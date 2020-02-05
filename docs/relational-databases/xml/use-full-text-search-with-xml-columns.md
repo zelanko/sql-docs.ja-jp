@@ -14,10 +14,10 @@ ms.assetid: 8096cfc6-1836-4ed5-a769-a5d63b137171
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f101051d924c1fca0bfbcd131ea8544ea4781e12
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909108"
 ---
 # <a name="use-full-text-search-with-xml-columns"></a>XML 列でのフルテキスト検索の使用
@@ -36,7 +36,7 @@ ms.locfileid: "72909108"
   
 2.  次に、XML 列の XML インデックスを使用する XML 値にクエリを実行します。  
 
-## <a name="example-combining-full-text-search-with-xml-querying"></a>例: フルテキスト検索と XML クエリの組み合わせ  
+## <a name="example-combining-full-text-search-with-xml-querying"></a>例 : フルテキスト検索と XML クエリの組み合わせ  
  XML 列でフルテキスト インデックスを作成した後、XML 値が書名に語 "custom" を含んでいることを次のクエリで確認します。  
   
 ```sql
@@ -52,7 +52,7 @@ AND    xCol.exist('/book/title/text()[contains(.,"custom")]') =1
   
  さらに、フルテキスト検索ではステマーが使用されますが、XQuery の **contains()** はリテラルの照合です。 両者の違いを次の例で示します。  
   
-## <a name="example-full-text-search-on-xml-values-using-stemming"></a>例: ステミングを使用した XML 値のフルテキスト検索  
+## <a name="example-full-text-search-on-xml-values-using-stemming"></a>例 : ステミングを使用した XML 値のフルテキスト検索  
  上記の例で行った XQuery **contains()** による確認は、通常は省略できません。 次のクエリについて考えてみます。  
   
 ```sql

@@ -20,10 +20,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 883256cfaad3c23133b5db520f5d9ef92f4546d3
-ms.sourcegitcommit: 2f56848ec422845ee81fb84ed321a716c677aa0e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71271911"
 ---
 # <a name="collate-transact-sql"></a>COLLATE (Transact-SQL)
@@ -52,9 +52,9 @@ COLLATE { <collation_name> | database_default }
 
 **database_default** COLLATE 句によって、現在のデータベースの照合順序が継承されます。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-COLLATE 句は、さまざまなレベルで指定できます。 その一部を次に示します。
+COLLATE 句は、さまざまなレベルで指定できます。 コーディネートは次のとおりです。
 
 1. データベースの作成または変更
 
@@ -101,7 +101,7 @@ FROM fn_helpcollations();
 >
 > 指定した照合順序、または参照先のオブジェクトで使用される照合順序で、Windows でサポートされていないコード ページが使用されていると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でエラーが表示されます。
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 ### <a name="a-specifying-collation-during-a-select"></a>A. SELECT 時に照合順序を指定する
 
@@ -148,7 +148,7 @@ Colima
 Chiapas
 ```
 
-### <a name="b-additional-examples"></a>B. その他の例
+### <a name="b-additional-examples"></a>B. 追加の例
 
 **COLLATE** を使用するその他の例については、「[CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017#examples)」の例「**G. データベースを作成し、照合順序名とオプションを指定する**」と「[ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md#alter_column)」の例「**V. 列の照合順序を変更する**」を参照してください。
 

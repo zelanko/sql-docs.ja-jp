@@ -19,10 +19,10 @@ ms.assetid: 94918d1d-7c10-4be7-bf9f-27e00b003a0f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 4af4e8b1d0dacb5e08cdd117a14691b909050b09
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75254055"
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>データベースの復旧モデルの表示または変更 (SQL Server)
@@ -38,7 +38,7 @@ ms.locfileid: "75254055"
 ##  <a name="BeforeYouBegin"></a> はじめる前に  
   
 
--   [完全復旧モデルまたは一括ログ復旧モデル](recovery-models-sql-server.md)から切り替える**前**に、[トランザクション ログをバックアップしてください](back-up-a-transaction-log-sql-server.md)。  
+-   [完全復旧モデルまたは一括ログ復旧モデル](back-up-a-transaction-log-sql-server.md)から切り替える**前**に、[トランザクション ログをバックアップしてください](recovery-models-sql-server.md)。  
   
 -   一括ログ復旧モデルでは特定の時点に復旧できません。 一括ログ復旧モデルでトランザクション ログの復元を必要とするトランザクションを実行すると、データが失われる可能性があります。 障害復旧シナリオでデータをより確実に復旧するには、次の条件下でのみ一括ログ復旧モデルに切り替えることをお勧めします。  
   
@@ -102,7 +102,7 @@ USE [master] ;
 ALTER DATABASE [model] SET RECOVERY FULL ;  
 ```  
   
-##  <a name="FollowUp"></a> 推奨事項:復旧モデルを変更した後  
+##  <a name="FollowUp"></a> 推奨事項: 復旧モデルを変更した後  
   
 -   **完全復旧モデルと一括ログ復旧モデルの切り替え後の処理**  
   

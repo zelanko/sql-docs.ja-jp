@@ -15,10 +15,10 @@ ms.assetid: e1340b6f-ef75-4b14-af6f-823586eff0ed
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ccabb3d2964d1a2a5d4de6beab7e299eb9befb03
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297723"
 ---
 # <a name="transform-data-with-transformations"></a>変換を使用してデータを変換する
@@ -30,7 +30,7 @@ ms.locfileid: "71297723"
   
  次の図は、1 つの変換元、2 つの変換、および 1 つの変換先を持つ、簡単なデータ フローを示しています。  
   
- ![Data flow](../../../integration-services/data-flow/media/mw-dts-08.gif "Data flow")  
+ ![データ フロー](../../../integration-services/data-flow/media/mw-dts-08.gif "Data flow")  
   
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] の変換では、次の機能が用意されています。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "71297723"
 -   [データ フロー コンポーネントのプロパティを設定する](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
 ## <a name="see-also"></a>参照  
- [[データ フロー タスク]](../../../integration-services/control-flow/data-flow-task.md)   
+ [データ フロー タスク](../../../integration-services/control-flow/data-flow-task.md)   
  [データ フロー](../../../integration-services/data-flow/data-flow.md)   
  [パスを使用してコンポーネントを連結する](https://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8)   
  [データのエラー処理](../../../integration-services/data-flow/error-handling-in-data.md)   

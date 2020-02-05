@@ -11,10 +11,10 @@ ms.assetid: 00bfa716-5390-48e3-b30c-d954d5e0be47
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3ce06430094825bf3268836657661930fea058e4
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296631"
 ---
 # <a name="catalogmaster_properties-ssisdb-database"></a>catalog.master_properties (SSISDB データベース)
@@ -31,7 +31,7 @@ ms.locfileid: "71296631"
 |property_name|**nvarchar (256)**|Scale Out Master のプロパティの名前。|  
 |property_value|**nvarchar(max)**|Scale Out Master のプロパティの値。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 このビューは、各 Scale Out Master のプロパティの行を表示します。 このビューで表示されるプロパティは、次のとおりです。
 
 |プロパティ名|[説明]|  

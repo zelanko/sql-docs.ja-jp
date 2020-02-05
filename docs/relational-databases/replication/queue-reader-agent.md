@@ -15,10 +15,10 @@ ms.assetid: f02d24b6-dcb5-4126-b56e-fab41cfe4337
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 2987497ade73542890b0e90e6c09c1fdd44870ee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68021254"
 ---
 # <a name="queue-reader-agent"></a>キュー リーダー エージェント (Queue Reader Agent)
@@ -28,13 +28,13 @@ ms.locfileid: "68021254"
 ## <a name="options"></a>オプション  
  **[表示]** メニューから表示するキュー リーダー エージェントのセッションを選択し、次に **[キュー リーダー エージェントのセッション]** というラベルのグリッド内で特定のセッションを選択します。 このセッションの詳細情報は、 **[選択されたセッションのアクション]** というラベルのグリッドに表示されます。 選択したセッションがエラーで終了した場合は、 **[選択されたセッションのエラーの詳細またはメッセージ]** というラベルのテキスト領域も表示されます。  
   
- **[表示]**  
+ **表示**  
  表示するキュー リーダー エージェントのセッションを選択します。 通常、キュー リーダー エージェントは継続的に実行されるため、表示するセッションが 1 つのみの場合があります。  
   
- **[状態]**  
+ **状態**  
  キュー リーダー エージェントの状態です。 表示される状態の種類を、次に示します。  
   
--   [エラー]  
+-   エラー  
   
 -   [失敗したコマンドの再試行]  
   

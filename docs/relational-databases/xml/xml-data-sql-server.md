@@ -14,17 +14,17 @@ ms.assetid: 6a1793c9-9856-485c-aac5-88fda62f61a8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fc11a8dd385266d38bb12f067d2ffa1a88030b87
-ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70190429"
 ---
 # <a name="xml-data-sql-server"></a>XML データ (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、半構造化されたデータを管理する多機能アプリケーションを開発するための強力なプラットフォームを提供します。 XML のサポートは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのコンポーネントに統合されており、次の機能を提供します。  
   
--   **xml** データ型。 XML 値は XML スキーマ コレクションに従って型指定できる **xml** データ型の列にネイティブに保存できます。また、型指定しない状態でも保存できます。 XML 列にはインデックスを設定できます。  
+-   **xml** データ型。 XML 値は XML スキーマ コレクションに従って型指定できる **xml** データ型の列にネイティブに保存できます。また、型指定しない状態でも保存できます。 XML 列のインデックスを作成できます。  
   
 -   **xml** 型の列や変数に格納されている XML データに対して XQuery クエリを指定する機能。  
   

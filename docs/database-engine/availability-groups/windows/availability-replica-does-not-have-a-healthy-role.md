@@ -15,10 +15,10 @@ ms.assetid: ebb2c9f4-2097-4688-b4fb-8f0571047317
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 91b73682ffd7d626592193c5b729896ec3d593a2
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75241771"
 ---
 # <a name="availability-replica-does-not-have-a-healthy-role-for-an-always-on-availability-group"></a>Always On 可用性グループの可用性レプリカに正常なロールがない
@@ -42,7 +42,7 @@ ms.locfileid: "75241771"
 ## <a name="possible-causes"></a>考えられる原因  
  この可用性レプリカのロールが正常ではありません。 このレプリカにはプライマリ ロールもセカンダリ ロールも割り当てられていません。  
   
-## <a name="possible-solution-information_still_to_come"></a>考えられる解決方法:Information_still_to_come  
+## <a name="possible-solution-information_still_to_come"></a>考えられる解決方法: ここに情報を挿入  
   
 ## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

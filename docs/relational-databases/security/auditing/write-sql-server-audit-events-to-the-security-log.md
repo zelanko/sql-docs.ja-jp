@@ -16,10 +16,10 @@ ms.assetid: 6fabeea3-7a42-4769-a0f3-7e04daada314
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 0c998b4d5ed5988d5a5e2a01bf0cbd611157f665
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68095102"
 ---
 # <a name="write-sql-server-audit-events-to-the-security-log"></a>セキュリティ ログへの SQL サーバー監査イベントの書き込み  
@@ -31,7 +31,7 @@ ms.locfileid: "68095102"
   
 -   オブジェクト アクセスの監査の設定は、イベントをキャプチャするように構成する必要があります。 監査ポリシー ツール (`auditpol.exe`) は、" **オブジェクト アクセスの監査** " カテゴリでさまざまなサブポリシー設定を公開しています。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] がオブジェクト アクセスを監査できるようにするには、 **application generated** 設定を構成します。  
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスを実行しているアカウントは、Windows セキュリティ ログに書き込むための " **セキュリティ監査の生成** " 権限を持っている必要があります。 既定では、LOCAL SERVICE アカウントおよび NETWORK SERVICE アカウントにこの権限があります。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] がこれらのアカウントのいずれかで実行されている場合、この手順は必要ありません。  
--   レジストリ ハイブ `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EventLog\Security` への [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービス アカウントに完全なアクセス許可を提供します。  
+-   レジストリ ハイブ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] への `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EventLog\Security` サービス アカウントに完全なアクセス許可を提供します。  
 
   > [!IMPORTANT]  
   > [!INCLUDE[ssnoteregistry-md](../../../includes/ssnoteregistry-md.md)]   
@@ -104,6 +104,6 @@ Windows の監査ポリシーは、Windows セキュリティ ログに書き込
 7.  セキュリティ ポリシー ツールを閉じます。  
   
 ## <a name="see-also"></a>参照  
- [SQL Server Audit &#40;データベース エンジン&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)  
+ [SQL Server Audit &#40;Database Engine&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)  
   
   

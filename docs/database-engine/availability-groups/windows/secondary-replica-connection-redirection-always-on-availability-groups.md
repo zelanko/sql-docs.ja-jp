@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 8bf76e0929dea69758b1f9152af0df8f3170227d
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75235203"
 ---
 # <a name="secondary-to-primary-replica-readwrite-connection-redirection-always-on-availability-groups"></a>セカンダリ レプリカからプライマリ レプリカへの読み取り/書き込み接続のリダイレクト (Always On 可用性グループ)
@@ -52,7 +52,7 @@ ms.locfileid: "75235203"
 
 読み取り/書き込み接続を構成するには、AG を作成するときに、プライマリ レプリカに対して `READ_WRITE_ROUTING_URL` を設定する必要があります。 
 
-[!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] では、`<add_replica_option>` 仕様に `READ_WRITE_ROUTING_URL` が追加されています。 次のトピックを参照してください。 
+[!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] では、`READ_WRITE_ROUTING_URL` 仕様に `<add_replica_option>` が追加されています。 次のトピックを参照してください。 
 
 * [CREATE AVAILABILITY GROUP](../../../t-sql/statements/create-availability-group-transact-sql.md)
 * [ALTER AVAILABILITY GROUP](../../../t-sql/statements/alter-availability-group-transact-sql.md)

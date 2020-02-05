@@ -11,10 +11,10 @@ ms.assetid: 8adee525-579b-4d2f-b807-e2ecc07fb2e9
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d131ebd8d532e0844774fc675165750832f964c9
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295457"
 ---
 # <a name="catalogrestore_project-ssisdb-database"></a>catalog.restore_project (SSISDB データベース)
@@ -40,7 +40,7 @@ catalog.restore_project [ @folder_name = ] folder_name
  プロジェクトを含むフォルダーの名前。 *folder_name* は **nvarchar(128)** です。  
   
  [ @project _name = ] *project_name*  
- プロジェクトの名前。 *project_name* は **nvarchar(128)** です。  
+ プロジェクトの名前です。 *project_name* は **nvarchar(128)** です。  
   
  [ @object_version_lsn = ] *object_version_lsn*  
  プロジェクトのバージョン。 *object_version_lsn* は **bigint** です。  
@@ -49,7 +49,7 @@ catalog.restore_project [ @folder_name = ] folder_name
  成功した場合は 0 を返します。  
   
 ## <a name="result-sets"></a>結果セット  
- *project_name* が見つかった場合、結果セットの一部として、プロジェクトの詳細が **varbinary(MAX)** として返されます。  
+ **project_name** が見つかった場合、結果セットの一部として、プロジェクトの詳細が *varbinary(MAX)* として返されます。  
   
  指定のフォルダーにプロジェクトを復元できない場合、**NO RESULT SET** が返されます。  
   
@@ -71,7 +71,7 @@ catalog.restore_project [ @folder_name = ] folder_name
   
 -   ユーザーに適切な権限がない  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  プロジェクトを復元すると、すべてのパラメーターが既定値としてが割り当てられ、すべての環境参照は変更されないままになります。 カタログに保持されるプロジェクト バージョンの最大数は、カタログ プロパティ **MAX_VERSIONS_PER_PROJECT** によって決まります。[catalog_property](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md) ビューに表示されます。  
   
 > [!WARNING]  

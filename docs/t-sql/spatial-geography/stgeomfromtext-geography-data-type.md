@@ -19,10 +19,10 @@ ms.assetid: 3717987b-77d8-4ccf-a1db-5a8016ac1083
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 90359259bb7ba85377e72c40a8eece79de44cbf2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042122"
 ---
 # <a name="stgeomfromtext-geography-data-type"></a>STGeomFromText (geography データ型)
@@ -49,14 +49,14 @@ STGeomFromText ( 'geography_tagged_text' , SRID )
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
- CLR の戻り値の型:**SqlGeography**  
+ CLR の戻り値の型: **SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  STGeomFromText() によって返される **geography** インスタンスの OGC 型は、対応する WKT 入力に設定されています。  
   
  このメソッドは、この入力に対蹠点が含まれている場合、**ArgumentException** をスローします。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  `STGeomFromText()` を使用して `geography` インスタンスを作成する例を次に示します。  
   
 ```  

@@ -13,10 +13,10 @@ ms.assetid: c4c1e94f-4f5f-431e-8b5b-d5ff97baf723
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 03f409e11e037fcc406940d5a97e9934a77b96b4
-ms.sourcegitcommit: c98c6e33d04d4a1888db7dbe89cb0b1bb3a66418
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74249765"
 ---
 # <a name="scm-services---connect-to-another-computer"></a>SCM サービス - 別のコンピューターに接続する
@@ -38,7 +38,7 @@ ms.locfileid: "74249765"
 2. **[操作]** メニューの **[別のコンピューターへ接続]** をクリックします。
 3. **[コンピューターの選択]** ダイアログ ボックスの **[別のコンピューター]** ボックスに管理するコンピューターの名前を入力し、 **[OK]** をクリックします。
 
-   リモート コンピューターで実行されているサービスが、[コンピューターの管理] に表示されます。 最上位ノードが **[コンピューターの管理 \<*リモート コンピューター*>]** に変更されます。
+   リモート コンピューターで実行されているサービスが、[コンピューターの管理] に表示されます。 最上位ノードが **[コンピューターの管理** \<リモート コンピューター *>]* に変更されます。
 
 4. コンソール ツリーの **[サービスとアプリケーション]** を展開し、 **[SQL Server 構成マネージャー]** を展開して、リモート コンピューターのサービスを管理します。
 

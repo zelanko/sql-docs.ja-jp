@@ -18,10 +18,10 @@ ms.assetid: 6d4ca31e-ddf0-44bf-be5e-a5da060bf096
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: dfba294b5c07fc7053669c5c4ebbbd46217efb18
-ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74822636"
 ---
 # <a name="remove-a-primary-database-from-an-always-on-availability-group"></a>Always On 可用性グループからプライマリ データベースを削除する
@@ -93,7 +93,7 @@ ms.locfileid: "74822636"
   
 -   [SQL Server PowerShell プロバイダー](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a>補足情報: 可用性グループから可用性データベースを削除した後  
+##  <a name="FollowUp"></a> 補足情報: 可用性グループから可用性データベースを削除した後  
  可用性グループから可用性データベースを削除すると、以前のプライマリ データベースおよび対応するセカンダリ データベース間のデータの同期が終了します。 以前のプライマリ データベースはオンラインのまま残ります。 すべての対応するセカンダリ データベースは RESTORING 状態になります。  
   
  この時点で、削除されたセカンダリ データベースを処理する別の方法は次のとおりです。  

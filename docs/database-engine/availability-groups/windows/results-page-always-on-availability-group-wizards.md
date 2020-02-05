@@ -16,10 +16,10 @@ ms.assetid: d80b14eb-60db-4351-90ad-6c179d235aa3
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: bb4a661110d91f73f45152b84dcfb63f8763d018
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75235446"
 ---
 # <a name="results-page-always-on-availability-group-wizards"></a>[結果] ページ (AlwaysOn 可用性グループ ウィザード)
@@ -30,7 +30,7 @@ ms.locfileid: "75235446"
 ##  <a name="PageOptions"></a> [結果] ページのオプション  
  **[概要]** グリッドに含まれる列は、次のとおりです。  
   
- **Name**  
+ **名前**  
  特定の操作について説明する語句が表示されます。  
   
  **結果**  

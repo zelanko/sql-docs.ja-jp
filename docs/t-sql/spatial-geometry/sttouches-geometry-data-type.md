@@ -18,10 +18,10 @@ ms.assetid: af3650b4-26da-4600-9cc2-1be71dd76a14
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 93ea5be3c2f9a4ecdd415471da16ca21eb1f08c9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066241"
 ---
 # <a name="sttouches-geometry-data-type"></a>STTouches (geometry データ型)
@@ -38,19 +38,19 @@ ms.locfileid: "68066241"
   
 ## <a name="arguments"></a>引数  
  *other_geometry*  
- `STTouches()` を呼び出したインスタンスと比較される、別の **geometry** インスタンスです。  
+ **を呼び出したインスタンスと比較される、別の**geometry`STTouches()` インスタンスです。  
   
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **bit**  
   
- CLR の戻り値の型:**SqlBoolean**  
+ CLR の戻り値の型: **SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  2 つの **geometry** インスタンスの地点のセットは交差しているが、内部が交差していない場合、これらのインスタンスは接しています。  
   
  **geometry** インスタンスの SRID (spatial reference ID) が一致しない場合、このメソッドは常に null を返します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  `STTouches()` を使用して、2 つの `geometry` インスタンスが接しているかどうかをテストする例を次に示します。  
   
 ```  

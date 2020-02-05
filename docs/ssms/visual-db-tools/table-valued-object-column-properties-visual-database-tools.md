@@ -1,10 +1,9 @@
 ---
-title: テーブル値オブジェクト (列) のプロパティ (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: テーブル値オブジェクト (列) のプロパティ
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +11,14 @@ f1_keywords:
 ms.assetid: 212d9bcd-aded-4313-a6b9-d7e2270e5954
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 020c695ecd85de811586b55f2b739caab1590b8f
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: d5c82466168714f6a58055e1ed50959602318ef3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68261474"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242163"
 ---
 # <a name="table-valued-object-column-properties-visual-database-tools"></a>テーブル値オブジェクト (列) のプロパティ (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "68261474"
 **[IDENTITY] カテゴリ**  
 展開すると、 **[名前]** プロパティが表示されます。  
   
-**[名前]**  
+**名前**  
 選択した列の名前が表示されます。  
   
 **クエリ デザイナー カテゴリ**  
@@ -41,10 +42,10 @@ ms.locfileid: "68261474"
 **[NULL を許容]**  
 列のデータ型で NULL が許容されるかどうかが表示されます。  
   
-**[照合順序]**  
+**Collation**  
 選択した列における照合順序の設定が表示されます。 照合順序は、Table Designer の [列のプロパティ] タブで設定できます。  
   
-**データ型**  
+**[データ型]**  
 選択した列のデータ型が表示されます。  
   
 **[データ型]**  
@@ -56,7 +57,7 @@ ms.locfileid: "68261474"
 **[精度]**  
 数値データ型で許容される最大桁数が表示されます。 数値データ型でないデータ型の場合、このプロパティには **0** と表示されます。  
   
-**[スケール]**  
+**スケール**  
 数値データ型の小数点の右側にある桁数の最大数が表示されます。 この値は、有効桁数以下である必要があります。 数値データ型でないデータ型の場合、このプロパティには **0** と表示されます。  
   
 **[サイズ]**  

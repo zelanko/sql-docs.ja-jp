@@ -21,10 +21,10 @@ ms.assetid: c45e1086-c25b-48bb-a764-4a893e983db2
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 0353ff7b9e0778a7ef59107f5ba2876e72bbdd69
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75243339"
 ---
 # <a name="revoke-database-principal-permissions-transact-sql"></a>REVOKE (データベース プリンシパルの権限の取り消し) (Transact-SQL)
@@ -161,7 +161,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 ## <a name="examples"></a>例  
   
 ### <a name="a-revoking-control-permission-on-a-user-from-another-user"></a>A. ユーザーに対する CONTROL 権限を別のユーザーから取り消す  
- 次の例では、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] ユーザー `Wanida` に対する `CONTROL` 権限を、ユーザー `RolandX` から取り消します。  
+ 次の例では、`CONTROL` ユーザー [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] に対する `Wanida` 権限を、ユーザー `RolandX` から取り消します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -170,7 +170,7 @@ GO
 ```  
   
 ### <a name="b-revoking-view-definition-permission-on-a-role-from-a-user-to-which-it-was-granted-with-grant-option"></a>B. ロールに対する VIEW DEFINITION 権限を、WITH GRANT OPTION で権限が許可されたユーザーから取り消す  
- 次の例では、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] ロール `VIEW DEFINITION` に対する `SammamishParking` 権限を、データベース ユーザー `JinghaoLiu` から取り消します。 ユーザー `JinghaoLiu` には、`WITH GRANT OPTION` を指定して `VIEW DEFINITION` 権限が許可されているため、`CASCADE` オプションを指定します。  
+ 次の例では、`VIEW DEFINITION` ロール [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] に対する `SammamishParking` 権限を、データベース ユーザー `JinghaoLiu` から取り消します。 ユーザー `CASCADE` には、`JinghaoLiu` を指定して `VIEW DEFINITION` 権限が許可されているため、`WITH GRANT OPTION` オプションを指定します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -180,7 +180,7 @@ GO
 ```  
   
 ### <a name="c-revoking-impersonate-permission-on-a-user-from-an-application-role"></a>C. ユーザーに対する IMPERSONATE 権限をアプリケーション ロールから取り消す  
- 次の例では、ユーザー `HamithaL` に対する `IMPERSONATE` 権限を、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] アプリケーション ロール `AccountsPayable17` から取り消します。  
+ 次の例では、ユーザー `IMPERSONATE` に対する `HamithaL` 権限を、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] アプリケーション ロール `AccountsPayable17` から取り消します。  
   
 **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   

@@ -16,10 +16,10 @@ ms.assetid: 694f0462-d0c5-4191-b64e-821b1bdef055
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0001806e1a8f0cba9a879297b4dab49367dd84a8
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297019"
 ---
 # <a name="gathering-a-list-for-the-foreach-loop-with-the-script-task"></a>スクリプト タスクによる ForEach ループの一覧の収集
@@ -36,7 +36,7 @@ ms.locfileid: "71297019"
  次の例は、**System.IO** 名前空間のメソッドを使用して、ユーザーが変数で指定した日数より新しいまたは古い Excel ブックの一覧をコンピューターで収集します。 拡張子 .xls を持つファイルを探して C ドライブのディレクトリを再帰的に検索し、各ファイルの最終更新日を調べて、一覧に属するかどうかを判定します。 該当するファイルを **ArrayList** に追加した後、その **ArrayList** を変数に保存して、後に Foreach ループ コンテナーで使用できるようにします。 この Foreach ループ コンテナーは、Foreach from Variable 列挙子を使用するように構成されています。  
   
 > [!NOTE]  
->  Foreach From Variable 列挙子で使用する変数は、**Object** 型であることが必要です。 変数内に格納するオブジェクトでは、次のいずれかのインターフェイスを実装する必要があります。**System.Collections.IEnumerable**、**System.Runtime.InteropServices.ComTypes.IEnumVARIANT**、**System.ComponentModel IListSource**、または **Microsoft.SqlServer.Dts.Runtime.Wrapper.ForEachEnumeratorHost**。 **Array** または **ArrayList** が一般に使用されます。 **ArrayList** は、**System.Collections** 名前空間に対する参照と **Imports** ステートメントを必要とします。  
+>  Foreach From Variable 列挙子で使用する変数は、**Object** 型であることが必要です。 変数に配置するオブジェクトは、**System.Collections.IEnumerable**、**System.Runtime.InteropServices.ComTypes.IEnumVARIANT**、**System.ComponentModel IListSource**、または **Microsoft.SqlServer.Dts.Runtime.Wrapper.ForEachEnumeratorHost** のいずれかのインターフェイスを実装する必要があります。 **Array** または **ArrayList** が一般に使用されます。 **ArrayList** は、**System.Collections** 名前空間に対する参照と **Imports** ステートメントを必要とします。  
   
  このタスクは、`FileAge` パッケージ変数に対して正および負のさまざまな値を使用することによってテストできます。 たとえば、この 5 日間に作成されたファイルを検索するには 5 を入力し、3 日前よりも前に作成されたファイルを検索するには -3 を入力します。 このタスクは、検索するフォルダーの数が多いドライブの場合、実行に 1 ～ 2 分かかることがあります。  
   

@@ -18,10 +18,10 @@ ms.assetid: fe91a9f5-8de6-464e-88db-00650eae79b0
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 869ddd79f3c4f7ca2eea30ddaf1f704a233c15fe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68131939"
 ---
 # <a name="stmpointfromtext-geography-data-type"></a>STMPointFromText (geography データ型)
@@ -46,14 +46,14 @@ STMPointFromText ( 'multipoint_tagged_text', SRID )
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
- CLR の戻り値の型:**SqlGeography**  
+ CLR の戻り値の型: **SqlGeography**  
   
- OGC の型:**MultiPoint**  
+ OGC の型: **MultiPoint**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  このメソッドでは、入力が整形式でない場合に、**FormatException** がスローされます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  `STMPointFromText()` を使用して `geography` インスタンスを作成する例を次に示します。  
   
 ```  

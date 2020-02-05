@@ -16,10 +16,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 13bb5944c5907f3bebc9f01eb969b4b8979f8c97
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73595757"
 ---
 # <a name="provision-always-encrypted-keys-using-sql-server-management-studio"></a>SQL Server Management Studio を使用して Always Encrypted キーをプロビジョニングする
@@ -35,12 +35,12 @@ ms.locfileid: "73595757"
 **[新しい列マスター キー]** ダイアログでは、列マスター キーを生成することも、キー ストア内の既存のキーを選択することもできます。さらに、作成または選択したキーに対して列マスター キーのメタデータをデータベースに作成することができます。
 
 1.  **オブジェクト エクスプローラー**を使用し、データベースの下の **[セキュリティ]、[Always Encrypted キー]** の順にアクセスします。
-2.  **[列マスター キー]** フォルダーを右クリックし、**[新しい列マスター キー...]** を選択します。 
+2.  **[列マスター キー]** フォルダーを右クリックし、 **[新しい列マスター キー...]** を選択します。 
 3.  **[新しい列マスター キー]** ダイアログで、列マスター キーのメタデータ オブジェクトの名前を入力します。
 4.  キー ストアを選択します。
     - **証明書ストア - 現在のユーザー** - Windows 証明書ストアでの現在のユーザーの証明書ストアの場所を示します。これは個人的なストアです。 
     - **証明書ストア - ローカル コンピューター** - Windows 証明書ストアでのローカル コンピューターの証明書ストアの場所を示します。 
-    - **Azure Key Vault** - Azure にサインインする必要があります (**[サインイン]** をクリック)。 サインインすると、ご自分の Azure サブスクリプションのいずれかと、キー コンテナーを選択できるようになります。
+    - **Azure Key Vault** - Azure にサインインする必要があります ( **[サインイン]** をクリック)。 サインインすると、ご自分の Azure サブスクリプションのいずれかと、キー コンテナーを選択できるようになります。
     - **キー ストア プロバイダー (KSP)** - Cryptography Next Generation (CNG) API を実装するキー ストア プロバイダー (KSP) を介してアクセスできるキー ストアを示します。 通常、この種のストアは、ハードウェア セキュリティ モジュール (HSM) となります。 このオプションを選択したら、KSP を選択する必要があります。 既定では、**Microsoft ソフトウェア キー ストア プロバイダー** が選択されます。 HSM に格納されている列マスター キーを使用する場合は、デバイス用の KSP を選択します (ダイアログを開く前に、コンピューターにインストールし、構成しておく必要があります)。
     -   **暗号化サービス プロバイダー (CSP)** - 暗号化 API (CAPI) を実装する暗号化サービス プロバイダー (CSP) を介してアクセスできるキー ストアです。 通常、そのようなストアは、ハードウェア セキュリティ モジュール (HSM) です。 このオプションを選択したら、CSP を選択する必要があります。  HSM に格納されている列マスター キーを使用する場合は、デバイス用の CSP を選択します (ダイアログを開く前に、コンピューターにインストールし、構成しておく必要があります)。
     
@@ -49,10 +49,10 @@ ms.locfileid: "73595757"
    
     上記のキー ストアの詳細については、「[Always Encrypted の列マスター キーの作成と保存](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)」をご覧ください。
 
-5. お客様が [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] を使用していて、お使いの SQL Server インスタンスがセキュア エンクレーブを使って構成されている場合は、**[エンクレーブ計算を許可する]** チェックボックスをオンにして、マスター キーをエンクレーブ対応にすることができます。 詳細については、「[セキュア エンクレーブを使用する Always Encrypted](always-encrypted-enclaves.md)」をご覧ください。 
+5. お客様が [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] を使用していて、お使いの SQL Server インスタンスがセキュア エンクレーブを使って構成されている場合は、 **[エンクレーブ計算を許可する]** チェックボックスをオンにして、マスター キーをエンクレーブ対応にすることができます。 詳細については、「[セキュア エンクレーブを使用する Always Encrypted](always-encrypted-enclaves.md)」をご覧ください。 
 
     > [!NOTE]
-    > お使いの SQL Server インスタンスがセキュア エンクレーブを使って正しく構成されていない場合は、**[エンクレーブ計算を許可する]** チェックボックスは表示されません。
+    > お使いの SQL Server インスタンスがセキュア エンクレーブを使って正しく構成されていない場合は、 **[エンクレーブ計算を許可する]** チェックボックスは表示されません。
 
 6.  キー ストアにある既存のキーを選択するか、あるいは **[キーの生成]** ボタンまたは **[証明書の生成]** ボタンをクリックしてキー ストアにキーを作成します。 
 7.  **[OK]** をクリックします。新しいキーが一覧に表示されます。 
@@ -81,10 +81,10 @@ ms.locfileid: "73595757"
 **[新しい列の暗号化キー]** ダイアログでは、列暗号化キーを生成し、それを列マスター キーで暗号化し、データベースに列暗号化キーのメタデータを作成することができます。
 
 1.  **オブジェクト エクスプローラー**を使用して、データベースの下にあるフォルダーを **[セキュリティ]、[Always Encrypted キー]** の順に移動します。
-2.  **[列暗号化キー]** フォルダーを右クリックし、**[新しい列の暗号化キー...]** を選択します。 
+2.  **[列暗号化キー]** フォルダーを右クリックし、 **[新しい列の暗号化キー...]** を選択します。 
 3.  **[新しい列の暗号化キー]** ダイアログで、列暗号化キーのメタデータ オブジェクトの名前を入力します。
 4.  データベースの列マスター キーを表すメタデータ オブジェクトを選択します。
-5.  [**OK**] をクリックします。 
+5.  **[OK]** をクリックします。 
 
 ダイアログを完了すると、SQL Server Management Studio によって新しい列暗号化キーが生成され、選択した列マスター キーのメタデータがデータベースから取得されます。 次に、SSMS では、列マスター キーのメタデータを使って、その列マスター キーを含むキー ストアとの交信が行われ、列暗号化キーが暗号化されます。 最後に、[CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md) ステートメントを生成して発行することで、SSMS によって新しい列暗号化のメタデータ データがデータベースに作成されます。
 
@@ -103,19 +103,19 @@ ms.locfileid: "73595757"
 
 [Always Encrypted ウィザード](../../../relational-databases/security/encryption/always-encrypted-wizard.md)は、選択したデータベースの列の暗号化、暗号化解除、および再暗号化を行うためのツールです。 そこでは、既に構成されているキーを使用できますが、新しい列マスター キーと新しい列暗号化を生成することもできます。 
 
-## <a name="next-steps"></a>Next Steps
-- [Always Encrypted ウィザードを使用した列暗号化の構成](always-encrypted-wizard.md)
+## <a name="next-steps"></a>次の手順
+- [Always Encrypted ウィザードを使用して列暗号化を構成する](always-encrypted-wizard.md)
 - [DAC パッケージでの Always Encrypted を使用した列暗号化の構成](configure-always-encrypted-using-dacpac.md)
 - [SQL Server Management Studio を使用して Always Encrypted キーを交換する](rotate-always-encrypted-keys-using-ssms.md)
 - [Always Encrypted を使用したアプリケーションの開発](always-encrypted-client-development.md)
-- [SQL Server インポートおよびエクスポート ウィザードでの Always Encrypted を使用した列間でのデータの移行](always-encrypted-migrate-using-import-export-wizard.md)
+- [SQL Server インポートおよびエクスポート ウィザードで Always Encrypted を使用して列間でデータを移行する](always-encrypted-migrate-using-import-export-wizard.md)
 
 ## <a name="see-also"></a>参照
-- [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [常に暗号化](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Always Encrypted のキー管理の概要](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
-- [Always Encrypted の列マスター キーの作成と保存](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)
-- [SQL Server Management Studio を使用した Always Encrypted の構成](configure-always-encrypted-using-sql-server-management-studio.md)
-- [PowerShell を使用した Always Encrypted キーのプロビジョニング](configure-always-encrypted-keys-using-powershell.md)
+- [Always Encrypted の列マスター キーを作成して保存する](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)
+- [SQL Server Management Studio を使用して Always Encrypted を構成する](configure-always-encrypted-using-sql-server-management-studio.md)
+- [PowerShell を使用して Always Encrypted キーをプロビジョニングする](configure-always-encrypted-keys-using-powershell.md)
 - [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md)
 - [DROP COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/drop-column-master-key-transact-sql.md)
 - [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md)

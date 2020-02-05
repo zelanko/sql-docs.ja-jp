@@ -11,10 +11,10 @@ ms.assetid: 20b3ba0a-126f-49bf-b70f-61b2a0fcb750
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 87acb8f9b15fa2b22f4a7f1dbe01669eff08b92e
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71281016"
 ---
 # <a name="catalogcreate_customized_logging_level"></a>catalog.create_customized_logging_level 
@@ -76,7 +76,7 @@ catalog.create_customized_logging_level [ @level_name = ] level_name
   
  *level_id* は **bigint** です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  Transact-SQL で *profile_value* または *events_value* 引数の複数の値を結合するには、この例に従います。 OnError (8) と DiagnosticEx (15) イベントをキャプチャする場合、*event_value* を計算する式は `2^8 + 2^15 = 33024` です。  
   
 ## <a name="return-codes"></a>リターン コード  

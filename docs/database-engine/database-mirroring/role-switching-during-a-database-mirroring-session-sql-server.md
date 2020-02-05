@@ -21,10 +21,10 @@ ms.assetid: a782d60d-0373-4386-bd77-9ec192553700
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b310083d3317c9099532b8d08f2482efe193d95c
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75252791"
 ---
 # <a name="role-switching-during-a-database-mirroring-session-sql-server"></a>データベース ミラーリング セッション中の役割の交代 (SQL Server)
@@ -109,7 +109,7 @@ ms.locfileid: "75252791"
 2.  フェールオーバーのログ シーケンス番号 (LSN) としてプリンシパルから受信した、最後のログ レコードの LSN が、ミラー サーバーに記録されます。  
   
     > [!NOTE]  
-    >  この LSN を表示するには、[sys.database_mirroring &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md) から **mirroring_failover_lsn** 列を選択します。  
+    >  この LSN を表示するには、**sys.database_mirroring &#40;Transact-SQL&#41;** から [mirroring_failover_lsn](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md) 列を選択します。  
   
 3.  再実行キューで待機しているログがある場合は、ミラー サーバーがミラー データベースのロールフォワードを完了します。 必要な時間は、システムの処理速度、最近の作業負荷、および再実行キューのログの量によって異なります。 同期動作モードの場合、再実行キューのサイズを制限することでフェールオーバーの時間を調節できます。 ただし、同期動作モードでは、ミラー サーバーの遅れを取り戻すためにプリンシパル サーバーの処理速度が低下する場合があります。  
   
@@ -159,7 +159,7 @@ ms.locfileid: "75252791"
 -   プリンシパル サーバーとその他のデータベース ミラーリング構成との通信が切断され、ミラー サーバーとミラーリング監視サーバーはクォーラムを保持している。 ただし、すべてのサーバー インスタンスで通信が切断された場合、ミラーリング監視サーバーとミラー サーバーの通信が回復しても、自動フェールオーバーは行われません。  
   
     > [!NOTE]  
-    >  詳細については、「[クォーラム: データベースの可用性にミラーリング監視サーバーが与える影響 (データベース ミラーリング)](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)」を参照してください。  
+    >  詳細については、「[クォーラム: データベースの可用性にミラーリング監視サーバーが与える影響 &#40;Database Mirroring&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)」を参照してください。  
   
 -   プリンシパル サーバーの障害がミラー サーバーによって検出される。  
   

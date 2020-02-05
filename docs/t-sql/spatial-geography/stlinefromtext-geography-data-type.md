@@ -18,10 +18,10 @@ ms.assetid: e0c05bde-077d-4ce2-b4ec-8861db9b996d
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 19572f60d1b13dd7b9e1e03c6d2b75f707962569
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67952258"
 ---
 # <a name="stlinefromtext-geography-data-type"></a>STLineFromText (geography データ型)
@@ -46,14 +46,14 @@ STLineFromText ( 'linestring_tagged_text' , SRID )
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
- CLR の戻り値の型:**SqlGeography**  
+ CLR の戻り値の型: **SqlGeography**  
   
- OGC の型:**LineString**  
+ OGC の型: **LineString**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  このメソッドでは、入力が整形式でない場合に、**FormatException** がスローされます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  `STLineFromText()` を使用して `geography` インスタンスを作成する例を次に示します。  
   
 ```  

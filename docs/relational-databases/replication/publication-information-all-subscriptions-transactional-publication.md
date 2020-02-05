@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: 7073350c-f667-4f70-88e9-152c9a1b08dd
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 0ffbbd5f2cef23accfde900543fb07b934bb3730
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: f93f4bb75bf225f7ccf7a3d377ef495a3cb99854
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75321351"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286633"
 ---
 # <a name="publication-information-all-subscriptions-transactional-publication"></a>パブリケーション情報、[すべてのサブスクリプション]\(トランザクション パブリケーション)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -32,9 +32,9 @@ ms.locfileid: "75321351"
   
 -   **[表示する列の選択]** : **[列の選択]** ダイアログ ボックスで、表示する列とその表示順序を選択します。  
   
--   **フィルター**: **[フィルターの設定]** ダイアログ ボックスで、列の値に基づいてグリッドの行をフィルター処理します。  
+-   **[フィルター]** : **[フィルターの設定]** ダイアログ ボックスで、列の値に基づいてグリッドの行をフィルター選択します。  
   
--   **[フィルターのクリア]** :グリッドのフィルター設定をすべてクリアします。  
+-   **[フィルターのクリア]** : グリッドのフィルター設定をすべてクリアします。  
   
  フィルター設定は各グリッドに固有です。 列の選択と並べ替えは、各パブリッシャーのパブリケーション グリッドなど、同じ種類のすべてのグリッドに適用されます。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "75321351"
  状態値 **[パフォーマンス クリティカル]** および **[まもなく期限切れ/期限切れ]** は、しきい値が設定されている場合のみ表示されます。 パフォーマンスの測定としきい値の設定については、「[Monitor Performance with Replication Monitor](../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md)」 (レプリケーション モニターを使用したパフォーマンスの監視) と「[レプリケーション モニターのしきい値と警告の設定](../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)」を参照してください。  
   
  **サブスクリプション**  
- 各サブスクリプションの名前です。*SubscriberName:SubscriptionDatabaseName* という形式になります。  
+ 各サブスクリプションの名前です。 *SubscriberName: SubscriptionDatabaseName*という形式になります。  
   
  **パフォーマンス**  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンのみです。 各サブスクリプションのパフォーマンス評価は、レプリケーション モニターにより取得され、履歴パフォーマンスに反映されていない、最も新しい計測値に基づいています。 パフォーマンスは、パフォーマンスしきい値が定義されているパブリケーションへのサブスクリプションについてのみ計測されます。パブリケーションにパフォーマンスしきい値が定義されていない場合、この列には **[有効になっていません]** と表示されます。 パフォーマンス評価は、次のいずれかの値になります。  

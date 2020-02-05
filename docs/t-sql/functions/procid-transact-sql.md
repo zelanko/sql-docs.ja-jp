@@ -25,10 +25,10 @@ ms.assetid: 0d4882c7-edb8-49b1-a470-2c7497b8998f
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 2e9f862ab78cbfd9db885ca2f0c7c9c0f483920d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67914313"
 ---
 # <a name="x40x40procid-transact-sql"></a>&#x40;&#x40;PROCID (Transact-SQL)
@@ -47,7 +47,7 @@ ms.locfileid: "67914313"
 ## <a name="return-types"></a>戻り値の型  
  **int**  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、`@@PROCID` を `OBJECT_NAME` 関数の入力パラメーターとして使用して、`RAISERROR` メッセージでストアド プロシージャの名前を返します。  
   
 ```  

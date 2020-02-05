@@ -24,10 +24,10 @@ ms.assetid: 141bc976-7631-49f6-82bd-a235028645b1
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 009029f16d85fa82867f37e075066701dacfc375
-ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73064689"
 ---
 # <a name="create-asymmetric-key-transact-sql"></a>CREATE ASYMMETRIC KEY (Transact-SQL)
@@ -114,7 +114,7 @@ CREATE ASYMMETRIC KEY asym_key_name
  ENCRYPTION BY PASSWORD = '*password*'  
  秘密キーを暗号化するパスワードを指定します。 この句が存在しない場合、秘密キーはデータベースのマスター キーで暗号化されます。 *password* は最大 128 文字です。 *password* は、Windows のパスワード ポリシーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを実行するコンピューターに要求する条件を満足する必要があります。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  "*非対称キー*" は、データベース レベルのセキュリティ保護可能なエンティティです。 既定の形式では、このエンティティには公開キーと秘密キーの両方が含まれます。 FROM 句を使用せずに CREATE ASYMMETRIC KEY を実行した場合は、新しいキー ペアが作成されます。 FROM 句を使用して CREATE ASYMMETRIC KEY を実行した場合は、ファイルからキー ペアがインポートされるか、アセンブリまたは DLL ファイルから公開キーがインポートされます。  
   
  既定では、秘密キーはデータベースのマスター キーによって保護されます。 データベースのマスター キーが作成されていない場合、秘密キーを保護するにはパスワードが必要です。  
@@ -124,10 +124,10 @@ CREATE ASYMMETRIC KEY asym_key_name
 ## <a name="permissions"></a>アクセス許可  
  データベースに対する CREATE ASYMMETRIC KEY 権限が必要です。 AUTHORIZATION 句を指定する場合は、データベース プリンシパルに対する IMPERSONATE 権限、またはアプリケーション ロールに対する ALTER 権限が必要です。 非対称キーを所有できるのは、Windows ログイン、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン、およびアプリケーション ロールだけです。 グループとロールによる非対称キーの所有はできません。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-creating-an-asymmetric-key"></a>A. 非対称キーを作成する  
- 次の例では、`RSA_2048` アルゴリズムを使って `PacificSales09` という非対称キーを作成し、パスワードで秘密キーを保護します。  
+ 次の例では、`PacificSales09` アルゴリズムを使って `RSA_2048` という非対称キーを作成し、パスワードで秘密キーを保護します。  
   
 ```sql  
 CREATE ASYMMETRIC KEY PacificSales09   
@@ -147,7 +147,7 @@ GO
 ```  
   
 ### <a name="c-creating-an-asymmetric-key-from-an-ekm-provider"></a>C. EKM プロバイダーから非対称キーを作成する  
- 次の例では、`EKM_Provider1` という拡張キー管理プロバイダーに格納されているキー ペアから非対称キー `EKM_askey1` を作成し、そのプロバイダー上の `key10_user1` というキーを作成します。  
+ 次の例では、`EKM_askey1` という拡張キー管理プロバイダーに格納されているキー ペアから非対称キー `EKM_Provider1` を作成し、そのプロバイダー上の `key10_user1` というキーを作成します。  
   
 ```sql  
 CREATE ASYMMETRIC KEY EKM_askey1   

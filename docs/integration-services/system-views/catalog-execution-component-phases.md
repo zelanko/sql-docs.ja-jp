@@ -11,10 +11,10 @@ ms.assetid: 07a9a163-4787-40f7-b371-ac5c6cb4b095
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9c4580c6b6b4dc6ea0d7ab9bb93f9614b90feb1d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295176"
 ---
 # <a name="catalogexecution_component_phases"></a>catalog.execution_component_phases 
@@ -38,7 +38,7 @@ ms.locfileid: "71295176"
 |end_time|**datetimeoffset(7)**|フェーズの終了時刻。|  
 |execution_path|**nvarchar(max)**|データ フロー タスクの実行パス。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  このビューには、Validate、Pre-Execute、Post-Execute、PrimeOutput、ProcessInput など、データ フロー コンポーネントの実行フェーズごとに 1 行表示されます。 各行には、特定の実行フェーズの開始時刻と終了時刻が表示されます。  
   
 ## <a name="example"></a>例  

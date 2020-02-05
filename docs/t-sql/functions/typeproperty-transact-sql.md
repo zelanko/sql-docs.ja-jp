@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6fc6da38a122f2397c41232cb1a0ec5ad0831cd5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68098633"
 ---
 # <a name="typeproperty-transact-sql"></a>TYPEPROPERTY (Transact-SQL)
@@ -50,9 +50,9 @@ TYPEPROPERTY (type , property)
 |プロパティ|[説明]|返される値|  
 |--------------|-----------------|--------------------|  
 |**AllowsNull**|データ型で NULL 値が許容されるかどうか。|1 = True<br /><br /> 0 = False<br /><br /> NULL = データ型が見つからない|  
-|**OwnerId**|型の所有者。<br /><br /> 注:スキーマの所有者は型の所有者である必要はありません。|NULL 以外 = 型所有者のデータベース ユーザー ID。<br /><br /> NULL = サポートされない型、または型の ID が無効。|  
+|**OwnerId**|型の所有者。<br /><br /> 注: スキーマの所有者はデータ型の所有者である必要はありません。|NULL 以外 = 型所有者のデータベース ユーザー ID。<br /><br /> NULL = サポートされない型、または型の ID が無効。|  
 |**[精度]**|データ型の有効桁数。|桁数または文字数。<br /><br /> -1 = **xml** または大きな値のデータ型<br /><br /> NULL = データ型が見つからない|  
-|**[スケール]**|データ型の小数点以下桁数。|データ型の小数点以下桁数<br /><br /> NULL = データ型が **numeric** でないか、見つからない|  
+|**スケール**|データ型の小数点以下桁数。|データ型の小数点以下桁数<br /><br /> NULL = データ型が **numeric** でないか、見つからない|  
 |**UsesAnsiTrim**|データ型の作成時に ANSI による埋め込みがオンであるかどうか。|1 = True<br /><br /> 0 = False<br /><br /> NULL = データ型が見つからないか、データ型が binary と文字列型のどちらでもない。|  
   
 ## <a name="return-types"></a>戻り値の型  
@@ -63,7 +63,7 @@ TYPEPROPERTY (type , property)
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、そのユーザーが所有している、または権限を与えられている、セキュリティ保護可能なアイテムのメタデータのみを表示できます。 つまり、オブジェクトに対する権限がユーザーに与えられていない場合、メタデータを生成する組み込み関数 (TYPEPROPERTY など) が NULL を返す可能性があります。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-identifying-the-owner-of-a-data-type"></a>A. データ型の所有者を特定する  
  次の例では、データ型の所有者を返します。  

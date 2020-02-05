@@ -30,10 +30,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 06f36ff1e8891ad3753f3899fd5696d5e6ea365a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67934440"
 ---
 # <a name="file-states"></a>ファイルの状態
@@ -45,7 +45,7 @@ ms.locfileid: "67934440"
 ## <a name="file-state-definitions"></a>ファイルの状態の定義  
  次の表では、ファイルの状態を定義しています。  
   
-|状態|定義|  
+|State|定義|  
 |-----------|----------------|  
 |ONLINE|すべての操作でファイルを使用できます。 データベース自体がオンラインである場合、プライマリ ファイル グループ内のファイルは常にオンラインです。 プライマリ ファイル グループ内のファイルがオンラインでない場合、データベースはオンラインにならないので、セカンダリ ファイルの状態は未定義となります。|  
 |OFFLINE|ファイルにアクセスできません。また、ファイルがディスク上に存在しない可能性があります。 ファイルは、ユーザーの明示的な操作によってオフラインになり、ユーザーが追加操作を行うまではオフラインのままになります。<br /><br /> **\*\* 注意 \*\*** ファイルが破損しているとき、ファイルの状態がオフラインに設定されることがありますが、オンラインに戻すことができます。 オフラインに設定されたファイルをオンラインに設定する唯一の方法は、バックアップからファイルを復元することです。 単一ファイルの復元の詳細については、「[RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)」を参照してください。 <br /><br /> データベースが完全または一括のログ復旧状態のとき、ファイルが削除されると、データベース ファイルもオフラインに設定されます。 sys.master_files のエントリは、drop_lsn 値を超えたためにトランザクション ログが切り詰められるまで残ります。 詳細については、「[トランザクション ログの切り捨て](../../relational-databases/logs/the-transaction-log-sql-server.md#Truncation)」を参照してください. |  

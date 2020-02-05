@@ -13,10 +13,10 @@ ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8dd50c08035690fd932dc717ae08d179b89b4ed2
-ms.sourcegitcommit: a92fa97e7d3132ea201e4d86c76ac39cd564cd3c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75325419"
 ---
 # <a name="solve-common-issues-with-json-in-sql-server"></a>SQL Server での JSON に関する一般的な問題を解決する
@@ -85,7 +85,7 @@ FOR JSON PATH
   
  FOR JSON クエリによって返された文字列は、プレーン テキストとしてエスケープされているようです。 これは、WITHOUT_ARRAY_WRAPPER が指定されている場合にのみ発生します。 どうして JSON オブジェクトとして扱われず、エスケープされないで結果に含まれないのですか?  
   
- **回答** 内側の `FOR JSON` で `WITHOUT_ARRAY_WRAPPER` オプションを指定すると、結果の JSON テキストは必ずしも有効な JSON ではなくなります。 そのため、外側の `FOR JSON` では、これをプレーン テキストと見なし、文字列をエスケープします。 JSON の出力が有効であることが確実な場合は、次の例のように、`JSON_QUERY` 関数を使用してそれをラップし、正しく書式設定された JSON に昇格させます。  
+ **回答** 内側の `WITHOUT_ARRAY_WRAPPER` で `FOR JSON` オプションを指定すると、結果の JSON テキストは必ずしも有効な JSON ではなくなります。 そのため、外側の `FOR JSON` では、これをプレーン テキストと見なし、文字列をエスケープします。 JSON の出力が有効であることが確実な場合は、次の例のように、`JSON_QUERY` 関数を使用してそれをラップし、正しく書式設定された JSON に昇格させます。  
   
 ```sql  
 SELECT 'Text' as myText,  

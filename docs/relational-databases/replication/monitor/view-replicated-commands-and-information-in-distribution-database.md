@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 9c20acec-8fab-4483-b9c1-dfe3768f85dd
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 5ef4e316e27ddd77ee126549e21fc3e5efb988cd
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 3794d249002fb6038be6a6d27d88e5f70e042104
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75322215"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286339"
 ---
 # <a name="view-replicated-commands-and-information-in-distribution-database"></a>レプリケートされたコマンドとディストリビューション データベースの情報の表示
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "75322215"
   
 1.  (省略可) パブリッシャーのパブリケーション データベースで [sp_helparticle](../../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)を実行します。 `@publication` および `@article` を指定します。 結果セットの **article id** の値を確認します。  
   
-2.  ディストリビューターのディストリビューション データベースで [sp_browsereplcmds](../../../relational-databases/system-stored-procedures/sp-browsereplcmds-transact-sql.md)を実行します。 (省略可) 手順 2 のアーティクル ID を `@article_id` に指定します。 (省略可) パブリケーション データベースの ID を `@publisher_database_id` に指定します。この ID は、[sys.databases](../../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) カタログ ビューの **database_id** 列で確認できます。  
+2.  ディストリビューターのディストリビューション データベースで [sp_browsereplcmds](../../../relational-databases/system-stored-procedures/sp-browsereplcmds-transact-sql.md)を実行します。 (省略可) 手順 2 のアーティクル ID を `@article_id` に指定します。 (省略可) パブリケーション データベースの ID を `@publisher_database_id` に指定します。この ID は、**sys.databases** カタログ ビューの [database_id](../../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 列で確認できます。  
   
 ## <a name="see-also"></a>参照  
  [プログラムによるレプリケーションの監視](../../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  

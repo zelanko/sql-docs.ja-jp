@@ -11,10 +11,10 @@ ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: de1dc6567603b0b16324aa798527a0b79282fa83
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095742"
 ---
 # <a name="import-json-documents-into-sql-server"></a>JSON ドキュメントの SQL Server へのインポート
@@ -110,7 +110,7 @@ WITH ( DATA_SOURCE = 'MyAzureBlobStorage');
 
 ## <a name="parse-json-documents-into-rows-and-columns"></a>JSON ドキュメントを行と列に解析する
 
-JSON ファイルを 1 つの値として読み取るのではなく、分析して、ファイル内の書籍とそのプロパティを行と列で返すこともできます。 次の例では、書籍の一覧を格納している[こちらのサイト](https://github.com/tamingtext/book/blob/master/apache-solr/example/exampledocs/books.json)の JSON ファイルを使います。
+JSON ファイルを 1 つの値として読み取るのではなく、解析して、ファイル内の書籍とそのプロパティを行と列で返すこともできます。 次の例では、書籍の一覧を格納している[こちらのサイト](https://github.com/tamingtext/book/blob/master/apache-solr/example/exampledocs/books.json)の JSON ファイルを使います。
 
 ### <a name="example-1"></a>例 1
 
@@ -145,11 +145,11 @@ SELECT book.*
 
 この例では、OPENROWSET(BULK) はファイルの内容を読み取り、出力用に定義されたスキーマでその内容を OPENJSON 関数に渡します。 OPENJSON は、列名を使用して、JSON オブジェクト内のプロパティを対応付けます。 たとえば、`price` プロパティは `price` 列として返され、float データ型に変換されます。 結果は次のようになります。
 
-|Id|[オブジェクト名]|price|pages_i|Author|
+|Id|Name|price|pages_i|Author|
 |---|---|---|---|---|
 |978-0641723445|The Lightning Thief|12.5|384|Rick Riordan| 
 |978-1423103349|The Sea of Monsters|6.49|304|Rick Riordan| 
-|978-1857995879|Sophie's World :The Greek Philosophers|3.07|64|Jostein Gaarder| 
+|978-1857995879|Sophie's World : The Greek Philosophers|3.07|64|Jostein Gaarder| 
 |978-1933988177|Lucene in Action, Second Edition|30.5|475|Michael McCandless|
 ||||||
 

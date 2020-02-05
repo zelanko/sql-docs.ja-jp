@@ -17,10 +17,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c305d9fd08ffcdd1c4b66d90d834c8f0fb6dead5
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74165758"
 ---
 # <a name="open-view-and-print-a-deadlock-file-in-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) でデッドロック ファイルを開く、表示、印刷する
@@ -30,13 +30,13 @@ ms.locfileid: "74165758"
   
 ## <a name="open-and-view-a-deadlock-file"></a>デッドロック ファイルを開いて表示する  
   
-1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で **[ファイル]** メニューの **[開く]** をポイントし、 **[ファイル]** を選択します。  
+1. **で**[ファイル][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] メニューの **[開く]** をポイントし、 **[ファイル]** を選択します。  
   
 2. **[ファイルを開く]** ダイアログ ボックスで、 **[ファイルの種類]** ボックスの一覧から [SQL デッドロック ファイル] を選択します。 これにより、デッドロック ファイルだけが一覧表示されます。  
   
 ## <a name="print-a-deadlock-file"></a>デッドロック ファイルを印刷する  
   
-1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で **[ファイル]** メニューの **[開く]** をポイントし、 **[ファイル]** を選択します。  
+1. **で**[ファイル][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] メニューの **[開く]** をポイントし、 **[ファイル]** を選択します。  
   
 2. **[ファイルを開く]** ダイアログ ボックスで、 **[ファイルの種類]** ボックスの一覧から [SQL デッドロック ファイル] を選択します。 これにより、デッドロック ファイルだけが一覧表示されます。  
   

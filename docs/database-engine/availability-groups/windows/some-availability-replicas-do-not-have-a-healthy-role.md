@@ -14,16 +14,16 @@ ms.assetid: 7ec5b337-7201-4a66-a541-7560f8b18784
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ce157b3d188f7841df4f7dc626928029219c3088
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68014075"
 ---
 # <a name="some-availability-replicas-do-not-have-a-healthy-role"></a>いくつかの可用性レプリカが、正常なロールを持っていません
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
-## <a name="introduction"></a>概要  
+## <a name="introduction"></a>はじめに  
   
 |||  
 |-|-|  

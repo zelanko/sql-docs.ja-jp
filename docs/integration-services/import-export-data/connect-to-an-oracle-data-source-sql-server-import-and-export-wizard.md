@@ -10,10 +10,10 @@ ms.assetid: b0bd1f5a-34dd-4be3-9ac8-f9f87727781b
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: faa8517c24a3db78ee7e7b53ff0151be93a87ba2
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71285433"
 ---
 # <a name="connect-to-an-oracle-data-source-sql-server-import-and-export-wizard"></a>Oracle データ ソースに接続する (SQL Server インポートおよびエクスポート ウィザード)
@@ -27,14 +27,14 @@ ms.locfileid: "71285433"
 > Oracle データベースに接続するための詳細な要件と前提条件については、この Microsoft の記事では説明しません。 この記事では、Oracle クライアント ソフトウェアをインストール済みであることと、ターゲットの Oracle データベースに正常に接続できることを前提としています。 詳細については、Oracle データベース管理者に問い合わせるか、Oracle のドキュメントを参照してください。
 
 ## <a name="connect-to-oracle-with-the-net-framework-data-provider-for-oracle"></a>.NET Framework Data Provider for Oracle を使用して Oracle に接続する
-ウィザードの **[データ ソースの選択]** ページまたは **[変換先の選択]** ページで **[.NET Framework Data Provider for Oracle]** を選択すると、そのページにプロバイダーのオプションのグループ化された一覧が表示されます。 これらの多くは、分かりにくい名前となじみのない設定です。 幸い、2、3 の情報を提供するだけで済みます。 他の設定の既定値は無視できます。
+ウィザードの **[データ ソースの選択]** ページまたは **[変換先の選択]** ページで **[.NET Framework Data Provider for Oracle]** を選択すると、そのページにプロバイダーのオプションのグループ化された一覧が表示されます。 これらの多くは、わかりにくい名前となじみのない設定です。 幸い、2、3 の情報を提供するだけで済みます。 他の設定の既定値は無視できます。
 
 > [!NOTE]
 > このデータ プロバイダーの接続オプションは、Oracle が変換元または変換先の場合でも同じです。 つまり、表示されるオプションは、ウィザードの **[データ ソースの選択]** ページまたは **[変換先の選択]** ページともに同じです。
 
 |必要な情報|.NET Framework Data Provider for Oracle プロパティ|
 |---|---|
-|サーバー名|**[データ ソース]**|
+|サーバー名|**データ ソース**|
 |認証 (ログイン) 情報|**ユーザー ID** と**パスワード**、または**統合セキュリティ**|
 
 リストの **[ConnectionString]** フィールドに接続文字列を入力する必要はありません。 Oracle サーバー名 (**データ ソース**) とログイン情報に個別の値を入力すると、ウィザードが個々のプロパティとその値から、接続文字列をアセンブルします。 
@@ -86,7 +86,7 @@ Oracle サーバーの名前。
 
 `SELECT host_name FROM v$instance`
 
-内の複数の
+or
 
 `SELECT sys_context('USERENV','SERVER_HOST') FROM dual`
 

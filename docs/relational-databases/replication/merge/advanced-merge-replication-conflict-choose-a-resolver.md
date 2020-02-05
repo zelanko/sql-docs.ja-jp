@@ -15,10 +15,10 @@ ms.assetid: b7dec3fa-d9d9-409d-b946-f9b9a3202829
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3b93c9b438a22cba125bb7487b393371b4ffd8c1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68033441"
 ---
 # <a name="advanced-merge-replication-conflict---choose-a-resolver"></a>マージ レプリケーションの競合の詳細 - 競合回避モジュールの選択
@@ -43,8 +43,8 @@ ms.locfileid: "68033441"
 |競合の結果データが元の競合データと異なっている必要がある場合|新しい値を計算するアーティクル競合回避モジュールを使用する。|  
   
 ## <a name="see-also"></a>参照  
- [論理レコードの競合の検出および解決](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-resolving-in-logical-record.md)   
- [マージ レプリケーションの競合検出および解決の詳細](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
+ [Detecting and Resolving Conflicts in Logical Records](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-resolving-in-logical-record.md)   
+ [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [データの再パブリッシュ](../../../relational-databases/replication/republish-data.md)  
   
   

@@ -14,10 +14,10 @@ ms.assetid: 929c5e15-d087-438d-b1f2-aa97c5f8bff8
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 0560e17a7ab582b52b4f0a5db822dbd2ab5fa5f5
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75235375"
 ---
 # <a name="select-databases-page-new-availability-group-wizard-and-add-database-wizard"></a>[データベースの選択] ページ (新しい可用性グループ ウィザードおよびデータベース追加ウィザード)
@@ -27,7 +27,7 @@ ms.locfileid: "75235375"
 ##  <a name="PageOptions"></a> データベース オプションの選択  
  **[この SQL Server のインスタンス上のユーザー データベース]** グリッドには、すべてのローカル ユーザー データベースが表示されます。 次の列で構成されます。  
   
- **Name**  
+ **名前**  
  ローカル ユーザー データベースの名前が表示されます。  
 
  **[サイズ]**  

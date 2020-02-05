@@ -14,10 +14,10 @@ ms.assetid: 2e1c6c64-5ce7-4357-98c7-ac7763a9f9de
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e7e2e655be19ac8f84378930e1dfada525007504
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68013162"
 ---
 # <a name="agent-xps-server-configuration-option"></a>Agent XP サーバー構成オプション
@@ -30,7 +30,7 @@ ms.locfileid: "68013162"
 > [!NOTE]  
 >  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] のオブジェクト エクスプローラーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント サービスの状態にかかわらず、これらの拡張ストアド プロシージャを有効にしない限り、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのノードのコンテンツは表示されません。  
   
- 可能な値は次のとおりです。  
+ 指定できる値は、  
   
 -   **0**は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの拡張ストアド プロシージャを使用できないことを示します (既定)。  
   

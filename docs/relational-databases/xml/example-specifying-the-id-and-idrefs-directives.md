@@ -1,5 +1,5 @@
 ---
-title: '例: ID ディレクティブと IDREFS ディレクティブの指定 | Microsoft Docs'
+title: '例 : ID ディレクティブと IDREFS ディレクティブの指定 | Microsoft Docs'
 ms.custom: fresh2019may
 ms.date: 05/22/2019
 ms.prod: sql
@@ -14,13 +14,13 @@ ms.assetid: 99b9f0d8-ecbb-4225-859f-881066c09785
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1574f3336ae06b8bfb368de7eff37d1bc4286af0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006691"
 ---
-# <a name="example-specifying-the-id-and-idrefs-directives"></a>例:ID ディレクティブと IDREFS ディレクティブの指定
+# <a name="example-specifying-the-id-and-idrefs-directives"></a>例 : ID ディレクティブと IDREFS ディレクティブの指定
 
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
@@ -39,7 +39,7 @@ ms.locfileid: "68006691"
 </Customer>  
 ```  
   
-`<Customer>` 要素の `SalesOrderIDList` 属性は、複数の値を指定できる属性であり、`<SalesOrder>` 要素の `SalesOrderID` 属性を参照しています。 このリンクを確立するには、`SalesOrderID` 属性を `ID` 型として宣言し、`<Customer>` 要素の `SalesOrderIDList` 属性を `IDREFS` 型として宣言する必要があります。 各顧客が複数の注文を発注することが考えられるので、 `IDREFS` 型を使用しています。
+`SalesOrderIDList` 要素の `<Customer>` 属性は、複数の値を指定できる属性であり、`SalesOrderID` 要素の `<SalesOrder>` 属性を参照しています。 このリンクを確立するには、`SalesOrderID` 属性を `ID` 型として宣言し、`SalesOrderIDList` 要素の `<Customer>` 属性を `IDREFS` 型として宣言する必要があります。 各顧客が複数の注文を発注することが考えられるので、 `IDREFS` 型を使用しています。
   
  **IDREFS** 型の要素も、複数の値を保持できます。 このため、別の SELECT 句を使用して、同じタグ、親、およびキー列の情報を再利用する必要があります。 さらに、 `ORDER BY` IDREFS **値を構成する一連の行が、それぞれの親要素の直後にグループ化された状態で表示されるように、** 句を指定します。  
   

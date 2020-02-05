@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f899a8fc1ad5a316784a83cb13f29acb84a01b2b
-ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74412552"
 ---
 # <a name="plan-your-adoption-of-in-memory-oltp-features-in-sql-server"></a>SQL Server でのインメモリ OLTP 機能の採用計画
@@ -204,7 +204,7 @@ IDENTITY 列を再シードするために[DBCC CHECKIDENT](../../t-sql/database
 
 メモリ最大化テーブルを初めて実装する際に、多くの場合、従来の B ツリー非クラスター化インデックスを選択するのが賢明かつ簡単です。 後で、アプリケーションのパフォーマンスを確認してから、インデックスの別の種類への切り替えを検討できます。
 
-次の特殊な 2 種類のインデックスでは、メモリ最適化テーブルのコンテキストでのディスカッションが必要になります:ハッシュ インデックスと列ストア インデックス。
+特殊な 2 種類のインデックス (ハッシュ インデックスと列ストア インデックス) では、メモリ最適化テーブルのコンテキストでのディスカッションが必要になります。
 
 メモリ最適化テーブルのインデックスの概要については、次の情報を参照してください。
 
@@ -283,7 +283,7 @@ Transact-SQL の特定の要素に対する制限事項に加えて、ネイテ�
 
 
 
-## <a name="f-application-design-transactions-and-retry-logic"></a>F. アプリケーション デザイン:トランザクションと再試行ロジック
+## <a name="f-application-design-transactions-and-retry-logic"></a>F. アプリケーション デザイン: トランザクションと再試行ロジック
 
 メモリ最適化テーブルに関係するトランザクションは、同じテーブルに関係する別のトランザクションに依存できます。 従属トランザクション数が許容最大値を超えた場合、すべての従属トランザクションが失敗します。
 

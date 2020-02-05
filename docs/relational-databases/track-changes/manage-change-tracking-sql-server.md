@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e129ce11414f27c5502279b392f88204b502bd32
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095415"
 ---
 # <a name="manage-change-tracking-sql-server"></a>変更の追跡の管理 (SQL Server)
@@ -54,7 +54,7 @@ ms.locfileid: "74095415"
 ## <a name="understanding-change-tracking-overhead"></a>変更の追跡のオーバーヘッドについて  
  テーブルの変更の追跡を有効にすると、一部の管理操作が影響を受けます。 次の表に、考慮する必要がある操作と影響を示します。  
   
-|演算|変更の追跡が有効になっている場合|  
+|操作|変更の追跡が有効になっている場合|  
 |---------------|-------------------------------------|  
 |DROP TABLE|削除するテーブルのすべての変更追跡情報が削除されます。|  
 |ALTER TABLE DROP CONSTRAINT|PRIMARY KEY 制約を削除しようとすると失敗します。 PRIMARY KEY 制約を削除する前に、変更の追跡を無効にする必要があります。|  
@@ -108,7 +108,7 @@ sp_spaceused 'sys.syscommittab'
  [データ変更の追跡 &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [[データベースのプロパティ] &#40;[変更の追跡] ページ&#41;](../../relational-databases/databases/database-properties-changetracking-page.md)   
- [ALTER DATABASE SET のオプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
+ [ALTER DATABASE SET オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
  [sys.change_tracking_databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-databases.md)   
  [sys.change_tracking_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-tables.md)   
  [データ変更の追跡 &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   

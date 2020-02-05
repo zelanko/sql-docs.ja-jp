@@ -13,10 +13,10 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: b57d3443ab83ead35d92615ad6c718cde6977097
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68000225"
 ---
 # <a name="create-a-domain-independent-availability-group"></a>ドメインに依存しない可用性グループを作成する
@@ -127,7 +127,7 @@ Windows Server 2016 では、Active Directory がデタッチされたクラス�
    ```
 
 10. プライマリになる可能性があるレプリカでは、関連するすべてのセカンダリ レプリカでログインとユーザーを作成します。
-11. 各インスタンスで、作成されたログインとユーザーがある他のインスタンスに証明書を復元します。 プライマリ レプリカで、すべてのセカンダリ レプリカの証明書を復元します。 各セカンダリで、プライマリ レプリカの証明書を復元します。また、プライマリになる可能性があるその他のレプリカにも復元します。 例:
+11. 各インスタンスで、作成されたログインとユーザーがある他のインスタンスに証明書を復元します。 プライマリ レプリカで、すべてのセカンダリ レプリカの証明書を復元します。 各セカンダリで、プライマリ レプリカの証明書を復元します。また、プライマリになる可能性があるその他のレプリカにも復元します。 次に例を示します。
 
    ```sql
    CREATE CERTIFICATE [InstanceB_Cert]
@@ -160,7 +160,7 @@ Windows Server 2016 では、Active Directory がデタッチされたクラス�
 14. 基になる証明書とエンドポイントのセキュリティが構成されたら、指定した方法を使用して、可用性グループを作成します。 セカンダリの初期化に使用するバックアップを手動でバックアップ、コピー、および復元するか、または[自動シード処理](automatically-initialize-always-on-availability-group.md)を使用することをお勧めします。 セカンダリ レプリカを初期化するためのウィザードの使用には、サーバー メッセージ ブロック (SMB) ファイルが関係し、ドメインに参加していないワークグループ クラスターを使用する場合は動作しない可能性があります。
 15. リスナーを作成する場合は、その名前と IP アドレスの両方が DNS に登録されていることを確認します。
 
-### <a name="next-steps"></a>次の手順 
+### <a name="next-steps"></a>次のステップ 
 
 - [可用性グループ ウィザードの使用 (SQL Server Management Studio)](use-the-availability-group-wizard-sql-server-management-studio.md)
 

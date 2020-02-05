@@ -18,10 +18,10 @@ ms.assetid: a9e44748-4a9e-4179-abc4-7631597be5a7
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: a8aaa21498c95c215de5e5a49f9ced8089b4c71e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68223661"
 ---
 # <a name="mindbcompatibilitylevel-geography-data-type"></a>MinDbCompatibilityLevel (geography データ型)
@@ -41,10 +41,10 @@ ms.locfileid: "68223661"
   
  CLR の戻り値の型: **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  `MinDbCompatibilityLevel()` を使用すると、データベースで互換性レベルを変更する前に、空間オブジェクトの互換性をテストできます。 無効な **geography** 型を入力すると 110 が返されます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-testing-circularstring-type-for-compatibility-with-compatibility-level-110"></a>A. 互換性レベル 110 で CircularString 型の互換性をテストする  
  次の例では、`CircularString` インスタンスの、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] との互換性がテストされます。  

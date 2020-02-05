@@ -22,10 +22,10 @@ ms.assetid: a4bb055a-a538-4db9-a6fb-550d1eabfa18
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: ad8f9e49ea1dd22184384b337d036991d9dc7f9d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68044109"
 ---
 # <a name="drop-partition-function-transact-sql"></a>DROP PARTITION FUNCTION (Transact-SQL)
@@ -46,7 +46,7 @@ DROP PARTITION FUNCTION partition_function_name [ ; ]
  *partition_function_name*  
  削除するパーティション関数の名前です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  現在、パーティション関数を使用しているパーティション構成がない場合にのみ、パーティション関数を削除できます。 パーティション関数を使用するパーティション構成がある場合、DROP PARTITION FUNCTION でエラーが返されます。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -58,7 +58,7 @@ DROP PARTITION FUNCTION partition_function_name [ ; ]
   
 -   パーティション関数が作成されたデータベースのサーバーでの CONTROL SERVER または ALTER ANY DATABASE 権限。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、パーティション関数 `myRangePF` が現在のデータベースで作成されたことを前提としています。  
   
 ```  

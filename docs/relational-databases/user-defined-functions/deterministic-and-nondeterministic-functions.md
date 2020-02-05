@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8c7fed197491d26c4aaad4b4d09ba480d2d7eb82
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68123598"
 ---
 # <a name="deterministic-and-nondeterministic-functions"></a>決定的関数と非決定的関数
@@ -49,13 +49,13 @@ ms.locfileid: "68123598"
 |CEILING|ISNULL|SQUARE|  
 |COALESCE|ISNUMERIC|SQRT|  
 |COS|LOG|TAN|  
-|COT|LOG10|[YEAR]|  
+|COT|LOG10|YEAR|  
 |DATALENGTH|MONTH||  
 |[DATEADD]|NULLIF||  
   
  次の関数は必ず決定的関数になるとは限りませんが、決定的な方法で指定されている場合は、インデックス付きビューまたは計算列のインデックスで使用できます。  
   
-|機能|コメント|  
+|Function|説明|  
 |--------------|--------------|  
 |すべての集計関数|OVER 句および ORDER BY 句で指定されていない限り、集計関数はすべて決定的です。 集計関数の一覧については、「[集計関数 &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)」を参照してください。|  
 |CAST|**datetime**、 **smalldatetime**、または **sql_variant**と共に使用しない場合は、決定的関数になります。|  

@@ -13,10 +13,10 @@ ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 3e4aac74ac35fc5d75320b420e85b130be110340
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74096035"
 ---
 # <a name="use-openjson-with-the-default-schema-sql-server"></a>既定のスキーマを使用する OPENJSON の使用 (SQL Server)
@@ -36,9 +36,9 @@ FROM OPENJSON('{"name":"John","surname":"Doe","age":45}')
   
  **結果**  
   
-|Key|[値]|  
+|Key|値|  
 |---------|-----------|  
-|NAME|John|  
+|name|John|  
 |姓|Doe|  
 |age|45|  
   
@@ -52,13 +52,13 @@ FROM OPENJSON('["en-GB", "en-UK","de-AT","es-AR","sr-Cyrl"]')
   
  **結果**  
   
-|Key|[値]|  
+|Key|値|  
 |---------|-----------|  
 |0|en-GB|  
 |1|en-UK|  
 |2|de-AT|  
 |3|es-AR|  
-|4|sr という|  
+|4|sr-Cyrl|  
   
 ## <a name="example---convert-json-to-a-temporary-table"></a>例 - JSON を一時テーブルに変換する  
  次のクエリのすべてのプロパティを返します、 **情報** オブジェクトです。  
@@ -83,13 +83,13 @@ SELECT *
 FROM OPENJSON(@json,N'lax $.info')
 ```  
   
- **[結果]**  
+ **結果**  
   
-|Key|[値]|型|  
+|Key|値|種類|  
 |---------|-----------|----------|  
 |型|1|0|  
 |address|{ "town":"Bristol", "county":"Avon", "country":"England" }|5|  
-|タグ|[「スポーツ」、「Water ポーロ」]|4|  
+|tags|[「スポーツ」、「Water ポーロ」]|4|  
   
 ## <a name="example---combine-relational-data-and-json-data"></a>例 - リレーショナル データと JSON データを結合する  
  次の例では、JSON 形式で SalesOrderReasons の配列を含む SalesReason テキスト列が、SalesOrderHeader テーブルにあります。 SalesOrderReasons オブジェクトには、"製造元" と "品質" のようなプロパティが含まれます。 この例では、販売理由が別個の子テーブルに含まれているかのように販売理由の JSON 配列を展開して、すべての販売注文行を関連する販売理由に結合するレポートを作成します。  

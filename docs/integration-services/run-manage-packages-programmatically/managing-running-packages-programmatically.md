@@ -14,10 +14,10 @@ ms.assetid: 0e91f4ac-6f29-40d7-8c28-9b82e4802c35
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ae990092e930bb1f017e10c0b6e1f07917e3a446
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71281970"
 ---
 # <a name="managing-running-packages-programmatically"></a>プログラムによるパッケージの実行の管理
@@ -29,7 +29,7 @@ ms.locfileid: "71281970"
   
  パッケージの監視の詳細については、「[パッケージの管理 &#40;SSIS サービス&#41;](../../integration-services/service/package-management-ssis-service.md)」を参照してください。  
   
- このトピックで説明するすべてのメソッドには、**Microsoft.SqlServer.ManagedDTS** アセンブリへの参照が必要です。 新しいプロジェクトに参照を追加した後、**using** または **Imports** ステートメントを使って <xref:Microsoft.SqlServer.Dts.Runtime> 名前空間をインポートします。  
+ このトピックで説明するすべてのメソッドには、**Microsoft.SqlServer.ManagedDTS** アセンブリへの参照が必要です。 新しいプロジェクトに参照を追加した後、<xref:Microsoft.SqlServer.Dts.Runtime>using**または**Imports**ステートメントを使って** 名前空間をインポートします。  
   
 > [!IMPORTANT]  
 >  SSIS パッケージ ストアを操作するための <xref:Microsoft.SqlServer.Dts.Runtime.Application> クラスのメソッドでは、"."、localhost、またはローカル サーバーのサーバー名のみがサポートされます。 "(local)" は使用できません。  

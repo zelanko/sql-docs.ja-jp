@@ -18,16 +18,16 @@ ms.assetid: 3efdc48a-8064-4ea6-a828-3fbf758ef97c
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: df42a2d0f7dea2e32df61670aff88374a6fcff54
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75558066"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>Azure Key Vault を使用する拡張キー管理 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 用の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コネクタを使用すると、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の暗号化において、Azure Key Vault サービスを[拡張キー管理 &#40;EKM&#41;](../../../relational-databases/security/encryption/extensible-key-management-ekm.md) プロバイダーに使用して、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の暗号化キーを保護することができます。  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 用の [!INCLUDE[msCoName](../../../includes/msconame-md.md)] コネクタを使用すると、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の暗号化において、Azure Key Vault サービスを[拡張キー管理 &#40;EKM&#41;](../../../relational-databases/security/encryption/extensible-key-management-ekm.md) プロバイダーに使用して、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の暗号化キーを保護することができます。  
   
  このトピックでは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コネクタについて説明します。 その他の情報については、「 [Azure Key Vault を使用した拡張キー管理のセットアップ手順](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)」、「 [SQL 暗号化機能への SQL Server コネクタの使用](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)」、「 [SQL Server コネクタのメンテナンスとトラブルシューティング](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)」を参照してください。  
   

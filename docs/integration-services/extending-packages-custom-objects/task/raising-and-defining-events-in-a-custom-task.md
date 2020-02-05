@@ -25,10 +25,10 @@ ms.assetid: e0898aa1-e90c-4c4e-99d4-708a76efddfd
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 461750eee78c631adef9b012b971c9bab60bf29f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71286893"
 ---
 # <a name="raising-and-defining-events-in-a-custom-task"></a>カスタム タスクでのイベントの発生と定義
@@ -41,7 +41,7 @@ ms.locfileid: "71286893"
  <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> インターフェイスでは、<xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> によってタスクの代わりに発生するイベントのセットが別に定義されています。 <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> は、検証および実行の前後にイベントを発生させます。これに対してタスクは、実行および検証中にイベントを発生させます。  
   
 ## <a name="creating-custom-events"></a>カスタム イベントの作成  
- カスタム タスクの開発者は、オーバーライドした <xref:Microsoft.SqlServer.Dts.Runtime.EventInfo> メソッドの実装に新しい <xref:Microsoft.SqlServer.Dts.Runtime.Task.InitializeTask%2A> を作成することにより、新しいカスタム イベントを定義できます。 <xref:Microsoft.SqlServer.Dts.Runtime.EventInfo> が作成されると、<xref:Microsoft.SqlServer.Dts.Runtime.EventInfos.Add%2A> メソッドを使用して **EventInfos** コレクションに追加されます。 次に、<xref:Microsoft.SqlServer.Dts.Runtime.EventInfos.Add%2A> メソッドのメソッド シグネチャを示します。  
+ カスタム タスクの開発者は、オーバーライドした <xref:Microsoft.SqlServer.Dts.Runtime.EventInfo> メソッドの実装に新しい <xref:Microsoft.SqlServer.Dts.Runtime.Task.InitializeTask%2A> を作成することにより、新しいカスタム イベントを定義できます。 <xref:Microsoft.SqlServer.Dts.Runtime.EventInfo> が作成されると、**メソッドを使用して**EventInfos<xref:Microsoft.SqlServer.Dts.Runtime.EventInfos.Add%2A> コレクションに追加されます。 次に、<xref:Microsoft.SqlServer.Dts.Runtime.EventInfos.Add%2A> メソッドのメソッド シグネチャを示します。  
   
  `public void Add(string eventName, string description, bool allowEventHandlers, string[] parameterNames, TypeCode[] parameterTypes, string[] parameterDescriptions);`  
   

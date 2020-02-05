@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: dc1e6d1021e1e7cf30a683d8c81c625a56b9766c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68127055"
 ---
 # <a name="view-or-change-the-properties-of-a-database"></a>データベースのプロパティの表示または変更
@@ -32,7 +32,7 @@ ms.locfileid: "68127055"
   
 -   **作業を開始する準備:**  
   
-     [推奨事項](#Recommendations)  
+     [Recommendations (推奨事項)](#Recommendations)  
   
      [セキュリティ](#Security)  
   
@@ -42,7 +42,7 @@ ms.locfileid: "68127055"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Recommendations"></a> 推奨事項  
   
@@ -64,7 +64,7 @@ ms.locfileid: "68127055"
 3.  **[データベースのプロパティ]** ダイアログ ボックスで、任意のページを選択して、対応する情報を表示します。 たとえば、データおよびログ ファイルの情報を表示するには、 **[ファイル]** ページをクリックします。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
- Transact-SQL を使用すると、さまざまな方法でデータベースのプロパティを表示および変更できます。 データベースのプロパティを表示するには、 [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md) 関数と [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) カタログ ビューを使用します。 データベースのプロパティを変更するには、自分の環境に合う ALTER DATABASE ステートメントのバージョン ([ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md) または [ALTER DATABASE (Azure SQL データベース)](../../t-sql/statements/alter-database-azure-sql-database.md)) を使用できます。 データベース スコープのプロパティを表示するには、 [sys.database_scoped_configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) カタログ ビューを使用します。データベース スコープのプロパティを変更するには、 [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) ステートメントを使用します。  
+ Transact-SQL を使用すると、さまざまな方法でデータベースのプロパティを表示および変更できます。 データベースのプロパティを表示するには、 [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md) 関数と [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) カタログ ビューを使用します。 データベースのプロパティを変更するには、自分の環境に合う ALTER DATABASE ステートメントのバージョン ([ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md) または [ALTER DATABASE (Azure SQL データベース ) ](../../t-sql/statements/alter-database-azure-sql-database.md)) を使用できます。 データベース スコープのプロパティを表示するには、 [sys.database_scoped_configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) カタログ ビューを使用します。データベース スコープのプロパティを変更するには、 [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) ステートメントを使用します。  
   
 #### <a name="to-view-a-property-of-a-database-by-using-the-databasepropertyex-function"></a>DATABASEPROPERTYEX 関数を使用してデータベースのプロパティを表示するには  
   
@@ -91,7 +91,7 @@ ms.locfileid: "68127055"
     FROM sys.databases WHERE name = 'AdventureWorks2012';  
     ```  
   
-#### <a name="to-view-the-properties-of-a-database-scoped-configuration-by-querying-sysdatabasesscopedconfiguration"></a>sys.databases_scoped_configuration を照会してデータベース スコープの構成のプロパティを表示するには  
+#### <a name="to-view-the-properties-of-a-database-scoped-configuration-by-querying-sysdatabases_scoped_configuration"></a>sys.databases_scoped_configuration を照会してデータベース スコープの構成のプロパティを表示するには  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)] に接続し、プロパティを表示するデータベースに接続します。  
   

@@ -16,10 +16,10 @@ ms.assetid: f1dd6a79-698b-4e31-b923-6bfc3ea0b617
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 04d0864d07eeb741690df26fb9aee02c3f0bc547
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75254170"
 ---
 # <a name="database-mirroring-and-sql-server-failover-cluster-instances"></a>データベース ミラーリングと SQL Server フェールオーバー クラスター インスタンス
@@ -45,7 +45,7 @@ ms.locfileid: "75254170"
   
  ![クラスターでのフェールオーバー](../../database-engine/database-mirroring/media/dbm-and-failover-clustering.gif "クラスターでのフェールオーバー")  
   
- ミラーリング セッションを構成する 3 つのサーバー インスタンスが、それぞれ異なる次のクラスターに配置されています: **Cluster_A**、**Cluster_B**、**Cluster_C**。 各クラスターでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定のインスタンスが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスとして実行されています。 ミラーリング セッションが開始されると、 **Cluster_A** のフェールオーバー クラスター インスタンスはプリンシパル サーバー、 **Cluster_B** のフェールオーバー クラスター インスタンスはミラー サーバー、 **Cluster_C** のフェールオーバー クラスター インスタンスはミラーリング監視サーバーとして機能します。 ここで、 **Cluster_A** でのアクティブなノードで障害が発生し、プリンシパル サーバーが利用できなくなったとします。  
+ ミラーリング セッションを構成する 3 つのサーバー インスタンスが、それぞれ異なるクラスター **Cluster_A**、 **Cluster_B**、および **Cluster_C**に配置されています。 各クラスターでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定のインスタンスが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスとして実行されています。 ミラーリング セッションが開始されると、 **Cluster_A** のフェールオーバー クラスター インスタンスはプリンシパル サーバー、 **Cluster_B** のフェールオーバー クラスター インスタンスはミラー サーバー、 **Cluster_C** のフェールオーバー クラスター インスタンスはミラーリング監視サーバーとして機能します。 ここで、 **Cluster_A** でのアクティブなノードで障害が発生し、プリンシパル サーバーが利用できなくなったとします。  
   
  クラスターがフェールオーバーを行う前に、ミラーリング監視サーバーを併用することにより、プリンシパル サーバーが使用できなくなったことがミラー サーバーによって検出されます。 ミラー サーバーは、可能な限り短時間でこのサーバーにあるデータベースをロールフォワードし、プリンシパル データベースとしてこれをオンラインにします。 **Cluster_A** のフェールオーバーが完了すると、これまでのプリンシパル サーバーは現在はミラー サーバーになり、このサーバーのデータベースが **Cluster_B**の現在のプリンシパル データベースと同期されます。  
   

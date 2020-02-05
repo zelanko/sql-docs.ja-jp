@@ -12,10 +12,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: aa54440c5b1a506ce9c218dc7213383e0ff43ca0
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72906866"
 ---
 # <a name="delete-user-defined-functions"></a>ユーザー定義関数の削除
@@ -70,7 +70,7 @@ ms.locfileid: "72906866"
 5.  **[オブジェクトの削除]** ダイアログ ボックスで **[OK]** をクリックします。  
 
     > [!IMPORTANT]  
-    >  **[オブジェクトの削除]** ダイアログ ボックスの **[依存関係の表示]** をクリックして **[_function\_name_ の依存関係]** ダイアログ ボックスを開きます。 関数に依存するすべてのオブジェクトと、関数が依存するすべてのオブジェクトが表示されます。  
+    >  **[オブジェクトの削除]** ダイアログ ボックスの **[依存関係の表示]** をクリックして _[\_function_name **の依存関係]** ダイアログ ボックスを開きます。 関数に依存するすべてのオブジェクトと、関数が依存するすべてのオブジェクトが表示されます。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   

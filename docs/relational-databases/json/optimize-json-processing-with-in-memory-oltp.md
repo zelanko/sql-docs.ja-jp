@@ -11,10 +11,10 @@ ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a2b02d5b987958abc8dd97e48f86e7b44636efad
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74096078"
 ---
 # <a name="optimize-json-processing-with-in-memory-oltp"></a>インメモリ OLTP を使用した JSON の処理の最適化
@@ -23,7 +23,7 @@ ms.locfileid: "74096078"
 SQL Server と Azure SQL Database では、JSON 形式のテキストを使用できます。 JSON データを処理するクエリのパフォーマンスを上げるには、標準の文字列型の列 (NVARCHAR 型) を使用してメモリ最適化テーブルに JSON ドキュメントを格納します。 JSON データをメモリ最適化テーブルに格納すると、ロックはされることがなく、データはインメモリでアクセスされるので、クエリのパフォーマンスが向上します。
 
 ## <a name="store-json-in-memory-optimized-tables"></a>メモリ最適化テーブルへの JSON の格納
-次に、`Tags` と `Data` という 2 つの JSON 列があるメモリ最適化 `Product` テーブルの例を示します。
+次に、`Product` と `Tags` という 2 つの JSON 列があるメモリ最適化 `Data` テーブルの例を示します。
 
 ```sql
 CREATE SCHEMA xtp;
@@ -49,7 +49,7 @@ SQL Server と Azure SQL Database の機能を使用すると、既存のイン�
 ## <a name="validate"></a> JSON の列の検証
 SQL Server と Azure SQL Database では、文字列の列に格納された JSON ドキュメントの内容を検証するネイティブ コンパイルの CHECK 制約を追加できます。 ネイティブ コンパイルされた JSON の CHECK 制約では、メモリ最適化テーブルに格納されている JSON テキストの書式が正しいことを保証します。
 
-次の例では、JSON 列 `Tags` を含む `Product` テーブルを作成します。 `Tags` 列には、`ISJSON` 関数を使用して列の JSON テキストを検証する、CHECK 制約が設定されています。
+次の例では、JSON 列 `Product` を含む `Tags` テーブルを作成します。 `Tags` 列には、`ISJSON` 関数を使用して列の JSON テキストを検証する、CHECK 制約が設定されています。
 
 ```sql
 DROP TABLE IF EXISTS xtp.Product;

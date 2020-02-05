@@ -13,10 +13,10 @@ ms.assetid: d188a819-731f-4029-98aa-780d3299a0ce
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 6f0600f663e00e0318a933e7824f3e0b78166f55
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68087199"
 ---
 # <a name="manage-policy-categories"></a>ポリシー カテゴリの管理
@@ -43,7 +43,7 @@ ms.locfileid: "68087199"
   
 -   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]を使用している場合、 **[データベースのサブスクリプションの要求]** チェック ボックスがオフになっているときには、サーバーの関連部分 (1 つ以上のデータベースやテーブルなど) にポリシー カテゴリを個別に適用する必要があります。  
   
--   存在しないポリシー カテゴリを指定すると、新しいポリシー カテゴリが作成され、ストアド プロシージャの実行時にすべてのデータベースに対してサブスクリプションが要求されます。 新しいカテゴリに要求されたサブスクリプションをクリアすると、そのサブスクリプションは、*target_object* で指定したデータベースにのみ適用されます。 要求されたサブスクリプションの設定を変更する方法の詳細については、「[sp_syspolicy_update_policy_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-update-policy-category-transact-sql.md)」を参照してください。  
+-   存在しないポリシー カテゴリを指定すると、新しいポリシー カテゴリが作成され、ストアド プロシージャの実行時にすべてのデータベースに対してサブスクリプションが要求されます。 新しいカテゴリに要求されたサブスクリプションをクリアすると、そのサブスクリプションは、 *target_object*で指定したデータベースにのみ適用されます。 要求されたサブスクリプションの設定を変更する方法の詳細については、「[sp_syspolicy_update_policy_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-update-policy-category-transact-sql.md)」を参照してください。  
   
 ###  <a name="Security"></a> セキュリティ  
   
@@ -62,7 +62,7 @@ ms.locfileid: "68087199"
   
      **[ポリシー カテゴリの管理]** ダイアログ ボックスには、次の情報が表示されます。  
   
-     **[名前]**  
+     **名前**  
      ポリシー カテゴリの名前です。  
   
      **[データベースのサブスクリプションの要求]**  

@@ -1,5 +1,5 @@
 ---
-title: '例: XMLTEXT ディレクティブの指定 | Microsoft Docs'
+title: '例 : XMLTEXT ディレクティブの指定 | Microsoft Docs'
 ms.custom: ''
 ms.date: 04/05/2017
 ms.prod: sql
@@ -13,13 +13,13 @@ ms.assetid: e78008ec-51e8-4fd1-b86f-1058a781de17
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 52e3d6ea8cff9d1984ee11a510a6c21833034c29
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006676"
 ---
-# <a name="example-specifying-the-xmltext-directive"></a>例:XMLTEXT ディレクティブの指定
+# <a name="example-specifying-the-xmltext-directive"></a>例: XMLTEXT ディレクティブの指定
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   この例では、EXPLICIT モードを使用した **ステートメントで、** XMLTEXT `SELECT` ディレクティブによりオーバーフロー列のデータを指定する方法を示します。  
   
@@ -36,7 +36,7 @@ INSERT INTO Person VALUES
    ,('P3','Joe',N'<SomeTag attr3="data" PersonID="P">content</SomeTag>');  
 ```  
   
- このクエリでは、 `Person` テーブルから列を取得します。 `Overflow` 列には *AttributeName* が指定されていませんが、ユニバーサル テーブルの列名の一部として、  *ディレクティブ* `XMLTEXT` が設定されています。  
+ このクエリでは、 `Person` テーブルから列を取得します。 `Overflow` 列には *AttributeName* が指定されていませんが、ユニバーサル テーブルの列名の一部として、  *ディレクティブ*`XMLTEXT` が設定されています。  
   
 ```  
 SELECT 1 as Tag, NULL as parent,  
@@ -49,9 +49,9 @@ FOR XML EXPLICIT;
   
  結果の XML ドキュメントは次のようになります。  
   
--   `Overflow` 列には *AttributeName* が指定されていませんが、`xmltext` ディレクティブが指定されているので、<`overflow`> 要素の属性は、囲み要素である <`Parent`> の属性リストに追加されます。  
+-   *列には*AttributeName`Overflow` が指定されていませんが、`xmltext` ディレクティブが指定されているので、<`overflow`> 要素の属性は、囲み要素である <`Parent`> の属性リストに追加されます。  
   
--   <`xmltext`> 要素の `PersonID` 属性は、同じ要素レベルで取得される `PersonID` 属性と競合するので、<`xmltext`> 要素の属性は無視されます。これは、`PersonID` 属性の値が NULL であっても同じです。 一般的に、属性はオーバーフローに含まれる同じ名前の属性をオーバーライドします。  
+-   <`PersonID`> 要素の `xmltext` 属性は、同じ要素レベルで取得される `PersonID` 属性と競合するので、<`xmltext`> 要素の属性は無視されます。これは、`PersonID` 属性の値が NULL であっても同じです。 一般的に、属性はオーバーフローに含まれる同じ名前の属性をオーバーライドします。  
   
  結果を次に示します。  
   
@@ -127,7 +127,7 @@ FOR XML EXPLICIT
  </Parent>
  ```  
   
- このクエリでは、`PersonName` 属性に *element* ディレクティブを指定します。 これにより、`PersonName` 属性は、囲み要素である <`Parent`> 要素のサブ要素として追加されます。 <`xmltext`> の属性も、依然として、囲み要素 <`Parent`> に追加されます。 <`overflow`> 要素の内容 (サブ要素) は、囲み要素である <`Parent`> 要素の他のサブ要素の前に追加されます。  
+ このクエリでは、*属性に*element`PersonName` ディレクティブを指定します。 これにより、`PersonName` 属性は、囲み要素である <`Parent`> 要素のサブ要素として追加されます。 <`xmltext`> の属性も、依然として、囲み要素 <`Parent`> に追加されます。 <`overflow`> 要素の内容 (サブ要素) は、囲み要素である <`Parent`> 要素の他のサブ要素の前に追加されます。  
   
 ```  
 SELECT 1      AS Tag, NULL as parent,  
@@ -152,7 +152,7 @@ FOR XML EXPLICIT;
  </Parent>
  ```  
   
- `XMLTEXT` 列のデータにルート要素の属性が含まれている場合、これらの属性は XML データ スキーマに反映されません。結果の XML ドキュメントのその部分に関して、MSXML パーサーによる検証は行われません。 例 :  
+ `XMLTEXT` 列のデータにルート要素の属性が含まれている場合、これらの属性は XML データ スキーマに反映されません。結果の XML ドキュメントのその部分に関して、MSXML パーサーによる検証は行われません。 次に例を示します。  
   
 ```  
 SELECT 1 AS Tag,  
