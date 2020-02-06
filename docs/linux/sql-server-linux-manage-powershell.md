@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: a3492ce1-5d55-4505-983c-d6da8d1a94ad
 ms.openlocfilehash: 52db0986bb6af34e1dc034d95146a96d3fdcf246
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68000120"
 ---
 # <a name="use-powershell-on-windows-to-manage-sql-server-on-linux"></a>Windows 上の PowerShell を使用して SQL Server on Linux を管理する
@@ -25,13 +25,13 @@ ms.locfileid: "68000120"
 
 Windows 上の [SQL PowerShell](../powershell/download-sql-server-ps-module.md) は、PowerShell ギャラリーで提供されています。 SQL Server を使用するとき、常に最新版の SqlServer PowerShell モジュールを使用してください。
 
-## <a name="before-you-begin"></a>アンインストールの準備
+## <a name="before-you-begin"></a>開始する前に
 
 SQL Server on Linux の[既知の問題](sql-server-linux-release-notes.md)を参照してください。
 
 ## <a name="launch-powershell-and-import-the-sqlserver-module"></a>PowerShell を起動して *sqlserver* モジュールをインポートする
 
-最初に、Windows 上で PowerShell を起動しましょう。 Windows コンピューターで <kbd>Win</kbd> + <kbd>R</kbd> キーを押し、「**PowerShell**」と入力して、新しい windows PowerShell セッションを起動します。
+最初に、Windows 上で PowerShell を起動しましょう。 Windows コンピューターで <kbd>Win</kbd>+<kbd>R</kbd> キーを押し、「**PowerShell**」と入力して、新しい windows PowerShell セッションを起動します。
 
 ```
 PowerShell

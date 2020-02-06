@@ -20,10 +20,10 @@ helpviewer_keywords:
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 955cfe87f93bedc41c6aeb29951ee1c81d0a4d6e
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68425934"
 ---
 # <a name="filepropertyex-transact-sql"></a>FILEPROPERTYEX (Transact-SQL)
@@ -48,7 +48,7 @@ FILEPROPERTYEX ( name , property )
 
 
   
-|[値]|[説明]|
+|値|[説明]|
 |-----------|-----------------|  
 |**BlobTier**|ターゲット Azure ページ BLOB の層。 Azure ページ BLOB ストレージを使用する Standard および GeneralPurpose データベースのみに適用されます。|
 |**[AccountType]**|BLOB ストレージとファイル ストレージのどちらであるか、また Premium ストレージと Standard ストレージのどちらであるかを示すストレージ アカウントの種類。|
@@ -58,10 +58,10 @@ FILEPROPERTYEX ( name , property )
 ## <a name="return-types"></a>戻り値の型  
  **sql_variant**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  *file_name* に対応する、 **名前** 内の列、 **sys.master_files** または **sys.database_files** カタログ ビューです。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、データベース ファイルの設定が返されます。
 ```sql
 SELECT s.file_id,

@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.openlocfilehash: 1f2be60ff216b65afbb50c0e97da4edfb4239aec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68082071"
 ---
 # <a name="integration-services-ssis-scale-out-worker"></a>Integration Services (SSIS) Scale Out Worker
@@ -31,7 +31,7 @@ Scale Out Worker は Scale Out Worker サービスを実行し、Scale Out Maste
 |構成  |[説明]  |既定値|
 |---------|---------|---------|
 |DisplayName|Scale Out Worker の表示名。 **[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017 では使用しません。**|コンピューター名|
-|[説明]|Scale Out Worker の説明。 **[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017 では使用しません。**|空|
+|[説明]|Scale Out Worker の説明。 **[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017 では使用しません。**|Empty|
 |MasterEndpoint|Scale Out Master に接続するエンドポイント。|Scale Out Worker のインストール時に設定されるエンドポイント|
 |MasterHttpsCertThumbprint|Scale Out Master の認証に使用されるクライアント SSL 証明書のサムプリント|Scale Out Worker のインストール時に指定されるクライアント証明書のサムプリント。|
 |WorkerHttpsCertThumbprint|Scale Out Master の認証に使用される Scale Out Master 証明書のサムプリント。|Scale Out Worker のインストール時に自動的に作成され、インストールされる証明書のサムプリント|
@@ -44,11 +44,11 @@ Scale Out Worker は Scale Out Worker サービスを実行し、Scale Out Maste
 |TaskRequestMinMemory|Scale Out Worker のタスク要求時のメモリの下限 (MB 単位)。|100.0|
 |MaxTaskCount|Scale Out Worker が保持できるタスクの最大数。|10|
 |LeaseInterval|Scale Out Worker によって保持されているタスクのリース間隔。|00:01:00|
-|TasksRootFolder|タスク ログのフォルダー。 値が空の場合、`\<drive\>:\Users\[account]\AppData\Local\SSIS\Cluster\Tasks` フォルダー パスが使用されます。 [アカウント] は、Scale Out Worker サービスを実行するアカウントです。 既定のアカウントは SSISScaleOutWorker140 です。|空|
+|TasksRootFolder|タスク ログのフォルダー。 値が空の場合、`\<drive\>:\Users\[account]\AppData\Local\SSIS\Cluster\Tasks` フォルダー パスが使用されます。 [アカウント] は、Scale Out Worker サービスを実行するアカウントです。 既定のアカウントは SSISScaleOutWorker140 です。|Empty|
 |TaskLogLevel|Scale Out Worker のタスク ログ レベル。 (Verbose 0x01、Information 0x02、Warning 0x04、Error 0x08、Progress 0x10、CriticalError 0x20、Audit 0x40)|126 (Information、Warning、Error、Progress、CriticalError、Audit)|
 |TaskLogSegment|タスク ログ ファイルの期間。|00:00:00|
 |TaskLogEnabled|タスク ログが有効かどうかを示します。|true|
-|ExecutionLogCacheFolder|パッケージ実行ログのキャッシュに使用するフォルダー。 値が空の場合、`\<drive\>:\Users\[account]\AppData\Local\SSIS\Cluster\Agent\ELogCache` フォルダー パスが使用されます。 [アカウント] は、Scale Out Worker サービスを実行するアカウントです。 既定のアカウントは SSISScaleOutWorker140 です。|空|
+|ExecutionLogCacheFolder|パッケージ実行ログのキャッシュに使用するフォルダー。 値が空の場合、`\<drive\>:\Users\[account]\AppData\Local\SSIS\Cluster\Agent\ELogCache` フォルダー パスが使用されます。 [アカウント] は、Scale Out Worker サービスを実行するアカウントです。 既定のアカウントは SSISScaleOutWorker140 です。|Empty|
 |ExecutionLogMaxBufferLogCount|メモリ内の 1 つの実行ログ バッファーの、キャッシュされる実行ログの最大数。|10000|
 |ExecutionLogMaxInMemoryBufferCount|実行ログ用のメモリ内の実行ログ バッファーの最大数。|10|
 |ExecutionLogRetryCount|実行ログに失敗した場合の再試行回数。|3|
@@ -59,9 +59,9 @@ Scale Out Worker は Scale Out Worker サービスを実行し、Scale Out Maste
 ## <a name="view-the-scale-out-worker-log"></a>Scale Out Worker ログの表示
 Scale Out Worker サービスのログ ファイルは `\<drive\>:\Users\\[account]\AppData\Local\SSIS\ScaleOut\Agent` フォルダーにあります。
 
-個別タスクのログの場所は `TasksRootFolder` の `WorkerSettings.config` ファイルで構成されます。 値を指定しない場合、ログは `\<drive\>:\Users\\[account]\AppData\Local\SSIS\ScaleOut\Tasks` フォルダーに置かれます。 
+個別タスクのログの場所は `WorkerSettings.config` の `TasksRootFolder` ファイルで構成されます。 値を指定しない場合、ログは `\<drive\>:\Users\\[account]\AppData\Local\SSIS\ScaleOut\Tasks` フォルダーに置かれます。 
 
 *[account]* パラメーターは、Scale Out Worker サービスを実行するアカウントです。 既定では、アカウントは `SSISScaleOutWorker140` です。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 [Integration Services (SSIS) Scale Out Master](integration-services-ssis-scale-out-master.md)

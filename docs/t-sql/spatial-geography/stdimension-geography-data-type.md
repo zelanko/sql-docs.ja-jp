@@ -18,10 +18,10 @@ ms.assetid: 4368b0f6-0678-4ade-87dc-b43d8b2e8d92
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: ac39de3b0fe0d85aa65ef59661a512988acd4a36
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042332"
 ---
 # <a name="stdimension-geography-data-type"></a>STDimension (geography データ型)
@@ -39,12 +39,12 @@ ms.locfileid: "68042332"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **int**  
   
- CLR の戻り値の型:**SqlInt32**  
+ CLR の戻り値の型: **SqlInt32**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  STDimension() では、**geography** インスタンスが空の場合、-1 を返します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  `STDimension()` を使用して、`geography` インスタンスを保持するテーブル変数を作成し、`Point`、`LineString`、および `Polygon` を挿入する例を次に示します。  
   
 ```  
@@ -60,11 +60,11 @@ FROM @temp;
   
  次に、各 `geography` インスタンスの次元を返す例を示します。  
   
-|NAME|dim|  
+|name|dim|  
 |----------|---------|  
 |ポイント|0|  
 |LineString|1|  
-|Polygon|2|  
+|多角形|2|  
   
 ## <a name="see-also"></a>参照  
  [Geography インスタンスの OGC メソッド](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  

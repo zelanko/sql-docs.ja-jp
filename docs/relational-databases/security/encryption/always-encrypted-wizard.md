@@ -17,10 +17,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 71df93e5e7d628fadf5839e980f42a92138a5e0c
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73594505"
 ---
 # <a name="configure-column-encryption-using-always-encrypted-wizard"></a>Always Encrypted ウィザードを使用して列暗号化を構成する
@@ -101,14 +101,14 @@ PowerShell を使用することをお勧めします
 > [!TIP]
 > このウィザードでは、Windows 証明書ストアおよび Azure Key Vault のキーだけを参照および作成できます。 また、新しいキーとキーを記述するデータベース メタデータ オブジェクトの両方の名前が自動生成されます。 キーのプロビジョニング方法をより詳細に制御する必要がある場合 (および列マスター キーを格納したキー ストアの選択肢がもっと必要である場合) は、 **[新しい列マスター キー]** ダイアログと **[新しい列の暗号化キー]** ダイアログを使用して最初にキーを作成した後、ウィザードを実行して作成したキーを選択します。 「[[新しい列マスター キー] ダイアログを使用して列マスター キーをプロビジョニングする](configure-always-encrypted-keys-using-ssms.md#provision-column-master-keys-with-the-new-column-master-key-dialog)」および「[[新しい列の暗号化キー] ダイアログを使用して列の暗号化キーをプロビジョニングする](configure-always-encrypted-keys-using-ssms.md#provision-column-encryption-keys-with-the-new-column-encryption-key-dialog)」をご覧ください。 
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>次の手順
 - [SQL Server Management Studio で Always Encrypted を使用した列のクエリを実行する](always-encrypted-query-columns-ssms.md)
 - [Always Encrypted を使用したアプリケーションの開発](always-encrypted-client-development.md)
 
 ## <a name="see-also"></a>参照  
- - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+ - [常に暗号化](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
  - [Always Encrypted のキー管理の概要](overview-of-key-management-for-always-encrypted.md) 
- - [SQL Server Management Studio を使用した Always Encrypted の構成](configure-always-encrypted-using-sql-server-management-studio.md)
+ - [SQL Server Management Studio を使用して Always Encrypted を構成する](configure-always-encrypted-using-sql-server-management-studio.md)
  - [PowerShell を使用して Always Encrypted キーをプロビジョニングする](configure-always-encrypted-keys-using-powershell.md)
  - [PowerShell での Always Encrypted を使用した列暗号化の構成](configure-column-encryption-using-powershell.md)
  - [DAC パッケージでの Always Encrypted を使用した列暗号化の構成](configure-always-encrypted-using-dacpac.md)

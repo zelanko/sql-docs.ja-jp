@@ -13,19 +13,19 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0b045ca8fd9d93ab2c088d898bd86fafe7acfc60
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68048632"
 ---
 # <a name="multipoint"></a>MultiPoint
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   **MultiPoint** は、0 個以上のポイントのコレクションです。 **MultiPoint** インスタンスの境界は空になります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 
-### <a name="example-a"></a>例 A。
+### <a name="example-a"></a>例 A.
 次の例では、SRID が 23 で、ポイントが 2 つある (1 つは座標 (2,3) のポイントで、もう 1 つは座標 (7,8) で Z が 9.5 のポイント) `geometry MultiPoint` インスタンスを作成します。  
   
 ```sql  
@@ -34,7 +34,7 @@ SET @g = geometry::STGeomFromText('MULTIPOINT((2 3), (7 8 9.5))', 23);
 ```  
   
 ### <a name="example-b"></a>例 B。 
-次の例では、`STMPointFromText()` を使用する `MultiPoint` インスタンスを表します。  
+次の例では、`MultiPoint` を使用する `STMPointFromText()` インスタンスを表します。  
   
 ```sql  
 DECLARE @g geometry;  
