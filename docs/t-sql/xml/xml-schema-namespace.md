@@ -21,13 +21,13 @@ ms.assetid: ee9873d8-dd3a-4bff-a10c-68bbadbdf1a6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bb3b19e67a4a85ef3f7a26d7ad792e7e39459302
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67948037"
 ---
-# <a name="xmlschemanamespace"></a>xml_schema_namespace
+# <a name="xml_schema_namespace"></a>xml_schema_namespace
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   指定された XML スキーマ コレクション内のすべてのスキーマまたは特定のスキーマを再構築します。 この関数は、 **xml** データ型のインスタンスを返します。  
@@ -54,14 +54,14 @@ xml_schema_namespace( Relational_schema , XML_schema_collection_name , [ Namespa
 ## <a name="return-types"></a>戻り値の型  
  **xml**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md) または [ALTER XML SCHEMA COLLECTION](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md) を使用してデータベース内の XML スキーマ コンポーネントをインポートする場合、検証に使用されたスキーマの情報が保持されます。 したがって、再構築されたスキーマは、元のスキーマ ドキュメントとは構文的に同じにならない可能性があります。 特に、コメント、空白、注釈は失われ、暗黙的な型の情報が明示されます。 たとえば、\<xs:element name="e1" /> は \<xs:element name="e1" type="xs:anyType"/> になります。 また、名前空間プレフィックスは保持されません。  
   
  名前空間のパラメーターを指定した場合、結果のスキーマ ドキュメントにはその名前空間内のすべてのスキーマ コンポーネントの定義が含まれます。それらのコンポーネントが異なるスキーマ ドキュメントまたは DDL のステップ、あるいはその両方に追加された場合であっても、同様です。  
   
  この関数を使用して、XML スキーマ ドキュメントを **sys.sys** XML スキーマ コレクションから構築することはできません。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、XML スキーマ コレクション `ProductDescriptionSchemaCollection` を、`AdventureWorks` データベース内の運用リレーショナル スキーマから取得します。  
   
 ```  

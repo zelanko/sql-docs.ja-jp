@@ -18,10 +18,10 @@ ms.assetid: 8974cd07-8ec4-4126-8fc2-fdcf322ccedd
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: eb5d28712e5d4132cd8be07ab1e5014d5cb26567
-ms.sourcegitcommit: b016c01c47bc08351d093a59448d895cc170f8c3
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71118132"
 ---
 # <a name="stendpoint-geography-data-type"></a>STEndPoint (geography データ型)
@@ -39,17 +39,17 @@ ms.locfileid: "71118132"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
- CLR の戻り値の型:**SqlGeography**  
+ CLR の戻り値の型: **SqlGeography**  
   
- Open Geospatial Consortium (OGC) の型:**Point**  
+ Open Geospatial Consortium (OGC) の型: **Point**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  STEndPoint() は、[STPointN](../../t-sql/spatial-geography/stpointn-geography-data-type.md)`(x.STNumPoints``())` と同じです。  
   
  このメソッドは、空の **geometry** インスタンスに対して呼び出された場合は null を返します。  
   
-## <a name="examples"></a>使用例  
- `STGeomFromText()` で `LineString` インスタンスを作成し、`STEndPoint()` を使用して、`LineString` の終点を取得する例を次に示します。  
+## <a name="examples"></a>例  
+ `LineString` で `STGeomFromText()` インスタンスを作成し、`STEndPoint()` を使用して、`LineString` の終点を取得する例を次に示します。  
   
 ```  
 DECLARE @g geography;  

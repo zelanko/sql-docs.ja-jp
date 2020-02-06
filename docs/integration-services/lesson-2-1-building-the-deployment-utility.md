@@ -1,5 +1,5 @@
 ---
-title: 手順 1:配置ユーティリティの構築 | Microsoft Docs
+title: '手順 1: 配置ユーティリティの構築 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 1ff4dcff-89b3-4b99-a725-5f7963e98abf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: edb7f78fd1d1d64980e7874f953a91030e7ecdc9
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296039"
 ---
 # <a name="lesson-2-1---building-the-deployment-utility"></a>レッスン 2-1 - 配置ユーティリティの構築
@@ -52,7 +52,7 @@ ms.locfileid: "71296039"
   
 4.  出力ウィンドウに、次のような情報が表示されます。  
   
-    ビルド開始:SQL Integration Services プロジェクト:インクリメンタル...  
+    ビルド開始:  SQL Integration Services プロジェクト: インクリメンタル...  
   
     配置ユーティリティを作成しています  
   
@@ -60,12 +60,12 @@ ms.locfileid: "71296039"
   
     ビルドの完了 -- エラー 0 個、警告 0 個  
   
-    ========== ビルド:0 正常終了、0 失敗、1 更新、0 スキップ ==========  
+    ========== ビルド: 0 正常終了、0 失敗、1 更新、0 スキップ ==========  
   
 5.  **[ファイル]** メニューの **[終了]** をクリックします。 Deployment Tutorial アイテムへの変更の保存を指示するメッセージが表示されたら、 **[はい]** をクリックします。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
-[手順 2:配置バンドルの確認](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
+[手順 2: 配置バンドルの確認](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
   
 ## <a name="see-also"></a>参照  
 [配置ユーティリティを作成する](../integration-services/packages/create-a-deployment-utility.md)  

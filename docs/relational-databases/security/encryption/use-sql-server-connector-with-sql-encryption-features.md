@@ -14,10 +14,10 @@ ms.assetid: 58fc869e-00f1-4d7c-a49b-c0136c9add89
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: 0fc954228aff75940e66f976f19d1414118e1a8e
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75558514"
 ---
 # <a name="use-sql-server-connector-with-sql-encryption-features"></a>SQL 暗号化機能への SQL Server コネクタの使用
@@ -41,7 +41,7 @@ ms.locfileid: "75558514"
  
 資格情報とログインが必要となります。また、データベースに格納されるデータとログを暗号化するためのデータベース暗号化キーを作成する必要があります。 データベースを暗号化するには、データベースに対する **CONTROL** 権限が必要です。 次の図は、Azure Key Vault 使用下における暗号化キーの階層を示したものです。  
   
- ![ekm&#45;key&#45;hierarchy&#45;with&#45;akv](../../../relational-databases/security/encryption/media/ekm-key-hierarchy-with-akv.png "|::ref1::|")  
+ ![ekm&#45;key&#45;hierarchy&#45;with&#45;akv](../../../relational-databases/security/encryption/media/ekm-key-hierarchy-with-akv.png "ekm-key-hierarchy-with-akv")  
   
 1.  **データベース エンジンが TDE に使用する [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の資格情報を作成する**  
   

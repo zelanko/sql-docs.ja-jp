@@ -19,10 +19,10 @@ ms.assetid: 55f5db6e-6777-435f-8a06-b68c129f8437
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 68f0f1ea718d867b2fb26f08bb5b6c30e49dd739
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71291222"
 ---
 # <a name="pivot-transformation"></a>ピボット変換
@@ -97,7 +97,7 @@ ms.locfileid: "71291222"
   
  次の表は、データが **Year** 列でピボットされる前のデータセットを示しています。  
   
-|Year|製品名|Total|  
+|年|製品名|合計|  
 |----------|------------------|-----------|  
 |2004|HL Mountain Tire|1504884.15|  
 |2003|Road Tire Tube|35920.50|  
@@ -135,7 +135,7 @@ ms.locfileid: "71291222"
 -   [変換のカスタム プロパティ](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
 ## <a name="related-content"></a>関連コンテンツ  
- このコンポーネントのプロパティの設定方法の詳細については、「 [データ フロー コンポーネントのプロパティを設定する](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)」をご覧ください。  
+ このコンポーネントのプロパティの設定方法の詳細については、「 [データ フロー コンポーネントのプロパティを設定する](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [ピボット解除変換](../../../integration-services/data-flow/transformations/unpivot-transformation.md)   

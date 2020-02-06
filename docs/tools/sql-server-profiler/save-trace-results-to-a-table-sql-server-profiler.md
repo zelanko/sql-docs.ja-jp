@@ -1,30 +1,30 @@
 ---
-title: トレース結果のテーブルへの保存 (SQL Server Profiler) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: トレース結果をテーブルに保存する
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- saving traces
-- traces [SQL Server], saving
 ms.assetid: edbecf74-683b-4e43-a1ef-7a3d5f5e27f6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9191c2ab44f4152a54211a1a66a5d843c0d6c12c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 6fb406988c9aeb92e7f0c1d3689e5b513a7ea0d3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67928758"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307431"
 ---
 # <a name="save-trace-results-to-a-table-sql-server-profiler"></a>トレース結果のテーブルへの保存 (SQL Server Profiler)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  このトピックでは、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を使用して、トレース結果をデータベース テーブルに保存する方法について説明します。  
+
+このトピックでは、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を使用して、トレース結果をデータベース テーブルに保存する方法について説明します。  
   
-### <a name="to-save-trace-results-to-a-table"></a>トレース結果をテーブルに保存するには  
+## <a name="to-save-trace-results-to-a-table"></a>トレース結果をテーブルに保存するには
   
 1.  **[ファイル]** メニューの **[新しいトレース]** をクリックし、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスに接続します。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "67928758"
   
 5.  **[所有者]** ボックスの一覧で、トレースの所有者を選択します。  
   
-6.  **[テーブル]** ボックスの一覧で、トレース結果用のテーブルの名前を入力または選択します。 クリックして **OK.**  
+6.  **[テーブル]** ボックスの一覧で、トレース結果用のテーブルの名前を入力または選択します。 **[OK]** をクリックします。  
   
 7.  **[トレースのプロパティ]** ダイアログ ボックスで、 **[最大行数の設定 (1000 行単位)]** チェック ボックスをオンにして、保存する最大行数を指定します。  
   

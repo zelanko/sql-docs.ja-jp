@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d6901afbb6d0faa26c4977c15a3836bdeab68bb4
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73844623"
 ---
 # <a name="current_user-transact-sql"></a>CURRENT_USER (Transact-SQL)
@@ -45,12 +45,12 @@ CURRENT_USER
 ## <a name="return-types"></a>戻り値の型
 **sysname**
   
-## <a name="remarks"></a>Remarks  
-`CURRENT_USER` によって、現在のセキュリティ コンテキストの名前が返されます。 `EXECUTE AS` を呼び出してコンテキストを切り替えた後に `CURRENT_USER` が実行された場合、`CURRENT_USER` によって、偽装コンテキストの名前が返されます。 Windows プリンシパルがグループのメンバーシップを使ってデータベースにアクセスした場合、`CURRENT_USER` はグループの名前ではなく Windows プリンシパルの名前を返します。
+## <a name="remarks"></a>解説  
+`CURRENT_USER` によって、現在のセキュリティ コンテキストの名前が返されます。 `CURRENT_USER` を呼び出してコンテキストを切り替えた後に `EXECUTE AS` が実行された場合、`CURRENT_USER` によって、偽装コンテキストの名前が返されます。 Windows プリンシパルがグループのメンバーシップを使ってデータベースにアクセスした場合、`CURRENT_USER` はグループの名前ではなく Windows プリンシパルの名前を返します。
   
 現在のユーザーのログインを返す方法については、「[SUSER_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/suser-name-transact-sql.md)」と「[SYSTEM_USER &#40;Transact-SQL&#41;](../../t-sql/functions/system-user-transact-sql.md)」を参照してください。
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-using-current_user-to-return-the-current-user-name"></a>A. CURRENT_USER を使用して現在のユーザー名を返す  
 この例では、現在のユーザー名を返します。
@@ -61,7 +61,7 @@ GO
 ```  
   
 ### <a name="b-using-current_user-as-a-default-constraint"></a>B. DEFAULT 制約として CURRENT_USER を使用する  
-この例では、sales 行の `order_person` 列に対する `DEFAULT` 制約として `CURRENT_USER` を使用するテーブルを作成します。
+この例では、sales 行の `CURRENT_USER` 列に対する `DEFAULT` 制約として `order_person` を使用するテーブルを作成します。
   
 ```sql
 USE AdventureWorks2012;  

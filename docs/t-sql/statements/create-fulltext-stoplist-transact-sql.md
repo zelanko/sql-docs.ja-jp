@@ -26,10 +26,10 @@ ms.assetid: 0669b1d0-46cc-4fac-8df7-5f7fa7af5db4
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 7d2061479ac8f93dfcdbc4a8039ef3914d897f87
-ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73064651"
 ---
 # <a name="create-fulltext-stoplist-transact-sql"></a>CREATE FULLTEXT STOPLIST (Transact-SQL)
@@ -72,7 +72,7 @@ CREATE FULLTEXT STOPLIST stoplist_name
  AUTHORIZATION *owner_name*  
  ストップリストの所有者となるデータベース プリンシパルの名前を指定します。 *owner_name* に現在のユーザーがメンバーとなっているプリンシパルの名前を指定するか、または *owner_name* に対する IMPERSONATE 権限を現在のユーザーが持っている必要があります。 このオプションを指定しない場合は、所有権は現在のユーザーに与えられます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  ストップリストの作成者はその所有者になります。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -81,7 +81,7 @@ CREATE FULLTEXT STOPLIST stoplist_name
 > [!NOTE]  
 >  フルテキスト インデックスが関連付けられたストップリストを使用するには、REFERENCE 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-creating-a-new-full-text-stoplist"></a>A. 新しいフルテキスト ストップリストを作成する  
  次の例では、`myStoplist` という名前の新しいフルテキスト ストップリストを作成しています。  

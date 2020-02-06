@@ -10,12 +10,12 @@ ms.author: maghan
 ms.custom: seodec18
 ms.date: 12/26/2019
 ms.reviewer: alayu; sstein
-ms.openlocfilehash: e0094ffaaa1be646b470547277026385c9dae24e
-ms.sourcegitcommit: 0d5b0aeee2a2b34fd448aec2e72c0fa8be473ebe
+ms.openlocfilehash: c5c75b2fda96d970b243161636d791029e311330
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75727029"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76516493"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Azure Data Studio のダウンロードとインストール
 
@@ -57,13 +57,11 @@ ms.locfileid: "75727029"
 2. ダウンロードしたファイルを参照して抽出します。
 3. `\azuredatastudio-windows\azuredatastudio.exe` を実行します。
 
-
 ## <a name="get-azure-data-studio-for-macos"></a>Azure Data Studio for macOS を取得する
 
 1. [[!INCLUDE[name-sos](../includes/name-sos-short.md)] for macOS](https://go.microsoft.com/fwlink/?linkid=2113528) をダウンロードします。
 2. zip のコンテンツを展開するには、ダブルクリックします。
 3. [!INCLUDE[name-sos](../includes/name-sos-short.md)] を*スタート パッド*で使用できるようにするには、*Azure Data Studio.app* を *[アプリケーション]* フォルダーにドラッグします。
-
 
 ## <a name="get-azure-data-studio-for-linux"></a>Linux 用の Azure Data Studio を取得する
 
@@ -146,10 +144,12 @@ Windows インストーラーを使用して [!INCLUDE[name-sos-short](../includ
 - Windows Server 2008 R2 (64 ビット)
 
 ### <a name="macos"></a>macOS
+
 - macOS 10.13 High Sierra
 - macOS 10.12 Sierra
 
 ### <a name="linux"></a>Linux
+
 - Red Hat Enterprise Linux 7.4
 - Red Hat Enterprise Linux 7.3
 - SUSE Linux Enterprise Server v12 SP2
@@ -164,6 +164,7 @@ Windows インストーラーを使用して [!INCLUDE[name-sos-short](../includ
 |             |           |            |
 
 ## <a name="check-for-updates"></a>更新プログラムをチェックする
+
 最新の更新プログラムを確認するには、ウィンドウの左下にある歯車アイコンをクリックし、 **[更新プログラムのチェック]** をクリックします。
 
 ## <a name="supported-sql-offerings"></a>サポートされる SQL 製品
@@ -173,9 +174,8 @@ Windows インストーラーを使用して [!INCLUDE[name-sos-short](../includ
 ## <a name="upgrade-from-sql-operations-studio"></a>SQL Operations Studio からのアップグレード
 
 引き続き SQL Operations Studio を使用している場合は、Azure Data Studio にアップグレードする必要があります。 SQL Operations Studio はプレビュー名であり、Azure Data Studio のプレビュー バージョンでした。 2018 年 9 月に、[名前を Azure Data Studio に変更](https://cloudblogs.microsoft.com/sqlserver/2018/09/25/azure-data-studio-for-sql-server/)し、一般公開 (GA) バージョンをリリースしました。 SQL Operations Studio は更新またはサポートされなくなったため、Microsoft では、すべての SQL Operations Studio ユーザーに、最新の機能、セキュリティ更新プログラム、修正プログラムを入手するため、最新バージョンの Azure Data Studio をダウンロードするように求めます。
- 
-以前のプレビューから最新の Azure Data Studio にアップグレードすると、現在の設定と拡張機能が失われます。 設定を移動するには、次の「*ユーザー設定を移動する*」セクションの手順に従います。
 
+以前のプレビューから最新の Azure Data Studio にアップグレードすると、現在の設定と拡張機能が失われます。 設定を移動するには、次の「*ユーザー設定を移動する*」セクションの手順に従います。
 
 ## <a name="move-user-settings"></a>ユーザー設定を移動する
 
@@ -203,6 +203,7 @@ Windows インストーラーを使用して [!INCLUDE[name-sos-short](../includ
 ## <a name="next-steps"></a>次の手順
 
 作業を開始するには、次のクイック スタートのいずれかを参照してください。
+
 - [SQL Server に対する接続およびクエリ](quickstart-sql-server.md)
 - [Azure SQL Database に対する接続およびクエリ](quickstart-sql-database.md)
 - [Azure Data Warehouse に対する接続およびクエリ](quickstart-sql-dw.md)

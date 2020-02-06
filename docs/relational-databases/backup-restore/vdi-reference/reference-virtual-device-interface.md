@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 2b4556734044ad5bd688f8d5b286885450897b42
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847153"
 ---
 # <a name="virtual-device-interface-vdi-reference"></a>仮想デバイス インターフェイス (VDI) リファレンス
@@ -34,7 +34,7 @@ VDI では、主に次の 2 種類のバックアップ テクノロジがサポ
 
 VDI によって実行される従来のオンライン バックアップでは、SQL Server でのバックアップと復元のあらゆる機能を利用できます。 スナップショット バックアップは、完全なデータベースとファイル/ファイルグループのバックアップのみに制限されます。 ただし、スナップショット バックアップでは、従来のデータベース差分バックアップ、ファイル差分バックアップ、およびトランザクション ログ バックアップを使用してロール フォワードすることができる場合があります。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 このセクションの VDI リファレンス ドキュメントを確認します。
 

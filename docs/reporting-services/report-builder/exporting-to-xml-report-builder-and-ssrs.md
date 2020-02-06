@@ -9,10 +9,10 @@ ms.assetid: 11d72068-2d97-495e-948f-12d1e8c1957d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 52d83c17a1cfe79f8add7f0764216d404c14cfd9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580756"
 ---
 # <a name="exporting-to-xml-report-builder-and-ssrs"></a>XML へのエクスポート (レポート ビルダーおよび SSRS)
@@ -30,7 +30,7 @@ ms.locfileid: "65580756"
 |データ領域|コンテナーの要素内部の要素として表示されます。 データ領域には、データをテキストおよびグラフとして表示するテーブル、マトリックス、一覧、およびデータを視覚化するデータ バー、スパークライン、ゲージ、インジケーターが含まれます。|  
 |グループ セクションおよび詳細セクション|各インスタンスにより、コンテナーの要素内部の要素として表示されます。|  
 |テキスト ボックス|コンテナー内部の属性または要素として表示されます。|  
-|四角形|コンテナー内部の要素として表示されます。|  
+|Rectangle|コンテナー内部の要素として表示されます。|  
 |マトリックスの列グループ|行グループ内部の要素として表示されます。|  
 |マップ|コンテナーの要素内部の要素として表示されます。 マップ レイヤーはマップの子要素で、各マップ レイヤーにはそのマップ メンバーの要素とマップ メンバーの属性が含まれています。|  
 |グラフ|コンテナーの要素内部の要素として表示されます。 系列はグラフの子要素であり、カテゴリは系列の子要素です。 それぞれのグラフ値にすべてのグラフ ラベルをレンダリングします。 ラベルと値は属性として含まれています。|  
@@ -62,8 +62,8 @@ ms.locfileid: "65580756"
 |**Float** (または **Decimal** と任意の整数かバイト データ型)|**xsd:float**|  
 |**Double** (または **Decimal** と任意の整数かバイト データ型)|**xsd:double**|  
 |**DateTime または DateTime Offset**|**xsd:dateTime**|  
-|**[時刻]**|**xsd:string**|  
-|**ブール値**|**xsd:boolean**|  
+|**Time**|**xsd:string**|  
+|**Boolean**|**xsd:boolean**|  
 |**String**、 **Char**|**xsd:string**|  
 |その他|**xsd:string**|  
   
@@ -80,7 +80,7 @@ ms.locfileid: "65580756"
   
  それぞれの変数の値は次のとおりです。  
   
-|[オブジェクト名]|[値]|  
+|Name|値|  
 |----------|-----------|  
 |レポート|Report.DataElementName|  
 |ReportURL|サーバー上のレポートに対する絶対 URL です。URL エンコードされます。|  
@@ -105,10 +105,10 @@ ms.locfileid: "65580756"
 ### <a name="custom-report-items"></a>カスタム レポート アイテム  
  表示拡張機能は、CustomReportItems (CRI) を認識しません。 レポートにカスタム レポート アイテムが存在した場合は、標準的なレポート アイテムとしてレンダリングされます。  
   
-### <a name="images"></a>画像  
+### <a name="images"></a>イメージ  
  画像はレンダリングされません。  
   
-### <a name="lines"></a>線  
+### <a name="lines"></a>路線  
  線はレンダリングされません。  
   
   

@@ -19,10 +19,10 @@ ms.assetid: f4c804ab-ed3f-43b1-a024-c9ac6944b66b
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: bcf14745af6da26cc625e928d75f510e0da9a2e8
-ms.sourcegitcommit: 823d7bdfa01beee3cf984749a8c17888d4c04964
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70030353"
 ---
 # <a name="data-type-precedence-transact-sql"></a>データ型の優先順位 (Transact-SQL)
@@ -53,7 +53,7 @@ ms.locfileid: "70030353"
 1. **bit**  
 1. **ntext**  
 1. **text**  
-1. **image**  
+1. **画像**  
 1. **timestamp**  
 1. **uniqueidentifier**  
 1. **nvarchar** (**nvarchar(max)** など)  

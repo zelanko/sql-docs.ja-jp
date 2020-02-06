@@ -11,10 +11,10 @@ ms.assetid: d0c8f942-4c96-456f-ad10-577577c0f74e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 77f3575375ec991119462a5933e85df13de80795
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298687"
 ---
 # <a name="prepare-sql-server-for-oracle-cdc-view-script"></a>Oracle CDC 表示スクリプト用の SQL Server の準備
@@ -29,7 +29,7 @@ ms.locfileid: "71298687"
  **[名前を付けて保存]**  
  任意の場所に保存できるテキスト ファイルにスクリプトを保存します。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]にスクリプトを貼り付けることによって、後でスクリプトを実行することができます。  
   
- **[コピー]**  
+ **Copy** に設定する必要があります  
  スクリプトをクリップボードにコピーします。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] にスクリプトを貼り付けて実行し、MSXDBCDC データベースを作成することができます。  
   
 ## <a name="see-also"></a>参照  

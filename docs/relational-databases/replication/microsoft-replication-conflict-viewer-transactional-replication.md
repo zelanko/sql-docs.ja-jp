@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: 39be2638f1d85e610e5898f9a4c33c7129764424
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75321525"
 ---
 # <a name="replication-conflict-viewer-transactional-replication"></a>レプリケーション競合表示モジュール (トランザクション レプリケーション)
@@ -64,7 +64,7 @@ ms.locfileid: "75321525"
  最初の 5 列および競合データが含まれている列を表示します。 これは、テーブルに多数の列があり、競合を解決するのに最も関連する列のみを表示する場合に便利です。 主キーや名前フィールドなど、行を識別するフィールドはテーブルの最初の列にある場合が多いため、このビューでは最初の 5 列が必ず表示されます。  
   
  **列情報の表示** ( **[...]** )  
- 列情報を表示するには、次の順にクリックします。 **[テーブル名]** 、 **[列名]** 、 **[データ型]** 、 **[列の値]** 。  
+ 列の情報である **[テーブル名]** 、 **[列名]** 、 **[データ型]** 、および **[列の値]** を表示します。  
   
  **[競合の詳細をログに記録]**  
  このボックスをオンにすると、競合の詳細がファイルに記録されます。 ファイルの場所を指定するには、 **[表示]** メニューをポイントし、 **[オプション]** をクリックします。 値を入力するか、参照ボタン ( **[...]** ) をクリックして適切なファイルに移動します。 **[OK]** をクリックして、 **[オプション]** ダイアログ ボックスを終了します。  

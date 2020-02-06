@@ -21,10 +21,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 78e19aa69d5d5141be7b142074a1c4d120ea8519
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68121867"
 ---
 # <a name="or-transact-sql"></a>OR (Transact-SQL)
@@ -50,7 +50,7 @@ boolean_expression OR boolean_expression
 ## <a name="result-value"></a>結果の値  
  OR では、いずれかの条件が TRUE の場合に TRUE を返します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  次の表に、OR 演算子の結果を示します。  
   
 ||TRUE|FALSE|UNKNOWN|  
@@ -59,7 +59,7 @@ boolean_expression OR boolean_expression
 |**FALSE**|TRUE|FALSE|UNKNOWN|  
 |**UNKNOWN**|TRUE|UNKNOWN|UNKNOWN|  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、`vEmployeeDepartmentHistory` ビューを使用して、夕方または夜間のシフトで勤務する `Quality Assurance` の従業員の名前を取得します。 かっこを省略した場合、このクエリでは、夕方シフトで勤務する `Quality Assurance` の従業員と、夜間シフトで勤務するすべての従業員が返されます。  
   
 ```  
@@ -80,7 +80,7 @@ WHERE Department = 'Quality Assurance'
  Sootha       Charncherngkha   Night
  ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  次の例は、20 未満の `BaseRate` を取得するか、2001 年 1 月 1 日以降の `HireDate` を持つ従業員の名前を取得します。  
   
 ```  

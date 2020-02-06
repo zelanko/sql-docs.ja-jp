@@ -1,6 +1,6 @@
 ---
 title: '[スレッド] ウィンドウ'
-titleSuffix: T-SQL Debugger
+titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
 ms.topic: conceptual
@@ -10,15 +10,15 @@ ms.assetid: e153f619-0049-4162-9076-c24a454f3278
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.custom: ''
-ms.date: 03/14/2017
+ms.custom: seo-lt-2019
+ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ba4f72bc5848f14e2bfd9821c43f024a129092e1
-ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
+ms.openlocfilehash: 057178568ef12c6de42cde518c02db1ae137a0ae
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74119235"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253007"
 ---
 # <a name="transact-sql-debugger---threads-window"></a>Transact-SQL デバッガー - [スレッド] ウィンドウ
 
@@ -40,7 +40,7 @@ ms.locfileid: "74119235"
   
  簡易プーリング モードで実行していない場合は、os_thread_id の値が **[ID]** 列の値に一致する行を選択します。 簡易プーリング モードで実行している場合は、fiber_context_address の値が **[ID]** 列の値に一致する行を選択します。  
   
- **[名前]**  
+ **名前**  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] セッションの情報を **ComputerName/InstanceName [SPID]** の形式で表示します。  
   
  **[ComputerName]**  
@@ -52,10 +52,10 @@ ms.locfileid: "74119235"
  **[SPID]**  
  このセッションを一意に識別する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセッション プロセス ID。 セッションの詳細情報を参照するには、spid 列と同じ値を持つ sys.sysprocesses ビューの行を選択します。  
   
- **場所**  
+ **Location**  
  デバッグ中のクエリ エディター セッションで使用されているスクリプト ファイルの名前を表示します。  
   
- **[Priority]**  
+ **優先順位**  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーはこの機能をサポートしていません。  
   
  **[中断]**  

@@ -14,10 +14,10 @@ ms.assetid: ca20e4f6-50ec-4456-900d-87d280fde2b3
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 68d4d824dc95fcbc9c56fe13493c16d0a8f6a0bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67947811"
 ---
 # <a name="sql-server-workload-group-stats-object"></a>SQLServer:Workload Group Stats オブジェクト
@@ -32,11 +32,11 @@ ms.locfileid: "67947811"
 |**Active requests**|このワークロード グループの現在実行中の要求数。 グループ ID でフィルター選択した sys.dm_exec_requests の行数と同じ数になります。|  
 |**Blocked requests**|ワークロード グループのブロックされた要求の現在の数。 この数値を使用して負荷の特性を判別できます。|  
 |**CPU delayed %**|パフォーマンス オブジェクトの指定されたインスタンス内のすべての要求を待機するシステム CPU (アクティブ時間の合計に対する割合)| 
-|**CPU delayed % base**|内部使用のみです。| 
+|**CPU delayed % base**|内部使用専用です。| 
 |**CPU effective %**|パフォーマンス オブジェクトの指定されたインスタンス内のすべての要求に対するシステム CPU の使用率 (アクティブ時間の合計に対する割合)| 
-|**CPU effective % base**|内部使用のみです。| 
+|**CPU effective % base**|内部使用専用です。| 
 |**CPU usage %**|このワークロード グループのすべての要求による CPU 帯域幅の使用率。コンピューターを基準に測定され、システムのすべての CPU を基準に正規化されます。 この値は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセスで使用できる CPU の量によって変化します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセスに割り当てられた内容を基準にして正規化されるのではありません。| 
-|**CPU usage % base**|内部使用のみです。| 
+|**CPU usage % base**|内部使用専用です。| 
 |**CPU violated %**|CPU 予約と有効なスケジュール割合の差。|  
 |**Max request CPU time (ms)**|ワークロード グループの現在実行中の要求で使用される最大 CPU 時間 (ミリ秒単位)。|  
 |**Max request memory grant (KB)**|1 つのクエリに対するメモリ許可の最大値 (KB 単位)。|  

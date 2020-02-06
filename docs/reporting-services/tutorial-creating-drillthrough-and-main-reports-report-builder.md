@@ -9,10 +9,10 @@ ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 02defc00e1c65eff7eb624a8d3295082d8d6dc8c
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73637983"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>チュートリアル: 詳細レポートとメイン レポートの作成 (レポート ビルダー)
@@ -587,7 +587,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
   
 4.  **[3 つの図形]** をクリックし、 **[OK]** をクリックします。  
   
-5.  インジケーターを右クリックし、ゲージ データ ペインで、 **[(未指定)]** の横にある下矢印をクリックします。 [ `Net_QTY`] を選択します。  
+5.  インジケーターを右クリックし、ゲージ データ ペインで、 **[(未指定)]** の横にある下矢印をクリックします。 [`Net_QTY`] を選択します。  
   
 6.  `[Sum(Net QTY)]` [合計] `[Product_Category_Name]` の **行グループにある**セルに対して、手順 2. ～ 5. を繰り返します。  
   
@@ -599,7 +599,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
   
 3.  **[3 つの図形]** をクリックし、 **[OK]** をクリックします。  
   
-4.  インジケーターを右クリックし、ゲージ データ ペインで、 **[(未指定)]** の横にある下矢印をクリックします。 [ `Net_Sales`] を選択します。  
+4.  インジケーターを右クリックし、ゲージ データ ペインで、 **[(未指定)]** の横にある下矢印をクリックします。 [`Net_Sales`] を選択します。  
   
 5.  `[Sum(Net_Sales)]` [合計] `[Product_Category_Name]` の **行グループにある**セルに対して、手順 1. ～ 4. を繰り返します。  
   

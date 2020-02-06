@@ -22,16 +22,16 @@ ms.assetid: 571320f5-7228-4b0e-9d01-ab732d2d1eab
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b6278faa80721ce500257650db70359dcc740ee8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68132074"
 ---
 # <a name="context_info--transact-sql"></a>CONTEXT_INFO  (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-この関数は、現在のセッションまたはバッチに設定された、または [SET CONTEXT_INFO](../../t-sql/statements/set-context-info-transact-sql.md) ステートメントを使用して派生した **context_info** 値を返します。
+この関数は、現在のセッションまたはバッチに設定された、または **SET CONTEXT_INFO** ステートメントを使用して派生した [context_info](../../t-sql/statements/set-context-info-transact-sql.md) 値を返します。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -48,7 +48,7 @@ CONTEXT_INFO()
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は NULL を返します。  
 -   [!INCLUDE[ssSDS](../../includes/sssds-md.md)] で  、一意のセッション固有 GUID.を返します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 複数のアクティブな結果セット (MARS) 機能によって、アプリケーションは複数のバッチまたは要求を同じ接続上で同時に実行できます。 `CONTEXT_INFO` 関数が SET ステートメントと同じバッチで実行される場合、MARS 接続バッチの 1 つで SET CONTEXT_INFO を実行すると、`CONTEXT_INFO` 関数は新しいコンテキスト値を返します。 `CONTEXT_INFO` 関数が他の 1 つ以上の接続バッチで実行されている場合、SET ステートメントを実行したバッチの完了後にバッチが開始されない限り、`CONTEXT_FUNCTION` は新しい値を返しません。
   
 ## <a name="permissions"></a>アクセス許可  
@@ -57,7 +57,7 @@ CONTEXT_INFO()
 - **sys.dm_exec_sessions**
 - **sys.sysprocesses**
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 この簡単な例では、**context_info** 値を `0x1256698456` に設定してから、`CONTEXT_INFO` 関数を使用して値を取得します。
   
 ```sql

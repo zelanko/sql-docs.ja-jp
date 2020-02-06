@@ -14,10 +14,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 59efa5a8143d448ca322ab1b6efa86cbfa9f66d1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67934080"
 ---
 # <a name="update-statistics"></a>統計の更新
@@ -59,7 +59,7 @@ ms.locfileid: "67934080"
   
 5.  更新する統計オブジェクトを右クリックし、 **[プロパティ]** を選択します。  
   
-6.  **[統計のプロパティ - _statistics\_name_]** ダイアログ ボックスで **[この列の統計を更新する]** チェック ボックスをオンにし、 **[OK]** をクリックします。  
+6.  **[統計のプロパティ -** statistics_name\_]_ ダイアログ ボックスで **[この列の統計を更新する]** チェック ボックスをオンにし、 **[OK]** をクリックします。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
@@ -95,7 +95,7 @@ ms.locfileid: "67934080"
     GO  
     ```  
   
-詳細については、「[UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)」を参照してください。  
+詳細については、「 [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)で作成されたデータベース メンテナンス プランを実行します。  
   
 ### <a name="to-update-all-statistics-in-a-database"></a>データベースのすべての統計を更新するには  
   

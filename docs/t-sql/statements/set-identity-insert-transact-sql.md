@@ -24,13 +24,13 @@ author: CarlRabeler
 ms.author: carlrab
 monkerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||=azure-sqldw-latest||= sqlallproducts-allversions
 ms.openlocfilehash: 1b1706a78402c705eac92f135a492ea352544fe9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67928967"
 ---
-# <a name="set-identityinsert-transact-sql"></a>SET IDENTITY_INSERT (Transact-SQL)
+# <a name="set-identity_insert-transact-sql"></a>SET IDENTITY_INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
 テーブルの ID 列に明示的な値を追加することを許可します。  
@@ -54,7 +54,7 @@ SET IDENTITY_INSERT [ [ database_name . ] schema_name . ] table_name { ON | OFF 
  *table_name*  
  ID 列があるテーブルの名前です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  いかなる場合も、IDENTITY_INSERT プロパティを ON に設定できるのはセッション内の 1 つのテーブルのみです。 1 つのテーブルで既にこのプロパティが ON に設定されている状態で、別のテーブルに対して SET IDENTITY_INSERT ON ステートメントを実行すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では SET IDENTITY_INSERT が既に ON であるというエラー メッセージが返され、このプロパティが ON に設定されているテーブルがレポートされます。  
   
  挿入する値がテーブルの現在の ID 値よりも大きい場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では新しく挿入された値が現在の ID 値として自動的に使用されます。  
@@ -64,7 +64,7 @@ SET IDENTITY_INSERT [ [ database_name . ] schema_name . ] table_name { ON | OFF 
 ## <a name="permissions"></a>アクセス許可  
  ユーザーはテーブルを所有しているか、テーブルに対する ALTER 権限を持っている必要があります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、ID 列を含むテーブルを作成した後、`SET IDENTITY_INSERT` ステートメントによって ID 値に発生したギャップを、`DELETE` の設定を使用して調整しています。  
   
 ```  

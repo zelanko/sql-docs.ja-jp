@@ -18,10 +18,10 @@ ms.assetid: fd515bbc-6f49-4d0c-ae7f-6ea3c3f24a1c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e1573167bfe50e5dcb63734a90c7b9b5bd00e40a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297967"
 ---
 # <a name="data-conversion-transformation"></a>データ変換の変換
@@ -80,7 +80,7 @@ ms.locfileid: "71297967"
  **[精度]**  
  数値データの有効桁数を設定します。  
   
- **Scale**  
+ **スケール**  
  数値データの小数点以下桁数を設定します。  
   
  **コード ページ**  

@@ -1,5 +1,5 @@
 ---
-title: 手順 3:パッケージとその他のファイルの追加 | Microsoft Docs
+title: '手順 3: パッケージとその他のファイルの追加 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: a7e6ec9c-d31d-4613-9525-8947a7b358f7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: be3dcb5bd42624ee943db4393809e2889808a11e
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71283837"
 ---
 # <a name="lesson-1-3---adding-packages-and-other-files"></a>レッスン 1-3 - パッケージとその他のファイルの追加
@@ -34,7 +34,7 @@ ms.locfileid: "71283837"
   
 これらのパッケージの配置をサポートするために、次の付属ファイルを Deployment Tutorial プロジェクトに追加します。  
   
-|[パッケージ]|ファイル|  
+|Package|ファイル|  
 |-----------|--------|  
 |DataTransfer|NewCustomers.txt|  
 |LoadXMLData|orders.xml および orders.xsd|  
@@ -72,7 +72,7 @@ ms.locfileid: "71283837"
 4.  ファイル メニューの  **すべてを保存** をクリックします。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
-[手順 4:パッケージ構成の追加](../integration-services/lesson-1-4-adding-package-configurations.md)  
+[手順 4: パッケージ構成の追加](../integration-services/lesson-1-4-adding-package-configurations.md)  
   
   
   

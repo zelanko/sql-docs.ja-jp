@@ -20,10 +20,10 @@ ms.assetid: ae52a723-91c4-43fd-bcc7-f8de1d1f90e5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 86482b666c2ecfc5e9fcc09c1d06df14640386d0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68134794"
 ---
 # <a name="extract-a-dac-from-a-database"></a>データベースからの DAC の抽出
@@ -31,7 +31,7 @@ ms.locfileid: "68134794"
   **データ層アプリケーションの抽出ウィザード** または Windows PowerShell スクリプトを使用すると、既存の SQL Server データベースからデータ層アプリケーション (DAC) パッケージを抽出できます。 抽出プロセスでは、データベース オブジェクトの定義とそれに関連するインスタンスレベルの要素を格納した DAC パッケージ ファイルが作成されます。 たとえば、DAC パッケージ ファイルには、データベース テーブル、ストアド プロシージャ、ビュー、ユーザー、およびデータベース ユーザーにマップされているログインが含まれます。  
   
  
-## <a name="before-you-begin"></a>アンインストールの準備  
+## <a name="before-you-begin"></a>開始する前に  
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)]、または [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 4 以降のインスタンスに存在するデータベースから DAC を抽出できます。 DAC から配置されたデータベースに対して抽出プロセスが実行された場合、データベース内のオブジェクトの定義のみが抽出されます。 プロセスは **msdb** (**の** マスター [!INCLUDE[ssSDS](../../includes/sssds-md.md)]) で登録された DAC を参照しません。 抽出プロセスは、データベース エンジンの現在のインスタンスの DAC 定義を登録しません。 DAC の登録の詳細については、「 [Register a Database As a DAC](../../relational-databases/data-tier-applications/register-a-database-as-a-dac.md)」を参照してください。  
   
 ##  <a name="LimitationsRestrictions"></a> 制限事項と制約事項  
@@ -120,7 +120,7 @@ ms.locfileid: "68134794"
   
  **[レポートの保存]** : クリックすると、ウィザードの進行状況の結果がファイルに保存されます。  
   
- **[完了]** : 処理が完了した後やエラーが発生した場合にクリックしてウィザードを閉じます。  
+ **[完了]** - 処理が完了した後やエラーが発生した場合にクリックしてウィザードを閉じます。  
    
 ##  <a name="ExtractDACPowerShell"></a> PowerShell を使用して DAC を抽出する  
  **PowerShell スクリプトで Extract() メソッドを使用してデータベースから DAC を抽出するには**  
@@ -161,6 +161,6 @@ $extractionunit.Extract($dacpacPath)
 ```  
   
 ## <a name="see-also"></a>参照  
- [の](../../relational-databases/data-tier-applications/data-tier-applications.md)  
+ [データ層アプリケーション](../../relational-databases/data-tier-applications/data-tier-applications.md)  
   
   

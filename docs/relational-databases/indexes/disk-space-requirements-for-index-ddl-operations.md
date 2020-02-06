@@ -17,10 +17,10 @@ ms.assetid: 35930826-c870-44c1-a966-a6a4638f62ef
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e49ef1ad379f675ca457f8cd9c82a5e4ecc3fd04
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68107130"
 ---
 # <a name="disk-space-requirements-for-index-ddl-operations"></a>インデックス DDL 操作に必要なディスク領域

@@ -1,5 +1,5 @@
 ---
-title: トラブルシューティング:可用性グループ接続の超過 RTO (SQL Server) | Microsoft Docs
+title: 'トラブルシューティング: 可用性グループ接続の超過 RTO (SQL Server) | Microsoft Docs'
 ms.custom: ag-guide
 ms.date: 06/13/2017
 ms.prod: sql
@@ -10,13 +10,13 @@ ms.assetid: e83e4ef8-92f0-406f-bd0b-dc48dc210517
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 9b62bcc1eebe8371bc45ae7f565d9aa712f1b1d4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68013752"
 ---
-# <a name="troubleshoot-availability-group-exceeded-rto"></a>トラブルシューティング:可用性グループ接続の超過 RTO
+# <a name="troubleshoot-availability-group-exceeded-rto"></a>トラブルシューティング: 可用性グループ接続の超過 RTO
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   可用性グループのデータ損失のない自動フェールオーバーまたは計画された手動フェールオーバーの後に、フェールオーバー時間が回復時刻の目標 (RTO) を超えていることに気づく場合があります。 または、「[Always On 可用性グループのパフォーマンスを監視する](monitor-performance-for-always-on-availability-groups.md)」の方法を使用して同期コミット セカンダリ レプリカのフェールオーバー時間を推定したとき (自動フェールオーバー パートナーなど)、RTO を超過していることが判明します。  
   
@@ -62,7 +62,7 @@ from sys.dm_hadr_database_replica_states
   
  再実行スレッドが実際に遅れている場合、セカンダリ レプリカのパフォーマンスの低下の根本原因を調査する必要があります。 レポート ワークロードとの I/O の競合がある場合、[リソース ガバナー](~/relational-databases/resource-governor/resource-governor.md)を使用して、レポート ワークロードによって使用される CPU サイクルを制御し、取得される I/O サイクルを間接的にある程度制御することができます。 たとえば、レポート ワークロードが CPU の 10% を消費していても、ワークロードが I/O バウンドになっている場合は、リソース ガバナーを使用して、CPU リソースの使用率を 5% に制限し、読み取りワークロードを制限して、I/O への影響を最小限に抑えることができます。  
   
-## <a name="next-steps"></a>次の手順  
+## <a name="next-steps"></a>次のステップ  
  [SQL Server (SQL Server 2012 に適用されます) のパフォーマンスに関する問題のトラブルシューティング](https://msdn.microsoft.com/library/dd672789(v=SQL.100).aspx)  
   
   

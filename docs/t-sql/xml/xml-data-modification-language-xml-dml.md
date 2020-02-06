@@ -21,10 +21,10 @@ ms.assetid: 20ce50d2-c07b-4e41-93a7-1380d2cd49cb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 28de1be430d02a9288b0a1fe27567965fb0a32e4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68140889"
 ---
 # <a name="xml-data-modification-language-xml-dml"></a>XML データ変更言語 (XML DML)
@@ -42,11 +42,11 @@ ms.locfileid: "68140889"
   
  「[XML データ型と列 &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-type-and-columns-sql-server.md)」の説明に従って **XML** データ型の変数と列を作成し、それらに XML ドキュメントやフラグメントを割り当てることができます。 このような XML インスタンスを変更または更新するには、次の操作を実行します。  
   
--   **xml** データ型の [modify() メソッド (xml データ型)](../../t-sql/xml/modify-method-xml-data-type.md) を使用します。  
+-   [xml](../../t-sql/xml/modify-method-xml-data-type.md) データ型の **modify() メソッド (xml データ型)** を使用します。  
   
 -   **modify()** メソッド内に適切な XML DML ステートメントを指定します。  
   
- 一部の属性では、挿入や削除、値の変更ができないので注意してください。 例:  
+ 一部の属性では、挿入や削除、値の変更ができないので注意してください。 次に例を示します。  
   
 -   **xml** の型指定の有無にかかわらず、属性には **xmlns**、**xmlns:\*** 、**xml:base** を使用します。  
   

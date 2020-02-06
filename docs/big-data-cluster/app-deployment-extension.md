@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: e05fa19c8453418c22829862801c5044e6c25d2b
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73707140"
 ---
 # <a name="how-to-use-visual-studio-code-to-deploy-applications-to-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Visual Studio Code を使用して [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]にアプリケーションを展開する方法
@@ -22,12 +22,12 @@ ms.locfileid: "73707140"
 
 この記事では、Microsoft Visual Studio Code とアプリ展開拡張機能を使用して SQL Server ビッグ データ クラスターにアプリケーションを展開する方法について説明します。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [SQL Server ビッグ データ クラスター](big-data-cluster-overview.md)
 
-## <a name="capabilities"></a>Capabilities
+## <a name="capabilities"></a>機能
 
 この拡張機能では、Visual Studio Code での次のタスクがサポートされます。
 
@@ -95,7 +95,7 @@ azdata bdc endpoint list
 
 Visual Studio Code 内で、アプリの成果物を保存する*ワークスペースを開く*必要があります。
 
-いずれかのテンプレートから新しいアプリを展開するには、[`App Specifications`]\(アプリの仕様\) ウィンドウの [`New App Template`]\(新しいアプリ テンプレート\) ボタンをクリックします。このボタンをクリックすると、名前、ランタイム、およびローカル コンピューターで新しいアプリを配置する場所を入力するように求められます。 指定する名前とバージョンは、DNS-1035 ラベルとする必要があります。また、小文字の英数字または '-' で構成され、アルファベット文字で始まり、英数字で終わる必要があります。
+いずれかのテンプレートから新しいアプリを展開するには、[`New App Template`]\(アプリの仕様\) ウィンドウの [`App Specifications`]\(新しいアプリ テンプレート\) ボタンをクリックします。このボタンをクリックすると、名前、ランタイム、およびローカル コンピューターで新しいアプリを配置する場所を入力するように求められます。 指定する名前とバージョンは、DNS-1035 ラベルとする必要があります。また、小文字の英数字または '-' で構成され、アルファベット文字で始まり、英数字で終わる必要があります。
 
 拡張機能のすべての機能を使用できるように、現在の Visual Studio Code ワークスペースに配置することをお勧めしますが、ローカル ファイル システムの任意の場所に配置できます。
 
@@ -115,14 +115,14 @@ Visual Studio Code 内で、アプリの成果物を保存する*ワークスペ
 アプリのソース コードは、[Workspace] フォルダーにあります。
 
 - **ソース ファイル名**
-   - これは、`spec.yaml` で `src` に指定されているソース コード ファイルです。
-   - `spec.yaml` に示されているように、アプリの `entrypoint` と見なされる `handler` という 1 つの関数があります。 `msg` という文字列の入力を受け取り、`out` という文字列の出力を返します。 これらは `spec.yaml` の `inputs` と `outputs` で指定されます。
+   - これは、`src` で `spec.yaml` に指定されているソース コード ファイルです。
+   - `handler` に示されているように、アプリの `entrypoint` と見なされる `spec.yaml` という 1 つの関数があります。 `msg` という文字列の入力を受け取り、`out` という文字列の出力を返します。 これらは `inputs` の `outputs` と `spec.yaml` で指定されます。
 
-スキャフォールディング テンプレートが不要で、既に作成済みのアプリの展開用に `spec.yaml` を優先する場合は、[`New App Template`]\(新しいアプリ テンプレート\) ボタンの横にある [`New Deploy Spec`]\(新しい展開の仕様\) ボタンをクリックして同じプロセスを実行しますが、`spec.yaml` が表示されるだけです。それにより選択方法を変更できます。
+スキャフォールディング テンプレートが不要で、既に作成済みのアプリの展開用に `spec.yaml` を優先する場合は、[`New Deploy Spec`]\(新しいアプリ テンプレート\) ボタンの横にある [`New App Template`]\(新しい展開の仕様\) ボタンをクリックして同じプロセスを実行しますが、`spec.yaml` が表示されるだけです。それにより選択方法を変更できます。
 
-### <a name="deploy-app"></a>アプリを展開
+### <a name="deploy-app"></a>アプリをデプロイする
 
-このアプリは、`spec.yaml` 内の [`Deploy App`]\(アプリの展開\) の CodeLens によってすぐに展開することも、[App Specifications]\(アプリの仕様\) メニューで `spec.yaml` ファイルの横にある稲妻フォルダーのボタンを押すこともできます。 拡張機能により、`spec.yaml` を配置したディレクトリ内のすべてのファイルが zip 圧縮され、アプリがクラスターに展開されます。 
+このアプリは、`Deploy App` 内の [`spec.yaml`]\(アプリの展開\) の CodeLens によってすぐに展開することも、[App Specifications]\(アプリの仕様\) メニューで `spec.yaml` ファイルの横にある稲妻フォルダーのボタンを押すこともできます。 拡張機能により、`spec.yaml` を配置したディレクトリ内のすべてのファイルが zip 圧縮され、アプリがクラスターに展開されます。 
 
 >[!NOTE]
 >すべてのアプリ ファイルが確実に `spec.yaml` と同じディレクトリにあるようにします。 `spec.yaml` は、アプリのソース コード ディレクトリのルート レベルにある必要があります。 
@@ -184,7 +184,7 @@ Visual Studio Code 内で、アプリの成果物を保存する*ワークスペ
 - ベクター
     - `inputs:`
         - `x: [1, 2, 3]`
-- マトリックス
+- Matrix
     - `inputs:`
         - `x: [[A,B,C],[1,2,3]]`
 - Object
@@ -197,11 +197,11 @@ Visual Studio Code 内で、アプリの成果物を保存する*ワークスペ
 
 アプリを削除するには、[`Deployed Apps`]\(展開済みアプリ\) サイド ウィンドウでアプリの横にあるごみ箱ボタンをクリックするだけです。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]に展開されているアプリを独自のアプリケーションに統合する方法の詳細については、[ビッグ データ クラスター上でのアプリケーションの使用](big-data-cluster-consume-apps.md)に関するページを参照してください。 「[アプリ展開のサンプル](https://aka.ms/sql-app-deploy)」にある追加のサンプルを参照して、拡張機能を試してみることもできます。
 
-[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]の詳細については、「[[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]の概要](big-data-cluster-overview.md)」を参照してください。
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]の詳細については、「[[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]とは](big-data-cluster-overview.md)」を参照してください。
 
 
 私たちの目標は、この拡張機能をお客様にとって有益なものにすることです。フィードバックをお待ちしております。 [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] チーム](https://aka.ms/sqlfeedback)までお送りください。

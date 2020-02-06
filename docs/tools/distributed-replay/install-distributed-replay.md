@@ -1,7 +1,6 @@
 ---
-title: 分散再生のインストール |Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: 分散再生のインストール
+titleSuffix: SQL Server Distributed Replay
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -9,22 +8,26 @@ ms.topic: conceptual
 ms.assetid: ea1171da-f50e-4f16-bedc-5e468a46477f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4aa2cc0859972f980e26d67e054dba3c955527c2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 4679b1f2ca6de3a358528a7ef24af8f118aa5f45
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67950036"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74992184"
 ---
 # <a name="install-distributed-replay"></a>分散再生のインストール
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  次の 3 つのいずれかの方法で分散再生をインストールできます。  
+
+次の 3 つのいずれかの方法で分散再生をインストールできます。  
   
 -   [インストール ウィザードからの分散再生のインストール](#bkmk_wizard)  
   
--   [コマンド プロンプトからの 分散再生のインストール](#bkmk_command_prompt)  
+-   [コマンド プロンプトからの分散再生のインストール](#bkmk_command_prompt)  
   
--   [構成ファイルを使用した 分散再生のインストール](#bkmk_configuration_file)  
+-   [構成ファイルを使用した分散再生のインストール](#bkmk_configuration_file)  
   
 ##  <a name="bkmk_wizard"></a> インストール ウィザードからの分散再生のインストール  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散再生機能を [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] インストール ウィザードでインストールします。 機能をインストールする場所を計画する際には、以下について検討してください。  
@@ -115,7 +118,7 @@ ms.locfileid: "67950036"
   
     2.  64 ビットのコンピューターの場合、既定のインストール パスは **C:\Program Files (x86)\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\** です。  
   
-9. 終了したら **[次へ]** をクリックします。  
+9. 構成し終わったら、 **[次へ]** をクリックします。  
   
 10. **[インストール ルール]** ページで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップはコンピューターの構成を検証します。 検証プロセスが完了したら、 **[次へ]** をクリックします。  
   
@@ -155,16 +158,16 @@ ms.locfileid: "67950036"
   
 |パラメーター|[説明]|サポートされる値|  
 |---------------|-----------------|----------------------|  
-|/CTLRSVCACCOUNT<br /><br /> **省略可**|分散再生コントローラー サービスのサービス アカウント。|アカウントとパスワードのチェック|  
-|/CTLRSVCPASSWORD<br /><br /> **省略可**|分散再生コントローラー のサービス アカウントのパスワード。|アカウントとパスワードのチェック|  
-|/CTLRSTARTUPTYPE<br /><br /> **省略可**|分散再生コントローラー サービスのスタートアップの種類。|自動<br /><br /> Disabled<br /><br /> 手動|  
-|/CTLRUSERS<br /><br /> **省略可**|分散再生コントローラー サービスの権限を持つユーザーを指定します。|区切り記号に " " (スペース) を使用した、一連のユーザー アカウント文字列<br /><br /> **重要**: 分散再生コントローラー サービスを構成するとき、分散再生クライアント サービスの実行に使用する 1 つ以上のユーザー アカウントを指定できます。 サポートされているアカウントの一覧を次に示します。<br /><br /> ドメイン ユーザー アカウント<br /><br /> ユーザーによって作成されたローカル ユーザー アカウント<br /><br /> 管理者<br /><br /> 管理者<br /><br /> 仮想アカウントおよび管理されたサービス アカウント (MSA)<br /><br /> ネットワーク サービス、ローカル サービス、およびシステム<br /><br /> <br /><br /> 注: グループ アカウント (ローカルまたはドメイン) およびその他の組み込みのアカウント (Everyone など) は使用できません。|  
-|/CLTSVCACCOUNT<br /><br /> **省略可**|分散再生クライアント サービスのサービス アカウント。|アカウントとパスワードのチェック|  
-|/CLTSVCPASSWORD<br /><br /> **省略可**|分散再生クライアント のサービス アカウントのパスワード。|アカウントとパスワードのチェック|  
-|/CLTSTARTUPTYPE<br /><br /> **省略可**|分散再生クライアント サービスのスタートアップの種類。|自動<br /><br /> Disabled<br /><br /> 手動|  
-|/CLTCTLRNAME<br /><br /> **省略可**|分散再生クライアント サービスと通信するクライアントのコンピューター名です。||  
-|/CLTWORKINGDIR<br /><br /> **省略可**|分散再生クライアント サービス用の作業ディレクトリです。|有効なパス|  
-|/CLTRESULTDIR<br /><br /> **省略可**|分散再生クライアント サービス用の結果ディレクトリです。|有効なパス|  
+|/CTLRSVCACCOUNT<br /><br /> **省略可能**|分散再生コントローラー サービスのサービス アカウント。|アカウントとパスワードのチェック|  
+|/CTLRSVCPASSWORD<br /><br /> **省略可能**|分散再生コントローラー のサービス アカウントのパスワード。|アカウントとパスワードのチェック|  
+|/CTLRSTARTUPTYPE<br /><br /> **省略可能**|分散再生コントローラー サービスのスタートアップの種類。|自動<br /><br /> 無効<br /><br /> マニュアル|  
+|/CTLRUSERS<br /><br /> **省略可能**|分散再生コントローラー サービスの権限を持つユーザーを指定します。|区切り記号に " " (スペース) を使用した、一連のユーザー アカウント文字列<br /><br /> **重要**: 分散再生コントローラー サービスを構成するとき、分散再生クライアント サービスの実行に使用する 1 つ以上のユーザー アカウントを指定できます。 サポートされているアカウントの一覧を次に示します。<br /><br /> ドメイン ユーザー アカウント<br /><br /> ユーザーによって作成されたローカル ユーザー アカウント<br /><br /> 管理者<br /><br /> 管理者<br /><br /> 仮想アカウントおよび管理されたサービス アカウント (MSA)<br /><br /> ネットワーク サービス、ローカル サービス、およびシステム<br /><br /> <br /><br /> 注: グループ アカウント (ローカルまたはドメイン) およびその他の組み込みのアカウント (Everyone など) は使用できません。|  
+|/CLTSVCACCOUNT<br /><br /> **省略可能**|分散再生クライアント サービスのサービス アカウント。|アカウントとパスワードのチェック|  
+|/CLTSVCPASSWORD<br /><br /> **省略可能**|分散再生クライアント のサービス アカウントのパスワード。|アカウントとパスワードのチェック|  
+|/CLTSTARTUPTYPE<br /><br /> **省略可能**|分散再生クライアント サービスのスタートアップの種類。|自動<br /><br /> 無効<br /><br /> マニュアル|  
+|/CLTCTLRNAME<br /><br /> **省略可能**|分散再生クライアント サービスと通信するクライアントのコンピューター名です。||  
+|/CLTWORKINGDIR<br /><br /> **省略可能**|分散再生クライアント サービス用の作業ディレクトリです。|有効なパス|  
+|/CLTRESULTDIR<br /><br /> **省略可能**|分散再生クライアント サービス用の結果ディレクトリです。|有効なパス|  
   
 ### <a name="sample-syntax"></a>サンプル構文:  
  **分散再生コントローラー コンポーネントをインストールする場合**  
@@ -217,8 +220,8 @@ Setup.exe /CTLRSVCPASSWORD="ctlrsvcpswd" /CLTSVCPASSWORD="cltsvcpswd" / Configur
 ## <a name="see-also"></a>参照  
  [SQL Server 2016 の各エディションでサポートされる機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [分散再生の要件](../../tools/distributed-replay/distributed-replay-requirements.md)   
+ [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md)   
  [管理ツール コマンド ライン オプション &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
- [Distributed Replay の構成](../../tools/distributed-replay/configure-distributed-replay.md)  
+ [分散再生の構成](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   

@@ -14,10 +14,10 @@ ms.assetid: d5c4d1e1-7be4-4d25-bcd9-5b6ddb53b3b3
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7ce0a8e44a89dbac275b8c2df320a20e7bc14f14
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297495"
 ---
 # <a name="-logical-not-ssis-expression"></a>! (論理 Not) (SSIS 式)
@@ -45,10 +45,10 @@ ms.locfileid: "71297495"
 ## <a name="result-types"></a>戻り値の型  
  DT_BOOL  
   
-## <a name="remarks"></a>Remarks  
- 次の表は、! 指定します。  
+## <a name="remarks"></a>解説  
+ 次の表は、! 操作を完了するための次の手順について引き続き調査中です。  
   
-|元のブール式|! 演算子の適用後 演算子 (operator)|  
+|元のブール式|! 演算子の適用後 operator|  
 |---------------------------------|------------------------------------|  
 |TRUE|FALSE|  
 |NULL|NULL|  

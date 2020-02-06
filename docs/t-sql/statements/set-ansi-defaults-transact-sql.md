@@ -22,13 +22,13 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 02353688efb79b4c2dbb7c4bc3d9ed0d4d5e0a37
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67913940"
 ---
-# <a name="set-ansidefaults-transact-sql"></a>SET ANSI_DEFAULTS (Transact-SQL)
+# <a name="set-ansi_defaults-transact-sql"></a>SET ANSI_DEFAULTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   一部の ISO 標準動作を集合的に指定する、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 設定のグループを制御します。  
@@ -49,7 +49,7 @@ SET ANSI_DEFAULTS { ON | OFF }
 SET ANSI_DEFAULTS ON
 ```
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 ANSI_DEFAULTS は、クライアントで変更できない、サーバー側の設定です。 クライアントは自身の設定を管理します。 既定では、これらの設定はサーバー設定と対照的です。 サーバー設定は、ユーザーが変更するものではありません。 ユーザーがクライアントの動作を変更するには、SQL_COPT_SS_PRESERVE_CURSORS を使用します。 詳細については、「[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)」を参照してください。  
   
 有効 (ON) に設定すると、次の ISO 設定が有効になります。  
@@ -78,7 +78,7 @@ SET ANSI_DEFAULTS を実行すると、QUOTED_IDENTIFIER は解析時に設定�
 ## <a name="permissions"></a>アクセス許可  
 ロール **public** のメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 次の例では、ANSI_DEFAULTS を ON に設定し、`DBCC USEROPTIONS` ステートメントを使用して、影響を受ける設定を表示します。  
   
 ```sql  

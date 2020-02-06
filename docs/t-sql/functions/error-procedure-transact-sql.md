@@ -25,13 +25,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 75e3664517ac0ce66f2a56499286303df81513ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68094679"
 ---
-# <a name="errorprocedure-transact-sql"></a>ERROR_PROCEDURE (Transact-SQL)
+# <a name="error_procedure-transact-sql"></a>ERROR_PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 この関数は、エラーによって TRY...CATCH 構造の CATCH ブロックが実行された場合に、そのエラーが発生したストアド プロシージャまたはトリガーの名前を返します。  
@@ -54,14 +54,14 @@ CATCH ブロックで呼び出された場合、`ERROR_PROCEDURE` はエラー�
   
 `ERROR_PROCEDURE` は、CATCH ブロックの範囲外で呼び出されると、NULL を返します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 `ERROR_PROCEDURE` は、CATCH ブロックのスコープ内の任意の場所で呼び出すことができます。  
   
-実行された回数、または `CATCH` ブロックのスコープ内で実行される場所に関係なく、`ERROR_PROCEDURE` は、エラーが発生したストアド プロシージャまたはトリガーの名前を返します。 エラーが発生したステートメントの直後のステートメントのエラー番号のみを返す、@@ERROR などの関数とは対照的となります。  
+実行された回数、または `ERROR_PROCEDURE` ブロックのスコープ内で実行される場所に関係なく、`CATCH` は、エラーが発生したストアド プロシージャまたはトリガーの名前を返します。 エラーが発生したステートメントの直後のステートメントのエラー番号のみを返す、@@ERROR などの関数とは対照的となります。  
    
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
   
-### <a name="a-using-errorprocedure-in-a-catch-block"></a>A. CATCH ブロックで ERROR_PROCEDURE を使用する  
+### <a name="a-using-error_procedure-in-a-catch-block"></a>A. CATCH ブロックで ERROR_PROCEDURE を使用する  
 この例では、0 除算エラーを生成したストアド プロシージャを示します。 `ERROR_PROCEDURE` は、エラーが発生したストアド プロシージャの名前を返します。  
   
 ```  
@@ -98,7 +98,7 @@ usp_ExampleProc
 
 ```  
   
-### <a name="b-using-errorprocedure-in-a-catch-block-with-other-error-handling-tools"></a>B. CATCH ブロックで、別のエラー処理ツールと一緒に ERROR_PROCEDURE を使用する  
+### <a name="b-using-error_procedure-in-a-catch-block-with-other-error-handling-tools"></a>B. CATCH ブロックで、別のエラー処理ツールと一緒に ERROR_PROCEDURE を使用する  
 この例では、0 除算エラーを生成したストアド プロシージャを示します。 ストアド プロシージャは、エラーが発生したストアド プロシージャの名前と共に、エラーに関する情報を返します。  
   
 ```  

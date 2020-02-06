@@ -16,10 +16,10 @@ ms.assetid: ab5ebab1-7ee4-41f4-999b-b4f0c420c921
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8f9480787ced42ad66602bb34db98d1c2d53bd35
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75321979"
 ---
 # <a name="switch-between-update-modes-for-an-updatable-transactional-subscription"></a>更新可能トランザクション サブスクリプションの更新モードの切り替え
@@ -63,17 +63,17 @@ ms.locfileid: "75321979"
   
 3.  更新モードを設定するサブスクリプションを右クリックしてから、 **[更新方法の設定]** をクリックします。  
   
-4.  **[更新方法の設定 - \<サブスクライバー>:\<サブスクリプション データベース>]** ダイアログ ボックスで、 **[即時更新]** または **[キュー更新]** を選択します。  
+4.  **[更新方法の設定 - \<Subscriber>: \<SubscriptionDatabase>]** ダイアログ ボックスで、 **[即時更新]** または **[キュー更新]** を選択します。  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
 
 #### <a name="to-set-the-updating-mode-for-a-pull-subscription"></a>プル サブスクリプションの更新モードを設定するには  
   
-1.  **[サブスクリプションのプロパティ - \<パブリッシャー>:\<パブリケーション データベース>]** ダイアログ ボックスの **[サブスクライバーの更新方法]** オプションで、 **[変更をすぐにレプリケートする]** または **[変更をキューに登録]** のいずれかの値を選択します。  
+1.  **[サブスクリプションのプロパティ - \<Publisher>: \<PublicationDatabase>]** ダイアログ ボックスの **[サブスクライバーの更新方法]** オプションで、 **[変更をすぐにレプリケートする]** または **[変更をキューに登録]** のいずれかの値を選択します。  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
- **[サブスクリプションのプロパティ - \<パブリッシャー>:\<パブリケーション データベース>]** ダイアログ ボックスへのアクセスについて詳しくは、[「プル サブスクリプションのプロパティの表示または変更](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)」をご覧ください。  
+ **[サブスクリプションのプロパティ - \<Publisher>: \<PublicationDatabase>]** ダイアログ ボックスへのアクセスの詳細については、「[プル サブスクリプションのプロパティの表示または変更](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)」を参照してください。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   

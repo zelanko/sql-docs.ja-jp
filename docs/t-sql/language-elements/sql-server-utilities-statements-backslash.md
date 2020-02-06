@@ -29,10 +29,10 @@ ms.assetid: c97fbb20-3d12-4d0b-9b52-62a229bc83c0
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 54e1dcd9735610f7cc8f109f00aa56fa7728ce04
-ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68495442"
 ---
 # <a name="backslash-line-continuation-transact-sql"></a>円記号 (行の連結) (Transact-SQL)
@@ -57,10 +57,10 @@ ms.locfileid: "68495442"
  \<文字列の継続するセクション>  
  文字列の 2 行目以降を指定します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 このコマンドは、文字列の 1 行目と 2 行目以降を 1 つの文字列として、円記号を含めずに返します。 円記号の後の改行は、改行文字 (U+000A) か、復帰 (U+000D) と改行 (U+000A) の順序での組み合わせである必要があります。 
 
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 
 ### <a name="a-splitting-a-character-string"></a>A. 文字列を分割する  
 

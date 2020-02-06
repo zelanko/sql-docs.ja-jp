@@ -13,10 +13,10 @@ ms.author: mathoma
 manager: erikre
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 293df346a7eac72f23fa3b3bdd7bbe7994fdc54c
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68892895"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Analysis Services と Always On 可用性グループ
@@ -34,7 +34,7 @@ ms.locfileid: "68892895"
   
  **(読み取り専用ワークロードの場合)** 。 セカンダリ レプリカのロールは、読み取り専用接続に対して構成されている必要があり、可用性グループはルーティング リストを持つ必要があり、Analysis Services データ ソース内の接続は可用性グループのリスナーを指定する必要があります。 手順はこのトピックで説明します。  
   
-##  <a name="bkmk_UseSecondary"></a> チェック リスト:読み取り専用操作でセカンダリ レプリカを使用する  
+##  <a name="bkmk_UseSecondary"></a> チェック リスト: 読み取り専用操作でセカンダリ レプリカを使用する  
  Analysis Services ソリューションに書き戻しが含まれていない場合は、読み取り可能なセカンダリ レプリカを使用するようにデータ ソース接続を構成できます。 高速ネットワーク接続がある場合、セカンダリ レプリカのデータ待機時間は非常に短くなり、プライマリ レプリカとほとんど同一のデータを持つことになります。 Analysis Services 操作のためにセカンダリ レプリカを使用すると、プライマリ レプリカ上の読み取りと書き込みの競合が削減され、可用性グループのセカンダリ レプリカの利用率が向上します。  
   
  既定では、プライマリ レプリカへの読み取り/書き込みアクセスと読み取りを目的としたアクセスの両方が許可され、セカンダリ レプリカへの接続は許可されません。 セカンダリ レプリカへの読み取り専用クライアント接続をセットアップするには、さらに構成が必要です。 構成には、セカンダリ レプリカのプロパティ設定と、読み取り専用ルーティング リストを定義する T-SQL スクリプトの実行が必要です。 次のプロシージャを使用すると、両方の手順を確実に実行できます。  
@@ -42,7 +42,7 @@ ms.locfileid: "68892895"
 > [!NOTE]  
 >  次の手順は、既存の AlwaysOn 可用性グループとデータベースがあることを前提としています。 新しいグループを構成する場合は、新しい可用性グループ ウィザードを使用してグループを作成し、データベースを結合します。 このウィザードでは、前提条件のチェック、それぞれの手順のガイド、および初期同期を実行します。 詳細については、「[新しい可用性グループ ウィザードの使用 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)」を参照してください。  
   
-#### <a name="step-1-configure-access-on-an-availability-replica"></a>手順 1:可用性レプリカに対してアクセスを構成する  
+#### <a name="step-1-configure-access-on-an-availability-replica"></a>手順 1. 可用性レプリカに対してアクセスを構成する  
   
 1.  オブジェクト エクスプローラーで、プライマリ レプリカをホストするサーバー インスタンスに接続し、サーバー ツリーを展開します。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "68892895"
   
          このプロパティは、計画的なフェールオーバーに必須です。 テスト目的で計画的な手動フェールオーバーを実行する場合、プライマリ レプリカとセカンダリ レプリカの両方に対して **[可用性モード]** を **[同期コミット]** に設定します。  
   
-#### <a name="step-2-configure-read-only-routing"></a>手順 2:読み取り専用ルーティングを構成する  
+#### <a name="step-2-configure-read-only-routing"></a>手順 2. 読み取り専用ルーティングを構成する  
   
 1.  プライマリ レプリカに接続します。  
   
@@ -124,7 +124,7 @@ ms.locfileid: "68892895"
   
 1.  [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]の Analysis Services の多次元およびデータ マイニング モデル プロジェクトで、 **[データ ソース]** を右クリックして **[新しいデータ ソース]** をクリックします。 新しいデータ ソースを作成するには、 **[新規作成]** をクリックします。  
   
-     または、テーブル モデル プロジェクトの場合、[モデル] メニューをクリックし、 **[データ ソースからのインポート]** をクリックします。  
+     または、テーブル モデル プロジェクトの場合、モデル メニューをクリックし、 **データ ソースからのインポート** をクリックします。  
   
 2.  接続マネージャーで、プロバイダーには、表形式のデータ ストリーム (TDS) プロトコルをサポートするプロバイダーを選択します。 SQL Server Native Client 11.0 は、このプロトコルをサポートしています。  
   
@@ -138,7 +138,7 @@ ms.locfileid: "68892895"
   
      セカンダリ レプリカへの読み取り専用クライアント接続を構成する場合は、 **[Application Intent]** を **[READONLY]** に設定します。 または、既定の **[READWRITE]** を保持して接続をプライマリ レプリカにリダイレクトします。  
   
-5.  [権限借用情報] では **[特定の Windows ユーザー名とパスワードを使用する]** をクリックし、データベースに対して少なくとも **db_datareader** 権限を持つ、Windows ドメイン ユーザー アカウントを入力します。  
+5.  権限借用情報 では  **特定の Windows ユーザー名とパスワードを使用する** をクリックし、データベースに対して少なくとも **db_datareader** 権限を持つ、Windows ドメイン ユーザー アカウントを入力します。  
   
      **[現在のユーザーの資格情報を使用する]** または **[継承する]** を選択しないでください。 **[サービス アカウントを使用する]** を選択できますが、そのアカウントがデータベースに対する読み取り権限を持つ場合のみです。  
   
@@ -153,7 +153,7 @@ ms.locfileid: "68892895"
 ##  <a name="bkmk_test"></a> 構成をテストする  
  Analysis Services でセカンダリ レプリカを構成してデータ ソース接続を作成したら、処理とクエリのコマンドがセカンダリ レプリカにリダイレクトされていることを確認できます。 また、計画された手動フェールオーバーを実行して、このシナリオの復元計画を確認できます。  
   
-#### <a name="step-1-confirm-the-data-source-connection-is-redirected-to-the-secondary-replica"></a>手順 1:データ ソース接続がセカンダリ レプリカにリダイレクトされることを確認する  
+#### <a name="step-1-confirm-the-data-source-connection-is-redirected-to-the-secondary-replica"></a>手順 1. データ ソース接続がセカンダリ レプリカにリダイレクトされることを確認する  
   
 1.  SQL Server Profiler を開始して、セカンダリ レプリカをホストしている SQL Server インスタンスに接続します。  
   
@@ -169,7 +169,7 @@ ms.locfileid: "68892895"
   
      トレース ウィンドウには、アプリケーション **Microsoft SQL Server Analysis Services**からのイベントが表示されます。 セカンダリ レプリカをホストしているサーバー インスタンスのデータベースからデータを取得する **SELECT** ステートメントが表示されます (リスナー経由でセカンダリ レプリカに接続された場合)。  
   
-#### <a name="step-2-perform-a-planned-failover-to-test-the-configuration"></a>手順 2:計画されたフェールオーバーを実行して構成をテストする  
+#### <a name="step-2-perform-a-planned-failover-to-test-the-configuration"></a>手順 2. 計画されたフェールオーバーを実行して構成をテストする  
   
 1.  [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] ではプライマリ レプリカとセカンダリ レプリカをチェックして、その両方で同期コミット モードが構成されていて、現在同期していることを確認します。  
   
@@ -203,7 +203,7 @@ ms.locfileid: "68892895"
 ##  <a name="bkmk_whathappens"></a> フェールオーバー後に何が起きるか  
  フェールオーバー中に、セカンダリ レプリカはプライマリ ロールに移行し、元のプライマリ レプリカはセカンダリ レプリカに移行します。 すべてのクライアント接続が終了して、可用性グループ リスナーの所有権はプライマリ レプリカ ロールと共に新しい SQL Server インスタンスに移動し、リスナー エンドポイントは新しいインスタンスの仮想 IP アドレスと TCP ポートにバインドされます。 詳細については、「[可用性レプリカに対するクライアント接続アクセスについて &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)」を参照してください。  
   
- 処理中にフェールオーバーした場合、Analysis Services のログ ファイルまたは出力ウィンドウで、次のエラーが発生します。"OLE DB エラー:OLE DB または ODBC エラー:通信リンクが失敗しました; 08S01; TPC プロバイダー:既存の接続はリモート ホストに強制的に切断されました。 ; 08S01。"  
+ 処理中にフェールオーバーが発生した場合、次のエラーが Analysis Services のログ ファイルまたは表示ウィンドウに発生します。"OLE DB エラー: OLE DB または ODBC エラー: 通信リンクが失敗しました; 08S01; TPC プロバイダー : 既存の接続はリモート ホストに強制的に切断されました。 ; 08S01。"  
   
  数分待ってから再試行すると、このエラーは解決されます。 可用性グループが読み取り可能なセカンダリ レプリカに対して正しく構成されている場合、処理を再試行すると、新しいセカンダリ レプリカで再開されます。  
   
@@ -220,7 +220,7 @@ ms.locfileid: "68892895"
   
 ## <a name="see-also"></a>参照  
  [可用性グループ リスナー、クライアント接続、およびアプリケーションのフェールオーバー &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
- [アクティブなセカンダリ:読み取り可能なセカンダリ レプリカ &#40;Always On 可用性グループ&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
+ [アクティブなセカンダリ: 読み取り可能なセカンダリ レプリカ &#40;AlwaysOn 可用性グループ&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
  [AlwaysOn 可用性グループでの運用上の問題のポリシー ベースの管理 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md)   
  [データ ソースの作成 &#40;SSAS 多次元&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional)   
  [ディメンションの書き戻しの有効化](https://docs.microsoft.com/analysis-services/multidimensional-models/bi-wizard-enable-dimension-writeback)  

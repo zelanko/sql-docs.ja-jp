@@ -12,13 +12,13 @@ ms.assetid: 8f929d69-8eb4-4fe9-be52-b9680a7820db
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 6a38a5470c51145141eda81d30eaadd8ff9f72e6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68002020"
 ---
-# <a name="mssqlserver2579"></a>MSSQLSERVER_2579
+# <a name="mssqlserver_2579"></a>MSSQLSERVER_2579
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>詳細  
@@ -30,7 +30,7 @@ ms.locfileid: "68002020"
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|DBCC_EXTENT_OUT_OF_RANGE|  
-|メッセージ テキスト|テーブル エラー:オブジェクト ID O_ID、インデックス ID I_ID、パーティション ID PN_ID、アロケーション ユニット ID A_ID (型 TYPE) のエクステント P_ID が、このデータベースの範囲を超えています。|  
+|メッセージ テキスト|テーブル エラー : オブジェクト ID O_ID、インデックス ID I_ID、パーティション ID PN_ID、アロケーション ユニット ID A_ID (型 TYPE) のエクステント P_ID が、このデータベースの範囲を超えています。|  
   
 ## <a name="explanation"></a>説明  
 *P_ID* は、 *(filenum:pageinfile)* という形式のページ ID です。 このエクステントの *pageinfile* が、データベース ファイル *(filenum)* の物理サイズより大きくなっています。 このエクステントが、表示されたアロケーション ユニット ID に対応して IAM ページ内で割り当てられていることを示しています。  

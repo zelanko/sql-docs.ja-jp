@@ -14,10 +14,10 @@ ms.assetid: 5f423b9f-a6c4-41a7-9d8d-8f4926ce1fb4
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 9284388a56014084b2478d6d805ff3fc917459d1
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75558117"
 ---
 # <a name="view-policy-based-management-facets-on-a-sql-server-object"></a>SQL Server オブジェクトのポリシーベースの管理ファセットの表示
@@ -47,7 +47,7 @@ ms.locfileid: "75558117"
   
 1.  オブジェクト エクスプローラーで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンス、インスタンス オブジェクト、データベース、またはデータベース オブジェクトを右クリックし、 **[ファセット]** をクリックします。  
   
-2.  **[ファセットの表示 - _object_name_]** ダイアログ ボックスの **[ファセット]** ボックスの一覧で、プロパティを表示するファセットを選択します。 このダイアログ ボックスで利用可能なオプションの詳細については、「 [View Facets Dialog Box](../../relational-databases/policy-based-management/view-facets-dialog-box.md)」を参照してください。  
+2.  **[ファセットの表示 -** object_name _]_ ダイアログ ボックスの **[ファセット]** ボックスの一覧で、プロパティを表示するファセットを選択します。 このダイアログ ボックスで利用可能なオプションの詳細については、「 [View Facets Dialog Box](../../relational-databases/policy-based-management/view-facets-dialog-box.md)」を参照してください。  
   
 3.  完了したら、 **[OK]** をクリックします。  
   
