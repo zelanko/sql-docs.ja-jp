@@ -26,10 +26,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 664e3cd0fc687509c630258a681c155d94863d39
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67943067"
 ---
 # <a name="-bitwise-exclusive-or-transact-sql"></a>^ (ビットごとの排他的 OR) (Transact-SQL)
@@ -47,7 +47,7 @@ expression ^ expression
   
 ## <a name="arguments"></a>引数  
  *式 (expression)*  
- 整数データ型に分類されるデータ型のいずれか、または **bit**、または **binary** または **varbinary** データ型の有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。 *式*は、ビットごとの演算に対して 2 進数として扱われます。  
+ 整数データ型に分類されるデータ型のいずれか、または [bit](../../t-sql/language-elements/expressions-transact-sql.md)、または **binary** または **varbinary** データ型の有効な**式**を指定します。 *式*は、ビットごとの演算に対して 2 進数として扱われます。  
   
 > [!NOTE]  
 >  ビットごとの演算では、1 つの*式*のみが **binary** または **varbinary** データ型のいずれかになります。  
@@ -59,12 +59,12 @@ expression ^ expression
   
  入力値が **tinyint** の場合は **tinyint** です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  ビットごとの **^** 演算子では、2 つの式の対応するビットを対象に、ビットごとの排他的論理 OR 演算が実行されます。 入力式で現在処理対象となっているビットについて、両方ではなくいずれか一方のビットだけが 1 の場合、結果セットのビットは 1 に設定されます。 両方のビットが 0 または 1 の場合、結果セットのビットはクリアされて 0 になります。  
   
  左側の式と右側の式が異なる整数型の場合 (たとえば、左側の*式*が **smallint** 型で、右側の*式*が **int** 型の場合)、小さいデータ型の引数が大きいデータ型の引数に変換されます。 この場合、**smallint**_expression_ は **int** に変換されます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、**int** データ型を使用して元の値を格納するテーブルを作成し、1 行に 2 つの値を挿入します。  
   
 ```  

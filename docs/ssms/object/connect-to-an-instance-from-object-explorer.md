@@ -1,6 +1,6 @@
 ---
-title: SQL Server または Azure SQL Database への接続 | Microsoft Docs
-ms.custom: ''
+title: SQL Server または Azure SQL Database への接続
+ms.custom: seo-lt-2019
 ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9803a8a0-a8f1-4b65-87b8-989b06850194
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: aeb46551b33f40ba6c42de705559e20d8c7b0315
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 8241bb0edff2a424d42d79ad3e6aa514519e79b3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264608"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257209"
 ---
 # <a name="connect-to-a-sql-server-or-azure-sql-database"></a>SQL Server または Azure SQL Database への接続
 
@@ -28,11 +28,11 @@ ms.locfileid: "68264608"
 
 1. **オブジェクト エクスプローラー**で、 **[接続]、[データベース エンジン]** の順にクリックします。
 
-   ![connect](../media/connect-to-server/connect-db-engine.png)
+   ![接続する](../media/connect-to-server/connect-db-engine.png)
 
 1. **[サーバーへの接続]** フォームに必要事項を入力し、 **[接続]** をクリックします。
 
-   ![サーバーへの接続](../media/connect-to-server/connect.png)
+   ![[サーバーに接続]](../media/connect-to-server/connect.png)
 
 1. Azure SQL Server に接続する場合は、サインインしてファイアウォール規則を作成するように求めるメッセージが表示される場合があります。 **[サインイン]** をクリックします (メッセージが表示されない場合は、下記の手順 6 に進みます)。
 
@@ -46,9 +46,9 @@ ms.locfileid: "68264608"
 
 1. 接続が正常に行われると、**オブジェクト エクスプローラー**にサーバー表示されます。
 
-   ![接続済み](../media/connect-to-server/connected.png)
+   ![connected](../media/connect-to-server/connected.png)
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>次の手順
 
 [テーブルの設計、作成、更新](../visual-db-tools/design-tables-visual-database-tools.md)
 
@@ -58,6 +58,6 @@ ms.locfileid: "68264608"
 [SQL Server Management Studio (SSMS) のダウンロード](../download-sql-server-management-studio-ssms.md)
 
 [Analysis Services](https://docs.microsoft.com/sql/analysis-services/instances/connect-to-analysis-services)  
-[Integration Services](https://docs.microsoft.com/sql/integration-services/sql-server-integration-services)  
+[統合サービス](https://docs.microsoft.com/sql/integration-services/sql-server-integration-services)  
 [Reporting Services](https://docs.microsoft.com/sql/reporting-services/tools/connect-to-a-report-server-in-management-studio)  
-[Azure Storage](../f1-help/connect-to-microsoft-azure-storage.md)  
+[Azure ストレージ](../f1-help/connect-to-microsoft-azure-storage.md)  

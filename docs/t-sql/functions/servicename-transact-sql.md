@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: adae0818964e55bffb71dd415dde9cb74297f3ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67906113"
 ---
 # <a name="x40x40servicename-transact-sql"></a>&#x40;&#x40;SERVICENAME (Transact-SQL)
@@ -43,11 +43,11 @@ ms.locfileid: "67906113"
 ## <a name="return-types"></a>戻り値の型  
  **nvarchar**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は MSSQLServer という名前のサービスとして実行されます。  
   
-## <a name="examples"></a>使用例  
- 次に、`@@SERVICENAME` の使用例を示します。  
+## <a name="examples"></a>例  
+ 次の例に、`@@SERVICENAME` の使用方法を示します。  
   
 ```  
 SELECT @@SERVICENAME AS 'Service Name';  

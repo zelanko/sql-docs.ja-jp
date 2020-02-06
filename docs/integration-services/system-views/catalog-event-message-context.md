@@ -11,10 +11,10 @@ ms.assetid: 273a54f8-b107-4f36-9461-2b475644760d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9026edfafeb24eae766e9d42634512a565b6934b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296677"
 ---
 # <a name="catalogevent_message_context"></a>catalog.event_message_context 
@@ -28,17 +28,17 @@ ms.locfileid: "71296677"
   
 |列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
-|Context_id|BIGINT|エラー コンテキストの一意の ID。|  
-|Event_message_id|BIGINT|コンテキストに関連するメッセージの一意の ID。|  
+|Context_id|bigint|エラー コンテキストの一意の ID。|  
+|Event_message_id|bigint|コンテキストに関連するメッセージの一意の ID。|  
 |Context_depth|INT|深さが増えるにつれて、コンテキストはエラーからかけ離れたものになります。 エラーが発生した場合、コンテキストの深さは 1 から始まります。 値 0 は、実行が開始される前のパッケージの状態を示します。|  
 |Package_path|Nvarchar(max)|コンテキスト ソースのパッケージ パス。|  
-|Context_type|SMALLINT|コンテキストのソースであるオブジェクトの型。 コンテキストの種類の一覧については、「**解説**」セクションを参照してください。|  
+|Context_type|smallint|コンテキストのソースであるオブジェクトの型。 コンテキストの種類の一覧については、「**解説**」セクションを参照してください。|  
 |Context_source_name|Nvarchar (4000)|コンテキストのソースであるオブジェクトの名前。|  
 |Context_source_id|Nvarchar(38)|コンテキストのソースであるオブジェクトの一意の ID。|  
 |Property_name|Nvarchar (4000)|コンテキストのソースに関連付けられているプロパティの名前。|  
 |Property_value|Sql_variant|コンテキストのソースに関連付けられているプロパティ値。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  次の表に、コンテキストの種類の一覧を示します。  
   
 ||||  
@@ -49,7 +49,7 @@ ms.locfileid: "71296677"
 |30|Sequence|シーケンスの状態。|  
 |40|For ループ|For ループの状態。|  
 |50|Foreach ループ|Foreach ループの状態。|  
-|60|[パッケージ]|エラーが発生したときのパッケージの状態。|  
+|60|Package|エラーが発生したときのパッケージの状態。|  
 |70|変数|変数の値|  
 |80|[ODBC 入力元エディター]|接続マネージャーのプロパティ。|  
   

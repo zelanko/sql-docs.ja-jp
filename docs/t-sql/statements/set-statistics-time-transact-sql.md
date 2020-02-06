@@ -25,10 +25,10 @@ ms.assetid: eec2e1cd-a29d-4cf3-a271-be9d61506f15
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 90eb59652bf64e6e3be4edaa3cce2f0bf3c02df7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67897997"
 ---
 # <a name="set-statistics-time-transact-sql"></a>SET STATISTICS TIME (Transact-SQL)
@@ -45,7 +45,7 @@ ms.locfileid: "67897997"
 SET STATISTICS TIME { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  SET STATISTICS TIME が ON の場合、ステートメントの処理時間の統計が表示されます。 OFF の場合、時間の統計は表示されません。  
   
  SET STATISTICS TIME は、解析時ではなく実行時に設定されます。  
@@ -59,7 +59,7 @@ SET STATISTICS TIME { ON | OFF }
 ## <a name="permissions"></a>アクセス許可  
  SET STATISTICS TIME を使用するには、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行するための適切な権限が必要です。 SHOWPLAN 権限は必要ありません。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  この例では、サーバーの実行、解析、コンパイルの時間を表示します。  
   
 ```  

@@ -16,10 +16,10 @@ ms.assetid: 738d56be-3870-4774-b112-3dce27becc11
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6d94ffd0182bfad3ed95f52640a2aed01ceeaa54
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68118972"
 ---
 # <a name="decompress-transact-sql"></a>DECOMPRESS (Transact-SQL)
@@ -42,9 +42,9 @@ DECOMPRESS ( expression )
 ## <a name="return-types"></a>戻り値の型  
 データ型 **varbinary(max)** の値。 `DECOMPRESS` は ZIP アルゴリズムを使用し、入力引数の圧縮を解除します。 ユーザーは、必要な場合、結果をターゲットの型に明示的にキャストする必要があります。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-decompress-data-at-query-time"></a>A. クエリ時にデータの圧縮を解除する  
 この例では、圧縮されたテーブル データを返す方法を示します。  

@@ -16,10 +16,10 @@ author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
 ms.openlocfilehash: fa881a12ad04c5613aced89771ebc31e1cdaa5a2
-ms.sourcegitcommit: 365a919e3f0b0c14440522e950b57a109c00a249
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75831778"
 ---
 # <a name="scalar-udf-inlining"></a>スカラー UDF のインライン化
@@ -137,12 +137,12 @@ UDF 内のロジックの複雑さによっては、結果として得られる�
 <a name="requirements"></a> 以下のすべての条件に該当する場合、そのスカラー T-SQL UDF はインライン化できます。
 
 - UDF が、次のコンストラクトを使用して書かれている。
-    - `DECLARE`、`SET`:変数の宣言と代入。
-    - `SELECT`:単一/複数の変数代入を含む SQL クエリ<sup>1</sup>。
-    - `IF`/`ELSE`:任意の入れ子レベルでの分岐。
-    - `RETURN`:1 つまたは複数の return ステートメント。
-    - `UDF`:入れ子/再帰関数呼び出し<sup>2</sup>。
-    - その他:`EXISTS`、`ISNULL` などの関係演算。
+    - `DECLARE`、`SET`: 変数の宣言と代入。
+    - `SELECT`: 単一/複数の変数代入を含む SQL クエリ<sup>1</sup>。
+    - `IF`/`ELSE`: 任意の入れ子レベルでの分岐。
+    - `RETURN`: 1 つまたは複数の return ステートメント。
+    - `UDF`: 入れ子/再帰関数呼び出し<sup>2</sup>。
+    - その他: `EXISTS`、`ISNULL` などの関係演算。
 - UDF で、時間に依存する組み込み関数 (`GETDATE()` など) または副作用のある組み込み関数<sup>3</sup> (`NEWSEQUENTIALID()` など) が呼び出されていない。
 - UDF で、`EXECUTE AS CALLER` 句が使用されている (`EXECUTE AS` 句が指定されていない場合の既定の動作)。
 - UDF で、テーブル変数またはテーブル値パラメーターが参照されていない。
@@ -210,7 +210,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET TSQL_SCALAR_UDF_INLINING = OFF;
 ALTER DATABASE SCOPED CONFIGURATION SET TSQL_SCALAR_UDF_INLINING = ON;
 ```
 
-ON のとき、この設定は [`sys.database_scoped_configurations`](../system-catalog-views/sys-database-scoped-configurations-transact-sql.md) で有効として表示されます。 `USE HINT` クエリ ヒントとして `DISABLE_TSQL_SCALAR_UDF_INLINING` を指定することで、特定のクエリについてスカラー UDF のインライン化を無効にすることもできます。 次に例を示します。
+ON のとき、この設定は [`sys.database_scoped_configurations`](../system-catalog-views/sys-database-scoped-configurations-transact-sql.md) で有効として表示されます。 `DISABLE_TSQL_SCALAR_UDF_INLINING` クエリ ヒントとして `USE HINT` を指定することで、特定のクエリについてスカラー UDF のインライン化を無効にすることもできます。 次に例を示します。
 
 ```sql
 SELECT L_SHIPDATE, O_SHIPPRIORITY, SUM (dbo.discount_price(L_EXTENDEDPRICE, L_DISCOUNT)) 

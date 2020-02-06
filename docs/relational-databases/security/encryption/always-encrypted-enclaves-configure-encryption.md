@@ -11,10 +11,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: d887e428773e6901544422edcb6960e6e9ae0580
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73595517"
 ---
 # <a name="configure-column-encryption-in-place-using-always-encrypted-with-secure-enclaves"></a>セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用して列の暗号化をインプレースで構成する 
@@ -27,7 +27,7 @@ ms.locfileid: "73595517"
 
 インプレース暗号化を使うと、[ALTER TABLE ALTER COLUMN (Transact-SQL)](../../../t-sql/statements/alter-table-transact-sql.md) ステートメントを使用して暗号化操作をトリガーすることもできます。これは、エンクレーブなしでは実行できません。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 サポートされている暗号化操作と、操作に使用される列暗号化キーの要件は、次のとおりです。
 - プレーンテキスト列の暗号化。 列の暗号化に使用される列暗号化キーは、エンクレーブ対応である必要があります。
 - 新しい暗号化の種類と新しい列暗号化キーの一方または両方を使用した、暗号化された列の再暗号化。 現在の列暗号化キーと新しい列暗号化キー (現在のキーと異なる場合) の両方が、エンクレーブ対応である必要があります。
@@ -44,7 +44,7 @@ SQL Server Management Studio またはカスタム アプリケーションか�
 > [!NOTE]
 > 現時点では、[Always Encrypted ウィザード](always-encrypted-wizard.md)および [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/module/sqlserver/set-sqlcolumnencryption) コマンドレットではインプレース暗号化はサポートされておらず、構成が上記の要件を満たしている場合でも、データは暗号化操作のために常にダウンロードされます。 
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>次の手順
 - [Transact-SQL を使用してインプレースでの列の暗号化を構成する](always-encrypted-enclaves-configure-encryption-tsql.md)
 - [セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用する列でインデックスを作成して使用する](always-encrypted-enclaves-create-use-indexes.md)
 - [セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用するアプリケーションを開発する](always-encrypted-enclaves-client-development.md)

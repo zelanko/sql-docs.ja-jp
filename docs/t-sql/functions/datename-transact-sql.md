@@ -26,10 +26,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6052e7eb0e759b7821ac8d7ad6b213fef188be06
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75255818"
 ---
 # <a name="datename-transact-sql"></a>DATENAME (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "75255818"
 
 この関数は、指定された *date* の指定された *datepart* を表す文字列を返します。
 
-[!INCLUDE[tsql](../../includes/tsql-md.md)] の日付と時刻のあらゆるデータ型と関数に関する概要については、「[日付と時刻のデータ型および関数 &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)」を参照してください。
+[ の日付と時刻のあらゆるデータ型と関数に関する概要については、「](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)日付と時刻のデータ型および関数 &#40;Transact-SQL&#41;[!INCLUDE[tsql](../../includes/tsql-md.md)]」を参照してください。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -49,7 +49,7 @@ DATENAME ( datepart , date )
   
 ## <a name="arguments"></a>引数  
 *datepart*  
-`DATENAME` によって返される *date* 引数の特定の部分。 この表には、有効な *datepart* 引数をすべて一覧表示しています。
+*によって返される*date`DATENAME` 引数の特定の部分。 この表には、有効な *datepart* 引数をすべて一覧表示しています。
 
 > [!NOTE]
 > `DATENAME` は、*datepart* 引数に関して、ユーザー定義変数に相当するものは受け入れられません。
@@ -92,7 +92,7 @@ DATENAME ( datepart , date )
   
 -   *-各日付構成要素とその省略形は、同じ値を返します。*  
   
-戻り値は、[SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) と、ログインの [default language サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md)で設定した言語環境に依存します。 *date* がなんらかの形式の文字列リテラルである場合、戻り値は [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md) に依存します。 date が日付データ型や時刻データ型の列式である場合、SET DATEFORMAT によって戻り値が変わることはありません。
+戻り値は、[SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) と、ログインの [default language サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md)で設定した言語環境に依存します。 [date](../../t-sql/statements/set-dateformat-transact-sql.md) がなんらかの形式の文字列リテラルである場合、戻り値は *SET DATEFORMAT* に依存します。 date が日付データ型や時刻データ型の列式である場合、SET DATEFORMAT によって戻り値が変わることはありません。
   
 *date* パラメーターに **date** データ型引数がある場合、戻り値は [SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md) によって指定された設定に依存します。
   
@@ -135,7 +135,7 @@ SELECT DATENAME(year, @t);
 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , 、DATENAME は、文字列リテラルを暗黙的にキャスト、 **datetime2** 型です。 つまり、`DATENAME` では、日付が文字列として渡される場合、YDM 形式がサポートされません。 文字列を明示的にキャストする必要があります、 **datetime** または **smalldatetime** YDM 形式を使用する型。
   
 ## <a name="examples"></a>例  
-この例は、指定された日付の日付部分を返します。 SELECT ステートメントの `datepart` 引数の代わりにテーブルの *datepart* 値を使用します。
+この例は、指定された日付の日付部分を返します。 SELECT ステートメントの *引数の代わりにテーブルの*datepart`datepart` 値を使用します。
   
 `SELECT DATENAME(datepart,'2007-10-30 12:15:32.1234567 +05:10');`
   
@@ -161,7 +161,7 @@ SELECT DATENAME(year, @t);
   
 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
-この例は、指定された日付の日付部分を返します。 SELECT ステートメントの `datepart` 引数の代わりにテーブルの *datepart* 値を使用します。
+この例は、指定された日付の日付部分を返します。 SELECT ステートメントの *引数の代わりにテーブルの*datepart`datepart` 値を使用します。
   
 ```sql
 SELECT DATENAME(datepart,'2007-10-30 12:15:32.1234567 +05:10');  

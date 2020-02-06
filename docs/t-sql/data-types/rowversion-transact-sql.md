@@ -27,10 +27,10 @@ ms.assetid: 65c9cf0e-3e8a-45f8-87b3-3460d96afb0b
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 0129999e61e1df1c61c3a0fb58eab1b3a1cca7b6
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75245300"
 ---
 # <a name="rowversion-transact-sql"></a>rowversion (Transact-SQL)
@@ -101,7 +101,7 @@ IF (SELECT COUNT(*) FROM @t) = 0
   
 `myRv` は、その行の前回の読み取り時間を示す、行の **rowversion** 列の値です。 この値を実際の **rowversion** 値に置き換える必要があります。 実際の **rowversion** 値の例は、0x00000000000007d3 などになります。
   
-また、サンプル [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントをトランザクションに置くことができます。 トランザクションの範囲内で `@t` 変数に対してクエリを実行すると、`MyTest` テーブルに対するクエリを再度実行しなくても、テーブルの更新済みの `myKey` 列を取得できます。
+また、サンプル [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントをトランザクションに置くことができます。 トランザクションの範囲内で `@t` 変数に対してクエリを実行すると、`myKey` テーブルに対するクエリを再度実行しなくても、テーブルの更新済みの `MyTest` 列を取得できます。
   
 **timestamp** 構文を使用した同じ例を次に示します。
   

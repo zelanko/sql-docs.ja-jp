@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
 ms.openlocfilehash: 88ef620a24bc2ce623ea6fb072871dadeffbcf6d
-ms.sourcegitcommit: 2604e13627fbc9f3bda3926b67045fceb7b04e37
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68823116"
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>Linux での SQL Server データベースのバックアップと復元
@@ -30,7 +30,7 @@ ms.locfileid: "68823116"
 sqlcmd -S localhost -U SA -Q "BACKUP DATABASE [demodb] TO DISK = N'/var/opt/mssql/data/demodb.bak' WITH NOFORMAT, NOINIT, NAME = 'demodb-full', SKIP, NOREWIND, NOUNLOAD, STATS = 10"
 ```
 
-コマンドを実行すると、SQL Server によってパスワードの入力が求められます。 パスワードを入力すると、バックアップの進行状況の結果がシェルから返されます。 例:
+コマンドを実行すると、SQL Server によってパスワードの入力が求められます。 パスワードを入力すると、バックアップの進行状況の結果がシェルから返されます。 次に例を示します。
 
 ```
 Password:

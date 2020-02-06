@@ -14,10 +14,10 @@ ms.assetid: 0b3cbe38-ce24-47ca-83ef-6538a5299d1a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: bfad11f3bcba41160fcb46ede37f6e7ea3c5ece4
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295160"
 ---
 # <a name="catalogoperation_messages-ssisdb-database"></a>catalog.operation_messages (SSISDB データベース)
@@ -39,7 +39,7 @@ ms.locfileid: "71295160"
 |message|**nvarchar(max)**|メッセージのテキストです。|  
 |extended_info_id|**bigint**|操作メッセージに関連する追加情報の ID については、[extended_operation_info](../../integration-services/system-views/catalog-extended-operation-info-ssisdb-database.md) ビューを参照してください。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  このビューには、カタログでの操作中に記録される各メッセージの行が表示されます。 このメッセージは、サーバー、パッケージの実行プロセス、または実行エンジンによって生成されます。  
   
  このビューに表示されるメッセージの種類は次のとおりです。  
@@ -49,7 +49,7 @@ ms.locfileid: "71295160"
 |-1|Unknown|  
 |120|エラー|  
 |110|警告|  
-|70|[情報]|  
+|70|Information|  
 |10|検証前|  
 |20|検証後|  
 |30|実行前|  
