@@ -18,10 +18,10 @@ ms.assetid: b402b36f-05bf-4c6d-8cd6-76c0fff19db2
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 5c79a6aea1042649d688b52d124f9b661d4a5b7f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68107721"
 ---
 # <a name="stexteriorring-geometry-data-type"></a>STExteriorRing (geometry データ型)
@@ -39,14 +39,14 @@ ms.locfileid: "68107721"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **geometry**  
   
- CLR の戻り値の型:**SqlGeometry**  
+ CLR 戻り値の型: **SqlGeometry**  
   
- Open Geospatial Consortium (OGC) の型:**LineString**  
+ Open Geospatial Consortium (OGC) の型: **LineString**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **geometry** インスタンスが多角形ではない場合、このメソッドは **NULL** を返します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  `Polygon` インスタンスを作成し、`STExteriorRing()` を使用して、多角形の外部リングを **LineString** として返す例を次に示します。  
   
 ```  

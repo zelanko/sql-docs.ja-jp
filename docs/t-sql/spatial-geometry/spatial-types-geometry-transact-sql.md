@@ -18,10 +18,10 @@ ms.assetid: 3fefdf7b-f931-404c-821c-82c0375eaf51
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: a2b65decea6d737801ef1b0b37e44b0c8ae028af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68101016"
 ---
 # <a name="spatial-types---geometry-transact-sql"></a>空間型 - geometry (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "68101016"
 ## <a name="registering-the-geometry-type"></a>geometry 型の登録  
  **geometry** 型は、各データベースで使用できるように事前に定義されています。 **geometry** 型のテーブル列を作成し、他の CLR 型を使用するときと同じように **geometry** データを操作できます。 保存される計算列と保存されない計算列で使用できます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-showing-how-to-add-and-query-geometry-data"></a>A. geometry 型のデータの追加方法とクエリ方法を示す  
  次の 2 つの例は、geometry 型のデータの追加方法とクエリ方法を示しています。 最初の例では、ID 列と `geometry` 型の `GeomCol1`列を含むテーブルを作成します。 3 番目の列で、 `geometry` 型の列をその Open Geospatial Consortium (OGC) の Well-Known Text (WKT) 表現で示し、 `STAsText()` メソッドを使用します。 次に 2 つの行が挿入されます。1 つは、 `LineString` の `geometry`インスタンスを含む行で、もう 1 つは `Polygon` インスタンスを含む行です。  

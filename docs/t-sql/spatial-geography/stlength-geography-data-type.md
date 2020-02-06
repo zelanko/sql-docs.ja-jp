@@ -18,10 +18,10 @@ ms.assetid: 774560ab-4a4a-4058-b043-1e67cf6fb9eb
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 61487b976322f8725f9398e54f8292919ff0ca58
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68139107"
 ---
 # <a name="stlength-geography-data-type"></a>STLength (geography データ型)
@@ -39,14 +39,14 @@ ms.locfileid: "68139107"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **float**  
   
- CLR の戻り値の型:**SqlDouble**  
+ CLR の戻り値の型: **SqlDouble**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **geography** インスタンスが閉じられている場合、長さはインスタンスの周囲の合計長として計算されます。多角形の長さとは、周囲の長さです。地点の長さは 0 です。 **GeometryCollection** の長さは、コレクションに含まれるすべての **geography** インスタンスの合計長として計算されます。  
   
  STLength() は、LineString が有効でも無効でも動作します。 通常、LineString が無効になるのは、線分の重複のためです。これは、不正確な GPS のトレースなどの異常によって起きる場合があります。 STLength() は、重複する線分や無効な線分を削除しません。 返される長さの値には、重複する線分や無効な線分が含まれています。 MakeValid() メソッドは、LineString から重複する線分を削除できます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  `LineString` インスタンスを作成し、`STLength()` を使用して、インスタンスの長さを取得する例を次に示します。  
   
 ```  

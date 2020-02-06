@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 19fbd10e-5b59-4cd0-a988-52d5d9206242
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 6a99d15ba812edac0408262ba1ae26d7ea8b8dbc
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 3df80893c54978060387c7ff96cb975b34740534
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768437"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287340"
 ---
 # <a name="replication-tutorials"></a>レプリケーションのチュートリアル
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "68768437"
 > このチュートリアルで示すタスクのほとんどは、プログラムによって実行できます。 詳細については、「[レプリケーション開発者のドキュメント](../../relational-databases/replication/concepts/replication-developer-documentation.md)」をご覧ください。  
   
 ## <a name="replication-tutorials"></a>レプリケーションのチュートリアル  
-[チュートリアル: レプリケーション用の SQL Server の準備 (パブリッシャー、ディストリビューター、サブスクライバー)](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md) 
+[チュートリアル: レプリケーション用の SQL Server の準備 - パブリッシャー、ディストリビューター、サブスクライバー](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md) 
  
 最小の権限でレプリケーションを実行できるようサーバーを準備する方法を学習します。 このチュートリアルは、レプリケーション関連のチュートリアルの中で最初に実行する必要があります。  
   

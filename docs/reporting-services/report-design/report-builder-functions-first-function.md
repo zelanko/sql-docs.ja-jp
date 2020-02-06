@@ -9,10 +9,10 @@ ms.assetid: d0914520-30c5-4d63-9b59-8d9342ed63b9
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8d7f2db5b2b212dd529ac800819c5aa58b5d121a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579529"
 ---
 # <a name="report-builder-functions---first-function"></a>レポート ビルダー関数 - First 関数
@@ -38,7 +38,7 @@ First(expression, scope)
 ## <a name="return-type"></a>戻り値の型  
  式の種類によって決まります。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **First** 関数は、指定されたスコープですべての並べ替えおよびフィルター処理が適用された後、データセットの最初の値を返します。  
   
  **First** 関数は、現在 (既定) のスコープ以外のスコープを使用してグループ化フィルター式で使用することはできません。  

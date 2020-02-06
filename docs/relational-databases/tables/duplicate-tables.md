@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 45fabf20b18fb0f3227f99ab2a6b5270e245562a
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907305"
 ---
 # <a name="duplicate-tables"></a>テーブルの複製
@@ -66,7 +66,7 @@ ms.locfileid: "72907305"
   
 6.  **[編集]** メニューの **[貼り付け]** をクリックします。  
   
-7.  **[ファイル]** メニューの **[<_テーブル名_> を保存]** をクリックします。  
+7.  **[ファイル]** メニューの **[<** テーブル名 _> を保存]_ をクリックします。  
   
 8.  **[名前の選択]** ダイアログ ボックスで、新しいテーブルの名前を入力し、 **[OK]** をクリックします。  
 

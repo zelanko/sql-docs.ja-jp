@@ -9,10 +9,10 @@ ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 964fdf4d4abb58d7baf27ee9e2f8b6900a7d0bbb
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295719"
 ---
 # <a name="run-an-ssis-package-from-the-command-prompt-with-dtexecexe"></a>DTExec.exe を使用してコマンド プロンプトから SSIS パッケージを実行する
@@ -51,7 +51,7 @@ Linux で SSIS パッケージを実行する場合は、このクイックス�
     dtexec /ISServer "\SSISDB\Project1Folder\Integration Services Project1\Package.dtsx" /Server "localhost"
     ```
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 - パッケージを実行する他の方法を検討します。
     - [SSMS を使用して SSIS パッケージを実行する](./ssis-quickstart-run-ssms.md)
     - [Transact-SQL (SSMS) を使用して SSIS パッケージを実行する](./ssis-quickstart-run-tsql-ssms.md)

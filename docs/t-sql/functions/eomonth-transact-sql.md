@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 481faddf2a0a12bcc44a8b4e677101afa68c37a4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67904386"
 ---
 # <a name="eomonth-transact-sql"></a>EOMONTH (Transact-SQL)
@@ -50,10 +50,10 @@ EOMONTH ( start_date [, month_to_add ] )
 ## <a name="return-type"></a>戻り値の型  
  **date**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 `EOMONTH` 関数は、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降のサーバーに対してリモート処理が可能です。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] よりも前のバージョンのサーバーに対してリモート処理を実行することはできません。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-eomonth-with-explicit-datetime-type"></a>A. 明示的な datetime 型を使用する EOMONTH  
   
@@ -90,7 +90,7 @@ Result
 (1 row(s) affected)  
 ```  
   
-### <a name="c-eomonth-with-and-without-the-monthtoadd-parameter"></a>C. month_to_add パラメーターを使用する EOMONTH と使用しない EOMONTH  
+### <a name="c-eomonth-with-and-without-the-month_to_add-parameter"></a>C. month_to_add パラメーターを使用する EOMONTH と使用しない EOMONTH  
   
 注: これらの結果セットに示されている値は、実行日を含む期間を反映します。
         

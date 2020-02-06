@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e319c3875adc616d6a855b7fdca0ff24ff880522
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982509"
 ---
 # <a name="objectproperty-transact-sql"></a>OBJECTPROPERTY (Transact-SQL)
@@ -96,7 +96,7 @@ OBJECTPROPERTY ( id , property )
 |IsForeignKey|任意のスキーマ スコープ オブジェクト|FOREIGN KEY 制約。<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsIndexed|テーブル、ビュー|インデックス付きのテーブルまたはビュー。<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsIndexable|テーブル、ビュー|インデックスを作成できるテーブルまたはビュー。<br /><br /> 1 = True<br /><br /> 0 = False|  
-|IsInlineFunction|機能|インライン関数。<br /><br /> 1 = インライン関数<br /><br /> 0 = インライン関数ではない|  
+|IsInlineFunction|Function|インライン関数。<br /><br /> 1 = インライン関数<br /><br /> 0 = インライン関数ではない|  
 |IsMSShipped|任意のスキーマ スコープ オブジェクト|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール時に作成されたオブジェクト。<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsPrimaryKey|任意のスキーマ スコープ オブジェクト|PRIMARY KEY 制約。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> NULL = 関数ではありません。またはオブジェクト ID が無効です。|  
 |IsProcedure|任意のスキーマ スコープ オブジェクト|プロシージャ。<br /><br /> 1 = True<br /><br /> 0 = False|  
@@ -104,12 +104,12 @@ OBJECTPROPERTY ( id , property )
 |IsQueue|任意のスキーマ スコープ オブジェクト|Service Broker キュー<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsReplProc|任意のスキーマ スコープ オブジェクト|レプリケーション プロシージャ。<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsRule|任意のスキーマ スコープ オブジェクト|ルールのバインド。<br /><br /> 1 = True<br /><br /> 0 = False|  
-|IsScalarFunction|機能|スカラー値関数。<br /><br /> 1 = スカラー値関数<br /><br /> 0 = スカラー値関数ではない|  
+|IsScalarFunction|Function|スカラー値関数。<br /><br /> 1 = スカラー値関数<br /><br /> 0 = スカラー値関数ではない|  
 |IsSchemaBound|関数、ビュー|SCHEMABINDING を使用して作成されたスキーマ バインド関数またはビュー。<br /><br /> 1 = スキーマ バインド<br /><br /> 0 = 非スキーマ バインド|  
 |IsSystemTable|テーブル|システム テーブル。<br /><br /> 1 = True<br /><br /> 0 = False| 
 |IsSystemVerified|Object|SQL Server では、オブジェクトの決定性のプロパティと有効桁数のプロパティを確認できます。<br /><br /> 1 = True<br /><br /> 0 = False| 
 |IsTable|テーブル|テーブル。<br /><br /> 1 = True<br /><br /> 0 = False|  
-|IsTableFunction|機能|テーブル値関数。<br /><br /> 1 = テーブル値関数<br /><br /> 0 = テーブル値関数ではない|  
+|IsTableFunction|Function|テーブル値関数。<br /><br /> 1 = テーブル値関数<br /><br /> 0 = テーブル値関数ではない|  
 |IsTrigger|任意のスキーマ スコープ オブジェクト|トリガー。<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsUniqueCnst|任意のスキーマ スコープ オブジェクト|UNIQUE 制約。<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsUserTable|テーブル|ユーザー定義テーブル。<br /><br /> 1 = True<br /><br /> 0 = False|  
@@ -122,7 +122,7 @@ OBJECTPROPERTY ( id , property )
 |TableFullTextBackgroundUpdateIndexOn|テーブル|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。<br /><br /> テーブルではフルテキスト インデックスのバックグラウンド更新 (変更の自動追跡) が有効です。<br /><br /> 1 = TRUE<br /><br /> 0 = FALSE|  
 |TableFulltextCatalogId|テーブル|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。<br /><br /> テーブルのフルテキスト インデックス データが存在する、フルテキスト カタログの ID。<br /><br /> 0 以外 = フルテキスト インデックス テーブル内の行を識別する一意なインデックスに関連付けられた、フルテキスト カタログ ID。<br /><br /> 0 = テーブルにフルテキスト インデックスはない。|  
 |TableFulltextChangeTrackingOn|テーブル|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。<br /><br /> テーブルでは、フルテキストの変更の追跡が有効になっています。<br /><br /> 1 = TRUE<br /><br /> 0 = FALSE|  
-|TableFulltextDocsProcessed|テーブル|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。<br /><br /> フルテキスト インデックス作成の開始以降に処理された行の数。 フルテキスト検索用にインデックスが作成されるテーブルでは、1 行のすべての列が、インデックスが作成される 1 つのドキュメントの一部と見なされます。<br /><br /> 0 = アクティブ クロールまたはフルテキスト インデックス作成は完了していない。<br /><br /> > 0 = 次のいずれか (A または B): A) 完全、増分、または手動による変更追跡の作成開始以降、挿入操作や更新操作で処理されたドキュメントの数。 B) バックグラウンド更新インデックス作成の有効化、フルテキスト インデックス スキーマの変更、フルテキスト カタログの再構築、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの再起動などの変更の追跡以降、挿入操作や更新操作で処理された行数。<br /><br /> NULL = テーブルにフルテキスト インデックスはない。<br /><br /> このプロパティによって、削除された行の監視またはカウントは行われません。|  
+|TableFulltextDocsProcessed|テーブル|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。<br /><br /> フルテキスト インデックス作成の開始以降に処理された行の数。 フルテキスト検索用にインデックスが作成されるテーブルでは、1 行のすべての列が、インデックスが作成される 1 つのドキュメントの一部と見なされます。<br /><br /> 0 = アクティブ クロールまたはフルテキスト インデックス作成は完了していない。<br /><br /> > 0 = 次のいずれか (A または B): A) 完全、増分、または手動による変更追跡の作成開始以降、挿入操作や更新操作で処理されたドキュメントの数です。 B) バックグラウンド更新インデックス作成の有効化、フルテキスト インデックス スキーマの変更、フルテキスト カタログの再構築、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの再起動などの変更の追跡以降、挿入操作や更新操作で処理された行数。<br /><br /> NULL = テーブルにフルテキスト インデックスはない。<br /><br /> このプロパティによって、削除された行の監視またはカウントは行われません。|  
 |TableFulltextFailCount|テーブル|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。<br /><br /> フルテキスト検索によるインデックスが設定されなかった行数。<br /><br /> 0 = 作成完了<br /><br /> > 0 = 次のいずれか (A または B): A) 完全、増分、または手動更新による変更追跡の作成開始以降に、インデックスが作成されなかったドキュメントの数。 B) インデックスのバックグラウンド更新による変更追跡の場合、作成の開始または再開以降にインデックスが作成されなかった行数。 これは、スキーマの変更、カタログの再構築、サーバーの再起動などにより発生する場合があります。<br /><br /> NULL = テーブルにフルテキスト インデックスはない。|  
 |TableFulltextItemCount|テーブル|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。<br /><br /> フルテキスト インデックスが正常に設定された行数。|  
 |TableFulltextKeyColumn|テーブル|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。<br /><br /> フルテキスト インデックス定義に関係している、一意な単一列インデックスに関連付けられた列の ID。<br /><br /> 0 = テーブルにフルテキスト インデックスはない。|  
@@ -166,7 +166,7 @@ OBJECTPROPERTY ( id , property )
   
  ユーザーが所有しているか、または権限を与えられている、セキュリティ保護可能なリソースのメタデータのみを表示できます。 つまり、オブジェクトに対する権限がユーザーに与えられていない場合、メタデータを生成する組み込み関数 (OBJECTPROPERTY など) が NULL を返す可能性があります。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  を前提としています *object_id* が現在のデータベース コンテキストでします。 別のデータベースの *object_id* を参照するクエリは、NULL または正しくない値を返します。 たとえば、次のクエリでは、現在のデータベース コンテキストは master データベースです。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]は、クエリ内で指定されたデータベースではなく、このデータベースの指定された *object_id* のプロパティ値を返します。 ビュー `vEmployee` は master データベース内にないため、このクエリでは正しくない結果が返されます。  
   
 ```  
@@ -182,7 +182,7 @@ GO
   
  テーブルを作成するときに QUOTED IDENTIFIER オプションが OFF に設定されている場合でも、作成されるテーブルのメタデータでは、このオプションは常に ON として格納されます。 したがって、OBJECTPROPERTY(*table_id*, 'IsQuotedIdentOn') は常に 1 (TRUE) を返します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-verifying-that-an-object-is-a-table"></a>A. オブジェクトがテーブルかどうかを確認する  
  次の例では、`UnitMeasure` が [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースのテーブルかどうかをテストします。  
@@ -201,7 +201,7 @@ GO
 ```  
   
 ### <a name="b-verifying-that-a-scalar-valued-user-defined-function-is-deterministic"></a>B. スカラー値ユーザー定義関数の決定性を確認する  
- 次の例では、**money** 値を返すユーザー定義のスカラー値関数である `ufnGetProductDealerPrice` が決定的であるかどうかをテストします。  
+ 次の例では、`ufnGetProductDealerPrice`money**値を返すユーザー定義のスカラー値関数である** が決定的であるかどうかをテストします。  
   
 ```  
 USE AdventureWorks2012;  
@@ -230,7 +230,7 @@ ORDER BY type_desc, name;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-verifying-that-an-object-is-a-table"></a>D: オブジェクトがテーブルかどうかを確認する  
  次の例では、`dbo.DimReseller` が [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] データベースのテーブルかどうかをテストします。  

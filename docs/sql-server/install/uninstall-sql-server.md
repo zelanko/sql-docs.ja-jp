@@ -10,10 +10,10 @@ ms.assetid: e6255f8e-a25e-4b3d-9310-c5da2f9c9333
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a47a4d6efa06e94f62c572eed562f96ba1f2102a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68045760"
 ---
 # <a name="uninstall-sql-server"></a>SQL Server のアンインストール 
@@ -35,7 +35,7 @@ ms.locfileid: "68045760"
  この記事では、ローカル コンピューターから [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] をアンインストールして削除する手順について説明します。  
   
  [Data Quality Server オブジェクトの削除](../../sql-server/install/remove-data-quality-server-objects.md)  
- この記事では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、または [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) の [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] コンポーネントのみをアンインストールした後、[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] オブジェクトを手動で削除する方法について説明します。  
+ この記事では、[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (DQS) の [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] コンポーネントのみをアンインストールした後、[!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] オブジェクトを手動で削除する方法について説明します。  
   
 ## <a name="related-sections"></a>関連項目  
   

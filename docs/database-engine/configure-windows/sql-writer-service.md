@@ -22,10 +22,10 @@ ms.assetid: 0f299867-f499-4c2a-ad6f-b2ef1869381d
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 79b0ba2bad207b92e0227ed5c8d3999dab335df6
-ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71816672"
 ---
 # <a name="sql-writer-service"></a>SQL ライター サービス
@@ -34,7 +34,7 @@ ms.locfileid: "71816672"
   
  SQL ライター サービスは、自動的にインストールされます。 SQL ライター サービスは、ボリューム シャドウ コピー サービス (VSS) アプリケーションがバックアップまたは復元を要求したときに動作している必要があります。 SQL ライター サービスを構成するには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows サービス アプレットを使用します。 SQL ライター サービスは、すべてのオペレーティング システムにインストールできます。  
   
-## <a name="purpose"></a>用途  
+## <a name="purpose"></a>目的  
  SQL ライター サービスが実行されている場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] はデータ ファイルをロックして排他アクセス権を取得します。 SQL ライター サービスが実行されていない場合、Windows で実行中のバックアップ プログラムはデータ ファイルにアクセスできないため、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバックアップ機能を使用してバックアップを実行する必要があります。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の実行中に Windows のバックアップ プログラムが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ ファイルをコピーできるようにするには、SQL ライター サービスを使用します。  
@@ -76,6 +76,6 @@ ms.locfileid: "71816672"
   
 -   ページ復元  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 SQL ライター サービスは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エンジンとは異なるサービスです。これは、同じサーバー上にあるさまざまなバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] や、さまざまな [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス全体で共有されます。  SQL ライター サービス ファイルは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール パッケージに含まれ、付属する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エンジンと同じバージョン番号が付けられます。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の新しいインスタンスをサーバーにインストールするか、既存のインスタンスをアップグレードするときに、インストールまたはアップグレードするインスタンスのバージョン番号が現在サーバー上にある SQL ライター サービスのバージョン番号よりも大きい場合、そのファイルはインストール パッケージに含まれるファイルに置き換えられます。  サービス パックまたは累積更新プログラムによって SQL ライター サービスが更新されており、RTM バージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をインストールしようとしている場合、インストールがより大きいメジャー バージョン番号を持っていれば、新しいバージョンの SQL ライター サービスを古いバージョンで置き換えることができます。  たとえば、SQL ライター サービスが [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU2 で更新されているとします。  そのインスタンスを [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] RTM にアップグレードする場合、更新された SQL ライター サービスは古いバージョンに置き換えられます。  この場合、新しいバージョンの SQL ライター サービスを取得するために、新しいインスタンスに最新の CU を適用する必要があります。
 

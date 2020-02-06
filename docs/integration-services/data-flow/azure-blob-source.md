@@ -14,10 +14,10 @@ ms.assetid: 80645c5c-88c8-4fb0-8607-de1bb7bffcbb
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8342fc3595f695225ee5ea3e4a12259c2bb8301a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293460"
 ---
 # <a name="azure-blob-source"></a>Azure BLOB Source
@@ -25,7 +25,7 @@ ms.locfileid: "71293460"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  **Azure BLOB Source** コンポーネントは、SSIS パッケージが Azure BLOB のデータを読み取ることを可能にします。 サポートされるファイル形式は、CSV と AVRO です。
+  **Azure BLOB Source** コンポーネントは、SSIS パッケージが Azure BLOB のデータを読み取ることを可能にします。 サポートされるファイル形式は、CSV および AVRO です。
   
   Azure BLOB Source のエディターを表示するには、データ フロー デザイナー上に **Azure Blob Source** をドラッグ アンド ドロップし、これをダブルクリックしてエディターを開きます。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "71293460"
 
 6.  ファイルが圧縮されている場合は、 **[Decompress the file]** (ファイルの圧縮解除) を選択します。
 
-7.  ファイルが圧縮されている場合は、 **[圧縮の種類]** として次のいずれかを選択します: **[GZIP]** 、 **[DEFLATE]** 、 **[BZIP2]** 。 Zip 形式はサポートされていません。
+7.  ファイルが圧縮されている場合は、 **[圧縮の種類]** として **[GZIP]** 、 **[DEFLATE]** 、または **[BZIP2]** を選択します。 Zip 形式はサポートされていません。
   
 8.  接続情報を指定した後、 **[列]** ページで、SSIS データ フローのマップ元の列をマップ先の列にマップします。  
   

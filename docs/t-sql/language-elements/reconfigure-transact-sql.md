@@ -23,10 +23,10 @@ ms.assetid: 2e6e4eeb-b70b-4f45-a253-28ac4e595d75
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 6ee52f585af8930afcba301a5aba12df4eb47173
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072379"
 ---
 # <a name="reconfigure-transact-sql"></a>RECONFIGURE (Transact-SQL)
@@ -52,7 +52,7 @@ RECONFIGURE [ WITH OVERRIDE ]
     
  WITH OVERRIDE オプションを使用してほとんどすべての構成オプションを再構成できますが、それでも一部の致命的なエラーは防止されています。 たとえば、**min server memory** 構成オプションを、**max server memory** 構成オプションで指定されている値よりも大きい値を使用して構成することはできません。
       
-## <a name="remarks"></a>Remarks    
+## <a name="remarks"></a>解説    
  **sp_configure** では、各構成オプションに定義されている有効値の範囲外の値を新しい構成オプションの値として使用することはできません。    
     
  RECONFIGURE は、明示的または暗黙的なトランザクションでは使用できません。 複数のオプションを同時に再構成すると、いずれかの再構成オプションが失敗した場合に、すべての再構成オプションが無効になります。    
@@ -62,7 +62,7 @@ RECONFIGURE [ WITH OVERRIDE ]
 ## <a name="permissions"></a>アクセス許可    
  RECONFIGURE 権限は、既定では ALTER SETTINGS 権限が与えられているユーザーに与えられます。 **sysadmin** および **serveradmin** 固定サーバー ロールでは、この権限が暗黙的に保持されます。    
     
-## <a name="examples"></a>使用例    
+## <a name="examples"></a>例    
  次の例では、`recovery interval` 構成オプションの上限を `75` 分に設定し、`RECONFIGURE WITH OVERRIDE` を使用してインストールします。 60 分より長い復旧間隔は推奨されず、既定では許可されせんが、 `WITH OVERRIDE` オプションが指定されているので、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では指定の値 (`75`) が `recovery interval` 構成オプションに対して有効かどうかはチェックされません。    
     
 ```    

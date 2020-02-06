@@ -9,14 +9,14 @@ ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ee2333bc6d369bbc9908198d8cfa2fa18ce23065
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63041890"
 ---
 # <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>チュートリアル: レポートへの KPI の追加 (レポート ビルダー)
-この [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] チュートリアルでは、 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] のページ分割されたレポートに主要業績評価指標 (KPI) を追加します。  
+この [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] チュートリアルでは、[!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] のページ分割されたレポートに主要業績評価指標 (KPI) を追加します。  
 
 KPI は、ビジネス上重要で、測定可能な値です。 このシナリオの KPI は、製品サブカテゴリ別の販売集計です。 この KPI の現在の状態を、色、ゲージ、およびインジケーターを使用して表示します。
   
@@ -335,8 +335,8 @@ KPI は、ビジネス上重要で、測定可能な値です。 このシナリ
   
 2.  **[保存]** をクリックします。  
   
-## <a name="next-steps"></a>Next Steps  
-これで、「レポートへの KPI の追加」チュートリアルを終了します。 詳細については、以下をご覧ください。
+## <a name="next-steps"></a>次の手順  
+これで、「レポートへの KPI の追加」チュートリアルを終了します。 詳細については、次を参照してください。
 *  [ゲージ](../reporting-services/report-design/gauges-report-builder-and-ssrs.md)
 * [インジケーター](../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   

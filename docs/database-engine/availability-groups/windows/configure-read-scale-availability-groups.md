@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: high-availability
 ms.openlocfilehash: 3ff0064a228cb756614dec2ff54a91f4f03d374c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67991157"
 ---
 # <a name="configure-read-scale-for-an-always-on-availability-group"></a>Always On 可用性グループの読み取りスケールを構成する
@@ -85,7 +85,7 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 
 [!INCLUDE[Force failover](../../../includes/ss-force-failover-read-scale-out.md)]
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 * [分散型可用性グループの構成](distributed-availability-groups-always-on-availability-groups.md)
 * [可用性グループの詳細](overview-of-always-on-availability-groups-sql-server.md)

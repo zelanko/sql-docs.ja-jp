@@ -18,10 +18,10 @@ ms.assetid: f0551674-e6e8-4926-9038-df03f2c807d7
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 1a15d3bdc505c4406c1c5d09dbc9d6f007c34fe0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67930383"
 ---
 # <a name="stboundary-geometry-data-type"></a>STBoundary (geometry データ型)
@@ -39,12 +39,12 @@ ms.locfileid: "67930383"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **geometry**  
   
- CLR の戻り値の型:**SqlGeometry**  
+ CLR 戻り値の型: **SqlGeometry**  
   
-## <a name="remarks"></a>Remarks  
- **LineString**、**CircularString**、または **CompoundCurve** インスタンスのエンドポイントが同じである場合、`STBoundary()` は空白の **GeometryCollection** を返します。  
+## <a name="remarks"></a>解説  
+ `STBoundary()`LineString **、** CircularString **、または** CompoundCurve **インスタンスのエンドポイントが同じである場合、** は空白の **GeometryCollection** を返します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-using-stboundary-on-a-linestring-instance-with-different-endpoints"></a>A. エンドポイントが異なる LineString インスタンスに STBoundary() を使用する  
  次の例では、`LineString``geometry` インスタンスを作成します。 `STBoundary()` は、`LineString` の境界を返します。  

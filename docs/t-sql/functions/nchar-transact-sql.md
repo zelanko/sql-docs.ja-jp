@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 59c4f13d53a8ffa296a685883bd4797d59403c55
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68130159"
 ---
 # <a name="nchar-transact-sql"></a>NCHAR (Transact-SQL)
@@ -65,7 +65,7 @@ SELECT NCHAR(143743);
 SELECT NCHAR(UNICODE(@d));    
 ```  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-using-nchar-and-unicode"></a>A. NCHAR と UNICODE を使用する  
  次の例では、`UNICODE` 関数と `NCHAR` 関数を使用して、`UNICODE` という文字列の 2 番目の文字の `NCHAR` 値と `København` (Unicode 文字) を出力することによって、`ø` という実際の 2 番目の文字を出力します。  

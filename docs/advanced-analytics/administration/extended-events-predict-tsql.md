@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 9e891ee16ce664e12f12b16c9deda957d0fa2263
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727726"
 ---
 # <a name="monitor-predict-t-sql-statements-with-extended-events-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services の拡張イベントで PREDICT T-SQL ステートメントを監視する
@@ -24,7 +24,7 @@ ms.locfileid: "73727726"
 
 次の拡張イベントは、[PREDICT](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) T-SQL ステートメントをサポートするすべてのバージョンの SQL Server で使用できます。 
 
-|NAME |object_type|description| 
+|name |object_type|description| 
 |----|----|----|
 |predict_function_completed |イベント  |組み込み実行時間のブレークダウン|
 |predict_model_cache_hit |イベント|モデルが PREDICT 関数モデル キャッシュから取得されるときに発生します。 PREDICT 関数モデル キャッシュが原因で発生した問題についてトラブルシューティングを行うには、このイベントを他の predict_model_cache_* イベントと共に使用します。|
@@ -42,7 +42,7 @@ FROM sys.dm_xe_object_columns
 WHERE object_name LIKE `predict%'
 ```
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 PREDICT を使用してスコアリング セッションのパフォーマンスに関する情報を取得するには次の手順を実行します。
 
@@ -76,7 +76,7 @@ FROM sys.dm_os_memory_objects
 WHERE TYPE = 'MEMOBJ_NATIVESCORING';
 ```
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 拡張イベント (XEvent と呼ばれることもあります) の詳細と、セッションのイベントを追跡する方法の詳細については、次の記事を参照してください。
 

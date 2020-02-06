@@ -16,10 +16,10 @@ ms.assetid: 01b7fbca-5181-4d47-9f75-7f25af6b40d2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c0f04255feb2eec4b7cc8fc2fd9df0eed67ef25f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297900"
 ---
 # <a name="implement-a-lookup-in-no-cache-or-partial-cache-mode"></a>キャッシュなしモードまたは部分キャッシュ モードの参照を実装する
@@ -64,17 +64,17 @@ ms.locfileid: "71297900"
   
     -   **[SQL クエリの結果を使用する]** をクリックし、 **[SQL コマンド]** ウィンドウでクエリを作成します。  
   
-         \- または -  
+         または  
   
          **[クエリの作成]** をクリックし、 **[クエリ ビルダー]** で用意されているグラフィック ツールを使用してクエリを作成します。  
   
-         \- または -  
+         または  
   
          **[参照]** をクリックして、ファイルから SQL ステートメントをインポートします。  
   
      SQL クエリを検証するには、 **[クエリの解析]** をクリックします。  
   
-     データのサンプルを表示するには、 **[プレビュー]** をクリックします。  
+     データのサンプルを表示するには、 **[プレビュー**] をクリックします。  
   
 9. **[列]** ページをクリックし、 **[使用できる入力列]** 一覧の 1 列以上を **[使用できる参照列]** 一覧の列にドラッグします。  
   

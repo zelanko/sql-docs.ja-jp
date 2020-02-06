@@ -15,10 +15,10 @@ ms.assetid: d2fac9ce-730e-474e-961a-69406b633778
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: fefb8e6c4cd29804f28cb2813fe20aba7c70427c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293906"
 ---
 # <a name="single-table-quick-profile-form-data-profiling-task"></a>[単一テーブル クイック プロファイル フォーム] (データ プロファイル タスク)
@@ -37,10 +37,10 @@ ms.locfileid: "71293906"
  **[テーブルまたはビュー]**  
  選択した接続マネージャーの接続先となる、データベース内の既存のテーブルまたはビューを選択します。  
   
- **[計算]**  
+ **Compute**  
  計算するプロファイルを選択します。  
   
-|[値]|[説明]|  
+|値|[説明]|  
 |-----------|-----------------|  
 |**列の NULL 比プロファイル**|選択したテーブルまたはビュー内のすべての該当する列に対して既定の設定を使用して、列の NULL 比プロファイルを計算します。<br /><br /> このプロファイルは、選択した列の NULL 値の比率を報告します。 このプロファイルを使用すると、列の NULL 値の比率が予想外に高いなどのデータの問題を特定できます。 このプロファイルの設定の詳細については、「[[列の NULL 比プロファイル要求] のオプション &#40;データ プロファイル タスク&#41;](../../integration-services/control-flow/column-null-ratio-profile-request-options-data-profiling-task.md)」を参照してください。|  
 |**列統計プロファイル**|選択したテーブルまたはビュー内のすべての該当する列に対して既定の設定を使用して、列統計プロファイルを計算します。<br /><br /> このプロファイルは、数値型列の最小値、最大値、平均値、標準偏差や、 **datetime** 列の最小値、最大値などの統計を報告します。 このプロファイルを使用すると、無効な日付などのデータの問題を特定できます。 このプロファイルの設定の詳細については、「[[列統計プロファイル要求] のオプション &#40;データ プロファイル タスク&#41;](../../integration-services/control-flow/column-statistics-profile-request-options-data-profiling-task.md)」を参照してください。|  
@@ -56,7 +56,7 @@ ms.locfileid: "71293906"
 >  値包含プロファイル型は、 **[単一テーブル クイック プロファイル フォーム]** では使用できません。  
   
 ## <a name="see-also"></a>参照  
- [データ プロファイル タスク エディター &#40;[全般] ページ&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
+ [データ プロファイル タスク エディター ([全般] ページ)](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
  [データ プロファイル タスク エディター &#40;[プロファイル要求] ページ&#41;](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)  
   
   

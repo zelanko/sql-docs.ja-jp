@@ -1,10 +1,9 @@
 ---
-title: WMI イベント警告の作成 | Microsoft Docs
-ms.custom: ''
+title: Create a WMI Event Alert
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,13 +11,15 @@ helpviewer_keywords:
 ms.assetid: b8c46db6-408b-484e-98f0-a8af3e7ec763
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f1f092ba4facfe166c8be67a21e6f20d414466e5
-ms.sourcegitcommit: cbbb210c0315f9e2be2b9cd68db888ac53429814
+ms.openlocfilehash: 64f5c5956f69eb1127b8eb5f895476ca7e6cadb6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69890929"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252299"
 ---
 # <a name="create-a-wmi-event-alert"></a>Create a WMI Event Alert
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

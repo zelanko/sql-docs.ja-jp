@@ -18,10 +18,10 @@ ms.assetid: 09ee6c5b-af94-4a4b-a0e2-f9eac50e43aa
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: cb80bf30529c8948b164735b21eaf3025c386a40
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67898290"
 ---
 # <a name="drop-broker-priority-transact-sql"></a>DROP BROKER PRIORITY (Transact-SQL)
@@ -43,13 +43,13 @@ DROP BROKER PRIORITY ConversationPriorityName
  *ConversationPriorityName*  
  削除するメッセージ交換の優先度の名前を指定します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  メッセージ交換の優先度を削除した場合、既存のメッセージ交換では、そのメッセージ交換の優先度から割り当てられた優先順位で操作が続行されます。  
   
 ## <a name="permissions"></a>アクセス許可  
  メッセージ交換の優先度を作成する権限は、既定では db_ddladmin 固定データベース ロールまたは db_owner 固定データベース ロールのメンバー、および sysadmin 固定サーバー ロールのメンバーに与えられています。 データベースに対する ALTER 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、`InitiatorAToTargetPriority` という名前のメッセージ交換の優先度を削除します。  
   
 ```  

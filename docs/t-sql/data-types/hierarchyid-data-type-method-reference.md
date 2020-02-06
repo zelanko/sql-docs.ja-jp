@@ -19,10 +19,10 @@ ms.assetid: 69b756e0-a1df-45b3-8a24-6ded8658aefe
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 122630048b7e4ff9cef34c49bfde68177020630f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68077911"
 ---
 # <a name="hierarchyid-data-type-method-reference"></a>hierarchyid データ型メソッド リファレンス
@@ -42,7 +42,7 @@ ms.locfileid: "68077911"
   
 **hierarchyid** 型は、CLR クライアントで **SqlHierarchyId** データ型として利用できます。
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 **hierarchyid** 型は、ツリーのルートからノードまでのパスをエンコードすることで、階層ツリーの 1 つのノードに関する情報を論理的にエンコードします。 このようなパスは、ルートの後にアクセスされたすべての子の一連のノード ラベルとして論理的に表されます。 この表現はスラッシュによって開始されます。ルートのみを表すパスは、単一スラッシュで表されます。 ルートの下のレベルの各ラベルは、ドットで区切られた一連の整数としてエンコードされます。 子と子の比較は、ドットで区切られた一連の整数を辞書順で比較することにより行われます。 各レベルの後ろには、スラッシュが続きます。 したがって、スラッシュは親と子を区切ります。 たとえば、次に示すのは、長さがそれぞれ 1、2、2、3、3 レベルの有効な **hierarchyid** パスです。
   
 -   /  
@@ -59,8 +59,8 @@ ms.locfileid: "68077911"
   
 ## <a name="data-type-conversion"></a>データ型の変換
 **hierarchyid** データ型は、次のように他のデータ型に変換できます。
--   **hierarchyid** 値を **nvarchar(4000)** データ型として論理表現に変換するには、[ToString()](../../t-sql/data-types/tostring-database-engine.md) メソッドを使用します。  
--   **hierarchyid** を **varbinary** に変換するには、[Read ()](../../t-sql/data-types/read-database-engine.md) と [Write ()](../../t-sql/data-types/write-database-engine.md) を使います。  
+-   [hierarchyid](../../t-sql/data-types/tostring-database-engine.md) 値を **nvarchar(4000)** データ型として論理表現に変換するには、**ToString()** メソッドを使用します。  
+-   [hierarchyid](../../t-sql/data-types/read-database-engine.md) を [varbinary](../../t-sql/data-types/write-database-engine.md) に変換するには、**Read ()** と **Write ()** を使います。  
 -   SOAP 経由で **hierarchyid** パラメーターを送信するには、最初にパラメーターを文字列としてキャストします。  
   
 ## <a name="upgrading-databases"></a>データベースのアップグレード
@@ -76,7 +76,7 @@ ms.locfileid: "68077911"
 ### <a name="one-directional-replication"></a>単方向レプリケーション
 単方向レプリケーションには、サブスクライバー側で変更が行われないスナップショット レプリケーション、トランザクション レプリケーション、およびマージ レプリケーションが含まれます。 **hierarchyid** 列が単方向レプリケーションとどのように連携するかは、サブスクライバーが実行されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョンによって異なります。
 -   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] パブリッシャーは、**hierarchyid** 列を [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] サブスクライバーにレプリケートできます。特別な注意は必要ありません。  
--   [!INCLUDE[ssEW](../../includes/ssew-md.md)] または前バージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行しているサブスクライバーにレプリケートするには、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] パブリッシャーは、**hierarchyid** 列を変換する必要があります。 [!INCLUDE[ssEW](../../includes/ssew-md.md)] および前バージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、**hierarchyid** 列がサポートされません。 このどちらかのバージョンを使用している場合でも、サブスクライバーにデータをレプリケートすることは可能です。 そのためには、互換性のあるデータ型に列を変換できるように、スキーマ オプションまたはパブリケーションの互換性レベル (マージ レプリケーションの場合) を設定する必要があります。  
+-   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または前バージョンの  **を実行しているサブスクライバーにレプリケートするには、** パブリッシャーは、[!INCLUDE[ssEW](../../includes/ssew-md.md)]hierarchyid[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 列を変換する必要があります。 [!INCLUDE[ssEW](../../includes/ssew-md.md)] および前バージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、**hierarchyid** 列がサポートされません。 このどちらかのバージョンを使用している場合でも、サブスクライバーにデータをレプリケートすることは可能です。 そのためには、互換性のあるデータ型に列を変換できるように、スキーマ オプションまたはパブリケーションの互換性レベル (マージ レプリケーションの場合) を設定する必要があります。  
   
 どちらのシナリオでも、列のフィルター選択はサポートされています。 これには、**hierarchyid** 列をフィルターで除外する処理が含まれます。 行のフィルター選択は、フィルターに **hierarchyid** 列が含まれない限りサポートされます。
   

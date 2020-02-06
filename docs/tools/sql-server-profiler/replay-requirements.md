@@ -1,30 +1,28 @@
 ---
-title: 再生要件 |Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: 再生を実行するための必要条件
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- event classes [SQL Server], replaying traces
-- traces [SQL Server], replaying
-- replaying traces
-- TSQL_Replay template [SQL Server]
 ms.assetid: 0e01dfc7-84b9-47f6-8bf7-b0656df4fa7d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d4a4cf18a4bf6131e41e45343244a747c4651a2f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 85f062ae15addae9908dca572c916e55a7ffde39
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67928894"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307483"
 ---
 # <a name="replay-requirements"></a>再生を実行するための必要条件
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] または Distributed Replay Utility を使用してトレース データを再生するには、特定のイベント クラスと列のセットがトレースにキャプチャされている必要があります。 **TSQL_Replay** トレース テンプレートを使用して、後で再生に使用するトレースを構成した場合、これらの設定は既定で有効になります。 このトピックでは、これらの設定と、再生を実行するためのその他の必要条件について説明します。  
+
+[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] または Distributed Replay Utility を使用してトレース データを再生するには、特定のイベント クラスと列のセットがトレースにキャプチャされている必要があります。 **TSQL_Replay** トレース テンプレートを使用して、後で再生に使用するトレースを構成した場合、これらの設定は既定で有効になります。 このトピックでは、これらの設定と、再生を実行するためのその他の必要条件について説明します。  
   
 > [!NOTE]  
 >  (アクティブなコンカレント接続が多数ある、またはスループットが高い) 集中型の OLTP アプリケーションを再生する場合は、Distributed Replay Utility を使用することをお勧めします。 Distributed Replay Utility では、複数のコンピューターからのトレース データを再生し、ミッションクリティカルなワークロードをより正確にシミュレートできます。 詳細については、「 [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)」を参照してください。  
@@ -71,13 +69,13 @@ ms.locfileid: "67928894"
   
 -   **TextData**  
   
--   **Application Name**  
+-   **アプリケーション名**  
   
 -   **LoginName**  
   
 -   **DatabaseName**  
   
--   **データベース ID**  
+-   **[データベース ID]**  
   
 -   **ClientProcessID**  
   

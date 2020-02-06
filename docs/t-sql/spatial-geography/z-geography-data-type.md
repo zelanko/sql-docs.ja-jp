@@ -18,10 +18,10 @@ ms.assetid: 9abc79c5-43c9-4cc2-b37f-d2ecdec7c234
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: c4c798c431b2eb71354dd803bd5701df0b6f9cad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68120657"
 ---
 # <a name="z-geography-data-type"></a>Z (geography データ型)
@@ -39,16 +39,16 @@ ms.locfileid: "68120657"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の型: **float**  
   
- CLR の型:**SqlDouble**  
+ CLR の型: **SqlDouble**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **geography** インスタンスが地点ではない場合や、**Point** インスタンスにこのプロパティの値が設定されていない場合は、このプロパティの値は null になります。  
   
  このプロパティは読み取り専用です。  
   
  Z 座標はライブラリが行う計算では使用されません。また、ライブラリが行う計算によって渡されることもありません。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、Z (標高) 値と M (メジャー) 値を含む `Point` インスタンスを作成し、`Z` を使用してインスタンスの Z 値をフェッチします。  
   
 ```  

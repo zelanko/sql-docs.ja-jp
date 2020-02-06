@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 12bcff24be2bf0a722375fa6f7c06444ba818e9d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68140355"
 ---
 # <a name="use-sparse-columns"></a>スパース列の使用
@@ -64,7 +64,7 @@ ms.locfileid: "68140355"
 |-|-|  
 |**geography**|**text**|  
 |**geometry**|**timestamp**|  
-|**image**|**ユーザー定義データ型**|  
+|**画像**|**ユーザー定義データ型**|  
 |**ntext**||  
   
 ## <a name="estimated-space-savings-by-data-type"></a>領域を節約するためのデータ型別推定値  
@@ -181,7 +181,7 @@ ms.locfileid: "68140355"
   
 -   テーブルをコピーするとき、列のスパース プロパティは保持されません。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、ドキュメント テーブルに `DocID` 列と `Title`列のセットが共通で含まれています。 製造グループは、すべての製造ドキュメントに `ProductionSpecification` 列と `ProductionLocation` 列を必要とします。 マーケティング グループは、マーケティング ドキュメントに `MarketingSurveyGroup` 列を必要とします。 この例のコードでは、スパース列を使用するテーブルを作成し、そのテーブルに 2 つの行を挿入し、そのテーブルからデータを選択します。  
   
 > [!NOTE]  

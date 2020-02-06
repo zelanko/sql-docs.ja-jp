@@ -18,10 +18,10 @@ ms.assetid: edc80444-b697-410f-9419-0f63c9b5618d
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: f38ee0e89201a1ecc0a8faa145167ad58601c133
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68077820"
 ---
 # <a name="isdescendantof-database-engine"></a>IsDescendantOf (データベース エンジン)
@@ -50,12 +50,12 @@ IsDescendantOf テストを実行する必要がある **hierarchyid** ノード
   
 **CLR の戻り値の型:SqlBoolean**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 親をルートとするサブツリー内のすべてのノードには true、それ以外のノードには false を返します。
   
 親はそれ自身の子孫と見なされます。
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-using-isdescendantof-in-a-where-clause"></a>A. WHERE 句で IsDescendantOf を使用する  
 次の例では、マネージャーと、そのマネージャーに直属の従業員を返します。

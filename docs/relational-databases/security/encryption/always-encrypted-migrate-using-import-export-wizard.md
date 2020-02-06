@@ -17,10 +17,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c8e23b3f5f291d120a099cae7f3e3e057db8da95
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73595787"
 ---
 # <a name="migrate-data-to-or-from-columns-using-always-encrypted-with-sql-server-import-and-export-wizard"></a>SQL Server インポートおよびエクスポート ウィザードで Always Encrypted を使用して列間でデータを移行する 
@@ -60,7 +60,7 @@ SQL Server インポートおよびエクスポート ウィザードでデー�
 
 SQL Server インポートおよびエクスポート ウィザード内の次のデータ プロバイダーでは、Always Encrypted がサポートされています。
 
-- .NET Framework Data Provider for SQL Server
+- SQL Server 用の .NET Framework データ プロバイダー
   - ウィザードが実行されているコンピューターで .NET Framework 4.6.1 以降が使用されていることを確認します。
   - 接続に対して Always Encrypted を有効にするには、接続プロパティ内の `Column Encryption Setting` を `Enabled` に設定します。 Always Encrypted を無効にするには、`Column Encryption Setting` を `Disabled` に設定します。 詳細については、「[.NET Framework Data Provider for SQL Server を使用して SQL Server に接続する](../../../integration-services/import-export-data/connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard.md#connect-to-sql-server-with-the-net-framework-data-provider-for-sql-server)」および「[アプリケーション クエリで Always Encrypted を有効にする](develop-using-always-encrypted-with-net-framework-data-provider.md#enabling-always-encrypted-for-application-queries)」を参照してください。
 - .NET Framework Data Provider for ODBC
@@ -79,12 +79,12 @@ SQL Server のソース データベースまたは宛先データベースに�
 - **暗号化サービス プロバイダー (CAPI)** - キー ストアまたはキーを使用する際に入力を求められる可能性がある必要な権限と資格情報は、ストアと CSP の構成によって異なります。
 詳細については、 [列マスター キーの作成と格納 (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md) を参照してください。
 
-## <a name="next-steps"></a>Next Steps
-- [SQL Server Management Studio で Always Encrypted を使用した列にクエリを実行する](always-encrypted-query-columns-ssms.md)
+## <a name="next-steps"></a>次の手順
+- [SQL Server Management Studio で Always Encrypted を使用した列のクエリを実行する](always-encrypted-query-columns-ssms.md)
 - [Always Encrypted を使用したアプリケーションの開発](always-encrypted-client-development.md)
 
 ## <a name="see-also"></a>参照
-- [Always Encrypted](always-encrypted-database-engine.md)
+- [常に暗号化](always-encrypted-database-engine.md)
 - [Always Encrypted を使用したデータベースのエクスポートとインポート](always-encrypted-migrate-using-bacpac.md)
 - [Always Encrypted を使用したデータベースのバックアップと復元](always-encrypted-migrate-using-backup-restore.md)
 - [Always Encrypted を使用した暗号化データの列への一括読み込み](migrate-sensitive-data-protected-by-always-encrypted.md)

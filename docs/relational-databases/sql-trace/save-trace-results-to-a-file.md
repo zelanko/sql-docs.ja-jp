@@ -11,10 +11,10 @@ ms.assetid: 74f80667-62f3-4e14-bb1a-f0c2b6ef3402
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1506c13655187ad29d27f96f5fa1b73d01f67620
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70846825"
 ---
 # <a name="save-trace-results-to-a-file"></a>トレース結果のファイルへの保存
@@ -35,7 +35,7 @@ ms.locfileid: "70846825"
   
 -   クエリの最適化の実行  
   
- ストアド プロシージャ **sp_trace_create** の **\@tracefile** 引数にパスとファイル名を指定すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によりファイルにトレース結果が保存されます。  
+ ストアド プロシージャ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sp_trace_create **の \@** tracefile **引数にパスとファイル名を指定すると、** によりファイルにトレース結果が保存されます。  
   
 > [!NOTE]  
 >  トレース ファイルの保存用に、 **sp_trace_create** ストアド プロシージャにパスを指定する場合は、サーバーからそのディレクトリにアクセスできる必要があります。 また、 **sp_trace_create**にローカル ディレクトリを指定すると、サーバー コンピューターのローカル ディレクトリを指定したことになるので注意してください。  

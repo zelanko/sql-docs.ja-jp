@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3bfdfb5c3579b43ada97c9ef72b72dbaf3d29308
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982935"
 ---
 # <a name="indexproperty-transact-sql"></a>INDEXPROPERTY (Transact-SQL)
@@ -53,7 +53,7 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
 > [!NOTE]  
 >  *property* が有効なプロパティ名でない場合、*object_ID* が有効なオブジェクト ID でない場合、*object_ID* が指定したプロパティでサポートされていないオブジェクトの種類であった場合、または呼び出し側にオブジェクトのメタデータを表示する権限がない場合は、特に指定のない限り、NULL が返されます。  
   
-|プロパティ|[説明]|[値]|  
+|プロパティ|[説明]|値|  
 |--------------|-----------------|-----------|  
 |**IndexDepth**|インデックスの深さです。|インデックス レベルの数です。<br /><br /> NULL = XML インデックスまたは無効な入力|  
 |**IndexFillFactor**|インデックスが作成されたとき、または最後に再構築されたときに使用された FILL FACTOR 値です。|FILL FACTOR|  
@@ -79,8 +79,8 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
   
  ユーザーが所有しているか、または権限を与えられている、セキュリティ保護可能なリソースのメタデータのみを表示できます。 つまり、オブジェクトに対する権限がユーザーに与えられていない場合、メタデータを生成する組み込み関数 (INDEXPROPERTY など) が NULL を返す可能性があります。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="examples"></a>使用例  
- 次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースにある `Employee` テーブルの `PK_Employee_BusinessEntityID` インデックスについて **IsClustered**、**IndexDepth**、および **IndexFillFactor** プロパティの値を返します。  
+## <a name="examples"></a>例  
+ 次の例では、**データベースにある** テーブルの **インデックスについて**IsClustered **、** IndexDepth`PK_Employee_BusinessEntityID`、および `Employee`IndexFillFactor[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] プロパティの値を返します。  
   
 ```  
 SELECT   
@@ -93,7 +93,7 @@ SELECT
   
 ```  
   
- 以下に結果セットを示します。  
+ 結果セットは次のようになります。  
   
 ```  
 Is Clustered Index Depth Fill Factor   
@@ -103,7 +103,7 @@ Is Clustered Index Depth Fill Factor
 (1 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  次の例では、`FactResellerSales` テーブルのインデックスの 1 つのプロパティを調べます。  
   
 ```  

@@ -22,10 +22,10 @@ ms.assetid: e912a06d-9fde-4e26-b057-801255d79504
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: f35532913a21ed6f90d1e940dd6346137fc3feda
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68039087"
 ---
 # <a name="dbcc-outputbuffer-transact-sql"></a>DBCC OUTPUTBUFFER (Transact-SQL)
@@ -61,7 +61,7 @@ WHERE session_id = @@spid;
  NO_INFOMSGS  
  重大度レベル 0 から 10 のすべての情報メッセージを表示しないようにします。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 DBCC OUTPUTBUFFER では、指定したクライアント (*session_id*) に送信された結果が表示されます。 ただし、出力ストリームを含まないプロセスでは、エラー メッセージが返されます。
   
 DBCC OUTPUTBUFFER で表示される結果を返したステートメントを表示するには、DBCC INPUTBUFFER を実行します。
@@ -86,7 +86,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 ## <a name="permissions"></a>アクセス許可  
 **sysadmin** 固定サーバー ロールのメンバーシップが必要です。
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 次の例では、セッション ID が `52` の、現在の出力バッファー情報を返します。
   
 ```sql

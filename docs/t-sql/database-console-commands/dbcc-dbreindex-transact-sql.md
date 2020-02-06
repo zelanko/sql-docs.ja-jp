@@ -23,10 +23,10 @@ ms.assetid: 6e929d09-ccb5-4855-a6af-b616022bc8f6
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 5aa089ac3c8de549e0c2ec33fd413c9cafba24dd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68101996"
 ---
 # <a name="dbcc-dbreindex-transact-sql"></a>DBCC DBREINDEX (Transact-SQL)
@@ -66,7 +66,7 @@ DBCC DBREINDEX
  WITH NO_INFOMSGS  
  重大度レベル 0 から 10 のすべての情報メッセージを表示しないようにします。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 DBCC DBREINDEX では、テーブルの 1 つのインデックス、またはテーブルに対して定義されているすべてのインデックスを再構築します。 インデックスを動的に再構築できれば、PRIMARY KEY 制約または UNIQUE 制約を削除して再作成しなくても、それらの制約を強制しているインデックスを再構築できます。 したがって、テーブルの構造やその制約がわからない場合でも、インデックスを再構築することができます。 インデックスの再構築は、テーブルにデータを一括コピーした後に実行できます。
 
 DBCC DBREINDEX では、1 つのステートメントでテーブルのすべてのインデックスを再構築できます。 これは複数の DROP INDEX ステートメントと CREATE INDEX ステートメントをコーディングするより簡単です。 DBCC DBREINDEX は、1 つのステートメントで作業を行うため最初からアトミックです。これに対して、個々の DROP INDEX ステートメントと CREATE INDEX ステートメントをアトミックにするためには、トランザクションに含める必要があります。 また、DBCC DBREINDEX を使用した方が、個々の DROP INDEX ステートメントと CREATE INDEX ステートメントを使用するよりもさらに最適化されます。
@@ -91,9 +91,9 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 ## <a name="permissions"></a>アクセス許可  
 呼び出し元はテーブルまたはインデックス付きビューを所有しているか、固定サーバー ロール **sysadmin**、固定データベース ロール **db_owner**、または固定データベース ロール **db_ddladmin** のメンバーである必要があります。
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 ### <a name="a-rebuilding-an-index"></a>A. インデックスを再構築する  
-次の例では、`AdventureWorks` データベースの `Employee` テーブルで、`Employee_EmployeeID` クラスター化インデックスを FILL FACTOR `80` で再構築します。
+次の例では、`Employee_EmployeeID` データベースの `80` テーブルで、`Employee` クラスター化インデックスを FILL FACTOR `AdventureWorks` で再構築します。
   
 ```sql  
 USE AdventureWorks2012;   
