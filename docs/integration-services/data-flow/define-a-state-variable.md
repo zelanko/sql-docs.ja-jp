@@ -11,10 +11,10 @@ ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 64f1b991d0978e45cbfa9dbf19ba796cc824bf5c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292940"
 ---
 # <a name="define-a-state-variable"></a>状態変数の定義
@@ -49,7 +49,7 @@ ms.locfileid: "71292940"
   
  次の表に、使用可能な CDC 状態値を示します。  
   
-|状態|[説明]|  
+|State|[説明]|  
 |-----------|-----------------|  
 |(INITIAL)|現在の CDC グループでパッケージが実行される前の初期状態です。 CDC 状態が空のときの状態でもあります。|  
 |ILSTART (Initial Load Started)|CDC 制御タスクに対する **MarkInitialLoadStart** 操作の呼び出し後、初期読み込みパッケージが開始したときの状態です。|  
@@ -90,6 +90,6 @@ ms.locfileid: "71292940"
   
 ## <a name="see-also"></a>参照  
  [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)   
- [CDC Control Task Editor](../../integration-services/control-flow/cdc-control-task-editor.md)  
+ [CDC 制御タスク エディター](../../integration-services/control-flow/cdc-control-task-editor.md)  
   
   

@@ -17,10 +17,10 @@ ms.assetid: 5d4652d5-228c-4238-905c-346dd8503fdf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7357e1508172e5b4debbdea99967314c45d53bf4
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71299069"
 ---
 # <a name="adding-tasks-programmatically"></a>プログラムによるタスクの追加
@@ -47,7 +47,7 @@ ms.locfileid: "71299069"
  パッケージにタスクを追加するには、<xref:Microsoft.SqlServer.Dts.Runtime.Executables> の既存のコレクションを持つコンテナーが必要です。 ほとんどの場合、コレクションに追加するタスクはパッケージです。 新しいタスクの実行可能ファイルをそのコンテナーのコレクションに追加するには、<xref:Microsoft.SqlServer.Dts.Runtime.Executables.Add%2A> メソッドを呼び出します。 このメソッドには単一の文字列パラメーターがあり、CLSID、PROGID、STOCK モニカー、または、追加するタスクの <xref:Microsoft.SqlServer.Dts.Runtime.TaskInfo.CreationName%2A> が格納されます。  
   
 ## <a name="task-names"></a>タスク名  
- 名前または ID でタスクを指定できますが、<xref:Microsoft.SqlServer.Dts.Runtime.Executables.Add%2A> メソッドで最もよく使用されるパラメーターは **STOCK** モニカーです。 **STOCK** モニカーによって識別される実行可能ファイルにタスクを追加するには、次の構文を使用します。  
+ 名前または ID でタスクを指定できますが、**メソッドで最もよく使用されるパラメーターは**STOCK<xref:Microsoft.SqlServer.Dts.Runtime.Executables.Add%2A> モニカーです。 **STOCK** モニカーによって識別される実行可能ファイルにタスクを追加するには、次の構文を使用します。  
   
 ```csharp  
 Executable exec = package.Executables.Add("STOCK:BulkInsertTask");  
@@ -321,7 +321,7 @@ End Module
   
  タスク固有のクラスにキャストする代わりに <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> クラスをコードで使用する場合、次の利点があります。  
   
--   <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost.Properties%2A> プロバイダーは、コード内でアセンブリを参照する必要がありません。  
+-   <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost><xref:Microsoft.SqlServer.Dts.Runtime.TaskHost.Properties%2A> プロバイダーは、コード内でアセンブリを参照する必要がありません。  
   
 -   コンパイル時にタスクの名前を知る必要がないため、すべてのタスクで動作する汎用ルーチンをコーディングできます。 このような汎用ルーチンには、タスク名を引数として受け取るメソッドが含まれます。このメソッド コードはすべてのタスクで動作します。 これは、テスト コードを記述するのに適したメソッドです。  
   
