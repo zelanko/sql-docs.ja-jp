@@ -14,10 +14,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e627106c5c2b4456b3559971897687c95e9833b1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68086673"
 ---
 # <a name="drop-external-table-transact-sql"></a>DROP EXTERNAL TABLE (Transact-SQL)
@@ -25,7 +25,7 @@ ms.locfileid: "68086673"
 
   PolyBase の外部テーブルをデータベースから削除しますが、外部データは削除しません。  
   
- ![記事のリンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "記事のリンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![記事リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "記事リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
@@ -46,7 +46,7 @@ DROP EXTERNAL TABLE { database_name.schema_name.table_name | schema_name.table_n
 ## <a name="general-remarks"></a>全般的な解説  
  外部テーブルを削除すると、テーブルに関連するすべてのメタデータが削除されます。 外部データは削除されません。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-using-basic-syntax"></a>A. 基本的な構文を使用します  
   
@@ -64,7 +64,7 @@ DROP EXTERNAL TABLE ProductVendor1;
 ```  
   
 ### <a name="c-dropping-a-table-from-another-database"></a>C. 別のデータベースからテーブルを削除します  
- 次の例では、`EasternDivision` データベースにある `SalesPerson` テーブルを削除します。  
+ 次の例では、`SalesPerson` データベースにある `EasternDivision` テーブルを削除します。  
   
 ```  
 DROP EXTERNAL TABLE EasternDivision.dbo.SalesPerson;  

@@ -15,10 +15,10 @@ ms.assetid: ed530b0d-438d-4c93-8e91-13f2b2b6a8b2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: cb86b202db40fb3bde858a43fb5dac550a2aaada
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71299120"
 ---
 # <a name="add-copy-of-existing-package"></a>[既存のパッケージのコピーを追加]
@@ -38,7 +38,7 @@ ms.locfileid: "71299120"
  **認証の種類**  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]からコピーする場合は、認証の種類を選択します。  
   
- **User name**  
+ **ユーザー名**  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証を使用する場合は、ユーザー名を指定します。  
   
  **パスワード**  

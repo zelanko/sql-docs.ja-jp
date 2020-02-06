@@ -15,10 +15,10 @@ ms.assetid: bffe26e0-1b9a-47ad-bae6-6b708cb4cf4f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3aedd7aef35555fe11bf67a11254833c52083f9d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297179"
 ---
 # <a name="developing-a-custom-foreach-enumerator"></a>カスタム ForEach 列挙子の開発
@@ -42,7 +42,7 @@ ms.locfileid: "71297179"
  [カスタム ForEach 列挙子用ユーザー インターフェイスの開発](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/developing-a-user-interface-for-a-custom-foreach-enumerator.md)  
  ユーザー インターフェイス クラスと、カスタム foreach 列挙子の構成に使用するフォームの実装方法について説明します。  
   
-## <a name="related-topics"></a>関連項目  
+## <a name="related-topics"></a>関連トピック  
   
 ### <a name="information-common-to-all-custom-objects"></a>すべてのカスタム オブジェクトに共通の情報  
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] で作成可能なカスタム オブジェクトのすべての種類に共通の情報については、次のトピックを参照してください。  

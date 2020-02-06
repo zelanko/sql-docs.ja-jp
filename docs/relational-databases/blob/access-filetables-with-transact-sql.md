@@ -13,10 +13,10 @@ ms.assetid: 3c4a5ffb-c521-4696-99cb-2b03cffc9c02
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: c86ab8b3f29699e807c61b571832c106ab235710
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68018893"
 ---
 # <a name="access-filetables-with-transact-sql"></a>Transact SQL を使用した FileTable へのアクセス
@@ -28,9 +28,9 @@ ms.locfileid: "68018893"
   
 -   ファイル属性のすべての列には NOT NULL 制約があります。 明示的に値が設定されなかった場合は、適切な既定値が使用されます。  
   
--   INSERT ステートメントで **name**、**path_locator**、**parent_path_locator**、またはファイル属性を設定する場合、システム定義の制約が適用されます。  
+-   INSERT ステートメントで **name**、 **path_locator**、 **parent_path_locator**、またはファイル属性を設定する場合、システム定義の制約が適用されます。  
   
--   アプリケーションは、[GetPathLocator &#40;Transact-SQL&#41;](../../relational-databases/system-functions/getpathlocator-transact-sql.md) 関数にファイル システム パスを渡すことで、ファイルまたはディレクトリの **path_locator** を取得できます。  
+-   アプリケーションは、**GetPathLocator &#40;Transact-SQL&#41;** 関数にファイル システム パスを渡すことで、ファイルまたはディレクトリの [path_locator](../../relational-databases/system-functions/getpathlocator-transact-sql.md) を取得できます。  
   
 ##  <a name="BasicsUpdate"></a> FileTable での UPDATE 操作  
  FileTable で **UPDATE** 操作を行う場合は、次の点に注意してください。  
@@ -71,7 +71,7 @@ ms.locfileid: "68018893"
   
 ## <a name="see-also"></a>参照  
  [FileTable へのファイルの読み込み](../../relational-databases/blob/load-files-into-filetables.md)   
- [FileTable 内のディレクトリとパスの操作](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)   
+ [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)   
  [ファイル I/O API を使用した FileTable へのアクセス](../../relational-databases/blob/access-filetables-with-file-input-output-apis.md)   
  [FileTable DDL、関数、ストアド プロシージャ、およびビュー](../../relational-databases/blob/filetable-ddl-functions-stored-procedures-and-views.md)  
   

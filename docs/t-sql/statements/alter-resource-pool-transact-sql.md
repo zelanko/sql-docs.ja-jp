@@ -18,10 +18,10 @@ ms.assetid: 9c1c4cfb-0e3b-4f01-bf57-3fce94c7d1d4
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 57849c8d99700f61c251177c3c3195b2277163ae
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982087"
 ---
 # <a name="alter-resource-pool-transact-sql"></a>ALTER RESOURCE POOL (Transact-SQL)
@@ -68,10 +68,10 @@ ALTER RESOURCE POOL { pool_name | "default" }
 >  定義済みのワークロード グループおよびリソース プールはすべて、"default" などの小文字の名前を使用しています。 大文字と小文字を区別する照合順序を使用するサーバーでは、これを考慮する必要があります。 SQL_Latin1_General_CP1_CI_AS など、大文字と小文字を区別しない照合順序を使用するサーバーでは、"default" と "Default" が同じものと見なされます。  
   
  MIN_CPU_PERCENT =*value*  
- CPU の競合がある場合に、リソース プールのすべての要求に保証される平均 CPU 帯域幅を指定します。 *value* は整数で、既定の設定は 0 です。 *value* の許容範囲は 0 から 100 までです。  
+ CPU の競合がある場合に、リソース プールのすべての要求に保証される平均 CPU 帯域幅を指定します。 *value* は整数で、既定の設定は 0 です。 *value* の許容範囲は 0 から 100 です。  
   
  MAX_CPU_PERCENT =*value*  
- CPU の競合がある場合に、このリソース プールのすべての要求に割り当てられる最大平均 CPU 帯域幅を指定します。 *value* は整数で、既定の設定は 100 です。 *value* の許容範囲は 1 から 100 までです。  
+ CPU の競合がある場合に、このリソース プールのすべての要求に割り当てられる最大平均 CPU 帯域幅を指定します。 *value* は整数で、既定の設定は 100 です。 *value* の許容範囲は 1 ～ 100 です。  
   
  CAP_CPU_PERCENT =*value*  
  **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。  
@@ -99,10 +99,10 @@ INNER JOIN sys.dm_os_schedulers AS sc
 ```  
   
  MIN_MEMORY_PERCENT =*value*  
- このリソース プール用に確保され、他のリソース プールとは共有できないメモリ量の最小値を指定します。 *value* は整数で、既定の設定は 0 です。 *value* の許容範囲は 0 から 100 までです。  
+ このリソース プール用に確保され、他のリソース プールとは共有できないメモリ量の最小値を指定します。 *value* は整数で、既定の設定は 0 です。 *value* の許容範囲は 0 から 100 です。  
   
  MAX_MEMORY_PERCENT =*value*  
- このリソース プールの要求で使用できる合計サーバー メモリを指定します。 *value* は整数で、既定の設定は 100 です。 *value* の許容範囲は 1 から 100 までです。  
+ このリソース プールの要求で使用できる合計サーバー メモリを指定します。 *value* は整数で、既定の設定は 100 です。 *value* の許容範囲は 1 ～ 100 です。  
   
  MIN_IOPS_PER_VOLUME =*value*  
  **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。  
@@ -116,7 +116,7 @@ INNER JOIN sys.dm_os_schedulers AS sc
   
  プールの MAX_IOPS_PER_VOLUME を 0 に設定した場合、プールはまったく管理されなくなり、他のプールで MIN_IOPS_PER_VOLUME が設定されていても、システムですべての IOPS を行うことがあります。 この場合、IO についてこのプールが管理されるようにするには、このプールの MAX_IOPS_PER_VOLUME の値をより大きな数値 (たとえば、最大値 2^31-1) に設定することをお勧めします。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  MAX_CPU_PERCENT と MAX_MEMORY_PERCENT には、それぞれ MIN_CPU_PERCENT と MIN_MEMORY_PERCENT 以上の値を指定する必要があります。  
   
  MAX_CPU_PERCENT は、使用可能になる場合、MAX_CPU_PERCENT の値を上回る CPU 容量を使用できます。 CAP_CPU_PERCENT を上回る急増が定期的に発生する場合がありますが、追加の CPU 容量が使用可能な場合でも、長時間にわたって CAP_CPU_PERCENT を超えることはありません。  
@@ -137,8 +137,8 @@ INNER JOIN sys.dm_os_schedulers AS sc
 ## <a name="permissions"></a>アクセス許可  
  CONTROL SERVER 権限が必要です。  
   
-## <a name="examples"></a>使用例  
- 次の例では、`MAX_CPU_PERCENT` を `25` に変更する以外は、すべて `default` プールの既定のリソース プール設定が保持されます。  
+## <a name="examples"></a>例  
+ 次の例では、`default` を `MAX_CPU_PERCENT` に変更する以外は、すべて `25` プールの既定のリソース プール設定が保持されます。  
   
 ```  
 ALTER RESOURCE POOL "default"  

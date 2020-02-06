@@ -15,10 +15,10 @@ ms.assetid: 8c0d2f39-59c1-4168-a649-65473f6a771b
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 22101d8ec2f24eeb1a93708adf52b2b24060ce28
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67987143"
 ---
 # <a name="view-plan-guide-properties"></a>プラン ガイド プロパティの表示
@@ -62,7 +62,7 @@ ms.locfileid: "67987143"
      **[無効化]**  
      プラン ガイドの状態が表示されます。 指定できる値は、 **[True]** および **[False]** です。  
   
-     **[名前]**  
+     **名前**  
      プラン ガイドの名前が表示されます。  
   
      **パラメーター**  
@@ -80,7 +80,7 @@ ms.locfileid: "67987143"
      **[スコープの種類]**  
      [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを含むエンティティの種類が表示されます。 これは [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントとプラン ガイドを照合するコンテキストを示します。 選択できる値は、 **OBJECT**、 **SQL**、および **TEMPLATE**です。  
   
-     **Statement**  
+     **ステートメント**  
      プラン ガイドの適用対象の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントが表示されます。  
   
 4.  **[OK]** をクリックします。  

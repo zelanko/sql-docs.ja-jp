@@ -26,10 +26,10 @@ author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 48eaf7f49976ed8784973c950887dc92252b08e5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68101901"
 ---
 # <a name="dbcc-freeproccache-transact-sql"></a>DBCC FREEPROCCACHE (Transact-SQL)
@@ -88,7 +88,7 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
 > [!NOTE]
 > [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降は、`ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE` を使用してスコープ内のデータベースのプロシージャ (プラン) キャッシュをクリアします。
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 DBCC FREEPROCCACHE を使用してプラン キャッシュをクリアする際には注意が必要です。 プロシージャ (プラン) キャッシュをクリアすると、すべてのプランが削除されます。その後にクエリを実行すると、以前にキャッシュされたプランは再利用されず、新しいプランがコンパイルされます。 
 
 そのため、新しいコンパイルの数が増えると、クエリのパフォーマンスが突然一時的に低下する可能性があります。 プラン キャッシュ内のキャッシュストアがクリアされるたびに、"[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、'DBCC FREEPROCCACHE' 操作または 'DBCC FREESYSTEMCACHE' 操作により、'%s' キャッシュストア (プラン キャッシュの一部) のキャッシュストア フラッシュを %d 個検出しました。" という情報メッセージが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログに記録されます。 このメッセージは、5 分以内にキャッシュがフラッシュされる限り、5 分間隔でログに記録されます。
@@ -112,7 +112,7 @@ DBCC FREEPROCCACHE を使用してプラン キャッシュをクリアする際
 -   user options  
   
 ## <a name="result-sets"></a>結果セット  
-WITH NO_INFOMSGS 句が指定されていない場合は、DBCC FREEPROCCACHE により次が返されます。"DBCC の実行が完了しました。 DBCC がエラー メッセージを出力した場合は、システム管理者に相談してください。"
+WITH NO_INFOMSGS 句が指定されていない場合は次のメッセージが表示されます。"DBCC の実行が完了しました。 DBCC がエラー メッセージを出力した場合は、システム管理者に相談してください。"
   
 ## <a name="permissions"></a>アクセス許可  
 適用対象: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 
@@ -187,7 +187,7 @@ DBCC FREEPROCCACHE ('default');
 GO  
 ```  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-dbcc-freeproccache-basic-syntax-examples"></a>D. DBCC FREEPROCCACHE の基本的な構文の例  
 次の例では、コンピューティング ノードからすべての既存のクエリ プラン キャッシュを削除します。 コンテキストを UserDbSales に設定すると、すべてのデータベースのコンピューティング ノードのクエリ プラン キャッシュが削除されます。 WITH NO_INFOMSGS 句は、情報メッセージが結果に表示されないようにします。  

@@ -11,10 +11,10 @@ ms.assetid: 74012c90-b42e-4171-b27a-9c30cf69ff98
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d904d16bb54236ee61dd463ca3c7bf829a46c3e3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115319"
 ---
 # <a name="use-utility-explorer-to-manage-the-sql-server-utility"></a>ユーティリティ エクスプローラーを使用した SQL Server ユーティリティの管理
@@ -38,7 +38,7 @@ ms.locfileid: "68115319"
 ### <a name="sql-server-utility-navigation-pane"></a>SQL Server ユーティリティのナビゲーション ウィンドウ  
  ユーティリティ エクスプローラーのナビゲーション ウィンドウでは、ユーティリティ コントロール ポイント (UCP) でグループ化された、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティ オブジェクトのツリー ビューが表示されます。 フォルダーを展開するには、プラス記号 (+) をクリックするか、ユーティリティ エクスプローラーのナビゲーション ウィンドウ内の UCP 名をダブルクリックします。 フォルダーまたはオブジェクトを右クリックすると、一般的なタスクを実行するためのメニューが表示されます。 ツリー ビューのノードは次のとおりです。  
   
--   ツリー ビューの最上位ノードは、ユーティリティ コントロール ポイント (UCP) です。 ノード名は、"Utility_Name"(ComputerName\UCP_instance_name) のように作成されます。 UCP がない場合は、作成する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティに接続していない場合は、接続する必要があります。 詳細については、「 [SQL Server ユーティリティの機能とタスク](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)」を参照してください。 ツリー ビューの UCP 名をクリックし、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティ エクスプローラーのコンテンツ ウィンドウに、ダッシュボード ビューのデータを読み込みます。 詳細については、「[ユーティリティ ダッシュボード &#40;SQL Server ユーティリティ&#41;](https://msdn.microsoft.com/library/999eb741-4a60-43f6-ab37-2df7dce845c1)」を参照してください。  
+-   ツリー ビューの最上位ノードは、ユーティリティ コントロール ポイント (UCP) です。 ノード名は、"Utility_Name" (ComputerName\UCP_instance_name) のように作成されます。 UCP がない場合は、作成する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティに接続していない場合は、接続する必要があります。 詳細については、「 [SQL Server ユーティリティの機能とタスク](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)」を参照してください。 ツリー ビューの UCP 名をクリックし、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティ エクスプローラーのコンテンツ ウィンドウに、ダッシュボード ビューのデータを読み込みます。 詳細については、「[ユーティリティ ダッシュボード &#40;SQL Server ユーティリティ&#41;](https://msdn.microsoft.com/library/999eb741-4a60-43f6-ab37-2df7dce845c1)」を参照してください。  
   
      UCP ノードを右クリックして、ダッシュボードのデータを更新します。  
   
@@ -60,8 +60,8 @@ ms.locfileid: "68115319"
 ### <a name="filtering-the-list-of-objects-in-utility-explorer-contents"></a>ユーティリティ エクスプローラー内のオブジェクトの一覧に対するフィルター処理  
  1 つのノードに多数のオブジェクトが含まれていると、対象のオブジェクトを見つけるのが難しくなります。 そのような場合は、ユーティリティ エクスプローラーのフィルター機能を使用して、一覧のサイズを小さく絞り込みます。 たとえば、特定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスや、ファイル領域の使用率の低いコンピューターだけを見つけるとします。 フィルター処理を行うフォルダーを右クリックし、[フィルター] ボタンをクリックして、 **[フィルターの設定]** をクリックして [ユーティリティ エクスプローラーのフィルターの設定] ダイアログ ボックスを開きます。 名前、コンピューターの CPU、インスタンスの CPU、ファイル領域、ボリューム領域、ポリシーのオーバーライド設定、または最終報告日時で、一覧をフィルター処理できます。 **[演算子]** 列および **[値]** 列のボックスの一覧には、追加のフィルター演算子が表示されます。  
   
-### <a name="starting-powershell"></a>PowerShell の起動  
- PowerShell セッションを起動するには、オブジェクト エクスプローラー ツリーで、一部を除くいずれかのフォルダーまたはオブジェクトを右クリックし、 **[Powershell の起動]** をクリックします。 これにより、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell サポートが有効になった Powershell セッションが起動し、パスがオブジェクト エクスプローラーで右クリックしたオブジェクトに設定されます。 これで、対話型の Powershell 環境で Powershell コマンドを入力できます。 詳細については、「 [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)」を参照してください。  
+### <a name="starting-powershell"></a>PowerShell の開始  
+ PowerShell セッションを起動するには、オブジェクト エクスプローラー ツリーで、一部を除くいずれかのフォルダーまたはオブジェクトを右クリックし、 **[Powershell の起動]** をクリックします。 これにより、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell サポートが有効になった Powershell セッションが起動し、パスがオブジェクト エクスプローラーで右クリックしたオブジェクトに設定されます。 これで、対話型の Powershell 環境で Powershell コマンドを入力できます。 詳細については、「[SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)」を参照してください。  
   
  PowerShell には F1 ヘルプがありませんが、 **Get-Help** コマンドレットで PowerShell の使用に関する情報を参照することができます。 詳細については、「 [Get Help SQL Server PowerShell](../../relational-databases/scripting/get-help-sql-server-powershell.md)」を参照してください。  
   

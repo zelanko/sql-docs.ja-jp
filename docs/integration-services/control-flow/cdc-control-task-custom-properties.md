@@ -11,10 +11,10 @@ ms.assetid: 2a073699-79a2-4ea1-a68e-fc17a80b74ba
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 048cbe154dde064d43178da6c58e5f948130ca7b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294270"
 ---
 # <a name="cdc-control-task-custom-properties"></a>CDC 制御タスクのカスタム プロパティ
@@ -26,7 +26,7 @@ ms.locfileid: "71294270"
   
 |プロパティ名|データ型|[説明]|  
 |-------------------|---------------|-----------------|  
-|接続|ADO.NET Connection|変更テーブルおよび CDC 状態 (同じデータベースに格納されている場合) にアクセスするための、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC データベースへの ADO.NET 接続。<br /><br /> 選択した変更テーブルが存在する、CDC に対応した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースへの接続である必要があります。|  
+|Connection|ADO.NET Connection|変更テーブルおよび CDC 状態 (同じデータベースに格納されている場合) にアクセスするための、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC データベースへの ADO.NET 接続。<br /><br /> 選択した変更テーブルが存在する、CDC に対応した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースへの接続である必要があります。|  
 |TaskOperation|Integer (列挙)|CDC 制御タスクに対して選択した操作。 有効な値は、 **[初期読み込みの開始をマーク]** 、 **[初期読み込みの終了をマーク]** 、 **[CDC の開始をマーク]** 、 **[処理範囲の取得]** 、 **[処理済みの範囲をマーク]** 、および **[CDC の状態をリセット]** です。<br /><br /> (Oracle ではなく) **CDC での作業時に**[MarkCdcStart] **、** [MarkInitialLoadStart] **、または** [MarkInitialLoadEnd] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を選択した場合、接続マネージャーで指定されたユーザーは、  **db_owner** か **sysadmin**である必要があります。<br /><br /> これらの操作の詳細については、「 [CDC Control Task Editor](../../integration-services/control-flow/cdc-control-task-editor.md) 」(CDC 制御タスク エディター) と「 [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)」(CDC 制御タスク) を参照してください。|  
 |OperationParameter|String|現在、 **MarkCdcStart** 操作で使用されています。 このパラメーターでは、特定の操作に必要な追加情報を入力できます。 たとえば、 **MarkCdcStart** 操作には LSN 番号が必要です。|  
 |StateVariable|String|現在の CDC コンテキストの CDC の状態を格納する SSIS パッケージ変数。 **AutomaticStatePersistenceCDC** が選択されていない限り、制御タスクは **StateVariable** に対して状態を読み書きし、永続ストレージからの読み込みまたは格納は行いません。 「 [Define a State Variable](../../integration-services/data-flow/define-a-state-variable.md)」(状態変数の定義) を参照してください。|  
@@ -38,6 +38,6 @@ ms.locfileid: "71294270"
   
 ## <a name="see-also"></a>参照  
  [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)   
- [CDC Control Task Editor](../../integration-services/control-flow/cdc-control-task-editor.md)  
+ [CDC 制御タスク エディター](../../integration-services/control-flow/cdc-control-task-editor.md)  
   
   

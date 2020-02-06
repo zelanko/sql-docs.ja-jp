@@ -13,10 +13,10 @@ ms.author: mikeray
 ms.custom: ''
 ms.date: 05/23/2019
 ms.openlocfilehash: bdefcbbfe6d5987de4ac69ab60d1e80b004a5db6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68025455"
 ---
 # <a name="server-properties---database-settings-page"></a>サーバーのプロパティ - [データベースの設定] ページ
@@ -59,7 +59,7 @@ FILL FACTOR の値を小さくすると、 [!INCLUDE[ssNoVersion](../../includes
 - **[バックアップを圧縮する]** チェック ボックスがオンの場合、既定で新しいバックアップが圧縮されます。
   
     > [!IMPORTANT]
-    >  既定の設定では、圧縮によって CPU 使用率が著しく増加し、圧縮処理によって CPU がさらに消費されるために、同時に実行される操作が悪影響を受ける場合があります。 このため、 [リソース ガバナー](../../relational-databases/resource-governor/resource-governor.md)によって CPU 使用率が制限されるセッションでは、優先度の低い圧縮バックアップを作成することができます。 詳細については、[「リソース ガバナーを使用してバックアップの圧縮による CPU 使用率を制限する方法 &#40;Transact-SQL&#41;」](../.. relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)を参照してください。
+    >  既定の設定では、圧縮によって CPU 使用率が著しく増加し、圧縮処理によって CPU がさらに消費されるために、同時に実行される操作が悪影響を受ける場合があります。 このため、 [リソース ガバナー](../../relational-databases/resource-governor/resource-governor.md)によって CPU 使用率が制限されるセッションでは、優先度の低い圧縮バックアップを作成することができます。 詳細については、「 [リソース ガバナーを使用してバックアップの圧縮による CPU 使用率を制限する方法 &#40;Transact-SQL&#41;](../.. relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)」を参照してください。
   
 **sysadmin** 固定サーバー ロールまたは **serveradmin** 固定サーバー ロールのメンバーである場合は、 **[バックアップを圧縮する]** ボックスをオンにして設定を変更できます。  
   
@@ -73,15 +73,15 @@ FILL FACTOR の値を小さくすると、 [!INCLUDE[ssNoVersion](../../includes
 
 データベースごとに、データベースの復旧にかける最長時間を分単位で設定します。 既定値は 0 です。0 の場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]によって自動的に構成されます。 実際には、復旧時間が 1 分未満で、アクティブなデータベースのチェックポイントは約 1 分間隔になります。 詳細については、「 [recovery interval サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)」を参照してください。  
   
-### <a name="data"></a>data
+### <a name="data"></a>Data
 
 データ ファイルの既定の位置を指定します。 参照ボタンをクリックして、新しい既定の位置を指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を再起動するまでは、有効になりません。  
   
-### <a name="log"></a>Log
+### <a name="log"></a>ログ
   
 ログ ファイルの既定の位置を指定します。 参照ボタンをクリックして、新しい既定の位置を指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を再起動するまでは、有効になりません。  
   
-### <a name="configured-values"></a>構成した値
+### <a name="configured-values"></a>構成されている値
 
 このペインの各オプションに構成されている値を表示します。 これらの値を変更した場合は、 **[実行中の値]** をクリックして、変更後の値が反映されているかどうかを確認してください。 そうなっていない場合は、先に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを再指定する必要があります。  
   

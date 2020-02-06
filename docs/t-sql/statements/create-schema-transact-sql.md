@@ -25,10 +25,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 365abc8df7c64650e3be6c79bcd00725149ec25d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68117298"
 ---
 # <a name="create-schema-transact-sql"></a>CREATE SCHEMA (Transact-SQL)
@@ -87,7 +87,7 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
  *deny_statement*  
  セキュリティ保護可能なリソース (ただし新しいスキーマを除く) に対する権限を拒否する DENY ステートメントを指定します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
 > [!NOTE]  
 >  ステートメントに CREATE SCHEMA AUTHORIZATION を使用し、スキーマ名を指定しなくても、このステートメントは許可されます。ただしこれは、旧バージョンとの互換性の維持を目的としたものです。 ステートメントでエラーは発生しませんが、スキーマは作成されません。  
@@ -112,7 +112,7 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
   
  **スキーマおよびユーザーの暗黙的な作成**  
   
- データベース ユーザー アカウント (データベース内のデータベース プリンシパル) がなくても、ユーザーがデータベースを使用できる場合があります。 このことは、次の状況で発生します。  
+ データベース ユーザー アカウント (データベース内のデータベース プリンシパル) がなくても、ユーザーがデータベースを使用できる場合があります。 これは、次の状況で発生します。  
   
 -   ログインが **CONTROL SERVER** 特権を持っている。  
   
@@ -123,7 +123,7 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
  この動作が必要なのは、ユーザーが Windows グループに基づいてオブジェクトを作成および所有できるようにするためです。 ただし、スキーマおよびユーザーが誤って作成される可能性があります。 ユーザーおよびスキーマが暗黙的に作成されないように、可能な限り、明示的にデータベース プリンシパルを作成して既定のスキーマを割り当てます。 または、データベース内にオブジェクトを作成するときに、2 部または 3 部構成のオブジェクト名を使用して既存のスキーマを明示的に指定します。  
 
 > [!NOTE]
->  [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] では、Azure Active Directory ユーザーを暗黙的に作成することはできません。 外部プロバイダーから Azure AD ユーザーを作成する場合、ユーザーの状態を AAD で確認する必要があるので、ユーザーの作成はエラー 2760:**指定されたスキーマ名 "\<user_name@domain>" が存在しないか、そのスキーマ名を使用する権限がないため失敗します。** 次いで、エラー 2759:**直前のエラーにより CREATE SCHEMA に失敗しました。** が表示されます。 これらのエラーを回避するには、最初に外部プロバイダーから Azure AD ユーザーを作成し、次にオブジェクト作成ステートメントを再実行します。
+>  [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] では、Azure Active Directory ユーザーを暗黙的に作成することはできません。 外部プロバイダーからの Azure AD ユーザーの作成では AAD でユーザーの状態を確認する必要があるので、ユーザーの作成はエラー 2760 "**指定されたスキーマ名 "\<user_name@domain>" が存在しないか、そのスキーマ名を使用する権限がありません**"、 およびその後のエラー 2759 "**直前のエラーにより CREATE SCHEMA に失敗しました**" で失敗します。 これらのエラーを回避するには、最初に外部プロバイダーから Azure AD ユーザーを作成し、次にオブジェクト作成ステートメントを再実行します。
  
   
 ## <a name="deprecation-notice"></a>今後のバージョンでの使用  
@@ -139,10 +139,10 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
 > [!NOTE]  
 >  旧バージョンとの互換性のための構文では、スキーマが作成されないので、CREATE SCHEMA に対する権限はチェックされません。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-creating-a-schema-and-granting-permissions"></a>A. スキーマを作成して、権限を付与する  
- 次の例では、`Annik` が所有するスキーマ `Sprockets` を作成します。このスキーマにはテーブル `NineProngs` が含まれます。 このステートメントでは、`SELECT` に対して `Mandar` を許可し、`SELECT` に対して `Prasanna` を拒否します。 `Sprockets` と `NineProngs` は単一のステートメントで作成されることに注意してください。  
+ 次の例では、`Sprockets` が所有するスキーマ `Annik` を作成します。このスキーマにはテーブル `NineProngs` が含まれます。 このステートメントでは、`SELECT` に対して `Mandar` を許可し、`SELECT` に対して `Prasanna` を拒否します。 `Sprockets` と `NineProngs` は単一のステートメントで作成されることに注意してください。  
   
 ```  
 USE AdventureWorks2012;  
@@ -154,7 +154,7 @@ CREATE SCHEMA Sprockets AUTHORIZATION Annik
 GO   
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="b-creating-a-schema-and-a-table-in-the-schema"></a>B. スキーマとスキーマ内のテーブルを作成する  
  次の例では、スキーマ `Sales` を作成した後、そのスキーマ内にテーブル `Sales.Region` を作成します。  
@@ -171,7 +171,7 @@ GO
 ```  
   
 ### <a name="c-setting-the-owner-of-a-schema"></a>C. スキーマの所有者を設定する  
- 次の例では、`Mary` が所有するスキーマ `Production` を作成します。  
+ 次の例では、`Production` が所有するスキーマ `Mary` を作成します。  
   
 ```  
 CREATE SCHEMA Production AUTHORIZATION [Contoso\Mary];  

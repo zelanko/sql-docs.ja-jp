@@ -16,10 +16,10 @@ ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 153cbd447fa84087b50501005d0ea457f47d1eda
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298213"
 ---
 # <a name="odbc-destination"></a>ODBC 入力先
@@ -38,7 +38,7 @@ ms.locfileid: "71298213"
   
 -   **バッチ**: このモードでは、ODBC 入力先は、把握した ODBC プロバイダーの機能に基づいて、最も効率的な挿入方法を使用します。 最新の ODBC プロバイダーの場合、これは、パラメーターを設定した INSERT ステートメントを準備し、行方向の配列パラメーター バインドを使用する方法です (このとき、配列のサイズは **BatchSize** プロパティによって制御します)。 **[バッチ]** を選択したが、この方法がプロバイダーでサポートされていない場合、ODBC 入力先は自動的に **[行ごと]** モードに切り替わります。  
   
--   **行ごと**: このモードでは、ODBC 入力先はパラメーターを設定した INSERT ステートメントを準備し、**SQL の Execute** を使用して一度に 1 行ずつ行を挿入します。  
+-   **行ごと**: このモードでは、ODBC 入力先はパラメーターを設定した INSERT ステートメントを準備し、 **SQL の Execute** を使用して一度に 1 行ずつ行を挿入します。  
   
 ## <a name="error-handling"></a>エラー処理  
  ODBC 入力先にはエラー出力があります。 コンポーネントのエラー出力には、次の出力列があります。  
@@ -51,7 +51,7 @@ ms.locfileid: "71298213"
   
  ODBC 入力先は、エラー動作の設定に応じて、抽出処理中に発生したエラー (データ変換、切り捨て) をエラー出力に返します。 詳細については、「[CDC ソース エディター &#40;[エラー出力] ページ&#41;](../../integration-services/data-flow/odbc-source-editor-error-output-page.md)」を参照してください。  
   
-## <a name="parallelism"></a>並列処理  
+## <a name="parallelism"></a>Parallelism  
  並列実行できる ODBC 入力先コンポーネントの数に制限はありません。これは、同一テーブル上にある場合または異なるテーブル上にある場合、同一コンピューター上で実行する場合または異なるコンピューター上で実行する場合のいずれにも該当します (ただし、通常のグローバルなセッション制限を除きます)。  
   
  ただし、使用する ODBC プロバイダーの制限によって、プロバイダーを介するコンカレント接続数が制限される場合があります。 これらの制限によって、ODBC 入力先で使用できる並列インスタンス数のサポートが制限されます。 SSIS プロバイダーは、使用される ODBC プロバイダーの制限を把握し、SSIS パッケージを作成する際に考慮する必要があります。  
@@ -104,7 +104,7 @@ ms.locfileid: "71298213"
 #### <a name="connection-manager"></a>[ODBC 入力元エディター]  
  既存の ODBC 接続マネージャーを一覧から選択するか、[新規作成] をクリックして新しい接続を作成します。 ODBC でサポートされているデータベースへの接続を選択または入力できます。  
   
-#### <a name="new"></a>ボタンを使用して新しい  
+#### <a name="new"></a>新規  
  **[新規作成]** をクリックします。 新しい接続マネージャーを作成できる **[ODBC 接続マネージャーの構成エディター]** ダイアログ ボックスが開きます。  
   
 #### <a name="data-access-mode"></a>[データ アクセス モード]  
@@ -155,7 +155,7 @@ ms.locfileid: "71298213"
 #### <a name="inputoutput"></a>[入力または出力]  
  データ ソースの名前を表示します。  
   
-#### <a name="column"></a>[列]  
+#### <a name="column"></a>列  
  使用されていません。  
   
 #### <a name="error"></a>エラー  
@@ -170,7 +170,7 @@ ms.locfileid: "71298213"
 #### <a name="set-this-value-to-selected-cells"></a>[選択したセルに設定する値]  
  エラーまたは切り捨てが発生した場合に、選択したすべてのセルを ODBC 入力先でどのように処理するか (エラーを無視する、行をリダイレクトする、またはコンポーネントを失敗させる) を選択します。  
   
-#### <a name="apply"></a>[適用]  
+#### <a name="apply"></a>適用  
  選択したセルにエラー処理オプションを適用します。  
   
 ### <a name="error-handling-options"></a>エラー処理オプション  

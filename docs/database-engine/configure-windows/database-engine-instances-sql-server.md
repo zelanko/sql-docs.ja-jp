@@ -11,17 +11,17 @@ ms.assetid: af9ae643-9866-4014-b36f-11ab556a773e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 2d5f89f5e3aa801386642bfb75470cef15db6e96
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68012053"
 ---
 # <a name="database-engine-instances-sql-server"></a>データベース エンジンのインスタンス (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスは、オペレーティング システム サービスとして実行される **sqlservr** 実行可能ファイルのコピーです。 各インスタンスは、いくつかのシステム データベースと、1 つまたは複数のユーザー データベースを管理します。 各コンピューターは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]の複数のインスタンスを実行できます。 アプリケーションはインスタンスに接続して、インスタンスに管理されているデータベースでの作業を実行します。  
   
-## <a name="instances"></a>インスタンス  
+## <a name="instances"></a>Instances  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスは、そのインスタンスで管理されているいずれかのデータベースのデータを操作するすべてのアプリケーション要求を処理するサービスとして動作します。 アプリケーションからの接続要求 (ログイン) の送信先です。 アプリケーションとインスタンスが別のコンピューター上にある場合、接続はネットワーク接続を通じて確立されます。 アプリケーションとインスタンスが同じコンピューター上にある場合、SQL Server 接続はネットワーク接続としてもインメモリ接続としても確立できます。 接続が完了すると、アプリケーションは接続を通じてインスタンスに [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを送信します。 インスタンスは [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントをデータベース内のデータおよびオブジェクトに対する操作に解決して、必要な権限がログイン資格情報に付与されていれば、操作を実行します。 取得されたデータは、エラーなどのメッセージと共にアプリケーションに返されます。  
   
  1 台のコンピューター上で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] の複数のインスタンスを実行できます。 1 つのインスタンスを既定のインスタンスにすることができます。 既定のインスタンスには名前がありません。 接続要求にコンピューター名しか指定されていない場合、接続は既定のインスタンスに対して確立されます。 名前付きインスタンスは、インスタンスをインストールするときに名前を指定するインスタンスです。 このインスタンスに対する接続要求では、コンピューター名とインスタンス名の両方を指定する必要があります。 既定のインスタンスのインストールは必須ではありません。コンピューターで実行されているすべてのインスタンスが名前付きインスタンスであってもかまいません。  

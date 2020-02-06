@@ -16,10 +16,10 @@ ms.assetid: e62083ec-d127-48ea-aaa4-cca6017a29cb
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 544740f7a6e0d292b1764a9bdfb565d1e7ce0f18
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293950"
 ---
 # <a name="select-variables-page"></a>[変数の選択] ページ
@@ -35,7 +35,7 @@ ms.locfileid: "71293950"
  選択ボックス  
  特定の変数またはすべての変数を選択したり、すべての変数の選択を解除したりします。  
   
- **[名前]**  
+ **名前**  
  変数の名前を指定します。  
   
  **Type**  

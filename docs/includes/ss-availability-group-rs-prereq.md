@@ -1,12 +1,4 @@
----
-ms.openlocfilehash: 336162ea06533901107c83dd47f062fc94fdd869
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68213324"
----
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 可用性グループを作成する前に、以下のことを行う必要があります。
 
@@ -24,7 +16,7 @@ SQL Server インスタンスをホストする各レプリカで Always On 可�
 Enable-SqlAlwaysOn -ServerInstance <server\instance> -Force
 ```
 
-## <a name="enable-an-alwaysonhealth-event-session"></a>AlwaysOn_health イベント セッションを有効にする
+## <a name="enable-an-alwayson_health-event-session"></a>AlwaysOn_health イベント セッションを有効にする
 
  可用性グループのトラブルシューティング時に根本原因を診断できるように、オプションで Always On 可用性グループの拡張イベント (XEvents) セッションを有効にすることができます。 この操作を行うには、SQL Server の各インスタンスで次のコマンドを実行します。
 

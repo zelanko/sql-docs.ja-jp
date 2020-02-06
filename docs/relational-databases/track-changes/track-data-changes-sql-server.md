@@ -21,10 +21,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 94f5ccf6d7983a25bb8cafe084dbca103f966255
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095426"
 ---
 # <a name="track-data-changes-sql-server"></a>データ変更の追跡 (SQL Server)
@@ -62,10 +62,10 @@ ms.locfileid: "74095426"
 |列が変更されたかどうか|はい|はい|  
 |DML 型|はい|はい|  
   
-##  <a name="Capture"></a> Change Data Capture  
+##  <a name="Capture"></a> 変更データ キャプチャ  
  変更データ キャプチャでは、DML の変更が行われたという事実と変更された実際のデータの両方がキャプチャされ、ユーザー テーブルの変更情報の履歴が提供されます。 変更は、非同期プロセスを使用してトランザクション ログを読み取ることによってキャプチャされます。これは、システムへの影響が少ない方法です。  
   
- 次の図に示すように、ユーザー テーブルに対して行われた変更は、対応する変更テーブルにキャプチャされます。 これらの変更テーブルには、時間の経過に伴う変更の履歴が表示されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の[変更データ キャプチャ](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)関数を使用して、変更データを簡単かつ体系的に利用できます。  
+ 次の図に示すように、ユーザー テーブルに対して行われた変更は、対応する変更テーブルにキャプチャされます。 これらの変更テーブルには、時間の経過に伴う変更の履歴が表示されます。 [ の](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)変更データ キャプチャ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]関数を使用して、変更データを簡単かつ体系的に利用できます。  
   
  ![変更データ キャプチャの概念図](../../relational-databases/track-changes/media/cdcart1.gif "変更データ キャプチャの概念図")  
   
@@ -91,7 +91,7 @@ ms.locfileid: "74095426"
 |スパース列|はい|columnset を使用する場合は変更のキャプチャをサポートしません。|  
 |計算列|いいえ|計算列に対する変更は追跡されません。 列は適切な種類の変更テーブルに表示されますが、値は NULL になります。|  
 |XML|はい|個々の XML 要素に対する変更は追跡されません。|  
-|timestamp|はい|変更テーブル内のデータ型はバイナリに変換されます。|  
+|Timestamp|はい|変更テーブル内のデータ型はバイナリに変換されます。|  
 |BLOB データ型|はい|BLOB 列の前の画像は、列自体が変更された場合にのみ保存されます。|  
   
 ### <a name="change-data-capture-and-other-sql-server-features"></a>変更データ キャプチャとその他の SQL Server 機能  
@@ -137,7 +137,7 @@ ms.locfileid: "74095426"
   
  [sys.sp_cdc_disable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md) を使用すると、復元またはアタッチされたデータベースから変更データ キャプチャを削除できます。  
   
-##  <a name="Tracking"></a> Change Tracking  
+##  <a name="Tracking"></a> 変更の追跡  
  変更の追跡では、テーブル内の行が変更されたという事実がキャプチャされますが、変更されたデータはキャプチャされません。 この機能を使用すると、変更された行をアプリケーションで特定し、最新の行データについてはユーザー テーブルから直接取得することができます。 したがって、変更の追跡で確認できる履歴の情報は変更データ キャプチャと比較すると限定されますが、 変更データがキャプチャされないため、履歴情報が必要ではないアプリケーションではストレージ オーバーヘッドがはるかに少なくて済みます。 変更は、同期追跡メカニズムを使用して追跡されます。 これは、DML 操作のオーバーヘッドを最小限に抑えるように設計されています。  
   
  次の図は、変更の追跡を使用すると効果的な同期のシナリオを示しています。 このシナリオのアプリケーションでは、テーブルの前回の同期後に変更されたすべてのテーブル行の現在の行データのみが必要です。 同期メカニズムを使用して変更が追跡されるため、アプリケーションで双方向同期を実行して、発生する可能性がある競合を確実に検出できます。  
@@ -155,7 +155,7 @@ ms.locfileid: "74095426"
   
 -   [Microsoft Sync Framework デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=108054)  
   
-     [!INCLUDE[ssSyncFrameLong](../../includes/sssyncframelong-md.md)] および [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]に関する完全なドキュメントが用意されています。 [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)] のドキュメントのトピック「How to:Use SQL Server Change Tracking」(方法: SQL Server 変更の追跡を使用する) には、詳細な情報とコードの例が掲載されています。  
+     [!INCLUDE[ssSyncFrameLong](../../includes/sssyncframelong-md.md)] および [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]に関する完全なドキュメントが用意されています。 [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]のドキュメントのトピック「SQL Server 変更の追跡の使用方法」には、詳細な情報とコードの例があります。  
   
 ## <a name="related-tasks-required"></a>関連タスク (必須)  
   

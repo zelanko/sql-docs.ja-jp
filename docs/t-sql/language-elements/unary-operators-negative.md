@@ -20,10 +20,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 992d0b8d0a2b3781af732aaa83983882a9938112
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072145"
 ---
 # <a name="unary-operators---negative"></a>単項演算子 - 負号
@@ -54,7 +54,7 @@ ms.locfileid: "68072145"
 ## <a name="result-types"></a>戻り値の型  
  *numeric_expression* のデータ型を返します。ただし符号なし **tinyint** 型の式は例外で、この場合の結果は符号ありの **smallint** 型になります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-setting-a-variable-to-a-negative-value"></a>A. 変数に負の値を設定する  
  次の例では、変数に負の値を設定します。  
@@ -103,7 +103,7 @@ VariableValue NegativeValue
   
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-returning-the-negative-of-a-positive-constant"></a>C. 正の定数の負の値を返す  
  次の例では、正の定数の負の値を返します。  
@@ -136,7 +136,7 @@ SELECT TOP (1) - ( - 17) FROM DimEmployee;
 ```  
   
 ### <a name="e-returning-the-negative-of-a-column"></a>E. 列の負の値を返す  
- 次の例では、`dimEmployee` テーブルの各従業員に対し、`BaseRate` 値の負の値を返します。  
+ 次の例では、`BaseRate` テーブルの各従業員に対し、`dimEmployee` 値の負の値を返します。  
   
 ```  
 USE ssawPDW;  

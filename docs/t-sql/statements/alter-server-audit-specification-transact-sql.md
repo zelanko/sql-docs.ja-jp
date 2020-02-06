@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9cac288b-940e-4c16-88d6-de06aeed2b47
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 7bc8d1e1a84ddacbffe5b830e1b5931eb94a5f14
-ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
+ms.openlocfilehash: 497cf728ab104f706de0fbd8fd6946c481dd4c55
+ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70745330"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77004690"
 ---
 # <a name="alter-server-audit-specification-transact-sql"></a>ALTER SERVER AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ ALTER SERVER AUDIT SPECIFICATION audit_specification_name
  WITH **(** STATE **=** { ON | OFF } **)**  
  監査による、この監査仕様についてのレコードの収集を有効または無効にします。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  監査仕様を変更する場合は、監査仕様の状態のオプションを OFF に設定する必要があります。 STATE=OFF 以外のオプションを使用して監査仕様を有効にしているときに ALTER SERVER AUDIT SPECIFICATION を実行すると、エラー メッセージが表示されます。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -67,14 +67,15 @@ ALTER SERVER AUDIT SPECIFICATION audit_specification_name
   
  サーバー監査仕様の作成後は、CONTROL SERVER または ALTER ANY SERVER AUDIT 権限を持つプリンシパル、sysadmin アカウント、またはその監査への明示的なアクセス権を持つプリンシパルによってその仕様を表示できます。  
   
-## <a name="examples"></a>使用例  
- 次の例では、`HIPAA_Audit_Specification` というサーバー監査仕様を作成します。 `HIPAA_Audit` という [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 監査に対して、失敗したログインの監査アクション グループを削除し、データベース オブジェクト アクセスの監査アクション グループを追加します。  
+## <a name="examples"></a>例  
+ 次の例では、`HIPAA_Audit_Specification` というサーバー監査仕様を作成します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] という `HIPAA_Audit` 監査に対して、失敗したログインの監査アクション グループを削除し、データベース オブジェクト アクセスの監査アクション グループを追加します。  
   
 ```  
 ALTER SERVER AUDIT SPECIFICATION HIPAA_Audit_Specification  
 FOR SERVER AUDIT HIPAA_Audit  
-    DROP (FAILED_LOGIN_GROUP)  
-    ADD (DATABASE_OBJECT_ACCESS_GROUP);  
+    DROP (FAILED_LOGIN_GROUP),  
+    ADD (DATABASE_OBJECT_ACCESS_GROUP)  
+    WITH (STATE=ON);  
 GO  
 ```  
   

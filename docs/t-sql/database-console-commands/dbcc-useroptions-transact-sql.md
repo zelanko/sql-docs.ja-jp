@@ -22,10 +22,10 @@ ms.assetid: 565ab112-7af1-4c18-a579-07cdb332f539
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: dc8f12ae745acd0410fb309dc4c3dc9b65e7a382
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68040449"
 ---
 # <a name="dbcc-useroptions-transact-sql"></a>DBCC USEROPTIONS (Transact-SQL)
@@ -70,13 +70,13 @@ isolation level              read committed
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.
  ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 READ_COMMITTED_SNAPSHOT データベース オプションが ON に設定され、トランザクション分離レベルが "READ COMMITTED" に設定されている場合、DBCC USEROPTIONS は、"READ COMMITTED スナップショット" の分離レベルを報告します。 実際の分離レベルは READ COMMITTED です。
   
 ## <a name="permissions"></a>アクセス許可  
 ロール **public** のメンバーシップが必要です。
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 次の例は、現在の接続のアクティブな SET オプションを返します。
   
 ```sql  

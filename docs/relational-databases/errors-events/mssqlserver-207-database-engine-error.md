@@ -12,13 +12,13 @@ ms.assetid: d1ab00c7-0331-437a-84fe-bae53b82feec
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 0fa8c6371ba5889cde5afe2c66b036a1ec8c031d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68056804"
 ---
-# <a name="mssqlserver207"></a>MSSQLSERVER_207
+# <a name="mssqlserver_207"></a>MSSQLSERVER_207
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>詳細  
@@ -115,7 +115,7 @@ ms.locfileid: "68056804"
     GROUP BY Year;  
     ```  
   
--   MERGE ステートメントの WHEN NOT MATCHED BY SOURCE 句が、アクセスできる値を参照している。 WHEN NOT MATCHED BY SOURCE 句でソース テーブルから少なくとも 1 行が返されるように MERGE ステートメントを変更します。 たとえば、この句に指定した検索条件を追加または変更する必要があります。 または、句を変更して、ソース テーブルを参照しない値を指定します。 たとえば、`WHEN NOT MATCHED BY SOURCE THEN UPDATE SET TargetTable.Col1 = <expression, or other available value>` のようになります。  
+-   MERGE ステートメントの WHEN NOT MATCHED BY SOURCE 句が、アクセスできる値を参照している。 WHEN NOT MATCHED BY SOURCE 句でソース テーブルから少なくとも 1 行が返されるように MERGE ステートメントを変更します。 たとえば、この句に指定した検索条件を追加または変更する必要があります。 または、句を変更して、ソース テーブルを参照しない値を指定します。 たとえば、「 `WHEN NOT MATCHED BY SOURCE THEN UPDATE SET TargetTable.Col1 = <expression, or other available value>` 」のように入力します。  
   
 ## <a name="see-also"></a>参照  
 [MERGE &#40;Transact-SQL&#41;](~/t-sql/statements/merge-transact-sql.md)  

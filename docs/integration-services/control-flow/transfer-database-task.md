@@ -19,10 +19,10 @@ ms.assetid: b9a2e460-cdbc-458f-8df8-06b8b2de3d67
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 8badd727143d80db08eed45ddbf5102c635ddeeb
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293895"
 ---
 # <a name="transfer-database-task"></a>データベース転送タスク
@@ -40,13 +40,13 @@ ms.locfileid: "71293895"
 ## <a name="transfer-of-databases-between-versions-of-sql-server"></a>SQL Server のバージョン間でのデータベースの転送  
  データベース転送タスクは、異なるバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス間でデータベースを転送できます。  
   
-## <a name="events"></a>イベント  
+## <a name="events"></a>events  
  データベース転送タスクでは、エラー メッセージ転送の進捗状況は報告されません。0% または 100% 完了した場合のみ報告されます。  
   
 ## <a name="execution-value"></a>実行値  
  タスクの **ExecutionValue** プロパティで定義される実行値は、値 1 を返します。これは、他の転送タスクとは異なり、データベース転送タスクでは 1 つのデータベースしか転送できないためです。  
   
- データベース転送タスクの **ExecValueVariable** プロパティにユーザー定義変数を割り当てると、エラー メッセージ転送に関する情報をパッケージ内の他のオブジェクトで利用できるようになります。 詳細については、「[Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)」と「[パッケージで変数を使用する](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)」を参照してください。  
+ データベース転送タスクの **ExecValueVariable** プロパティにユーザー定義変数を割り当てると、エラー メッセージ転送に関する情報をパッケージ内の他のオブジェクトで利用できるようになります。 詳細については、「[Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)」と「[パッケージで変数を使用する](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)」をご覧ください。  
   
 ## <a name="log-entries"></a>ログ エントリ  
  データベース転送タスクには、次のカスタム ログ エントリが含まれています。  
@@ -59,7 +59,7 @@ ms.locfileid: "71293895"
   
  さらに、転送先データベースが上書きされたときに、 **OnInformation** イベントのログ エントリが書き込まれます。  
   
-## <a name="security-and-permissions"></a>セキュリティおよび権限  
+## <a name="security-and-permissions"></a>セキュリティとアクセス許可  
  オフライン モードを使用してデータベースを転送するには、パッケージを実行するユーザーが sysadmin サーバー ロールのメンバーである必要があります。  
   
  オンライン モードを使用してデータベースを転送するには、パッケージを実行するユーザーが sysadmin サーバー ロールのメンバーであるか、または選択されたデータベースのデータベース所有者 (dbo) である必要があります。  
@@ -94,13 +94,13 @@ ms.locfileid: "71293895"
   **[データベース転送タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、データベース転送タスクの名前と説明を入力できます。 データベース転送タスクは、2 つの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの間で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースをコピーまたは移動します。 このタスクを使用して、同じサーバー内でデータベースをコピーすることもできます。   
   
 ### <a name="options"></a>オプション  
- **[名前]**  
+ **名前**  
  データベース転送タスクの一意な名前を入力します。 この名前は、タスク アイコンのラベルとして使用されます。  
   
 > [!NOTE]  
 >  タスク名はパッケージ内で一意である必要があります。  
   
- **[説明]**  
+ **説明**  
  データベース転送タスクの説明を入力します。  
   
 ## <a name="transfer-database-task-editor-databases-page"></a>[データベース転送タスク エディター] ([データベース] ページ)
@@ -135,9 +135,9 @@ ms.locfileid: "71293895"
   
  このプロパティには、次の表に示すオプションがあります。  
   
-|[値]|Description|  
+|値|[説明]|  
 |-----------|-----------------|  
-|**True**|転送先サーバーのデータベースを上書きします。|  
+|**True** にします|転送先サーバーのデータベースを上書きします。|  
 |**False**|転送先サーバーのデータベースを上書きしません。|  
   
 > [!CAUTION]  
@@ -164,9 +164,9 @@ ms.locfileid: "71293895"
   
  このプロパティには、次の表に示すオプションがあります。  
   
-|[値]|Description|  
+|値|[説明]|  
 |-----------|-----------------|  
-|**True**|ソース データベースを再アタッチします。|  
+|**True** にします|ソース データベースを再アタッチします。|  
 |**False**|ソース データベースを再アタッチしません。|  
 
 ## <a name="source-database-files"></a>[転送元のデータベース ファイル]

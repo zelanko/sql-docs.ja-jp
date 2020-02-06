@@ -11,13 +11,13 @@ ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1bc950a7d0a576338bea9a614193ab3edaee7c96
-ms.sourcegitcommit: 82b70c39550402a2b0b327db32bf5ecf88b50d3c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73032997"
 ---
-# <a name="lesson-1-connecting-to-the-database-engine"></a>レッスン 1:データベース エンジンへの接続
+# <a name="lesson-1-connecting-to-the-database-engine"></a>レッスン 1: データベース エンジンへの接続
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]のインストール時に一緒にインストールされるツールは、エディションとセットアップによって異なります。 このレッスンでは、主要なツールについて確認し、接続して基本機能を実行する方法について学習します。これで、さらに多くのユーザーを認証することができます。  
@@ -72,7 +72,7 @@ ms.locfileid: "73032997"
 1.  [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]の **[ファイル]** メニューの **[オブジェクト エクスプローラーを接続]** をクリックします。 
 - **[サーバーへの接続]** ダイアログ ボックスが開きます。 **[サーバーの種類]** ボックスに、最後に使用したコンポーネントの種類が表示されます。  
 
-2.  **[データベース エンジン]** を選択します。
+2.  **データベース エンジン**を選択します。
 
 ![オブジェクト エクスプ ローラー](../relational-databases/media/object-explorer.png)
 
@@ -109,5 +109,5 @@ ms.locfileid: "73032997"
 > 上記は開始するための基本的な情報です。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では優れたセキュリティ環境が提供されます。セキュリティはデータベース操作において明らかに重要な要素です。  
 
 ## <a name="next-lesson"></a>次のレッスン  
-[レッスン 2:別のコンピューターからの接続](../relational-databases/lesson-2-connecting-from-another-computer.md)    
+[レッスン 2: 別のコンピューターからの接続](../relational-databases/lesson-2-connecting-from-another-computer.md)    
   

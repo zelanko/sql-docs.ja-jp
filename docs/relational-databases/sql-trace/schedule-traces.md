@@ -19,15 +19,15 @@ ms.assetid: 620b79db-924b-4502-8af3-39efcfca245d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 12061040ea7fa1b34d892230fbba73f4c34a1949
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68140689"
 ---
 # <a name="schedule-traces"></a>トレースのスケジュール設定
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]でトレースのスケジュールを設定するには、次の 2 つの方法があります。 可能な代替手段としては以下の方法があります。  
+  Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]でトレースのスケジュールを設定するには、次の 2 つの方法があります。 次のようにすることができます。  
   
 -   トレース停止時刻を有効にする。  
   

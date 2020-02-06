@@ -25,10 +25,10 @@ ms.assetid: 0e25fe22-2536-4d7e-ba4a-1921e880f367
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 276ce1b24afc58be960f7c9f580204f7b329fe4d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68091746"
 ---
 # <a name="backup-master-key-transact-sql"></a>BACKUP MASTER KEY (Transact-SQL)
@@ -53,7 +53,7 @@ BACKUP MASTER KEY TO FILE = 'path_to_file'
  PASSWORD ='*password*'  
  ファイル内のマスター キーの暗号化に使用されているパスワードを指定します。 このパスワードに対しては、複雑性がチェックされます。 詳細については、「 [Password Policy](../../relational-databases/security/password-policy.md)」をご参照ください。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  マスター キーは開かれている必要があります。したがって、バックアップ前に暗号化を解除する必要があります。 マスター キーがサービス マスター キーで暗号化されている場合は、明示的に開く必要はありません。 パスワードのみで暗号化されている場合は、明示的に開く必要があります。  
   
  マスター キーは作成後すぐにバックアップし、安全な別の場所に保存することをお勧めします。  
@@ -61,7 +61,7 @@ BACKUP MASTER KEY TO FILE = 'path_to_file'
 ## <a name="permissions"></a>アクセス許可  
  データベースに対する CONTROL 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、`AdventureWorks2012` マスター キーのバックアップを作成します。 このマスター キーはサービス マスター キーによって暗号化されているので、マスター キーを開くときにはパスワードを指定する必要があります。  
   
 ```  

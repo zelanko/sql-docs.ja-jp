@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c04af45ee0188c2520ccad6b65f50be2021cdf10
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67907062"
 ---
 # <a name="space-transact-sql"></a>SPACE (Transact-SQL)
@@ -49,10 +49,10 @@ SPACE ( integer_expression )
 ## <a name="return-types"></a>戻り値の型  
  **varchar**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  Unicode データに空白文字を含めるには、または 8000 文字を超える空白文字を返すには、SPACE ではなく REPLICATE を使用します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、`Person` の `AdventureWorks2012` テーブルに格納されている人名の姓を取り出して、コンマ、空白文字 2 つ、および名を連結します。  
   
 ```  
@@ -64,7 +64,7 @@ ORDER BY LastName, FirstName;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  次の例では、`DimCustomer` の `AdventureWorksPDW2012` テーブルに格納されている人名の姓を取り出して、コンマ、空白文字 2 つ、および名を連結します。  
   
 ```  

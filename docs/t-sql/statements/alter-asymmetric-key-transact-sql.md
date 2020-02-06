@@ -20,10 +20,10 @@ ms.assetid: 958e95d6-fbe6-43e8-abbd-ccedbac2dbac
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 06263499babe005bca36a982bc863dfa24356b5d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066072"
 ---
 # <a name="alter-asymmetric-key-transact-sql"></a>ALTER ASYMMETRIC KEY (Transact-SQL)
@@ -66,16 +66,16 @@ ALTER ASYMMETRIC KEY Asym_Key_Name <alter_option>
  DECRYPTION BY PASSWORD **='***oldPassword***'**  
  現在秘密キーが保護されている、古いパスワードを指定します。 秘密キーがデータベースのマスター キーで暗号化されている場合は指定する必要はありません。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  データベースのマスター キーがない場合は、ENCRYPTION BY PASSWORD オプションを指定する必要があります。パスワードを指定しないと、この操作は失敗します。 データベースのマスター キー作成方法については、「[CREATE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md)」をご覧ください。  
   
  秘密キーの保護を変更するには、ALTER ASYMMETRIC KEY を使用して、PRIVATE KEY オプションを次のように指定します。  
   
 |保護の変更対象|ENCRYPTION BY PASSWORD|DECRYPTION BY PASSWORD|  
 |----------------------------|----------------------------|----------------------------|  
-|古いパスワードから新しいパスワードへ|Required|Required|  
-|パスワードからマスター キーへ|[省略]|Required|  
-|マスター キーからパスワードへ|Required|[省略]|  
+|古いパスワードから新しいパスワードへ|必須|必須|  
+|パスワードからマスター キーへ|[省略]|必須|  
+|マスター キーからパスワードへ|必須|[省略]|  
   
  データベースのマスター キーを秘密キーの保護に使用するには、マスター キーを先に開いておく必要があります。 詳しくは、「[OPEN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-master-key-transact-sql.md)」をご覧ください。  
   
@@ -84,7 +84,7 @@ ALTER ASYMMETRIC KEY Asym_Key_Name <alter_option>
 ## <a name="permissions"></a>アクセス許可  
  秘密キーを削除する場合、非対称キーに対する CONTROL 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-changing-the-password-of-the-private-key"></a>A. 秘密キーのパスワードを変更する  
  次の例では、非対称キー `PacificSales09` の秘密キーの保護に使用するパスワードを変更します。 新しいパスワードは `<enterStrongPasswordHere>` です。  

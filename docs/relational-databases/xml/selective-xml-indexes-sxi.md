@@ -11,10 +11,10 @@ ms.assetid: 598ecdcd-084b-4032-81b2-eed6ae9f5d44
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f176ba79cc42610d706bb56896a8ca073ea8185a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68000708"
 ---
 # <a name="selective-xml-indexes-sxi"></a>選択的 XML インデックス (SXI)
@@ -120,7 +120,7 @@ FOR
   
 -   バイナリ XS 型 (base64Binary や hexBinary など) のノードに対するインデックス設定。  
   
--   末尾にワイルドカード文字 `*` を含む XPath 式を使用した、インデックスを設定するノードの指定。例: `/a/b/c/*`、`/a//b/*`、`/a/b/*:c`。  
+-   末尾にワイルドカード文字 `*` を含む XPath 式を使用した、インデックスを設定するノードの指定。例:  `/a/b/c/*`、 `/a//b/*`、 `/a/b/*:c`。  
   
 -   子、属性、または子孫以外の軸に対するインデックスの設定。 `//<step>` は特殊なケースとして使用できます。  
   

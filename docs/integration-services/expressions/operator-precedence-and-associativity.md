@@ -14,10 +14,10 @@ ms.assetid: 5094164f-dabc-45b5-b611-384feb2b3fe3
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 5e1c394cd8b58fccdae23e83b163164776de3948
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71288701"
 ---
 # <a name="operator-precedence-and-associativity"></a>演算子の優先順位と結合規則
@@ -46,6 +46,6 @@ ms.locfileid: "71288701"
 |? :|条件式|右から左|  
   
 ## <a name="see-also"></a>参照  
- [演算子 (SSIS 式)](../../integration-services/expressions/operators-ssis-expression.md)  
+ [演算子 &#40;SSIS 式&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   

@@ -23,10 +23,10 @@ ms.assetid: d686f2f5-e03a-4ffe-a566-6036628f46f1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c2a02ae5bc9572265cc33392a02c596cfcfec0ff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072010"
 ---
 # <a name="drop-xml-schema-collection-transact-sql"></a>DROP XML SCHEMA COLLECTION (Transact-SQL)
@@ -50,7 +50,7 @@ DROP XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier
 *sql_identifier*  
 削除する XML スキーマ コレクションの名前。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 XML スキーマ コレクションの削除は、トランザクション操作です。 トランザクション内で XML スキーマ コレクションを削除した後にそのトランザクションをロールバックすると、その XML スキーマ コレクションは削除されなかったことになります。  
   
 使用中の XML スキーマ コレクションは削除できません。 つまり、次のいずれかの条件に該当するコレクションは削除できません。  
@@ -59,7 +59,7 @@ XML スキーマ コレクションの削除は、トランザクション操作
   
 -   任意のテーブル制約で指定されているコレクション。  
   
--   スキーマ バインド関数またはストアド プロシージャで参照されているコレクション。 たとえば、次の関数では `WITH SCHEMABINDING` が指定されるので、XML スキーマ コレクション `MyCollection` はロックされます。 このコレクションを削除すると、XML SCHEMA COLLECTION のロックはなくなります。  
+-   スキーマ バインド関数またはストアド プロシージャで参照されているコレクション。 たとえば、次の関数では `MyCollection` が指定されるので、XML スキーマ コレクション `WITH SCHEMABINDING` はロックされます。 このコレクションを削除すると、XML SCHEMA COLLECTION のロックはなくなります。  
   
     ```  
     CREATE FUNCTION dbo.MyFunction()  
@@ -76,7 +76,7 @@ XML スキーマ コレクションの削除は、トランザクション操作
 ## <a name="permissions"></a>アクセス許可  
 XML SCHEMA COLLECTION を削除するには、コレクションに対する DROP 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 次の例では、XML スキーマ コレクションを削除します。  
   
 ```  

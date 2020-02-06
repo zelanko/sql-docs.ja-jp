@@ -12,10 +12,10 @@ ms.assetid: 3b975000-63a1-43c2-a40f-89d0a8a36bef
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: db307d221b8c90f478c21ab1605362e7fdf2ffd6
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907722"
 ---
 # <a name="mssqlserver_701"></a>MSSQLSERVER_701
@@ -33,7 +33,7 @@ ms.locfileid: "72907722"
 |メッセージ テキスト|システム メモリが不足しているため、このクエリを実行できません。|  
   
 ## <a name="explanation"></a>説明  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、クエリを実行するために必要なメモリを割り当てることができませんでした。 このエラーはさまざまな理由で発生しますが、その原因としてはオペレーティング システムの設定、使用可能な物理メモリ容量、現在のワークロードに対するメモリ制限などが考えられます。 多くの場合、失敗したトランザクション自体がエラーの原因ではありません。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、クエリを実行するために必要なメモリを割り当てることができませんでした。 この原因としては、オペレーティング システムの設定、物理メモリの可用性、現在のワークロードのメモリ制限など、さまざまなことが考えられます。 ほとんどの場合、トランザクションが失敗しても、このエラーは発生しません。  
   
 サーバーに十分なメモリがないので、DBCC ステートメントなどの診断クエリは失敗する可能性があります。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "72907722"
   
 1.  このサーバー上で、他のアプリケーションやサービスによってメモリが消費されていないか確認します。 重要度の低いアプリケーションやサービスのメモリ消費量が少なくなるように、構成を変更します。  
   
-2.  次のパフォーマンス モニター カウンターの収集を開始します。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **:Buffer Manager**、**SQL Server:Memory Manager**。  
+2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **: Buffer Manager** および **SQL Server: Memory Manager** のパフォーマンス モニター カウンターを確認します。  
   
 3.  次に示す SQL Server メモリ構成パラメーターを確認します。  
   

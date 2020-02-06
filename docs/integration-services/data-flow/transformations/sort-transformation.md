@@ -21,10 +21,10 @@ ms.assetid: 728c9351-84a8-4a89-be4d-d50d4adc04e0
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1b8c49f0f462bf62bde8e92a1e51f981d18d7ef7
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297746"
 ---
 # <a name="sort-transformation"></a>並べ替え変換
@@ -41,7 +41,7 @@ ms.locfileid: "71297746"
   
  また、並べ替え変換では、並べ替えの実行時に重複する行を削除できます。 重複する行とは、並べ替えキーの値が同じ行のことです。 並べ替えキーの値は、使用する文字列比較オプションに基づいて生成されます。したがって、リテラル文字列が異なっていても、並べ替えキーの値は同じとなる場合があります。 並べ替え変換は、値は異なるが並べ替えキーが同じ入力列の行を、重複していると識別します。  
   
- 並べ替え変換には、パッケージの読み込み時にプロパティ式で更新できる、**MaximumThreads** カスタム プロパティがあります。 詳細については、「[Integration Services (SSIS) の式](../../../integration-services/expressions/integration-services-ssis-expressions.md)」、「[パッケージでプロパティ式を使用する](../../../integration-services/expressions/use-property-expressions-in-packages.md)」、および「[変換のカスタム プロパティ](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)」を参照してください。  
+ 並べ替え変換には、パッケージの読み込み時にプロパティ式で更新できる、 **MaximumThreads** カスタム プロパティがあります。 詳細については、「[Integration Services &#40;SSIS&#41; の式](../../../integration-services/expressions/integration-services-ssis-expressions.md)」、「[パッケージでプロパティ式を使用する](../../../integration-services/expressions/use-property-expressions-in-packages.md)」、および「[変換のカスタム プロパティ](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)」を参照してください。  
   
  この変換は 1 つの入力と 1 つの出力をとります。 エラー出力はサポートされていません。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "71297746"
   
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [共通プロパティ](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [変換のカスタム プロパティ](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -67,7 +67,7 @@ ms.locfileid: "71297746"
  **使用できる入力列**  
  このチェック ボックスを使用して、並べ替える列を指定します。  
   
- **[名前]**  
+ **名前**  
  使用できる各入力列の名前を表示します。  
   
  **パススルー**  
@@ -82,7 +82,7 @@ ms.locfileid: "71297746"
  **[並べ替えの種類]**  
  昇順で並べ替えるか、降順で並べ替えるかを示します。  
   
- **並べ替え順序**  
+ **[並べ替え順序]**  
  列を並べ替える順序を示します。 各列に対して手動で設定する必要があります。  
   
  **[比較フラグ]**  

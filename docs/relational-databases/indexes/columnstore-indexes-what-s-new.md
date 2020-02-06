@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 690455f8dba76b45643ac4971c988059c56e33f9
-ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70009425"
 ---
 # <a name="columnstore-indexes---what39s-new"></a>列ストア インデックス - 新機能
@@ -96,7 +96,7 @@ ms.locfileid: "70009425"
 -   `MAXDOP 1` または直列クエリ プランで実行されるシングル スレッド クエリは、バッチ モードで実行されます。 以前は、マルチ スレッド クエリのみがバッチ モードで実行されていました。  
 -   メモリ最適化テーブル クエリでは、行ストア インデックスまたは列ストア インデックス内のデータにアクセスする際に、並列プランを SQL 相互運用モードで使用できます。  
   
-### <a name="supportability"></a>サポート性  
+### <a name="supportability"></a>サポート  
 次に、列ストア用の新しいシステム ビューを示します。  
 
 ||| 

@@ -19,10 +19,10 @@ ms.assetid: a433fbef-1853-4740-9d5e-8a32bc4ffbb2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: fd8b17acb904ae0d33b06e85531e531792f1d60e
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295695"
 ---
 # <a name="identify-the-source-of-packages-with-digital-signatures"></a>デジタル署名を使用してパッケージのソースを特定する
@@ -40,7 +40,7 @@ ms.locfileid: "71295695"
   
 -   デザイン時にすべてのパッケージのデジタル署名を確認してからパッケージを読み込むには、 **で** [パッケージの読み込み時にデジタル署名を確認する] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]チェック ボックスをオンにします。 このオプションは、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]でのすべてのパッケージに対するグローバルな設定です。
   
--   個別のパッケージのデジタル署名を確認するには、 **dtexec** ユーティリティを使用してパッケージを実行するときに **/VerifyS[igned]** オプションを指定します。 詳細については、「 [dtexec Utility](../../integration-services/packages/dtexec-utility.md)」を参照してください。  
+-   個別のパッケージのデジタル署名を確認するには、 **dtexec** ユーティリティを使用してパッケージを実行するときに **/VerifyS[igned]** オプションを指定します。 詳細については、「[dtexec ユーティリティ](../../integration-services/packages/dtexec-utility.md)」を参照してください。  
   
 ## <a name="set-a-registry-value-to-check-package-signature"></a>パッケージの署名を確認するレジストリ値を設定する  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、オプションのレジストリ値である **BlockedSignatureStates**もサポートされています。このレジストリ値を使用すると、署名付きパッケージと署名がないパッケージの読み込みに関する組織のポリシーを管理できます。 このレジストリ値により、パッケージが署名されていない場合、または無効な署名や信頼できない署名が含まれている場合に、パッケージが読み込まれないようにすることができます。 このレジストリ値を設定する方法の詳細については、「 [レジストリ値を設定して署名ポリシーを実装する](#registry)」を参照してください。  
@@ -62,7 +62,7 @@ ms.locfileid: "71295695"
   
  次の表に、DWORD データの有効な値、およびそれらに関連付けられたポリシーを示します。  
   
-|[値]|Description|  
+|値|[説明]|  
 |-----------|-----------------|  
 |0|管理制限はありません。|  
 |1|署名が無効なパッケージをブロックします。<br /><br /> この設定では、署名がないパッケージはブロックしません。|  
@@ -146,7 +146,7 @@ ms.locfileid: "71295695"
  **[署名]**  
  **[証明書の選択]** ダイアログ ボックスを開き、使用する証明書を選択します。  
   
- **[削除]**  
+ **Remove**  
  デジタル署名を削除します。  
 
 ## <a name="see-also"></a>参照  

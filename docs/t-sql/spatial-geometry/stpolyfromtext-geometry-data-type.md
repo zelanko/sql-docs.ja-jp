@@ -18,10 +18,10 @@ ms.assetid: a7c1c9f0-1dd5-493b-b206-83bbfa33452b
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 292f043085cc04ee58a29ead730518b723854ed9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066345"
 ---
 # <a name="stpolyfromtext-geometry-data-type"></a>STPolyFromText (geometry データ型)
@@ -46,14 +46,14 @@ STPolyFromText ( 'polygon_tagged_text' , SRID )
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **geometry**  
   
- CLR の戻り値の型:**SqlGeometry**  
+ CLR 戻り値の型: **SqlGeometry**  
   
- OGC の型:**多角形**  
+ OGC の型: **Polygon**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  このメソッドでは、入力が正しい形式でない場合に、**FormatException** をスローします。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  `STPolyFromText()` を使用して `geometry` インスタンスを作成する例を次に示します。  
   
 ```  

@@ -17,10 +17,10 @@ ms.assetid: 1df60fd6-c019-405d-8155-c330dbac2cc1
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9d82f3ef27525ad918ef01e9cb2e0600ef85ae0a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293860"
 ---
 # <a name="transfer-logins-task"></a>ログイン転送タスク
@@ -33,7 +33,7 @@ ms.locfileid: "71293860"
 ## <a name="transfer-logins-between-instances-of-sql-server"></a>SQL Server のインスタンス間でのログインの転送  
  ログイン転送タスクでは、転送元または転送先として、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をサポートします。  
   
-## <a name="events"></a>イベント  
+## <a name="events"></a>events  
  ログイン転送タスクでは、転送されたログインの数を報告する情報イベントと、ログインが上書きされた場合の警告イベントが発生します。  
   
  ログインの転送の進捗状況は報告されません。0% または 100% 完了した場合のみ報告されます。  
@@ -50,7 +50,7 @@ ms.locfileid: "71293860"
   
  また、 **OnInformation** イベントのログ エントリは転送されたログインの数を報告し、 **OnWarning** イベントのログ エントリは転送先でログインが上書きされると書き込まれます。  
   
-## <a name="security-and-permissions"></a>セキュリティおよび権限  
+## <a name="security-and-permissions"></a>セキュリティとアクセス許可  
  転送元サーバーのログインを参照し、転送先サーバーにログインを作成するユーザーは、両方のサーバーのサーバー ロール sysadmin のメンバーでなければなりません。  
   
 ## <a name="configuration-of-the-transfer-logins-task"></a>ログイン転送タスクの構成  
@@ -68,7 +68,7 @@ ms.locfileid: "71293860"
   
 -   重複するログインをスキップします。  
   
- ログイン転送タスクは実行時に、2 つの SMO 接続マネージャーを使用して、転送元および転送先サーバーに接続します。 SMO 接続マネージャーの構成はログイン転送タスクとは別に行い、ログイン転送タスクは SMO 接続マネージャーを参照します。 SMO 接続マネージャーは、サーバーと、サーバーに接続する際に使用する認証モードを指定します。 詳しくは、「 [SMO 接続マネージャー](../../integration-services/connection-manager/smo-connection-manager.md)」をご覧ください。  
+ ログイン転送タスクは実行時に、2 つの SMO 接続マネージャーを使用して、転送元および転送先サーバーに接続します。 SMO 接続マネージャーの構成はログイン転送タスクとは別に行い、ログイン転送タスクは SMO 接続マネージャーを参照します。 SMO 接続マネージャーは、サーバーと、サーバーに接続する際に使用する認証モードを指定します。 詳細については、「 [SMO 接続マネージャー](../../integration-services/connection-manager/smo-connection-manager.md)」をご覧ください。  
   
  プロパティを設定するには [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
@@ -89,13 +89,13 @@ ms.locfileid: "71293860"
   **[ログイン転送タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、ログイン転送タスクの名前と説明を入力します。  
   
 ### <a name="options"></a>オプション  
- **[名前]**  
+ **名前**  
  ログイン転送タスクの一意の名前を入力します。 この名前は、タスク アイコンのラベルとして使用されます。  
   
 > [!NOTE]  
 >  タスク名はパッケージ内で一意である必要があります。  
   
- **[説明]**  
+ **説明**  
  ログイン転送タスクの説明を入力します。  
   
 ## <a name="transfer-logins-task-editor-logins-page"></a>[ログイン転送タスク エディター] ([ログイン] ページ)
@@ -114,7 +114,7 @@ ms.locfileid: "71293860"
  **[LoginsToTransfer]**  
  転送元サーバーから転送先サーバーにコピーされる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを選択します。 このプロパティには、次の表に示すオプションがあります。  
   
-|[値]|[説明]|  
+|値|[説明]|  
 |-----------|-----------------|  
 |**[AllLogins]**|転送元サーバーのすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインが転送先サーバーにコピーされます。|  
 |**[SelectedLogins]**|**[LoginsList]** に指定されているログインのみが転送先サーバーにコピーされます。|  
@@ -131,7 +131,7 @@ ms.locfileid: "71293860"
   
  このプロパティには、次の表に示すオプションがあります。  
   
-|[値]|[説明]|  
+|値|[説明]|  
 |-----------|-----------------|  
 |**[FailTask]**|転送先サーバーに同じ名前のログインが既に存在していた場合、タスクが失敗します。|  
 |**Overwrite**|転送先サーバーにある同じ名前のログインは上書きされます。|  

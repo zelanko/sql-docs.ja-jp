@@ -19,10 +19,10 @@ ms.assetid: 0dc6f422-7aae-4016-b7f4-3289fa8f989c
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 665497328238fbaa88d666fb214af336531e93c7
-ms.sourcegitcommit: aece9f7db367098fcc0c508209ba243e05547fe1
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72260162"
 ---
 # <a name="point-geography-data-type"></a>Point (geography データ型)
@@ -50,12 +50,12 @@ Point ( Lat, Long, SRID )
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
- CLR の戻り値の型:**SqlGeography**  
+ CLR の戻り値の型: **SqlGeography**  
   
 > [!NOTE]  
 >  Point (geography データ型) メソッドの引数は、WKT と比較して元に戻された座標を持ちます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  `Point()` を使用して `geography` インスタンスを作成する例を次に示します。  
   
 ```  

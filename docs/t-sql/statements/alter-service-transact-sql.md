@@ -21,10 +21,10 @@ ms.assetid: 2b4608f7-bb2e-4246-aa29-b52c55995b3a
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 3b18eb0d8f848bb57015aa78797d1222b9d92194
-ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70745293"
 ---
 # <a name="alter-service-transact-sql"></a>ALTER SERVICE (Transact-SQL)
@@ -51,7 +51,7 @@ ALTER SERVICE service_name
  *service_name*  
  変更するサービス名を指定します。 サーバー名、データベース名、スキーマ名は指定できません。  
   
- ON QUEUE [ _schema_name_**.** ] *queue_name*  
+ ON QUEUE [ _schema_name_ **.** ] *queue_name*  
  このサービス用の新しいキューを指定します。 このサービス用のすべてのメッセージは、[!INCLUDE[ssSB](../../includes/sssb-md.md)] によって現在のキューから新しいキューに移動されます。  
   
  ADD CONTRACT *contract_name*  
@@ -60,7 +60,7 @@ ALTER SERVICE service_name
  DROP CONTRACT *contract_name*  
  このサービスで公開されるコントラクト セットから削除するコントラクトを指定します。 このコントラクトを使用するサービスとのメッセージ交換が存在する場合、[!INCLUDE[ssSB](../../includes/sssb-md.md)] によってエラー メッセージが送信されます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  ALTER SERVICE ステートメントによってサービスからコントラクトが削除されると、サービスは、このコントラクトを使用するメッセージ交換の対象から除外されます。 したがって、[!INCLUDE[ssSB](../../includes/sssb-md.md)] では削除対象のコントラクトを使用するサービスとの新しいメッセージ交換は許可されません。 このコントラクトを使用する既存のメッセージ交換に影響はありません。  
   
  サービスの AUTHORIZATION を変更するには、ALTER AUTHORIZATION ステートメントを使用します。  
@@ -68,7 +68,7 @@ ALTER SERVICE service_name
 ## <a name="permissions"></a>アクセス許可  
  サービスを変更する権限は、既定では、サービスの所有者、**db_ddladmin** または **db_owner** 固定データベース ロールのメンバー、および **sysadmin** 固定サーバー ロールのメンバーに与えられています。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-changing-the-queue-for-a-service"></a>A. サービスのキューを変更する  
  次の例では、キュー `//Adventure-Works.com/Expenses` を使用するよう、`NewQueue` サービスを変更します。  

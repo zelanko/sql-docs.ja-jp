@@ -11,10 +11,10 @@ ms.assetid: cf751f1e-2348-4a77-904c-bd92c0d7d0ae
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e7035802b5b4e13c2696af9d76c6a2904547ea25
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292285"
 ---
 # <a name="odbc-flow-components"></a>ODBC フロー コンポーネント
@@ -28,7 +28,7 @@ ms.locfileid: "71292285"
   
  ODBC コネクタは、 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]のコンテキストで、ODBC でサポートされているデータベースへのデータの読み込みやデータのアンロードを実行するときに、最適なパフォーマンスを得ることができるように設計されています。  
   
-## <a name="benefits"></a>利点  
+## <a name="benefits"></a>メリット  
  [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] の ODBC 入力元および ODBC 入力先を使用することで、ODBC でサポートされるデータベースへのデータ読み込みまたはデータのアンロードを処理するプロジェクトで、SSIS に関する競争力がもたらされます。  
   
  ODBC 入力元と ODBC 入力先を共に使用することで、ODBC 対応データベースとの高パフォーマンスのデータ統合が可能になります。 どちらのコンポーネントも、行方向のパラメーター配列バインド モードをサポートする機能豊富な ODBC プロバイダーでこのバインド機能を使用するように構成することや、機能が少ない ODBC プロバイダーで単一行のパラメーター バインド機能を使用するように構成することができます。  
@@ -36,7 +36,7 @@ ms.locfileid: "71292285"
 ## <a name="getting-started-with-the-odbc-source-and-destination"></a>ODBC 入力元および入力先の概要  
  [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]を使用するパッケージをセットアップする前に、以下のコンポーネントを使用できることを確認する必要があります。  
   
--   [ODBC 入力元](../../integration-services/data-flow/odbc-source.md)  
+-   [ODBC 変換元](../../integration-services/data-flow/odbc-source.md)  
   
 -   [ODBC 変換先](../../integration-services/data-flow/odbc-destination.md)  
   
@@ -104,7 +104,7 @@ ms.locfileid: "71292285"
   
 ODBC 3.8 仕様で規定されている 拡張 C 型はサポートされません。次の表に、各 ODBC SQL 型に対応する SSIS データ型を示します。 SSIS 開発者は既定のマッピングをオーバーライドして、入出力列で使用する SSIS データ型を個別に指定できます。このときに必要となるデータ変換によって、パフォーマンスが影響を受けることはありません。  
   
-|ODBC SQL 型|SSIS データ型|コメント|  
+|ODBC SQL 型|SSIS データ型|説明|  
 |-----------------|------------------|------------|  
 |SQL_BIT|DT_BOOL||  
 |SQL_TINYINT|DT_I1<br /><br />DT_UI1|ODBC ドライバーで SQL データ型の UNSIGNED_ATTRIBUTE が SQL_TRUE に設定されている場合、その SQL データ型は SSIS の符号なしのデータ型 (DT_UI1、DT_UI2、DT_UI4、DT_UI8) にマッピングされます。|  
@@ -137,6 +137,6 @@ ODBC 3.8 仕様で規定されている 拡張 C 型はサポートされませ�
   
 -   [ODBC 変換元](../../integration-services/data-flow/odbc-source.md)  
   
--   [ODBC 入力先](../../integration-services/data-flow/odbc-destination.md)  
+-   [ODBC 変換先](../../integration-services/data-flow/odbc-destination.md)  
   
  

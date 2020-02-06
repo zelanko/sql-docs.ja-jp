@@ -15,10 +15,10 @@ ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 3b950557c3c5c22968cffa4be0b4565ddedb293c
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056517"
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>検索プロパティのプロパティ セット GUID およびプロパティ整数 ID の取得
@@ -44,8 +44,8 @@ ms.locfileid: "74056517"
 |----------------------|----------------------------|-----------------------|----------------|-----------------|  
 |Authors|**System.Author**|F29F85E0-4FF9-1068-AB91-08002B27B3D9|4|特定のアイテムの作成者。|  
 |Tags|**System.Keywords**|F29F85E0-4FF9-1068-AB91-08002B27B3D9|5|アイテムに割り当てられる一連のキーワード (タグとも呼ばれます)。|  
-|型|**System.PerceivedType**|28636AA6-953D-11D2-B5D6-00C04FD918D0|9|正規の種類に基づいて認識されるファイルの種類。|  
-|[タイトル]|**System.Title**|F29F85E0-4FF9-1068-AB91-08002B27B3D9|2|アイテムのタイトル。 たとえば、ドキュメントのタイトル、メッセージの件名、写真のキャプション、または音楽トラックの名前。|  
+|種類|**System.PerceivedType**|28636AA6-953D-11D2-B5D6-00C04FD918D0|9|正規の種類に基づいて認識されるファイルの種類。|  
+|タイトル|**System.Title**|F29F85E0-4FF9-1068-AB91-08002B27B3D9|2|アイテムのタイトル。 たとえば、ドキュメントのタイトル、メッセージの件名、写真のキャプション、または音楽トラックの名前。|  
   
  ファイル形式間で一貫性を保持するため、マイクロソフトでは、頻繁に使用される、優先度の高いドキュメントのプロパティのサブセットを、いくつかのドキュメントのカテゴリとして特定しています。 これらには、通信、連絡先、ドキュメント、音楽ファイル、画像、およびビデオがあります。 各カテゴリの上位のプロパティの詳細については、Windows サーチに関するドキュメントの「 [カスタム ファイル形式のシステム定義プロパティ](https://go.microsoft.com/fwlink/?LinkId=144336) 」を参照してください。  
   

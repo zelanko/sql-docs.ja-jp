@@ -16,10 +16,10 @@ ms.assetid: a57b629c-e9ed-48fd-9a48-ed3787d80c8f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 8993c5e9ea1334b5bb8a002f1991041886a9f282
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68125168"
 ---
 # <a name="filetables-sql-server"></a>FileTables (SQL Server)
@@ -29,7 +29,7 @@ ms.locfileid: "68125168"
   
  つまり、ファイルおよびドキュメントを FileTable と呼ばれる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の特殊なテーブルに保存しておき、ファイル システムに格納されているかのように、Windows アプリケーションからこれらのファイルおよびドキュメントにアクセスできるということです。このとき、クライアント アプリケーションに変更を加える必要はありません。  
   
- FileTable の機能は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の FILESTREAM テクノロジをベースとして構築されています。 FILESTREAM の詳細については、「[FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md)」を参照してください。  
+ FileTable の機能は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の FILESTREAM テクノロジをベースとして構築されています。 FILESTREAM の詳細については、「[FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md)」を参照してください。  
   
 ##  <a name="Goals"></a> FileTable 機能の利点  
  FileTable 機能の目的は、次のとおりです。  

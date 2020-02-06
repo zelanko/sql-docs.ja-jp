@@ -11,10 +11,10 @@ ms.assetid: a612ed91-b89b-4173-a0b1-0bce381e1e28
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 62b781351b406aadc1b7516cd70dc0d11e7c5a16
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71291894"
 ---
 # <a name="sap-bw-destination"></a>SAP BW 転送先
@@ -83,7 +83,7 @@ ms.locfileid: "71291894"
   
 -   選択したオプションで、データの読み込みをテストします。  
   
- 変換先が呼び出す RFC 関数のログを有効にすることもできます (このログは、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージで有効にできる、省略可能なログとは異なります)。変換先が使用する SAP BW 接続マネージャーを構成する際に、RFC 関数呼び出しのログ記録を有効にします。 SAP BW 接続マネージャーを構成する方法の詳細については、「 [SAP BW Connection Manager](../../integration-services/connection-manager/sap-bw-connection-manager.md)」を参照してください。  
+ 変換先が呼び出す RFC 関数のログを有効にすることもできます (このログは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージで有効にできる、省略可能なログとは異なります)。変換先が使用する SAP BW 接続マネージャーを構成する際に、RFC 関数呼び出しのログ記録を有効にします。 SAP BW 接続マネージャーを構成する方法の詳細については、「 [SAP BW Connection Manager](../../integration-services/connection-manager/sap-bw-connection-manager.md)」を参照してください。  
   
  変換先を構成するために必要な値がわからない場合は、SAP 管理者に確認してください。  
   
@@ -92,17 +92,17 @@ ms.locfileid: "71291894"
 ### <a name="using-the-ssis-designer-to-configure-the-destination"></a>SSIS デザイナーを使用して変換先を構成する  
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できる SAP BW 変換先のプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [SAP BW 変換先エディター &#40;[接続マネージャー] ページ&#41;](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)  
+-   [SAP BW 変換先エディター ([接続マネージャー] ページ)](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)  
   
--   [SAP BW 変換先エディター &#40;[マッピング] ページ&#41;](../../integration-services/data-flow/sap-bw-destination-editor-mappings-page.md)  
+-   [SAP BW 変換先エディター ([マッピング] ページ)](../../integration-services/data-flow/sap-bw-destination-editor-mappings-page.md)  
   
--   [SAP BW 変換先エディター &#40;[エラー出力] ページ&#41;](../../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md)  
+-   [SAP BW 変換先エディター ([エラー出力] ページ)](../../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md)  
   
--   [SAP BW 変換先エディター &#40;[詳細設定] ページ&#41;](../../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)  
+-   [SAP BW 変換先エディター ([詳細設定] ページ)](../../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)  
   
  SAP BW 変換先を構成するときに、SAP Netweaver BW オブジェクトを参照または作成するためにさまざまなダイアログ ボックスを使用できます。 これらのダイアログ ボックスの詳細については、次のトピックのいずれかを参照してください。  
   
--   [[インフォパッケージの参照]](../../integration-services/data-flow/look-up-infopackage.md)  
+-   [インフォパッケージの参照](../../integration-services/data-flow/look-up-infopackage.md)  
   
 -   [新しいインフォオブジェクトの作成](../../integration-services/data-flow/create-new-infoobject.md)  
   

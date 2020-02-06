@@ -18,10 +18,10 @@ ms.assetid: eeb7d806-3cbb-405d-8199-8b82282c53df
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 2e13735c1782c4b2ced2751cbc59d53859516fcb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68117387"
 ---
 # <a name="stmpointfromwkb-geography-data-type"></a>STMPointFromWKB (geography データ型)
@@ -46,14 +46,14 @@ STMPointFromWKB ( 'WKB_multipoint' , SRID )
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
- CLR の戻り値の型:**SqlGeography**  
+ CLR の戻り値の型: **SqlGeography**  
   
- OGC の型:**MultiPoint**  
+ OGC の型: **MultiPoint**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  このメソッドでは、入力が整形式でない場合に、**FormatException** がスローされます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  `STMPointFromWKB()` を使用して `geography` インスタンスを作成する例を次に示します。  
   
 ```  

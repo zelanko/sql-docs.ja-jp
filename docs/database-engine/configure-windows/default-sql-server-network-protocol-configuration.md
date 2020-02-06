@@ -14,10 +14,10 @@ ms.assetid: 635ea361-a797-4971-bd05-e3415862bc5c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 218389eaf76336e33d866f16c6b79ef54661be0b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68011950"
 ---
 # <a name="default-sql-server-network-protocol-configuration"></a>SQL Server の既定のネットワーク プロトコル構成
@@ -31,14 +31,14 @@ ms.locfileid: "68011950"
 
 次の表は、インストール後の構成状態を示しています。
 
-|のエディション | 新規インストール/以前のインストールが存在する | 共有メモリ | TCP/IP | 名前付きパイプ|
+|Edition | 新規インストール/以前のインストールが存在する | 共有メモリ | TCP/IP | 名前付きパイプ|
 | -------- | -- | -- | -- | --  |  
-|Enterprise | 新規インストール | 有効 | 有効 | ネットワーク接続に対して無効です。|
-|Standard | 新規インストール | 有効 | 有効 | ネットワーク接続に対して無効です。|
-|Web | 新規インストール | 有効 | 有効 | ネットワーク接続に対して無効です。|
-|Developer | 新規インストール | 有効 | Disabled | ネットワーク接続に対して無効です。|
-|Evaluation | 新規インストール | 有効 | 有効 | ネットワーク接続に対して無効です。|
-|SQL Server Express | 新規インストール | 有効 | Disabled | ネットワーク接続に対して無効です。|
+|Enterprise | 新しいインストール | 有効 | 有効 | ネットワーク接続に対して無効です。|
+|Standard | 新しいインストール | 有効 | 有効 | ネットワーク接続に対して無効です。|
+|Web | 新しいインストール | 有効 | 有効 | ネットワーク接続に対して無効です。|
+|Developer | 新しいインストール | 有効 | 無効 | ネットワーク接続に対して無効です。|
+|評価 | 新しいインストール | 有効 | 有効 | ネットワーク接続に対して無効です。|
+|SQL Server Express | 新しいインストール | 有効 | 無効 | ネットワーク接続に対して無効です。|
 |全エディション | 以前のインストールがありますが、アップグレードされていません。 | 新規インストールと同じ | 新規インストールと同じ | 新規インストールと同じ|
 |全エディション | アップグレード | 有効 | 以前のインストールの設定が維持されます。 | 以前のインストールの設定が維持されます。|
 
@@ -57,7 +57,7 @@ ms.locfileid: "68011950"
 
 
 
-## <a name="includessnoversionmdincludesssnoversion-mdmd-browser-settings"></a>[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ブラウザーの設定
+## <a name="includessnoversion_mdincludesssnoversion-mdmd-browser-settings"></a>[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ブラウザーの設定
 
 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Browser サービスは、セットアップ時に自動的に起動するように構成できます。 既定では、以下の条件が満たされている場合、自動的に起動されます。
 

@@ -14,21 +14,21 @@ ms.assetid: e22c4e63-1792-473b-af11-14a7931ca9ed
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e16286e558d860a346ba8fff366009f064e65f91
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68011959"
 ---
 # <a name="database-mail-xps-server-configuration-option"></a>Database Mail XPs サーバー構成オプション
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-**Database Mail XPs** オプションを使用して、サーバーのデータベース メールを有効にします。 可能な値は次のとおりです。  
+**Database Mail XPs** オプションを使用して、サーバーのデータベース メールを有効にします。 指定できる値は、  
   
-- `0`:データベース メールを使用できません (既定)。  
+- `0`: データベース メールを使用できません (既定)。  
   
-- `1`:データベース メールを使用できます。  
+- `1`: データベース メールを使用できます。  
   
  この設定は、サーバーを停止して再起動しなくてもすぐに有効になります。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "68011959"
   
  **Database Mail XPs** オプションを `0` に設定すると、データベース メールは開始されません。 データベース メールが実行されている場合にこのオプションを `0` に設定すると、`DatabaseMailExeMinimumLifeTime` オプションで設定したアイドル状態の時間が続くまで、データベース メールは継続して実行され、メールが送信されます。  
   
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
  次の例では、データベース メール拡張ストアド プロシージャが有効になります。  
   
 ```  

@@ -11,10 +11,10 @@ ms.assetid: ec93e67b-04ce-4aae-ab96-3ad20e9793ad
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3d621eab941a4b4db5e679583fba56d6743d4d27
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296569"
 ---
 # <a name="catalogexecution_parameter_values-ssisdb-database"></a>catalog.execution_parameter_values (SSISDB データベース)
@@ -39,7 +39,7 @@ ms.locfileid: "71296569"
 |value_set|**bit**|値が `1` の場合、パラメーター値は割り当てられています。 値が `0` の場合、パラメーター値は割り当てられていません。|  
 |runtime_override|**bit**|値が `1` の場合、実行が開始される前に、パラメーター値が元の値から変更されました。 値が `0` の場合、パラメーター値は割り設定された元の値です。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  このビューは、カタログの実行の各パラメーターの行を表示します。 実行パラメーター値は、1 つのインスタンスの実行中にプロジェクト パラメーターまたはパッケージ パラメーターに割り当てられた値です。  
   
 ## <a name="permissions"></a>アクセス許可  

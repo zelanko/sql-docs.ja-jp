@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d91870e53e5976ba5d52b83f086a57fa552ad1ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67927623"
 ---
 # <a name="upper-transact-sql"></a>UPPER (Transact-SQL)
@@ -52,7 +52,7 @@ UPPER ( character_expression )
 ## <a name="return-types"></a>戻り値の型  
  **varchar** または **nvarchar**  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、`UPPER` 関数と `RTRIM` 関数を使用して `dbo.DimEmployee` テーブル内の人の姓を返しています。関数により、姓を大文字にして空白を切り捨て、名と連結しています。  
   
 ```  

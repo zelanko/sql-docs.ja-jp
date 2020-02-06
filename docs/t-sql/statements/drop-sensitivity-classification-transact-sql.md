@@ -26,10 +26,10 @@ helpviewer_keywords:
 - data classification
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 871822e57e9109455614e1391a28d87a6d9e6b90
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68223597"
 ---
 # <a name="drop-sensitivity-classification-transact-sql"></a>DROP SENSITIVITY CLASSIFICATION (Transact-SQL)
@@ -58,7 +58,7 @@ DROP SENSITIVITY CLASSIFICATION FROM
     - *table_name* - 分類される列が属するテーブルの名前です。
     - *column_name* - 分類を削除する列の名前です。
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 
 - 1 つの "DROP SENSITIVITY CLASSIFICATION" ステートメントを使用して複数のオブジェクトの分類を削除できます。
 
@@ -67,7 +67,7 @@ DROP SENSITIVITY CLASSIFICATION FROM
 ALTER ANY SENSITIVITY CLASSIFICATION 権限が必要です。 ALTER ANY SENSITIVITY CLASSIFICATION は、データベース権限 ALTER またはサーバー権限 CONTROL SERVER によって示されます。
 
 
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 
 
 ### <a name="a-dropping-classification-from-a-single-column"></a>A. 1 つの列からの分類の削除

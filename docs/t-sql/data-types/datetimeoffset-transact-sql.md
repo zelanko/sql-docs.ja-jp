@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 699d7779c3409a69d4389a96b93feab1cae3f9e0
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70148838"
 ---
 # <a name="datetimeoffset-transact-sql"></a>datetimeoffset (Transact-SQL)
@@ -37,12 +37,12 @@ ms.locfileid: "70148838"
   
 ## <a name="datetimeoffset-description"></a>datetimeoffset の説明
   
-|プロパティ|[値]|  
+|プロパティ|値|  
 |---|---|
 |構文|**datetimeoffset** [ (*fractional seconds precision*) ]|  
-|使用方法|DECLARE \@MyDatetimeoffset **datetimeoffset(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **datetimeoffset(7)** )|  
+|使用法|DECLARE \@MyDatetimeoffset **datetimeoffset(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **datetimeoffset(7)** )|  
 |既定の文字列リテラル形式 (下位クライアント用)|YYYY-MM-DD hh:mm:ss[.nnnnnnn] [{+&#124;-}hh:mm]<br /><br /> 詳細については、後述の「下位クライアントの下位互換性」セクションを参照してください。|  
-|日付範囲|0001-01-01 ～ 31.12.99<br /><br /> 1 月 1 日 1 CE ～12 月 31 日 9999 CE|  
+|期間|0001-01-01 ～ 31.12.99<br /><br /> 1 月 1 日 1 CE ～12 月 31 日 9999 CE|  
 |時間の範囲|00:00:00 から 23:59:59.9999999|  
 |タイム ゾーンのオフセット範囲|-14:00 ～ +14:00|  
 |要素範囲|YYYY は、0001 ～ 9999 の年を表す 4 桁の数字です。<br /><br /> MM は、指定された年の 01 ～ 12 の月を表す 2 桁の数字です。<br /><br /> DD は、指定された月の (月に応じて) 01 ～ 31 の日を表す 2 桁の数字です。<br /><br /> hh は、00 ～ 23 の時を表す 2 桁の数字です。<br /><br /> mm は、分を表す 00 から 59 の 2 桁の数字です。<br /><br /> ss は、秒を表す 00 から 59 の 2 桁の数字です。<br /><br /> n* は、秒の有効桁数を表す 0 ～ 7 桁の数字です (0 ～ 9999999)。<br /><br /> hh は、-14 から +14 までの 2 桁の数字です。 <br /><br /> mm は、00 ～ 59 の 2 桁の数字です。|  
@@ -51,7 +51,7 @@ ms.locfileid: "70148838"
 |ストレージ サイズ|既定では 10 バイト固定 (秒部分の既定の有効桁数は 100 ns) です。|  
 |精度|100 ナノ秒|  
 |既定値|1900-01-01 00:00:00 00:00|  
-|カレンダー|グレゴリオ暦|  
+|Calendar|グレゴリオ暦|  
 |ユーザー定義の 1 秒未満の秒の有効桁数|はい|  
 |タイム ゾーン オフセットへの対応と保持|はい|  
 |夏時間への対応|いいえ|  
@@ -108,7 +108,7 @@ ms.locfileid: "70148838"
 |**datetimeoffset**|YYYY-MM-DD hh:mm:ss[.nnnnnnn] [+&#124;-]hh:mm|SQL_WVARCHAR または SQL_VARCHAR|DBTYPE_WSTR または DBTYPE_STR|Java.sql.String|String または SqString|  
   
 ## <a name="converting-date-and-time-data"></a>日付と時刻のデータ型の変換
-data データ型と time データ型に変換する場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で日付や時刻と認識できない値はすべて拒否されます。 CAST 関数および CONVERT 関数で日付と時刻のデータを使用する方法については、「[CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)」をご覧ください。
+日付と時刻のデータ型に変換する場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で日付または時刻と認識できない値はすべて拒否されます。 CAST 関数および CONVERT 関数で日付と時刻のデータを使用する方法については、「[CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)」をご覧ください。
   
 ### <a name="converting-datetimeoffset-data-type-to-other-date-and-time-types"></a>datetimeoffset データ型の他の日付/時刻データ型への変換
 ここでは、**datetimeoffset** データ型が他の日付/時刻データ型に変換される場合の処理について説明します。
@@ -130,7 +130,7 @@ SELECT @datetimeoffset AS '@datetimeoffset ', @date AS 'date';
   
 ```  
   
-**time(n)** への変換の場合は、時、分、秒、および秒の小数部がコピーされます。 タイム ゾーンの値は切り捨てられます。 **datetimeoffset(n)** の値の有効桁数が **time(n)** の値の有効桁数を超える場合、値が切り上げられます。 次のコードでは、`datetimeoffset(4)` の値を `time(3)` の値に変換した結果を示します。
+**time(n)** への変換の場合は、時、分、秒、および秒の小数部がコピーされます。 タイム ゾーンの値は切り捨てられます。 **datetimeoffset(n)** の値の有効桁数が **time(n)** の値の有効桁数を超える場合、値が切り上げられます。 次のコードは、`datetimeoffset(4)` 値を `time(3)` 値に変換した結果を示しています。
   
 ```sql
 DECLARE @datetimeoffset datetimeoffset(4) = '12-10-25 12:32:10.1237 +01:0';  
@@ -148,7 +148,7 @@ SELECT @datetimeoffset AS '@datetimeoffset ', @time AS 'time';
   
 ```  
   
-**datetime** に変換するときは、日付と時刻の値がコピーされ、タイム ゾーンが切り捨てられます。 **datetimeoffset(n)** 値の小数部の有効桁数が 3 桁を超える場合、値は切り捨てられます。 次のコードでは、`datetimeoffset(4)` の値を `datetime` の値に変換した結果を示します。
+**datetime** に変換するときは、日付と時刻の値がコピーされ、タイム ゾーンが切り捨てられます。 **datetimeoffset(n)** 値の小数部の有効桁数が 3 桁を超える場合、値は切り捨てられます。 次のコードは、`datetimeoffset(4)` 値を `datetime` 値に変換した結果を示しています。
   
 ```sql
 DECLARE @datetimeoffset datetimeoffset(4) = '12-10-25 12:32:10.1237 +01:0';  
@@ -208,11 +208,11 @@ SELECT @datetimeoffset AS '@datetimeoffset', @datetime2 AS '@datetime2';
 |TIME のみ|DATE 部分は既定で 1900-1-1 に設定されます。 TIMEZONE は既定値の +00:00 に設定される。|  
 |タイム ゾーンのみ|既定値が設定される|  
 |DATE + TIME|TIMEZONE は既定値の +00:00 に設定される。|  
-|DATE + TIMEZONE|使用不可|  
+|DATE + TIMEZONE|禁止|  
 |TIME + TIMEZONE|DATE 部分は既定で 1900-1-1 に設定されます。|  
 |DATE + TIME + TIMEZONE|単純変換|  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 次の例では、文字列をそれぞれの **date** および **time** データ型にキャストした結果を比較します。
   
 ```sql
@@ -232,12 +232,12 @@ SELECT
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-|データ型|[出力]|  
+|データ型|Output|  
 |---|---|
-|**[時刻]**|12:35:29. 1234567|  
+|**Time**|12:35:29. 1234567|  
 |**Date**|2007-05-08|  
 |**Smalldatetime**|2007-05-08 12:35:00|  
-|**DateTime**|2007-05-08 12:35:29.123|  
+|**Datetime**|2007-05-08 12:35:29.123|  
 |**datetime2**|2007-05-08 12:35:29. 1234567|  
 |**Datetimeoffset**|2007-05-08 12:35:29.1234567 +12:15|  
   

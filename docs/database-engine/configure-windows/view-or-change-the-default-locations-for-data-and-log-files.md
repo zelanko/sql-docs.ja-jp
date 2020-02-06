@@ -14,10 +14,10 @@ ms.assetid: 70a57fda-fcfe-490f-9cf6-5df620e32b2a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 933d15e789e0d069822f657ff09cff0e2b4aaf8c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67945753"
 ---
 # <a name="view-or-change-the-default-locations-for-data-and-log-files"></a>データ ファイルとログ ファイルの既定の場所の表示または変更
@@ -34,7 +34,7 @@ ms.locfileid: "67945753"
   
 3.  **[データベースの既定の場所]** パネルに、新しいデータ ファイルと新しいログ ファイルの現在の既定の場所が表示されます。 既定の場所を変更するには、 **[データ]** フィールドまたは **[ログ]** フィールドに新しい既定のパス名を入力するか、参照ボタンをクリックしてパス名を選択します。  
   
->**注:** 既定の場所を変更したら、SQL Server サービスを停止して開始することで変更を完了する必要があります。  
+>**注:** 既定の場所を変更したら、SQLServer サービスをいったん停止してから再起動して変更を完了する必要があります。  
   
 ## <a name="see-also"></a>参照  
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   

@@ -28,10 +28,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b5a8e03235614ce9ae5b2461154c97a2bb5f67f1
-ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73064624"
 ---
 # <a name="create-role-transact-sql"></a>CREATE ROLE (Transact-SQL)
@@ -54,7 +54,7 @@ CREATE ROLE role_name [ AUTHORIZATION owner_name ]
  AUTHORIZATION *owner_name*  
  新しいロールを所有するデータベース ユーザーまたはロールを指定します。 ユーザーを指定しない場合、ロールは CREATE ROLE を実行するユーザーが所有します。 ロールの所有者、または所有するロールのメンバーは、ロールのメンバーを追加または削除できます。
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  ロールはデータベース レベルのセキュリティ保護可能なリソースです。 ロールを作成した後は、GRANT、DENY、REVOKE を使って、ロールのデータベース レベルの権限を構成します。 データベース ロールにメンバーを追加するには、[ALTER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-role-transact-sql.md) を使います。 詳しくは、「[データベース レベルのロール](../../relational-databases/security/authentication-access/database-level-roles.md)」をご覧ください。  
   
  データベース ロールは、sys.database_role_members および sys.database_principals カタログ ビューで確認できます。  
@@ -73,11 +73,11 @@ CREATE ROLE role_name [ AUTHORIZATION owner_name ]
   
 -   ロールの所有権をアプリケーション ロールに割り当てるには、アプリケーション ロールに対する ALTER 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 以下のすべての例では、AdventureWorks データベースを使います。   
 
 ### <a name="a-creating-a-database-role-that-is-owned-by-a-database-user"></a>A. データベース ユーザーが所有するデータベース ロールを作成する  
- 次の例では、ユーザー `BenMiller` が所有するデータベース ロール `buyers` を作成します。  
+ 次の例では、ユーザー `buyers` が所有するデータベース ロール `BenMiller` を作成します。  
   
 ```sql  
 CREATE ROLE buyers AUTHORIZATION BenMiller;  
@@ -85,7 +85,7 @@ GO
 ```  
   
 ### <a name="b-creating-a-database-role-that-is-owned-by-a-fixed-database-role"></a>B. 固定データベース ロールが所有するデータベース ロールを作成する  
- 次の例では、固定データベース ロール `db_securityadmin` が所有するデータベース ロール `auditors` を作成します。  
+ 次の例では、固定データベース ロール `auditors` が所有するデータベース ロール `db_securityadmin` を作成します。  
   
 ```sql  
 CREATE ROLE auditors AUTHORIZATION db_securityadmin;  

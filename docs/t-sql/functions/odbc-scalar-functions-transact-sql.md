@@ -52,19 +52,19 @@ ms.assetid: a0df1ac2-6699-4ac0-8f79-f362f23496f1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0a58f211c1a838cb0089cbc2f3e5e156936d1c7e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5fd8173f0c29855fc4553dedcd9ac47ddc909f57
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67914740"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76909832"
 ---
 # <a name="odbc-scalar-functions-transact-sql"></a>ODBC スカラー関数 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントでは、[ODBC スカラー関数](https://go.microsoft.com/fwlink/?LinkID=88579)を使用できます。 これらのステートメントは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって解釈されます。 具体的には、ストアド プロシージャやユーザー定義関数の中で、 文字列、数値、時刻、日付、間隔を扱う関数のほか、システム関数を使用することができます。  
+  [ ステートメントでは、](https://go.microsoft.com/fwlink/?LinkID=88579)ODBC スカラー関数[!INCLUDE[tsql](../../includes/tsql-md.md)]を使用できます。 これらのステートメントは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって解釈されます。 具体的には、ストアド プロシージャやユーザー定義関数の中で、 文字列、数値、時刻、日付、間隔を扱う関数のほか、システム関数を使用することができます。  
   
-## <a name="usage"></a>使用方法  
+## <a name="usage"></a>使用法  
  `SELECT {fn <function_name> [ (<argument>,....n) ] }`  
   
 ## <a name="functions"></a>関数  
@@ -72,7 +72,7 @@ ms.locfileid: "67914740"
   
 ### <a name="string-functions"></a>文字列関数  
   
-|機能|[説明]|  
+|Function|[説明]|  
 |--------------|-----------------|  
 |BIT_LENGTH(string_exp) (ODBC 3.0)|文字列式の長さ (ビット単位) を返します。<br /><br /> string_exp を文字列に変換せず、指定されたデータ型の内部サイズを返します。|  
 |CONCAT(string_exp1,string_exp2) (ODBC 1.0)|string_exp1 に対して string_exp2 を連結した結果の文字列を返します。 結果の文字列は DBMS に依存します。 たとえば、string_exp1 に指定された列に NULL 値が格納されていた場合、DB2 では NULL が返されますが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では非 NULL 文字列が返されます。|  
@@ -80,13 +80,13 @@ ms.locfileid: "67914740"
   
 ### <a name="numeric-function"></a>数値関数  
   
-|機能|[説明]|  
+|Function|[説明]|  
 |--------------|-----------------|  
 |TRUNCATE( numeric_exp, integer_exp) (ODBC 2.0)|numeric_exp を、小数点の右側の integer_exp 桁までに切り詰めて返します。 integer_exp が負数の場合、numeric_exp は、小数点の左側 &#124;integer_exp&#124; 桁に切り詰められます。|  
   
 ### <a name="time-date-and-interval-functions"></a>時刻、日付、および間隔を扱う関数  
   
-|機能|[説明]|  
+|Function|[説明]|  
 |--------------|-----------------|  
 |CURRENT_DATE( ) (ODBC 3.0)|現在の日付を返します。|  
 |CURDATE( ) (ODBC 3.0)|現在の日付を返します。|  
@@ -102,7 +102,7 @@ ms.locfileid: "67914740"
 |QUARTER( date_exp ) (ODBC 1.0)|date_exp の四半期を 1 から 4 の整数値として返します。1 は、1 月 1 日から 3 月 31 日を表します。|  
 |WEEK( date_exp ) (ODBC 1.0)|date_exp の週部分に基づき、年頭から数えた週を 1 から 53 の整数値として返します。|  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-using-an-odbc-function-in-a-stored-procedure"></a>A. ODBC 関数をストアド プロシージャで使用する  
  次の例では、ストアド プロシージャで、ODBC 関数を使用します。  
@@ -177,7 +177,7 @@ SELECT {fn WEEK( @date_exp )};
 -- Returns 16  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-using-an-odbc-function-in-a-stored-procedure"></a>D. ODBC 関数をストアド プロシージャで使用する  
  次の例では、ストアド プロシージャで、ODBC 関数を使用します。  
@@ -223,7 +223,7 @@ SELECT {fn BIT_LENGTH( @string_exp )};
 SELECT {fn CONCAT( 'CONCAT ','returns a character string')};  
 -- Returns CONCAT returns a character string  
 SELECT {fn CURRENT_DATE( )};  
--- Returns todays date  
+-- Returns today's date  
 SELECT {fn CURRENT_TIME(6)};  
 -- Returns the time  
   

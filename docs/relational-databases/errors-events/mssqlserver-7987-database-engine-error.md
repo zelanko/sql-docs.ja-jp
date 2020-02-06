@@ -12,13 +12,13 @@ ms.assetid: 314aebf1-6cdf-488d-a274-ce967fadb57b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d626c0dcf44bc0907516d78aefd54b3ec0bb608a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68007068"
 ---
-# <a name="mssqlserver7987"></a>MSSQLSERVER_7987
+# <a name="mssqlserver_7987"></a>MSSQLSERVER_7987
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>詳細  
@@ -30,7 +30,7 @@ ms.locfileid: "68007068"
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|DBCC2_PRE_CHECKS_CHAIN_LINKAGE_MISMATCH|  
-|メッセージ テキスト|システム テーブルの事前チェック:オブジェクト O_ID のチェーン リンケージが一致しません。 P_ID1->next = P_ID2、P_ID2->prev = P_ID3。 修復できないエラーにより、Check ステートメントが終了しました。|  
+|メッセージ テキスト|システム テーブルの事前チェック : オブジェクト ID O_ID のチェーン リンケージが一致しません。 P_ID1->next = P_ID2、P_ID2->prev = P_ID3。 修復できないエラーにより、Check ステートメントが終了しました。|  
   
 ## <a name="explanation"></a>説明  
 DBCC CHECKDB の最初のフェーズで行われるのは、重要なシステム テーブルのデータ ページに対する初期チェックです。 この時点でエラーが検出されても修正できないので、DBCC CHECKDB は直ちに終了します。  
@@ -50,5 +50,5 @@ DBCC CHECKDB の最初のフェーズで行われるのは、重要なシステ�
 問題がハードウェアに関するものではなく、また既知のクリーン バックアップがある場合は、そのバックアップを使用してデータベースを復元します。  
   
 ### <a name="run-dbcc-checkdb"></a>DBCC CHECKDB の実行  
-該当なし。 このエラーを自動的に修正することはできません。 バックアップからデータベースを復元できない場合は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] カスタマー サポート サービス (CSS) にご連絡ください。  
+適用不可。 このエラーを自動的に修正することはできません。 バックアップからデータベースを復元できない場合は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] カスタマー サポート サービス (CSS) にご連絡ください。  
   

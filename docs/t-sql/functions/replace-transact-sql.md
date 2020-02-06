@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 59cbaf203b8e877f9476e807008345b9af05b0fd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67944536"
 ---
 # <a name="replace-transact-sql"></a>REPLACE (Transact-SQL)
@@ -59,13 +59,13 @@ REPLACE ( string_expression , string_pattern , string_replacement )
   
  場合 *string_expression* の種類はありません **varchar (max)** または **nvarchar (max)、** 置換 は 8,000 バイトで戻り値を切り捨てます。 8,000 バイトを超える値を返すには、大きな値を格納できるデータ型に *string_expression* を明示的にキャストする必要があります。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  REPLACE は、入力の照合順序に基づいて比較を行います。 特定の照合順序で比較を行うには、[COLLATE](~/t-sql/statements/collations.md) を使用して、入力に明示的な照合順序を適用します。  
   
  0x0000 (**char(0)** ) の Windows 照合順序で未定義の文字は、REPLACE に含めることができません。  
   
-## <a name="examples"></a>使用例  
- 次の例では、`abcdefghi` にある文字列 `cde` を `xxx` に置換します。  
+## <a name="examples"></a>例  
+ 次の例では、`cde` にある文字列 `abcdefghi` を `xxx` に置換します。  
   
 ```sql  
 SELECT REPLACE('abcdefghicde','cde','xxx');  

@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 90165738dfcea8818353d602f72390bb08eea792
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847353"
 ---
 # <a name="iclientvirtualdeviceset2createex-vdi"></a>IClientVirtualDeviceSet2::CreateEx (VDI)
@@ -48,7 +48,7 @@ HRESULT IClientVirtualDeviceSet2::CreateEx (
 | VD_E_NOTSUPPORTED | 構成の 1 つ以上のフィールドが無効であるか、サポートされていません。 |
 | VD_E_PROTOCOL | 仮想デバイス セットが作成されました。 |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 CreateEx メソッドは、バックアップまたは復元操作ごとに 1 回だけ呼び出す必要があります。 Close メソッドを呼び出した後、クライアントでは、インターフェイスを再利用して別の仮想デバイス セットを作成できます。
 
@@ -58,6 +58,6 @@ CreateEx (および Create) の呼び出しによって、クライアント プ
 
 CreateEx メソッドは、元の IClientVirtualDeviceSet で定義されている Create メソッドよりも優先されます。 元の Create メソッドは非推奨となっており、今後の開発では使用しないでください。 元の Create メソッドでは、_VIRTUAL_SERVER_NAME_ 環境変数を使用して、インスタンス名サポートの形式が実装されます。 環境内でその変数が設定されている場合、Create メソッドによって内部的に CreateEx が呼び出され、インスタンス名として _VIRTUAL_SERVER_NAME_ の値が渡されます。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 詳細については、[SQL Server 仮想デバイス インターフェイス リファレンスの概要](reference-virtual-device-interface.md)に関するページを参照してください。

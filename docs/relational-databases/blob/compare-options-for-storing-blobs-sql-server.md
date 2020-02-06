@@ -11,10 +11,10 @@ ms.assetid: 6038697b-36a9-49e8-a02a-2ad9e2e60e5a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 68efb09a2b6d2a3ace441107ed9160fede154c8a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68085443"
 ---
 # <a name="compare-options-for-storing-blobs-sql-server"></a>Blob (SQL Server) を保存するオプションの比較
@@ -54,10 +54,10 @@ FileTable 機能は、既存の FILESTREAM 機能をベースとして構築さ�
 |:------|:--------------------------------|:------------------|:-----------------|
 |**管理タスクのシングル ストーリー**|いいえ|はい|**はい**|
 |**サービスの単一セット**: 検索、レポート、クエリなど|いいえ|はい|**はい**|
-|**統合セキュリティ モデル**|いいえ|はい|**可**|
+|**統合セキュリティ モデル**|いいえ|はい|**はい**|
 |**FILESTREAM データのインプレース更新**|はい|いいえ|**はい**|
 |**データベースで管理されるファイルおよびディレクトリの階層**|いいえ|いいえ|**はい**|
-|**Windows アプリケーションの互換性**|はい|いいえ|**可**|
+|**Windows アプリケーションの互換性**|はい|いいえ|**はい**|
 |**ファイルの属性へのリレーショナル アクセス**|いいえ|いいえ|**はい**|
 
 ## <a name="CompareRBS"></a> FILESTREAM とリモート BLOB ストア (RBS) の比較

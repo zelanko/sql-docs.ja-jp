@@ -20,10 +20,10 @@ ms.assetid: 1f3730b4-1495-4d3a-af43-e57952812df9
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: e22d0c36c3a5ce614357566079ec81dc54b7c70e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68022199"
 ---
 # <a name="sessionproperty-transact-sql"></a>SESSIONPROPERTY (Transact-SQL)
@@ -58,10 +58,10 @@ SESSIONPROPERTY (option)
 ## <a name="return-types"></a>戻り値の型  
  **sql_variant**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  SET オプションは、サーバー レベル、データベース レベル、およびユーザー指定のオプションを組み合わせることによって表します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、`CONCAT_NULL_YIELDS_NULL` オプションの設定を返します。  
   
 ```  

@@ -18,10 +18,10 @@ ms.assetid: 7c18f5be-5a29-422e-8ca7-d8a5f38e03f5
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 8a01a4ee58b4bca80cba9bfc9a1a094f575c5154
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67950128"
 ---
 # <a name="stintersects-geometry-data-type"></a>STIntersects (geometry データ型)
@@ -38,17 +38,17 @@ ms.locfileid: "67950128"
   
 ## <a name="arguments"></a>引数  
  *other_geometry*  
- `STIntersects()` を呼び出したインスタンスと比較される、別の **geometry** インスタンスです。  
+ **を呼び出したインスタンスと比較される、別の**geometry`STIntersects()` インスタンスです。  
   
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **bit**  
   
- CLR の戻り値の型:**SqlBoolean**  
+ CLR の戻り値の型: **SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **geometry** インスタンスの SRID (spatial reference ID) が一致しない場合、このメソッドは常に null を返します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  `STIntersects()` を使用して 2 つの `geometry` インスタンスが相互に交差しているかどうかを調べる例を次に示します。  
   
 ```  

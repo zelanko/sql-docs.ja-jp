@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e42d7dbfe00ff957511d9853e39febd29b7aab66
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68137325"
 ---
 # <a name="contained-databases"></a>包含データベース
@@ -74,7 +74,7 @@ ms.locfileid: "68137325"
  **master** データベースへのログインに基づくユーザーには、包含データベースに対するアクセス許可を付与できますが、それによって [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスとの依存関係が生成されます。 そのため、ログインに基づくユーザーを作成するには、部分的包含が必要です。
   
 > [!IMPORTANT]  
->  部分的包含データベースを有効にすると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスへのアクセス制御がデータベースの所有者にデリゲートされます。 詳しくは、「 [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md)」をご覧ください。  
+>  部分的包含データベースを有効にすると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスへのアクセス制御がデータベースの所有者にデリゲートされます。 詳細については、「 [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md)」を参照してください。  
   
  データベース境界  
  部分的包含データベースはデータベースの機能をインスタンスの機能から分離するので、これらの 2 つの要素間には " *データベース境界*" と呼ばれる、明確に定義された区分線があります。  
@@ -143,16 +143,16 @@ ms.locfileid: "68137325"
 ##  <a name="Identifying"></a> データベースの包含状態の識別  
  データベースの包含状態を識別するのに役立つ 2 つのツールがあります。 [sys.dm_db_uncontained_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md) は、データベース内には含まれていない可能性があるすべてのエンティティを示すビューです。 実行時に、実際に含まれていないエンティティが識別されると、database_uncontained_usage イベントが発生します。  
   
-### <a name="sysdmdbuncontainedentities"></a>sys.dm_db_uncontained_entities  
+### <a name="sysdm_db_uncontained_entities"></a>sys.dm_db_uncontained_entities  
  このビューには、データベース内には含まれていない可能性があるエンティティ (データベース境界を越えるエンティティなど) が表示されます。 こうしたエンティティには、データベース モデル外部のオブジェクトを使用するユーザー エンティティが含まれます。 ただし、一部のエンティティ (たとえば、動的 SQL を使用するエンティティ) の包含は実行時まで識別できないため、このビューでは、実際に含まれていないエンティティ以外のエンティティが表示される場合があります。 詳細については、「[sys.dm_db_uncontained_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md)」を参照してください。  
   
-### <a name="databaseuncontainedusage-event"></a>database_uncontained_usage イベント  
+### <a name="database_uncontained_usage-event"></a>database_uncontained_usage イベント  
  この XEvent は、実行時に、含まれていないエンティティが識別されると発生します。 これには、クライアント コードで生成されたエンティティが含まれます。 この Xevent は、実際に含まれていないエンティティに対してのみ発生します。 ただし、このイベントが発生するのは実行時のみです。 したがって、まだ実行されていない場合、含まれていないユーザー エンティティはこの XEvent で識別されません。  
   
 ## <a name="see-also"></a>参照  
  [変更された機能 &#40;包含データベース&#41;](../../relational-databases/databases/modified-features-contained-database.md)   
- [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md)   
- [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md)   
+ [包含データベースの照合順序](../../relational-databases/databases/contained-database-collations.md)   
+ [包含データベースでのセキュリティのベスト プラクティス](../../relational-databases/databases/security-best-practices-with-contained-databases.md)   
  [Migrate to a Partially Contained Database](../../relational-databases/databases/migrate-to-a-partially-contained-database.md)   
  [包含データベース ユーザー - データベースの可搬性を確保する](../../relational-databases/security/contained-database-users-making-your-database-portable.md)  
   

@@ -25,10 +25,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0c9a0803b3f90a244fdd4ca05298e5c34eb8c984
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68139289"
 ---
 # <a name="sign-transact-sql"></a>SIGN (Transact-SQL)
@@ -47,7 +47,7 @@ SIGN ( numeric_expression )
 
 ## <a name="arguments"></a>引数  
  *numeric_expression*  
- **bit** データ型を除く、真数または概数データ型カテゴリの[式](../../t-sql/language-elements/expressions-transact-sql.md)です。  
+ [bit](../../t-sql/language-elements/expressions-transact-sql.md) データ型を除く、真数または概数データ型カテゴリの**式**です。  
   
 ## <a name="return-types"></a>戻り値の型  
   
@@ -59,7 +59,7 @@ SIGN ( numeric_expression )
 |**numeric/decimal**|**numeric/decimal**|  
 |**その他の型**|**float**|  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、-1 から 1 の 3 つの数値の SIGN 値を返します。  
   
 ```  
@@ -97,7 +97,7 @@ GO
 (1 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  次の例では、3 つの数値の SIGN 値を返します。  
   
 ```  

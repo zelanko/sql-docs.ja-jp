@@ -22,13 +22,13 @@ ms.assetid: 6e18a0eb-bb36-4348-90d9-8b1ecf095064
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 4b354807fedda0f273d5f3822591f7f84912b028
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68127407"
 ---
-# <a name="rowcountbig-transact-sql"></a>ROWCOUNT_BIG (Transact-SQL)
+# <a name="rowcount_big-transact-sql"></a>ROWCOUNT_BIG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   最後に実行されたステートメントの影響を受けた行数を返します。 この関数は、[@@ROWCOUNT](../../t-sql/functions/rowcount-transact-sql.md) と同じように動作します。ただし、ROWCOUNT_BIG では、戻り値の型は **bigint** になります.  
@@ -45,7 +45,7 @@ ROWCOUNT_BIG ( )
 ## <a name="return-types"></a>戻り値の型  
  **bigint**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この関数は、SELECT ステートメントの後に置かれると、SELECT ステートメントによって返される行数を返します。  
   
  この関数は、INSERT ステートメント、UPDATE ステートメント、および DELETE ステートメントの後に置かれると、データ変更ステートメントによって影響を受ける行数を返します。  

@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 933d8ae26522800326c88a8ba28dbd99c5688fc2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67990914"
 ---
 # <a name="installing-updates-from-the-command-prompt"></a>コマンド プロンプトからの更新プログラムのインストール
@@ -26,12 +26,12 @@ ms.locfileid: "67990914"
 ## <a name="sample-syntax-for-installation"></a>インストールのサンプル構文 
 更新プログラム パッケージの名前はさまざまであり、言語、エディション、およびプロセッサ コンポーネントが含まれる場合があります。 コマンド プロンプトで更新プログラムを適用する際に、<package_name> の部分は実際の更新プログラム パッケージの名前に置き換えてください。 
  
-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の 1 つのインスタンスと [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] や管理ツールなどのすべての共有コンポーネントを更新します。InstanceName パラメーターまたは InstanceID パラメーターを使用してインスタンスを指定できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の準備済みインスタンスを更新するには、InstanceID パラメーターを指定する必要があります。
+- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の 1 つのインスタンスと、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] や管理ツールなどのすべての共有コンポーネントを更新します。インスタンスを指定するには、InstanceName パラメーターまたは InstanceID パラメーターを使用します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の準備済みインスタンスを更新するには、InstanceID パラメーターを指定する必要があります。
 
     ```
     <package_name>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch /InstanceName=MyInstance
     ```
-    内の複数の 
+    or 
     ```
     <package_name>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch /InstanceID=\<Instance ID>. 
     ```
@@ -42,7 +42,7 @@ ms.locfileid: "67990914"
     setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=PrepareImage /UpdateEnabled=True /UpdateSource=\<path where the update is downloaded> /INSTANCEID=\<Instance ID> /FEATURES=SQLEngine. 
     ```
 
-- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] や管理ツールなどの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 共有コンポーネントのみを更新します。 
+- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] や管理ツールなどの [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 共有コンポーネントのみを更新します。 
 
     ```
     <package_name>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch 
@@ -60,7 +60,7 @@ ms.locfileid: "67990914"
     <package_name>.exe /qs /Action=RemovePatch /InstanceName=MyInstance. 
     ```
 
-- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] や管理ツールなどの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 共有コンポーネントのみから更新プログラムを削除します。 
+- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] や管理ツールなどの [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 共有コンポーネントのみから更新プログラムを削除します。 
 
     ```
     <package_name>.exe /qs /Action=RemovePatch 
@@ -74,10 +74,10 @@ ms.locfileid: "67990914"
 > [!IMPORTANT] 
 > セキュリティ資格情報は、できるだけ実行時に入力してください。 資格情報をスクリプト ファイルに含める必要がある場合は、不正なアクセスが行われないようにファイルをセキュリティで保護してください。 
  
-|スイッチ|[説明]| 
+|Switch|[説明]| 
 |------------|-----------------| 
 |**/?**|自動インストールのコマンド プロンプト ヘルプを表示します。| 
-|**/action=Patch または /action=RemovePatch**|インストール動作を指定します: Patch または RemovePatch。| 
+|**/action=Patch または /action=RemovePatch**|インストール動作 (Patch または RemovePatch) を指定します。| 
 |**/allinstances**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新プログラムを、すべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスとすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネント (共有、インスタンス非対応) に適用します。| 
 |**/instancename=InstanceName***|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新プログラムを、InstanceName という名前の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスとすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネント (共有、インスタンス非対応) に適用します。| 
 |**/InstanceID=Inst1**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新プログラムを、Inst1 という [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスとすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネント (共有、インスタンス非対応) に適用します。| 

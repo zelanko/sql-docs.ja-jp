@@ -18,10 +18,10 @@ ms.assetid: 4e43f954-0982-470b-a239-08a13c61563a
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 54959f89172d0d382c20c60d46dac11df5837137
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67984411"
 ---
 # <a name="deny-system-object-permissions-transact-sql"></a>DENY (システム オブジェクトの権限の拒否) (Transact-SQL)
@@ -48,7 +48,7 @@ DENY { SELECT | EXECUTE } ON [ sys.]system_object TO principal
  *principal*  
  権限を取り消すプリンシパルを指定します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  このステートメントを使用すると、特定のストアド プロシージャ、拡張ストアド プロシージャ、テーブル値関数、スカラー関数、ビュー、カタログ ビュー、互換ビュー、INFORMATION_SCHEMA ビュー、動的管理ビュー、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってインストールされたシステム テーブルに対する権限を拒否できます。 これらのシステム オブジェクトはそれぞれ、リソース データベース (**mssqlsystemresource**) に一意なレコードとして存在しています。 リソース データベースは読み取り専用です。 オブジェクトへのリンクは、各データベースの **sys** スキーマでは 1 レコードとして表されます。  
   
  既定の名前解決では、修飾子のないプロシージャ名はリソース データベースとして解釈されます。 したがって、**sys** 修飾子は、カタログ ビューおよび動的カタログ ビューを指定する場合にのみ必要です。  
@@ -75,8 +75,8 @@ GO
 ## <a name="permissions"></a>アクセス許可  
  CONTROL SERVER 権限が必要です。  
   
-## <a name="examples"></a>使用例  
- 次の例では、`public` に対し、`xp_cmdshell` の `EXECUTE` 権限を拒否します。  
+## <a name="examples"></a>例  
+ 次の例では、`EXECUTE` に対し、`xp_cmdshell` の `public` 権限を拒否します。  
   
 ```  
 DENY EXECUTE ON sys.xp_cmdshell TO public;  

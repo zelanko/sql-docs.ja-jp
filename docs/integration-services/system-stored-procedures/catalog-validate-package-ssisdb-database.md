@@ -14,10 +14,10 @@ ms.assetid: 0dc03df1-b793-408f-af4c-c11188729abf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0a7ecbe24971e4138dfc55c847d07efa5e901f1f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295262"
 ---
 # <a name="catalogvalidate_package-ssisdb-database"></a>catalog.validate_package (SSISDB データベース)
@@ -55,10 +55,10 @@ catalog.validate_package [ @folder_name = ] folder_name
  検証の一意識別子 (ID) を返します。 *validation_id* は **bigint** です。  
   
  [ @use32bitruntime = ] *use32bitruntime*  
- 64 ビット オペレーティング システムで 32 ビットのランタイムを使用してパッケージを実行すべきかどうかを示します。 値 `1` を使用して 64 ビットのオペレーティング システムで実行されているときに、32 ビット ランタイムを使用してパッケージを実行します。 値 `0` を使用すると、64 ビット オペレーティング システムで実行しているときに、64 ビット ランタイムでパッケージが実行されます。 このパラメーターはオプションです。 *use32bitruntime* は **bit** です。  
+ 64 ビット オペレーティング システムで 32 ビットのランタイムを使用してパッケージを実行すべきかどうかを示します。 値 `1` を使用して 64 ビットのオペレーティング システムで実行されているときに、32 ビット ランタイムを使用してパッケージを実行します。 値 `0` を使用すると、64 ビット オペレーティング システムで実行しているときに、64 ビット ランタイムでパッケージが実行されます。 このパラメーターは省略可能です。 *use32bitruntime* は **bit** です。  
   
  [ @environment_scope = ] *environment_scope*  
- 検証が考慮する環境参照を示します。 値が `A` の場合は、プロジェクトに関連するすべての環境参照が検証に含まれます。 値が `S` の場合は、1 つの環境参照のみが含まれます。 値が `D` の場合、環境参照は含まれず、各パラメーターには、検証に合格するため、既定のリテラル値を指定する必要があります。 このパラメーターはオプションです。 文字 `D` が既定で使用されます。 *environment_scope* は **char(1)** です。  
+ 検証が考慮する環境参照を示します。 値が `A` の場合は、プロジェクトに関連するすべての環境参照が検証に含まれます。 値が `S` の場合は、1 つの環境参照のみが含まれます。 値が `D` の場合、環境参照は含まれず、各パラメーターには、検証に合格するため、既定のリテラル値を指定する必要があります。 このパラメーターは省略可能です。 文字 `D` が既定で使用されます。 *environment_scope* は **char(1)** です。  
   
  [ @reference_id = ] *reference_id*  
  環境参照の一意の ID。 このパラメーターは、検証に 1 つの環境参照が含まれていて、*environment_scope* が `S` の場合にのみ必要です。 *reference_id* は **bigint** です。  
@@ -95,7 +95,7 @@ catalog.validate_package [ @folder_name = ] folder_name
   
 -   変数がパッケージ パラメーターで参照されるが、参照先の環境が検証に含まれなかった  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  検証では、パッケージが正常に実行されない問題を特定することができます。 検証の状態を監視するには、[catalog.validations](../../integration-services/system-views/catalog-validations-ssisdb-database.md) または [catalog.operations](../../integration-services/system-views/catalog-operations-ssisdb-database.md) ビューを使用します。  
   
   

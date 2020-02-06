@@ -1,26 +1,26 @@
 ---
 title: azdata bdc spark batch リファレンス
-titleSuffix: SQL Server big data clusters
 description: azdata bdc spark batch コマンドのリファレンス記事です。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: fc3dc5a987ae55ba410ca64c15a3a4b776465b54
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 5d141669313a90bd04cda2e54d5a9e9d5a3c68f6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531757"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258633"
 ---
 # <a name="azdata-bdc-spark-batch"></a>azdata bdc spark batch
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-以下の記事では、`azdata` ツールの `sql` コマンドに関するリファレンスを提供します。 `azdata` の他のコマンドに関する詳細については、[azdata のリファレンス](reference-azdata.md)に関するページをご覧ください
+以下の記事では、`bdc spark batch` ツールの `azdata` コマンドに関するリファレンスを提供します。 `azdata` の他のコマンドに関する詳細については、[azdata のリファレンス](reference-azdata.md)に関するページをご覧ください
 
 ## <a name="commands"></a>コマンド
 |     |     |
@@ -50,12 +50,12 @@ azdata bdc spark batch create --file -f
                               [--name -n]  
                               [--config]
 ```
-### <a name="examples"></a>使用例
+### <a name="examples"></a>例
 新しい Spark バッチを作成します。
 ```bash
 azdata spark batch create --code "2+2"
 ```
-### <a name="required-parameters"></a>必要なパラメーター
+### <a name="required-parameters"></a>必須のパラメーター
 #### `--file -f`
 実行するファイルのパス。
 ### <a name="optional-parameters"></a>省略可能なパラメーター
@@ -97,13 +97,13 @@ Spark 構成値を含む名前と値のペアのリスト。  JSON ディクシ�
 #### `--query -q`
 JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/) を参照してください。
 #### `--verbose`
-ログの詳細レベルを上げます。 完全なデバッグ ログを表示するには --debug を使います。
+ログの詳細レベルを上げます。 詳細なデバッグ ログを表示するには --debug を使います。
 ## <a name="azdata-bdc-spark-batch-list"></a>azdata bdc spark batch list
 Spark 内のすべてのバッチを一覧表示します。
 ```bash
 azdata bdc spark batch list 
 ```
-### <a name="examples"></a>使用例
+### <a name="examples"></a>例
 すべてのアクティブなバッチを一覧表示します。
 ```bash
 azdata spark batch list
@@ -118,7 +118,7 @@ azdata spark batch list
 #### `--query -q`
 JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/) を参照してください。
 #### `--verbose`
-ログの詳細レベルを上げます。 完全なデバッグ ログを表示するには --debug を使います。
+ログの詳細レベルを上げます。 詳細なデバッグ ログを表示するには --debug を使います。
 ## <a name="azdata-bdc-spark-batch-info"></a>azdata bdc spark batch info
 これを使うと、指定した ID を持つ Spark バッチに関する情報を取得できます。  バッチ ID は 'spark batch create' から返されます。
 ```bash
@@ -129,7 +129,7 @@ Get batch info for batch with ID of 0.
 ```bash
 azdata spark batch info --batch-id 0
 ```
-### <a name="required-parameters"></a>必要なパラメーター
+### <a name="required-parameters"></a>必須のパラメーター
 #### `--batch-id -i`
 Spark バッチの ID 番号。
 ### <a name="global-arguments"></a>グローバル引数
@@ -142,7 +142,7 @@ Spark バッチの ID 番号。
 #### `--query -q`
 JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/) を参照してください。
 #### `--verbose`
-ログの詳細レベルを上げます。 完全なデバッグ ログを表示するには --debug を使います。
+ログの詳細レベルを上げます。 詳細なデバッグ ログを表示するには --debug を使います。
 ## <a name="azdata-bdc-spark-batch-log"></a>azdata bdc spark batch log
 これを使うと、指定した ID を持つ Spark バッチのバッチ ログ エントリを取得できます。  バッチ ID は 'spark batch create' から返されます。
 ```bash
@@ -153,7 +153,7 @@ Get batch log for batch with ID of 0.
 ```bash
 azdata spark batch log --batch-id 0
 ```
-### <a name="required-parameters"></a>必要なパラメーター
+### <a name="required-parameters"></a>必須のパラメーター
 #### `--batch-id -i`
 Spark バッチの ID 番号。
 ### <a name="global-arguments"></a>グローバル引数
@@ -166,7 +166,7 @@ Spark バッチの ID 番号。
 #### `--query -q`
 JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/) を参照してください。
 #### `--verbose`
-ログの詳細レベルを上げます。 完全なデバッグ ログを表示するには --debug を使います。
+ログの詳細レベルを上げます。 詳細なデバッグ ログを表示するには --debug を使います。
 ## <a name="azdata-bdc-spark-batch-state"></a>azdata bdc spark batch state
 これを使うと、指定した ID を持つ Spark バッチのバッチ状態を取得できます。  バッチ ID は 'spark batch create' から返されます。
 ```bash
@@ -177,7 +177,7 @@ Get batch state for batch with ID of 0.
 ```bash
 azdata spark batch state --batch-id 0
 ```
-### <a name="required-parameters"></a>必要なパラメーター
+### <a name="required-parameters"></a>必須のパラメーター
 #### `--batch-id -i`
 Spark バッチの ID 番号。
 ### <a name="global-arguments"></a>グローバル引数
@@ -190,7 +190,7 @@ Spark バッチの ID 番号。
 #### `--query -q`
 JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/) を参照してください。
 #### `--verbose`
-ログの詳細レベルを上げます。 完全なデバッグ ログを表示するには --debug を使います。
+ログの詳細レベルを上げます。 詳細なデバッグ ログを表示するには --debug を使います。
 ## <a name="azdata-bdc-spark-batch-delete"></a>azdata bdc spark batch delete
 これを使うと、Spark バッチを削除できます。 バッチ ID は 'spark batch create' から返されます。
 ```bash
@@ -201,7 +201,7 @@ Delete a batch.
 ```bash
 azdata spark batch delete --batch-id 0
 ```
-### <a name="required-parameters"></a>必要なパラメーター
+### <a name="required-parameters"></a>必須のパラメーター
 #### `--batch-id -i`
 Spark バッチの ID 番号。
 ### <a name="global-arguments"></a>グローバル引数
@@ -216,6 +216,6 @@ JMESPath クエリ文字列。 詳細と例については、[http://jmespath.or
 #### `--verbose`
 ログの詳細レベルを上げます。 詳細なデバッグ ログを表示するには --debug を使います。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 `azdata` の他のコマンドに関する詳細については、[azdata のリファレンス](reference-azdata.md)に関するページをご覧ください。 `azdata` ツールのインストール方法の詳細については、[SQL Server 2019 ビッグ データ クラスターを管理する azdata のインストール](deploy-install-azdata.md)に関するページを参照してください。

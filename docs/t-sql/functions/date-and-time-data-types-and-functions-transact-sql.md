@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azure-sqldw-latest||= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
 ms.openlocfilehash: a7beec472b0f4b70662c364081641b6ea91be507
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75256091"
 ---
 # <a name="date-and-time-data-types-and-functions-transact-sql"></a>日付と時刻のデータ型および関数 (Transact-SQL)
@@ -72,17 +72,17 @@ ms.locfileid: "75256091"
   
 |Function|構文|戻り値|戻り値のデータ型|決定性|  
 |---|---|---|---|---|
-|[SYSDATETIME](../../t-sql/functions/sysdatetime-transact-sql.md)|SYSDATETIME ()|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが実行されているコンピューターの日付と時刻を含む、**datetime2(7)** 値を返します。 戻り値には、タイム ゾーン オフセットは含まれません。|**datetime2(7)**|非決定的|  
-|[SYSDATETIMEOFFSET](../../t-sql/functions/sysdatetimeoffset-transact-sql.md)|SYSDATETIMEOFFSET ( )|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが実行されているコンピューターの日付と時刻を含む、**datetimeoffset(7)** 値を返します。 戻り値にはタイム ゾーン オフセットが含まれます。|**datetimeoffset(7)**|非決定的|  
-|[SYSUTCDATETIME](../../t-sql/functions/sysutcdatetime-transact-sql.md)|SYSUTCDATETIME ( )|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが実行されているコンピューターの日付と時刻を含む、**datetime2(7)** 値を返します。 この関数は、日付と時刻を UTC 時刻 (世界協定時刻) として返します。|**datetime2(7)**|非決定的|  
+|[SYSDATETIME](../../t-sql/functions/sysdatetime-transact-sql.md)|SYSDATETIME ()|**のインスタンスが実行されているコンピューターの日付と時刻を含む、** datetime2(7)[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 値を返します。 戻り値には、タイム ゾーン オフセットは含まれません。|**datetime2(7)**|非決定的|  
+|[SYSDATETIMEOFFSET](../../t-sql/functions/sysdatetimeoffset-transact-sql.md)|SYSDATETIMEOFFSET ( )|**のインスタンスが実行されているコンピューターの日付と時刻を含む、** datetimeoffset(7)[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 値を返します。 戻り値にはタイム ゾーン オフセットが含まれます。|**datetimeoffset(7)**|非決定的|  
+|[SYSUTCDATETIME](../../t-sql/functions/sysutcdatetime-transact-sql.md)|SYSUTCDATETIME ( )|**のインスタンスが実行されているコンピューターの日付と時刻を含む、** datetime2(7)[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 値を返します。 この関数は、日付と時刻を UTC 時刻 (世界協定時刻) として返します。|**datetime2(7)**|非決定的|  
   
 #### <a name="lower-precision-system-date-and-time-functions"></a>低精度のシステム日付/時刻関数
   
 |Function|構文|戻り値|戻り値のデータ型|決定性|  
 |---|---|---|---|---|
-|[CURRENT_TIMESTAMP](../../t-sql/functions/current-timestamp-transact-sql.md)|CURRENT_TIMESTAMP|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが実行されているコンピューターの日付と時刻を含む、**datetime** 値を返します。 戻り値には、タイム ゾーン オフセットは含まれません。|**datetime**|非決定的|  
-|[GETDATE](../../t-sql/functions/getdate-transact-sql.md)|GETDATE ( )|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが実行されているコンピューターの日付と時刻を含む、**datetime** 値を返します。 戻り値には、タイム ゾーン オフセットは含まれません。|**datetime**|非決定的|  
-|[GETUTCDATE](../../t-sql/functions/getutcdate-transact-sql.md)|GETUTCDATE ( )|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが実行されているコンピューターの日付と時刻を含む、**datetime** 値を返します。 この関数は、日付と時刻を UTC 時刻 (世界協定時刻) として返します。|**datetime**|非決定的|  
+|[CURRENT_TIMESTAMP](../../t-sql/functions/current-timestamp-transact-sql.md)|CURRENT_TIMESTAMP|**のインスタンスが実行されているコンピューターの日付と時刻を含む、** datetime[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 値を返します。 戻り値には、タイム ゾーン オフセットは含まれません。|**datetime**|非決定的|  
+|[GETDATE](../../t-sql/functions/getdate-transact-sql.md)|GETDATE ( )|**のインスタンスが実行されているコンピューターの日付と時刻を含む、** datetime[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 値を返します。 戻り値には、タイム ゾーン オフセットは含まれません。|**datetime**|非決定的|  
+|[GETUTCDATE](../../t-sql/functions/getutcdate-transact-sql.md)|GETUTCDATE ( )|**のインスタンスが実行されているコンピューターの日付と時刻を含む、** datetime[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 値を返します。 この関数は、日付と時刻を UTC 時刻 (世界協定時刻) として返します。|**datetime**|非決定的|  
   
 ###  <a name="GetDateandTimeParts"></a> 日付と時刻の要素を返す関数
   
@@ -116,10 +116,10 @@ ms.locfileid: "75256091"
   
 |Function|構文|戻り値|戻り値のデータ型|決定性|  
 |---|---|---|---|---|
-|[DATEADD](../../t-sql/functions/dateadd-transact-sql.md)|DATEADD (*datepart* , *number* , *date* )|指定された *date* の指定された *datepart* に期間を加えた新しい **datetime** の値を返します。|*date* 引数のデータ型|決定的|  
+|[DATEADD](../../t-sql/functions/dateadd-transact-sql.md)|DATEADD (*datepart* , *number* , *date* )|指定された **date** の指定された *datepart* に期間を加えた新しい *datetime* の値を返します。|*date* 引数のデータ型|決定的|  
 |[EOMONTH](../../t-sql/functions/eomonth-transact-sql.md)|EOMONTH  ( *start_date* [, *month_to_add* ] )|オプションのオフセットを使用して、指定された日付を含んでいる月の最後の日付を返します。|戻り値の型は、*start_date* 引数型、または **date** データ型です。|決定的|  
-|[SWITCHOFFSET](../../t-sql/functions/switchoffset-transact-sql.md)|SWITCHOFFSET (*DATETIMEOFFSET* , *time_zone*)|SWITCHOFFSET は、DATETIMEOFFSET 値のタイム ゾーン オフセットを変更し、UTC 値を保持します。|*DATETIMEOFFSET* の小数部の有効桁数を持つ **datetimeoffset**|決定的|  
-|[TODATETIMEOFFSET](../../t-sql/functions/todatetimeoffset-transact-sql.md)|TODATETIMEOFFSET (*expression* , *time_zone*)|TODATETIMEOFFSET では、datetime2 値が datetimeoffset 値に変換されます。 *TODATETIMEOFFSET* は、datetime2 値を、指定された time_zone のローカル時刻で解釈します。|*datetime* 引数の小数部の有効桁数を持つ **datetimeoffset**|決定的|  
+|[SWITCHOFFSET](../../t-sql/functions/switchoffset-transact-sql.md)|SWITCHOFFSET (*DATETIMEOFFSET* , *time_zone*)|SWITCHOFFSET は、DATETIMEOFFSET 値のタイム ゾーン オフセットを変更し、UTC 値を保持します。|**DATETIMEOFFSET** の小数部の有効桁数を持つ *datetimeoffset*|決定的|  
+|[TODATETIMEOFFSET](../../t-sql/functions/todatetimeoffset-transact-sql.md)|TODATETIMEOFFSET (*expression* , *time_zone*)|TODATETIMEOFFSET では、datetime2 値が datetimeoffset 値に変換されます。 *TODATETIMEOFFSET* は、datetime2 値を、指定された time_zone のローカル時刻で解釈します。|**datetime** 引数の小数部の有効桁数を持つ *datetimeoffset*|決定的|  
   
 ###  <a name="SetorGetSessionFormatFunctions"></a> セッションの形式の関数を設定または返す関数
   

@@ -18,10 +18,10 @@ ms.assetid: 60a520a6-1a7c-486b-8d91-34401edf6233
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: d9244a2833a75925fab1f00d6ce20915f5ceaafb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67930333"
 ---
 # <a name="stconvexhull-geometry-data-type"></a>STConvexHull (geometry データ型)
@@ -39,12 +39,12 @@ ms.locfileid: "67930333"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **geometry**  
   
- CLR の戻り値の型:**SqlGeometry**  
+ CLR 戻り値の型: **SqlGeometry**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  `STConvexHull()` は、指定された **geometry** インスタンスを含む最小の凸多角形を返します。 **Points** インスタンスまたは同一直線上の **LineString** インスタンスは、入力と同じ型のインスタンスを作成します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、`STConvexHull()` を使用して、凸のない `Polygon``geometry` インスタンスの凸包を見つけます。  
   
 ```  

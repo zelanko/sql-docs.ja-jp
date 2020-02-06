@@ -13,10 +13,10 @@ ms.assetid: 292f9572-362a-45c1-879a-d81d31496ca7
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d1676f6aeec77fa3feb6b46365536de3ac36bff6
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71282547"
 ---
 # <a name="microsoft-connector-for-sap-bw-f1-help"></a>Microsoft Connector for SAP BW の F1 ヘルプ
@@ -48,7 +48,7 @@ ms.locfileid: "71282547"
   
 -   [SAP BW ソース エディター ([詳細設定] ページ)](../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)  
   
--   [[RFC 転送先の参照]](../integration-services/data-flow/look-up-rfc-destination.md)  
+-   [RFC 転送先の参照](../integration-services/data-flow/look-up-rfc-destination.md)  
   
 -   [プロセス チェーンの参照](../integration-services/data-flow/look-up-process-chain.md)  
   
@@ -66,7 +66,7 @@ ms.locfileid: "71282547"
   
 -   [SAP BW 変換先エディター ([詳細設定] ページ)](../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)  
   
--   [[インフォパッケージの参照]](../integration-services/data-flow/look-up-infopackage.md)  
+-   [インフォパッケージの参照](../integration-services/data-flow/look-up-infopackage.md)  
   
 -   [新しいインフォオブジェクトの作成](../integration-services/data-flow/create-new-infoobject.md)  
   

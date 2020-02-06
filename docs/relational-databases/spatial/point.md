@@ -14,10 +14,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 91bcaba1008ee0ca67de6562d681b81bcc5641e6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68048552"
 ---
 # <a name="point"></a>ポイント
@@ -30,8 +30,8 @@ ms.locfileid: "68048552"
 ## <a name="geometry-data-type"></a>geometry データ型  
  geometry データ型の Point 型は、 *X* が生成される Point の X 座標、 *Y* が生成される Point の Y 座標を表している 1 つの場所を表します。 *SRID* は、返される **geometry** インスタンスの空間参照 ID を表します。  
   
-## <a name="examples"></a>使用例  
-### <a name="example-a"></a>例 A。
+## <a name="examples"></a>例  
+### <a name="example-a"></a>例 A.
 次の例では、点 (3, 4) を表す `geometry Point`インスタンスを作成します。このインスタンスの SRID は 0 です。  
   
 ```sql  

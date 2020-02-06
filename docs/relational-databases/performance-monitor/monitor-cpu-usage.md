@@ -23,10 +23,10 @@ ms.assetid: 2a02a3b6-07b2-4ad0-8a24-670414d19812
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: eb73d1b82d1a58a756c2ec6287429cee88315fd7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68091032"
 ---
 # <a name="monitor-cpu-usage"></a>CPU 使用率の監視
@@ -48,7 +48,7 @@ ms.locfileid: "68091032"
   
      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]などのユーザー プロセスの実行にプロセッサが費やす時間比率を示します。  
   
--   **System:Processor Queue Length**  
+-   **System: Processor Queue Length**  
   
      プロセッサ時間を待っているスレッドの数を示します。 プロセスのスレッドが、使用できるよりも多くのプロセッサ サイクルを必要とする場合は、プロセッサのボトルネックが生じます。 複数のプロセスがプロセッサ時間を利用する場合、状況によっては、より高速なプロセッサのインストールが必要になります。 多重プロセッサ システムを使用している場合は、プロセッサの追加も可能です。  
   
