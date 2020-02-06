@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1877f653244100126226b85b29a24ca458c1cf74
-ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71326137"
 ---
 # <a name="use-column-sets"></a>列セットの使用
@@ -28,7 +28,7 @@ ms.locfileid: "71326137"
   
  テーブルに多数の列があり、その個別操作が煩雑である場合は、列セットの使用を検討してください。 多数の列を含むテーブルで列セットを使用してデータの選択や挿入を行うと、アプリケーションのパフォーマンスがある程度向上する場合があります。 ただし、テーブル内の列に多数のインデックスが定義されている場合は、列セットのパフォーマンスが低下することがあります。 これは、実行プランに必要なメモリ容量が増えるためです。  
   
- 列セットを定義するには、[CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) または [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) ステートメントで *<column_set_name>* FOR ALL_SPARSE_COLUMNS キーワードを使用します。  
+ 列セットを定義するには、*CREATE TABLE* または [ALTER TABLE](../../t-sql/statements/create-table-transact-sql.md) ステートメントで [<column_set_name>](../../t-sql/statements/alter-table-transact-sql.md) FOR ALL_SPARSE_COLUMNS キーワードを使用します。  
   
 ## <a name="guidelines-for-using-column-sets"></a>列セットの使用に関するガイドライン  
  列セットを使用する場合は、次のガイドラインを考慮してください。  
@@ -112,7 +112,7 @@ GO
 ## <a name="using-the-sql_variant-data-type"></a>sql_variant データ型の使用  
  **sql_variant** データ型には、 **int**、 **char**、 **date**などの種類の異なる複数のデータ型を格納できます。 列セットは、 **sql_variant** 値に関連付けられている小数点以下桁数、有効桁数、ロケール情報などのデータ型情報を、生成された XML 列に属性として出力します。 これらの属性を、列セットでの挿入または更新操作の入力としてカスタム生成 XML ステートメントで指定しようとすると、一部の属性が必須となり、一部の属性に既定値が割り当てられます。 値が指定されなかったときにサーバーで生成されるデータ型と既定値の一覧を次の表に示します。  
   
-|データ型|localeID*|sqlCompareOptions|sqlCollationVersion|SqlSortId|最大の長さ|有効桁数|Scale|  
+|データ型|localeID*|sqlCompareOptions|sqlCollationVersion|SqlSortId|最大の長さ|Precision|スケール|  
 |---------------|----------------|-----------------------|-------------------------|---------------|--------------------|---------------|-----------|  
 |**char**、 **varchar**、 **binary**|-1|'Default'|0|0|8000|なし**|適用なし|  
 |**nvarchar**|-1|'Default'|0|0|4000|適用なし|適用なし|  
@@ -139,7 +139,7 @@ GO
   
 -   スパース列または列セットに対して REVOKE ステートメントを実行すると、セキュリティは、既定でその親オブジェクトのセキュリティに設定されます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、ドキュメント テーブルに `DocID` 列と `Title`列のセットが共通で含まれています。 製造グループは、すべての製造ドキュメントに `ProductionSpecification` 列と `ProductionLocation` 列を必要とします。 マーケティング グループは、マーケティング ドキュメントに `MarketingSurveyGroup` 列を必要とします。  
   
 ### <a name="a-creating-a-table-that-has-a-column-set"></a>A. 列セットを含むテーブルを作成する  

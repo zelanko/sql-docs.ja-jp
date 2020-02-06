@@ -16,10 +16,10 @@ ms.assetid: 1ef0b60e-a64c-4e97-847b-67930e3973ef
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a3ff2605e0c872bd5e544d618c88dc179e3c3b43
-ms.sourcegitcommit: 03884a046aded85c7de67ca82a5b5edbf710be92
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74564800"
 ---
 # <a name="table-transact-sql"></a>table (Transact-SQL)
@@ -118,7 +118,7 @@ table 変数は作成後に変更できません。
 ## <a name="examples"></a>例  
   
 ### <a name="a-declaring-a-variable-of-type-table"></a>A. table 型の変数を宣言する  
-次の例では、UPDATE ステートメントの OUTPUT 句で指定される値を格納する `table` 変数を作成します。 この後に、`SELECT` 内の値、および `@MyTableVar` テーブルの更新操作の結果を返す 2 つの `Employee` ステートメントが続きます。 `INSERTED.ModifiedDate` 列の結果が、`Employee` テーブルの `ModifiedDate` 列の値と異なります。 この違いは、`AFTER UPDATE` の値を現在の日付に更新する `ModifiedDate` トリガーが `Employee` テーブルで定義されることに起因します。 ただし、`OUTPUT` が返す列には、トリガーが起動される前の値が反映されています。 詳細については、「[OUTPUT 句 &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md)」を参照してください。
+次の例では、UPDATE ステートメントの OUTPUT 句で指定される値を格納する `table` 変数を作成します。 この後に、`SELECT` 内の値、および `@MyTableVar` テーブルの更新操作の結果を返す 2 つの `Employee` ステートメントが続きます。 `INSERTED.ModifiedDate` 列の結果が、`ModifiedDate` テーブルの `Employee` 列の値と異なります。 この違いは、`AFTER UPDATE` の値を現在の日付に更新する `ModifiedDate` トリガーが `Employee` テーブルで定義されることに起因します。 ただし、`OUTPUT` が返す列には、トリガーが起動される前の値が反映されています。 詳細については、「[OUTPUT 句 &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md)」を参照してください。
   
 ```sql
 USE AdventureWorks2012;  

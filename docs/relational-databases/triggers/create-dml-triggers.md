@@ -20,10 +20,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ed3026ae450e50bcb2d9debf93c4b90eab3afad0
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72905534"
 ---
 # <a name="create-dml-triggers"></a>DML トリガーの作成
@@ -57,12 +57,12 @@ ms.locfileid: "72905534"
   
 5.  **[テンプレート パラメーターの値の指定]** ダイアログ ボックスで、各パラメーターに次の値を入力します。  
   
-    |パラメーター|[値]|  
+    |パラメーター|値|  
     |---------------|-----------|  
     |Author|*名前*|  
     |Create Date|*今日の日付*|  
     |[説明]|ベンダーへの新しい購買発注の挿入を許可する前に、ベンダーの信用格付けを確認します。|  
-    |Schema_Name|Purchasing|  
+    |Schema_Name|購入|  
     |Trigger_Name|NewPODetail2|  
     |Table_Name|PurchaseOrderDetail|  
     |Data_Modification_Statement|一覧から UPDATE と DELETE を削除します。|  

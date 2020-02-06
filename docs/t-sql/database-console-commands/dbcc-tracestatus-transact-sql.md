@@ -25,10 +25,10 @@ ms.assetid: 9be51199-78b4-4b87-ae6e-557246b7e29a
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 3d353a6c11d19f96f590e11aa5ebe48677c3cd84
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70211235"
 ---
 # <a name="dbcc-tracestatus-transact-sql"></a>DBCC TRACESTATUS (Transact-SQL)
@@ -47,7 +47,7 @@ DBCC TRACESTATUS ( [ [ trace# [ ,...n ] ] [ , ] [ -1 ] ] )
   
 ## <a name="arguments"></a>引数  
 *trace#*  
-状態を表示するトレース フラグの番号です。 場合 *trace #*、-1 が指定されていない場合は、セッションが有効になっているすべてのトレース フラグが表示されます。
+状態を表示するトレース フラグの番号です。 場合 *trace #* 、-1 が指定されていない場合は、セッションが有効になっているすべてのトレース フラグが表示されます。
   
 *n*  
 複数のトレース フラグを指定できることを示すプレースホルダーです。
@@ -64,19 +64,19 @@ WITH NO_INFOMSGS
 |列名|[説明]|  
 |---|---|
 |**TraceFlag**|トレース フラグの名前です。|  
-|**ステータス**|トレース フラグがグローバルまたはセッションごとに ON または OFF に設定されているかどうかを示します。<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
-|**Global**|トレース フラグがグローバルに設定されているかどうかを示します。<br /><br /> 1 = True<br /><br /> 0 = False|  
-|**Session**|トレース フラグがセッションに対して設定されているかどうかを示します。<br /><br /> 1 = True<br /><br /> 0 = False|  
+|**状態**|トレース フラグがグローバルまたはセッションごとに ON または OFF に設定されているかどうかを示します。<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
+|**グローバル**|トレース フラグがグローバルに設定されているかどうかを示します。<br /><br /> 1 = True<br /><br /> 0 = False|  
+|**セッション**|トレース フラグがセッションに対して設定されているかどうかを示します。<br /><br /> 1 = True<br /><br /> 0 = False|  
   
 DBCC TRACESTATUS はトレース フラグ番号の列と状態の列を返します。 これは、トレース フラグがオン (1)、オフ (0) のどちらになっているかを示します。 グローバル トレース フラグまたはセッション トレース フラグのどちらの状態を確認するかに応じて、トレース フラグ番号の列ヘッダーが **Global Trace Flag** または **Session Trace Flag** に設定されます。
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、セッションとグローバルという 2 種類のトレース フラグがあります。 セッション トレース フラグは、1 つの接続についてアクティブで、その接続に対してのみ表示可能です。 グローバル トレース フラグは、サーバー レベルで設定され、サーバー上のすべての接続に対して表示可能です。
   
 ## <a name="permissions"></a>アクセス許可  
 ロール **public** のメンバーシップが必要です。
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 次の例は、現在グローバルに有効化されているすべてのトレース フラグの状態を表示します。
   
 ```sql  

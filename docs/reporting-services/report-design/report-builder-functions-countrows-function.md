@@ -9,10 +9,10 @@ ms.assetid: 5b1c403d-6afd-44c8-b5f6-5ecff2a29a45
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9295abe7d34ee0b799517137163d4581d8b34ce5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579610"
 ---
 # <a name="report-builder-functions---countrows-function"></a>レポート ビルダー関数 - CountRows 関数
@@ -38,7 +38,7 @@ CountRows(scope, recursive)
 ## <a name="return-type"></a>戻り値の型  
  **Integer**値を返します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **CountRows** は、指定されたスコープ内のすべての行 (NULL 値を持つ行を含む) をカウントします。  
   
  *scope* の値には、式を指定することができません。また、この値では、現在のスコープまたはコンテナー スコープを参照する必要があります。  

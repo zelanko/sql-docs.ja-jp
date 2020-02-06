@@ -1,10 +1,7 @@
 ---
-title: バナー要素 (ssbdiagnose) |Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: Banner 要素
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,16 +11,23 @@ helpviewer_keywords:
 ms.assetid: cc6cd49a-acf0-4cfb-8c6a-554692b89de2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 202652271b9d8de9603706b9d1c7be8ca9411bb7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: 446a022570781aa6f965ee6f4728e833620158c2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986208"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257697"
 ---
 # <a name="banner-element-ssbdiagnose"></a>Banner 要素 (ssbdiagnose)
+
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  **ssbdiagnose** の出力 XML ファイルを生成したユーティリティを示します。  
+
+**ssbdiagnose** の出力 XML ファイルを生成したユーティリティを示します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,7 +41,7 @@ ms.locfileid: "67986208"
   
 ## <a name="element-attributes"></a>要素の属性  
   
-|属性|[説明]|  
+|Attribute|[説明]|  
 |---------------|-----------------|  
 |**title**|**ssbdiagnose** の XML 出力ファイルを生成したユーティリティを示します。|  
 |**product**|**ssbdiagnose** の XML 出力ファイルを生成した製品を示します。|  
@@ -45,7 +49,7 @@ ms.locfileid: "67986208"
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特性|[説明]|  
+|特徴|[説明]|  
 |--------------------|-----------------|  
 |**データ型と長さ**|[なし] :|  
 |**既定値**|[なし] :|  

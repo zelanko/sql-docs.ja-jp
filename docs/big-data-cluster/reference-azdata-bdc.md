@@ -9,18 +9,18 @@ ms.date: 11/04/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a4b619396c2dcdad589deff3f9fc6a03fe37c1d5
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: d5d5cb5256f4a1b8389d882300a89f0ee0012a99
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531691"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74820988"
 ---
 # <a name="azdata-bdc"></a>azdata bdc
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-以下の記事では、`azdata` ツールの `sql` コマンドに関するリファレンスを提供します。 `azdata` の他のコマンドに関する詳細については、[azdata のリファレンス](reference-azdata.md)に関するページをご覧ください
+以下の記事では、`bdc` ツールの `azdata` コマンドに関するリファレンスを提供します。 `azdata` の他のコマンドに関する詳細については、[azdata のリファレンス](reference-azdata.md)に関するページをご覧ください
 
 ## <a name="commands"></a>コマンド
 |     |     |
@@ -49,7 +49,7 @@ azdata bdc create [--name -n]
                   [--node-label -l]  
                   [--force -f]
 ```
-### <a name="examples"></a>使用例
+### <a name="examples"></a>例
 ガイド付きの BDC 展開のエクスペリエンス。必要な値の入力を求めるプロンプトが表示されます。
 ```bash
 azdata bdc create
@@ -94,12 +94,12 @@ SQL Server ビッグ データ クラスターを削除します。Kubernetes �
 azdata bdc delete --name -n 
                   [--force -f]
 ```
-### <a name="examples"></a>使用例
+### <a name="examples"></a>例
 BDC の削除。
 ```bash
 azdata bdc delete --name <cluster_name>
 ```
-### <a name="required-parameters"></a>必要なパラメーター
+### <a name="required-parameters"></a>必須のパラメーター
 #### `--name -n`
 ビッグ データ クラスターの名前。kubernetes 名前空間に使用されます。
 ### <a name="optional-parameters"></a>省略可能なパラメーター
@@ -123,7 +123,7 @@ azdata bdc upgrade --name -n
                    --tag -t  
                    [--repository -r]
 ```
-### <a name="examples"></a>使用例
+### <a name="examples"></a>例
 同じリポジトリからの新しいイメージ タグ "cu2" への BDC のアップグレード。
 ```bash
 azdata bdc upgrade -t cu2
@@ -132,7 +132,7 @@ azdata bdc upgrade -t cu2
 ```bash
 azdata bdc upgrade -t cu2 -r foo/bar/baz
 ```
-### <a name="required-parameters"></a>必要なパラメーター
+### <a name="required-parameters"></a>必須のパラメーター
 #### `--name -n`
 ビッグ データ クラスターの名前。kubernetes 名前空間に使用されます。
 #### `--tag -t`
@@ -152,6 +152,6 @@ JMESPath クエリ文字列。 詳細と例については、[http://jmespath.or
 #### `--verbose`
 ログの詳細レベルを上げます。 詳細なデバッグ ログを表示するには --debug を使います。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 `azdata` の他のコマンドに関する詳細については、[azdata のリファレンス](reference-azdata.md)に関するページをご覧ください。 `azdata` ツールのインストール方法の詳細については、[SQL Server 2019 ビッグ データ クラスターを管理する azdata のインストール](deploy-install-azdata.md)に関するページを参照してください。

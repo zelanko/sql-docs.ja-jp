@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 1d93d95e-9c89-4274-9b3f-fa2608ec2792
 ms.openlocfilehash: 5abd2db590a89350f45497d7f94b81940a0ec5bc
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68065154"
 ---
 # <a name="create-and-run-sql-server-agent-jobs-on-linux"></a>Microsoft SQL Server エージェント ジョブを作成して Linux 上で実行する
@@ -29,7 +29,7 @@ SQL Server ジョブを使用して、SQL Server データベースで同じ一�
 
 Linux 上の SQL Server エージェントに関する既知の問題については、[リリース ノート](sql-server-linux-release-notes.md)を参照してください。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 このチュートリアルを完了するには、次の前提条件を満たす必要があります。
 
@@ -187,9 +187,9 @@ Windows 上で SQL Server Management Studio (SSMS) を使用して、ジョブ�
 
    <img src="./media/sql-server-linux-run-sql-server-agent-job/ssms-agent-9.png" alt="Start the SQL Server Agent job" style="width: 550px;"/>
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>次の手順
 
-このチュートリアルでは、以下を実行する方法について説明しました。
+このチュートリアルでは、以下の内容を学習しました。
 
 > [!div class="checklist"]
 > * Linux 上に SQL Server エージェントをインストールする

@@ -27,10 +27,10 @@ ms.assetid: bc1218eb-ffff-44ce-8122-6e4fa7d68a79
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: d1735a107f0510deaf062ce28bdc1a8db2acbae1
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056349"
 ---
 # <a name="dbcc-checkalloc-transact-sql"></a>DBCC CHECKALLOC (Transact-SQL)
@@ -79,7 +79,7 @@ DBCC CHECKALLOC
  構文は、旧バージョンとの互換性のためにのみ残されています。 修復操作は実行されません。
 
  REPAIR_REBUILD  
- 該当なし。  
+ 適用不可。  
  REPAIR オプションは、最後の手段としてのみ使用してください。 エラーの修復では、バックアップから復元することをお勧めします。 修復操作では、テーブルまたはテーブル間に制約があっても考慮されません。 指定したテーブルに 1 つでも関連する制約がある場合は、修復操作の後に DBCC CHECKCONSTRAINTS を実行することをお勧めします。 REPAIR を使用する必要がある場合は、修復オプションを指定せずに DBCC CHECKDB を実行して、使用する修復レベルを確認してください。 REPAIR_ALLOW_DATA_LOSS レベルを使用する場合は、このオプションを指定して DBCC CHECKDB を実行する前に、データベースをバックアップすることをお勧めします。
 
  WITH  
@@ -97,7 +97,7 @@ DBCC CHECKALLOC
  ESTIMATEONLY  
  他のすべてのオプションを指定したときに、DBCC CHECKALLOC の実行に必要な tempdb 領域の予測サイズを表示します。
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 DBCC CHECKALLOC では、ページの種類やページが属するオブジェクトの種類に関係なく、データベースのすべてのページの割り当てがチェックされます。 また、ページとページ間の関係の追跡に使用されるさまざまな内部構造も検証されます。
 NO_INFOMSGS を指定しない場合、DBCC CHECKALLOC ではデータベースのすべてのオブジェクトに関する領域の使用情報が収集されます。 この情報は、検出されたエラーと共に出力されます。
   
@@ -113,7 +113,7 @@ DBCC CHECKALLOC では、内部データベースのスナップショットを�
 ## <a name="understanding-dbcc-error-messages"></a>DBCC エラー メッセージについて  
 DBCC CHECKALLOC コマンドの終了後、メッセージが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログに書き込まれます。 DBCC コマンドが正常に実行された場合、メッセージでは正常完了とコマンド実行時間が示されます。 エラーが発生して DBCC コマンドが完了前に停止した場合、メッセージではコマンドが終了したことと、状態の値、コマンド実行時間が示されます。 次の表は、メッセージに含まれる可能性がある状態値の一覧と説明です。
   
-|状態|[説明]|  
+|State|[説明]|  
 |---|---|  
 |0|エラー番号 8930 が発生しました。 メタデータの破損が原因で DBCC コマンドが終了しました。|  
 |1|エラー番号 8967 が発生しました。 内部 DBCC エラーがあります。|  
@@ -230,8 +230,8 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 ## <a name="permissions"></a>アクセス許可  
 Sysadmin 固定サーバー ロールまたは db_owner 固定データベース ロールのメンバーシップが必要です。
   
-## <a name="examples"></a>使用例  
-次の例では、現在のデータベースと `AdventureWorks2012` データベースに対して `DBCC CHECKALLOC` を実行します。
+## <a name="examples"></a>例  
+次の例では、現在のデータベースと `DBCC CHECKALLOC` データベースに対して `AdventureWorks2012` を実行します。
   
 ```sql  
 -- Check the current database.  

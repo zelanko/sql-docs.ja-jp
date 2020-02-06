@@ -19,10 +19,10 @@ ms.assetid: e06d2cab-f1ff-42f1-8550-6aaec57be36f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 3edebc2c1a7182e71ec093508adc5755afb22758
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67914944"
 ---
 # <a name="newsequentialid-transact-sql"></a>NEWSEQUENTIALID (Transact-SQL)
@@ -50,8 +50,8 @@ NEWSEQUENTIALID ( )
 ## <a name="return-type"></a>戻り値の型  
  **uniqueidentifier**  
   
-## <a name="remarks"></a>Remarks  
- NEWSEQUENTIALID() は、型のテーブル列の既定の制約でのみ使用できます **uniqueidentifier**です。 例:  
+## <a name="remarks"></a>解説  
+ NEWSEQUENTIALID() は、型のテーブル列の既定の制約でのみ使用できます **uniqueidentifier**です。 次に例を示します。  
   
 ```  
 CREATE TABLE myTable (ColumnA uniqueidentifier DEFAULT NEWSEQUENTIALID());   

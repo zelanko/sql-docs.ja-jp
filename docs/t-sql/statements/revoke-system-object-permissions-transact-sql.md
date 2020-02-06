@@ -16,10 +16,10 @@ ms.assetid: 84983238-dd7d-45bd-99bb-52c9d8e96a87
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 47428ffc2ab1074ec2b4ce1789e679c184607a05
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67914200"
 ---
 # <a name="revoke-system-object-permissions-transact-sql"></a>REVOKE (システム オブジェクトの権限の取り消し) (Transact-SQL)
@@ -46,7 +46,7 @@ REVOKE { SELECT | EXECUTE } ON [sys.]system_object FROM principal
  *principal*  
  権限を取り消すプリンシパルを指定します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  このステートメントを使用すると、特定のストアド プロシージャ、拡張ストアド プロシージャ、テーブル値関数、スカラー関数、ビュー、カタログ ビュー、互換ビュー、INFORMATION_SCHEMA ビュー、動的管理ビュー、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってインストールされたシステム テーブルに対する権限を取り消すことができます。 これらのシステム オブジェクトはそれぞれ、リソース データベース (**mssqlsystemresource**) に一意なレコードとして存在しています。 リソース データベースは読み取り専用です。 オブジェクトへのリンクは、各データベースの **sys** スキーマでは 1 レコードとして表されます。  
   
  既定の名前解決では、修飾子のないプロシージャ名はリソース データベースとして解釈されます。 したがって、**sys.** 修飾子は、カタログ ビューおよび動的カタログ ビューを指定する場合にのみ必要です。  
@@ -63,8 +63,8 @@ REVOKE { SELECT | EXECUTE } ON [sys.]system_object FROM principal
 ## <a name="permissions"></a>アクセス許可  
  CONTROL SERVER 権限が必要です。  
   
-## <a name="examples"></a>使用例  
- 次の例では、`sp_addlinkedserver` に対する `EXECUTE` 権限を、`public` から取り消します。  
+## <a name="examples"></a>例  
+ 次の例では、`EXECUTE` に対する `sp_addlinkedserver` 権限を、`public` から取り消します。  
   
 ```  
 REVOKE EXECUTE ON sys.sp_addlinkedserver FROM public;  

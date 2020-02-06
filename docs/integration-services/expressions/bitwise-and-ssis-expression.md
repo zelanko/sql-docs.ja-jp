@@ -15,10 +15,10 @@ ms.assetid: 06d2958e-66a5-44d8-8bc4-56209ebe1ff2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 295affd0b03368d8156bec8e3b7193f3ce0684ac
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71290313"
 ---
 # <a name="amp-bitwise-and-ssis-expression"></a>&amp; (ビット演算 AND) (SSIS 式)
@@ -45,7 +45,7 @@ integer_expression1 & integer_expression2
 ## <a name="result-types"></a>戻り値の型  
  2 つの引数のデータ型によって決まります。 詳しくは、「 [式における Integration Services データ型](../../integration-services/expressions/integration-services-data-types-in-expressions.md)」をご覧ください。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  条件のいずれかが NULL の場合、式の結果は NULL になります。  
   
 ## <a name="expression-examples"></a>式の例  

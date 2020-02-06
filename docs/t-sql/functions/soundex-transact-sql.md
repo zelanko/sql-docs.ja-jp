@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3f0a8dd4c5faecc54b7d1c5a5d506fc7cf4ecd00
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67907076"
 ---
 # <a name="soundex-transact-sql"></a>SOUNDEX (Transact-SQL)
@@ -49,7 +49,7 @@ SOUNDEX ( character_expression )
 ## <a name="return-types"></a>戻り値の型  
  **varchar**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  SOUNDEX では、英数字の文字列が、読み上げ時の文字列の発音方法に基づいた 4 文字コードに変換されます。 コードの最初の文字の最初の文字は *character_expression*, 、大文字に変換されます。 コードの 2 番目から 4 番目までの文字は式の中の文字を表す数字です。 A、E、I、O、U、H、W、Y の各文字は、文字列の先頭の文字である場合を除き無視されます。 4 文字コードを生成するために、必要に応じて、末尾にゼロが追加されます。 SOUNDEX コードの詳細については、次を参照してください。 [The Soundex Indexing System](https://www.archives.gov/research/census/soundex.html)です。  
   
  さまざまな文字列からの SOUNDEX コードを比較して、読み上げ時の文字列の発音がどの程度類似しているかを確認できます。 DIFFERENCE 関数では 2 つの文字列に対して SOUNDEX が実行され、これらの文字列について SOUNDEX コードがどの程度類似しているかを示す整数が返されます。  
@@ -67,7 +67,7 @@ SOUNDEX ( character_expression )
   
 -   SOUNDEX で定義された保存される計算列を含むインデックス (インデックス付きビューを含む) は、`ALTER INDEX ALL ON <object> REBUILD` ステートメントを実行してインデックスが再構築されるまでクエリできません。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、SOUNDEX 関数、およびこれに関連した DIFFERENCE 関数を示しています。 最初の例では、標準 `SOUNDEX` 値がすべての子音に対して返されます。 母音、文字 `SOUNDEX`、2 文字の連続、および文字 `Smith` は含まれないため、`Smythe` と `y` に対する `h` では同じ結果が返されます。  
   
 ```  

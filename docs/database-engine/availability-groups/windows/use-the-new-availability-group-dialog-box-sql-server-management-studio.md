@@ -13,10 +13,10 @@ ms.assetid: 1b0a6421-fbd4-4bb4-87ca-657f4782c433
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 2c53998ea56c02e43a62573b31767c1beea78a8d
-ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74821953"
 ---
 # <a name="use-the-new-availability-group-dialog-box-sql-server-management-studio"></a>[新しい可用性グループ] ダイアログ ボックスの使用 (SQL Server Management Studio)
@@ -45,7 +45,7 @@ ms.locfileid: "74821953"
 -   セカンダリ レプリカの可用性グループへの参加    
 -   最初のデータの同期の実行  
   
- これらの構成タスクの詳細については、[補足情報: 可用性グループを作成した後](#FollowUp)に関する情報 (このトピックで後述) を参照してください。  
+ これらの構成タスクについては、このトピックの後の「 [補足情報: [新しい可用性グループ] ダイアログ ボックスを使用して可用性グループを作成した後](#FollowUp)」を参照してください。  
   
 ##  <a name="Permissions"></a> Permissions  
  **sysadmin** 固定サーバー ロールのメンバーシップと、CREATE AVAILABILITY GROUP サーバー権限、ALTER ANY AVAILABILITY GROUP 権限、CONTROL SERVER 権限のいずれかが必要です。  
@@ -70,13 +70,13 @@ ms.locfileid: "74821953"
     > [!TIP]  
     >  レプリカを追加した後ホスト サーバー インスタンスに接続できない場合は、このレプリカを削除し、新しいレプリカを追加できます。 詳細については、「[可用性グループからのセカンダリ レプリカの削除 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-a-secondary-replica-from-an-availability-group-sql-server.md)」および「[可用性グループへのセカンダリ レプリカの追加 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md)」を参照してください。  
   
-8.  ダイアログ ボックスの **[ページの選択]** ペインで、 **[バックアップの設定]** をクリックします。 次に、 **[バックアップの設定]** ページで、レプリカのロールに基づいてどこでバックアップを実行するかを指定し、この可用性グループの可用性レプリカをホストするそれぞれのサーバー インスタンスにバックアップの優先順位を割り当てます。 詳細については、「[可用性グループのプロパティ: 新しい可用性グループ &#40;[バックアップの設定] ページ&#41;](../../../database-engine/availability-groups/windows/availability-group-properties-new-availability-group-backup-preferences-page.md)」を参照してください。  
+8.  ダイアログ ボックスの **[ページの選択]** ペインで、 **[バックアップの設定]** をクリックします。 次に、 **[バックアップの設定]** ページで、レプリカのロールに基づいてどこでバックアップを実行するかを指定し、この可用性グループの可用性レプリカをホストするそれぞれのサーバー インスタンスにバックアップの優先順位を割り当てます。 詳細については、「[[可用性グループのプロパティ]: [新しい可用性グループ] &#40;[バックアップの設定] ページ&#41;](../../../database-engine/availability-groups/windows/availability-group-properties-new-availability-group-backup-preferences-page.md)」を参照してください。  
   
 9. 可用性グループを作成するには、 **[OK]** をクリックします。 これにより、指定したデータベースが前提条件を満たしているかどうかが確認されます。  
   
      可用性グループを作成しないでダイアログ ボックスを終了するには、 **[キャンセル]** をクリックします。  
   
-##  <a name="FollowUp"></a>補足情報: [新しい可用性グループ] ダイアログ ボックスを使用して可用性グループを作成した後  
+##  <a name="FollowUp"></a> 補足情報: [新しい可用性グループ] ダイアログ ボックスを使用して可用性グループを作成した後  
   
 -   可用性グループのセカンダリ レプリカをホストするそれぞれのサーバー インスタンスに接続し、次の手順を実行する必要があります。  
   

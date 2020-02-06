@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: d7fc5a14a9da000b69db804a5439fb62985f59b8
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75558560"
 ---
 # <a name="configure-usage--diagnostic-data-collection-for-sql-server-on-linux"></a>SQL Server on Linux の使用状況と診断データの収集を構成する
@@ -61,7 +61,7 @@ Docker 上で使用状況と診断データの収集を無効にするには、D
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-1. `[telemetry]` および `customerfeedback = false` という行を含む `mssql.conf` ファイルをホスト ディレクトリに追加します。
+1. `mssql.conf` および `[telemetry]` という行を含む `customerfeedback = false` ファイルをホスト ディレクトリに追加します。
  
    ```bash
    echo '[telemetry]' >> <host directory>/mssql.conf
@@ -85,7 +85,7 @@ Docker 上で使用状況と診断データの収集を無効にするには、D
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-1. `[telemetry]` および `customerfeedback = false` という行を含む `mssql.conf` ファイルをホスト ディレクトリに追加します。
+1. `mssql.conf` および `[telemetry]` という行を含む `customerfeedback = false` ファイルをホスト ディレクトリに追加します。
 
    ```bash
    echo '[telemetry]' >> <host directory>/mssql.conf
@@ -154,7 +154,7 @@ Docker 上で Local Audit を有効にするには、Docker で[データを保�
    sudo mkdir <host directory>/audit
    ```
 
-1. `[telemetry]` および `userrequestedlocalauditdirectory = <host directory>/audit` という行を含む `mssql.conf` ファイルをホスト ディレクトリに追加します。
+1. `mssql.conf` および `[telemetry]` という行を含む `userrequestedlocalauditdirectory = <host directory>/audit` ファイルをホスト ディレクトリに追加します。
  
    ```bash
    echo '[telemetry]' >> <host directory>/mssql.conf
@@ -184,7 +184,7 @@ Docker 上で Local Audit を有効にするには、Docker で[データを保�
    sudo mkdir <host directory>/audit
    ```
 
-1. `[telemetry]` および `userrequestedlocalauditdirectory = <host directory>/audit` という行を含む `mssql.conf` ファイルをホスト ディレクトリに追加します。
+1. `mssql.conf` および `[telemetry]` という行を含む `userrequestedlocalauditdirectory = <host directory>/audit` ファイルをホスト ディレクトリに追加します。
  
    ```bash
    echo '[telemetry]' >> <host directory>/mssql.conf

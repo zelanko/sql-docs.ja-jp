@@ -9,10 +9,10 @@ author: SQLvariant
 ms.author: aanelson
 ms.reviewer: vanto
 ms.openlocfilehash: e37237224dd9e8a6b44b913914c43d29cbc25d21
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "69028724"
 ---
 # <a name="manage-sql-server-on-linux-with-powershell-core"></a>PowerShell Core で SQL Server on Linux を管理する
@@ -78,9 +78,9 @@ Script     21.1.18102 SqlServer     {Add-SqlAvailabilityDatabase, Add-SqlAvailab
 
 次の手順では、PowerShell Core を使用して Linux 上の SQL Server インスタンスに接続し、いくつかのサーバー プロパティを表示します。
 
-PowerShell プロンプトで次のコマンドをコピーして貼り付けます。 これらのコマンドを実行すると、PowerShell では、次のことが行われます。
+次のコマンドをコピーして PowerShell プロンプトに貼り付けます。 これらのコマンドを実行すると、PowerShell では、次のことが行われます。
 - インスタンスのホスト名または IP アドレスの入力を求めるダイアログが表示されます
-- *[PowerShell 資格情報の要求]* ダイアログが表示され、資格情報の入力が求められます。 *SQL ユーザー名*と *SQL パスワード*を使用し、Linux 上の SQL Server インスタンスに接続できます
+- *[PowerShell 資格情報の要求]* ダイアログが表示され、資格情報の入力が求められます。 "*SQL ユーザー名*" と "*SQL パスワード*" を使って、Linux 上の SQL Server インスタンスに接続できます
 - **Get-SqlInstance** コマンドレットを使用して **Server** に接続し、いくつかのプロパティを表示します
 
 必要に応じて、`$serverInstance` 変数をお使いの SQL Server インスタンスの IP アドレスまたはホスト名に置き換えることができます。
@@ -180,12 +180,12 @@ tempdb               Normal       16.00 MB    5.49 MB Simple       140 sa
 
 次の手順では、PowerShell Core を使用し、Linux 上の SQL Server インスタンスで接続されているエラー ログを調べます。
 
-PowerShell プロンプトで次のコマンドをコピーして貼り付けます。 実行に数分かかる場合があります これらのコマンドで次の手順が実行されます。
+次のコマンドをコピーして PowerShell プロンプトに貼り付けます。 実行に数分かかる場合があります。 これらのコマンドで次の手順が実行されます。
 - インスタンスのホスト名または IP アドレスの入力を求めるダイアログが表示されます
-- *[PowerShell 資格情報の要求]* ダイアログが表示され、資格情報の入力が求められます。 *SQL ユーザー名*と *SQL パスワード*を使用し、Linux 上の SQL Server インスタンスに接続できます
-- **Get-SqlErrorLog** コマンドレットを使用して Linux 上の SQL Server インスタンスに接続し、**昨日**以降のエラー ログを取得します。
+- *[PowerShell 資格情報の要求]* ダイアログが表示され、資格情報の入力が求められます。 "*SQL ユーザー名*" と "*SQL パスワード*" を使って、Linux 上の SQL Server インスタンスに接続できます
+- **Get-SqlErrorLog** コマンドレットを使用して Linux 上の SQL Server インスタンスに接続し、**昨日**以降のエラー ログを取得します
 
-任意で、`$serverInstance` 変数を SQL Server インスタンスの IP アドレスまたはホスト名と置換できます。
+必要に応じて、`$serverInstance` 変数をお使いの SQL Server インスタンスの IP アドレスまたはホスト名に置き換えることができます。
 
 ```powershell
 # Prompt for instance & credentials to login into SQL Server

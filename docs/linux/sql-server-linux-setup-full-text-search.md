@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
 ms.openlocfilehash: 2f99310a1eaa240db15b4db5f686a4d6cc49c186
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70874764"
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>Linux に SQL Server フルテキスト検索をインストールする
@@ -86,9 +86,9 @@ sudo zypper update mssql-server-fts
 
 フルテキスト検索では、言語に基づいて個々の単語の識別方法を決定する、[ワード ブレーカー](../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)が使われています。 **sys.fulltext_languages** カタログ ビューに対してクエリを実行することで、登録されているワード ブレーカーの一覧を取得できます。 以下の言語のワード ブレーカーが SQL Server と共にインストールされます。
 
-| [言語] | 言語 ID |
+| 言語 | 言語 ID |
 |---|---|
-| ニュートラル | 0 |
+| 中立 | 0 |
 | アラビア語 | 1025 |
 | ベンガル語 (インド) | 1093 |
 | ブークモール | 1044 |
@@ -128,12 +128,12 @@ sudo zypper update mssql-server-fts
 | Russian | 1049 |
 | セルビア語 (キリル) | 3098 |
 | セルビア語 (ラテン) | 2074 |
-| Simplified Chinese | 2052 |
+| 簡体中国語 | 2052 |
 | Slovak | 1051 |
 | Slovenian | 1060 |
 | Spanish | 3082 |
 | Swedish | 1053 |
-| タミール語 | 1097 |
+| タミル語 | 1097 |
 | テルグ語 | 1098 |
 | Thai | 1054 |
 | Traditional Chinese | 1028 |
@@ -280,6 +280,6 @@ sudo zypper update mssql-server-fts
     GO
     ```
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 フルテキスト検索の詳細については、[SQL Server フルテキスト検索](../relational-databases/search/full-text-search.md)に関する記事をご覧ください。 

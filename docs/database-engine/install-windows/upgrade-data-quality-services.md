@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: fab545b34f257563466ec2f64911cdfaceca9456
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67934856"
 ---
 # <a name="upgrade-data-quality-services"></a>Data Quality Services のアップグレード
@@ -25,7 +25,7 @@ ms.locfileid: "67934856"
   
 > [!IMPORTANT]
 >  -   スキーマのアップグレード中に誤ってデータが削除されることを防ぐため、DQS をアップグレードする前に DQS データベースをバックアップしておく必要があります。 DQS データベースのバックアップの詳細については、「 [DQS データベースのバックアップと復元](../../data-quality-services/backing-up-and-restoring-dqs-databases.md)」を参照してください。  
-> -   データ品質タスクを実行するために、現在または以前のバージョンの Data Quality クライアントか、Integration Services 内の [DQS クレンジング変換](../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)を使用して、[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Data Quality サーバーに接続できます。  
+> -   データ品質タスクを実行するために、現在または以前のバージョンの Data Quality クライアントか、Integration Services 内の [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]DQS クレンジング変換[を使用して、](../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md) Data Quality サーバーに接続できます。  
 > -   Data Quality Services およびマスター データ サービスをアップグレードした後は、以前のバージョンの Excel 用マスター データ サービス アドインは機能しなくなります。 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] ここ [から、](https://go.microsoft.com/fwlink/?LinkID=506665)バージョンの Excel 用マスター データ サービス アドインをダウンロードできます。  
   
 ##  <a name="Prerequisites"></a> 前提条件  
@@ -60,8 +60,8 @@ ms.locfileid: "67934856"
 
       >[!NOTE]
       >フォルダーのパスで、[nn] は [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] のバージョン番号に置き換えます。
-      >- SQL Server 2016 の場合:13
-      >- SQL Server 2017 の場合:14
+      >- SQL Server 2016 の場合: 13
+      >- SQL Server 2017 の場合: 14
 
         ```  
         cd C:\Program Files\Microsoft SQL Server\MSSQL[nn].MSSQLSERVER\MSSQL\Binn  
@@ -91,7 +91,7 @@ ms.locfileid: "67934856"
   
 3.  出力で、アップグレードの日付と共に、各アップグレードのエントリが表示されます。 最新の日付になっていて、値が最も大きい VERSION_ID と ASSEMBLY_VERSION が、現在のバージョンです。 STATUS 列に値 2 が表示されている場合は、成功を示しています。 エラーが発生した場合は、ERROR 列にそのエラーが表示されます。 サンプル出力を示します。  
   
-    |ID|UPGRADE_DATE|VERSION_ID|ASSEMBLY_VERSION|USER_NAME|STATUS|[error]|  
+    |id|UPGRADE_DATE|VERSION_ID|ASSEMBLY_VERSION|USER_NAME|状態|ERROR|  
     |--------|-------------------|-----------------|-----------------------|----------------|------------|-----------|  
     |1000|2013-08-11 05:26:39.567|1200|11.0.3000.0|\<DOMAIN\UserName>|2||  
     |1001|2013-09-19 15:09:37.750|1600|12.0.xxxx.0|\<DOMAIN\UserName>|2||  

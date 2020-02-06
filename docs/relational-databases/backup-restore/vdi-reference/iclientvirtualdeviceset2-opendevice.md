@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: aff46d7240cf504b02e75d91b75d0ba746a24752
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847573"
 ---
 # <a name="iclientvirtualdeviceset2opendevice-vdi"></a>IClientVirtualDeviceSet2::OpenDevice (VDI)
@@ -48,7 +48,7 @@ HRESULT IClientVirtualDeviceSet2::OpenDevice (
 | VD_E_PROTOCOL | セットが初期化中の状態ではないか、この特定のデバイスが既に開いています。 |
 | VD_E_INVALID | デバイス名が無効です。 これは、セットの構成要素として認識されている名前の 1 つではありません。 |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 VD_E_OPEN は、問題なく返される場合があります。 クライアントでは、このコードが返されるまで、ループを使って OpenDevice を呼び出すことができます。
 複数のデバイス (たとえば、n 個デバイス) が構成されている場合は、仮想デバイス セットから一意のデバイス インターフェイスが n 個返されます。 最初のデバイスには、仮想デバイス セットと同じ名前が付けられます。 その他のデバイスには、BACKUP/RESTORE ステートメントの VIRTUAL_DEVICE 句で指定された名前が付けられます。
@@ -57,6 +57,6 @@ GetConfiguration 関数は、デバイスが開けるようになるまで待機
 
 この関数が成功しなかった場合は、ppVirtualDevice によって null 値が返されます。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 詳細については、[SQL Server 仮想デバイス インターフェイス リファレンスの概要](reference-virtual-device-interface.md)に関するページを参照してください。

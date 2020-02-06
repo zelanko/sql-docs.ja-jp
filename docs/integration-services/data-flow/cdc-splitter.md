@@ -13,10 +13,10 @@ ms.assetid: 167bc5c6-fa36-439d-987c-b20acd1a77e2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: beba1f54c4eae683e6b35eb44408d84c5d812b84
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293229"
 ---
 # <a name="cdc-splitter"></a>CDC スプリッター
@@ -26,10 +26,10 @@ ms.locfileid: "71293229"
 
   CDC スプリッターは、CDC ソース データの変更行の単一フローを、挿入、更新、削除の各操作のための個別のデータ フローに分割します。 データベースは、必須の列 `__$operation` と、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 変更テーブル内のその標準の値に基づいて分割されます。  
   
-|操作の値|[出力]|[説明]|  
+|操作の値|Output|[説明]|  
 |------------------------|------------|-----------------|  
 |1|削除|削除された行|  
-|2|Insert|挿入された行 ( **"結合を含む差分"** CDC モードを使用する場合は使用不可)|  
+|2|挿入|挿入された行 ( **"結合を含む差分"** CDC モードを使用する場合は使用不可)|  
 |3|更新|更新前の行 ( **"古い値を含むすべて"** CDC モードの場合のみ使用可)|  
 |4|更新|更新後の行 (更新前と同じ)|  
 |5|更新|マージ行 ( **"結合を含む差分"** CDC モードを使用する場合のみ使用可)|  
@@ -44,7 +44,7 @@ ms.locfileid: "71293229"
   
  コンポーネントのエラー出力には、次の出力列があります。  
   
--   **エラー コード**: 1 に設定します。  
+-   **エラー コード**: 1 に設定されます。  
   
 -   **エラー列**: (変換エラーの) エラーの原因となるソース列。  
   

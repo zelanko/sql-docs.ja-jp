@@ -21,10 +21,10 @@ ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d5f721d589354d5e7f4ec970bf0ea086895df129
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75320005"
 ---
 # <a name="set-up-replication-distribution-database-in-always-on-availability-group"></a>Always On 可用性グループのレプリケーション ディストリビューション データベースを設定する
@@ -98,7 +98,7 @@ AG のディストリビューション データベースを下記の手順に�
 
 ### <a name="distributors-workflow"></a>ディストリビューターのワークフロー
 
-1. `sp_adddistributor @@servername` を使用して DIST1、DIST2、DIST3 をディストリビューターとして構成します。 `@password` によって `distributor_admin` のパスワードを指定します。 `@password` は、DIST1、DIST2、DIST3 の間で同じにする必要があります。
+1. `sp_adddistributor @@servername` を使用して DIST1、DIST2、DIST3 をディストリビューターとして構成します。 `distributor_admin` によって `@password` のパスワードを指定します。 `@password` は、DIST1、DIST2、DIST3 の間で同じにする必要があります。
 2. `sp_adddistributiondb` を使用して DIST1 上にディストリビューション データベースを作成します。 ディストリビューション データベースの名前は `distribution` です。 `distribution` データベースの回復モードを簡易から完全に変更します。
 3. DIST1、DIST2、および DIST3 上でレプリカを使用して `distribution` データベース用の AG を作成します。 すべてのレプリカを同期させることをお勧めします。 セカンダリ レプリカを読み取り可能に構成するか、読み取りを許可するように構成します。 この時点では、ディストリビューション データベースは AG であり、DIST1 がプライマリ レプリカ、DIST2 と DIST3 がセカンダリ レプリカです。
 4. AG 用に `DISTLISTENER` という名前のリスナーを構成します。
@@ -188,7 +188,7 @@ PUB 上で、このパブリッシャー用のサブスクリプションとパ�
 
 ### <a name="distributors-workflow"></a>ディストリビューターのワークフロー
 
-1. `sp_adddistributor @@servername` を使用して DIST3 をディストリビューターとしてする必要があります。 @password パラメーターを使用して、`distributor_admin` のパスワードを指定する必要があります。 パスワードは、DIST1 および DIST2 に対して指定したものと同じにする必要があります。
+1. `sp_adddistributor @@servername` を使用して DIST3 をディストリビューターとしてする必要があります。 `distributor_admin` パラメーターを使用して、@password のパスワードを指定する必要があります。 パスワードは、DIST1 および DIST2 に対して指定したものと同じにする必要があります。
 2. 現在のディストリビューション データベース用の AG に DIST3 を追加します。
 3. DIST3 上で次を実行します。
 

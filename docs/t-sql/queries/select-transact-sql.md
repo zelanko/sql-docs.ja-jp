@@ -26,10 +26,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 160d2e384dec5a0c0f3cc5ff40bcf62e3941d096
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67948286"
 ---
 # <a name="select-transact-sql"></a>SELECT (Transact-SQL)
@@ -100,7 +100,7 @@ SELECT <select_criteria>
   
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  SELECT ステートメントは非常に複雑であるため、構文の構成要素と引数の詳細を句ごとに説明します。  
   
 |||  
@@ -147,7 +147,7 @@ SELECT <select_criteria>
 次の例では、[!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] データベースを使用します。
   
 ### <a name="a-using-select-to-retrieve-rows-and-columns"></a>A. SELECT を使用して行および列を取得する  
- このセクションでは、次の 3 つのコード例を示します。 最初のコード例では、`DimEmployee` テーブルから、WHERE 句を指定せずにすべての行を返し、また `*` を使用してすべての列を返しています。  
+ このセクションでは、次の 3 つのコード例を示します。 最初のコード例では、`*` テーブルから、WHERE 句を指定せずにすべての行を返し、また `DimEmployee` を使用してすべての列を返しています。  
   
 ```sql  
 SELECT *  
@@ -163,7 +163,7 @@ FROM DimEmployee AS e
 ORDER BY LastName;  
 ```  
   
- この例では、`AdventureWorksPDW2012` データベース内の `DimEmployee` テーブルから、WHERE 句を指定せずにすべての行と、一部の列 (`FirstName`、`LastName`、`StartDate`) を返しています。 3 番目の列見出しは `FirstDay` に名前変更されています。  
+ この例では、`FirstName` データベース内の `LastName` テーブルから、WHERE 句を指定せずにすべての行と、一部の列 (`StartDate`、`DimEmployee`、`AdventureWorksPDW2012`) を返しています。 3 番目の列見出しは `FirstDay` に名前変更されています。  
   
 ```sql  
 SELECT FirstName, LastName, StartDate AS FirstDay  
@@ -171,7 +171,7 @@ FROM DimEmployee
 ORDER BY LastName;  
 ```  
   
- この例では、`EndDate` が NULL でない、`MaritalStatus` が 'M' (結婚している) の `DimEmployee` の行のみが返されます。  
+ この例では、`DimEmployee` が NULL でない、`EndDate` が 'M' (結婚している) の `MaritalStatus` の行のみが返されます。  
   
 ```sql  
 SELECT FirstName, LastName, StartDate AS FirstDay  

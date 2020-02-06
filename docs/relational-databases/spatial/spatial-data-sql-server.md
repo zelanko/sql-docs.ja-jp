@@ -19,16 +19,16 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f600f45241016bc2f5bb59faa89b5f45b317c90d
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72278140"
 ---
 # <a name="spatial-data-sql-server"></a>空間データ (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  空間データは、幾何オブジェクトの物理的な位置と形状に関する情報を表します。 それらのオブジェクトは、点の位置である場合もあれば、国、道、湖などのより複雑なオブジェクトである場合もあります。  
+  空間データは、幾何学的オブジェクトの物理的な場所と形状に関する情報を表します。 これらのオブジェクトは、ポイントの場所や、国、道路、湖などのより複雑なオブジェクトである可能性があります。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 **geometry** と **geography** の 2 つの空間データ型がサポートされています。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "72278140"
  [空間データ型の概要](../../relational-databases/spatial/spatial-data-types-overview.md)  
  空間データ型について説明します。  
   
--   [ポイント](../../relational-databases/spatial/point.md)  
+-   [Point](../../relational-databases/spatial/point.md)  
   
 -   [LineString](../../relational-databases/spatial/linestring.md)  
   
@@ -63,7 +63,7 @@ ms.locfileid: "72278140"
   
 -   [CompoundCurve](../../relational-databases/spatial/compoundcurve.md)  
   
--   [多角形](../../relational-databases/spatial/polygon.md)  
+-   [Polygon](../../relational-databases/spatial/polygon.md)  
   
 -   [CurvePolygon](../../relational-databases/spatial/curvepolygon.md)  
   

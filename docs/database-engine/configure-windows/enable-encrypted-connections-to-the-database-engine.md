@@ -24,10 +24,10 @@ ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 53ca4d2631e41e0a815dbf240fc0a7006ec8ce8b
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75252860"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>データベース エンジンへの暗号化接続の有効化
@@ -89,9 +89,9 @@ TLS 暗号化を有効にすると、[!INCLUDE[ssNoVersion](../../includes/ssnov
   > [!INCLUDE[ssnoteregistry_md](../../includes/ssnoteregistry-md.md)]  
 
 ## <a name="to-provision-install-a-certificate-on-a-single-server"></a>1 台のサーバーに証明書をプロビジョニング (インストール) するには  
-[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] で、SQL Server 構成マネージャーに証明書の管理が統合されました。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] の SQL Server 構成マネージャーは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の以前のバージョンで使用できます。 単一の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに証明書を追加する方法については、「[証明書の管理 (SQL Server 構成マネージャー)](../../database-engine/configure-windows/manage-certificates.md)」を参照してください。
+[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] で、SQL Server 構成マネージャーに証明書の管理が統合されました。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] の SQL Server 構成マネージャーは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の以前のバージョンで使用できます。 単一の [ インスタンスに証明書を追加する方法については、「](../../database-engine/configure-windows/manage-certificates.md)証明書の管理 (SQL Server 構成マネージャー)[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]」を参照してください。
 
-[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] を介して [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] を使用する場合に、[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] の SQL Server 構成マネージャーが使用できない場合は、次の手順に従ってください。
+[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] を介して [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] を使用する場合に、[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] の SQL Server 構成マネージャーが使用できない場合は、次の手順に従ってください。
 
 1. **[スタート]** メニューの **[ファイル名を指定して実行]** をクリックし、 **[名前]** ボックスに「 **MMC** 」と入力して **[OK]** をクリックします。  
   
@@ -116,7 +116,7 @@ TLS 暗号化を有効にすると、[!INCLUDE[ssNoVersion](../../includes/ssnov
 ## <a name="to-provision-install-a-certificate-across-multiple-servers"></a>複数のサーバーに証明書をプロビジョニング (インストール) するには
 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] で、SQL Server 構成マネージャーに証明書の管理が統合されました。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] の SQL Server 構成マネージャーは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の以前のバージョンで使用できます。 フェールオーバー クラスター構成または可用性グループ構成に証明書を追加するには、「[証明書の管理 (SQL Server 構成マネージャー)](../../database-engine/configure-windows/manage-certificates.md)」を参照してください。
 
-[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] を介して [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] を使用する場合に、[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] の SQL Server 構成マネージャーが使用できない場合は、各サーバーに対して、「[1 台のサーバーに証明書をプロビジョニング (インストール) するには](#to-provision-install-a-certificate-on-a-single-server)」の手順を実行します。
+[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] を介して [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] を使用する場合に、[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] の SQL Server 構成マネージャーが使用できない場合は、各サーバーに対して、「[1 台のサーバーに証明書をプロビジョニング (インストール) するには](#to-provision-install-a-certificate-on-a-single-server)」の手順を実行します。
 
 ## <a name="to-export-the-server-certificate"></a>サーバー証明書をエクスポートするには  
   
@@ -129,9 +129,9 @@ TLS 暗号化を有効にすると、[!INCLUDE[ssNoVersion](../../includes/ssnov
 > [!IMPORTANT]
 > SQL Server サービス アカウントは、SQL Server で暗号化を強制するために使用される証明書の読み取りアクセス許可を持っている必要があります。 特権のないサービス アカウントの場合、読み取りアクセス許可を証明書に追加する必要があります。 この操作に失敗すると、SQL Server サービスを再起動できなくなる可能性があります。
   
-1. **SQL Server 構成マネージャー**で、 **[SQL Server ネットワークの構成]** を展開し、 _[\<server instance>_ **のプロトコル]** を右クリックします。次に **[プロパティ]** を選択します。  
+1. **SQL Server 構成マネージャー**で、 **[SQL Server ネットワークの構成]** を展開し、 **[** server instance> _\< のプロトコル]_ を右クリックします。次に **[プロパティ]** を選択します。  
   
-2. _[\<instance name>_ **のプロトコル]** の **[プロパティ]** ダイアログ ボックスの **[証明書]** タブで、 **[証明書]** ボックスのドロップダウンから必要な証明書を選択し、 **[OK]** をクリックします。  
+2. **[** instance name> _\< のプロトコル]_ の **[プロパティ]** ダイアログ ボックスの **[証明書]** タブで、 **[証明書]** ボックスのドロップダウンから必要な証明書を選択し、 **[OK]** をクリックします。  
   
 3. **[フラグ]** タブの **[ForceEncryption]** ボックスの一覧の **[はい]** をクリックし、 **[OK]** をクリックしてダイアログ ボックスを閉じます。  
   

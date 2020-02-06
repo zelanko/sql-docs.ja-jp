@@ -38,10 +38,10 @@ author: bluefooted
 ms.author: pamela
 manager: amitban
 ms.openlocfilehash: cd1fc9d36200a571a3dfd0e5367d4e3e01278466
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68262322"
 ---
 # <a name="dbcc-clonedatabase-transact-sql"></a>DBCC CLONEDATABASE (Transact-SQL)
@@ -88,7 +88,7 @@ Service Broker の関連システム カタログを複製に含めるかどう�
 BACKUP_CLONEDB  
 クローン データベースのバックアップを作成し、検証します。  VERIFY_CLONEDB と組み合わせて使用した場合、バックアップが作成される前にクローン データベースが検証されます。  このオプションは、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP3、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU8 以降で使用できます。
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 次の検証は、DBCC CLONEDATABASE によって実行されます。 いずれかの検証に失敗すると、コマンドは失敗となります。
 - 複製元データベースはユーザー データベースにする必要があります。 システム データベース (master、model、msdb、tempdb、ディストリビューション データベースなど) は複製できません。
 - 複製元データベースはオンラインにするか、読み取り可能になっている必要があります。
@@ -209,7 +209,7 @@ DBCC CLONEDATABASE では、複製に必要なトランザクション整合性�
 
 `DATABASEPROPERTYEX('dbname', 'IsVerifiedClone')` は、データベースが WITH VERIFY_CLONEDB を利用して正常に検証された場合に 1 を返します。
 
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-creating-a-clone-of-a-database-that-includes-schema-statistics-and-query-store"></a>A. スキーマ、統計、クエリ ストアを含むデータベースを複製する 
 次の例では、スキーマ、統計、クエリ ストア データを含む AdventureWorks データベースが複製されます ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 以降のバージョン)

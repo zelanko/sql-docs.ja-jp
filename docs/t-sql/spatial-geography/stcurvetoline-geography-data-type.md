@@ -18,10 +18,10 @@ ms.assetid: 2f863a85-6168-465a-b32f-bb5e3de58dee
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: d6c68aa9859fbe7e1066ad392377d6b50289fd0a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042392"
 ---
 # <a name="stcurvetoline-geography-data-type"></a>STCurveToLine (geography データ型)
@@ -39,9 +39,9 @@ ms.locfileid: "68042392"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
- CLR の戻り値の型:**SqlGeography**  
+ CLR の戻り値の型: **SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **CircularString** または **CompoundCurve** インスタンスに対して **LineString** インスタンスを返します。  
   
  **CurvePolygon** インスタンスに対して **Polygon** インスタンスを返します。  
@@ -50,7 +50,7 @@ ms.locfileid: "68042392"
   
  SQL MM 仕様とは異なり、このメソッドは多角形近似の計算に z 座標値を使用しません。 呼び出し元の **geography** インスタンスに含まれているすべての z-coordinate 値は無視されます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例は、`LineString` インスタンスの多角形近似である `CircularString` インスタンスを返します。  
   
 ```

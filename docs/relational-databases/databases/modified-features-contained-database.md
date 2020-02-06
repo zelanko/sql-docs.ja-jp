@@ -13,10 +13,10 @@ ms.assetid: a2942509-39a2-4903-b504-ae80a300a9de
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3c85d6e423c63337be4d2eaf2f96c420a4f6ad33
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68067342"
 ---
 # <a name="modified-features-contained-database"></a>変更された機能 (包含データベース)
@@ -46,7 +46,7 @@ ms.locfileid: "68067342"
  一時テーブルでは、ユーザー定義型、XML スキーマ コレクション、またはユーザー定義関数を参照できません。  
   
 ## <a name="collation"></a>照合順序  
- 非包含データベース モデルでは、3 種類の照合順序があります。データベースの照合、インスタンスの照合、および tempdb の照合です。 包含データベースでは、データベースの照合順序と新しいカタログの照合順序の 2 種類の照合順序のみが使用されます。 包含データベースの照合順序の詳細については、「 [包含データベースの照合順序](../../relational-databases/databases/contained-database-collations.md) 」を参照してください。  
+ 非包含データベースのモデルには、データベースの照合順序、インスタンスの照合順序、および tempdb の照合順序の 3 種類の照合順序があります。 包含データベースでは、データベースの照合順序と新しいカタログの照合順序の 2 種類の照合順序のみが使用されます。 包含データベースの照合順序の詳細については、「 [包含データベースの照合順序](../../relational-databases/databases/contained-database-collations.md) 」を参照してください。  
   
 ## <a name="user-options"></a>ユーザー オプション  
  包含データベースを有効にする場合、 [のインスタンスに対して](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md) user options オプション [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を 0 に設定する必要があります。  

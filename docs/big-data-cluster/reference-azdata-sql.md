@@ -9,18 +9,18 @@ ms.date: 11/04/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 951598c895fe322ee1a8b32cbbc2dc29b20c8e1a
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: f8fa1ca8df7f4d72c6df9b252d639f8771dee30c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531662"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74908738"
 ---
 # <a name="azdata-sql"></a>azdata sql
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-以下の記事では、`azdata` ツールの `sql` コマンドに関するリファレンスを提供します。 `azdata` の他のコマンドに関する詳細については、[azdata のリファレンス](reference-azdata.md)に関するページをご覧ください
+以下の記事では、`sql` ツールの `azdata` コマンドに関するリファレンスを提供します。 `azdata` の他のコマンドに関する詳細については、[azdata のリファレンス](reference-azdata.md)に関するページをご覧ください
 
 ## <a name="commands"></a>コマンド
 |     |     |
@@ -32,7 +32,7 @@ SQL DB CLI により、ユーザーは T-SQL を使用して SQL Server を操�
 ```bash
 azdata sql shell 
 ```
-### <a name="examples"></a>使用例
+### <a name="examples"></a>例
 対話型エクスペリエンスを開始するコマンド ラインの例。
 ```bash
 azdata sql shell
@@ -51,15 +51,14 @@ JMESPath クエリ文字列。 詳細と例については、[http://jmespath.or
 ## <a name="azdata-sql-query"></a>azdata sql query
 クエリ コマンドを使用すると、T-SQL クエリを実行できます。
 ```bash
-azdata sql query --database -d 
-                 -q
+azdata sql query -q --database -d
 ```
-### <a name="examples"></a>使用例
+### <a name="examples"></a>例
 テーブル名の一覧を選択します。  データベースの既定値は master です。
 ```bash
-azdata sql query 'SELECT name FROM SYS.TABLES'
+azdata sql query -q 'SELECT name FROM SYS.TABLES'
 ```
-### <a name="required-parameters"></a>必要なパラメーター
+### <a name="required-parameters"></a>必須のパラメーター
 #### `--database -d`
 クエリを実行するデータベース。  既定値は master です。
 #### `-q`
@@ -76,6 +75,6 @@ JMESPath クエリ文字列。 詳細と例については、[http://jmespath.or
 #### `--verbose`
 ログの詳細レベルを上げます。 詳細なデバッグ ログを表示するには --debug を使います。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 `azdata` の他のコマンドに関する詳細については、[azdata のリファレンス](reference-azdata.md)に関するページをご覧ください。 `azdata` ツールのインストール方法の詳細については、[SQL Server 2019 ビッグ データ クラスターを管理する azdata のインストール](deploy-install-azdata.md)に関するページを参照してください。

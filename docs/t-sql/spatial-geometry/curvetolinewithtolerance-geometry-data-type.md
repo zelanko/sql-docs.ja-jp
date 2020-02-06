@@ -15,10 +15,10 @@ ms.assetid: 96871075-1998-4cd9-86b1-3fc55577aee4
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 95893aac0b6ca62b60b12f9d35daf15e77e565f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67929300"
 ---
 # <a name="curvetolinewithtolerance-geometry-data-type"></a>CurveToLineWithTolerance (geometry データ型)
@@ -43,12 +43,12 @@ ms.locfileid: "67929300"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **geometry**  
   
- CLR の戻り値の型:**SqlGeometry**  
+ CLR 戻り値の型: **SqlGeometry**  
   
 ## <a name="exceptions"></a>例外  
  tolerance <= 0 に設定すると、`ArgumentOutOfRange` 例外がスローされます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  このメソッドを使用すると、結果として得られる **LineString** の許容誤差量を指定できます。  
   
  次の表には、さまざまな種類の `CurveToLineWithTolerance()` によって返されるインスタンスの種類を示しています。  
@@ -69,10 +69,10 @@ ms.locfileid: "67929300"
 |2 次元のインスタンスを複数持つ **GeometryCollection**|**MultiPolygon** インスタンス|  
 |次元の異なるインスタンスを複数持つ **GeometryCollection**|**GeometryCollection** インスタンス|  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-using-different-tolerance-values-on-a-circularstring-instance"></a>A. CircularString インスタンスに対して異なる tolerance 値を使用する  
- 次の例では、許容値の設定によって、`CircularString` から返される `LineString` インスタンスが変化するしくみを確認できます。  
+ 次の例では、許容値の設定によって、`LineString` から返される `CircularString` インスタンスが変化するしくみを確認できます。  
   
 ```
  DECLARE @g geometry; 
@@ -99,7 +99,7 @@ ms.locfileid: "67929300"
  ```  
   
 ### <a name="d-setting-relative-to-true-for-an-invoking-curvepolygon-instance"></a>D. 呼び出し元の CurvePolygon インスタンスに対して relative を true に設定する  
- 次の例では、`CurvePolygon` インスタンスを使用し、*relative* を true に設定して `CurveToLineWithTolerance()` を呼び出します。  
+ 次の例では、`CurvePolygon` インスタンスを使用し、`CurveToLineWithTolerance()`relative*を true に設定して* を呼び出します。  
   
 ```
  DECLARE @g geometry = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(0 4, 4 0, 8 4), (8 4, 0 4)))'; 
@@ -107,7 +107,7 @@ ms.locfileid: "67929300"
  ```  
   
 ### <a name="e-using-the-method-on-a-geometrycollection-instance"></a>E. GeometryCollection インスタンスに対してメソッドを使用する  
- 次の例では、2 次元の `CurvePolygon` インスタンスと 1 次元の `CircularString` インスタンスを含む `GeometryCollection` に対して `CurveToLineWithTolerance()` を呼び出します。 `CurveToLineWithTolerance()` により、両方の円弧型が線分型に変換され、`GeometryCollection` 型で返されます。  
+ 次の例では、2 次元の `CurveToLineWithTolerance()` インスタンスと 1 次元の `GeometryCollection` インスタンスを含む `CurvePolygon` に対して `CircularString` を呼び出します。 `CurveToLineWithTolerance()` により、両方の円弧型が線分型に変換され、`GeometryCollection` 型で返されます。  
   
 ```
  DECLARE @g geometry; 

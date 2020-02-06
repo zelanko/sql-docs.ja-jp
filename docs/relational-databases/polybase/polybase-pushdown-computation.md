@@ -9,10 +9,10 @@ ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
 ms.openlocfilehash: 94e360c19c4f734b891701a4ec40c82cdb57927d
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71710483"
 ---
 # <a name="pushdown-computations-in-polybase"></a>PolyBase でのプッシュダウン計算
@@ -64,7 +64,7 @@ SQL Server では、述語のプッシュダウンに次の基本的な式と演
 
 演算子 BETWEEN、NOT、IN、LIKE はプッシュダウンできる場合があります。 実際の動作は、クエリ オプティマイザーが演算子式をどのように基本的な関係演算子を使用する一連のステートメントとして書き換えるかに依存します。
 
-この例のクエリには、Hadoop にプッシュダウンできる述語が複数あります。 SQL Server は、map-reduce ジョブを Hadoop にプッシュして、述語 `customer.account_balance <= 200000` を実行できます。 `BETWEEN 92656 and 92677` の式もまた、Hadoop にプッシュできる 2 項演算子と論理演算子とで構成されます。 `customer.account_balance and customer.zipcode` 内の論理**積**が最後の式です。
+この例のクエリには、Hadoop にプッシュダウンできる述語が複数あります。 SQL Server は、map-reduce ジョブを Hadoop にプッシュして、述語 `customer.account_balance <= 200000` を実行できます。 `BETWEEN 92656 and 92677` の式もまた、Hadoop にプッシュできる 2 項演算子と論理演算子とで構成されます。 **内の論理**積`customer.account_balance and customer.zipcode`が最後の式です。
 
 この述語の組み合わせで、map-reduce ジョブですべての WHERE 句を実行できます。 SELECT 条件を満たすデータのみが SQL Server PDW にコピーされます。
 
@@ -88,6 +88,6 @@ WHERE Speed > 65
 OPTION (DISABLE EXTERNALPUSHDOWN);
 ```
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 PolyBase について詳しくは、「[PolyBase とは](polybase-guide.md)」をご覧ください。

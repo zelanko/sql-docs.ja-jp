@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 66627b7b430d15afe73ec823c0af90e2d19d9a39
-ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70123183"
 ---
 # <a name="right-transact-sql"></a>RIGHT (Transact-SQL)
@@ -42,22 +42,22 @@ RIGHT ( character_expression , integer_expression )
   
 ## <a name="arguments"></a>引数  
  *character_expression*  
- 文字データまたはバイナリ データの[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。 *character_expression* には、定数、変数、または列を使用できます。 *character_expression* には、**text** または **ntext** を除く任意のデータ型 (暗黙的に **varchar** または **nvarchar** に変換できるデータ型) を使用できます。 それ以外の場合は、[CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) 関数を使用して *character_expression* を明示的に変換します。  
+ 文字データまたはバイナリ データの[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。 *character_expression* には定数、変数、または列を指定できます。 *character_expression* には、**text** または **ntext** を除く任意のデータ型 (暗黙的に **varchar** または **nvarchar** に変換できるデータ型) を使用できます。 それ以外の場合は、[CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) 関数を使用して *character_expression* を明示的に変換します。  
   
  *integer_expression*  
  返される *character_expression* の文字数を指定する正の整数です。 *integer_expression* が負の場合、エラーが返されます。 *integer_expression* が **bigint** 型で、値が大きい場合、*character_expression* には **varchar(max)** などのラージ データ型を使用する必要があります。  
   
 ## <a name="return-types"></a>戻り値の型  
- *character_expression* が非 Unicode 文字データ型の場合は、**varchar** を返します。  
+ **character_expression** が非 Unicode 文字データ型の場合は、*varchar* を返します。  
   
- *character_expression* が Unicode 文字データ型の場合は、**nvarchar** を返します。  
+ **character_expression** が Unicode 文字データ型の場合は、*nvarchar* を返します。  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>補助文字 (サロゲート ペア)  
  SC の照合順序を使用する場合、RIGHT 関数では、UTF-16 のサロゲート ペアが 1 文字としてカウントされます。 詳細については、「 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
-### <a name="a-using-right-with-a-column"></a>A:列を指定して RIGHT を使用する  
+### <a name="a-using-right-with-a-column"></a>A. 列を指定して RIGHT を使用する  
  次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベース内の各担当者の名前の右端から 5 文字が返されます。  
   
 ```  
@@ -82,7 +82,7 @@ Rob
   
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="b-using-right-with-a-column"></a>B. 列を指定して RIGHT を使用する  
  次の例では、`DimEmployee` テーブル内の各姓の右端から 5 文字が返されます。  

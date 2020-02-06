@@ -19,17 +19,17 @@ author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
 ms.openlocfilehash: 845c621291331fdf75e257a3f71ec8068df13ffd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68109355"
 ---
-# <a name="jsonvalue-transact-sql"></a>JSON_VALUE (Transact-SQL)
+# <a name="json_value-transact-sql"></a>JSON_VALUE (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
- JSON 文字列からには、スカラー値を抽出します。  
+ JSON 文字列からスカラー値を抽出します。  
   
  JSON 文字列からスカラー値ではなくオブジェクトまたは配列を抽出する場合は、「[JSON_QUERY &#40;Transact-SQL&#41;](../../t-sql/functions/json-query-transact-sql.md)」を参照してください。 **JSON_VALUE** と **JSON_QUERY** の違いについては、「[JSON_VALUE と JSON_QUERY を比較する](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md#JSONCompare)」を参照してください。  
   
@@ -67,11 +67,11 @@ JSON_VALUE ( expression , path )
   
  4,000 文字を超えるスカラー値を返す必要がある場合は、**JSON_VALUE** の代わりに **OPENJSON** を使用します。 詳細については、「 [OPENJSON &#40;Transact-SQL&#41;](../../t-sql/functions/openjson-transact-sql.md)」をご覧ください。  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 ### <a name="lax-mode-and-strict-mode"></a>厳密でないモードと厳格モード
 
- 次の JSON テキストを考慮してください。  
+ 次の JSON テキストを考えてみます。  
   
 ```json  
 DECLARE @jsonInfo NVARCHAR(MAX)
@@ -92,18 +92,18 @@ SET @jsonInfo=N'{
   
  次の表は、厳密でないモードと厳格モードでの **JSON_VALUE** の動作を比較します。 省略可能なパス モード (厳密でない、または厳格) の指定について詳しくは、「[JSON パス式 &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)」を参照してください。  
   
-|[パス]|厳密でないモードでの戻り値|厳格モードでの戻り値|詳細|  
+|Path|厳密でないモードでの戻り値|厳格モードでの戻り値|詳細情報|  
 |----------|------------------------------|---------------------------------|---------------|  
-|$|NULL|Error|スカラー値ではありません。<br /><br /> 代わりに **JSON_QUERY** を使用します。|  
+|$|NULL|エラー|スカラー値ではありません。<br /><br /> 代わりに **JSON_QUERY** を使用します。|  
 |$.info.type|N'1'|N'1'|該当なし|  
 |$.info.address.town|N'Bristol'|N'Bristol'|該当なし|  
-|$.info."address"|NULL|Error|スカラー値ではありません。<br /><br /> 代わりに **JSON_QUERY** を使用します。|  
-|$.info.tags|NULL|Error|スカラー値ではありません。<br /><br /> 代わりに **JSON_QUERY** を使用します。|  
-|$.info.type[0]|NULL|Error|配列ではありません。|  
-|$.info.none|NULL|Error|プロパティが存在しません。|  
+|$.info."address"|NULL|エラー|スカラー値ではありません。<br /><br /> 代わりに **JSON_QUERY** を使用します。|  
+|$.info.tags|NULL|エラー|スカラー値ではありません。<br /><br /> 代わりに **JSON_QUERY** を使用します。|  
+|$.info.type[0]|NULL|エラー|配列ではありません。|  
+|$.info.none|NULL|エラー|プロパティが存在しません。|  
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="example-1"></a>例 1
  次の例では、クエリの結果に JSON のプロパティの値 `town` と `state` を使用します。 **JSON_VALUE** がソースの照合順序を保持するため、結果の並べ替え順序が `jsonInfo` 列の照合順序に依存します。 

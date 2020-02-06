@@ -11,10 +11,10 @@ ms.date: 08/20/2018
 ms.author: chugu
 author: chugugrace
 ms.openlocfilehash: 8d78ab5befe5f95c07b6cb539d2629fdd9d003ae
-ms.sourcegitcommit: 909b69dd1f918f00b9013bb43ea66e76a690400a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75924991"
 ---
 # <a name="load-data-into-sql-server-or-azure-sql-database-with-sql-server-integration-services-ssis"></a>SQL Server Integration Services (SSIS) を使用して SQL Server または Azure SQL Database にデータを読み込む
@@ -173,9 +173,9 @@ Visual Studio が開き、新しい Integration Services (SSIS) プロジェク�
 
 ## <a name="next-steps"></a>次のステップ
 
-- デザイン環境でパッケージのデバッグおよびトラブルシューティングを行う方法について説明します。 こちらから開始:[パッケージ開発のトラブルシューティング ツール][Troubleshooting Tools for Package Development]。
+- デザイン環境でパッケージのデバッグおよびトラブルシューティングを行う方法について説明します。 まずは、「 [パッケージ開発のトラブルシューティング ツール][Troubleshooting Tools for Package Development]」を参照してください。
 
-- Integration Services サーバーまたは別の保存場所に SSIS プロジェクトおよびパッケージを配置する方法について説明します。 こちらから開始:[プロジェクトとパッケージの展開][Deployment of Projects and Packages]。
+- Integration Services サーバーまたは別の保存場所に SSIS プロジェクトおよびパッケージを配置する方法について説明します。 まずは、「 [プロジェクトとパッケージの展開][Deployment of Projects and Packages]」を参照してください。
 
 <!-- Image references -->
 [01]:  ./media/load-data-to-sql-database-with-ssis/ssis-designer-01.png

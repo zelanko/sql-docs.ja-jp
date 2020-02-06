@@ -11,10 +11,10 @@ ms.assetid: a79f1006-54e8-4cbf-96f8-5ed143ebb830
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 62cbd5141dfb6254415657dc3ef03d1402b0f3b4
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71281369"
 ---
 # <a name="catalogcleanup_server_execution_keys"></a>catalog.cleanup_server_execution_keys 
@@ -66,7 +66,7 @@ catalog.cleanup_server_execution_keys [ @cleanup_flag = ] cleanup_flag ,
   
 -   SSISDB データベースがシングル ユーザー モードではない。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  SQL Server 2012 Service Pack 2 により、SERVER_OPERATION_ENCRYPTION_LEVEL プロパティが **internal.catalog_properties** テーブルに追加されました。 このプロパティには、次の 2 つの有効値があります。  
   
 -   **PER_EXECUTION (1)** : 機密性の高い実行パラメーターと実行ログを保護する証明書と対称キーが実行するたびに作成されます。 これが既定値です。 実行ごとに証明書/キーが生成されるため、運用環境でパフォーマンスの問題 (デッドロック、メンテナンス ジョブの失敗など) が発生する可能性があります。 ただしこの設定は、その他の値 (2) よりも高いレベルのセキュリティを提供します。  

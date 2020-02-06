@@ -18,10 +18,10 @@ ms.assetid: 77270245-a24b-4a20-b481-e6a5ea05b499
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 7b7c9706f3b2943780e48ba5fe99769ddc059c94
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68065529"
 ---
 # <a name="grant-certificate-permissions-transact-sql"></a>GRANT (証明書の権限の許可) (Transact-SQL)
@@ -48,7 +48,7 @@ GRANT permission  [ ,...n ]
  権限を許可する証明書を指定します。 スコープ修飾子 "::" が必要です。  
   
  *database_principal*  
- 権限を許可するプリンシパルを指定します。 次のいずれかです。  
+ 権限を許可するプリンシパルを指定します。 次のいずれか:  
   
 -   データベース ユーザー  
 -   データベース ロール (database role)  
@@ -63,7 +63,7 @@ GRANT OPTION
  権限が許可されたプリンシパルが、この権限を他のプリンシパルにも許可できることを示します。  
   
 AS *granting_principal*  
- このクエリを実行するプリンシパルが権限を許可する権利を取得した、元のプリンシパルを指定します。 次のいずれかです。  
+ このクエリを実行するプリンシパルが権限を許可する権利を取得した、元のプリンシパルを指定します。 次のいずれか:  
   
 -   データベース ユーザー  
 -   データベース ロール (database role)  
@@ -74,7 +74,7 @@ AS *granting_principal*
 -   非対称キーにマップされているデータベース ユーザー  
 -   サーバー プリンシパルにマップされていないデータベース ユーザー  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  証明書は、データベース レベルのセキュリティ保護可能なリソースで、権限の階層で親となっているデータベースに含まれています。 次に、証明書で許可できる権限のうち最も限定的なものを、それらを暗黙的に含む一般的な権限と共に示します。  
   
 |証明書の権限|権限が含まれる証明書権限|権限が含まれるデータベース権限|  

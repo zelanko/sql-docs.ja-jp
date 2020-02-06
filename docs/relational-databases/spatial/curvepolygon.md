@@ -11,10 +11,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d42aa77e4ecddf96ee0405645e7f98a52b5823e7
-ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71816742"
 ---
 # <a name="curvepolygon"></a>CurvePolygon
@@ -30,7 +30,7 @@ ms.locfileid: "71816742"
   
 -   **CurvePolygon** インスタンスの内部は、外部リングとすべての内部リングとの間にある空間です。  
   
- **CurvePolygon** インスタンスが **Polygon** インスタンスと異なるのは、**CurvePolygon** インスタンスは次の円弧を含む場合があるという点です:**CircularString** および **CompoundCurve**。  
+ **CurvePolygon** インスタンスが **Polygon** インスタンスと異なるのは、 **CurvePolygon** インスタンスは円弧 ( **CircularString** および **CompoundCurve**) を含む場合があるという点です。  
   
 ## <a name="compoundcurve-instances"></a>CompoundCurve インスタンス  
  有効な **CurvePolygon** の図を次に示します。  
@@ -112,7 +112,7 @@ DECLARE @g geography = 'CURVEPOLYGON((-122.3 47, 122.3 47, 125.7 49, 121 38, -12
 SELECT @g.STIsValid();  
 ```  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-instantiating-a-geometry-instance-with-an-empty-curvepolygon"></a>A. 空の CurvePolygon を使用して geometry インスタンスをインスタンス化する  
  次の例は、空の **CurvePolygon** インスタンスを作成する方法を示しています。  

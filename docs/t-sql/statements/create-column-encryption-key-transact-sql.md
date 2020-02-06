@@ -29,10 +29,10 @@ ms.assetid: 517fe745-d79b-4aae-99a7-72be45ea6acb
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: 28952359d69fa1fa1c140a8a2a18222ec114cea0
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73593905"
 ---
 # <a name="create-column-encryption-key-transact-sql"></a>CREATE COLUMN ENCRYPTION KEY (Transact-SQL)
@@ -75,7 +75,7 @@ _varbinary\_literal_
 > [!WARNING]  
 >  このステートメントでは、プレーンテキストで列暗号化キーの値を渡さないでください。 そうすれば、この機能の利点が得られます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 `CREATE COLUMN ENCRYPTION KEY` ステートメントには、少なくとも 1 つまたは 2 つの値が含まれる必要があります。 後で [ALTER COLUMN ENCRYPTION KEY (Transact-SQL)](alter-column-encryption-key-transact-sql.md) を使用して 2 番目の値を追加できます。 `ALTER COLUMN ENCRYPTION KEY` ステートメントを使用して値を削除することもできます。  
   
 通常、列暗号化キーは、暗号化された値を 1 つだけ使用して作成されます。 列マスター キーをローテーションして、現在の列マスター キーを新しい列マスター キーに置き換えることが必要な場合があります。 キーをローテーションする必要がある場合は、新しい列マスター キーを使用して暗号化された列暗号化キーの値を追加します。 このローテーションにより、クライアント アプリケーションでは、列暗号化キーを使用して暗号化されたデータへのアクセスを維持しながら、新しい列マスター キーを使用できます。 新しいマスター キーにアクセスできないクライアント アプリケーションの、Always Encrypted が有効なドライバーでは、古い列マスター キーで暗号化された列暗号化キーの値が、機密データへのアクセスに使用されます。  
@@ -92,7 +92,7 @@ SQL Server Management Studio (SSMS) や PowerShell などのツールを使っ�
 ## <a name="permissions"></a>アクセス許可  
 **ALTER ANY COLUMN ENCRYPTION KEY** 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-creating-a-column-encryption-key"></a>A. 列の暗号化キーを作成します  
 次の例では、列の暗号化キー `MyCEK` を作成します。  
@@ -138,6 +138,6 @@ GO
 [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
 [セキュリティで保護されたエンクレーブが設定された Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)   
 [Always Encrypted のキー管理の概要](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)   
-[セキュリティで保護されたエンクレーブが設定された Always Encrypted のキーの管理](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)   
+[セキュリティで保護されたエンクレーブが設定された Always Encrypted のキーを管理する](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)   
   
   

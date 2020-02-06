@@ -18,10 +18,10 @@ ms.assetid: 957addce-feb0-4e54-893e-5faca3cd184c
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 47b924754f221b93e8f9e661a1b12afb5f07fcd4
-ms.sourcegitcommit: 8c1c6232a4f592f6bf81910a49375f7488f069c4
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70026232"
 ---
 # <a name="alter-workload-group-transact-sql"></a>ALTER WORKLOAD GROUP (Transact-SQL)
@@ -142,7 +142,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 > [!NOTE]  
 > オプションの "default" は、大文字と小文字が区別されます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  ALTER WORKLOAD GROUP は、既定のグループに対して使用できます。  
   
  ワークロード グループの構成の変更は、ALTER RESOURCE GOVERNOR RECONFIGURE を実行しないと有効になりません。 プランを変更し、設定に影響する場合、新しい設定は、DBCC FREEPROCCACHE (*pool_name*) の実行後にのみ、前にキャッシュされたプランに反映されます。この *pool_name* は、ワークロード グループが関連付けられているリソース ガバナー リソース プールの名前です。  
@@ -156,7 +156,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
   
  DDL ステートメントを実行する場合、Resource Governor の状態について詳しく理解しておくことをお勧めします。 詳細については、「[リソース ガバナー](../../relational-databases/resource-governor/resource-governor.md)」を参照してください。  
   
- REQUEST_MEMORY_GRANT_PERCENT:[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]インデックスの作成では、パフォーマンスの改善のために最初に付与されたのよりも多くのワークスペース メモリを使用することが許可されています。 この特別な処理は、今後のバージョンのリソース ガバナーでもサポートされますが、最初のメモリ許可も追加のメモリ許可もリソース プール設定とワークロード グループ設定によって制限されます。  
+ REQUEST_MEMORY_GRANT_PERCENT: [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] のインデックス作成では、パフォーマンスを向上させるため、最初に許可されたメモリ量を超えるワークスペース メモリの使用が許可されます。 この特別な処理は、今後のバージョンのリソース ガバナーでもサポートされますが、最初のメモリ許可も追加のメモリ許可もリソース プール設定とワークロード グループ設定によって制限されます。  
   
  **パーティション テーブルのインデックス作成**  
   
@@ -165,7 +165,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 ## <a name="permissions"></a>アクセス許可  
  `CONTROL SERVER` 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例は、既定のグループの要求の重要度を `MEDIUM` から `LOW` に変更する方法を示しています。  
   
 ```sql  

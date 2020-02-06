@@ -21,10 +21,10 @@ ms.assetid: 189399e4-428d-4902-b3a8-94f07fdefc6a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: c5c52edfde8a0cde06ec5a0f2f154df06b6b6c12
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843719"
 ---
 # <a name="getansinull-transact-sql"></a>GETANSINULL (Transact-SQL)
@@ -48,7 +48,7 @@ GETANSINULL ( [ 'database' ] )
 ## <a name="return-types"></a>戻り値の型  
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 データベースの NULL 値の許容で null 値が許可されている場合、GETANSINULL は 1 を返します。 この戻り値には、列またはデータ型の NULL 値の許容が明示的に定義されていないことも必要です。 ANSI NULL の既定値は 1 です。 
   
  ANSI NULL の既定の動作を有効にするには、次のいずれかの条件を設定する必要があります。  
@@ -59,7 +59,7 @@ GETANSINULL ( [ 'database' ] )
   
 -   SET ANSI_NULL_DFLT_OFF OFF  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、`AdventureWorks2012` データベースの NULL 値を許容するかどうかの既定の設定が返されます。  
   
 ```  

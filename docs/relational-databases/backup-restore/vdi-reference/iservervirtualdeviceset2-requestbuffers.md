@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 1b941f251c9093f10abbced8c3522f1719a1580e
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847183"
 ---
 # <a name="iservervirtualdeviceset2requestbuffers-vdi"></a>IServerVirtualDeviceSet2::RequestBuffers (VDI)
@@ -49,12 +49,12 @@ HRESULT IServerVirtualDeviceSet2::RequestBuffers (
 | VD_E_PROTOCOL | このセットは、バッファー割り当てを宣言できる状態ではありません (状態遷移マトリックスを参照)。 |
 | VD_E_MEMORY | 要求されたメモリを取得できませんでした。 |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 このメソッドは、AllocateBuffer でバッファーが割り当てられる前に使用する必要があります。 RequestBuffers で、指定されたサイズとアラインメントを持つバッファーのセットが要求された後、AllocateBuffer で個々のバッファーが割り当てられます。
 
 構成フェーズでは、EndConfiguration 呼び出し時に (その時点で割り当てられる) 1 つのバッファー領域を使用できるように、RequestBuffers の呼び出しが "合計" されます。 構成が完了すると、任意の RequestBuffers の呼び出しで、より多くのバッファー領域が即座に割り当てられるようになります。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 詳細については、[SQL Server 仮想デバイス インターフェイス リファレンスの概要](reference-virtual-device-interface.md)に関するページを参照してください。

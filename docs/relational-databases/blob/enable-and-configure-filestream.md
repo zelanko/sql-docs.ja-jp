@@ -12,10 +12,10 @@ ms.assetid: 78737e19-c65b-48d9-8fa9-aa6f1e1bce73
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 7abba927f12f4f6ae8b9c45dc4695eb64b7d5621
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908767"
 ---
 # <a name="enable-and-configure-filestream"></a>FILESTREAM の有効化と構成
@@ -43,7 +43,7 @@ ms.locfileid: "72908767"
   
 8.  この共有に格納された FILESTREAM データにリモート クライアントからアクセスする必要がある場合は、 **[リモート クライアントに FILESTREAM データへのストリーム アクセスを許可する]** を選択します。  
   
-9. **[適用]** をクリックします。  
+9. **[Apply]** をクリックします。  
   
 10. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、 **[新しいクエリ]** をクリックしてクエリ エディターを表示します。  
   
@@ -77,8 +77,8 @@ ms.locfileid: "72908767"
   
 ||||||  
 |-|-|-|-|-|  
-|RAID レベル|書き込みパフォーマンス|読み取りパフォーマンス|フォールト トレランス|Remarks|  
-|RAID 5|標準|標準|[非常に良い]|パフォーマンスは、1 台のディスクまたは JBOD よりも高く、RAID 0 またはストライピング機能を備えた RAID 5 よりも低くなります。|  
+|RAID レベル|書き込みパフォーマンス|読み取りパフォーマンス|フォールト トレランス|解説|  
+|RAID 5|Normal|Normal|[非常に良い]|パフォーマンスは、1 台のディスクまたは JBOD よりも高く、RAID 0 またはストライピング機能を備えた RAID 5 よりも低くなります。|  
 |RAID 0|[非常に良い]|[非常に良い]|なし||  
 |RAID 5 + ストライピング|[非常に良い]|[非常に良い]|[非常に良い]|最も高価なオプションです。|  
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |

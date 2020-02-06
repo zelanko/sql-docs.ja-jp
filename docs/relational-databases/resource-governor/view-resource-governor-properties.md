@@ -14,10 +14,10 @@ ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 2250030405a0c6bb2512e3b8446cb76e11a7080e
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72903910"
 ---
 # <a name="view-resource-governor-properties"></a>View Resource Governor Properties
@@ -26,11 +26,11 @@ ms.locfileid: "72903910"
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]の [リソース ガバナーのプロパティ] ページを使用して、リソース プールやワークロード グループなどのリソース ガバナー エンティティを作成または構成できます。  
   
  ##  <a name="BeforeYouBegin"></a> 関連トピック 
- **[リソース ガバナーのプロパティ]** ページでは、リソース ガバナー エンティティのプロパティを表示する以外に、さまざまな構成タスクを実行できます。 詳細については、次のトピックをご覧ください。  
+ **[リソース ガバナーのプロパティ]** ページでは、リソース ガバナー エンティティのプロパティを表示する以外に、さまざまな構成タスクを実行できます。 詳細については、以下のトピックを参照してください。  
   
 -   [リソース ガバナーの有効化](../../relational-databases/resource-governor/enable-resource-governor.md)  
   
--   [リソース ガバナーを無効にしたとき](../../relational-databases/resource-governor/disable-resource-governor.md)  
+-   [リソース ガバナーの無効化](../../relational-databases/resource-governor/disable-resource-governor.md)  
   
 -   [リソース プールの作成](../../relational-databases/resource-governor/create-a-resource-pool.md)  
   
@@ -72,7 +72,7 @@ ms.locfileid: "72903910"
  **[リソース プール]**  
  提供されるグリッドを使用して、リソース プールおよび外部リソース プールの構成を作成または変更します。 このグリッドには、あらかじめ定義されている内部プールおよび既定プールの情報が設定されています。 プールの行の最初の列をクリックして、使用するプールを選択します。 新しいリソース プールを作成するには、先頭にアスタリスク ( **&#42;** ) が付いている行をクリックします。  
   
- **[名前]**  
+ **名前**  
  リソース プールの名前を指定します。  
   
  **[最小 CPU %]**  
@@ -92,7 +92,7 @@ ms.locfileid: "72903910"
  **[リソース プールのワークロード グループ]**  
  提供されるグリッドを使用して、ワークロード グループ構成を作成または変更します。 このグリッドには、あらかじめ定義されている内部グループおよび既定グループの情報が設定されています。 グループの行の最初の列をクリックして、使用するグループを選択します。 新しいワークロード グループを作成するには、先頭にアスタリスク ( **&#42;** ) が付いている行をクリックします。  
   
- **[名前]**  
+ **名前**  
  ワークロード グループの名前を指定します。  
   
  **重要度**  
@@ -123,7 +123,7 @@ ms.locfileid: "72903910"
 2.  リソース ガバナー エンティティの現在の構成を表示するには、「[リソース ガバナー関連の動的管理ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)」を使用します。  
   
 ## <a name="more-information"></a>詳細情報
- [[リソース ガバナー]](../../relational-databases/resource-governor/resource-governor.md)   
+ [リソース ガバナー](../../relational-databases/resource-governor/resource-governor.md)   
  [リソース ガバナーの有効化](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [リソース ガバナー リソース プール](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
  [リソース ガバナー ワークロード グループ](../../relational-databases/resource-governor/resource-governor-workload-group.md)   

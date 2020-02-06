@@ -18,16 +18,16 @@ ms.assetid: 30f47275-2727-4d22-bbec-c0c54bcb3ac2
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 8de2f7c47572e8f25fdc38ce6bb537dadfc38d7d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042663"
 ---
 # <a name="ringn-geography-data-type"></a>RingN (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  `1 ≤ n ≤ NumRings()` の範囲で、**geography** インスタンスの指定したリングを返します。  
+  **の範囲で、** geography`1 ≤ n ≤ NumRings()` インスタンスの指定したリングを返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -43,12 +43,12 @@ ms.locfileid: "68042663"
 ## <a name="return-value"></a>戻り値  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
- CLR の戻り値の型:**SqlGeography**  
+ CLR の戻り値の型: **SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  リング インデックス **n** の値が 1 未満の場合、このメソッドは、**ArgumentOutOfRangeException** をスローします。 リング インデックス値は、1 以上、かつ `NumRings()` で返される数値以下である必要があります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  2 つのリングを含む `Polygon` インスタンスを作成し、2 番目のリングを返す例を次に示します。  
   
 ```  

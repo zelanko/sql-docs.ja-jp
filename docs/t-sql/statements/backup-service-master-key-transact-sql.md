@@ -25,10 +25,10 @@ ms.assetid: f8356683-6680-4f1c-9eaf-5c29a9a9020d
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 1a8526ee9113af846288f68b0ad0bc24dbf9b821
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68091731"
 ---
 # <a name="backup-service-master-key-transact-sql"></a>BACKUP SERVICE MASTER KEY (Transact-SQL)
@@ -53,13 +53,13 @@ BACKUP SERVICE MASTER KEY TO FILE = 'path_to_file'
  PASSWORD **='***password***'**  
  バックアップ ファイル内のサービス マスター キーの暗号化に使用されているパスワードを指定します。 このパスワードに対しては、複雑性がチェックされます。 詳細については、「 [Password Policy](../../relational-databases/security/password-policy.md)」をご参照ください。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  サービス マスター キーは、バックアップして安全な別の場所に保存してください。 このバックアップの作成は、サーバー管理操作の最初の段階で実行します。  
   
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する CONTROL SERVER 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、サービス マスター キーをファイルにバックアップします。  
   
 ```  

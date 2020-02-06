@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 99b6522316928fcd7397d27c1a5c85d927a8e0b9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67934861"
 ---
 # <a name="supported-version-and-edition-upgrades"></a>サポートされるバージョンとエディションのアップグレード
@@ -40,7 +40,7 @@ ms.locfileid: "67934861"
   
 -   Windows インストーラー サービスが実行されていない場合は、アップグレードがブロックされます。  
   
-## <a name="unsupported-scenarios"></a>サポートされていないシナリオ  
+## <a name="unsupported-scenarios"></a>サポートされないシナリオ  
   
 -   [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] の複数バージョンにまたがるインスタンスの使用はサポートされていません。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、および [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] コンポーネントのバージョン番号は [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]のインスタンス内で同一であることが必要です。  
   
@@ -104,7 +104,7 @@ SQL Server 2016 では、次のバージョンの SQL Server からのアップ�
 
  \* Microsoft では、特に Technology Adoption Program (TAP) に参加したお客様向けに、リリース候補版ソフトウェアからのアップグレードをサポートしています。 
    
-###  <a name="SupportFor2005"></a> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] サポート対象 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]  
+###  <a name="SupportFor2005"></a> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] に対する [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] のサポート  
 ここでは、 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] に対する [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]のサポートについて説明します。 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]では、次の作業を実行できます。  
   
 -   データベース エンジンの [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] インスタンスに、 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] データベース (mdf/ldf ファイル) をアタッチします。  

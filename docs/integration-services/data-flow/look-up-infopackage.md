@@ -11,10 +11,10 @@ ms.assetid: 7c0cb7a4-cd07-44cc-85cb-eb1ad91f85fd
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2c5736704fd170c629dacdadb89cb3466a0180db
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298232"
 ---
 # <a name="look-up-infopackage"></a>[インフォパッケージの参照]
@@ -63,13 +63,13 @@ ms.locfileid: "71298232"
  **Type**  
  インフォパッケージの種類を表示します。 次の表に、種類として使用できる値の一覧を示します。  
   
-|[値]|[説明]|  
+|値|[説明]|  
 |-----------|-----------------|  
 |Trans.|トランザクション データ。|  
 |Attr.|属性データ。|  
 |テキスト|テキスト。|  
   
- **[説明]**  
+ **説明**  
  インフォパッケージの説明を表示します。  
   
  **インフォソース**  
@@ -81,7 +81,7 @@ ms.locfileid: "71298232"
  インフォパッケージの一覧が表示されたら、目的のインフォパッケージを選択します。変換先の関連するオプションに必要な値が設定されます。  
   
 ## <a name="see-also"></a>参照  
- [SAP BW 変換先エディター ([接続マネージャー] ページ)](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)   
+ [SAP BW 変換先エディター &#40;[接続マネージャー] ページ&#41;](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)   
  [Microsoft Connector for SAP BW の F1 ヘルプ](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   

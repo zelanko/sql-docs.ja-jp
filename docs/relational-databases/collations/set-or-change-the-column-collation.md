@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0880ce366c2db15f7e751c9493bebf5f97d4240a
-ms.sourcegitcommit: 9b8b11961b33e66fc9f433d094fc5c0f9b473772
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74908708"
 ---
 # <a name="set-or-change-the-column-collation"></a>列の照合順序の設定または変更
@@ -122,7 +122,7 @@ GO
 SELECT * FROM TestPermTab AS a INNER JOIN #TestTempTab on a.Col1 = #TestTempTab.Col1;  
 ```  
   
- **ttempdbt** で既定のサーバー照合順序が使用され、`TestPermTab.Col1` で別の照合順序が使用されるため、SQL Server は次のエラーを返します。"equal to 操作の Latin1_General_CI_AS_KS_WS' と 'Estonian_CS_AS' 間での照合順序の競合を解決できません。"  
+ **tempdb** ではサーバーの既定照合順序が使用され、 `TestPermTab.Col1` では異なる照合順序が使用されるので、"Cannot resolve collation conflict between 'Latin1_General_CI_AS_KS_WS' and 'Estonian_CS_AS' in equal to operation. " (equal to 操作の 'Latin1_General_CI_AS_KS_WS' と 'Estonian_CS_AS' 間での照合順序の競合を解決できません。) というエラーが SQL Server から返されます。  
   
  このエラーを回避するには、次のいずれかを行います。  
   

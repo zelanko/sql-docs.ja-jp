@@ -17,10 +17,10 @@ ms.assetid: 9f7ed895-ad65-43e3-ba08-00d7bff1456d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 407e477be98f386adc27fc965b1d099d1dec4dfa
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75251231"
 ---
 # <a name="transactions---availability-groups-and-database-mirroring"></a>トランザクション - 可用性グループとデータベース ミラーリング
@@ -45,13 +45,13 @@ SQL Server 2017 では、可用性グループのデータベースに対して�
 - [DTC 開発者ガイド](https://msdn.microsoft.com/library/ms679938.aspx)
 - [DTC プログラマ リファレンス](https://msdn.microsoft.com/library/ms686108.aspx)
 
-## <a name="sql-server-2016-sp1-and-before-support-for-cross-database-transactions-within-the-same-sql-server-instance"></a>SQL Server 2016 SP1 以前:同じ SQL Server インスタンス内での複数データベースにまたがるトランザクションのサポート  
+## <a name="sql-server-2016-sp1-and-before-support-for-cross-database-transactions-within-the-same-sql-server-instance"></a>SQL Server 2016 SP1 以前: 同じ SQL Server インスタンス内での複数データベースにまたがるトランザクションのサポート  
 
 SQL Server 2016 SP1 以前では、可用性グループに対して、同じ SQL Server インスタンス内での複数データベースにまたがるトランザクションはサポートされていません。 いずれかまたは両方のデータベースが可用性グループにある場合は、同じ SQL Server インスタンスで複数データベースにまたがるトランザクションの 2 つのデータベースをホストできない可能性があります。 この制限は、これらのデータベースが同じ可用性グループの一部である場合でも適用されます。  
   
 複数のデータベースにまたがるトランザクションは、データベース ミラーリングでもサポートされていません。  
   
-##  <a name="dtcsupport"></a> SQL Server 2016 SP1 以前:分散トランザクションのサポート  
+##  <a name="dtcsupport"></a> SQL Server 2016 SP1 以前: 分散トランザクションのサポート  
 複数のデータベースがそれぞれ異なる SQL Server インスタンスでホストされている場合は、可用性グループで分散トランザクションがサポートされます。 これは、SQL Server インスタンスと DTC に準拠した別のサーバー間の分散トランザクションにも当てはまります。  
  
 Microsoft 分散トランザクション コーディネーター (MSDTC または DTC) は、分散システムのトランザクション インフラストラクチャを提供する Windows サービスです。 MSDTC では、クライアント アプリケーションに対して、1 つのトランザクションに複数のデータ ソースを含め、その後、トランザクションに含まれるすべてのサーバーにコミットすることを許可します。 たとえば、MSDTC を使用して、さまざまなサーバーの複数のデータベースにわたるトランザクションを調整することができます。
@@ -91,6 +91,6 @@ SQL Server 2016 では、トランザクションの 1 つ以上のデータベ�
 >  この記事で承認されていない DTC とデータベース ミラーリングの使用や DTC と可用性グループの使用はサポートされていません。  これは、DTC に関係しない部分はサポートされないことを意味するものではありません。ただし、分散トランザクションの不適切な使用により発生する問題はサポートされません。  
   
 ## <a name="next-steps"></a>次のステップ  
- [Always On 可用性グループ:相互運用性 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
+ [Always On availability groups: Interoperability &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
   
   

@@ -9,18 +9,18 @@ ms.date: 11/04/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 3d9b5538170e57b09a1cf8bc4360a68187595ac2
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 0a866dcca1debba47abf2e2e241d00151b8641ff
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531672"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74820964"
 ---
 # <a name="azdata-notebook"></a>azdata notebook
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-以下の記事では、`azdata` ツールの `sql` コマンドに関するリファレンスを提供します。 `azdata` の他のコマンドに関する詳細については、[azdata のリファレンス](reference-azdata.md)に関するページをご覧ください
+以下の記事では、`notebook` ツールの `azdata` コマンドに関するリファレンスを提供します。 `azdata` の他のコマンドに関する詳細については、[azdata のリファレンス](reference-azdata.md)に関するページをご覧ください
 
 ## <a name="commands"></a>コマンド
 |     |     |
@@ -33,7 +33,7 @@ ms.locfileid: "73531672"
 azdata notebook view --path -p 
                      [--continue-on-error -c]
 ```
-### <a name="examples"></a>使用例
+### <a name="examples"></a>例
 ノートブックを表示します。  これにより、すべてのセルが表示されます。
 ```bash
 azdata notebook view --path '/home/me/notebooks/demo_notebook.ipynb'
@@ -42,7 +42,7 @@ azdata notebook view --path '/home/me/notebooks/demo_notebook.ipynb'
 ```bash
 azdata notebook view --path '/home/me/notebooks/demo_notebook.ipynb' --stop-on-error
 ```
-### <a name="required-parameters"></a>必要なパラメーター
+### <a name="required-parameters"></a>必須のパラメーター
 #### `--path -p`
 表示するノートブックのパス。
 ### <a name="optional-parameters"></a>省略可能なパラメーター
@@ -70,12 +70,12 @@ azdata notebook run --path -p
                     [--clear -c]  
                     [--timeout -t]
 ```
-### <a name="examples"></a>使用例
+### <a name="examples"></a>例
 ノートブックを実行します。
 ```bash
 azdata notebook run --path '/home/me/notebooks/demo_notebook.ipynb'
 ```
-### <a name="required-parameters"></a>必要なパラメーター
+### <a name="required-parameters"></a>必須のパラメーター
 #### `--path -p`
 実行するノートブックのファイル パス。
 ### <a name="optional-parameters"></a>省略可能なパラメーター
@@ -104,6 +104,6 @@ JMESPath クエリ文字列。 詳細と例については、[http://jmespath.or
 #### `--verbose`
 ログの詳細レベルを上げます。 詳細なデバッグ ログを表示するには --debug を使います。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 `azdata` の他のコマンドに関する詳細については、[azdata のリファレンス](reference-azdata.md)に関するページをご覧ください。 `azdata` ツールのインストール方法の詳細については、[SQL Server 2019 ビッグ データ クラスターを管理する azdata のインストール](deploy-install-azdata.md)に関するページを参照してください。

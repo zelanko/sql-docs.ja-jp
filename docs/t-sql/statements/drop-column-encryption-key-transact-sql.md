@@ -21,10 +21,10 @@ ms.assetid: 86415302-1383-4d36-9fc7-f780831a2d37
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: 4141a205028b22bfd627e2660b057879b5982250
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73594307"
 ---
 # <a name="drop-column-encryption-key-transact-sql"></a>暗号化キーの列 (TRANSACT-SQL) を削除します。
@@ -45,13 +45,13 @@ DROP COLUMN ENCRYPTION KEY key_name [;]
  *key_name*  
  データベースから削除する列の暗号化キーの名前です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  データベース内のすべての列の暗号化に使用されている場合は、列の暗号化キーを削除することはできません。 まず、列の暗号化キーを使用してすべての列を削除する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
  データベースに対する **ALTER ANY COLUMN ENCRYPTION KEY** 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-dropping-a-column-encryption-key"></a>A. 列の暗号化キーを削除する  
  次の例では、列の暗号化キー `MyCEK` を削除します。  

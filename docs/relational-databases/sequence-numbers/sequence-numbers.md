@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6f56e354023c869fb04d296b63ac748abec763e1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68126779"
 ---
 # <a name="sequence-numbers"></a>シーケンス番号
@@ -82,7 +82,7 @@ CREATE SEQUENCE Schema.SequenceName
 ## <a name="managing-sequences"></a>シーケンスの管理  
  シーケンスの詳細については、「 [sys.sequences](../../relational-databases/system-catalog-views/sys-sequences-transact-sql.md)」を参照してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  関連する例については、「[CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md)」、「[NEXT VALUE FOR &#40;Transact-SQL&#41;](../../t-sql/functions/next-value-for-transact-sql.md)」、および「[sp_sequence_get_range](../../relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql.md)」を参照してください。  
   
 ### <a name="a-using-a-sequence-number-in-a-single-table"></a>A. 1 つのテーブルでシーケンス番号を使用する  
@@ -271,7 +271,7 @@ WHERE Name LIKE '%nut%' ;
 ```  
   
 ### <a name="f-resetting-the-sequence-number"></a>F. シーケンス番号をリセットする  
- 例 E では、`Samples.IDLabel` のシーケンス番号の最初の 79 個の番号が使用されました (`AdventureWorks2012` のバージョンによっては結果の数が異なる場合があります)。次のコードを実行すると、後続の 79 個のシーケンス番号 (80 ～ 158) が使用されます。  
+ 例 E では、`Samples.IDLabel` のシーケンス番号の最初の 79 個の番号が使用されました ( `AdventureWorks2012` のバージョンによっては結果の数が異なる場合があります)。次のコードを実行すると、後続の 79 個のシーケンス番号 (80 ～ 158) が使用されます。  
   
 ```  
 SELECT NEXT VALUE FOR Samples.IDLabel OVER (ORDER BY Name) AS NutID, ProductID, Name, ProductNumber FROM Production.Product  
@@ -391,7 +391,7 @@ GO
   
 ```  
   
- `SELECT *` を使用する [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントは、最初の列としてではなく最後の列として、新しい列を受け取ります。 この動作を許容できない場合は、新しいテーブルを作成してデータをそこに移動した後、新しいテーブルに対する権限を再作成する必要があります。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用する `SELECT *` ステートメントは、最初の列としてではなく最後の列として、新しい列を受け取ります。 この動作を許容できない場合は、新しいテーブルを作成してデータをそこに移動した後、新しいテーブルに対する権限を再作成する必要があります。  
   
 ## <a name="related-content"></a>関連コンテンツ  
  [CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md)  

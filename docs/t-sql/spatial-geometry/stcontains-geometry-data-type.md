@@ -18,10 +18,10 @@ ms.assetid: 865ceca1-9200-45ed-a7d8-e286e2679fdc
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 1a8d85b5823d692343acbc73ffc10e0cb08bc9f9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67930154"
 ---
 # <a name="stcontains-geometry-data-type"></a>STContains (geometry データ型)
@@ -38,17 +38,17 @@ ms.locfileid: "67930154"
   
 ## <a name="arguments"></a>引数  
  *other_geometry*  
- `STContains()` を呼び出したインスタンスと比較される、別の **geometry** インスタンスです。  
+ **を呼び出したインスタンスと比較される、別の**geometry`STContains()` インスタンスです。  
   
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **bit**  
   
- CLR の戻り値の型:**SqlBoolean**  
+ CLR の戻り値の型: **SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
- **geometry** インスタンスの SRID (spatial reference ID) が一致しない場合、`STContains()` は常に null を返します。  
+## <a name="remarks"></a>解説  
+ `STContains()`geometry **インスタンスの SRID (spatial reference ID) が一致しない場合、** は常に null を返します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  `STContains()` を使用して、2 つの `geometry` インスタンスの一方のインスタンスがもう一方のインスタンスを含むかどうかをテストする例を次に示します。  
   
 ```  

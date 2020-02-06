@@ -18,10 +18,10 @@ ms.assetid: e0decf5e-2858-4c56-b61a-6123f47fb51c
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 1d38aee9c7fdb7f7142af5f5d72b5b08b0e18ccd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67930195"
 ---
 # <a name="stastext-geometry-data-type"></a>STAsText (geometry データ型)
@@ -39,9 +39,9 @@ ms.locfileid: "67930195"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **nvarchar(max)**  
   
- CLR の戻り値の型:**SqlChars**  
+ CLR の戻り値の型: **SqlChars**  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、(0,0) から (2,3) までの `LineString` geometry インスタンスをテキストから作成します。 `STAsText()` は結果をテキストで返します。  
   
 ```  

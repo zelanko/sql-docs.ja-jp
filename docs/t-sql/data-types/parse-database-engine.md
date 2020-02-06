@@ -18,10 +18,10 @@ ms.assetid: b37e28b6-6e2e-470a-945b-ce5252da743a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 8f7160513cd23e16f06dbba27851920b66bf72c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68119815"
 ---
 # <a name="parse-database-engine"></a>Parse (データベース エンジン)
@@ -46,19 +46,19 @@ static SqlHierarchyId Parse ( SqlString input )
   
 ## <a name="arguments"></a>引数  
 *input*  
-[!INCLUDE[tsql](../../includes/tsql-md.md)]:変換対象となる文字データ型の値。
+[!INCLUDE[tsql](../../includes/tsql-md.md)] : 変換対象となる文字データ型の値。
   
-CLR:評価される String 値。
+CLR : 評価される String 値。
   
 ## <a name="return-types"></a>戻り値の型  
 **SQL Server の戻り値の型: hierarchyid**
   
 **CLR 戻り値の型:SqlHierarchyId**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 場合 解析 の有効な文字列表記ではない値を受け取る、 **hierarchyid**, 、例外が発生します。 たとえば場合、 **cha**r データ型には、末尾のスペースが含まれている、例外が発生します。
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-converting-transact-sql-values-without-a-table"></a>A. テーブルを使用しない Transact-SQL 値の変換  
 次のコード例では、`ToString` を使用して **hierarchyid** 値を文字列に変換し、`Parse` を使用して文字列値を **hierarchyid** に変換します。

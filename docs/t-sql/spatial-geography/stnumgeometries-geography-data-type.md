@@ -18,10 +18,10 @@ ms.assetid: 6ae7fac2-62f1-420f-9fc9-a09606be9605
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 7a1150128c281be485ca23dab65db3d82b88e1f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68120913"
 ---
 # <a name="stnumgeometries-geography-data-type"></a>STNumGeometries (geography データ型)
@@ -39,12 +39,12 @@ ms.locfileid: "68120913"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **int**  
   
- CLR の戻り値の型:**SqlInt32**  
+ CLR の戻り値の型: **SqlInt32**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  このメソッドは、**geography** インスタンスが **MultiPoint**、**MultiLineString**、**MultiPolygon**、**GeometryCollection** インスタンスではない場合に 1 を返し、**geography** インスタンスが空の場合に 0 を返します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  `MultiPoint` インスタンスを作成し、`STNumGeometries()` を使用して**ジオメトリ**の数を確認する例を次に示します。  
   
 ```  

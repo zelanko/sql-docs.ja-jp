@@ -31,10 +31,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9b92994f9a04b0b9bda56085b00896278e124705
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67910669"
 ---
 # <a name="getdate-transact-sql"></a>GETDATE (Transact-SQL)
@@ -58,7 +58,7 @@ GETDATE ( )
 ## <a name="return-type"></a>戻り値の型  
  **datetime**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを参照できます GETDATE を参照できる任意の場所、 **datetime** 式です。  
   
  GETDATE は、非決定的関数です。 この関数を列内で参照するビューと式には、インデックスを付けることができません。  
@@ -72,7 +72,7 @@ WHERE c1 > @dt OPTION (RECOMPILE);
   
 ```  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、現在の日付と時刻を返す 6 つの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム関数を使用して、日付、時刻、またはその両方を取得しています。 値は順番に返されるため、秒の小数部が異なる可能性があります。  
   
 ### <a name="a-getting-the-current-system-date-and-time"></a>A. 現在のシステム日付と時刻を取得する  
@@ -143,7 +143,7 @@ GETDATE()          13:18:45.3470000
 GETUTCDATE()       20:18:45.3470000  
 ```
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  次の例では、現在の日付と時刻を返す 3 つの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム関数を使用して、日付、時刻、またはその両方を取得しています。 値は順番に返されるため、秒の小数部が異なる可能性があります。  
   
 ### <a name="d-getting-the-current-system-date-and-time"></a>D. 現在のシステム日付と時刻を取得する  

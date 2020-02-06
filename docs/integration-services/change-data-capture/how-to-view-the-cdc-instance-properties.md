@@ -11,10 +11,10 @@ ms.assetid: 4bce9b82-7bbd-41df-b3f4-4b40b8bad474
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: eaf4308f05b7a7fb1f450947754736d0cf565b61
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294671"
 ---
 # <a name="how-to-view-the-cdc-instance-properties"></a>CDC インスタンスのプロパティを表示する方法
@@ -34,7 +34,7 @@ ms.locfileid: "71294671"
   
      インスタンスに関する情報は、CDC デザイナー コンソールの中央部分に表示されます。 この部分は 4 つのタブに分かれています。 タブはいずれも読み取り専用です。  
   
-     **ステータス**  
+     **状態**  
      このタブには、インスタンスの変更データ キャプチャの現在の状態に関する情報が表示されます。 このタブに表示される内容の詳細については、「 **Manage a CDC Instance** 」の「 [ビューアーのタブ](../../integration-services/change-data-capture/manage-a-cdc-instance.md)」を参照してください。  
   
      **Oracle**  
@@ -43,7 +43,7 @@ ms.locfileid: "71294671"
      **テーブル**  
      このタブには、変更データ キャプチャに含まれるテーブルに関する情報が表示されます。 キャプチャされる列も表示されます。 このタブに表示される内容の詳細については、「 [Edit Tables](../../integration-services/change-data-capture/edit-tables.md)」を参照してください。  
   
-     **詳細設定**  
+     **詳細**  
      このタブには、プロパティ エディターで定義する詳細プロパティの一覧が表示されます。 このタブに表示される内容の詳細については、「 [Edit the Advanced Properties](../../integration-services/change-data-capture/edit-the-advanced-properties.md)」を参照してください。  
   
   

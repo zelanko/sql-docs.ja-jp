@@ -21,10 +21,10 @@ ms.assetid: b3a930e6-df05-4034-929c-f681f5f6fc6e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 5563c65352713f3557e4c412607d1944f28f3a3f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68071434"
 ---
 # <a name="filegroupproperty-transact-sql"></a>FILEGROUPPROPERTY (Transact-SQL)
@@ -42,12 +42,12 @@ FILEGROUPPROPERTY ( filegroup_name, property )
   
 ## <a name="arguments"></a>引数  
  *filegroup_name*  
-`FILEGROUPPROPERTY` によって名前付けされたプロパティ情報が返されるファイル グループの名前を表す、**sysname** 型の式を指定します。  
+**によって名前付けされたプロパティ情報が返されるファイル グループの名前を表す、** sysname`FILEGROUPPROPERTY` 型の式を指定します。  
   
  *property*  
 ファイル グループのプロパティの名前を返す **varchar(128)** 型の式を指定します。 *property* によって返される値は次のいずれかです。  
   
-|[値]|[説明]|返される値|  
+|値|[説明]|返される値|  
 |-----------|-----------------|--------------------|  
 |**IsReadOnly**|ファイル グループが読み取り専用であるかどうかを示します。|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 無効な入力です。|  
 |**IsUserDefinedFG**|ファイル グループはユーザー定義のファイル グループです。|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 無効な入力です。|  
@@ -56,11 +56,11 @@ FILEGROUPPROPERTY ( filegroup_name, property )
 ## <a name="return-types"></a>戻り値の型  
 **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 *filegroup_name* は、**sys.filegroups** カタログ ビューの **name** 列に対応します。  
   
-## <a name="examples"></a>使用例  
-この例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベース内のプライマリ ファイル グループに対する `IsDefault` プロパティの設定値が返されます。  
+## <a name="examples"></a>例  
+この例では、`IsDefault` データベース内のプライマリ ファイル グループに対する [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] プロパティの設定値が返されます。  
   
 ```  
 SELECT FILEGROUPPROPERTY('PRIMARY', 'IsDefault') AS 'Default Filegroup';  

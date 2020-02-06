@@ -33,10 +33,10 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 37e374d44fc6013c1cdf6b9594d709ff4282f7aa
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70846722"
 ---
 # <a name="create-table-sql-graph"></a>CREATE TABLE (SQL Graph)
@@ -122,7 +122,7 @@ CREATE TABLE
  ON {partition_scheme | filegroup | "default"}    
  PRIMARY KEY 制約または UNIQUE 制約でも指定できます。 これらの制約はインデックスを作成します。 filegroup を指定すると、インデックスは指定されたファイル グループに格納されます。 "default" を指定するか、ON を指定しなかった場合、インデックスはテーブルと同じファイル グループに格納されます。 PRIMARY KEY または UNIQUE 制約によりクラスター化インデックスが作成される場合、テーブルのデータ ページはインデックスと同じファイル グループに格納されます。 CLUSTERED を指定するか、制約によりクラスター化インデックスを作成し、テーブル定義の partition_scheme または filegroup とは異なる partition_scheme (またはその逆) を指定すると、制約定義だけが優先され、それ以外は無視されます。
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 一時テーブルをノード テーブルまたはエッジ テーブルとして作成することはできません。  
 
 ノード テーブルまたはエッジ テーブルをテンポラル テーブルとして作成することはできません。
@@ -134,7 +134,7 @@ CREATE TABLE
 パーティション分割されていないグラフ ノード/エッジ テーブルをパーティション分割されているグラフ ノード/エッジ テーブルに変更することはできません。 
   
  
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-create-a-node-table"></a>A. `NODE` テーブルの作成
  次の例では、`NODE` テーブルの作成方法を示しています。

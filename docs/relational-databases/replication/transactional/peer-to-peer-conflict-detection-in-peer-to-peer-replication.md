@@ -14,10 +14,10 @@ ms.assetid: 754a1070-59bc-438d-998b-97fdd77d45ca
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a9e62710d28b9b7e0ad66ff157b841f939d6dfaf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68041091"
 ---
 # <a name="peer-to-peer---conflict-detection-in-peer-to-peer-replication"></a>ピア ツー ピア - ピア ツー ピア レプリケーションにおける競合検出
@@ -87,18 +87,18 @@ ms.locfileid: "68041091"
   
 -   ディストリビューション エージェントが引き続き変更を適用できるようにすることで、ノードの同期を再試行します。  
   
-    1.  [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) を実行します。このとき、@property パラメーターに 'p2p_continue_onconflict' を指定し、@value パラメーターに **true** を指定します。  
+    1.  [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) を実行します。このとき、@property パラメーターに 'p2p_continue_onconflict' を指定し、**パラメーターに**true@value を指定します。  
   
     2.  ディストリビューション エージェントを再起動します。  
   
-    3.  競合表示モジュールを使用して検出された競合を確認し、関係する行、競合の種類、および優先されたデータを特定します。 競合は、構成時に指定した発信元 ID 値に基づいて解決されます。つまり、最も ID の大きいノードの行が競合で優先されます。 詳細については、「[View Data Conflicts for Transactional Publications &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)」 (トランザクション パブリケーションのデータの競合の表示 &#40;SQL Server Management Studio&#41;) を参照してください。  
+    3.  競合表示モジュールを使用して検出された競合を確認し、関係する行、競合の種類、および優先されたデータを特定します。 競合は、構成時に指定した発信元 ID 値に基づいて解決されます。つまり、最も ID の大きいノードの行が競合で優先されます。 詳細については、「[トランザクション パブリケーションのデータの競合の表示 &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)」を参照してください。  
   
     4.  検証を実行して、競合する行が正しく収束したことを確認します。 詳細については、「[レプリケートされたデータの検証](../../../relational-databases/replication/validate-data-at-the-subscriber.md)」 を参照してください。  
   
         > [!NOTE]  
         >  この手順の実行後にデータに一貫性がない場合は、最も優先度の高いノードの行を手動で更新して、そのノードから変更を反映する必要があります。 競合する変更がトポロジ内になくなると、すべてのノードが一貫性のある状態になります。  
   
-    5.  [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) を実行します。このとき、@property パラメーターに 'p2p_continue_onconflict' を指定し、@value パラメーターに **false** を指定します。  
+    5.  [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) を実行します。このとき、@property パラメーターに 'p2p_continue_onconflict' を指定し、**パラメーターに**false@value を指定します。  
   
 ## <a name="see-also"></a>参照  
  [ピア ツー ピア トランザクション レプリケーション](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)  

@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 388a9d8e11cc738b13df752868568cd4cea556d9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68074164"
 ---
 # <a name="ddl-event-groups"></a>DDL イベント グループ
@@ -28,10 +28,10 @@ ms.locfileid: "68074164"
 > [!NOTE]  
 >  DDL に似た操作を実行する一部のシステム ストアド プロシージャも、DDL トリガー、またはイベント通知を起動することができます。 実行されるシステム ストアド プロシージャへの応答を判断するために、DDL トリガーおよびイベント通知をテストしてください。 たとえば、CREATE TYPE ステートメントおよび **sp_addtype** ストアド プロシージャはどちらも、CREATE_TYPE イベントで作成される DDL トリガーおよびイベント通知を起動します。  
   
-## <a name="events"></a>イベント  
+## <a name="events"></a>events  
  DDL_DATABASE_LEVEL_EVENTS の下に記載されているイベントは、サーバー (インスタンス) またはデータベース レベルで実行されます。 DDL_SERVER_LEVEL_EVENTS の下に記載されているイベントは、サーバー レベルでのみ実行できます。  
   
-|parent_type|型|NAME|  
+|parent_type|型|name|  
 |-|-|-|
 |NULL|296|ALTER_SERVER_CONFIGURATION|  
 |NULL|10001|DDL_EVENTS|  

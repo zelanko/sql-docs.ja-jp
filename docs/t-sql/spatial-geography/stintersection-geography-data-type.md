@@ -18,10 +18,10 @@ ms.assetid: 7e09468f-499f-4a38-ba4b-bb30b8821e3b
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: a06620641fd69479bba3c3b46ab04e337c2dc18d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042053"
 ---
 # <a name="stintersection-geography-data-type"></a>STIntersection (geography データ型)
@@ -43,9 +43,9 @@ ms.locfileid: "68042053"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
- CLR の戻り値の型:**SqlGeography**  
+ CLR の戻り値の型: **SqlGeography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  2 つの geography インスタンスが交差する地点が返されます。  
   
  **geography** インスタンスの SRID (spatial reference ID) が一致しない場合、STIntersection() は常に null を返します。  
@@ -54,7 +54,7 @@ ms.locfileid: "68042053"
   
  結果に円弧が含まれるのは、入力インスタンスに円弧が含まれる場合のみです。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-computing-the-intersection-of-a-polygon-and-a-linestring"></a>A. Polygon と LineString が交差する地点を計算する  
  `STIntersection()` を使用して、`Polygon` と `LineString` が交差する地点を計算する例を次に示します。  
@@ -79,7 +79,7 @@ SELECT @g.STIntersection(@h).ToString();
 ```  
   
 ### <a name="c-computing-the-symmetric-difference-with-fullglobe"></a>C. FullGlobe を使用して、対称差を計算する  
- `FullGlobe` を使用して、`Polygon` の対称差を比較する例を次に示します。  
+ `Polygon` を使用して、`FullGlobe` の対称差を比較する例を次に示します。  
   
 ```  
 DECLARE @g geography = 'POLYGON((-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';  

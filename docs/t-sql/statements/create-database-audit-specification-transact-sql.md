@@ -25,10 +25,10 @@ ms.assetid: 0544da48-0ca3-4a01-ba4c-940e23dc315b
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 98dce9206326c51f5ae721903b93ea287afa992a
-ms.sourcegitcommit: 34d28d49e8d0910cf06efda686e2d73059569bf8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75656649"
 ---
 # <a name="create-database-audit-specification-transact-sql"></a>CREATE DATABASE AUDIT SPECIFICATION (Transact-SQL)
@@ -95,7 +95,7 @@ CREATE DATABASE AUDIT SPECIFICATION audit_specification_name
 ## <a name="examples"></a>例
 
 ### <a name="a-audit-select-and-insert-on-a-table-for-any-database-principal"></a>A. 任意のデータベース プリンシパルについてテーブルで SELECT と INSERT を監査する 
- 次の例では、`Payrole_Security_Audit` というサーバー監査を作成した後、`AdventureWorks2012` データベースの `HumanResources.EmployeePayHistory` テーブルで `dbo` ユーザーによる `SELECT` ステートメントと `INSERT` ステートメントを監査する、`Payrole_Security_Audit` というデータベース監査仕様を作成します。  
+ 次の例では、`Payrole_Security_Audit` というサーバー監査を作成した後、`Payrole_Security_Audit` データベースの `SELECT` テーブルで `INSERT` ユーザーによる `dbo` ステートメントと `HumanResources.EmployeePayHistory` ステートメントを監査する、`AdventureWorks2012` というデータベース監査仕様を作成します。  
   
 ```  
 USE master ;  
@@ -122,7 +122,7 @@ GO
 ``` 
 
 ### <a name="b-audit-any-dml-insert-update-or-delete-on-_all_-objects-in-the-_sales_-schema-for-a-specific-database-role"></a>B. 特定のデータベース ロールについて _sales_ スキーマの_すべて_のオブジェクトで任意の DML (INSERT、UPDATE、または DELETE) を監査する  
- 次の例では、`DataModification_Security_Audit` というサーバー監査を作成した後、`AdventureWorks2012` データベースでの `Sales` スキーマのすべてのオブジェクトについて、新しいデータベース ロール `SalesUK` のユーザーによる `INSERT`、`UPDATE` および `DELETE` ステートメントを監査する、`Audit_Data_Modification_On_All_Sales_Tables` というデータベース監査仕様を作成します。  
+ 次の例では、`DataModification_Security_Audit` というサーバー監査を作成した後、`Audit_Data_Modification_On_All_Sales_Tables` データベースでの `INSERT` スキーマのすべてのオブジェクトについて、新しいデータベース ロール `UPDATE` のユーザーによる `DELETE`、`SalesUK` および `Sales` ステートメントを監査する、`AdventureWorks2012` というデータベース監査仕様を作成します。  
   
 ```  
 USE master ;  

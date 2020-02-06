@@ -17,10 +17,10 @@ ms.assetid: 9d4e89f4-478f-419a-8b50-b096771e3880
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: cd783ac6f5f6d8c7a9e561614dbe2c06053f758a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68050671"
 ---
 # <a name="grant-system-object-permissions-transact-sql"></a>GRANT (システム オブジェクトの権限の許可) (Transact-SQL)
@@ -47,7 +47,7 @@ GRANT { SELECT | EXECUTE } ON [ sys.]system_object TO principal
  *principal*  
  権限を許可するプリンシパルを指定します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  このステートメントを使用すると、特定のストアド プロシージャ、拡張ストアド プロシージャ、テーブル値関数、スカラー関数、ビュー、カタログ ビュー、互換ビュー、INFORMATION_SCHEMA ビュー、動的管理ビュー、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってインストールされたシステム テーブルに対する権限を許可できます。 これらのシステム オブジェクトはそれぞれ、サーバーのリソース データベース (mssqlsystemresource) に一意なレコードとして存在しています。 リソース データベースは読み取り専用です。 オブジェクトへのリンクは、各データベースの sys スキーマでは 1 レコードとして表されます。 システム オブジェクトを実行または選択する権限は、許可、拒否、および取り消しが可能です。  
   
  オブジェクトを実行または選択する権限を許可しても、そのオブジェクトの使用に必要なすべての権限が与えられるわけではありません。 ほとんどのオブジェクトでは、操作の実行に追加の権限が必要です。 たとえば、ユーザーに対して sp_addlinkedserver の EXECUTE 権限が許可されていても、sysadmin 固定サーバー ロールのメンバーでない限り、そのユーザーはリンク サーバーを作成できません。  
@@ -73,10 +73,10 @@ GO
 ## <a name="permissions"></a>アクセス許可  
  CONTROL SERVER 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-granting-select-permission-on-a-view"></a>A. ビューに対する SELECT 権限を許可する  
- 次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインの一覧を表示するビューを選択する権限を、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン `Sylvester1` に許可します。 その後、ユーザーが所有していない [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインでメタデータを表示するために必要な追加権限を許可します。  
+ 次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインの一覧を表示するビューを選択する権限を、`Sylvester1` ログイン [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に許可します。 その後、ユーザーが所有していない [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインでメタデータを表示するために必要な追加権限を許可します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -86,7 +86,7 @@ GO
 ```  
   
 ### <a name="b-granting-execute-permission-on-an-extended-stored-procedure"></a>B. 拡張ストアド プロシージャに対する EXECUTE 権限を許可する  
- 次の例では、`Sylvester1` に対し、`xp_readmail` の `EXECUTE` 権限を許可します。  
+ 次の例では、`EXECUTE` に対し、`xp_readmail` の `Sylvester1` 権限を許可します。  
   
 ```  
 GRANT EXECUTE ON xp_readmail TO Sylvester1;  

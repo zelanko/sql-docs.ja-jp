@@ -13,10 +13,10 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: c8f60ee25f00c4b9ba4b7959a6447e11a0f549b1
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75244831"
 ---
 # <a name="subqueries-azure-sql-data-warehouse-parallel-data-warehouse"></a>サブクエリ (Azure SQL Data Warehouse、Parallel Data Warehouse)
@@ -30,7 +30,7 @@ ms.locfileid: "75244831"
   
 -   [基本操作](#Basics)  
   
--   [例:SQL Data Warehouse と Parallel Data Warehouse](#Examples)  
+-   [例: SQL Data Warehouse と Parallel Data Warehouse](#Examples)  
   
 ##  <a name="Basics"></a> 基本操作  
  サブクエリ  
@@ -115,7 +115,7 @@ SELECT Rb.b1, (SELECT RA.a1 FROM RA WHERE RB.b1 = RA.a1) FROM RB GROUP BY RB.b1;
 ```  
   
 ### <a name="i-using-in-with-a-correlated-subquery"></a>I. 相関サブクエリで IN を使用する  
- 次の例では、相関または繰り返しサブクエリ内で `IN` を使用しています。 これは、外側のクエリによって値が決まるクエリです。 内側のクエリは、外側のクエリが選択する行に対して 1 回ずつ、繰り返し実行されます。 このクエリは、`FactResellerSales` テーブルの `OrderQuantity` が `5` で、従業員の ID 番号が `DimEmployee` テーブルと `FactResellerSales` テーブルで一致する各従業員の `EmployeeKey` と姓名のインスタンスを 1 つ取得します。  
+ 次の例では、相関または繰り返しサブクエリ内で `IN` を使用しています。 これは、外側のクエリによって値が決まるクエリです。 内側のクエリは、外側のクエリが選択する行に対して 1 回ずつ、繰り返し実行されます。 このクエリは、`EmployeeKey` テーブルの `OrderQuantity` が `FactResellerSales` で、従業員の ID 番号が `5` テーブルと `DimEmployee` テーブルで一致する各従業員の `FactResellerSales` と姓名のインスタンスを 1 つ取得します。  
   
 ```  
 SELECT DISTINCT dm.EmployeeKey, dm.FirstName, dm.LastName   

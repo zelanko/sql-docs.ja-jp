@@ -16,16 +16,16 @@ ms.assetid: 4c52a20e-527e-4d14-9a5a-4cd195aac8ed
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 783058a764963637f2c91808424bac7bdd403c02
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954755"
 ---
 # <a name="executeupdate-method-javalangstring-int"></a>executeUpdate (java.lang.String, int) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  渡された SQL ステートメントを実行し、[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) オブジェクトによって自動生成されたキーを検索可能にするかどうかについて、渡されたフラグを使用して [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] に通知します。  
+  渡された SQL ステートメントを実行し、[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]SQLServerStatement[ オブジェクトによって自動生成されたキーを検索可能にするかどうかについて、渡されたフラグを使用して ](../../../connect/jdbc/reference/sqlserverstatement-class.md) に通知します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -54,7 +54,7 @@ public final int executeUpdate(java.lang.String sql,
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この executeUpdate メソッドは、java.sql.Statement インターフェイスの executeUpdate メソッドで規定されています。  
   
  更新数が 1 より大きくなる (または複数の結果セットが生成される) ストアド プロシージャは [execute](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md) メソッドを使用して実行してください。  

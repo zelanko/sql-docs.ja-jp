@@ -19,10 +19,10 @@ ms.assetid: a34b9e90-199d-46d0-817a-a7e69387bf5f
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 236749303a05b54f37be5e24f10f56fc6f5bc41d
-ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71227156"
 ---
 # <a name="alter-external-data-source-transact-sql"></a>ALTER EXTERNAL DATA SOURCE (Transact-SQL)
@@ -68,13 +68,13 @@ ALTER EXTERNAL DATA SOURCE data_source_name
  CREDENTIAL = Credential_Name: 名前付きの資格情報を指定します。 「[CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)」を参照してください。
 
 TYPE = [HADOOP | BLOB_STORAGE]   
-**適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]」を参照してください。
-一括操作の場合のみ、`LOCATION` は Azure BLOB ストレージの有効な URL にする必要があります。 **/** 、ファイル名、共有アクセス署名パラメーターを `LOCATION` URL の末尾に入れないでください。
+**適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]。
+一括操作の場合のみ、`LOCATION` は Azure BLOB ストレージの有効な URL にする必要があります。 **URL の末尾に、/** `LOCATION`、ファイル名、または Shared Access Signature パラメーターを配置しないでください。
 使用される資格情報は、`SHARED ACCESS SIGNATURE` を使用して ID として作成する必要があります。 Shared Access Signature に関する詳細については、「[Shared Access Signature (SAS) を使用](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)」を参照してください。
 
   
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
  一度に変更できるソースは 1 つだけです。 同じソースを変更する複数の要求が同時に発生すると、1 つのステートメントが待機状態になります。 ただし、さまざまなソースを同時に変更できます。 このステートメントは、他のステートメントと同時実行できます。
 
 ## <a name="permissions"></a>アクセス許可  
@@ -83,7 +83,7 @@ TYPE = [HADOOP | BLOB_STORAGE]
  > ALTER ANY EXTERNAL DATA SOURCE 権限は、あらゆる外部データ ソース オブジェクトを作成し、変更する能力をプリンシパルに与えます。そのため、データベース上のすべてのデータベース スコープ資格情報にアクセスする能力も与えます。 この権限は特権として考える必要があります。したがって、システム内の信頼できるプリンシパルにのみ与える必要があります。
 
 
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、既存のデータソースの場所とリソース マネージャーの場所を変更します。
 
 ```  

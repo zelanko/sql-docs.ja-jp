@@ -24,10 +24,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ede74cb467b0ee9f83c72c5c07ee1b933c1a7fa6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072097"
 ---
 # <a name="drop-view-transact-sql"></a>DROP VIEW (Transact-SQL)
@@ -63,7 +63,7 @@ DROP VIEW [ schema_name . ] view_name [ ; ]
  *view_name*  
  削除するビューの名前を指定します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  ビューを削除すると、ビューの定義やビューに関するその他の情報がシステム カタログから削除されます。 ビューに対する権限もすべて削除されます。  
   
  DROP TABLE を使用して削除されたテーブルのすべてのビューは、DROP VIEW を使用して明示的に削除する必要があります。  
@@ -79,7 +79,7 @@ DROP VIEW [ schema_name . ] view_name [ ; ]
 ## <a name="permissions"></a>アクセス許可  
  ビューの **CONTROL** 権限、ビューを含んでいるスキーマの **ALTER** 権限、または **db_ddladmin** 固定サーバー ロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-drop-a-view"></a>A. ビューを削除する  
  次の例では、ビュー `Reorder` を削除します。  

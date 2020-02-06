@@ -17,10 +17,10 @@ ms.assetid: b8ae31c6-d76f-4dd7-8f46-17d023ca3eca
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 448688a54a245cadffa4c0c916d146e7c3e7e115
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75321989"
 ---
 # <a name="strategies-for-backing-up-and-restoring-merge-replication"></a>マージ レプリケーションのバックアップと復元の方式
@@ -56,12 +56,12 @@ ms.locfileid: "75321989"
   
 -   パブリケーションがフィルター選択されていない場合は、最新のサブスクライバーと同期することでパブリケーション データベースを最新の状態に更新できます。  
   
--   パブリケーションがフィルター選択されている場合は、パブリケーションを最新の状態に更新できない場合があります。 各サブスクリプションが 1 つの地域の顧客データのみを受信できるようにパーティション分割されているテーブルがあるとします。北、東、南、西のいずれかです。 データの各パーティションに 1 つ以上のサブスクライバーがある場合、各パーティションのサブスクライバーと同期することにより、パブリケーション データベースを最新の状態に更新できます。 ただし、たとえば、西パーティションのデータがすべてのサブスクライバーにレプリケートされていない場合は、パブリッシャーでこのデータを最新の状態に更新することはできません。  
+-   パブリケーションがフィルター選択されている場合は、パブリケーションを最新の状態に更新できない場合があります。 たとえば、各サブスクリプションが 1 つの地域 (北、東、南、西のいずれか) の顧客データのみを受信できるようにパーティション分割されているテーブルがあるとします。 データの各パーティションに 1 つ以上のサブスクライバーがある場合、各パーティションのサブスクライバーと同期することにより、パブリケーション データベースを最新の状態に更新できます。 ただし、たとえば、西パーティションのデータがすべてのサブスクライバーにレプリケートされていない場合は、パブリッシャーでこのデータを最新の状態に更新することはできません。  
   
 > [!IMPORTANT]  
 >  パブリケーション データベースとサブスクリプション データベースを同期することによって、復元対象のパブリッシュされたテーブルを、バックアップから復元されたパブリッシュされていないテーブルよりも新しい状態にすることができます。  
   
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] よりも前のバージョンの [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を実行しているサブスクライバーと同期する場合は、サブスクリプションを匿名にすることはできません。このサブスクリプションは、クライアント サブスクリプションまたはサーバー サブスクリプション (前のリリースではローカル サブスクリプションとグローバル サブスクリプションと呼ばれていました) にする必要があります。  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] よりも前のバージョンの [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] を実行しているサブスクライバーと同期する場合は、サブスクリプションを匿名にすることはできません。このサブスクリプションは、クライアント サブスクリプションまたはサーバー サブスクリプション (前のリリースではローカル サブスクリプションとグローバル サブスクリプションと呼ばれていました) にする必要があります。  
   
  サブスクリプションを同期するには、「 [Synchronize a Push Subscription](../../../relational-databases/replication/synchronize-a-push-subscription.md) 」および「 [Synchronize a Pull Subscription](../../../relational-databases/replication/synchronize-a-pull-subscription.md)」を参照してください。  
   

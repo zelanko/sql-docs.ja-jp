@@ -20,10 +20,10 @@ ms.assetid: 060eb839-666a-4046-9e1d-5edc9ea75a11
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 0a9954e823ae66017c3a6105f0f0ec27964b7043
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75246172"
 ---
 # <a name="grant-availability-group-permissions-transact-sql"></a>可用性グループの権限の許可 (Transact-SQL)
@@ -100,7 +100,7 @@ GRANT permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
 ## <a name="examples"></a>例  
   
 ### <a name="a-granting-view-definition-permission-on-an-availability-group"></a>A. 可用性グループの VIEW DEFINITION 権限を許可する  
- 次の例では、可用性グループ `MyAg` での `VIEW DEFINITION` 権限を、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン `ZArifin` に対して許可します。  
+ 次の例では、可用性グループ `VIEW DEFINITION` での `MyAg` 権限を、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン `ZArifin` に対して許可します。  
   
 ```  
 USE master;  

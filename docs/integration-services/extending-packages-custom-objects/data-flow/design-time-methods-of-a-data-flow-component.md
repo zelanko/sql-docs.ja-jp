@@ -20,10 +20,10 @@ ms.assetid: b5a121a1-b87c-441b-a42c-2cec628dc81c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: be2f7082d582d509b427605dcf7e6dd7cc4aa89a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71287815"
 ---
 # <a name="design-time-methods-of-a-data-flow-component"></a>データ フロー コンポーネントのデザイン時のメソッド
@@ -70,7 +70,7 @@ End Sub
 > [!NOTE]  
 >  <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100> インターフェイスは、**Object** 型のプロパティ値を制限付きでサポートしています。 カスタム プロパティの値として格納できるオブジェクトは、文字列や整数などの単純型の配列のみです。  
   
- 次の例に示すように、カスタム プロパティの <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.ExpressionType%2A> プロパティの値を、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSCustomPropertyExpressionType> 列挙値の **CPET_NOTIFY** に設定すると、カスタム プロパティでプロパティ式をサポートすることを指定できます。 ユーザーによって入力されたプロパティ式を処理または検証するためのコードを追加する必要はありません。 プロパティの既定値を設定し、値を検証し、値を読み取って正常に使用することができます。  
+ 次の例に示すように、カスタム プロパティの <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.ExpressionType%2A> プロパティの値を、**列挙値の**CPET_NOTIFY<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSCustomPropertyExpressionType> に設定すると、カスタム プロパティでプロパティ式をサポートすることを指定できます。 ユーザーによって入力されたプロパティ式を処理または検証するためのコードを追加する必要はありません。 プロパティの既定値を設定し、値を検証し、値を読み取って正常に使用することができます。  
   
 ```csharp  
 IDTSCustomProperty100 myCustomProperty;  

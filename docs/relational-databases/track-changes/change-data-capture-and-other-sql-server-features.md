@@ -13,17 +13,17 @@ ms.assetid: 7dfcb362-1904-4578-8274-da16681a960e
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: e29ad6de65172b08bb3f35aa89820ca817a9e1d3
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095295"
 ---
 # <a name="change-data-capture-and-other-sql-server-features"></a>変更データ キャプチャとその他の SQL Server 機能
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
   このトピックでは、次の機能と変更データ キャプチャとの連携について説明します。  
   
--   [変更の追跡](#ChangeTracking)  
+-   [Change tracking](#ChangeTracking)  
   
 -   [データベース ミラーリング](#DatabaseMirroring)  
   

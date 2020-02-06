@@ -25,10 +25,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6722becf2b18b1c81576b6f3173be2474e94cc73
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68044130"
 ---
 # <a name="drop-master-key-transact-sql"></a>DROP MASTER KEY (Transact-SQL)
@@ -47,13 +47,13 @@ DROP MASTER KEY
 ## <a name="arguments"></a>引数  
  このステートメントは引数をとりません。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  データベースの秘密キーがマスター キーで保護されている場合、削除は失敗します。  
   
 ## <a name="permissions"></a>アクセス許可  
  データベースに対する CONTROL 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、データベース `AdventureWorks2012` のマスター キーを削除します。  
   
 ```  
@@ -62,7 +62,7 @@ DROP MASTER KEY;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  次の例では、マスター キーを削除します。  
   
 ```  

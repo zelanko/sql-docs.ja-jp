@@ -26,13 +26,13 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 651af5040782bc729d5bca48fa2285e14e709e10
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67929175"
 ---
-# <a name="set-ansinulls-transact-sql"></a>SET ANSI_NULLS (Transact-SQL)
+# <a name="set-ansi_nulls-transact-sql"></a>SET ANSI_NULLS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で = (等号) 比較演算子と <> (不等号) 比較演算子を NULL 値に対して使用した場合の ISO 準拠動作を指定します。  
@@ -56,7 +56,7 @@ SET ANSI_NULLS { ON | OFF }
 SET ANSI_NULLS ON
 ```
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 ANSI_NULLS が ON の場合、WHERE *column_name* = **NULL** を使用する SELECT ステートメントを実行すると、*column_name* に NULL 値が指定されていても、0 行が返されます。 WHERE *column_name* <> **NULL** を使用する SELECT ステートメントでは、*column_name* に NULL 以外の値が指定されていても、0 行が返されます。  
   
 ANSI_NULLS が OFF の場合は、= (等号) 比較演算および <> (不等号) 比較演算の実行結果に、ISO 標準が適用されません。 WHERE *column_name* = **NULL** を使用する SELECT ステートメントでは、*column_name* に NULL 値を持つ行が返されます。 WHERE *column_name* <> **NULL** を使用する SELECT ステートメントでは、列に NULL 以外の値を持つ行が返されます。 また、WHERE *column_name* <> *XYZ_value* を使用する SELECT ステートメントでは、*XYZ_value* 以外の非 NULL 値を持つすべての行が返されます。  
@@ -106,7 +106,7 @@ SELECT @ANSI_NULLS AS ANSI_NULLS;
 ## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、`=` (等号) 比較演算子と `<>` (不等号) 比較演算子を使用して、テーブル内の `NULL` 値と NULL 以外の値を比較します。 例は `IS NULL` が `SET ANSI_NULLS` 設定に影響されないことも示しています。  
   
 ```sql  
@@ -185,7 +185,7 @@ DROP TABLE dbo.t1;
 ## <a name="see-also"></a>参照  
  [SET ステートメント &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
  [SESSIONPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/sessionproperty-transact-sql.md)   
- [= &#40;等号&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/equals-transact-sql.md)   
+ [= &#40;等しい&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/equals-transact-sql.md)   
  [IF...ELSE &#40;Transact-SQL&#41;](../../t-sql/language-elements/if-else-transact-sql.md)   
  [&#60;&#62; &#40;不等号&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/not-equal-to-transact-sql-traditional.md)   
  [SET ステートメント &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   

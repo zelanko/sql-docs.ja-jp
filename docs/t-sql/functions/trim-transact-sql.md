@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azure-sqldw-latest||=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9707f0b23d9461418536c2b9f9015623124d5436
-ms.sourcegitcommit: 2bc15f81d7a238c6fc409440800f1d6c7943a4b5
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70059838"
 ---
 # <a name="trim-transact-sql"></a>TRIM (Transact-SQL)
@@ -53,11 +53,11 @@ string: 文字を削除する必要がある任意の文字型 (`nvarchar`、`va
 
 空白文字 `char(32)` または他の指定した文字が両側から削除される、文字列引数の型を持つ文字式を返します。 入力文字列が `NULL` の場合は `NULL` を返します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 既定では、`TRIM` 関数によって文字列の先頭と末尾の両方から空白文字が削除されます。 この動作は `LTRIM(RTRIM(@string))` と同等です。
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 ### <a name="a--removes-the-space-character-from-both-sides-of-string"></a>A.  文字列の先頭と末尾からスペース文字を削除します。
 

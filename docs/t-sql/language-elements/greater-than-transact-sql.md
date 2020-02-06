@@ -24,10 +24,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 977066e40cc35b5a769192005dadc0e52b37a91a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68075136"
 ---
 # <a name="gt-greater-than-transact-sql"></a>&gt; (より大きい) (Transact-SQL)
@@ -50,7 +50,7 @@ expression > expression
 ## <a name="result-types"></a>戻り値の型  
  **Boolean**  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-using--in-a-simple-query"></a>A. 簡単なクエリで > を使用する  
  次の例では、`HumanResources.Department` テーブル内で、`DepartmentID` の値が値 13 を超えるすべての行を返します。  

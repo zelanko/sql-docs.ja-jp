@@ -29,10 +29,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: da59f10213eab84f52b764f41625d6f9361f0a40
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68060991"
 ---
 # <a name="create-database-encryption-key-transact-sql"></a>CREATE DATABASE ENCRYPTION KEY (Transact-SQL)
@@ -78,7 +78,7 @@ ENCRYPTION BY SERVER CERTIFICATE Encryptor_Name
 ENCRYPTION BY SERVER ASYMMETRIC KEY Encryptor_Name  
 データベース暗号化キーを暗号化するために使用する非対称キーの名前を指定します。 非対称キーでデータベース暗号化キーを暗号化するには、非対称キーが拡張キー管理プロバイダーに存在している必要があります。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 *Transparent Data Encryption* (TDE) を使ってデータベースを暗号化するには、事前にデータベース暗号化キーが必要です。 データベースを透過的に暗号化すると、特別にコードを変更することなく、データベース全体がファイル レベルで暗号化されます。 データベース暗号化キーの暗号化に使用する証明書または非対称キーは、マスター システム データベースに配置されている必要があります。  
   
 データベース暗号化ステートメントは、ユーザー データベースでのみ使用できます。  
@@ -92,7 +92,7 @@ ENCRYPTION BY SERVER ASYMMETRIC KEY Encryptor_Name
 ## <a name="permissions"></a>アクセス許可  
 データベースに対する CONTROL 権限と、データベース暗号化キーの暗号化に使用する証明書または非対称キーに対する VIEW DEFINITION 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 TDE の使用に関する他の例については、「[Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)」、「[EKM の使用による TDE の有効化](../../relational-databases/security/encryption/enable-tde-on-sql-server-using-ekm.md)」、および「[Azure Key Vault を使用する拡張キー管理 &#40;SQL Server&#41;](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)」をご覧ください。  
   
 次の例では、`AES_256` アルゴリズムを使用してデータベース暗号化キーを作成し、`MyServerCert` という証明書で秘密キーを保護します。  

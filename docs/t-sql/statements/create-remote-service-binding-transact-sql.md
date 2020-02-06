@@ -38,10 +38,10 @@ ms.assetid: 4165c404-4d50-4063-9a6e-6e267d309376
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 2fc021cec09a7f62d05f5e435db9d6fc2597fce3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68117343"
 ---
 # <a name="create-remote-service-binding-transact-sql"></a>CREATE REMOTE SERVICE BINDING (Transact-SQL)
@@ -78,7 +78,7 @@ CREATE REMOTE SERVICE BINDING binding_name
  ANONYMOUS  
  リモート サービスと通信するときに匿名認証を使用するかどうかを指定します。 ANONYMOUS を ON にすると匿名認証が使用され、リモート データベースでの操作は、**public** 固定データベース ロールのメンバーによる操作として実行されます。 ANONYMOUS を OFF にすると、リモート データベースでの操作は、そのデータベース固有のユーザーによる操作として実行されます。 この句を指定しない場合、既定値は OFF になります。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] では、リモート サービス バインドを使用して、新しいメッセージ交換に使用する証明書が検索されます。 *user_name* に関連付けられている証明の公開キーは、リモート サービスに送信されるメッセージの認証とセッション キーの暗号化に使用されます。その後、暗号化されたセッション キーを使用して、メッセージ交換が暗号化されます。 *user_name* の証明は、リモート サービスをホストするデータベースに格納されているユーザーの証明と対応している必要があります。  
   
  リモート サービス バインドは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの外部にある対象サービスと通信するサービスを開始する場合にのみ必要です。 開始サービスをホストするデータベースには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの外部にあるすべての対象サービスのリモート サービス バインドが含まれている必要があります。 ただし、対象サービスをホストするデータベースには、対象サービスと通信する開始サービスのリモート サービス バインドが含まれている必要はありません。 開始サービスと対象サービスが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の同じインスタンス内にある場合、リモート サービス バインドは必要ありません。 ただし、TO SERVICE に指定された *service_name* とローカル サービスの名前が一致する場所にリモート サービス バインドが存在する場合は、[!INCLUDE[ssSB](../../includes/sssb-md.md)] ではそのバインドが使用されます。  
@@ -94,7 +94,7 @@ CREATE REMOTE SERVICE BINDING binding_name
   
  リモート サービス バインドは一時オブジェクトとして指定できません。 **#** で始まるリモート サービス バインド名は許可されますが、パーマネント オブジェクトになります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-creating-a-remote-service-binding"></a>A. リモート サービス バインドを作成する  
  次の例では、サービス `//Adventure-Works.com/services/AccountsPayable` のバインドを作成します。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] では、データベース プリンシパル `APUser` が所有する証明を使用してリモート サービスへの認証が行われ、リモート サービスとの間でセッション暗号化キーが交換されます。  
