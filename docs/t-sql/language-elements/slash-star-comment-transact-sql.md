@@ -22,10 +22,10 @@ ms.assetid: 4d9ab1b2-4bbb-4c16-beb1-cafc1af7417c
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: c1bee651b2dd74564ebaff47add5acd4b62c5018
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68121680"
 ---
 # <a name="slash-star-block-comment-transact-sql"></a>スラッシュ アスタリスク (ブロック コメント) (Transact-SQL)
@@ -49,7 +49,7 @@ text_of_comment
  *text_of_comment*  
  コメントのテキストです。 1 つ以上の文字列です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  コメントは、単独行に指定したり、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの中に指定できます。 複数行のコメントは、/* と \*/ で示す必要があります。 複数行のコメントで使用されることが多いスタイル規則では、最初の行は /\* で始め、その後に続く行は \*\* で始め、最後は \*/ で終了します。  
   
  コメントの長さには制限がありません。  
@@ -81,7 +81,7 @@ GO
   
 ```  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、コード セクションの作業内容を説明するコメントを使用しています。  
   
 ```  

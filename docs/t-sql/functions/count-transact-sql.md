@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e4cec9afec24b1ef184b9f37795903017c6d3b00
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68026493"
 ---
 # <a name="count-transact-sql"></a>COUNT (Transact-SQL)
@@ -56,7 +56,7 @@ DISTINCT
 `COUNT` で一意の NULL ではない値の数を返すことを指定します。
   
 *式 (expression)*  
-**image**、**ntext**、**text** を除く、任意の型の[式](../../t-sql/language-elements/expressions-transact-sql.md)です。 `COUNT` は、式の集計関数またはサブクエリをサポートしていません。
+[image](../../t-sql/language-elements/expressions-transact-sql.md)、**ntext**、**text** を除く、任意の型の**式**です。 `COUNT` は、式の集計関数またはサブクエリをサポートしていません。
   
 \*  
 `COUNT` ですべての行をカウントし、返すテーブルの合計行数を決定することを指定します。 `COUNT(*)` はパラメーターを受け取らず、DISTINCT の使用をサポートしていません。 `COUNT(*)` では、この関数の定義上、特定の列についての情報は使用されないため、*expression* パラメーターは必要ありません。 `COUNT(*)` は、指定されたテーブル内の行数を返し、重複する行を保持します。 各行は 1 行としてカウントされ、 これには NULL 値を保持している行も含まれます。
@@ -67,7 +67,7 @@ OVER **(** [ *partition_by_clause* ] [ *order_by_clause* ] [ *ROW_or_RANGE_claus
 ## <a name="return-types"></a>戻り値の型
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 COUNT(\*) はグループ内のアイテム数を返します。 これには NULL 値と重複値が含まれます。
   
 COUNT(ALL *expression*) はグループ内の各行に対して *expression* を評価し、非 NULL 値の数を返します。
@@ -78,7 +78,7 @@ COUNT(DISTINCT *expression*) はグループ内の各行に対して *expression
   
 `COUNT` は、OVER 句や ORDER BY 句***なし***で使用される場合は決定的関数です。 OVER 句や ORDER BY 句と***共に***使用される場合は、非決定的関数です。 詳細については、「[決定的関数と非決定的関数](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)」を参照してください。
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-using-count-and-distinct"></a>A. COUNT と DISTINCT を使用する  
 この例では、[!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] の従業員が保持できるさまざまな役職の数を返します。
@@ -178,7 +178,7 @@ Tool Design                   8.62                  29.8462               23.505
 (16 row(s) affected)
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-using-count-and-distinct"></a>E. COUNT と DISTINCT を使用する  
 この例では、特定の会社の従業員が保持できるさまざまな役職の数を返します。

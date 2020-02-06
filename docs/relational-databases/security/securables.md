@@ -20,10 +20,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 30688490a06c784a2149e53f7e175b6350d3d891
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67986565"
 ---
 # <a name="securables"></a>[セキュリティ保護可能なリソース]
@@ -31,20 +31,20 @@ ms.locfileid: "67986565"
 
   セキュリティ保護可能なリソースは、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] の承認システムによりアクセスが制限されたリソースです。 たとえば、テーブルはセキュリティ保護可能です。 セキュリティ保護可能なリソースの中には他のセキュリティ保護可能なリソースに含まれているものがあります。これらは "スコープ" と呼ばれ、それ自体をセキュリティで保護できる入れ子構造の階層を形成しています。 セキュリティ保護可能なスコープは、 **サーバー**、 **データベース**、および **スキーマ**です。  
   
-## <a name="securable-scope-server"></a>セキュリティ保護可能なスコープ:[サーバー]  
+## <a name="securable-scope-server"></a>セキュリティ保護可能なスコープ: サーバー  
  **サーバー** セキュリティ保護可能なスコープには、次のセキュリティ保護可能なリソースが含まれています。  
   
 -   可用性グループ  
   
 -   エンドポイント  
   
--   Login  
+-   ログイン  
   
 -   サーバー ロール  
   
 -   データベース  
   
-## <a name="securable-scope-database"></a>セキュリティ保護可能なスコープ:データベース  
+## <a name="securable-scope-database"></a>セキュリティ保護可能なスコープ: データベース  
  **データベース** セキュリティ保護可能なスコープには、次のセキュリティ保護可能なリソースが含まれています。  
   
 -   アプリケーション ロール  
@@ -67,7 +67,7 @@ ms.locfileid: "67986565"
   
 -   (データベース) ロール  
   
--   Route  
+-   ルート  
   
 -   スキーマ  
   
@@ -77,12 +77,12 @@ ms.locfileid: "67986565"
   
 -   対称キー  
   
--   ユーザー  
+-   User  
   
-## <a name="securable-scope-schema"></a>セキュリティ保護可能なスコープ:スキーマ  
+## <a name="securable-scope-schema"></a>セキュリティ保護可能なスコープ: スキーマ  
  **スキーマ** セキュリティ保護可能なスコープには、次のセキュリティ保護可能なリソースが含まれています。  
   
--   型  
+-   種類  
   
 -   XML スキーマ コレクション  
   
@@ -90,7 +90,7 @@ ms.locfileid: "67986565"
   
     -   Aggregate  
   
-    -   機能  
+    -   Function  
   
     -   手順  
   

@@ -11,10 +11,10 @@ ms.assetid: bcd945ba-5d81-4124-9a2b-d87491c2a369
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a0c867d9acba6542d90f72595fa0f71ab6d62e64
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68026056"
 ---
 # <a name="smo-and-dmo-xps-server-configuration-option"></a>SMO and DMO XPs サーバー構成オプション
@@ -26,14 +26,14 @@ ms.locfileid: "68026056"
   
  次の表に、このオプションで使用可能な値を示します。  
   
-|[値]|意味|  
+|値|意味|  
 |-----------|-------------|  
 |0|SMO 拡張ストアド プロシージャ (XP) を使用できません。|  
 |1|SMO 拡張ストアド プロシージャ (XP) を使用できます。 これは既定値です。|  
   
- この設定はすぐに有効になります。  
+ 設定はすぐに有効になります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、SMO の拡張ストアド プロシージャを有効にします。  
   
 ```  

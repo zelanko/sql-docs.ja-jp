@@ -1,10 +1,9 @@
 ---
-title: '[XML インデックス] ダイアログ ボックス (Visual Database Tools) | Microsoft Docs'
-ms.custom: ''
+title: '[XML インデックス] ダイアログ ボックス'
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +11,14 @@ f1_keywords:
 ms.assetid: eef38310-4498-4ccc-bb77-5bbd1c7cc477
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c2526d2facc494dc102ac6674ac01ab851b0a40c
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 38be046b5c99e56a76c716117708d4eeb88ac9fd
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262464"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246183"
 ---
 # <a name="xml-indexes-dialog-box-visual-database-tools"></a>[XML インデックス] ダイアログ ボックス (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "68262464"
 **[選択された XML インデックス]**  
 既存の XML インデックスを一覧表示します。 特定のインデックスを選択すると、右側のグリッドにそのプロパティが表示されます。 一覧が空の場合、テーブルには何も定義されていません。  
   
-**[追加]**  
+**追加**  
 XML インデックスを新規作成します。  
   
 **削除**  
@@ -48,16 +49,16 @@ XML インデックスを新規作成します。
 **[2 番目の型]**  
 セカンダリ インデックスの種類を表示します。 セカンダリ インデックスが選択されている場合のみ有効です。  
   
-**[型]**  
+**Type**  
 このインデックスが XML インデックスであることを示します。  
   
 **[IDENTITY] カテゴリ**  
 展開して、 **[オブジェクト名]** プロパティ フィールドと **[説明]** プロパティ フィールドを表示します。  
   
-**[オブジェクト名]**  
+**名前**  
 XML インデックスの名前を表示します。 新しいキーまたはインデックスを作成した場合、このプロパティには、テーブル デザイナーのアクティブ ウィンドウのテーブルに基づいて、既定の名前が設定されます。 名前はいつでも変更できます。  
   
-**[説明]**  
+**説明**  
 インデックスの説明を記述します。 より詳細な説明を記述する場合は、 **[説明]** をクリックしてから、プロパティ フィールドの右に表示される省略記号ボタン ( **[...]** ) をクリックします。 これにより、テキストを書くことができる領域が大きくなります。  
   
 **[テーブル デザイナー] カテゴリ**  

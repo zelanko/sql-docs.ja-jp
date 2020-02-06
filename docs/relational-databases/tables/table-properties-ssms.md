@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1c0dea1eff86506021907b184c80b3f28f74ab5a
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72905951"
 ---
 # <a name="table-properties---ssms"></a>Table Properties - SSMS
@@ -46,14 +46,14 @@ ms.locfileid: "72905951"
  **[サーバー]**  
  現在のサーバー インスタンスの名前です。  
   
- **ユーザー**  
+ **User**  
  この接続のユーザーの名前です。  
   
  **[作成日]**  
  テーブルが作成された日付と時刻です。  
   
- **[名前]**  
- テーブルの名前です。  
+ **名前**  
+ テーブルの名前。  
   
  **[スキーマ]**  
  テーブルを所有するスキーマです。  
@@ -68,7 +68,7 @@ ms.locfileid: "72905951"
  オブジェクトが、引用符で囲まれた識別子オプションが ON に設定されて作成されたかどうかを指定します。 詳細については、「[SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)」を参照してください。  
   
  **[ロックのエスカレーション]**  
- テーブルのロック エスカレーションの粒度を示します。 データベース エンジンのロックの詳細については、「 [SQL Server トランザクションのロックおよび行のバージョン管理ガイド](https://msdn.microsoft.com/library/jj856598.aspx)」をご覧ください。 有効な値は次のとおりです。  
+ テーブルのロック エスカレーションの粒度を示します。 データベース エンジンのロックの詳細については、「 [SQL Server トランザクションのロックおよび行のバージョン管理ガイド](https://msdn.microsoft.com/library/jj856598.aspx)」をご覧ください。 次のいずれかの値になります。  
   
  AUTO  
  このオプションを使用すると、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] は、テーブル スキーマに適したロック エスカレーションの粒度を選択します。  
@@ -160,7 +160,7 @@ ms.locfileid: "72905951"
  **[パーティション列]**  
  テーブルがパーティション分割される列の名前。  
   
- **パーティション構成**  
+ **[パーティション構成]**  
  テーブルがパーティション分割されている場合のパーティション構成の名前。 テーブルがパーティション分割されていない場合、このフィールドは空白です。  
   
  **[パーティション数]**  

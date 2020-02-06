@@ -22,28 +22,28 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f844874da3ba4c7a644331f521293e1c0f94fed5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67940247"
 ---
 # <a name="binary-and-varbinary-transact-sql"></a>binary と varbinary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-固定長または可変長のbinary データ型です。
+固定長または可変長のバイナリ データ型です。
   
 ## <a name="arguments"></a>引数  
 **binary** [ ( _n_ ) ]。長さ _n_ バイトの固定長のbinary データです。_n_ は 1 ～ 8,000 の値になります。 ストレージのサイズは _n_ バイトです。
   
 **varbinary** [ ( _n_ | **max**) ] 可変長のbinary データ。 _n_ には 1 ～ 8,000 の値を指定できます。 **max** 記憶域の最大サイズが 2 であることを示します。 ^ 31-1 バイトです。 格納サイズは、入力したデータの実際の長さ + 2 バイトとなります。 入力するデータの長さは 0 バイトでもかまいません。 **varbinary** の ANSI SQL シノニム **binary** 可変です。
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 データ定義または変数宣言ステートメントで _n_ を指定しないと、既定の長さは 1 になります。 CAST 関数で _n_ を指定しないと、既定の長さは 30 になります。
 
 | データ型 | 次の場合に使用 |
 | --- | --- |
-| **binary** | 列データ エントリのサイズが一定である。|
+| **[バイナリ]** | 列データ エントリのサイズが一定である。|
 | **varbinary** | 列データ エントリのサイズが大幅に変化する。|
 | **varbinary(max)** | 列データ エントリのサイズが 8,000 バイトを超える。|
 
@@ -55,11 +55,11 @@ ms.locfileid: "67940247"
 * **varchar**
 * **nchar**
 * **nvarchar**
-* **binary**
+* **[バイナリ]**
 * **varbinary**
 * **text**
 * **ntext**
-* **image**
+* **画像**
 
 他のデータ型が変換される場合 **binary** または **varbinary**, 、データが埋め込まれるか、左側に切り捨てられます。 桁の埋め込みには 16 進数の 0 が使用されます。
   
@@ -96,7 +96,7 @@ GO
   
 ## <a name="see-also"></a>参照
 [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-[データ型の変換 &#40;データベース エンジン&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
+[データ型の変換&#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
 [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)
   
   

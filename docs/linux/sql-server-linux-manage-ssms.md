@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: b2fcf858-21c3-462a-8d49-50c85647d092
 ms.openlocfilehash: 753845d41c946d955b80a927901f827ee4643567
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68000092"
 ---
 # <a name="use-sql-server-management-studio-on-windows-to-manage-sql-server-on-linux"></a>Windows で SQL Server Management Studio を使用して SQL Server on Linux を管理する
@@ -59,11 +59,11 @@ SQL Server を操作する際には、常に最新版の SQL Server Management S
    |-----|-----|
    | **サーバーの種類** | 既定値はデータベース エンジンです。この値は変更しないでください。 |
    | **サーバー名** | ターゲットの Linux SQL Server マシンの名前か、その IP アドレスを入力します。 |
-   | **[認証]** | SQL Server on Linux の場合は、 **[SQL Server 認証]** を使用します。 |
+   | **認証** | SQL Server on Linux の場合は、 **[SQL Server 認証]** を使用します。 |
    | **Login** | サーバー上のデータベースへのアクセス権を持つユーザーの名前 (たとえば、セットアップ中に作成された既定の **SA** アカウント) を入力します。 |
    | **パスワード** | 指定したユーザーのパスワードを入力します (**SA** アカウントの場合は、セットアップ時に作成したものを入力します)。 |
 
-    ![SQL Server Management Studio:SQL Database サーバーへの接続](./media/sql-server-linux-manage-ssms/connect.png)
+    ![SQL Server Management Studio: SQL Database サーバーへの接続](./media/sql-server-linux-manage-ssms/connect.png)
 
 1. **[接続]** をクリックします。
 
@@ -91,7 +91,7 @@ SQL Server を操作する際には、常に最新版の SQL Server Management S
 
 1. **[実行]** ボタンをクリックしてクエリを実行し、結果を確認します。
 
-   ![正常終了しました。 SQL Database サーバーへの接続:SQL Server Management Studio](./media/sql-server-linux-manage-ssms/execute-query.png)
+   ![正常終了しました。 SQL Database サーバーへの接続: SQL Server Management Studio](./media/sql-server-linux-manage-ssms/execute-query.png)
 
 Transact-SQL クエリはほとんどの管理タスクに使用できますが、SSMS のグラフィカル ツールを使用すれば、SQL Server をより簡単に管理することができます。 以下のセクションでは、グラフィカル ユーザー インターフェイスの使用例をいくつか紹介します。
 
@@ -132,7 +132,7 @@ SQL Server Management Studio (SSMS) には、[利用状況モニター](../relat
 利用状況モニターには、展開と折りたたみが可能なペインと、次の情報が表示されます。
 
 - 概要
-- プロセス
+- 処理
 - リソースの待機
 - データ ファイル I/O
 - 最近コストの高いクエリ

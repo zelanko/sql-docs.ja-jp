@@ -22,10 +22,10 @@ ms.assetid: 87c0c385-6b2d-4716-ac8c-a3ce6e8d89e9
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: edaa3069bece2d6acf7f28ab32da5f5639f49be4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68024269"
 ---
 # <a name="indexkey_property-transact-sql"></a>INDEXKEY_PROPERTY (Transact-SQL)
@@ -58,7 +58,7 @@ INDEXKEY_PROPERTY ( object_ID ,index_ID ,key_ID ,property )
  *property*  
  情報が返されるプロパティの名前です。 *プロパティ* 、文字の文字列は、次の値のいずれかを指定することができます。  
   
-|[値]|[説明]|  
+|値|[説明]|  
 |-----------|-----------------|  
 |**ColumnId**|列の ID で、*key_ID*、インデックスの位置。|  
 |**IsDescending**|インデックス列を格納する順序です。<br /><br /> 1 = 降順、0 = 昇順|  
@@ -71,7 +71,7 @@ INDEXKEY_PROPERTY ( object_ID ,index_ID ,key_ID ,property )
   
  ユーザーが所有しているか、または権限を与えられている、セキュリティ保護可能なリソースのメタデータのみを表示できます。 つまり、オブジェクトに対する権限がユーザーに与えられていない場合、メタデータを生成する組み込み関数 (INDEXKEY_PROPERTY など) が NULL を返す可能性があります。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、両方のプロパティが `1` テーブルのインデックス ID `1`、キー列 `Production.Location` に対して返されます。  
   
 ```sql  
@@ -84,7 +84,7 @@ SELECT
         1,1,'IsDescending') AS [Asc or Desc order];  
 ```  
   
- 以下に結果セットを示します。  
+ 結果セットは次のようになります。  
   
 ```  
 Column ID   Asc or Desc order   

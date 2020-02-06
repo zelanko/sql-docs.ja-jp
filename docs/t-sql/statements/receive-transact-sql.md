@@ -22,10 +22,10 @@ ms.assetid: 878c6c14-37ab-4b87-9854-7f8f42bac7dd
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: e555a51cc4ab7c628dc75469aa1cfe4d7c01edcc
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70211440"
 ---
 # <a name="receive-transact-sql"></a>RECEIVE (Transact-SQL)
@@ -105,7 +105,7 @@ ms.locfileid: "70211440"
  TIMEOUT *timeout*  
  ステートメントでメッセージを待機する時間をミリ秒で指定します。 この句は WAITFOR 句と共に使用する必要があります。 この句を指定しないか、タイムアウトが -**1** の場合、待機時間は無制限になります。 タイムアウトの時間を過ぎると、RECEIVE では空の結果セットが返されます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
 > [!IMPORTANT]  
 >  RECEIVE ステートメントがバッチまたはストアド プロシージャで最初のステートメントではない場合は、前のステートメントの後にセミコロン (;) を指定する必要があります。  
@@ -157,7 +157,7 @@ ms.locfileid: "70211440"
   
 |列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
-|**ステータス**|**tinyint**|メッセージの状態。 RECEIVE コマンドで返されるメッセージの状態は常に **0** です。 キューのメッセージには、次のいずれかの値が含まれます。<br /><br /> **0** = 準備完了。**1** = 受信メッセージ。**2** = 未完了。**3** = 保持されている送信済みメッセージ。|  
+|**status**|**tinyint**|メッセージの状態。 RECEIVE コマンドで返されるメッセージの状態は常に **0** です。 キューのメッセージには、次のいずれかの値が含まれます。<br /><br /> **0** = 準備完了。**1** = 受信メッセージ。**2** = 未完了。**3** = 保持されている送信済みメッセージ。|  
 |**priority**|**tinyint**|メッセージに適用されているメッセージ交換の優先度レベル。|  
 |**queuing_order**|**bigint**|キュー内のメッセージの順序番号。|  
 |**conversation_group_id**|**uniqueidentifier**|メッセージが属するメッセージ交換グループの識別子。|  
@@ -175,7 +175,7 @@ ms.locfileid: "70211440"
 ## <a name="permissions"></a>アクセス許可  
  メッセージを受信するには、キューに対する RECEIVE 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-receiving-all-columns-for-all-messages-in-a-conversation-group"></a>A. メッセージ交換グループにあるすべてのメッセージの、すべての列を受信する  
  次の例では、`ExpenseQueue` キューから、次に使用できるメッセージ交換グループに属している使用可能なすべてのメッセージを受信します。 このステートメントでは、メッセージが結果セットとして返されます。  

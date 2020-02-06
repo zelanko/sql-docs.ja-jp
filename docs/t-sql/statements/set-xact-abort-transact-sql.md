@@ -27,10 +27,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 805b13301cad748331bc571a70cc77ffe8c8c27e
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71952347"
 ---
 # <a name="set-xact_abort-transact-sql"></a>SET XACT_ABORT (Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "71952347"
 > [!NOTE]
 > **THROW** ステートメントは **SET XACT_ABORT** に従いますが、 **RAISERROR** は従いません。 新しいアプリケーションでは、**RAISERROR** の代わりに **THROW** を使ってください。
 
-[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントによって実行時エラーが発生した場合に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が自動的に現在のトランザクションをロールバックするかどうかを指定します。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ステートメントによって実行時エラーが発生した場合に、[!INCLUDE[tsql](../../includes/tsql-md.md)] が自動的に現在のトランザクションをロールバックするかどうかを指定します。
 
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -50,7 +50,7 @@ ms.locfileid: "71952347"
 SET XACT_ABORT { ON | OFF }
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 SET XACT_ABORT が ON の場合は、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントで実行時エラーが発生すると、トランザクション全体が終了し、ロールバックされます。
 
@@ -73,7 +73,7 @@ SELECT @XACT_ABORT AS XACT_ABORT;
 
 ```
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 次の例では、他の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを含むトランザクションで、外部キー違反エラーが発生します。 最初のステートメント セットでは、エラーが生成されますが、他のステートメントは正常に実行され、トランザクションは正常にコミットされます。 2 番目のステートメントでは、`SET XACT_ABORT` は `ON` に設定されます。 このため、ステートメント エラーが発生すると、バッチが終了し、トランザクションはロールバックされます。
 
