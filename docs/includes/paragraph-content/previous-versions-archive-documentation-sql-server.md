@@ -1,11 +1,3 @@
----
-ms.openlocfilehash: 28835571ef6bd3690884ea3e2b916d0c0d237eab
-ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73057334"
----
 
 Microsoft は、Web ページのアーカイブ セットに非常に古いバージョンの Microsoft SQL Server のドキュメントを蓄積し、保持しています。 アーカイブされた Web ページは、Bing.com や Google.com などの検索エンジンの対象にはなりません。 これらのアーカイブは、Microsoft の Docs の _previous-versions/sql/_ アドレスで確認できます。
 

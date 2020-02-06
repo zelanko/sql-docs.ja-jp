@@ -25,10 +25,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8e3fbbeed1224c6cd67c4292a6e263fb079d3ad5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68107145"
 ---
 # <a name="disable-indexes-and-constraints"></a>インデックスと制約の無効化
@@ -130,9 +130,9 @@ ms.locfileid: "68107145"
  インデックスが作成されているテーブルまたはビューの名前を表示します。  
   
  **[インデックスの種類]**  
- インデックスの種類を表示します:**クラスター化**、**非クラスター化**、**空間**、または **XML**。  
+ インデックスの種類 ( **[クラスター化]** 、 **[非クラスター化]** 、 **[空間]** 、または **[XML]** ) を表示します。  
   
- **ステータス**  
+ **状態**  
  無効化操作の状態を表示します。 実行後の値は、次のいずれかになります。  
   
 -   空白  

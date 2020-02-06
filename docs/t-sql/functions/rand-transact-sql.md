@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: af3301961fb153dc64e7ebe98f7012ce6570d0e9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67948444"
 ---
 # <a name="rand-transact-sql"></a>RAND (Transact-SQL)
@@ -48,7 +48,7 @@ RAND ( [ seed ] )
 ## <a name="return-types"></a>戻り値の型  
  **float**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  同じシード値を使用して RAND() を繰り返し呼び出しても、同じ結果が返されます。  
   
  1 つの接続について、指定したシード値で RAND() を呼び出すと、以降のすべての RAND() の呼び出しで、シード値を指定した RAND() の呼び出しに基づいた結果が生成されます。 たとえば、次のクエリでは、同じ数値のシーケンスが常に返されます。  
@@ -57,7 +57,7 @@ RAND ( [ seed ] )
 SELECT RAND(100), RAND(), RAND()   
 ```  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、RAND 関数によって 4 つの異なる乱数が生成されます。  
   
 ```sql  

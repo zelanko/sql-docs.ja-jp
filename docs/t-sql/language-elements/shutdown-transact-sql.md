@@ -22,10 +22,10 @@ ms.assetid: c8b03ff9-688c-4fe8-86e8-bd6bd401c9a4
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 01cf9fcf7795e8f353565b767bbf79b1da43f4de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68121702"
 ---
 # <a name="shutdown-transact-sql"></a>SHUTDOWN (Transact-SQL)
@@ -44,9 +44,9 @@ SHUTDOWN [ WITH NOWAIT ]
   
 ## <a name="arguments"></a>引数  
  WITH NOWAIT  
- 省略可。 各データベースでチェックポイントを実行せずに、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をシャットダウンします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はすべてのユーザー プロセスの停止を試行した後に終了します。 サーバーが再起動すると、完了しなかったトランザクションのロールバック操作が行われます。  
+ 省略可能。 各データベースでチェックポイントを実行せずに、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をシャットダウンします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はすべてのユーザー プロセスの停止を試行した後に終了します。 サーバーが再起動すると、完了しなかったトランザクションのロールバック操作が行われます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  WITHNOWAIT オプションを使用しない場合、SHUTDOWN では [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が次のようにシャットダウンされます。  
   
 1.  ログインを無効にする (固定サーバー ロール **sysadmin** および **serveradmin** のメンバーを除く)。  
@@ -71,7 +71,7 @@ SHUTDOWN [ WITH NOWAIT ]
  **sqlservr.exe** をコマンド プロンプトから起動した場合は、Ctrl キーを押しながら C キーを押すと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がシャットダウンされます。 Ctrl+C キーを押してもチェックポイントは挿入されません。  
   
 > [!NOTE]  
->  どの方法で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を停止しても、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には `SERVICE_CONTROL_STOP` メッセージが送信されます。  
+>  どの方法で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を停止しても、`SERVICE_CONTROL_STOP` には [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] メッセージが送信されます。  
   
 ## <a name="permissions"></a>アクセス許可  
  SHUTDOWN アクセス許可は、既定では固定サーバー ロール **sysadmin** および **serveradmin** のメンバーに与えられています。このアクセス許可を譲渡することはできません。  

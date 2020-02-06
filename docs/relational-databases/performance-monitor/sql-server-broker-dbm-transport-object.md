@@ -14,10 +14,10 @@ ms.assetid: eddb60b6-20a9-416c-adf3-4bc1687944fa
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 8a6a8bc83c1842676220f384d39179c74c47a336
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67987067"
 ---
 # <a name="sql-server-broker---dbm-transport-object"></a>SQL Server: Broker - DBM Transport オブジェクト
@@ -42,9 +42,9 @@ ms.locfileid: "67987067"
 |**Message Fragment Receives/sec**|ネットワーク経由で 1 秒あたりに受信したメッセージ フラグメント数を報告します。|   
 |**Message Fragment Sends/sec**|ネットワーク経由で 1 秒あたりに送信されたすべての優先度のメッセージ フラグメント数を報告します。|  
 |**Msg Fragment Recv Size Avg**|ネットワーク経由で受信したメッセージ フラグメントの平均サイズを報告します。|  
-|**Msg Fragment Recv Size Avg Base**|内部使用のみです。| 
+|**Msg Fragment Recv Size Avg Base**|内部使用専用です。| 
 |**Msg Fragment Send Size Avg**|ネットワーク経由で送信されたメッセージ フラグメントの平均サイズを報告します。|  
-|**Msg Fragment Send Size Avg Base**|内部使用のみです。|
+|**Msg Fragment Send Size Avg Base**|内部使用専用です。|
 |**Open Connection Count**|Service Broker が現在開いているネットワーク接続の数を報告します。|  
 |**Pending Bytes for Recv I/O**|ネットワークからの受信後、まだキューへの配置も破棄も行われていないメッセージ フラグメントに含まれるバイト数を報告します。|  
 |**Pending Bytes for Send I/O**|ネットワーク経由での送信準備が整ったメッセージ フラグメント内の合計バイト数を報告します。|  
@@ -53,14 +53,14 @@ ms.locfileid: "67987067"
 |**Receive I/O bytes/sec**|Service Broker のエンドポイントとデータベース ミラーリングのエンドポイントで、ネットワーク経由で 1 秒あたりに受信したバイト数を報告します。|  
 |**Receive I/O Bytes Total**|Service Broker のエンドポイントとデータベース ミラーリングのエンドポイントで、ネットワーク経由で受信した合計バイト数を報告します。|  
 |**Receive I/O Len Avg**|トランスポート受信操作の平均バイト数を報告します。|  
-|**Receive I/O Len Avg Base**|内部使用のみです。|
+|**Receive I/O Len Avg Base**|内部使用専用です。|
 |**Receive I/Os/sec**|Service Broker / DBM トランスポート層が 1 秒あたりに完了したトランスポート受信 I/O 操作の数を報告します。 1 つのトランスポート受信操作には、複数のメッセージ フラグメントが含まれている可能性があることに注意してください。|  
 |**Recv I/O Buffer Copies bytes/sec**|トランスポート受信 I/O 操作でバッファー フラグメントをメモリに移動しなければならなかった割合。|
 |**Recv I/O Buffer Copies Count**|トランスポート受信 I/O 操作でバッファー フラグメントをメモリに移動しなければならなかった回数。| 
 |**Send I/O bytes/sec**|Service Broker のエンドポイントとデータベース ミラーリングのエンドポイントで、ネットワーク経由で 1 秒あたりに送信したバイト数を報告します。|   
 |**Send I/O Bytes Total**|Service Broker のエンドポイントとデータベース ミラーリングのエンドポイントで、ネットワーク経由で送信した合計バイト数を報告します。| 
 |**Send I/O Len Avg**|各トランスポート送信操作の平均サイズをバイト単位で報告します。 1 つのトランスポート送信操作には、複数のメッセージ フラグメントが含まれている可能性があることに注意してください。|  
-|**Send I/O Len Avg Base**|内部使用のみです。|
+|**Send I/O Len Avg Base**|内部使用専用です。|
 |**Send I/Os/sec**|1 秒あたりに完了したトランスポート送信 I/O 操作の数を報告します。 1 つのトランスポート送信操作には、複数のメッセージ フラグメントが含まれている可能性があることに注意してください。|  
   
 ## <a name="see-also"></a>参照  

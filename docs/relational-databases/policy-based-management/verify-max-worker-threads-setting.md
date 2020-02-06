@@ -13,10 +13,10 @@ ms.assetid: 2d94adfd-3ba1-493a-b29a-b436f9d583df
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 79a2ff6f86c5d1fb7e109c0d8b6ba4b35d504c10
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68009341"
 ---
 # <a name="verify-max-worker-threads-setting"></a>max worker threads 設定の検証
@@ -30,6 +30,6 @@ ms.locfileid: "68009341"
  [max worker threads サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md)  
   
 ## <a name="see-also"></a>参照  
- [ポリシー ベースの管理を使用したベスト プラクティスの監視と実行](../../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)  
+ [ポリシーベースの管理を使用したベスト プラクティスの監視と実行](../../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)  
   
   

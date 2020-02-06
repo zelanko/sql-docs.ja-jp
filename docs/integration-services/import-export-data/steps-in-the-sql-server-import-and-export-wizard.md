@@ -10,10 +10,10 @@ ms.assetid: 816fb1bd-7bb9-450d-ad65-e4c2d02eaff8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0a6fb370c80af6221812b88d3694a230dc206f7b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296204"
 ---
 # <a name="steps-in-the-sql-server-import-and-export-wizard"></a>SQL Server インポートおよびエクスポート ウィザードの手順
@@ -35,7 +35,7 @@ ms.locfileid: "71296204"
 |**ようこそ**<br />このページでいかなる操作も必要はありません。|[SQL Server インポートおよびエクスポート ウィザードへようこそ](../../integration-services/import-export-data/welcome-to-sql-server-import-and-export-wizard.md)|  
 |データの変換元**を選択します**。|[データ ソースの選択](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)|  
 |データの**変換先を選択します**。|[変換先の選択](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)|  
-|**変換先を構成します**。 (省略可能な手順)<br /><br /> - 新しい変換先データベースを作成します。<br />- データをテキスト ファイルにコピーする場合は、追加設定を構成します。|[データベースの作成](../../integration-services/import-export-data/create-database-sql-server-import-and-export-wizard.md)<br /><br />[フラット ファイルの変換先の構成](../../integration-services/import-export-data/configure-flat-file-destination-sql-server-import-and-export-wizard.md)|  
+|**変換先を構成します**。 (省略可能な手順)<br /><br /> - 新しい変換先データベースを作成します。<br />- データをテキスト ファイルにコピーする場合は、追加設定を構成します。|[CREATE DATABASE](../../integration-services/import-export-data/create-database-sql-server-import-and-export-wizard.md)<br /><br />[フラット ファイルの変換先の構成](../../integration-services/import-export-data/configure-flat-file-destination-sql-server-import-and-export-wizard.md)|  
 |**何をコピーするかを指定します。**|[テーブルのコピーまたはクエリの指定](../../integration-services/import-export-data/specify-table-copy-or-query-sql-server-import-and-export-wizard.md)<br /><br />[コピー元のテーブルおよびビューを選択](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md)<br /><br />[基になるクエリの指定](../../integration-services/import-export-data/provide-a-source-query-sql-server-import-and-export-wizard.md)|  
 |**コピー操作を構成します**。 (省略可能な手順)<br /><br /> - 新しい変換先テーブルを作成します。<br />- ユーザーが選択した変換元と変換先の間のデータ型マッピングの方法を、ウィザードが認識しない場合の操作を決定します。<br />- 変換元と変換先の間の列マッピングを見直します。<br />- 変換元と変換先の間のデータ型変換に関する問題を処理します。<br />- コピーされるデータを見直します。|[テーブル作成 SQL ステートメント](../../integration-services/import-export-data/create-table-sql-statement-sql-server-import-and-export-wizard.md)<br /><br />[変換の確認を伴わない型変換](../../integration-services/import-export-data/convert-types-without-conversion-checking-sql-server-import-and-export-wizard.md)<br /><br />[列マッピング](../../integration-services/import-export-data/column-mappings-sql-server-import-and-export-wizard.md)<br /><br />[データ型マッピングの確認](../../integration-services/import-export-data/review-data-type-mapping-sql-server-import-and-export-wizard.md)<br /><br />[[列変換の詳細] ダイアログ ボックス](../../integration-services/import-export-data/column-conversion-details-dialog-box-sql-server-import-and-export-wizard.md)<br /><br />[[データのプレビュー] ダイアログ ボックス](../../integration-services/import-export-data/preview-data-dialog-box-sql-server-import-and-export-wizard.md)|  
 |**データをコピーします。**<br /><br /> 必要に応じて、設定を SQL Server Integration Services (SSIS) パッケージとして保存します。|[パッケージの保存および実行](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md)<br /><br />[SSIS パッケージの保存](../../integration-services/import-export-data/save-ssis-package-sql-server-import-and-export-wizard.md)<br /><br />[ウィザードの完了](../../integration-services/import-export-data/complete-the-wizard-sql-server-import-and-export-wizard.md)<br /><br />[操作の実行](../../integration-services/import-export-data/performing-operation-sql-server-import-and-export-wizard.md)|  

@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 0d4148e002ba84677e13e101a4830f0b6da10915
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68088972"
 ---
 # <a name="create-diagnostics-session-transact-sql"></a>CREATE DIAGNOSTICS SESSION (Transact-SQL)
@@ -63,7 +63,7 @@ DROP DIAGNOSTICS SESSION diagnostics_name ;
  ビューに保存されるイベントの数。 たとえば、100 を指定した場合は、フィルター条件に一致する最新の 100 イベントが診断セッションに保存されます。 見つかった一致するイベントが 100 より少ない場合は、診断セッションに含まれるイベントは 100 未満になります。 *max_item_count_num* は 100 以上 100,000 以下である必要があります。  
   
  *event_name*  
- 診断セッションで収集する実際のイベントを定義します。  *event_name* は、`sys.pdw_diag_events.is_enabled='True'` の場合に [sys.pdw_diag_events](../../relational-databases/system-catalog-views/sys-pdw-diag-events-transact-sql.md) に列挙されるイベントの 1 つです。  
+ 診断セッションで収集する実際のイベントを定義します。  *event_name* は、[ の場合に ](../../relational-databases/system-catalog-views/sys-pdw-diag-events-transact-sql.md)sys.pdw_diag_events`sys.pdw_diag_events.is_enabled='True'` に列挙されるイベントの 1 つです。  
   
  *filter_property_name*  
  結果を制限するプロパティの名前です。 たとえば、セッション ID に基づいて制限する場合は、*filter_property_name* を *SessionId* にする必要があります。 *filter_property_name* に使用できる値の一覧については、以下の *property_name* を参照してください。  
@@ -84,11 +84,11 @@ DROP DIAGNOSTICS SESSION diagnostics_name ;
 |QueryId|クエリの ID。|  
 |CommandType|コマンドの種類。|  
 |CommandText|処理されたコマンド内のテキスト。|  
-|[OperationType]|イベントの操作の種類。|  
+|OperationType|イベントの操作の種類。|  
 |Duration|イベントの期間。|  
 |SPID|サービス プロセス ID。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  各ユーザーには、最大 10 個の同時診断セッションが許可されます。 現在のセッションの一覧については、[sys.pdw_diag_sessions](../../relational-databases/system-catalog-views/sys-pdw-diag-sessions-transact-sql.md) を参照してください。不要なセッションがある場合は、`DROP DIAGNOSTICS SESSION` を使用して削除します。  
   
  診断セッションでは、削除されるまでメタデータの収集が続行されます。  
@@ -99,7 +99,7 @@ DROP DIAGNOSTICS SESSION diagnostics_name ;
 ## <a name="locking"></a>ロック  
  診断セッション テーブルで共有ロックを取得します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-creating-a-diagnostics-session"></a>A. 診断セッションを作成する  
  この例では、データベース エンジンのパフォーマンスのメトリックを記録する診断セッションを作成します。 この例では、エンジン クエリ実行/終了イベントと DMS ブロック   イベントをリッスンする診断セッションを作成します。 返される結果は、コマンド テキスト、コンピューター名、要求 ID (クエリ ID)、イベントが作成されたセッションです。  

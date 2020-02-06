@@ -13,13 +13,13 @@ ms.assetid: 8a57b765-a890-46a3-8b5f-5754e921ea6e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 606c83c59147bf6ef171d4fa4f802d13f55f8219
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006825"
 ---
-# <a name="example-constructing-siblings-with-explicit-mode"></a>例:EXPLICIT モードを使用した兄弟の構築
+# <a name="example-constructing-siblings-with-explicit-mode"></a>例: EXPLICIT モードを使用した兄弟の構築
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   販売注文情報を提供する XML を生成するとします。 <`SalesPerson`> 要素と <`OrderDetail`> 要素は兄弟です。 各注文には、<`OrderHeader`> 要素が 1 つ、<`SalesPerson`> 要素が 1 つ、<`OrderDetail`> 要素が 1 つ以上あります。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "68006825"
 <OrderHeader ...</OrderHeader>  
 ```  
   
- 次に示す EXPLICIT モードのクエリは、上記の形式の XML を生成します。 このクエリでは、<`OrderHeader`> 要素の `Tag` 列に 1 を、<`SalesPerson`> 要素には 2 を、<`OrderDetail`> 要素には 3 を指定しています。 <`SalesPerson`> 要素と <`OrderDetail`> 要素は兄弟なので、これらの要素の `Parent` 列に値 1 を指定し、<`OrderHeader`> 要素を親要素として特定しています。  
+ 次に示す EXPLICIT モードのクエリは、上記の形式の XML を生成します。 このクエリでは、<`Tag`> 要素の `OrderHeader` 列に 1 を、<`SalesPerson`> 要素には 2 を、<`OrderDetail`> 要素には 3 を指定しています。 <`SalesPerson`> 要素と <`OrderDetail`> 要素は兄弟なので、これらの要素の `Parent` 列に値 1 を指定し、<`OrderHeader`> 要素を親要素として特定しています。  
   
 ```  
 USE AdventureWorks2012;  

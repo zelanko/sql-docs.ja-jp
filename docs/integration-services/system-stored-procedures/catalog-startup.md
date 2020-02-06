@@ -11,10 +11,10 @@ ms.assetid: 271fd405-246a-4852-bfbe-f557241ce6ea
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ecc8678da81b9d4559f36d3cb70a88a7444f87e5
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295269"
 ---
 # <a name="catalogstartup"></a>catalog.startup 
@@ -28,7 +28,7 @@ ms.locfileid: "71295269"
   
  このストアド プロシージャは、[!INCLUDE[ssIS](../../includes/ssis-md.md)] サーバー インスタンスがダウンした場合に、実行されていたパッケージの状態を修正します。  
   
- **[カタログの作成]** ダイアログ ボックスの **[Enable automatic execution of Integration Services stored procedure at SQL Server startup]\(SQL Server の起動時に Integration Services ストアド プロシージャの自動実行を有効にする\)** オプションを選択すると、[!INCLUDE[ssIS](../../includes/ssis-md.md)] インスタンスが再起動されるたびに、ストアド プロシージャが自動実行されるようにできます。  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)][カタログの作成]**ダイアログ ボックスの**[Enable automatic execution of Integration Services stored procedure at SQL Server startup]\(SQL Server の起動時に Integration Services ストアド プロシージャの自動実行を有効にする\) **オプションを選択すると、** インスタンスが再起動されるたびに、ストアド プロシージャが自動実行されるようにできます。  
   
 ## <a name="syntax"></a>構文  
   

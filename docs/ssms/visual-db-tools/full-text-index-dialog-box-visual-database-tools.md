@@ -1,10 +1,9 @@
 ---
-title: '[フルテキスト インデックス] ダイアログ ボックス (Visual Database Tools) | Microsoft Docs'
-ms.custom: ''
+title: '[フルテキスト インデックス] ダイアログ ボックス'
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +11,14 @@ f1_keywords:
 ms.assetid: ef45b585-2567-4abe-b421-9fd0994e0146
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 926e3d42d21e24d9a3e76d10966e3d90381ca843
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 3056ebfc960b26dd3035f1aefd1932151bad207a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68254615"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247263"
 ---
 # <a name="full-text-index-dialog-box-visual-database-tools"></a>[フルテキスト インデックス] ダイアログ ボックス (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "68254615"
 **[選択されたフルテキスト インデックス]**  
 既存のフルテキスト インデックスを一覧表示します。 インデックスを選択すると、右のグリッドにそのインデックスのプロパティが表示されます。 一覧が空の場合、テーブルにフルテキスト インデックスは定義されていません。  
   
-**[追加]**  
+**追加**  
 新しいフルテキスト インデックスを作成します。  
   
 **削除**  
@@ -54,17 +55,17 @@ ms.locfileid: "68254615"
 **[IDENTITY] カテゴリ**  
 展開してインデックスの名前フィールドを表示します。  
   
-**[名前]**  
+**名前**  
 システムが指定したフルテキスト インデックスの名前を表示します。  
   
 **[テーブル デザイナー] カテゴリ**  
 展開してインデックスの実行方法を指定するプロパティを表示します。  
   
-**Active**  
+**アクティブ**  
 該当するフルテキスト インデックスを使用して、フルテキスト検索を現在実行できるかどうかを示します。  
   
 **[トラッキング設定の変更]**  
-該当するインデックスの変更履歴の状態を示します([手動]、[自動]、または [オフ])。  
+該当するインデックスの変更履歴の状態を示します。[手動]、[自動]、または [オフ]。  
   
 **[クロールの完了]**  
 最近のクロールが完了したかどうかを示します。 このプロパティ値が [いいえ] の場合、クロールは現在進行中です。  
@@ -88,7 +89,7 @@ ms.locfileid: "68254615"
 次のクロールが開始する日時を表示します。  
   
 **[現在または最近のクロールの種類]**  
-現在のクロールまたは最近のクロールの種類を表示します(空き領域なし、インクリメンタル、更新、自動伝達)。  
+現在のクロールまたは最近のクロールの型を表示します。[空き領域なし]、[インクリメンタル]、[更新]、または [自動伝達]。  
   
 **[一意のインデックス名]**  
 一意の単一列インデックスを持つ、データベース内のすべての列の名前を一覧表示します。 これらの列は、フルテキスト インデックスの作成に使用できます。  

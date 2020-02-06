@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: e6529f06-e442-437e-a7bf-41790bc092c5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d658b63e8c2b80c277ed9d8c3647717d07c96c48
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: 8e426d6af578cd822befdeab928c522a55f98d7e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982977"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76259420"
 ---
 # <a name="disable-trigger-transact-sql"></a>DISABLE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ ON { object_name | DATABASE | ALL SERVER } [ ; ]
 > [!NOTE]  
 >  このオプションは、包含データベースでは使用できません。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  既定では、トリガーは作成されたときに有効になります。 トリガーを無効にしてもトリガーは削除されず、 オブジェクトとして現在のデータベースに残りますが、 トリガーがプログラムされた [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行しても、トリガーは起動しません。 トリガーは、[ENABLE TRIGGER](../../t-sql/statements/enable-trigger-transact-sql.md) を使用することにより再度有効にできます。 テーブルに定義された DML トリガーも、[ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) を使用して無効または有効にできます。  
   
  **ALTER TRIGGER** ステートメントを使用してトリガーを変更すると、トリガーが有効になります。  
@@ -81,11 +81,11 @@ ON { object_name | DATABASE | ALL SERVER } [ ; ]
   
  サーバー スコープ (ON ALL SERVER) 付きの DDL トリガーまたはログオン トリガーを無効にするには、サーバーでの CONTROL SERVER 権限が必要です。 データベース スコープ (ON DATABASE) の DDL トリガーを無効にするために、ユーザーには少なくとも、現在のデータベースに対する ALTER ANY DATABASE DDL TRIGGER 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 次の例は、AdventureWorks2012 データベースで記述されています。
   
 ### <a name="a-disabling-a-dml-trigger-on-a-table"></a>A. テーブルの DML トリガーを無効にする  
- 次の例では、テーブル `Address` に作成されたトリガー `uAddress` を無効にします。  
+ 次の例では、テーブル `uAddress` に作成されたトリガー `Person` を無効にします。  
   
 ```sql  
 DISABLE TRIGGER Person.uAddress ON Person.Address;  

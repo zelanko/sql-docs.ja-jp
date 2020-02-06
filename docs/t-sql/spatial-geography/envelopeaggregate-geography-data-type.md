@@ -18,10 +18,10 @@ ms.assetid: 4947797f-edb8-490f-beca-37df9ec06954
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 896a328f0f11570034b71f57e912ec3f460d73e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066452"
 ---
 # <a name="envelopeaggregate-geography-data-type"></a>EnvelopeAggregate (geography データ型)
@@ -43,7 +43,7 @@ EnvelopeAggregate ( geography_operand )
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  結果の境界オブジェクトが半球より大きい場合は、**FullGlobe** オブジェクトが返されます。 このメソッドは正確ではありません。  
   
  入力の SRID が異なる場合、メソッドでは **null** が返されます。 「[&#40;SRIDs&#41; Spatial Reference Identifiers](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)」を参照してください。  
@@ -53,8 +53,8 @@ EnvelopeAggregate ( geography_operand )
 > [!NOTE]  
 >  メソッドは、入力された値がすべて **null** の場合、**null** を返します。  
   
-## <a name="examples"></a>使用例  
- 次の例は、都市内の **geography** ロケーション ポイントのセットで `EnvelopeAggregate` を実行します。  
+## <a name="examples"></a>例  
+ 次の例は、都市内の `EnvelopeAggregate`geography**ロケーション ポイントのセットで** を実行します。  
   
  ```
  USE AdventureWorks2012  

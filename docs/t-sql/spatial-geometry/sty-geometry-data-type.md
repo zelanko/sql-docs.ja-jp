@@ -18,10 +18,10 @@ ms.assetid: f72e0eaa-7d1d-4052-88fd-a172d8cb0d71
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 05f4ddd6366fbb09b4c5f0c9dd186f415fdc16ea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066143"
 ---
 # <a name="sty-geometry-data-type"></a>STY (geometry データ型)
@@ -39,12 +39,12 @@ ms.locfileid: "68066143"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の型: **float**  
   
- CLR の型:**SqlDouble**  
+ CLR の型: **SqlDouble**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **geometry** インスタンスが地点である場合、このプロパティの値は null になります。 このプロパティは読み取り専用です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  `Point` インスタンスを作成し、`STY` を使用して、このインスタンスの Y 座標を取得する例を次に示します。  
   
 ```  

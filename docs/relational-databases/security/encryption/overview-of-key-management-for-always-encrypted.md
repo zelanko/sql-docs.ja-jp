@@ -12,10 +12,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 50411ab35801dea8db00dcea6f6d0109be954a02
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73594108"
 ---
 # <a name="overview-of-key-management-for-always-encrypted"></a>Always Encrypted のキー管理の概要
@@ -73,7 +73,7 @@ Always Encrypted キーは、 [SQL Server Management Studio (SSMS)](https://msdn
     - [SQL Server Management Studio を使用して Always Encrypted キーをプロビジョニングする](configure-always-encrypted-keys-using-ssms.md)
     - [SQL Server Management Studio を使用して Always Encrypted キーを交換する](rotate-always-encrypted-keys-using-ssms.md)
 
-- **SQL Server PowerShell** - 役割の分離を使用または使用せずに Always Encrypted キーを管理するためのコマンドレットが含まれます。 詳細については、以下をご覧ください。
+- **SQL Server PowerShell** - 役割の分離を使用または使用せずに Always Encrypted キーを管理するためのコマンドレットが含まれます。 詳細については、次を参照してください。
     - [PowerShell を使用して Always Encrypted キーを構成する](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md)
     - [PowerShell を使用して Always Encrypted キーをローテーションする](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)
 
@@ -92,14 +92,14 @@ Always Encrypted の主な目的は、データベース システムまたは�
 - 列マスター キーまたは暗号化キーをデータベースをホストするコンピューター上で生成しないでください。 代わりに、別のコンピューター (キー管理専用またはキーへのアクセスを必要とするアプリケーションをホストしているコンピューターのいずれか) でキーを生成します。 つまり、攻撃者がプロビジョニングや Always Encrypted キーの維持に使用しているコンピューターにアクセスすると、ツールのメモリにキーが短時間表示されるだけでも、攻撃者がキーを取得できる可能性があるため、**キーを生成するために使用したツールをデータベースをホストしているコンピューター上で決して実行しないでください**。
 - キー管理プロセスで誤って列マスター キーや列暗号化キーを公開しないようにするには、キー管理プロセスを定義して実装する前に、潜在的な敵対者およびセキュリティの脅威を識別することが重要です。 たとえば、DBA が機密データにアクセスできないようにすることが目的の場合は、DBA がキーの生成を担当することはできません。 ただし、メタデータにはプレーンテキストのキーは含まれていないため、DBA はデータベース内のキーのメタデータを管理することは *できます* 。
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>次の手順
 - [Always Encrypted ウィザードを使用して列暗号化を構成する](always-encrypted-wizard.md)
 - [Always Encrypted の列マスター キーを作成して保存する](create-and-store-column-master-keys-always-encrypted.md)
 - [SQL Server Management Studio を使用して Always Encrypted キーをプロビジョニングする](configure-always-encrypted-keys-using-ssms.md)
 - [PowerShell を使用して Always Encrypted キーをプロビジョニングする](configure-always-encrypted-keys-using-powershell.md)
 
 ## <a name="see-also"></a>参照
-- [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [常に暗号化](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Always Encrypted ウィザード チュートリアル (Azure Key Vault)](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted-azure-key-vault/)
 - [Always Encrypted ウィザード チュートリアル (Windows 証明書ストア)](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)
 
