@@ -18,10 +18,10 @@ ms.assetid: 6bd9ccae-af77-4a05-b97f-f8ab41cfde42
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 53b447b2a13c68c2c87536bc3c1f14f9efd74cfd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68132092"
 ---
 # <a name="connectionproperty-transact-sql"></a>CONNECTIONPROPERTY (Transact-SQL)
@@ -41,9 +41,9 @@ CONNECTIONPROPERTY ( property )
 *property*  
 接続のプロパティです。 *property* には、これらの値のいずれかを指定することができます。
   
-|[値]|データ型|[説明]|  
+|値|データ型|[説明]|  
 |---|---|---|
-|net_transport|**nvarchar(40)**|この接続で使用される物理的な転送プロトコルを返します。 この値は NULL 許容ではありません。 有効な戻り値:<br /><br /> **HTTP**<br /> **名前付きパイプ**<br /> **Session**<br /> **共有メモリ**<br /> **SSL**<br /> **TCP**<br /><br /> クエリと<br /><br /> **VIA**<br /><br /> 注: 接続において、複数のアクティブな結果セット (MARS) が有効になっていると共に接続プールが有効になっている場合は、常に**セッション**が返されます。|  
+|net_transport|**nvarchar(40)**|この接続で使用される物理的な転送プロトコルを返します。 この値は NULL 許容ではありません。 有効な戻り値:<br /><br /> **HTTP**<br /> **名前付きパイプ**<br /> **セッション**<br /> **共有メモリ**<br /> **SSL**<br /> **TCP**<br /><br /> and<br /><br /> **VIA**<br /><br /> 注: 接続で複数のアクティブな結果セット (MARS) の両方が有効になっているときに、接続プールが有効になっている場合は、常に**セッション**を返します。|  
 |protocol_type|**nvarchar(40)**|ペイロードのプロトコルの種類を返します。 現在、これによって TDS (TSQL) と SOAP が区別されています。 NULL 値が許可されます。|  
 |auth_scheme|**nvarchar(40)**|接続の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証スキームを返します。 認証方法は、Windows 認証 (NTLM、KERBEROS、DIGEST、BASIC、NEGOTIATE) または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証のいずれかです。 NULL 値は許可されません。|  
 |local_net_address|**varchar(48)**|この特定の接続の対象となったサーバーの IP アドレスを返します。 TCP トランスポート プロバイダーを使用する接続の場合にのみ該当します。 NULL 値が許可されます。|  
@@ -52,10 +52,10 @@ CONNECTIONPROPERTY ( property )
 |physical_net_transport|**nvarchar(40)**|この接続で使用される物理的な転送プロトコルを返します。 接続で複数のアクティブな結果セット (MARS) が有効になっている場合は、正確です。|  
 |\<その他の文字列>||無効な入力の場合は NULL を返します。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 **local_net_address** と **local_tcp_port** で NULL を返す [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]です。
   
-戻り値は、[sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md) 動的管理ビューの対応する列に表示されるオプションと同じです。 例:
+戻り値は、[sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md) 動的管理ビューの対応する列に表示されるオプションと同じです。 次に例を示します。
   
 ```sql
 SELECT   

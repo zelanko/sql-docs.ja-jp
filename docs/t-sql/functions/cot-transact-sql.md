@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b2a571663ed1987f9eb9e847f6065e3efd30ae56
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67914948"
 ---
 # <a name="cot-transact-sql"></a>COT (Transact-SQL)
@@ -41,12 +41,12 @@ COT ( float_expression )
   
 ## <a name="arguments"></a>引数  
 *float_expression*  
-**float** 型、または暗黙的に **float** 型に変換できる[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。
+[float](../../t-sql/language-elements/expressions-transact-sql.md) 型、または暗黙的に **float** 型に変換できる**式**を指定します。
   
 ## <a name="return-types"></a>戻り値の型
 **float**
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 この例では、特定の角度の `COT` 値が返されます。
   
 ```sql

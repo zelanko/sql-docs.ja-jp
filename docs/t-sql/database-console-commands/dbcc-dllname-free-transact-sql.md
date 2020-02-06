@@ -27,10 +27,10 @@ ms.assetid: 1eb71c17-fe15-430b-8916-e4e312dcf9c0
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: cc9716cbd1e27c6589b964c3c3d6208105f4863c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68101947"
 ---
 # <a name="dbcc-dllname-free-transact-sql"></a>DBCC dllname (FREE) (Transact-SQL)
@@ -51,7 +51,7 @@ DBCC <dllname> ( FREE ) [ WITH NO_INFOMSGS ]
  WITH NO_INFOMSGS  
  すべての情報メッセージを表示しないようにします。  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 拡張ストアド プロシージャを実行すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスによって DLL が読み込まれ、サーバーがシャットダウンされるまで読み込まれたままになります。 このステートメントを使うと、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をシャットダウンせずに DLL をメモリからアンロードできます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で現在読み込まれている DLL ファイルを表示するには、**sp_helpextendedproc** を実行します。
   
 ## <a name="result-sets"></a>結果セット  
@@ -64,7 +64,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 ## <a name="permissions"></a>アクセス許可  
 **sysadmin** 固定サーバー ロールまたは **db_owner** 固定データベース ロールのメンバーシップが必要です。
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 次の例では、`xp_sample` が xp_sample.dll として実装され、実行されているものとします。 DBCC \<*dllname*> (FREE) は、`xp_sample` 拡張プロシージャに関連付けられた xp_sample.dll ファイルをアップロードします。
   
 ```sql  

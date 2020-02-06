@@ -25,10 +25,10 @@ ms.assetid: 03a80e63-6f37-4b49-bf13-dc35cfe46c44
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 73e0c8737a65b040552029717bf6848e1fc0cb63
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68094575"
 ---
 # <a name="eventdata-transact-sql"></a>EVENTDATA (Transact-SQL)
@@ -45,7 +45,7 @@ ms.locfileid: "68094575"
 EVENTDATA( )  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 `EVENTDATA` は、DDL トリガーまたはログオン トリガーの内部で直接参照された場合のみ、データを返します。 他のルーチンから呼び出された場合は、たとえ DDL トリガーまたはログオン トリガーがそのルーチンを呼びだした場合であっても、`EVENTDATA` は null を返します。
   
 `EVENTDATA` によって返されるデータは、以下のトランザクションの後で無効になります。
@@ -73,19 +73,19 @@ EVENTDATA( )
 `CREATE LOGIN` または `ALTER LOGIN` ステートメントを実行したとき、パスワードは表示されません。 こにより、ログイン セキュリティが保護されます。  
   
 ## <a name="schemas-returned"></a>返されるスキーマ  
-EVENTDATA は、**xml** データ型の値を返します。 既定では、すべてのイベントのスキーマ定義は、次のディレクトリにインストールされます:[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Tools\Binn\schemas\sqlserver\2006\11\events\events.xsd。  
+EVENTDATA は、**xml** データ型の値を返します。 既定では、すべてのイベントのスキーマ定義は、[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Tools\Binn\schemas\sqlserver\2006\11\events\events.xsd ディレクトリにインストールされます。  
   
 「[Microsoft SQL Server XML Schemas](https://go.microsoft.com/fwlink/?LinkID=31850)」(Microsoft SQL Server の XML スキーマ) Web ページにもイベント スキーマがあります。  
   
 特定のイベントのスキーマを抽出するには、複合型 `EVENT_INSTANCE_<event_type>` のスキーマを検索します。 たとえば、`DROP_TABLE` イベントのスキーマを抽出するには、`EVENT_INSTANCE_DROP_TABLE` のスキーマを検索します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-querying-event-data-in-a-ddl-trigger"></a>A. DDL トリガーでイベント データをクエリする  
 この例では、新しいデータベース テーブルが作成されないようにする DDL トリガーを作成します。 `EVENTDATA` によって生成された XML データに対して XQuery を使用して、トリガーを発生させる [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントをキャプチャします。 詳しくは、「[XQuery 言語リファレンス &#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md)」をご覧ください。  
   
 > [!NOTE]  
->  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で **[結果をグリッドに表示]** を使用して `<TSQLCommand>` 要素をクエリすると、コマンド テキストに改行が表示されません。 代わりに、 **[結果をテキストで表示]** を使用してください。  
+>  **で**[結果をグリッドに表示][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して `<TSQLCommand>` 要素をクエリすると、コマンド テキストに改行が表示されません。 代わりに、 **[結果をテキストで表示]** を使用してください。  
   
 ```  
 USE AdventureWorks2012;  

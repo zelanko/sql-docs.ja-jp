@@ -22,10 +22,10 @@ ms.assetid: 2b6d4c5a-a7f5-4dd1-b10a-7632265b1af7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 015ba90a6f2cad79483e52d5caa23ad06784c055
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68004711"
 ---
 # <a name="set-statistics-xml-transact-sql"></a>SET STATISTICS XML (Transact-SQL)
@@ -42,7 +42,7 @@ ms.locfileid: "68004711"
 SET STATISTICS XML { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  SET STATISTICS XML は、解析時ではなく実行時に設定されます。  
   
  SET STATISTICS XML が ON の場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では各ステートメントの実行に関する情報がステートメントの実行後に返されます。 返される情報は、このオプションが ON に設定されてから OFF に設定されるまでに実行されたすべての [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントに関する情報です。 SET STATISTICS XML 以外のステートメントを同時にバッチで実行することもできます。  
@@ -60,7 +60,7 @@ SET STATISTICS XML { ON | OFF }
  SET STATISTICS PROFILE と SET STATISTICS XML は、同時に使用できません。 前者ではテキスト形式の出力が生成され、後者では XML 形式の出力が生成されます。 将来の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、新しいクエリ実行プランの情報は STATISTICS XML ステートメントでのみ表示され、SET STATISTICS PROFILE ステートメントでは表示されなくなります。  
   
 > [!NOTE]  
->  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で **[実際の実行プランを含める]** を選ぶと、この SET オプションによって XML プラン表示出力が生成されません。 SET オプションを使う前に、 **[実際の実行プランを含める]** ボタンの選択を解除してください。  
+>  **で**[実際の実行プランを含める][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を選ぶと、この SET オプションによって XML プラン表示出力が生成されません。 SET オプションを使う前に、 **[実際の実行プランを含める]** ボタンの選択を解除してください。  
   
 ## <a name="permissions"></a>アクセス許可  
  SET STATISTICS XML を使用して出力を表示するには、ユーザーに次の権限が必要です。  
@@ -71,7 +71,7 @@ SET STATISTICS XML { ON | OFF }
   
  STATISTICS XML の結果セットを生成しない [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの場合は、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行するための適切な権限のみで十分です。 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントで STATISTICS XML の結果セットを生成する場合は、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行する権限と、SHOWPLAN の権限の両方があることを確認してください。これらの 2 つの権限がないと、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの実行は中断され、プラン表示に関する情報は生成されません。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次に示す 2 つのステートメントでは、SET STATISTICS XML の設定を使用し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でクエリ内のインデックスの使用状況を分析し最適化する方法を示しています。 最初のクエリでは、インデックス付き列の WHERE 句で = (等しい) 比較演算子を使用します。 2 番目のクエリでは、WHERE 句で LIKE 演算子を使用します。 このように指定すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではクラスター化インデックス スキャンが行われ、WHERE 句の条件を満たすデータが検索されます。 **EstimateRows** 属性と **EstimatedTotalSubtreeCost** 属性の値は、インデックスが設定された最初のクエリの方が小さくなっています。これは、インデックスを設定されていないクエリよりも速く処理が行われ、使用リソースが少なかったことを示しています。  
   
 ```  

@@ -15,10 +15,10 @@ ms.assetid: f9ef89ed-36f6-431b-8843-25d445ec137f
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 5d1a8b0c8f674dd39ece67cb79db0110cfd55994
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75321250"
 ---
 # <a name="create-an-updatable-subscription-to-a-transactional-publication"></a>トランザクション パブリケーションの更新可能なサブスクリプションの作成
@@ -51,7 +51,7 @@ ms.locfileid: "75321250"
 
     * **[定義済みのリンク サーバーまたはリモート サーバーを使用する]** [sp_addserver (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)、[sp_addlinkedserver (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)、SQL Server Management Studio、または他の方法を使用してサブスクライバ―とパブリッシャーの間にリモート サーバーまたはリンクされたサーバーを定義した場合は、このオプションを選択します。
 
-    リンクされたサーバー アカウントに必要な権限に関する詳細については、「[ここにサブスクリプションを入力](../../../relational-databases/replication/security/secure-the-subscriber.md)」の「**Queued Updating Subscriptions**」(キューに入れられた更新サブスクリプション) を参照してください。
+    リンクされたサーバー アカウントに必要な権限に関する詳細については、「**ここにサブスクリプションを入力**」の「[Queued Updating Subscriptions](../../../relational-databases/replication/security/secure-the-subscriber.md)」(キューに入れられた更新サブスクリプション) を参照してください。
 
 8. ウィザードを完了します。
 
@@ -80,7 +80,7 @@ ms.locfileid: "75321250"
 
     * **[定義済みのリンク サーバーまたはリモート サーバーを使用する]** [sp_addserver (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)、[sp_addlinkedserver (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)、SQL Server Management Studio、または他の方法を使用してサブスクライバ―とパブリッシャーの間にリモート サーバーまたはリンクされたサーバーを定義した場合は、このオプションを選択します。
 
-    リンクされたサーバー アカウントに必要な権限に関する詳細については、「[ここにサブスクリプションを入力](../../../relational-databases/replication/security/secure-the-subscriber.md)」の「**Queued Updating Subscriptions**」(キューに入れられた更新サブスクリプション) を参照してください。
+    リンクされたサーバー アカウントに必要な権限に関する詳細については、「**ここにサブスクリプションを入力**」の「[Queued Updating Subscriptions](../../../relational-databases/replication/security/secure-the-subscriber.md)」(キューに入れられた更新サブスクリプション) を参照してください。
 
 11. ウィザードを完了します。
 
@@ -201,7 +201,7 @@ ms.locfileid: "75321250"
 1. パブリッシャーで、 [sp_helppublication](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)を実行することにより、パブリケーションがキュー更新サブスクリプションをサポートしていることを確認します。 
 
     * 結果セットの allow_queued_tran の値が 1 である場合、パブリケーションは即時更新サブスクリプションをサポートします。
-    * 結果セットの allow_queued_tran の値が 0 である場合は、キュー更新サブスクリプションを有効にしてパブリケーションを再作成する必要があります。 詳細については、トランザクション パブリケーションの更新可能なサブスクリプションを有効化する方法 (レプリケーション Transact-SQL プログラミング) に関する記事を参照してください。
+    * 結果セットの allow_queued_tran の値が 0 である場合は、キュー更新サブスクリプションを有効にしてパブリケーションを再作成する必要があります。 詳細については、「トランザクション パブリケーションに対するサブスクリプションの更新を有効にする方法 (レプリケーション Transact-SQL プログラミング)」を参照してください。
 
 2. パブリッシャーで、 [sp_helppublication](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)を実行することにより、パブリケーションがプッシュ サブスクリプションをサポートしていることを確認します。 
 
@@ -228,10 +228,10 @@ ms.locfileid: "75321250"
     * このサブスクリプションでのディストリビューション エージェント ジョブのスケジュール。
 
 ## <a name="set-queued-updating-conflict-resolution-options"></a>キュー更新の競合解決オプションを設定する 
-**[パブリケーション プロパティ - \<Publication>]** ダイアログ ボックスの **[サブスクリプション オプション]** ページで、キュー更新サブスクリプションをサポートするパブリケーションの競合解決オプションを設定します。 このダイアログ ボックスへのアクセス方法の詳細については、「[パブリケーション プロパティの表示および変更](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)」を参照してください。  
+**[パブリケーション プロパティ -** Publication>] **ダイアログ ボックスの \<[サブスクリプション オプション]** ページで、キュー更新サブスクリプションをサポートするパブリケーションの競合解決オプションを設定します。 このダイアログ ボックスへのアクセス方法の詳細については、「[パブリケーション プロパティの表示および変更](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)」を参照してください。  
   
   
-1.  **[パブリケーション プロパティ - \<Publication>]** ダイアログ ボックスの **[サブスクリプション オプション]** ページで、 **[競合の解決方法]** オプションに対して、次のいずれかの値を選択します。  
+1.  **[パブリケーション プロパティ -** Publication>] **ダイアログ ボックスの \<[サブスクリプション オプション]** ページで、 **[競合の解決方法]** オプションに対して、次のいずれかの値を選択します。  
   
     -   **[パブリッシャーの変更を保持します]**    
     -   **[サブスクライバーの変更を保持します]**    

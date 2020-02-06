@@ -15,10 +15,10 @@ ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||= azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: feac4a3e00164837373f9b3024c322dbf7c49818
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095823"
 ---
 # <a name="parse-and-transform-json-data-with-openjson-sql-server"></a>OPENJSON を使用して JSON データを解析して変換する (SQL Server)
@@ -55,11 +55,11 @@ FROM OPENJSON(@json);
   
 **結果**
   
-|キー (key)|value|型|  
+|key|value|型|  
 |---------|-----------|----------|  
-|NAME|John|1|  
+|name|John|1|  
 |姓|Doe|1|  
-|有効期間|45|2|  
+|age|45|2|  
 |スキル|["SQL","C#","MVC"]|4|
 
 ### <a name="more-info-about-openjson-with-the-default-schema"></a>既定のスキーマを使用する OPENJSON に関する詳細情報
@@ -116,7 +116,7 @@ WITH (
   
 **結果**
   
-|数値|date|Customer|Quantity|  
+|Number|Date|Customer|Quantity|  
 |------------|----------|--------------|--------------|  
 |SO43659|2011-05-により、|AW29825|1|  
 |として SO43661|2011-06-01T00:00:00|AW73565|3|  

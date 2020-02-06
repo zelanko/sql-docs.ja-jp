@@ -18,10 +18,10 @@ ms.assetid: 564e3500-c567-43dc-993b-9ab50e99cf3f
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: fd74479464d23ab6ce85a92babf6ba92fa8baf49
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67984345"
 ---
 # <a name="deny-type-permissions-transact-sql"></a>DENY (型の権限の拒否) (Transact-SQL)
@@ -95,7 +95,7 @@ DENY permission  [ ,...n ] ON TYPE :: [ schema_name . ] type_name
  *Database_user_with_no_login*  
  対応するサーバー レベルのプリンシパルがないデータベース ユーザーを指定します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  型は、スキーマ レベルのセキュリティ保護可能なリソースで、権限の階層で親となっているスキーマに含まれています。  
   
 > [!IMPORTANT]  
@@ -114,7 +114,7 @@ DENY permission  [ ,...n ] ON TYPE :: [ schema_name . ] type_name
 ## <a name="permissions"></a>アクセス許可  
  型に対する CONTROL 権限が必要です。 AS 句を使用する場合、指定されるプリンシパルは、権限が拒否される型を所有している必要があります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、`VIEW DEFINITION` に対し、ユーザー定義型 `CASCADE` の `PhoneNumber` 権限を、`KhalidR` を指定して拒否します。 `PhoneNumber` はスキーマ `Telemarketing` にあります。  
   
 ```  

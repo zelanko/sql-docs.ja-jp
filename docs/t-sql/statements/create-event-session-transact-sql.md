@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 67683027-2b0f-47aa-b223-604731af8b4d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5033bbb939c2c6237e82683fba4e32defef69281
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 089725c52c2f65a9e1edb45a6afadd01ff2ace79
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902801"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76910195"
 ---
 # <a name="create-event-session-transact-sql"></a>CREATE EVENT SESSION (Transact-SQL)
 
@@ -166,7 +166,7 @@ EVENT_RETENTION_MODE = { **ALLOW_SINGLE_EVENT_LOSS** | ALLOW_MULTIPLE_EVENT_LOSS
 
 **ALLOW_SINGLE_EVENT_LOSS** を指定すると、セッションからイベントを削除できます。 単独のイベントは、すべてのイベント バッファーがいっぱいになった場合にのみ削除されます。 イベント バッファーがいっぱいのときに単独のイベントを削除することで、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のパフォーマンス特性が許容可能な状態になり、処理後のイベント ストリームのデータ損失を最小限に抑えることができます。
 
-ALLOW_MULTIPLE_EVENT_LOSS を指定すると、複数のイベントでいっぱいのイベント バッファーをセッションから削除できます。 削除されるイベントの数は、セッションに割り当てられているメモリ サイズ、メモリのパーティション分割、およびバッファー内のイベントのサイズによって異なります。 このオプションを使用すると、イベント バッファーがすぐにいっぱいになるときにサーバーのパフォーマンスに与える影響を最小限に抑えることができますが、多数のイベントがセッションから削除される可能性があります。
+ALLOW_MULTIPLE_EVENT_LOSS を指定すると、複数のイベントでいっぱいのイベント バッファーをセッションから削除できます。 削除されるイベントの数は、セッションに割り当てられているメモリ サイズ、メモリのパーティション分割、バッファー内のイベントのサイズによって異なります。 このオプションを使用すると、イベント バッファーがすぐにいっぱいになるときにサーバーのパフォーマンスに与える影響を最小限に抑えることができますが、多数のイベントがセッションから削除される可能性があります。
 
 NO_EVENT_LOSS を指定した場合、イベントの削除は許可されません。 このオプションを指定した場合、発生したすべてのイベントが保持されます。 このオプションを使用した場合、イベントを開始するすべてのタスクは、イベント バッファーに空きができるまで待機します。 その結果、イベント セッションがアクティブになっている間、検知できる程度のパフォーマンスの問題が発生することがあります。 バッファーからイベントがフラッシュされるのを待機する間、ユーザーの接続に遅延が生じる可能性があります。
 
@@ -200,7 +200,7 @@ ON の場合、起動時にイベント セッションが開始されます。
 
 **OFF** の場合、起動時にイベント セッションが開始されません。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 論理演算子の優先順位は、高い方から `NOT`、`AND`、`OR` です。
 
@@ -209,7 +209,7 @@ ON の場合、起動時にイベント セッションが開始されます。
 SQL Server では、`ALTER ANY EVENT SESSION` アクセス許可が必要です。
 SQL Database では、データベースにおける `ALTER ANY DATABASE EVENT SESSION` アクセス許可が必要です。
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 ### <a name="sql-server-example"></a>SQL Server の例
 

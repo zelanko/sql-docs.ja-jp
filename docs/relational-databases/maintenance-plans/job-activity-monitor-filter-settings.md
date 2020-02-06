@@ -13,13 +13,13 @@ ms.assetid: 89cb0055-5262-447f-8464-7203d4caba78
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 2532ca83c063d029015560b22e1a89317b90b5b5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115810"
 ---
-# <a name="job-activity-monitor-filter-settings"></a>[ジョブの利用状況モニター] \([フィルターの設定])
+# <a name="job-activity-monitor-filter-settings"></a>[ジョブの利用状況モニター] ([フィルターの設定])
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   このページを使用すると、ジョブの利用状況モニターに表示される行数を削減できます。 1 つまたは複数の利用可能なボックスに基準を入力すると、指定した値に一致する行のみが表示されます。 一部のボックス ( **[状態]** や **[ブロッキングの種類]** ) は指定できる有効な値が決まっており、ドロップダウン リストによって提供されます。 他のボックス ( **[アプリケーション]** など) は、任意の値をコンマ区切りのリストにして必要な数だけ入力できます。 ツール バーのアイコンを使用すると、利用可能なボックスをカテゴリ別またはアルファベット順に並べ替えることができます。 基準をクリックすると、それぞれの簡単な説明が表示されます。  
   
@@ -28,7 +28,7 @@ ms.locfileid: "68115810"
 ## <a name="all-jobs"></a>すべてのジョブ  
  このフィルター基準のグループは、ジョブの利用状況モニターをフィルタリングする場合に使用できます。  
   
- **[名前]**  
+ **名前**  
  ジョブを名前でフィルタリングします。  
   
  **[次の実行]**  
@@ -52,7 +52,7 @@ ms.locfileid: "68115810"
  **[スケジュール]**  
  スケジュールを使用するジョブ、またはスケジュールを使用しないジョブをすべて表示します。  
   
- **ステータス**  
+ **状態**  
  状態でジョブをフィルタリングします。  
   
 ## <a name="description-area"></a>説明領域  

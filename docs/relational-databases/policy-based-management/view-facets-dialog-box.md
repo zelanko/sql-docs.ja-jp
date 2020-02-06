@@ -13,10 +13,10 @@ ms.assetid: 70adec34-078c-4ae0-9961-d6a8318340e7
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 0d1c9ec4a0f26a48f281b3f9d91fdbbc745a5391
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68054413"
 ---
 # <a name="view-facets-dialog-box"></a>[ファセットの表示] ダイアログ ボックス
@@ -27,7 +27,7 @@ ms.locfileid: "68054413"
  **ファセット**  
  現在選択されているファセットの名前。  
   
- **[説明]**  
+ **説明**  
  ファセットの概要を説明します。  
   
  **[ファセットのプロパティ]**  

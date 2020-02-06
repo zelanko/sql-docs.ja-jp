@@ -18,10 +18,10 @@ ms.assetid: 23668e88-cef4-4009-a9cf-38e607eab7a2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 51cce76a41cfcc513e633a20b16ca5e861fa492a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71299036"
 ---
 # <a name="connecting-tasks-programmatically"></a>プログラムによるタスクの接続
@@ -37,8 +37,8 @@ ms.locfileid: "71299036"
 |----------------------------------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DTSPrecedenceEvalOp.Constraint>|制約付きコンテナーまたは制約付きタスクを実行するかどうかを実行結果が決定するように指定します。 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Value%2A> の <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint> プロパティを <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> 列挙の目的の値に設定します。|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DTSPrecedenceEvalOp.Expression>|制約付きコンテナーまたは制約付きタスクを実行するかどうかを式の値で決定するように指定します。 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Expression%2A> の <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint> プロパティを設定します。|  
-|<xref:Microsoft.SqlServer.Dts.Runtime.DTSPrecedenceEvalOp.ExpressionAndConstraint>|実行する制約付きコンテナーまたは制約付きタスクに対して、制約結果が発生し、式が評価するように指定します。 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint> の <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Value%2A> プロパティおよび <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Expression%2A> プロパティの両方を設定し、その <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.LogicalAnd%2A> プロパティを **true** に設定します。|  
-|<xref:Microsoft.SqlServer.Dts.Runtime.DTSPrecedenceEvalOp.ExpressionOrConstraint>|実行する制約付きコンテナーまたは制約付きタスクに対して、制約結果が発生するか、または式が評価するように指定します。 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint> の <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Value%2A> プロパティおよび <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Expression%2A> プロパティの両方を設定し、その <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.LogicalAnd%2A> プロパティを **false** に設定します。|  
+|<xref:Microsoft.SqlServer.Dts.Runtime.DTSPrecedenceEvalOp.ExpressionAndConstraint>|実行する制約付きコンテナーまたは制約付きタスクに対して、制約結果が発生し、式が評価するように指定します。 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Value%2A> の <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Expression%2A> プロパティおよび <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint> プロパティの両方を設定し、その <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.LogicalAnd%2A> プロパティを **true** に設定します。|  
+|<xref:Microsoft.SqlServer.Dts.Runtime.DTSPrecedenceEvalOp.ExpressionOrConstraint>|実行する制約付きコンテナーまたは制約付きタスクに対して、制約結果が発生するか、または式が評価するように指定します。 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Value%2A> の <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Expression%2A> プロパティおよび <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint> プロパティの両方を設定し、その <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.LogicalAnd%2A> プロパティを **false** に設定します。|  
   
  次のコード例では、パッケージにタスクを 2 つ追加します。 次に、タスクの間に <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint> を作成し、第 1 のタスクが終了するまで第 2 のタスクは実行しないように設定します。  
   

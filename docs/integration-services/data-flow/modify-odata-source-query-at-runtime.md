@@ -11,10 +11,10 @@ ms.assetid: bcbba7f4-6e5d-46e6-a73a-3f17d3ff376a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: aa8a5454fb85c4a6bcfe53088549107f09b9772f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298208"
 ---
 # <a name="provide-an-odata-source-query-at-runtime"></a>実行時の OData ソース クエリの提供
@@ -22,7 +22,7 @@ ms.locfileid: "71298208"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
- データ フロー タスクの **[OData ソース].[クエリ]** プロパティに*式*を追加すると、OData ソースのクエリを実行時に変更できます。  
+ データ フロー タスクの *[OData ソース].[クエリ]* プロパティに**式**を追加すると、OData ソースのクエリを実行時に変更できます。  
   
  返される列は、デザイン時に返されたものと同じ列である必要があります。それ以外の場合、パッケージの実行時にエラーが発生します。 $select クエリ オプションを使用する場合は、同じ列を (同じ順序で) 指定してください。 $select オプションを使用するより安全な代替手段は、ソース コンポーネント UI で、直接使用することを希望しない列を選択解除することです。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "71298208"
   
 1.  **[データ フロー タスク]** を右クリックし、 **[パラメーター化]** オプションを選択します。  
   
-2.  **[パラメーター化]** ダイアログで、 **[プロパティ]** に対して **[\<OData ソース コンポーネント名>].[クエリ]** を選択します。  
+2.  **[パラメーター化]** ダイアログで、 **[プロパティ]\< に対して** [**OData ソース コンポーネント名>].[クエリ]** を選択します。  
   
 3.  **[新しいパラメーターの作成]** または **[既存のパラメーターを使用する]** のどちらかを選択します。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "71298208"
   
     4.  パラメーターが **[必須]** であるかどうかを指定します。  
   
-5.  **[OK]** をクリックして、ダイアログ ボックスを閉じます。  
+5.  **[OK]** をクリックしてダイアログ ボックスを閉じます。  
   
 ## <a name="provide-the-query-with-an-expression"></a>クエリに式を指定する
  この方法は、クエリ文字列を実行時に動的に構築する場合に役立ちます。

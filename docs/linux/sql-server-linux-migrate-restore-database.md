@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
 ms.openlocfilehash: 148b887497cf9411aad72936a201805000c717ec
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75558564"
 ---
 # <a name="migrate-a-sql-server-database-from-windows-to-linux-using-backup-and-restore"></a>バックアップと復元を使用して SQL Server データベースを Windows から Linux に移行する
@@ -91,7 +91,7 @@ Windows でデータベースのバックアップ ファイルを作成する�
    cd 'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup\'
    ```
 
-1. **scp** コマンドを使って、ターゲットの Linux コンピューターにファイルを転送します。 次の例では、IP アドレスが *192.0.2.9* である Linux サーバー上の *user1* のホーム ディレクトリに、**YourDB.bak** を転送します。
+1. **scp** コマンドを使って、ターゲットの Linux コンピューターにファイルを転送します。 次の例では、IP アドレスが **192.0.2.9** である Linux サーバー上の *user1* のホーム ディレクトリに、*YourDB.bak* を転送します。
 
    ```bash
    scp YourDB.bak user1@192.0.2.9:./
@@ -170,7 +170,7 @@ Windows でデータベースのバックアップ ファイルを作成する�
    Directory lookup for the file "Z:\Microsoft SQL Server\MSSQL11.GLOBAL\MSSQL\Data\YourDB\YourDB_Product.ndf" failed with the operating system error 2(The system cannot find the file specified.).
    ```
    
-   この場合、データベースにはセカンダリ ファイルが含まれています。 これらのファイルを `RESTORE DATABASE` の `MOVE` 句で指定しないと、復元プロシージャでは元のサーバーと同じパスにこれらのファイルの作成が試みられます。 
+   この場合、データベースにはセカンダリ ファイルが含まれています。 これらのファイルを `MOVE` の `RESTORE DATABASE` 句で指定しないと、復元プロシージャでは元のサーバーと同じパスにこれらのファイルの作成が試みられます。 
 
    バックアップに含まれるすべてのファイルの一覧を表示できます。
    ```sql

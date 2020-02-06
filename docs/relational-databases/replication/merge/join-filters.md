@@ -16,10 +16,10 @@ ms.assetid: dd78fd8f-56e3-4582-9abd-6bc25c91e075
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 712665d24946c2826e4ab6c5e53bb853b07642b4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68033245"
 ---
 # <a name="join-filters"></a>結合フィルター
@@ -44,7 +44,7 @@ ms.locfileid: "68033245"
 LoginID = SUSER_SNAME()  
 ```  
   
- このフィルターを指定すると、各従業員のサブスクリプションには、当該従業員に関連する **HumanResources.Employee** テーブルのデータのみ (この例では単一の行) が格納されます。 詳細については、「 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)」を参照してください。  
+ このフィルターを指定すると、各従業員のサブスクリプションには、当該従業員に関連する **HumanResources.Employee** テーブルのデータのみ (この例では単一の行) が格納されます。 詳しくは、「 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)」をご覧ください。  
   
  次の手順で、このフィルターを各関連テーブルに拡張します。フィルターの拡張に使用する構文は、2 つのテーブルの結合の指定に使用する構文とほぼ同じです。 最初の結合フィルター句を次のように指定します。  
   
@@ -88,7 +88,7 @@ SalesOrderHeader.SalesOrderID = SalesOrderDetail.SalesOrderID
      上記のようなロジックを使用する場合、サブクエリではなく結合フィルターを使用することを強くお勧めします。 アプリケーションでサブクエリを使用する行フィルターが必要な場合は、サブクエリが参照するデータが変更されない読み取り専用データであることを確認してください。  
   
 ## <a name="see-also"></a>参照  
- [マージ レプリケーション用にパブリッシュされたデータのフィルター選択](../../../relational-databases/replication/merge/filter-published-data-for-merge-replication.md)   
+ [マージ レプリケーション用にパブリッシュされたデータのフィルター処理](../../../relational-databases/replication/merge/filter-published-data-for-merge-replication.md)   
  [パラメーター化された行フィルター](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
   
   

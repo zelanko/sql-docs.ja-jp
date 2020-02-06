@@ -24,10 +24,10 @@ ms.assetid: 1aee3933-a11c-4b87-91b7-32f5ea38c87f
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: b7ec7d6142bae4a6a0ad21a7f68413b257764e06
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68091007"
 ---
 # <a name="monitor-memory-usage"></a>メモリ使用率の監視
@@ -36,15 +36,15 @@ ms.locfileid: "68091007"
   
  メモリの少ない状況を監視するには、次のオブジェクト カウンターを使用します。  
   
--   **Memory:Available Bytes**  
+-   **Memory: Available Bytes**  
   
--   **Memory:Pages/sec**  
+-   **Memory: Pages/sec**  
   
  **Available Bytes** カウンターは、プロセスで現在使用できるメモリのバイト数を示します。 **Pages/sec** カウンターは、ハード ページ フォールトのためにディスクから取り出されたページ数や、ページ フォールトによって作業セット内の領域を解放するためにディスクに書き込まれたページ数を示します。  
   
- **Available Bytes** カウンターの値が低い場合、コンピューターのメモリが全体的に不足しているか、アプリケーションがメモリを解放していないことが考えられます。 **Pages/sec** カウンターの値が高い場合、ページングが過剰であることが考えられます。 ディスク利用状況がページングによるものかどうかを確認するには、**Memory:Page Faults/sec** カウンターを監視します。  
+ **Available Bytes** カウンターの値が低い場合、コンピューターのメモリが全体的に不足しているか、アプリケーションがメモリを解放していないことが考えられます。 **Pages/sec** カウンターの値が高い場合、ページングが過剰であることが考えられます。 ディスク利用状況がページングによるものかどうかを確認するには、 **Memory: Page Faults/sec** カウンターを監視します。  
   
- コンピューターに十分なメモリがある場合でも、ページングとページ フォールトが低い率で発生することは問題ではありません。 Microsoft Windows Virtual Memory Manager (VMM) では、プロセスの作業セットのサイズを小さくするときに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と他のプロセスからページを取得します。 この VMM の動作が、ページ フォールトの原因になる場合があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または他のプロセスが過剰なページングの原因であるかどうかを判断するには、**Process:Page Faults/sec** カウンター ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセス インスタンス) を監視します。  
+ コンピューターに十分なメモリがある場合でも、ページングとページ フォールトが低い率で発生することは問題ではありません。 Microsoft Windows Virtual Memory Manager (VMM) では、プロセスの作業セットのサイズを小さくするときに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と他のプロセスからページを取得します。 この VMM の動作が、ページ フォールトの原因になる場合があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または他のプロセスが過剰なページングの原因であるかどうかを判断するには、**プロセス インスタンスの**Process: Page Faults/sec[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] カウンターを監視します。  
   
  過剰なページングの解決方法の詳細については、Windows オペレーティング システムのマニュアルを参照してください。  
   
@@ -53,13 +53,13 @@ ms.locfileid: "68091007"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で使用されるメモリの量を監視するには、次のパフォーマンス カウンターを調べます。  
   
--   **Process:Working Set**  
+-   **Process: Working Set**  
   
--   **SQL Server:Buffer Manager:Buffer Cache Hit Ratio**  
+-   **SQL Server: Buffer Manager: Buffer Cache Hit Ratio**  
   
--   **SQL Server:Buffer Manager:Database Pages**  
+-   **SQL Server: Buffer Manager: Database Pages**  
   
--   **SQL Server:Memory Manager:Total Server Memory (KB)**  
+-   **SQL Server: Memory Manager: Total Server Memory (KB)**  
   
  **WorkingSet** カウンターは、プロセスが使用しているメモリの量を示します。 この数値が **min server memory** および **max server memory** サーバー オプションで設定したメモリの量を常に下回っている場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は過剰なメモリを使用するように構成されています。  
   

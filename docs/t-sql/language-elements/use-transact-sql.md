@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: bf46cd6f2ce89553d846c0322d0f8866f05921f6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68086141"
 ---
 # <a name="use-transact-sql"></a>USE (Transact-SQL)
@@ -48,7 +48,7 @@ USE { database_name }
   
  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]では、データベース パラメーターは現在のデータベースのみを参照できます。 現在のデータベース以外のデータベースが提供されている場合、`USE` ステートメントではデータベースを切り替えず、エラー コード 40508 が返されます。 データベースを変更するには、直接データベースに接続する必要があります。 このページの上部で、USE ステートメントは SQL Database には該当しないとマークされているのは、バッチ内に `USE` ステートメントがあっても、何も実行されないためです。
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続すると、自動的に既定のデータベースに接続し、データベース ユーザーのセキュリティ コンテキストを取得できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン用のデータベース ユーザーが 1 人も作成されていない場合、ログインは guest として接続されます。 データベース ユーザーが、データベースに対する CONNECT 権限を持たない場合、USE ステートメントは失敗します。 ログインに既定のデータベースが割り当てられていない場合、既定のデータベースとして master が設定されます。  
   
  USE は、コンパイル時と実行時の両方で実行でき、その効果は直ちに有効になります。 したがって、バッチ内で USE ステートメントの後にあるステートメントは、指定したデータベースで実行されます。  
@@ -56,7 +56,7 @@ USE { database_name }
 ## <a name="permissions"></a>アクセス許可  
  切り替え先のデータベースに対する CONNECT 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、データベース コンテキストを `AdventureWorks2012` データベースに変更します。  
   
 ```  

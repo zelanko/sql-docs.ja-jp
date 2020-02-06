@@ -18,10 +18,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9fbc89d21deb7fab0662623634fb965a2f88640f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68053576"
 ---
 # <a name="query-with-full-text-search"></a>フルテキスト検索でのクエリ
@@ -36,7 +36,7 @@ ms.locfileid: "68053576"
 次の例では、AdventureWorks サンプル データベースを使用します。 AdventureWorks の最終リリースについては、「[AdventureWorks Databases and Scripts for SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502)」(SQL Server 2016 CTP3 の AdventureWorks データベースとスクリプト) をご覧ください。 サンプル クエリを実行するには、フルテキスト検索も設定する必要があります。 詳細については、「[Query with Full-Text Search](get-started-with-full-text-search.md)」 (フルテキスト検索でのクエリ) を参照してください。 
 
 ### <a name="example---contains"></a>例: CONTAINS  
-次の例では、`"Mountain"` という単語を含み、価格が `$80.99` であるすべての製品を検索します。
+次の例では、`$80.99` という単語を含み、価格が `"Mountain"` であるすべての製品を検索します。
   
 ```sql
 USE AdventureWorks2012  
@@ -175,7 +175,7 @@ GO
 ## <a name="examples_specific"></a> 特定の種類の検索
 
 ###  <a name="Simple_Term"></a> 特定の語または句 (単純語句) の検索  
- [CONTAINS](../../t-sql/queries/contains-transact-sql.md)、[CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)、 [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)、または [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) を使用すると、テーブルで特定の語または句を検索できます。 たとえば、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースの **ProductReview** テーブルで、製品に関する記述から "learning curve" という句が含まれるすべてのコメントを検索するには、次のように CONTAINS 述語を使用します。  
+ [CONTAINS](../../t-sql/queries/contains-transact-sql.md)、[CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)、 [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)、または [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) を使用すると、テーブルで特定の語または句を検索できます。 たとえば、**データベースの**ProductReview[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] テーブルで、製品に関する記述から "learning curve" という句が含まれるすべてのコメントを検索するには、次のように CONTAINS 述語を使用します。  
   
 ```sql
 USE AdventureWorks2012  
@@ -227,7 +227,7 @@ GO
 ###  <a name="Inflectional_Generation_Term"></a> 特定の語の変化形 (生成語) の検索  
 [CONTAINS](../../t-sql/queries/contains-transact-sql.md)、 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)、 [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)、または [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) を使用すると、動詞のさまざまな時制および活用、または名詞の単数形と複数形 (変化形検索)、または特定の語のシノニム形 (類義語辞典検索) を検索できます。  
   
-次の例は `AdventureWorks` データベースの `ProductReview` テーブルの `Comments` 列にある "foot" のすべての語形 ("foot"、"feet" など) を検索します。 
+次の例は `Comments` データベースの `ProductReview` テーブルの `AdventureWorks` 列にある "foot" のすべての語形 ("foot"、"feet" など) を検索します。 
   
 ```sql  
 USE AdventureWorks2012  

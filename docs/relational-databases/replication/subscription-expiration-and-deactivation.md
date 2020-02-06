@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 4d03f5ab-e721-4f56-aebc-60f6a56c1e07
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 87c3a091e4a6ce3ef9462e6e0d730bcea56c18bc
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: bb803c0490b5e52ac26f0bdf04f30c4b10ce6446
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710713"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287079"
 ---
 # <a name="subscription-expiration-and-deactivation"></a>サブスクリプションの有効期限と非アクティブ化
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "71710713"
  保有期間を設定する場合は、「[サブスクリプションの有効期限の設定](../../relational-databases/replication/publish/set-the-expiration-period-for-subscriptions.md)」、「[トランザクション パブリケーションのディストリビューションの保有期間の設定 &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/set-distribution-retention-period-for-transactional-publications.md)」および「[パブリッシングおよびディストリビューションの構成](../../relational-databases/replication/configure-publishing-and-distribution.md)」を参照してください。  
   
 ## <a name="transactional-replication"></a>トランザクション レプリケーション  
- トランザクション レプリケーションでは、ディストリビューションの最大保有期間 ([sp_adddistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md) の `@max_distretention` パラメーター) およびパブリケーションの保有期間 ([sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) の `@retention` パラメーター) を使用します。  
+ トランザクション レプリケーションでは、ディストリビューションの最大保有期間 (`@max_distretention`sp_adddistributiondb &#40;Transact-SQL&#41;[ の ](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md) パラメーター) およびパブリケーションの保有期間 (`@retention`sp_addpublication &#40;Transact-SQL&#41;[ の ](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) パラメーター) を使用します。  
   
 -   ディストリビューションの最大保有期間 (既定値は 72 時間) 内にサブスクリプションが同期されず、ディストリビューション データベース内にサブスクライバーに配信されていない変更がある場合、そのサブスクリプションは、ディストリビューターで実行される **ディストリビューションのクリーンアップ** ジョブによって非アクティブ化にマークされます。 サブスクリプションを再初期化する必要があります。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "71710713"
      プッシュ サブスクリプションの期限が切れた場合は完全に削除されますが、プル サブスクリプションの場合は削除されません。 プル サブスクリプションは、サブスクライバーでクリーンアップする必要があります。 詳細については、「 [Delete a Pull Subscription](../../relational-databases/replication/delete-a-pull-subscription.md)」を参照してください。  
   
 ## <a name="merge-replication"></a>マージ レプリケーション  
- マージ レプリケーションでは、パブリケーションの保有期間 ([sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) の `@retention` および `@retention_period_unit` パラメーター) を使用します。 サブスクリプションが期限切れになると、そのサブスクリプションのメタデータが削除されるため、サブスクリプションを再初期化する必要があります。 再初期化されていないサブスクリプションは、パブリッシャーで実行される、 **有効期限が切れたサブスクリプションのクリーンアップ** ジョブによって削除されます。 既定では、このジョブは毎日実行されます。このジョブにより、パブリケーションの保有期間の 2 倍の期間にわたって同期されなかったすべてのプッシュ サブスクリプションが削除されます。 例:  
+ マージ レプリケーションでは、パブリケーションの保有期間 (`@retention`sp_addmergepublication &#40;Transact-SQL&#41;`@retention_period_unit` の [ および ](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) パラメーター) を使用します。 サブスクリプションが期限切れになると、そのサブスクリプションのメタデータが削除されるため、サブスクリプションを再初期化する必要があります。 再初期化されていないサブスクリプションは、パブリッシャーで実行される、 **有効期限が切れたサブスクリプションのクリーンアップ** ジョブによって削除されます。 既定では、このジョブは毎日実行されます。このジョブにより、パブリケーションの保有期間の 2 倍の期間にわたって同期されなかったすべてのプッシュ サブスクリプションが削除されます。 次に例を示します。  
   
 -   パブリケーションの保有期間が 14 日間である場合、サブスクリプションは 14 日以内に同期されなかった場合に期限切れになる可能性があります。  
   
