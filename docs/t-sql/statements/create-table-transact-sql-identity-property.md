@@ -22,10 +22,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8cf672f9aefc4b9fa0444c73596d2fac67089474
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67938938"
 ---
 # <a name="create-table-transact-sql-identity-property"></a>CREATE TABLE (Transact-SQL) IDENTITY (プロパティ)
@@ -54,7 +54,7 @@ IDENTITY [ (seed , increment) ]
   
  seed と increment の両方を指定するか、またはどちらも指定しないでください。 どちらも指定しないときの既定値は (1,1) です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  ID 列はキー値の生成に使用できます。 列の ID プロパティでは、次の点が保証されます。  
   
 -   新しい値はそれぞれ、現在のシードと増分に基づいて生成されます。  
@@ -79,7 +79,7 @@ IDENTITY [ (seed , increment) ]
   
  メモリ最適化テーブルで、シードと増分を 1,1 に設定する必要があります。 シードまたは増分を 1 以外に設定すると、次のエラーが発生します。1 以外のシードと増分の使用は、メモリ最適化テーブルではサポートされません。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-using-the-identity-property-with-create-table"></a>A. CREATE TABLE で IDENTITY プロパティを使用する  
  次の例では、ID 番号を自動的に増分するテーブルを、`IDENTITY` プロパティを使用して新規作成します。  
