@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8a659583df74cdc2e5100fcc25aa25e90af3bf22
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843839"
 ---
 # <a name="user-defined-functions"></a>ユーザー定義関数
@@ -103,7 +103,7 @@ ms.locfileid: "73843839"
 |@@IDLE|@@TOTAL_WRITE|  
 |@@IO_BUSY||  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] ユーザー定義関数では、次の非決定論的な組み込み関数を使用**できません**。  
+ **ユーザー定義関数では、次の非決定論的な組み込み関数を使用**できません[!INCLUDE[tsql](../../includes/tsql-md.md)]。  
   
 |||  
 |-|-|  
@@ -115,7 +115,7 @@ ms.locfileid: "73843839"
 ##  <a name="SchemaBound"></a> スキーマ バインド関数  
  `CREATE FUNCTION` は、`SCHEMABINDING` 句をサポートしています。この句は、テーブル、ビュー、およびその他のユーザー定義関数など、参照対象オブジェクトのスキーマにその関数をバインドします。 スキーマ バインド関数によって参照されるオブジェクトを変更または削除しようとすると、失敗します。  
   
- [CREATE FUNCTION](../../t-sql/statements/create-function-transact-sql.md) に `SCHEMABINDING` を指定するには、次の条件を満たしている必要があります。  
+ `SCHEMABINDING`CREATE FUNCTION[ に ](../../t-sql/statements/create-function-transact-sql.md) を指定するには、次の条件を満たしている必要があります。  
   
 -   CREATE 関数が参照するすべてのビューとユーザー定義関数が、スキーマにバインドされている必要があります。  
   

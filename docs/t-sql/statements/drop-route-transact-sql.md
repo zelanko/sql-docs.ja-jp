@@ -22,10 +22,10 @@ ms.assetid: d8fab0bc-d54a-46ca-9437-552db7477d40
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: b11908f182037a1368b9d1fda34ebda3f1422918
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68022588"
 ---
 # <a name="drop-route-transact-sql"></a>DROP ROUTE (Transact-SQL)
@@ -47,7 +47,7 @@ DROP ROUTE route_name
  *route_name*  
  削除するルートの名前を指定します。 サーバー名、データベース名、スキーマ名は指定できません。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  ルートを格納するルーティング テーブルは、カタログ ビュー **sys.routes** を介して読み取ることができるメタデータ テーブルです。 このルーティング テーブルは、CREATE ROUTE、ALTER ROUTE、DROP ROUTE ステートメントでのみ更新できます。  
   
  メッセージ交換でルートが使用されているかどうかに関係なく、ルートを削除することができますが、 しかし、リモート サービスへのルートが他に存在しない場合は、リモート サービスへのルートが作成されるか、メッセージ交換がタイムアウトになるまで、メッセージ交換のメッセージは転送キューに残ります。  
@@ -55,7 +55,7 @@ DROP ROUTE route_name
 ## <a name="permissions"></a>アクセス許可  
  ルートを削除する権限は、既定ではルートの所有者、db_ddladmin 固定データベース ロールまたは db_owner 固定データベース ロールのメンバー、および sysadmin 固定サーバー ロールのメンバーに与えられています。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、`ExpenseRoute` ルートを削除します。  
   
 ```  

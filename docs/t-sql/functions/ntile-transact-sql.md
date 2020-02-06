@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d4bd1270c0dde3031054dd4e0aa3e0719a77dfad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67914903"
 ---
 # <a name="ntile-transact-sql"></a>NTILE (Transact-SQL)
@@ -54,12 +54,12 @@ NTILE (integer_expression) OVER ( [ <partition_by_clause> ] < order_by_clause > 
 ## <a name="return-types"></a>戻り値の型  
  **bigint**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  パーティション内の行の数がで割り切れるかどうか *であれば、任意,* 、2 つのサイズが異なる 1 つのメンバーによってグループが生成されます。 OVER 句で指定される順序では、大きいグループが小さいグループよりも前になります。 たとえば、行の総数が 53 でグループの数が 5 の場合、最初の 3 つのグループに 11 行が割り当てられ、残りの 2 つのグループにはそれぞれ 10 行が割り当てられます。 一方、行の総数がグループの数で割り切れる場合、行はそれらのグループに均等に割り当てられます。 たとえば、行の総数が 50 で、5 つのグループがある場合、各グループに 10 行ずつ割り当てられます。  
   
  NTILE は非決定的です。 詳細については、「 [決定的関数と非決定的関数](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)」を参照してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-dividing-rows-into-groups"></a>A. 行をグループに分割する  
  次の例では、年度累計の売上高に基づいて、行を 4 つの従業員グループに分割します。 行の総数がグループの数で割り切れないため、最初の 2 つのグループに 4 つの行が割り当てられ、残りのグループにはそれぞれ 3 つの行が割り当てられます。  
@@ -150,7 +150,7 @@ Lynn         Tsoflias             4        1,421,810.92  98055
 (14 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-dividing-rows-into-groups"></a>C. 行をグループに分割する  
  次の例では、各自に割り当てられた 2003 年度の販売ノルマに基づいて、一連の販売員を 4 つのグループに分割します。 行の総数がグループの数で割り切れないため、最初のグループに 5 つの行が割り当てられ、残りのグループにはそれぞれ 4 つの行が割り当てられます。  

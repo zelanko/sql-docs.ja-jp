@@ -29,10 +29,10 @@ ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 23ae71eff12e7155580eff8238a459c47211c5de
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297755"
 ---
 # <a name="term-extraction-transformation"></a>用語抽出変換
@@ -180,7 +180,7 @@ ms.locfileid: "71297755"
   
  **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [共通プロパティ](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [変換のカスタム プロパティ](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -193,10 +193,10 @@ ms.locfileid: "71297755"
  **使用できる入力列**  
  チェック ボックスを使用して、用語の抽出に使用するテキスト列を 1 つ選択します。  
   
- **項目**  
+ **用語**  
  抽出された用語を格納する出力列の名前を指定します。  
   
- **[スコア]**  
+ **スコア**  
  抽出されたそれぞれの用語のスコアを格納する出力列の名前を指定します。  
   
  **エラー出力の構成**  
@@ -241,7 +241,7 @@ ms.locfileid: "71297755"
  スコアが用語の頻度であることを指定します。  
   
  **[TFIDF]**  
- スコアが用語の TFIDF 値であることを指定します。 TFIDF スコアは、Term Frequency と Inverse Document Frequency の積であり、次のように定義されます: 用語 T の TFIDF = (T の頻度) * log( (入力の行数) / (T を含む行数) )  
+ スコアが用語の TFIDF 値であることを指定します。 TFIDF スコアは、Term Frequency と Inverse Document Frequency の積です。"用語 T の TFIDF = (T の頻度) * log( (入力の行数) / (T を含む行数) )" として定義されます。  
   
  **[頻度のしきい値]**  
  語または句を抽出する前の語または句の出現回数を指定します。 既定値は 2 です。  
@@ -252,7 +252,7 @@ ms.locfileid: "71297755"
  **[用語抽出で大文字と小文字を区別する]**  
  抽出で大文字と小文字を区別するかどうかを指定します。 既定値は **False**です。  
   
- **[エラー出力の構成]**  
+ **エラー出力の構成**  
  [[エラー出力の構成]](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) ダイアログ ボックスは、エラーが発生した行に対するエラー処理を指定するために使用します。  
   
 ## <a name="see-also"></a>参照  

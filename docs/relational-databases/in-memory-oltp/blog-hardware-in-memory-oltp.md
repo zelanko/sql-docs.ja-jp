@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions
 ms.openlocfilehash: 21293308f2b21d0a41cca901a084d65ca0250573
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67951137"
 ---
 # <a name="hardware-considerations-for-in-memory-oltp-in-sql-server"></a>SQL Server におけるインメモリ OLTP のハードウェアに関する考慮事項
@@ -39,7 +39,7 @@ ms.locfileid: "67951137"
 
 インメモリ OLTP を使用したハイパー スレッディングを有効にすることをお勧めします。 一部の OLTP ワークロードで、ハイパー スレッディングを使用する場合に最大 40% のパフォーマンスの向上が見られました。
 
-## <a name="memory"></a>[メモリ]
+## <a name="memory"></a>メモリ
 
 メモリ最適化テーブルはすべて、完全にメモリ内に存在します。 そのため、データベースに対して実行されるワークロードに耐えられる、テーブル自体にとって十分な物理メモリを備える必要がありますが、実際に必要なメモリの量はワークロード次第です。出発点として、データ サイズの約 2 倍のメモリを利用できれば十分です。 ワークロードで従来のディスク ベース テーブルも処理される場合、バッファー プール用の十分なメモリも必要です。
 

@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
 ms.openlocfilehash: d86483245f8a4f06dfcb357d5d105539dd56f3a7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67997918"
 ---
 # <a name="polybase-connectivity-configuration-transact-sql"></a>PolyBase 接続構成 (Transact-SQL)
@@ -56,29 +56,29 @@ RECONFIGURE
   
  Hadoop の接続設定とそれに対応してサポートされる Hadoop データ ソースがあります。 一度に 1 つの設定だけを有効にすることができます。 オプション 1、4、および 7 では、複数の種類の外部データ ソースを作成して、サーバー上のすべてのセッションで使用することができます。  
   
--   オプション 0:Hadoop 接続の無効化  
+-   オプション 0: Hadoop 接続の無効化  
   
--   オプション 1:Windows Server 上の Hortonworks HDP 1.3  
+-   オプション 1: Windows Server 上の Hortonworks HDP 1.3  
   
--   オプション 1:Azure BLOB ストレージ (WASB[S])  
+-   オプション 1: Azure BLOB ストレージ (WASB[S])  
   
--   オプション 2:Linux 上の Hortonworks HDP 1.3  
+-   オプション 2: Linux 上の Hortonworks HDP 1.3  
   
--   オプション 3:Linux 上の Cloudera CDH 4.3  
+-   オプション 3: Linux 上の Cloudera CDH 4.3  
   
--   オプション 4:Windows Server 上の Hortonworks HDP 2.0  
+-   オプション 4: Windows Server 上の Hortonworks HDP 2.0  
   
--   オプション 4:Azure BLOB ストレージ (WASB[S])  
+-   オプション 4: Azure BLOB ストレージ (WASB[S])  
   
--   オプション 5:Linux 上の Hortonworks HDP 2.0  
+-   オプション 5: Linux 上の Hortonworks HDP 2.0  
   
--   オプション 6:Linux 上の Cloudera 5.1、5.2、5.3、5.4、5.5、5.9、5.10、5.11、5.12、5.13  
+-   オプション 6: Linux 上の Cloudera 5.1、5.2、5.3、5.4、5.5、5.9、5.10、5.11、5.12、5.13  
   
--   オプション 7:Linux 上の Hortonworks 2.1、2.2、2.3、2.4、2.5、2.6、3.0  
+-   オプション 7: Linux 上の Hortonworks 2.1、2.2、2.3、2.4、2.5、2.6、3.0  
   
--   オプション 7:Windows Server 上の Hortonworks 2.1、2.2、2.3  
+-   オプション 7: Windows Server 上の Hortonworks 2.1、2.2、および 2.3  
   
--   オプション 7:Azure BLOB ストレージ (WASB[S])  
+-   オプション 7: Azure BLOB ストレージ (WASB[S])  
   
  **RECONFIGURE**  
  構成値 (config_value) と一致するように、実行値 (run_value) を更新します。 run_value と config_value の定義については、「 [結果セット](#ResultSets) 」を参照してください。 sp_configure で設定されている新しい構成値は、実行値が RECONFIGURE ステートメントで設定されるまで有効になりません。  
@@ -111,7 +111,7 @@ RECONFIGURE
   
  構成値を変更する、または RECONFIGURE を実行するには、 **sysadmin** 固定サーバー ロールに **ALTER SETTINGS** サーバー レベルの権限またはメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-list-all-available-configuration-settings"></a>A. すべての使用可能な構成設定を一覧表示する  
  次の例では、すべての構成オプションを一覧表示する方法を示します。  
