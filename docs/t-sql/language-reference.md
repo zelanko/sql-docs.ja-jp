@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 46ce5f22f38b9854be8161aa3d104a60e41886ab
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73844348"
 ---
 # <a name="transact-sql-reference-database-engine"></a>Transact-SQL リファレンス (データベース エンジン)
@@ -83,11 +83,11 @@ SQL のドキュメントには、他にも次のような言語リファレン�
 - [Analysis Services 言語リファレンス](../mdx/analysis-services-language-reference.md)  
 
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 T-SQL のリファレンス トピックを見つける方法を理解したので、次のことができるようになりました。
 
-- T-SQL を記述する方法を短いチュートリアルで学習します。「[チュートリアル: Transact-SQL ステートメントの作成](../t-sql/tutorial-writing-transact-sql-statements.md)」を参照してください。 
+- T-SQL を書く方法を短いチュートリアルで学習します。「[チュートリアル: Transact-SQL ステートメントの作成](../t-sql/tutorial-writing-transact-sql-statements.md)」を参照してください。 
 - 「[Transact-SQL 構文表記規則 &#40;Transact-SQL&#41;](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)」を参照します。  
 
   

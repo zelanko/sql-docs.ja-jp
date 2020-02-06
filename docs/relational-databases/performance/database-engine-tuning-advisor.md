@@ -12,10 +12,10 @@ ms.assetid: 50dd0a0b-a407-4aeb-bc8b-b02a793aa30a
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 52b3154649a06bfb899e6993eb875a04190c59d2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67946947"
 ---
 # <a name="database-engine-tuning-advisor"></a>Database Engine Tuning Advisor
@@ -111,7 +111,7 @@ ms.locfileid: "67946947"
   
 -   データベース エンジン チューニング アドバイザーで分析するデータベースの物理デザイン構造のみを指定します。 データベース エンジン チューニング アドバイザーには多くのオプションが用意されていますが、必要なオプションのみを指定するようにしてください。  
   
-## <a name="dependency-on-xpmsver-extended-stored-procedure"></a>xp_msver 拡張ストアド プロシージャへの依存性  
+## <a name="dependency-on-xp_msver-extended-stored-procedure"></a>xp_msver 拡張ストアド プロシージャへの依存性  
  データベース エンジン チューニング アドバイザーは、 **xp_msver** 拡張ストアド プロシージャに依存してすべての機能を提供します。 この拡張ストアド プロシージャは既定でオンになっています。 データベース エンジン チューニング アドバイザーはこの拡張ストアド プロシージャを使用して、チューニングするデータベースがあるコンピューター上のプロセッサの数および利用可能なメモリをフェッチします。 **xp_msver** が使用できない場合は、データベース エンジン チューニング アドバイザーを実行しているコンピューターのハードウェア特性を推定します。 データベース エンジン チューニング アドバイザーを実行しているコンピューターのハードウェア特性を推定できない場合は、1 つのプロセッサと 1,024 MB のメモリがあると仮定します。  
   
  推奨パーティションの数はこれらの 2 つの値 (プロセッサ数と利用可能なメモリ) によって変わるので、この依存性によって、パーティション分割に関する推奨設定が影響を受けます。 また、テスト サーバーを使用して本番運用サーバーをチューニングする場合は、依存性によってチューニング結果にも影響があります。 この場合、データベース エンジン チューニング アドバイザーは、 **xp_msver** を使用して運用サーバーからハードウェア属性をフェッチします。 テスト サーバー上でワークロードをチューニングした後に、データベース エンジン チューニング アドバイザーはこれらのハードウェア属性を使用して推奨設定を生成します。 詳細については、「[xp_msver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/xp-msver-transact-sql.md)」を参照してください。  

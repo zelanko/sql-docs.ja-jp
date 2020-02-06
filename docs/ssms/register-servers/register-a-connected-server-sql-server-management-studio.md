@@ -1,10 +1,7 @@
 ---
-title: 接続済みのサーバーの登録 (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
-ms.date: 07/28/2016
+title: 接続済みサーバーの登録
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -15,16 +12,22 @@ helpviewer_keywords:
 ms.assetid: 77deb5f5-0f80-484f-8b8b-29afa67ec18f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 24751639dcd0484bb31f1783ca936dddd3e9240c
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 07/28/2016
+ms.openlocfilehash: 2487dff89a32c4a5b62bcbb7a610e88f58ed2f78
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68256303"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75256277"
 ---
 # <a name="register-a-connected-server-sql-server-management-studio"></a>接続済みのサーバーの登録 (SQL Server Management Studio)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) を使用して、接続されたサーバーを登録する方法について説明します。 サーバーを登録することによって、頻繁にアクセスするサーバーの接続情報を保存しておくことができます。 サーバーの登録は、接続する前か、またはオブジェクト エクスプローラーから接続するときに実行できます。  メニューから **[表示]** \\ **[登録済みサーバー]** に移動して、SSMS で登録済みサーバーを表示することができます。
+
+このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) を使用して、接続されたサーバーを登録する方法について説明します。 サーバーを登録することによって、頻繁にアクセスするサーバーの接続情報を保存しておくことができます。 サーバーの登録は、接続する前か、またはオブジェクト エクスプローラーから接続するときに実行できます。  メニューから **[表示]** \\ **[登録済みサーバー]** に移動して、SSMS で登録済みサーバーを表示することができます。
   
  **このトピックの内容**  
   
@@ -41,7 +44,7 @@ ms.locfileid: "68256303"
 **サーバー名**  
 このフィールドには、既定で接続先のサーバー名が設定されます。  必要に応じて、サーバー名を入力することも、ドロップ ダウン リストからいずれかを選択することもできます。
 
-**[認証]**  
+**認証**  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスに接続する際には、2 つの認証モードのいずれかを選択します。 
 
 -    **[Windows 認証]**  
@@ -53,7 +56,7 @@ Windows 認証モードを使用すると、ユーザーは [!INCLUDE[msCoName](
      > [!IMPORTANT]  
      > [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)] 詳細については、「 [認証モードの選択](../../relational-databases/security/choose-an-authentication-mode.md)」を参照してください。  
 
-     -    **User name**  
+     -    **ユーザー名**  
 接続に使用されている、現在のユーザー名を表示します。 この読み取り専用オプションは、Windows 認証を使用した接続が指定されている場合にのみ使用できます。 **[ユーザー名]** を変更するには、別のユーザーとしてコンピューターにログインします。 
 
      -    **Login**  
@@ -77,10 +80,9 @@ Windows 認証モードを使用すると、ユーザーは [!INCLUDE[msCoName](
 **テスト**  
 クリックすると、 **[サーバー名]** で選択されたサーバーへの接続をテストします。  
   
-**[保存]**  
+**および**  
 クリックすると、登録済みサーバーの設定を保存します。 
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>参照
+
 [新しい登録済みサーバーの作成 (SQL Server Management Studio)](../../tools/sql-server-management-studio/create-a-new-registered-server-sql-server-management-studio.md)
-  
-  

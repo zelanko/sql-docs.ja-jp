@@ -11,10 +11,10 @@ ms.assetid: f151c3e8-3811-457d-a3d3-6158ca65a646
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 5b2e9ebcf8464b17712d36fc43c86b7785de9ae7
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292996"
 ---
 # <a name="datareader-destination-custom-properties"></a>DataReader 変換先のカスタム プロパティ
@@ -30,7 +30,7 @@ ms.locfileid: "71292996"
 |-------------------|---------------|-----------------|  
 |DataReader|String|DataReader 変換先のクラス名。|  
 |FailOnTimeout|Boolean|**ReadTimeout** が発生したときに失敗するかどうかを示します。 このプロパティの既定値は **False**です。|  
-|ReadTimeout|Integer|タイムアウトが発生するまでの時間 (ミリ秒単位)。 このプロパティの既定値は 30000 (30 秒) です。|  
+|ReadTimeout|整数|タイムアウトが発生するまでの時間 (ミリ秒単位)。 このプロパティの既定値は 30000 (30 秒) です。|  
   
  DataReader 変換先の入力および入力列には、カスタム プロパティはありません。  
   

@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: azure-data-studio
 ms.date: 09/24/2018
 ms.openlocfilehash: 2a1f62ed9266b0575f037dfe9541a026a4c1ed29
-ms.sourcegitcommit: db715cad313055c8b42d547be686de8755342d65
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73801136"
 ---
 # <a name="explore-and-manage-azure-sql-resources-with-azure-resource-explorer"></a>Azure Resource Explorer を使用して Azure SQL リソースを調査および管理する
@@ -33,7 +33,7 @@ Azure アカウントに関連付けられている SQL リソースを表示す
 
 1. 左下の [アカウント管理] アイコンから、または Azure Resource Explorer の **[Azure にサインイン]** から、 **[リンクされたアカウント]** ダイアログを開きます。
 
-    ![Azure にサインインする](media/azure-resource-explorer/sign-in-to-azure.png)
+    ![Azure へのサインイン](media/azure-resource-explorer/sign-in-to-azure.png)
 
 2. **[リンクされたアカウント]** ダイアログで **[アカウントの追加]** をクリックします。
 
@@ -98,7 +98,7 @@ Azure Resource Explorer では、クエリおよび管理のために SQL Server
    ![SQL 接続ダイアログ](media/azure-resource-explorer/sql-connection-dialog.png)
 4. 接続に成功すると、新しく接続された SQL Server またはデータベースを使って、 **[サーバー]** ウィンドウが自動的に開きます。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 - [[!INCLUDE[Azure Data Studio](../includes/name-sos-short.md)] を使用した Azure SQL データベースに対する接続およびクエリ](quickstart-sql-database.md)
 - [[!INCLUDE[Azure Data Studio](../includes/name-sos-short.md)] を使用した Azure SQL Data Warehouse のデータに対する接続およびクエリ](quickstart-sql-dw.md)

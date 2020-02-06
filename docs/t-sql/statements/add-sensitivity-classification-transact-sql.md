@@ -26,10 +26,10 @@ helpviewer_keywords:
 - rank
 monikerRange: " >= sql-server-linux-ver15 || >= sql-server-ver15 || = azuresqldb-current || = sqlallproducts-allversions"
 ms.openlocfilehash: 93c0511a6d2756c41d80745f0c0d2409f8d494ce
-ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73882405"
 ---
 # <a name="add-sensitivity-classification-transact-sql"></a>ADD SENSITIVITY CLASSIFICATION (Transact-SQL)
@@ -94,7 +94,7 @@ ADD SENSITIVITY CLASSIFICATION TO
 感度の順位を定義する事前定義された値セットに基づく識別子です。 Advanced Threat Protection などの他のサービスによって使用され、順位に基づいて異常を検出します。
 
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 
 - 1 つのオブジェクトには分類を 1 つだけ追加できます。 分類済みのオブジェクトに分類を追加すると、既存の分類が上書きされます。
 - 1 つの `ADD SENSITIVITY CLASSIFICATION` ステートメントを使用して複数のオブジェクトを分類できます。
@@ -106,7 +106,7 @@ ADD SENSITIVITY CLASSIFICATION TO
 ALTER ANY SENSITIVITY CLASSIFICATION 権限が必要です。 ALTER ANY SENSITIVITY CLASSIFICATION は、データベース権限 ALTER またはサーバー権限 CONTROL SERVER によって示されます。
 
 
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 
 ### <a name="a-classifying-two-columns"></a>A. 2 つの列の分類
 

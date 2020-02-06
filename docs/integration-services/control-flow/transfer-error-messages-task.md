@@ -17,10 +17,10 @@ ms.assetid: da702289-035a-4d14-bd74-04461fbfee1b
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 363a2761472f544e2c995fba25f4650ee6242b36
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293881"
 ---
 # <a name="transfer-error-messages-task"></a>エラー メッセージ転送タスク
@@ -46,7 +46,7 @@ ms.locfileid: "71293881"
   
  エラー メッセージ転送タスクは、転送元および転送先として [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をサポートしています。 転送元または転送先として使用するバージョンに関する制限はありません。  
   
-## <a name="events"></a>イベント  
+## <a name="events"></a>events  
  このタスクは、転送されたエラー メッセージの数を報告する情報イベントを発生させます。  
   
  エラー メッセージ転送タスクでは、エラー メッセージ転送の進捗状況は報告されません。0% または 100% 完了した場合のみ報告されます。  
@@ -63,7 +63,7 @@ ms.locfileid: "71293881"
   
  また、 **OnInformation** イベントのログ エントリは転送されたエラー メッセージの数をレポートし、 **OnWarning event** のログ エントリは転送先でエラー メッセージが上書きされるたびに書き込まれます。  
   
-## <a name="security-and-permissions"></a>セキュリティおよび権限  
+## <a name="security-and-permissions"></a>セキュリティとアクセス許可  
  新しいエラー メッセージを作成する場合、パッケージを実行するユーザーは、転送先サーバーで sysadmin または serveradmin サーバー ロールのメンバーである必要があります。  
   
 ## <a name="configuration-of-the-transfer-error-messages-task"></a>エラー メッセージ転送タスクの構成  
@@ -86,13 +86,13 @@ ms.locfileid: "71293881"
   **[エラー メッセージ転送タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、エラー メッセージ転送タスクに名前を付けて説明を記述することができます。 エラー メッセージ転送タスクは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス間で 1 つ以上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ユーザー定義エラー メッセージを転送します。   
   
 ### <a name="options"></a>オプション  
- **[名前]**  
+ **名前**  
  エラー メッセージ転送タスクの一意の名前を入力します。 この名前は、タスク アイコンのラベルとして使用されます。  
   
 > [!NOTE]  
 >  タスク名はパッケージ内で一意である必要があります。  
   
- **[説明]**  
+ **説明**  
  エラー メッセージ転送タスクの説明を入力します。  
   
 ## <a name="transfer-error-messages-task-editor-messages-page"></a>[エラー メッセージ転送タスク エディター] ([メッセージ] ページ)
@@ -113,9 +113,9 @@ ms.locfileid: "71293881"
   
  このプロパティには、次の表に示すオプションがあります。  
   
-|[値]|Description|  
+|値|[説明]|  
 |-----------|-----------------|  
-|**True**|すべてのユーザー定義メッセージをコピーします。|  
+|**True** にします|すべてのユーザー定義メッセージをコピーします。|  
 |**False**|指定されたユーザー定義メッセージのみをコピーします。|  
   
  **[ErrorMessagesList]**  

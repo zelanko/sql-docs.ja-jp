@@ -19,10 +19,10 @@ ms.assetid: dc224f4f-b339-4eb6-a008-1b4fe0ea4fd2
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 23cea7d670916db9dfd13fa37170967a3c19d11c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297127"
 ---
 # <a name="coding-a-custom-task"></a>カスタム タスクのコーディング
@@ -59,9 +59,9 @@ ms.locfileid: "71297127"
 -   **Validate** メソッド内のコードは、タスクの実行前に <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> によっても呼び出され、検証が失敗した場合は <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> の実行が取り消されます。  
   
 #### <a name="user-interface-considerations-during-validation"></a>検証時のユーザー インターフェイスについての検討事項  
- <xref:Microsoft.SqlServer.Dts.Runtime.Task> には、**Validate** メソッドのパラメーターとして、<xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> インターフェイスが含まれています。 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> インターフェイスには、イベントをランタイム エンジンに送るためにタスクが呼び出すメソッドが含まれています。 検証中に警告またはエラー条件が発生すると、<xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireWarning%2A> および <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireError%2A> メソッドが呼び出されます。 どちらの警告メソッドにも、エラー コード、ソース コンポーネント、説明、ヘルプ ファイル、ヘルプ コンテキスト情報などの同じパラメーターが必要です。 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーはこの情報に基づいて、エラーの発生をデザイン画面上で視覚的に通知します。 デザイナーによって提供される視覚的な通知には、デザイン画面上のタスクの横に表示される感嘆符のアイコンがあります。 この視覚的通知は、実行を続けるにはタスクの構成を追加する必要があることを示します。  
+ <xref:Microsoft.SqlServer.Dts.Runtime.Task> には、<xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents>Validate **メソッドのパラメーターとして、** インターフェイスが含まれています。 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> インターフェイスには、イベントをランタイム エンジンに送るためにタスクが呼び出すメソッドが含まれています。 検証中に警告またはエラー条件が発生すると、<xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireWarning%2A> および <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireError%2A> メソッドが呼び出されます。 どちらの警告メソッドにも、エラー コード、ソース コンポーネント、説明、ヘルプ ファイル、ヘルプ コンテキスト情報などの同じパラメーターが必要です。 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーはこの情報に基づいて、エラーの発生をデザイン画面上で視覚的に通知します。 デザイナーによって提供される視覚的な通知には、デザイン画面上のタスクの横に表示される感嘆符のアイコンがあります。 この視覚的通知は、実行を続けるにはタスクの構成を追加する必要があることを示します。  
   
- 感嘆符のアイコンによって、エラー メッセージを含むツールヒントも表示されます。 エラー メッセージは、タスクによってイベントの説明パラメーターに提供されます。 エラー メッセージは、[!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] の **[タスク一覧]** ペインにも表示されます。このペインは、すべての検証エラーを表示するための集中管理場所となります。  
+ 感嘆符のアイコンによって、エラー メッセージを含むツールヒントも表示されます。 エラー メッセージは、タスクによってイベントの説明パラメーターに提供されます。 エラー メッセージは、**の**[タスク一覧][!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] ペインにも表示されます。このペインは、すべての検証エラーを表示するための集中管理場所となります。  
   
 #### <a name="validation-example"></a>検証例  
  次のコード例は、**UserName** プロパティを使用したタスクを示しています。 このプロパティは、検証に必要なものとして指定されています。 このプロパティが設定されていない場合、タスクはエラーを通知し、<xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult.Failure> 列挙から <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> を返します。 例外が発生すると、**Validate** メソッドは try/catch ブロックにラップされ、検証は失敗します。  
@@ -183,7 +183,7 @@ End Class
  <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> は、実行結果に関する追加情報を提供するために使用可能な <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost.ExecutionValue%2A> プロパティも提供します。 たとえば、タスクがその **Execute** メソッドの一部としてテーブルから行を削除すると、削除された行数は <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost.ExecutionValue%2A> プロパティの値として返されます。 また、<xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> は <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost.ExecValueVariable%2A> プロパティを提供します。 ユーザーはこのプロパティを使用して、タスクから返された <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost.ExecutionValue%2A> を、タスクで認識可能な任意の変数にマップすることができます。 指定した変数を使用して、タスク間の優先順位制約を確立できます。  
   
 ### <a name="execution-example"></a>実行例  
- 次のコード例では、**Execute** メソッドを実装する方法、およびオーバーライドされた **ExecutionValue** プロパティを示します。 このタスクでは、タスクの **fileName** プロパティで指定されたファイルが削除されます。 ファイルが存在しない場合、または **fileName** プロパティが空の文字列である場合、タスクは警告メッセージを通知します。 タスクは、<xref:Microsoft.SqlServer.Dts.Runtime.TaskHost.ExecutionValue%2A> プロパティで、ファイルが削除されたかどうかを示す **Boolean** 値を返します。  
+ 次のコード例では、**Execute** メソッドを実装する方法、およびオーバーライドされた **ExecutionValue** プロパティを示します。 このタスクでは、タスクの **fileName** プロパティで指定されたファイルが削除されます。 ファイルが存在しない場合、または **fileName** プロパティが空の文字列である場合、タスクは警告メッセージを通知します。 タスクは、**プロパティで、ファイルが削除されたかどうかを示す**Boolean<xref:Microsoft.SqlServer.Dts.Runtime.TaskHost.ExecutionValue%2A> 値を返します。  
   
 ```csharp  
 using System;  

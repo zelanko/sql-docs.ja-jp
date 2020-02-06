@@ -9,13 +9,13 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18, sqlfreshmay19
-ms.date: 10/15/2019
-ms.openlocfilehash: 9f6be7cbd673a98f8e8934860b0e26d427acac06
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.date: 01/15/2020
+ms.openlocfilehash: 7cf4f98a4cb8d191cebd9b361fd63217b9cd2228
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75241746"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "75956495"
 ---
 # <a name="what-is-azure-data-studio"></a>Azure Data Studio とは
 
@@ -33,7 +33,7 @@ Azure Data Studio のソース コードとそのデータ プロバイダーは
 
 ## <a name="smart-sql-code-snippets"></a>スマート SQL コード スニペット
 
-SQL コード スニペットにより、データベース、テーブル、ビュー、ストアド プロシージャ、ユーザー、ログイン、ロールなどを作成するため、および既存のデータベース オブジェクトを更新するための適切な SQL 構文が生成されます。 スマート スニペットを使用して、開発またはテストを目的としたデータベースのコピーをすばやく作成したり、CREATE および INSERT スクリプトを生成して実行したりできます。
+SQL コード スニペットにより、データベース、テーブル、ビュー、ストアド プロシージャ、ユーザー、ログイン、ロールを作成するため、および既存のデータベース オブジェクトを更新するための適切な SQL 構文が生成されます。 スマート スニペットを使用して、開発またはテストを目的としたデータベースのコピーをすばやく作成したり、CREATE および INSERT スクリプトを生成して実行したりできます。
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] には、カスタム SQL コード スニペットを作成する機能も用意されています。 詳細については、「[コード スニペットの作成と使用](code-snippets.md)」を参照してください。
 
@@ -51,7 +51,7 @@ SQL コード スニペットにより、データベース、テーブル、ビ
 
 ## <a name="extensibility-and-extension-authoring"></a>拡張性と拡張機能の作成
 
-基本インストールの機能を拡張することで、[!INCLUDE[name-sos](../includes/name-sos-short.md)] のエクスペリエンスを向上させることができます。 [!INCLUDE[name-sos](../includes/name-sos-short.md)] では、拡張機能の作成のサポートだけでなく、データ管理アクティビティの機能拡張ポイントも提供されます。
+基本インストールの機能を拡張することで、[!INCLUDE[name-sos](../includes/name-sos-short.md)] のエクスペリエンスを向上させることができます。 [!INCLUDE[name-sos](../includes/name-sos-short.md)] では、データ管理アクティビティの機能拡張ポイントと、拡張機能の作成のサポートが提供されます。
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] における機能拡張の詳細については、[機能拡張](extensibility.md)に関するページを参照してください。
 拡張機能の作成の詳細については、[拡張機能の作成](extension-authoring.md)に関するページを参照してください。
@@ -95,9 +95,9 @@ SQL コード スニペットにより、データベース、テーブル、ビ
 |テーマ|はい||
 |ダーク モード|はい||
 |Azure Resource Explorer|プレビュー||
-|スクリプト生成ウィザード||はい|
+|スクリプト生成ウィザード||プレビュー|
 |DACPAC のインポート/エクスポート||はい|
-|オブジェクトのプロパティ||はい|
+|オブジェクトのプロパティ||プレビュー|
 |テーブル デザイナー (Table Designer)||はい|
 
 ### <a name="query-editor"></a>クエリ エディター
@@ -131,9 +131,9 @@ SQL コード スニペットにより、データベース、テーブル、ビ
 
 |機能|Azure Data Studio|SSMS|
 |:---|:---|:---|
-|外部テーブルの作成ウィザード|プレビュー||
-|HDFS 統合|プレビュー||
-|ノートブック|プレビュー||
+|外部テーブルの作成ウィザード|はい||
+|HDFS 統合|はい||
+|ノートブック|はい||
 
 ### <a name="database-administration"></a>データベースの管理
 
@@ -147,7 +147,7 @@ SQL コード スニペットにより、データベース、テーブル、ビ
 |常時接続||はい|
 |Always Encrypted||はい|
 |データ コピー ウィザード||はい|
-|データ チューニング アドバイザー||はい|
+|Database Engine Tuning Advisor||はい|
 |エラー ログ ビューアー||はい|
 |メンテナンス プラン||はい|
 |マルチサーバー クエリ||はい|
