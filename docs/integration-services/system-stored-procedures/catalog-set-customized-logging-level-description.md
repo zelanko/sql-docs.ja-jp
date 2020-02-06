@@ -11,10 +11,10 @@ ms.assetid: 6ceaa39f-2439-457b-b99f-f12d88a1be32
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b836c5b2ef056e630a5ff6bf00848fa5bb3a5e31
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295351"
 ---
 # <a name="catalogset_customized_logging_level_description"></a>catalog.set_customized_logging_level_description 
@@ -44,7 +44,7 @@ catalog.set_customized_logging_level_description [ @level_name = ] level_name
   
  *level_description* は **nvarchar (1024)** です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
 ## <a name="return-codes"></a>リターン コード  
  成功した場合は 0 を返します。  

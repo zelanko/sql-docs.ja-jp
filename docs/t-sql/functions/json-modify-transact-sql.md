@@ -12,13 +12,13 @@ author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
 ms.openlocfilehash: d340d362301698f7dfaef28476ea659b948163bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68109382"
 ---
-# <a name="jsonmodify-transact-sql"></a>JSON_MODIFY (Transact-SQL)
+# <a name="json_modify-transact-sql"></a>JSON_MODIFY (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
@@ -37,7 +37,7 @@ JSON_MODIFY ( expression , path , newValue )
  *式 (expression)*  
  式。 通常、変数または JSON テキストを含む列の名前。  
   
- *式*に有効な JSON が含まれていない場合、**JSON_MODIFY** エラーが返されます。  
+ **式**に有効な JSON が含まれていない場合、*JSON_MODIFY* エラーが返されます。  
   
  *path*  
  更新するプロパティを指定する JSON path 式。
@@ -60,7 +60,7 @@ JSON_MODIFY ( expression , path , newValue )
   
 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] と [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)] では、*path* の値として変数を指定できます。
 
-*path* の書式が有効でない場合、**JSON_MODIFY** はエラーを返します。  
+**path** の書式が有効でない場合、*JSON_MODIFY* はエラーを返します。  
   
  *newValue*  
  *path* によって指定されるプロパティの新しい値。  
@@ -73,7 +73,7 @@ JSON_MODIFY は、値の型が NVARCHAR または VARCHAR の場合は、新し�
 
  *expression* の更新された値を、適切に書式設定された JSON テキストとして返します。  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
  JSON_MODIFY 関数を使用して、既存のプロパティの値の更新、新しいキーと値のペアの挿入、またはモードと指定された組み合わせに基づくキーの削除を実行できます。  
   
@@ -82,13 +82,13 @@ JSON_MODIFY は、値の型が NVARCHAR または VARCHAR の場合は、新し�
 |既存の値|パスが存在するか|厳密でないモード|厳格モード|  
 |--------------------|-----------------|--------------|-----------------|  
 |NULL 以外|はい|既存の値を更新します。|既存の値を更新します。|  
-|NULL 以外|いいえ|指定したパスに新しいキーと値のペアを作成しようとします。<br /><br /> これは失敗する場合があります。 たとえば、パス `$.user.setting.theme` を指定したときに、`$.user` または `$.user.settings` オブジェクトが存在しないか、設定がアレイまたはスカラー値の場合、JSON_MODIFY はキー `theme` を挿入しません。|Error - INVALID_PROPERTY|  
+|NULL 以外|いいえ|指定したパスに新しいキーと値のペアを作成しようとします。<br /><br /> これは失敗する場合があります。 たとえば、パス `$.user.setting.theme` を指定したときに、`theme` または `$.user` オブジェクトが存在しないか、設定がアレイまたはスカラー値の場合、JSON_MODIFY はキー `$.user.settings` を挿入しません。|Error - INVALID_PROPERTY|  
 |NULL|はい|既存のプロパティを削除します。|既存の値を null に設定します。|  
 |NULL|いいえ|NO ACTION 最初の引数が結果として返されます。|Error - INVALID_PROPERTY|  
   
  lax モードでは、JSON_MODIFY は、新しいキーと値のペアを作成しようとしますが、その操作は、場合によっては失敗します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="example---basic-operations"></a>例 - 基本的な操作
 

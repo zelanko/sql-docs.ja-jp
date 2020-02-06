@@ -34,10 +34,10 @@ ms.assetid: b8752ecc-db45-4e23-aee7-13b8bc3cbae2
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 7d983f2e7e370ec9fe385e6d46602c4703ca6d1e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68040466"
 ---
 # <a name="dbcc-updateusage-transact-sql"></a>DBCC UPDATEUSAGE (Transact-SQL)
@@ -76,7 +76,7 @@ NO_INFOMSGS
 COUNT_ROWS  
 row count 列に、テーブルまたはビューの現在の行数カウントを反映します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 DBCC UPDATEUSAGE では、テーブルまたはインデックスのパーティションごとに、行、使用済みページ、予約済みページ、リーフ ページ、およびデータ ページのカウントが修正されます。 システム テーブルに情報の不一致がない場合、DBCC UPDATEUSAGE ではデータは返されません。 情報の不一致が検出および修正され、WITH NO_INFOMSGS が使用されていない場合、DBCC UPDATEUSAGE ではシステム テーブル内の更新された行と列が返されます。
   
 DBCC CHECKDB が強化され、ページや行のカウントが負になったことを検出します。 この問題が検出されると、DBCC CHECKDB の出力に警告が表示され、推奨される解決方法として DBCC UPDATEUSAGE を実行するよう示されます。
@@ -94,7 +94,7 @@ DBCC UPDATEUSAGE では次の情報が返されます (値は変わることが�
 ## <a name="permissions"></a>アクセス許可  
 **sysadmin** 固定サーバー ロールまたは **db_owner** 固定データベース ロールのメンバーシップが必要です。
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-updating-page-or-row-counts-or-both-for-all-objects-in-the-current-database"></a>A. 現在のデータベースのすべてのオブジェクトに対し、ページ数または行数、あるいはその両方を更新する  
 次の例では、データベース名に `0` を指定し、`DBCC UPDATEUSAGE` で現在のデータベースに対する更新されたページ数または行数をレポートします。
@@ -113,7 +113,7 @@ GO
 ```  
   
 ### <a name="c-updating-page-or-row-counts-or-both-for-the-employee-table"></a>C. Employee テーブルに対してページ数または行数、あるいはその両方を更新する  
-次の例では、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースの `Employee` テーブルに関して、更新されたページ数または行数をレポートします。
+次の例では、`Employee` データベースの [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] テーブルに関して、更新されたページ数または行数をレポートします。
   
 ```sql
 DBCC UPDATEUSAGE (AdventureWorks2012,'HumanResources.Employee');  

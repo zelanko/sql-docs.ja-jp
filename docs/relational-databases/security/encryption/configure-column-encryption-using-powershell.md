@@ -12,10 +12,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: cc6f86a091f96f3d38bc4db7a5d5d2fde5462dce
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73594384"
 ---
 # <a name="configure-column-encryption-using-always-encrypted-with-powershell"></a>PowerShell での Always Encrypted を使用した列暗号化の構成
@@ -31,7 +31,7 @@ ms.locfileid: "73594384"
 ::: moniker-end
 SqlServer PowerShell モジュールでの Always Encrypted のサポートの詳細については、「[PowerShell を使用した Always Encrypted の構成](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)」を参照してください。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 ターゲットの暗号化構成を設定するには、次のことを確認する必要があります。
 - 列暗号化キーがデータベースで構成されていること (列を暗号化または再暗号化する場合)。 詳しくは、「[PowerShell を使用して Always Encrypted キーを構成する](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md)」を参照してください。
@@ -146,11 +146,11 @@ for($i=0; $i -lt $tables.Count; $i++){
 Set-SqlColumnEncryption -ColumnEncryptionSettings $ces -InputObject $database -LogFileDirectory .
 ```
  
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>次の手順
 - [Always Encrypted を使用したアプリケーションの開発](always-encrypted-client-development.md)
 
 ## <a name="see-also"></a>参照  
- - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+ - [常に暗号化](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
  - [Always Encrypted のキー管理の概要](overview-of-key-management-for-always-encrypted.md) 
  - [PowerShell を使用した Always Encrypted の構成](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)
  - [Always Encrypted ウィザードを使用して列暗号化を構成する](always-encrypted-wizard.md)

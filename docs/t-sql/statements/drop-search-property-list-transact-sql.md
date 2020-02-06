@@ -21,10 +21,10 @@ ms.assetid: 7c7ce52a-6b77-4a1c-9abf-d5feb664bea8
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 746d2f33d780e4eada7accabdd029998c9e61742
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68070182"
 ---
 # <a name="drop-search-property-list-transact-sql"></a>DROP SEARCH PROPERTY LIST (Transact-SQL)
@@ -50,7 +50,7 @@ DROP SEARCH PROPERTY LIST property_list_name
 SELECT name FROM sys.registered_search_property_lists;  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  リストがいずれかのフルテキスト インデックスに関連付けられている場合は、データベースから検索プロパティ リストを削除できません。削除しようとすると失敗します。 特定のフルテキスト インデックスから検索プロパティ リストを削除するには、[ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) ステートメントを使い、SET SEARCH PROPERTY LIST 句に OFF または別の検索プロパティ リストの名前を指定します。  
   
  **サーバー インスタンス上のプロパティ リストを表示するには**  
@@ -69,9 +69,9 @@ SELECT name FROM sys.registered_search_property_lists;
  検索プロパティ リストに対する CONTROL 権限が必要です。  
   
 > [!NOTE]  
->  プロパティ リストの CONTROL 権限はそのリストの所有者が許可できます。 既定では、検索プロパティ リストを作成したユーザーがその所有者になります。 所有者は、[ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使って変更できます。  
+>  プロパティ リストの CONTROL 権限はそのリストの所有者が許可できます。 既定では、検索プロパティ リストを作成したユーザーがその所有者になります。 所有者は、[ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使って変更できます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、`JobCandidateProperties` プロパティ リストを `AdventureWorks2012` データベースから削除します。  
   
 ```  

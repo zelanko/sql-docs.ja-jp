@@ -9,10 +9,10 @@ ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
 ms.openlocfilehash: d686cbe2fb314a59085adee76b3bbad22fcea0fc
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72906885"
 ---
 # <a name="configure-polybase-scale-out-groups-on-windows"></a>Windows 上で PolyBase スケールアウト グループを構成する
@@ -21,7 +21,7 @@ ms.locfileid: "72906885"
 
 この記事では、Windows 上で [PolyBase スケールアウト グループ](polybase-scale-out-groups.md)を設定する方法について説明します。 これにより、Hadoop や Azure Blob Storage などの外部データ ソースからの大量のデータ セットを、クエリ パフォーマンスの向上のためにスケールアウト形式で処理するために、SQL Server インスタンス クラスターが作成されます。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
   
 - 同じドメイン内の複数のマシン  
   
@@ -35,11 +35,11 @@ ms.locfileid: "72906885"
   
 2. 1 つの SQL Server インスタンスをヘッド ノードとして選択します。 ヘッド ノードは、SQL Server Enterprise を実行するインスタンスでのみ指定できます。
   
-3. [sp_polybase_join_group](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-join-group.md) を使用して、残りの SQL Server インスタンスをコンピューティング ノードとして追加します。
+3. [sp_polybase_join_group](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-join-group.md)を使用して、残りの SQL Server インスタンスをコンピューティング ノードとして追加します。
 
 4. [sys.dm_exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md) を使用して、グループのノードを監視します。
 
-5. 省略可。 [sp_polybase_leave_group &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-leave-group.md) を使用して、コンピューティング ノードを削除します。
+5. 省略可能。 [sp_polybase_leave_group &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-leave-group.md) を使用して、コンピューティング ノードを削除します。
 
 ## <a name="example-walk-through"></a>サンプル チュートリアル
 
@@ -51,7 +51,7 @@ ms.locfileid: "72906885"
   
    - PQTH4A-CMP02  
   
-2. ドメイン アカウント:*PQTH4A\PolyBaseUse*r  
+2. ドメイン アカウント: *PQTH4A\PolyBaseUser*  
 
 ## <a name="install-sql-server-with-polybase-on-all-machines"></a>すべてのマシンに、PolyBase を使用する SQL Server をインストールする
 
@@ -87,7 +87,7 @@ ms.locfileid: "72906885"
   
 4. PolyBase エンジンをシャット ダウンし、PolyBase データ移動サービスを再起動します。
   
-## <a name="optional-remove-a-compute-node"></a>省略可能:コンピューティング ノードを削除する  
+## <a name="optional-remove-a-compute-node"></a>省略可能: コンピューティング ノードを削除する  
   
 1. コンピューティング ノードの SQL Server (PQTH4A-CMP02) に接続します。
   
@@ -103,7 +103,7 @@ ms.locfileid: "72906885"
   
 5. PQTH4A-CMP01 で DMV sys.dm_exec_compute_nodes を実行して、ノードが削除されたことを確認します。 これで、PQTH4A-CMP02 はスタンドアロンのヘッド ノードとして機能するようになります。  
   
-## <a name="next-steps"></a>次の手順  
+## <a name="next-steps"></a>次のステップ  
 
 トラブルシューティングについては、「 [PolyBase troubleshooting with dynamic management views](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)」を参照してください。
   

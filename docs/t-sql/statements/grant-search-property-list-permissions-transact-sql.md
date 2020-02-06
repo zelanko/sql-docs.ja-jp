@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 76d96e9342ca66f4133b8993b2409960e6091301
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75246151"
 ---
 # <a name="grant-search-property-list-permissions-transact-sql"></a>GRANT (検索プロパティ リスト権限の許可) (Transact-SQL)
@@ -133,7 +133,7 @@ GRANT permission [ ,...n ] ON
 ## <a name="examples"></a>例  
   
 ### <a name="granting-permissions-to-a-search-property-list"></a>検索プロパティ リストに対する権限を許可する  
- 次の例では、検索プロパティ リスト `DocumentTablePropertyList` に対する `VIEW DEFINITION` 権限を `Mary` に許可します。  
+ 次の例では、検索プロパティ リスト `Mary` に対する `VIEW DEFINITION` 権限を `DocumentTablePropertyList` に許可します。  
   
 ```  
 GRANT VIEW DEFINITION  

@@ -18,10 +18,10 @@ ms.assetid: 055f9c6a-5c18-4942-98e7-ec918f0ff975
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 4314dbd1ab80fe8a26a1c6fa2b2429b68c6645fa
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908895"
 ---
 # <a name="remove-defunct-filegroups-sql-server"></a>機能していないファイル グループの削除 (SQL Server)
@@ -34,7 +34,7 @@ ms.locfileid: "72908895"
   
      [制限事項と制約事項](#Restrictions)  
   
--   [推奨事項](#Recommendations)  
+-   [Recommendations (推奨事項)](#Recommendations)  
   
      [セキュリティ](#Security)  
   
@@ -56,7 +56,7 @@ ms.locfileid: "72908895"
   
 -   ファイル グループが復元されておらず、復元する必要もなければ、データベースからそのファイル グループを削除することで、 *機能していない* 状態にすることができます。 機能していないファイル グループをこのデータベースに復元することはできませんが、そのメタデータはデータベース内に残ります。 ファイル グループが機能しなくなった後、データベースを再起動でき、復旧によって、復元されるファイル グループ間でデータベースの一貫性が維持されます。  
   
-     たとえば、ファイル グループを機能していない状態にすることは、データベース内で不要になったオフライン ファイル グループによって生じた遅延トランザクションを解決する方法の 1 つです。 ファイル グループがオフラインであったことが原因で遅延されたトランザクションは、ファイル グループを機能していない状態にすると、遅延状態ではなくなります。 詳細については、「 [遅延トランザクション &#40;SQL Server&#41;](../../relational-databases/backup-restore/deferred-transactions-sql-server.md)を使用して、機能していないファイル グループを削除する方法を説明します。  
+     たとえば、ファイル グループを機能していない状態にすることは、データベース内で不要になったオフライン ファイル グループによって生じた遅延トランザクションを解決する方法の 1 つです。 ファイル グループがオフラインであったことが原因で遅延されたトランザクションは、ファイル グループを機能していない状態にすると、遅延状態ではなくなります。 詳細については、「 [遅延トランザクション &#40;SQL Server&#41;](../../relational-databases/backup-restore/deferred-transactions-sql-server.md)」を参照してください。  
   
 ###  <a name="Security"></a> セキュリティ  
   
@@ -87,7 +87,7 @@ ms.locfileid: "72908895"
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 (**注:** この例では、ファイルとファイル グループが既に存在することを前提としています。 これらのオブジェクトを作成するには、「[ALTER DATABASE の File および Filegroup オプション](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)」トピックの例 B を参照してください)。最初の例では、`test1dat3` ステートメントと `test1dat4` 句を使用して、`ALTER DATABASE` ファイルと `REMOVE FILE` ファイルを機能していないファイル グループから削除します。 2 番目の例では、`Test1FG1` 句を使用して、機能していないファイル グループ `REMOVE FILEGROUP` を削除します。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 (**注:** この例では、ファイルとファイル グループが既に存在することを前提としています。 これらのオブジェクトを作成するには、「 [ALTER DATABASE の File および Filegroup オプション](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md) 」トピックの例 B を参照してください)。最初の例では、 `test1dat3` ステートメントと `test1dat4` 句を使用して、 `ALTER DATABASE` ファイルと `REMOVE FILE` ファイルを機能していないファイル グループから削除します。 2 番目の例では、 `Test1FG1`句を使用して、機能していないファイル グループ `REMOVE FILEGROUP` を削除します。  
   
 ```sql  
 USE master;  
@@ -113,7 +113,7 @@ GO
  [ALTER DATABASE の File および Filegroup オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)   
  [遅延トランザクション &#40;SQL Server&#41;](../../relational-databases/backup-restore/deferred-transactions-sql-server.md)   
  [ファイルの復元 &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/file-restores-full-recovery-model.md)   
- [ファイル復元 &#40;単純復旧モデル&#41;](../../relational-databases/backup-restore/file-restores-simple-recovery-model.md)   
+ [ファイルの復元 &#40;単純復旧モデル&#41;](../../relational-databases/backup-restore/file-restores-simple-recovery-model.md)   
  [Online Restore &#40;SQL Server&#41;](../../relational-databases/backup-restore/online-restore-sql-server.md)   
  [ページ復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-pages-sql-server.md)   
  [段階的な部分復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)  

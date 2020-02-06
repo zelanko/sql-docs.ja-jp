@@ -25,10 +25,10 @@ ms.assetid: 0f00bd66-efd5-4f12-9e1c-36195f739332
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 56dc5d83a23bfbf175c203edbdeb27d30760557b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71299026"
 ---
 # <a name="handling-events-programmatically"></a>プログラムによるイベントの処理
@@ -36,12 +36,12 @@ ms.locfileid: "71299026"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  [!INCLUDE[ssIS](../../includes/ssis-md.md)] のランタイムには、パッケージの検証や実行の処理前、処理中、処理後に発生する一連のイベントがあります。 これらのイベントをキャプチャするには、次の 2 つの方法があります。 1 つは、あるクラスに <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> インターフェイスを実装し、このクラスをパラメーターとして、パッケージの **Execute** および **Validate** メソッドに渡す方法です。 もう 1 つは <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> オブジェクトを作成する方法です。このオブジェクトには、タスクやループなど、<xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> に属するイベントが発生したときに実行される、他の [!INCLUDE[ssIS](../../includes/ssis-md.md)] オブジェクトを含めることができます。 ここでは、この 2 つの方法について説明し、その使用法をコード例で示します。  
+  [!INCLUDE[ssIS](../../includes/ssis-md.md)] のランタイムには、パッケージの検証や実行の処理前、処理中、処理後に発生する一連のイベントがあります。 これらのイベントをキャプチャするには、次の 2 つの方法があります。 1 つは、あるクラスに <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> インターフェイスを実装し、このクラスをパラメーターとして、パッケージの **Execute** および **Validate** メソッドに渡す方法です。 もう 1 つは <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> オブジェクトを作成する方法です。このオブジェクトには、タスクやループなど、[!INCLUDE[ssIS](../../includes/ssis-md.md)] に属するイベントが発生したときに実行される、他の <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> オブジェクトを含めることができます。 ここでは、この 2 つの方法について説明し、その使用法をコード例で示します。  
   
 ## <a name="receiving-idtsevents-callbacks"></a>IDTSEvents コールバックの受信  
  プログラムによってパッケージを構築し、実行する開発者は、<xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> インターフェイスを使用して、検証中や実行中に発生したイベント通知を受信することができます。 これを行うには、<xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> インターフェイスを実装するクラスを作成し、このクラスをパラメーターとして、パッケージの **Validate** および **Execute** メソッドに渡します。 イベントが発生すると、ランタイム エンジンによってこのクラスのメソッドが呼び出されます。  
   
- <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents> クラスにはあらかじめ <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> インターフェイスが実装されています。したがって、<xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> インターフェイスを直接実装する代わりに、<xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents> から派生するクラスを作成し、応答を受ける特定のイベントをオーバーライドする方法を取ることもできます。 その後、このクラスをパラメーターとして、<xref:Microsoft.SqlServer.Dts.Runtime.Package> の **Validate** および **Execute** メソッドに渡し、イベントのコールバックを受け取ります。  
+ <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents> クラスにはあらかじめ <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> インターフェイスが実装されています。したがって、<xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> インターフェイスを直接実装する代わりに、<xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents> から派生するクラスを作成し、応答を受ける特定のイベントをオーバーライドする方法を取ることもできます。 その後、このクラスをパラメーターとして、**の**Validate**および**Execute<xref:Microsoft.SqlServer.Dts.Runtime.Package> メソッドに渡し、イベントのコールバックを受け取ります。  
   
  次のコード サンプルは、<xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents> から派生するクラスを示し、<xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnPreExecute%2A> メソッドをオーバーライドします。 その後、クラスはパラメーターとして、パッケージの **Validate** および **Execute** メソッドに渡されます。  
   

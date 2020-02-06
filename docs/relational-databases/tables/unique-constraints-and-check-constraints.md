@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 400b028696666b188760f61c2490a218bc8bd2be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68017661"
 ---
 # <a name="unique-constraints-and-check-constraints"></a>UNIQUE 制約と CHECK 制約
@@ -85,7 +85,7 @@ GO
 DELETE CheckTbl WHERE col1 = 10;  
 ```  
   
- `CHECK` 制約では、テーブル `CheckTbl` に `1` 行以上が格納されていなければならないことを指定していますが、`DELETE` ステートメントは成功します。  
+ `DELETE` 制約では、テーブル `CHECK` に `CheckTbl` 行以上が格納されていなければならないことを指定していますが、`1` ステートメントは成功します。  
   
 ##  <a name="Tasks"></a> 関連タスク  
   

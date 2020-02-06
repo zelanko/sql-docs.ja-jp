@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: aab429b0d3705d6ba7867f146fa43aca486cbb02
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68099000"
 ---
 # <a name="timefromparts-transact-sql"></a>TIMEFROMPARTS (Transact-SQL)
@@ -57,14 +57,14 @@ TIMEFROMPARTS ( hour, minute, seconds, fractions, precision )
 ## <a name="return-types"></a>戻り値の型  
  **time(** *precision* **)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  TIMEROMPARTS では、完全に初期化された time 値が返されます。 引数が無効な場合は、エラーが発生します。 パラメーターのいずれかが NULL の場合、NULL が返されます。 ただし場合、 *有効桁数* 引数が null の場合、エラーが発生します。  
   
- *分数* 引数によって異なります、 *有効桁数* 引数。 たとえば、*precision* が 7 の場合、小数部分はそれぞれ 100 ナノ秒を表します。*precision* が 3 の場合、小数部分はそれぞれ 1 ミリ秒を表します。 *precision* の値が 0 の場合、*fractions* の値も 0 にする必要があります。そうしないと、エラーが発生します。  
+ *分数* 引数によって異なります、 *有効桁数* 引数。 たとえば、*precision* が 7 の場合、小数部分はそれぞれ 100 ナノ秒を表します。*precision* が 3 の場合、小数部分はそれぞれ 1 ミリ秒を表します。 場合の値 *有効桁数* が 0 の場合、値の *分数* もする必要があります。 0 にするそれ以外の場合、エラーが発生します。  
   
  この関数は、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以上のサーバーに対してリモート処理が可能です。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] より前のバージョンのサーバーには、リモート処理は実行できません。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-simple-example-without-fractions-of-a-second"></a>A. 秒の小数部を使用しない場合の簡単な例  
   

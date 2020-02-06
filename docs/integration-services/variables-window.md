@@ -16,10 +16,10 @@ ms.assetid: f405e5ce-ef69-4c58-8c7d-a3d44dfe9ab0
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ef2e4b408dabf7b054465149b2489e07fbdefef8
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295026"
 ---
 # <a name="variables-window"></a>[変数] ウィンドウ
@@ -37,7 +37,7 @@ ms.locfileid: "71295026"
 >  **Name** プロパティと **Namespace** プロパティの値の最初の文字は、Unicode Standard 2.0 に定義されているアルファベット文字か、アンダースコア (_) にする必要があります。 2 番目以降の文字では、Unicode Standard 2.0 に定義されている文字または数字と、アンダースコア (\_) を使用できます。  
   
 ## <a name="options"></a>オプション  
- **[変数の追加]**  
+ **変数の追加**  
  ユーザー定義変数を追加します。  
   
  **変数の移動**  
@@ -51,7 +51,7 @@ ms.locfileid: "71295026"
  **グリッドのオプション**  
  クリックすると **[可変グリッドのオプション]** ダイアログ ボックスが開きます。このダイアログ ボックスで、列の選択を変更したり、 **[変数]** ウィンドウにフィルターを適用したりできます。 詳細については、「 [可変グリッドのオプション](../integration-services/variable-grid-options.md)」を参照してください。  
   
- **Name**  
+ **名前**  
  変数名を表示します。 ユーザー定義変数の名前を更新できます。  
   
  **スコープ**  
@@ -74,10 +74,10 @@ ms.locfileid: "71295026"
  **[Raise Change Event]**  
  値を変更した場合に **OnVariableValueChanged** イベントを発生させるかどうかを示します。 ユーザー定義変数およびシステム変数の値を更新できます。 既定では、 **[変数]** ウィンドウにこの列は表示されません。 この列を表示するには、 **[グリッドのオプション]** をクリックします。  
   
- **[説明]**  
+ **説明**  
  変数の説明を表示します。 ユーザー定義変数の説明を変更できます。 既定では、 **[変数]** ウィンドウにこの列は表示されません。 この列を表示するには、 **[グリッドのオプション]** をクリックします。  
   
- **[変数]**  
+ **[式]**  
  変数に割り当てられた式を表示します。 式を割り当てるには、参照ボタンをクリックします。  
   
  変数に式を割り当てると、変数の横に特別なアイコン マーカーが表示されます。 この特別なアイコン マーカーは、式が設定されている接続マネージャーおよびタスクの横にも表示されます。  
@@ -94,14 +94,14 @@ ms.locfileid: "71295026"
  **すべてのスコープの変数を表示する**  
  選択すると、パッケージのスコープ内の変数、および、パッケージにあるコンテナー、タスク、およびイベント ハンドラーのスコープ内の変数が表示されます。 このオプションをオフにすると、パッケージのスコープ内の変数、および、選択されたコンテナー、タスク、またはイベント ハンドラーのスコープ内の変数のみが表示されます。  
   
- 変数のスコープの詳細については、「 [Integration Services (SSIS) の変数](../integration-services/integration-services-ssis-variables.md)」を参照してください。  
+ 変数のスコープの詳細については、「 [Integration Services &#40;SSIS&#41; の変数](../integration-services/integration-services-ssis-variables.md)領域の下にあります。  
   
 ### <a name="options-for-columns"></a>列のオプション  
  **[変数]** ウィンドウに表示する列を選択します。  
   
 -   **スコープ**  
   
--   **Data type**  
+-   **データの種類**  
   
 -   **Value**  
   
@@ -109,14 +109,14 @@ ms.locfileid: "71295026"
   
 -   **[変数値の変化時にイベントを発生]**  
   
--   **[説明]**  
+-   **説明**  
   
 -   **[式]**  
   
 ## <a name="see-also"></a>参照  
  [Integration Services &#40;SSIS&#41; の変数](../integration-services/integration-services-ssis-variables.md)   
  [パッケージで変数を使用する](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)   
- [Integration Services &#40;SSIS&#41; の式](../integration-services/expressions/integration-services-ssis-expressions.md)   
+ [Integration Services &#40;SSIS&#41; 式](../integration-services/expressions/integration-services-ssis-expressions.md)   
  [パッケージ実行用のダンプ ファイルを生成する](../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)  
   
   

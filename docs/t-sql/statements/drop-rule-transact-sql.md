@@ -22,10 +22,10 @@ ms.assetid: 8370b730-7fd5-43fe-a7f6-8300b3caa16d
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: cce8533a1ac74feb95577d28f73cb6f87c15aa31
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68223600"
 ---
 # <a name="drop-rule-transact-sql"></a>DROP RULE (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68223600"
   1 つ以上のユーザー定義のルールを現在のデータベースから削除します。  
   
 > [!IMPORTANT]
->  DROP RULE は、次期バージョンの [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では削除される予定です。 新しい開発作業では、DROP RULE の使用は避け、現在このオプションを使用しているアプリケーションは修正するようにしてください。 代わりに、[CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) または [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) の CHECK キーワードを使用して作成できる CHECK 制約を使用してください。 詳細については、「 [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md)」を参照してください。  
+>  DROP RULE は、次期バージョンの [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では削除される予定です。 新しい開発作業では、DROP RULE の使用は避け、現在このオプションを使用しているアプリケーションは修正するようにしてください。 代わりに、[CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) または [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) の CHECK キーワードを使用して作成できる CHECK 制約を使用してください。 詳細については、「 [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md)」を参照してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -56,7 +56,7 @@ DROP RULE [ IF EXISTS ] { [ schema_name . ] rule_name } [ ,...n ] [ ; ]
  *rule*  
  削除するルールです。 ルール名は、[識別子](../../relational-databases/databases/database-identifiers.md)の規則に従っている必要があります。 ルールのスキーマ名の指定は省略可能です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  ルールを削除するには、そのルールが列または別名データ型に現在バインドされている場合、まず、このバインドを解除します。 ルールのバインドを解除するには、**sp_unbindrule** を使います。 バインドされているルールを削除しようとすると、エラー メッセージが表示され、DROP RULE ステートメントは取り消されます。  
   
  ルールを削除すると、以前はそのルールに制御されていた列に新しいデータを入力しても、ルールの制約を受けなくなります。 既存のデータはまったく影響を受けません。  
@@ -66,7 +66,7 @@ DROP RULE [ IF EXISTS ] { [ schema_name . ] rule_name } [ ,...n ] [ ; ]
 ## <a name="permissions"></a>アクセス許可  
  DROP RULE を実行するには、少なくとも、ルールが属するスキーマに対する ALTER 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、`VendorID_rule` というルールのバインドを解除し、削除します。 
   
 ```  

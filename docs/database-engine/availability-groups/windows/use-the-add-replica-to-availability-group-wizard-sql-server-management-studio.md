@@ -16,10 +16,10 @@ ms.assetid: 60d962b6-2af4-4394-9190-61939a102bc0
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: afca5e00f95056fc201f37260088c90004ff3d1f
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75244981"
 ---
 # <a name="add-a-replica-to-your-always-on-availability-group-using-the-availability-group-wizard-in-sql-server-management"></a>SQL Server Management で可用性グループ ウィザードを使用し、Always On 可用性グループにレプリカを追加する
@@ -70,14 +70,14 @@ ms.locfileid: "75244981"
   
 3.  セカンダリ レプリカを追加する可用性グループを右クリックし、 **[レプリカの追加]** をクリックします。 可用性グループへのレプリカ追加ウィザードが起動します。  
   
-4.  **[既存のセカンダリ レプリカへの接続]** ページで、可用性グループのすべてのセカンダリ レプリカに接続します。 詳細については、「[既存のセカンダリ レプリカ ページへの接続 &#40;レプリカの追加ウィザード:データベース追加ウィザード&#41;](../../../database-engine/availability-groups/windows/connect-to-existing-secondary-replicas-page.md)」を参照してください。  
+4.  **[既存のセカンダリ レプリカへの接続]** ページで、可用性グループのすべてのセカンダリ レプリカに接続します。 詳細については、「[既存のセカンダリ レプリカ ページへの接続 &#40;レプリカの追加ウィザード/データベース追加ウィザード&#41;](../../../database-engine/availability-groups/windows/connect-to-existing-secondary-replicas-page.md)」を参照してください。  
   
 5.  **[レプリカの指定]** ページで、可用性グループの 1 つまたは複数の新しいセカンダリ レプリカを指定し、構成します。 このページには、3 つのタブがあります。 次の表では、これらのタブについて説明します。 詳細については、「[[レプリカの指定] ページ &#40;新しい可用性グループウィザード/レプリカの追加ウィザード&#41;](../../../database-engine/availability-groups/windows/specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md)」を参照してください。  
   
     |タブ|簡単な説明|  
     |---------|-----------------------|  
     |**レプリカ**|このタブを使用して、新しいセカンダリ レプリカをホストする [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の各インスタンスを指定します。|  
-    |**エンドポイント**|このタブを使用して、新しいセカンダリ レプリカに対する既存のデータベース ミラーリング エンドポイントを検証します (存在する場合)。 サービス アカウントが Windows 認証を使用しているサーバー インスタンスでエンドポイントが不足している場合、ウィザードは、エンドポイントの自動作成を試行します。<br /><br /> <br /><br /> 注:ドメイン以外のユーザー アカウントで実行されているサーバー インスタンスが 1 つでもある場合、ウィザードを続行するには、サーバー インスタンスに手動で変更を加える必要があります。 詳細については、このトピックの「 [前提条件](#Prerequisites)」をご覧ください。|  
+    |**エンドポイント**|このタブを使用して、新しいセカンダリ レプリカに対する既存のデータベース ミラーリング エンドポイントを検証します (存在する場合)。 サービス アカウントが Windows 認証を使用しているサーバー インスタンスでエンドポイントが不足している場合、ウィザードは、エンドポイントの自動作成を試行します。<br /><br /> <br /><br /> 注: ドメイン以外のユーザー アカウントで実行されているサーバー インスタンスが 1 つでもある場合、ウィザードを続行するには、サーバー インスタンスに手動で変更を加える必要があります。 詳細については、このトピックの「 [前提条件](#Prerequisites)」をご覧ください。|  
     |**バックアップの設定**|このタブを使用して、可用性グループ全体のバックアップ設定を指定し (現在の設定を変更する場合)、各可用性レプリカのバックアップの優先順位を指定します。|  
   
 6.  選択したレプリカにデータベース マスター キーを保有しているデータベースが含まれている場合は、そのデータベース マスター キーのパスワードを **[パスワード]** 列に入力します。 **[状態]** 列には、データベース マスター キーを保有しているデータベースに **パスワードが必要** であることが示されます。 **[パスワード]** 列に正しいパスワードが入力されるまで、 **[次へ]** は淡色表示されます。 パスワードを入力したら、 **[更新]** をクリックします。 パスワードを正しく入力した場合、[状態] 列に **[パスワードが入力されました]** が表示され、 **[次へ]** が有効になります。  
@@ -116,7 +116,7 @@ ms.locfileid: "75244981"
      ウィザードでの作業が完了したら、 **[閉じる]** をクリックして終了します。  
   
 > [!IMPORTANT]  
->  レプリカ追加後の操作については、「[可用性グループへのセカンダリ レプリカの追加 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md)」の「補足情報: レプリカの追加後」 を参照してください。  
+>  レプリカ追加後の操作については、「 [可用性グループへのセカンダリ レプリカの追加 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md)」を参照してください。  
   
 ##  <a name="RelatedTasks"></a> 関連タスク  
   

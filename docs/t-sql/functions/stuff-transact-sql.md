@@ -25,10 +25,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0bb5b030b138fa49f90c77c13e12bf2f64968da3
-ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71342002"
 ---
 # <a name="stuff-transact-sql"></a>STUFF (Transact-SQL)
@@ -60,7 +60,7 @@ STUFF ( character_expression , start , length , replaceWith_expression )
 ## <a name="return-types"></a>戻り値の型  
  *character_expression* が、サポートされている文字データ型のいずれかの場合は、文字データが返されます。 *character_expression* が、サポートされているバイナリ データ型のいずれかの場合は、バイナリ データが返されます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  開始位置または長さが負の場合、または開始位置が 1 番目の文字列の長さを超える場合は NULL 文字列が返されます。 開始位置が 0 の場合は、NULL 値が返されます。 削除する長さが 1 番目の文字列より長い場合は、1 番目の文字列の最初の文字まで削除されます。  
 
 結果値が、戻り値の型でサポートされている最大値より大きい場合は、エラーが発生します。  
@@ -68,7 +68,7 @@ STUFF ( character_expression , start , length , replaceWith_expression )
 ## <a name="supplementary-characters-surrogate-pairs"></a>補助文字 (サロゲート ペア)  
  SC の照合順序を使用する場合、*character_expression* と *replaceWith_expression* の両方にサロゲート ペアを含めることができます。 length パラメーターでは、*character_expression* 内の各サロゲートは 1 文字としてカウントされます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、最初の文字列 (`abcdef`) の位置 `2` (`b`) から 3 文字を削除し、その位置に 2 番目に指定した文字列を挿入して生成される文字列を返します。  
   
 ```  

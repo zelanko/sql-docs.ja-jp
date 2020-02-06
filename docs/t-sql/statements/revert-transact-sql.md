@@ -23,10 +23,10 @@ ms.assetid: 4688b17a-dfd1-4f03-8db4-273a401f879f
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 2105b03f64ecc2e0357e5a06f0d7cb2c18fb69b0
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72252177"
 ---
 # <a name="revert-transact-sql"></a>REVERT (Transact-SQL)
@@ -48,7 +48,7 @@ REVERT
  WITH COOKIE = @*varbinary_variable*  
  対応するスタンドアロンの [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md) ステートメントで作成されたクッキーを指定します。 *\@varbinary_variable* は **varbinary(100)** です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  REVERT は、ストアド プロシージャまたはユーザー定義関数などのモジュール内で、またはスタンドアロンのステートメントとして指定できます。 モジュール内で指定した場合、REVERT はモジュール内で定義された EXECUTE AS ステートメントにのみ適用されます。 たとえば、次のストアド プロシージャでは、`EXECUTE AS` ステートメントの後に `REVERT` ステートメントが実行されます。  
   
 ```  
@@ -72,7 +72,7 @@ GO
 EXECUTE dbo.usp_myproc;   
 ```  
   
- この場合、`usp_myproc` 内で定義された `REVERT` ステートメントでは、モジュール内で設定されている実行コンテキストが切り替えられますが、モジュール外で設定されている実行コンテキストに影響はありません。 つまり、セッションの実行コンテキストは `login1` のままです。  
+ この場合、`REVERT` 内で定義された `usp_myproc` ステートメントでは、モジュール内で設定されている実行コンテキストが切り替えられますが、モジュール外で設定されている実行コンテキストに影響はありません。 つまり、セッションの実行コンテキストは `login1` のままです。  
   
  スタンドアロンのステートメントとして指定した場合、REVERT はバッチまたはセッション内で定義された EXECUTE AS に適用されます。 対応する EXECUTE AS ステートメントに WITH NO REVERT 句が含まれている場合、REVERT は無効です。 この場合、実行コンテキストはセッションが削除されるまで有効です。  
   
@@ -84,7 +84,7 @@ EXECUTE dbo.usp_myproc;
 ## <a name="permissions"></a>アクセス許可  
  権限は必要ありません。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-using-execute-as-and-revert-to-switch-context"></a>A. EXECUTE AS と REVERT を使用してコンテキストを切り替える  
  次の例では、複数のプリンシパルを使用してコンテキスト実行スタックを作成した後、 REVERT ステートメントを使用して実行コンテキストを以前のコンテキストに戻します。 REVERT ステートメントは、実行コンテキストが最初の呼び出し元に設定されるまで、スタックの上層に向かって複数回実行されます。  
@@ -131,7 +131,7 @@ GO
 ```  
   
 ### <a name="b-using-the-with-cookie-clause"></a>B. WITH COOKIE 句を使用する  
- 次の例では、セッションの実行コンテキストを、指定したユーザーに設定し、WITH NO REVERT COOKIE = @*varbinary_variable* 句を指定します。 コンテキストを正常に呼び出し元に戻すには、`REVERT` ステートメントで、`EXECUTE AS` ステートメントの `@cookie` 変数に渡される値を指定する必要があります。 この例を実行するには、例 A で作成したログイン `login1` とユーザー `user1` が存在している必要があります。  
+ 次の例では、セッションの実行コンテキストを、指定したユーザーに設定し、WITH NO REVERT COOKIE = @*varbinary_variable* 句を指定します。 コンテキストを正常に呼び出し元に戻すには、`REVERT` ステートメントで、`@cookie` ステートメントの `EXECUTE AS` 変数に渡される値を指定する必要があります。 この例を実行するには、例 A で作成したログイン `login1` とユーザー `user1` が存在している必要があります。  
   
 ```  
 DECLARE @cookie varbinary(100);  

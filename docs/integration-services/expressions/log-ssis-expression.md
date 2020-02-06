@@ -14,10 +14,10 @@ ms.assetid: f7fccace-c178-4e13-bde9-7dc4ef1d98fa
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a2a44d6e7245108c16442e30a67aaea13aae8293
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297506"
 ---
 # <a name="log-ssis-expression"></a>LOG (SSIS 式)
@@ -41,7 +41,7 @@ LOG(numeric_expression)
 ## <a name="result-types"></a>戻り値の型  
  DT_R8  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この *数値式* は、対数の計算前に DT_R8 データ型にキャストされます。 詳細については、「 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)」を参照してください。  
   
  *numeric_expression* が 0 または負の値に評価される場合、返される結果は NULL になります。  

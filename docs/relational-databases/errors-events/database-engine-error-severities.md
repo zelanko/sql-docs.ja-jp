@@ -16,10 +16,10 @@ ms.assetid: 3e7f5925-6edd-42e1-bf17-f7deb03993a7
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d0984d0003f6a20c410b91f99dc6fd1b4ae3f545
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73844325"
 ---
 # <a name="database-engine-error-severities"></a>データベース エンジン エラーの重大度
@@ -63,7 +63,7 @@ ms.locfileid: "73844325"
   
  接続が終了すると実行は中断されるため、データベース接続を終了させるエラー (通常の場合、重大度 20 ～ 25 のエラー) は CATCH ブロックでは処理されません。  
   
- 詳細については、「 [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)に発生した問題の種類がエラーの重大度によって示されます。  
+ 詳細については、「 [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)」を参照してください。  
   
 ## <a name="retrieving-error-severity"></a>エラーの重大度の取得  
  システム関数 ERROR_SEVERITY を使用して、TRY...CATCH コンストラクトの CATCH ブロックを実行したエラーの重大度を取得することができます。 CATCH ブロックの範囲外で呼び出された場合、ERROR_SEVERITY は NULL を返します。 詳細については、「[ERROR_SEVERITY &#40;Transact-SQL&#41;](../../t-sql/functions/error-severity-transact-sql.md)」を参照してください。  

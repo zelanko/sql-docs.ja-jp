@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2c83006aab69b7d72a2c3006dab48811eeda8495
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909120"
 ---
 # <a name="create-a-user-defined-data-type-alias"></a>ユーザー定義データ型の別名の作成
@@ -61,7 +61,7 @@ ms.locfileid: "72909120"
      **[NULL を許容]**  
      ユーザー定義データ型が NULL 値を受け入れるかどうかを指定します。 既存のユーザー定義データ型に対する NULL 値の許容/非許容は編集できません。  
   
-     **データ型**  
+     **データの種類**  
      基本データ型をリスト ボックスから選択します。 リスト ボックスには、 **geography**、 **geometry**、 **hierarchyid**、 **sysname**、 **timestamp** 、および **xml** の各データ型以外のすべてのデータ型が表示されます。 既存のユーザー定義データ型のデータ型は編集できません。  
   
      **[Default]**  
@@ -72,19 +72,19 @@ ms.locfileid: "72909120"
   
      長さは、 **nvarchar (max)** 、 **varchar (max)** 、 **varbinary (max)** の各データ型に対しては表示されません。  
   
-     **[名前]**  
+     **名前**  
      ユーザー定義データ型の別名を新規に作成する場合、ユーザー定義データ型を表すためにデータベース全体で使用する一意の名前を入力します。 文字の最大数は、システム **sysname** データ型に一致する必要があります。 既存のユーザー定義データ型の別名は編集できません。  
   
      **Rule**  
      必要に応じて、ユーザー定義データ型の別名にバインドするルールを選択します。  
   
-     **Scale**  
+     **スケール**  
      小数点の右側にとることのできる 10 進数の最大桁数を指定します。  
   
-     **スキーマ**  
+     **[スキーマ]**  
      現在のユーザーが使用できるすべてのスキーマの一覧からスキーマを選択します。 既定の選択は、現在のユーザーの既定のスキーマです。  
   
-     **ストレージ**  
+     **Storage**  
      ユーザー定義データ型の別名に対応するストレージの最大サイズを表示します。 ストレージの最大サイズは、有効桁数によって異なります。  
   
     |||  

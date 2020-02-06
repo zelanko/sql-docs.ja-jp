@@ -26,10 +26,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: be05a8adcf83fdd9f2e26ca5dce38d71a67c70ac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68075266"
 ---
 # <a name="exists-transact-sql"></a>EXISTS (Transact-SQL)
@@ -55,7 +55,7 @@ EXISTS ( subquery )
 ## <a name="result-values"></a>結果の値  
  サブクエリが行を含む場合は、TRUE を返します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-using-null-in-a-subquery-to-still-return-a-result-set"></a>A. サブクエリで NULL を使用しても結果セットを返すようにする  
  次の例では、サブクエリに `NULL` を指定しても、`EXISTS` により TRUE と評価されるので、結果が返されます。  
@@ -296,7 +296,7 @@ Peng                           Wu                             Quality Assurance 
 (91 row(s) affected)
  ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="f-using-exists"></a>F. EXISTS を使用する  
  次の例では、`ProspectiveBuyer` テーブルの行が `DimCustomer` テーブルの行と一致するかどうかを示しています。 2 つのテーブルの `LastName` と `BirthDate` の両方の値が一致する場合にのみ、クエリは行を返します。  
@@ -313,7 +313,7 @@ WHERE EXISTS
 ```  
   
 ### <a name="g-using-not-exists"></a>G. NOT EXISTS を使用する  
- NOT EXISTS の動作は EXISTS と逆です。 NOT EXISTS 内の WHERE 句の条件は、サブクエリから行が返されない場合に満たされます。 次の例では、`LastName` と `BirthDate` が `ProspectiveBuyers` テーブルのどのエントリとも一致しない `DimCustomer` テーブルの行を検出します。  
+ NOT EXISTS の動作は EXISTS と逆です。 NOT EXISTS 内の WHERE 句の条件は、サブクエリから行が返されない場合に満たされます。 次の例では、`DimCustomer` と `LastName` が `BirthDate` テーブルのどのエントリとも一致しない `ProspectiveBuyers` テーブルの行を検出します。  
   
 ```  
 -- Uses AdventureWorks  

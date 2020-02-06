@@ -24,10 +24,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d9908d99f81094b8b8d3c2afd5c82ad870c2de22
-ms.sourcegitcommit: 58f1d5498c87bfe0f6ec4fd9d7bbe723be47896b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68995738"
 ---
 # <a name="db_id-transact-sql"></a>DB_ID (Transact-SQL)
@@ -50,19 +50,19 @@ DB_ID ( [ 'database_name' ] )
 ## <a name="return-types"></a>戻り値の型
 **int**
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 `DB_ID` は、Azure SQL Database 内の現在のデータベースのデータベース ID を取得するためにのみ使用できます。 指定したデータベース名が現在のデータベースではない場合は、NULL が返されます。
 
 > [!NOTE]
-> Azure SQL Database と共に使用する場合、`DB_ID` では、**sys.databases** からの `database_id` のクエリと同じ結果が返されないことがあります。 `DB_ID` の呼び出し元で結果が他の **sys** ビューと比較されている場合は、代わりに **sys.databases** のクエリを実行する必要があります。
+> Azure SQL Database と共に使用する場合、`DB_ID` では、`database_id`sys.databases**からの** のクエリと同じ結果が返されないことがあります。 `DB_ID` の呼び出し元で結果が他の **sys** ビューと比較されている場合は、代わりに **sys.databases** のクエリを実行する必要があります。
   
 ## <a name="permissions"></a>アクセス許可  
-`DB_ID` の呼び出し元が、**マスター**以外または **tempdb** 以外の特定データベースを所有していない場合は、対応する `DB_ID` 行を確認するために、少なくとも、サーバー レベルの `ALTER ANY DATABASE` または `VIEW ANY DATABASE` 権限が必要です。 **マスター** データベースの場合、`DB_ID` には少なくとも `CREATE DATABASE` 権限が必要です。 呼び出し元が接続するデータベースは常に、**sys.databases** 内で確認できます。
+`DB_ID` の呼び出し元が、**マスター**以外または **tempdb** 以外の特定データベースを所有していない場合は、対応する `ALTER ANY DATABASE` 行を確認するために、少なくとも、サーバー レベルの `VIEW ANY DATABASE` または `DB_ID` 権限が必要です。 **マスター** データベースの場合、`DB_ID` には少なくとも `CREATE DATABASE` 権限が必要です。 呼び出し元が接続するデータベースは常に、**sys.databases** 内で確認できます。
   
 > [!IMPORTANT]  
->  既定では、public ロールは、すべてのログインにデータベース情報の表示を許可する `VIEW ANY DATABASE` 権限を持っています。 ログインでデータベースが検出されるのを阻止するには、public から `VIEW ANY DATABASE` を `REVOKE` するか、または、個別のログインに対する `VIEW ANY DATABASE` を `DENY` します。  
+>  既定では、public ロールは、すべてのログインにデータベース情報の表示を許可する `VIEW ANY DATABASE` 権限を持っています。 ログインでデータベースが検出されるのを阻止するには、public から `REVOKE` を `VIEW ANY DATABASE` するか、または、個別のログインに対する `DENY` を `VIEW ANY DATABASE` します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-returning-the-database-id-of-the-current-database"></a>A. 現在のデータベースのデータベース ID を返す  
 この例では、現在のデータベースのデータベース ID を返します。
@@ -103,7 +103,7 @@ ELSE
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-return-the-id-of-the-current-database"></a>D. 現在のデータベースの ID を返す  
 この例では、現在のデータベースのデータベース ID を返します。

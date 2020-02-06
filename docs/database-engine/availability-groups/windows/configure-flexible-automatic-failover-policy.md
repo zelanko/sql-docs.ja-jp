@@ -16,10 +16,10 @@ ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 39e6e14700fe7ad9d9c1c3ba71eca82b3855beb2
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056684"
 ---
 # <a name="configure-a-flexible-automatic-failover-policy-for-an-always-on-availability-group"></a>Always On 可用性グループに柔軟な自動フェールオーバー ポリシーを構成する
@@ -69,8 +69,8 @@ ms.locfileid: "74056684"
   
 |Level|エラー状態|[!INCLUDE[tsql](../../../includes/tsql-md.md)] の値|PowerShell 値|  
 |-----------|-----------------------|------------------------------|----------------------|  
-|1|サーバーの停止。 次のいずれかが発生した場合に自動フェールオーバーを開始することを指定します。<br /><br /> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスがダウンした。<br /><br /> WSFC クラスターに接続するための可用性グループのリースが、サーバー インスタンスから ACK を受信しないために期限切れになった。 詳細については、「[How It Works:SQL Server Always On Lease Timeout](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx)」 (動作方法: SQL Server Always On のリース タイムアウト) を参照してください。<br /><br /> <br /><br /> これは最も制限の緩いレベルです。|1|**OnServerDown**|  
-|2|サーバーの応答停止。 次のいずれかが発生した場合に自動フェールオーバーを開始することを指定します。<br /><br /> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスがクラスターに接続していず、可用性グループのユーザー指定の正常性チェック タイムアウトしきい値を超えた。<br /><br /> 可用性レプリカがエラー状態である。|2|**OnServerUnresponsive**|  
+|1 つ|サーバーの停止。 次のいずれかが発生した場合に自動フェールオーバーを開始することを指定します。<br /><br /> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスがダウンした。<br /><br /> WSFC クラスターに接続するための可用性グループのリースが、サーバー インスタンスから ACK を受信しないために期限切れになった。 詳細については、「 [動作方法: SQL Server Always On のリース タイムアウト](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx)」を参照してください。<br /><br /> <br /><br /> これは最も制限の緩いレベルです。|1|**OnServerDown**|  
+|2 つ|サーバーの応答停止。 次のいずれかが発生した場合に自動フェールオーバーを開始することを指定します。<br /><br /> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスがクラスターに接続していず、可用性グループのユーザー指定の正常性チェック タイムアウトしきい値を超えた。<br /><br /> 可用性レプリカがエラー状態である。|2|**OnServerUnresponsive**|  
 |3|重大なサーバー エラー。 孤立したスピンロック、深刻な書き込みアクセス違反、ダンプが多すぎるなどの深刻な [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 内部エラーが発生した場合に自動フェールオーバーを開始することを指定します。<br /><br /> これは既定のレベルです。|3|**OnCriticalServerError**|  
 |4|中程度のサーバー エラー。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 内部リソース プールに永続的なメモリ不足の状態があるなど中程度の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 内部エラーが発生した場合に自動フェールオーバーを開始することを指定します。|4|**OnModerateServerError**|  
 |5|任意の限定されたエラー条件。 以下のような任意の限定されたエラー条件に対して自動フェールオーバーを開始することを指定します。<br /><br /> スケジューラ デッドロックの検出。<br /><br /> 解決不可能なデッドロックが検出された。<br /><br /> <br /><br /> これは最も制限の厳しいレベルです。|5|**OnAnyQualifiedFailureConditions**|  
@@ -98,8 +98,8 @@ ms.locfileid: "74056684"
   
         |[!INCLUDE[tsql](../../../includes/tsql-md.md)] の値|Level|自動フェールオーバーが開始される条件|  
         |------------------------------|-----------|-------------------------------------------|  
-        |1|1|サーバーの停止。 フェールオーバーまたは再起動のため、SQL Server サービスが停止した場合。|  
-        |2|2|サーバーの応答停止。 下限値の任意の条件が満たされた場合、SQL Server サービスがクラスターに接続され正常性チェックのタイムアウトしきい値を超えた場合、または現在のプライマリ レプリカがエラー状態になった場合。|  
+        |1|1 つ|サーバーの停止。 フェールオーバーまたは再起動のため、SQL Server サービスが停止した場合。|  
+        |2|2 つ|サーバーの応答停止。 下限値の任意の条件が満たされた場合、SQL Server サービスがクラスターに接続され正常性チェックのタイムアウトしきい値を超えた場合、または現在のプライマリ レプリカがエラー状態になった場合。|  
         |3|3|重大なサーバー エラー。 下限値の任意の条件が満たされるか、重大な内部サーバー エラーが発生した場合。<br /><br /> これは既定のレベルです。|  
         |4|4|中程度のサーバー エラー。 下限値の任意の条件が満たされるか、中程度のサーバー エラーが発生した場合。|  
         |5|5|任意の限定されたエラー条件。 下限値の任意の条件が満たされるか、限定されたエラー条件が発生した場合。|  
@@ -124,17 +124,17 @@ ms.locfileid: "74056684"
   
     -   フェールオーバーの条件レベルを設定するには、 **FailureConditionLevel**_level_ パラメーターを使用します。この *level* は次の値のいずれかになります。  
   
-        |[値]|Level|自動フェールオーバーが開始される条件|  
+        |値|Level|自動フェールオーバーが開始される条件|  
         |-----------|-----------|-------------------------------------------|  
-        |**OnServerDown**|1|サーバーの停止。 フェールオーバーまたは再起動のため、SQL Server サービスが停止した場合。|  
-        |**OnServerUnresponsive**|2|サーバーの応答停止。 下限値の任意の条件が満たされた場合、SQL Server サービスがクラスターに接続され正常性チェックのタイムアウトしきい値を超えた場合、または現在のプライマリ レプリカがエラー状態になった場合。|  
+        |**OnServerDown**|1 つ|サーバーの停止。 フェールオーバーまたは再起動のため、SQL Server サービスが停止した場合。|  
+        |**OnServerUnresponsive**|2 つ|サーバーの応答停止。 下限値の任意の条件が満たされた場合、SQL Server サービスがクラスターに接続され正常性チェックのタイムアウトしきい値を超えた場合、または現在のプライマリ レプリカがエラー状態になった場合。|  
         |**OnCriticalServerError**|3|重大なサーバー エラー。 下限値の任意の条件が満たされるか、重大な内部サーバー エラーが発生した場合。<br /><br /> これは既定のレベルです。|  
         |**OnModerateServerError**|4|中程度のサーバー エラー。 下限値の任意の条件が満たされるか、中程度のサーバー エラーが発生した場合。|  
         |**OnAnyQualifiedFailureConditions**|5|任意の限定されたエラー条件。 下限値の任意の条件が満たされるか、限定されたエラー条件が発生した場合。|  
   
          詳細については、「[可用性グループの自動フェールオーバーのための柔軟なフェールオーバー ポリシー &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md)」を参照してください。  
   
-         たとえば、次のコマンドでは、既存の可用性グループ `AG1` のエラー条件レベルをレベル 1 に変更します。  
+         たとえば、次のコマンドでは、既存の可用性グループ `AG1`のエラー条件レベルをレベル 1 に変更します。  
   
         ```  
         Set-SqlAvailabilityGroup `   

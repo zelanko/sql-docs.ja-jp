@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4e3560501061819b3911d7dd628d29e5dda09f79
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67999865"
 ---
 # <a name="background-job-error-event-class"></a>Background Job Error イベント クラス
@@ -40,9 +40,9 @@ ms.locfileid: "67999865"
 |**SessionLoginName**|**nvarchar**|セッションを開始したユーザーのログイン名。 たとえば、Login1 を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続し、Login2 でステートメントを実行すると、 **SessionLoginName** には Login1 が表示され、 **LoginName** には Login2 が表示されます。 この列には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインと [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ログインの両方が表示されます。|64|はい|  
 |**Severity**|**int**|最後の試行におけるエラーの重要度レベル (**EventSubClass** が 1 の場合のみ)。|20|はい|  
 |**StartTime**|**datetime**|ジョブが作成された時刻。|14|はい|  
-|**状態**|**int**|最後の試行におけるエラーの状態 (**EventSubClass** が 1 の場合のみ)。|30|はい|  
+|**State**|**int**|最後の試行におけるエラーの状態 (**EventSubClass** が 1 の場合のみ)。|30|はい|  
 |**TextData**|**ntext**|イベント サブクラスの値についての説明テキスト。|1|はい|  
-|**型**|**int**|ジョブの種類。|57|はい|  
+|**Type**|**int**|ジョブの種類。|57|はい|  
   
 ## <a name="see-also"></a>参照  
  [拡張イベント](../../relational-databases/extended-events/extended-events.md)   
