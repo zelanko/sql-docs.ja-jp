@@ -25,10 +25,10 @@ ms.assetid: 092d0d71-9f1e-4e38-a1c4-2487adfa5b4e
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 810367b817aec0688a2bc5168be10c7ff073affc
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73980993"
 ---
 # <a name="drop-trigger-transact-sql"></a>DROP TRIGGER (Transact-SQL)
@@ -81,7 +81,7 @@ ON ALL SERVER
 > [!NOTE]  
 >  このオプションは、包含データベースでは使用できません。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  DML トリガーを削除するには、DML トリガー自体またはトリガー テーブルを削除します。 テーブルを削除した場合、関係付けられているすべてのトリガーも削除されます。  
   
  トリガーが削除されると、トリガーに関する情報が **sys.objects**、**sys.triggers**、および **sys.sql_modules** カタログ ビューから削除されます。  
@@ -101,10 +101,10 @@ ON ALL SERVER
   
  サーバー スコープ (ON ALL SERVER) で定義されている DDL トリガー、またはログオン トリガーを削除するには、サーバーでの CONTROL SERVER 権限が必要です。 データベース スコープ (ON DATABASE) で定義されている DDL トリガーを削除するには、現在のデータベースでの ALTER ANY DATABASE DDL TRIGGER 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-dropping-a-dml-trigger"></a>A. DML トリガーを削除する  
- 次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースにある `employee_insupd` トリガーを削除します ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降では、DROP TRIGGER IF EXISTS 構文を使うことができます)。  
+ 次の例では、`employee_insupd` データベースにある [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] トリガーを削除します ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降では、DROP TRIGGER IF EXISTS 構文を使うことができます)。  
   
 ```  
 IF OBJECT_ID ('employee_insupd', 'TR') IS NOT NULL  

@@ -13,10 +13,10 @@ ms.assetid: be28515c-5d6d-467b-b933-d7c8d97a45b4
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 79ca361c5f330196c4363441f573732e5ff15b6a
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72905040"
 ---
 # <a name="generate-filters"></a>[フィルターの生成]
@@ -43,7 +43,7 @@ ms.locfileid: "72905040"
   
 3.  **[このテーブルからデータを取得するサブスクリプションの数を指定します。]**  
 
-     [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンのみ。 マージ レプリケーションを使用して、お使いのデータとアプリケーションに最適なパーティションの種類を指定できます。 **[このテーブルの 1 行を 1 つのサブスクリプションのみに移動する]** を選択すると、マージ レプリケーションでは、重複しないパーティションのオプションが設定されます。 重複しないパーティションを事前計算済みパーティションと共に使用することで、パフォーマンスが向上します。事前計算済みパーティションに関連するアップロードの負担が、重複しないパーティションによって最小限に抑えられるためです。 重複しないパーティションのパフォーマンス上の利点は、使用するパラメーター化されたフィルターと結合フィルターが複雑になるほど明確になります。 このオプションを選択する場合は、データのパーティション分割によって、1 つの行が複数のサブスクライバーにレプリケートされないことを確認する必要があります。 詳細については、「 [パラメーター化された行フィルター](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)」トピックの「[パーティションのオプション] の設定」をご覧ください。  
+     [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンのみです。 マージ レプリケーションを使用して、お使いのデータとアプリケーションに最適なパーティションの種類を指定できます。 **[このテーブルの 1 行を 1 つのサブスクリプションのみに移動する]** を選択すると、マージ レプリケーションでは、重複しないパーティションのオプションが設定されます。 重複しないパーティションを事前計算済みパーティションと共に使用することで、パフォーマンスが向上します。事前計算済みパーティションに関連するアップロードの負担が、重複しないパーティションによって最小限に抑えられるためです。 重複しないパーティションのパフォーマンス上の利点は、使用するパラメーター化されたフィルターと結合フィルターが複雑になるほど明確になります。 このオプションを選択する場合は、データのパーティション分割によって、1 つの行が複数のサブスクライバーにレプリケートされないことを確認する必要があります。 詳細については、「 [パラメーター化された行フィルター](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)」トピックの「[パーティションのオプション] の設定」をご覧ください。  
   
  フィルターを追加した後で、 **[OK]** をクリックして終了し、ダイアログ ボックスを閉じます。 指定したフィルターは、SELECT 句のテーブルに対して解析され、実行されます。 フィルター ステートメントに構文エラーなどの問題がある場合には通知され、フィルター ステートメントを編集することができます。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "72905040"
 ## <a name="see-also"></a>参照  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [パブリケーション プロパティの表示および変更](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
- [パブリッシュされたデータのフィルター選択](../../relational-databases/replication/publish/filter-published-data.md)   
+ [パブリッシュされたデータのフィルター処理](../../relational-databases/replication/publish/filter-published-data.md)   
  [Join Filters](../../relational-databases/replication/merge/join-filters.md)   
  [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [データとデータベース オブジェクトのパブリッシュ](../../relational-databases/replication/publish/publish-data-and-database-objects.md)  

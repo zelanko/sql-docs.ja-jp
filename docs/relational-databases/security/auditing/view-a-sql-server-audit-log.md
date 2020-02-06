@@ -15,10 +15,10 @@ ms.assetid: e8feaca0-7852-422b-895a-319b965d8d9b
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 9bc987034cde54d5c90392876f223ef5cf428562
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72903793"
 ---
 # <a name="view-a-sql-server-audit-log"></a>SQL Server 監査ログの表示
@@ -58,6 +58,6 @@ ms.locfileid: "72903793"
   
 ## <a name="see-also"></a>参照  
  [SQL Server Audit &#40;データベース エンジン&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)   
- [セキュリティ ログへの SQL サーバー監査イベントの書き込み](../../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md)  
+ [セキュリティ ログへの SQL Server 監査イベントの書き込み](../../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md)  
   
   

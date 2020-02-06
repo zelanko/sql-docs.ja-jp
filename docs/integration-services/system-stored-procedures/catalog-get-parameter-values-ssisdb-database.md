@@ -11,10 +11,10 @@ ms.assetid: 5b1aeaf7-c938-4aef-bafc-e4d7a82eb578
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0338675549b49dd5c50eff9a8996f7a3ee6ee329
-ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73049949"
 ---
 # <a name="catalogget_parameter_values-ssisdb-database"></a>catalog.get_parameter_values (SSISDB データベース)
@@ -47,7 +47,7 @@ catalog.get_parameter_values [ @folder_name = ] folder_name
  パッケージの名前です。 パッケージ名を指定して、すべてのプロジェクト パラメーターと指定されたパッケージのパラメーターを取得します。 *package_name* は **nvarchar (260)** です。  
   
  [ @reference_id = ] *reference_id*  
- 環境参照の一意識別子。 このパラメーターはオプションです。 *reference_id* は **bigint** です。  
+ 環境参照の一意識別子。 このパラメーターは省略可能です。 *reference_id* は **bigint** です。  
   
 ## <a name="return-code-value"></a>リターン コード値  
  成功した場合は 0 を返します。  

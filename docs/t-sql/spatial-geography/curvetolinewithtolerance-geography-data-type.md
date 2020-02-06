@@ -18,10 +18,10 @@ ms.assetid: 74369c76-2cf6-42ae-b9cc-e7a051db2767
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 6f81b5ba7ba6de057dd82090775013db55e4275b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066493"
 ---
 # <a name="curvetolinewithtolerance-geography-data-type"></a>CurveToLineWithTolerance (geography データ型)
@@ -46,20 +46,20 @@ _relative_
 ## <a name="return-types"></a>戻り値の型  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
-CLR の戻り値の型:**SqlGeography**  
+CLR の戻り値の型: **SqlGeography**  
   
 ## <a name="exceptions"></a>例外  
 tolerance <= 0 を設定すると、**ArgumentOutOfRange** 例外がスローされます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 このメソッドでは、結果として得られる **LineString** に許容誤差量を指定できます。  
   
 **CurveToLineWithTolerance** メソッドでは、**CircularString** または **CompoundCurve** インスタンスに **LineString** インスタンスが返され、**CurvePolygon** インスタンスに **Polygon** インスタンスが返されます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-using-different-tolerance-values-on-a-circularstring-instance"></a>A. CircularString インスタンスに対して異なる tolerance 値を使用する  
-次の例では、許容値の設定によって、`CircularString` から返される `LineString` インスタンスが変化するしくみを確認できます。  
+次の例では、許容値の設定によって、`LineString` から返される `CircularString` インスタンスが変化するしくみを確認できます。  
   
 ```
 DECLARE @g geography;  
@@ -86,7 +86,7 @@ SELECT @g.CurveToLineWithTolerance(0.1,0).ToString();
 ```  
   
 ### <a name="d-setting-relative-to-true-for-an-invoking-curvepolygon-instance"></a>D. 呼び出し元の CurvePolygon インスタンスに対して relative を true に設定する  
-次の例では、`CurvePolygon` インスタンスを使用し、*relative* を true に設定して `CurveToLineWithTolerance()` を呼び出します。  
+次の例では、`CurvePolygon` インスタンスを使用し、`CurveToLineWithTolerance()`relative*を true に設定して* を呼び出します。  
   
 ```
 DECLARE @g geography = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658), (-122.348 47.658, -122.358 47.658, -122.358 47.653)))';  

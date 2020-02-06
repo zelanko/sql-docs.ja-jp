@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 05093c47ea7e05845f237e0e7c9c3df2c7d59fd6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67914240"
 ---
 # <a name="radians-transact-sql"></a>RADIANS (Transact-SQL)
@@ -40,15 +40,15 @@ RADIANS ( numeric_expression )
   
 ## <a name="arguments"></a>引数  
  *numeric_expression*  
- **bit** データ型を除く、真数または概数データ型カテゴリの[式](../../t-sql/language-elements/expressions-transact-sql.md)です。  
+ [bit](../../t-sql/language-elements/expressions-transact-sql.md) データ型を除く、真数または概数データ型カテゴリの**式**です。  
   
 ## <a name="return-types"></a>戻り値の型  
  *numeric_expression*と同じ型を返します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-using-radians-to-show-00"></a>A. RADIANS を使用して 0.0 を表示する  
- 次の例では、ラジアンに変換する数値式が `RADIANS` 関数にとって小さすぎる値であるため、`0.0` という結果を返します。  
+ 次の例では、ラジアンに変換する数値式が `0.0` 関数にとって小さすぎる値であるため、`RADIANS` という結果を返します。  
   
 ```  
 SELECT RADIANS(1e-307)  

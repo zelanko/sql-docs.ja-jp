@@ -14,10 +14,10 @@ ms.assetid: 94195797-ad7a-4962-a8e3-b259cd13aa38
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 96716d694a44003105190e287cfc7a4662924663
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68033421"
 ---
 # <a name="advanced-merge-replication-conflict---com-based-custom-resolvers"></a>マージ レプリケーションの競合の詳細 - COM ベースのカスタム競合回避モジュール
@@ -42,7 +42,7 @@ ms.locfileid: "68033421"
  カスタム競合回避モジュールを指定するには、「 [マージ アーティクル競合回避モジュールの指定](../../../relational-databases/replication/publish/specify-a-merge-article-resolver.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [マージ レプリケーションの競合検出および解決の詳細](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
+ [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [Microsoft COM ベースの競合回避モジュール](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md)  
   
   

@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 142762514f9bdbd7c7984dff218e5ea665d1d4d4
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843316"
 ---
 # <a name="x40x40trancount-transact-sql"></a>&#x40;&#x40;TRANCOUNT (Transact-SQL)
@@ -44,10 +44,10 @@ ms.locfileid: "73843316"
 ## <a name="return-types"></a>戻り値の型  
  **integer**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  @@TRANCOUNT の値は、BEGIN TRANSACTION ステートメントが実行されるごとに 1 ずつ増加します。 ROLLBACK TRANSACTION は、@@TRANCOUNT に影響しない ROLLBACK TRANSACTION *savepoint_name* を除き、@@TRANCOUNT を 0 にデクリメントします。 COMMIT TRANSACTION または COMMIT WORK は、@@TRANCOUNT を 1 ずつデクリメントします。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-showing-the-effects-of-the-begin-and-commit-statements"></a>A. BEGIN と COMMIT ステートメントの影響を確認する  
  次の例では、`BEGIN` ステートメントと `COMMIT` ステートメントを入れ子にした場合の `@@TRANCOUNT` 変数に対する影響を確認します。  

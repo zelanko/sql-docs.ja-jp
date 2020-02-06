@@ -22,10 +22,10 @@ ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 393b6e248962fa496dcdac9fe5def556b766a2bd
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056261"
 ---
 # <a name="configure--manage-word-breakers--stemmers-for-search-sql-server"></a>検索用のワード ブレーカーとステミング機能の構成と管理 (SQL Server)
@@ -95,7 +95,7 @@ SELECT language_id AS 'LCID' FROM sys.fulltext_index_columns;
 
 ### <a name="info-about-the-mssqlserver_30053-error"></a>MSSQLSERVER_30053 エラーに関する情報
   
-|プロパティ|[値]|
+|プロパティ|値|
 |-|-|
 |製品名|SQL Server|  
 |イベント ID|30053|  
@@ -122,7 +122,7 @@ SELECT language_id AS 'LCID' FROM sys.fulltext_index_columns;
 #### <a name="user-action"></a>ユーザーの操作  
  次に示すように、タイムアウトについて考えられる原因に適した、ユーザーのアクションを選択してください。  
   
-|考えられる原因|ユーザーのアクション|  
+|考えられる原因|ユーザー アクション|  
 |--------------------|-----------------|  
 |クエリ言語のワード ブレーカーが正しく構成されていない。|サード パーティ製のワード ブレーカーを使用しているとき、ワード ブレーカーがオペレーティング システムに正しく登録されていない場合があります。 この場合は、ワード ブレーカーを再登録してください。 詳細については、「[Revert the Word Breakers Used by Search to the Previous Version](revert-the-word-breakers-used-by-search-to-the-previous-version.md)」(検索で使用するワード ブレーカーを以前のバージョンに戻す) を参照してください。|  
 |ワード ブレーカーが特定のクエリ文字列に対して誤動作する。|ワード ブレーカーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でサポートされている場合は、マイクロソフト カスタマー サポート サービスに問い合わせてください。|  

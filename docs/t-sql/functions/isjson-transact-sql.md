@@ -18,10 +18,10 @@ author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
 ms.openlocfilehash: 0d3060af2114f62c1c21b25e79abf4714acfbe4b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68109441"
 ---
 # <a name="isjson-transact-sql"></a>ISJSON (Transact-SQL)
@@ -46,10 +46,10 @@ ISJSON ( expression )
   
  エラーは返されません。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **ISJSON** は、同じレベルのキーの一意性をチェックしません。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="example-1"></a>例 1  
 次の例では、パラメーター値 `@param` に有効な JSON が含まれている場合は、ステートメント ブロックを条件付きで実行します。  

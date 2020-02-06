@@ -18,10 +18,10 @@ ms.assetid: f845d28c-8029-4e2b-bcf0-71c52a592501
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 1ca7e74743773fb42a85300a37cc6b8aaa9d8f39
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066261"
 ---
 # <a name="stwithin-geometry-data-type"></a>STWithin (geometry データ型)
@@ -38,17 +38,17 @@ ms.locfileid: "68066261"
   
 ## <a name="arguments"></a>引数  
  *other_geometry*  
- `STWithin()` を呼び出したインスタンスと比較される、別の **geometry** インスタンスです。  
+ **を呼び出したインスタンスと比較される、別の**geometry`STWithin()` インスタンスです。  
   
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **bit**  
   
- CLR の戻り値の型:**SqlBoolean**  
+ CLR の戻り値の型: **SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **geometry** インスタンスの SRID (spatial reference ID) が一致しない場合、このメソッドは常に null を返します。
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  `STWithin()` を使用して、2 つの `geometry` インスタンスの一方のインスタンスがもう一方のインスタンスを完全に含むかどうかをテストする例を次に示します。  
   
 ```  

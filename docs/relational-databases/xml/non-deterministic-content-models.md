@@ -14,10 +14,10 @@ ms.assetid: 9d4513e7-dd19-4491-b7c7-28bc7c2f8589
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4de53a22bb650098db48619bef26efe543dd9ebd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68137434"
 ---
 # <a name="non-deterministic-content-models"></a>非決定的コンテンツ モデル
@@ -26,7 +26,7 @@ ms.locfileid: "68137434"
   
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP1 以降では、オカレンス制約が 0、1、または unbounded の場合、非決定的コンテンツ モデルが許容されます。  
   
-## <a name="example-non-deterministic-content-model-rejected"></a>例: 拒否される非決定的コンテンツ モデル  
+## <a name="example-non-deterministic-content-model-rejected"></a>例 : 拒否される非決定的コンテンツ モデル  
  次の例では、非決定的コンテンツ モデルを含む XML スキーマの作成を試みています。 このコードは、 `<root>` 要素には 2 つの `<a>` 要素で構成されたシーケンスが 1 つ必要なのか、 `<root>` 要素にはそれぞれ `<a>` 要素を含む 2 つのシーケンスが必要なのかが明確ではないので失敗します。  
   
 ```  
@@ -60,7 +60,7 @@ GO
 </sequence>  
 ```  
   
-## <a name="example-non-deterministic-content-model-accepted"></a>例: 許容される非決定的コンテンツ モデル  
+## <a name="example-non-deterministic-content-model-accepted"></a>例 : 許容される非決定的コンテンツ モデル  
  次のスキーマは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SP1 よりも前のバージョンの [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] では拒否されます。  
   
 ```  

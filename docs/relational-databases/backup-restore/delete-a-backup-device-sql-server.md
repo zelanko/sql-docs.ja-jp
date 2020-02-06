@@ -17,10 +17,10 @@ ms.assetid: 7be62480-ed6a-4262-a071-1feba73b1c02
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: be32e40cdba72ebd544758b395cb125deb05297b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68075913"
 ---
 # <a name="delete-a-backup-device-sql-server"></a>バックアップ デバイスの削除 (SQL Server)

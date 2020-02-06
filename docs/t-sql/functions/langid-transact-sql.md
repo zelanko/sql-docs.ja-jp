@@ -22,10 +22,10 @@ ms.assetid: 7a0fc089-2a48-4a81-9d78-2aaedb540d37
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 83aff89cf0651d338105788a4ca7ef7f751b8528
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68109249"
 ---
 # <a name="x40x40langid-transact-sql"></a>&#x40;&#x40;LANGID (Transact-SQL)
@@ -44,10 +44,10 @@ ms.locfileid: "68109249"
 ## <a name="return-types"></a>戻り値の型  
  **smallint**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  言語 ID 番号を含めて、言語の設定に関する情報を表示するには、パラメーターを指定しないで **sp_helplanguage** を実行します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  この例では、現在のセッションで使用する言語を `Italian` に設定し、`@@LANGID` を使用してイタリア語の ID を返します。  
   
 ```  

@@ -19,10 +19,10 @@ ms.assetid: e7c278e5-ab23-419e-ab3e-3bb20b0636df
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e4ae8127d6365e2fd88b92992ab7dd3308e1460f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68105017"
 ---
 # <a name="replication-functions---publishingservername"></a>レプリケーション関数 - PUBLISHINGSERVERNAME
@@ -42,7 +42,7 @@ PUBLISHINGSERVERNAME()
 ## <a name="return-types"></a>戻り値の型  
  **nvarchar**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  PUBLISHINGSERVERNAME は、すべての種類のレプリケーションで使用できます。  
   
  PUBLISHINGSERVERNAME は、パブリッシャーとミラーリング パートナー インスタンスの間のパブリケーション データベースでデータベース ミラーリング セッションが開かれているときに使用します。  

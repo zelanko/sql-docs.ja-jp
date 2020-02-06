@@ -22,10 +22,10 @@ ms.assetid: 8f49c62a-8da5-4afd-a5eb-4df8ef8be755
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 272af8e89dfdf313e24017edd615401bc2a35362
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68097464"
 ---
 # <a name="x40x40idle-transact-sql"></a>&#x40;&#x40;IDLE (Transact-SQL)
@@ -45,12 +45,12 @@ ms.locfileid: "68097464"
 ```  
   
 ## <a name="return-types"></a>戻り値の型  
- **整数 (integer)**  
+ **integer**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  いくつか含むレポートを表示する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 実行の統計情報 **sp_monitor**です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の起動時から現在までのアイドル時間をミリ秒単位で返します。 値をマイクロ秒に変換するときに演算オーバーフローが発生しないようにするため、この例では値の 1 つを `float` 型に変換しています。  
   
 ```  

@@ -23,10 +23,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f5e660301620a98e7ea6b93b4242da1a0d852ce9
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909891"
 ---
 # <a name="get-information-about-a-view"></a>ビューに関する情報の取得
@@ -71,13 +71,13 @@ ms.locfileid: "72909891"
      **[サーバー]**  
      現在のサーバー インスタンスの名前です。  
   
-     **ユーザー**  
+     **User**  
      この接続のユーザーの名前です。  
   
      **[作成日]**  
      ビューが作成された日付を表示します。  
   
-     **[名前]**  
+     **名前**  
      現在のビューの名前です。  
   
      **[スキーマ]**  
@@ -111,10 +111,10 @@ ms.locfileid: "72909891"
      **[(名前)]**  
      現在のビューの名前です。  
   
-     **Database Name**  
+     **データベース名**  
      このビューを含むデータベースの名前です。  
   
-     **[説明]**  
+     **説明**  
      現在のビューの簡単な説明です。  
   
      **[スキーマ]**  

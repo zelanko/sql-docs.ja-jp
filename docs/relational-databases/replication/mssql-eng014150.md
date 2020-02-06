@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: c3dd3109-abf3-4b38-a4e9-ef48d0235656
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 74e43b8d816fe2cfdbf9d35ea1815517f186b736
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 2d006558894137ab627a53da8b2543a1ad57fbac
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68766224"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287809"
 ---
-# <a name="mssqleng014150"></a>MSSQL_ENG014150
+# <a name="mssql_eng014150"></a>MSSQL_ENG014150
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
     
 ## <a name="message-details"></a>メッセージの詳細  
@@ -50,15 +50,15 @@ ms.locfileid: "68766224"
 -   レプリケーション メンテナンス ジョブ。  
   
 ## <a name="user-action"></a>ユーザーの操作  
- 通常、ログ リーダー エージェント、キュー リーダー エージェント、およびディストリビューション エージェントは連続実行しますが、他のエージェントは、要求時に実行するかスケジュールに合わせて実行します。 エージェントが実行を完了したかどうかわからない場合は、エージェントの状態を確認します。 詳細については、「[レプリケーション エージェントの監視](../../relational-databases/replication/monitor/monitor-replication-agents.md)」を参照してください。  
+ 通常、ログ リーダー エージェント、キュー リーダー エージェント、およびディストリビューション エージェントは連続実行しますが、他のエージェントは、要求時に実行するかスケジュールに合わせて実行します。 エージェントが実行を完了したかどうかわからない場合は、エージェントの状態を確認します。 詳細については、「 [Monitor Replication Agents](../../relational-databases/replication/monitor/monitor-replication-agents.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [レプリケーション エージェントの管理](../../relational-databases/replication/agents/replication-agent-administration.md)   
  [エラーとイベントのリファレンス &#40;レプリケーション&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)   
- [レプリケーション ディストリビューション エージェント](../../relational-databases/replication/agents/replication-distribution-agent.md)   
- [レプリケーション ログ リーダー エージェント](../../relational-databases/replication/agents/replication-log-reader-agent.md)   
- [レプリケーション マージ エージェント](../../relational-databases/replication/agents/replication-merge-agent.md)   
+ [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md)   
+ [Replication Log Reader Agent](../../relational-databases/replication/agents/replication-log-reader-agent.md)   
+ [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md)   
  [レプリケーション キュー リーダー エージェント](../../relational-databases/replication/agents/replication-queue-reader-agent.md)   
- [レプリケーション スナップショット エージェント](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
+ [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
   

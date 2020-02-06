@@ -15,10 +15,10 @@ ms.assetid: 52430735-51f4-46d1-a308-9aecf8648fda
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5c98ef9c726d2db5b5ec06d71a00de08288098a0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68051277"
 ---
 # <a name="modify-method-xml-data-type"></a>modify() メソッド (xml データ型)
@@ -40,7 +40,7 @@ modify (XML_DML)
 > [!NOTE]  
 >  **modify()** メソッドが NULL 値を使用して呼び出される場合、または結果が NULL 値になる場合、エラーが返されます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  **modify()** メソッドには XML データ操作言語 (DML) の文字列が必要なので、**modify()** のサンプルは XML DML ステートメントについて説明するトピックに含まれています。 これらの例については、「[&#40;XML DML&#41; の挿入](../../t-sql/xml/insert-xml-dml.md)」、「[&#40;XML DML&#41; の削除](../../t-sql/xml/delete-xml-dml.md)」、および「[&#40;XML DML&#41; の値の置き換え](../../t-sql/xml/replace-value-of-xml-dml.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  

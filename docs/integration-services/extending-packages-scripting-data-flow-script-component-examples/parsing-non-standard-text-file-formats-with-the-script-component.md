@@ -16,10 +16,10 @@ ms.assetid: 1fda034d-09e4-4647-9a9f-e8d508c2cc8f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 733c3a909629514b55042d21f02cfca563d3c531
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297064"
 ---
 # <a name="parsing-non-standard-text-file-formats-with-the-script-component"></a>スクリプト コンポーネントを使用した標準以外のテキスト ファイル形式の解析
@@ -104,7 +104,7 @@ ms.locfileid: "71297064"
   
     -   LastName  
   
-    -   [タイトル]  
+    -   タイトル  
   
     -   City  
   

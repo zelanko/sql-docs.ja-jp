@@ -18,10 +18,10 @@ ms.assetid: 3d1f7075-3a3c-4660-8cd0-ed938b86fecd
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: b6380749b9e2aa37ea50d93ac4dec6f0e2e34db3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68117538"
 ---
 # <a name="symkeyproperty-transact-sql"></a>SYMKEYPROPERTY (Transact-SQL)
@@ -51,7 +51,7 @@ SYMKEYPROPERTY ( Key_ID , 'algorithm_desc' | 'string_sid' | 'sid' )
 ## <a name="permissions"></a>アクセス許可  
  対称キーに対する何らかの権限が必要です。呼び出し元で、対称キーに対する VIEW 権限が拒否されていないことも必要になります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、Key_ID が 256 の対称キーのアルゴリズムを返します。  
   
 ```  

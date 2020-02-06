@@ -11,10 +11,10 @@ ms.assetid: 4edfab68-7e68-45e8-a3f3-a0049ff7eb9e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 70e8c3cbc08837bce7c3b8aa9afeb3222165996c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298914"
 ---
 # <a name="advanced-connection-properties"></a>高度な接続プロパティ
@@ -37,6 +37,6 @@ ms.locfileid: "71298914"
   
 ## <a name="see-also"></a>参照  
  [CDC デザイナー コンソールへのアクセス](../../integration-services/change-data-capture/access-the-cdc-designer-console.md)   
- [インスタンスの作成のための SQL サーバー接続](../../integration-services/change-data-capture/sql-server-connection-for-instance-creation.md)  
+ [インスタンスの作成のための SQL Server 接続](../../integration-services/change-data-capture/sql-server-connection-for-instance-creation.md)  
   
   

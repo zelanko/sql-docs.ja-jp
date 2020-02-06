@@ -19,10 +19,10 @@ ms.assetid: 91e3622e-4b1a-439a-80c7-a00b90d66979
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: aa5d978126807e1fb83c08a1d1b8d9d7b74d8368
-ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74687173"
 ---
 # <a name="ole-db-connection-manager"></a>OLE DB 接続マネージャー
@@ -145,7 +145,7 @@ Azure SQL Database マネージド インスタンスにマネージド ID 認�
     
 - **設計時に構成します。** SSIS デザイナーで、OLE DB 接続マネージャーを右クリックして、 **[プロパティ]** を選択します。 プロパティ `ConnectUsingManagedIdentity` を `True` に更新します。
     > [!NOTE]
-    >  現在、SSIS パッケージを SSIS デザイナーまたは [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server で実行しているときは、接続マネージャーのプロパティ `ConnectUsingManagedIdentity` は有効になりません (マネージド ID 認証が機能しないことを示します)。
+    >  現在、SSIS パッケージを SSIS デザイナーまたは `ConnectUsingManagedIdentity` SQL Server で実行しているときは、接続マネージャーのプロパティ [!INCLUDE[msCoName](../../includes/msconame-md.md)] は有効になりません (マネージド ID 認証が機能しないことを示します)。
 
 - **実行時に構成します。** パッケージを SSMS または **SQL パッケージの実行**アクティビティで実行するときは、OLE DB 接続マネージャーを見つけて、そのプロパティ `ConnectUsingManagedIdentity` を `True` に更新します。
     > [!NOTE]

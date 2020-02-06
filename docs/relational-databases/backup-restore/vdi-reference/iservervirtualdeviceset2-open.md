@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 552394db26a1b236a4d6997f6dbfba77d12086ee
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847223"
 ---
 # <a name="iservervirtualdeviceset2open-vdi"></a>IServerVirtualDeviceSet2::Open (VDI)
@@ -44,10 +44,10 @@ HRESULT IServerVirtualDeviceSet2::Open (
 | NOERROR | 関数が正常に実行されました。 |
 | VD_E_INVALID | 指定された名前で、サーバーからアクセス可能な仮想デバイス セットが識別できませんでした。 |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 この関数が正常に呼び出されると、サーバーで GetConfiguration と SetConfiguration を使用して仮想デバイス セットの構成を続行できます。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 詳細については、[SQL Server 仮想デバイス インターフェイス リファレンスの概要](reference-virtual-device-interface.md)に関するページを参照してください。

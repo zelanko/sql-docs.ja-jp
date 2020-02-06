@@ -18,10 +18,10 @@ ms.assetid: 90acdb21-e826-4d81-afe8-45a71f33282a
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: a001a70db2b7154a6c753ae1e26209bcd868b03d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68107833"
 ---
 # <a name="stdisjoint-geometry-data-type"></a>STDisjoint (geometry データ型)
@@ -38,19 +38,19 @@ ms.locfileid: "68107833"
   
 ## <a name="arguments"></a>引数  
  *other_geometry*  
- `STDisjoint()` を呼び出したインスタンスと比較される、別の **geometry** インスタンスです。  
+ **を呼び出したインスタンスと比較される、別の**geometry`STDisjoint()` インスタンスです。  
   
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **bit**  
   
- CLR の戻り値の型:**SqlBoolean**  
+ CLR の戻り値の型: **SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  地点のセットの交点が空である場合、2 つの **geography** インスタンスは連結されていません。  
   
  **geometry** インスタンスの SRID (spatial reference ID) が一致しない場合、このメソッドは常に null を返します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  `STDisjoint()` を使用して 2 つの **geometry** インスタンスが空間的に連結されていないかどうかをテストする例を次に示します。  
   
 ```  

@@ -1,10 +1,9 @@
 ---
-title: 場所ダイアログ ボックス (Visual Database Tools) | Microsoft Docs
-ms.custom: ''
+title: '[場所] ダイアログ ボックス'
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +11,14 @@ f1_keywords:
 ms.assetid: b7f94269-d28a-4f30-9e50-2ee1a6e82178
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cd2e40972e790068b6ce0c19f8d85bcc0e4fa805
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 2188d0ede38f7cc5afbbb7f1a918e8428e7924c2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265232"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75224650"
 ---
 # <a name="location-dialog-box-visual-database-tools"></a>場所ダイアログ ボックス (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -25,7 +26,7 @@ ms.locfileid: "68265232"
   
 -   **[ファイル]** メニューの **[新規作成]** を選択し、 **[プロジェクト]** を選択します。 **[新しいプロジェクト]** ダイアログ ボックスが表示されたら、 **[参照]** を選択します。 " **プロジェクトの場所** " というタイトルの **場所**ダイアログ ボックスが開きます。  
   
-**[探す場所]**  
+**Look in**  
 必要なフォルダーをこの一覧から見つけます。 選択したフォルダーのサブフォルダーが表示されます。  
   
 ## <a name="my-places-bar"></a>マイ プレース バー  
@@ -42,10 +43,10 @@ ms.locfileid: "68265232"
 **[フォルダー名]**  
 選択されているフォルダーのパスを表示します。  
   
-**開く**  
+**[ファイル]**  
 **[フォルダー名]** フィールドで選択されているフォルダーのパスを呼び出し元のダイアログ ボックスに返します。  
   
-## <a name="toolbar"></a>[ツール バー]  
+## <a name="toolbar"></a>ツール バー  
 **最近参照した場所**  
 最近参照したフォルダー、ドライブ、またはインターネットの場所を返します。  
   

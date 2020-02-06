@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d0957ffb1aa78ee0cbaf3c7c3e5acdb973aa8fb7
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74165717"
 ---
 # <a name="temporal-table-system-consistency-checks"></a>テンポラル テーブルのシステム一貫性のチェック
@@ -45,7 +45,7 @@ ms.locfileid: "74165717"
 
 ### <a name="data-consistency-check"></a>データ整合性チェック
 
-**SYSTEM_VERSIONING** が **ON** に設定される前、任意の DML 操作の一環として、システムでは次のチェックを実行します。**SysEndTime** ≥**SysStartTime**
+**SYSTEM_VERSIONING** が **ON** に設定される前、任意の DML 操作の一環として、システムでは次のチェックを実行します。 **SysEndTime** ≥**SysStartTime**
 
 既存の履歴テーブルへのリンクを作成する場合は、データの整合性チェックを実行することもできます。 このデータの一貫性チェックでは、既存のレコードに重複がなく、個々の各レコードでテンポラルの要件が満たされたことが確認されます。 データを実行する一貫性チェックが、既定値です。 一般に、データの一貫性は、履歴データが入力された既存の履歴テーブルを組み込む場合など、現行および履歴テーブルのデータ間に一貫性がない可能性がある場合に実行することをお勧めします。
 

@@ -20,10 +20,10 @@ ms.assetid: a8efc37e-113d-489c-babc-b914fea2c316
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 458083fda6382c353af78c7d2b438fdc0d39c826
-ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72173855"
 ---
 # <a name="alter-security-policy-transact-sql"></a>ALTER SECURITY POLICY (Transact-SQL)
@@ -88,7 +88,7 @@ NOT FOR REPLICATION
 table_schema_name.table_name  
 適用されたセキュリティ述語のターゲット テーブル。 無効な複数のセキュリティ ポリシーは単一テーブルをターゲットにできますが、有効にできるのはどの時点でも 1 つだけです。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 ALTER SECURITY POLICY ステートメントはトランザクションのスコープ内にあります。 トランザクションがロールバックされると、ステートメントもロールバックされます。  
   
 メモリ最適化テーブルで述語関数を使用する場合、セキュリティ ポリシーには **SCHEMABINDING** が含まれる必要があり、**WITH NATIVE_COMPILATION** コンパイル ヒントを使用する必要があります。 SCHEMABINDING の引数は、すべての述語に適用されるため、ALTER ステートメントを使用して変更できません。 スキーマ バインドを変更するには、セキュリティ ポリシーを削除して再作成する必要があります。  
@@ -104,7 +104,7 @@ ALTER ANY SECURITY POLICY 権限が必要です。
 -   ポリシーにバインドしているターゲット テーブルに対する REFERENCES 権限。  
 -   引数として使用しているターゲット テーブルのすべての列に対する REFERENCES 権限。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 以下の例は、**ALTER SECURITY POLICY** 構文の使用法を示しています。 詳細なセキュリティ ポリシーのシナリオ例については、「[行レベルのセキュリティ](../../relational-databases/security/row-level-security.md)」をご覧ください。  
   
 ### <a name="a-adding-an-additional-predicate-to-a-policy"></a>A. ポリシーに述語を追加する  

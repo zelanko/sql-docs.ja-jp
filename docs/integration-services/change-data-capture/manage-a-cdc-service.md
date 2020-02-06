@@ -13,10 +13,10 @@ ms.assetid: 645ae53f-f352-4d6a-9eb0-264e53a93a18
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b6838ae985c16f4188ed43e3442b4f86c4a3557b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298675"
 ---
 # <a name="manage-a-cdc-service"></a>CDC サービスの管理
@@ -49,6 +49,6 @@ ms.locfileid: "71298675"
 ## <a name="see-also"></a>参照  
  [SQL Server 変更データベース インスタンスを作成する方法](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
  [CDC デザイナー コンソールから CDC サービスを管理する方法](../../integration-services/change-data-capture/how-to-manage-a-cdc-service-from-the-cdc-designer-console.md)   
- [Use the New Instance Wizard](../../integration-services/change-data-capture/use-the-new-instance-wizard.md)  
+ [新しいインスタンス ウィザードを使用する](../../integration-services/change-data-capture/use-the-new-instance-wizard.md)  
   
   

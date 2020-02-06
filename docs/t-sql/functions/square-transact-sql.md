@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7ef602ecc617f9811b5c40abd1e512a6109fc8ec
-ms.sourcegitcommit: c98c6e33d04d4a1888db7dbe89cb0b1bb3a66418
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74249790"
 ---
 # <a name="square-transact-sql"></a>SQUARE (Transact-SQL)
@@ -41,7 +41,7 @@ SQUARE ( float_expression )
   
 ## <a name="arguments"></a>引数  
  *float_expression*  
- **float** 型、または暗黙的に float 型に変換できる[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。  
+ [float](../../t-sql/language-elements/expressions-transact-sql.md) 型、または暗黙的に float 型に変換できる**式**を指定します。  
   
 ## <a name="return-types"></a>戻り値の型  
  **float**  

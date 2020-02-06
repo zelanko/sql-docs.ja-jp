@@ -19,10 +19,10 @@ ms.assetid: 41ae67bd-ece9-49ea-8062-c8d658ab4154
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 754b7a4baaff71cf0abe7193e5ba9c9cbd0a943a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68039184"
 ---
 # <a name="use-for-xml-results-in-application-code"></a>アプリケーション コードでの FOR XML の結果の使用
@@ -31,7 +31,7 @@ ms.locfileid: "68039184"
   
 -   [XML Data &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md) 値のインスタンスの SQL テーブルにクエリを実行する  
   
--   text 型や image 型のデータが含まれているクエリ結果を XML として返すために [FOR XML クエリの TYPE ディレクティブ](../../relational-databases/xml/type-directive-in-for-xml-queries.md)を適用する  
+-   text 型や image 型のデータが含まれているクエリ結果を XML として返すために [FOR XML クエリの TYPE ディレクティブ](../../relational-databases/xml/type-directive-in-for-xml-queries.md) を適用する  
   
  このトピックでは、これらの方法を示す例を提供します。  
   
@@ -291,7 +291,7 @@ SqlConnection closed.
 ```  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] による **xml** データ型のサポートにより、[TYPE ディレクティブ](../../relational-databases/xml/type-directive-in-for-xml-queries.md)を指定することで、FOR XML クエリの結果を、string データ型または image データ型ではなく、**xml** データ型で返すように要求できます。 FOR XML クエリに TYPE ディレクティブを使用すると、「[アプリケーションでの XML データの使用](../../relational-databases/xml/use-xml-data-in-applications.md)」で示したのと同様に、プログラムから FOR XML の結果にアクセスできます。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] による **xml** データ型のサポートにより、**TYPE ディレクティブ**を指定することで、FOR XML クエリの結果を、string データ型または image データ型ではなく、[xml](../../relational-databases/xml/type-directive-in-for-xml-queries.md) データ型で返すように要求できます。 FOR XML クエリに TYPE ディレクティブを使用すると、「 [アプリケーションでの XML データの使用](../../relational-databases/xml/use-xml-data-in-applications.md)」で示したのと同様に、プログラムから FOR XML の結果にアクセスできます。  
   
 ## <a name="see-also"></a>参照  
  [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)  

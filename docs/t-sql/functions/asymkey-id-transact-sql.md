@@ -23,13 +23,13 @@ ms.assetid: d697daf8-2106-4ebb-b09a-ca0be465d747
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: b1dc7454ecd042f06654f8a269332f8ae7f305ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68040251"
 ---
-# <a name="asymkeyid-transact-sql"></a>ASYMKEY_ID (Transact-SQL)
+# <a name="asymkey_id-transact-sql"></a>ASYMKEY_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 非対称キーの ID を返します。
@@ -52,7 +52,7 @@ ASYMKEY_ID ( 'Asym_Key_Name' )
 ## <a name="permissions"></a>アクセス許可  
 非対称キーに対する適切なアクセス許可が必要です。また、非対称キーに対する呼び出し元の VIEW アクセス許可が拒否されていない必要があります。 非対称キーのアクセス許可の詳細については、「[CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)」を参照してください。
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 この例では、非対称キー `ABerglundKey11` の ID が返されます。
   
 ```sql

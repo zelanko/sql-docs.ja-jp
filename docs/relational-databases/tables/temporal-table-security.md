@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b22210bdcabf1972e7fa76d7871ebd94e1f23ff5
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72452903"
 ---
 # <a name="temporal-table-security"></a>テンポラル テーブル セキュリティ
@@ -41,7 +41,7 @@ SYSTEM_VERSIONING がオンに設定されているとき、スキーマ変更�
 
 ### <a name="disallowed-alter-schema-operations"></a>許可されていない ALTER スキーマ操作
 
-|演算|現行テーブル|履歴テーブル|
+|操作|現行テーブル|履歴テーブル|
 |---------------|-------------------|-------------------|
 |**DROP TABLE**|禁止|禁止|
 |**ALTER TABLE...SWITCH PARTITION**|SWITCH IN のみ (「 [テンポラル テーブルでのパーティション分割](../../relational-databases/tables/partitioning-with-temporal-tables.md)」参照)|SWITCH OUT のみ (「 [テンポラル テーブルでのパーティション分割](../../relational-databases/tables/partitioning-with-temporal-tables.md)」参照)|
@@ -50,7 +50,7 @@ SYSTEM_VERSIONING がオンに設定されているとき、スキーマ変更�
 
 ## <a name="allowed-alter-table-operations"></a>許可される ALTER TABLE 操作
 
-|演算|Current|履歴|
+|操作|Current|履歴|
 |---------------|-------------|-------------|
 |**ALTER TABLE...REBUILD**|許可 (非依存)|許可 (非依存)|
 |**CREATE INDEX**|許可 (非依存)|許可 (非依存)|
@@ -61,14 +61,14 @@ SYSTEM_VERSIONING がオンに設定されているとき、スキーマ変更�
 ||新しい履歴テーブルを作成する|既存の履歴テーブルを再利用する|
 |-|------------------------------|----------------------------------|
 |必要な権限|データベースの**CREATE TABLE** 権限<br /><br /> 現行テーブルと履歴テーブルが作成されるスキーマの**ALTER** 権限|データベースの**CREATE TABLE** 権限<br /><br /> 現行テーブルが作成されるスキーマの**ALTER** 権限<br /><br /> テンポラル テーブルを作成する**CONTROL** ステートメントの一部として指定される履歴テーブルの **CONTROL** 権限|
-|監査|監査により、ユーザーが 2 つのオブジェクトを作成しようとしたことが示されます。 データベースにテーブルを作成する権限がないため、あるいはどちらかのテーブルのスキーマを変更する権限がないため、操作が失敗することがあります。|監査により、テンポラル テーブルが作成されたことが示されます。 データベースにテーブルを作成する権限がないため、テンポラル テーブルのスキーマを変更する権限がないため、あるいは履歴テーブルに対する権限がないため、操作が失敗することがあります。|
+|Audit|監査により、ユーザーが 2 つのオブジェクトを作成しようとしたことが示されます。 データベースにテーブルを作成する権限がないため、あるいはどちらかのテーブルのスキーマを変更する権限がないため、操作が失敗することがあります。|監査により、テンポラル テーブルが作成されたことが示されます。 データベースにテーブルを作成する権限がないため、テンポラル テーブルのスキーマを変更する権限がないため、あるいは履歴テーブルに対する権限がないため、操作が失敗することがあります。|
 
 ## <a name="security-of-the-alter-temporal-table-set-system_versioning-onoff-statement"></a>ALTER Temporal TABLE SET (SYSTEM_VERSIONING オン/オフ) ステートメントのセキュリティ
 
 ||新しい履歴テーブルを作成する|既存の履歴テーブルを再利用する|
 |-|------------------------------|----------------------------------|
 |必要な権限|データベースの**CONTROL** 権限<br /><br /> データベースの**CREATE TABLE** 権限<br /><br /> 履歴テーブルが作成されるスキーマの**ALTER** 権限|変更される元のテーブルの**CONTROL** 権限<br /><br /> **ALTER TABLE** ステートメントの一部として指定される履歴テーブルの **CONTROL** 権限|
-|監査|監査により、テンポラル テーブルが変更され、同時に履歴テーブルが作成されたことが示されます。 データベースにテーブルを作成する権限がないため、履歴テーブルのスキーマを変更する権限がないため、あるいはテンポラル テーブルを変更する権限がないため、操作が失敗することがあります。|監査により、テンポラル テーブルが変更されたが、操作には履歴テーブルへのアクセス許可が必要であったことが示されます。 履歴テーブルに対する権限がないため、あるいは現行テーブルに対する権限がないため、操作が失敗することがあります。|
+|Audit|監査により、テンポラル テーブルが変更され、同時に履歴テーブルが作成されたことが示されます。 データベースにテーブルを作成する権限がないため、履歴テーブルのスキーマを変更する権限がないため、あるいはテンポラル テーブルを変更する権限がないため、操作が失敗することがあります。|監査により、テンポラル テーブルが変更されたが、操作には履歴テーブルへのアクセス許可が必要であったことが示されます。 履歴テーブルに対する権限がないため、あるいは現行テーブルに対する権限がないため、操作が失敗することがあります。|
 
 ## <a name="security-of-select-statement"></a>SELECT ステートメントのセキュリティ
 

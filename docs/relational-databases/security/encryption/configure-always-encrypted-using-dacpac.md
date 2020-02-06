@@ -13,20 +13,20 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: df18a2ca6f79982db41b5188283bf1721b518e31
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73595747"
 ---
 # <a name="configure-column-encryption-using-always-encrypted-with-a-dac-package"></a>DAC パッケージでの Always Encrypted を使用した列暗号化の構成 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-[データ層アプリケーション (DAC) パッケージ](../../data-tier-applications/data-tier-applications.md) (DACPAC とも呼ばれます) は、テーブル内のテーブルや列を含むすべての SQL Server オブジェクトを定義する SQL Server データベースのデプロイの移植可能な単位です。 DACPAC をデータベースに発行する場合 (DACPAC を使用してデータベースをアップグレードする場合)、ターゲット データベースのスキーマは、DACPAC のスキーマに一致するように更新されます。 SQL Server Management Studio、[PowerShell](../../data-tier-applications/upgrade-a-data-tier-application.md#UpgradeDACPowerShell)、または [sqlpackage](../../../tools/sqlpackage.md#publish-parameters-properties-and-sqlcmd-variables) の[データ層アプリケーションのアップグレード ウィザード](../../data-tier-applications/upgrade-a-data-tier-application.md#UsingDACUpgradeWizard)を使用して、DACPAC を発行できます。
+[データ層アプリケーション (DAC) パッケージ](../../data-tier-applications/data-tier-applications.md) (DACPAC とも呼ばれます) は、テーブル内のテーブルや列を含むすべての SQL Server オブジェクトを定義する SQL Server データベースのデプロイの移植可能な単位です。 DACPAC をデータベースに発行する場合 (DACPAC を使用してデータベースをアップグレードする場合)、ターゲット データベースのスキーマは、DACPAC のスキーマに一致するように更新されます。 SQL Server Management Studio、[PowerShell](../../data-tier-applications/upgrade-a-data-tier-application.md#UsingDACUpgradeWizard)、または [sqlpackage](../../data-tier-applications/upgrade-a-data-tier-application.md#UpgradeDACPowerShell) の[データ層アプリケーションのアップグレード ウィザード](../../../tools/sqlpackage.md#publish-parameters-properties-and-sqlcmd-variables)を使用して、DACPAC を発行できます。
 
 この記事では、DACPAC またはターゲット データベースに [Always Encrypted](always-encrypted-database-engine.md) で保護された列が含まれる場合に、データベースをアップグレードするための特別な考慮事項について説明します。 DACPAC 内の列の暗号化スキームが、ターゲット データベースの既存の列の暗号化スキームと異なる場合、DACPAC を発行すると、列に格納されているデータの暗号化、暗号化解除、または再暗号化が行われます。 詳細については、次の表を参照してください。
 
-| 条件|操作|
+| 条件|アクション|
 |:---|:---|
 |列は、DACPAC では暗号化され、データベースでは暗号化されていません。| 列のデータは暗号化されます。|
 |列は、DACPAC では暗号化されておらず、データベースでは暗号化されています。| 列のデータは暗号化解除されます (列の暗号化は解除されます)。|
@@ -40,7 +40,7 @@ ms.locfileid: "73595747"
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 
 > [!NOTE]
-> [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] を使用し、SQL Server インスタンスがセキュア エンクレーブで構成されている場合は、データベースからデータを移動せずに、暗号化操作をインプレースで実行できます。 「[セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用して列暗号化をインプレースで構成する](always-encrypted-enclaves-configure-encryption.md)」を参照してください。 DACPAC のデプロイでは、インプレース暗号化は使用できないことに注意してください。
+> [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] を使用していて、お使いの SQL Server インスタンスがセキュリティで保護されたエンクレーブで構成されている場合は、データベースからデータを移動せずに、暗号化操作をインプレースで実行できます。 「[セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用して列の暗号化をインプレースで構成する](always-encrypted-enclaves-configure-encryption.md)」を参照してください。 DACPAC のデプロイでは、インプレース暗号化は使用できないことに注意してください。
 
 ::: moniker-end
 
@@ -60,14 +60,14 @@ DACPAC またはターゲット データベースで Always Encrypted がセッ
 詳細については、 [列マスター キーの作成と格納 (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md) を参照してください。 
 
  
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>次の手順
 - [Always Encrypted を使用したアプリケーションの開発](always-encrypted-client-development.md)
-- [SQL Server Management Studio で Always Encrypted を使用した列にクエリを実行する](always-encrypted-query-columns-ssms.md)
+- [SQL Server Management Studio で Always Encrypted を使用した列のクエリを実行する](always-encrypted-query-columns-ssms.md)
 
 ## <a name="see-also"></a>参照  
- - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+ - [常に暗号化](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
  - [Always Encrypted のキー管理の概要](overview-of-key-management-for-always-encrypted.md) 
- - [SQL Server Management Studio を使用した Always Encrypted の構成](configure-always-encrypted-using-sql-server-management-studio.md)
- - [Always Encrypted ウィザードを使用した列暗号化の構成](always-encrypted-wizard.md)
+ - [SQL Server Management Studio を使用して Always Encrypted を構成する](configure-always-encrypted-using-sql-server-management-studio.md)
+ - [Always Encrypted ウィザードを使用して列暗号化を構成する](always-encrypted-wizard.md)
  - [PowerShell での Always Encrypted を使用した列暗号化の構成](configure-column-encryption-using-powershell.md)
  

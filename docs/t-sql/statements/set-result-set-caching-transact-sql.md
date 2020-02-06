@@ -15,10 +15,10 @@ author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: aea7470bd5b4d046dd5346e633fb5302ea8e7b9c
-ms.sourcegitcommit: eae9efe2a2d3758685e85039ffb8fa698aa47f9b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73962360"
 ---
 # <a name="set-result-set-caching-transact-sql"></a>結果セット キャッシュの設定 (Transact-SQL) 
@@ -37,7 +37,7 @@ ms.locfileid: "73962360"
 SET RESULT_SET_CACHING { ON | OFF };
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 
 result_set_caching の設定を構成するユーザー データベースに接続した状態で、このコマンドを実行します。
 
@@ -47,7 +47,7 @@ result_set_caching の設定を構成するユーザー データベースに接
 **OFF**   
 現在のクライアント セッションの結果セットのキャッシュを無効にします。
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 クエリの request_id を指定して [sys.dm_pdw_exec_requests](/sql/relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql) 内の result_cache_hit 列をクエリし、このクエリの実行時に、結果のキャッシュ ヒットおよびキャッシュ ミスのいずれが使用されたかを確認します。
 
@@ -62,7 +62,7 @@ WHERE request_id = 'QID58286'
 public ロールのメンバーシップが必要です
 
 ## <a name="see-also"></a>参照
-[結果セットのキャッシュを使用したパフォーマンス チューニング](/azure/sql-data-warehouse/performance-tuning-result-set-caching)</br>
+[結果セットのキャッシュを使用したパフォーマンスのチューニング](/azure/sql-data-warehouse/performance-tuning-result-set-caching)</br>
 [ALTER DATABASE SET のオプション &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options?view=azure-sqldw-latest)</br>
 [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql?view=azure-sqldw-latest)</br>
 [DBCC SHOWRESULTCACHESPACEUSED (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-showresultcachespaceused-transact-sql)</br>

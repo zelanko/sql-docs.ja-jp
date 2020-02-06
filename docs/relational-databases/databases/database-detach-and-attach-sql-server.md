@@ -28,10 +28,10 @@ ms.assetid: d0de0639-bc54-464e-98b1-6af22a27eb86
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3b6ee22299c854193d15e5fe4d1e2daabf7250bb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68037586"
 ---
 # <a name="database-detach-and-attach-sql-server"></a>データベースのデタッチとアタッチ (SQL Server)
@@ -39,12 +39,12 @@ ms.locfileid: "68037586"
 データベースのデータ ファイルおよびトランザクション ログ ファイルは、デタッチして、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の同一または別のインスタンスに再度アタッチすることができます。 同一コンピューターの別の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスにデータベースを変更したり、データベースを移動したりする場合、データベースをデタッチしてアタッチする操作が便利です。  
   
   
-##  <a name="Security"></a> Security  
+##  <a name="Security"></a> セキュリティ  
 ファイル アクセス許可は、データベースのデタッチやアタッチなど、さまざまなデータベース操作中に設定されます。  
   
 > [!IMPORTANT]  
 > 不明なソースや信頼されていないソースからデータベースをアタッチまたは復元しないことをお勧めします。 こうしたデータベースには、意図しない [!INCLUDE[tsql](../../includes/tsql-md.md)] コードを実行したり、スキーマまたは物理データベース構造を変更してエラーを発生させるような、悪意のあるコードが含まれている可能性があります。   
-> 不明または信頼できないソースのデータベースを使用する前に、実稼働用ではないサーバーでそのデータベースに対し [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) を実行し、さらに、そのデータベースのストアド プロシージャやその他のユーザー定義コードなどのコードを調べます。  
+> 不明または信頼できないソースのデータベースを使用する前に、運用サーバー以外のサーバーでそのデータベースに対し [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) を実行し、さらに、そのデータベースのストアド プロシージャやその他のユーザー定義コードなどのコードを調べます。  
   
 ##  <a name="DetachDb"></a> データベースのデタッチ  
 データベースはデタッチすると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスからは削除されますが、データ ファイルおよびトランザクション ログ ファイル内ではそのまま残ります。 これらのデータ ファイルとトランザクション ログ ファイルを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の任意のインスタンスにデータベースをアタッチできます。その際、そのデータベースをデタッチした元のサーバーにアタッチすることもできます。  
@@ -58,7 +58,7 @@ ms.locfileid: "68037586"
   
 -   データベースに、データベース スナップショットが存在する。  
   
-    データベースをデタッチするには、すべてのデータベース スナップショットを削除する必要があります。 詳細については、「 [データベース スナップショットの削除 &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)の同一または別のインスタンスに再度アタッチすることができます。  
+    データベースをデタッチするには、すべてのデータベース スナップショットを削除する必要があります。 詳細については、「 [データベース スナップショットの削除 &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)」を参照してください。  
   
     > [!NOTE]  
     > データベース スナップショットのデタッチおよびアタッチは行うことができません。  
@@ -130,7 +130,7 @@ ms.locfileid: "68037586"
   
 -   [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)  
   
--   [データベースのインポート](../../relational-databases/databases/attach-a-database.md)  
+-   [データベースのアタッチ](../../relational-databases/databases/attach-a-database.md)  
   
 -   [sp_attach_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-db-transact-sql.md)  
   

@@ -18,10 +18,10 @@ ms.assetid: 051d66bc-04de-4c58-861c-760dc5b859b5
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 7da6aca6ccc5180d379ff853267d2de9f682cfb9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68040096"
 ---
 # <a name="lat-geography-data-type"></a>Lat (geography データ型)
@@ -38,12 +38,12 @@ ms.locfileid: "68040096"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の型: **float**  
   
- CLR の型:**SqlDouble**  
+ CLR の型: **SqlDouble**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  OpenGIS モデルでは、Lat は単一地点のデータで構成される **geography** インスタンスにのみ定義されます。 **geography** インスタンスに複数の地点が含まれる場合、このプロパティは NULL を返します。 このプロパティは正確で、読み取り専用です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  この例では、ある地点を作成して、その地点の緯度を返します。  
   
 ```  

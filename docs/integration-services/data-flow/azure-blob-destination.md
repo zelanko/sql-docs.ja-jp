@@ -14,10 +14,10 @@ ms.assetid: 820a1e7a-7182-4c7b-ab56-5b4097a7e042
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 7ec0d571fe219719a22e841c43dedd0716ef5a4a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293445"
 ---
 # <a name="azure-blob-destination"></a>Azure Blob Destination
@@ -25,7 +25,7 @@ ms.locfileid: "71293445"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
- **Azure Blob Destination** コンポーネントは、SSIS パッケージが Azure Blob にデータを書き込めるようにします。 サポートされるファイル形式は、CSV と AVRO です。 
+ **Azure Blob Destination** コンポーネントは、SSIS パッケージが Azure Blob にデータを書き込めるようにします。 サポートされるファイル形式は、CSV および AVRO です。 
    
  **Azure Blob Destination** をデータ フロー デザイナーにドラッグ アンド ドロップし、ダブルクリックしてエディターを表示します。  
   

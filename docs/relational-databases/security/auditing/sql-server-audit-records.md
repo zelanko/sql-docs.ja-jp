@@ -13,30 +13,30 @@ ms.assetid: 7a291015-df15-44fe-8d53-c6d90a157118
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 2681d021099e8b10150efd255e27cf436c665a90
-ms.sourcegitcommit: b7618a2a7c14478e4785b83c4fb2509a3e23ee68
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73926030"
 ---
 # <a name="sql-server-audit-records"></a>SQL Server 監査レコード
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 監査機能を使用すると、サーバー レベルおよびデータベース レベルのイベントのグループおよびイベントを監査することができます。 詳しくは、「[SQL Server Audit &#40;データベース エンジン&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)」を参照してください。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]」をご覧ください。  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 監査機能を使用すると、サーバー レベルおよびデータベース レベルのイベントのグループおよびイベントを監査することができます。 詳しくは、「[SQL Server Audit &#40;データベース エンジン&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)」を参照してください。 [https://login.microsoftonline.com/consumers/]([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)])  
   
  監査は、監査 *対象*に記録される 0 個以上の監査アクション項目で構成されます。 監査ターゲットには、バイナリ ファイル、Windows アプリケーション イベント ログ、または Windows セキュリティ イベント ログを使用できます。 ターゲットに送信されるレコードに含まれる可能性がある要素を次の表に示します。  
   
-|列名|[説明]|型|常に使用可能かどうか|  
+|列名|[説明]|種類|常に使用可能かどうか|  
 |-----------------|-----------------|----------|----------------------|  
 |**event_time**|監査可能なアクションが発生した日付/時刻。|**datetime2**|はい|  
 |**sequence_no**|大きすぎて監査の書き込みバッファーに収まらなかった 1 つの監査レコード内のレコードの順序を追跡します。|**int**|はい|  
-|**action_id**|アクションの ID。<br /><br /> ヒント:**action_id** を述語として使用するには、文字列から数値に変換する必要があります。 詳細については、「 [Filter SQL Server Audit on action_id / class_type predicate (action_id/class_type 述語での SQL Server 監査のフィルター選択)](https://blogs.msdn.com/b/sqlsecurity/archive/2012/10/03/filter-sql-server-audit-on-action-id-class-type-predicate.aspx)」を参照してください。|**varchar (4)**|はい|  
+|**action_id**|アクションの ID<br /><br /> ヒント: **action_id** を述語として使用するには、文字列から数値に変換する必要があります。 詳細については、「 [Filter SQL Server Audit on action_id / class_type predicate (action_id/class_type 述語での SQL Server 監査のフィルター選択)](https://blogs.msdn.com/b/sqlsecurity/archive/2012/10/03/filter-sql-server-audit-on-action-id-class-type-predicate.aspx)」を参照してください。|**varchar (4)**|はい|  
 |**succeeded**|監査イベントをトリガーするアクションのアクセス許可のチェックが成功または失敗したかどうかを示します。 |**bit**<br /> - 1 = 成功 <br />0 = 失敗|はい|  
-|**permission_bitmask**|権限の許可、拒否、または取り消しを示します (該当する場合)。|**bigint**|いいえ|  
+|**permission_bitmask**|該当する場合、許可、拒否、または取り消されたアクセス許可を表示します。|**bigint**|いいえ|  
 |**is_column_permission**|列レベル権限を示すフラグ。|**bit** <br />- 1 = True <br />0 = False|いいえ|  
 |**session_id**|イベントが発生したセッションの ID。|**int**|はい|  
 |**server_principal_id**|アクションが実行されるログイン コンテキストの ID。|**int**|はい|  
 |**database_principal_id**|アクションが実行されるデータベース ユーザー コンテキストの ID。|**int**|いいえ|  
-|**object_id**|監査が発生したエンティティのプライマリ ID。 この ID には次が可能です。<br /><br /> サーバー オブジェクト<br /><br /> データベース<br /><br /> データベース オブジェクト<br /><br /> スキーマ オブジェクト|**int**|いいえ|  
+|**object_id**|監査が発生したエンティティのプライマリ ID。 この ID には次が可能です。<br /><br /> サーバー オブジェクト<br /><br /> databases<br /><br /> データベース オブジェクト<br /><br /> スキーマ オブジェクト|**int**|いいえ|  
 |**target_server_principal_id**|監査可能なアクションが適用されるサーバー プリンシパル。|**int**|はい|  
 |**target_database_principal_id**|監査可能なアクションが適用されるデータベース プリンシパル。|**int**|いいえ|  
 |**class_type**|監査が発生する監査可能なエンティティの種類。|**varchar(2)**|はい|  
@@ -50,11 +50,11 @@ ms.locfileid: "73926030"
 |**server_instance_name**|監査が発生したサーバー インスタンスの名前。 標準の machine\instance の形式を使用します。|**nvarchar(120)**|はい|  
 |**database_name**|アクションが発生したデータベース コンテキスト。|**sysname**|いいえ|  
 |**schema_name**|アクションが発生したスキーマ コンテキスト。|**sysname**|いいえ|  
-|**object_name**|監査が発生したエンティティの名前。 この名前には次が可能です。<br /><br /> サーバー オブジェクト<br /><br /> データベース<br /><br /> データベース オブジェクト<br /><br /> スキーマ オブジェクト<br /><br /> TSQL ステートメント (あれば)|**sysname**|いいえ|  
+|**object_name**|監査が発生したエンティティの名前。 この名前には次が可能です。<br /><br /> サーバー オブジェクト<br /><br /> databases<br /><br /> データベース オブジェクト<br /><br /> スキーマ オブジェクト<br /><br /> TSQL ステートメント (あれば)|**sysname**|いいえ|  
 |**statement**|TSQL ステートメント (あれば)|**nvarchar (4000)**|いいえ|  
 |**additional_information**|XML として格納されるイベントに関する追加情報。|**nvarchar (4000)**|いいえ|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  アクションに該当しないために列の値が設定されない場合もあります。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 監査は、監査レコードの文字フィールドに 4,000 文字のデータを格納します。 監査可能なアクションから返される **additional_information** と **statement** の値が 4,000 文字を超えていた場合は、そのデータを記録するために、 **sequence_no** 列を使用して 1 つの監査アクションの監査レポートに複数のレコードが書き込まれます。 このプロセスは次のとおりです。  

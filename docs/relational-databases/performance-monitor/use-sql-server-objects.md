@@ -31,10 +31,10 @@ ms.assetid: bcd731b1-3c4e-4086-b58a-af7a3af904ad
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 15aa957b25323337f3b76b4f54f89a7121567a24
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982186"
 ---
 # <a name="use-sql-server-objects"></a>SQL Server オブジェクトの使用
@@ -66,7 +66,7 @@ ms.locfileid: "73982186"
   
 -   [SSIS Pipeline カウンター](#SsisPipelineCounters)  
   
--   [必要な権限](#RequiredPermissions)  
+-   [必要なアクセス許可](#RequiredPermissions)  
   
 ##  <a name="SQLServerAgentPOs"></a> SQL Server エージェント パフォーマンス オブジェクト  
  次の表は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント用のパフォーマンス オブジェクトの一覧を示します。  

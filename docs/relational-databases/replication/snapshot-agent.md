@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: b715e621-2cd5-4a15-8f58-a341aa8ef5e4
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: c3eb8c58bc43268356f47946df3ec60e7553ec61
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: b4f8a7c8bb130c7b92446ba3a925566e730737eb
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769529"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287167"
 ---
 # <a name="snapshot-agent"></a>スナップショット エージェント
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -29,13 +29,13 @@ ms.locfileid: "68769529"
 ## <a name="options"></a>オプション  
  表示するスナップショット エージェントのセッションを **[表示]** メニューで選択した後、 **[スナップショット エージェントのセッション]** というラベルのグリッドで特定のセッションを選択します。 このセッションの詳細情報は、 **[選択されたセッションのアクション]** というラベルのグリッドに表示されます。 選択したセッションがエラーで終了した場合は、 **[選択されたセッションのエラーの詳細またはメッセージ]** というラベルのテキスト領域も表示されます。  
   
- **[表示]**  
+ **表示**  
  表示するスナップショット エージェント セッションを選択します。  
   
- **ステータス**  
+ **状態**  
  スナップショット エージェントの状態です。 表示される状態の種類を、次に示します。  
   
--   [エラー]  
+-   エラー  
   
 -   [失敗したコマンドの再試行]  
   

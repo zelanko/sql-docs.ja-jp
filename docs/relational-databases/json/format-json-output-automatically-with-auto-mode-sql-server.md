@@ -13,10 +13,10 @@ ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1472c05c2ac4a9308a0fc941ed706d155203ca03
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095808"
 ---
 # <a name="format-json-output-automatically-with-auto-mode-sql-server"></a>AUTO モードで自動的に JSON 出力を書式設定する (SQL Server)
@@ -28,13 +28,13 @@ ms.locfileid: "74095808"
  
 または、**PATH** オプションを使用して出力の制御を維持します。
 -   **PATH** オプションの詳細については、「[Format Nested JSON Output with PATH Mode](../../relational-databases/json/format-nested-json-output-with-path-mode-sql-server.md)」 (PATH モードで入れ子になった JSON 出力を書式設定する) を参照してください。
--   両方のオプションの概要については、「[Format Query Results as JSON with FOR JSON](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md)」(FOR JSON を使用してクエリ結果を JSON として書式設定する) を参照してください。
+-   両方のオプションの概要については、「[Format Query Results as JSON with FOR JSON](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md)」 (FOR JSON を使用してクエリ結果を JSON として書式設定する) を参照してください。
 
 **FOR JSON AUTO** オプションを使用するクエリには、 **FROM** 句を含める必要があります。  
   
 以下に、 **FOR JSON** 句で **AUTO** オプションを使用した例を示します。  
   
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 ### <a name="example-1"></a>例 1
  **クエリ**  

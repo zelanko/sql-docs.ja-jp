@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions'
 ms.openlocfilehash: 688db496825af348183e195bfd4003cfcfb53d81
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "69653384"
 ---
 # <a name="high-availability-for-sql-server-containers"></a>SQL Server コンテナーの高可用性
@@ -32,15 +32,15 @@ Kubernetes 1.6 以降では、"[*ストレージ クラス*](https://kubernetes.
 
 ![Kubernetes SQL Server クラスターの図](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql.png)
 
-上の図で、`mssql-server` は "[*ポッド*](https://kubernetes.io/docs/concepts/workloads/pods/pod/)" 内の SQL Server インスタンス (コンテナー) です。 [レプリカ セット](https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/)によって、ノード障害が発生した後にポッドが自動的に回復されるようになります。 アプリケーションがサービスに接続します。 このケースでは、サービスは、`mssql-server` の障害が発生した後も変化しない IP アドレスをホストするロードバランサーを表します。
+上の図で、`mssql-server` は "[*ポッド*](https://kubernetes.io/docs/concepts/workloads/pods/pod/)" 内の SQL Server インスタンス (コンテナー) です。 [レプリカ セット](https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/)によって、ノード障害が発生した後でポッドが自動的に復旧されます。 アプリケーションがサービスに接続します。 このケースでは、サービスは、`mssql-server` の障害後も変化しない IP アドレスがホストされているロード バランサーを表します。
 
-Kubernetes は、クラスター内のリソースを調整します。 SQL Server インスタンス コンテナーをホストしているノードで障害が発生すると、SQL Server インスタンスを含む新しいコンテナーがブートストラップされ、同じ永続ストレージにアタッチされます。
+Kubernetes により、クラスター内のリソースが調整されます。 SQL Server インスタンス コンテナーをホストしているノードで障害が発生すると、SQL Server インスタンスを含む新しいコンテナーがブートストラップされ、同じ永続ストレージにアタッチされます。
 
 SQL Server 2017 以降では、Kubernetes 上のコンテナーがサポートされます。
 
 Kubernetes にコンテナーを作成するには、「[Kubernetes に SQL Server コンテナーをデプロイする](tutorial-sql-server-containers-kubernetes.md)」をご覧ください。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 SQL Server コンテナーを Azure Kubernetes Service (AKS) にデプロイするには、次の例を参照してください。
 * [Docker コンテナーに SQL Server をデプロイする](sql-server-linux-configure-docker.md)

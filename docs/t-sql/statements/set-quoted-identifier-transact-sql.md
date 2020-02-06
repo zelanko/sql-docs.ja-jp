@@ -26,13 +26,13 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b080efcb7af0f813f798c7f572f464d4718fdd75
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68008877"
 ---
-# <a name="set-quotedidentifier-transact-sql"></a>SET QUOTED_IDENTIFIER (Transact-SQL)
+# <a name="set-quoted_identifier-transact-sql"></a>SET QUOTED_IDENTIFIER (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
@@ -54,7 +54,7 @@ SET QUOTED_IDENTIFIER { ON | OFF }
 SET QUOTED_IDENTIFIER ON
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 SET QUOTED_IDENTIFIER が ON の場合は、識別子を二重引用符で区切ることができます。リテラルは単一引用符で区切る必要があります。 SET QUOTED_IDENTIFIER が OFF の場合、識別子を引用符で区切ることはできません。識別子に関しては [!INCLUDE[tsql](../../includes/tsql-md.md)] のすべての規則に従う必要があります。 詳細については、「[データベース識別子](../../relational-databases/databases/database-identifiers.md)」を参照してください。 リテラルは単一引用符と二重引用符のどちらで区切ることもできます。
 
@@ -103,7 +103,7 @@ SELECT @QUOTED_IDENTIFIER AS QUOTED_IDENTIFIER;
 
 public ロールのメンバーシップが必要です。
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 ### <a name="a-using-the-quoted-identifier-setting-and-reserved-word-object-names"></a>A. 引用符で囲まれた識別子の設定と、予約済みキーワードを用いたオブジェクト名を使用する
 
@@ -205,7 +205,7 @@ GO
 - [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)
 - [CREATE TRIGGER](../../t-sql/statements/create-trigger-transact-sql.md)
 - [CREATE VIEW](../../t-sql/statements/create-view-transact-sql.md)
-- [データ型](../../t-sql/data-types/data-types-transact-sql.md)
+- [Data Types (データ型)](../../t-sql/data-types/data-types-transact-sql.md)
 - [EXECUTE](../../t-sql/language-elements/execute-transact-sql.md)
 - [SELECT](../../t-sql/queries/select-transact-sql.md)
 - [SET Statements](../../t-sql/statements/set-statements-transact-sql.md)

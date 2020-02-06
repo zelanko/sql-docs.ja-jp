@@ -26,10 +26,10 @@ ms.assetid: 621805d5-49ed-4764-b3cb-2ae4a3bf797e
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: bf05f923a5a7a6333bdca7278efae918aed71f32
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70211420"
 ---
 # <a name="get_transmission_status-transact-sql"></a>GET_TRANSMISSION_STATUS (Transact-SQL)
@@ -53,7 +53,7 @@ GET_TRANSMISSION_STATUS ( conversation_handle )
 ## <a name="return-types"></a>戻り値の型  
  **nchar**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  指定したメッセージ交換に関する、最後の転送試行の状態を説明する文字列を返します。 最後の転送が成功した場合、転送がまだ試行されていない場合、または *conversation_handle* が存在しない場合は、空の文字列が返されます。  
   
  この関数で返される情報は、管理ビュー sys.transmission_queue の last_transmission_error 列で表示される情報と同じです。 ただし、この関数を使用すると、転送キューに現在メッセージがないメッセージ交換の転送状態を検出できます。  
@@ -61,7 +61,7 @@ GET_TRANSMISSION_STATUS ( conversation_handle )
 > [!NOTE]  
 >  GET_TRANSMISSION_STATUS では、現在のインスタンスにメッセージ交換エンドポイントを持たないメッセージの情報は提供されません。 つまり、転送されるメッセージの情報は使用できません。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、メッセージ交換ハンドル `58ef1d2d-c405-42eb-a762-23ff320bddf0` とのメッセージ交換に関する転送状態がレポートされます。  
   
 ```  
