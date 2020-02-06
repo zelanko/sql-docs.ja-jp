@@ -23,10 +23,10 @@ author: pmasl
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0ed31eae6817216a694337ed5bc606dcba52fb89
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73844505"
 ---
 # <a name="datalength-transact-sql"></a>DATALENGTH (Transact-SQL)
@@ -50,11 +50,11 @@ DATALENGTH ( expression )
 任意の型の[式](../../t-sql/language-elements/expressions-transact-sql.md)。
   
 ## <a name="return-types"></a>戻り値の型
-*expression* が **varchar(max)** 、**nvarchar(max)** 、**varbinary(max)** データ型の場合は **bigint**、それ以外の場合は **int**。
+**expression** が *varchar(max)* 、**nvarchar(max)** 、**varbinary(max)** データ型の場合は **bigint**、それ以外の場合は **int**。
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 次のような可変長データを格納できるデータ型で使用すると、`DATALENGTH` は非常に便利です。
-- **image**
+- **画像**
 - **ntext**
 - **nvarchar**
 - **text**
@@ -69,8 +69,8 @@ NULL 値の場合、`DATALENGTH` は NULL を返します。
 > [!NOTE]
 > 特定の文字列式にエンコードされた文字数を取得するには [LEN](../../t-sql/functions/len-transact-sql.md) を使用し、特定の文字列式のバイト サイズを取得するには [DATALENGTH](../../t-sql/functions/datalength-transact-sql.md) を使用します。 これらの出力は、データ型および列で使用されているエンコードの種類によっては、異なる場合があります。 異なる種類のエンコードでの記憶域の違いについて詳しくは、「[照合順序と Unicode のサポート](../../relational-databases/collations/collation-and-unicode-support.md)」をご覧ください。
 
-## <a name="examples"></a>使用例  
-この例では、`Product` テーブルの `Name` 列の長さが返されます。
+## <a name="examples"></a>例  
+この例では、`Name` テーブルの `Product` 列の長さが返されます。
   
 ```sql
 USE AdventureWorks2016  

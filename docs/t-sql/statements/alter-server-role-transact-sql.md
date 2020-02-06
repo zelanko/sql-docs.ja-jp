@@ -20,10 +20,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2307a80d3a40599aed4762077b188baac0533967
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68070271"
 ---
 # <a name="alter-server-role-transact-sql"></a>ALTER SERVER ROLE (Transact-SQL)
@@ -67,7 +67,7 @@ DROP MEMBER *server_principal*
 WITH NAME **=** _new_server_role_name_  
 ユーザー定義サーバー ロールの新しい名前を指定します。 サーバー内に存在しない名前を指定してください。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 ユーザー定義サーバー ロールの名前を変更しても、ロールの ID 番号、所有者、権限は変わりません。  
   
 ロールのメンバーシップの変更では、`ALTER SERVER ROLE` は sp_addsrvrolemember と sp_dropsrvrolemember を置き換えます。 これらのストアド プロシージャは非推奨です。  
@@ -93,7 +93,7 @@ WITH NAME **=** _new_server_role_name_
 > [!NOTE]  
 >  固定サーバー ロールとは異なり、ユーザー定義サーバー ロールのメンバーには、同じロールにメンバーを追加する権限がもともとありません。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-changing-the-name-of-a-server-role"></a>A. サーバー ロールの名前を変更する  
 次の例では、`Product` という名前のサーバー ロールを作成し、そのサーバー ロールの名前を `Production` に変更します。  
@@ -112,7 +112,7 @@ ALTER SERVER ROLE Production ADD MEMBER [adventure-works\roberto0] ;
 ```  
   
 ### <a name="c-adding-a-sql-server-login-to-a-server-role"></a>C. SQL Server ログインをサーバー ロールに追加する  
-次の例では、`Ted` という名前の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを `diskadmin` 固定サーバー ロールに追加します。  
+次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] という名前の `Ted` ログインを `diskadmin` 固定サーバー ロールに追加します。  
   
 ```  
 ALTER SERVER ROLE diskadmin ADD MEMBER Ted ;  
@@ -120,14 +120,14 @@ GO
 ```  
   
 ### <a name="d-removing-a-domain-account-from-a-server-role"></a>D. サーバー ロールからドメイン アカウントを削除する  
-次の例では、`Production` という名前のユーザー定義サーバー ロールから `adventure-works\roberto0` という名前のドメイン アカウントを削除します。  
+次の例では、`adventure-works\roberto0` という名前のユーザー定義サーバー ロールから `Production` という名前のドメイン アカウントを削除します。  
   
 ```  
 ALTER SERVER ROLE Production DROP MEMBER [adventure-works\roberto0] ;  
 ```  
   
 ### <a name="e-removing-a-sql-server-login-from-a-server-role"></a>E. サーバー ロールから SQL Server ログインを削除する  
-次の例では、`diskadmin` 固定サーバー ロールから `Ted` という名前の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを削除します。  
+次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 固定サーバー ロールから `Ted` という名前の `diskadmin` ログインを削除します。  
   
 ```  
 ALTER SERVER ROLE Production DROP MEMBER Ted ;  
@@ -143,7 +143,7 @@ GO
 ```  
   
 ### <a name="g-to-view-role-membership"></a>G. ロールのメンバーシップを表示するには  
-ロールのメンバーシップを表示するには、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の **[サーバー ロール (メンバー)]** ページを使用するか、次のクエリを実行します。  
+ロールのメンバーシップを表示するには、**の**[サーバー ロール (メンバー)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ページを使用するか、次のクエリを実行します。  
   
 ```  
 SELECT SRM.role_principal_id, SP.name AS Role_Name,   

@@ -14,10 +14,10 @@ ms.assetid: 879f13b0-331d-4dee-a079-edfaca11ae5b
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9daa6cf4c788c4ca63a9cc394c9a814a8c27cb5b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295209"
 ---
 # <a name="catalogexecutions-ssisdb-database"></a>catalog.executions (SSISDB データベース)
@@ -33,7 +33,7 @@ ms.locfileid: "71295209"
 |-----------------|---------------|-----------------|  
 |execution_id|**bigint**|実行のインスタンスの一意の識別子 (ID)。|  
 |folder_name|**sysname(nvarchar(128))**|プロジェクトを含むフォルダーの名前。|  
-|project_name|**sysname(nvarchar(128))**|プロジェクトの名前。|  
+|project_name|**sysname(nvarchar(128))**|プロジェクトの名前です。|  
 |package_name|**nvarchar(260)**|実行中に開始された最初のパッケージの名前。|  
 |reference_id|**bigint**|実行のインスタンスによって参照される環境。|  
 |reference_type|**char(1)**|環境をプロジェクトと同じフォルダーに配置できるか (相対参照)、または別のフォルダーに配置できるか (絶対参照) を示します。 値が `R` の場合、環境は相対参照を使用して配置されます。 値が `A` の場合、環境は絶対参照を使用して配置されます。|  
@@ -45,7 +45,7 @@ ms.locfileid: "71295209"
 |use32bitruntime|**bit**|64 ビット オペレーティング システムで 32 ビットのランタイムを使用してパッケージを実行するかどうかを示します。 値が `1` の場合、実行は 32 ビット ランタイムで実行されます。 値が `0` の場合、実行は 64 ビット ランタイムで実行されます。|  
 |object_type|**smallint**|オブジェクトの種類。 オブジェクトは、プロジェクト (`20`) またはパッケージ (`30`) です。|  
 |object_id|**bigint**|操作の影響を受けるオブジェクトの ID。|  
-|ステータス|**int**|操作の状態。 使用される可能性がある値は、作成済み (`1`)、実行中 (`2`)、取り消し済み (`3`)、失敗 (`4`)、保留中 (`5`)、予期しない終了 (`6`)、成功 (`7`)、停止 (`8`)、および完了 (`9`) です。|  
+|status|**int**|操作の状態。 使用される可能性がある値は、作成済み (`1`)、実行中 (`2`)、取り消し済み (`3`)、失敗 (`4`)、保留中 (`5`)、予期しない終了 (`6`)、成功 (`7`)、停止 (`8`)、および完了 (`9`) です。|  
 |start_time|**datetimeoffset**|実行のインスタンスが起動された時間。|  
 |end_time|**datetimeoffsset**|実行のインスタンスが終了した時間。|  
 |caller_sid|**varbinary(85)**|ログオンに Windows 認証が使用された場合はユーザーのセキュリティ ID (SID)。|  
@@ -62,7 +62,7 @@ ms.locfileid: "71295209"
 |machine_name|**nvarchar(128)**|サーバー インスタンスが稼働しているコンピューターの名前。|  
 |dump_id|**uniqueidentifier**|実行ダンプの ID。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  このビューは、カタログの実行の各インスタンスの行を表示します。  
   
 ## <a name="permissions"></a>アクセス許可  

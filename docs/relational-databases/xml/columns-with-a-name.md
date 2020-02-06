@@ -13,10 +13,10 @@ ms.assetid: c994e089-4cfc-4e9b-b7fc-e74f6014b51a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 855f7c079d592c095ce3754cd5c6fc799139324e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68113051"
 ---
 # <a name="columns-with-a-name"></a>名前のある列
@@ -36,7 +36,7 @@ ms.locfileid: "68113051"
 -   名前の異なる列がある場合  
   
 ## <a name="column-name-starts-with-an-at-sign-"></a>列名がアット マーク (\@) で始まる場合  
- 列名がアット マーク (\@) で始まり、スラッシュ (/) を含んでいない場合は、対応する列値を持つ `row` 要素の属性が作成されます。 たとえば、次のクエリは 2 列 (\@PmId、Name) の行セットを返します。 結果の XML では、対応する `row` 要素に **PmId** 属性が追加され、ProductModelID の値が割り当てられます。  
+ 列名がアット マーク (\@) で始まり、スラッシュ (/) を含んでいない場合は、対応する列値を持つ `row` 要素の属性が作成されます。 たとえば、次のクエリは 2 列 (\@PmId、Name) の行セットを返します。 結果の XML では、対応する **要素に**PmId`row` 属性が追加され、ProductModelID の値が割り当てられます。  
   
 ```sql
 SELECT ProductModelID as "@PmId",  
@@ -67,7 +67,7 @@ FOR XML PATH;
 ## <a name="column-name-does-not-start-with-an-at-sign-"></a>列名がアット マーク (\@) で始まらない場合  
  列名がアット マーク (\@) で始まらず、XPath の任意のノード テストでもなく、スラッシュ (/) も含んでいない場合、行要素 (既定では `row`) のサブ要素になる XML 要素が作成されます。  
   
- 次のクエリでは列名 result が指定されています。 したがって、`row` 要素には `result` 子要素が追加されます。  
+ 次のクエリでは列名 result が指定されています。 したがって、`result` 要素には `row` 子要素が追加されます。  
   
 ```sql
 SELECT 2+2 as result  
@@ -82,7 +82,7 @@ for xml PATH;
 </row>  
 ```  
   
- 次のクエリでは、**xml** 型の Instructions 列に対して指定した XQuery から返される XML に対応する列の名前として、ManuWorkCenterInformation を指定しています。 したがって、`row` 要素の子として、`ManuWorkCenterInformation` 要素が追加されます。  
+ 次のクエリでは、**xml** 型の Instructions 列に対して指定した XQuery から返される XML に対応する列の名前として、ManuWorkCenterInformation を指定しています。 したがって、`ManuWorkCenterInformation` 要素の子として、`row` 要素が追加されます。  
   
 ```sql
 SELECT
@@ -127,7 +127,7 @@ WHERE  E.EmployeeID = C.ContactID  AND
 FOR XML PATH;
 ```  
   
- PATH モードでは、列名は XML を作成する際のパスとして使用されます。 従業員 ID の値を含む列名は '\@' で始まっているため、**EmpID** 属性が `row` 要素に追加されます。 それ以外のすべての列の列名には、階層を示すスラッシュ ('/') が含まれています。 結果の XML では、`row` 要素の下に `EmpName` 子要素があり、`EmpName` 子要素には `First`、`Middle`、および `Last` 子要素があります。  
+ PATH モードでは、列名は XML を作成する際のパスとして使用されます。 従業員 ID の値を含む列名は '\@' で始まっているため、**EmpID** 属性が `row` 要素に追加されます。 それ以外のすべての列の列名には、階層を示すスラッシュ ('/') が含まれています。 結果の XML では、`EmpName` 要素の下に `row` 子要素があり、`EmpName` 子要素には `First`、`Middle`、および `Last` 子要素があります。  
   
 ```xml
 <row EmpID="1">  
@@ -166,7 +166,7 @@ FOR XML PATH, ELEMENTS XSINIL;
   
  PATH モードの既定では要素中心の XML が生成されます。 したがって、PATH モードのクエリで ELEMENTS ディレクティブを指定しても効力はありません。 ただし、前のクエリで示したように、ELEMENTS ディレクティブを XSINIL と組み合わせると、NULL 値に対して要素を生成する場合に便利です。  
   
- 次のクエリでは従業員の ID と名前以外に住所を取得します。 住所列の列名のパスにより、`row` 要素に `Address` 子要素が追加され、`Address` 要素の子要素として詳しい住所が追加されます。  
+ 次のクエリでは従業員の ID と名前以外に住所を取得します。 住所列の列名のパスにより、`Address` 要素に `row` 子要素が追加され、`Address` 要素の子要素として詳しい住所が追加されます。  
   
 ```sql
 SELECT EmployeeID   "@EmpID",   

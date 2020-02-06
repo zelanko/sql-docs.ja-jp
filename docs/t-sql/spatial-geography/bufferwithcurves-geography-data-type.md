@@ -18,16 +18,16 @@ ms.assetid: abf0a11c-c99c-4faa-bf80-3ae8e04d7bfb
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 6f0e5927216d6bc0ff1acbb2146d7f23c31012ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066549"
 ---
 # <a name="bufferwithcurves-geography-data-type"></a>BufferWithCurves (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  呼び出し元の **geography** インスタンスからの距離が *distance* パラメーターの値以下となる、すべての地点のセットを表す **geography** インスタンスを返します。  
+  呼び出し元の **geography** インスタンスからの距離が **distance** パラメーターの値以下となる、すべての地点のセットを表す *geography* インスタンスを返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -43,7 +43,7 @@ ms.locfileid: "68066549"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
- CLR の戻り値の型:**SqlGeography**  
+ CLR の戻り値の型: **SqlGeography**  
   
 ## <a name="exceptions"></a>例外  
  次の条件を満たす場合、**ArgumentException** がスローされます。  
@@ -52,15 +52,15 @@ ms.locfileid: "68066549"
   
 -   `@g.BufferWithCurves('a')` のように、数値以外のパラメーターがメソッドに渡された。  
   
--   `@g.BufferWithCurves(NULL)` のように、**NULL** がメソッドに渡された。  
+-   **のように、** NULL`@g.BufferWithCurves(NULL)` がメソッドに渡された。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  次の表に、さまざまな distance 値に対して返される結果を示します。  
   
 |distance 値|型ディメンション|返される空間の種類|  
 |--------------------|---------------------|---------------------------|  
 |distance < 0|0 または 1|空の **GeometryCollection** インスタンス|  
-|distance \< 0|2 以上|負のバッファーを持つ **CurvePolygon** または **GeometryCollection** インスタンス<br /><br /> 注:負の値のバッファーでは、空の **GeometryCollection** が作成されることがあります|
+|distance \< 0|2 以上|負のバッファーを持つ **CurvePolygon** または **GeometryCollection** インスタンス<br /><br /> 注: 負の値のバッファーでは、空の **GeometryCollection** が作成されることがあります。|
 |distance = 0|すべてのディメンション|呼び出し元の **geography** インスタンスのコピー|  
 |distance > 0|すべてのディメンション|**CurvePolygon** または **GeometryCollection** インスタンス|  
   
@@ -69,7 +69,7 @@ ms.locfileid: "68066549"
   
  **string** パラメーターをこのメソッドに渡すと、**float** に変換されるか、`ArgumentException` がスローされます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-calling-bufferwithcurves-with-a-parameter-value--0-on-one-dimensional-geography-instance"></a>A. 1 次元の geography インスタンスに対して、パラメーターに 0 を下回る (< 0) 値を指定して、BufferWithCurves() を呼び出す  
  次の例では、空の `GeometryCollection` インスタンスが返されます。  

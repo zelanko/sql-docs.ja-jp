@@ -26,10 +26,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ee54971547e141d06fb2688ab4a69b65bda4c00a
-ms.sourcegitcommit: 4933934fad9f3c3e16406952ed964fbd362ee086
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75548275"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
@@ -241,7 +241,7 @@ GO
  このセクションの例では、削除する行数を制限する方法を示します。  
   
 #### <a name="b-using-the-where-clause-to-delete-a-set-of-rows"></a>B. WHERE 句を使用して行セットを削除する  
- 次の例は、`StandardCost` 列の値が `1000.00` より大きいすべての行を [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベース内の `ProductCostHistory`テーブルから削除します。  
+ 次の例は、`ProductCostHistory` 列の値が [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] より大きいすべての行を `StandardCost` データベース内の `1000.00`テーブルから削除します。  
   
 ```sql
 DELETE FROM Production.ProductCostHistory  
@@ -259,7 +259,7 @@ PRINT 'Number of rows deleted is ' + CAST(@@ROWCOUNT as char(3));
 ```  
   
 #### <a name="c-using-a-cursor-to-determine-the-row-to-delete"></a>C. カーソルを使用して削除する行を決定する  
- 次の例は、`complex_cursor` というカーソルを使用している 1 行を [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベース内の `EmployeePayHistory` テーブルから削除します。 この操作では、カーソルから現在フェッチされている 1 行だけが削除されます。  
+ 次の例は、`EmployeePayHistory` というカーソルを使用している 1 行を [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベース内の `complex_cursor` テーブルから削除します。 この操作では、カーソルから現在フェッチされている 1 行だけが削除されます。  
   
 ```sql
 DECLARE complex_cursor CURSOR FOR  
@@ -279,7 +279,7 @@ GO
 ```  
   
 #### <a name="d-using-joins-and-subqueries-to-data-in-one-table-to-delete-rows-in-another-table"></a>D. 1 つのテーブルへの結合およびサブクエリを使用して、別のテーブルの行を削除する  
- 次の例では、1 つのテーブル内の行を、別のテーブルのデータに基づいて削除する 2 つの方法を示します。 どちらの例も、`SalesPerson` テーブルに格納されている今年に入ってからの売り上げに基づいて、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベース内の `SalesPersonQuotaHistory` テーブルから行を削除します。 最初の `DELETE` ステートメントは ISO 互換のサブクエリ ソリューションを示しています。また、2 つ目の `DELETE` ステートメントは、2 つのテーブルを結合する [!INCLUDE[tsql](../../includes/tsql-md.md)] FROM 拡張機能を示しています。  
+ 次の例では、1 つのテーブル内の行を、別のテーブルのデータに基づいて削除する 2 つの方法を示します。 どちらの例も、`SalesPersonQuotaHistory` テーブルに格納されている今年に入ってからの売り上げに基づいて、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベース内の `SalesPerson` テーブルから行を削除します。 最初の `DELETE` ステートメントは ISO 互換のサブクエリ ソリューションを示しています。また、2 つ目の `DELETE` ステートメントは、2 つのテーブルを結合する [!INCLUDE[tsql](../../includes/tsql-md.md)] FROM 拡張機能を示しています。  
   
 ```sql
 -- SQL-2003 Standard subquery  
@@ -315,7 +315,7 @@ DELETE spqh
 ```  
   
 #### <a name="e-using-top-to-limit-the-number-of-rows-deleted"></a>E. TOP を使用して削除する行数を制限する  
- DELETE ステートメントで TOP (*n*) 句を使用した場合、ランダムに選択される '*n*' 行に対して削除操作が実行されます。 次の例では、納期が 2006 年 7 月 1 日より早い `20` 行を [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベース内の `PurchaseOrderDetail` テーブルからランダムに選択して削除します。  
+ DELETE ステートメントで TOP (*n*) 句を使用した場合、ランダムに選択される '*n*' 行に対して削除操作が実行されます。 次の例では、納期が 2006 年 7 月 1 日より早い `20` 行を `PurchaseOrderDetail` データベース内の [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] テーブルからランダムに選択して削除します。  
   
 ```sql
 DELETE TOP (20)   
@@ -341,7 +341,7 @@ GO
 **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
 #### <a name="f-deleting-data-from-a-remote-table-by-using-a-linked-server"></a>F. リンク サーバーを使用してリモート テーブルからデータを削除する  
- 次の例では、リモート テーブルの行を削除します。 [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) を使用してリモート データ ソースへのリンクを作成した後、 *server.catalog.schema.object* という形式の、4 つの要素で構成されたオブジェクト名の一部として、リンク サーバー名 `MyLinkServer` を指定します。  
+ 次の例では、リモート テーブルの行を削除します。 [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) を使用してリモート データ ソースへのリンクを作成した後、 `MyLinkServer`server.catalog.schema.object*という形式の、4 つの要素で構成されたオブジェクト名の一部として、リンク サーバー名* を指定します。  
   
 ```sql
 USE master;  
@@ -404,7 +404,7 @@ GO
 ```  
   
 #### <a name="j-using-output-with-from_table_name-in-a-delete-statement"></a>J. OUTPUT を DELETE ステートメント内で <from_table_name> と共に使用する  
- 次の例は、`DELETE` ステートメントの `FROM` 句で定義された検索条件に基づいて、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベース内の `ProductProductPhoto` テーブルの行を削除します。 `OUTPUT` 句では、削除されるテーブルの列 ( `DELETED.ProductID`、 `DELETED.ProductPhotoID`)、および `Product` テーブルの列を返します。 これは `FROM` 句で削除する行を指定するときに使用されます。  
+ 次の例は、`ProductProductPhoto` ステートメントの [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 句で定義された検索条件に基づいて、`FROM` データベース内の `DELETE` テーブルの行を削除します。 `OUTPUT` 句では、削除されるテーブルの列 ( `DELETED.ProductID`、 `DELETED.ProductPhotoID`)、および `Product` テーブルの列を返します。 これは `FROM` 句で削除する行を指定するときに使用されます。  
   
 ```sql
 DECLARE @MyTableVar table (  
@@ -441,7 +441,7 @@ DELETE FROM Table1;
 ```  
   
 ### <a name="l-delete-a-set-of-rows-from-a-table"></a>L. テーブルから行のセットを削除する  
- 次の例では、`StandardCost` 列の値が 1000.00 より大きいすべての行を `Table1` テーブルから削除します。  
+ 次の例では、`Table1` 列の値が 1000.00 より大きいすべての行を `StandardCost` テーブルから削除します。  
   
 ```sql
 DELETE FROM Table1  

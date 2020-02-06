@@ -12,10 +12,10 @@ author: Jodebrui
 ms.author: jodebrui
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 833108cfc5e8a11f72e8b7cb7b628690b0050c58
-ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74412680"
 ---
 # <a name="faster-temp-table-and-table-variable-by-using-memory-optimization"></a>メモリ最適化を使用した一時テーブルとテーブル変数の高速化
@@ -60,7 +60,7 @@ ms.locfileid: "74412680"
     - [https://login.microsoftonline.com/consumers/](`DECLARE @mytablevariable my_type;`)  
   
   
-## <a name="b-scenario-replace-global-tempdb-x23x23table"></a>B. シナリオ:グローバル tempdb &#x23;&#x23;table の置換  
+## <a name="b-scenario-replace-global-tempdb-x23x23table"></a>B. シナリオ: グローバル tempdb &#x23;&#x23;table の置換  
   
 グローバル一時テーブルとメモリ最適化 SCHEMA_ONLY テーブルの置換は非常に単純です。 最大の変更は、テーブルを実行時ではなく展開時に作成することです。 メモリ最適化テーブルの作成は、コンパイル時に最適化されるため、従来のテーブルの作成よりも時間がかかります。 メモリ最適化テーブルをオンライン ワークロードの一部として作成およびドロップすると、ワークロードのパフォーマンスだけでなく、AlwaysOn セカンダリおよびデータベース復旧の再実行のパフォーマンスにも影響します。
 
@@ -104,7 +104,7 @@ CREATE TABLE dbo.soGlobalB
 3. T-SQL で、 **&#x23;&#x23;tempGlobalB** のすべてのメンションを **dbo.soGlobalB** に置き換えます。  
   
   
-## <a name="c-scenario-replace-session-tempdb-x23table"></a>C. シナリオ:セッション tempdb &#x23;table の置換  
+## <a name="c-scenario-replace-session-tempdb-x23table"></a>C. シナリオ: セッション tempdb &#x23;table の置換  
   
 セッションの一時テーブルを置換するための準備には、以前のグローバル一時テーブルのシナリオよりも多く T-SQL が含まれます。 追加の T-SQL で、変換を行うために必要な労力が増えるということではありません。  
 
@@ -190,7 +190,7 @@ go
   
   
   
-## <a name="d-scenario-table-variable-can-be-memory_optimizedon"></a>D. シナリオ:テーブル変数は MEMORY_OPTIMIZED=ON にすることができます  
+## <a name="d-scenario-table-variable-can-be-memory_optimizedon"></a>D. シナリオ: テーブル変数を MEMORY_OPTIMIZED=ON にする  
   
   
 従来のテーブル変数は、tempdb データベース内のテーブルを表します。 パフォーマンスが高速化するには、テーブル変数のメモリを最適化することができます。  
@@ -211,7 +211,7 @@ DECLARE @tvTableD TABLE
   
 上記の構文は、テーブル変数 *inline*を作成すると考えられます。 インライン構文は、メモリ最適化をサポートしません。 そのため、インライン構文を TYPE の明示的な構文に変換します。  
   
-*スコープ:* 最初の go の区切り文字のバッチによって作成された TYPE 定義は、サーバーがシャットダウンして再起動された後でも保持されます。 ただし、最初の go 区切り文字の後に、宣言されたテーブル @tvTableC は、次の go に到達してバッチが終了するまでのみ保持されます。  
+*スコープ:* 最初の go の区切り文字のバッチによって作成された TYPE 定義は、サーバーがシャット ダウンして再起動された後でも保持されます。 ただし、最初の go 区切り文字の後に、宣言されたテーブル @tvTableC は、次の go に到達してバッチが終了するまでのみ保持されます。  
   
   
   
@@ -420,7 +420,7 @@ Batch execution completed 5001 times.
 次のリソースを使用して、メモリ最適化テーブルの必要なアクティブ メモリを予測する方法を学習できます。  
   
 - [メモリ最適化テーブルのメモリ必要量の推定](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md)  
-- [メモリ最適化テーブルのテーブルと行のサイズ:計算の例](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)  
+- [メモリ最適化テーブルのテーブルと行のサイズ: 計算の例](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)  
   
 より大きなテーブル変数の場合、非クラスター化のインデックスは、メモリ最適化 " *テーブル*" よりも多くメモリを使用します。 行の数やインデックス キーが多くなるほど、その違いは大きくなります。  
   

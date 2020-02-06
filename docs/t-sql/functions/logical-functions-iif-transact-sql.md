@@ -18,10 +18,10 @@ ms.assetid: e3ccf8ed-1cec-43ac-90b7-d8597c24b050
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 92dd195322e03f8b3eb776269cd6a8636fffd150
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68059754"
 ---
 # <a name="logical-functions---iif-transact-sql"></a>論理関数 - IIF (Transact-SQL)
@@ -53,12 +53,12 @@ IIF ( boolean_expression, true_value, false_value )
 ## <a name="return-types"></a>戻り値の型  
  内の型からの優先順位が最も高いデータ型を返します *true_value* と *false_value*です。 詳細については、「[データ型の優先順位 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)」を参照してください。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  IIF は CASE 式の簡略版です。 最初の引数として渡されたブール式を評価し、評価の結果に基づいて他の 2 つの引数のいずれかを返します。 つまり、 *true_value* ブール式が true の場合、返されると、 *false_value* ブール式が false または不明のかどうかに返されます。 任意の型の *true_value* と *false_value* を指定できます。 ブール式、NULL 処理、および戻り値の型に対する CASE 式に適用されるのと同じ規則が IIF にも適用されます。 詳細については、を参照してください。 [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md).  
   
  IIF が CASE に変換されるという事実は、この関数の動作の他の側面にも影響を与えます。 CASE 式では最大 10 のレベルまで入れ子が許容されるため、IIF ステートメントでも最大 10 のレベルまで入れ子が許容されます。 また、IIF では、意味が同等の CASE 式として他のサーバーにリモート処理を行い、リモート処理された CASE 式のすべての動作を実行します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-simple-iif-example"></a>A. 簡単な IIF の例  
   

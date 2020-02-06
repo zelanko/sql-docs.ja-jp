@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 51dc2ba27e346dea75f1bd347491d4932695fd43
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68077532"
 ---
 # <a name="configure-sql-server-integration-services-on-linux-with-ssis-conf"></a>ssis-conf を使用して Linux で SQL Server Integration Services を構成する
@@ -23,7 +23,7 @@ Red Hat Enterprise Linux および Ubuntu 用の SQL Server Integration Services
 
 `ssis-conf` ユーティリティを使用して、次のプロパティを構成することもできます。
 
-| コマンド | [説明] |
+| command | [説明] |
 |-------------|---------------------------------------------------------------------|
 | set-edition | SQL Server のエディションを設定します。                                       |
 | telemetry   | SQL Server Integration Services のテレメトリ サービスを有効または無効にします。 |
@@ -32,9 +32,9 @@ Red Hat Enterprise Linux および Ubuntu 用の SQL Server Integration Services
 
 ## <a name="run-ssis-conf"></a>ssis-conf を実行する
 
-この記事の例では、完全なパス `/opt/ssis/bin/ssis-conf` を指定して `ssis-conf` を実行します。 その場所に異動してから `ssis-conf` を実行する場合は、このユーティリティを現在のディレクトリのコンテキストで実行できます (`./ssis-conf`)。
+この記事の例では、完全なパス `ssis-conf` を指定して `/opt/ssis/bin/ssis-conf` を実行します。 その場所に異動してから `ssis-conf` を実行する場合は、このユーティリティを現在のディレクトリのコンテキストで実行できます (`./ssis-conf`)。
 
-この記事で説明されているコマンドは必ずルート特権を付けて使用してください。 たとえば、`/opt/ssis/bin/ssis-conf setup` ではなく、`sudo /opt/ssis/bin/ssis-conf setup` を実行します。
+この記事で説明されているコマンドは必ずルート特権を付けて使用してください。 たとえば、`sudo /opt/ssis/bin/ssis-conf setup` ではなく、`/opt/ssis/bin/ssis-conf setup` を実行します。
 
 希望の言語のプロンプトでこれらのコマンドを実行するには、ロケールを指定できます。 たとえば、中国語のプロンプトを受け取るには、コマンド `sudo LC_ALL=zh_CN.UTF-8 /opt/ssis/bin/ssis-conf setup` を実行します。
 
@@ -116,7 +116,7 @@ SSIS をインストールするたびに `setup` コマンドを使用します
 
 次の `/var/opt/ssis/ssis.conf` ファイルで各設定の例を示します。
 
-SQL Server では、`mssql.conf` ファイルの値を変更することによってシステム設定を変更できます。 SSIS では、`ssis.conf` ファイルの値を変更してシステム設定を変更 "*できません*"。 `ssis.conf` ファイルには、セットアップの結果のみが表示されます。 SSIS の設定を変更する場合は、`ssis.conf` ファイルを削除し、`setup` コマンドを再度実行します。
+SQL Server では、`mssql.conf` ファイルの値を変更することによってシステム設定を変更できます。 SSIS では、 *ファイルの値を変更してシステム設定を変更 "* できません`ssis.conf`"。 `ssis.conf` ファイルには、セットアップの結果のみが表示されます。 SSIS の設定を変更する場合は、`ssis.conf` ファイルを削除し、`setup` コマンドを再度実行します。
 
 次に、サンプルの `ssis.conf` ファイルを示します。 各フィールドが 1 つのセットアップ手順の結果に対応しています。
 
@@ -141,7 +141,7 @@ lcid = 2052
 ```
 
 ## <a name="related-content-about-ssis-on-linux"></a>Linux 上の SSIS の関連コンテンツ
--   [SSIS で Linux 上のデータの抽出、変換、読み込みを行う](sql-server-linux-migrate-ssis.md)
--   [Linux に SQL Server Integration Services (SSIS) をインストールする](sql-server-linux-setup-ssis.md)
--   [Linux の SSIS の制限事項と既知の問題](sql-server-linux-ssis-known-issues.md)
--   [cron を利用して Linux で SQL Server Integration Services パッケージのスケジュールを設定する](sql-server-linux-schedule-ssis-packages.md)
+-   [SSIS を使用して Linux 上でデータの抽出、変換、読み込みを行う](sql-server-linux-migrate-ssis.md)
+-   [SQL Server Integration Services (SSIS) on Linux をインストールする](sql-server-linux-setup-ssis.md)
+-   [SSIS on Linux の制限事項と既知の問題](sql-server-linux-ssis-known-issues.md)
+-   [cron を使用して Linux 上で SQL Server Integration Services パッケージの実行スケジュールを設定する](sql-server-linux-schedule-ssis-packages.md)

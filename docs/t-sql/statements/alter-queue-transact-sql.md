@@ -24,10 +24,10 @@ ms.assetid: d54aa325-8761-4cd4-8da7-acf33df12296
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 253828eba55e919d7363bb56896560de1de38b25
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982052"
 ---
 # <a name="alter-queue-transact-sql"></a>ALTER QUEUE (Transact-SQL)
@@ -157,7 +157,7 @@ WITH
   
  有害なメッセージの処理が OFF に設定されているキューは、トランザクションのロールバックが連続して 5 回実行されても無効になりません。 これにより、カスタムの有害なメッセージの処理システムをアプリケーションで定義できます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  指定されたアクティブ化ストアド プロシージャが存在するキューにメッセージが含まれている場合は、アクティブ化状態を OFF から ON に変更すると、すぐにアクティブ化ストアド プロシージャがアクティブになります。 アクティブ化状態を ON から OFF に変更すると、ストアド プロシージャのインスタンスのアクティブ化処理は停止しますが、現在実行中のストアド プロシージャのインスタンスは停止しません。  
   
  キューにアクティブ化ストアド プロシージャを追加しても、キューのアクティブ化の状態は変わりません。 キューのアクティブ化ストアド プロシージャを変更しても、現在実行中のアクティブ化ストアド プロシージャのインスタンスには影響しません。  
@@ -171,7 +171,7 @@ WITH
 ## <a name="permissions"></a>アクセス許可  
  既定では、キューを変更する権限は、キューの所有者、db_ddladmin 固定データベース ロールまたは db_owner 固定データベース ロールのメンバー、および sysadmin 固定サーバー ロールのメンバーに与えられています。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-making-a-queue-unavailable"></a>A. キューを利用できないようにする  
  次の例では、`ExpenseQueue` キューをメッセージの受信に利用できないようにします。  
@@ -191,7 +191,7 @@ ALTER QUEUE ExpenseQueue
 ```  
   
 ### <a name="c-changing-the-number-of-queue-readers"></a>C. キュー リーダーの数を変更する  
- 次の例では、このキュー用に [!INCLUDE[ssSB](../../includes/sssb-md.md)] で起動されるストアド プロシージャ インスタンスの最大数を `7` に設定します。  
+ 次の例では、このキュー用に `7` で起動されるストアド プロシージャ インスタンスの最大数を [!INCLUDE[ssSB](../../includes/sssb-md.md)] に設定します。  
   
 ```  
 ALTER QUEUE ExpenseQueue WITH ACTIVATION (MAX_QUEUE_READERS = 7) ;  
@@ -241,7 +241,7 @@ ALTER QUEUE ExpenseQueue REBUILD WITH (MAXDOP = 2)
 ALTER QUEUE ExpenseQueue REORGANIZE   
 ```  
   
-### <a name="i-moving-queue-internal-table-to-another-filegroup"></a>I:キューの内部テーブルを別のファイル グループに移動する  
+### <a name="i-moving-queue-internal-table-to-another-filegroup"></a>I: キューの内部テーブルを別のファイル グループに移動する  
   
 **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降。  
   

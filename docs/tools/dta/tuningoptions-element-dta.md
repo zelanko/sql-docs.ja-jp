@@ -1,10 +1,7 @@
 ---
-title: TuningOptions 要素 (DTA) |Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+title: TuningOptions 要素 (DTA)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs:
@@ -14,16 +11,22 @@ helpviewer_keywords:
 ms.assetid: 58a22ba1-8e03-411f-bd46-85e4540f217a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 20b266aa90f9c1a68607468e284fe9e5d8eb9e95
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
+ms.openlocfilehash: 92b52745273894cd5c1537e4ae8bbb5a0b476ce0
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68105924"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75304839"
 ---
 # <a name="tuningoptions-element-dta"></a>TuningOptions 要素 (DTA)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  特定のチューニング セッションのチューニング オプションが含まれます。  
+
+特定のチューニング セッションのチューニング オプションが含まれます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,11 +41,11 @@ ms.locfileid: "68105924"
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特性|[説明]|  
+|特徴|[説明]|  
 |--------------------|-----------------|  
 |**データ型と長さ**|[なし] :|  
 |**既定値**|[なし] :|  
-|**個数**|省略可。 使用する場合は、 **DTAInput** 要素につき 1 回使用できます。|  
+|**個数**|省略可能。 使用する場合は、 **DTAInput** 要素につき 1 回使用できます。|  
   
 ## <a name="element-relationships"></a>要素の関係  
   
