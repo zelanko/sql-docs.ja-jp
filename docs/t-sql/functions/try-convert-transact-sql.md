@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current||>= sql-server-2016 ||>= sql-server-linux-2017||= sqlallproducts-allversions||>= aps-pdw-2016||= azure-sqldw-latest
 ms.openlocfilehash: ace985045db2bf10b1ef0e80a2b05ea3e0cb85ca
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70151963"
 ---
 # <a name="try_convert-transact-sql"></a>TRY_CONVERT (Transact-SQL)
@@ -49,21 +49,21 @@ TRY_CONVERT ( data_type [ ( length ) ], expression [, style ] )
  *style*  
  **TRY_CONVERT** 関数が *expression* を変換する方法を指定する省略可能な整数式。  
   
- *style* は、**CONVERT** 関数の *style* パラメーターと同じ値を使用します。 詳細については、「[CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)」を参照してください。  
+ *style* は、*CONVERT* 関数の **style** パラメーターと同じ値を使用します。 詳細については、「[CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)」を参照してください。  
   
  許容される値の範囲は、*data_type* の値によって決まります。 *style* が null の場合、**TRY_CONVERT** は null を返します。  
   
 ## <a name="return-types"></a>戻り値の型  
  指定されたデータ型へのキャストが成功した場合は、キャストされる値が返されます。それ以外の場合は、null が返されます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **TRY_CONVERT** は渡された値を使用して、指定された *data_type* への変換を試みます。 キャストが成功した場合、**TRY_CONVERT** は指定された *data_type* と同じ値を返します。エラーが発生した場合は null が返されます。 ただし、明示的に許可されない変換を要求すると、**TRY_CONVERT** はエラーが発生して失敗します。  
   
  互換性レベル 110 以上では、**TRY_CONVERT** は予約されたキーワードです。  
   
  この関数は、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以上のバージョンがインストールされているサーバーに対してリモート処理が可能です。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] より前のバージョンをインストールしているサーバーには、リモート処理が行われません。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-try_convert-returns-null"></a>A. TRY_CONVERT は null を返します。  
  次の例は、キャストが失敗した場合に TRY_CONVERT から null が返されることを示しています。  

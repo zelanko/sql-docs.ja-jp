@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: a1485cf4-b1c4-49e9-ab06-8ccfaad998f3
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: c37a0b953177d0e3d978607982da54c613a3d2a2
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 3006b3258d26f359e5eab98856ca7ffe43d8321a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908238"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287329"
 ---
 # <a name="republish-data"></a>データの再パブリッシュ
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "72908238"
   
  レプリケーションでは、次の表に示す再パブリッシュのシナリオがサポートされます。  
   
-|パブリッシャー|パブリッシュ元のサブスクライバー|サブスクライバー (Subscriber)|  
+|Publisher|パブリッシュ元のサブスクライバー|サブスクライバー (Subscriber)|  
 |---------------|---------------------------|----------------|  
 |トランザクション パブリケーション|トランザクション サブスクリプション/トランザクション パブリケーション|トランザクション サブスクリプション|  
 |トランザクション パブリケーション|トランザクション サブスクリプション/マージ パブリケーション*|マージ サブスクリプション|  

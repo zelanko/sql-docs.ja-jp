@@ -18,10 +18,10 @@ ms.assetid: 47670feb-b9e0-4b4b-af83-b9bba7da66ac
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 12ae393f99510df743b5a5ec0bf777f7b982d570
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68120819"
 ---
 # <a name="stpointn-geography-data-type"></a>STPointN (geography データ型)
@@ -43,11 +43,11 @@ ms.locfileid: "68120819"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
- CLR の戻り値の型:**SqlGeography**  
+ CLR の戻り値の型: **SqlGeography**  
   
- Open Geospatial Consortium (OGC) の型:**Point**  
+ Open Geospatial Consortium (OGC) の型: **Point**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  ユーザーが作成した **geography** インスタンスの場合、STPointN() は、最初に入力した順序で地点を並べ替えることで、*expression* で指定された地点を返します。  
   
  システムによって作成された **geography** インスタンスの場合、STPointN() は、出力する順序ですべての地点を並べ替えることで、*式*で指定された地点を返します。出力する順序にするには、**geography** インスタンス、インスタンス内のリング (必要な場合)、リング内の地点の順に並べ替えます。 この順序は決定的です。  
@@ -56,7 +56,7 @@ ms.locfileid: "68120819"
   
  インスタンス内の地点の数より大きい値を指定してこのメソッドを呼び出すと、メソッドは NULL を返します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  `LineString` インスタンスを作成し、`STPointN()` を使用して、このインスタンスの記述に含まれる 2 番目の地点を取得する例を次に示します。  
   
 ```  

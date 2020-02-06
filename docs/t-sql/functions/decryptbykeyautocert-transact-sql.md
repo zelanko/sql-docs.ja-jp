@@ -18,10 +18,10 @@ ms.assetid: 6b45fa2e-ffaa-46f7-86ff-5624596eda4a
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: a8772e2e1ecb001b26db02750ae134f545180113
-ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71314565"
 ---
 # <a name="decryptbykeyautocert-transact-sql"></a>DECRYPTBYKEYAUTOCERT (Transact-SQL)
@@ -69,13 +69,13 @@ DecryptByKeyAutoCert ( cert_ID , cert_password
 ## <a name="return-types"></a>戻り値の型  
 最大サイズが 8,000 バイトの **varbinary**。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 `DECRYPTBYKEYAUTOCERT` には、`OPEN SYMMETRIC KEY` と `DECRYPTBYKEY` の機能が組み合わされています。 1 つの操作で、最初に非対称キーが復号され、そのキーで暗号化テキストが復号されます。  
   
 ## <a name="permissions"></a>アクセス許可  
 対称キーに対する `VIEW DEFINITION` 権限と、証明書に対する `CONTROL` 権限が必要です。   
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 この例では、`DECRYPTBYKEYAUTOCERT` が復号コードを簡略化するしくみを確認できます。 このコードは、データベース マスター キーが存在しない [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースで実行する必要があります。  
   
 ```  
