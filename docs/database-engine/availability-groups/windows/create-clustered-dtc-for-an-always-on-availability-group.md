@@ -12,10 +12,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 96c706d58e0f90f4f10b89a724f7d87fa94e41f3
-ms.sourcegitcommit: ac90f8510c1dd38d3a44a45a55d0b0449c2405f5
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/18/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72586765"
 ---
 # <a name="create-clustered-dtc-resource-for-an-always-on-availability-group"></a>Always On 可用性グループ用のクラスター化された DTC リソースを作成する
@@ -41,7 +41,7 @@ ms.locfileid: "72586765"
 - クラスターの詳細 (既存):
   - 名前: `Cluster`
   - ネットワーク名: `Cluster Network 1`
-  - ノード: `SQLNODE1, SQLNODE2`
+  - 複数ノード: `SQLNODE1, SQLNODE2`
   - 共有ストレージ:`Cluster Disk 3` (`SQLNODE1` が所有)
 - クラスター詳細 (作成予定):
   - ネットワーク名リソース: `DTCnet1`
@@ -281,7 +281,7 @@ GO
 ```
 
 ## <a name="7---create-availability-group"></a>7. 可用性グループを作成する
-[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]は、**CREATE AVAILABILITY GROUP** コマンドと **WITH DTC_SUPPORT = PER_DB** 句を使用して作成する必要があります。  現在、既存の可用性グループを変更することはできません。  新しい可用性グループ ウィザードでは、新しい可用性グループに対して DTC サポートを有効にすることができません。  次のスクリプトは新しい可用性グループを作成し、セカンダリを参加させます。  `SQLNODE1` SQLCMD モード **で**に対して SSMS の次の T-SQL スクリプトを実行します。
+[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]は、**CREATE AVAILABILITY GROUP** コマンドと **WITH DTC_SUPPORT = PER_DB** 句を使用して作成する必要があります。  現在、既存の可用性グループを変更することはできません。  新しい可用性グループ ウィザードでは、新しい可用性グループに対して DTC サポートを有効にすることができません。  次のスクリプトは新しい可用性グループを作成し、セカンダリを参加させます。  **SQLCMD モード**で `SQLNODE1` に対して SSMS の次の T-SQL スクリプトを実行します。
 
 ```sql  
 /*******************************************************************

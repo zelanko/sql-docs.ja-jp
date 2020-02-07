@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 4fae460e78682263c604d8e1e86ca40b7b62df97
-ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69531043"
 ---
 # <a name="sql-server-2019-on-windows-isolation-changes-for-machine-learning-services"></a>Windows 上の SQL Server 2019:Machine Learning Services の分離の変更
@@ -39,9 +39,9 @@ Windows では、SQL Server 2019 セットアップにより、外部プロセ�
 
 以前のリリースでは、**SQLRUserGroup** には、外部プロセスの分離と実行に使用されるローカル Windows ユーザー アカウント (MSSQLSERVER00-MSSQLSERVER20) のプールが含まれていました。 外部プロセスが必要な場合、SQL Server Launchpad サービスは使用可能なアカウントを取得し、それを使用してプロセスを実行します。 
 
-SQL Server 2019 では、セットアップでローカル ワーカー アカウントが作成されなくなりました。 代わりに、[AppContainers](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation) によって分離が実現されます。 実行時に、ストアド プロシージャまたはクエリで埋め込みスクリプトやコードが検出されると、SQL Server は拡張機能固有の起動ツールの要求を使用して Launchpad を呼び出します。 Launchpad は、自身の ID の下のプロセスで適切なランタイム環境を呼び出し、AppContainer をインスタンス化して、それを含めます。 ローカル アカウントとパスワードの管理が不要になったため、これは有益な変更です。 また、ローカル ユーザー アカウントが禁止されているインストールでは、ローカル ユーザー アカウントの依存関係を削除することで、この機能を使用できるようになります。
+SQL Server 2019 では、セットアップでローカル ワーカー アカウントが作成されなくなりました。 代わりに、[AppContainer](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation) によって分離が実現されます。 実行時に、ストアド プロシージャまたはクエリで埋め込みスクリプトやコードが検出されると、SQL Server は拡張機能固有の起動ツールの要求を使用して Launchpad を呼び出します。 Launchpad は、自身の ID の下のプロセスで適切なランタイム環境を呼び出し、AppContainer をインスタンス化して、それを含めます。 ローカル アカウントとパスワードの管理が不要になったため、これは有益な変更です。 また、ローカル ユーザー アカウントが禁止されているインストールでは、ローカル ユーザー アカウントの依存関係を削除することで、この機能を使用できるようになります。
 
-SQL Server によって実装されたため、AppContainers は内部メカニズムです。 プロセス モニターに AppContainers の物理的な証拠が表示されることはありませんが、プロセスがネットワーク呼び出しを行わないように、セットアップによって作成された送信ファイアウォール規則で見つけることができます。
+AppContainer は、SQL Server に実装されているため、内部メカニズムです。 プロセス モニターには AppContainer の物理的な証拠は表示されませんが、セットアップによって作成された、プロセスによるネットワーク呼び出しを防ぐための送信ファイアウォール規則で AppContainer を見つけることができます。
 
 ## <a name="firewall-rules-created-by-setup"></a>セットアップによって作成されたファイアウォール規則
 

@@ -23,12 +23,12 @@ manager: jroth
 ms.custom: seo-lt-2019
 ms.date: 09/25/2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: deaaa783f465c5cfecb940df4b9dd56e10590bc5
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.openlocfilehash: 0fb3a05f08cdf3481b9e2957c35bf6ee48bce6b0
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74056389"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76909965"
 ---
 # <a name="use-bulk-insert-or-openrowsetbulk-to-import-data-to-sql-server"></a>BULK INSERT または OPENROWSET(BULK...) を使用して SQL Server にデータをインポートする
 
@@ -58,7 +58,7 @@ BULK INSERT では、データ ファイルからテーブルにデータが読�
 - [フォーマット ファイルを使用したテーブル列のスキップ &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)
 - [フォーマット ファイルを使用したテーブル列とデータ ファイル フィールドのマッピング &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)
 
-## <a name="openrowsetbulk-function"></a>OPENROWSET(BULK...)機能
+## <a name="openrowsetbulk-function"></a>OPENROWSET(BULK...)Function
 
 OPENROWSET 一括行セット プロバイダーには、BULK オプションを指定して OPENROWSET 関数を呼び出すことによってアクセスします。 OPENROWSET(BULK...) 関数では、OLE DB プロバイダー経由でデータ ファイルなどのリモート データ ソースに接続することで、リモート データにアクセスできます。
 
@@ -95,7 +95,7 @@ BULK オプションの上記以外の使い方の詳細については、「 [O
 
 BULK INSERT または INSERT...SELECT \* FROM OPENROWSET(BULK...) を使用して別のコンピューターからデータを一括インポートするには、データ ファイルを 2 台のコンピューター間で共有している必要があります。 共有データ ファイルを指定するには、UNC (汎用名前付け規則) 名を使用します。UNC 名の一般的な形式は、 **\\\\** _Servername_ **\\** _Sharename_ **\\** _Path_ **\\** _Filename_です。 また、データ ファイルへのアクセスに使用されるアカウントは、リモート ディスク上のファイルの読み取りに必要な権限を持っている必要があります。
 
-たとえば、次の `BULK INSERT` ステートメントでは、 `SalesOrderDetail` というデータ ファイルから `AdventureWorks` データベースの `newdata.txt`テーブルにデータの一括インポートを行います。 このデータ ファイルは、`\dailyorders` というシステムの `salesforce` というネットワーク共有ディレクトリの `computer2` という共有フォルダーにあります。
+たとえば、次の `BULK INSERT` ステートメントでは、 `SalesOrderDetail` というデータ ファイルから `AdventureWorks` データベースの `newdata.txt`テーブルにデータの一括インポートを行います。 このデータ ファイルは、 `\dailyorders` というシステムの `salesforce` というネットワーク共有ディレクトリの `computer2`という共有フォルダーにあります。
 
 ```sql
 BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
@@ -114,7 +114,7 @@ Azure Blob Storage からパブリック (匿名アクセス) ではないデー
 次の例では、BULK INSERT コマンドを使用して、SAS キーを作成した Azure Blob Storage の場所にある csv ファイルからデータを読み込む方法を示します。 Azure Blob Storage の場所は、外部データ ソースとして構成されます。 これには、ユーザー データベース内でマスター キーを使用して暗号化された共有アクセス署名を使用するデータベース スコープ資格情報が必要です。
 
 ```sql
---> Optional - a MASTER KEY is not requred if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
+--> Optional - a MASTER KEY is not required if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'YourStrongPassword1';
 GO
 --> Optional - a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
@@ -142,10 +142,10 @@ WITH (DATA_SOURCE = 'MyAzureBlobStorage');
 
 ### <a name="using-openrowset"></a>OPENROWSET の使用
 
-次の例では、OPENROWSET コマンドを使用して、SAS キーを作成した Azure Blob Storage の場所にある csv ファイルからデータを読み込む方法を示します。 Azure Blob Storage の場所は、外部データ ソースとして構成されます。 これには、ユーザー データベース内でマスター キーを使用して暗号化された共有アクセス署名を使用するデータベース スコープ資格情報が必要です。
+次の例は、OPENROWSET コマンドを使用して、SAS キーを作成した Azure Blob Storage の場所にある csv ファイルからデータを読み込む方法を示しています。 Azure Blob Storage の場所は、外部データ ソースとして構成されます。 これには、ユーザー データベース内でマスター キーを使用して暗号化された共有アクセス署名を使用するデータベース スコープ資格情報が必要です。
 
 ```sql
---> Optional - a MASTER KEY is not requred if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
+--> Optional - a MASTER KEY is not required if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'YourStrongPassword1';
 GO
 --> Optional - a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!

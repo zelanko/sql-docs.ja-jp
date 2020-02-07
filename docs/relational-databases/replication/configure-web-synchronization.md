@@ -33,10 +33,10 @@ ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 95acac097d1c3ec5ffd4989058db0c2927441554
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907235"
 ---
 # <a name="configure-web-synchronization"></a>Web 同期の構成
@@ -88,7 +88,7 @@ ms.locfileid: "72907235"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:[Web 同期用の IIS の構成](../../relational-databases/replication/configure-iis-for-web-synchronization.md)  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)][ ] :[Web 同期用の IIS 7 の構成](../../relational-databases/replication/configure-iis-7-for-web-synchronization.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:[Web 同期用の IIS 7 の構成](../../relational-databases/replication/configure-iis-7-for-web-synchronization.md)  
   
 ## <a name="creating-a-web-garden"></a>Web ガーデンの作成  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レプリケーション リスナーでは、スレッドごとに同時に 2 つの同期処理がサポートされます。 この制限を超えると、レプリケーション リスナーが応答しなくなる可能性があります。 replisapi.dll に割り当てられるスレッドの数は、アプリケーション プールの "ワーカー プロセスの最大数" プロパティで決まります。 既定では、このプロパティは 1 に設定されます。  
@@ -169,7 +169,7 @@ ms.locfileid: "72907235"
   
     -   通常、IIS を実行しているコンピューターは、ポート 1433 (既定のインスタンス用) を使用してパブリッシャーまたはディストリビューターに接続します。 パブリッシャーまたはディストリビューターが、サーバー上の既定のインスタンスとは別に存在する名前付きインスタンスである場合、その名前付きインスタンスへの接続には通常はポート 1500 が使用されます。  
   
-    -   IIS を実行しているコンピューターがファイアウォールによってディストリビューターから分離されており、スナップショットの配信に FTP 共有が使用される場合は、FTP 用のポートが開かれている必要があります。 詳細については、「[Transfer Snapshots Through FTP](../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md)」(FTP によるスナップショットの転送) をご覧ください。  
+    -   IIS を実行しているコンピューターがファイアウォールによってディストリビューターから分離されており、スナップショットの配信に FTP 共有が使用される場合は、FTP 用のポートが開かれている必要があります。 詳細については、「[FTP によるスナップショットの転送](../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md)」を参照してください。  
   
 > [!IMPORTANT]  
 >  ファイアウォールのポートを開くと、サーバーが攻撃を受けやすくなります。 ポートを開く前に、ファイアウォール システムについて理解しておいてください。 詳細については、「 [Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)」を参照してください。  

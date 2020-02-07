@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: abc14f78a969abd4adbbb2dcf12b4ee316614d23
-ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69634548"
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>SQL Server のインスタンス内の機械学習 (R および Python) コンポーネントをアップグレードする
@@ -234,12 +234,12 @@ Microsoft Machine Learning Server を実行すると、SqlBindR.exe というコ
 バインドされたインスタンスを、SQL Server セットアップによって確立された R および Python コンポーネントの初期インストールに復元できます。 SQL Server サービスに戻すには、3つの部分があります。
 
 + [ステップ 1:Microsoft Machine Learning Server からのバインド解除](#step-1-unbind)
-+ [ステップ 2:インスタンスを元の状態に復元する](#step-2-restore)
++ [手順 2:インスタンスを元の状態に復元する](#step-2-restore)
 + [ステップ 3:インストールに追加したパッケージを再インストールする](#step-3-reinstall-packages)
 
 <a name="step-1-unbind"></a> 
 
-### <a name="step-1-unbind"></a>ステップ 1:バインドの解除
+### <a name="step-1-unbind"></a>手順 1:バインドの解除
 
 バインドをロールバックするには、2つのオプションがあります。セットアップを再実行するか、SqlBindR コマンドラインユーティリティを使用します。
 
@@ -264,7 +264,7 @@ Microsoft Machine Learning Server を実行すると、SqlBindR.exe というコ
 
 <a name="step-2-restore"></a> 
 
-###  <a name="step-2-repair-the-sql-server-instance"></a>ステップ 2:SQL Server のインスタンスを修復する
+###  <a name="step-2-repair-the-sql-server-instance"></a>手順 2:SQL Server のインスタンスを修復する
 
 SQL Server セットアップを実行して、R および Python の機能を備えたデータベース エンジンのインスタンスを修復します。 既存の更新プログラムは保持されますが、R および Python パッケージへの SQL Server サービス更新プログラムを実行しなかった場合は、このステップで修正プログラムが適用されます。
 
@@ -272,19 +272,19 @@ SQL Server セットアップを実行して、R および Python の機能を�
 
 <a name="step-3-reinstall-packages"></a> 
 
-### <a name="step-3-add-any-third-party-packages"></a>ステップ 3:サードパーティ製のパッケージを追加する
+### <a name="step-3-add-any-third-party-packages"></a>手順 3:サードパーティ製のパッケージを追加する
 
 パッケージ ライブラリに、他のオープンソースまたはサードパーティのパッケージを追加している場合もあるでしょう。 バインドを逆にすると、既定のパッケージ ライブラリの保存先が切り替わります。そのため、現在 R および Python を保存しているライブラリにパッケージを再インストールする必要があります。 詳細については、「[R パッケージ情報](../package-management/r-package-information.md)」と「[インストール](../package-management/install-additional-r-packages-on-sql-server.md)」、および「[Python パッケージ情報](../package-management/python-package-information.md)および[インストール](../package-management/install-additional-python-packages-on-sql-server.md)」を参照してください。
 
 ## <a name="sqlbindrexe-command-syntax"></a>sqlbindr.exe コマンドの構文
 
-### <a name="usage"></a>使用方法
+### <a name="usage"></a>使用法
 
 `sqlbindr [/list] [/bind <SQL_instance_ID>] [/unbind <SQL_instance_ID>]`
 
 ### <a name="parameters"></a>パラメーター
 
-|[オブジェクト名]|[説明]|
+|Name|説明|
 |------|------|
 |*list*| 現在のコンピューター上にあるすべての SQL データベース インスタンスの ID を一覧表示します|
 |*bind*| 指定された SQL データベース インスタンスを R Server の最新バージョンにアップグレードし、インスタンスが R Server の今後のアップグレードを自動的に取得するようにします|
@@ -296,7 +296,7 @@ SQL Server セットアップを実行して、R および Python の機能を�
 
 MLS Installer と SqlBindR の両方で、次のエラー コードとメッセージが返されます。
 
-|エラー コード  | メッセージ           | 詳細               |
+|エラー コード  | Message           | 詳細               |
 |------------|-------------------|-----------------------|
 |バインド エラー 0 | Ok (成功) | バインドがエラーなしで渡されました。 |
 |バインド エラー 1 | 引数が無効です | 構文エラー。 |

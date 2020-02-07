@@ -9,10 +9,10 @@ ms.assetid: b9ebd36c-a337-47ae-83e5-6c2f2144eb52
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c3a4db20da76fa0188db3171f879e6fdcaefdacd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63200898"
 ---
 # <a name="group-data-by-columns-or-rows-in-a-mobile-report--reporting-services"></a>モバイル レポートのデータを行または列によってグループ化する |Reporting Services
@@ -36,7 +36,7 @@ ms.locfileid: "63200898"
 
    同様に、 **[比較対象系列]**  -- **Comparison1** ～ **Comparison5** が選択されます。
    
-4. **[プレビュー]** を選択します。
+4. **[Preview]\(プレビュー\)** を選択します。
 
    ![mobile-report-chart-by-columns](../../reporting-services/mobile-reports/media/mobile-report-chart-by-columns.png)
 
@@ -54,7 +54,7 @@ ms.locfileid: "63200898"
 
     ![mobile-report-properties-rows](../../reporting-services/mobile-reports/media/mobile-report-properties-rows.png)
 
-9. **[プレビュー]** を選択します。
+9. **[Preview]\(プレビュー\)** を選択します。
 
    ![mobile-report-chart-by-rows](../../reporting-services/mobile-reports/media/mobile-report-chart-by-rows.png)
 

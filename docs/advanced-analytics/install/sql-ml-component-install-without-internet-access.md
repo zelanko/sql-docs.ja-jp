@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: e966406a20df723c453a5c8083f00f2e4989d9d0
-ms.sourcegitcommit: 385a907ed1de8fa7ada76260ea3f92583eb09238
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "74064129"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>インターネットにアクセスできないコンピューターに SQL Server Machine Learning R および Python をインストールする
@@ -41,7 +41,7 @@ ms.locfileid: "74064129"
 
 インターネットに接続されているコンピューター上で、SQL Server 2019 の初回リリースおよびインストール メディア用の R および Python 機能を提供する CAB ファイルをダウンロードします。
 
-リリース  |ダウンロード リンク  |
+Release  |ダウンロード リンク  |
 ---------|---------------|
 Microsoft R Open        | [SRO_3.5.2.125_1033.cab](https://go.microsoft.com/fwlink/?linkid=2085686) |
 Microsoft R Server      | [SRS_9.4.7.25_1033.cab](https://go.microsoft.com/fwlink/?linkid=2085792) |
@@ -73,7 +73,7 @@ Microsoft Python Server | [SPS_9.4.7.25_1033.cab](https://go.microsoft.com/fwlin
 
 インターネットに接続されているコンピューター上で、SQL Server 2017 の初回リリースおよびインストール メディア用の R および Python 機能を提供する CAB ファイルをダウンロードします。 
 
-リリース  |ダウンロード リンク  |
+Release  |ダウンロード リンク  |
 ---------|---------------|
 Microsoft R Open     |[SRO_3.3.3.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851496)|
 Microsoft R Server      |[SRS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851507)|
@@ -100,7 +100,7 @@ SQL Server 2016 のデータベース内分析は R のみです。これには�
 
 ### <a name="1---download-2016-cabs"></a>1 - 2016 用の CAB をダウンロードする
 
-リリース  | Microsoft R Open | Microsoft R Server |
+Release  | Microsoft R Open | Microsoft R Server |
 ---------|-----------------|---------------------|
 **SQL Server 2016 RTM**     | [SRO_3.2.2.803_1033.cab](https://go.microsoft.com/fwlink/?LinkId=761266) |[SRS_8.0.3.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=735051) |
 **SQL Server 2016 SP 1**     | [SRO_3.2.2.15000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=824879) |[SRS_8.0.3.15000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=824881) | 
@@ -166,7 +166,7 @@ Python の CAB ファイル用には %TEMP% フォルダーが必要です。 R 
 
 3. 最新の累積的な更新プログラムを選択して、実行可能ファイルをダウンロードします。
 
-4. R および Python 用の対応する CAB ファイルを入手します。 ダウンロード リンクについては、[SQL Server データベース内分析インスタンスの累積的な更新プログラムの CAB ダウンロード](sql-ml-cab-downloads.md)に関するページを参照してください。
+4. R および Python 用の対応する CAB ファイルを入手します。 ダウンロード リンクについては、「[SQL Server データベース内分析インスタンスの累積的な更新プログラムの CAB ダウンロード](sql-ml-cab-downloads.md)」を参照してください。
 
 5. すべてのファイル (実行可能ファイルと CAB ファイル) を、オフライン コンピューター上の同じフォルダーに転送します。
 
@@ -213,7 +213,7 @@ SQL Server R Services の初回オフライン インストールには、オン
 + [必要に応じた追加の構成](sql-r-services-windows-install.md#bkmk_FollowUp)
 ::: moniker-end
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 インスタンスのインストール状態を確認し、よくある問題を解決するには、[SQL Server のカスタム レポート](../r/monitor-r-services-using-custom-reports-in-management-studio.md)に関する記事をご覧ください。
 

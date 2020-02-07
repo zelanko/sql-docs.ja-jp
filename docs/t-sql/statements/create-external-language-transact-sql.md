@@ -11,10 +11,10 @@ ms.author: negust
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 3f2911406b902ea4d4e7840676dcf08b0318664d
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73536244"
 ---
 # <a name="create-external-language-transact-sql"></a>CREATE EXTERNAL LANGUAGE (Transact-SQL)
@@ -102,13 +102,13 @@ WITH (<option_spec>)
 
 **external_lang_env_variables**
 
-これにより、外部プロセスの開始前に、外部言語ランタイムに環境変数のセットを提供できます。 環境変数の例は、たとえば、ランタイム自体のホーム ディレクトリです。 例:JRE_HOME。
+これにより、外部プロセスの開始前に、外部言語ランタイムに環境変数のセットを提供できます。 環境変数の例は、たとえば、ランタイム自体のホーム ディレクトリです。 次に例を示します。JRE_HOME。
 
 **platform**
 
 このパラメーターは、ハイブリッド OS のシナリオに必要です。 ハイブリッド アーキテクチャでは、プラットフォームごとに 1 回、言語を登録する必要があります。 プラットフォームと言語の名前は、外部言語ごとの一意のキーになります。 プラットフォームを指定しないと、現在の OS が想定されます。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 現在、**PARAMETERS** と **ENVIRONMENT_VARIABLES** はサポートされていません。
 
@@ -133,7 +133,7 @@ TO database_principal_name;
 
 アセンブリと同様、外部ライブラリと外部言語の間にリンクが存在するように、外部言語に対する参照アクセス許可が必要です。 たとえば、外部言語を削除する場合、ユーザーは最初に、その言語を参照しているすべての外部ライブラリを削除する必要があります。 外部言語は、階層内で外部ライブラリより上位レベルのオブジェクトと見ることができます。
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 ### <a name="a-create-an-external-language-in-a-database"></a>A. データベース内の外部言語を作成する  
 

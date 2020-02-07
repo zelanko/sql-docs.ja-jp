@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 0445fb83a1ee4c4e2a991df8e698f24988454d19
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727675"
 ---
 # <a name="python-language-extension-in-sql-server"></a>SQL Server の Python 言語拡張機能
@@ -35,7 +35,7 @@ SQL Server では、Python 実行可能ファイルは変更されませんが�
 
 Microsoft が並列ワークロードと分散ワークロード用に追加した Python パッケージには、次のライブラリが含まれます。
 
-| ライブラリ | [説明] |
+| ライブラリ | 説明 |
 |---------|-------------|
 | [**revoscalepy**](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | データ ソース オブジェクトとデータの探索、操作、変換、視覚化をサポートします。 リモート コンピューティング コンテキスト、およびさまざまなスケーラブルな機械学習モデル (**rxLinMod** など) の作成をサポートします。 詳細については、[SQL Server での revoscalepy モジュール](../python/ref-py-revoscalepy.md)に関するページをご覧ください。  |
 | [**microsoftml**](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 速度と精度のために最適化された機械学習アルゴリズムに加え、テキストとイメージを操作するためのインライン変換も含まれています。 詳細については、[SQL Server での microsoftml モジュール](../python/ref-py-microsoftml.md)に関するページを参照してください。 |
@@ -94,11 +94,11 @@ Linux の場合、SQL では**スタート パッド** サービスを使用し�
 8. SQL サテライトでは、SQL Server との通信と、関連するジョブ オブジェクトのクリーンアップが管理されます。
 9. SQL Server からクライアントに結果が返されます。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 + [SQL Server の revoscalepy モジュール](../python/ref-py-revoscalepy.md)
 + [revoscalepy 関数リファレンス](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package) 
 + [SQL Server の機能拡張フレームワーク](extensibility-framework.md)
 + [SQL Server の R および機械学習拡張機能](extension-r.md)
 + [Python パッケージ情報の取得](../package-management/python-package-information.md)
-+ [sqlmlutils を使用して Python パッケージをインストールする](../package-management/install-additional-python-packages-on-sql-server.md)
++ [sqlmlutils を使用した Python パッケージのインストール](../package-management/install-additional-python-packages-on-sql-server.md)

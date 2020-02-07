@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 9844746d6887c14e5524ed54c39e2de7e0375eb1
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73723795"
 ---
 # <a name="tutorial-sql-development-for-r-data-scientists"></a>チュートリアル:R データ サイエンティスト向けの SQL 開発
@@ -27,11 +27,11 @@ R コード、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] デー�
 
 このチュートリアルは、R 開発者に [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] を紹介する目的で設計されているため、可能な場合には R が使用されています。 ただしこれは、各タスクにとって必ずしも R が最適なツールであるという意味ではありません。 多くの場合、特にデータ集計と機能エンジニアリングについては、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の方が優れたパフォーマンスを示す可能性があります。  このようなタスクでは、特に [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]の新機能 (メモリ最適化列ストア インデックスなど) のメリットが得られます。 可能な最適化については、レッスンの中でご紹介します。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 + [R が統合された SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md#verify-installation) または [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)
 
-+ [データベース権限](../security/user-permission.md) と SQL Server データベース ユーザー ログイン
++ [データベース権限](../security/user-permission.md)と SQL Server データベース ユーザー ログイン
 
 + [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)
 
@@ -88,7 +88,7 @@ SQL Server にパッケージをインストールするには、いくつかの
 
   パッケージが既にインストールされている場合は、`installed.packages()` を実行してインストール済みパッケージの一覧を確認します。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [データの探索と集計](walkthrough-view-and-summarize-data-using-r.md)

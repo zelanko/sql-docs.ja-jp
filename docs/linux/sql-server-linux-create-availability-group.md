@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 5d341d7bbda403b405268fe253cff7d60cea4d0d
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68077439"
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>SQL Server on Linux の可用性グループを作成および構成する
@@ -316,7 +316,7 @@ sudo systemctl restart mssql-server
 
 このセクションでは、[!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)] (SSMS) または Transact-SQL を使用して [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] の可用性グループを作成する方法を説明します。
 
-### <a name="use-includessmanstudiofull-mdincludesssmanstudiofull-mdmd"></a>[!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)] を使用してください。
+### <a name="use-includessmanstudiofull-mdincludesssmanstudiofull-mdmd"></a>[!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)] を使用します
 
 このセクションでは、新しい可用性グループ ウィザードを使用して、SSMS を使用する外部タイプのクラスターの AG を作成する方法を説明します。
 
@@ -354,9 +354,9 @@ sudo systemctl restart mssql-server
 
 11. 読み取り可能なシナリオ用にリスナーが作成されている場合、SSMS 17.3 以降では、ウィザードで読み取り専用ルーティングを作成できます。 これは後から SSMS または Transact-SQL を使用して追加することもできます。 すぐに読み取り専用ルーティングを追加にするには:
 
-    A.  [読み取り専用ルーティング] タブを選択します。
+    a.  [読み取り専用ルーティング] タブを選択します。
 
-    B.  読み取り専用レプリカの URL を入力します。 これらの URL はエンドポイントに似ていますが、エンドポイントではなくインスタンスのポートを使用する点が異なります。
+    b.  読み取り専用レプリカの URL を入力します。 これらの URL はエンドポイントに似ていますが、エンドポイントではなくインスタンスのポートを使用する点が異なります。
 
     c.  各 URL を選択し、下部で読み取り可能なレプリカを選択します。 複数選択するには、SHIFT キーを押すか、クリックしてドラッグします。
 
@@ -512,7 +512,7 @@ sudo systemctl restart mssql-server
     GO
     ```
     
-    場所
+    Where
     - *AGName* は、可用性グループの名前です。
     - *DBName* は、可用性グループで使用されるデータベースの名前です。 名前をコンマで区切って指定することもできます。
     - *PortOfEndpoint* は、作成されるエンドポイントで使用されるポート番号です。
@@ -569,7 +569,7 @@ sudo systemctl restart mssql-server
     
 4.  Ctrl キーを押したまま、X キー、C キーの順に押し、ファイルを終了して保存します。
 
-5.  Execute 
+5.  実行 
     ```bash
     sudo chmod 400 /var/opt/mssql/secrets/passwd
     ```
@@ -674,7 +674,7 @@ sudo systemctl restart mssql-server
     
     ここで、*NameForIPResource* は IP リソースの名前、*NameForAGResource* は AG リソースの名前です。また、SLES では *NameForConstraint* は制約の名前です。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 このチュートリアルでは、[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] on Linux の可用性グループ (AG) を作成および構成する方法について説明しました。 以下の方法を学習しました。
 > [!div class="checklist"]

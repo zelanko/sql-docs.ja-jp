@@ -33,10 +33,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2fc2ca71731fa632db2a857e1b727574722058c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68119175"
 ---
 # <a name="x40x40datefirst-transact-sql"></a>&#x40;&#x40;DATEFIRST (Transact-SQL)
@@ -57,7 +57,7 @@ ms.locfileid: "68119175"
 ## <a name="return-type"></a>戻り値の型  
 **tinyint**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 SET DATEFIRST *n* では、週の最初の日 (日曜日、月曜日、火曜日など) を指定します。 *n* の値は、1 から 7 までの範囲となります。
 
 ```sql
@@ -83,7 +83,7 @@ GO
 SELECT @@DATEFIRST;  
 ```  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 この例では、週の最初の曜日を `5` (金曜日) に設定します。現在の曜日 `Today` は土曜日であると仮定します。 `SELECT` ステートメントでは、`DATEFIRST` の値と現在の曜日を示す数値が返されます。
   
 ```sql

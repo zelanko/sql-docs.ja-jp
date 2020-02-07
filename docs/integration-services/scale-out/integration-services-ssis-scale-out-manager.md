@@ -10,10 +10,10 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.openlocfilehash: 06708cc6770779f22bea45eddacba5a5d29f9092
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68082135"
 ---
 # <a name="integration-services-scale-out-manager"></a>Integration Services Scale Out Manager
@@ -57,7 +57,7 @@ SQL Server に接続した後で、Scale Out が有効になっていない場�
 ### <a name="view-scale-out-master-status"></a>Scale Out Master の状態を表示する
 Scale Out Master の状態は、 **[ダッシュボード]** ページに表示されます。
 
-![ポータルのダッシュボード](media/portal-dashboard-new.PNG)
+![ポータル ダッシュボード](media/portal-dashboard-new.PNG)
 
 ### <a name="view-scale-out-worker-status"></a>Scale Out Worker の状態を表示する
 Scale Out Worker の状態は、 **[ワーカー マネージャー]** ページに表示されます。 各ワーカーを選択すると、個別の状態を表示できます。
@@ -102,7 +102,7 @@ Scale Out Worker の説明を編集するには、Scale Out Worker を選択し�
 
 ![ポータルのワーカーの保存](media/portal-save-worker-new.PNG)
 
-## <a name="next-steps"></a>次の手順
-詳細については、次の記事をご覧ください。
+## <a name="next-steps"></a>次のステップ
+詳細については、次の記事を参照してください。
 -   [Integration Services (SSIS) Scale Out Master](integration-services-ssis-scale-out-master.md)
 -   [Integration Services (SSIS) Scale Out Worker](integration-services-ssis-scale-out-worker.md)

@@ -23,10 +23,10 @@ ms.assetid: eaf8cc82-1047-4144-9e77-0e1095df6143
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 1420c5f8a1a16dc7430af0b445a8464c16d1b763
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982949"
 ---
 # <a name="has_perms_by_name-transact-sql"></a>HAS_PERMS_BY_NAME (Transact-SQL)
@@ -72,7 +72,7 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
   
  クエリが失敗した場合は NULL が返されます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この組み込み関数では、現在のプリンシパルが、指定したセキュリティ保護可能なリソースに対して、特定の有効な権限を保持しているかどうかが評価されます。 HAS_PERMS_BY_NAME は、セキュリティ保護可能なリソースに対する有効な権限がユーザーにある場合は 1 を返し、有効な権限がない場合は 0 を返します。また、セキュリティ保護可能なクラスまたは権限が無効である場合は NULL を返します。 有効な権限とは、次のような権限です。  
   
 -   プリンシパルに直接許可されており、拒否されていない権限。  
@@ -101,7 +101,7 @@ SELECT class_desc FROM sys.fn_builtin_permissions(default);
   
 -   列レベルのチェックの場合、"ANY" はサポートされません。 適切な権限を指定する必要があります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-do-i-have-the-server-level-view-server-state-permission"></a>A. サーバー レベルの VIEW SERVER STATE 権限を保持しているかどうかをチェックする  
   

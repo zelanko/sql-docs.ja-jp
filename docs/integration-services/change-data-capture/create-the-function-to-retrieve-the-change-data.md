@@ -13,10 +13,10 @@ ms.assetid: 55dd0946-bd67-4490-9971-12dfb5b9de94
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 43809c2be4dca62d150be31f62b833b08a2569b7
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72251985"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>変更データを取得する関数を作成する
@@ -143,7 +143,7 @@ deallocate #hfunctions
  パッケージで、すべての変更に対してクエリを実行するラッパー関数を呼び出すと、そのラッパー関数は __CDC_STARTLSN 列と \__CDC_SEQVAL 列も返します。 この 2 つの列はそれぞれ、結果セットの 1 番目の列と 2 番目の列になります。 また、ラッパー関数は、この 2 つの列に基づいて結果セットを並べ替えます。  
   
 ## <a name="writing-your-own-table-value-function"></a>独自のテーブル値関数の作成  
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用すると、変更データ キャプチャのクエリ関数を呼び出す独自のテーブル値ラッパー関数を作成して、そのテーブル値ラッパー関数を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に格納することもできます。 Transact-SQL 関数の作成方法の詳細については、「[CREATE FUNCTION (Transact-SQL)](../../t-sql/statements/create-function-transact-sql.md)」をご覧ください。  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用すると、変更データ キャプチャのクエリ関数を呼び出す独自のテーブル値ラッパー関数を作成して、そのテーブル値ラッパー関数を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に格納することもできます。 Transact-SQL 関数の作成方法の詳細については、「[CREATE FUNCTION (Transact-SQL)](../../t-sql/statements/create-function-transact-sql.md)」をご覧ください。  
   
  次の例では、指定した変更間隔の Customer テーブルから変更を取得するテーブル値関数を定義します。 この関数では、変更データ キャプチャの関数を使用して、変更テーブルで内部的に使用されるバイナリ ログ シーケンス番号 (LSN) の値に **datetime** 値をマップします。 また、この関数では、次の特殊な条件も処理されます。  
   
@@ -210,13 +210,13 @@ go
 ### <a name="retrieving-additional-metadata-with-the-change-data"></a>変更データを含む追加のメタデータの取得  
  前述のユーザーが作成したテーブル値関数では **__$operation** 列のみが使用されていますが、**cdc.fn_cdc_get_net_changes_<capture_instance>** 関数では、各変更行の 4 つのメタデータ列を返します。 これらの値をデータ フローで使用する場合は、テーブル値ラッパー関数から追加の列として値を返すことができます。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**__$start_lsn**|**binary(10)**|変更のコミット トランザクションに関連付けられた LSN。<br /><br /> 同じトランザクションでコミットされたすべての変更は、同じコミット LSN を共有します。 たとえば、ソース テーブルの更新操作によって 2 つの異なる行が変更された場合、変更テーブルには、すべて同じ **__$start_lsn** 値を持った 4 つの行 (古い値を含む 2 行と新しい値を含む 2 行) が格納されます。|  
 |**__$seqval**|**binary(10)**|特定のトランザクションに含まれる行の変更を並べ替えるためのシーケンス値です。|  
-|**__$operation**|**int**|変更に関連付けられているデータ操作言語 (DML) 操作。 次のいずれかになります。<br /><br /> 1 = 削除<br /><br /> 2 = 挿入<br /><br /> 3 = 更新 (更新操作前の値)<br /><br /> 4 = 更新 (更新操作後の値)|  
+|**__$operation**|**int**|変更に関連付けられているデータ操作言語 (DML) 操作。 以下のいずれかを指定できます。<br /><br /> 1 = 削除<br /><br /> 2 = 挿入<br /><br /> 3 = 更新 (更新操作前の値)<br /><br /> 4 = 更新 (更新操作後の値)|  
 |**__$update_mask**|**varbinary (128)**|変更された列を識別する、変更テーブルの列序数に基づくビットマスク。 変更された列を特定する必要がある場合にこの値を調べることができます。|  
-|**\< キャプチャ対象のソース テーブルの列 >**|各種|この関数によって返されるその他の列は、ソース テーブルの列のうち、キャプチャ インスタンスの作成時にキャプチャ対象として指定された列です。 キャプチャ対象列リストで列が最初に指定されなかった場合、ソース テーブルのすべての列が返されます。|  
+|**\< キャプチャ対象のソース テーブルの列 >**|多様|この関数によって返されるその他の列は、ソース テーブルの列のうち、キャプチャ インスタンスの作成時にキャプチャ対象として指定された列です。 キャプチャ対象列リストで列が最初に指定されなかった場合、ソース テーブルのすべての列が返されます。|  
   
  詳細については、「[cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)」を参照してください。  
   

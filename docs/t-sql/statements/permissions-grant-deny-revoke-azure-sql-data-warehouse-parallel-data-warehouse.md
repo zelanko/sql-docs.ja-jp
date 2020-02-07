@@ -15,10 +15,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 43292a665583962694974f524786356c747b7e9d
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75255475"
 ---
 # <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>権限:GRANT、DENY、REVOKE (Azure SQL Data Warehouse、並列データ ウェアハウス)
@@ -36,7 +36,7 @@ ms.locfileid: "75255475"
   
 -   **REVOKE** は、既存の **GRANT** または **DENY** アクセス許可を削除します。  
   
- ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "|::ref1::|") [Transact-SQL 構文表記規則 (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則 (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
@@ -242,7 +242,7 @@ REVOKE
 ### <a name="chart-of-permissions"></a>アクセス許可のグラフ  
  すべてのアクセス許可は、このポスターでグラフィカルに表されます。 これは、アクセス許可の入れ子になった階層構造を確認する最も簡単な方法です。 たとえば、**ALTER ON LOGIN** 自体でアクセス許可を与えることができますが、ログインがそのログインに対する **CONTROL** アクセス許可を与えられている場合、またはログインが **ALTER ANY LOGIN** アクセス許可を与えられている場合にも含まれます。  
   
- ![APS セキュリティの権限ポスター](../../t-sql/statements/media/aps-security-perms-poster.png "|::ref2::|")  
+ ![APS セキュリティの権限ポスター](../../t-sql/statements/media/aps-security-perms-poster.png "APS セキュリティの権限ポスター")  
   
  このポスターのフル サイズ バージョンをダウンロードするには、APS Yammer サイトのファイルのセクションの「[SQL Server PDW のアクセス許可](https://go.microsoft.com/fwlink/?LinkId=244249)」を参照してください (または **apsdoc\@microsoft.com** に電子メールで要求してください)。  
   

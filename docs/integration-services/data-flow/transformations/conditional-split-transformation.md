@@ -17,10 +17,10 @@ ms.assetid: 3f8b5825-226f-413c-ba8f-0bb931ca3770
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d1e4cddbdad631a5602096f92915a4fe78b23d67
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298004"
 ---
 # <a name="conditional-split-transformation"></a>条件分割変換
@@ -28,7 +28,7 @@ ms.locfileid: "71298004"
 [!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  条件分割変換では、データ行をデータの内容に応じた別の出力にルートできます。 条件分割変換の実装は、プログラミング言語の CASE 決定構造と同様です。 この変換は式を評価し、その結果に基づいて、データ行を指定された出力に送信します。 この変換には既定の出力も用意されているため、行が式に一致しない場合は既定の出力に送信されます。  
+  条件分割変換では、データ行をデータの内容に応じた別の出力にルートできます。 条件分割変換の実装は、プログラミング言語の CASE 決定構造と同様です。 この変換は式を評価し、その結果に基づいて、データ行を指定された出力に送信します。 この変換には既定の出力も用意されているので、行が式に一致しない場合は既定の出力に送られます。  
   
 ## <a name="configuration-of-the-conditional-split-transformation"></a>条件分割変換の構成  
  条件分割変換は、次の方法で構成できます。  
@@ -59,7 +59,7 @@ ms.locfileid: "71298004"
   
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [共通プロパティ](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [変換のカスタム プロパティ](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -79,13 +79,13 @@ ms.locfileid: "71298004"
 >  条件分割変換は、1 つの出力に対してのみ各入力行を送信します。 複数の条件を入力した場合、変換によって、条件が True である最初の出力に各行が送信され、その行に対して後続する条件は無視されます。 複数の条件を継続して評価する必要がある場合、データ フローで複数の条件分割変換の連結が必要となることがあります。  
   
 ### <a name="options"></a>オプション  
- **書**  
+ **Order**  
  行を選択し、右側の矢印キーを使用して、式を評価する順序を変更します。  
   
  **[出力名]**  
  出力名を指定します。 既定は数字の付いた場合の一覧ですが、一意のわかりやすい名前を選択することもできます。  
   
- **条件**  
+ **Condition**  
  式を入力するか、使用可能な列、変数、関数、および演算子の一覧からドラッグして式を作成します。  
   
  このプロパティの値は、プロパティ式を使用して指定することができます。  

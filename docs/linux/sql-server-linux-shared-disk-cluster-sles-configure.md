@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: e5ad1bdd-c054-4999-a5aa-00e74770b481
 ms.openlocfilehash: 70701d5c0103da089444177db1143066d0c862cd
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68032224"
 ---
 # <a name="configure-sles-shared-disk-cluster-for-sql-server"></a>SQL Server 用に SLES 共有ディスク クラスターを構成する
@@ -24,19 +24,19 @@ ms.locfileid: "68032224"
 
 クラスター構成、リソース エージェントのオプション、管理、ベスト プラクティス、推奨事項の詳細については、「[SUSE Linux Enterprise High Availability Extension 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html)」を参照してください。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 次のエンドツーエンドのシナリオを完了するには、2 ノードのクラスターと別のサーバーを配置して NFS 共有を構成するために、2 台のコンピューターが必要です。 以下の手順では、これらのサーバーの構成方法を説明します。
 
 ## <a name="setup-and-configure-the-operating-system-on-each-cluster-node"></a>各クラスター ノードにオペレーティング システムをセットアップして構成する
 
-最初の手順では、クラスター ノードのオペレーティング システムを構成します。 このチュートリアルでは、HA アドオンの有効なサブスクリプションで SLES を使用します。
+最初の手順は、クラスター ノード上のオペレーティング システムを構成することです。 このチュートリアルでは、HA アドオンの有効なサブスクリプションで SLES を使用します。
 
 ## <a name="install-and-configure-sql-server-on-each-cluster-node"></a>各クラスター ノードに SQL Server をインストールして構成する
 
 1. 両方のノードに SQL Server をインストールしてセットアップします。 詳細については、[SQL Server on Linux のインストール](sql-server-linux-setup.md)に関するページを参照してください。
-2. 構成の目的の場合は、1 つのノードをプライマリ、もう 1 つをセカンダリとして指定します。 このガイドでは、以降でこれらの用語を使用します。 
-3. セカンダリ ノードで SQL Server を停止して無効にします。 次の例では、SQL Server を停止して無効にします。
+2. 構成目的の場合は、1 つのノードをプライマリ、もう 1 つをセカンダリとして指定します。 このガイドでは、以降でこれらの用語を使用します。 
+3. セカンダリ ノードで SQL Server を停止して無効にします。 次の例では、SQL Server を停止して無効にしています。
 
     ```bash
     sudo systemctl stop mssql-server
@@ -44,8 +44,8 @@ ms.locfileid: "68032224"
     ```
 
     > [!NOTE]
-    > セットアップ時に、SQL Server インスタンスのサーバー マスター キーが生成され、`/var/opt/mssql/secrets/machine-key` に配置されます。 Linux では、SQL Server は常に mssql というローカル アカウントとして実行されます。 ローカル アカウントであるため、ID はノード間で共有されません。 したがって、プライマリ ノードから各セカンダリ ノードに暗号化キーをコピーして、サーバー マスター キーの暗号化を解除するために各ローカル mssql アカウントがそれにアクセスできるようにする必要があります。
-4. プライマリ ノードで、Pacemaker の SQL Server ログインを作成し、`sp_server_diagnostics` を実行するためにログイン権限を付与します。 Pacemaker では、このアカウントを使用して、SQL Server が実行されているノードが確認されます。
+    > セットアップ時に、SQL Server インスタンスのサーバー マスター キーが生成され、`/var/opt/mssql/secrets/machine-key` に配置されます。 Linux では、SQL Server は常に mssql というローカル アカウントとして実行されます。 ローカル アカウントであるため、その ID はノード間で共有されません。 したがって、プライマリ ノードから各セカンダリ ノードに暗号化キーをコピーして、サーバー マスター キーの暗号化を解除するために各ローカル mssql アカウントがそれにアクセスできるようにする必要があります。
+4. プライマリ ノードで、Pacemaker の SQL Server ログインを作成し、`sp_server_diagnostics` を実行するためにログイン権限を付与します。 Pacemaker は、このアカウントを使用して、SQL Server が実行されているノードを確認します。
 
     ```bash
     sudo systemctl start mssql-server
@@ -67,9 +67,9 @@ ms.locfileid: "68032224"
     sudo ip addr show
     ```
 
-    各ノードにコンピューター名を設定します。 各ノードに 15 文字以下の一意の名前を指定します。 [yast](https://www.suse.com/documentation/sles11/book_sle_admin/data/sec_basicnet_yast.html) を使って、または[手動](https://www.suse.com/documentation/sled11/book_sle_admin/data/sec_basicnet_manconf.html)で、`/etc/hostname` にコンピューター名を追加して設定します。
+    各ノードのコンピューター名を設定します。 各ノードに 15 文字以下の一意の名前を指定します。 [yast](https://www.suse.com/documentation/sles11/book_sle_admin/data/sec_basicnet_yast.html) を使って、または[手動](https://www.suse.com/documentation/sled11/book_sle_admin/data/sec_basicnet_manconf.html)で、`/etc/hostname` にコンピューター名を追加して設定します。
 
-    次の例では、`SLES1` および `SLES2` という名前の 2 つのノードに対する追加が含まれる `/etc/hosts` を示します。
+    次の例では、`SLES1` および `SLES2` という名前の 2 つのノードが追加された `/etc/hosts` を示します。
 
     ```
     127.0.0.1   localhost
@@ -124,7 +124,7 @@ NFS サーバーを構成するには、SUSE のドキュメントで次の手�
     > [!NOTE]
     > SUSE のベスト プラクティスと、高可用性 NFS ストレージに関する推奨事項に従うことをお勧めします。[DRBD と Pacemaker による高可用性 NFS ストレージ](https://www.suse.com/documentation/sle-ha-12/book_sleha_techguides/data/art_ha_quick_nfs.html)。
 
-2. SQL Server が新しいファイル パスで正常に起動されることを確認します。 これを各ノードで行います。 この時点では、一度に 1 つのノードだけで SQL Server を実行する必要があります。 両方が同時にデータ ファイルにアクセスしようとするため、両方とも同時に実行することはできません (両方のノードで誤って SQL Server が起動されるのを防ぐために、ファイル システム クラスター リソースを使用して、共有が異なるノードによって 2 回マウントされないようにします)。 次のコマンドでは、SQL Server が起動され、状態が確認されてから、SQL Server が停止されます。
+2. SQL Server が新しいファイル パスで正常に起動されることを確認します。 これを各ノードで行います。 この時点では、一度に 1 つのノードだけで SQL Server を実行する必要があります。 両方が同時にデータ ファイルにアクセスしようとするため、両方とも同時に実行することはできません (両方のノードで誤って SQL Server が開始されるのを防ぐために、ファイル システム クラスターのリソースを使用して、共有が異なるノードによって 2 回マウントされていないようにしてください)。 次のコマンドでは、SQL Server が起動され、状態が確認されてから、SQL Server が停止されます。
 
     ```bash
     sudo systemctl start mssql-server
@@ -249,7 +249,7 @@ Full list of resources:
 
 クラスター リソースの管理については、次の SUSE トピックを参照してください: [クラスター リソースの管理](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.config.crm )
 
-### <a name="manual-failover"></a>手動フェールオーバー (manual failover)
+### <a name="manual-failover"></a>手動フェールオーバー
 
 リソースはハードウェアまたはソフトウェアの障害が発生した場合にクラスターの他のノードに自動的にフェールオーバー (または移行) するように構成されていますが、Pacemaker の GUI またはコマンド ラインを使って、手動でクラスター内の別のノードにリソースを移動することもできます。 
 

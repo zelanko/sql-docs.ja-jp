@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 15c3406d6745802ece620942bf51b23c4d3643ee
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727448"
 ---
 # <a name="operationalize-r-code-using-stored-procedures-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services でストアド プロシージャを使用して R コードを運用可能にする
@@ -32,7 +32,7 @@ SQL Server Machine Learning Services の R および Python 機能を使用し�
 
 ## <a name="guidelines-for-optimizing-r-code-for-sql"></a>SQL 向け R コードを最適化するためのガイドライン
 
-R または Python コードで事前に最適化をいくつか行うと、お使いの R コードを SQL で変換しやすくなります。 これには、問題の原因となるデータ型を回避する、不要なデータ変換が行われないようにする、簡単にパラメーター化できる 1 つの関数呼び出しとして R コードを再生成する、などの作業が含まれます。 詳細については、以下をご覧ください。
+R または Python コードで事前に最適化をいくつか行うと、お使いの R コードを SQL で変換しやすくなります。 これには、問題の原因となるデータ型を回避する、不要なデータ変換が行われないようにする、簡単にパラメーター化できる 1 つの関数呼び出しとして R コードを再生成する、などの作業が含まれます。 詳細については、次を参照してください。
 
 + [R ライブラリとデータ型](r-libraries-and-data-types.md)
 + [R Services で使用する R コードの変換](converting-r-code-for-use-in-sql-server.md)

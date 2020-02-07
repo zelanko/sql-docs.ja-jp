@@ -12,10 +12,10 @@ author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
 ms.openlocfilehash: d204c7acfbd8598a7cbb66a41dcf89915fc711ef
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73843779"
 ---
 # <a name="monitor-and-troubleshoot-data-migration-stretch-database"></a>データ移行の監視とトラブルシューティング (Stretch Database)
@@ -42,7 +42,7 @@ ms.locfileid: "73843779"
   
 -   SQL Server コンピューターに対するネットワーク接続を確認する。  
   
--   SQL Server からリモート エンドポイントへの接続が Azure ファイアウォールによってブロックされていないかどうかを確認する。  
+-   Azure ファイアウォールが、SQL Server からリモート エンドポイントへの接続をブロックしていないことを確認します。  
   
 -   動的管理ビュー **sys.dm_db_rda_migration_status** で最新のバッチの状態を確認する。 エラーが発生した場合は、バッチの error_number、error_state、error_severity の値を確認します。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "73843779"
     -   SQL Server エラー メッセージの内容の詳細については「[sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)」を参照してください。  
   
  **ローカル サーバーからの接続が Azure ファイアウォールによってブロックされています。**  
- SQL Server がリモート Azure サーバーと通信できるように、Azure サーバーの Azure ファイアウォール設定にルールを追加する必要があります。  
+ Azure サーバーの Azure ファイアウォール設定にルールを追加して、SQL Server がリモートの Azure サーバーと通信できるようにする必要があります。  
   
 ## <a name="see-also"></a>参照  
  [Stretch Database の管理とトラブルシューティング](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)  

@@ -22,10 +22,10 @@ ms.assetid: 08a6f084-8f73-4f2a-bae4-3c7513dc99b9
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: ad3852f0bb935371fd141cc4ceb98f90c7aa9c19
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67904354"
 ---
 # <a name="select---for-clause-transact-sql"></a>SELECT - FOR 句 (Transact-SQL)
@@ -216,7 +216,7 @@ _不要な改行を非表示にする:_ SQL Server Management Studio (SSMS) を�
  列を副要素として返します。 指定していない場合は、XML 属性にマップされます。 このオプションは、RAW、AUTO、および PATH モードでのみサポートされます。 詳細については、「 [FOR XML での RAW モードの使用](../../relational-databases/xml/use-raw-mode-with-for-xml.md)」を参照してください。  
   
  XSINIL  
- 列の値が NULL の場合、**xsi:nil** 属性が **True** に設定されている要素を作成します。 このオプションは、ELEMENTS ディレクティブでのみ指定できます。 詳細については、以下をご覧ください。
+ 列の値が NULL の場合、**xsi:nil** 属性が **True** に設定されている要素を作成します。 このオプションは、ELEMENTS ディレクティブでのみ指定できます。 詳細については、次を参照してください。
 
 - [XSINIL パラメーターを使用した NULL 値に対する要素の生成](../../relational-databases/xml/generate-elements-for-null-values-with-the-xsinil-parameter.md)。
 - [SELECT ステートメントでの FOR XML](../../relational-databases/xml/for-xml-sql-server.md)

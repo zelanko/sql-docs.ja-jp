@@ -11,10 +11,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2748ffa055927670b840a17590dc4e29436deb30
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73594462"
 ---
 # <a name="provision-always-encrypted-keys-using-powershell"></a>PowerShell を使用して Always Encrypted キーをプロビジョニングする
@@ -185,7 +185,7 @@ New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKe
 手順 3.  列マスター キーの場所に関する情報を含む *SqlColumnMasterKeySettings* オブジェクトを作成します。 *SqlColumnMasterKeySettings* は、メモリ (PowerShell) に存在するオブジェクトです。 キー ストアに固有のコマンドレットを使用します。 |      [New-SqlAzureKeyVaultColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlazurekeyvaultcolumnmasterkeysettings)<br><br>[New-SqlCertificateStoreColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcertificatestorecolumnmasterkeysettings)<br><br>[New-SqlCngColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcngcolumnmasterkeysettings)<br><br>[New-SqlCspColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcspcolumnmasterkeysettings)   | いいえ         | いいえ         
 手順 4.  列マスター キーが Azure Key Vault に保存されている場合、Azure に対して認証します。 |    [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext)    |はい|いいえ         
 手順 5.  列暗号化キーを生成し、それを列マスター キーで暗号化して列の暗号化キーの値を暗号化します。     |   [New-SqlColumnEncryptionKeyEncryptedValue](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkeyencryptedvalue)     |    はい    | いいえ        
-手順 6.  列マスター キーの場所 (プロバイダー名と列マスター キーのキー パス) と列暗号化キーの暗号化値を DBA に提供します。  | 後半の例を参照してください。        |   いいえ      | いいえ         
+手順 6.  列マスター キーの場所 (プロバイダー名と列マスター キーのキー パス) と列暗号化キーの暗号化値を DBA に提供します。  | 次の例を参照してください。        |   いいえ      | いいえ         
 
 ### <a name="dba"></a>DBA 
 
@@ -193,7 +193,7 @@ DBA は、セキュリティ管理者から受け取った (上記の手順 6) �
 
 タスク  |[アーティクル]  |プレーンテキストのキーへのアクセス  |データベースへのアクセス   
 ---------|---------|---------|---------
-手順 1.  列の暗号化キーの場所と列の暗号化キーの暗号化された値をセキュリティ管理者から取得します。 |後半の例を参照してください。 | いいえ | いいえ
+手順 1.  列の暗号化キーの場所と列の暗号化キーの暗号化された値をセキュリティ管理者から取得します。 |次の例を参照してください。 | いいえ | いいえ
 手順 2.  PowerShell 環境を起動し、Sql Server のモジュールをインポートします。  | [PowerShell を使用した Always Encrypted の構成](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)  | いいえ | いいえ
 手順 3.  サーバーとデータベースに接続します。 | [データベースに接続する](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | いいえ | はい
 手順 4.  列マスター キーの場所に関する情報を含む SqlColumnMasterKeySettings オブジェクトを作成します。 SqlColumnMasterKeySettings は、メモリに存在するオブジェクトです。 | New-SqlColumnMasterKeySettings | いいえ | いいえ
@@ -260,13 +260,13 @@ $cekName = "CEK1"
 New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKey $cmkName -EncryptedValue $keyData.EncryptedValue
 ```  
  
-## <a name="next-steps"></a>Next Steps    
+## <a name="next-steps"></a>次の手順    
 - [PowerShell での Always Encrypted を使用した列暗号化の構成](configure-column-encryption-using-powershell.md)  
 - [PowerShell を使用して Always Encrypted キーをローテーションする](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)
 - [Always Encrypted を使用したアプリケーションの開発](always-encrypted-client-development.md)
 
 ## <a name="see-also"></a>参照    
-- [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)    
+- [常に暗号化](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)    
 - [Always Encrypted のキー管理の概要](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
 - [Always Encrypted の列マスター キーを作成して保存する](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)
 - [PowerShell を使用した Always Encrypted の構成](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)

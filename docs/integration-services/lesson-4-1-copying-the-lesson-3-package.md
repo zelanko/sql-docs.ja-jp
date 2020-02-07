@@ -11,10 +11,10 @@ ms.assetid: 0d053786-5203-43f3-a613-27a8dd2bc44a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 5fb38e4be2b7d7c780dae3ee819e146958541c9f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295965"
 ---
 # <a name="lesson-4-1-copy-the-lesson-3-package"></a>レッスン 4-1: レッスン 3 のパッケージをコピーする
@@ -57,9 +57,9 @@ ms.locfileid: "71295965"
 
 4.  参照ボタン **[...]** を選択し、ご利用のコンピューター上の **Lesson 3.dtsx** に移動して、 **[開く]** を選択します。
 
-5.  前のセクションの手順 3 から 8 の説明に従って、レッスン 3 のパッケージをコピーして貼り付けます。
+5.  前のセクションの手順 3 から 8 の説明に従って、レッスン 3 パッケージをコピーして貼り付けます。
 
   
-## <a name="go-to-next-task"></a>次の実習に進む  
-[手順 2: 破損したファイルを作成する](../integration-services/lesson-4-2-creating-a-corrupted-file.md)  
+## <a name="go-to-next-task"></a>次のタスクに進む  
+[手順 2:破損したファイルを作成する](../integration-services/lesson-4-2-creating-a-corrupted-file.md)  
   

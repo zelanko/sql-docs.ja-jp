@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 742727a1-5189-44ec-b3ae-6fd7aa1f5347
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 11628e5b490c30ef64329f6b9d06aee1b6c10fa9
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 6f5bb78720f864a5fddcbe957f36290e097984ea
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908290"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76284991"
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>初期スナップショットの作成および適用
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "72908290"
 ## <a name="create-snapshot"></a>スナップショットの作成
 SQL Server エージェントが実行されている場合、既定でパブリケーションの新規作成ウィザードでパブリケーションが作成された直後に、スナップショット エージェントによってスナップショットが生成されます。 既定では、スナップショットはディストリビューション エージェント (スナップショット レプリケーションおよびトランザクション レプリケーションの場合) またはマージ エージェント (マージ サブスクリプションの場合) によって、すべてのサブスクリプションに対して適用されます。 スナップショットは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] およびレプリケーション モニターを使用して生成することもできます。 レプリケーション モニターの起動の詳細については、「[Start the Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md)」 (レプリケーション モニターの開始) を参照してください。  
 
-### <a name="using-sql-server-management-studio"></a>SQL Server Management Studio の使用
+### <a name="using-sql-server-management-studio"></a>SQL Server Management Studio を使用する
 
 1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]でパブリッシャーに接続し、サーバー ノードを展開します。    
 2.  **[レプリケーション]** フォルダーを展開し、 **[ローカル パブリケーション]** フォルダーを展開します。    
@@ -86,7 +86,7 @@ SQL Server エージェントが実行されている場合、既定でパブリ
 > [!IMPORTANT]  
 >  可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。 スクリプト ファイルに資格情報を格納する必要がある場合は、不正アクセスを防ぐために、ファイルを保護します。  
 
-1.  スナップショット パブリケーション、トランザクション パブリケーション、またはマージ パブリケーションを作成します。 詳細については、「 [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)」を参照してください。  
+1.  スナップショット パブリケーション、トランザクション パブリケーション、またはマージ パブリケーションを作成します。 詳しくは、「 [パブリケーションを作成](../../relational-databases/replication/publish/create-a-publication.md)」をご覧ください。  
   
 2.  [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) を実行します。 このとき、 **\@publication** パラメーターを指定したうえで、次のパラメーターを指定します。  
   
@@ -96,7 +96,7 @@ SQL Server エージェントが実行されている場合、既定でパブリ
   
     -   (省略可能) エージェントからパブリッシャーへの接続に SQL Server 認証を使用する場合は、 **\@publisher_security_mode** の値に **0** を指定します。 この場合は、さらに、 **\@publisher_login** と **\@publisher_password** に対して、SQL Server 認証のログイン情報を指定する必要があります。  
   
-    -   (省略可) スナップショット エージェント ジョブの同期スケジュールを指定します。 詳しくは、「 [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md)」をご覧ください。  
+    -   (省略可) スナップショット エージェント ジョブの同期スケジュールを指定します。 詳細については、「 [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md)」を参照してください。  
   
     > [!IMPORTANT]  
     >  リモート ディストリビューターを使用するパブリッシャーを構成する場合は、 *job_login* および *job_password*を含むすべてのパラメーターに指定された値がディストリビューターにプレーン テキストとして送信されます。 このストアド プロシージャを実行する前に、パブリッシャーとリモート ディストリビューターの間の接続を暗号化する必要があります。 詳細については、「[データベース エンジンへの暗号化接続の有効化 &#40;SQL Server 構成マネージャー&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。  
@@ -107,7 +107,7 @@ SQL Server エージェントが実行されている場合、既定でパブリ
   
 ## <a name="apply-a-snapshot"></a>スナップショットの適用  
 
-### <a name="using-sql-server-management-studio"></a>SQL Server Management Studio の使用
+### <a name="using-sql-server-management-studio"></a>SQL Server Management Studio を使用する
   
 1.  生成したスナップショットは、ディストリビューション エージェントまたはマージ エージェントによるサブスクリプションの同期によって適用されます。   
     -   エージェントを連続して実行するように設定している場合 (トランザクション レプリケーションの既定の動作)、スナップショットは生成後に自動的に適用されます。   
@@ -118,7 +118,7 @@ SQL Server エージェントが実行されている場合、既定でパブリ
   
 ###   <a name="use-transact-sql"></a>Transact-SQL の使用  
  
-1.  スナップショット パブリケーション、トランザクション パブリケーション、またはマージ パブリケーションを作成します。 詳細については、「 [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)」を参照してください。  
+1.  スナップショット パブリケーション、トランザクション パブリケーション、またはマージ パブリケーションを作成します。 詳しくは、「 [パブリケーションを作成](../../relational-databases/replication/publish/create-a-publication.md)」をご覧ください。  
   
 2.  パブリケーションにアーティクルを追加します。 詳しくは、「 [アーティクルを定義](../../relational-databases/replication/publish/define-an-article.md)」をご覧ください。  
   

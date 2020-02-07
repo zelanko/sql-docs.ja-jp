@@ -6,17 +6,17 @@ author: dphansen
 ms.author: davidph
 ms.reviewer: vanto
 manager: cgronlun
-ms.date: 11/05/2019
+ms.date: 02/03/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2b5a8c83f827f574698d2e9b37a19cdb29e1ba80
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.openlocfilehash: 561a683f6b4c9489121c8fe9910ca798c50ecd82
+ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73660778"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76971222"
 ---
 # <a name="install-sql-server-language-extensions-on-linux"></a>SQL Server の言語拡張を Linux にインストールする
 
@@ -30,7 +30,7 @@ Java 拡張機能のパッケージは、SQL Server Linux ソース リポジト
 
 また、言語拡張は Linux コンテナー上でもサポートされます。 言語拡張には、ビルド済みのコンテナーは付属していませんが、[GitHub 上で入手できるサンプル テンプレート](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices)を使用して、SQL Server コンテナーから作成できます。
 
-言語拡張と [Machine Learning Services](../advanced-analytics/index.yml) は、既定では、SQL Server ビッグ データ クラスターにインストールされます。 ビッグ データ クラスターを使用する場合、この記事の手順を行う必要はありません。 詳細については、[ビッグ データ クラスターでの Machine Learning Services (Python および R) の使用](../big-data-cluster/machine-learning-services.md)に関するページを参照してください。
+言語拡張と [Machine Learning Services](../advanced-analytics/index.yml) は、SQL Server ビッグ データ クラスターには既定でインストールされます。 ビッグ データ クラスターを使用する場合、この記事の手順を行う必要はありません。 詳細については、[ビッグ データ クラスターでの Machine Learning Services (Python および R) の使用](../big-data-cluster/machine-learning-services.md)に関するページを参照してください。
 
 ## <a name="uninstall-preview-version"></a>プレビュー バージョンをアンインストールする
 
@@ -70,7 +70,7 @@ OS 固有の一連のインストール手順ごとに、"*最上位のパッケ
    + [Ubuntu](#ubuntu)
    + [SUSE](#suse)
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 + Linux バージョンは、必ず [SQL Server によってサポートされます](sql-server-linux-release-notes-2019.md#supported-platforms)が、Docker エンジンは含まれていません。 サポートされているバージョンは次のとおりです。
 
@@ -86,7 +86,7 @@ OS 固有の一連のインストール手順ごとに、"*最上位のパッケ
 
 インターネットに接続されたデバイス上で、各オペレーティング システム用のパッケージ インストーラーを使用して、パッケージがデータベース エンジンとは別個にダウンロードされてインストールされます。 次の表に、使用可能な全パッケージについて説明します。
 
-| パッケージ名 | 適用先 | [説明] |
+| パッケージ名 | 適用先 | 説明 |
 |--------------|----------|-------------|
 |mssql-server-extensibility  | すべての言語 | Java 言語拡張機能に使用される拡張性フレームワーク |
 |mssql-server-extensibility-java | Java | Java 言語拡張機能に使用され、サポートされている Java ランタイムが含まれる拡張性フレームワーク |
@@ -157,7 +157,7 @@ sudo zypper install mssql-server-extensibility-java
     chown mssql_satellite:mssql_satellite <MyJarFile.jar>
     ```
 
-    追加の構成には、主に[ mssql-conf ツール](sql-server-linux-configure-mssql-conf.md)を利用します。
+    追加の構成には、主に [mssql-conf ツール](sql-server-linux-configure-mssql-conf.md)を利用します。
 
 2. SQL Server サービスの実行に使用する mssql ユーザー アカウントを追加します。 事前にセットアップを実行していない場合、これは必須です。
 
@@ -165,7 +165,7 @@ sudo zypper install mssql-server-extensibility-java
    sudo /opt/mssql/bin/mssql-conf setup
    ```
 
-3. 送信ネットワーク アクセスを有効にします。 既定では、送信ネットワーク アクセスは無効になっています。 送信要求を有効にするには、mssql-conf ツールを使用して "outboundnetworkaccess" ブール型プロパティを設定します。 詳しくは、「[mssql-conf ツールを利用して Linux 上で SQL Server を構成する](sql-server-linux-configure-mssql-conf.md#mlservices-outbound-access)」をご覧ください。
+3. 送信ネットワーク アクセスを有効にします。 既定では、送信ネットワーク アクセスは無効になっています。 送信要求を有効にするには、mssql-conf ツールを使用して "outboundnetworkaccess" ブール型プロパティを設定します。 詳しくは、「[mssql-conf ツールを利用して SQL Server on Linux を構成する](sql-server-linux-configure-mssql-conf.md#mlservices-outbound-access)」をご覧ください。
 
    ```bash
    # Run as SUDO or root
@@ -226,13 +226,13 @@ Java 機能の統合には、ライブラリは含まれませんが、`grep -r 
   sudo yum install -y mssql-server mssql-server-extensibility-java 
   ```
 
-3. 使用許諾契約書に同意し、インストール後の構成を完了します。 このタスクには、**mssql-conf** ツールを使用します。
+3. ライセンス契約に同意し、インストール後の構成を完了します。 このタスクには、**mssql-conf** ツールを使用します。
 
   ```bash
   sudo /opt/mssql/bin/mssql-conf setup
   ```
 
-  データベース エンジンの使用許諾契約書に同意し、エディションを選択して、管理者パスワードを設定するように求められます。 
+  データベース エンジンのライセンス契約に同意し、エディションを選択して、管理者パスワードを設定するように求められます。 
 
 4. 求められた場合は、サービスを再起動します。
 
@@ -240,7 +240,7 @@ Java 機能の統合には、ライブラリは含まれませんが、`grep -r 
   sudo systemctl restart mssql-server.service
   ```
 
-## <a name="unattended-installation"></a>無人インストール
+## <a name="unattended-installation"></a>自動実行インストール
 
 データベース エンジンの[無人インストール](https://docs.microsoft.com/sql/linux/sql-server-linux-setup#unattended)を使用して、mssql-server-extensibility-java 用のパッケージを追加します。
 
@@ -262,19 +262,19 @@ Java 機能の統合には、ライブラリは含まれませんが、`grep -r 
 
 |||
 |--|----|
-| mssql/extensibility-java パッケージ | [https://packages.microsoft.com/rhel/7/mssql-server-preview/](https://packages.microsoft.com/rhel/7/mssql-server-preview/) |
+| mssql/extensibility-java パッケージ | [https://packages.microsoft.com/rhel/7/mssql-server-2019/](https://packages.microsoft.com/rhel/7/mssql-server-2019/) |
 
 #### <a name="ubuntu1604-paths"></a>Ubuntu/16.04 パス
 
 |||
 |--|----|
-| mssql/extensibility-java パッケージ | [https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/) |
+| mssql/extensibility-java パッケージ | [https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/) |
 
 #### <a name="suse12-paths"></a>SUSE/12 パス
 
 |||
 |--|----|
-| mssql/extensibility-java パッケージ | [https://packages.microsoft.com/sles/12/mssql-server-preview/](https://packages.microsoft.com/sles/12/mssql-server-preview/) |
+| mssql/extensibility-java パッケージ | [https://packages.microsoft.com/sles/12/mssql-server-2019/](https://packages.microsoft.com/sles/12/mssql-server-2019/) |
 
 #### <a name="package-list"></a>パッケージ一覧
 
@@ -297,7 +297,7 @@ mssql-server-extensibility-java-15.0.1000
 
 外部リソース プールに対する[リソースのガバナンス](../t-sql/statements/create-external-resource-pool-transact-sql.md)では、Linux と Windows 間に一致がありますが、[sys.dm_resource_governor_external_resource_pools](../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) の統計では、現在は Linux 上に異なるユニットがあります。 
  
-| 列名   | [説明] | Linux 上の値 | 
+| 列名   | 説明 | Linux 上の値 | 
 |---------------|--------------|---------------|
 |peak_memory_kb | リソース プールに使用されているメモリの最大量。 | Linux では、この統計は CGroups メモリ サブシステムから提供され、値は memory.max_usage_in_bytes になります |
 |write_io_count | Resource Governor の統計がリセットされてから発行された書き込み IO の合計。 | Linux では、この統計は CGroups blkio サブシステムから提供され、書き込み行での値は blkio.throttle.io_serviced になります | 
@@ -306,8 +306,8 @@ mssql-server-extensibility-java-15.0.1000
 |total_cpu_user_ms | Resource Governor の統計がリセットされてからの累積 CPU ユーザー時間 (ミリ秒単位)。| Linux では、この統計は CGroups cpuacct サブシステムから提供され、システム行での値は cpuacct.stat になります | 
 |active_processes_count | 要求の時点で実行されている外部プロセスの数。| Linux では、この統計は CGroups pids サブシステムから提供され、値は pids.current になります | 
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 Java 開発者はいくつかの簡単な例を試して、SQL Server での Java の動作方法の基本を確認できます。 次の手順については、以下のリンクを参照してください。
 
-+ [チュートリアル: Java での正規表現](../language-extensions/tutorials/search-for-string-using-regular-expressions-in-java.md)
++ [チュートリアル:Java での正規表現](../language-extensions/tutorials/search-for-string-using-regular-expressions-in-java.md)

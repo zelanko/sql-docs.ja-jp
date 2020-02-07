@@ -21,10 +21,10 @@ ms.assetid: 49239d02-964e-47c0-9b7f-2b539151ee1b
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 85ca560e24fac75897d0b65946121e3ca4251e20
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75252750"
 ---
 # <a name="transport-security---database-mirroring---always-on-availability"></a>トランスポート セキュリティ - データベース ミラーリング - AlwaysOn 可用性
@@ -72,7 +72,7 @@ ms.locfileid: "75252750"
   
  必要に応じて、エンドポイントで使用可能な暗号化アルゴリズムを管理できます。それには、CREATE ENDPOINT ステートメントまたは ALTER ENDPOINT ステートメントの ALGORITHM オプションに、次のいずれかの値を指定します。  
   
-|ALGORITHM の値|[説明]|  
+|ALGORITHM の値|説明|  
 |---------------------|-----------------|  
 |RC4|エンドポイントで RC4 アルゴリズムを使用する必要があることを指定します。 これは既定値です。<br /><br /> <strong>\*\* 警告 \*\*</strong> RC4 アルゴリズムは推奨されません。 [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] AES を使用することをお勧めします。|  
 |AES|エンドポイントで AES アルゴリズムを使用する必要があることを指定します。|  

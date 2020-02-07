@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9192afa87b3a035bbc048fa2476c18c1673a7a39
-ms.sourcegitcommit: 3ec48823bee1c092ce2aba6011b95174de03fb65
+ms.openlocfilehash: 71864b1670d61448b48e3acdc89d9c2d231c782d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68926950"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244407"
 ---
 # <a name="sql-server-help-and-feedback"></a>SQL Server のヘルプとフィードバック
 
@@ -22,7 +22,7 @@ ms.locfileid: "68926950"
 
 ## <a name="contact-microsoft-support"></a>Microsoft サポートに問い合わせる
 
-サポート プランをご利用の場合は、Microsoft サポートとの[チケットを開く](https://support.microsoft.com/en-us/hub/4343728/support-for-business)ことができます。  詳細については、[企業のサポート オプション](https://support.microsoft.com/en-us/help/4341255/support-for-business)を参照してください。 
+サポート プランをご利用の場合は、Microsoft サポートとの[チケットを開く](https://support.microsoft.com/hub/4343728/support-for-business)ことができます。  詳細については、[企業のサポート オプション](https://support.microsoft.com/help/4341255/support-for-business)を参照してください。 
 
 サポート プランをご利用ではない場合は、コミュニティに支援を求めるか、[https://aka.ms/sqlfeedback](https://aka.ms/sqlfeedback) の UserVoice 経由でバグを送信できます。
 
@@ -63,7 +63,7 @@ SQL Server の問題に役立つコミュニティがいくつかあります。
 - **Azure Data Studio の問題**:[Azure Data Studio GitHub](https://github.com/microsoft/azuredatastudio/issues)
  
 
-###  <a name="sql-server-documentation"></a>SQL Server のドキュメント
+###  <a name="sql-server-documentation"></a>SQL Server ドキュメント
 
 SQL Server コンテンツ チームに連絡する最善の方法は、Git Issue を使用することです。 ほとんどのページの下部には、Git Issue を送信するための次のオプションがあります。 
 

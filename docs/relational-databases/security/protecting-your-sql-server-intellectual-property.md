@@ -14,10 +14,10 @@ ms.assetid: 174a646a-d65c-4074-8249-d783e91be2dd
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: afe179023f72ec509af5828bb89afb51f93b53a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67986595"
 ---
 # <a name="protecting-your-sql-server-intellectual-property"></a>SQL Server の知的所有権の保護
@@ -32,7 +32,7 @@ ms.locfileid: "67986595"
 
 クライアントがコンピューターの管理者でない場合は、クライアントのアクセスを阻止できます。 ファイル データの暗号化、バックアップの暗号化、すべてのユーザー操作の監査には、[透過的なデータ暗号化](../../relational-databases/security/encryption/transparent-data-encryption.md)を使用できます。 ただし、[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] コンピューターの [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] の管理者と管理グループは、これらの操作を取り消すことができます。
 
-## <a name="solution"></a>解決方法
+## <a name="solution"></a>解決策
 クライアントのコンピューターに [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] をインストールしなくてもクライアントのデータ アクセスを構成する方法は多数あります。 最も簡単な方法は、クライアントが管理者ではない [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)] を [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) と組み合わせて使用する方法です。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] の概要については、「[SQL Database とは SQL データベースの概要](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview)」を参照してください。  
 
 また、[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] を自分のネットワークにホストし、クライアントがネットワーク経由で直接または Web アプリケーションを経由してデータにアクセスできるようにできます。

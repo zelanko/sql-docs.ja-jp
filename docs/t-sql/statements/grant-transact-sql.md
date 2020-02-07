@@ -26,10 +26,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e23c4794b00daca7a228a3cd189835fcdf32628a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68050647"
 ---
 # <a name="grant-transact-sql"></a>GRANT (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "68050647"
 
   セキュリティ保護可能なリソースに対する権限をプリンシパルに許可します。  一般的な考え方としては、GRANT \<権限> ON \<オブジェクト> TO \<ユーザー、ログイン、またはグループ> という形になります。 権限の概要については、「[権限 &#40;データベース エンジン&#41;](../../relational-databases/security/permissions-database-engine.md)」を参照してください。  
   
- ![記事のリンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "記事のリンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![記事リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "記事リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
@@ -119,7 +119,7 @@ AS *principal*
 
 このステートメントで AS を使っても、別のユーザーを偽装できることは意味しません。 
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  GRANT ステートメントの完全な構文は複雑です。 前の構文ダイアグラムは、構造をわかりやすくするために簡略化されています。 セキュリティ保護可能なリソースに対するアクセス許可を許可するための完全な構文については、後の記事を参照してください。  
   
  許可された権限を取り消す場合は REVOKE ステートメントを使用します。また、GRANT によってプリンシパルに特定の権限が許可されないようにするには DENY ステートメントを使用します。  
@@ -157,7 +157,7 @@ GRANT EXECUTE ON TestMe TO User2 AS TesterRole;
   
  sysadmin 固定サーバー ロールのメンバーなど、CONTROL SERVER 権限が許可されているユーザーは、サーバー内のセキュリティ保護可能なリソースに対する権限を許可できます。 db_owner 固定データベース ロールのメンバーなど、データベースに対する CONTROL 権限が許可されているユーザーは、データベース内のセキュリティ保護可能なリソースに対する権限を許可できます。 スキーマに対する CONTROL 権限が許可されているユーザーは、スキーマ内のオブジェクトに対する権限を許可できます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の表は、セキュリティ保護可能なリソースと、その構文について説明している記事の一覧です。  
   
 |||  
@@ -173,25 +173,25 @@ GRANT EXECUTE ON TestMe TO User2 AS TesterRole;
 |エンドポイント|[GRANT (エンドポイントの権限の許可) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)|  
 |フルテキスト カタログ|[GRANT (フルテキストの権限の許可) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-full-text-permissions-transact-sql.md)|  
 |フルテキスト ストップリスト|[GRANT (フルテキストの権限の許可) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-full-text-permissions-transact-sql.md)|  
-|機能|[GRANT (オブジェクトの権限の許可) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
-|Login|[GRANT (サーバー プリンシパルの権限の許可) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-server-principal-permissions-transact-sql.md)|  
+|Function|[GRANT (オブジェクトの権限の許可) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
+|ログイン|[GRANT (サーバー プリンシパルの権限の許可) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-server-principal-permissions-transact-sql.md)|  
 |メッセージ型|[GRANT (Service Broker の権限の許可) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)|  
 |Object|[GRANT (オブジェクトの権限の許可) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
 |キュー|[GRANT (オブジェクトの権限の許可) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
 |リモート サービス バインド|[GRANT (Service Broker の権限の許可) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)|  
-|ロール|[GRANT (データベース プリンシパルの権限の許可) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-principal-permissions-transact-sql.md)|  
-|Route|[GRANT (Service Broker の権限の許可) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)|  
+|Role|[GRANT (データベース プリンシパルの権限の許可) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-principal-permissions-transact-sql.md)|  
+|ルート|[GRANT (Service Broker の権限の許可) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)|  
 |スキーマ|[GRANT (スキーマ権限の許可) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-schema-permissions-transact-sql.md)|  
 |検索プロパティ リスト|[GRANT (検索プロパティ リスト権限の許可) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-search-property-list-permissions-transact-sql.md)|  
-|[サーバー]|[GRANT (サーバーの権限の許可) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-server-permissions-transact-sql.md)|  
+|サーバー|[GRANT (サーバーの権限の許可) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-server-permissions-transact-sql.md)|  
 |サービス|[GRANT (Service Broker の権限の許可) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)|  
 |ストアド プロシージャ|[GRANT (オブジェクトの権限の許可) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
 |対称キー|[GRANT (対称キーの権限の許可) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-symmetric-key-permissions-transact-sql.md)|  
 |シノニム|[GRANT (オブジェクトの権限の許可) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
 |システム オブジェクト|[GRANT (システム オブジェクトの権限の許可) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-system-object-permissions-transact-sql.md)|  
 |テーブル|[GRANT (オブジェクトの権限の許可) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
-|型|[GRANT (型の権限の許可) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-type-permissions-transact-sql.md)|  
-|ユーザー|[GRANT (データベース プリンシパルの権限の許可) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-principal-permissions-transact-sql.md)|  
+|Type|[GRANT (型の権限の許可) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-type-permissions-transact-sql.md)|  
+|User|[GRANT (データベース プリンシパルの権限の許可) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-principal-permissions-transact-sql.md)|  
 |表示|[GRANT (オブジェクトの権限の許可) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)|  
 |XML スキーマ コレクション|[GRANT (XML スキーマ コレクションの権限の許可) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-xml-schema-collection-permissions-transact-sql.md)|  
   

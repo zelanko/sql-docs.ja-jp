@@ -16,10 +16,10 @@ ms.assetid: b741894f-d267-4b10-adfe-cbc14aa6caeb
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 82ff8e58891d07ccbecfef119c05c0cef1bbb06e
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095269"
 ---
 # <a name="enable-and-disable-change-data-capture-sql-server"></a>変更データ キャプチャの有効化と無効化 (SQL Server)
@@ -27,7 +27,7 @@ ms.locfileid: "74095269"
   このトピックでは、データベースおよびテーブルに対して変更データ キャプチャを有効または無効にする方法について説明します。  
   
 ## <a name="enable-change-data-capture-for-a-database"></a>データベースでの変更データ キャプチャの有効化  
- 個々のテーブルに対してキャプチャ インスタンスを作成する前に、 **sysadmin** 固定サーバー ロールのメンバーがデータベースで変更データ キャプチャを有効にする必要があります。 これは、データベース コンテキストでストアド プロシージャ [sys.sp_cdc_enable_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md) を実行することにより行われます。 データベースが既に有効であるかどうかを確認するには、**sys.databases** カタログ ビューの **is_cdc_enabled** 列に対してクエリを実行します。  
+ 個々のテーブルに対してキャプチャ インスタンスを作成する前に、 **sysadmin** 固定サーバー ロールのメンバーがデータベースで変更データ キャプチャを有効にする必要があります。 これは、データベース コンテキストでストアド プロシージャ [sys.sp_cdc_enable_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md) を実行することにより行われます。 データベースが既に有効であるかどうかを確認するには、 **sys.databases** カタログ ビューの **is_cdc_enabled** 列に対してクエリを実行します。  
   
  データベースで変更データ キャプチャを有効にすると、 **cdc** スキーマ、 **cdc** ユーザー、メタデータ テーブル、その他のシステム オブジェクトがデータベースに作成されます。 **cdc** スキーマには、変更データ キャプチャ メタデータ テーブルが含まれています。ソース テーブルで変更データ キャプチャを有効にした後には、変更データのリポジトリとして機能する個々の変更テーブルも含まれます。 **cdc** スキーマには、変更データのクエリの実行に使用する関連のシステム関数も含まれています。  
   

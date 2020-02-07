@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 4cb806c0a6286ec8a6608b346d12e666a8e9a09f
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73724531"
 ---
 # <a name="build-an-r-model-and-save-to-sql-server-walkthrough"></a>R モデルを構築して SQL Server に保存する (チュートリアル)
@@ -21,7 +21,7 @@ ms.locfileid: "73724531"
 
 このステップでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で機械学習モデルを構築し、モデルを保存する方法について説明します。 モデルを保存することにより、システム ストアド プロシージャ [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) または [PREDICT (T-SQL) 関数](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)を使用して、[!INCLUDE[tsql](../../includes/tsql-md.md)] コードから直接呼び出すことができます。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 この手順では、進行中の R セッションは、このチュートリアルの前の手順に基づいていることを前提としています。 ここでは、これらの手順で作成した接続文字列とデータ ソース オブジェクトを使用します。 スクリプトの実行には、次のツールとパッケージが使用されます。
 
@@ -201,7 +201,7 @@ GO
 > [!NOTE]
 > 使用するデータ ポイントの数によっては、グラフの外観が異なる場合があります。
 
-## <a name="deploy-the-model"></a>モデルの配置
+## <a name="deploy-the-model"></a>モデルをデプロイする
 
 モデルを構築した後、それが正常に実行されていることを確かめたら、おそらく、組織内のユーザーまたはユーザーがモデルを利用できるサイトにデプロイしたり、定期的にモデルを再トレーニングしたり再調整したりすることができます。 このプロセスは、モデルの*運用*と呼ばれることがあります。 SQL Server では、ストアド プロシージャに R コードを埋め込むことによって運用が実現されます。 コードはプロシージャ内に存在するので、SQL Server に接続できる任意のアプリケーションから呼び出すことができます。
 
@@ -241,7 +241,7 @@ GO
 
 モデルをテーブルへの保存に必要なステートメントは、INSERT のみです。 ただし、多くの場合、*PersistModel* などのストアド プロシージャにラップすると、より簡単になります。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 次の最後のレッスンでは、[!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、保存したモデルに対してスコアリングを実行する方法について説明します。
 

@@ -20,10 +20,10 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 40ce8094d651ee9ae1423b9c3feb636c33befca9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67901952"
 ---
 # <a name="match-transact-sql"></a>MATCH (Transact-SQL)
@@ -134,13 +134,13 @@ FROM 句で指定されたエッジ テーブルの名前またはエイリア�
 * **+** :パターンを 1 回以上繰り返します。 最短パスが見つかったらすぐに終了します。    
 * **{1,n}** : パターンを 1 から "n" 回繰り返します。 最短パスが見つかったらすぐに終了します。     
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 MATCH 内のノード名は繰り返すことができます。  つまり、ノードは、同じクエリ内でノードは任意の回数走査できます。  
 エッジ名は MATCH 内では繰り返すことはできません。  
 エッジは、いずれの方向もポイントできますが、明示的な方向が必要です。  
 MATCH パターンでは、OR および NOT 演算子はサポートされていません。 MATCH は、AND と WHERE 句を使用して他の式と組み合わせることができます。 ただし、OR または NOT を使用して他の式と組み合わせることはサポートされていません。 
 
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 ### <a name="a--find-a-friend"></a>A.  友達の検索 
  次の例では、Person ノード テーブルと friend エッジ テーブルを作成し、いくつかデータを挿入し、MATCH を使用して、グラフの Alice の友人を検索します。
 
