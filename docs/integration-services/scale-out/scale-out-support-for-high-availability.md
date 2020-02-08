@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.openlocfilehash: 36f4dce1559df59a61ee25d26b76d0ddd4dda3c1
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "69028749"
 ---
 # <a name="scale-out-support-for-high-availability"></a>高可用性を実現するための Scale Out のサポート
@@ -31,7 +31,7 @@ Scale Out Master 側の高可用性は、[Always On for SSIS Catalog](../catalog
 
 SSIS カタログに Always On を使用して Scale Out Master 側の高可用性を設定するには、次の手順を実行します。
 
-## <a name="1-prerequisites"></a>1.Prerequisites
+## <a name="1-prerequisites"></a>1.前提条件
 Windows フェールオーバー クラスターを設定します。 手順については、ブログ投稿の「[Windows Server 2012 のフェールオーバー クラスター機能とツールのインストール](https://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx)」 を参照してください。 すべてのクラスター ノードに機能とツールをインストールします。
 
 ## <a name="2-install-scale-out-master-on-the-primary-node"></a>2.プライマリ ノードに Scale Out Master をインストールする
@@ -113,7 +113,7 @@ Azure の仮想マシンでは、この構成手順の他に追加の手順が�
 ## <a name="upgrade-scale-out-in-high-availability-environment"></a>高可用性環境で Scale Out をアップグレードする
 高可用性環境で Scale Out をアップグレードするには、[Always On for SSIS Catalog のアップグレード手順](../catalog/ssis-catalog.md#Upgrade)に従い、各コンピューター上の Scale Out Master と Scale Out Worker をアップグレードし、上記の手順 7 の Windows Server フェールオーバー クラスター ロールを新しいバージョンの Scale Out Master サービスを使用して再作成します。
 
-## <a name="next-steps"></a>次の手順
-詳細については、次の記事をご覧ください。
+## <a name="next-steps"></a>次のステップ
+詳細については、次の記事を参照してください。
 -   [Integration Services (SSIS) Scale Out Master](integration-services-ssis-scale-out-master.md)
 -   [Integration Services (SSIS) Scale Out Worker](integration-services-ssis-scale-out-worker.md)

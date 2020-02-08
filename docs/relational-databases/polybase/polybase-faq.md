@@ -8,10 +8,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 ms.openlocfilehash: 9d4cda6dd0fdade80521a801799e5ee53a80c140
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71710552"
 ---
 # <a name="frequently-asked-questions"></a>よく寄せられる質問
@@ -54,13 +54,13 @@ ms.locfileid: "71710552"
 
 |機能 |ビッグ データ クラスター|スタンドアロン インスタンス|
 |--------------------------|--------------------------|---------|   
-|SQL Server、Oracle、Teradata、Mongo DB に対する外部データ ソースを作成する |×|× |
-|互換性のあるサードパーティ製 ODBC ドライバーを使用して外部データ ソースを作成する | | ×|
-|HADOOP データ ソースに対する外部データ ソースを作成する | ×| ×|
-|Azure Blob Storage に対する外部データ ソースを作成する | ×| ×|
-|SQL Server データ プールに外部テーブルを作成する | ×| |
-|SQL Server ストレージ プールに外部テーブルを作成する | ×| |
-|クエリの実行をスケールアウトする | ×| ×|
+|SQL Server、Oracle、Teradata、Mongo DB に対する外部データ ソースを作成する |X|X |
+|互換性のあるサードパーティ製 ODBC ドライバーを使用して外部データ ソースを作成する | | X|
+|HADOOP データ ソースに対する外部データ ソースを作成する | X| X|
+|Azure Blob Storage に対する外部データ ソースを作成する | X| X|
+|SQL Server データ プールに外部テーブルを作成する | X| |
+|SQL Server ストレージ プールに外部テーブルを作成する | X| |
+|クエリの実行をスケールアウトする | X| X|
 
 > [!NOTE]
 >この表では、最新の [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] CTP で利用できる機能については説明されていません。 使用可能な機能については、リリース ノートをご覧ください。 ODBC ジェネリック コネクタを使用した接続の詳細については、[ODBC ジェネリック型を構成するためのハウツー ガイド](polybase-configure-odbc-generic.md)の記事をご覧ください。

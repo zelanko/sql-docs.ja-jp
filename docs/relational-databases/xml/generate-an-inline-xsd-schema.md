@@ -19,10 +19,10 @@ ms.assetid: 04b35145-1cca-45f4-9eb7-990abf2e647d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a0902765a96f68acf811bd3583a41a8e8198d5ca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67943157"
 ---
 # <a name="generate-an-inline-xsd-schema"></a>インライン XSD スキーマの生成
@@ -37,7 +37,7 @@ ms.locfileid: "67943157"
   
  FOR XML クエリに XMLSCHEMA を指定すると、クエリ結果としてスキーマと XML データの両方が返されます。 データの最上位レベルの各要素が既定の名前空間宣言を使用して前のスキーマを参照し、次に、既定の名前空間宣言がインライン スキーマの対象の名前空間を参照します。  
   
- 例:  
+ 次に例を示します。  
   
 ```  
 <xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:schema="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">  
@@ -274,7 +274,7 @@ for    XML RAW, ELEMENTS, XMLSCHEMA
   
  このインライン XSD スキーマでは、次の点に注意してください。  
   
--   ListPrice と DealerPrice は `money` という同じ型で、テーブルではどちらも NULL 値が許容されます。 したがって、これらの要素は返される XML に含まれないので、<`row`> 要素の複合型の宣言には、minOccurs が 0、maxOccurs が 2 に指定された 1 つの <`Price`> 子要素のみが含まれます。  
+-   ListPrice と DealerPrice は `money`という同じ型で、テーブルではどちらも NULL 値が許容されます。 したがって、これらの要素は返される XML に含まれないので、<`row`> 要素の複合型の宣言には、minOccurs が 0、maxOccurs が 2 に指定された 1 つの <`Price`> 子要素のみが含まれます。  
   
 -   テーブルの `DealerPrice` の値が NULL なので、クエリ結果には、`ListPrice` のみが <`Price`> 要素として返されます。 `XSINIL` パラメーターを ELEMENTS ディレクティブに追加すると、返される両方の要素で、DealerPrice に対応する <`Price`> 要素の `xsi:nil` の値が TRUE に設定されます。 また、インライン XSD スキーマの <`row`> の複合型の定義として 2 つの <`Price`> 子要素が返されます。どちらの要素でも `nillable` 属性が TRUE に設定されます。 結果の一部を次に示します。  
   
@@ -465,7 +465,7 @@ FOR XML RAW, ELEMENTS, XMLSCHEMA
   
 -   Col2 と Col3 の両方で NULL 値が許容されるので、<`Col`> 要素の宣言により、minOccurs が 0、maxOccurs が 2 にそれぞれ指定されます。  
   
--   これらの <`Col`> 要素は兄弟なので、スキーマに含まれる要素の宣言は 1 つです。 また、型は異なりますが、どちらの要素も単純型なので、スキーマ内の要素の型は `xsd:anySimpleType` になります。 結果では、`xsi:type` 属性により、それぞれのインスタンスの型が識別されます。  
+-   これらの <`Col`> 要素は兄弟なので、スキーマに含まれる要素の宣言は 1 つです。 また、型は異なりますが、どちらの要素も単純型なので、スキーマ内の要素の型は `xsd:anySimpleType`になります。 結果では、 `xsi:type` 属性により、それぞれのインスタンスの型が識別されます。  
   
 -   クエリ結果の <`Col`> 要素のインスタンスはすべて、`xsi:type` 属性を使用して、インスタンスの型を参照します。  
   

@@ -10,16 +10,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = sql-server-ver15 || = sqlallproducts-allversions
 ms.openlocfilehash: f03c9999471f1f196263cfab43960008c7d26aaf
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "74096113"
 ---
 # <a name="includesql-server-2019includessssqlv15-mdmd-release-notes"></a>[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] リリース ノート
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-この記事では、[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] の制限事項と既知の問題について説明します。 関連情報については、次を参照してください。
+この記事では、[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] の制限事項と既知の問題について説明します。 関連情報については、以下をご覧ください。
 
 > [[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] の新機能](../sql-server/what-s-new-in-sql-server-ver15.md)
 
@@ -80,7 +80,7 @@ SQL Server 2019 の RTM ビルド番号は `15.0.2000.5` です。
 
 - [SQL Server のインストールに必要なハードウェアおよびソフトウェア](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15.md)
 
-## <a name="machine-learning-services"></a>Machine Learning Services
+## <a name="machine-learning-services"></a>Machine Learning サービス
 
 SQL Server Machine Learning Services での問題については、「[SQL Server Machine Learning Services の既知の問題](../advanced-analytics/known-issues-for-sql-server-machine-learning-services.md)」を参照してください。
 

@@ -26,10 +26,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 19019a0493ef20aac9ab51090d64646d5d626185
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68041805"
 ---
 # <a name="set-datefirst-transact-sql"></a>SET DATEFIRST (Transact-SQL)
@@ -59,17 +59,17 @@ SET DATEFIRST 7 ;
  *number* |  **@** _number_var_  
  週の最初の曜日を示す整数値を指定します。 次のいずれかの値を指定できます。  
   
-|[値]|週の最初の曜日|  
+|Value|週の最初の曜日|  
 |-----------|------------------------------|  
 |**1**|月曜日|  
-|**2**|火曜日|  
+|**2**|Tuesday|  
 |**3**|水曜日|  
-|**4**|木曜日|  
+|**4**|Thursday|  
 |**5**|金曜日|  
 |**6**|土曜日|  
-|**7** (米国英語、既定値)|日曜日|  
+|**7** (米国英語、既定値)|土曜日|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  SET DATEFIRST の現在の設定を確認するには、[@@DATEFIRST](../../t-sql/functions/datefirst-transact-sql.md) 関数を使います。  
   
  SET DATEFIRST の設定は、解析時ではなく実行時に設定されます。  
@@ -79,7 +79,7 @@ SET DATEFIRST 7 ;
 ## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、日付値に対応する曜日を表示し、`DATEFIRST` の設定を変更した場合の影響を示しています。  
   
 ```  

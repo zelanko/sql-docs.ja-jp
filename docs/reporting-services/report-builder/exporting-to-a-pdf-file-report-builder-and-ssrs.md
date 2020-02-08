@@ -9,10 +9,10 @@ ms.assetid: f22497b7-f6c1-4c7b-b831-8c731e26ae37
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ff2c93000c1b5f0e9d01a3204858717640733228
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580787"
 ---
 # <a name="exporting-to-a-pdf-file-report-builder-and-ssrs"></a>PDF ファイルへのエクスポート (レポート ビルダーおよび SSRS)
@@ -60,9 +60,9 @@ ms.locfileid: "65580787"
 |PDF プロパティ|作成元|  
 |------------------|------------------|  
 |**Title**|**Name** RDL 要素の **Report** 属性です。|  
-|**Author**|**Author** RDL 要素です。|  
-|**[Subject]**|**Description** RDL 要素です。|  
-|**Creator**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 製品の名前およびバージョンです。|  
+|**作成者**|**Author** RDL 要素です。|  
+|**[件名]**|**Description** RDL 要素です。|  
+|**作成者**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 製品の名前およびバージョンです。|  
 |**Producer**|表示拡張機能の名前とバージョンです。|  
 |**CreationDate**|PDF **datetime** 形式でのレポートの実行時間です。|  
   

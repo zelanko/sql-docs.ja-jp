@@ -10,10 +10,10 @@ ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f83f028772a93dbd2104d9f449fcd7aa3b1be0d8
-ms.sourcegitcommit: 02449abde606892c060ec9e9e9a85a3f49c47c6c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74543010"
 ---
 # <a name="data-type-support"></a>データ型のサポート
@@ -70,5 +70,5 @@ SSIS コンポーネントでは、Teradata Parallel Transporter API (TPT API) �
 
 - [Teradata 接続マネージャー](teradata-connection-manager.md)を構成する
 - [Teradata ソース](teradata-source.md)を構成する
-- [Teradata 転送先](teradata-destination.md)を構成する
-- ご質問がある場合は、[Tech Community](https://aka.ms/AA6iwdw) を参照してください。
+- [Teradata 変換先](teradata-destination.md)を構成する
+- ご質問がある場合は、[技術者コミュニティ](https://aka.ms/AA6iwdw)を参照してください。

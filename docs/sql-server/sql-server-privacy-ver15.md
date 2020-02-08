@@ -11,10 +11,10 @@ author: MsSQLGirl
 ms.author: jukoesma
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: bbb8a21ee63e0a14778ee57874ba0ef385ac6cba
-ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/20/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "71150295"
 ---
 # <a name="sql-server-2019-privacy-supplement"></a>SQL Server 2019 のプライバシーの補足情報
@@ -124,7 +124,7 @@ SQL Server の使用許諾契約ごとに、インターネット ベースの�
 -   組織名 (例:Microsoft Corp.)
 
 ### <a name="permitted-usage-scenarios"></a>許可される使用シナリオ
-|シナリオ  |アクセスの制限  |リテンション期間の要件|
+|シナリオ  |アクセス制限  |リテンション期間の要件|
 |---------|---------|---------|
 | Microsoft では、Azure Virtual Machines 内で SQL Server を使用するために Azure 内でお客様にオプションの特典を与える目的のためだけに、Azure Virtual Machines で実行されている SQL Server インスタンスの一般的使用状況データを収集することがあります。 | Microsoft は、Azure Virtual Machines で SQL Server を実行しているお客様が Azure で SQL Server を実行する場合にのみ与えられる特典にアクセスできるよう、Azure portal などを経由してお客様にデータを公開できます。 | 最短 90 日から最長 3 年 |
 
@@ -151,7 +151,7 @@ Microsoft は SQL Server を使用するその他のプログラムで設定さ�
 
 ### <a name="permitted-usage-scenarios"></a>許可される使用シナリオ
 
-|シナリオ  |アクセスの制限  |リテンション期間の要件|
+|シナリオ  |アクセス制限  |リテンション期間の要件|
 |---------|---------|---------|
 |機能の改善および/または現在の機能のバグの修正のために Microsoft で使用される可能性があります。|サードパーティによるアクセスなしの Microsoft の内部使用に制限されます。 |最短 90 日から最長 3 年 |
 |顧客への提案の際に使用される可能性があります。  たとえば、"製品の使用状況に基づいて、パフォーマンスの向上のため、機能 *X* の使用を検討してください" というように提案されます。 |Microsoft は、ダッシュボードなどを通じて、元の顧客にデータを公開できます。 |顧客データのセキュリティ ログ:最短 3 年から最長 6 年 |

@@ -24,10 +24,10 @@ ms.assetid: 1df2123a-1197-4fff-91a3-25e3d8848aaa
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 0e1fff3c60dab7e8fe055753c125fddf70abb1df
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68039062"
 ---
 # <a name="dbcc-showcontig-transact-sql"></a>DBCC SHOWCONTIG (Transact-SQL)
@@ -89,7 +89,7 @@ DBCC SHOWCONTIG
 ## <a name="result-sets"></a>結果セット  
 次の表では、結果セットに表示される情報について説明します。
   
-|統計|[説明]|  
+|統計|説明|  
 |---|---|
 |**スキャンされたページ数**|テーブルまたはインデックスのページ数です。|  
 |**スキャンされたエクステント数**|テーブルまたはインデックスのエクステント数です。|  
@@ -110,14 +110,14 @@ DBCC SHOWCONTIG
   
 TABLERESULTS を指定した場合、DBCC SHOWCONTIG は次の列に加え、前の表で説明した 9 つの列も返します。
   
-|統計|[説明]|  
+|統計|説明|  
 |---|---|
 |**[オブジェクト名]**|処理されるテーブルまたはビューの名前です。|  
 |**ObjectId**|オブジェクト名の ID。|  
 |**IndexName**|処理されるインデックスの名前です。 ヒープの場合は NULL です。|  
 |**IndexId**|インデックスの ID。 ヒープの場合は 0 です。|  
 |**Level**|インデックスのレベルです。 レベル 0 は、インデックスのリーフ レベルまたはデータ レベルです。<br /><br /> ヒープの場合、レベルは 0 です。|  
-|**[ページ]**|インデックスまたはヒープ全体のレベルを構成するページ数です。|  
+|**ページ**|インデックスまたはヒープ全体のレベルを構成するページ数です。|  
 |**行数**|指定したインデックスのレベルのデータまたはインデックス レコードの数です。 ヒープの場合は、ヒープ全体のデータ レコードの数です。<br /><br /> ヒープでは、この関数から返されるレコード数が、ヒープに対して SELECT COUNT(*) を実行したときに返される行数と一致しない場合があります。 これは、1 行に複数のレコードが含まれる場合があるためです。 たとえば、更新の状況によっては、更新操作の結果として転送元レコードと転送先レコードが 1 つのヒープ行に含まれることがあります。 また、大きな LOB 行のほとんどは、LOB_DATA ストレージ内で複数のレコードに分割されます。|  
 |**MinimumRecordSize**|指定したインデックスのレベルまたはヒープ全体のレコードの最小サイズです。|  
 |**MaximumRecordSize**|指定したインデックスのレベルまたはヒープ全体のレコードの最大サイズです。|  
@@ -142,13 +142,13 @@ WITH TABLERESULTS および FAST を指定した場合の結果セットは WITH
 |**AverageRecordSize**|**ExtentFragmentation**|  
 |**ForwardedRecords**||  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 *index_id* を指定すると、DBCC SHOWCONTIG ステートメントは、指定されたインデックスのリーフ レベルでページ チェーンを移動します。 *table_id* のみを指定するか、*index_id* を 0 に指定すると、指定されたテーブルのデータ ページがスキャンされます。 この操作には、インテント共有 (IS) テーブル ロックのみが必要です。 この方法では、排他 (X) テーブル ロックが必要な場合を除き、すべての更新と挿入が実行できます。 これにより、実行の速度は速くなりますが、返される統計数に対するコンカレンシーの数は削減されません。 ただし、このコマンドを断片化の測定のみに使用する場合は、最適なパフォーマンスを得るために WITH FAST オプションを指定することをお勧めします。 高速スキャンでは、インデックスのリーフ レベルまたはデータ レベルのページは読み込まれません。 WITH FAST オプションは、ヒープには適用されません。
   
 ## <a name="restrictions"></a>制限  
 DBCC SHOWCONTIG では、**ntext**、**text**、**image** データ型のデータは表示されません。 これは、テキストとイメージのデータが格納されているテキスト インデックスが存在しなくなったためです。
   
-また、DBCC SHOWCONTIG でサポートされない新機能もあります。 例:
+また、DBCC SHOWCONTIG でサポートされない新機能もあります。 次に例を示します。
 -   指定されたテーブルまたはインデックスがパーティション分割されている場合、DBCC SHOWCONTIG では指定されたテーブルまたはインデックスの最初のパーティションのみが表示されます。  
 -   DBCC SHOWCONTIG では、行オーバーフロー ストレージ情報と、**nvarchar(max)** 、**varchar(max)** 、**varbinary(max)** 、**xml** など、その他の新しい行以外のデータ型は表示されません。  
 -   空間インデックスは、DBCC SHOWCONTIG ではサポートされません。  
@@ -187,7 +187,7 @@ DBCC SHOWCONTIG は、テーブルに著しい断片化が生じているかど�
 ## <a name="permissions"></a>アクセス許可  
 ユーザーはテーブルを所有しているか、**sysadmin** 固定サーバー ロール、**db_owner** 固定サーバー ロール、または **db_ddladmin** 固定データベース ロールのメンバーであることが必要です。
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 ### <a name="a-displaying-fragmentation-information-for-a-table"></a>A. テーブルの断片化情報を表示する  
 次の例では、`Employee` テーブルの断片化情報を表示します。
   
@@ -198,7 +198,7 @@ DBCC SHOWCONTIG ('HumanResources.Employee');
 GO  
 ```  
   
-### <a name="b-using-objectid-to-obtain-the-table-id-and-sysindexes-to-obtain-the-index-id"></a>B. OBJECT_ID を使用してテーブル ID を取得し、sysindexes を使用してインデックス ID を取得する  
+### <a name="b-using-object_id-to-obtain-the-table-id-and-sysindexes-to-obtain-the-index-id"></a>B. OBJECT_ID を使用してテーブル ID を取得し、sysindexes を使用してインデックス ID を取得する  
 次の例では、`OBJECT_ID` と `sys.indexes` カタログ ビューを使用して、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベース内の `Production.Product` テーブルの `AK_Product_Name` インデックスに対するテーブル ID とインデックス ID を取得します。
   
 ```sql  

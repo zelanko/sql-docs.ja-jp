@@ -13,10 +13,10 @@ ms.assetid: f5de748d-1c55-4714-9661-38fe62e5095f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 52d6f73b585f3d0857186bef9c6c440e8655adc1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68012343"
 ---
 # <a name="configure-the-remote-access-server-configuration-option"></a>remote access サーバー構成オプションの構成
@@ -24,7 +24,7 @@ ms.locfileid: "68012343"
 
   このトピックは、"リモート アクセス"機能に関するものです。 この構成オプションは、わかりにくい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] から [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への通信機能であり、非推奨であるため、使用すべきではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]への接続で問題があるため、それを解決するためにこのページに至った場合は、代わりに次のいずれかのページを参照してください。  
   
--   [チュートリアル: データベース エンジンの概要](../../relational-databases/tutorial-getting-started-with-the-database-engine.md)  
+-   [チュートリアル:データベース エンジンの概要](../../relational-databases/tutorial-getting-started-with-the-database-engine.md)  
   
 -   [SQL Server へのログイン](../../database-engine/configure-windows/logging-in-to-sql-server.md)  
   
@@ -44,7 +44,7 @@ ms.locfileid: "68012343"
   
 -   [SQL Server のインスタンスへの接続](../../relational-databases/server-management-objects-smo/create-program/connecting-to-an-instance-of-sql-server.md)  
   
--   [方法:SQL Server データベースへの接続を作成する](https://msdn.microsoft.com/library/s4yys16a.aspx)  
+-   [方法: SQL Server データベースへの接続を作成する](https://msdn.microsoft.com/library/s4yys16a.aspx)  
   
  **このトピックの本文は、ここから始まります。**  
   

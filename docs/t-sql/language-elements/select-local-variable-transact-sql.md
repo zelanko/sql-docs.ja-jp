@@ -26,13 +26,13 @@ author: rothja
 ms.author: jroth
 monikerRange: = azuresqldb-current ||>= sql-server-2016 ||= azure-sqldw-latest||>= sql-server-linux-2017||= sqlallproducts-allversions
 ms.openlocfilehash: 6a274535d53b7eec57fdf257425f855eded5d046
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68121781"
 ---
-# <a name="select-localvariable-transact-sql"></a>SELECT @local_variable (Transact-SQL)
+# <a name="select-local_variable-transact-sql"></a>SELECT @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   ローカル変数を式の値に設定します。  
@@ -56,7 +56,7 @@ SELECT { @local_variable { = | += | -= | *= | /= | %= | &= | ^= | |= } expressio
 右側の値を左側の変数に代入します。  
   
 複合代入演算子です。  
-  |演算子 (operator) |アクション (action) |   
+  |operator |action |   
   |-----|-----|  
   | = | 後続の式を変数に代入します。 |  
   | += | 加算して代入 |   
@@ -71,7 +71,7 @@ SELECT { @local_variable { = | += | -= | *= | /= | %= | &= | ^= | |= } expressio
  *式 (expression)*  
  任意の有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。 これには、スカラー サブクエリが含まれます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  SELECT @*local_variable* は通常、変数に 1 つの値を返すときに使用します。 ただし、*expression* が列名の場合は、複数の値を返すことができます。 SELECT ステートメントが複数の値を返した場合は、最後に返された値が変数に割り当てられます。  
   
  SELECT ステートメントが行を返さない場合、変数は現在の値を保ちます。 *expression* が値を返さないスカラー サブクエリの場合、変数は NULL に設定されます。  
@@ -81,9 +81,9 @@ SELECT { @local_variable { = | += | -= | *= | /= | %= | &= | ^= | |= } expressio
 > [!NOTE]  
 >  変数の割り当てを含む SELECT ステートメントを、同時に通常の結果セットの取得に使用することはできません。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
-### <a name="a-use-select-localvariable-to-return-a-single-value"></a>A. SELECT @local_variable を使用して値を 1 つ返す  
+### <a name="a-use-select-local_variable-to-return-a-single-value"></a>A. SELECT @local_variable を使用して値を 1 つ返す  
  次の例では、変数 `@var1` には、その値として `Generic Name` が割り当てられています。 `Store` に指定した値は `CustomerID` テーブル内に存在しないため、このテーブルに対するクエリは行を返しません。 変数の値は `Generic Name` のままです。  
   
 ```sql  
@@ -105,7 +105,7 @@ SELECT @var1 AS 'Company Name';
  Generic Name  
  ```  
   
-### <a name="b-use-select-localvariable-to-return-null"></a>B. SELECT @local_variable を使用して NULL を返す  
+### <a name="b-use-select-local_variable-to-return-null"></a>B. SELECT @local_variable を使用して NULL を返す  
  次の例では、`@var1` に値を割り当てるのにサブクエリを使用しています。 `CustomerID` に要求された値が存在しないため、サブクエリは値を返しません。変数は `NULL` に設定されます。  
   
 ```sql  

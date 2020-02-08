@@ -10,13 +10,13 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
 ms.openlocfilehash: 402466ab44a5f3795c0031ecdaa33cb863279839
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73594553"
 ---
-# <a name="quickstart-run-sql-server-in-the-cloud"></a>クイック スタート: クラウドで SQL Server を実行する
+# <a name="quickstart-run-sql-server-in-the-cloud"></a>クイック スタート:クラウドで SQL Server を実行する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 このクイックスタートでは、任意のクラウドで Red Hat Enterprise Linux (RHEL)、SUSE Linux Enterprise Server (SLES)、または Ubuntu に SQL Server をインストールします。 「[Azure portal での Linux SQL Server 仮想マシンのプロビジョニング](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=/sql/toc/toc.json)」に進み、Azure で SQL Server on Linux を実行します。
@@ -47,7 +47,7 @@ ms.locfileid: "73594553"
 1. ssh で droplet に接続します
 1. 「[Ubuntu クイックスタート](quickstart-install-connect-ubuntu.md)」に従います。
 1. リモート接続用に構成します。
-    * [コントロール パネル] の上部にある **[ネットワーク]** リンクをたどり、**[ファイアウォール]** を選択します。
+    * [コントロール パネル] の上部にある **[ネットワーク]** リンクをたどり、 **[ファイアウォール]** を選択します。
     * SQL Server がリッスンするポート (既定の TCP ポート 1433) でトラフィックを許可する受信規則を追加します
     
 ## <a name="google-cloud-platform"></a>Google Cloud Platform

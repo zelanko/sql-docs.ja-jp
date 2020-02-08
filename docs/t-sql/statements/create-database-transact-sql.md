@@ -38,10 +38,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: afca0210d61e23af7578e6805c5052c00c72f88a
-ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75952397"
 ---
 # <a name="create-database"></a>CREATE DATABASE
@@ -201,7 +201,7 @@ NON_TRANSACTED_ACCESS = { **OFF** | READ_ONLY | FULL } **適用対象**: [!INCLU
 
 データベースに対する非トランザクション FILESTREAM アクセスのレベルを指定します。
 
-|値|[説明]|
+|Value|説明|
 |-----------|-----------------|
 |OFF|非トランザクション アクセスは無効です。|
 |READONLY|このデータベース内の FILESTREAM データは、非トランザクション プロセスによって読み取ることができます。|
@@ -972,7 +972,7 @@ MAXSIZE: データベースの最大サイズを指定します。 MAXSIZE は�
 |1024 GB|該当なし|該当なし|√|√|√ (D)|
 |1024 GB から 4096 GB (256 GB ずつ増分)* |該当なし|該当なし|該当なし|該当なし|√|√|
 
-\* P11 と P15 では 1024 GB を既定のサイズとして MAXSIZE が 4 TB まで許可されます。 P11 と P15 では、追加料金なしで付属のストレージを 4 TB まで使用できます。 次の地域の Premium レベルでは、現在 1 TB を超える MAXSIZE を使用できます: 米国東部 2、米国西部、米国政府バージニア、西ヨーロッパ、ドイツ中部、東南アジア、東日本、オーストラリア東部、カナダ中部、カナダ東部。 DTU モデルのリソースの制限事項に関する詳細については、[DTU リソースの制限](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)に関する記事を参照してください。
+\* P11 と P15 では 1024 GB を既定のサイズとして MAXSIZE が 4 TB まで許可されます。 P11 と P15 では、追加料金なしで付属のストレージを 4 TB まで使用できます。 次の地域の Premium レベルでは、現在 1 TB を超える MAXSIZE を使用できます: 米国東部 2、米国西部、US Gov バージニア、西ヨーロッパ、ドイツ中部、東南アジア、東日本、オーストラリア東部、カナダ中部、カナダ東部。 DTU モデルのリソースの制限事項に関する詳細については、[DTU リソースの制限](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)に関する記事を参照してください。
 
 DTU モデルの MAXSIZE 値。指定される場合は、上記の表に示すように指定されたサービス レベルで有効な値である必要があります。
 
@@ -1486,7 +1486,7 @@ CREATE DATABASE ステートメントは、明示的なトランザクション�
 
 DATABASE オブジェクトを共有ロックします。
 
-## <a name="metadata"></a>メタデータ
+## <a name="metadata"></a>Metadata
 
 この操作に成功すると、このデータベースのエントリがメタデータ ビューの [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) および [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) に表示されます。
 

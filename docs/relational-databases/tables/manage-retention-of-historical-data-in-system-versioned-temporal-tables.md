@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 81e51dfca5692882ec75841f9be1244ef3479c33
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74401568"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>システム バージョン管理されたテンポラル テーブルの履歴データの保有期間管理
@@ -172,7 +172,7 @@ COMMIT ;
 
 次はデータを 6 か月維持する初回パーティション分割構成の図です。
 
-![パーティション分割](../../relational-databases/tables/media/partitioning.png "|::ref5::|")
+![パーティション分割](../../relational-databases/tables/media/partitioning.png "[パーティション分割]")
 
 > **注:** パーティション分割を構成するとき、RANGE LEFT または RANGE RIGHT を利用するときのパフォーマンス上の違いについては、下の「テーブル パーティション分割におけるパフォーマンス上の考慮事項」を参照してください。
 
@@ -314,7 +314,7 @@ COMMIT TRANSACTION
 
 最初に RANGE LEFT オプションと RANGE RIGHT オプションの意味を図で説明します。
 
-![パーティション分割 3](../../relational-databases/tables/media/partitioning3.png "|::ref7::|")
+![パーティション分割 3](../../relational-databases/tables/media/partitioning3.png "パーティション分割 3")
 
 パーティション関数を RANGE LEFT として定義すると、指定値はパーティションの上位境界になります。 RANGE RIGHT を利用するとき、指定値はパーティションの下位境界になります。 MERGE RANGE 操作でパーティション関数定義から境界を削除するとき、基礎となる実装は、境界を含むパーティションも削除します。 そのパーティションが空ではない場合、MERGE RANGE 操作の結果となるパーティションにデータが移動します。
 

@@ -16,10 +16,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5d0a96f061f01749194cd3f0d1be1aae5443ff8a
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73595707"
 ---
 # <a name="rotate-always-encrypted-keys-using-sql-server-management-studio"></a>SQL Server Management Studio を使用して Always Encrypted キーを交換する
@@ -56,14 +56,14 @@ SQL Server Management Studio では、古い列マスター キーで保護さ�
 
 ### <a name="step-3-configure-your-applications-with-the-new-column-master-key"></a>手順 3:新しい列マスター キーでアプリケーションを構成する
 
-この手順では、回転している列マスター キーで保護されたデータベース列 (つまり、回転されている列マスター キーで暗号化される列暗号化キーで暗号化されたデータベース列) に対してクエリを実行するすべてのクライアント アプリケーションが、新しい列マスター キーにアクセスできるようにする必要があります。 この手順は、新しい列マスター キーが格納されているキー ストアの種類によって異なります。 例:
+この手順では、回転している列マスター キーで保護されたデータベース列 (つまり、回転されている列マスター キーで暗号化される列暗号化キーで暗号化されたデータベース列) に対してクエリを実行するすべてのクライアント アプリケーションが、新しい列マスター キーにアクセスできるようにする必要があります。 この手順は、新しい列マスター キーが格納されているキー ストアの種類によって異なります。 次に例を示します。
 
 - 新しい列マスター キーが Windows 証明書ストアに格納された証明書である場合、データベースの列マスター キーのキー パスに指定された場所と同じ証明書ストアの場所 ( *[現在のユーザー]* または *[ローカル コンピューター]* ) に証明書を展開する必要があります。 アプリケーションが、証明書にアクセスできる必要があります。
   - 証明書が、"*現在のユーザー*" の証明書ストアに格納されている場合、証明書をアプリケーションの Windows ID (ユーザー) の [現在のユーザー] ストアにインポートする必要があります。
   - 証明書が "*ローカル コンピューター*" の証明書ストアに格納されている場合、アプリケーションの Windows ID に証明書へのアクセス許可が必要です。
 - 新しい列マスター キーが Microsoft Azure Key Vault に格納されている場合は、アプリケーションが Azure を認証でき、キーにアクセスできるように実装する必要があります。
 
-詳細については、「[Always Encrypted の列マスター キーの作成と保存](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)」をご覧ください。
+詳しくは、「[Always Encrypted の列マスター キーを作成して保存する](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)」をご覧ください。
 
 > [!NOTE]
 > 回転のこの時点では、古い列マスター キーと新しい列マスター キーの両方が有効であり、これらを使ってデータにアクセスすることができます。
@@ -141,14 +141,14 @@ SQL Server Management Studio では、 [ALTER COLUMN ENCRYPTION KEY (Transact-SQ
 
 詳細については、「[Always Encrypted の列マスター キーの作成と保存](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)」をご覧ください。
 
-## <a name="next-steps"></a>Next Steps
-- [SQL Server Management Studio で Always Encrypted を使用した列にクエリを実行する](always-encrypted-query-columns-ssms.md)
+## <a name="next-steps"></a>次の手順
+- [SQL Server Management Studio で Always Encrypted を使用した列のクエリを実行する](always-encrypted-query-columns-ssms.md)
 - [Always Encrypted を使用したアプリケーションの開発](always-encrypted-client-development.md)
 
 ## <a name="see-also"></a>参照
-- [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [常に暗号化](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Always Encrypted のキー管理の概要](overview-of-key-management-for-always-encrypted.md) 
-- [SQL Server Management Studio を使用した Always Encrypted の構成](configure-always-encrypted-using-sql-server-management-studio.md)
+- [SQL Server Management Studio を使用して Always Encrypted を構成する](configure-always-encrypted-using-sql-server-management-studio.md)
 - [PowerShell を使用した Always Encrypted の構成](configure-always-encrypted-using-powershell.md)
 - [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md)
 - [DROP COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/drop-column-master-key-transact-sql.md)

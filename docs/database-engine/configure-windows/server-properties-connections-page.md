@@ -13,10 +13,10 @@ ms.assetid: 33be8ac5-12dd-4b8a-99e0-68261c219dd2
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 15ab408465890a13fc6e87efd2f2e15e8f8a7fad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68025490"
 ---
 # <a name="server-properties---connections-page"></a>サーバーのプロパティ - [接続] ページ
@@ -34,7 +34,7 @@ ms.locfileid: "68025490"
  **Default connection options**  
  次の表に示すような既定の接続オプションを指定します。  
   
-|構成オプション|[説明]|  
+|構成オプション|説明|  
 |--------------------------|-----------------|  
 |**[disable deferred constraint checking]**|中間制約チェックまたは遅延制約チェックを制御します。|  
 |**暗黙のトランザクション**|ステートメント実行時にトランザクションを暗黙的に開始するかどうかを制御します。|  

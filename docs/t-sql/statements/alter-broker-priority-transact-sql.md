@@ -21,10 +21,10 @@ ms.assetid: 15fda1b2-e4dd-4f9d-935a-2e38926075b2
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 06ab8c327709fa6bfb504217bdd083aaed98f870
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066001"
 ---
 # <a name="alter-broker-priority-transact-sql"></a>ALTER BROKER PRIORITY (Transact-SQL)
@@ -107,7 +107,7 @@ FOR CONVERSATION
   
  PRIORITY_LEVEL を指定しない場合、メッセージ交換の優先度の優先度レベル プロパティは変更されません。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  ALTER BROKER PRIORITY で変更されるプロパティは、既存のメッセージ交換には適用されません。 既存のメッセージ交換は、開始されたときに割り当てられた優先度のままです。  
   
  詳細については、「[CREATE BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/create-broker-priority-transact-sql.md)」を参照してください。  
@@ -115,7 +115,7 @@ FOR CONVERSATION
 ## <a name="permissions"></a>アクセス許可  
  メッセージ交換の優先度を作成する権限は、既定では **db_ddladmin** 固定データベース ロールまたは **db_owner** 固定データベース ロールのメンバーと **sysadmin** 固定サーバー ロールのメンバーに与えられています。 データベースに対する ALTER 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-changing-only-the-priority-level-of-an-existing-conversation-priority"></a>A. 既存のメッセージ交換の優先度レベルのみ変更する  
  優先度レベルを変更しますが、コントラクト、ローカル サービス、またはリモート サービスの各プロパティは変更しません。  

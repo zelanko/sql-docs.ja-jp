@@ -11,17 +11,17 @@ ms.assetid: e918986c-af15-48f6-8178-256aed829c6a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 962ab17170c69b6225f852f0b625a6cd50fa20d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63308398"
 ---
 # <a name="configure-the-web-portal"></a>Web ポータルの構成
 
 Web ポータルは、Web フロント エンド アプリケーションであり、レポートの表示、レポート サーバー コンテンツの管理、およびネイティブ モードのレポート サーバーへのアクセス権の付与に使用されます。 Web ポータルは、レポート サーバー Web サービスと共に、同じレポート サーバー インスタンス内にインストールされます。また、セットアップ時に **[ネイティブ モードの既存の構成をインストールする]** を選択した場合は、必要に応じて構成できます。 Web ポータルはインストール後のタスクとしても構成できます。 このトピックでは、次の Web ポータルの構成シナリオについて説明します。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 Web ポータルを使用するには、次の条件を満たす必要があります。
 
@@ -48,7 +48,7 @@ Web ポータルは、ユーザーが Web ブラウザーでアクセスする W
 
 3. Web ポータルの一意の仮想ディレクトリ名を入力します。
 
-4. **[適用]** をクリックします。
+4. **[Apply]** をクリックします。
 
 5. [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] または Windows Server 2008 を使用している場合は、Web ポータルを使用する前に追加の手順が必要になることがあります。 詳細については、「 [ローカル管理用のネイティブ モードのレポート サーバー &#40;SSRS&#41; の構成](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)」を参照してください。
 
@@ -66,7 +66,7 @@ Web ポータルは、ユーザーが Web ブラウザーでアクセスする W
 
 3. レポート サーバー インスタンスの URL に置き換えます。
 
-4. 変更を保存してファイルを閉じます。
+4. 変更を保存し、ファイルを閉じます。
 
 構成ファイルの詳細については、「[Reporting Services の構成ファイル &#40;RSreportserver.config&#41; の変更」](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)および「[RsReportServer.config 構成ファイル](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)」を参照してください。
 
@@ -88,7 +88,7 @@ Web ポータルは、ユーザーが Web ブラウザーでアクセスする W
 
 6. **[適用]** を選択します。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 [Web ポータル](../../reporting-services/web-portal-ssrs-native-mode.md)  
 [Reporting Services のブラウザー サポート](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)

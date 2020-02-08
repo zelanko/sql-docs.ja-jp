@@ -17,10 +17,10 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: c163c54bb6ee6276ce39286c1b7743587f94f695
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71713271"
 ---
 # <a name="configure-distributed-transactions-for-an-always-on-availability-group"></a>Always On 可用性グループ用に分散トランザクションを構成する
@@ -41,7 +41,7 @@ ms.locfileid: "71713271"
 
 データベースがフェールオーバー クラスターのメンバーでもある場合を除き、DTC は可用性グループの処理には関与しません。 可用性グループ内では、可用性グループのロジックによってレプリカ間の整合性が維持されます。永続的なストレージにログ レコードが永続化されたことをセカンダリが確認して初めて、プライマリはコミットを完了し、呼び出し元へのコミットを確認します。 その後で初めて、プライマリはトランザクションの完了を宣言します。 非同期モードでは、セカンダリからの肯定応答を待たないため、少量のデータが失われる可能性が明示的に存在します。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 分散トランザクションをサポートするように可用性グループを構成するには、次の前提条件が満たされている必要があります。
 
@@ -195,7 +195,7 @@ following the guideline for Troubleshooting DTC Transactions.
 
 未確定トランザクションの解決について詳しくは、「[トランザクションを手動で解決する](https://technet.microsoft.com/library/cc754134.aspx)」をご覧ください。
 
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>次の手順  
 
 [分散トランザクション](https://docs.microsoft.com/dotnet/framework/data/adonet/distributed-transactions)
 

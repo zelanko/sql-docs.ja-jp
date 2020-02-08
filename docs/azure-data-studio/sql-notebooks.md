@@ -11,10 +11,10 @@ ms.author: alayu
 ms.custom: seodec18
 ms.date: 06/28/2019
 ms.openlocfilehash: df1e49af0378b6af4a3d82b5a5ec2a4293be5e35
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74957086"
 ---
 # <a name="how-to-use-notebooks-in-azure-data-studio"></a>Azure Data Studio でノートブックを使用する方法
@@ -82,7 +82,7 @@ PostgreSQL サーバー インスタンスに接続する SQL カーネル
 
 ![image22](media/sql-notebooks/jupyter-backend.png)
 
-|カーネル|[説明]
+|カーネル|説明
 |:-----|:-----
 | SQL カーネル | リレーショナル データベースを対象とした SQL コードを記述します。
 |PySpark3 と PySpark カーネル| クラスターから Spark コンピューティングを使用して Python コードを作成します。

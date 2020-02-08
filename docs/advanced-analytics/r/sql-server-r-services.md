@@ -10,10 +10,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: =sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 99aba9748e7ee6d53aabb18919324243740d996a
-ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/20/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "71149926"
 ---
 # <a name="what-is-sql-server-2016-r-services"></a>SQL Server 2016 R Services とは
@@ -46,7 +46,7 @@ SQL Server R Services を使用できる予測の種類の例には、次のも�
 |分類/カテゴリ|顧客からのフィードバックを肯定的なカテゴリと否定的なカテゴリに自動的に分割します|
 |回帰/予測の連続値|サイズと場所に基づいて家の価格を予測します|
 |異常検出|不正な銀行取引を検出します |
-|推奨事項|以前の購入に基づいて、オンラインの顧客が購入する商品を提案します|
+|Recommendations|以前の購入に基づいて、オンラインの顧客が購入する商品を提案します|
 
 ### <a name="how-to-execute-r-scripts"></a>R スクリプトを実行する方法
 
@@ -62,7 +62,7 @@ R Services で R スクリプトを実行するには、次の 2 つの方法が
 
 Microsoft のエンタープライズ パッケージに加えて、オープンソース パッケージとフレームワークを使用できます。 最も一般的なオープンソースの R パッケージは、R Services にプレインストールされています。 Microsoft の次の R パッケージも含まれています。
 
-| [パッケージ] | [説明] |
+| Package | 説明 |
 |-|-|
 | [RevoScaleR](../r/ref-r-revoscaler.md) | スケーラブルな R の主要パッケージ。データの変換と操作、統計の概要、視覚化、多くの形式のモデリング。 さらに、このパッケージの関数により、並列処理に使用できるコア全体にワークロードが自動的に分散されます。 |
 | [MicrosoftML (R)](../r/ref-r-microsoftml.md) | テキスト分析、画像分析、感情分析のカスタム モデルを作成する機械学習アルゴリズムを追加します。 |
@@ -72,7 +72,7 @@ Microsoft のエンタープライズ パッケージに加えて、オープン
 
 ## <a name="how-do-i-get-started-with-rservices"></a>RServices の基本的な使用方法
 
-1. [SQL Server 2016 R Services をインストールします](../install/sql-r-services-windows-install.md)
+1. [SQL Server 2016 R Services をインストールする](../install/sql-r-services-windows-install.md)
 
 1. 開発ツールを構成します。 使用できるもの:
 
@@ -81,12 +81,12 @@ Microsoft のエンタープライズ パッケージに加えて、オープン
 
 1. 最初の R スクリプトを作成します
 
-    + クイック スタート: [SQL Server でシンプルな R スクリプトを作成して実行する](../tutorials/quickstart-r-create-script.md)
-    + クイック スタート: [R で予測モデルを作成してトレーニングする](../tutorials/quickstart-r-train-score-model.md)
+    + クイック スタート:[SQL Server でシンプルな R スクリプトを作成して実行する](../tutorials/quickstart-r-create-script.md)
+    + クイック スタート:[R で予測モデルを作成してトレーニングする](../tutorials/quickstart-r-train-score-model.md)
     + チュートリアル:[T-SQL で R を使用する](../tutorials/sqldev-in-database-r-for-sql-developers.md):データの探索、特徴エンジニアリングの実行、モデルのトレーニングとデプロイ、予測の作成 (5 部構成シリーズ)
     + チュートリアル:[R ツールで R Services を使用する](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md):データの探索、グラフとプロットの作成、特徴エンジニアリングの実行、モデルのトレーニングとデプロイ、予測の作成 (6 部構成シリーズ)
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 + [SQL Server 2016 R Services をインストールする](../install/sql-r-services-windows-install.md)
 + [R 開発用にデータ サイエンス クライアントを設定する](../r/set-up-a-data-science-client.md)

@@ -13,10 +13,10 @@ author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 65b88c890dc16adf1a1b626dd0ddc91ad359505b
-ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74821977"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>SQL データベースでのインテリジェントなクエリ処理
@@ -139,7 +139,7 @@ USE HINT クエリ ヒントは、データベース スコープ構成または
 
 *LastRequestedMemory* では、前のクエリの実行から許可されたメモリがキロバイト (KB) で表示されます。 *IsMemoryGrantFeedbackAdjusted* 属性を使用すると、実際のクエリ実行プラン内のステートメントに対するメモリ許可フィードバックの状態を確認できます。 この属性に表示される値は次のとおりです。
 
-| IsMemoryGrantFeedbackAdjusted の値 | [説明] |
+| IsMemoryGrantFeedbackAdjusted の値 | 説明 |
 |---|---|
 | No:First Execution | メモリ許可フィードバックは、最初のコンパイルとそれに関連付けられた実行ではメモリを調整しません。  |
 | No:Accurate Grant | ディスクへの書き込みが存在せず、許可されたメモリの少なくとも 50% がステートメントによって使用されている場合、メモリ許可フィードバックはトリガーされません。 |
@@ -212,14 +212,14 @@ MSTVF のシンプルな `SELECT *` では、インターリーブ実行によ�
 ### <a name="tracking-interleaved-execution-activity"></a>インターリーブ実行アクティビティの追跡
 実際のクエリ実行プランで使用法属性を確認できます。
 
-| 実行プラン属性 | [説明] |
+| 実行プラン属性 | 説明 |
 | --- | --- |
 | ContainsInterleavedExecutionCandidates | *QueryPlan* ノードに適用します。 *true* の場合、プランにインターリーブ実行候補が含まれることを意味します。 |
 | IsInterleavedExecuted | TVF ノードの RelOp 以下にある *RuntimeInformation* 要素の属性。 *true* の場合、操作がインターリーブ実行操作の一部としてマテリアル化されたことを意味します。 |
 
 次の xEvent を使って、インターリーブ実行の発生を追跡することもできます。
 
-| xEvent | [説明] |
+| xEvent | 説明 |
 | ---- | --- |
 | interleaved_exec_status | このイベントは、インターリーブ実行が発生すると発生します。 |
 | interleaved_exec_stats_update | このイベントは、インターリーブ実行によって更新されたカーディナリティの推定を記述します。 |

@@ -11,10 +11,10 @@ ms.assetid: f8663ff3-aa98-4dd8-b850-b21efada0b87
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 341d48d35404cd8d18c3f1474693305b7fadb3cf
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296720"
 ---
 # <a name="catalogstart_execution-ssisdb-database"></a>catalog.start_execution (SSISDB データベース)
@@ -37,9 +37,9 @@ catalog.start_execution [@execution_id =] execution_id [, [@retry_count =] retry
  実行のインスタンスの一意の識別子。 *execution_id* は **bigint** です。
  
  [@retry_count =] *retry_count*  
- 実行に失敗した場合の再試行回数。 実行が Scale Out である場合にのみ有効になります。このパラメーターはオプションです。 指定しない場合、その値は 0 に設定されます。 *retry_count* は **int** です。
+ 実行に失敗した場合の再試行回数。 実行が Scale Out である場合にのみ有効になります。このパラメーターは省略可能です。 指定しない場合、その値は 0 に設定されます。 *retry_count* は **int** です。
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  実行は、パッケージの実行の 1 つのインスタンス中にパッケージによって使用されるパラメーター値を指定するために使用されます。 実行のインスタンスが作成された後、インスタンスが起動する前に、対応するプロジェクトが再配置される場合があります。 この場合、実行のインスタンスは古いプロジェクトを参照します。 この無効な参照により、ストアド プロシージャが失敗します。  
   
 > [!NOTE]  

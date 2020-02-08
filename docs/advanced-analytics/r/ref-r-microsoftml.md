@@ -9,16 +9,16 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 450091bba39cf10e551b8da5e62993ca676c64af
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73707921"
 ---
 # <a name="microsoftml-r-library-in-sql-server"></a>MicrosoftML (SQL Server の R ライブラリ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-**MicrosoftML** は、高パフォーマンスの機械学習アルゴリズムを提供する Microsoft の R 関数ライブラリです。 トレーニング、変換、スコアリング、テキストと画像の分析、および既存のデータから値を派生させるための特徴抽出を行うための関数が含まれています。
+**MicrosoftML** は、高パフォーマンスの機械学習アルゴリズムを提供する Microsoft の R 関数ライブラリです。 トレーニング、変換、スコアリング、テキストと画像の分析、既存のデータから値を派生させるための特徴抽出を行うための関数が含まれています。
 
 機械学習 API は、内部機械学習アプリケーション用に Microsoft によって開発されたものです。マルチコア処理と高速データ ストリーミングを使用してビッグ データに対する高パフォーマンスをサポートするために、長年にわたって改善され続けています。 また、MicrosoftML には、テキストと画像処理のための変換も多数含まれています。
 
@@ -31,7 +31,7 @@ ms.locfileid: "73707921"
 **MicrosoftML** ライブラリは R 3.4.3 に基づいており、次のいずれかの Microsoft 製品またはダウンロードをインストールした場合にのみ利用できます。
 
 + [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)
-+ [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)
++ [SQL Server Machine Learning サービス](../install/sql-machine-learning-services-windows-install.md)
 + [Microsoft Machine Learning Server 9.2.0 以降](https://docs.microsoft.com/machine-learning-server/)
 + [Microsoft R Client](set-up-a-data-science-client.md)
 
@@ -55,7 +55,7 @@ ms.locfileid: "73707921"
 
 ## <a name="1-machine-learning-algorithms"></a>1 - 機械学習アルゴリズム
 
-| 関数名 | [説明] |
+| 関数名 | 説明 |
 |---------------|-------------|
 |[rxFastTrees](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees) | MART 勾配ブースティング アルゴリズムの効率的な実装である、FastRank の実装。  |
 |[rxFastForest](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfastforest) | [rxFastTrees](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees) を使用した、ランダム フォレストと分位点回帰フォレストの実装。  |
@@ -69,7 +69,7 @@ ms.locfileid: "73707921"
 
 ## <a name="2-transformation-functions"></a>2 - 変換の関数
 
-| 関数名 | [説明] |
+| 関数名 | 説明 |
 |---------------|-------------|
 |[concat](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/concat) | 複数の列から 1 つのベクトル値列を作成する変換。  |
 |[categorical](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categorical) | 辞書によるカテゴリ変換の使用によりインジケーター ベクトルを作成します。  |
@@ -87,7 +87,7 @@ ms.locfileid: "73707921"
 
 ## <a name="3-scoring-and-training-functions"></a>3 - スコアリングおよびトレーニングの関数
 
-| 関数名 | [説明] |
+| 関数名 | 説明 |
 |---------------|-------------|
 |[rxPredict.mlModel](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxpredict) | より高速な予測パフォーマンスを実現するために、ストアド プロシージャを使用して SQL Server から、または R コードからスコアリング ライブラリを実行し、リアルタイムのスコアリングを可能にします。|
 |[rxFeaturize](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfeaturize) | 入力データ セットのデータを出力データ セットに変換します。|
@@ -96,7 +96,7 @@ ms.locfileid: "73707921"
 
 ## <a name="4-loss-functions-for-classification-and-regression"></a>4 - 分類および回帰の損失関数
 
-| 関数名 | [説明] |
+| 関数名 | 説明 |
 |---------------|-------------|
 |[expLoss](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/loss) | 指数分類損失関数の仕様。 | 
 |[logLoss](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/loss) | ログ分類損失関数の仕様。  |
@@ -107,14 +107,14 @@ ms.locfileid: "73707921"
 
 ## <a name="5-feature-selection-functions"></a>5 - 特徴選択の関数
 
-| 関数名 | [説明] |
+| 関数名 | 説明 |
 |---------------|-------------|
 |[minCount](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/mincount) | カウント モードの特徴選択の仕様。 |
 |[mutualInformation](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/mutualinformation) | 相互情報量モードの特徴選択の仕様。 |
 
 ## <a name="6-ensemble-modeling-functions"></a>6 - アンサンブル モデリングの関数
 
-| 関数名 | [説明] |
+| 関数名 | 説明 |
 |---------------|-------------|
 |[fastTrees](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/fasttrees) | [rxEnsemble](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxensemble) で高速ツリー モデルをトレーニングするための関数名と引数を含むリストを作成します。|
 |[fastForest](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfastforest) | [rxEnsemble](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxensemble) で高速フォレスト モデルをトレーニングするための関数名と引数を含むリストを作成します。|
@@ -124,14 +124,14 @@ ms.locfileid: "73707921"
 
 ## <a name="7-neural-networking-functions"></a>7 - ニューラル ネットワークの関数
 
-| 関数名 | [説明] |
+| 関数名 | 説明 |
 |---------------|-------------|
 |[optimizer](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/optimizer) | [rxNeuralNet](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet) 機械学習アルゴリズムの最適化アルゴリズムを指定します。|
 
 
 ## <a name="8-package-state-functions"></a>8 - パッケージ状態の関数
 
-| 関数名 | [説明] |
+| 関数名 | 説明 |
 |---------------|-------------|
 |[rxHashEnv](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxHashEnv) | パッケージ全体の状態を格納するために使用される環境オブジェクト。 |
 
@@ -154,6 +154,6 @@ logisticRegression(args);
 
 + [R のチュートリアル](../tutorials/sql-server-r-tutorials.md)
 + [計算コンテキストの使用方法](../tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)
-+ [SQL 開発者向け R: モデルのトレーニングと運用化](../tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [SQL 開発者向け R:モデルのトレーニングと運用化](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 + [GitHub 上の Microsoft 製品サンプル](https://github.com/Microsoft/SQL-Server-R-Services-Samples)
 + [R リファレンス (Microsoft Machine Learning Server)](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference) 

@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: ef03354afd3aa2318317ca4c946463a5b7355c12
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727530"
 ---
 # <a name="set-up-a-data-science-client-for-python-development-on-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services で Python 開発用のデータ サイエンス クライアントを設定する
@@ -33,7 +33,7 @@ SQL Server 用の Python ソリューションを開発して展開するには�
 > これらの演習のビデオ デモについては、[Jupyter Notebook からの SQL Server での R および Python のリモート実行](https://youtu.be/D5erljpJDjE)に関するビデオをご覧ください。
 
 > [!Note]
-> クライアント ライブラリのインストールの代替手段は、[スタンドアロン サーバー](../install/sql-machine-learning-standalone-windows-install.md)をリッチ クライアントとして使用することです。これは、より高度なシナリオの作業の場合に、一部のお客様に好まれます。 スタンドアロン サーバーは SQL Server から完全に切り離されていますが、Python ライブラリは同じであるため、データベース内分析で SQL Server のクライアントとして使用することができます。 また、他のデータ プラットフォームからデータをインポートおよびモデル化する機能を含む、SQL に関連しない作業にも使用できます。 スタンドアロン サーバーをインストールする場合は、この場所 (`C:\Program Files\Microsoft SQL Server\140\PYTHON_SERVER`) で Python 実行可能ファイルを見つけることができます。 インストールを確認するには、[Jupyter ノートブックを開き](#python-tools)、その場所で Python.exe を使用してコマンドを実行します。
+> クライアント ライブラリのインストールの代替手段は、[スタンドアロン サーバー](../install/sql-machine-learning-standalone-windows-install.md)をリッチ クライアントとして使用することです。これは、より高度なシナリオの作業の場合に、一部のお客様に好まれます。 スタンドアロン サーバーは SQL Server から完全に切り離されていますが、Python ライブラリは同じであるため、データベース内分析で SQL Server のクライアントとして使用することができます。 また、他のデータ プラットフォームからデータをインポートおよびモデル化する機能など、SQL に関連しない作業にも使用できます。 スタンドアロン サーバーをインストールする場合は、この場所 (`C:\Program Files\Microsoft SQL Server\140\PYTHON_SERVER`) で Python 実行可能ファイルを見つけることができます。 インストールを確認するには、[Jupyter ノートブックを開き](#python-tools)、その場所で Python.exe を使用してコマンドを実行します。
 
 ## <a name="commonly-used-tools"></a>一般的に使用されるツール
 
@@ -57,7 +57,7 @@ SSMS は個別にダウンロードします。これは、Python コードが�
 
 2. 特権を持つ管理者権限で PowerShell ウィンドウを開きます ( **[管理者として実行]** を右クリックする)。
 
-3. インストーラーをダウンロードしたフォルダーに移動し、スクリプトを実行します。 `-InstallFolder` コマンドライン引数を追加して、ライブラリのフォルダーの場所を指定します。 例: 
+3. インストーラーをダウンロードしたフォルダーに移動し、スクリプトを実行します。 `-InstallFolder` コマンドライン引数を追加して、ライブラリのフォルダーの場所を指定します。 次に例を示します。 
 
    ```python
    cd {{download-directory}}
@@ -71,7 +71,7 @@ SSMS は個別にダウンロードします。これは、Python コードが�
 > [!Tip] 
 > [Windows 用の Python の FAQ](https://docs.python.org/3/faq/windows.html) が示されたページで、Windows での Python プログラムの実行に関する汎用情報を確認することをお勧めします。
 
-## <a name="2---locate-executables"></a>2 - 実行可能ファイルを検索する
+## <a name="2---locate-executables"></a>2 - 実行可能ファイルの検索
 
 引き続き PowerShell で、インストール フォルダーの内容をリストし、Python.exe、スクリプト、およびその他のパッケージがインストールされていることを確認します。 
 
@@ -132,7 +132,7 @@ Anaconda には Jupyter Notebook が含まれています。 次の手順とし�
 
 スクリプトを実行してデータをアップロードするために SQL Server のインスタンスに接続するには、データベース サーバーでの有効なログインが必要です。 SQL ログインまたは統合 Windows 認証を使用できます。 一般的には Windows 統合認証を使用することをお勧めしますが、一部のシナリオでは、特にスクリプトに外部データへの接続文字列が含まれている場合は、SQL ログインを使用する方が簡単です。
 
-少なくとも、コードの実行に使用するアカウントには、操作するデータベースから読み取るためのアクセス許可に加え、特別なアクセス許可 EXECUTE ANY EXTERNAL SCRIPT が必要です。 ほとんどの開発者には、ストアド プロシージャを作成し、トレーニング データまたはスコア付きデータを含むテーブルにデータを書き込むためのアクセス許可も必要です。 
+少なくとも、コードの実行に使用するアカウントには、操作するデータベースから読み取るためのアクセス許可に加え、特別なアクセス許可である EXECUTE ANY EXTERNAL SCRIPT が必要です。 ほとんどの開発者には、ストアド プロシージャを作成し、トレーニング データまたはスコア付きデータを含むテーブルにデータを書き込むためのアクセス許可も必要です。 
 
 Python を使用するデータベースで、[アカウントの次のアクセス許可を構成する](../security/user-permission.md)ようにデータベース管理者に依頼してください。
 
@@ -142,7 +142,7 @@ Python を使用するデータベースで、[アカウントの次のアクセ
 + **db_owner** - ストアド プロシージャ、テーブル、関数などのオブジェクトを作成します。 
   サンプルを作成し、データベースをテストする場合は、**db_owner** も必要です。 
 
-SQL Server と共に既定でインストールされないパッケージがコードで必要な場合は、データベース管理者に連絡して、インスタンスと共にパッケージがインストールされるようにしてください。 SQL Server はセキュリティで保護された環境であり、パッケージをインストールできる場所に関する制限があります。 権限がある場合でも、コードの一部としてのパッケージのアドホック インストールはお勧めできません。 また、サーバー ライブラリに新しいパッケージをインストールする前に、常に、セキュリティへの影響を慎重に検討してください。
+SQL Server と共に既定でインストールされないパッケージをコードが必要とする場合は、データベース管理者に連絡して、インスタンスと共にパッケージがインストールされるようにしてください。 SQL Server はセキュリティで保護された環境であり、パッケージをインストールできる場所に制限があります。 権限がある場合でも、コードの一部としてのパッケージのアドホック インストールはお勧めできません。 また、サーバー ライブラリに新しいパッケージをインストールする前に、常に、セキュリティへの影響を慎重に検討してください。
 
 
 <a name="create-iris-remotely"></a>
@@ -258,7 +258,7 @@ display.Image(data=image)
 
 開発者は頻繁に複数のバージョンの Python を操作するため、セットアップでは Python がパスに追加されません。 セットアップでインストールされた Python の実行可能ファイルとライブラリを使用するには、**revoscalepy** と **microsoftml** も提供するパスの **Python.exe** に IDE をリンクします。 
 
-### <a name="command-line"></a>[パッケージ実行ユーティリティ]
+### <a name="command-line"></a>コマンド ライン
 
 C:\Program Files\Microsoft\PyForMLS (または Python クライアント ライブラリのインストール用に指定した任意の場所) から **Python.exe** を実行すると、完全な Anaconda ディストリビューションに加え、Microsoft Python モジュールの **revoscalepy** および **microsoftml** にアクセスできます。
 
@@ -301,9 +301,9 @@ PyCharm で、インタープリターを、Machine Learning Server によって
 
 これで、**revoscalepy**、**microsoftml**、または **azureml** モジュールをインポートできるようになりました。 また、 **[ツール]**  >  **[Python Console]\(Python コンソール\)** の順に選択して、対話型ウィンドウを開くこともできます。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 これで、ツールが準備でき、SQL Server への接続が機能することを確認できたので、[SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) を使用して Python のクイックスタートを実行し、スキルを向上させることができます。
 
 > [!div class="nextstepaction"]
-> [クイックスタート: SQL Server Machine Learning Services を使用した単純な Python スクリプトの作成と実行](../tutorials/quickstart-python-create-script.md)
+> [クイック スタート: SQL Server Machine Learning Services を使用した単純な Python スクリプトの作成と実行](../tutorials/quickstart-python-create-script.md)

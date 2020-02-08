@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.openlocfilehash: c1b9941b60dc8a5f1fc87627094513ce6f20711b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67897010"
 ---
 # <a name="add-a-scale-out-worker-with-scale-out-manager"></a>Scale Out Manager による Scale Out Worker の追加
@@ -47,5 +47,5 @@ SQL Server Management Studio を管理者として実行し、Scale Out Master �
 
 **[Scale Out Manager]** ダイアログ ボックスで、 **[ワーカー マネージャー]** に切り替えます。 **[+]** を選択し、 **[ワーカーの接続]** ダイアログ ボックスの指示に従います。 
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 詳細については、[Scale Out Manager](integration-services-ssis-scale-out-manager.md) に関するページを参照してください。

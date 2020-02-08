@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: 354afb535abb1efab76e005d88b3bdfd464a299c
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71710762"
 ---
 # <a name="validate-replicated-data"></a>レプリケートされたデータの検証
@@ -89,7 +89,7 @@ ms.locfileid: "71710762"
   
 ## <a name="articles-in-transactional-replication"></a>トランザクション レプリケーションのアーティクル 
 
-### <a name="using-sql-server-management-studio"></a>SQL Server Management Studio の使用
+### <a name="using-sql-server-management-studio"></a>SQL Server Management Studio を使用する
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でパブリッシャーに接続し、サーバー ノードを展開します。    
 2.  **[レプリケーション]** フォルダーを展開し、 **[ローカル パブリケーション]** フォルダーを展開します。    
@@ -168,7 +168,7 @@ ms.locfileid: "71710762"
   
 ## <a name="for-a-single-subscription-to-a-merge-publication"></a>マージ パブリケーションの単一のサブスクリプション
 
-### <a name="using-sql-server-management-studio"></a>SQL Server Management Studio の使用
+### <a name="using-sql-server-management-studio"></a>SQL Server Management Studio を使用する
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でパブリッシャーに接続し、サーバー ノードを展開します。    
 2.  **[レプリケーション]** フォルダーを展開し、 **[ローカル パブリケーション]** フォルダーを展開します。   
@@ -185,7 +185,7 @@ ms.locfileid: "71710762"
   
 ## <a name="for-all-subscriptions-to-a-merge-publication"></a>マージ パブリケーションのすべてのサブスクリプション
 
-### <a name="using-sql-server-management-studio"></a>SQL Server Management Studio の使用  
+### <a name="using-sql-server-management-studio"></a>SQL Server Management Studio を使用する  
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でパブリッシャーに接続し、サーバー ノードを展開します。    
 2.  **[レプリケーション]** フォルダーを展開し、 **[ローカル パブリケーション]** フォルダーを展開します。   
 3.  サブスクリプションを検証するパブリケーションを右クリックし、 **[すべてのサブスクリプションの検証]** をクリックします。    

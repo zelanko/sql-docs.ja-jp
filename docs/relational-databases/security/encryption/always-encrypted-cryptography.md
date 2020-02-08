@@ -13,10 +13,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b0fe0e861e8139416250ffc2677230dbc2aeab6d
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73594402"
 ---
 # <a name="always-encrypted-cryptography"></a>Always Encrypted による暗号
@@ -31,7 +31,7 @@ ms.locfileid: "73594402"
   
  列暗号化キー (CEK) は、CMK によって保護されているコンテンツ暗号化キー (たとえば、データを保護するために使用されるキー) です。  
   
- すべての [!INCLUDE[msCoName](../../../includes/msconame-md.md)] CMK ストア プロバイダーでは、RSA-OAEP (RSA with Optimal Asymmetric Encryption Padding) を使用して CEK が暗号化されます。 Microsoft Cryptography API がサポートされているキー ストア プロバイダー:.NET Framework の Next Generation (CNG) ([SqlColumnEncryptionCngProvider クラス](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx)) では、RFC 8017 のセクション A.2.1 で指定されている既定のパラメーターが使用されます。 これらの既定のパラメーターでは、SHA-1 のハッシュ関数と、SHA-1 を指定した MGF1 のマスク生成関数を使用します。 他のすべてのキー ストア プロバイダーでは、SHA-256 が使用されます。 
+ すべての [!INCLUDE[msCoName](../../../includes/msconame-md.md)] CMK ストア プロバイダーでは、RSA-OAEP (RSA with Optimal Asymmetric Encryption Padding) を使用して CEK が暗号化されます。 Microsoft Cryptography API がサポートされているキー ストア プロバイダー:.NET Framework の Next Generation (CNG) ([SqlColumnEncryptionCngProvider クラス](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx)) では、RFC 8017 のセクション A.2.1 で指定されている既定のパラメーターが使用されます。 これらの既定パラメーターでは、SHA-1 のハッシュ関数と、SHA-1 による MGF1 のマスク生成関数が使用されます。 他のすべてのキー ストア プロバイダーでは、SHA-256 が使用されます。 
   
 ## <a name="data-encryption-algorithm"></a>データ暗号化のアルゴリズム  
  Always Encrypted では **AEAD_AES_256_CBC_HMAC_SHA_256** アルゴリズムを使用して、データベース内のデータを暗号化します。  
@@ -92,14 +92,14 @@ enc_key = HMAC-SHA-256(CEK, "Microsoft SQL Server cell encryption key" + algorit
 MAC = HMAC-SHA-256(mac_key, versionbyte + IV + Ciphertext + versionbyte_length)  
 ```  
   
- 各要素の説明は次のとおりです。  
+ 各値の説明:  
   
 ```  
 versionbyte = 0x01 and versionbyte_length = 1
 mac_key = HMAC-SHA-256(CEK, "Microsoft SQL Server cell MAC key" + algorithm + CEK_length)  
 ```  
   
-### <a name="step-4-concatenation"></a>手順 4:Concatenation  
+### <a name="step-4-concatenation"></a>手順 4:連結  
  最後に、暗号化された値は、アルゴリズム バージョン バイト、MAC、IV および AES_256_CBC 暗号化テキストを連結して生成されます。  
   
 ```  
@@ -129,7 +129,7 @@ aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext
 1 + 32 + 16 + (FLOOR(DATALENGTH(cell_data)/16) + 1) * 16  
 ```  
   
- 例:  
+ 次に例を示します。  
   
 -   4 バイト長の **int** プレーンテキスト値は、暗号化後に 65 バイト長のバイナリ値になります。  
   
@@ -140,9 +140,9 @@ aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext
 |データ型|暗号化テキストの長さ (バイト)|  
 |---------------|---------------------------------|  
 |**bigint**|65|  
-|**[バイナリ]**|多様。 上の式を使用します。|  
+|**[バイナリ]**|状況に応じて異なります。 上の式を使用します。|  
 |**bit**|65|  
-|**char**|多様。 上の式を使用します。|  
+|**char**|状況に応じて異なります。 上の式を使用します。|  
 |**date**|65|  
 |**datetime**|65|  
 |**datetime2**|65|  
@@ -155,10 +155,10 @@ aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext
 |**image**|該当なし (サポートされていません)|  
 |**int**|65|  
 |**money**|65|  
-|**nchar**|多様。 上の式を使用します。|  
+|**nchar**|状況に応じて異なります。 上の式を使用します。|  
 |**ntext**|該当なし (サポートされていません)|  
 |**numeric**|81|  
-|**nvarchar**|多様。 上の式を使用します。|  
+|**nvarchar**|状況に応じて異なります。 上の式を使用します。|  
 |**real**|65|  
 |**smalldatetime**|65|  
 |**smallint**|65|  
@@ -170,15 +170,15 @@ aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext
 |**timestamp**<br /><br /> (**rowversion**)|該当なし (サポートされていません)|  
 |**tinyint**|65|  
 |**uniqueidentifier**|81|  
-|**varbinary**|多様。 上の式を使用します。|  
-|**varchar**|多様。 上の式を使用します。|  
+|**varbinary**|状況に応じて異なります。 上の式を使用します。|  
+|**varchar**|状況に応じて異なります。 上の式を使用します。|  
 |**xml**|該当なし (サポートされていません)|  
   
 ## <a name="net-reference"></a>.NET リファレンス  
  このドキュメントに記載されているアルゴリズムの詳細については、[.NET リファレンス](https://referencesource.microsoft.com/)の **SqlAeadAes256CbcHmac256Algorithm.cs**、**SqlColumnEncryptionCertificateStoreProvider.cs**、**SqlColumnEncryptionCertificateStoreProvider.cs** ファイルを参照してください。  
   
 ## <a name="see-also"></a>参照  
- - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
+ - [常に暗号化](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  - [Always Encrypted を使用したアプリケーションの開発](../../../relational-databases/security/encryption/always-encrypted-client-development.md)  
   
   
