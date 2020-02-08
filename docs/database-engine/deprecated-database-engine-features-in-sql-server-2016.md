@@ -16,10 +16,10 @@ ms.assetid: c10eeaa5-3d3c-49b4-a4bd-5dc4fb190142
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 4bfad58a8d1fbcfe6baad67ce38461a6d6bbcf72
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75247529"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2016"></a>SQL Server 2016 データベース エンジンの非推奨の機能
@@ -77,7 +77,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |データ型|**timestamp** データ型の **rowversion** 構文|**rowversion** データ型の構文|timestamp|158|  
 |データ型|**timestamp** 列に null 値を挿入する機能|代わりに DEFAULT を使用してください。|TIMESTAMP 列への INSERT NULL|179|  
 |データ型|'text in row' テーブル オプション|**varchar(max)** 、**nvarchar(max)** 、および **varbinary(max)** データ型を使用してください。 詳細については、「[sp_tableoption &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)」を参照してください。|Text in row テーブル オプション|9|  
-|データ型|データ型:<br /><br /> **text**<br /><br /> **ntext**<br /><br /> **画像**|**varchar(max)** 、**nvarchar(max)** 、および **varbinary(max)** データ型を使用してください。|データ型: **text**、 **ntext** 、または **image**|4|  
+|データ型|データ型:<br /><br /> **text**<br /><br /> **ntext**<br /><br /> **image**|**varchar(max)** 、**nvarchar(max)** 、および **varbinary(max)** データ型を使用してください。|データ型: **text**、 **ntext** 、または **image**|4|  
 |データベースの管理|sp_attach_db<br /><br /> sp_attach_single_file_db|CREATE DATABASE ステートメントで FOR ATTACH オプションを使用します。 複数のログ ファイルを再構築するときに、これらのログ ファイル 1 つ以上に対して新しい場所を指定する場合は、FOR ATTACH_REBUILD_LOG を使用します。|sp_attach_db<br /><br /> sp_attach_single_file_db|81<br /><br /> 82|  
 |データベース オブジェクト|CREATE DEFAULT<br /><br /> DROP DEFAULT<br /><br /> sp_bindefault<br /><br /> sp_unbindefault|CREATE TABLE および ALTER TABLE の DEFAULT キーワード|CREATE_DROP_DEFAULT<br /><br /> sp_bindefault<br /><br /> sp_unbindefault|162<br /><br /> 64<br /><br /> 65|  
 |データベース オブジェクト|CREATE RULE<br /><br /> DROP RULE<br /><br /> sp_bindrule<br /><br /> sp_unbindrule|CREATE TABLE および ALTER TABLE の CHECK キーワード|CREATE_DROP_RULE<br /><br /> sp_bindrule<br /><br /> sp_unbindrule|161<br /><br /> 66<br /><br /> 67|  
@@ -106,7 +106,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |インスタンスのオプション|sp_configure の 'remote proc trans' オプション|システム テーブルは更新できなくなりました。 設定しても何の影響もありません。|sp_configure 'remote proc trans'|37|  
 |リンク サーバー|リンク サーバーの SQLOLEDB プロバイダーの指定|SQL Server Native Client (SQLNCLI)|SQLOLEDDB for linked servers|19|  
 |ロック|sp_lock|sys.dm_tran_locks|sp_lock|99|  
-|メタデータ|FILE_ID<br /><br /> INDEXKEY_PROPERTY|FILE_IDEX<br /><br /> sys.index_columns|FILE_ID<br /><br /> INDEXKEY_PROPERTY|15<br /><br /> 17|  
+|Metadata|FILE_ID<br /><br /> INDEXKEY_PROPERTY|FILE_IDEX<br /><br /> sys.index_columns|FILE_ID<br /><br /> INDEXKEY_PROPERTY|15<br /><br /> 17|  
 |ネイティブ XML Web サービス|FOR SOAP オプションを指定した CREATE ENDPOINT または ALTER ENDPOINT ステートメント<br /><br /> sys.endpoint_webmethods<br /><br /> sys.soap_endpoints|代わりに Windows Communications Foundation (WCF) または ASP.NET を使用してください。|CREATE/ALTER ENDPOINT<br /><br /> sys.endpoint_webmethods<br /><br /> EXT_soap_endpoints<br /><br /> sys.soap_endpoints|21<br /><br /> 22<br /><br /> 23|  
 |リムーバブル データベース|sp_certify_removable<br /><br /> sp_create_removable|sp_detach_db|sp_certify_removable<br /><br /> sp_create_removable|74<br /><br /> 75|  
 |リムーバブル データベース|sp_dbremove|DROP DATABASE|sp_dbremove|76|  

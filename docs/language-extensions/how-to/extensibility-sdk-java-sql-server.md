@@ -10,10 +10,10 @@ ms.author: negust
 ms.reviewer: dphansen
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 66719e8a30b9e7f4e42eaba376c73af9eb9868b2
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73658849"
 ---
 # <a name="microsoft-extensibility-sdk-for-java-for-sql-server"></a>SQL Server 用の Microsoft Extensibility SDK for Java
@@ -92,7 +92,7 @@ public void init(String sessionId, int taskId, int numtask) {}
 
 この SDK では、単なる省略可能なヘルパー クラスとして提供されています。 このクラスを使用しない場合は、**AbstractSqlServerExtensionDataset** から継承する独自のクラスを実装する必要があります。  
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
-+ [チュートリアル: Java で正規表現 (regex) を使用して文字列を検索する](../tutorials/search-for-string-using-regular-expressions-in-java.md)
++ [チュートリアル:Java で正規表現 (regex) を使用して文字列を検索する](../tutorials/search-for-string-using-regular-expressions-in-java.md)
 + [SQL Server で Java を呼び出す方法](call-java-from-sql.md)

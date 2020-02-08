@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
 ms.openlocfilehash: 0a7c16f508621297e39df5cd47bde891b7d8a140
-ms.sourcegitcommit: 82b70c39550402a2b0b327db32bf5ecf88b50d3c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73033018"
 ---
 # <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>Visual Studio を使用して SQL Server on Linux 用のデータベースを作成する
@@ -49,7 +49,7 @@ SQL Server on Linux は、SSDT バージョン 17.0 RC 以降でサポートさ�
 
    <img src="./media/sql-server-linux-develop-use-ssdt/git-repository.png" alt="local repository" style="width: 300px;"/>
 
-4. **[作成]** をクリックします。 ローカル Git リポジトリが作成されたら、 **[SSDTRepo]** をダブルクリックします。
+4. **Create** をクリックしてください。 ローカル Git リポジトリが作成されたら、 **[SSDTRepo]** をダブルクリックします。
 
 5. **[ソリューション]** セクションの **[新規]** をクリックします。 **[新規プロジェクト]** ダイアログで、 **[その他の言語]** ノードの下の **[SQL Server]** を選択します。
 
@@ -103,7 +103,7 @@ SQL Server on Linux は、SSDT バージョン 17.0 RC 以降でサポートさ�
 
 これで、Linux 上の SQL Server インスタンスに新しいデータベースが作成され、ソース管理されたデータベース プロジェクトを使用してデータベースを開発するための基本を学習できました。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 T-SQL を初めて使用する場合は、「[チュートリアル:Transact-SQL ステートメントの作成](../t-sql/tutorial-writing-transact-sql-statements.md)」を参照してください。
 
@@ -112,5 +112,5 @@ SQL Data Tools を使用したデータベースの開発の詳細について�
 * [Visual Studio をダウンロードしてインストールする](https://www.visualstudio.com/downloads/)
 * [SSDT をダウンロードしてインストールする](https://aka.ms/ssdt-download)
 * [SSDT MSDN のドキュメント](https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx)
-* [チュートリアル: Transact-SQL ステートメントの作成](https://msdn.microsoft.com/library/ms365303.aspx)
+* [チュートリアル:Transact-SQL ステートメントの作成](https://msdn.microsoft.com/library/ms365303.aspx)
 * [Transact-SQL リファレンス (データベース エンジン)](https://msdn.microsoft.com/library/bb510741.aspx)

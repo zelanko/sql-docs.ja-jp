@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 11/04/2019
 ms.openlocfilehash: 0315f181aad5c61b7d9c5fe7d46f3d81b27c9758
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73589136"
 ---
 # <a name="sql-assessment-api"></a>SQL Assessment API
@@ -133,6 +133,6 @@ SQL Assessment API の呼び出しにパラメーターとして 1 つ以上の 
 > [!IMPORTANT]  
 >  信頼されていないソースから提供されたルールセットは、安全であることを十分に確認するまで使用しないことをお勧めします。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 [SQL Server 管理オブジェクト (SMO)](../relational-databases/server-management-objects-smo/overview-smo.md) と [PowerShell](../powershell/download-sql-server-ps-module.md) に関する記事を参照してください。

@@ -19,10 +19,10 @@ ms.assetid: 16fe1c18-4486-424d-81d6-d276ed97482f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 07a4d09e55999c9e6f85e059f576c1460baf750a
-ms.sourcegitcommit: af5e1f74a8c1171afe759a4a8ff2fccb5295270a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71823559"
 ---
 # <a name="delete-a-data-tier-application"></a>データ層アプリケーションの削除
@@ -54,7 +54,7 @@ ms.locfileid: "71823559"
 > [!WARNING]  
 >  復元または再アタッチされたデータベースから DAC を登録して DAC インスタンスを再構築しても、サーバーの選択ポリシーなど、元の DAC の一部は再作成されません。  
   
-###  <a name="Permissions"></a> 権限  
+###  <a name="Permissions"></a> Permissions  
  DAC を削除できるのは、 **sysadmin** または **serveradmin** 固定サーバー ロールのメンバーか、データベース所有者のみです。 あらかじめ登録された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム管理者アカウント ( **sa** ) もこのウィザードを起動できます。  
   
 ##  <a name="UsingDeleteDACWizard"></a> データ層アプリケーションの削除ウィザードの使用  
@@ -70,11 +70,11 @@ ms.locfileid: "71823559"
   
 5.  ウィザードの各ダイアログの手順を実行します。  
   
-    1.  [概要](#Introduction)  
+    1.  [はじめに](#Introduction)  
   
     2.  [方法の選択](#Choose_method)  
   
-    3.  [概要](#Summary)  
+    3.  [まとめ](#Summary)  
   
     4.  [データ層アプリケーションの削除](#Delete_datatier_application)  
   
@@ -102,7 +102,7 @@ ms.locfileid: "71823559"
   
  データベースのデータ ファイルとログ ファイルは、完全に削除されます。  
   
- **[< 戻る]** : **[説明]** ページに戻ります。  
+ **[戻る]** : **[説明]** ページに戻ります。  
   
  **[次へ]** : **[概要]** ページに進みます。  
   

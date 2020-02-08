@@ -25,10 +25,10 @@ author: VanMSFT
 ms.author: vanto
 ms.reviewer: mikeray
 ms.openlocfilehash: 7327d63e9c22ab1020c885e9b372c444c485de8d
-ms.sourcegitcommit: 76fb3ecb79850a8ef2095310aaa61a89d6d93afd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75776557"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2019-on-linux"></a>SQL Server 2019 on Linux のエディションとサポートされる機能
@@ -68,7 +68,7 @@ Linux 上で使用できない SQL Server の機能の一覧については、[�
 
 SQL Server 2019 on Linux では、SQL Server データベース エンジンがサポートされています。 次の表で、データベース エンジンの機能について説明します。   
   
-|サーバー コンポーネント|[説明]|  
+|サーバー コンポーネント|説明|  
 |-----------------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] には、[!INCLUDE[ssDE](../includes/ssde-md.md)]、データを格納、処理、およびセキュリティで保護するための主要サービス、レプリケーション、フルテキスト検索、リレーショナル データと XML データを管理するためのツール、およびデータベース内分析の統合が含まれます。|  
 

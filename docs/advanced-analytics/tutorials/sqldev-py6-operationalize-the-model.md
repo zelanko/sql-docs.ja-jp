@@ -8,18 +8,18 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6ac6abe2ea0f04ee0778b80b98bf28f3f12c2f6e
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 00e4ba99b23abff0147627239093328e6f483ffb
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73724713"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74901862"
 ---
 # <a name="run-predictions-using-python-embedded-in-a-stored-procedure"></a>ストアド プロシージャに埋め込まれた Python を使用した予測の実行
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-この記事は、[SQL 開発者向けのデータベース内 Python 分析チュートリアルの一部です](sqldev-in-database-python-for-sql-developers.md)。 
+この記事は、[SQL 開発者向けのデータベース内 Python analytics](sqldev-in-database-python-for-sql-developers.md) チュートリアルの一部です。 
 
 この手順では、前の手順でトレーニングして保存したモデルを*運用する*方法について説明します。
 
@@ -28,7 +28,7 @@ ms.locfileid: "73724713"
 このレッスンでは、Python モデルに基づいて予測を作成する、バッチ スコアリングと、行ごとのスコアリングの、2 つの方法を説明します。
 
 - **バッチ スコアリング:** 入力データの複数の行を指定するには、SELECT クエリを引数としてストアド プロシージャに渡します。 結果は、入力ケースに対応する観察のテーブルを返します。
-- **個別のスコアリング**:個々のパラメーター値のセットを入力として渡します。  このストアド プロシージャは、1 つの行または値を返します。
+- **個別のスコアリング**:個々のパラメーター セットを入力パラメーターとして渡します。  このストアド プロシージャは、1 つの行または値を返します。
 
 スコアリングに必要なすべての Python コードは、ストアド プロシージャの一部として提供されています。
 

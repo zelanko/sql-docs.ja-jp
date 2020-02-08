@@ -20,13 +20,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ee0119ccd051912551c1274860265d48750ac969
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68111341"
 ---
-# <a name="schemaname-transact-sql"></a>SCHEMA_NAME (Transact-SQL)
+# <a name="schema_name-transact-sql"></a>SCHEMA_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   スキーマ名に関連付けられているスキーマ ID を返します。  
@@ -41,7 +41,7 @@ SCHEMA_NAME ( [ schema_id ] )
   
 ## <a name="arguments"></a>引数  
   
-|項目|定義|  
+|期間|定義|  
 |----------|----------------|  
 |*schema_id*|スキーマの ID です。 *schema_id* は、 **int**です。場合 *schema_id* が定義されていない場合、SCHEMA_NAME は、呼び出し元の既定のスキーマの名前が返すされます。|  
   
@@ -50,10 +50,10 @@ SCHEMA_NAME ( [ schema_id ] )
   
  ときに、NULL を返します*schema_id* 、有効な ID ではありません  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  SCHEMA_NAME は、システム スキーマとユーザー定義スキーマの名前を返します。 SCHEMA_NAME は、選択リストの中、WHERE 句の中、また、式を使える所であればどこでも呼び出すことができます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-returning-the-name-of-the-default-schema-of-the-caller"></a>A. 呼び出し元の既定のスキーマ名を返す  
   

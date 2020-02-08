@@ -14,10 +14,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ed7e7f31da9cacaf4862c29ada9c98df9559f9c9
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72903860"
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>フルテキスト カタログの作成と管理
@@ -29,7 +29,7 @@ ms.locfileid: "72903860"
 ##  <a name="creating"></a> フルテキスト カタログを作成する  
 
 ### <a name="create-a-full-text-catalog-with-transact-sql"></a>Transact SQL を使用してフルテキスト カタログを作成する
-[CREATE FULLTEXT CATALOG](../../t-sql/statements/create-fulltext-catalog-transact-sql.md) を使用します。 例:
+[CREATE FULLTEXT CATALOG](../../t-sql/statements/create-fulltext-catalog-transact-sql.md) を使用します。 次に例を示します。
 
 ```sql 
 USE AdventureWorks;  
@@ -66,7 +66,7 @@ GO
   
 次の表は、フルテキスト カタログに関連しているプロパティを示しています。 この情報は、フルテキスト検索の管理およびトラブルシューティングに役立ちます。 
   
-|プロパティ|[説明]|  
+|プロパティ|説明|  
 |--------------|-----------------|  
 |**AccentSensitivity**|アクセントの区別の設定。|
 |**ImportStatus**|フルテキスト カタログがインポートされているかどうかを示します。|  
@@ -119,5 +119,5 @@ Transact-SQL ステートメント [DROP FULLTEXT CATALOG](
   
 4.  **[オブジェクトの削除]** ダイアログ ボックスで **[OK]** をクリックします。  
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 [フルテキスト インデックスの作成と管理](../../relational-databases/search/create-and-manage-full-text-indexes.md)

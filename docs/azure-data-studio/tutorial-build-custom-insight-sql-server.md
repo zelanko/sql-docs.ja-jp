@@ -11,10 +11,10 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.openlocfilehash: 34ee9c23569897247f05d6b9b5f9f2610f5d68fc
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67959097"
 ---
 # <a name="tutorial-build-a-custom-insight-widget"></a>チュートリアル:カスタムの分析情報ウィジェットを構築する
@@ -28,7 +28,7 @@ ms.locfileid: "67959097"
 > * サーバーまたはデータベース ダッシュボードにグラフを追加する
 > * カスタムの分析情報ウィジェットに詳細を追加する
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 このチュートリアルには、SQL Server か Azure SQL Database *TutorialDB* が必要です。 *TutorialDB* データベースを作成するには、次のクイックスタートのいずれかを実行します。
 
@@ -63,7 +63,7 @@ ms.locfileid: "67959097"
 
 1. 分析情報ウィジェット構成を開き、 *[Chart Viewer]\(グラフ ビューアー\)* で **[Create Insight]\(分析情報の作成\)** をクリックします。
 
-   ![構成](./media/tutorial-build-custom-insight-sql-server/create-insight.png)
+   ![configuration](./media/tutorial-build-custom-insight-sql-server/create-insight.png)
    
 2. 分析情報構成 (JSON データ) をコピーします。 
 
@@ -162,8 +162,8 @@ ms.locfileid: "67959097"
 
     ![activesession 分析情報](./media/tutorial-build-custom-insight-sql-server/insight-activesession-detail.png)
 
-## <a name="next-steps"></a>次の手順
-このチュートリアルでは、次の方法を学習しました。
+## <a name="next-steps"></a>次のステップ
+このチュートリアルでは、以下の内容を学習しました。
 > [!div class="checklist"]
 > * 独自のクエリを実行し、それをグラフで表示する
 > * グラフからカスタムの分析情報ウィジェットを構築する

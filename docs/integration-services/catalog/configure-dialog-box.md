@@ -15,10 +15,10 @@ ms.assetid: 10183c8d-b1be-420f-972a-96ea97d4f4d8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 63d4507a2ad81a1167444acca111865460662904
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71299007"
 ---
 # <a name="configure-dialog-box"></a>[構成] ダイアログ ボックス
@@ -60,7 +60,7 @@ ms.locfileid: "71299007"
  **コンテナー**  
  パラメーターを含むオブジェクトを一覧表示します。  
   
- **[名前]**  
+ **Name**  
  パラメーター名を一覧表示します。  
   
  **Value**  
@@ -71,7 +71,7 @@ ms.locfileid: "71299007"
  **コンテナー**  
  接続マネージャーを含むオブジェクトを一覧表示します。  
   
- **[名前]**  
+ **Name**  
  接続マネージャーの名前を一覧表示します。  
   
  **プロパティ名**  
@@ -85,21 +85,21 @@ ms.locfileid: "71299007"
   
  環境は、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに配置したプロジェクトに含まれるパッケージのランタイム値を示します。  
   
- **環境**  
+ **Environment**  
  環境を一覧表示します。  
   
  **環境フォルダー**  
  環境を含むフォルダーを一覧表示します。  
   
- **開く**  
+ **[ファイル]**  
  **[環境のプロパティ]** ダイアログ ボックスを開く場合にクリックします。  
   
- **[追加]**  
+ **追加**  
  環境への参照を追加する場合にクリックします。 **[環境の参照]** ダイアログ ボックスで、環境をクリックして **[OK]** をクリックします。  
   
  **SSISDB** ノードの下の任意のプロジェクト フォルダーに含まれている環境を選択できます。  
   
- **[削除]**  
+ **Remove**  
  **[参照]** 領域に表示されている環境を選択し、 **[削除]** をクリックします。  
   
   

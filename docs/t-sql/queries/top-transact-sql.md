@@ -22,10 +22,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 51bb7288f620e479d818598cf28d357b6e4e479d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67948248"
 ---
 # <a name="top-transact-sql"></a>TOP (Transact-SQL)
@@ -137,7 +137,7 @@ GO
   
 TOP と ORDER BY をサブセレクト操作で使用することにより、ORDER BY 句の結果が TOP 句に適用され、UNION 操作の結果の並べ替えには使用されなくなります。  
   
- 以下に結果セットを示します。  
+ 結果セットは次のようになります。  
   
  ```
  Model         Color      Price  
@@ -153,7 +153,7 @@ INSERT、UPDATE、MERGE、または DELETE で TOP を使用すると、参照�
   
 (同じクエリ スコープ内の) 同じクエリ式で TOP を OFFSET および FETCH と組み合わせて使用することはできません。 詳細については、「[ORDER BY 句 (Transact-SQL)](../../t-sql/queries/select-order-by-clause-transact-sql.md)」を参照してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 |カテゴリ|主な構文要素|  
 |--------------|------------------------------|  
@@ -315,7 +315,7 @@ WHERE HumanResources.Employee.BusinessEntityID = th.BusinessEntityID;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 次の例では、クエリ条件に一致する上位 31 行を返します。 **ORDER BY** 句により、返される 31 行は、`LastName` 列のアルファベット順に基づく最初の 31 行になります。  
   
 ties を指定せずに **TOP** を使用する。  

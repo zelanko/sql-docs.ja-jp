@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6c1f1fe588447ba4fdbac3cdc66fcc17ea5a6508
-ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72041228"
 ---
 # <a name="round-transact-sql"></a>ROUND (Transact-SQL)
@@ -63,7 +63,7 @@ ROUND ( numeric_expression , length [ ,function ] )
 |**money** および **smallmoney** カテゴリ|**money**|  
 |**float** および **real** カテゴリ|**float**|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  ROUND は常に値を返します。 *length* が負の値で、整数部の桁数より大きい場合、ROUND は 0 を返します。  
   
 |例|結果|  
@@ -72,14 +72,14 @@ ROUND ( numeric_expression , length [ ,function ] )
   
  ROUND は、*length* が負の値であるときは、データ型に関係なく、*numeric_expression* を丸めて返します。  
   
-|使用例|結果|  
+|例|結果|  
 |--------------|------------|  
 |ROUND (748.58, -1)|750.00|  
 |ROUND (748.58, -2)|700.00|  
 |ROUND(748.58, -3)|748.58 の既定値は decimal(5,2) となり、1000.00 を返すことができないため、結果は算術オーバーフローになります。|  
-|4 桁までに丸めるには、入力のデータ型を変更します。 例:<br /><br /> `SELECT ROUND(CAST (748.58 AS decimal (6,2)),-3);`|1000.00|  
+|4 桁までに丸めるには、入力のデータ型を変更します。 次に例を示します。<br /><br /> `SELECT ROUND(CAST (748.58 AS decimal (6,2)),-3);`|1000.00|  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-using-round-and-estimates"></a>A. ROUND と概数を使用する  
  次の例では、`ROUND` を使用することにより最後の桁が常に概数になることを表す 2 つの式を示します。  

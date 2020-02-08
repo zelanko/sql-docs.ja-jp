@@ -11,10 +11,10 @@ ms.assetid: e604a382-95c8-4764-b268-742eb5c6d4cf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9b5f7628f0284cb4662f0cf88bff1fd80cb2014e
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295229"
 ---
 # <a name="catalogcatalog_properties-ssisdb-database"></a>catalog.catalog_properties (SSISDB データベース)
@@ -26,15 +26,15 @@ ms.locfileid: "71295229"
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログのプロパティを表示します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |property_name|**nvarchar (256)**|カタログ プロパティの名前。|  
 |property_value|**nvarchar (256)**|カタログ プロパティの値。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  このビューは、各カタログ プロパティの行を表示します。
   
-|プロパティ名|[説明]|  
+|プロパティ名|説明|  
 |-------------------|-----------------|  
 |**DEFAULT_EXECUTION_MODE**|パッケージのサーバー全体の既定の実行モード - `Server` (0) または `Scale Out` (1)。 |
 |**ENCRYPTION_ALGORITHM**|機密データの暗号化に使用される暗号化アルゴリズムの種類。 サポートされている値は、`DES`、`TRIPLE_DES`、`TRIPLE_DES_3KEY`、`DESX`、`AES_128`、`AES_192`、および `AES_256` です。 注:プロパティを変更するには、カタログ データベースがシングル ユーザー モードである必要があります。|

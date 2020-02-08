@@ -26,10 +26,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6e8c8f90dbd07af646700a738dcf265785b79475
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981704"
 ---
 # <a name="select---over-clause-transact-sql"></a>SELECT - OVER 句 (Transact-SQL)
@@ -186,7 +186,7 @@ ROWS/RANGE を指定し、\<window frame preceding> を \<window frame extent> �
   
  OVER 句と共に使用される順位付け関数、集計関数、または分析関数によっては、\<ORDER BY clause> と \<ROWS and RANGE clause> のどちらか一方または両方がサポートされない場合があります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-using-the-over-clause-with-the-row_number-function"></a>A. OVER 句を ROW_NUMBER 関数と共に使用する  
  次の例では、OVER 句と ROW_NUMBER 関数を使用して、パーティション内の各行の行番号を表示する方法を示します。 OVER 句に指定した ORDER BY 句によって、列 `SalesYTD` を基準に各パーティション内の行の順序付けが行われます。 SELECT ステートメントの ORDER BY 句によって、クエリ結果セット全体が返される順序が決まります。  

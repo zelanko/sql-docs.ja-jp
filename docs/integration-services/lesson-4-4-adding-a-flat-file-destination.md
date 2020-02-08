@@ -11,10 +11,10 @@ ms.assetid: f4088de3-16d8-419c-96a1-a2cd005d0a5b
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: ae02b9188ecc9917d26532633e4d5a253d4f326b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295945"
 ---
 # <a name="lesson-4-4-add-a-flat-file-destination"></a>レッスン 4-4:フラット ファイル変換先を追加する
@@ -63,7 +63,7 @@ Lookup Currency Key 変換でエラーが出力されると、参照に失敗し
   
 15. **[OK]** を選択します。  
   
-## <a name="go-to-next-task"></a>次の実習に進む
+## <a name="go-to-next-task"></a>次のタスクに進む
 [手順 5:レッスン 4 で作成したチュートリアル パッケージのテスト](../integration-services/lesson-4-5-testing-the-lesson-4-tutorial-package.md)  
   
   

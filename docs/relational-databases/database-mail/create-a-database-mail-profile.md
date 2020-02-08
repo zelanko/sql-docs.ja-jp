@@ -15,10 +15,10 @@ ms.assetid: 58ae749d-6ada-4f9c-bf00-de7c7a992a2d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 09b3759af6fc956d83daee464b5120fa80462dcf
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72278314"
 ---
 # <a name="create-a-database-mail-profile"></a>データベース メール プロファイルの作成
@@ -97,7 +97,7 @@ ms.locfileid: "72278314"
   
      *\@description* = '<*説明*>'  
   
-     *\@profile_name* はプロファイルの名前です。 *\@description* はプロファイルの説明です。 このパラメーターはオプションです。  
+     *\@profile_name* はプロファイルの名前です。 *\@description* はプロファイルの説明です。 このパラメーターは省略可能です。  
   
 -   アカウントごとに、ストアド プロシージャ [sysmail_add_profileaccount_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md) を次のように実行します。  
   
@@ -165,7 +165,7 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
   
      *\@description* = '<*説明*>'  
   
-     *\@profile_name* はプロファイルの名前です。 *\@description* はプロファイルの説明です。 このパラメーターはオプションです。  
+     *\@profile_name* はプロファイルの名前です。 *\@description* はプロファイルの説明です。 このパラメーターは省略可能です。  
   
 -   アカウントごとに、ストアド プロシージャ [sysmail_add_profileaccount_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md) を次のように実行します。  
   

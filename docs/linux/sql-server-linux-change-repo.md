@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 zone_pivot_groups: ld2-linux-distribution
 ms.openlocfilehash: c1def0c2cfbdc4b3feed191e9eb2673b8e788f82
-ms.sourcegitcommit: 76fb3ecb79850a8ef2095310aaa61a89d6d93afd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75776381"
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>SQL Server on Linux のインストールとアップグレードを行うためのリポジトリを構成する
@@ -38,7 +38,7 @@ ms.locfileid: "75776381"
 
 SQL Server on Linux をインストールする場合は、Microsoft リポジトリを構成する必要があります。 このリポジトリを使って、データベース エンジンのパッケージ (**mssql-server**) と、関連する SQL Server のパッケージを入手します。 現在、5 つの主要なリポジトリがあります。
 
-| リポジトリ | Name | [説明] |
+| リポジトリ | Name | 説明 |
 |---|---|---|
 | **2019** | **mssql-server-2019** | SQL Server 2019 Cumulative Update (CU) リポジトリ。 |
 | **2019 GDR** | **mssql-server-2019-gdr** | 重要な更新プログラム専用の SQL Server 2019 GDR リポジトリ。 |

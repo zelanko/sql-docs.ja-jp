@@ -25,10 +25,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
 ms.openlocfilehash: a652bc56a826469017ba4de643c9d3e1822d4c22
-ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75952528"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Linux 上の SQL Server 2017 のエディションとサポートされる機能
@@ -68,7 +68,7 @@ Linux 上で使用できない SQL Server の機能の一覧については、[�
 
 SQL Server 2017 on Linux では、SQL Server データベース エンジンがサポートされています。 次の表で、データベース エンジンの機能について説明します。   
   
-|サーバー コンポーネント|[説明]|  
+|サーバー コンポーネント|説明|  
 |-----------------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] には、[!INCLUDE[ssDE](../includes/ssde-md.md)]、データを格納、処理、およびセキュリティで保護するための主要サービス、レプリケーション、フルテキスト検索、リレーショナル データと XML データを管理するためのツール、およびデータベース内分析の統合が含まれます。|  
 

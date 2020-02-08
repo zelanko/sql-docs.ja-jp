@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 474533a69d74512e3e305f44d96f90009aa64e00
-ms.sourcegitcommit: 34d28d49e8d0910cf06efda686e2d73059569bf8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75656611"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Linux デプロイでの SQL Server 可用性の基本
@@ -84,7 +84,7 @@ Windows ベースの SMB 共有を使用することもできます。[!INCLUDE[
 ### <a name="configure-the-firewall"></a>ファイアウォールの構成
 Windows と同様に、Linux ディストリビューションにはファイアウォールが組み込まれています。 組織のサーバーに外部ファイアウォールが使用されている場合は、Linux でファイアウォールを無効にすることが許容される可能性もあります。 ただし、ファイアウォールがどこで有効になっているかに関係なく、ポートは開いている必要があります。 次の表は、Linux 上の高可用性 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] デプロイに必要な、一般的なポートを示したものです。
 
-| ポート番号 | 種類     | [説明]                                                                                                                 |
+| ポート番号 | Type     | 説明                                                                                                                 |
 |-------------|----------|-----------------------------------------------------------------------------------------------------------------------------|
 | 111         | TCP/UDP  | NFS - `rpcbind/sunrpc`                                                                                                    |
 | 135         | TCP      | Samba (使用されている場合) - End Point Mapper                                                                                          |

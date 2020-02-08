@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: f2e2d696a09e5b5bb321da583efd76f580759ce6
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727669"
 ---
 # <a name="security-overview-for-the-extensibility-framework-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services の機能拡張フレームワークのセキュリティの概要
@@ -98,7 +98,7 @@ Launchpad は、外部プロセスを起動するだけでなく、呼び出し�
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 ### <a name="appcontainer-isolation-in-sql-server-2019"></a>SQL Server 2019 での AppContainer の分離
 
-SQL Server 2019 では、セットアップで **SQLRUserGroup** のワーカー アカウントが作成されなくなりました。 代わりに、[AppContainer](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation) によって分離が実現されます。 実行時に、ストアド プロシージャまたはクエリで外部スクリプトが検出されると、SQL Server は拡張機能固有の起動ツールの要求を使用して Launchpad を呼び出します。 Launchpad は、その ID 下のプロセスで適切なランタイム環境を呼び出し、AppContainer をインスタンス化して、そのランタイム環境を含めます。 ローカル アカウントとパスワードの管理が不要になったため、これは有益な変更です。 また、ローカル ユーザー アカウントが禁止されているインストールでは、ローカル ユーザー アカウントの依存関係を削除することで、この機能を使用できるようになります。
+SQL Server 2019 では、セットアップで **SQLRUserGroup** のワーカー アカウントが作成されなくなりました。 代わりに、[AppContainer](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation) によって分離が実現されます。 実行時に、ストアド プロシージャまたはクエリで外部スクリプトが検出されると、SQL Server は拡張機能固有の起動ツールの要求を使用して Launchpad を呼び出します。 Launchpad は、自身の ID の下のプロセスで適切なランタイム環境を呼び出し、AppContainer をインスタンス化して、それを含めます。 ローカル アカウントとパスワードの管理が不要になったため、これは有益な変更です。 また、ローカル ユーザー アカウントが禁止されているインストールでは、ローカル ユーザー アカウントの依存関係を削除することで、この機能を使用できるようになります。
 
 AppContainer は、SQL Server に実装されているため、内部メカニズムです。 プロセス モニターには AppContainer の物理的な証拠は表示されませんが、セットアップによって作成された、プロセスによるネットワーク呼び出しを防ぐための送信ファイアウォール規則で AppContainer を見つけることができます。 詳細については、「[SQL Server Machine Learning Services のファイアウォール構成](../../advanced-analytics/security/firewall-configuration.md)」を参照してください。
 
@@ -150,7 +150,7 @@ SQL Server の機密性の高いリソースを保護するために、**SQLRUse
 
 [Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md) の場合、外部ランタイムは暗号化キーにアクセスできません。 そのため、スクリプトにデータを送信できません。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 この記事では、[機能拡張フレームワーク](../../advanced-analytics/concepts/extensibility-framework.md)に組み込まれたセキュリティ アーキテクチャのコンポーネントと相互作用モデルについて学習しました。 この記事で取り上げた主なポイントは、Launchpad、SQLRUserGroup、およびワーカー アカウントの目的、R と Python のプロセス分離、ユーザー ID をワーカーアカウントにマップする方法です。 
 

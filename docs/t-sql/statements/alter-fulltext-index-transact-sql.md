@@ -22,10 +22,10 @@ ms.assetid: b6fbe9e6-3033-4d1b-b6bf-1437baeefec3
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: f9799b747883f876b413bf540516f5c2a1cbed11
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981813"
 ---
 # <a name="alter-fulltext-index-transact-sql"></a>ALTER FULLTEXT INDEX (Transact-SQL)
@@ -211,9 +211,9 @@ ALTER FULLTEXT INDEX ON table_name
 |変更の追跡|WITH NO POPULATION|結果|  
 |---------------------|------------------------|------------|  
 |有効ではない|指定なし|インデックスで完全作成が実行されます。|  
-|有効ではない|[Specified]|ALTER FULLTEXT INDEX...START POPULATION ステートメントが実行されるまで、インデックスの作成は行われません。|  
-|有効|指定あり|エラーが発生し、インデックスは変更されません。|  
-|有効|指定なし|インデックスで完全作成が実行されます。|  
+|有効ではない|指定済み|ALTER FULLTEXT INDEX...START POPULATION ステートメントが実行されるまで、インデックスの作成は行われません。|  
+|Enabled|指定済み|エラーが発生し、インデックスは変更されません。|  
+|Enabled|指定なし|インデックスで完全作成が実行されます。|  
   
  フルテキスト インデックスの作成について詳しくは、「[フルテキスト インデックスの作成](../../relational-databases/search/populate-full-text-indexes.md)」をご覧ください。  
   
@@ -292,7 +292,7 @@ ALTER FULLTEXT INDEX ON table_name
 > [!NOTE]  
 >  一般のユーザーには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に含まれる既定のストップリストに対する REFERENCES 権限が許可されています。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-setting-manual-change-tracking"></a>A. 手動の変更追跡を設定する  
  次の例では、`JobCandidate` テーブルで、フルテキスト インデックスに対して手動での変更追跡を設定します。  

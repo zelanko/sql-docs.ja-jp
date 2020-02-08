@@ -11,10 +11,10 @@ ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
 ms.openlocfilehash: 23610c3144c7cf03a4c93be900bfc60a449448ed
-ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72041251"
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Linux に SQL Server コマンドライン ツール sqlcmd および bcp をインストールする
@@ -229,7 +229,7 @@ brew install mssql-tools
     | SLES | `sudo zypper install msodbcsql-<version>.rpm`<br/>`sudo zypper install mssql-tools-<version>.rpm` |
     | Ubuntu | `sudo dpkg -i msodbcsql_<version>.deb`<br/>`sudo dpkg -i mssql-tools_<version>.deb` |
 
-1. **不足している依存関係を解決します**。この時点で、依存関係が不足している場合があります。 そうでない場合は、この手順は省略します。 場合によっては、それらの依存関係を手動で見つけてインストールする必要があります。
+1. **不足している依存関係を解決します**。この時点で、依存関係が不足している場合があります。 そうでない場合は、この手順は省略できます。 場合によっては、それらの依存関係を手動で見つけてインストールする必要があります。
 
     RPM パッケージでは、次のコマンドを使用して必要な依存関係を調べることができます。
 
@@ -254,7 +254,7 @@ brew install mssql-tools
     dpkg -I mssql-tools_<version>_amd64.deb | grep "Depends:"
     ```
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 **sqlcmd** を使用して SQL Server に接続してデータベースを作成する方法の例については、次のクイックスタートのいずれかをご覧ください。
 

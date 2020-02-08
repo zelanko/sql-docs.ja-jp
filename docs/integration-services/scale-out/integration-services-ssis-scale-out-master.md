@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.openlocfilehash: e3e52a854224210ed4561dbce12877fbb4c0f6fb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68082120"
 ---
 # <a name="integration-services-ssis-scale-out-master"></a>Integration Services (SSIS) Scale Out Master
@@ -52,7 +52,7 @@ Scale Out Master サービスは、Scale Out Worker との通信を担当する 
 `<drive>:\Program Files\Microsoft SQL Server\140\DTS\Binn\MasterSettings.config` ファイルを使用して、SSIS Scale Out サービスを構成します。 構成ファイルの更新後に、サービスを再起動する必要があります。
 
 
-|構成  |[説明]  |[既定値]  |
+|構成  |説明  |Default value  |
 |---------|---------|---------|
 |PortNumber|Scale Out Worker との通信に利用されるネットワーク ポート番号。|8391|
 |SSLCertThumbprint|Scale Out Worker との通信の保護に利用される SSL 証明書のサムプリント。|Scale Out Master のインストール時に指定される SSL 証明書のサムプリント|
@@ -69,6 +69,6 @@ Scale Out Master サービス ログ ファイルは `<drive>:\Users\[account]\A
 
 *[account]* パラメーターは、Scale Out Master サービスを実行するアカウントです。 既定では、このアカウントは `SSISScaleOutMaster140` です。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 [Integration Services (SSIS) Scale Out Worker](integration-services-ssis-scale-out-worker.md)

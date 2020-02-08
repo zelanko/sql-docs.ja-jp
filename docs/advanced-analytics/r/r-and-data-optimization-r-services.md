@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: d966094277f47d3ef12239c32a75c9a3ecbf88c9
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727425"
 ---
 # <a name="performance-for-r-services---data-optimization"></a>R Services のパフォーマンス - データの最適化
@@ -31,7 +31,7 @@ SQL Server 2016 および 2017 では、R または Python スクリプトを実
 
 大規模なデータ セットを操作する場合は、常に SQL 計算コンテキストを使用してください。
 
-## <a name="factors"></a>因子
+## <a name="factors"></a>考慮すべき要素
 
 R 言語には "*因子*" の概念があります。これはカテゴリ データに対する特別な変数です。 データ サイエンティストが因子変数を式で使用することはよくあります。これは、カテゴリ変数を因子として処理することで、データが機械学習関数によって確実かつ適切に処理されるためです。 詳細については、[R for Dummies: 因子変数](https://www.dummies.com/programming/r/how-to-look-at-the-structure-of-a-factor-in-r/)に関するページをご覧ください。
 
@@ -135,7 +135,7 @@ RevoScaleR アルゴリズムの多くが、トレーニング モデルの生�
 
     `rxDTree` では、`maxDepth` パラメーターがサポートされています。これはデシジョン ツリーの深さを制御します。 `maxDepth` が増加するとパフォーマンスが低下する可能性があります。したがって、深さを増やすメリットと、パフォーマンスを低下させるデメリットを分析することが重要です。
 
-    `maxNumBins` `maxDepth`、`maxComplete`、`maxSurrogate` などのパラメーターを調整することで、時間の複雑さと予測の精度のバランスを制御することもできます。 深さを 10 または 15 を超えた値に増やすと、計算が非常に不経済になる可能性があります。
+    `maxNumBins``maxDepth`、`maxComplete`、`maxSurrogate` などのパラメーターを調整することで、時間の複雑さと予測の精度のバランスを制御することもできます。 深さを 10 または 15 を超えた値に増やすと、計算が非常に不経済になる可能性があります。
 
 + [rxLinMod](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlinmod)
 
@@ -185,6 +185,6 @@ RevoScaleR の最適化に関するその他のガイダンスについては、
 
 [R のパフォーマンス チューニング - SQL Server の構成](sql-server-configuration-r-services.md)
 
-[R のパフォーマンス チューニング - R コードおよびデータの最適化](r-and-data-optimization-r-services.md)
+[R のパフォーマンス チューニング - R コードとデータの最適化](r-and-data-optimization-r-services.md)
 
 [パフォーマンス チューニング - ケース スタディの結果](performance-case-study-r-services.md)

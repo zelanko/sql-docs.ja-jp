@@ -17,10 +17,10 @@ ms.assetid: d74afd28-25c3-48a1-bc3f-e353bee615c2
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 6fa77fa3ac4733d9672b5bc72523d72abe640fc8
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75251262"
 ---
 # <a name="availability-group-database-level-health-detection-failover-option"></a>可用性グループのデータベース レベルの正常性検出フェールオーバー オプション
@@ -152,7 +152,7 @@ SQL Server Management Studio を使用して、プライマリ SQL Server に接
 
 フィールドの説明:
 
-|列のデータ | [説明]|
+|列のデータ | 説明|
 |---------|---------|
 |availability_group_id |可用性グループの ID。|
 |availability_group_name |可用性グループの名前です。|
@@ -167,7 +167,7 @@ SQL Server Management Studio を使用して、プライマリ SQL Server に接
 
 この出力例は、AutoHa-Sample2 という名前のデータベースで "fault_type 2 シャットダウン" が発生したため、SQLSERVER-1 という名前のレプリカの、可用性グループ Contoso-ag で、重大なイベントが発生したことを示しています。
 
-|フィールド  | 値|
+|フィールド  | Value|
 |---------|---------|
 |availability_group_id | 24E6FE58-5EE8-4C4E-9746-491CFBB208C1|
 |availability_group_name | Contoso-ag|

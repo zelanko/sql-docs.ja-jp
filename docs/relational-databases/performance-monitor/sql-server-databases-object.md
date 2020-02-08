@@ -16,10 +16,10 @@ ms.assetid: a7f9e7d4-fff4-4c72-8b3e-3f18dffc8919
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: a8114722ac95c1404a45d8c85bf1736e541fa0ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68093603"
 ---
 # <a name="sql-server-databases-object"></a>SQL Server、Databases オブジェクト
@@ -30,7 +30,7 @@ ms.locfileid: "68093603"
   
  次の表で、SQL Server **Databases** カウンターについて説明します。  
   
-|SQL Server Databases カウンター|[説明]|  
+|SQL Server Databases カウンター|説明|  
 |-----------------------------------|-----------------|  
 |**Active Transactions**|データベースのアクティブなトランザクション数。|  
 |**Avg Dist From EOL/LP Request**|最新の VLF 内の要求における、ログ プール要求ごとの、ログの終端からのバイト単位での平均距離。| 
@@ -43,7 +43,7 @@ ms.locfileid: "68093603"
 |**Group Commit Time/sec**|1 秒あたりのグループ停止時間 (マイクロ秒)。|
 |**Log Bytes Flushed/sec**|フラッシュされたログの総バイト数。|  
 |**Log Cache Hit Ratio**|ログ キャッシュによって満たされたログ キャッシュ読み取りの比率。|  
-|**Log Cache Hit Ratio Base**|内部使用のみです。| 
+|**Log Cache Hit Ratio Base**|内部使用専用です。| 
 |**Log Cache Reads/sec**|ログ マネージャー キャッシュを使用して 1 秒間に実行された読み取り数。|  
 |**Log File(s) Size (KB)**|データベース内のすべてのトランザクション ログ ファイルの合計サイズ (KB)。|  
 |**Log File(s) Used Size (KB)**|データベース内のすべてのログ ファイルの合計使用サイズ (KB)。|  
@@ -63,7 +63,7 @@ ms.locfileid: "68093603"
 |**Log Pool Push Low Memory/sec**|メモリが不足しているため、ログ ブロックのプッシュ率が下がります。|
 |**Log Pool Push No Free Buffer/sec**|空きバッファーが利用できないため、ログ ブロックのプッシュ率が下がります。|
 |**Log Pool Req.Behind Trunc/sec**|切り捨て LSN で要求されたブロックによるログ プールのキャッシュ ミス回数。|
-|**Log Pool Requests Base**|内部使用のみです。| 
+|**Log Pool Requests Base**|内部使用専用です。| 
 |**Log Pool Requests Old VLF/sec**|ログの最新の VLF にないログ プール要求。|  
 |**Log Pool Requests/sec**|ログ プールで処理されるログ ブロック要求の数。|  
 |**Log Pool Total Active Log Size**|共有キャッシュ バッファー マネージャーに現在格納されているアクティブなログの合計 (バイト単位) です。|
@@ -77,7 +77,7 @@ ms.locfileid: "68093603"
 |**Tracked transactions/sec**|データベースのコミット テーブルに記録するコミット済みトランザクションの数。|  
 |**Transactions/sec**|1 秒間にデータベースに対して開始されたトランザクションの数。<br /><br /> **Transactions/sec** は、XTP のみのトランザクション (ネイティブ コンパイル ストアド プロシージャによって開始されたトランザクション) はカウントしません。|  
 |**Write Transactions/sec**|最後の 1 秒間にデータベースに書き込んでコミットしたトランザクションの数。|  
-|**XTP Controller DLC Latency Base**|内部使用のみです。| 
+|**XTP Controller DLC Latency Base**|内部使用専用です。| 
 |**XTP Controller DLC Latency/Fetch**|Direct Log Consumer に入ってから XTP コントローラーによって取り出されるまでのログ ブロック間における、1 秒あたりの平均待機時間 (マイクロ秒)。|
 |**XTP Controller DLC Peak Latency**|XTP コントローラーによる Direct Log Consumer からのフェッチで記録された最大待機時間 (マイクロ秒)。|
 |**XTP Controller Log Processed/sec**|XTP コントローラー スレッドによって処理された、1 秒あたりの合計ログ バイト数。|
@@ -85,6 +85,6 @@ ms.locfileid: "68093603"
   
 ## <a name="see-also"></a>参照  
  [リソースの利用状況の監視 &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
- [SQL Server、Database Replica](../../relational-databases/performance-monitor/sql-server-database-replica.md)  
+ [SQL Server、データベース レプリカ](../../relational-databases/performance-monitor/sql-server-database-replica.md)  
   
   

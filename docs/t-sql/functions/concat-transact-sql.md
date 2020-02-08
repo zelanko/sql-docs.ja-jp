@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6968766b2d7d447f21fccc6425935017a6943778
-ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70122956"
 ---
 # <a name="concat-transact-sql"></a>CONCAT (Transact-SQL)
@@ -46,15 +46,15 @@ CONCAT ( string_value1, string_value2 [, string_valueN ] )
 *string_value*  
 長さと型を入力に依存する文字列値。
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 `CONCAT` は、文字列引数の可変数を取得して、1 つの文字列に連結 (または結合) します。 最小で 2 つの入力値が必要です。それ以外の場合は、`CONCAT` でエラーが発生します。 `CONCAT` は連結する前に、すべての引数を文字列型に暗黙的に変換します。 `CONCAT` は null 値を空の文字列に暗黙的に変換します。 `CONCAT` はすべて **NULL** 値の引数を受け取ると、**varchar**(1) 型の空の文字列を返します。 文字列への暗黙の変換は、データ型変換の既存の規則に従います。 データ型変換の詳細については、「[CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)」を参照してください。
   
 戻り値の型は、引数の種類によって異なります。 次の表に、マッピングを示します。
   
 |入力型|出力型と長さ|  
 |---|---|
-|1.次の任意の引数<br><br />SQL-CLR システム型<br><br />SQL CLR UDT<br><br />内の複数の<br><br />`nvarchar(max)`|**nvarchar(max)**|  
-|2.それ以外の場合、次の型の任意の引数<br><br />**varbinary(max)**<br><br />内の複数の<br><br />**varchar(max)**|**varchar(max)** 。ただし、いずれかのパラメーターが任意の長さの **nvarchar** である場合を除きます。 この場合、`CONCAT` は **nvarchar(max)** 型の結果を返します。|  
+|1.次の任意の引数<br><br />SQL-CLR システム型<br><br />SQL CLR UDT<br><br />or<br><br />`nvarchar(max)`|**nvarchar(max)**|  
+|2.それ以外の場合、次の型の任意の引数<br><br />**varbinary(max)**<br><br />or<br><br />**varchar(max)**|**varchar(max)** 。ただし、いずれかのパラメーターが任意の長さの **nvarchar** である場合を除きます。 この場合、`CONCAT` は **nvarchar(max)** 型の結果を返します。|  
 |3.それ以外の場合、最大 4,000 文字の **nvarchar** 型の任意の引数<br><br />( **nvarchar**(<= 4000) )|**nvarchar**(<= 4000)|  
 |4.その他のすべての場合|**varchar**(<= 8000) (最大 8,000 文字の **varchar**)。ただし、いずれかのパラメーターが任意の長さの nvarchar である場合を除きます。 その場合、`CONCAT` は **nvarchar(max)** 型の結果を返します。|  
   
@@ -64,7 +64,7 @@ CONCAT ( string_value1, string_value2 [, string_valueN ] )
   
 CONCAT 関数は、バージョン [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降のリンク サーバーでリモートで実行することができます。 古いバージョンのリンク サーバーでは、リンク サーバーが非連結された値を返した後で、CONCAT 操作がローカルに実行されます。
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-using-concat"></a>A. CONCAT を使用する  
   

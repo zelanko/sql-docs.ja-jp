@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.openlocfilehash: 5c4d5cc303d297a21b730abc30e10b85c65cc3d2
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68811201"
 ---
 # <a name="scale-out-support-for-high-availability-via-sql-server-failover-cluster-instance"></a>SQL Server フェールオーバー クラスター インスタンスを介した高可用性の Scale Out のサポート
@@ -25,7 +25,7 @@ ms.locfileid: "68811201"
 
 SQL Server フェールオーバー クラスター インスタンスを使用して Scale Out Master 側の高可用性を設定するには、次の手順を実行します。
 
-## <a name="1-prerequisites"></a>1.Prerequisites
+## <a name="1-prerequisites"></a>1.前提条件
 Windows フェールオーバー クラスターを設定します。 手順については、ブログ投稿の「[Windows Server 2012 のフェールオーバー クラスター機能とツールのインストール](https://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx)」 を参照してください。 すべてのクラスター ノードに機能とツールをインストールします。
 
 ## <a name="2-install-sql-server-failover-cluster"></a>2.SQL Server フェールオーバー クラスターをインストールする
@@ -75,7 +75,7 @@ SQL Server フェールオーバー クラスター内のすべてのノード�
 > [!NOTE]
 > Scale Out Master は SQL Server フェールオーバー クラスターをサポートしていません。 Scale Out Manager を使用して Scale Out Worker を追加する場合は、すべてのマスター ノードにワーカー証明書を手動でインストールする必要があります。
 
-## <a name="next-steps"></a>次の手順
-詳細については、次の記事をご覧ください。
+## <a name="next-steps"></a>次のステップ
+詳細については、次の記事を参照してください。
 -   [Integration Services (SSIS) Scale Out Master](integration-services-ssis-scale-out-master.md)
 -   [Integration Services (SSIS) Scale Out Worker](integration-services-ssis-scale-out-worker.md)

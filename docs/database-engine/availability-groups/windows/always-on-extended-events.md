@@ -11,10 +11,10 @@ ms.assetid: 5950f98a-3950-473d-95fd-cde3557b8fc2
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: d6fdf58703d448e07c9be063b616f90c72f2411d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67991556"
 ---
 # <a name="configure-extended-events-for-always-on-availability-groups"></a>Always On 可用性グループの拡張イベントを構成する
@@ -81,15 +81,15 @@ alwayson_health でカバーされているイベントの一部については�
   
 #### <a name="event-information"></a>イベントに関する情報  
   
-|[列]|[説明]|  
+|列|説明|  
 |------------|-----------------|  
-|[オブジェクト名]|availability_replica_state_change|  
+|Name|availability_replica_state_change|  
 |カテゴリ|always on|  
-|Channel|運用|  
+|チャネル|運用時|  
   
 #### <a name="event-fields"></a>イベント フィールド  
   
-|[オブジェクト名]|Type_name|[説明]|  
+|Name|Type_name|説明|  
 |----------|----------------|-----------------|  
 |availability_group_id|guid|可用性グループの ID。|  
 |availability_group_name|unicode_string|可用性グループの名前です。|  
@@ -97,7 +97,7 @@ alwayson_health でカバーされているイベントの一部については�
 |previous_state|availability_replica_state|変更前のレプリカのロール。<br /><br /> **有効な値は次のとおりです。**<br /><br /> Primary_Normal<br /><br /> Secondary_Normal<br /><br /> Resolving_Pending_Failover<br /><br /> Resolving_Normal<br /><br /> Primary_Pending<br /><br /> Not_Available|  
 |current_state|availability_replica_state|変更後のレプリカのロール。<br /><br /> **有効な値は次のとおりです。**<br /><br /> Primary_Normal<br /><br /> Secondary_Normal<br /><br /> Resolving_Pending_Failover<br /><br /> Resolving_Normal<br /><br /> Primary_Pending<br /><br /> Not_Available|  
   
-#### <a name="alwaysonhealth-session-definition"></a>alwayson_health セッションの定義  
+#### <a name="alwayson_health-session-definition"></a>alwayson_health セッションの定義  
   
 ```sql  
 CREATE EVENT SESSION [alwayson_health] ON SERVER   
@@ -112,20 +112,20 @@ GO
   
 #### <a name="event-information"></a>イベントに関する情報  
   
-|[列]|[説明]|  
+|列|説明|  
 |------------|-----------------|  
-|[オブジェクト名]|availability_group_lease_expired|  
+|Name|availability_group_lease_expired|  
 |カテゴリ|always on|  
-|Channel|運用|  
+|チャネル|運用時|  
   
 #### <a name="event-fields"></a>イベント フィールド  
   
-|[オブジェクト名]|Type_name|[説明]|  
+|Name|Type_name|説明|  
 |----------|----------------|-----------------|  
 |availability_group_id|guid|可用性グループの ID。|  
 |availability_group_name|unicode_string|可用性グループの名前です。|  
   
-#### <a name="alwaysonhealth-session-definition"></a>alwayson_health セッションの定義  
+#### <a name="alwayson_health-session-definition"></a>alwayson_health セッションの定義  
   
 ```sql  
 CREATE EVENT SESSION [alwayson_health] ON SERVER   
@@ -140,15 +140,15 @@ GO
   
 #### <a name="event-information"></a>イベントに関する情報  
   
-|[オブジェクト名]|[説明]|  
+|Name|説明|  
 |----------|-----------------|  
 |availability_replica_automatic_failover_validation||  
 |カテゴリ|always on|  
-|Channel|分析|  
+|チャネル|分析|  
   
 #### <a name="event-fields"></a>イベント フィールド  
   
-|[オブジェクト名]|Type_name|[説明]|  
+|Name|Type_name|説明|  
 |----------|----------------|-----------------|  
 |availability_group_id|guid|可用性グループの ID。|  
 |availability_group_name|unicode_string|可用性グループの名前です。|  
@@ -157,7 +157,7 @@ GO
 |joined_and_synchronized|validation_result_type|値が FALSE の場合、この可用性レプリカでは自動フェールオーバーは無効になります。<br /><br /> TRUE<br /><br /> FALSE|  
 |previous_primary_or_automatic_failover_target|validation_result_type|値が FALSE の場合、この可用性レプリカでは自動フェールオーバーは無効になります。<br /><br /> TRUE<br /><br /> FALSE|  
   
-#### <a name="alwaysonhealth-session-definition"></a>alwayson_health セッションの定義  
+#### <a name="alwayson_health-session-definition"></a>alwayson_health セッションの定義  
   
 ```sql  
 CREATE EVENT SESSION [alwayson_health] ON SERVER   
@@ -177,15 +177,15 @@ GO
 ###  <a name="BKMK_error_reported"></a> error_reported (複数のエラー番号): 転送または接続に問題がある場合  
  フィルター処理した各イベントは、可用性グループが依存しているトランスポートまたはデータベース ミラーリング エンドポイントで接続の問題が発生したことを示します。  
   
-|[列]|[説明]|  
+|列|説明|  
 |------------|-----------------|  
-|[オブジェクト名]|error_reported<br /><br /> フィルター処理する番号: 35201、35202、35206、35204、35207、9642、9666、9691、9692、9693、28034、28036、28080、28091、33309|  
+|Name|error_reported<br /><br /> フィルター処理する番号: 35201、35202、35206、35204、35207、9642、9666、9691、9692、9693、28034、28036、28080、28091、33309|  
 |カテゴリ|エラー|  
-|Channel|管理|  
+|チャネル|[Admin]|  
   
 #### <a name="error-numbers-to-filter"></a>フィルター処理するエラー番号  
   
-|エラー番号|[説明]|  
+|エラー番号|説明|  
 |------------------|-----------------|  
 |35201|可用性レプリカ '%ls' への接続を確立しようとしているときに接続タイムアウトが発生しました。|  
 |35202|可用性グループ '%ls' での、ID [%ls] を持つ可用性レプリカ '%ls' から ID [%ls] を持つ可用性レプリカ '%ls' への接続が正常に確立されました。  このメッセージは情報提供だけを目的としています。 ユーザーによる操作は不要です。|  
@@ -204,7 +204,7 @@ GO
 |28091|%S_MSG のエンドポイントを認証なしで開始することはサポートされていません。|  
 |33309|既定の %S_MSG エンドポイント構成がまだ読み込まれていないので、クラスター エンドポイントを開始できません。|  
   
-#### <a name="alwaysonhealth-session-definition"></a>alwayson_health セッションの定義  
+#### <a name="alwayson_health-session-definition"></a>alwayson_health セッションの定義  
   
 ```sql  
 CREATE EVENT SESSION [alwayson_health] ON SERVER   
@@ -240,17 +240,17 @@ GO
   
 #### <a name="event-information"></a>イベントに関する情報  
   
-|[列]|[説明]|  
+|列|説明|  
 |------------|-----------------|  
-|[オブジェクト名]|data_movement_suspend_resume|  
-|カテゴリ|Always on|  
-|Channel|運用|  
+|Name|data_movement_suspend_resume|  
+|カテゴリ|常に有効です。|  
+|チャネル|運用時|  
   
 #### <a name="event-fields"></a>イベント フィールド  
   
 ||||  
 |-|-|-|  
-|[オブジェクト名]|Type_name|[説明]|  
+|Name|Type_name|説明|  
 |availability_group_id|guid|可用性グループの ID。|  
 |availability_group_name|unicode_string|可用性グループの名前 (使用可能な場合)。|  
 |availability_replica_id|guid|可用性レプリカの ID。|  
@@ -261,7 +261,7 @@ GO
 |suspend_source|suspend_source_type|中断アクションまたは再開アクションのソース。|  
 |suspend_reason|unicode_string|データベース レプリカ マネージャー内でキャプチャされた中断の理由。|  
   
-#### <a name="alwaysonhealth-session-definition"></a>alwayson_health セッションの定義  
+#### <a name="alwayson_health-session-definition"></a>alwayson_health セッションの定義  
   
 ```sql  
 CREATE EVENT SESSION [alwayson_health] ON SERVER   
@@ -283,23 +283,23 @@ GO
   
 #### <a name="event-information"></a>イベントに関する情報  
   
-|[列]|[説明]|  
+|列|説明|  
 |------------|-----------------|  
-|[オブジェクト名]|alwayson_ddl_execution|  
+|Name|alwayson_ddl_execution|  
 |カテゴリ|always on|  
-|Channel|分析|  
+|チャネル|分析|  
   
 #### <a name="event-fields"></a>イベント フィールド  
   
-|[オブジェクト名]|Type_name|[説明]|  
+|Name|Type_name|説明|  
 |----------|----------------|-----------------|  
 |availability_group_id|Guid|可用性グループの ID。|  
 |availability_group_name|unicode_string|可用性グループの名前です。|  
 |ddl_action|alwayson_ddl_action|REATE、ALTER、DROP といった DDL アクションのCREATE、ALTER、または DROP。|  
 |ddl_phase|ddl_opcode|BEGIN、COMMIT、ROLLBACK といった DDL 操作のBEGIN、COMMIT、または ROLLBACK。|  
-|ステートメントから削除してください。|unicode_string|実行されたステートメントのテキスト。|  
+|ステートメント|unicode_string|実行されたステートメントのテキスト。|  
   
-#### <a name="alwaysonhealth-session-definition"></a>alwayson_health セッションの定義  
+#### <a name="alwayson_health-session-definition"></a>alwayson_health セッションの定義  
   
 ```sql  
 CREATE EVENT SESSION [alwayson_health] ON SERVER   
@@ -316,19 +316,19 @@ GO
   
 #### <a name="event-information"></a>イベントに関する情報  
   
-|[列]|[説明]|  
+|列|説明|  
 |------------|-----------------|  
-|[オブジェクト名]|availability_replica_manager_state_change|  
+|Name|availability_replica_manager_state_change|  
 |カテゴリ|always on|  
-|Channel|運用|  
+|チャネル|運用時|  
   
 #### <a name="event-fields"></a>イベント フィールド  
   
-|[オブジェクト名]|Type_name|[説明]|  
+|Name|Type_name|説明|  
 |----------|----------------|-----------------|  
-|current_state|manager_state|可用性レプリカ マネージャーの現在の状態。<br /><br /> オンライン<br /><br /> Offline<br /><br /> WaitingForClusterCommunication|  
+|current_state|manager_state|可用性レプリカ マネージャーの現在の状態。<br /><br /> オンライン<br /><br /> オフライン<br /><br /> WaitingForClusterCommunication|  
   
-#### <a name="alwaysonhealth-session-definition"></a>alwayson_health セッションの定義  
+#### <a name="alwayson_health-session-definition"></a>alwayson_health セッションの定義  
   
 ```sql  
 CREATE EVENT SESSION [alwayson_health] ON SERVER   
@@ -347,13 +347,13 @@ GO
   
 #### <a name="event-information"></a>イベントに関する情報  
   
-|[列]|[説明]|  
+|列|説明|  
 |------------|-----------------|  
-|[オブジェクト名]|error_reported<br /><br /> エラー番号 1480: REPLICATION_TYPE_MSG データベース "DATABASE_NAME" は、REASON_MSG が原因で、"OLD_ROLE" から "NEW_ROLE" にロールを変更中です|  
+|Name|error_reported<br /><br /> エラー番号 1480: REPLICATION_TYPE_MSG データベース "DATABASE_NAME" は、REASON_MSG が原因で、"OLD_ROLE" から "NEW_ROLE" にロールを変更中です|  
 |カテゴリ|エラー|  
-|Channel|管理|  
+|チャネル|[Admin]|  
   
-#### <a name="alwaysonhealth-session-definition"></a>alwayson_health セッションの定義  
+#### <a name="alwayson_health-session-definition"></a>alwayson_health セッションの定義  
   
 ```sql  
 CREATE EVENT SESSION [alwayson_health] ON SERVER   
@@ -375,5 +375,5 @@ WITH (MAX_MEMORY=4096 KB,EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,MAX_DISPAT
 GO  
 ```  
   
-## <a name="next-steps"></a>次の手順  
+## <a name="next-steps"></a>次のステップ  
  [イベント セッション データの表示](https://msdn.microsoft.com/library/hh710068(v=sql.110).aspx)   

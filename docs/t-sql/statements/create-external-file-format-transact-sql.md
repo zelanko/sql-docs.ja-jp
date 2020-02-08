@@ -21,10 +21,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: dd632c012e6859da004e105d2311c9c21d3dec02
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67902702"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT (Transact-SQL)
@@ -182,16 +182,16 @@ PolyBase では、カスタム日付形式はデータのインポートに対�
   
 -   AM/PM (tt) は、必須ではありません。 既定値は AM です。
   
-|日付型|例|[説明]|  
+|日付型|例|説明|  
 |---------------|-------------|-----------------|  
 |DateTime|DATE_FORMAT = 'yyyy-MM-dd HH:mm:ss.fff'|年、月、日に加えて、この日付形式には、00-24 の時、00-59 の分、00-59 の秒、3 桁のミリ秒が含まれます。|  
 |DateTime|DATE_FORMAT = 'yyyy-MM-dd hh:mm:ss.ffftt'|年、月、日に加えて、この日付形式には、00-12 の時、00-59 の分、00-59 の秒、3 桁のミリ秒、および AM/am/PM/pm が含まれます。 |  
 |SmallDateTime|DATE_FORMAT =  'yyyy-MM-dd HH:mm'|年、月、日に加えて、この日付形式には、00-23 の時、00-59 の分が含まれます。|  
 |SmallDateTime|DATE_FORMAT =  'yyyy-MM-dd hh:mmtt'|年、月、日に加えて、この日付形式には、00-11 の時、00-59 の分、AM/am/PM/pm が含まれ、秒は含まれません。|  
-|date|DATE_FORMAT =  'yyyy-MM-dd'|年、月、日。 時刻要素は含まれていません。|  
-|date|DATE_FORMAT = 'yyyy-MMM-dd'|年、月、日。 3 つの M を使用して月を指定する場合、入力値は 1 つです。つまり、1 月、2 月、3 月、4 月、6 月、7 月、8 月、9 月、10 月、11 月、または 12 月という文字列です。|  
-|datetime2|DATE_FORMAT = 'yyyy-MM-dd HH:mm:ss.fffffff'|年、月、日に加えて、この日付形式には、00-23 の時、00-59 の分、00-59 の秒、7 桁のミリ秒が含まれます。|  
-|datetime2|DATE_FORMAT = 'yyyy-MM-dd hh:mm:ss.ffffffftt'|年、月、日に加えて、この日付形式には、00-11 の時、00-59 の分、00-59 の秒、7 桁のミリ秒、および AM/am/PM/pm が含まれます。|  
+|Date|DATE_FORMAT =  'yyyy-MM-dd'|年、月、日。 時刻要素は含まれていません。|  
+|Date|DATE_FORMAT = 'yyyy-MMM-dd'|年、月、日。 3 つの M を使用して月を指定する場合、入力値は 1 つです。つまり、1 月、2 月、3 月、4 月、6 月、7 月、8 月、9 月、10 月、11 月、または 12 月という文字列です。|  
+|DateTime2|DATE_FORMAT = 'yyyy-MM-dd HH:mm:ss.fffffff'|年、月、日に加えて、この日付形式には、00-23 の時、00-59 の分、00-59 の秒、7 桁のミリ秒が含まれます。|  
+|DateTime2|DATE_FORMAT = 'yyyy-MM-dd hh:mm:ss.ffffffftt'|年、月、日に加えて、この日付形式には、00-11 の時、00-59 の分、00-59 の秒、7 桁のミリ秒、および AM/am/PM/pm が含まれます。|  
 |DateTimeOffset|DATE_FORMAT = 'yyyy-MM-dd HH:mm:ss.fffffff zzz'|年、月、日に加えて、この日付形式には、00-23 の時、00-59 の分、00-59 の秒、7 桁のミリ秒、および `{+&#124;-}HH:ss` として入力ファイルに格納するタイムゾーンのオフセットが含まれます。 たとえば、ロサンゼルス時間 (夏時間なし) は、UTC よりも 8 時間遅くなるので、入力ファイル内の値 -08:00 によってロサンゼルスのタイムゾーンが指定されます。|  
 |DateTimeOffset|DATE_FORMAT = 'yyyy-MM-dd hh:mm:ss.ffffffftt zzz'|年、月、日に加えて、この日付形式には、00-11 の時、00-59 の分、00-59 の秒、7 桁のミリ秒、AM/am/PM/pm、およびタイムゾーンのオフセットが含まれます。 前の行の説明を参照してください。|  
 |Time|DATE_FORMAT = 'HH:mm:ss'|日付の値はありません。00 から 23 時、00 から 59 分、00 から 59 秒のみです。|  
@@ -301,7 +301,7 @@ PolyBase では、カスタム日付形式はデータのインポートに対�
   
  Gzip で圧縮されたテキスト ファイルは分割可能ではありません。 Gzip で圧縮されたテキスト ファイルのパフォーマンスを向上させるには、複数のファイルを生成し、そのすべてを外部データ ソースの同じディレクトリに格納することをお勧めします。 このようなファイル構造にすると、PolyBase は、複数のリーダー プロセスと圧縮解除プロセスを使って、より速くデータを圧縮解除できます。 圧縮されたファイルの理想的な数は、計算ノードあたりのデータ リーダー プロセスの最大数です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] では、データ リーダー プロセスの最大数はノードあたり 8 個です。ただし、Azure SQL Data Warehouse Gen2 のリーダー数はノードあたり 20 個です。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] では、ノードごとのデータ リーダー プロセスの最大数は SLO によって変化します。 詳しくは、「[Azure SQL Data Warehouse loading patterns and strategies](https://blogs.msdn.microsoft.com/sqlcat/2017/05/17/azure-sql-data-warehouse-loading-patterns-and-strategies/)」(Azure SQL Data Warehouse の読み込みパターンと戦略) をご覧ください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-create-a-delimitedtext-external-file-format"></a>A. DELIMITEDTEXT 外部ファイル形式を作成する  
  この例では、テキスト区切りファイル用に *textdelimited1* という名前の外部ファイル形式を作成します。 FORMAT\_OPTIONS のオプション リストでは、ファイルのフィールドをパイプ文字 "|" を使って区切ることが指定されています。 テキスト ファイルはまた、Gzip コーデックを使用して圧縮されます。 DATA\_COMPRESSION を指定しないと、テキスト ファイルは圧縮されません。

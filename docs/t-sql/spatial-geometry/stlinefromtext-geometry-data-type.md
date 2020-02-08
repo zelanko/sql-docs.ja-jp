@@ -18,10 +18,10 @@ ms.assetid: 430508ad-207b-4dee-a4d1-4ddf25e6b4a9
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: a0a912e4ab228617537e9c28e9a5cecc4a0278fe
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72278132"
 ---
 # <a name="stlinefromtext-geometry-data-type"></a>STLineFromText (geometry データ型)
@@ -50,13 +50,13 @@ STLineFromText ( 'linestring_tagged_text' , SRID )
   
  OGC の型:**LineString**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 このメソッドでは、入力が整形式でない場合に、**FormatException** がスローされます。 SQL 仕様バージョン 1.2.1 の Open Geospatial Consortium (OGC) Simple Features の 3 次元ジオメトリと測定ジオメトリの WKT 表記はサポートされていません。 Z (標高) 値と M (メジャー) 値のサポートされている表現の例を参照してください。
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  `STLineFromText()` を使用して `geometry` インスタンスを作成する例を次に示します。
 
-### <a name="example-1-two-dimension-geometry-wkt"></a>例 1 : 2 次元ジオメトリ WKT
+### <a name="example-1-two-dimension-geometry-wkt"></a>例 1:2 次元ジオメトリ WKT
 ```  
 DECLARE @g geometry;  
 SET @g = geometry::STLineFromText('LINESTRING (100 100, 200 200)', 0);  

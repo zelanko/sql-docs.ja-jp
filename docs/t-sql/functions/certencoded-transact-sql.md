@@ -18,10 +18,10 @@ ms.assetid: 677a0719-7b9a-4f0b-bc61-41634563f924
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: e81c4101d03fd6f8426b1a15a29b206a0c2be7a5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68040103"
 ---
 # <a name="certencoded-transact-sql"></a>CERTENCODED (Transact-SQL)
@@ -42,13 +42,13 @@ CERTENCODED ( cert_id )
 ## <a name="return-types"></a>戻り値の型
 **varbinary**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 **CERTENCODED** と **CERTPRIVATEKEY** を一緒に使用すると、バイナリの形式で証明書の異なる部分を返します。
   
 ## <a name="permissions"></a>アクセス許可  
 **CERTENCODED** はパブリックに使用できます。
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="simple-example"></a>簡単な例  
 この例では、`Shipping04` という名前の証明書を作成した後、その証明書のバイナリ エンコードを **CERTENCODED** 関数を使用して返します。 この例では、証明書の有効期限を 2040 年 10 月 31 日に設定します。

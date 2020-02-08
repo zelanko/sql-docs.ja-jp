@@ -11,10 +11,10 @@ ms.assetid: 4bd91402-4e37-41de-ab78-8ca5a1948a37
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4f30cba22276d467c218da4d09749fccb464ac5d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296000"
 ---
 # <a name="lesson-3-1-copy-the-lesson-2-package"></a>レッスン 3-1:レッスン 2 のパッケージのコピー
@@ -45,7 +45,7 @@ ms.locfileid: "71296000"
 
 7.  **[プロパティ]** ウィンドウで、 **[Name]** プロパティを「**Lesson 3**」に変更します。
 
-8.  **ID** プロパティのボックスを選択し、ドロップダウン矢印を選択し、[ **\<新しい ID の生成>** ] を選択します。
+8.  **ID** プロパティのボックスを選択し、ドロップダウン矢印を選択し、 **[\<新しい ID の生成>]** を選択します。
 
 ## <a name="add-the-completed-lesson-2-package"></a>完了したレッスン 2 のパッケージの追加
 
@@ -59,6 +59,6 @@ ms.locfileid: "71296000"
 
 5.  前のセクションの手順 3 から 8 の説明に従って、レッスン 3 パッケージをコピーして貼り付けます。  
   
-## <a name="go-to-next-task"></a>次の実習に進む
+## <a name="go-to-next-task"></a>次のタスクに進む
 [手順 2:ログ記録の追加および構成](../integration-services/lesson-3-2-adding-and-configuring-logging.md)  
   

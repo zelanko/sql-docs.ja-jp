@@ -22,10 +22,10 @@ ms.assetid: 83f18102-2035-4a87-acd0-8d96d03efad5
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: c9048efd86a7a4a993a9fff6bcab7f9058144f7e
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843761"
 ---
 # <a name="formatmessage-transact-sql"></a>FORMATMESSAGE (Transact-SQL)
@@ -56,14 +56,14 @@ FORMATMESSAGE ( { msg_number  | ' msg_string ' } , [ param_value [ ,...n ] ] )
 ## <a name="return-types"></a>戻り値の型  
  **nvarchar**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  RAISERROR ステートメントと同様、FORMATMESSAGE は、指定されたパラメーター値を、メッセージ内のプレースホルダー変数に置き換えることによって、メッセージを編集します。 エラー メッセージに指定できるプレースホルダーと編集処理の詳細については、「[RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)」を参照してください。  
   
  FORMATMESSAGE は、ユーザーが現在使用している言語のメッセージを検索します。 日本語版のメッセージがない場合は、英語版のメッセージが使用されます。  
   
  日本語版のメッセージの場合、英語版のパラメーター プレースホルダーに対応するようにパラメーター値を指定する英語版。 つまり、日本語版のパラメーター 1 は、英語版のパラメーター 1 に対応する必要があります。日本語版のパラメーター 2 は、英語版のパラメーター 2 に対応する必要があります。以降についても同様です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-example-with-a-message-number"></a>A. メッセージ番号を含む例  
  次の例では、sys.messages に格納されているレプリケーション メッセージ `20009` を "アーティクル '%s' をパブリケーション '%s' に追加できませんでした。" として使用します。FORMATMESSAGE は、パラメーター プレースホルダーの代わりに `First Variable` 値と `Second Variable` 値を使用します。 置換後の文字列 "アーティクル 'First Variable' をパブリケーション 'Second Variable' に追加できませんでした。" は、ローカル変数 `@var1` に格納されます。  

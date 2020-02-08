@@ -30,10 +30,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6fbcdfc0142d448c8ef02898dd8d5610954423c3
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056811"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
@@ -202,7 +202,7 @@ CREATE USER user_name
   
   - `CREATE USER [Nurses] FROM EXTERNAL PROVIDER;`  
   
- 詳細については、「 [Azure Active Directory 認証を使用して SQL Database に接続する](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication)」を参照してください。  
+ 詳細については、[Azure Active Directory 認証を使用した SQL Database への接続](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication)に関するページを参照してください。  
   
 WITH PASSWORD = '*password*'  
  **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
@@ -243,7 +243,7 @@ ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]
 > [!WARNING]  
 >  このオプションを不適切に使用すると、データが破損する場合があります。 詳細については、「[Always Encrypted で保護された機微なデータの移行](../../relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md)」を参照してください。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  FOR LOGIN を省略した場合、新しいデータベース ユーザーは同じユーザー名を持つ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインにマップされます。  
   
  既定のスキーマは、このデータベース ユーザー用のオブジェクトの名前を解決するときに、サーバーで最初に検索されるスキーマになります。 特に指定しない限り、このデータベース ユーザーによって作成されたオブジェクトの所有者になるのは、既定のスキーマです。  
@@ -345,7 +345,7 @@ SQL Database マネージド インスタンス データベースでユーザ�
 ### <a name="permissions"></a>アクセス許可  
  データベースに対する ALTER ANY USER 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-creating-a-database-user-based-on-a-sql-server-login"></a>A. SQL Server ログインに基づくデータベース ユーザーを作成する  
  次の例では、最初に `AbolrousHazem` という [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを作成し、次に対応するデータベース ユーザー `AbolrousHazem` を `AdventureWorks2012` に作成します。  
@@ -501,7 +501,7 @@ CREATE USER [bob@contoso.com] FROM EXTERNAL PROVIDER;
 GO
 ```
 
-## <a name="next-steps"></a>次の手順  
+## <a name="next-steps"></a>次のステップ  
 ユーザーを作成したら、[ALTER ROLE](../../t-sql/statements/alter-role-transact-sql.md) ステートメントを使用して、ユーザーをデータベース ロールに追加することを検討します。  
 ロールに [GRANT (オブジェクト権限の許可)](../../t-sql/statements/grant-object-permissions-transact-sql.md) を適用して、テーブルにアクセスできるようにすることもできます。 SQL Server セキュリティ モデルの概要については、[権限](../../relational-databases/security/permissions-database-engine.md)に関するページを参照してください。   
   

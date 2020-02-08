@@ -9,10 +9,10 @@ ms.assetid: 2fdf670a-5237-48fe-813d-97657c5c77d2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 780cda075d8280d71f3438c79359c58ad1ac3133
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65575632"
 ---
 # <a name="formatting-pointers-on-a-gauge-report-builder-and-ssrs"></a>ゲージのポインターの書式設定 (レポート ビルダーおよび SSRS)
@@ -48,10 +48,10 @@ ms.locfileid: "65575632"
 ##  <a name="SpecifyingImage"></a> 画像を放射状ゲージのポインターとして指定する  
  ポインターには、組み込みの一連のポインター スタイルの他に、画像を指定できます。 既存の針ポインター スタイルを画像で置き換えた場合、最も効果的です。 画像はポインターに重ね合わせられますが、ポインター機能はすべて適用可能です。 ポインターに画像が使用されている場合、色とグラデーションのオプションは適用されません。  
   
- ポインターの画像が不規則な形状の場合は、ゲージに表示しない画像部分を非表示にするために透明色を定義する必要があります。 透明色を定義すると、ゲージで画像が既存のポインターの上に配置され、ポインターの形状だけ表示されるように画像がトリミングされます。 ゲージでは、ポインターのサイズに合わせて画像が再スケールされます。 ポインターに画像を指定すると、その後、ゲージの上部に追加されるポインターは、画像の下に描画されます。 したがって、ゲージに複数のポインターがある場合は、ポインターに画像を指定しないことをお勧めします。 詳細については、「 [画像をゲージのポインターとして指定する (レポート ビルダーおよび SSRS)](https://msdn.microsoft.com/9d73b3c3-a068-4868-a2be-0cd261b6e92b)」を参照してください。  
+ ポインターの画像が不規則な形状の場合は、ゲージに表示しない画像部分を非表示にするために透明色を定義する必要があります。 透明色を定義すると、ゲージで画像が既存のポインターの上に配置され、ポインターの形状だけ表示されるように画像がトリミングされます。 ゲージでは、ポインターのサイズに合わせて画像が再スケールされます。 ポインターに画像を指定すると、その後、ゲージの上部に追加されるポインターは、画像の下に描画されます。 したがって、ゲージに複数のポインターがある場合は、ポインターに画像を指定しないことをお勧めします。 詳細については、「[画像をゲージのポインターとして指定する (レポート ビルダーおよび SSRS)](https://msdn.microsoft.com/9d73b3c3-a068-4868-a2be-0cd261b6e92b)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
- [ゲージのスケールの書式設定 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
+ [ゲージのスケールの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
  [ゲージの範囲の書式設定 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)   
  [ゲージ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
   

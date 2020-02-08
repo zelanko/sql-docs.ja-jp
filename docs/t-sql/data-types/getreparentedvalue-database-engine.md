@@ -18,10 +18,10 @@ ms.assetid: f47f8e25-08ef-498b-84f4-a317aca1f358
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 8ff469d92165d12bac6d10bed6682d29ea162eb7
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72278360"
 ---
 # <a name="getreparentedvalue-database-engine"></a>GetReparentedValue (データベース エンジン)
@@ -53,10 +53,10 @@ _newRoot_
   
 **CLR 戻り値の型:SqlHierarchyId**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 _oldRoot_ から _newRoot_ にノードを移動することでツリーを変更するために使用されます。 GetReparentedValue は、階層内の新しい場所に階層ノードを移動するために使用されます。 **hierarchyid** データ型を表しますが、階層構造は強制されません。 ユーザーは、hierarchyid 新しい位置に対して正しく構成されていることを確認する必要があります。 一意のインデックス、 **hierarchyid** エントリの重複を防止のデータ型に役立ちます。 サブツリー全体の移動例については、「[階層データ &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)」を参照してください。
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-comparing-two-node-locations"></a>A. 2 つのノードの位置の比較  
 次の例は、ノードの現在の hierarchyid と、 移動されたノードが **\@NewParent** ノードの子孫になる場合のノードの **hierarchyid** も示します。 この例では、`ToString()` メソッドを使用して階層関係を表示しています。

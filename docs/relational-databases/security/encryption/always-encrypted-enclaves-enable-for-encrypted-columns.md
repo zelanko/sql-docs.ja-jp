@@ -11,10 +11,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: ad9346cacd3cb29b19245fb11b0d21c373d93738
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73595657"
 ---
 # <a name="enable-always-encrypted-with-secure-enclaves-for-existing-encrypted-columns"></a>既存の暗号化された列に対してセキュリティで保護されたエンクレーブが設定された Always Encrypted を有効にする 
@@ -72,6 +72,6 @@ ms.locfileid: "73595657"
 
 クライアント側ツールを使用して列の暗号化をローテーションする方法の詳細については、「[SQL Server Management Studio を使用して Always Encrypted キーを交換する](rotate-always-encrypted-keys-using-ssms.md)」および「[PowerShell を使用して Always Encrypted キーをローテーションする](rotate-always-encrypted-keys-using-powershell.md)」をご覧ください。
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>次の手順
 - [セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用する列のクエリを実行する](always-encrypted-enclaves-query-columns.md)
 - [セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用するアプリケーションを開発する](always-encrypted-enclaves-client-development.md)

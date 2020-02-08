@@ -11,10 +11,10 @@ ms.assetid: 459e3995-2116-4f15-aaa2-32f26113869c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 5f09ac0b6b7a1d0536205596a553eddb06765b93
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296028"
 ---
 # <a name="lesson-2-3-modify-the-flat-file-connection-manager"></a>レッスン 2-3:フラット ファイル接続マネージャーの変更
@@ -47,7 +47,7 @@ ms.locfileid: "71296028"
   
 9.  再度 **[OK]** を選択し、 **[プロパティ式エディター]** ダイアログを閉じます。  
   
-## <a name="go-to-next-task"></a>次の実習に進む  
+## <a name="go-to-next-task"></a>次のタスクに進む  
 [手順 4:レッスン 2 で作成したチュートリアル パッケージのテスト](../integration-services/lesson-2-4-testing-the-lesson-2-tutorial-package.md)  
   
   

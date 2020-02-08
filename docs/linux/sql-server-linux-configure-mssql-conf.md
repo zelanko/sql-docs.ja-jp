@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 ms.openlocfilehash: 8e36eb9bccd183c8c38ebbfeafcc4ace7e025960
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72783398"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>mssql-conf ツールを使用して SQL Server on Linux を構成する
@@ -27,7 +27,7 @@ ms.locfileid: "72783398"
 |||
 |---|---|
 | [エージェント](#agent) | SQL Server エージェントを有効にします。 |
-| [[照合順序]](#collation) | SQL Server on Linux に新しいコロケーションを設定します。 |
+| [Collation](#collation) | SQL Server on Linux に新しいコロケーションを設定します。 |
 | [カスタマー フィードバック](#customerfeedback) | SQL Server が Microsoft にフィードバックを送信するかどうかを選択します。 |
 | [[データベース メール プロファイル]](#dbmail) | SQL Server on Linux の既定のデータベース メール プロファイルを設定します。 |
 | [既定のデータ ディレクトリ](#datadir) | 新しい SQL Server データベースのデータ ファイル (.mdf) の既定のディレクトリを変更します。 |
@@ -54,8 +54,8 @@ ms.locfileid: "72783398"
 
 |||
 |---|---|
-| [エージェント](#agent) | SQL Server エージェントを有効にします |
-| [[照合順序]](#collation) | SQL Server on Linux に新しいコロケーションを設定します。 |
+| [エージェント](#agent) | SQL Server エージェントを有効にする |
+| [Collation](#collation) | SQL Server on Linux に新しいコロケーションを設定します。 |
 | [カスタマー フィードバック](#customerfeedback) | SQL Server が Microsoft にフィードバックを送信するかどうかを選択します。 |
 | [[データベース メール プロファイル]](#dbmail) | SQL Server on Linux の既定のデータベース メール プロファイルを設定します。 |
 | [既定のデータ ディレクトリ](#datadir) | 新しい SQL Server データベースのデータ ファイル (.mdf) の既定のディレクトリを変更します。 |
@@ -393,7 +393,7 @@ SQL Server によって収集されるメモリ ダンプの種類を制御す�
 
     指定できる **coredump.coredumptype** の値の一覧を次の表に示します。
 
-    | 型 | [説明] |
+    | Type | 説明 |
     |-----|-----|
     | **mini** | mini は、最も小さいダンプ ファイルの種類です。 これは、Linux システム情報を使用して、プロセス内のスレッドとモジュールを特定します。 ダンプには、ホスト環境のスレッド スタックとモジュールのみが含まれます。 間接的なメモリ参照またはグローバルは含まれません。 |
     | **miniplus** | miniplus は mini に似ていますが、追加のメモリが含まれています。 これは、SQLPAL とホスト環境の内部構造を認識して、次のメモリ領域をダンプに追加します。</br></br> - さまざまなグローバル</br> - 64 TB を超えるすべてのメモリ</br> - **/proc/$pid/maps** で見つかったすべての名前付きリージョン</br> - スレッドとスタックからの間接メモリ</br> - スレッド情報</br> - 関連付けられている Teb と Peb</br> - モジュール情報</br> - VMM および VAD ツリー |
@@ -507,7 +507,7 @@ Microsoft 分散トランザクション コーディネーター (MSDTC) を構
 
 mssql-conf には、MSDTC の監視とトラブルシューティングに使用できるその他のいくつかの設定があります。 次の表では、これらの設定について簡単に説明しています。 使用方法の詳細については、[MS DTC の診断トレースを有効にする方法](https://support.microsoft.com/help/926099/how-to-enable-diagnostic-tracing-for-ms-dtc-on-a-windows-based-compute)に関する Windows サポートの記事を参照してください。
 
-| mssql-conf setting | [説明] |
+| mssql-conf setting | 説明 |
 |---|---|
 | distributedtransaction.allowonlysecurerpccalls | 分散トランザクションに対して、セキュリティで保護された RPC のみを構成します |
 | distributedtransaction.fallbacktounsecurerpcifnecessary | 分散トランザクションに対して、セキュリティ専用の RPC 呼び出しを構成します |
@@ -564,7 +564,7 @@ accepteulaml = Y
 
 [SQL Server Machine Learning Services](sql-server-linux-setup-machine-learning.md) 機能の R、Python、および Java 拡張機能の送信ネットワーク アクセスは、既定では無効になっています。 送信要求を有効にするには、mssql-conf を使用して "outboundnetworkaccess" ブール型プロパティを設定します。
 
-プロパティの設定後、SQL Server Launchpad サービスを再起動して、INI ファイルから更新後の値を読み込みます。 拡張機能に関連する設定が変更されるたびに、再起動のメッセージが表示されます。
+プロパティの設定後、SQL Server Launchpad サービスを再起動して、INI ファイルから更新後の値を読み込みます。 拡張機能に関連する設定が変更されるたびに、再起動を促すメッセージが表示されます。
 
 ```bash
 # Adds the extensibility section and property.
@@ -613,7 +613,7 @@ outboundnetworkaccess = 1
 
 次のオプションでは、Linux で実行されている SQL Server のインスタンスに対して TLS を構成します。
 
-|オプション |[説明] |
+|オプション |説明 |
 |--- |--- |
 |**network.forceencryption** |1 の場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] はすべての接続を強制的に暗号化します。 既定では、このオプションは 0 になっています。 |
 |**network.tlscert** |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] が TLS に使用する証明書ファイルへの絶対パス。 例: `/etc/ssl/certs/mssql.pem` 証明書ファイルには、mssql アカウントがアクセスできる必要があります。 Microsoft では、`chown mssql:mssql <file>; chmod 400 <file>` を使用してファイルへのアクセスを制限することをお勧めします。 |
@@ -793,7 +793,7 @@ traceflag = 3456
 
 ::: moniker-end
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 代わりに環境変数を使用してこれらの構成の変更を行う場合は、[環境変数を使用した SQL Server 設定の構成](sql-server-linux-configure-environment-variables.md)に関するページを参照してください。
 

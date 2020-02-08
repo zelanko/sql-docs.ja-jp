@@ -29,10 +29,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b7b42f9f9db95954509c6e47c28b317eab0626c4
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981899"
 ---
 # <a name="transact-sql-syntax-conventions-transact-sql"></a>Transact-SQL 構文表記規則 (Transact-SQL)
@@ -42,14 +42,14 @@ ms.locfileid: "73981899"
   
 |表記|使用目的|  
 |----------------|--------------|  
-|大文字|[!INCLUDE[tsql](../../includes/tsql-md.md)] キーワードを示します。|  
+|UPPERCASE|[!INCLUDE[tsql](../../includes/tsql-md.md)] キーワードを示します。|  
 |_斜体_|ユーザーが指定する [!INCLUDE[tsql](../../includes/tsql-md.md)] 構文のパラメーターを示します。|  
 |**太字**|データベース名、テーブル名、列名、インデックス名、ストアド プロシージャ、ユーティリティ、データ型名、およびテキストを、記載されているとおりに入力します。|  
 |下線|下線が引かれている値を含む句がステートメントから省略されているときに適用される既定値を示します。|  
-|(& a) #124 です。(縦棒)|角かっこ、または中かっこで囲まれた構文項目を区切ります。 使用できる項目は 1 つだけです。|  
+|&#124; (垂直線)|角かっこ、または中かっこで囲まれた構文項目を区切ります。 使用できる項目は 1 つだけです。|  
 |`[ ]` (角かっこ)|省略可能な構文項目。 角かっこは入力しません。|  
 |{} (中かっこ)|必須の構文項目を示します。 中かっこは入力しません。|  
-|[ **,** ..._n_]|先行する項目を _n_ 回繰り返せることを示します。 項目はコンマで区切ります。|  
+|[ **,** ..._n_]|先行する項目を _n_ 回繰り返せることを示します。 出現箇所は、コンマで区切られます。|  
 |[..._n_]|先行する項目を _n_ 回繰り返せることを示します。 項目は空白で区切ります。|  
 |;|[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの終端記号を示します。 セミコロンは、このバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のほとんどのステートメントでは必須ではありませんが、将来のバージョンでは必須になる予定です。|  
 |\<label> ::=|構文のブロックの名前を示します。 この表記規則を使用して、1 つのステートメント内の複数の箇所で使用できる長い構文の一部、または構文の 1 単位について、グループ化してラベルを付けます。 構文のブロックを使用できる箇所は、不等号で囲まれたラベル (\<label>) で示します。<br /><br /> セットとは、式のコレクションです (たとえば \<grouping set>)。リストとは、セットのコレクションです (たとえば \<composite element list>)。|  
@@ -84,7 +84,7 @@ _object\_name_
   
 中間のノードを省略するには、ピリオドを使用してそれらの位置を示します。 次の表に、オブジェクト名の有効な形式を示します。  
   
-|オブジェクト参照形式|[説明]|  
+|オブジェクト参照形式|説明|  
 |-----------------------------|-----------------|  
 |_server_._database_._schema_._object_|4 部構成の名前です。|  
 |_server_._database_.._object_|スキーマ名を省略しています。|  

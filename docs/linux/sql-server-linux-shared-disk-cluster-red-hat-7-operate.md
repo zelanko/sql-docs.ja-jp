@@ -11,10 +11,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
 ms.openlocfilehash: 76c59c6c7b821bfcc9eb76ca3a694a1c69095ce1
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75558527"
 ---
 # <a name="operate-rhel-failover-cluster-instance-fci-for-sql-server"></a>SQL Server の RHEL フェールオーバー クラスター インスタンス (FCI) を運用する
@@ -210,7 +210,7 @@ sudo pcs    resource op monitor interval=2s mssqlha
 
 クラスターのトラブルシューティングでは、3 つのデーモンの連携によってクラスター リソースが管理される方法を理解しておくと役に立つ場合があります。 
 
-| デーモン | [説明] 
+| デーモン | 説明 
 | ----- | -----
 | Corosync | クラスター ノード間のクォーラム メンバーシップとメッセージングを提供します。
 | Pacemaker | Corosync の上に存在し、リソースのステート マシンを提供します。 

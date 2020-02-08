@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 91301fcfb0376e1bd256ac60c59c1c0b65dfbbe4
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75256100"
 ---
 # <a name="databasepropertyex-transact-sql"></a>DATABASEPROPERTYEX (Transact-SQL)
@@ -52,7 +52,7 @@ DATABASEPROPERTYEX ( database , property )
 > [!NOTE]  
 >  データベースがまだ開始されていない場合、`DATABASEPROPERTYEX` を呼び出したとき、`DATABASEPROPERTYEX` がメタデータから検索せず、データベースに直接アクセスすることで値を引き出した場合、NULL が返されます。 AUTO_CLOSE が ON に設定されているか、それ以外の方法でオフラインになっているデータベースは '開始されていない' と見なされます。  
   
-|プロパティ|[説明]|返される値|  
+|プロパティ|説明|返される値|  
 |---|---|---|
 |照合順序|データベースの既定の照合順序名です。|照合順序名<br /><br /> NULL: データベースは開始していません<br /><br /> 基本データ型: **nvarchar(128)**|  
 |ComparisonStyle|照合順序の Windows 比較形式です。 次のスタイルの値を使用し、完全な ComparisonStyle 値のビットマップを構築します。<br /><br /> 大文字と小文字を区別しない: 1<br /><br /> アクセントを無視する: 2<br /><br /> ひらがなとカタカナを区別しない: 65536<br /><br /> 全角と半角を区別しない: 131072<br /><br /> <br /><br /> たとえば、既定値 196609 は、大文字と小文字を区別しない、ひらがなとカタカナを区別しない、全角と半角を区別しないという 3 つのオプションを足した値を表しています。|比較スタイルを返します。<br /><br /> バイナリ照合順序ではすべて 0 が返されます。<br /><br /> 基本データ型: **int**|  

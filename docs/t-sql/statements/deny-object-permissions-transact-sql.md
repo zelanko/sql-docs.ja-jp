@@ -16,10 +16,10 @@ ms.assetid: 0b8d3ddc-38c0-4241-b7bb-ee654a5081aa
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 05f0d6d99ca4e5274882ec5d4e751ba658b62a1e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68114802"
 ---
 # <a name="deny-object-permissions-transact-sql"></a>DENY (オブジェクトの権限の拒否) (Transact-SQL)
@@ -60,11 +60,11 @@ DENY <permission> [ ,...n ] ON
  ALL  
  ALL を指定しても、可能な権限がすべて拒否されるわけではありません。 ALL を指定すると、指定したオブジェクトに適用されるすべての ANSI-92 権限を拒否することになります。 ALL の意味は、状況に応じて次のようになります。  
   
- - スカラー関数の権限:EXECUTE、REFERENCES。  
- - テーブル値関数の権限:DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
- - ストアド プロシージャの権限:EXECUTE。  
- - テーブルの権限:DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
- - ビューの権限:DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
+ - スカラー関数の権限: EXECUTE、REFERENCES。  
+ - テーブル値関数の権限: DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
+ - ストアド プロシージャの権限: EXECUTE。  
+ - テーブルの権限: DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
+ - ビューの権限: DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
   
 PRIVILEGES  
  ANSI-92 準拠のために用意されています。 ALL の動作は変更されません。  
@@ -111,7 +111,7 @@ PRIVILEGES
  *Database_user_with_no_login*  
  対応するサーバー レベルのプリンシパルがないデータベース ユーザーを指定します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  オブジェクトに関する情報は、各種カタログ ビューに表示されます。 詳しくは、「[オブジェクト カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)」をご覧ください。  
   
  オブジェクトは、スキーマ レベルのセキュリティ保護可能なリソースで、権限の階層で親となっているスキーマに含まれています。 次の表に、オブジェクトで拒否できる権限のうち最も限定的なものを、それらを暗黙的に含む一般的な権限と共に示します。  
@@ -136,7 +136,7 @@ PRIVILEGES
   
  AS 句を使用する場合、指定されるプリンシパルは、権限が拒否されるオブジェクトを所有している必要があります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 以下の例では、AdventureWorks データベースを使います。
   
 ### <a name="a-denying-select-permission-on-a-table"></a>A. テーブルの SELECT 権限を拒否する  

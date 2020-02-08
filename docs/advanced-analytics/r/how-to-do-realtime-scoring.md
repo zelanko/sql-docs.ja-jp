@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 7822cd56a52e47493fe175c293dbfe491a9524af
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727437"
 ---
 # <a name="how-to-generate-forecasts-and-predictions-using-machine-learning-models-in-sql-server"></a>SQL Server で機械学習モデルを使用してフォーキャストと予測を生成する方法
@@ -46,7 +46,7 @@ _スコアリング_ は 2 ステップのプロセスです。 まず、既に�
 少し前に戻ると、モデルを準備してスコアを生成する全体的なプロセスは、次のようにまとめられます。
 
 1. サポートされているアルゴリズムを使用してモデルを作成します。 サポートは選択したスコアリング方法によって異なります。
-2. モデルをトレーニングします。
+2. モデルをトレーニングする。
 3. 特別なバイナリ形式を使用して、モデルをシリアル化します。
 3. モデルを SQL Server に保存します。 通常、これは、シリアル化されたモデルを SQL Server テーブルに格納することを意味します。
 4. モデルとデータの入力をパラメーターとして指定して、関数またはストアド プロシージャを呼び出します。
@@ -97,7 +97,7 @@ R コードから、[rxWriteObject](https://docs.microsoft.com/machine-learning-
 
 ## <a name="scoring-in-related-products"></a>関連製品でのスコアリング
 
-[スタンドアロン サーバー](r-server-standalone.md)または [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server) を使用している場合は、ストアド プロシージャと T-SQL 関数以外にも、予測を迅速に生成するための選択肢があります。 スタンドアロン サーバーと Machine Learning Server はどちらも、コードのデプロイのための *web service* の概念をサポートしています。 R または Python 事前トレーニング済みモデルを web サービスとしてバンドルすることができます。これは、新しいデータ入力を評価するために、実行時に呼ばれます。 詳細については、次の記事を参照してください。
+[スタンドアロン サーバー](r-server-standalone.md)または [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server) を使用している場合は、ストアド プロシージャと T-SQL 関数以外にも、予測を迅速に生成するための選択肢があります。 スタンドアロン サーバーと Machine Learning Server はどちらも、コードのデプロイのための *web service* の概念をサポートしています。 R または Python 事前トレーニング済みモデルを web サービスとしてバンドルすることができます。これは、新しいデータ入力を評価するために、実行時に呼ばれます。 詳細と例については、次の記事をご覧ください。
 
 + [Machine Learning Server の Web サービスとは](https://docs.microsoft.com/machine-learning-server/operationalize/concept-what-are-web-services)
 + [操作化とは](https://docs.microsoft.com/machine-learning-server/what-is-operationalization)

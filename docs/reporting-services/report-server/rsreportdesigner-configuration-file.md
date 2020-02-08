@@ -12,10 +12,10 @@ ms.assetid: fdcc9c58-3bad-45b3-ba8e-c7816d64f14c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a24b1a2f008c23adc5445ec5ed36c51ade181486
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581337"
 ---
 # <a name="rsreportdesigner-configuration-file"></a>RSReportDesigner 構成ファイル
@@ -52,7 +52,7 @@ ms.locfileid: "65581337"
   
 ## <a name="configuration-settings"></a>構成設定  
   
-|設定|[説明]|  
+|設定|説明|  
 |-------------|-----------------|  
 |**SecureConnectionLevel**|Web サービス接続のセキュリティ レベルを指定します。 有効な値は、0 ～ 3 で、0 はセキュリティ レベルが最も低くなります。 詳細については、「 [セキュリティで保護された Web サービス メソッドの使用](../../reporting-services/report-server-web-service/net-framework/using-secure-web-service-methods.md)」を参照してください。|  
 |**InstanceName**|プレビュー サーバーの識別子です。 この値は変更しないでください。|  
@@ -61,7 +61,7 @@ ms.locfileid: "65581337"
 |**PolicyLevel**|セキュリティ ポリシーの構成ファイルを指定します。 有効な値は Rspreviewpolicy.config です。詳細については、「 [Using Reporting Services Security Policy Files](../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md)」を参照してください。|  
 |**CacheDataForPreview**|**True**に設定すると、レポート デザイナーがローカル コンピューター上のキャッシュ ファイルにデータを格納します。 有効な値は **True** (既定値) および **False**です。 詳細については、「 [レポートのプレビュー](../../reporting-services/reports/previewing-reports.md)」を参照してください。|  
 |**Render**|プレビューのためにレポート デザイナーで利用できる表示拡張機能を列挙します。 プレビューに使用する表示拡張機能のセットは、レポート サーバーと一緒にインストールされた表示拡張機能と同一である必要があります。<br /><br /> **Name** は、表示拡張機能を指定します。 コードで表示拡張機能を起動している場合は、この値を使用して、特定の拡張機能を呼び出します。<br /><br /> **Type** は、拡張クラスの完全修飾クラス名、およびライブラリ名をコンマで区切って指定します。<br /><br /> **Visible** は、任意のユーザー インターフェイスに名前を表示するかどうかを指定します。 この値には、 **True** (既定値) または **False**があります。 **True**を指定すると、名前がユーザー インターフェイスに表示されます。|  
-|**Data**|レポートにデータを提供するデータ ソースに接続するためにレポート デザイナーで利用できるデータ処理拡張機能を列挙します。 レポート デザイナーで使用するデータ処理拡張機能のセットは、レポート サーバーと一緒にインストールされたデータ処理拡張機能と同一のものである場合があります。 カスタム拡張機能を追加または削除する場合は、「 [データ処理拡張機能の配置](../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md)」を参照してください。<br /><br /> **Name** は、データ処理拡張機能を指定します。<br /><br /> **Type** は、拡張クラスの完全修飾クラス名、およびライブラリ名をコンマで区切って指定します。|  
+|**データ**|レポートにデータを提供するデータ ソースに接続するためにレポート デザイナーで利用できるデータ処理拡張機能を列挙します。 レポート デザイナーで使用するデータ処理拡張機能のセットは、レポート サーバーと一緒にインストールされたデータ処理拡張機能と同一のものである場合があります。 カスタム拡張機能を追加または削除する場合は、「 [データ処理拡張機能の配置](../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md)」を参照してください。<br /><br /> **Name** は、データ処理拡張機能を指定します。<br /><br /> **Type** は、拡張クラスの完全修飾クラス名、およびライブラリ名をコンマで区切って指定します。|  
 |**Designer**|レポート デザイナーで使用できるクエリ ビルダーが列挙されます。 クエリ ビルダーは、レポートで使用されるデータを取得するクエリを構築するためのユーザー インターフェイスを提供します。 クエリ ビルダーは、データ処理拡張機能によって異なる場合があります。 既定では、Reporting Services は、製品に含まれるすべてのデータ処理拡張機能に 1 つのビジュアル データ ツール ユーザー インターフェイスを提供します。 ただし、サード パーティのデータ処理拡張機能を構築または使用している場合は、他のクエリ ビルダー インターフェイスが適用されることがあります。|  
 |**PreviewProcessingServiceStartupTimeoutSeconds**|エラー メッセージを表示する前にプレビュー処理サービスの起動を待機する時間を指定します。 既定値は 15 秒です。|  
   

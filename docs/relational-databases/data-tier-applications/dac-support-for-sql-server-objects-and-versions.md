@@ -13,10 +13,10 @@ ms.assetid: b1b78ded-16c0-4d69-8657-ec57925e68fd
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c0e0f85e21898ccf61d7c205305fc9179edc2af4
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68810579"
 ---
 # <a name="dac-support-for-sql-server-objects-and-versions"></a>SQL Server オブジェクトとバージョンの DAC サポート
@@ -50,7 +50,7 @@ ms.locfileid: "68810579"
 |DATABASE ROLE|FUNCTION:インライン テーブル値|  
 |FUNCTION:複数ステートメント テーブル値|FUNCTION:スカラー|  
 |INDEX:クラスター化インデックス|INDEX:非クラスター化インデックス|  
-|INDEX:空間|INDEX:[一意]|  
+|INDEX:空間|INDEX:一意|  
 |Login|アクセス許可|  
 |ロールのメンバーシップ|SCHEMA|  
 |統計|STORED PROCEDURE:Transact-SQL|  

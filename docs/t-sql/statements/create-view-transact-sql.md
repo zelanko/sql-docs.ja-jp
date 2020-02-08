@@ -38,10 +38,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 50ae26a445faa8f8bcd811ed7834868417fc27b4
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982670"
 ---
 # <a name="create-view-transact-sql"></a>CREATE VIEW (Transact-SQL)
@@ -158,7 +158,7 @@ OR ALTER
   
  WITH VIEW_METADATA を使用してビューを作成するとき、**timestamp** 列を除くすべての列は、ビューに INSTEAD OF INSERT または INSTEAD OF UPDATE トリガーが含まれている場合に更新可能になります。 更新可能なビューの詳細については、「解説」を参照してください。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  ビューは現在のデータベースでのみ作成できます。 CREATE VIEW は、クエリ バッチの最初のステートメントであることが必要です。 1 つのビューで保持できる列の数は最大 1,024 です。  
   
  ビューからクエリを実行すると、[!INCLUDE[ssDE](../../includes/ssde-md.md)] では、ステートメントで参照されているデータベース オブジェクトがすべて存在すること、データベース オブジェクトがステートメントのコンテキストで有効であること、およびデータ変更ステートメントがデータの整合性規則に違反していないことが確認されます。 確認に失敗すると、エラー メッセージが返されます。 確認に成功すると、そのアクションが、基になるテーブルに対するアクションに変換されます。  
@@ -349,7 +349,7 @@ FROM Tn;
 ## <a name="permissions"></a>アクセス許可  
  データベースの CREATE VIEW 権限と、ビューが作成されているスキーマの ALTER 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 
 次の例では、AdventureWorks 2012 または AdventureWorksDW データベースを使用します。  
 
@@ -464,7 +464,7 @@ INSERT dbo.all_supplier_view VALUES ('1', 'CaliforniaCorp'), ('5', 'BraziliaLtd'
 GO  
 ```  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="f-creating-a-simple-view"></a>F. 単純なビューを作成する  
  次の例では、ソース テーブルから一部の列のみを選択することで、ビューを作成します。  

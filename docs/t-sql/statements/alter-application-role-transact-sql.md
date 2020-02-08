@@ -21,10 +21,10 @@ ms.assetid: c6cd5d0f-18f4-49be-b161-64d9c5569086
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 7d39f716717fe517fb3274e4c5519606916afb7b
-ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73064672"
 ---
 # <a name="alter-application-role-transact-sql"></a>ALTER APPLICATION ROLE (Transact-SQL)
@@ -60,7 +60,7 @@ ALTER APPLICATION ROLE application_role_name
  DEFAULT_SCHEMA =*schema_name*  
  オブジェクトの名前を解決するときに、サーバーで最初に検索されるスキーマを指定します。 *schema_name* にはデータベースに存在しないスキーマを指定できます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  新しいアプリケーション ロールの名前が既にデータベースに存在する場合、このステートメントは失敗します。 アプリケーション ロールの名前、パスワード、または既定のスキーマが変更されても、そのロールに関連付けられている ID は変更されません。  
   
 > [!IMPORTANT]  
@@ -74,7 +74,7 @@ ALTER APPLICATION ROLE application_role_name
 ## <a name="permissions"></a>アクセス許可  
  データベースに対する ALTER ANY APPLICATION ROLE 権限が必要です。 既定のスキーマを変更するには、アプリケーション ロールに対する ALTER 権限も必要です。 アプリケーション ロールは、それ自体の既定のスキーマを変更できますが、名前とパスワードは変更できません。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-changing-the-name-of-application-role"></a>A. アプリケーション ロールの名前を変更する  
  次の例では、アプリケーション ロール `weekly_receipts` の名前を `receipts_ledger` に変更します。  

@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
 ms.openlocfilehash: 6cff48da9e251fedd56d676349480e350c88bcae
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73531535"
 ---
 # <a name="supported-version-and-edition-upgrades-for-sql-server-2019"></a>SQL Server 2019 のサポートされているバージョンとエディションのアップグレード
@@ -33,11 +33,11 @@ ms.locfileid: "73531535"
 - [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] のいずれかのエディションから別のエディションへアップグレードする前に、現在使用している機能が移動先のエディションでサポートされているかどうかを確認します。  
 - サポートされている[ハードウェアおよびソフトウェア](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15.md)を確認する。
 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]をアップグレードする前に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの Windows 認証を有効にし、既定の構成 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのサービス アカウントが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sysadmin グループのメンバーであること) を確認してください。
-- [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] にアップグレードするには、サポート対象のオペレーティング システムを実行している必要があります。 詳細については、「[SQL Server のインストールに必要なハードウェアおよびソフトウェア](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15.md)」を参照してください。  
+- [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)]にアップグレードするには、サポート対象のオペレーティング システムを実行している必要があります。 詳細については、「[SQL Server のインストールに必要なハードウェアおよびソフトウェア](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15.md)」を参照してください。  
 - 再起動を保留している場合はアップグレードがブロックされます。  
 - Windows インストーラー サービスが実行されていない場合は、アップグレードがブロックされます。
 
-## <a name="unsupported-scenarios"></a>サポートされていないシナリオ
+## <a name="unsupported-scenarios"></a>サポートされないシナリオ
 
 - [!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] の複数バージョンにまたがるインスタンスの使用はサポートされていません。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] コンポーネントのバージョン番号は、[!INCLUDE[sssqlv15-md](../../includes/sssqlv15-md.md)] のインスタンス内で同一である必要があります。  
   

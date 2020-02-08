@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9efad50aeb778c4cae01145fb39dd10a71c42ca0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 328f3bc8106cd499326cfce79430fef7886cd9b2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66413567"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75688205"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Exporting to Microsoft Word (Report Builder and SSRS)
 
@@ -53,11 +53,11 @@ ms.locfileid: "66413567"
 ##  <a name="DocumentProperties"></a> ドキュメント プロパティ  
  Word レンダラーでは、次のメタデータが DOCX ファイルに書き込まれます。  
   
-|レポート要素のプロパティ|Description|  
+|レポート要素のプロパティ|説明|  
 |-------------------------------|-----------------|  
-|Report Title (レポート タイトル)|[タイトル]|  
+|Report Title (レポート タイトル)|タイトル|  
 |Report.Author|Author|  
-|Report.Description|コメント|  
+|Report.Description|説明|  
   
 ##  <a name="ReportHeadersFooters"></a> ページ ヘッダーとページ フッター  
  ページのヘッダーとフッターは、Word のヘッダー領域およびフッター領域としてレンダリングされます。 ページ ヘッダーまたはページ フッターに、レポートの合計ページ数を表すページ番号 (または式) が表示される場合、これらは、レンダリング後のレポートに正確なページ番号が表示されるように、Word のフィールドに変換されます。 レポートで設定されたヘッダーまたはフッターの高さは、Word では反映されません。 状況によっては、PrintOnFirstPage プロパティを使用して、ページ ヘッダーとページ フッターのテキストをレポートの最初のページに印刷するかどうかを指定できます。 表示レポートに複数のページがあり、ページごとに 1 つのセクションのみが含まれる場合は、PrintOnFirstPage を False に設定でき、最初のページのテキストは非表示になります。それ以外の場合は、PrintOnFirstPage プロパティの値に関係なく、テキストが印刷されます。  
@@ -72,9 +72,9 @@ ms.locfileid: "66413567"
   
  この問題は、Word レンダラーがレポートの **PageNumber** や **TotalPages** などの改ページに関連するフィールドを解析して単純な参照のみを処理し、関数の呼び出しが行われないために生じます。 この場合、式は **ToString** 関数を呼び出します。 次の 2 つの式は同等であり、レポート ビルダーやレポート デザイナーでレポートをプレビューするか、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web ポータルや SharePoint ライブラリでパブリッシュされたレポートを表示した場合は、両方とも正しく表示されます。 ただし、Word レンダラーでは 2 番目の式のみが正しく解析され、正しいページ番号が表示されます。  
   
--   **複合式:**  式は以下のとおりです: `="Average Sales " & Avg(Fields!YTDPurchase.Value, "Sales") & " Page Number " & Globals!PageNumber`  
+-   **複合式:** 式は `="Average Sales " & Avg(Fields!YTDPurchase.Value, "Sales") & " Page Number " & Globals!PageNumber` です  
   
--   **テキスト ランを使用した式:** テキスト、 **Average Sales**、および式、  `=Avg(Fields!YTDPurchase.Value, "Sales)`、およびテキスト、 **ページ番号**、および式 `=Globals!PageNumber`  
+-   **テキスト ランを使用した式:** テキスト、**Average Sales**、式、`=Avg(Fields!YTDPurchase.Value, "Sales)`、テキスト、**Page Number**、式 `=Globals!PageNumber`  
   
  この問題を回避するには、フッターおよびヘッダーで式を使用するときに 1 つの複合式ではなく複数のテキスト ランを使用します。 次の 2 つの式は等価です。 最初の式は複合式で、2 番目の式はテキスト ランを使用しています。 Word レンダラーでは、2 番目の式のみが正しく解析されます。  
   
@@ -151,7 +151,7 @@ ms.locfileid: "66413567"
 > [!IMPORTANT]  
 >  [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 (.doc) 表示拡張機能の使用は非推奨とされます。 詳細については、「 [SQL Server 2016 における SQL Server Reporting Services の非推奨の機能](~/reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)」を参照してください。  
   
- Word レンダラーはインストールされている Word/Excel/PowerPoint 用 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] Office 互換機能パックにより、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 2003 との互換性が維持されます。 詳細については、「 [Word、Excel、および PowerPoint 2007 用ファイル形式互換機能パック](https://www.microsoft.com/download/details.aspx?id=12439)」を参照してください。  
+ Word レンダラーはインストールされている Word/Excel/PowerPoint 用 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] Office 互換機能パックにより、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 2003 との互換性が維持されます。 詳細については、「 [Word、Excel、および PowerPoint 2007 用ファイル形式互換機能パック](https://www.microsoft.com/download/details.aspx?id=1285)」を参照してください。
   
  [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 と互換性のある Word 表示拡張機能の以前のバージョンは、名前が Word 2003 に変更されます。 既定では、Word 表示拡張機能のみを使用できます。 Word 2003 表示拡張機能を使用できるようにするには、Reporting Services の構成ファイルを更新する必要があります。 Word 2003 レンダラーで生成されるファイルのコンテンツ タイプは **application/vnd.ms-word** で、ファイル名拡張子は .doc です。  
   
@@ -189,7 +189,7 @@ ms.locfileid: "66413567"
 ##  <a name="DeviceInfo"></a> デバイス情報設定  
  このレンダラーでは、デバイス情報設定を変更することによって、一部の既定の設定を変更できます。たとえば、ハイパーリンクやドリルスルー リンクを省略することも、展開表示と縮小表示の切り替えが可能な項目について、レンダリング時の状態に関係なく、すべての項目を展開することもできます。 詳しくは、「 [Word Device Information Settings](../../reporting-services/word-device-information-settings.md)」をご覧ください。  
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 [Reporting Services の改ページ](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
 [レンダリングの動作](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   

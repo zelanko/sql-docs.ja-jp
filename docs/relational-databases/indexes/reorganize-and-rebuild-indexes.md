@@ -32,10 +32,10 @@ author: pmasl
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: cd844947b93e17684643fe95b5c51335af81b473
-ms.sourcegitcommit: c98c6e33d04d4a1888db7dbe89cb0b1bb3a66418
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74249754"
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>インデックスの再構成と再構築
@@ -67,7 +67,7 @@ ms.locfileid: "74249754"
 
 **sys.dm_db_index_physical_stats** 関数から返される結果セットに含まれる列を次に示します。
 
-|列|[説明]|
+|列|説明|
 |------------|-----------------|
 |**avg_fragmentation_in_percent**|論理的な断片化 (インデックス内で順序が乱れたページ) の割合。|
 |**fragment_count**|インデックス内の断片化 (物理的に連続したリーフ ページ) の数。|
@@ -96,7 +96,7 @@ DMV の [sys.dm_db_column_store_row_group_physical_stats](../../relational-datab
 
 **sys.dm_db_column_store_row_group_physical_stats** DMV から返される結果セットに含まれる列を次に示します。
 
-|列|[説明]|
+|列|説明|
 |------------|-----------------|
 |**total_rows**|行グループに物理的に格納されている行の数。 圧縮された行グループの場合は、削除済みとマークされた行が含まれます。|
 |**deleted_rows**|削除対象としてマークされている圧縮行グループに物理的に格納されている行の数。 デルタ ストア内の行グループの場合は 0 です。|
@@ -209,7 +209,7 @@ DMV の [sys.dm_db_column_store_row_group_physical_stats](../../relational-datab
 
 **[断片化]** ページでは、次の情報を取得できます。
 
-|値|[説明]|
+|Value|説明|
 |---|---|
 |**[ページのゆとり]**|インデックス ページのゆとりの平均をパーセントで示します。 100% は、インデックス ページが完全にいっぱいであることを示します。 50% は、平均して各インデックス ページが半分埋まっていることを示します。|
 |**[全体の断片化]**|論理的な断片化の割合です。 この値は、順番に格納されないインデックス内のページ数を示します。|

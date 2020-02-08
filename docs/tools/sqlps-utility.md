@@ -1,6 +1,6 @@
 ---
-title: sqlps ユーティリティ | Microsoft Docs
-ms.custom: ''
+title: sqlps ユーティリティ
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -14,12 +14,12 @@ ms.assetid: 4b2515a6-12c3-44fb-b263-1c567681cd2b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: cbc4492aa3c52e08eb6cbce71012da9f91f371aa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 6d76286b8632797ab871693a26ff6e19523cc256
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68223739"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75304823"
 ---
 # <a name="sqlps-utility"></a>sqlps ユーティリティ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -76,7 +76,7 @@ sqlps
  [ **-?** |  **-Help** ]  
  **sqlps** ユーティリティ オプションの構文の概要を表示します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **sqlps** ユーティリティは、PowerShell 環境 (PowerShell.exe) を起動し、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell モジュールを読み込みます。 このモジュール ( **sqlps**) は、以下の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell スナップインの読み込みと登録を行います。  
   
 -   Microsoft.SqlServer.Management.PSProvider.dll  
@@ -101,7 +101,7 @@ sqlps
   
  **および** に採用されていたバージョンの [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] sqlps [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] ユーティリティは、Windows PowerShell 1.0 のミニシェルとして実装されていました。 ミニシェルには特定の制限があります。たとえば、ミニシェルによって読み込まれているスナップイン以外、ユーザーは読み込むことができません。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以降のバージョンのユーティリティは、 **sqlps** モジュールを使用するように変更されており、このような制限は適用されません。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  **A.既定の対話モードで著作権画面を表示せずに sqlps ユーティリティを実行する**  
   
 ```  

@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/10/2020
+ms.date: 01/27/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 123b395fe54000b34b509637e5a0568340598edb
-ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
+ms.openlocfilehash: 61c8728fede661a91090d5cb15ee4feed5816e7c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75952376"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76831972"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 
@@ -416,7 +416,7 @@ WITH
       LOCATION='tpch_10.dbo.customer',
       DATA_SOURCE=SqlServerInstance
      );
- ```
+```
 
 ### <a name="i-create-an-external-table-for-oracle"></a>I. Oracle の外部テーブルの作成
 
@@ -444,7 +444,7 @@ WITH
      CREDENTIAL = credential_name)
 
    /*
-   * LOCATION: Oracle table/view in '<database_name>.<schema_name>.<object_name>' format
+   * LOCATION: Oracle table/view in '.<schema_name>.<object_name>' format
    * DATA_SOURCE: the external data source, created above.
    */
    CREATE EXTERNAL TABLE customers(
@@ -459,10 +459,10 @@ WITH
    [O_COMMENT] VARCHAR(79) COLLATE Latin1_General_BIN NOT NULL
    )
    WITH (
-    LOCATION='customer',
+    LOCATION='.mySchema.customer',
     DATA_SOURCE= external_data_source_name
    );
-   ```
+```
 
 ### <a name="j-create-an-external-table-for-teradata"></a>J. Teradata の外部テーブルの作成
 
@@ -604,7 +604,7 @@ column_name <data_type>
         [DISTRIBUTION  = SHARDED(sharding_column_name) | REPLICATED | ROUND_ROBIN]]  
     )  
 [;]  
-```  
+```
 
 ## <a name="arguments"></a>引数
 
@@ -750,7 +750,7 @@ column_name <data_type>
     | REJECTED_ROW_LOCATION = '/REJECT_Directory'
   
 }  
-```  
+```
 
 ## <a name="arguments"></a>引数
 
@@ -817,7 +817,7 @@ REJECT_SAMPLE_VALUE = *reject_sample_value*。REJECT_TYPE = percentage を指定
 REJECTED_ROW_LOCATION = *<ディレクトリの場所>*
 
 外部データ ソース内のディレクトリを指定します。拒否された行と該当エラー ファイルをそこに書き込みます。
-指定したパスが存在しない場合、PolyBase では、そのパスが自動的に作成されます。 "_rejectedrows" という名前で子ディレクトリが作成されます。"_ " 文字があることで、場所パラメーターで明示的に指定されない限り、他のデータ処理ではこのディレクトリがエスケープされます。 このディレクトリ内には、YearMonthDay -HourMinuteSecond (例: 20180330-173205) のロード サブミッション時間に基づいて作成されたフォルダーがあります。 このフォルダーで、2 種類のファイル、理由ファイルとデータ ファイルが書き込まれます。
+指定したパスが存在しない場合、PolyBase では、そのパスが自動的に作成されます。 "\_rejectedrows" という名前で子ディレクトリが作成されます。 "\_" 文字があることで、場所パラメーターで明示的に指定されない限り、他のデータ処理ではこのディレクトリがエスケープされます。 このディレクトリ内には、YearMonthDay -HourMinuteSecond (例: 20180330-173205) のロード サブミッション時間に基づいて作成されたフォルダーがあります。 このフォルダーで、2 種類のファイル、理由ファイルとデータ ファイルが書き込まれます。
 
 理由ファイルとデータ ファイルのいずれにも、CTAS ステートメントと関連付けられている queryID が含まれます。 データと理由が別々のファイル内にあるため、対応するファイルはサフィックスが一致しています。
 
@@ -945,7 +945,7 @@ AS SELECT * FROM
 ## <a name="overview-analytics-platform-system"></a>概要:分析プラットフォーム システム
 
 次のために外部テーブルを使用します。
-  
+
 - [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用して、Hadoop または Azure Blob Storage データをクエリします。
 - Hadoop または Azure Blob Storage からデータをインポートして、Analytics Platform System に格納します。
 
@@ -976,7 +976,7 @@ column_name <data_type>
     | REJECT_SAMPLE_VALUE = reject_sample_value,
   
 }  
-```  
+```
 
 ## <a name="arguments"></a>引数
 

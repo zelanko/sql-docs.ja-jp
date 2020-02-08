@@ -18,10 +18,10 @@ ms.assetid: 1af22188-e08b-4c80-a27e-4ae6ed9ff969
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 68232821ac186aa63d113319373b8326dae987a4
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74165177"
 ---
 # <a name="soft-numa-sql-server"></a>ソフト NUMA (SQL Server)
@@ -100,7 +100,7 @@ SET PROCESS AFFINITY CPU=4 TO 7;
   
  次の例では、1 ソケットにつき 18 個のコア (4 ソケットを装備) を備え、各ソケットがそれぞれ独自の K グループに属する DL580 G9 サーバーを使用するとします。 作成する可能性のあるソフト NUMA 構成は、ノードごとに 6 コア、グループごとに 3 ノード、および 4 グループのようになります。  
   
-|複数の K グループを持つ [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] サーバーの例|種類|値の名前|値データ|  
+|複数の K グループを持つ [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] サーバーの例|Type|値の名前|値データ|  
 |-----------------------------------------------------------------------------------------------------------------|----------|----------------|----------------|  
 |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\NodeConfiguration\Node0|DWORD|CPUMask|0x3F|  
 |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\NodeConfiguration\Node0|DWORD|Group|0|  
@@ -127,7 +127,7 @@ SET PROCESS AFFINITY CPU=4 TO 7;
 |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\NodeConfiguration\Node11|DWORD|CPUMask|0x3f000|  
 |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\NodeConfiguration\Node11|DWORD|Group|3|  
   
-## <a name="metadata"></a>メタデータ  
+## <a name="metadata"></a>Metadata  
  次の DMV を使用して、ソフト NUMA の現在の状態と構成を表示できます。  
   
 -   [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md): SOFTNUMA の現在の値 (0 または 1) を表示します。  

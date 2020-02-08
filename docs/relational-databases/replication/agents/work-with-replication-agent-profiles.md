@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 9c290a88-4e9f-4a7e-aab5-4442137a9918
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 93ee480a595178627f65613b502c10e44dffc8e3
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 7b0a47ff73186642e0b0b48aec06e5320fc44d15
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907805"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288239"
 ---
 # <a name="work-with-replication-agent-profiles"></a>レプリケーション エージェント プロファイルを操作する
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -286,7 +286,7 @@ ms.locfileid: "72907805"
   
 5.  <xref:Microsoft.SqlServer.Replication.AgentProfile.Remove%2A> メソッドを呼び出して、このオブジェクトで表されるユーザー定義プロファイルをサーバーから削除します。  
   
-##  <a name="FollowUp"></a> 補足情報:エージェント パラメーターを変更した後  
+##  <a name="FollowUp"></a>補足情報: エージェント パラメーターを変更した後  
 エージェント パラメーターの変更は、エージェントの次回起動時に反映されます。 エージェントを継続して実行している場合は、そのエージェントを停止して再起動する必要があります。 SQL Server 2017 CU3 以降では、エージェントを再起動しなくても、一部のエージェント パラメーターの変更が有効になります。 
   
 ## <a name="see-also"></a>参照  
@@ -295,6 +295,6 @@ ms.locfileid: "72907805"
  [Replication Log Reader Agent](../../../relational-databases/replication/agents/replication-log-reader-agent.md)   
  [Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)   
  [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)   
- [Replication Queue Reader Agent](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)  
+ [レプリケーション キュー リーダー エージェント](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)  
   
   

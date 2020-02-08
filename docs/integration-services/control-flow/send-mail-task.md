@@ -21,10 +21,10 @@ ms.assetid: fe0b7cbc-fe8e-4fe2-95b4-2953efff5869
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f35ec3ad66199e6c13c648c9a2208f5bf88f439a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293930"
 ---
 # <a name="send-mail-task"></a>メール送信タスク
@@ -64,7 +64,7 @@ ms.locfileid: "71293930"
 ## <a name="custom-logging-messages-available-on-the-send-mail-task"></a>メール送信タスクで使用できるカスタム ログ メッセージ  
  次の表は、メール送信タスクのカスタム ログ エントリの一覧です。 詳細については、「[Integration Services (SSIS) のログ記録](../../integration-services/performance/integration-services-ssis-logging.md)」をご覧ください。  
   
-|ログ エントリ|[説明]|  
+|ログ エントリ|説明|  
 |---------------|-----------------|  
 |**SendMailTaskBegin**|タスクが電子メール メッセージの送信を開始したことを示します。|  
 |**SendMailTaskEnd**|タスクが電子メール メッセージの送信を終了したことを示します。|  
@@ -92,12 +92,12 @@ ms.locfileid: "71293930"
   **[メール送信タスク エディター]** の **[全般]** ページを使用すると、メール送信タスクに名前を付けて説明を記述できます。  
   
 ### <a name="options"></a>オプション  
- **[名前]**  
+ **Name**  
  メール送信タスクに一意の名前を提供します。 この名前は、タスク アイコンのラベルとして使用されます。  
   
  **注** &#xA0;&#xA0;&#xA0;タスク名はパッケージ内で一意である必要があります。  
   
- **[説明]**  
+ **説明**  
  メール送信タスクの説明を入力します。  
   
 ## <a name="send-mail-task-editor-mail-page"></a>[メール送信タスク エディター] ([メール] ページ)
@@ -115,7 +115,7 @@ ms.locfileid: "71293930"
  **From**  
  送信者の電子メール アドレスを指定します。  
   
- **変換先**  
+ **To**  
  受信者の電子メール アドレスを指定します。受信者はセミコロンで区切ります。  
   
  **[Cc]**  
@@ -124,19 +124,19 @@ ms.locfileid: "71293930"
  **[Bcc]**  
  メッセージのコピーを Bcc として受け取る受信者の電子メール アドレスを指定します。受信者はセミコロンで区切ります。  
   
- **[Subject]**  
+ **[件名]**  
  電子メール メッセージの件名を指定します。  
   
  **[MessageSourceType]**  
  メッセージのソースの種類を選択します。 このプロパティのオプションを次の表に示します。  
   
-|ReplTest1|[説明]|  
+|Value|説明|  
 |-----------|-----------------|  
 |**[直接入力]**|メッセージ テキストをソースとして設定します。 この値を選択すると、動的オプション **[MessageSource]** が表示されます。|  
 |**[ファイル接続]**|メッセージ テキストが含まれるファイルをソースとして設定します。 この値を選択すると、動的オプション **[MessageSource]** が表示されます。|  
 |**変数**|メッセージ テキストが含まれる変数をソースとして設定します。 この値を選択すると、動的オプション **[MessageSource]** が表示されます。|  
   
- **[Priority]**  
+ **優先順位**  
  メッセージの重要度を設定します。  
   
  **[Attachments]**  

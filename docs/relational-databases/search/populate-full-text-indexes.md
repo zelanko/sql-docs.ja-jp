@@ -25,10 +25,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 52fc7d3d43c1f0adcf7ab94d78cf301254a9a18d
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72903876"
 ---
 # <a name="populate-full-text-indexes"></a>フルテキスト インデックスの作成
@@ -188,7 +188,7 @@ ALTER FULLTEXT INDEX ON Production.Document
   
      このページでは、フルテキスト インデックスのベース テーブルまたはインデックス付きビューの増分作成を開始する SQL Server エージェント ジョブのスケジュールを作成または管理できます。  
 
-     次のオプションがあります。  
+     次のようなオプションがあります。  
   
     -   新しいスケジュールを**作成**するには、 **[新規作成]** をクリックします。  
   

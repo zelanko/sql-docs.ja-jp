@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 57755782f2907eff25db942600cebc63f09598e0
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73658828"
 ---
 # <a name="what-is-sql-server-language-extensions"></a>SQL Server 言語拡張とは?
@@ -35,7 +35,7 @@ SQL Server 2019 では、Java がサポートされています。 既定の Jav
 + 速さ。 データベースは、セットベースの操作用に最適化されています。 インメモリ テーブルなどのデータベースの最近のイノベーションにより、サマリーと集計が高速になり、データ サイエンスを完全に補完することができます。
 + 展開と統合の容易さ。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は、他の多くのデータ管理タスクおよびアプリケーションの操作の中心となるポイントです。 データベースに存在するデータを使用することで、Java で使用されるデータの一貫性と最新性を確保できます。
 
-## <a name="how-to-get-started"></a>開始する方法
+## <a name="how-to-get-started"></a>ファースト ステップ
 
 ### <a name="step-1-install-the-software"></a>手順 1:ソフトウェアをインストールする
 
@@ -58,13 +58,13 @@ SQL Server 2019 では、Java がサポートされています。 既定の Jav
 
 T-SQL スクリプト内から Java コードを実行します。
 
-+ [チュートリアル: Java での正規表現](tutorials/search-for-string-using-regular-expressions-in-java.md)
++ [チュートリアル:Java での正規表現](tutorials/search-for-string-using-regular-expressions-in-java.md)
 
 ## <a name="limitations"></a>制限事項
 
 + 入力および出力バッファーの値の数は、Java の配列に割り当てることができる要素の最大数であるため、`MAX_INT (2^31-1)` を超えることはできません。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 + [Windows 上](install/install-sql-server-language-extensions-on-windows.md)または [Linux 上に SQL Server 言語拡張をインストール](../linux/sql-server-linux-setup-language-extensions.md)します
 + [Microsoft 拡張機能 SDK for Java](how-to/extensibility-sdk-java-sql-server.md) をインストールします

@@ -15,10 +15,10 @@ ms.assetid: dc842a10-0586-4b0f-9775-5ca0ecc761d9
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: de6e6a237c0aa80e2793f33373ec664dfe93f953
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908709"
 ---
 # <a name="load-files-into-filetables"></a>FileTable へのファイルの読み込み
@@ -98,7 +98,7 @@ UPDATE PhotoMetadata
   
     -   INSERT INTO ... SELECT * FROM OPENROWSET(BULK ...) (IGNORE_CONSTRAINTS 句を含む)。  
   
-###  <a name="HowToBulkLoad"></a>方法:FileTable へのファイルの一括読み込みを行う  
+###  <a name="HowToBulkLoad"></a> 方法:FileTable へのファイルの一括読み込みを行う  
  ファイルを FileTable に一括読み込みするには、次の方法を使用できます。  
   
 -   **bcp**  
@@ -121,7 +121,7 @@ UPDATE PhotoMetadata
   
  FileTable 制約の無効化の詳細については、「 [FileTable の管理](../../relational-databases/blob/manage-filetables.md)」を参照してください。  
   
-###  <a name="disabling"></a>方法:一括読み込みのための FileTable の制約を無効化する  
+###  <a name="disabling"></a> 方法:一括読み込みのための FileTable の制約を無効化する  
  システム定義の制約を一時的に無効化すると、制約の適用というオーバーヘッドなしで、FileTable へのファイルの一括読み込みを行うことができます。 詳細については、「 [FileTable の管理](../../relational-databases/blob/manage-filetables.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  

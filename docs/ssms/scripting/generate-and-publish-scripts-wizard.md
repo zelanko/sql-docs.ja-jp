@@ -1,6 +1,6 @@
 ---
-title: スクリプトの生成とパブリッシュ ウィザード | Microsoft Docs
-ms.custom: ''
+title: スクリプトの生成とパブリッシュ ウィザード
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -43,12 +43,12 @@ ms.assetid: 5ee520ba-ec7e-4199-a441-189e9e264b37
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0671a283261a6c0867e4349f8cd0f2baadf0cbd7
-ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
+ms.openlocfilehash: 401e9a36e6ab93a9701508bc4b587a55b81642e1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70123000"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253902"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>スクリプトの生成とパブリッシュ ウィザード
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -142,9 +142,9 @@ ms.locfileid: "70123000"
 -   **[対象になるデータベース]** : 選択したオブジェクトのパブリッシュ先のデータベースを選択します。 対象になるデータベースを選択する前に、プロバイダーを選択する必要があります。  
   
 ###  <a name="AdvScriptOpt"></a> [スクリプト作成の詳細オプション] ページ  
- このページでは、このウィザードでスクリプトを生成する方法を指定できます。 さまざまなオプションを使用できます。 オプションが [データベース エンジンの種類] **で指定したバージョンの SQL Server または** [!INCLUDE[ssSDS](../../includes/sssds-md.md)] によってサポートされていない場合、グレーで表示されます。  
+ このページでは、このウィザードでスクリプトを生成する方法を指定できます。 さまざまなオプションを使用できます。 オプションが [データベース エンジンの種類] **で指定したバージョンの SQL Server または**[!INCLUDE[ssSDS](../../includes/sssds-md.md)] によってサポートされていない場合、グレーで表示されます。  
 
-![[詳細設定オプション]](media/generate-and-publish-scripts-wizard/advanced.png)
+![詳細オプション](media/generate-and-publish-scripts-wizard/advanced.png)
   
  **[オプション]** : 詳細オプションを指定するには、各オプションの右にある使用可能な設定の一覧から値を選択します。  
   
@@ -198,7 +198,7 @@ ms.locfileid: "70123000"
   
 -   **[変更の追跡のスクリプトを作成]** : 変更の追跡が元のデータベースまたは元のデータベースのテーブルで有効になっている場合に、変更の追跡のスクリプトを作成します。 既定値は **False**です。 詳細については、「[変更の追跡について &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-tracking-sql-server.md)」を参照してください。  
   
--   **[CHECK 制約のスクリプトを作成]** : **CHECK** 制約をスクリプトに追加します。 既定値は **True**です。 **CHECK** 制約を追加すると、指定した条件を満たすデータのみがテーブルに入力されます。 詳しくは、「 [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md)」をご覧ください。  
+-   **[CHECK 制約のスクリプトを作成]** : **CHECK** 制約をスクリプトに追加します。 既定値は **True**です。 **CHECK** 制約を追加すると、指定した条件を満たすデータのみがテーブルに入力されます。 詳細については、「 [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md)」を参照してください。  
   
 -   **[データ圧縮オプションのスクリプトを作成]** : データ圧縮オプションが元のデータベースまたは元のデータベースのテーブルで構成されている場合に、データ圧縮オプションのスクリプトを作成します。 詳細については、「 [Data Compression](../../relational-databases/data-compression/data-compression.md)」を参照してください。 既定値は **False**です。  
   
@@ -232,7 +232,7 @@ ms.locfileid: "70123000"
  **[キャンセル]** : **[ホスティング プロバイダー]** ダイアログ ボックスで行ったすべての変更を取り消します。  
   
 ###  <a name="AdvPubOpts"></a> [パブリッシングの詳細オプション] ページ  
- このページでは、このウィザードでデータベースをパブリッシュする方法を指定できます。 さまざまなオプションを使用できます。 オプションが [データベース エンジンの種類] **で指定したバージョンの SQL Server または** [!INCLUDE[ssSDS](../../includes/sssds-md.md)] によってサポートされていない場合、グレーで表示されます。  
+ このページでは、このウィザードでデータベースをパブリッシュする方法を指定できます。 さまざまなオプションを使用できます。 オプションが [データベース エンジンの種類] **で指定したバージョンの SQL Server または**[!INCLUDE[ssSDS](../../includes/sssds-md.md)] によってサポートされていない場合、グレーで表示されます。  
 
   ![パブリッシングの詳細](media/generate-and-publish-scripts-wizard/advancedpublish.png)
   
@@ -282,7 +282,7 @@ ms.locfileid: "70123000"
   
 6.  **[トリガーのパブリッシュ]** - パブリッシュ処理に DML トリガーの作成を含めます。 既定値は **True**です。 DML トリガーは、データベースで DML (データ操作言語) イベントが発生したときに起動されるようにプログラミングされた操作です。 詳しくは、「 [DML Triggers](../../relational-databases/triggers/dml-triggers.md)」をご覧ください。  
   
-7.  **[一意キーのパブリッシュ]** - パブリッシュ処理にテーブルの一意キーの作成を含めます。 一意キーにより、重複するデータを入力できなくなります。 既定値は **True**です。 詳しくは、「 [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md)」をご覧ください。  
+7.  **[一意キーのパブリッシュ]** - パブリッシュ処理にテーブルの一意キーの作成を含めます。 一意キーにより、重複するデータを入力できなくなります。 既定値は **True**です。 詳細については、「 [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md)」を参照してください。  
   
 8.  **[変更の追跡のパブリッシュ]** - 変更の追跡が元のデータベースまたは元のデータベースのテーブルで有効になっている場合に、パブリッシュ処理に変更の追跡を含めます。 既定値は **False**です。 詳細については、「[変更の追跡について &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-tracking-sql-server.md)」を参照してください。  
   
@@ -331,7 +331,7 @@ ms.locfileid: "70123000"
   
  **[詳細]** - **[アクション]** 列が表示され、ウィザードの進行状況を確認できます。 スクリプトが生成されると、このウィザードでは、選択内容に基づいて、スクリプトをファイルに保存するか、スクリプトを使用して Web サービスにパブリッシュします。 各手順が完了したときに、 **[結果]** 列の値をクリックすると、対応する手順の結果を確認できます。  
   
- **[レポートの保存]** - クリックすると、ウィザードの進行状況の結果がファイルに保存されます。  
+ **[レポートの保存]** : クリックすると、ウィザードの進行状況の結果がファイルに保存されます。  
   
  **[キャンセル]** - 処理が完了する前やエラーが発生した場合にクリックしてウィザードを閉じます。  
   

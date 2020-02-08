@@ -18,10 +18,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: d16b152bed2a0ed774ea443ada13201e4416f173
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74055923"
 ---
 # <a name="specify-compatibility-data-formats-when-using-bcp-sql-server"></a>bcp を使用して互換性データ形式を指定する (SQL Server)
@@ -35,7 +35,7 @@ ms.locfileid: "74055923"
 ##  <a name="bcpDataFormatAttr"></a> bcp データ形式の属性  
  **bcp** コマンドにより、次のデータ形式属性に関して、データ ファイル内の各フィールドの構造を指定できます。  
   
--   ファイル保存形式  
+-   ファイル ストレージ型  
   
      *ファイル ストレージ型* は、データ ファイルへのデータの格納方法を記述します。 データ ファイルには、データベース テーブルの型 (ネイティブ形式)、文字表現 (文字形式)、または暗黙的な型変換がサポートされているデータ型のいずれかでデータをエクスポートできます。暗黙的な型変換では、たとえば、 **smallint** は **int**としてコピーされます。ユーザー定義のデータ型は、基本データ型としてエクスポートされます。 詳細については、「 [bcp を使用したファイル ストレージ型の指定 &#40;SQL Server&#41;](../../relational-databases/import-export/specify-file-storage-type-by-using-bcp-sql-server.md)」を参照してください。  
   
@@ -93,7 +93,7 @@ bcp AdventureWorks.HumanResources.myTeam out myTeam.txt -T
 > [!NOTE]  
 >  フォーマット ファイルを使用して、データ ファイルから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスにデータを一括インポートできます。また、形式を再度指定しないで、そのテーブルからデータを一括エクスポートできます。 詳細については、「 [データのインポートまたはエクスポート用のフォーマット ファイル &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)」を参照してください。  
   
- 次の例では、`myFormatFile.fmt` という名前の XML 以外のフォーマット ファイルを作成します。  
+ 次の例では、 `myFormatFile.fmt`という名前の XML 以外のフォーマット ファイルを作成します。  
   
  `Do you want to save this format information in a file? [Y/n] y`  
   

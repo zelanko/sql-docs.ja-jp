@@ -18,10 +18,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 59536e4f4ba418aef0ee49737a67df43f903435d
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73983279"
 ---
 # <a name="revoke-database-permissions-transact-sql"></a>REVOKE (データベースの権限の取り消し) (Transact-SQL)
@@ -112,14 +112,14 @@ permission | ALL [ PRIVILEGES ]
  *Database_user_with_no_login*  
  対応するサーバー レベルのプリンシパルがないデータベース ユーザーを指定します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  GRANT OPTION で権限が許可されたプリンシパルに対する権限を取り消すときに CASCADE を指定しない場合、ステートメントは失敗します。  
   
  データベースは、セキュリティ保護可能なリソースで、権限の階層で親となっているサーバーに含まれています。 次の表に、データベースで取り消すことができる権限のうち最も限定的なものを、それらを暗黙的に含む一般的な権限と共に示します。  
   
 |データベース権限|権限が含まれるデータベース権限|権限が含まれるサーバー権限|  
 |-------------------------|------------------------------------|----------------------------------|  
-|ADMINISTER DATABASE BULK OPERATIONS<br/>**適用対象:** [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]」を参照してください。|CONTROL|CONTROL SERVER|
+|ADMINISTER DATABASE BULK OPERATIONS<br/>**適用対象**: [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。|CONTROL|CONTROL SERVER|
 |ALTER|CONTROL|ALTER ANY DATABASE|  
 |ALTER ANY APPLICATION ROLE|ALTER|CONTROL SERVER|  
 |ALTER ANY ASSEMBLY|ALTER|CONTROL SERVER|  
@@ -202,7 +202,7 @@ permission | ALL [ PRIVILEGES ]
   
  AS オプションを使用する場合、指定するプリンシパルはデータベースを所有している必要があります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-revoking-permission-to-create-certificates"></a>A. 証明書を作成する権限を取り消す  
  次の例では、`AdventureWorks2012` データベースに対する `CREATE CERTIFICATE` 権限を、ユーザー `MelanieK` から取り消します。  

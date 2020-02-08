@@ -10,10 +10,10 @@ ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f8eba07362ac5780d1d7790d5553aaa397b7847e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75245085"
 ---
 # <a name="connect-to-the-teradata-source"></a>Teradata ソースに接続する
@@ -40,7 +40,7 @@ Teradata ソースでは、並列処理がサポートされているため、�
 
 次の表に、Teradata ソースのカスタム プロパティの一覧を示します。 すべてのプロパティは読み取り/書き込み可能です。
 
-|プロパティ名|データ型|[説明]|
+|プロパティ名|データ型|説明|
 |:-|:-|:-|
 |AccessMode|Integer (列挙)|データベースへのアクセスに使用するモード。 指定できる値は、 *[テーブル名]* と *[SQL コマンド]* です。 既定値は *Table Name* です。|
 |BlockSize|整数|クライアントにデータを返すときに使用されるブロック サイズ (バイト単位)。 既定値は 1048576 (1 MB) です。 最小値は 256 バイトです。 最大値は 16775168 バイトです。<br> このプロパティは、 **[詳細エディター]** ペインにあります。|
@@ -104,7 +104,7 @@ Teradata ソースは、プログラムによって、または SQL Server Integ
 
 * ソースからデータを選択する方法を選択します。 次の表に示すオプションがあります。
 
-    |オプション|[説明]|
+    |オプション|説明|
     |:-|:-|
     |テーブル名 - TPT Export|Teradata データ ソースのテーブルまたはビューからデータを取得します。 このオプションを選択した場合、使用できるテーブルまたはビューを **[テーブル名またはビュー名]** の一覧から選択します。|
     |SQL コマンド - TPT Export|SQL クエリを使用して、Teradata データ ソースからデータを取得します。 このオプションを選択した場合は、以下のいずれかの方法でクエリを入力します。 <ul><li>**[SQL コマンド テキスト]** フィールドに SQL クエリのテキストを入力します。</li><li>**[参照]** を選択して、テキスト ファイルから SQL クエリを読み込みます。</li><li>**[クエリの解析]** を選択して、クエリ テキストの構文を検証します。</li></ul>|

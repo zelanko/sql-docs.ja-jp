@@ -1,23 +1,24 @@
 ---
-title: チュートリアル:SQL Server の単体テストの作成と実行 | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: SQL Server の単体テストの作成と実行
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 992c1d8e-3729-438b-9ef4-cd103e28f145
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d8ed1dbfa5ffcb61200f7838753dc1681f8c6509
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 0bca0d4e70c1b147e5c0231936d588cc914bb1d6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141206"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242696"
 ---
 # <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>チュートリアル:SQL Server の単体テストの作成と実行
+
 このチュートリアルでは、複数のストアド プロシージャの動作を検証する SQL Server の単体テストを作成します。 SQL Server の単体テストを作成すると、アプリケーションの不適切な動作の原因となる可能性があるコードの欠陥を特定するのに役立ちます。 SQL Server の単体テストとアプリケーション テストは、自動テスト スイートの一部として実行できます。  
   
 このチュートリアルでは、次のタスクを実行します。  
@@ -38,7 +39,7 @@ ms.locfileid: "68141206"
   
 単体テストのいずれかによってストアド プロシージャ内のエラーが検出されたら、そのエラーを修正してテストを再実行します。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>前提条件  
 このチュートリアルを完了するには、データベースを作成および配置するための権限があるデータベース サーバー (LocalDB データベース) に接続できる必要があります。 詳しくは、「[Visual Studio のデータベース機能に必要なアクセス許可](https://msdn.microsoft.com/library/aa833413(VS.100).aspx)」をご覧ください。  
   
 ## <a name="CreateScript"></a>データベース スキーマを含むスクリプトを作成する  
@@ -718,10 +719,10 @@ ms.locfileid: "68141206"
   
 5.  Sales_uspPlaceNewOrderTest、Sales_uspFillOrderTest、Sales_uspShowOrderDetailsTest の各テストについて、手順 3. を繰り返します。 結果は次のようになります。  
   
-    |[テスト]|予想される結果|  
+    |テスト|予測される結果|  
     |--------|-------------------|  
-    |Sales_uspPlaceNewOrderTest|成功|  
-    |Sales_uspShowOrderDetailsTest|成功|  
+    |Sales_uspPlaceNewOrderTest|合格|  
+    |Sales_uspShowOrderDetailsTest|合格|  
     |Sales_uspFillOrderTest|次のエラーにより失敗しました:"ScalarValueCondition 条件 (scalarValueCondition2) が失敗しました:ResultSet 1 の行 1 の列 1: 値が一致しません。実際は '-100'、予期した値は '100'。"このエラーは、ストアド プロシージャの定義に軽度なエラーが含まれていることが原因で発生します。|  
   
     次に、エラーを修正してテストを再実行します。  
@@ -981,7 +982,7 @@ ms.locfileid: "68141206"
   
     テストが成功したということは、プロシージャが失敗すると想定されていた場合に失敗したことを意味します。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>次の手順  
 一般的なプロジェクトでは、追加の単体テストを定義して、重要なデータベース オブジェクトがすべて正しく動作することを確認します。 一連のテストが完了したら、これらのテストをバージョン管理にチェックインしてチームと共有します。  
   
 ベースラインを設定したら、データベース オブジェクトを作成および変更し、変更によって予期される動作が妨げられないかどうかを確認するための関連テストを作成できます。  
@@ -989,6 +990,6 @@ ms.locfileid: "68141206"
 ## <a name="see-also"></a>参照  
 [SQL Server の単体テストの作成と定義](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
 [SQL Server の単体テストを使用したデータベース コードの検証](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  
-[空の SQL Server の単体テストを作成する方法](../ssdt/how-to-create-an-empty-sql-server-unit-test.md)  
-[SQL Server の単体テストの実行を構成する方法](../ssdt/how-to-configure-sql-server-unit-test-execution.md)  
+[方法: 空の SQL Server の単体テストを作成する方法](../ssdt/how-to-create-an-empty-sql-server-unit-test.md)  
+[方法: SQL Server の単体テストの実行を構成する方法](../ssdt/how-to-configure-sql-server-unit-test-execution.md)  
   

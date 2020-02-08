@@ -35,10 +35,10 @@ ms.assetid: 2c506167-0b69-49f7-9282-241e411910df
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: 54b6353b789f837f45759c34b0dbbbd591cf5dbf
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982422"
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB (Transact-SQL)
@@ -168,7 +168,7 @@ DATA_PURITY
 > [!WARNING] 
 > MAXDOP が 0 に設定されている場合、SQL Server では使用する最大限の並列処理が選択されます。    
 
-## <a name="remarks"></a>Remarks    
+## <a name="remarks"></a>解説    
 DBCC CHECKDB は、無効なインデックスについては検査しません。 無効なインデックスの詳細については、「[インデックスと制約の無効化](../../relational-databases/indexes/disable-indexes-and-constraints.md)」を参照してください。    
 
 ユーザー定義型がバイト順としてマークされている場合、シリアル化されたユーザー定義型は 1 つだけ存在する必要があります。 シリアル化されたバイト順のユーザー定義型が一貫して存在していない場合、DBCC CHECKDB の実行中にエラー 2537 が発生します。 詳細については、「[ユーザー定義型の要件](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-requirements.md)」を参照してください。    
@@ -213,7 +213,7 @@ Microsoft SQL Server 2012 または SQL Server の以前のバージョンでは
 ## <a name="understanding-dbcc-error-messages"></a>DBCC エラー メッセージについて    
 DBCC CHECKDB コマンドの終了後、メッセージが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログに書き込まれます。 DBCC コマンドが正常に実行された場合、メッセージでは正常に処理されたこととコマンドの実行時間が示されます。 エラーが発生して DBCC コマンドが完了前に停止した場合、メッセージではコマンドが終了したことと、状態の値、およびコマンド実行時間が示されます。 次の表は、メッセージに含まれる可能性がある状態値の一覧と説明です。
     
-|状態|[説明]|    
+|State|説明|    
 |-----------|-----------------|    
 |0|エラー番号 8930 が発生しました。 このエラーは、メタデータの破損により DBCC コマンドが終了したことを示します。|    
 |1|エラー番号 8967 が発生しました。 内部 DBCC エラーがあります。|    
@@ -367,7 +367,7 @@ ESTIMATEONLY を指定した場合、DBCC CHECKDB は以下の結果セットを
 ## <a name="permissions"></a>アクセス許可    
 Sysadmin 固定サーバー ロールまたは db_owner 固定データベース ロールのメンバーシップが必要です。
     
-## <a name="examples"></a>使用例    
+## <a name="examples"></a>例    
     
 ### <a name="a-checking-both-the-current-and-another-database"></a>A. 現在のデータベースと別のデータベースの両方をチェックする    
 次の例では、現在のデータベースと [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースに対して `DBCC CHECKDB` を実行します。

@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 34ec0c2814dda7d2cf4bada10e5e53c05f8e08b9
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73724022"
 ---
 # <a name="create-graphs-and-plots-using-sql-and-r-walkthrough"></a>SQL と R を使用してグラフとプロットを作成する (チュートリアル)
@@ -21,7 +21,7 @@ ms.locfileid: "73724022"
 
 チュートリアルのこのパートでは、R を使用して SQL Server データでプロットとマップを生成する方法について説明します。 単純なヒストグラムを作成してから、より複雑なマップ プロットを作成します。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 この手順では、進行中の R セッションは、このチュートリアルの前の手順に基づいていることを前提としています。 ここでは、これらの手順で作成した接続文字列とデータ ソース オブジェクトを使用します。 スクリプトの実行には、次のツールとパッケージが使用されます。
 
@@ -108,7 +108,7 @@ ms.locfileid: "73724022"
 
     ![カスタム R 関数を使用してタクシーの乗車をプロットする](media/rsql-e2e-mapplot.png "カスタム R 関数を使用してタクシーの乗車をプロットする")
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [R と SQL を使用してデータ機能を作成する](walkthrough-create-data-features.md)

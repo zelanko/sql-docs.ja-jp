@@ -8,10 +8,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 5183efa51afd89ad82d0cdcb6448996429b81d28
-ms.sourcegitcommit: bb56808dd81890df4f45636b600aaf3269c374f2
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/24/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72890561"
 ---
 # <a name="whats-new-for-sql-server-2019-on-linux"></a>SQL Server 2019 on Linux の新機能
@@ -20,7 +20,7 @@ ms.locfileid: "72890561"
 
 この記事では、Linux 上で実行される SQL Server 2019 で使用できる主な機能とサービスについて説明します。 パッケージのダウンロードと既知の問題については、[リリース ノート](sql-server-linux-release-notes-2019.md?view=sql-server-linux-ver15)のページをご覧ください。
 
-## <a name="updates"></a>Updates
+## <a name="updates"></a>更新プログラム
 
 SQL Server 2019 on Linux では、次の更新が行われています。
 
@@ -28,7 +28,7 @@ SQL Server 2019 on Linux では、次の更新が行われています。
 |:-----|:-----|
 |レプリケーションのサポート |[Linux での SQL Server のレプリケーション](sql-server-linux-replication.md)
 |Microsoft 分散トランザクション コーディネーター (MSDTC) のサポート |[Linux で MSDTC を構成する方法](sql-server-linux-configure-msdtc.md) |
-|サード パーティの AD プロバイダーに対する OpenLDAP のサポート |[チュートリアル: SQL Server on Linux で Active Directory 認証を使用する](sql-server-linux-active-directory-authentication.md) |
+|サード パーティの AD プロバイダーに対する OpenLDAP のサポート |[チュートリアル:SQL Server on Linux で Active Directory 認証を使用する](sql-server-linux-active-directory-authentication.md) |
 |Linux 上の Machine Learning |[Linux に Machine Learning を構成する](sql-server-linux-setup-machine-learning.md) |
 |`tempdb` の強化機能 | 既定では、Linux 上に SQL Server を新しくインストールすると、論理コアの数に基づいて複数の `tempdb` データ ファイルが作成されます (最大で 8 個のデータ ファイル)。 これは、マイナー バージョンまたはメジャー バージョンのインプレース アップグレードには適用されません。 各 `tempdb` ファイルは 8 MB で、64 MB まで自動拡張されます。 この動作は、Windows への SQL Server の既定のインストールに似ています。 |
 | Linux での PolyBase | 非 Hadoop コネクタ向けに Linux に [PolyBase をインストール](../relational-databases/polybase/polybase-linux-setup.md)します。<br/><br/>[PolyBase 型のマッピング](../relational-databases/polybase/polybase-type-mapping.md) |
@@ -36,7 +36,7 @@ SQL Server 2019 on Linux では、次の更新が行われています。
 | Microsoft Container Registry | [Microsoft Container Registry](https://www.ntweekly.com/2019/09/23/microsoft-container-registry-to-replace-docker-hub-for-new-images/) では、[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] など、Microsoft の新しい公式コンテナー イメージのために Docker Hub が取り替えられます。 |
 | ルート以外のコンテナー | [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] では、既定でルート以外のユーザーとして [!INCLUDE[sql-server](../includes/ssnoversion-md.md)] を起動することで、より安全なコンテナーを作成できるようになりました。 詳細については、「[非ルート ユーザーとして SQL Server コンテナーを作成して実行する](sql-server-linux-configure-docker.md#buildnonrootcontainer)」を参照してください。 |
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 SQL Server on Linux をインストールするには、次のチュートリアルのいずれかを使用します。
 

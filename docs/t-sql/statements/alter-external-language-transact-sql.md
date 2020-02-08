@@ -11,10 +11,10 @@ ms.author: negust
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 1b831047e4c2b8bad166e5ddf5ce3bdc7f8b6165
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73532857"
 ---
 # <a name="create-external-language-transact-sql"></a>CREATE EXTERNAL LANGUAGE (Transact-SQL)
@@ -100,13 +100,13 @@ ALTER EXTERNAL LANGUAGE language_name
 
 **external_lang_env_variables**
 
-これにより、外部プロセスの開始前に、外部言語ランタイムに環境変数のセットを提供できます。 環境変数の例は、たとえば、ランタイム自体のホーム ディレクトリです。 例:JRE_HOME。
+これにより、外部プロセスの開始前に、外部言語ランタイムに環境変数のセットを提供できます。 環境変数の例は、たとえば、ランタイム自体のホーム ディレクトリです。 次に例を示します。JRE_HOME。
 
 **platform**
 
 このパラメーターは、ハイブリッド OS のシナリオに必要です。 ハイブリッド アーキテクチャでは、プラットフォームごとに 1 回、言語を登録する必要があります。 プラットフォームと言語の名前は、外部言語ごとの一意のキーになります。 プラットフォームを指定しないと、現在の OS が想定されます。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 現在、**PARAMETERS** と **ENVIRONMENT_VARIABLES** はサポートされていません。
 
@@ -114,7 +114,7 @@ ALTER EXTERNAL LANGUAGE language_name
 
 `ALTER ANY EXTERNAL LANGUAGE` アクセス許可が必要です。 既定では、**db_owner** ロールのメンバーである **dbo** を持つすべてのユーザーに、外部言語を変更するためのアクセス許可があります。 他のすべてのユーザーについては、[GRANT](https://docs.microsoft.com/sql/t-sql/statements/grant-database-permissions-transact-sql) ステートメントを使用し、特権として ALTER ANY EXTERNAL LANGUAGE を指定して、アクセス許可を明示的に付与する必要があります。
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 ### <a name="alter-an-external-language-in-a-database"></a>データベース内の外部言語を変更する  
 

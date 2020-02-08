@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 766adecbc91f88ed0796e4214b7e4074fc564f01
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727286"
 ---
 # <a name="native-scoring-using-the-predict-t-sql-function"></a>PREDICT T-SQL 関数を使用したネイティブ スコアリング
@@ -34,13 +34,13 @@ ms.locfileid: "73727286"
 
 この関数は、入力データの予測を、パス スルーしたいソース データの任意の列と一緒に返します。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 PREDICT は、SQL Server 2017 データベース エンジンのすべてのエディションで使用でき、既定で有効になっています。これには、Windows の SQL Server Machine Learning Services、SQL Server 2017 (Windows)、SQL Server 2017 (Linux)、または Azure SQL Database が含まれます。 R や Python をインストールしたり、追加機能を有効にしたりする必要はありません。
 
 + このモデルは、下記に一覧表示されているサポートされる **rx** アルゴリズムのいずれかを使用して、事前にトレーニングされる必要があります。
 
-+ R の場合は [rxSerialize](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel)、Python の場合は [rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model) を使用して、モデルをシリアル化します。 これらのシリアル化関数は、高速スコアリングをサポートするように最適化されています。
++ モデルのシリアル化には、R の場合は [rxSerialize](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel)、Python の場合は [rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model) を使用します。 これらのシリアル化関数は、高速スコアリングをサポートするように最適化されています。
 
 <a name="bkmk_native_supported_algos"></a> 
 
@@ -165,7 +165,7 @@ go
 > [!NOTE]
 > **PREDICT** によって返される列と値は、モデルの種類によって異なる場合があるため、**WITH** 句を使用して、返されるデータのスキーマを定義する必要があります。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 ネイティブ スコアリングを含む完全なソリューションについては、SQL Server 開発チームのこれらのサンプルを参照してください。
 

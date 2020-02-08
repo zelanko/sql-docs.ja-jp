@@ -55,10 +55,10 @@ author: pmasl
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 80f3fba621cbfe4f8411f618ca60025685c2da34
-ms.sourcegitcommit: 909b69dd1f918f00b9013bb43ea66e76a690400a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75924910"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
@@ -828,7 +828,7 @@ OPTIMIZE_FOR_SEQUENTIAL_KEY インデックス オプションをオンにする
 - 列ストア インデックスが既に存在する場合に、データ ウェアハウス テーブル上のクラスター化または非クラスター化行ストア インデックス。 この動作は、行ストアと列ストアの両方のインデックスが同じテーブル上に共存できる SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] とは異なります。
 - インデックスをビューに作成することはできません。
 
-## <a name="metadata"></a>メタデータ
+## <a name="metadata"></a>Metadata
 既存のインデックスに関する情報を表示するには、[sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) カタログ ビューに対してクエリを実行します。
 
 ## <a name="version-notes"></a>バージョンに関するメモ

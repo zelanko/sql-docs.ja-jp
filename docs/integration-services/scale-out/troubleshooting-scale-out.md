@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.openlocfilehash: 87f5ab815fc7d3a5df23aa3675e92ffa206bfcdf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67896153"
 ---
 # <a name="troubleshoot-scale-out"></a>Scale Out のトラブルシューティング
@@ -36,7 +36,7 @@ SSIS Scale Out には、SSIS カタログ データベース `SSISDB`、Scale Ou
 
 -   マスター プロパティがビュー `[catalog].[master_properties]` に入力されない。
 
-### <a name="solution"></a>解決方法
+### <a name="solution"></a>解決策
 1.  Scale Out が有効になっているかどうかを確認します。
 
     SSMS のオブジェクト エクスプローラーで **[SSISDB]** を右クリックして、 **[Scale Out 機能が有効です]** を確認します。
@@ -58,7 +58,7 @@ SSIS Scale Out には、SSIS カタログ データベース `SSISDB`、Scale Ou
 
 -   Scale Out Worker サービスは実行されているが、Scale Out Worker がオフラインである。
 
-### <a name="solution"></a>解決方法
+### <a name="solution"></a>解決策
 `\<drive\>:\Users\\*[account running worker service]*\AppData\Local\SSIS\Cluster\Agent` にある Scale Out Worker サービス ログのエラー メッセージを確認します。
 
 ## <a name="no-endpoint-listening"></a>リッスンしているエンドポイントがない
@@ -67,7 +67,7 @@ SSIS Scale Out には、SSIS カタログ データベース `SSISDB`、Scale Ou
 
 *"System.ServiceModel.EndpointNotFoundException: メッセージを受信できる https://* [MachineName]:[Port] */ClusterManagement/ でリッスンしているエンドポイントがありませんでした。"*
 
-### <a name="solution"></a>解決方法
+### <a name="solution"></a>解決策
 
 1.  Scale Out Master のサービス構成ファイルで指定されたポート番号が正しいかどうかを確認し、Scale Out Master サービスを再起動します。 
 
@@ -82,11 +82,11 @@ SSIS Scale Out には、SSIS カタログ データベース `SSISDB`、Scale Ou
 ### <a name="symptoms"></a>現象
 *""System.ServiceModel.Security.SecurityNegotiationException: 機関 '[Machine Name]:[Port]' との SSL/TLS のセキュリティで保護されているチャネルに対する信頼関係を確立できませんでした。"*
 
-*"System.Net.WebException: 基になる接続が閉じられました: SSL/TLS のセキュリティで保護されているチャネルに対する信頼関係を確立できませんでした。"*
+*"System.Net.WebException: 基になる接続が閉じられました。SSL/TLS のセキュリティで保護されているチャネルに対する信頼関係を確立できませんでした。"*
 
 *"System.Security.Authentication.AuthenticationException: 検証プロシージャによると、リモート証明書は無効です。"*
 
-### <a name="solution"></a>解決方法
+### <a name="solution"></a>解決策
 1.  Scale Out Master 証明書を Scale Out Worker ノードのローカル コンピューターのルート証明書ストアにインストールして (証明書がまだインストールされていない場合)、Scale Out Worker サービスを再起動します。
 
 2.  マスター エンドポイント内のホスト名が Scale Out Master 証明書の CN に含まれているかどうかを確認します。 含まれていない場合は、Scale Out Worker の構成ファイル内のマスター エンドポイントをリセットし、Scale Out Worker サービスを再起動します。 
@@ -102,9 +102,9 @@ SSIS Scale Out には、SSIS カタログ データベース `SSISDB`、Scale Ou
 
 *"System.ServiceModel.Security.SecurityNegotiationException: オーソリティ '[Machine Name]:[Port]' と、セキュリティで保護された SSL/TLS のチャネルを確立できませんでした。"*
 
-*"System.Net.WebException: 要求は中止されました: SSL/TLS のセキュリティで保護されているチャネルを作成できませんでした。"*
+*"System.Net.WebException: 要求が中止されました:SSL/TLS のセキュリティで保護されているチャネルを作成できませんでした。"*
 
-### <a name="solution"></a>解決方法
+### <a name="solution"></a>解決策
 次のコマンドを実行して、Scale Out Worker サービスを実行するアカウントに、Scale Out Worker 証明書へのアクセス権があるかどうかを確認します。
 
 ```dos
@@ -123,9 +123,9 @@ winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {
 
 *"System.ServiceModel.Security.MessageSecurityException: この HTTP 要求は、クライアントの認証方式 'Anonymous' で許可されませんでした。"*
 
-*"System.Net.WebException: リモート サーバーがエラーを返しました: 403 許可されていません。"*
+*"System.Net.WebException: リモート サーバーがエラー403 許可されていません。"*
 
-### <a name="solution"></a>解決方法
+### <a name="solution"></a>解決策
 1.  Scale Out Worker 証明書を、Scale Out Master ノードのローカル コンピューターのルート証明書ストアにインストールし (証明書がまだインストールされていない場合)、Scale Out Worker サービスを再起動します。
 
 2.  Scale Out Master ノード上のローカル コンピューターのルート証明書ストア内の不要な証明書をクリーンアップします。
@@ -159,7 +159,7 @@ winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {
 
 *"System.ServiceModel.CommunicationException: https://[Machine Name]:[Port]/ClusterManagement/ に対する HTTP 要求の発行中にエラーが発生しました。これは、HTTPS ケースの HTTP.SYS でサーバー証明書が正しく構成されていないという事実が原因と考えられます。またはクライアントとサーバーの間でセキュリティ バインドが整合していないことも原因になり得ます。"*
 
-### <a name="solution"></a>解決方法
+### <a name="solution"></a>解決策
 1.  次のコマンドを実行して、Scale Out Master 証明書がマスター ノード上のマスター エンドポイントのポートに正しくバインドされているかどうかを確認します。
 
     ```dos
@@ -178,7 +178,7 @@ winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {
 ### <a name="symptoms"></a>現象
 Scale Out Manager で Scale Out Worker を Scale Out Master に接続したときに、 *"マシン上で証明書ストアを開けません"* というエラー メッセージが表示され、検証が失敗する。
 
-### <a name="solution"></a>解決方法
+### <a name="solution"></a>解決策
 
 1.  管理者として Scale Out Manager を実行します。 SSMS で Scale Out Manager を開く場合は、SSMS を管理者として実行する必要があります。
 
@@ -189,7 +189,7 @@ Scale Out Manager で Scale Out Worker を Scale Out Master に接続したと�
 ### <a name="symptoms"></a>現象
 Scale Out で実行が開始されない。
 
-### <a name="solution"></a>解決方法
+### <a name="solution"></a>解決策
 
 ビュー `[catalog].[worker_agents]` でパッケージを実行するために選択したコンピューターの状態を確認します。 少なくとも 1 つのワーカーがオンラインで有効になっている必要があります。
 
@@ -198,7 +198,7 @@ Scale Out で実行が開始されない。
 ### <a name="symptoms"></a>現象 
 パッケージは正常に実行されているが、メッセージがログに記録されない。
 
-### <a name="solution"></a>解決方法
+### <a name="solution"></a>解決策
 
 SSISDB をホストする SQL Server インスタンスにより SQL Server 認証が許可されているかどうかを確認します。
 
@@ -210,7 +210,7 @@ SSISDB をホストする SQL Server インスタンスにより SQL Server 認�
 ### <a name="symptoms"></a>現象
 パッケージ実行レポート内のエラー メッセージが、トラブルシューティングには不十分である。
 
-### <a name="solution"></a>解決方法
+### <a name="solution"></a>解決策
 `WorkerSettings.config` で構成されている `TasksRootFolder` には、さらに多くの実行ログがあります。 既定では、このフォルダーは `\<drive\>:\Users\\[account]\AppData\Local\SSIS\ScaleOut\Tasks` です。 *[account]* は、既定値が `SSISScaleOutWorker140` の Scale Out Worker サービスを実行しているアカウントです。
 
 *[execution ID]* を持つパッケージ実行のログを見つけるには、次の Transact-SQL コマンドを実行して *[task ID]* を取得します。 次に、`TasksRootFolder` で *[task ID]* を含むサブフォルダー名を見つけます。
@@ -224,7 +224,7 @@ WHERE executions.execution_id = *Your Execution Id* AND tasks.JobId = executions
 > [!WARNING]
 > このクエリはトラブルシューティング専用です。 クエリで参照されている内部ビューは、今後、変更される可能性があります。 
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 詳細については、SSIS Scale Out のセットアップと構成に関する以下の記事を参照してください。
 -   [1 台のコンピューターでの Integration Services (SSIS) Scale Out の概要](get-started-with-ssis-scale-out-onebox.md)
 -   [チュートリアル:Integration Services Scale Out をセットアップする](walkthrough-set-up-integration-services-scale-out.md)

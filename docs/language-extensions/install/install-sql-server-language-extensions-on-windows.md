@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 3e4f3a84e5001d7485ab590a66ee497522042824
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73658841"
 ---
 # <a name="install-sql-server-language-extensions-on-windows"></a>SQL Server の言語拡張を Windows にインストールする
@@ -219,7 +219,7 @@ GO
     
 2. **[サービス]** パネルまたは SQL Server 構成マネージャーを開き、**SQL Server Launchpad サービス**が実行されていることを確認します。 言語拡張がインストールされているすべてのデータベース エンジンのインスタンスに対して、1 つのサービスが存在する必要があります。 サービスの詳細については、[機能拡張フレームワーク](../concepts/extensibility-framework.md)に関するページを参照してください。 
    
-## <a name="additional-configuration"></a>その他の構成
+## <a name="additional-configuration"></a>追加構成
 
 検証手順が成功した場合は、SQL Server Management Studio、Azure Data Studio、Visual Studio Code、または T-SQL ステートメントをサーバーに送信できる他の任意のクライアントから、Java コードを実行できます。
 
@@ -249,7 +249,7 @@ GO
 
 ### <a name="optimize-the-server-for-language-extensions"></a>言語拡張用にサーバーを最適化する
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセットアップの既定の設定では、データベース エンジンによってサポートされているさまざまなサービスのバランスを最適化することを目的としています。サービスには、抽出 (Extract)、変換 (Transform)、および読み込み (Load) の ETL プロセス、レポート、監査、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データを使うアプリケーションなどが含まれます。 そのため、既定の設定では、場合によって言語拡張用のリソースが制限または調整されることがあります (特に、メモリを大量に使用する操作の場合)。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセットアップの既定の設定は、データベース エンジンによってサポートされているさまざまなサービスに対してサーバーのバランスを最適化することを目的としています。サービスには、抽出、変換、および読み込み (ETL) プロセス、レポート、監査、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データを使うアプリケーションなどが含まれます。 そのため、既定の設定では、場合によって言語拡張用のリソースが制限または調整されることがあります (特に、メモリを大量に使用する操作の場合)。
 
 言語拡張ジョブが適切に優先順位を設定されて、リソースを提供されるようにするため、SQL Server Resource Governor を使って外部リソース プールを構成することをお勧めします。 また、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース エンジンに割り当てられるメモリの量を変更したり、[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] サービスで実行するアカウントの数を増やしたりすることもできます。
 
@@ -259,8 +259,8 @@ GO
   
 Standard Edition を使用していて、Resource Governor がない場合は、動的管理ビュー (DMV) と拡張イベントに加え、Windows イベント監視を使用してサーバー リソースを管理できます。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 Java 開発者はいくつかの簡単な例を試して、SQL Server での Java の動作方法の基本を確認できます。 次の手順については、以下のリンクを参照してください。
 
-+ [チュートリアル: Java での正規表現](../tutorials/search-for-string-using-regular-expressions-in-java.md)
++ [チュートリアル:Java での正規表現](../tutorials/search-for-string-using-regular-expressions-in-java.md)

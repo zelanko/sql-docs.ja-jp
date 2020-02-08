@@ -27,10 +27,10 @@ ms.assetid: f8926b95-e146-4e3f-b56b-add0c0d0a30e
 author: jaszymas
 ms.author: jaszymas
 ms.openlocfilehash: cd6148499c6e9d906d0077632001d3fe32ce9cc3
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73593893"
 ---
 # <a name="create-column-master-key-transact-sql"></a>CREATE COLUMN MASTER KEY (Transact-SQL)
@@ -96,7 +96,7 @@ key_path
   
     **キーのパスの形式:** *CertificateStoreName*/*CertificateStoreLocation*/*CertificateThumbprint*  
   
-     各要素の説明は次のとおりです。  
+     各値の説明:  
   
     *CertificateStoreLocation*  
     証明書ストアの場所。現在のユーザーまたはローカル マシンにする必要があります。 詳しくは、「[Local Machine and Current User Certificate Stores](https://msdn.microsoft.com/library/windows/hardware/ff548653.aspx)」(ローカル マシンおよび現在のユーザーの証明書ストア) をご覧ください。  
@@ -107,7 +107,7 @@ key_path
     *CertificateThumbprint*  
     証明書のサムプリント。  
   
-    **使用例:**  
+    **例:**  
   
     ```  
     N'CurrentUser/My/BBF037EC4A133ADCA89FFAEC16CA5BFA8878FB94'  
@@ -119,7 +119,7 @@ key_path
   
     **キーのパスの形式:** *ProviderName*/*KeyIdentifier*  
   
-    各要素の説明は次のとおりです。  
+    各値の説明:  
   
     *ProviderName*  
     列マスター キー ストアの暗号サービス プロバイダー (CSP) の名前。CAPI が実装されています。 キー ストアとして HSM を使用する場合、プロバイダー名は HSM ベンダー提供の CSP の名前にする必要があります。 クライアント コンピューターにプロバイダーをインストールする必要があります。  
@@ -127,7 +127,7 @@ key_path
     *KeyIdentifier*  
     キー ストア内のキーの識別子。列マスター キーとして使用されます。  
   
-    **使用例:**  
+    **例:**  
   
     ```  
     N'My HSM CSP Provider/AlwaysEncryptedKey1'  
@@ -137,7 +137,7 @@ key_path
   
     **キーのパスの形式:** *ProviderName*/*KeyIdentifier*  
   
-    各要素の説明は次のとおりです。  
+    各値の説明:  
   
     *ProviderName*  
     列マスター キー ストアのキー ストレージ プロバイダー (KSP) の名前。Cryptography: Next Generation (CNG) API が実装されています。 キー ストアとして HSM を使用する場合、プロバイダー名は HSM ベンダー提供の KSP の名前にする必要があります。 クライアント コンピューターにプロバイダーをインストールする必要があります。  
@@ -145,7 +145,7 @@ key_path
     *KeyIdentifier*  
     キー ストア内のキーの識別子。列マスター キーとして使用されます。  
   
-    **使用例:**  
+    **例:**  
   
     ```  
     N'My HSM CNG Provider/AlwaysEncryptedKey1'  
@@ -155,7 +155,7 @@ key_path
   
     **キーのパスの形式:** *KeyUrl*  
   
-    各要素の説明は次のとおりです。  
+    各値の説明:  
   
     *KeyUrl*  
     Azure Key Vault 内のキーの URL
@@ -167,7 +167,7 @@ ENCLAVE_COMPUTATIONS
 "*キーのパス*" のデジタル署名と列マスター キーでの ENCLAVE_COMPUTATIONS の設定の結果であるバイナリ リテラル。 署名には、ENCLAVE_COMPUTATIONS が指定されているかどうかが反映されます。 この署名は、承認されていないユーザーが符号付きの値を変更できないようにします。 Always Encrypted 対応のクライアント ドライバーでは、署名が検証されて、署名が無効な場合はアプリケーションにエラーが返されます。 署名は、クライアント側のツールを使用して生成されている必要があります。 詳細については、「[セキュア エンクレーブを使用する Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)」を参照してください。
   
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 
 データベースに列暗号化キー メタデータ エントリを作成する前、および Always Encrypted を使用してデータベース内の列を暗号化する前に、列マスター キー メタデータ エントリを作成します。 メタデータ内の列マスター キー エントリには、実際の列マスター キーは含まれません。 列マスター キーは、(SQL Server の外部にある) 外部列キー ストアに格納する必要があります。 メタデータ内のキー ストア プロバイダー名と列マスター キー パスは、クライアント アプリケーションに対して有効である必要があります。 クライアント アプリケーションでは、列マスター キーを使用して、列暗号化キーの暗号化を解除する必要があります。 列暗号化キーは、列マスター キーで暗号化されています。 また、クライアント アプリケーションでは、暗号化された列のクエリを実行する必要があります。
 
@@ -177,7 +177,7 @@ SQL Server Management Studio (SSMS) や PowerShell などのツールを使っ�
 ## <a name="permissions"></a>アクセス許可  
 **ALTER ANY COLUMN MASTER KEY** 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-creating-a-column-master-key"></a>A. 列マスター キーを作成する  
 次の例では、列マスター キーの列マスター キー メタデータ エントリを作成します。 列マスター キーは、MSSQL_CERTIFICATE_STORE プロバイダーを使用して列マスター キーにアクセスするクライアント アプリケーションの証明書ストアに格納されます。  
@@ -247,8 +247,8 @@ WITH (
 * [DROP COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-column-master-key-transact-sql.md)   
 * [CREATE COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-column-encryption-key-transact-sql.md)
 * [sys.column_master_keys (Transact-SQL)](../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md)
-* [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
+* [常に暗号化](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
 * [セキュリティで保護されたエンクレーブが設定された Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)   
 * [Always Encrypted のキー管理の概要](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)   
-* [セキュリティで保護されたエンクレーブが設定された Always Encrypted のキーの管理](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)   
+* [セキュリティで保護されたエンクレーブが設定された Always Encrypted のキーを管理する](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)   
   

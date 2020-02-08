@@ -22,13 +22,13 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ed6848494d9d9673905dadbff036ad97f3be834c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67894882"
 ---
-# <a name="declare-localvariable-transact-sql"></a>DECLARE @local_variable (Transact-SQL)
+# <a name="declare-local_variable-transact-sql"></a>DECLARE @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   変数は、バッチやプロシージャの中で DECLARE ステートメントを使用して宣言し、SET ステートメントまたは SELECT ステートメントを使用して値を割り当てます。 このステートメントでは、他のカーソル関連のステートメントで使用できるカーソル変数を宣言できます。 宣言の一部として値を指定しない場合、宣言の後、すべての変数は NULL として初期化されます。  
@@ -95,7 +95,7 @@ DECLARE
  インラインで値を変数に代入します。 値には定数または式を指定できますが、変数宣言の型と同じであるか、その型に暗黙的に変換できる必要があります。 詳細については、「[式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)」を参照してください。  
   
 @*cursor_variable_name*  
- カーソル変数の名前です。 カーソル変数名はアット マーク (@) で始まり、識別子の規則に従っている必要があります。  
+ カーソル変数の名前を指定します。 カーソル変数名はアット マーク (@) で始まり、識別子の規則に従っている必要があります。  
   
 CURSOR  
  変数がローカルのカーソル変数であることを指定します。  
@@ -126,13 +126,13 @@ CURSOR
  Windows と SQL の照合順序名については、「[COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md)」を参照してください。  
   
  DEFAULT  
- 挿入の際に明示的な値を指定しない場合に、列に入力される値を指定します。 DEFAULT 定義は、**timestamp** として定義された列または IDENTITY プロパティを持つ列以外のすべての列に適用できます。 テーブルが削除されると、DEFAULT 定義も削除されます。 既定値として使用できるのは、文字列などの定数値、SYSTEM_USER() などのシステム関数、または NULL だけです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の旧バージョンとの互換性を保つため、DEFAULT に制約名を割り当てることができます。  
+ 挿入の際に明示的な値を指定しない場合に、列に入力される値を指定します。 DEFAULT 定義は、**timestamp** として定義された列または IDENTITY プロパティを持つ列以外のすべての列に適用できます。 テーブルが削除されると、DEFAULT 定義は削除されます。 既定値として使用できるのは、文字列などの定数値、SYSTEM_USER() などのシステム関数、または NULL だけです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の旧バージョンとの互換性を保つため、DEFAULT に制約名を割り当てることができます。  
   
  *constant_expression*  
  列の既定値として使用される定数、NULL またはシステム関数を指定します。  
   
  IDENTITY  
- 新しい列が ID 列であることを指定します。 テーブルに行が新しく追加されると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では列に一意な増分値が設定されます。 ID 列は通常、PRIMARY KEY 制約と組み合わせて使用し、テーブルの一意な行識別子 (ROWID) の役割を果たします。 IDENTITY プロパティは、**tinyint**、**smallint**、**int**、**decimal(p,0)** 、**numeric(p,0)** のいずれかの列に割り当てることができます。 ID 列は 1 つのテーブルにつき 1 つだけ作成できます。 バインドされた既定値および DEFAULT 制約を ID 列と組み合わせて使用することはできません。 seed と increment は、両方を指定するか、どちらも指定しないでください。 どちらも指定しないときの既定値は (1,1) です。  
+ 新しい列が ID 列であることを指定します。 テーブルに行が新しく追加されると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では列に一意な増分値が設定されます。 ID 列は通常、PRIMARY KEY 制約と組み合わせて使用し、テーブルの一意な行識別子 (ROWID) の役割を果たします。 IDENTITY プロパティは、**tinyint**、**smallint**、**int**、**decimal(p,0)** 、**numeric(p,0)** のいずれかの列に割り当てることができます。 ID 列は 1 つのテーブルにつき 1 つだけ作成できます。 バインドされた既定値および DEFAULT 制約を ID 列と共に使用することはできません。 seed と increment は、両方を指定するか、どちらも指定しないでください。 どちらも指定しないときの既定値は (1,1) です。  
   
  *seed*  
  テーブルに読み込まれる最初の行に使用される値です。  
@@ -158,7 +158,7 @@ CURSOR
  *logical_expression*  
  TRUE または FALSE を返す論理式です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  変数は、バッチやプロシージャの中で、WHILE、LOOP、または IF...ELSE ブロックのカウンターとして使用される場合があります。  
   
  変数は式の内部だけで使用できます。オブジェクト名やキーワードの代わりに使用することはできません。 動的 SQL ステートメントを作成するには、EXECUTE を使用します。  
@@ -191,7 +191,7 @@ CURSOR
   
 -   カーソルへのポインターとして扱われます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-using-declare"></a>A. DECLARE を使用する  
  次の例では、`@find` という名前のローカル変数を使って、`Man` で始まるすべての姓の連絡先情報を取得します。  
@@ -278,7 +278,7 @@ DECLARE @LocationTVP
 AS LocationTableType;  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-using-declare"></a>E. DECLARE を使用する  
  次の例では、`@find` という名前のローカル変数を使って、`Walt` で始まるすべての姓の連絡先情報を取得します。  

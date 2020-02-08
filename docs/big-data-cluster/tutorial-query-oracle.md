@@ -10,10 +10,10 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: b880e3758481e5b061221bd2753b5a26f01ed856
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "71708367"
 ---
 # <a name="tutorial-query-oracle-from-a-sql-server-big-data-cluster"></a>チュートリアル:SQL Server ビッグ データ クラスターから Oracle にクエリを実行する
@@ -22,7 +22,7 @@ ms.locfileid: "71708367"
 
 このチュートリアルでは、SQL Server 2019 ビッグ データ クラスターから Oracle データにクエリを実行する方法について説明します。 このチュートリアルを実行するには、Oracle サーバーにアクセスできる必要があります。 アクセスできない場合は、このチュートリアルで、SQL Server ビッグ データ クラスター内の外部データ ソースに対してデータ仮想化がどのように機能するかを理解できます。
 
-このチュートリアルでは、次の方法を学習します。
+このチュートリアルでは、以下の内容を学習します。
 
 > [!div class="checklist"]
 > * 外部 Oracle データベースのデータ用の外部テーブルを作成する。
@@ -37,7 +37,7 @@ ms.locfileid: "71708367"
    - **kubectl**
    - **Azure Data Studio**
    - **SQL Server 2019 の拡張機能**
-- [ビッグ データ クラスターへのサンプル データの読み込み](tutorial-load-sample-data.md)
+- [ビッグ データ クラスターにサンプル データを読み込む](tutorial-load-sample-data.md)
 
 ## <a name="create-an-oracle-table"></a>Oracle テーブルを作成する
 
@@ -132,7 +132,7 @@ DROP EXTERNAL DATA SOURCE [OracleSalesSrvr] ;
 DROP DATABASE SCOPED CREDENTIAL [OracleCredential];
 ```
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 データ プールにデータを取り込む方法を学習します:
 > [!div class="nextstepaction"]

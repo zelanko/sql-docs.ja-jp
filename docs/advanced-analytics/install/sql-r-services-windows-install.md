@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: =sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 6fcb4245d4efff00002dea9b490312792e0d83d6
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73706993"
 ---
 # <a name="install-sql-server-2016-r-services"></a>SQL Server 2016 R Services のインストール
@@ -197,7 +197,7 @@ R 機能の統合のみの場合、**MKL_CBWR** 環境変数を設定して、In
 
 <a name="bkmk_FollowUp"></a> 
 
-## <a name="additional-configuration"></a>その他の構成
+## <a name="additional-configuration"></a>追加構成
 
 外部スクリプトの検証手順が成功した場合は、SQL Server Management Studio、Visual Studio Code、または T-SQL ステートメントをサーバーに送信できる他の任意のクライアントから、Python コマンドを実行できます。
 
@@ -251,13 +251,13 @@ SQL Server 用に作成する R ソリューションでは、基本 R 関数、
 
 SQL Server で使用するパッケージは、インスタンスによって使用される既定のライブラリにインストールする必要があります。 コンピューター上に R の別のインストールがある場合、またはパッケージをユーザー ライブラリにインストールした場合は、これらのパッケージを T-SQL から使用できません。
 
-R パッケージのインストールと管理のプロセスは、SQL Server 2016 と SQL Server 2017 で異なります。 SQL Server 2016 では、データベース管理者は、ユーザーが必要とする R パッケージをインストールする必要があります。 SQL Server 2017 では、ユーザー グループを設定してデータベース レベルでパッケージを共有するか、ユーザーが独自のパッケージをインストールできるようにデータベース ロールを構成します。 詳細については、[新しい R パッケージのインストール](../r/install-additional-r-packages-on-sql-server.md)に関するページを参照してください。
+R パッケージのインストールと管理のプロセスは、SQL Server 2016 と SQL Server 2017 で異なります。 SQL Server 2016 では、データベース管理者は、ユーザーが必要とする R パッケージをインストールする必要があります。 SQL Server 2017 では、ユーザー グループを設定してデータベース レベルでパッケージを共有するか、ユーザーが独自のパッケージをインストールできるようにデータベース ロールを構成します。 詳細については、「[新しい R パッケージのインストール](../r/install-additional-r-packages-on-sql-server.md)」に関するページを参照してください。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
-R 開発者はいくつかの簡単な例を試して、SQL Server での R の動作方法の基本を確認できます。 次の手順については、以下のリンクをご覧ください。
+R 開発者はいくつかの簡単な例を試して、SQL Server での R の動作方法の基本を確認できます。 次の手順については、以下のリンクを参照してください。
 
-+ [チュートリアル: T-SQL での R の実行](../tutorials/quickstart-r-create-script.md)
-+ [チュートリアル: R 開発者向けのデータベース内分析](../tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [チュートリアル:T-SQL での R の実行](../tutorials/quickstart-r-create-script.md)
++ [チュートリアル:R 開発者向けのデータベース内分析](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 
 実際のシナリオに基づいた機械学習の例については、[機械学習のチュートリアル](../tutorials/machine-learning-services-tutorials.md)を参照してください。

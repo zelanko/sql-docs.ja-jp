@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 30155a37f57391edeee916cd2b6629d63a1dcaaa
-ms.sourcegitcommit: 7906af9d11c79b14fdd38babd73a0c8dc6f6de9b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75688241"
 ---
 # <a name="sql-server-installation-guide"></a>SQL Server のインストール ガイド
@@ -70,7 +70,7 @@ ms.locfileid: "75688241"
 
 ## <a name="sql-server-installation"></a>SQL Server のインストール
  
-|[アーティクル]|[説明]|  
+|[アーティクル]|説明|  
 |-----------|-----------------|  
 |[インストール ウィザードからの SQL Server&2016; のインストール (セットアップ)](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)|setup.exe セットアップ メディアから起動するインストール ウィザード GUI を使用して SQL Server をインストールします。 |  
 |[コマンド プロンプト](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)|コマンド プロンプトから SQL Server インストールを実行するためのサンプルの構文とインストール パラメーター。 | 
@@ -89,7 +89,7 @@ ms.locfileid: "75688241"
   
 ## <a name="individual-component-installation"></a>個々のコンポーネント インストール 
   
-|[アーティクル]|[説明]|  
+|[アーティクル]|説明|  
 |-----------|-----------------|  
 |[SQL Server データベース エンジン](../../database-engine/install-windows/install-sql-server-database-engine.md)|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] をインストールし、構成します。|  
 |[SQL Server レプリケーション](../../database-engine/install-windows/install-sql-server-replication.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レプリケーションをインストールし、構成します。|  
@@ -100,7 +100,7 @@ ms.locfileid: "75688241"
 
 ## <a name="sql-server-configuration"></a>SQL Server の構成 
   
-|[アーティクル]|[説明]|  
+|[アーティクル]|説明|  
 |-----------|-----------------|  
 |[Windows ファイアウォールの構成 (SQL Server)](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|ファイアウォール構成の概要と、SQL Server へのアクセスを許可するように Windows ファイアウォールを構成する方法。|  
 |[Windows ファイアウォールの構成 (SSAS)](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] または [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint へのアクセスを許可するためにポートとファイアウォールの両方の設定を構成します。|  

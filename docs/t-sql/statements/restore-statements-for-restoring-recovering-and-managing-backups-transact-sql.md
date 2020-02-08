@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: a316cb512f3f5e23a7413ab5f5eaa4b15e3d39a7
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75258757"
 ---
 # <a name="restore-statements-for-restoring-recovering-and-managing-backups-transact-sql"></a>バックアップの復元、復旧、管理用の RESTORE ステートメント (Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "75258757"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|ステートメント|[説明]|  
+|ステートメント|説明|  
 |---------------|-----------------|  
 |[RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)|RESTORE DATABASE および RESTORE LOG Transact-SQL ステートメントについて説明します。これらのステートメントは、BACKUP コマンドで作成されたバックアップからデータベースを復元および復旧するときに使用します。 RESTORE DATABASE は、すべての復旧モデルのデータベースに使用できます。 RESTORE LOG は、完全復旧モデルと一括ログ復旧モデルでのみ使用します。 RESTORE DATABASE は、データベースをデータベース スナップショットに戻す場合にも使用できます。|  
 |[RESTORE の引数 &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)|RESTORE ステートメントと、関連する一連の補助ステートメントの「構文」セクションで説明されている次の引数について説明します: RESTORE FILELISTONLY、RESTORE HEADERONLY、RESTORE LABELONLY、RESTORE REWINDONLY、RESTORE VERIFYONLY。 ほとんどの引数は、これら 6 つのステートメントでのみ使用できます。 各引数のサポート状況については、引数の説明で示します。|  

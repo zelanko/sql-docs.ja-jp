@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 00175ce9c9c9c0f6f83b7661b685063f97ef8c44
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67950358"
 ---
 # <a name="case-transact-sql"></a>CASE (Transact-SQL)
@@ -111,7 +111,7 @@ END
   
 -   *Boolean_expression* の評価がいずれも TRUE でなかった場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)] は、ELSE 句が指定されていれば *else_result_expression* を、ELSE 句が指定されていない場合は NULL を返します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、Case 式に入れ子にできるのは 10 レベルまでです。  
   
  CASE 式を使用して、Transact-SQL ステートメント、ステートメント ブロック、ユーザー定義関数、およびストアド プロシージャの実行フローを制御することはできません。 フロー制御言語の一覧については、「[フロー制御言語 &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)」を参照してください。  
@@ -135,7 +135,7 @@ FROM Data ;
   
  WHEN 条件が上から順に評価されるという前提は、スカラー式 (スカラー値を返す非相関サブクエリを含む) では問題ありませんが、集計式では成立しないので注意が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-using-a-select-statement-with-a-simple-case-expression"></a>A. SELECT ステートメントを単純 CASE 式と共に使用する  
  `SELECT` ステートメント内では、単純 `CASE` 式は等しいかどうかのチェックだけを実行できます。これ以外の比較操作は実行できません。 `CASE` 式を使用して、製品ラインのカテゴリの表示をわかりやすいものに変更する例を次に示します。  
@@ -312,7 +312,7 @@ ORDER BY MaximumRate DESC;
   
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="g-using-a-select-statement-with-a-case-expression"></a>G. SELECT ステートメントを単純 CASE 式と共に使用する  
  SELECT ステートメント内では、CASE 式は比較値に基づいて結果セット内で値を置換できます。 CASE 式を使用して、製品ラインのカテゴリの表示をわかりやすいものに変更する例を次に示します。 値が存在しない場合は、テキスト "Not for sale" が表示されます。  

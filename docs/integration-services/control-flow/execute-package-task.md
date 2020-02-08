@@ -20,10 +20,10 @@ ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: dcd1e0912f1bf0adcbae79da1f1d34f92233f467
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294187"
 ---
 # <a name="execute-package-task"></a>パッケージ実行タスク
@@ -31,7 +31,7 @@ ms.locfileid: "71294187"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  パッケージ実行タスクは、パッケージのワークフローの一部として他のパッケージを実行できるようにすることで、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のエンタープライズ用機能を拡張します。  
+  パッケージ実行タスクは、パッケージのワークフローの一部として他のパッケージを実行できるようにすることで、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のエンタープライズ用機能を拡張します。  
   
  パッケージ実行タスクは、次の目的で使用されます。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "71294187"
   
  次のいずれかの方法を使用して、子パッケージに値を渡すことができます。  
   
--   **パッケージ構成**  
+-   **[パッケージ構成]**  
   
      [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、親パッケージ変数という種類の構成を使用して、親パッケージの値を子パッケージに渡すことができます。 この設定は子パッケージ上で構築され、親パッケージ内の変数を使用します。 構成は、子パッケージ内の変数、または子パッケージ内のオブジェクトのプロパティにマップされます。 また、スクリプト タスクまたはスクリプト コンポーネントで使用されるスクリプト内でも変数を使用できます。  
   
@@ -144,13 +144,13 @@ ms.locfileid: "71294187"
 2.  SSIS デザイナーでタスクを右クリックし、 **[編集]** をクリックします。  
   
 ###  <a name="general"></a> [全般] ページのオプションを設定する  
- **[名前]**  
+ **Name**  
  パッケージ実行タスクの一意な名前を指定します。 この名前は、タスク アイコンのラベルとして使用されます。  
   
 > [!NOTE]  
 >  タスク名はパッケージ内で一意である必要があります。  
   
- **[説明]**  
+ **説明**  
  パッケージ実行タスクの説明を入力します。  
   
 ###  <a name="package"></a> [パッケージ] ページのオプションを設定する  
@@ -169,10 +169,10 @@ ms.locfileid: "71294187"
 #### <a name="referencetype-dynamic-options"></a>[ReferenceType] の動的オプション  
   
 ##### <a name="referencetype--external-reference"></a>ReferenceType = 外部参照  
- **場所**  
+ **地域**  
  子パッケージの場所を選択します。 このプロパティのオプションを次の表に示します。  
   
-|ReplTest1|[説明]|  
+|Value|説明|  
 |-----------|-----------------|  
 |**SQL Server**|場所を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスに設定します。|  
 |**ファイル システム**|場所をファイル システムに設定します。|  
@@ -218,10 +218,10 @@ ms.locfileid: "71294187"
  **バインドするパラメーターまたは変数**  
  子パッケージに渡す値を含むパラメーターまたは変数を選択します。  
   
- **[追加]**  
+ **追加**  
  パラメーターまたは変数を子パッケージのパラメーターにマップする場合にクリックします。  
   
- **[削除]**  
+ **Remove**  
  パラメーターまたは変数と子パッケージのパラメーターの間のマッピングを削除する場合にクリックします。  
   
   

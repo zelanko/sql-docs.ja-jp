@@ -10,10 +10,10 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 4acb5c2306064da29d3537fc881dbfc3d312ad2f
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73844242"
 ---
 # <a name="tutorial-run-a-sample-notebook-on-a-sql-server-big-data-cluster"></a>チュートリアル:SQL Server ビッグ データ クラスターでサンプルのノートブックを実行する
@@ -31,7 +31,7 @@ ms.locfileid: "73844242"
    - **kubectl**
    - **Azure Data Studio**
    - **SQL Server 2019 の拡張機能**
-- [ビッグ データ クラスターへのサンプル データの読み込み](tutorial-load-sample-data.md)
+- [ビッグ データ クラスターにサンプル データを読み込む](tutorial-load-sample-data.md)
 
 ## <a name="download-the-sample-notebook-file"></a>サンプルのノートブック ファイルをダウンロードする
 
@@ -72,7 +72,7 @@ ms.locfileid: "73844242"
 - [SQL Server でノートブックを使用する方法](notebooks-guidance.md)
 - [Azure Data Studio でノートブックを管理する方法](notebooks-how-to-manage.md)
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 ノートブックについてさらに学習します:
 > [!div class="nextstepaction"]

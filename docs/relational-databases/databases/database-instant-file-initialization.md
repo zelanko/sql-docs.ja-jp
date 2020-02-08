@@ -18,10 +18,10 @@ ms.assetid: 1ad468f5-4f75-480b-aac6-0b01b048bd67
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 87257431940b527fda01bc1704a519b37b6d4e05
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982448"
 ---
 # <a name="database-file-initialization"></a>データベース ファイルの初期化
@@ -69,7 +69,7 @@ ms.locfileid: "73982448"
 > [!NOTE]
 > [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP4 以降、および [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 以降では、[sys.dm_server_services](../../relational-databases/system-dynamic-management-views/sys-dm-server-services-transact-sql.md) DMV の *instant_file_initialization_enabled* 列を利用し、ファイルの瞬時初期化が有効になっているかどうかを判断できます。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス開始アカウントに *SE_MANAGE_VOLUME_NAME* が与えられる場合、開始時に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログに次のような情報メッセージが記録されます。 
 
 `Database Instant File Initialization: enabled. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.`

@@ -17,10 +17,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
 ms.openlocfilehash: ff3d3db1ab4fc3d02e8710cf482225523285c0a0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68031525"
 ---
 # <a name="at-time-zone-transact-sql"></a>AT TIME ZONE (Transact-SQL)
@@ -51,7 +51,7 @@ inputdate AT TIME ZONE timezone
 ## <a name="return-value"></a>戻り値  
  変換先のタイム ゾーンの **datetimeoffset** 値。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **AT TIME ZONE** は、データ型 **smalldatetime**、**datetime**、**datetime2** の入力値が DST 変更の影響を受ける時間間隔に分類されるとき、特別な入力値変換ルールを適用します。  
   
 -   時計が進んでいると、現地時刻には時計調整の継続時間と等しい隔たりが存在します。 この継続時間は通常は 1 時間ですが、タイム ゾーンによっては 30 分または 45 分の場合もあります。 DST 変更の "*後*" で、この隔たり内にある時点はオフセットで変換されます。  
@@ -119,7 +119,7 @@ inputdate AT TIME ZONE timezone
 
 一部の情報 (タイム ゾーン ルールなど) は [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] の外で保守管理され、時折変更されるため、**AT TIME ZONE** 関数は非決定的として分類されます。 
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-add-target-time-zone-offset-to-datetime-without-offset-information"></a>A. オフセット情報なしで、変換先のタイム ゾーンのオフセットを datetime に追加する  
  元の **datetime** 値が同じタイム ゾーンで与えられることがわかっているとき、タイム ゾーン ルールに基づいてオフセットを追加するには、**AT TIME ZONE** を使用します。  

@@ -10,10 +10,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||>=sql-server-linux-2017||=sql-server-previousversions||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: f175e9639b07c945b92b6fd715fa8b34ebea60c3
-ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73049905"
 ---
 # <a name="versioning-system-for-sql-documentation"></a>SQL ドキュメントのバージョン管理システム
@@ -60,7 +60,7 @@ Web アドレスが `https://docs.microsoft.com/sql/` で始まっている各�
 
 1990 年代から 2000 年代にかけては、Microsoft SQL Server には 1 つの製品しかありませんでした。 SQL Server 2008 の _Developer_ エディションや _Enterprise_ エディションなど、SQL Server の各バージョンにはさまざまな "_エディション_" がありました。 エディションでは、わずかに異なる機能セットが示されていましたが、コア製品は同じでした。 新しい SQL Server のリリースにも、さまざまなエディションが含まれている場合があります。
 
-### <a name="products"></a>Products
+### <a name="products"></a>製品
 
 最近のクラウド コンピューティングと Microsoft Azure の登場により、Microsoft は Azure SQL Database 製品をリリースしました。 従来の SQL Server オンプレミス製品と Azure SQL Database 製品では多くのコードが共有されていますが、これらは 2 つの完全に独立した製品です。
 
@@ -113,9 +113,9 @@ Web アドレスが `https://docs.microsoft.com/sql/` で始まっている記�
 
 次の記事は、SQL Server 2017 で新しく追加されました。 記事では、バージョン 2017 の SQL Server に追加された機能について説明されています。 それらの新機能のほとんどまたはすべては、バージョン 2019 にも含まれます。 記事の属性は次のとおりです。
 
-| 属性 | [値] |
+| Attribute | Value |
 | :-------- | :---- |
-| [タイトル] | SQL Server 2017 の新機能 |
+| タイトル | SQL Server 2017 の新機能 |
 | モニカー範囲 | `>= sql-server-2017 || = sqlallproducts-allversions` |
 | `https` アドレス | `https://docs.microsoft.com/sql/sql-server/what-s-new-in-sql-server-2017` |
 | &nbsp; | &nbsp; |

@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 725dbc3306f9ad9616b5cbeca2d96249dca1c4a8
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74165784"
 ---
 # <a name="getting-started-with-system-versioned-temporal-tables"></a>システム バージョン管理されたテンポラル テーブルの概要
@@ -26,7 +26,7 @@ ms.locfileid: "74165784"
 
 また、テンポラルには、通常の DML やクエリ実行のほかに、拡張 Transact-SQL 構文でデータ履歴から情報を簡単かつ便利に取得する方法も用意されています。 すべてのシステム バージョン管理されたテーブルに履歴テーブルが割り当てられていますが、これはユーザーに対して完全に透過的です。ただし、ユーザーが追加のインデックスを作成するか、別のストレージ オプションを選択して、ワークロードのパフォーマンスまたはストレージの使用量を最適化する必要がある場合は除きます。
 
-次の図は、システム バージョン管理されたテンポラル テーブルの一般的なワークフローを示しています。![テンポラルの概要](../../relational-databases/tables/media/getting-started-with-temporal.png "|::ref1::|")
+次の図は、システム バージョン管理されたテンポラル テーブルの一般的なワークフローを示しています。![テンポラルの概要](../../relational-databases/tables/media/getting-started-with-temporal.png "テンポラルの概要")
 
 このトピックには、次の 5 つのセクションがあります。
 

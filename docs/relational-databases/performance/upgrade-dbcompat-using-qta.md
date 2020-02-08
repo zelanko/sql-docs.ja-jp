@@ -19,10 +19,10 @@ author: pmasl
 ms.author: pelopes
 manager: amitban
 ms.openlocfilehash: 958445b0f07dc9624e7d284f408210c386ecfa9e
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74165678"
 ---
 # <a name="upgrading-databases-by-using-the-query-tuning-assistant"></a>クエリ調整アシスタントを使用したデータベースのアップグレード
@@ -89,7 +89,7 @@ QTA はセッション ベースの機能であり、セッションが初めて
         -  QTA ワークフローが完了した後、ユーザー データベースで使用する必要がある、目的のターゲット データベース互換レベルを設定します。
         完了したら、 **[次へ]** をクリックします。
     
-       ![新しいデータベース アップグレード セッションの [セットアップ] ウィンドウ](../../relational-databases/performance/media/qta-new-session-setup.png "|::ref3::|")  
+       ![新しいデータベース アップグレード セッションの [セットアップ] ウィンドウ](../../relational-databases/performance/media/qta-new-session-setup.png "新しいデータベース アップグレードの [セットアップ] ウィンドウ")  
   
     2.  **[設定]** ウィンドウの 2 つの列には、ターゲットとなるデータベースのクエリ ストアの **[現在]** の状態と、 **[推奨]** 設定が表示されます。 
         -  既定では [推奨] 設定が選択されますが、[現在] 列のラジオ ボタンをクリックすると、現在の設定が受け入れられます。また、現在のクエリ ストア構成を微調整することもできます。 
@@ -153,7 +153,7 @@ QTA はセッション ベースの機能であり、セッションが初めて
 
         次のページでは、データベース互換レベルが正常にアップグレードされたことを確認します。
 
-        ![QTA のステップ 2 サブステップ 2](../../relational-databases/performance/media/qta-step2-substep2.png "|::ref9::|")
+        ![QTA のステップ 2 サブステップ 2](../../relational-databases/performance/media/qta-step2-substep2.png "QTA のステップ 2 サブステップ 2")
 
     3.  **[観測されたデータの収集]** では、クエリストアで、最適化の機会を見つけるために使用される比較ベースラインを収集できるように、ユーザーに代表的なワークロード サイクルの再実行が要求されます。 ワークロードが実行されたら、 **[更新]** ボタンを使用して、機能低下したクエリ (検出された場合) のリストを更新し続けます。 **[表示するクエリ]** の値を変更し、表示されるクエリの数を制限します。 リストの順序は、 **[メトリック]** (期間または CpuTime) と **[集計]** (平均が既定値) に影響を受けます。 **表示するクエリ**の数も選択します。 そのワークロードが完了したら、 **[Done with workload run]\(ワークロードの実行完了\)** をオンにし、 **[次へ]** をクリックします。
 

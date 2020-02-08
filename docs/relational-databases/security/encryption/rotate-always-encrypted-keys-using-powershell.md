@@ -12,10 +12,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b5b5246dabbe205554b45cee91be93c4485a60f6
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73594122"
 ---
 # <a name="rotate-always-encrypted-keys-using-powershell"></a>PowerShell を使用して Always Encrypted キーをローテーションする
@@ -105,7 +105,7 @@ DBA は、交換する列マスター キーと、現在の列マスター キ�
 |手順 2. サーバーとデータベースに接続します。 | [データベースに接続する](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | いいえ | はい
 |手順 3. 古い列マスター キーに関するメタデータを取得します。| [Get-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/get-sqlcolumnmasterkey) | いいえ | はい
 |手順 4. 古い列マスター キーで保護されている列マスター キーに関するメタデータ (暗号化値など) を取得します。 | [Get-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/get-sqlcolumnencryptionkey) | いいえ | はい
-|手順 5. 列マスター キーの場所 (プロバイダー名と列マスター キーのキー パス) と、前の列マスター キーで保護されている対応する列暗号化キーの暗号化値を共有します。| 後半の例を参照してください。 | いいえ | いいえ
+|手順 5. 列マスター キーの場所 (プロバイダー名と列マスター キーのキー パス) と、前の列マスター キーで保護されている対応する列暗号化キーの暗号化値を共有します。| 次の例を参照してください。 | いいえ | いいえ
 
 ### <a name="part-2-security-administrator"></a>パート 2: セキュリティ管理者
 
@@ -113,14 +113,14 @@ DBA は、交換する列マスター キーと、現在の列マスター キ�
 
 | タスク | [アーティクル] | プレーンテキストのキー/キーストアへのアクセス| データベースへのアクセス
 |:---|:---|:---|:---
-|手順 1. 古い列マスター キーの場所と、古い列マスター キーで保護されている対応する列暗号化キーの暗号化値を、DBA から取得します。|なし<br>後半の例を参照してください。|いいえ| いいえ
+|手順 1. 古い列マスター キーの場所と、古い列マスター キーで保護されている対応する列暗号化キーの暗号化値を、DBA から取得します。|該当なし<br>次の例を参照してください。|いいえ| いいえ
 |手順 2. キー ストアで新しい列マスター キーを作成します。<br><br>**注:** SqlServer モジュールでは、この手順はサポートされていません。 コマンドラインからこのタスクを実行するには、キー ストアの種類に固有のツールを使用する必要があります。|[Always Encrypted の列マスター キーを作成して保存する](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)| はい | いいえ
 |手順 3. PowerShell 環境を起動し、Sql Server のモジュールをインポートします。 | [SqlServer モジュールのインポート](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | いいえ | いいえ
 |手順 4. **古い** 列マスター キーの場所に関する情報を含む SqlColumnMasterKeySettings オブジェクトを作成します。 SqlColumnMasterKeySettings は、メモリ (PowerShell) に存在するオブジェクトです。 |New-SqlColumnMasterKeySettings| いいえ | いいえ
 |手順 5. **新しい** 列マスター キーの場所に関する情報を含む SqlColumnMasterKeySettings オブジェクトを作成します。 SqlColumnMasterKeySettings は、メモリ (PowerShell) に存在するオブジェクトです。 作成するには、キー ストアに固有のコマンドレットを使用する必要があります。 | [New-SqlAzureKeyVaultColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlazurekeyvaultcolumnmasterkeysettings)<br><br>[New-SqlCertificateStoreColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcertificatestorecolumnmasterkeysettings)<br><br>[New-SqlCngColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcngcolumnmasterkeysettings)<br><br>[New-SqlCspColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcspcolumnmasterkeysettings)| いいえ | いいえ
 |手順 6. 古い (現在の) 列マスター キーまたは新しい列マスター キーが Azure Key Vault に格納されている場合は、Azure に対して認証します。 | [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext) | はい | いいえ
 |手順 7. 現在は古い列マスター キーで保護されている各列暗号化キー値を、新しい列マスター キーを使用して再暗号化します。 | [New-SqlColumnEncryptionKeyEncryptedValue](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkeyencryptedvalue)<br><br>**注:** このコマンドレットを呼び出すときは、SqlColumnMasterKeySettings オブジェクトと、列暗号化キー値を新旧両方の列マスター キーに渡して、再暗号化します。|はい|いいえ
-|手順 8. 新しい列マスター キーの場所 (プロバイダー名と列マスター キーのキー パス) と、列暗号化キーの新しい暗号化値セットを DBA と共有します。| 後半の例を参照してください。 | いいえ | いいえ
+|手順 8. 新しい列マスター キーの場所 (プロバイダー名と列マスター キーのキー パス) と、列暗号化キーの新しい暗号化値セットを DBA と共有します。| 次の例を参照してください。 | いいえ | いいえ
 
 > [!NOTE]
 > 回転の後、古い列マスター キーは完全に削除しないを強くお勧めします。 そこで、古い列マスター キーを現在のキー ストアに保存するか、セキュリティで保護された別の場所にアーカイブします。 バックアップ ファイルからデータベースを復元して、新しい列マスター キーを構成する *前* の時点まで戻る場合は、古いキーでデータにアクセスする必要があります。
@@ -131,7 +131,7 @@ DBA は、新しい列マスター キーのメタデータを作成し、影響
 
 | タスク | [アーティクル] | プレーンテキストのキー/キーストアへのアクセス| データベースへのアクセス
 |:---|:---|:---|:---
-|手順 1. 新しい列マスター キーの場所と、古い列マスター キーで保護されている対応する列暗号化キーの新しい暗号化値セットを、セキュリティ管理者から取得します。| 後半の例を参照してください。 | いいえ | いいえ
+|手順 1. 新しい列マスター キーの場所と、古い列マスター キーで保護されている対応する列暗号化キーの新しい暗号化値セットを、セキュリティ管理者から取得します。| 次の例を参照してください。 | いいえ | いいえ
 |手順 2. PowerShell 環境を起動し、Sql Server のモジュールをインポートします。 | [SqlServer モジュールのインポート](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | いいえ | いいえ
 |手順 3. サーバーとデータベースに接続します。 | [データベースに接続する](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | いいえ | はい
 |手順 4. 新しい列マスター キーの場所に関する情報を含む SqlColumnMasterKeySettings オブジェクトを作成します。 SqlColumnMasterKeySettings は、メモリ (PowerShell) に存在するオブジェクトです。 |New-SqlColumnMasterKeySettings| いいえ| いいえ
@@ -344,12 +344,12 @@ Set-SqlColumnEncryption -ColumnEncryptionSettings $ces -InputObject $database -U
 Remove-SqlColumnEncryptionKey -Name $oldCekName -InputObject $database
 ```
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>次の手順
 - [SQL Server Management Studio で Always Encrypted を使用した列のクエリを実行する](always-encrypted-query-columns-ssms.md)
 - [Always Encrypted を使用したアプリケーションの開発](always-encrypted-client-development.md)
   
 ## <a name="see-also"></a>参照
-- [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [常に暗号化](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Always Encrypted のキー管理の概要](overview-of-key-management-for-always-encrypted.md) 
 - [PowerShell を使用した Always Encrypted の構成](configure-always-encrypted-using-powershell.md)
 - [SQL Server Management Studio を使用して Always Encrypted キーを交換する](rotate-always-encrypted-keys-using-ssms.md)

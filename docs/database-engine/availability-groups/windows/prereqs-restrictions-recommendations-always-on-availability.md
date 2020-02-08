@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f918fea905451aed787416aff0e2c22cae9e2bf5
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 31a443e7a3a1e7dedf9efb0742cfad5862804945
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75258082"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76831929"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>Always On 可用性グループの前提条件、制限事項、推奨事項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -157,17 +157,14 @@ ms.locfileid: "75258082"
     -   特定のスレッドが一定期間アイドル状態になると、そのスレッドは解放され、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の汎用スレッド プールに戻されます。 通常、非アクティブ スレッドは、非アクティブな状態のまま最大 15 秒経過すると解放されます。 ただし、最後の利用状況によっては、アイドル状態のスレッドが保持される時間が延長される場合があります。  
 
     -   SQL Server インスタンスは、セカンダリ レプリカの並列再実行に最大で 100 個のスレッドを使用します。 各データベースは、最大で、CPU コアの合計数の半分を使用しますが、データベースあたりのスレッド数は 16 個以下となります。 単一のインスタンスで必要なスレッド数の合計が 100 を超えている場合、SQL Server は、残りの各データベースには単一の再実行スレッドを使用します。 シリアル再実行スレッドは、非アクティブな状態のまま最大 15 秒経過すると解放されます。 
-    
-    > [!NOTE]
-    > 単一のスレッドを使用するデータベースは、各データベース ID の昇順に基づいて選択されます。 そのため、使用可能なワーカー スレッドよりも多くの可用性グループ データベースをホストする SQL Server インスタンスの場合は、データベースの作成順序を検討する必要があります。 たとえば、CPU のコア数が 32 以上のシステムでは、1 つまたは複数の可用性グループの (データベース ID 順に並べた) 最初の 6 つのデータベースは並列再実行モードを使用し、残りのデータベースは単一再実行モードを使用します。
-  
+     
 -   さらに、可用性グループでは非共有スレッドを次のように使用します。  
   
     -   各プライマリ レプリカでは、プライマリ データベースごとにログ キャプチャ スレッドを 1 つ使用します。 また、セカンダリ データベースごとにログ送信スレッドを 1 つ使用します。 ログ送信スレッドは、非アクティブな状態のまま最大 15 秒経過すると解放されます。    
   
     -   セカンダリ レプリカでのバックアップでは、バックアップ操作の間、プライマリ レプリカにスレッドが保持されます。  
   
- 詳細については、「[Always On - HADRON 学習シリーズ: HADRON 対応データベースでのワーカー プールの使用](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)」 (CSS [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エンジニア ブログ) を参照してください。  
+ 詳細については、「[Always On - HADRON 学習シリーズ: HADRON 対応データベースでのワーカー プールの使用](https://blogs.msdn.microsoft.com/psssql/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases/)」 (CSS [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エンジニア ブログ) を参照してください。  
   
 ###  <a name="PermissionsSI"></a> 権限 (サーバー インスタンス)  
   
@@ -186,7 +183,7 @@ ms.locfileid: "75258082"
   
 ###  <a name="RelatedContentSI"></a> 関連コンテンツ (サーバー インスタンス)  
   
--   [Always On - HADRON 学習シリーズ:HADRON 対応データベースでのワーカー プールの使用](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+-   [Always On - HADRON 学習シリーズ:HADRON 対応データベースでのワーカー プールの使用](https://blogs.msdn.microsoft.com/psssql/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases/)  
   
 ##  <a name="NetworkConnect"></a> ネットワーク接続の推奨事項  
  WSFC ノード間の通信と、可用性レプリカ間の通信には、同じネットワーク リンクを使用することを強くお勧めします。  別々のネットワーク リンクを使用すると、一部のリンクにエラーが発生した場合に (断続的なエラーであっても)、予期しない動作が発生する可能性があります。  
@@ -279,7 +276,7 @@ ms.locfileid: "75258082"
 ###  <a name="RequirementsAG"></a> 前提条件 (可用性グループ)  
  可用性グループの構成を作成したり再構成したりする場合は、次の要件を満たす必要があります。  
   
-||前提条件|[説明]|  
+||前提条件|説明|  
 |-|------------------|-----------------|  
 |![Checkbox](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンス (FCI) を使用して可用性レプリカをホストする予定がある場合は、FCI の制限を確実に理解し、FCI の要件が満たされていることを確認してください。|[SQL Server のフェールオーバー クラスター インスタンス (FCI) を使用して可用性レプリカをホストするための前提条件と制限](#FciArLimitations) (このトピックの前半)|  
   
@@ -386,7 +383,7 @@ ms.locfileid: "75258082"
   
 -   [SQL Server Always On チーム ブログ:SQL Server Always On チームのオフィシャル ブログ](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
--   [Always On - HADRON 学習シリーズ:HADRON 対応データベースでのワーカー プールの使用](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+-   [Always On - HADRON 学習シリーズ:HADRON 対応データベースでのワーカー プールの使用](https://blogs.msdn.microsoft.com/psssql/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases/)  
   
 ## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

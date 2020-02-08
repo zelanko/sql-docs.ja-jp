@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 ms.openlocfilehash: a2d6929277b7d024e45daaefd5cb41dccd495c63
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68082164"
 ---
 # <a name="get-started-with-integration-services-ssis-scale-out-on-a-single-computer"></a>1 台のコンピューターでの Integration Services (SSIS) Scale Out の概要
@@ -45,7 +45,7 @@ SQL Server インストール ウィザードの **[機能の選択]** ページ
 
 SQL Server のインストール ウィザードを完了します。
 
-## <a name="2-install-sql-server-management-studio"></a>2.SQL Server Management Studio のインストール
+## <a name="2-install-sql-server-management-studio"></a>2.SQL Server Management Studio をインストールします。
 
 [SQL Server Management Studio (SSMS) ダウンロードしてインストールします](../../ssms/download-sql-server-management-studio-ssms.md)。
 
@@ -67,5 +67,5 @@ Scale Out Worker を有効にするには、 **[ワーカー マネージャー]
 ## <a name="5-run-packages-in-scale-out"></a>5.Scale Out でのパッケージの実行
 これで、Scale Out で SSIS パッケージを実行する準備が整いました。詳細については、「[Integration Services (SSIS) Scale Out でパッケージを実行する](run-packages-in-integration-services-ssis-scale-out.md)」を参照してください。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 -   [Scale Out Manager による Scale Out Worker の追加](add-scale-out-worker.md)

@@ -11,10 +11,10 @@ ms.assetid: 9a77dd32-d8c2-4961-ad37-2a971f9d6043
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2a412235a3eaeb18f32e820460b82ab238c7c0e8
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296116"
 ---
 # <a name="lesson-1-2-add-and-configure-a-flat-file-connection-manager"></a>レッスン 1-2:フラット ファイル接続マネージャーの追加と構成
@@ -83,10 +83,10 @@ ms.locfileid: "71296116"
   
     |フラット ファイルの列|推測されたデータ型|変換先列|変換先の型|  
     |--------------------|------------------|----------------------|--------------------|  
-    |AverageRate|float [DT_R4]|FactCurrencyRate.AverageRate|FLOAT|  
+    |AverageRate|float [DT_R4]|FactCurrencyRate.AverageRate|float|  
     |CurrencyID|string [DT_STR]|DimCurrency,CurrencyAlternateKey|nchar(3)|  
     |CurrencyDate|date [DT_DATE]|DimDate.FullDateAlternateKey|date|  
-    |EndOfDayRate|float [DT_R4]|FactCurrencyRate.EndOfDayRate|FLOAT|  
+    |EndOfDayRate|float [DT_R4]|FactCurrencyRate.EndOfDayRate|float|  
   
     **CurrencyID** 列で推測されたデータ型は、変換先テーブルのフィールドのデータ型と互換性がありません。 `DimCurrency.CurrencyAlternateKey` のデータ型は nchar(3) なので、**CurrencyID** のデータ型を文字列 [DT_STR] から Unicode 文字列 [DT_WSTR] に変更する必要があります。 また、フィールド `DimDate.FullDateAlternateKey` は date データ型として定義されるため、**CurrencyDate** の型は、date [DT_Date] から database date [DT_DBDATE] に変更する必要があります。  
   
@@ -96,8 +96,8 @@ ms.locfileid: "71296116"
   
 4.  **[OK]** を選択します。  
   
-## <a name="go-to-next-task"></a>次の実習に進む
-[手順 3:OLE DB 接続マネージャーを追加し、構成する](../integration-services/lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
+## <a name="go-to-next-task"></a>次のタスクに進む
+[ステップ 3:OLE DB 接続マネージャーを追加し、構成する](../integration-services/lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
   
 ## <a name="see-also"></a>参照  
 [フラット ファイル接続マネージャー](../integration-services/connection-manager/flat-file-connection-manager.md)  

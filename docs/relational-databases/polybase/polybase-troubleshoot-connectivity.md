@@ -11,10 +11,10 @@ ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
 ms.openlocfilehash: 631cfbf59cedddc699d82f36d4ea42ff23b0119c
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909151"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>PolyBase Kerberos の接続性のトラブルシューティング
@@ -30,7 +30,7 @@ Kerberos でセキュリティが強化された Hadoop クラスターに対し
 > このツールを使用することで、SQL Server 以外の問題の解決が容易になるため、HDFS Kerberos 設定に関する問題の解決 (つまり、ユーザー名/パスワードの不適切な構成やクラスター Kerberos 設定の不適切な構成の特定) に集中することができます。      
 > このツールは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] から完全に独立しています。 Jupyter Notebook として使用でき、Azure Data Studio が必要になります。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 1. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] RTM CU6/[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU3/[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 以上 (PolyBase がインストールされていること)
 1. Kerberos (Active Directory または MIT) によるセキュリティで保護された Hadoop クラスター (Cloudera または Hortonworks)
@@ -100,7 +100,7 @@ PolyBase には、Hadoop クラスターのプロパティを含む次の構成 
 
 ## <a name="arguments"></a>引数
 
-| 引数 | [説明]|
+| 引数 | 説明|
 | --- | --- |
 | *名前ノードのアドレス* | 名前ノードの IP または FQDN です。 CREATE EXTERNAL DATA SOURCE T-SQL の "LOCATION" 引数を参照します。|
 | *名前ノードのポート* | 名前ノードのポートです。 CREATE EXTERNAL DATA SOURCE T-SQL の "LOCATION" 引数を参照します。 例: 8020。 |
@@ -232,7 +232,7 @@ Kerberos へのアクセス時に引き続き問題が発生する場合は、�
 1. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の外部から Kerberos HDFS データにアクセスできることを確認します。 次のいずれかを実行できます。 
 
     - 独自の Java プログラムを記述します。
-    - PolyBase インストール フォルダーの `HdfsBridge` クラスを使用します。 例:
+    - PolyBase インストール フォルダーの `HdfsBridge` クラスを使用します。 次に例を示します。
 
       ```java
       -classpath ".\Hadoop\conf;.\Hadoop\*;.\Hadoop\HDP2_2\*" com.microsoft.polybase.client.HdfsBridge 10.193.27.232 8020 admin_user C:\temp\kerberos_pass.txt

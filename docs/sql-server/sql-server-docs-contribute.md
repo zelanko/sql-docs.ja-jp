@@ -9,10 +9,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 5b63711b537358db7cbf3fa34dcbfdf7444d4b7a
-ms.sourcegitcommit: 182ed49fa5a463147273b58ab99dc228413975b6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68693187"
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>SQL Server のドキュメントに投稿する方法
@@ -79,7 +79,7 @@ ms.locfileid: "68693187"
 
 [sql-docs](https://github.com/MicrosoftDocs/sql-docs) リポジトリでは、複数の標準フォルダーを使ってコンテンツが整理されています。
 
-| フォルダー | [説明] |
+| Folder | 説明 |
 |---|---|
 | [docs](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs) | 公開されたすべての SQL Server コンテンツが格納されています。 サブフォルダーには、異なる分野のコンテンツが論理的にまとめられています。 |
 | [docs/includes](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs/includes) | インクルード ファイルが格納されています。 これらのファイルは、他のトピックに含めることのできるコンテンツのブロックです。 |
@@ -117,10 +117,10 @@ SQL Server の各記事には、タイトルの後に **applies-to** インク�
 > [!TIP]
 > ドキュメントに関するフィードバックではなく製品のフィードバックの場合は、[こちらで SQL Server 製品に関するフィードバックを提供](https://feedback.azure.com/forums/908035-sql-server)してください。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 GitHub で [sql-docs リポジトリ](https://github.com/MicrosoftDocs/sql-docs)を調べます。
 
 記事を探し、変更内容を送信して、SQL Server コミュニティに投稿します。 
 
-ありがとうございます。
+よろしくお願いいたします。

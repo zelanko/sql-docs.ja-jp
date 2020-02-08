@@ -19,10 +19,10 @@ ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b0c755208a5443e4606bdb41a0cbdfdf26a1fa1c
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71680963"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Integration Services (SSIS) プロジェクトとパッケージの配置
@@ -63,7 +63,7 @@ ms.locfileid: "71680963"
 ## <a name="features-of-project-deployment-model"></a>プロジェクト配置モデルの機能  
  次の表に、プロジェクト配置モデル専用に開発されたプロジェクトで使用できる機能を示します。  
   
-|機能|[説明]|  
+|機能|説明|  
 |-------------|-----------------|  
 |パラメーター|パラメーターは、パッケージで使用されるデータを指定します。 パラメーターは、パッケージ パラメーターとプロジェクト パラメーターを使用して、パッケージ レベルとプロジェクト レベルそれぞれにスコープを設定できます。 パラメーターは、式またはタスクで使用できます。 プロジェクトをカタログに配置すると、パラメーターごとにリテラル値を割り当てることも、設計時に割り当てられた既定値を使用することもできます。 リテラル値の代わりに、環境変数を参照することもできます。 環境変数値は、パッケージ実行時に解決されます。|  
 |環境|環境とは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトが参照できる変数のコンテナーです。 各プロジェクトには複数の環境参照を含めることができますが、1 回のパッケージ実行で参照できるのは、1 つの環境の変数のみです。 環境を使用すると、パッケージに割り当てる値をまとめることができます。 たとえば、"Dev"、"test"、"Production" という名前の環境を使用できます。|  
@@ -135,7 +135,7 @@ System.ComponentModel.Win32Exception: A required privilege is not held by the cl
   
 1.  [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]でプロジェクトを開き、ソリューション エクスプローラーでプロジェクトを右クリックし、 **[プロジェクト配置モデルに変換]** をクリックします。  
   
-     \- または -  
+     または  
   
      オブジェクト エクスプローラーの [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]で、 **[プロジェクト]** ノードを右クリックし、 **[パッケージのインポート]** を選択します。  
   
@@ -145,17 +145,17 @@ System.ComponentModel.Win32Exception: A required privilege is not held by the cl
   
 1.  [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]でプロジェクトを開き、 **[プロジェクト]** メニューの **[配置]** を選択して、 **Integration Services 配置ウィザード**を起動します。  
   
-     内の複数の  
+     or  
   
      [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のオブジェクト エクスプローラーで、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] > **SSISDB** ノードの順に展開し、配置するプロジェクトの [プロジェクト] フォルダーを探します。 **[プロジェクト]** フォルダーを右クリックして **[プロジェクトの配置]** をクリックします。  
   
-     内の複数の  
+     or  
   
      コマンド プロンプトで、 **%ProgramFiles%\Microsoft SQL Server\130\DTS\Binn** にある **isdeploymentwizard.exe**を実行します。 64 ビット コンピューターの場合、 **%ProgramFiles(x86)%\Microsoft SQL Server\130\DTS\Binn**に 32 ビット バージョンのツールもあります。  
   
 2.  **[ソースの選択]** ページで、 **[プロジェクト配置ファイル]** をクリックして、プロジェクトの配置ファイルを選択します。  
   
-     内の複数の  
+     or  
   
      **[Integration Services カタログ]** をクリックし、SSISDB カタログに既に配置されているプロジェクトを選択します。  
   
@@ -296,7 +296,7 @@ static void Main()
 
  - Windows Search に「 **SQL Server 配置ウィザード」** 」と入力します。 
 
- 内の複数の
+ or
 
  - SQL Server のインストール フォルダーで、実行可能ファイル **ISDeploymentWizard.exe** を検索します。たとえば、"C:\Program Files (x86)\Microsoft SQL Server\130\DTS\Binn" で検索します。 
  
@@ -306,7 +306,7 @@ static void Main()
   
 ###  <a name="ProjectModel"></a> Project Deployment Model  
   
-#### <a name="select-source"></a>[ソースの選択]
+#### <a name="select-source"></a>ソースを選択する
 
  作成したプロジェクト配置ファイルを配置するには、 **[プロジェクト配置ファイル]** を選択して .ispac ファイルのパスを入力します。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログにあるプロジェクトを配置するには、 **[Integration Services カタログ]** を選択し、サーバー名とカタログ内のプロジェクトのパスを入力します。 **[次へ]** をクリックして、 **[配置先の選択]** ページを表示します。  
   
@@ -324,7 +324,7 @@ static void Main()
   
 ###  <a name="PackageModel"></a> Package Deployment Model  
   
-#### <a name="select-source"></a>[ソースの選択]
+#### <a name="select-source"></a>ソースを選択する
 
  **Integration Services 配置ウィザード** の **[ソースの選択]** ページには、 **配置モデル** に **[パッケージ配置]** オプションを選択した場合、パッケージ配置モデルに固有の設定が表示されます。  
   
@@ -416,11 +416,11 @@ static void Main()
   
     2.  **[環境変数を使用する]** をクリックし、作成した環境変数を選択します。  
   
-14. **[OK]** を 2 回クリックして変更を保存します。  
+14. **[OK]** をクリックして変更を保存します。  
 
 ## <a name="deploy-and-execute-ssis-packages-using-stored-procedures"></a>ストアド プロシージャを使用した SSIS パッケージの配置と実行
 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトを、プロジェクト配置モデルを使用するように構成すると、[!INCLUDE[ssIS](../../includes/ssis-md.md)] カタログのストアド プロシージャを使用して、プロジェクトの配置とパッケージの実行を行うことができます。 プロジェクト配置モデルの詳細については、「[プロジェクトとパッケージの展開](deploy-integration-services-ssis-projects-and-packages.md#compare-project-deployment-model-and-legacy-package-deployment-model)」を参照してください。  
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトを、プロジェクト配置モデルを使用するように構成すると、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] カタログのストアド プロシージャを使用して、プロジェクトの配置とパッケージの実行を行うことができます。 プロジェクト配置モデルの詳細については、「 [プロジェクトとパッケージの展開](deploy-integration-services-ssis-projects-and-packages.md#compare-project-deployment-model-and-legacy-package-deployment-model)」を参照してください。  
   
  また、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] を使用して、プロジェクトの配置とパッケージの実行を行うこともできます。 詳細については、「 **関連項目** 」セクションのトピックを参照してください。  
   
@@ -431,7 +431,7 @@ static void Main()
 > 2.  パッケージを右クリックし、 **[実行]** をクリックします。  
 > 3.  必要に応じて、パラメーター値、接続マネージャー プロパティ、 **[詳細設定]** タブのオプション (ログ記録レベルなど) を設定します。  
 > 
->      詳細については、「[SSIS サーバーでのパッケージ実行のログ記録を有効にする](../../integration-services/performance/integration-services-ssis-logging.md#server_logging)」を参照してください。  
+>      詳細については、「 [SSIS サーバーでのパッケージ実行のログ記録を有効にする](../../integration-services/performance/integration-services-ssis-logging.md#server_logging)」を参照してください。  
 > 4.  **[OK]** をクリックしてパッケージを実行する前に、 **[スクリプト]** をクリックします。 Transact-SQL が [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のクエリ エディター ウィンドウに表示されます。  
   
 ### <a name="to-deploy-and-execute-a-package-using-stored-procedures"></a>ストアド プロシージャを使用してパッケージの配置と実行を行うには  
@@ -529,7 +529,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
   **Integration Services プロジェクト変換ウィザード** で、プロジェクトをプロジェクト配置モデルに変換します。  
   
 > [!NOTE]  
->  プロジェクトに含まれている 1 つ以上のデータ ソースは、プロジェクトの変換が完了すると削除されます。 プロジェクト内のパッケージで共有可能なデータ ソースへの接続を作成するには、プロジェクト レベルで接続マネージャーを追加します。 詳細については、「 [パッケージの接続マネージャーを追加、削除、または共有する](https://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655)」を参照してください。  
+>  プロジェクトに含まれている 1 つ以上のデータ ソースは、プロジェクトの変換が完了すると削除されます。 プロジェクト内のパッケージで共有可能なデータ ソースへの接続を作成するには、プロジェクト レベルで接続マネージャーを追加します。 詳細については、「 [パッケージでの接続マネージャーの追加、削除、または共有](https://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655)」 を参照してください。  
   
  **目的に合ったトピックをクリックしてください**  
   
@@ -593,7 +593,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **[SQL Server 認証を使用する]**  
  指定されたログイン名とパスワードを使用して、信頼関係の低い接続から接続した場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン アカウントが設定されているかどうか、指定されたパスワードが以前に記録されたパスワードと一致しているかどうかを確認することで接続の認証を行います。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にログイン アカウントが設定されていない場合、認証は失敗し、エラー メッセージが返されます。  
   
- **User name**  
+ **ユーザー名**  
  SQL Server 認証を使用する場合に、ユーザー名を指定します。  
   
  **パスワード**  
@@ -606,7 +606,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **[パッケージ名]**  
  パッケージ ファイルを一覧表示します。  
   
- **ステータス**  
+ **状態**  
  パッケージをパッケージ配置モデルに変換する準備ができているかどうかを示します。  
   
  **メッセージ**  
@@ -659,7 +659,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **[親パッケージ]**  
  パッケージ実行タスクを使用して子パッケージを実行するパッケージの名前を一覧表示します。  
   
- **[タスク名]**  
+ **タスク名**  
  パッケージ実行タスクの名前を一覧表示します。  
   
  **[元の参照]**  
@@ -671,7 +671,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
 ###  <a name="configurations"></a> [構成の選択] ページのオプションの設定  
  パラメーターで置き換えるパッケージ構成を選択します。  
   
- **[パッケージ]**  
+ **Package**  
  パッケージ ファイルを一覧表示します。  
   
  **Type**  
@@ -680,7 +680,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **[構成文字列]**  
  構成ファイルのパスを一覧表示します。  
   
- **ステータス**  
+ **状態**  
  構成の状態メッセージが表示されます。 メッセージ テキスト全体を表示するには、メッセージをクリックします。  
   
  **[構成の追加]**  
@@ -697,17 +697,17 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
 ###  <a name="createParameters"></a> [パラメーターの作成] ページのオプションの設定  
  各構成プロパティのパラメーター名とスコープを選択します。  
   
- **[パッケージ]**  
+ **Package**  
  パッケージ ファイルを一覧表示します。  
   
- **[パラメーター名]**  
+ **パラメーター名**  
  パラメーター名を一覧表示します。  
   
  **スコープ**  
  パラメーターのスコープ (パッケージまたはプロジェクト) を選択します。  
   
 ###  <a name="configureParameters"></a> [パラメーターの構成] ページのオプションの設定  
- **[名前]**  
+ **Name**  
  パラメーター名を一覧表示します。  
   
  **スコープ**  
@@ -730,7 +730,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **[戻る]**  
  オプションを変更する場合にクリックします。  
   
- **[変換]**  
+ **CONVERT**  
  プロジェクトをプロジェクト配置モデルに変換する場合にクリックします。  
   
 ###  <a name="conversion"></a> [変換の実行] のオプションの設定  

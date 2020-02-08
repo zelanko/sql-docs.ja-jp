@@ -13,10 +13,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: b73d24edb139e36f11e05c854c9d10d885994e18
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73595487"
 ---
 # <a name="tutorial-develop-a-net-framework-application-using-always-encrypted-with-secure-enclaves"></a>チュートリアル:セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用して .NET Framework アプリケーションを開発する
@@ -24,7 +24,7 @@ ms.locfileid: "73595487"
 
 このチュートリアルでは、[セキュリティで保護されたエンクレーブが設定された Always Encrypted](encryption/always-encrypted-enclaves.md) に対してサーバー側のセキュリティで保護されたエンクレーブを使用するデータベース クエリを発行する、簡単なアプリケーションを開発する方法について説明します。 
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 このチュートリアルは、「[チュートリアル: SSMS を使用したセキュリティで保護されたエンクレーブを持つ Always Encrypted の概要](./tutorial-getting-started-with-always-encrypted-enclaves.md)」に続くものです。 以下の手順に従う前に、それが完了していることを確認してください。
 
 さらに、Visual Studio (バージョン 2019 を推奨) が必要です。[https://visualstudio.microsoft.com/](https://visualstudio.microsoft.com) からダウンロードできます。 アプリケーション開発用コンピューターでは、.NET Framework 4.7.2 以降が実行されている必要があります。
@@ -56,14 +56,14 @@ ms.locfileid: "73595487"
 
 8. \<configuration\> セクションを見つけて、\<configsections\> セクションを追加または更新します。
 
-   A. \<configuration\> セクションに \<configSections\> セクションが含まれて**いない**場合は、\<configuration\> のすぐ下に次の内容を追加します。
+   a. \<configuration\> セクションに \<configSections\> セクションが含まれて**いない**場合は、\<configuration\> のすぐ下に次の内容を追加します。
    
       ```xml
       <configSections>
          <section name="SqlColumnEncryptionEnclaveProviders" type="System.Data.SqlClient.SqlColumnEncryptionEnclaveProviderConfigurationSection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
       </configSections>
       ```
-   B. \<configruation\> セクションに既に \<configSections\> セクションが含まれている場合、\<configSections\> 内に次の行を追加します。
+   b. \<configruation\> セクションに既に \<configSections\> セクションが含まれている場合、\<configSections\> 内に次の行を追加します。
 
    ```xml
    <section name="SqlColumnEncryptionEnclaveProviders"  type="System.Data.SqlClient.SqlColumnEncryptionEnclaveProviderConfigurationSection, System.Data,  Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" /\>

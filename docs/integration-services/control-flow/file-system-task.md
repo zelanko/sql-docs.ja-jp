@@ -16,10 +16,10 @@ ms.assetid: 7dd79a6a-e066-4028-a385-1d40f31056f8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f170a279f591b496b4c69cbb80b4c719954c30ba
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294126"
 ---
 # <a name="file-system-task"></a>ファイル システム タスク
@@ -36,7 +36,7 @@ ms.locfileid: "71294126"
 ## <a name="predefined-file-system-operations"></a>定義済みのファイル システム操作  
  ファイル システム タスクには、定義済みの操作のセットが含まれています。 次の表では、これらの操作について説明します。  
   
-|操作|Description|  
+|Operation|説明|  
 |---------------|-----------------|  
 |ディレクトリのコピー|ある場所から別の場所にフォルダーをコピーします。|  
 |ファイルのコピー|ある場所から別の場所にファイルをコピーします。|  
@@ -58,7 +58,7 @@ ms.locfileid: "71294126"
 ## <a name="custom-log-entries-available-on-the-file-system-task"></a>ファイル システム タスクで使用できるカスタム ログ エントリ  
  次の表では、ファイル システム タスクのカスタム ログ エントリを説明します。 詳細については、「[Integration Services (SSIS) のログ記録](../../integration-services/performance/integration-services-ssis-logging.md)」をご覧ください。  
   
-|ログ エントリ|Description|  
+|ログ エントリ|説明|  
 |---------------|-----------------|  
 |**FileSystemOperation**|タスクで実行される操作を報告します。 ログ エントリは、ファイル システム操作の開始時に書き込まれます。これには、操作の基になるファイルと操作対象のファイルに関する情報が含まれます。|  
   
@@ -95,11 +95,11 @@ ms.locfileid: "71294126"
   
  さまざまな変数を使用する式を使用できます。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>オプション  
  **[IsDestinationPathVariable]**  
  対象になるパスを変数に格納するかどうかを示します。 このプロパティのオプションを次の表に示します。  
   
-|ReplTest1|Description|  
+|Value|説明|  
 |-----------|-----------------|  
 |**True**|対象になるパスは変数に格納されます。 この値を選択すると、動的オプション **[DestinationVariable]** が表示されます。|  
 |**False**|対象になるパスは、ファイル接続マネージャーで指定されます。 この値を選択すると、動的オプション **[DestinationConnection]** が表示されます。|  
@@ -107,19 +107,19 @@ ms.locfileid: "71294126"
  **[OverwriteDestination]**  
  操作によって対象になるディレクトリ内のファイルを上書きできるかどうかを指定します。  
   
- **名前**  
+ **Name**  
  ファイル システム タスクの一意な名前を指定します。 この名前は、タスク アイコンのラベルとして使用されます。  
   
 > [!NOTE]  
 >  タスク名はパッケージ内で一意である必要があります。  
   
- **[説明]**  
+ **説明**  
  ファイル システム タスクの説明を入力します。  
   
  **操作**  
  実行するファイル システム操作を選択します。 このプロパティのオプションを次の表に示します。  
   
-|ReplTest1|Description|  
+|Value|説明|  
 |-----------|-----------------|  
 |**ディレクトリのコピー**|ディレクトリをコピーします。 この値を選択すると、ソースとターゲットを指定するための動的オプションが表示されます。|  
 |**ファイルのコピー**|ファイルをコピーします。 この値を選択すると、ソースとターゲットを指定するための動的オプションが表示されます。|  
@@ -135,7 +135,7 @@ ms.locfileid: "71294126"
  **[IsSourcePathVariable]**  
  対象になるパスを変数に格納するかどうかを示します。 このプロパティのオプションを次の表に示します。  
   
-|ReplTest1||  
+|Value||  
 |-----------|-|  
 |**True**|対象になるパスは変数に格納されます。 この値を選択すると、動的オプション **[SourceVariable]** が表示されます。|  
 |**False**|対象になるパスは、ファイル接続マネージャーで指定されます。 この値を選択すると、動的オプション **[DestinationVariable]** が表示されます。|  

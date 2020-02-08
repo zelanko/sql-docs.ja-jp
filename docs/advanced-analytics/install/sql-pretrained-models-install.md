@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 97da2ed795d002fa47900eb21ead90b48b525387
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727560"
 ---
 # <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>事前トレーニング済みの機械学習モデルを SQL Server にインストールする
@@ -25,12 +25,12 @@ ms.locfileid: "73727560"
 
 事前トレーニング済みのモデルを使用するには、次の表に示す関数を呼び出します。
 
-| R 関数 (MicrosoftML) | Python 関数 (microsoftml) | 使用方法 |
+| R 関数 (MicrosoftML) | Python 関数 (microsoftml) | 使用法 |
 |--------------------------|-------------------------------|-------|
 | [getSentiment](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/getsentiment) | [get_sentiment](https://docs.microsoft.com//machine-learning-server/python-reference/microsoftml/get-sentiment) | テキスト入力に対して正/負のセンチメント スコアを生成します。 |
 | [featurizeImage](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/featurizeimage) | [featurize_image](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/featurize-image) | 画像ファイル入力からテキスト情報を抽出します。 |
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 機械学習アルゴリズムは、計算を集中的に行います。 すべてのサンプル データを使用したチュートリアルの完了など、低から中レベルのワークロードには 16 GB の RAM を使用することをお勧めします。
 
@@ -213,7 +213,7 @@ R モデルと Python モデルのインストール パスは次のとおりで
 
 ## <a name="see-also"></a>参照
 
-+ [SQL Server Machine Learning Services](sql-machine-learning-services-windows-install.md)
++ [SQL Server Machine Learning サービス](sql-machine-learning-services-windows-install.md)
 + [SQL Server のインスタンス内の R および Python コンポーネントをアップグレードする](../install/upgrade-r-and-python.md)
 + [R 用の MicrosoftML パッケージ](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)
 + [Python 用の microsoftml パッケージ](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)

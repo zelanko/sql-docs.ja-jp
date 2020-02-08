@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 68c731767a83acbd4b7df84843f2c140c5a63d3e
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727708"
 ---
 # <a name="common-issues-with-launchpad-service-and-external-script-execution-in-sql-server"></a>SQL Server での Launchpad サービスと外部スクリプト実行に関する一般的な問題
@@ -131,9 +131,9 @@ Launchpad に別のアカウントを割り当てたか、SQL Server コンピ�
 
 4. 通常、サービスを再起動すると、問題が解決して、機械学習スクリプトを実行できるようになります。 再起動によって問題が解決しない場合は、 **[バイナリ パス]** プロパティのパスと引数を確認し、次の手順を実行します。
 
-    A. ランチャーの .config ファイルを確認し、作業ディレクトリが有効であることを確認します。
+    a. ランチャーの .config ファイルを確認し、作業ディレクトリが有効であることを確認します。
 
-    B. Launchpad によって使用される Windows グループが SQL Server インスタンスに接続できることを確認します。
+    b. Launchpad によって使用される Windows グループが SQL Server インスタンスに接続できることを確認します。
 
     c. サービス プロパティを 1 つでも変更した場合は、Launchpad サービスを再起動します。
 
@@ -234,7 +234,7 @@ R をインストールするボリュームが短いファイル名に対応し
 4. 構成ファイルを編集して、WORKING_DIRECTORY プロパティに入力した作業ディレクトリと同じものを指定します。 あるいは、別の作業ディレクトリを指定して、8dot3 表記と互換性がある既存のパスを選択することもできます。
 ::: moniker-end
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 [Machine Learning Services のトラブルシューティングと既知の問題](machine-learning-troubleshooting-faq.md)
 

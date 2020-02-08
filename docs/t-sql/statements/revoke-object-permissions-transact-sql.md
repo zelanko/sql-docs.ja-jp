@@ -18,10 +18,10 @@ ms.assetid: 99c7146e-d2e7-4f1a-80ff-21a05bc5e8bb
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 0e374b0042ec4b46b8c64e71b86d45d1f4cd3062
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68140901"
 ---
 # <a name="revoke-object-permissions-transact-sql"></a>REVOKE (オブジェクトの権限の取り消し) (Transact-SQL)
@@ -62,15 +62,15 @@ REVOKE [ GRANT OPTION FOR ] <permission> [ ,...n ] ON
  ALL  
  ALL を指定しても、可能な権限がすべて取り消されるわけではありません。 ALL を指定すると、指定したオブジェクトに適用されるすべての [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]-92 権限を取り消すことになります。 ALL の意味は、状況に応じて次のようになります。  
   
- スカラー関数の権限:EXECUTE、REFERENCES。  
+ スカラー関数の権限: EXECUTE、REFERENCES。  
   
- テーブル値関数の権限:DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
+ テーブル値関数の権限: DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
   
- ストアド プロシージャの権限:EXECUTE。  
+ ストアド プロシージャの権限: EXECUTE。  
   
- テーブルの権限:DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
+ テーブルの権限: DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
   
- ビューの権限:DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
+ ビューの権限: DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
   
  PRIVILEGES  
  [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]-92 準拠のために用意されています。 ALL の動作は変更されません。  
@@ -121,7 +121,7 @@ REVOKE [ GRANT OPTION FOR ] <permission> [ ,...n ] ON
  *Database_user_with_no_login*  
  対応するサーバー レベルのプリンシパルがないデータベース ユーザーを指定します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  オブジェクトに関する情報は、各種カタログ ビューに表示されます。 詳しくは、「[オブジェクト カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)」をご覧ください。  
   
  オブジェクトは、スキーマ レベルのセキュリティ保護可能なリソースで、権限の階層で親となっているスキーマに含まれています。 次の表に、オブジェクトで取り消すことができる権限のうち最も限定的なものを、それらを暗黙的に含む一般的な権限と共に示します。  
@@ -146,7 +146,7 @@ REVOKE [ GRANT OPTION FOR ] <permission> [ ,...n ] ON
   
  AS 句を使用する場合、指定されるプリンシパルは、権限が取り消されるオブジェクトを所有している必要があります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-revoking-select-permission-on-a-table"></a>A. テーブルの SELECT 権限を取り消す  
  次の例では、ユーザー `RosaQdM` から、データベース `AdventureWorks2012` のテーブル `Person.Address` に対する `SELECT` アクセス許可を取り消します。  

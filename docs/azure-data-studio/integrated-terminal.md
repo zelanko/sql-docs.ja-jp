@@ -11,30 +11,30 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.openlocfilehash: 13a0e3c17f45e0ba136d83f832d3531bc8059884
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67959535"
 ---
 # <a name="integrated-terminal"></a>統合ターミナル
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] では、統合ターミナルを開くことができ、最初はご利用のワークスペースのルートから開始します。 簡単なコマンドライン タスクを実行するのにウィンドウを切り替えたり、既存のターミナルの状態を変更したりする必要がないので、これは便利な場合があります。
 
-ターミナルを開くには: 
+ターミナルを開くには:
 
 * **Ctrl + '** キーボード ショートカットとバッククォート文字を使用します。
 * **[表示** | **Integrated Terminal]\(統合端末\)** メニュー コマンドを使用します。
-* **コマンド パレット** (**Ctrl + Shift + P**) から、**[View:Toggle Integrated Terminal]\(表示:統合ターミナルの切り替え\)** コマンドを使用します。
+* **コマンド パレット** (**Ctrl + Shift + P**) から、 **[View:Toggle Integrated Terminal]\(表示:統合ターミナルの切り替え\)** コマンドを使用します。
 
 ![ターミナル](media/integrated-terminal/terminal-screen.png)
 
 > [!NOTE]
-> [!INCLUDE[name-sos](../includes/name-sos-short.md)] の外部で作業したい場合は、引き続き、エクスプローラーの **[コマンド プロンプトで開く]** コマンド (Mac または Linux の場合は **[Open in Terminal]\(ターミナルで開く\)**) を使用して外部シェルを開くことができます。
+> [!INCLUDE[name-sos](../includes/name-sos-short.md)] の外部で作業したい場合は、引き続き、エクスプローラーの **[コマンド プロンプトで開く]** コマンド (Mac または Linux の場合は **[Open in Terminal]\(ターミナルで開く\)** ) を使用して外部シェルを開くことができます。
 
 ## <a name="managing-multiple-terminals"></a>複数のターミナルを管理する
 
-さまざまな場所で開かれる複数のターミナルを作成し、それらのターミナル間を簡単に移動することができます。 ターミナル インスタンスは追加することができます。そのためには、**[ターミナル]** パネルの右上にあるプラス アイコンを押すか、または **Ctrl + Shift + `** コマンドをトリガーします。 これにより、ドロップ ダウンリストに別のエントリが作成され、ターミナルを切り替えるときに使用できます。
+さまざまな場所で開かれる複数のターミナルを作成し、それらのターミナル間を簡単に移動することができます。 ターミナル インスタンスは追加することができます。そのためには、 **[ターミナル]** パネルの右上にあるプラス アイコンを押すか、または **Ctrl + Shift + `** コマンドをトリガーします。 これにより、ドロップ ダウンリストに別のエントリが作成され、ターミナルを切り替えるときに使用できます。
 
 ![複数のターミナル](media/integrated-terminal/terminal-multiple-instances.png)
 
@@ -93,7 +93,7 @@ Windows 上でシェルを正しく構成することは、適切な実行可能
 
 統合ターミナル内をすばやく移動するためのキーボード ショートカットを次に示します。
 
-|Key|コマンド|  
+|Key|command|  
 |---|---|  
 |**Ctrl + \`**|統合ターミナルを表示します|  
 |**Ctrl + Shift + \`**|新しいターミナルを作成します|  
@@ -118,7 +118,7 @@ Windows 上でシェルを正しく構成することは、適切な実行可能
 
 ### <a name="run-selected-text"></a>選択したテキストを実行する
 
-`runSelectedText` コマンドを使用するには、エディターでテキストを選択して、**[ターミナル]:[Run Selected Text in Active Terminal]\(アクティブなターミナルで選択したテキストを実行\)** コマンドを**コマンド パレット** (**Ctrl + Shift +P**) を介して実行します。 ターミナルでは、選択したテキストの実行が試みられます。
+`runSelectedText` コマンドを使用するには、エディターでテキストを選択して、 **[ターミナル]:[Run Selected Text in Active Terminal]\(アクティブなターミナルで選択したテキストを実行\)** コマンドを**コマンド パレット** (**Ctrl + Shift +P**) を介して実行します。 ターミナルでは、選択したテキストの実行が試みられます。
 
 ![選択したテキストを実行する](media/integrated-terminal/terminal_run_selected.png)
 
@@ -132,7 +132,7 @@ Windows 上でシェルを正しく構成することは、適切な実行可能
 * MAC: **Cmd + C** および **Cmd + V**
 * Windows: **Ctrl + C** および **Ctrl + V**
 
-### <a name="find"></a>[検索]
+### <a name="find"></a>Find
 
 統合ターミナルには、**Ctrl + F** キーを使用してトリガーできる基本的な検索機能があります。
 
@@ -145,7 +145,7 @@ Linux および Windows 上で [検索] ウィジェットを起動するので�
 
 ### <a name="rename-terminal-sessions"></a>ターミナル セッションの名前を変更する
 
-統合ターミナル セッションの名前は、**[ターミナル]:[名前の変更]** (`workbench.action.terminal.rename`) コマンドを使用して変更できるようになりました。 新しい名前がターミナルの選択ドロップダウンに表示されます。
+統合ターミナル セッションの名前は、 **[ターミナル]:[名前の変更]** (`workbench.action.terminal.rename`) コマンドを使用して変更できるようになりました。 新しい名前がターミナルの選択ドロップダウンに表示されます。
 
 ### <a name="forcing-key-bindings-to-pass-through-the-terminal"></a>キー バインドを強制的にターミナルをパススルーさせる
 

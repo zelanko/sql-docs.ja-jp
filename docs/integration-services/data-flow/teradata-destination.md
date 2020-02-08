@@ -10,10 +10,10 @@ ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d016a1fed3a60df78a02242a2f42e46cf7184553
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75245100"
 ---
 # <a name="teradata-destination"></a>Teradata 変換先
@@ -79,7 +79,7 @@ Teradata ソースから Teradata ODBC ドライバーへの ODBC の呼び出�
 
 次の表で、Teradata 変換先のカスタム プロパティについて説明します。 すべてのプロパティは読み取り/書き込み可能です。
 
-|プロパティ名|データ型|[説明]|
+|プロパティ名|データ型|説明|
 |:-|:-|:-|
 |AlwaysDropErrorTable|Boolean|既定値は **False** です。 **True** の場合、Teradata 変換先が読み取りに失敗した場合でも、すべてのエラー テーブルが削除されます。|
 |ArraySupport|Boolean|既定値は **True** です。 **True** の場合、DML グループで ArraySupport が使用されます。 TPT Stream にのみ適用されます。 このプロパティは、**詳細エディター**にあります。|
@@ -154,7 +154,7 @@ Teradata 変換先エディターの [接続マネージャー] ページを開�
 
 入力元のデータを選択する方法を選択します。 次の表に示すオプションがあります。
 
-|オプション|[説明]|
+|オプション|説明|
 |:-|:-|
 |テーブル名 - TPT Stream|TPT Stream 演算子を使用した増分モード。 <br>**[テーブル名またはビュー名]** :既存のテーブルまたはビューを一覧から選択します。 この一覧には、最初の 1000 個のテーブルのみが表示されます。 テーブル名のプレフィックスを入力するか、名前の任意の部分と (*) ワイルドカードを使用して、使用するテーブルを一覧表示することができます。|
 |テーブル名 - TPL Load|TPT API Load 演算子 (Teradata FastLoad プロトコル) を使用した高速 (ダイレクト パス) 読み込みモード。ターゲット テーブルを空にする必要があります。 <br>**[テーブル名またはビュー名]** : 既存のテーブルまたはビューを一覧から選択します。 この一覧には、最初の 1000 個のテーブルのみが表示されます。 テーブル名のプレフィックスを入力するか、名前の任意の部分と (*) ワイルドカードを使用して、使用するテーブルを一覧表示することができます。|

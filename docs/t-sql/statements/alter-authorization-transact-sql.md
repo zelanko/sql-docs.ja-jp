@@ -27,10 +27,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: af69908f78c5f6a0958c87d315c0ba20da25cfb3
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982880"
 ---
 # <a name="alter-authorization-transact-sql"></a>ALTER AUTHORIZATION (Transact-SQL)
@@ -154,7 +154,7 @@ ALTER AUTHORIZATION ON
  *principal_name* | SCHEMA OWNER    
  エンティティの所有者となるセキュリティ プリンシパルの名前。 データベース オブジェクトはデータベース プリンシパル (データベース ユーザーまたはデータベース ロール) が所有する必要があります。 サーバー オブジェクト (データベースなど) はサーバー プリンシパル (ログイン) が所有する必要があります。 **SCHEMA OWNER** を *principal_name* として指定して、オブジェクトのスキーマを所有するプリンシパルがオブジェクトを所有する必要があることを示します。    
     
-## <a name="remarks"></a>Remarks    
+## <a name="remarks"></a>解説    
  ALTER AUTHORIZATION は、所有者が存在するエンティティの所有権を変更するときに使用できます。 データベースに含まれるエンティティの所有権は、任意のデータベース レベルのプリンシパルに譲渡できます。 サーバー レベルのエンティティの所有権は、サーバー レベルのプリンシパルのみに譲渡できます。    
     
 > [!IMPORTANT]    
@@ -229,10 +229,10 @@ ALTER AUTHORIZATION ON
   
 実行者  |移行先  |結果    
 ---------|---------|---------  
-SQL サーバー認証ログイン     |SQL サーバー認証ログイン         |成功  
+SQL サーバー認証ログイン     |SQL サーバー認証ログイン         |Success  
 SQL サーバー認証ログイン     |Azure AD ユーザー         |失敗           
-Azure AD ユーザー     |SQL サーバー認証ログイン         |成功           
-Azure AD ユーザー     |Azure AD ユーザー         |成功           
+Azure AD ユーザー     |SQL サーバー認証ログイン         |Success           
+Azure AD ユーザー     |Azure AD ユーザー         |Success           
   
 データベースの Azure AD 所有者を確認するには、ユーザー データベース (この例では `testdb`) で次の Transact-SQL コマンドを実行します。  
     
@@ -260,11 +260,11 @@ Azure AD ユーザーをデータベースの個人所有者として使う代�
   ```    
   ALTER AUTHORIZATION ON database::testdb TO DisabledLogin;  
   ```    
-2.  データベースを所有する Azure AD グループを作成し、そのグループをユーザー データベースにユーザーとして追加します。 例:  
+2.  データベースを所有する Azure AD グループを作成し、そのグループをユーザー データベースにユーザーとして追加します。 次に例を示します。  
   ```    
   CREATE USER [mydbogroup] FROM EXTERNAL PROVIDER;  
   ```    
-3.  ユーザー データベースで、Azure AD グループを表すユーザーを、**db_owner** 固定データベース ロールに追加します。 例:  
+3.  ユーザー データベースで、Azure AD グループを表すユーザーを、**db_owner** 固定データベース ロールに追加します。 次に例を示します。  
   ```    
   ALTER ROLE db_owner ADD MEMBER mydbogroup;  
   ```    
@@ -285,7 +285,7 @@ SELECT IS_MEMBER ('db_owner');
 ## <a name="permissions"></a>アクセス許可    
  エンティティに対する TAKE OWNERSHIP 権限が必要です。 新しい所有者がステートメントを実行するユーザーではない場合は、次の条件に応じた権限が必要になります。1) 新しい所有者がユーザーまたはログインの場合は、新しい所有者に対する IMPERSONATE 権限。2) 新しい所有者がロールまたはロールのメンバーシップの場合は、ロールに対する ALTER 権限。3) 新しい所有者がアプリケーション ロールの場合は、アプリケーション ロールに対する ALTER 権限。    
     
-## <a name="examples"></a>使用例    
+## <a name="examples"></a>例    
     
 ### <a name="a-transfer-ownership-of-a-table"></a>A. テーブルの所有権を譲渡する    
  次の例では、テーブル `Sprockets` の所有権をユーザー `MichikoOsada` に譲渡します。 このテーブルは、スキーマ `Parts` 内にあります。    
@@ -302,7 +302,7 @@ ALTER AUTHORIZATION ON Parts.Sprockets TO MichikoOsada;
 GO    
 ```    
     
- オブジェクトのスキーマがステートメントの一部として含まれない場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)] はユーザーの既定のスキーマでオブジェクトを検索します。 例:    
+ オブジェクトのスキーマがステートメントの一部として含まれない場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)] はユーザーの既定のスキーマでオブジェクトを検索します。 次に例を示します。    
     
 ```    
 ALTER AUTHORIZATION ON Sprockets TO MichikoOsada;    

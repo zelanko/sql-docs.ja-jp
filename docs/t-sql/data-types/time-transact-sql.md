@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 239d7ee532f4052caa067be7a20022720740ff3d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68000456"
 ---
 # <a name="time-transact-sql"></a>time (Transact-SQL)
@@ -39,13 +39,13 @@ ms.locfileid: "68000456"
   
 ## <a name="time-description"></a>time の説明  
   
-|プロパティ|[値]|  
+|プロパティ|Value|  
 |--------------|-----------|  
 |構文|**time** [ (*fractional second scale*) ]|  
-|使用方法|DECLARE \@MyTime **time(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **time(7)** )|  
+|使用法|DECLARE \@MyTime **time(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **time(7)** )|  
 |*fractional seconds scale*|秒の小数点以下の有効桁数を指定します。<br /><br /> 0 ～ 7 の整数を指定できます。 Informatica の場合は、0 ～ 3 の整数を指定できます。<br /><br /> 既定の有効桁数は 7 (100 ナノ秒) です。|  
 |既定の文字列リテラル形式<br /><br /> (下位クライアントに使用)|hh:mm:ss[.nnnnnnn] (Informatica の場合は nnn)<br /><br /> 詳細については、「[下位クライアントの下位互換性](#BackwardCompatibilityforDownlevelClients)」セクションを参照してください。|  
-|範囲|00:00:00.0000000 ～ 23:59:59.9999999 (Informatica の場合は 00:00:00.000 ～ 23:59:59.999)|  
+|Range|00:00:00.0000000 ～ 23:59:59.9999999 (Informatica の場合は 00:00:00.000 ～ 23:59:59.999)|  
 |要素範囲|hh は、0 ～ 23 の時を表す 2 桁の数字です。<br /><br /> mm は、0 ～ 59 の分を表す 2 桁の数字です。<br /><br /> ss は、0 ～ 59 の秒を表す 2 桁の数字です。<br /><br /> n\* は、秒の有効桁数を表す 0 ～ 7 桁の数字です (0 ～ 9999999)。 Informatica の場合は、n\* は 0 ～ 3 桁の数字です (0 ～ 999)。|  
 |文字長|8 文字 (hh:mm:ss) 以上、16 文字 (hh:mm:ss.nnnnnnn) 以下。 Informatica の場合は、最大 12 文字 (hh:mm:ss.nnn) です。|  
 |有効桁数、小数点以下桁数<br /><br /> (ユーザーは小数点以下桁数のみ指定)|次の表を参照してください。|  
@@ -56,7 +56,7 @@ ms.locfileid: "68000456"
 |タイム ゾーン オフセットへの対応と保持|いいえ|  
 |夏時間への対応|いいえ|  
   
-|指定した小数点以下桁数|結果 (有効桁数、小数点以下桁数)|列長 (バイト)|1 秒未満の<br /><br /> seconds<br /><br /> 有効桁数 (precision)|  
+|指定した小数点以下桁数|結果 (有効桁数、小数点以下桁数)|列長 (バイト)|1 秒未満の<br /><br /> seconds<br /><br /> precision|  
 |---------------------|---------------------------------|-----------------------------|------------------------------------------|  
 |**time**|(16,7) (Informatica では (12,3))|5 (Informatica では 4)|7 (Informatica では 3)|  
 |**time(0)**|(8,0)|3|0-2|  
@@ -71,15 +71,15 @@ ms.locfileid: "68000456"
 ## <a name="supported-string-literal-formats-for-time"></a>time でサポートされる文字列リテラル形式  
  次の表は、**time** データ型に使用できる有効な文字列リテラル形式を示しています。  
   
-|SQL Server|[説明]|  
+|SQL Server|説明|  
 |----------------|-----------------|  
 |hh:mm[:ss][:fractional seconds][AM][PM]<br /><br /> hh:mm[:ss][.fractional seconds][AM][PM]<br /><br /> hhAM[PM]<br /><br /> hh AM[PM]|AM を指定したかどうかに関係なく、時刻値 0 は午前 0 時を表します。 時刻値が 0 のときに PM を指定することはできません。<br /><br /> AM と PM のどちらも指定していない場合、01 から 11 までの時刻値は午前の時刻を表します。 これらの値は、AM を指定した場合も午前の時刻を表します。 PM を指定すると、午後の時刻を表します。<br /><br /> AM と PM のどちらも指定していない場合、時刻値 12 は正午を表します。 AM を指定すると、午前の時刻を表します。 PM を指定すると、正午を表します。 たとえば、12:01 という値は、12:01 PM では正午を 1 分過ぎた時刻、12:01 AM では午前 0 時を 1 分過ぎた時刻を表します。 12:01 AM と指定することは、00:01 または 00:01 AM と指定することと同じです。<br /><br /> 13 から 23 までの時刻値は、AM または PM を指定していなくても、午後の時刻を表します。 また、PM を指定した場合も午後の時刻を表します。 時刻値が 13 から 23 までの場合、AM を指定することはできません。<br /><br /> 24 という時刻値は無効です。 午前 0 時を表すには、12:00 AM または 00:00 を使います。<br /><br /> ミリ秒の前には、コロン (:) またはピリオド (.) を付けます。 コロンを付けると、その数値は 1000 分の 1 秒単位になります。 ピリオドを付けると、数字が 1 桁なら 10 分の 1 秒単位に、2 桁なら 100 分の 1 秒単位に、3 桁なら 1000 分の 1 秒単位になります。 たとえば、12:30:20:1 は 12 時 30 分を 20 と 1000 分の 1 秒過ぎた時刻を表し、12:30:20.1 は 12 時 30 分を 20 と 10 分の 1 秒過ぎた時刻を表します。|  
   
-|ISO 8601|注|  
+|ISO 8601|Notes|  
 |--------------|-----------|  
 |hh:mm:ss<br /><br /> hh:mm[:ss][.fractional seconds]|hh は、タイム ゾーン オフセットの時間数を表す、0 から 23 までの 2 桁の数字です。<br /><br /> mm は、タイム ゾーン オフセットの追加の分数を表す、0 から 59 までの 2 桁の数字です。|  
   
-|ODBC|注|  
+|ODBC|Notes|  
 |----------|-----------|  
 |{t 'hh:mm:ss[.fractional seconds]'}|ODBC API 固有です。|  
   
@@ -94,7 +94,7 @@ ms.locfileid: "68000456"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ型|下位クライアントに渡される既定の文字列リテラル形式|下位 ODBC|下位 OLEDB|下位 JDBC|下位 SQLCLIENT|  
 |-----------------------------------------|----------------------------------------------------------------|----------------------|-----------------------|----------------------|---------------------------|  
 |**time**|hh:mm:ss[.nnnnnnn]|SQL_WVARCHAR または SQL_VARCHAR|DBTYPE_WSTR または DBTYPE_STR|Java.sql.String|String または SqString|  
-|**date**|-YYYY-MM-DD|SQL_WVARCHAR または SQL_VARCHAR|DBTYPE_WSTR または DBTYPE_STR|Java.sql.String|String または SqString|  
+|**date**|YYYY-MM-DD|SQL_WVARCHAR または SQL_VARCHAR|DBTYPE_WSTR または DBTYPE_STR|Java.sql.String|String または SqString|  
 |**datetime2**|YYYY-MM-DD hh:mm:ss[.nnnnnnn]|SQL_WVARCHAR または SQL_VARCHAR|DBTYPE_WSTR または DBTYPE_STR|Java.sql.String|String または SqString|  
 |**datetimeoffset**|YYYY-MM-DD hh:mm:ss[.nnnnnnn] [+&#124;-]hh:mm|SQL_WVARCHAR または SQL_VARCHAR|DBTYPE_WSTR または DBTYPE_STR|Java.sql.String|String または SqString|  
   
@@ -122,7 +122,7 @@ SELECT @timeTo AS 'time(3)', @timeFrom AS 'time(4)';
   
  **date** に変換すると、変換は失敗し、エラー メッセージ 206"オペランド型の不整合: date は time と互換性がありません" が発生します。  
   
- 変換先が **datetime** の場合は、時、分、秒の値がコピーされ、日付部分が "1900-01-01" に設定されます。 **time(n)** 値の秒の小数部の有効桁数が 3 桁より大きい場合、**datetime** の結果は切り捨てられます。 次のコードでは、`time(4)` の値を `datetime` の値に変換した結果を示します。  
+ 変換先が **datetime** の場合は、時、分、秒の値がコピーされ、日付部分が "1900-01-01" に設定されます。 **time(n)** 値の秒の小数部の有効桁数が 3 桁より大きい場合、**datetime** の結果は切り捨てられます。 次のコードは、`time(4)` 値を `datetime` 値に変換した結果を示しています。  
   
 ```  
 DECLARE @time time(4) = '12:15:04.1237';  
@@ -214,7 +214,7 @@ SELECT @datetime2 AS '@datetime2', @time AS '@time';
 |TIME + TIMEZONE|入力文字列の時刻部分が使用される|  
 |DATE + TIME + TIMEZONE|ローカル datetime の時刻部分が使用されます。|  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-comparing-date-and-time-data-types"></a>A. date と time のデータ型を比較する  
  次の例では、文字列をそれぞれの **date** および **time** データ型にキャストした結果を比較します。  
@@ -232,7 +232,7 @@ SELECT
         'datetimeoffset';  
 ```  
   
-|データ型|[出力]|  
+|データ型|Output|  
 |---------------|------------|  
 |**time**|12:35:29. 1234567|  
 |**date**|2007-05-08|  
@@ -244,7 +244,7 @@ SELECT
 ###  <a name="ExampleB"></a> B. 有効な時刻文字列リテラルを time(7) 列に挿入する  
  次の表では、**time(7)** データ型の列に挿入可能な各種の文字列リテラルと、その列に格納される値を示します。  
   
-|文字列リテラル形式の種類|挿入する文字列リテラル|格納される time(7) 値|[説明]|  
+|文字列リテラル形式の種類|挿入する文字列リテラル|格納される time(7) 値|説明|  
 |--------------------------------|-----------------------------|------------------------------------|-----------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|'01:01:01:123AM'|01:01:01.1230000|秒の小数部の有効桁数の前にコロン (:) を付けた場合、小数点以下桁数が 3 桁を超えると、エラーが発生します。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|'01:01:01.1234567 AM'|01:01:01.1234567|AM または PM を指定した場合、時刻は 24 時間形式で格納され、リテラルの AM または PM は格納されません。|  
@@ -259,7 +259,7 @@ SELECT
 ### <a name="c-inserting-time-string-literal-into-columns-of-each-date-and-time-date-type"></a>C. date 型と time 型のそれぞれの列に対して時間の文字列リテラルを挿入する  
  次の表の 1 列目は、2 列目に示した date データ型または time データ型のデータベース テーブル列に挿入する時間の文字列リテラルを示しています。 3 列目は、データベース テーブル列に格納される値を示しています。  
   
-|挿入する文字列リテラル|[列データ型]|列に格納される値|[説明]|  
+|挿入する文字列リテラル|列のデータ型|列に格納される値|説明|  
 |-----------------------------|----------------------|------------------------------------|-----------------|  
 |'12:12:12.1234567'|**time(7)**|12:12:12.1234567|秒の小数部の有効桁数が列に指定された値を超えている場合、エラーなしで文字列が切り詰められます。|  
 |'2007-05-07'|**date**|NULL|time 値により、INSERT ステートメントが失敗します。|  
