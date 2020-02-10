@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0c06abe4d6adb3916028b3501c16b68d2491af47
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900399"
 ---
 # <a name="dqs-cleansing-transformation"></a>DQS クレンジング変換
@@ -42,13 +42,13 @@ ms.locfileid: "62900399"
   
 -   [Data Quality Client で Integration Services プロジェクトを開く](../../../data-quality-services/open-integration-services-projects-in-data-quality-client.md)  
   
--   [Import Cleansing Project Values into a Domain](../../../data-quality-services/import-cleansing-project-values-into-a-domain.md)  
+-   [クレンジング プロジェクトの値をドメインにインポートする](../../../data-quality-services/import-cleansing-project-values-into-a-domain.md)  
   
 -   [データ ソースにデータ品質ルールを適用する](apply-data-quality-rules-to-data-source.md)  
   
 ## <a name="related-content"></a>関連コンテンツ  
   
--   [管理&#40;を開く、ロック解除、名前の変更、および削除&#41;データ品質プロジェクト](../../../data-quality-services/manage-open-unlock-rename-and-delete-a-data-quality-project.md)  
+-   [データ品質プロジェクト&#41; を管理 &#40;開いてロックを解除する、名前を変更する、削除する](../../../data-quality-services/manage-open-unlock-rename-and-delete-a-data-quality-project.md)  
   
 -   social.technet.microsoft.com の記事「 [複合ドメインを使用した複雑なデータのクレンジング](https://social.technet.microsoft.com/wiki/contents/articles/13324.using-dqs-cleansing-complex-data-using-composite-domains.aspx)」  
   

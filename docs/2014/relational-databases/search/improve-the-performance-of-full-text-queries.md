@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 96a37b1b59043079f52ca922f1ab3e7dfc9cc0ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011264"
 ---
 # <a name="improve-the-performance-of-full-text-queries"></a>フルテキスト クエリのパフォーマンスの向上
@@ -26,7 +26,8 @@ ms.locfileid: "66011264"
   
 -   [ALTER FULLTEXT CATALOG REORGANIZE](/sql/t-sql/statements/alter-fulltext-catalog-transact-sql)を使用して、フルテキスト カタログを再構成します。 このステートメントを実行するとそのカタログのフルテキスト インデックスがマスター マージされるため、この作業はパフォーマンス テストの前に行うようにしてください。  
   
--   フルテキスト キー列として、サイズの小さい列を選択します。 900 バイトの列がサポートされていますが、フルテキスト インデックスでは比較的小さいキー列を使用することをお勧めします。 `int` および `bigint` を使用すると、最適なパフォーマンスが得られます。  
+-   フルテキスト キー列として、サイズの小さい列を選択します。 900 バイトの列がサポートされていますが、フルテキスト インデックスでは比較的小さいキー列を使用することをお勧めします。 
+  `int` および `bigint` を使用すると、最適なパフォーマンスが得られます。  
   
 -   整数型のフルテキスト キーを使用すると、 **docid** マッピング テーブルとの結合が回避されます。 したがって、整数型のフルテキスト キーにより、クエリのパフォーマンスが大幅に向上し、クロールのパフォーマンスも向上します。 フルテキスト キーがクラスター化インデックス キーでもある場合、パフォーマンスがさらに向上する可能性があります。  
   
@@ -48,9 +49,9 @@ ms.locfileid: "66011264"
 -   選択的リレーションの述語が含まれているアプリケーションにおいて、選択的リレーションの述語と非選択的なフルテキスト述語を使用するクエリでは、クエリ オプティマイザーを使用するように記述した場合に最適なパフォーマンスを得られる可能性があります。 この場合、効果的なクエリ プランを作成するために述語を利用するかプッシュダウンを適用するかが、クエリ オプティマイザーによって判断されます。 この方法は、リレーショナル データをフルテキスト データとしてインデックス作成するよりも単純であり、多くの場合、効率的でもあります。  
   
 ## <a name="related-resources"></a>関連リソース  
- [SQL Server 2008 フルテキスト検索: 内部と機能強化](https://go.microsoft.com/fwlink/?LinkId=129544)  
+ [SQL Server 2008 フルテキスト検索: 内部構造と機能強化](https://go.microsoft.com/fwlink/?LinkId=129544)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [sys.dm_fts_memory_buffers &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql)   
  [sys.dm_fts_memory_pools &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-pools-transact-sql)  
   

@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ebb1f67a981396f1f7bb2026f66a528052b0e4df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011147"
 ---
 # <a name="limit-search-results-with-rank"></a>RANK を使用して検索結果を制限する方法
@@ -37,7 +37,7 @@ ms.locfileid: "66011147"
   
 ##  <a name="examples"></a> RANK を使用して検索結果を制限する例  
   
-### <a name="example-a-searching-for-only-the-top-three-matches"></a>例 a:上位 3 件の一致結果のみを検索する  
+### <a name="example-a-searching-for-only-the-top-three-matches"></a>例 A: 上位 3 件の一致結果のみを検索する  
  次の例では、CONTAINSTABLE を使用して上位 3 件の一致結果のみを返します。  
   
 ```  
@@ -68,7 +68,7 @@ RANK        Address                          City
 ```  
   
   
-### <a name="example-b-searching-for-the-top-ten-matches"></a>例 b:上位 10 件の一致結果を検索する  
+### <a name="example-b-searching-for-the-top-ten-matches"></a>例 B: 上位 10 件の一致結果を検索する  
  次の例では、CONTAINSTABLE を使用して、 `Description` 列内で "light" または "lightweight" という単語の近くに "aluminum" という語句を含んでいる、上位 5 種の製品の説明を返します。  
   
 ```  
@@ -141,9 +141,11 @@ GO
 ### <a name="rank-computation-issues"></a>順位計算に関する問題点  
  順位の計算処理はさまざまな要因に依存します。  ワード ブレーカーの言語が異なると、テキストをトークン化する方法も異なります。 たとえば、あるワード ブレーカーは "dog-house" という文字列を "dog" "house" に分割しますが、別のワード ブレーカーは "dog-house" に分割します。 これは、指定された言語によって一致および順位が異なるということを意味します。単語だけでなく、ドキュメント長も異なるからです。 ドキュメント長の違いは、クエリすべての順位付けに影響します。  
   
- `IndexRowCount` などの統計は大きく異なる場合があります。 たとえば、カタログのマスター インデックスに 20 億の行が格納されている場合、1 つの新規ドキュメントにメモリ内で中間インデックスが作成され、そのメモリ内インデックスのドキュメント数に基づいてドキュメントが順位付けされると、マスター インデックスのドキュメントの順位と整合性のない結果になる可能性があります。 こうした理由から、任意の作成処理により大量の行がインデックス化または再インデックス化された場合は、ALTER FULLTEXT CATALOG ... REORGANIZE [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用してこれらのインデックスをマスター インデックスにマージすることを推奨します。 また、中間インデックスの数やサイズなどのパラメーターを基に、Full-Text Engine によるインデックスのマージも自動的に実行されます。  
+ 
+  `IndexRowCount` などの統計は大きく異なる場合があります。 たとえば、カタログのマスター インデックスに 20 億の行が格納されている場合、1 つの新規ドキュメントにメモリ内で中間インデックスが作成され、そのメモリ内インデックスのドキュメント数に基づいてドキュメントが順位付けされると、マスター インデックスのドキュメントの順位と整合性のない結果になる可能性があります。 こうした理由から、任意の作成処理により大量の行がインデックス化または再インデックス化された場合は、ALTER FULLTEXT CATALOG ... REORGANIZE [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用してこれらのインデックスをマスター インデックスにマージすることを推奨します。 また、中間インデックスの数やサイズなどのパラメーターを基に、Full-Text Engine によるインデックスのマージも自動的に実行されます。  
   
- `MaxOccurrence` の値は 1 ～ 32 の範囲のいずれかに正規化されます。 これは、たとえば 50 語のドキュメントが 100 語のドキュメントと同様に扱われるということを意味します。 正規化に使用される表を以下に示します。 同じ長さ、128 として効果的に扱われるドキュメントの長さが隣接するテーブル値 32 と 128 の間の範囲であるため (32 < `docLength` < = 128)。  
+ 
+  `MaxOccurrence` の値は 1 ～ 32 の範囲のいずれかに正規化されます。 これは、たとえば 50 語のドキュメントが 100 語のドキュメントと同様に扱われるということを意味します。 正規化に使用される表を以下に示します。 ドキュメントの長さは、隣接するテーブル値32と128の間の範囲内にあるため、実際には同じ長さの 128 (32 `docLength` < <= 128) として扱われます。  
   
 ```  
 { 16, 32, 128, 256, 512, 725, 1024, 1450, 2048, 2896, 4096, 5792, 8192, 11585,   

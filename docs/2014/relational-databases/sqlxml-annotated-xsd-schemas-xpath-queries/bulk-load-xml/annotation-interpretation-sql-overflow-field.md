@@ -1,5 +1,5 @@
 ---
-title: sql:overflow-フィールド (SQLXML 4.0) |Microsoft Docs
+title: 'sql: overflow フィールド (SQLXML 4.0) |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,20 +16,21 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 594ebdbad3968ba2efe7e255b28379194d2fb77f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013470"
 ---
 # <a name="sqloverflow-field-sqlxml-40"></a>sql:overflow-field (SQLXML 4.0)
   スキーマでは、XML ドキュメントからのすべての未使用データを受け取るオーバーフロー列を指定することができます。 この列は、スキーマ内で `sql:overflow-field` 注釈により指定します。 オーバーフロー列は複数指定することもできます。  
   
- `sql:overflow-field` 注釈が定義されている XML ノード (要素または属性) がスコープ内に入るとオーバーフロー列がアクティブになり、未使用データがこの列に挿入されます。 ノードがスコープ外に出ると、オーバーフロー列はアクティブではなくなります。それまでのオーバーフロー フィールドがある場合は、XML 一括読み込みによってそのフィールドがアクティブになります。  
+ 
+  `sql:overflow-field` 注釈が定義されている XML ノード (要素または属性) がスコープ内に入るとオーバーフロー列がアクティブになり、未使用データがこの列に挿入されます。 ノードがスコープ外に出ると、オーバーフロー列はアクティブではなくなります。それまでのオーバーフロー フィールドがある場合は、XML 一括読み込みによってそのフィールドがアクティブになります。  
   
  XML 一括読み込みでは、オーバーフロー列へのデータの格納時に、`sql:overflow-field` が定義されている親要素の開始タグと終了タグも格納されます。  
   
- たとえば、次のスキーマについて説明します、 **\<顧客 >** と **\<CustOrder >** 要素。 これらの要素それぞれに、オーバーフロー列が指定されています。  
+ たとえば、次のスキーマでは、 ** \<顧客の>** と** \<custorder>** 要素について説明しています。 これらの要素それぞれに、オーバーフロー列が指定されています。  
   
 ```  
 <?xml version="1.0" ?>  
@@ -73,15 +74,15 @@ ms.locfileid: "66013470"
 </xsd:schema>  
 ```  
   
- スキーマで、 **\<顧客 >** 要素は Cust テーブルにマップし、 **\<順序 >** 要素は CustOrder テーブルにマップされます。  
+ スキーマでは、 ** \<Customer>** 要素は Cust テーブルにマップされ、 ** \<Order>** 要素は custorder テーブルにマップされます。  
   
- 両方の **\<顧客 >** と **\<順序 >** 要素は、オーバーフロー列を識別します。 したがって、XML 一括読み込みを保存します未使用のすべての子の要素と属性、 **\<顧客 >** Cust テーブルのオーバーフロー列内の要素と、未使用の子要素と、の属性をすべて **\<順序 >** CustOrder テーブルのオーバーフロー列内の要素。  
+ ** \<Customer>** 要素と** \<Order>** 要素はどちらもオーバーフロー列を識別します。 したがって、XML 一括読み込みでは、Cust テーブルの overflow 列にある** \<Customer>** 要素のすべての未使用の子要素と属性、および custorder テーブルの overflow 列の** \<Order>** 要素のすべての未使用の子要素と属性が保存されます。  
   
 ### <a name="to-test-a-working-sample"></a>実際のサンプルをテストするには  
   
 1.  この例のスキーマを SampleSchema.xml として保存します。  
   
-2.  これらのテーブルを作成します。  
+2.  次のテーブルを作成します。  
   
     ```  
     CREATE TABLE Cust (  

@@ -13,13 +13,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 266c127a8ef38a1a5701de24f9442861e604d84d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62875631"
 ---
-# <a name="restore-database-options-page"></a>[データベースの復元] \([オプション] ページ)
+# <a name="restore-database-options-page"></a>データベースの復元 ([オプション] ページ)
   **[データベースの復元]** ダイアログ ボックスの **[オプション]** ページを使用して、復元操作の動作と結果を変更します。  
   
  **SQL Server Management Studio を使用してデータベース バックアップを復元するには**  
@@ -31,9 +31,9 @@ ms.locfileid: "62875631"
 > [!NOTE]  
 >  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用して復元タスクを指定するときに、この復元操作の RESTORE ステートメントを含む、対応する [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトを生成できます。 このスクリプトを生成するには、 **[スクリプト]** をクリックし、スクリプトの保存先を選択します。 RESTORE 構文については、「 [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)」を参照してください。  
   
-## <a name="options"></a>[データベースの復元]  
+## <a name="options"></a>オプション  
   
-### <a name="restore-options"></a>[復元オプション]  
+### <a name="restore-options"></a>復元オプション  
  復元操作の動作の特徴を変更するには、 **[復元オプション]** パネルのオプションを使用します。  
   
  **[既存のデータベースを上書きする [WITH REPLACE]]**  
@@ -98,7 +98,7 @@ ms.locfileid: "62875631"
  **[既存の接続を閉じる]**  
  データベースへのアクティブな接続がある場合、復元操作は失敗する可能性があります。 **とデータベース間のすべてのアクティブな接続を閉じるには、** [既存の接続を閉じる] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] オプションをオンにします。 このチェック ボックスをオンにすると、データベースは復元操作の実行前にシングル ユーザー モードに設定され、復元操作の完了後にマルチユーザー モードに設定されます。  
   
-### <a name="prompt"></a>[プロンプト]  
+### <a name="prompt"></a>Prompt  
  **[各バックアップを復元する前に確認する]**  
  各バックアップが復元された後、復元シーケンスを続行するかどうかを確認する **[復元の続行]** ダイアログ ボックスを表示することを指定します。 このダイアログ ボックスには、次のメディア セットの名前 (既知の場合) および次のバックアップ セットの名前と説明が表示されます。  
   

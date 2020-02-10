@@ -1,5 +1,5 @@
 ---
-title: ADO (SQLXML 4.0) を使用した、DiffGram の実行 |マイクロソフトのドキュメント
+title: ADO を使用した DiffGram の実行 (SQLXML 4.0) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,28 +17,28 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ac11a4f5f697e2b2cd0c27a56940a7183c6231da
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66012478"
 ---
 # <a name="executing-a-diffgram-by-using-ado-sqlxml-40"></a>ADO を使用した、DiffGram の実行 (SQLXML 4.0)
-  この [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic アプリケーションでは、ADO を使用して Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスへの接続を確立した後、DiffGram を実行します。 このアプリケーションでは、DiffGram と XSD スキーマは 1 つのファイルに格納されており、 ファイルを指定して DiffGram を読み込みます。 Diffgram (と関連する XSD スキーマ) のいずれかを使用することで説明されている[DiffGram の例](diffgram-examples-sqlxml-4-0.md)します。  
+  この [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic アプリケーションでは、ADO を使用して Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスへの接続を確立した後、DiffGram を実行します。 このアプリケーションでは、DiffGram と XSD スキーマは 1 つのファイルに格納されており、 ファイルを指定して DiffGram を読み込みます。 [Diffgram の例](diffgram-examples-sqlxml-4-0.md)に記載されている、すべての diffgram (および関連する XSD スキーマ) を使用できます。  
   
- これは、サンプル アプリケーションのプロセスです。  
+ サンプルアプリケーションのプロセスは次のとおりです。  
   
--   **Conn**オブジェクト (**ADODB します。接続**) 特定のサーバーで実行中の SQL Server のインスタンスへの接続を確立します。  
+-   **Conn**オブジェクト (**ADODB接続**) 特定のサーバー上の SQL Server の実行中のインスタンスへの接続を確立します。  
   
--   **Cmd**オブジェクト (**ADODB.Command**) で確立された接続を実行します。  
+-   **Cmd**オブジェクト (**ADODB**) は、確立された接続で実行されます。  
   
 -   コマンド言語が DBGUID_MSSQLXML に設定されます。  
   
--   DiffGram がコマンド ストリームにコピーされます (**strmIn**) ファイルから。  
+-   DiffGram は、ファイルからコマンドストリーム (**Strmin**) にコピーされます。  
   
--   設定されているコマンドの出力ストリーム、 **StrmOut**オブジェクト (**ADODB します。Stream**) が表示されるデータが返されます。  
+-   コマンドの出力ストリームは、 **Strmout**オブジェクト (ADODB) に設定され**ます。ストリーム**) が返されます。  
   
--   SQLOLEDB プロバイダーを使用する場合、既定では Sqlxmlx.dll により Microsoft SQLXML の機能が提供されます。 SQLOLEDB プロバイダーで Sqlxml4.dll を使用する、 **SQLXML Version**にプロパティを設定する必要があります**SQLXML.4.0** SQLOLEDB プロバイダーで**接続**オブジェクト。  
+-   SQLOLEDB プロバイダーを使用する場合、既定では Sqlxmlx.dll により Microsoft SQLXML の機能が提供されます。 SQLOLEDB プロバイダーで Sqlxml4.dll を使用するには、SQLOLEDB プロバイダー**接続**オブジェクトで**sqlxml Version**プロパティが**sqlxml. 4.0**に設定されている必要があります。  
   
 -   コマンド (DiffGram) が実行されます。  
   
@@ -84,7 +84,7 @@ End Sub
   
 ### <a name="to-test-the-diffgram"></a>DiffGram をテストするには  
   
-1.  コンピューター上のフォルダー、するには、例では、いずれかから、Diffgram と対応する XSD スキーマのいずれかをコピー [DiffGram の例](diffgram-examples-sqlxml-4-0.md)します。  
+1.  コンピューター上のフォルダーには、 [diffgram の例](diffgram-examples-sqlxml-4-0.md)のいずれかの例から、いずれかの diffgram と対応する XSD スキーマをコピーします。  
   
 2.  Visual Basic を開き、標準 EXE プロジェクトを作成します。  
   
@@ -94,7 +94,7 @@ End Sub
     Microsoft ActiveX Data Objects 2.8 Library  
     ```  
   
-4.  ツールボックス、 **CommandButton**フォームにボタンを描画します。  
+4.  ツールボックスで、[**コマンド**ボタン] をクリックし、フォームにボタンを描画します。  
   
 5.  ボタンをダブルクリックしてコードを編集し、トピックで提供されるアプリケーション コードを追加します。  
   

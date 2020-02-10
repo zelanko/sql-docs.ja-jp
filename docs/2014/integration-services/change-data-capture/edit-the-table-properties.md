@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 618a155390d8719e639d0e12d241b2f824e5375d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62835990"
 ---
 # <a name="edit-the-table-properties"></a>テーブルのプロパティの編集
@@ -42,7 +42,7 @@ ms.locfileid: "62835990"
   
     -   **[新しいキャプチャ インスタンス]** : この場合、新しいキャプチャ インスタンスが保存され、古いキャプチャ インスタンスは削除されません。  
   
-         **注**:テーブルごとに 2 つまでのキャプチャ インスタンスを設定できます。 既に 2 つのキャプチャ インスタンスがある場合、このオプションは利用できません。  
+         **注**: テーブルごとに 2 つまでのキャプチャ インスタンスを設定できます。 既に 2 つのキャプチャ インスタンスがある場合、このオプションは利用できません。  
   
     -   **[既存のものを置換]** : この場合、現在のキャプチャ インスタンスが削除され、作成したキャプチャ インスタンスで置換されます。 このテーブルに 2 つのキャプチャ インスタンスが定義されている場合、置換するキャプチャ インスタンスを選択する必要があります。  
   

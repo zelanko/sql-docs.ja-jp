@@ -1,5 +1,5 @@
 ---
-title: SQL Server 2014 における Integration Services の機能の廃止 |Microsoft Docs
+title: SQL Server 2014 | の Integration Services 廃止された機能Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 915cb42726d27526342870ca39abd7012166270a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059380"
 ---
 # <a name="discontinued-integration-services-functionality-in-sql-server-2014"></a>SQL Server 2014 で提供が中止された Integration Services の機能
-  このトピックで説明[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]の現在のリリースでは使用されなくなった機能[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]します。  
+  このトピックで[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]は、現在のリリースの[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]で使用できなくなった機能について説明します。  
   
  SQL Server 2014 では、提供が中止された Integration Services の機能はありません。  
   

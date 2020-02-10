@@ -1,5 +1,5 @@
 ---
-title: タスク 3:マスター データ マネージャーでのデータの検証 |Microsoft Docs
+title: 'タスク 3: マスターデータマネージャー | でデータを検証するMicrosoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,24 +11,24 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 21d43023fd12d6e417268d115ce3f44d2364c2b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65489214"
 ---
-# <a name="task-3-verifying-the-data-in-master-data-manager"></a>タスク 3:マスター データ マネージャーのデータを確認する
-  このタスクですることを確認します、**業者**でエンティティが作成された**MDS**を使用して**マスター データ マネージャー Web アプリケーション**します。  
+# <a name="task-3-verifying-the-data-in-master-data-manager"></a>タスク 3: マスター データ マネージャーのデータを確認する
+  このタスクでは、**マスターデータマネージャー Web アプリケーション**を使用して、 **Supplier で Supplier**エンティティが作成さ**れている**ことを確認します。  
   
-1.  場合**マスター データ マネージャー**は既にを開き、 **SQL Server 2012 マスター データ サービス**上部のホーム ページに移動します。 それ以外の場合に移動します[ http://localhost/mds ](http://localhost/mds)を起動する**マスター データ マネージャー**します。  
+1.  **マスターデータマネージャー**が既に開いている場合は、上部にある**SQL Server 2012 マスターデータサービス**をクリックして、ホームページに移動します。 それ以外の場合[http://localhost/mds](http://localhost/mds)は、に移動して**マスターデータマネージャー**を起動します。  
   
-2.  選択**Suppliers**の**モデル**、 をクリック**エクスプ ローラー**します。  
+2.  [**モデル**] で [**仕入先**] を選択し、[**エクスプローラー**] をクリックします。  
   
-     ![マスター データ マネージャー、エクスプ ローラー ボタン](../../2014/tutorials/media/et-verifyingthedatainmasterdatamanager.jpg "マスター データ マネージャー、エクスプ ローラー ボタン")  
+     ![マスター データ マネージャー - [エクスプローラー] ボタン](../../2014/tutorials/media/et-verifyingthedatainmasterdatamanager.jpg "マスター データ マネージャー - [エクスプローラー] ボタン")  
   
-3.  MDS に格納されているデータを確認します。 データが表示されない場合は、選択したことを確認**Suppliers**の**モデル**起動する前に、ホーム ページに**エクスプ ローラー**します。 追加またはを使用して仕入先の一覧から削除することができます**メンバーの追加**と**メンバーの削除**ツールバーのボタン。  
+3.  MDS に格納されているデータを確認します。 データが表示されない場合は、**エクスプローラー**を起動する前に、ホームページで**モデル**の [**仕入先**] が選択されていることを確認します。 ツールバーの [**メンバーの追加**] および [**メンバーの削除**] ボタンを使用して、仕入先の一覧に対して追加または削除を行うことができます。  
   
-## <a name="next-step"></a>次の手順  
- [タスク 4&#40;省略可能な&#41;:新しいデータ セットを公開し、結合、照合、](../../2014/tutorials/task-4-optional-combining-matching-and-publishing-new-set-of-data.md)  
+## <a name="next-step"></a>次のステップ  
+ [タスク 4 &#40;オプションの&#41;: 新しいデータセットの結合、照合、およびパブリッシュ](../../2014/tutorials/task-4-optional-combining-matching-and-publishing-new-set-of-data.md)  
   
   

@@ -11,13 +11,14 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7ee7e06829f72ab44fd036766907be94c95b7d90
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483691"
 ---
 # <a name="automatic-code-creation-master-data-services"></a>コードの自動作成 (Master Data Services)
+  
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、Code 属性の数値または他の数値属性の数値を自動的に生成できます。 コードを自動生成するときは、コードに他の値を入力してもかまいません。正確には、初期値が自動的に設定されます。  
   
 ## <a name="generating-code-values"></a>コード値の生成  
@@ -31,25 +32,25 @@ ms.locfileid: "65483691"
  いずれかのツールで、またはステージング処理を使用して属性値を MDS に入力するとき、属性値をブランクのままにできます。 ビジネス ルールが適用されると、既存の最高の値に基づいて値が増分されます。 たとえば、ルールが "1 から開始して 4 ずつ増加する生成値に対する既定の属性" であり、属性の現在最も高い値が 700 である場合、追加される次のメンバーの値は 704 になります。  
   
 ## <a name="deleting-automatically-generated-values"></a>自動的に生成される値の削除  
- 管理者が Code 属性の値の自動生成を有効にした後、ユーザーが再利用するコード値を持っていたメンバーを誤って削除する場合があります。 「メンバー コードが削除されたメンバーを使用して既に」エラー メッセージが表示されます。 この解決方法には、次の 2 つが挙げられます。  
+ 管理者が Code 属性の値の自動生成を有効にした後、ユーザーが再利用するコード値を持っていたメンバーを誤って削除する場合があります。 "メンバーコードは既に削除されたメンバーによって使用されています" というエラーメッセージが表示されます。 解決策として、次の 2 つが考えられます。  
   
--   **バージョン管理**機能領域で、管理者は、メンバーが削除されたときに発生したトランザクションを取り消すことができます。 ただし、これはすべての以前のメンバーの属性と階層およびコレクションのメンバーシップが復元ことを意味します。 詳細については、次を参照してください。[トランザクションを破棄する&#40;Master Data Services&#41;](reverse-a-transaction-master-data-services.md)します。  
+-   管理者は、[**バージョン管理**] 機能領域で、メンバーが削除されたときに発生したトランザクションを元に戻すことができます。 ただし、これは、以前のメンバーの属性と階層とコレクションのメンバーシップがすべて復元されることを意味します。 詳細については、「[トランザクションの反転 &#40;マスターデータサービス&#41;](reverse-a-transaction-master-data-services.md)」を参照してください。  
   
--   管理者は、ステージング処理を使用して、メンバーを完全に削除できます。 詳細については、次を参照してください。[非アクティブ化またはステージング処理を使用してメンバーの削除&#40;Master Data Services&#41;](add-update-and-delete-data-master-data-services.md)します。  
+-   管理者は、ステージング処理を使用して、メンバーを完全に削除できます。 詳細については、「 [&#40;マスターデータサービス&#41;のステージング処理を使用したメンバーの非アクティブ化または削除](add-update-and-delete-data-master-data-services.md)」を参照してください。  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  
-|Code 属性の値を自動的に生成します。|[Code 属性の値の自動生成 (マスター データ サービス)](../../2014/master-data-services/automatically-generate-code-attribute-values-master-data-services.md)|  
-|他の属性の値を自動的に生成します。|[Code 以外の属性の値の自動生成 (マスター データ サービス)](../../2014/master-data-services/automatically-generate-attribute-values-other-than-code-master-data-services.md)|  
+|Code 属性の値を自動的に生成します。|[マスターデータサービス &#40;コード属性の値を自動的に生成&#41;](../../2014/master-data-services/automatically-generate-code-attribute-values-master-data-services.md)|  
+|他の属性の値を自動的に生成します。|[Code &#40;マスターデータサービス以外の属性値を自動的に生成する&#41;](../../2014/master-data-services/automatically-generate-attribute-values-other-than-code-master-data-services.md)|  
   
 ## <a name="related-content"></a>関連コンテンツ  
   
 -   [マスター データ サービス概要](master-data-services-overview-mds.md)  
   
--   [ビジネス ルール (マスター データ サービス)](../../2014/master-data-services/business-rules-master-data-services.md)  
+-   [ビジネスルール &#40;マスターデータサービス&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
   
--   [エンティティ (マスター データ サービス)](../../2014/master-data-services/entities-master-data-services.md)  
+-   [エンティティ &#40;マスターデータサービス&#41;](../../2014/master-data-services/entities-master-data-services.md)  
   
   

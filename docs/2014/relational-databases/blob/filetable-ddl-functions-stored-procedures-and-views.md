@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 85e0c761f5dc784698b3aed361ce50488a93e366
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010100"
 ---
 # <a name="filetable-ddl-functions-stored-procedures-and-views"></a>FileTable DDL、関数、ストアド プロシージャ、およびビュー
@@ -28,9 +28,9 @@ ms.locfileid: "66010100"
   
 ##  <a name="ddl"></a> Transact-SQL データ定義言語 (DDL) ステートメント  
   
-|オブジェクト|状態|詳細情報|  
+|Object|Status|詳細情報|  
 |------------|------------|----------------------|  
-|[ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)<br /><br /> [ALTER DATABASE SET オプション &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)|変更|[FileTable の前提条件の有効化](enable-the-prerequisites-for-filetable.md)<br /><br /> [FileTable の管理](manage-filetables.md)|  
+|[ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)<br /><br /> [ALTER DATABASE SET のオプション &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)|変更|[FileTable の前提条件の有効化](enable-the-prerequisites-for-filetable.md)<br /><br /> [FileTable の管理](manage-filetables.md)|  
 |[ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)|変更|[FileTable の作成、変更、および削除](create-alter-and-drop-filetables.md)<br /><br /> [FileTable の管理](manage-filetables.md)|  
 |[CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)|変更|[FileTable の前提条件の有効化](enable-the-prerequisites-for-filetable.md)|  
 |[CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql)|変更|[FileTable の作成、変更、および削除](create-alter-and-drop-filetables.md)|  
@@ -38,7 +38,7 @@ ms.locfileid: "66010100"
   
 ##  <a name="func"></a> 関数  
   
-|オブジェクト|状態|詳細情報|  
+|Object|Status|詳細情報|  
 |------------|------------|----------------------|  
 |[FileTableRootPath &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/filetablerootpath-transact-sql)|**追加**|[FileTable 内のディレクトリとパスの操作](work-with-directories-and-paths-in-filetables.md)|  
 |[GetFileNamespacePath &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getfilenamespacepath-transact-sql)|**追加**|[FileTable 内のディレクトリとパスの操作](work-with-directories-and-paths-in-filetables.md)|  
@@ -46,13 +46,13 @@ ms.locfileid: "66010100"
   
 ##  <a name="sproc"></a> ストアド プロシージャ  
   
-|オブジェクト|状態|詳細情報|  
+|Object|Status|詳細情報|  
 |------------|------------|----------------------|  
 |[sp_kill_filestream_non_transacted_handles &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/filestream-and-filetable-sp-kill-filestream-non-transacted-handles)|**追加**|[FileTable の管理](manage-filetables.md)|  
   
 ##  <a name="cv"></a> カタログ ビュー  
   
-|オブジェクト|状態|詳細情報|  
+|Object|Status|詳細情報|  
 |------------|------------|----------------------|  
 |[sys.database_filestream_options &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-filestream-options-transact-sql)|**追加**|[FileTable の前提条件の有効化](enable-the-prerequisites-for-filetable.md)|  
 |[sys.filetable_system_defined_objects &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-filetable-system-defined-objects-transact-sql)|**追加**|[FileTable の作成、変更、および削除](create-alter-and-drop-filetables.md)<br /><br /> [FileTable の管理](manage-filetables.md)|  
@@ -61,7 +61,7 @@ ms.locfileid: "66010100"
   
 ##  <a name="dmv"></a> 動的管理ビュー  
   
-|オブジェクト|状態|詳細情報|  
+|Object|Status|詳細情報|  
 |------------|------------|----------------------|  
 |[sys.dm_filestream_non_transacted_handles &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql)|**追加**|[FileTable の管理](manage-filetables.md)|  
   

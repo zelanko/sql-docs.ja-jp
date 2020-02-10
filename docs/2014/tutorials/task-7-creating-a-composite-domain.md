@@ -1,5 +1,5 @@
 ---
-title: タスク 7:複合ドメインを作成する |Microsoft Docs
+title: 'タスク 7: 複合ドメインを作成する |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,28 +11,28 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: bbc00117e10e48adbde37b9f0561610feff8f87e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65488963"
 ---
-# <a name="task-7-creating-a-composite-domain"></a>タスク 7:複合ドメインを作成する
-  このタスクで、複合ドメインを作成する**Address Validation**で構成される**Address Line**、**市区町村**、**状態**、および**Zip**ドメイン。 複合ドメインでは、ルール内の複数のドメインに関するクロスドメイン ルールを定義できます。 複合ドメインには、フィールド値を複数のドメインに解析できるなどの利点があります。  たとえば、氏名フィールドの値を、名、ミドル ネーム、および姓の個別のドメインに解析できます。 このチュートリアルでは、クロスドメイン ルールのみを定義します。 参照してください[複合ドメインの管理](https://msdn.microsoft.com/library/hh510399.aspx)の詳細。  
+# <a name="task-7-creating-a-composite-domain"></a>タスク 7: 複合ドメインを作成する
+  このタスクでは、address **Line**、 **City**、 **State**、および**Zip**の各ドメインで構成される、**アドレス検証**という複合ドメインを作成します。 複合ドメインでは、ルール内の複数のドメインに関するクロスドメイン ルールを定義できます。 複合ドメインには、フィールド値を複数のドメインに解析できるなどの利点があります。  たとえば、氏名フィールドの値を、名、ミドル ネーム、および姓の個別のドメインに解析できます。 このチュートリアルでは、クロスドメイン ルールのみを定義します。 詳細について[は、「複合ドメインの管理](https://msdn.microsoft.com/library/hh510399.aspx)」を参照してください。  
   
-1.  左側のウィンドウで次のようにクリックします。**複合ドメインの作成**ツールバーのボタンをクリックします。  
+1.  左側のウィンドウで、ツールバーの [**複合ドメインの作成**] ボタンをクリックします。  
   
-     ![複合ドメインのツール バー ボタンを作成する](../../2014/tutorials/media/et-creatingacompositedomain-01.jpg "複合ドメインのツール バー ボタンの作成")  
+     ![[複合ドメインの作成] ツール バー ボタン](../../2014/tutorials/media/et-creatingacompositedomain-01.jpg "[複合ドメインの作成] ツール バー ボタン")  
   
-2.  入力**住所の確認に**の**複合ドメイン名**します。  
+2.  **複合ドメイン名**の**アドレス検証**を入力します。  
   
      ![アドレス検証複合ドメイン](../../2014/tutorials/media/et-creatingacompositedomain-02.jpg "アドレス検証複合ドメイン")  
   
-3.  ドメインの一覧から選択**Address Line**、**City**、**State**、および**Zip**  をクリック**右矢印**追加する、**複合ドメイン内の**一覧。  
+3.  [ドメイン] ボックスの一覧から [ **Address Line**]、[ **City**]、[ **State**]、および [ **Zip** ] を選択し、**右矢印**をクリックして [**複合ドメイン内のドメイン**] の一覧に追加します。  
   
-4.  **[OK]** をクリックしてダイアログ ボックスを閉じます。  
+4.  [**OK**] をクリックして、ダイアログ ボックスを閉じます。  
   
-## <a name="next-step"></a>次の手順  
- [タスク 8:複合ドメイン ルールを作成します。](../../2014/tutorials/task-8-creating-a-composite-domain-rule.md)  
+## <a name="next-step"></a>次のステップ  
+ [タスク 8: 複合ドメイン ルールを作成する](../../2014/tutorials/task-8-creating-a-composite-domain-rule.md)  
   
   

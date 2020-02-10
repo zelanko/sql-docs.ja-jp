@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3ce57aa0ac17a29b9e8f3b0ea7eef3ad1501a60e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107539"
 ---
 # <a name="add-a-filter-to-a-dataset-report-builder-and-ssrs"></a>データセットへのフィルターの追加 (レポート ビルダーおよび SSRS)
@@ -37,7 +37,7 @@ ms.locfileid: "66107539"
   
 4.  **[追加]** をクリックします。 新しい空のフィルター式が表示されます。  
   
-5.  **[式]** で、フィルター処理の対象となるフィールドの式を入力するか、選択します。 式を編集するには、式 (*[fx]*) ボタンをクリックします。  
+5.  **[式]** で、フィルター処理の対象となるフィールドの式を入力するか、選択します。 式を編集するには、式 ( *[fx]* ) ボタンをクリックします。  
   
 6.  リスト ボックスから、手順 5. で作成した式のデータ型と同じデータ型を選択します。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "66107539"
   
 4.  **[追加]** をクリックします。 新しい空のフィルター式が表示されます。  
   
-5.  **[式]** で、フィルター処理の対象となるフィールドの式を入力するか、選択します。 式を編集するには、式 (*[fx]*) ボタンをクリックします。  
+5.  **[式]** で、フィルター処理の対象となるフィールドの式を入力するか、選択します。 式を編集するには、式 ( *[fx]* ) ボタンをクリックします。  
   
 6.  ドロップダウン ボックスから、手順 5. で作成した式のデータ型と同じデータ型を選択します。  
   
@@ -71,8 +71,8 @@ ms.locfileid: "66107539"
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [データセット フィルター、データ領域フィルター、およびグループ フィルターの追加 &#40;レポート ビルダーおよび SSRS&#41;](../report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
+## <a name="see-also"></a>参照  
+ [データセット フィルター、データ領域フィルター、およびグループ フィルターの追加 (レポート ビルダーおよび SSRS)](../report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
  [式の例 (レポート ビルダーおよび SSRS)](../report-design/expression-examples-report-builder-and-ssrs.md)   
  [フィルターの追加 &#40;レポート ビルダーおよび SSRS&#41;](../report-design/add-a-filter-report-builder-and-ssrs.md)  
   

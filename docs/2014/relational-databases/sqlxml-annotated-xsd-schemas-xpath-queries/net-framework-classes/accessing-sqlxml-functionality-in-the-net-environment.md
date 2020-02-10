@@ -16,20 +16,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5d4055c52f8d7a9401bf3c9b89754db831d94bb3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66012565"
 ---
 # <a name="accessing-sqlxml-functionality-in-the-net-environment"></a>.NET 環境での SQLXML 機能へのアクセス
   この例では、次のことについて説明します。  
   
--   使用する[!INCLUDE[msCoName](../../../includes/msconame-md.md)]SQLXML マネージ クラス (Microsoft.Data.SqlXml) Microsoft へのアクセスに[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]で、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 環境。  
+-   SQLXML マネージクラス[!INCLUDE[msCoName](../../../includes/msconame-md.md)] (Microsoft. Data. sqlxml) を使用して、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 環境で microsoft にアクセスする方法。  
   
 -   .NET Framework 環境で生成された DiffGram を使って [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] テーブルにデータ更新を適用する方法  
   
- このアプリケーションでは、XSD スキーマに対して XPath クエリを実行します。 XPath クエリの実行には、連絡先データで構成される XML ドキュメントが返されます (**FirstName**、 **LastName**)。 アプリケーションでは、.NET Framework 環境でこの XML ドキュメントをデータセットに読み込み、 データセットの最初の連絡先の名前を "Susan" に変更します。 このデータセットから DiffGram を生成し、この DiffGram で指定されている更新 (従業員の名前の変更) を、Person.Contact テーブルに適用します。  
+ このアプリケーションでは、XSD スキーマに対して XPath クエリを実行します。 XPath クエリを実行すると、連絡先データ (**FirstName**、 **LastName**) で構成される XML ドキュメントが返されます。 アプリケーションでは、.NET Framework 環境でこの XML ドキュメントをデータセットに読み込み、 データセットの最初の連絡先の名前を "Susan" に変更します。 このデータセットから DiffGram を生成し、この DiffGram で指定されている更新 (従業員の名前の変更) を、Person.Contact テーブルに適用します。  
   
 > [!NOTE]  
 >  コードでは、接続文字列に [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンス名を含める必要があります。  
@@ -70,7 +70,7 @@ class Test
 }  
 ```  
   
- **この例をテストします。**  
+ **この例をテストするには**  
   
  この例をテストするには、コンピューターに [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework がインストールされている必要があります。  
   

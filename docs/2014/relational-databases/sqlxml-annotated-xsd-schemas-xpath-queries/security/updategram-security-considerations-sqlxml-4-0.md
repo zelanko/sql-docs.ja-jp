@@ -1,5 +1,5 @@
 ---
-title: アップデート グラムのセキュリティに関する考慮事項 (SQLXML 4.0) |Microsoft Docs
+title: アップデートグラムのセキュリティに関する考慮事項 (SQLXML 4.0) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 12354329d51bbe13930fc6edefca1fcf84171e33
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66015055"
 ---
 # <a name="updategram-security-considerations-sqlxml-40"></a>アップデートグラムのセキュリティに関する注意点 (SQLXML 4.0)
@@ -29,6 +29,6 @@ ms.locfileid: "66015055"
 -   アップデートグラムの作成と実行をユーザーに許可しないでください。 アップデートグラムはテンプレートとしてサーバーに置いておくことをお勧めします。ASP 型のアプリケーションでアップデートグラムを動的に作成すると、データベースのデータが保護されない危険性があります。 ユーザーには、アップデートグラムをテンプレートとして提供し、このアップデートグラム経由でのみデータへのアクセスを許可すれば、この危険を回避できます。  
   
 ## <a name="see-also"></a>参照  
- [SQLXML 4.0 でのアップデートグラムを使用したデータの変更](../updategrams/using-updategrams-to-modify-data-in-sqlxml-4-0.md)  
+ [SQLXML 4.0 での、アップデートグラムを使用したデータ変更](../updategrams/using-updategrams-to-modify-data-in-sqlxml-4-0.md)  
   
   

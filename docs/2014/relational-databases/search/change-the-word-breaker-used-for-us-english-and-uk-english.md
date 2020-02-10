@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f0067b0e13e724948e53a2eb291c9a1da6315011
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66012752"
 ---
 # <a name="change-the-word-breaker-used-for-us-english-and-uk-english"></a>米国英語と英国英語に使用されるワード ブレーカーを変更する方法
@@ -22,7 +22,7 @@ ms.locfileid: "66012752"
   
  前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、米国英語 (LCID 1033) と英国英語 (LCID 2057) に対し、異なる CLSID で表される異なるワード ブレーカーが使用されていました。 このリリースでは、次の表に示すように、両方の LCID で同じ CLSID を持つ同じコンポーネントが使用されます。  
   
-|LCID (LCID)|以前のバージョンでインストールされたワード ブレーカー<br /><br /> バージョン 12.0.6828.0|以前のバージョンでインストールされたステマー|このバージョンでインストールされるワード ブレーカー<br /><br /> バージョン 14.0.4999.1038|このバージョンでインストールされるステマー|  
+|LCID|以前のバージョンでインストールされたワード ブレーカー<br /><br /> バージョン 12.0.6828.0|以前のバージョンでインストールされたステマー|このバージョンでインストールされるワード ブレーカー<br /><br /> バージョン 14.0.4999.1038|このバージョンでインストールされるステマー|  
 |----------|-------------------------------------------------------------------------|--------------------------------------------|-----------------------------------------------------------------------|---------------------------------------|  
 |1033<br />(米国英語)|188D6CC5-CB03-4C01-912E-47D21295D77E|EEED4C20-7F1B-11CE-BE57-00AA0051FE20|9faed859-0b30-4434-ae65-412e14a16fb8|e1e5ef84-c4a6-4e50-8188-99aef3de2659|  
 |2057<br />(英国英語)|173C97E2-AEBE-437C-9445-01B237ABF2F6|D99F7670-7F1A-11CE-BE57-00AA0051FE20|9faed859-0b30-4434-ae65-412e14a16fb8|e1e5ef84-c4a6-4e50-8188-99aef3de2659|  
@@ -35,7 +35,7 @@ ms.locfileid: "66012752"
   
 #### <a name="to-switch-from-the-current-version-of-the-us-english-word-breaker-to-the-previous-version"></a>米国英語用のワード ブレーカーを現在のバージョンから前のバージョンに切り替えるには  
   
-1.  レジストリで、次のノードに移動します。**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<インスタンス ルート\>\MSSearch\CLSID**.  
+1.  レジストリで、**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID** ノードに移動します。  
   
 2.  次の手順を使用して、LCID 1033 の前の米国英語用ワード ブレーカー インターフェイスおよびステマー インターフェイスに対応する COM ClassID の新しいキーを追加します。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "66012752"
   
     4.  このキー値の [(既定)] のデータを **infosoft.dll** に更新します。  
   
-3.  レジストリで、次のノードに移動します。**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<インスタンス ルート\>\MSSearch\Language\enu**.  
+3.  レジストリで、**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\enu** ノードに移動します。  
   
 4.  **WBreakerClass** キー値を **{188D6CC5-CB03-4C01-912E-47D21295D77E}** に更新します。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "66012752"
   
 #### <a name="to-switch-from-the-current-version-of-the-uk-english-word-breaker-to-the-previous-version"></a>英国英語用のワード ブレーカーを現在のバージョンから前のバージョンに切り替えるには  
   
-1.  レジストリで、次のノードに移動します。**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<インスタンス ルート\>\MSSearch\CLSID**.  
+1.  レジストリで、**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID** ノードに移動します。  
   
 2.  次の手順を使用して、LCID 2057 の前の英国英語用ワード ブレーカー インターフェイスおよびステマー インターフェイスに対応する COM ClassID の新しいキーを追加します。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "66012752"
   
     4.  このキー値の [(既定)] のデータを **infosoft.dll** に更新します。  
   
-3.  レジストリで、次のノードに移動します。**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<インスタンス ルート\>\MSSearch\Language\eng**.  
+3.  レジストリで、**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\eng** ノードに移動します。  
   
 4.  **WBreakerClass** キー値を **{173C97E2-AEBE-437C-9445-01B237ABF2F6}** に更新します。  
   
@@ -81,19 +81,19 @@ ms.locfileid: "66012752"
   
 #### <a name="to-switch-back-from-the-previous-version-of-the-us-english-word-breaker-to-the-current-version"></a>米国英語用のワード ブレーカーを前のバージョンから現在のバージョンに切り替えるには  
   
-1.  レジストリで、次のノードに移動します。**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<インスタンス ルート\>\MSSearch\CLSID**.  
+1.  レジストリで、**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID** ノードに移動します。  
   
 2.  次のキーが存在しない場合は、次の手順を使用して、LCID 1033 の現在の米国英語用ワード ブレーカー インターフェイスおよびステマー インターフェイスに対応する COM ClassID の新しいキーを追加します。  
   
     1.  現在のワード ブレーカー用に値が **{9faed859-0b30-4434-ae65-412e14a16fb8}** の新しいキーを追加します。  
   
-    2.  このキー値の [(既定)] のデータを **MsWb7.dll**に更新します。  
+    2.  このキー値の [(既定)] のデータを **MsWb7.dll** に更新します。  
   
     3.  現在のステマー用に値が **{e1e5ef84-c4a6-4e50-8188-99aef3de2659}** の新しいキーを追加します。  
   
-    4.  このキー値の [(既定)] のデータを **MsWb7.dll**に更新します。  
+    4.  このキー値の [(既定)] のデータを **MsWb7.dll** に更新します。  
   
-3.  レジストリで、次のノードに移動します。**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<インスタンス ルート\>\MSSearch\Language\eng**.  
+3.  レジストリで、**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\eng** ノードに移動します。  
   
 4.  **WBreakerClass** キー値を **{9faed859-0b30-4434-ae65-412e14a16fb8}** に更新します。  
   
@@ -103,19 +103,19 @@ ms.locfileid: "66012752"
   
 #### <a name="to-switch-back-from-the-previous-version-of-the-uk-english-word-breaker-to-the-current-version"></a>英国英語用のワード ブレーカーを前のバージョンから現在のバージョンに切り替えるには  
   
-1.  レジストリで、次のノードに移動します。**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<インスタンス ルート\>\MSSearch\CLSID**.  
+1.  レジストリで、**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID** ノードに移動します。  
   
 2.  次のキーが存在しない場合は、次の手順を使用して、LCID 2057 の現在の英国英語用ワード ブレーカー インターフェイスおよびステマー インターフェイスに対応する COM ClassID の新しいキーを追加します。  
   
     1.  現在のワード ブレーカー用に値が **{9faed859-0b30-4434-ae65-412e14a16fb8}** の新しいキーを追加します。  
   
-    2.  このキー値の [(既定)] のデータを **MsWb7.dll**に更新します。  
+    2.  このキー値の [(既定)] のデータを **MsWb7.dll** に更新します。  
   
     3.  現在のステマー用に値が **{e1e5ef84-c4a6-4e50-8188-99aef3de2659}** の新しいキーを追加します。  
   
-    4.  このキー値の [(既定)] のデータを **MsWb7.dll**に更新します。  
+    4.  このキー値の [(既定)] のデータを **MsWb7.dll** に更新します。  
   
-3.  レジストリで、次のノードに移動します。**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<インスタンス ルート\>\MSSearch\Language\eng**.  
+3.  レジストリで、**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\eng** ノードに移動します。  
   
 4.  **WBreakerClass** キー値を **{9faed859-0b30-4434-ae65-412e14a16fb8}** に更新します。  
   

@@ -1,5 +1,5 @@
 ---
-title: エラー ページ (レポート マネージャー) |Microsoft Docs
+title: エラーページ (レポートマネージャー) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,27 +11,27 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fc50a5b0516bcbf8221ce3ee130090f66a929c3e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109218"
 ---
 # <a name="error-page-report-manager"></a>[エラー] ページ (レポート マネージャー)
-  [エラー] ページには、エラーの状況に関する詳細情報が表示されます。 このページで、サーバー ベースまたはセッション ベースのエラーが表示されます。 特定のページ コントロールに関連する検証エラーは、コントロールの横にインラインで表示されます。  
+  [エラー] ページには、エラーの状況に関する詳細情報が表示されます。 このページには、サーバーベースまたはセッションベースのエラーが表示されます。 特定のページ コントロールに関連する検証エラーは、コントロールの横にインラインで表示されます。  
   
--   参照する場合は、ローカル レポート サーバーに、次のようなエラーを参照してください。 参照してください。[ローカル管理用のネイティブ モードのレポート サーバー (SSRS) の構成](report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)  
+-   ローカルレポートサーバーを参照しているときに、次のようなエラーが表示される場合は、「[ローカル管理用のネイティブモードのレポートサーバーを構成する &#40;SSRS](report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md) 」を参照してください&#41;  
   
-     ユーザー ' Domain\\[ユーザー名]' は必要な権限がありません。 適切なアクセス許可が付与されていることと、Windows ユーザー アカウント制御 (UAC) の制限に対処済みであることを確認してください。  
+     ユーザー ' Domain\\[user name] ' に必要なアクセス許可がありません。 適切なアクセス許可が付与されていることと、Windows ユーザー アカウント制御 (UAC) の制限に対処済みであることを確認してください。  
   
 -   次のようなエラー メッセージが表示された場合は、「 [Configure a Report Server for Remote Administration](report-server/configure-a-report-server-for-remote-administration.md)」を参照してください。  
   
      コンピューターが見つかりませんでした。 "RPC サーバーを利用できません。 (HRESULT からの例外: 0x800706BA)"。  
   
--   リモート サーバーで発生するエラー状態に関する追加情報が返されるように、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] レポート サーバーのサーバー プロパティを設定できます。 エラー メッセージが含まれる場合、テキスト「このエラーに関する詳細については、ローカル サーバー コンピューターでは、レポート サーバーに移動またはリモート エラーを有効にする」を参照してください。[リモート エラーを有効にする&#40;Reporting Services&#41;](report-server/enable-remote-errors-reporting-services.md)します。  
+-   リモート サーバーで発生するエラー状態に関する追加情報が返されるように、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] レポート サーバーのサーバー プロパティを設定できます。 エラーメッセージに "このエラーの詳細については、ローカルサーバーコンピューター上のレポートサーバーに移動するか、リモートエラーを有効にする" というテキストが含まれている場合は、「 [Enable Remote errors &#40;Reporting Services&#41;](report-server/enable-remote-errors-reporting-services.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- [レポート マネージャーの構成 &#40;ネイティブ モード&#41;](report-server/configure-web-portal.md)   
+## <a name="see-also"></a>参照  
+ [レポートマネージャー &#40;ネイティブモード&#41;を構成する](report-server/configure-web-portal.md)   
  [エラーとイベントのリファレンス (Reporting Services)](troubleshooting/errors-and-events-reference-reporting-services.md)   
  [レポート マネージャー F1 ヘルプ](../../2014/reporting-services/report-manager-f1-help.md)  
   

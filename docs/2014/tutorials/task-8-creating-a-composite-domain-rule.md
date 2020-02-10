@@ -1,5 +1,5 @@
 ---
-title: タスク 8:複合ドメイン ルールを作成する |Microsoft Docs
+title: 'タスク 8: 複合ドメインルールを作成する |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -11,30 +11,30 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7e40ec982a9b2c43c3d55ec60179ac9a0b80e8a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65489625"
 ---
-# <a name="task-8-creating-a-composite-domain-rule"></a>タスク 8:複合ドメイン ルールを作成する
-  このタスクでのルールを作成する、 **Address Validation**複合ドメイン。 クロス ドメイン ルールを定義する: 場合**City**は**Los Angeles**、**State**必要があります**CA**場所**City** **State**は 2 つのドメイン。  
+# <a name="task-8-creating-a-composite-domain-rule"></a>タスク 8: 複合ドメイン ルールを作成する
+  このタスクでは、 **Address Validation**複合ドメインのルールを作成します。 クロスドメインルールを定義する: **city**が**ロサンゼルス**の場合、 **state**は**CA**である必要があります。**市区町村**と**州**は2つのドメインです。  
   
-1.  右側のウィンドウに切り替えると、 **CD のルール**タブ。  
+1.  右側のウィンドウで、[CD の**規則**] タブに切り替えます。  
   
-2.  クリックして**新しいドメイン ルールの追加**ツールバーから。  
+2.  ツールバーの [**新しいドメインルールの追加**] をクリックします。  
   
-3.  型**City-State Rule**の**名前**キーを押します**ENTER**します。  
+3.  [**名前**] に「 **City-State Rule** 」と入力し、 **enter**キーを押します。  
   
-4.  **ルールの作成**ペインで、**City**、ドメインの一覧と条件の選択 で**値は等しく**と種類**Los Angeles**の値。  
+4.  [**ルールの作成**] ペインで、[ドメイン] ボックスの一覧の [ **City** ] を選択し、[条件**値が以下**] を選択して、値に「**ロサンゼルス**(ロサンゼルス)」と入力します。  
   
-5.  **し**ペインで、**State**クリックし、ドメインの一覧で**値は等しく**、型**CA**値、およびキーを押して**タブ**します。  
+5.  **[Then** ] ペインで、[ドメイン] ボックスの一覧の [**状態**] を選択し、[**値が次の値に等しい**] を選択し、値として「 **CA** 」と入力して、 **tab**キーを押します。  
   
      ![複合ドメイン ルール](../../2014/tutorials/media/et-creatingacompositedomainrule.jpg "複合ドメイン ルール")  
   
-6.  クリックして**閉じる**DQS クライアントのメイン ページに移動するページの下部にあるボタンをクリックします。 次のレッスンでナレッジ ベースをパブリッシュします。 ナレッジ ベースがロック状態 (ロック アイコン) にあることに注意してください。  
+6.  ページの下部にある [**閉じる**] ボタンをクリックして、DQS クライアントのメインページに切り替えます。 次のレッスンでナレッジ ベースをパブリッシュします。 ナレッジ ベースがロック状態 (ロック アイコン) にあることに注意してください。  
   
-## <a name="next-step"></a>次の手順  
- [タスク 9:参照データ サービスを構成します。](../../2014/tutorials/task-9-configuring-a-reference-data-service.md)  
+## <a name="next-step"></a>次のステップ  
+ [タスク 9: 参照データ サービスを構成する](../../2014/tutorials/task-9-configuring-a-reference-data-service.md)  
   
   

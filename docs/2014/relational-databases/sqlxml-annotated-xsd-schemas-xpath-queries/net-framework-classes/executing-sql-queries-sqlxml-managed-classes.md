@@ -1,5 +1,5 @@
 ---
-title: SQL クエリの実行 (SQLXML マネージ クラス) |マイクロソフトのドキュメント
+title: SQL クエリの実行 (SQLXML マネージクラス) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,22 +17,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2f8e16ff3651b9ce23fafe99137b4905eb3961ce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014939"
 ---
 # <a name="executing-sql-queries-sqlxml-managed-classes"></a>SQL クエリの実行 (SQLXML マネージド クラス)
   この例では、次のことを行います。  
   
--   パラメーター (SqlXmlParameter オブジェクト) を作成します。  
+-   パラメーターの作成 (SqlXmlParameter オブジェクト)  
   
--   SqlXmlParameter オブジェクトのプロパティ (名前と値) に値を割り当てます。  
+-   SqlXmlParameter オブジェクトのプロパティ (名前と値) に値を代入します。  
   
- この例では、単純な SQL クエリを実行して、従業員の姓、名、および誕生日を取得します。従業員の姓の値はパラメーターとして渡されます。 パラメーターを指定するときに (*LastName*)、Value プロパティのみを設定します。 Name プロパティは設定されていませんので、このクエリでは、パラメーターは位置指定し、名前は必要ありません。  
+ この例では、単純な SQL クエリを実行して、従業員の姓、名、および誕生日を取得します。従業員の姓の値はパラメーターとして渡されます。 パラメーター (*LastName*) を指定する場合は、Value プロパティのみが設定されます。 Name プロパティが設定されていません。このクエリでは、パラメーターは位置指定であり、名前は必要ありません。  
   
- 既定で SqlXmlCommand オブジェクトの CommandType プロパティが**Sql**します。 したがって、このプロパティは明示的に設定しません。  
+ SqlXmlCommand オブジェクトの CommandType プロパティは、既定では**Sql**です。 したがって、このプロパティは明示的に設定しません。  
   
 > [!NOTE]  
 >  コードでは、接続文字列に Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンス名を含める必要があります。  
@@ -99,7 +99,7 @@ public static int Main(String[] args)
   
  この例をテストするには、コンピューターに [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework がインストールされている必要があります。  
   
- コマンド テキストとして SQL クエリを指定する代わりに、次のコード フラグメントのようなテンプレートを指定して、(同様にテンプレートとして提供されている) アップデートグラムを実行し、顧客レコードを挿入することもできます。 テンプレートとアップデートグラムはファイル内に指定し、ファイルとして実行できます。 詳細については、次を参照してください。 [CommandText プロパティを使用してテンプレート ファイルを実行する](executing-template-files-by-using-the-commandtext-property.md)します。  
+ コマンド テキストとして SQL クエリを指定する代わりに、次のコード フラグメントのようなテンプレートを指定して、(同様にテンプレートとして提供されている) アップデートグラムを実行し、顧客レコードを挿入することもできます。 テンプレートとアップデートグラムはファイル内に指定し、ファイルとして実行できます。 詳細については、「 [CommandText プロパティを使用したテンプレートファイルの実行](executing-template-files-by-using-the-commandtext-property.md)」を参照してください。  
   
 ```  
 SqlXmlCommand cmd = new SqlXmlCommand("Provider=SQLOLEDB;Data Source=SqlServerName;Initial Catalog=Database; Integrated Security=SSPI;");  
@@ -120,7 +120,7 @@ cmd = null;
 ```  
   
 ## <a name="using-executetostream"></a>ExecuteToStream の使用  
- 既存のストリームがある場合は、Stream オブジェクトを作成して、Execute メソッドを使用してではなく ExecuteToStream メソッドを使用できます。 前の例のコードを改訂され、ここで ExecuteToStream メソッドを使用します。  
+ 既存のストリームがある場合は、Stream オブジェクトを作成し、Execute メソッドを使用する代わりに、ExecuteToStream メソッドを使用できます。 前の例のコードは、次のように ExecuteToStream メソッドを使用するように改訂されています。  
   
 ```  
 using System;  
@@ -153,6 +153,6 @@ class Test
 ```  
   
 > [!NOTE]  
->  XmlReader オブジェクトを返す ExecuteXMLReadermethod を使用することもできます。 詳細については、次を参照してください。 [ExecuteXMLReader メソッドを使用して SQL クエリを実行する](executing-sql-queries-by-using-the-executexmlreader-method.md)します。  
+>  XmlReader オブジェクトを返す ExecuteXMLReadermethod を使用することもできます。 詳細については、「 [ExecuteXMLReader メソッドを使用した SQL クエリの実行](executing-sql-queries-by-using-the-executexmlreader-method.md)」を参照してください。  
   
   

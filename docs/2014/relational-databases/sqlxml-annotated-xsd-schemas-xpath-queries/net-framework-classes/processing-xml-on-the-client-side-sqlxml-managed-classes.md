@@ -1,5 +1,5 @@
 ---
-title: クライアント側の XML の処理 (SQLXML マネージ クラス) |マイクロソフトのドキュメント
+title: クライアント側での XML の処理 (SQLXML マネージクラス) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a75d9fb1d4f77cb41cfdc3578af675533fbb6bca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010806"
 ---
 # <a name="processing-xml-on-the-client-side-sqlxml-managed-classes"></a>クライアント側での XML の処理 (SQLXML マネージド クラス)
-  この例では、ClientSideXml プロパティの使用を示します。 サーバーで、アプリケーションによってストアド プロシージャが実行されると、 クライアント側でその結果 (2 列の行セット) が処理され、XML ドキュメントが生成されます。  
+  この例は、ClientSideXml プロパティの使用方法を示しています。 サーバーで、アプリケーションによってストアド プロシージャが実行されると、 クライアント側でその結果 (2 列の行セット) が処理され、XML ドキュメントが生成されます。  
   
- 次の GetContacts、ストアド プロシージャ**FirstName**と**LastName** AdventureWorks データベースの Person.Contact テーブル内の従業員のです。  
+ 次の GetContacts ストアドプロシージャは、AdventureWorks データベースの Person. Contact テーブルにある従業員の**FirstName**と**LastName**を返します。  
   
 ```  
 USE AdventureWorks  
@@ -38,7 +38,7 @@ WHERE LastName = @LastName
 Go  
 ```  
   
- この c# アプリケーションでは、ストアド プロシージャを実行し、CommandText 値を指定するときに、FOR XML AUTO オプションを指定します。 SqlXmlCommand オブジェクトの ClientSideXml プロパティを設定するアプリケーションでは、true に設定します。 これにより、前から存在するストアド プロシージャを実行して行セットを返すことができ、クライアント側で XML 変換を適用することができます。  
+ この C# アプリケーションは、ストアドプロシージャを実行し、CommandText 値を指定するために FOR XML AUTO オプションを指定します。 アプリケーションでは、SqlXmlCommand オブジェクトの ClientSideXml プロパティが true に設定されています。 これにより、前から存在するストアド プロシージャを実行して行セットを返すことができ、クライアント側で XML 変換を適用することができます。  
   
 > [!NOTE]  
 >  コードでは、接続文字列に Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンス名を含める必要があります。  
@@ -81,7 +81,7 @@ public static int Main(String[] args)
   
 ### <a name="to-test-the-application"></a>アプリケーションをテストするには  
   
-1.  ストアド プロシージャを作成します。  
+1.  ストアドプロシージャを作成します。  
   
 2.  この例で提供される C# コード (DocSample.cs) をフォルダーに保存します。 コードを編集し、適切なログインおよびパスワード情報を指定します。  
   

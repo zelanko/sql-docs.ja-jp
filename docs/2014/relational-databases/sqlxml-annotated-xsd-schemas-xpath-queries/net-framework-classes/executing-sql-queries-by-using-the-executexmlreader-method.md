@@ -1,5 +1,5 @@
 ---
-title: 示しますメソッドを使用して SQL クエリを実行します。マイクロソフトのドキュメント
+title: ExecuteXMLReader メソッドを使用して SQL クエリを実行する |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dfbd321e56d1df3b985ed7b89dde3a4b29d36c27
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66012528"
 ---
 # <a name="executing-sql-queries-by-using-the-executexmlreader-method"></a>ExecuteXMLReader メソッドを使用した、SQL クエリの実行
-  ExecuteToStream メソッドを使用するのではなく、示しますオブジェクトのメソッド、SqlXmlCommand コマンドを実行するために使用できます。 このメソッドは、さらに、結果は (この例では、要素名または属性名と値を印刷) の処理のために使用できる XmlReader オブジェクトを返します。  
+  ExecuteToStream メソッドを使用する代わりに、SqlXmlCommand オブジェクトの ExecuteXmlReader メソッドを使用してコマンドを実行できます。 このメソッドは、結果をさらに処理するために使用できる XmlReader オブジェクトを返します (この例では、要素名または属性名と値を出力します)。  
   
 > [!NOTE]  
 >  コードでは、接続文字列に Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンス名を含める必要があります。  
@@ -69,7 +69,7 @@ using System.Xml;
   
 1.  コンピューターに [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework がインストールされていることを確認します。  
   
-2.  フォルダー内には、このトピックの C# コード (DocSample.cs) が用意されていることを保存します。  
+2.  このトピックに記載されている C# コード (DocSample.cs) をフォルダーに保存します。  
   
 3.  コードをコンパイルします。 コマンド プロンプトでコードをコンパイルするには、次を使用します。  
   

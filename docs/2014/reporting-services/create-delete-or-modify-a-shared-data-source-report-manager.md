@@ -1,5 +1,5 @@
 ---
-title: 作成、削除、または共有データ ソースを変更 (レポート マネージャー) |Microsoft Docs
+title: 共有データソースを作成、削除、または変更する (レポートマネージャー) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c554215ba716a35f3e2851a5042be1989ee5648c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109611"
 ---
 # <a name="create-delete-or-modify-a-shared-data-source-report-manager"></a>共有データ ソースを作成、削除、または変更する (レポート マネージャー)
@@ -28,7 +28,7 @@ ms.locfileid: "66109611"
   
  次のアイコンは、レポート マネージャーのフォルダー階層内の共有データ ソースを示します。  
   
- ![共有データ ソースのアイコン](media/hlp-16datasource.png "共有データ ソースのアイコン")  
+ ![共有データソースのアイコン](media/hlp-16datasource.png "Shared data source icon")  
 共有データ ソースのアイコン  
   
 ### <a name="to-create-a-shared-data-source"></a>共有データ ソースを作成するには  
@@ -37,23 +37,27 @@ ms.locfileid: "66109611"
   
 2.  レポート マネージャーで **[コンテンツ]** ページに移動します。  
   
-3.  **[新しいデータ ソース]** をクリックします。 **[新しいデータ ソース]** ページが開きます。  
+3.  
+  **[新しいデータ ソース]** をクリックします。 
+  **[新しいデータ ソース]** ページが開きます。  
   
-4.  アイテムの名前を入力します。 名前は 1 文字以上で、文字で始まる必要があります。 特定の記号を含めることもできますが、スペースまたは ; ? : \@ & = + , $ / * \< > | " /.  
+4.  アイテムの名前を入力します。 名前は 1 文字以上で、文字で始まる必要があります。 特定の記号を含めることもできますが、スペースまたは ; ? : \@ & = +、$/* \< > |" /.  
   
 5.  必要に応じて説明を入力し、接続に関する情報をユーザーに提供します。 この説明は、レポート マネージャーの **[コンテンツ]** ページに表示されます。  
   
-6.  **[データ ソースの種類]** の一覧で、データ ソースから取得したデータの処理に使用するデータ処理拡張機能を指定します。  
+6.  
+  **[データ ソースの種類]** の一覧で、データ ソースから取得したデータの処理に使用するデータ処理拡張機能を指定します。  
   
-7.  **[接続文字列]** でレポート サーバーがデータ ソースへの接続に使用する接続文字列を指定します。 接続文字列には資格情報を指定しないことをお勧めします。  
+7.  [**接続文字列**] には、レポートサーバーがデータソースへの接続に使用する接続文字列を指定します。 接続文字列には資格情報を指定しないことをお勧めします。  
   
-     以下に、ローカルの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] データベースへの接続に使用する接続文字列の例を示します。  
+     次の例は、ローカル[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]データベースに接続するための接続文字列を示しています。  
   
     ```  
     data source=<localservername>; initial catalog=AdventureWorks2012  
     ```  
   
-8.  **[接続に使用する認証]** では、レポートが実行される際に資格情報を取得する方法を指定します。  
+8.  
+  **[接続に使用する認証]** では、レポートが実行される際に資格情報を取得する方法を指定します。  
   
     -   ユーザーにログオン名とパスワードを要求する場合は、 **[レポートの実行者により指定された資格情報]** をクリックします。 ユーザーが入力する資格情報を Windows 資格情報として使用するには、 **[データ ソースへの接続時に Windows 資格情報として使用する]** をクリックします。 ユーザー名とパスワードがデータベースの資格情報である場合は、このオプションを選択しないでください。  
   
@@ -70,13 +74,13 @@ ms.locfileid: "66109611"
     > [!NOTE]  
     >  [接続テスト] ボタンは、XML データ ソースの種類ではサポートされません。  
   
-10. **[OK]** をクリックします。  
+10. [**OK**] をクリックします。  
   
 ### <a name="to-modify-a-shared-data-source"></a>共有データ ソースを変更するには  
   
 1.  レポート マネージャーで [コンテンツ] ページに移動します。  
   
-2.  共有データ ソース アイテムに移動し、アイテムの上にマウス ポインターを移動して、ドロップダウン リストをクリックし、コンテキスト メニューから **[管理]** をクリックします。 **[プロパティ]** ページを開きます。  
+2.  共有データ ソース アイテムに移動し、アイテムの上にマウス ポインターを移動して、ドロップダウン リストをクリックし、コンテキスト メニューから **[管理]** をクリックします。 [**プロパティ**] ページが開きます。  
   
 3.  データ ソースを変更し、 **[適用]** をクリックします。  
   
@@ -88,19 +92,21 @@ ms.locfileid: "66109611"
   
          アイテムをクリックして開きます。 [全般プロパティ] ページが開きます。  
   
-         **[削除]** をクリックして、 **[OK]** をクリックします。  
+         
+  **[削除]** をクリックして、 **[OK]** をクリックします。  
   
-    -   **[コンテンツ]** ページで、削除するデータ ソースを含むフォルダーに移動します。  
+    -   
+  **[コンテンツ]** ページで、削除するデータ ソースを含むフォルダーに移動します。  
   
          アイテムの上にマウス ポインターを移動して、ドロップダウン リストをクリックし、コンテキスト メニューから **[削除]** をクリックします。  
   
          [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>参照  
- [データ接続、データ ソース、および Reporting Services の接続文字列](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
- [[コンテンツ] ページ (レポート マネージャー)](../../2014/reporting-services/contents-page-report-manager.md)   
- [共有データ ソースを作成、変更、および削除する (SSRS)](report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   
+ [Reporting Services のデータ接続、データソース、および接続文字列](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
+ [[コンテンツ] ページ &#40;レポートマネージャー&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [SSRS&#41;&#40;共有データソースを作成、変更、および削除します。](report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   
  [レポート データ ソースを管理する](report-data/manage-report-data-sources.md)   
- [レポートのデータ ソースのプロパティを構成する (レポート マネージャー)](report-data/configure-data-source-properties-for-a-report-report-manager.md)  
+ [レポート &#40;レポートマネージャーのデータソースプロパティの構成&#41;](report-data/configure-data-source-properties-for-a-report-report-manager.md)  
   
   

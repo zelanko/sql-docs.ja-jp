@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6554691ce8debb96d4b0ee350ef98d2bfc57f02c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011880"
 ---
 # <a name="non-xml-format-files-sql-server"></a>XML 以外のフォーマット ファイル (SQL Server)
@@ -26,7 +26,7 @@ ms.locfileid: "66011880"
   
  **このトピックの内容**  
   
--   [利点](#Benefits)  
+-   [メリット](#Benefits)  
   
 -   [XML 以外のフォーマット ファイルの構造](#Structure)  
   
@@ -52,18 +52,19 @@ ms.locfileid: "66011880"
   
  次の図は、XML 以外のフォーマット ファイルのサンプルの、フォーマット ファイル フィールドを示しています。  
   
- ![XML 以外の形式ファイルのフィールドの指定](../../database-engine/media/mydepart-fmt-ident-c.gif "XML 以外の形式ファイルのフィールドの指定")  
+ ![非 XML 形式ファイルのフィールドの指定](../../database-engine/media/mydepart-fmt-ident-c.gif "非 XML 形式ファイルのフィールドの指定")  
   
  " **バージョン** " フィールドおよび " **列の数** " フィールドは XML 以外のフォーマット ファイルごとに 1 つだけ存在します。 次の表で、各フィールドの意味を説明します。  
   
-|フォーマット ファイル フィールド|説明|  
+|フォーマット ファイル フィールド|[説明]|  
 |------------------------|-----------------|  
-|バージョン|このバージョン番号は **ではなく**bcp [!INCLUDE[tsql](../../includes/tsql-md.md)]だけで認識されます。 **bcp** ユーティリティのバージョン番号です。次の値があります。<br /><br /> 9.0 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 10.0 = [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]<br /><br /> 11.0 = [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]<br /><br /> 12.0 = [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]<br /><br /> 注:フォーマット ファイルの読み取りに使用される **bcp** ユーティリティ (Bcp.exe) のバージョンは、フォーマット ファイルの作成に使用されたバージョン、またはそれ以降のバージョンである必要があります。 たとえば、[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] の **bcp** では、[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] の **bcp** によって生成されるバージョン 10.0 のフォーマット ファイルを読み取ることができますが、[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] の **bcp** では、[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] の **bcp** によって生成されるバージョン 12.0 のフォーマット ファイルを読み取ることができません。|  
+|Version|このバージョン番号は **ではなく**bcp [!INCLUDE[tsql](../../includes/tsql-md.md)]だけで認識されます。 
+  **bcp** ユーティリティのバージョン番号です。次の値があります。<br /><br /> 9.0 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 10.0 = [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]<br /><br /> 11.0 = [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]<br /><br /> 12.0 = [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]<br /><br /> 注: フォーマット ファイルの読み取りに使用される **bcp** ユーティリティ (Bcp.exe) のバージョンは、フォーマット ファイルの作成に使用されたバージョン、またはそれ以降のバージョンである必要があります。 たとえば、[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] の **bcp** では、[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] の **bcp** によって生成されるバージョン 10.0 のフォーマット ファイルを読み取ることができますが、[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] の **bcp** では、[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] の **bcp** によって生成されるバージョン 12.0 のフォーマット ファイルを読み取ることができません。|  
 |列の数|データ ファイルのフィールドの数。 この数は、すべての行で同じである必要があります。|  
   
  他のフォーマット ファイル フィールドには、一括インポートまたは一括エクスポートされるデータ フィールドが記述されます。 各データ フィールドは、フォーマット ファイル内に個別の行を必要とします。 フォーマット ファイルの各行には、次の表で示すフォーマット ファイル フィールドの値が含まれます。  
   
-|フォーマット ファイル フィールド|説明|  
+|フォーマット ファイル フィールド|[説明]|  
 |------------------------|-----------------|  
 |**ホスト ファイル フィールドの順序**|データ ファイル内の各フィールドの位置を示す番号。 行の最初のフィールドは 1 になり、それ以降のフィールドにも順番に番号が付けられます。|  
 |**ホスト ファイル データ型**|データ ファイルの特定のフィールドに格納されているデータ型。 ASCII データ ファイルでは、SQLCHAR を使用します。ネイティブ形式のデータ ファイルでは、既定のデータ型を使用します。 詳細については、「 [bcp を使用したファイル ストレージ型の指定 &#40;SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)」を参照してください。|  
@@ -107,7 +108,7 @@ ms.locfileid: "66011880"
 -   [フォーマット ファイルを使用したテーブル列とデータ ファイル フィールドのマッピング &#40;SQL Server&#41;](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
 ## <a name="see-also"></a>参照  
- [bcp Utility](../../tools/bcp-utility.md)   
+ [bcp ユーティリティ](../../tools/bcp-utility.md)   
  [フォーマット ファイルの作成 &#40;SQL Server&#41;](create-a-format-file-sql-server.md)   
  [XML フォーマット ファイル &#40;SQL Server&#41;](xml-format-files-sql-server.md)   
  [データのインポートまたはエクスポート用のフォーマット ファイル &#40;SQL Server&#41;](format-files-for-importing-or-exporting-data-sql-server.md)  

@@ -1,5 +1,5 @@
 ---
-title: タスク 7:Excel でマスター データ マネージャーを使用して行った更新を表示 |Microsoft Docs
+title: 'タスク 7: Excel でマスターデータマネージャーを使用して行われた更新を表示する |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -11,26 +11,26 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b3ae997dfc2ea9b601a0d7a41a0d24c4cb9c426b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65489687"
 ---
-# <a name="task-7-viewing-updates-made-using-master-data-manager-in-excel"></a>タスク 7:Excel でマスター データ マネージャーを使用して行った更新を表示する
+# <a name="task-7-viewing-updates-made-using-master-data-manager-in-excel"></a>タスク 7: Excel でマスター データ マネージャーを使用して行った更新を表示する
   ここでは、Excel に MDS から更新されたデータが表示されることを確認します。  
   
-1.  持つ excel ウィンドウに切り替えます**Cleansed and Matched Suppliers**スプレッドシートを開きます。  
+1.  次に、クレンジングされ、一致する**業者**のスプレッドシートが開いている excel ウィンドウに切り替えます。  
   
-2.  クリックして**更新**リボンのボタンをクリックします。  
+2.  リボンの [**更新**] ボタンをクリックします。  
   
-     ![Excel - [マスター データ] タブのボタンを更新](../../2014/tutorials/media/et-viewupdatesmadeusingmdminexcel-01.jpg "Excel - [マスター データ] タブのボタンを更新")  
+     ![Excel - [マスター データ] タブの [更新] ボタン](../../2014/tutorials/media/et-viewupdatesmadeusingmdminexcel-01.jpg "Excel - [マスター データ] タブの [更新] ボタン")  
   
-3.  注意**名**(California、New York など) の表示、**状態**フィールドで、**コード**。  
+3.  [**都道府県**] フィールドに**名前**が表示されていることに**注意して**ください (カリフォルニア、ニューヨークなど)。  
   
-     ![Excel - 州のコードと名前を更新](../../2014/tutorials/media/et-viewupdatesmadeusingmdminexcel-02.jpg "Excel - 州のコードと名前が更新されました")  
+     ![Excel - 更新された州のコードと名前](../../2014/tutorials/media/et-viewupdatesmadeusingmdminexcel-02.jpg "Excel - 更新された州のコードと名前")  
   
-## <a name="next-step"></a>次の手順  
- [タスク 8:Excel で State エンティティの新しい値を追加します。](../../2014/tutorials/task-8-adding-a-new-value-for-state-entity-in-excel.md)  
+## <a name="next-step"></a>次のステップ  
+ [タスク 8: Excel で State エンティティに新しい値を追加する](../../2014/tutorials/task-8-adding-a-new-value-for-state-entity-in-excel.md)  
   
   

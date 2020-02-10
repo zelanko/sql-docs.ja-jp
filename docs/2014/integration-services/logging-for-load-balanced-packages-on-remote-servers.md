@@ -1,5 +1,5 @@
 ---
-title: リモート サーバー上でパッケージが分散負荷のログ記録 |Microsoft Docs
+title: リモートサーバー上の負荷分散パッケージのログ記録Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 64dec3a89b883d6b3234f65896bb89d3bfde5305
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057853"
 ---
 # <a name="logging-for-load-balanced-packages-on-remote-servers"></a>リモート サーバー上の負荷分散パッケージのログ記録
@@ -28,6 +28,6 @@ ms.locfileid: "66057853"
  パッケージでログ記録を有効にする方法については、「 [SQL Server Data Tools でパッケージのログ記録を有効にする](../../2014/integration-services/enable-package-logging-in-sql-server-data-tools.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [Integration Services &#40;SSIS&#41; のログ記録](performance/integration-services-ssis-logging.md)  
+ [SSIS&#41; ログ &#40;Integration Services](performance/integration-services-ssis-logging.md)  
   
   

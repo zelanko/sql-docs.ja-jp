@@ -15,13 +15,14 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: db039658fa292976062426268234d3978c1b32ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483002"
 ---
 # <a name="explicit-hierarchies-master-data-services"></a>明示的階層 (Master Data Services)
+  
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]の明示的階層は、1 つのエンティティからのメンバーを指定した任意の方法で整理します。 構造は不規則にすることができます。派生階層とは異なり、明示的階層はドメイン ベースの属性のリレーションシップに基づいていません。  
   
 ## <a name="consolidated-members-group-other-members"></a>他のメンバーをグループ化する統合メンバー  
@@ -30,7 +31,7 @@ ms.locfileid: "65483002"
  明示的階層は不規則で、階層は異なるレベルで同時に終了できます。 各統合メンバーの下位に統合メンバーとリーフ メンバーを無制限に含めることも、まったく含めないこともできます。 リーフ メンバーは、単一の統合メンバーの下位に含めることも、複数レベルの統合メンバーの下位に含めることもできます。  
   
 > [!NOTE]  
->  明示的階層を作成するには、明示的階層でエンティティを有効にしておく必要があります。 詳細については、次を参照してください。[明示的階層およびコレクションに対してエンティティを有効にする&#40;Master Data Services&#41;](enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)します。  
+>  明示的階層を作成するには、明示的階層でエンティティを有効にしておく必要があります。 詳細については、「[明示的階層とコレクションのエンティティの有効化 &#40;マスターデータサービス&#41;](enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)」を参照してください。  
   
 ## <a name="types-of-explicit-hierarchies"></a>明示的階層の種類  
  明示的階層には、必須階層と任意階層の 2 種類があります。  
@@ -69,7 +70,7 @@ ms.locfileid: "65483002"
 |不規則になる場合がある|常に一定のレベル数を含む|  
   
 ## <a name="explicit-hierarchy-example"></a>明示的階層の例  
- 次の例では、Product エンティティに以下のリーフ メンバーが含まれています。BK-M101 {Mountain-100}、BK-M201 {Mountain-200}、BK-M301 {Mountain-300}、BK-R150 {Road-150}、BK-R450 {Road-450}、BK-R650 {Road-650}。  
+ 次の例では、Product エンティティは、BK-M101 {Mountain-100}、BK-M201 {Mountain-200}、BK-M301 {Mountain-300}、BK-R150 {Road-150}、BK-R450 {Road-450}、および BK-R650 {Road-650} のリーフ メンバーを含みます。  
   
  これらのリーフ メンバーを特定の統合ポイントで集計するには、Product エンティティに統合メンバーを作成します。 リーフ メンバーを集計する階層ツリー内のレベルに、統合メンバーを挿入します。 統合メンバーを挿入するレベルについての制限はありませんが、各メンバー (リーフまたは統合) を使用できるのは 1 回のみです。  
   
@@ -81,16 +82,16 @@ ms.locfileid: "65483002"
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  
-|明示的階層とコレクションに対してエンティティを有効にする。|[明示的階層およびコレクションに対してエンティティを有効にする&#40;マスター データ サービス&#41;](enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)|  
-|新しく明示的階層を作成する。|[明示的階層を作成する (マスター データ サービス)](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)|  
-|既存の明示的階層の名前を変更する。|[明示的階層名を変更する (マスター データ サービス)](../../2014/master-data-services/change-an-explicit-hierarchy-name-master-data-services.md)|  
-|既存の明示的階層を削除する。|[明示的階層を削除する (マスター データ サービス)](../../2014/master-data-services/delete-an-explicit-hierarchy-master-data-services.md)|  
+|明示的階層とコレクションに対してエンティティを有効にする。|[明示的階層およびコレクションに対してエンティティを有効にする &#40;マスターデータサービス&#41;](enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)|  
+|新しく明示的階層を作成する。|[明示的階層 &#40;マスターデータサービスを作成し&#41;](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)|  
+|既存の明示的階層の名前を変更する。|[明示的階層名を変更する &#40;マスターデータサービス&#41;](../../2014/master-data-services/change-an-explicit-hierarchy-name-master-data-services.md)|  
+|既存の明示的階層を削除する。|[明示的階層 &#40;マスターデータサービスの削除&#41;](../../2014/master-data-services/delete-an-explicit-hierarchy-master-data-services.md)|  
 |||  
   
 ## <a name="related-content"></a>関連コンテンツ  
   
--   [派生階層 (マスター データ サービス)](../../2014/master-data-services/derived-hierarchies-master-data-services.md)  
+-   [派生階層 &#40;マスターデータサービス&#41;](../../2014/master-data-services/derived-hierarchies-master-data-services.md)  
   
--   [コレクション (マスター データ サービス)](../../2014/master-data-services/collections-master-data-services.md)  
+-   [コレクション &#40;マスターデータサービス&#41;](../../2014/master-data-services/collections-master-data-services.md)  
   
   

@@ -23,13 +23,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c52fa04c46ff41ce67094599a6a2f3f5074e8f03
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62873554"
 ---
-# <a name="data-compression"></a>Data Compression
+# <a name="data-compression"></a>データ圧縮
+  
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、行ストア インデックスおよびテーブルのための行およびページの圧縮がサポートされます。また、列ストアと、列ストアおよびインデックスのための列ストアの保存用圧縮もサポートされます。  
   
  行ストア テーブルおよびインデックスについては、データベースのサイズを小さくするためにデータ圧縮機能を使用してください。 領域を削減するだけでなく、データ圧縮を使用すると、データを格納するページ数が少なくなり、クエリがディスクから読み取る必要のあるページが少なくなるため、大量の I/O が発生する作業のパフォーマンスを向上できます。 ただし、アプリケーションとの間でデータが交換される間は、データの圧縮と圧縮解除のためデータベース サーバーで追加の CPU リソースが必要になります。 次のデータベース オブジェクトで行とページの圧縮を構成することができます。  
@@ -57,13 +58,13 @@ ms.locfileid: "62873554"
   
 -   データの圧縮に関する詳細情報は、Service Pack または今後のリリースで予告なしに変更されることがあります。  
   
--   圧縮は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのエディッションで使用できるわけではありません。 詳しくは「 [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)」をご覧ください。  
+-   圧縮は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディッションで使用できるわけではありません。 詳しくは「 [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)」をご覧ください。  
   
 -   圧縮は、システム テーブルには使用できません。  
   
 -   圧縮を使用すると、ページに格納できる行数が増えますが、テーブルまたはインデックスの最大行サイズは変更されません。  
   
--   最大行サイズに圧縮のオーバーヘッドを加えると最大行サイズが 8,060 バイトを超える場合、テーブルで圧縮を有効にすることはできません。 たとえば、列 c1 のあるテーブル`char(8000)`および c2`char(53)`追加の圧縮のオーバーヘッドが原因で圧縮することはできません。 vardecimal ストレージ形式を使用する場合は、この形式が有効になると行サイズのチェックが実行されます。 行とページの圧縮の場合は、オブジェクトが最初に圧縮されるときに行サイズのチェックが実行され、各行が挿入または変更されるときにもチェックされます。 圧縮では、次の 2 つのルールが適用されます。  
+-   最大行サイズに圧縮のオーバーヘッドを加えると最大行サイズが 8,060 バイトを超える場合、テーブルで圧縮を有効にすることはできません。 たとえば、c1`char(8000)`および c2`char(53)`という列を含むテーブルは、圧縮のオーバーヘッドが増加するため、圧縮できません。 vardecimal ストレージ形式を使用する場合は、この形式が有効になると行サイズのチェックが実行されます。 行とページの圧縮の場合は、オブジェクトが最初に圧縮されるときに行サイズのチェックが実行され、各行が挿入または変更されるときにもチェックされます。 圧縮では、次の 2 つのルールが適用されます。  
   
     -   固定長の型に対する更新が常に成功する必要があります。  
   
@@ -99,18 +100,19 @@ ms.locfileid: "62873554"
   
 -   大きな値のデータ型は、そのサイズが原因で、通常の行データとは別に特殊な目的のページに格納される場合があります。 データ圧縮は、別個に格納されているデータには使用できません。  
   
--   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] で vardecimal ストレージ形式を実装したテーブルは、アップグレード時にもその設定を保持します。 vardecimal ストレージ形式を使用するテーブルに行の圧縮を適用することができます。 ただし、行の圧縮は vardecimal ストレージ形式のスーパーセットなので、vardecimal ストレージ形式を保持する理由はありません。 vardecimal ストレージ形式と行の圧縮を組み合わせても、10 進値の圧縮は追加されません。 vardecimal ストレージ形式を使用するテーブルにページの圧縮を適用することができます。ただし、vardecimal ストレージ形式の列の圧縮が追加される可能性は低くなります。  
+-   
+  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] で vardecimal ストレージ形式を実装したテーブルは、アップグレード時にもその設定を保持します。 vardecimal ストレージ形式を使用するテーブルに行の圧縮を適用することができます。 ただし、行の圧縮は vardecimal ストレージ形式のスーパーセットなので、vardecimal ストレージ形式を保持する理由はありません。 vardecimal ストレージ形式と行の圧縮を組み合わせても、10 進値の圧縮は追加されません。 vardecimal ストレージ形式を使用するテーブルにページの圧縮を適用することができます。ただし、vardecimal ストレージ形式の列の圧縮が追加される可能性は低くなります。  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] は vardecimal ストレージ形式をサポートしていますが、行レベルの圧縮で同じ目的が果たされるので、vardecimal ストレージ形式は非推奨とされます。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
+    >  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]は、vardecimal ストレージ形式をサポートしています。ただし、行レベルの圧縮は同じ目的を達成するため、vardecimal ストレージ形式は非推奨とされます。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
 ## <a name="using-columnstore-and-columnstore-archive-compression"></a>列ストアおよび列ストアの保存用圧縮の使用  
   
 ||  
 |-|  
-|**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。|  
+|**に適用さ**れます: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]を通じて[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658))。|  
   
-### <a name="basics"></a>の基本操作  
+### <a name="basics"></a>基本  
  列ストア テーブルおよび列ストア インデックスは常に列ストア圧縮を使用して格納されます。 保存用圧縮と呼ばれる追加の圧縮機能を構成するによって、列ストアのデータ サイズをさらに小さくすることができます。  保存用圧縮を使用するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でデータに対して Microsoft Xpress 圧縮アルゴリズムを実行します。 次の種類のデータ圧縮を使用して、保存用圧縮を追加または削除します。  
   
 -   保存用圧縮で列ストア データを圧縮するには、`COLUMNSTORE_ARCHIVE` データ圧縮を使用します。  
@@ -119,7 +121,7 @@ ms.locfileid: "62873554"
   
  保存用圧縮を追加するには、REBUILD オプションと DATA COMPRESSION = COLUMNSTORE を指定して [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql) または [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql) を使用します。  
   
- 例 :  
+ 例:  
   
 ```  
 ALTER TABLE ColumnstoreTable1   
@@ -135,7 +137,7 @@ REBUILD PARTITION = ALL WITH (DATA_COMPRESSION =  COLUMNSTORE_ARCHIVE ON PARTITI
   
  保存用圧縮を削除して、データを列ストア圧縮に復元するには、REBUILD オプションと DATA COMPRESSION = COLUMNSTORE を指定して [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql) または [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql) を使用します。  
   
- 例 :  
+ 例:  
   
 ```  
 ALTER TABLE ColumnstoreTable1   
@@ -164,12 +166,12 @@ REBUILD PARTITION = ALL WITH (
   
  パフォーマンスは低下しますがストレージが少なくてすむため、頻繁にアクセスしないデータには便利です。 たとえば、各月のデータ用のパーティションがある場合、ほとんどアクティビティは最新の月のデータに対して実行されるため、古い月のデータをアーカイブして必要なストレージを削減できます。  
   
-### <a name="metadata"></a>メタデータ  
+### <a name="metadata"></a>Metadata  
  次のシステム ビューには、クラスター化インデックスのデータ圧縮に関する情報が含まれています。  
   
--   [sys.indexes &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql) -`type`と`type_desc`列に CLUSTERED COLUMNSTORE と NONCLUSTERED COLUMNSTORE が含まれています。  
+-   [&#40;transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql) -列と`type_desc`列には、 `type`クラスター化列ストアと非クラスター化列ストアが含まれます。  
   
--   [sys.partitions &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-partitions-transact-sql) -`data_compression`と`data_compression_desc`列には、COLUMNSTORE と COLUMNSTORE_ARCHIVE が含まれています。  
+-   [ `data_compression_desc` [transact-sql&#41;のパーティション &#40;](/sql/relational-databases/system-catalog-views/sys-partitions-transact-sql) ]-列と`data_compression`列には、列ストアと COLUMNSTORE_ARCHIVE が含まれます。  
   
  プロシージャ [sp_estimate_data_compression_savings &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql) は、列ストア インデックスに適用されません。  
   
@@ -251,15 +253,15 @@ REBUILD PARTITION = ALL WITH (
   
 -   圧縮を有効にすると、クエリ プランが変更される可能性があります。データの格納に使用されるページ数とページあたりの行数が異なるためです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [行の圧縮の実装](row-compression-implementation.md)   
  [ページの圧縮の実装](page-compression-implementation.md)   
  [Unicode 圧縮の実装](unicode-compression-implementation.md)   
- [CREATE PARTITION SCHEME &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-partition-scheme-transact-sql)   
- [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-partition-function-transact-sql)   
- [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql)   
- [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)   
+ [CREATE PARTITION SCHEME &#40;Transact-sql&#41;](/sql/t-sql/statements/create-partition-scheme-transact-sql)   
+ [CREATE PARTITION FUNCTION &#40;Transact-sql&#41;](/sql/t-sql/statements/create-partition-function-transact-sql)   
+ [CREATE TABLE &#40;Transact-sql&#41;](/sql/t-sql/statements/create-table-transact-sql)   
+ [ALTER TABLE &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-table-transact-sql)   
  [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)   
- [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)  
+ [ALTER INDEX &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-index-transact-sql)  
   
   

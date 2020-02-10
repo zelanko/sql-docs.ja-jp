@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e2eec829c3c8909bd318a86ecf35eedb9ac0f222
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010088"
 ---
 # <a name="filetables-sql-server"></a>FileTables (SQL Server)
@@ -27,7 +27,7 @@ ms.locfileid: "66010088"
   
  つまり、ファイルおよびドキュメントを FileTable と呼ばれる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の特殊なテーブルに保存しておき、ファイル システムに格納されているかのように、Windows アプリケーションからこれらのファイルおよびドキュメントにアクセスできるということです。このとき、クライアント アプリケーションに変更を加える必要はありません。  
   
- FileTable の機能は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の FILESTREAM テクノロジをベースとして構築されています。 FILESTREAM の詳細については、「[FILESTREAM &#40;SQL Server&#41;](filestream-sql-server.md)」を参照してください。  
+ FileTable の機能は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の FILESTREAM テクノロジをベースとして構築されています。 FILESTREAM の詳細については、「[FILESTREAM &#40;SQL Server&#41;](filestream-sql-server.md)」を参照してください。  
   
 ##  <a name="Goals"></a> FileTable 機能の利点  
  FileTable 機能の目的は、次のとおりです。  
@@ -82,23 +82,23 @@ ms.locfileid: "66010088"
 -   FileTable に対して、通常の [!INCLUDE[tsql](../../includes/tsql-md.md)] アクセスによってクエリおよび更新を実行することもできます。 また、FileTable は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理ツールや、バックアップなどの機能と統合されています。  
   
   
-##  <a name="additional"></a> FileTable の使用に関するその他の考慮事項  
+##  <a name="additional"></a>Filetable の使用に関するその他の注意点  
   
-###  <a name="DBA"></a> 管理上の注意点  
- **FILESTREAM と FileTable について**  
+###  <a name="DBA"></a>管理上の注意点  
+ **FILESTREAM と Filetable について**  
   
 -   FileTable は FILESTREAM とは別に構成します。 したがって、非トランザクション アクセスの有効化や FileTable の作成を行うことなく、FILESTREAM 機能を使用し続けることができます。  
   
 -   FileTable を介した場合を除き、FILESTREAM データへの非トランザクション アクセスは存在しません。 そのため、非トランザクション アクセスを有効にしても、既存の FILESTREAM 列およびアプリケーションの動作は影響を受けません。  
   
- **FileTable と非トランザクション アクセスについて**  
+ **Filetable と非トランザクションアクセスについて**  
   
 -   非トランザクション アクセスは、データベース レベルで有効または無効にできます。  
   
 -   非トランザクション アクセスをオフにしたり、読み取り専用または完全な読み取り/書き込みアクセスを有効にしたりすることによって、データベース レベルで非トランザクション アクセスを構成または調整することができます。  
   
   
-###  <a name="memory"></a> FileTable ではメモリ マップ ファイルはサポートされていません  
+###  <a name="memory"></a>Filetable では、メモリマップトファイルはサポートされていません  
  FileTable ではメモリ マップ ファイルはサポートされていません。 メモ帳とペイントの 2 つは、メモリ マップ ファイルを使用するアプリケーションの一般的な例です。 これらのアプリケーションを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と同じコンピューターで使用して、FileTable に保存されているファイルを開くことはできません。 ただし、これらのアプリケーションをリモート コンピューターで使用すると、メモリ マッピング機能が使用されないため、FileTable に保存されているファイルを開くことができます。  
   
   

@@ -8,10 +8,10 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 51f45290847444a1400f1d708755c6737a3b3f84
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65574788"
 ---
 # <a name="add-sql-server-reporting-services-report-viewer-web-part-to-a-sharepoint-page"></a>SQL Server Reporting Services レポート ビューアー Web パーツを SharePoint ページに追加する
@@ -22,7 +22,7 @@ ms.locfileid: "65574788"
 
 ![SharePoint ページのレポート ビューアー Web パーツ](media/sharepoint-report-viewer-web-part-on-page.png)
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 * レポートを正常に読み込むには、Kerberos 制約付き委任に対して Claims to Windows Token Service (C2WTS) を構成する必要があります。 C2WTS の構成方法については、「[Claims to Windows Token Service (C2WTS) と Reporting Services](../install-windows/claims-to-windows-token-service-c2wts-and-reporting-services.md)」を参照してください。
 
@@ -42,7 +42,7 @@ ms.locfileid: "65574788"
 
     ![Office リボンから Web パーツを挿入します。](media/sharepoint-insert-web-part.png)
 
-4. **[カテゴリ] で** [SQL Server Reporting Services (ネイティブ モード)] を選びます。 **[パーツ]** で **[レポート ビューアー]** を選びます。 **[追加]** を選びます。
+4. **[カテゴリ] で** [SQL Server Reporting Services (ネイティブ モード)] を選びます。 **[パーツ]** で **[レポート ビューアー]** を選びます。 その後、 **[追加]** を選択します。
 
     ![レポート ビューアー Web パーツを追加します。](media/sharepoint-report-viewer-web-part.png)
 
@@ -68,7 +68,7 @@ ms.locfileid: "65574788"
 
 ![SharePoint ページのレポート ビューアー Web パーツ](media/sharepoint-report-viewer-web-part-on-page.png)
 
-## <a name="considerations-and-limitations"></a>注意点と制限事項
+## <a name="considerations-and-limitations"></a>考慮事項と制限事項
 
 * レポート ビューアー Web パーツは、SharePoint 内の最新式ページでは使用できません。
 * Power BI レポートと Report Viewer Web パーツは併用できません。

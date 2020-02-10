@@ -14,13 +14,14 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 1e9f8d65e1a835af954952a64322f21a484a16f3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483340"
 ---
 # <a name="delete-a-version-master-data-services"></a>バージョンを削除する (マスター データ サービス)
+  
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、バージョンに関連付けられたマスター データが確実に不要になった場合には、そのバージョンを削除します。 バージョンを削除した後、関連するマスター データを取得することはできません。  
   
 > [!WARNING]  
@@ -29,11 +30,13 @@ ms.locfileid: "65483340"
 ## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
--   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースで mdm.viw_SYSTEM_SCHEMA_VERSION ビューを表示して mds.udpVersionDelete ストアド プロシージャを実行するための権限が必要です。 詳細については、「[データベース オブジェクト セキュリティ (マスター データ サービス)](database-object-security-master-data-services.md)」を参照してください。  
+-   
+  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースで mdm.viw_SYSTEM_SCHEMA_VERSION ビューを表示して mds.udpVersionDelete ストアド プロシージャを実行するための権限が必要です。 詳細については、「[データベース オブジェクト セキュリティ (マスター データ サービス)](database-object-security-master-data-services.md)」を参照してください。  
   
 ### <a name="to-delete-a-version"></a>バージョンを削除するには  
   
-1.  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] を開き、 [!INCLUDE[ssDE](../includes/ssde-md.md)] データベースの [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] インスタンスに接続します。  
+1.  
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] を開き、 [!INCLUDE[ssDE](../includes/ssde-md.md)] データベースの [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] インスタンスに接続します。  
   
 2.  mdm.viw_SYSTEM_SCHEMA_VERSION ビューを開きます。  
   
@@ -52,8 +55,8 @@ ms.locfileid: "65483340"
     > [!NOTE]  
     >  Web アプリケーションに変更が反映されるまで数分かかる場合があります。  
   
-## <a name="see-also"></a>関連項目  
- [バージョン (マスター データ サービス)](../../2014/master-data-services/versions-master-data-services.md)   
- [バージョンをコピーする (マスター データ サービス)](../../2014/master-data-services/copy-a-version-master-data-services.md)  
+## <a name="see-also"></a>参照  
+ [バージョン &#40;マスターデータサービス&#41;](../../2014/master-data-services/versions-master-data-services.md)   
+ [マスターデータサービス &#40;バージョンをコピー&#41;](../../2014/master-data-services/copy-a-version-master-data-services.md)  
   
   

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d93e6cfa3ce6e958b31c1156cd4fc5fa046ad5ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62872333"
 ---
 # <a name="create-a-database"></a>データベースの作成
@@ -32,9 +32,9 @@ ms.locfileid: "62872333"
   
      [前提条件](#Prerequisites)  
   
-     [推奨事項](#Recommendations)  
+     [Recommendations (推奨事項)](#Recommendations)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **以下を使用してデータベースを作成するには:**  
   
@@ -46,7 +46,7 @@ ms.locfileid: "62872333"
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
   
--   インスタンスには、最大 32,767 個のデータベースを指定できます [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスには、最大 32,767 個のデータベースを指定できます。  
   
 ###  <a name="Prerequisites"></a> 前提条件  
   
@@ -54,7 +54,7 @@ ms.locfileid: "62872333"
   
 ###  <a name="Recommendations"></a> 推奨事項  
   
--   [master](master-database.md) データベースは、ユーザー データベースが作成、変更、または削除されるたびにバックアップする必要があります。  
+-   [Master](master-database.md)データベースは、ユーザーデータベースが作成、変更、または削除されるたびにバックアップする必要があります。  
   
 -   データベースを作成する際に、データ ファイルのサイズは、データベースに記述されるデータの最大量を基に可能な限り大きく設定しておきます。  
   
@@ -69,18 +69,20 @@ ms.locfileid: "62872333"
   
 #### <a name="to-create-a-database"></a>データベースを作成するには  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のインスタンスに接続し、そのインスタンスを展開します。  
+1.  **オブジェクトエクスプローラー**で、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続し、そのインスタンスを展開します。  
   
-2.  **[データベース]** を右クリックし、 **[新しいデータベース]** をクリックします。  
+2.  [**データベース**] を右クリックし、[**新しいデータベース**] をクリックします。  
   
-3.  **[新しいデータベース]** ダイアログ ボックスで、データベース名を入力します。  
+3.  
+  **[新しいデータベース]** ダイアログ ボックスで、データベース名を入力します。  
   
 4.  すべての既定値をそのまま使用してデータベースを作成するには、 **[OK]** をクリックします。変更する場合は、次に示すオプションの手順を続けて行います。  
   
 5.  所有者名を変更するには、参照ボタン **[...]** をクリックし、別の所有者を選択します。  
   
     > [!NOTE]  
-    >  **以降のバージョンでは、すべてのユーザー データベースでフルテキストが有効になっているため、** [フルテキスト インデックスを使用する] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]オプションは常にオンに設定され、淡色表示されます。  
+    >  
+  **以降のバージョンでは、すべてのユーザー データベースでフルテキストが有効になっているため、** [フルテキスト インデックスを使用する] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]オプションは常にオンに設定され、淡色表示されます。  
   
 6.  プライマリ データ ファイルとトランザクション ログ ファイルの既定値を変更するには、 **[データベース ファイル]** グリッドで該当するセルをクリックし、新しい値を入力します。 詳細については、「 [データベースに対するデータ ファイルまたはログ ファイルの追加](add-data-or-log-files-to-a-database.md)」をご覧ください。  
   
@@ -90,13 +92,16 @@ ms.locfileid: "62872333"
   
 9. データベースのオプションを変更するには、 **[オプション]** ページをクリックし、データベースのオプションを変更します。 各オプションの詳細については、「[ALTER DATABASE の SET オプション &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)」を参照してください。  
   
-10. 新しいファイル グループを追加するには、 **[ファイル グループ]** ページをクリックします。 **[追加]** をクリックし、ファイル グループを表す新しい値を入力します。  
+10. 新しいファイル グループを追加するには、 **[ファイル グループ]** ページをクリックします。 
+  **[追加]** をクリックし、ファイル グループを表す新しい値を入力します。  
   
 11. 拡張プロパティをデータベースに追加するには、 **[拡張プロパティ]** ページをクリックします。  
   
-    1.  **[名前]** 列に、拡張プロパティを表す名前を入力します。  
+    1.  
+  **[名前]** 列に、拡張プロパティを表す名前を入力します。  
   
-    2.  **[値]** 列に、拡張プロパティのテキストを入力します。 たとえば、データベースを説明する 1 つ以上のステートメントを入力します。  
+    2.  
+  **[値]** 列に、拡張プロパティのテキストを入力します。 たとえば、データベースを説明する 1 つ以上のステートメントを入力します。  
   
 12. データベースを作成するには、 **[OK]** をクリックします。  
   
@@ -108,7 +113,13 @@ ms.locfileid: "62872333"
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、 `Sales`データベースを作成します。 PRIMARY キーワードが使用されていないので、最初のファイル (`Sales`_`dat`) がプライマリ ファイルになります。 `Sales`\_`dat` ファイルの SIZE パラメーターに MB も KB も指定されていないため、ファイルは MB を使用し、メガバイト単位で割り当てられます。 `Sales`\_`log` ファイルは、 `MB` パラメーターに `SIZE` サフィックスが明示的に指定されているため、メガバイト単位で割り当てられます。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、 `Sales`データベースを作成します。 PRIMARY キーワードが使用されていないので、最初のファイル (`Sales`_`dat`) がプライマリ ファイルになります。 
+  `Sales`
+  \_
+  `dat` ファイルの SIZE パラメーターに MB も KB も指定されていないため、ファイルは MB を使用し、メガバイト単位で割り当てられます。 
+  `Sales`
+  \_
+  `log` ファイルは、 `MB` パラメーターに `SIZE` サフィックスが明示的に指定されているため、メガバイト単位で割り当てられます。  
   
 ```sql  
 USE master ;  
@@ -132,9 +143,9 @@ GO
  詳細については、「[CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [データベース ファイルとファイル グループ](database-files-and-filegroups.md)   
+ [データベースファイルとファイルグループ](database-files-and-filegroups.md)   
  [データベースのデタッチとアタッチ &#40;SQL Server&#41;](database-detach-and-attach-sql-server.md)   
- [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
- [Add Data or Log Files to a Database](add-data-or-log-files-to-a-database.md)  
+ [ALTER DATABASE &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
+ [データベースに対するデータ ファイルまたはログ ファイルの追加](add-data-or-log-files-to-a-database.md)  
   
   

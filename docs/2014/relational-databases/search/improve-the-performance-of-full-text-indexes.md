@@ -18,16 +18,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 42aa89a111697f17f23613761eeeb462494bdd27
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011258"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>フルテキスト インデックスのパフォーマンスの向上
   フルテキスト インデックス作成とフルテキスト クエリのパフォーマンスは、メモリ、ディスク速度、CPU 速度、コンピューターのアーキテクチャなどのハードウェア リソースの影響を受けます。  
   
-##  <a name="causes"></a> パフォーマンスの問題の一般的な原因  
+##  <a name="causes"></a>パフォーマンスの問題の一般的な原因  
  フルテキスト インデックス作成のパフォーマンス低下の主な原因となるのは、ハードウェア リソースの制限です。  
   
 -   フィルター デーモン ホスト プロセス (fdhost.exe) または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセス (sqlservr.exe) の CPU 使用率が 100% に近くなっている場合は、CPU がボトルネックになっています。  
@@ -37,11 +37,13 @@ ms.locfileid: "66011258"
 -   物理メモリが不足している場合 (3 GB 以下) は、メモリがボトルネックになっている可能性があります。 物理メモリ上の制限は、すべてのシステムで発生する可能性があります。32 ビット システムでは、仮想メモリの不足が原因でフルテキスト インデックス作成に時間がかかることがあります。  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]以降の Full-Text Engine は sqlservr.exe の一部となったため、AWE メモリを使用できます。  
+    >  
+  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]以降の Full-Text Engine は sqlservr.exe の一部となったため、AWE メモリを使用できます。  
   
  システムにハードウェアのボトルネックがない場合、フルテキスト検索のインデックス作成パフォーマンスは、主に以下の条件に左右されます。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によるフルテキスト バッチの作成にかかる時間  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によるフルテキスト バッチの作成にかかる時間  
   
 -   フィルター デーモンがバッチを処理する速度  
   
@@ -55,14 +57,15 @@ ms.locfileid: "66011258"
   
   
   
-##  <a name="tuning"></a> フルテキスト インデックスのパフォーマンスのチューニング  
+##  <a name="tuning"></a>フルテキストインデックスのパフォーマンスのチューニング  
  フルテキスト インデックスのパフォーマンスを最大化するには、次に示すベスト プラクティスを実装します。  
   
--   すべてのプロセッサまたはコアを最大値を使用する設定[sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)'`max full-text crawl ranges`' に、システム上の Cpu の数。 構成オプションの詳細については、「 [max full-text crawl range サーバー構成オプション](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md)」を参照してください。  
+-   すべてのプロセッサまたはコアを最大限に使用する[](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)には`max full-text crawl ranges`、sp_configure ' ' をシステム上の cpu の数に設定します。 構成オプションの詳細については、「 [max full-text crawl range サーバー構成オプション](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md)」を参照してください。  
   
 -   ベース テーブルにクラスター化インデックスがあることを確認します。 クラスター化インデックスの最初の列には整数データ型を使用します。 GUID は使用しないようにしてください。 クラスター化インデックスで複数の範囲の作成を使用すると、作成速度を最大限に高めることができます。 フルテキスト キーとして機能する列は整数データ型にすることをお勧めします。  
   
--   [UPDATE STATISTICS](/sql/t-sql/statements/update-statistics-transact-sql) ステートメントを使用してベース テーブルの統計を更新します。 さらに重要な点は、クラスター化インデックスの統計や完全作成のフルテキスト キーを更新することです。 これにより、複数の範囲の作成によってテーブルに適切なパーティションが生成されるようになります。  
+-   
+  [UPDATE STATISTICS](/sql/t-sql/statements/update-statistics-transact-sql) ステートメントを使用してベース テーブルの統計を更新します。 さらに重要な点は、クラスター化インデックスの統計や完全作成のフルテキスト キーを更新することです。 これにより、複数の範囲の作成によってテーブルに適切なパーティションが生成されるようになります。  
   
 -   増分作成のパフォーマンスを強化するには、`timestamp` 列のセカンダリ インデックスを作成します。  
   
@@ -70,8 +73,8 @@ ms.locfileid: "66011258"
   
   
   
-##  <a name="full"></a> 完全作成のパフォーマンスのトラブルシューティング  
- パフォーマンスの問題を診断するには、フルテキスト クロール ログを調べます。 クロール ログの詳細については、「[フルテキスト インデックスの作成](../indexes/indexes.md)」を参照してください。  
+##  <a name="full"></a>完全作成のパフォーマンスのトラブルシューティング  
+ パフォーマンスの問題を診断するには、フルテキスト クロール ログを調べます。 クロール ログの詳細については、「 [フルテキスト インデックスの作成](../indexes/indexes.md)」を参照してください。  
   
  完全作成のパフォーマンスが不十分な場合は、次の順序でトラブルシューティングを行うことをお勧めします。  
   
@@ -85,12 +88,14 @@ ms.locfileid: "66011258"
   
 -   完全作成時に使用可能な物理メモリの量がゼロの場合、システム上の物理メモリのほとんどを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バッファー プールが消費している可能性があります。  
   
-     sqlservr.exe プロセスは、構成されている最大サーバー メモリ量に達するまで、バッファー プールで使用できるすべてのメモリを獲得しようとします。 `max server memory` の割り当てが大きすぎる場合は、fdhost.exe プロセスのメモリ不足や共有メモリの割り当ての失敗が発生することがあります。  
+     sqlservr.exe プロセスは、構成されている最大サーバー メモリ量に達するまで、バッファー プールで使用できるすべてのメモリを獲得しようとします。 
+  `max server memory` の割り当てが大きすぎる場合は、fdhost.exe プロセスのメモリ不足や共有メモリの割り当ての失敗が発生することがあります。  
   
     > [!NOTE]  
     >  マルチ CPU コンピューター上でのフルテキスト作成時、fdhost.exe または sqlservr.exe との間でバッファー プール メモリの競合が発生する場合があります。 その結果、共有メモリが不足すると、バッチの再試行、メモリ スラッシング、および fdhost.exe プロセスによるダンプが発生します。  
   
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バッファー プールの `max server memory` 値を適切に設定することにより、この問題を解決できます。 詳細については、このトピックの「フィルター デーモン ホスト プロセス (fdhost.exe) のメモリ要件の推定」を参照してください。 フルテキスト インデックスの作成に使用されるバッチのサイズを小さくすると、有効な場合があります。  
+     
+  `max server memory` バッファー プールの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 値を適切に設定することにより、この問題を解決できます。 詳細については、このトピックの「フィルター デーモン ホスト プロセス (fdhost.exe) のメモリ要件の推定」を参照してください。 フルテキスト インデックスの作成に使用されるバッチのサイズを小さくすると、有効な場合があります。  
   
 -   ページングの問題  
   
@@ -105,7 +110,7 @@ ms.locfileid: "66011258"
   
  フィルター デーモン ホストによって使用されるメモリ量 (バイト単位) は、次の式を使用して概算できます。  
   
- *number_of_crawl_ranges* \`ism_size'*max_outstanding_isms* \* 2  
+ *number_of_crawl_ranges* \`ism_size '*max_outstanding_isms* \* 2  
   
  この式の変数の既定値は次のとおりです。  
   
@@ -117,39 +122,39 @@ ms.locfileid: "66011258"
   
  fdhost.exe のメモリ要件の推定方法に関するガイドラインを、以下の表に示します。 この表の数式では次の値を使用します。  
   
--   *F*: fdhost.exe に必要なメモリの推定値 (MB 単位)。  
+-   *F*は、FDHOST (MB 単位) で必要とされるメモリの推定値です。  
   
--   *T*: システムで使用できる合計物理メモリ (MB 単位)。  
+-   *T*。システムで使用可能な合計物理メモリ (MB 単位) です。  
   
--   *M*、最適な`max server memory`設定します。  
+-   *M*。これは最適`max server memory`な設定です。  
   
 > [!IMPORTANT]  
->  数式に関する基本情報については、次を参照してください。 <sup>1</sup>、 <sup>2</sup>、および<sup>3</sup>、後述します。  
+>  数式に関する基本的な情報については、以下の「 <sup>1</sup>、 <sup>2</sup>、および<sup>3</sup>」を参照してください。  
   
-|プラットフォーム|MB-fdhost.exe のメモリ要件の推定*F*<sup>1</sup>|最大サーバー メモリの計算式*M*<sup>2</sup>|  
+|プラットフォーム|Fdhost のメモリ要件の推定 (MB)-*F*<sup>1</sup>|最大サーバーメモリを計算するための式-*M*<sup>2</sup>|  
 |--------------|---------------------------------------------------------------------|---------------------------------------------------------------|  
-|x86|_F_ **=** _クロール範囲の数_ **&#42;** 50|_M_ **= 最小 (** _T_ **、** 2000 **)- *`F`* -** 500|  
-|x64|_F_ **=** _クロール範囲の数_ **&#42;** 10 **&#42;** 8|_M_ **=** _T_ **-** _F_ **-** 500|  
+|x86|_F_ **=** _クロール範囲の数_ **&#42;** 50|_M_ **= 最小 (** _T_ **,** 2000 **)-*`F`* ** 500|  
+|x64|_F_ **=** _クロール範囲の数_ **&#42;** 10 **&#42;** 8|_M_ **=** __ T **-** __ F **-** 500|  
   
- <sup>1</sup>複数の完全作成が進行中である場合は、それぞれの fdhost.exe のメモリ要件の計算として個別に*F1*、 *F2*となります。 その後、*M* as _T_ **-** sigma **(** _F_i **)** で計算します。  
+ <sup>1</sup>複数の完全作成が進行中の場合は、それぞれの fdhost のメモリ要件を、 *F1*、 *F2*などのように個別に計算します。 次に、 *M*を_T_ **-** シグマ **(**_F_i **)** として計算します。  
   
- <sup>2</sup> 500 MB は、その他のプロセス、システムに必要なメモリの推定値です。 システムで追加の作業を実行している場合、適宜この値を大きくします。  
+ <sup>2</sup> 500 MB は、システム内の他のプロセスが必要とするメモリの推定値です。 システムで追加の作業を実行している場合、適宜この値を大きくします。  
   
- <sup>3</sup> .*ism_size* x64 8 MB と見なされますプラットフォーム。  
+ <sup>3</sup> .*ism_size*は、x64 プラットフォームでは 8 MB と見なされます。  
   
- **例:Fdhost.exe のメモリ要件の推定**  
+ **例 : fdhost.exe のメモリ要件の推定**  
   
  この例は、8 GM の RAM と 4 つのデュアル コア プロセッサを搭載した AMD64 コンピューターを対象としています。 最初の計算では、fdhost.exe に必要なメモリ (*F*) を推定します。 クロール範囲の数は `8`です。  
   
  `F = 8*10*8=640`  
   
- 次の計算の最適な値を取得する`max server memory` - *M*します。 *T*MB で、このシステムで使用できる物理メモリ合計*T*-は`8192`します。  
+ 次の計算では、 `max server memory` - *M*の最適な値を取得します。 ** このシステムで使用可能な合計物理*メモリ (MB*) は`8192`です。  
   
  `M = 8192-640-500=7052`  
   
- **例:最大サーバー メモリの設定**  
+ **例 : max server memory の設定**  
   
- この例では、 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)と[再構成](/sql/t-sql/language-elements/reconfigure-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)]を設定するステートメント`max server memory`に対して計算された値に*M*前の例, `7052`:  
+ この例では、 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)を使用し、前の例の*M*に対して計算され`7052`た値に設定`max server memory`するようにステートメントを[再構成](/sql/t-sql/language-elements/reconfigure-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)]します。  
   
 ```  
 USE master;  
@@ -160,7 +165,7 @@ RECONFIGURE;
 GO  
 ```  
   
- **Max server memory 構成オプションを設定するには**  
+ **max server memory 構成オプションを設定するには**  
   
 -   [サーバー メモリに関するサーバー構成オプション](../../database-engine/configure-windows/server-memory-server-configuration-options.md)  
   
@@ -179,7 +184,7 @@ GO
   
      次の表で、主な待機の種類について説明します。  
   
-    |待機の種類|説明|解決方法|  
+    |待機の種類|[説明]|解決方法|  
     |---------------|-----------------|-------------------------|  
     |PAGEIO_LATCH_SH (_EX または _UP)|IO がボトルネックとなっている可能性があります。この場合は通常、平均のディスク キューも長くなります。|別のディスクの別のファイル グループにフルテキスト インデックスを移動すると、IO のボトルネックを軽減できる場合があります。|  
     |PAGELATCH_EX (または _UP)|複数のスレッドが同じデータベース ファイルへの書き込みを試行し、多数の競合が発生している可能性があります。|フルテキスト インデックスが格納されているファイル グループにファイルを追加すると、このような競合を軽減できる場合があります。|  
@@ -198,22 +203,22 @@ GO
   
   
   
-##  <a name="filters"></a> フィルター処理によるインデックス作成パフォーマンスの低下のトラブルシューティング  
- Full-Text Engine では、フルテキスト インデックスを作成するときに、マルチスレッド フィルターとシングル スレッド フィルターの 2 種類のフィルターを使用します。 フィルター処理するドキュメントに応じて、マルチスレッド フィルターを使用する場合 ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Word 文書など) と、 シングル スレッド フィルターを使用する場合 (Adobe Acrobat Portable Document Format (PDF) ドキュメントなど) があります。  
+##  <a name="filters"></a>フィルター処理によるインデックス作成のパフォーマンスの低下のトラブルシューティング  
+ Full-Text Engine では、フルテキスト インデックスを作成するときに、マルチスレッド フィルターとシングル スレッド フィルターの 2 種類のフィルターを使用します。 フィルター処理するドキュメントに応じて、マルチスレッド フィルターを使用する場合 ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word 文書など) と、 シングル スレッド フィルターを使用する場合 (Adobe Acrobat Portable Document Format (PDF) ドキュメントなど) があります。  
   
  セキュリティ上の理由から、フィルターはフィルター デーモン ホスト プロセスによって読み込まれます。 サーバー インスタンスでは、マルチスレッド フィルターに対してはすべてマルチスレッド処理が使用され、シングル スレッド フィルターに対してはすべてシングル スレッド処理が使用されます。 マルチスレッド フィルターを使用するドキュメントにシングル スレッド フィルターを使用するドキュメントが埋め込まれていると、Full-Text Engine では埋め込まれたドキュメントに対してシングル スレッド処理を開始します。 たとえば、PDF ドキュメントが埋め込まれた Word 文書の場合、Full-Text Engine は、Word コンテンツに対してはマルチスレッド プロセスを使用し、PDF の内容に対してはシングル スレッド プロセスを開始します。 ただし、このような環境では、シングル スレッド フィルターが適切に機能しない場合があり、フィルター処理が不安定になることがあります。 このような埋め込みが通例であるような特定の状況では、不安定になった結果、フィルター処理がクラッシュすることもあります。 クラッシュが発生すると、エラーが発生したドキュメント (たとえば、PDF の内容が埋め込まれた Word 文書) がシングル スレッド フィルター処理に再ルーティングされます。 再ルーティングが頻繁に起こると、フルテキスト インデックス作成処理のパフォーマンスが低下します。  
   
- この問題を回避するには、コンテナー ドキュメント (この場合は Word) に対するフィルターとして、シングル スレッド フィルターを設定します。 フィルターのレジストリ値を変更して、特定のフィルターをシングル スレッド フィルターとして設定できます。 シングル スレッド フィルターとしてをマークするには、設定する必要があります、 **ThreadingModel**にフィルターの値はレジストリ`Apartment Threaded`します。 シングル スレッド アパートメントの詳細については、ホワイト ペーパー「 [COM スレッド モデルの概要と使用方法](https://go.microsoft.com/fwlink/?LinkId=209159)」を参照してください。  
+ この問題を回避するには、コンテナー ドキュメント (この場合は Word) に対するフィルターとして、シングル スレッド フィルターを設定します。 フィルターのレジストリ値を変更して、特定のフィルターをシングル スレッド フィルターとして設定できます。 フィルターをシングルスレッドフィルターとしてマークするには、フィルターの**ThreadingModel**レジストリ値をに`Apartment Threaded`設定する必要があります。 シングル スレッド アパートメントの詳細については、ホワイト ペーパー「 [COM スレッド モデルの概要と使用方法](https://go.microsoft.com/fwlink/?LinkId=209159)」を参照してください。  
   
   
   
 ## <a name="see-also"></a>参照  
- [サーバー メモリに関するサーバー構成オプション](../../database-engine/configure-windows/server-memory-server-configuration-options.md)   
- [max full-text crawl range サーバー構成オプション](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md)   
- [フルテキスト インデックスの作成](populate-full-text-indexes.md)   
- [フルテキスト インデックスの作成と管理](create-and-manage-full-text-indexes.md)   
- [sys.dm_fts_memory_buffers &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql)   
- [sys.dm_fts_memory_pools &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-pools-transact-sql)   
+ [サーバーメモリのサーバー構成オプション](../../database-engine/configure-windows/server-memory-server-configuration-options.md)   
+ [max フルテキストクロール範囲のサーバー構成オプション](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md)   
+ [フルテキストインデックスの作成](populate-full-text-indexes.md)   
+ [フルテキストインデックスの作成と管理](create-and-manage-full-text-indexes.md)   
+ [dm_fts_memory_buffers &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql)   
+ [dm_fts_memory_pools &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-pools-transact-sql)   
  [フルテキスト インデックスの作成のトラブルシューティング](troubleshoot-full-text-indexing.md)  
   
   

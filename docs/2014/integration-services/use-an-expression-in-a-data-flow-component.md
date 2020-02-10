@@ -1,5 +1,5 @@
 ---
-title: データ フロー コンポーネントで式を使用して |Microsoft Docs
+title: データフローコンポーネント | で式を使用するMicrosoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bc9f6c28e775cdbd21806172d7074e655fdd1545
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054820"
 ---
 # <a name="use-an-expression-in-a-data-flow-component"></a>データ フロー コンポーネントで式を使用する
@@ -34,13 +34,16 @@ ms.locfileid: "66054820"
   
 ### <a name="to-create-an-expression"></a>式を作成するには  
   
-1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で、目的のパッケージが含まれている [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
+1.  
+  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で、目的のパッケージが含まれている [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
   
 2.  ソリューション エクスプローラーで、パッケージをダブルクリックして開きます。  
   
-3.  [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーの **[制御フロー]** タブをクリックし、式を実装するデータ フローを含むデータ フロー タスクをクリックします。  
+3.  
+  [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーの **[制御フロー]** タブをクリックし、式を実装するデータ フローを含むデータ フロー タスクをクリックします。  
   
-4.  **[データ フロー]** タブをクリックし、 **[ツールボックス]** からデザイン画面に条件分割変換または派生列変換のいずれかをドラッグします。  
+4.  
+  **[データ フロー]** タブをクリックし、 **[ツールボックス]** からデザイン画面に条件分割変換または派生列変換のいずれかをドラッグします。  
   
 5.  緑色のコネクタをソースまたは変換から条件分割変換または派生列変換にドラッグします。  
   
@@ -48,27 +51,30 @@ ms.locfileid: "66054820"
   
 7.  左側のペインで **[変数]** を展開し、システム変数およびユーザー定義変数を表示します。また、 **[列]** を展開して、変換の入力列を表示します。  
   
-8.  右側のペインで **[数学関数]** 、 **[文字列関数]** 、 **[日付/時刻関数]** 、 **[NULL 関数]** 、 **[型キャスト]** 、および **[演算子]** を展開して、式の文法で用意されている関数、キャスト、および演算子にアクセスします。  
+8.  右側のペインで **[数学関数]**、 **[文字列関数]**、 **[日付/時刻関数]**、 **[NULL 関数]**、 **[型キャスト]**、および **[演算子]** を展開して、式の文法で用意されている関数、キャスト、および演算子にアクセスします。  
   
 9. 変換に応じて、次のいずれかの操作を実行し、式を作成します。  
   
-    -   **[条件分割変換エディター]** ダイアログ ボックスで、変数、列、関数、演算子、およびキャストを **[条件]** 列にドラッグします。 ドラッグする代わりに、 **[条件]** 列に式を直接入力することもできます。  
+    -   
+  **[条件分割変換エディター]** ダイアログ ボックスで、変数、列、関数、演算子、およびキャストを **[条件]** 列にドラッグします。 ドラッグする代わりに、 **[条件]** 列に式を直接入力することもできます。  
   
-    -   **[派生列変換エディター]** ダイアログ ボックスで、変数、列、関数、演算子、およびキャストを **[式]** 列にドラッグします。 ドラッグする代わりに、 **[式]** 列に式を直接入力することもできます。  
+    -   
+  **[派生列変換エディター]** ダイアログ ボックスで、変数、列、関数、演算子、およびキャストを **[式]** 列にドラッグします。 ドラッグする代わりに、 **[式]** 列に式を直接入力することもできます。  
   
         > [!NOTE]  
-        >  **[条件]** 列または **[式]** 列からフォーカスを外したときに、式テキストが強調表示された場合、式の文法が間違っていることを示します。  
+        >  
+  **[条件]** 列または **[式]** 列からフォーカスを外したときに、式テキストが強調表示された場合、式の文法が間違っていることを示します。  
   
-10. **[OK]** をクリックしてダイアログ ボックスを閉じます。  
+10. [**OK**] をクリックして、ダイアログ ボックスを終了します。  
   
     > [!NOTE]  
     >  式が有効でない場合、式に文法エラーがあることを示す警告が表示されます。  
   
-## <a name="see-also"></a>関連項目  
- [Integration Services &#40;SSIS&#41; 式](expressions/integration-services-ssis-expressions.md)   
- [Conditional Split Transformation](data-flow/transformations/conditional-split-transformation.md)   
- [Derived Column Transformation](data-flow/transformations/derived-column-transformation.md)   
- [[データ フロー タスク]](control-flow/data-flow-task.md)   
- [データ フロー](data-flow/data-flow.md)  
+## <a name="see-also"></a>参照  
+ [SSIS&#41; 式の Integration Services &#40;](expressions/integration-services-ssis-expressions.md)   
+ [条件分割変換](data-flow/transformations/conditional-split-transformation.md)   
+ [派生列変換](data-flow/transformations/derived-column-transformation.md)   
+ [データフロータスク](control-flow/data-flow-task.md)   
+ [Data Flow](data-flow/data-flow.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 階層 (マスター データ サービス) 内のメンバーの移動 |Microsoft Docs
+title: 階層内のメンバーを移動する (マスターデータサービス) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,48 +16,53 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 58b39d2dc660fd51d1ba21308ff056874a239731
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054088"
 ---
 # <a name="move-members-within-a-hierarchy-master-data-services"></a>階層内のメンバーを移動する (マスター データ サービス)
+  
   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で、階層内のメンバーを移動してその場所または親割り当てを変更します。  
   
 ## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
--   **[エクスプローラー]** 機能領域にアクセスする権限が必要です。  
+-   
+  **[エクスプローラー]** 機能領域にアクセスする権限が必要です。  
   
--   明示的階層の場合の最小値があります**Update**エンティティへのアクセスを許可します。  
+-   明示的階層の場合は、エンティティに対する**更新**権限が最低限必要です。  
   
--   派生階層での最小値があります**Update**モデルを任意のドメイン ベースの属性を階層内で使用します。  
+-   派生階層の場合、モデルと、階層で使用されるドメインベースの属性を**更新**する必要があります。  
   
 ### <a name="to-move-members-within-a-hierarchy"></a>階層内のメンバーを移動するには  
   
-1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] のホーム ページで、 **[モデル]** ボックスの一覧からモデルを選択します。  
+1.  
+  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] のホーム ページで、 **[モデル]** ボックスの一覧からモデルを選択します。  
   
-2.  **[バージョン]** ボックスの一覧からバージョンを選択します。  
+2.  
+  **[バージョン]** ボックスの一覧からバージョンを選択します。  
   
-3.  **[エクスプローラー]** をクリックします。  
+3.  
+  **[エクスプローラー]** をクリックします。  
   
-4.  ポイントして、メニュー バーから**階層**クリック*hierarchy_name*します。  
+4.  メニューバーの [**階層**] をポイントし、[ *hierarchy_name*] をクリックします。  
   
-5.  **階層**ペイン、階層がツリー構造で表示される場所を移動する各メンバーのチェック ボックスをクリックします。  
+5.  階層がツリー構造で表示されている [**階層**] ペインで、移動する各メンバーのチェックボックスをオンにします。  
   
-6.  上部にある、**階層**ウィンドウで、をクリックして**切り取り**します。  
+6.  **階層**ペインの上部にある [**切り取り**] をクリックします。  
   
-7.  **階層**ウィンドウにメンバーを移動するメンバーのチェック ボックスをクリックします。  
+7.  [**階層**] ペインで、メンバーの移動先となるメンバーのチェックボックスをオンにします。  
   
-8.  クリックして**貼り付け**します。  
+8.  [**貼り付け**] をクリックします。  
   
     > [!NOTE]  
     >  派生階層では、メンバーは同じレベルにのみ移動できます。 また、メンバーの並べ替え順序は変更できません。  
   
 ## <a name="see-also"></a>参照  
- [ステージング処理を使用して明示的階層メンバーの移動&#40;マスター データ サービス&#41;](add-update-and-delete-data-master-data-services.md)   
- [派生階層 (マスター データ サービス)](../../2014/master-data-services/derived-hierarchies-master-data-services.md)   
- [明示的階層 (マスター データ サービス)](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)  
+ [ステージングプロセス &#40;マスターデータサービスを使用して明示的階層メンバーを移動する&#41;](add-update-and-delete-data-master-data-services.md)   
+ [派生階層 &#40;マスターデータサービス&#41;](../../2014/master-data-services/derived-hierarchies-master-data-services.md)   
+ [明示的階層 &#40;マスターデータサービス&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)  
   
   

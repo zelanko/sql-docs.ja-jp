@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7db9b0b31d619dc77b537989bfbf281c276e95e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011311"
 ---
 # <a name="full-text-search-ddl-functions-stored-procedures-and-views"></a>フルテキスト検索の DDL、関数、ストアド プロシージャ、およびビュー
@@ -22,7 +22,7 @@ ms.locfileid: "66011311"
   
  非推奨のオブジェクトは含まれていません。  
   
- セマンティック検索をサポートするデータベース オブジェクトの一覧については、「 [セマンティック検索の DDL、関数、ストアド プロシージャ、およびビュー](../views/views.md)」を参照してください。  
+ セマンティック検索をサポートするデータベース オブジェクトの一覧については、「 [Semantic Search DDL, Functions, Stored Procedures, and Views](../views/views.md)」を参照してください。  
   
 ##  <a name="ddl"></a> Transact-SQL データ定義言語 (DDL) ステートメント  
   

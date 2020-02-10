@@ -15,14 +15,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6ca536125be481766e41c3665dd313d483160ae0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013274"
 ---
 # <a name="schema-caching-sqlxml-40"></a>スキーマのキャッシュ (SQLXML 4.0)
-  Microsoft SQL Server 2000 Web Release 1、Microsoft SQLXML 2.0、および SQLXML 3.0 の XML のサイド バイ サイドでインストール、すべてのバージョンでのキャッシュは、次のレジストリ キーを使用してスキーマを明示的に制御できます。  
+  Microsoft SQL Server 2000 Web Release 1、Microsoft SQLXML 2.0、SQLXML 3.0 の XML のサイド バイ サイド インストールで、次のレジストリ キーを使用すると、すべてのバージョンでスキーマのキャッシュを明示的に制御できます。  
   
  Web Release 1:  
   
@@ -45,21 +45,21 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SQLXML3\SchemaCacheSize
 > [!CAUTION]  
 >  [!INCLUDE[ssNoteRegistry](../../../includes/ssnoteregistry-md.md)]  
   
- サイド バイ サイドでインストールの詳細については、次を参照してください。 [SQLXML 4.0 SP1 の新](../../sqlxml/what-s-new-in-sqlxml-4-0-sp1.md)します。  
+ サイドバイサイドインストールの詳細については、「 [SQLXML 4.0 SP1 の新機能](../../sqlxml/what-s-new-in-sqlxml-4-0-sp1.md)」を参照してください。  
   
  スキーマをキャッシュすると、XPath クエリのパフォーマンスが大きく向上します。 マッピング スキーマに対して XPath クエリを実行すると、スキーマはメモリに格納され、必要なデータ構造がメモリ内で作成されます。 スキーマのキャッシュを設定している場合、スキーマはメモリに残るので、以降の XPath クエリのパフォーマンスが向上します。  
   
  スキーマのキャッシュ サイズは、レジストリに上のキーを追加することで設定できます。  
   
- スキーマ サイズは、使用可能なメモリ量と、使用しているスキーマ数に基づいて設定します。 既定の**SchemaCacheSize**サイズは 31 です。 設定した場合**SchemaCacheSize**高くより多くのメモリが使用されます。 スキーマのアクセスが遅い場合はキャッシュ サイズを増やし、メモリが少ない場合はキャッシュ サイズを減らします。  
+ スキーマ サイズは、使用可能なメモリ量と、使用しているスキーマ数に基づいて設定します。 既定の**Schemacachesize**サイズは31です。 **Schemacachesize**を大きく設定すると、より多くのメモリが使用されます。 スキーマのアクセスが遅い場合はキャッシュ サイズを増やし、メモリが少ない場合はキャッシュ サイズを減らします。  
   
- パフォーマンス上の理由をお勧め設定する**SchemaCacheSize**通常使用するスキーマのマッピングの数より大きい。 場合、スキーマの数を増やすと**SchemaCacheSize**が小さいするスキーマの数よりパフォーマンスが低下します。  
+ パフォーマンス上の理由から、 **Schemacachesize**は、通常使用するマッピングスキーマの数より大きい値に設定することをお勧めします。 スキーマの数が増えるにつれて、 **Schemacachesize**がスキーマの数より少ない場合は、パフォーマンスが低下します。  
   
 > [!NOTE]  
 >  スキーマへの変更は約 2 分経たないとキャッシュに反映されないため、開発時はスキーマをキャッシュしないことをお勧めします。  
   
 ## <a name="see-also"></a>参照  
- [テンプレートのキャッシュ&#40;SQLXML 4.0&#41;](template-caching-sqlxml-4-0.md)   
- [XSL のキャッシュ&#40;SQLXML 4.0&#41;](xsl-caching-sqlxml-4-0.md)  
+ [テンプレートのキャッシュ &#40;SQLXML 4.0&#41;](template-caching-sqlxml-4-0.md)   
+ [XSL キャッシュ &#40;SQLXML 4.0&#41;](xsl-caching-sqlxml-4-0.md)  
   
   

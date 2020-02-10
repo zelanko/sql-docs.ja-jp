@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 987907a70aa4d3c1aa6f2485f0812ef804fb1f6e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62870092"
 ---
-# <a name="mssqlserver12302"></a>MSSQLSERVER_12302
+# <a name="mssqlserver_12302"></a>MSSQLSERVER_12302
     
 ## <a name="details"></a>詳細  
   
@@ -35,7 +35,7 @@ ms.locfileid: "62870092"
 ## <a name="user-action"></a>ユーザーの操作  
  主キー制約の一部である列は更新しないでください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [インメモリ OLTP &#40;インメモリ最適化&#41;](../in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

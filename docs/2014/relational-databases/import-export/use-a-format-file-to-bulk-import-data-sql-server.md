@@ -14,20 +14,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 772dbb86188bf164a2e135f7bb9b71a1cc030745
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011766"
 ---
 # <a name="use-a-format-file-to-bulk-import-data-sql-server"></a>データの一括インポートでのフォーマット ファイルの使用 (SQL Server)
-  このトピックでは、一括インポート操作でのフォーマット ファイルの使用方法について説明します。 フォーマット ファイルでは、データ ファイルのフィールドがテーブルの列にマップされます。  XML 以外のフォーマット ファイルまたは XML フォーマット ファイルを使用して、データを一括インポートできます。この操作には、**bcp** コマンド、または[!INCLUDE[tsql](../../includes/tsql-md.md)] コマンドの BULK INSERT か INSERT ... SELECT * FROM OPENROWSET(BULK...) を使用します。  
+  このトピックでは、一括インポート操作でのフォーマット ファイルの使用方法について説明します。 フォーマット ファイルでは、データ ファイルのフィールドがテーブルの列にマップされます。  XML 以外のフォーマットファイルまたは XML フォーマットファイルを使用してデータを一括インポートするには、 **bcp**コマンド、または BULK INSERT または INSERT...SELECT * FROM OPENROWSET (BULK...)[!INCLUDE[tsql](../../includes/tsql-md.md)]コマンドを実行します。  
   
 > [!IMPORTANT]  
 >  Unicode 文字データ ファイルを操作するフォーマット ファイルの場合、すべての入力フィールドが Unicode テキスト文字列 (つまり、固定サイズの Unicode 文字列または終端文字が指定された Unicode 文字列) でなければなりません。  
   
 > [!NOTE]  
->  フォーマット ファイルに慣れていない場合は、次を参照してください。 [XML 以外のフォーマット ファイル&#40;SQL Server&#41; ](xml-format-files-sql-server.md)と[XML フォーマット ファイル&#40;SQL Server&#41;](xml-format-files-sql-server.md)します。  
+>  フォーマットファイルの詳細については、「 [Xml 以外のフォーマットファイル &#40;SQL Server&#41;](xml-format-files-sql-server.md)および[xml フォーマットファイル &#40;SQL Server&#41;](xml-format-files-sql-server.md)」を参照してください。  
   
 ## <a name="format-file-options-for-bulk-import-commands"></a>一括インポート コマンドのフォーマット ファイル オプション  
  次の表は、各一括インポート コマンドのフォーマット ファイル オプションを示しています。  
@@ -36,15 +36,15 @@ ms.locfileid: "66011766"
 |------------------------|-----------------------------------|  
 |BULK INSERT|FORMATFILE = '*format_file_path*'|  
 |INSERT ...SELECT * FROM OPENROWSET(BULK...)|FORMATFILE = '*format_file_path*'|  
-|**bcp** .**で**|**-f** *format_file*|  
+|**bcp** ...**in**|**-f** *format_file*|  
   
- 詳細については、「[bcp ユーティリティ](../../tools/bcp-utility.md)」、「[BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)」、または「[OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)」を参照してください。  
+ 詳細については、[bcp ユーティリティ](../../tools/bcp-utility.md)、[BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)」、または「[OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)」を参照してください。  
   
 > [!NOTE]  
->  SQLXML データを一括エクスポートまたは一括インポートするには、フォーマット ファイルで次のいずれかのデータ型を使用します。SQLCHAR または SQLVARYCHAR (データはクライアント コード ページまたは照合順序で暗黙的に指定されるコード ページで送られます)、SQLNCHAR または SQLNVARCHAR (データは Unicode として送られます)、SQLBINARY または SQLVARYBIN (データは変換なしで送られます)。  
+>  SQLXML データを一括エクスポートまたは一括インポートする場合、フォーマット ファイルのデータ型には、SQLCHAR または SQLVARYCHAR (データはクライアント コード ページまたは照合順序で暗黙的に指定されるコード ページで送られます)、SQLNCHAR または SQLNVARCHAR (データは Unicode として送られます)、SQLBINARY または SQLVARYBIN (データは変換なしで送られます) のいずれかを使用します。  
   
-## <a name="examples"></a>使用例  
- このセクションの例では、**bcp** コマンド、BULK INSERT ステートメント、および INSERT ...SELECT * FROM OPENROWSET(BULK...) ステートメントを使用してデータを一括インポートする場合のフォーマット ファイルの使用方法を示します。 一括インポートの例を実行する前に、サンプル テーブル、データ ファイル、およびフォーマット ファイルを作成する必要があります。  
+## <a name="examples"></a>例  
+ このセクションの例では、 **bcp**コマンドと BULK INSERT を使用して、フォーマットファイルを使用してデータを一括インポートする方法について説明します。SELECT * FROM OPENROWSET (BULK...) ステートメント。 一括インポートの例を実行する前に、サンプル テーブル、データ ファイル、およびフォーマット ファイルを作成する必要があります。  
   
 ### <a name="sample-table"></a>サンプル テーブル  
  次の例では、 **dbo** スキーマ内の [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] myTestFormatFiles **という名前のテーブルを** サンプル データベースに作成する必要があります。 このテーブルを作成するには、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] クエリ エディターで、次のコードを実行します。  
@@ -62,7 +62,7 @@ GO
 ```  
   
 ### <a name="sample-data-file"></a>サンプル データ ファイル  
- この例では、次のレコードが含まれているサンプル データ ファイル `myTestFormatFiles-c.Dat`を使用します。 このデータ ファイルを作成するには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows のコマンド プロンプトで次のように入力します。  
+ この例では、次のレコードが含まれているサンプル データ ファイル `myTestFormatFiles-c.Dat`を使用します。 このデータ ファイルを作成するには、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows のコマンド プロンプトで次のように入力します。  
   
 ```  
 10,Field2,Field3,Field4  
@@ -75,7 +75,8 @@ GO
  このセクションの例では、XML フォーマット ファイル `myTestFormatFiles-f-x-c.Xml` を使用する場合と、XML 形式以外のフォーマット ファイルを使用する場合があります。 どちらのフォーマット ファイルでも、文字データの形式と既定外のフィールド ターミネータ (,) を使用します。  
   
 #### <a name="the-sample-non-xml-format-file"></a>XML 形式以外のフォーマット ファイルのサンプル  
- 次の例では、 **bcp** を使用して、 `myTestFormatFiles` テーブルから XML フォーマット ファイルを生成します。 `myTestFormatFiles.Fmt` ファイルには、次の情報が格納されます。  
+ 次の例では、 **bcp** を使用して、 `myTestFormatFiles` テーブルから XML フォーマット ファイルを生成します。 
+  `myTestFormatFiles.Fmt` ファイルには、次の情報が格納されます。  
   
 ```  
 9.0  
@@ -86,7 +87,8 @@ GO
 4       SQLCHAR       0       100     "\r\n"   4     Col4         SQL_Latin1_General_CP1_CI_AS  
 ```  
   
- **format** オプションと共に **bcp** を使用して、このフォーマット ファイルを作成するには、Windows のコマンド プロンプトで次のように入力します。  
+ 
+  **format** オプションと共に **bcp** を使用して、このフォーマット ファイルを作成するには、Windows のコマンド プロンプトで次のように入力します。  
   
 ```  
 bcp AdventureWorks2012..MyTestFormatFiles format nul -c -t, -f myTestFormatFiles.Fmt -T  
@@ -96,7 +98,8 @@ bcp AdventureWorks2012..MyTestFormatFiles format nul -c -t, -f myTestFormatFiles
  フォーマット ファイルの作成方法の詳細については、「[フォーマット ファイルの作成 &#40;SQL Server&#41;](create-a-format-file-sql-server.md)」を参照してください。  
   
 #### <a name="the-sample-xml-format-file"></a>XML 形式のフォーマット ファイルのサンプル  
- 次の例では、 **bcp** を使用して、 `myTestFormatFiles` テーブルから XML フォーマット ファイルを生成します。 `myTestFormatFiles.Xml` ファイルには、次の情報が格納されます。  
+ 次の例では、 **bcp** を使用して、 `myTestFormatFiles` テーブルから XML フォーマット ファイルを生成します。 
+  `myTestFormatFiles.Xml` ファイルには、次の情報が格納されます。  
   
 ```  
 <?xml version="1.0"?>  
@@ -116,7 +119,8 @@ bcp AdventureWorks2012..MyTestFormatFiles format nul -c -t, -f myTestFormatFiles
 </BCPFORMAT>  
 ```  
   
- **format** オプションと共に **bcp** を使用して、このフォーマット ファイルを作成するには、Windows のコマンド プロンプトで次のように入力します。  
+ 
+  **format** オプションと共に **bcp** を使用して、このフォーマット ファイルを作成するには、Windows のコマンド プロンプトで次のように入力します。  
   
 ```  
 bcp AdventureWorks2012..MyTestFormatFiles format nul -c -t, -x -f myTestFormatFiles.Xml -T  
@@ -135,9 +139,10 @@ bcp AdventureWorks2012..myTestFormatFiles in C:\myTestFormatFiles-c.Dat -f C:\my
 >  このコマンドの詳細については、「[bcp ユーティリティ](../../tools/bcp-utility.md)」を参照してください。  
   
 ### <a name="using-bulk-insert"></a>BULK INSERT の使用  
- 次の例では、BULK INSERT を使用して、`myTestFormatFiles-c.Dat` データ ファイルから [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] サンプル データベース内の `HumanResources.myTestFormatFiles` テーブルにデータを一括インポートします。 この例では、XML 形式以外のフォーマット ファイル `MyTestFormatFiles.Fmt` を使用します。 既存のテーブル行は、データ ファイルのインポート前に削除されます。  
+ 次の例では、BULK INSERT を使用して、`myTestFormatFiles-c.Dat` データ ファイルから `HumanResources.myTestFormatFiles` サンプル データベース内の [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] テーブルにデータを一括インポートします。 この例では、XML 形式以外のフォーマット ファイル `MyTestFormatFiles.Fmt` を使用します。 既存のテーブル行は、データ ファイルのインポート前に削除されます。  
   
- [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] クエリ エディターで、次のコードを実行します。  
+ 
+  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] クエリ エディターで、次のコードを実行します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -156,9 +161,10 @@ GO
 >  この句の詳細については、「[BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)」を参照してください。  
   
 ### <a name="using-the-openrowset-bulk-rowset-provider"></a>OPENROWSET 一括行セット プロバイダーの使用  
- 次の例では、 `INSERT ... SELECT * FROM OPENROWSET(BULK...)` を使用して、 `myTestFormatFiles-c.Dat` データ ファイルのデータを `HumanResources.myTestFormatFiles` サンプル データベース内の `AdventureWorks` テーブルに一括インポートします。 この例では、XML 形式のフォーマット ファイル `MyTestFormatFiles.Xml`を使用します。 既存のテーブル行は、データ ファイルのインポート前に削除されます。  
+ 次の例では、`INSERT ... SELECT * FROM OPENROWSET(BULK...)` を使用して、`myTestFormatFiles-c.Dat` データ ファイルのデータを `HumanResources.myTestFormatFiles` サンプル データベース内の `AdventureWorks` テーブルに一括インポートします。 この例では、XML 形式のフォーマット ファイル `MyTestFormatFiles.Xml`を使用します。 既存のテーブル行は、データ ファイルのインポート前に削除されます。  
   
- [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] クエリ エディターで、次のコードを実行します。  
+ 
+  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] クエリ エディターで、次のコードを実行します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -184,19 +190,19 @@ DROP TABLE myTestFormatFiles
 >  OPENROWSET BULK 句の詳細については、「 [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)を使用) を示すことができます。  
   
 ## <a name="additional-examples"></a>その他の例  
- [フォーマット ファイルの作成 &#40;SQL Server&#41;](create-a-format-file-sql-server.md)  
+ [フォーマットファイル &#40;SQL Server を作成し&#41;](create-a-format-file-sql-server.md)  
   
- [フォーマット ファイルを使用したテーブル列のスキップ &#40;SQL Server&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md)  
+ [フォーマットファイルを使用してテーブル列をスキップする &#40;SQL Server&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md)  
   
- [フォーマット ファイルを使用したデータ フィールドのスキップ &#40;SQL Server&#41;](use-a-format-file-to-skip-a-data-field-sql-server.md)  
+ [フォーマットファイルを使用して、データフィールド &#40;SQL Server をスキップし&#41;](use-a-format-file-to-skip-a-data-field-sql-server.md)  
   
- [フォーマット ファイルを使用したテーブル列とデータ ファイル フィールドのマッピング &#40;SQL Server&#41;](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
+ [フォーマットファイルを使用して、テーブル列をデータファイルフィールド &#40;SQL Server にマップ&#41;](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
 ## <a name="see-also"></a>参照  
- [bcp Utility](../../tools/bcp-utility.md)   
+ [bcp ユーティリティ](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
- [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
- [XML 以外のフォーマット ファイル &#40;SQL Server&#41;](xml-format-files-sql-server.md)   
- [XML フォーマット ファイル &#40;SQL Server&#41;](xml-format-files-sql-server.md)  
+ [OPENROWSET &#40;Transact-sql&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
+ [XML 以外のフォーマットファイル &#40;SQL Server&#41;](xml-format-files-sql-server.md)   
+ [XML フォーマットファイル &#40;SQL Server&#41;](xml-format-files-sql-server.md)  
   
   

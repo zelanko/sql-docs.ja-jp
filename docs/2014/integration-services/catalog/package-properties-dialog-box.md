@@ -14,14 +14,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ab3cdf0079d0c01d95b73339e1fce8960658f93a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62836336"
 ---
 # <a name="package-properties-dialog-box"></a>[パッケージのプロパティ] ダイアログ ボックス
-  **[パッケージのプロパティ]** ダイアログ ボックスでは、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに格納されているパッケージのプロパティを表示できます。  
+  **[パッケージのプロパティ]** ダイアログ ボックスでは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに格納されているパッケージのプロパティを表示できます。  
   
  詳細については、「[Integration Services &#40;SSIS&#41; Packages](integration-services-ssis-server-and-catalog.md)」(Integration Services &#40;SSIS&#41; のパッケージ) を参照してください。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "62836336"
  **名前**  
  パッケージの名前が表示されます。  
   
- **[Identifier]**  
+ **識別子**  
  パッケージ ID を一覧表示します。  
   
  **エントリ ポイント**  
@@ -61,7 +61,7 @@ ms.locfileid: "62836336"
   
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] で親パッケージと子パッケージの両方に対してこのプロパティを設定するには、ソリューション エクスプローラーでパッケージを右クリックし、 **[エントリ ポイント パッケージ]** をクリックします。  
   
- **[説明]**  
+ **説明**  
  省略可能なパッケージの説明が表示されます。  
   
   

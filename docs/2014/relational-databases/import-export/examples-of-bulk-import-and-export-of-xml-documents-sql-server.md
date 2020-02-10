@@ -19,15 +19,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d60518f64bd44b9b2498c9d27711d47753b04cf9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011971"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>XML ドキュメントの一括インポートと一括エクスポートの例 (SQL Server)
     
-##  <a name="top"></a> 一括インポートの XML ドキュメントを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースまたは一括エクスポートしてから、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース。 このトピックではその両方の例を示します。  
+##  <a name="top"></a>XML ドキュメントは、データベースに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]一括インポートすることも、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースから一括エクスポートすることもできます。 このトピックではその両方の例を示します。  
   
  データ ファイルから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のテーブルまたはパーティション分割されていないビューにデータを一括インポートする場合、次の機能を使用できます。  
   
@@ -39,22 +39,22 @@ ms.locfileid: "66011971"
   
 -   INSERT ...SELECT * FROM OPENROWSET(BULK...)  
   
- 詳細については、次を参照してください[インポートおよび bcp ユーティリティを使用した一括データのエクスポート&#40;SQL Server&#41; ](import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)と[を使用して BULK INSERT または OPENROWSET の一括データのインポート&#40;一括しています.。&#41; &#40;SQL Server&#41;](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)します。  
+ 詳細については、「 [Bcp ユーティリティ&#41;SQL Server &#40;使用した一括データのインポートとエクスポート](import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)」を参照してください。[また、BULK INSERT または OPENROWSET&#40;bulk... &#41; &#40;SQL Server&#41;を使用](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)して一括データをインポートすることもできます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次に例を示します。  
   
--   A. [バイナリ バイト ストリームとして XML データの一括インポート](#binary_byte_stream)  
+-   A. [バイナリバイトストリームとしての XML データの一括インポート](#binary_byte_stream)  
   
--   B. [既存の行に XML データの一括インポート](#existing_row)  
+-   B. [既存の行への XML データの一括インポート](#existing_row)  
   
--   C. [一括を DTD を含むファイルから XML データのインポート](#file_contains_dtd)  
+-   C. [DTD を含むファイルからの XML データの一括インポート](#file_contains_dtd)  
   
--   D. [フォーマット ファイルを使用して明示的にフィールド ターミネータを指定します。](#field_terminator_in_format_file)  
+-   D. [フォーマットファイルを使用してフィールドターミネータを明示的に指定する](#field_terminator_in_format_file)  
   
 -   E. [XML データの一括エクスポート](#bulk_export_xml_data)  
   
-###  <a name="binary_byte_stream"></a> A. バイナリ バイト ストリームとして XML の一括インポートを行う  
+###  <a name="binary_byte_stream"></a>ある. バイナリ バイト ストリームとして XML の一括インポートを行う  
  適用するエンコード宣言が含まれているファイルから XML データの一括インポートを行うときは、OPENROWSET(BULK...) 句で SINGLE_BLOB オプションを指定します。 SINGLE_BLOB オプションが指定されていると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の XML パーサーは XML 宣言で指定されたエンコード体系に従ってデータをインポートします。  
   
 #### <a name="sample-table"></a>サンプル テーブル  
@@ -88,7 +88,7 @@ SELECT * FROM OPENROWSET(
    SINGLE_BLOB) AS x;  
 ```  
   
-#### <a name="remarks"></a>Remarks  
+#### <a name="remarks"></a>解説  
  この場合に SINGLE_BLOB を使用すると、XML エンコード宣言で指定されている XML ドキュメントのエンコードと、サーバーによって暗黙的に示されている文字列のコード ページとの不一致を回避できます。  
   
  NCLOB または CLOB データ型を使用した際にコード ページまたはエンコードの競合が発生する場合は、次のいずれかの操作を行う必要があります。  
@@ -99,9 +99,9 @@ SELECT * FROM OPENROWSET(
   
 -   データベースの照合順序の設定を Unicode 以外の XML エンコード体系に一致 (解決) させます。  
   
- [&#91;先頭に戻る&#93;](#top)  
+ [&#91;上&#93;](#top)  
   
-###  <a name="existing_row"></a> B. 既存の行に XML データの一括インポートを行う  
+###  <a name="existing_row"></a>B. 既存の行に XML データの一括インポートを行う  
  この例では `OPENROWSET` 一括行セット プロパイダを使用して、XML インスタンスを既存のサンプル テーブル `T`の 1 行または複数の行に追加します。  
   
 > [!NOTE]  
@@ -134,14 +134,15 @@ WHERE IntCol = 1;
 GO  
 ```  
   
- [&#91;先頭に戻る&#93;](#top)  
+ [&#91;上&#93;](#top)  
   
-###  <a name="file_contains_dtd"></a> C. DTD を含むファイルから XML データの一括インポートを行う  
+###  <a name="file_contains_dtd"></a>40u-c. DTD を含むファイルから XML データの一括インポートを行う  
   
 > [!IMPORTANT]  
 >  作業中の XML 環境で DTD (文書型定義) が特に必要ではない場合は、DTD のサポートを無効にしておくことをお勧めします。 DTD のサポートを有効にすると、使用しているサーバーが外部からの攻撃を受けやすくなり、サービス拒否攻撃の危険にさらされる場合があります。 DTD のサポートを有効にする必要がある場合は、信頼できる XML ドキュメントのみを処理することにより、このセキュリティ上のリスクを軽減できます。  
   
- [bcp](../../tools/bcp-utility.md) コマンドを使用して、DTD を含むファイルから XML データのインポートを試みた場合に、次に示すようなエラーが表示されることがあります。  
+ 
+  [bcp](../../tools/bcp-utility.md) コマンドを使用して、DTD を含むファイルから XML データのインポートを試みた場合に、次に示すようなエラーが表示されることがあります。  
   
  "SQLState = 42000, NativeError = 6359"  
   
@@ -178,15 +179,17 @@ INSERT T1
     OPENROWSET(Bulk 'c:\temp\Dtdfile.xml', SINGLE_BLOB) [rowsetresults];  
 ```  
   
- `INSERT` ステートメントの実行後、DTD が XML から分離され、テーブル `T1` に格納されます。  
+ 
+  `INSERT` ステートメントの実行後、DTD が XML から分離され、テーブル `T1` に格納されます。  
   
- [&#91;先頭に戻る&#93;](#top)  
+ [&#91;上&#93;](#top)  
   
-###  <a name="field_terminator_in_format_file"></a> D. フォーマット ファイルを使用してフィールド ターミネータを明示的に指定する  
+###  <a name="field_terminator_in_format_file"></a>A. フォーマット ファイルを使用してフィールド ターミネータを明示的に指定する  
  次の例では、XML ドキュメント `Xmltable.dat`を一括インポートする方法を示します。  
   
 #### <a name="sample-data-file"></a>サンプル データ ファイル  
- `Xmltable.dat` のドキュメントには 2 つの XML 値が、1 行に 1 つずつ含まれています。 最初の XML 値は UTF-16 でエンコードされており、2 番目の値は UTF-8 でエンコードされています。  
+ 
+  `Xmltable.dat` のドキュメントには 2 つの XML 値が、1 行に 1 つずつ含まれています。 最初の XML 値は UTF-16 でエンコードされており、2 番目の値は UTF-8 でエンコードされています。  
   
  このデータの内容を 16 進形式でダンプすると次のようになります。  
   
@@ -212,7 +215,7 @@ B7 EF BA B7 EF BF B8 C3-B8 3C 2F 72 6F 6F 74 3E  *.........</root>*
 ```  
   
 #### <a name="sample-table"></a>サンプル テーブル  
- XML ドキュメントの一括インポートまたは一括エクスポートを行う際には、いずれのドキュメントにも記述されていない [フィールド ターミネータ](specify-field-and-row-terminators-sql-server.md) を使用する必要があります。たとえば、一連の 4 つの Null (`\0`) の後に文字 `z`を付けた、 `\0\0\0\0z`などです。  
+ XML ドキュメントの一括インポートまたは一括エクスポートを行う場合は、どのドキュメントにも表示されない[フィールドターミネータ](specify-field-and-row-terminators-sql-server.md)を使用する必要があります。たとえば、一連の4つの null (`\0`) の後に文字`z`が`\0\0\0\0z`続きます。  
   
  この例では、サンプル テーブル `xTable` のフィールド ターミネータの使用方法を示します。 サンプル テーブルを作成するには、次の `CREATE TABLE` ステートメントを使用します。  
   
@@ -243,9 +246,9 @@ WITH (FORMATFILE = 'C:\Xmltable.fmt');
 GO  
 ```  
   
- [&#91;先頭に戻る&#93;](#top)  
+ [&#91;上&#93;](#top)  
   
-###  <a name="bulk_export_xml_data"></a> E. XML データの一括エクスポートを行う  
+###  <a name="bulk_export_xml_data"></a>つまり. XML データの一括エクスポートを行う  
  次の例では、 `bcp` を使用し、同じ XML フォーマット ファイルを使用して、前の例で作成されたテーブルから XML データの一括エクスポートを行います。 次の `bcp` コマンドで、 `<server_name>` と `<instance_name>` はプレースホルダーであり、適切な値との差し替えが必要です。  
   
 ```  
@@ -253,16 +256,18 @@ bcp bulktest..xTable out a-wn.out -N -T -S<server_name>\<instance_name>
 ```  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XML データがデータベース内に保存されるときに、 では XML エンコードが保存されません。 したがって、XML データをエクスポートするときは、XML フィールドの元のエンコードは使用できません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は XML データをエクスポートする際に UTF-16 エンコードを使用します。  
+>  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XML データがデータベース内に保存されるときに、 では XML エンコードが保存されません。 したがって、XML データをエクスポートするときは、XML フィールドの元のエンコードは使用できません。 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は XML データをエクスポートする際に UTF-16 エンコードを使用します。  
   
- [&#91;先頭に戻る&#93;](#top)  
+ [&#91;上&#93;](#top)  
   
 ## <a name="see-also"></a>参照  
  [INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/insert-transact-sql)   
- [SELECT 句 &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-clause-transact-sql)   
+ [SELECT 句 &#40;Transact-sql&#41;](/sql/t-sql/queries/select-clause-transact-sql)   
  [bcp ユーティリティ](../../tools/bcp-utility.md)   
- [データの一括インポートと一括エクスポート &#40;SQL Server&#41;](bulk-import-and-export-of-data-sql-server.md)   
+ [データ &#40;SQL Server&#41;の一括インポートと一括エクスポート](bulk-import-and-export-of-data-sql-server.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
- [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)  
+ [OPENROWSET &#40;Transact-sql&#41;](/sql/t-sql/functions/openrowset-transact-sql)  
   
   

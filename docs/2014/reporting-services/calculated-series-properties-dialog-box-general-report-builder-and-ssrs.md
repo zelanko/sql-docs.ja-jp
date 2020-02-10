@@ -1,5 +1,5 @@
 ---
-title: 計算系列のプロパティ ダイアログ ボックスの全般 (レポート ビルダーおよび SSRS) |Microsoft Docs
+title: '[全般] ([計算系列のプロパティ] ダイアログボックス) (レポートビルダーおよび SSRS) |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,22 +14,23 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d3f03857ebbd1d633d78a25437b1f7c03558c7e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109870"
 ---
 # <a name="calculated-series-properties-dialog-box-general-report-builder-and-ssrs"></a>[全般] ([計算系列のプロパティ] ダイアログ ボックス) (レポート ビルダーおよび SSRS)
+  
   **[計算系列のプロパティ]** ダイアログ ボックスの **[数式]** を選択すると、既存の系列データを入力として使用する組み込みの数式に基づいて計算される系列を追加または変更できます。  
   
-## <a name="options"></a>および  
- **[数式]**  
+## <a name="options"></a>オプション  
+ **数式**  
  グラフに適用する数式を選択します。 次のオプションがあります。  
   
--   平均  
+-   Mean  
   
--   中央  
+-   Median  
   
 -   ボリンジャー バンド  
   
@@ -55,10 +56,10 @@ ms.locfileid: "66109870"
   
 -   TRIX  
   
- **数式パラメーターの設定**  
+ **[数式パラメーターの設定]**  
  選択した数式のパラメーターを指定します。  
   
 ## <a name="see-also"></a>参照  
- [グラフ (レポート ビルダーおよび SSRS)](report-design/charts-report-builder-and-ssrs.md)  
+ [グラフ &#40;レポート ビルダーおよび SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)  
   
   

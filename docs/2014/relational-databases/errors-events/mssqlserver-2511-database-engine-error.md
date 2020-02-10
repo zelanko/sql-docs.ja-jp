@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1748e8b483eecee43da921bd268d419408924af3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62868967"
 ---
-# <a name="mssqlserver2511"></a>MSSQLSERVER_2511
+# <a name="mssqlserver_2511"></a>MSSQLSERVER_2511
     
 ## <a name="details"></a>詳細  
   
@@ -30,7 +30,7 @@ ms.locfileid: "62868967"
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|DBCC_KEYS_OUT_OF_ORDER|  
-|メッセージ テキスト|テーブル エラー:オブジェクト ID %d、インデックス ID %d、パーティション ID %I64d、アロケーション ユニット ID %I64d (型 %.*ls)。 ページ %S_PGID、スロット %d および %d のキーの順序が不正です。|  
+|メッセージ テキスト|テーブル エラー: オブジェクト ID %d、インデックス ID %d、パーティション ID %I64d、アロケーション ユニット ID %I64d (型 %.*ls)。 ページ %S_PGID、スロット %d および %d のキーの順序が不正です。|  
   
 ## <a name="explanation"></a>説明  
  指定したインデックスで順序が不正なキーが検出されました。 キーを含むページが壊れている可能性があります。  

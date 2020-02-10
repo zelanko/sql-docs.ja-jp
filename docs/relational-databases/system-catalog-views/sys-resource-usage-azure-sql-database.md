@@ -1,5 +1,5 @@
 ---
-title: sys.resource_usage (Azure SQL データベース) |Microsoft Docs
+title: resource_usage (Azure SQL Database) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.service: sql-database
@@ -20,37 +20,37 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 3be4ff07923759af53b929852d4dbaa4088a77f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67904422"
 ---
-# <a name="sysresourceusage-azure-sql-database"></a>sys.resource_usage (Azure SQL データベース)
+# <a name="sysresource_usage-azure-sql-database"></a>sys.resource_usage (Azure SQL データベース)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
     
 > [!IMPORTANT]
->  この機能はプレビュー状態にします。 機能を変更または将来のリリースで削除された可能性がありますので、この機能の特定の実装に依存関係をなりません。  
+>  この機能はプレビュー状態です。 この機能は将来のリリースで変更または削除される可能性があるので、この機能の具体的な実装への依存関係を導入しないでください。  
 > 
->  プレビュー状態で、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]運用チームには、この DMV のオンとオフのデータ収集が有効にすることがあります。  
+>  プレビュー状態の間、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] オペレーション チームは、この DMV のデータ収集をオフまたはオンにしている可能性があります。  
 > 
 >  -   有効になっていると、DMV は集計時点の現在のデータを返します。  
 > -   無効になっていると、DMV は古くなった可能性のある履歴データを返します。  
   
- 現在のサーバーでユーザー データベースのリソース使用状況データの時間単位の概要を提供します。 履歴データは 90 日間保持されます。  
+ 現在のサーバーにおけるユーザー データベースのリソース使用状況データの毎時の集計を返します。 履歴データは90日間保持されます。  
   
- 各ユーザー データベースの 1 行が 1 時間ごとの継続的な方法で。 場合でも、データベースがアイドルであった時間内に、1 つの行があるし、そのデータベースの usage_in_seconds の値は 0 になります。 記憶域使用率と SKU については、ロール アップ時間の適切にします。  
+ 各ユーザー データベースについて、毎時 1 行のデータが連続的に含まれます。 データベースがアイドル状態であった時間に対する行も含まれ、そのデータベースの usage_in_seconds 値は 0 になります。 対象時間のストレージの使用率および SKU 情報が適切にロール アップされます。  
   
-|[列]|データ型|説明|  
+|[列]|データ型|[説明]|  
 |-------------|---------------|-----------------|  
-|time|**datetime**|1 時間単位の時刻 (UTC)。|  
-|database_name|**nvarchar**|ユーザー データベースの名前。|  
-|sku|**nvarchar**|SKU の名前。 使用できる値を次に示します。<br /><br /> Web<br /><br /> 会社住所<br /><br /> 基本<br /><br /> Standard<br /><br /> Premium|  
-|usage_in_seconds|**int**|1 時間の間隔において使用された CPU 時間の合計。<br /><br /> 注:この列は非推奨 v11 と V12 には適用されません。 **値は常に 0 に設定します。**|  
-|storage_in_megabytes|**decimal**|データベースのデータ、インデックス、ストアド プロシージャ、およびメタデータを含む、1 時間の最大ストレージ サイズです。|  
+|time|**DATETIME**|1 時間単位の時刻 (UTC) です。|  
+|database_name|**nvarchar**|ユーザー データベースの名前です。|  
+|sku|**nvarchar**|SKU の名前です。 使用できる値を次に示します。<br /><br /> Web<br /><br /> 勤務先<br /><br /> Basic<br /><br /> Standard<br /><br /> Premium|  
+|usage_in_seconds|**int**|1 時間の間隔において使用された CPU 時間の合計。<br /><br /> 注: この列は V11 では非推奨とされており、V12 には適用されません。 **値は常に0に設定されます。**|  
+|storage_in_megabytes|**decimal**|対象時間内のストレージの最大サイズです。データベース データ、インデックス、ストアド プロシージャ、およびメタデータを含みます。|  
   
 ## <a name="permissions"></a>アクセス許可  
- このビューは、仮想に接続するアクセス許可を持つすべてのユーザー ロールに使用可能な**マスター**データベース。  
+ このビューは、仮想**master**データベースに接続するためのアクセス許可を持つすべてのユーザーロールで使用できます。  
   
   

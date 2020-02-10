@@ -11,39 +11,44 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 5bd144197379ed574ccd152fedf8089b311881be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483537"
 ---
 # <a name="change-the-order-of-attributes"></a>属性の順序の変更
+  
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、属性の順序を変更できます。  
   
 ## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
--   **[システム管理]** 機能領域にアクセスする権限が必要です。  
+-   [**システム管理**] 機能領域にアクセスするためのアクセス許可が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスター データ サービス&#41;](administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
+-   モデル管理者である必要があります。 詳細については、「 [管理者 (マスター データ サービス)](administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
   
 ### <a name="to-change-the-order-of-an-attribute"></a>属性の順序を変更するには  
   
-1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[システム管理]** をクリックします。  
+1.  
+  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で **[システム管理]** をクリックします。  
   
-2.  **[モデル ビュー]** ページのメニュー バーから **[管理]** をポイントして **[エンティティ]** をクリックします。  
+2.  
+  **[モデル ビュー]** ページのメニュー バーから **[管理]** をポイントして **[エンティティ]** をクリックします。  
   
-3.  **[エンティティのメンテナンス]** ページの **[モデル]** ボックスの一覧からモデルを選択します。  
+3.  
+  **[エンティティのメンテナンス]** ページの **[モデル]** ボックスの一覧からモデルを選択します。  
   
 4.  順序を変更する属性を含むエンティティの行をクリックします。  
   
-5.  **[選択したエンティティの編集]** をクリックします。  
+5.  
+  **[選択したエンティティの編集]** をクリックします。  
   
-6.  **エンティティの編集** ページの **リーフ メンバー属性**、または**統合メンバー属性**、または**コレクション属性**を選択しますこの属性の順序を変更し、上矢印または下矢印をその順序を変更 をクリックします。  
+6.  [**エンティティの編集**] ページの [**リーフメンバー属性**] または [**統合メンバー**属性] または [**コレクション属性**] で、順序を変更する属性を選択し、上矢印または下矢印をクリックして順序を変更します。  
   
-7.  クリックして**エンティティの保存**します。  
+7.  [**エンティティの保存**] をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [属性 (マスター データ サービス)](../../2014/master-data-services/attributes-master-data-services.md)  
+ [属性 &#40;マスターデータサービス&#41;](../../2014/master-data-services/attributes-master-data-services.md)  
   
   

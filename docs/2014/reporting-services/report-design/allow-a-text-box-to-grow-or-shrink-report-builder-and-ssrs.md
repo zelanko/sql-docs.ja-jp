@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b3aad6f25496384026e2550862b5babaf95bfd39
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106466"
 ---
 # <a name="allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs"></a>テキスト ボックスの拡大または縮小 (レポート ビルダーおよび SSRS)
@@ -27,7 +27,7 @@ ms.locfileid: "66106466"
   
 1.  テキスト ボックスを右クリックして、 **[テキスト ボックスのプロパティ]** をクリックします。  
   
-2.  **[全般]** タブをクリックします。  
+2.  **[General]** タブをクリックします。  
   
     -   テキスト ボックスがその内容に応じて縦に拡大されるようにするには、 **[高さの増加を許可する]** をオンにします。  
   

@@ -13,20 +13,20 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0aefc386d2da3cc17c7ed335a6438667b715d11a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62835149"
 ---
 # <a name="work-with-cdc-services"></a>CDC Service の操作
   CDC Service 構成コンソールを使用すると、新しい CDC サービスを作成したり、CDC 用の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースを準備したりできます。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **[SQL Server の準備]**  
  CDC Service 構成コンソールの右側にある **[アクション]** ペインで、このオプションを選択します。  
   
- または、 **[ローカルの CDC Service]** を右クリックして **[SQLServer の準備]** をクリックします。  
+ **[ローカルの CDC Service]** を右クリックして **[SQLServer の準備]** をクリックすることもできます。  
   
  [Oracle CDC 用 SQL Server インスタンスの準備] ダイアログ ボックスが表示されます。  
   

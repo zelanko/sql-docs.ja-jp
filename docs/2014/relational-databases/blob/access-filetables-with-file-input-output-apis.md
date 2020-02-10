@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cd43f430f43f31435df6fff71687136f4bd5f9e7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010356"
 ---
 # <a name="access-filetables-with-file-input-output-apis"></a>ファイル I/O API を使用した FileTable へのアクセス
@@ -25,7 +25,7 @@ ms.locfileid: "66010356"
 ##  <a name="accessing"></a> FileTable でのファイル I/O API の使用  
  FileTable を使用する際、多くの場合は Windows ファイル システムとファイル I/O API が利用されます。 FileTable は、さまざまなファイル I/O API を利用した非トランザクション アクセスをサポートしています。  
   
-1.  一般的に、ファイル I/O API は、ファイルまたはディレクトリの論理 UNC パスを取得することによって起動されます。 アプリケーションは、[GetFileNamespacePath &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getfilenamespacepath-transact-sql) 関数を含む [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用して、ファイルまたはディレクトリの論理パスを取得できます。 詳しくは、「 [Work with Directories and Paths in FileTables](work-with-directories-and-paths-in-filetables.md)」をご覧ください。  
+1.  一般的に、ファイル I/O API は、ファイルまたはディレクトリの論理 UNC パスを取得することによって起動されます。 アプリケーションは、[!INCLUDE[tsql](../../includes/tsql-md.md)]GetFileNamespacePath &#40;Transact-SQL&#41;[ 関数を含む ](/sql/relational-databases/system-functions/getfilenamespacepath-transact-sql) ステートメントを使用して、ファイルまたはディレクトリの論理パスを取得できます。 詳しくは、「 [Work with Directories and Paths in FileTables](work-with-directories-and-paths-in-filetables.md)」をご覧ください。  
   
 2.  次に、この論理パスを使用して、ファイルまたはディレクトリに対するハンドルを取得し、オブジェクトを操作します。 CreateFile()、CreateDirectory() など、サポート対象のファイル システム API 関数にパスを渡して、ファイルを作成したり、開いたり、ハンドルを取得したりできます。 そのハンドルを使用することで、データのストリーミング、ディレクトリの列挙と編成、ファイル属性の取得と設定、ファイルまたはディレクトリの削除などの操作を実行できます。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "66010356"
   
 ##  <a name="considerations"></a> FileTable へのファイル I/O アクセスに関するその他の注意点  
   
-###  <a name="vnn"></a> AlwaysOn 可用性グループでの仮想ネットワーク名 (VNN) の使用  
+###  <a name="vnn"></a>AlwaysOn 可用性グループでの Virtual Network 名 (Vnn) の使用  
  FILESTREAM データまたは FileTable データを格納するデータベースが AlwaysOn 可用性グループに属する場合、ファイル システム API を介した FILESTREAM データまたは FileTable データへのすべてのアクセスではコンピューター名ではなく仮想ネットワーク名 (VNN) を使用する必要があります。 詳細については、「[FILESTREAM および FileTable と AlwaysOn 可用性グループ &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/filestream-and-filetable-with-always-on-availability-groups-sql-server.md)」を参照してください。  
   
 ###  <a name="partial"></a> 部分更新  
@@ -102,7 +102,7 @@ ms.locfileid: "66010356"
   
 ##  <a name="funclist"></a> FileTable でサポートされているファイル システム機能  
   
-|機能|Supported|コメント|  
+|機能|サポートされています|説明|  
 |----------------|---------------|--------------|  
 |**oplock**|はい|レベル 2、レベル 1、バッチ、およびフィルターの各 oplock がサポートされます。|  
 |**拡張属性**|いいえ||  

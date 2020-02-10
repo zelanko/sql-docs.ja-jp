@@ -1,5 +1,5 @@
 ---
-title: パス コンポーネントを接続する |Microsoft Docs
+title: パスを使用してコンポーネントを連結する |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,18 +15,18 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1a75a9717345d1d0dc4c2fe30bf7fc441cb91ddc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060386"
 ---
 # <a name="connect-components-with-paths"></a>パスを使用してコンポーネントを連結する
-  パッケージ内にデータ フローを構築するには、[!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーにある **[データ フロー]** タブのデザイン画面を使用します。 データ フローにデータ フロー コンポーネントが 2 つ含まれる場合、変換元または変換からの出力を変換または変換先への入力に連結することで、これらのコンポーネントを連結できます。 2 つのデータ フロー コンポーネント間のコネクタは、パスと呼ばれます。  
+  パッケージ内にデータ フローを構築するには、 **デザイナーにある** [データ フロー] [!INCLUDE[ssIS](../includes/ssis-md.md)] タブのデザイン画面を使用します。 データ フローにデータ フロー コンポーネントが 2 つ含まれる場合、変換元または変換からの出力を変換または変換先への入力に連結することで、これらのコンポーネントを連結できます。 2 つのデータ フロー コンポーネント間のコネクタは、パスと呼ばれます。  
   
  次の図は、1 つの変換元コンポーネント、2 つの変換、1 つの変換先コンポーネント、およびこれらを連結するパスを持つ、簡単なデータ フローを示しています。  
   
- ![Data flow](media/mw-dts-08.gif "Data flow")  
+ ![データフロー](media/mw-dts-08.gif "データ フロー")  
   
  2 つのコンポーネントを連結したら、パスを移動するデータのメタデータおよびパスのプロパティを、 **[データ フロー パス エディター]** で表示できます。 詳細については、「 [Integration Services のパス](data-flow/integration-services-paths.md)」を参照してください。  
   
@@ -48,9 +48,9 @@ ms.locfileid: "66060386"
   
 -   [データ フローにデータ ビューアーを追加する](../../2014/integration-services/add-a-data-viewer-to-a-data-flow.md)  
   
-## <a name="see-also"></a>関連項目  
- [[データ フロー タスク]](control-flow/data-flow-task.md)   
- [データ フロー](data-flow/data-flow.md)   
+## <a name="see-also"></a>参照  
+ [データフロータスク](control-flow/data-flow-task.md)   
+ [データフロー](data-flow/data-flow.md)   
  [変換を使用してデータを変換する](data-flow/transformations/transform-data-with-transformations.md)   
  [データのエラー処理](data-flow/error-handling-in-data.md)  
   

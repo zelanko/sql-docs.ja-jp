@@ -1,5 +1,5 @@
 ---
-title: XPath クエリ (SQLXML 4.0) での軸の指定 |マイクロソフトのドキュメント
+title: XPath クエリでの軸の指定 (SQLXML 4.0) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,29 +19,30 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 81d671c834cfeb1bf1191c0d5cd4ace72741ff10
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010717"
 ---
 # <a name="specifying-axes-in-xpath-queries-sqlxml-40"></a>XPath クエリ内での軸の指定 (SQLXML 4.0)
   以下の例では、XPath クエリに軸を指定する方法を示します。  
   
- これらの例では、SampleSchema1.xml に格納されているマッピング スキーマに対して XPath クエリを指定しています。 このサンプル スキーマについては、次を参照してください。 [XPath の例のサンプル注釈付き XSD スキーマ&#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)します。  
+ これらの例では、SampleSchema1.xml に格納されているマッピング スキーマに対して XPath クエリを指定しています。 このサンプルスキーマの詳細については、「 [XPath のサンプルの注釈付き XSD スキーマの例 &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)」を参照してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-retrieve-child-elements-of-the-context-node"></a>A. コンテキスト ノードの子要素を取得する  
- 次の XPath クエリでは、すべてを選択、 **\<連絡先 >** コンテキスト ノードの子要素。  
+ 次の XPath クエリでは、コンテキストノードのすべての** \<Contact>** 子要素を選択します。  
   
 ```  
 /child::Contact  
 ```  
   
- クエリで`child`軸と`Contact`はノード テストです (場合は TRUE`Contact`は、 **\<要素 >** ノード、ため\<要素 > は、プライマリ ノード タイプに関連付けられている、`child`軸) です。  
+ このクエリでは`child` 、は軸で`Contact` 、はノードテストです (が`Contact` ** \<要素>** ノードの場合は TRUE \<、要素> は`child`軸に関連付けられているプライマリノード型であるため)。  
   
- `child` 軸は既定の軸です。 したがって、クエリは次のように指定できます。  
+ 
+  `child` 軸は既定の軸です。 したがって、クエリは次のように指定できます。  
   
 ```  
 /Contact  
@@ -49,7 +50,7 @@ ms.locfileid: "66010717"
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>マッピング スキーマに対して XPath クエリをテストするには  
   
-1.  コピー、[サンプル スキーマ コード](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)テキスト ファイルに貼り付けます。 SampleSchema1.xml として保存します。  
+1.  [サンプルスキーマコード](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)をコピーし、テキストファイルに貼り付けます。 SampleSchema1.xml として保存します。  
   
 2.  次のテンプレート (XPathAxesSampleA.xml) を作成し、SampleSchema1.xml を保存したディレクトリに保存します。  
   
@@ -69,7 +70,7 @@ ms.locfileid: "66010717"
   
 3.  SQLXML 4.0 テスト スクリプト (sqlxml4test.vbs) を作成し、それを使用してテンプレートを実行します。  
   
-     詳細については、次を参照してください。 [SQLXML 4.0 クエリの実行に ADO を使用する](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)します。  
+     詳細については、「ADO を使用した[SQLXML 4.0 クエリの実行](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)」を参照してください。  
   
  テンプレートを実行して得られる結果セットの一部を次に示します。  
   
@@ -84,15 +85,16 @@ ms.locfileid: "66010717"
 ```  
   
 ### <a name="b-retrieve-grandchildren-of-the-context-node"></a>B. コンテキスト ノードの孫を取得する  
- 次の XPath クエリでは、すべてを選択、 **\<順序 >** の子要素、 **\<顧客 >** コンテキスト ノードの子要素。  
+ 次の XPath クエリでは、 ** \<Customer>** 要素の子要素である、コンテキストノードの子要素を** \<>** すべて選択します。  
   
 ```  
 /child::Customer/child::Order  
 ```  
   
- クエリで`child`は、軸と`Customer`と`Order`はノード テストです (顧客と注文がある場合、これらのノード テストは TRUE **\<要素 >** ノード、ため、  **\<要素 >** ノードは、プライマリ ノードの`child`軸) です。 一致する各ノードに対して **\<顧客 >** 、一致するノード **\<注文 >** 結果に追加されます。 のみ **\<順序 >** が結果セットに返されます。  
+ このクエリでは`child` 、は軸`Customer` `Order`で、はノードテストです (これらのノードテストは、Customer と Order が** \<要素>** ノードである場合に TRUE になります。これは、 `child` ** \<要素>** ノードが軸のプライマリノードであるためです)。 ** \<顧客>** に一致するノードごとに、 ** \<Orders>** に一致するノードが結果に追加されます。 結果セットに返されるのは、 ** \<Order>** だけです。  
   
- `child` 軸は既定の軸です。 そのため、クエリは、として指定できます。  
+ 
+  `child` 軸は既定の軸です。 そのため、クエリは次のように指定できます。  
   
 ```  
 /Customer/Order  
@@ -100,7 +102,7 @@ ms.locfileid: "66010717"
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>マッピング スキーマに対して XPath クエリをテストするには  
   
-1.  コピー、[サンプル スキーマ コード](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)テキスト ファイルに貼り付けます。 SampleSchema1.xml として保存します。  
+1.  [サンプルスキーマコード](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)をコピーし、テキストファイルに貼り付けます。 SampleSchema1.xml として保存します。  
   
 2.  次のテンプレート (XPathAxesSampleB.xml) を作成し、ディレクトリに保存します。  
   
@@ -120,7 +122,7 @@ ms.locfileid: "66010717"
   
 3.  SQLXML 4.0 テスト スクリプト (sqlxml4test.vbs) を作成し、それを使用してテンプレートを実行します。  
   
-     詳細については、次を参照してください。 [SQLXML 4.0 クエリの実行に ADO を使用する](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)します。  
+     詳細については、「ADO を使用した[SQLXML 4.0 クエリの実行](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)」を参照してください。  
   
  テンプレートを実行して得られる結果セットの一部を次に示します。  
   
@@ -159,16 +161,16 @@ ms.locfileid: "66010717"
 </ROOT>  
 ```  
   
- XPath クエリが指定されている場合`Customer/Order/OrderDetail`、一致する各ノードから **\<顧客 >** に移動する、クエリ、 **\<順序 >** 要素。 一致する各ノードに対して **\<順序 >** 、クエリには、ノードが追加されます **\<OrderDetail >** 結果にします。 のみ **\<OrderDetail >** が結果セットに返されます。  
+ XPath クエリがとして指定`Customer/Order/OrderDetail`されている場合、 ** \<Customer>** 一致する各ノードから、クエリは** \<Order>** 要素に移動します。 また、 ** \<順序>** に一致するノードごとに、クエリによってノード** \<orderdetail>** が結果に追加されます。 結果セットに返されるのは** \<orderdetail>** だけです。  
   
-### <a name="c-use--to-specify-the-parent-axis"></a>C. .. を使用して parent 軸を指定する  
- 次のクエリでは、すべてを取得、 **\<順序 >** 要素の親が **\<顧客 >** を持つ要素を**CustomerID**属性1 の値。 クエリを使用して、`child`の親を検索する述語内の軸、 **\<順序 >** 要素。  
+### <a name="c-use--to-specify-the-parent-axis"></a>C. .. を使用して  parent 軸を指定する  
+ 次のクエリでは、 **CustomerID**属性値が1である親** \<Customer>** 要素を持つすべての** \<注文>** 要素を取得します。 このクエリでは`child` 、述語の軸を使用して、 ** \<Order>** 要素の親を検索します。  
   
 ```  
 /child::Customer/child::Order[../@CustomerID="1"]  
 ```  
   
- `child`軸は既定の軸。 そのため、クエリは、として指定できます。  
+ `child`軸は既定の軸です。 そのため、クエリは次のように指定できます。  
   
 ```  
 /Customer/Order[../@CustomerID="1"]  
@@ -181,11 +183,11 @@ ms.locfileid: "66010717"
 ```  
   
 > [!NOTE]  
->  XPath クエリ`/Order[../@CustomerID="1"]`の親が存在しないため、エラーが返されます **\<順序 >** します。 含まれているマッピング スキーマ内の要素である可能性がありますが **\<順序 >** 、XPath ですこれらのいずれかで開始していないその結果、 **\<順序 >** と見なされます、。ドキュメントの最上位の要素の型。  
+>  ** \<Order>** の`/Order[../@CustomerID="1"]`親が存在しないため、XPath クエリからエラーが返されます。 ** \<順序>** を含む要素がマッピングスキーマに存在する場合がありますが、XPath はそのいずれかで開始されていません。したがって、 ** \<注文>** は、ドキュメント内の最上位の要素の種類と見なされます。  
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>マッピング スキーマに対して XPath クエリをテストするには  
   
-1.  コピー、[サンプル スキーマ コード](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)テキスト ファイルに貼り付けます。 SampleSchema1.xml として保存します。  
+1.  [サンプルスキーマコード](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)をコピーし、テキストファイルに貼り付けます。 SampleSchema1.xml として保存します。  
   
 2.  次のテンプレート (XPathAxesSampleC.xml) を作成し、ディレクトリに保存します。  
   
@@ -205,7 +207,7 @@ ms.locfileid: "66010717"
   
 3.  SQLXML 4.0 テスト スクリプト (sqlxml4test.vbs) を作成し、それを使用してテンプレートを実行します。  
   
-     詳細については、次を参照してください。 [SQLXML 4.0 クエリの実行に ADO を使用する](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)します。  
+     詳細については、「ADO を使用した[SQLXML 4.0 クエリの実行](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)」を参照してください。  
   
  テンプレートを実行して得られる結果セットの一部を次に示します。  
   
@@ -246,15 +248,16 @@ ms.locfileid: "66010717"
 ```  
   
 ### <a name="d-specify-the-attribute-axis"></a>D. attribute 軸を指定する  
- 次の XPath クエリでは、すべてを選択、 **\<顧客 >** 、コンテキスト ノードの子要素を**CustomerID**属性 1 の値。  
+ 次の XPath クエリでは、 **CustomerID**属性値が1の、コンテキストノードのすべての** \<顧客>** 子要素を選択します。  
   
 ```  
 /child::Customer[attribute::CustomerID="1"]  
 ```  
   
- 述語で`attribute::CustomerID`、`attribute`軸と`CustomerID`はノード テストです (場合`CustomerID`ノード テストは TRUE、属性は、ため、 **\<属性 >** ノードのプライマリ ノードです`attribute`軸) です。  
+ `attribute::CustomerID`述語では、 `attribute`は軸`CustomerID`で、はノードテストです (が`CustomerID`属性の場合、ノードテストは TRUE になります。これは、 ** \<属性>** ノードが`attribute`軸のプライマリノードであるためです)。  
   
- `attribute` 軸は省略形 (@) で指定できます。また、`child` 軸は既定の軸なので、クエリから省略できます。  
+ 
+  `attribute` 軸は省略形 (@) で指定できます。また、`child` 軸は既定の軸なので、クエリから省略できます。  
   
 ```  
 /Customer[@CustomerID="1"]  
@@ -262,7 +265,7 @@ ms.locfileid: "66010717"
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>マッピング スキーマに対して XPath クエリをテストするには  
   
-1.  コピー、[サンプル スキーマ コード](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)テキスト ファイルに貼り付けます。 SampleSchema1.xml として保存します。  
+1.  [サンプルスキーマコード](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)をコピーし、テキストファイルに貼り付けます。 SampleSchema1.xml として保存します。  
   
 2.  次のテンプレート (XPathAxesSampleD.xml) を作成し、SampleSchema1.xml を保存したディレクトリに保存します。  
   
@@ -282,7 +285,7 @@ ms.locfileid: "66010717"
   
 3.  SQLXML 4.0 テスト スクリプト (sqlxml4test.vbs) を作成し、それを使用してテンプレートを実行します。  
   
-     詳細については、次を参照してください。 [SQLXML 4.0 クエリの実行に ADO を使用する](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)します。  
+     詳細については、「ADO を使用した[SQLXML 4.0 クエリの実行](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)」を参照してください。  
   
  テンプレートを実行して得られる結果セットの一部を次に示します。  
   

@@ -1,5 +1,5 @@
 ---
-title: SSIS パッケージの形式 |Microsoft Docs
+title: SSIS パッケージ形式 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f59ed0eee86f17fdda568caa5c1a1dc7252c6d9c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055349"
 ---
 # <a name="ssis-package-format"></a>SSIS パッケージの形式
-  最新のリリースの [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]では、形式の読み取りとパッケージの比較を容易にするために、パッケージの形式 (.dtsx file) に大幅な変更が加えられました。 変更の競合またはバイナリ形式で格納されている変更が含まれていないパッケージをより確実にマージできます。  
+  最新のリリースの [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]では、形式の読み取りとパッケージの比較を容易にするために、パッケージの形式 (.dtsx file) に大幅な変更が加えられました。 また、競合する変更やバイナリ形式での変更が含まれていないパッケージをより確実にマージすることもできます。  
   
- 最新の DTSX パッケージ ファイル形式を表示するを参照してください[ \[MS-DTSX\]:。データ変換サービス パッケージの XML ファイル形式の仕様](https://go.microsoft.com/fwlink/?LinkId=233251)します。  
+ 現在の .dtsx パッケージファイル形式を表示するには、「 [ \[\].dtsx: データ変換サービスパッケージの XML ファイル形式の仕様](https://go.microsoft.com/fwlink/?LinkId=233251)」を参照してください。  
   
  ファイル形式の変更の概要を次に示します。 これらの変更のコード例については、「 [SQL Server 2012 のパッケージ形式の変更](https://go.microsoft.com/fwlink/?LinkId=233255)」を参照してください。  
   
@@ -30,7 +30,8 @@ ms.locfileid: "66055349"
   
 -   他のオブジェクトで参照できるパッケージ内のほとんどのオブジェクトに、パッケージ XML で定義された `refId` 属性が割り当てられています。 系列 ID の代わりに `refID`が残っています。 系列 ID は今でもランタイム内で使用され、パッケージを読み込むと再生成されます。  
   
-     `refId` 値は、GUID または整数値よりも読みやすくわかりやすい一意の文字列です。 この文字列は、以前のリリースの [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]でパッケージ構成に使用されたパス値に似ています。  
+     
+  `refId` 値は、GUID または整数値よりも読みやすくわかりやすい一意の文字列です。 この文字列は、以前のリリースの [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]でパッケージ構成に使用されたパス値に似ています。  
   
      2 つのバージョンのパッケージ間の変更をマージする場合は、検索/置換操作で `refId` を使用して、そのオブジェクトへのすべての参照が正しく更新されたことを確認できます。  
   

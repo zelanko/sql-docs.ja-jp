@@ -1,5 +1,5 @@
 ---
-title: Raw ファイル ソース エディター ([列] ページ) |Microsoft Docs
+title: Raw ファイルソースエディター ([列] ページ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 95d4f56eccbde80eb01cdef781c0dcd29eabca1f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056498"
 ---
 # <a name="raw-file-source-editor-columns-page"></a>[生ファイル ソース エディター] ([列] ページ)
-  RAW ファイル ソースは、ファイルから生データを読み取ります。 データはソース ファイル固有の方法で表示されるため、変換の必要がなく、ほとんどの場合は解析の必要もありません。 詳細については、「 [RAW ファイル ソース](data-flow/raw-file-source.md)」を参照してください。  
+  RAW ファイル ソースは、ファイルから生データを読み取ります。 データはソース ファイル固有の方法で表示されるため、変換の必要がなく、ほとんどの場合は解析の必要もありません。 詳細については、「 [RAW ファイル ソース](data-flow/raw-file-source.md)」をご覧ください。  
   
   

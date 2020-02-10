@@ -1,5 +1,5 @@
 ---
-title: OData ソース エディター ([エラー出力] ページ) |Microsoft Docs
+title: '[OData ソースエディター] ([エラー出力] ページ) |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0578dcb98e34f06db155fd5c3f1438209d8b2687
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057291"
 ---
 # <a name="odata-source-editor-error-output-page"></a>[OData ソース エディター] ([エラー出力] ページ)
   **[OData ソース エディター]** ダイアログ ボックスの **[エラー出力]** ページを使用すると、エラー処理オプションを選択したり、エラー出力列のプロパティを設定したりできます。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **[入力または出力]**  
  データ ソースの名前を表示します。  
   
@@ -32,12 +32,12 @@ ms.locfileid: "66057291"
  **Error**  
  エラーが発生した場合に、障害を無視するか、行をリダイレクトするか、コンポーネントを失敗させるかを指定します。  
   
- **関連項目:** [データのエラー処理](data-flow/error-handling-in-data.md)  
+ **関連トピック:** [データのエラー処理](data-flow/error-handling-in-data.md)  
   
  **切り捨て**  
  切り捨てが発生したときの処理方法 (エラーを無視する、行をリダイレクトする、またはコンポーネントを失敗させる) を指定します。  
   
- **[説明]**  
+ **説明**  
  エラーの説明を表示します。  
   
  **[選択したセルに設定する値]**  
@@ -47,8 +47,8 @@ ms.locfileid: "66057291"
  選択したセルにエラー処理オプションを適用します。  
   
 ## <a name="see-also"></a>参照  
- [[OData ソース エディター] &#40;[接続] ページ&#41;](../../2014/integration-services/odata-source-editor-connection-page.md)   
- [[OData ソース エディター] &#40;[列] ページ&#41;](../../2014/integration-services/odata-source-editor-columns-page.md)   
+ [OData ソースエディター &#40;接続ページ&#41;](../../2014/integration-services/odata-source-editor-connection-page.md)   
+ [OData ソースエディター &#40;列のページ&#41;](../../2014/integration-services/odata-source-editor-columns-page.md)   
  [OData ソース](data-flow/odata-source.md)   
  [OData 接続マネージャー](connection-manager/odata-connection-manager.md)  
   

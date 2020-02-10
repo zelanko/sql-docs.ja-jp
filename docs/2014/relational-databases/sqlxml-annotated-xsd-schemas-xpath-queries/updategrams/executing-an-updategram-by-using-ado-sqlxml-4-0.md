@@ -1,5 +1,5 @@
 ---
-title: ADO (SQLXML 4.0) を使用してアップデート グラムの実行 |Microsoft Docs
+title: ADO を使用したアップデートグラムの実行 (SQLXML 4.0) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 54ee962310cb1ac41e442155a146afec8758c64f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014837"
 ---
 # <a name="executing-an-updategram-by-using-ado-sqlxml-40"></a>ADO を使用した、アップデートグラムの実行 (SQLXML 4.0)
@@ -26,19 +26,19 @@ ms.locfileid: "66014837"
   
  サンプル アプリケーションの処理は次のとおりです。  
   
--   **Conn**オブジェクト (**ADODB します。接続**) の実行中のインスタンスへの接続を確立[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]特定のサーバー コンピューターにします。  
+-   **Conn**オブジェクト (**ADODB接続**) 特定のサーバーコンピューター上にある実行[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中のインスタンスへの接続を確立します。  
   
--   **Cmd**オブジェクト (**ADODB.Command**) で確立された接続を実行します。  
+-   **Cmd**オブジェクト (**ADODB**) は、確立された接続で実行されます。  
   
 -   コマンド言語が DBGUID_MSSQLXML に設定されます。  
   
--   アップデート グラムがコマンド ストリームにコピーされます (**strmIn**)。  
+-   アップデートグラムはコマンドストリーム (**Strmin**) にコピーされます。  
   
--   設定されているコマンドの出力ストリーム、 **StrmOut**オブジェクト (**ADODB します。Stream**) が表示されるデータが返されます。  
+-   コマンドの出力ストリームは、 **Strmout**オブジェクト (ADODB) に設定され**ます。ストリーム**) が返されます。  
   
 -   最後にコマンド (アップデートグラム) が実行されます。  
   
- 次にサンプル コードを示します。  
+ 以下は、そのサンプル コードです。  
   
 ```vb  
 Private Sub Form_Load()  
@@ -182,7 +182,7 @@ End Sub
 ```  
   
 ## <a name="passing-parameters"></a>パラメーターの引き渡し  
- 上の Visual Basic アプリケーションでは、パラメーターを渡しません。 このアプリケーションで、 **ContactID**と**MiddleName**値は、アップデート グラムにパラメーター化された入力として渡されます。  
+ 上の Visual Basic アプリケーションでは、パラメーターを渡しません。 このアプリケーションでは、 **ContactID**と**MiddleName**の値がパラメーター化された入力としてアップデートグラムに渡されます。  
   
 ```vb  
 Private Sub Form_Load()  
