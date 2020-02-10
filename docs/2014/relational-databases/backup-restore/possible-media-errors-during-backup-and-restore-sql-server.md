@@ -24,17 +24,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 46b9fef97433609310169c98d8ffc623a21a10c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62876116"
 ---
 # <a name="possible-media-errors-during-backup-and-restore-sql-server"></a>バックアップ中および復元中に発生する可能性があるメディア エラー (SQL Server)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、エラーが検出されてもデータベースを復旧するオプションを選択できるようになりました。 エラー検出の重要なメカニズムとして、バックアップ チェックサムを任意で作成できるようになりました。バックアップ チェックサムは、バックアップ操作で生成して、復元操作で検証できます。 操作中にエラーを検出するかどうかと、エラー発生時に操作を停止するか続行するかを制御できます。 バックアップにバックアップ チェックサムが含まれている場合、RESTORE ステートメントおよび RESTORE VERIFYONLY ステートメントでエラーを検査できます。  
   
 > [!NOTE]  
->  ミラー化バックアップでは、メディア セットのコピー (ミラー) が最大で 4 つ作成され、メディアの破損によるエラーから復旧するために使用する代替コピーが提供されます。 詳細については、「 [Mirrored Backup Media Sets &#40;SQL Server&#41;](mirrored-backup-media-sets-sql-server.md)」を参照してください。  
+>  ミラー化バックアップでは、メディア セットのコピー (ミラー) が最大で 4 つ作成され、メディアの破損によるエラーから復旧するために使用する代替コピーが提供されます。 詳細については、「 [ミラー化バックアップ メディア セット &#40;SQL Server&#41;](mirrored-backup-media-sets-sql-server.md)」を参照してください。  
   
   
   
@@ -67,7 +67,7 @@ ms.locfileid: "62876116"
   
  エラー発生後に BACKUP 操作を続行する場合は、次の手順が実行されます。  
   
-1.  バックアップ メディア上のバックアップ セットに対し、エラーが存在するというフラグを設定し、**msdb** データベースの **suspect_pages** テーブルでそのページを追跡します。 詳細については、「[suspect_pages &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/suspect-pages-transact-sql)」を参照してください。  
+1.  バックアップ メディア上のバックアップ セットに対し、エラーが存在するというフラグを設定し、 **msdb** データベースの **suspect_pages** テーブルでそのページを追跡します。 詳細については、「[suspect_pages &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/suspect-pages-transact-sql)」を参照してください。  
   
 2.  SQL Server エラー ログにエラーを記録します。  
   

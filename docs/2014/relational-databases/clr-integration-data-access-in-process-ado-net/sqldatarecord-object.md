@@ -14,18 +14,20 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: c688d41a1f27c6f3d620e9395d2a908d9b9cddd1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62874681"
 ---
 # <a name="sqldatarecord-object"></a>SqlDataRecord オブジェクト
+  
   `SqlDataRecord` オブジェクトは、1 行のデータと、そのデータに関連するメタデータを表します。  
   
- マネージド ストアド プロシージャは、`SqlDataReader` からのものではない結果セットをクライアントに送信することがあります。 `SqlDataRecord` クラスを、`SendResultsStart` オブジェクトの `SendResultsRow` メソッド、`SendResultsEnd` メソッド、および `SqlPipe` メソッドと併用すると、ストアド プロシージャからクライアントにカスタム結果セットを送信できます。  
+ マネージド ストアド プロシージャは、`SqlDataReader` からのものではない結果セットをクライアントに送信することがあります。 
+  `SqlDataRecord` クラスを、`SendResultsStart` オブジェクトの `SendResultsRow` メソッド、`SendResultsEnd` メソッド、および `SqlPipe` メソッドと併用すると、ストアド プロシージャからクライアントにカスタム結果セットを送信できます。  
   
- 詳細については、次を参照してください。、`Microsoft.SqlServer.Server.SqlDataRecord`クラスの .NET Framework SDK ドキュメントのリファレンス ドキュメント。  
+ 詳細については、 `Microsoft.SqlServer.Server.SqlDataRecord` .NET Framework SDK のドキュメントのクラスリファレンスドキュメントを参照してください。  
   
 ## <a name="example"></a>例  
  次の例では、新しい従業員レコードを作成し、これを呼び出し元に返します。  

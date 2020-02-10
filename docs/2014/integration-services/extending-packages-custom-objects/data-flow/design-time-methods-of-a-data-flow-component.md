@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7d7d1a2d3b62578fc2fd627aea32112c218895d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62896262"
 ---
 # <a name="design-time-methods-of-a-data-flow-component"></a>データ フロー コンポーネントのデザイン時のメソッド
@@ -64,9 +64,10 @@ End Sub
  コンポーネントの開発者は、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProvideComponentProperties%2A> メソッドへの呼び出しで、カスタム プロパティ (<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100>) をコンポーネントに追加する必要があります。 カスタム プロパティにはデータ型プロパティがありません。 カスタム プロパティのデータ型は、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.Value%2A> プロパティに割り当てた値のデータ型によって設定されます。 ただし、カスタム プロパティに初期値を割り当てた後、別のデータ型の値を割り当てることはできません。  
   
 > [!NOTE]  
->  <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100> インターフェイスは、`Object` 型のプロパティ値を制限付きでサポートしています。 カスタム プロパティの値として格納できるオブジェクトは、文字列や整数などの単純型の配列のみです。  
+>  
+  <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100> インターフェイスは、`Object` 型のプロパティ値を制限付きでサポートしています。 カスタム プロパティの値として格納できるオブジェクトは、文字列や整数などの単純型の配列のみです。  
   
- 次の例に示すように、カスタム プロパティの <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.ExpressionType%2A> プロパティの値を、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSCustomPropertyExpressionType> 列挙値の `CPET_NOTIFY` に設定すると、カスタム プロパティでプロパティ式をサポートすることを指定できます。 ユーザーによって入力されたプロパティ式を処理または検証するためのコードを追加する必要はありません。 プロパティの既定値を設定し、値を検証し、値を読み取って正常に使用することができます。  
+ 次の例に示すように、カスタム プロパティの <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.ExpressionType%2A> プロパティの値を、`CPET_NOTIFY` 列挙値の <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSCustomPropertyExpressionType> に設定すると、カスタム プロパティでプロパティ式をサポートすることを指定できます。 ユーザーによって入力されたプロパティ式を処理または検証するためのコードを追加する必要はありません。 プロパティの既定値を設定し、値を検証し、値を読み取って正常に使用することができます。  
   
 ```csharp  
 IDTSCustomProperty100 myCustomProperty;  
@@ -80,7 +81,7 @@ Dim myCustomProperty As IDTSCustomProperty100
 myCustomProperty.ExpressionType = DTSCustomPropertyExpressionType.CPET_NOTIFY  
 ```  
   
- 使用して列挙体からのカスタム プロパティの値を選択するユーザーを制限することができます、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.TypeConverter%2A>プロパティ、という名前のパブリック列挙値が定義されているものとは、次の例で示した`MyValidValues`します。  
+ 次の例に示すように、 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.TypeConverter%2A>プロパティを使用すると、ユーザーが列挙からカスタムプロパティ値を選択できるように制限できます。この例では、 `MyValidValues`という名前のパブリック列挙型が定義されていることを前提としています。  
   
 ```csharp  
 IDTSCustomProperty100 customProperty = outputColumn.CustomPropertyCollection.New();  
@@ -136,7 +137,7 @@ customProperty.UITypeEditor = GetType(MyCustomTypeEditor).AssemblyQualifiedName
   
  詳細については、[MSDN ライブラリ](https://go.microsoft.com/fwlink/?LinkId=7022)の「UI 型エディターの実装」を参照してください。  
   
-![Integration Services のアイコン (小)](../../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。**<br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
+![Integration Services アイコン (小)](../../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services に関するページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
 ## <a name="see-also"></a>参照  
  [データ フロー コンポーネントの実行時のメソッド](run-time-methods-of-a-data-flow-component.md)  

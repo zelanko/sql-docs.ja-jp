@@ -1,5 +1,5 @@
 ---
-title: UDT データを操作する |Microsoft Docs
+title: UDT データの操作 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -30,17 +30,19 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 11aa57037a1ea92bd72ed2eaa581d34baff8a122
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62874310"
 ---
 # <a name="manipulating-udt-data"></a>UDT データの操作
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] には、UDT (ユーザー定義型) 列のデータを変更する際に特別な INSERT、UPDATE、または DELETE ステートメント構文は用意されていません。 [!INCLUDE[tsql](../../includes/tsql-md.md)] の CAST 関数または CONVERT 関数を使用して、ネイティブ データ型を UDT 型にキャストします。  
+  
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] には、UDT (ユーザー定義型) 列のデータを変更する際に特別な INSERT、UPDATE、または DELETE ステートメント構文は用意されていません。 
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] の CAST 関数または CONVERT 関数を使用して、ネイティブ データ型を UDT 型にキャストします。  
   
 ## <a name="inserting-data-in-a-udt-column"></a>UDT 列へのデータの挿入  
- 次[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントにサンプル データの 3 つの行を挿入、**ポイント**テーブル。 **ポイント**データ型は X と Y の整数値、UDT のプロパティとして公開されます。 CAST または CONVERT のいずれかの関数を使用して、コンマ区切りをキャストする必要があります X と Y 値を**ポイント**型。 最初の 2 つのステートメントでは、CONVERT 関数を使用して、文字列値を変換、**ポイント**型、および 3 番目のステートメントは、CAST 関数を使用します。  
+ 次[!INCLUDE[tsql](../../includes/tsql-md.md)]のステートメントでは、3行のサンプルデータを**Points**テーブルに挿入します。 **Point**データ型は、UDT のプロパティとして公開される X および Y 整数値で構成されます。 コンマ区切りの X 値と Y 値を**Point**型にキャストするには、cast 関数または CONVERT 関数のいずれかを使用する必要があります。 最初の2つのステートメントでは、CONVERT 関数を使用して文字列値を**Point**型に変換し、3番目のステートメントで CAST 関数を使用します。  
   
 ```  
 INSERT INTO dbo.Points (PointValue) VALUES (CONVERT(Point, '3,4'));  
@@ -55,14 +57,14 @@ INSERT INTO dbo.Points (PointValue) VALUES (CAST ('1,99' AS Point));
 SELECT ID, PointValue FROM dbo.Points  
 ```  
   
- 読みやすい形式で表示される出力を表示するを呼び出して、`ToString`のメソッド、**ポイント**UDT では、値を文字列表現に変換します。  
+ 出力を判読可能な形式で表示するには、 `ToString` **Point** UDT のメソッドを呼び出します。これにより、値が文字列形式に変換されます。  
   
 ```  
 SELECT ID, PointValue.ToString() AS PointValue   
 FROM dbo.Points;  
 ```  
   
- これには、次の結果が生成されます。  
+ これにより、次の結果が生成されます。  
   
 ```  
 IDPointValue  
@@ -82,7 +84,7 @@ SELECT ID, CONVERT(varchar, PointValue)
 FROM dbo.Points;  
 ```  
   
- **ポイント**UDT が個別に選択し、プロパティとして、X と Y 座標を公開します。 次の、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントでは、X 座標と Y 座標を個別に選択します。  
+ **Point** UDT は、X 座標と Y 座標をプロパティとして公開します。これを個別に選択できます。 次の、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントでは、X 座標と Y 座標を個別に選択します。  
   
 ```  
 SELECT ID, PointValue.X AS xVal, PointValue.Y AS yVal   
@@ -128,8 +130,8 @@ SELECT @PointValue.ToString() AS PointValue;
   
  変数の代入に SELECT ステートメントを使用した場合と SET ステートメントを使用した場合には異なる点が 1 つあります。SELECT ステートメントでは 1 つのステートメントで複数の変数に代入できますが、SET 構文では、1 つ変数に代入するごとに 1 つの SET ステートメントが必要になります。  
   
-## <a name="comparing-data"></a>データを比較します。  
- クラスを定義する際に、`IsByteOrdered` プロパティに `true` を設定すると、比較演算子を使用して、UDT の値を比較できます。 詳細については、次を参照してください。[ユーザー定義型を作成する](creating-user-defined-types.md)します。  
+## <a name="comparing-data"></a>データの比較  
+ クラスを定義する際に、`IsByteOrdered` プロパティに `true` を設定すると、比較演算子を使用して、UDT の値を比較できます。 詳細については、「[ユーザー定義型の作成](creating-user-defined-types.md)」を参照してください。  
   
 ```  
 SELECT ID, PointValue.ToString() AS Points   
@@ -156,7 +158,8 @@ WHERE PointValue = @ComparePoint;
 ```  
   
 ## <a name="invoking-udt-methods"></a>UDT メソッドの呼び出し  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] でも、UDT で定義されているメソッドを呼び出すことができます。 **ポイント**クラスには、3 つのメソッドが含まれています。 `Distance`、 `DistanceFrom`、および`DistanceFromXY`します。 これら 3 つのメソッドを定義するコード リストを参照してください。 [Coding User-Defined 型](creating-user-defined-types-coding.md)します。  
+ 
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] でも、UDT で定義されているメソッドを呼び出すことができます。 **Point**クラスには、、、 `Distance`および`DistanceFrom` `DistanceFromXY`の3つのメソッドが含まれています。 これら3つのメソッドを定義するコードの一覧については、「[ユーザー定義型のコーディング](creating-user-defined-types-coding.md)」を参照してください。  
   
  次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントでは、`PointValue.Distance` メソッドを呼び出します。  
   
@@ -167,7 +170,7 @@ SELECT ID, PointValue.X AS [Point.X],
 FROM dbo.Points;  
 ```  
   
- 結果が表示されます、`Distance`列。  
+ 結果が`Distance`列に表示されます。  
   
 ```  
 IDXYDistance  
@@ -177,7 +180,7 @@ IDXYDistance
 319999.0050503762308  
 ```  
   
- `DistanceFrom`メソッドの引数を受け取る**ポイント**データ型、および指定した点から PointValue までの距離が表示されます。  
+ メソッド`DistanceFrom`は**point**データ型の引数を受け取り、指定されたポイントから pointvalue までの距離を表示します。  
   
 ```  
 SELECT ID, PointValue.ToString() AS Pnt,  
@@ -195,7 +198,8 @@ ID PntDistanceFromPoint
 31,990  
 ```  
   
- `DistanceFromXY` メソッドでは、Points を引数として個別に受け取ります。  
+ 
+  `DistanceFromXY` メソッドでは、Points を引数として個別に受け取ります。  
   
 ```  
 SELECT ID, PointValue.X as X, PointValue.Y as Y,   
@@ -231,7 +235,8 @@ WHERE PointValue = '3,4';
 ```  
   
 ### <a name="updating-limitations"></a>更新の制限事項  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、複数のプロパティを一度に更新することはできません。 たとえば、1 つの UPDATE ステートメントでは同じ列名を 2 回使用することができないため、次のステートメントは失敗します。  
+ 
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、複数のプロパティを一度に更新することはできません。 たとえば、1 つの UPDATE ステートメントでは同じ列名を 2 回使用することができないため、次のステートメントは失敗します。  
   
 ```  
 UPDATE dbo.Points  

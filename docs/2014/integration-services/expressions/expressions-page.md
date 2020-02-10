@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4cb37061fd90f8662ee6670bb558e99035c792e7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62898034"
 ---
 # <a name="expressions-page"></a>[式] ページ
@@ -28,7 +28,7 @@ ms.locfileid: "62898034"
   
  式の作成とプロパティ式の使用の詳細については、「 [Integration Services &#40;SSIS&#41; 式](integration-services-ssis-expressions.md) ダイアログ ボックスや [パッケージでプロパティ式を使用する](use-property-expressions-in-packages.md)」を参照してください。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **式 (...)**  
  [...] をクリックすると、 **[プロパティ式エディター]** ダイアログ ボックスが表示されます。 詳細については、「 [プロパティ式エディター](property-expressions-editor.md)」を参照してください。  
   

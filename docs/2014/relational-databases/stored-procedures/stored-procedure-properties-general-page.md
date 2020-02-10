@@ -14,23 +14,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5c97c07d34de2b17b6966ab269004612c966b961
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62856442"
 ---
-# <a name="stored-procedure-properties-general-page"></a>[ストアド プロシージャのプロパティ]\([全般] ページ)
+# <a name="stored-procedure-properties-general-page"></a>[ストアド プロシージャのプロパティ] ([全般] ページ)
   ストアド プロシージャに関する情報を表示します。 すべての情報は読み取り専用です。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **[データベース]**  
  このストアド プロシージャを含むデータベースの名前です。  
   
  **[サーバー]**  
  現在のサーバー インスタンスの名前です。  
   
- **ユーザー**  
+ **User**  
  この接続のユーザーの名前です。  
   
  **[作成日]**  

@@ -1,5 +1,5 @@
 ---
-title: ユーザー定義ロールの作成 |Microsoft Docs
+title: ユーザー定義のロールを作成する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0277b936ddd4884f8a6b9b47b9184766dac9954b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060241"
 ---
 # <a name="create-a-user-defined-role"></a>ユーザー定義ロールを作成する
@@ -23,13 +23,16 @@ ms.locfileid: "66060241"
   
 1.  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]を開きます。  
   
-2.  **[表示]** メニューの **[オブジェクト エクスプローラー]** をクリックします。  
+2.  
+  **[表示]** メニューの **[オブジェクト エクスプローラー]** をクリックします。  
   
 3.  オブジェクト エクスプローラー ツール バーで **[接続]** をクリックし、 **[データベース エンジン]** をクリックします。  
   
-4.  **[サーバーへの接続]** ダイアログ ボックスで、サーバー名を指定し、認証モードを選択します。 ピリオド (.)、(local)、または `localhost` を使用すると、ローカル サーバーを指定できます。  
+4.  
+  **[サーバーへの接続]** ダイアログ ボックスで、サーバー名を指定し、認証モードを選択します。 ピリオド (.)、(local)、または `localhost` を使用すると、ローカル サーバーを指定できます。  
   
-5.  **[接続]** をクリックします。  
+5.  
+  **[接続]** をクリックします。  
   
 6.  [データベース]、[システム データベース]、[msdb]、[セキュリティ]、[ロール] を順に展開します。  
   

@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a9f7332460d3dc25c756e6bd031b1a4b3a1f6743
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62868767"
 ---
-# <a name="mssqlserver3181"></a>MSSQLSERVER_3181
+# <a name="mssqlserver_3181"></a>MSSQLSERVER_3181
     
 ## <a name="details"></a>詳細  
   
@@ -41,10 +41,10 @@ ms.locfileid: "62868767"
 ## <a name="user-action"></a>ユーザーの操作  
  十分なディスク領域があるドライブにバックアップを復元するか、ディスク領域を増やします。  
   
-## <a name="see-also"></a>関連項目  
- [データベースを新しい場所に復元する &#40;SQL Server&#41;](../backup-restore/restore-a-database-to-a-new-location-sql-server.md)   
- [新しい場所にファイルを復元&#40;SQL Server&#41;](../backup-restore/restore-files-to-a-new-location-sql-server.md)   
- [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
+## <a name="see-also"></a>参照  
+ [SQL Server &#40;新しい場所にデータベースを復元&#41;](../backup-restore/restore-a-database-to-a-new-location-sql-server.md)   
+ [新しい場所にファイルを復元する &#40;SQL Server&#41;](../backup-restore/restore-files-to-a-new-location-sql-server.md)   
+ [Transact-sql&#41;の復元 &#40;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-verifyonly-transact-sql)  
   
   

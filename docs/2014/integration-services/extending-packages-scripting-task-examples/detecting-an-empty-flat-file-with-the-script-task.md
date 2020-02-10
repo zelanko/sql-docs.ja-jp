@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 34462589141133e04ca8728361e3a173f0944f12
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62895501"
 ---
 # <a name="detecting-an-empty-flat-file-with-the-script-task"></a>スクリプト タスクによる空のフラット ファイルの検出
@@ -28,20 +28,22 @@ ms.locfileid: "62895501"
 > [!NOTE]  
 >  複数のパッケージでより簡単に再利用できるタスクを作成する場合は、このスクリプト タスク サンプルのコードを基にした、カスタム タスクの作成を検討してください。 詳細については、「 [カスタム タスクの開発](../extending-packages-custom-objects/task/developing-a-custom-task.md)」を参照してください。  
   
-## <a name="description"></a>説明  
- 次の例では、`System.IO` 名前空間のメソッドを使用して、フラット ファイル接続マネージャーで指定されたフラット ファイルをテストし、ファイルが空かどうか、または列ヘッダーなどの必要な非データ行や空の行だけが含まれるかどうかを確認します。 このスクリプトは最初にファイルのサイズをチェックします。サイズがゼロ バイトの場合、ファイルは空です。 ファイル サイズがゼロより大きい場合、行がなくなるまで、または必要な非データ行の数を超えるまでファイルから行を読み取ります。 ファイル内の行数が必要な非データ行の数以下の場合、そのファイルは空と見なされます。 結果はユーザー変数内のブール値として返されます。この値は、パッケージの制御フローでの分岐に使用できます。 `FireInformation`メソッドでは、結果も表示されます、**出力**のウィンドウ、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA)。  
+## <a name="description"></a>[説明]  
+ 次の例では、`System.IO` 名前空間のメソッドを使用して、フラット ファイル接続マネージャーで指定されたフラット ファイルをテストし、ファイルが空かどうか、または列ヘッダーなどの必要な非データ行や空の行だけが含まれるかどうかを確認します。 このスクリプトは最初にファイルのサイズをチェックします。サイズがゼロ バイトの場合、ファイルは空です。 ファイル サイズがゼロより大きい場合、行がなくなるまで、または必要な非データ行の数を超えるまでファイルから行を読み取ります。 ファイル内の行数が必要な非データ行の数以下の場合、そのファイルは空と見なされます。 結果はユーザー変数内のブール値として返されます。この値は、パッケージの制御フローでの分岐に使用できます。 また`FireInformation` 、このメソッドは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) の [**出力**] ウィンドウに結果を表示します。  
   
 #### <a name="to-configure-this-script-task-example"></a>このスクリプト タスクの例を構成するには  
   
-1.  作成し、という名前のフラット ファイル接続マネージャーを構成する`EmptyFlatFileTest`します。  
+1.  という名前`EmptyFlatFileTest`のフラットファイル接続マネージャーを作成して構成します。  
   
-2.  `FFNonDataRows` という名前の整数変数を作成し、その値をフラット ファイルで必要な、非データ行の数に設定します。  
+2.  
+  `FFNonDataRows` という名前の整数変数を作成し、その値をフラット ファイルで必要な、非データ行の数に設定します。  
   
-3.  `FFIsEmpty` という名前のブール変数を作成します。  
+3.  
+  `FFIsEmpty` という名前のブール変数を作成します。  
   
-4.  スクリプト タスクの **ReadOnlyVariables** プロパティに `FFNonDataRows` 変数を追加します。  
+4.  スクリプト タスクの `FFNonDataRows`ReadOnlyVariables** プロパティに ** 変数を追加します。  
   
-5.  スクリプト タスクの **ReadWriteVariables** プロパティに `FFIsEmpty` 変数を追加します。  
+5.  スクリプト タスクの `FFIsEmpty`ReadWriteVariables** プロパティに ** 変数を追加します。  
   
 6.  コードに `System.IO` 名前空間をインポートします。  
   
@@ -139,7 +141,7 @@ public void Main()
         }  
 ```  
   
-![Integration Services のアイコン (小)](../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。**<br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
+![Integration Services アイコン (小)](../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services に関するページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
 ## <a name="see-also"></a>参照  
  [スクリプト タスクの例](../extending-packages-scripting-task-examples/script-task-examples.md)  

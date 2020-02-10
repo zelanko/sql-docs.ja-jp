@@ -1,5 +1,5 @@
 ---
-title: タスク 16:マスター データ マネージャーを確認する |Microsoft Docs
+title: 'タスク 16: マスターデータマネージャーによる検証 |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,30 +11,30 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 35dd2da7f6cf6598918cd9d109b97f3d314556d1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65484688"
 ---
-# <a name="task-16-verifying-with-master-data-manager"></a>タスク 16:マスター データ マネージャーを確認する
+# <a name="task-16-verifying-with-master-data-manager"></a>タスク 16: マスター データ マネージャーを確認する
   ここでは、マスター データ マネージャーを使用して、SSIS パッケージによって送信されたバッチ ジョブの状態をチェックし、データが MDS サーバーにアップロードされたことを確認します。  
   
-1.  起動**マスター データ マネージャー** ([http://localhost/MDS](http://localhost/MDS))。 既に開いている、クリックして**Microsoft SQL Server マスター データ サービス**に切り替えるの上部にある、**ホーム ページ**。  
+1.  **マスターデータマネージャー** ([http://localhost/MDS](http://localhost/MDS)) を起動します。 既に開いている場合は、上部にある [ **Microsoft SQL Server マスターデータサービス**をクリックして、**ホームページ**に移動します。  
   
-2.  クリックして**統合管理**します。  
+2.  [**統合管理**] をクリックします。  
   
-3.  という名前のバッチがあることに注意してください**EIMBatch**一覧には、送信します。 クリックして**データのインポート**次の画面が表示されない場合は、メニュー バー。  
+3.  リストに送信した**Eimbatch**という名前のバッチがあることに注意してください。 次の画面が表示されない場合は、メニューバーの [**データのインポート**] をクリックします。  
   
      ![EIM バッチ](../../2014/tutorials/media/et-verifyingwithmasterdatamanager.jpg "EIM バッチ")  
   
-4.  をクリックして、ホーム ページに切り替える**SQL Server 2012 マスター データ サービス**上部にあります。  
+4.  上部にある [ **SQL Server 2012 マスターデータサービス**をクリックして、ホームページに戻ります。  
   
-5.  確認します**Suppliers**モデルが選択されている**モデル**と**VERSION_1**が選択されている**バージョン**、 をクリック**エクスプ ローラー**します。  
+5.  [**モデル**] に [**仕入先**モデル] が選択されていることを確認し、[**バージョン**] で [ **VERSION_1** ] が選択されていることを確認し、[**エクスプローラー**  
   
-6.  MDS にインポートされたデータの SSIS パッケージが表示されます。 データはクレンジングされており、重複があるない**コード**値 (注。**SupplierID** Excel 列に対応**コード**MDS の Supplier エンティティの属性)。  
+6.  MDS にインポートされたデータの SSIS パッケージが表示されます。 データはクレンジングされ、重複する**コード**値はありません (注: Excel の [**仕入**先] 列は、MDS の Supplier エンティティの**code**属性に対応しています)。  
   
-## <a name="next-step"></a>次の手順  
- [タスク 17:SSIS パッケージによって DQS クレンジング プロジェクトの作成を確認します。](../../2014/tutorials/task-17-reviewing-dqs-cleansing-project-created-by-the-ssis-package.md)  
+## <a name="next-step"></a>次のステップ  
+ [タスク 17: SSIS パッケージによって作成された DQS クレンジング プロジェクトを確認する](../../2014/tutorials/task-17-reviewing-dqs-cleansing-project-created-by-the-ssis-package.md)  
   
   

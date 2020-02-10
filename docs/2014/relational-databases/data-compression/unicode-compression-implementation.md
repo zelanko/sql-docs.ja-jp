@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a43a437b277c0fcc090a4ebd52d9deb14bec9fd0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62872980"
 ---
 # <a name="unicode-compression-implementation"></a>Unicode 圧縮の実装
@@ -46,14 +46,14 @@ ms.locfileid: "62872980"
   
  圧縮により節約されるストレージ領域は、圧縮されるデータの特性とデータのロケールによって異なります。 次の表に、いくつかのロケールで節約できる領域の一覧を示します。  
   
-|ロケール|圧縮率|  
+|Locale|圧縮率|  
 |------------|-------------------------|  
-|英語|50%|  
-|ドイツ語|50%|  
+|English|50%|  
+|German|50%|  
 |ヒンディー語|50%|  
-|トルコ語|48%|  
+|Turkish|48%|  
 |ベトナム語|39%|  
-|日本語|15%|  
+|Japanese|15%|  
   
 ## <a name="see-also"></a>参照  
  [データの圧縮](data-compression.md)   

@@ -11,10 +11,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: caae4212e2182ae6afde29b0fed1aaee4f05645a
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70176128"
 ---
 # <a name="features-supported-by-the-editions-of-sql-server-2014"></a>SQL Server 2014 の各エディションがサポートする機能
@@ -22,9 +22,9 @@ ms.locfileid: "70176128"
 
   このトピックでは、 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]のさまざまなエディションでサポートされる機能の詳細について説明します。 
 
- > **注:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は、180日間の評価版で利用できます。 詳細については、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][評価版ソフトウェア Web サイト](https://go.microsoft.com/fwlink/?LinkId=190955)を参照してください。  
+ > **注:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]は、180日間の試用期間の評価版で使用できます。 詳細については、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [試用版ソフトウェアの Web サイト](https://go.microsoft.com/fwlink/?LinkId=190955)を参照してください。  
 > 
-> **注:** 評価版と Developer edition でサポートされている機能については、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise 機能セットを参照してください。  
+> **注:** 評価版と Developer edition でサポートされて[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]いる機能については、Enterprise の機能セットを参照してください。  
   
  各 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] テクノロジの表に移動するには、それぞれのリンクをクリックしてください。  
   
@@ -48,19 +48,19 @@ ms.locfileid: "70176128"
   
  [Integration Services](#SSIS)  
   
- [Integration Services-高度なアダプター](#SSIS_AA)  
+ [Integration Services – 拡張アダプター](#SSIS_AA)  
   
- [Integration Services-高度な変換](#SSIS_AT)  
+ [Integration Services – 詳細な変換](#SSIS_AT)  
   
  [マスター データ サービス](#MDS)  
   
- [データ ウェアハウス](#Data_warehouse)  
+ [データ ウェアハウス (data warehouse)](#Data_warehouse)  
   
  [Analysis Services](#SSAS)  
   
- [BI セマンティックモデル (多次元)](#BISemModel_multi)  
+ [BI セマンティック モデル (多次元)](#BISemModel_multi)  
   
- [BI セマンティック モデル (テーブル)](#BISemModel_tabular)  
+ [BI セマンティックモデル (テーブル)](#BISemModel_tabular)  
   
  [PowerPivot for SharePoint](#PowerPivot)  
   
@@ -68,7 +68,7 @@ ms.locfileid: "70176128"
   
  [Reporting Services](#Reporting)  
   
- [Business Intelligence クライアント](#BIClients)  
+ [ビジネスインテリジェンスクライアント](#BIClients)  
   
  [空間サービスとロケーションサービス](#Spatial)  
   
@@ -76,22 +76,22 @@ ms.locfileid: "70176128"
   
  [その他のコンポーネント](#Other_Components)  
   
-##  <a name="CrossBoxScale"></a> クロスボックスのスケールの制限  
+##  <a name="CrossBoxScale"></a>クロスボックスのスケールの制限  
   
-|機能名|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
+|機能名|Enterprise|ビジネス インテリジェンス|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
-|1つのインスタンスで使用される最大計算容量 ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベースエンジン)<sup>1</sup>|オペレーティング システムの最大容量|4 ソケットまたは 16 コアのいずれか小さいほうに制限|4 ソケットまたは 16 コアのいずれか小さいほうに制限|4 ソケットまたは 16 コアのいずれか小さいほうに制限|1 ソケットまたは 4 コアのいずれか小さいほうに制限|1 ソケットまたは 4 コアのいずれか小さいほうに制限|1 ソケットまたは 4 コアのいずれか小さいほうに制限|  
+|1つのインスタンスで使用される最大[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]計算容量 (データベースエンジン)<sup>1</sup>|オペレーティング システムの最大容量|4 ソケットまたは 16 コアのいずれか小さいほうに制限|4 ソケットまたは 16 コアのいずれか小さいほうに制限|4 ソケットまたは 16 コアのいずれか小さいほうに制限|1 ソケットまたは 4 コアのいずれか小さいほうに制限|1 ソケットまたは 4 コアのいずれか小さいほうに制限|1 ソケットまたは 4 コアのいずれか小さいほうに制限|  
 |1つのインスタンスで使用される最大計算容量 (Analysis Services、Reporting Services) <sup>1</sup>|オペレーティング システムの最大容量|オペレーティング システムの最大容量|4 ソケットまたは 16 コアのいずれか小さいほうに制限|4 ソケットまたは 16 コアのいずれか小さいほうに制限|1 ソケットまたは 4 コアのいずれか小さいほうに制限|1 ソケットまたは 4 コアのいずれか小さいほうに制限|1 ソケットまたは 4 コアのいずれか小さいほうに制限|  
 |利用可能な最大メモリ サイズ ( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベース エンジンのインスタンスごと)|オペレーティング システムの最大容量|128 GB|128 GB|64 GB|1 GB|1 GB|1 GB|  
-|利用可能な最大メモリ サイズ ( [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]のインスタンスごと)|オペレーティング システムの最大容量|オペレーティング システムの最大容量|64 GB|なし|なし|なし|なし|  
-|利用可能な最大メモリ サイズ ( [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]のインスタンスごと)|オペレーティング システムの最大容量|オペレーティング システムの最大容量|64 GB|64 GB|4 GB|なし|なし|  
+|利用可能な最大メモリ サイズ ( [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]のインスタンスごと)|オペレーティング システムの最大容量|オペレーティング システムの最大容量|64 GB|該当なし|該当なし|該当なし|該当なし|  
+|利用可能な最大メモリ サイズ ( [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]のインスタンスごと)|オペレーティング システムの最大容量|オペレーティング システムの最大容量|64 GB|64 GB|4 GB|該当なし|該当なし|  
 |リレーショナル データベースの最大サイズ|524 PB|524 PB|524 PB|524 PB|10 GB|10 GB|10 GB|  
   
- <sup>1</sup> Enterprise Edition with Server および Client Access LICENSE (CAL) に基づくライセンス (新しい契約では利用できません) は、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスあたり最大20コアに制限されています。 コアベースのサーバー ライセンス モデルでは、制限はありません。 詳細については、「 [Compute Capacity Limits by Edition of SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)」を参照してください。  
+ <sup>1</sup> Enterprise Edition with Server および Client Access LICENSE (CAL) に基づくライセンス (新しい契約では利用できません) は、インスタンスあたり[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]最大20コアに制限されています。 コアベースのサーバー ライセンス モデルでは、制限はありません。 詳細については、「 [SQL Server のエディション別の計算容量制限](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)」を参照してください。  
   
-##  <a name="High_availability"></a> 高可用性  
+##  <a name="High_availability"></a>高可用性  
   
-|機能名|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
+|機能名|Enterprise|ビジネス インテリジェンス|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |Server Core サポート<sup>1</sup>|はい|はい|はい|はい|はい|はい|はい|  
 |ログ配布|はい|はい|はい|はい||||  
@@ -109,15 +109,15 @@ ms.locfileid: "70176128"
 |ホットアドメモリと CPU<sup>2</sup>|はい|||||||  
 |データベース復旧アドバイザー|はい|はい|はい|はい|はい|はい|はい|  
 |暗号化されたバックアップ|はい|はい|はい|||||  
-|スマート バックアップ|はい|はい|はい|[いいえ]||||  
+|スマート バックアップ|はい|はい|はい|いいえ||||  
   
- <sup>1</sup>Server Core への [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] のインストールの詳細については、「 [Server core で SQL Server 2014 をインストール](../database-engine/install-windows/install-sql-server-on-server-core.md)する」を参照してください。  
+ <sup>1</sup>Server Core へのの[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]インストールの詳細については、「 [Install SQL Server 2014 on server core](../database-engine/install-windows/install-sql-server-on-server-core.md)」を参照してください。  
   
- <sup>2</sup>この機能は、64ビット [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]でのみ使用できます。  
+ <sup>2</sup>この機能は、64ビット[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のでのみ使用できます。  
   
 ##  <a name="Scalability"></a>スケーラビリティとパフォーマンス  
   
-|機能名|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
+|機能名|Enterprise|ビジネス インテリジェンス|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |複数インスタンスのサポート|50|50|50|50|50|50|50|  
 |テーブルとインデックスのパーティション分割|はい|||||||  
@@ -131,11 +131,11 @@ ms.locfileid: "70176128"
 |インメモリ OLTP <sup>1</sup>|はい|||||||  
 |遅延持続性|はい|はい|はい|はい|はい|はい|はい|  
   
- <sup>1</sup>この機能は、64ビット [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]でのみ使用できます。  
+ <sup>1</sup>この機能は64ビット[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のみで使用できます。  
   
 ##  <a name="Enterprise_security"></a> セキュリティ  
   
-|機能名|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
+|機能名|Enterprise|ビジネス インテリジェンス|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |基本的な監査|はい|はい|はい|はい|はい|はい|はい|  
 |詳細な監査|はい|||||||  
@@ -147,41 +147,41 @@ ms.locfileid: "70176128"
   
 ##  <a name="Replication"></a> レプリケーション  
   
-|機能名|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
+|機能名|Enterprise|ビジネス インテリジェンス|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 変更の追跡|はい|はい|はい|はい|はい|はい|はい|  
-|マージ レプリケーション|はい|はい|はい|可 (サブスクライバーのみ)|可 (サブスクライバーのみ)|可 (サブスクライバーのみ)|可 (サブスクライバーのみ)|  
-|トランザクション レプリケーション|はい|はい|はい|可 (サブスクライバーのみ)|可 (サブスクライバーのみ)|可 (サブスクライバーのみ)|可 (サブスクライバーのみ)|  
-|スナップショット レプリケーション|はい|はい|はい|可 (サブスクライバーのみ)|可 (サブスクライバーのみ)|可 (サブスクライバーのみ)|可 (サブスクライバーのみ)|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]変更の追跡|はい|はい|はい|はい|はい|はい|はい|  
+|マージ レプリケーション|はい|はい|はい|はい (サブスクライバーのみ)|はい (サブスクライバーのみ)|はい (サブスクライバーのみ)|はい (サブスクライバーのみ)|  
+|トランザクション レプリケーション|はい|はい|はい|はい (サブスクライバーのみ)|はい (サブスクライバーのみ)|はい (サブスクライバーのみ)|はい (サブスクライバーのみ)|  
+|スナップショット レプリケーション|はい|はい|はい|可 (サブスクライバーのみ)|はい (サブスクライバーのみ)|はい (サブスクライバーのみ)|はい (サブスクライバーのみ)|  
 |異種サブスクライバー|はい|はい|はい|||||  
 |Oracle パブリッシュ|はい|||||||  
 |ピア ツー ピア トランザクション レプリケーション|はい|||||||  
   
-##  <a name="Mgmt_Tools"></a> Management Tools  
+##  <a name="Mgmt_Tools"></a>管理ツール  
   
-|機能名|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
+|機能名|Enterprise|ビジネス インテリジェンス|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |SQL 管理オブジェクト (SMO)|はい|はい|はい|はい|はい|はい|はい|  
 |SQL 構成マネージャー|はい|はい|はい|はい|はい|はい|はい|  
 |SQL CMD (コマンド プロンプト ツール)|はい|はい|はい|はい|はい|はい|はい|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio|はい|はい|はい|はい|はい|はい||  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Management Studio|はい|はい|はい|はい|はい|はい||  
 |分散再生 - 管理ツール|はい|はい|はい|はい|はい|はい||  
-|分散再生 - クライアント|はい|[いいえ]|はい|はい||||  
-|分散再生 - コントローラー|可 (Enterprise では最大 16 クライアントのサポート、Developer では 1 クライアントのみサポート)|[いいえ]|可 (1 クライアントのサポートのみ)|可 (1 クライアントのサポートのみ)||||  
+|分散再生 - クライアント|はい|いいえ|はい|はい||||  
+|分散再生 - コントローラー|可 (Enterprise では最大 16 クライアントのサポート、Developer では 1 クライアントのみサポート)|いいえ|可 (1 クライアントのサポートのみ)|可 (1 クライアントのサポートのみ)||||  
 |SQL Profiler|はい|はい|はい|×<sup>2</sup>|×<sup>2</sup>|×<sup>2</sup>|×<sup>2</sup>|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エージェント|はい|はい|はい|はい||||  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]・|はい|はい|はい|はい||||  
 |Microsoft System Center Operations Manager 管理パック|はい|はい|はい|はい||||  
-|データベース チューニング アドバイザー (DTA)|はい|はい|可 <sup>3</sup>|可 <sup>3</sup>||||  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベースを Azure VM ウィザードにデプロイする|はい|はい|はい|はい|はい|はい|はい|  
-|Azure でのデータファイルの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|はい|はい|はい|はい|はい|はい|はい|  
+|データベース チューニング アドバイザー (DTA)|はい|はい|はい<sup>3</sup>|はい<sup>3</sup>||||  
+|Azure VM [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]にデータベースを配置ウィザード|はい|はい|はい|はい|はい|はい|はい|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Azure のデータファイル|はい|はい|はい|はい|はい|はい|はい|  
   
- <sup>2</sup> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Web、[!INCLUDE[ssExpress](../includes/ssexpress-md.md)]、[!INCLUDE[ssExpress](../includes/ssexpress-md.md)] with Tools、および [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] With Advanced Services は、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard および [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise エディションを使用してプロファイルできます。  
+ <sup>2</sup> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Web、 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]、 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] with Tools、および[!INCLUDE[ssExpress](../includes/ssexpress-md.md)] with Advanced Services は、Standard edition [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]と[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise edition を使用してプロファイルできます。  
   
  <sup>3</sup>チューニングは Standard edition 機能でのみ有効です。  
   
-##  <a name="RDBMS_mgmt"></a> RDBMS Manageability  
+##  <a name="RDBMS_mgmt"></a>RDBMS の管理の容易性  
   
-|機能名|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
+|機能名|Enterprise|ビジネス インテリジェンス|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |ユーザー インスタンス|||||はい|はい|はい|  
 |LocalDB|||||はい|はい||  
@@ -200,19 +200,20 @@ ms.locfileid: "70176128"
 |並列インデックス操作|はい|||||||  
 |クエリ オプティマイザーによる自動的なインデックス付きのビュー使用|はい|||||||  
 |並列整合性チェック|はい|||||||  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーティリティ コントロール ポイント|はい|||||||  
+|
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーティリティ コントロール ポイント|はい|||||||  
 |包含データベース|はい|はい|はい|はい|はい|はい|はい|  
 |バッファープール拡張<sup>2</sup>|はい|はい|はい|||||  
   
- <sup>1</sup> 詳細については、「[SysPrep を使用した SQL Server のインストールに関する注意点](../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md)」を参照してください。  
+ <sup>1</sup>詳細については、「 [SysPrep を使用した SQL Server のインストールに関する考慮事項](../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md)」を参照してください。  
   
- <sup>2</sup>この機能は、64ビット [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]でのみ使用できます。  
+ <sup>2</sup>この機能は、64ビット[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のでのみ使用できます。  
   
-##  <a name="Dev_tools"></a> Development Tools  
+##  <a name="Dev_tools"></a>開発ツール  
   
-|機能名|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
+|機能名|Enterprise|ビジネス インテリジェンス|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
-|[!INCLUDE[msCoName](../includes/msconame-md.md)] Visual Studio との統合|はい|はい|はい|はい|はい|はい|はい|  
+|[!INCLUDE[msCoName](../includes/msconame-md.md)]Visual Studio の統合|はい|はい|はい|はい|はい|はい|はい|  
 |Intellisense ([!INCLUDE[tsql](../includes/tsql-md.md)] および MDX)|はい|はい|はい|はい|はい|はい|はい|  
 |[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]|はい|はい|はい|はい|はい|||  
 |SQL クエリの編集およびデザインツール<sup>1</sup>|はい|はい|はい|||||  
@@ -221,9 +222,9 @@ ms.locfileid: "70176128"
   
  <sup>1</sup>この機能は、64ビット版の Standard edition では使用できません。  
   
-##  <a name="Programmability"></a> プログラミング  
+##  <a name="Programmability"></a> Programmability  
   
-|機能名|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
+|機能名|Enterprise|ビジネス インテリジェンス|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |共通言語ランタイム (CLR) 統合|はい|はい|はい|はい|はい|はい|はい|  
 |ネイティブ XML サポート|はい|はい|はい|はい|はい|はい|はい|  
@@ -236,13 +237,14 @@ ms.locfileid: "70176128"
 |フルテキストおよびセマンティック検索|はい|はい|はい|はい|はい|||  
 |クエリ内の言語指定|はい|はい|はい|はい|はい|||  
 |Service Broker (メッセージング)|はい|はい|はい|不可 (クライアントのみ)|不可 (クライアントのみ)|不可 (クライアントのみ)|不可 (クライアントのみ)|  
-|[!INCLUDE[tsql](../includes/tsql-md.md)] エンドポイント|はい|はい|はい|はい||||  
+|[!INCLUDE[tsql](../includes/tsql-md.md)]|はい|はい|はい|はい||||  
   
 ##  <a name="SSIS"></a> Integration Services  
   
-|機能|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
+|機能|Enterprise|ビジネス インテリジェンス|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |-------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザード|はい|はい|はい|はい|はい|はい|はい|  
+|
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザード|はい|はい|はい|はい|はい|はい|はい|  
 |組み込みのデータ ソース コネクタ|はい|はい|はい|はい|はい|はい|はい|  
 |SSIS デザイナーおよびランタイム|はい|はい|はい|||||  
 |基本的な変換|はい|はい|はい|||||  
@@ -250,9 +252,9 @@ ms.locfileid: "70176128"
 |Attunity の Change Data Capture Service for Oracle|はい|||||||  
 |Attunity の Change Data Capture Designer for Oracle|はい|||||||  
   
-###  <a name="SSIS_AA"></a> Integration Services – 拡張アダプター  
+###  <a name="SSIS_AA"></a>Integration Services-高度なアダプター  
   
-|機能名|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
+|機能名|Enterprise|ビジネス インテリジェンス|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |高パフォーマンスの Oracle 変換先|はい|||||||  
 |高パフォーマンスの Teradata 変換先|はい|||||||  
@@ -263,28 +265,29 @@ ms.locfileid: "70176128"
 |Attunity 変更データ キャプチャ コンポーネント|はい|||||||  
 |Attunity ODBC (Open Database Connectivity) 接続|はい|||||||  
   
-###  <a name="SSIS_AT"></a>Integration Services – 詳細な変換  
+###  <a name="SSIS_AT"></a>Integration Services-高度な変換  
   
-|機能名|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
+|機能名|Enterprise|ビジネス インテリジェンス|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |永続性 (高パフォーマンス) 参照|はい|||||||  
 |データ マイニング クエリ変換|はい|||||||  
 |あいまいグループ化変換とあいまい参照変換|はい|||||||  
 |用語抽出と用語参照変換|はい|||||||  
   
-##  <a name="MDS"></a> Master Data Services  
+##  <a name="MDS"></a>マスター データ サービス  
   
 > [!NOTE]  
->  -   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] は、64 ビット エディションの Business Intelligence と Enterprise でのみ使用できます。  
+>  -   
+  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] は、64 ビット エディションの Business Intelligence と Enterprise でのみ使用できます。  
   
-|機能|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
+|機能|Enterprise|ビジネス インテリジェンス|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |-------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
-|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベース (database)|はい|はい||||||  
-|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web アプリケーション|はい|はい||||||  
+|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]データベース|はい|はい||||||  
+|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]web アプリケーション|はい|はい||||||  
   
-##  <a name="Data_warehouse"></a> Data Warehouse  
+##  <a name="Data_warehouse"></a>データウェアハウス  
   
-|機能名|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
+|機能名|Enterprise|ビジネス インテリジェンス|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |データベースを使用しないキューブ作成|はい|はい|はい|||||  
 |自動生成ステージングとデータ ウェアハウス スキーマ|はい|はい|はい|||||  
@@ -295,9 +298,9 @@ ms.locfileid: "70176128"
 |xVelocity メモリ最適化列ストア インデックス|はい|||||||  
 |グローバル バッチ集計|はい|||||||  
   
-##  <a name="SSAS"></a> Analysis Services  
+##  <a name="SSAS"></a>Analysis Services  
   
-|機能名|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
+|機能名|Enterprise|ビジネス インテリジェンス|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |スケーラブルな共有データベース (アタッチ/デタッチ、読み取り専用データベース)|はい|はい||||||  
 |データベースのバックアップ/復元、アタッチ/デタッチ|はい|はい|はい|||||  
@@ -307,10 +310,10 @@ ms.locfileid: "70176128"
   
 ###  <a name="BISemModel_multi"></a>BI セマンティックモデル (多次元)  
   
-|機能名|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
+|機能名|Enterprise|ビジネス インテリジェンス|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
-|準加法メジャー|はい|はい|なし<sup>1</sup>|||||  
-|[階層]|はい|はい|はい|||||  
+|準加法メジャー|はい|はい|不可<sup>1</sup>|||||  
+|階層|はい|はい|はい|||||  
 |KPI|はい|はい|はい|||||  
 |パースペクティブ|はい|はい||||||  
 |アクション|はい|はい|はい|||||  
@@ -320,7 +323,7 @@ ms.locfileid: "70176128"
 |キューブの書き戻し|はい|はい|はい|||||  
 |ディメンションの書き戻し|はい|はい||||||  
 |セルの書き戻し|はい|はい|はい|||||  
-|詳細|はい|はい|はい|||||  
+|ドリルスルー|はい|はい|はい|||||  
 |高度な階層の種類 (親子、不規則階層)|はい|はい|はい|||||  
 |高度なディメンション (参照ディメンション、多対多ディメンション)|はい|はい|はい|||||  
 |リンク メジャーとディメンション|はい|はい||||||  
@@ -342,11 +345,11 @@ ms.locfileid: "70176128"
   
  <sup>1</sup>LastChild 準加法メジャーは standard edition でサポートされていますが、他の準加法メジャー (None、FirstChild、Firstchild でない、Lastchild、ByAccount など) はサポートされていません。 加法メジャー (Sum、Count、Min、Max など) や非加法メジャー (DistinctCount) はすべてのエディションでサポートされます。  
   
-###  <a name="BISemModel_tabular"></a> BI セマンティック モデル (テーブル)  
+###  <a name="BISemModel_tabular"></a>BI セマンティックモデル (テーブル)  
   
-|機能名|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
+|機能名|Enterprise|ビジネス インテリジェンス|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
-|[階層]|はい|はい||||||  
+|階層|はい|はい||||||  
 |KPI|はい|はい||||||  
 |パースペクティブ|はい|はい||||||  
 |翻訳|はい|はい||||||  
@@ -357,7 +360,7 @@ ms.locfileid: "70176128"
   
 ###  <a name="PowerPivot"></a>PowerPivot for SharePoint  
   
-|機能名|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
+|機能名|Enterprise|ビジネス インテリジェンス|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |共有サービス アーキテクチャに基づく SharePoint ファーム統合|はい|はい||||||  
 |使用状況レポート|はい|はい||||||  
@@ -366,13 +369,13 @@ ms.locfileid: "70176128"
 |PowerPivot のデータ更新|はい|はい||||||  
 |PowerPivot データ フィード|はい|はい||||||  
   
-###  <a name="DataMining"></a> Data Mining  
+###  <a name="DataMining"></a>データマイニング  
   
-|機能名|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
+|機能名|Enterprise|ビジネス インテリジェンス|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |標準アルゴリズム|はい|はい|はい|||||  
 |データ マイニング ツール (ウィザード、エディター、クエリ ビルダー)|はい|はい|はい|||||  
-|相互検証|はい|はい||||||  
+|クロス検証|はい|はい||||||  
 |マイニング構造データのフィルター選択したサブセットのモデル|はい|はい||||||  
 |時系列: ARTXP 法と ARIMA 法のカスタムな組み合わせ|はい|はい||||||  
 |時系列: 新しいデータでの予測|はい|はい||||||  
@@ -385,11 +388,11 @@ ms.locfileid: "70176128"
 |シーケンス予測|はい|はい||||||  
 |複数の Naïve Bayes の予測ターゲット、ニューラル ネットワーク、およびロジスティック回帰|はい|はい||||||  
   
-##  <a name="Reporting"></a> Reporting Services  
+##  <a name="Reporting"></a>Reporting Services  
   
 ###  <a name="Reporting_features"></a>Reporting Services 機能  
   
-|機能名|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
+|機能名|Enterprise|ビジネス インテリジェンス|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |サポートされているカタログ DB の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エディション|Standard 以上|Standard 以上|Standard 以上|Web|Express|||  
 |サポートされているデータ ソースの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エディション|すべての   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エディション|すべての [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エディション|すべての [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エディション|Web|Express|||  
@@ -415,65 +418,68 @@ ms.locfileid: "70176128"
 |データ ドリブン レポート サブスクリプション|はい|はい||||||  
 |スケール アウト配置 (Web ファーム)|はい|はい||||||  
 |警告<sup>2</sup>|はい|はい||||||  
-|[!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] <sup>2</sup>|はい|はい||||||  
+|[!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]<sup>2</sup>|はい|はい||||||  
   
- <sup>1</sup>[!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]でサポートされているデータソースの詳細については、「 [ &#40;Reporting Services SSRS&#41;でサポートされるデータソース](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)」を参照してください。  
+ <sup>1</sup>で[!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]サポートされるデータソースの詳細については、「 [Reporting Services &#40;SSRS&#41;でサポートされるデータソース](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)」を参照してください。  
   
- <sup>2</sup>SharePoint モードの [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] が必要です。 詳細については、「sharepoint[モード&#40;のインストール Reporting Services SharePoint 2010&#41;および sharepoint 2013](../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)」を参照してください。  
+ <sup>2</sup>SharePoint [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]モードのが必要です。 詳細については、「sharepoint [2010 および sharepoint 2013&#41;の Reporting Services Sharepoint モードの &#40;インストール](../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)」を参照してください。  
   
 ### <a name="report-server-database-server-edition-requirements"></a>レポート サーバー データベースのサーバー エディション  
  レポート サーバー データベースを作成するときは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のすべてのエディションでデータベースをホストできるわけではないことに注意してください。 次の表に、 [!INCLUDE[ssDE](../includes/ssde-md.md)] の特定のエディションで使用できる [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]のエディションを示します。  
   
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Reporting Services のエディション|データベースをホストするために使用するデータベース エンジン インスタンスのエディション|  
+|
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Reporting Services のエディション|データベースをホストするために使用するデータベース エンジン インスタンスのエディション|  
 |----------------------------------------------------------------------|---------------------------------------------------------------------------|  
 |Enterprise|Standard Edition、Business Intelligence Enterprise Edition (ローカルまたはリモート)|  
-|Business Intelligence|Standard Edition、Business Intelligence Enterprise Edition (ローカルまたはリモート)|  
+|ビジネス インテリジェンス|Standard Edition、Business Intelligence Enterprise Edition (ローカルまたはリモート)|  
 |Standard|Standard Edition、Enterprise Edition (ローカルまたはリモート)|  
 |Web|Web Edition (ローカルのみ)|  
 |Express with Advanced Services|Express with Advanced Services (ローカルのみ)|  
-|Evaluation|Evaluation|  
+|評価|評価|  
   
-##  <a name="BIClients"></a> Business Intelligence Clients  
+##  <a name="BIClients"></a>ビジネスインテリジェンスクライアント  
  次のソフトウェア クライアント アプリケーションを Microsoft ダウンロード センターから入手できます。これらのアプリケーションは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスで使用するビジネス インテリジェンス ドキュメントの作成に役立ちます。 作成したドキュメントをサーバー環境でホストする場合は、そのドキュメントの種類でサポートされている [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のエディションを使用してください。 これらのクライアント アプリケーションで作成したドキュメントをホストするのに必要なサーバー機能を備えた [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エディションを次の表に示します。  
   
-|機能名|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
+|機能名|Enterprise|ビジネス インテリジェンス|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)]|はい|はい|はい|||||  
 |Excel および Visio 2010 用データ マイニング アドイン|はい|はい|はい|||||  
-|[!INCLUDE[ssGeminiClient](../includes/ssgeminiclient-md.md)] 2010|はい|はい||||||  
+|[!INCLUDE[ssGeminiClient](../includes/ssgeminiclient-md.md)]2010|はい|はい||||||  
 |[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]|はい|はい||||||  
   
 > [!NOTE]
->  1.  [!INCLUDE[ssGeminiClient](../includes/ssgeminiclient-md.md)] は Excel アドインで、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] には依存しません。 ただし、SharePoint で [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] ワークブックの共有およびコラボレーションを行うには、 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] が必要です。この機能は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise および Business Intelligence エディションの一部として使用できます。  
+>  1.  
+  [!INCLUDE[ssGeminiClient](../includes/ssgeminiclient-md.md)] は Excel アドインで、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] には依存しません。 ただし、SharePoint で [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] ワークブックの共有およびコラボレーションを行うには、 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] が必要です。この機能は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise および Business Intelligence エディションの一部として使用できます。  
 > 2.  上記の表は、これらのクライアント ツールを有効にするために必要な [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エディションを示しています。ただし、これらの機能は、どのエディションの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]にホストされているデータにもアクセスできます。  
   
-##  <a name="Spatial"></a> Spatial and Location Services  
+##  <a name="Spatial"></a>空間サービスとロケーションサービス  
   
-|機能名|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
+|機能名|Enterprise|ビジネス インテリジェンス|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |空間インデックス|はい|はい|はい|はい|はい|はい|はい|  
 |平面データ型と測地データ型|はい|はい|はい|はい|はい|はい|はい|  
 |高度な空間的なライブラリ|はい|はい|はい|はい|はい|はい|はい|  
 |業界標準の空間データ形式のインポート/エクスポート|はい|はい|はい|はい|はい|はい|はい|  
   
-##  <a name="Add_DBServices"></a> Additional Database Services  
+##  <a name="Add_DBServices"></a>その他のデータベースサービス  
   
-|機能名|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
+|機能名|Enterprise|ビジネス インテリジェンス|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Migration Assistant|はい|はい|はい|はい|はい|はい|はい|  
+|
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Migration Assistant|はい|はい|はい|はい|はい|はい|はい|  
 |データベース メール|はい|はい|はい|はい||||  
   
-##  <a name="Other_Components"></a> その他のコンポーネント  
+##  <a name="Other_Components"></a>その他のコンポーネント  
   
-|機能名|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
+|機能名|Enterprise|ビジネス インテリジェンス|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |Data Quality Services|はい|はい||||||  
 |StreamInsight|StreamInsight Premium Edition|StreamInsight Standard Edition|StreamInsight Standard Edition|StreamInsight Standard Edition||||  
 |StreamInsight HA|StreamInsight Premium Edition|||||||  
   
 ## <a name="see-also"></a>参照  
- [SQL Server 2014  の製品仕様](../../2014/getting-started/sql-server-2014-product-specifications.md)  
- [SQL Server 2014  用のインストール](../database-engine/install-windows/installation-for-sql-server.md)  
- [SQL Server 2014 のクイックスタート インストール](../../2014/getting-started/quick-start-installation-of-sql-server-2014.md)  
+ [SQL Server 2014 の製品仕様](../../2014/getting-started/sql-server-2014-product-specifications.md)   
+ [SQL Server 2014 のインストール](../database-engine/install-windows/installation-for-sql-server.md)   
+ [SQL Server 2014 のクイック スタート インストール](../../2014/getting-started/quick-start-installation-of-sql-server-2014.md)  
   
   

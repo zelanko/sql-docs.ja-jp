@@ -14,16 +14,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ef7f15fc1b54d18c71d7fccfd379454911cb8961
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62874998"
 ---
 # <a name="restore-database-files-page"></a>[データベースの復元]\([ファイル] ページ)
   **[データベースの復元]** ダイアログ ボックスの **[ファイル]** ページを使用して、データベース内で復元するように選択した特定のファイルを管理します。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
   
 ### <a name="restore-database-files-as"></a>[次のデータベース ファイルに復元]  
  復元されたファイルに新しいファイル パスを割り当て、管理できます。  
@@ -31,7 +31,7 @@ ms.locfileid: "62874998"
  **[すべてのファイルをフォルダーに移動]**  
  復元されたファイルを再配置します。  
   
-|オプション|説明|  
+|オプション|[説明]|  
 |------------|-----------------|  
 |**データ ファイル フォルダー**|復元されたデータ ファイルが移されるデータ ファイルのフォルダー名を入力または検索します。|  
 |**ログ ファイル フォルダー**|復元されたログ ファイルが移されるログ ファイル フォルダーを入力または検索します。|  

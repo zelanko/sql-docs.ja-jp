@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d72ece429ae04e8cb6ee3af3acd872fa751d3a57
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62835454"
 ---
 # <a name="oracle-cdc-instance-data-types"></a>Oracle CDC インスタンスのデータ型
@@ -26,18 +26,18 @@ ms.locfileid: "62835454"
 |Oracle データベース データ型|SQL Server データ型|  
 |-------------------------------|--------------------------|  
 |BINARY_FLOAT|real|  
-|BINARY_DOUBLE|[FLOAT]|  
+|BINARY_DOUBLE|FLOAT|  
 |CHAR|NVARCHAR|  
-|[DATE]|DATETIME|  
-|[FLOAT]|[FLOAT]|  
+|DATE|DATETIME|  
+|FLOAT|FLOAT|  
 |INT|NUMERIC (38)|  
 |INTERVAL|DATETIME|  
 |NCHAR|NVARCHAR|  
-|NUMBER|[FLOAT]|  
+|NUMBER|FLOAT|  
 |NAVARCHAR2|NVARCHAR|  
 |RAW|VARBINARY|  
-|real|[FLOAT]|  
-|TIMESTAMP|DATETIME2|  
+|real|FLOAT|  
+|timestamp|DATETIME2|  
 |TIMESTAMP WITH TIME ZONE|VARCHAR (37)|  
 |TIMESTAMP WITH LOCAL TIME ZONE|VARCHAR (37)|  
 |VARCHAR2|VARCHAR|  
@@ -68,7 +68,7 @@ ms.locfileid: "62835454"
   
  テーブルに次のデータ型が存在する場合、LogMinder はそのテーブルの列のデータを取得できません。  
   
--   ユーザー定義のデータ型  
+-   ユーザー定義データ型  
   
 -   VARRAY  
   

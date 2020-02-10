@@ -1,5 +1,5 @@
 ---
-title: 保存し、実行パッケージ (SQL Server インポートおよびエクスポート ウィザード) |Microsoft Docs
+title: '[パッケージの保存および実行] (SQL Server インポートおよびエクスポートウィザード) |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -13,63 +13,63 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 517ba30e4565ec05e5fa15a650bb39909d24dd02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62894766"
 ---
 # <a name="save-and-execute-package-sql-server-import-and-export-wizard"></a>[パッケージの保存および実行] (SQL Server インポートおよびエクスポート ウィザード)
-  使用して、**実行パッケージの保存および**を後で、実行、または両方を保存、すぐにパッケージを実行する ダイアログ ボックス。  
+  [**パッケージの保存と実行**] ダイアログボックスを使用すると、すぐにパッケージを実行したり、後で実行するように保存したり、その両方を実行したりできます。  
   
 > [!NOTE]  
->  実行が終了する前にパッケージを停止した場合、パッケージは保存されません、選択した場合でも、**保存**チェック ボックスをオンします。  
+>  パッケージの実行が完了する前に停止した場合、[**保存**] チェックボックスをオンにした場合でも、パッケージは保存されません。  
   
- このウィザードの詳細については、次を参照してください。 [SQL Server インポートおよびエクスポート ウィザード](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)します。 ウィザードを正常に実行するために必要なアクセス許可と同様に、ウィザードを開始するためのオプションについては、次を参照してください。 [、SQL Server インポートおよびエクスポート ウィザードを実行](start-the-sql-server-import-and-export-wizard.md)します。  
+ このウィザードの詳細については、「 [SQL Server インポートおよびエクスポートウィザード](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)」を参照してください。 ウィザードを起動するためのオプション、およびウィザードを正常に実行するために必要な権限の詳細については、「 [run the SQL Server Import And Export wizard](start-the-sql-server-import-and-export-wizard.md)」を参照してください。  
   
  SQL Server インポートおよびエクスポート ウィザードの目的は、変換元から変換先にデータをコピーすることです。 また、このウィザードでは、変換先データベースと変換先テーブルも作成できます。 ただし、複数のデータベースやテーブルまたは他の種類のデータベース オブジェクトをコピーする必要がある場合は、データベース コピー ウィザードを使用してください。 詳細については、「 [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md)」を参照してください。  
   
-## <a name="options"></a>および  
- **すぐに実行します。**  
+## <a name="options"></a>オプション  
+ **直ちに実行**  
  このオプションを選択すると、すぐにパッケージを実行します。  
   
  **SSIS パッケージの保存**  
  パッケージをすぐに実行するためのオプションを使用して、パッケージを後で実行するために保存します。  
   
 > [!NOTE]  
->  [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]、ウィザードによって作成されたパッケージを保存するオプションは使用できません。  
+>  で[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]は、ウィザードによって作成されたパッケージを保存するオプションは使用できません。  
   
  **SQL Server**  
- このオプションを選択して、パッケージを [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `msdb` データベースに保存します。  
+ パッケージを[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `msdb`データベースに保存するには、このオプションを選択します。  
   
 > [!NOTE]  
->  このオプションは選択した場合にのみ使用可能な**SSIS パッケージの保存**オプション。  
+>  このオプションは、[ **SSIS パッケージの保存**] オプションを選択した場合にのみ使用できます。  
   
- **ファイル システム**  
+ **ファイルシステム**  
  このオプションを選択して、.dtsx 拡張子を持つファイルとしてパッケージを保存します。  
   
 > [!NOTE]  
->  このオプションは選択した場合にのみ使用可能な**SSIS パッケージの保存**オプション。  
+>  このオプションは、[ **SSIS パッケージの保存**] オプションを選択した場合にのみ使用できます。  
   
  **パッケージの保護レベル**  
  一覧から保護レベルを選択します。  
   
- 保護レベルによって、パッケージ保護の方法、パスワードまたはユーザー キー、適用範囲が決定されます。 保護対象には、すべてのデータを含めることも機密データのみを含めることもできます。 パッケージのセキュリティ オプションと要件についてを参照してください。[パッケージ内の機密データのアクセス制御](../security/access-control-for-sensitive-data-in-packages.md)と[セキュリティの概要&#40;Integration Services&#41;](../security/security-overview-integration-services.md)します。  
+ 保護レベルによって、パッケージ保護の方法、パスワードまたはユーザー キー、適用範囲が決定されます。 保護対象には、すべてのデータを含めることも機密データのみを含めることもできます。 パッケージのセキュリティの要件とオプションを理解するには、「パッケージとセキュリティの[概要 &#40;Integration Services&#41;](../security/security-overview-integration-services.md)の[機密データの Access Control](../security/access-control-for-sensitive-data-in-packages.md)を参照してください。  
   
 > [!NOTE]  
->  このオプションは選択した場合にのみ使用可能な**SSIS パッケージの保存**オプション。  
+>  このオプションは、[ **SSIS パッケージの保存**] オプションを選択した場合にのみ使用できます。  
   
- **Password**  
+ **パスワード**  
  パスワードを入力します。  
   
 > [!NOTE]  
->  このオプションは設定した場合にのみ使用可能な**パッケージの保護レベル**にいずれかのオプション**機密データをパスワードで暗号化**または**すべてのデータをパスワードで暗号化**します。  
+>  このオプションは、[**パッケージの保護レベル**] オプションで [**機微なデータをパスワードで暗号化**する] または [**すべてのデータをパスワードで暗号化**する] を設定した場合にのみ使用できます。  
   
  **パスワードの再入力**  
  パスワードを再度入力します。  
   
 > [!NOTE]  
->  このオプションは設定した場合にのみ使用可能な**パッケージの保護レベル**にいずれかのオプション**機密データをパスワードで暗号化**または**すべてのデータをパスワードで暗号化**します。  
+>  このオプションは、[**パッケージの保護レベル**] オプションで [**機微なデータをパスワードで暗号化**する] または [**すべてのデータをパスワードで暗号化**する] を設定した場合にのみ使用できます。  
   
 ## <a name="see-also"></a>参照  
  [プロジェクトとパッケージの実行](../packages/run-integration-services-ssis-packages.md)   

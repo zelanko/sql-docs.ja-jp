@@ -1,5 +1,5 @@
 ---
-title: SQLXML のセキュリティに関する考慮事項をコア |Microsoft Docs
+title: SQLXML のセキュリティに関する重要な考慮事項 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cc25af8e18e826ce6b8323d714f090ac3d571a97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010552"
 ---
 # <a name="core-sqlxml-security-considerations"></a>SQLXML のセキュリティに関する主な注意点
   次に、データ アクセスに SQLXML を使用するときのセキュリティ ガイドラインを示します。  
   
--   SQLXMLOLEDB プロバイダーでは、`StreamFlags` プロパティへのアクセスが提供されます。このプロパティでは、特定の各インスタンスに対して有効または無効にする SQLXML 機能を示すフラグを設定できます。 このプロパティを使用して、必要なコンポーネントだけが有効になるよう、SQLXML の使用をカスタマイズすることをお勧めします。 詳細については、次を参照してください。 [SQLXMLOLEDB プロバイダー &#40;SQLXML 4.0&#41;](../../../database-engine/dev-guide/sqlxmloledb-provider-sqlxml-4-0.md)します。  
+-   SQLXMLOLEDB プロバイダーでは、`StreamFlags` プロパティへのアクセスが提供されます。このプロパティでは、特定の各インスタンスに対して有効または無効にする SQLXML 機能を示すフラグを設定できます。 このプロパティを使用して、必要なコンポーネントだけが有効になるよう、SQLXML の使用をカスタマイズすることをお勧めします。 詳細については、「 [SQLXMLOLEDB Provider &#40;SQLXML 4.0&#41;](../../../database-engine/dev-guide/sqlxmloledb-provider-sqlxml-4-0.md)」を参照してください。  
   
 -   SQLXML エラーが発生した場合、返されるメッセージには、テーブル名、列名、種類の情報など、データベース スキーマに関する情報を含めることができます。 これらのエラーを扱うときには、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインストールに関する情報が関係のないユーザーに伝わらないよう注意する必要があります。  
   
@@ -49,6 +49,6 @@ ms.locfileid: "66010552"
 -   DiffGrams を実行すると、SQLXML では DiffGram が [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスに対する DELETE、UPDATE、および INSERT コマンドに変換されます。 これらのコマンドは、既存のデータにのみ影響します。 SQLXML により生成されるコマンドでは、データベースは変更されません。 データベースの構造を変更するには、ユーザーは明示的なコマンドを発行する必要があります。 たとえば、テンプレートの `sql:query` ブロックにコマンドを含めます。  
   
 ## <a name="see-also"></a>参照  
- [SQLXML 4.0 のセキュリティに関する考慮事項](sqlxml-4-0-security-considerations.md)  
+ [SQLXML 4.0 のセキュリティに関する注意点](sqlxml-4-0-security-considerations.md)  
   
   

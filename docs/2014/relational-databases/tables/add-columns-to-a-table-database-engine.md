@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: eed258c78e76c5ec3f6aeeeb6bdd647166592613
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62856135"
 ---
 # <a name="add-columns-to-a-table-database-engine"></a>テーブルへの列の追加 (データベース エンジン)
@@ -30,9 +30,9 @@ ms.locfileid: "62856135"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
--   **使用して列を挿入するには。**  
+-   **列を挿入する方法:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -52,9 +52,11 @@ ms.locfileid: "62856135"
   
 #### <a name="to-insert-columns-into-a-table-with-table-designer"></a>テーブル デザイナーでテーブルに列を挿入するには  
   
-1.  **オブジェクト エクスプローラー**で、列を追加するテーブルを右クリックし、 **[デザイン]** をクリックします。  
+1.  
+  **オブジェクト エクスプローラー**で、列を追加するテーブルを右クリックし、 **[デザイン]** をクリックします。  
   
-2.  **[列名]** 列内の最初の空白セルをクリックします。  
+2.  
+  **[列名]** 列内の最初の空白セルをクリックします。  
   
 3.  セルに列名を入力します。 [列名] には値が必要です。  
   
@@ -68,7 +70,7 @@ ms.locfileid: "62856135"
     > [!NOTE]  
     >  新しい列の作成時には、列プロパティの既定の値が追加されますが、 **[列のプロパティ]** タブで値を変更できます。  
   
-6.  列の追加が完了したら、 **ファイル** メニューの **table name**_の保存_をクリックします。  
+6.  列の追加が完了したら、 **[ファイル]** メニューで [ **table name**_table name_.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
@@ -78,12 +80,12 @@ ms.locfileid: "62856135"
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例では、 `dbo.doc_exa`テーブルに列を 2 つ追加する方法を示します。 次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
+3.  次の例では、 `dbo.doc_exa`テーブルに列を 2 つ追加する方法を示します。 次の例をコピーし、クエリウィンドウに貼り付けて、[**実行**] をクリックします。  
   
 ```  
 ALTER TABLE dbo.doc_exa ADD column_b VARCHAR(20) NULL, column_c INT NULL ;  
 ```  
   
-##  <a name="FollowUp"></a> 詳細については、「[ALTER TABLE (Transact-SQL)](/sql/t-sql/statements/alter-table-transact-sql)」を参照してください。  
+##  <a name="FollowUp"></a>詳細については、「 [ALTER TABLE &#40;transact-sql&#41;](/sql/t-sql/statements/alter-table-transact-sql) 」を参照してください。  
   
   
