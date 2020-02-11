@@ -15,10 +15,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: e81bf59912499310fc95afd29758d5be5f691118
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056365"
 ---
 # <a name="use-a-format-file-to-bulk-import-data-sql-server"></a>データの一括インポートでのフォーマット ファイルの使用 (SQL Server)
@@ -36,7 +36,7 @@ ms.locfileid: "74056365"
   * SQLCHAR または SQLVARYCHAR (データは、クライアント コード ページまたは照合順序で暗黙的に指定されるコード ページで送られます)
   * SQLNCHAR または SQLNVARCHAR (データは Unicode として送信されます)
   * SQLBINARY または SQLVARYBIN (データは変換なしで送られます)
-* Azure SQL Database と Azure SQL Data Warehouse は、 [bcp](../../tools/bcp-utility.md)のみをサポートします。  その他の詳細については、以下を参照してください。
+* Azure SQL Database と Azure SQL Data Warehouse は、 [bcp](../../tools/bcp-utility.md)のみをサポートします。  追加情報については、次を参照してください。
   * [Azure SQL Data Warehouse にデータを読み込む](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-overview-load/)
   * [SQL Server から Azure SQL Data Warehouse にデータを読み込む (フラット ファイル)](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-load-from-sql-server-with-bcp/)
   * [データを移行する](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-migrate-data/)

@@ -10,10 +10,10 @@ ms.author: davidph
 author: dphansen
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: ee5d6cbf9b1d5430e431cf04fb3b86ae7fb5743b
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73726230"
 ---
 # <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>チュートリアル:SQL Server 上の R でパーティション ベースのモデルを作成する
@@ -33,7 +33,7 @@ SQL Server 2019 でのパーティション ベースのモデリングは、パ
 > * 各パーティションでモデルを作成およびトレーニングし、データベースにオブジェクトを格納します。
 > * 各パーティション モデルについてチップの結果の確率を予測します。それには、その目的のために用意されているサンプル データを使用します。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
  
 このチュートリアルを完了するには次の準備が必要です。
 
@@ -332,7 +332,7 @@ SELECT *
 FROM prediction_results;
 ```
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 このチュートリアルでは、[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) を使用して、パーティション分割されたデータに対する操作を繰り返しました。 ストアド プロシージャでの外部スクリプトの呼び出しと RevoScaleR 関数の使用の詳細については、次のチュートリアルを参照してください。
 
