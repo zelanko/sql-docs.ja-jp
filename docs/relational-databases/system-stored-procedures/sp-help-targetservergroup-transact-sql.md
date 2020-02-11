@@ -1,5 +1,5 @@
 ---
-title: sp_help_targetservergroup (TRANSACT-SQL) |Microsoft Docs
+title: sp_help_targetservergroup (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: ec3a4a68-b591-431c-9518-053ede522d0c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 63a3d9daa48bb98408c3f0d9b8282e8083849cf0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68085073"
 ---
-# <a name="sphelptargetservergroup-transact-sql"></a>sp_help_targetservergroup (Transact-SQL)
+# <a name="sp_help_targetservergroup-transact-sql"></a>sp_help_targetservergroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   指定したグループ内のすべてのターゲット サーバーを表示します。 グループを指定しない場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではすべてのターゲット サーバー グループに関する情報が返されます。  
@@ -40,25 +40,25 @@ sp_help_targetservergroup
 ```  
   
 ## <a name="argument"></a>引数  
-`[ @name = ] 'name'` 情報を返す対象サーバー グループの名前です。 *名前* は **sysname** 、既定値は NULL です。  
+`[ @name = ] 'name'`情報を返す対象サーバーグループの名前を指定します。 *名前*は**sysname**,、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
-|**servergroup_id**|**int**|サーバー グループの識別番号|  
-|**name**|**sysname**|サーバー グループの名前|  
+|**servergroup_id**|**int**|サーバーグループの識別番号|  
+|**name**|**sysname**|サーバーグループの名前|  
   
 ## <a name="permissions"></a>アクセス許可  
- 既定ではこのプロシージャを実行する権限、 **sysadmin**固定サーバー ロール。  
+ このプロシージャを実行する権限は、既定では**sysadmin**固定サーバーロールに設定されています。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-listing-information-for-all-target-server-groups"></a>A. すべてのターゲット サーバー グループの情報を一覧表示する  
- 次の例では、すべてのターゲット サーバー グループの情報を一覧表示します。  
+ この例では、すべての対象サーバーグループの情報を一覧表示します。  
   
 ```  
 USE msdb ;  
@@ -68,7 +68,7 @@ EXEC dbo.sp_help_targetservergroup ;
 GO  
 ```  
   
-### <a name="b-listing-information-for-a-specific-target-server-group"></a>B. 特定のターゲット サーバー グループの情報を一覧表示する  
+### <a name="b-listing-information-for-a-specific-target-server-group"></a>B. 特定の対象サーバーグループの情報を一覧表示する  
  次の例では、ターゲット サーバー グループ `Servers Maintaining Customer Information` の情報を一覧表示します。  
   
 ```  
@@ -80,10 +80,10 @@ EXEC dbo.sp_help_targetservergroup
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [sp_add_targetservergroup &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql.md)   
- [sp_delete_targetservergroup &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-targetservergroup-transact-sql.md)   
- [sp_update_targetservergroup &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql.md)   
- [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>参照  
+ [sp_add_targetservergroup &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql.md)   
+ [sp_delete_targetservergroup &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-targetservergroup-transact-sql.md)   
+ [sp_update_targetservergroup &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql.md)   
+ [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

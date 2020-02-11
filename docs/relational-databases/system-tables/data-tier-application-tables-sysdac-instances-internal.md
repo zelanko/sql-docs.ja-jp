@@ -1,5 +1,5 @@
 ---
-title: sysdac_instances_internal (TRANSACT-SQL) |Microsoft Docs
+title: sysdac_instances_internal (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -18,36 +18,37 @@ ms.assetid: d2d52cc4-3463-431a-b779-6fbfdeee1dfc
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e8cec14e22779391d954b2a666782e8783f50f3a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68084746"
 ---
-# <a name="data-tier-application-tables---sysdacinstancesinternal"></a>データ層アプリケーション テーブル - sysdac_instances_internal
+# <a name="data-tier-application-tables---sysdac_instances_internal"></a>データ層アプリケーション テーブル - sysdac_instances_internal
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
+  
   [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに配置されたデータ層アプリケーション (DAC) インスタンスごとに 1 行を表示します。 このテーブルは、msdb データベースの dbo スキーマに格納されます。  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
-|instance_id|**uniqueidentifier**|DAC インスタンスの識別子。|  
-|instance_name|**sysname**|DAC インスタンスの名前は、インスタンスの配置時に指定します。|  
-|type_name|**sysname**|DAC の名前は、DAC パッケージの作成時に指定します。|  
-|type_version|**nvarchar(64)**|DAC パッケージの作成時に指定された DAC のバージョン。|  
-|description|**nvarchar (4000)**|DAC パッケージの作成時に指定された DAC の説明。|  
-|type_stream|**varbinary(max)**|論理オブジェクト (テーブルやビュー、DAC に含まれているなど) のエンコード表記を含んでいるビット ストリーム。|  
-|date_created|**datetime**|DAC インスタンスが作成された日付。|  
+|instance_id|**UNIQUEIDENTIFIER**|DAC インスタンスの識別子。|  
+|instance_name|**sysname**|インスタンスの配置時に指定された DAC インスタンスの名前。|  
+|type_name|**sysname**|DAC パッケージの作成時に指定された DAC の名前。|  
+|type_version|**nvarchar (64)**|DAC パッケージの作成時に指定された DAC のバージョン。|  
+|description|**nvarchar(4000)**|DAC パッケージの作成時に指定された DAC の説明。|  
+|type_stream|**varbinary(max)**|DAC に含まれるテーブルやビューなどの論理オブジェクトのエンコードされた表現を格納しているビットストリーム。|  
+|date_created|**DATETIME**|DAC インスタンスが作成された日付と時刻。|  
 |created_by|**sysname**|DAC インスタンスを作成したログイン。|  
   
-## <a name="remarks"></a>コメント  
- このビューに読み取り専用のアクセスは、master データベースに接続するアクセス許可を持つすべてのユーザーに使用できます。  
+## <a name="remarks"></a>解説  
+ このビューへの読み取り専用アクセスは、master データベースに接続する権限を持つすべてのユーザーが使用できます。  
   
 ## <a name="permissions"></a>アクセス許可  
  sysadmin 固定サーバー ロールのメンバーシップが必要です。  
   
-## <a name="see-also"></a>関連項目  
- [[データ層アプリケーション]](../../relational-databases/data-tier-applications/data-tier-applications.md)   
- [dbo.sysdac_instances &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)  
+## <a name="see-also"></a>参照  
+ [データ層アプリケーション](../../relational-databases/data-tier-applications/data-tier-applications.md)   
+ [dbo. sysdac_instances &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)  
   
   

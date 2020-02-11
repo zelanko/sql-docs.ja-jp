@@ -14,11 +14,11 @@ ms.assetid: 6eccacdf-b837-4b66-bd48-ba31771acecb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 331b60b31c49a203da5f25c4481a604132fbb0e8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68079547"
 ---
 # <a name="version-number"></a>バージョン番号
-ODBC では、それぞれさまざまな機能のいくつかのバージョンがあります。 アプリケーションでは、ODBC ドライバー マネージャーのバージョンと特定のドライバーを呼び出すことによってサポート決定**SQLGetInfo** SQL_ODBC_VER および SQL_DRIVER_ODBC_VER のオプションを使用します。
+ODBC には、それぞれ機能が異なる複数のバージョンがあります。 アプリケーションでは、SQL_ODBC_VER オプションと SQL_DRIVER_ODBC_VER オプションを指定して**SQLGetInfo**を呼び出すことによって、ドライバーマネージャーと特定のドライバーがサポートする ODBC バージョンを決定します。

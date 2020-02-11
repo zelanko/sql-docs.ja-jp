@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 87b7b030776c1c18bb13307bf97db721fe472bd3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68105335"
 ---
 # <a name="iif-mdx"></a>IIf (MDX)
@@ -28,45 +28,45 @@ IIf(Logical_Expression, Expression1 [HINT <hints>], Expression2 [HINT <hints>])
 ```  
   
 ## <a name="arguments"></a>引数  
- IIf 関数は、3 つの引数を受け取る: iif (\<条件 >、 \<then 分岐 >、 \<else 分岐 >)。  
+ IIf 関数は、iif (\<condition>、 \<branch>、 \<else 分岐>) の3つの引数を受け取ります。  
   
  *Logical_Expression*  
- 評価される条件**true** (1) または**false** (0)。 有効な多次元式 (MDX) の論理式を指定する必要があります。  
+ **True** (1) または**false** (0) に評価される条件。 有効な多次元式 (MDX) の論理式を指定する必要があります。  
   
- *Expression1 ヒント [Eager |厳密な |遅延]*  
- 論理式を評価するときに使用**true**します。 Expression1 には、有効な多次元式 (MDX) を指定する必要があります。  
+ *Expression1 ヒント [一括 |Strict |Lazy]]*  
+ 論理式が**true**と評価されるときに使用されます。 Expression1 有効な多次元式 (MDX) 式を指定する必要があります。  
   
- *Expression2 ヒント [Eager |厳密な |遅延]*  
- 論理式を評価するときに使用**false**します。 Expression2 には、有効な多次元式 (MDX) を指定する必要があります。  
+ *Expression2 ヒント [一括 |Strict |Lazy]]*  
+ 論理式が**false**に評価されるときに使用されます。 Expression2 には、有効な多次元式 (MDX) を指定する必要があります。  
   
-## <a name="remarks"></a>コメント  
- 論理式で指定された条件の評価が**false**ときに、この式の値は 0 です。 その他の値を評価する**true**します。  
+## <a name="remarks"></a>解説  
+ 論理式で指定された条件は、この式の値が0の場合は**false**に評価されます。 その他の値は**true**に評価されます。  
   
- 条件の場合は**true**、 **IIf**関数は、最初の式を返します。 それ以外の場合は、2 番目の式を返します。  
+ 条件が**true**の場合、 **IIf**関数は最初の式を返します。 それ以外の場合、関数は2番目の式を返します。  
   
- 指定した 2 つの式は値または MDX オブジェクトを返すことができます。 また、1 番目と 2 番目の式の型は一致しなくてもかまいません。  
+ 指定された式は、値または MDX オブジェクトを返すことができます。 また、1 番目と 2 番目の式の型は一致しなくてもかまいません。  
   
- **IIf**関数は、検索条件に基づくメンバーのセットを作成するは推奨されません。 代わりに、使用、[フィルター](../mdx/filter-mdx.md)を論理式に対して指定されたセット内の各メンバーを評価し、メンバーのサブセットを返す関数。  
+ **IIf**関数は、検索条件に基づいてメンバーのセットを作成する場合は推奨されません。 代わりに、 [Filter](../mdx/filter-mdx.md)関数を使用して、指定されたセット内の各メンバーを論理式に対して評価し、メンバーのサブセットを返します。  
   
 > [!NOTE]  
->  いずれかの式が NULL と評価される場合、その条件が満たされる場合は結果セットが NULL になります。  
+>  いずれかの式が NULL に評価された場合、その条件が満たされると結果セットは NULL になります。  
   
- Hint はオプションの修飾子で、式をいつどのように評価するかを指定します。 これを使用すると、式の評価方法を指定することにより、既定のクエリ プランをオーバーライドすることができます。  
+ ヒントは、式を評価する方法とタイミングを決定するオプションの修飾子です。 これにより、式の評価方法を指定することによって、既定のクエリプランをオーバーライドできます。  
   
--   EAGER を指定すると、式は元の IIF サブ空間で評価されます。  
+-   一括では、元の IIF サブ空間に対して式が評価されます。  
   
 -   STRICT を指定すると、論理条件式によって作成された制限付きのサブ空間のみで式が評価されます。  
   
--   LAZY を指定すると、式はセル単位で評価されます。  
+-   レイジーは、セルごとのモードで式を評価します。  
   
- EAGER と STRICT は IIF の then-else 分岐のみに適用され、LAZY はすべての MDX 式に適用されます。 MDX 式の後には、セル単位でその式を評価する HINT LAZY を指定できます。  
+ "一括" と "厳密" は IIF の then 分岐にのみ適用されますが、LAZY はすべての MDX 式に適用されます。 任意の MDX 式の後にヒントレイジーを指定すると、その式がセル単位のモードで評価されます。  
   
- ヒントで EAGER と STRICT を同時に使用することはできません。同じ IIF(,,) の別の式で使用することはできます。  
+ 集中と厳密はヒントで相互に排他的です。これらは、異なる式で同じ IIF (,,) で使用できます。  
   
- 詳細については、次を参照してください。 [IIF 関数のクエリ ヒントでは、SQL Server Analysis Services 2008](https://go.microsoft.com/fwlink/?LinkId=269540)と[実行プランおよび MDX の IIF 関数と CASE ステートメントのプラン ヒント](https://go.microsoft.com/fwlink/?LinkId=269565)します。  
+ 詳細については、「 [SQL Server Analysis Services 2008 の IIF 関数のクエリヒント](https://go.microsoft.com/fwlink/?LinkId=269540)」および「 [MDX の IIF 関数と CASE ステートメントの実行プランとプランヒント](https://go.microsoft.com/fwlink/?LinkId=269565)」を参照してください。  
   
-## <a name="examples"></a>使用例  
- 次のクエリの簡単な使用を示しています。 **IIF** Internet Sales Amount メジャーが大きい場合は、2 つの異なる文字列値または $10000 未満のいずれかを返す計算されるメジャー内で。  
+## <a name="examples"></a>例  
+ 次のクエリは、計算されるメジャー内の**IIF**を使用して、Internet Sales Amount メジャーが $1万より大きいか、または未満の場合に、2つの異なる文字列値のいずれかを返す簡単な方法を示しています。  
   
  `WITH MEMBER MEASURES.IIFDEMO AS`  
   
@@ -80,7 +80,7 @@ IIf(Logical_Expression, Expression1 [HINT <hints>], Expression2 [HINT <hints>])
   
  `FROM [Adventure Works]`  
   
- IIF の一般的な使用方法では、次の例に示すように、計算されるメンバー内で "0 除算" エラーを処理します。  
+ IIF の非常に一般的な用途は、次の例に示すように、計算されるメジャー内で "ゼロによる除算" エラーを処理することです。  
   
  `WITH`  
   
@@ -130,7 +130,7 @@ IIf(Logical_Expression, Expression1 [HINT <hints>], Expression2 [HINT <hints>])
   
  `WHERE([Product].[Product Categories].[Subcategory].&[26])`  
   
- 次の例に示します**IIF**行に複雑な組のセットを作成する、Generate 関数内の 2 つのセットの 1 つを返します。  
+ 次の例では、Generate 関数内の2つのセットのいずれか**を返して**、行に組の複雑なセットを作成しています。  
   
  `SELECT {[Measures].[Internet Sales Amount]} ON 0,`  
   
@@ -158,7 +158,7 @@ IIf(Logical_Expression, Expression1 [HINT <hints>], Expression2 [HINT <hints>])
   
  `WHERE([Product].[Product Categories].[Subcategory].&[26])`  
   
- 最後に、この例では、プラン ヒントを使用する方法を示します。  
+ 最後に、この例では、プランヒントの使用方法を示します。  
   
  `WITH MEMBER MEASURES.X AS`  
   
@@ -177,6 +177,6 @@ IIf(Logical_Expression, Expression1 [HINT <hints>], Expression2 [HINT <hints>])
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>参照  
- [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Mdx 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

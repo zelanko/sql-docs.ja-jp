@@ -16,21 +16,21 @@ ms.assetid: 738fd3ff-3daf-483d-a0b9-88bef1be54c1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 87c61baa93cb1dbca58bbe86ffc254a92d2b9d5b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965245"
 ---
 # <a name="ruleenum"></a>RuleEnum
-ときに従うルールを指定します、[キー](../../../ado/reference/adox-api/key-object-adox.md)は削除されます。  
+[キー](../../../ado/reference/adox-api/key-object-adox.md)が削除されたときに従うルールを指定します。  
   
-|定数|Value|説明|  
+|常時|値|[説明]|  
 |--------------|-----------|-----------------|  
-|**adRICascade**|1|Cascade 変更します。|  
-|**adRINone**|0|既定値です。 アクションは行われません。|  
-|**adRISetDefault**|3|外部キーの値は、既定値に設定されます。|  
-|**adRISetNull**|2|外部キー値の設定を null にします。|  
+|**adRICascade**|1 で保護されたプロセスとして起動されました|カスケード変更。|  
+|**adRINone**|0|既定。 アクションは実行されません。|  
+|**adRISetDefault**|3|外部キーの値が既定値に設定されています。|  
+|**adRISetNull**|2|外部キーの値が null に設定されています。|  
   
 ## <a name="applies-to"></a>適用対象  
  [DeleteRule プロパティ (ADOX)](../../../ado/reference/adox-api/deleterule-property-adox.md)

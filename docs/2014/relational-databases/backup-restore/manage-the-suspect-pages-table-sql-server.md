@@ -19,20 +19,20 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0f6c6afc1822e2f56189aace2836a15486d1b73b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62921958"
 ---
-# <a name="manage-the-suspectpages-table-sql-server"></a>suspect_pages テーブルの管理 (SQL Server)
+# <a name="manage-the-suspect_pages-table-sql-server"></a>suspect_pages テーブルの管理 (SQL Server)
   このトピックでは、 **または** を使用して、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] suspect_pages [!INCLUDE[tsql](../../includes/tsql-md.md)]テーブルを管理する方法について説明します。 **suspect_pages** テーブルは、問題があると考えられるページに関する情報を保持するためのテーブルであり、復元が必要かどうかを判断する際に使用します。 [suspect_pages](/sql/relational-databases/system-tables/suspect-pages-transact-sql) テーブルは、 [msdb データベース](../databases/msdb-database.md)にあります。  
   
  [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] がデータ ページの読み取りを試みたときに次のエラーのいずれかを検出すると、ページは "問題あり" と見なされます。  
   
--   [823 エラー](../errors-events/mssqlserver-823-database-engine-error.md) : ディスク エラー (特定のハードウェア エラー) など、オペレーティング システムで実行された巡回冗長検査 (CRC) によって発生したエラーです。  
+-   ディスクエラー (特定のハードウェアエラー) など、オペレーティングシステムによって発行された巡回冗長検査 (CRC) によって発生した[823 エラー](../errors-events/mssqlserver-823-database-engine-error.md)  
   
--   [824 エラー](../errors-events/mssqlserver-824-database-engine-error.md): 正しくないページ (すべての論理エラー) などです。  
+-   [824 エラー](../errors-events/mssqlserver-824-database-engine-error.md)(破損ページ (すべての論理エラー) など)  
   
  問題があると考えられるすべてのページのページ ID が **suspect_pages** テーブルに記録されます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] は、次のような通常の処理中に検出された問題のあるページを記録します。  
   
@@ -48,9 +48,9 @@ ms.locfileid: "62921958"
   
 -   **作業を開始する準備:**  
   
-     [推奨事項](#Recommendations)  
+     [Recommendations (推奨事項)](#Recommendations)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **suspect_pages テーブルを管理する方法:**  
   
@@ -58,7 +58,7 @@ ms.locfileid: "62921958"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Recommendations"></a> 推奨事項  
   
@@ -122,7 +122,7 @@ ms.locfileid: "62921958"
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-#### <a name="to-manage-the-suspectpages-table"></a>suspect_pages テーブルを管理するには  
+#### <a name="to-manage-the-suspect_pages-table"></a>suspect_pages テーブルを管理するには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]のインスタンスに接続して、そのインスタンスを展開します。次に、 **[データベース]** を展開します。  
   
@@ -134,7 +134,7 @@ ms.locfileid: "62921958"
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### <a name="to-manage-the-suspectpages-table"></a>suspect_pages テーブルを管理するには  
+#### <a name="to-manage-the-suspect_pages-table"></a>suspect_pages テーブルを管理するには  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
@@ -160,13 +160,13 @@ GO
   
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [DROP DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-database-audit-specification-transact-sql)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [DBCC &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-transact-sql)   
  [ページ復元 &#40;SQL Server&#41;](restore-pages-sql-server.md)   
- [suspect_pages &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-tables/suspect-pages-transact-sql)   
+ [suspect_pages &#40;Transact-sql&#41;](/sql/relational-databases/system-tables/suspect-pages-transact-sql)   
  [MSSQLSERVER_823](../errors-events/mssqlserver-823-database-engine-error.md)   
  [MSSQLSERVER_824](../errors-events/mssqlserver-824-database-engine-error.md)  
   
