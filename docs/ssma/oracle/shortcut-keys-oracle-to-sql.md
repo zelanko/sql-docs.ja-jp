@@ -1,5 +1,5 @@
 ---
-title: ショートカット キー (Oracletosql) |Microsoft Docs
+title: ショートカットキー (Oracle から SQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,17 +11,17 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: aad656fb2958de67336c9ac4c3e937528fef6466
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68266470"
 ---
 # <a name="shortcut-keysoracle-to-sql"></a>ショートカット キー (OracleToSQL)
-SSMA アプリケーション内を移動するキーボード ショートカットを使用することができます。 詳細については、次の各トピックを参照してください。  
+SSMA アプリケーション内を移動するには、キーボードショートカットを使用します。 詳細については、次の各トピックを参照してください。  
   
--   [メニュー コマンドやその他のショートカット キー&#40;Oracle から SQL&#41;](../../ssma/oracle/menu-commands-and-other-shortcut-keys-oracle-to-sql.md)  
+-   [メニューコマンドやその他のショートカットキー&#40;Oracle から SQL&#41;](../../ssma/oracle/menu-commands-and-other-shortcut-keys-oracle-to-sql.md)  
   
-## <a name="see-also"></a>関連項目  
-[Ssma for Oracle 作業の開始&#40;OracleToSQL&#41;](../../ssma/oracle/getting-started-with-ssma-for-oracle-oracletosql.md)  
+## <a name="see-also"></a>参照  
+[SSMA for Oracle &#40;OracleToSQL によるはじめに&#41;](../../ssma/oracle/getting-started-with-ssma-for-oracle-oracletosql.md)  
   

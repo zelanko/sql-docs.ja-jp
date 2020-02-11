@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f1b729c5652258deb0780ec129592e1a0f14217c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63195052"
 ---
 # <a name="open-the-query-and-view-designer-visual-database-tools"></a>クエリおよびビュー デザイナーを開く (Visual Database Tools)
@@ -41,7 +41,9 @@ ms.locfileid: "63195052"
   
 1.  オブジェクト エクスプローラーで、開くビューを右クリックし、 **[デザイン]** または **[ビューを開く]** をクリックします。  
   
-     **[デザイン]** を選択すると、 **[オプション]** ダイアログ ボックスで選択したオプションに従い、クエリおよびビュー デザイナーのペインが開きます。 **[ビューを開く]** を選択すると、既定で結果ペインのみが開きます。  
+     
+  **[デザイン]** を選択すると、 **[オプション]** ダイアログ ボックスで選択したオプションに従い、クエリおよびビュー デザイナーのペインが開きます。 
+  **[ビューを開く]** を選択すると、既定で結果ペインのみが開きます。  
   
 ### <a name="to-open-the-query-and-view-designer-for-an-existing-query"></a>クエリおよびビュー デザイナーで既存のクエリを開くには  
   
@@ -52,7 +54,7 @@ ms.locfileid: "63195052"
 3.  クエリ ステートメントを強調表示し、強調表示された領域を右クリックして、 **[エディターでクエリをデザイン]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [クエリおよびビューの操作方法に関するトピックを設計&#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [クエリおよびビューのデザイン方法に関するトピック &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [クエリおよびビュー デザイナー ツール (Visual Database Tools)](query-and-view-designer-tools-visual-database-tools.md)  
   
   

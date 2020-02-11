@@ -15,19 +15,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 14f380f510070da1b8fa77f7f5440640ce37452b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62856501"
 ---
 # <a name="view-the-dependencies-of-a-stored-procedure"></a>ストアド プロシージャの依存関係の表示
     
-##  <a name="Top"></a> このトピックでは、ストアド プロシージャの依存関係を表示する方法を説明します[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]を使用して[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]または[!INCLUDE[tsql](../../includes/tsql-md.md)]します。  
+##  
+  <a name="Top"></a> このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、[!INCLUDE[tsql](../../includes/tsql-md.md)] でストアド プロシージャの依存関係を表示する方法について説明します。  
   
--   **作業を開始する準備:** [Security](#Security)  
+-   **作業を開始する準備:**  [セキュリティ](#Security)  
   
--   **プロシージャの依存関係の表示を使用します。** [SQL Server Management Studio](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
+-   **プロシージャの依存関係の表示に使用するもの:** [SQL Server Management Studio](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
@@ -43,7 +44,7 @@ ms.locfileid: "62856501"
  オブジェクト カタログ ビュー: `sys.sql_expression_dependencies`  
  データベースに対する VIEW DEFINITION 権限およびデータベースの sys.sql_expression_dependencies に対する SELECT 権限が必要です。 既定では、SELECT 権限は db_owner 固定データベース ロールのメンバーだけに与えられます。 SELECT 権限と VIEW DEFINITION 権限が別のユーザーに与えられている場合、権限が許可されているユーザーはデータベース内のすべての依存関係を表示できます。  
   
-##  <a name="Procedures"></a> ストアド プロシージャの依存関係を表示する方法  
+##  <a name="Procedures"></a>ストアドプロシージャの依存関係を表示する方法  
  次のいずれかを使用します。  
   
 -   [SQL Server Management Studio](#SSMSProcedure)  
@@ -51,13 +52,15 @@ ms.locfileid: "62856501"
 -   [Transact-SQL](#TsqlProcedure)  
   
 ###  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
- **オブジェクト エクスプローラーでプロシージャの依存関係を表示するには**  
+ **オブジェクトエクスプローラーのプロシージャの依存関係を表示するには**  
   
 1.  オブジェクト エクスプローラーで、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] に接続し、そのインスタンスを展開します。  
   
-2.  **[データベース]** を展開し、プロシージャが属するデータベースを展開し、 **[プログラミング]** を展開します。  
+2.  
+  **[データベース]** を展開し、プロシージャが属するデータベースを展開し、 **[プログラミング]** を展開します。  
   
-3.  **[ストアド プロシージャ]** を展開し、プロシージャを右クリックして、 **[依存関係の表示]** をクリックします。  
+3.  
+  **[ストアド プロシージャ]** を展開し、プロシージャを右クリックして、 **[依存関係の表示]** をクリックします。  
   
 4.  プロシージャに依存しているオブジェクトの一覧を表示します。  
   
@@ -66,16 +69,18 @@ ms.locfileid: "62856501"
 6.  **[OK]** をクリックします。  
   
 ###  <a name="TsqlProcedure"></a> Transact-SQL の使用  
- **クエリ エディターでプロシージャの依存関係を表示するには**  
+ **クエリエディターでプロシージャの依存関係を表示するには**  
   
  システム関数: `sys.dm_sql_referencing_entities`  
  この関数は、プロシージャに依存しているオブジェクトを表示するために使用します。  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続し、そのインスタンスを展開します。  
+1.  **オブジェクトエクスプローラー**で、の[!INCLUDE[ssDE](../../includes/ssde-md.md)]インスタンスに接続し、そのインスタンスを展開します。  
   
-2.  **[データベース]** を展開し、プロシージャが属するデータベースを展開します。  
+2.  
+  **[データベース]** を展開し、プロシージャが属するデータベースを展開します。  
   
-3.  **[ファイル]** メニューの **[新しいクエリ]** をクリックします。  
+3.  
+  **[ファイル]** メニューの **[新しいクエリ]** をクリックします。  
   
 4.  次の例をコピーし、クエリ エディターに貼り付けます。 最初の例では、 `uspVendorAllInfo` データベース内のすべてのベンダーの名前と、そのベンダーの提供製品、信用格付け、およびベンダーが現時点で製品を提供できるかどうかを返す [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] プロシージャが作成されます。  
   
@@ -95,11 +100,13 @@ ms.locfileid: "62856501"
  システム関数: `sys.dm_sql_referenced_entities`  
  この関数は、プロシージャが依存しているオブジェクトを表示するために使用します。  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続し、そのインスタンスを展開します。  
+1.  **オブジェクトエクスプローラー**で、の[!INCLUDE[ssDE](../../includes/ssde-md.md)]インスタンスに接続し、そのインスタンスを展開します。  
   
-2.  **[データベース]** を展開し、プロシージャが属するデータベースを展開します。  
+2.  
+  **[データベース]** を展開し、プロシージャが属するデータベースを展開します。  
   
-3.  **[ファイル]** メニューの **[新しいクエリ]** をクリックします。  
+3.  
+  **[ファイル]** メニューの **[新しいクエリ]** をクリックします。  
   
 4.  次の例をコピーし、クエリ エディターに貼り付けます。 最初の例では、 `uspVendorAllInfo` データベース内のすべてのベンダーの名前と、そのベンダーの提供製品、信用格付け、およびベンダーが現時点で製品を提供できるかどうかを返す [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] プロシージャが作成されます。  
   
@@ -121,11 +128,13 @@ ms.locfileid: "62856501"
  このビューを使用すると、プロシージャが依存しているオブジェクトまたはプロシージャに依存しているオブジェクトを表示できます。  
   
  プロシージャに依存しているオブジェクトを表示します。  
- 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続し、そのインスタンスを展開します。  
+ 1.  **オブジェクトエクスプローラー**で、の[!INCLUDE[ssDE](../../includes/ssde-md.md)]インスタンスに接続し、そのインスタンスを展開します。  
   
-2.  **[データベース]** を展開し、プロシージャが属するデータベースを展開します。  
+2.  
+  **[データベース]** を展開し、プロシージャが属するデータベースを展開します。  
   
-3.  **[ファイル]** メニューの **[新しいクエリ]** をクリックします。  
+3.  
+  **[ファイル]** メニューの **[新しいクエリ]** をクリックします。  
   
 4.  次の例をコピーし、クエリ エディターに貼り付けます。 最初の例では、 `uspVendorAllInfo` データベース内のすべてのベンダーの名前と、そのベンダーの提供製品、信用格付け、およびベンダーが現時点で製品を提供できるかどうかを返す [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] プロシージャが作成されます。  
   
@@ -152,11 +161,13 @@ ms.locfileid: "62856501"
     ```  
   
  プロシージャが依存しているオブジェクトを表示します。  
- 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続し、そのインスタンスを展開します。  
+ 1.  **オブジェクトエクスプローラー**で、の[!INCLUDE[ssDE](../../includes/ssde-md.md)]インスタンスに接続し、そのインスタンスを展開します。  
   
-2.  **[データベース]** を展開し、プロシージャが属するデータベースを展開します。  
+2.  
+  **[データベース]** を展開し、プロシージャが属するデータベースを展開します。  
   
-3.  **[ファイル]** メニューの **[新しいクエリ]** をクリックします。  
+3.  
+  **[ファイル]** メニューの **[新しいクエリ]** をクリックします。  
   
 4.  次の例をコピーし、クエリ エディターに貼り付けます。 最初の例では、 `uspVendorAllInfo` データベース内のすべてのベンダーの名前と、そのベンダーの提供製品、信用格付け、およびベンダーが現時点で製品を提供できるかどうかを返す [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] プロシージャが作成されます。  
   
@@ -182,9 +193,9 @@ ms.locfileid: "62856501"
     ```  
   
 ## <a name="see-also"></a>参照  
- [ストアド プロシージャの名前の変更](rename-a-stored-procedure.md)   
- [sys.dm_sql_referencing_entities &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql)   
- [sys.dm_sql_referenced_entities &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql)   
- [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql)  
+ [ストアドプロシージャの名前の変更](rename-a-stored-procedure.md)   
+ [dm_sql_referencing_entities &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql)   
+ [dm_sql_referenced_entities &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql)   
+ [sql_expression_dependencies &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql)  
   
   
