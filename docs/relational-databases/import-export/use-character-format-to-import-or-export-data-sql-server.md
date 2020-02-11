@@ -15,10 +15,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 4d380954be720a6cb839b0c4259a408733f8e176
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056334"
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>文字形式を使用したデータのインポートまたはエクスポート (SQL Server)
@@ -54,20 +54,20 @@ ms.locfileid: "74056334"
   
 -   変換中に拡張文字が失われないようにするには、Unicode 文字形式を使用するか、コード ページを指定します。  
   
--   [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) データが文字形式ファイルに保存される場合は、メタデータなしで保存されます。 各データ値は、暗黙的なデータ変換の規則に従って [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) 形式に変換されます。 [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) 型の列にインポートされるときは、 [char](../../t-sql/data-types/char-and-varchar-transact-sql.md)型のデータとしてインポートされます。 [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) 型以外のデータ型の列にインポートされるときは、暗黙の変換を使用してデータが [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) から変換されます。 詳細については、「[データ型の変換 &#40;データベース エンジン&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)」を参照してください。  
+-   [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) データが文字形式ファイルに保存される場合は、メタデータなしで保存されます。 各データ値は、暗黙的なデータ変換の規則に従って [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) 形式に変換されます。 [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) 型の列にインポートされるときは、 [char](../../t-sql/data-types/char-and-varchar-transact-sql.md)型のデータとしてインポートされます。 [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md)型以外のデータ型の列にインポートされるときは、暗黙の変換を使用してデータが [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) から変換されます。 詳細については、「[データ型の変換 &#40;データベース エンジン&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)」を参照してください。  
   
--   [bcp ユーティリティ](../../tools/bcp-utility.md)は [money](../../t-sql/data-types/money-and-smallmoney-transact-sql.md) 型の値をエクスポートする場合、コンマなどの桁区切り文字で区切らずに、小数点以下 4 桁の文字形式データ ファイルとしてエクスポートします。 たとえば、値 1,234,567.123456 を含む [money](../../t-sql/data-types/money-and-smallmoney-transact-sql.md) 型の列は、文字列 1234567.1235 としてデータ ファイルに一括エクスポートされます。  
+-   [bcp ユーティリティ](../../tools/bcp-utility.md) は [money](../../t-sql/data-types/money-and-smallmoney-transact-sql.md) 型の値をエクスポートする場合、コンマなどの桁区切り文字で区切らずに、小数点以下 4 桁の文字形式データ ファイルとしてエクスポートします。 たとえば、値 1,234,567.123456 を含む [money](../../t-sql/data-types/money-and-smallmoney-transact-sql.md) 型の列は、文字列 1234567.1235 としてデータ ファイルに一括エクスポートされます。  
   
 ## 文字形式のコマンド オプション<a name="command_options"></a>  
 文字形式のデータは、[bcp](../../tools/bcp-utility.md)、[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)、または [INSERT ...SELECT * FROM OPENROWSET(BULK...) を使用してテーブルにインポートできます](../../t-sql/functions/openrowset-transact-sql.md)。[bcp](../../tools/bcp-utility.md) コマンドまたは [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) ステートメントの場合は、ステートメントでデータ形式を指定できます。  [INSERT ...SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) ステートメントの場合は、フォーマット ファイルでデータ形式を指定する必要があります。  
   
 文字形式は、次のコマンド オプションでサポートされています。  
   
-|コマンド|オプション|[説明]|  
+|command|オプション|説明|  
 |-------------|------------|-----------------|  
 |bcp|**-c**|bcp ユーティリティが文字データを使用するようにします。\*|  
 |BULK INSERT|DATAFILETYPE **='char'**|データの一括インポート時に文字形式を使用します。|  
-|OPENROWSET|なし|フォーマット ファイルを使用する必要があります|
+|OPENROWSET|該当なし|フォーマット ファイルを使用する必要があります|
   
  \* 文字 ( **-c**) データを、先行バージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クライアントと互換性のある形式で読み込むには、 **-V** スイッチを使用します。 詳細については、「 [以前のバージョンの SQL Server からのネイティブ形式データおよび文字形式データのインポート](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)」をご覧ください。  
    
@@ -219,7 +219,7 @@ SELECT * FROM TestDatabase.dbo.myChar;
 -   [Unicode ネイティブ形式を使用したデータのインポートまたはエクスポート &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
 ## <a name="see-also"></a>参照  
- [bcp Utility](../../tools/bcp-utility.md)   
+ [bcp ユーティリティ](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
