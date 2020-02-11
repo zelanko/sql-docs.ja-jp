@@ -1,5 +1,5 @@
 ---
-title: managed_backup.sp_backup_config_advanced (TRANSACT-SQL) |Microsoft Docs
+title: managed_backup。 sp_backup_config_advanced (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,16 +21,16 @@ ms.assetid: 4fae8193-1f88-48fd-a94a-4786efe8d6af
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: cbbbfbf442d36a5f78771e4d097888a86b441065
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67942142"
 ---
-# <a name="managed_backupsp_backup_config_advanced-transact-sql"></a>managed_backup.sp_backup_config_advanced (TRANSACT-SQL)
+# <a name="managed_backupsp_backup_config_advanced-transact-sql"></a>managed_backup。 sp_backup_config_advanced (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  高度な設定を構成します[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]します。  
+  の詳細設定を[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]構成します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,12 +45,12 @@ EXEC managed_backup.sp_backup_config_advanced
     ,[@local_cache_path = ] 'NOT AVAILABLE'  
 ```  
   
-##  <a name="Arguments"></a> 引数  
+##  <a name="Arguments"></a>数値  
  @database_name  
- 特定のデータベースでマネージ バックアップを有効にするためのデータベース名。 NULL の場合、または *、この管理対象のバックアップは、サーバー上のすべてのデータベースに適用されます。  
+ 特定のデータベースでマネージバックアップを有効にするためのデータベース名。 NULL または * の場合、このマネージバックアップはサーバー上のすべてのデータベースに適用されます。  
   
  @encryption_algorithm  
- バックアップ中にバックアップ ファイルを暗号化するために使用する暗号化アルゴリズムの名前。 @encryption_algorithmは **SYSNAME** します。 データベースに対して初めて [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]を構成する場合の必須パラメーターです。 指定**NO_ENCRYPTION**バックアップ ファイルを暗号化したくない場合。 変更するときに、[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]構成設定では、このパラメーターは省略可能 - 既存の構成値を保持し、パラメーターが指定されていない場合。 このパラメーターに使用できる値は次のとおりです。  
+ バックアップ中にバックアップファイルを暗号化するために使用される暗号化アルゴリズムの名前。 @encryption_algorithmは**SYSNAME**です。 データベースに対して初めて [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]を構成する場合の必須パラメーターです。 バックアップファイルを暗号化しない場合は、 **NO_ENCRYPTION**を指定します。 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]構成設定を変更する場合、このパラメーターは省略可能です。パラメーターが指定されていない場合は、既存の構成値が保持されます。 このパラメーターに指定できる値は次のとおりです。  
   
 -   AES_128  
   
@@ -65,26 +65,26 @@ EXEC managed_backup.sp_backup_config_advanced
  暗号化アルゴリズムの詳細については、「 [Choose an Encryption Algorithm](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)」をご覧ください。  
   
  @encryptor_type  
- '証明書' を指定できますが、暗号化機能の型または ' ASYMMETRIC_KEY"です。 @encryptor_typeは **nvarchar (32)** します。 このパラメーターは省略可能の NO_ENCRYPTION を指定する場合、@encryption_algorithmパラメーター。  
+ 暗号化機能の種類。 "CERTIFICATE" または "ASYMMETRIC_KEY" のいずれかになります。 @encryptor_typeは**nvarchar (32)** です。 パラメーターに NO_ENCRYPTION を指定した場合、 @encryption_algorithmこのパラメーターは省略可能です。  
   
  @encryptor_name  
- 既存の証明書またはバックアップの暗号化に使用する非対称キーの名前。 @encryptor_nameは **SYSNAME** します。 非対称キーを使用して場合拡張キー管理 (EKM) が構成する必要があります。 このパラメーターは省略可能の NO_ENCRYPTION を指定する場合、@encryption_algorithmパラメーター。  
+ バックアップの暗号化に使用する既存の証明書または非対称キーの名前。 @encryptor_nameは**SYSNAME**です。 非対称キーを使用する場合は、拡張キー管理 (EKM) を使用して構成する必要があります。 パラメーターに NO_ENCRYPTION を指定した場合、 @encryption_algorithmこのパラメーターは省略可能です。  
   
  詳しくは、「[拡張キー管理 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)」をご覧ください。  
   
  @local_cache_path  
- このパラメーターはまだサポートされていません。  
+ このパラメーターは、まだサポートされていません。  
   
 ## <a name="return-code-value"></a>リターン コード値  
  0 (成功) または 1 (失敗)  
   
-## <a name="security"></a>セキュリティ  
+## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>アクセス許可  
- メンバーシップが必要です**db_backupoperator**データベース ロール、 **ALTER ANY CREDENTIAL**アクセス許可、および**EXECUTE**に対する**sp_deletebackuphistory**ストアド プロシージャ。  
+ **Db_backupoperator**データベースロールのメンバーシップ、 **ALTER ANY CREDENTIAL**権限、および**Sp_delete_backuphistory**ストアドプロシージャに対する**EXECUTE**権限が必要です。  
   
-## <a name="examples"></a>使用例  
- 次の例は、高度な構成オプションを設定[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]の SQL Server のインスタンス。  
+## <a name="examples"></a>例  
+ 次の例では、SQL Server の[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]インスタンスのの詳細な構成オプションを設定します。  
   
 ```  
 Use msdb;  
@@ -96,8 +96,8 @@ Go
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [managed_backup.sp_backup_config_basic (TRANSACT-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md)   
- [managed_backup.sp_backup_config_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md)  
+## <a name="see-also"></a>参照  
+ [managed_backup。 sp_backup_config_basic (Transact-sql)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md)   
+ [managed_backup sp_backup_config_schedule &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md)  
   
   

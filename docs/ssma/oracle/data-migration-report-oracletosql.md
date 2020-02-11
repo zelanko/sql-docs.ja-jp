@@ -11,37 +11,37 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 0d58f07f4e9d43f78c9c8990d174030cce484781
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68264250"
 ---
 # <a name="data-migration-report--oracletosql"></a>データ移行レポート (OracleToSQL)
-**データ移行レポート**へのデータを移行した後、ダイアログ ボックスが表示されます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
+[**データ移行レポート**] ダイアログボックスは、にデータを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]移行した後に表示されます。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
 **状態**  
-ソースからターゲット データベースへのデータ移行の状態が表示されます。  
+転送元データベースから転送先データベースへのデータ移行の状態が表示されます。  
   
-**From**  
-ソース テーブル。  
+**差出人**  
+ソーステーブルです。  
   
-**変換先**  
+**宛先**  
 対象のテーブル。  
   
 **行の合計数**  
-ソース テーブル内のデータ行の数。  
+ソーステーブル内のデータ行の数。  
   
-**正常に移行済みの行の数**  
-データの行の数は、対象のテーブルを正常に移行します。  
+**正常に移行された行の数**  
+ターゲットテーブルに正常に移行されたデータの行の数。  
   
 **比率**  
-行の割合が正常に移行します。  
+正常に移行された行の割合。  
   
 **詳細**  
-データ移行に失敗した場合は、レポートで選択した行の移行の詳細を表示する をクリックします。 SSMA は、失敗の理由で表示されます。  
+データの移行に失敗した場合は、クリックすると、レポート内の選択した行の移行の詳細が表示されます。 SSMA には、エラーの理由が表示されます。  
   
-**レポートを保存します。**  
-レポートを保存します。CSV (コンマ区切り値) のファイルは、Microsoft Excel を使用して調べることができます。  
+**レポートの保存**  
+レポートをに保存します。CSV (コンマ区切り値) ファイル。 Microsoft Excel を使用して調べることができます。  
   

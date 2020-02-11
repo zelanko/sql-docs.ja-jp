@@ -1,5 +1,5 @@
 ---
-title: RDS プロパティ |Microsoft Docs
+title: RDS のプロパティ |Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,33 +14,33 @@ ms.assetid: e4e04cbd-21fc-44a1-9f21-49aa68746934
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5f6ada7e9c6c793ebc412abc00bf4c0957072740
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67963615"
 ---
 # <a name="rds-properties"></a>RDS プロパティ
 > [!IMPORTANT]
->  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)します。  
+>  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および[Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416)」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
   
 |||  
 |-|-|  
-|[接続 (RDS)](../../../ado/reference/rds-api/connect-property-rds.md)|クエリと更新操作の実行元となるデータベース名を示します。|  
-|[ExecuteOptions (RDS)](../../../ado/reference/rds-api/executeoptions-property-rds.md)|非同期実行が有効になっているかどうかを示します。|  
-|[FetchOptions (RDS)](../../../ado/reference/rds-api/fetchoptions-property-rds.md)|非同期のフェッチの種類を示します。|  
-|[FilterColumn (RDS)](../../../ado/reference/rds-api/filtercolumn-property-rds.md)|フィルター条件の評価対象となる列を示します。|  
-|[FilterCriterion (RDS)](../../../ado/reference/rds-api/filtercriterion-property-rds.md)|フィルター値で使用する評価演算子を示します。|  
-|[FilterValue (RDS)](../../../ado/reference/rds-api/filtervalue-property-rds.md)|レコードをフィルターする値を示します。|  
-|[ハンドラー (RDS)](../../../ado/reference/rds-api/handler-property-rds.md)|サーバー側のカスタマイズのプログラムの名前を示します (*ハンドラー*) の機能を拡張する、 **RDSServer.DataFactory**とで使用されるパラメーター、*ハンドラー*.|  
-|[InternetTimeout (RDS)](../../../ado/reference/rds-api/internettimeout-property-rds.md)|要求がタイムアウトするまで待機するミリ秒数を示します。|  
-|[ReadyState (RDS)](../../../ado/reference/rds-api/readystate-property-rds.md)|進行状況を示す、 **DataControl**オブジェクトにデータをフェッチされてその**レコード セット**オブジェクト。|  
-|[レコード セットと SourceRecordset (RDS)](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md)|示す、**レコード セット**カスタム ビジネス オブジェクトからオブジェクトが返されます。|  
-|[サーバー (RDS)](../../../ado/reference/rds-api/server-property-rds.md)|インターネット インフォメーション サービス (IIS) の名前との通信プロトコルを示します。|  
-|[SortColumn (RDS)](../../../ado/reference/rds-api/sortcolumn-property-rds.md)|レコードの並べ替え列を示します。|  
-|[SortDirection (RDS)](../../../ado/reference/rds-api/sortdirection-property-rds.md)|並べ替え順序が昇順または降順かどうかを示します。|  
-|[SQL (RDS)](../../../ado/reference/rds-api/sql-property.md)|取得するために使用するクエリ文字列を示します、 **Recordset**します。|  
-|[URL (RDS)](../../../ado/reference/rds-api/url-property-rds.md)|相対パスまたは絶対 URL を含む文字列を示します。|
+|[接続 (RDS)](../../../ado/reference/rds-api/connect-property-rds.md)|クエリおよび更新操作の実行元のデータベース名を示します。|  
+|[ExecuteOptions (RDS)](../../../ado/reference/rds-api/executeoptions-property-rds.md)|非同期実行が有効かどうかを示します。|  
+|[FetchOptions (RDS)](../../../ado/reference/rds-api/fetchoptions-property-rds.md)|非同期フェッチの種類を示します。|  
+|[FilterColumn (RDS)](../../../ado/reference/rds-api/filtercolumn-property-rds.md)|フィルター条件を評価する列を示します。|  
+|[FilterCriterion (RDS)](../../../ado/reference/rds-api/filtercriterion-property-rds.md)|フィルター値に使用する評価演算子を示します。|  
+|[FilterValue (RDS)](../../../ado/reference/rds-api/filtervalue-property-rds.md)|レコードをフィルター処理するための値を示します。|  
+|[ハンドラー (RDS)](../../../ado/reference/rds-api/handler-property-rds.md)|**RDSServer**の機能を拡張するサーバー側のカスタマイズプログラム (*ハンドラー*) の名前と、*ハンドラー*によって使用されるすべてのパラメーターを示します。|  
+|[InternetTimeout (RDS)](../../../ado/reference/rds-api/internettimeout-property-rds.md)|要求がタイムアウトするまでのミリ秒単位の待機時間を示します。|  
+|[ReadyState (RDS)](../../../ado/reference/rds-api/readystate-property-rds.md)|**DataControl**オブジェクトが**レコードセット**オブジェクトにデータをフェッチする際の進行状況を示します。|  
+|[Recordset と SourceRecordset (RDS)](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md)|カスタムビジネスオブジェクトから返される**レコードセット**オブジェクトを示します。|  
+|[サーバー (RDS)](../../../ado/reference/rds-api/server-property-rds.md)|インターネットインフォメーションサービス (IIS) 名と通信プロトコルを示します。|  
+|[SortColumn (RDS)](../../../ado/reference/rds-api/sortcolumn-property-rds.md)|レコードを並べ替える列を指定します。|  
+|[SortDirection (RDS)](../../../ado/reference/rds-api/sortdirection-property-rds.md)|並べ替え順序が昇順と降順のどちらであるかを示します。|  
+|[SQL (RDS)](../../../ado/reference/rds-api/sql-property.md)|**レコードセット**を取得するために使用するクエリ文字列を示します。|  
+|[URL (RDS)](../../../ado/reference/rds-api/url-property-rds.md)|相対 URL または絶対 URL を含む文字列を示します。|
 
 
 

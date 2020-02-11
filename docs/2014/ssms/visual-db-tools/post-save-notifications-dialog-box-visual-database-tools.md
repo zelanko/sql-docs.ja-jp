@@ -15,16 +15,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e4ce89c0a1333a0a9a7a4ee9a801a2969c32a2e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63033474"
 ---
 # <a name="post-save-notifications-dialog-box-visual-database-tools"></a>[保存前の通知] ダイアログ ボックス (Visual Database Tools)
   このダイアログ ボックスは、テーブルへ変更を保存するときにエラーが発生した場合に表示されます。 このダイアログ ボックスには、データベースに正常に保存されたオブジェクト、保存されなかったオブジェクト、および発生したエラーが一覧表示されます。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **[テキスト ファイルを保存]**  
  **[上書き保存]** ダイアログ ボックスが表示され、エラー情報の一覧を含むテキスト ファイルの保存場所を指定するように要求されます。 このファイルは、正常に保存されたデータベースへの変更、およびエラーのために保存できなかった変更を記録しています。  
   

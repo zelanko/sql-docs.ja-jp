@@ -16,16 +16,16 @@ ms.assetid: 511b5d7d-c679-4cb2-a3dd-170cc126f49d
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7376c57f809fa97168b27b158678d931a696b5df
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68038971"
 ---
 # <a name="data-accessor-functions---data-xquery"></a>データ アクセサー関数 - data (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  指定された各項目の型指定された値を返します *$arg*します。  
+  *$Arg*によって指定された各項目の型指定された値を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,36 +38,36 @@ fn:data ($arg as item()*) as xdt:untypedAtomic*
  *$arg*  
  型指定された値を返す対象となるアイテムのシーケンス。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  型指定された値には、次のことが当てはまります。  
   
--   アトミック値の型指定された値は、アトミック値になります。  
+-   アトミック値の型指定された値はアトミック値です。  
   
 -   テキスト ノードの型指定された値は、そのテキスト ノードの文字列値になります。  
   
--   コメントの型指定された値は、そのコメントの文字列値になります。  
+-   コメントの型指定された値は、コメントの文字列値です。  
   
 -   処理命令の型指定された値は、その処理命令の内容になります。このとき、処理命令の操作対象名は含まれません。  
   
--   ドキュメント ノードの型指定された値は、その文字列値になります。  
+-   ドキュメントノードの型指定された値は、その文字列値です。  
   
  属性ノードと要素ノードには、次のことが当てはまります。  
   
--   属性ノードが XML スキーマ型で型指定されている場合、このノードの型指定された値は XML スキーマ型に応じた型の値になります。  
+-   属性ノードが XML スキーマ型を使用して型指定されている場合、その型指定された値は、それに応じて型指定された値になります。  
   
--   インスタンスとして返される文字列値をその型指定された値は属性ノードが型指定された場合は、 **xdt:untypedAtomic**します。  
+-   属性ノードが型指定されていない場合、型指定された値は**xdt: untypedAtomic**のインスタンスとして返される文字列値と同じになります。  
   
--   インスタンスとして返される文字列値をその型指定された値は、要素ノードが型指定されていない場合**xdt:untypedAtomic**します。  
+-   要素ノードが型指定されていない場合、型指定された値は**xdt: untypedAtomic**のインスタンスとして返される文字列値と同じになります。  
   
- 型指定された要素ノードには、次のことが当てはまります。  
+ 型指定された要素ノードには、次のものが適用されます。  
   
--   要素が単純なコンテンツの種類、 **data()** 要素の型指定された値を返します。  
+-   要素に単純コンテンツ型がある場合、 **data ()** は要素の型指定された値を返します。  
   
--   ノードが、xs:anyType などの複合型の場合**data()** 静的エラーが返されます。  
+-   ノードが xs: anyType を含む複合型の場合、 **data ()** は静的エラーを返します。  
   
- 使用していますが、 **data()** を指定する、次の例に示すように、関数は多くの場合、 **data()** 関数は、クエリの読みやすさを明示的に増加します。 詳細については、次を参照してください。 [XQuery の基礎](../xquery/xquery-basics.md)します。  
+ 次の例に示すように、 **data ()** 関数を使用することは、多くの場合、省略可能ですが、 **data ()** 関数を明示的に指定すると、クエリの読みやすさが向上します。 詳細については、「 [XQuery の基本](../xquery/xquery-basics.md)」を参照してください。  
   
- 指定することはできません**data()** で、次に示すように、XML を構築します。  
+ 次に示すように、構築された XML で**データ ()** を指定することはできません。  
   
 ```  
 declare @x xml  
@@ -75,11 +75,11 @@ set @x = ''
 select @x.query('data(<SomeNode>value</SomeNode>)')  
 ```  
   
-## <a name="examples"></a>使用例  
- このトピックではさまざまなに格納されている XML インスタンスに対して XQuery の例について**xml**型の列には、AdventureWorks データベース。  
+## <a name="examples"></a>例  
+ このトピックでは、AdventureWorks データベースのさまざまな**xml**型の列に格納されている xml インスタンスに対して XQuery の例を示します。  
   
 ### <a name="a-using-the-data-xquery-function-to-extract-typed-value-of-a-node"></a>A. data() XQuery 関数によるノードの型指定された値の抽出  
- 次のクエリを示していますが、どのように**data()** 関数を使用して、属性、要素、およびテキスト ノードの値を取得します。  
+ 次のクエリは、 **data ()** 関数を使用して、属性、要素、およびテキストノードの値を取得する方法を示しています。  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -104,7 +104,7 @@ WHERE ProductModelID = 19
 <Root ProductID="19" Feature="parts and labor"/>  
 ```  
   
- 前述のように、 **data()** 属性を作成する場合は、関数は省略可能です。 指定しない場合、 **data()** 関数の場合、暗黙的と見なされます。 次のクエリは、前のクエリと同じ結果を生成します。  
+ 前述のように、属性を構築する場合、 **data ()** 関数は省略可能です。 **Data ()** 関数を指定しなかった場合、暗黙的に想定されます。 次のクエリでは、前のクエリと同じ結果が生成されます。  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -123,9 +123,9 @@ FROM Production.ProductModel
 WHERE ProductModelID = 19  
 ```  
   
- 次の例では、インスタンスを**data()** 関数が必要です。  
+ 次の例は、 **data ()** 関数が必要なインスタンスを示しています。  
   
- 次のクエリで **$pd/1: specifications/素材**を返します、<`Material`> 要素。 また、**データ ($pd/1: specifications/素材)** ため、xdt:untypedatomic 型のデータの文字を返します <`Material`> は型指定されません。 入力が型指定された場合、結果の**data()** として型指定された**xdt:untypedAtomic**します。  
+ 次のクエリでは、 **$pd/p1: 仕様/マテリアル**が <`Material`> 要素を返します。 また、**データ ($pd/p1: 仕様/マテリアル)** は、xdt: untypedAtomic として型指定さ`Material`れた文字データを返します。これは、<> が型指定されていないためです。 入力が型指定されていない場合、 **data ()** の結果は**Xdt: untypedAtomic**として型指定されます。  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -149,7 +149,7 @@ WHERE ProductModelID = 19
 </Root>  
 ```  
   
- 次のクエリで**data($pd/p1:Features/wm:Warranty)** ために、静的なエラーを返します <`Warranty`> は複合型の要素です。  
+ 次のクエリでは、**データ ($pd/p1: Features/wm: 保証)** は静的なエラーを`Warranty`返します。これは <> が複合型の要素であるためです。  
   
 ```  
 WITH XMLNAMESPACES (  

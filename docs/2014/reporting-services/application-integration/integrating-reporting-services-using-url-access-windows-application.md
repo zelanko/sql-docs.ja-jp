@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cb841d187385724ea31b5a7db86fcb323bf10663
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63126242"
 ---
 # <a name="using-url-access-in-a-windows-application"></a>Windows アプリケーションでの URL アクセスの使用
@@ -31,7 +31,8 @@ ms.locfileid: "63126242"
 -   Windows フォームで <xref:System.Windows.Forms.WebBrowser> コントロールを使用し、レポートを表示します。  
   
 ## <a name="starting-internet-explorer-from-a-windows-form"></a>Windows フォームからの Internet Explorer の起動  
- <xref:System.Diagnostics.Process> クラスを使用して、コンピューターで実行されているプロセスにアクセスできます。 <xref:System.Diagnostics.Process> クラスは、アプリケーションの起動、停止、制御、および監視に役立つ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の構成要素です。 レポート サーバー データベースの特定のレポートを表示するには、レポートへの URL を渡して **IExplore** プロセスを起動できます。 次のコード例を使用すると、ユーザーが Windows フォームのボタンをクリックしたときに [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer が起動し、特定のレポート URL を渡すことができます。  
+ 
+  <xref:System.Diagnostics.Process> クラスを使用して、コンピューターで実行されているプロセスにアクセスできます。 <xref:System.Diagnostics.Process>クラスは、アプリケーションを[!INCLUDE[msCoName](../../includes/msconame-md.md)]起動、停止、制御、および監視するための便利[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]な構成要素です。 レポート サーバー データベースの特定のレポートを表示するには、レポートへの URL を渡して **IExplore** プロセスを起動できます。 次のコード例を使用すると、ユーザーが Windows フォームのボタンをクリックしたときに [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer が起動し、特定のレポート URL を渡すことができます。  
   
 ```vb  
 Private Sub viewReportButton_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles viewReportButton.Click  
@@ -87,17 +88,21 @@ private void viewReportButton_Click(object sender, System.EventArgs e)
   
 ###### <a name="to-add-the-webbrowser-control-to-your-windows-form"></a>Windows フォームに WebBrowser コントロールを追加するには  
   
-1.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] または [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] で新しい Windows アプリケーションを作成します。  
+1.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)]また[!INCLUDE[msCoName](../../includes/msconame-md.md)]は[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]のいずれかで、新しい Windows アプリケーションを作成します。  
   
-2.  **[ツールボックス]** ダイアログ ボックスで <xref:System.Windows.Forms.WebBrowser> コントロールを探します。  
+2.  
+  <xref:System.Windows.Forms.WebBrowser>[ツールボックス]** ダイアログ ボックスで ** コントロールを探します。  
   
-     **ツールボックス**が表示されていない場合は、 **[表示]** メニュー項目をクリックして **[ツールボックス]** を選択することでアクセスできます。  
+     
+  **ツールボックス**が表示されていない場合は、**[表示]** メニュー項目をクリックして **[ツールボックス]** を選択することでアクセスできます。  
   
-3.  <xref:System.Windows.Forms.WebBrowser> コントロールを Windows フォームのデザイン画面にドラッグします。  
+3.  
+  <xref:System.Windows.Forms.WebBrowser> コントロールを Windows フォームのデザイン画面にドラッグします。  
   
      webBrowser1 という <xref:System.Windows.Forms.WebBrowser> コントロールがフォームに追加されます。  
   
- <xref:System.Windows.Forms.WebBrowser> コントロールを URL に指定するには、その **Navigate** メソッドを呼び出します。 次の例に示すように、実行時に特定の URL アクセス文字列を <xref:System.Windows.Forms.WebBrowser> コントロールに割り当てることができます。  
+ 
+  <xref:System.Windows.Forms.WebBrowser> コントロールを URL に指定するには、その **Navigate** メソッドを呼び出します。 次の例に示すように、実行時に特定の URL アクセス文字列を <xref:System.Windows.Forms.WebBrowser> コントロールに割り当てることができます。  
   
 ```vb  
 Dim url As String = "http://localhost/reportserver?/" & _  

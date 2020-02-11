@@ -1,5 +1,5 @@
 ---
-title: sp_helpreplicationdboption (Transact-SQL) |Microsoft Docs
+title: sp_helpreplicationdboption (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -16,13 +16,13 @@ ms.assetid: 143ce689-108b-49d7-9892-fd3a86897f38
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7aa68b2ee2e592f264f5a64c4c675103253da495
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68771530"
 ---
-# <a name="sp_helpreplicationdboption-transact-sql"></a>sp_helpreplicationdboption (Transact-SQL)
+# <a name="sp_helpreplicationdboption-transact-sql"></a>sp_helpreplicationdboption (Transact-sql)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   パブリッシャー側のデータベースでレプリケーションが有効になっているかどうかを示します。 このストアドプロシージャは、パブリッシャー側で任意のデータベースに対して実行されます。 *Oracle パブリッシャーではサポートされていません。*  
@@ -39,24 +39,24 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @dbname = ] 'dbname'`データベースの名前を指定します。 *dbname*は**sysname**,、既定値 **%** はです。 の **%** 場合、結果セットにはパブリッシャーのすべてのデータベースが含まれます。それ以外の場合は、指定されたデータベースに関する情報のみが返されます。 次に示すように、ユーザーが適切な権限を持っていないデータベースについては、情報は返されません。  
+`[ @dbname = ] 'dbname'`データベースの名前を指定します。 *dbname*は**sysname**,、既定値は**%** です。 の**%** 場合、結果セットにはパブリッシャーのすべてのデータベースが含まれます。それ以外の場合は、指定されたデータベースに関する情報のみが返されます。 次に示すように、ユーザーが適切な権限を持っていないデータベースについては、情報は返されません。  
   
-`[ @type = ] 'type'`指定されたレプリケーションオプションの*type*の値が有効になっているデータベースのみが含まれるように結果セットを制限します。 *type*は**sysname**で、次のいずれかの値を指定できます。  
+`[ @type = ] 'type'`指定されたレプリケーションオプションの*種類*の値が有効になっているデータベースのみが含まれるように結果セットを制限します。 *種類*は**sysname**で、次のいずれかの値を指定できます。  
   
-|値|説明|  
+|値|[説明]|  
 |-----------|-----------------|  
-|**publish**|トランザクションレプリケーションを許可します。|  
+|**投稿**|トランザクションレプリケーションを許可します。|  
 |**merge publish**|マージレプリケーションが許可されています。|  
-|**replication allowed**（デフォルト）|トランザクション レプリケーションまたはマージ レプリケーションを許可します。|  
+|**レプリケーションが許可され**ている (既定)|トランザクション レプリケーションまたはマージ レプリケーションを許可します。|  
   
-`[ @reserved = ] reserved`既存のパブリケーションとサブスクリプションに関する情報を返すかどうかを指定します。 *予約済み*の**bit**,、既定値は0です。 **1**の場合、結果セットには、指定されたデータベースに既存のパブリケーションまたはサブスクリプションがあるかどうかに関する情報が含まれます。  
+`[ @reserved = ] reserved`既存のパブリケーションとサブスクリプションに関する情報を返すかどうかを指定します。 *予約済み*の**ビット**,、既定値は0です。 **1**の場合、結果セットには、指定されたデータベースに既存のパブリケーションまたはサブスクリプションがあるかどうかに関する情報が含まれます。  
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|データベースの名前です。|  
-|**id**|**int**|データベース識別子。|  
+|**name**|**sysname**|データベースの名前。|  
+|**番号**|**int**|データベース識別子。|  
 |**transpublish**|**bit**|データベースでスナップショットまたはトランザクションパブリッシングが有効になっている場合は、値が**1**の場合は、スナップショットパブリケーションまたはトランザクションパブリッシングが有効であることを示します。|  
 |**mergepublish**|**bit**|データベースでマージパブリッシングが有効になっている場合は、値が**1**の場合は、マージパブリッシングが有効であることを示します。|  
 |**dbowner**|**bit**|ユーザーが**db_owner**固定データベースロールのメンバーである場合は、値が**1**の場合は、ユーザーがこのロールのメンバーであることを示します。|  
@@ -67,14 +67,14 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  **sp_helpreplicationdboption**は、スナップショットレプリケーション、トランザクションレプリケーション、およびマージレプリケーションで使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sysadmin**固定サーバーロールのメンバーは、任意のデータベースに対して**sp_helpreplicationdboption**を実行できます。 **Db_owner**固定データベースロールのメンバーは、そのデータベースの**sp_helpreplicationdboption**を実行できます。  
   
-## <a name="see-also"></a>関連項目  
- [sp_replicationdboption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)   
- [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>参照  
+ [sp_replicationdboption &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)   
+ [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

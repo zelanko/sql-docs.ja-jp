@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 911d0a740a20f74edf9e32d4a6ff69a8d6040f24
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022482"
 ---
 # <a name="backup-and-restore-for-oracle-publishers"></a>Oracle パブリッシャーのバックアップと復元
@@ -35,7 +35,7 @@ ms.locfileid: "63022482"
   
 -   データベースを復元した結果、パブリッシャーまたはディストリビューターが同期しなくなった場合は、レプリケーション エージェントによってエラー メッセージが記録されます。 この時点で、関連するパブリケーションとサブスクリプションをすべて削除して再作成する必要があります。  
   
-    1.  パブリケーションおよびサブスクリプションの定義のスクリプトを作成します。 詳細については、「 [Scripting Replication](../scripting-replication.md)」を参照してください。  
+    1.  パブリケーションおよびサブスクリプションの定義のスクリプトを作成します。 詳しくは、「 [Scripting Replication](../scripting-replication.md)」をご覧ください。  
   
          パブリッシャーとディストリビューターの状態のバージョン間でパブリケーションの定義が変更された場合は、スクリプトを変更する必要があります。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "63022482"
   
 ## <a name="see-also"></a>参照  
  [レプリケートされたデータベースのバックアップと復元](../administration/back-up-and-restore-replicated-databases.md)   
- [Oracle パブリッシャーの構成](configure-an-oracle-publisher.md)   
+ [Configure an Oracle Publisher (Oracle パブリッシャーの構成)](configure-an-oracle-publisher.md)   
  [Oracle パブリッシングの概要](oracle-publishing-overview.md)  
   
   

@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 536dce64880c1e70b1b8a0c4b419811c1b32a975
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62772136"
 ---
 # <a name="azure-feature-pack"></a>Azure Feature Pack
@@ -65,7 +65,7 @@ SQL Server Integration Services (SSIS) Feature Pack for Azure は、このペー
     
     -   [Azure Data Lake Store Destination](../../2014/integration-services/azure-data-lake-store-destination.md)
   
--   Azure Blob 列挙子と ADLS File 列挙子。 「 [Foreach Loop Container](control-flow/foreach-loop-container.md)」を参照してください。  
+-   Azure Blob 列挙子は、ADLS File 列挙子 & ます。 「 [Foreach ループコンテナー](control-flow/foreach-loop-container.md)」を参照してください。  
   
  
 ## <a name="download-the-feature-pack"></a>Feature Pack のダウンロード  
@@ -77,7 +77,7 @@ SQL Server Integration Services (SSIS) Feature Pack for Azure をダウンロー
 この機能パックをインストールする前に、次の前提条件をインストールする必要があります。  
   
 -   SQL Server Integration Services  
--   .NET Framework 4.5  
+-   .Net Framework 4.5  
   
 ## <a name="scenarios"></a>シナリオ  
   

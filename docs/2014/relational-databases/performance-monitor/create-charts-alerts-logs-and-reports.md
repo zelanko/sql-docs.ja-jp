@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8f36f1a3df7eae3fd363aa5e2bc4b5ae13f36ae2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63032407"
 ---
 # <a name="create-charts-alerts-logs-and-reports"></a>グラフ、警告、ログ、およびレポートの作成
@@ -48,7 +48,7 @@ ms.locfileid: "63032407"
   
  現在発生しているイベントを監視する場合など、ローカル コンピューターまたはリモート コンピューターを短い時間、リアルタイムで監視するのにグラフは便利です。  
   
-## <a name="alerts"></a>オブジェクト エクスプローラーには  
+## <a name="alerts"></a>警告  
  システム モニターで警告を使用すると、特定のイベントを追跡して、要求に応じてそのイベントを通知できます。 警告ログは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のオブジェクトに対して選択したカウンターとインスタンスについて現在のパフォーマンスを監視できます。 カウンターが指定した値を超えたときに、ログはそのイベントの日付と時刻を記録します。 イベントはネットワーク警告を生成することもできます。 また、イベントが初めて発生したとき、またはイベントが発生するたびに、特定のプログラムを実行できます。 たとえば、警告はすべてのシステム管理者に対して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのディスク容量が不足していることを示すネットワーク メッセージを送信できます。  
   
 ## <a name="logs"></a>ログ  
@@ -56,12 +56,12 @@ ms.locfileid: "63032407"
   
  ログ ファイルには、トラブルシューティングやプランニングに役立つ豊富な情報が記録されています。 現在の利用状況に関するグラフ、警告、およびレポートが即時のフィードバックを与えるのに対して、ログ ファイルは、長期間にわたってカウンターを追跡できます。 このため、情報をより徹底的に検査し、システムのパフォーマンスを文書化することができます。  
   
-## <a name="reports"></a>[レポート]  
+## <a name="reports"></a>Reports  
  レポートを使用すると、選択したオブジェクトに対して、絶えず変化し続けるカウンター値とインスタンス値を表示できます。 値は、各インスタンスの列に表示されます。 レポート間隔を調整したり、スナップショットを印刷したり、データをエクスポートすることもできます。 raw 番号を表示する必要がある場合には、レポートを使用します。  
   
  グラフ、警告、ログ、およびレポートの作成、または Windows オブジェクトとカウンターの詳細については、Windows のマニュアルを参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [リソースの利用状況の監視 &#40;システム モニター&#41;](monitor-resource-usage-system-monitor.md)  
   
   

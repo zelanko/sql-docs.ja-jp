@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 113d84526b34f9f702cd8da68a06c055c3b559e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63062330"
 ---
 # <a name="setserviceaccountpassword-method-sqlservice-class"></a>SetServiceAccountPassword メソッド (SqlService クラス)
@@ -40,7 +40,7 @@ AccountOldPassword , ServiceStartPassword
 ```  
   
 ## <a name="parts"></a>要素  
- *object*  
+ *素材*  
  サービスを表す [SqlService クラス](sqlservice-class.md) オブジェクト。  
   
 #### <a name="parameters"></a>パラメーター  
@@ -51,7 +51,8 @@ AccountOldPassword , ServiceStartPassword
  アカウントの新しいパスワードを指定する文字列値。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
- `uint32` 値。サービスが正常に変更された場合は 0、要求がサポートされていない場合は 1 になります。それ以外の数値はエラーを示します。  
+ 
+  `uint32` 値。サービスが正常に変更された場合は 0、要求がサポートされていない場合は 1 になります。それ以外の数値はエラーを示します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
   

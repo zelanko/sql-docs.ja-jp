@@ -1,6 +1,6 @@
 ---
-title: SQL データベースのサンプルを Graph |Microsoft Docs
-description: のに役立つ簡単なサンプルは、SQL グラフ データベースで導入された新しい構文の概要します。
+title: SQL グラフデータベースのサンプル |Microsoft Docs
+description: SQL graph データベースで導入された新しい構文の使用を開始するのに役立つクイックサンプルです。
 ms.date: 04/19/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,24 +16,24 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1737ae8427df8d6d9bd6dbb9dea359da09f0c657
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68035873"
 ---
-# <a name="create-a-graph-database-and-run-some-pattern-matching-queries-using-t-sql"></a>グラフ データベースを作成し、T-SQL を使用してクエリに一致するパターンはいくつかの実行
+# <a name="create-a-graph-database-and-run-some-pattern-matching-queries-using-t-sql"></a>グラフデータベースを作成し、T-sql を使用して何らかのパターン一致クエリを実行する
 
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-このサンプルでは、[!INCLUDE[tsql-md](../../includes/tsql-md.md)]ノードとエッジのグラフ データベースを作成し、新しい MATCH 句を使用して、いくつかのパターンに一致して、グラフを走査するスクリプト。 このサンプル スクリプトは Azure SQL データベースの両方で動作し、 [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]  
+このサンプルでは[!INCLUDE[tsql-md](../../includes/tsql-md.md)] 、ノードとエッジを含むグラフデータベースを作成し、新しい MATCH 句を使用していくつかのパターンに一致し、グラフを走査するスクリプトを示します。 このサンプルスクリプトは、Azure SQL Database との両方で動作します。[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]  
 
-## <a name="sample-schema"></a>サンプル スキーマ
+## <a name="sample-schema"></a>サンプルスキーマ
 
-このサンプルは、人、レストラン、市区町村のノードを持つ仮想的なソーシャル ネットワークの図 1 に示すように、グラフ スキーマを作成します。 これらのノードは、友人を使用して相互に接続しているいいね!、LivesIn と LocatedIn のエッジ。
+このサンプルでは、図1に示すように、People、レストラン、および City ノードを持つ架空のソーシャルネットワークについて、グラフスキーマを作成します。 これらのノードは、友人、いいね!、LivesIn、および LocatedIn エッジを使用して相互に接続されています。
 
-![人の都市のレストラン テーブル](../../relational-databases/graphs/media/person-cities-restaurants-tables.png "Sql グラフ データベースのサンプル")  
-図 1: レストラン、市区町村、person ノード LivesIn LocatedIn、いいねの端とサンプルのスキーマです。
+![市区町村-レストラン-テーブル](../../relational-databases/graphs/media/person-cities-restaurants-tables.png "Sql グラフデータベースのサンプル")  
+図 1: レストラン、city、person nodes、LivesIn、LocatedIn、いいね! のエッジを含むサンプルスキーマ。
 
 ## <a name="sample-script"></a>サンプル スクリプト
 
@@ -141,8 +141,8 @@ FROM Person, likes, Restaurant, livesIn, City, locatedIn
 WHERE MATCH (Person-(likes)->Restaurant-(locatedIn)->City AND Person-(livesIn)->City);
 ```
 
-## <a name="clean-up"></a>クリーンアップします。  
-スキーマとサンプル用に作成されたデータベースをクリーンアップします。
+## <a name="clean-up"></a>クリーンアップする  
+サンプル用に作成されたスキーマとデータベースをクリーンアップします。
 
 ```
 USE graphdemo;
@@ -163,10 +163,10 @@ go
 ```
 
 ## <a name="script-explanation"></a>スクリプトの説明  
-このスクリプトでは、新しい T-SQL 構文を使用して、ノードとエッジ テーブルを作成します。 使用してノードとエッジ テーブルにデータを挿入する方法を示します`INSERT`ステートメントを使用する方法も示しています`MATCH`パターン マッチングとナビゲーションの句。
+このスクリプトでは、新しい T-sql 構文を使用して、ノードテーブルとエッジテーブルを作成します。 ステートメントを使用してノードテーブルとエッジテーブルに`INSERT`データを挿入する方法につい`MATCH`て説明します。また、パターンマッチングとナビゲーションに句を使用する方法についても説明します。
 
-|Command    |メモ
+|command    |メモ
 |---  |---  |
-|[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)  |グラフ ノードまたはエッジ テーブルを作成します。  |
-|[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-sql-graph.md)  |ノードまたはエッジ テーブルに挿入します。  |
-|[一致&#40;TRANSACT-SQL&#41;](../../t-sql/queries/match-sql-graph.md)  |一致を使用して、パターンに一致またはグラフの走査  |
+|[CREATE TABLE &#40;Transact-sql&#41;](../../t-sql/statements/create-table-sql-graph.md)  |グラフノードまたはエッジテーブルの作成  |
+|[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-sql-graph.md)  |ノードまたはエッジテーブルに挿入する  |
+|[Transact-sql&#41;と一致 &#40;](../../t-sql/queries/match-sql-graph.md)  |一致を使用してパターンに一致させるか、グラフをスキャンします  |

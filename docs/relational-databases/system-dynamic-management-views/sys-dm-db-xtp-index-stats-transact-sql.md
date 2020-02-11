@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_xtp_index_stats (TRANSACT-SQL) |Microsoft Docs
+title: dm_db_xtp_index_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -21,29 +21,29 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6e6370f4cbfcbc38478e562c3b74ff24ffde962f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68026832"
 ---
-# <a name="sysdmdbxtpindexstats-transact-sql"></a>sys.dm_db_xtp_index_stats (Transact-SQL)
+# <a name="sysdm_db_xtp_index_stats-transact-sql"></a>sys.dm_db_xtp_index_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   前回データベースが再起動されてから収集された統計が含まれます。  
   
- 詳細については、次を参照してください。 [、インメモリ OLTP&#40;インメモリ最適化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)と[Guidelines for Using Indexes on Memory-Optimized Tables](https://msdn.microsoft.com/library/16ef63a4-367a-46ac-917d-9eebc81ab29b)します。  
+ 詳細については、「イン[メモリ OLTP &#40;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)メモリ最適化テーブルでの[インデックスの使用に関するガイドライン](https://msdn.microsoft.com/library/16ef63a4-367a-46ac-917d-9eebc81ab29b)&#41;」を参照してください。  
 
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
-|object_id|**bigint**|インデックスが属しているオブジェクトの ID。|  
-|xtp_object_id|**bigint**|オブジェクトの現在のバージョンに対応する内部の ID。<br /><br /> 注:[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]に適用されます。|  
+|object_id|**bigint**|このインデックスが所属するオブジェクトの ID。|  
+|xtp_object_id|**bigint**|オブジェクトの現在のバージョンに対応する内部 ID。<br /><br /> 注: に[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]適用されます。|  
 |index_id|**bigint**|インデックスの ID。 index_id は、オブジェクト内でのみ一意です。|  
-|scans_started|**bigint**|実行されたインメモリ OLTP のインデックス スキャンの回数。 選択、挿入、更新、または削除を実行するたびに、インデックス スキャンが必要になります。|  
-|scans_retries|**bigint**|再試行する必要のあるインデックス スキャンの回数。|  
-|rows_returned|**bigint**|テーブルの作成後または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の起動後に返された行の累積数。|  
-|rows_touched|**bigint**|テーブルの作成後または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の起動後にアクセスされた行の累積数。|  
+|scans_started|**bigint**|実行されたインメモリ OLTP のインデックス スキャンの回数。 すべての select、insert、update、または delete には、インデックススキャンが必要です。|  
+|scans_retries|**bigint**|再試行が必要なインデックススキャンの数。|  
+|rows_returned|**bigint**|テーブルが作成された後、またはが開始され[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]てから返された、累積行数。|  
+|rows_touched|**bigint**|テーブルの作成以降にアクセスされた行の累積数また[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]はの先頭。|  
 |rows_expiring|**bigint**|内部使用のみです。|  
 |rows_expired|**bigint**|内部使用のみです。|  
 |rows_expired_removed|**bigint**|内部使用のみです。|  
@@ -54,12 +54,12 @@ ms.locfileid: "68026832"
 |phantom_expired_rows_encountered|**bigint**|内部使用のみです。|  
 |phantom_expired_removed_rows_encountered|**bigint**|内部使用のみです。|  
 |phantom_expired_rows_removed|**bigint**|内部使用のみです。|  
-|object_address|**varbinary(8)**|内部使用のみです。|  
+|object_address|**varbinary (8)**|内部使用のみです。|  
   
 ## <a name="permissions"></a>アクセス許可  
  現在のデータベースに対する VIEW DATABASE STATE 権限が必要です。  
   
 ## <a name="see-also"></a>参照  
- [メモリ最適化テーブルの動的管理ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [メモリ最適化テーブルの動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

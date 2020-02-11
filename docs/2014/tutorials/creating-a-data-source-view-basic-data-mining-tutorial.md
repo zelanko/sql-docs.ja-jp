@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: ac7730e8437eaed304ed69c40e45fc93ee9b5531
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68888648"
 ---
 # <a name="creating-a-data-source-view-basic-data-mining-tutorial"></a>データ ソース ビューの作成 (基本的なデータ マイニング チュートリアル)
@@ -22,34 +22,38 @@ ms.locfileid: "68888648"
   
 ### <a name="to-create-a-data-source-view"></a>データ ソース ビューを作成するには  
   
-1.  **ソリューション エクスプローラー**で **[データ ソース ビュー]** を右クリックし、 **[新しいデータ ソース ビュー]** をクリックします。  
+1.  
+  **ソリューション エクスプローラー**で **[データ ソース ビュー]** を右クリックし、 **[新しいデータ ソース ビュー]** をクリックします。  
   
-2.  **[データ ソース ビュー ウィザードへようこそ]** ページで **[次へ]** をクリックします。  
+2.  
+  **[データ ソース ビュー ウィザードへようこそ]** ページで **[次へ]** をクリックします。  
   
-3.  **[データ ソースの選択]** ページの **[リレーショナル データ ソース]** で、前回の作業で作成した [Adventure Works DW 2012] データ ソースを選択します。 **[次へ]** をクリックします。  
+3.  
+  **[データ ソースの選択]** ページの **[リレーショナル データ ソース]** で、前回の作業で作成した [Adventure Works DW 2012] データ ソースを選択します。 **[次へ]** をクリックします。  
   
     > [!NOTE]  
     >  新しいデータ ソースを作成する場合は、 **[データ ソース]** を右クリックし、 **[新しいデータ ソース]** をクリックして、データ ソース ウィザードを開始します。  
   
-4.  **[テーブルとビューの選択]** ページで次のオブジェクトを選択し、右矢印をクリックして、これらのオブジェクトを新しいデータ ソース ビューに追加します。  
+4.  
+  **[テーブルとビューの選択]** ページで次のオブジェクトを選択し、右矢印をクリックして、これらのオブジェクトを新しいデータ ソース ビューに追加します。  
   
-    -   **[ProspectiveBuyer (dbo)]** : 自転車の購入見込み者のテーブル  
+    -   **ProspectiveBuyer (dbo)** -見込み自転車購入者のテーブル  
   
-    -   **[vTargetMail (dbo)]** : 過去の自転車購入者に関する履歴データのビュー  
+    -   **Vtargetmail (dbo)** -過去の自転車購入者に関する履歴データの表示  
   
 5.  **[次へ]** をクリックします。  
   
-6.  既定では、Adventure Works DW 2012 という名前のデータ ソース ビューが **[ウィザードの完了]** ページに表示されます。 名前をに`Targeted Mailing`変更し、 **[完了]** をクリックします。  
+6.  既定では、Adventure Works DW 2012 という名前のデータ ソース ビューが **[ウィザードの完了]** ページに表示されます。 名前をに`Targeted Mailing`変更し、[**完了**] をクリックします。  
   
      新しいデータ ソース ビューが **[Targeted Mailing.dsv [Design]]** タブで開きます。  
   
 ## <a name="previous-task-in-lesson"></a>このレッスンの前の作業  
- [データソース&#40;の作成基本的なデータマイニングチュートリアル&#41;](../../2014/tutorials/creating-a-data-source-basic-data-mining-tutorial.md)  
+ [データソースの作成 &#40;基本的なデータマイニングチュートリアル&#41;](../../2014/tutorials/creating-a-data-source-basic-data-mining-tutorial.md)  
   
 ## <a name="next-lesson"></a>次のレッスン  
- [レッスン 2:絞り込みメール配信構造&#40;の作成基本的なデータマイニングチュートリアル&#41;](../../2014/tutorials/lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial.md)  
+ [レッスン 2: &#40;の基本的なデータマイニングチュートリアルでは、絞り込みメール配信構造の作成&#41;](../../2014/tutorials/lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>関連項目  
- [データ ソース ビューの定義 (Analysis Services)](https://docs.microsoft.com/analysis-services/multidimensional-models/defining-a-data-source-view-analysis-services)  
+## <a name="see-also"></a>参照  
+ [データソースビュー &#40;Analysis Services の定義&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/defining-a-data-source-view-analysis-services)  
   
   

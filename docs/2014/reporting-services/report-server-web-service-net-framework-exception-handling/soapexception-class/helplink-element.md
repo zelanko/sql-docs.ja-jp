@@ -14,27 +14,29 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7bdd18641663003a1878fe0af0ac1d39a16eda1f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63046026"
 ---
 # <a name="helplink-element"></a>HelpLink 要素
+  
   **Detail** プロパティの **HelpLink** 要素は、レポート サーバーで生成される URL 文字列です。 この URL は [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ヘルプとサポートで管理されている Web ページを指し、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] で発生する特定のエラーに関するヘルプとサポート技術情報の記事を提供します。 URL の構文は、次のようになっています。  
   
- **http://** www.microsoft.com **/** 製品 **/** ee **/** transform.aspx**でしょうか。EvtSrc**=_値_ **& 情報が必要な**=_値_ **& ProdName** =_値_ **& ProdVer**=_値_  
+ **http://** www.microsoft.com**/** products**/** ee**/** transform **?Evtsrc**=_値_**&evtid**=_値_**&ProdName**=_値_**&ProdVer**=_値_  
   
  次の表は、**HelpLink** URL の引数を示しています。  
   
-|引数|値|  
+|引数|Value|  
 |--------------|-----------|  
 |**EvtSrc**|"Microsoft.ReportingServices.Diagnostics.ErrorStrings.resources.Strings"|  
 |**EvtID**|レポート サーバー エラー コード。たとえば、rsReservedItem。|  
 |**ProdName**|"Microsoft SQL%20Server%20Reporting%20Services"。 製品名の値は URL エンコードされています。|  
-|**ProdVer**|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] のバージョン番号。 "8.00" の値は、[!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] を示します。|  
+|**ProdVer**|
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] のバージョン番号。 値 "8.00" はを示し[!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]ます。|  
   
- 次の例を示しています、 **HelpLink**エラー コードで返される URL`rsReservedItem`します。 このエラーは、ユーザーが [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] の予約アイテムの変更または削除を試みたときに発生します。  
+ 次の例は、 **** エラーコード`rsReservedItem`に対して返される HelpLink URL を示しています。 このエラーは、ユーザーが [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] の予約アイテムの変更または削除を試みたときに発生します。  
   
 ```  
 https://www.microsoft.com/products/ee/transform.aspx?  

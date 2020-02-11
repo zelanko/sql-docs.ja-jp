@@ -13,22 +13,22 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 788defce7f897e4da3a3680118c573b5a73ac3b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917055"
 ---
 # <a name="log-shipping-monitor-settings"></a>[ログ配布モニターの設定]
   このページを使用すると、ログ配布監視サーバーのプロパティを構成および変更できます。  
   
- ログ配布の概念については、「[ログ配布について &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)」を参照してください。  
+ ログ配布の概念については、「 [ログ配布について &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)」を参照してください。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **[監視サーバー インスタンス]**  
  ログ配布構成の監視サーバーとして現在構成されているサーバー インスタンスの名前を表示します。  
   
- **Connect**  
+ **のインスタンスに接続するときには、**  
  監視サーバーとして使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを選択して接続します。 接続に使用するアカウントは、セカンダリ サーバーのインスタンスの sysadmin 固定サーバー ロールのメンバーである必要があります。  
   
  **[ジョブのプロキシ アカウントを借用する]**  
@@ -43,7 +43,7 @@ ms.locfileid: "62917055"
  **ジョブ名**  
  バックアップまたは復元しきい値が超過したときに、警告を発行するためにログ配布によって使用される SQL Server エージェントの警告ジョブの名前を示します。 このジョブを作成しているときは、ボックスに入力することで名前を変更できます。  
   
- **スケジュール**  
+ **[スケジュール]**  
  SQL Server エージェントの警告ジョブの現在のスケジュールを示します。  
   
  **[編集]**  

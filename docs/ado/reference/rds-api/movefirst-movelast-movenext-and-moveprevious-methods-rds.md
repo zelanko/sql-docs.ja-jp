@@ -1,5 +1,5 @@
 ---
-title: MoveFirst、MoveLast、MoveNext、MovePrevious メソッド (RDS) |Microsoft Docs
+title: MoveFirst、MoveLast、MoveNext、および MovePrevious メソッド (RDS) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,17 +17,17 @@ ms.assetid: 45c80bb5-136f-4204-9df2-78740fa55574
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8e99ff17cad2bebcfaed509788ea3721ddfeb0ce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67963884"
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-rds"></a>MoveFirst、MoveLast、MoveNext、MovePrevious メソッド (RDS)
-First、last に移動します。 次に、または前のレコードを、指定した[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト。  
+指定された[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト内の最初、最後、次、または前のレコードに移動します。  
   
 > [!IMPORTANT]
->  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)します。  
+>  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および[Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416)」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,17 +38,17 @@ DataControl.Recordset.{MoveFirst | MoveLast | MoveNext | MovePrevious}
   
 #### <a name="parameters"></a>パラメーター  
  *DataControl*  
- オブジェクト変数を表す、 [rds.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)オブジェクト。  
+ RDS を表すオブジェクト変数です[。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)オブジェクト。  
   
-## <a name="remarks"></a>コメント  
- 使用することができます、**移動**メソッド、 **rds.DataControl** Web ページ上のデータ バインド コントロールでデータ レコード間を移動するオブジェクト。 たとえば、表示する、 **Recordset**にバインドしてグリッドに、 **rds.DataControl**オブジェクト。 ユーザーがクリックして、最初に移動、最後、次に、最初、Last、Next、および前のボタンを含めることができますし、表示されている前のレコードまたは**レコード セット**します。 呼び出すことによって、これを行う、 **MoveFirst**、 **MoveLast**、 **MoveNext**、および**MovePrevious**のメソッド、 **rds.DataControl**最初、Last、Next、および前のボタンの onClick プロシージャでそれぞれオブジェクトします。 [アドレス帳例](../../../ado/guide/remote-data-service/address-book-navigation-buttons.md)これを行う方法を示しています。  
+## <a name="remarks"></a>解説  
+ RDS で**Move**メソッドを使用でき**ます。DataControl**オブジェクトを使用して、Web ページ上のデータバインドコントロール内のデータレコード間を移動します。 たとえば、RDS にバインドすることによって、**レコードセット**をグリッドに表示するとし**ます。DataControl**オブジェクト。 次に、ユーザーがクリックして、表示されている**レコードセット**内の最初、最後、次、または前のレコードに移動するためのボタンを追加できます。 これを行うには、RDS の**MoveFirst**、 **MoveLast**、 **MoveNext**、および**MovePrevious**の各メソッドを呼び出し**ます。** First、Last、Next、および Previous の各ボタンの onClick プロシージャ内の DataControl オブジェクト。 [アドレス帳の例](../../../ado/guide/remote-data-service/address-book-navigation-buttons.md)では、これを行う方法を示しています。  
   
 ## <a name="applies-to"></a>適用対象  
  [DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Move メソッド (ADO)](../../../ado/reference/ado-api/move-method-ado.md)   
- [MoveFirst、MoveLast、MoveNext、MovePrevious メソッド (ADO)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
+ [MoveFirst、MoveLast、MoveNext、および MovePrevious メソッド (ADO)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
  [MoveRecord メソッド (ADO)](../../../ado/reference/ado-api/moverecord-method-ado.md)
 
 

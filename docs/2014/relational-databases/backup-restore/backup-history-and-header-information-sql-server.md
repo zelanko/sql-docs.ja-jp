@@ -34,10 +34,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b1ab8545714e84c8ecf8ee6c9cb89b7b8c0d3831
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62922240"
 ---
 # <a name="backup-history-and-header-information-sql-server"></a>バックアップの履歴とヘッダーの情報 (SQL Server)
@@ -67,7 +67,7 @@ ms.locfileid: "62922240"
 ##  <a name="BnRHistoryTables"></a> バックアップと復元の履歴テーブル  
  ここでは、 **msdb** システム データベース内のバックアップ メタデータおよび復元メタデータが保存される履歴テーブルについて説明します。  
   
-|履歴テーブル|説明|  
+|履歴テーブル|[説明]|  
 |-------------------|-----------------|  
 |[backupfile](/sql/relational-databases/system-tables/backupfile-transact-sql)|バックアップされるデータ ファイルまたはログ ファイルごとに 1 行のデータを格納します。|  
 |[backupfilegroup](/sql/relational-databases/system-tables/backupfilegroup-transact-sql)|バックアップ セットのファイル グループごとに 1 行のデータを格納します。|  
@@ -87,7 +87,7 @@ ms.locfileid: "62922240"
 > [!IMPORTANT]  
 >  RESTORE FILELISTONLY、RESTORE HEADERONLY、RESTORE LABELONLY、および RESTORE VERIFYONLY の各 Transact-SQL ステートメントを実行するために CREATE DATABASE 権限が必要です。 この要件により、以前のバージョンよりも、バックアップ ファイルの安全性が高くなり、バックアップ情報が十分保護されます。 このアクセス許可の詳細については、「[データベースの権限の許可&#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-database-permissions-transact-sql)」を参照してください。  
   
-|情報ステートメント|バックアップ履歴テーブル|説明|  
+|情報ステートメント|バックアップ履歴テーブル|[説明]|  
 |---------------------------|--------------------------|-----------------|  
 |[RESTORE FILELISTONLY](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql)|[backupfile](/sql/relational-databases/system-tables/backupfile-transact-sql)|指定したバックアップ セットに含まれるデータベース ファイルとログ ファイルの一覧を含む結果セットを返します。<br /><br /> 詳細については、このトピックの「データベース ファイルとトランザクション ログ ファイルの一覧表示」を参照してください。|  
 |[RESTORE HEADERONLY](/sql/t-sql/statements/restore-statements-headeronly-transact-sql)|[backupset](/sql/relational-databases/system-tables/backupset-transact-sql)|特定のバックアップ デバイス上のすべてのバックアップ セットについて、バックアップ ヘッダーに関するすべての情報を取得します。 RESTORE HEADERONLY を実行して得られる結果は、結果セットです。<br /><br /> 詳細については、このトピックの「バックアップ ヘッダー情報の表示」を参照してください。|  
@@ -217,11 +217,11 @@ ms.locfileid: "62922240"
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlVerify%2A> (SMO)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [メディア セット、メディア ファミリ、およびバックアップ セット &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md)   
  [バックアップ デバイス &#40;SQL Server&#41;](backup-devices-sql-server.md)   
- [ミラー化バックアップ メディア セット &#40;SQL Server&#41;](mirrored-backup-media-sets-sql-server.md)   
+ [Mirrored Backup Media Sets &#40;SQL Server&#41;](mirrored-backup-media-sets-sql-server.md)   
  [バックアップ中および復元中に発生する可能性があるメディア エラー &#40;SQL Server&#41;](possible-media-errors-during-backup-and-restore-sql-server.md)  
   
   

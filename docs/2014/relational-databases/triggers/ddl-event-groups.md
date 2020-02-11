@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: d23a16fab200c3c6ef55a1cac8f1838a2f51468d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211727"
 ---
 # <a name="ddl-event-groups"></a>DDL イベント グループ
@@ -27,12 +27,12 @@ ms.locfileid: "68211727"
 > [!NOTE]  
 >  DDL に似た操作を実行する一部のシステム ストアド プロシージャも、DDL トリガー、またはイベント通知を起動することができます。 実行されるシステム ストアド プロシージャへの応答を判断するために、DDL トリガーおよびイベント通知をテストしてください。 たとえば、CREATE TYPE ステートメントおよび **sp_addtype** ストアド プロシージャはどちらも、CREATE_TYPE イベントで作成される DDL トリガーおよびイベント通知を起動します。  
   
-## <a name="events"></a>イベント  
+## <a name="events"></a>events  
  DDL_DATABASE_LEVEL_EVENTS の下に記載されているイベントは、サーバー (インスタンス) またはデータベース レベルで実行されます。 DDL_SERVER_LEVEL_EVENTS の下に記載されているイベントは、サーバー レベルでのみ実行できます。  
   
 ||||  
 |-|-|-|  
-|parent_type|type|NAME|  
+|parent_type|型|name|  
 |NULL|296|ALTER_SERVER_CONFIGURATION|  
 |NULL|10001|DDL_EVENTS|  
 |10001|10016|&#124;    DDL_DATABASE_LEVEL_EVENTS|  
@@ -315,7 +315,7 @@ FROM DirectReports
 ORDER BY sort;  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [イベント通知](../service-broker/event-notifications.md)   
  [DDL トリガー](ddl-triggers.md)   
  [DDL イベント](ddl-events.md)  

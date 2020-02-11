@@ -1,5 +1,5 @@
 ---
-title: GeneralFlags プロパティ (ServerSettings クラス) |Microsoft Docs
+title: 一般 Flags プロパティ (ServerSettings クラス) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,14 +19,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 44f3f5bbfe183136ee8bf1a8d602a50e638b89b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63028415"
 ---
 # <a name="generalflags-property-serversettings-class"></a>GeneralFlags プロパティ (ServerSettings クラス)
-   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンスに関連付けられた一般的なフラグを取得します。  
+  の[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンスに関連付けられた一般的なフラグを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,15 +37,17 @@ object
 ```  
   
 ## <a name="parts"></a>要素  
- *object*  
- [のインスタンス上のサーバー設定を表す](serversettings-class.md) ServerSettings クラス [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]オブジェクト。  
+ *素材*  
+ 
+  [のインスタンス上のサーバー設定を表す](serversettings-class.md) ServerSettings クラス [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]オブジェクト。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
- [のインスタンスに関連付けられた一般的なフラグを指定する](../serversettingsgeneralflag-class/serversettingsgeneralflag-class.md) ServerSettingsGeneralFlag クラス [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]オブジェクトの配列。  
+ 
+  [のインスタンスに関連付けられた一般的なフラグを指定する](../serversettingsgeneralflag-class/serversettingsgeneralflag-class.md) ServerSettingsGeneralFlag クラス [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]オブジェクトの配列。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
   
-## <a name="see-also"></a>関連項目  
- [サーバー ネットワーク プロトコルとネットワーク ライブラリの構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+## <a name="see-also"></a>参照  
+ [サーバーのネットワーク プロトコルと Net-Library の構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

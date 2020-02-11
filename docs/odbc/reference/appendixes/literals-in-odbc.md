@@ -1,5 +1,5 @@
 ---
-title: ODBC のリテラル |Microsoft Docs
+title: ODBC でのリテラル |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,14 +16,14 @@ ms.assetid: e66e9ab8-6dcc-47e2-bcb6-efdb324a1d3b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a36c390d21cb51f024ce7bdfce1039372a4b57c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68041587"
 ---
 # <a name="literals-in-odbc"></a>ODBC のリテラル
-次のセクションで、構文は、間隔と ODBC の数値リテラルに使用されます。 この構文を提供する数値型または interval 型では、文字列型とは、文字の文字列型に型の数値型または interval 型から変換を実行するとドライバー開発者を支援するためにここでします。 詳細については、次を参照してください[Interval のリテラル](../../../odbc/reference/appendixes/interval-literals.md)と[数値リテラル](../../../odbc/reference/appendixes/numeric-literals.md)付録 d:。データ型。  
+次のセクションの構文は、ODBC の間隔と数値リテラルに使用されます。 この構文は、文字文字列型から数値または間隔の型、または数値または間隔の型から文字列型への変換が実行される場合のドライバーの作成者を対象として、ここで提供されています。 詳細については、「付録 D: データ型」の「[間隔リテラル](../../../odbc/reference/appendixes/interval-literals.md)と[数値リテラル](../../../odbc/reference/appendixes/numeric-literals.md)」を参照してください。  
   
  この付録には、次のトピックが含まれています。  
   

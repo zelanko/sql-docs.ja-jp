@@ -17,16 +17,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 431124cff2fcf293ccf1e8e8bcb74321245a661e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63032283"
 ---
 # <a name="localdbgetversions-function"></a>LocalDBGetVersions 関数
   コンピューターで使用できるすべての SQL Server Express LocalDB バージョンを返します。  
   
- **ヘッダー ファイル:** sqlncli.h  
+ **ヘッダーファイル:** sqlncli  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,10 +36,10 @@ ms.locfileid: "63032283"
   
 ## <a name="parameters"></a>パラメーター  
  *pVersionNames*  
- [出力]ユーザーのワークステーションで利用できる LocalDB バージョンの名前が含まれています。  
+ Outputユーザーのワークステーションで使用可能な LocalDB バージョンの名前が含まれます。  
   
  *lpdwNumberOfVersions*  
- [入力/出力]入力内のバージョンのスロットの数を保持する、 *pVersionNames*バッファー。   
+ [入力/出力]入力時には、 *Pversionnames*バッファーにあるバージョンのスロットの数を保持します。   
 出力では、既存の LocalDB バージョンの数を保持します。  
   
 ## <a name="returns"></a>戻り値  
@@ -58,8 +58,8 @@ ms.locfileid: "63032283"
  [LOCALDB_ERROR_INTERNAL_ERROR](../express-localdb-error-messages/localdb-error-internal-error.md)  
  予期しないエラーが発生しました。 詳細をイベント ログで確認してください。  
   
-## <a name="remarks"></a>コメント  
- LocalDB API を使用するコード サンプルは、次を参照してください。 [SQL Server Express LocalDB リファレンス](../sql-server-express-localdb-reference.md)します。  
+## <a name="remarks"></a>解説  
+ LocalDB API を使用するコードサンプルについては、 [Localdb リファレンスの SQL Server Express](../sql-server-express-localdb-reference.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server Express LocalDB ヘッダーとバージョン情報](sql-server-express-localdb-header-and-version-information.md)  

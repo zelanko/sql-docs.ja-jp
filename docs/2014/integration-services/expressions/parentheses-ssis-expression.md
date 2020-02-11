@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3fc1a9beb0468f50291854d8eb5cd0e3bf9ba8d1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768808"
 ---
 # <a name="-parentheses-ssis-expression"></a>() (かっこ) (SSIS 式)
@@ -36,7 +36,7 @@ ms.locfileid: "62768808"
   
 ## <a name="arguments"></a>引数  
  *式 (expression)*  
- 有効な式を指定します。  
+ 任意の有効な式です。  
   
 ## <a name="result-types"></a>戻り値の型  
  *expression*のデータ型。 詳細については、「 [Integration Services Data Types](../data-flow/integration-services-data-types.md)」を参照してください。  
