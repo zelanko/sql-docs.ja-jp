@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c293b7007ccb8a42928c02ed37bcaacb898504f9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108698"
 ---
 # <a name="delete-and-re-create-encryption-keys--ssrs-configuration-manager"></a>暗号化キーの削除と再作成 (SSRS 構成マネージャー)
@@ -44,11 +44,13 @@ ms.locfileid: "66108698"
   
      レポート サーバーのスケールアウト配置に対する暗号化キーを再作成する場合、配置内のすべてのインスタンスでこのプロパティを無効にします。  
   
-    1.  Windows エクスプローラーを開き、 *drive*:\Program Files\Microsoft SQL Server\\*report_server_instance*\Reporting Services に移動します。 *drive* は使用しているコンピューターのドライブ文字に置き換え、 *report_server_instance* は Web サービスおよび HTTP アクセスを無効にするレポート サーバー インスタンスに対応するフォルダー名に置き換えます。 たとえば、C:\Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services のようになります。  
+    1.  Windows エクスプローラーを開き、 *drive*:\Program Files\Microsoft SQL Server\\*report_server_instance*\Reporting Services に移動します。 
+  *drive* は使用しているコンピューターのドライブ文字に置き換え、 *report_server_instance* は Web サービスおよび HTTP アクセスを無効にするレポート サーバー インスタンスに対応するフォルダー名に置き換えます。 たとえば、C:\Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services のようになります。  
   
     2.  rsreportserver.config ファイルを開きます。  
   
-    3.  `IsWebServiceEnabled` プロパティに対して `False` を指定し、変更を保存します。  
+    3.  
+  `IsWebServiceEnabled` プロパティに対して `False` を指定し、変更を保存します。  
   
 2.  Reporting Services 構成ツールを起動して、構成するレポート サーバー インスタンスに接続します。  
   
@@ -62,7 +64,8 @@ ms.locfileid: "66108698"
   
 1.  レポート サーバー Web サービスおよび HTTP アクセスを無効にします。 上記の手順に従って Web サービスの操作を停止します。  
   
-2.  レポート サーバーをホストするコンピューターのローカルで **rskeymgmt.exe** を実行します。 `-s` 引数を指定して対称キーを再設定します。 他の引数は必要ありません。  
+2.  レポート サーバーをホストするコンピューターのローカルで **rskeymgmt.exe** を実行します。 
+  `-s` 引数を指定して対称キーを再設定します。 他の引数は必要ありません。  
   
     ```  
     rskeymgmt -s  
@@ -91,7 +94,8 @@ ms.locfileid: "66108698"
   
 1.  Reporting Services 構成ツールを起動して、構成するレポート サーバー インスタンスに接続します。  
   
-2.  **[暗号化キー]** をクリックし、 **[削除]** をクリックします。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+2.  
+  **[暗号化キー]** をクリックし、 **[削除]** をクリックします。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 3.  レポート サーバー Windows サービスを再開します。 スケールアウト配置の場合は、すべてのレポート サーバー インスタンスについてこの作業を行います。  
   
@@ -117,6 +121,6 @@ ms.locfileid: "66108698"
   
 ## <a name="see-also"></a>参照  
  [暗号化キーの構成と管理 &#40;SSRS 構成マネージャー&#41;](ssrs-encryption-keys-manage-encryption-keys.md)   
- [暗号化されたレポート サーバー データの格納 &#40;SSRS 構成マネージャー&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
+ [暗号化されたレポートサーバーデータ &#40;SSRS Configuration Manager に格納&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
   
   

@@ -17,14 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 34e06960274c7e16ef4f6efc31f1b7ca55a7d48c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63270588"
 ---
 # <a name="create-union-queries-visual-database-tools"></a>UNION クエリの作成 (Visual Database Tools)
-  UNION キーワードを使用すると、2 つの SELECT ステートメントの結果を、1 つのテーブルに表示できます。 いずれかの SELECT ステートメントから返された行がすべて組み合わされて、UNION 式の結果として表示されます。 例については、次を参照してください。 [SELECT の例&#40;TRANSACT-SQL&#41;](/sql/t-sql/queries/select-examples-transact-sql)します。  
+  UNION キーワードを使用すると、2 つの SELECT ステートメントの結果を、1 つのテーブルに表示できます。 いずれかの SELECT ステートメントから返された行がすべて組み合わされて、UNION 式の結果として表示されます。 例については、「 [SELECT の例 &#40;transact-sql&#41;](/sql/t-sql/queries/select-examples-transact-sql)」を参照してください。  
   
 > [!NOTE]  
 >  ダイアグラム ペインに表示できるのは、1 つの SELECT 句だけです。 したがって、UNION クエリを使用している場合、クエリ デザイナーにはテーブル操作ペインは表示されません。  
@@ -45,14 +45,15 @@ ms.locfileid: "63270588"
     FROM dbo.Gloves;  
     ```  
   
-3.  **[クエリ デザイナー]** メニューの **[SQL の実行]** をクリックして、クエリを実行します。  
+3.  
+  **[クエリ デザイナー]** メニューの **[SQL の実行]** をクリックして、クエリを実行します。  
   
      UNION クエリがクエリ デザイナーによって書式化されます。  
   
 ## <a name="see-also"></a>参照  
- [クエリの種類がサポートされている&#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [クエリおよびビューの操作方法に関するトピックを設計&#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
- [クエリに関する基本操作を実行&#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)   
- [共用体&#40;TRANSACT-SQL&#41;](/sql/t-sql/language-elements/set-operators-union-transact-sql)  
+ [Visual Database Tools &#40;サポートされているクエリの種類&#41;](visual-database-tools.md)   
+ [クエリおよびビューのデザイン方法に関するトピック &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
+ [Visual Database Tools &#40;クエリで基本的な操作を実行&#41;](perform-basic-operations-with-queries-visual-database-tools.md)   
+ [UNION &#40;Transact-sql&#41;](/sql/t-sql/language-elements/set-operators-union-transact-sql)  
   
   

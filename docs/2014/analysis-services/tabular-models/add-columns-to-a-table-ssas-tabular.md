@@ -1,5 +1,5 @@
 ---
-title: テーブル (SSAS テーブル) に列の追加 |Microsoft Docs
+title: テーブルへの列の追加 (SSAS テーブル) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7a62460a63bab15499f9aeb4c6510c0e4a9652a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067769"
 ---
 # <a name="add-columns-to-a-table-ssas-tabular"></a>列のテーブルへの追加 (SSAS テーブル)
@@ -37,10 +37,11 @@ ms.locfileid: "66067769"
   
 1.  モデル デザイナーで列を追加するテーブルをクリックし、 **[テーブル]** メニュー、  **[テーブルのプロパティ]** の順にクリックします。  
   
-2.  **[テーブルのプロパティの編集]** ダイアログ ボックスのテーブル プレビュー ウィンドウで、追加するソース列を選択してから、[OK] をクリックします。 既にテーブル定義に含まれている列はチェックされています。  
+2.  
+  **[テーブルのプロパティの編集]** ダイアログ ボックスのテーブル プレビュー ウィンドウで、追加するソース列を選択してから、[OK] をクリックします。 既にテーブル定義に含まれている列はチェックされています。  
   
 ## <a name="add-a-calculated-column"></a>計算列の追加  
- 計算列では、各行の値の定義に DAX 式を使用します。 たとえば、各行に 1 を加算する単純な数式 (=1) を使用した計算列を作成できます。 計算列には、モデル内のその他のデータに基づき値を計算する複雑な式が含まれることもあります。 計算列については、他のトピックで詳しく説明します。 詳細については、「[計算列 (SSAS テーブル)](ssas-calculated-columns.md)」を参照してください。  
+ 計算列では、各行の値の定義に DAX 式を使用します。 たとえば、各行に 1 を加算する単純な数式 (=1) を使用した計算列を作成できます。 計算列には、モデル内のその他のデータに基づき値を計算する複雑な式が含まれることもあります。 計算列については、他のトピックで詳しく説明します。 詳細については、「 [計算列 &#40;SSAS テーブル&#41;](ssas-calculated-columns.md)で作成したテーブル モデル プロジェクトでの利用を想定して取り上げます。  
   
 #### <a name="to-create-a-calculated-column"></a>計算列を作成するには  
   
@@ -51,7 +52,7 @@ ms.locfileid: "66067769"
 2.  各行の属性を追加するには、数式バーに DAX 式を入力します。  
   
 ## <a name="add-a-blank-column"></a>空白列の追加  
- モデル テーブルに名前付きの空白列を作成できます。 空白の列は、別のソースのデータを貼り付ける場合に便利です。 貼り付けたデータは、インポートされたデータとは異なる方法で保存されることに留意してください。 詳細については、「[データのコピーと貼り付け (SSAS テーブル)](../copy-and-paste-data-ssas-tabular.md)」を参照してください。  
+ モデル テーブルに名前付きの空白列を作成できます。 空白の列は、別のソースのデータを貼り付ける場合に便利です。 貼り付けたデータは、インポートされたデータとは異なる方法で保存されることに留意してください。 詳細については、「[ &#40;SSAS テーブル&#41;](../copy-and-paste-data-ssas-tabular.md)」を参照してください。  
   
 #### <a name="to-create-a-named-blank-column"></a>名前付きの空白列を作成するには  
   
@@ -61,8 +62,8 @@ ms.locfileid: "66067769"
   
 2.  一番上のセルをクリックし、名前を入力してから Enter キーを押します。  
   
-## <a name="see-also"></a>関連項目  
- [[テーブルのプロパティの編集] ダイアログ ボックス (SSAS)](../edit-table-properties-dialog-box-ssas.md)   
- [テーブル、列、または行のフィルターのマッピングの変更 (SSAS テーブル)](change-table-column-or-row-filter-mappings-ssas-tabular.md)  
+## <a name="see-also"></a>参照  
+ [[テーブルのプロパティの編集] ダイアログボックス &#40;SSAS&#41;](../edit-table-properties-dialog-box-ssas.md)   
+ [SSAS 表形式&#41;&#40;テーブル、列、または行のフィルターのマッピングを変更します。](change-table-column-or-row-filter-mappings-ssas-tabular.md)  
   
   

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ea7bd1ada1c5efcc4ce64d0703192df8ddd6d9ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63280377"
 ---
 # <a name="partition-column-list-dialog-box-visual-database-tools"></a>[パーティション列の一覧] ダイアログ ボックス (Visual Database Tools)
@@ -28,7 +28,7 @@ ms.locfileid: "63280377"
  データ型  
  パーティション スキームで定義されている列のデータ型を表示します。  
   
- [列]  
+ 列  
  パーティション関数を適用する列を選択できるドロップダウン リストが用意されています。  
   
 ## <a name="see-also"></a>参照  

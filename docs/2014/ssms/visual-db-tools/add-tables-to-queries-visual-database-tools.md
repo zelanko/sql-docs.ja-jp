@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ba3957eb5b0c88396376d615033107b13d0621ae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63297861"
 ---
 # <a name="add-tables-to-queries-visual-database-tools"></a>クエリへのテーブルの追加 (Visual Database Tools)
@@ -57,10 +57,10 @@ ms.locfileid: "63297861"
 7.  **SQL ペイン**の中で、右かっこの後に別名を追加します。  
   
 ## <a name="see-also"></a>参照  
- [テーブルの別名の作成&#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [クエリからテーブルを削除する&#40;Visual Database Tools&#41;](remove-tables-from-queries-visual-database-tools.md)   
- [検索条件を指定&#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md)   
- [クエリ結果の要約&#40;Visual Database Tools&#41;](summarize-query-results-visual-database-tools.md)   
+ [Visual Database Tools &#40;テーブルの別名の作成&#41;](visual-database-tools.md)   
+ [クエリからテーブルを削除する &#40;Visual Database Tools&#41;](remove-tables-from-queries-visual-database-tools.md)   
+ [Visual Database Tools &#40;検索条件を指定し&#41;](specify-search-criteria-visual-database-tools.md)   
+ [Visual Database Tools &#40;クエリ結果の概要&#41;](summarize-query-results-visual-database-tools.md)   
  [クエリに関する基本操作の実行 (Visual Database Tools)](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

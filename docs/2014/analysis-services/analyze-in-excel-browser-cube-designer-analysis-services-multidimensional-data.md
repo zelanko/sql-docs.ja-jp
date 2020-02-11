@@ -1,5 +1,5 @@
 ---
-title: ([ブラウザー] タブ、キューブ デザイナー)、Excel で分析 (Analysis Services - 多次元データ) |Microsoft Docs
+title: '[Excel で分析] (キューブデザイナーの [ブラウザー] タブ) (Analysis Services-多次元データ) |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,22 +14,26 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b2833fb2ecbbac269442ce149cd5673abedcf83c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062366"
 ---
 # <a name="analyze-in-excel-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>[Excel で分析] (キューブ デザイナーの [ブラウザー] タブ) (Analysis Services - 多次元データ)
-  キューブ開発者は、プロジェクトがエンド ユーザーにどのように表示されるかを **"Excel で分析"** で簡単に確認できます。 **"Excel で分析"** 機能によって Microsoft Excel が開き、モデル ワークスペース データベースへのデータ ソース接続が作成され、自動的にピボットテーブルがワークシートに追加されます。 この機能は、以前のリリースで [ブラウザー] タブに組み込みのピボットテーブルを提供していた Office Web コントロールに替わるものです。  
+  " **Excel で分析**" を使用すると、キューブの開発者は、プロジェクトがエンドユーザーにどのように表示されるかをすばやく確認することができます。 
+  **"Excel で分析"** 機能によって Microsoft Excel が開き、モデル ワークスペース データベースへのデータ ソース接続が作成され、自動的にピボットテーブルがワークシートに追加されます。 この機能は、以前のリリースで [ブラウザー] タブに組み込みのピボットテーブルを提供していた Office Web コントロールに替わるものです。  
   
- **キューブのデータを表示するには。**  
+ **キューブ データを表示するには:**  
   
-1.  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]のソリューション エクスプローラーでキューブをダブルクリックすると、キューブ デザイナーでそのキューブが開きます。  
+1.  
+  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]のソリューション エクスプローラーでキューブをダブルクリックすると、キューブ デザイナーでそのキューブが開きます。  
   
-2.  **[ブラウザー]** タブをクリックします。  
+2.  
+  **[ブラウザー]** タブをクリックします。  
   
-3.  **[再接続]** をクリックして、接続を検証します。  
+3.  
+  **[再接続]** をクリックして、接続を検証します。  
   
 4.  メニュー バーの Excel アイコンをクリックします。  
   
@@ -42,18 +46,19 @@ ms.locfileid: "66062366"
 > [!NOTE]  
 >  "Excel で分析" 機能を使用するには、 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]と同じコンピューターに Excel がインストールされている必要があります。 Excel が同じコンピューターにインストールされていない場合は、別のコンピューターの Excel を使用して、データ ソースとしてキューブに接続できます。 これにより、ピボットテーブルをワークシートに手動で追加することができます。 モデル オブジェクト (テーブル、列、メジャー、および KPI) は、ピボットテーブルのフィールドの一覧にフィールドとして含まれています。  
   
- **"Excel で分析"** 機能の詳細については、以下のリソースを参照してください。  
+ 
+  **"Excel で分析"** 機能の詳細については、以下のリソースを参照してください。  
   
- [Excel で分析 &#40;SSAS テーブル&#41;](tabular-models/analyze-in-excel-ssas-tabular.md)  
+ [Excel での分析 &#40;SSAS 表形式&#41;](tabular-models/analyze-in-excel-ssas-tabular.md)  
   
- [Excel でのテーブル モデルの分析 (SSAS テーブル)](tabular-models/analyze-a-tabular-model-in-excel-ssas-tabular.md)  
+ [Excel でのテーブルモデルの分析 &#40;SSAS 表形式&#41;](tabular-models/analyze-a-tabular-model-in-excel-ssas-tabular.md)  
   
  [キューブ内のデータおよびメタデータの参照](multidimensional-models/browse-data-and-metadata-in-cube.md)  
   
 ## <a name="see-also"></a>参照  
- [ブラウザー&#40;キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](browser-cube-designer-analysis-services-multidimensional-data.md)   
- [ツールバー&#40;ブラウザー タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](toolbar-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   
- [メタデータ&#40;ブラウザー タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](metadata-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   
- [クエリおよびフィルター&#40;ブラウザー タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](query-filter-browser-cube-designer-analysis-services-multidimensional-data.md)  
+ [ブラウザー &#40;キューブデザイナー&#41; &#40;Analysis Services-多次元データ&#41;](browser-cube-designer-analysis-services-multidimensional-data.md)   
+ [ツールバー &#40;[ブラウザー] タブ、キューブデザイナー&#41; &#40;Analysis Services-多次元データ&#41;](toolbar-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [[メタデータ &#40;ブラウザー] タブ、キューブデザイナー&#41; &#40;Analysis Services-多次元データ&#41;](metadata-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [キューブデザイナーの [&#40;ブラウザー] タブの [クエリとフィルター]&#41; &#40;Analysis Services-多次元データ&#41;](query-filter-browser-cube-designer-analysis-services-multidimensional-data.md)  
   
   

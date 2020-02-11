@@ -13,14 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b88c78a1a7f4244afe220585919a50ed06cd0ad9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66110138"
 ---
 # <a name="examining-the-current-structure-of-the-employee-table"></a>Employee テーブルの現在の構造の確認
-  サンプル [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースには、**HumanResources** スキーマに含まれる **Employee** テーブルがあります。 元のテーブルを変更しないように、この手順では、 **Employee** テーブルのコピーを作成して **EmployeeDemo**という名前を付けます。 例を単純にするために、元のテーブルから 5 列だけをコピーします。 クエリを実行し、 **HumanResources.EmployeeDemo**を使用せず、テーブル内のデータが構造化方法を確認するテーブル、`hierarchyid`データ型。  
+  サンプル[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]データベースには、 **humanresources.employee**スキーマ内の**Employee**テーブルが含まれています。 元のテーブルを変更しないように、この手順では、 **Employee** テーブルのコピーを作成して **EmployeeDemo**という名前を付けます。 例を単純にするために、元のテーブルから 5 列だけをコピーします。 次に、 **Humanresources.employee demo**テーブルに対してクエリを実行し、 `hierarchyid`データ型を使用せずにテーブルでデータがどのように構造化されているかを確認します。  
   
 ### <a name="to-copy-the-employee-table"></a>Employee テーブルをコピーするには  
   
@@ -68,7 +68,8 @@ ms.locfileid: "66110138"
   
      結果は合計 290 行にわたります。  
   
- `ORDER BY` 句を使用していることによって、出力では、各管理レベルの直属の部下がまとめて表示されていることに注意してください。 たとえば、 **MgrID** 3 (roberto0) の 7 人の直属の部下がすべて左右に並べて表示されています。 実際に **MgrID** 3 に直属するすべての人をグループ化することは、不可能ではありませんが、かなり難しくなります。  
+ 
+  `ORDER BY` 句を使用していることによって、出力では、各管理レベルの直属の部下がまとめて表示されていることに注意してください。 たとえば、 **MgrID** 3 (roberto0) の 7 人の直属の部下がすべて左右に並べて表示されています。 実際に **MgrID** 3 に直属するすべての人をグループ化することは、不可能ではありませんが、かなり難しくなります。  
   
  次の作業では、`hierarchyid` データ型を使用して新しいテーブルを作成し、この新しいテーブルにデータを移動します。  
   

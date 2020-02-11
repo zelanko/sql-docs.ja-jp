@@ -1,5 +1,5 @@
 ---
-title: 計算されるメンバー (MDX) のセッション スコープの作成 |Microsoft Docs
+title: セッションスコープの計算されるメンバーの作成 (MDX) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,19 +14,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 701d7a49f7ddda60983a03723506442eac17866b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074549"
 ---
 # <a name="creating-session-scoped-calculated-members-mdx"></a>セッション スコープの計算されるメンバーの作成 (MDX)
-  多次元式 (MDX) セッション全体で使用できる計算されるメンバーを作成するには、[CREATE MEMBER](/sql/mdx/mdx-data-definition-create-member) ステートメントを使用します。 CREATE MEMBER ステートメントを使用して作成された計算されるメンバーは、MDX セッションが閉じるまで削除されません。  
+  多次元式 (MDX) セッション全体で使用できる計算されるメンバーを作成するには、 [CREATE MEMBER](/sql/mdx/mdx-data-definition-create-member) ステートメントを使用します。 CREATE MEMBER ステートメントを使用して作成された計算されるメンバーは、MDX セッションが閉じるまで削除されません。  
   
  このトピックで説明するように、CREATE MEMBER ステートメントの構文は非常に単純で使いやすいものです。  
   
 > [!NOTE]  
->  計算されるメンバーの詳細については、「[Building Calculated Members in MDX (MDX)](mdx-calculated-members-building-calculated-members.md)」(MDX での計算されるメンバーの作成 (MDX))を参照してください。  
+>  計算されるメンバーの詳細については、「[MDX での計算されるメンバーの作成 &#40;MDX&#41;](mdx-calculated-members-building-calculated-members.md)」を参照してください。  
   
 ## <a name="create-member-syntax"></a>CREATE MEMBER の構文  
  MDX ステートメントに CREATE MEMBER ステートメントを追加するための構文は、以下のとおりです。  
@@ -40,7 +40,8 @@ CREATE [SESSION] MEMBER [<cube-name>.]<fully-qualified-member-name> AS <expressi
 <property-identifier> ::= VISIBLE | SOLVEORDER | SOLVE_ORDER | FORMAT_STRING | NON_EMPTY_BEHAVIOR <ole db member properties>  
 ```  
   
- CREATE MEMBER ステートメントの構文で使用する `fully-qualified-member-name` の値は、計算されるメンバーの完全修飾名です。 完全修飾名には、計算されるメンバーを関連付けるディメンションまたはレベルが含まれます。 `expression` の値は、その式の値が評価された後の計算されるメンバーの値を返します。  
+ CREATE MEMBER ステートメントの構文で使用する `fully-qualified-member-name` の値は、計算されるメンバーの完全修飾名です。 完全修飾名には、計算されるメンバーを関連付けるディメンションまたはレベルが含まれます。 
+  `expression` の値は、その式の値が評価された後の計算されるメンバーの値を返します。  
   
 ## <a name="create-member-example"></a>CREATE MEMBER の例  
  以下の例では、CREATE MEMBER ステートメントを使用して、計算されるメンバー `LastFourStores` を作成しています。 この計算されるメンバーは、販売した単位の合計を最後の 4 つのストアに関して返します。このメンバーは、このキューブのセッション全体で使用できます。  
@@ -52,6 +53,6 @@ sum(([Stores].[ByLocation].Lag(3) :
 ```  
   
 ## <a name="see-also"></a>参照  
- [クエリ スコープの計算されるメンバーの作成 (MDX)](mdx-calculated-members-query-scoped-calculated-members.md)  
+ [MDX&#41;&#40;クエリスコープの計算されるメンバーの作成](mdx-calculated-members-query-scoped-calculated-members.md)  
   
   

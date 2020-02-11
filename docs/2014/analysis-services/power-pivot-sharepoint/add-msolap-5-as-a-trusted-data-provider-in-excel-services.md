@@ -1,5 +1,5 @@
 ---
-title: Excel Services で信頼できるデータ プロバイダーとして MSOLAP.5 を追加する |Microsoft Docs
+title: Excel Services の信頼された Data Provider として MSOLAP を追加する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9095c1fa767e1854c300df1ad08bf5d1900af860
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66071928"
 ---
 # <a name="add-msolap5-as-a-trusted-data-provider-in-excel-services"></a>Excel Services で信頼できるデータ プロバイダーとして MSOLAP.5 を追加
@@ -30,7 +30,8 @@ ms.locfileid: "66071928"
   
 1.  サーバーの全体管理で、 **[アプリケーション構成の管理]** をクリックし、Excel Services サービス アプリケーションをクリックします。  
   
-2.  **[信頼できるデータ プロバイダー]** をクリックします。  
+2.  
+  **[信頼できるデータ プロバイダー]** をクリックします。  
   
 3.  MSOLAP.5 が一覧に表示されていることを確認します。 PowerPivot for SharePoint の構成方法によっては、MSOLAP.5 が既に信頼されている場合があります。  
   
@@ -40,6 +41,6 @@ ms.locfileid: "66071928"
   
 6.  [プロバイダーの種類] では、OLE DB が選択されていることを確認します。  
   
-7.  [プロバイダーの説明] に、「 **Microsoft OLE DB プロバイダー (OLAP Services 11.0 用)** 」と入力します。  
+7.  [プロバイダーの説明] に、「 **Microsoft OLE DB プロバイダー (OLAP Services 11.0 用)**」と入力します。  
   
   

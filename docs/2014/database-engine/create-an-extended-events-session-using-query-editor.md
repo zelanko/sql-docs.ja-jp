@@ -1,5 +1,5 @@
 ---
-title: クエリ エディターを使用して拡張イベント セッションの作成 |Microsoft Docs
+title: クエリエディターを使用して拡張イベントセッションを作成する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4a541c86029be9a438492a851c0eb16d18120f75
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065028"
 ---
 # <a name="create-an-extended-events-session-using-query-editor"></a>クエリ エディターを使用した拡張イベント セッションの作成
-  拡張イベント セッションを作成するには、クエリ エディターを使用するか、オブジェクト エクスプローラーでセッションを作成します。 オブジェクト エクスプ ローラーでは、拡張イベントは、作成、変更、およびイベント セッション データのイベント セッションの作成プロセスをガイドするウィザードとより高度な構成オプションを提供する新しいセッション UI を表示する際、2 つのユーザー インターフェイスを提供します。 拡張イベント セッションを作成して SQL Server のトレースを診断できます。これにより次のような問題を解決できます。  
+  拡張イベント セッションを作成するには、クエリ エディターを使用するか、オブジェクト エクスプローラーでセッションを作成します。 オブジェクトエクスプローラーでは、拡張イベントに2つのユーザーインターフェイスが用意されています。このウィザードでは、イベントセッションの作成プロセスを案内するウィザードと、より高度な構成オプションを提供する新しいセッション UI を作成、変更、および表示するために使用できます。 拡張イベント セッションを作成して SQL Server のトレースを診断できます。これにより次のような問題を解決できます。  
   
 -   最も高価なクエリを見つける  
   
@@ -92,7 +92,7 @@ ms.locfileid: "66065028"
     ADD EVENT package_name.event_name  
     ```  
   
-     例 :  
+     次に例を示します。  
   
     ```  
     ADD EVENT sqlserver.file_read_completed,  
@@ -129,7 +129,7 @@ ms.locfileid: "66065028"
         AND column_type = 'data'  
         ```  
   
-         以下に例を示します。  
+         次に例を示します。  
   
         ```  
         SELECT *   

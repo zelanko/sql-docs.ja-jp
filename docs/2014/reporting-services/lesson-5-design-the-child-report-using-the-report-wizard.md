@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 5: レポート ウィザードを使用して子レポートの設計 |Microsoft Docs'
+title: 'レッスン 5: レポート ウィザードを使用して子レポートを設計する | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 661b4f3cc63eb0c19fddb53f872e940d1f9976e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108438"
 ---
 # <a name="lesson-5-design-the-child-report-using-the-report-wizard"></a>レッスン 5: レポート ウィザードを使用して子レポートを設計する
@@ -26,11 +26,11 @@ ms.locfileid: "66108438"
   
 2.  Web サイトを右クリックし、 **[新しい項目の追加]** を選択します。  
   
-3.  **新しい項目の追加**ダイアログ ボックスで、をクリックして**レポート ウィザード**、レポート ファイルの名前を入力し、**追加**します。  
+3.  [**新しい項目の追加**] ダイアログボックスで、[**レポートウィザード**] をクリックし、レポートファイルの名前を入力して、[**追加**] をクリックします。  
   
      これにより、レポート ウィザードが起動します。  
   
-4.  **データセットのプロパティ**ページで、**データ ソース**ボックスで、 **DataSet2**します。  
+4.  [データ**セットのプロパティ**] ページの [**データソース**] ボックスで、[ **DataSet2**] をクリックします。  
   
      作成した DataTable で **[使用できるデータセット]** ボックスが自動的に更新されます。  
   
@@ -40,15 +40,15 @@ ms.locfileid: "66108438"
   
     1.  **[ProductID]** 、 **[PurchaseOrderID]** 、 **[PurchaseOrderDetailID]** 、 **[OrderQty]** 、 **[ReceivedQty]** 、 **[RejectedQty]** 、および **[StockedQty]** を、 **[使用できるフィールド]** から **[値]** ボックスにドラッグします。  
   
-    2.  矢印をクリックして**Sum(ProductID)** 、 **Sum(PurchaseOrderID)** 、 **Sum(PurchaseOrderDetailID)** 、 **Sum(OrderQty)** 、 **Sum(ReceivedQty)** 、 **Sum(RejectedQty)** 、および**Sum(StockedQty)** をオフにし、**合計**選択します。  
+    2.  [ **Sum (ProductID)**]、[ **sum (PurchaseOrderID)**]、[ **sum (PurchaseOrderDetailID)**]、[sum ( **OrderQty)**]、[ **Sum (ReceivedQty)**]、[Sum **(RejectedQty)**]、および [ **sum (StockedQty)** ] の横にある矢印をクリックし、**合計**の選択を解除します。  
   
-7.  をクリックして **[次へ]** 2 回クリックして**完了**を閉じる、**レポート ウィザード**します。  
+7.  [**次へ**] を2回クリックし、[**完了**] をクリックして**レポートウィザード**を閉じます。  
   
      これで .rdlc ファイルが作成されました。 このファイルはレポート デザイナーで開くことができます。 設計した Tablix がデザイン画面に表示されます。  
   
 8.  .rdlc ファイルが開かれた状態で、次の手順を実行してパラメーターを追加します。  
   
-    1.  をクリックして**パラメーター**で、**レポート データ**ペイン、およびクリック**パラメーターを追加して**。  
+    1.  **レポートデータ**ペインで [**パラメーター** ] をクリックし、[**パラメーターの追加**] をクリックします。  
   
     2.  **[名前]** ボックスに **productid** を入力します。  
   

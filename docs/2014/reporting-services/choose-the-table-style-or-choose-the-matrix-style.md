@@ -1,5 +1,5 @@
 ---
-title: テーブルのスタイルを選択するか、マトリックスのスタイルの選択 |Microsoft Docs
+title: テーブルのスタイルを選択するか、マトリックスのスタイルを選択します。Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 137d9d4adf1377d730bac2fc6e847f97d02c2c3f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109827"
 ---
 # <a name="choose-the-table-style-or-choose-the-matrix-style"></a>テーブルのスタイルを選択/マトリックスのスタイルを選択
-  レポート ウィザードのこの 2 つのページを使用すると、レポートのテキストと線のスタイルを選択できます。 スタイルの一覧は、構成できるテンプレートに基づいています。 レポート デザイナーには、次の初期テンプレートが用意されています。スレート、フォレスト、企業、太字、[オーシャン]、およびジェネリックです。  
+  レポート ウィザードのこの 2 つのページを使用すると、レポートのテキストと線のスタイルを選択できます。 スタイルの一覧は、構成できるテンプレートに基づいています。 レポート デザイナーには、[スレート]、[フォレスト]、[フォーマル]、[太字]、[オーシャン]、[汎用] の 6 つの標準テンプレートが用意されています。  
   
  また、新しいスタイル テンプレートを追加することもできます。  
   

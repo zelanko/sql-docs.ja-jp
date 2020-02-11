@@ -13,26 +13,27 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 16da6af99af021185c8965dccd087e1c8420e50a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107660"
 ---
 # <a name="reporting-services-login-dialog-box-report-builder"></a>[Reporting Services ログイン] ダイアログ ボックス (レポート ビルダー)
+  
   **[Reporting Services ログイン]** ダイアログ ボックスを使用すると、レポートをレポート サーバーにパブリッシュする際に使用する資格情報を指定できます。 これらの資格情報については、レポート サーバー管理者に問い合わせてください。  
   
-## <a name="options"></a>および  
- **Server**  
- レポート サーバーの名前を表示します。 たとえば、 `http://localhost/reportserver`のようにします。 既定のポート 80 と異なるポートを使用するレポート サーバーの場合は、ポート番号を含めます。 たとえば、`http://localhost:8080/reportserver` のようにします。  
+## <a name="options"></a>オプション  
+ **サーバー**  
+ レポート サーバーの名前を表示します。 たとえば、「 `http://localhost/reportserver` 」のように入力します。 既定のポート 80 と異なるポートを使用するレポート サーバーの場合は、ポート番号を含めます。 たとえば、「 `http://localhost:8080/reportserver` 」のように入力します。  
   
  **ユーザー名**  
  Web サービスへのログインに使用するユーザー名を入力します。  
   
- **Password**  
+ **パスワード**  
  Web サービスへのログインに使用するパスワードを入力します。  
   
-## <a name="see-also"></a>関連項目  
- [レポート ビルダーのダイアログ ボックス、ペイン、およびウィザードに関するヘルプ](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+## <a name="see-also"></a>参照  
+ [ダイアログボックス、ペイン、およびウィザードのヘルプのレポートビルダー](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

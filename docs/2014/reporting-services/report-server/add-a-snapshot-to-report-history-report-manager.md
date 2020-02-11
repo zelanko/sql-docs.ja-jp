@@ -16,10 +16,10 @@ helpviewer_keywords:
 ms.custom: ''
 ms.date: 06/13/2017
 ms.openlocfilehash: 00b1caa2f68da0a3a38d98cf35f959f83257b99e
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67413114"
 ---
 # <a name="add-a-snapshot-to-report-history-report-manager"></a>レポート履歴へのスナップショットの追加 (レポート マネージャー)
@@ -34,12 +34,13 @@ ms.locfileid: "67413114"
   
 2. ドロップダウン メニューの **[レポート履歴の表示]** をクリックします。  
   
-3. **[新しいスナップショット]** をクリックします。 **[実行時]** 列に新しいスナップショットが作成されます。  
+3. **[新しいスナップショット]** をクリックします。 
+  **[実行時]** 列に新しいスナップショットが作成されます。  
   
     > [!NOTE]
     > レポート履歴にスナップショットを追加するには、管理者がレポート履歴の構成で **[履歴の手動作成を許可する]** に設定しておく必要があります。 詳細については、 [レポート履歴を制限する (レポート マネージャー)](../reports/limit-report-history-report-manager.md)をクリックします。
 
-4. **[適用]** をクリックします。
+4. **[Apply]** をクリックします。
 
 ## <a name="to-automatically-add-all-snapshots-to-report-history"></a>レポート履歴にすべてのスナップショットを自動で追加するには  
   
@@ -49,11 +50,13 @@ ms.locfileid: "67413114"
   
 3. ドロップダウン メニューの **[管理]** をクリックします。  
   
-4. **[スナップショット オプション]** をクリックします。  
+4. 
+  **[スナップショット オプション]** をクリックします。  
   
-5. **[すべてのレポート実行スナップショットを履歴に格納する]** チェック ボックスをオンにします。  
+5. 
+  **[すべてのレポート実行スナップショットを履歴に格納する]** チェック ボックスをオンにします。  
   
-6. **[適用]** をクリックします。  
+6. **[Apply]** をクリックします。  
   
 ### <a name="to-automatically-add-snapshots-to-report-history-based-on-a-schedule"></a>スケジュールを基にスナップショットを自動でレポート履歴に追加するには  
   
@@ -61,20 +64,24 @@ ms.locfileid: "67413114"
   
 2. ドロップダウン メニューの **[管理]** をクリックします。  
   
-3. **[スナップショット オプション]** をクリックします。  
+3. 
+  **[スナップショット オプション]** をクリックします。  
   
-4. **[次のスケジュールを使用して、スナップショットをレポート履歴に追加する]** チェック ボックスをオンにします。 次のいずれかを実行します。  
+4. 
+  **[次のスケジュールを使用して、スナップショットをレポート履歴に追加する]** チェック ボックスをオンにします。 以下のいずれかを行います。  
   
-    - **[レポート固有のスケジュール]** をクリックします。 スケジュールの詳細を入力し、スケジュールの開始日と終了日を選択して、 **[OK]** をクリックします。  
+    - 
+  **[レポート固有のスケジュール]** をクリックします。 スケジュールの詳細を入力し、スケジュールの開始日と終了日を選択して、 **[OK]** をクリックします。  
   
-    - **[共有スケジュール]** を選択します。 一覧から適切なスケジュールを選択します。  
+    - 
+  **[共有スケジュール]** を選択します。 一覧から適切なスケジュールを選択します。  
   
-5. **[適用]** をクリックします。  
+5. **[Apply]** をクリックします。  
   
 ## <a name="see-also"></a>参照
 
-- [レポートの実行プロパティを構成する &#40;レポート マネージャー&#41;](../reports/configure-execution-properties-for-a-report-report-manager.md)
-- [レポートを開閉する &#40;レポート マネージャー&#41;](../reports/open-and-close-a-report-report-manager.md)
+- [レポート &#40;レポートマネージャーの実行プロパティの構成&#41;](../reports/configure-execution-properties-for-a-report-report-manager.md)
+- [レポート &#40;レポートマネージャーを開いて閉じる&#41;](../reports/open-and-close-a-report-report-manager.md)
 - [レポート履歴を制限する &#40;レポート マネージャー&#41;](../reports/limit-report-history-report-manager.md)
 - [スケジュール](../subscriptions/schedules.md)   
 - [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](../report-manager-ssrs-native-mode.md)

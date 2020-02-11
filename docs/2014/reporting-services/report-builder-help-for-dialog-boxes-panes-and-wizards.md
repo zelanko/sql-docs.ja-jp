@@ -1,5 +1,5 @@
 ---
-title: レポート ビルダーのダイアログ ボックス、ペイン、およびウィザードに関するヘルプ |Microsoft Docs
+title: ダイアログボックス、ペイン、およびウィザードのヘルプをレポートビルダーします。Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d3f9f6fa990aa3c976565968ccb69bb3d18c25f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107958"
 ---
 # <a name="report-builder-help-for-dialog-boxes-panes-and-wizards"></a>レポート ビルダーのダイアログ ボックス、ペイン、およびウィザードに関するヘルプ

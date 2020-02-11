@@ -1,5 +1,5 @@
 ---
-title: 行のフィルター (ロール デザイナー)(Tabular Model) |Microsoft Docs
+title: 行フィルター (ロールデザイナー) (テーブルモデル) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,30 +13,30 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fdc5f0326152eaa62bd41364ace48d7e02fbd0f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070133"
 ---
 # <a name="row-filters-role-designertabular-model"></a>行フィルター (ロール デザイナー) (テーブル モデル)
-  ロール デザイナーの **[行フィルター]** ページを使用して、関連付けられているロールの行レベル フィルターを定義します。 行フィルターを定義できるのは、読み取りおよび読み取りと処理の権限を持つロールに対してだけです。  
+  ロール デザイナーの **[行フィルター]** ページを使用して、関連付けられているロールの行レベル フィルターを定義します。 行フィルターは、Read (読み取り) アクセス許可および Read and Process (読み取りとプロセス) アクセス許可を持つロールに対してのみ定義できます。  
   
 > [!NOTE]  
 >  ロール デザイナーの **[全般]** ページで **[フル コントロール (管理者)]** が選択されているか、ロール権限が **[処理]** に設定されていると、このページのオプションはすべて使用できなくなります。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **Table**  
  フィルターが定義されているモデル テーブルです。  
   
- **DAX フィルター**  
+ **[DAX フィルター]**  
  ブール条件に評価される DAX 式です。  
   
- **DAX フィルター - \<tablename >**  
+ **DAX フィルター- \<tablename>**  
  ブール条件に評価される DAX 式を入力します。  
   
-## <a name="see-also"></a>関連項目  
- [テーブル モデル ロール&#40;SSAS 表形式&#41;](tabular-models/roles-ssas-tabular.md)   
- [SSMS を使用したロールの管理 (SSAS テーブル)](tabular-models/manage-roles-by-using-ssms-ssas-tabular.md)  
+## <a name="see-also"></a>参照  
+ [SSAS 表形式&#41;&#40;テーブルモデルロール](tabular-models/roles-ssas-tabular.md)   
+ [SSMS を使用したロールの管理 &#40;SSAS 表形式&#41;](tabular-models/manage-roles-by-using-ssms-ssas-tabular.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 名前付き MDX (MDX) のセットの構成 |Microsoft Docs
+title: MDX での名前付きセットの作成 (MDX) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 98d363ab09e75905b13503687fe425a981c790e7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074144"
 ---
 # <a name="building-named-sets-in-mdx-mdx"></a>MDX での名前付きセットの作成 (MDX)
@@ -31,17 +31,17 @@ ms.locfileid: "66074144"
   
  名前付きセットの定義では、以下のいずれかのコンテキストを設定できます。  
   
--   **クエリ スコープ** MDX クエリの一部として定義される名前付きセットを作成する場合 (つまり、スコープをそのクエリに限定する場合) は、WITH キーワードを使用します。 その名前付きセットは、MDX の SELECT ステートメントの中で使用できます。 この方法では、WITH キーワードを使用して作成した名前付きセットを、SELECT ステートメントを修正せずに変更できます。  
+-   **クエリスコープ**MDX クエリの一部として定義されている名前付きセットを作成し、そのスコープをそのクエリに限定する場合は、WITH キーワードを使用します。 その名前付きセットは、MDX の SELECT ステートメントの中で使用できます。 この方法では、WITH キーワードを使用して作成した名前付きセットを、SELECT ステートメントを修正せずに変更できます。  
   
      WITH キーワードを使用して名前付きセットを作成する方法の詳細については、「[クエリ スコープの名前付きセットの作成 (MDX)](mdx-named-sets-creating-query-scoped-named-sets.md)」を参照してください。  
   
--   **セッション スコープ** クエリのコンテキストよりも広いスコープを設定して名前付きセットを作成する場合 (つまり、スコープを MDX セッションの有効期間全体とする場合) は、CREATE SET ステートメントを使用します。 CREATE SET ステートメントで定義した名前付きセットは、そのセッションのすべての MDX クエリで使用できます。 CREATE SET ステートメントを使用する方法は、たとえば、さまざまなクエリで 1 つのセットを使い回すクライアント アプリケーションで役立ちます。  
+-   **セッションスコープ**スコープが MDX セッションの有効期間である、クエリのコンテキストよりも広いスコープを持つ名前付きセットを作成するには、CREATE SET ステートメントを使用します。 CREATE SET ステートメントで定義した名前付きセットは、そのセッションのすべての MDX クエリで使用できます。 CREATE SET ステートメントを使用する方法は、たとえば、さまざまなクエリで 1 つのセットを使い回すクライアント アプリケーションで役立ちます。  
   
      CREATE SET ステートメントを使用してセッションでの名前付きセットを作成する方法の詳細については、「[セッション スコープの名前付きセットの作成 (MDX)](mdx-named-sets-creating-session-scoped-named-sets.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [SELECT ステートメント &#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select)   
- [CREATE SET ステートメント (MDX)](/sql/mdx/mdx-data-definition-create-set)   
+ [CREATE SET ステートメント &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-set)   
  [MDX クエリの基礎 &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   

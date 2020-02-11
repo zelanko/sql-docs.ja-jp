@@ -1,5 +1,5 @@
 ---
-title: データ ソース ダイアログ ボックス (Analysis Services - 多次元データ) を参照 |Microsoft Docs
+title: '[データソースの参照] ダイアログボックス (Analysis Services-多次元データ) |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,20 +15,21 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c9dfc99a05b4da5d8ba5537529db4d25f6771038
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66064546"
 ---
 # <a name="browse-data-source-dialog-box-analysis-services---multidimensional-data"></a>[データ ソースの参照] ダイアログ ボックス (Analysis Services - 多次元データ)
+  
   **の** データ ソースの参照 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ダイアログ ボックスを使用すると、選択したテーブルの最初の 1,000 個のレコードを表示できます。  
   
-## <a name="options"></a>および  
- **データ ソースのテーブル**  
+## <a name="options"></a>オプション  
+ **[データ ソース テーブル]**  
  選択したテーブルの最初の 1,000 個のレコードが表示されます。 データはすべて読み取り専用です。  
   
-## <a name="see-also"></a>関連項目  
- [Analysis Services のデザイナーおよびダイアログ ボックス&#40;多次元データ&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
+## <a name="see-also"></a>参照  
+ [多次元データ &#40;Analysis Services のデザイナーとダイアログボックス&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   
   

@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5ca661105c28cab2bf3e881cf262922e95da5eed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63250366"
 ---
 # <a name="optimize-merge-replication-performance-with-download-only-articles"></a>ダウンロード専用アーティクルを使用したマージ レプリケーションのパフォーマンス最適化
@@ -47,7 +47,7 @@ ms.locfileid: "63250366"
  アプリケーションの要件を理解することにより、柔軟性の最大化とパフォーマンスの最適化の間でアプリケーションを調整できます。 たとえば、パブリッシャーとサブスクライバーの両方で多数の競合と変更が発生するアプリケーションでは、標準アーティクルから構成されるパブリケーションを使用します。 セールス フォース オートメーションなど一部のアプリケーションでは、競合の可能性のあるアーティクルと、それ以外にダウンロード専用に指定できる参照テーブル用のアーティクルが使用されることがあります。 POS システムやフィールド フォース オートメーションなどのデータ入力アプリケーションでは、競合を排除するように厳密にデータがパーティション分割されている場合が多く、あるサブスクライバーから他のサブスクライバーにデータが送信されることは決してありません。 このような状況では、重複しないパーティション、ダウンロード専用アーティクル、および事前計算済みパーティションを組み合わせて使用することで、パフォーマンスとスケーラビリティを最大化することができます。 重複しないパーティションおよび事前計算済みパーティションの詳細については、「 [パラメータ化された行フィルタ](parameterized-filters-parameterized-row-filters.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [マージ レプリケーションのアーティクル オプション](article-options-for-merge-replication.md)   
- [条件付き削除の追跡によるマージ レプリケーション パフォーマンスの最適化](optimize-merge-replication-performance-with-conditional-delete-tracking.md)  
+ [マージレプリケーションのアーティクルオプション](article-options-for-merge-replication.md)   
+ [条件付き削除の追跡によるマージレプリケーションのパフォーマンスの最適化](optimize-merge-replication-performance-with-conditional-delete-tracking.md)  
   
   

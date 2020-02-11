@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 75b29477c7ead402f06c9df2505a84636b906978
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63163953"
 ---
 # <a name="specify-search-conditions-visual-database-tools"></a>検索条件の指定 (Visual Database Tools)
@@ -47,7 +47,7 @@ ms.locfileid: "63163953"
  クエリおよびビュー デザイナーは、WHERE 句を追加または変更して、 [SQL ペイン](sql-pane-visual-database-tools.md) の SQL ステートメントを更新します。  
   
 ## <a name="see-also"></a>参照  
- [ルールを入力するための値を検索する&#40;Visual Database Tools&#41;](rules-for-entering-search-values-visual-database-tools.md)   
+ [Visual Database Tools &#40;検索値を入力するための規則&#41;](rules-for-entering-search-values-visual-database-tools.md)   
  [検索基準の指定 (Visual Database Tools)](specify-search-criteria-visual-database-tools.md)  
   
   

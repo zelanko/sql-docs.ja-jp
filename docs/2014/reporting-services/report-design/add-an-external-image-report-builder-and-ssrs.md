@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 236600f0a4ff2b77daaab2266b7e927e6858447b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106724"
 ---
 # <a name="add-an-external-image-report-builder-and-ssrs"></a>外部の画像の追加 (レポート ビルダーおよび SSRS)
@@ -37,7 +37,7 @@ ms.locfileid: "66106724"
   
      ネイティブ モードのレポート サーバーにある画像を指定する場合は、 **[次の画像を使用]** ボックスに画像の相対パスを入力します (例: ../images/image1.jpg)。  
   
-     SharePoint 統合モード、またはその他の Web サイトでレポート サーバー上の画像、入力内のイメージへの完全な URL、**このイメージを使用**ボックス-たとえば、 http://\<SharePointservername >/\<サイト >/Documents/images/image1.jpg します。  
+     SharePoint 統合モードのレポートサーバーまたはその他の Web サイトの画像の場合は、[**次の画像を使用**] ボックスに画像の完全な URL を入力し\<ます (たとえば、\<http://sharepointservername>/site>/documents/images/image1.jpg」)。  
   
      詳細については、「[外部アイテムへのパスの指定 &#40;レポート ビルダーおよび SSRS&#41;](specifying-paths-to-external-items-report-builder-and-ssrs.md)」を参照してください。  
   
@@ -45,9 +45,9 @@ ms.locfileid: "66106724"
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [レポートへの画像の埋め込み &#40;レポート ビルダーおよび SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md)   
  [背景画像の追加 &#40;レポート ビルダーおよび SSRS&#41;](add-a-background-image-report-builder-and-ssrs.md)   
- [[全般] &#40;[画像のプロパティ] ダイアログ ボックス&#41; &#40;レポート ビルダーおよび SSRS&#41;](../image-properties-dialog-box-general-report-builder-and-ssrs.md)  
+ [[全般] ([画像のプロパティ] ダイアログ ボックス) (レポート ビルダーおよび SSRS)](../image-properties-dialog-box-general-report-builder-and-ssrs.md)  
   
   

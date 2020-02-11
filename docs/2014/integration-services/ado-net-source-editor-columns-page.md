@@ -1,5 +1,5 @@
 ---
-title: ADO net 変換元エディター ([列] ページ) |Microsoft Docs
+title: '[ADO NET 変換元エディター] ([列] ページ) |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,26 +13,30 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1eba4cb2f1f5c8825e9cae5751fe230fbe45a835
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061701"
 ---
 # <a name="ado-net-source-editor-columns-page"></a>[ADO NET 変換元エディター] ([列] ページ)
+  
   **[ADO NET 変換元エディター]** ダイアログ ボックスの **[列]** ページを使用すると、出力列をそれぞれの外部 (変換元) 列にマップできます。  
   
  ADO NET 変換元の詳細については、「 [ADO NET Source](data-flow/ado-net-source.md)」を参照してください。  
   
  **[列] ページを開くには**  
   
-1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で、ADO NET 変換元を含む [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージを開きます。  
+1.  
+  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で、ADO NET 変換元を含む [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージを開きます。  
   
-2.  **[データ フロー]** タブで、ADO NET 変換元をダブルクリックします。  
+2.  
+  **[データ フロー]** タブで、ADO NET 変換元をダブルクリックします。  
   
-3.  **[ADO NET 変換元エディター]** で、 **[列]** をクリックします。  
+3.  
+  **[ADO NET 変換元エディター]** で、 **[列]** をクリックします。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **使用できる外部列**  
  データ ソース内の使用できる外部列の一覧を表示します。 このテーブルを使用して列を追加または削除することはできません。  
   
@@ -44,7 +48,7 @@ ms.locfileid: "66061701"
   
 ## <a name="see-also"></a>参照  
  [[ADO NET 変換元エディター] &#40;[接続マネージャー] ページ&#41;](../../2014/integration-services/ado-net-source-editor-connection-manager-page.md)   
- [[ADO NET 変換元エディター] &#40;[エラー出力] ページ&#41;](../../2014/integration-services/ado-net-source-editor-error-output-page.md)   
+ [ADO NET 変換元エディター &#40;エラー出力ページ&#41;](../../2014/integration-services/ado-net-source-editor-error-output-page.md)   
  [ADO.NET 接続マネージャー](connection-manager/ado-net-connection-manager.md)  
   
   

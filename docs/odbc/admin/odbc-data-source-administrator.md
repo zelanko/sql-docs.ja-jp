@@ -1,5 +1,5 @@
 ---
-title: ODBC データ ソース アドミニストレーター |Microsoft Docs
+title: ODBC データソースアドミニストレーター |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,18 +14,18 @@ ms.assetid: a2f66b4c-a4ac-401b-8e95-d8f96332e0b5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: da8dd850e62f46042287569f1e4bb8520b18151f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67901653"
 ---
 # <a name="odbc-data-source-administrator"></a>ODBC データ ソース アドミニストレーター
-Microsoft® ODBC データ ソース アドミニストレーターは、データベースのドライバーとデータ ソースを管理します。 このアプリケーションは、Windows コントロール パネルの下にある**管理ツール**します。 Windows 8 以降では、アイコンの名前は**ODBC データ ソース**、64 ビット オペレーティング システムでは、32 ビットおよび 64 ビット バージョンとします。  
+Microsoft® ODBC データソース管理者は、データベースドライバーとデータソースを管理します。 このアプリケーションは、Windows のコントロールパネルの [**管理ツール**] にあります。 Windows 8 以降では、アイコンは**ODBC データソース**という名前になり、64ビットオペレーティングシステムでは32ビットと64ビットのバージョンがあります。  
   
- Odbc データ ソース アドミニストレーターの詳細な手順については、開く、 [ODBC データ ソース アドミニストレーター](https://msdn.microsoft.com/eea94d94-f53b-4289-ae75-9ccccde15333)  ダイアログ ボックスをクリックします**ヘルプ**します。  
+ 詳細な ODBC 管理者の手順については、[ [Odbc データソースアドミニストレーター](https://msdn.microsoft.com/eea94d94-f53b-4289-ae75-9ccccde15333) ] ダイアログボックスを開き、[**ヘルプ**] をクリックしてください。  
   
- ドライバーとデータ ソースを管理するのに PowerShell コマンドを使用することができます。 これらの PowerShell コマンドの詳細については、次を参照してください。 [Windows データ アクセス コンポーネントの PowerShell コマンド](https://msdn.microsoft.com/library/windows/desktop/jj134064.aspx)します。  
+ PowerShell コマンドを使用して、ドライバーとデータソースを管理できます。 これらの PowerShell コマンドの詳細については、「 [Windows Data Access Components の powershell コマンド](https://msdn.microsoft.com/library/windows/desktop/jj134064.aspx)」を参照してください。  
   
  このセクションでは、次のトピックを扱います。  
   

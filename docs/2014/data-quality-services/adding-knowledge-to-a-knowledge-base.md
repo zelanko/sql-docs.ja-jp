@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c9122db448e95a6734ea3cf3c1010665b60f4650
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65481185"
 ---
 # <a name="adding-knowledge-to-a-knowledge-base"></a>ナレッジ ベースへのナレッジの追加
@@ -26,46 +26,46 @@ ms.locfileid: "65481185"
   
 -   [ナレッジ検出の実行](#Discovery)  
   
--   [ドメイン内のデータ値の管理](#ManageDomain)  
+-   [ドメイン内のデータ値を管理する](#ManageDomain)  
   
--   [.dqs ファイルからのナレッジのインポート](#DQSFile)  
+-   [Dqs ファイルからのナレッジのインポート](#DQSFile)  
   
 -   [Excel ファイルからのナレッジのインポート](#Excel)  
   
--   [プロジェクトからナレッジ ベースへのナレッジの再インポート](#Project)  
+-   [プロジェクトからナレッジベースへのナレッジのインポート](#Project)  
   
--   [既定の DQS ナレッジ ベースの使用](#Default)  
+-   [既定の DQS ナレッジベースを使用する](#Default)  
   
-##  <a name="Discovery"></a> ナレッジ検出の実行  
+##  <a name="Discovery"></a>ナレッジ検出の実行  
  ナレッジ検出では、データ品質基準を取得するためにデータのサンプルを分析し、取得したナレッジをナレッジ ベースに追加します。 これは、データの不整合と構文エラーを識別し、データへの変更を提案するコンピューター支援型のプロセスです。 ナレッジ検出アクティビティは、ドメイン値を対話的に管理できるページを含むウィザードです。  
   
 -   ドキュメント化された詳細情報については、「 [Perform Knowledge Discovery](../../2014/data-quality-services/perform-knowledge-discovery.md)」を参照してください。  
   
 -   ナレッジ検出の実行方法を示すビデオについては、 [ここ](https://msdn.microsoft.com/sqlserver/hh323825.aspx)をクリックしてください。  
   
-##  <a name="ManageDomain"></a> ドメイン内のデータ値の管理  
+##  <a name="ManageDomain"></a>ドメイン内のデータ値を管理する  
  DQS では、コンピューター支援型のナレッジ検出アクティビティで生成されたメタデータを対話的に変更および拡張することができます。 これはドメイン管理アクティビティで行います。ドメイン管理アクティビティでは、特定のデータ値に変更を適用することができます。  
   
 -   ドキュメント化された詳細情報については、「 [Change Domain Values](../../2014/data-quality-services/change-domain-values.md)」を参照してください。  
   
 -   ドメイン管理の実行方法を示すビデオについては、 [ここ](https://msdn.microsoft.com/sqlserver/hh323825.aspx)をクリックしてください。 このビデオでは、ナレッジ検出ウィザードの [ドメイン値の管理] ページでドメイン値を変更します。 この手順は、ドメイン管理アクティビティの [ドメイン値] ページでも行うことができます。  
   
-##  <a name="DQSFile"></a> .dqs ファイルからのナレッジのインポート  
+##  <a name="DQSFile"></a>Dqs ファイルからのナレッジのインポート  
  .dqs データ ファイルから既存のナレッジ ベースにドメインをインポートしたり、.dqs から新しいナレッジ ベースにナレッジ ベース全体をインポートしたりできます。 これを行うには、まず既存のドメインまたはナレッジ ベースを .dqs ファイルにエクスポートする必要があります。 ドメインを含む .dqs ファイルには、ドメインのすべてのデータが格納されています。ナレッジ ベースを含む .dqs ファイルには、ドメインや照合ポリシーを含むナレッジ ベースのすべての情報が格納されています。  
   
 -   ドキュメントについて詳しくは、「[.dqs ファイルからのドメインのインポート](../../2014/data-quality-services/import-a-domain-from-a-dqs-file.md)」または「[.dqs ファイルからのナレッジ ベースのインポート](../../2014/data-quality-services/import-a-knowledge-base-from-a-dqs-file.md)」をご覧ください。  
   
-##  <a name="Excel"></a> Excel ファイルからのナレッジのインポート  
+##  <a name="Excel"></a>Excel ファイルからのナレッジのインポート  
  Excel スプレッドシート ファイルから既存のドメインまたはナレッジ ベースにドメイン値をインポートできます。 これを行うには、まずインポートするドメイン値を含む Excel スプレッドシートを作成し、 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] を使用して値をインポートできるように Excel が [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]コンピューターにインストールされていることを確認する必要があります。 ドメインまたはナレッジ ベースから Excel ファイルにドメイン値をエクスポートすることはできません。  
   
 -   ドキュメントについて詳しく、「[値を Excel ファイルからドメインへインポートする](../../2014/data-quality-services/import-values-from-an-excel-file-into-a-domain.md)」または「[ナレッジ検出でドメインを Excel ファイルからインポートする](../../2014/data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md)」をご覧ください。  
   
-##  <a name="Project"></a> プロジェクトからナレッジ ベースへのナレッジの再インポート  
+##  <a name="Project"></a>プロジェクトからナレッジベースへのナレッジのインポート  
  ナレッジ ベースを使用してクレンジングまたは照合データ品質プロジェクトを実行した後、クレンジングまたは照合中に作成されたナレッジをそのナレッジ ベースに再インポートできます。 これにより、プロジェクト中に生成されたナレッジを保持し、ナレッジ ベースにナレッジを継続的に構築することができます。  
   
 -   ドキュメントについて詳しくは、「[ドメインへのクレンジング プロジェクトの値のインポート](../../2014/data-quality-services/import-cleansing-project-values-into-a-domain.md)」をご覧ください。  
   
-##  <a name="Default"></a> 既定の DQS ナレッジ ベースの使用  
+##  <a name="Default"></a>既定の DQS ナレッジベースを使用する  
  DQS には、DQS データと呼ばれる構築済みのナレッジ ベースが同梱されています。このナレッジ ベースには、米国の会社および住所データのドメインが含まれています。 このナレッジ ベースを使用すると、新しいナレッジ ベースを作成することなく、プロジェクトをすばやく開始できます。 DQS データ ナレッジ ベースは読み取り専用ですが、データ スチュワードはこれに基づいて新しいナレッジ ベースを作成できます。  
   
 -   ドキュメント化された詳細情報については、「 [Using the DQS Default Knowledge Base](../../2014/data-quality-services/using-the-dqs-default-knowledge-base.md)」を参照してください。  

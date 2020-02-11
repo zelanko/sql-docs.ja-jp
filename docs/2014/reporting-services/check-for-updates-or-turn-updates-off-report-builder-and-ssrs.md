@@ -1,5 +1,5 @@
 ---
-title: チェックの更新または更新をオフ (レポート ビルダーおよび SSRS) |Microsoft Docs
+title: 更新を確認するか、更新をオフにします (レポートビルダーと SSRS) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 27942be9c32d4537f729adbd69df1c64a9c9ff6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109871"
 ---
 # <a name="check-for-updates-or-turn-updates-off-report-builder-and-ssrs"></a>更新を確認するまたは更新をオフにする (レポート ビルダーおよび SSRS)
@@ -24,22 +24,22 @@ ms.locfileid: "66109871"
   
 ### <a name="to-turn-on-and-off-report-part-updates"></a>レポート パーツ更新のオン/オフを切り替えるには  
   
-1.  レポート ビルダーのボタンをクリックして**オプション**します。  
+1.  [レポートビルダー] ボタンをクリックし、[**オプション**] をクリックします。  
   
-2.  **オプション**] ダイアログ ボックスの [、**リソース**タブ、オンまたはオフ、**個人用レポートのレポート パーツへの更新プログラムの表示**チェック ボックスをオンします。  
+2.  [**オプション**] ダイアログボックスの [**リソース**] タブで、[**個人用レポートのレポートパーツに更新を表示する**] チェックボックスをオンまたはオフにします。  
   
 > [!NOTE]  
 >  これは、ユーザー設定です。 そのユーザーが開くすべてのレポートで無効になります。  
   
 ### <a name="to-check-for-updates"></a>更新を確認するには  
   
--   デザイン画面またはレポート本文内のレポートの外側を右クリックし、をクリックして**更新プログラムの確認**します。  
+-   レポートの外部またはレポート本文でデザイン画面を右クリックし、[**更新プログラムの確認**] をクリックします。  
   
 ## <a name="see-also"></a>参照  
  [レポート パーツ &#40;レポート ビルダーおよび SSRS&#41;](report-parts-report-builder-and-ssrs.md)   
- [およびレポート パーツを再パブリッシュ&#40;レポート ビルダーおよび SSRS&#41;](report-design/publish-and-republish-report-parts-report-builder-and-ssrs.md)   
- [レポート パーツの参照し、既定のフォルダーの設定&#40;レポート ビルダーおよび SSRS&#41;](report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)   
- [レポート パーツのトラブルシューティング&#40;レポート ビルダーおよび SSRS&#41;](../../2014/reporting-services/troubleshoot-report-parts-report-builder-and-ssrs.md)   
+ [レポートパーツ &#40;レポートビルダーと SSRS&#41;をパブリッシュおよび再パブリッシュする](report-design/publish-and-republish-report-parts-report-builder-and-ssrs.md)   
+ [レポートパーツを参照し、既定のフォルダー &#40;レポートビルダーおよび SSRS に設定&#41;](report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)   
+ [レポートパーツ &#40;レポートビルダーと SSRS&#41;のトラブルシューティング](../../2014/reporting-services/troubleshoot-report-parts-report-builder-and-ssrs.md)   
  [レポート ビルダーのレポート パーツおよびデータセット](report-data/report-parts-and-datasets-in-report-builder.md)  
   
   

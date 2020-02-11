@@ -1,5 +1,5 @@
 ---
-title: 設定または DirectQuery の優先接続方法の変更 |Microsoft Docs
+title: DirectQuery | の優先接続方法を設定または変更します。Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9737b829a5ccab1ddc0362f2d8ac81285f0f6e1c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068698"
 ---
 # <a name="set-or-change-the-preferred-connection-method-for-directquery"></a>DirectQuery の優先接続方法の設定または変更
-  DirectQuery モードで使用するモデルを作成する場合は、まず、DirectQuery の使用をサポートするようにデザイン環境を構成する必要があります。 これを行うには、次を参照してください。 [DirectQuery デザイン モードを有効にする&#40;SSAS 表形式&#41;](tabular-models/enable-directquery-mode-in-ssdt.md)します。  
+  DirectQuery モードで使用するモデルを作成する場合は、まず、DirectQuery の使用をサポートするようにデザイン環境を構成する必要があります。 これを行うには、「 [SSAS 表形式&#41;&#40;DirectQuery デザインモードを有効に](tabular-models/enable-directquery-mode-in-ssdt.md)する」を参照してください。  
   
  モデルを配置する準備ができたら、追加のプロパティを設定して、ユーザーが DirectQuery モードの 1 つを使用してモデルにアクセスできるようにする必要があります。  
   
@@ -32,38 +32,42 @@ ms.locfileid: "66068698"
   
 ### <a name="to-set-the-preferred-connection-method-for-a-directquery-model"></a>DirectQuery モデルの優先接続方法を設定するには  
   
-1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で、DirectQuery モデルのソリューション ファイルを開きます。  
+1.  
+  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で、DirectQuery モデルのソリューション ファイルを開きます。  
   
 2.  Visual Studio で、 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。  
   
-3.  **[プロパティ]** ペインで、 **DirectQueryMode**プロパティを、DirectQuery の使用をサポートする値の 1 つに変更します。  
+3.  
+  **[プロパティ]** ペインで、 **DirectQueryMode**プロパティを、DirectQuery の使用をサポートする値の 1 つに変更します。  
   
-    -   **DirectQuery で InMemory**:このオプションを使用する場合は、モデルが展開されているが、モデルに対するクエリを実行する前にキャッシュを処理する必要があります。  
+    -   [ **DirectQuery (DirectQuery**あり)]: このオプションを使用する場合、モデルは配置されますが、モデルに対してクエリを実行する前にキャッシュを処理する必要があります。  
   
-    -   **DirectQuery (インメモリあり)** :このオプションを使用する場合は、既に処理された場合、キャッシュがクライアントで使用できるようなります。 この設定でモデルを配置し、キャッシュを処理しない場合、一部のクライアントではモデルに接続しようとするとエラーが発生します。  
+    -   **DirectQuery (InMemory**あり): このオプションを使用すると、既に処理されているクライアントがキャッシュを使用できるようになります。 この設定でモデルを配置し、キャッシュを処理しない場合、一部のクライアントではモデルに接続しようとするとエラーが発生します。  
   
-    -   **DirectQuery のみ**:このオプションを使用する場合は、メタデータが展開されているがモデルにデータがありません。 インメモリ モードを使用して接続しようとするクライアントでは、モデルが存在しないか処理されていないことを示すエラーが発生します。  
+    -   [ **DirectQuery のみ**]: このオプションを使用すると、メタデータが配置されますが、モデルにはデータがありません。 インメモリ モードを使用して接続しようとするクライアントでは、モデルが存在しないか処理されていないことを示すエラーが発生します。  
   
 4.  エラーがある場合は、Visual Studio で **[エラー一覧]** を開き、モデルが DirectQuery モードで配置されるのを妨げている問題を解決します。  
   
 ### <a name="to-verify-or-change-the-preferred-connection-method-for-a-directquery-model"></a>DirectQuery モデルの優先接続方法を検証または変更するには  
   
-1.  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] で、DirectQuery モデルを配置したインスタンスに接続します。  
+1.  
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]で、DirectQuery モデルを配置したインスタンスに接続します。  
   
 2.  モデル データベースを右クリックし、 **[プロパティ]** をクリックします。  
   
-3.  **[プロパティ]** ペインで、 **DirectQueryMode**プロパティを次のいずれかの値に変更します。  
+3.  
+  **[プロパティ]** ペインで、 **DirectQueryMode**プロパティを次のいずれかの値に変更します。  
   
     -   **DirectQuery のみ**  
   
-    -   **DirectQuery で InMemory**  
+    -   **DirectQuery を使用した InMemory**  
   
     -   **DirectQuery (インメモリあり)**  
   
  これらのプロパティは、配置前に Visual Studio でプロジェクトに設定したプロパティと同じです。 DirectQuery の使用をサポートするようにモデルを構成してあれば、DirectQuery モードの優先接続方法をいつでも変更できます。  
   
 ## <a name="see-also"></a>参照  
- [DirectQuery モード &#40;SSAS テーブル&#41;](tabular-models/directquery-mode-ssas-tabular.md)   
- [DirectQuery デザイン モードを有効にする&#40;SSAS 表形式&#41;](tabular-models/enable-directquery-mode-in-ssdt.md)  
+ [SSAS テーブル &#40;の DirectQuery モード&#41;](tabular-models/directquery-mode-ssas-tabular.md)   
+ [SSAS 表形式&#41;&#40;DirectQuery デザインモードを有効にする](tabular-models/enable-directquery-mode-in-ssdt.md)  
   
   

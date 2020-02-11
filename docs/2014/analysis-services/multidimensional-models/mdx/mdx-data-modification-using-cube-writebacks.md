@@ -1,5 +1,5 @@
 ---
-title: キューブの書き戻し (MDX) を使用して |Microsoft Docs
+title: キューブの書き戻しの使用 (MDX) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,14 +17,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a79e98375c27c6a3570b2fafcf424965d7a97c8d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074216"
 ---
 # <a name="using-cube-writebacks-mdx"></a>キューブの書き戻しの使用 (MDX)
-  キューブを更新するには、[UPDATE CUBE](/sql/mdx/mdx-data-manipulation-update-cube) ステートメントを使用します。 このステートメントを使用すると、特定の値で組を更新できます。 UPDATE CUBE ステートメントを使って効果的にキューブを更新するには、ステートメントの構文、発生し得るエラー条件、および更新操作がキューブに与える影響を理解しておく必要があります。  
+  キューブを更新するには、 [UPDATE CUBE](/sql/mdx/mdx-data-manipulation-update-cube) ステートメントを使用します。 このステートメントを使用すると、特定の値で組を更新できます。 UPDATE CUBE ステートメントを使って効果的にキューブを更新するには、ステートメントの構文、発生し得るエラー条件、および更新操作がキューブに与える影響を理解しておく必要があります。  
   
 ## <a name="update-cube-statement-syntax"></a>UPDATE CUBE ステートメントの構文  
  UPDATE CUBE ステートメントの構文は、以下のとおりです。  
@@ -41,7 +41,7 @@ UPDATE [CUBE] <Cube_Name> SET <tuple>.VALUE = <value> [,<tuple>.VALUE = <value>.
  UPDATE CUBE ステートメントは、アトミック セルに対する個々のセルの一連の書き戻し操作を生成するサブルーチンのようなものと考えることができます。 その後、これらすべての個々の書き戻し操作は、指定された合計にロール アップします。  
   
 > [!NOTE]  
->  更新されるセルが重ならない場合は、`Update Isolation Level` 接続文字列プロパティを使用して、UPDATE CUBE のパフォーマンスを向上させることができます。 詳細については、「 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> 」を参照してください。  
+>  更新されるセルが重ならない場合は、`Update Isolation Level` 接続文字列プロパティを使用して、UPDATE CUBE のパフォーマンスを向上させることができます。 詳細については、<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> を参照してください。  
   
 ## <a name="example"></a>例  
  Adventure Works キューブの Sales Targets メジャー グループを使って UPDATE CUBE をテストできます。 このメジャー グループは、UPDATE CUBE の要件である SUM によって集計されたメジャーで構成されます。  
@@ -117,6 +117,6 @@ USE_EQUAL_ALLOCATION
 -   書き戻しに含まれるディメンションの粒度の変更。  
   
 ## <a name="see-also"></a>参照  
- [データの変更 &#40;MDX&#41;](mdx-data-modification-modifying-data.md)  
+ [MDX&#41;&#40;のデータの変更](mdx-data-modification-modifying-data.md)  
   
   

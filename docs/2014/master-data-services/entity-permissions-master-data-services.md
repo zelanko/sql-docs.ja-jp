@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4219830c82710861ee7b079ce78d1b5859681753
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479540"
 ---
 # <a name="entity-permissions-master-data-services"></a>エンティティ権限 (Master Data Services)
@@ -34,15 +34,15 @@ ms.locfileid: "65479540"
 > [!NOTE]  
 >  これらの権限は、ユーザー インターフェイスの **[エクスプローラー]** 機能領域にのみ適用されます。  
   
-|権限|説明|  
+|権限|[説明]|  
 |----------------|-----------------|  
-|**読み取り専用です。**|エンティティが表示されますが、ユーザーはメンバーを追加、削除、または変更できません。|  
+|**読み取り専用**|エンティティが表示されますが、ユーザーはメンバーを追加、削除、または変更できません。|  
 |**Update**|エンティティが表示され、ユーザーはメンバーを追加、削除、および変更できます。|  
 |**Deny**|エンティティが表示されません。|  
   
 ## <a name="see-also"></a>参照  
- [モデル オブジェクト権限を割り当てる (マスター データ サービス)](assign-model-object-permissions-master-data-services.md)   
- [モデル オブジェクト権限 (マスター データ サービス)](../../2014/master-data-services/model-object-permissions-master-data-services.md)   
- [エンティティ (マスター データ サービス)](../../2014/master-data-services/entities-master-data-services.md)  
+ [モデルオブジェクト権限の割り当て &#40;マスターデータサービス&#41;](assign-model-object-permissions-master-data-services.md)   
+ [モデルオブジェクト権限 &#40;マスターデータサービス&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)   
+ [エンティティ &#40;マスターデータサービス&#41;](../../2014/master-data-services/entities-master-data-services.md)  
   
   

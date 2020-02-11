@@ -11,14 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1828f0f76963cea8cf792c17a251c843a93b5b0c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106562"
 ---
 # <a name="add-or-delete-a-group-in-a-chart-report-builder-and-ssrs"></a>グラフでのグループの追加または削除 (レポート ビルダーおよび SSRS)
-  表示するグラフ データ領域内をクリックして、**グラフ データ**ウィンドウ。 データセット フィールドを **[カテゴリ グループ]** 領域と **[系列グループ]** 領域にドラッグすると、グループが作成されます。 入れ子になったグループを追加するには、複数のフィールドを領域に追加します。  
+  グラフデータ領域をクリックすると、**グラフデータ**ペインが表示されます。 データセット フィールドを **[カテゴリ グループ]** 領域と **[系列グループ]** 領域にドラッグすると、グループが作成されます。 入れ子になったグループを追加するには、複数のフィールドを領域に追加します。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -56,6 +56,6 @@ ms.locfileid: "66106562"
 2.  **[カテゴリ グループ]** 領域または **[系列グループ]** 領域内のグループを右クリックし、 **[削除]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [グラフ (レポート ビルダーおよび SSRS)](charts-report-builder-and-ssrs.md)  
+ [グラフ &#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md)  
   
   

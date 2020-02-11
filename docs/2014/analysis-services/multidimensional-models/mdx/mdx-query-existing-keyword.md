@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a6c5e8dbe3e1b1ad44286bcbb79132010cad618a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073966"
 ---
 # <a name="existing-keyword-mdx"></a>EXISTING キーワード (MDX)
@@ -35,11 +35,12 @@ Existing Set_Expression
  *Set_Expression*  
  有効な多次元式 (MDX) セット式です。  
   
-## <a name="remarks"></a>コメント  
- 既定では、セットの評価は、そのセットのメンバーを含むキューブのコンテキストで実行されます。 `Existing` キーワードを指定すると、指定されているセットの評価が現在のコンテキストで行われます。  
+## <a name="remarks"></a>解説  
+ 既定では、セットの評価は、そのセットのメンバーを含むキューブのコンテキストで実行されます。 
+  `Existing` キーワードを指定すると、指定されているセットの評価が現在のコンテキストで行われます。  
   
 ## <a name="example"></a>例  
- 次の例では、`Aggregate`  関数を使用して評価された、ユーザー選択の State-Province メンバー値に基づいて、1 つ前の期よりも売上が減少した再販業者の数を返します。 Product ディメンションに含まれる製品カテゴリに関して減少した売上の値を返すために、 [Hierarchize (MDX)](/sql/mdx/hierarchize-mdx) 関数および [DrilldownLevel (MDX)](/sql/mdx/drilldownlevel-mdx) 関数を使用しています。 `Existing`キーワードのセットを強制する、 `Filter` State-province 属性階層の Washington および Oregon メンバーには、現在のコンテキストで評価する関数。  
+ 次の例では、`Aggregate`  関数を使用して評価された、ユーザー選択の State-Province メンバー値に基づいて、1 つ前の期よりも売上が減少した再販業者の数を返します。 Product ディメンションに含まれる製品カテゴリに関して減少した売上の値を返すために、 [Hierarchize (MDX)](/sql/mdx/hierarchize-mdx) 関数および [DrilldownLevel (MDX)](/sql/mdx/drilldownlevel-mdx) 関数を使用しています。 `Existing`キーワードを使用すると、 `Filter`関数内のセットが現在のコンテキストで評価されるようになります。つまり、ワシントンおよびオレゴン州の属性階層のオレゴンメンバーに対して評価されます。  
   
 ```  
 WITH MEMBER Measures.[Declining Reseller Sales] AS  
@@ -77,13 +78,13 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>参照  
- [Count (セット) (MDX)](/sql/mdx/count-set-mdx)   
- [AddCalculatedMembers (MDX)](/sql/mdx/addcalculatedmembers-mdx)   
- [Aggregate (MDX)](/sql/mdx/aggregate-mdx)   
- [Filter (MDX)](/sql/mdx/filter-mdx)   
- [Properties (MDX)](/sql/mdx/properties-mdx)   
- [DrilldownLevel (MDX)](/sql/mdx/drilldownlevel-mdx)   
- [Hierarchize (MDX)](/sql/mdx/hierarchize-mdx)   
- [MDX 関数リファレンス (MDX)](/sql/mdx/mdx-function-reference-mdx)  
+ [MDX&#41;&#41; &#40;設定 &#40;数](/sql/mdx/count-set-mdx)   
+ [MDX&#41;&#40;の Add演算メンバー](/sql/mdx/addcalculatedmembers-mdx)   
+ [MDX&#41;の集計 &#40;](/sql/mdx/aggregate-mdx)   
+ [MDX&#41;のフィルター処理 &#40;](/sql/mdx/filter-mdx)   
+ [MDX&#41;&#40;プロパティ](/sql/mdx/properties-mdx)   
+ [MDX&#41;&#40;ドリルダウンレベル](/sql/mdx/drilldownlevel-mdx)   
+ [Hierarchize &#40;MDX&#41;](/sql/mdx/hierarchize-mdx)   
+ [Mdx 関数リファレンス &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)  
   
   

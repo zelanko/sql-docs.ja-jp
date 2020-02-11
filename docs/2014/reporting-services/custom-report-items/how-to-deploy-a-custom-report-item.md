@@ -1,5 +1,5 @@
 ---
-title: 操作方法:カスタム レポート アイテムの展開 |Microsoft Docs
+title: カスタム レポート アイテムを配置する方法 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,18 +13,19 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2b41519ee6a6d31be33d92c8fbdf2ab503c93ec1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63265080"
 ---
-# <a name="how-to-deploy-a-custom-report-item"></a>操作方法:カスタム レポート アイテムを配置する
+# <a name="how-to-deploy-a-custom-report-item"></a>カスタム レポート アイテムを配置する方法
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] でカスタム レポート アイテムを配置するには、レポート サーバー構成ファイルを変更し、デザイン時と実行時のコンポーネント アセンブリをレポート デザイナーとレポート サーバーの両方に対する適切なアプリケーション フォルダーにコピーする必要があります。  
   
 ### <a name="to-deploy-a-custom-report-item"></a>カスタム レポート アイテムを配置するには  
   
-1.  Rsreportdesigner.config ファイルを編集して、デザイナーで使用するカスタム レポート アイテムの実行時とデザイン時のコンポーネントを構成します。 `ReportItemName` エントリは `CustomReportItemAttribute` クラス内で使用される `CustomReportItemDesigner` 属性と一致する必要があることに注意してください。 例 :  
+1.  Rsreportdesigner.config ファイルを編集して、デザイナーで使用するカスタム レポート アイテムの実行時とデザイン時のコンポーネントを構成します。 
+  `ReportItemName` エントリは `CustomReportItemAttribute` クラス内で使用される `CustomReportItemDesigner` 属性と一致する必要があることに注意してください。 次に例を示します。  
   
     ```  
     <ReportItems>  
@@ -38,7 +39,7 @@ ms.locfileid: "63265080"
     </ReportItemConverter>  
     ```  
   
-2.  Rsreportserver.config ファイルを編集して、カスタム レポート アイテムの実行時コンポーネントを登録します。 例 :  
+2.  Rsreportserver.config ファイルを編集して、カスタム レポート アイテムの実行時コンポーネントを登録します。 次に例を示します。  
   
     ```  
     <ReportItems>  
@@ -46,7 +47,7 @@ ms.locfileid: "63265080"
     </ReportItems>  
     ```  
   
-3.  Rsssrvpolicy.config ファイルを編集して、カスタム レポート アイテムに適切な権限を許可する `CodeGroup` を追加します。 以下に例を示します。  
+3.  Rsssrvpolicy.config ファイルを編集して、カスタム レポート アイテムに適切な権限を許可する `CodeGroup` を追加します。 次に例を示します。  
   
     ```  
     <CodeGroup   
@@ -65,7 +66,7 @@ ms.locfileid: "63265080"
   
 5.  カスタム レポート アイテムのデザイン時コンポーネント DLL を %ProgramFiles%\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies ディレクトリにコピーします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Reporting Services 構成ファイル](../report-server/reporting-services-configuration-files.md)   
  [カスタム レポート アイテムのクラス ライブラリ](custom-report-item-class-libraries.md)  
   

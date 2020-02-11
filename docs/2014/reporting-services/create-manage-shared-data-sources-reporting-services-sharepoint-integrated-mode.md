@@ -1,5 +1,5 @@
 ---
-title: 作成および共有データ ソース (Reporting Services の SharePoint 統合モード) の管理 |Microsoft Docs
+title: 共有データソースを作成および管理する (SharePoint 統合モードの Reporting Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5eedb74dd5a24f40469b3ee6a4a24e97e6e59174
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109632"
 ---
 # <a name="create-and-manage-shared-data-sources-reporting-services-in-sharepoint-integrated-mode"></a>共有データ ソースを作成および管理する (Reporting Services の SharePoint 統合モード)
@@ -33,24 +33,30 @@ ms.locfileid: "66109632"
   
 1.  ライブラリ リボンで、 **[ドキュメント]** タブをクリックします。  
   
-2.  **[新しいドキュメント]** メニューの **[レポート データ ソース]** をクリックします。  
+2.  
+  **[新しいドキュメント]** メニューの **[レポート データ ソース]** をクリックします。  
   
     > [!NOTE]  
-    >  メニューに **[レポート データ ソース]** アイテムが表示されない場合は、レポート データ ソースのコンテンツ タイプが有効化されていません。 詳細については、次を参照してください。[追加レポート サーバー コンテンツ タイプをライブラリに&#40;Reporting Services SharePoint 統合モードで&#41;](../../2014/reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md)します。  
+    >  メニューに **[レポート データ ソース]** アイテムが表示されない場合は、レポート データ ソースのコンテンツ タイプが有効化されていません。 詳細については、「 [SharePoint 統合モードでのレポートサーバーコンテンツタイプのライブラリへの追加 &#40;Reporting Services」&#41;](../../2014/reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md)を参照してください。  
   
-3.  **[名前]** に、.rsds ファイルに付けるわかりやすい名前を入力します。  
+3.  
+  **[名前]** に、.rsds ファイルに付けるわかりやすい名前を入力します。  
   
-4.  **[データ ソースの種類]** で、一覧からデータ ソースの種類を選択します。 詳細については、「[Reporting Services でサポートされるデータ ソース &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)」をご覧ください。  
+4.  
+  **[データ ソースの種類]** で、一覧からデータ ソースの種類を選択します。 詳細については、「[Reporting Services でサポートされるデータ ソース &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)」をご覧ください。  
   
-5.  **[接続文字列]** で、外部データ ソースへの接続を確立するために必要な設定として、データ ソースへのポインターなどを指定します。 使用するデータ ソースの種類によって、接続文字列の構文が異なります。 詳細と例については、次を参照してください。[データ接続、データ ソース、および Reporting Services の接続文字列](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)します。  
+5.  
+  **[接続文字列]** で、外部データ ソースへの接続を確立するために必要な設定として、データ ソースへのポインターなどを指定します。 使用するデータ ソースの種類によって、接続文字列の構文が異なります。 詳細と例については、「 [Reporting Services のデータ接続、データソース、および接続文字列](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)」を参照してください。  
   
-6.  **[資格情報]** で、外部データ ソースにアクセスする際にレポート サーバーが資格情報を取得する方法を指定します。 資格情報は、自動レポート処理用に保存、要求、統合、または構成できます。  
+6.  
+  **[資格情報]** で、外部データ ソースにアクセスする際にレポート サーバーが資格情報を取得する方法を指定します。 資格情報は、自動レポート処理用に保存、要求、統合、または構成できます。  
   
     -   レポートを開いたユーザーの資格情報を使用してデータにアクセスする場合は、 **[Windows 認証 (統合)]** を選択します。 SharePoint サイトまたはファームでフォーム認証を使用する場合や、信頼済みアカウントを使用してレポート サーバーに接続する場合は、このオプションを選択しないでください。 このレポートのサブスクリプションまたはデータ処理をスケジュールする場合は、このオプションを選択しないでください。 Kerberos 認証が有効なドメインに参加している場合、またはレポート サーバーと同一のコンピューターにデータ ソースがある場合に、このオプションは最適です。 Kerberos 認証が無効になっている場合、Windows 資格情報は別のコンピューター 1 台にしか渡すことができません。 つまり、外部データ ソースが別のコンピューターにあり、別の接続が必要な場合、意図したデータを取得できずにエラーが発生します。  
   
     -   ユーザーがレポートを実行するたびに資格情報の入力を要求する場合は、 **[資格情報を要求する]** をクリックします。 このレポートのサブスクリプションまたはデータ処理をスケジュールする場合は、このオプションを選択しないでください。  
   
-    -   1 組の資格情報を使用してデータにアクセスする場合は、 **[保存された資格情報]** を選択します。 資格情報は暗号化されてから保存されます。 保存されている資格情報の認証方法を指定するオプションを選択できます。 保存された資格情報が Windows ユーザー アカウントに属する場合は、[データ ソースへの接続時に Windows 資格情報として使用する] をクリックします。 データベース サーバーの実行コンテキストを設定する場合は、 **[実行コンテキストをこのアカウントに設定する]** をクリックします。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベースの場合、このオプションによって SETUSER 関数が設定されます。 詳細については、「[SETUSER &#40;Transact-SQL&#41;](/sql/t-sql/statements/setuser-transact-sql)」を参照してください。  
+    -   1 組の資格情報を使用してデータにアクセスする場合は、 **[保存された資格情報]** を選択します。 資格情報は暗号化されてから保存されます。 保存されている資格情報の認証方法を指定するオプションを選択できます。 保存された資格情報が Windows ユーザー アカウントに属する場合は、[データ ソースへの接続時に Windows 資格情報として使用する] をクリックします。 データベース サーバーの実行コンテキストを設定する場合は、 **[実行コンテキストをこのアカウントに設定する]** をクリックします。 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベースの場合、このオプションによって SETUSER 関数が設定されます。 詳細については、「[SETUSER &#40;Transact-SQL&#41;](/sql/t-sql/statements/setuser-transact-sql)」を参照してください。  
   
     -   接続文字列で資格情報を指定する場合や、レポート サーバーで構成されている最小特権アカウントを使用してレポートを実行する場合は、 **[資格情報は必要ありません]** を選択します。 レポート サーバーでこのアカウントが構成されていない場合、ユーザーは資格情報の入力を要求され、そのレポート用に定義したスケジュール済みの操作は実行されません。  
   
@@ -61,7 +67,8 @@ ms.locfileid: "66109632"
     > [!NOTE]  
     >  [接続テスト] ボタンは、XML データ ソースの種類ではサポートされません。  
   
-9. **[OK]** をクリックして、共有データ ソースを作成します。  
+9. 
+  **[OK]** をクリックして、共有データ ソースを作成します。  
   
 ### <a name="to-view-dependent-items"></a>依存アイテムを表示するには  
   

@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 525dd41faa2c1f9d150ba7bd02442b125975c395
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63156368"
 ---
 # <a name="clustered-and-nonclustered-indexes-described"></a>クラスター化インデックスと非クラスター化インデックスの概念
@@ -49,13 +49,14 @@ ms.locfileid: "63156368"
  PRIMARY KEY 制約と UNIQUE 制約がテーブル列に定義されると、インデックスが自動的に作成されます。 たとえば、テーブルを作成し、特定の列を主キーとして識別すると、その列に PRIMARY KEY 制約とインデックスが [!INCLUDE[ssDE](../../includes/ssde-md.md)] によって自動的に作成されます。 詳細については、「 [主キーの作成](../tables/create-primary-keys.md) 」および「 [UNIQUE 制約の作成](../tables/create-unique-constraints.md)」を参照してください。  
   
 ## <a name="how-indexes-are-used-by-the-query-optimizer"></a>クエリ オプティマイザーでのインデックスの使用方法  
- インデックスを適切に設計すると、ディスク I/O 操作が減少し、使用するシステム リソースが少なくなります。その結果、クエリのパフォーマンスが向上します。 インデックスは、SELECT、UPDATE、DELETE、または MERGE の各ステートメントを含むさまざまなクエリで役立ちます。 `SELECT Title, HireDate FROM HumanResources.Employee WHERE EmployeeID = 250` データベースのクエリ [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] について考えてみましょう。 このクエリが実行されるときに、クエリ オプティマイザーでは、データの取得に使用できる方法がそれぞれ評価され、最も効率的な方法が選択されます。 選択される方法には、テーブルのスキャン、1 つ以上のインデックスのスキャン (存在する場合) などがあります。  
+ インデックスを適切に設計すると、ディスク I/O 操作が減少し、使用するシステム リソースが少なくなります。その結果、クエリのパフォーマンスが向上します。 インデックスは、SELECT、UPDATE、DELETE、または MERGE の各ステートメントを含むさまざまなクエリで役立ちます。 
+  `SELECT Title, HireDate FROM HumanResources.Employee WHERE EmployeeID = 250` データベースのクエリ [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] について考えてみましょう。 このクエリが実行されるときに、クエリ オプティマイザーでは、データの取得に使用できる方法がそれぞれ評価され、最も効率的な方法が選択されます。 選択される方法には、テーブルのスキャン、1 つ以上のインデックスのスキャン (存在する場合) などがあります。  
   
  テーブル スキャンを実行すると、クエリ オプティマイザーでテーブルのすべての行が読み取られ、クエリの条件を満たす行が抽出されます。 テーブル スキャンでは、ディスク I/O 操作が数多く行われ、リソースが集中的に使用される可能性があります。 ただし、クエリの結果セットに大部分のテーブル行が含まれる場合などは、テーブル スキャンが最も効率的な方法になることがあります。  
   
  クエリ オプティマイザーでインデックスが使用されるときは、インデックス キー列が検索され、クエリで必要とされる行のストレージの場所が検索されて、一致する行がその場所から抽出されます。 一般に、インデックスの検索はテーブルの検索よりも高速です。これは、テーブルとは異なり、多くの場合、インデックスでは各行にごく少数の列しか含まれず、行が既に並べ替え済みであるためです。  
   
- クエリ オプティマイザーでは、通常、クエリを実行するときに最も効率的な方法が選択されます。 ただし、インデックスが使用できなければ、クエリ オプティマイザーではテーブル スキャンを使用する必要があります。 クエリ オプティマイザーが効率的なインデックスを選択できるように、環境に最も適したインデックスを設計および作成する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][データベース エンジン チューニング アドバイザー](../performance/database-engine-tuning-advisor.md) が用意されており、データベース環境の分析や適切なインデックスの選択に役立てることができます。  
+ クエリ オプティマイザーでは、通常、クエリを実行するときに最も効率的な方法が選択されます。 ただし、インデックスが使用できなければ、クエリ オプティマイザーではテーブル スキャンを使用する必要があります。 クエリ オプティマイザーが効率的なインデックスを選択できるように、環境に最も適したインデックスを設計および作成する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]には、データベース環境の分析と適切なインデックスの選択に役立つ[データベースエンジンチューニングアドバイザー](../performance/database-engine-tuning-advisor.md)が用意されています。  
   
 ## <a name="related-tasks"></a>Related Tasks  
  [クラスター化インデックスの作成](create-clustered-indexes.md)  

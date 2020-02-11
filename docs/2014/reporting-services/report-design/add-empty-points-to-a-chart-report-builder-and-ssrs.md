@@ -1,5 +1,5 @@
 ---
-title: 空のポイントのグラフを追加 (レポート ビルダーおよび SSRS) |Microsoft Docs
+title: 空のポイントのグラフへの追加 (レポートビルダーおよび SSRS) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 59c79d4824c7df4709c571d5d46476fd89f3cbe4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106607"
 ---
 # <a name="add-empty-points-to-the-chart-report-builder-and-ssrs"></a>空のポイントのグラフへの追加 (レポート ビルダーおよび SSRS)
@@ -53,7 +53,7 @@ ms.locfileid: "66106607"
 ## <a name="see-also"></a>参照  
  [データセット フィルター、データ領域フィルター、およびグループ フィルターの追加 (レポート ビルダーおよび SSRS)](add-dataset-filters-data-region-filters-and-group-filters.md)   
  [グラフの種類 &#40;レポート ビルダーおよび SSRS&#41;](chart-types-report-builder-and-ssrs.md)   
- [グラフへのスケール区切りの追加 (レポート ビルダーおよび SSRS)](add-scale-breaks-to-a-chart-report-builder-and-ssrs.md)   
+ [グラフへのスケール区切りの追加 &#40;レポート ビルダーおよび SSRS&#41;](add-scale-breaks-to-a-chart-report-builder-and-ssrs.md)   
  [グラフ &#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: ビジネス インテリジェンス ウィザードを使用してディメンションの拡張 |Microsoft Docs
+title: ビジネスインテリジェンスウィザードを使用してディメンションを拡張する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 331820704691d86ab06c1a46934f7aca6154e1cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065508"
 ---
 # <a name="use-the-business-intelligence-wizard-to-enhance-dimensions"></a>ビジネス インテリジェンス ウィザードを使用したディメンションの拡張
@@ -32,13 +32,13 @@ ms.locfileid: "66065508"
   
 -   [ディメンションの順序の定義](multidimensional-models/bi-wizard-define-the-ordering-for-a-dimension.md)  
   
--   [ディメンションの書き戻しの有効化](multidimensional-models/bi-wizard-enable-dimension-writeback.md)  
+-   [[ディメンションの書き戻しの有効化]](multidimensional-models/bi-wizard-enable-dimension-writeback.md)  
   
 ## <a name="see-also"></a>参照  
- [データベース ディメンションを定義します。](multidimensional-models/define-database-dimensions.md)   
- [ディメンションの属性のプロパティの参照](multidimensional-models/dimension-attribute-properties-reference.md)   
+ [データベースディメンションの定義](multidimensional-models/define-database-dimensions.md)   
+ [ディメンションの属性のプロパティのリファレンス](multidimensional-models/dimension-attribute-properties-reference.md)   
  [ユーザー定義階層の作成](multidimensional-models/user-defined-hierarchies-create.md)   
- [属性リレーションシップを定義します。](multidimensional-models/attribute-relationships-define.md)   
+ [属性リレーションシップの定義](multidimensional-models/attribute-relationships-define.md)   
  [多次元モデル内のディメンション](multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

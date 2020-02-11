@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2839ecff951a9f1547a05b60f6957ed5976bee9a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073488"
 ---
 # <a name="multidimensional-modeling-ssas"></a>多次元モデリング (SSAS)
@@ -26,13 +26,13 @@ ms.locfileid: "66073488"
  Analysis Services 多次元データベースを使用するもう 1 つの重要な利点は、Excel、Reporting Services、PerformancePoint などの一般的に使用される BI レポート ツール、およびカスタム アプリケーションやサード パーティ ソリューションとの統合です。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [多次元モデル ソリューション (SSAS)](multidimensional-model-solutions-ssas.md)  
+ [SSAS&#41;&#40;の多次元モデルソリューション](multidimensional-model-solutions-ssas.md)  
   
- [多次元モデル データベース (SSAS)](multidimensional-model-databases-ssas.md)  
+ [SSAS&#41;&#40;多次元モデルデータベース](multidimensional-model-databases-ssas.md)  
   
- [多次元モデル オブジェクトの処理](processing-a-multidimensional-model-analysis-services.md)  
+ [多次元モデルのオブジェクト処理](processing-a-multidimensional-model-analysis-services.md)  
   
- [ロールと権限 &#40;Analysis Services&#41;](roles-and-permissions-analysis-services.md)  
+ [ロールとアクセス許可 &#40;Analysis Services&#41;](roles-and-permissions-analysis-services.md)  
   
  [多次元モデルの Power View](power-view-for-multidimensional-models.md)  
   

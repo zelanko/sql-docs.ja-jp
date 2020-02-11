@@ -1,5 +1,5 @@
 ---
-title: Sqlgetinfo で paradox に返される値 |Microsoft Docs
+title: SQLGetInfo 戻り値の Paradox |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,24 +17,24 @@ ms.assetid: 543526fb-7c54-42f7-9371-926730ca5483
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8745580b1e478c2cfa9548887affb64e07322779
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67898818"
 ---
 # <a name="sqlgetinfo-returned-values-for-paradox"></a>SQLGetInfo で Paradox に返される値
-次の表に、C 言語 # の defines、 *fInfoType*引数と対応する値によって返される**SQLGetInfo**します。 この情報を一覧表示されている C 言語を渡すことによって取得できます #defines **SQLGetInfo**で、 *fInfoType*引数。 によって返される値の詳細については**SQLGetInfo**を参照してください、 *ODBC プログラマ リファレンス*します。  
+次の表に、 *Fin$ type*引数の C 言語 #defines と**SQLGetInfo**によって返される対応する値の一覧を示します。 この情報を取得するに*は、一覧*表示されている C 言語の #defines を**SQLGetInfo**に渡します。 **SQLGetInfo**によって返される値の詳細については、 *ODBC プログラマーズリファレンス*を参照してください。  
   
 > [!NOTE]  
->  場所**SQLGetInfo**縦棒、32 ビット ビットマスクを返します (&#124;)、ビットごとの OR を表します。  
+>  **SQLGetInfo**が32ビットのビットマスクを返す場合、縦棒 (&#124;) はビットごとの or を表します。  
   
 |InfoType|戻り値|  
 |--------------|--------------------|  
 |SQL_ACCESSIBLE_PROCEDURES|"N"|  
 |SQL_ACCESSIBLE_TABLES|"Y"|  
 |SQL_ACTIVE_ENVIRONMENTS|0|  
-|SQL_AGGREGATE_FUNCTIONS|すべての設定|  
+|SQL_AGGREGATE_FUNCTIONS|すべてのセット|  
 |SQL_ALTER_DOMAIN|0|  
 |SQL_ALTER_TABLE|[複数の値]|  
 |SQL_ASYNC_MODE|0|  
@@ -44,7 +44,7 @@ ms.locfileid: "67898818"
 |SQL_CATALOG_LOCATION|SQL_QL_START|  
 |SQL_CATALOG_NAME|"Y"|  
 |SQL_CATALOG_NAME_SEPARATOR|"\\"|  
-|SQL_CATALOG_TERM|"Directory"|  
+|SQL_CATALOG_TERM|名簿|  
 |SQL_CATALOG_USAGE|[複数の値]|  
 |SQL_COLLATION_SEQ|""|  
 |SQL_COLUMN_ALIAS|"Y"|  
@@ -81,22 +81,22 @@ ms.locfileid: "67898818"
 |SQL_CURSOR_COMMIT_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_ROLLBACK_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
-|SQL_DATA_SOURCE_NAME|Odbc.ini の DSN または""Odbc.ini で DRIVER キーワードを使用する場合|  
-|SQL_DATA_SOURCE_READ_ONLY|"N"(これはデータ ソースに依存します。)|  
-|SQL_DATABASE_NAME|現在のデータベース ディレクトリ|  
+|SQL_DATA_SOURCE_NAME|Odbc .ini の DSN または "" if DRIVER キーワードが Odbc .ini で使用されている場合|  
+|SQL_DATA_SOURCE_READ_ONLY|"N" (これはデータソースによって異なります。)|  
+|SQL_DATABASE_NAME|現在のデータベースディレクトリ|  
 |SQL_DATETIME_LITERALS|0|  
-|SQL_DBMS_NAME|"PARADOX"|  
+|SQL_DBMS_NAME|PARADOX|  
 |SQL_DBMS_VER|[複数の値]|  
 |SQL_DDL_INDEX|[複数の値]|  
 |SQL_DEFAULT_TXN_ISOLATION|0|  
 |SQL_DESCRIBE_PARAMETER|0|  
-|SQL_DRIVER_HDBC|ドライバー マネージャーによって処理されます。|  
-|SQL_DRIVER_HENV|ドライバー マネージャーによって処理されます。|  
-|SQL_DRIVER_HLIB|ドライバー マネージャーによって処理されます。|  
-|SQL_DRIVER_HSTMT|ドライバー マネージャーによって処理されます。|  
-|SQL_DRIVER_NAME|"OdbcJt32.dll"|  
+|SQL_DRIVER_HDBC|ドライバーマネージャーによって処理されます。|  
+|SQL_DRIVER_HENV|ドライバーマネージャーによって処理されます。|  
+|SQL_DRIVER_HLIB|ドライバーマネージャーによって処理されます。|  
+|SQL_DRIVER_HSTMT|ドライバーマネージャーによって処理されます。|  
+|SQL_DRIVER_NAME|"OdbcJt32"|  
 |SQL_DRIVER_ODBC_VER|"3.51.0000"|  
-|SQL_DRIVER_VER|"4.00*nnnn*"(*nnnn*ビルド日を指定します)。|  
+|SQL_DRIVER_VER|"4.00" (*nnnn*はビルド日付を指定*します)*|  
 |SQL_DROP_ASSERTION|0|  
 |SQL_DROP_CHARACTER_SET|0|  
 |SQL_DROP_COLLATION|0|  
@@ -111,7 +111,7 @@ ms.locfileid: "67898818"
 |SQL_GETDATA_EXTENSIONS|[複数の値]|  
 |SQL_GROUP_BY|SQL_GB_GROUP_BY_CONTAINS_SELECT|  
 |SQL_IDENTIFIER_CASE|SQL_IC_MIXED|  
-|SQL_IDENTIFIER_QUOTE_CHAR|"\`"(引用符をバックアップする場合)|  
+|SQL_IDENTIFIER_QUOTE_CHAR|"\`" (バッククォート)|  
 |SQL_KEYWORDS|[複数の値]|  
 |SQL_LIKE_ESCAPE_CLAUSE|"N"|  
 |SQL_MAX_BINARY_LITERAL_LEN|255|  
@@ -119,7 +119,7 @@ ms.locfileid: "67898818"
 |SQL_MAX_CHAR_LITERAL_LEN|255|  
 |SQL_MAX_COLUMN_NAME_LEN|25|  
 |SQL_MAX_COLUMNS_IN_GROUP_BY|10|  
-|SQL_MAX_COLUMNS_IN_INDEX|0 (制限不明または該当なし)|  
+|SQL_MAX_COLUMNS_IN_INDEX|0 (不明または該当なしの制限)|  
 |SQL_MAX_COLUMNS_IN_ORDER_BY|10|  
 |SQL_MAX_COLUMNS_IN_SELECT|255|  
 |SQL_MAX_COLUMNS_IN_TABLE|255|  
@@ -141,9 +141,9 @@ ms.locfileid: "67898818"
 |SQL_NON_NULLABLE_COLUMNS|SQL_NNC_NON_NULL|  
 |SQL_NULL_COLLATION|SQL_NC_LOW|  
 |SQL_NUMERIC_FUNCTIONS|[複数の値]|  
-|SQL_ODBC_SAG_CLI_ CONFORMANCE|SQL_OSCC_COMPLIANT|  
+|SQL_ODBC_SAG_CLI_ の準拠|SQL_OSCC_COMPLIANT|  
 |SQL_ODBC_SQL_INTEGRITY|"N"|  
-|SQL_ODBC_VER|ドライバー マネージャーから|  
+|SQL_ODBC_VER|ドライバーマネージャーから|  
 |SQL_OJ_CAPABILITIES|[複数の値]|  
 |SQL_ORDER_BY_COLUMNS_IN_SELECT|"N"|  
 |SQL_OUTER_JOINS|"Y"|  
@@ -155,12 +155,12 @@ ms.locfileid: "67898818"
 |SQL_SCHEMA_USAGE|0|  
 |SQL_SCROLL_OPTIONS|[複数の値]|  
 |SQL_SEARCH_PATTERN_ESCAPE|"\\"|  
-|SQL_SERVER_NAME|"PARADOX"|  
-|SQL_SPECIAL_CHARACTERS|"~\`@#$%^&*_-+=\\}{"';:?/><,.!'[]&#124;"|  
+|SQL_SERVER_NAME|PARADOX|  
+|SQL_SPECIAL_CHARACTERS|"~\`@ # $% ^& * _-+ =\\} {" ';:?/><,.! '[] &#124; "|  
 |SQL_STRING_FUNCTIONS|[複数の値]|  
 |SQL_SUBQUERIES|[複数の値]|  
 |SQL_SYSTEM_FUNCTIONS|0|  
-|SQL_TABLE_TERM|"TABLE"|  
+|SQL_TABLE_TERM|一覧|  
 |SQL_TIMEDATE_ADD_INTERVALS|0|  
 |SQL_TIMEDATE_DIFF_INTERVALS|0|  
 |SQL_TIMEDATE_FUNCTIONS|[複数の値]|  

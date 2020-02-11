@@ -1,5 +1,5 @@
 ---
-title: レポート ビルダーのオプション ダイアログ ボックスで、設定 (レポート ビルダー) |Microsoft Docs
+title: '[レポートビルダーのオプション] ダイアログボックスの [設定] (レポートビルダー) |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bae94dfd09495d271b668390b17059e067f092c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107616"
 ---
 # <a name="report-builder-options-dialog-box-settings-report-builder"></a>[設定] (レポート ビルダーの [オプション] ダイアログ ボックス) (レポート ビルダー)
-  をクリックして、**レポート ビルダー**ボタンをクリックし、をクリックし、**オプション**最近使ったファイルとの接続を表示するためのオプションを設定します。 既定のレポート サーバーを変更することも、既定のレポート サーバーがなければ追加することもできます。  
+  [**レポートビルダー** ] ボタンをクリックし、[**オプション**] をクリックして、最近使用したファイルと接続の表示オプションを設定します。 既定のレポート サーバーを変更することも、既定のレポート サーバーがなければ追加することもできます。  
   
 ## <a name="uielement-list"></a>UI 要素の一覧  
  **[既定で使用するレポート サーバーまたは SharePoint サイト]**  
@@ -45,7 +45,7 @@ ms.locfileid: "66107616"
  **[最近使ったすべてのアイテムの一覧をクリア]**  
  最近使ったサイトとサーバー、共有データセット、共有データ ソース接続、およびドキュメントの現在の一覧をクリアします。  
   
-## <a name="see-also"></a>関連項目  
- [レポート ビルダーのダイアログ ボックス、ペイン、およびウィザードに関するヘルプ](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+## <a name="see-also"></a>参照  
+ [ダイアログボックス、ペイン、およびウィザードのヘルプのレポートビルダー](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

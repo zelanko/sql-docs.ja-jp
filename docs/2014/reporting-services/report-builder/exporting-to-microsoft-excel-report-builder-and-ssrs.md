@@ -11,13 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ed18d5f14a2245290e14804d4a64f58beba885d8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107913"
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Exporting to Microsoft Excel (Report Builder and SSRS)
+  
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Excel 表示拡張機能は、レポートを [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] 2007-2010 のネイティブ形式で表示します。 Excel 表示拡張機能を使用すると、レポートの列の幅は、より正確に Excel の列の幅に反映されます。  
   
  形式は、Office Open XML です。 このレンダラーによって生成されるファイルのコンテンツ タイプは **application/vnd.openxmlformats-officedocument.spreadsheetml.sheet** で、ファイル拡張子は .xlsx です。  
@@ -27,20 +28,23 @@ ms.locfileid: "66107913"
 > [!IMPORTANT]  
 >  10 MB よりも大きいレポートを Excel にエクスポートするときにエラー メッセージが表示されないようにするには、 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]の最新のサービス パックをインストールします。 この問題は SP2 で修正されています。  
 >   
->  問題の詳細については、次を参照してください。[修正。SSRS 2012 は、Excel 形式の 10 MB よりも大きいレポートをエクスポートできません。](https://go.microsoft.com/fwlink/p/?LinkId=402513)  
+>  問題の詳細については、 [「修正: SSRS 2012 で 10 MB を超えるレポートを Excel 形式にエクスポートでない」](https://go.microsoft.com/fwlink/p/?LinkId=402513)を参照してください。  
 >   
->  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]の最新のサービス パックを入手するには、「 [SQL Server 2012 の最新のサービス パックの入手方法](https://go.microsoft.com/fwlink/p/?LinkId=402512)」を参照してください。  
+>  
+  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]の最新のサービス パックを入手するには、「 [SQL Server 2012 の最新のサービス パックの入手方法](https://go.microsoft.com/fwlink/p/?LinkId=402512)」を参照してください。  
   
 > [!IMPORTANT]  
->  `String` 型のパラメーターを定義する際には、任意の値が許容されるテキスト ボックスが表示されます。 クエリ パラメーターと関連付けられていないレポート パラメーターがあり、このパラメーター値がレポートに含まれていると、レポート ユーザーが、式の構文、スクリプト、または URL をパラメーター値に入力して、このレポートを Excel に変換することも可能になります。 別のユーザーがこのレポートを表示して、表示されたパラメーター コンテンツをクリックすると、悪意のあるスクリプトまたはリンクが意図せず実行されてしまう可能性があります。  
+>  
+  `String` 型のパラメーターを定義する際には、任意の値が許容されるテキスト ボックスが表示されます。 クエリ パラメーターと関連付けられていないレポート パラメーターがあり、このパラメーター値がレポートに含まれていると、レポート ユーザーが、式の構文、スクリプト、または URL をパラメーター値に入力して、このレポートを Excel に変換することも可能になります。 別のユーザーがこのレポートを表示して、表示されたパラメーター コンテンツをクリックすると、悪意のあるスクリプトまたはリンクが意図せず実行されてしまう可能性があります。  
 >   
 >  悪意のあるスクリプトを誤って実行するリスクを軽減するためには、信頼されたソースのレポートしか開かないようにする必要があります。 レポートのセキュリティ保護の詳細については、「 [レポートとリソースの保護](../security/secure-reports-and-resources.md)」を参照してください。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="ExcelLimitations"></a> Excel の制限  
- [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] では、Excel の機能とそのファイル形式により、エクスポートされたレポートに制限が適用されます。 最も重要な制限は、次のとおりです。  
+##  <a name="ExcelLimitations"></a>Excel の制限事項  
+ 
+  [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] では、Excel の機能とそのファイル形式により、エクスポートされたレポートに制限が適用されます。 最も重要な制限は、次のとおりです。  
   
 -   最大列幅は 255 文字または 1726.5 ポイントです。 レンダラーでは、列幅がこの制限を下回っているかどうかは検証されません。  
   
@@ -76,7 +80,7 @@ ms.locfileid: "66107913"
     > [!NOTE]  
     >  この問題を回避するには、レポートのテキスト ボックスの幅を大きくしてください。  
   
-### <a name="images"></a>画像  
+### <a name="images"></a>イメージ  
  画像には、次の制限事項が適用されます。  
   
 -   レポート アイテムの背景画像は無視されます。Excel では、セルごとの背景イメージはサポートされていません。  
@@ -93,7 +97,8 @@ ms.locfileid: "66107913"
   
 -   Excel のヘッダーとフッターでサポートされる最大文字数は 256 文字 (マークアップを含む) です。 文字列は、表示拡張機能により 256 文字で切り捨てられます。  
   
--   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] は、レポートのヘッダーとフッターにおける余白をサポートしていません。 Excel へのエクスポート時に、これらの余白の値はゼロに設定され、複数行のデータを含むヘッダーやフッターは、プリンターの設定によっては複数行に印刷されない場合があります。  
+-   
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] は、レポートのヘッダーとフッターにおける余白をサポートしていません。 Excel へのエクスポート時に、これらの余白の値はゼロに設定され、複数行のデータを含むヘッダーやフッターは、プリンターの設定によっては複数行に印刷されない場合があります。  
   
 -   ヘッダーやフッターのテキスト ボックスは、Excel へのエクスポート時にその書式が維持されますが、配置は維持されません。 これは、レポートが Excel にレンダリングされる際に先頭と末尾のスペースが切り捨てられるためです。  
   
@@ -128,34 +133,40 @@ ms.locfileid: "66107913"
 ## <a name="excel-renderer"></a>Excel レンダラー  
   
 ### <a name="excel-2007-2010-renderer"></a>Excel 2007-2010 レンダラー  
- [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] の既定の Excel レンダラーは、[!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] 2007-2010 と互換性があるバージョンです。 これは、レポート マネージャーおよび SharePoint リストの **[エクスポート]** メニューに用意されている **[Excel]** オプションです。  
+ 
+  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] の既定の Excel レンダラーは、[!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] 2007-2010 と互換性があるバージョンです。 これは、レポート マネージャーおよび SharePoint リストの **[エクスポート]** メニューに用意されている **[Excel]** オプションです。  
   
  以前の Excel 2003 レンダラーの代わりに既定の Excel レンダラーを使用すると、Word/Excel/PowerPoint 用 Microsoft Office 互換機能パックをインストールして、エクスポートされたファイルを開くことができます。  
   
 ### <a name="excel-2003-renderer"></a>Excel 2003 レンダラー  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] 2003 表示拡張機能は非推奨とされます。 詳細については、次を参照してください。 [SQL Server 2014 における SQL Server Reporting Services の非推奨機能](../deprecated-features-in-sql-server-reporting-services-ssrs.md)します。  
+>  
+  [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] 2003 表示拡張機能の使用は推奨されません。 詳細については、 [SQL Server 2014 の「SQL Server Reporting Services の非推奨の機能](../deprecated-features-in-sql-server-reporting-services-ssrs.md)」を参照してください。  
   
  Excel 2003 と互換性のある Excel レンダラーの以前のバージョンは、Excel 2003 という名前になり、この名前がメニューに表示されます。 このレンダラーで生成されるファイルのコンテンツ タイプは **application/vnd.ms-excel** で、ファイル名の拡張子は .xls です。  
   
  既定では、 **[Excel 2003]** メニュー オプションは表示されません。 管理者が RSReportServer 構成ファイルを更新することで、特定の環境でこのメニュー オプションが表示されるようにできます。 Excel 2003 レンダラーを使用して [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] からレポートをエクスポートするには、RSReportDesigner 構成ファイルを更新します。  
   
- **[Excel 2003]** メニュー オプション拡張機能は、次のシナリオでは表示されません。  
+ 
+  **[Excel 2003]** メニュー オプション拡張機能は、次のシナリオでは表示されません。  
   
 -   レポート ビルダーが切断モードのときにレポート ビルダーでレポートをプレビューした場合。 RSReportServer 構成ファイルはレポート サーバー上に存在しているため、レポートをエクスポートするツールまたは製品が構成ファイルを読み取るためにレポート サーバーに接続されている必要があります。  
   
      レポート ビルダーの [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] バージョンおよびスタンドアロン バージョンの両方に該当します。  
   
--   レポート ビューアー Web パーツがローカル モードで、SharePoint ファームが [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] レポート サーバーと統合されていない場合。 詳細については、「[レポート ビューアーでのローカル モードと接続モードのレポート &#40;Reporting Services の SharePoint モード&#41;](../local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md)  
+-   レポート ビューアー Web パーツがローカル モードで、SharePoint ファームが [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] レポート サーバーと統合されていない場合。 詳細については、「[レポートビューアーでのローカルモードと接続モードのレポート」 &#40;「SharePoint モードでの Reporting Services](../local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md) 」を参照してください&#41;  
   
- **[Excel 2003]** メニュー オプション レンダラーが表示されるように構成されている場合は、Excel と Excel 2003 の両方のオプションが次の状況で使用可能になります。  
+ 
+  **[Excel 2003]** メニュー オプション レンダラーが表示されるように構成されている場合は、Excel と Excel 2003 の両方のオプションが次の状況で使用可能になります。  
   
 -   レポート マネージャー (Reporting Services がネイティブ モードでインストールされている場合)。  
   
 -   SharePoint サイト (Reporting Services が SharePoint 統合モードでインストールされている場合)。  
   
--   [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] でレポートをプレビューする場合。  
+-   
+  [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] でレポートをプレビューする場合。  
   
 -   レポート ビルダーがレポート サーバーに接続されている場合。 レポート ビルダーの [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] バージョンまたはスタンドアロン バージョンが該当します。  
   
@@ -167,12 +178,13 @@ ms.locfileid: "66107913"
   
  `<Extension Name="EXCEL" Type="Microsoft.ReportingServices.Rendering.ExcelRenderer.ExcelRenderer,Microsoft.ReportingServices.ExcelRendering" Visible="false"/>`  
   
- EXCELOPENXML 拡張機能は Excel 2007-2010 用の Excel レンダラーを定義します。 EXCEL 拡張機能は、Excel 2003 バージョンを定義します。 `Visible = "false"` は、Excel 2003 レンダラーが非表示であることを示します。 詳細については、「 [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md) 」および「 [RSReportDesigner Configuration File](../report-server/rsreportdesigner-configuration-file.md)」を参照してください。  
+ EXCELOPENXML 拡張機能は Excel 2007-2010 用の Excel レンダラーを定義します。 EXCEL 拡張機能は、Excel 2003 バージョンを定義します。 
+  `Visible = "false"` は、Excel 2003 レンダラーが非表示であることを示します。 詳細については、「 [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md) 」および「 [RSReportDesigner Configuration File](../report-server/rsreportdesigner-configuration-file.md)」を参照してください。  
   
 ### <a name="differences-between-the-excel-2007-2010-and-excel-2003-renderers"></a>Excel 2007-2010 レンダラーと Excel 2003 レンダラーの違い  
  Excel レンダラーまたは Excel 2003 レンダラーを使用して表示されるレポートは通常は同じですが、まれに 2 つの形式が異なる場合があります。 Excel レンダラーと Excel 2003 レンダラーの比較を次の表に示します。  
   
-|プロパティ|[Excel 2003]|[エクスポート]|  
+|プロパティ|[Excel 2003]|Excel|  
 |--------------|----------------|-----------|  
 |ワークシートあたりの最大列数|256|16,384|  
 |ワークシートあたりの最大行数|65,536|1,048,576|  
@@ -184,7 +196,7 @@ ms.locfileid: "66107913"
   
  レポートでは行の高さが明示的に設定されるため、既定の行の高さは、Excel へのエクスポート時にサイズが自動的に設定される行だけに作用します。  
   
-##  <a name="ReportItemsExcel"></a> Excel のレポート アイテム  
+##  <a name="ReportItemsExcel"></a>Excel のレポートアイテム  
  四角形、サブレポート、レポート本文、およびデータ領域は、Excel のセル範囲としてレンダリングされます。 テキスト ボックス、画像、グラフ、データ バー、スパークライン、マップ、ゲージ、およびインジケーターは、必ず単一の Excel セル内にレンダリングされます。レポートの他の部分のレイアウトによっては、セルが結合される場合もあります。  
   
  画像、グラフ、スパークライン、データ バー、マップ、ゲージ、インジケーター、および線は、単一の Excel セル内で、セル グリッドの一番上に来るように配置されます。 線はセル罫線としてレンダリングされます。  
@@ -198,26 +210,26 @@ ms.locfileid: "66107913"
   
  一致するものが見つからなかった場合は、プリンターの既定のページ サイズが使用されます。 用紙方向は、ページの幅が高さよりも小さければ [縦] に、それ以外の場合は [横] に設定されます。  
   
-##  <a name="WorksheetTabNames"></a> ワークシートのタブ名  
- レポートを Excel ファイルにエクスポートすると、改ページによって生じたレポートの各ページが別々のワークシートにエクスポートされます。 レポートの最初のページ名を指定した場合、既定では、その Excel ワークブックの各ワークシートにこの名前が使用されます。 名前は、ワークシートのタブに表示されます。ただし、ワークブック内の各ワークシートは一意の名前を使用する必要があるため、追加のワークシートごとに 1 から開始され昇順に 1 ずつ増加する整数値がワークブック名に追加されます。 たとえば、最初のページ名が **"会計年度ごとの売り上げレポート"** である場合、2 番目のワークシート名は **"会計年度ごとの売り上げレポート1"** 、3 番目のワークシート名は **"会計年度ごとの売り上げレポート2"** となります。  
+##  <a name="WorksheetTabNames"></a>ワークシートのタブ名  
+ レポートを Excel ファイルにエクスポートすると、改ページによって生じたレポートの各ページが別々のワークシートにエクスポートされます。 レポートの最初のページ名を指定した場合、既定では、その Excel ワークブックの各ワークシートにこの名前が使用されます。 名前は、ワークシートのタブに表示されます。ただし、ブック内の各ワークシートには一意の名前が必要であるため、1から始まり1ずつ増加する整数が、追加のワークシートごとに最初のページ名に付加されます。 たとえば、最初のページ名が **"会計年度ごとの売り上げレポート"** である場合、2 番目のワークシート名は **"会計年度ごとの売り上げレポート1"**、3 番目のワークシート名は **"会計年度ごとの売り上げレポート2"** となります。  
   
  改ページによって生じたすべてのレポート ページに新しいページ名がある場合は、各ワークシートには関連するページ名が付けられます。 ただし、これらのページ名が一意でない場合があります。 ページ名が一意でない場合、ワークシートには最初に説明したページ名と同じ方法で名前が付けられます。 たとえば、2 つのグループのページ名が **"東北部の売り上げ"** である場合、1 つのワークシートに **"東北部の売り上げ"** という名前が付けられ、もう一方のワークシートには **"東北部の売り上げ1"** という名前が付けられます。  
   
- レポートに、最初のページ名も改ページに関連付けられたページ名もない場合、ワークシートのタブには、 **"シート1"** 、 **"シート2"** と順番に続く既定の名前が使用されます。  
+ レポートに、最初のページ名も改ページに関連付けられたページ名もない場合、ワークシートのタブには、**"シート1"**、**"シート2"** と順番に続く既定の名前が使用されます。  
   
  Reporting Services には、ユーザーが指定する方法で Excel にエクスポートできるレポートの作成を支援するために、レポート、データ領域、グループ、および四角形に設定するプロパティが用意されています。 詳細については、「 [Reporting Services の改ページ (レポート ビルダーおよび SSRS)](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)」を参照してください。  
   
-##  <a name="DocumentProperties"></a> ドキュメント プロパティ  
+##  <a name="DocumentProperties"></a>ドキュメントのプロパティ  
  Excel レンダラーでは、次のメタデータが Excel ファイルに書き込まれます。  
   
-|レポート要素のプロパティ|Description|  
+|レポート要素のプロパティ|[説明]|  
 |-------------------------------|-----------------|  
-|Created|レポート実行の日付と時刻 (ISO 形式の日付/時刻値)。|  
-|Author|Report.Author|  
-|Description|Report.Description|  
+|作成済み|レポート実行の日付と時刻 (ISO 形式の日付/時刻値)。|  
+|作成者|Report.Author|  
+|[説明]|Report.Description|  
 |LastSaved|レポート実行の日付と時刻 (ISO 形式の日付/時刻値)。|  
   
-##  <a name="PageHeadersFooters"></a> ページ ヘッダーとページ フッター  
+##  <a name="PageHeadersFooters"></a>ページヘッダーとページフッター  
  デバイス情報の SimplePageHeaders 設定に応じて、ページ ヘッダーは、ページ ヘッダーを各ワークシートのセル グリッドの上部に表示するか、または実際の Excel ワークシートのヘッダー セクションに表示するという、2 つの方法で表示可能です。 既定では、ヘッダーが Excel ワークシートのセル グリッドにレンダリングされます。  
   
  ページ フッターは、SimplePageHeaders 設定の値に関係なく、常に Excel ワークシートの実際のフッター セクションにレンダリングされます。  
@@ -242,7 +254,8 @@ ms.locfileid: "66107913"
  Excel では、いくつかの対話型要素がサポートされています。 具体的な動作について説明します。  
   
 ### <a name="show-and-hide"></a>表示/非表示  
- [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] には、表示と非表示の切り替えができるレポート アイテムの、エクスポート時の扱いに関して制限があります。 表示と非表示の切り替えが可能なレポート アイテムを含んだグループ、行、および列は、Excel のアウトラインとしてレンダリングされます。 アウトラインでは、行全体または列全体を展開したり折りたたんだりできますが、それが原因で、意図していないレポート アイテムまで折りたたんで表示されてしまうことがあります。 また、アウトラインが重なり合うことによって、Excel のアウトライン記号が散在し、わかりにくくなってしまう場合もあります。 Excel 表示拡張機能では、こうした問題を解消するために、アウトラインに関して次の規則が適用されます。  
+ 
+  [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] には、表示と非表示の切り替えができるレポート アイテムの、エクスポート時の扱いに関して制限があります。 表示と非表示の切り替えが可能なレポート アイテムを含んだグループ、行、および列は、Excel のアウトラインとしてレンダリングされます。 アウトラインでは、行全体または列全体を展開したり折りたたんだりできますが、それが原因で、意図していないレポート アイテムまで折りたたんで表示されてしまうことがあります。 また、アウトラインが重なり合うことによって、Excel のアウトライン記号が散在し、わかりにくくなってしまう場合もあります。 Excel 表示拡張機能では、こうした問題を解消するために、アウトラインに関して次の規則が適用されます。  
   
 -   左上隅に存在する、表示と非表示の切り替えが可能なレポート アイテムは、Excel でも引き続き表示と非表示の切り替えができます。 表示と非表示の切り替えが可能なレポート アイテムが左上隅にあり、そのレポート アイテムと水平方向または垂直方向の領域を共有して、表示と非表示の切り替えが可能な別のレポート アイテムがある場合、後者のレポート アイテムについては、Excel での表示と非表示の切り替えができなくなります。  
   
@@ -273,7 +286,7 @@ ms.locfileid: "66107913"
 ### <a name="bookmarks"></a>ブックマーク  
  テキスト ボックス内のブックマーク リンクは、テキストが表示されるセルに Excel ハイパーリンクとしてレンダリングされます。 画像やグラフのブックマーク リンクは、Excel ハイパーリンクとして、画像上にレンダリングされます。 クリックすると、ブックマークが付けられたレポート アイテムの Excel セルに移動します。  
   
-##  <a name="ConditionalFormat"></a> 実行時のレポートの変更  
+##  <a name="ConditionalFormat"></a>実行時のレポートの変更  
  レポートを複数の形式で表示する必要があるにもかかわらず、必要なすべての形式で目的どおりに表示されるレポート レイアウトを作成することができない場合は、組み込みの RenderFormat グローバルの値を使用して、レポートの外観を実行時に条件に応じて変更するようにしてください。 この方法により、使用するレンダラーに応じてレポート アイテムの表示/非表示を切り替えて、それぞれの形式で最適な結果を得ることができます。 詳細については、「[組み込み Globals および Users 参照 &#40;レポート ビルダーおよび SSRS&#41;](../report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  

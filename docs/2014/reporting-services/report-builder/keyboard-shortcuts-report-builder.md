@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 040d49e66e9feed4f8bc213c8189c8d41486b77d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107781"
 ---
 # <a name="keyboard-shortcuts-report-builder"></a>キーボード ショートカット (レポート ビルダー)
@@ -32,7 +32,7 @@ ms.locfileid: "66107781"
   
 ## <a name="keyboard-shortcuts-in-report-builder"></a>レポート ビルダーでのキーボード ショートカット  
   
-|説明|キーの組み合わせ|  
+|[説明]|キーの組み合わせ|  
 |-----------------|---------------------|  
 |レポート ビルダーのメニューを開く。|Alt + F|  
 |レポートを作成する。|Ctrl + N|  
@@ -40,7 +40,7 @@ ms.locfileid: "66107781"
 |レポートを保存する。|Ctrl + S、Alt + S|  
 |レポート ビルダーの領域 (リボン、デザイン画面、グループ化ペイン、プロパティ ペイン、データ ペイン) 間を移動する。|F6&lt;/localizedText&gt;、&lt;localizedText&gt;Shift&lt;/localizedText&gt; + &lt;localizedText&gt;F6|  
 |リボンに移動する。|Alt|  
-|リボンの [ホーム] タブに移動する。|Alt&lt;/localizedText&gt; + &lt;localizedText&gt;H|  
+|リボンの [ホーム] タブに移動する。|Alt + H|  
 |リボンの [挿入] タブに移動する。|Alt&lt;/localizedText&gt; + &lt;localizedText&gt;I|  
 |リボンの [表示] タブに移動する。|Alt&lt;/localizedText&gt; + &lt;localizedText&gt;V|  
 |領域間の境界線 (グループ化ペインとデザイン画面の境界線など) をアクティブ化する。|Tab|  
@@ -56,10 +56,10 @@ ms.locfileid: "66107781"
 |選択した複数の項目の端を合わせる。|Alt + H + A|  
 |レポートを実行します。|F5、Alt + H + R|  
 |デザイン モードに切り替える。|F8|  
-|[コピー]|Ctrl + C、Alt + H + C|  
+|コピー|Ctrl + C、Alt + H + C|  
 |切り取り|Ctrl + X、Alt + H + X|  
-|[貼り付け]|Ctrl + V、Alt + H + V|  
-|すべて選択|Ctrl + A|  
+|貼り付け|Ctrl + V、Alt + H + V|  
+|すべて選択|CTRL + A|  
 |元に戻す|Ctrl + Z、Alt + Z|  
 |やり直し|Ctrl + Y、Alt + Y|  
 |[拡大]|Ctrl + 正符号 (+) キー|  
@@ -92,8 +92,8 @@ ms.locfileid: "66107781"
 |マップ ビューポートが選択されている場合に、マップ ビュー領域を高速でパンおよび拡大する。|Ctrl&lt;/localizedText&gt; + 左クリック|  
   
 ## <a name="see-also"></a>参照  
- [SQL Server 2014 のレポート ビルダー](report-builder-in-sql-server-2016.md)   
+ [SQL Server 2014 のレポートビルダー](report-builder-in-sql-server-2016.md)   
  [レポート デザイン ビュー (レポート ビルダー)](report-design-view-report-builder.md)   
- [用語集 (レポート ビルダー)](glossary-report-builder.md)  
+ [用語集 &#40;レポートビルダー&#41;](glossary-report-builder.md)  
   
   

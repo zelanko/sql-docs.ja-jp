@@ -1,5 +1,5 @@
 ---
-title: 換算の種類 (ビジネス インテリジェンス ウィザード) を選択します |。Microsoft Docs
+title: '[変換の種類の選択] (ビジネスインテリジェンスウィザード)Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,20 +13,21 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ab618eaa2d8d54b08e3d01fa238d19451084eff8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069616"
 ---
 # <a name="select-conversion-type-business-intelligence-wizard"></a>[換算の種類の選択] (ビジネス インテリジェンス ウィザード)
+  
   **[換算の種類の選択]** ページを使用すると、複数の通貨で保存されているトランザクションに関して、現地通貨とレポート用通貨の間のリレーションシップを定義できます。 現地通貨とは、 **[メジャーの選択]** ページで選択されたメジャーのトランザクションが保存される通貨です。 レポート用通貨とは、 **[メジャーの選択]** ページで選択されたトランザクションが変換される通貨です。  
   
 > [!NOTE]  
 >  ビジネス インテリジェンス ウィザードをディメンション デザイナーから起動した場合や、 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]のソリューション エクスプローラーでディメンションを右クリックして起動した場合、このページは表示されません。  
   
-## <a name="options"></a>および  
- **[多対多]**  
+## <a name="options"></a>オプション  
+ **多対多**  
  現地通貨を使用してトランザクションを格納します。 この通貨換算機能は、このようなトランザクションを **[通貨換算オプションの設定]** ページで指定された、ピボット通貨に換算した後、1 つまたは複数の他のレポート用通貨に換算します。  
   
  たとえば、ピボット通貨を米国ドル (USD) に設定し、トランザクションをユーロ (EUR)、豪ドル (AUD)、およびメキシコ ペソ (MXN) でファクト テーブルに格納するように設定できます。 このオプションを選択すると、これらのトランザクションは、指定された現地通貨からピボット通貨に換算されます。その後、換算されたトランザクションは、ピボット通貨から指定されたレポート用通貨に再び換算されます。 その結果、トランザクションを指定された現地通貨で格納して、指定のピボット通貨または **[レポート用通貨の指定]** ページで指定されたいずれかのレポート用通貨で表示できるようになります。  
@@ -39,7 +40,7 @@ ms.locfileid: "66069616"
   
  たとえば、ピボット通貨を米国ドル (USD) に設定し、トランザクションをユーロ (EUR)、豪ドル (AUD)、およびメキシコ ペソ (MXN) でファクト テーブルに格納するように設定できます。 このオプションを選択すると、これらのトランザクションは、指定された現地通貨からピボット通貨に換算されます。 その結果、トランザクションを指定された現地通貨で格納して、指定のピボット通貨で表示できるようになります。  
   
- **[一対多]**  
+ **一対多**  
  トランザクションを **[通貨換算オプションの設定]** ページで指定された、ピボット通貨を使用して格納した後、1 つまたは複数の他のレポート用通貨に換算します。  
   
 > [!NOTE]  
@@ -48,8 +49,8 @@ ms.locfileid: "66069616"
  たとえば、ピボット通貨を米国ドル (USD) に設定し、トランザクションを USD でファクト テーブルに格納するように設定できます。 このオプションを選択すると、これらのトランザクションは、ピボット通貨から指定されたレポート用通貨に換算されます。 その結果、トランザクションを指定のピボット通貨で格納して、指定のピボット通貨または **[レポート用通貨の指定]** ページで指定されたいずれかのレポート用通貨で表示できるようになります。  
   
 ## <a name="see-also"></a>参照  
- [ビジネス インテリジェンス ウィザードの F1 ヘルプ](business-intelligence-wizard-f1-help.md)   
- [キューブ デザイナー &#40;Analysis Services - 多次元データ&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [ディメンション デザイナー &#40;Analysis Services - 多次元データ&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
+ [ビジネスインテリジェンスウィザードの F1 ヘルプ](business-intelligence-wizard-f1-help.md)   
+ [キューブデザイナー &#40;Analysis Services-多次元データ&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [ディメンションデザイナー &#40;Analysis Services-多次元データ&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   
   

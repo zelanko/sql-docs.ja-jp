@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 2e38df1a24b76ee40aae3a5ab3c28dd9bca2b310
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67905520"
 ---
 # <a name="linregr2-mdx"></a>LinRegR2 (MDX)
 
 
-  セットの線形回帰を計算し、R、決定係数を返します<sup>2</sup>します。  
+  セットの線形回帰を計算し、決定係数 R<sup>2</sup>を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -29,7 +29,7 @@ LinRegR2(Set_Expression, Numeric_Expression_y [ ,Numeric_Expression_x ] )
   
 ## <a name="arguments"></a>引数  
  *Set_Expression*  
- セットを返す有効な多次元式 (MDX) です。  
+ セットを返す有効な多次元式 (MDX) 式です。  
   
  *Numeric_Expression_y*  
  有効な数値式です。通常は、Y 軸の値を表す数値を返すセル座標の多次元式 (MDX) 式です。  
@@ -37,26 +37,26 @@ LinRegR2(Set_Expression, Numeric_Expression_y [ ,Numeric_Expression_x ] )
  *Numeric_Expression_x*  
  有効な数値式です。通常は、X 軸の値を表す数値を返すセル座標の多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>コメント  
- 最小二乗法が使用する、線形回帰は、回帰直線 (点、一連の best-fit 行) の式を計算します。 回帰直線では、次の式では、場所は傾き、b は切片です。  
+## <a name="remarks"></a>解説  
+ 最小二乗法を使用する線形回帰では、回帰直線の式 (つまり、一連の点に最適な線) が計算されます。 回帰直線の式は次のようになります。ここで、は傾き、b は切片です。  
   
  y = ax+b  
   
- **LinRegR2**関数は指定した setagainst、y 軸の値を取得する最初の数値式を示します。 関数は、x 軸の値を取得する場合に、2 番目の数値式に対して指定されたセットを評価します。 2 番目の数値した式が指定されていない場合、関数は、x 軸の値として指定されたセット内のセルの現在のコンテキストを使用します。 X-axisargument を指定していない時間ディメンションでよく使用します。  
+ **LinRegR2**関数は、y 軸の値を取得するために、指定された setagainst 最初の数値式に対して評価します。 次に、関数は、指定されている場合は、指定されたセットを2番目の数値式に対して評価し、x 軸の値を取得します。 2番目の数値式が指定されていない場合、関数は、指定されたセット内のセルの現在のコンテキストを x 軸の値として使用します。 X 軸の引数を指定しないと、時間ディメンションでよく使用されます。  
   
- 点のセットを取得した後、 **LinRegR2**返します統計的係数 R<sup>2</sup>直線式が点に適合しているかを説明します。  
+ **LinRegR2**関数は、点のセットを取得した後、直線式が点にどのように適合するかを示す統計的な R<sup>2</sup>を返します。  
   
 > [!NOTE]  
->  **LinRegR2**関数は空のセルまたはテキストや論理値を含むセルを無視します。 ただし、関数には、値が 0 のセルが含まれています。  
+>  **LinRegR2**関数は、空のセル、またはテキストや論理値を含むセルを無視します。 ただし、この関数には0の値を持つセルが含まれています。  
   
 ## <a name="example"></a>例  
- 次の例は、統計的係数 R を返します<sup>2</sup>の売上数量と店舗売上メジャーのポイントに線形回帰式の適合度をについて説明します。  
+ 次の例では、線形回帰式が単位売上と店舗売上メジャーの点に適合することを示す統計 R<sup>2</sup>を返します。  
   
 ```  
 LinRegR2(LastPeriods(10), [Measures].[Unit Sales],[Measures].[Store Sales])  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>参照  
+ [Mdx 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: '[選択] ページのリンク (レポート マネージャー) |Microsoft Docs'
+title: '[リンクの選択] ページ (レポートマネージャー) |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 910b06a5cd7af69cc668fb3054dfdfd98c3ae036
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109883"
 ---
 # <a name="choose-link-page-report-manager"></a>[リンクの選択] ページ (レポート マネージャー)
@@ -22,7 +22,7 @@ ms.locfileid: "66109883"
   
  [リンクの選択] ページでは、リンク レポートで使用する別のパブリッシュされたレポートを選択できます。 リンク レポートの他の設定 (セキュリティ設定やパラメーター設定など) は、リンク情報を変更しても影響を受けません。 レポート サーバーでは選択内容が検証されないため、リンク レポートで指定したパラメーターと同じパラメーターを使用するレポートを選択してください。  
   
-## <a name="navigation"></a>ナビゲーション  
+## <a name="navigation"></a>「ナビゲーション」  
  ユーザー インターフェイス (UI) のこの場所に移動するには、次の手順に従います。  
   
 ###### <a name="to-open-the-choose-link-page"></a>[リンクの選択] ページを開くには  
@@ -35,16 +35,16 @@ ms.locfileid: "66109883"
   
 4.  プロパティ ページの **[全般]** タブで、 **[リンクの変更]** をクリックします。  
   
-## <a name="options"></a>および  
- **場所**  
+## <a name="options"></a>オプション  
+ **Location**  
  フォルダーのパスとレポート名を含む、パブリッシュされたレポートの完全な名前を指定します。 完全なレポート名を入力するか、ツリー ビューを使用して、使用するレポートに移動できます。  
   
- **ツリー ビュー**  
+ **ツリービュー**  
  レポート サーバーのフォルダー階層にあるすべてのフォルダーが表示されます。 ツリー ビューを使用して **[場所]** フィールドに入力するには、レポート名をクリックします。  
   
-## <a name="see-also"></a>関連項目  
- [全般プロパティ ページ、レポート &#40;レポート マネージャー&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
- [新しいリンク レポート ページ &#40;レポート マネージャー&#41;](../../2014/reporting-services/new-linked-report-page-report-manager.md)   
+## <a name="see-also"></a>参照  
+ [[全般] プロパティページ、レポート &#40;レポートマネージャー&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
+ [[新しいリンクレポート] ページ &#40;レポートマネージャー&#41;](../../2014/reporting-services/new-linked-report-page-report-manager.md)   
  [レポート マネージャー F1 ヘルプ](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 992b479ea0867aef1ca75e42cc865db2cc5a735f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63268651"
 ---
 # <a name="article-options-for-transactional-replication"></a>トランザクション レプリケーションのアーティクル オプション
@@ -25,13 +25,13 @@ ms.locfileid: "63268651"
   
 -   パブリッシャーからサブスクライバーに変更を反映する方法を指定できます。 詳細については、「[トランザクション アーティクルに変更を反映する方法の指定](transactional-articles-specify-how-changes-are-propagated.md)」を参照してください。  
   
--   ストアド プロシージャの実行をレプリケートするように指定できます。 これは、大量のデータに影響を与えるメンテナンス用ストアド プロシージャの結果をレプリケートする場合に便利です。 詳細については、「 [Publishing Stored Procedure Execution in Transactional Replication](publishing-stored-procedure-execution-in-transactional-replication.md)」をご覧ください。  
+-   ストアド プロシージャの実行をレプリケートするように指定できます。 これは、大量のデータに影響を与えるメンテナンス用ストアド プロシージャの結果をレプリケートする場合に便利です。 詳細については、「[トランザクション レプリケーションにおけるパブリッシング ストアド プロシージャの実行](publishing-stored-procedure-execution-in-transactional-replication.md)」をご覧ください。  
   
--   制約やトリガーをサブスクライバーにコピーするかどうかなど、スキーマ オプションを指定します。 詳細については、「 [スキーマ オプションの指定](../publish/specify-schema-options.md)」を参照してください。  
+-   制約やトリガーをサブスクライバーにコピーするかどうかなど、スキーマ オプションを指定します。 詳細については、「[スキーマ オプションの指定](../publish/specify-schema-options.md)」を参照してください。  
   
 -   行フィルターや列フィルターを使用できます。 テーブル アーティクルをフィルター選択すると、パブリッシュされるデータのパーティションを作成できます。 詳細については、「[パブリッシュされたデータのフィルター選択](../publish/filter-published-data.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データとデータベース オブジェクトのパブリッシュ](../publish/publish-data-and-database-objects.md)  
   
   

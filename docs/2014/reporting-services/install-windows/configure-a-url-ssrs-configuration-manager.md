@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 617a4e01b3fd4f8dcbc6d929c2a26d483f2fa1ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108861"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>URL の構成 (SSRS 構成マネージャー)
@@ -34,7 +34,7 @@ ms.locfileid: "66108861"
   
 -   URL の詳細プロパティを設定して追加の URL を定義する。  
   
- や相互運用性の問題の詳細 Url を格納して管理する方法の詳細については、次を参照してください[についての URL 予約と登録&#40;SSRS 構成マネージャー&#41; ](about-url-reservations-and-registration-ssrs-configuration-manager.md)と[レポートのインストール。サービスとインターネット インフォメーション サービスのサイド バイ サイドで&#40;SSRS ネイティブ モード&#41;](install-reporting-and-internet-information-services-side-by-side.md)で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オンライン ブックの「します。 Reporting Services でよく使用される URL の例については、このトピックの「 [URL の構成の例](#URLExamples) 」を参照してください。  
+ Url の格納と管理の方法、または相互運用性の問題の詳細については、オンラインブックの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 「&#40;の Url の[予約と登録につい](about-url-reservations-and-registration-ssrs-configuration-manager.md)て」を参照してください。 ssrs Configuration Manager&#41;および Reporting Services サイドバイ[サイドインターネットインフォメーションサービス Ssrs ネイティブモード &#40;をインストール](install-reporting-and-internet-information-services-side-by-side.md)してください。 Reporting Services でよく使用される URL の例については、このトピックの「 [URL の構成の例](#URLExamples) 」を参照してください。  
   
 ## <a name="prerequisites"></a>前提条件  
  URL の作成や変更を行う前に、次の点を確認してください。  
@@ -75,7 +75,8 @@ ms.locfileid: "66108861"
   
          複数のカードがある場合や、ネットワークで IPv4 と IPv6 の両方のアドレスがサポートされている場合は、複数の IP アドレスが表示されます。 1 つの IP アドレスのみを選択すると、アプリケーション アクセスがその IP アドレス (およびドメイン ネーム サーバーによってそのアドレスにマップされるホスト名) に限定されます。 localhost を使用してレポート サーバーにアクセスすることはできません。また、レポート サーバー コンピューターにインストールされている他のネットワーク アダプター カードの IP アドレスは使用できません。 通常、この値を選択するのは、明確な IP アドレスやホスト名を指定する複数の URL 予約 (イントラネット接続に使用するネットワーク アダプター カード用と外部接続に使用するネットワーク アダプター カード用など) を構成する場合です。  
   
-5.  ポートを指定します。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] および Windows Server 2008 の [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] では、ポート 80 が既定のポートになっています。これは、他のアプリケーションとポートを共有できるためです。 カスタム ポート番号を使用する場合は、レポート サーバーへのアクセスに使用する URL で常にその番号を指定する必要があることに注意してください。 使用可能なポートを見つけるには、次の方法を使用できます。  
+5.  ポートを指定します。 
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] および Windows Server 2008 の [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] では、ポート 80 が既定のポートになっています。これは、他のアプリケーションとポートを共有できるためです。 カスタム ポート番号を使用する場合は、レポート サーバーへのアクセスに使用する URL で常にその番号を指定する必要があることに注意してください。 使用可能なポートを見つけるには、次の方法を使用できます。  
   
     -   コマンド プロンプトで次のコマンドを入力し、使用されている TCP ポートの一覧を取得します。  
   
@@ -95,15 +96,16 @@ ms.locfileid: "66108861"
   
 10. ページの **[URL]** セクションでリンクをクリックして URL をテストします。 URL をテストするには、先にレポート サーバー データベースを作成して構成する必要があります。 手順については、「[ネイティブ モード レポート サーバー データベースの作成 &#40;SSRS 構成マネージャー&#41;](ssrs-report-server-create-a-native-mode-report-server-database.md)」を参照してください。  
   
-11. さらに、SharePoint 統合モードを使用するようにレポート サーバーが構成されている場合は、SharePoint サーバーの全体管理でレポート サーバー Web サービスの URL を構成します。 SharePoint サーバーの全体管理でレポート サーバー Web サービスの URL を更新する方法の詳細については、次を参照してください[レポート サーバーの構成と管理&#40;Reporting Services SharePoint モード&#41;](../configure-administer-report-server-reporting-services-sharepoint-mode.md)と。[Reporting Services レポート サーバー &#40;SharePoint モード&#41;](../reporting-services-report-server-sharepoint-mode.md)します。  
+11. さらに、SharePoint 統合モードを使用するようにレポート サーバーが構成されている場合は、SharePoint サーバーの全体管理でレポート サーバー Web サービスの URL を構成します。 SharePoint サーバーの全体管理でレポートサーバー Web サービスの URL を更新する方法の詳細については、「[レポートサーバーの構成と管理](../configure-administer-report-server-reporting-services-sharepoint-mode.md)」を参照してください。 &#40;Reporting Services sharepoint モード&#41;および[Reporting Services レポートサーバー &#40;sharepoint モード&#41;](../reporting-services-report-server-sharepoint-mode.md)。  
   
 ### <a name="to-create-a-url-reservation-for-report-manager"></a>レポート マネージャーの URL 予約を作成するには  
   
 1.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールを起動して、レポート サーバー インスタンスに接続します。  
   
-2.  **[レポート マネージャー URL]** をクリックします。  
+2.  
+  **[レポート マネージャー URL]** をクリックします。  
   
-3.  仮想ディレクトリを指定します。 レポート マネージャーは、レポート サーバー Web サービスと同じ IP アドレスとポートでリッスンします。 別のレポート サーバー Web サービスを指すようにレポート マネージャーを構成した場合は、RSReportServer.config ファイルでレポート マネージャーの URL 設定を変更する必要があります。 手順については、次を参照してください。[レポート マネージャーの構成&#40;ネイティブ モード&#41;](../report-server/configure-web-portal.md)で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オンライン ブックの「します。  
+3.  仮想ディレクトリを指定します。 レポート マネージャーは、レポート サーバー Web サービスと同じ IP アドレスとポートでリッスンします。 別のレポート サーバー Web サービスを指すようにレポート マネージャーを構成した場合は、RSReportServer.config ファイルでレポート マネージャーの URL 設定を変更する必要があります。 手順については、オンラインブックの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 「[レポートマネージャー &#40;ネイティブモード&#41;を構成する](../report-server/configure-web-portal.md)」を参照してください。  
   
 4.  SSL 証明書がインストールされている場合は、その証明書を選択して、レポート マネージャーへの要求をすべて HTTPS でルーティングするように指定できます。  
   
@@ -124,11 +126,11 @@ ms.locfileid: "66108861"
   
 #### <a name="to-set-advanced-properties-on-a-url"></a>URL の詳細プロパティを設定するには  
   
-1.  いずれかで、 **Web サービスの URL**または**レポート マネージャー URL** ] ページで [ **[詳細設定]** します。  
+1.  [ **Web サービスの url**または**レポートマネージャー url** ] ページで、[**詳細設定**] をクリックします。  
   
 2.  **[追加]** をクリックします。  
   
-3.  [IP アドレス] または [ホスト ヘッダー名] をクリックします。 ホスト ヘッダーを指定する場合は、DNS サービスで解決できる名前を指定してください。 公のドメイン名を指定する場合は、 http://www を含む URL 全体を指定します。  
+3.  [IP アドレス] または [ホスト ヘッダー名] をクリックします。 ホスト ヘッダーを指定する場合は、DNS サービスで解決できる名前を指定してください。 公のドメイン名を指定する場合は、http://www を含む URL 全体を指定します。  
   
 4.  ポートを指定します。 カスタム ポートを指定する場合は、アプリケーションの URL に常にポート番号を含める必要があります。  
   

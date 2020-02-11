@@ -1,5 +1,5 @@
 ---
-title: 既存のディメンション (キューブ ウィザード) を選択します |。Microsoft Docs
+title: '[既存のディメンションの選択] (キューブウィザード)Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e02b4da19c3fe8cef9d31b304b1aeecdaa906bdd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069521"
 ---
 # <a name="select-existing-dimensions-cube-wizard"></a>[既存のディメンションの選択] (キューブ ウィザード)
+  
   **[既存のディメンションの選択]** ページを使用すると、キューブに含める既存のディメンションを選択できます。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **Dimensions**  
  キューブに含めるディメンションを選択します。  
   
@@ -30,7 +31,7 @@ ms.locfileid: "66069521"
   
  既定では、すべてのディメンションが選択されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [多次元モデルのキューブ](multidimensional-models/cubes-in-multidimensional-models.md)  
   
   

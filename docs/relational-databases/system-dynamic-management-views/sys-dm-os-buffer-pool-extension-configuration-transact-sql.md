@@ -1,5 +1,5 @@
 ---
-title: sys.dm_os_buffer_pool_extension_configuration (TRANSACT-SQL) |Microsoft Docs
+title: dm_os_buffer_pool_extension_configuration (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 09/09/2017
 ms.prod: sql
@@ -19,43 +19,43 @@ ms.assetid: d52cc481-4d29-4f33-b63d-231ec35d092f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 38e4e1ad85a5e968d4b0bb33a3a72a829942585b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67900218"
 ---
-# <a name="sysdmosbufferpoolextensionconfiguration-transact-sql"></a>sys.dm_os_buffer_pool_extension_configuration (TRANSACT-SQL)
+# <a name="sysdm_os_buffer_pool_extension_configuration-transact-sql"></a>dm_os_buffer_pool_extension_configuration (Transact-sql)
 
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
-  バッファー プール拡張に関する構成情報を返します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 各バッファー プール拡張ファイルの 1 つの行を返します。  
+  の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バッファープール拡張に関する構成情報を返します。 バッファープール拡張ファイルごとに1行の値を返します。  
   
 
   
-| 列名 | データ型 | 説明 |
+| 列名 | データ型 | [説明] |
 | :---------- | :-------- | :---------- |
-|path|**nvarchar**(256)|バッファー プール拡張キャッシュのパスとファイル名。 Null 値を許容します。|  
+|path|**nvarchar**(256)|バッファー プール拡張キャッシュのパスとファイル名。 NULL 値は許可されます。|  
 |file_id|**int**|バッファー プール拡張ファイルの ID。 NULL 値は許可されません。|  
-|state|**int**|バッファー プール拡張機能の状態。 NULL 値は許可されません。<br /><br /> 0 - バッファー プール拡張機能が無効<br /><br /> 1 - バッファー プール拡張機能の無効化<br /><br /> 2 - 将来使用するため予約されています<br /><br /> 3 - バッファー プール拡張機能の有効化<br /><br /> 4 - 将来使用するため予約されています<br /><br /> 5 - バッファー プール拡張機能が有効|  
-|state_description|**nvarchar**(60)|バッファー プール拡張機能の状態を説明します。 NULL 値が許可されます。<br /><br /> 0 = バッファー プール拡張機能が無効<br /><br /> 5 = バッファー プール拡張機能が有効になっています。|
-|current_size_in_kb|**bigint**|現在、バッファー プール拡張ファイルのサイズ。 NULL 値は許可されません。|
+|state|**int**|バッファー プール拡張機能の状態。 NULL 値は許可されません。<br /><br /> 0 - バッファー プール拡張機能が無効<br /><br /> 1 - バッファー プール拡張機能の無効化<br /><br /> 2-将来使用するために予約されています<br /><br /> 3 - バッファー プール拡張機能の有効化<br /><br /> 4-将来使用するために予約されています<br /><br /> 5 - バッファー プール拡張機能が有効|  
+|state_description|**nvarchar**(60)|バッファー プール拡張機能の状態を説明します。 NULL 値が許可されます。<br /><br /> 0 = バッファー プール拡張機能が無効<br /><br /> 5 = バッファープール拡張機能が有効|
+|current_size_in_kb|**bigint**|バッファープール拡張ファイルの現在のサイズ。 NULL 値は許可されません。|
 | &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-returning-configuration-buffer-pool-extension-information"></a>A. バッファー プール拡張の構成情報を返す  
- 次の例は、sys.dm_os_buffer_pool_extension_configruation DMV のすべての列を返します。  
+ 次の例では、dm_os_buffer_pool_extension_configruation DMV からすべての列を返します。  
   
 ```sql  
 SELECT path, file_id, state, state_description, current_size_in_kb  
 FROM sys.dm_os_buffer_pool_extension_configuration;  
 ```  
   
-### <a name="b-returning-the-number-of-cached-pages-in-the-buffer-pool-extension-file"></a>B. バッファー プール拡張ファイル内のキャッシュされたページ数を返す  
+### <a name="b-returning-the-number-of-cached-pages-in-the-buffer-pool-extension-file"></a>B. バッファープール拡張ファイル内のキャッシュされたページ数を返す  
  次の例は、各バッファー プール拡張ファイル内のキャッシュされたページ数を返します。  
   
 ```sql  
@@ -65,8 +65,8 @@ WHERE is_in_bpool_extension <> 0
 ;  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [バッファー プール拡張機能](../../database-engine/configure-windows/buffer-pool-extension.md)   
- [sys.dm_os_buffer_descriptors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql.md)  
+## <a name="see-also"></a>参照  
+ [バッファープール拡張機能](../../database-engine/configure-windows/buffer-pool-extension.md)   
+ [dm_os_buffer_descriptors &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql.md)  
   
   

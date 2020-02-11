@@ -13,21 +13,24 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0ac2ff0a1617e2228d6b7b5f2651380b3a08ea17
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062726"
 ---
 # <a name="advanced-settings-ssas"></a>[詳細設定] (SSAS)
-  **テーブルのインポート ウィザード** からこのダイアログ ボックスを開くと、接続先のフラット ファイルのエンコードおよびロケールを指定できます。 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]からウィザードにアクセスするには、 **[モデル]** メニューの **[データ ソースからのインポート]** をクリックします。  
+  
+  **テーブルのインポート ウィザード** からこのダイアログ ボックスを開くと、接続先のフラット ファイルのエンコードおよびロケールを指定できます。 
+  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]からウィザードにアクセスするには、 **[モデル]** メニューの **[データ ソースからのインポート]** をクリックします。  
   
 ## <a name="uielement-list"></a>UI 要素の一覧  
   
 |||  
 |-|-|  
-|項目|定義|  
-|**[エンコード]**|使用するエンコードの種類を指定します。ANSI または Unicode です。<br /><br /> **Unicode** 値は UTF-16 エンコードに対応します。|  
+|期間|定義|  
+|**[エンコード]**|使用するエンコードの種類として ANSI または Unicode を指定します。<br /><br /> 
+  **Unicode** 値は UTF-16 エンコードに対応します。|  
 |**ロケール**|ロケールを指定して、順序付けおよび日時の形式に関する言語固有の情報を提供します。|  
   
   

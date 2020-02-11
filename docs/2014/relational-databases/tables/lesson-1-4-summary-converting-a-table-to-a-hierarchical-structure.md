@@ -1,5 +1,5 @@
 ---
-title: まとめ:テーブルの階層構造への変換 |Microsoft Docs
+title: 'まとめ : テーブルの階層構造への変換 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,21 +13,22 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 740353035b1bd53a8c99b6336b3a70532eb57b2b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66110128"
 ---
-# <a name="summary-converting-a-table-to-a-hierarchical-structure"></a>まとめ:テーブルの階層構造への変換
+# <a name="summary-converting-a-table-to-a-hierarchical-structure"></a>まとめ : テーブルの階層構造への変換
+  
   `hierarchyid` データ型では、階層リレーションシップを簡単かつコンパクトな形式で格納できます。 正しいインデックスを指定すると、階層のレベル別、階層のサブツリー別、または従来の単一参照別にデータが効率よく返されます。  
   
  このレッスンでは、2 つの階層的な手法を使用しました。 次のレッスンでは、さらに多くの手法を使用して階層データのクエリおよび操作を実行する方法を説明します。  
   
 ## <a name="next-lesson"></a>次のレッスン  
- [レッスン 2:作成して、階層テーブルでデータを管理します。](lesson-2-creating-and-managing-data-in-a-hierarchical-table.md)  
+ [レッスン 2 : 階層テーブルでのデータの作成と管理](lesson-2-creating-and-managing-data-in-a-hierarchical-table.md)  
   
 ## <a name="see-also"></a>参照  
- [階層データ (SQL Server)](../hierarchical-data-sql-server.md)  
+ [階層データ &#40;SQL Server&#41;](../hierarchical-data-sql-server.md)  
   
   

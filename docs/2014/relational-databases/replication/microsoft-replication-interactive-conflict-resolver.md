@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 68ddc4f6b42dcc53445b8afaae0bc15e666a5711
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62667284"
 ---
 # <a name="microsoft-replication-interactive-conflict-resolver"></a>Microsoft レプリケーション インタラクティブ競合回避モジュール
@@ -25,17 +25,17 @@ ms.locfileid: "62667284"
 > [!NOTE]  
 >  論理レコードに関連する競合は、インタラクティブ競合回避モジュールには表示されません。 これらの競合に関する情報を表示するには、レプリケーション ストアド プロシージャを使用します。 詳細については、「[マージ パブリケーションの競合情報の表示 (レプリケーション Transact-SQL プログラミング)](view-conflict-information-for-merge-publications.md)」を参照してください。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **列名**  
  テーブルのすべての列の名前です。 1 つまたは複数の列が競合するデータを持つ場合があります。 どの列が競合するかにかかわらず、競合で優先された行全体が、優先されなかった行全体を上書きします。  
   
  **[提案された解決策]**  
  アーティクルの競合回避モジュールによって提案された解決策です。  
   
- **パブリッシャー**  
+ **発行元**  
  パブリッシャーでのデータ値です。  
   
- **サブスクライバー (Subscriber)**  
+ **サブスクライバー**  
  サブスクライバーでのデータ値です。  
   
  **[推奨設定を優先]** 、 **[パブリッシャーを優先]** 、 **[サブスクライバーを優先]**  
@@ -47,7 +47,7 @@ ms.locfileid: "62667284"
  **[参照用にこの競合の詳細をログに記録する]**  
  システム テーブルでの競合の詳細をログに記録します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [インタラクティブな競合解決](merge/advanced-merge-replication-conflict-interactive-resolution.md)   
  [マージ パブリケーションでのデータの競合の表示および解決 &#40;SQL Server Management Studio&#41;](view-and-resolve-data-conflicts-for-merge-publications.md)   
  [Windows 同期マネージャーを使用したサブスクリプションの同期 &#40;Windows 同期マネージャー&#41;](synchronize-a-subscription-using-windows-synchronization-manager.md)   

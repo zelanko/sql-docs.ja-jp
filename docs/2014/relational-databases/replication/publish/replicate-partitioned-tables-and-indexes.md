@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f2201be33df4346ab2afa812828ab9655b0ed2be
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67793294"
 ---
 # <a name="replicate-partitioned-tables-and-indexes"></a>パーティション テーブルとパーティション インデックスのレプリケート
@@ -37,7 +37,7 @@ ms.locfileid: "67793294"
   
  パーティション分割に関連するプロパティの最初のセットは、パーティション分割するオブジェクトをサブスクライバーにコピーするかどうかを指定するアーティクルのスキーマ オプションです。 これらのスキーマ オプションは次の方法で設定できます。  
   
--   パブリケーションの新規作成ウィザードの **[アーティクルのプロパティ]** ページ、または [パブリケーションのプロパティ] ダイアログ ボックス。 前の表に一覧表示されたオブジェクトをコピーするには、値を指定`true`プロパティ**テーブル分割構成のコピー**と**インデックス分割構成のコピー**します。 **[アーティクルのプロパティ]** ページへのアクセス方法については、「[View and Modify Publication Properties](view-and-modify-publication-properties.md)」 (パブリケーション プロパティの表示および変更) を参照してください。  
+-   パブリケーションの新規作成ウィザードの **[アーティクルのプロパティ]** ページ、または [パブリケーションのプロパティ] ダイアログ ボックス。 前の`true`表に示したオブジェクトをコピーするには、[**テーブル分割**構成のコピー] プロパティと [**インデックス分割**構成のコピー] プロパティに値を指定します。 **[アーティクルのプロパティ]** ページへのアクセス方法については、「[View and Modify Publication Properties](view-and-modify-publication-properties.md)」 (パブリケーション プロパティの表示および変更) を参照してください。  
   
 -   次のいずれかのストアド プロシージャの *schema_option* パラメーターの使用。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "67793294"
   
  レプリケーションでは、初期同期中にオブジェクトがサブスクライバーにコピーされます。 パーティション構成で PRIMARY 以外のファイル グループを使用する場合、そのファイル グループは初期同期の前にサブスクライバーに存在している必要があります。  
   
- サブスクライバーが初期化された後、データ変更がサブスクライバーに反映され、適切なパーティションに適用されます。 ただし、パーティション構成に対する変更はサポートされていません。 トランザクション レプリケーションおよびマージ レプリケーションでは、次のコマンドをレプリケートはサポートされません。ALTER PARTITION FUNCTION、ALTER PARTITION SCHEME、または ALTER INDEX の REBUILD WITH PARTITION ステートメント。  これらに関連付けられた変更は、サブスクライバーに自動的にレプリケートされません。 ユーザーがサブスクライバー側で同様の変更を手動で行う必要があります。  
+ サブスクライバーが初期化された後、データ変更がサブスクライバーに反映され、適切なパーティションに適用されます。 ただし、パーティション構成に対する変更はサポートされていません。 トランザクション レプリケーションとマージ レプリケーションでは、ALTER PARTITION FUNCTION コマンド、ALTER PARTITION SCHEME コマンド、ALTER INDEX コマンドの REBUILD WITH PARTITION ステートメントのレプリケートはサポートされません。  これらに関連付けられた変更は、サブスクライバーに自動的にレプリケートされません。 ユーザーがサブスクライバー側で同様の変更を手動で行う必要があります。  
   
 ## <a name="replication-support-for-partition-switching"></a>レプリケーションによるパーティション切り替えのサポート  
  テーブル分割の主な利点の 1 つは、パーティション間でデータのサブセットをすばやく効率的に移動できることです。 データは SWITCH PARTITION コマンドを使用して移動します。 既定では、テーブルのレプリケーションが有効な場合、SWITCH PARTITION 操作は次の理由でブロックされます。  
@@ -70,9 +70,9 @@ ms.locfileid: "67793294"
 ### <a name="enabling-partition-switching"></a>パーティション切り替えの有効化  
  トランザクション パブリケーションの次のプロパティを使用すると、レプリケーション環境でのパーティション切り替えの動作を制御できます。  
   
--   **\@allow_partition_switch**に設定すると`true`、パブリケーション データベースに対して SWITCH PARTITION を実行することができます。  
+-   allow_partition_switch、に`true`設定すると、パブリケーションデータベースに対して switch partition を実行できます。 ** \@**  
   
--   **\@replicate_partition_switch** SWITCH PARTITION DDL ステートメントをサブスクライバーにレプリケートできるかどうかを決定します。 このオプションは、有効な場合にのみ **\@allow_partition_switch**に設定されている`true`します。  
+-   replicate_partition_switch によって、switch partition DDL ステートメントをサブスクライバーにレプリケートする必要があるかどうかが決まります。 ** \@** このオプションは、 ** \@allow_partition_switch**がに`true`設定されている場合にのみ有効です。  
   
  これらのプロパティは、パブリケーションの作成時に [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) を使用するか、パブリケーションの作成後に [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql) を使用することによって設定できます。 既に述べたとおり、マージ レプリケーションではパーティション切り替えがサポートされません。 マージ レプリケーションが有効になっているテーブルで SWITCH PARTITION を実行するには、パブリケーションからテーブルを削除します。  
   

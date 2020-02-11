@@ -14,16 +14,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 07c75779d05d22e09e7823b5d0b3bffc2ca7acc8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108306"
 ---
 # <a name="manage-my-data-alerts-in-data-alert-manager"></a>データ警告マネージャーでのデータ警告の管理
   SharePoint ユーザーは、自分が作成したデータ警告と、それらの警告に関する情報を一覧表示できます。 また、警告を削除したり、データ警告デザイナーで警告定義を開いて編集したり、それらの警告を実行することもできます。 次の図に、データ警告マネージャーでユーザーが使用できる機能を示します。  
   
- ![SharePoint ユーザー向けの警告マネージャー機能](media/rs-alertmanageriw.gif "SharePoint ユーザー向けの警告マネージャー機能")  
+ ![SharePoint ユーザー用の警告マネージャー機能](media/rs-alertmanageriw.gif "SharePoint ユーザー用の警告マネージャー機能")  
   
 ### <a name="to-view-a-list-of-your-alerts"></a>警告の一覧を表示するには  
   
@@ -35,7 +35,8 @@ ms.locfileid: "66108306"
   
      データ警告マネージャーが開きます。 既定では、ライブラリで選択したレポートに対する警告が一覧表示されます。  
   
-3.  **[レポート用の警告の表示]** の一覧の横にある下矢印をクリックして、警告を表示するレポートを選択するか、 **[すべて表示]** をクリックして警告をすべて表示します。  
+3.  
+  **[レポート用の警告の表示]** の一覧の横にある下矢印をクリックして、警告を表示するレポートを選択するか、 **[すべて表示]** をクリックして警告をすべて表示します。  
   
     > [!NOTE]  
     >  選択したレポートに警告が存在しない場合、SharePoint ライブラリに戻って警告があるレポートを検索および選択する必要はありません。 代わりに、 **[すべて表示]** をクリックしてすべての警告を一覧表示します。  
@@ -66,7 +67,7 @@ ms.locfileid: "66108306"
   
      警告インスタンスが作成され、データ警告メッセージが直ちに送信されます。これは、データ警告デザイナーで指定したスケジュール オプションの内容にかかわらず実行されます。 たとえば、結果が変更された場合にのみ、週単位で送信されるよう構成された警告も同様です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [警告管理者用のデータ警告マネージャー](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)   
  [Reporting Services Data Alerts](../ssms/agent/alerts.md)  
   

@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7db85ce6d63cd6c3eb458434357fa5a2d8127dec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63268672"
 ---
 # <a name="replication-security-best-practices"></a>レプリケーション セキュリティの推奨事項
@@ -29,7 +29,7 @@ ms.locfileid: "63268672"
   
 -   レプリケーション トポロジ内のコンピューター間の接続を、仮想プライベート ネットワーク (VPN)、SSL (Secure Sockets Layer)、IPSEC (IP Secrity) などの業界標準の方式を使用して暗号化する。 詳細については、「[データベース エンジンへの暗号化接続の有効化 &#40;SQL Server 構成マネージャー&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。 VPN と SSL を使用したインターネット経由のデータのレプリケーションについては、「 [Securing Replication Over the Internet](securing-replication-over-the-internet.md)」を参照してください。  
   
-     SSL を使用してレプリケーション トポロジのコンピューター間の接続をセキュリティで保護する場合、各レプリケーション エージェントの **-EncryptionLevel** パラメーターに値 **1** または **2** を指定します (値 **2** が推奨値です)。 値 **1** は、暗号化を使用していますが、SSL サーバー証明書が信頼されている発行者によって署名されていることをエージェントが検証していないことを示します。値 **2** は、証明書が検証されていることを示します。 エージェント パラメーターは、エージェント プロファイルおよびコマンド ラインで指定できます。 詳細については、以下をご覧ください。  
+     SSL を使用してレプリケーション トポロジのコンピューター間の接続をセキュリティで保護する場合、各レプリケーション エージェントの **-EncryptionLevel** パラメーターに値 **1** または **2** を指定します (値 **2** が推奨値です)。 値 **1** は、暗号化を使用していますが、SSL サーバー証明書が信頼されている発行者によって署名されていることをエージェントが検証していないことを示します。値 **2** は、証明書が検証されていることを示します。 エージェント パラメーターは、エージェント プロファイルおよびコマンド ラインで指定できます。 詳細については、次を参照してください。  
   
     -   [レプリケーション エージェント プロファイルの操作](../agents/replication-agent-profiles.md)  
   
@@ -67,7 +67,7 @@ ms.locfileid: "63268672"
   
     -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証が必要な状況では、多くの場合、UNC スナップショット共有へのアクセスは実行できません (たとえば、アクセスがファイアウォールでブロックされます)。 この場合は、ファイル転送プロトコル (FTP) を使用して、スナップショットをサブスクライバーに転送できます。 詳細については、「[FTP によるスナップショットの転送](../transfer-snapshots-through-ftp.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データベース エンジンへの暗号化接続の有効化 &#40;SQL Server 構成マネージャー&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
  [インターネット経由のレプリケーション](../replication-over-the-internet.md)   
  [サブスクライバーのセキュリティ保護](secure-the-subscriber.md)   

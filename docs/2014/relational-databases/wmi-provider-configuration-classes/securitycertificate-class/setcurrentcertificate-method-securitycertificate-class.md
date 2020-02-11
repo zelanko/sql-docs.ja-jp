@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 32af70857eac43a99257444081c1bcbdc842a2e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63270640"
 ---
 # <a name="setcurrentcertificate-method-securitycertificate-class"></a>SetCurrentCertificate メソッド (SecurityCertificate クラス)
@@ -40,12 +40,12 @@ SHA , SQLInstance
 ```  
   
 ## <a name="parts"></a>要素  
- *object*  
- [SecurityCertificate クラス] securitycertificate-class.md) セキュリティ証明書を表すオブジェクト。  
+ *素材*  
+ セキュリティ証明書を表す [SecurityCertificate Class] securitycertificate-class.md) オブジェクト。  
   
 #### <a name="parameters"></a>パラメーター  
   
-|パラメーター|説明|  
+|パラメーター|[説明]|  
 |---------------|-----------------|  
 |*SHA*|必要なセキュリティ証明書に対応する SHA (secure hash algorithm) サムプリントを指定する文字列値。|  
 |*SQLInstance*|証明書を必要とするインスタンスを指定する文字列値|  
@@ -53,9 +53,9 @@ SHA , SQLInstance
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  uint32 値。サービスが正常に変更された場合は 0、要求がサポートされていない場合は 1 になります。それ以外の数値はエラーを示します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
   
-## <a name="see-also"></a>関連項目  
- [サーバー ネットワーク プロトコルとネットワーク ライブラリの構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+## <a name="see-also"></a>参照  
+ [サーバーのネットワーク プロトコルと Net-Library の構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

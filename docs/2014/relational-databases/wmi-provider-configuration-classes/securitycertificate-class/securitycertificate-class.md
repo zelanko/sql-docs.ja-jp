@@ -19,24 +19,26 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: f5d0ddc957cfca8e122920321acc7ccebb70ef72
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63270770"
 ---
 # <a name="securitycertificate-class"></a>SecurityCertificate クラス
-  [SecurityCertificate クラス] securitycertificate-class.md) は、セキュリティ証明書を表します。 証明書の公開キーの値のインスタンスにバインドするデジタル署名されたステートメントは、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]、対応する秘密キーが格納されます。 証明書は証明機関から発行されます。  
+  [SecurityCertificate Class] securitycertificate-class.md) は、セキュリティ証明書を表します。 証明書は、公開キーの値を、対応する秘密キーを保持するの[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンスにバインドする、デジタル署名されたステートメントです。 証明書は証明機関から発行されます。  
   
- [SecurityCertificate クラス] securitycertificate-class.md)、次のタスクを実行できます。  
+ [SecurityCertificate Class] securitycertificate-class.md) を使用すると、次のタスクを実行できます。  
   
 -   セキュリティ証明書のプロパティの表示  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の指定インスタンスに対する、指定された SHA サムプリントを持つセキュリティ証明書の設定  
+-   
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の指定インスタンスに対する、指定された SHA サムプリントを持つセキュリティ証明書の設定  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の指定インスタンスに対する、SHA サムプリントの検証  
+-   
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の指定インスタンスに対する、SHA サムプリントの検証  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [暗号化階層](../../security/encryption/encryption-hierarchy.md)  
   
   

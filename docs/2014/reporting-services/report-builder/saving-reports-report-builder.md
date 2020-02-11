@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e21b1c9e48dcccf8b72a60fbd381aac3d878c0dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107630"
 ---
 # <a name="saving-reports-report-builder"></a>レポートの保存 (レポート ビルダー)
@@ -28,9 +28,9 @@ ms.locfileid: "66107630"
   
 -   レポート履歴を使用して、表示されたレポートのバージョンを履歴コピーとして保存する。  
   
- レポート サーバー上のレポートを直接表示し、管理する方法の詳細については、msdn.microsoft.com で、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [オンライン ブック](https://go.microsoft.com/fwlink/?LinkId=154888)の「[レポートの検索、表示、管理 (レポート ビルダーおよび SSRS)](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)」および「[Reporting Services レポート サーバー (ネイティブ モード)](../report-server/reporting-services-report-server-native-mode.md)」を参照してください。  
+ レポート サーバー上のレポートを直接表示し、管理する方法の詳細については、msdn.microsoft.com で、[](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)オンライン ブック[の「](../report-server/reporting-services-report-server-native-mode.md)レポートの検索、表示、管理 (レポート ビルダーおよび SSRS)」および「[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Reporting Services レポート サーバー (ネイティブ モード)](https://go.microsoft.com/fwlink/?LinkId=154888)」を参照してください。  
   
-##  <a name="SavingReportDefinitions"></a> レポート定義の保存  
+##  <a name="SavingReportDefinitions"></a>レポート定義の保存  
  レポートは自分のコンピューターに保存することもできますが、レポート サーバーに保存すると多くの利点があります。  
   
  レポートをレポート サーバーに保存すると、次のような利点があります。  
@@ -52,7 +52,7 @@ ms.locfileid: "66107630"
 
   
 ##  <a name="ExportingAndSavingReports"></a> レポートのエクスポートと保存  
- アーカイブするレポートの数が少ない場合、レポートをエクスポートしてファイルとして保存することを検討してください。 レポートをアプリケーション (PDF や Excel など) にエクスポートしたら、そのレポートをファイルとして保存し、ネットワーク上の保護された共有ディレクトリに配置できます。 また、形式にかかわらず、レポート サーバー データベースにレポートのすべてのコピーを保存する場合、リソース アイテムとして保存した PDF または Excel ファイルをアップロードできます。 レポートのエクスポートの詳細については、次を参照してください。[レポートのエクスポート&#40;レポート ビルダーおよび SSRS&#41; ](export-reports-report-builder-and-ssrs.md)と[ファイルまたはレポートをアップロード&#40;レポート マネージャー&#41;](../reports/upload-a-file-or-report-report-manager.md)します。  
+ アーカイブするレポートの数が少ない場合、レポートをエクスポートしてファイルとして保存することを検討してください。 レポートをアプリケーション (PDF や Excel など) にエクスポートしたら、そのレポートをファイルとして保存し、ネットワーク上の保護された共有ディレクトリに配置できます。 また、形式にかかわらず、レポート サーバー データベースにレポートのすべてのコピーを保存する場合、リソース アイテムとして保存した PDF または Excel ファイルをアップロードできます。 レポートのエクスポートの詳細については、「[レポート &#40;レポートビルダーおよび SSRS&#41;をエクスポート](export-reports-report-builder-and-ssrs.md)する」および「[ファイルまたは &#40;レポートをアップロードするレポートマネージャー ](../reports/upload-a-file-or-report-report-manager.md)&#41;」を参照してください。  
   
 
   
@@ -72,15 +72,15 @@ ms.locfileid: "66107630"
   
 -   [SharePoint ライブラリへのレポートの保存 &#40;レポート ビルダー&#41;](save-a-report-to-a-sharepoint-library-report-builder.md)  
   
--   [お使いのコンピューターにレポートを保存&#40;レポート ビルダー&#41;](../save-reports-to-your-computer-report-builder.md)  
+-   [コンピューターにレポートを保存 &#40;レポートビルダー&#41;](../save-reports-to-your-computer-report-builder.md)  
   
 
   
 ## <a name="see-also"></a>参照  
  [レポート、レポート パーツ、およびレポート定義 (レポート ビルダーおよび SSRS)](../report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
- [インストール、アンインストール、およびレポート ビルダーのサポート](../install-uninstall-and-report-builder-support.md)   
+ [インストール、アンインストール、およびレポートビルダーサポート](../install-uninstall-and-report-builder-support.md)   
  [レポートの検索、表示、管理 (レポート ビルダーおよび SSRS)](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [レポートのエクスポート&#40;レポート ビルダーおよび SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
+ [レポートのエクスポート &#40;レポートビルダーと SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
  [レポートの印刷 &#40;レポート ビルダーおよび SSRS&#41;](print-reports-report-builder-and-ssrs.md)  
   
   

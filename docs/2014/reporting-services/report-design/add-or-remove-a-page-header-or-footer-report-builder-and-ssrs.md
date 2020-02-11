@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 88a4cb2598b8c57813f3d2034434eeef31f49a76
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106548"
 ---
 # <a name="add-or-remove-a-page-header-or-footer-report-builder-and-ssrs"></a>ページ ヘッダーまたはページ フッターの追加および削除 (レポート ビルダーおよび SSRS)
@@ -47,11 +47,11 @@ ms.locfileid: "66106548"
   
     -   **四角形**  
   
-    -   **[イメージ]**  
+    -   **Image**  
   
-3.  ページ ヘッダーを右クリックして **[ヘッダーのプロパティ]** をクリックし、罫線、背景画像、または色を追加したり、ヘッダーの幅を調整したりします。 **[OK]** をクリックします。  
+3.  ページ ヘッダーを右クリックして **[ヘッダーのプロパティ]** をクリックし、罫線、背景画像、または色を追加したり、ヘッダーの幅を調整したりします。 次に、 **[OK]** をクリックします  
   
-4.  ページ フッターを右クリックして **[フッターのプロパティ]** をクリックし、罫線、背景画像、または色を追加したり、フッターの幅を調整したりします。 **[OK]** をクリックします。  
+4.  ページ フッターを右クリックして **[フッターのプロパティ]** をクリックし、罫線、背景画像、または色を追加したり、フッターの幅を調整したりします。 次に、 **[OK]** をクリックします  
   
 ### <a name="to-remove-a-page-header-or-footer"></a>ページ ヘッダーまたはページ フッターを削除するには  
   
@@ -63,6 +63,6 @@ ms.locfileid: "66106548"
 >  ページ ヘッダーまたはページ フッターを削除すると、レポートから消去されます。 それまでにページ ヘッダーまたはページ フッターに追加したアイテムは、後でページ ヘッダーまたはページ フッターを再び追加しても再表示されません。  
   
 ## <a name="see-also"></a>参照  
- [ページ ヘッダーとページ フッター (レポート ビルダーおよび SSRS)](page-headers-and-footers-report-builder-and-ssrs.md)  
+ [ページ ヘッダーとページ フッター &#40;レポート ビルダーおよび SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)  
   
   
