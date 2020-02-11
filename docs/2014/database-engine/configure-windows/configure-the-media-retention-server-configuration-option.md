@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d9e936c25db4522a949fb97257e136ba6799697f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62811346"
 ---
 # <a name="configure-the-media-retention-server-configuration-option"></a>media retention サーバー構成オプションの構成
@@ -30,9 +30,9 @@ ms.locfileid: "62811346"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [推奨事項](#Recommendations)  
+     [Recommendations (推奨事項)](#Recommendations)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **以下を使用して media retention オプションを構成するには:**  
   
@@ -40,7 +40,7 @@ ms.locfileid: "62811346"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **補足情報:** [Media retention オプションを構成した後](#FollowUp)  
+-   **補足情報:** [media retention オプションを構成した後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
@@ -95,10 +95,10 @@ GO
   
  詳細については、「 [サーバー構成オプション &#40;SQL Server&#41;](server-configuration-options-sql-server.md)」を参照してください。  
   
-##  <a name="FollowUp"></a>補足情報: Media retention オプションを構成した後  
+##  <a name="FollowUp"></a>補足情報: media retention オプションを構成した後  
  新しい設定は、サーバーを再起動しなくてもすぐに有効になります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SQL Server データベースのバックアップと復元](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [RECONFIGURE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reconfigure-transact-sql)   

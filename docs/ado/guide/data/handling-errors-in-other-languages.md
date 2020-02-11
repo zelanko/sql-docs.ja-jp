@@ -1,5 +1,5 @@
 ---
-title: その他の言語でのエラー処理 |Microsoft Docs
+title: 他の言語でのエラーの処理 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -11,14 +11,14 @@ ms.assetid: 8c57f35e-3c04-4f17-bf3e-3ad053951530
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 83d9430dc368a3dc9eb93719f9698b0d39b1385b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925164"
 ---
 # <a name="handling-errors-in-other-languages"></a>他の言語でエラーを処理する
-ここまでは、このセクションでは、Microsoft® Visual Basic® の観点からのエラーについて説明しました。 このセクションの残りの部分では、Visual Basic 以外の言語でのエラー処理の概要を説明します。  
+ここまでで、このセクションでは、Microsoft® Visual Basic®の観点からのエラーについて説明しました。 このセクションの残りの部分では、Visual Basic 以外の言語でのエラー処理の概要について説明します。  
   
  このセクションでは、次のトピックを扱います。  
   

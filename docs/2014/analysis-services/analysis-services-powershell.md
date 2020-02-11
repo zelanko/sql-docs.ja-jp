@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f75298a4701f15a1fc0f3f471bf7628f4a7030c1
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72782652"
 ---
 # <a name="analysis-services-powershell"></a>Analysis Services PowerShell
-  [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] には、Windows PowerShell を使用した Analysis Services オブジェクトの移動、管理、およびクエリを実行するための Analysis Services PowerShell (SQLAS) プロバイダーとコマンドレットが含まれています。  
+  [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)]には、Analysis Services PowerShell (SQLAS) プロバイダーとコマンドレットが含まれています。これにより、Windows PowerShell を使用して Analysis Services オブジェクトの移動、管理、およびクエリを実行できるようになります。  
   
  Analysis Services PowerShell は、次の要素で構成されています。  
   
@@ -28,38 +28,38 @@ ms.locfileid: "72782652"
   
 -   処理、ロール管理、パーティション管理、バックアップと復元などの日常的な操作に使用するタスク固有のコマンドレット。  
   
-## <a name="in-this-article"></a>この記事では、次の項目が扱われます。  
+## <a name="in-this-article"></a>この記事の内容  
  [前提条件](#bkmk_prereq)  
   
  [サポートされている Analysis Services のバージョンとモード](#bkmk_vers)  
   
  [認証要件とセキュリティに関する考慮事項](#bkmk_auth)  
   
- [PowerShell タスクの Analysis Services](#bkmk_tasks)  
+ [Analysis Services PowerShell タスク](#bkmk_tasks)  
 
 構文と例の詳細については、「 [PowerShell リファレンスの Analysis Services](/sql/analysis-services/powershell/analysis-services-powershell-reference)」を参照してください。
 
-##  <a name="bkmk_prereq"></a> の前提条件  
+##  <a name="bkmk_prereq"></a> 前提条件  
  Windows PowerShell 2.0 がインストールされている必要があります。 新しいバージョンの Windows オペレーティング システムでは、既定でインストールされます。 詳細については、「 [Windows PowerShell 2.0 のインストール](https://msdn.microsoft.com/library/ff637750.aspx)」を参照してください。
 
 <!-- ff637750.aspx above is linked to by:  (https://go.microsoft.com/fwlink/?LinkId=227613). -->
   
  SQL Server PowerShell (SQLPS) モジュールとクライアント ライブラリを含んだ SQL Server 機能をインストールする必要があります。 その最も簡単な方法は、SQL Server Management Studio をインストールすることです。SQL Server Management Studio をインストールすると、PowerShell の機能とクライアント ライブラリも自動的にインストールされます。 SQL Server PowerShell (SQLPS) モジュールには、Analysis Services オブジェクト階層の移動に使用する SQLASCmdlets モジュールと SQLAS プロバイダーなど、すべての SQL Server 機能用の PowerShell プロバイダーとコマンドレットが含まれています。  
   
- `SQLAS` プロバイダーとコマンドレットを使用するには、 **Sqlps**モジュールをインポートする必要があります。 SQLAS プロバイダーは、`SQLServer` プロバイダーの拡張機能です。 SQLPS モジュールをインポートするには、いくつかの方法があります。 詳細については、「 [SQLPS モジュールのインポート](../../2014/database-engine/import-the-sqlps-module.md)」を参照してください。  
+ プロバイダーとコマンドレットを使用するには、Sqlps モジュールをインポートする必要があります。 **** `SQLAS` SQLAS プロバイダーは、 `SQLServer`プロバイダーの拡張機能です。 SQLPS モジュールをインポートするには、いくつかの方法があります。 詳細については、「 [SQLPS モジュールのインポート](../../2014/database-engine/import-the-sqlps-module.md)」を参照してください。  
   
  Analysis Services インスタンスにリモート アクセスするには、リモート管理とファイル共有を有効にしておく必要があります。 詳細については、このトピックの「[リモート管理の有効化](#bkmk_remote)」を参照してください。  
   
-##  <a name="bkmk_vers"></a> サポートされている Analysis Services のバージョンとモード  
+##  <a name="bkmk_vers"></a>サポートされている Analysis Services のバージョンとモード  
  現在、Analysis Services PowerShell は、Windows Server 2008 R2、Windows Server 2008 SP1、または Windows 7 で動作する [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Analysis Services のすべてのエディションでサポートされています。  
   
  次の表に、さまざまなコンテキストで利用可能な Analysis Services PowerShell の機能を示します。  
   
-|コンテキスト|PowerShell の利用可能な機能|  
+|Context|PowerShell の利用可能な機能|  
 |-------------|-------------------------------------|  
 |多次元のインスタンスとデータベース|ローカルおよびリモート管理でサポートされます。<br /><br /> Merge-partition にはローカル接続が必要です。|  
 |表形式のインスタンスとデータベース|ローカルおよびリモート管理でサポートされます。<br /><br /> 詳細については、「 [PowerShell を使用したテーブルモデルの管理](https://go.microsoft.com/fwlink/?linkID=227685)」の2011年8月のブログを参照してください。|  
-|PowerPivot for SharePoint のインスタンスとデータベース|制限付きでサポートされます。 HTTP 接続と SQLAS プロバイダーを使用して、インスタンスとデータベースの情報を表示できます。<br /><br /> ただし、コマンドレットの使用はサポートされていません。 インメモリ PowerPivot データベースのバックアップと復元に Analysis Services PowerShell は使用しないでください。また、ロールの追加や削除、データの処理、任意の XMLA スクリプトの実行にも使用しないでください。<br /><br /> PowerPivot for SharePoint には、構成のために個別に提供される組み込みの PowerShell サポートがあります。 詳細については、「 [PowerShell Reference for PowerPivot for SharePoint](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)」を参照してください。|  
+|PowerPivot for SharePoint のインスタンスとデータベース|制限付きサポート。 HTTP 接続と SQLAS プロバイダーを使用して、インスタンスとデータベースの情報を表示できます。<br /><br /> ただし、コマンドレットの使用はサポートされていません。 インメモリ PowerPivot データベースのバックアップと復元に Analysis Services PowerShell は使用しないでください。また、ロールの追加や削除、データの処理、任意の XMLA スクリプトの実行にも使用しないでください。<br /><br /> PowerPivot for SharePoint には、構成のために個別に提供される組み込みの PowerShell サポートがあります。 詳細については、「 [PowerShell Reference for PowerPivot for SharePoint](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)」を参照してください。|  
 |ローカル キューブへのネイティブ接続<br /><br /> "Data Source = c:\backup\test.cub"|サポートされていません。|  
 |SharePoint 内の BI セマンティック モデル (.bism) 接続ファイルへの HTTP 接続<br /><br /> "Data Source =http://server/shared_docs/name.bism"|サポートされていません。|  
 |PowerPivot データベースへの埋め込み接続<br /><br /> "Data Source = $Embedded $"|サポートされていません。|  
@@ -76,13 +76,13 @@ ms.locfileid: "72782652"
   
  -Credential パラメーターは、ユーザー名とパスワードを指定する PSCredential オブジェクトを受け取ります。 Analysis Services PowerShell では、既存の接続のコンテキスト内で実行されるコマンドレットとは対照的に、-Credential パラメーターを使用して、Analysis Services への接続要求を行うコマンドレットを使用できます。 接続要求を行うコマンドレットとしては、Invoke-ASCmd、Backup-ASDatabase、Restore-ASDatabase などが挙げられます。 これらのコマンドレットでは、次の条件が満たされている場合、-Credential パラメーターを使用できます。  
   
-1.  サーバーが HTTP アクセス用に構成されている (つまり、Analysis Services に接続する際は、IIS が接続を処理し、ユーザー名とパスワードを読み取り、対応するユーザー ID の権限を借用する)。 詳細については、「[インターネット インフォメーション サービス (IIS) 8.0 上の Analysis Services への HTTP アクセスの構成](instances/configure-http-access-to-analysis-services-on-iis-8-0.md)」を参照してください。  
+1.  サーバーが HTTP アクセス用に構成されている (つまり、Analysis Services に接続する際は、IIS が接続を処理し、ユーザー名とパスワードを読み取り、対応するユーザー ID の権限を借用する)。 詳細については、「 [インターネット インフォメーション サービス &#40;IIS&#41; 8.0 上の Analysis Services への HTTP アクセスの構成](instances/configure-http-access-to-analysis-services-on-iis-8-0.md)」をご覧ください。  
   
 2.  Analysis Services の HTTP アクセス用に作成された IIS 仮想ディレクトリが、基本認証を使用するように構成されている。  
   
 3.  資格情報オブジェクトによって指定されたユーザー名とパスワードが、Windows ユーザー ID へと解決される。 Analysis Services は、この ID を現在のユーザーとして使用します。 Windows ユーザーでない場合、または要求された操作を実行するための十分な権限がそのユーザーにない場合、要求は失敗します。  
   
- 資格情報オブジェクトを作成するには、Get-Credential コマンドレットを使用して、対象のオペレーターの資格情報を収集します。 この資格情報オブジェクトを Analysis Services への接続コマンドに使用できます。 次の例は、1つの方法を示しています。 この例では、HTTP アクセス用に構成されたローカルインスタンス (`SQLSERVER:\SQLAS\HTTP_DS`) への接続です。  
+ 資格情報オブジェクトを作成するには、Get-Credential コマンドレットを使用して、対象のオペレーターの資格情報を収集します。 この資格情報オブジェクトを Analysis Services への接続コマンドに使用できます。 次の例は、1つの方法を示しています。 この例では、HTTP アクセス用に構成され`SQLSERVER:\SQLAS\HTTP_DS`たローカルインスタンス () への接続です。  
   
 ```powershell
 $cred = Get-Credential adventureworks\dbadmin  
@@ -93,7 +93,7 @@ Invoke-ASCmd -Inputfile:"c:\discoverconnections.xmla" -Credential:$cred
   
  PowerShell で指定した資格情報、クエリ、およびコマンドは、そのままトランスポート層に渡されることに注意してください。 機密性の高いコンテンツがスクリプトに含まれていると、悪質なインジェクション攻撃のリスクが増大します。  
   
- **Microsoft のセキュリティで保護された文字列オブジェクトとしてのパスワードの指定**  
+ **Microsoft.Secure.String オブジェクトでのパスワードの指定**  
   
  バックアップや復元など、一部の操作については、コマンドにパスワードを指定した場合にアクティブ化される暗号化オプションがサポートされます。 パスワードを指定すると、バックアップ ファイルを暗号化 (または暗号化を解除) するように、Analysis Services 伝えられます。 このパスワードは、Analysis Services において、セキュリティで保護された文字列オブジェクトとしてインスタンス化されます。 次の例では、オペレーターから実行時にパスワードを収集します。  
   
@@ -116,15 +116,15 @@ Remove-Variable -Name pwd
   
  ここでは、Analysis Services PowerShell を使用する一般的なタスクについて説明します。  
   
--   [Analysis Services プロバイダーとコマンドレットを読み込む](#bkmk_load)  
+-   [Analysis Services プロバイダーとコマンドレットの読み込み](#bkmk_load)  
   
--   [リモート管理を有効にする](#bkmk_remote)  
+-   [リモート管理の有効化](#bkmk_remote)  
   
 -   [Analysis Services オブジェクトへの接続](#bkmk_connect)  
   
 -   [サービスを管理する](#bkmk_admin)  
   
--   [PowerShell の Analysis Services に関するヘルプを表示する](#bkmk_help)  
+-   [Analysis Services PowerShell のヘルプ](#bkmk_help)  
   
 ###  <a name="bkmk_load"></a>Analysis Services プロバイダーとコマンドレットを読み込む  
  Analysis Services プロバイダーは、SQLPS モジュールをインポートすると利用可能になる SQL Server ルート プロバイダーの拡張機能です。 Analysis Services コマンドレットも同時に読み込まれます。プロバイダーなしでコマンドレットを使用する場合は、コマンドレットを別に読み込むこともできます。  
@@ -148,7 +148,7 @@ Remove-Variable -Name pwd
   
 1.  ローカル コンピューターとリモート コンピューターの両方で、クライアント ツールとサーバー ツールが [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] のバージョンであることを確認します。  
   
-2.  Analysis Services インスタンスをホストしているリモート サーバーで、Windows ファイアウォールの TCP ポート 2383 を開きます。 Analysis Services を名前付きインスタンスとしてインストールした場合やカスタム ポートを使用している場合は、ポート番号は異なります。 詳細については、「 [Analysis Services のアクセスを許可するための Windows ファイアウォールの構成](instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)」をご参照ください。  
+2.  Analysis Services インスタンスをホストしているリモート サーバーで、Windows ファイアウォールの TCP ポート 2383 を開きます。 Analysis Services を名前付きインスタンスとしてインストールした場合やカスタム ポートを使用している場合は、ポート番号は異なります。 詳細については、「 [Configure the Windows Firewall to Allow Analysis Services Access](instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)」をご参照ください。  
   
 3.  リモート サーバーで、リモート プロシージャ コール (RPC) サービス、TCP/IP NetBIOS Helper サービス、WMI (Windows Management Instrumentation) サービス、Windows リモート管理 (WS-Management) サービスが開始されていることを確認します。  
   
@@ -156,9 +156,9 @@ Remove-Variable -Name pwd
   
 5.  [コンピューターの構成]、[管理用テンプレート]、[ネットワーク]、[ネットワーク接続]、[Windows ファイアウォール]、[ドメイン プロファイル] の順に開きます。  
   
-6.  **[Windows ファイアウォール: 着信リモート管理の例外を許可する]** をダブルクリックし、 **[有効]** を選択して、 **[OK]** をクリックします。  
+6.  [ **Windows ファイアウォール: 着信リモート管理の例外を許可する**] をダブルクリックし、[**有効**] を選択して、[ **OK**] をクリックします。  
   
-7.  **[Windows ファイアウォール: 着信ファイルとプリンターの共有の例外を許可する]** をダブルクリックし、 **[有効]** を選択して、 **[OK]** をクリックします。  
+7.  [ **Windows ファイアウォール: 着信ファイルとプリンターの共有の例外を許可する**] をダブルクリックし、[**有効**] を選択して、[ **OK**] をクリックします。  
   
 8.  クライアントツールがあるローカルコンピューターで、次のコマンドレットを使用してリモート管理を確認し、*リモートサーバー名*のプレースホルダーの実際のサーバー名に置き換えます。 Analysis Services が既定のインスタンスとしてインストールされている場合は、インスタンス名は省略します。 このコマンドが機能するためには、事前に SQLPS モジュールをインポートしておく必要があります。  
   
@@ -184,7 +184,8 @@ Enable-PSRemoting
   
  ![Analysis Services へのネイティブ接続](media/ssas-powershell-nativeconnection.gif "Analysis Services へのネイティブ接続")  
   
- 次の例は、ネイティブ接続を使用してオブジェクト階層を移動する方法を示しています。 プロバイダーから `dir` を実行して、インスタンスの情報を表示できます。 `cd` を使用して、そのインスタンスのオブジェクトを表示できます。  
+ 次の例は、ネイティブ接続を使用してオブジェクト階層を移動する方法を示しています。 プロバイダーから `dir` を実行して、インスタンスの情報を表示できます。 
+  `cd` を使用して、そのインスタンスのオブジェクトを表示できます。  
   
 ```  
 PS SQLSERVER:> cd sqlas  
@@ -193,15 +194,16 @@ PS SQLSERVER\sqlas:> cd localhost\default
 PS SQLSERVER\sqlas\localhost\default:> dir  
 ```  
   
- アセンブリ、データベース、ロール、トレースの各コレクションを確認する必要があります。 `cd` と `dir` を引き続き使用して、各コレクションの内容を表示できます。  
+ アセンブリ、データベース、ロール、トレースの各コレクションを確認する必要があります。 
+  `cd` と `dir` を引き続き使用して、各コレクションの内容を表示できます。  
   
  **Analysis Services への HTTP 接続**  
   
  ![Analysis Services への HTTP 接続](media/ssas-powershell-httpconnection.gif "Analysis Services への HTTP 接続")  
   
- Http 接続は、このトピックの手順を使用して http アクセス用にサーバーを構成した場合に便利です。 [ &#40;インターネットインフォメーションサービス&#41; IIS 8.0 の Analysis Services への http アクセスの構成](instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
+ Http 接続は、このトピックの手順を使用して http アクセス用にサーバーを構成した場合に役立ちます。[インターネットインフォメーションサービス &#40;IIS&#41; 8.0 の Analysis Services への Http アクセスの構成](instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
   
- http://localhost/olap/msmdpump.dllのサーバー URL を想定した場合、接続は次のようになります。  
+ サーバーの URL がのhttp://localhost/olap/msmdpump.dll場合、接続は次のようになります。  
   
 ```  
 PS SQLSERVER\sqlas:> cd http_ds  
@@ -234,19 +236,22 @@ Restart-Service mssqlserverolapservice
 ###  <a name="bkmk_help"></a>PowerShell の Analysis Services に関するヘルプを表示する  
  次のコマンドレットを使用して、コマンドレットの機能を確認したり、サービス、プロセス、およびオブジェクトの詳細情報を表示できます。  
   
-1.  `Get-Help` は、Analysis Services コマンドレットの組み込みのヘルプ (例を含む) を返します。  
+1.  
+  `Get-Help` は、Analysis Services コマンドレットの組み込みのヘルプ (例を含む) を返します。  
   
     ```powershell
     Get-Help invoke-ascmd -Examples  
     ```  
   
-2.  `Get-Command` は、11 個の Analysis Services PowerShell コマンドレットの一覧を返します。  
+2.  
+  `Get-Command` は、11 個の Analysis Services PowerShell コマンドレットの一覧を返します。  
   
     ```powershell
     Get-Command -module SQLASCmdlets  
     ```  
   
-3.  `Get-Member` は、サービスまたはプロセスのプロパティやメソッドを返します。  
+3.  
+  `Get-Member` は、サービスまたはプロセスのプロパティやメソッドを返します。  
   
     ```powershell
     Get-Service mssqlserverolapservice | Get-Member -Type Property  
@@ -260,14 +265,16 @@ Restart-Service mssqlserverolapservice
     Get-Process msmdsrv | Get-Member -Type Property  
     ```  
   
-4.  `Get-Member` には、サーバー インスタンスを指定する SQLAS プロバイダーを使用してオブジェクトのプロパティやメソッド (サーバー オブジェクトの AMO メソッドなど) を返すという使用方法もあります。  
+4.  
+  `Get-Member` には、サーバー インスタンスを指定する SQLAS プロバイダーを使用してオブジェクトのプロパティやメソッド (サーバー オブジェクトの AMO メソッドなど) を返すという使用方法もあります。  
   
     ```
     PS SQLSERVER:\sqlas\localhost\default > $serverObj = New-Object Microsoft.AnalysisServices.Server  
     PS SQLSERVER:\sqlas\localhost\default > $serverObj = | Get-Member -Type Method  
     ```  
   
-5.  `Get-PSdrive` は、現在インストールされているプロバイダーの一覧を返します。 SQLPS モジュールをインポートしてあると、`SQLServer` プロバイダーが一覧に表示されます (SQLAS は SQLServer プロバイダーの一部であり、個別に一覧には表示されません)。  
+5.  
+  `Get-PSdrive` は、現在インストールされているプロバイダーの一覧を返します。 SQLPS モジュールをインポートしてあると、`SQLServer` プロバイダーが一覧に表示されます (SQLAS は SQLServer プロバイダーの一部であり、個別に一覧には表示されません)。  
   
     ```powershell
     Get-PSDrive  
@@ -276,6 +283,6 @@ Restart-Service mssqlserverolapservice
 ## <a name="see-also"></a>参照  
  [SQL Server PowerShell のインストール](../database-engine/install-windows/install-sql-server-powershell.md)   
  [PowerShell を使用したテーブルモデルの管理 (ブログ)](https://go.microsoft.com/fwlink/?linkID=227685)   
- [インターネット インフォメーション サービス (IIS) 8.0 上の Analysis Services への HTTP アクセスの構成](instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
+ [インターネットインフォメーションサービス &#40;IIS&#41; 8.0 の Analysis Services への HTTP アクセスを構成する](instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
   
   

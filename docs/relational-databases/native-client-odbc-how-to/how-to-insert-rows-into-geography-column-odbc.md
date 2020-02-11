@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 94c533392a824bf14b2b6f8f5ef57674a9a8c440
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73781291"
 ---
 # <a name="how-to-insert-rows-into-geography-column-odbc"></a>Geography 列に行を挿入する方法 (ODBC)
@@ -27,18 +27,19 @@ ms.locfileid: "73781291"
   
  このサンプルは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] より前のバージョンの [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] では動作しません。  
   
- 空間ストレージの詳細については、「 [ &#40;空間&#41;データ SQL Server](../../relational-databases/spatial/spatial-data-sql-server.md)」を参照してください。  
+ 空間ストレージの詳細については、「[空間データ &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)」を参照してください。  
   
 ## <a name="example"></a>例  
- 最初の ([!INCLUDE[tsql](../../includes/tsql-md.md)]) コードリストは、このサンプルで使用するテーブルを作成します。  
+ 1つ目[!INCLUDE[tsql](../../includes/tsql-md.md)]の () コードリストは、このサンプルで使用するテーブルを作成します。  
   
  odbc32.lib と user32.lib を使用して 3 つ目の (C++) コード リストをコンパイルします。 INCLUDE 環境変数に、sqlncli を含むディレクトリが含まれていることを確認します。  
   
  このサンプルを 64 ビット オペレーティング システムで 32 ビット アプリケーションとしてビルドし、実行する場合、%windir%\SysWOW64\odbcad32.exe の ODBC アドミニストレーターを使用して ODBC データ ソースを作成する必要があります。  
   
- このサンプルでは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 名前付きインスタンスに接続するには、ODBC データ ソースの定義を変更し、server\namedinstance 形式でそのインスタンスを指定します。 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] は、既定で名前付きインスタンスとしてインストールされます。  
+ このサンプルでは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 名前付きインスタンスに接続するには、ODBC データ ソースの定義を変更し、server\namedinstance 形式でそのインスタンスを指定します。 
+  [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] は、既定で名前付きインスタンスとしてインストールされます。  
   
- 3番目の ([!INCLUDE[tsql](../../includes/tsql-md.md)]) コードリストは、このサンプルで使用されるテーブルを削除します。  
+ 3番目[!INCLUDE[tsql](../../includes/tsql-md.md)]の () コードリストは、このサンプルで使用されるテーブルを削除します。  
   
 ```sql
 use tempdb  

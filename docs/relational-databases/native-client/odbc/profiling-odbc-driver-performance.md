@@ -21,15 +21,16 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c15c8920d2a0188a7dbe517149dc369dea95522e
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73760706"
 ---
 # <a name="profiling-odbc-driver-performance"></a>ODBC ドライバーのパフォーマンスのプロファイル
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
+  
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは、次の 2 種類のパフォーマンス データをプロファイルできます。  
   
 -   実行時間の長いクエリ。  
@@ -61,7 +62,8 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
    the log file, logging disabled.  
 ```  
   
- ドライバーは、環境ハンドルが閉じられると、パフォーマンス データの収集を停止します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client アプリケーションが、それぞれ固有の環境ハンドルを持つ複数の接続を保持している場合、関連付けられている環境ハンドルのいずれかが閉じられると、ドライバーはパフォーマンス データの収集を停止します。  
+ ドライバーは、環境ハンドルが閉じられると、パフォーマンス データの収集を停止します。 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client アプリケーションが、それぞれ固有の環境ハンドルを持つ複数の接続を保持している場合、関連付けられている環境ハンドルのいずれかが閉じられると、ドライバーはパフォーマンス データの収集を停止します。  
   
  ドライバーのパフォーマンス データは、SQLPERF データ構造体に保存するか、タブ区切り形式ファイルに記録できます。 このデータには、次の種類の統計情報が含まれます。  
   
@@ -71,7 +73,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 -   ネットワーク  
   
--   time  
+-   Time  
   
  次の表では、SQLPERF データ構造体のフィールドについて説明します。この説明は、パフォーマンス ログ ファイルに記録される統計情報にも適用されます。  
   
@@ -100,13 +102,13 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 |CurrentStmtCount|ドライバー内で開かれているすべての接続上で、現在開いているステートメント ハンドルの数。|  
 |MaxOpenStmt|SQL_PERF_START 以降に同時に開かれたステートメント ハンドルの最大数。|  
 |SumOpenStmt|SQL_PERF_START 以降に開かれたステートメント ハンドルの数。|  
-|**接続の統計情報:**||  
+|**接続統計情報 :**||  
 |CurrentConnectionCount|アプリケーションがサーバーに対して開いている現在アクティブな接続ハンドルの数。|  
 |MaxConnectionsOpened|SQL_PERF_START 以降に開かれたコンカレント接続ハンドルの最大数。|  
 |SumConnectionsOpened|SQL_PERF_START 以降に開かれた接続ハンドルの合計数。|  
 |SumConnectionTime|SQL_PERF_START 以降に開かれたすべての接続の接続時間の合計。 たとえば、アプリケーションが接続を 10 開いていて、各接続を 5 秒間保持していた場合、SumConnectionTime は 50 秒になります。|  
 |AvgTimeOpened|SumConnectionsOpened/ SumConnectionTime の計算結果になります。|  
-|**ネットワークの統計情報:**||  
+|**ネットワーク統計情報 :**||  
 |ServerRndTrips|ドライバーがサーバーにコマンドを送信し、応答を受け取った回数。|  
 |BuffersSent|SQL_PERF_START 以降にドライバーから [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に送信された表形式データ ストリーム (TDS) パケットの数。 大量の処理を伴うコマンドは複数のバッファーを使用する可能性があるので、このようなコマンドがサーバーに送信され、6 個のパケットを使用する場合、ServerRndTrips は 1 ずつ増加しますが、BuffersSent は 6 ずつ増加します。|  
 |BuffersRec|アプリケーションがドライバーの使用を開始した後に、ドライバーが [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] から受信した TDS パケットの数。|  
@@ -121,7 +123,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 |msNetworkServerTime|ドライバーがサーバーからの応答待ちに要した累積時間。|  
   
 ## <a name="see-also"></a>参照  
- [ &#40;ODBC&#41; ](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  の SQL Server Native Client  
- [ODBC ドライバーのパフォーマンスのプロファイル方法に&#40;関するトピック odbc&#41;](../../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
+ [SQL Server Native Client &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
+ [Odbc&#41;&#40;ODBC ドライバーのパフォーマンスのプロファイル方法に関するトピック](../../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
   
   

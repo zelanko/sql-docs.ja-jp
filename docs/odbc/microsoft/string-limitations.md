@@ -1,5 +1,5 @@
 ---
-title: 文字列の制限事項 |Microsoft Docs
+title: 文字列に関する制限事項 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,17 +14,17 @@ ms.assetid: ec1da65f-c69d-415d-bf75-8fda8aa2b39f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7faab41bd52397ac0d352e04a9ec153571e93f1e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67948760"
 ---
 # <a name="string-limitations"></a>文字列の制限事項
-SQL ステートメントの文字列の最大長は、65,000 文字です。  
+SQL ステートメント文字列の最大長は65000文字です。  
   
- Microsoft Access ドライバーを使用すると、(単一引用符、いない二重引用符) で sql-92 の文字列定数のみがサポートされます。  
+ Microsoft Access ドライバーが使用されている場合は、SQL-92 文字列定数 (二重引用符ではなく、単一引用符で囲む) のみがサポートされます。  
   
- パイプ文字 (&#124;) かどうか文字がバック引用符で囲まれているかどうか、文字列では使用できません。  
+ 文字が逆引用符で囲まれているかどうかにかかわらず、パイプ文字 (&#124;) を文字列内で使用することはできません。  
   
- 相互運用性を最大に、アプリケーションが、パラメーターの文字列を渡す必要がありますのではなく渡す文字列を引用符で囲まれました。
+ 相互運用性を最大にするために、アプリケーションは、引用符で囲まれた文字列を渡すのではなく、パラメーターに文字列を渡す必要があります。

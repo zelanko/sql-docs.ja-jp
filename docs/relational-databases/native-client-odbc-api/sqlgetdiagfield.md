@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f2a3d8d829794692cff6ecb9879e6f62f0b0b91b
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73786475"
 ---
 # <a name="sqlgetdiagfield"></a>SQLGetDiagField
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、 **SQLGetDiagField**用に次の追加の診断フィールドが指定されています。 これらのフィールドでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アプリケーションに関する各種エラー報告がサポートされます。また、これらのフィールドは、接続されている ODBC 接続ハンドルや ODBC ステートメント ハンドルで生成されるすべての診断レコードで使用できます。 これらのフィールドは、sqlncli.h で定義されています。  
+  Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client ODBC ドライバーでは、 **SQLGetDiagField**用に次の追加の診断フィールドが指定されています。 これらのフィールドでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アプリケーションに関する各種エラー報告がサポートされます。また、これらのフィールドは、接続されている ODBC 接続ハンドルや ODBC ステートメント ハンドルで生成されるすべての診断レコードで使用できます。 これらのフィールドは、sqlncli.h で定義されています。  
   
 |診断レコードのフィールド|[説明]|  
 |------------------------------|-----------------|  
@@ -36,9 +36,10 @@ ms.locfileid: "73786475"
   
  文字データを含む [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 固有の診断フィールドの SQL_DIAG_SS_PROCNAME と SQL_DIAG_SS_SRVNAME では、NULL で終わる ANSI 文字列または Unicode 文字列としてデータをクライアントに返します。 必要に応じて、文字数を文字幅で調整する必要があります。 また、TCHAR や SQLTCHAR などの移植可能な C データ型を使用して、プログラム変数の適切な長さを保証できます。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、次の補足の動的機能コードが報告されます。この動的機能コードでは、最後に試行された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ステートメントが特定されます。 動的機能コードは、診断レコード セットのヘッダー (レコード 0) に返されるので、各実行が成功しても失敗しても参照できます。  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、次の補足の動的機能コードが報告されます。この動的機能コードでは、最後に試行された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ステートメントが特定されます。 動的機能コードは、診断レコード セットのヘッダー (レコード 0) に返されるので、各実行が成功しても失敗しても参照できます。  
   
-|動的機能コード|ソース|  
+|動的機能コード|source|  
 |---------------------------|------------|  
 |SQL_DIAG_DFC_SS_ALTER_DATABASE|ALTER DATABASE ステートメント|  
 |SQL_DIAG_DFC_SS_CHECKPOINT|CHECKPOINT ステートメント|  
@@ -82,7 +83,7 @@ ms.locfileid: "73786475"
 |SQL_DIAG_DFC_SS_SET_STATISTICS|SET STATISTICS IO ステートメントまたは SET STATISTICS TIME ステートメント|  
 |SQL_DIAG_DFC_SS_SET_TEXTSIZE|SET TEXTSIZE ステートメント|  
 |SQL_DIAG_DFC_SS_SETUSER|SETUSER ステートメント|  
-|SQL_DIAG_DFC_SS_SET_XCTLVL|SET TRANSACTION ISOLATION LEVEL ステートメント|  
+|SQL_DIAG_DFC_SS_SET_XCTLVL|SET TRANSACTION 分離レベルステートメント|  
 |SQL_DIAG_DFC_SS_SHUTDOWN|SHUTDOWN ステートメント|  
 |SQL_DIAG_DFC_SS_TRANS_BEGIN|BEGIN TRAN ステートメント|  
 |SQL_DIAG_DFC_SS_TRANS_COMMIT|COMMIT TRAN ステートメント|  
@@ -99,7 +100,7 @@ ms.locfileid: "73786475"
 ## <a name="sqlgetdiagfield-and-table-valued-parameters"></a>SQLGetDiagField とテーブル値パラメーター  
  SQLGetDiagField は、SQL_DIAG_SS_TABLE_COLUMN_NUMBER と SQL_DIAG_SS_TABLE_ROW_NUMBER の2つの診断フィールドを取得するために使用できます。 これらのフィールドは、診断レコードに関連するエラーまたは警告の原因となった値を特定するのに役立ちます。  
   
- テーブル値パラメーターの詳細については、「[テーブル値パラメーター &#40;の&#41;ODBC](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)」を参照してください。  
+ テーブル値パラメーターの詳細については、「[テーブル値パラメーター &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [SQLGetDiagField 関数](https://go.microsoft.com/fwlink/?LinkId=59352)   

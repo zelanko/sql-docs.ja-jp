@@ -16,16 +16,16 @@ ms.assetid: 0ed1ebc1-a1bd-4aed-9f46-615c5cf07827
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0d3ba6552861f162a8ba0755dc37e30bc965e2a4
-ms.sourcegitcommit: eae9efe2a2d3758685e85039ffb8fa698aa47f9b
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73962379"
 ---
 # <a name="sp_publisherproperty-transact-sql"></a>sp_publisherproperty (Transact-sql)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 以外の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パブリッシャーのパブリッシャーのプロパティを表示または変更します。 このストアドプロシージャは、ディストリビューター側で実行されます。  
+  以外[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のパブリッシャーのパブリッシャーのプロパティを表示または変更します。 このストアドプロシージャは、ディストリビューター側で実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -39,11 +39,11 @@ sp_publisherproperty [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publisher = ] 'publisher'` は異種パブリッシャーの名前です。 *パブリッシャー* は **sysname** 、既定値はありません。  
+`[ @publisher = ] 'publisher'`異種パブリッシャーの名前を指定します。 *publisher*は**sysname**で、既定値はありません。  
   
-`[ @propertyname = ] 'propertyname'` は、設定するプロパティの名前です。 *propertyname*は**sysname**で、次のいずれかの値を指定できます。  
+`[ @propertyname = ] 'propertyname'`設定するプロパティの名前を指定します。 *propertyname*は**sysname**で、次のいずれかの値を指定できます。  
   
-|ReplTest1|[説明]|  
+|値|[説明]|  
 |-----------|-----------------|  
 |**xactsetbatching**|パブリッシャーのトランザクションが、後続の処理のために、トランザクション全体で一貫性のあるセット (Xactsets と呼ばれます) にまとめられるかどうかを示します。 値が**enabled**の場合は、既定の Xactsets を作成できます。 値**disabled**は、既存の Xactsets が新しい Xactsets を作成せずに処理されることを意味します。|  
 |**xactsetjob**|Xactsets を作成するために Xactset ジョブを有効にするかどうかを示します。 値が**enabled**の場合は、Xactset ジョブが定期的に実行され、パブリッシャーで Xactsets が作成されます。 値が**disabled**の場合は、パブリッシャーに変更をポーリングするときに、ログリーダーエージェントによってのみ Xactsets が作成されることを意味します。|  
@@ -64,8 +64,8 @@ sp_publisherproperty [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
- **sp_publisherproperty**は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のパブリッシャーのトランザクションレプリケーションで使用されます。  
+## <a name="remarks"></a>解説  
+ **sp_publisherproperty**は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以外のパブリッシャーのトランザクションレプリケーションで使用されます。  
   
  *パブリッシャー*だけを指定した場合、結果セットには、設定可能なすべてのプロパティの現在の設定が含まれます。  
   
@@ -79,7 +79,7 @@ sp_publisherproperty [ @publisher = ] 'publisher'
  **Sp_publisherproperty**を実行できるのは、ディストリビューター側の固定サーバーロール**sysadmin**のメンバーだけです。  
   
 ## <a name="see-also"></a>参照  
- [Oracle パブリッシャー用のトランザクション セット ジョブの構成 &#40;レプリケーション Transact-SQL プログラミング&#41;](../../relational-databases/replication/administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
- [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Oracle パブリッシャー &#40;レプリケーション Transact-sql プログラミングのトランザクションセットジョブの構成&#41;](../../relational-databases/replication/administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
+ [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

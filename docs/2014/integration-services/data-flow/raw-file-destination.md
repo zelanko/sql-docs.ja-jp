@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b7996ed3cc3ea209361790f23f6955f09be035e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770859"
 ---
 # <a name="raw-file-destination"></a>RAW ファイル変換先 (Raw File destination)
@@ -53,9 +53,9 @@ ms.locfileid: "62770859"
   
  次の表では、WriteOption プロパティで使用できるオプションについて説明します。  
   
-|オプション|説明|  
+|オプション|[説明]|  
 |------------|-----------------|  
-|追加|既存のファイルにデータを追加します。 追加するデータのメタデータは、ファイル形式と一致している必要があります。|  
+|Append|既存のファイルにデータを追加します。 追加するデータのメタデータは、ファイル形式と一致している必要があります。|  
 |常に作成する|常に新しいファイルを作成します。|  
 |1 回だけ作成する|新しいファイルを 1 つ作成します。 ファイルが存在する場合、コンポーネントは失敗します。|  
 |切り捨てと追加|既存のファイルを切り捨て、データをそのファイルに書き込みます。 追加するデータのメタデータは、ファイル形式と一致している必要があります。|  
@@ -113,7 +113,7 @@ ms.locfileid: "62770859"
   
 1.  WriteOption プロパティを **CreateOnce** または **CreateAlways**に設定し、ループの繰り返しを 1 回実行します。 ファイルが作成されます。 これにより、追加するデータのメタデータとファイルが必ず一致するようになります。  
   
-2.  WriteOption プロパティをリセット**Append** ValidateExternalMetadata プロパティを設定および`False`します。  
+2.  WriteOption プロパティ**をにリセットし、** ValidateExternalMetadata プロパティをに`False`設定します。  
   
  **Append** オプションの代わりに **TruncateAppend** オプションを使用すると、以前の実行で追加された行が切り捨てられ、新しい行が追加されます。 また **TruncateAppend** オプションを使用するには、データがファイル形式に一致している必要があります。  
   
@@ -122,7 +122,7 @@ ms.locfileid: "62770859"
   
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [共通プロパティ](../common-properties.md)  
+-   [Common Properties](../common-properties.md)  
   
 -   [RAW ファイルのカスタム プロパティ](raw-file-custom-properties.md)  
   
@@ -133,7 +133,7 @@ ms.locfileid: "62770859"
  sqlservercentral.com のブログ「 [RAW ファイルは最高](http://www.sqlservercentral.com/blogs/stratesql/archive/2011/1/1/31-days-of-ssis-_1320_-raw-files-are-awesome-_2800_1_2F00_31_2900_.aspx)」  
   
 ## <a name="see-also"></a>参照  
- [RAW ファイル ソース](raw-file-source.md)   
- [データ フロー](data-flow.md)  
+ [Raw ファイルソース](raw-file-source.md)   
+ [Data Flow](data-flow.md)  
   
   

@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a0dfa9a95697c4bb1fcb2e4e5d3798f18e305e42
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211657"
 ---
 # <a name="rename-views"></a>ビューの名前の変更
@@ -32,7 +32,7 @@ ms.locfileid: "68211657"
   
      [前提条件](#Prerequisites)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **以下を使用してビューの名前を変更するには:**  
   

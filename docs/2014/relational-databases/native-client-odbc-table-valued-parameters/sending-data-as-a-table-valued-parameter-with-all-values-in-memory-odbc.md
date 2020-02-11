@@ -1,5 +1,5 @@
 ---
-title: すべての値 (ODBC) のメモリ内のテーブル値パラメーターとしてデータを送信する |マイクロソフトのドキュメント
+title: メモリ内のすべての値を含むテーブル値パラメーターとしてのデータの送信 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 03eeb209dfef3c2bfa9c2ffaea70cb24286c23f4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68205450"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc"></a>すべての値がメモリ内にある場合にテーブル値パラメーターとしてデータを送信 (ODBC)
-  このトピックでは、すべての値がメモリ内にある場合に、データをテーブル値パラメーターとしてストアド プロシージャに送信する方法について説明します。 テーブル値パラメーターを示す別のサンプルでは、次を参照してください。[テーブル値パラメーターの&#40;ODBC&#41;](table-valued-parameters-odbc.md)します。  
+  このトピックでは、すべての値がメモリ内にある場合に、データをテーブル値パラメーターとしてストアド プロシージャに送信する方法について説明します。 テーブル値パラメーターを示す別のサンプルについては、「[テーブル値パラメーターの使用 &#40;ODBC&#41;](table-valued-parameters-odbc.md)」を参照してください。  
   
 ## <a name="prerequisite"></a>前提条件  
  この手順では、次の [!INCLUDE[tsql](../../includes/tsql-md.md)] がサーバーで実行されていることを前提としています。  
@@ -86,7 +86,7 @@ from @Items
        sizeof(OrdDate), &cbOrdDate);  
     ```  
   
-3.  第 2 段階として、テーブル値パラメーターの列をバインドします。 最初、テーブル値パラメーターの序数にフォーカスが設定されます。 テーブルの値の列は、両者が ParameterNumber の列序数で、ストアド プロシージャのパラメーターと同じ方法で SQLBindParameter を使用してバインドされます。 テーブル値パラメーターがまだある場合は、順番にフォーカスを設定し、その列をバインドします。 最後に、パラメーターのフォーカスが 0 にリセットされます。  
+3.  第 2 段階として、テーブル値パラメーターの列をバインドします。 最初、テーブル値パラメーターの序数にフォーカスが設定されます。 次に、テーブル値の列は、ストアドプロシージャのパラメーターである場合と同じように、SQLBindParameter を使用してバインドされます。ただし、ParameterNumber には列序数が使用されます。 テーブル値パラメーターがまだある場合は、順番にフォーカスを設定し、その列をバインドします。 最後に、パラメーターのフォーカスが 0 にリセットされます。  
   
     ```  
     // Bind columns for the table-valued parameter (param 2).  
@@ -102,7 +102,8 @@ from @Items
     r = SQLSetStmtAttr(hstmt, SQL_SOPT_SS_PARAM_FOCUS, (SQLPOINTER) 0, SQL_IS_INTEGER);  
     ```  
   
-4.  パラメーターのバッファーを設定します。 `cbTVP` は、サーバーに送信される行数に設定されます。  
+4.  パラメーターのバッファーを設定します。 
+  `cbTVP` は、サーバーに送信される行数に設定されます。  
   
     ```  
     // Populate parameters.  
