@@ -1,5 +1,5 @@
 ---
-title: 階層レコード セットの作成 |Microsoft Docs
+title: 造詣階層レコードセット |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,16 +16,16 @@ ms.assetid: a584e642-a4a3-418e-bc20-3aff81a5625a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6fcdb630f2391f685080ac594cfdb537edf626a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925322"
 ---
 # <a name="fabricating-hierarchical-recordsets"></a>階層レコードセットの作成
-次の例は、データのシェイプの親、子、および孫の列を定義する文法を使用して、基になるデータ ソースのない階層レコード セットを作成する方法を示しています。**レコード セット**します。  
+次の例では、データシェイプの文法を使用して、親、子、および孫**レコードセット**の列を定義することで、基になるデータソースのない階層レコードセットを作成する方法を示します。  
   
- 階層構造を作成する**レコード セット**を指定する必要があります、 [OLE DB (ADO サービス プロバイダー) の Microsoft Data Shaping Service](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) (MSDataShape) なしでのデータ プロバイダーの値を指定して、接続文字列パラメーター、[オープン](../../../ado/reference/ado-api/open-method-ado-connection.md)のメソッド、[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクト。 詳細については、次を参照してください。[データ シェイプに必要なプロバイダー](../../../ado/guide/data/required-providers-for-data-shaping.md)します。  
+ 階層**レコードセット**を作成するには、 [OLE DB (ADO サービスプロバイダー) (MSDataShape) 用の Microsoft データ整形サービス](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)を指定する必要があります。また、 [connection](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトの[OPEN](../../../ado/reference/ado-api/open-method-ado-connection.md)メソッドの接続文字列パラメーターで NONE の Data Provider 値を指定できます。 詳細については、「[データシェイプの必須プロバイダー](../../../ado/guide/data/required-providers-for-data-shaping.md)」を参照してください。  
   
 ```  
 Dim cn As New ADODB.Connection  
@@ -52,11 +52,11 @@ strShape = _
 rsCustomers.Open strShape, cn, adOpenStatic, adLockOptimistic, -1  
 ```  
   
- すぐに、 **Recordset**された作成、設定、操作、またはそのファイルに保存します。  
+ **レコードセット**が作成されるとすぐに、データセットの設定、操作、またはファイルへの保存を行うことができます。  
   
 ## <a name="see-also"></a>参照  
- [階層レコード セット内の行へのアクセス](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
- [Shape の正式文法](../../../ado/guide/data/formal-shape-grammar.md)   
- [データ シェイプに必要なプロバイダー](../../../ado/guide/data/required-providers-for-data-shaping.md)   
- [Shape の APPEND 句](../../../ado/guide/data/shape-append-clause.md)   
+ [階層レコードセット内の行へのアクセス](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
+ [仮形の文法](../../../ado/guide/data/formal-shape-grammar.md)   
+ [データシェイプに必要なプロバイダー](../../../ado/guide/data/required-providers-for-data-shaping.md)   
+ [Shape APPEND 句](../../../ado/guide/data/shape-append-clause.md)   
  [一般的な Shape コマンド](../../../ado/guide/data/shape-commands-in-general.md)

@@ -1,5 +1,5 @@
 ---
-title: dbo.systargetservergroups (TRANSACT-SQL) |Microsoft Docs
+title: systargetservergroups (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -20,21 +20,21 @@ ms.assetid: df1195b1-62c3-4b94-8b2e-a646dcaf281b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 220871e8bbfd72958ef23db0980e097e85b4cee9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68076459"
 ---
-# <a name="dbosystargetservergroups-transact-sql"></a>dbo.systargetservergroups (Transact-SQL)
+# <a name="dbosystargetservergroups-transact-sql"></a>systargetservergroups (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   マルチサーバー環境に現在参加しているターゲット サーバー グループを記録します。  
   
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
-|**servergroup_id**|**int**|サーバー グループ ID。|  
-|**name**|**sysname**|サーバー グループ名。|  
+|**servergroup_id**|**int**|サーバーグループ ID|  
+|**name**|**sysname**|サーバーグループ名|  
   
   

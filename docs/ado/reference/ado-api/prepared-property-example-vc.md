@@ -1,5 +1,5 @@
 ---
-title: プロパティの例 (vc++) の準備 |Microsoft Docs
+title: Prepared プロパティの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: f697ac1a-f125-42b5-bbf6-762a7fa30ae3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 58da870e9c65be459e6bd4a8c35bb84aef325c61
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917584"
 ---
 # <a name="prepared-property-example-vc"></a>Prepared プロパティの例 (VC++)
-この例では、[準備](../../../ado/reference/ado-api/prepared-property-ado.md)プロパティを 2 つを開いて[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトの準備、および準備されていません。  
+次の例では、2つの[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトを開いて、準備さ[れたプロパティ](../../../ado/reference/ado-api/prepared-property-ado.md)を示しています。1つは準備されています。  
   
 ## <a name="example"></a>例  
   
@@ -141,8 +141,8 @@ void PrintComError(_com_error &e) {
 ```  
   
  **パフォーマンスの結果:**  
-**準備されていません。0.016 秒**  
-**準備。    0.016 秒**   
-## <a name="see-also"></a>関連項目  
- [コマンド オブジェクト (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
+**未準備: 0.016 秒**  
+**準備完了: 0.016 秒**   
+## <a name="see-also"></a>参照  
+ [Command オブジェクト (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Prepared プロパティ (ADO)](../../../ado/reference/ado-api/prepared-property-ado.md)

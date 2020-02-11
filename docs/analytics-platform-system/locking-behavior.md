@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: f3ecf5cf783b707b75c90dfa70d502e3c81d28c3
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401003"
 ---
 # <a name="locking-behavior-in-parallel-data-warehouse"></a>並列データウェアハウスでのロック動作
@@ -40,7 +40,7 @@ SharedUpdate ロックでは、排他的ロックモードと ExclusiveUpdate �
   
 ロックは、データベース、スキーマ、オブジェクト (テーブル、ビュー、またはプロシージャ)、アプリケーション (内部で使用)、EXTERNALDATASOURCE、EXTERNALFILEFORMAT、および SCHEMARESOLUTION (作成、変更、または作成中に取得されたデータベースレベルのロック) によって保持されます。スキーマオブジェクトまたはデータベースユーザーを削除しています。 これらのオブジェクトクラスは、 [dm_pdw_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-waits-transact-sql.md)の object_type 列に表示されます。  
   
-## <a name="Remarks"></a>一般的な解説  
+## <a name="Remarks"></a>全般的な解説  
 ロックは、データベース、テーブル、またはビューに適用できます。  
   
 SQL Server PDW は、構成可能な分離レベルを実装していません。 ANSI 規格で定義されている READ_UNCOMMITTED 分離レベルをサポートしています。 ただし、読み取り操作は READ_UNCOMMITTED で実行されるため、実際に発生するブロッキング操作はほとんどなく、システム内で競合が発生する可能性があります。  
@@ -99,5 +99,5 @@ SQL Server では、次の種類のロックがサポートされています。
 <!-- MISSING LINKS 
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
 -->
-[dm_pdw_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-waits-transact-sql.md)  
+[sys.dm_pdw_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-waits-transact-sql.md)  
   

@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c1fc4ab5d778535fdc4e2186c5bc88741b4367f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076138"
 ---
 # <a name="create-named-sets"></a>名前付きセットの作成
@@ -29,7 +29,7 @@ ms.locfileid: "66076138"
  **名前**  
  名前付きセットの名前を選択します。 この名前は、エンド ユーザーがキューブを参照したときに表示されます。  
   
- **[式]**  
+ **式**  
  名前付きセットを作成する式を指定します。 この式は、MDX で記述することもできます。 式には、次の要素を含めることができます。  
   
 -   ディメンション、レベル、メジャーなど、キューブのコンポーネントを表すデータ式  
@@ -43,9 +43,9 @@ ms.locfileid: "66076138"
  キューブ コンポーネントは、 **[計算ツール]** ペインの **[メタデータ]** タブから **名前付きセット フォーム エディター** ペインの **[式]** ボックスにコピーまたはドラッグできます。 関数は、 **[計算ツール]** ペインの **[関数]** タブから **名前付きセット フォーム エディター** ペインの **[式]** ボックスにコピーまたはドラッグできます。  
   
 > [!IMPORTANT]  
->  セット内のメンバーを明示的に名前付けして、セット式を作成する場合は、メンバーの一覧を囲む中かっこのペアで ({})。  
+>  セット内のメンバーに明示的に名前を付けてセット式を作成する場合は、メンバーの一覧を中かっこ{}() で囲みます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [多次元モデルの計算](calculations-in-multidimensional-models.md)  
   
   

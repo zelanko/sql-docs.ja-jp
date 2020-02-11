@@ -1,5 +1,5 @@
 ---
-title: 参照変換エディター ([エラー出力] ページ) |Microsoft Docs
+title: '[参照変換エディター] ([エラー出力] ページ) |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,23 +13,24 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 12f1a73c1d21986d2089878bfe9d29dd4450f222
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057854"
 ---
 # <a name="lookup-transformation-editor-error-output-page"></a>[参照変換エディター] ([エラー出力] ページ)
+  
   **[参照変換エディター]** ダイアログ ボックスの **[エラー出力]** ページを使用すると、エラー処理オプションを指定できます。  
   
  参照変換の詳細については、「 [Lookup Transformation](data-flow/transformations/lookup-transformation.md)」を参照してください。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **[入力または出力]**  
  入力の名前を表示します。  
   
  **列**  
- 使用されていません。  
+ 使用されません。  
   
  **Error**  
  参照データセットに一致するエントリがない行を処理したときに発生させるエラーの種類を指定します。  
@@ -53,10 +54,10 @@ ms.locfileid: "66057854"
   
 -   コンポーネントを失敗させます。  
   
- **[説明]**  
+ **説明**  
  操作の説明を表示します。  
   
- **[選択したセルに設定する値]**  
+ **選択したセルをこの値に設定します**  
  エラーまたは切り捨てが発生したときのすべての選択済みセルの動作を指定します。  
   
 -   エラーを無視します。  
@@ -68,7 +69,7 @@ ms.locfileid: "66057854"
  **[適用]**  
  選択したセルにエラー処理オプションを適用します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1cac8403327ecf3888439290554f059bb00bce2c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770870"
 ---
 # <a name="sap-bw-destination"></a>SAP BW 転送先
@@ -67,7 +67,8 @@ ms.locfileid: "62770870"
   
 -   インフォパッケージの適切なインフォオブジェクトへのデータ フロー内の各列をマップします。  
   
--   `PackageSize` プロパティを構成して、一度に転送するデータの行数を指定します。  
+-   
+  `PackageSize` プロパティを構成して、一度に転送するデータの行数を指定します。  
   
 -   データの読み込みが SAP Netweaver BW システムで完了するまで待機することを選択します。  
   
@@ -79,7 +80,7 @@ ms.locfileid: "62770870"
   
 -   選択したオプションで、データの読み込みをテストします。  
   
- 変換先が呼び出す RFC 関数のログを有効にすることもできます (このログは、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージで有効にできる、省略可能なログとは異なります)。変換先が使用する SAP BW 接続マネージャーを構成する際に、RFC 関数呼び出しのログ記録を有効にします。 SAP BW 接続マネージャーを構成する方法の詳細については、「 [SAP BW Connection Manager](../connection-manager/sap-bw-connection-manager.md)」を参照してください。  
+ 変換先が呼び出す RFC 関数のログを有効にすることもできます (このログは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージで有効にできる、省略可能なログとは異なります)。変換先が使用する SAP BW 接続マネージャーを構成する際に、RFC 関数呼び出しのログ記録を有効にします。 SAP BW 接続マネージャーを構成する方法の詳細については、「 [SAP BW Connection Manager](../connection-manager/sap-bw-connection-manager.md)」を参照してください。  
   
  変換先を構成するために必要な値がわからない場合は、SAP 管理者に確認してください。  
   
@@ -88,17 +89,17 @@ ms.locfileid: "62770870"
 ### <a name="using-the-ssis-designer-to-configure-the-destination"></a>SSIS デザイナーを使用して変換先を構成する  
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できる SAP BW 変換先のプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [SAP BW 変換先エディター &#40;[接続マネージャー] ページ&#41;](sap-bw-destination-editor-connection-manager-page.md)  
+-   [SAP BW 変換先エディター ([接続マネージャー] ページ)](sap-bw-destination-editor-connection-manager-page.md)  
   
 -   [SAP BW 変換先エディター ([マッピング] ページ)](sap-bw-destination-editor-mappings-page.md)  
   
 -   [SAP BW 変換先エディター ([エラー出力] ページ)](sap-bw-destination-editor-error-output-page.md)  
   
--   [SAP BW 変換先エディター &#40;[詳細設定] ページ&#41;](sap-bw-destination-editor-advanced-page.md)  
+-   [SAP BW 変換先エディター ([詳細設定] ページ)](sap-bw-destination-editor-advanced-page.md)  
   
  SAP BW 変換先を構成するときに、SAP Netweaver BW オブジェクトを参照または作成するためにさまざまなダイアログ ボックスを使用できます。 これらのダイアログ ボックスの詳細については、次のトピックのいずれかを参照してください。  
   
--   [[インフォパッケージの参照]](look-up-infopackage.md)  
+-   [インフォパッケージの参照](look-up-infopackage.md)  
   
 -   [新しいインフォオブジェクトの作成](create-new-infoobject.md)  
   
@@ -114,7 +115,7 @@ ms.locfileid: "62770870"
   
 -   [インフォパッケージの作成](create-infopackage.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Microsoft Connector 1.1 for SAP BW のコンポーネント](../microsoft-connector-for-sap-bw-components.md)  
   
   

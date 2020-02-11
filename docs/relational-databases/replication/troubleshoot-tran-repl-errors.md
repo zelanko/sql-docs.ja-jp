@@ -11,13 +11,13 @@ helpviewer_keywords:
 - replication [SQL Server], tutorials
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: c8b363be7cd8f160cb7317e6a90d109cc1ad3ccb
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 9a079838d343ba8de93e270d01d704eb32219ee9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75321941"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286991"
 ---
 # <a name="troubleshooter-find-errors-with-sql-server-transactional-replication"></a>トラブルシューティング ツール:トラブルシューティング ツール: SQL Server トランザクション レプリケーション エラーを検出する 
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "75321941"
 
     a. オブジェクト エクスプローラーで、 **[レプリケーション]** の下の **[ローカル パブリケーション]** ノードを展開します。
 
-    b. **AdvWorksProductTrans** パブリケーションを右クリックして、 >  **[スナップショット エージェントの状態の表示]** をクリックします。 
+    b. **AdvWorksProductTrans** パブリケーションを右クリックして、 **[スナップショット エージェントの状態の表示]** をクリックします。 
 
     ![ショートカット メニューの [スナップショット エージェントの状態の表示] コマンド](media/troubleshooting-tran-repl-errors/view-snapshot-agent-status.png)
 
@@ -117,7 +117,7 @@ ms.locfileid: "75321941"
 
     a. オブジェクト エクスプローラーで **[データベース]** を展開します。
 
-    b. **AdventureWorks2012** を右クリックして、 >  **[プロパティ]** をクリックします。 
+    b. **AdventureWorks2012** を右クリックして、 **[プロパティ]** をクリックします。 
 
     c. **[ファイル]** ページの下に所有者が存在することを確認します。 このボックスが空白の場合は、これが問題の原因と考えられます。 
 
@@ -191,7 +191,7 @@ ms.locfileid: "75321941"
 
 7. オブジェクト エクスプローラーで **[レプリケーション]** を右クリックして、レプリケーション モニターをもう一度確認します。 **[すべてのサブスクリプション]** の下の赤い X 印は、ディストリビューション エージェントでまだエラーが発生していることを示します。 
 
-    **[レプリケーション モニター]** でサブスクリプションを右クリックして  >  **[詳細表示]** を選択し、 **[ディストリビューターからサブスクライバーまで]** の履歴を開きます。 ここでは、異なるエラーが表示されるようになります。 
+    **[レプリケーション モニター]** でサブスクリプションを右クリックして **[詳細表示]** を選択し、 **[ディストリビューターからサブスクライバーまで]** の履歴を開きます。 ここでは、異なるエラーが表示されるようになります。 
 
     ![ディストリビューション エージェントが接続できないことを示すエラー](media/troubleshooting-tran-repl-errors/dist-agent-cant-connect.png)
            

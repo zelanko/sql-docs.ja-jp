@@ -11,18 +11,20 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 9b9e442fb97245d32c398602cdfd727de8239cb8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62467909"
 ---
 # <a name="requirements-for-using-memory-optimized-tables"></a>メモリ最適化テーブルを使用するための要件
-  加え、 [Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)、インメモリ OLTP を使用するための要件を次に示します。  
+  [SQL Server 2014 をインストールするためのハードウェアとソフトウェアの要件](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)に加えて、インメモリ OLTP を使用するための要件を次に示します。  
   
--   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]の 64 ビット Enterprise Edition、Developer Edition、または Evaluation Edition。  
+-   
+  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]の 64 ビット Enterprise Edition、Developer Edition、または Evaluation Edition。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、メモリ最適化テーブルおよびインデックスでデータを保持するために十分なメモリが必要です。 行バージョンも保持するためには、メモリ最適化テーブルおよびインデックスの予想サイズの 2 倍となるメモリ量を用意する必要があります。 ただし、必要なメモリの実際の容量はワークロードによって異なります。 メモリの使用量を監視し、必要に応じて調整を加える必要があります。 メモリ最適化テーブル データのサイズは、プールの容量のうち、許可されたパーセンテージを超えないようにする必要があります。 メモリ最適化テーブルのサイズを検出するには、次を参照してください。 [sys.dm_db_xtp_table_memory_stats &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql)します。  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、メモリ最適化テーブルおよびインデックスでデータを保持するために十分なメモリが必要です。 行バージョンも保持するためには、メモリ最適化テーブルおよびインデックスの予想サイズの 2 倍となるメモリ量を用意する必要があります。 ただし、必要なメモリの実際の容量はワークロードによって異なります。 メモリの使用量を監視し、必要に応じて調整を加える必要があります。 メモリ最適化テーブル データのサイズは、プールの容量のうち、許可されたパーセンテージを超えないようにする必要があります。 メモリ最適化テーブルのサイズを調べるには、「 [sys. dm_db_xtp_table_memory_stats &#40;transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql)」を参照してください。  
   
      データベースにディスク ベース テーブルがある場合、それらのテーブルのバッファー プールとクエリ処理に十分なメモリを提供する必要があります。  
   
@@ -32,19 +34,22 @@ ms.locfileid: "62467909"
   
 -   インメモリ OLTP を使用するための **cmpxchg16b** 命令をサポートするプロセッサ。 最新のすべての 64 ビット プロセッサでは **cmpxchg16b**がサポートされています。  
   
-     VM ホスト アプリケーションを使用していて、古いプロセッサが原因のエラーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって表示される場合は、アプリケーションに **cmpxchg16b**を許可する構成オプションがあるかどうかをご確認ください。 該当する構成オプションがない場合は、Hyper-V を使用できます。Hyper-V では、構成オプションを変更しなくても、 **cmpxchg16b** がサポートされています。  
+     VM ホスト アプリケーションを使用していて、古いプロセッサが原因のエラーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって表示される場合は、アプリケーションに **cmpxchg16b**を許可する構成オプションがあるかどうかをご確認ください。 該当する構成オプションがない場合は、Hyper-V を使用できます。Hyper-V では、構成オプションを変更することなく **cmpxchg16b** がサポートされています。  
   
 -   インメモリ OLTP をインストールするには、 **のインストール時に** [データベース エンジン サービス] [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]を選択します。  
   
-     レポートの生成をインストールする ([Determining if テーブルまたはストアド プロシージャ Should Be Ported to インメモリ OLTP](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) と[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)](を使用して、インメモリ OLTP を管理する[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]オブジェクト エクスプ ローラー) を選択します**管理ツール-基本**または**管理ツール-高度な**インストールするときに[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]します。  
+     レポートの生成 ([テーブルまたはストアドプロシージャをインメモリ oltp に移植する必要が](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)あるかどうか[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]の判断) と (オブジェクトエクスプローラーを介し[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]てインメモリ oltp を管理する場合) をインストールするには、を[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]インストールするときに [**管理ツール-基本**] または [**管理ツール-詳細**] を選択します。  
   
-## <a name="important-notes-on-using-includehek2includeshek-2-mdmd"></a>[!INCLUDE[hek_2](../../../includes/hek-2-md.md)]  
+## <a name="important-notes-on-using-includehek_2includeshek-2-mdmd"></a>
+  [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]
   
--   データベース内の持続性のあるすべてのテーブルのメモリ内サイズの合計は 250 GB を超えないようにする必要があります。 詳細については、次を参照してください。[メモリ最適化テーブルの持続性](durability-for-memory-optimized-tables.md)します。  
+  
+-   データベース内の持続性のあるすべてのテーブルのメモリ内サイズの合計は 250 GB を超えないようにする必要があります。 詳細については、「[メモリ最適化テーブルの持続性](durability-for-memory-optimized-tables.md)」を参照してください。  
   
 -   このリリースの [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] は、2 または 4 ソケットおよび 60 未満のコアを備えたシステムで適切に機能するように設定されています。  
   
--   チェックポイント ファイルは手動で削除しないでください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって自動的に不要なチェックポイント ファイルのガベージ コレクションを実行します。 詳細については、内のデータとデルタ ファイルをマージする方法の説明を参照してください。[メモリ最適化テーブルの持続性](durability-for-memory-optimized-tables.md)します。  
+-   チェックポイント ファイルは手動で削除しないでください。 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって自動的に不要なチェックポイント ファイルのガベージ コレクションを実行します。 詳細については、「[メモリ最適化テーブルの持続性](durability-for-memory-optimized-tables.md)」のデータファイルとデルタファイルのマージに関する説明を参照してください。  
   
 -   インメモリ OLTP の最初のリリースであるこのリリース ( [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) で、メモリ最適化ファイル グループを削除する唯一の方法は、データベースを削除することです。  
   
@@ -52,8 +57,8 @@ ms.locfileid: "62467909"
   
 -   メモリ最適化テーブルが含まれるデータベースを 1 つ以上作成する場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに対してファイルの瞬時初期化を有効にする ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のサービス開始アカウントに SE_MANAGE_VOLUME_NAME ユーザー権限を付与する) 必要があります。 ファイルの瞬時初期化を使用しない場合、メモリ最適化ストレージ ファイル (データ ファイルとデルタ ファイル) が作成時に初期化されるため、ワークロードのパフォーマンスが低下する場合があります。 ファイルの瞬時初期化に関する詳細については、「 [データベース ファイルの初期化](../databases/database-instant-file-initialization.md)」をご覧ください。 ファイルの瞬時初期化を有効にする方法については、「 [How and Why to Enable Instant File Initialization (ファイルの瞬時初期化を有効にする方法と理由)](https://blogs.msdn.com/b/sql_pfe_blog/archive/2009/12/23/how-and-why-to-enable-instant-file-initialization.aspx)」をご覧ください。  
   
-## <a name="did-this-article-help-you-were-listening"></a>この記事は役に立ちましたか? 待ちしています  
- どのような情報をお探しでしたか? お探しの情報は見つかりましたか? コンテンツを向上させるためにお客様のフィードバックを受け付けています。 [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Requirements%20for%20Using%20Memory-Optimized%20Tables%20page) にコメントをお送りください。  
+## <a name="did-this-article-help-you-were-listening"></a>この記事は役に立ちましたか? お待ちしています  
+ どのような情報をお探しでしたか? お探しの情報は見つかりましたか? コンテンツを改善するためのフィードバックをお待ちしています。 にコメントを[sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Requirements%20for%20Using%20Memory-Optimized%20Tables%20page)送信してください。  
   
 ## <a name="see-also"></a>参照  
  [インメモリ OLTP &#40;インメモリ最適化&#41;](in-memory-oltp-in-memory-optimization.md)  

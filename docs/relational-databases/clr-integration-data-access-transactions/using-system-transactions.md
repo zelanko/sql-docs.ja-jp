@@ -1,5 +1,5 @@
 ---
-title: System.Transactions の使用 |Microsoft Docs
+title: Using system.string |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,32 +17,32 @@ ms.assetid: 79656ce5-ce46-4c5e-9540-cf9869bd774b
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: a9b99842a92649a42e9a0a42e6732368dc5e06ec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68081350"
 ---
 # <a name="using-systemtransactions"></a>System.Transactions の使用
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  **System.Transactions**名前空間は、ADO.NET に完全に統合される新しいトランザクション フレームワークを提供し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]共通言語ランタイム (CLR) 統合します。 **System.Transactions.TransactionScope**クラスは、分散トランザクション内の接続を暗黙的に参加して、コード ブロックをトランザクション。 呼び出す必要があります、**完了**によってマークされたメソッドのコード ブロックの末尾に、 **TransactionScope**します。 **Dispose**プログラムの実行が中止された場合、トランザクションの原因と、コード ブロックを離れるときに、メソッドが呼び出される、**完了**メソッドは呼び出されません。 コードがスコープから離れるような例外がスローされると、このトランザクションは中止されたと見なされます。  
+  System.string**名前空間は、** ADO.NET および[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]共通言語ランタイム (CLR) 統合と完全に統合されたトランザクションフレームワークを提供します。 System.object**クラスは**、接続を分散トランザクションに暗黙的に参加させることによって、コードブロックをトランザクションにします。 **TransactionScope**によってマークされたコードブロックの最後に**Complete**メソッドを呼び出す必要があります。 **Dispose**メソッドは、プログラムの実行がコードブロックから出たときに呼び出され、 **Complete**メソッドが呼び出されなかった場合にトランザクションは中止されます。 コードがスコープから離れるような例外がスローされると、このトランザクションは中止されたと見なされます。  
   
- 取り入れることをお勧めします、**を使用して**ことを確認するブロック、 **Dispose**でメソッドが呼び出される、 **TransactionScope**オブジェクトと、 **を使用して**。ブロックを終了します。 コミットまたは保留中のトランザクションのロールバックに失敗したことができます重大なパフォーマンスが低下するための既定のタイムアウト、 **TransactionScope**は 1 分です。 使用しない場合、**を使用して**ステートメントでは、すべての処理を実行する必要があります、**お試しください**をブロックし、明示的に呼び出す、 **Dispose**メソッドで、**最後に**ブロックします。  
+ Using**ブロックを**使用して、 **using**ブロックが終了したときに、 **TransactionScope**オブジェクトで**Dispose**メソッドが呼び出されるようにすることをお勧めします。 保留中のトランザクションのコミットまたはロールバックに失敗すると、 **TransactionScope**の既定のタイムアウトが1分であるため、パフォーマンスが大幅に低下する可能性があります。 **Using**ステートメントを使用しない場合は、 **Try**ブロックですべての作業を実行し、 **Finally**ブロックで**Dispose**メソッドを明示的に呼び出す必要があります。  
   
- 内で例外が発生した場合、 **TransactionScope**トランザクションが不整合としてマークされているし、破棄されます。 戻るときに、 **TransactionScope**が破棄されました。 例外が発生しなければ、参加しているトランザクションがコミットされます。  
+ **TransactionScope**内で例外が発生した場合、トランザクションは不整合としてマークされ、破棄されます。 このメソッドは、 **TransactionScope**が破棄されるとロールバックされます。 例外が発生しなければ、参加しているトランザクションがコミットされます。  
   
- **TransactionScope**ローカルおよびリモート データ ソースまたは外部リソース マネージャーにアクセスしている場合にのみ使用する必要があります。 これは、ため**TransactionScope**によって常に昇格するには、トランザクション コンテキスト接続内でのみ使用されている場合でもです。  
-  
-> [!NOTE]  
->  **TransactionScope**でトランザクションを作成するクラス、 **System.Transactions.Transaction.IsolationLevel**の**Serializable**既定。 アプリケーションによっては、分離レベルを低くして、アプリケーション内の競合を回避することを検討する必要があります。  
+ **TransactionScope**は、ローカルおよびリモートのデータソースまたは外部リソースマネージャーがアクセスされている場合にのみ使用してください。 これは、 **TransactionScope**がコンテキスト接続内でのみ使用されている場合でも、常にトランザクションが昇格するためです。  
   
 > [!NOTE]  
->  リモート サーバーに対する分散トランザクション内では、大量のデータベース リソースが消費されるため、更新、挿入、および削除だけを実行することをお勧めします。 操作がローカル サーバーで実行される場合は、分散トランザクションは必要なく、ローカル トランザクションで十分です。 SELECT ステートメントは、不必要にデータベース リソースをロックすることがあります。また、選択に多くのトランザクションを要する場合もあります。 データベース以外の作業は、トランザクション処理を行う他のリソース マネージャーを必要とする場合を除き、トランザクションのスコープ外で行う必要があります。 トランザクションのスコープ内での例外には、トランザクションのコミットが防止されますが、 **TransactionScope**クラスには用意されていません、トランザクションのスコープの外部で行った変更をロールバックして、コードの自体。 独自の実装を記述する必要があります、トランザクションがロールバック時に、何らかのアクションを実行する必要がある場合、 **System.Transactions.IEnlistmentNotification**インターフェイス、およびトランザクションに明示的に参加します。  
+>  **TransactionScope**クラスは、既定で**Serializable**の**IsolationLevel**を使用してトランザクションを作成します。 アプリケーションによっては、分離レベルを低くして、アプリケーション内の競合を回避することを検討する必要があります。  
+  
+> [!NOTE]  
+>  リモート サーバーに対する分散トランザクション内では、大量のデータベース リソースが消費されるため、更新、挿入、および削除だけを実行することをお勧めします。 操作がローカル サーバーで実行される場合は、分散トランザクションは必要なく、ローカル トランザクションで十分です。 SELECT ステートメントは、不必要にデータベース リソースをロックすることがあります。また、選択に多くのトランザクションを要する場合もあります。 データベース以外の作業は、トランザクション処理を行う他のリソース マネージャーを必要とする場合を除き、トランザクションのスコープ外で行う必要があります。 トランザクションのスコープ内で例外が発生しても、トランザクションはコミットされませんが、 **TransactionScope**クラスは、コードがトランザクション自体のスコープ外で行った変更をロールバックするための準備を行いません。 トランザクションがロールバックされるときに何らかのアクションを実行する必要がある場合は、 **IEnlistmentNotification**インターフェイスの独自の実装を記述し、トランザクションに明示的に参加する必要があります。  
   
 ## <a name="example"></a>例  
- 使用する**System.Transactions**、System.Transactions.dll ファイルへの参照があります。  
+ **システムトランザクション**を操作するには、system.string ファイルへの参照が必要です。  
   
- 次のコードでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の 2 つの異なるインスタンスに対して昇格可能なトランザクションを作成する方法を説明します。 これらのインスタンスが 2 つの異なるによって表される**System.Data.SqlClient.SqlConnection**オブジェクトでラップされている、 **TransactionScope**ブロックします。 コードを作成、 **TransactionScope**ブロックと一緒に、**を使用して**ステートメントでは、自動的に参加させることで、最初の接続を開くと、 **TransactionScope**。 最初、トランザクションは完全な分散トランザクションではなく、軽量トランザクションとして参加します。 このコードでは、条件ロジックが存在することを前提としています (説明を簡単にするために、このロジックは省略しています)。 必要な場合は、2 番目の接続を開きますに参加させます、 **TransactionScope**します。 2 番目の接続が開かれると、トランザクションは完全な分散トランザクションに自動的に昇格します。 コードが呼び出され、 **TransactionScope.Complete**、トランザクションをコミットします。 コードを終了するときに 2 つの接続の破棄、**を使用して**接続のステートメント。 **TransactionScope.Dispose**のメソッド、 **TransactionScope**の終了時に自動的に呼び出されますが、**を使用して**のブロック、 **TransactionScope**します。 任意の時点で例外がスローされたかどうか、 **TransactionScope**ブロック、**完了**が呼び出されませんの分散トランザクションはロールバックとき、 **TransactionScope**が破棄されています。  
+ 次のコードでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の 2 つの異なるインスタンスに対して昇格可能なトランザクションを作成する方法を説明します。 これらのインスタンスは、 **TransactionScope**ブロックにラップされている2つ**の異なる system.string**オブジェクトで表されます。 このコードは、 **using**ステートメントを使用して**transactionscope**ブロックを作成し、最初の接続を開きます。これにより、 **transactionscope**に自動的に参加します。 最初、トランザクションは完全な分散トランザクションではなく、軽量トランザクションとして参加します。 このコードでは、条件ロジックが存在することを前提としています (説明を簡単にするために、このロジックは省略しています)。 必要な場合にのみ2番目の接続を開き、 **TransactionScope**に参加します。 2 番目の接続が開かれると、トランザクションは完全な分散トランザクションに自動的に昇格します。 次に、コードは**TransactionScope**を呼び出します。これによりトランザクションがコミットされます。 このコードは、接続に対し**て using ステートメントを**終了するときに、2つの接続を破棄します。 Transactionscope**の transactionscope**メソッドは、 **transactionscope**の**using**ブロックの終了時に自動的に呼び出されます。 **** **Transactionscope**ブロック内の任意のポイントで例外がスローされた場合、 **Complete**は呼び出されず、 **transactionscope**が破棄されると、分散トランザクションがロールバックされます。  
   
  Visual Basic  
   
@@ -105,7 +105,7 @@ using (TransactionScope transScope = new TransactionScope())
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [CLR 統合とトランザクション](../../relational-databases/clr-integration-data-access-transactions/clr-integration-and-transactions.md)  
   
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 76746ade9222257bcea6962c180ea12a01ff8afa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107646"
 ---
 # <a name="searching-for-reports-and-other-items-report-builder--and-ssrs"></a>レポートおよび他のアイテムの検索 (レポート ビルダーおよび SSRS)
@@ -33,9 +33,9 @@ ms.locfileid: "66107646"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="see-also"></a>参照  
- [レポート マネージャーを使用したレポートの検索と表示 (レポート ビルダーおよび SSRS)](finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)   
- [個人用レポートの使用 (レポート ビルダーおよび SSRS)](using-my-reports-report-builder-and-ssrs.md)   
+ [レポートマネージャー &#40;レポートビルダーおよび SSRS&#41;でのレポートの検索と表示](finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)   
+ [個人用レポート &#40;レポートビルダーおよび SSRS&#41;の使用](using-my-reports-report-builder-and-ssrs.md)   
  [レポートの検索、表示、管理 (レポート ビルダーおよび SSRS)](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [レポートを開閉する (レポート マネージャー)](../reports/open-and-close-a-report-report-manager.md)  
+ [レポート &#40;レポートマネージャーを開いて閉じる&#41;](../reports/open-and-close-a-report-report-manager.md)  
   
   

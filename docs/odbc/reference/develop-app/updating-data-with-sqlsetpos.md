@@ -1,5 +1,5 @@
 ---
-title: SQLSetPos によるデータの更新 |Microsoft Docs
+title: SQLSetPos | を使用したデータの更新Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,24 +15,24 @@ ms.assetid: e9625b59-06a0-4883-b155-b932ba7528d9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d2895ec765df3910dbbaa1e76ba1579e4afe5cca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68091647"
 ---
 # <a name="updating-data-with-sqlsetpos"></a>SQLSetPos によるデータの更新
-アプリケーションの更新または削除を含む行セットの任意の行**SQLSetPos**します。 呼び出す**SQLSetPos**を構築して、SQL ステートメントの実行に代わる便利な方法です。 位置指定更新をサポートして、データ ソースが配置されている SQL ステートメントをサポートしていない場合にも ODBC ドライバーことができます。 関数呼び出しを使用してデータベースの完全なアクセスを実現するためのパラダイムの一部になります。  
+アプリケーションは、 **SQLSetPos**を使用して行セット内の任意の行を更新または削除できます。 **SQLSetPos**の呼び出しは、SQL ステートメントの構築と実行に代わる便利な方法です。 データソースで位置指定 SQL ステートメントがサポートされていない場合でも、ODBC ドライバーで位置指定更新をサポートできます。 これは、関数呼び出しを使用してデータベースへの完全アクセスを実現するパラダイムの一部です。  
   
- **SQLSetPos**は現在の行セットを操作しへの呼び出し後にのみ使用することができます**SQLFetchScroll**します。 アプリケーションでは、更新、削除、または挿入する行の数を指定します。 および、ドライバーは、行セットのバッファーからその行の新しいデータを取得します。 **SQLSetPos**現在の行として指定した行を指定するか、データ ソースから行セット内の特定の行を更新するにも使用できます。  
+ **SQLSetPos**は現在の行セットに対して動作し、 **sqlfetchscroll**の呼び出しの後にのみ使用できます。 アプリケーションでは、更新、削除、または挿入する行の番号を指定し、ドライバーは行セットのバッファーからその行の新しいデータを取得します。 **SQLSetPos**を使用して、指定した行を現在の行として指定したり、データソースから行セット内の特定の行を更新したりすることもできます。  
   
- 呼び出して行セットのサイズが設定されて**SQLSetStmtAttr**で、*属性*引数 sql_attr_row_array_size を指定します。 **SQLSetPos**への呼び出し後にのみ、ただし、新しい行セットのサイズを使用して**SQLFetch**または**SQLFetchScroll**します。 たとえば、次の行セットのサイズを変更すると、 **SQLSetPos**が呼び出され、 **SQLFetch**または**SQLFetchScroll**が呼び出されへの呼び出し**SQLSetPos**中に古い行セットのサイズを使用して**SQLFetch**または**SQLFetchScroll**新しい行セット サイズが使用されます。  
+ 行セットサイズは、SQL_ATTR_ROW_ARRAY_SIZE の*属性*引数を使用して**SQLSetStmtAttr**を呼び出すことによって設定されます。 **SQLSetPos**では、 **Sqlfetch**または**sqlfetchscroll**を呼び出した後にのみ、新しい行セットサイズが使用されます。 たとえば、行セットのサイズが変更された場合は、 **sqlsetpos**が呼び出され、 **Sqlfetch**または**sqlfetchscroll**が呼び出されます。 **Sqlsetpos**を呼び出すと、 **sqlfetch**または**sqlfetchscroll**は新しい行セットサイズを使用しますが、古い行セットサイズが使用されます。  
   
- 行セット内の先頭行の行番号は 1 です。 *RowNumber*引数**SQLSetPos**行セット内の行を識別する必要がありますは、その値が 1 から最後にフェッチされた行の数の範囲である必要があります (なる可能性があるより小さい行セット サイズ)。 場合*RowNumber*が 0 の場合、操作は、行セット内のすべての行に適用されます。  
+ 行セット内の先頭行の行番号は 1 です。 **SQLSetPos**の*RowNumber*引数は、行セット内の行を識別する必要があります。つまり、その値は、1から最後にフェッチされた行の数 (行セットのサイズよりも小さくなる場合があります) の範囲内である必要があります。 *RowNumber*が0の場合、操作は行セットのすべての行に適用されます。  
   
- Sql、リレーショナル データベースとのほとんどの対話が行われるため、 **SQLSetPos**広くサポートされていません。 ただし、ドライバーを簡単にエミュレートできますが構築して実行する**UPDATE**または**DELETE**ステートメント。  
+ リレーショナルデータベースとのほとんどのやり取りは SQL を通じて行われるため、 **SQLSetPos**は広くサポートされていません。 ただし、ドライバーは、 **UPDATE**ステートメントまたは**DELETE**ステートメントを構築して実行することで、簡単にエミュレートできます。  
   
- 操作を決定する**SQLSetPos**サポートされており、アプリケーションを呼び出す**SQLGetInfo** SQL_DYNAMIC_CURSOR_ATTRIBUTES1、SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1、SQL_KEYSET_CURSOR_ATTRIBUTES1、または (カーソルの種類) に応じて SQL_STATIC_CURSOR_ATTRIBUTES1 情報オプション。  
+ **SQLSetPos**がサポートする操作を確認するために、アプリケーションでは、SQL_DYNAMIC_CURSOR_ATTRIBUTES1、SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1、SQL_KEYSET_CURSOR_ATTRIBUTES1、または SQL_STATIC_CURSOR_ATTRIBUTES1 情報オプションを使用して**SQLGetInfo**を呼び出します (カーソルの種類によって異なります)。  
   
  このセクションでは、次のトピックを扱います。  
   

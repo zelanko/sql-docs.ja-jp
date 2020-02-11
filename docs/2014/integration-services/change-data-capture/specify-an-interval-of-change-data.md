@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2c5509699945db857bd0b763192c7aea21ac90da
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771220"
 ---
 # <a name="specify-an-interval-of-change-data"></a>変更データの間隔を指定する
@@ -45,9 +45,11 @@ ms.locfileid: "62771220"
  複数の子パッケージを実行するマスター パッケージのエンドポイントを計算する場合は、親パッケージ変数の構成を使用してその変数の値を各子パッケージに渡すことができます。 詳細については、「 [パッケージ実行タスク](../control-flow/execute-package-task.md) 」および「 [子パッケージでの変数およびパラメーターの値の使用](../use-the-values-of-variables-and-parameters-in-a-child-package.md)」を参照してください。  
   
 ## <a name="calculate-a-starting-point-and-an-ending-point-for-change-data"></a>変更データの開始時点と終了時点の計算  
- 間隔のエンドポイントのパッケージ変数を設定したら、そのエンドポイントの実際の値を計算し、対応するパッケージ変数にマップできるようになります。 このエンドポイントは `datetime` 値なので、`datetime` 値を計算または操作できる関数を使用する必要があります。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 式言語と Transact-SQL の両方に、`datetime` 値を操作する関数が用意されています。  
+ 間隔のエンドポイントのパッケージ変数を設定したら、そのエンドポイントの実際の値を計算し、対応するパッケージ変数にマップできるようになります。 このエンドポイントは `datetime` 値なので、`datetime` 値を計算または操作できる関数を使用する必要があります。 
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 式言語と Transact-SQL の両方に、`datetime` 値を操作する関数が用意されています。  
   
- `datetime` 値を操作する [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 式言語の関数  
+ 
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 値を操作する `datetime` 式言語の関数  
  -   [DATEADD (SSIS 式)](../expressions/dateadd-ssis-expression.md)  
   
 -   [DATEDIFF (SSIS 式)](../expressions/datediff-ssis-expression.md)  
@@ -64,16 +66,17 @@ ms.locfileid: "62771220"
   
 -   [YEAR (SSIS 式)](../expressions/year-ssis-expression.md)  
   
- `datetime` 値を操作する Transact-SQL の関数  
- [日付と時刻のデータ型および関数 (Transact-SQL)](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql)。  
+ 
+   `datetime` 値を操作する Transact-SQL の関数  
+[日付と時刻のデータ型および関数 (Transact-SQL)](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql)。  
   
  これらの `datetime` 関数のいずれかを使用してエンドポイントを計算する前に、間隔が一定で定期的かどうかを判断する必要があります。 通常、ソース テーブルで行われた変更は、定期的に変換先テーブルに適用します。 たとえば、このような変更は、1 時間ごと、毎日、または毎週適用します。  
   
  変更間隔が一定かランダムかを把握したら、エンドポイントを計算できます。  
   
--   **開始日時の計算**。 前の読み込みの終了日時を現在の開始日時として使用します。 増分読み込みの間隔が一定である場合は、Transact-SQL または [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 式言語の `datetime` 関数を使用してこの値を計算できます。 一定でない場合は、実行のたびにエンドポイントを保存し、SQL 実行タスクまたはスクリプト タスクを使用して前のエンドポイントを読み込むことが必要になる場合があります。  
+-   **開始日時の計算**。 前の読み込みの終了日時を現在の開始日時として使用します。 増分読み込みの間隔が一定である場合は、Transact-SQL または `datetime` 式言語の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 関数を使用してこの値を計算できます。 一定でない場合は、実行のたびにエンドポイントを保存し、SQL 実行タスクまたはスクリプト タスクを使用して前のエンドポイントを読み込むことが必要になる場合があります。  
   
--   **終了日時の計算**。 増分読み込みの間隔が一定である場合は、現在の終了日時を開始日時からのオフセットとして計算します。 使用して、この値を計算する、もう一度、`datetime`または TRANSACT-SQL の関数、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]式言語です。  
+-   **終了日時の計算**。 増分読み込みの間隔が一定である場合は、現在の終了日時を開始日時からのオフセットとして計算します。 ここでも、Transact-sql または`datetime` [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]式言語の関数を使用して、この値を計算できます。  
   
  次の手順では、変更間隔が一定で、増分読み込みパッケージが例外なく毎日実行されることを前提としています。 それ以外の場合、対象外の間隔の変更データは失われます。 間隔の開始時点は一昨日の午前 0 時 (24 ～ 48 時間前) です。 間隔の終了時点は昨日の午前 0 時 (0 ～ 24 時間前の昨晩) です。  
   
@@ -109,7 +112,7 @@ ms.locfileid: "62771220"
   
 ## <a name="see-also"></a>参照  
  [パッケージで変数を使用する](../use-variables-in-packages.md)   
- [Integration Services (SSIS) 式](../expressions/integration-services-ssis-expressions.md)   
+ [Integration Services &#40;SSIS&#41; 式](../expressions/integration-services-ssis-expressions.md)   
  [SQL 実行タスク](../control-flow/execute-sql-task.md)   
  [スクリプト タスク](../control-flow/script-task.md)  
   

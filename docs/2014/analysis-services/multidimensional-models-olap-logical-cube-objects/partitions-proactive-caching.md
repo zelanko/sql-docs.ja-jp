@@ -1,5 +1,5 @@
 ---
-title: プロアクティブ キャッシュ (パーティション) |Microsoft Docs
+title: プロアクティブキャッシュ (パーティション) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,10 +20,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2c968cb8c75fc5f1fb8e77cc98d8c6a306a62115
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62727276"
 ---
 # <a name="proactive-caching-partitions"></a>プロアクティブ キャッシュ (パーティション)
@@ -43,7 +43,7 @@ ms.locfileid: "62727276"
  待機時間を削減する一方でパフォーマンスを最適化するために、現在の MOLAP オブジェクトを削除せずにキャッシュを使用することもできます。 クエリは、データが新しいキャッシュに読み込まれ、処理されている間に MOLAP オブジェクトに対して続行されます。 この方法では、パフォーマンスは向上しますが、新しいキャッシュが構築されている間に、クエリが古いデータを返す場合があります。  
   
 ## <a name="see-also"></a>参照  
- [ディメンションのストレージ](../multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md)   
- [パーティション ストレージの設定 (Analysis Services - 多次元)](../multidimensional-models/set-partition-storage-analysis-services-multidimensional.md)  
+ [ディメンションストレージ](../multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md)   
+ [パーティションストレージ &#40;Analysis Services の設定-多次元&#41;](../multidimensional-models/set-partition-storage-analysis-services-multidimensional.md)  
   
   
