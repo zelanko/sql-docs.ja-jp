@@ -15,16 +15,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8089309c8abe94d392b073fc916b2b0b8fa9292f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011949"
 ---
 # <a name="format-files-for-importing-or-exporting-data-sql-server"></a>データのインポートまたはエクスポート用のフォーマット ファイル (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルにデータを一括インポートしたり、テーブルからデータを一括エクスポートしたりする場合、 *フォーマット ファイル* を使用して、データの一括エクスポートと一括インポートに必要なすべてのフォーマット情報を格納できます。 これには、そのテーブルに対応するデータ ファイル内の各フィールドのフォーマット情報が含まれます。  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、次の 2 種類のフォーマット ファイルがサポートされます: XML の形式と XML 以外のフォーマット ファイル。 XML 以外のフォーマット ファイルにも XML フォーマット ファイルにもデータ ファイル内のすべてのフィールドの説明が含まれており、XML フォーマット ファイルには対応するテーブル列の説明も含まれています。 通常は、XML フォーマット ファイルと XML 以外のフォーマット ファイルの間には互換性があります。 ただし、XML フォーマット ファイルの方が XML 以外のフォーマット ファイルよりも優れた点がいくつかあるので、新しいフォーマット ファイルには XML 構文を使用することをお勧めします。 詳細については、「 [XML フォーマット ファイル &#40;SQL Server&#41;](xml-format-files-sql-server.md)です。  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、XML フォーマット ファイルと XML 以外のフォーマット ファイルの 2 種類がサポートされます。 XML 以外のフォーマット ファイルにも XML フォーマット ファイルにもデータ ファイル内のすべてのフィールドの説明が含まれており、XML フォーマット ファイルには対応するテーブル列の説明も含まれています。 通常は、XML フォーマット ファイルと XML 以外のフォーマット ファイルの間には互換性があります。 ただし、XML フォーマット ファイルの方が XML 以外のフォーマット ファイルよりも優れた点がいくつかあるので、新しいフォーマット ファイルには XML 構文を使用することをお勧めします。 詳細については、「 [XML フォーマット ファイル &#40;SQL Server&#41;](xml-format-files-sql-server.md)です。  
   
  
   
@@ -35,7 +35,7 @@ ms.locfileid: "66011949"
 -   不要なデータを追加または削除したり、データ ファイル内の既存のデータを並べ替えたりしなくても、データを一括インポートできます。 フォーマット ファイルは、データ ファイルのフィールドとテーブルの列間に不一致がある場合に特に役立ちます。  
   
 ##  <a name="ExamplesOfFFs"></a> フォーマット ファイルの例  
- 次の例では、XML 以外のフォーマット ファイルと XML フォーマット ファイルのレイアウトを示します。 これらのフォーマット ファイルは、 `HumanResources.myTeam` サンプル データベースの [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] テーブルに対応しています。 このテーブルには、`EmployeeID`、`Name`、`Title`、および `ModifiedDate` という 4 つの列があります。  
+ 次の例では、XML 以外のフォーマット ファイルと XML フォーマット ファイルのレイアウトを示します。 これらのフォーマット ファイルは、 `HumanResources.myTeam` サンプル データベースの [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] テーブルに対応しています。 このテーブルには、 `EmployeeID`、 `Name`、 `Title`、および `ModifiedDate`という 4 つの列があります。  
   
 > [!NOTE]  
 >  このテーブルの詳細とテーブルを作成する方法については、「[HumanResources.myTeam サンプル テーブル &#40;SQL Server&#41;](humanresources-myteam-sample-table-sql-server.md)」を参照してください。  
@@ -53,7 +53,7 @@ The contents of this format file are as follows: 9.0
 4       SQLNCHAR      2       100     ""   4     Background               SQL_Latin1_General_CP1_CI_AS  
 ```  
   
- 詳細については、「 [XML 以外のフォーマット ファイル &#40;SQL Server&#41;](non-xml-format-files-sql-server.md)」をご覧ください。  
+ 詳細については、「 [XML 以外のフォーマット ファイル &#40;SQL Server&#41;](non-xml-format-files-sql-server.md)でサポートされる従来のフォーマットです。  
   
  
   
@@ -84,7 +84,7 @@ bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Xml -x -n -T
 </BCPFORMAT>  
 ```  
   
- 詳細については、「 [XML フォーマット ファイル &#40;SQL Server&#41;](xml-format-files-sql-server.md)」をご覧ください。  
+ 詳細については、「 [XML フォーマット ファイル &#40;SQL Server&#41;](xml-format-files-sql-server.md)です。  
   
 
   
@@ -128,9 +128,9 @@ bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Xml -x -n -T
   
 
   
-## <a name="see-also"></a>関連項目  
- [XML 以外のフォーマット ファイル &#40;SQL Server&#41;](non-xml-format-files-sql-server.md)   
- [XML フォーマット ファイル &#40;SQL Server&#41;](xml-format-files-sql-server.md)   
+## <a name="see-also"></a>参照  
+ [XML 以外のフォーマットファイル &#40;SQL Server&#41;](non-xml-format-files-sql-server.md)   
+ [XML フォーマットファイル &#40;SQL Server&#41;](xml-format-files-sql-server.md)   
  [一括インポートまたは一括エクスポートのデータ形式 &#40;SQL Server&#41;](data-formats-for-bulk-import-or-bulk-export-sql-server.md)  
   
   

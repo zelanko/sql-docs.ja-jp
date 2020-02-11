@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: a23d307cc33e5b8e59111819b245bc9df1df67df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63063121"
 ---
 # <a name="deleting-database-objects"></a>データベース オブジェクトの削除
@@ -39,7 +39,8 @@ ms.locfileid: "63063121"
   
     ```  
   
-3.  `DROP` データベースに対する `Mary` のアクセス権限を削除するには、 `TestData` ステートメントを使用します。  
+3.  
+  `DROP` データベースに対する `Mary` のアクセス権限を削除するには、 `TestData` ステートメントを使用します。  
   
     ```  
     DROP USER Mary;  
@@ -47,7 +48,8 @@ ms.locfileid: "63063121"
   
     ```  
   
-4.  `DROP` が `Mary` のこのインスタンスにアクセスする権限を削除するには、 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]ステートメントを使用します。  
+4.  
+  `DROP` が `Mary` のこのインスタンスにアクセスする権限を削除するには、 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]ステートメントを使用します。  
   
     ```  
     DROP LOGIN [<computer_name>\Mary];  
@@ -71,7 +73,8 @@ ms.locfileid: "63063121"
   
     ```  
   
-7.  `DELETE` テーブルからすべての行を削除するには、 `Products` ステートメントを使用します。  
+7.  
+  `DELETE` テーブルからすべての行を削除するには、 `Products` ステートメントを使用します。  
   
     ```  
     DELETE FROM Products;  
@@ -79,7 +82,8 @@ ms.locfileid: "63063121"
   
     ```  
   
-8.  `DROP` テーブルを削除するには、 `Products` ステートメントを使用します。  
+8.  
+  `DROP` テーブルを削除するには、 `Products` ステートメントを使用します。  
   
     ```  
     DROP Table Products;  
@@ -102,14 +106,14 @@ ms.locfileid: "63063121"
 ## <a name="return-to-sql-server-tools-portal"></a>SQL Server ツールのポータルに戻る  
  [チュートリアル: Transact-SQL ステートメントの作成](tutorial-writing-transact-sql-statements.md)  
   
-## <a name="see-also"></a>関連項目  
- [REVOKE &#40;Transact-SQL&#41;](/sql/t-sql/statements/revoke-transact-sql)   
- [DROP USER &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-user-transact-sql)   
- [DROP LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-login-transact-sql)   
- [DROP PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-procedure-transact-sql)   
- [DROP VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-view-transact-sql)   
+## <a name="see-also"></a>参照  
+ [&#40;Transact-sql&#41;を取り消す](/sql/t-sql/statements/revoke-transact-sql)   
+ [ユーザー &#40;Transact-sql&#41;を削除します。](/sql/t-sql/statements/drop-user-transact-sql)   
+ [Transact-sql&#41;&#40;のログインを削除します。](/sql/t-sql/statements/drop-login-transact-sql)   
+ [DROP PROCEDURE &#40;Transact-sql&#41;](/sql/t-sql/statements/drop-procedure-transact-sql)   
+ [DROP VIEW &#40;Transact-sql&#41;](/sql/t-sql/statements/drop-view-transact-sql)   
  [DELETE &#40;Transact-SQL&#41;](/sql/t-sql/statements/delete-transact-sql)   
- [DROP TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-table-transact-sql)   
- [DROP DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-database-audit-specification-transact-sql)  
+ [DROP TABLE &#40;Transact-sql&#41;](/sql/t-sql/statements/drop-table-transact-sql)   
+ [Transact-sql&#41;&#40;データベースの削除](/sql/t-sql/statements/drop-database-audit-specification-transact-sql)  
   
   

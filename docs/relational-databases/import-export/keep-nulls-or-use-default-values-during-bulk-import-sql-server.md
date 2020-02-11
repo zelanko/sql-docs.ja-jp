@@ -22,10 +22,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 7120efd623905f05e1f02c6c02856b793ad15cea
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74055954"
 ---
 # <a name="keep-nulls-or-default-values-during-bulk-import-sql-server"></a>一括インポート中の NULL または既定値の保持 (SQL Server)
@@ -42,19 +42,19 @@ ms.locfileid: "74055954"
 ## Null 値を維持する<a name="keep_nulls"></a>  
 以下の修飾子は、一括インポート操作中、テーブル列の既定値がある場合にその既定値を継承するのではなく、データ ファイルの空のフィールドにそのフィールドの NULL 値を保持することを指定しています。  [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)の場合、既定では、一括読み込み操作で指定されていないすべての列が NULL に設定されます。
   
-|コマンド|Qualifier|修飾子の種類|  
+|command|Qualifier|修飾子の種類|  
 |-------------|---------------|--------------------|  
-|bcp|-k|スイッチ|  
+|bcp|-k|Switch|  
 |BULK INSERT|KEEPNULLS\*|引数|  
-|INSERT ...SELECT * FROM OPENROWSET(BULK...)|なし|なし|  
+|INSERT ...SELECT * FROM OPENROWSET(BULK...)|該当なし|該当なし|  
   
-\* [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)では、既定値を使用できない場合、NULL 値を許容するようにテーブル列を定義する必要があります。 
+\*[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)では、既定値を使用できない場合、NULL 値を許容するようにテーブル列を定義する必要があります。 
   
 > [!NOTE]
 > 上記の修飾子は、一括インポート コマンドによるテーブルでの DEFAULT 定義の確認を無効にします。  ただし、同時に実行するすべての INSERT ステートメントでは、DEFAULT 定義が必要です。
  
 ## 既定値と INSERT ... を使用するSELECT * FROM [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md)<a name="keep_default"></a>  
-データ ファイルのフィールドが空の場合、対応するテーブル列に既定値があるときはその列で既定値を使用することを指定できます。  既定値を使用するには、テーブル ヒント [KEEPDEFAULTS](../../t-sql/queries/hints-transact-sql-table.md) を使用します。
+データ ファイルのフィールドが空の場合、対応するテーブル列に既定値があるときはその列で既定値を使用することを指定できます。  既定値を使用するには、テーブル ヒント [KEEPDEFAULTS](../../t-sql/queries/hints-transact-sql-table.md)を使用します。
  
 > [!NOTE]
 >  詳細については、「[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)」、「[SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)」、「[OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)」、「[テーブル ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)」を参照してください。

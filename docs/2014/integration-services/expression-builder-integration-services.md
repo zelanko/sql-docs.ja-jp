@@ -17,16 +17,19 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 56ab8cb5fbfcd4562aa48ba80a83204a8ca97ad8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058897"
 ---
 # <a name="expression-builder-integration-services"></a>式ビルダー (Integration Services)
-  **[式ビルダー]** ダイアログ ボックスでは、プロパティの式が使用する式を構築するグラフィカル ユーザー インターフェイスが提供されます。 **[式ビルダー]** ダイアログ ボックスには、 [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーのカスタム タスクのダイアログ ボックス、または **の** [プロパティ] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]ウィンドウからアクセスできます。  
   
- **[式ビルダー]** ダイアログ ボックスでは、次のタスクを実行できます。  
+  **[式ビルダー]** ダイアログ ボックスでは、プロパティの式が使用する式を構築するグラフィカル ユーザー インターフェイスが提供されます。 
+  **[式ビルダー]** ダイアログ ボックスには、 [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーのカスタム タスクのダイアログ ボックス、または **の** [プロパティ] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]ウィンドウからアクセスできます。  
+  
+ 
+  **[式ビルダー]** ダイアログ ボックスでは、次のタスクを実行できます。  
   
 -   式の構築  
   
