@@ -1,5 +1,5 @@
 ---
-title: Microsoft ActiveX Data Objects (ADO) |Microsoft Docs
+title: Microsoft ActiveX データオブジェクト (ADO) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/08/2018
 ms.reviewer: ''
@@ -13,57 +13,57 @@ ms.assetid: 2fa6237b-44b8-4b6c-9952-5acd80a54e20
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0ca9c22cb54c54441f848ecbf367e92e30c1fd83
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921878"
 ---
 # <a name="microsoft-activex-data-objects-ado"></a>Microsoft ActiveX Data Objects (ADO)
 
-ADO は、C++ プログラムで SQL Server への接続に使用されます。 もちろん、クラウドでの Azure SQL Database に接続するこの機能はもします。
+ADO は、C++ プログラムで SQL Server に接続するために使用されます。 もちろん、クラウド内の Azure SQL Database に接続することもできます。
 
-この記事では、各セクションでは、ADO のコンポーネントについて説明します。
+この記事の各セクションでは、ADO のコンポーネントについて説明します。
 
 > [!NOTE]
-> ADO.NET は、ADO と異なります。 ADO.NET、およびその他の多くの SQL 接続ドライバーとその言語は開始位置として説明[SQL Server ドライバー](../connect/sql-connection-libraries.md)します。
+> ADO.NET は ADO とは異なります。 ADO.NET、およびその他の多くの SQL 接続ドライバーとその言語については[SQL Server ドライバー](../connect/sql-connection-libraries.md)をご覧ください。
 
   
 ## <a name="ado"></a>ADO (ADO)  
- Microsoft ActiveX データ オブジェクト (ADO) では、クライアント アプリケーションからアクセスして、さまざまな OLE DB プロバイダー経由のソースからデータを操作が有効にします。 その主な利点は、使いやすさ、高速、低いメモリのオーバーヘッドが小さく、ディスク フット プリントです。 ADO には、クライアント/サーバーと Web ベースのアプリケーションを構築するための主な機能がサポートしています。  
+ Microsoft ActiveX データオブジェクト (ADO) を使用すると、クライアントアプリケーションは、OLE DB プロバイダーを介してさまざまなソースからのデータにアクセスして操作できます。 主な利点は、使いやすさ、高速、メモリオーバーヘッド、およびディスクフットプリントが小さいことです。 ADO は、クライアント/サーバーおよび Web ベースのアプリケーションを構築するための主要な機能をサポートしています。  
   
 ## <a name="ado-md"></a>ADO MD (ADO MD)  
- Microsoft ActiveX Data Objects (多次元) (ADO MD) は、Microsoft Visual Basic、および Microsoft Visual C などの言語から多次元データを簡単にアクセスを提供します。 ADO MD CubeDef およびセルセット オブジェクトなどの多次元データに固有のオブジェクトを Microsoft ActiveX データ オブジェクト (ADO) を拡張します。 ADO MD とには、多次元スキーマを参照し、キューブを照会および結果を取得することができます。  
+ Microsoft ActiveX データオブジェクト (多次元) (ADO MD) を使用すると、Microsoft Visual Basic、Microsoft Visual C++ などの言語からの多次元データに簡単にアクセスできます。 ADO MD により、Microsoft ActiveX データオブジェクト (ADO) が拡張され、CubeDef オブジェクトや Cellset オブジェクトなどの多次元データに固有のオブジェクトが追加されます。 ADO MD を使用すると、多次元スキーマの参照、キューブのクエリ、および結果の取得を行うことができます。  
   
- ADO と同様には、ADO MD は、データにアクセスするのに、基になる OLE DB プロバイダーを使用します。 ADO MD を使用するには、プロバイダーは OLE DB for OLAP 仕様で定義されている多次元データ プロバイダー (MDP) をある必要があります。 Mdp 表形式のデータ プロバイダー (Tdp) ではなく多次元のビューでデータを示すでデータの表形式ビュー。 特定の構文と、プロバイダーでサポートされている動作の詳細については、OLAP OLE DB プロバイダーは、ドキュメントを参照してください。  
+ ADO と同様に、ADO MD は、基になる OLE DB プロバイダーを使用してデータにアクセスします。 ADO MD を使用するには、プロバイダーが OLAP 仕様の OLE DB で定義されている多次元データプロバイダー (.MDP) である必要があります。 MDPs は、表形式のビューにデータを表示する表形式のデータプロバイダー (TDPs) ではなく、多次元ビューにデータを表示します。 プロバイダーでサポートされている特定の構文と動作の詳細については、OLAP OLE DB プロバイダーのドキュメントを参照してください。  
   
 ## <a name="rds"></a>RDS  
- リモート データ サービス (RDS) は、ADO がクライアント アプリケーションまたは Web ページをサーバーからデータを移動、クライアントでは、データを操作して更新プログラムを 1 回のラウンド トリップでサーバーに返すの機能です。  
+ リモートデータサービス (RDS) は ADO の機能の1つです。この機能を使用すると、サーバーからクライアントアプリケーションまたは Web ページにデータを移動し、クライアント上のデータを操作して、1回のラウンドトリップでサーバーに更新を返すことができます。  
   
 > [!IMPORTANT]
->  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)します。  
+>  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および[Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416)」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
   
 ## <a name="adox"></a>ADOX  
- Microsoft ActiveX データ オブジェクトの拡張機能をデータ定義言語 (ADOX) セキュリティでは、ADO オブジェクトとプログラミング モデルの拡張機能です。 ADOX には、スキーマの作成と変更、セキュリティのオブジェクトが含まれます。 操作のスキーマにオブジェクト ベースのアプローチであるために、さまざまなデータ ソースのネイティブの構文を使って違いに関係なく動作するコードを記述できます。  
+ データ定義言語およびセキュリティ用の Microsoft ActiveX データオブジェクト拡張機能 (ADOX) は、ADO オブジェクトとプログラミングモデルの拡張機能です。 ADOX には、スキーマの作成と変更、およびセキュリティのためのオブジェクトが含まれています。 スキーマ操作に対するオブジェクトベースのアプローチであるため、ネイティブ構文の違いに関係なく、さまざまなデータソースに対して機能するコードを記述できます。  
   
- ADOX は、コア ADO オブジェクト コンパニオン ライブラリです。 作成、変更、およびテーブルやプロシージャなどのスキーマ オブジェクトを削除するその他のオブジェクトを公開します。 ユーザーとグループの管理と付与して、オブジェクトに対する権限の取り消しをセキュリティ オブジェクトも含まれています。  
+ ADOX は、中核となる ADO オブジェクトに関連するライブラリです。 テーブルやプロシージャなどのスキーマオブジェクトを作成、変更、および削除するための追加のオブジェクトを公開します。 また、ユーザーとグループを管理したり、オブジェクトに対する権限を許可および取り消すためのセキュリティオブジェクトも含まれます。  
   
 ## <a name="documentation"></a>ドキュメント  
  [ADO セキュリティ デザイン機能に関する問題](../ado/guide/ado-security-design-issues.md)  
   
  [ADO プログラマー ガイド](../ado/guide/ado-programmer-s-guide.md)  
   
- ADO、RDS、ADO MD、および ADOX の使用の概要。  
+ ADO、RDS、ADO MD、および ADOX の使用方法について説明します。  
   
  [ADO プログラマー リファレンス](../ado/reference/ado-programmer-s-reference.md)  
   
- ADO のドキュメントのこのセクションには、各 ADO、RDS、ADO MD、および ADOX オブジェクト、コレクション、プロパティ、動的なプロパティ、メソッド、イベント、および列挙体のトピックが含まれています。  
+ ADO ドキュメントのこのセクションには、各 ADO、RDS、ADO MD、ADOX オブジェクト、コレクション、プロパティ、動的プロパティ、メソッド、イベント、および列挙に関するトピックが含まれています。  
   
  [ADO の用語集](../ado/ado-glossary.md)  
   
 ## <a name="support"></a>サポート  
- 無料の ADO の問題に関するヘルプ、ADO パブリック ニュースグループへの投稿をお試しください。 このニュースグループは、ADO をカバーする Microsoft 製品サポート サービス (PSS) のサポート担当者と他の経験豊富な ADO 開発者が監視されます。  
+ ADO の問題に関する無料ヘルプを表示するには、ADO パブリックニュースグループに投稿してください。 このニュースグループは、ADO をカバーする Microsoft 製品サポートサービス (PSS) サポート担当者と、その他の経験豊富な ADO 開発者によって監視されています。  
   
- サポート オプションの詳細については、Microsoft ヘルプとサポート Web サイトで参照できます。
+ サポートオプションの詳細については、Microsoft ヘルプとサポートの Web サイトを参照してください。
 
 

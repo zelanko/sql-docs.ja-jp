@@ -1,5 +1,5 @@
 ---
-title: 項目のプロパティの例 (VB) |Microsoft Docs
+title: Item プロパティの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,16 +15,16 @@ ms.assetid: b4476603-691b-4081-8797-a3d0b331dce5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c309319ceb81e9af4a8b84d0b96537d0be933e32
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918339"
 ---
 # <a name="item-property-example-vb"></a>Item プロパティの例 (VB)
-この例では、どのように[項目](../../../ado/reference/ado-api/item-property-ado.md)プロパティは、コレクションのメンバーにアクセスします。 開く例を示します、***作成者***のテーブル、 ***Pubs***パラメーター化されたコマンドを使ってデータベース。  
+この例では、 [Item](../../../ado/reference/ado-api/item-property-ado.md)プロパティがコレクションのメンバーにアクセスする方法を示します。 この例では、パラメーター化されたコマンドを使用して、 ***Pubs***データベースの***Authors***テーブルを開きます。  
   
- データベースに対して発行されたコマンドのパラメーターはからアクセスする、[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトの[パラメーター](../../../ado/reference/ado-api/parameters-collection-ado.md)インデックスと名前のコレクション。 返されたフィールド[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)からそのオブジェクトのアクセスは[フィールド](../../../ado/reference/ado-api/fields-collection-ado.md)インデックスと名前のコレクション。  
+ データベースに対して発行されたコマンドのパラメーターは、[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトの[Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md)コレクションからインデックスと名前によってアクセスされます。 返された[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)のフィールドは、そのオブジェクトの[fields](../../../ado/reference/ado-api/fields-collection-ado.md)コレクションからインデックスと名前によってアクセスされます。  
   
 ```  
 'BeginItemVB  
@@ -134,9 +134,9 @@ End Sub
 'EndItemVB  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [コマンド オブジェクト (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [フィールド コレクション (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
+## <a name="see-also"></a>参照  
+ [Command オブジェクト (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
+ [Fields コレクション (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Item プロパティ (ADO)](../../../ado/reference/ado-api/item-property-ado.md)   
  [Parameters コレクション (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

@@ -16,27 +16,27 @@ ms.assetid: 390c8abf-133e-40da-8b99-8f748a983e4f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0212f3b4cb663bd56adaa1bdbc3ab6675c3ce888
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932268"
 ---
 # <a name="marshaloptions-property-ado"></a>MarshalOptions プロパティ (ADO)
-レコードのことを示します、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)サーバーにマーシャ リングされます。  
+サーバーにマーシャリングされるレコード[セット](../../../ado/reference/ado-api/recordset-object-ado.md)のレコードを示します。  
   
 ## <a name="settings-and-return-values"></a>設定と戻り値  
- 設定または取得を[MarshalOptionsEnum](../../../ado/reference/ado-api/marshaloptionsenum.md)値。 既定値は**adMarshalAll**します。  
+ [Marshaloptionsenum](../../../ado/reference/ado-api/marshaloptionsenum.md)値を設定または返します。 既定値は**Admarshalall**です。  
   
-## <a name="remarks"></a>コメント  
- クライアント側を使用する場合[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)クライアントで変更されたレコードは、パッケージ化し、インターフェイス メソッドを送信するプロセスのマーシャ リングと呼ばれる手法を使って Web サーバー、中間層に書き戻されますスレッドまたはプロセスの境界を越えてパラメーター。 設定、 **MarshalOptions**プロパティが変更されたリモート データが中間層または Web サーバーに更新するためにマーシャ リングするときにパフォーマンスを向上できます。  
+## <a name="remarks"></a>解説  
+ クライアント側の[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)を使用すると、クライアントで変更されたレコードが、スレッドまたはプロセスの境界を越えてパッケージ化および送信するプロセスであるマーシャリングと呼ばれる手法によって、中間層または Web サーバーに書き戻されます。 変更したリモートデータを中間層または Web サーバーに戻すためにマーシャリングする場合、 **Marshaloptions**プロパティを設定するとパフォーマンスが向上します。  
   
 > [!NOTE]
->  **リモート データ サービスの使用状況**このプロパティはクライアント側でのみ使用**Recordset**します。  
+>  **リモートデータサービスの使用状況**このプロパティは、クライアント側の**レコードセット**でのみ使用されます。  
   
 ## <a name="applies-to"></a>適用対象  
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [MarshalOptions プロパティの例 (VB)](../../../ado/reference/ado-api/marshaloptions-property-example-vb.md)   
  [MarshalOptions プロパティの例 (VC++)](../../../ado/reference/ado-api/marshaloptions-property-example-vc.md)   

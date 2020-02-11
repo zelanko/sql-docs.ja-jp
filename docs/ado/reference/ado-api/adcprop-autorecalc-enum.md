@@ -16,21 +16,21 @@ ms.assetid: ded4f087-87b9-4efa-8026-bde53d3e9e8a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 738f4cece8cf2355c12c0de4ac42314152c6370a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921440"
 ---
-# <a name="adcpropautorecalcenum"></a>ADCPROP_AUTORECALC_ENUM
-タイミングを指定します、 [MSDataShape](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)プロバイダーは、階層レコード セットの集計と計算列を再計算します。  
+# <a name="adcprop_autorecalc_enum"></a>ADCPROP_AUTORECALC_ENUM
+[MSDataShape](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)プロバイダーが階層レコードセットの集計列と計算列を再計算するタイミングを指定します。  
   
- これらの定数でのみ使用、 **MSDataShape**プロバイダーと**レコード セット**"**自動再計算**"で参照されている、動的なプロパティ、 [ADOプロパティの動的インデックス](../../../ado/reference/ado-api/ado-dynamic-property-index.md)で文書化されていると、 [OLE DB 用の Microsoft カーソル サービス](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md)または[Microsoft Data Shaping Service for OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)ドキュメント。  
+ これらの定数は、 **MSDataShape**プロバイダーと**レコードセット**の "**自動**再計算" 動的プロパティでのみ使用されます。動的プロパティは[ADO 動的プロパティインデックス](../../../ado/reference/ado-api/ado-dynamic-property-index.md)で参照され、OLE DB ドキュメントについては、 [Microsoft Cursor service for OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md)または[microsoft データ整形サービス](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)に記載されています。  
   
-|定数|Value|説明|  
+|常時|値|[説明]|  
 |--------------|-----------|-----------------|  
-|**adRecalcAlways**|1|既定値です。 再計算されるたびに、 **MSDataShape**計算列が依存する値が変更されたプロバイダーを決定します。|  
-|**adRecalcUpFront**|0|最初に、階層を構築した場合にのみ**Recordset**します。|  
+|**adRecalcAlways**|1 で保護されたプロセスとして起動されました|既定。 計算列が依存している値が**MSDataShape**プロバイダーによって決定されるたびに再計算されます。|  
+|**adRecalcUpFront**|0|は、最初に階層**レコードセット**を作成するときにのみ計算されます。|  
   
-## <a name="adowfc-equivalent"></a>ADO と WFC と同等  
- これらの定数には、ADO と WFC 対応はありません。
+## <a name="adowfc-equivalent"></a>同等の ADO/WFC  
+ これらの定数には、対応する ADO/WFC がありません。

@@ -16,48 +16,48 @@ ms.assetid: 65120ce6-3900-4cd4-b322-3b9816d74737
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 54b2db44fe2e1971356f96d33aa8de0b02781b1e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931640"
 ---
 # <a name="parenturl-property-ado"></a>ParentURL プロパティ (ADO)
-親を指す絶対 URL 文字列を示す[レコード](../../../ado/reference/ado-api/record-object-ado.md)、現在の**レコード**オブジェクト。  
+現在の**レコード**オブジェクトの親[レコード](../../../ado/reference/ado-api/record-object-ado.md)を指す絶対 URL 文字列を示します。  
   
 ## <a name="return-value"></a>戻り値  
- 返します、**文字列**、親の URL を示す値**レコード**します。  
+ 親**レコード**の URL を示す**文字列**値を返します。  
   
-## <a name="remarks"></a>コメント  
- **ParentURL**プロパティは、開くために使用するソースによって異なります。、**レコード**オブジェクト。 たとえば、**レコード**によって参照されるディレクトリの相対パス名を含むソースを開くことができます、 [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)プロパティ。  
+## <a name="remarks"></a>解説  
+ **Parenturl**プロパティは、 **Record**オブジェクトを開くために使用されるソースによって異なります。 たとえば、 [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)プロパティによって参照されるディレクトリの相対パス名を含むソースで**レコード**を開くことができます。  
   
- たとえば、"first"の下のフォルダーが含まれるは「次」。 開く、**レコード**次の構文を使用してオブジェクト。  
+ "Second" が "first" の下に含まれるフォルダーであるとします。 次の構文を使用して、**レコード**オブジェクトを開きます。  
   
 ```  
 record.ActiveConnection = "https://first"  
 record.Open "second"  
 ```  
   
- 値、 `the` **ParentURL**プロパティは`"https://first"`と同じ**ActiveConnection**します。  
+ ここで、 `the` **parenturl**プロパティの値は`"https://first"`、 **ActiveConnection**と同じです。  
   
- ソースが次のように、絶対 URL を指定もできます`"https://first/second"`します。 **ParentURL**プロパティは、 `"https://first"`、その上のレベル`"second"`します。  
+ ソースには、の`"https://first/second"`ような絶対 URL を指定することもできます。 **Parenturl**プロパティは`"https://first"`、上記`"second"`のレベルです。  
   
- このプロパティは、場合、null 値にすることがあります。  
+ このプロパティは、次の場合に null 値になることがあります。  
   
--   現在のオブジェクトの親が存在しません。たとえば場合、**レコード**オブジェクトは、ディレクトリのルートを表します。  
+-   現在のオブジェクトの親がありません。たとえば、**レコード**オブジェクトがディレクトリのルートを表しているとします。  
   
 -   **レコード**オブジェクトは、URL で指定できないエンティティを表します。  
   
  このプロパティは読み取り専用です。  
   
 > [!NOTE]
->  このプロパティはなど、ドキュメントのソース プロバイダーによってサポートのみ、 [Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)します。 詳細については、次を参照してください。[レコードとプロバイダー提供のフィールド](../../../ado/guide/data/records-and-provider-supplied-fields.md)します。  
+>  このプロパティは、 [Microsoft OLE DB Provider For Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)などのドキュメントソースプロバイダーによってのみサポートされます。 詳細については、「[レコードとプロバイダーが指定](../../../ado/guide/data/records-and-provider-supplied-fields.md)したフィールド」を参照してください。  
   
 > [!NOTE]
->  Http スキームを使用して Url が自動的に呼び出さ、 [Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)します。 詳細については、次を参照してください。[絶対と相対 Url](../../../ado/guide/data/absolute-and-relative-urls.md)します。  
+>  Http スキームを使用する Url は、[インターネット公開のために Microsoft OLE DB プロバイダー](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)を自動的に呼び出します。 詳細については、「[絶対 url と相対 url](../../../ado/guide/data/absolute-and-relative-urls.md)」を参照してください。  
   
 > [!NOTE]
->  現在のレコードが、ADO からのデータ レコードを含むかどうか**レコード セット**へのアクセス、 **ParentURL**プロパティ URL がないことを示す、実行時エラーが発生します。  
+>  現在のレコードに ADO**レコードセット**のデータレコードが含まれている場合、 **parenturl**プロパティにアクセスすると、url が不可能であることを示す実行時エラーが発生します。  
   
 ## <a name="applies-to"></a>適用対象  
  [Record オブジェクト (ADO)](../../../ado/reference/ado-api/record-object-ado.md)

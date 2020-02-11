@@ -18,14 +18,14 @@ ms.assetid: 5ea8029b-eda4-490b-ae84-2ad036fb582f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a81eb6ee58d942547a159728b9c3edf9a30f1ece
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917670"
 ---
 # <a name="parentrow-property-ado"></a>ParentRow プロパティ (ADO)
-OLE DB のコンテナーを設定します**行**上のオブジェクト、 **ADORecordConstruction**オブジェクト、行の親が ADO に変換されるよう**レコード**オブジェクト。  
+行の親が ADO **Record**オブジェクトに変換されるように、 **ADORecordConstruction**オブジェクトの OLE DB **row**オブジェクトのコンテナーを設定します。  
   
  書き込み専用です。  
   
@@ -37,10 +37,10 @@ HRESULT put_ParentRow([in] IUnknown* pParent);
   
 ## <a name="parameters"></a>パラメーター  
  *pParent*  
- 行のコンテナーです。  
+ 行のコンテナー。  
   
 ## <a name="return-values"></a>戻り値  
- このプロパティのメソッドでは、S_OK および E_FAIL を含む、標準の HRESULT 値を返します。  
+ このプロパティメソッドは、S_OK および E_FAIL を含む標準の HRESULT 値を返します。  
   
 ## <a name="applies-to"></a>適用対象  
  [ADORecordConstruction インターフェイス](../../../ado/reference/ado-api/adorecordconstruction-interface.md)

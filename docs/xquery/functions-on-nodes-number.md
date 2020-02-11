@@ -16,16 +16,16 @@ ms.assetid: dff6d19b-765c-4df9-afff-9a0e7be9b91b
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 31a52f86692d5769fe22f4cf0b5a04ad324c3ac0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67930115"
 ---
 # <a name="functions-on-nodes---number"></a>ノードの関数 - number
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  によって示されるノードの数値の値を返します *$arg*します。  
+  *$Arg*によって示されるノードの数値を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,10 +37,10 @@ fn:number($arg as node()?) as xs:double?
   
 ## <a name="arguments"></a>引数  
  *$arg*  
- ノードの値は数値として返されます。  
+ 値が数値として返されるノード。  
   
-## <a name="remarks"></a>コメント  
- 場合 *$arg*が指定されていない、double 型に変換された、コンテキスト ノードの数値の値が返されます。 SQL Server で**fn:number()** せず、引数は、コンテキストに依存する述語のコンテキストでのみ使用できます。 具体的にのみ使用できます角かっこ () 内で。 たとえば、次の式を返します、<`ROOT`> 要素。  
+## <a name="remarks"></a>解説  
+ *$Arg*が指定されていない場合、double に変換されたコンテキストノードの数値が返されます。 SQL Server では、引数のない**fn: number ()** は、コンテキストに依存する述語のコンテキストでのみ使用できます。 具体的には、角かっこ ([]) 内でのみ使用できます。 たとえば、次の式は、<`ROOT`> 要素を返します。  
   
 ```  
 declare @x xml  
@@ -48,13 +48,13 @@ set @x='<ROOT>111</ROOT>'
 select @x.query('/ROOT[number()=111]')  
 ```  
   
- ノードの値でない場合、数値の単純型の有効な字句表現で定義されている**XML Schema Part 2: datatypes,、W3C 勧告**関数は空のシーケンスを返します。 NaN はサポートされません。  
+ ノードの値が、 **XML スキーマパート 2: データ型、W3C 勧告**で定義されているように、数値単純型の有効な字句表現でない場合、関数は空のシーケンスを返します。 NaN はサポートされません。  
   
-## <a name="examples"></a>使用例  
- このトピックではさまざまなに格納されている XML インスタンスに対して XQuery の例について**xml**型の列には、AdventureWorks データベース。  
+## <a name="examples"></a>例  
+ このトピックでは、AdventureWorks データベースのさまざまな**xml**型の列に格納されている xml インスタンスに対して XQuery の例を示します。  
   
-### <a name="a-using-the-number-xquery-function-to-retrieve-the-numeric-value-of-an-attribute"></a>A. Number() XQuery 関数を使用して、属性の数値の値を取得するには  
- 次のクエリでは、製品モデル 7 の製造プロセス内で最初の作業のセンターの場所から、ロット サイズ属性の数値の値を取得します。  
+### <a name="a-using-the-number-xquery-function-to-retrieve-the-numeric-value-of-an-attribute"></a>A. Number () XQuery 関数を使用して属性の数値を取得する  
+ 次のクエリでは、製品モデル7の製造プロセスの最初のワークセンターの場所から、大量のサイズの属性の数値を取得します。  
   
 ```  
 SELECT ProductModelID, Instructions.query('  
@@ -74,11 +74,11 @@ WHERE ProductModelID=7
   
  上のクエリに関して、次の点に注意してください。  
   
--   **Number()** 関数のためのクエリで示すように必須ではありません、 **LotSizeA**属性。 これは XPath 1.0 関数で、主に旧バージョンとの互換性上の理由で含まれています。  
+-   **Number ()** 関数は、 **LotSizeA**属性のクエリに示されているように、必須ではありません。 これは XPath 1.0 関数で、主に旧バージョンとの互換性上の理由で含まれています。  
   
--   XQuery では**LotSizeB** number 関数を指定し、冗長です。  
+-   **LotSizeB**の XQuery は number 関数を指定し、冗長です。  
   
--   クエリを**LotSizeD**算術演算の番号の値の使用方法を示します。  
+-   **Lotsizec**のクエリは、算術演算で数値を使用する方法を示しています。  
   
  結果を次に示します。  
   
@@ -92,13 +92,13 @@ ProductModelID   Result
 ```  
   
 ### <a name="implementation-limitations"></a>実装の制限事項  
- 制限事項を次に示します。  
+ 制限事項は次のとおりです。  
   
--   **Number()** 関数ノードのみを受け取ります。 アトミック値を受け取ることはできません。  
+-   **Number ()** 関数は、ノードのみを受け入れます。 アトミック値を受け取ることはできません。  
   
--   値は、数値として返すことができないときに、 **number()** 関数が NaN ではなく空のシーケンスを返します。  
+-   値を数値として返すことができない場合、 **number ()** 関数は、NaN ではなく空のシーケンスを返します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [xml データ型に対する XQuery 関数](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 手順 1:Visual Basic プロジェクトを設定する |Microsoft Docs
+title: '手順 1: Visual Basic プロジェクトを設定する |Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -11,31 +11,31 @@ ms.assetid: 77d3bfa5-fc9f-4a72-93b4-790c7d227988
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bd44990c38a30f26e682fbb7f1f6aef642043215
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924070"
 ---
-# <a name="step-1-set-up-the-visual-basic-project"></a>手順 1:Visual Basic プロジェクトを設定する
-このシナリオである Microsoft Visual Basic 6.0、ADO 2.5 またはそれ以降、および Microsoft OLE DB Provider for Internet Publishing がシステムにインストールされていると見なされます。 まず、新しいプロジェクトを作成して、プロジェクトで既定のフォームをいくつかのコントロールを追加します。  
+# <a name="step-1-set-up-the-visual-basic-project"></a>手順 1: Visual Basic プロジェクトを設定する
+このシナリオでは、Microsoft Visual Basic 6.0、ADO 2.5 以降、および Microsoft OLE DB Provider for Internet Publishing がシステムにインストールされていることを前提としています。 最初に新しいプロジェクトを作成し、次にプロジェクトの既定のフォームにコントロールを追加します。  
   
-### <a name="to-create-an-ado-project"></a>ADO プロジェクトを作成します。  
+### <a name="to-create-an-ado-project"></a>ADO プロジェクトを作成するには:  
   
-1.  Microsoft Visual Basic では、新しい標準 EXE プロジェクトを作成します。  
+1.  Microsoft Visual Basic で、新しい標準 EXE プロジェクトを作成します。  
   
-2.  [プロジェクト] メニューからの参照を選択します。  
+2.  [プロジェクト] メニューの [参照] をクリックします。  
   
-3.  「Microsoft ActiveX データ オブジェクト 2.5 ライブラリ」を選択し、[ok] をクリックします。  
+3.  [Microsoft ActiveX データオブジェクト2.5 ライブラリ] を選択し、[OK] をクリックします。  
   
-### <a name="to-insert-controls-on-the-main-form"></a>メイン フォームのコントロールを挿入するには。  
+### <a name="to-insert-controls-on-the-main-form"></a>メインフォームにコントロールを挿入するには、次の操作を行います。  
   
-1.  Form1 に ListBox コントロールを追加します。 その名前のプロパティを設定**lstMain**します。  
+1.  Form1 に ListBox コントロールを追加します。 Name プロパティを**lstMain**に設定します。  
   
-2.  Form1 にもう 1 つの ListBox コントロールを追加します。 その名前のプロパティを設定**lstDetails**します。  
+2.  Form1 に別の ListBox コントロールを追加します。 Name プロパティを**lstDetails**に設定します。  
   
-3.  Form1 に TextBox コントロールを追加します。 その名前のプロパティを設定**txtDetails**します。  
+3.  Form1 に TextBox コントロールを追加します。 Name プロパティを**Txtdetails**に設定します。  
   
-## <a name="see-also"></a>関連項目  
- [インターネットのシナリオへの発行](../../../ado/guide/data/internet-publishing-scenario.md)   
- [手順 2:メイン リスト ボックスを初期化します。](../../../ado/guide/data/step-2-initialize-the-main-list-box.md)
+## <a name="see-also"></a>参照  
+ [インターネット公開のシナリオ](../../../ado/guide/data/internet-publishing-scenario.md)   
+ [手順 2: Main リスト ボックスを初期化する](../../../ado/guide/data/step-2-initialize-the-main-list-box.md)

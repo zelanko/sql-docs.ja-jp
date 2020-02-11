@@ -12,21 +12,21 @@ ms.assetid: ca294f6d-eeb5-42ca-9306-156281a3f0f3
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 3e7e854b532040c9a0d9468ad98a7e08048569de
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73632672"
 ---
 # <a name="new-project-ssma-accesstosql"></a>新しいプロジェクト (SSMA) (Sql server への追加)
-新しい SSMA プロジェクトを作成するには、 **[新しいプロジェクト]** ダイアログボックスを使用します。 **[新しいプロジェクト]** ダイアログボックスにアクセスするには、 **[ファイル]** メニューの **[新しいプロジェクト]** をクリックします。  
+新しい SSMA プロジェクトを作成するには、[**新しいプロジェクト**] ダイアログボックスを使用します。 [**新しいプロジェクト**] ダイアログボックスにアクセスするには、[**ファイル**] メニューの [**新しいプロジェクト**] をクリックします。  
   
 ## <a name="options"></a>オプション  
 **名前**  
   
 プロジェクトの名前を入力します。 SSMA によってファイル拡張子が追加されます。  
   
-**場所**  
+**Location**  
   
 フォルダーまたはネットワークの場所を入力するか、参照してプロジェクトを保存します。  
   
@@ -34,15 +34,15 @@ ms.locfileid: "73632672"
   
 次の一覧からターゲットデータベースのバージョンの1つを選択します  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2008  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2016  
   
 -   SQL Azure  
   

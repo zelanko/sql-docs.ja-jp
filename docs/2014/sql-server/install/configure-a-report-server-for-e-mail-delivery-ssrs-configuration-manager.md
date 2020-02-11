@@ -23,22 +23,23 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: c2e34258f10033c61f9966e62fa7c14025423613
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71952332"
 ---
 # <a name="configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager"></a>電子メール配信用にレポート サーバーを構成する (SSRS 構成マネージャー)
 
 
+  
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には電子メール配信拡張機能があり、電子メールを使用してレポートを配布できます。 電子メール サブスクリプションをどのように定義するかに応じて、配信は、通知、リンク、添付ファイル、または埋め込みレポートから構成されます。 電子メール配信拡張機能は、既存のメール サーバー テクノロジと連携して動作します。 メール サーバーは、SMTP サーバーまたはフォワーダーである必要があります。 レポート サーバーは、オペレーティング システムに用意されている Collaboration Data Objects (CDO) ライブラリ (cdosys.dll) を通じて SMTP サーバーに接続します。  
   
  既定では、レポート サーバーの電子メール配信拡張機能は構成されていません。 Reporting Services 構成マネージャーを使用して、この拡張機能の最低限の構成を行う必要があります。 詳細なプロパティを設定するには、 `RSReportServer.config` ファイルを編集します。 この拡張機能を使用するようにレポート サーバーを構成できない場合は、代わりに共有フォルダーにレポートを配信できます。 詳細については、「 [File Share Delivery in Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md)」を参照してください。  
   
 ||  
 |-|  
-|[!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モード|  
+|[!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]ネイティブモード|  
   
  
   
@@ -65,9 +66,9 @@ ms.locfileid: "71952332"
   
  電子メール配信用にレポート サーバーを構成するには、次の操作を行います。  
   
--   SMTP サーバーと、電子メールを送信する権限のあるユーザー アカウントを指定するだけの場合は、Reporting Services 構成マネージャーを使用します。 これらは、レポート サーバーの電子メール配信拡張機能を構成するために最低限必要な設定です。 詳細については、「[電子メール&#40;の設定-&#41; Configuration Manager SSRS ネイティブモード](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)」と「 [Reporting Services での電子メール配信](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)」を参照してください。  
+-   SMTP サーバーと、電子メールを送信する権限のあるユーザー アカウントを指定するだけの場合は、Reporting Services 構成マネージャーを使用します。 これらは、レポート サーバーの電子メール配信拡張機能を構成するために最低限必要な設定です。 詳細については、「[電子メールの設定-Configuration Manager &#40;SSRS ネイティブモード&#41;](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md) 」、および「 [Reporting Services での電子メール配信](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)」を参照してください。  
   
--   (省略可能) テキスト エディターを使用して、RSreportserver.config ファイルで追加の設定を指定します。 このファイルには、レポート サーバーの電子メール配信の構成設定がすべて含まれています。 ローカル SMTP サーバーを使用する場合や、電子メールの配信を特定のホストに限定する場合は、これらのファイルで追加の設定を指定する必要があります。 構成ファイルの検索と変更の詳細については、SQL Server オンラインブックの「 [Reporting Services 構成ファイル&#40;&#41;を変更する](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)」を参照してください。  
+-   (省略可能) テキスト エディターを使用して、RSreportserver.config ファイルで追加の設定を指定します。 このファイルには、レポート サーバーの電子メール配信の構成設定がすべて含まれています。 ローカル SMTP サーバーを使用する場合や、電子メールの配信を特定のホストに限定する場合は、これらのファイルで追加の設定を指定する必要があります。 構成ファイルの検索と変更の詳細については、SQL Server オンラインブックの「 [Reporting Services 構成ファイル &#40;RSreportserver. .config&#41;を変更する](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)」を参照してください。  
   
 > [!NOTE]  
 >  レポート サーバーの電子メール設定は CDO に基づいています。 特定の設定に関する詳細については、CDO の製品マニュアルを参照してください。  
@@ -107,18 +108,20 @@ ms.locfileid: "71952332"
   
 
   
-##  <a name="bkmk_setting_TO_field"></a>をに設定するための構成オプション:フィールドを設定するための構成オプション  
- **"個別のサブスクリプションを管理"** タスクで与えられる権限に従って作成されたユーザー定義サブスクリプションには、ドメイン ユーザー アカウントに基づく定義済みのユーザー名が含まれます。 ユーザーがサブスクリプションを作成すると、 **[宛先]** フィールドの受信者名は、サブスクリプションの作成者のドメイン ユーザー アカウントを使用して自動的に指定されます。  
+##  <a name="bkmk_setting_TO_field"></a>メッセージの [宛先] フィールドを設定するための構成オプション  
+ **個々のサブスクリプションの管理**タスクによって付与されるアクセス許可に従って作成されたユーザー定義サブスクリプションには、ドメインユーザーアカウントに基づく事前設定されたユーザー名が含まれます。 ユーザーがサブスクリプションを作成すると、 **[宛先]** フィールドの受信者名は、サブスクリプションの作成者のドメイン ユーザー アカウントを使用して自動的に指定されます。  
   
  使用している SMTP サーバーまたはフォワーダーで、ドメイン ユーザー アカウントとは別の電子メール アカウントを利用している場合、SMTP サーバーからそのユーザーにレポートの配信が試行されたときに配信が失敗します。  
   
- この問題に対処するには、ユーザーが **[宛先]** フィールドに名前を入力できるように構成設定を変更します。  
+ この問題に対処するには、ユーザーが [ **宛先** ] フィールドに名前を入力できるように構成設定を変更します。  
   
 1.  テキスト エディターで RSReportServer.config を開きます。  
   
-2.  `SendEmailToUserAlias` を `False` に設定します。  
+2.  
+  `SendEmailToUserAlias` を `False` に設定します。  
   
-3.  `DefaultHostName` を SMTP サーバーまたはフォワーダーのドメイン ネーム システム (DNS) 名または IP アドレスに設定します。  
+3.  
+  `DefaultHostName` を SMTP サーバーまたはフォワーダーのドメイン ネーム システム (DNS) 名または IP アドレスに設定します。  
   
 4.  ファイルを保存します。  
   
@@ -127,35 +130,37 @@ ms.locfileid: "71952332"
 ##  <a name="bkmk_options_remote_SMTP"></a>リモート SMTP サービスの構成オプション  
  レポート サーバーと SMTP サーバーまたはフォワーダーの間の接続は、次の構成設定によって決まります。  
   
--   `SendUsing` メッセージを送信する方法を指定します。 ネットワーク SMTP サービスまたはローカル SMTP サービスのピックアップ ディレクトリを選択できます。 リモート SMTP サービスを使用するには、RSReportServer.config ファイルでこの値を **2** に設定する必要があります。  
+-   
+  `SendUsing` メッセージを送信する方法を指定します。 ネットワーク SMTP サービスまたはローカル SMTP サービスのピックアップ ディレクトリを選択できます。 リモート SMTP サービスを使用するには、RSReportServer.config ファイルでこの値を **2** に設定する必要があります。  
   
--   `SMTPServer` リモート SMTP サーバーまたはフォワーダーを指定します。 リモート SMTP サーバーまたはフォワーダーを使用している場合には、この値は必須です。  
+-   
+  `SMTPServer` リモート SMTP サーバーまたはフォワーダーを指定します。 リモート SMTP サーバーまたはフォワーダーを使用している場合には、この値は必須です。  
   
--   `From` メール メッセージの **[送信者]** 行に使用する値を設定します。 リモート SMTP サーバーまたはフォワーダーを使用している場合には、この値は必須です。  
+-   `From`電子メールメッセージの**From:** 行に表示される値を設定します。 リモート SMTP サーバーまたはフォワーダーを使用している場合には、この値は必須です。  
   
  リモート SMTP サービスで使用する他の値としては、次のものがあります (既定値を変更するのでない限り、これらの値をオーバーライドする必要はありません)。  
   
--   **SMTPServerPort** は、ポート 25 に構成します。  
+-   **Smtpserverport**は、ポート25用に構成されています。  
   
--   **SMTPAuthenticate** では、レポート サーバーがリモート SMTP サーバーに接続する方法を指定します。 既定値は 0 (認証なし) です。 この場合、接続は匿名アクセスをとおして行われます。 ドメインの構成によっては、レポート サーバーと SMTP サーバーが同じドメインのメンバーであることが必要になる場合があります。  
+-   **Smtpauthenticate**は、レポートサーバーがリモート SMTP サーバーに接続する方法を指定します。 既定値は 0 (認証なし) です。 この場合、接続は匿名アクセスをとおして行われます。 ドメインの構成によっては、レポート サーバーと SMTP サーバーが同じドメインのメンバーであることが必要になる場合があります。  
   
      制限付きの配信リスト (たとえば、認証されたアカウントからの着信メッセージだけを受け付ける配信リスト) に電子メールを送信するには、 **SMTPAuthenticate** を **2**に設定します。  
   
 
   
 ##  <a name="bkmk_options_local_SMTP"></a>ローカル SMTP サービスの構成オプション  
- レポート サーバー電子メール配信のテストまたはトラブルシューティングを行う場合は、ローカル SMTP サービスの構成が役に立ちます。 既定ではローカル SMTP サービスは無効になっています。 有効にする方法については、「[電子メール配信用にレポートサーバーを構成する (ssrs Configuration Manager)](../../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md) 」および「[電子メールの設定-Configuration Manager &#40;ssrs ネイティブ&#41;モード](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)」を参照してください。  
+ レポート サーバー電子メール配信のテストまたはトラブルシューティングを行う場合は、ローカル SMTP サービスの構成が役に立ちます。 既定ではローカル SMTP サービスは無効になっています。 有効にする方法については、「[電子メール配信用にレポートサーバーを構成する (ssrs Configuration Manager)](../../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md) 」および「[電子メールの設定-Configuration Manager &#40;SSRS ネイティブモード&#41;](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)」を参照してください。  
   
  レポート サーバーとローカル SMTP サーバーまたはフォワーダーの間の接続は、次の構成設定によって決まります。  
   
--   `SendUsing` は**1**に設定されます。  
+-   `SendUsing`が**1**に設定されています。  
   
--   **SMTPServerPickupDirectory** には、ローカル ドライブのフォルダーを設定します。  
+-   **Smtpserverピック Updirectory**は、ローカルドライブ上のフォルダーに設定されています。  
   
     > [!NOTE]  
-    >  ローカル SMTP サーバーを使用している場合は、`SMTPServer` に設定しないようにしてください。  
+    >  ローカル SMTP サーバーを使用して`SMTPServer`いる場合は、を設定しないようにしてください。  
   
--   `From` メール メッセージの **[送信者]** 行に使用する値を設定します。 この値は必須です。  
+-   `From`電子メールメッセージの**From:** 行に表示される値を設定します。 この値は必須です。  
   
  
   
@@ -167,9 +172,10 @@ ms.locfileid: "71952332"
   
 3.  [電子メールの設定] ページで、SMTP サーバーの名前を入力します。 この値は、IP アドレス、企業イントラネット上のコンピューターの UNC 名、または完全修飾ドメイン名にすることができます。  
   
-4.  **[送信者アドレス]** で、SMTP サーバーから電子メールを送信する権限を保持しているアカウントの名前を入力します。  
+4.  
+  **[送信者アドレス]** で、SMTP サーバーから電子メールを送信する権限を保持しているアカウントの名前を入力します。  
   
-5.  **[適用]** をクリックします。  
+5.  **[Apply]** をクリックします。  
   
 
   
@@ -179,15 +185,15 @@ ms.locfileid: "71952332"
   
 2.  テキスト エディターで RSReportServer.config ファイルを開きます。  
   
-3.  <`UrlRoot`> がレポート サーバーの URL アドレスに設定されていることを確認します。 この値はレポート サーバーを構成するときに設定されるため、既に設定されているはずです。 設定されていない場合は、レポート サーバーの URL アドレスを入力します。  
+3.  <`UrlRoot`> がレポートサーバーの URL アドレスに設定されていることを確認します。 この値はレポート サーバーを構成するときに設定されるため、既に設定されているはずです。 設定されていない場合は、レポート サーバーの URL アドレスを入力します。  
   
-4.  Delivery セクションで、<`ReportServerEmail`> を検索します。  
+4.  [配信] セクションで、[ `ReportServerEmail` <> を見つけます。  
   
-5.  <`SMTPServer`> で、SMTP サーバーの名前を入力します。 この値は、IP アドレス、企業イントラネット上のコンピューターの UNC 名、または完全修飾ドメイン名にすることができます。  
+5.  [<`SMTPServer`> で、SMTP サーバーの名前を入力します。 この値は、IP アドレス、企業イントラネット上のコンピューターの UNC 名、または完全修飾ドメイン名にすることができます。  
   
-6.  <`SendUsing`> が 2 に設定されていることを確認します。 別の値に設定されている場合、レポート サーバーはリモート SMTP サービスを使用するように構成されていません。  
+6.  <`SendUsing`> が2に設定されていることを確認します。 別の値に設定されている場合、レポート サーバーはリモート SMTP サービスを使用するように構成されていません。  
   
-7.  <`From`> で、SMTP サーバーから電子メールを送信する権限を保持しているアカウントの名前を入力します。  
+7.  [<`From`>] に、SMTP サーバーから電子メールを送信する権限を持つアカウントの名前を入力します。  
   
 8.  ファイルを保存します。  
   
@@ -197,33 +203,43 @@ ms.locfileid: "71952332"
   
 ##  <a name="bkmk_confiugre_local_SMTP"></a>レポートサーバーのローカル SMTP サービスを構成するには  
   
-1.  コントロール パネルを開き、 **[プログラムの追加と削除]** をクリックします。  
+1.  コントロール パネルで、**[プログラムの追加と削除]** をクリックします。  
   
-2.  **[Windows コンポーネントの追加と削除]** をクリックして、Windows コンポーネント ウィザードを開始します。  
+2.  
+  **[Windows コンポーネントの追加と削除]** をクリックして、Windows コンポーネント ウィザードを開始します。  
   
-3.  **[アプリケーション サーバー]** を選択し、 **[詳細]** をクリックします。  
+3.  
+  **[アプリケーション サーバー]** を選択し、 **[詳細]** をクリックします。  
   
-4.  **[インターネット インフォメーション サービス (IIS)]** を選択し、 **[詳細]** をクリックします。  
+4.  
+  **[インターネット インフォメーション サービス (IIS)]** を選択し、 **[詳細]** をクリックします。  
   
-5.  **[SMTP サービス]** チェック ボックスをオンにして、 **[OK]** をクリックします。  
+5.  
+  **[SMTP サービス]** チェック ボックスをオンにして、 **[OK]** をクリックします。  
   
 6.  Windows コンポーネント ウィザードの **[次へ]** をクリックし、 **[完了]** をクリックします。  
   
-7.  **[サービス]** コンソールでサービスが実行されていることを確認します。  
+7.  
+  **[サービス]** コンソールでサービスが実行されていることを確認します。  
   
-8.  テキスト エディターで **RSReportServer.config** ファイルを開きます。  
+8.  **Rsreportserver. .config**ファイルをテキストエディターで開きます。  
   
-9. `<UrlRoot>` がレポート サーバーの URL アドレスに設定されていることを確認します。 この値はレポート サーバーを構成するときに設定されるため、既に設定されているはずです。 設定されていない場合は、レポート サーバーの URL アドレスを入力します。  
+9. 
+  `<UrlRoot>` がレポート サーバーの URL アドレスに設定されていることを確認します。 この値はレポート サーバーを構成するときに設定されるため、既に設定されているはずです。 設定されていない場合は、レポート サーバーの URL アドレスを入力します。  
   
 10. Delivery セクションで、`<ReportServerEmail>.` を検索します。  
   
-11. `<SMTPServer>`内で、この設定の値をすべて消去します。タグは削除しないでください。  
+11. 
+  `<SMTPServer>`内で、この設定の値をすべて消去します。タグは削除しないでください。  
   
-12. `<SendUsing>` を 1 に設定します。 1 以外の値に設定されている場合、レポート サーバーはローカル SMTP サービスを使用するように構成されていません。  
+12. 
+  `<SendUsing>` を 1 に設定します。 1 以外の値に設定されている場合、レポート サーバーはローカル SMTP サービスを使用するように構成されていません。  
   
-13. `<SMTPServerPickupDirectory>` に、ローカル ドライブ上のフォルダーを設定します。  
+13. 
+  `<SMTPServerPickupDirectory>` に、ローカル ドライブ上のフォルダーを設定します。  
   
-14. `<From>` に、SMTP サーバーから電子メールを送信する権限を保持しているアカウントを設定します。  
+14. 
+  `<From>` に、SMTP サーバーから電子メールを送信する権限を保持しているアカウントを設定します。  
   
 15. ファイルを保存します。  
   

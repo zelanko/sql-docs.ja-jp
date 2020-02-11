@@ -1,5 +1,5 @@
 ---
-title: sp_browsemergesnapshotfolder (TRANSACT-SQL) |Microsoft Docs
+title: sp_browsemergesnapshotfolder (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: e248642f-5fea-4ed7-be1a-36ff75abcfde
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 92df93d1c14b10aa6587d0eaf13f4de81bc4d7f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68046012"
 ---
-# <a name="spbrowsemergesnapshotfolder-transact-sql"></a>sp_browsemergesnapshotfolder (TRANSACT-SQL)
+# <a name="sp_browsemergesnapshotfolder-transact-sql"></a>sp_browsemergesnapshotfolder (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  マージ パブリケーションに対して生成された最新のスナップショットの完全なパスを返します。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
+  マージパブリケーションに対して生成された最新のスナップショットの完全なパスを返します。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースに対して実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -37,28 +37,28 @@ sp_browsemergesnapshotfolder [@publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publication = ] 'publication'` パブリケーションの名前です。 *パブリケーション* は **sysname** 、既定値はありません。  
+`[ @publication = ] 'publication'`パブリケーションの名前を指定します。 *publication*は**sysname**,、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
-|**snapshot_folder**|**nvarchar(2000)**|スナップショット ディレクトリの完全パスです。|  
+|**snapshot_folder**|**nvarchar (2000)**|スナップショットディレクトリへの完全パスです。|  
   
-## <a name="remarks"></a>コメント  
- **sp_browsemergesnapshotfolder**はマージ レプリケーションで使用します。  
+## <a name="remarks"></a>解説  
+ **sp_browsemergesnapshotfolder**は、マージレプリケーションで使用します。  
   
- 結果セットが 2 つの行を含める場合は、パブリッシャーの作業ディレクトリとパブリッシャー スナップショット フォルダーの両方にスナップショット ファイルを生成するパブリケーションを設定します。 最初の行には、パブリケーションのスナップショット フォルダーが含まれていますし、2 番目の行には、パブリッシャーの作業が含まれています。ディレクトリ。  
+ パブリケーションが、パブリッシャーの作業ディレクトリとパブリッシャーのスナップショットフォルダーの両方でスナップショットファイルを生成するように設定されている場合、結果セットには2つの行が含まれます。最初の行にはパブリケーションスナップショットフォルダーが含まれ、2行目には作業中のパブリッシャーが含まれます。名簿.  
   
- **sp_browsemergesnapshotfolder**は、マージ スナップショット ファイルが生成されるディレクトリを決定するために便利です。 このフォルダーおよびパスとその内容をリムーバブル メディアにコピーし、スナップショットを使用してスナップショットの代替位置からサブスクリプションを同期することができます。  
+ **sp_browsemergesnapshotfolder**は、マージスナップショットファイルが生成されるディレクトリを特定するのに役立ちます。 このフォルダーおよびパスとその内容をリムーバブル メディアにコピーし、スナップショットを使用してスナップショットの代替位置からサブスクリプションを同期することができます。  
   
 ## <a name="permissions"></a>アクセス許可  
- メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_browsemergesnapshotfolder**します。  
+ **Sp_browsemergesnapshotfolder**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
-## <a name="see-also"></a>関連項目  
- [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>参照  
+ [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

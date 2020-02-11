@@ -1,5 +1,5 @@
 ---
-title: RDS のプログラミング モデルとオブジェクト |Microsoft Docs
+title: オブジェクトを使用した RDS プログラミングモデル |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,40 +14,40 @@ ms.assetid: 07ce0ef0-72f1-48f4-823d-1b65d28c0926
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 06bf7c811074ba70741fe77b06037f9f69c9cda4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67922473"
 ---
 # <a name="rds-programming-model-with-objects"></a>RDS のプログラミング モデルとオブジェクト
-RDS の目標にアクセスし、IIS などの中間層を介して、データ ソースを更新することです。 プログラミング モデルでは、この目標を達成するために必要なアクティビティのシーケンスを指定します。 オブジェクト モデルでは、メソッドとプロパティが、プログラミング モデルに影響するオブジェクトを指定します。  
+RDS の目標は、IIS などの中継局を介してデータソースにアクセスし、更新することです。 プログラミングモデルは、この目標を達成するために必要なアクティビティのシーケンスを指定します。 オブジェクトモデルは、メソッドとプロパティがプログラミングモデルに影響を与えるオブジェクトを指定します。  
   
 > [!IMPORTANT]
->  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)します。  
+>  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および[Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416)」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
   
- RDS は、次の一連のアクションを実行する手段を提供します。  
+ RDS には、次の一連の操作を実行するための手段が用意されています。  
   
--   サーバーで、呼び出されるプログラムを指定して、クライアントから参照する方法 (プロキシ) を取得 ([rds.DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md))。  
+-   サーバーで呼び出されるプログラムを指定し、クライアント (RDS) から参照する方法 (プロキシ) を取得し[ます。領域スペース](../../../ado/reference/rds-api/dataspace-object-rds.md))。  
   
--   サーバー プログラムを起動します。 データ ソースおよび発行するコマンドを識別するサーバーのプログラムにパラメーターを渡す (プロキシまたは[rds.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md))。  
+-   サーバープログラムを起動します。 データソースを識別するパラメーターと、発行するコマンド (プロキシまたは RDS) をサーバープログラムに渡し[ます。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md))。  
   
--   サーバーのプログラムを取得、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)ADO を使用して、通常、データ ソースからのオブジェクト。 必要に応じて、 **Recordset**オブジェクトは、サーバーで処理される ([RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md))。  
+-   サーバープログラムは、通常は ADO を使用して、データソースから[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトを取得します。 必要に応じて、**レコードセット**オブジェクトがサーバー上で処理されます ([RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md))。  
   
--   サーバー プログラム返します最終的な**レコード セット**オブジェクトをクライアント アプリケーション (プロキシ)。  
+-   サーバープログラムは、最後の**レコードセット**オブジェクトをクライアントアプリケーション (プロキシ) に返します。  
   
--   クライアントで、**レコード セット**ビジュアル コントロールで簡単に使用できる形式にオブジェクトが格納されます (ビジュアル コントロールと**rds.DataControl**)。  
+-   クライアントでは、**レコードセット**オブジェクトは、ビジュアルコントロール (ビジュアルコントロールおよび RDS) で簡単に使用できるフォームに配置され**ます。DataControl**)。  
   
--   変更、 **Recordset**オブジェクトがサーバーに送信され、データ ソースを更新するために使用 (**rds.DataControl**または**RDSServer.DataFactory**)。  
+-   **Recordset**オブジェクトへの変更は、サーバーに送り返され、データソースの更新に使用され**ます (RDS.DataControl**または**RDSServer**)。  
   
-## <a name="see-also"></a>関連項目  
- [RDS オブジェクト モデルの概要](../../../ado/guide/remote-data-service/rds-object-model-summary.md)   
+## <a name="see-also"></a>参照  
+ [RDS オブジェクトモデルの概要](../../../ado/guide/remote-data-service/rds-object-model-summary.md)   
  [DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [DataFactory オブジェクト (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)   
- [DataSpace オブジェクト (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)   
+ [領域スペースオブジェクト (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)   
  [RDS のシナリオ](../../../ado/guide/remote-data-service/rds-scenario.md)   
  [RDS チュートリアル](../../../ado/guide/remote-data-service/rds-tutorial.md)   
- [RecordSet オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [RDS の使用方法とセキュリティ](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
 
 

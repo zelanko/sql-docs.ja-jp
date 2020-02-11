@@ -16,14 +16,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bddf15e6469e2fd347c716e98e750c077bcc29e7
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72797688"
 ---
 # <a name="create-or-configure-an-availability-group-listener-sql-server"></a>可用性グループ リスナーの作成または構成 (SQL Server)
-  このトピックでは、 *で* 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、または PowerShell を使用して、AlwaysOn 可用性グループに対して 1 つの [!INCLUDE[tsql](../../../includes/tsql-md.md)]可用性グループ リスナー [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]を作成または構成する方法について説明します。  
+  このトピックでは、で[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]、、または PowerShell を使用[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]して、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]AlwaysOn 可用性グループの単一の*可用性グループリスナー*を作成または構成する方法について説明します。  
   
 > [!IMPORTANT]  
 >  可用性グループの最初の可用性グループ リスナーを作成するには、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、または [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell を使用することを強くお勧めします。 必要な場合 (追加リスナーを作成する場合など) を除いて、WSFC クラスターでリスナーを直接作成することは避けてください。  
@@ -46,7 +46,7 @@ ms.locfileid: "72797688"
 ###  <a name="Recommendations"></a> 推奨事項  
  複数のサブネットを構成する場合は、必須ではありませんが、静的 IP アドレスの使用をお勧めします。  
   
-###  <a name="Prerequisites"></a> の前提条件  
+###  <a name="Prerequisites"></a> 前提条件  
   
 -   プライマリ レプリカをホストするサーバー インスタンスに接続されている必要があります。  
   
@@ -65,10 +65,10 @@ ms.locfileid: "72797688"
   
 ###  <a name="WinPermissions"></a> Windows 権限  
   
-|アクセス許可|リンク|  
+|アクセス許可|Link|  
 |-----------------|----------|  
 |可用性グループをホストしている WSFC クラスターのクラスター オブジェクト名 (CNO) には、 **Create Computer objects** アクセス許可が必要です。<br /><br /> Active Directory では、CNO は既定で **Create Computer objects** アクセス許可を明示的に持たず、仮想コンピューター オブジェクト (VCO) を最大で 10 個作成できます。 VCO を 10 個作成した後、追加で VCO を作成しようとしても失敗します。 この問題は、WSFC クラスターの CNO に権限を明示的に与えることで回避できます。 削除した可用性グループの VCO は Active Directory 内で自動的に削除されず、手動で削除しない限り、VCO の 10 個の既定の制限の対象としてカウントされます。<br /><br /> 注: 組織によっては、 **Create Computer objects** 権限を個別のユーザー アカウントに付与することがセキュリティ ポリシーで禁止されている場合があります。|*クラスターをインストールするユーザーのアカウントを構成する手順:* 「 [フェールオーバー クラスター ステップ バイ ステップ ガイド: Active Directory のアカウントの構成](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_installer)<br /><br /> *クラスター名アカウントを事前設定する手順:* 「 [フェールオーバー クラスター ステップ バイ ステップ ガイド: Active Directory のアカウントの構成](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating)|  
-|リスナーの仮想ネットワーク名にコンピューター アカウントを事前設定する必要がある場合は、 **Account Operator** グループのメンバーシップが必要です。または、ドメイン管理者に依頼する必要があります。<br /><br /> ヒント: 一般的には、リスナーの仮想ネットワーク名にコンピューター アカウントを事前設定しないことが最も簡単です。 可能な場合は、WSFC の高可用性ウィザードを実行する際にアカウントが自動的に作成および構成されるように構成します。|*クラスター化されたサービスまたはアプリケーションのアカウントを事前設定する手順:* 「[フェールオーバー クラスター ステップ バイ ステップ ガイド: Active Directory のアカウントの構成](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating2)」|  
+|リスナーの仮想ネットワーク名にコンピューター アカウントを事前設定する必要がある場合は、 **Account Operator** グループのメンバーシップが必要です。または、ドメイン管理者に依頼する必要があります。<br /><br /> ヒント: 一般的には、リスナーの仮想ネットワーク名にコンピューター アカウントを事前設定しないことが最も簡単です。 可能な場合は、WSFC の高可用性ウィザードを実行する際にアカウントが自動的に作成および構成されるように構成します。|*クラスター化されたサービスまたはアプリケーションのアカウントを事前設定する手順* [: 「フェールオーバークラスターステップバイステップガイド: Active Directory でのアカウントの構成](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating2)」を参照してください。|  
   
 ###  <a name="SqlPermissions"></a> SQL Server 権限  
   
@@ -86,7 +86,8 @@ ms.locfileid: "72797688"
   
 1.  オブジェクト エクスプローラーで、可用性グループのプライマリ レプリカをホストするサーバー インスタンスに接続し、サーバー名をクリックしてサーバー ツリーを展開します。  
   
-2.  **[AlwaysOn 高可用性]** ノードと **[可用性グループ]** ノードを展開します。  
+2.  
+  **[AlwaysOn 高可用性]** ノードと **[可用性グループ]** ノードを展開します。  
   
 3.  リスナーを構成する可用性グループをクリックし、次のいずれかを選択します。  
   
@@ -119,19 +120,19 @@ ms.locfileid: "72797688"
   
  次の列で構成されます。  
   
- **[サブネット]**  
+ **サブネット**  
  可用性グループ リスナーに追加される各サブネットの識別子が表示されます。  
   
- **[IP アドレス]**  
+ **IP アドレス**  
  特定のサブネットの IP アドレスが表示されます。  サブネットの IP アドレスには、IPv4 アドレスまたは IPv6 アドレスを使用できます。  
   
- **[追加]**  
+ **追加**  
  選択したサブネットまたはこのリスナーの別のサブネットに静的 IP アドレスを追加する場合にクリックします。 クリックすると、 **[IP アドレスの追加]** ダイアログ ボックスが開きます。 詳細については、「[[IP アドレスの追加] ダイアログ ボックス &#40;SQL Server Management Studio&#41;](add-ip-address-dialog-box-sql-server-management-studio.md)」ヘルプ トピックを参照してください。  
   
- **[削除]**  
+ **Remove**  
  選択したサブネットをこのリスナーから削除する場合にクリックします。  
   
- **OK**  
+ **[OK]**  
  指定した可用性グループ リスナーを作成する場合にクリックします。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
@@ -191,23 +192,24 @@ ms.locfileid: "72797688"
     ```  
   
     > [!NOTE]  
-    >  コマンドレットの構文を表示するには、 **PowerShell 環境で**  Get-Help [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コマンドレットを使用します。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
+    >  コマンドレットの構文を表示するには、 **** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 環境で get-help コマンドレットを使用します。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
   
 SQL Server PowerShell プロバイダーを設定して使用する方法については、「 [SQL Server PowerShell プロバイダー](../../../powershell/sql-server-powershell-provider.md)」を参照してください。
   
 ## <a name="troubleshooting"></a>トラブルシューティング  
   
-###  <a name="ADQuotas"></a> Active Directory クォータが原因で可用性グループ リスナーの作成が失敗する問題  
- 新しい可用性グループ リスナーの作成は、参加しているクラスター ノード マシン アカウントの Active Directory クォータに達したため、失敗する場合があります。  詳細については、次の各資料を参照してください。  
+###  <a name="ADQuotas"></a>Active Directory クォータが原因で可用性グループリスナーを作成できない  
+ 新しい可用性グループ リスナーの作成は、参加しているクラスター ノード マシン アカウントの Active Directory クォータに達したため、失敗する場合があります。  詳細については、次の記事を参照してください。  
   
--   [HYPERLINK "https://support.microsoft.com/kb/307532" コンピューターオブジェクトを変更するときにクラスターサービスアカウントのトラブルシューティングを行う方法](https://support.microsoft.com/kb/307532)  
+-   [HYPERLINK "https://support.microsoft.com/kb/307532" コンピューターオブジェクトが変更されたときにクラスターサービスアカウントのトラブルシューティングを行う方法](https://support.microsoft.com/kb/307532)  
   
--   [ハイパーリンク "https://technet.microsoft.com/library/cc904295(WS.10).aspx" Active Directory クォータ](https://technet.microsoft.com/library/cc904295\(WS.10\).aspx)  
+-   [HYPERLINK "https://technet.microsoft.com/library/cc904295(WS.10).aspx" Active Directory クォータ](https://technet.microsoft.com/library/cc904295\(WS.10\).aspx)  
   
-##  <a name="FollowUp"></a> 補足情報: 可用性グループ リスナーの作成後  
+##  <a name="FollowUp"></a>補足情報: 可用性グループリスナーを作成した後  
   
-###  <a name="MultiSubnetFailover"></a> MultiSubnetFailover のキーワードおよび関連機能  
- `MultiSubnetFailover` は、SQL Server 2012 の AlwaysOn 可用性グループおよび AlwaysOn フェールオーバー クラスター インスタンスに対して高速フェールオーバーを有効にするために使用する新しい接続文字列キーワードです。 接続文字列で `MultiSubnetFailover=True` が設定されていると、次の 3 つのサブ機能が有効になります。  
+###  <a name="MultiSubnetFailover"></a>MultiSubnetFailover キーワードと関連機能  
+ 
+  `MultiSubnetFailover` は、SQL Server 2012 の AlwaysOn 可用性グループおよび AlwaysOn フェールオーバー クラスター インスタンスに対して高速フェールオーバーを有効にするために使用する新しい接続文字列キーワードです。 接続文字列で `MultiSubnetFailover=True` が設定されていると、次の 3 つのサブ機能が有効になります。  
   
 -   AlwaysOn 可用性グループまたはフェールオーバー クラスター インスタンスに対する複数サブネット リスナーへのより高速なマルチサブネット フェールオーバー。  
   
@@ -219,52 +221,59 @@ SQL Server PowerShell プロバイダーを設定して使用する方法につ�
   
     -   複数サブネット エンドポイントを持つ AlwaysOn フェールオーバー クラスター インスタンスの名前付きインスタンス解決サポートを追加します。  
   
- **.NET Framework 3.5 および OLEDB で MultiSubnetFailover=True はサポートされない**  
+ **MultiSubnetFailover = True は、NET Framework 3.5 または OLEDB ではサポートされていません**  
   
- **問題点:** 異なるサブネットからの複数の IP アドレスに応じて可用性グループまたはフェールオーバー クラスター インスタンスにリスナー名 (ネットワーク名または WSFC クラスター マネージャーのクライアント アクセス ポイント) がある場合に、ADO.NET with .NET Framework 3.5SP1 または SQL Native Client 11.0 OLEDB を使用していると、可用性グループ リスナーに対するクライアント接続要求の 50% が接続タイムアウトに達する可能性があります。  
+ **問題:** 異なるサブネットからの複数の IP アドレスに応じて、可用性グループまたはフェールオーバークラスターインスタンスにリスナー名 (WSFC クラスターマネージャーのネットワーク名またはクライアントアクセスポイントと呼ばれる) がある場合、.NET Framework 3.5 SP1 または SQL Native Client 11.0 OLEDB で ADO.NET を使用していると、可用性グループリスナーへのクライアント接続要求の50% が接続タイムアウトに達します。  
   
  **回避策:** 次のいずれかのタスクを実行することをお勧めします。  
   
 -   クラスター リソースを操作する権限がない場合は、接続タイムアウトを 30 秒に設定します (この値は結果として、20 秒の TCP タイムアウトと 10 秒のバッファーになります)。  
   
-     **長所:** クロスサブネット フェールオーバーが発生した場合、クライアントの復旧時間が短くなります。  
+     **長所**: クロスサブネットフェールオーバーが発生した場合、クライアントの復旧時間は短くなります。  
   
-     **短所:** 半数のクライアント接続に 20 秒以上要します。  
+     **短所**: クライアント接続の半分が20秒を超えることになります。  
   
 -   クラスター リソースを操作する権限がある場合は、可用性グループ リスナーのネットワーク名を `RegisterAllProvidersIP=0`に設定する方法をお勧めします。 詳細については、このセクションの「RegisterAllProvidersIP の設定」を参照してください。  
   
-     **長所:** クライアント接続のタイムアウト値を大きくする必要がありません。  
+     **長所:** クライアント接続のタイムアウト値を大きくする必要はありません。  
   
-     **短所:** クロスサブネットフェールオーバーが発生した場合、`HostRecordTTL` 設定やクロスサイト DNS/AD レプリケーションスケジュールの設定によっては、クライアントの復旧時間が15分以上になる可能性があります。  
+     **短所:** クロスサブネットフェールオーバーが発生した場合、 `HostRecordTTL`設定とクロスサイト DNS/AD レプリケーションスケジュールの設定によっては、クライアントの復旧時間が15分以上になる可能性があります。  
   
-###  <a name="RegisterAllProvidersIP"></a> RegisterAllProvidersIP の設定  
- [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)]、または PowerShell を使用して可用性グループ リスナーを作成すると、WSFC にクライアント アクセス ポイントが作成され、その `RegisterAllProvidersIP` プロパティが 1 (true) に設定されます。 このプロパティ値の効果は、次に示すように、クライアント接続文字列によって異なります。  
+###  <a name="RegisterAllProvidersIP"></a>RegisterAllProvidersIP の設定  
+ 
+  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)]、または PowerShell を使用して可用性グループ リスナーを作成すると、WSFC にクライアント アクセス ポイントが作成され、その `RegisterAllProvidersIP` プロパティが 1 (true) に設定されます。 このプロパティ値の効果は、次に示すように、クライアント接続文字列によって異なります。  
   
--   `MultiSubnetFailover` を true に設定する接続文字列  
+-   
+  `MultiSubnetFailover` を true に設定する接続文字列  
   
-     クライアントの接続文字列で `MultiSubnetFailover = True`を指定するクライアントのフェールオーバー後の再接続時間を短縮するために、[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] `RegisterAllProvidersIP` プロパティを1に設定します。 リスナーのマルチサブネット機能を活用するには、クライアントに `MultiSubnetFailover` キーワードをサポートするデータ プロバイダーが必要な場合があります。 マルチサブネット フェールオーバーのドライバー サポートについては、「[AlwaysOn クライアント接続 &#40;SQL Server&#41;](always-on-client-connectivity-sql-server.md)」を参照してください。  
+     [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]クライアントの`RegisterAllProvidersIP`接続文字列がを指定`MultiSubnetFailover = True`しているクライアントのフェールオーバー後の再接続時間を短縮するために、プロパティを1に設定します (推奨)。 リスナーのマルチサブネット機能を活用するには、クライアントに `MultiSubnetFailover` キーワードをサポートするデータ プロバイダーが必要な場合があります。 マルチサブネット フェールオーバーのドライバー サポートについては、「[AlwaysOn クライアント接続 &#40;SQL Server&#41;](always-on-client-connectivity-sql-server.md)」を参照してください。  
   
-     マルチサブネット クラスタリングについては、「[SQL Server マルチサブネット クラスタリング &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md)」を参照してください。  
+     マルチサブネット クラスタリングについては、「 [SQL Server マルチサブネット クラスタリング &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md)を作成または構成する方法について説明します。  
   
     > [!TIP]  
-    >  `RegisterAllProvidersIP = 1`のときに、WSFC クラスターに対して WSFC の構成の検証ウィザードを実行すると、次の警告メッセージが表示されます。  
+    >  
+  `RegisterAllProvidersIP = 1`のときに、WSFC クラスターに対して WSFC の構成の検証ウィザードを実行すると、次の警告メッセージが表示されます。  
     >   
     >  "ネットワーク名 'Name:<network_name>' の RegisterAllProviderIP プロパティは 1 に設定されています。現在のクラスター構成の場合、この値は 0 に設定する必要があります。"  
     >   
     >  このメッセージは無視してください。  
   
--   `MultiSubnetFailover` を true に設定しない接続文字列  
+-   
+  `MultiSubnetFailover` を true に設定しない接続文字列  
   
-     `RegisterAllProvidersIP = 1`の場合、接続文字列で `MultiSubnetFailover = True`を使用しないクライアントは、接続の待機時間が長くなります。 これが発生するのは、このようなクライアントはすべての IP への接続を順に試行するためです。 これに対し、`RegisterAllProvidersIP` を 0 に変更すると、WSFC クラスターのクライアント アクセス ポイントにアクティブな IP アドレスが登録され、レガシ クライアントの待機時間が短縮されます。 したがって、可用性グループリスナーに接続する必要があり、`MultiSubnetFailover` プロパティを使用できないレガシクライアントがある場合は、`RegisterAllProvidersIP` を0に変更することをお勧めします。  
+     
+  `RegisterAllProvidersIP = 1`の場合、接続文字列で `MultiSubnetFailover = True`を使用しないクライアントは、接続の待機時間が長くなります。 これが発生するのは、このようなクライアントはすべての IP への接続を順に試行するためです。 これに対し、`RegisterAllProvidersIP` を 0 に変更すると、WSFC クラスターのクライアント アクセス ポイントにアクティブな IP アドレスが登録され、レガシ クライアントの待機時間が短縮されます。 したがって、可用性グループリスナーに接続する必要があり、 `MultiSubnetFailover`プロパティを使用できないレガシクライアントがある場合は、を 0 `RegisterAllProvidersIP`に変更することをお勧めします。  
   
     > [!IMPORTANT]  
     >  WSFC クラスター (フェールオーバー クラスター マネージャーの GUI) を通してリスナーを作成すると、`RegisterAllProvidersIP` は既定で 0 (false) になります。  
   
-###  <a name="HostRecordTTL"></a> HostRecordTTL の設定  
- 既定では、クライアントは 20 分間、クラスター DNS レコードをキャッシュします。  `HostRecordTTL` の値 (キャッシュするレコードの有効期限 (TTL)) を小さくすると、レガシ クライアントはよりすばやく再接続できるようになります。  ただし、`HostRecordTTL` の設定を小さくすると、DN サーバーへのトラフィックが増加する可能性があります。  
+###  <a name="HostRecordTTL"></a>HostRecordTTL の設定  
+ 既定では、クライアントは 20 分間、クラスター DNS レコードをキャッシュします。  
+  `HostRecordTTL` の値 (キャッシュするレコードの有効期限 (TTL)) を小さくすると、レガシ クライアントはよりすばやく再接続できるようになります。  ただし、`HostRecordTTL` の設定を小さくすると、DN サーバーへのトラフィックが増加する可能性があります。  
   
-###  <a name="SampleScript"></a> RegisterAllProvidersIP を無効にし、TTL を短縮する PowerShell サンプル スクリプト  
- 次の PowerShell の例では、リスナー リソースに対する `RegisterAllProvidersIP` クラスター パラメーターと `HostRecordTTL` クラスター パラメーターの両方を構成する方法を示しています。  DNS レコードは、既定の 20 分間ではなく、5 分間キャッシュされます。  両方のクラスター パラメーターを変更すると、`MultiSubnetFailover` パラメーターを使用できないレガシ クライアントのフェールオーバーが発生した後に、適切な IP アドレスに接続する時間が短縮される可能性があります。  `yourListenerName` は、変更対象のリスナーの名前に置き換えてください。  
+###  <a name="SampleScript"></a>RegisterAllProvidersIP を無効にし、TTL を短縮する PowerShell サンプルスクリプト  
+ 次の PowerShell の例では、リスナー リソースに対する `RegisterAllProvidersIP` クラスター パラメーターと `HostRecordTTL` クラスター パラメーターの両方を構成する方法を示しています。  DNS レコードは、既定の 20 分間ではなく、5 分間キャッシュされます。  両方のクラスター パラメーターを変更すると、`MultiSubnetFailover` パラメーターを使用できないレガシ クライアントのフェールオーバーが発生した後に、適切な IP アドレスに接続する時間が短縮される可能性があります。  
+  `yourListenerName` は、変更対象のリスナーの名前に置き換えてください。  
   
 ```powershell
 Import-Module FailoverClusters  
@@ -276,21 +285,21 @@ Start-ClusterResource yourAGResource
   
  フェールオーバー中の復旧時間の詳細については、「 [Client Recovery Latency During Failover](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md#DNS)」を参照してください。  
   
-###  <a name="FollowUpRecommendations"></a> 補足情報: 推奨事項  
+###  <a name="FollowUpRecommendations"></a>補足情報: 推奨事項  
  可用性グループ リスナーを作成した後:  
   
 -   リスナーの IP アドレスが排他的に使用されるように確保することを、ネットワーク管理者に依頼します。  
   
 -   この可用性グループへのクライアント接続を要求するときの接続文字列で使用できるよう、リスナーの DNS ホスト名をアプリケーション開発者に通知します。  
   
--   可能であれば、`MultiSubnetFailover = True` を指定するようにクライアント接続文字列を更新することを開発者に勧めます。 マルチサブネット フェールオーバーのドライバー サポートについては、「[AlwaysOn クライアント接続 &#40;SQL Server&#41;](always-on-client-connectivity-sql-server.md)」を参照してください。  
+-   可能であれば、 `MultiSubnetFailover = True`を指定するようにクライアント接続文字列を更新することを開発者に勧めます。 マルチサブネット フェールオーバーのドライバー サポートについては、「[AlwaysOn クライアント接続 &#40;SQL Server&#41;](always-on-client-connectivity-sql-server.md)」を参照してください。  
   
-###  <a name="CreateAdditionalListener"></a> 可用性グループの追加のリスナーの作成 (省略可能)  
+###  <a name="CreateAdditionalListener"></a>可用性グループの追加のリスナーの作成 (省略可能)  
  SQL Server で 1 つのリスナーを作成した後、次の手順で追加のリスナーを追加できます。  
   
 1.  次のツールのいずれかを使用してリスナーを作成します。  
   
-    -   **WSFC フェールオーバー クラスター マネージャーの使用:**  
+    -   **WSFC フェールオーバークラスターマネージャーの使用:**  
   
         1.  クライアント アクセス ポイントを追加し、IP アドレスを構成します。  
   
@@ -300,17 +309,21 @@ Start-ClusterResource yourAGResource
   
          フェールオーバー クラスター マネージャーのダイアログ ボックスおよびタブの詳細については、「 [ユーザー インターフェイス: フェールオーバー クラスター マネージャー スナップイン](https://technet.microsoft.com/library/cc772502.aspx)」を参照してください。  
   
-    -   **フェールオーバー クラスターの Windows PowerShell の使用:**  
+    -   **フェールオーバークラスター用の Windows PowerShell の使用:**  
   
-        1.  [Add-ClusterResource](https://technet.microsoft.com/library/ee460983.aspx) を使用して、ネットワーク名と IP アドレス リソースを作成します。  
+        1.  
+  [Add-ClusterResource](https://technet.microsoft.com/library/ee460983.aspx) を使用して、ネットワーク名と IP アドレス リソースを作成します。  
   
-        2.  [Start-ClusterResource](https://technet.microsoft.com/library/ee461056.aspx) を使用して、ネットワーク名リソースを開始します。  
+        2.  
+  [Start-ClusterResource](https://technet.microsoft.com/library/ee461056.aspx) を使用して、ネットワーク名リソースを開始します。  
   
-        3.  [Add-ClusterResourceDependency](https://technet.microsoft.com/library/ee461014.aspx) を使用して、ネットワーク名と、既存の SQL Server 可用性グループ リソース間の依存関係を設定します。  
+        3.  
+  [Add-ClusterResourceDependency](https://technet.microsoft.com/library/ee461014.aspx) を使用して、ネットワーク名と、既存の SQL Server 可用性グループ リソース間の依存関係を設定します。  
   
          フェールオーバー クラスターの Windows PowerShell の詳細については、「 [サーバー マネージャーのコマンドの概要](https://technet.microsoft.com/library/cc732757.aspx#BKMK_wps)」を参照してください。  
   
-2.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] で新しいリスナーのリッスンを開始します。 追加リスナーを作成した後、プライマリ レプリカをホストする [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスに接続し、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、または PowerShell を使用してリスナー ポートを変更します。  
+2.  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] で新しいリスナーのリッスンを開始します。 追加リスナーを作成した後、プライマリ レプリカをホストする [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスに接続し、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、または PowerShell を使用してリスナー ポートを変更します。  
   
  詳細については、「[同じ可用性グループの複数のリスナーを作成する方法](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/03/how-to-create-multiple-listeners-for-same-availability-group-goden-yao.aspx)」(SQL Server AlwaysOn チームのブログ) を参照してください。  
   
@@ -327,6 +340,6 @@ Start-ClusterResource yourAGResource
 -   [SQL Server AlwaysOn チームのブログ: AlwaysOn チームの公式 SQL Server のブログ](https://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>参照  
- [AlwaysOn 可用性グループ&#40;SQL Server&#41;の概要](overview-of-always-on-availability-groups-sql-server.md)   
+ [AlwaysOn 可用性グループ &#40;SQL Server の概要&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [可用性グループ リスナー、クライアント接続、およびアプリケーションのフェールオーバー &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
- [SQL Server マルチサブネット クラスタリング &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md)  
+ [SQL Server マルチサブネットクラスタリング &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md)  

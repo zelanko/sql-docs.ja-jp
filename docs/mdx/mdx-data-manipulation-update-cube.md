@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: f52dd59b67b42ad430df9bb1e9d00dce7ad6d697
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68003531"
 ---
 # <a name="mdx-data-manipulation---update-cube"></a>MDX データ操作 - UPDATE CUBE
 
 
-  UPDATE CUBE ステートメントは、SUM 集計によって親に対して集計を行うキューブ内の任意のセルにデータを書き戻すために使用します。 詳細な説明と例では、このブログ投稿の割り当てについて」を参照してください。[Analysis Services (ブログ) での書き戻しアプリケーションの構築](https://go.microsoft.com/fwlink/?LinkId=394977)します。  
+  UPDATE CUBE ステートメントは、SUM 集計によって親に対して集計を行うキューブ内の任意のセルにデータを書き戻すために使用します。 詳細と例については、このブログの投稿「 [Analysis Services を使用した書き戻しアプリケーションの構築 (ブログ)](https://go.microsoft.com/fwlink/?LinkId=394977)」の「割り当てについて」を参照してください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -52,21 +52,21 @@ UPDATE [ CUBE ] Cube_Name
  *Weight_Expression*  
  0 ～ 1 の範囲の 10 進値を返す有効な多次元式 (MDX) 数値式です。  
   
-## <a name="remarks"></a>コメント  
- キューブ内の指定されたリーフ セルまたは非リーフ セルの値を更新できます。指定された非リーフ セルの値を、それに依存するすべてのリーフ セルに割り当てることもできます。 組式で指定したセルは、多次元領域内の任意の有効なセルを指定できます (つまり、セルがリーフ セルにする)。 ただしでのセルは集計する必要があります、[Sum](../mdx/sum-mdx.md)集計関数と、セルの識別に使用される組の中の計算されるメンバーを含めないでください。  
+## <a name="remarks"></a>解説  
+ キューブ内の指定されたリーフ セルまたは非リーフ セルの値を更新できます。指定された非リーフ セルの値を、それに依存するすべてのリーフ セルに割り当てることもできます。 組式で指定されるセルは、多次元空間内の任意の有効なセルにすることができます (つまり、セルはリーフセルである必要はありません)。 ただし、セルは[Sum](../mdx/sum-mdx.md)集計関数を使用して集計する必要があり、セルの識別に使用される組には計算されるメンバーを含めないでください。  
   
- 考える可能性がある、 **UPDATE CUBE**ステートメントは、一連の指定された合計にロール アップされるリーフと非リーフ セルに個々 のセルの書き戻し操作を自動的に生成するサブルーチンです。  
+ **UPDATE CUBE**ステートメントは、指定された合計にロールアップされるリーフセルと非リーフセルに対して、一連の個別のセルの書き戻し操作を自動的に生成するサブルーチンと考えると役に立つ場合があります。  
   
- 割り当ての方法の説明を次に示します。  
+ 次に、割り当ての方法の説明を示します。  
   
- **USE_EQUAL_ALLOCATION:** 更新されるセルに貢献するすべてのリーフ セルには、次の式に基づく同じの値が割り当てられます。  
+ **USE_EQUAL_ALLOCATION:** 更新されたセルに貢献するすべてのリーフセルには、次の式に基づいて等しい値が割り当てられます。  
   
 ```  
 <leaf cell value> =   
 <New Value> / Count(leaf cells that are contained in <tuple>)  
 ```  
   
- **USE_EQUAL_INCREMENT:** 更新されるセルに貢献するすべてのリーフ セルは、次の式に基づいて変更されます。  
+ **USE_EQUAL_INCREMENT:** 更新されたセルに貢献するすべてのリーフセルは、次の式に従って変更されます。  
   
 ```  
 <leaf cell value> = <leaf cell value> +   
@@ -74,40 +74,40 @@ UPDATE [ CUBE ] Cube_Name
 Count(leaf cells contained in <tuple>)  
 ```  
   
- **USE_WEIGHTED_ALLOCATION:** 更新されるセルに貢献するすべてのリーフ セルには、次の式に基づく同じ値が割り当てられます。  
+ **USE_WEIGHTED_ALLOCATION:** 更新されたセルに貢献するすべてのリーフセルには、次の式に基づく等しい値が割り当てられます。  
   
 ```  
 <leaf cell value> = < New Value> * Weight_Expression  
 ```  
   
- **USE_WEIGHTED_INCREMENT:** 更新されるセルに貢献するすべてのリーフ セルは、次の式に基づいて変更されます。  
+ **USE_WEIGHTED_INCREMENT:** 更新されたセルに貢献するすべてのリーフセルは、次の式に従って変更されます。  
   
 ```  
 <leaf cell value> = <leaf cell value> +   
 (<New Value> - <existing value>)  * Weight_Expression  
 ```  
   
- Weight_expression を指定しない場合、 **UPDATE CUBE**ステートメントは暗黙的に次の式を使用します。  
+ 重み式が指定されていない場合、 **UPDATE CUBE**ステートメントは暗黙的に次の式を使用します。  
   
 ```  
 Weight_Expression = <leaf cell value> / <existing value>  
 ```  
   
- Weight_expression は、ゼロ (0) ~ 1 の 10 進値として表現されなければなりません。 この値には、割り当て対象となるリーフ セルに割り当てる値の比率を指定します。 クライアント アプリケーションのプログラマは、式の割り当て値とロールアップ集計値が等しくなるように式を作成する必要があります。  
+ 重み式は、0 ~ 1 の10進値として表す必要があります。 この値には、割り当て対象となるリーフ セルに割り当てる値の比率を指定します。 クライアント アプリケーションのプログラマは、式の割り当て値とロールアップ集計値が等しくなるように式を作成する必要があります。  
   
 > [!CAUTION]  
->  クライアント アプリケーションは、不正なロールアップ値、一貫性のないデータなど、予期しない結果を回避するには、同時にすべてのディメンションの割り当てを考慮してください。  
+>  クライアントアプリケーションは、正しくないロールアップ値やデータの不整合などの予期しない結果を回避するために、すべてのディメンションの割り当てを同時に検討する必要があります。  
   
- 各**UPDATE CUBE**トランザクションとしてのアトミックである割り当てを考慮する必要があります。 つまり、数式のエラーやセキュリティ違反など、何かの理由でいずれかの割り当て操作が失敗すると、UPDATE CUBE 操作全体が失敗します。 個々の割り当て操作の計算が処理される前に、データのスナップショットが作成され、計算結果が正しいかどうかの確認が行われます。  
+ 各**更新キューブ**の割り当ては、トランザクションのためにアトミックであると見なす必要があります。 つまり、数式のエラーやセキュリティ違反など、何かの理由でいずれかの割り当て操作が失敗すると、UPDATE CUBE 操作全体が失敗します。 個々の割り当て操作の計算が処理される前に、データのスナップショットが作成され、計算結果が正しいかどうかの確認が行われます。  
   
 > [!CAUTION]  
->  整数を含むメジャーで使用すると、USE_WEIGHTED_ALLOCATION メソッドは、増分変更に丸め不正確な結果を返すことができます。  
+>  USE_WEIGHTED_ALLOCATION メソッドは、整数を含むメジャーで使用する場合、増分丸めの変更によって発生する不正確な結果を返すことができます。  
   
 > [!IMPORTANT]  
 >  更新されるセルが重ならない場合は、 **Update Isolation Level** 接続文字列プロパティを使用して、UPDATE CUBE のパフォーマンスを向上させることができます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>   
- [MDX データ操作ステートメント&#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)  
+ [Mdx&#41;&#40;MDX データ操作ステートメント](../mdx/mdx-data-manipulation-statements-mdx.md)  
   
   

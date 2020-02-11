@@ -19,12 +19,12 @@ ms.assetid: 8ca6b0c6-8d9c-4eee-b02f-51ddffab4492
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 49311ac52d9dba7c31e48f68b4363ead5a2c0b2a
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.openlocfilehash: bd17110b5a5f2abf8f64662221f334ebf769b258
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74095336"
+ms.lasthandoff: 02/10/2020
+ms.locfileid: "77114568"
 ---
 # <a name="sp_sequence_get_range-transact-sql"></a>sp_sequence_get_range (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
@@ -51,26 +51,26 @@ sp_sequence_get_range [ @sequence_name = ] N'<sequence>'
 ```  
   
 ## <a name="arguments"></a>引数  
-シーケンスオブジェクトの名前 `[ @sequence_name = ] N'sequence'` ます。 スキーマは省略可能です。 *sequence_name*は**nvarchar (776)** です。  
+`[ @sequence_name = ] N'sequence'`シーケンスオブジェクトの名前。 スキーマは省略可能です。 *sequence_name*は**nvarchar (776)** です。  
   
-シーケンスからフェッチする値の数を `[ @range_size = ] range_size` します。 **\@range_size**は**bigint**です。  
+`[ @range_size = ] range_size`シーケンスからフェッチする値の数。 range_size は**bigint**です。 ** \@**  
   
-`[ @range_first_value = ] range_first_value` 出力パラメーターは、要求された範囲の計算に使用されるシーケンスオブジェクトの最初 (最小値または最大値) の値を返します。 **\@range_first_value**は、要求で使用されているシーケンスオブジェクトと同じ基本型を使用して**sql_variant**ます。  
+`[ @range_first_value = ] range_first_value`出力パラメーターは、要求された範囲の計算に使用されるシーケンスオブジェクトの最初 (最小値または最大値) の値を返します。 range_first_value は、要求で使用されているシーケンスオブジェクトと同じ基本型で**sql_variant**ます。 ** \@**  
   
-`[ @range_last_value = ] range_last_value` 省略可能な出力パラメーターを指定すると、要求された範囲の最後の値が返されます。 **\@range_last_value**は、要求で使用されているシーケンスオブジェクトと同じ基本型を使用して**sql_variant**ます。  
+`[ @range_last_value = ] range_last_value`省略可能な出力パラメーターは、要求された範囲の最後の値を返します。 range_last_value は、要求で使用されているシーケンスオブジェクトと同じ基本型で**sql_variant**ます。 ** \@**  
   
-`[ @range_cycle_count = ] range_cycle_count` 省略可能な出力パラメーターは、要求された範囲を返すためにシーケンスオブジェクトが循環した回数を返します。 **\@range_cycle_count**は**int**です。  
+`[ @range_cycle_count = ] range_cycle_count`省略可能な出力パラメーターは、要求された範囲を返すためにシーケンスオブジェクトが循環した回数を返します。 range_cycle_count は**int**です。 ** \@**  
   
-`[ @sequence_increment = ] sequence_increment` 省略可能な出力パラメーターを指定すると、要求された範囲の計算に使用されるシーケンスオブジェクトのインクリメントが返されます。 **\@sequence_increment**は、要求で使用されているシーケンスオブジェクトと同じ基本型を使用して**sql_variant**ます。  
+`[ @sequence_increment = ] sequence_increment`省略可能な出力パラメーターは、要求された範囲の計算に使用されるシーケンスオブジェクトのインクリメントを返します。 sequence_increment は、要求で使用されているシーケンスオブジェクトと同じ基本型で**sql_variant**ます。 ** \@**  
   
-`[ @sequence_min_value = ] sequence_min_value` 省略可能な出力パラメーターを指定すると、シーケンスオブジェクトの最小値が返されます。 **\@sequence_min_value**は、要求で使用されているシーケンスオブジェクトと同じ基本型を使用して**sql_variant**ます。  
+`[ @sequence_min_value = ] sequence_min_value`省略可能な出力パラメーターは、シーケンスオブジェクトの最小値を返します。 sequence_min_value は、要求で使用されているシーケンスオブジェクトと同じ基本型で**sql_variant**ます。 ** \@**  
   
-`[ @sequence_max_value = ] sequence_max_value` 省略可能な出力パラメーターを指定すると、シーケンスオブジェクトの最大値が返されます。 **\@sequence_max_value**は、要求で使用されているシーケンスオブジェクトと同じ基本型を使用して**sql_variant**ます。  
+`[ @sequence_max_value = ] sequence_max_value`省略可能な出力パラメーターは、シーケンスオブジェクトの最大値を返します。 sequence_max_value は、要求で使用されているシーケンスオブジェクトと同じ基本型で**sql_variant**ます。 ** \@**  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  sys で sp_sequence_get_rangeis します。 スキーマとは、sys. sp_sequence_get_range として参照できます。  
   
 ### <a name="cycling-sequences"></a>シーケンスの循環  
@@ -87,7 +87,7 @@ sp_sequence_get_range [ @sequence_name = ] N'<sequence>'
 ## <a name="permissions"></a>アクセス許可  
  シーケンスオブジェクトまたはシーケンスオブジェクトのスキーマに対する UPDATE 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、テスト RangeSeq という名前のシーケンスオブジェクトを使用します。 次のステートメントを使用して、テスト RangeSeq シーケンスを作成します。  
   
 ```  
@@ -111,7 +111,7 @@ CREATE SEQUENCE Test.RangeSeq
 ```  
 DECLARE @range_first_value_output sql_variant ;  
   
-EXEC sp_sequence_get_range  
+EXEC sys.sp_sequence_get_range  
 @sequence_name = N'Test.RangeSeq'  
 , @range_size = 4  
 , @range_first_value = @range_first_value_output OUTPUT ;  
@@ -120,7 +120,7 @@ SELECT @range_first_value_output AS FirstNumber ;
   
 ```  
   
-### <a name="b-returning-all-output-parameters"></a>b. すべての出力パラメーターを返す  
+### <a name="b-returning-all-output-parameters"></a>B. すべての出力パラメーターを返す  
  次の例では、sp_sequence_get_range プロシージャからのすべての出力値を返します。  
   
 ```  
@@ -166,7 +166,7 @@ cmd.CommandText = "sys.sp_sequence_get_range";
 cmd.Parameters.AddWithValue("@sequence_name", "Test.RangeSeq");  
 cmd.Parameters.AddWithValue("@range_size", 10);  
   
-// Specify an output parameter to retreive the first value of the generated range.  
+// Specify an output parameter to retrieve the first value of the generated range.  
 SqlParameter firstValueInRange = new SqlParameter("@range_first_value", SqlDbType.Variant);  
 firstValueInRange.Direction = ParameterDirection.Output;  
 cmd.Parameters.Add(firstValueInRange);  
@@ -180,10 +180,10 @@ Console.WriteLine(firstValueInRange.Value);
 ```  
   
 ## <a name="see-also"></a>参照  
- [CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md)   
- [ALTER SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-sequence-transact-sql.md)   
- [DROP SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-sequence-transact-sql.md)   
- [NEXT VALUE FOR &#40;Transact-SQL&#41;](../../t-sql/functions/next-value-for-transact-sql.md)   
+ [CREATE SEQUENCE &#40;Transact-sql&#41;](../../t-sql/statements/create-sequence-transact-sql.md)   
+ [ALTER SEQUENCE &#40;Transact-sql&#41;](../../t-sql/statements/alter-sequence-transact-sql.md)   
+ [DROP SEQUENCE &#40;Transact-sql&#41;](../../t-sql/statements/drop-sequence-transact-sql.md)   
+ [&#40;Transact-sql&#41;の次の値](../../t-sql/functions/next-value-for-transact-sql.md)   
  [シーケンス番号](../../relational-databases/sequence-numbers/sequence-numbers.md)  
   
   

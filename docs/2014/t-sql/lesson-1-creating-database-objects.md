@@ -11,10 +11,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 90780c16c2ba4b94b4e4a88c6f2c249176ef072b
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73632713"
 ---
 # <a name="lesson-1-creating-database-objects"></a>レッスン 1: データベース オブジェクトの作成
@@ -34,17 +34,17 @@ ms.locfileid: "73632713"
   
  このレッスンの内容は次のとおりです。  
   
--   [データベースの作成 (チュートリアル)](lesson-1-1-creating-a-database.md)  
+-   [チュートリアル&#41;&#40;データベースの作成](lesson-1-1-creating-a-database.md)  
   
--   [テーブルの作成 (チュートリアル)](lesson-1-2-creating-a-table.md)  
+-   [テーブル &#40;チュートリアルの作成&#41;](lesson-1-2-creating-a-table.md)  
   
--   [テーブルのデータの挿入と更新 (チュートリアル)](lesson-1-3-inserting-and-updating-data-in-a-table.md)  
+-   [テーブル内のデータの挿入と更新 &#40;チュートリアル&#41;](lesson-1-3-inserting-and-updating-data-in-a-table.md)  
   
--   [テーブルのデータの読み取り (チュートリアル)](lesson-1-4-reading-the-data-in-a-table.md)  
+-   [テーブル内のデータの読み取り &#40;チュートリアル&#41;](lesson-1-4-reading-the-data-in-a-table.md)  
   
 -   [要約 : データベース オブジェクトの作成](lesson-1-5-summary-creating-database-objects.md)  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
- [データベースの作成 (チュートリアル)](lesson-1-1-creating-a-database.md)  
+ [チュートリアル&#41;&#40;データベースの作成](lesson-1-1-creating-a-database.md)  
   
   

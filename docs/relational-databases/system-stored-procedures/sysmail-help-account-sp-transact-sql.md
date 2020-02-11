@@ -18,10 +18,10 @@ ms.assetid: 87c7c39c-8e05-4e68-9272-45f908809c3b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 857e4139081833980ee6c90eca9d90d16d4c0ad2
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72305146"
 ---
 # <a name="sysmail_help_account_sp-transact-sql"></a>sysmail_help_account_sp (Transact-SQL)
@@ -39,9 +39,9 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 ```  
   
 ## <a name="arguments"></a>引数  
-情報を一覧表示するアカウントのアカウント ID を `[ @account_id = ] account_id` します。 *account_id*は**int**,、既定値は NULL です。  
+`[ @account_id = ] account_id`情報を一覧表示するアカウントのアカウント ID。 *account_id*は**int**,、既定値は NULL です。  
   
-情報を一覧表示するアカウントの名前 `[ @account_name = ] 'account_name'` ます。 *account_name*は**sysname**,、既定値は NULL です。  
+`[ @account_name = ] 'account_name'`情報を一覧表示するアカウントの名前。 *account_name*は**sysname**,、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -54,18 +54,18 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 |列名|データ型|[説明]|  
 |**account_id**|**int**|アカウントの ID。|  
 |**name**|**sysname**|アカウントの名前。|  
-|**description**|**nvarchar (256)**|アカウントの説明。|  
-|**email_address**|**nvarchar(128)**|メッセージの送信元の電子メールアドレス。|  
-|**display_name**|**nvarchar(128)**|アカウントの表示名。|  
-|**replyto_address**|**nvarchar(128)**|このアカウントからのメッセージに対する返信アドレス。|  
+|**記述**|**nvarchar(256)**|アカウントの説明。|  
+|**email_address**|**nvarchar(128**|メッセージの送信元の電子メールアドレス。|  
+|**display_name**|**nvarchar(128**|アカウントの表示名。|  
+|**replyto_address**|**nvarchar(128**|このアカウントからのメッセージに対する返信アドレス。|  
 |**servertype**|**sysname**|アカウントの電子メールサーバーの種類。|  
-|**servername**|**sysname**|アカウントの電子メールサーバーの名前。|  
-|**port**|**int**|電子メールサーバーが使用するポート番号。|  
-|**username**|**nvarchar(128)**|電子メールサーバーが認証を使用する場合は、電子メールサーバーへのサインインに使用するユーザー名。 **Username**が NULL の場合、データベースメールはこのアカウントに対して認証を使用しません。|  
-|**use_default_credentials**|**bit**|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]の資格情報を使用して SMTP サーバーにメールを送信するかどうかを指定します。 **use_default_credentials**はビット,、既定値はありません。 このパラメーターが1の場合、データベースメールは [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] サービスの資格情報を使用します。 このパラメーターが0の場合、データベースメールは **\@ユーザー名**と **\@パスワード**を使用して、SMTP サーバーの認証を行います。 **\@ユーザー名**と **\@パスワード**が NULL の場合、データベースメールは匿名認証を使用します。 このパラメーターを指定する前に、SMTP 管理者に問い合わせてください。|  
+|**server**|**sysname**|アカウントの電子メールサーバーの名前。|  
+|**ポート**|**int**|電子メールサーバーが使用するポート番号。|  
+|**ユーザー名**|**nvarchar(128**|電子メールサーバーが認証を使用する場合は、電子メールサーバーへのサインインに使用するユーザー名。 **Username**が NULL の場合、データベースメールはこのアカウントに対して認証を使用しません。|  
+|**use_default_credentials**|**bit**|の資格情報を使用して SMTP サーバーにメールを送信するか[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]どうかを指定します。 **use_default_credentials**はビット,、既定値はありません。 このパラメーターが1の場合、データベースメールは[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]サービスの資格情報を使用します。 このパラメーターが0の場合、データベースメールは、SMTP サーバーの認証に** \@ユーザー名**と** \@パスワード**を使用します。 ** \@ユーザー名**と** \@パスワード**が NULL の場合、データベースメールは匿名認証を使用します。 このパラメーターを指定する前に、SMTP 管理者に問い合わせてください。|  
 |**enable_ssl**|**bit**|データベースメールが Secure Sockets Layer (SSL) を使用して通信を暗号化するかどうかを指定します。 SMTP サーバーで SSL が必要な場合はこのオプションを使用します。 **enable_ssl**はビット,、既定値はありません。 1 の場合、データベース メールでは SSL を使用して通信を暗号化することを示します。 0 の場合、データベース メールでは SSL 暗号化を使用せずにメールを送信することを示します。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  *Account_id*または*account_name*が指定されていない場合、 **sysmail_help_account**は、Microsoft SQL Server インスタンス内のすべてのデータベースメールアカウントに関する情報を一覧表示します。  
   
  ストアドプロシージャ**sysmail_help_account_sp**は**msdb**データベースにあり、 **dbo**スキーマが所有しています。 現在のデータベースが**msdb**でない場合は、3つの部分で構成される名前を使用してプロシージャを実行する必要があります。  
@@ -73,7 +73,7 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 ## <a name="permissions"></a>アクセス許可  
  このプロシージャの実行権限は、既定では**sysadmin**固定サーバーロールのメンバーに与えています。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  **A. すべてのアカウントの情報を一覧表示する**  
   
  次の例では、インスタンス内のすべてのアカウントのアカウント情報を一覧表示します。  
@@ -91,7 +91,7 @@ account_id  name                         description                            
 149         Audit Account                Account for audit e-mail.               audit@Adventure-Works.com Automated Mailer (Audit)         NULL            SMTP       smtp.Adventure-Works.com  25          NULL 0                          0        
 ```  
   
- **B. 特定のアカウントの情報を一覧表示する**  
+ **B. 特定のジョブに関する情報を一覧表示する**  
   
  次の例では、`AdventureWorks Administrator` というアカウントについて、アカウント情報を一覧表示します。  
   
@@ -110,7 +110,7 @@ account_id  name                         description                            
   
 ## <a name="see-also"></a>参照  
  [データベース メール](../../relational-databases/database-mail/database-mail.md)   
- [データベースメールアカウントの作成](../../relational-databases/database-mail/create-a-database-mail-account.md)   
- [ストアドプロシージャ&#40;のデータベースメール transact-sql&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [データベースメールアカウントを作成する](../../relational-databases/database-mail/create-a-database-mail-account.md)   
+ [Transact-sql&#41;&#40;のストアドプロシージャのデータベースメール](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

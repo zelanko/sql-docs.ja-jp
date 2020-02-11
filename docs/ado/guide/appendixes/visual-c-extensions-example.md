@@ -1,5 +1,5 @@
 ---
-title: Visual C 拡張機能の例 |Microsoft Docs
+title: Visual C++ 拡張機能の例 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,18 +16,18 @@ ms.assetid: 9739c278-582c-402b-a158-7f68a1b2c293
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6d3517f40b15081ca2ee4621d07455cc13bb577d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926392"
 ---
 # <a name="visual-c-extensions-example"></a>Visual C++ 拡張機能の例
-このプログラムは、値のフィールドから取得および C と C++ の変数に変換する方法を示します。  
+このプログラムは、フィールドから値を取得し、C/c + + 変数に変換する方法を示しています。  
   
- この例では「スマート ポインター、」呼び出し元の COM 固有の詳細情報を自動的に処理する`QueryInterface`と参照のカウント、 **IADORecordBinding**インターフェイス。  
+ また、この例では "スマートポインター" を利用しています。これは、 `QueryInterface` **IADORecordBinding**インターフェイスの呼び出しと参照カウントの COM 固有の詳細を自動的に処理します。  
   
- なし、スマート ポインターは、次のコードは。  
+ スマートポインターを使用しない場合、コードは次のようになります。  
   
 ```cpp
 IADORecordBinding   *picRs = NULL;  
@@ -38,19 +38,19 @@ TESTHR(pRs->QueryInterface(
 if (picRs) picRs->Release();  
 ```  
   
- スマート ポインターを使用した派生、`IADORecordBindingPtr`から入力、`IADORecordBinding`このステートメントを使用してインターフェイス。  
+ スマートポインターを使用すると、 `IADORecordBindingPtr`次のステートメント`IADORecordBinding`を使用してインターフェイスから型を派生させます。  
   
 ```cpp
 _COM_SMARTPTR_TYPEDEF(IADORecordBinding, __uuidof(IADORecordBinding));  
 ```  
   
- このようなポインターをインスタンス化します。  
+ 次のようにポインターをインスタンス化します。  
   
 ```cpp
 IADORecordBindingPtr picRs(pRs);  
 ```  
   
- ため、ビジュアルC++で拡張機能の実装、**レコード セット**オブジェクト、スマート ポインター コンス トラクター`picRs`は、_`RecordsetPtr`ポインター、 `pRs`。 コンス トラクター呼び出し`QueryInterface`を使用して`pRs`を検索する、`IADORecordBinding`インターフェイス。  
+ Visual C++ の拡張機能は**Recordset**オブジェクトによって実装されるため、スマートポインター `picRs`のコンストラクターは、_`RecordsetPtr`ポインターを`pRs`受け取ります。 コンストラクターは、 `QueryInterface` `IADORecordBinding`を`pRs`使用してインターフェイスを検索します。  
   
 ```cpp
 // Visual_Cpp_Extensions_Example.cpp  
@@ -110,5 +110,5 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>参照  
- [Visual C の拡張機能の使用](../../../ado/guide/appendixes/using-visual-c-extensions.md)   
+ [Visual C++ 拡張機能の使用](../../../ado/guide/appendixes/using-visual-c-extensions.md)   
  [Visual C++ Extensions のヘッダー](../../../ado/guide/appendixes/visual-c-extensions-header.md)

@@ -15,14 +15,14 @@ ms.assetid: 3aae1107-2f81-413c-8eda-ef96c3df1b8a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d9b0886302a48f7b9b3ee8e261014c0784d51fc0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67930414"
 ---
 # <a name="catalog-example-vb"></a>カタログの例 (VB)
-この Visual Basic プロジェクトでは、MDX を使用して新しいキューブを作成します。 次に、Microsoft Word 文書内のキューブの構造を説明します。  
+この Visual Basic プロジェクトでは、MDX を使用して新しいキューブを作成します。 次に、Microsoft Word 文書内のキューブの構造について説明します。  
   
 ```  
 Private Sub cmdCreateDocForCube_Click()  

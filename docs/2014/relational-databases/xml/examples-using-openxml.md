@@ -27,22 +27,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 61c5fc1cb0692d22f110958b894ac2eb7c2af4cf
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70874694"
 ---
 # <a name="examples-using-openxml"></a>例: OPENXML の使用
   このトピックの例では、OPENXML を使用して XML ドキュメントの行セット ビューを作成する方法を示します。 OPENXML の構文の詳細については、「 [OPENXML &#40;Transact-SQL&#41;](/sql/t-sql/functions/openxml-transact-sql)」を参照してください。 ここに示す例では、OPENXML でのメタプロパティの指定を除く OPENXML のすべての側面を示します。 OPENXML のメタプロパティの指定方法の詳細については、「 [OPENXML 内でのメタプロパティの指定](specify-metaproperties-in-openxml.md)」を参照してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  データを取得する際に、 *rowpattern* を使用して、XML ドキュメント内の行を決定するノードを識別します。 また、 *rowpattern* は、MSXML XPath の実装で使用される XPath パターン言語で表現されます。 たとえば、パターンが要素や属性になる場合、 *rowpattern*で選択される要素や属性のノードごとに行が作成されます。  
   
  *flags* 値は、既定のマッピングを指定します。 *SchemaDeclaration* で *ColPattern*が指定されていない場合、 *flags* で指定されたマッピングが想定されます。 *SchemaDeclaration* で *ColPattern* が指定されている場合、 *flags*の値は無視されます。 指定された *ColPattern* により、マッピング、属性中心か要素中心か、さらにオーバーフロー データと未使用データを処理するときの動作が決まります。  
   
 ### <a name="a-executing-a-simple-select-statement-with-openxml"></a>A. OPENXML を使用した単純な SELECT ステートメントの実行  
- この例の XML ドキュメントは、<`Customer`> 要素、<`Order`> 要素、および <`OrderDetail`> 要素で構成されます。 OPENXML ステートメントでは、XML ドキュメントから顧客情報が 2 列の行セット (**CustomerID** と **ContactName**) で取得されます。  
+ この例の XML ドキュメントは、<`Customer`> 要素、<`Order`> 要素、および <`OrderDetail`> 要素で構成されます。 OPENXML ステートメントでは、XML ドキュメントから顧客情報が 2 列の行セット ( **CustomerID** と **ContactName**) で取得されます。  
   
  最初に、 **sp_xml_preparedocument** ストアド プロシージャを呼び出してドキュメント ハンドルを取得します。 このドキュメント ハンドルを OPENXML に渡します。  
   
@@ -140,10 +140,10 @@ LILAS      Carlos Gonzlez
   
  **sp_xml_preparedocument** から返されたドキュメント ハンドルは、セッション内ではなく、バッチが実行されている間は有効であることに注意してください。  
   
-### <a name="b-specifying-colpattern-for-mapping-between-rowset-columns-and-the-xml-attributes-and-elements"></a>b. 行セットの列と XML の属性や要素の間でマッピングを行うための ColPattern の指定  
+### <a name="b-specifying-colpattern-for-mapping-between-rowset-columns-and-the-xml-attributes-and-elements"></a>B. 行セットの列と XML の属性や要素の間でマッピングを行うための ColPattern の指定  
  この例では、省略可能な *ColPattern* パラメーターに XPath パターンを指定して、行セットの列と XML の属性や要素の間でマッピングを行う方法を示します。  
   
- この例の XML ドキュメントは、<`Customer`> 要素、<`Order`> 要素、および <`OrderDetail`> 要素で構成されます。 OPENXML ステートメントにより、XML ドキュメントから顧客情報と注文情報が 1 つの行セット (**CustomerID**、**OrderDate**、**ProdID**、および **Qty**) として取得されます。  
+ この例の XML ドキュメントは、<`Customer`> 要素、<`Order`> 要素、および <`OrderDetail`> 要素で構成されます。 OPENXML ステートメントにより、XML ドキュメントから顧客情報と注文情報が 1 つの行セット (**CustomerID**、 **OrderDate**、 **ProdID**、および **Qty**) として取得されます。  
   
  最初に、 **sp_xml_preparedocument** ストアド プロシージャを呼び出してドキュメント ハンドルを取得します。 このドキュメント ハンドルを OPENXML に渡します。  
   
@@ -151,13 +151,13 @@ LILAS      Carlos Gonzlez
   
 -   *rowpattern* (/ROOT/Customer/Order/OrderDetail) により、処理する <`OrderDetail`> ノードが識別されます。  
   
- ここでは説明のために、*flags* パラメーター値を **2** に設定して、要素中心のマッピングを示しています。 ただし、このマッピングは *ColPattern* に指定したマッピングによって上書きされます。 つまり、 *ColPattern* に指定した XPath パターンにより、行セットの列が属性にマップされます。 この結果、属性中心のマッピングになります。  
+ ここでは説明のために、 *flags* パラメーター値を **2** に設定して、要素中心のマッピングを示しています。 ただし、このマッピングは *ColPattern* に指定したマッピングによって上書きされます。 つまり、 *ColPattern* に指定した XPath パターンにより、行セットの列が属性にマップされます。 この結果、属性中心のマッピングになります。  
   
  WITH 句の *SchemaDeclaration*では、 *ColName* パラメーターと *ColType* パラメーターを使用して *ColPattern* も指定されています。 省略可能な *ColPattern* は指定された XPath パターンで、次のことを示します。  
   
 -   行セットの **OrderID** 列、**CustomerID** 列、および **OrderDate** 列は *rowpattern* によって識別されたノードの親の属性にマップされ、*rowpattern* によって <`OrderDetail`> ノードが識別されます。 したがって、**CustomerID** 列と **OrderDate** 列は < **> 要素の** CustomerID**属性と**OrderDate`Order` 属性にマップされます。  
   
--   行セットの **ProdID** 列と **Qty** 列は、**rowpattern** で識別されたノードの **ProductID** 属性と *Quantity* 属性にマップされます。  
+-   行セットの **ProdID** 列と **Qty** 列は、 **rowpattern** で識別されたノードの **ProductID** 属性と *Quantity*属性にマップされます。  
   
  次に、SELECT ステートメントにより、OPENXML で提供される行セット内のすべての列が取得されます。  
   
@@ -281,7 +281,7 @@ VINET      Paul Henriot
 LILAS      Carlos Gonzlez  
 ```  
   
- **CustomerID** に属性中心のマッピングが適用されます。 < **> 要素には** ConzｘtactName`Customer` 属性がありません。 そのため、要素中心のマッピングが適用されます。  
+ **CustomerID**に属性中心のマッピングが適用されます。 < **> 要素には** ConzｘtactName`Customer` 属性がありません。 そのため、要素中心のマッピングが適用されます。  
   
 ### <a name="d-specifying-the-text-xpath-function-as-colpattern"></a>D. ColPattern としての text() XPath 関数の指定  
  この例の XML ドキュメントは、<`Customer`> 要素および <`Order`> 要素で構成されます。 OPENXML ステートメントにより、< **> 要素の** oid`Order` 属性、*rowpattern* で識別されるノードの親の ID、および要素のコンテンツのリーフ値の文字列で構成される行セットが取得されます。  
@@ -343,7 +343,7 @@ O4    10000.0       NULL
 ### <a name="e-specifying-tablename-in-the-with-clause"></a>E. WITH 句での TableName の指定  
  この例では、WITH 句に *SchemaDeclaration* ではなく *TableName*を指定します。 この指定は、目的の構造のテーブルがあり、列パターンの *ColPattern* パラメーターが必要ない場合に役立ちます。  
   
- この例の XML ドキュメントは、<`Customer`> 要素および <`Order`> 要素で構成されます。 OPENXML ステートメントでは、XML ドキュメントから注文情報が 3 列の行セット (**oid**、**date**、および **amount**) に取得されます。  
+ この例の XML ドキュメントは、<`Customer`> 要素および <`Order`> 要素で構成されます。 OPENXML ステートメントでは、XML ドキュメントから注文情報が 3 列の行セット (**oid**、 **date**、および **amount**) に取得されます。  
   
  最初に、 **sp_xml_preparedocument** ストアド プロシージャを呼び出してドキュメント ハンドルを取得します。 このドキュメント ハンドルを OPENXML に渡します。  
   
@@ -442,7 +442,7 @@ FROM OPENXML (@docHandle, '/ROOT/Customer')
 EXEC sp_xml_removedocument @docHandle  
 ```  
   
- 結果はエッジ テーブルとして返されます。 エッジ テーブルに対するクエリを作成して、情報を取得できます。 例 :  
+ 結果はエッジ テーブルとして返されます。 エッジ テーブルに対するクエリを作成して、情報を取得できます。 次に例を示します。  
   
 -   次のクエリにより、ドキュメント内の **Customer** ノードの数が返されます。 WITH 句が指定されていないので、OPENXML からエッジ テーブルが返されます。 SELECT ステートメントにより、エッジ テーブルへのクエリが実行されます。  
   
@@ -462,7 +462,7 @@ EXEC sp_xml_removedocument @docHandle
     ```  
   
 ### <a name="g-specifying-rowpattern-ending-with-an-attribute"></a>G. 属性で終了する rowpattern の指定  
- この例の XML ドキュメントは、<`Customer`> 要素、<`Order`> 要素、および <`OrderDetail`> 要素で構成されます。 OPENXML ステートメントにより、XML ドキュメントから注文明細の情報が 3 列の行セット (**ProductID**、**Quantity**、および **OrderID**) で取得されます。  
+ この例の XML ドキュメントは、<`Customer`> 要素、<`Order`> 要素、および <`OrderDetail`> 要素で構成されます。 OPENXML ステートメントにより、XML ドキュメントから注文明細の情報が 3 列の行セット (**ProductID**、 **Quantity**、および **OrderID**) で取得されます。  
   
  最初に、 **sp_xml_preparedocument** を呼び出してドキュメント ハンドルを取得します。 このドキュメント ハンドルを OPENXML に渡します。  
   
@@ -474,7 +474,7 @@ EXEC sp_xml_removedocument @docHandle
   
  WITH 句の *SchemaDeclaration* では、 *ColName* パラメーターと *ColType* パラメーターを使用して *ColPattern* も指定されています。 省略可能な *ColPattern* は、次のことを示すために指定する XPath パターンです。  
   
--   行セット内の **ProdID** 列の *ColPattern* に指定された XPath パターン ( **.** ) により、コンテキスト ノード (現在のノード) が識別されます。 指定された *rowpattern* によって、これは、< **> 要素の** ProductID`OrderDetail` 属性となります。  
+-   行セット内の**ProdID**列の *ColPattern* に指定された XPath パターン ( **.** ) により、コンテキスト ノード (現在のノード) が識別されます。 指定された *rowpattern* によって、これは、< **> 要素の** ProductID`OrderDetail` 属性となります。  
   
 -   行セット内の *Qty* 列に指定された **ColPattern\@ である** ../**Quantity** により、コンテキスト ノード **ProductID> の親ノードである <** > の `OrderDetail`Quantity\< 属性が識別されます。  
   
@@ -523,7 +523,7 @@ ProdID      Qty         OID
 ```  
   
 ### <a name="h-specifying-an-xml-document-that-has-multiple-text-nodes"></a>H. 複数のテキスト ノードを含む XML ドキュメントの指定  
- XML ドキュメント内に複数のテキスト ノードがある場合、 *ColPattern*である **text()** が指定された SELECT ステートメントにより、すべてのテキスト ノードではなく最初のテキスト ノードだけが返されます。 例 :  
+ XML ドキュメント内に複数のテキスト ノードがある場合、 *ColPattern*である **text()** が指定された SELECT ステートメントにより、すべてのテキスト ノードではなく最初のテキスト ノードだけが返されます。 次に例を示します。  
   
 ```  
 DECLARE @h int  
@@ -610,11 +610,11 @@ id  lname   xmlname                   OverFlow
   
 -   \<Student>  
   
-     **id** (学生 ID) 属性、**name** 属性、および **attends** 属性。 **attends** 属性には複数の値を指定できます。  
+     **id** (学生 ID) 属性、 **name**属性、および **attends** 属性。 **attends** 属性には複数の値を指定できます。  
   
 -   \<Class>  
   
-     **id** (クラス ID) 属性、**name** 属性、および **attendedBy** 属性。 **attendedBy** 属性には複数の値を指定できます。  
+     **id** (クラス ID) 属性、 **name**属性、および **attendedBy** 属性。 **attendedBy** 属性には複数の値を指定できます。  
   
  **Student> の** attends\< 属性と **Class> の** attendedBy\< 属性は、Student テーブルと Class テーブル間の **m:n** リレーションシップを表します。 学生は多くのクラスを受講でき、クラスは多くの学生を受け入れることができます。  
   

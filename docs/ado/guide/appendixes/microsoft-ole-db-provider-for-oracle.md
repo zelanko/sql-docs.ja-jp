@@ -15,28 +15,28 @@ ms.assetid: 44fae9dd-5585-4cd6-8bbd-3248a78931b4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 60510302525562d9c3007a6ef57213fc261b4c60
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926625"
 ---
 # <a name="microsoft-ole-db-provider-for-oracle-overview"></a>Microsoft OLE DB Provider for Oracle の概要
 > [!IMPORTANT]
->  この機能は、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 代わりに、Oracle の OLE DB プロバイダーを使用します。
+>  この機能は、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 代わりに、Oracle の OLE DB プロバイダーを使用します。
 
- Microsoft OLE DB Provider for Oracle では、Oracle データベースにアクセスする ADO を使用します。
+ Microsoft OLE DB Provider for Oracle により、ADO は Oracle データベースにアクセスできます。
 
 ## <a name="connection-string-parameters"></a>接続文字列パラメーター
- このプロバイダーに接続するには、設定、*プロバイダー*の引数、 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)プロパティ。
+ このプロバイダーに接続するには、 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)プロパティの*provider*引数を次のように設定します。
 
 ```vb
 MSDAORA
 ```
 
- 読み取り、[Provider](../../../ado/reference/ado-api/provider-property-ado.md)プロパティは同様に、この文字列を返します。
+ [プロバイダー](../../../ado/reference/ado-api/provider-property-ado.md)プロパティを読み取ると、この文字列も返されます。
 
- Oracle データベースでは、キーセット カーソルまたは動的カーソルでの結合クエリを実行する場合、エラーが発生します。 Oracle では、静的な読み取り専用のカーソルのみサポートされます。
+ キーセットカーソルまたは動的カーソルを使用した結合クエリが Oracle データベースで実行されると、エラーが発生します。 Oracle では、静的な読み取り専用カーソルのみがサポートされます。
 
 ## <a name="typical-connection-string"></a>一般的な接続文字列
  このプロバイダーの一般的な接続文字列は次のとおりです。
@@ -45,30 +45,30 @@ MSDAORA
 "Provider=MSDAORA;Data Source=serverName;User ID=MyUserID; Password=MyPassword;"
 ```
 
- 文字列は、これらのキーワードで構成されます。
+ 文字列は、次のキーワードで構成されています。
 
-|Keyword|説明|
+|Keyword|[説明]|
 |-------------|-----------------|
-|**Provider**|OLE DB Provider for Oracle を指定します。|
+|**プロバイダー**|Oracle の OLE DB プロバイダーを指定します。|
 |**Data Source**|サーバーの名前を指定します。|
 |**User ID**|ユーザー名を指定します。|
-|**Password**|ユーザーのパスワードを指定します。|
+|**パスワード**|ユーザーのパスワードを指定します。|
 
 > [!NOTE]
->  Windows 認証をサポートするデータ ソース プロバイダーに接続するかどうかは、する必要がありますを指定する**Trusted_Connection = yes**または**Integrated Security = SSPI**ユーザー ID とパスワードの代わりに接続文字列の情報です。
+>  Windows 認証をサポートするデータソースプロバイダーに接続する場合は、接続文字列にユーザー ID とパスワードの情報ではなく、 **Trusted_Connection = yes**または**INTEGRATED Security = SSPI**を指定する必要があります。
 
 ## <a name="provider-specific-connection-parameters"></a>プロバイダー固有の接続パラメーター
- プロバイダーは、ADO で定義されているだけでなく、いくつかのプロバイダーに固有の接続パラメーターをサポートします。 ADO 接続のプロパティでこれらのプロバイダーに固有のプロパティを使用して設定できるよう、[プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)のコレクションを[接続](../../../ado/reference/ado-api/connection-object-ado.md)またはの一部として、 **ConnectionString**.
+ プロバイダーは、ADO によって定義されているものに加えて、いくつかのプロバイダー固有の接続パラメーターをサポートしています。 ADO の接続プロパティと同様に、これらのプロバイダー固有のプロパティは、[接続](../../../ado/reference/ado-api/connection-object-ado.md)の[properties](../../../ado/reference/ado-api/properties-collection-ado.md)コレクションまたは**ConnectionString**の一部として設定できます。
 
- これらのパラメーターに詳しく記載、 [OLE DB プログラマーズ リファレンス](https://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8)します。 [ADO Dynamic プロパティ インデックス](../../../ado/reference/ado-api/ado-dynamic-property-index.md)これらのパラメーター名と対応する OLE DB プロパティの間の相互参照を提供します。
+ これらのパラメーターの詳細については[OLE DB プログラマーリファレンス](https://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8)」を参照してください。 [ADO 動的プロパティインデックス](../../../ado/reference/ado-api/ado-dynamic-property-index.md)は、これらのパラメーター名と、対応する OLE DB プロパティとの間の相互参照を提供します。
 
-|パラメーター|説明|
+|パラメーター|[説明]|
 |---------------|-----------------|
-|**ウィンドウ ハンドル**|使用して追加の情報を要求するウィンドウ ハンドルを示します。|
-|**Locale Identifier**|一意な 32 ビットに関連するユーザーの言語の基本設定を指定する数 (たとえば、1033) を示します。 これらの設定を示す日付と時刻を書式設定方法、項目をアルファベット順に並べ替えるか、文字列が比較され具合です。|
-|**OLE DB サービス**|OLE DB サービスを有効または無効を指定するビットマスクを示します。|
-|**プロンプト**|接続が確立されるときにユーザーに確認するかどうかを示します。|
-|**拡張プロパティ**|プロバイダー固有の拡張された接続情報を含む文字列。 このプロパティはプロパティのメカニズムでは記述できないプロバイダーに固有の接続情報にのみ使用します。|
+|**ウィンドウハンドル**|追加情報の入力を求めるために使用するウィンドウハンドルを示します。|
+|**ロケール識別子**|ユーザーの言語に関連する設定を指定する32ビットの一意の数値 (1033 など) を示します。 これらの設定は、日付と時刻を書式設定する方法、アルファベット順に並べ替えられる項目、文字列を比較する方法などを指定します。|
+|**OLE DB サービス**|有効または無効にする OLE DB サービスを指定するビットマスクを示します。|
+|**プロンプト**|接続の確立中にユーザーにプロンプトを表示するかどうかを示します。|
+|**Extended Properties**|プロバイダー固有の拡張接続情報を含む文字列。 このプロパティは、プロパティメカニズムでは記述できないプロバイダー固有の接続情報に対してのみ使用します。|
 
-## <a name="see-also"></a>関連項目
- [ConnectionString プロパティ (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md) [プロバイダー プロパティ (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) [レコード セット オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+## <a name="see-also"></a>参照
+ [ConnectionString プロパティ (ado)](../../../ado/reference/ado-api/connectionstring-property-ado.md) [プロバイダープロパティ (ado](../../../ado/reference/ado-api/provider-property-ado.md) )[レコードセットオブジェクト (ado)](../../../ado/reference/ado-api/recordset-object-ado.md)

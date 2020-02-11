@@ -1,5 +1,5 @@
 ---
-title: パラメーター オブジェクトのプロパティ、メソッド、およびイベント |Microsoft Docs
+title: Parameter オブジェクトのプロパティ、メソッド、およびイベント |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,13 +13,13 @@ ms.assetid: 53952466-4a9c-4396-bba6-cf44bec1da88
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e20cb08ccfedbc2fa60b703279f8494d0f3f53c1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917786"
 ---
-# <a name="parameter-object-properties-methods-and-events"></a>パラメーター オブジェクトのプロパティ、メソッド、およびイベント
+# <a name="parameter-object-properties-methods-and-events"></a>Parameter オブジェクトのプロパティ、メソッド、およびイベント
 ## <a name="propertiescollections"></a>プロパティ/コレクション  
  [Attributes プロパティ](../../../ado/reference/ado-api/attributes-property-ado.md)  
   
@@ -42,8 +42,8 @@ ms.locfileid: "67917786"
 ## <a name="methods"></a>メソッド  
  [AppendChunk メソッド](../../../ado/reference/ado-api/appendchunk-method-ado.md)  
   
-## <a name="events"></a>イベント  
+## <a name="events"></a>events  
  [なし] :  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Parameter オブジェクト](../../../ado/reference/ado-api/parameter-object.md)

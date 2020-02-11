@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5ca7d915b940296e6de6689e666401b0c3534c9d
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72782729"
 ---
 # <a name="work-with-sql-server-powershell-paths"></a>SQL Server PowerShell パスの操作
@@ -22,10 +22,11 @@ ms.locfileid: "72782729"
   
 1.  [はじめに](#BeforeYouBegin)  
   
-2.  **パス ノードに関する作業:**  [メソッドとプロパティの一覧表示](#ListPropMeth)、 [メソッドとプロパティの使用](#UsePropMeth)  
+2.  **パスノードで作業するには:** メソッドとプロパティの[一覧](#ListPropMeth)表示、[メソッドとプロパティの使用](#UsePropMeth)    
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
- [!INCLUDE[ssDE](../includes/ssde-md.md)] プロバイダーのパスでノードに移動した後、2 種類の操作を実行できます。  
+ 
+  [!INCLUDE[ssDE](../includes/ssde-md.md)] プロバイダーのパスでノードに移動した後、2 種類の操作を実行できます。  
   
 -   **Rename-Item**など、ノードを操作する Windows PowerShell コマンドレットを実行できます。  
   
@@ -74,7 +75,7 @@ Set-Location SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012\Table
 Get-ChildItem | Where {$_.Schema -eq "Sales"}  
 ```  
   
- この例では、SMO の**script**メソッドを使用して、AdventureWorks2012 でビューを再作成するために必要な `CREATE VIEW` ステートメントを含むスクリプトを生成します。  
+ この例では、SMO の**script**メソッドを使用して、 `CREATE VIEW` AdventureWorks2012 でビューを再作成するために必要なステートメントを含むスクリプトを生成します。  
   
 ```powershell
 Remove-Item C:\PowerShell\CreateViews.sql  
@@ -94,7 +95,7 @@ $MyDBVar.State
 ```  
   
 ## <a name="see-also"></a>参照  
- [SQL Server PowerShell Provider](sql-server-powershell-provider.md)   
+ [SQL Server PowerShell プロバイダー](sql-server-powershell-provider.md)   
  [SQL Server PowerShell パスの移動](navigate-sql-server-powershell-paths.md)   
  [URN から SQL Server プロバイダー パスへの変換](../database-engine/convert-urns-to-sql-server-provider-paths.md)   
  [SQL Server PowerShell](sql-server-powershell.md)  

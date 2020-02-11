@@ -13,16 +13,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 172c8cbf13b76c23cd9f4768aaf5162e923bc28d
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70154304"
 ---
 # <a name="connect-to-azure-storage"></a>Azure Storage への接続
-  **[Azure Storage 接続]** ダイアログボックスを使用して、ストレージアカウントを指定し、Azure への接続を検証します。  
+  ストレージ アカウントを指定したり、Azure への接続を検証したりするには、 **[Azure Storage Connection]\(Azure Storage の接続\)** ダイアログを使用します。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  Azure アカウントに関する次の情報を指定し、 **[次へ]** をクリックして続行します。  
   
 1.  **[ストレージ アカウント]** : ストレージ アカウント名を指定します。  

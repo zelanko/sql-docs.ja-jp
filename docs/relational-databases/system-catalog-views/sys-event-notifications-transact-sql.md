@@ -1,5 +1,5 @@
 ---
-title: sys.event_notifications (TRANSACT-SQL) |Microsoft Docs
+title: event_notifications (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,36 +21,36 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 736083db5043dd8bcb9dce9f828a9191c582c872
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68048420"
 ---
-# <a name="syseventnotifications-transact-sql"></a>sys.event_notifications (TRANSACT-SQL)
+# <a name="sysevent_notifications-transact-sql"></a>event_notifications (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  イベント通知では、あるオブジェクトごとの行を返します**sys.objects.type** EN を = です。  
+  イベント通知であるオブジェクトごとに1行の値を返します **。型**= EN。  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|イベント通知名です。|  
+|**name**|**sysname**|イベント通知名。|  
 |**object_id**|**int**|オブジェクト ID 番号。 データベース内で一意です。|  
-|**parent_class**|**tinyint**|親のクラスです。<br /><br /> 0 = データベース<br /><br /> 1 = オブジェクトまたは列|  
-|**parent_class_desc**|**nvarchar(60)**|DATABASE<br /><br /> OBJECT_OR_COLUMN|  
-|**parent_id**|**int**|親オブジェクトの 0 以外の ID。<br /><br /> 0 = 親クラスは、データベースです。|  
-|**create_date**|**datetime**|作成された日付。|  
-|**modify_date**|**datetime**|常に = **create_date**します。|  
-|**service_name**|**nvarchar (256)**|通知の送信先のサービスの名前です。|  
-|**broker_instance**|**nvarchar(128)**|ブローカー インスタンスが、通知が送信されます。|  
-|**principal_id**|**int**|このイベント通知を所有するデータベース プリンシパルの ID。|  
-|**creator_sid**|**varbinary(85)**|イベント通知を作成したログインの SID。<br /><br /> FAN_IN オプションが指定されていない場合は NULL です。|  
+|**parent_class**|**tinyint**|親のクラス。<br /><br /> 0 = データベース<br /><br /> 1 = オブジェクトまたは列|  
+|**parent_class_desc**|**nvarchar (60)**|DATABASE<br /><br /> OBJECT_OR_COLUMN|  
+|**parent_id**|**int**|親オブジェクトの0以外の ID。<br /><br /> 0 = 親クラスはデータベースです。|  
+|**create_date**|**DATETIME**|作成日。|  
+|**modify_date**|**DATETIME**|常に**create_date**と等しくなります。|  
+|**service_name**|**nvarchar(256)**|通知の送信先のサービスの名前です。|  
+|**broker_instance**|**nvarchar(128**|通知が送信されるブローカーインスタンス。|  
+|**principal_id**|**int**|このイベント通知を所有するデータベースプリンシパルの ID。|  
+|**creator_sid**|**varbinary (85)**|イベント通知を作成したログインの SID。<br /><br /> FAN_IN オプションが指定されていない場合は NULL になります。|  
   
 ## <a name="permissions"></a>アクセス許可  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]詳細については、「[メタデータ表示の構成](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [オブジェクト カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [オブジェクトカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Microsoft のデータ シェイプの OLE DB (ADO サービス プロバイダー) のサービス |Microsoft Docs
+title: OLE DB 用の Microsoft データ整形サービス (ADO サービスプロバイダー) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,41 +14,41 @@ ms.assetid: 523009ce-e01b-4e2d-a7df-816d7688aff0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ddef2feab633627c9549b73787faa1d104d69c5e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926818"
 ---
-# <a name="microsoft-data-shaping-service-for-ole-db-overview"></a>Microsoft のデータ シェイプの Service for OLE DB の概要
+# <a name="microsoft-data-shaping-service-for-ole-db-overview"></a>OLE DB 用の Microsoft データ整形サービスの概要
 > [!IMPORTANT]
->  この機能は、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 代わりに、アプリケーションでは、XML を使用する必要があります。
+>  この機能は、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 代わりに、アプリケーションは XML を使用する必要があります。
 
- サービス プロバイダーの OLE DB 用の Microsoft Data Shaping Service は、階層の構築をサポートしています (形)[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)データ プロバイダーからのオブジェクト。
+ OLE DB サービスプロバイダー用の Microsoft データ整形サービスは、データプロバイダーからの階層構造の (整形された)[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトの構築をサポートしています。
 
-## <a name="provider-keyword"></a>プロバイダーのキーワード
- OLE db Data Shaping Service を呼び出すには、接続文字列で、次のキーワードと値を指定します。
+## <a name="provider-keyword"></a>Provider キーワード
+ OLE DB のデータ整形サービスを呼び出すには、接続文字列に次のキーワードと値を指定します。
 
 ```vb
 "Provider=MSDataShape"
 ```
 
 ## <a name="dynamic-properties"></a>動的プロパティ
- このサービス プロバイダーが呼び出されたときに、次の動的なプロパティに追加されます、[プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)のコレクション、[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクト。
+ このサービスプロバイダーが呼び出されると、次の動的プロパティが[Connection](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトの[properties](../../../ado/reference/ado-api/properties-collection-ado.md)コレクションに追加されます。
 
-|動的なプロパティ名|説明|
+|動的プロパティ名|[説明]|
 |---------------------------|-----------------|
-|**Reshape の一意の名前**|示すかどうか**レコード セット**に対して重複する値を持つオブジェクト、 **Reshape Name**プロパティは使用できます。 この動的プロパティは、する場合**True**され、新しい**レコード セット**は既存のと同じ reshape のユーザーが指定した名前で作成**レコード セット**、し、新しい**レコード セット**オブジェクトのパス名が一意になるように変更します。 このプロパティは、する場合**False**され、新しい**レコード セット**は既存のと同じ reshape のユーザーが指定した名前で作成**レコード セット**の両方を**レコード セット**オブジェクトが同じ reshape 名前が与えられます。 そのため、どちらも**Recordset**両方のレコード セットが存在する限り、形状変更できます。<br /><br /> プロパティの既定値は**False**します。|
-|**データ プロバイダー**|形状になる行を提供するプロバイダーの名前を示します。 行を指定するプロバイダーは使用しない場合は、この値は [なし] で指定できます。|
+|**一意のリシェイプ名**|**リシェイプ名**プロパティの値が重複している**レコードセット**オブジェクトを使用できるかどうかを示します。 この動的プロパティが**True**で、既存の**レコードセット**と同じユーザー指定のリシェイプ名で新しい**レコードセット**が作成された場合、**新しいレコードセットオブジェクトの**リシェイプ名が変更され、一意になります。 このプロパティが**False**で、既存の**レコードセット**と同じユーザー指定のリシェイプ名で新しい**レコードセット**が作成された場合、両方の**レコードセット**オブジェクトのリシェイプ名は同じになります。 したがって、両方のレコードセットが存在する限り、どちらの**レコードセット**もリシェイプできません。<br /><br /> プロパティの既定値は**False**です。|
+|**Data Provider**|整形する行を提供するプロバイダーの名前を示します。 プロバイダーが行の提供に使用されない場合、この値は NONE になります。|
 
- 接続文字列のキーワードとしてその名前を指定することで、書き込み可能な動的プロパティを設定することもできます。 たとえば、Microsoft Visual Basic では、設定、**データ プロバイダー** "MSDASQL"を指定することでの動的なプロパティ。
+ 接続文字列のキーワードとして名前を指定することで、書き込み可能な動的プロパティを設定することもできます。 たとえば、Microsoft Visual Basic で、次のように指定して**Data Provider**動的プロパティを "MSDASQL" に設定します。
 
 ```vb
 Dim cn as New ADODB.Connection
 cn.Open "Provider=MSDataShape;Data Provider=MSDASQL"
 ```
 
- 設定またはのインデックスとしてその名前を指定することで動的プロパティを取得することも、[プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)プロパティ。 たとえば、次のコード例は取得しの現在の値を出力、**データ プロバイダー**動的プロパティは新しい値を場合に設定し、cn。DataProvider は、"MSDataShape"に設定されています (直接または間接的に接続文字列を使用)、接続が開かれていないと。
+ また、プロパティの名前を[Properties](../../../ado/reference/ado-api/properties-collection-ado.md)プロパティのインデックスとして指定することによって、動的プロパティを設定または取得することもできます。 たとえば、次のコード例では、 **Data Provider**動的プロパティの現在の値を取得して出力し、cn の場合に新しい値を設定します。DataProvider が "MSDataShape" に設定されました (直接または間接的に接続文字列を介して)。接続が開かれていません。
 
 ```vb
 Debug.Print cn.Properties("Data Provider")
@@ -56,9 +56,9 @@ cn.Properties("Data Provider") = "MSDASQL"
 ```
 
 > [!NOTE]
->  動的なプロパティ、**データ プロバイダー**、開かれていないでのみ設定できる**接続**オブジェクト。 接続が開いたら、**データ プロバイダー**プロパティは読み取り専用になります。
+>  動的プロパティの**Data Provider**は、開かれていない**接続**オブジェクトに対してのみ設定できます。 接続が開かれると、 **Data Provider**プロパティが読み取り専用になります。
 
- データ シェイプの詳細については、次を参照してください。[データ シェイプ](../../../ado/guide/data/data-shaping-overview.md)します。
+ データシェイプの詳細については、「[データシェイプ](../../../ado/guide/data/data-shaping-overview.md)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
  [付録 A: プロバイダー](../../../ado/guide/appendixes/appendix-a-providers.md)

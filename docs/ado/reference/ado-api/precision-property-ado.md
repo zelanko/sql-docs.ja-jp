@@ -17,24 +17,24 @@ ms.assetid: 1fa38e78-6b5b-414d-ba0a-3dd26b29b766
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 26da0367e494bd74253b904393a2dad62308a608
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931638"
 ---
 # <a name="precision-property-ado"></a>Precision プロパティ (ADO)
-内の数値の有効桁数の度を示す、[パラメーター](../../../ado/reference/ado-api/parameter-object.md)オブジェクトまたは数値の[フィールド](../../../ado/reference/ado-api/field-object.md)オブジェクト。  
+[パラメーター](../../../ado/reference/ado-api/parameter-object.md)オブジェクトまたは数値[フィールド](../../../ado/reference/ado-api/field-object.md)オブジェクトの数値の有効桁数を示します。  
   
 ## <a name="settings-and-return-values"></a>設定と戻り値  
- 設定または取得を**バイト**値を表すために使用する最大桁数を示す値。  
+ 値を表すために使用される最大桁数を示す**バイト**値を設定または返します。  
   
-## <a name="remarks"></a>コメント  
- 使用して、**精度**数値の値を表すために使用する最大桁数を決定するプロパティ**パラメーター**または**フィールド**オブジェクト。  
+## <a name="remarks"></a>解説  
+ 数値**パラメーター**または**フィールド**オブジェクトの値を表すために使用される最大桁数を決定するには、 **Precision**プロパティを使用します。  
   
- 読み取り/書き込みするには、値、**パラメーター**オブジェクト。  
+ 値は、**パラメーター**オブジェクトの読み取り/書き込みです。  
   
- **フィールド**オブジェクト、**精度**は通常読み取り専用です。 ただし、新規の**フィールド**に追加されたオブジェクト、[フィールド](../../../ado/reference/ado-api/fields-collection-ado.md)のコレクションを[レコード](../../../ado/reference/ado-api/record-object-ado.md)、**精度**は読み取り/書き込みのみ後に、[値](../../../ado/reference/ado-api/value-property-ado.md)プロパティを**フィールド**が指定されているデータ プロバイダーからその新しいが正常に追加し、**フィールド**を呼び出すことによって[Update](../../../ado/reference/ado-api/update-method.md)のメソッド、**フィールド**コレクション。  
+ **Field**オブジェクトの場合、通常、**有効桁数**は読み取り専用です。 ただし、[レコード](../../../ado/reference/ado-api/record-object-ado.md)の[フィールド](../../../ado/reference/ado-api/fields-collection-ado.md)コレクションに追加された新しい**フィールド**オブジェクトでは、**フィールド**の[Value](../../../ado/reference/ado-api/value-property-ado.md)プロパティが指定され、データプロバイダーが**フィールド**コレクションの[Update](../../../ado/reference/ado-api/update-method.md)メソッドを呼び出すことによって新しい**フィールド**を正常に追加した後にのみ、**有効桁数**が読み取り/書き込みになります。  
   
 ## <a name="applies-to"></a>適用対象  
   
@@ -42,7 +42,7 @@ ms.locfileid: "67931638"
 |-|-|  
 |[Field オブジェクト](../../../ado/reference/ado-api/field-object.md)|[Parameter オブジェクト](../../../ado/reference/ado-api/parameter-object.md)|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [NumericScale および Precision プロパティの例 (VB)](../../../ado/reference/ado-api/numericscale-and-precision-properties-example-vb.md)   
- [NumericScale および Precision プロパティの例 (vc++)](../../../ado/reference/ado-api/numericscale-and-precision-properties-example-vc.md)   
+ [NumericScale および Precision プロパティの例 (VC + +)](../../../ado/reference/ado-api/numericscale-and-precision-properties-example-vc.md)   
  [NumericScale プロパティ (ADO)](../../../ado/reference/ado-api/numericscale-property-ado.md)

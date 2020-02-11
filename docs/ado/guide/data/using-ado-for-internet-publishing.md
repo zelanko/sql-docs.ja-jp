@@ -1,5 +1,5 @@
 ---
-title: ADO を使用して for Internet Publishing |Microsoft Docs
+title: インターネット発行に ADO を使用する |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,31 +16,31 @@ ms.assetid: d399fce4-b70b-418f-8110-3deb3448863c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: decbc7c3b377234d91fe6b3e662d9449298041c1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923619"
 ---
 # <a name="using-ado-for-internet-publishing"></a>インターネットへの発行に ADO を使用する
-[OLE DB Provider for Internet Publishing](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md) ADO を使用した異種データへのアクセスの具体的な例を示しています。 このセクションの例では、インターネット パブリッシング用プロバイダーを使用する特定できますは、電子メール ストアにプロバイダーなどの異種データを他のプロバイダーと ADO を使用するときに示されている原則が生成されます。  
+[インターネット発行用の OLE DB プロバイダーは、](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md) ADO を使用して異種データにアクセスする具体的な例を示しています。 このセクションの例は、インターネット公開プロバイダーの使用に固有のものですが、他のプロバイダーで ADO を電子メールストアのプロバイダーなどの異種データに対して使用する場合は、このような原則が似ています。  
   
 ## <a name="urls"></a>URL  
- Uniform Resource Locator (Url) は、データ ソースとファイルとディレクトリの場所を指定する接続文字列とコマンドのテキストの代替として使用できます。 Url を使用するには、既存の[接続](../../../ado/reference/ado-api/connection-object-ado.md)と**Recordset**オブジェクトを使用して、**レコード**と**Stream**オブジェクト。  
+ 接続文字列の代わりに Uniform Resource locator (Url) を使用して、データソースとファイルやディレクトリの場所を指定できます。 既存の[接続](../../../ado/reference/ado-api/connection-object-ado.md)および**レコードセット**オブジェクトと、**レコード**オブジェクトおよび**ストリーム**オブジェクトで url を使用できます。  
   
- Url を使用する方法の詳細については、次を参照してください。[絶対と相対 Url](../../../ado/guide/data/absolute-and-relative-urls.md)します。  
+ Url の使用方法の詳細については、「[絶対 url と相対 url](../../../ado/guide/data/absolute-and-relative-urls.md)」を参照してください。  
   
-## <a name="record-fields"></a>レコードのフィールド  
- 異種データと同種のデータの主な違いは、前者は、データの各行または**レコード**、異なる一連の列を持つことができますまたは**フィールド**します。 同種のデータの各行は、同じ列のセットを持ちます。 インターネット公開プロバイダーに固有のフィールドの詳細については、次を参照してください。[レコードとプロバイダー提供の余分なフィールド](../../../ado/guide/data/records-and-provider-supplied-fields.md)します。  
+## <a name="record-fields"></a>レコードフィールド  
+ 異種データと同種データの違いは、前者の場合、データの各行 (または**レコード**) は、異なる列または**フィールド**のセットを持つことができるという点です。 同種データの場合、各行の列セットは同じになります。 インターネット公開プロバイダーに固有のフィールドの詳細については、「[レコード」および「プロバイダーが提供する追加フィールド](../../../ado/guide/data/records-and-provider-supplied-fields.md)」を参照してください。  
   
-### <a name="appending-new-fields"></a>新しいフィールドを追加します。  
- 組み合わせて動作するいくつかの ADO のオブジェクトが強化されています**レコード**と**Stream**オブジェクト。  
+### <a name="appending-new-fields"></a>新しいフィールドの追加  
+ いくつかの ADO オブジェクトが、**レコード**オブジェクトおよび**ストリーム**オブジェクトと共に機能するように拡張されています。  
   
--   [フィールド](../../../ado/reference/ado-api/fields-collection-ado.md)コレクション[Append](../../../ado/reference/ado-api/append-method-ado.md)メソッドでは、作成し、追加、[フィールド](../../../ado/reference/ado-api/field-object.md)コレクションにオブジェクトの値を指定できますも、 **フィールド**.  
+-   [フィールドオブジェクトを](../../../ado/reference/ado-api/field-object.md)作成してコレクションに追加する[フィールド](../../../ado/reference/ado-api/fields-collection-ado.md)コレクション[追加](../../../ado/reference/ado-api/append-method-ado.md)メソッドは、**フィールド**の値を指定することもできます。  
   
--   [Update](../../../ado/reference/ado-api/update-method.md)メソッドが追加またはコレクションにフィールドの削除を終了します。  
+-   [Update](../../../ado/reference/ado-api/update-method.md)メソッドは、コレクションへのフィールドの追加または削除を終了します。  
   
--   代わりに、ショートカットとして、 **Append**メソッド、未定義または以前に削除されたフィールドに値を割り当てることでフィールドを作成することができます。  
+-   **Append**メソッドの代替手段として、未定義のフィールドまたは以前に削除されたフィールドに値を割り当てることにより、フィールドを作成できます。  
   
  このセクションでは、次のトピックを扱います。  
   

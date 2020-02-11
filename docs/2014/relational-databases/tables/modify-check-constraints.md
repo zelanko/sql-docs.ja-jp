@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 651b13121653f5627f59bc6a8a11f1e2e49c43b2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211841"
 ---
 # <a name="modify-check-constraints"></a>CHECK 制約の変更
@@ -29,7 +29,7 @@ ms.locfileid: "68211841"
   
 -   **作業を開始する準備:**  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **CHECK 制約を変更するための方法:**  
   
@@ -56,7 +56,7 @@ ms.locfileid: "68211841"
   
 4.  次の表の操作を完了します。  
   
-    |目的|手順|  
+    |ターゲット|手順|  
     |--------|------------------------|  
     |制約式を編集する。|**[式]** フィールドに新しい式を入力します。|  
     |制約名を変更する。|**[名前]** フィールドに新しい名前を入力します。|  
@@ -69,7 +69,7 @@ ms.locfileid: "68211841"
   
 5.  **[閉じる]** をクリックします。  
   
-6.  **[ファイル]** メニューの **[<_テーブル名_> を保存]** をクリックします。  
+6.  **[ファイル]** メニューの **[<** テーブル名 _> を保存]_ をクリックします。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
  **CHECK 制約を変更するには**  
