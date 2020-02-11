@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 464961600f69f14a2b66515a75906c0fd4af3f82
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70175355"
 ---
 # <a name="lesson-9-restore-a-database-from-azure-storage"></a>レッスン 9: Azure Storage からデータベースを復元する
@@ -36,13 +36,13 @@ ms.locfileid: "70175355"
   
  Azure Storage からデータベースを復元するには、次の手順を実行します。  
   
-1.  [SQL Server Management Studio] を起動します。 既定のインスタンスに接続します。  
+1.  SQL Server Management Studio を起動します。 既定のインスタンスに接続します。  
   
-2.  標準 ツールバーの **新しいクエリ** をクリックします。  
+2.  [標準] ツールバーの [**新しいクエリ**] をクリックします。  
   
 3.  次の完全なスクリプトをコピーして、クエリ ウィンドウに貼り付けます。 必要に応じて、スクリプトを変更します。  
   
-     **注:** `RESTORE`ステートメントを実行して、Azure Storage 内のデータベースバックアップ (.bak) を別のコンピューターのデータベースインスタンスに復元します。  
+     **注:**`RESTORE`ステートメントを実行して、Azure Storage 内のデータベースバックアップ (.bak) を別のコンピューターのデータベースインスタンスに復元します。  
   
     ```sql  
   
@@ -95,6 +95,6 @@ ms.locfileid: "70175355"
   
     ```  
   
- **チュートリアルの終了:Azure Storage サービスのデータファイルの SQL Server**  
+ **チュートリアルの最後: Azure Storage サービスのデータファイルの SQL Server**  
   
   

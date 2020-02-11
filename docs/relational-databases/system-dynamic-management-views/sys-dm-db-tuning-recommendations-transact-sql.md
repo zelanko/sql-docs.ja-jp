@@ -1,6 +1,6 @@
 ---
-title: sys.dm_db_tuning_recommendations (TRANSACT-SQL) |Microsoft Docs
-description: 潜在的なパフォーマンスの問題を検索する方法について説明し、SQL Server と Azure SQL Database での修正プログラムをお勧めします。
+title: dm_db_tuning_recommendations (Transact-sql) |Microsoft Docs
+description: SQL Server と Azure SQL Database で、潜在的なパフォーマンスの問題と推奨される修正を見つける方法について説明します
 ms.custom: ''
 ms.date: 07/20/2017
 ms.prod: sql
@@ -23,75 +23,76 @@ author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: dbee7422bdf58d753c31c7aa57a81bc4b29d2568
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68096235"
 ---
-# <a name="sysdmdbtuningrecommendations-transact-sql"></a>sys.dm\_db\_チューニング\_(TRANSACT-SQL) の推奨事項
+# <a name="sysdm_db_tuning_recommendations-transact-sql"></a>sys.dm\_db\_チューニング\_に関する推奨事項 (transact-sql)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-  チューニングの推奨事項に関する詳細な情報を返します。  
+  チューニングの推奨設定に関する詳細情報を返します。  
   
- [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]では、動的管理ビューでデータベースの包含に影響を与える情報を公開することや、ユーザーがアクセスできる他のデータベースに関する情報を公開することはできません。 この情報を公開することを避けるため、接続されているテナントに属していないデータが含まれるすべての行はフィルターで除外します。
-
-| **列名** | **データ型** | **[説明]** |
-| --- | --- | --- |
-| **name** | **nvarchar (4000)** | 推奨設定の一意の名前。 |
-| **type** | **nvarchar (4000)** | たとえば、推奨を生成した自動チューニング オプションの名前 `FORCE_LAST_GOOD_PLAN` |
-| **reason** | **nvarchar (4000)** | なぜこの推奨事項が提供されている理由です。 |
-| **valid\_since** | **datetime2** | 最初にこの推奨事項が生成されました。 |
-| **last\_refresh** | **datetime2** | この推奨事項が生成された最後の時刻。 |
-| **state** | **nvarchar (4000)** | 推奨事項の状態を記述する JSON ドキュメントです。 次のフィールドを使用できます。<br />-   `currentValue` -推奨事項の現在の状態。<br />-   `reason` -定数を推奨事項は、現在の状態の理由について説明します。|
-| **is\_executable\_action** | **bit** | 1 = を使用してデータベースに対して実行できる推奨事項[!INCLUDE[tsql_md](../../includes/tsql-md.md)]スクリプト。<br />0 = データベースに対して、推奨事項を実行することはできません (例: についてのみ、または元に戻された推奨事項) |
-| **\_revertable\_アクション** | **bit** | 1 = 推奨事項を自動的に監視し、データベース エンジンによって元に戻されます。<br />0 = 推奨事項を自動的に監視および元に戻すできることはできません。 ほとんど&quot;実行可能ファイル&quot;アクション&quot;revertable&quot;します。 |
-| **execute\_action\_start\_time** | **datetime2** | 推奨事項の適用の日付。 |
-| **execute\_action\_duration** | **time** | Execute アクションは、の期間です。 |
-| **execute\_action\_initiated\_by** | **nvarchar (4000)** | `User` = ユーザーは、推奨設定でプランを手動で適用します。 <br /> `System` = システムは、推奨事項を自動的に適用されます。 |
-| **execute\_action\_initiated\_time** | **datetime2** | 推奨事項が適用された日付。 |
-| **元に戻す\_アクション\_開始\_時間** | **datetime2** | 日付は、推奨事項が元に戻されます。 |
-| **元に戻す\_アクション\_期間** | **time** | 元に戻す操作の期間です。 |
-| **revert\_action\_initiated\_by** | **nvarchar (4000)** | `User` = 推奨プランの手動で unforced ユーザー。 <br /> `System` = システムは、推奨事項を自動的に元に戻されます。 |
-| **元に戻す\_アクション\_開始\_時間** | **datetime2** | 日付は、推奨事項が元に戻されます。 |
-| **score** | **int** | この推奨事項では、0 ~ 100 の値または影響を推定スケール (が大きいほど良い) |
-| **details** | **nvarchar(max)** | 推奨事項の詳細を含む JSON ドキュメントです。 次のフィールドを使用できます。<br /><br />`planForceDetails`<br />-    `queryId` -クエリ\_後退したクエリの id。<br />-    `regressedPlanId` -後退したプランの plan_id します。<br />-   `regressedPlanExecutionCount` -、回帰の前に、後退したプランとクエリの実行の数が検出されました。<br />-    `regressedPlanAbortedCount` -後退したプランの実行中にエラーが検出された数。<br />-    `regressedPlanCpuTimeAverage` -平均 CPU 時間が、回帰が検出される前に、後退したクエリで使用します。<br />-    `regressedPlanCpuTimeStddev` 標準偏差、回帰の前に、後退したクエリによって消費される CPU 時間が検出されました。<br />-    `recommendedPlanId` -plan_id プランを強制する必要があります。<br />-   `recommendedPlanExecutionCount`-プランの回帰が検出される前に強制する必要がありますを使用して、クエリの実行回数です。<br />-    `recommendedPlanAbortedCount` -適用する必要があるプランの実行中にエラーが検出された数。<br />-    `recommendedPlanCpuTimeAverage` -平均 CPU 時間を強制する必要があります (計算、回帰が検出される前に) プランで実行されるクエリによって消費されます。<br />-    `recommendedPlanCpuTimeStddev` 回帰直線の前に、後退したクエリで使用された CPU 時間の標準偏差が検出されました。<br /><br />`implementationDetails`<br />-  `method` -メソッド、回帰を修正するために使用する必要があります。 値は常に`TSql`します。<br />-    `script` - [!INCLUDE[tsql_md](../../includes/tsql-md.md)] 推奨されるプランを強制的に実行されるスクリプトです。 |
-  
-## <a name="remarks"></a>コメント  
- によって返される情報`sys.dm_db_tuning_recommendations`データベース エンジンは、潜在的なクエリ パフォーマンスの低下を識別し、永続化されていないときに更新されます。 推奨事項がまでのみ保持[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を再起動します。 データベース管理者は、サーバーの再利用後も保持する場合は、チューニング推奨設定のバックアップ コピーを定期的に作成する必要があります。 
-
- `currentValue` フィールドに、`state`列は、次の値がある可能性があります。
  
- | 状態 | 説明 |
+  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、動的管理ビューは、データベースの包含に影響する情報を公開することも、ユーザーがアクセスできる他のデータベースに関する情報を公開することもできません。 この情報を公開しないように、接続されたテナントに属していないデータを含むすべての行がフィルターで除外されます。
+
+| **列名** | **データ型** | **説明** |
+| --- | --- | --- |
+| **name** | **nvarchar(4000)** | 推奨事項の一意の名前。 |
+| **type** | **nvarchar(4000)** | 推奨設定を生成した自動チューニングオプションの名前。たとえば、次のようになります。`FORCE_LAST_GOOD_PLAN` |
+| **理由** | **nvarchar(4000)** | この推奨事項が提供された理由。 |
+| **有効\_期限** | **datetime2** | この推奨事項が初めて生成されたとき。 |
+| **最終\_更新** | **datetime2** | この推奨事項が最後に生成された時刻。 |
+| **状態** | **nvarchar(4000)** | 推奨事項の状態を説明する JSON ドキュメント。 次のフィールドを使用できます。<br />-   `currentValue`-推奨事項の現在の状態。<br />-   `reason`-推奨設定が現在の状態である理由を示す定数。|
+| **実行\_可能\_なアクション** | **bit** | 1 = 推奨事項は、スクリプトを使用[!INCLUDE[tsql_md](../../includes/tsql-md.md)]してデータベースに対して実行できます。<br />0 = データベースに対して推奨設定を実行することはできません (例: 情報のみ、または推奨事項を元に戻します)。 |
+| **is\_revertable\_action** | **bit** | 1 = 推奨事項は、データベースエンジンによって自動的に監視および元に戻すことができます。<br />0 = 推奨事項を自動的に監視して元に戻すことはできません。 ほとんど&quot;の&quot;実行可能な&quot;アクション&quot;は revertable になります。 |
+| **実行\_アクション\_の\_開始時刻** | **datetime2** | 推奨事項が適用される日付。 |
+| **アクション\_\_実行期間** | **time** | 実行アクションの期間。 |
+| **実行\_アクション\_の\_開始者** | **nvarchar(4000)** | `User`= ユーザーは、推奨事項に手動で強制されたプランです。 <br /> `System`= システムに自動的に適用される推奨事項。 |
+| **アクション\_\_の実行\_開始時刻** | **datetime2** | 推奨事項が適用された日付。 |
+| **アクション\_\_の開始\_時刻を元に戻す** | **datetime2** | 推奨事項が元に戻された日付。 |
+| **元\_に\_戻す操作の期間** | **time** | 元に戻す操作の期間。 |
+| **元\_に\_戻す\_操作の開始** | **nvarchar(4000)** | `User`= ユーザー手動で強制されていない推奨プラン。 <br /> `System`= システムは自動的に推奨設定を戻しました。 |
+| **アクション\_\_開始\_時刻を元に戻す** | **datetime2** | 推奨事項が元に戻された日付。 |
+| **学生** | **int** | 0-100 スケールでのこの推奨事項の推定値/影響 (より優れたもの) |
+| **住所** | **nvarchar(max)** | 推奨事項についての詳細が記載された JSON ドキュメント。 次のフィールドを使用できます。<br /><br />`planForceDetails`<br />-    `queryId`-低下した\_クエリのクエリ id。<br />-    `regressedPlanId`-低下したプランの plan_id。<br />-   `regressedPlanExecutionCount`-回帰が検出されるまでの低下した plan を使用したクエリの実行回数。<br />-    `regressedPlanAbortedCount`-低下したプランの実行中に検出されたエラーの数。<br />-    `regressedPlanCpuTimeAverage`-回帰が検出される前に低下したクエリによって消費された平均 CPU 時間。<br />-    `regressedPlanCpuTimeStddev`-回帰が検出される前に低下したクエリによって消費される CPU 時間の標準偏差。<br />-    `recommendedPlanId`-強制する計画の plan_id。<br />-   `recommendedPlanExecutionCount`-回帰が検出される前に強制される必要があるプランを持つクエリの実行回数。<br />-    `recommendedPlanAbortedCount`-プランの実行中に強制される必要がある検出されたエラーの数。<br />-    `recommendedPlanCpuTimeAverage`-強制的に実行する必要がある (回帰が検出される前に計算された) プランで実行されたクエリによって消費される平均 CPU 時間。<br />-    `recommendedPlanCpuTimeStddev`回帰が検出される前に低下したクエリによって消費される CPU 時間の標準偏差。<br /><br />`implementationDetails`<br />-  `method`-回帰を修正するために使用する必要があるメソッド。 値は常`TSql`にです。<br />-    `script` - [!INCLUDE[tsql_md](../../includes/tsql-md.md)]推奨されるプランを強制するために実行するスクリプト。 |
+  
+## <a name="remarks"></a>解説  
+ によって`sys.dm_db_tuning_recommendations`返される情報は、データベースエンジンによってクエリパフォーマンスの潜在的な回帰が識別され、保存されない場合に更新されます。 推奨事項は、が[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]再起動されるまで保持されます。 サーバーの再利用後に保持する場合は、データベース管理者がチューニングの推奨設定のバックアップコピーを定期的に作成する必要があります。 
+
+ `currentValue``state`列のフィールドには、次の値が含まれる場合があります。
+ 
+ | Status | [説明] |
  |--------|-------------|
- | `Active` | アクティブであり、まだ適用されていません。 お勧めします。 ユーザーは、推奨設定スクリプトを作成し、それを手動で実行できます。 |
- | `Verifying` | 推奨事項の適用によって[!INCLUDE[ssde_md](../../includes/ssde_md.md)]と内部の検証プロセスが機能低下したプランの強制プランのパフォーマンスを比較します。 |
- | `Success` | 推奨事項が正常に適用されます。 |
- | `Reverted` | パフォーマンスが著しく向上することがないために、推奨事項は元に戻します。 |
- | `Expired` | 推奨事項は、有効期限が切れたし、もはや適用することはできません。 |
+ | `Active` | 推奨事項はアクティブであり、まだ適用されていません。 ユーザーは推奨設定のスクリプトを取得し、手動で実行できます。 |
+ | `Verifying` | 推奨事項はに[!INCLUDE[ssde_md](../../includes/ssde_md.md)]よって適用され、内部検証プロセスは、強制されたプランのパフォーマンスを低下したプランと比較します。 |
+ | `Success` | 推奨事項が正常に適用されました。 |
+ | `Reverted` | パフォーマンスを大幅に向上させることができないため、推奨事項は元に戻されます。 |
+ | `Expired` | 推奨事項の有効期限が切れているため、もう適用できません。 |
 
-JSON ドキュメント`state`列が現在の状態で、推奨事項である理由を説明する理由が含まれています。 [理由] フィールドの値は次のようになります。 
+[JSON ドキュメント`state`の列に含まれるのは、現在の状態の推奨事項である理由を示しています。 [理由] フィールドの値は次のようになります。 
 
-| Reason | 説明 |
+| Reason | [説明] |
 |--------|-------------|
-| `SchemaChanged` | 推奨事項には、参照先のテーブルのスキーマが変更されたため、有効期限が切れました。 |
-| `StatisticsChanged`| 推奨事項は、参照先のテーブルで統計を変更したため有効期限が切れました。 |
-| `ForcingFailed` | 推奨されるプランは、クエリに強制することはできません。 検索、`last_force_failure_reason`で、 [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)失敗の理由を確認するビュー。 |
-| `AutomaticTuningOptionDisabled` | `FORCE_LAST_GOOD_PLAN` オプションは、検証プロセス中に、ユーザーが無効です。 有効にする`FORCE_LAST_GOOD_PLAN`オプションを使用して[AUTOMATIC_TUNING 設定データベースの ALTER &#40;TRANSACT-SQL&#41; ](../../t-sql/statements/alter-database-transact-sql-set-options.md)ステートメントまたは強制的に、プラン内のスクリプトを使用して手動で`[details]`列。 |
-| `UnsupportedStatementType` | クエリにプランを強制することはできません。 サポートされていないクエリの例は、カーソルと`INSERT BULK`ステートメント。 |
-| `LastGoodPlanForced` | 推奨事項が正常に適用されます。 |
-| `AutomaticTuningOptionNotEnabled`| [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 潜在的なパフォーマンスの低下、識別されたが、`FORCE_LAST_GOOD_PLAN`オプションが有効になっていないを参照してください - [AUTOMATIC_TUNING 設定データベースの ALTER &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)します。 推奨事項を手動で適用または有効にする`FORCE_LAST_GOOD_PLAN`オプション。 |
-| `VerificationAborted`| 検証プロセスが再起動またはクエリ ストアのクリーンアップにより中止されました。 |
-| `VerificationForcedQueryRecompile`| クエリは、大幅なパフォーマンス向上がないために再コンパイルされます。 |
-| `PlanForcedByUser`| プランを使用して、ユーザーが手動で強制[sp_query_store_force_plan &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)プロシージャ。 |
-| `PlanUnforcedByUser` | プランを使用して、ユーザーが手動で動作[sp_query_store_unforce_plan &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)プロシージャ。 |
+| `SchemaChanged` | 参照されるテーブルのスキーマが変更されたため、推奨設定の有効期限が切れました。 |
+| `StatisticsChanged`| 参照されるテーブルの統計が変更されたため、推奨設定の有効期限が切れました。 |
+| `ForcingFailed` | クエリで推奨されるプランを強制することはできません。 Query_store_plan ビュー `last_force_failure_reason`でを[](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)見つけて、エラーの原因を見つけます。 |
+| `AutomaticTuningOptionDisabled` | `FORCE_LAST_GOOD_PLAN`オプションは、検証プロセス中にユーザーによって無効にされます。 ALTER `FORCE_LAST_GOOD_PLAN` database SET AUTOMATIC_TUNING 使用してオプションを有効にするか[&#40;transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)ステートメントを使用するか、 `[details]` [スクリプトに含まれるスクリプト] 列を使用して手動でプランを強制してください。 |
+| `UnsupportedStatementType` | クエリに対してプランを強制することはできません。 サポートされていないクエリ`INSERT BULK`の例としては、カーソルとステートメントがあります。 |
+| `LastGoodPlanForced` | 推奨事項が正常に適用されました。 |
+| `AutomaticTuningOptionNotEnabled`| [!INCLUDE[ssde_md](../../includes/ssde_md.md)]パフォーマンスが低下する可能性がある`FORCE_LAST_GOOD_PLAN`ことを確認しましたが、オプションが有効になっていません。 [ALTER database SET AUTOMATIC_TUNING &#40;transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)を参照してください。 推奨設定を手動で`FORCE_LAST_GOOD_PLAN`適用するか、オプションを有効にします。 |
+| `VerificationAborted`| 再起動またはクエリストアクリーンアップが原因で、検証プロセスが中止されました。 |
+| `VerificationForcedQueryRecompile`| パフォーマンスが大幅に改善されないため、クエリが再コンパイルされます。 |
+| `PlanForcedByUser`| ユーザーは[sp_query_store_force_plan &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)プロシージャを使用して手動でプランを強制しています。 |
+| `PlanUnforcedByUser` | ユーザーは[sp_query_store_unforce_plan &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)プロシージャを使用して、手動でプランを強制解除します。 |
 
- [詳細] 列の統計では、プランのランタイム統計情報 (たとえば、現在の CPU 時間) は表示されません。 推奨事項の詳細の回帰の検出時に行われ、理由について説明します[!INCLUDE[ssde_md](../../includes/ssde_md.md)]パフォーマンスの低下を識別します。 使用`regressedPlanId`と`recommendedPlanId`クエリに[クエリ ストアのカタログ ビュー](../../relational-databases/performance/how-query-store-collects-data.md)プランの正確なランタイム統計情報を検索します。
+ [詳細] 列の統計情報には、ランタイムプランの統計情報 (現在の CPU 時間など) は表示されません。 推奨事項の詳細は、回帰の検出時に取得され[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 、特定されたパフォーマンスの回帰の理由を説明します。 および`regressedPlanId`を`recommendedPlanId`使用して[クエリストアカタログビュー](../../relational-databases/performance/how-query-store-collects-data.md)に対してクエリを実行し、正確なランタイムプランの統計情報を検索します。
 
-## <a name="examples-of-using-tuning-recommendations-information"></a>チューニング推奨設定の情報を使用する例  
+## <a name="examples-of-using-tuning-recommendations-information"></a>チューニングの推奨設定情報の使用例  
 
 ### <a name="example-1"></a>例 1
-次に、生成された取得[!INCLUDE[tsql](../../includes/tsql-md.md)]クエリの適切なプランを強制するスクリプト。  
+次の例では[!INCLUDE[tsql](../../includes/tsql-md.md)] 、特定のクエリに対して適切なプランを強制する、生成されたスクリプトを取得します。  
  
 ```sql
 SELECT name, reason, score,
@@ -105,7 +106,7 @@ CROSS APPLY OPENJSON(details, '$.planForceDetails')
 WHERE JSON_VALUE(state, '$.currentValue') = 'Active';
 ```
 ### <a name="example-2"></a>例 2
-次に、生成された取得[!INCLUDE[tsql](../../includes/tsql-md.md)]スクリプトは、指定されたクエリと推定利益に関する追加情報の適切なプランを強制します。
+次の例では[!INCLUDE[tsql](../../includes/tsql-md.md)] 、特定のクエリに対して適切なプランを強制する、生成されたスクリプトと、推定されるゲインに関する追加情報を取得します。
 
 ```sql
 SELECT reason, score,
@@ -129,7 +130,7 @@ CROSS APPLY OPENJSON (Details, '$.planForceDetails')
 ```
 
 ### <a name="example-3"></a>例 3
-次に、生成された取得[!INCLUDE[tsql](../../includes/tsql-md.md)]スクリプトは、指定されたクエリとクエリ テキストを含む追加の情報の適切なプランとクエリのストアに格納されているクエリ プランを強制します。
+次の例では[!INCLUDE[tsql](../../includes/tsql-md.md)] 、特定のクエリに対して適切なプランを強制する、生成されたスクリプトと、クエリストアに格納されているクエリテキストとクエリプランを含む追加情報を取得します。
 
 ```sql
 WITH cte_db_tuning_recommendations
@@ -171,16 +172,16 @@ INNER JOIN sys.query_store_query AS qsq ON qsq.query_id = rp.query_id
 INNER JOIN sys.query_store_query_text AS qsqt ON qsqt.query_text_id = qsq.query_text_id;
 ```
 
-推奨事項のビューでクエリの値に使用できる JSON 関数の詳細については、次を参照してください。[の JSON サポート](../../relational-databases/json/index.md)で[!INCLUDE[ssde_md](../../includes/ssde_md.md)]します。
+推奨事項ビューの値のクエリに使用できる JSON 関数の詳細については、「」の[!INCLUDE[ssde_md](../../includes/ssde_md.md)]「 [json サポート](../../relational-databases/json/index.md)」を参照してください。
   
 ## <a name="permissions"></a>アクセス許可  
 
-必要があります`VIEW SERVER STATE`権限[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]します。   
-必要があります、`VIEW DATABASE STATE`で、データベースに対する権限[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]します。   
+に`VIEW SERVER STATE`は[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]権限が必要です。   
+で[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]は`VIEW DATABASE STATE` 、データベースに対する権限が必要です。   
 
 ## <a name="see-also"></a>参照  
  [自動チューニング](../../relational-databases/automatic-tuning/automatic-tuning.md)   
- [sys.database_automatic_tuning_options &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md)   
- [sys.database_query_store_options &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
+ [database_automatic_tuning_options &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md)   
+ [database_query_store_options &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
  [JSON のサポート](../../relational-databases/json/index.md)
  

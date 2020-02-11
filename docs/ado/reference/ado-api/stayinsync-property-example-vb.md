@@ -15,16 +15,16 @@ ms.assetid: b682bcc3-04b3-42b0-86f4-c17e0cd29baf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5a97ff4191aa065ece5af53087295e13885209d4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67930814"
 ---
 # <a name="stayinsync-property-example-vb"></a>StayInSync プロパティの例 (VB)
-この例では、どのように[StayInSync](../../../ado/reference/ado-api/stayinsync-property.md)プロパティには、階層構造にアクセスする行が容易になります。[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)します。  
+この例では、 [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md)プロパティを使用して、階層[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)内の行へのアクセスを容易にする方法を示します。  
   
- 外側のループでは、各著者の姓と名、状態、および識別情報が表示されます。 追加された**レコード セット**の各行がから取得した、[フィールド](../../../ado/reference/ado-api/fields-collection-ado.md)コレクションに自動的に割り当てられると**最初**によって、 **StayInSync**プロパティたびに、親**Recordset**を新しい行に移動します。 内側のループでは、追加されたレコード セットの各行から 4 つのフィールドが表示されます。  
+ 外側のループでは、各作成者の姓、州、および id が表示されます。 各行の追加された**レコードセット**は、 [Fields](../../../ado/reference/ado-api/fields-collection-ado.md)コレクションから取得され、親**レコードセット**が新しい行に移動するたびに、 **StayInSync**プロパティによって自動的に**rstTitleAuthor**に割り当てられます。 内側のループでは、追加されたレコードセットの各行に4つのフィールドが表示されます。  
   
 ```  
 'BeginStayInSyncVB  
@@ -89,7 +89,7 @@ End Sub
 'EndStayInSyncVB  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [フィールド コレクション (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [RecordSet オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+## <a name="see-also"></a>参照  
+ [Fields コレクション (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
+ [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [StayInSync プロパティ](../../../ado/reference/ado-api/stayinsync-property.md)

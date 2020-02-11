@@ -1,5 +1,5 @@
 ---
-title: sys.fn_cdc_map_lsn_to_time (TRANSACT-SQL) |Microsoft Docs
+title: fn_cdc_map_lsn_to_time (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,16 +21,16 @@ ms.assetid: 405aa29c-8bd8-42d3-9f39-7494b643fc6f
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: c3573b876a10b4400969bf63200682e91bfc45fb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68046340"
 ---
-# <a name="sysfncdcmaplsntotime-transact-sql"></a>sys.fn_cdc_map_lsn_to_time (TRANSACT-SQL)
+# <a name="sysfn_cdc_map_lsn_to_time-transact-sql"></a>fn_cdc_map_lsn_to_time (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  日付と時刻の値を返します、 **tran_end_time**内の列、 [cdc.lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md)システム テーブルの指定されたログ シーケンス番号 (LSN)。 この関数を使用すると、変更テーブル内の日付範囲を LSN 範囲を体系的にマップします。  
+  指定されたログシーケンス番号 (LSN) について、 [lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md)システムテーブルの**tran_end_time**列から日付と時刻の値を返します。 この関数を使用すると、変更テーブルの日付範囲に LSN 範囲を体系的にマップできます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,19 +43,19 @@ sys.fn_cdc_map_lsn_to_time ( lsn_value )
   
 ## <a name="arguments"></a>引数  
  *lsn_value*  
- 照合する LSN 値です。 *lsn_value*は**binary (10)** します。  
+ 照合する LSN 値を指定します。 *lsn_value*は**binary (10)** です。  
   
 ## <a name="return-type"></a>戻り値の型  
- **datetime**  
+ **DATETIME**  
   
-## <a name="remarks"></a>コメント  
- 基に、変更がコミットされた時刻を確認するこの関数を使用できます、 **_ _ $start_lsn**変更データの行で値が返されます。  
+## <a name="remarks"></a>解説  
+ この関数を使用すると、変更データの行に返された **__ $ start_lsn**値に基づいて、変更がコミットされた時刻を確認できます。  
   
 ## <a name="permissions"></a>アクセス許可  
- ロール **public** のメンバーシップが必要です。  
+ **Public**ロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例  
- 次の例では、関数を使用して`sys.fn_cdc_map_lsn_to_time`に対して指定された LSN 間隔で最後の変更に関連付けられたコミット時刻を決定する、`HumanResources_Employee`キャプチャ インスタンスです。  
+## <a name="examples"></a>例  
+ 次の例では、 `sys.fn_cdc_map_lsn_to_time`関数を使用して、 `HumanResources_Employee`キャプチャインスタンスの指定した LSN 間隔で最後に処理された変更に関連付けられたコミット時間を確認します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -67,10 +67,10 @@ SELECT sys.fn_cdc_map_lsn_to_time(@max_lsn);
 GO   
 ```  
   
-## <a name="see-also"></a>関連項目  
- [cdc.lsn_time_mapping &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md)   
- [sys.fn_cdc_map_time_to_lsn &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md)   
- [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)   
- [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)  
+## <a name="see-also"></a>参照  
+ [cdc. lsn_time_mapping &#40;Transact-sql&#41;](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md)   
+ [fn_cdc_map_time_to_lsn &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md)   
+ [cdc. fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-sql&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)   
+ [cdc. fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-sql&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)  
   
   

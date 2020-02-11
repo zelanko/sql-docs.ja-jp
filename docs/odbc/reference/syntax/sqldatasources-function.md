@@ -1,5 +1,5 @@
 ---
-title: SQLDataSources 関数 |Microsoft Docs
+title: SQLDataSources ソース関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,18 +20,18 @@ ms.assetid: 3f63b1b4-e70e-44cd-96c6-6878d50d0117
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 28fcf56293516937455afc387a8d478734f5b006
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68121378"
 ---
 # <a name="sqldatasources-function"></a>SQLDataSources 関数
-**準拠**  
- バージョンが導入されました。ODBC 1.0 規格に準拠します。ISO 92  
+**互換性**  
+ 導入されたバージョン: ODBC 1.0 標準準拠: ISO 92  
   
  **まとめ**  
- **SQLDataSources**データ ソースに関する情報を返します。 この関数は、ドライバー マネージャーによってのみ実装されます。  
+ **Sqldatasources**ソースは、データソースに関する情報を返します。 この関数は、ドライバーマネージャーによってのみ実装されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -50,71 +50,71 @@ SQLRETURN SQLDataSources(
   
 ## <a name="arguments"></a>引数  
  *EnvironmentHandle*  
- [入力]環境ハンドル。  
+ 代入環境ハンドル。  
   
- *[方向]*  
- [入力]データ ソースをドライバー マネージャーに関する情報を返しますを決定します。 次の値をとります。  
+ *横書き*  
+ 代入ドライバーマネージャーが情報を返すデータソースを決定します。 次の値をとります。  
   
- SQL_FETCH_NEXT (一覧で、[次へ] のデータ ソース名を取得) を SQL_FETCH_FIRST (リストの先頭からのフェッチ) を (最初のフェッチのユーザーに DSN)、SQL_FETCH_FIRST_USER または SQL_FETCH_FIRST_SYSTEM (最初のシステム DSN のフェッチ) にします。  
+ SQL_FETCH_NEXT (一覧内の次のデータソース名を取得するため)、SQL_FETCH_FIRST (リストの先頭からフェッチ)、SQL_FETCH_FIRST_USER (最初のユーザー DSN をフェッチする場合)、または SQL_FETCH_FIRST_SYSTEM (最初のシステム DSN をフェッチする場合) です。  
   
- ときに*方向*SQL_FETCH_FIRST、後続の呼び出しに設定されている**SQLDataSources**で*方向*リターン ユーザーとシステム Dsn を前方に設定します。 ときに*方向*SQL_FETCH_FIRST_USER、後続のすべての呼び出しに設定されている**SQLDataSources**で*方向*リターン ユーザー Dsn だけを前方に設定します。 ときに*方向*SQL_FETCH_FIRST_SYSTEM、後続のすべての呼び出しに設定されている**SQLDataSources**で*方向*リターン システム Dsn だけを前方に設定します。  
+ *Direction*が SQL_FETCH_FIRST に設定されている場合、その後、 *direction*をに設定して**sqldatasources ソース**を呼び出すと、ユーザーとシステムの両方の dsn が返さ SQL_FETCH_NEXT 返されます。 *Direction*が SQL_FETCH_FIRST_USER に設定されている場合、後続の**sqldatasources ソース**への呼び出しでは、*方向*がに設定され SQL_FETCH_NEXT ユーザー dsn のみが返されます。 *Direction*が SQL_FETCH_FIRST_SYSTEM に設定されている場合、後続の**sqldatasources ソース**への呼び出しでは、*方向*がに設定され SQL_FETCH_NEXT はシステム dsn のみを返します。  
   
- *ServerName*  
- [出力]データ ソース名を返すバッファーへのポインター。  
+ *Server*  
+ Outputデータソース名を返すバッファーへのポインター。  
   
- 場合*ServerName*が null の場合、 *NameLength1Ptr*はまだ文字 (文字データの null 終端文字を除く) の合計数を返しますが指すバッファーに返される使用可能な*ServerName*します。  
+ *Servername*が NULL の場合でも、 *NameLength1Ptr*は、 *servername*が指すバッファー内で返すことができる文字の合計数 (文字データの null 終端文字を除く) を返します。  
   
  *BufferLength1*  
- [入力]長さ、**ServerName*文字で、バッファー; SQL_MAX_DSN_LENGTH と null 終端文字以内であるこの必要はありません。  
+ 代入**ServerName*バッファーの長さ (文字数)これは SQL_MAX_DSN_LENGTH より長く、null 終了文字を加えたものである必要はありません。  
   
  *NameLength1Ptr*  
- [出力]文字 (null 終了文字を除く) の合計数を返すバッファーへのポインターで返される使用可能な\* *ServerName*します。 返すに使用できる文字数がより大きいかに等しい場合*BufferLength1*、内のデータ ソース名\* *ServerName*に切り捨てられます*BufferLength1* null 終了文字の長さマイナスです。  
+ Output\* *ServerName*で返すことができる合計文字数 (null 終端文字を除く) を返すバッファーへのポインター。 戻り値として使用できる文字数が*BufferLength1*以上の場合、 \* *ServerName*のデータソース名は*BufferLength1*に切り捨てられ、null 終了文字の長さを引いたものになります。  
   
- *[説明]*  
- [出力]データ ソースに関連付けられているドライバーの説明を返すバッファーへのポインター。 たとえば、dBASE ファイルまたは SQL Server。  
+ *説明*  
+ Outputデータソースに関連付けられているドライバーの説明を返すバッファーへのポインター。 たとえば、dBASE や SQL Server などです。  
   
- 場合*説明*が null の場合、 *NameLength2Ptr*はまだ文字 (文字データの null 終端文字を除く) の合計数を返しますが指すバッファーに返される使用可能な*説明*します。  
+ *Description*が NULL の場合、 *NameLength2Ptr*は、*説明*に示されているバッファー内で返すことができる文字の合計数 (文字データの null 終端文字を除く) を返します。  
   
  *BufferLength2*  
- [入力]文字の長さ、**説明*バッファー。  
+ 代入**Description*バッファーの長さ (文字数)。  
   
  *NameLength2Ptr*  
- [出力]文字 (null 終了文字を除く) の合計数を返すバッファーへのポインターで返される使用可能な\**説明*します。 返すに使用できる文字数がより大きいかに等しい場合*BufferLength2*、ドライバーの説明で\**説明*に切り捨てられます*BufferLength2* null 終了文字の長さマイナスです。  
+ Output\**説明*で返すことができる文字の合計数 (null 終了文字を除く) を返すバッファーへのポインター。 戻り値として使用できる文字数が*BufferLength2*以上の場合は、[ \**説明*] に記載されているドライバーの説明が、 *BufferLength2*から null 終了文字の長さを引いた値に切り捨てられます。  
   
 ## <a name="returns"></a>戻り値  
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_NO_DATA、SQL_ERROR、または SQL_INVALID_HANDLE。  
   
 ## <a name="diagnostics"></a>診断  
- ときに**SQLDataSources** SQL_ERROR または SQL_SUCCESS_WITH_INFO のいずれかを返します呼び出すことによって、関連付けられた SQLSTATE 値を取得できる**SQLGetDiagRec**で、 *HandleType*sql_handle_env としての*処理*の*EnvironmentHandle*します。 次の表に、によって返される通常の SQLSTATE 値**SQLDataSources** ; この関数のコンテキストでそれぞれについて説明しますと表記"(DM)"の前にドライバー マネージャーによって返されるについての説明。 SQLSTATE 値ごとに関連付けられているリターン コードは明記しない限り、SQL_ERROR です。  
+ **Sqldatasources**が SQL_ERROR または SQL_SUCCESS_WITH_INFO のいずれかを返す場合、関連付けられた SQLSTATE 値を取得するには、 *Handletype* SQL_HANDLE_ENV と*EnvironmentHandle*の*ハンドル*を指定して**** を呼び出します。 次の表に、 **Sqldatasources ソース**によって通常返される SQLSTATE 値の一覧を示し、この関数のコンテキストでそれぞれについて説明します。"(DM)" という表記は、ドライバーマネージャーによって返される SQLSTATEs の説明の前にあります。 特に記載がない限り、各 SQLSTATE 値に関連付けられているリターンコードは SQL_ERROR ます。  
   
-|SQLSTATE|[エラー]|説明|  
+|SQLSTATE|エラー|[説明]|  
 |--------------|-----------|-----------------|  
-|01000|一般的な警告|(DM) ドライバー マネージャーに固有の情報メッセージ。 (関数は、SQL_SUCCESS_WITH_INFO を返します)。|  
-|01004|文字列データで、右側が切り捨てられました|(DM) バッファー \* *ServerName*完全なデータ ソース名を取得するのに十分な大きさがありません。 そのため、名前が切り捨てられました。 全体のデータ ソース名の長さが返される\* *NameLength1Ptr*します。 (関数は、SQL_SUCCESS_WITH_INFO を返します)。<br /><br /> (DM) バッファー \**説明*を完全なドライバーの説明を返すのに十分な大きさがありません。 そのため、説明が切り捨てられました。 切り詰められていないデータ ソースの説明の長さが返される **NameLength2Ptr*します。 (関数は、SQL_SUCCESS_WITH_INFO を返します)。|  
-|HY000|一般的なエラー|(DM) エラーが発生する固有の SQLSTATE がなかったし、対象の実装に固有の SQLSTATE が定義されていません。 によって返されるエラー メッセージ**SQLGetDiagRec**で、  *\*MessageText*バッファーは、エラーとその原因について説明します。|  
-|HY001|メモリの割り当てエラー|(DM)、ドライバー マネージャーは、実行または関数の完了をサポートするために必要なメモリを割り当てることができませんでした。|  
-|HY010|関数のシーケンス エラー|(DM) **SQLExecute**、 **SQLExecDirect**、または**SQLMoreResults**に対して呼び出された、 *StatementHandle* SQL_PARAM_DATA_ を返されます。ご利用いただけます。 ストリームのすべてのパラメーターのデータが取得される前に、この関数が呼び出されました。|  
-|HY013|メモリ管理エラー|基になるメモリ オブジェクトにアクセスできませんでした、場合によってメモリ不足が原因であるために、関数呼び出しを処理できませんでした。|  
-|HY090|文字列またはバッファーの長さが無効です。|引数に指定された (DM) 値*BufferLength1*が 0 未満でした。<br /><br /> 引数に指定された (DM) 値*BufferLength2*が 0 未満でした。|  
-|HY103|無効な取得コード|引数に指定された値 (DM)*方向*SQL_FETCH_FIRST、SQL_FETCH_FIRST_USER、SQL_FETCH_FIRST_SYSTEM、または SQL_FETCH_NEXT でした。|  
-|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、次を参照してください。 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)します。|  
+|01000|一般警告|(DM) Driver Manager 固有の情報メッセージ。 (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
+|01004|文字列データ、右側が切り捨てられました|(DM) バッファー \* *ServerName*は、完全なデータソース名を返すのに十分な大きさではありませんでした。 そのため、名前が切り詰められました。 データソース名全体の長さは、 \* *NameLength1Ptr*で返されます。 (関数は SQL_SUCCESS_WITH_INFO を返します)。<br /><br /> (DM) バッファー \*の*説明*が完全なドライバーの説明を返すのに十分な大きさではありませんでした。 このため、説明は切り捨てられました。 切り捨てられていないデータソースの説明の長さは、**NameLength2Ptr*で返されます。 (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
+|HY000|一般的なエラー|(DM) 特定の SQLSTATE がなく、実装固有の SQLSTATE が定義されていないエラーが発生しました。 Messagetext バッファーの**SQLGetDiagRec**によって返されるエラーメッセージには、エラーとその原因が記述されています。 * \**|  
+|HY001|メモリ割り当てエラー|(DM) ドライバーマネージャーは、関数の実行または完了をサポートするために必要なメモリを割り当てることができませんでした。|  
+|HY010|関数のシーケンスエラー|(DM) **Sqlexecute**、 **SQLExecDirect**、または**Sqlmoreresults**が*StatementHandle*に対して呼び出され、SQL_PARAM_DATA_AVAILABLE が返されました。 この関数は、ストリーミングされたすべてのパラメーターのデータが取得される前に呼び出されました。|  
+|HY013|メモリ管理エラー|基になるメモリオブジェクトにアクセスできなかったため、関数呼び出しを処理できませんでした。メモリ不足の状態が原因である可能性があります。|  
+|HY090|文字列またはバッファーの長さが無効です|(DM) 引数*BufferLength1*に指定された値が0未満でした。<br /><br /> (DM) 引数*BufferLength2*に指定された値が0未満でした。|  
+|HY103|無効な取得コード|(DM) 引数の*方向*に指定された値が、SQL_FETCH_FIRST、SQL_FETCH_FIRST_USER、SQL_FETCH_FIRST_SYSTEM、または SQL_FETCH_NEXT と等しくありません。|  
+|HY117|トランザクションの状態が不明なため、接続が中断されました。 切断と読み取り専用の機能のみが許可されます。|(DM) 中断状態の詳細については、「 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)」を参照してください。|  
   
-## <a name="comments"></a>コメント  
- **SQLDataSources**は実装されてドライバー マネージャーでの特定のドライバーの標準への準拠に関係なくすべてのドライバーでサポートされています。  
+## <a name="comments"></a>説明  
+ **Sqldatasources ソース**は driver Manager に実装されているため、特定のドライバーの標準に準拠しているかどうかに関係なく、すべてのドライバーでサポートされます。  
   
- アプリケーションが呼び出すことができます**SQLDataSources**すべてのデータ ソース名を取得する回数します。 ドライバー マネージャーは、システム情報からこの情報を取得します。 ない多くのデータ ソース名が存在する場合、ドライバー マネージャーは SQL_NO_DATA を返します。 場合**SQLDataSources**は、SQL_NO_DATA が返された後、最初のデータ ソース名が返されます。 すぐに SQL_FETCH_NEXT で呼び出されます。 アプリケーションがによって返される情報を使用する方法については**SQLDataSources**を参照してください[データ ソースまたはドライバーを選択する](../../../odbc/reference/develop-app/choosing-a-data-source-or-driver.md)します。  
+ アプリケーションで**sqldatasources**ソースを複数回呼び出して、すべてのデータソース名を取得できます。 ドライバーマネージャーは、この情報をシステム情報から取得します。 データソース名が存在しない場合、ドライバーマネージャーは SQL_NO_DATA を返します。 **Sqldatasources**ソースが SQL_NO_DATA を返した直後に SQL_FETCH_NEXT で呼び出された場合は、最初のデータソース名が返されます。 アプリケーションが**Sqldatasources**ソースによって返された情報を使用する方法については、「[データソースまたはドライバーの選択](../../../odbc/reference/develop-app/choosing-a-data-source-or-driver.md)」を参照してください。  
   
- SQL_FETCH_NEXT が渡された場合**SQLDataSources**初めて呼び出されると、最初のデータ ソースの名前を返します。  
+ SQL_FETCH_NEXT が初めて呼び出されたときに**Sqldatasources**ソースに渡されると、最初のデータソース名が返されます。  
   
- ドライバーは、データ ソース名を実際のデータ ソースにマップする方法を決定します。  
+ ドライバーは、データソース名を実際のデータソースにマップする方法を決定します。  
   
 ## <a name="related-functions"></a>関連する関数  
   
-|詳細|参照先|  
+|対象|以下を参照してください。|  
 |---------------------------|---------|  
-|検出とデータ ソースに接続するために必要な値を一覧表示します。|[SQLBrowseConnect 関数](../../../odbc/reference/syntax/sqlbrowseconnect-function.md)|  
+|データソースへの接続に必要な値を検出して一覧表示する|[SQLBrowseConnect 関数](../../../odbc/reference/syntax/sqlbrowseconnect-function.md)|  
 |データ ソースへの接続|[SQLConnect 関数](../../../odbc/reference/syntax/sqlconnect-function.md)|  
-|接続文字列またはダイアログ ボックスを使用してデータ ソースへの接続|[SQLDriverConnect 関数](../../../odbc/reference/syntax/sqldriverconnect-function.md)|  
+|接続文字列またはダイアログボックスを使用したデータソースへの接続|[SQLDriverConnect 関数](../../../odbc/reference/syntax/sqldriverconnect-function.md)|  
 |ドライバーの説明と属性を返す|[SQLDrivers 関数](../../../odbc/reference/syntax/sqldrivers-function.md)|  
   
 ## <a name="see-also"></a>参照  

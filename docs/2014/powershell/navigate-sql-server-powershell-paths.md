@@ -11,19 +11,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ce1e3a2088214c222cd2c2e84fc333f4993b7a6b
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72797813"
 ---
 # <a name="navigate-sql-server-powershell-paths"></a>SQL Server PowerShell パスの移動
   [!INCLUDE[ssDE](../includes/ssde-md.md)] PowerShell プロバイダーは、ファイル パスと同様の構造で、SQL Server のインスタンス内のオブジェクトのセットを公開します。 Windows PowerShell コマンドレットを使用することで、プロバイダー パスを移動し、カスタム ドライブを作成して、入力するパスを短くすることができます。  
   
-## <a name="before-you-begin"></a>作業を開始する準備  
+## <a name="before-you-begin"></a>はじめに  
  Windows PowerShell では、コマンドレットを実装して、PowerShell プロバイダーによりサポートされるオブジェクトの階層を表すパス構造を移動できます。 そのパス内のノードへ移動したときに、他のコマンドレットを使用して、現在のオブジェクトの基本的な操作を実行することができます。 コマンドレットは頻繁に使用されるため、短い標準の別名が用意されています。 また、コマンドレットを類似のコマンド プロンプトのコマンドにマップする別名のセットと、UNIX シェル コマンド用の別のセットもあります。  
   
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] プロバイダーは、次の表に示すように、プロバイダーのコマンドレットのサブセットを実装します。  
+ 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] プロバイダーは、次の表に示すように、プロバイダーのコマンドレットのサブセットを実装します。  
   
 |コマンドレット|標準の別名|コマンドの別名|UNIX シェルの別名|[説明]|  
 |------------|---------------------|---------------|----------------------|-----------------|  
@@ -115,9 +116,12 @@ Get-ChildItem -force
 
 ### <a name="create-and-use-a-custom-drive"></a>カスタム ドライブの作成と使用
   
-1.  `New-PSDrive` を使用して、カスタム ドライブを定義します。 `Root` パラメーターを使用して、カスタム ドライブ名で表されるパスを指定します。  
+1.  
+  `New-PSDrive` を使用して、カスタム ドライブを定義します。 
+  `Root` パラメーターを使用して、カスタム ドライブ名で表されるパスを指定します。  
   
-2.  `Set-Location` などのパス移動コマンドレットでカスタム ドライブ名を参照します。  
+2.  
+  `Set-Location` などのパス移動コマンドレットでカスタム ドライブ名を参照します。  
   
 ### <a name="custom-drive-example-powershell"></a>カスタム ドライブの例 (PowerShell)  
  この例では、配置された AdventureWorks2012 サンプル データベースのコピーのノードにマップする AWDB という名前の仮想ドライブを作成します。 仮想ドライブを使用して、データベース内のテーブルに移動します。  
@@ -131,7 +135,7 @@ Set-Location AWDB:\Tables\Purchasing.Vendor
 ```  
   
 ## <a name="see-also"></a>参照  
- [SQL Server PowerShell Provider](sql-server-powershell-provider.md)   
+ [SQL Server PowerShell プロバイダー](sql-server-powershell-provider.md)   
  [SQL Server PowerShell パスの操作](work-with-sql-server-powershell-paths.md)   
  [URN から SQL Server プロバイダー パスへの変換](../database-engine/convert-urns-to-sql-server-provider-paths.md)   
  [SQL Server PowerShell](sql-server-powershell.md)  

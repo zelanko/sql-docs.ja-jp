@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 48f2a2d485f99b91b0f30a6a707a900ccbbeea96
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74399916"
 ---
 # <a name="syspdw_nodes_pdw_physical_databases-transact-sql"></a>pdw_nodes_pdw_physical_databases (Transact-sql)
@@ -24,11 +24,11 @@ ms.locfileid: "74399916"
 
   コンピューティングノードの物理データベースごとに1行のデータを格納します。 物理データベース情報を集計して、データベースに関する詳細情報を取得します。 情報を結合するには`sys.pdw_nodes_pdw_physical_databases` 、を`sys.pdw_database_mappings`テーブル`sys.databases`とテーブルに結合します。  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
-|database_id|**通り**|データベースのオブジェクト ID。 この値は、 [transact-sql&#41;ビュー &#40;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)の database_id と同じではないことに注意してください。|  
+|database_id|**int**|データベースのオブジェクト ID。 この値は、 [transact-sql&#41;ビュー &#40;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)の database_id と同じではないことに注意してください。|  
 |physical_name|**sysname**|シェル/コンピューティングノード上のデータベースの物理名。 この値は、 [pdw_database_mappings &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md)ビューの physical_name 列の値と同じです。|  
-|pdw_node_id|**通り**|ノードに関連付けられている一意の数値 id。|  
+|pdw_node_id|**int**|ノードに関連付けられている一意の数値 id。|  
   
 ## <a name="examples-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   

@@ -16,24 +16,24 @@ ms.assetid: f557e537-015d-4ba7-8a41-a6f00b366a91
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: df70838b7986993459df4f37af8b7043626a5d7b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931262"
 ---
 # <a name="recordtypeenum"></a>RecordTypeEnum
-型を指定[レコード](../../../ado/reference/ado-api/record-object-ado.md)オブジェクト。  
+[レコード](../../../ado/reference/ado-api/record-object-ado.md)オブジェクトの種類を指定します。  
   
-|定数|Value|説明|  
+|常時|値|[説明]|  
 |--------------|-----------|-----------------|  
-|**adSimpleRecord**|0|示す、*単純*レコード (子ノードを含まない)。|  
-|**adCollectionRecord**|1|示す、*コレクション*レコード (子ノードが含まれています)。|  
-|**adRecordUnknown**|-1|示しますこのタイプ**レコード**が不明です。|  
-|**adStructDoc**|2|特殊なの種類を示す*コレクション*COM を表すレコードがドキュメントを構造化します。|  
+|**adSimpleRecord**|0|*単純な*レコードを示します (子ノードは含まれません)。|  
+|**adCollectionRecord**|1 で保護されたプロセスとして起動されました|*コレクション*レコード (子ノードを含む) を示します。|  
+|**adRecordUnknown**|-1|この**レコード**の型が不明であることを示します。|  
+|**adStructDoc**|2|COM 構造化ドキュメントを表す特別な種類の*コレクション*レコードを示します。|  
   
-## <a name="adowfc-equivalent"></a>ADO と WFC と同等  
- これらの定数には、ADO と WFC 対応はありません。  
+## <a name="adowfc-equivalent"></a>同等の ADO/WFC  
+ これらの定数には、対応する ADO/WFC がありません。  
   
 ## <a name="applies-to"></a>適用対象  
  [RecordType プロパティ (ADO)](../../../ado/reference/ado-api/recordtype-property-ado.md)

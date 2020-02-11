@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: a5364b32aeb69019f7438b2c6d0e8f5ab716e39f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68077264"
 ---
 # <a name="distinctcount-mdx"></a>DistinctCount (MDX)
@@ -29,12 +29,12 @@ DistinctCount(Set_Expression)
   
 ## <a name="arguments"></a>引数  
  *Set_Expression*  
- セットを返す有効な多次元式 (MDX) です。  
+ セットを返す有効な多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>コメント  
- **DistinctCount**関数は等価`Count(Distinct(Set_Expression), EXCLUDEEMPTY)`します。  
+## <a name="remarks"></a>解説  
+ **DistinctCount**関数は、と同じ`Count(Distinct(Set_Expression), EXCLUDEEMPTY)`です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次のクエリでは、DistinctCount 関数の使用方法を示します。  
   
  `WITH SET MySet AS`  
@@ -61,8 +61,8 @@ DistinctCount(Set_Expression)
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>関連項目  
- [Count &#40;Set&#41; &#40;MDX&#41;](../mdx/count-set-mdx.md)   
- [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>参照  
+ [MDX&#41;&#41; &#40;設定 &#40;数](../mdx/count-set-mdx.md)   
+ [Mdx 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

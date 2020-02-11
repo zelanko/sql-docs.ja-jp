@@ -14,17 +14,17 @@ ms.assetid: 9f131c8d-1497-416d-8209-abb481c38f7b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8434345dcc4436865e4981a19ef1164d35a852f9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67964204"
 ---
 # <a name="execute21-method-rds"></a>Execute21 メソッド (RDS)
-要求を実行し、ADO 2.1 で使用する ADO レコード セットを作成します。  
+要求を実行し、ado 2.1 で使用する ADO レコードセットを作成します。  
   
 > [!IMPORTANT]
->  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)します。  
+>  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および[Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416)」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,46 +34,46 @@ object.Execute21(ConnectionString As String, HandlerString As String, QueryStrin
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *ConnectionString*  
- 実行の要求を送信する先の OLE DB プロバイダーへの接続に使用する文字列。 使用して、ハンドラーが指定されている場合*HandlerString*、編集、接続文字列に置き換えます。  
+ *文字列*  
+ 要求が実行のために送信される OLE DB プロバイダーに接続するために使用される文字列。 ハンドラーが handler*文字列*を使用して指定されている場合は、接続文字列を編集または置換できます。  
   
- *HandlerString*  
- 文字列は、この実行で使用するハンドラーを識別します。 文字列には、2 つの部分が含まれています。 最初の部分には、使用するハンドラーの名前 (ProgID) が含まれています。 文字列の 2 番目の部分には、ハンドラーに渡される引数が含まれています。 特定のハンドラーには、引数文字列を解釈する方法です。 2 つの部分は、(ただし、引数文字列には、追加のコンマを含めることができます)、コンマ、文字列内の最初のインスタンスで区切られます。 引数は省略可能です。  
+ *ハンドラ文字列*  
+ 文字列は、この実行で使用されるハンドラーを識別します。 文字列には2つの部分が含まれています。 最初の部分には、使用するハンドラーの名前 (ProgID) が含まれています。 文字列の2番目の部分には、ハンドラーに渡される引数が含まれています。 引数文字列の解釈方法は、ハンドラー固有です。 2つの部分は、文字列内のコンマの最初のインスタンスによって区切られます (ただし、引数の文字列には追加のコンマを含めることができます)。 引数は省略可能です。  
   
- *QueryString*  
- 接続文字列で識別される OLE DB プロバイダーでサポートされているコマンド言語でのコマンド。 SQL ベースのプロバイダーでは、含まれる、[!INCLUDE[tsql](../../../includes/tsql-md.md)]ステートメントでは、コマンドしますが、非 SQL プロバイダー (たとえば、MSDataShape) のこのできない可能性があります、[!INCLUDE[tsql](../../../includes/tsql-md.md)]クエリ ステートメント。  
+ *クエリ*  
+ 接続文字列で指定された OLE DB プロバイダーによってサポートされるコマンド言語のコマンドです。 SQL ベースのプロバイダーでは、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]コマンドステートメントが含まれている場合がありますが、sql 以外のプロバイダー (MSDataShape など) の場合[!INCLUDE[tsql](../../../includes/tsql-md.md)] 、これはクエリステートメントではない可能性があります。  
   
- また、ハンドラーが使用されている (およびハンドラーを使用することを強くお勧め) 場合、ハンドラーできます alter またはここで指定した値を置き換えます。 ハンドラーが通常置換など*QueryString* .ini ファイルからクエリ文字列を使用します。 既定では、Msdfmap.ini ファイルが使用されます。  
+ また、ハンドラーが使用されている場合 (ハンドラーを使用することを強くお勧めします)、ハンドラーはここで指定された値を変更または置換できます。 たとえば、ハンドラーは通常、 *QueryString*を .ini ファイルのクエリ文字列に置き換えます。 既定では、Msdfmap .ini ファイルが使用されます。  
   
  *lMarshalOptions*  
- 返される行セットとレコード セットでマーシャ リング オプションを設定するために使用します。  
+ 返される行セットまたはレコードセットのマーシャリングオプションを設定するために使用します。  
   
  *TableID*  
- バリアントは、VT_EMPTY または VT_BSTR のいずれかを入力します。 この値が VT_EMPTY 型の場合は無視されます。 使用して、レコード セットが作成された VT_BSTR 型の場合、 **adCmdTableDirect**ここで指定された値を使用して、 *QueryString*パラメーターは無視されます。  
+ VT_EMPTY または VT_BSTR 型のバリアント。 この値が VT_EMPTY 型の場合、この値は無視されます。 VT_BSTR 型の場合、ここで指定した値**を使用してレコード**セットが作成され、 *QueryString*パラメーターは無視されます。  
   
  *lExecuteOptions*  
- 実行オプションのビットマスクを指定します。  
+ 実行オプションのビットマスク。  
   
- 1 =*ReadOnly* 、レコード セットを使用して開いたは**adLockReadOnly**します。  
+ 1 =*読み取り専用*: **adlockreadonly**を使用してレコードセットを開きます。  
   
- 2 =*NoBatch* 、レコード セットを使用して開いたは**adLockOptimistic**します。  
+ 2 =*Nobatch*レコードセットは、 **adlockoptimistic**を使用して開かれます。  
   
- 4 =*AllParamInfoSupplied* 、呼び出し元のすべてのパラメーターのパラメーター情報を提供することを保証*pParameters*します。  
+ 4 =*Allparaminfosupplied*元は、すべてのパラメーターのパラメーター情報が*pparameters*に指定されていることを保証します。  
   
- 8 =*GetInfo* 、クエリのパラメーター情報が、OLE DB プロバイダーから取得しで返される、 *pParameters*パラメーター。 クエリが実行されないと、レコード セットは返されません。  
+ 8 = クエリの*GetInfo*パラメーター情報は OLE DB プロバイダーから取得され、 *pparameters*パラメーターに返されます。 クエリは実行されず、レコードセットは返されません。  
   
- 16 = を使用して、レコード セットを開いたは GetHiddenColumns **adLockBatchOptimistic**して非表示の列は、レコード セットに含められます。  
+ 16 = GetHiddenColumns レコードセットは**Adlockbatchoptimistic**を使用して開かれ、すべての非表示の列がレコードセットに含まれます。  
   
- *ReadOnly*、 *NoBatch*と*GetHiddenColumns*相互排他的なオプションは、それらの 1 つ以上を設定するエラーではありません。 複数のオプションが設定されている場合*GetHiddenColumns*後に、その他のすべてのオプションよりも優先*ReadOnly*します。 使用して、レコード セットを開くオプションが指定されていない場合、既定では、 **adLockBatchOptimistic**が非表示の列が、レコード セットに含まれていません。  
+ *ReadOnly*、 *Nobatch* 、 *GetHiddenColumns*は相互に排他的なオプションですが、複数のオプションを設定することはできません。 複数のオプションが設定されている場合、 *GetHiddenColumns*は他のすべてのオプションよりも優先され、その後に*ReadOnly*が適用されます。 オプションが指定されていない場合、既定では、レコードセットは**Adlockbatchoptimistic**を使用して開かれますが、非表示の列はレコードセットに含まれません。  
   
  *pParameters*  
- パラメーターの定義のセーフ配列を格納するバリアント。 場合、 *GetInfo*オプションに指定されました*lExecuteOptions*、OLE DB プロバイダーから取得したパラメーターの定義を返すこのパラメーターを使用します。 それ以外の場合、このパラメーターを空にすることがあります。  
+ パラメーター定義のセーフ配列を含むバリアント。 [ *GetInfo* ] オプションが*lexecuteoptions*で指定されている場合、このパラメーターを使用して、OLE DB プロバイダーから取得したパラメーター定義が返されます。 それ以外の場合、このパラメーターは空になることがあります。  
   
-## <a name="remarks"></a>コメント  
- *HandlerString*パラメーターを null にすることがあります。 この場合の処理は、RDS サーバーを構成する方法によって異なります。 "MSDFMAP.handler"のハンドラーの文字列では、Microsoft から提供されたハンドラー (Msdfmap.dll) を使用することを示します。 "MASDFMAP.handler,sample.ini"のハンドラーの文字列は、Msdfmap.dll ハンドラーを使用することと、ハンドラーに"sample.ini"引数を渡す必要がありますを示します。 MSDFMAP.dll は、方向、sample.ini を使用して、接続およびクエリ文字列を確認すると、引数を解釈します。  
+## <a name="remarks"></a>解説  
+ *ハンドラー文字列*パラメーターは null にすることができます。 この場合の動作は、RDS サーバーの構成方法によって異なります。 "MSDFMAP. handler" というハンドラー文字列は、Microsoft 提供のハンドラー (Msdfmap .dll) を使用する必要があることを示します。 "" のハンドラー文字列 "は、" "のハンドラー文字列" は、Msdfmap .dll ハンドラーを使用する必要があり、引数 "sample .ini" をハンドラーに渡す必要があることを示します。 MSDFMAP .dll は、この引数を、サンプルの .ini を使用して接続とクエリ文字列を確認するための方向として解釈します。  
   
 > [!NOTE]
->  **Execute21**メソッドは、バージョンの[Execute メソッド (RDS)](../../../ado/reference/rds-api/execute-method-rds.md)します。 使用する必要がある、 **Execute** 2.1 では、ADO と通信するメソッド、 **Execute21**メソッドを代わりに呼び出すことができます。 機能、 **Execute**メソッド ADO 2.5 以降では ADO 2.1 では、同じメソッドを提供する機能のスーパー セットです。  
+>  **Execute21**メソッドは、 [EXECUTE メソッド (RDS)](../../../ado/reference/rds-api/execute-method-rds.md)の1つのバージョンです。 **Execute**メソッドを使用して ADO 2.1 と通信する必要がある場合は、代わりに**Execute21**メソッドを呼び出すことができます。 ADO 2.5 以降の**Execute**メソッドの機能は、ado 2.1 で同じメソッドに対して提供される機能のスーパーセットです。  
   
 ## <a name="applies-to"></a>適用対象  
  [DataFactory オブジェクト (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)

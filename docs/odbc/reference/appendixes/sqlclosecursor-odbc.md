@@ -13,16 +13,16 @@ ms.assetid: 5e47e3f7-e1b8-451f-bf75-daa19b7c7271
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a4d0f88d2d9eaba7d95ba887ffbe11e728320b17
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68123378"
 ---
-# <a name="sqlclosecursorodbc"></a>SQLCloseCursor_ODBC
+# <a name="sqlclosecursor_odbc"></a>SQLCloseCursor_ODBC
 > [!IMPORTANT]  
->  この機能は、Windows の将来のバージョンで削除されます。 新しい開発作業でこの機能を使用しないようにして、現在この機能を使用しているアプリケーションの変更を検討してください。 ドライバーのカーソル機能を使用することをお勧めします。  
+>  この機能は、今後のバージョンの Windows では削除される予定です。 新しい開発作業ではこの機能の使用を避け、現在この機能を使用しているアプリケーションの変更を検討してください。 Microsoft では、ドライバーのカーソル機能を使用することをお勧めします。  
   
- このトピックの使用、 **SQLCloseCursor**カーソル ライブラリ内の関数。 に関する一般的な情報**SQLCloseCursor**を参照してください[SQLCloseCursor 関数](../../../odbc/reference/syntax/sqlclosecursor-function.md)します。  
+ このトピックでは、カーソルライブラリでの**Sqlcloの**使用方法について説明します。 **Sqlcloに**関する一般的な情報については、「 [Sqlcloの機能](../../../odbc/reference/syntax/sqlclosecursor-function.md)」を参照してください。  
   
- カーソル ライブラリは、呼び出し元をサポートしていません**SQLCloseCursor**開いているカーソルなし。 この作業を行うと、SQLSTATE 24000 (無効なカーソル状態) が返されます。 呼び出す**SQLFreeStmt**で、*オプション*SQL_CLOSE のカーソル ライブラリによってサポートされているが場合カーソルが開いていません。
+ カーソルライブラリでは、カーソルを開かずに**Sqlcloを**呼び出すことはできません。 これを試みると、SQLSTATE 24000 (無効なカーソル状態) が返されます。 カーソルが開いていないときに SQL_CLOSE の*オプション*を指定して**SQLFreeStmt**を呼び出すと、カーソルライブラリでサポートされます。

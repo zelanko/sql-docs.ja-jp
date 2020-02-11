@@ -1,5 +1,5 @@
 ---
-title: sp_helpuser (TRANSACT-SQL) |Microsoft Docs
+title: sp_helpuser (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,19 +18,19 @@ ms.assetid: 9c70b41d-ef4c-43df-92da-bd534c287ca1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a170c5e43329d90a4977db12a98bd9d2e556e91d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68048164"
 ---
-# <a name="sphelpuser-transact-sql"></a>sp_helpuser (Transact-SQL)
+# <a name="sp_helpuser-transact-sql"></a>sp_helpuser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   現在のデータベースに存在するデータベース レベルのプリンシパルに関する情報をレポートします。  
   
 > [!IMPORTANT]  
->  **sp_helpuser**で導入されたセキュリティ保護可能な情報は返されません[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]します。 使用[sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)代わりにします。  
+>  **sp_helpuser**は、で導入された securables に関する[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]情報を返しません。 代わりに、 [sys. database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)を使用してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,49 +42,49 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @name_in_db = ] 'security_account'` データベース ユーザーまたは現在のデータベース内のデータベース ロールの名前です。 *これ*現在のデータベースに存在する必要があります。 *これ*は**sysname**、既定値は NULL です。 場合*これ*が指定されていない**sp_helpuser**すべてのデータベース プリンシパルに関する情報を返します。  
+`[ @name_in_db = ] 'security_account'`現在のデータベースのデータベースユーザーまたはデータベースロールの名前を指定します。 *security_account*は、現在のデータベースに存在している必要があります。 *security_account*は**sysname**,、既定値は NULL です。 *Security_account*が指定されていない場合、 **sp_helpuser**はすべてのデータベースプリンシパルに関する情報を返します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- 次の表は、結果セットのどちらの場合、ユーザー アカウントも[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]か、または Windows ユーザーが指定*これ*。  
+ 次の表は、ユーザーアカウントも Windows ユーザーも、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *security_account*に対して指定されていない場合の結果セットを示しています。  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
-|**UserName**|**sysname**|現在のデータベース内のユーザー。|  
-|**RoleName**|**sysname**|ロール**UserName**が属しています。|  
-|**LoginName**|**sysname**|ログイン**UserName**します。|  
-|**DefDBName**|**sysname**|既定のデータベース**UserName**します。|  
-|**DefSchemaName**|**sysname**|データベース ユーザーの既定のスキーマ。|  
-|**UserID**|**smallint**|ID **UserName**現在のデータベースでします。|  
+|**ユーザー名**|**sysname**|現在のデータベース内のユーザー。|  
+|**役割**|**sysname**|**ユーザー名**が属するロール。|  
+|**ログイン**|**sysname**|**ユーザー名**のログイン。|  
+|**DefDBName**|**sysname**|**ユーザー名**の既定のデータベース。|  
+|**DefSchemaName**|**sysname**|データベースユーザーの既定のスキーマ。|  
+|**UserID**|**smallint**|現在のデータベースの**ユーザー名**の ID。|  
 |**SID**|**smallint**|ユーザーのセキュリティ識別番号 (SID)。|  
   
- 次の表では、ユーザー アカウントが指定されていないと、エイリアスは、現在のデータベースに存在する場合の結果セットを示します。  
+ 次の表は、ユーザーアカウントが指定されておらず、現在のデータベースに別名が存在する場合の結果セットを示しています。  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
-|**LoginName**|**sysname**|現在のデータベースに存在するユーザーの別名であるログイン。|  
-|**UserNameAliasedTo**|**sysname**|ログインがエイリアス化される現在のデータベース内のユーザー名。|  
+|**ログイン**|**sysname**|現在のデータベースに存在するユーザーの別名であるログイン。|  
+|**UserNameAliasedTo**|**sysname**|ログインがエイリアス化されている現在のデータベース内のユーザー名。|  
   
- 次の表は、ロールが指定されている場合の結果セット*これ*します。  
+ 次の表に、 *security_account*にロールを指定した場合の結果セットを示します。  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
-|**Role_name**|**sysname**|現在のデータベース ロールの名前。|  
-|**Role_id**|**smallint**|現在のデータベースで、ロールのロール ID。|  
-|**Users_in_role**|**sysname**|現在のデータベース ロールのメンバー。|  
-|**ユーザー Id**|**smallint**|ロールのメンバーのユーザー ID。|  
+|**Role_name**|**sysname**|現在のデータベース内のロールの名前。|  
+|**Role_id**|**smallint**|現在のデータベース内のロールのロール ID。|  
+|**Users_in_role**|**sysname**|現在のデータベースのロールのメンバー。|  
+|**Userid**|**smallint**|ロールのメンバーのユーザー ID。|  
   
-## <a name="remarks"></a>コメント  
- データベース ロールのメンバーシップに関する情報を表示する[sys.database_role_members](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md)します。 サーバー ロールのメンバーに関する情報を表示する[sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)、サーバー レベル プリンシパルに関する情報を表示する[sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)します。  
+## <a name="remarks"></a>解説  
+ データベースロールのメンバーシップに関する情報を表示するには、 [database_role_members](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md)を使用します。 サーバーロールのメンバーに関する情報を表示するには、 [server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)を使用し、サーバーレベルのプリンシパルに関する情報を表示するには、 [server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)を使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
- ロール **public** のメンバーシップが必要です。  
+ **Public**ロールのメンバーシップが必要です。  
   
- 返される情報は、メタデータへのアクセスの制限が適用されます。 これで、権限がプリンシパルにないエンティティは表示されません。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+ 返される情報には、メタデータへのアクセスに関する制限が適用されます。 プリンシパルに権限がないエンティティは表示されません。 詳細については、「[メタデータ表示の構成](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-listing-all-users"></a>A. すべてのユーザーを表示する  
  次の例では、現在のデータベースに存在するすべてのユーザーを表示します。  
@@ -94,26 +94,26 @@ EXEC sp_helpuser;
 ```  
   
 ### <a name="b-listing-information-for-a-single-user"></a>B. 特定のユーザーの情報を表示する  
- 次の例は、ユーザー データベースの所有者に関する情報を一覧表示 (`dbo`)。  
+ 次の例では、ユーザーデータベースの所有者`dbo`() に関する情報を一覧表示します。  
   
 ```  
 EXEC sp_helpuser 'dbo';  
 ```  
   
-### <a name="c-listing-information-for-a-database-role"></a>C. データベース ロールに関する情報を表示  
+### <a name="c-listing-information-for-a-database-role"></a>C. データベースロールの情報を一覧表示する  
  次の例では、`db_securityadmin` 固定データベース ロールに関する情報を表示します。  
   
 ```  
 EXEC sp_helpuser 'db_securityadmin';  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [セキュリティ ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [プリンシパル &#40;データベース エンジン&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
- [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
- [sys.database_role_members &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md)   
- [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
- [sys.server_role_members &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)  
+## <a name="see-also"></a>参照  
+ [セキュリティストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [プリンシパル &#40;データベースエンジン&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
+ [database_principals &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
+ [database_role_members &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md)   
+ [server_principals &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
+ [server_role_members &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)  
   
   

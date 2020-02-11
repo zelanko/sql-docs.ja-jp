@@ -1,5 +1,5 @@
 ---
-title: sp_attach_schedule (TRANSACT-SQL) |Microsoft Docs
+title: sp_attach_schedule (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: 80c80eaf-cf23-4ed8-b8dd-65fe59830dd1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f85095941311459da2fdc757a11895795ebb418e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68046165"
 ---
-# <a name="spattachschedule-transact-sql"></a>sp_attach_schedule (Transact-SQL)
+# <a name="sp_attach_schedule-transact-sql"></a>sp_attach_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   ジョブのスケジュールを設定します。  
@@ -42,29 +42,29 @@ sp_attach_schedule
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @job_id = ] job_id` スケジュールを追加するジョブのジョブ識別番号。 *job_id*は**uniqueidentifier**、既定値は NULL です。  
+`[ @job_id = ] job_id`スケジュールを追加するジョブのジョブ識別番号を指定します。 *job_id*は**uniqueidentifier**,、既定値は NULL です。  
   
-`[ @job_name = ] 'job_name'` スケジュールを追加するジョブの名前。 *job_name*は**sysname**、既定値は NULL です。  
-  
-> [!NOTE]  
->  いずれか*job_id*または*job_name*指定する必要がありますが、両方を指定することはできません。  
-  
-`[ @schedule_id = ] schedule_id` ジョブに設定するスケジュールのスケジュールの識別番号。 *schedule_id*は**int**、既定値は NULL です。  
-  
-`[ @schedule_name = ] 'schedule_name'` ジョブに設定するスケジュールの名前。 *schedule_name*は**sysname**、既定値は NULL です。  
+`[ @job_name = ] 'job_name'`スケジュールを追加するジョブの名前を指定します。 *job_name*は**sysname**,、既定値は NULL です。  
   
 > [!NOTE]  
->  いずれか*schedule_id*または*schedule_name*指定する必要がありますが、両方を指定することはできません。  
+>  *Job_id*または*job_name*のいずれかを指定する必要がありますが、両方を指定することはできません。  
   
-## <a name="remarks"></a>コメント  
- スケジュールとジョブは、所有者が同じである必要があります。  
+`[ @schedule_id = ] schedule_id`ジョブに設定するスケジュールの識別番号を指定します。 *schedule_id*は**int**,、既定値は NULL です。  
   
- スケジュールは複数のジョブに対して設定できます。 ジョブは、1 つ以上のスケジュールで実行できます。  
+`[ @schedule_name = ] 'schedule_name'`ジョブに設定するスケジュールの名前を指定します。 *schedule_name*は**sysname**,、既定値は NULL です。  
   
- このストアド プロシージャを実行する必要があります、 **msdb**データベース。  
+> [!NOTE]  
+>  *Schedule_id*または*schedule_name*のいずれかを指定する必要がありますが、両方を指定することはできません。  
+  
+## <a name="remarks"></a>解説  
+ スケジュールとジョブの所有者は同じである必要があります。  
+  
+ スケジュールは複数のジョブに対して設定できます。 ジョブは、複数のスケジュールで実行できます。  
+  
+ このストアドプロシージャは、 **msdb**データベースから実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
- 既定では、このストアド プロシージャを実行できるのは、 **sysadmin** 固定サーバー ロールのメンバーです。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
+ 既定では、 **sysadmin**固定サーバーロールのメンバーは、このストアドプロシージャを実行できます。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
   
 -   **SQLAgentUserRole**  
   
@@ -72,17 +72,18 @@ sp_attach_schedule
   
 -   **SQLAgentOperatorRole**  
   
- ジョブの所有者が、ジョブをスケジュールにアタッチおよびにスケジュール所有者にならなくても、ジョブ、スケジュールをデタッチできますに注意してください。 ただし、スケジュールを削除できない場合は、デタッチがのままに、ジョブはありません、呼び出し元が、スケジュール所有者でない限り、します。  
+ ジョブの所有者はスケジュールにジョブをアタッチし、スケジュールの所有者でなくてもジョブをスケジュールからデタッチできることに注意してください。 ただし、呼び出し元がスケジュールの所有者でない限り、デタッチによってジョブが存在しない場合、スケジュールを削除することはできません。  
   
  これらのロールの権限の詳細については、「 [SQL Server エージェントの固定データベース ロール](../../ssms/agent/sql-server-agent-fixed-database-roles.md)」を参照してください。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、ユーザーがジョブとスケジュールの両方を所有しているかどうかを確認します。  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、ユーザーがジョブとスケジュールの両方を所有しているかどうかを確認します。  
   
-## <a name="examples"></a>使用例  
- 次の例は、名前付きのスケジュールを作成`NightlyJobs`です。 このスケジュールを使用するジョブは、毎日、サーバーの時間が `01:00` になると実行されます。 例では、ジョブにスケジュールをアタッチする`BackupDatabase`とジョブ`RunReports`します。  
+## <a name="examples"></a>例  
+ 次の例では、と`NightlyJobs`いう名前のスケジュールを作成します。 このスケジュールを使用するジョブは、毎日、サーバーの時間が `01:00` になると実行されます。 この例では、スケジュールをジョブ`BackupDatabase`とジョブ`RunReports`にアタッチします。  
   
 > [!NOTE]  
->  この例では、ジョブ`BackupDatabase`とジョブ`RunReports`既に存在します。  
+>  この例では、ジョブ`BackupDatabase`とジョブ`RunReports`が既に存在していることを前提としています。  
   
 ```  
 USE msdb ;  
@@ -106,9 +107,9 @@ EXEC sp_attach_schedule
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [sp_add_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
- [sp_detach_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)   
- [sp_delete_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)  
+## <a name="see-also"></a>参照  
+ [sp_add_schedule &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
+ [sp_detach_schedule &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)   
+ [sp_delete_schedule &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)  
   
   

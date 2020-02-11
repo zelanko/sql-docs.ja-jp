@@ -1,5 +1,5 @@
 ---
-title: 注文に関連する XQueries |Microsoft Docs
+title: Order に関連する XQueries |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,22 +17,22 @@ ms.assetid: 4f1266c5-93d7-402d-94ed-43f69494c04b
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 4fc30086978e26f53f7a4fdbab8a731ac2334181
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67946114"
 ---
 # <a name="xqueries-involving-order"></a>順序に関係する XQuery
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  リレーショナル データベースにはシーケンスの概念はありません。 たとえば、"データベースから最初の顧客を取得する" などの要求を行うことはできません。 ただし、XML ドキュメントのクエリを実行し、最初に取得\<顧客 > 要素。 その後は、常に、同じ顧客が取得されます。  
+  リレーショナル データベースにはシーケンスの概念はありません。 たとえば、"データベースから最初の顧客を取得する" などの要求を行うことはできません。 ただし、XML ドキュメントに対してクエリを実行し、 \<最初の顧客> 要素を取得することはできます。 その後、常に同じ顧客を取得します。  
   
- このトピックでは、ドキュメントにノードが表示される順序に基づいたクエリについて説明します。  
+ このトピックでは、ドキュメントにノードが表示される順序に基づくクエリについて説明します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
-### <a name="a-retrieve-manufacturing-steps-at-the-second-work-center-location-for-a-product"></a>A. 2 番目のワーク センターの場所で製品の製造手順の取得  
+### <a name="a-retrieve-manufacturing-steps-at-the-second-work-center-location-for-a-product"></a>A. 2番目のワークセンターの場所で製品の製造手順を取得する  
  次のクエリでは、特定の製品モデルに対して、製造プロセス内にあるワーク センターの場所の順序で 2 番目のワーク センターの場所で製造手順が取得されます。  
   
 ```sql
@@ -59,15 +59,15 @@ WHERE ProductModelID=7
   
  上のクエリに関して、次の点に注意してください。  
   
--   かっこ内の式は、評価結果に置き換えられます。 詳細については、次を参照してください。 [XML の構築&#40;XQuery&#41;](../xquery/xml-construction-xquery.md)します。  
+-   中かっこ内の式は、評価の結果に置き換えられます。 詳細については、「 [XML コンストラクション &#40;XQuery&#41;](../xquery/xml-construction-xquery.md)」を参照してください。  
   
--   **@\*** 2 番目のワーク センター拠点のすべての属性を取得します。  
+-   **@\*** 2番目のワークセンターの場所のすべての属性を取得します。  
   
--   FLWOR の繰り返し (FOR ...RETURN) は、2 番目のワーク センターの場所のすべての <`step`> 子要素を取得します。  
+-   FLWOR の反復 (...RETURN) は、2番`step`目のワークセンターの場所のすべての <> 子要素を取得します。  
   
--   [Sql:column() 関数 (XQuery)](../xquery/xquery-extension-functions-sql-column.md)構築される XML にリレーショナル値が含まれています。  
+-   [Sql: column () 関数 (XQuery)](../xquery/xquery-extension-functions-sql-column.md)には、構築される XML にリレーショナル値が含まれています。  
   
- これは、結果です。  
+ 結果を次に示します。  
   
 ```  
 <ManuStep ProdModelID="7" ProductModelName="HL Touring Frame">  
@@ -81,9 +81,9 @@ WHERE ProductModelID=7
 </ManuStep>    
 ```  
   
- 上記のクエリでは、テキスト ノードだけを取得します。 全体の場合 <`step`> 代わりに、返された要素を削除、 **string()** クエリから関数。  
+ 上記のクエリでは、テキストノードのみが取得されます。 代わりに <`step`> 要素全体を返す場合は、クエリから**string ()** 関数を削除します。  
   
-### <a name="b-find-all-the-material-and-tools-used-at-the-second-work-center-location-in-the-manufacturing-of-a-product"></a>B. 製品を製造する際の 2 番目のワーク センターの場所で使用されるすべての材料とツールの検索  
+### <a name="b-find-all-the-material-and-tools-used-at-the-second-work-center-location-in-the-manufacturing-of-a-product"></a>B. 製品の製造における2番目のワークセンターの場所で使用されているすべての素材とツールを検索する  
  次のクエリでは、特定の製品モデルに対して、製造プロセス内にあるワーク センターの場所の順序で 2 番目のワーク センターの場所で使用されるツールと材料が取得されます。  
   
 ```sql
@@ -115,11 +115,11 @@ where ProductModelID=7
   
  上のクエリに関して、次の点に注意してください。  
   
--   クエリでは、<Loca`tion`> 要素が構築され、その属性値がデータベースから取得されます。  
+-   このクエリは、`tion`> 要素 <を構築し、その属性値をデータベースから取得します。  
   
--   このとき 2 つの FLWOR (for...return) の繰り返しが使用されます。1 つはツールの取得のため、もう 1 つは使用される材料の取得のためです。  
+-   2つの FLWOR を使用しています (...return) イテレーション: ツールを取得し、使用された素材を取得するためのものです。  
   
- これは、結果です。  
+ 結果を次に示します。  
   
 ```xml
 <Location LocationID="10" SetupHours=".5"   
@@ -136,8 +136,8 @@ where ProductModelID=7
 </Location>  
 ```  
   
-### <a name="c-retrieve-the-first-two-product-feature-descriptions-from-the-product-catalog"></a>C. 製品カタログからの最初の 2 製品の機能説明の取得  
- 次のクエリでは、特定の製品モデルに対して、製品モデル カタログの <`Features`> 要素から最初の 2 つの機能説明が取得されます。  
+### <a name="c-retrieve-the-first-two-product-feature-descriptions-from-the-product-catalog"></a>C. 製品カタログから最初の2つの製品機能の説明を取得する  
+ 特定の製品モデルの場合、クエリは、製品モデルカタログの <`Features`> 要素から最初の2つの機能の説明を取得します。  
   
 ```sql
 SELECT CatalogDescription.query('  
@@ -157,11 +157,11 @@ where ProductModelID=19
   
  上のクエリに関して、次の点に注意してください。  
   
- クエリ本文では、ProductModelID 属性と ProductModelName 属性を備えた <`ProductModel`> 要素が含まれる XML が構築されます。  
+ クエリ本文は、ProductModelID 属性と`ProductModel` ProductModelName 属性を持つ <> 要素を含む XML を構築します。  
   
--   クエリでは、FOR ...RETURN ループを使用して、製品モデルの機能説明を取得します。 **Position()** 関数を使用して、最初の 2 つの機能を取得します。  
+-   このクエリでは、FOR...製品モデルの特徴の説明を取得するためのループを返します。 **Position ()** 関数は、最初の2つの機能を取得するために使用されます。  
   
- これは、結果です。  
+ 結果を次に示します。  
   
 ```xml
 <ProductModel ProductModelID="19" ProductModelName="Mountain 100">  
@@ -180,8 +180,8 @@ where ProductModelID=19
 </ProductModel>   
 ```  
   
-### <a name="d-find-the-first-two-tools-used-at-the-first-work-center-location-in-the-manufacturing-process-of-the-product"></a>D. 製品の製造プロセス内にある最初のワーク センターの場所で使用される最初の 2 つのツールの検索  
- 次のクエリでは、製品モデルに対して、製造プロセス内にあるワーク センターの場所の順序で、最初のワーク センターの場所で使用される最初の 2 つのツールが返されます。 格納された製造手順に対してクエリを指定、**指示**の列、 **Production.ProductModel**テーブル。  
+### <a name="d-find-the-first-two-tools-used-at-the-first-work-center-location-in-the-manufacturing-process-of-the-product"></a>D. 製品の製造プロセスの最初のワークセンターの場所で使用されている最初の2つのツールを検索します。  
+ 製品モデルの場合、このクエリは、製造プロセスのワークセンターの場所の順序で最初のワークセンターの場所で使用される最初の2つのツールを返します。 このクエリは、 **Production モデル**テーブルの**命令**列に格納されている製造手順に対して指定されます。  
   
 ```sql
 SELECT Instructions.query('  
@@ -204,7 +204,7 @@ FROM Production.ProductModel
 where ProductModelID=7  
 ```  
   
- これは、結果です。  
+ 結果を次に示します。  
   
 ```xml
 <Location LocationID="10" SetupHours=".5"   
@@ -217,7 +217,7 @@ where ProductModelID=7
 ```  
   
 ### <a name="e-find-the-last-two-manufacturing-steps-at-the-first-work-center-location-in-the-manufacturing-of-a-specific-product"></a>E. 特定の製品を製造する際の最初のワーク センターの場所で最後の 2 つの製造手順の検索  
- クエリを使用して、 **last()** 最後の 2 つの製造ステップを取得する関数。  
+ このクエリでは、last **()** 関数を使用して、最後の2つの製造手順を取得します。  
   
 ```sql
 SELECT Instructions.query('   
@@ -234,7 +234,7 @@ FROM Production.ProductModel
 where ProductModelID=7  
 ```  
   
- これは、結果です。  
+ 結果を次に示します。  
   
 ```xml
 <LastTwoManuSteps>  
@@ -248,6 +248,6 @@ where ProductModelID=7
 ## <a name="see-also"></a>参照  
  [XML データ &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [XQuery 言語リファレンス &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)   
- [XML の構築&#40;XQuery&#41;](../xquery/xml-construction-xquery.md)  
+ [XML 構築 &#40;XQuery&#41;](../xquery/xml-construction-xquery.md)  
   
   

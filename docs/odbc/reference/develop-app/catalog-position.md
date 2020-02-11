@@ -15,37 +15,37 @@ ms.assetid: 5bc5f64b-c75a-43d2-8745-102ec7a49000
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3d7c320521a9948c7968f4f7f5d42fd715f6c03d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68062683"
 ---
 # <a name="catalog-position"></a>カタログの位置
-識別子および他の識別子を区切る方法でカタログ名の位置は、データ ソースからデータ ソースに変化します。 たとえば、Xbase データソースでカタログ名がディレクトリで、Microsoft® Windows® は分離 (つまり、ファイル名)、テーブル名に円記号 (\\)。 次の図では、この条件を示します。  
+識別子に含まれるカタログ名の位置と、識別子の残りの部分との分離方法は、データソースとデータソースによって異なります。 たとえば、Xbase データソースでは、カタログ名はディレクトリであり、Microsoft® Windows®では、テーブル名 (ファイル名) から円記号 (\\) で区切られます。 次の図は、この条件を示しています。  
   
- ![カタログの位置。Xbase](../../../odbc/reference/develop-app/media/ch0801.gif "ch0801")  
+ ![カタログの位置: Xbase](../../../odbc/reference/develop-app/media/ch0801.gif "ch0801")  
   
- SQL Server データ ソースには、カタログはデータベースでありはスキーマとテーブル名とピリオド (.) で区切られます。  
+ SQL Server データソースでは、カタログはデータベースで、スキーマ名とテーブル名はピリオド (.) で区切られます。  
   
- ![カタログの位置。SQL Server](../../../odbc/reference/develop-app/media/ch0802.gif "ch0802")  
+ ![カタログの位置: SQL Server](../../../odbc/reference/develop-app/media/ch0802.gif "ch0802")  
   
- Oracle データ ソースに、カタログもデータベースが、テーブル名に依存して、によって、スキーマとテーブルの名前から分離されて、アット マーク (@)。  
+ Oracle データソースでは、カタログはデータベースでもありますが、テーブル名に従います。スキーマ名とテーブル名は、アットマーク (@) で区切られます。  
   
- ![カタログの位置。Oracle](../../../odbc/reference/develop-app/media/ch0803.gif "ch0803")  
+ ![カタログの位置: Oracle](../../../odbc/reference/develop-app/media/ch0803.gif "ch0803")  
   
- カタログの区切り記号とカタログ名の場所を決定するには、アプリケーションが呼び出す**SQLGetInfo** SQL_CATALOG_NAME_SEPARATOR および SQL_CATALOG_LOCATION のオプションを使用します。 相互運用可能なアプリケーションでは、これらの値に従って識別子を構築する必要があります。  
+ アプリケーションでは、カタログの区切り記号とカタログ名の場所を決定するために、SQL_CATALOG_NAME_SEPARATOR オプションと SQL_CATALOG_LOCATION オプションを使用して**SQLGetInfo**を呼び出します。 相互運用可能なアプリケーションでは、これらの値に基づいて識別子を構築する必要があります。  
   
- 1 つ以上の部分を含む識別子を囲むには、アプリケーションは各部分を個別に見積もりし、を識別子を区切る文字を引用符で囲むしないように注意してあります。 カタログ (\XBASE\SALES\CORP) と、テーブル (Parts.dbf) 名がカタログの区切り記号ではないすべての行と Xbase のテーブルの列を選択するには、次のステートメントを引用符でなど (\\)。  
+ 複数の部分を含む識別子を引用符で囲む場合、アプリケーションでは、各部分を個別に引用符で囲む必要があり、識別子を区切る文字を引用符で囲む必要はありません。 たとえば、次のステートメントでは、Xbase テーブルのすべての行と列を選択して、カタログ (\XBASE\SALES\CORP) 名とテーブル (Parts) 名を引用符で囲んでいます\\。ただし、カタログ区切り記号 () は使用しません。  
   
 ```  
 SELECT * FROM "\XBASE\SALES\CORP"\"PARTS.DBF"  
 ```  
   
- すべての行と、Oracle テーブルの列を選択するには、次のステートメントの引用符カタログ (Sales)、(企業) のスキーマおよびテーブル (部分) の名前がカタログではありません (@) またはスキーマ (.) の区切り記号。  
+ 次のステートメントでは、Oracle テーブルのすべての行と列を選択して、カタログ (Sales)、スキーマ (企業)、およびテーブル (部分) の名前を引用します。ただし、カタログ (@) またはスキーマ (.) の区切り記号は指定できません。  
   
 ```  
 SELECT * FROM "Corporate"."Parts"@"Sales"  
 ```  
   
- 識別子を囲む方法の詳細については、次のセクションを参照してください。[引用符で囲まれた識別子](../../../odbc/reference/develop-app/quoted-identifiers.md)します。
+ 識別子の引用符の詳細については、次の「[引用符で囲ま](../../../odbc/reference/develop-app/quoted-identifiers.md)れた識別子」を参照してください。

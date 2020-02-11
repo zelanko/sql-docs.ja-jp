@@ -1,5 +1,5 @@
 ---
-title: sp_OAGetErrorInfo (TRANSACT-SQL) |Microsoft Docs
+title: sp_OAGetErrorInfo (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: ceecea08-456f-4819-85d9-ecc9647d7187
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e263308713a80ffaad4bfd9c484d061f5c19b94e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68107914"
 ---
-# <a name="spoageterrorinfo-transact-sql"></a>sp_OAGetErrorInfo (Transact-SQL)
+# <a name="sp_oageterrorinfo-transact-sql"></a>sp_OAGetErrorInfo (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   OLE オートメーションのエラー情報を取得します。  
@@ -44,60 +44,60 @@ sp_OAGetErrorInfo [ objecttoken ]
   
 ## <a name="arguments"></a>引数  
  *objecttoken*  
- 使用して作成した OLE オブジェクトのオブジェクト トークン**sp_OACreate**または null を指定します。 場合*objecttoken*が指定すると、そのオブジェクトのエラー情報が返されます。 NULL を指定した場合は、そのバッチ全体のエラー情報が返されます。  
+ は、以前に**sp_OACreate**を使用して作成された OLE オブジェクトのオブジェクトトークンであるか、または NULL です。 *Objecttoken*が指定されている場合、そのオブジェクトのエラー情報が返されます。 NULL が指定されている場合は、バッチ全体のエラー情報が返されます。  
   
  _ソース_**出力**  
- エラー情報のソースです。 指定する場合、ローカルがする必要があります**char**、 **nchar**、 **varchar**、または**nvarchar**変数。 戻り値は必要に応じてローカル変数のサイズに切り捨てられます。  
+ エラー情報のソースです。 指定する場合は、ローカルの**char**、 **nchar**、 **varchar**、または**nvarchar**変数である必要があります。 戻り値は、必要に応じて、ローカル変数に合うように切り捨てられます。  
   
- _説明_**出力**  
- エラーの説明です。 指定する場合、ローカルがする必要があります**char**、 **nchar**、 **varchar**、または**nvarchar**変数。 戻り値は必要に応じてローカル変数のサイズに切り捨てられます。  
+ _説明_の**出力**  
+ エラーの説明を示します。 指定する場合は、ローカルの**char**、 **nchar**、 **varchar**、または**nvarchar**変数である必要があります。 戻り値は、必要に応じて、ローカル変数に合うように切り捨てられます。  
   
- _helpfile_ **出力**  
- OLE オブジェクトのヘルプ ファイルです。 指定する場合、ローカルがする必要があります**char**、 **nchar**、 **varchar**、または**nvarchar**変数。 戻り値は必要に応じてローカル変数のサイズに切り捨てられます。  
+ _helpfile_の**出力**  
+ OLE オブジェクトのヘルプ ファイルです。 指定する場合は、ローカルの**char**、 **nchar**、 **varchar**、または**nvarchar**変数である必要があります。 戻り値は、必要に応じて、ローカル変数に合うように切り捨てられます。  
   
- _helpid_ **出力**  
- ヘルプ ファイル コンテキスト ID です。 指定する場合、ローカルがする必要があります**int**変数。  
+ _helpid_の**出力**  
+ ヘルプファイルのコンテキスト ID を示します。 指定する場合は、ローカルの**int**変数である必要があります。  
   
 > [!NOTE]  
->  このストアド プロシージャのパラメーターは、名前ではなく位置で指定されます。  
+>  このストアドプロシージャのパラメーターは、名前ではなく位置によって指定されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- 成功した場合は 0、失敗した場合は OLE オートメーション オブジェクトによって返される HRESULT の 0 以外の整数値を返します。  
+ 0 (成功) または0以外の数 (失敗)。これは、OLE オートメーションオブジェクトによって返される HRESULT の整数値です。  
   
- HRESULT のリターン コードの詳細については、次を参照してください。 [OLE オートメーションのリターン コードとエラー情報](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md)します。  
+ HRESULT のリターンコードの詳細については、「 [OLE オートメーションのリターンコードとエラー情報](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md)」を参照してください。  
   
 ## <a name="result-sets"></a>結果セット  
  出力パラメーターを指定しない場合、エラー情報は結果セットとしてクライアントに返されます。  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |------------------|---------------|-----------------|  
-|**Error**|**binary(4)**|エラー番号の 2 進表記。|  
-|**Source**|**nvarchar(nn)**|エラーのソース。|  
-|**[説明]**|**nvarchar(nn)**|エラーの説明。|  
-|**Helpfile**|**nvarchar(nn)**|ソースのヘルプ ファイル。|  
-|**HelpID**|**int**|ヘルプ ソース ファイルのヘルプ コンテキスト ID。|  
+|**Error**|**バイナリ (4)**|エラー番号のバイナリ表現。|  
+|**ソース**|**nvarchar (nn)**|エラーのソース。|  
+|**説明**|**nvarchar (nn)**|エラーの説明。|  
+|**ヘルプ**|**nvarchar (nn)**|ソースのヘルプファイルです。|  
+|**HelpID**|**int**|ヘルプソースファイル内のヘルプコンテキスト ID。|  
   
-## <a name="remarks"></a>コメント  
- OLE オートメーションを呼び出すたびにストアド プロシージャ (を除く**sp_OAGetErrorInfo**) エラー情報をリセットします。 したがって、 **sp_OAGetErrorInfo**最新 OLE に関してのみ、エラー情報を取得します。オートメーション ストアド プロシージャの呼び出しです。 ため**sp_OAGetErrorInfo**エラー情報はリセットされません呼び出せる何度も同じエラー情報を取得します。  
+## <a name="remarks"></a>解説  
+ OLE オートメーションストアドプロシージャを呼び出すたびに ( **sp_OAGetErrorInfo**を除く)、エラー情報がリセットされます。したがって、 **sp_OAGetErrorInfo**は、最新の OLE オートメーションストアドプロシージャ呼び出しのエラー情報のみを取得します。 **Sp_OAGetErrorInfo**によってエラー情報がリセットされないため、同じエラー情報を取得するために複数回呼び出すことができます。  
   
  次の表は、OLE オートメーション エラーと一般的な原因の一覧です。  
   
 |エラーおよび HRESULT|一般的な原因|  
 |-----------------------|------------------|  
-|**無効な変数型 (0x80020008)**|データ型、[!INCLUDE[tsql](../../includes/tsql-md.md)]メソッド パラメーターと一致しませんでしたとして渡される値、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]メソッド パラメーター、または NULL 値のデータ型は、メソッド パラメーターとして渡されました。|  
-|**不明な名前 (です 0x8002006)**|指定したプロパティ名またはメソッド名が、指定したオブジェクトに見つかりませんでした。|  
-|**無効なクラス文字列 (です 0x800401f3)**|指定した ProgID または CLSID は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに OLE オブジェクトとして登録されていません。 使用してインスタンスできます前に、カスタム OLE オートメーション サーバーを登録する必要があります**sp_OACreate**します。 これを行うプロセス (.dll) サーバーでは、Regsvr32.exe ユーティリティを使用して、または **/REGSERVER**コマンド ライン スイッチをローカル (.exe) サーバー。|  
+|**変数型が不正です&amp;#x2028;(0x80020008)**|メソッドパラメーターとし[!INCLUDE[tsql](../../includes/tsql-md.md)]て渡された値のデータ型が[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 、メソッドパラメーターのデータ型と一致しなかったか、またはメソッドパラメーターとして NULL 値が渡されました。|  
+|**不明な名前です&amp;#x2028;(0x8002006)**|指定したプロパティ名またはメソッド名が、指定したオブジェクトに見つかりませんでした。|  
+|**無効なクラス文字列です&amp;#x2028;(0x800401f3)**|指定した ProgID または CLSID は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに OLE オブジェクトとして登録されていません。 **Sp_OACreate**を使用してインスタンス化するには、事前にカスタム OLE オートメーションサーバーを登録しておく必要があります。 これを行うには、インプロセス (.dll) サーバーの場合は Regsvr32 ユーティリティを使用し、ローカル (.exe) サーバーの場合**はコマンドライン**スイッチを使用します。|  
 |**サーバーの実行に失敗しました (0x80080005)**|指定した OLE オブジェクトは、ローカル OLE サーバー (.exe ファイル) として登録されていますが、.exe ファイルが見つからないか、起動できません。|  
-|**指定されたモジュールは見つかりませんでした (0x8007007e)**|指定した OLE オブジェクトは、組み込み OLE サーバー (.dll ファイル) として登録されていますが、.dll ファイルが見つからないか、読み込むことができません。|  
-|**型が一致しません (0x80020005)**|プロパティ値またはメソッドの戻り値を格納するために使用する [!INCLUDE[tsql](../../includes/tsql-md.md)] ローカル変数のデータ型が、プロパティ値またはメソッドの戻り値の [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] データ型と一致しません。 または、プロパティやメソッドの戻り値を要求しましたが、そのプロパティやメソッドで戻り値が返されません。|  
-|**sp_OACreate の 'context' パラメーターのデータ型または値が無効です。(0x8004275B)**|コンテキスト パラメーターの値には、いずれかを指定する必要があります。1、4、または 5 です。|  
+|**指定されたモジュールが見つかりませんでした&amp;#x2028;(0x8007007e)**|指定された OLE オブジェクトは、インプロセス OLE サーバー (.dll ファイル) として登録されていますが、.dll ファイルが見つからないか、または読み込めませんでした。|  
+|**型が一致しません&amp;#x2028;(0x80020005)**|プロパティ値またはメソッドの戻り値を格納するために使用する [!INCLUDE[tsql](../../includes/tsql-md.md)] ローカル変数のデータ型が、プロパティ値またはメソッドの戻り値の [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] データ型と一致しません。 または、プロパティやメソッドの戻り値を要求しましたが、そのプロパティやメソッドで戻り値が返されません。|  
+|**Sp_OACreate の ' context ' パラメーターのデータ型または値が無効です。(0x8004275B)**|コンテキスト パラメーターの値は 1、4、5 のいずれかであることが必要です。|  
   
- HRESULT のリターン コードの処理に関する詳細については、次を参照してください。 [OLE オートメーションのリターン コードとエラー情報](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md)します。  
+ HRESULT のリターンコードの処理の詳細については、「 [OLE オートメーションのリターンコードとエラー情報](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md)」を参照してください。  
   
 ## <a name="permissions"></a>アクセス許可  
- メンバーシップが必要です、 **sysadmin**固定サーバー ロールまたはアクセス許可をこのストアド プロシージャを直接実行します。 `Ole Automation Procedures` 構成でなければなりません**有効になっている**OLE オートメーションに関連するすべてのシステム プロシージャを使用します。  
+ **Sysadmin**固定サーバーロールのメンバーシップ、またはこのストアドプロシージャに対して直接実行権限が必要です。 `Ole Automation Procedures`OLE オートメーションに関連するシステムプロシージャを使用するには、構成を**有効**にする必要があります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、OLE オートメーションのエラー情報を表示します。  
   
 ```  
@@ -122,7 +122,7 @@ END;
 ```  
   
 ## <a name="see-also"></a>参照  
- [OLE オートメーション ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;の OLE オートメーションストアドプロシージャ](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
  [OLE オートメーションのサンプル スクリプト](../../relational-databases/stored-procedures/ole-automation-sample-script.md)  
   
   

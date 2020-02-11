@@ -1,5 +1,5 @@
 ---
-title: sp_execute_remote (Azure SQL データベース) |Microsoft Docs
+title: sp_execute_remote (Azure SQL Database) |Microsoft Docs
 ms.custom: ''
 ms.date: 02/01/2017
 ms.service: sql-database
@@ -16,18 +16,18 @@ author: stevestein
 ms.author: sstein
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 021a6e689dfc109f8a58ca080956aec7efc49291
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68124473"
 ---
-# <a name="spexecuteremote-azure-sql-database"></a>sp_execute_remote (Azure SQL Database)
+# <a name="sp_execute_remote-azure-sql-database"></a>sp_execute_remote (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  実行、[!INCLUDE[tsql](../../includes/tsql-md.md)]のステートメントでは、リモートの Azure SQL Database は 1 つまたは一連のデータベースを水平方向のパーティション構成にシャードとして機能します。  
+  シャードと[!INCLUDE[tsql](../../includes/tsql-md.md)]して機能する単一のリモート Azure SQL Database またはデータベースのセットに対して、行方向のパーティション構成でステートメントを実行します。  
   
- ストアド プロシージャには、エラスティック クエリ機能の一部です。  [Azure SQL Database エラスティック データベース クエリの概要](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/)と[(水平パーティション) シャーディングのエラスティック データベース クエリ](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-horizontal-partitioning/)を参照してください。  
+ このストアドプロシージャは、エラスティッククエリ機能の一部です。  「[エラスティックデータベースクエリの概要](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/)」および「[シャーディングのエラスティックデータベースクエリ (行方向のパーティション分割)」を](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-horizontal-partitioning/)参照して Azure SQL Database ください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,47 +43,48 @@ sp_execute_remote [ @data_source_name = ] datasourcename
 ```  
   
 ## <a name="arguments"></a>引数  
- [ \@data_source_name = ] *datasourcename*  
- ステートメントを実行する外部データ ソースを識別します。 [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)を参照してください。 外部データ ソースは、"RDBMS"または"SHARD_MAP_MANAGER"の型指定できます。  
+ [ \@data_source_name =]*datasourcename*  
+ ステートメントが実行される外部データソースを識別します。 「 [CREATE EXTERNAL DATA SOURCE &#40;transact-sql&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)」を参照してください。 外部データソースの種類は、"RDBMS" または "SHARD_MAP_MANAGER" にすることができます。  
   
  [ \@stmt =]*ステートメント*  
- 含む Unicode 文字列には、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントまたはバッチです。 \@stmt は、Unicode 定数または Unicode 変数のいずれかである必要があります。 \+ 演算子で 2 つの文字列を連結するなどの複雑な Unicode 式は使用できません。 文字定数も使用できません。 Unicode 定数が指定されている場合に付ける必要があります、 **N**します。Unicode 定数など**N 'sp_who'** が有効で、文字定数 **'sp_who'** はありません。 文字列のサイズは、使用可能なデータベース サーバーのメモリによってのみ制限されます。 64 ビット サーバーで、文字列のサイズが 2 GB の最大サイズに制限、 **nvarchar (max)** します。  
+ ステートメントまたはバッチを[!INCLUDE[tsql](../../includes/tsql-md.md)]含む Unicode 文字列を指定します。 \@stmt は、Unicode 定数または Unicode 変数のいずれかである必要があります。 + 演算子で 2 つの文字列を連結するなどの複雑な Unicode 式は使用できません。 文字定数も使用できません。 Unicode 定数を指定する場合は、先頭に**N**を付ける必要があります。たとえば、Unicode 定数**N ' sp_who '** は有効ですが、文字定数 **' sp_who '** は有効ではありません。 文字列のサイズは、使用可能なデータベースサーバーのメモリによってのみ制限されます。 64ビットサーバーでは、文字列のサイズは、最大サイズである**nvarchar (max)** の 2 GB に制限されています。  
   
 > [!NOTE]  
->  \@stmt には、たとえば、名前の変数と同じ形式を持つパラメーターを含めることができます。 `N'SELECT * FROM HumanResources.Employee WHERE EmployeeID = @IDParameter'`  
+>  \@stmt には、変数名と同じ形式のパラメーターを含めることができます。次に例を示します。`N'SELECT * FROM HumanResources.Employee WHERE EmployeeID = @IDParameter'`  
   
- 含まれる各パラメーター \@stmt では、両方に対応するエントリがあります、 \@params パラメーター定義リストとパラメーター値の一覧。  
+ Stmt に\@含まれる各パラメーターには、 \@params パラメーター定義リストとパラメーター値リストの両方に対応するエントリが必要です。  
   
- [ \@params =] N'\@*parameter_name * * data_type* [,...*n* ] '  
- 1 つの文字列に埋め込まれたすべてのパラメーターの定義を含む\@stmt します。この文字列は Unicode 定数または Unicode 変数にする必要があります。 各パラメーター定義は、パラメーター名とデータ型で構成されます。 *n*は追加のパラメーター定義を示すプレース ホルダーです。 すべてのパラメーターで指定された\@で定義されている stmtmust \@params します。 場合、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントまたはバッチに\@stmt にパラメーターが含まれていない\@params は必要ありません。 このパラメーターの既定値は、NULL です。  
+ [ \@params =]N '\@*parameter_name * * data_type* [,...*n* ] '  
+ Stmt に\@埋め込まれているすべてのパラメーターの定義を含む1つの文字列を指定します。文字列は、Unicode 定数または Unicode 変数のいずれかである必要があります。 各パラメーター定義は、パラメーター名とデータ型で構成されます。 *n*は、追加のパラメーター定義を示すプレースホルダーです。 Stmtmust で指定さ\@れたすべての\@パラメーターは、params で定義されます。 Stmt の[!INCLUDE[tsql](../../includes/tsql-md.md)] \@ステートメントまたはバッチにパラメーターが含まれて\@いない場合、params は必要ありません。 このパラメーターの既定値は NULL です。  
   
- [ \@param1 =] '*value1*'  
- パラメーター文字列に定義する最初のパラメーターの値を指定します。 Unicode 定数または Unicode 変数を指定できます。 含まれるすべてのパラメーターに指定されたパラメーター値が必要がある\@stmt します。ときに、値は必要ありません、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントまたはバッチに\@stmt にパラメーターがありません。  
+ [ \@param1 =]'*value1*'  
+ パラメーター文字列に定義する最初のパラメーターの値を指定します。 Unicode 定数または Unicode 変数を指定できます。 Stmt に\@含まれるすべてのパラメーターにパラメーター値が指定されている必要があります。Stmt の[!INCLUDE[tsql](../../includes/tsql-md.md)] \@ステートメントまたはバッチにパラメーターがない場合、値は必要ありません。  
   
  *n*  
- 追加のパラメーターの値のプレース ホルダー。 定数または変数のみを指定できます。 値は、関数などのより複雑な式または演算子を使用して作成された式にすることはできません。  
+ 追加のパラメーターの値のプレースホルダーです。 定数または変数のみを指定できます。 値には、関数や演算子を使用して作成された式など、より複雑な式を指定することはできません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- 0 (成功) またはゼロ以外 (失敗)  
+ 0 (成功) または0以外 (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- 最初の SQL ステートメントの結果セットを返します。  
+ 最初の SQL ステートメントから結果セットを返します。  
   
 ## <a name="permissions"></a>アクセス許可  
- `ALTER ANY EXTERNAL DATA SOURCE` 権限が必要です。  
+ 
+  `ALTER ANY EXTERNAL DATA SOURCE` 権限が必要です。  
   
-## <a name="remarks"></a>コメント  
- `sp_execute_remote` 上記の「構文」の説明に従って、特定の順序でパラメーターを入力する必要があります。 パラメーターは、誤順序の入力は、エラー メッセージが発生します。  
+## <a name="remarks"></a>解説  
+ `sp_execute_remote`パラメーターは、前の「構文」セクションで説明されているように、特定の順序で入力する必要があります。 パラメーターが順序どおりに入力されていない場合は、エラーメッセージが表示されます。  
   
- `sp_execute_remote`として動作は同じ[EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)に関してバッチおよび名前のスコープです。 TRANSACT-SQL ステートメントまたはバッチ、sp_execute_remote に *\@stmt*パラメーターは、sp_execute_remote ステートメントが実行されるまでコンパイルされません。  
+ `sp_execute_remote`には、バッチと名前のスコープに関して、 [transact-sql&#41;の実行 &#40;](../../t-sql/language-elements/execute-transact-sql.md)と同じ動作があります。 Sp_execute_remote * \@stmt*パラメーター内の transact-sql ステートメントまたはバッチは、sp_execute_remote ステートメントが実行されるまでコンパイルされません。  
   
- `sp_execute_remote` という名前の '$ShardName'、行を生成したリモート データベースの名前を含む結果セットに追加の列を追加します。  
+ `sp_execute_remote`行を生成したリモートデータベースの名前を含む ' $ShardName ' という名前の結果セットに列を追加します。  
   
- `sp_execute_remote`同様に使用できる[sp_executesql &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md)。  
+ `sp_execute_remote`は、 [transact-sql&#41;&#40;sp_executesql](../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md)と同様に使用できます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 ### <a name="simple-example"></a>簡単な例  
- 次の例では、作成し、リモート データベースで単純な SELECT ステートメントを実行します。  
+ 次の例では、リモートデータベースに対して単純な SELECT ステートメントを作成して実行します。  
   
 ```sql  
 EXEC sp_execute_remote  
@@ -91,8 +92,8 @@ EXEC sp_execute_remote
     N'SELECT COUNT(w_id) AS Count_id FROM warehouse'   
 ```  
   
-### <a name="example-with-multiple-parameters"></a>複数のパラメーターの例  
-ユーザー データベース、master データベースの管理者の資格情報を指定することで、データベース スコープ資格情報を作成します。 Master データベースをポイントし、データベース スコープ資格情報を指定する外部データ ソースを作成します。 次の例で、ユーザー データベースを実行し、 `sp_set_firewall_rule` master データベース内のプロシージャです。 `sp_set_firewall_rule`手順 3 つのパラメーターとが必要です、`@name`パラメーターを Unicode になります。
+### <a name="example-with-multiple-parameters"></a>複数のパラメーターを使用した例  
+ユーザーデータベースにデータベーススコープの資格情報を作成し、master データベースの管理者の資格情報を指定します。 マスターデータベースを指す外部データソースを作成し、データベーススコープの資格情報を指定します。 次に、ユーザーデータベースの例では、master `sp_set_firewall_rule`データベースでプロシージャを実行します。 この`sp_set_firewall_rule`プロシージャには3つのパラメーターが`@name`必要であり、パラメーターは Unicode である必要があります。
 
 ```
 EXEC sp_execute_remote @data_source_name  = N'PointToMaster', 
@@ -103,6 +104,6 @@ EXEC sp_execute_remote @data_source_name  = N'PointToMaster',
 
 ## <a name="see-also"></a>参照:
 
-[作成するデータベース スコープ資格情報](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)  
-[CREATE EXTERNAL DATA SOURCE &amp;#40;Transact-SQL&amp;#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)  
+[データベーススコープ資格情報の作成](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)  
+[CREATE EXTERNAL DATA SOURCE (Transact-sql)](../../t-sql/statements/create-external-data-source-transact-sql.md)  
     

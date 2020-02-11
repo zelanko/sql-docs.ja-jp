@@ -10,10 +10,10 @@ author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 6a4b56a31ede0d8e011c1a2244f5d014e185e7e5
-ms.sourcegitcommit: 9e026cfd9f2300f106af929d88a9b43301f5edc2
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74318993"
 ---
 # <a name="adventureworks-installation-and-configuration"></a>AdventureWorks のインストールと構成
@@ -67,9 +67,9 @@ SQL Server Management Studio を使用してデータベースのバックアッ
 1. SQL Server Management Studio を開き、ターゲットの SQL Server インスタンスに接続します。
 2. [**データベース**] ノードを右クリックし、[**データベースの復元**] を選択します。
 3. [**デバイス**] を選択し、省略記号ボタン ([.**.**.]) をクリックします。
-4. ダイアログで [**バックアップデバイスの選択**] をクリックし、[**追加**] をクリックして、サーバーのファイルシステム内のデータベースバックアップに移動し、バックアップを選択します。 [**OK**] をクリックすると、
+4. ダイアログで [**バックアップデバイスの選択**] をクリックし、[**追加**] をクリックして、サーバーのファイルシステム内のデータベースバックアップに移動し、バックアップを選択します。 **[OK]** をクリックします。
 5. 必要に応じて、[**ファイル**] ウィンドウでデータファイルとログファイルのターゲットの場所を変更します。 データファイルとログファイルは別のドライブに配置することをお勧めします。
-6. [**OK**] をクリックすると、 これにより、データベースの復元が開始されます。 完了すると、AdventureWorks データベースが SQL Server インスタンスにインストールされます。
+6. **[OK]** をクリックします。 これにより、データベースの復元が開始されます。 完了すると、AdventureWorks データベースが SQL Server インスタンスにインストールされます。
 
 SQL Server データベースの復元の詳細については、「 [SSMS を使用したデータベースバックアップの復元](../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)」を参照してください。
 

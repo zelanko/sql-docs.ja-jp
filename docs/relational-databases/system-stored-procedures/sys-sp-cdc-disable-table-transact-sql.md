@@ -1,5 +1,5 @@
 ---
-title: sys.sp_cdc_disable_table (TRANSACT-SQL) |Microsoft Docs
+title: sp_cdc_disable_table (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,16 +22,16 @@ ms.assetid: da2156c0-504e-4d76-b9a0-4448becf9bda
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 693c449679433b733cfc3a45e2bbedf3f1d92185
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68106509"
 ---
-# <a name="sysspcdcdisabletable-transact-sql"></a>sys.sp_cdc_disable_table (TRANSACT-SQL)
+# <a name="syssp_cdc_disable_table-transact-sql"></a>sp_cdc_disable_table (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  変更データ キャプチャの現在のデータベース内の指定したソース テーブルとキャプチャ インスタンスを無効にします。 変更データ キャプチャは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディッションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2016 の各エディションがサポートする機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。  
+  現在のデータベース内の指定したソーステーブルおよびキャプチャインスタンスの変更データキャプチャを無効にします。 変更データ キャプチャは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディッションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2016 の各エディションがサポートする機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,17 +46,17 @@ sys.sp_cdc_disable_table
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @source_schema = ] 'source\_schema'` ソース テーブルが含まれているスキーマの名前です。 *source_schema*は**sysname**、既定値はありません、NULL にすることはできません。  
+`[ @source_schema = ] 'source\_schema'`ソーステーブルが含まれているスキーマの名前を指定します。 *source_schema*は**sysname**であり、既定値はありません。 NULL にすることはできません。  
   
- *source_schema*現在のデータベースに存在する必要があります。  
+ *source_schema*は、現在のデータベースに存在している必要があります。  
   
-`[ @source_name = ] 'source\_name'` 変更データ キャプチャが無効にするのには、ソース テーブルの名前です。 *source_name*は**sysname**、既定値はありません、NULL にすることはできません。  
+`[ @source_name = ] 'source\_name'`変更データキャプチャを無効にするソーステーブルの名前を指定します。 *source_name*は**sysname**であり、既定値はありません。 NULL にすることはできません。  
   
- *source_name*現在のデータベースに存在する必要があります。  
+ *source_name*は、現在のデータベースに存在している必要があります。  
   
-`[ @capture_instance = ] 'capture\_instance' | 'all'` 指定したソース テーブルで無効にするキャプチャ インスタンスの名前です。 *capture_instance*は**sysname** NULL にすることはできません。  
+`[ @capture_instance = ] 'capture\_instance' | 'all'`指定したソーステーブルに対して無効にするキャプチャインスタンスの名前を指定します。 *capture_instance*は**sysname**であり、NULL にすることはできません。  
   
- 'All' を指定した場合、すべてのキャプチャ インスタンスに対して定義されている*source_name*は無効になります。  
+ ' All ' を指定した場合、 *source_name*に対して定義されているすべてのキャプチャインスタンスは無効になります。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -64,14 +64,14 @@ sys.sp_cdc_disable_table
 ## <a name="result-sets"></a>結果セット  
  なし  
   
-## <a name="remarks"></a>コメント  
- **sys.sp_cdc_disable_table**削除、変更データ キャプチャは、指定したソース テーブルとキャプチャ インスタンスに関連付けられているテーブルおよびシステム関数を変更します。 変更データ キャプチャのシステム テーブルとセットから指定されたキャプチャ インスタンスに関連付けられたすべての行を削除、 **is_tracked_by_cdc**列、テーブル内のエントリ、 [sys.tables](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)カタログ ビュー0 を返します。  
+## <a name="remarks"></a>解説  
+ 指定したソーステーブルおよびキャプチャインスタンスに関連付けられている変更データキャプチャの変更テーブルとシステム関数を削除するには、sp_cdc_disable_table によって削除され**ます。** このメソッドは、指定されたキャプチャインスタンスに関連付けられているすべての行を変更データキャプチャのシステムテーブルから削除し、テーブルのエントリの**is_tracked_by_cdc**列を、[テーブルカタログビュー](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)を0に設定します。  
   
 ## <a name="permissions"></a>アクセス許可  
- メンバーシップが必要です、 **db_owner**固定データベース ロール。  
+ **Db_owner**固定データベースロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例  
- 次の例を無効に変更データ キャプチャを`HumanResources.Employee`テーブル。  
+## <a name="examples"></a>例  
+ 次の例では、 `HumanResources.Employee`テーブルの変更データキャプチャを無効にします。  
   
 ```  
 USE AdventureWorks2012;  
@@ -82,7 +82,7 @@ EXECUTE sys.sp_cdc_disable_table
     @capture_instance = N'HumanResources_Employee';  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [sys.sp_cdc_enable_table &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)  
+## <a name="see-also"></a>参照  
+ [sp_cdc_enable_table &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)  
   
   

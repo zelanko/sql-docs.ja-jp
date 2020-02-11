@@ -14,15 +14,15 @@ ms.assetid: 084761fe-e65b-4f38-ba4f-69884b2a7700
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: eb2587f733f5042436144f7865627fee576e3d9c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68096309"
 ---
 # <a name="delete-statement-limitations"></a>DELETE ステートメントの制限事項
-DELETE ステートメントは、Microsoft Excel またはテキストのドライバーではサポートされていません。 テキストのドライバーの INSERT ステートメントがサポートされていることに注意してください。  
+DELETE ステートメントは、Microsoft Excel またはテキストドライバーではサポートされていません。 Text ドライバーでは INSERT ステートメントがサポートされていることに注意してください。  
   
- DBASE ドライバーでは、「削除」の値を削除するテーブルをパッキングすることはできません。  
+ DBASE ドライバーでは、"deleted" 値を削除するためのテーブルのパッキングはサポートされていません。  
   
- テーブルから行を削除する Paradox ドライバーの場合、テーブルに一意のインデックス (Paradox 主キー) ことが必要です。
+ Paradox ドライバーでテーブルから行を削除するには、テーブルに一意のインデックス (Paradox 主キー) が含まれている必要があります。

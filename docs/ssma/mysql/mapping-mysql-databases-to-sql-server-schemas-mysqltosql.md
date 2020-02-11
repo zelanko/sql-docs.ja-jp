@@ -1,5 +1,5 @@
 ---
-title: SQL Server スキーマ (MySQLToSQL) への MySQL データベースのマッピング |Microsoft Docs
+title: MySQL データベースを SQL Server スキーマ (MySQLToSQL) にマップするにはMicrosoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,64 +13,64 @@ ms.assetid: 5c6fb445-92ae-4933-b77d-80230931c024
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 215833c96fae02ae7877e00173fb5a920a47ee0c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67908986"
 ---
 # <a name="mapping-mysql-databases-to-sql-server-schemas-mysqltosql"></a>MySQL データベースの SQL Server スキーマへのマッピング (MySQLToSQL)
-既定では、SSMA for MySQL に移行する MySQL スキーマのすべてのオブジェクトを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure データベースのスキーマの名前します。 ただし、MySQL スキーマ間のマッピングをカスタマイズすることができますと[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure データベース。  
+既定で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、ssma for mysql は、mysql スキーマ内のすべてのオブジェクトを、スキーマのという名前のまたは SQL Azure データベースに移行します。 ただし、MySQL スキーマと[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Azure データベース間のマッピングはカスタマイズできます。  
   
-## <a name="mysql-and-sql-server-or-sql-azure-schemas"></a>MySQL と SQL Server または SQL Azure のスキーマ  
-スキーマの MySQL の概念は、データベースとそのスキーマのいずれかの SQL Server の概念にマップされます。 SSMA はスキーマとしてデータベースとスキーマの SQL Server の組み合わせを表します。  
+## <a name="mysql-and-sql-server-or-sql-azure-schemas"></a>MySQL および SQL Server または SQL Azure スキーマ  
+MySQL のスキーマの概念は、データベースとそのスキーマの SQL Server 概念にマップされます。 SSMA とは、データベースとスキーマの SQL Server の組み合わせをスキーマとして表します。  
   
-スキーマの MySQL の概念は、データベースとそのスキーマのいずれかの SQL Server の概念にマップされます。 たとえば、MySQL のという名前のスキーマがある**HR**します。 という名前のデータベースを SQL Server のインスタンスである可能性があります**HR**、そのデータベースは、スキーマとします。 1 つのスキーマは、 **dbo** (またはデータベース所有者) スキーマ。 既定では、MySQL スキーマ**HR**にマップされます、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースおよびスキーマ**HR.dbo**します。 SSMA を指す、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]スキーマとしてデータベースとスキーマの組み合わせ。  
+MySQL のスキーマの概念は、データベースとそのスキーマの SQL Server 概念にマップされます。 たとえば、MySQL には**HR**という名前のスキーマが含まれている場合があります。 SQL Server のインスタンスには、 **HR**という名前のデータベースがあり、そのデータベース内にはスキーマがあります。 1つのスキーマは、 **dbo** (またはデータベース所有者) スキーマです。 既定では、MySQL スキーマの**hr**はデータベースとスキーマ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の**hr. dbo**にマップされます。 SSMA とは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]スキーマとしてのデータベースとスキーマの組み合わせを意味します。  
   
-MySQL の間のマッピングを変更して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または Azure のスキーマ。  
+MySQL と[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Azure スキーマの間のマッピングを変更できます。  
   
-## <a name="modifying-the-target-database-and-schema"></a>ターゲット データベースおよびスキーマの変更  
-SSMA では、使用可能な任意に MySQL スキーマをマップできます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure のスキーマ。  
+## <a name="modifying-the-target-database-and-schema"></a>ターゲットデータベースとスキーマの変更  
+SSMA で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、MySQL スキーマを任意のスキーマまたは SQL Azure スキーマにマップできます。  
   
 **データベースとスキーマを変更するには**  
   
-1.  MySQL メタデータ エクスプ ローラーで選択**スキーマ**します。  
+1.  MySQL メタデータエクスプローラーで、[**スキーマ**] を選択します。  
   
-    **スキーマ マッピング** タブは、個別のスキーマを選択したときにも使用可能な。 一覧で、**スキーマ マッピング** タブを選択したオブジェクトのカスタマイズします。  
+    [**スキーママッピング**] タブは、個別のスキーマを選択した場合にも使用できます。 [**スキーママッピング**] タブの一覧は、選択したオブジェクトに合わせてカスタマイズされています。  
   
-2.  右側のウィンドウでをクリックして、**スキーマ マッピング**タブ。  
+2.  右ペインで、[**スキーママッピング**] タブをクリックします。  
   
-    対象の値を後に、すべての MySQL スキーマの一覧が表示されます。 このターゲットは、2 部構成の表記法で示されます (*database.schema*) で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure が、オブジェクトとデータを移行します。  
+    すべての MySQL スキーマの一覧が表示され、その後にターゲット値が表示されます。 このターゲットは、または SQL Azure の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2 つの部分表記 (*データベーススキーマ*) で表され、オブジェクトとデータが移行されます。  
   
-3.  変更、およびクリックするマッピングが含まれている行を選択**変更**します。  
+3.  変更するマッピングを含む行を選択し、[**変更**] をクリックします。  
   
-    **ターゲット スキーマの選択**ダイアログ ボックスで、使用可能なターゲット データベース スキーマや型、データベースとスキーマの 2 部構成の表記 (database.schema) で、テキスト ボックスに名前をクリックを参照することがあります**OK**.  
+    [**ターゲットスキーマの選択**] ダイアログボックスで、使用可能なターゲットデータベースとスキーマを参照するか、2つの部分表記 (データベーススキーマ) のテキストボックスにデータベースとスキーマ名を入力し、[ **OK**] をクリックします。  
   
-4.  ターゲットの変更、**スキーマ マッピング**タブ。  
+4.  [**スキーママッピング**] タブでターゲットが変更されます。  
   
 **マッピングのモード**  
   
 -   SQL Server へのマッピング  
   
-ソース データベースは、任意のターゲット データベースにマップできます。 既定では、ソース データベースがマップされているターゲットに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SSMA を使用してを接続したデータベース。 マップされるターゲット データベースでは、非既存ではかどうか[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、メッセージが表示されますが、 **"、データベースやスキーマがターゲットに存在しません[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メタデータ。これが同期中に作成されます。続行することでしょうか。"** [はい] をクリックします。 同様に、ターゲットの存在しないスキーマをスキーマにマップできます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]同期中に作成されるデータベース。  
+ソースデータベースを任意のターゲットデータベースにマップできます。 既定では、ソースデータベースは SSMA を使用して接続したターゲット[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースにマップされます。 マップされているターゲットデータベースがに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]存在しない場合は、 **"データベースまたはスキーマがターゲット[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メタデータに存在しません" というメッセージが表示されます。同期中に作成されます。続行しますか? "** [はい] をクリックします。 同様に、スキーマを、同期中に作成される[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ターゲットデータベース下に存在しないスキーマにマップすることもできます。  
   
 -   SQL Azure へのマッピング  
   
-接続されているターゲットをソース データベースにマップできます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースまたは接続されているターゲットのスキーマに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース。 ソース スキーマ 接続されているターゲット データベースでは、存在しないスキーマをマップするかどうかは、メッセージが表示されるが **"スキーマが対象のメタデータには存在できません。これが同期中に作成されます。続行しますか?"** はい をクリックします。  
+接続[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]先データベースまたは接続先[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースの任意のスキーマに、ソースデータベースをマップできます。 送信元スキーマを [接続されたターゲットデータベース] の既存ではないスキーマにマップすると、 **"スキーマはターゲットメタデータに存在しません" というメッセージが表示されます。同期中に作成されます。続行しますか?[はい] をクリックし**ます。  
   
-## <a name="reverting-to-the-default-database-and-schema"></a>既定のデータベースとスキーマを元に戻す  
-MySQL スキーマと SQL Server スキーマ間のマッピングをカスタマイズする場合は、既定値にマッピングを戻すことができます。  
+## <a name="reverting-to-the-default-database-and-schema"></a>既定のデータベースとスキーマに戻す  
+MySQL スキーマと SQL Server スキーマ間のマッピングをカスタマイズする場合は、マッピングを既定値に戻すことができます。  
   
 **既定のデータベースとスキーマに戻すには**  
   
-1.  スキーマ マッピング タブで、任意の行を選択し をクリックして**既定値にリセット**既定のデータベースとスキーマに戻す。  
+1.  [スキーママッピング] タブで、任意の行を選択し、[既定**値にリセット**] をクリックして既定のデータベースとスキーマに戻します。  
   
 ## <a name="next-steps"></a>次の手順  
-SQL Server または SQL Azure のオブジェクトへの MySQL のオブジェクトの変換を分析する場合は、[変換レポートを作成する](assessing-mysql-databases-for-conversion-mysqltosql.md)できますそれ以外の場合[MySQL データベースのオブジェクトの定義の変換](converting-mysql-databases-mysqltosql.md)SQL にサーバーまたは SQL Azure のスキーマ  
+MySQL オブジェクトから SQL Server または SQL Azure オブジェクトへの変換を分析する場合は、[変換レポートを作成](assessing-mysql-databases-for-conversion-mysqltosql.md)できます。そうしないと、 [mysql データベースオブジェクト定義](converting-mysql-databases-mysqltosql.md)を SQL Server または SQL Azure スキーマに変換できます。  
   
-## <a name="see-also"></a>関連項目  
-[プロジェクトの設定&#40;変換&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-conversion-mysqltosql.md)  
-[Azure SQL DB に接続する&#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-azure-sql-db-mysqltosql.md)  
-[SQL Server - Azure SQL DB への移行 MySQL データベース&#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
-[SQL Server に接続する&#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  
+## <a name="see-also"></a>参照  
+[プロジェクト設定 &#40;変換&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-conversion-mysqltosql.md)  
+[Azure SQL DB &#40;MySQLToSQL&#41;に接続しています](../../ssma/mysql/connecting-to-azure-sql-db-mysqltosql.md)  
+[MySQL データベースの SQL Server への移行-Azure SQL DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[SQL Server &#40;MySQLToSQL&#41;に接続しています](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  
   

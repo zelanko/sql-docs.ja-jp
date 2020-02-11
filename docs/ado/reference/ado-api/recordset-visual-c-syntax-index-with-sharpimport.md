@@ -1,5 +1,5 @@
 ---
-title: 'レコード セット (Visual C 構文のインデックスで #import) |Microsoft Docs'
+title: 'レコードセット (Visual C++ 構文インデックス #import) |Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,13 +16,13 @@ ms.assetid: fe41da71-b607-4329-94da-60964b8efcdc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: be0dd3aba94e228ce32e09660c867ca5385e755b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931279"
 ---
-# <a name="recordset-visual-c-syntax-index-with-import"></a>レコード セット (Visual C 構文のインデックスで #import)
+# <a name="recordset-visual-c-syntax-index-with-import"></a>レコードセット (Visual C++ 構文インデックス #import)
 ## <a name="methods"></a>メソッド  
   
 ```  
@@ -203,5 +203,5 @@ __declspec(property(get=GetStayInSync,put=PutStayInSync)) VARIANT_BOOL
     StayInSync;  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5c579d8d31daff1b03db4c82bcd33642c02f85c5
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72251278"
 ---
 # <a name="sp_xtp_flush_temporal_history-transact-sql"></a>sp_xtp_flush_temporal_history (Transact-sql)
@@ -48,12 +48,12 @@ sys.sp_xtp_flush_temporal_history @schema_name, @object_name
  現在のテーブルまたはテンポラルテーブルの名前  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- 0 (成功) または > 0 (失敗)  
+ 0 (成功) または >0 (失敗)  
   
 ## <a name="permissions"></a>アクセス許可  
- Db_owner アクセス許可が必要です。  
+ Db_owner のアクセス許可が必要です。  
   
-## <a name="see-also"></a>関連項目  
- [メモリ最適化およびシステム バージョン管理されたテンポラル テーブルのパフォーマンスに関する考慮事項](../../relational-databases/tables/memory-optimized-system-versioned-temporal-tables-performance.md)  
+## <a name="see-also"></a>参照  
+ [メモリ最適化されたシステムバージョン管理されたテンポラルテーブルのパフォーマンスに関する考慮事項](../../relational-databases/tables/memory-optimized-system-versioned-temporal-tables-performance.md)  
   
   

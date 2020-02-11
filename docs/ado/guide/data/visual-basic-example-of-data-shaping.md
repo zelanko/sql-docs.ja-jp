@@ -1,5 +1,5 @@
 ---
-title: Visual Basic の例のデータの整形 |Microsoft Docs
+title: データシェイプの Visual Basic の例 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,10 +15,10 @@ ms.assetid: d95dd499-19e2-4ce7-b16e-f56a04a9519c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5a21eda26bab7f5bc5d678c6763c803323ffcff8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923504"
 ---
 # <a name="visual-basic-example-of-data-shaping"></a>Visual Basic のデータ シェイプの例
@@ -90,16 +90,16 @@ End Function
   
 ```  
   
-#### <a name="try-it"></a>手順を次に示します。  
+#### <a name="try-it"></a>試してみる  
   
-1.  標準 EXE の Visual Basic アプリケーション プロジェクトを作成します。  
+1.  Visual Basic の標準 EXE アプリケーションプロジェクトを作成する  
   
-2.  選択**コンポーネント**から、**プロジェクト**Visual Studio のメニュー  
+2.  Visual Studio の [**プロジェクト**] メニューから**コンポーネント**を選択する  
   
-3.  "Microsoft 階層フレキシブル グリッド コントロール 6.0 (OLEDB)"を選択してから、**コンポーネント**ポップアップ ウィンドウをクリック**保存**します。  
+3.  [**コンポーネント**] ポップアップウィンドウで [Microsoft 階層フレキシブルコントロール 6.0 (OLEDB)] を選択し、[**保存**] をクリックします。  
   
-4.  Visual Basic ワークスペースの [ツールボックス] ウィンドウからフレキシブル グリッド コントロールをダブルクリックします。 フレキシブルをこのインスタンスの名前を変更します。  
+4.  [Visual Basic] ワークスペースの [ツールボックス] ペインで、[フレキシブルグリッド] コントロールをダブルクリックします。 このインスタンスの名前を MSHFLEXGRID に変更します。  
   
-5.  上記のコードをコピーして貼り付けます、**コード**ページを既存のコードに置き換えます。  
+5.  前のコードをコピーし、**コード**ページに貼り付けて、既存のコードを置き換えます。  
   
-6.  選択**開始**から、**実行** メニューのアプリケーションを実行します。
+6.  [**実行**] メニューの [**開始**] を選択して、アプリケーションを実行します。

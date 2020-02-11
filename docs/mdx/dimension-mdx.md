@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 58bee93a4cef37a8a5a71211b292a16392687f12
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67999961"
 ---
 # <a name="dimension-mdx"></a>Dimension (MDX)
@@ -37,16 +37,16 @@ Member_Expression.Dimension
   
 ## <a name="arguments"></a>引数  
  *Hierarchy_Expression*  
- 階層を返す有効な多次元式 (MDX) 式。  
+ 階層を返す有効な多次元式 (MDX) 式です。  
   
  *Level_Expression*  
- レベルを返す有効な多次元式 (MDX) 式。  
+ レベルを返す有効な多次元式 (MDX) 式です。  
   
- *メンバー式*  
+ *Member_Expression*  
  メンバーを 1 つ返す有効な多次元式 (MDX) 式です。  
   
-### <a name="examples"></a>使用例  
- 次の例では、**ディメンション**と組み合わせて、関数、**名前**を指定されたメンバーの階層の名前を返す関数。  
+### <a name="examples"></a>例  
+ 次の例では、 **Name**関数と共に**Dimension**関数を使用して、指定されたメンバーの階層名を返します。  
   
 ```  
 WITH member measures.x as [Product].[Product Model Lines].[Model].&[HL Road Tire].Dimension.Name  
@@ -54,7 +54,7 @@ SELECT measures.x on 0
 FROM [Adventure Works]  
 ```  
   
- 次の例では、レベルと組み合わせて、Dimension 関数および Count 関数を使用して、指定されたメンバーを含む階層内のレベル数を返します。  
+ 次の例では、ディメンション関数をレベルおよびカウント関数と組み合わせて使用して、指定されたメンバーを含む階層内のレベル数を返します。  
   
 ```  
 WITH member measures.x as [Product].[Product Model Lines].[Model].&[HL Road Tire].Dimension.Levels.Count  
@@ -62,7 +62,7 @@ SELECT measures.x on 0
 FROM [Adventure Works]  
 ```  
   
- 次の例では、**ディメンション**と組み合わせて、関数、**メンバー**と**カウント**関数、階層のメンバーの数を返す指定されたメンバーを含むです。  
+ 次の例では、**ディメンション**関数を**メンバー**および**カウント**関数と共に使用して、指定されたメンバーを含む階層内のメンバーの数を返します。  
   
 ```  
 WITH member measures.x as [Product].[Product Model Lines].[Model].&[HL Road Tire].Dimension.Members.Count  
@@ -70,11 +70,11 @@ SELECT measures.x on 0
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [カウント&#40;階層レベル&#41; &#40;MDX&#41;](../mdx/count-hierarchy-levels-mdx.md)   
- [Count &#40;Set&#41; &#40;MDX&#41;](../mdx/count-set-mdx.md)   
- [レベル&#40;MDX&#41;](../mdx/levels-mdx.md)   
- [メンバー&#40;設定&#41; &#40;MDX&#41;](../mdx/members-set-mdx.md)   
- [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>参照  
+ [MDX&#41;&#41; &#40;&#40;階層レベルのカウント](../mdx/count-hierarchy-levels-mdx.md)   
+ [MDX&#41;&#41; &#40;設定 &#40;数](../mdx/count-set-mdx.md)   
+ [MDX&#41;&#40;レベル](../mdx/levels-mdx.md)   
+ [メンバー &#40;設定&#41; &#40;MDX&#41;](../mdx/members-set-mdx.md)   
+ [Mdx 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

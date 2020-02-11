@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b96e0bb7f28349e4d0b0ed5225f9b29e58de982f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62637851"
 ---
 # <a name="create-alter-and-drop-secondary-selective-xml-indexes"></a>選択的セカンダリ XML インデックスの作成、変更、および削除
@@ -22,9 +22,9 @@ ms.locfileid: "62637851"
   
 ##  <a name="create"></a> 選択的セカンダリ XML インデックスの作成  
   
-### <a name="how-to-create-a-secondary-selective-xml-index"></a>操作方法: 選択的セカンダリ XML インデックスの作成  
+### <a name="how-to-create-a-secondary-selective-xml-index"></a>選択的セカンダリ XML インデックスを作成する方法  
  **Transact-SQL を使用して選択的セカンダリ XML インデックスを作成する**  
- CREATE SELECTIVE XML INDEX ステートメントを呼び出して選択的セカンダリ XML インデックスを作成します。 詳細については、次を参照してください。 [CREATE XML INDEX&#40;選択的 XML インデックス&#41;] (~ t-sql/statements/create-xml-index-selective-xml-indexes/。  
+ CREATE SELECTIVE XML INDEX ステートメントを呼び出して選択的セカンダリ XML インデックスを作成します。 詳細については、[XML インデックス &#40;選択的 XML インデックスの作成&#41;] (~/t-sql/statements/create-xml-index-selective-xml-indexes.  
   
  **例**  
   
@@ -44,11 +44,11 @@ FOR
 ##  <a name="alter"></a> 選択的セカンダリ XML インデックスの変更  
  ALTER ステートメントは、選択的セカンダリ XML インデックスではサポートされません。 選択的セカンダリ XML インデックスを変更するには、既存のインデックスを削除し、再作成します。  
   
-### <a name="how-to-alter-a-secondary-selective-xml-index"></a>操作方法:選択的セカンダリ XML インデックスを変更します。  
+### <a name="how-to-alter-a-secondary-selective-xml-index"></a>選択的セカンダリ XML インデックスを変更する方法  
  **Transact-SQL を使用して選択的セカンダリ XML インデックスを変更する**  
  1.  DROP INDEX ステートメントを呼び出して既存の選択的セカンダリ XML インデックスを削除します。 詳細については、「[DROP INDEX &#40;選択的 XML インデックス&#41;](../indexes/indexes.md)」を参照してください。  
   
-2.  CREATE XML INDEX ステートメントを呼び出すことによって必要なオプションのインデックスを再作成します。 詳細については、次を参照してください。 [CREATE XML INDEX&#40;選択的 XML インデックス&#41;] (~ t-sql/statements/create-xml-index-selective-xml-indexes/。  
+2.  CREATE XML INDEX ステートメントを呼び出すことによって必要なオプションのインデックスを再作成します。 詳細については、[XML インデックス &#40;選択的 XML インデックスの作成&#41;] (~/t-sql/statements/create-xml-index-selective-xml-indexes.  
   
  **例**  
   
@@ -69,7 +69,7 @@ FOR
   
 ##  <a name="drop"></a> 選択的セカンダリ XML インデックスの削除  
   
-### <a name="how-to-drop-a-secondary-selective-xml-index"></a>操作方法: 選択的セカンダリ XML インデックスのドロップ  
+### <a name="how-to-drop-a-secondary-selective-xml-index"></a>選択的セカンダリ XML インデックスを削除する方法  
  **Transact-SQL を使用して選択的セカンダリ XML インデックスを削除する**  
  DROP INDEX ステートメントを呼び出して選択的セカンダリ XML インデックスを削除します。 詳細については、「[DROP INDEX &#40;選択的 XML インデックス&#41;](../indexes/indexes.md)」を参照してください。  
   

@@ -1,5 +1,5 @@
 ---
-title: sp_change_users_login (Transact-SQL) |Microsoft Docs
+title: sp_change_users_login (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 12/13/2016
 ms.prod: sql
@@ -18,16 +18,16 @@ ms.assetid: 1554b39f-274b-4ef8-898e-9e246b474333
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 0594066f044288757e5e31f8e078fabb4c2f3775
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68120227"
 ---
-# <a name="sp_change_users_login-transact-sql"></a>sp_change_users_login (Transact-SQL)
+# <a name="sp_change_users_login-transact-sql"></a>sp_change_users_login (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  マップする既存のデータベース ユーザー、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインします。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 使用[ALTER USER](../../t-sql/statements/alter-user-transact-sql.md)代わりにします。  
+  既存の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースユーザーをログインにマップします。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]代わりに[ALTER USER](../../t-sql/statements/alter-user-transact-sql.md)を使用してください。  
   
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -44,38 +44,38 @@ sp_change_users_login [ @Action = ] 'action'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @Action=] '*アクション*'  
- プロシージャにより実行されるアクションの説明です。 *アクション*は**varchar (10)** します。 *アクション*値は次のいずれかであることができます。  
+ [ @Action= ]'*action*'  
+ プロシージャにより実行されるアクションの説明です。 *action*は**varchar (10)** です。 *アクション*には、次のいずれかの値を指定できます。  
   
-|[値]|説明|  
+|値|[説明]|  
 |-----------|-----------------|  
-|**Auto_Fix**|現在のデータベース内の sys.database_principals システム カタログ ビューにあるユーザー エントリを、同じ名前の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインにリンクします。 同じ名前のログインが存在しない場合は、新しく作成されます。 結果を**Auto_Fix**ステートメントを正しいリンクが実際に作成されたことを確認します。 使用しないでください**Auto_Fix**セキュリティに影響する場合。<br /><br /> 使用すると**Auto_Fix**を指定する必要があります*ユーザー*と*パスワード*ログインが存在しない場合は、それ以外の場合を指定してください*ユーザー*が*パスワード*は無視されます。 *ログイン*NULL にする必要があります。 *ユーザー*現在のデータベースで有効なユーザーである必要があります。 ログインにマップされている別のユーザーを含めることはできません。|  
-|**Report**|現在のデータベース内で、どのログインにもリンクされていないユーザーと、対応するセキュリティ識別子 (SID) を一覧表示します。 *ユーザー*、*ログイン*、および*パスワード*NULL であるか、指定されていません。<br /><br /> レポート オプションのシステム テーブルを使用してクエリに置き換えると、エントリを比較**sys.server_prinicpals**内のエントリに**sys.database_principals**します。|  
-|**Update_One**|指定したリンク*ユーザー*を既存の現在のデータベースで[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]*ログイン*します。 *ユーザー*と*ログイン*指定する必要があります。 *パスワード*NULL であるか、指定されていません。|  
+|**Auto_Fix**|現在のデータベース内の sys.database_principals システム カタログ ビューにあるユーザー エントリを、同じ名前の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインにリンクします。 同じ名前のログインが存在しない場合は、新しく作成されます。 **Auto_Fix**ステートメントの結果を調べて、正しいリンクが実際に作成されていることを確認します。 セキュリティを重視する状況では**Auto_Fix**を使用しないようにしてください。<br /><br /> **Auto_Fix**を使用する場合は、ログインがまだ存在しない場合は*ユーザー*と*パスワード*を指定する必要があります。そうでない場合は、*ユーザー*を指定する必要がありますが、*パスワード*は無視されます。 *ログイン*は NULL にする必要があります。 *ユーザー*は、現在のデータベースの有効なユーザーである必要があります。 ログインに別のユーザーをマップすることはできません。|  
+|**Report**|現在のデータベース内で、どのログインにもリンクされていないユーザーと、対応するセキュリティ識別子 (SID) を一覧表示します。 *ユーザー*、*ログイン*、および*パスワード*は NULL であるか、指定されていません。<br /><br /> システムテーブルを使用するクエリでレポートオプションを置き換えるには、 **server_prinicpals**内のエントリを、 **database_principals**のエントリと比較します。|  
+|**Update_One**|現在のデータベース内の指定された*ユーザー*を[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]既存の*ログイン*にリンクします。 *ユーザー*と*ログイン*を指定する必要があります。 *パスワード*は NULL であるか、指定されていません。|  
   
- [ @UserNamePattern= ] '*user*'  
- 現在のデータベース内のユーザーの名前です。 *ユーザー*は**sysname**、既定値は NULL です。  
+ [ @UserNamePattern= ]'*user*'  
+ 現在のデータベース内のユーザーの名前を指定します。 *user*の部分は**sysname**で、既定値は NULL です。  
   
- [ @LoginName= ] '*login*'  
- 名前を指定する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインします。 *login* のデータ型は **sysname** で、既定値は NULL です。  
+ [ @LoginName= ]'*login*'  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインの名前を指定します。 *login*は**sysname**,、既定値は NULL です。  
   
- [ @Password= ] '*password*'  
- 新しいに割り当てられているパスワード[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を指定して作成したログイン**Auto_Fix**します。 一致するログインが既に存在する場合、ユーザーとログインがマップと*パスワード*は無視されます。 Sp_change_users_login を作成し、新しい一致するログインが存在しない場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインと割り当てます*パスワード*新しいログインのパスワードとして。 *パスワード*は**sysname**NULL にする必要がありません。  
+ [ @Password= ]'*パスワード*'  
+ Auto_Fix を指定して作成さ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]れた新しいログインに割り当て**** られたパスワードを指定します。 一致するログインが既に存在する場合、ユーザーとログインはマップされ、*パスワード*は無視されます。 一致するログインが存在しない場合、sp_change_users_login によっ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]て新しいログインが作成され、*パスワード*が新しいログインのパスワードとして割り当てられます。 *パスワード*は**sysname**であり、NULL にすることはできません。  
   
-> **重要!!** 常に使用して、[強力なパスワード。](../../relational-databases/security/strong-passwords.md)
+> **重要!!** 常に[強力なパスワード](../../relational-databases/security/strong-passwords.md)を使用してください。
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
-|UserName|**sysname**|データベース ユーザー名。|  
-|UserSID|**varbinary(85)**|ユーザーのセキュリティ識別子です。|  
+|UserName|**sysname**|データベースユーザー名。|  
+|UserSID|**varbinary (85)**|ユーザーのセキュリティ識別子。|  
   
-## <a name="remarks"></a>コメント  
- sp_change_users_login は、現在のデータベースのデータベース ユーザーを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインとリンクする場合に使用します。 ユーザーのログインが既に変更されている場合は、sp_change_users_login を使用してユーザーを新しいログインにリンクすれば、ユーザーの権限が失われることはありません。 新しい*ログイン*sa にすることはできません、*ユーザー*dbo、guest、または INFORMATION_SCHEMA ユーザーにすることはできません。  
+## <a name="remarks"></a>解説  
+ sp_change_users_login は、現在のデータベースのデータベース ユーザーを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインとリンクする場合に使用します。 ユーザーのログインが既に変更されている場合は、sp_change_users_login を使用してユーザーを新しいログインにリンクすれば、ユーザーの権限が失われることはありません。 新しい*ログイン*を sa にすることはできません。また、*ユーザー*を dbo、guest、または INFORMATION_SCHEMA ユーザーにすることはできません。  
   
  sp_change_users_login は、データベース ユーザーを Windows レベルのプリンシパル、証明書、または非対称キーにマップする場合は使用できません。  
   
@@ -84,9 +84,9 @@ sp_change_users_login [ @Action = ] 'action'
  ユーザー定義のトランザクション内では、sp_change_users_login は実行できません。  
   
 ## <a name="permissions"></a>アクセス許可  
- db_owner 固定データベース ロールのメンバーシップが必要です。 Sysadmin 固定サーバー ロールのメンバーだけを指定できます、 **Auto_Fix**オプション。  
+ db_owner 固定データベース ロールのメンバーシップが必要です。 **Auto_Fix**オプションを指定できるのは、sysadmin 固定サーバーロールのメンバーだけです。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-showing-a-report-of-the-current-user-to-login-mappings"></a>A. 現在のユーザーとログインの対応関係を示すレポートを表示する  
  次の例では、現在のデータベース内のユーザーと各ユーザーのセキュリティ識別子 (SID) を示すレポートを作成します。  
@@ -95,8 +95,8 @@ sp_change_users_login [ @Action = ] 'action'
 EXEC sp_change_users_login 'Report';  
 ```  
   
-### <a name="b-mapping-a-database-user-to-a-new-sql-server-login"></a>B. 新しい SQL Server ログインにデータベース ユーザーのマッピング  
- 次の例では、データベース ユーザーは、新しい関連付け[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインします。 データベース ユーザー `MB-Sales`、再マップが別のログインに割り当て先となる最初のログインに`MaryB`します。  
+### <a name="b-mapping-a-database-user-to-a-new-sql-server-login"></a>B. 新しい SQL Server ログインへのデータベースユーザーのマッピング  
+ 次の例では、データベースユーザーが新しい[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインに関連付けられています。 最初に`MB-Sales`別のログインにマップされるデータベースユーザーは、ログイン`MaryB`に再マップされます。  
   
 ```  
 --Create the new login.  
@@ -109,8 +109,8 @@ EXEC sp_change_users_login 'Update_One', 'MB-Sales', 'MaryB';
 GO  
 ```  
   
-### <a name="c-automatically-mapping-a-user-to-a-login-creating-a-new-login-if-it-is-required"></a>C. 新しいログインを作成する必要がある場合、ログインにユーザーを自動的にマッピング  
- 次の例は、使用する方法を示します`Auto_Fix`、既存のユーザーを同じ名前のログインにマップするか、作成、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログイン`Mary`パスワードを持つ`B3r12-3x$098f6`場合、ログイン`Mary`存在しません。  
+### <a name="c-automatically-mapping-a-user-to-a-login-creating-a-new-login-if-it-is-required"></a>C. ユーザーをログインに自動的にマップし、必要に応じて新しいログインを作成する  
+ 次の例では、を`Auto_Fix`使用して、既存のユーザーを同じ名前のログインにマップする方法、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]また`Mary`はログイン`Mary`が存在`B3r12-3x$098f6`しない場合にパスワードを持つログインを作成する方法を示します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -119,12 +119,12 @@ EXEC sp_change_users_login 'Auto_Fix', 'Mary', NULL, 'B3r12-3x$098f6';
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [セキュリティ ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
- [sp_adduser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md)   
- [sp_helplogins &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md)   
- [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)  
+## <a name="see-also"></a>参照  
+ [セキュリティストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;ログインの作成](../../t-sql/statements/create-login-transact-sql.md)   
+ [sp_adduser &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md)   
+ [sp_helplogins &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md)   
+ [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [database_principals &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)  
   
   

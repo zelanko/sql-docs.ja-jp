@@ -11,13 +11,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ec8fa09f34b27d9638f505981f11de960cb4d5b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62520162"
 ---
-# <a name="localdberrorcannotaccessinstancefolder"></a>LOCALDB_ERROR_CANNOT_ACCESS_INSTANCE_FOLDER
+# <a name="localdb_error_cannot_access_instance_folder"></a>LOCALDB_ERROR_CANNOT_ACCESS_INSTANCE_FOLDER
     
 ## <a name="details"></a>詳細  
   
@@ -27,7 +27,7 @@ ms.locfileid: "62520162"
 |イベント ID|261|  
 |イベント ソース|SQL Server Local Database Runtime 12.0|  
 |コンポーネント|Local Database Runtime API|  
-|メッセージ テキスト|ローカル データベース インスタンスのフォルダーにアクセスできません: %%LOCALAPPDATA%%\Microsoft\Microsoft SQL Server のローカル DB\Instances\\< インスタンス名\>します。|  
+|メッセージ テキスト|ローカルデータベースインスタンスフォルダーにアクセスできません:%% LOCALAPPDATA%% \ Microsoft\Microsoft SQL Server ローカル\\ db\ インスタンス\><インスタンス名。|  
   
 ## <a name="explanation"></a>説明  
  インスタンス フォルダーにアクセスできません。  
