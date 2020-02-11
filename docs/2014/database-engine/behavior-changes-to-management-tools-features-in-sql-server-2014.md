@@ -1,5 +1,5 @@
 ---
-title: 動作の変更の管理ツールで SQL Server 2014 の機能 |Microsoft Docs
+title: SQL Server 2014 | の管理ツール機能の動作の変更Microsoft Docs
 ms.custom: ''
 ms.date: 11/27/2018
 ms.prod: sql-server-2014
@@ -11,19 +11,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6319d9b1c5e091297e371c03949daf73e9551bd7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62787948"
 ---
 # <a name="behavior-changes-to-management-tools-features-in-sql-server-2014"></a>SQL Server 2014 における管理ツール機能の動作の変更
   このトピックでは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理ツール機能の動作変更について説明します。 動作変更によって、 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] の機能や操作方法が [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の以前のバージョンと異なっています。  
   
-## <a name="behavior-changes-in-includesssql14includessssql14-mdmd"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] での動作変更  
+## <a name="behavior-changes-in-includesssql14includessssql14-mdmd"></a>
+  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] での動作変更  
  今後、情報が追加されていきます。  
 
-## <a name="previous-versions"></a> 非常に古いバージョンの SQL Server のアーカイブされたドキュメント
+## <a name="previous-versions"></a>以前のバージョンの SQL Server に関するアーカイブ済みドキュメント
 
 [!INCLUDE[Archived documentation for very old versions of SQL Server](../includes/paragraph-content/previous-versions-archive-documentation-sql-server.md)]
 

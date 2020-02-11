@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 42791ed9e60ad633ee1331dfc8326d58c0546000
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022555"
 ---
 # <a name="administrative-considerations-for-oracle-publishers"></a>Oracle パブリッシャーの管理上の注意点
@@ -29,10 +29,14 @@ ms.locfileid: "63022555"
  Oracle 上のトランザクション パブリケーションでは、トリガーを使用して変更を追跡します。 パブリッシュされたテーブルに対する変更がサブスクライバーにレプリケートされるのは、更新、挿入、削除の際にレプリケーション トリガーが起動されたときだけです。 Oracle ユーティリティの Oracle インポートおよび SQL*Loader には、レプリケートされたテーブルにこれらのユーティリティから行を挿入したときにトリガーを起動するかどうかを指定するオプションがあります。  
   
 ### <a name="oracle-import"></a>Oracle インポート  
- Oracle インポートでは、 **ignore** オプションを「y」または「n」に設定できます (既定値は「n」です)。 **ignore** を「n」に設定すると、インポート時にテーブルが削除されて再作成されます。 このときレプリケーション トリガーが削除され、レプリケーションが無効になります。 **ignore** を「y」に設定すると、既存のテーブルに行が読み込まれ、レプリケーション トリガーが起動されます。 したがって、レプリケートされるテーブルに Import ツールでインポートする際には、 **ignore** を「y」に設定してください。  
+ Oracle インポートでは、 **ignore** オプションを「y」または「n」に設定できます (既定値は「n」です)。 
+  **ignore** を「n」に設定すると、インポート時にテーブルが削除されて再作成されます。 このときレプリケーション トリガーが削除され、レプリケーションが無効になります。 
+  **ignore** を「y」に設定すると、既存のテーブルに行が読み込まれ、レプリケーション トリガーが起動されます。 したがって、レプリケートされるテーブルに Import ツールでインポートする際には、 **ignore** を「y」に設定してください。  
   
 ### <a name="sqlloader"></a>SQL*Loader  
- SQL\*Loader では、**direct** オプションを「true」または「false」に設定できます (既定値は「false」です)。 **direct** を「false」に設定すると、通常の INSERT ステートメントを使用して行が挿入され、レプリケーション トリガーが起動されます。 **direct** を「true」に設定すると、読み込みが最適化され、トリガーは起動されません。 したがって、SQL*Loader ツールでレプリケートされるテーブルへの読み込みを行う際には、 **direct** を「false」に設定してください。  
+ SQL\*Loader では、**direct** オプションを「true」または「false」に設定できます (既定値は「false」です)。 
+  **direct** を「false」に設定すると、通常の INSERT ステートメントを使用して行が挿入され、レプリケーション トリガーが起動されます。 
+  **direct** を「true」に設定すると、読み込みが最適化され、トリガーは起動されません。 したがって、SQL*Loader ツールでレプリケートされるテーブルへの読み込みを行う際には、 **direct** を「false」に設定してください。  
   
 ## <a name="making-changes-to-published-objects"></a>パブリッシュされたオブジェクトに対する変更  
  以下の操作には、特別な注意は必要ありません。  
@@ -62,9 +66,9 @@ ms.locfileid: "63022555"
   
  パブリッシャーの削除と再構成の詳細については、「 [Troubleshooting Oracle Publishers](troubleshooting-oracle-publishers.md)」の「パブリッシャーの再構成が必要になる変更」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Oracle パブリッシャーの構成](configure-an-oracle-publisher.md)   
- [Oracle パブリッシャーの設計上の注意点および制限](design-considerations-and-limitations-for-oracle-publishers.md)   
+ [Oracle パブリッシャーの設計上の考慮事項と制限事項](design-considerations-and-limitations-for-oracle-publishers.md)   
  [Oracle パブリッシングの概要](oracle-publishing-overview.md)  
   
   

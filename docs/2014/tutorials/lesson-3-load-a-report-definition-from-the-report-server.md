@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 3: レポート サーバーからレポート定義を読み込む |Microsoft Docs'
+title: 'レッスン 3: レポートサーバーからのレポート定義の読み込み |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,18 +11,18 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: d4c51002c8c829417c63a0dd6c59a3538604fd81
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63042518"
 ---
-# <a name="lesson-3-load-a-report-definition-from-the-report-server"></a>レッスン 3: レポート サーバーからのレポート定義の読み込み
+# <a name="lesson-3-load-a-report-definition-from-the-report-server"></a>レッスン 3 : レポート サーバーからのレポート定義の読み込み
   プロジェクトを作成し、RDL スキーマからクラスを生成すると、レポート定義をレポート サーバーから読み込めるようになります。  
   
 ### <a name="to-load-a-report-definition"></a>レポート定義を読み込むには  
   
-1.  上部にあるプライベート フィールドを追加、`ReportUpdater`クラス (モジュールを使用する場合[!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) の`Report`クラス。 このフィールドは、アプリケーションの動作中、レポート サーバーから読み込んだレポートへの参照を保持するために使用されます。  
+1.  クラスの先頭`ReportUpdater`にプライベートフィールド (を使用して[!INCLUDE[vbprvb](../includes/vbprvb-md.md)]いる場合はモジュール) `Report`を追加します。 このフィールドは、アプリケーションの動作中、レポート サーバーから読み込んだレポートへの参照を保持するために使用されます。  
   
     ```csharp  
     private Report _report;  
@@ -32,7 +32,7 @@ ms.locfileid: "63042518"
     Private m_report As Report  
     ```  
   
-2.  Program.cs ファイル ([!INCLUDE[vbprvb](../includes/vbprvb-md.md)] では Module1.vb) で、`LoadReportDefinition()` メソッドのコードを次のコードに置き換えます。  
+2.  Program.cs ファイル (`LoadReportDefinition()` では Module1.vb) で、[!INCLUDE[vbprvb](../includes/vbprvb-md.md)] メソッドのコードを次のコードに置き換えます。  
   
     ```csharp  
     private void LoadReportDefinition()  
@@ -97,10 +97,10 @@ ms.locfileid: "63042518"
     ```  
   
 ## <a name="next-lesson"></a>次のレッスン  
- 次のレッスンでは、レポート サーバーから読み込んだレポート定義を更新するコードを記述します。 「[レッスン 4:レポート定義をプログラムで更新](../../2014/tutorials/lesson-4-update-the-report-definition-programmatically.md)します。  
+ 次のレッスンでは、レポート サーバーから読み込んだレポート定義を更新するコードを記述します。 「[レッスン 4: プログラムによるレポート定義の更新」を](../../2014/tutorials/lesson-4-update-the-report-definition-programmatically.md)参照してください。  
   
 ## <a name="see-also"></a>参照  
- [RDL スキーマから生成されたクラスを使用してレポートを更新&#40;SSRS チュートリアル&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
+ [RDL スキーマから生成されたクラスを使用したレポートの更新 SSRS チュートリアル &#40;&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
  [レポート定義言語 &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
   
   

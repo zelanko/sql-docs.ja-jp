@@ -11,13 +11,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 25ae3cee8e08292297449914bfb6e40dfc1b4b3a
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70175456"
 ---
-# <a name="lesson-7-move-your-data-files-to-azure-storage"></a>レッスン 7: データファイルを Azure Storage に移動する
+# <a name="lesson-7-move-your-data-files-to-azure-storage"></a>レッスン 7: Azure Storage にデータ ファイルを移動する
   このレッスンでは、(SQL Server インスタンスではなく) Azure Storage にデータファイルを移動する方法を学習します。 このレッスンを続行するには、レッスン 4、5、および 6 を実行する必要はありません。  
   
  データファイルを Azure Storage に移動するには、 `ALTER DATABASE`ステートメントを使用します。これは、データファイルの場所を変更するのに役立ちます。  
@@ -63,7 +63,7 @@ ms.locfileid: "70175456"
   
     ```  
   
-3.  これを実行すると、次のメッセージが表示されます。"ファイル" TestDB1Alter "はシステムカタログで変更されています。 新しいパスは、次回データベースを起動するときに使用されます。  
+3.  これを実行すると、システムカタログで "ファイル" TestDB1Alter "が変更されていることがわかります。 新しいパスは、次回データベースを起動するときに使用されます。  
   
 4.  続いて、データベースをオフラインにします。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "70175456"
   
     ```  
   
-5.  ここで、次のいずれかの方法を使用して、データファイルを Azure Storage にコピーする必要があります。[Azcopy ツール](https://blogs.msdn.com/b/windowsazurestorage/archive/2012/12/03/azcopy-uploading-downloading-files-for-windows-azure-blobs.aspx)、 [Put Page](https://msdn.microsoft.com/library/azure/ee691975.aspx)、 [storage クライアントライブラリリファレンス](https://msdn.microsoft.com/library/azure/dn261237.aspx)、またはサードパーティのストレージエクスプローラーツール。  
+5.  次に、 [Azcopy ツール](https://blogs.msdn.com/b/windowsazurestorage/archive/2012/12/03/azcopy-uploading-downloading-files-for-windows-azure-blobs.aspx)、 [Put Page](https://msdn.microsoft.com/library/azure/ee691975.aspx)、 [storage Client Library Reference](https://msdn.microsoft.com/library/azure/dn261237.aspx)、またはサードパーティのストレージエクスプローラーツールのいずれかの方法を使用して、データファイルを Azure Storage にコピーする必要があります。  
   
      **重要:** この新しい機能強化を使用する場合は、必ずブロック blob ではなくページ blob を作成してください。  
   
@@ -89,6 +89,6 @@ ms.locfileid: "70175456"
   
  **次のレッスン:**  
   
- [レッスン 8:Azure Storage にデータベースを復元する](lesson-7-restore-a-database-to-a-point-in-time.md)  
+ [レッスン8。Azure Storage にデータベースを復元する](lesson-7-restore-a-database-to-a-point-in-time.md)  
   
   

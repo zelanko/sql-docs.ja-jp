@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ee7d1aba2b468c8aa0420bbacc76aea652ae7556
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62828656"
 ---
 # <a name="ado-net-custom-properties"></a>ADO NET カスタム プロパティ
@@ -28,7 +28,7 @@ ms.locfileid: "62828656"
 |-------------------|---------------|-----------------|  
 |CommandTimeOut|String|SQL コマンドがタイムアウトになる時間を秒数で指定する値です。値が 0 の場合、コマンドはタイムアウトになりません。|  
 |SqlCommand|String|ADO NET ソースがデータの抽出に使用する SQL ステートメントです。<br /><br /> パッケージを読み込むときに、ADO NET ソースが使用する SQL ステートメントでこのプロパティを動的に更新できます。 詳しくは、「[Integration Services &#40;SSIS&#41; の式](../expressions/integration-services-ssis-expressions.md)」および「[パッケージでプロパティ式を使用する](../expressions/use-property-expressions-in-packages.md)」をご覧ください。|  
-|AllowImplicitStringConversion|ブール値|次の処理を実行するかどうかを示す値です。<br /><br /> 外部メタデータの型と文字列型である出力列の型が一致しない場合に、検証エラーを生成しない (DT_WSTR または DT_NTEXT)。<br /><br /> 外部メタデータの型を、出力列が使用する文字列データ型に暗黙的に変換する。<br /><br /> <br /><br /> 既定値は TRUE です。<br /><br /> 詳しくは、「 [ADO NET ソース](ado-net-source.md)」をご覧ください。|  
+|AllowImplicitStringConversion|Boolean|次の処理を実行するかどうかを示す値です。<br /><br /> 外部メタデータの型と文字列型である出力列の型が一致しない場合に、検証エラーを生成しない (DT_WSTR または DT_NTEXT)。<br /><br /> 外部メタデータの型を、出力列が使用する文字列データ型に暗黙的に変換する。<br /><br /> <br /><br /> 既定値は TRUE です。<br /><br /> 詳しくは、「 [ADO NET ソース](ado-net-source.md)」をご覧ください。|  
   
  ADO NET ソースの出力および出力列には、カスタム プロパティがありません。  
   
@@ -42,13 +42,13 @@ ms.locfileid: "62828656"
   
 |プロパティ|データ型|説明|  
 |--------------|---------------|-----------------|  
-|BatchSize|Integer|サーバーに送信されるバッチ内の行数です。 値 **0** は、バッチ サイズが内部バッファーのサイズに一致することを示します。 このプロパティの既定値は **0**です。|  
-|CommandTimeOut|Integer|SQL コマンドがタイムアウトになるまでの最大秒数。この値に **0** を指定すると、時間は無制限になります。 このプロパティの既定値は **0**です。|  
+|BatchSize|整数|サーバーに送信されるバッチ内の行数です。 値 **0** は、バッチ サイズが内部バッファーのサイズに一致することを示します。 このプロパティの既定値は **0**です。|  
+|CommandTimeOut|整数|SQL コマンドがタイムアウトになるまでの最大秒数。この値に **0** を指定すると、時間は無制限になります。 このプロパティの既定値は **0**です。|  
 |TableOrViewName|String|変換先のテーブルまたはビューの名前。|  
   
  詳しくは、「 [ADO NET 変換先](ado-net-destination.md)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
- [共通プロパティ](../common-properties.md)  
+ [Common Properties](../common-properties.md)  
   
   

@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 67767ae7ec3bda62783281385333fef89481f45d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68195597"
 ---
 # <a name="modify-xml-indexes"></a>XML インデックスの変更
@@ -29,7 +29,7 @@ ms.locfileid: "68195597"
   
 -   ALTER INDEX ALL を指定すると、このオプションは XML 以外のインデックスと XML インデックスの両方に適用されます。 一方の種類のインデックスでは無効なインデックス オプションが指定される場合があります。 その場合、ステートメント全体が失敗します。  
   
-## <a name="example-modifying-an-xml-index"></a>例: XML インデックスの変更  
+## <a name="example-modifying-an-xml-index"></a>例 : XML インデックスの変更  
  次の例では、XML インデックスを作成後、 `ALLOW_ROW_LOCKS` オプションを `OFF`に設定してインデックスを変更します。 `ALLOW_ROW_LOCKS` が `OFF`の場合、行はロックされないので、ページレベルおよびテーブルレベルのロックを使用して、指定したインデックスにアクセスできます。  
   
 ```  
@@ -50,7 +50,7 @@ ALTER INDEX PIdx_T_XmlCol on T
 SET (ALLOW_ROW_LOCKS = OFF)  
 ```  
   
-## <a name="example-disabling-and-enabling-an-xml-index"></a>例: XML インデックスの無効化と有効化  
+## <a name="example-disabling-and-enabling-an-xml-index"></a>例 : XML インデックスの無効化と有効化  
  既定では、XML インデックスは有効です。 XML インデックスが無効になっている場合、その XML 列に実行されるクエリでは XML インデックスが使用されません。 XML インデックスを有効にするには、 `ALTER INDEX` オプションを指定した `REBUILD` を使用します。  
   
 ```  
@@ -70,7 +70,7 @@ ALTER INDEX PIdx_T_XmlCol on T REBUILD
 Go  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [XML インデックス &#40;SQL Server&#41;](xml-indexes-sql-server.md)  
   
   

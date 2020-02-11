@@ -14,11 +14,11 @@ ms.assetid: f6e494ed-c7cb-4b1b-bf3b-c4361850b51a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8cb0d006a6d380ed21cbe73f77abe3c2aa42a71f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67901385"
 ---
 # <a name="aggregate-function-limitations"></a>集計関数の制限事項
-1 つの SQL ステートメントの引数としてには、集計関数と非集計列の参照の両方を使用することはできません。
+集計関数と非集計列参照は、両方とも1つの SQL ステートメントの引数として使用することはできません。

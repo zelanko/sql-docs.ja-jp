@@ -13,10 +13,10 @@ ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 89c71bd3864fcaa682d3587a54fc2b32c26e5659
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75255593"
 ---
 # <a name="create-a-composite-domain"></a>複合ドメインの作成
@@ -29,14 +29,14 @@ ms.locfileid: "75255593"
   
  複合ドメインを作成したら、複合ドメインのプロパティの変更、ドメインへの参照データ サービスのアタッチ、ドメイン間のルールの作成、または値のリレーションの作成を行うことができます。 そのためには、 **[ドメイン管理]** ページの **[ドメイン リスト]** で複合ドメインを選択し、適切なタブを選択します。  
   
-##  <a name="BeforeYouBegin"></a>開始する前に  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Prerequisites"></a>応募  
+###  <a name="Prerequisites"></a> 前提条件  
  複合ドメインを作成するには、ナレッジ ベースを作成して開いておく必要があります。また、複合ドメインに追加する単一ドメインを少なくとも 2 つ作成しておく必要があります。  
   
-###  <a name="Security"></a>保護  
+###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a>許可  
+####  <a name="Permissions"></a> Permissions  
  複合ドメインを作成するには、DQS_MAIN データベースの dqs_kb_editor ロールまたは dqs_administrator ロールが必要です。  
   
 ##  <a name="ParsingKnowledgeDiscoveryActivity"></a>ナレッジ検出アクティビティでの複合ドメインの作成  
@@ -76,7 +76,7 @@ ms.locfileid: "75255593"
 6.  
   **[ドメイン リスト]** で、複合ドメインの一部となるドメインを選択し、右矢印をクリックして **"複合ドメイン内のドメイン"** テーブルに移動します。  
   
-7.  [**OK**] をクリックすると、  
+7.  **[OK]** をクリックします。  
   
 ##  <a name="CompositeDomainProperties"></a>複合ドメインのプロパティの設定  
   
@@ -86,8 +86,7 @@ ms.locfileid: "75255593"
 2.  
   **[ドメイン リスト]** で、複合ドメインの一部となるドメインを選択し、右矢印をクリックして **"複合ドメイン内のドメイン"** テーブルに移動します。 これは、作成する複合ドメインに追加できる単一ドメインの一覧です。 既存の複合ドメインに追加されていない既に作成済みの単一ドメインのみを使用できます。 単一ドメインをナレッジ ベースの複数の複合ドメインに追加したり、複合ドメインを別の複合ドメインに追加したりすることはできません。  
   
-3.  
-  **[詳細設定]** をクリックします。  
+3.  **[詳細設定]** をクリックします。  
   
 4.  
   **[解析方法]** で、次のいずれかを選択します。  

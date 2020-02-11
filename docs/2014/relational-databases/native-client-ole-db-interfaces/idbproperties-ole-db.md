@@ -1,5 +1,5 @@
 ---
-title: IDBProperties (OLE DB) |マイクロソフトのドキュメント
+title: IDBProperties (OLE DB) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3b6dada26e15fc83d890b270ad553eb051bb08fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62692187"
 ---
 # <a name="idbproperties-ole-db"></a>IDBProperties (OLE DB)
-  OLE DB 標準仕様では、プロバイダーが `DBPROPINFO::vValues` に VT_EMPTY を指定することを認めています。 ただし、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB は、呼び出すときに常に VT_EMPTY を返します`IDBProperties::GetPropertyInfo`で`DBPROPSET_ROWSETALL`行セット プロパティを取得します。  
+  OLE DB 標準仕様では、プロバイダーが `DBPROPINFO::vValues` に VT_EMPTY を指定することを認めています。 ただし、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB は、を呼び出し`IDBProperties::GetPropertyInfo`て行セット`DBPROPSET_ROWSETALL`のプロパティを取得すると、常に VT_EMPTY を返します。  
   
-## <a name="see-also"></a>関連項目  
- [インターフェイス&#40;OLE DB&#41;](../../database-engine/dev-guide/interfaces-ole-db.md)  
+## <a name="see-also"></a>参照  
+ [インターフェイス &#40;OLE DB&#41;](../../database-engine/dev-guide/interfaces-ole-db.md)  
   
   

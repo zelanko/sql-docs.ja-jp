@@ -17,10 +17,10 @@ ms.assetid: 2c3615d8-4a1a-4162-b096-97aefe6ddc16
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fdcf5a9dcd462562886c7815b500c43145b749a3
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75322229"
 ---
 # <a name="sp_replmonitorchangepublicationthreshold-transact-sql"></a>sp_replmonitorchangepublicationthreshold (Transact-sql)
@@ -28,7 +28,7 @@ ms.locfileid: "75322229"
 
   パブリケーションの監視しきい値を変更します。 レプリケーションを監視するために使用されるこのストアドプロシージャは、ディストリビューター側のディストリビューションデータベースで実行されます。  
   
- ![トピックリンクアイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-sql 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
@@ -54,20 +54,20 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
   
 `[ @publication_type = ] publication_type`パブリケーションの種類。 *publication_type*は**int**,、これらの値のいずれかを指定できます。  
   
-|値|説明|  
+|値|[説明]|  
 |-----------|-----------------|  
 |**0**|トランザクションパブリケーション。|  
-|**1 で保護されたプロセスとして起動されました**|スナップショットパブリケーション。|  
-|**3**|マージ パブリケーションです。|  
+|**1**|スナップショットパブリケーション。|  
+|**2**|マージ パブリケーションです。|  
 |NULL (既定値)|レプリケーションは、パブリケーションの種類を特定しようとします。|  
   
 `[ @metric_id = ] metric_id`変更するパブリケーションしきい値の ID を示します。 *metric_id*は**int**,、既定値は NULL の場合、これらの値のいずれかを指定できます。  
   
-|値|メトリックの名前|  
+|Value|メトリックの名前|  
 |-----------|-----------------|  
-|**1 で保護されたプロセスとして起動されました**|**有効期限**-トランザクションパブリケーションに対するサブスクリプションの期限が迫っていないかを監視します。|  
-|**3**|**latency** -トランザクションパブリケーションに対するサブスクリプションのパフォーマンスを監視します。|  
-|**4/4**|**mergeexpiration 期限**-マージパブリケーションに対するサブスクリプションの期限が迫っていないかを監視します。|  
+|**1**|**有効期限**-トランザクションパブリケーションに対するサブスクリプションの期限が迫っていないかを監視します。|  
+|**2**|**latency** -トランザクションパブリケーションに対するサブスクリプションのパフォーマンスを監視します。|  
+|**4**|**mergeexpiration 期限**-マージパブリケーションに対するサブスクリプションの期限が迫っていないかを監視します。|  
 |**5/5**|**mergeslowrunduration** -低帯域 (ダイヤルアップ) 接続でのマージ同期の期間を監視します。|  
 |**6**|**mergefastrunduration** -高帯域幅ローカルエリアネットワーク (LAN) 接続でのマージ同期の期間を監視します。|  
 |**7**|**mergefastrunspeed** -高帯域 (LAN) 接続でのマージ同期の同期率を監視します。|  
@@ -86,7 +86,7 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  **sp_replmonitorchangepublicationthreshold**は、すべての種類のレプリケーションで使用されます。  
   
 ## <a name="permissions"></a>アクセス許可  
