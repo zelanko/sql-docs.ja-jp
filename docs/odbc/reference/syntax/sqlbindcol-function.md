@@ -20,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: 41a37655-84cd-423f-9daa-e0b47b88dc54
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c1c89ff79ee0fcac37f7b6e231e957e051c9db2e
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.openlocfilehash: de3cbb6582ae4fad74bb2440791e51203140796b
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72289287"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "75656599"
 ---
 # <a name="sqlbindcol-function"></a>SQLBindCol 関数
 **互換性**  
  導入されたバージョン: ODBC 1.0 標準準拠: ISO 92  
   
- **概要**  
+ **まとめ**  
  **SQLBindCol**は、アプリケーションデータバッファーを結果セットの列にバインドします。  
   
 ## <a name="syntax"></a>構文  
@@ -55,7 +55,7 @@ SQLRETURN SQLBindCol(
  代入バインドする結果セット列の番号。 列には、列の順序が0から始まるように番号が付けられます。ここで、column 0 はブックマーク列です。 ブックマークが使用されていない場合 (つまり、SQL_ATTR_USE_BOOKMARKS statement 属性が SQL_UB_OFF に設定されている場合、列番号は1から始まります。  
   
  *TargetType*  
- 代入\**Targetvalueptr*バッファーの C データ型の識別子。 データソースから**Sqlfetch**、 **sqlfetchscroll**、 **Sqlbulkoperations**、または**SQLSetPos**を使用してデータを取得する場合、ドライバーはデータをこの型に変換します。**Sqlbulkoperations**または**SQLSetPos**を使用してデータをデータソースに送信すると、ドライバーはこの型からデータを変換します。 有効な C データ型と型識別子の一覧については、「付録 D: データ型」の「 [c データ型](../../../odbc/reference/appendixes/c-data-types.md)」を参照してください。  
+ 代入\* *Targetvalueptr*バッファーの C データ型の識別子。 データソースから**Sqlfetch**、 **sqlfetchscroll**、 **Sqlbulkoperations**、または**SQLSetPos**を使用してデータを取得する場合、ドライバーはデータをこの型に変換します。**Sqlbulkoperations**または**SQLSetPos**を使用してデータをデータソースに送信すると、ドライバーはこの型からデータを変換します。 有効な C データ型と型識別子の一覧については、「付録 D: データ型」の「 [c データ型](../../../odbc/reference/appendixes/c-data-types.md)」を参照してください。  
   
  *TargetType*引数が interval データ型の場合、既定の間隔の有効桁数 (2) と既定の間隔の秒の有効桁数 (6) が、それぞれのの SQL_DESC_DATETIME_INTERVAL_PRECISION および SQL_DESC_PRECISION の各フィールドに設定されています。 *TargetType*引数が SQL_C_NUMERIC 場合は、既定の有効桁数 (ドライバー定義) と既定の小数点以下桁数 (0) が使用されます。この値は、SQL_DESC_PRECISION および SQL_DESC_SCALE のフィールドで設定されます。 既定の有効桁数または小数点以下桁数が適切でない場合、アプリケーションは、 **SQLSetDescField**または**SQLSetDescRec**の呼び出しによって適切な記述子フィールドを明示的に設定する必要があります。  
   
@@ -67,9 +67,9 @@ SQLRETURN SQLBindCol(
  *Targetvalueptr*が null ポインターの場合、ドライバーは列のデータバッファーをバインド解除します。 アプリケーションでは、SQL_UNBIND オプションを指定して**SQLFreeStmt**を呼び出すことによって、すべての列のバインドを解除できます。 **SQLBindCol**への呼び出しの*targetvalueptr*引数が null ポインターでも、 *StrLen_or_IndPtr*引数が有効な値である場合、アプリケーションは、列のデータバッファーのバインドを解除できますが、長さ/インジケーターバッファーが列にバインドされていてもかまいません。  
   
  *BufferLength*  
- 代入\**Targetvalueptr*バッファーの長さ (バイト単位)。  
+ 代入\* *Targetvalueptr*バッファーの長さ (バイト単位)。  
   
- ドライバーを使用して*BufferLength*の末尾を越えて書き込みを回避するために、 \* *TargetValuePtr* 文字またはバイナリ データなどの可変長データが返されるときにバッファーします。 ドライバーが文字データが返されるときに、null 終端文字がカウントされることを確認\* *TargetValuePtr* します。 \**TargetValuePtr* スペースを含める必要がありますので、null 終了文字またはドライバーにデータを切り捨てるの。  
+ ドライバーは*bufferlength*を使用して、文字やバイナリデータ\*などの可変長データを返すときに*targetvalueptr*バッファーの末尾を越えた書き込みを回避します。 ドライバーは、 \* *targetvalueptr*に文字データを返すときに、null 終端文字をカウントすることに注意してください。 \*したがって、 *Targetvalueptr*には null 終端文字用の領域が含まれている必要があります。指定されていない場合、ドライバーはデータを切り捨てます。  
   
  ドライバーが整数や日付構造などの固定長データを返す場合、ドライバーは*Bufferlength*を無視し、バッファーがデータを保持するのに十分な大きさであると想定します。 このため、アプリケーションで固定長データ用に十分な大きさのバッファーを割り当てることが重要です。または、ドライバーがバッファーの末尾を越えて書き込みを行います。  
   
@@ -102,7 +102,7 @@ SQLRETURN SQLBindCol(
   
  インジケーターバッファーと長さバッファーが個別のバッファーの場合、インジケーターバッファーは SQL_NULL_DATA のみを返すことができますが、長さのバッファーは他のすべての値を返すことができます。  
   
- 詳細については、次を参照してください[SQLBulkOperations 関数](../../../odbc/reference/syntax/sqlbulkoperations-function.md)、 [SQLFetch 関数](../../../odbc/reference/syntax/sqlfetch-function.md)、 [SQLSetPos 関数](../../../odbc/reference/syntax/sqlsetpos-function.md)、および[長さ/インジケーター値を使用する](../../../odbc/reference/develop-app/using-length-and-indicator-values.md)。  
+ 詳細については、「 [Sqlbulkoperations 関数](../../../odbc/reference/syntax/sqlbulkoperations-function.md)」、「 [sqlfetch 関数](../../../odbc/reference/syntax/sqlfetch-function.md)」、「 [SQLSetPos 関数](../../../odbc/reference/syntax/sqlsetpos-function.md)」、および「[長さ/インジケーター値の使用](../../../odbc/reference/develop-app/using-length-and-indicator-values.md)」を参照してください。  
   
  *StrLen_or_IndPtr*が null ポインターの場合、長さまたはインジケーターの値は使用されません。 これはデータをフェッチするときにエラーになり、データは NULL になります。  
   
@@ -119,7 +119,7 @@ SQLRETURN SQLBindCol(
 |01000|一般警告|ドライバー固有の情報メッセージ。 (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
 |07006|制限されたデータ型の属性違反|(DM) *Columnnumber*引数が0で、 *TargetType*引数が SQL_C_BOOKMARK または SQL_C_VARBOOKMARK ではありませんでした。|  
 |07009|無効な記述子のインデックス|引数*Columnnumber*に指定された値が、結果セット内の列の最大数を超えました。|  
-|HY000|一般エラー|特定の SQLSTATE がなく、実装固有の SQLSTATE が定義されていないエラーが発生しました。 *\*MessageText*バッファー内の**SQLGetDiagRec**によって返されるエラーメッセージには、エラーとその原因が記述されています。|  
+|HY000|一般的なエラー|特定の SQLSTATE がなく、実装固有の SQLSTATE が定義されていないエラーが発生しました。 Messagetext バッファーの**SQLGetDiagRec**によって返されるエラーメッセージには、エラーとその原因が記述されています。 * \**|  
 |HY001|メモリ割り当てエラー|ドライバーは、関数の実行または完了をサポートするために必要なメモリを割り当てることができませんでした。|  
 |HY003|アプリケーションバッファーの種類が無効です|引数*TargetType*は、有効なデータ型でも SQL_C_DEFAULT でもありませんでした。|  
 |HY010|関数のシーケンスエラー|(DM) 非同期的に実行する関数が、 *StatementHandle*に関連付けられている接続ハンドルに対して呼び出されました。 この非同期関数は、 **SQLBindCol**が呼び出されたときにまだ実行されていました。<br /><br /> (DM) **Sqlexecute**、 **SQLExecDirect**、または**Sqlmoreresults**が*StatementHandle*に対して呼び出され、SQL_PARAM_DATA_AVAILABLE が返されました。 この関数は、ストリーミングされたすべてのパラメーターのデータが取得される前に呼び出されました。<br /><br /> (DM) 非同期的に実行する関数が*StatementHandle*に対して呼び出されましたが、この関数が呼び出されたときにまだ実行されていました。<br /><br /> (DM) **Sqlexecute**、 **SQLExecDirect**、 **Sqlbulkoperations**、 **SQLSetPos**が*StatementHandle*に対して呼び出され、SQL_NEED_DATA が返されました。 この関数は、実行時データのすべてのパラメーターまたは列に対してデータが送信される前に呼び出されました。|  
@@ -130,7 +130,7 @@ SQLRETURN SQLBindCol(
 |HYT01|接続タイムアウトの期限が切れました|データソースが要求に応答する前に、接続のタイムアウト期間が経過しました。 接続タイムアウト期間は、 **SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT によって設定されます。|  
 |IM001|ドライバーはこの機能をサポートしていません|(DM) *StatementHandle*に関連付けられているドライバーでは、関数はサポートされていません。|  
   
-## <a name="comments"></a>コメント  
+## <a name="comments"></a>説明  
  **SQLBindCol**は、結果セット内の列を、アプリケーションのデータバッファーと長さ/インジケーターバッファーに関連付ける、または*バインド*するために使用されます。 アプリケーションが**Sqlfetch**、 **sqlfetchscroll**、または**SQLSetPos**を呼び出してデータをフェッチすると、ドライバーは、指定されたバッファー内のバインドされた列のデータを返します。詳細については、「 [Sqlfetch 関数](../../../odbc/reference/syntax/sqlfetch-function.md)」を参照してください。 アプリケーションが**Sqlbulkoperations**を呼び出して行を更新または挿入する**ときに行**を更新する場合、ドライバーは、指定されたバッファーからバインドされた列のデータを取得します。詳細については、「 [Sqlbulkoperations 関数](../../../odbc/reference/syntax/sqlbulkoperations-function.md)」または「 [SQLSetPos 関数](../../../odbc/reference/syntax/sqlsetpos-function.md)」を参照してください。 バインディングの詳細については、「[結果の取得 (基本)](../../../odbc/reference/develop-app/retrieving-results-basic.md)」を参照してください。  
   
  列からデータを取得するために、列をバインドする必要はないことに注意してください。 アプリケーションでは、 **SQLGetData**を呼び出して列からデータを取得することもできます。 行の一部の列をバインドし、他の列に対して**SQLGetData**を呼び出すこともできますが、これにはいくつかの制限があります。 詳細については、「 [SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md)」を参照してください。  
@@ -232,7 +232,7 @@ SQLRETURN SQLBindCol(
 ## <a name="buffer-addresses"></a>バッファーアドレス  
  *バッファーアドレス*は、データまたは長さ/インジケーターバッファーの実際のアドレスです。 ドライバーは、バッファーに書き込む直前 (フェッチ時など) に、バッファーアドレスを計算します。 次の式から計算されます。これは、 *Targetvalueptr*と*StrLen_or_IndPtr*引数に指定されたアドレス、バインドオフセット、および行番号を使用します。  
   
- バインドされた*アドレス* + *バインドオフセット*+ ((*行番号*-1) x*要素サイズ*)  
+ *バインド* + されたアドレスの*バインドのオフセット*+ ((*行番号*-1) x*要素のサイズ*)  
   
  ここでは、次の表に示すように、数式の変数を定義します。  
   
@@ -240,7 +240,7 @@ SQLRETURN SQLBindCol(
 |--------------|-----------------|  
 |*バインドされたアドレス*|データバッファーの場合は、 **SQLBindCol**の*targetvalueptr*引数で指定されたアドレス。<br /><br /> 長さ/インジケーターバッファーの場合、 **SQLBindCol**の*StrLen_or_IndPtr*引数で指定されたアドレス。 詳細については、「記述子と SQLBindCol」セクションの「その他のコメント」を参照してください。<br /><br /> バインドされたアドレスが0の場合、前の数式で計算されたアドレスが0以外の場合でも、データ値は返されません。|  
 |*バインドオフセット*|行方向のバインドを使用する場合は、SQL_ATTR_ROW_BIND_OFFSET_PTR statement 属性で指定したアドレスに格納されている値。<br /><br /> 列方向のバインドが使用されている場合、または SQL_ATTR_ROW_BIND_OFFSET_PTR statement 属性の値が null ポインターの場合、*バインドオフセット*は0になります。|  
-|*行番号*|行セット内の行の1から始まる番号。 単一行フェッチ (既定値) の場合、これは1です。|  
+|*Row Number*|行セット内の行の1から始まる番号。 単一行フェッチ (既定値) の場合、これは1です。|  
 |*要素のサイズ*|バインドされた配列内の要素のサイズ。<br /><br /> 列方向のバインドが使用されている場合、長さ/インジケーターバッファーには**sizeof (SQLINTEGER)** が使用されます。 データバッファーの場合は、データ型が可変長の場合は**SQLBindCol**の*bufferlength*引数の値、データ型が固定長の場合はデータ型のサイズになります。<br /><br /> 行方向のバインドを使用する場合、これはデータと長さ/インジケーターバッファーの両方の SQL_ATTR_ROW_BIND_TYPE statement 属性の値になります。|  
   
 ## <a name="descriptors-and-sqlbindcol"></a>記述子と SQLBindCol  
@@ -283,7 +283,7 @@ SQLRETURN SQLBindCol(
 ## <a name="code-example"></a>コード例  
  次の例では、アプリケーションは Customers テーブルに対して**select**ステートメントを実行し、名前で並べ替えられた顧客 id、名前、および電話番号の結果セットを返します。 次に、 **SQLBindCol**を呼び出して、データの列をローカルバッファーにバインドします。 最後に、アプリケーションは**Sqlfetch**を使用してデータの各行をフェッチし、各顧客の名前、ID、および電話番号を出力します。  
   
- コード例については、次を参照してください[SQLBulkOperations 関数](../../../odbc/reference/syntax/sqlbulkoperations-function.md)、 [SQLColumns 関数](../../../odbc/reference/syntax/sqlcolumns-function.md)、 [SQLFetchScroll 関数](../../../odbc/reference/syntax/sqlfetchscroll-function.md)、および[SQLSetPos 関数](../../../odbc/reference/syntax/sqlsetpos-function.md)。  
+ コード例の詳細については、「 [Sqlbulkoperations 関数](../../../odbc/reference/syntax/sqlbulkoperations-function.md)」、「 [sqlcolumns 関数](../../../odbc/reference/syntax/sqlcolumns-function.md)」、「 [sqlbulkoperations 関数](../../../odbc/reference/syntax/sqlfetchscroll-function.md)」、および「 [SQLSetPos 関数](../../../odbc/reference/syntax/sqlsetpos-function.md)」を参照してください。  
   
 ```cpp  
 // SQLBindCol_ref.cpp  
@@ -295,7 +295,7 @@ SQLRETURN SQLBindCol(
 #include <sqlext.h>  
   
 #define NAME_LEN 50  
-#define PHONE_LEN 20  
+#define PHONE_LEN 60
   
 void show_error() {  
    printf("error\n");  
@@ -335,17 +335,24 @@ int main() {
                if (retcode == SQL_SUCCESS || retcode == SQL_SUCCESS_WITH_INFO) {  
   
                   // Bind columns 1, 2, and 3  
-                  retcode = SQLBindCol(hstmt, 1, SQL_C_CHAR, &sCustID, 100, &cbCustID);  
-                  retcode = SQLBindCol(hstmt, 2, SQL_C_CHAR, szName, NAME_LEN, &cbName);  
-                  retcode = SQLBindCol(hstmt, 3, SQL_C_CHAR, szPhone, PHONE_LEN, &cbPhone);   
+                  retcode = SQLBindCol(hstmt, 1, SQL_C_WCHAR, &sCustID, 100, &cbCustID);  
+                  retcode = SQLBindCol(hstmt, 2, SQL_C_WCHAR, szName, NAME_LEN, &cbName);  
+                  retcode = SQLBindCol(hstmt, 3, SQL_C_WCHAR, szPhone, PHONE_LEN, &cbPhone);   
   
                   // Fetch and print each row of data. On an error, display a message and exit.  
-                  for (i ; ; i++) {  
+                  for (int i=0 ; ; i++) {  
                      retcode = SQLFetch(hstmt);  
                      if (retcode == SQL_ERROR || retcode == SQL_SUCCESS_WITH_INFO)  
                         show_error();  
                      if (retcode == SQL_SUCCESS || retcode == SQL_SUCCESS_WITH_INFO)  
-                        wprintf(L"%d: %S %S %S\n", i + 1, sCustID, szName, szPhone);  
+                     {
+                        //replace wprintf with printf
+                        //%S with %ls
+                        //warning C4477: 'wprintf' : format string '%S' requires an argument of type 'char *'
+                        //but variadic argument 2 has type 'SQLWCHAR *'
+                        //wprintf(L"%d: %S %S %S\n", i + 1, sCustID, szName, szPhone);  
+                        printf("%d: %ls %ls %ls\n", i + 1, sCustID, szName, szPhone);  
+                    }    
                      else  
                         break;  
                   }  
@@ -372,7 +379,7 @@ int main() {
   
 ## <a name="related-functions"></a>関連する関数  
   
-|詳細|参照先|  
+|対象|以下を参照してください。|  
 |---------------------------|---------|  
 |結果セットの列に関する情報を返す|[SQLDescribeCol 関数](../../../odbc/reference/syntax/sqldescribecol-function.md)|  
 |データのブロックのフェッチまたは結果セットのスクロール|[SQLFetchScroll 関数](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|  
