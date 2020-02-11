@@ -25,10 +25,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: eb1f2133aa335f266da75e00638dbb484dae1431
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73784714"
 ---
 # <a name="connecting-to-a-data-source-odbc"></a>データ ソースへの接続 (ODBC)
@@ -58,7 +58,7 @@ ms.locfileid: "73784714"
   
 -   ODBC データ ソースを使用せずに接続する場合  
   
- **SQLDriverConnect**接続文字列には、ODBC ドライバーによってサポートされるすべての接続情報を指定する一連のキーワードと値のペアが含まれています。 各ドライバーでは、ドライバーでサポートされるすべての接続情報を表すドライバー固有のキーワード以外に、標準の ODBC キーワード (DSN、FILEDSN, DRIVER、UID、PWD、および SAVEFILE) をサポートします。 **SQLDriverConnect**は、データソースを使用せずに接続するために使用できます。 たとえば、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに "DSN レス" 接続を作成するように設計されたアプリケーションは、ログイン ID、パスワード、ネットワークライブラリ、接続先のサーバー名、および既定値を定義する接続文字列を使用して**SQLDriverConnect**を呼び出すことができます。使用するデータベース。  
+ **SQLDriverConnect**接続文字列には、ODBC ドライバーによってサポートされるすべての接続情報を指定する一連のキーワードと値のペアが含まれています。 各ドライバーでは、ドライバーでサポートされるすべての接続情報を表すドライバー固有のキーワード以外に、標準の ODBC キーワード (DSN、FILEDSN, DRIVER、UID、PWD、および SAVEFILE) をサポートします。 **SQLDriverConnect**は、データソースを使用せずに接続するために使用できます。 たとえば、の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスに対して "DSN レス" 接続を作成するように設計されたアプリケーションは、ログイン ID、パスワード、ネットワークライブラリ、接続先のサーバー名、および使用する既定のデータベースを定義する接続文字列を使用して**SQLDriverConnect**を呼び出すことができます。  
   
  **SQLDriverConnect**を使用する場合、必要な接続情報をユーザーに確認するには、次の2つのオプションがあります。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "73784714"
   
  **SQLBrowseConnect**が成功した接続を完了すると、 **SQLDriverConnect**への後続の呼び出しで使用できる接続文字列が返されます。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは、 **SQLConnect**、 **SQLDriverConnect**、または**SQLBrowseConnect**が正常に実行された場合、常に SQL_SUCCESS_WITH_INFO を返します。 SQL_SUCCESS_WITH_INFO 取得した後に ODBC アプリケーションが**SQLGetDiagRec**を呼び出すと、次のメッセージが表示されます。  
+ Native Client ODBC ドライバーは、 **SQLConnect**、SQLDriverConnect、または**SQLBrowseConnect**が正常に実行された場合、常に SQL_SUCCESS_WITH_INFO を返します。 **** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL_SUCCESS_WITH_INFO 取得した後に ODBC アプリケーションが**SQLGetDiagRec**を呼び出すと、次のメッセージが表示されます。  
   
  5701  
  このメッセージは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が、ユーザーのコンテキストをデータ ソースで定義されている既定のデータベースに登録したことを示します。または、データ ソースに既定のデータベースが定義されていない場合は、接続で使用したログイン ID に対して定義されている既定のデータベースに登録したことを示します。  
@@ -100,7 +100,7 @@ szErrorMsg="[Microsoft][SQL Server Native Client][SQL Server]
        Changed language setting to 'us_english'."  
 ```  
   
- 5701 と 5703 のメッセージは、情報提供だけを目的としているので無視できます。 ただし、SQL_SUCCESS_WITH_INFO リターン コードでは 5701 や 5703 以外のメッセージも返されることがあるので、そのようなリターン コードは無視しないでください。 たとえば、ドライバーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを実行しているサーバーに、古いカタログストアドプロシージャを使用して接続している場合、SQL_SUCCESS_WITH_INFO 後に**SQLGetDiagRec**から返されるエラーの1つは次のようになります。  
+ 5701 と 5703 のメッセージは、情報提供だけを目的としているので無視できます。 ただし、SQL_SUCCESS_WITH_INFO リターン コードでは 5701 や 5703 以外のメッセージも返されることがあるので、そのようなリターン コードは無視しないでください。 たとえば、ドライバーがの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスを実行しているサーバーに、古いカタログストアドプロシージャを使用して接続している場合、SQL_SUCCESS_WITH_INFO 後に**SQLGetDiagRec**によって返されたエラーの1つは次のようになります。  
   
 ```  
 SqlState:   01000  
@@ -112,9 +112,9 @@ szErrorMsg: "[Microsoft][SQL Server Native Client]The ODBC
             Please contact your system administrator."  
 ```  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 接続用のアプリケーションのエラー処理関数は、SQL_NO_DATA を返すまで**SQLGetDiagRec**を呼び出す必要があります。 次に、 *pfNative*コードが5701または5703のメッセージ以外のすべてのメッセージに対して動作します。  
+ 接続用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のアプリケーションのエラー処理関数は、SQL_NO_DATA を返すまで**SQLGetDiagRec**を呼び出す必要があります。 次に、 *pfNative*コードが5701または5703のメッセージ以外のすべてのメッセージに対して動作します。  
   
 ## <a name="see-also"></a>参照  
- [SQL Server &#40;ODBC との通信&#41;](../../relational-databases/native-client-odbc-communication/communicating-with-sql-server-odbc.md)  
+ [ODBC&#41;&#40;SQL Server との通信](../../relational-databases/native-client-odbc-communication/communicating-with-sql-server-odbc.md)  
   
   

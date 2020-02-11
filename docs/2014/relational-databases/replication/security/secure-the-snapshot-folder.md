@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f3612a8b2006978a8098a406a6557d6c9f0f1f7f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62960489"
 ---
 # <a name="secure-the-snapshot-folder"></a>スナップショット フォルダーのセキュリティ保護
@@ -50,8 +50,8 @@ ms.locfileid: "62960489"
   
  FTP でスナップショットにアクセスするためのパスワードの設定と変更については、「 [Secure the Publisher](secure-the-publisher.md)」の「FTP スナップショット配信」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- [スナップショット フォルダーの代替位置](../alternate-snapshot-folder-locations.md)   
+## <a name="see-also"></a>参照  
+ [代替スナップショットフォルダーの場所](../alternate-snapshot-folder-locations.md)   
  [Initialize a Subscription with a Snapshot (スナップショットを使用したサブスクリプションの初期化)](../initialize-a-subscription-with-a-snapshot.md)   
  [Replication Security Best Practices](replication-security-best-practices.md)   
  [SQL Server レプリケーションのセキュリティ](view-and-modify-replication-security-settings.md)   

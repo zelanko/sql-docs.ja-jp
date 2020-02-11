@@ -19,10 +19,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 388b51c79681589d3caec2ee3ea03b1ece6ff459
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73782338"
 ---
 # <a name="bcp_writefmt"></a>bcp_writefmt
@@ -52,12 +52,12 @@ RETCODE bcp_writefmt (
 ## <a name="remarks"></a>解説  
  フォーマット ファイルでは、一括コピーで作成されるデータ ファイルのデータの形式を指定します。 [Bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)および[bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)を呼び出して、データファイルの形式を定義します。 **bcp_writefmt**は、この定義を*szformatfile*によって参照されるファイルに保存します。 詳細については、「 [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)」を参照してください。  
   
- **Bcp**データフォーマットファイルの構造の詳細については、「 [Bcp ユーティリティ&#40;SQL Server&#41;を使用した一括データのインポートとエクスポート](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)」を参照してください。  
+ **Bcp**データフォーマットファイルの構造の詳細については、「 [bcp ユーティリティ &#40;SQL Server&#41;を使用した一括データのインポートとエクスポート](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)」を参照してください。  
   
  保存されたフォーマットファイルを読み込むには、 [bcp_readfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md)を使用します。  
   
 > [!NOTE]  
->  **Bcp_writefmt**によって生成されるフォーマットファイルは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バージョン7.0 以降で配布されたバージョンの**bcp**ユーティリティでのみサポートされます。  
+>  **Bcp_writefmt**によって生成されるフォーマットファイルは、バージョン 7.0 **** 以降で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]配布されるバージョンの bcp ユーティリティでのみサポートされます。  
   
 ## <a name="example"></a>例  
   

@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6f7b166ae15e403e2a84bc3a7f3902350c805788
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73760592"
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>大きな CLR ユーザー定義型 (ODBC)
@@ -37,7 +37,7 @@ ms.locfileid: "73760592"
   
  次の表に、パラメーターおよび結果セットでのデータ型のマッピングを示します。  
   
-|SQL Server データ型|SQL データ型|値|  
+|SQL Server のデータ型|SQL データ型|Value|  
 |--------------------------|-------------------|-----------|  
 |CLR UDT|SQL_SS_UDT|-151 (sqlncli.h)|  
   
@@ -133,20 +133,20 @@ ms.locfileid: "73760592"
 |変換対象|SQL_SS_UDT|  
 |-----------------------------|------------------|  
 |SQL_C_WCHAR|さ|  
-|SQL_C_BINARY|Supported|  
+|SQL_C_BINARY|サポートされています|  
 |SQL_C_CHAR|さ|  
   
- \* バイナリデータは16進数の文字列に変換されます。  
+ \*バイナリデータは16進数の文字列に変換されます。  
   
  C から SQL データ型への変換としてサポートされているものは次のとおりです。  
   
 |変換対象|SQL_SS_UDT|  
 |-----------------------------|------------------|  
 |SQL_C_WCHAR|さ|  
-|SQL_C_BINARY|Supported|  
+|SQL_C_BINARY|サポートされています|  
 |SQL_C_CHAR|さ|  
   
- バイナリデータ変換のための16進文字列 \* します。  
+ \*16進文字列からバイナリデータへの変換が行われます。  
   
 ## <a name="sql_variant-support-for-udts"></a>SQL_VARIANT による UDT のサポート  
  SQL_VARIANT 列では UDT がサポートされません。  
@@ -213,7 +213,7 @@ ms.locfileid: "73760592"
 ### <a name="sqlgetdescrec"></a>SQLGetDescRec  
  UDT に対して返される値は次のとおりです。  
   
-|SQL データ型|型|SubType|長さ|有効桁数|Scale|  
+|SQL データ型|種類|SubType|Length|Precision|スケール|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
 |SQL_SS_UDT<br /><br /> (8,000 バイト以下の長さ)|SQL_SS_UDT|0|*n*|n|0|  
 |SQL_SS_UDT<br /><br /> (8,000 バイトを超える長さ)|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  
@@ -233,7 +233,7 @@ ms.locfileid: "73760592"
 ### <a name="sqlsetdescrec"></a>SQLSetDescRec  
  UDT に対して許可される値は次のとおりです。  
   
-|SQL データ型|型|SubType|長さ|有効桁数|Scale|  
+|SQL データ型|種類|SubType|Length|Precision|スケール|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
 |SQL_SS_UDT<br /><br /> (8,000 バイト以下の長さ)|SQL_SS_UDT|0|*n*|*n*|0|  
 |SQL_SS_UDT<br /><br /> (8,000 バイトを超える長さ)|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  

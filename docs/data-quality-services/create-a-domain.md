@@ -12,10 +12,10 @@ ms.assetid: 5c4828f5-bd51-4c29-b3de-87b7d2f2d3e5
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: d39f86d2efa18c385f2aafd8b3e4cb7de9975b06
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75252260"
 ---
 # <a name="create-a-domain"></a>ドメインの作成
@@ -26,14 +26,14 @@ ms.locfileid: "75252260"
   
  新しいドメインを作成するには、次の 2 つの方法があります。 1 つ目は、ナレッジ検出アクティビティのマップ手順中に、データ サンプルを分析する過程でナレッジを新しいまたは既存のナレッジ ベースに追加するときに行います。 2 つ目は、ドメイン管理アクティビティの実行中に、既存のドメインを変更するのではなく、新しいドメインを作成するときに行います。  
   
-##  <a name="BeforeYouBegin"></a>開始する前に  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Prerequisites"></a>応募  
+###  <a name="Prerequisites"></a> 前提条件  
  ドメインを作成するには、ナレッジ ベースを作成して開いておく必要があります。  
   
-###  <a name="Security"></a>保護  
+###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a>許可  
+####  <a name="Permissions"></a> Permissions  
  ドメインを作成するには、DQS_MAIN データベースの dqs_kb_editor ロールまたは dqs_administrator が必要です。  
   
 ##  <a name="Discovery"></a>ナレッジ検出アクティビティでのドメインの作成  
@@ -96,7 +96,7 @@ ms.locfileid: "75252260"
   
 8.  データ型が **[String]** の場合は、 **[構文エラーのアルゴリズムを無効にする]** をオンにして、文字列値の構文エラーをチェックせずにドメインを設定します。  
   
-9. [**OK**] をクリックすると、  
+9. **[OK]** をクリックします。  
   
 10. 
   **[完了]** をクリックし、「 [ドメイン管理アクティビティの終了](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)」の説明に従ってドメイン管理アクティビティを完了します。  

@@ -16,10 +16,10 @@ ms.assetid: 7d9abe49-ce92-47f3-82c9-aea749518c91
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6f9021ec9b71694fc6567db5edf79965e09fd3c0
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72304917"
 ---
 # <a name="sp_reinitpullsubscription-transact-sql"></a>sp_reinitpullsubscription (Transact-SQL)
@@ -39,23 +39,23 @@ sp_reinitpullsubscription [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publisher = ] 'publisher'` パブリッシャーの名前を指定します。 *パブリッシャー* は **sysname** 、既定値はありません。  
+`[ @publisher = ] 'publisher'`パブリッシャーの名前を指定します。 *publisher*は**sysname**で、既定値はありません。  
   
-`[ @publisher_db = ] 'publisher_db'` パブリッシャーデータベースの名前を指定します。 *publisher_db* は **sysname** 、既定値はありません。  
+`[ @publisher_db = ] 'publisher_db'`パブリッシャーデータベースの名前を指定します。 *publisher_db*は**sysname**であり、既定値はありません。  
   
-`[ @publication = ] 'publication'` パブリケーションの名前を指定します。 *publication*は**sysname**で、既定値は all です。これはすべてのサブスクリプションに再初期化のマークを付けます。  
+`[ @publication = ] 'publication'`パブリケーションの名前を指定します。 *publication*は**sysname**で、既定値は all です。これはすべてのサブスクリプションに再初期化のマークを付けます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **sp_reinitpullsubscription**は、トランザクションレプリケーションで使用します。  
   
  **sp_reinitpullsubscription**は、ピアツーピアトランザクションレプリケーションではサポートされていません。  
   
  ディストリビューションエージェントの次回の実行時に、サブスクリプションを再初期化するために、サブスクライバーから**sp_reinitpullsubscription**を呼び出すことができます。  
   
- **\@immediate_sync**の値が**false**で作成されたパブリケーションに対するサブスクリプションは、サブスクライバーから再初期化することはできません。  
+ ** \@Immediate_sync**の値が**false**で作成されたパブリケーションに対するサブスクリプションは、サブスクライバーから再初期化することはできません。  
   
  プルサブスクリプションを再初期化するには、サブスクライバーで**sp_reinitpullsubscription**を実行するか、パブリッシャーで**sp_reinitsubscription**します。  
   
@@ -68,6 +68,6 @@ sp_reinitpullsubscription [ @publisher = ] 'publisher'
 ## <a name="see-also"></a>参照  
  [サブスクリプションの再初期化](../../relational-databases/replication/reinitialize-a-subscription.md)   
  [サブスクリプションの再初期化](../../relational-databases/replication/reinitialize-subscriptions.md)   
- [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

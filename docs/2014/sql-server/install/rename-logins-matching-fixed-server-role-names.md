@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: df9d9e51846e286c67a4773823207524755d15dc
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72278215"
 ---
 # <a name="rename-logins-matching-fixed-server-role-names"></a>固定サーバー ロール名と一致するログイン名を変更する
@@ -60,10 +60,10 @@ ms.locfileid: "72278215"
   
 2.  ログイン名を削除します。  
   
-3.  新しいログインを作成するには、 **sp_addlogin**システムプロシージャを使用します。 対応する各ログインの **\@sid**パラメーターで、手順 1. で返された sid を指定します。  
+3.  新しいログインを作成するには、 **sp_addlogin**システムプロシージャを使用します。 対応する各ログインの** \@sid**パラメーターに、手順 1. で返された sid を指定します。  
   
 ## <a name="see-also"></a>参照  
  [データベースエンジンのアップグレードに関する問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor &#91;新規&#93;](sql-server-2014-upgrade-advisor.md)  
+ [SQL Server 2014 Upgrade Advisor &#91;新しい&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

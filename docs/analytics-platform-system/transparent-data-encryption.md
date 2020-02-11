@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: e75230ed175c6fbf1b0a2492265bbe12067060ca
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74399934"
 ---
-# <a name="transparent-data-encryption"></a>Transparent Data Encryption
-セキュリティで保護されたシステムの設計、機密資産の暗号化、データベース サーバーに対するファイアウォールの構築などの、データベースを保護するいくつかの対策を講じることができます。 ただし、物理メディア (ドライブやバックアップテープなど) が盗まれた場合は、悪意のある人物がデータベースを復元またはアタッチしてデータを参照するだけで済みます。 ソリューションの 1 つとして、データベース内の機密データを暗号化し、証明書を使用してデータを暗号化するために使用するキーを保護することが挙げられます。 これにより、キーを持たない人物によるデータの使用を防止できますが、このような保護は事前に計画する必要があります。  
+# <a name="transparent-data-encryption"></a>透過的なデータ暗号化
+セキュリティで保護されたシステムの設計、機密資産の暗号化、データベース サーバーに対するファイアウォールの構築などの、データベースを保護するいくつかの対策を講じることができます。 ただし、物理メディア (ドライブやバックアップテープなど) が盗まれた場合は、悪意のある人物がデータベースを復元またはアタッチしてデータを参照するだけで済みます。 解決策の 1 つは、データベース内の機密データを暗号化し、データの暗号化に使用されるキーを証明書で保護することです。 これにより、キーを持たない人物によるデータの使用を防止できますが、このような保護は事前に計画する必要があります。  
   
-*Transparent data encryption* (tde) では、データファイルとトランザクションログファイル、および特別な PDW ログファイルの i/o 暗号化と暗号化解除がリアルタイムで実行されます。 暗号化は、復旧中に、可用性のためのデータベース ブート レコードに格納されるデータベース暗号化キー (DEK) を使用します。 DEK は、SQL Server PDW の master データベースに格納されている証明書を使用してセキュリティで保護された対称キーです。 TDE は、"保存" データ、つまりデータとログ ファイルを保護します。 多数の法律、規制、さまざまな業界で制定されたガイドラインに準拠する機能を提供します。 この機能により、ソフトウェア開発者は、既存のアプリケーションを変更することなく、AES および3DES 暗号化アルゴリズムを使用してデータを暗号化できます。  
+*Transparent data encryption* (tde) では、データファイルとトランザクションログファイル、および特別な PDW ログファイルの i/o 暗号化と暗号化解除がリアルタイムで実行されます。 暗号化は、復旧中に、可用性のためのデータベース ブート レコードに格納されるデータベース暗号化キー (DEK) を使用します。 DEK は、SQL Server PDW の master データベースに格納されている証明書を使用してセキュリティで保護された対称キーです。 TDE では、"静止した" データ、つまりデータとログ ファイルが保護されます。 この暗号化は、法律、規制、およびさまざまな業界で確立されているガイドラインの多くに準拠できるようになっています。 この機能により、ソフトウェア開発者は、既存のアプリケーションを変更することなく、AES および3DES 暗号化アルゴリズムを使用してデータを暗号化できます。  
   
 > [!IMPORTANT]  
 > TDE では、クライアントと PDW の間で移動するデータの暗号化は提供されません。 クライアントと SQL Server PDW の間でデータを暗号化する方法の詳細については、「[証明書のプロビジョニング](provision-certificate.md)」を参照してください。  
@@ -123,16 +123,16 @@ TDE の証明書を次に示すステートメントで処理できるように�
 |[データベース暗号化キーの作成](../t-sql/statements/create-database-encryption-key-transact-sql.md)|データベースの暗号化に使用されるキーを作成します。|  
 |[データベース暗号化キーの変更](../t-sql/statements/alter-database-encryption-key-transact-sql.md)|データベースの暗号化に使用されるキーを変更します。|  
 |[データベース暗号化キーの削除](../t-sql/statements/drop-database-encryption-key-transact-sql.md)|データベースの暗号化に使用されたキーを削除します。|  
-|[データベースの変更](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)|TDE を有効にするために使用される **ALTER DATABASE** オプションについて説明します。|  
+|[ALTER DATABASE](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)|TDE を有効にするために使用される **ALTER DATABASE** オプションについて説明します。|  
   
 ## <a name="catalog-views-and-dynamic-management-views"></a>カタログ ビューと動的管理ビュー  
 次の表に、TDE のカタログ ビューと動的管理ビューを示します。  
   
 |カタログ ビューまたは動的管理ビュー|目的|  
 |-------------------------------------------|-----------|  
-|[システムデータベース](../relational-databases/system-catalog-views/sys-databases-transact-sql.md)|データベース情報を表示するカタログ ビュー|  
-|[sys. 証明書](../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)|データベース内の証明書を表示するカタログ ビュー|  
-|[dm_pdw_nodes_database_encryption_keys](../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-database-encryption-keys-transact-sql.md)|各ノード、データベースで使用される暗号化キー、およびデータベースの暗号化の状態に関する情報を提供する動的管理ビュー。|  
+|[sys.databases](../relational-databases/system-catalog-views/sys-databases-transact-sql.md)|データベース情報を表示するカタログ ビュー|  
+|[sys.certificates](../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)|データベース内の証明書を表示するカタログ ビュー|  
+|[sys.dm_pdw_nodes_database_encryption_keys](../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-database-encryption-keys-transact-sql.md)|各ノード、データベースで使用される暗号化キー、およびデータベースの暗号化の状態に関する情報を提供する動的管理ビュー。|  
   
 ## <a name="permissions"></a>アクセス許可  
 TDE の各機能とコマンドには、上の表で説明されているように、個別の権限要件があります。  
@@ -270,7 +270,7 @@ TDE のパフォーマンスへの影響は、使用しているデータの種�
 ## <a name="related-content"></a>関連コンテンツ  
 次のリンクには、SQL Server が暗号化を管理する方法に関する一般的な情報が記載されています。 これらの記事は、SQL Server の暗号化について理解するのに役立ちますが、これらの記事には、SQL Server PDW に固有の情報は含まれておらず、SQL Server PDW には存在しない機能について説明しています。  
   
--   [SQL Server 暗号化](../relational-databases/security/encryption/sql-server-encryption.md)  
+-   [SQL Server の暗号化](../relational-databases/security/encryption/sql-server-encryption.md)  
   
 -   [暗号化階層](../relational-databases/security/encryption/encryption-hierarchy.md)  
   
@@ -278,13 +278,13 @@ TDE のパフォーマンスへの影響は、使用しているデータの種�
 
   
 ## <a name="see-also"></a>参照  
-[データベースの変更](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)  
+[ALTER DATABASE](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)  
 [マスターキーの作成](../t-sql/statements/create-master-key-transact-sql.md)  
 [データベース暗号化キーの作成](../t-sql/statements/create-database-encryption-key-transact-sql.md)  
-[バックアップ証明書](../t-sql/statements/backup-certificate-transact-sql.md)  
+[BACKUP CERTIFICATE](../t-sql/statements/backup-certificate-transact-sql.md)  
 [sp_pdw_database_encryption](../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)  
 [sp_pdw_database_encryption_regenerate_system_keys](../relational-databases/system-stored-procedures/sp-pdw-database-encryption-regenerate-system-keys-sql-data-warehouse.md)  
 [sp_pdw_log_user_data_masking](../relational-databases/system-stored-procedures/sp-pdw-log-user-data-masking-sql-data-warehouse.md)  
-[sys. 証明書](../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)  
-[dm_pdw_nodes_database_encryption_keys](../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-database-encryption-keys-transact-sql.md)  
+[sys.certificates](../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)  
+[sys.dm_pdw_nodes_database_encryption_keys](../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-database-encryption-keys-transact-sql.md)  
   

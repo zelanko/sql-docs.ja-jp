@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ffe65b15ef18618058ea9ccc385dd12cd0482d96
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73781695"
 ---
 # <a name="call-sqlcolumns-on-a-table-with-sparse-columns"></a>スパース列を持つテーブルに対する SQLColumns の呼び出し
@@ -31,11 +31,12 @@ ms.locfileid: "73781695"
 ## <a name="example"></a>例  
  最初のリストは、C++ ソース コードです。 "MyServer" を有効なサーバー名に変更してください。 INCLUDE 環境変数に、sqlncli を含むディレクトリが含まれていることを確認します。 このサンプルを 64 ビット オペレーティング システムで 32 ビット アプリケーションとしてビルドし、実行する場合、%windir%\SysWOW64\odbcad32.exe の ODBC アドミニストレーターを使用して ODBC データ ソースを作成する必要があります。  
   
- このサンプルでは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 名前付きインスタンスに接続するには、ODBC データ ソースの定義を変更し、server\namedinstance 形式でそのインスタンスを指定します。 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] は、既定で名前付きインスタンスとしてインストールされます。  
+ このサンプルでは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 名前付きインスタンスに接続するには、ODBC データ ソースの定義を変更し、server\namedinstance 形式でそのインスタンスを指定します。 
+  [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] は、既定で名前付きインスタンスとしてインストールされます。  
   
  /EHsc /D、"UNICODE"、および odbc32.lib を使用してコンパイルします。  
   
- 2番目の ([!INCLUDE[tsql](../../includes/tsql-md.md)]) コードリストは、このサンプルで作成したテーブルを削除します。  
+ 2番目[!INCLUDE[tsql](../../includes/tsql-md.md)]の () コードリストは、このサンプルで作成したテーブルを削除します。  
   
 ```  
 // compile with: /EHsc /D "UNICODE" odbc32.lib  

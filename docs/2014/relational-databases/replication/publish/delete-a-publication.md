@@ -16,13 +16,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fa08a7f84cd413f1212cc73d4242b5da70fd33eb
-ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73882289"
 ---
-# <a name="delete-a-publication"></a>Delete a Publication
+# <a name="delete-a-publication"></a>パブリケーションの削除
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、またはレプリケーション管理オブジェクト (RMO) を使用して、パブリケーションを削除する方法について説明します。  
   
  **このトピックの内容**  
@@ -58,10 +58,10 @@ ms.locfileid: "73882289"
   
     -   単一のパブリケーションを削除するには、パブリッシャーのパブリケーション データベースで [sp_droppublication](/sql/relational-databases/system-stored-procedures/sp-droppublication-transact-sql) を実行します。  
   
-    -   すべてのパブリケーションを削除し、パブリッシュされたデータベースからすべてのレプリケーション オブジェクトを削除するには、パブリッシャーで [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) を実行します。 **\@の種類**の `tran` の値を指定します。 (省略可能) ディストリビューターにアクセスできない場合や、ディストリビューターのデータベース ステータスがオフラインになっている可能性がある場合は、force **に \@1** を指定します。 (省略可能) パブリケーション データベースに対して **sp_removedbreplication\@ を実行しない場合は、** [dbname](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) にデータベースの名前を指定します。  
+    -   すべてのパブリケーションを削除し、パブリッシュされたデータベースからすべてのレプリケーション オブジェクトを削除するには、パブリッシャーで [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) を実行します。 型の値`tran`を指定します。 ** \@** (省略可能) ディストリビューターにアクセスできない場合や、ディストリビューターのデータベース ステータスがオフラインになっている可能性がある場合は、 **\@force** に **1** を指定します。 (省略可能) パブリケーション データベースに対して [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) を実行しない場合は、 **\@dbname** にデータベースの名前を指定します。  
   
         > [!NOTE]  
-        >  force **に \@1** を指定すると、レプリケーション関連のパブリッシング オブジェクトがデータベース上に残されます。  
+        >  **\@force** に **1** を指定すると、レプリケーション関連のパブリッシング オブジェクトがデータベース上に残されます。  
   
 2.  (省略可) このデータベースに他のパブリケーションが存在しない場合は、[sp_replicationdboption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql) を実行し、スナップショット レプリケーションまたはトランザクション レプリケーションを使用した、現在のデータベースのパブリケーションを無効にします。  
   
@@ -73,10 +73,10 @@ ms.locfileid: "73882289"
   
     -   単一のパブリケーションを削除するには、パブリッシャーのパブリケーション データベースで [sp_dropmergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql) を実行します。  
   
-    -   すべてのパブリケーションを削除し、パブリッシュされたデータベースからすべてのレプリケーション オブジェクトを削除するには、パブリッシャーで [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) を実行します。 **\@の種類**の `merge` の値を指定します。 (省略可能) ディストリビューターにアクセスできない場合や、ディストリビューターのデータベース ステータスがオフラインになっている可能性がある場合は、force **に \@1** を指定します。 (省略可能) パブリケーション データベースに対して **sp_removedbreplication\@ を実行しない場合は、** [dbname](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) にデータベースの名前を指定します。  
+    -   すべてのパブリケーションを削除し、パブリッシュされたデータベースからすべてのレプリケーション オブジェクトを削除するには、パブリッシャーで [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) を実行します。 型の値`merge`を指定します。 ** \@** (省略可能) ディストリビューターにアクセスできない場合や、ディストリビューターのデータベース ステータスがオフラインになっている可能性がある場合は、 **\@force** に **1** を指定します。 (省略可能) パブリケーション データベースに対して [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) を実行しない場合は、 **\@dbname** にデータベースの名前を指定します。  
   
         > [!NOTE]  
-        >  force **に \@1** を指定すると、レプリケーション関連のパブリッシング オブジェクトがデータベース上に残されます。  
+        >  **\@force** に **1** を指定すると、レプリケーション関連のパブリッシング オブジェクトがデータベース上に残されます。  
   
 2.  (省略可) このデータベースに他のパブリケーションが存在しない場合は、[sp_replicationdboption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql) を実行し、マージ レプリケーションを使用した、現在のデータベースのパブリケーションを無効にします。  
   
@@ -112,7 +112,8 @@ ms.locfileid: "73882289"
   
     2.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出します。 このメソッドにより `false` が返された場合は、データベースが存在することを確認してください。  
   
-    3.  <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledTransPublishing%2A> プロパティを `false` に設定します。  
+    3.  
+  <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledTransPublishing%2A> プロパティを `false` に設定します。  
   
     4.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> メソッドを呼び出します。  
   
@@ -136,7 +137,8 @@ ms.locfileid: "73882289"
   
     2.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出します。 このメソッドが `false` を返す場合、データベースが存在するかどうかを確認してください。  
   
-    3.  <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledMergePublishing%2A> プロパティを `false` に設定します。  
+    3.  
+  <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledMergePublishing%2A> プロパティを `false` に設定します。  
   
     4.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> メソッドを呼び出します。  
   

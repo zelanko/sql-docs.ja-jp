@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0bb23beae7bcf8e47166ea205a3ce4e5a72f0493
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63126988"
 ---
 # <a name="sql-server-properties-log-on-tab"></a>[SQL Server のプロパティ] ダイアログ ボックス ([ログオン] タブ)
@@ -25,7 +25,7 @@ ms.locfileid: "63126988"
 >   
 >  サービスを実行するアカウントの選択の詳細については、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「Windows サービス アカウントの設定」を参照してください。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **[ビルトイン アカウント]**  
  **Local System**  
  -   ローカル システム アカウントを指定します。 このアカウントはパスワードを必要としません。 ただし、ローカル システム アカウントに与えられている特権によっては、そのサービスが他のサーバーと対話できないこともあります。  
@@ -42,7 +42,7 @@ ms.locfileid: "63126988"
  **アカウント名**  
  ローカル ユーザー アカウント名またはドメイン ユーザー アカウント名を指定します。  
   
- **Password**  
+ **パスワード**  
  アカウントのパスワードを入力します。  
   
  **[パスワードの確認入力]**  
@@ -51,7 +51,7 @@ ms.locfileid: "63126988"
  **[開始]**  
  サービスを開始します。  
   
- **[停止]**  
+ **Stop**  
  サービスを停止します。  
   
  **[一時停止]**  

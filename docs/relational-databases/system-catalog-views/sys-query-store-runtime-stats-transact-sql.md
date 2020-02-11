@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0bd7f1870a88ae2050445050565e0f268f4d9b0e
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70148287"
 ---
 # <a name="sysquery_store_runtime_stats-transact-sql"></a>query_store_runtime_stats (Transact-sql)
@@ -39,7 +39,7 @@ ms.locfileid: "70148287"
 |**plan_id**|**bigint**|外部キー。 [Query_store_plan &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)に結合します。|  
 |**runtime_stats_interval_id**|**bigint**|外部キー。 [Query_store_runtime_stats_interval &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)に結合します。|  
 |**execution_type**|**tinyint**|クエリ実行の種類を決定します。<br /><br /> 0-通常の実行 (正常に完了)<br /><br /> 3-クライアントが開始した実行中止<br /><br /> 4-例外が実行を中止しました|  
-|**execution_type_desc**|**nvarchar(128)**|実行の種類のフィールドの説明テキストです。<br /><br /> 0-標準<br /><br /> 3-中止<br /><br /> 4-例外|  
+|**execution_type_desc**|**nvarchar(128**|実行の種類のフィールドの説明テキストです。<br /><br /> 0-標準<br /><br /> 3-中止<br /><br /> 4-例外|  
 |**first_execution_time**|**datetimeoffset**|集計間隔内のクエリプランの最初の実行時間。 これは、クエリの実行の終了時刻を示します。|  
 |**last_execution_time**|**datetimeoffset**|集計間隔内のクエリプランの最後の実行時間。 これは、クエリの実行の終了時刻を示します。|  
 |**count_executions**|**bigint**|集計間隔内のクエリプランの実行の合計数。|  
@@ -93,11 +93,11 @@ ms.locfileid: "70148287"
 |**min_log_bytes_used**|**bigint**|集計間隔内で、クエリプランによって使用されるデータベースログの最小バイト数。<br/>**注:** Azure SQL Data Warehouse は常にゼロ (0) を返します。|
 |**max_log_bytes_used**|**bigint**|集計間隔内で、クエリプランによって使用されるデータベースログ内の最大バイト数。<br/>**注:** Azure SQL Data Warehouse は常にゼロ (0) を返します。|
 |**stdev_log_bytes_used**|**float**|集計間隔内で、クエリプランによって使用されるデータベースログ内のバイト数の標準偏差。<br/>**注:** Azure SQL Data Warehouse は常にゼロ (0) を返します。|  
-|**avg_tempdb_space_used**|**float**|集計間隔内のクエリプランの平均ページ読み取り回数。 (読み取られた 8 KB ページの数として表現されます)。<br><br/>**適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]以降) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|
-|**last_tempdb_space_used**|**bigint**|集計間隔内のクエリプランのページ読み取りの最後の数。 (読み取られた 8 KB ページの数として表現されます)。<br><br/>**適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]以降) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|
-|**min_tempdb_space_used**|**bigint**|集計間隔内のクエリプランのページ読み取りの最小数。 (読み取られた 8 KB ページの数として表現されます)。<br><br/>**適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]以降) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|
-|**max_tempdb_space_used**|**bigint**|集計間隔内のクエリプランのページ読み取りの最大数。(読み取られた 8 KB ページの数として表現されます)。<br><br/>**適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]以降) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|
-|**stdev_tempdb_space_used**|**float**|集計間隔内のクエリプランに対するページ読み取りの標準偏差。 (読み取られた 8 KB ページの数として表現されます)。<br><br/>**適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]以降) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|
+|**avg_tempdb_space_used**|**float**|集計間隔内のクエリプランの平均ページ読み取り回数。 (読み取られた 8 KB ページの数として表現されます)。<br><br/>**適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (以降[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) および[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|
+|**last_tempdb_space_used**|**bigint**|集計間隔内のクエリプランのページ読み取りの最後の数。 (読み取られた 8 KB ページの数として表現されます)。<br><br/>**適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (以降[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) および[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|
+|**min_tempdb_space_used**|**bigint**|集計間隔内のクエリプランのページ読み取りの最小数。 (読み取られた 8 KB ページの数として表現されます)。<br><br/>**適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (以降[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) および[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|
+|**max_tempdb_space_used**|**bigint**|集計間隔内のクエリプランのページ読み取りの最大数。(読み取られた 8 KB ページの数として表現されます)。<br><br/>**適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (以降[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) および[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|
+|**stdev_tempdb_space_used**|**float**|集計間隔内のクエリプランに対するページ読み取りの標準偏差。 (読み取られた 8 KB ページの数として表現されます)。<br><br/>**適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (以降[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) および[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|
 |**avg_page_server_io_reads**|**float**|集計間隔内のクエリプランに対するページサーバー i/o 読み取りの平均数。 (読み取られた 8 KB ページの数として表現されます)。<br><br/>**適用対象:** Azure SQL Database ハイパースケール</br>**注:** Azure SQL Data Warehouse、Azure SQL DB、MI (ハイパースケール以外) は常にゼロ (0) を返します。|
 |**last_page_server_io_reads**|**bigint**|集計間隔内のクエリプランのページサーバー i/o 読み取りの最後の数。 (読み取られた 8 KB ページの数として表現されます)。<br><br/>**適用対象:** Azure SQL Database ハイパースケール</br>**注:** Azure SQL Data Warehouse、Azure SQL DB、MI (ハイパースケール以外) は常にゼロ (0) を返します。|
 |**min_page_server_io_reads**|**bigint**|集計間隔内のクエリプランのページサーバー i/o 読み取りの最小数。 (読み取られた 8 KB ページの数として表現されます)。<br><br/>**適用対象:** Azure SQL Database ハイパースケール</br>**注:** Azure SQL Data Warehouse、Azure SQL DB、MI (ハイパースケール以外) は常にゼロ (0) を返します。|
@@ -105,18 +105,19 @@ ms.locfileid: "70148287"
 |**stdev_page_server_io_reads**|**float**|ページサーバー i/o の数は、集計間隔内のクエリプランの標準偏差を読み取ります。 (読み取られた 8 KB ページの数として表現されます)。<br><br/>**適用対象:** Azure SQL Database ハイパースケール</br>**注:** Azure SQL Data Warehouse、Azure SQL DB、MI (ハイパースケール以外) は常にゼロ (0) を返します。|
   
 ## <a name="permissions"></a>アクセス許可  
-`VIEW DATABASE STATE` アクセス許可が必要です。  
+
+  `VIEW DATABASE STATE` アクセス許可が必要です。  
   
 ## <a name="see-also"></a>参照  
- [database_query_store_options &#40;transact-sql&#41; ](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
- [query_context_settings &#40;transact-sql&#41; ](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
- [query_store_plan &#40;transact-sql&#41; ](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
- [query_store_query &#40;transact-sql&#41; ](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
- [query_store_query_text &#40;transact-sql&#41; ](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
- [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
- [query_store_runtime_stats_interval &#40;transact-sql&#41; ](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
+ [database_query_store_options &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
+ [query_context_settings &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
+ [query_store_plan &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
+ [query_store_query &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
+ [query_store_query_text &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
+ [query_store_wait_stats &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
+ [query_store_runtime_stats_interval &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
  [クエリのストアを使用した、パフォーマンスの監視](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [クエリ ストアのストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)    
+ [Transact-sql&#41;&#40;のストアドプロシージャのクエリストア](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)    
  [クエリ ストアを使用する際の推奨事項](../../relational-databases/performance/best-practice-with-the-query-store.md)   
   

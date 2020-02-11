@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9e0eadbbc2d126a001057cf5f9d0e17211c0a93e
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70874725"
 ---
 # <a name="revert-the-word-breakers-used-by-search-to-the-previous-version"></a>検索で使用するワード ブレーカーを以前のバージョンに戻す
@@ -22,9 +22,9 @@ ms.locfileid: "70874725"
   
  このトピックでは、次の言語については説明しません。  
   
--   **英語**。 英語のコンポーネントに戻す、または英語のコンポーネントを復元するには、「 [Change the Word Breaker Used for US English and UK English](change-the-word-breaker-used-for-us-english-and-uk-english.md)」を参照してください。  
+-   **英語**。 英語のコンポーネントに戻す、または英語のコンポーネントを復元するには、「 [米国英語と英国英語に使用されるワード ブレーカーの変更](change-the-word-breaker-used-for-us-english-and-uk-english.md)」を参照してください。  
   
--   **デンマーク語、ポーランド語、およびトルコ語**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の以前のリリースに含まれていたデンマーク語、ポーランド語、およびトルコ語向けのサードパーティ製のワード ブレーカーは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] コンポーネントに置き換えられました。  
+-   **デンマーク語、ポーランド語、およびトルコ語**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の以前のリリースに含まれていたデンマーク語、ポーランド語、およびトルコ語向けのサードパーティ製のワード ブレーカーは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] コンポーネントに置き換えられました。  
   
 -   **チェコ語とギリシャ語**。 チェコ語とギリシャ語向けの新しいワード ブレーカーがあります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フルテキスト検索の以前のリリースでは、これらの 2 つの言語のサポートは含まれていません。  
   
@@ -37,9 +37,9 @@ ms.locfileid: "70874725"
   
 |現在のファイル|以前のファイル|影響を受ける言語の数|ファイルに対する操作|レジストリ エントリに対する操作|  
 |------------------|-------------------|----------------------------------|----------------------|---------------------------------|  
-|NaturalLanguage6.dll|NaturalLanguage6.dll|34|以前のバージョンの NaturalLanguage6.dll を入手してインストールし、現在のバージョンのファイルを上書きします。|操作は不要です。<br /><br /> レジストリのキーと値は、このリリースでは変更されていません。|  
+|NaturalLanguage6.dll|NaturalLanguage6.dll|34|以前のバージョンの NaturalLanguage6.dll を入手してインストールし、現在のバージョンのファイルを上書きします。|必要なアクションはありません。<br /><br /> レジストリのキーと値は、このリリースでは変更されていません。|  
 |(その他のファイル名)|NaturalLanguage6.dll|5|以前のバージョンの NaturalLanguage6.dll を入手してインストールし、現在のバージョンのファイルを上書きします。|以前のバージョンのコンポーネントを指定するようにレジストリ エントリのセットを変更します。|  
-|(その他のファイル名)|(その他のファイル名)|6|操作は不要です。<br /><br /> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のセットアップでは、現在と以前の両方のバージョンのコンポーネントを Binn フォルダーにコピーします。|以前のバージョンのコンポーネントを指定するようにレジストリ エントリのセットを変更します。|  
+|(その他のファイル名)|(その他のファイル名)|6|必要なアクションはありません。<br /><br /> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のセットアップでは、現在と以前の両方のバージョンのコンポーネントを Binn フォルダーにコピーします。|以前のバージョンのコンポーネントを指定するようにレジストリ エントリのセットを変更します。|  
   
 > [!WARNING]  
 >  現在のバージョンのファイル (NaturalLanguage6.dll) を別のバージョンに置き換えると、そのファイルを使用するすべての言語の動作が影響を受けます。  
@@ -56,38 +56,38 @@ ms.locfileid: "70874725"
   
  **影響を受ける言語の一覧**  
   
-|言語|省略形<br />(レジストリで<br />使用)|LCID (LCID)|  
+|言語|省略形<br />(レジストリで<br />使用)|LCID|  
 |--------------|---------------------------------------|----------|  
 |ベンガル語|ben|1093|  
-|ブルガリア語|bgr|1026|  
+|Bulgarian|bgr|1026|  
 |カタロニア語|cat|1027|  
-|スペイン語|esn|3082|  
-|フランス語|fra|1036|  
+|Spanish|esn|3082|  
+|French|fra|1036|  
 |グジャラート語|guj|1095|  
 |ヘブライ語|heb|1037|  
 |ヒンディー語|hin|1081|  
-|クロアチア語|hrv|1050|  
+|Croatian|hrv|1050|  
 |インドネシア語|ind|1057|  
 |アイスランド語|isl|1039|  
-|イタリア語|ita|1040|  
+|Italian|ita|1040|  
 |カンナダ語|kan|1099|  
-|リトアニア語|lth|1063|  
-|ラトビア語|lvi|1062|  
+|Lithuanian|lth|1063|  
+|Latvian|lvi|1062|  
 |マラヤーラム語|mal|1100|  
 |マラーティー語|mar|1102|  
 |マレー語|msl|1086|  
-|ニュートラル|ニュートラル|0000|  
+|中立|中立|0000|  
 |ノルウェー語 (ボークモール)|nor|1044|  
 |パンジャーブ語|pan|1094|  
 |ポルトガル語|ptg|2070|  
 |ポルトガル語 (ブラジル) |ptb|1046|  
-|ルーマニア語|rom|1048|  
-|スロバキア語|sky|1051|  
-|スロベニア語|slv|1060|  
-|セルビア語 (キリル)|srb|3098|  
-|セルビア語 (ラテン)|srl|2074|  
-|スウェーデン語|sve|1053|  
-|タミール語|tam|1097|  
+|Romanian|rom|1048|  
+|Slovak|sky|1051|  
+|Slovenian|slv|1060|  
+|セルビア語 - キリル|srb|3098|  
+|セルビア語 - ラテン|srl|2074|  
+|Swedish|sve|1053|  
+|タミル語|tam|1097|  
 |テルグ語|tel|1098|  
 |ウクライナ語|ukr|1058|  
 |ウルドゥ語|urd|1056|  
@@ -127,13 +127,13 @@ ms.locfileid: "70874725"
   
  **影響を受ける言語の一覧**  
   
-|言語|省略形<br />(レジストリで<br />使用)|LCID (LCID)|  
+|言語|省略形<br />(レジストリで<br />使用)|LCID|  
 |--------------|---------------------------------------|----------|  
 |アラビア語|ara|1025|  
-|ドイツ語|deu|1031|  
-|日本語|jpn|1041|  
-|オランダ語|nld|1043|  
-|ロシア語|rus|1049|  
+|German|deu|1031|  
+|Japanese|jpn|1041|  
+|Dutch|nld|1043|  
+|Russian|rus|1049|  
   
  この表は、省略形の列を基準としてアルファベット順に並べられています。  
   
@@ -152,7 +152,7 @@ ms.locfileid: "70874725"
     > [!WARNING]  
     >  この変更は、現在と以前のバージョンの両方で NaturalLanguage6.dll を使用するすべての言語に影響します。  
   
-5.  レジストリで、**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID** ノードに移動します。  
+5.  レジストリで、次のノードに移動します: **HKEY_LOCAL_MACHINE \software\microsoft\microsoft\\ SQL Server<\>InstanceRoot**。  
   
 6.  次の手順に従って、選択した言語の以前のワード ブレーカー インターフェイスおよびステマー インターフェイスに対応する COM ClassID の新しいキーを追加します。  
   
@@ -164,7 +164,7 @@ ms.locfileid: "70874725"
   
     4.  選択した言語でステマーを使用する場合は、そのキー値の (既定) データを、表に示す以前のステマーのファイル名に更新します。  
   
-7.  レジストリで、**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\\<language_key>** ノードに移動します。 *<language_key>* は、レジストリで使用される言語の省略形を表します。たとえば、フランス語の場合は "fra"、スペイン語の場合は "esn" です。  
+7.  レジストリで、次のノードに移動します: **HKEY_LOCAL_MACHINE \software\microsoft\microsoft\\ SQL Server<\>InstanceRoot、mssearch、\\ Language<language_key **>。 *<language_key>* は、レジストリで使用される言語の省略形を表します。たとえば、フランス語の場合は "fra"、スペイン語の場合は "esn" です。  
   
 8.  **WBreakerClass** キー値を、表に示す現在のワード ブレーカーの値に更新します。  
   
@@ -181,7 +181,7 @@ ms.locfileid: "70874725"
     > [!WARNING]  
     >  この変更は、現在と以前のバージョンの両方で NaturalLanguage6.dll を使用するすべての言語に影響します。  
   
-3.  レジストリで、**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID** ノードに移動します。  
+3.  レジストリで、次のノードに移動します: **HKEY_LOCAL_MACHINE \software\microsoft\microsoft\\ SQL Server<\>InstanceRoot**。  
   
 4.  次のキーが存在しない場合は、次の手順に従って、選択した言語の現在のワード ブレーカー インターフェイスおよびステマー インターフェイスに対応する COM ClassID の新しいキーを追加します。  
   
@@ -193,7 +193,7 @@ ms.locfileid: "70874725"
   
     4.  選択した言語でステマーを使用する場合は、そのキー値の (既定) データを、表に示す現在のステマーのファイル名に更新します。  
   
-5.  レジストリで、**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\\<language_key>** ノードに移動します。 *<language_key>* は、レジストリで使用される言語の省略形を表します。たとえば、フランス語の場合は "fra"、スペイン語の場合は "esn" です。  
+5.  レジストリで、次のノードに移動します: **HKEY_LOCAL_MACHINE \software\microsoft\microsoft\\ SQL Server<\>InstanceRoot、mssearch、\\ Language<language_key **>。 *<language_key>* は、レジストリで使用される言語の省略形を表します。たとえば、フランス語の場合は "fra"、スペイン語の場合は "esn" です。  
   
 6.  **WBreakerClass** キー値を、表に示す以前のワード ブレーカーの値に更新します。  
   
@@ -212,8 +212,8 @@ ms.locfileid: "70874725"
 |---------------|------------------|-------------|  
 |以前の CLSID|7EFD3C7E-9E4B-4a93-9503-DECD74C0AC6D|483B0283-25DB-4c92-9C15-A65925CB95CE|  
 |以前のファイル名|NaturalLanguage6.dll|NaturalLanguage6.dll|  
-|現在の CLSID|04b37e30-c9a9-4a7d-8f20-792fc87ddf71|[InclusionThresholdSetting]|  
-|現在のファイル名|MSWB7.dll|[InclusionThresholdSetting]|  
+|現在の CLSID|04b37e30-c9a9-4a7d-8f20-792fc87ddf71|なし|  
+|現在のファイル名|MSWB7.dll|なし|  
   
  **ドイツ語 (deu)、LCID 1031**  
   
@@ -230,8 +230,8 @@ ms.locfileid: "70874725"
 |---------------|------------------|-------------|  
 |以前の CLSID|E1E8F15E-8BEC-45df-83BF-50FF84D0CAB5|3D5DF14F-649F-4cbc-853D-F18FEDE9CF5D|  
 |以前のファイル名|NaturalLanguage6.dll|NaturalLanguage6.dll|  
-|現在の CLSID|04096682-6ece-4e9e-90c1-52d81f0422ed|[InclusionThresholdSetting]|  
-|現在のファイル名|MsWb70011.dll|[InclusionThresholdSetting]|  
+|現在の CLSID|04096682-6ece-4e9e-90c1-52d81f0422ed|なし|  
+|現在のファイル名|MsWb70011.dll|なし|  
   
  **オランダ語 (nld)、LCID 1043**  
   
@@ -256,13 +256,13 @@ ms.locfileid: "70874725"
   
  **影響を受ける言語の一覧**  
   
-|言語|省略形<br />(レジストリで<br />使用)|LCID (LCID)|  
+|言語|省略形<br />(レジストリで<br />使用)|LCID|  
 |--------------|---------------------------------------|----------|  
-|Simplified Chinese|chs|2052|  
-|繁体字中国語|cht|1028|  
-|タイ語|tha|1054|  
-|繁体字中国語|zh-hk|3076|  
-|繁体字中国語|zh-mo|5124|  
+|簡体中国語|chs|2052|  
+|Traditional Chinese|cht|1028|  
+|Thai|tha|1054|  
+|中国語 (繁体字)|zh-hk|3076|  
+|中国語 (繁体字)|zh-mo|5124|  
 |簡体中国語|zh-sg|4100|  
   
  この表は、省略形の列を基準としてアルファベット順に並べられています。  
@@ -273,7 +273,7 @@ ms.locfileid: "70874725"
   
 1.  現在のバージョンのコンポーネントのファイルを Binn フォルダーから削除しないでください。  
   
-2.  レジストリで、**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID** ノードに移動します。  
+2.  レジストリで、次のノードに移動します: **HKEY_LOCAL_MACHINE \software\microsoft\microsoft\\ SQL Server<\>InstanceRoot**。  
   
 3.  次の手順に従って、選択した言語の以前のワード ブレーカー インターフェイスおよびステマー インターフェイスに対応する COM ClassID の新しいキーを追加します。  
   
@@ -285,7 +285,7 @@ ms.locfileid: "70874725"
   
     4.  選択した言語でステマーを使用する場合は、そのキー値の (既定) データを、表に示す以前のステマーのファイル名に更新します。  
   
-4.  レジストリで、**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\\<language_key>** ノードに移動します。 *<language_key>* は、レジストリで使用される言語の省略形を表します。たとえば、フランス語の場合は "fra"、スペイン語の場合は "esn" です。  
+4.  レジストリで、次のノードに移動します: **HKEY_LOCAL_MACHINE \software\microsoft\microsoft\\ SQL Server<\>InstanceRoot、mssearch、\\ Language<language_key **>。 *<language_key>* は、レジストリで使用される言語の省略形を表します。たとえば、フランス語の場合は "fra"、スペイン語の場合は "esn" です。  
   
 5.  **WBreakerClass** キー値を、表に示す現在のワード ブレーカーの値に更新します。  
   
@@ -297,7 +297,7 @@ ms.locfileid: "70874725"
   
 1.  以前のバージョンのコンポーネントのファイルを Binn フォルダーから削除しないでください。  
   
-2.  レジストリで、**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID** ノードに移動します。  
+2.  レジストリで、次のノードに移動します: **HKEY_LOCAL_MACHINE \software\microsoft\microsoft\\ SQL Server<\>InstanceRoot**。  
   
 3.  次のキーが存在しない場合は、次の手順に従って、選択した言語の現在のワード ブレーカー インターフェイスおよびステマー インターフェイスに対応する COM ClassID の新しいキーを追加します。  
   
@@ -309,7 +309,7 @@ ms.locfileid: "70874725"
   
     4.  選択した言語でステマーを使用する場合は、そのキー値の (既定) データを、表に示す現在のステマーのファイル名に更新します。  
   
-4.  レジストリで、**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\\<language_key>** ノードに移動します。 *<language_key>* は、レジストリで使用される言語の省略形を表します。たとえば、フランス語の場合は "fra"、スペイン語の場合は "esn" です。  
+4.  レジストリで、次のノードに移動します: **HKEY_LOCAL_MACHINE \software\microsoft\microsoft\\ SQL Server<\>InstanceRoot、mssearch、\\ Language<language_key **>。 *<language_key>* は、レジストリで使用される言語の省略形を表します。たとえば、フランス語の場合は "fra"、スペイン語の場合は "esn" です。  
   
 5.  **WBreakerClass** キー値を、表に示す以前のワード ブレーカーの値に更新します。  
   
@@ -346,8 +346,8 @@ ms.locfileid: "70874725"
 |---------------|------------------|-------------|  
 |以前の CLSID|CCA22CF4-59FE-11D1-BBFF-00C04FB97FDA|CEDC01C7-59FE-11D1-BBFF-00C04FB97FDA|  
 |以前のファイル名|Thawbrkr.dll|Thawbrkr.dll|  
-|現在の CLSID|F70C0935-6E9F-4ef1-9F06-7876536DB900|[InclusionThresholdSetting]|  
-|現在のファイル名|MsWb7001e.dll|[InclusionThresholdSetting]|  
+|現在の CLSID|F70C0935-6E9F-4ef1-9F06-7876536DB900|なし|  
+|現在のファイル名|MsWb7001e.dll|なし|  
   
  **繁体字中国語 (zh-hk)、LCID 3076**  
   
@@ -377,7 +377,7 @@ ms.locfileid: "70874725"
 |現在のファイル名|MsWb70804.dll|  
   
 ## <a name="see-also"></a>参照  
- [Change the Word Breaker Used for US English and UK English](change-the-word-breaker-used-for-us-english-and-uk-english.md)   
+ [米国英語と英国英語に使用されるワード ブレーカーの変更](change-the-word-breaker-used-for-us-english-and-uk-english.md)   
  [フルテキスト検索の動作の変更](../../database-engine/behavior-changes-to-full-text-search.md)  
   
   

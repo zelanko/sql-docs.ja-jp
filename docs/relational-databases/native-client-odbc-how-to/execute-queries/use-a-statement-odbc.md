@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3624253fa70ca12078a981d694c5e50b5030ce01
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73781177"
 ---
 # <a name="use-a-statement-odbc"></a>ステートメントの使用 (ODBC)
@@ -26,7 +26,8 @@ ms.locfileid: "73781177"
     
 ### <a name="to-use-a-statement"></a>ステートメントを使用するには  
   
-1.  [HandleType](https://go.microsoft.com/fwlink/?LinkId=58396) を SQL_HANDLE_STMT として *SQLAllocHandle* を呼び出し、ステートメント ハンドルを割り当てます。  
+1.  
+  [HandleType](https://go.microsoft.com/fwlink/?LinkId=58396) を SQL_HANDLE_STMT として *SQLAllocHandle* を呼び出し、ステートメント ハンドルを割り当てます。  
   
 2.  また、[SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) を呼び出してステートメント オプションを設定するか、[SQLGetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md) を呼び出してステートメント属性を取得することもできます。  
   
@@ -56,7 +57,8 @@ ms.locfileid: "73781177"
   
      \- - または -  
   
-     [SQLRowCount](../../../relational-databases/native-client-odbc-api/sqlrowcount.md) を呼び出して、INSERT、UPDATE、または DELETE ステートメントの影響を受ける行数を確認します。  
+     
+  [SQLRowCount](../../../relational-databases/native-client-odbc-api/sqlrowcount.md) を呼び出して、INSERT、UPDATE、または DELETE ステートメントの影響を受ける行数を確認します。  
   
      SQL ステートメントに複数の結果セットが含まれている可能性がある場合は、各結果セットの最後に [SQLMoreResults](../../../relational-databases/native-client-odbc-api/sqlmoreresults.md) を呼び出して、処理する追加の結果セットがあるかどうかを確認します。  
   
@@ -70,9 +72,10 @@ ms.locfileid: "73781177"
   
     -   ステートメント ハンドルを再利用するには、手順 2. に進みます。  
   
-8.  [HandleType](../../../relational-databases/native-client-odbc-api/sqlfreehandle.md) を SQL_HANDLE_STMT として *SQLFreeHandle* を呼び出し、ステートメント ハンドルを解放します。  
+8.  
+  [HandleType](../../../relational-databases/native-client-odbc-api/sqlfreehandle.md) を SQL_HANDLE_STMT として *SQLFreeHandle* を呼び出し、ステートメント ハンドルを解放します。  
   
 ## <a name="see-also"></a>参照  
- [クエリの実行方法に関する&#40;トピック ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
+ [クエリの実行方法に関するトピック &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
   
   

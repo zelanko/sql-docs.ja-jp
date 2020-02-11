@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0000e0c7a5933003544de22b60a8adc4d9c59c82
-ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74684442"
 ---
 # <a name="custom-report-item-implementation-requirements"></a>カスタム レポート アイテムの実装要件
@@ -53,7 +53,7 @@ ms.locfileid: "74684442"
   [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK をインストールしたら、「[SQL Server の製品ドキュメントの追加または削除](../../2014-toc/index.yml)」の手順に従って、SDK ドキュメントをオンライン ブック コレクションと目次に追加できます。  
   
 ## <a name="see-also"></a>参照  
- [カスタムレポートアイテムの実行時コンポーネントの作成](creating-a-custom-report-item-run-time-component.md)   
+ [カスタム レポート アイテムの実行時コンポーネントの作成](creating-a-custom-report-item-run-time-component.md)   
  [カスタムレポートアイテムのデザイン時コンポーネントの作成](creating-a-custom-report-item-design-time-component.md)   
  [カスタムレポートアイテムを配置する方法](how-to-deploy-a-custom-report-item.md)   
  [カスタム レポート アイテムのクラス ライブラリ](custom-report-item-class-libraries.md)  

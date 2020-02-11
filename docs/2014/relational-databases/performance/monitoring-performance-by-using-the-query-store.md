@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8e380626408a7e50d8940e2cc1b347eac5f32922
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69028604"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>クエリのストアを使用した、パフォーマンスの監視
@@ -22,39 +22,43 @@ ms.locfileid: "69028604"
   
 ||  
 |-|  
-|**適用対象**:[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]([取得](http://azure.micosoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)します)。|  
+|**に適用さ**れます: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([取得](http://azure.micosoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))。|  
   
 > [!IMPORTANT]  
 >  現在、これはプレビュー機能です。 使用するクエリ ストアを確認して、クエリのストアの実装に同意する必要がありますが、プレビューの条項に従ってその適切なライセンス契約 (など、エンタープライズ契約、Microsoft Azure 契約、または Microsoft Online サブスクリプション契約) に [補足使用条件の Microsoft Azure プレビュー](https://azure.microsoft.com/support/legal/preview-supplemental-terms/)です。  
   
-##  <a name="Enabling"></a> クエリのストアを有効にする  
+##  <a name="Enabling"></a>クエリストアを有効にする  
  既定では、クエリのストアは新しいデータベースに対してアクティブではありません。  
   
 #### <a name="by-using-the-query-store-page-in-management-studio"></a>Management Studio でクエリのストアのページを使用する方法  
   
 1.  オブジェクト エクスプローラーで、データベースを右クリックし、 **[プロパティ]** をクリックします。 ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2016 バージョンの [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]が必要)。  
   
-2.  **[データベースのプロパティ]** ダイアログ ボックスで、 **[クエリのストア]** ページをクリックします。  
+2.  
+  **[データベースのプロパティ]** ダイアログ ボックスで、 **[クエリのストア]** ページをクリックします。  
   
-3.  **[有効にする]** ボックスで、 **[True]** を選択します。  
+3.  
+  **[有効にする]** ボックスで、 **[True]** を選択します。  
   
 #### <a name="by-using-transact-sql-statements"></a>Transact-SQL ステートメントを使用する方法  
   
-1.  `ALTER DATABASE` ステートメントを使用してクエリのストアを有効にします。 以下に例を示します。  
+1.  
+  `ALTER DATABASE` ステートメントを使用してクエリのストアを有効にします。 次に例を示します。  
   
     ```  
     ALTER DATABASE AdventureWorks2012 SET QUERY_STORE = ON;  
     ```  
   
-     クエリ ストアに関連する構文オプションの詳細については、「[ALTER DATABASE SET オプション &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)」を参照してください。  
+     クエリストアに関連するその他の構文オプションについては、「 [ALTER DATABASE SET options &#40;transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)」を参照してください。  
   
 > [!NOTE]  
 >  マスター データベースに対しては、クエリのストアを有効にできません。  
   
 
   
-##  <a name="About"></a> クエリのストア内の情報  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のどの特定のクエリの実行プランも、通常、統計情報やスキーマの変更、インデックスの作成または削除などのさまざまな理由により、時間の経過とともに進化します。プロシージャ キャッシュ (ここにキャッシュされたクエリ プランが格納される) には、最新の実行プランのみ格納されます。 メモリ負荷が原因で、プランがプラン キャッシュから削除されることもあります。 その結果、実行プランの変更によるクエリ パフォーマンスの低下が深刻なレベルになり、解決に時間を要する場合があります。  
+##  <a name="About"></a>クエリストアの情報  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のどの特定のクエリの実行プランも、通常、統計情報やスキーマの変更、インデックスの作成または削除などのさまざまな理由により、時間の経過とともに進化します。プロシージャ キャッシュ (ここにキャッシュされたクエリ プランが格納される) には、最新の実行プランのみ格納されます。 メモリ負荷が原因で、プランがプラン キャッシュから削除されることもあります。 その結果、実行プランの変更によるクエリ パフォーマンスの低下が深刻なレベルになり、解決に時間を要する場合があります。  
   
  クエリのストアには、1 つのクエリにつき複数の実行プランが保持されるため、クエリの特定の実行プランを使用するようクエリ プロセッサに指示するポリシーを強制できます。 これをプラン強制と呼びます。 クエリのストアのプラン強制は、 [USE PLAN](/sql/t-sql/queries/hints-transact-sql-query) クエリ ヒントに似たメカニズムを使用して提供されますが、ユーザー アプリケーションを変更する必要はありません。 プラン強制を使用することで、プラン変更によるクエリ パフォーマンスの低下をきわめて短時間に解決できます。  
   
@@ -70,7 +74,7 @@ ms.locfileid: "69028604"
   
 -   特定のデータベースのリソース (CPU、I/O、メモリ) の使用パターンを分析します。  
   
- クエリのストアには、次の 2 つのストアが含まれています。 **プラン ストア** は実行プラン情報を保持し、 **ランタイム統計情報ストア** は実行統計情報を保持するためのものです。 クエリのためにプラン ストア内に格納できる一意のプラン数は、`max_plans_per_query` 構成オプションによって制限されています。 パフォーマンスを向上させるために、この情報は つのストアに非同期的に書き込まれます。 領域使用量を最小にするため、ランタイム統計情報ストアのランタイム実行統計情報は、一定の時間枠で集計されます。 これらのストア内の情報は、クエリのストアのカタログ ビューに対してクエリを実行することによって表示できます。  
+ クエリのストアには、次の&2; つのストアが含まれています。 **プラン ストア** は実行プラン情報を保持し、 **ランタイム統計情報ストア** は実行統計情報を保持するためのものです。 クエリのためにプラン ストア内に格納できる一意のプラン数は、`max_plans_per_query` 構成オプションによって制限されています。 パフォーマンスを向上させるために、この情報は つのストアに非同期的に書き込まれます。 領域使用量を最小にするため、ランタイム統計情報ストアのランタイム実行統計情報は、一定の時間枠で集計されます。 これらのストア内の情報は、クエリのストアのカタログ ビューに対してクエリを実行することによって表示できます。  
   
  次のクエリは、クエリのストア内のクエリとプランに関する情報を返します。  
   
@@ -86,19 +90,20 @@ JOIN sys.query_store_query_text AS Txt
 
   
 ## <a name="using-the-regressed-queries-feature"></a>機能低下したクエリ機能の使用  
- クエリのストアを有効にしてから、[オブジェクト エクスプローラー] ペインのデータベースの部分を更新して、 **[クエリ ストア]** セクションを追加します。  
+ クエリストアを有効にした後、[オブジェクトエクスプローラー] ウィンドウのデータベース部分を更新して**クエリストア**セクションを追加します。  
   
- ![Querystore](../../database-engine/media/querystore.PNG "Querystore")  
+ ![QueryStore](../../database-engine/media/querystore.PNG "QueryStore")  
   
- **[機能低下したクエリ]** を選択し、 **で** [機能低下したクエリ] [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]ペインを開きます。 [機能低下したクエリ] ペインにクエリと、クエリのストア内のプランが表示されます。 上部にあるドロップダウン ボックスを使用すると、さまざまな条件に合わせてクエリを選択できます。 プランを選択して、グラフィカルなクエリ プランを表示します。 ソース クエリの表示、クエリ プランの強制と強制解除、表示の更新に使用できるボタンが用意されています。  
+ 
+  **[機能低下したクエリ]** を選択し、 **で** [機能低下したクエリ] [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]ペインを開きます。 [機能低下したクエリ] ペインにクエリと、クエリのストア内のプランが表示されます。 上部にあるドロップダウン ボックスを使用すると、さまざまな条件に合わせてクエリを選択できます。 プランを選択して、グラフィカルなクエリ プランを表示します。 ソース クエリの表示、クエリ プランの強制と強制解除、表示の更新に使用できるボタンが用意されています。  
   
  ![RegressedQueries](../../database-engine/media/regressedqueries.PNG "RegressedQueries")  
   
- プランを強制的に適用するには、クエリとプランを選択してから、 **[プランの強制]** 強制できるプランは、クエリ プランの機能によって保存され、クエリ プランのキャッシュに保持されているプランのみです。  
+ プランを強制するには、クエリとプランを選択し、[プランの強制] をクリックし**ます。** 強制できるプランは、クエリ プランの機能によって保存され、クエリ プランのキャッシュに保持されているプランのみです。  
   
 
   
-##  <a name="Options"></a> 構成オプション  
+##  <a name="Options"></a>構成オプション  
  OPERATION_MODE  
  READ_WRITE または READ_ONLY。  
   
@@ -114,57 +119,59 @@ JOIN sys.query_store_query_text AS Txt
  INTERVAL_LENGTH_MINUTES  
  クエリのストアにランタイムの実行の統計データを集計する時間間隔を決定します。 領域使用量を最適化するため、ランタイム統計情報ストアのランタイム実行統計情報は、一定の時間枠で集計されます。 この固定された時間枠は、INTERVAL_LENGTH_MINUTES 引数を介して構成されます。  
   
- `sys.database_query_store_options` ビューにクエリを実行し、クエリのストアの現在のオプションを確認します。  
+ 
+  `sys.database_query_store_options` ビューにクエリを実行し、クエリのストアの現在のオプションを確認します。  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用してオプションを設定する方法の詳細については、「 [オプション管理](#OptionMgmt)」をご覧ください。  
+ 
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用してオプションを設定する方法の詳細については、「 [オプション管理](#OptionMgmt)」をご覧ください。  
   
  
   
-##  <a name="Related"></a> 関連するビュー、関数、プロシージャ  
+##  <a name="Related"></a>関連するビュー、関数、およびプロシージャ  
  クエリのストアは、 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] か、次のビューとプロシージャを使用して表示および管理できます。  
   
--   [sys.fn_stmt_sql_handle_from_sql_stmt &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql)  
+-   [fn_stmt_sql_handle_from_sql_stmt &#40;Transact-sql&#41;](/sql/relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql)  
   
 ### <a name="query-store-catalog-views"></a>クエリのストアのカタログ ビュー  
  7 種類のカタログ ビューがクエリのストアの情報を提供します。  
   
--   [sys.database_query_store_options &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql)  
+-   [database_query_store_options &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql)  
   
--   [sys.query_context_settings &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-query-context-settings-transact-sql)  
+-   [query_context_settings &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-query-context-settings-transact-sql)  
   
--   [sys.query_store_plan &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-query-store-plan-transact-sql)  
+-   [query_store_plan &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-query-store-plan-transact-sql)  
   
--   [sys.query_store_query &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-query-store-query-transact-sql)  
+-   [query_store_query &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-query-store-query-transact-sql)  
   
--   [sys.query_store_query_text &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql)  
+-   [query_store_query_text &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql)  
   
--   [sys.query_store_runtime_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql)  
+-   [query_store_runtime_stats &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql)  
   
--   [sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql)  
+-   [query_store_runtime_stats_interval &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql)  
   
 ### <a name="query-store-stored-procedures"></a>クエリのストアのストアド プロシージャ  
  6 つのストアド プロシージャがクエリのストアを構成します。  
   
--   [sp_query_store_flush_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql)  
+-   [sp_query_store_flush_db &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql)  
   
--   [sp_query_store_reset_exec_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-query-store-reset-exec-stats-transact-sql)  
+-   [sp_query_store_reset_exec_stats &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-query-store-reset-exec-stats-transact-sql)  
   
--   [sp_query_store_force_plan &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql)  
+-   [sp_query_store_force_plan &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql)  
   
--   [sp_query_store_unforce_plan &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql)  
+-   [sp_query_store_unforce_plan &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql)  
   
 -   [sp_query_store_remove_plan &#40;Transct-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql)  
   
--   [sp_query_store_remove_query &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql)  
+-   [sp_query_store_remove_query &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql)  
   
 
   
-##  <a name="Scenarios"></a> 基本的な使用シナリオ  
+##  <a name="Scenarios"></a>主な使用シナリオ  
   
-###  <a name="OptionMgmt"></a> オプション管理  
+###  <a name="OptionMgmt"></a>オプション管理  
  このセクションでは、クエリのストアの機能自体を管理する方法に関するガイドラインを示します。  
   
- **クエリのストアが現在アクティブか**  
+ **クエリストア現在アクティブですか?**  
   
  クエリのストアはユーザー データベース内にデータを格納するため、サイズに上限が設定されています (`MAX_STORAGE_SIZE_MB` で構成)。 クエリのストア内のデータがその上限に達すると、クエリのストアは自動的に状態を読み取り/書き込みから読み取り専用に変更し、新しいデータの収集を停止します。  
   
@@ -184,7 +191,7 @@ ELSE SELECT ''Query Store is NOT active''' ;
 EXEC sp_executesql @query;  
 ```  
   
- **クエリのストアのオプションを取得する**  
+ **クエリストアオプションの取得**  
   
  クエリのストアの状態に関する詳細情報については、ユーザー データベースで次を実行します。  
   
@@ -192,7 +199,7 @@ EXEC sp_executesql @query;
 SELECT * FROM sys.database_query_store_options;  
 ```  
   
- **クエリのストアの時間間隔を設定する**  
+ **クエリストア間隔の設定**  
   
  クエリのランタイム統計情報を集計する時間間隔 (既定では 60 分) をオーバーライドできます。  
   
@@ -205,7 +212,7 @@ ALTER DATABASE <database_name>
 SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 15);  
 ```  
   
- 任意の値が許可されていないことに注意してください。次のいずれかを使用する必要があります。1、5、10、15、30、60。  
+ 任意の値は許可されていません。1、5、10、15、30、60 のいずれかの値を使用する必要があります。  
   
  時間間隔に使用する新しい値は、`sys.database_query_store_options` ビューで公開されます。  
   
@@ -216,7 +223,7 @@ ALTER DATABASE <database_name>
 SET QUERY_STORE (MAX_STORAGE_SIZE_MB = <new_size>);  
 ```  
   
- **クエリのストアのオプションをすべて設定する**  
+ **すべてのクエリストアオプションを設定する**  
   
  単一の ALTER DATABASE ステートメントで、クエリのストアの複数のオプションを一度にまとめて設定できます。  
   
@@ -242,7 +249,7 @@ ALTER DATABASE <db_name> SET QUERY_STORE CLEAR;
   
  または、アドホック クエリ データはクエリの最適化やプラン分析との関連性が低く、ただ場所を占有するだけなので、アドホック クエリ データのみを削除することもできます。  
   
- **アドホック クエリの削除** この操作は、24 時間以上前に 1 回実行しただけのクエリを削除します。  
+ アドホック**クエリの削除**これにより、1回だけ実行され、24時間以上経過したクエリは削除されます。  
   
 ```  
 DECLARE @id int  
@@ -283,7 +290,7 @@ DEALLOCATE adhoc_queries_cursor;
   
 
   
-###  <a name="Peformance"></a> パフォーマンスの監査とトラブルシューティング  
+###  <a name="Peformance"></a>パフォーマンスの監査とトラブルシューティング  
  クエリのストアには、コンパイルの履歴とクエリの実行全体に関するランタイム メトリックスが保持されているため、ワークロードに関連した多くの疑問の答えを簡単に見つけることができます。  
   
  **データベースで実行された最後の*n 個*のクエリ。**  
@@ -498,7 +505,7 @@ OPTION (MERGE JOIN);
   
 
   
-###  <a name="Stability"></a> クエリ パフォーマンスの安定性を維持する  
+###  <a name="Stability"></a>クエリパフォーマンスの安定性の維持  
  複数回実行されるクエリの場合、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] が異なるプランを使用した結果、リソースの使用の仕方や期間が異なっていることに気付く場合があります。 クエリのストアを使用すると、クエリ パフォーマンスが低下している時点を検出し、対象期間の最適なプランを特定できます。 こうすることで、将来のクエリの実行で最適なプランを強制的に適用できます。  
   
  パラメーターを持つクエリ (自動的にパラメーター化されたもの、または手動でパラメーター化されたもののいずれか) に関して、クエリ パフォーマンスが一定ではないものを特定することもできます。 さまざまなプランの中で、ほとんどすべてのパラメーター値に対して高速で最適なプランを特定し、そのプランを強制的に適用できます。これにより、より一層多様なユーザー シナリオに対して、予測可能なパフォーマンスを維持できます。  
@@ -509,9 +516,10 @@ OPTION (MERGE JOIN);
 EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;  
 ```  
   
- `sp_query_store_force_plan` を使用する場合は、クエリのストアによってそのクエリのプランとして記録されたプランのみを強制できます。 つまり、クエリで使用できるプランは、クエリのストアがアクティブであったときに Q1 を実行するために既に使用されているプランのみです。  
+ 
+  `sp_query_store_force_plan` を使用する場合は、クエリのストアによってそのクエリのプランとして記録されたプランのみを強制できます。 つまり、クエリで使用できるプランは、クエリのストアがアクティブであったときに Q1 を実行するために既に使用されているプランのみです。  
   
- **クエリに対するプランの強制を削除する。** もう一度 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] クエリ オプティマイザーを利用して最適なクエリ プランを計算するには、クエリに対して選択されていたプランの強制を `sp_query_store_unforce_plan` を使用して解除します。  
+ **クエリに対するプランの強制を削除します。** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]クエリオプティマイザーを使用して最適なクエリプランを計算するには`sp_query_store_unforce_plan` 、を使用して、クエリに対して選択されたプランを強制的に適用しないようにします。  
   
 ```  
 EXEC sp_query_store_unforce_plan @query_id = 48, @plan_id = 49;  

@@ -16,14 +16,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 432d48bbe848d6f66e9f3dae5365abe10d8deb62
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62833850"
 ---
 # <a name="excel-connection-manager"></a>Excel 接続マネージャー
-  Excel 接続マネージャーを使用すると、パッケージは既存の [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel ブック ファイルに接続できます。 Excel ソースおよび Excel 変換先を[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]は、Excel 接続マネージャーを使用します。  
+  Excel 接続マネージャーを使用すると、パッケージは既存の [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel ブック ファイルに接続できます。 Excel ソースおよび excel 変換先[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]には、excel 接続マネージャーが使用されます。  
   
  Excel 接続マネージャーをパッケージに追加するときに、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] により、実行時に Excel 接続として解決される接続マネージャーを作成し、接続マネージャーのプロパティを設定して、接続マネージャーをパッケージの `Connections` コレクションに追加します。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "62833850"
   
  Excel ソースによって Excel 接続マネージャーが使用された場合は、抽出したデータに列名が含められます。 Excel 変換先によって使用された場合は、出力されたデータに列名が含められます。  
   
- Excel 接続マネージャーを使用して、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Jet 4.0 とそのサポートの Excel ISAM (Indexed Sequential Access Method) ドライバーに接続し、読み取り、および Excel データ ソースにデータを書き込みます。 このプロバイダーとドライバーの Excel ソースおよび Excel 変換先で使用する場合の動作に関する詳細については、次を参照してください。 [Excel ソース](../data-flow/excel-source.md)と[Excel 変換先](../data-flow/excel-destination.md)します。  
+ Excel 接続マネージャーは、Jet [!INCLUDE[msCoName](../../includes/msconame-md.md)] 4.0 用の OLE DB プロバイダーと、それをサポートする excel ISAM (インデックス付きシーケンシャルアクセス方式) ドライバーを使用して、excel データソースへの接続とデータの読み書きを行います。 Excel ソースおよび excel 変換先で使用する場合のこのプロバイダーとドライバーの動作の詳細については、「 [Excel ソース](../data-flow/excel-source.md)および Excel[変換先](../data-flow/excel-destination.md)」を参照してください。  
   
  プロパティを設定するには [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   

@@ -17,19 +17,19 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f1c553835cc0380082821dd49f53f69e767baacb
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73771470"
 ---
 # <a name="persisted-data-source-objects"></a>保存されるデータ ソース オブジェクト
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、 **IPersistFile**インターフェイスを使用して、永続化されたデータソースオブジェクトをサポートします。  
+  Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB プロバイダーは、 **IPersistFile**インターフェイスを使用して、永続化されたデータソースオブジェクトをサポートします。  
   
-## <a name="examples"></a>使用例  
- **A: データソースの初期化を保持します。**  
+## <a name="examples"></a>例  
+ **A. データ ソースの初期化の保存 :**  
   
  次の例では、サーバー、データベース、および接続用の Windows 認証モードを定義しているデータ ソースの初期化プロパティを保存する関数を示します。 サーバー名とデータベース名は、関数の *pLocation* パラメーターと *pDatasource* パラメーターで受け取ります。  
   
@@ -140,7 +140,7 @@ HRESULT SetAndSaveInitProps
     }  
 ```  
   
- **B. 永続化されたデータソースの初期化を使用する:**  
+ **B. 保存されたデータ ソースの初期化の使用 :**  
   
  次の例では、保存されたデータ ソース オブジェクトを使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインとパスワードを指定する初期化プロパティを追加します。  
   
@@ -228,9 +228,11 @@ HRESULT InitFromPersistedDS
     }  
 ```  
   
- **IPersistFile::Save** メソッドは、**IDBInitialize::Initialize** の呼び出しの前または後に呼び出すことができます。 **IDBInitialize::Initialize** から正常に制御が戻った後にこのメソッドを呼び出すと、有効なデータ ソース指定が確実に保存されます。  
+ 
+  **IPersistFile::Save** メソッドは、**IDBInitialize::Initialize** の呼び出しの前または後に呼び出すことができます。 
+  **IDBInitialize::Initialize** から正常に制御が戻った後にこのメソッドを呼び出すと、有効なデータ ソース指定が確実に保存されます。  
   
 ## <a name="see-also"></a>参照  
- [データソースオブジェクト&#40;の OLE DB&#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
+ [データソースオブジェクト &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

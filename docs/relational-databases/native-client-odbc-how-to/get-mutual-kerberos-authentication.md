@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0c7d2e5ff90ce8ca9fd8e6cef090b4de5e645be4
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73782805"
 ---
 # <a name="get-mutual-kerberos-authentication"></a>Kerberos 相互認証の取得
@@ -25,12 +25,13 @@ ms.locfileid: "73782805"
   
  このサンプルは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] より前のバージョンの [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] では動作しません。  
   
- 詳細については、「[クライアント&#40;接続&#41;でのサービスプリンシパル名の SPN のサポート](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)」を参照してください。  
+ 詳細については、「[クライアント接続でのサービスプリンシパル名 &#40;SPN&#41; サポート](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  このサンプルを 64 ビット オペレーティング システムで 32 ビット アプリケーションとしてビルドし、実行する場合、%windir%\SysWOW64\odbcad32.exe の ODBC アドミニストレーターを使用して ODBC データ ソースを作成する必要があります。  
   
- このサンプルでは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 名前付きインスタンスに接続するには、ODBC データ ソースの定義を変更し、server\namedinstance 形式でそのインスタンスを指定します。 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] は、既定で名前付きインスタンスとしてインストールされます。  
+ このサンプルでは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 名前付きインスタンスに接続するには、ODBC データ ソースの定義を変更し、server\namedinstance 形式でそのインスタンスを指定します。 
+  [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] は、既定で名前付きインスタンスとしてインストールされます。  
   
  "MyServer" の部分を [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降のインスタンスが実行されているコンピューター名に変更してください。  
   

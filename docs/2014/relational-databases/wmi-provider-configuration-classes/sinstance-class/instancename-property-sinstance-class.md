@@ -19,14 +19,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 9ecc010dde59028b95896d6c00fa4f55cdc82c40
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63136480"
 ---
 # <a name="instancename-property-sinstance-class"></a>InstanceName プロパティ (SInstance クラス)
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンスの名前を取得します。  
+  の[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンスの名前を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,15 +37,16 @@ object
 ```  
   
 ## <a name="parts"></a>要素  
- *object*  
- [SInstance クラス](sinstance-class.md)サーバー インスタンスを表すオブジェクト。  
+ *素材*  
+ サーバーインスタンスを表す[Sinstance クラス](sinstance-class.md)オブジェクト。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンスの名前を指定する文字列値。  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンスの名前を指定する文字列値。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
   
 ## <a name="see-also"></a>参照  
- [サーバー ネットワーク プロトコルとネットワーク ライブラリの構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [サーバーのネットワーク プロトコルと Net-Library の構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

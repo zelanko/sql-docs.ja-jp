@@ -17,14 +17,14 @@ ms.assetid: af64753c-c758-4b68-954b-2c84e3bbd93f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 247928cfbc7e051853bba0c7f49644a1a6203614
-ms.sourcegitcommit: bcc3b2c7474297aba17b7a63b17c103febdd0af9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68794686"
 ---
 # <a name="sqlgetinfo-returned-values-for-dbase"></a>SQLGetInfo で dBASE に返される値
-次の表に、 *Fin$ type*引数の C 言語 #defines と**SQLGetInfo**によって返される対応する値の一覧を示します。 この情報を取得するには、一覧表示されている C 言語の #defines を**SQLGetInfo**に渡します。 **SQLGetInfo**によって返される値の詳細については、 *ODBC プログラマーズリファレンス*を参照してください。  
+次の表に、 *Fin$ type*引数の C 言語 #defines と**SQLGetInfo**によって返される対応する値の一覧を示します。 この情報を取得するに*は、一覧*表示されている C 言語の #defines を**SQLGetInfo**に渡します。 **SQLGetInfo**によって返される値の詳細については、 *ODBC プログラマーズリファレンス*を参照してください。  
   
 > [!NOTE]  
 >  **SQLGetInfo**が32ビットのビットマスクを返す場合、縦棒 (&#124;) はビットごとの or を表します。  
@@ -94,9 +94,9 @@ ms.locfileid: "68794686"
 |SQL_DRIVER_HENV|ドライバーマネージャーによって処理されます。|  
 |SQL_DRIVER_HLIB|ドライバーマネージャーによって処理されます。|  
 |SQL_DRIVER_HSTMT|ドライバーマネージャーによって処理されます。|  
-|SQL_DRIVER_NAME|"OdbcJt32.dll"|  
+|SQL_DRIVER_NAME|"OdbcJt32"|  
 |SQL_DRIVER_ODBC_VER|"3.51.0000"|  
-|SQL_DRIVER_VER|"4.00"(*nnnn*はビルド日付を指定します)|  
+|SQL_DRIVER_VER|"4.00" (*nnnn*はビルド日付を指定*します)*|  
 |SQL_DROP_ASSERTION|0|  
 |SQL_DROP_CHARACTER_SET|0|  
 |SQL_DROP_COLLATION|0|  
@@ -110,7 +110,7 @@ ms.locfileid: "68794686"
 |SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1|SQL_CA1_NEXT|  
 |SQL_GETDATA_EXTENSIONS|[複数の値]|  
 |SQL_GROUP_BY|SQL_GB_GROUP_BY_CONTAINS_SELECT|  
-|SQL_IDENTIFIER_CASE|SQL_IC_UPPER (修飾子は、Windows NT がディレクトリを見つけることができるように、大文字と小文字が混在して返されます)。|  
+|SQL_IDENTIFIER_CASE|SQL_IC_UPPER (Windows NT がディレクトリを見つけることができるように、大文字と小文字が混在して返されます)。|  
 |SQL_IDENTIFIER_QUOTE_CHAR|"\`" (バッククォート)|  
 |SQL_KEYWORDS|[複数の値]|  
 |SQL_LIKE_ESCAPE_CLAUSE|"N"|  
@@ -141,7 +141,7 @@ ms.locfileid: "68794686"
 |SQL_NON_NULLABLE_COLUMNS|SQL_NNC_NON_NULL|  
 |SQL_NULL_COLLATION|SQL_NC_LOW|  
 |SQL_NUMERIC_FUNCTIONS|[複数の値]|  
-|SQL_ODBC_SAG_CLI_ CONFORMANCE|SQL_OSCC_COMPLIANT|  
+|SQL_ODBC_SAG_CLI_ の準拠|SQL_OSCC_COMPLIANT|  
 |SQL_ODBC_SQL_INTEGRITY|"N"|  
 |SQL_ODBC_VER|ドライバーマネージャーから|  
 |SQL_OJ_CAPABILITIES|[複数の値]|  
@@ -156,7 +156,7 @@ ms.locfileid: "68794686"
 |SQL_SCROLL_OPTIONS|[複数の値]|  
 |SQL_SEARCH_PATTERN_ESCAPE|"\\"|  
 |SQL_SERVER_NAME|DBASE|  
-|SQL_SPECIAL_CHARACTERS|"~\`\@}{\?" ';:/<,.!\>'#$%^&\*\_-+=\\\[]&#124;"|  
+|SQL_SPECIAL_CHARACTERS|\`\@#$%^&"~\*\? / } {\> " ';:<,.! '\_-+=\\\[] &#124; "|  
 |SQL_STRING_FUNCTIONS|[複数の値]|  
 |SQL_SUBQUERIES|[複数の値]|  
 |SQL_SYSTEM_FUNCTIONS|0|  

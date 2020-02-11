@@ -1,5 +1,5 @@
 ---
-title: Microsoft OLE DB の単純なプロバイダー |Microsoft Docs
+title: Microsoft OLE DB Simple Provider |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,25 +15,25 @@ ms.assetid: 1e7dc6f0-482c-4103-8187-f890865e40fc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d3acdfc7e03115b415e7641047e7621d5ab463e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926604"
 ---
-# <a name="microsoft-ole-db-simple-provider-overview"></a>Microsoft OLE DB プロバイダーの簡単な概要
-Microsoft OLE DB 単純なプロバイダー (OSP) により、対象のプロバイダーが書き込まれたを使用して任意のデータにアクセスする ADO、 [OLE DB 単純なプロバイダー (OSP) Toolkit](https://msdn.microsoft.com/6e7b7931-9e4a-4151-ae51-672abd3f84a6)します。 単純なプロバイダーはインメモリ配列、または XML ドキュメントなどの OLE DB の基本的なサポートを必要とするデータ ソースにアクセスするためのものです。
+# <a name="microsoft-ole-db-simple-provider-overview"></a>Microsoft OLE DB Simple Provider の概要
+Microsoft OLE DB Simple Provider (OSP) を使用すると、ADO は、 [OLE DB Simple provider (osp) Toolkit](https://msdn.microsoft.com/6e7b7931-9e4a-4151-ae51-672abd3f84a6)を使用して、プロバイダーが記述されているすべてのデータにアクセスできます。 単純なプロバイダーは、メモリ内配列や XML ドキュメントなどの基本的な OLE DB サポートのみを必要とするデータソースにアクセスすることを目的としています。
 
 ## <a name="connection-string-parameters"></a>接続文字列パラメーター
- OLE DB 単純なプロバイダーの DLL に接続するには、設定、*プロバイダー*への引数、 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)プロパティ。
+ OLE DB の単純なプロバイダー DLL に接続するには、 *provider*引数を[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)プロパティに設定します。
 
 ```vb
 MSDAOSP
 ```
 
- この値も設定またはを使用して読み取る、[プロバイダー](../../../ado/reference/ado-api/provider-property-ado.md)プロパティ。
+ この値は、[プロバイダー](../../../ado/reference/ado-api/provider-property-ado.md)プロパティを使用して設定または読み取ることもできます。
 
- プロバイダーの作成者によって決定されます、登録済みのプロバイダー名を使用して完全な OLE DB プロバイダーとして登録されている単純なプロバイダーに接続することができます。
+ プロバイダーのライターによって決定される登録済みプロバイダー名を使用して、完全な OLE DB プロバイダーとして登録されている単純なプロバイダーに接続できます。
 
 ## <a name="typical-connection-string"></a>一般的な接続文字列
  このプロバイダーの一般的な接続文字列は次のとおりです。
@@ -42,17 +42,17 @@ MSDAOSP
 "Provider=MSDAOSP;Data Source=serverName"
 ```
 
- 文字列は、これらのキーワードで構成されます。
+ 文字列は、次のキーワードで構成されています。
 
-|Keyword|説明|
+|Keyword|[説明]|
 |-------------|-----------------|
-|**Provider**|SQL Server の OLE DB プロバイダーを指定します。|
+|**プロバイダー**|SQL Server の OLE DB プロバイダーを指定します。|
 |**Data Source**|サーバーの名前を指定します。|
 
 ## <a name="xml-document-example"></a>XML ドキュメントの例
- OLE DB 単純なプロバイダー (OSP) MDAC 2.7 以降と Windows Data Access Components (Windows DAC) は階層の ADO のオープンをサポートする強化されています**レコード セット**を任意の XML ファイル。 これらの XML ファイルは、ADO の XML 永続性スキーマを含めることができますが、必須ではありません。 これは、OSP に接続することによって実装されて、 **MSXML2.DLL**。 したがって**MSXML2.DLL**以降が必要です。
+ MDAC 2.7 以降の OLE DB Simple Provider (OSP) と Windows Data Access Components (Windows DAC) は、任意の XML ファイルに対する階層型 ADO**レコードセット**のオープンをサポートするように強化されています。 これらの XML ファイルには ADO XML 永続化スキーマが含まれている場合がありますが、必須ではありません。 これは、OSP を**msxml2.dll**に接続することによって実装されています。そのため、 **msxml2.dll**以降が必要です。
 
- **Portfolio.xml**次の例で使用されるファイルには、次のようなツリーが含まれています。
+ 次の例で使用されている**ポートフォリオ .xml**ファイルには、次のツリーが含まれています。
 
 ```console
 Portfolio
@@ -65,9 +65,9 @@ Portfolio
          WebSite
 ```
 
- XML の DSO が組み込みのヒューリスティックを使用して XML ツリー内のノードを階層構造の各章に変換する**Recordset**します。
+ XML DSO は、組み込みのヒューリスティックを使用して、XML ツリー内のノードを階層**レコードセット**内のチャプターに変換します。
 
- これらの組み込みのヒューリスティックを使用して、XML ツリーが 2 つのレベル階層に変換されます**Recordset**次の形式。
+ これらの組み込みのヒューリスティックを使用して、XML ツリーは次の形式の2レベルの階層**レコードセット**に変換されます。
 
 ```console
 Parent Recordset
@@ -76,28 +76,28 @@ Shares, Symbol, Price, $Text
       Company Name, WebSite, $Text
 ```
 
- ポートフォリオおよび情報のタグは、階層で表されないことに注意してください。 **Recordset**します。 XML の DSO に階層を XML ツリーを変換する方法の詳細については**レコード セット**、次の規則を参照してください。 $Text 列は、次のセクションについて説明します。
+ ポートフォリオタグと情報タグは、階層**レコードセット**では表されないことに注意してください。 Xml DSO が XML ツリーを階層的な**レコードセット**に変換する方法の詳細については、次のルールを参照してください。 $Text の列については、次のセクションで説明します。
 
-## <a name="rules-for-assigning-xml-elements-and-attributes-to-columns-and-rows"></a>XML 要素の割り当てと属性を行と列のルール
- XML DSO では、要素を割り当てるための手順し、データ主体のアプリケーションの列と行に属性します。 XML は、階層全体を含む 1 つのタグを持つツリーとしてモデル化されます。 たとえば、本の XML の説明には」の章のタグには、図タグ、セクション タグが含まれます。 最上位レベルは、サブ要素」の章、図、およびセクションを含む、書籍のタグになります。 XML の DSO では、XML 要素を行と列にマップ、最上位レベル要素ではなく、サブ要素が変換されます。
+## <a name="rules-for-assigning-xml-elements-and-attributes-to-columns-and-rows"></a>列および行への XML 要素と属性の割り当てに関する規則
+ XML DSO は、データバインドアプリケーションの列および行に要素と属性を割り当てる手順に従います。 XML は、階層全体を含む1つのタグを持つツリーとしてモデル化されます。 たとえば、書籍の XML 記述には、章タグ、図タグ、およびセクションタグを含めることができます。 最上位レベルには、サブ要素の章、図、およびセクションを含む book タグがあります。 Xml DSO が XML 要素を行と列にマップする場合、最上位レベルの要素ではなく、サブ要素が変換されます。
 
- XML DSO は、サブ要素を変換するため、この手順を使用します。
+ XML DSO は、サブ要素を変換するために次の手順を使用します。
 
--   各サブ要素と属性がいくつかの列に対応**レコード セット**階層にします。
+-   各サブ要素および属性は、階層内の一部の**レコードセット**内の列に対応します。
 
--   列の名前がサブ要素または属性の名前と同じ親要素、属性と同じ名前のサブ要素を後者があるない限り、"!"サブ要素の列名に付加されます。
+-   列の名前は、サブ要素または属性の名前と同じです。ただし、親要素に同じ名前のサブ要素がある場合は、"!" がサブ要素の列名の前に付加されます。
 
--   各列は、いずれかを*単純*スカラー値 (通常は文字列) を含む列または**レコード セット**子を含む列**レコード セット**します。
+-   各列は、スカラー値 (通常は文字列) または子**レコード**セットを含む**レコードセット**列を含む*単純*な列です。
 
 -   属性に対応する列は、常に単純です。
 
--   サブ要素に対応する列は**Recordset**場合は、サブ要素が、独自のサブ要素または属性 (または両方)、またはサブ要素の親が子としてのサブ要素の 1 つ以上のインスタンスのいずれかの列。 それ以外の場合、列は簡単です。
+-   サブ要素が独自のサブ要素または属性 (またはその両方) を持つか、サブ要素の親が子として複数のサブ要素のインスタンスを持つ場合、サブ要素に対応する列は**レコードセット**列です。 それ以外の場合、列は単純です。
 
--   (別の親) の下のサブ要素の複数のインスタンスが存在する場合、その列を**レコード セット**列場合*任意*インスタンスの意味を**レコード セット**列、列が単純な場合にのみ*すべて*インスタンスが単純な列を意味します。
+-   サブ要素の複数のインスタンス (異なる親の下) がある場合、*いずれか*のインスタンスが**レコードセット**列を意味する場合、その列は**レコードセット**列になります。この列は、*すべて*のインスタンスが単純な列を意味する場合にのみ単純です。
 
--   すべて**レコード セット**ある $Text という名前の列を追加します。
+-   すべての**レコードセット**には、$Text という名前の列が追加されています。
 
- 構築するために必要なコードを**レコード セット**のとおりです。
+ **レコードセット**を作成するために必要なコードは次のとおりです。
 
 ```vb
 Dim adoConn as ADODB.Connection
@@ -111,7 +111,7 @@ adoRS.Open "https://WebServer/VRoot/portfolio.xml, adoConn
 ```
 
 > [!NOTE]
->  4 つの異なる名前付け規則を使用して、データ ファイルのパスを指定できます。
+>  データファイルのパスは、4つの異なる名前付け規則を使用して指定できます。
 
 ```vb
 'HTTP://
@@ -124,24 +124,24 @@ adoRS.Open "\\ComputerName\ShareName\portfolio.xml", adoConn
 adoRS.Open "C:\Directory\portfolio.xml", adoConn
 ```
 
- すぐに、**レコード セット**が開かれた、通常、ADO **Recordset**ナビゲーション コマンドを使用できます。
+ **レコードセット**が開かれるとすぐに、通常の ADO**レコードセット**ナビゲーションコマンドを使用できるようになります。
 
- **レコード セット**OSP によって生成されるいくつかの制限があります。
+ OSP によって生成される**レコードセット**には、いくつかの制限があります。
 
--   クライアント カーソル (**adUseClient**) はサポートされていません。
+-   クライアントカーソル (**adUseClient**) はサポートされていません。
 
--   階層**レコード セット**任意に作成された XML で保存できません**Recordset.Save**します。
+-   任意の XML に対して作成された階層**レコードセット**は、**レコードセット**を使用して保存することはできません。
 
--   **レコード セット**OSP で作成された読み取り専用です。
+-   OSP で作成された**レコードセット**は読み取り専用です。
 
--   XMLDSO を各 $Text のデータの追加の列を追加します**Recordset**階層にします。
+-   XMLDSO は、階層内の各**レコードセット**にデータの列 ($Text) を追加します。
 
- OLE DB 単純なプロバイダーの詳細については、次を参照してください。[単純なプロバイダーを構築](https://msdn.microsoft.com/b31a6cba-58ae-4ee8-9039-700973d354d6)します。
+ OLE DB 単純なプロバイダーの詳細については、「[単純なプロバイダーの構築](https://msdn.microsoft.com/b31a6cba-58ae-4ee8-9039-700973d354d6)」を参照してください。
 
 ## <a name="code-example"></a>コード例
- Visual Basic コードを次に示します、階層を構築する任意の XML ファイルを開く**レコード セット**、およびそれぞれの各レコードの書き込みを再帰的に**レコード セット**デバッグ ウィンドウにします。
+ 次の Visual Basic コードは、任意の XML ファイルを開き、階層**レコードセット**を構築し、各レコード**セット**の各レコードをデバッグウィンドウに再帰的に書き込む方法を示しています。
 
- 株価情報を含む単純な XML ファイルを次に示します。 次のコードはこのファイルを使用して 2 つのレベル階層を構築する**Recordset**します。
+ 株価を含む単純な XML ファイルを次に示します。 次のコードでは、このファイルを使用して、2レベルの階層**レコードセット**を作成します。
 
 ```xml
 <portfolio>
@@ -184,7 +184,7 @@ adoRS.Open "C:\Directory\portfolio.xml", adoConn
 </portfolio>
 ```
 
- Visual Basic の 2 つのサブ プロシージャを次に示します。 最初の作成、 **Recordset**に渡されます、 *WalkHier* sub プロシージャ、再帰的には、それぞれの書き込み、階層の下位でについて説明します**フィールド**で各レコードごとに**Recordset**デバッグ ウィンドウにします。
+ 2つの Visual Basic サブプロシージャを次に示します。 1つ目の方法では、**レコードセット**が作成され、そのレコードセットが*ウォーク hier*サブプロシージャに渡されます。これは、階層を再帰的に処理し、各レコード**セット**内の各レコードの各**フィールド**をデバッグウィンドウに書き込みます。
 
 ```vb
 Private Sub BrowseHierRecordset()

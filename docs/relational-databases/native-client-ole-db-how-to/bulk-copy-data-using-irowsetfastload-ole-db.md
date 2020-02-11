@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: cf5f597b739f4fd121d1c4174039dae5379122f0
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73768272"
 ---
 # <a name="bulk-copy-data-using-irowsetfastload-ole-db"></a>IRowsetFastLoad を使用したデータの一括コピー (OLE DB)
@@ -30,12 +30,13 @@ ms.locfileid: "73768272"
   
  コンシューマーは、SQLOLEDB プロバイダー固有のプロパティ SSPROP_ENABLEFASTLOAD を VARIANT_TRUE に設定することにより、一括コピーを実行する必要があることを SQLOLEDB に通知します。 コンシューマーはデータ ソースのプロパティ セットを使用して、SQLOLEDB セッションを作成します。 新しいセッションでは、コンシューマーが**IRowsetFastLoad**にアクセスできるようになります。  
   
- **IRowsetFastLoad** を使用してレコードをテーブルに一括コピーする方法を示す完全なサンプル コードが用意されています。 このサンプルでは、テーブル **IRFLTable** に 10 個のレコードを追加します。 テーブル **IRFLTable** をデータベース内に作成する必要があります。  
+ 
+  **IRowsetFastLoad** を使用してレコードをテーブルに一括コピーする方法を示す完全なサンプル コードが用意されています。 このサンプルでは、テーブル **IRFLTable** に 10 個のレコードを追加します。 テーブル **IRFLTable** をデータベース内に作成する必要があります。  
   
  このサンプルには AdventureWorks サンプル データベースが必要です。このサンプル データベースは、[Microsoft SQL Server サンプルとコミュニティのプロジェクト](https://go.microsoft.com/fwlink/?LinkID=85384)のホーム ページからダウンロードできます。  
   
 > [!IMPORTANT]  
->  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) を使用して暗号化してください。  
+>  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、 [Win32 CRYPTO API](https://go.microsoft.com/fwlink/?LinkId=64532)を使用して暗号化する必要があります。  
   
 ### <a name="to-bulk-copy-data-into-a-sql-server-table"></a>SQL Server テーブルにデータを一括コピーするには  
   
@@ -45,7 +46,8 @@ ms.locfileid: "73768272"
   
 3.  **IOpenRowset**インターフェイスを要求するセッションを作成します。  
   
-4.  **IOpenRowset::OpenRowset** を呼び出して、(一括コピー操作によるデータのコピー先の) テーブルのすべての行が含まれる行セットを開きます。  
+4.  
+  **IOpenRowset::OpenRowset** を呼び出して、(一括コピー操作によるデータのコピー先の) テーブルのすべての行が含まれる行セットを開きます。  
   
 5.  必要なバインドを実行し、 **IAccessor:: CreateAccessor**を使用してアクセサーを作成します。  
   
@@ -58,7 +60,8 @@ ms.locfileid: "73768272"
   
  1 つ目の ([!INCLUDE[tsql](../../includes/tsql-md.md)]) コード リストを実行して、アプリケーションで使用するテーブルを作成します。  
   
- ole32.lib と oleaut32.lib を使用して次の C++ コード リストをコンパイルし、実行します。 このアプリケーションは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 一部の Windows オペレーティング システムでは、(localhost) または (local) を実際の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前に変更する必要があります。 名前付きインスタンスに接続するには、接続文字列を L"(local)" から L"(local)\\\name" に変更します。ここで、name は名前付きインスタンスです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、既定で名前付きインスタンスとしてインストールされます。 INCLUDE 環境変数に、sqlncli を含むディレクトリが含まれていることを確認します。  
+ ole32.lib と oleaut32.lib を使用して次の C++ コード リストをコンパイルし、実行します。 このアプリケーションは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 一部の Windows オペレーティング システムでは、(localhost) または (local) を実際の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前に変更する必要があります。 名前付きインスタンスに接続するには、接続文字列を L"(local)" から L"(local)\\\name" に変更します。ここで、name は名前付きインスタンスです。 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、既定で名前付きインスタンスとしてインストールされます。 INCLUDE 環境変数に、sqlncli を含むディレクトリが含まれていることを確認します。  
   
  3 つ目の ([!INCLUDE[tsql](../../includes/tsql-md.md)]) コード リストを実行して、アプリケーションで使用したテーブルを削除します。  
   

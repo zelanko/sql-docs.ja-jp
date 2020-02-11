@@ -18,10 +18,10 @@ ms.assetid: 624b9bdd-ed93-4140-bd4e-00d714a2558c
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 5a4c6441cd2e6210575cfd30d28bf2cc2f385c18
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73660765"
 ---
 # <a name="propertyvaltype-property-clientnetworkprotocolproperty-class"></a>PropertyValType プロパティ (ClientNetworkProtocolProperty クラス)
@@ -36,8 +36,8 @@ object.PropertyValType [= value]
 ```  
   
 ## <a name="parts"></a>要素  
- *object*  
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] クライアントによって使用されるネットワークプロトコルの属性を表す[Clientnetworkprotocolproperty クラス](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md)オブジェクト。  
+ *素材*  
+ クライアントによって[!INCLUDE[msCoName](../../../includes/msconame-md.md)]使用されるネットワークプロトコルの属性を表す[clientnetworkprotocolproperty クラス](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md)オブジェクト。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  プロパティ値のデータ型を指定する**uint32**値。  

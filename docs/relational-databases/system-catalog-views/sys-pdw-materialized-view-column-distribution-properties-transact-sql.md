@@ -13,10 +13,10 @@ author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: 934b1ed84aa7391ad8cf47e463dd38b37408ec00
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401662"
 ---
 # <a name="syspdw_materialized_view_column_distribution_properties-transact-sql"></a>pdw_materialized_view_column_distribution_properties (Transact-sql) 
@@ -25,10 +25,10 @@ ms.locfileid: "74401662"
 
 具体化されたビューの列の分布情報を表示します。  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
-|object_id|**通り**|列が所属するオブジェクトの ID。 |  
-|column_id|**通り**|列の ID。|  
+|object_id|**int**|列が所属するオブジェクトの ID。 |  
+|column_id|**int**|列の ID。|  
 |distribution_ordinal|**tinyint**|0 = ディストリビューション列ではありません。</br> 1 = SQL Data Warehouse は、この列を使用して具体化されたビューを分散しています。|
  
 ## <a name="permissions"></a>アクセス許可 

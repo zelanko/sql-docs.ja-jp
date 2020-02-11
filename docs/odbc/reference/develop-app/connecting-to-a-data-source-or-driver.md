@@ -1,5 +1,5 @@
 ---
-title: データ ソースまたはドライバー |Microsoft Docs
+title: データソースまたはドライバーへの接続 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,14 +11,14 @@ ms.assetid: e93027ab-9e60-47b7-ba96-8289dae32a22
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d51d92ae02084ea46c2a8bd2d73a27f0154e1a95
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68083141"
 ---
 # <a name="connecting-to-a-data-source-or-driver"></a>データ ソースまたはドライバーへの接続
-アプリケーションは、任意の数のドライバーとデータ ソースに接続できます。 さまざまなドライバーとデータ ソース、同じドライバーとのさまざまなデータ ソース、または同じドライバーとデータ ソースに複数の接続もできます。  
+アプリケーションは、任意の数のドライバーとデータソースに接続できます。 さまざまなドライバーとデータソース、同じドライバーとさまざまなデータソース、または同じドライバーとデータソースへの複数の接続を使用できます。  
   
  このセクションでは、次のトピックを扱います。  
   
@@ -38,4 +38,4 @@ ms.locfileid: "68083141"
   
 -   [データ ソースまたはドライバーからの切断](../../../odbc/reference/develop-app/disconnecting-from-a-data-source-or-driver.md)  
   
--   [接続プロセスにおける、ドライバー マネージャーの役割](../../../odbc/reference/develop-app/driver-manager-s-role-in-the-connection-process.md)
+-   [接続プロセスにおけるドライバーマネージャーの役割](../../../odbc/reference/develop-app/driver-manager-s-role-in-the-connection-process.md)

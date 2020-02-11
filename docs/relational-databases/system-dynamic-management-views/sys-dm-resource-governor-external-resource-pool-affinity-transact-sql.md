@@ -1,5 +1,5 @@
 ---
-title: sys.dm_resource_governor_external_resource_pool_affinity (TRANSACT-SQL) |Microsoft Docs
+title: dm_resource_governor_external_resource_pool_affinity (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/13/2017
 ms.prod: sql
@@ -20,38 +20,39 @@ ms.assetid: e32fac49-5161-47c0-8540-af3fe730c00c
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 02ec95d318825c1759067455b62f3dae6a86c184
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68053330"
 ---
-# <a name="sysdmresourcegovernorexternalresourcepoolaffinity-transact-sql"></a>sys.dm_resource_governor_external_resource_pool_affinity (TRANSACT-SQL)
+# <a name="sysdm_resource_governor_external_resource_pool_affinity-transact-sql"></a>dm_resource_governor_external_resource_pool_affinity (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
-**適用対象:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] および [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
+**適用対象:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]および[!INCLUDE[sssql17-md](../../includes/sssql17-md.md)][!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
-現在、外部リソース プールの構成について、CPU アフィニティ情報を返します。
+現在の外部リソースプールの構成に関する CPU アフィニティ情報を返します。
   
-|列名|データ型|説明|
+|列名|データ型|[説明]|
 |----------------|---------------|-----------------|
-|pool_id|**int**|外部リソース プールの ID。 NULL 値は許可されません。|
-|processor_group|**smallint**|Windows の論理プロセッサ グループの ID。 NULL 値は許可されません。|
-|cpu_mask|**bigint**|このプールに関連付けられている Cpu を表すバイナリ マスク。 NULL 値は許可されません。|
+|pool_id|**int**|外部リソースプールの ID。 NULL 値は許可されません。|
+|processor_group|**smallint**|Windows 論理プロセッサグループの ID。 NULL 値は許可されません。|
+|cpu_mask|**bigint**|このプールに関連付けられている Cpu を表すバイナリマスク。 NULL 値は許可されません。|
   
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
-アフィニティで作成されたプール`AUTO`アフィニティがないためにこのビューに表示されません。 詳細については、次を参照してください。、 [CREATE EXTERNAL RESOURCE POOL &#40;TRANSACT-SQL&#41; ](../../t-sql/statements/create-external-resource-pool-transact-sql.md)と[ALTER EXTERNAL RESOURCE POOL &#40;TRANSACT-SQL&#41; ](../../t-sql/statements/alter-external-resource-pool-transact-sql.md)ステートメント。
+アフィニティを使用`AUTO`して作成されたプールは、アフィニティがないため、このビューに表示されません。 詳細については、「 [CREATE EXTERNAL RESOURCE pool &#40;transact-sql&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md) 」および「 [ALTER external Resource pool &#40;transact-sql&#41;](../../t-sql/statements/alter-external-resource-pool-transact-sql.md)ステートメント」を参照してください。
 
 ## <a name="permissions"></a>アクセス許可
 
-`VIEW SERVER STATE` 権限が必要です。
 
-## <a name="see-also"></a>関連項目
+  `VIEW SERVER STATE` 権限が必要です。
 
-[SQL Server での Machine Learning のリソース管理](../../advanced-analytics/r/resource-governance-for-r-services.md)
+## <a name="see-also"></a>参照
 
-[sys.dm_resource_governor_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pool-affinity-transact-sql.md)
+[SQL Server での機械学習のためのリソースガバナンス](../../advanced-analytics/r/resource-governance-for-r-services.md)
+
+[dm_resource_governor_resource_pool_affinity &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pool-affinity-transact-sql.md)
 
 [external scripts enabled サーバー構成オプション](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)
 
-[ALTER EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-external-resource-pool-transact-sql.md)
+[Transact-sql&#41;&#40;の外部リソースプールの変更](../../t-sql/statements/alter-external-resource-pool-transact-sql.md)

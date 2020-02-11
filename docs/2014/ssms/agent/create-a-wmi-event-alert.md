@@ -13,16 +13,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5af4472d80e74c9d2845e6397f815ffb1c27f4d8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211435"
 ---
 # <a name="create-a-wmi-event-alert"></a>Create a WMI Event Alert
   このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を使用して、WMI Provider for Server Events によって監視されている特定の [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] イベントが発生したときに通知される [!INCLUDE[tsql](../../includes/tsql-md.md)]エージェントの警告を作成する方法について説明します。  
   
- 使用して、WMI プロバイダーを監視する方法については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]イベントを参照してください[WMI Provider for Server Events の概念](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)します。 WMI イベント警告の通知を受信するために必要な権限の詳細については、「 [SQL Server エージェント サービスのアカウントの選択](select-an-account-for-the-sql-server-agent-service.md)」を参照してください。 WQL の詳細については、「 [WMI Provider for Server Events と WQL の使用](../../relational-databases/wmi-provider-server-events/using-wql-with-the-wmi-provider-for-server-events.md)」を参照してください。  
+ WMI プロバイダーを使用したイベントの監視[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の詳細については、「 [Wmi Provider for Server events の概念](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)」を参照してください。 WMI イベント警告の通知を受信するために必要な権限の詳細については、「 [SQL Server エージェント サービスのアカウントの選択](select-an-account-for-the-sql-server-agent-service.md)」を参照してください。 WQL の詳細については、「 [WMI Provider for Server Events と WQL の使用](../../relational-databases/wmi-provider-server-events/using-wql-with-the-wmi-provider-for-server-events.md)」を参照してください。  
   
  **このトピックの内容**  
   
@@ -30,9 +30,9 @@ ms.locfileid: "68211435"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
--   **WMI イベント警告を作成する方法:**  
+-   **次のものを使用して WMI イベント警告を作成するには:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -42,11 +42,14 @@ ms.locfileid: "68211435"
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、警告システム全体を簡単に管理できるグラフィカルなツールです。警告の基本構成を設定するには、SQL Server Management Studio を使用することをお勧めします。  
+-   
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、警告システム全体を簡単に管理できるグラフィカルなツールです。警告の基本構成を設定するには、SQL Server Management Studio を使用することをお勧めします。  
   
--   **xp_logevent** で生成されたイベントは master データベースで発生します。 このため、 **xp_logevent** では、警告の **@database_name** が **'master'** または NULL になっていないと、警告が起動されません。  
+-   
+  **xp_logevent** で生成されたイベントは master データベースで発生します。 このため、 **xp_logevent** では、警告の **@database_name** が **'master'** または NULL になっていないと、警告が起動されません。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントが実行されているコンピューター上の WMI 名前空間だけがサポートされます。  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントが実行されているコンピューター上の WMI 名前空間だけがサポートされます。  
   
 ###  <a name="Security"></a> セキュリティ  
   
@@ -57,21 +60,28 @@ ms.locfileid: "68211435"
   
 #### <a name="to-create-a-wmi-event-alert"></a>WMI イベント警告を作成するには  
   
-1.  **オブジェクト エクスプローラー** で、プラス記号をクリックして、WMI イベントの警告を作成するサーバーを展開します。  
+1.  
+  **オブジェクト エクスプローラー** で、プラス記号をクリックして、WMI イベントの警告を作成するサーバーを展開します。  
   
 2.  プラス記号をクリックして **[SQL Server エージェント]** を展開します。  
   
-3.  **[警告]** を右クリックし、 **[新しい警告]** をクリックします。  
+3.  
+  **[警告]** を右クリックし、 **[新しい警告]** をクリックします。  
   
-4.  **[新しい警告]** ダイアログ ボックスで、 **[名前]** ボックスに新しい警告の名前を入力します。  
+4.  
+  **[新しい警告]** ダイアログ ボックスで、 **[名前]** ボックスに新しい警告の名前を入力します。  
   
-5.  **[有効化]** チェック ボックスをオンにして、実行する警告を有効にします。 既定では、 **[有効化]** チェック ボックスはオンになっています。  
+5.  
+  **[有効化]** チェック ボックスをオンにして、実行する警告を有効にします。 既定では、 **[有効化]** チェック ボックスはオンになっています。  
   
-6.  **[種類]** ボックスの一覧の **[WMI イベント警告]** をクリックします。  
+6.  
+  **[種類]** ボックスの一覧の **[WMI イベント警告]** をクリックします。  
   
-7.  **[WMI イベント警告定義]** の **[名前空間]** ボックスで、この警告を発生させる WMI イベントを識別する WQL (WMI Query Language) ステートメントの WMI 名前空間を指定します。  
+7.  
+  **[WMI イベント警告定義]** の **[名前空間]** ボックスで、この警告を発生させる WMI イベントを識別する WQL (WMI Query Language) ステートメントの WMI 名前空間を指定します。  
   
-8.  **[クエリ]** ボックスで、警告が応答するイベントを識別する WQL ステートメントを指定します。  
+8.  
+  **[クエリ]** ボックスで、警告が応答するイベントを識別する WQL ステートメントを指定します。  
   
 9. **[OK]** をクリックします。  
   
@@ -102,6 +112,6 @@ ms.locfileid: "68211435"
     GO  
     ```  
   
- 詳細については、次を参照してください。 [sp_add_alert &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-alert-transact-sql)します。  
+ 詳細については、「 [sp_add_alert &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-add-alert-transact-sql)」を参照してください。  
   
   

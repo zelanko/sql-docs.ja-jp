@@ -21,13 +21,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 304cd31b4d89d56bee5dbc903c784ee4bf7af5fe
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73637528"
 ---
 # <a name="microsoft-decision-trees-algorithm-technical-reference"></a>Microsoft デシジョン ツリー アルゴリズム テクニカル リファレンス
+  
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムは、さまざまなツリー作成手法が組み込まれた複合アルゴリズムであり、回帰、分類、アソシエーションなど、複数の分析タスクをサポートしています。 Microsoft デシジョン ツリー アルゴリズムは、不連続属性と連続属性の両方のモデリングをサポートしています。  
   
  このトピックでは、アルゴリズムの実装について説明し、さまざまなタスクに合わせてアルゴリズムの動作をカスタマイズする方法を示します。また、デシジョン ツリー モデルに対するクエリに関する追加情報へのリンクも示します。  
@@ -57,16 +58,18 @@ ms.locfileid: "73637528"
   
  予測可能属性が連続する数値データ型の場合、結果数をできるだけ減らしてモデルの作成を高速化するために、機能の選択が出力にも適用されます。 MAXIMUM_OUTPUT_ATTRIBUTES パラメーターを設定することにより、機能の選択のしきい値を変更して、使用可能な値の数を増減できます。  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムが、不連続の予測可能列をどのように処理するかについては、「 [ベイジアン ネットワークの学習 : 知識と統計データの組み合わせ](https://go.microsoft.com/fwlink/?LinkId=45963)」を参照してください。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムが、連続する予測可能列をどのように処理するかについては、「 [時系列分析の自動回帰ツリー モデル](https://go.microsoft.com/fwlink/?LinkId=45966)」の付録を参照してください。  
+ 
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムが、不連続の予測可能列をどのように処理するかについては、「 [ベイジアン ネットワークの学習 : 知識と統計データの組み合わせ](https://go.microsoft.com/fwlink/?LinkId=45963)」を参照してください。 
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムが、連続する予測可能列をどのように処理するかについては、「 [時系列分析の自動回帰ツリー モデル](https://go.microsoft.com/fwlink/?LinkId=45966)」の付録を参照してください。  
   
 ### <a name="scoring-methods-and-feature-selection"></a>スコアリング方法と機能の選択  
  Microsoft デシジョン ツリー アルゴリズムには、情報利得のスコアを計算する式が 3 つ用意されています。Shannon のエントロピー、K2 事前分布を指定したベイジアン ネットワーク、および均一なディリクレ事前分布を指定したベイジアン ネットワークです。 データ マイニング フィールドには、3 つの方法すべてが準備されています。 最適な結果を得るには、複数のパラメーターとスコアリング方法を試してみることをお勧めします。 これらのスコアリング方法の詳細については、「 [機能の選択](../../sql-server/install/feature-selection.md)」を参照してください。  
   
  すべての [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ マイニング アルゴリズムでは、分析の向上と処理負荷の削減のため、機能の選択が自動的に使用されます。 機能の選択に使用される方法は、モデルの作成に使用したアルゴリズムによって異なります。 デシジョン ツリー モデルに対する機能の選択を制御するアルゴリズム パラメーターは、MAXIMUM_INPUT_ATTRIBUTES と MAXIMUM_OUTPUT です。  
   
-|アルゴリズム|分析の方法|コメント|  
+|アルゴリズム|分析の方法|説明|  
 |---------------|------------------------|--------------|  
-|デシジョン ツリー|興味深さのスコア<br /><br /> Shannon のエントロピー<br /><br /> K2 事前分布を指定したベイズ定理<br /><br /> 均一な事前分布を指定したベイズ ディリクレ等式 (既定値)|非バイナリの連続する値を含む列がある場合は、一貫性を保つため、すべての列に対して興味深さのスコアが使用されます。 それ以外の場合は、既定の方法か、指定した方法が使用されます。|  
+|デシジョン ツリー|興味深さのスコア<br /><br /> Shannon のエントロピ<br /><br /> K2 事前分布を指定したベイズ定理<br /><br /> 均一な事前分布を指定したベイズ ディリクレ等式 (既定値)|非バイナリの連続する値を含む列がある場合は、一貫性を保つため、すべての列に対して興味深さのスコアが使用されます。 それ以外の場合は、既定の方法か、指定した方法が使用されます。|  
 |線形回帰|興味深さのスコア|線形回帰でサポートされるのは連続列だけであるため、興味深さのスコアのみが使用されます。|  
   
 ### <a name="scalability-and-performance"></a>スケーラビリティとパフォーマンス  
@@ -93,10 +96,12 @@ ms.locfileid: "73637528"
 -   任意の属性に対する不連続値の数を、10 以下に制限します。 モデルに応じたさまざまな方法で、値のグループ化を試みることができます。  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] のデータ探索ツールを使用すると、データ マイニングの開始前に、データ内の値の分布を視覚化し、値を適切にグループ化することができます。 詳細については、「 [データ プロファイル タスクとビューアー](../../integration-services/control-flow/data-profiling-task-and-viewer.md)」を参照してください。 また、 [Excel 2007 用データ マイニング アドイン](https://www.microsoft.com/download/details.aspx?id=8569)を使用すると、データの探索、グループ化、およびラベル変更を Microsoft Excel で行うことができます。  
+    >  
+  [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] のデータ探索ツールを使用すると、データ マイニングの開始前に、データ内の値の分布を視覚化し、値を適切にグループ化することができます。 詳細については、「 [データ プロファイル タスクとビューアー](../../integration-services/control-flow/data-profiling-task-and-viewer.md)」を参照してください。 また、 [Excel 2007 用データ マイニング アドイン](https://www.microsoft.com/download/details.aspx?id=8569)を使用すると、データの探索、グループ化、およびラベル変更を Microsoft Excel で行うことができます。  
   
 ## <a name="customizing-the-decision-trees-algorithm"></a>デシジョン ツリー アルゴリズムのカスタマイズ  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムでは、結果として得られるマイニング モデルのパフォーマンスおよび精度に影響を与えるパラメーターがサポートされています。 マイニング モデル列またはマイニング構造列にモデリング フラグを設定して、データの処理方法を制御することもできます。  
+ 
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムでは、結果として得られるマイニング モデルのパフォーマンスおよび精度に影響を与えるパラメーターがサポートされています。 マイニング モデル列またはマイニング構造列にモデリング フラグを設定して、データの処理方法を制御することもできます。  
   
 > [!NOTE]  
 >  Microsoft デシジョン ツリー アルゴリズムは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで利用できます。ただし、Microsoft デシジョン ツリー アルゴリズムの動作をカスタマイズするためのいくつかの高度なパラメーターは、特定のエディションの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]だけで使用できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、「[SQL Server 2012 の各エディションがサポートする機能](https://go.microsoft.com/fwlink/?linkid=232473)」(https://go.microsoft.com/fwlink/?linkid=232473) を参照してください。  
@@ -142,16 +147,16 @@ ms.locfileid: "73637528"
  *MINIMUM_SUPPORT*  
  デシジョン ツリー内で分割を生成するために必要なリーフ ケースの最小数を決定します。  
   
- 既定値は、10 です。  
+ 既定値は 10 です。  
   
  データセットが非常に大きい場合は、オーバートレーニングを回避するため、この値を大きくする必要が生じることがあります。  
   
  *SCORE_METHOD*  
- 分割スコアを計算するために使用する方法を決定します。 使用できるオプションは以下のとおりです。  
+ 分割スコアを計算するために使用する方法を決定します。 次のオプションを使用できます。  
   
-|ID|[オブジェクト名]|  
+|id|Name|  
 |--------|----------|  
-|@shouldalert|エントロピー|  
+|1 で保護されたプロセスとして起動されました|エントロピー|  
 |3|K2 事前分布を指定したベイズ定理|  
 |4|均一な事前分布を指定したベイズ ディリクレ等式 (BDE)<br /><br /> (既定値)。|  
   
@@ -160,18 +165,19 @@ ms.locfileid: "73637528"
  これらのスコアリング方法の詳細については、「 [機能の選択](../../sql-server/install/feature-selection.md)」を参照してください。  
   
  *SPLIT_METHOD*  
- ノードを分割するために使用する方法を決定します。 使用できるオプションは以下のとおりです。  
+ ノードを分割するために使用する方法を決定します。 次のオプションを使用できます。  
   
-|ID|[オブジェクト名]|  
+|id|Name|  
 |--------|----------|  
-|@shouldalert|**Binary:** 属性値の実際の数にかかわらず、ツリーが 2 つの分岐に分割されることを示します。|  
-|2|**Complete:** 属性値と同じ数の分割をツリーに作成できることを示します。|  
-|3|**Both:** バイナリ分割と完全分割のどちらを使用すると最適な結果が生成されるのかが、Analysis Services によって判断されることを示します。|  
+|1 で保護されたプロセスとして起動されました|**バイナリ:** 属性の実際の値の数に関係なく、ツリーを2つの分岐に分割する必要があることを示します。|  
+|2|**完了:** ツリーで、属性値と同じ数の分割を作成できることを示します。|  
+|3|**両方:** 最良の結果を得るために、バイナリまたは完全な分割を使用する必要があるかどうかを Analysis Services が判断できることを指定します。|  
   
  既定値は 3 です。  
   
 ### <a name="modeling-flags"></a>ModelingFlags  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムでは、次のモデリング フラグがサポートされています。 モデリング フラグは、マイニング構造やマイニング モデルを作成するときに定義し、分析時に各列の値をどのように処理するかを指定します。 詳細については、「[モデリング フラグ &#40;データ マイニング&#41;](modeling-flags-data-mining.md)」を参照してください。  
+ 
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムでは、次のモデリング フラグがサポートされています。 モデリング フラグは、マイニング構造やマイニング モデルを作成するときに定義し、分析時に各列の値をどのように処理するかを指定します。 詳細については、「[モデリング フラグ &#40;データ マイニング&#41;](modeling-flags-data-mining.md)」を参照してください。  
   
 |モデリング フラグ|[説明]|  
 |-------------------|-----------------|  
@@ -179,19 +185,21 @@ ms.locfileid: "73637528"
 |NOT NULL|列に NULL を含めることはできないことを示します。 モデルのトレーニング中に NULL が検出された場合はエラーが発生します。<br /><br /> マイニング構造列に適用されます。|  
   
 ### <a name="regressors-in-decision-tree-models"></a>デシジョン ツリー モデルのリグレッサー  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線形回帰アルゴリズムを使用していない場合でも、連続属性の回帰を表すノードが、連続する数値の入出力を持つデシジョン ツリー モデルに含まれることがあります。  
+ 
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線形回帰アルゴリズムを使用していない場合でも、連続属性の回帰を表すノードが、連続する数値の入出力を持つデシジョン ツリー モデルに含まれることがあります。  
   
  連続する数値データ列がリグレッサーを表すことを指定する必要はありません。 列に REGRESSOR フラグを設定しなくても、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムにより、列が自動的にリグレッサー候補として使用され、データセットが意味のあるパターンを持つ領域に分割されます。  
   
- しかし、FORCE_REGRESSOR パラメーターを使用すると、アルゴリズムで特定のリグレッサーが使用されるようにすることができます。 このパラメーターは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムと [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線形回帰アルゴリズムでのみ使用できます。 モデリングフラグを設定すると、アルゴリズムによって、a * C1 + b\*C2 +... という形式の回帰式が検索されます。は、ツリーのノードのパターンに適合します。 残差の合計が計算され、偏差が大きすぎる場合には、ツリーが強制的に分割されます。  
+ しかし、FORCE_REGRESSOR パラメーターを使用すると、アルゴリズムで特定のリグレッサーが使用されるようにすることができます。 このパラメーターは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムと [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線形回帰アルゴリズムでのみ使用できます。 モデリングフラグを設定すると、アルゴリズムによって、* C1 + b\*C2 +... という形式の回帰式が検索されます。は、ツリーのノードのパターンに適合します。 残差の合計が計算され、偏差が大きすぎる場合には、ツリーが強制的に分割されます。  
   
  たとえば、 **Income** を属性として使用して顧客の購入行動を予測する場合に、その列に REGRESSOR モデリング フラグを設定すると、アルゴリズムはまず、標準の回帰式を使用して **Income** の値を試します。 偏差が大きすぎる場合はその回帰式が放棄され、ツリーが他の属性で分割されます。 その後デシジョン ツリー アルゴリズムは、分割後の各分岐で、Income をリグレッサーとして使用できるかどうかを試します。  
   
-## <a name="requirements"></a>の要件  
+## <a name="requirements"></a>必要条件  
  デシジョン ツリー モデルには、キー列、入力列、および少なくとも 1 つの予測可能列が必要です。  
   
 ### <a name="input-and-predictable-columns"></a>入力列と予測可能列  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムでは、次の表に示す特定の入力列と予測可能列がサポートされています。 マイニング モデルにおけるコンテンツの種類の意味については、「[コンテンツの種類 (データ マイニング)](content-types-data-mining.md)」を参照してください。  
+ 
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムでは、次の表に示す特定の入力列と予測可能列がサポートされています。 マイニング モデルにおけるコンテンツの種類の意味については、「[コンテンツの種類 &#40;データ マイニング&#41;](content-types-data-mining.md)」を参照してください。  
   
 |列|コンテンツの種類|  
 |------------|-------------------|  
@@ -202,8 +210,8 @@ ms.locfileid: "73637528"
 >  コンテンツの種類 Cyclical および Ordered はサポートされますが、アルゴリズムはこれらを不連続の値として扱い、特別な処理は行いません。  
   
 ## <a name="see-also"></a>参照  
- [Microsoft デシジョン ツリー アルゴリズム](microsoft-decision-trees-algorithm.md)   
- [デシジョン ツリー モデルのクエリ例](decision-trees-model-query-examples.md)   
- [デシジョン ツリー モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
+ [Microsoft デシジョンツリーアルゴリズム](microsoft-decision-trees-algorithm.md)   
+ [デシジョンツリーモデルのクエリ例](decision-trees-model-query-examples.md)   
+ [デシジョンツリーモデルのマイニングモデルコンテンツ &#40;Analysis Services データマイニング&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
   
   

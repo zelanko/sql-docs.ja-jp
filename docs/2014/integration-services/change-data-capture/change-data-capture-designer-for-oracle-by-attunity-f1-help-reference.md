@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 873aaee7641c84ad3e204c860a61ea5bc138fae6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62835754"
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity-f1-help-reference"></a>Change Data Capture Designer for Oracle by Attunity の F1 ヘルプ参照
@@ -48,7 +48,7 @@ ms.locfileid: "62835754"
   
     -   [ミラー テーブルおよび CDC キャプチャ インスタンスの生成](generate-mirror-tables-and-cdc-capture-instances.md)  
   
-    -   [完了](finish.md)  
+    -   [[完了]](finish.md)  
   
 -   [インスタンスのプロパティの編集](edit-instance-properties.md)(または、次のいずれかのタスクを直接参照してください)  
   

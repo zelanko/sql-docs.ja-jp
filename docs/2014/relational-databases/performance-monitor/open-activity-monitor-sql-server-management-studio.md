@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0d1c0312acfcd2e5dbb17d740fe2659cb8c91bbe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63032006"
 ---
 # <a name="open-activity-monitor-sql-server-management-studio"></a>利用状況モニターを開く方法 (SQL Server Management Studio)
@@ -29,13 +29,13 @@ ms.locfileid: "63032006"
   
 -   **作業を開始する準備:**  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
--   **使用して、利用状況モニターを開きます。**  
+-   **利用状況モニターを開くための方法:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
--   **使用して、更新間隔を設定します。** [SQL Server Management Studio](#Refresh)  
+-   **更新間隔を設定するために使用するもの:**  [SQL Server Management Studio](#Refresh)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
  利用状況モニターでは、監視対象となるインスタンスでクエリを実行し、[利用状況モニター] 表示ペインに表示する情報を取得します。 更新間隔を 10 秒未満に設定すると、これらのクエリを実行する時間がサーバーのパフォーマンスに影響を与える可能性があります。  
@@ -51,30 +51,34 @@ ms.locfileid: "63032006"
   
 #### <a name="to-open-activity-monitor-in-sql-server-management-studio"></a>SQL Server Management Studio で利用状況モニターを開くには  
   
-1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の [標準] ツール バーの **[利用状況モニター]** をクリックします。  
+1.  [ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]標準] ツールバーの [**利用状況モニター**] をクリックします。  
   
-2.  **[サーバーへの接続]** ダイアログ ボックスで、サーバー名と認証モードを選択して **[接続]** をクリックします。  
+2.  
+  **[サーバーへの接続]** ダイアログ ボックスで、サーバー名と認証モードを選択して **[接続]** をクリックします。  
   
  また、Ctrl キーと Alt キーを押しながら A キーを押すと、いつでも利用状況モニターを表示できます。  
   
 #### <a name="to-open-activity-monitor-in-object-explorer"></a>オブジェクト エクスプローラーで利用状況モニターを開くには  
   
--   オブジェクト エクスプ ローラーで、インスタンス名を右クリックし、**の利用状況モニター**します。  
+-   オブジェクトエクスプローラーで、インスタンス名を右クリックし、[**利用状況モニター**] を選択します。  
   
 #### <a name="to-open-activity-monitor-when-opening-sql-server-management-studio"></a>SQL Server Management Studio を開くときに利用状況モニターを開くには  
   
 1.  **[ツール]** メニューの **[オプション]** をクリックします。  
   
-2.  **[オプション]** ダイアログ ボックスで **[環境]** を展開し、 **[全般]** をクリックします。  
+2.  
+  **[オプション]** ダイアログ ボックスで **[環境]** を展開し、 **[全般]** をクリックします。  
   
-3.  **[スタートアップ時]** ボックスで **[オブジェクト エクスプローラーと利用状況モニターを開く]** をクリックします。  
+3.  
+  **[スタートアップ時]** ボックスで **[オブジェクト エクスプローラーと利用状況モニターを開く]** をクリックします。  
   
 4.  変更を有効にするには、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を閉じて再度開きます。  
   
-###  <a name="Refresh"></a> 利用状況モニターの更新間隔を設定するには  
+###  <a name="Refresh"></a>利用状況モニターの更新間隔を設定するには  
   
 -   利用状況モニターを開きます。  
   
--   **[概要]** を右クリックして **[更新間隔]** をクリックし、利用状況モニターで新しいインスタンス情報を取得する間隔を選択します。  
+-   
+  **[概要]** を右クリックして **[更新間隔]** をクリックし、利用状況モニターで新しいインスタンス情報を取得する間隔を選択します。  
   
   

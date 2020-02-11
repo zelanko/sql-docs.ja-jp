@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: f3652b767f4628b61f5dd363999838418ff933aa
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401072"
 ---
 # <a name="install-sql-server-operations-manager-scom-management-packs-for-analytics-platform-system"></a>Analytics Platform System 用 SQL Server Operations Manager (SCOM) 管理パックをインストールする
 SQL Server PDW 用の System Center Operations Manager (SCOM) 管理パックをダウンロードしてインストールするには、次の手順に従います。 SCOM から SQL Server PDW を監視するには、管理パックが必要です。  
   
-## <a name="BeforeBegin"></a>開始する前に  
+## <a name="BeforeBegin"></a>はじめに  
 **前提条件**  
   
 System Center Operations Manager をインストールして実行する必要があります。 SQL Server PDW 2012 では System Center Operations Manager 2007 R2、System Center Operations Manager 2012、または System Center Operations Manager 2012 Service Pack 1 が必要です。  
@@ -52,9 +52,9 @@ APS を使用していない PDW の旧バージョンについては、[Microso
   
     ![インストールの確認](./media/install-the-scom-management-packs/SCOM_licnse_agrmt3.png "SCOM_licnse_agrmt3")  
   
-5.  [**閉じる**] をクリックします。  
+5.  **[閉じる]** をクリックします。  
   
-    ![[閉じる] をクリックしてください](./media/install-the-scom-management-packs/SCOM_licnse_agrmt4.png "SCOM_licnse_agrmt4")  
+    ![[閉じる] をクリック](./media/install-the-scom-management-packs/SCOM_licnse_agrmt4.png "SCOM_licnse_agrmt4")  
   
 ### <a name="install-the-monitoring-pack-for-sql-server-pdw-appliance"></a>SQL Server PDW アプライアンス用監視パックのインストール  
   
@@ -73,7 +73,7 @@ APS を使用していない PDW の旧バージョンについては、[Microso
   
     ![インストールの確認](./media/install-the-scom-management-packs/SCOM_licnse_agmtB2.png "SCOM_licnse_agmtB2")  
   
-5.  [**閉じる**] をクリックします。  
+5.  **[閉じる]** をクリックします。  
   
     ![インストールの完了](./media/install-the-scom-management-packs/SCOM_licnse_agmtB3.png "SCOM_licnse_agmtB3")  
   

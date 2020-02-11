@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 9740e8c93fbac0d7727ba9922342df96d9190e10
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73658793"
 ---
 # <a name="tutorial-search-for-a-string-using-regular-expressions-regex-in-java"></a>チュートリアル:Java での正規表現 (regex) を使用した文字列の検索
@@ -24,7 +24,7 @@ Java クラスに送信されるテキスト列内の指定のテキストが、
 
 このサンプル コードでは、テキストに "Java" または "java" の単語が含まれているかどうかを確認する正規表現を使用しています。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 + [Windows](../install/install-sql-server-language-extensions-on-windows.md) または [Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-language-extensions) 用の SQL Server 2019 データベース エンジン インスタンスと拡張機能、および Java プログラミングの拡張機能。 詳細については、[SQL Server 2019 での言語拡張](../language-extensions-overview.md)に関する記事を参照してください。 コードの要件については、[SQL Server での Java の呼び出し方法](../how-to/call-java-from-sql.md)に関する記事を参照してください。
 
@@ -323,7 +323,7 @@ GO
 
 + 外部ライブラリを使用していない場合は、外部プロセスを実行しているセキュリティ ID にご自分のコードに対する読み取りおよび実行のアクセス許可があることを確かめるために、**ルート**から **pkg** サブ フォルダーまでの*各*フォルダーのアクセス許可を確認します。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 + [SQL Server で Java を呼び出す方法](../how-to/call-java-from-sql.md)
 + [SQL Server の Java 拡張機能](../language-extensions-overview.md)

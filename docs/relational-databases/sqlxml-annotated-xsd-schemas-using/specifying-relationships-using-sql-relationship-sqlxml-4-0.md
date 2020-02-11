@@ -30,10 +30,10 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 02872a037e60fa3af58a70d3599b03c61d0cfb5e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75257340"
 ---
 # <a name="specifying-relationships-using-sqlrelationship-sqlxml-40"></a>sql:relationship を使用した、リレーションシップの指定 (SQLXML 4.0)
@@ -52,10 +52,10 @@ ms.locfileid: "75257340"
   
  テーブル名と必要な結合情報を指定するには、 **sql: relationship**注釈で次の属性を指定します。 これらの属性は、 ** \<sql: relationship>** 要素でのみ有効です。  
   
- **指定**  
+ **名前**  
  リレーションシップの一意な名前を指定します。  
   
- **所属**  
+ **Parent**  
  親リレーション (テーブル) を指定します。 これは省略可能な属性です。この属性を指定しない場合、親テーブル名はドキュメント内の子階層の情報から取得されます。 スキーマで、同じ** \<sql: relationship>** を使用する2つの親子階層が指定されていて、親要素が異なる場合は、 ** \<sql: relationship>** で親属性を指定しません。 この情報はスキーマ内の階層から取得されます。  
   
  **parent-key**  

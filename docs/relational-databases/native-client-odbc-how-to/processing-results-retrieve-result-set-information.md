@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f2d998dd8b4444298ff67abc8369993d17e26f55
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73780325"
 ---
 # <a name="processing-results---retrieve-result-set-information"></a>結果の処理 - 結果セットの情報の取得
@@ -38,8 +38,8 @@ ms.locfileid: "73780325"
     -   [Sqlcolattribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md)を呼び出して、結果列に関する特定の記述子情報を取得します。  
   
 ## <a name="see-also"></a>参照  
-[結果&#40;の処理 (ODBC)&#41;](../../relational-databases/native-client-odbc-how-to/processing-results-process-results.md)
+[ODBC&#41;&#40;の結果の処理](../../relational-databases/native-client-odbc-how-to/processing-results-process-results.md)
 
-[結果セット&#40;ODBC の特性の決定&#41;](../../relational-databases/native-client-odbc-results/determining-the-characteristics-of-a-result-set-odbc.md)  
+[ODBC&#41;&#40;結果セットの特性の決定](../../relational-databases/native-client-odbc-results/determining-the-characteristics-of-a-result-set-odbc.md)  
   
   

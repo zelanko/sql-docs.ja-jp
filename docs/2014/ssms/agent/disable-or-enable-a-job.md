@@ -16,22 +16,22 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1fa9a2700bd2f6a9ce2b074b1633182fc30c9aa7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211416"
 ---
-# <a name="disable-or-enable-a-job"></a>ジョブの有効化または無効化
+# <a name="disable-or-enable-a-job"></a>Disable or Enable a Job
   このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を使用して、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で [!INCLUDE[tsql](../../includes/tsql-md.md)]エージェント ジョブを無効にする方法について説明します。 ジョブを無効にしても、ジョブは削除されるわけではなく、必要に応じて再び有効にすることができます。  
   
  **このトピックの内容**  
   
 -   **作業を開始する準備:**  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
--   **ジョブを無効または有効にする方法:**  
+-   **ジョブを無効または有効にするために使用するもの:**  
   
      [SQL Server Management Studio](#SSMS)  
   
@@ -46,11 +46,13 @@ ms.locfileid: "68211416"
   
 #### <a name="to-disable-or-enable-a-job"></a>ジョブを無効または有効にするには  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続し、そのインスタンスを展開します。  
+1.  **オブジェクトエクスプローラー**で、の[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]インスタンスに接続し、そのインスタンスを展開します。  
   
-2.  **[SQL Server エージェント]** を展開します。  
+2.  
+  **[SQL Server エージェント]** を展開します。  
   
-3.  **[ジョブ]** を展開し、無効または有効にするジョブを右クリックします。  
+3.  
+  **[ジョブ]** を展開し、無効または有効にするジョブを右クリックします。  
   
 4.  ジョブを無効にするには、 **[無効化]** をクリックします。 ジョブを有効にするには、 **[有効化]** をクリックします。  
   
@@ -77,6 +79,6 @@ ms.locfileid: "68211416"
     GO  
     ```  
   
- 詳細については、次を参照してください。 [sp_update_job &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql)します。  
+ 詳細については、「 [sp_update_job &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql)」を参照してください。  
   
   

@@ -13,10 +13,10 @@ ms.assetid: 8bb15b97-9827-46bc-aca6-068534ab18c4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4b07af028cd0f2385c447c99192ccc50b65c4925
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74096130"
 ---
 # <a name="hadoop-connection-manager"></a>Hadoop 接続マネージャー
@@ -60,13 +60,13 @@ ms.locfileid: "74096130"
   
     5.  **[Kerberos]** 認証を選択した場合は、ユーザーの **パスワード** と **ドメイン**を入力します。  
   
-5.  **[接続テスト]** を選択します (有効にした接続のみがテストされます)。  
+5.  **[接続テスト]** を選択します。 (有効にした接続のみがテストされます)。  
   
-6.  **[OK]** を選択して、ダイアログ ボックスを閉じます。  
+6.  **[OK]** を選択してダイアログ ボックスを閉じます。  
 
 ## <a name="connect-with-kerberos-authentication"></a>Kerberos 認証を使用した接続
 Hadoop 接続マネージャーで Kerberos 認証を使用できるようにオンプレミス環境を設定する方法は 2 つあります。 状況に合う方法を選択することができます。
--   オプション 1:[SSIS コンピューターを Kerberos 領域に参加させる](#kerberos-join-realm)
+-   オプション 1: [SSIS コンピューターを Kerberos 領域に参加させる](#kerberos-join-realm)
 -   オプション 2:[Windows ドメインと Kerberos 領域の間の相互信頼関係を有効にする](#kerberos-mutual-trust)
 
 ### <a name="kerberos-join-realm"></a>オプション 1: SSIS コンピューターを Kerberos 領域に参加させる
@@ -152,7 +152,7 @@ KDC サーバー:
 
     構成が完了したら、KDC サービスを再起動します。
 
-2.  KDC サーバーで **krbtgt/REALM.COM\@AD.COM** という名前のプリンシパルを準備します。 次のコマンドを実行します。
+2.  KDC サーバーで **krbtgt/REALM.COM\@AD.COM** という名前のプリンシパルを準備します。 次のコマンドを使用します。
 
     `Kadmin> addprinc krbtgt/REALM.COM@AD.COM`
 

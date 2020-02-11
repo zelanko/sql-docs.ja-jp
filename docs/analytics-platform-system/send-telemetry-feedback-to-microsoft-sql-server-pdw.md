@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 639eb4e9e5c531e154b9eb7f91165af365bc519f
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400360"
 ---
 # <a name="send-telemetry-feedback-to-microsoft-for-analytics-platform-system"></a>分析プラットフォームシステムのテレメトリフィードバックを Microsoft に送信する
@@ -110,8 +110,8 @@ Analytics Platform System には、管理コンソールのデータを Microsof
   
 `Disable-RemoteMonitoring`コマンドを複数回実行しても害はありません。  
   
-## <a name="next-steps"></a>次の手順
-詳細については、次のドキュメントを参照してください。
+## <a name="next-steps"></a>次のステップ
+詳細については、次を参照してください。
 - [管理コンソール &#40;Analytics Platform System&#41;を使用してアプライアンスを監視する](monitor-the-appliance-by-using-the-admin-console.md)  
 - [システムビュー &#40;Analytics Platform System&#41;を使用してアプライアンスを監視する](monitor-the-appliance-by-using-system-views.md)  
 - [System Center Operations Manager &#40;Analytics Platform System&#41;を使用してアプライアンスを監視する](monitor-the-appliance-by-using-system-center-operations-manager.md)  

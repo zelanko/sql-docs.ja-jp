@@ -1,5 +1,5 @@
 ---
-title: sp_revoke_login_from_proxy (TRANSACT-SQL) |Microsoft Docs
+title: sp_revoke_login_from_proxy (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: e4546c13-9fba-4bab-8b42-d6f18b33ec25
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 0aad616275d635ac32d6e81dbc5321db0db58b34
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68019939"
 ---
-# <a name="sprevokeloginfromproxy-transact-sql"></a>sp_revoke_login_from_proxy (Transact-SQL)
+# <a name="sp_revoke_login_from_proxy-transact-sql"></a>sp_revoke_login_from_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   セキュリティ プリンシパルが持つプロキシへのアクセスを取り消します。  
@@ -42,22 +42,22 @@ sp_revoke_login_from_proxy
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @name = ] 'name'` 名前、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログイン、サーバー ロール、または**msdb**へのアクセスを削除するデータベース ロール。 *名前*は**nvarchar (256)** 既定値はありません。  
+`[ @name = ] 'name'`アクセスを削除する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログイン、サーバーロール、または**msdb**データベースロールの名前を指定します。 *名前*は**nvarchar (256)** 既定値はありません。  
   
-`[ @proxy_id = ] id` アクセスを取り消すプロキシの id。 いずれか*id*または*proxy_name*指定する必要がありますが、両方を指定することはできません。 *Id*は**int**、既定値は NULL です。  
+`[ @proxy_id = ] id`アクセスを削除するプロキシの id。 *Id*と*proxy_name*のどちらかを指定する必要がありますが、両方を指定することはできません。 *Id*は**int**,、既定値は NULL です。  
   
-`[ @proxy_name = ] 'proxy_name'` アクセスを取り消すプロキシの名前。 いずれか*id*または*proxy_name*指定する必要がありますが、両方を指定することはできません。 *Proxy_name*は**sysname**、既定値は NULL です。  
+`[ @proxy_name = ] 'proxy_name'`アクセスを削除するプロキシの名前。 *Id*と*proxy_name*のどちらかを指定する必要がありますが、両方を指定することはできません。 *Proxy_name*は**sysname**で、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  ログインによって所有されるジョブがこのプロキシを参照する場合、そのジョブは実行できなくなります。  
   
 ## <a name="permissions"></a>アクセス許可  
  このストアド プロシージャを実行するには、 **sysadmin** 固定サーバー ロールのメンバーであることが必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、ログイン `terrid` に対して、プロキシ `Catalog application proxy` へのアクセスを禁止します。  
   
 ```  
@@ -70,9 +70,9 @@ EXEC dbo.sp_revoke_login_from_proxy
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [SQL Server エージェント ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
- [sp_grant_login_to_proxy &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md)   
- [sp_help_proxy &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-proxy-transact-sql.md)  
+## <a name="see-also"></a>参照  
+ [Transact-sql&#41;&#40;のストアドプロシージャの SQL Server エージェント](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+ [sp_grant_login_to_proxy &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md)   
+ [sp_help_proxy &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-proxy-transact-sql.md)  
   
   

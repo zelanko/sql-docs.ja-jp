@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ddae9c199f1827d733d0e12f7ff834768aeae937
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69494017"
 ---
 # <a name="defining-parent-attribute-properties-in-a-parent-child-hierarchy"></a>親子階層の親属性プロパティの定義
@@ -31,25 +31,30 @@ ms.locfileid: "69494017"
   
 1.  ソリューション エクスプローラーで、 **[ディメンション]** フォルダーの **Employee.dim** をダブルクリックし、Employee ディメンションのディメンション デザイナーを開きます。  
   
-2.  **[ブラウザー]** タブをクリックし、 **[階層]** ボックスの一覧で **[Employees]** が選択されていることを確認します。次に、 **[All Employees]** メンバーを展開します。  
+2.  
+  **[ブラウザー]** タブをクリックし、 **[階層]** ボックスの一覧で **[Employees]** が選択されていることを確認します。次に、 **[All Employees]** メンバーを展開します。  
   
      この親子階層では、 **Ken J. Sánchez** が最上位の管理者です。  
   
-3.  **[Ken J. Sánchez]** メンバーをクリックします。  
+3.  
+  **[Ken J. Sánchez]** メンバーをクリックします。  
   
-     このメンバーのレベル名は **Level 02**です。 (レベル名は、 **[現在のレベル]** の後に **[All Employees]** メンバーのすぐ上に表示されます)。次の実習では、さらにわかりやすい名前を各レベルに定義します。  
+     このメンバーのレベル名は **Level 02**です。 (レベル名は、 **[現在のレベル:]** の後、つまり、 **[All Employees]** メンバーのすぐ上に表示されます)。次の実習では、さらにわかりやすい名前を各レベルに定義します。  
   
-4.  **[Ken J. Sánchez]** を展開し、この管理者の監督下にある従業員の名前を表示します。次に、 **[Brian S. Welcker]** をクリックし、このレベルの名前を表示します。  
+4.  
+  **[Ken J. Sánchez]** を展開し、この管理者の監督下にある従業員の名前を表示します。次に、 **[Brian S. Welcker]** をクリックし、このレベルの名前を表示します。  
   
      このメンバーのレベル名は **Level 03**です。  
   
 5.  ソリューション エクスプローラーで、 **[キューブ]** フォルダー内の **Analysis Services Tutorial.cube** をダブルクリックして、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial キューブのキューブ デザイナーを開きます。  
   
-6.  **[ブラウザー]** タブをクリックします。  
+6.  
+  **[ブラウザー]** タブをクリックします。  
   
 7.  Excel アイコンをクリックし、接続の有効化を確認するメッセージが表示されたら **[有効化]** をクリックします。  
   
-8.  ピボットテーブルのフィールド リストで **Reseller Sales**を展開します。 **Reseller Sales-Sales Amount** を値領域にドラッグします。  
+8.  ピボットテーブルのフィールド リストで **Reseller Sales**を展開します。 
+  **Reseller Sales-Sales Amount** を値領域にドラッグします。  
   
 9. ピボットテーブルのフィールド リストで **Employee**を展開し、 **Employees** 階層を **行** 領域にドラッグします。  
   
@@ -57,56 +62,64 @@ ms.locfileid: "69494017"
   
      次の図は、展開された Employees 階層を示しています。  
   
-10. ![Employees 階層を示す PivotTable](../../2014/tutorials/media/l4-employee-1.gif "Employees 階層を示す PivotTable")  
+10. ![Employees 階層を示すピボットテーブル](../../2014/tutorials/media/l4-employee-1.gif "Employees 階層を示すピボットテーブル")  
   
      Level 03 の各管理者の売上は Level 04 にも表示されます。 各管理者は、他の管理者の部下でもあるからです。 次の実習では、これらの売上高を非表示にします。  
   
 ## <a name="modifying-parent-attribute-properties-in-the-employee-dimension"></a>Employee ディメンションの親属性プロパティの変更  
   
-1.  **Employee** ディメンションのディメンション デザイナーに切り替えます。  
+1.  
+  **Employee** ディメンションのディメンション デザイナーに切り替えます。  
   
-2.  **[ディメンション構造]** タブをクリックし、 **[属性]** ペインで **[Employees]** 属性階層をクリックします。  
+2.  
+  **[ディメンション構造]** タブをクリックし、 **[属性]** ペインで **[Employees]** 属性階層をクリックします。  
   
      この属性だけ、他とは異なるアイコンが表示されています。 このアイコンは、Employees 属性が親子階層の親キーであることを示しています。 また、[プロパティ] ウィンドウを見ると、この属性の **Usage** プロパティが **Parent**として定義されていることがわかります。 このプロパティは、ディメンションを設計した際にディメンション ウィザードによって設定されたものです。 親子リレーションシップは、ウィザードによって自動的に検出されています。  
   
 3.  [プロパティ] ウィンドウで、**NamingTemplate**プロパティ セルの参照ボタン ( **[...]** ) をクリックします。  
   
-     **[レベル名前付けテンプレート]** ダイアログ ボックスでレベル名前付けテンプレートを定義します。このテンプレートは、キューブを表示するときに表示される親子階層のレベル名を決定します。  
+     
+  **[レベル名前付けテンプレート]** ダイアログ ボックスでレベル名前付けテンプレートを定義します。このテンプレートは、キューブを表示するときに表示される親子階層のレベル名を決定します。  
   
-4.  2行 **\*** 目の行の **[名前]** 列に「 **Employee Level \***  」と入力し、3番目の行をクリックします。  
+4.  2行目の**\*** 行の [**名前**] 列に「 **Employee Level \* ** 」と入力し、3番目の行をクリックします。  
   
-     **[結果]** の下を確認すると、各レベルには、"Employee Level" の後ろに連番を追加した名前が付いています。  
+     
+  **[結果]** の下を確認すると、各レベルには、"Employee Level" の後ろに連番を追加した名前が付いています。  
   
      次の図は、 **[レベル名前付けテンプレート]** ダイアログ ボックスで定義を変更するようすを示しています。  
   
-     ![[レベル名前付けテンプレート] ダイアログボックス](../../2014/tutorials/media/l4-namingtemplate.gif "[レベル名前付けテンプレート] ダイアログボックス")  
+     ![[レベル名前付けテンプレート] ダイアログボックス](../../2014/tutorials/media/l4-namingtemplate.gif "[レベル名前付けテンプレート] ダイアログ ボックス")  
   
 5.  **[OK]** をクリックします。  
   
-6.  **Employees** 属性の[プロパティ] ウィンドウの **MembersWithData** プロパティ セルで、 **[NonLeafDataHidden]** を選択して **Employees** 属性の値を変更します。  
+6.  
+  **Employees** 属性の[プロパティ] ウィンドウの **MembersWithData** プロパティ セルで、 **[NonLeafDataHidden]** を選択して **Employees** 属性の値を変更します。  
   
      この操作により、親子階層内の非リーフレベル メンバーに関連付けられているデータが非表示になります。  
   
 ## <a name="browsing-the-employee-dimension-with-the-modified-attributes"></a>属性を変更した Employee ディメンションの表示  
   
-1.  **で、** [ビルド] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]メニューの **[Analysis Services Tutorial の配置]** をクリックします。  
+1.  
+  **で、** [ビルド] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]メニューの **[Analysis Services Tutorial の配置]** をクリックします。  
   
 2.  チュートリアルが正常に配置されたら、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial キューブのキューブ デザイナーに切り替え、 **[ブラウザー]** タブのツール バーで **[再接続]** をクリックします。  
   
 3.  Excel アイコンをクリックし、 **[有効化]** をクリックします。  
   
-4.  **Reseller Sales-Sales Amount** を値領域にドラッグします。  
+4.  
+  **Reseller Sales-Sales Amount** を値領域にドラッグします。  
   
-5.  **Employees** 階層を行ラベル領域にドラッグします。  
+5.  
+  **Employees** 階層を行ラベル領域にドラッグします。  
   
      次の図は、Employees 階層を変更したようすを示しています。 Stephen Y. Jiang は、本人自身の部下として表示されなくなっています。  
   
-     ![Employees 階層](../../2014/tutorials/media/l4-employee-2.png "Employees 階層")  
+     ![変更した Employees 階層](../../2014/tutorials/media/l4-employee-2.png "変更した Employees 階層")  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
  [属性メンバーの自動的なグループ化](lesson-4-3-automatically-grouping-attribute-members.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [親子階層](multidimensional-models/parent-child-dimension.md)   
  [親子階層の属性](multidimensional-models/parent-child-dimension-attributes.md)  
   

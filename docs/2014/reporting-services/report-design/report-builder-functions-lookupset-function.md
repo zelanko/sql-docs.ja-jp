@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5f24c78e82d437ab7e2147122c5065f0b7274d5e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105233"
 ---
 # <a name="lookupset-function-report-builder-and-ssrs"></a>LookupSet 関数 (レポート ビルダーおよび SSRS)
@@ -32,24 +32,26 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
 #### <a name="parameters"></a>パラメーター  
  *source_expression*  
- (`Variant`) 現在のスコープ内で評価される式。参照する名前またはキーを指定します。 たとえば、`=Fields!ID.Value` のようにします。  
+ (`Variant`) 現在のスコープ内で評価される式。参照する名前またはキーを指定します。 たとえば、「 `=Fields!ID.Value` 」のように入力します。  
   
  *destination_expression*  
- (`Variant`) データセット内の各行に対して評価される式。照合する名前またはキーを指定します。 たとえば、`=Fields!CustomerID.Value` のようにします。  
+ (`Variant`) データセット内の各行に対して評価される式。照合する名前またはキーを指定します。 たとえば、「 `=Fields!CustomerID.Value` 」のように入力します。  
   
  *result_expression*  
- (`Variant`) データセット内の行に対して評価される式を*source_expression* = *destination_expression*、取得する値を指定します。 たとえば、`=Fields!PhoneNumber.Value` のようにします。  
+ (`Variant`)*Destination_expression* *source_expression* = データセット内の行に対して評価され、取得する値を指定する式。 たとえば、「 `=Fields!PhoneNumber.Value` 」のように入力します。  
   
  *データセット (dataset)*  
  レポート内のデータセットの名前を指定する定数。 たとえば、"ContactInformation" のように指定します。  
   
 ## <a name="return"></a>戻り値  
- `VariantArray` を返します。一致する結果がなかった場合は、`Nothing` を返します。  
+ 
+  `VariantArray` を返します。一致する結果がなかった場合は、`Nothing` を返します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  指定したデータセットで、名前と値のペアについて 1 対多のリレーションシップが存在する場合、`LookupSet` を使用して一連の値を取得します。 たとえば、テーブル内の顧客識別子に対して `LookupSet` を使用して、データ領域にバインドされていないデータセットから、顧客に関連付けられている電話番号をすべて取得することができます。  
   
- `LookupSet` を実行すると、次の処理が行われます。  
+ 
+  `LookupSet` を実行すると、次の処理が行われます。  
   
 -   ソースの式を現在のスコープ内で評価します。  
   
@@ -59,11 +61,11 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
 -   結果式の一連の値を返します。  
   
- 指定した名前に対応する、名前と値のペアを含むデータセットに 1 対 1 のリレーションシップが存在する場合、このデータセットから 1 つの値を取得するには、[Lookup 関数 &#40;レポート ビルダーおよび SSRS&#41;](report-builder-functions-lookup-function.md) を使用します。 呼び出す`Lookup`一連の値を使用して[Multilookup 関数&#40;レポート ビルダーおよび SSRS&#41;](report-builder-functions-multilookup-function.md)します。  
+ 指定した名前に対応する、名前と値のペアを含むデータセットに 1 対 1 のリレーションシップが存在する場合、このデータセットから 1 つの値を取得するには、[Lookup 関数 &#40;レポート ビルダーおよび SSRS&#41;](report-builder-functions-lookup-function.md) を使用します。 一連の`Lookup`値に対してを呼び出すには、 [multilookup 関数 &#40;レポートビルダーと SSRS&#41;](report-builder-functions-multilookup-function.md)を使用します。  
   
- 次の制限があります。  
+ 次の制限事項が適用されます。  
   
--   `LookupSet` すべてのフィルター式が適用された後に評価されます。  
+-   `LookupSet`は、すべてのフィルター式が適用された後に評価されます。  
   
 -   1 レベルの参照のみがサポートされます。 変換元、変換先、または結果の式に、Lookup 関数への参照を含めることはできません。  
   
@@ -71,7 +73,8 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
 -   変換元、変換先、結果の式には、レポート変数またはグループ変数への参照を含めることができません。  
   
--   `LookupSet` は、次のレポート アイテムを求める式として使用することはできません。  
+-   
+  `LookupSet` は、次のレポート アイテムを求める式として使用することはできません。  
   
     -   データ ソースの動的な接続文字列。  
   
@@ -97,11 +100,12 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
 ```  
   
 ## <a name="example"></a>例  
- `LookupSet` はオブジェクトのコレクションを返すため、結果式をテキスト ボックスに直接表示することはできません。 コレクション内の各オブジェクトの値を文字列として連結することはできます。  
+ 
+  `LookupSet` はオブジェクトのコレクションを返すため、結果式をテキスト ボックスに直接表示することはできません。 コレクション内の各オブジェクトの値を文字列として連結することはできます。  
   
  一連のオブジェクトから区切り記号付きの文字列を作成するには、[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 関数である `Join` を使用します。 コンマを区切り記号として使用し、オブジェクトを 1 行に結合します。 レンダラーによっては、 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] の改行 (`vbCrLF`) を区切り記号として使用し、各値を新しい 1 つの行に表示することもできます。  
   
- 次の式をテキスト ボックスの Value プロパティとして使用する場合は`Join`リストを作成します。  
+ 次の式は、テキストボックスの値プロパティとして使用されている`Join`場合、を使用してリストを作成します。  
   
 ```  
 =Join(LookupSet(Fields!TerritoryGroupID.Value, Fields!ID.Value, Fields!StoreName.Value, "Stores"),",")  
@@ -146,7 +150,7 @@ End Function
 =Code.MakeList(LookupSet(Fields!TerritoryGroupID.Value, Fields!ID.Value, Fields!StoreName.Value, "Stores"))  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [レポートでの式の使用 (レポート ビルダーおよび SSRS)](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [式の例 (レポート ビルダーおよび SSRS)](expression-examples-report-builder-and-ssrs.md)   
  [式で使用されるデータ型 &#40;レポート ビルダーおよび SSRS&#41;](expressions-report-builder-and-ssrs.md)   

@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5b30a9f60f52b8b19875f5fb3c15242ce2c632fd
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70175430"
 ---
 # <a name="lesson-8-restore-a-database-to-azure-storage"></a>レッスン 8: Azure Storage にデータベースを復元する
@@ -71,19 +71,19 @@ ms.locfileid: "70175430"
   
 1.  **オブジェクトエクスプローラー**で、サーバー名をクリックしてサーバーツリーを展開します。  
   
-2.  **[データベース]** を展開し、データベースを選択します。  
+2.  [**データベース**] を展開し、データベースを選択します。  
   
 3.  データベースを右クリックして **[タスク]** をポイントし、 **[復元]** をクリックします。  
   
-4.  **[全般]** ページの **[復元]** 元 セクションで、 **[ソース]** デバイス をクリックします。  
+4.  [**全般**] ページの [**復元**元] セクションで、[**ソース**デバイス] をクリックします。  
   
-5.  **[ソース]** デバイス ボックスの参照ボタンをクリックして、 **[バックアップデバイスの選択]** ダイアログボックスを開きます。  
+5.  [**ソース**デバイス] ボックスの参照ボタンをクリックして、[**バックアップデバイスの選択**] ダイアログボックスを開きます。  
   
-6.  バックアップメディア ボックスで、**ファイル** を選択し、**追加** ボタンをクリックしてバックアップ (.bak) ファイルを指定します。 **[OK]** をクリックします。  
+6.  [バックアップメディア] ボックスで、[**ファイル**] を選択し、[**追加**] ボタンをクリックしてバックアップ (.bak) ファイルを指定します。 **[OK]** をクリックします。  
   
-7.  最初のページの **[ファイル]** をクリックします。  
+7.  最初のページの [**ファイル**] をクリックします。  
   
-8.  **[データベースファイルの復元]** セクションの **[復元元]** フィールドに、次のように入力します。  
+8.  [**データベースファイルの復元**] セクションの [**復元元**] フィールドに、次のように入力します。  
   
      データファイルの場合は、 `https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS.mdf`「」と入力します。 ログファイルの場合は、 `https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS_log.ldf`「」と入力します。  
   
@@ -97,6 +97,6 @@ ms.locfileid: "70175430"
   
  **次のレッスン:**  
   
- [レッスン 9:Azure Storage からデータベースを復元する](../relational-databases/lesson-8-restore-as-new-database-from-log-backup.md)  
+ [レッスン 9.Azure Storage からデータベースを復元する](../relational-databases/lesson-8-restore-as-new-database-from-log-backup.md)  
   
   

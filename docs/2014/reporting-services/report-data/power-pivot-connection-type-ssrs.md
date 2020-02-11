@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e9b8fb98082fb3509acf50e6546673e86962893c
-ms.sourcegitcommit: 381595e990f2294dbf324ef31071e2dd2318b8dd
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74200420"
 ---
 # <a name="powerpivot-connection-type-ssrs"></a>PowerPivot の接続の種類 (SSRS)
@@ -33,7 +33,7 @@ ms.locfileid: "74200420"
 ## <a name="connection-string"></a>接続文字列  
  接続文字列は、PowerPivot ギャラリーまたはその他のライブラリ (など) の SharePoint でパブリッシュされた PowerPivot http://contoso-srv/subsite/PowerPivotLibrary/ContosoSales.xlsxブックの URL です。  
   
-## <a name="credentials"></a>資格情報  
+## <a name="credentials"></a>[資格情報]  
  PowerPivot ブックおよび SharePoint サイトへのアクセスに必要な資格情報を指定します (Windows 認証 (統合セキュリティ) など)。 詳細については、「 [Reporting Services のデータ接続、データソース、および接続文字列](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)」または「[レポートビルダーで資格情報を指定する](../specify-credentials-in-report-builder.md)」を参照してください。  
   
 ## <a name="queries"></a>クエリ  
@@ -47,7 +47,7 @@ ms.locfileid: "74200420"
 ## <a name="parameters"></a>パラメーター  
  フィルター ペインで、フィルターの **[パラメーター]** オプションを選択して、フィルターの選択に対応する使用可能な値を持つレポート パラメーターが自動的に作成されるようにします。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  PowerPivot ギャラリーの PowerPivot ブックからレポート ビルダーを開いた場合、PowerPivot ブックのピボットテーブル、ピボットグラフ、スライサー、およびその他のレイアウト機能や分析機能は、レポートで再作成されません。 代わりに、PowerPivot ブック内のデータを参照する、あらかじめ構成されたデータ ソースが空のレポートに含まれます。 PowerPivot ブックに基づくレポートをデザインする場合、レポートで再作成するスライサー、フィルター、およびテーブルやグラフの数によっては、手間と時間がかかることがあります。 そのため、レポートでのデータの表示方法については、PowerPivot のデザインとは切り離して考えることをお勧めします。  
   
  PowerPivot ブック内のデータは大幅に圧縮されていますが、PowerPivot ブックから取得されたレポートのデータは圧縮されません。 クエリ デザイナーを使用してフィルターとパラメーターを指定し、レポートに必要なデータだけに制限します。  
@@ -64,6 +64,6 @@ ms.locfileid: "74200420"
   
 ## <a name="see-also"></a>参照  
  [Analysis Services MDX クエリデザイナーのユーザーインターフェイス &#40;レポートビルダー&#41;](../analysis-services-mdx-query-designer-user-interface-report-builder.md)   
- [式 &#40;レポートビルダーと SSRS&#41;](../report-design/expressions-report-builder-and-ssrs.md)  
+ [式 &#40;レポート ビルダーおよび SSRS&#41;](../report-design/expressions-report-builder-and-ssrs.md)  
   
   

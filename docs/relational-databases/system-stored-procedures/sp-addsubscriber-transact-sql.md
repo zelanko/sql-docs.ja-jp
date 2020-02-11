@@ -16,10 +16,10 @@ ms.assetid: b8a584ea-2a26-4936-965b-b84f026e39c0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 278af2ca1bd6abdb84cdf2371628c6b95662e46e
-ms.sourcegitcommit: eae9efe2a2d3758685e85039ffb8fa698aa47f9b
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73962409"
 ---
 # <a name="sp_addsubscriber-transact-sql"></a>sp_addsubscriber (Transact-sql)
@@ -60,23 +60,24 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @subscriber = ] 'subscriber'`、このサーバー上のパブリケーションに有効なサブスクライバーとして追加するサーバーの名前を指定します。 *subscriber*は**sysname**、既定値はありません。  
+`[ @subscriber = ] 'subscriber'`有効なサブスクライバーとしてこのサーバーのパブリケーションに追加するサーバーの名前を指定します。 *サブスクライバー*は**sysname**,、既定値はありません。  
   
-`[ @type = ] type` はサブスクライバーの種類です。 *種類*は**tinyint**で、次のいずれかの値を指定できます。  
+`[ @type = ] type`サブスクライバーの種類を示します。 *種類*は**tinyint**で、次のいずれかの値を指定できます。  
   
-|ReplTest1|[説明]|  
+|値|[説明]|  
 |-----------|-----------------|  
-|**0** (既定値)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サブスクライバーの [!INCLUDE[msCoName](../../includes/msconame-md.md)]|  
+|**0** (既定値)|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サブスクライバー|  
 |**1**|ODBC データソースサーバー|  
-|**2**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet データベース|  
-|**3**|OLE DB プロバイダー|  
+|**2**|
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet データベース|  
+|**番**|OLE DB プロバイダー|  
   
-`[ @login = ] 'login'` は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証のログイン ID です。 *login* のデータ型は **sysname** で、既定値は NULL です。  
+`[ @login = ] 'login'`認証の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログイン ID を示します。 *login*は**sysname**,、既定値は NULL です。  
   
 > [!NOTE]  
 >  このパラメーターは非推奨とされており、スクリプトの旧バージョンとの互換性のために保持されています。 このプロパティは、 [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)の実行時に、サブスクリプションごとに指定されるようになりました。 この値を指定すると、このサブスクライバーでサブスクリプションを作成するときに既定値として使用され、警告メッセージが返されます。  
   
-`[ @password = ] 'password'` は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証用のパスワードです。 *パスワード*は**nvarchar (524)** ,、既定値は NULL です。  
+`[ @password = ] 'password'`認証用の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パスワードを入力します。 *パスワード*は**nvarchar (524)**,、既定値は NULL です。  
   
 > [!IMPORTANT]  
 >  空白のパスワードは使用しないでください。 強力なパスワードを使用してください。  
@@ -84,115 +85,115 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 > [!NOTE]  
 >  このパラメーターは非推奨とされており、スクリプトの旧バージョンとの互換性のために保持されています。 このプロパティは、 [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)の実行時に、サブスクリプションごとに指定されるようになりました。 この値を指定すると、このサブスクライバーでサブスクリプションを作成するときに既定値として使用され、警告メッセージが返されます。  
   
-`[ @commit_batch_size = ] commit_batch_size` このパラメーターは非推奨とされており、スクリプトの旧バージョンとの互換性のために保持されています。  
+`[ @commit_batch_size = ] commit_batch_size`このパラメーターは非推奨とされており、スクリプトの旧バージョンとの互換性のために保持されています。  
   
 > [!NOTE]  
 >  この値を指定すると、このサブスクライバーでサブスクリプションを作成するときに既定値として使用され、警告メッセージが返されます。  
   
-`[ @status_batch_size = ] status_batch_size` このパラメーターは非推奨とされており、スクリプトの旧バージョンとの互換性のために保持されています。  
+`[ @status_batch_size = ] status_batch_size`このパラメーターは非推奨とされており、スクリプトの旧バージョンとの互換性のために保持されています。  
   
 > [!NOTE]  
 >  この値を指定すると、このサブスクライバーでサブスクリプションを作成するときに既定値として使用され、警告メッセージが返されます。  
   
-`[ @flush_frequency = ] flush_frequency` このパラメーターは非推奨とされており、スクリプトの旧バージョンとの互換性のために保持されています。  
+`[ @flush_frequency = ] flush_frequency`このパラメーターは非推奨とされており、スクリプトの旧バージョンとの互換性のために保持されています。  
   
 > [!NOTE]  
 >  この値を指定すると、このサブスクライバーでサブスクリプションを作成するときに既定値として使用され、警告メッセージが返されます。  
   
-`[ @frequency_type = ] frequency_type` には、レプリケーションエージェントをスケジュールする頻度を指定します。 *frequency_type*は**int**,、これらの値のいずれかを指定できます。  
+`[ @frequency_type = ] frequency_type`レプリケーションエージェントをスケジュールする頻度を指定します。 *frequency_type*は**int**,、これらの値のいずれかを指定できます。  
   
-|ReplTest1|[説明]|  
+|値|[説明]|  
 |-----------|-----------------|  
-|**1**|指定日時|  
-|**2**|[要求時]|  
-|**4**|毎日。|  
-|**8**|毎週。|  
-|**16**|毎月。|  
+|**1**|1 回|  
+|**2**|オン デマンド|  
+|**4**|毎日|  
+|**8**|週単位|  
+|**まで**|月単位|  
 |**32**|月単位の相対|  
 |**64** (既定値)|自動開始|  
-|**128**|定期|  
+|**128**|繰り返し|  
   
 > [!NOTE]  
 >  このパラメーターは非推奨とされており、スクリプトの旧バージョンとの互換性のために保持されています。 このプロパティは、 [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)の実行時に、サブスクリプションごとに指定されるようになりました。 この値を指定すると、このサブスクライバーでサブスクリプションを作成するときに既定値として使用され、警告メッセージが返されます。  
   
-`[ @frequency_interval = ] frequency_interval` は、 *frequency_type*によって設定された頻度に適用される値です。 *frequency_interval*は**int**,、既定値は1です。  
+`[ @frequency_interval = ] frequency_interval`*Frequency_type*によって設定された頻度に適用される値を指定します。 *frequency_interval*は**int**,、既定値は1です。  
   
 > [!NOTE]  
 >  このパラメーターは非推奨とされており、スクリプトの旧バージョンとの互換性のために保持されています。 このプロパティは、 [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)の実行時に、サブスクリプションごとに指定されるようになりました。 この値を指定すると、このサブスクライバーでサブスクリプションを作成するときに既定値として使用され、警告メッセージが返されます。  
   
-`[ @frequency_relative_interval = ] frequency_relative_interval` レプリケーションエージェントの日付を指定します。 このパラメーターが使用されるときに *frequency_type* に設定されている **32** (月単位)。 *frequency_relative_interval*は**int**,、これらの値のいずれかを指定できます。  
+`[ @frequency_relative_interval = ] frequency_relative_interval`レプリケーションエージェントの日付を指定します。 このパラメーターは、 *frequency_type*が**32** (月単位) に設定されている場合に使用されます。 *frequency_relative_interval*は**int**,、これらの値のいずれかを指定できます。  
   
-|ReplTest1|[説明]|  
+|値|[説明]|  
 |-----------|-----------------|  
-|**1** (既定値)|First|  
-|**2**|第 2 週|  
+|**1** (既定値)|First (先頭へ)|  
+|**2**|秒|  
 |**4**|第 3 週|  
-|**8**|Fourth|  
-|**16**|Last|  
+|**8**|4 番目|  
+|**まで**|Last (最後へ)|  
   
 > [!NOTE]  
 >  このパラメーターは非推奨とされており、スクリプトの旧バージョンとの互換性のために保持されています。 このプロパティは、 [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)の実行時に、サブスクリプションごとに指定されるようになりました。 この値を指定すると、このサブスクライバーでサブスクリプションを作成するときに既定値として使用され、警告メッセージが返されます。  
   
-`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` は、 *frequency_type*によって使用される定期実行係数です。 *frequency_recurrence_factor*は**int**,、既定値は**0**です。  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor`*Frequency_type*によって使用される定期実行係数です。 *frequency_recurrence_factor*は**int**,、既定値は**0**です。  
   
 > [!NOTE]  
 >  このパラメーターは非推奨とされており、スクリプトの旧バージョンとの互換性のために保持されています。 このプロパティは、 [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)の実行時に、サブスクリプションごとに指定されるようになりました。 この値を指定すると、このサブスクライバーでサブスクリプションを作成するときに既定値として使用され、警告メッセージが返されます。  
   
-`[ @frequency_subday = ] frequency_subday` は、定義された期間中に再スケジュールされる頻度です。 *frequency_subday*は**int**,、これらの値のいずれかを指定できます。  
+`[ @frequency_subday = ] frequency_subday`定義した期間中に再スケジュールする頻度を指定します。 *frequency_subday*は**int**,、これらの値のいずれかを指定できます。  
   
-|ReplTest1|[説明]|  
+|値|[説明]|  
 |-----------|-----------------|  
-|**1**|1 回。|  
-|**2**|第 2 週|  
-|**4** (既定値)|Minute|  
-|**8**|Hour|  
+|**1**|1 度|  
+|**2**|秒|  
+|**4** (既定値)|分|  
+|**8**|時|  
   
 > [!NOTE]  
 >  このパラメーターは非推奨とされており、スクリプトの旧バージョンとの互換性のために保持されています。 このプロパティは、 [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)の実行時に、サブスクリプションごとに指定されるようになりました。 この値を指定すると、このサブスクライバーでサブスクリプションを作成するときに既定値として使用され、警告メッセージが返されます。  
   
-`[ @frequency_subday_interval = ] frequency_subday_interval` は*frequency_subday*の間隔です。 *frequency_subday_interval*は**int**,、既定値は**5**です。  
+`[ @frequency_subday_interval = ] frequency_subday_interval`*Frequency_subday*の間隔を指定します。 *frequency_subday_interval*は**int**,、既定値は**5**です。  
   
 > [!NOTE]  
 >  このパラメーターは非推奨とされており、スクリプトの旧バージョンとの互換性のために保持されています。 このプロパティは、 [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)の実行時に、サブスクリプションごとに指定されるようになりました。 この値を指定すると、このサブスクライバーでサブスクリプションを作成するときに既定値として使用され、警告メッセージが返されます。  
   
-`[ @active_start_time_of_day = ] active_start_time_of_day` は、レプリケーションエージェントを最初にスケジュール設定する時刻を HHMMSS 形式で指定します。 *active_start_time_of_day*は**int**,、既定値は**0**です。  
+`[ @active_start_time_of_day = ] active_start_time_of_day`レプリケーションエージェントを最初にスケジュール設定する時刻を HHMMSS 形式で指定します。 *active_start_time_of_day*は**int**,、既定値は**0**です。  
   
 > [!NOTE]  
 >  このパラメーターは非推奨とされており、スクリプトの旧バージョンとの互換性のために保持されています。 このプロパティは、 [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)の実行時に、サブスクリプションごとに指定されるようになりました。 この値を指定すると、このサブスクライバーでサブスクリプションを作成するときに既定値として使用され、警告メッセージが返されます。  
   
-`[ @active_end_time_of_day = ] active_end_time_of_day` は、レプリケーションエージェントのスケジュール設定を停止する時刻を HHMMSS 形式で指定します。 *active_end_time_of_day*は**int**,、既定値は 235959,、11:59:59 pm 24時間制として測定されます。  
+`[ @active_end_time_of_day = ] active_end_time_of_day`レプリケーションエージェントのスケジュール設定を停止する時刻を HHMMSS 形式で指定します。 *active_end_time_of_day*は**int**,、既定値は 235959,、11:59:59 pm 24時間制として測定されます。  
   
 > [!NOTE]  
 >  このパラメーターは非推奨とされており、スクリプトの旧バージョンとの互換性のために保持されています。 このプロパティは、 [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)の実行時に、サブスクリプションごとに指定されるようになりました。 この値を指定すると、このサブスクライバーでサブスクリプションを作成するときに既定値として使用され、警告メッセージが返されます。  
   
-`[ @active_start_date = ] active_start_date` は、レプリケーションエージェントを最初にスケジュール設定する日付を YYYYMMDD 形式で指定します。 *active_start_date*は**int**,、既定値は0です。  
+`[ @active_start_date = ] active_start_date`レプリケーションエージェントを最初にスケジュール設定する日付を YYYYMMDD 形式で指定します。 *active_start_date*は**int**,、既定値は0です。  
   
 > [!NOTE]  
 >  このパラメーターは非推奨とされており、スクリプトの旧バージョンとの互換性のために保持されています。 このプロパティは、 [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)の実行時に、サブスクリプションごとに指定されるようになりました。 この値を指定すると、このサブスクライバーでサブスクリプションを作成するときに既定値として使用され、警告メッセージが返されます。  
   
-`[ @active_end_date = ] active_end_date` は、レプリケーションエージェントのスケジュール設定を停止する日付を YYYYMMDD 形式で指定します。 *active_end_date*は**int**,、既定値は 99991231,、9999年12月31日を意味します。  
+`[ @active_end_date = ] active_end_date`レプリケーションエージェントのスケジュール設定を停止する日付を YYYYMMDD 形式で指定します。 *active_end_date*は**int**,、既定値は 99991231,、9999年12月31日を意味します。  
   
 > [!NOTE]  
 >  このパラメーターは非推奨とされており、スクリプトの旧バージョンとの互換性のために保持されています。 このプロパティは、 [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)の実行時に、サブスクリプションごとに指定されるようになりました。 この値を指定すると、このサブスクライバーでサブスクリプションを作成するときに既定値として使用され、警告メッセージが返されます。  
   
-`[ @description = ] 'description'` は、サブスクライバーの説明テキストです。 *説明*は**nvarchar (255)** ,、既定値は NULL です。  
+`[ @description = ] 'description'`サブスクライバーのテキストの説明を入力します。 *説明*は**nvarchar (255)**,、既定値は NULL です。  
   
-`[ @security_mode = ] security_mode` は、実装されているセキュリティモードです。 *security_mode*は**int**,、既定値は1です。 **0** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を指定します。 **1** Windows 認証を指定します。  
+`[ @security_mode = ] security_mode`実装されているセキュリティモードです。 *security_mode*は**int**,、既定値は1です。 **0**は[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証を指定します。 **1** Windows 認証を指定します。  
   
 > [!NOTE]  
 >  このパラメーターは非推奨とされており、スクリプトの旧バージョンとの互換性のために保持されています。 このプロパティは、 [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)の実行時に、サブスクリプションごとに指定されるようになりました。 この値を指定すると、このサブスクライバーでサブスクリプションを作成するときに既定値として使用され、警告メッセージが返されます。  
   
-このパラメーターは非推奨とされており、旧バージョンとの互換性のみの設定のために提供されており、任意の値に*encrypted_password*ますが、 **0**を指定するとエラーが発生します。 `[ @encrypted_password = ] encrypted_password`  
+`[ @encrypted_password = ] encrypted_password`このパラメーターは非推奨とされており、旧バージョンとの互換性のみを設定するために提供されていますが、 *encrypted_password*の値は任意ですが、 **0**を指定するとエラーが発生します。  
   
-`[ @publisher = ] 'publisher'` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のパブリッシャーを指定します。 *publisher*は**sysname**で、既定値は NULL です。  
+`[ @publisher = ] 'publisher'`以外の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーを指定します。 *publisher*は**sysname**で、既定値は NULL です。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パブリッシャーから発行する場合は、*パブリッシャー*を使用しないでください。  
+>  ** パブリッシャーからパブリッシュする場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーを使用しないでください。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **sp_addsubscriber**は、スナップショットレプリケーション、トランザクションレプリケーション、およびマージレプリケーションで使用します。  
   
  サブスクライバーがマージパブリケーションへの匿名サブスクリプションのみを持つ場合、 **sp_addsubscriber**は必要ありません。  
@@ -203,10 +204,10 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
  **Sp_addsubscriber**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
 ## <a name="see-also"></a>参照  
- [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
- [プル サブスクリプションの作成](../../relational-databases/replication/create-a-pull-subscription.md)   
- [sp_changesubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)   
- [sp_dropsubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
- [sp_helpsubscriberinfo &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)  
+ [プッシュサブスクリプションを作成する](../../relational-databases/replication/create-a-push-subscription.md)   
+ [プルサブスクリプションを作成する](../../relational-databases/replication/create-a-pull-subscription.md)   
+ [sp_changesubscriber &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)   
+ [sp_dropsubscriber &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
+ [sp_helpsubscriberinfo &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)  
   
   

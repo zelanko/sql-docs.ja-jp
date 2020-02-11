@@ -15,16 +15,17 @@ ms.assetid: a0fbd519-a10e-4cbd-92e6-5de9b8d3e3f0
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: b7440834e5f12cd18081687aa584a8dcfe3ce2e8
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728277"
 ---
 # <a name="derived-hierarchies-master-data-services"></a>派生階層 (Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
+  
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] の派生階層は、モデル内のエンティティ間に既に存在するドメインベースの属性のリレーションシップから派生します。  
   
  派生階層を作成することで、モデル内の既存のドメイン ベースの属性リレーションシップを強調表示できます。  
@@ -62,36 +63,36 @@ ms.locfileid: "73728277"
   
  派生階層では、Product と Subcategory 間のリレーションシップを強調表示してから、Subcategory と Category 間のリレーションシップを強調表示できます。 この階層内にメンバーを表示すると、ツリー内の各レベルに同じエンティティのメンバーが含まれています。  
   
- ![マウンテンバイク派生階層の例](../master-data-services/media/mds-conc-derived-hierarchy-example.gif "マウンテンバイク派生階層の例")  
+ ![マウンテン バイク派生階層の例](../master-data-services/media/mds-conc-derived-hierarchy-example.gif "マウンテン バイク派生階層の例")  
   
  この種類の階層では、無効なレベルにメンバーを移動できません。 たとえば、自転車 Road-650 は、Road Bikes というサブカテゴリから Mountain Bikes という別のサブカテゴリに移動することはできますが、 1 {Bikes} などのカテゴリの直下に移動することはできません。 階層ツリー内でメンバーを移動するたびに、メンバーのドメイン ベースの属性値は、移動を反映して変更されます。  
   
-## <a name="notes"></a>注  
+## <a name="notes"></a>メモ  
  派生階層ツリー内のすべてのメンバーは、ID で並べ替えられます。 並べ替え順序は変更できません。  
   
  メンバーのドメイン ベースの属性が空で、その属性が派生階層で使用される場合、そのメンバーは階層内に表示されません。 属性への値の設定を要求するビジネス ルールを作成してください。 詳細については、「[属性値を要求する &#40;マスター データ サービス&#41;](../master-data-services/require-attribute-values-master-data-services.md)」を参照してください。  
   
-## <a name="related-tasks"></a>関連タスク  
+## <a name="related-tasks"></a>Related Tasks  
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  
-|新しい派生階層を作成する。|[派生階層を作成する (マスター データ サービス)](../master-data-services/create-a-derived-hierarchy-master-data-services.md)|  
-|既存の派生階層のレベルを非表示にするか、または削除する。|[派生階層のレベルを非表示にするか削除する (マスター データ サービス)](../master-data-services/hide-or-delete-levels-in-a-derived-hierarchy-master-data-services.md)|  
-|既存の派生階層の名前を変更する。|[派生階層名を変更する (マスター データ サービス)](../master-data-services/change-a-derived-hierarchy-name-master-data-services.md)|  
-|既存の派生階層を削除する。|[派生階層を削除する (マスター データ サービス)](../master-data-services/delete-a-derived-hierarchy-master-data-services.md)|  
+|新しい派生階層を作成する。|[派生階層 &#40;マスターデータサービスを作成し&#41;](../master-data-services/create-a-derived-hierarchy-master-data-services.md)|  
+|既存の派生階層のレベルを非表示にするか、または削除する。|[派生階層のレベルの非表示または削除 &#40;マスターデータサービス&#41;](../master-data-services/hide-or-delete-levels-in-a-derived-hierarchy-master-data-services.md)|  
+|既存の派生階層の名前を変更する。|[派生階層名を変更する &#40;マスターデータサービス&#41;](../master-data-services/change-a-derived-hierarchy-name-master-data-services.md)|  
+|既存の派生階層を削除する。|[派生階層 &#40;マスターデータサービスの削除&#41;](../master-data-services/delete-a-derived-hierarchy-master-data-services.md)|  
   
 ## <a name="related-content"></a>関連コンテンツ  
   
--   [ドメインベースの属性 (マスター データ サービス)](../master-data-services/domain-based-attributes-master-data-services.md)  
+-   [ドメインベースの属性 &#40;マスターデータサービス&#41;](../master-data-services/domain-based-attributes-master-data-services.md)  
   
--   [明示的階層 (マスター データ サービス)](../master-data-services/explicit-hierarchies-master-data-services.md)  
+-   [明示的階層 &#40;マスターデータサービス&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)  
   
--   [再帰型階層 (マスター データ サービス)](../master-data-services/recursive-hierarchies-master-data-services.md)  
+-   [再帰型階層 &#40;マスターデータサービス&#41;](../master-data-services/recursive-hierarchies-master-data-services.md)  
   
--   [明示的なキャップを持つ派生階層 (マスター データ サービス)](../master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)  
+-   [明示的なキャップを持つ派生階層 &#40;マスターデータサービス&#41;](../master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)  
   
--   [派生階層 (マスター データ サービス) の多対多リレーションシップを表示する](../master-data-services/show-many-to-many-relationships-in-derived-hierarchies-master-data-services.md)  
+-   [派生階層の多対多リレーションシップを表示 &#40;マスターデータサービス&#41;](../master-data-services/show-many-to-many-relationships-in-derived-hierarchies-master-data-services.md)  
   
--   [コレクション (マスター データ サービス)](../master-data-services/collections-master-data-services.md)  
+-   [コレクション &#40;マスターデータサービス&#41;](../master-data-services/collections-master-data-services.md)  
   
   

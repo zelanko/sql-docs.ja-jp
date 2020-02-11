@@ -11,17 +11,18 @@ ms.assetid: c2687e39-dc20-494f-a707-2aa29f4c329e
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 47ae80a58f32aab4debb7cd4dde60a1ccf2cdb4a
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728501"
 ---
 # <a name="create-a-model-deployment-package-by-using-mdsmodeldeploy"></a>MDSModelDeploy を使用したモデルの配置パッケージの作成
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] では、MDSModelDeploy ツールを使用して、パッケージを作成します。 指定するコマンドに応じて、次のどちらかを含むパッケージを作成できます。  
+  
+  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、MDSModelDeploy ツールを使用して、パッケージを作成します。 指定するコマンドに応じて、次のどちらかを含むパッケージを作成できます。  
   
 -   モデル オブジェクトのみ。  
   
@@ -29,7 +30,7 @@ ms.locfileid: "73728501"
   
  モデル オブジェクトのみを含むパッケージを配置する必要がある場合は、代わりに、 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web アプリケーションのモデル配置ウィザードを使用できます。 詳細については、「 [ウィザードを使用したモデルの配置パッケージの作成](../master-data-services/create-a-model-deployment-package-by-using-the-wizard.md)」を参照してください。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
 1.  MDSModelDeploy ツールを実行するために必要な基本的な権限は、次のとおりです。  
@@ -58,7 +59,7 @@ ms.locfileid: "73728501"
   
  モデルのパッケージを作成するには、そのモデルが存在する必要があります。 詳細については、「[モデルを作成する (マスター データ サービス)](../master-data-services/create-a-model-master-data-services.md)」を参照してください。  
   
- 詳細については、「[Administrators &#40;Master Data Services&#41; (管理者 &#40;マスター データ サービス&#41;)](../master-data-services/administrators-master-data-services.md)」を参照してください。  
+ 詳細については、「 [管理者 (マスター データ サービス)](../master-data-services/administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
   
 ### <a name="to-create-a-model-deployment-package-by-using-mdsmodeldeploy"></a>MDSModelDeploy を使用してモデルの配置パッケージを作成するには  
   
@@ -70,13 +71,13 @@ ms.locfileid: "73728501"
   
     -   MDS を既定の場所にインストールしなかった場合は、ローカル コンピューター内で MDSModelDeploy.exe を検索します。  
   
-3.  省略可。 オプションおよびヘルプを表示します。  
+3.  省略可能。 オプションおよびヘルプを表示します。  
   
     -   使用可能なすべてのオプションを表示するには、「 `MDSModelDeploy` 」と入力し、Enter キーを押します。  
   
     -   オプションのヘルプを表示するには、「 *」と入力します。* OptionName `MDSModelDeploy help OptionName`はオプションの名前です。  
   
-4.  省略可。 Web アプリケーションが複数ある場合、次のコマンドを入力し、Enter キーを押して、配置するサービスの名前を確認します。  
+4.  省略可能。 Web アプリケーションが複数ある場合、次のコマンドを入力し、Enter キーを押して、配置するサービスの名前を確認します。  
   
     ```  
     MDSModelDeploy listservices  
@@ -94,12 +95,12 @@ ms.locfileid: "73728501"
   
 6.  Enter キーを押します。 パッケージが正常に作成されると、「MDSModelDeploy 操作は正常に完了しました」というメッセージが表示されます。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>次の手順  
   
 -   [MDSModelDeploy を使用したモデルの配置パッケージの配置](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)  
   
 ## <a name="see-also"></a>参照  
- [モデル配置オプション (マスター データ サービス)](../master-data-services/model-deployment-options-master-data-services.md)   
- [モデルの配置 (マスター データ サービス)](../master-data-services/deploying-models-master-data-services.md)  
+ [モデル配置オプション &#40;マスターデータサービス&#41;](../master-data-services/model-deployment-options-master-data-services.md)   
+ [モデルの配置 &#40;マスターデータサービス&#41;](../master-data-services/deploying-models-master-data-services.md)  
   
   

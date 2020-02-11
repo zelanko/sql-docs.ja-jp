@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9f5fa48a2ddeb884611b86387e1ea044cf865639
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73760632"
 ---
 # <a name="sparse-columns-support-odbc"></a>スパース列のサポート (ODBC)
@@ -29,10 +29,11 @@ ms.locfileid: "73760632"
  SQL_CA_SS_IS_COLUMN_SET という名前の読み取り専用の SQLSMALLINT フィールドである新しい実装行記述子 (IRD) を使用して、列が XML **column_set**値であるかどうかを判断できます。 SQL_CA_SS_IS_COLUMN_SET は、値 SQL_TRUE および SQL_FALSE を受け取ります。  
   
 ## <a name="catalog-metadata"></a>カタログ メタデータ  
- [Sqlcolumns](../../../relational-databases/native-client-odbc-api/sqlcolumns.md)の結果セットには、2つの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 固有の列 (SS_IS_SPARSE と SS_IS_COLUMN_SET) が追加されています。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [Sqlcolumns](../../../relational-databases/native-client-odbc-api/sqlcolumns.md)の結果セットには、2つの特定の列 (SS_IS_SPARSE と SS_IS_COLUMN_SET) が追加されています。  
   
 ## <a name="odbc-function-support-for-sparse-columns"></a>ODBC 関数によるスパース列のサポート  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client でスパース列をサポートするために、次の ODBC 関数が更新されました。  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client でスパース列をサポートするために、次の ODBC 関数が更新されました。  
   
 -   [SQLColAttribute](../../../relational-databases/native-client-odbc-api/sqlcolattribute.md)  
   

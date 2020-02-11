@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a87be6fe0a68172a99ade4704ae4111cabbe95f1
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73982728"
 ---
 # <a name="sysdatabase_permissions-transact-sql"></a>database_permissions (Transact-sql)
@@ -37,21 +37,21 @@ ms.locfileid: "73982728"
   
 |列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
-|**class**|**tinyint**|権限が存在するクラスを識別します。<br /><br /> 0 = データベース<br />1 = オブジェクトまたは列<br />3 = スキーマ<br />4 = データベースプリンシパル<br />5 = アセンブリ**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。<br />6 = 型<br />10 = XML スキーマコレクション- <br />                      **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。<br />15 = メッセージの種類: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降**に適用さ**れます。<br />16 = サービスコントラクト: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降**に適用さ**れます。<br />17 = サービス**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。<br />18 = リモートサービスバインド: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降**に適用さ**れます。<br />19 = ルート: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降**に適用さ**れます。<br />23 = フルテキストカタログ-**に適用さ**れます: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。<br />24 = 対称キー: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降**に適用さ**れます。<br />25 = 証明書: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降**に適用さ**れます。<br />26 = 非対称キー: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降**に適用さ**れます。|  
-|**class_desc**|**nvarchar(60)**|権限が存在するクラスの説明です。<br /><br /> DATABASE<br /><br /> OBJECT_OR_COLUMN<br /><br /> SCHEMA<br /><br /> DATABASE_PRINCIPAL<br /><br /> ASSEMBLY<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> MESSAGE_TYPE<br /><br /> SERVICE_CONTRACT<br /><br /> SERVICE<br /><br /> REMOTE_SERVICE_BINDING<br /><br /> ROUTE<br /><br /> FULLTEXT_CATALOG<br /><br /> SYMMETRIC_KEYS<br /><br /> CERTIFICATE<br /><br /> ASYMMETRIC_KEY|  
-|**major_id**|**int**|権限が存在する対象の ID。クラスに従って解釈されます。 通常、 **major_id**は、クラスが表すものに適用される id の種類にすぎません。 <br /><br /> 0 = データベース自体 <br /><br /> > 0 = ユーザーオブジェクトのオブジェクト Id <br /><br /> \<0 = システムオブジェクトのオブジェクト Id |  
+|**講義**|**tinyint**|権限が存在するクラスを識別します。<br /><br /> 0 = データベース<br />1 = オブジェクトまたは列<br />3 = スキーマ<br />4 = データベースプリンシパル<br />5 = アセンブリ-以降[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **に適用さ**れます。<br />6 = 型<br />10 = XML スキーマコレクション- <br />                      **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。<br />15 = メッセージの種類: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]以降**に適用さ**れます。<br />16 = サービスコントラクト-以降[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **に適用さ**れます。<br />17 = サービス-以降[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **に適用さ**れます。<br />18 = リモートサービスバインド-以降[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **に適用さ**れます。<br />19 = ルート: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]以降**に適用さ**れます。<br />23 = フルテキストカタログ: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]以降**に適用さ**れます。<br />24 = 対称キー-以降[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **に適用さ**れます。<br />25 = 証明書-以降[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **に適用さ**れます。<br />26 = 非対称キー-以降[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **に適用さ**れます。|  
+|**class_desc**|**nvarchar (60)**|権限が存在するクラスの説明です。<br /><br /> DATABASE<br /><br /> OBJECT_OR_COLUMN<br /><br /> SCHEMA<br /><br /> DATABASE_PRINCIPAL<br /><br /> ASSEMBLY<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> MESSAGE_TYPE<br /><br /> SERVICE_CONTRACT<br /><br /> SERVICE<br /><br /> REMOTE_SERVICE_BINDING<br /><br /> ROUTE<br /><br /> FULLTEXT_CATALOG<br /><br /> SYMMETRIC_KEYS<br /><br /> CERTIFICATE<br /><br /> ASYMMETRIC_KEY|  
+|**major_id**|**int**|権限が存在する対象の ID。クラスに従って解釈されます。 通常、 **major_id**は、クラスが表すものに適用される id の種類にすぎません。 <br /><br /> 0 = データベース自体 <br /><br /> >0 = ユーザーオブジェクトのオブジェクト Id <br /><br /> \<0 = システムオブジェクトのオブジェクト Id |  
 |**minor_id**|**int**|権限が存在することを示すセカンダリ ID。クラスに従って解釈されます。 多くの場合、オブジェクトのクラスに使用できるサブカテゴリがないため、 **minor_id**は0になります。 それ以外の場合は、テーブルの列 ID です。|  
 |**grantee_principal_id**|**int**|権限が許可されるデータベースプリンシパル ID。|  
 |**grantor_principal_id**|**int**|これらのアクセス許可の権限の許可のあるデータベースプリンシパル ID。|  
-|**型**|**char (4)**|データベース権限の種類。 権限の種類の一覧については、次の表を参照してください。|  
-|**permission_name**|**nvarchar(128)**|権限名。|  
-|**state**|**char(1)**|アクセス許可の状態:<br /><br /> D = 拒否<br /><br /> R = 取り消し<br /><br /> G = 許可<br /><br /> W = 許可の許可オプション|  
-|**state_desc**|**nvarchar(60)**|権限の状態の説明。<br /><br /> DENY<br /><br /> REVOKE<br /><br /> GRANT<br /><br /> GRANT_WITH_GRANT_OPTION|  
+|**type**|**char (4)**|データベース権限の種類。 権限の種類の一覧については、次の表を参照してください。|  
+|**permission_name**|**nvarchar(128**|アクセス許可の名前。|  
+|**状態**|**char (1)**|アクセス許可の状態:<br /><br /> D = 拒否<br /><br /> R = 取り消し<br /><br /> G = 許可<br /><br /> W = 許可の許可オプション|  
+|**state_desc**|**nvarchar (60)**|権限の状態の説明。<br /><br /> DENY<br /><br /> REVOKE<br /><br /> GRANT<br /><br /> GRANT_WITH_GRANT_OPTION|  
 
 ## <a name="database-permissions"></a>データベース権限   
 次の種類のアクセス許可が可能です。
   
-|権限の種類|アクセス許可名|適用されるセキュリティ保護可能なリソース|  
+|アクセス許可の種類|アクセス許可名|適用されるセキュリティ保護可能なリソース|  
 |---------------------|---------------------|--------------------------|  
 |AADS |ALTER ANY DATABASE EVENT SESSION |DATABASE |  
 |AAMK |任意のマスクを変更します。 |DATABASE |  
@@ -111,9 +111,9 @@ ms.locfileid: "73982728"
 |DABO |ADMINISTER DATABASE BULK OPERATIONS | DATABASE |
 |DL|DELETE|データベース、オブジェクト、スキーマ|  
 |EAES |EXECUTE ANY EXTERNAL SCRIPT |DATABASE |
-|EX|CREATE ステートメントを実行する前に、|ASSEMBLY、DATABASE、OBJECT、SCHEMA、TYPE、XML SCHEMA COLLECTION|  
+|EX|EXECUTE|ASSEMBLY、DATABASE、OBJECT、SCHEMA、TYPE、XML SCHEMA COLLECTION|  
 |IM|IMPERSONATE|User|  
-|IN|Insert|データベース、オブジェクト、スキーマ|  
+|IN|INSERT|データベース、オブジェクト、スキーマ|  
 |RC|RECEIVE|OBJECT|  
 |RF|REFERENCES|アセンブリ、非対称キー、証明書、コントラクト、データベース、フルテキストカタログ、メッセージ型、オブジェクト、スキーマ、対称キー、型、XML スキーマコレクション|  
 |SL|SELECT|データベース、オブジェクト、スキーマ|  
@@ -124,16 +124,16 @@ ms.locfileid: "73982728"
 |UP|UPDATE|データベース、オブジェクト、スキーマ|  
 |VW|VIEW DEFINITION|APPLICATION ROLE、ASSEMBLY、ASYMMETRIC KEY、CERTIFICATE、CONTRACT、DATABASE、FULLTEXT CATALOG、MESSAGE TYPE、OBJECT、REMOTE SERVICE BINDING、ROLE、ROUTE、SCHEMA、SERVICE、SYMMETRIC KEY、TYPE、USER、XML SCHEMA COLLECTION|  
 |VWCK |列の暗号化キーの定義を表示します。|DATABASE |  
-|VWCM |任意の列のマスター_キーの定義の表示|DATABASE |  
+|VWCM |任意の列のマスター_キーの定義の表示]|DATABASE |  
 |VWCT|VIEW CHANGE TRACKING|テーブル、スキーマ|  
 |VWDS|VIEW DATABASE STATE|DATABASE|  
   
 ## <a name="permissions"></a>アクセス許可  
  すべてのユーザーは自分の権限を参照できます。 他のユーザーの権限を表示するには、VIEW DEFINITION、ALTER ANY USER、またはユーザーに対する権限が必要です。 ユーザー定義ロールを表示するには、ALTER ANY ROLE、またはロールのメンバーシップ (public など) が必要です。  
   
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」をご覧ください。  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]詳細については、「[メタデータ表示の構成](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-listing-all-the-permissions-of-database-principals"></a>A: データベース プリンシパルのすべての権限を一覧表示する  
  次のクエリは、データベースプリンシパルに対して明示的に許可または拒否されている権限を一覧表示します。  
@@ -168,8 +168,8 @@ JOIN sys.schemas AS s
   
 ## <a name="see-also"></a>参照  
  [Securables](../../relational-databases/security/securables.md)   
- [権限の階層 &#40;データベース エンジン&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
- [セキュリティ カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
+ [権限の階層 &#40;データベースエンジン&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
+ [セキュリティカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

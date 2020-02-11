@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 421265abcf3731ed48ff34a6b199ba5cd3c6af5c
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401054"
 ---
 # <a name="launch-the-configuration-manager-in-analytics-platform-system"></a>Analytics Platform System の Configuration Manager を起動する
 このトピックでは、Analytics Platform System appliance の**Configuration Manager**を起動する手順について説明します。  
   
-## <a name="before-you-begin"></a>開始する前に  
+## <a name="before-you-begin"></a>はじめに  
   
 ### <a name="prerequisites"></a>前提条件  
 Analytics Platform System**Configuration Manager**は、アプライアンスドメイン管理者のみが実行できます。 このツールを実行するには、アプライアンスドメイン管理者のパスワードが必要です。 追加の APS 管理者を作成するには、「aps[ドメイン管理者 &#40;aps&#41;を作成](create-an-aps-domain-administrator-aps.md)する」を参照してください。  

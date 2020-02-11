@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 4ea61ea7e6983f9601783957eee6776f36eccfb4
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400727"
 ---
 # <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>Azure Blob storage 内の外部データにアクセスするように PolyBase を構成する
@@ -180,7 +180,7 @@ SQL Server Data Tools では、外部テーブルが別のフォルダー**外�
   
 ![SSDT の PolyBase オブジェクト](media/polybase/external-tables-datasource.png)  
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 PolyBase について詳しくは、「[PolyBase とは](../relational-databases/polybase/polybase-guide.md)」をご覧ください。 
 

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 56ddfce4fc1812e99870c22eeb0e15be64c5decb
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75245633"
 ---
 # <a name="hardware-and-software-requirements-for-reporting-services-in-sharepoint-mode"></a>Reporting Services の SharePoint モードに関するハードウェアとソフトウェアの要件
@@ -30,7 +30,7 @@ ms.locfileid: "75245633"
   
 -   [詳細情報](#bkmk_more_information)  
   
-##  <a name="bkmk_prereq"></a>応募  
+##  <a name="bkmk_prereq"></a> 前提条件  
   
 -   ローカル インストールの場合は、SharePoint と [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のインストール時にログインしたアカウントは、ローカルのオペレーティング システムの Administrators グループのメンバーである必要があります。 セットアップ アカウントは、SharePoint ファーム管理者グループのメンバーである必要はありません。  
   

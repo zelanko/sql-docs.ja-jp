@@ -11,16 +11,17 @@ ms.assetid: 9adbd5e1-f28c-4fb5-afa7-082de2831f3e
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: abf900f8eea0e64ed8e541ee7cd94c63834fbb48
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729747"
 ---
 # <a name="automatic-code-creation-master-data-services"></a>コードの自動作成 (Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
+  
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、Code 属性の数値または他の数値属性の数値を自動的に生成できます。 コードを自動生成するときは、コードに他の値を入力してもかまいません。正確には、初期値が自動的に設定されます。  
   
 ## <a name="generating-code-values"></a>コード値の生成  
@@ -33,19 +34,19 @@ ms.locfileid: "73729747"
   
  いずれかのツールで、またはステージング処理を使用して属性値を MDS に入力するとき、属性値をブランクのままにできます。 ビジネス ルールが適用されると、既存の最高の値に基づいて値が増分されます。 たとえば、ルールが "1 から開始して 4 ずつ増加する生成値に対する既定の属性" であり、属性の現在最も高い値が 700 である場合、追加される次のメンバーの値は 704 になります。  
   
-## <a name="related-tasks"></a>関連タスク  
+## <a name="related-tasks"></a>Related Tasks  
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  
-|Code 属性の値を自動的に生成します。|[Code 属性の値の自動生成 (マスター データ サービス)](../master-data-services/automatically-generate-code-attribute-values-master-data-services.md)|  
-|他の属性の値を自動的に生成します。|[Code 以外の属性の値の自動生成 (マスター データ サービス)](../master-data-services/automatically-generate-attribute-values-other-than-code-master-data-services.md)|  
+|Code 属性の値を自動的に生成します。|[マスターデータサービス &#40;コード属性の値を自動的に生成&#41;](../master-data-services/automatically-generate-code-attribute-values-master-data-services.md)|  
+|他の属性の値を自動的に生成します。|[Code &#40;マスターデータサービス以外の属性値を自動的に生成する&#41;](../master-data-services/automatically-generate-attribute-values-other-than-code-master-data-services.md)|  
   
 ## <a name="related-content"></a>関連コンテンツ  
   
--   [マスター データ サービスの概要 (MDS)](../master-data-services/master-data-services-overview-mds.md)  
+-   [マスターデータサービス概要 &#40;MDS&#41;](../master-data-services/master-data-services-overview-mds.md)  
   
--   [ビジネス ルール (マスター データ サービス)](../master-data-services/business-rules-master-data-services.md)  
+-   [ビジネスルール &#40;マスターデータサービス&#41;](../master-data-services/business-rules-master-data-services.md)  
   
--   [エンティティ (マスター データ サービス)](../master-data-services/entities-master-data-services.md)  
+-   [エンティティ &#40;マスターデータサービス&#41;](../master-data-services/entities-master-data-services.md)  
   
   

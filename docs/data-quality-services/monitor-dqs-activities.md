@@ -15,10 +15,10 @@ ms.assetid: 1d4c76f3-0d7b-498e-b792-4db4a0349814
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: d9926eb251d109eb8ed9529a4ae739e8a1915b07
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75245461"
 ---
 # <a name="monitor-dqs-activities"></a>DQS アクティビティの監視
@@ -27,14 +27,14 @@ ms.locfileid: "75245461"
 
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) でナレッジ検出、ドメイン管理、照合ポリシー、データ クレンジング、データ照合、および SSIS クレンジングの各アクティビティを一元的に監視する方法について説明します。  
   
-##  <a name="BeforeYouBegin"></a>開始する前に  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="LimitationsRestrictions"></a>制限事項と制約事項  
+###  <a name="LimitationsRestrictions"></a> 制限事項と制約事項  
  アクティビティを終了させたりアクティビティ内のプロセスを停止させたりすることができるのは、DQS_Main データベースの dqs_administrator ロールを持つユーザーだけです。  
   
-###  <a name="Security"></a>保護  
+###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a>許可  
+####  <a name="Permissions"></a> Permissions  
   
 -   DQS アクティビティを表示するには、DQS_MAIN データベースに対する dqs_kb_editor または dqs_kb_operator ロールが必要です。  
   
@@ -139,7 +139,7 @@ ms.locfileid: "75245461"
   
 3.  保存する Excel ファイルの名前と場所を指定するように求めるメッセージが表示されます。 エクスポートした Excel ファイルには、次のシートが含まれています。  
   
-    |シート名|説明|  
+    |シート名|[説明]|  
     |----------------|-----------------|  
     |アクティビティ|アクティビティ グリッドと同様の、アクティビティに関する情報 (列) が表示されます。|  
     |処理|
@@ -159,8 +159,7 @@ ms.locfileid: "75245461"
 2.  
   **[選択したアクティビティを終了します]** アイコンをクリックします。 または、アクティビティ グリッドでアクティビティを右クリックし、ショートカット メニューの **[アクティビティの終了]** をクリックします。  
   
-3.  アクションを確認するメッセージが表示されます。 
-  **[はい]** をクリックします。  
+3.  アクションを確認するメッセージが表示されます。 **[はい]** をクリックします。  
   
 ##  <a name="Stop"></a>DQS アクティビティでプロセスを停止する  
  DQS 管理者 (dqs_administrator ロール) は、種類が **[SSIS クレンジング]** ではないアクティビティの実行中の (アクティブな) プロセスを停止することができます。 アクティビティ監視画面でアクティビティのプロセスを停止する操作は、 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]の機能領域で該当するアクティビティ内のプロセスを停止する操作と同じです。 たとえば、クレンジング アクティビティ内のコンピューター支援型のクレンジング プロセスを停止したり、照合アクティビティ内の照合プロセスを停止したりすることができます。 停止されたプロセスをアクティビティ監視画面から再開することはできません。 
@@ -171,7 +170,6 @@ ms.locfileid: "75245461"
 2.  
   **[選択したプロセスを停止します]** アイコンをクリックします。 または、アクティビティの詳細グリッドでプロセスを右クリックし、ショートカット メニューの **[プロセスの停止]** をクリックします。  
   
-3.  アクションを確認するメッセージが表示されます。 
-  **[はい]** をクリックします。  
+3.  アクションを確認するメッセージが表示されます。 **[はい]** をクリックします。  
   
   

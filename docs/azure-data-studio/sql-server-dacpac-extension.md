@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.openlocfilehash: d33f43f4232e7a9a62365c5bb438c91339f4fd47
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73532420"
 ---
 # <a name="sql-server-dacpac-extension"></a>SQL Server dacpac の拡張機能
@@ -55,7 +55,7 @@ ms.locfileid: "73532420"
 ![dacpac 拡張機能の起動メニュー](media/extensions/sql-server-dacpac-extension/dacpac-extension-launch.png)
 
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 dacpac について詳しくは、[Microsoft のドキュメントを参照してください。](https://docs.microsoft.com/sql/relational-databases/data-tier-applications/data-tier-applications?view=sql-server-2017)
 問題と機能に関する要望を[こちら](https://github.com/microsoft/azuredatastudio/issues)にご報告ください。

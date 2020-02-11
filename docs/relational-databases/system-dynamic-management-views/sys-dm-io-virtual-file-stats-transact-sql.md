@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0ad2d38c031f97e46ef36f33f5e7a0fc82bcb5e0
-ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74412839"
 ---
 # <a name="sysdm_io_virtual_file_stats-transact-sql"></a>dm_io_virtual_file_stats (Transact-sql)
@@ -73,7 +73,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
   
 ## <a name="table-returned"></a>返されるテーブル  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**sysname**|データベース名。</br></br>SQL Data Warehouse の場合、これは pdw_node_id によって識別されるノードに格納されているデータベースの名前です。 各ノードには、13個のファイルを持つ tempdb データベースが1つあります。 各ノードには、ディストリビューションごとに1つのデータベースがあり、各ディストリビューションデータベースには5つのファイルがあります。 たとえば、各ノードに4つのディストリビューションが含まれている場合、結果には pdw_node_id あたり20個のディストリビューションデータベースファイルが表示されます。 
 |**database_id**|**smallint**|データベースの ID。|  
@@ -87,12 +87,12 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 |**io_stall_write_ms**|**bigint**|ファイルでの書き込み完了をユーザーが待機した総時間 (ミリ秒単位)。|  
 |**io_stall**|**bigint**|ファイルでの i/o の完了をユーザーが待機した合計時間 (ミリ秒単位)。|  
 |**size_on_disk_bytes**|**bigint**|このファイルのディスクで使用されているバイト数。 スパースファイルの場合、この数は、データベーススナップショットに使用されるディスク上の実際のバイト数です。|  
-|**file_handle**|**可変長**|このファイルの Windows ファイルハンドル。|  
+|**file_handle**|**varbinary**|このファイルの Windows ファイルハンドル。|  
 |**io_stall_queued_read_ms**|**bigint**|は、:: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]から[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)]**には適用されません**。<br /><br /> 読み取りの IO リソースガバナンスによって導入された IO 待機時間の合計。 NULL 値は許可されません。 詳細については、「 [sys. dm_resource_governor_resource_pools &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)」を参照してください。|  
 |**io_stall_queued_write_ms**|**bigint**|は、:: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]から[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)]**には適用されません**。<br /><br />  書き込みの IO リソースガバナンスによって導入された IO 待機時間の合計。 NULL 値は許可されません。|
-|**pdw_node_id**|**通り**|**適用対象:**[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>分布のノードの識別子。
+|**pdw_node_id**|**int**|**適用対象:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>分布のノードの識別子。
  
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 カウンタは、SQL Server (MSSQLSERVER) サービスが開始されるたびに空に初期化されます。
   
 ## <a name="permissions"></a>アクセス許可  
@@ -122,7 +122,7 @@ WHERE database_name = 'tempdb' AND file_id = 2;
 ```
 
 ## <a name="see-also"></a>参照  
- [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [I O 関連の動的管理ビューおよび関数 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)   
  [database_files &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [master_files &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  

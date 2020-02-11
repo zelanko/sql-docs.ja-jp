@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f45ccaa0caab2e1dcc7e96e80e217d82d4f1f805
-ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69530893"
 ---
 # <a name="object-naming-rules-analysis-services"></a>オブジェクトの名前付け規則 (Analysis Services)
@@ -27,9 +27,11 @@ ms.locfileid: "69530893"
   
  手動で指定することもできますが、`ID` は一般にオブジェクトの作成時に自動生成されます。 モデルの構築を開始した後は、`ID` を変更しないでください。 モデル内のオブジェクト参照はすべて `ID` に基づいて実行されます。 したがって、`ID` を変更すると簡単にモデルが壊れます。  
   
- 名前付け規則の例外として、`DataSource` オブジェクトと `DataSourceView` オブジェクトに注意してください。 `DataSource` の ID は、現在のデータベースの参照として 1 つのドット (.) に設定でき、これは一意ではありません。 次の例外は、`DataSourceView` で、これは .NET フレームワークの `DataSet` オブジェクト用に定義された名前付け規則に従います。この場合、`Name` が識別子として使用されます。  
+ 名前付け規則の例外として、`DataSource` オブジェクトと `DataSourceView` オブジェクトに注意してください。 
+  `DataSource` の ID は、現在のデータベースの参照として 1 つのドット (.) に設定でき、これは一意ではありません。 次の例外は、`DataSourceView` で、これは .NET フレームワークの `DataSet` オブジェクト用に定義された名前付け規則に従います。この場合、`Name` が識別子として使用されます。  
   
- `Name` プロパティと `ID` プロパティには、次のルールが適用されます。  
+ 
+  `Name` プロパティと `ID` プロパティには、次のルールが適用されます。  
   
 -   名前では大文字と小文字は区別されません。 同じデータベース内に "sales" という名前のキューブと "Sales" という名前のキューブを含めることはできません。  
   
@@ -44,7 +46,7 @@ ms.locfileid: "69530893"
   
  テーブル モデルでは、データベース互換性が 1103 に設定されている場合、一部のオブジェクトで検証ルールが緩められており、一部のクライアント アプリケーションの拡張文字要件と名前付け規則のためにルールに準拠していません。 これらの条件を満たすデータベースは、厳格でない検証ルールに従います。 この場合、制限された文字がオブジェクト名に使用されていても、検証に合格することがあります。  
   
- **予約済みキーワード**  
+ **予約語**  
   
 -   AUX  
   
@@ -60,21 +62,21 @@ ms.locfileid: "69530893"
   
 -   PRN  
   
--   NULL は XML 内の文字列の文字として許容されません。  
+-   NULL は XML 内の文字列の文字として許容されません。   
   
  **予約文字**  
   
  次の表では、特定のオブジェクトで無効な文字を示します。  
   
-|オブジェクト|無効な文字|  
+|Object|無効な文字|  
 |------------|------------------------|  
 |`Server`|サーバー オブジェクトに名前を付けるときは、Windows サーバーの名前付け規則に従います。 詳細については、「[名前付け規則 (Windows)](/windows/desktop/DNS/naming-conventions) 」を参照してください。|  
 |`DataSource`| `: / \ * \| ? " () [] {} <>` |  
-|`Level` または `Attribute`|````. , ; ' ` : / \ * & \| ? " & % $ ! + = [] {} < >````|  
-|`Dimension` または `Hierarchy`|````. , ; ' ` : / \ * \| ? " & % $ ! + = () [] {} <,>````|  
+|`Level`もしくは`Attribute`|````. , ; ' ` : / \ * & \| ? " & % $ ! + = [] {} < >````|  
+|`Dimension`もしくは`Hierarchy`|````. , ; ' ` : / \ * \| ? " & % $ ! + = () [] {} <,>````|  
 |他のすべてのオブジェクト|````. , ; ' ` : / \ * \| ? " & % $ ! + = () [] {} < >````|  
   
- **例外予約文字を使用できる場合**  
+ **例外: 予約文字を使用できる場合**  
   
  先に述べたように、特定のモダリティと互換性レベルを持つデータベースでは、予約文字を含むオブジェクト名を使用できます。 拡張文字を使用できる表形式データベース (1103 以上) の場合、ディメンション属性、階層、レベル、メジャー、および KPI オブジェクト名で予約文字を使用できます。  
   
@@ -87,9 +89,9 @@ ms.locfileid: "69530893"
   
  データベースは既定の ModelType を持つことができます。 既定値は多次元モデルと同等です。そのため、列名での予約文字の使用はサポートされません。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [MDX の予約語](/sql/mdx/mdx-reserved-words)   
- [翻訳&#40;Analysis Services&#41;](/analysis-services/translation-support-in-analysis-services)   
- [XML for Analysis コンプライアンス&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-compliance-xmla)  
+ [翻訳 &#40;Analysis Services&#41;](/analysis-services/translation-support-in-analysis-services)   
+ [XMLA&#41;&#40;XML for Analysis コンプライアンス](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-compliance-xmla)  
   
   

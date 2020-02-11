@@ -1,5 +1,5 @@
 ---
-title: パブリケーション情報、[すべてのサブスクリプション] (スナップショット パブリケーション) | Microsoft Docs
+title: パブリケーション情報、[すべてのサブスクリプション](スナップショット パブリケーション) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,41 +13,42 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3665647e89c03b75230acf58d2f5193fceefe878
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63021827"
 ---
 # <a name="publication-information-all-subscriptions-snapshot-publication"></a>パブリケーション情報、[すべてのサブスクリプション] (スナップショット パブリケーション)
+  
   **[すべてのサブスクリプション]** タブには、選択したスナップショット パブリケーションに対するすべてのサブスクリプションの情報が表示されます。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  サブスクリプションに関する詳細情報やタスクを調べるには、そのサブスクリプションの行を右クリックし、ショートカット メニューのオプションをクリックします。 グリッドにデータを表示する方法を変更するには、グリッドを右クリックし、次のいずれかのオプションをクリックします。  
   
--   **[並べ替え]**:**[列の並べ替え]** ダイアログ ボックスで、1 つ以上の列を基準にして並べ替えを行います。  
+-   **Sort**: [**列の並べ替え**] ダイアログボックス内の1つまたは複数の列を基準にして並べ替えを行います。  
   
--   **[表示する列の選択]**:**[列の選択]** ダイアログ ボックスで、表示する列とその表示順序を選択します。  
+-   表示**する列の選択**: 表示する列と、[**列の選択**] ダイアログボックスで表示する順序を選択します。  
   
--   **[フィルター]**:**[フィルターの設定]** ダイアログ ボックスで、列の値に基づいてグリッドの行をフィルター処理します。  
+-   [**フィルター**]: [**フィルターの設定**] ダイアログボックスの列の値に基づいて、グリッド内の行をフィルター処理します。  
   
--   **[フィルターのクリア]**:グリッドのフィルター設定をすべてクリアします。  
+-   [**フィルターのクリア**]: グリッドのフィルター設定をすべてクリアします。  
   
  フィルター設定は各グリッドに固有です。 列の選択と並べ替えは、各パブリッシャーのパブリケーション グリッドなど、同じ種類のすべてのグリッドに適用されます。  
   
- **[表示]**  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンのみです。 サブスクリプション状態を選択すると、選択した種類の状態のサブスクリプションが表示されます。 たとえば、エラーを含むサブスクリプションのみを表示するように設定できます。  
+ **示**  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]以降のバージョンのみ。 サブスクリプション状態を選択すると、選択した種類の状態のサブスクリプションが表示されます。 たとえば、エラーを含むサブスクリプションのみを表示するように設定できます。  
   
- **ステータス**  
+ **状態**  
  各サブスクリプションの状態です。スナップショット エージェントまたはディストリビューション エージェントの状態 (より高い優先度の状態が表示されます) によって決定されます。  
   
  既定では、サブスクリプション情報を表示するグリッドは **[状態]** 列の順序で並べられています。 表示される状態の値と、その値の並べ替え順 (たとえば、エラーは常にグリッドの上部に表示されます) を次に示します。  
   
--   [エラー]  
+-   エラー  
   
--   [まもなく期限切れ/期限切れ] ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンのみ)  
+-   [まもなく期限切れ/期限切れ]\([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンのみ)  
   
--   [初期化されていないサブスクリプション] \([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンのみ)  
+-   [初期化されていないサブスクリプション]\([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンのみ)  
   
 -   [失敗したコマンドの再試行]  
   
@@ -62,14 +63,14 @@ ms.locfileid: "63021827"
  状態値 **[まもなく期限切れ/期限切れ]** は、しきい値が設定されている場合のみ表示されます。 しきい値の設定方法の詳細については、「[レプリケーション モニターのしきい値と警告の設定](monitor/set-thresholds-and-warnings-in-replication-monitor.md)」を参照してください。  
   
  **サブスクリプション**  
- 各サブスクリプションの名前です。*SubscriberName:SubscriptionDatabaseName* という形式になります。  
+ 各サブスクリプションの名前です。 *SubscriberName: SubscriptionDatabaseName*という形式になります。  
   
- **[最後の同期]**  
+ **前回の同期**  
  ディストリビューション エージェントが最後に実行された時刻です。 同期が進行中の場合は、 **[実行中]** と表示されます。  
   
 ## <a name="see-also"></a>参照  
  [レプリケーション モニターの開始](monitor/start-the-replication-monitor.md)   
- [レプリケーション モニターを使用して情報を表示し、タスクを実行する](monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [レプリケーションモニターを使用して情報を表示し、タスクを実行する](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [レプリケーションの監視](monitoring-replication.md)  
   
   

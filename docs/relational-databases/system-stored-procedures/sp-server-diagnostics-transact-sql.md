@@ -18,18 +18,18 @@ ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d150d9b027b9a2c4d309ca2055722bb47ba092a4
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73982115"
 ---
-# <a name="sp_server_diagnostics-transact-sql"></a>sp_server_diagnostics (Transact-sql)
+# <a name="sp_server_diagnostics-transact-sql"></a>sp_server_diagnostics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
 潜在的な障害を検出するために、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に関する診断データと正常性の情報をキャプチャします。 プロシージャは繰り返しモードで実行され、結果は定期的に送信されます。 通常の接続または DAC 接続から呼び出すことができます。  
   
-**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降)。  
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]以降)。  
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,7 +40,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @repeat_interval = ] 'repeat_interval_in_seconds'` は、ストアドプロシージャが正常に実行されて正常性情報が送信されるまでの時間間隔を示します。  
+`[ @repeat_interval = ] 'repeat_interval_in_seconds'`正常性情報を送信するために、ストアドプロシージャが繰り返し実行される時間間隔を示します。  
   
  *repeat_interval_in_seconds*は**int**で、既定値は0です。 有効なパラメーター値は0、または5以上の値です。 ストアドプロシージャは、完全なデータを返すために少なくとも5秒間実行する必要があります。 繰り返しモードで実行するストアドプロシージャの最小値は5秒です。  
   
@@ -58,10 +58,10 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
   
 |列|データ型|[説明]|  
 |------------|---------------|-----------------|  
-|**creation_time**|**datetime**|行の作成のタイムスタンプを示します。 単一の行セットの各行は、同じタイムスタンプを持っています。|  
-|**component_type**|**sysname**|行に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスレベルコンポーネントまたは Always On 可用性グループの情報が含まれているかどうかを示します。<br /><br /> インスタンス (instance)<br /><br /> Always On: AvailabilityGroup|  
-|**component_name**|**sysname**|コンポーネントの名前または可用性グループの名前を示します。<br /><br /> システム<br /><br /> resource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> のイベント<br /><br /> *可用性グループの \<名 >*|  
-|**state**|**int**|コンポーネントの正常性状態を示します。<br /><br /> 0<br /><br /> @shouldalert<br /><br /> 2<br /><br /> 3|  
+|**creation_time**|**DATETIME**|行の作成のタイムスタンプを示します。 単一の行セットの各行は、同じタイムスタンプを持っています。|  
+|**component_type**|**sysname**|行に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスレベルコンポーネントまたは Always On 可用性グループの情報が含まれているかどうかを示します。<br /><br /> instance<br /><br /> Always On: AvailabilityGroup|  
+|**component_name**|**sysname**|コンポーネントの名前または可用性グループの名前を示します。<br /><br /> システム<br /><br /> resource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> events<br /><br /> *\<可用性グループの名前>*|  
+|**状態**|**int**|コンポーネントの正常性状態を示します。<br /><br /> 0<br /><br /> 1 で保護されたプロセスとして起動されました<br /><br /> 2<br /><br /> 3|  
 |**state_desc**|**sysname**|状態列について説明します。 State 列の値に対応する説明は次のとおりです。<br /><br /> 0: 不明<br /><br /> 1: クリーン<br /><br /> 2: 警告<br /><br /> 3: エラー|  
 |**data**|**varchar (max)**|コンポーネントに固有のデータを指定します。|  
   
@@ -77,20 +77,20 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
   
 -   **イベント**: サーバーによって記録されたエラーとイベントについて、ストアドプロシージャを介してデータを収集します。これには、リングバッファーの例外の詳細、メモリブローカーに関するリングバッファーイベント、メモリ不足、スケジューラモニター、バッファープール、スピンロック、セキュリティ、および接続が含まれます。 イベントには、常に状態として0が表示されます。  
   
--   **\<可用性グループの名前 >** : 指定した可用性グループのデータを収集します (component_type = "Always On: AvailabilityGroup" の場合)。  
+-   **可用性グループの名前>: 指定した可用性グループのデータを収集します (component_type = "Always On: AvailabilityGroup" の場合)。 \< **  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 障害の観点から見ると、システム、リソース、および query_processing コンポーネントはエラーの検出に利用され、io_subsystem とイベントのコンポーネントは診断目的でのみ利用されます。  
   
 次の表は、コンポーネントと関連する正常性状態の対応を示しています。  
   
-|のコンポーネント|クリーン (1)|警告 (2)|エラー (3)|不明 (0)|  
+|Components|クリーン (1)|警告 (2)|エラー (3)|不明 (0)|  
 |----------------|-----------------|-------------------|-----------------|--------------------|  
 |システム|x|x|x||  
 |resource|x|x|x||  
 |query_processing|x|x|x||  
 |io_subsystem|x|x|||  
-|のイベント||||x|  
+|events||||x|  
   
 各行の (x) は、そのコンポーネントに対して有効な正常性状態を表します。 たとえば、io_subsystem はクリーンまたは警告として表示されます。 エラー状態は表示されません。  
  
@@ -100,7 +100,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 ## <a name="permissions"></a>アクセス許可  
 サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 拡張セッションを使用して正常性の情報をキャプチャし、SQL Server の外部にあるファイルに保存することをお勧めします。 そのため、エラーが発生してもアクセスできます。 次の例は、イベント セッションからの出力をファイルに保存します。  
 ```sql  
 CREATE EVENT SESSION [diag]  
@@ -241,6 +241,6 @@ go
 ``` 
   
 ## <a name="see-also"></a>参照  
- [Failover Policy for Failover Cluster Instances](../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
+ [フェールオーバークラスターインスタンスのフェールオーバーポリシー](../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
   
   

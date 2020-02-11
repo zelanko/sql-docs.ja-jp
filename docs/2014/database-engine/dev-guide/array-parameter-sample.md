@@ -11,27 +11,32 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 822dc7f3d66afc44c187d199674a22f20977f535
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74055912"
 ---
 # <a name="array-parameter-sample"></a>Array パラメーター サンプル
   データベース内の行のセットを作成、更新、または削除すると便利な場合があります。 これを行うには、いくつかの方法があります。 1 つは、共通言語ランタイム (CLR) 統合ユーザー定義データ型を使用して、情報の配列をクライアントからサーバー上の CLR 統合ストアド プロシージャへ渡す方法です。 CLR 統合ユーザー定義データ型の性質によって、サーバーに提供されるデータの大きさは 8,000 バイトに制限されます。 したがって、この方法は、大規模なデータや複雑なデータを扱う場合には適切ではありません。 操作するデータが小規模で単純な場合、この方法は、行ごとにストアド プロシージャを呼び出す方法よりもはるかに効率的です。 データの順序が重要なアプリケーションでは、配列を渡すことでデータの順序を保持できます。このサンプルの内容は次のとおりです。  
   
-1.  `ContactTypeNames` ユーザー定義データ型。 これには、目的の連絡先の型名のリストが含まれています。  
+1.  
+  `ContactTypeNames` ユーザー定義データ型。 これには、目的の連絡先の型名のリストが含まれています。  
   
 2.  Microsoft Visual C# または Microsoft Visual Basic メソッドとして実装される `usp_EnsureContactTypeNames`ストアド プロシージャ。 このストアド プロシージャは、`ContactTypeNames` ユーザー定義データ型のインスタンスを受け取り、`Person.ContactType` テーブルにない連絡先名がこのユーザー定義データ型インスタンスに含まれている場合、新しい行をテーブルに挿入します。  
   
-3.  `TestArrayParameter` コンソール アプリケーション。 このアプリケーションは、渡されたコマンド ライン パラメーターに基づいて `ContactTypeNames` ユーザー定義データ型のインスタンスを作成し、`usp_EnsureContactTypeNames` ストアド プロシージャを呼び出して、このユーザー定義データ型インスタンスをパラメーターとして渡します。  
+3.  
+  `TestArrayParameter` コンソール アプリケーション。 このアプリケーションは、渡されたコマンド ライン パラメーターに基づいて `ContactTypeNames` ユーザー定義データ型のインスタンスを作成し、`usp_EnsureContactTypeNames` ストアド プロシージャを呼び出して、このユーザー定義データ型インスタンスをパラメーターとして渡します。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>前提条件  
  このプロジェクトを作成して実行するには、次のソフトウェアがインストールされている必要があります。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express ドキュメントとサンプルの [Web サイト](https://www.microsoft.com/download/details.aspx?id=42299)から無償で入手できます。  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express ドキュメントとサンプルの [Web サイト](https://www.microsoft.com/download/details.aspx?id=42299)から無償で入手できます。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] デベロッパー [Web サイト](https://archive.codeplex.com/?p=SqlServerSamples)から入手できる AdventureWorks データベース。  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] デベロッパー [Web サイト](https://archive.codeplex.com/?p=SqlServerSamples)から入手できる AdventureWorks データベース。  
   
 -   .NET Framework SDK 2.0 以降または Microsoft Visual Studio 2005 以降。 .NET Framework SDK は無償で入手できます。  
   
@@ -54,7 +59,7 @@ ms.locfileid: "74055912"
      `GO`  
   
     > [!NOTE]  
-    >  CLR を有効にするには、`ALTER SETTINGS` サーバーレベルの権限を持っている必要があります。この権限は、固定サーバーロール `sysadmin` と `serveradmin` のメンバーによって暗黙的に保持されます。  
+    >  CLR を有効にするには`ALTER SETTINGS` 、サーバーレベルの権限が必要です。この権限は`sysadmin` 、 `serveradmin`固定サーバーロールおよびのメンバーによって暗黙的に保持されています。  
   
 -   使用している [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに AdventureWorks データベースがインストールされている必要があります。  
   
@@ -78,7 +83,7 @@ ms.locfileid: "74055912"
   
 5.  c:\MySample で、`Program.vb` (Visual Basic サンプル) または `Program.cs` (C# サンプル) を作成し、適切な Visual Basic または C# のサンプル コード (下記) をこのファイルにコピーします。  
   
-6.  ファイルプログラムの該当する行 (24 行目) を見つけ、`XXX` をのインスタンスの名前に置き換え [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+6.  ファイルプログラム内の適切な行 (24 行目) を探し、 `XXX`をのインスタンスの名前に置き換えます。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
     -   `Dim connection As New SqlConnection("data source=XXX;initial catalog=AdventureWorks;Integrated Security=SSPI")`  
   
@@ -90,7 +95,8 @@ ms.locfileid: "74055912"
   
     -   `Csc /reference:ContactTypeNames.dll /reference:C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.Data.dll /reference:C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.dll /reference:C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.Xml.dll /out:TestArrayParameter.exe Program.cs`  
   
-8.  [!INCLUDE[tsql](../../includes/tsql-md.md)] インストール コードをファイルにコピーし、`Install.sql` としてサンプル ディレクトリに保存します。  
+8.  
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] インストール コードをファイルにコピーし、`Install.sql` としてサンプル ディレクトリに保存します。  
   
 9. サンプルが `C:\MySample\`以外のディレクトリにインストールされている場合は、その場所を示すように、ファイル `Install.sql` を編集します。  
   
@@ -102,7 +108,8 @@ ms.locfileid: "74055912"
   
     -   `TestArrayParameter "Executive Sales Representative" "Executive Sales Manager"`  
   
-12. [!INCLUDE[tsql](../../includes/tsql-md.md)] クリーンアップ スクリプトをファイルにコピーし、`cleanup.sql` としてサンプル ディレクトリに保存します。  
+12. 
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] クリーンアップ スクリプトをファイルにコピーし、`cleanup.sql` としてサンプル ディレクトリに保存します。  
   
 13. 次のコマンドを使用してこのスクリプトを実行します。  
   
@@ -715,6 +722,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [CLR &#40;共通言語ランタイム&#41; 統合の使用シナリオと例](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
+ [CLR&#41; 統合 &#40;共通言語ランタイムの使用シナリオと例](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

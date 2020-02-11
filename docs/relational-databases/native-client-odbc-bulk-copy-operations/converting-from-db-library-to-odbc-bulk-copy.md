@@ -18,16 +18,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b7e14018ea62edb5dd262b87ddbea467d1872132
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73785189"
 ---
 # <a name="converting-from-db-library-to-odbc-bulk-copy"></a>DB-Library から ODBC への一括コピーの変換
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでサポートされている一括コピー関数は DB-LIBRARY 一括コピー関数に似ているため、DB-LIBRARY 一括コピープログラムを ODBC に変換するのは簡単です。ただし、次のような例外があります。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client odbc ドライバーでサポートされている一括コピー関数は db-library の一括コピー関数に似ているため、db-library 一括コピープログラムを ODBC に変換するのは簡単です。ただし、次のような例外があります。  
   
 -   DB-Library アプリケーションでは、DBPROCESS 構造体を指すポインターを一括コピー関数の最初のパラメーターに渡します。 ODBC アプリケーションでは、DBPROCESS ポインターが ODBC 接続ハンドルに置き換わります。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "73785189"
         (void *)SQL_BCP_ON, SQL_IS_INTEGER);  
     ```  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、DB-LIBRARY メッセージとエラーハンドラーがサポートされていません。ODBC 一括コピー関数によって発生したエラーとメッセージを取得するには、 **SQLGetDiagRec**を呼び出す必要があります。 ODBC バージョンの一括コピー関数は、標準的な一括コピーのリターン コードである SUCCEED または FAILED を返しますが、SQL_SUCCESS や SQL_ERROR など、ODBC 形式のリターン コードを返しません。  
+-   Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client ODBC ドライバーでは、db-library メッセージとエラーハンドラーがサポートされていません。ODBC 一括コピー関数によって発生したエラーとメッセージを取得するには、 **SQLGetDiagRec**を呼び出す必要があります。 ODBC バージョンの一括コピー関数は、標準的な一括コピーのリターン コードである SUCCEED または FAILED を返しますが、SQL_SUCCESS や SQL_ERROR など、ODBC 形式のリターン コードを返しません。  
   
 -   DB-LIBRARY [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)の*varlen*パラメーターに指定された値は、ODBC **bcp_bind**の_cbdata_パラメーターとは異なる解釈になります。  
   
@@ -100,7 +100,7 @@ ms.locfileid: "73785189"
   
     -   DB-LIBRARY **dbconvert**関数でサポートされている任意の形式の**datetime**文字列および**smalldatetime**文字列。  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クライアントネットワークユーティリティの DB-LIBRARY **[オプション]** タブで **[インターナショナル設定を使用する]** チェックボックスがオンになっている場合、db-library 一括コピー関数は、ロケール設定に定義されている地域の日付形式の日付も受け入れます。クライアントコンピューターのレジストリ。  
+    -   クライアントネットワークユーティリティの [DB-LIBRARY オプション] タブで [**インターナショナル設定を使用する**] チェックボックスをオンにすると、db-library 一括コピー関数は、クライアントコンピューターのレジストリのロケール設定に定義されている地域の日付形式の日付も受け入れます。 **** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
      DB-LIBRARY 一括コピー関数では、ODBC **datetime**および**smalldatetime**形式は使用できません。  
   
@@ -109,7 +109,7 @@ ms.locfileid: "73785189"
 -   文字形式で**通貨**値を出力する場合、ODBC 一括コピー関数では、有効桁数が4桁、コンマ区切り文字が指定されません。DB-LIBRARY バージョンでは、2桁の有効桁数が指定され、コンマ区切り記号が含まれます。  
   
 ## <a name="see-also"></a>参照  
- [一括コピー操作&#40;の実行&#41; ODBC](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)   
+ [ODBC&#41;&#40;の一括コピー操作の実行](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)   
  [一括コピー関数](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

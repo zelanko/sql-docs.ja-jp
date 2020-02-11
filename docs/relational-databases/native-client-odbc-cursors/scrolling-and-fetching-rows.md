@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9a8c0c0783ff51548143fa7fd670de2502482673
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73784054"
 ---
 # <a name="scrolling-and-fetching-rows"></a>行のスクロールとフェッチ
@@ -52,7 +52,7 @@ ms.locfileid: "73784054"
 |1 画面分上へ移動 (PageUp)|SQL_FETCH_PRIOR|  
 |1 画面分下へ移動 (PageDown)|SQL_FETCH_NEXT|  
 |1 行上へ移動|FetchOffset が-1 に等しい SQL_FETCH_RELATIVE|  
-|1 行下へ移動|FetchOffset に 1 を指定した SQL_FETCH_RELATIVE|  
+|1 行下へ移動|FetchOffset に 1 を指定した SQL_FETCH_RELATIVE |  
 |スクロール ボックスを先頭に移動|SQL_FETCH_FIRST|  
 |スクロール ボックスを末尾に移動|SQL_FETCH_LAST|  
 |スクロール ボックスを任意の位置に移動|SQL_FETCH_ABSOLUTE|  
@@ -62,6 +62,6 @@ ms.locfileid: "73784054"
 -   [ODBC での行のブックマーク](../../relational-databases/native-client-odbc-cursors/scrolling-and-fetching-rows-bookmarking-rows-in-odbc.md)  
   
 ## <a name="see-also"></a>参照  
- [カーソル&#40;を使用した ODBC&#41;](../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
+ [ODBC&#41;&#40;カーソルの使用](../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
   
   

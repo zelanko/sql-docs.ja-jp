@@ -1,5 +1,5 @@
 ---
-title: sys.dm_workload_management_workload_groups_stats (Transact-sql) |Microsoft Docs
+title: dm_workload_management_workload_groups_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/02/2019
 ms.prod: sql
@@ -13,22 +13,22 @@ ms.author: rortloff
 manager: craigg
 monikerRange: = azure-sqldw-latest||= sqlallproducts-allversions
 ms.openlocfilehash: 6e77239d019cb51e66a34a3a5b909e01c28a7faa
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73633436"
 ---
-# <a name="sysdm_workload_management_workload_groups_stats-transact-sql"></a>sys.dm_workload_management_workload_groups_stats (Transact-sql)
+# <a name="sysdm_workload_management_workload_groups_stats-transact-sql"></a>dm_workload_management_workload_groups_stats (Transact-sql)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
-ワークロードグループの統計と、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]内のワークロードグループの有効な値を返します。  
+ワークロードグループの統計と、のワークロードグループの有効[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]な値を返します。  
   
-|列名|[データ型]|説明|範囲|  
+|列名|データ型|[説明]|Range|  
 |-----------------|---------------|-----------------|-----------|  
 |group_id|**int**|ワークロード グループの一意の ID。||
 |name|**sysname**|ワークロードグループの名前。||
-|statistics_start_time|**datetime**|ワークロードグループの統計コレクションが開始された時刻。  この値は、ワークロードグループが作成されたとき、またはインスタンスが一時停止またはスケーリングされたときのいずれかになります。||
+|statistics_start_time|**DATETIME**|ワークロードグループの統計コレクションが開始された時刻。  この値は、ワークロードグループが作成されたとき、またはインスタンスが一時停止またはスケーリングされたときのいずれかになります。||
 |total_request_count|**bigint**|ワークロードグループ内の完了した要求の累積数。||
 |total_shared_resource_reqeusts|**bigint**|共有プールからリソースを使用したワークロードグループ内の完了した要求の累積数。||
 |total_queued_request_count|**bigint**|Max_concurrency の制限に達した後にキューに登録された要求の累積数。||
@@ -41,4 +41,4 @@ ms.locfileid: "73633436"
 
 ## <a name="see-also"></a>参照
 
- [SQL Data Warehouse および並列データウェアハウスの動的管理&#40;ビュー transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+ [SQL Data Warehouse および並列データウェアハウスの動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  

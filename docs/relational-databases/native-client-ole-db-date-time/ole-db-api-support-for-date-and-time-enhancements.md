@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e1d995abd5bb718e9e1df1e2d5af5d1c22769014
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73772334"
 ---
 # <a name="ole-db-api-support-for-date-and-time-enhancements"></a>OLE DB API による機能強化された日付と時刻のサポート
@@ -23,10 +23,10 @@ ms.locfileid: "73772334"
 
   機能強化された日付や時刻をサポートする OLE DB API を次に示します。  
   
-|関数|説明|  
+|Function|[説明]|  
 |--------------|-----------------|  
 |IAccessor:: CreateAccessor|DBBINDING 構造体にフラグが追加され、アプリケーションが**datetime**、 **datetime2**、および**smalldatetime**の各値を区別できるようになります。 詳細については、「[パラメーターと行セットのメタデータ](../../relational-databases/native-client-ole-db-date-time/metadata-parameter-and-rowset.md)」を参照してください。|  
-|IBCPSession::BCPColFmt|詳細については、「 [OLE DB および ODBC&#41;の拡張され&#40;た日付/時刻型に対する一括コピーの変更](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)」を参照してください。|  
+|IBCPSession::BCPColFmt|詳細については、「 [&#40;OLE DB および ODBC&#41;の拡張された日付/時刻型に対する一括コピーの変更](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)」を参照してください。|  
 |ICommandWithParameters::GetParameterInfo|詳細については、「[パラメーターと行セットのメタデータ](../../relational-databases/native-client-ole-db-date-time/metadata-parameter-and-rowset.md)」を参照してください。|  
 |ICommandWithParameters::SetParameterinfo|詳細については、「[パラメーターと行セットのメタデータ](../../relational-databases/native-client-ole-db-date-time/metadata-parameter-and-rowset.md)」を参照してください。|  
 |IColumnsRowset::GetColumnsRowset|詳細については、「[パラメーターと行セットのメタデータ](../../relational-databases/native-client-ole-db-date-time/metadata-parameter-and-rowset.md)」を参照してください。|  
@@ -36,6 +36,6 @@ ms.locfileid: "73772334"
 |ITableDefinition::CreateTable|詳細については、「 [OLE DB の日付と時刻の機能強化に関するデータ型のサポート](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)」を参照してください。|  
   
 ## <a name="see-also"></a>参照  
- [日付と時刻の強化機能 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
+ [OLE DB &#40;の日付と時刻の改善&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

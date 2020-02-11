@@ -1,5 +1,5 @@
 ---
-title: SQL Server のライセンス条項 (SSCM) について |Microsoft Docs
+title: SQL Server ライセンス条項について (SSCM) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,18 +11,18 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 04231d0020d44107f9c8136aad9f26e8c098df47
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63035321"
 ---
 # <a name="about-the-sql-server-license-terms-sscm"></a>SQL Server のライセンス条項について (SSCM)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)]ソフトウェア ライセンス条項は、ローカル コンピューターにコピー時に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]がインストールされています。 同じエディションと言語の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを、同じコンピューターに複数インストールする場合、それらのエディションと言語のすべてのインスタンスに対して単一の使用許諾条件が適用されます。 ファイルに書き込まれます: %ProgramFiles%\Microsoft SQL server \110\license terms \ または %programfiles (x86) %\Microsoft SQL server \110\license 条項\\します。  
+  ソフトウェア[!INCLUDE[msCoName](../../includes/msconame-md.md)]ライセンス条項は、のインストール時[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]にローカルコンピューターにコピーされます。 同じエディションと言語の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを、同じコンピューターに複数インストールする場合、それらのエディションと言語のすべてのインスタンスに対して単一の使用許諾条件が適用されます。 ファイルは、%ProgramFiles%\Microsoft SQL server のライセンス条項 \ または% ProgramFiles (x86)% \ Microsoft SQL server \ 110\ ライセンス条項\\に書き込まれます。  
   
  同じ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エディションと言語のインスタンスを、同じコンピューターに複数インストールする場合、それらのエディションと言語のすべてのインスタンスに対して単一の使用許諾条件が適用されます。  
   
- 使用許諾条件ファイル名は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のエディションと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の言語のエディションを示します。 以下に例を示します。  
+ 使用許諾条件ファイル名は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のエディションと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の言語のエディションを示します。 次に例を示します。  
   
 -   License_DEV_ENU.txt: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Developer (英語版)  
   
@@ -38,7 +38,7 @@ ms.locfileid: "63035321"
   
 -   ENT - Enterprise  
   
--   DEV - Developer  
+-   開発-開発者  
   
 -   STD - Standard  
   
@@ -68,16 +68,16 @@ ms.locfileid: "63035321"
   
 -   NLA - オランダ語  
   
--   PTB - ポルトガル語 (ブラジル)  
+-   PTB-ポルトガル語 (ブラジル)  
   
 -   SVE - スウェーデン語  
   
 -   RUS - ロシア語  
   
 ## <a name="sql-server-licensing-options"></a>SQL Server ライセンス オプション  
- 詳細については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]価格およびライセンス オプションを参照してください、 [Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkId=190955) Web サイト。  
+ 価格とライセンスのオプションの詳細については、Microsoft SQL Server Web サイトを参照してください。 [](https://go.microsoft.com/fwlink/?LinkId=190955) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Microsoft SQL Server のプライバシーに関する声明](../../../2014/getting-started/microsoft-sql-server-privacy-statement.md)   
  [ドキュメントの免責事項](../../../2014/getting-started/legal-notice-for-documentation.md)  
   

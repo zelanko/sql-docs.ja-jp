@@ -15,19 +15,19 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4588e453087e71a55b104c997129a93de2edf1a0
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73786302"
 ---
 # <a name="sqlgetfunctions"></a>SQLGetFunctions
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Native Client ODBC ドライバーの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インターフェイスは、ODBC で定義されている3つの対応レベル (ISO、Open Group、および ODBC レベル 2) に準拠しています。 **Sqlgetfunctions**は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client odbc ドライバーですべての odbc 関数がサポートされていることを報告します。  
+  Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client odbc ドライバーインターフェイスは、odbc 用に定義された3つのコンプライアンスレベル (ISO、Open Group、および odbc レベル 2) に準拠しています。 **Sqlgetfunctions**は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client odbc ドライバーですべての odbc 関数がサポートされていることを報告します。  
   
 ## <a name="see-also"></a>参照  
- [Sqlgetfunctions 関数](https://go.microsoft.com/fwlink/?LinkId=59353)   
+ [SQLGetFunctions 関数](https://go.microsoft.com/fwlink/?LinkId=59353)   
  [ODBC API 実装の詳細](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

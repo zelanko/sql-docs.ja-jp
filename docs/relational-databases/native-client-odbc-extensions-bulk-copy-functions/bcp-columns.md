@@ -19,15 +19,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d26f288c857cf44a932a91b250074c36453e2482
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73782977"
 ---
 # <a name="bcp_columns"></a>bcp_columns
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
+  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] との一括コピー入出力に使用する、ユーザー ファイル内の合計列数を設定します。 bcp_columns と[bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)の代わりに[bcp_setbulkmode](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setbulkmode.md)を使用できます。  
   
 ## <a name="syntax"></a>構文  
@@ -43,8 +44,8 @@ RETCODE bcp_columns (
  *hdbc*  
  一括コピーが有効な ODBC 接続ハンドルです。  
   
- *n 列*  
- ユーザー ファイル内の合計列数です。 ユーザーファイルから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルにデータを一括コピーする準備をしていて、ユーザーファイル内のすべての列をコピーすることを意図していない場合でも、 *Ncolumns*をユーザーファイルの列の合計数に設定する必要があります。  
+ *nColumns*  
+ ユーザー ファイル内の合計列数です。 ユーザーファイルから[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]テーブルにデータを一括コピーする準備をしていて、ユーザーファイル内のすべての列をコピーする予定がない場合でも、 *ncolumns*をユーザーファイルの列の合計数に設定する必要があります。  
   
 ## <a name="returns"></a>戻り値  
  SUCCEED または FAIL。  

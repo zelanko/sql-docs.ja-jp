@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 89cdfa63bff88c4f4bb5954402034b31ad7f77ce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63060987"
 ---
 # <a name="errorcontrol-property-sqlservice-class"></a>ErrorControl プロパティ (SqlService クラス)
@@ -37,31 +37,31 @@ object
 ```  
   
 ## <a name="parts"></a>要素  
- *object*  
+ *素材*  
  サービスを表す [SqlService クラス](sqlservice-class.md) オブジェクト。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
- 起動時にサービスが失敗した場合にレポートされるエラーの重大度を指定する文字列値。 次の表では、使用可能な値を示します。  
+ 起動時にサービスが失敗した場合にレポートされるエラーの重大度を指定する文字列値。 次の表に、それぞれの値を示します。  
   
- Ignore  
+ 無視  
  ユーザーへの通知が行われません。  
   
- 標準  
+ Normal  
  ユーザーへの通知が行われます。  
   
- 重大  
+ Severe  
  システムは最後の正しい構成で再起動されます。  
   
- 重大  
+ Critical  
  正しい構成でシステムの再起動が試行されます。  
   
  Unknown  
  重大度が不明です。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  値は、失敗が発生した場合に、起動プログラムによって行われるアクションを示しています。 すべてのエラーは、コンピューター システムによって記録されます。  
   
 ## <a name="see-also"></a>参照  
- [開始とサービスの停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [サービスの開始および停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sp_drop_agent_parameter (TRANSACT-SQL) |Microsoft Docs
+title: sp_drop_agent_parameter (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: b99e65ff-9cca-4dce-a2ce-2968de23a76a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8356ee01b0c14a9cb87542d750a93ea537fac5cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68016533"
 ---
-# <a name="spdropagentparameter-transact-sql"></a>sp_drop_agent_parameter (TRANSACT-SQL)
+# <a name="sp_drop_agent_parameter-transact-sql"></a>sp_drop_agent_parameter (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  内のプロファイルから 1 つまたはすべてのパラメーターを削除、 **MSagent_parameters**テーブル。 このストアド プロシージャは、エージェントが実行されている、任意のデータベース上のディストリビューターで実行されます。  
+  **MSagent_parameters**テーブルのプロファイルから1つまたはすべてのパラメーターを削除します。 このストアドプロシージャは、任意のデータベース上でエージェントが実行されているディストリビューターで実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -38,22 +38,22 @@ sp_drop_agent_parameter [ @profile_id = ] profile_id
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @profile_id = ] profile_id` パラメーターを削除するプロファイルの ID です。 *profile_id*は**int**、既定値はありません。  
+`[ @profile_id = ] profile_id`パラメーターを削除するプロファイルの ID を指定します。 *profile_id*は**int**,、既定値はありません。  
   
-`[ @parameter_name = ] 'parameter_name'` 削除するパラメーターの名前です。 *parameter_name*は**sysname**、既定値は **%** します。 場合 **%** 、指定されたプロファイルのすべてのパラメーターが削除されます。  
+`[ @parameter_name = ] 'parameter_name'`削除するパラメーターの名前を指定します。 *parameter_name*は**sysname**で、既定値は**%** です。 の**%** 場合、指定したプロファイルのすべてのパラメーターが削除されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>コメント  
- **sp_drop_agent_parameter**はあらゆる種類のレプリケーションで使用します。  
+## <a name="remarks"></a>解説  
+ **sp_drop_agent_parameter**は、すべての種類のレプリケーションで使用されます。  
   
 ## <a name="permissions"></a>アクセス許可  
- メンバーのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_drop_agent_parameter**します。  
+ **Sp_drop_agent_parameter**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
-## <a name="see-also"></a>関連項目  
- [sp_add_agent_parameter &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)   
- [sp_help_agent_parameter &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md)   
- [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>参照  
+ [sp_add_agent_parameter &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)   
+ [sp_help_agent_parameter &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md)   
+ [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

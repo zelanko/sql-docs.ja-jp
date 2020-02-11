@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 6e4c7df84bc7bf3a4804db76d952b1219100ef5a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68008363"
 ---
 # <a name="isinnode-dmx"></a>IsInNode (DMX)
@@ -28,22 +28,22 @@ IsInNode(<NodeID>)
 ```  
   
 ## <a name="return-type"></a>戻り値の型  
- ブール型です。  
+ ブール型。  
   
-## <a name="remarks"></a>コメント  
- **IsInNode**でのみ使用が[SELECT FROM&#60;モデル&#62;します。ケース&#40;DMX&#41; ](../dmx/select-from-model-cases-dmx.md)と[SELECT FROM&#60;モデル&#62;します。SAMPLE_CASES &#40;DMX&#41; ](../dmx/select-from-model-sample-cases-dmx.md)クエリ。  
+## <a name="remarks"></a>解説  
+ **IsInNode**は、 [SELECT FROM &#60;model&#62; でのみ使用されます。DMX&#41;&#40;ケース](../dmx/select-from-model-cases-dmx.md)は[&#60;モデル&#62; から選択します。DMX&#41;クエリを &#40;SAMPLE_CASES](../dmx/select-from-model-sample-cases-dmx.md)します。  
   
-## <a name="examples"></a>使用例  
- 次の例では、IsInNode 関数で指定されているノードに関連付けられているモデルの作成に使用されたすべてのケースを返します。  
+## <a name="examples"></a>例  
+ 次の例では、IsInNode 関数で指定されたノードに関連付けられているモデルの作成に使用されたすべてのケースを返します。  
   
 ```  
 Select * from [TM Decision Tree].Cases  
 WHERE IsInNode('0')  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [データ マイニング拡張機能&#40;DMX&#41;関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [関数&#40;DMX&#41;](../dmx/functions-dmx.md)   
- [一般的な予測関数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
+## <a name="see-also"></a>参照  
+ [DMX&#41; 関数リファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [DMX&#41;&#40;関数](../dmx/functions-dmx.md)   
+ [DMX&#41;&#40;一般的な予測関数](../dmx/general-prediction-functions-dmx.md)  
   
   

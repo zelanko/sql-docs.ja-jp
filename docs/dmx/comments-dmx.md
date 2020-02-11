@@ -9,41 +9,42 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 26a529d6eb15997ccb48ad25d8d4fcb11cd2ddfb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68071051"
 ---
 # <a name="comments-dmx"></a>コメント (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  データ マイニング拡張機能 (DMX) でのコメントは、プログラム内のテキスト文字列のコードを[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]は実行されません。 コメントは解説とも呼ばれています。 コメントを使用すると、コードの説明を記述したり、コードの診断の際に DMX ステートメントまたはスクリプトの一部分を一時的に無効化することができます。  
+  データマイニング拡張機能 (DMX) のコメントは、実行されない[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]プログラムコード内のテキスト文字列です。 コメントは解説とも呼ばれています。 コメントを使用すると、コードの説明を記述したり、コードの診断の際に DMX ステートメントまたはスクリプトの一部分を一時的に無効化することができます。  
   
- コメントを使用してプログラム コードの説明を記述しておくと、後でコードの維持を簡単に行うことができます。 コメントを使用して、プログラムの名前、コードを作成した開発者の名前、および主なコード変更の日付などの詳細を記録することができます。 また、複雑な計算の説明やプログラム方法の説明を記述することもできます。  
+ コメントを使用してプログラムコードを記述すると、後でコードを簡単に管理できるようになります。 コメントを使用して、プログラムの名前、コードを作成した開発者の名前、および主なコード変更の日付などの詳細を記録することができます。 また、複雑な計算の説明やプログラム方法の説明を記述することもできます。  
   
  コメントを記述する際の基本的なガイドラインは次のとおりです。  
   
--   コメント内には、すべての英数字や記号を使用することができます。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] では、コメント内の文字はすべて無視されます。  
+-   コメント内には、すべての英数字や記号を使用することができます。 
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] では、コメント内の文字はすべて無視されます。  
   
--   ステートメント内またはスクリプト内のコメント長には制限がありません。 1 行または複数行のコメントを作成できます。  
+-   ステートメント内またはスクリプト内のコメント長には制限がありません。 1つまたは複数の行からコメントを作成できます。  
   
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 次の種類のコメント文字をサポートしています。  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]では、次の種類のコメント文字がサポートされています。  
   
--   **(二重スラッシュ)。** 実行するコードと同じ行にコメントを記述する、またはコメントのみの行にコメントを記述するには、このコメント文字を使用します。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] コメントの一部として、行の末尾に二重スラッシュからすべてを評価します。 複数行にわたってコメントを記述する場合、すべてのコメント行の先頭に二重スラッシュを使用します。 このコメント文字の詳細については、次を参照してください。[二重スラッシュ&#40;コメント&#41; &#40;DMX&#41;](../dmx/double-slash-comment-dmx.md)します。  
+-   **(二重スラッシュ)。** 実行するコードと同じ行にコメントを記述したり、コメント自体を行に記述したりするには、これらのコメント文字を使用します。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]二重スラッシュから行末までのすべてをコメントの一部として評価します。 複数行にわたってコメントを記述する場合、すべてのコメント行の先頭に二重スラッシュを使用します。 このコメント文字の詳細については、「 [DMX&#41;&#41; &#40;スラッシュ &#40;コメント](../dmx/double-slash-comment-dmx.md)」を参照してください。  
   
--   **-(二重ハイフン)。** 実行するコードと同じ行にコメントを記述する、またはコメントのみの行にコメントを記述するには、このコメント文字を使用します。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] コメントの一部として、行の末尾に二重ハイフンの後ろからすべてを評価します。 複数行にわたってコメントを記述する場合、すべてのコメント行の先頭に二重ハイフンを使用します。 このコメント文字の詳細については、次を参照してください。 [--&#40;コメント&#41; &#40;DMX&#41;概要](../dmx/comment-dmx-summary.md)します。  
+-   **--(二重ハイフン)。** 実行するコードと同じ行にコメントを記述したり、コメント自体を行に記述したりするには、これらのコメント文字を使用します。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]コメントの一部として、二重ハイフンから行末までのすべてを評価します。 複数行にわたってコメントを記述する場合、すべてのコメント行の先頭に二重ハイフンを使用します。 このコメント文字の詳細については、「 [--&#40;コメント&#41; &#40;DMX&#41; の概要](../dmx/comment-dmx-summary.md)」を参照してください。  
   
--   **/\* ...\*/(スラッシュとアスタリスク文字のペア)。** 実行コードと同じ行にコメントを記述する、コメント専用の行にコメントを記述する、または実行可能コード内にコメントを記述するには、このコメント文字を使用します。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] コメント開始記号からすべてを評価 (/*) にコメント終了記号 (\*/)、コメントの一部として。 複数行のコメントを作成するには、コメント文字のペアでコメントを開始 (/\*)、および閉じるコメント文字のペアでコメントの終了 (\*/)。 コメント行ではそれ以外のコメント文字は使用できません。 このコメント文字の詳細については、次を参照してください。[スラッシュ スター&#40;コメント&#41; &#40;DMX&#41;](../dmx/slash-star-comment-dmx.md)します。  
+-   **/\*...\*/(スラッシュとアスタリスクの文字のペア)。** 実行コードと同じ行にコメントを記述する、コメント専用の行にコメントを記述する、または実行可能コード内にコメントを記述するには、このコメント文字を使用します。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]コメントの一部として、開いているコメントのペア (/*)\*から終了コメントのペア (/) までのすべてを評価します。 複数行のコメントを作成するには、コメントを開始コメント文字のペア (/\*) で開始し、コメントを終了コメント文字のペア (\*/) で終了します。 コメントの行に他のコメント文字を含めることはできません。 このコメント文字の詳細については、「 [DMX&#41;&#41; &#40;スラッシュ (Star) &#40;コメント](../dmx/slash-star-comment-dmx.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング拡張機能 &#40;DMX&#41; リファレンス](../dmx/data-mining-extensions-dmx-reference.md)   
- [データ マイニング拡張機能&#40;DMX&#41;関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [データ マイニング拡張機能&#40;DMX&#41;演算子リファレンス](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [データ マイニング拡張機能&#40;DMX&#41;ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)   
- [データ マイニング拡張機能&#40;DMX&#41;構文表記規則](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
- [データ マイニング拡張機能&#40;DMX&#41;構文要素](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
- [一般的な予測関数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
+ [DMX&#41; リファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-reference.md)   
+ [DMX&#41; 関数リファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [DMX&#41; オペレーターリファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [DMX&#41; ステートメントリファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-statements.md)   
+ [DMX&#41; 構文表記規則を &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
+ [DMX&#41; の構文要素を &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
+ [DMX&#41;&#40;一般的な予測関数](../dmx/general-prediction-functions-dmx.md)   
  [構造と DMX 予測クエリの使用](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [DMX 選択ステートメントについて](../dmx/understanding-the-dmx-select-statement.md)  
   

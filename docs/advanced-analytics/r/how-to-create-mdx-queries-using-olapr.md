@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 6934d3ae816df23d68843eb49d5eca8c95d83d57
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727459"
 ---
 # <a name="how-to-create-mdx-queries-in-r-using-olapr"></a>olapR を使って R で MDX クエリを作成する方法
@@ -71,7 +71,7 @@ ms.locfileid: "73727459"
     + `executeMD` : 多次元配列を返します
     + `execute2D` : 2 次元 (表形式) のデータ フレームを返します
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 次の例は、AdventureWorks データ マートとキューブ プロジェクトに基づいています。このプロジェクトは、Analysis Services に簡単に復元できるバックアップ ァイルを含め、複数のバージョンで広く利用できるためです。 既存のキューブがない場合は、次のいずれかのオプションを使用してサンプル キューブを取得します。
 
@@ -81,7 +81,7 @@ ms.locfileid: "73727459"
 
 ### <a name="1-basic-mdx-with-slicer"></a>1.スライサーを使う基本的な MDX
 
-この MDX クエリは、インターネットの販売数と販売金額の数と金額の_メジャー_を選択し、列軸に設定します。 SalesTerritory ディメンションのメンバーを *スライサー*として追加し、オーストラリアからの販売のみが計算で使われるようにクエリをフィルターします。
+この MDX クエリは、インターネットの販売数と販売金額の数と金額の _メジャー_ を選択し、列軸に設定します。 SalesTerritory ディメンションのメンバーを *スライサー*として追加し、オーストラリアからの販売のみが計算で使われるようにクエリをフィルターします。
 
 ```MDX
 SELECT {[Measures].[Internet Sales Count], [Measures].[InternetSales-Sales Amount]} ON COLUMNS, 
@@ -176,9 +176,9 @@ explore(ocs, "Sales")
 
 | [結果]  |
 | ----|
-| _Customer_|
+| _顧客_|
 |_Date_|
-|_Region_|
+|_[リージョン]_|
 
 
 #### <a name="to-return-all-members-of-the-specified-dimension-and-hierarchy"></a>指定したディメンションと階層のすべてのメンバーを取得するには
@@ -196,7 +196,7 @@ explore(ocs, "Analysis Services Tutorial", "Product", "Product Categories", "Cat
 | _Accessories_|
 |_Bikes_|
 |_Clothing_|
-|_Components_|
+|_コンポーネント_|
 |-> Assembly Components|
 |-> Assembly Components|
 

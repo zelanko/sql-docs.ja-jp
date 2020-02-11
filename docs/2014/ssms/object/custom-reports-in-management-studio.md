@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e02e5f55032f7a5d4e11e1ee4c908e84a83e00f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68188291"
 ---
 # <a name="custom-reports-in-management-studio"></a>Management Studio におけるカスタム レポート
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] では、[!INCLUDE[msCoName](../../includes/msconame-md.md)] で作成された一連の標準レポートが多数のオブジェクト エクスプローラー ノードに表示されます。 これらのレポートは、要求されることの多いサーバー情報を要約表示できるように設計されています。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 以降は、管理者が [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] で作成されたカスタム レポートを [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]から実行できるようになりました。  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]では、 [!INCLUDE[msCoName](../../includes/msconame-md.md)]で作成された一連の標準レポートが多数のオブジェクト エクスプローラー ノードに表示されます。 これらのレポートは、要求されることの多いサーバー情報を要約表示できるように設計されています。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 以降は、管理者が [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] で作成されたカスタム レポートを [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]から実行できるようになりました。  
   
 ## <a name="implementation"></a>実装  
  カスタム レポートはレポート定義言語 (RDL) を使用して作成し、レポート定義 (.rdl) ファイルとして保存します。 RDL には、レポートのデータ取得情報とレイアウト情報が XML 形式で含まれています。 RDL はオープン スキーマです。 開発者は、属性や要素を追加して RDL を拡張することができます。 レポートは、任意の有効な [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントをレポート内で実行できます。  
@@ -72,9 +72,9 @@ ms.locfileid: "68188291"
   
 
   
-## <a name="see-also"></a>関連項目  
- [Management Studio へのカスタム レポートを追加します。](add-a-custom-report-to-management-studio.md)   
- [カスタム レポート実行の警告を抑制します。](unsuppress-run-custom-report-warnings.md)   
+## <a name="see-also"></a>参照  
+ [カスタムレポートを Management Studio に追加する](add-a-custom-report-to-management-studio.md)   
+ [抑制カスタムレポートの実行に関する警告](unsuppress-run-custom-report-warnings.md)   
  [カスタム レポートでのオブジェクト エクスプローラー ノード プロパティの使用](use-custom-reports-with-object-explorer-node-properties.md)  
   
   

@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7d8621aac563f9211f7d4ee0c9ebd8f557e33bea
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73780477"
 ---
 # <a name="support-for-large-udts"></a>大きな UDT のサポート
@@ -25,20 +25,21 @@ ms.locfileid: "73780477"
   
  このサンプルは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] より前のバージョンの [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] では動作しません。  
   
- 大きな Udt のサポートの詳細については、「 [LARGE CLR User Defined &#40;Types&#41;ODBC](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)」を参照してください。  
+ 大きな Udt のサポートの詳細については、「[大容量の CLR ユーザー定義型 &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  1 つ目のコード リストは C# ソース コードです。 LargeStringUDT.cs という名前のファイルに貼り付けて、DLL にコンパイルします。 LargeStringUDT.dll を C ドライブのルート ディレクトリにコピーします。  
   
- 2番目の ([!INCLUDE[tsql](../../includes/tsql-md.md)]) コードリストは、アセンブリを master データベースに作成します。  
+ 2つ目[!INCLUDE[tsql](../../includes/tsql-md.md)]の () コードリストは、master データベースにアセンブリを作成します。  
   
  odbc32.lib と user32.lib を使用して 3 つ目の (C++) コード リストをコンパイルします。 INCLUDE 環境変数に、sqlncli を含むディレクトリが含まれていることを確認します。  
   
  このサンプルを 64 ビット オペレーティング システムで 32 ビット アプリケーションとしてビルドし、実行する場合、%windir%\SysWOW64\odbcad32.exe の ODBC アドミニストレーターを使用して ODBC データ ソースを作成する必要があります。  
   
- このサンプルでは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 名前付きインスタンスに接続するには、ODBC データ ソースの定義を変更し、server\namedinstance 形式でそのインスタンスを指定します。 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] は、既定で名前付きインスタンスとしてインストールされます。  
+ このサンプルでは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 名前付きインスタンスに接続するには、ODBC データ ソースの定義を変更し、server\namedinstance 形式でそのインスタンスを指定します。 
+  [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] は、既定で名前付きインスタンスとしてインストールされます。  
   
- 4つ目の ([!INCLUDE[tsql](../../includes/tsql-md.md)]) コードリストは、アセンブリを master データベースから削除します。  
+ 4つ目[!INCLUDE[tsql](../../includes/tsql-md.md)]の () コードリストは、アセンブリを master データベースから削除します。  
   
 ```  
 // LargeStringUDT.cs  

@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ace9bbbbbc023d14dbce91a176f7d05ad19d699b
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68811060"
 ---
 # <a name="understanding-incremental-generation"></a>増分生成の理解
@@ -83,8 +83,8 @@ ms.locfileid: "68811060"
   
  一方、データ ソース接続文字列を以前の生成後に別のデータベースに変更した場合は、エラーは発生しません。 この場合は新しいデータベースが使用され、以前のデータベースには変更は行われません。  
   
-## <a name="see-also"></a>関連項目  
- [データ ソース ビューおよびデータ ソースへの変更の管理](manage-changes-to-data-source-views-and-data-sources.md)   
- [スキーマ生成ウィザード (Analysis Services)](schema-generation-wizard-analysis-services.md)  
+## <a name="see-also"></a>参照  
+ [データソースビューとデータソースに対する変更の管理](manage-changes-to-data-source-views-and-data-sources.md)   
+ [スキーマ生成ウィザード &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md)  
   
   

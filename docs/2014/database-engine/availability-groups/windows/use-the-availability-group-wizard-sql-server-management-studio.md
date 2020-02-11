@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 70227f556ae268144549616dab0895e70ff39de8
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75228739"
 ---
 # <a name="use-the-availability-group-wizard-sql-server-management-studio"></a>可用性グループ ウィザードの使用 (SQL Server Management Studio)
@@ -35,14 +35,14 @@ ms.locfileid: "75228739"
   
      [前提条件、制限事項、および推奨事項](#PrerequisitesRestrictions)  
   
-     [保護](#Security)  
+     [セキュリティ](#Security)  
   
 -   **可用性グループを作成および構成するには、**[新しい可用性グループウィザード (SQL Server Management Studio)](#RunAGwiz)を使用します。    
   
 > [!NOTE]  
 >  新しい可用性グループ ウィザードの代わりに、 [!INCLUDE[tsql](../../../includes/tsql-md.md)] や [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell コマンドレットを使用する方法もあります。 詳細については、「 [可用性グループの作成 &#40;Transact-SQL&#41;](create-an-availability-group-transact-sql.md) や [可用性グループの作成 &#40;SQL Server PowerShell&#41;](../../../powershell/sql-server-powershell.md)で Always On 可用性グループを作成および構成する方法について説明します。  
   
-##  <a name="BeforeYouBegin"></a>開始する前に  
+##  <a name="BeforeYouBegin"></a> はじめに  
  可用性グループを初めて作成する場合は、あらかじめこのセクションに目を通しておくことを強くお勧めします。  
   
 ###  <a name="PrerequisitesRestrictions"></a>前提条件、制限事項、および推奨事項  
@@ -87,9 +87,9 @@ ms.locfileid: "75228739"
   
      ウィザードを使用して初期データの完全同期を実行できない場合は、セカンダリ データベースを手動で準備する必要があります。 これは、ウィザードの実行前でも実行後でもかまいません。 詳細については、「 [可用性グループに対するセカンダリ データベースの手動準備 &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)、または PowerShell を使用して、AlwaysOn 可用性グループにセカンダリ データベースを参加させる方法について説明します。  
   
-###  <a name="Security"></a>保護  
+###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a>許可  
+####  <a name="Permissions"></a> Permissions  
  
   **sysadmin** 固定サーバー ロールのメンバーシップと、CREATE AVAILABILITY GROUP サーバー権限、ALTER ANY AVAILABILITY GROUP 権限、CONTROL SERVER 権限のいずれかが必要です。  
   
@@ -123,7 +123,7 @@ ms.locfileid: "75228739"
     |Tab|簡単な説明|  
     |---------|-----------------------|  
     |**物**|このタブを使用して、セカンダリ レプリカをホストする [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の各インスタンスを指定します。 現在接続しているサーバー インスタンスでプライマリ レプリカをホストする必要があることに注意してください。|  
-    |****|このタブを使用して、既存の任意のデータベース ミラーリング エンドポイントを検証します。また、サービス アカウントが Windows 認証を使用しているサーバー インスタンスでエンドポイントが不足している場合は、エンドポイントを自動的に作成します。 **注:** ドメイン以外のユーザーアカウントで実行されているサーバーインスタンスがある場合は、ウィザードを続行する前に、サーバーインスタンスに手動で変更を加える必要があります。 詳細については、このトピックの「 [前提条件](#PrerequisitesRestrictions)」をご覧ください。|  
+    |**エンドポイント**|このタブを使用して、既存の任意のデータベース ミラーリング エンドポイントを検証します。また、サービス アカウントが Windows 認証を使用しているサーバー インスタンスでエンドポイントが不足している場合は、エンドポイントを自動的に作成します。 **注:** ドメイン以外のユーザーアカウントで実行されているサーバーインスタンスがある場合は、ウィザードを続行する前に、サーバーインスタンスに手動で変更を加える必要があります。 詳細については、このトピックの「 [前提条件](#PrerequisitesRestrictions)」をご覧ください。|  
     |**バックアップの設定**|このタブを使用して、可用性グループ全体についてバックアップの設定を指定し、各可用性レプリカのバックアップ優先順位を指定します。|  
     |**リスナー**|このタブを使用して、可用性グループ リスナーを作成します。 既定では、ウィザードによってリスナーは作成されません。|  
   
@@ -167,7 +167,7 @@ ms.locfileid: "75228739"
   
      ウィザードでの作業が完了したら、 **[閉じる]** をクリックして終了します。  
   
-##  <a name="RelatedTasks"></a>関連タスク  
+##  <a name="RelatedTasks"></a> 関連タスク  
  **可用性グループの構成を完了するには**  
   
 -   [セカンダリレプリカを可用性グループに参加させる &#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md)  
@@ -176,7 +176,7 @@ ms.locfileid: "75228739"
   
 -   [セカンダリデータベースを可用性グループに参加させる &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)  
   
--   [可用性グループリスナー &#40;SQL Server を作成または構成&#41;](create-or-configure-an-availability-group-listener-sql-server.md)  
+-   [可用性グループ リスナーの作成または構成 &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)  
   
  **可用性グループを作成する別の方法**  
   
@@ -206,7 +206,7 @@ ms.locfileid: "75228739"
   
 -   [失敗したファイルの追加操作のトラブルシューティング &#40;AlwaysOn 可用性グループ&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
-##  <a name="RelatedContent"></a>関連するコンテンツ  
+##  <a name="RelatedContent"></a> 関連コンテンツ  
   
 -   **Blog**  
   

@@ -15,10 +15,10 @@ ms.assetid: 9b8873cc-df54-4336-ab9b-8f525132c2b0
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 66f12768a7fb739125022908d1decb4ef3327a77
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909191"
 ---
 # <a name="back-up-the-transaction-log-when-the-database-is-damaged-sql-server"></a>データベースが破損したときのトランザクション ログのバックアップ (SQL Server)
@@ -31,7 +31,7 @@ ms.locfileid: "72909191"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [推奨事項](#Recommendations)  
+     [Recommendations (推奨事項)](#Recommendations)  
   
      [セキュリティ](#Security)  
   
@@ -62,7 +62,7 @@ ms.locfileid: "72909191"
   
 #### <a name="to-back-up-the-tail-of-the-transaction-log"></a>トランザクション ログの末尾をバックアップするには  
 
-1.  オブジェクト エクスプローラーで適切な [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続した後、サーバー名をクリックしてサーバー ツリーを展開します。  
+1.  オブジェクト エクスプローラーで適切な [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続した後、サーバー名をクリックしてサーバー ツリーを展開します。  
   
 2.  **[データベース]** を展開します。さらに、そのデータベースに応じて、ユーザー データベースを選択するか、または **[システム データベース]** を展開してシステム データベースを選択します。  
   
@@ -169,10 +169,10 @@ GO
  [トランザクション ログ バックアップの復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)   
  [SQL Server データベースを特定の時点に復元する方法 &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)   
  [[データベースのバックアップ] &#40;[バックアップ オプション] ページ&#41;](../../relational-databases/backup-restore/back-up-database-backup-options-page.md)   
- [[データベースのバックアップ] &#40;[全般] ページ&#41;](../../relational-databases/backup-restore/back-up-database-general-page.md)   
+ [データベースのバックアップ &#40;全般ページ&#41;](../../relational-databases/backup-restore/back-up-database-general-page.md)   
  [トランザクション ログ バックアップの適用 &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
- [ファイルの復元 &#40; 単純復旧モデル&#41;](../../relational-databases/backup-restore/file-restores-simple-recovery-model.md)   
+ [ファイルの復元 &#40;単純復旧モデル&#41;](../../relational-databases/backup-restore/file-restores-simple-recovery-model.md)   
  [ファイル復元 &#40; 完全復旧モデル&#41;](../../relational-databases/backup-restore/file-restores-full-recovery-model.md)  
   
   

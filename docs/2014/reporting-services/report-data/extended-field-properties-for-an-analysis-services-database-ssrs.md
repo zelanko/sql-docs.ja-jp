@@ -10,43 +10,46 @@ ms.assetid: 1d7d87e2-bf0d-4ebb-a287-80b5a967a3f2
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3b601c08633ffe98d6b6005aa3dc34c773810ba3
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: b05d670e7873cab5b44c1bce0c62c716809af476
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892034"
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Analysis Services データベースに対する拡張フィールド プロパティ (SSRS)
+  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ処理拡張機能では、拡張フィールド プロパティがサポートされています。 拡張フィールド プロパティとは、データ ソースにありデータ処理拡張機能でサポートされるフィールド プロパティ `Value` および `IsMissing` に加えて使用するプロパティです。 拡張プロパティは、レポート データセットのフィールド コレクションの一部としてレポート データ ペインには表示されません。 拡張フィールドプロパティの値をレポートに含めるには、組み込み`Fields`コレクションを使用して名前で指定する式を記述します。  
   
  拡張プロパティには、定義済みプロパティとカスタム プロパティがあります。 定義済みプロパティとは、特定のフィールド プロパティ名にマップされ、組み込み `Fields` コレクションを介して名前でアクセスできる、複数のデータ ソースに共通のプロパティです。 カスタム プロパティは、各データ プロバイダーに固有であり、拡張プロパティ名を文字列として扱う構文のみを使用して、組み込み `Fields` コレクションを介してアクセスできます。  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] MDX クエリ デザイナーをグラフィカル モードで使用してクエリを定義する場合、定義済みの一連のセル プロパティおよびディメンション プロパティが自動的に MDX クエリに追加されます。 レポート内では、MDX クエリに明記されている拡張プロパティのみを使用できます。 レポートによっては、既定の MDX コマンド テキストを変更して、キューブに定義されている他のディメンションまたはカスタム プロパティを含めることができます。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ ソースで使用できる拡張フィールドの詳細については、「[プロパティ値の作成および使用 (MDX)](https://docs.microsoft.com/analysis-services/creating-and-using-property-values-mdx)」を参照してください。  
+ 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] MDX クエリ デザイナーをグラフィカル モードで使用してクエリを定義する場合、定義済みの一連のセル プロパティおよびディメンション プロパティが自動的に MDX クエリに追加されます。 レポート内では、MDX クエリに明記されている拡張プロパティのみを使用できます。 レポートによっては、既定の MDX コマンド テキストを変更して、キューブに定義されている他のディメンションまたはカスタム プロパティを含めることができます。 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ ソースで使用できる拡張フィールドの詳細については、「[プロパティ値の作成および使用 (MDX)](../../analysis-services/creating-and-using-property-values-mdx.md)」を参照してください。  
   
 ## <a name="working-with-field-properties-in-a-report"></a>レポートのフィールド プロパティの操作  
  拡張フィールド プロパティには、定義済みプロパティとデータ プロバイダー固有のプロパティがあります。 フィールド プロパティは、データセット用に作成されたクエリに存在しますが、 **レポート データ** ペインのフィールド一覧に表示されません。したがって、フィールド プロパティをレポートのデザイン画面にドラッグすることはできません。 その代わり、フィールドをレポートにドラッグし、フィールドの `Value` プロパティを、使用するプロパティに変更します。 たとえば、キューブからのセル データが既に書式設定されている場合は、 `=Fields!FieldName.FormattedValue`の式を使用することで、FormattedValue フィールド プロパティを使用できます。  
   
  事前に定義されていない拡張プロパティを参照するには、式で次の構文を使用します。  
   
--   *Fields!FieldName("PropertyName")*  
+-   *フィールド!FieldName ("PropertyName")*  
   
 ## <a name="predefined-field-properties"></a>定義済みフィールド プロパティ  
  ほとんどの場合、定義済みフィールド プロパティはメジャー、レベル、またはディメンションに適用されます。 定義済みフィールド プロパティは、対応する値が [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ ソースに格納されている必要があります。 値が存在しない場合、または、レベルにメジャーのみのフィールド プロパティを指定する場合、プロパティは NULL 値を返します。  
   
  次の構文のいずれかを使用して、式から定義済みプロパティを参照できます。  
   
--   *Fields!FieldName.PropertyName*  
+-   *フィールド!FieldName. PropertyName*  
   
--   *Fields!FieldName("PropertyName")*  
+-   *フィールド!FieldName ("PropertyName")*  
   
  次の表に、使用できる定義済みフィールド プロパティの一覧を示します。  
   
-|**プロパティ**|**型**|**説明/有効値**|  
+|**プロパティ**|**Type**|**説明または予期される値**|  
 |------------------|--------------|---------------------------------------|  
 |`Value`|`Object`|フィールドのデータ値を指定します。|  
 |`IsMissing`|`Boolean`|フィールドが結果データセットに存在するかどうかを示します。|  
-|`UniqueName`|`String`|レベルの完全修飾名を返します。 たとえば、 `UniqueName`従業員の値が *[employee]. [Employee Department]。[Department] です。 & [Sales] です。 & [北アメリカの営業マネージャー] です。 & [272]* 。|  
+|`UniqueName`|`String`|レベルの完全修飾名を返します。 たとえば、従業員の`UniqueName`値が *[employee]. [Employee Department]。[Department] です。 & [Sales] です。 & [北アメリカの営業マネージャー] です。 & [272]*。|  
 |`BackgroundColor`|`String`|データベースで定義されたフィールドの背景色を返します。|  
 |`Color`|`String`|データベースで定義されたアイテムの前景色を返します。|  
 |`FontFamily`|`String`|データベースで定義されたアイテムのフォント名を返します。|  
@@ -97,9 +100,9 @@ FROM [Adventure Works]
 |DateCaption|DateUniqueName|DateDayName|DateValueinOriginalDatatype|DateParentUniqueName|DateMemberKeyinOriginalDatatype|  
 |-----------------|--------------------|-----------------|---------------------------------|--------------------------|-------------------------------------|  
 |All Periods|[Date].[Date].[All Periods]|(null)|(null)|(null)|0|  
-|1-Jul-01|[Date].[Date].&[1]|日曜日|7/1/2001|[Date].[Date].[All Periods]|1|  
+|1-Jul-01|[Date].[Date].&[1]|土曜日|7/1/2001|[Date].[Date].[All Periods]|1 で保護されたプロセスとして起動されました|  
 |2-Jul-01|[Date].[Date].&[2]|月曜日|7/2/2001|[Date].[Date].[All Periods]|2|  
-|3-Jul-01|[Date].[Date].&[3]|火曜日|7/3/2001|[Date].[Date].[All Periods]|3|  
+|3-Jul-01|[Date].[Date].&[3]|Tuesday|7/3/2001|[Date].[Date].[All Periods]|3|  
   
  MDX クエリ デザイナーのグラフィカル モードを使用して作成される既定の MDX クエリに、ディメンション プロパティとして含まれるのは MEMBER_CAPTION と UNIQUENAME のみです。 既定では、これらの値は常に `String` データ型です。  
   
@@ -119,19 +122,19 @@ CELL PROPERTIES
   
  MDX 結果ペインに表示された結果の最初の 4 行を次の表に示します。  
   
-|Month of Year|Order Count|  
+|Month of Year|OrderCount|  
 |-------------------|-----------------|  
 |January|2,481|  
 |February|2,684|  
 |March|2,749|  
 |April|2,739|  
   
- プロパティは MDX の SELECT ステートメントに含まれていますが、結果セット列には表示されません。 そこで、拡張プロパティ機能を使用すると、データをレポートに使用することができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]の MDX クエリ結果ペインで、セルをダブルクリックすると、セルのプロパティ値が表示されます (キューブ内で設定されている場合)。 1,379 という値が格納されている最初の Order Count セルをダブルクリックすると、ポップアップ ウィンドウに次のセル プロパティが表示されます。  
+ プロパティは MDX の SELECT ステートメントに含まれていますが、結果セット列には表示されません。 そこで、拡張プロパティ機能を使用すると、データをレポートに使用することができます。 の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]MDX クエリ結果ペインでは、セルをダブルクリックして、セルプロパティの値がキューブで設定されている場合はその値を確認できます。 1,379 という値が格納されている最初の Order Count セルをダブルクリックすると、ポップアップ ウィンドウに次のセル プロパティが表示されます。  
   
-|プロパティ|値|  
+|プロパティ|Value|  
 |--------------|-----------|  
 |CellOrdinal|0|  
-|Value|2481|  
+|値|2481|  
 |BACK_COLOR|(null)|  
 |FORE_COLOR|(null)|  
 |FORMATTED_VALUE|2,481|  
@@ -148,9 +151,9 @@ CELL PROPERTIES
   
  これにより、データ ソースの元の整数データ型に基づいてフィールドの値が並べ替えられます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [式 &#40;レポート ビルダーおよび SSRS&#41;](../report-design/expressions-report-builder-and-ssrs.md)   
  [式で使用される組み込みコレクション (レポート ビルダーおよび SSRS)](../report-design/built-in-collections-in-expressions-report-builder.md)   
- [データセット フィールド コレクション (レポート ビルダーおよび SSRS)](dataset-fields-collection-report-builder-and-ssrs.md)  
+ [データセット フィールド コレクション &#40;レポート ビルダーおよび SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
   
   

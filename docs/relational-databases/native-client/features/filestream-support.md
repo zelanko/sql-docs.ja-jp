@@ -14,10 +14,10 @@ ms.assetid: 1ad3400d-7fcd-40c9-87ae-f5afc61e0374
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 75c5d2f0f04cf0692f4a6c6ca3145210fee014b3
-ms.sourcegitcommit: aaa42f26c68abc2de10eb58444fe6b490c174eab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74308064"
 ---
 # <a name="filestream-support"></a>FILESTREAM のサポート
@@ -65,6 +65,6 @@ SELECT is_filestream FROM sys.columns WHERE name = 'varbinaryCol3' AND object_id
  ネイティブクライアントの[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]バージョンより前にリリースされた SQLOLEDB またはその他のプロバイダーを使用するクライアントでは、 **varbinary (max)** は image にマップされます。  
   
 ## <a name="see-also"></a>参照  
- [SQL Server Native Client 機能](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  
+ [SQL Server Native Client の機能](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  
   
   

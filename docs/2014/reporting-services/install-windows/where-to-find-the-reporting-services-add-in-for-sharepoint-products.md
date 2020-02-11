@@ -12,41 +12,42 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 11/16/2015
 ms.openlocfilehash: adee6ee7d0d769d8e87e228c475b224a3e78675b
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73637873"
 ---
 # <a name="where-to-find-the-reporting-services-add-in-for-sharepoint-products"></a>SharePoint 製品用 Reporting Services アドインの検索場所
 
-SharePoint 製品およびテクノロジ (rsSharePoint.msi) 用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) アドインは Web からダウンロードでき、SharePoint で構築した配置にレポート サーバーを統合する機能を提供します。  
+Sharepoint [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]製品およびテクノロジ (rssharepoint .msi) 用 (SSRS) アドインは、レポートサーバーと sharepoint の配置を統合するための機能を提供する Web からダウンロードできます。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アドイン、レポートサーバー、および SharePoint のサポートされている組み合わせの一覧については、「 [sharepoint のサポートされる組み合わせ」と「Reporting Services サーバーとアドイン&#40;SQL Server 2014&#41;](supported-combinations-of-sharepoint-and-reporting-services-server.md)」を参照してください。  
+>  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]アドイン、レポートサーバー、および sharepoint のサポートされている組み合わせの一覧については、「 [Sharepoint のサポートされる組み合わせ」と「Reporting Services サーバーとアドイン &#40;SQL Server 2014&#41;](supported-combinations-of-sharepoint-and-reporting-services-server.md)」を参照してください。  
   
-##  <a name="bkmk_sql14"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SharePoint 製品用 Reporting Services アドイン  
+##  <a name="bkmk_sql14"></a>[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SharePoint 製品用 Reporting Services アドイン  
  アドインをダウンロードしてインストールするには、以下の [!INCLUDE[msCoName](../../includes/msconame-md.md)] ダウンロード センターを参照してください。  
   
--   [Microsoft SharePoint 用 Microsoft® SQL Server® 2014 Reporting Services アドイン](https://www.microsoft.com/download/details.aspx?id=53162)  
+-   [Microsoft SharePoint 用 microsoft® SQL Server 2014 Reporting Services アドイン](https://www.microsoft.com/download/details.aspx?id=53162)  
   
  このアドインの [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] バージョンは、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] インストール ウィザードでも提供されます。  
   
 -   セットアップ ウィザードの **[機能の選択]** ページで、 **[SharePoint 製品用 Reporting Services アドイン]** を選択します。  
   
--   コマンド プロンプトでのインストールから、 **RS_SHPWFE** オプションを使用してアドインをインストールします。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] コマンドプロンプトのインストールの詳細については、「 [Reporting Services SharePoint モードとネイティブモードのコマンドプロンプトインストール](install-reporting-services-at-the-command-prompt.md)」を参照してください。  
+-   コマンド プロンプトでのインストールから、 **RS_SHPWFE** オプションを使用してアドインをインストールします。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]コマンドプロンプトインストールの詳細については、「 [Reporting Services SharePoint モードとネイティブモードのコマンドプロンプトインストール](install-reporting-services-at-the-command-prompt.md)」を参照してください。  
   
-##  <a name="bkmk_sql11sp1"></a> [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] SharePoint 製品用 Reporting Services アドイン  
+##  <a name="bkmk_sql11sp1"></a>[!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] SharePoint 製品用 Reporting Services アドイン  
  アドインとレポート サーバーの [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] バージョンには、SharePoint Server 2013 のサポートが追加されます。  
   
  アドインをダウンロードしてインストールするには、以下の [!INCLUDE[msCoName](../../includes/msconame-md.md)] ダウンロード センターを参照してください。  
   
--   **SP1 アドイン:**  [Microsoft® SQL Server® 2012 SP1 Reporting Services Add-in for Microsoft® SharePoint®](https://www.microsoft.com/download/details.aspx?id=35583)(https://www.microsoft.com/download/details.aspx?id=35583)。  
+-   **SP1 アドイン:** microsoft[® SQL SERVER® 2012 SP1 Reporting Services microsoft® SharePoint®用アドイン](https://www.microsoft.com/download/details.aspx?id=35583)(https://www.microsoft.com/download/details.aspx?id=35583).    
   
--   **SP1:**  [Microsoft® SQL Server® 2012 Service Pack 1 (SP1)](https://www.microsoft.com/download/details.aspx?id=35575) (https://www.microsoft.com/download/details.aspx?id=35575)。  
+-   **Sp1:**  [Microsoft® SQL Server® 2012 Service PACK 1 (sp1)](https://www.microsoft.com/download/details.aspx?id=35575) (https://www.microsoft.com/download/details.aspx?id=35575)。  
   
-##  <a name="bkmk_sql11"></a> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SharePoint 2010 製品用 Reporting Services アドイン  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] リリースから、アドインは [機能の選択] ページで SQL Server インストール ウィザードの一部としてインストールできるようになりました。 アドインを別途ダウンロードしてインストールする場合、このファイルの最新バージョンは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ダウンロード センターの「 [Microsoft® SharePoint® テクノロジ 2010 用 Microsoft® SQL Server® 2012 Reporting Services アドイン](https://go.microsoft.com/fwlink/?LinkID=207242) 」ページからオンラインで入手できます。  
+##  <a name="bkmk_sql11"></a>[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SharePoint 2010 製品用 Reporting Services アドイン  
+ 
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] リリースから、アドインは [機能の選択] ページで SQL Server インストール ウィザードの一部としてインストールできるようになりました。 アドインを別途ダウンロードしてインストールする場合、このファイルの最新バージョンは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ダウンロード センターの「 [Microsoft® SharePoint® テクノロジ 2010 用 Microsoft® SQL Server® 2012 Reporting Services アドイン](https://go.microsoft.com/fwlink/?LinkID=207242) 」ページからオンラインで入手できます。  
   
 ##  <a name="bkmk_sql2008r2"></a>SharePoint 2010 製品用 SQL Server 2008 R2 Reporting Services アドイン  
  Microsoft SharePoint 2010 製品用 Microsoft SQL Server 2008 R2 Reporting Services アドインは、SharePoint 2010 製品準備ツール (**PreRequisiteInstaller.exe**) によってインストールされます。 アドインを別途ダウンロードしてインストールする場合、このファイルの最新バージョンは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ダウンロード センターの「 [Microsoft SharePoint テクノロジ 2010 用 SQL Server 2008 R2 Reporting Services アドイン](https://www.microsoft.com/download/details.aspx?id=622)」ページからオンラインで入手できます。  
@@ -65,8 +66,8 @@ SharePoint 製品およびテクノロジ (rsSharePoint.msi) 用 [!INCLUDE[msCoN
  このファイルの最新バージョンは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ダウンロード センターの「 [Microsoft SharePoint テクノロジ用 Microsoft SQL Server 2008 Reporting Services アドイン](https://www.microsoft.com/download/details.aspx?id=622)」ページからオンラインで入手できます。  
   
 ## <a name="see-also"></a>参照  
- [Sharepoint &#40;2010 および sharepoint 2013&#41;用の Reporting Services アドインのインストールまたはアンインストール](install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
- [SharePoint 統合モード&#40;&#41;のライブラリ Reporting Services にレポートサーバーのコンテンツの種類を追加](../add-reporting-services-content-types-to-a-sharepoint-library.md)   
- [Reporting Services アドインをアンインストールした後は、既定以外のゾーンで SharePoint ページを参照することはできません。](https://support.microsoft.com/kb/2009212)  
+ [Sharepoint &#40;sharepoint 2010 および SharePoint 2013 の Reporting Services アドインをインストールまたはアンインストール&#41;](install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
+ [SharePoint 統合モードの &#40;Reporting Services ライブラリにレポートサーバーのコンテンツの種類を追加&#41;](../add-reporting-services-content-types-to-a-sharepoint-library.md)   
+ [Reporting Services アドインをアンインストールした後、既定以外のゾーンで SharePoint ページを参照することはできません](https://support.microsoft.com/kb/2009212)  
   
   
