@@ -1,5 +1,5 @@
 ---
-title: データ ソース (ODBC) の削除 |マイクロソフトのドキュメント
+title: データソースの削除 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,27 +13,27 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ff882caf0ce5d9ef7d2e9f059daed89ed4b50d82
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63126105"
 ---
 # <a name="delete-a-data-source-odbc"></a>データ ソースの削除 (ODBC)
-  プログラムで ODBC アドミニストレーターを使用してデータ ソースを削除することができます (を使用して[SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md))、または (する場合、ファイル データ ソース名) にファイルを削除しています。  
+  データソースを削除するには、ODBC 管理者を使用してプログラムで ( [Sqlconfigdatasource](../native-client-odbc-api/sqlconfigdatasource.md)を使用)、またはファイルを削除します (ファイルデータソース名が指定されている場合)。  
   
 ### <a name="to-delete-a-data-source-by-using-odbc-administrator"></a>ODBC アドミニストレーターを使用してデータ ソースを削除するには  
   
-1.  **コントロール パネルの** 、オープン**管理ツール**、し、ダブルクリック**データ ソース (ODBC)** します。 コマンド プロンプトから odbcad32.exe を実行することもできます。  
+1.  **コントロールパネル**で、[**管理ツール**] を開き、[**データソース (ODBC)**] をダブルクリックします。 コマンド プロンプトから odbcad32.exe を実行することもできます。  
   
-2.  をクリックして、**ユーザー DSN**、**システム DSN**、または**ファイル DSN**タブ。  
+2.  [**ユーザー dsn**]、[**システム dsn**]、または [**ファイル dsn** ] タブをクリックします。  
   
 3.  削除するデータ ソースをクリックします。  
   
-4.  クリックして**削除**、削除を確定します。  
+4.  [**削除**] をクリックし、削除を確定します。  
   
 ## <a name="example"></a>例  
- データ ソースをプログラムで削除するには、呼び出す[SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md) 2 番目のパラメーターとして ODBC_REMOVE_DSN または ODBC_REMOVE_SYS_DSN を使用します。  
+ プログラムによってデータソースを削除するには、2番目のパラメーターとして ODBC_REMOVE_DSN または ODBC_REMOVE_SYS_DSN を使用して[Sqlconfigdatasource](../native-client-odbc-api/sqlconfigdatasource.md)を呼び出します。  
   
  次のサンプルでは、データ ソースをプログラムで削除する方法を示しています。  
   

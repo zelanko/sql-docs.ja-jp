@@ -17,10 +17,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 38eeb94dad960af3dc0f15921dbba717e819c828
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72252029"
 ---
 # <a name="sp_rxpredict"></a>sp_rxPredict  
@@ -28,7 +28,7 @@ ms.locfileid: "72252029"
 
 SQL Server データベースにバイナリ形式で格納されている機械学習モデルで構成される、指定された入力の予測値を生成します。
 
-R と Python の機械学習モデルのスコア付けをほぼリアルタイムで提供します。 `sp_rxPredict` は、 [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)および[microsoft Ml](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)の `rxPredict` R 関数のラッパーとして提供されているストアドプロシージャ、および[revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package)と[microsoft ml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)の[rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) Python 関数のラッパーとして提供されています。 これは、でC++記述され、スコアリング操作専用に最適化されています。
+R と Python の機械学習モデルのスコア付けをほぼリアルタイムで提供します。 `sp_rxPredict`は`rxPredict` 、 [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)および[microsoft ml](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)の R 関数のラッパーとして提供されているストアドプロシージャ、および[revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package)と[microsoft ml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)の[rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) Python 関数のためのものです。 これは C++ で記述され、スコアリング操作専用に最適化されています。
 
 モデルは R または Python を使用して作成する必要がありますが、シリアル化され、ターゲットデータベースエンジンインスタンスでバイナリ形式で格納されると、R または Python の統合がインストールされていない場合でも、そのデータベースエンジンのインスタンスから使用できます。 詳細については、「 [sp_rxPredict を使用したリアルタイムのスコアリング](https://docs.microsoft.com/sql/advanced-analytics/real-time-scoring)」を参照してください。
 
@@ -44,7 +44,7 @@ sp_rxPredict  ( @model, @input )
 
 サポートされている形式の事前トレーニング済みモデル。 
 
-**input**
+**代入**
 
 有効な SQL クエリ
 
@@ -53,14 +53,14 @@ sp_rxPredict  ( @model, @input )
 スコア列、および入力データソースのすべてのパススルー列が返されます。
 アルゴリズムがそのような値の生成をサポートしている場合は、信頼区間などの追加のスコア列を返すことができます。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 ストアドプロシージャを使用できるようにするには、インスタンスで SQLCLR が有効になっている必要があります。
 
 > [!NOTE]
 > このオプションの enabing には、セキュリティ上の影響があります。 サーバーで SQLCLR が有効になっていない場合は、 [TRANSACT-SQL PREDICT](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql?view=sql-server-2017)関数などの代替の実装を使用します。
 
-ユーザーは、データベースに対する `EXECUTE` 権限を持っている必要があります。
+ユーザーは、 `EXECUTE`データベースに対する権限が必要です。
 
 ### <a name="supported-algorithms"></a>サポートされているアルゴリズム
 
@@ -87,7 +87,7 @@ sp_rxPredict  ( @model, @input )
 
   + [featurizeText](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees)
   + [concat](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/concat)
-  + [categorical](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categorical)
+  + [カテゴリ](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categorical)
   + [categoricalHash](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categoricalHash)
   + [selectFeatures](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/selectFeatures)
 
@@ -113,18 +113,18 @@ sp_rxPredict  ( @model, @input )
 
   + [featurize_text](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-trees)
   + [concat](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/concat)
-  + [categorical](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical)
+  + [カテゴリ](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical)
   + [categorical_hash](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical-hash)
   
 ### <a name="unsupported-model-types"></a>サポートされていないモデルの種類
 
 次の種類のモデルはサポートされていません。
 
-+ RevoScaleR の `rxGlm` アルゴリズムまたは `rxNaiveBayes` アルゴリズムを使用するモデル
++ RevoScaleR のアルゴリズム`rxGlm`また`rxNaiveBayes`はアルゴリズムを使用するモデル
 + R の PMML モデル
 + 他のサードパーティライブラリを使用して作成されたモデル 
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 ```sql
 DECLARE @model = SELECT @model 
@@ -135,9 +135,9 @@ EXEC sp_rxPredict @model = @model,
 @inputData = N'SELECT * FROM data';
 ```
 
-*\@inputData*の入力データには、有効な SQL クエリに加えて、格納されているモデルの列と互換性のある列が含まれている必要があります。
+Inputdata の入力データには、有効な SQL クエリに加えて、格納されているモデルの列と互換性のある列が含まれている必要があります。 * \@*
 
-`sp_rxPredict` でサポートされる .NET 列の型は、double、float、short、ushort、long、ulong、および string のみです。 リアルタイムスコアリングに使用する前に、入力データでサポートされていない型を除外することが必要になる場合があります。 
+`sp_rxPredict`でサポートされている .NET 列の型は、double、float、short、ushort、long、ulong、および string のみです。 リアルタイムスコアリングに使用する前に、入力データでサポートされていない型を除外することが必要になる場合があります。 
 
   対応する SQL 型の詳細については、「[SQL と CLR 型のマッピング](/dotnet/framework/data/adonet/sql/linq/sql-clr-type-mapping)」または「[CLR パラメーター データのマッピング](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)」を参照してください。
 

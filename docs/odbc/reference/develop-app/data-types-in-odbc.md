@@ -14,16 +14,16 @@ ms.assetid: 7332d93e-44db-4132-9c10-988dbc13369e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9cfcc3a6d692f814ecf87f3a299d01f56592b549
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68077003"
 ---
 # <a name="data-types-in-odbc"></a>ODBC のデータ型
-ODBC では、2 つのデータ型のセットを使用します。SQL データ型と C データ型。 SQL データ型は、データ ソースで使用され、C データ型がアプリケーションでの C コードでは使用されます。  
+ODBC では、SQL データ型と C データ型の2セットのデータ型を使用します。 データソースでは SQL データ型が使用され、C データ型はアプリケーションの C コードで使用されます。  
   
- このセクションには、次のトピックが含まれています。  
+ ここでは、次のトピックについて説明します。  
   
 -   [型識別子](../../../odbc/reference/develop-app/type-identifiers.md)  
   

@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dbb5a12fdcb3c326957d719882feec4fe948190c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62761844"
 ---
-# <a name="mssqlserver7911"></a>MSSQLSERVER_7911
+# <a name="mssqlserver_7911"></a>MSSQLSERVER_7911
     
 ## <a name="details"></a>詳細  
   
@@ -30,7 +30,7 @@ ms.locfileid: "62761844"
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|DBCC2_REPAIR_PAGE_DEALLOCATED|  
-|メッセージ テキスト|修復:ページ P_ID はオブジェクト ID O_ID、インデックス ID I_ID、パーティション ID PN_ID、アロケーション ユニット ID A_ID (型 TYPE) から割り当て解除されました。|  
+|メッセージ テキスト|修復 : ページ P_ID が、オブジェクト ID O_ID、インデックス ID I_ID、パーティション ID PN_ID、アロケーション ユニット ID A_ID (型 TYPE) から割り当て解除されました。|  
   
 ## <a name="explanation"></a>説明  
  単一ページ スロット配列の IAM (Index Allocation Map) ページから 1 ページが割り当て解除されたことを示す、REPAIR からの情報メッセージです。  

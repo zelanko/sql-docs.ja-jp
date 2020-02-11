@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f014cb37c6c28a0c9a91bd811b9e94d734167e1e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62916772"
 ---
 # <a name="rename-a-database"></a>データベースの名前変更
@@ -29,7 +29,7 @@ ms.locfileid: "62916772"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **以下を使用してデータベースの名前を変更するには:**  
   
@@ -54,11 +54,12 @@ ms.locfileid: "62916772"
   
 #### <a name="to-rename-a-database"></a>データベースの名前を変更するには  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続し、そのインスタンスを展開します。  
+1.  **オブジェクトエクスプローラー**で、の[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]インスタンスに接続し、そのインスタンスを展開します。  
   
 2.  データベースを使用している人がいないことを確認し、 [データベースをシングル ユーザー モードに設定します](set-a-database-to-single-user-mode.md)。  
   
-3.  **[データベース]** を展開し、名前を変更するデータベースを右クリックして、 **[名前の変更]** をクリックします。  
+3.  
+  **[データベース]** を展開し、名前を変更するデータベースを右クリックして、 **[名前の変更]** をクリックします。  
   
 4.  新しいデータベース名を入力し、 **[OK]** をクリックします。  
   
@@ -84,8 +85,8 @@ GO
 ##  <a name="FollowUp"></a>補足情報: データベースの名前を変更した後  
  データベースの名前を変更した後は、 **master** データベースをバックアップします。  
   
-## <a name="see-also"></a>関連項目  
- [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
+## <a name="see-also"></a>参照  
+ [ALTER DATABASE &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
  [データベース識別子](database-identifiers.md)  
   
   

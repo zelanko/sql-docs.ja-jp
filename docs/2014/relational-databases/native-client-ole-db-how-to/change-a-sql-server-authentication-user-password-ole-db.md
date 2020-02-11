@@ -11,26 +11,29 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 351ce45247fcc4fb76228ab792a97f4e1f915989
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70874586"
 ---
 # <a name="change-a-sql-server-authentication-user-password-ole-db"></a>SQL Server 認証のユーザー パスワードの変更 (OLE DB)
   このサンプルでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証のユーザー アカウントのパスワードを OLE DB を使用して変更する方法を紹介しています。  
   
 > [!IMPORTANT]  
->  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、[Win32 Crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) を使用して暗号化してください。  
+>  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保持する必要がある場合は、 [Win32 CRYPTO API](https://go.microsoft.com/fwlink/?LinkId=64532)を使用して暗号化する必要があります。  
   
 ## <a name="example"></a>例  
  ビルド前に、.C++ コードを修正し、実際のユーザー ID、古いパスワード、および新しいパスワードを指定してください。  
   
- このアプリケーションは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 一部の Windows オペレーティング システムでは、(localhost) または (local) を実際の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前に変更する必要があります。 名前付きインスタンスに接続するには、接続文字列を L"(local)" から L"(local)\\\name" に変更します。ここで、name は名前付きインスタンスです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、既定で名前付きインスタンスとしてインストールされます。 INCLUDE 環境変数に、sqlncli を含むディレクトリが含まれていることを確認します。  
+ このアプリケーションは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 一部の Windows オペレーティング システムでは、(localhost) または (local) を実際の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前に変更する必要があります。 名前付きインスタンスに接続するには、接続文字列を L"(local)" から L"(local)\\\name" に変更します。ここで、name は名前付きインスタンスです。 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、既定で名前付きインスタンスとしてインストールされます。 INCLUDE 環境変数に、sqlncli を含むディレクトリが含まれていることを確認します。  
   
  ole32.lib と oleaut32.lib を使用してコンパイルします。  
   
- このサンプルをビルドするには、パスワードがわかっている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証のユーザー アカウントが必要です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証でのログインを許可するには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio を開き、オブジェクト エクスプローラーでサーバー ノードを右クリックし、[プロパティ] をクリックします。 [セキュリティ] をクリックし、[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証モードと Windows 認証モード] を有効にします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証用のユーザー アカウントを追加するには、オブジェクト エクスプローラーで [セキュリティ] ノードを右クリックし、[追加] をクリックします。  
+ このサンプルをビルドするには、パスワードがわかっている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証のユーザー アカウントが必要です。 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証でのログインを許可するには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio を開き、オブジェクト エクスプローラーでサーバー ノードを右クリックし、[プロパティ] をクリックします。 [セキュリティ] をクリックし、[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証モードと Windows 認証モード] を有効にします。 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証用のユーザー アカウントを追加するには、オブジェクト エクスプローラーで [セキュリティ] ノードを右クリックし、[追加] をクリックします。  
   
  このサンプルを実行するサーバーには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証が有効になっているログインが少なくとも 1 つ必要です。 また、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証でのログインを許可するようにサーバーを設定する必要があります。  
   

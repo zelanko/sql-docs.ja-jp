@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bb14d7809eba496ede8c8e0aa6e7133c2ad9c524
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243179"
 ---
 # <a name="use-the-sqlcmd-utility"></a>sqlcmd ユーティリティの使用
@@ -73,7 +73,7 @@ ms.locfileid: "75243179"
     sqlcmd -S <ComputerName>\<InstanceName>  
     ```  
   
-     または  
+     or  
   
     ```  
     sqlcmd -S .\<InstanceName>  
@@ -109,7 +109,7 @@ ms.locfileid: "75243179"
   `sqlcmd` ユーティリティでサポートされているオプションの一覧を表示するには、`sqlcmd -?` を実行してください。  
   
 ## <a name="running-transact-sql-statements-interactively-by-using-sqlcmd"></a>sqlcmd を使用した Transact-SQL ステートメントの対話的な実行  
- コマンド プロンプト ウィンドウでは、`sqlcmd` ユーティリティを対話的に使用して、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行できます。 を使用`sqlcmd`し[!INCLUDE[tsql](../../includes/tsql-md.md)]てステートメントを対話的に実行するには、 **-q**、 **-q**、 **-Z**、または **-i**オプションを使用せずに、入力ファイルまたはクエリを指定するために、ユーティリティを実行します。 例:  
+ コマンド プロンプト ウィンドウでは、`sqlcmd` ユーティリティを対話的に使用して、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行できます。 を使用`sqlcmd`し[!INCLUDE[tsql](../../includes/tsql-md.md)]てステートメントを対話的に実行するには、 **-q**、 **-q**、 **-Z**、または **-i**オプションを使用せずに、入力ファイルまたはクエリを指定するために、ユーティリティを実行します。 次に例を示します。  
   
  `sqlcmd -S <ComputerName>\<InstanceName>`  
   
@@ -129,7 +129,7 @@ ms.locfileid: "75243179"
  引用符で囲まれた文字列は、前処理がまったく行われずそのまま使用されます。ただし、例外として、2 つの連続する引用符を入力することで、引用符自体を文字列に挿入できます。 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、この文字の並びを 1 つの引用符として扱います (ただし、この変換はサーバーで行われます)。スクリプト変数が文字列内に存在する場合は展開されません。  
   
- 例:  
+ 次に例を示します。  
   
  `sqlcmd`  
   
@@ -588,6 +588,6 @@ SQLCMD -E -N -C
  [Sqlcmd をスクリプト変数と共に使用する](sqlcmd-use-with-scripting-variables.md)   
  [クエリエディターを使用して SQLCMD スクリプトを編集する](edit-sqlcmd-scripts-with-query-editor.md)   
  [ジョブステップの管理](../../ssms/agent/manage-job-steps.md)   
- [CmdExec ジョブステップの作成](../../ssms/agent/create-a-cmdexec-job-step.md)  
+ [CmdExec ジョブ ステップの作成](../../ssms/agent/create-a-cmdexec-job-step.md)  
   
   

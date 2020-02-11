@@ -1,5 +1,5 @@
 ---
-title: 手順 2:パッケージ インストール ウィザードの実行 | Microsoft Docs
+title: '手順 2: パッケージ インストール ウィザードの実行 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0fe0862438943fec36728a3c4e6c796061c86593
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62891580"
 ---
-# <a name="step-2-running-the-package-installation-wizard"></a>手順 2:パッケージ インストール ウィザードの実行
+# <a name="step-2-running-the-package-installation-wizard"></a>手順 2: パッケージ インストール ウィザードの実行
   この実習では、パッケージ インストール ウィザードを実行して、Deployment Tutorial プロジェクトから [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のインスタンスにパッケージを配置します。 msdb [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベースの sysssispackages テーブルにインストールできるのはパッケージだけです。配置バンドルに含まれるサポート ファイルは、ファイル システムに配置されます。  
   
  パッケージ インストール ウィザードを使用すると、手順に従ってパッケージのインストールと構成を行うことができます。 配置先のコンピューター (配置バンドルをコピーするコンピューター) の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスにパッケージをインストールします。 また、C:\DeploymentTutorialInstall フォルダーも作成します。このフォルダーには、パッケージ以外のファイルがインストールされます。  
@@ -81,11 +81,11 @@ ms.locfileid: "62891580"
   
      配置先コンピューターの環境変数の値は開発用コンピューターの環境変数の値と異なるため、[パッケージの検証] ページに複数の警告が表示されます。 次の 4 つの警告が表示されます。  
   
-    -   構成ファイル: "C:\DeploymentTutorial\DataTransferConfig.dtsConfig" は有効ではありません。 構成ファイルの名前を確認してください。  
+    -   構成ファイル : "C:\DeploymentTutorial\DataTransferConfig.dtsConfig" は有効ではありません。 構成ファイルの名前を確認してください。  
   
     -   パッケージの少なくとも 1 つの構成エントリを読み込めませんでした。 構成エントリとそれ以前に発生した警告を確認して、読み込めなかった構成に関する説明を参照してください。  
   
-    -   構成ファイル: "C:\DeploymentTutorial\LoadXMLDataConfig.dtsConfig は有効ではありません。 構成ファイルの名前を確認してください。  
+    -   構成ファイル : "C:\DeploymentTutorial\LoadXMLDataConfig.dtsConfig は有効ではありません。 構成ファイルの名前を確認してください。  
   
     -   パッケージの少なくとも 1 つの構成エントリを読み込めませんでした。 構成エントリとそれ以前に発生した警告を確認して、読み込めなかった構成に関する説明を参照してください。  
   
@@ -99,12 +99,12 @@ ms.locfileid: "62891580"
     >  パッケージの検証に使用する一時ログ ファイルが作成されます。 このファイルは、パッケージの実行時には使用されません。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
- [ステップ 3:配置したパッケージのテスト](../integration-services/lesson-3-3-testing-the-deployed-packages.md)  
+ [手順 3: 配置したパッケージのテスト](../integration-services/lesson-3-3-testing-the-deployed-packages.md)  
   
-![Integration Services のアイコン (小)](media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。**<br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
+![Integration Services アイコン (小)](media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services に関するページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
 ## <a name="see-also"></a>参照  
- [Integration Services サービス (SSIS サービス)](service/integration-services-service-ssis-service.md)   
+ [Integration Services サービス &#40;SSIS サービス&#41;](service/integration-services-service-ssis-service.md)   
  [Integration Services サービスを管理する](../../2014/integration-services/manage-the-integration-services-service.md)  
   
   

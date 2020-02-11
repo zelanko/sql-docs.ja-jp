@@ -1,5 +1,5 @@
 ---
-title: SSMA コンソール (OracleToSQL) コマンド ライン オプション |Microsoft Docs
+title: SSMA コンソールのコマンドラインオプション (OracleToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,49 +16,49 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 96d76d301e3f937cb0e3c21a43f1939d0149ec9b
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68264511"
 ---
 # <a name="command-line-options-in-ssma-console-oracletosql"></a>SSMA コンソールのコマンド ライン オプション (OracleToSQL)
-Microsoft を実行し、SSMA アクティビティを制御する信頼性の高い一連のコマンド ライン オプションを提供します。 次のセクションでは、同じについて説明します。  
+Microsoft では、SSMA アクティビティを実行および制御するための強固な set コマンドラインオプションを提供しています。 以降のセクションでも同じことが説明されています。  
   
 ## <a name="command-line-options-in-ssma-console"></a>SSMA コンソールのコマンド ライン オプション  
-コンソールにコマンド オプションは、ここに記載されました。  
+ここでは、コンソールコマンドのオプションについて説明します。  
   
-ここでは、用語 'option' と呼ばれるもを 'switch'。  
+このセクションでは、"option" という用語は "switch" とも呼ばれます。  
   
--   オプションは、小文字は区別されず、いずれかで始めることは ' **-** '、' **/** ' 文字。  
+-   オプションでは大文字と小文字が区別され**-** ず、' '**/** または ' ' 文字で始めることができます。  
   
--   オプションを指定する場合、対応するオプションのパラメーターの指定が必須になります。  
+-   オプションが指定されている場合は、対応するオプションパラメーターを指定することが必須になります。  
   
--   オプション パラメーターは、オプションの文字から空白で区切る必要があります。  
+-   オプションパラメーターは、オプション文字から空白で区切る必要があります。  
   
-    **構文例:**  
+    **構文の例:**  
   
     `C:\> SSMAforOracleConsole.EXE -s scriptfile`  
   
     `C:\> SSMAforOracleConsole.EXE -s "C Program Files\Microsoft SQL Server Migration Assistant for Oracle\Sample Console Scripts \AssessmentReportGenerationSample.xml" -v "C Program Files\Microsoft SQL Server Migration Assistant for Oracle\Sample Console Scripts \VariableValueFileSample.xml" -c "C Program Files\Microsoft SQL Server Migration Assistant for Oracle\Sample Console Scripts \ServersConnectionFileSample.xml"`  
   
--   二重引用符で囲まれた空白を含むフォルダーまたはファイルの名前を指定する必要があります。  
+-   スペースを含むフォルダーまたはファイル名は、二重引用符で囲んで指定する必要があります。  
   
--   コマンドラインのエントリとエラー メッセージの出力は STDOUT に出力される、または指定したファイルに格納されます。  
+-   コマンドラインエントリとエラーメッセージの出力は、STDOUT または指定したファイルに格納されます。  
   
-### <a name="script-file-option--sscript"></a>スクリプト ファイルのオプション:-s/スクリプト  
-必須のスイッチでは、スクリプト ファイルのパス/名前は、SSMA によって実行されるコマンドのシーケンスのスクリプトを指定します。  
+### <a name="script-file-option--sscript"></a>スクリプトファイルのオプション:-s/スクリプト  
+必須のスイッチであるスクリプトファイルのパス/名前は、SSMA によって実行されるコマンドシーケンスのスクリプトを指定します。  
   
-**構文例:**  
+**構文の例:**  
   
 `C:\>SSMAforOracleConsole.EXE -s "C Program Files\Microsoft SQL Server Migration Assistant for Oracle\Sample Console Scripts \ConversionAndDataMigrationSample.xml"`  
   
-### <a name="variable-value-file-option--vvariable"></a>変数値ファイルのオプション: - v/変数  
-このファイルには、スクリプト ファイルで使用される変数が構成されています。 これは、オプションのスイッチです。 変数がない変数ファイル内で宣言されているし、スクリプト ファイルで使用される、アプリケーションは、エラーが発生し、コンソールの実行を終了します。  
+### <a name="variable-value-file-option--vvariable"></a>変数の値ファイルのオプション:-v/variable  
+このファイルは、スクリプトファイルで使用される変数で構成されます。 これはオプションのスイッチです。 変数が変数ファイルで宣言されておらず、スクリプトファイルで使用されている場合は、アプリケーションによってエラーが生成され、コンソールの実行が終了します。  
   
-**構文例:**  
+**構文の例:**  
   
--   変数は、おそらく 1 つで、既定値と該当する場合に、インスタンス固有値を持つ別の複数の変数値ファイルで定義されています。 変数の重複がある場合、コマンドライン引数で指定された最後の変数ファイルは、基本設定を受け取ります。  
+-   複数の変数値のファイルで定義された変数。たとえば、既定値を持つ変数と、該当する場合はインスタンス固有の値を持つ変数です。 変数が重複している場合、コマンドライン引数で指定された最後の変数ファイルは、次のように優先されます。  
   
     `C:\>SSMAforOracleConsole.EXE -s`  
   
@@ -66,14 +66,14 @@ Microsoft を実行し、SSMA アクティビティを制御する信頼性の�
   
     `projects\global_variablevaluefile.xml -v "c:\migrationprojects\instance_variablevaluefile.xml"`  
   
-### <a name="server-connection-file-option--cserverconnection"></a>サーバー接続ファイルのオプション: -c/serverconnection  
-このファイルには、各サーバーのサーバー接続情報が含まれています。 各サーバーの定義 ID によって識別されます、一意なサーバー サーバー Id は、接続用のスクリプト ファイルで参照される関連するコマンド。  
+### <a name="server-connection-file-option--cserverconnection"></a>サーバー接続ファイルのオプション:-c/serverconnection  
+このファイルには、各サーバーのサーバー接続情報が含まれています。 各サーバー定義は、一意のサーバー ID によって識別されます。 サーバー Id は、接続関連のコマンドのスクリプトファイルで参照されます。  
   
-サーバー定義には、サーバー接続ファイル、またはスクリプト ファイルの一部を指定できます。 スクリプト ファイル内のサーバー id は、サーバー接続ファイルに優先されるサーバー id の重複がある場合します。  
+サーバー定義は、サーバー接続ファイルまたはスクリプトファイルの一部にすることができます。 サーバー id が重複している場合、スクリプトファイルのサーバー id はサーバー接続ファイルよりも優先されます。  
   
-**構文例:**  
+**構文の例:**  
   
--   スクリプト ファイルでサーバー Id を使用して、別のサーバー接続ファイルで定義されている、サーバー接続ファイルは、変数値ファイルで定義されている変数を使用します。  
+-   サーバー Id はスクリプトファイルで使用され、別のサーバー接続ファイルで定義されます。サーバー接続ファイルでは、変数値ファイルで定義されている変数を使用します。  
   
     `C:\>SSMAforOracleConsole.EXE -s "C:\ Program Files\Microsoft SQL Server Migration Assistant for Oracle\Sample Console Scripts \ConversionAndDataMigrationSample.xml"  -v`  
   
@@ -81,98 +81,98 @@ Microsoft を実行し、SSMA アクティビティを制御する信頼性の�
   
     `c:\SsmaProjects\myserverconnectionsfile1.xml`  
   
--   サーバーの定義がスクリプト ファイルに埋め込まれます。  
+-   サーバー定義は、スクリプトファイルに埋め込まれています。  
   
     `C:\>SSMAforOracleConsole.EXE -s "C:\ Program Files\Microsoft SQL Server Migration Assistant for Oracle\Sample Console Scripts \ConversionAndDataMigrationSample.xml"`  
   
-### <a name="xml-output-option--xxmloutput-xmloutputfile"></a>XML 出力のオプション: x/xmloutput [xmloutputfile]  
-このコマンドは、コンソールまたは xml ファイルのいずれかの xml 形式でコマンドの出力メッセージを出力するために使用されます。  
+### <a name="xml-output-option--xxmloutput-xmloutputfile"></a>XML 出力オプション:-x/xmloutput [xmloutputfile]  
+このコマンドは、コマンド出力メッセージを xml 形式でコンソールまたは xml ファイルに出力するために使用されます。  
   
-2 つのオプションに使用できるは、xmloutput 可視。  
+Xmloutput には、可視化の2つのオプションを使用できます。  
   
--   Xmloutput スイッチの後にファイル パスが指定されている場合、出力はファイルにリダイレクトされます。  
+-   Xmloutput スイッチの後に filepath を指定した場合、出力はファイルにリダイレクトされます。  
   
-    **構文例:**  
+    **構文の例:**  
   
     `C:\>SSMAforOracleConsole.EXE -s`  
   
     `"C:\ Program Files\Microsoft SQL Server Migration Assistant for Oracle\Sample Console Scripts \ConversionAndDataMigrationSample.xml"  -x d:\xmloutput\project1output.xml`  
   
--   Xmloutput スイッチの後にファイル パスが指定されていない場合、xmlout が自体、コンソールに表示されます。  
+-   Xmloutput スイッチの後に filepath が指定されていない場合、xmloutput はコンソール自体に表示されます。  
   
-    **構文例:**  
+    **構文の例:**  
   
     `C:\>SSMAforOracleConsole.EXE -s "C:\ Program Files\Microsoft SQL Server Migration Assistant for Oracle\Sample Console Scripts \ConversionAndDataMigrationSample.xml"  -xmloutput`  
   
-### <a name="log-file-option--llog"></a>-L/ログのログ ファイルのオプション:  
-コンソール アプリケーションのすべての SSMA 操作ログ ファイルに記録します。 これは、オプションのスイッチです。 ログ ファイルとそのパスをコマンドラインで指定する場合は、指定した場所にログが生成されます。 それ以外の場合、既定の場所に生成されるを取得します。  
+### <a name="log-file-option--llog"></a>ログファイルのオプション:-l/ログ  
+コンソールアプリケーションのすべての SSMA 操作は、ログファイルに記録されます。 これはオプションのスイッチです。 ログファイルとそのパスがコマンドラインで指定されている場合、ログは指定した場所に生成されます。 それ以外の場合は、既定の場所に生成されます。  
   
-**構文例:**  
+**構文の例:**  
   
 `C:\>SSMAforOracleConsole.EXE`  
   
 `"C:\ Program Files\Microsoft SQL Server Migration Assistant for Oracle\Sample Console Scripts \ConversionAndDataMigrationSample.xml"  -l c:\SsmaProjects\migration1.log`  
   
-### <a name="project-environment-folder-option--eprojectenvironment"></a>プロジェクトの環境のフォルダー オプション:-e/projectenvironment  
-これは、現在の SSMA プロジェクトのプロジェクト環境の設定 フォルダーを示します。 このスイッチは省略可能です。  
+### <a name="project-environment-folder-option--eprojectenvironment"></a>プロジェクト環境フォルダーオプション:-e/projectenvironment  
+これは、現在の SSMA プロジェクトのプロジェクト環境設定フォルダーを表します。 このスイッチは省略可能です。  
   
-**構文例:**  
+**構文の例:**  
   
 `C:\>SSMAforOracleConsole.EXE -s`  
   
 `"C:\ Program Files\Microsoft SQL Server Migration Assistant for Oracle\Sample Console Scripts \ConversionAndDataMigrationSample.xml"  -e c:\SsmaProjects\CommonEnvironment`  
   
-### <a name="secure-password-option--psecurepassword"></a>セキュリティで保護されたパスワード オプション:-p/securepassword  
-このオプションでは、サーバー接続の暗号化パスワードを指定します。 その他のすべてのオプションとは異なる: オプションで任意のスクリプトの実行も移行に関連するアクティビティが、移行プロジェクトで使用するサーバー接続のパスワードの暗号化の管理を支援します。  
+### <a name="secure-password-option--psecurepassword"></a>セキュリティで保護されたパスワードオプション:-p/securepassword  
+このオプションは、サーバー接続の暗号化されたパスワードを示します。 このオプションは、他のすべてのオプションとは異なります。このオプションでは、どのスクリプトも実行されず、移行に関連するアクティビティでも役に立ちませんが、移行プロジェクトで使用されるサーバー接続のパスワード暗号化の管理に役立ちます。  
   
-コマンド ライン パラメーターとして他のオプションまたはパスワードを入力することはできません。 それ以外の場合、エラーが発生します。 詳細についてを参照してください、[管理パスワード](managing-passwords-oracletosql.md)セクション。  
+コマンドラインパラメーターとして他のオプションやパスワードを入力することはできません。 それ以外の場合、エラーが発生します。 詳細については、「[パスワードの管理](managing-passwords-oracletosql.md)」セクションを参照してください。  
   
-次のサブ オプションはサポートされて`-p/securepassword`:  
+で`-p/securepassword`は、次のサブオプションがサポートされています。  
   
--   パスワードを追加するには、指定したサーバー ID に対して、またはサーバー接続ファイルに定義されているすべてのサーバー Id のストレージを保護しました。 既に存在する場合、更新プログラムの下のオプションのパスワードを上書きします。  
+-   指定したサーバー ID またはサーバー接続ファイルで定義されているすべてのサーバー Id の保護された記憶域にパスワードを追加する。 次の-overwrite オプションは、既に存在する場合、パスワードを更新します。  
   
     `-p|-securepassword -a|add    {"<server_id>[, .n]"|all}` `-c|-serverconnection <server-connection-file> [-v|variable <variable-value-file>]``[-o|overwrite]`  
   
     `-p|-securepassword -a|add    {"<server_id>[, .n]"|all}``-s|-script <server-connection-file> [-v|variable <variable-value-file>] [-o|overwrite]`  
   
--   指定したサーバー ID のまたはすべてのサーバー Id の保護されたストレージから暗号化されたパスワードを削除します。  
+-   暗号化されたパスワードを、指定したサーバー ID またはすべてのサーバー Id の保護された記憶域から削除するには、次のようにします。  
   
     `-p/securepassword -r/remove {<server_id> [, ...n] | all}`  
   
--   パスワードの暗号化をサーバー Id の一覧を表示するには。  
+-   パスワードが暗号化されているサーバー Id の一覧を表示するには、次のようにします。  
   
     `-p/securepassword -l/list`  
   
--   暗号化されたファイルに保護されたストレージに格納されているパスワードをエクスポートします。 このファイルは、パス フレーズをユーザー指定で暗号化されます。  
+-   保護された記憶域に格納されているパスワードを暗号化されたファイルにエクスポートします。 このファイルは、ユーザーが指定したパスフレーズで暗号化されます。  
   
     `-p/securepassword -e/export {<server-id> [, ...n] | all} <encrypted-password -file>`  
   
--   暗号化-ファイル以前エクスポートされたは、パス フレーズをユーザー指定を使用してローカルの保護されたストレージにインポートされます。 ファイルを暗号化解除すると、さらに、ローカル コンピューターで暗号化された、新しいファイルに格納されます。  
+-   以前にエクスポートされた暗号化ファイルは、ユーザーが指定したパスフレーズを使用して、ローカルの保護されたストレージにインポートされます。 ファイルの暗号化が解除されると、新しいファイルに保存され、ローカルコンピューターで暗号化されます。  
   
     `-p/securepassword -i/import {<server-id> [, ...n] | all} <encrypted-password -file>`  
   
-    コンマ区切り記号を使用して、複数のサーバー Id を指定できます。  
+    複数のサーバー Id は、コンマ区切り記号を使用して指定できます。  
   
-### <a name="help-option--help"></a>ヘルプ オプション:-?/help  
-SSMA コンソールのオプションの構文の概要が表示されます。  
+### <a name="help-option--help"></a>ヘルプオプション:-?/Help  
+SSMA コンソールオプションの構文の概要が表示されます。  
   
 `C:\>SSMAforOracleConsole.EXE -?`  
   
-SSMA コンソールのコマンド ライン オプションの表を参照してください[付録 - 1 &#40;OracleToSQL&#41;](../../ssma/oracle/appendix-1-oracletosql.md)します。  
+SSMA コンソールのコマンドラインオプションの表形式の表示については、 [「付録-1 &#40;OracleToSQL&#41;](../../ssma/oracle/appendix-1-oracletosql.md)」を参照してください。  
   
-### <a name="securepassword-help-option--securepassword--help"></a>SecurePassword ヘルプ オプション: securepassword-?/help  
-SSMA コンソールのオプションの構文の概要が表示されます。  
+### <a name="securepassword-help-option--securepassword--help"></a>SecurePassword ヘルプオプション:-securepassword-?/Help  
+SSMA コンソールオプションの構文の概要が表示されます。  
   
 `C:\>SSMAforOracleConsole.EXE -securepassword -?`  
   
-SSMA コンソールのコマンド ライン オプションの表を参照してください[付録 - 1 &#40;OracleToSQL&#41;](../../ssma/oracle/appendix-1-oracletosql.md)  
+SSMA コンソールのコマンドラインオプションの表形式の表示については、 [「付録-1 &#40;OracleToSQL](../../ssma/oracle/appendix-1-oracletosql.md) 」を参照してください&#41;  
   
-### <a name="next-step"></a>次の手順  
+### <a name="next-step"></a>次のステップ  
 次の手順は、プロジェクトの要件によって異なります。  
   
--   パスワードまたはエクスポートを指定する]、[パスワードのインポートを参照してください[管理パスワード&#40;OracleToSQL&#41;](../../ssma/oracle/managing-passwords-oracletosql.md)します。  
+-   パスワードを指定する、またはパスワードをエクスポート/インポートする方法については、「パスワードの[管理 &#40;OracleToSQL&#41;](../../ssma/oracle/managing-passwords-oracletosql.md)」を参照してください。  
   
--   レポートを生成するため、次を参照してください。[レポートを生成する&#40;OracleToSQL&#41;](../../ssma/oracle/generating-reports-oracletosql.md)します。  
+-   レポートを生成する方法については、「[レポートの生成 &#40;OracleToSQL&#41;](../../ssma/oracle/generating-reports-oracletosql.md)」を参照してください。  
   
--   コンソールで問題をトラブルシューティングするには、次を参照してください。[トラブルシューティング&#40;OracleToSQL&#41;](../../ssma/oracle/troubleshooting-oracletosql.md)します。  
+-   コンソールでの問題のトラブルシューティングについては、「 [&#40;OracleToSQL&#41;のトラブルシューティング](../../ssma/oracle/troubleshooting-oracletosql.md)」を参照してください。  
   

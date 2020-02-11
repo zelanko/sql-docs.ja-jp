@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 12304e532643e536981001da3886460848aec069
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62650213"
 ---
 # <a name="remove-steps-from-a-sql-server-agent-master-job"></a>Remove Steps from a SQL Server Agent Master Job
@@ -26,9 +26,9 @@ ms.locfileid: "62650213"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
--   **以下を使用して SQL Server エージェントのマスター ジョブからステップを削除するには:**  
+-   **次のものを使用して SQL Server エージェントマスタージョブからステップを削除するには:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -37,18 +37,21 @@ ms.locfileid: "62650213"
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのマスター ジョブの対象サーバーを、ローカル サーバーとリモート サーバーの両方に設定することはできません。  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのマスター ジョブの対象サーバーを、ローカル サーバーとリモート サーバーの両方に設定することはできません。  
   
 ###  <a name="Security"></a> セキュリティ  
   
 ####  <a name="Permissions"></a> Permissions  
- **sysadmin** 固定サーバー ロールのメンバー以外は、所有しているジョブしか変更できません。 詳細については、「 [SQL Server エージェントのセキュリティの実装](implement-sql-server-agent-security.md)」をご覧ください。  
+ 
+  **sysadmin** 固定サーバー ロールのメンバー以外は、所有しているジョブしか変更できません。 詳細については、「 [SQL Server エージェントのセキュリティの実装](implement-sql-server-agent-security.md)」をご覧ください。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-remove-steps-from-a-sql-server-agent-master-job"></a>SQL Server エージェントのマスター ジョブからステップを削除するには  
   
-1.  **オブジェクト エクスプローラー** で、ステップを削除するジョブを含むサーバーをプラス記号をクリックして展開します。  
+1.  
+  **オブジェクト エクスプローラー** で、ステップを削除するジョブを含むサーバーをプラス記号をクリックして展開します。  
   
 2.  プラス記号をクリックして **[SQL Server エージェント]** を展開します。  
   
@@ -56,9 +59,10 @@ ms.locfileid: "62650213"
   
 4.  ステップを削除するジョブを右クリックし、 **[プロパティ]** をクリックします。  
   
-5.  **[ジョブのプロパティ -** _<ジョブ名>]_ ダイアログ ボックスで、 **[ページの選択]** の **[ステップ]** を選択します。  
+5.  [**ジョブのプロパティ-**_job_name_ ] ダイアログボックスの [**ページの選択**] で、[**ステップ**] を選択します。  
   
-6.  **[ジョブ ステップの一覧]** で削除するジョブ ステップを選択し、 **[削除]** をクリックします。  
+6.  
+  **[ジョブ ステップの一覧]** で削除するジョブ ステップを選択し、 **[削除]** をクリックします。  
   
 7.  完了したら、 **[OK]** をクリックします。  
   
@@ -83,6 +87,6 @@ ms.locfileid: "62650213"
     GO  
     ```  
   
- 詳細については、次を参照してください。 [sp_delete_jobstep &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql)します。  
+ 詳細については、「 [sp_delete_jobstep &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql)」を参照してください。  
   
   

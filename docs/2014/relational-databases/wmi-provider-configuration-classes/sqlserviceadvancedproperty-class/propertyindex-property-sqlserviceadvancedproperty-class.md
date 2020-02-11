@@ -1,5 +1,5 @@
 ---
-title: PropertyIndex プロパティ (SqlServiceAdvancedProperty クラス) |Microsoft Docs
+title: PropertyIndex プロパティ (Sqlserviceadvanced Property クラス) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 186aa762c9c176cab2bfa55de17a0a9d7ea3a301
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62911663"
 ---
 # <a name="propertyindex-property-sqlserviceadvancedproperty-class"></a>PropertyIndex プロパティ (SqlServiceAdvancedProperty クラス)
@@ -37,15 +37,15 @@ object
 ```  
   
 ## <a name="parts"></a>要素  
- *object*  
+ *素材*  
  詳細プロパティを表す [SqlServiceAdvancedProperty クラス](sqlserviceadvancedproperty-class.md) オブジェクト。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  参照されたサービスに属する詳細プロパティ配列内で、詳細プロパティの位置を指定する `uint32` 値。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
   
 ## <a name="see-also"></a>参照  
- [開始とサービスの停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [サービスの開始および停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

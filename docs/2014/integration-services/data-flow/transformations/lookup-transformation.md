@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 47b04c547700eda94d4c4f19b4a1211f8cdbf694
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900256"
 ---
 # <a name="lookup-transformation"></a>参照変換
@@ -74,7 +74,8 @@ ms.locfileid: "62900256"
 -   不一致出力。 不一致出力は、参照データセット内の 1 つ以上のエントリと一致しない入力内の行を処理します。 一致エントリがない行をエラーとして扱うように参照変換を構成している場合、これらの行はエラー出力にリダイレクトされます。 それ以外の場合、これらの行は不一致出力にリダイレクトされます。  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssISversion2005](../../../includes/ssisversion2005-md.md)] の参照変換の出力は 1 つだけでした。 作成された参照変換を実行する方法の詳細についての[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]を参照してください[参照変換のアップグレード](../../../sql-server/install/upgrade-lookup-transformations.md)します。  
+    >  
+  [!INCLUDE[ssISversion2005](../../../includes/ssisversion2005-md.md)] の参照変換の出力は 1 つだけでした。 で[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]作成された参照変換を実行する方法の詳細については、「参照[変換のアップグレード](../../../sql-server/install/upgrade-lookup-transformations.md)」を参照してください。  
   
 -   エラー出力。  
   
@@ -85,9 +86,9 @@ ms.locfileid: "62900256"
   
  キャッシュをファイルに永続化する他の利点を次に示します。  
   
--   ***複数のパッケージ間でキャッシュ ファイルを共有できます。詳細については、「***  [キャッシュ接続マネージャーの変換を使用してフル キャッシュ モードの参照変換を実装する](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)  ***」をご覧ください。***  
+-   ***複数のパッケージ間でキャッシュファイルを共有します。詳細については、「***[キャッシュ接続マネージャーを使用してフルキャッシュモードの参照変換を実装する](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)」を参照してください ***。***      
   
--   キャッシュ ファイルをパッケージと一緒に配置できます。 ***これにより、このデータを複数のコンピューター上で使用できます。*** 詳細については、「 [参照変換用のキャッシュを作成および配置する](create-and-deploy-a-cache-for-the-lookup-transformation.md)」をご覧ください。  
+-   キャッシュ ファイルをパッケージと一緒に配置できます。 ***その後、複数のコンピューターでデータを使用できます。*** 詳細については、「 [参照変換用のキャッシュを作成および配置する](create-and-deploy-a-cache-for-the-lookup-transformation.md)」をご覧ください。  
   
 -   RAW ファイル ソースを使用してキャッシュ ファイルからデータを読み取ることができます。 次に他のデータ フロー コンポーネントを使用してデータを変換または移動できます。 詳細については、「 [RAW ファイル ソース](../raw-file-source.md)」をご覧ください。  
   
@@ -114,7 +115,8 @@ ms.locfileid: "62900256"
   
      このキャッシュ オプションは、 [!INCLUDE[ssISversion2005](../../../includes/ssisversion2005-md.md)]の参照変換に用意されているキャッシュなしオプションと互換性があります。  
   
- [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] と [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、文字列の比較方法が異なります。 実行前に参照データセットをキャッシュに読み込むように参照変換が構成されている場合、 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] によりキャッシュ内で参照比較が行われます。 それ以外の場合、参照操作でパラメーター化 SQL ステートメントが使用され、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] により参照比較が行われます。 つまり、キャッシュの種類に応じて、参照変換が、同じ参照テーブルから異なる数の一致結果を返す可能性があります。  
+ 
+  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] と [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、文字列の比較方法が異なります。 実行前に参照データセットをキャッシュに読み込むように参照変換が構成されている場合、 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] によりキャッシュ内で参照比較が行われます。 それ以外の場合、参照操作でパラメーター化 SQL ステートメントが使用され、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] により参照比較が行われます。 つまり、キャッシュの種類に応じて、参照変換が、同じ参照テーブルから異なる数の一致結果を返す可能性があります。  
   
 ## <a name="related-tasks"></a>Related Tasks  
  プロパティを設定するには [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。 詳細については、以下のトピックをご覧ください。  
@@ -129,20 +131,21 @@ ms.locfileid: "62900256"
   
 ## <a name="related-content"></a>関連コンテンツ  
   
--   MSDN ライブラリのビデオ「[フル キャッシュ モードで参照変換を実装する方法](https://go.microsoft.com/fwlink/?LinkId=131031)」 (msdn.microsoft.com)  
+-   msdn.microsoft.com のビデオ「 [フル キャッシュ モードで参照変換を実装する方法](https://go.microsoft.com/fwlink/?LinkId=131031)」  
   
 -   blogs.msdn.com のブログ「 [参照変換のキャッシュ モードを使用する際の推奨事項](https://go.microsoft.com/fwlink/?LinkId=146623)」  
   
--   blogs.msdn.com のブログ記事「[参照パターン: 大文字と小文字を区別しない](https://go.microsoft.com/fwlink/?LinkId=157782)」  
+-   blogs.msdn.com のブログ「 [参照パターン : 大文字と小文字を区別しない](https://go.microsoft.com/fwlink/?LinkId=157782)」  
   
 -   msftisprodsamples.codeplex.com のサンプル「 [参照変換](https://go.microsoft.com/fwlink/?LinkId=267528)」  
   
-     [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 製品サンプルとサンプル データベースのインストールの詳細については、「 [SQL Server Integration Services 製品サンプル](https://go.microsoft.com/fwlink/?LinkId=267527)」をご覧ください。  
+     
+  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 製品サンプルとサンプル データベースのインストールの詳細については、「 [SQL Server Integration Services 製品サンプル](https://go.microsoft.com/fwlink/?LinkId=267527)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
  [あいまい参照変換](fuzzy-lookup-transformation.md)   
  [用語参照変換](term-lookup-transformation.md)   
- [データ フロー](../data-flow.md)   
+ [データフロー](../data-flow.md)   
  [Integration Services の変換](integration-services-transformations.md)  
   
   

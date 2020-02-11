@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2cec1f30ba728f1cf3b808acb2fb362e21d259a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058156"
 ---
 # <a name="implementation-of-the-parent-package"></a>親パッケージの実装
@@ -29,7 +29,8 @@ ms.locfileid: "66058156"
   
  ![子パッケージの一覧を含む概要レポート](media/overviewreport-childpackagelisting.png "子パッケージの一覧を含む概要レポート")  
   
- **[概要]** レポートのアクセスについては、「 [Reports for the Integration Services Server](../../2014/integration-services/reports-for-the-integration-services-server.md)」を参照してください。  
+ 
+  **[概要]** レポートのアクセスについては、「 [Reports for the Integration Services Server](../../2014/integration-services/reports-for-the-integration-services-server.md)」を参照してください。  
   
 ## <a name="precedence-constraints-in-the-parent-package"></a>親パッケージの優先順位制約  
  親パッケージ内の複数の SQL Server エージェント ジョブの実行タスク間で優先順位制約を作成する場合、これらの優先順位制約で制御されるのは、リモート サーバー上の SQL Server エージェント ジョブの開始時刻のみです。 優先順位制約では、SQL Server エージェント ジョブのステップで実行される子パッケージが、成功したか失敗したかに関する情報を受け取ることができません。  
@@ -39,9 +40,10 @@ ms.locfileid: "66058156"
  このシナリオでの失敗とは、リモート SQL Server エージェント ジョブ タスクの呼び出しに失敗した場合しかありません。 このような失敗は、リモート サーバーが停止している場合、およびエージェントが応答しない場合に発生することがあります。 ただし、エージェントが起動している限り、親パッケージはそのタスクを正常に完了したことになります。  
   
 > [!NOTE]  
->  **sp_start_job N'package_name'** の Transact-SQL ステートメントを含む SQL 実行タスクを使用できます。 詳細については、「[sp_start_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-start-job-transact-sql)」をご覧ください。  
+>  
+  **sp_start_job N'package_name'** の Transact-SQL ステートメントを含む SQL 実行タスクを使用できます。 詳細については、「[sp_start_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-start-job-transact-sql)」をご覧ください。  
   
 ## <a name="debugging-environment"></a>デバッグ環境  
- 親パッケージをテストする場合は、[デバッグ] メニューの [デバッグの開始] をクリックして (または F5 キーを押して) そのパッケージを実行し、デザイナーのデバッグ環境を使用します。 または、コマンド プロンプト ユーティリティ **dtexec**を使用できます。 詳しくは、「 [dtexec Utility](packages/dtexec-utility.md)」をご覧ください。  
+ 親パッケージをテストする場合は、[デバッグ] メニューの [デバッグの開始] をクリックして (または F5 キーを押して) そのパッケージを実行し、デザイナーのデバッグ環境を使用します。 または、コマンド プロンプト ユーティリティ **dtexec**を使用できます。 詳細については、「 [Dtexec ユーティリティ](packages/dtexec-utility.md)」を参照してください。  
   
   
