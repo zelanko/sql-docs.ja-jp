@@ -1,5 +1,5 @@
 ---
-title: 実行関連の動的管理ビューおよび関数 (Transact-SQL) |Microsoft Docs
+title: 実行関連の動的管理ビューおよび関数 (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/27/2019
 ms.prod: sql
@@ -15,16 +15,16 @@ ms.assetid: aea07b33-f715-4b61-9d1e-8c77b03e9578
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: eaab973d2554e22d9fc7244850dcfbc0e8f3d4e5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68130833"
 ---
-# <a name="execution-related-dynamic-management-views-and-functions-transact-sql"></a>実行関連の動的管理ビューおよび関数 (Transact-SQL)
+# <a name="execution-related-dynamic-management-views-and-functions-transact-sql"></a>実行関連の動的管理ビューおよび関数 (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  このセクションには、次の動的管理オブジェクトが含まれています。  
+  ここでは、次の動的管理オブジェクトについて説明します。  
   
 
 |||  
@@ -53,11 +53,11 @@ ms.locfileid: "68130833"
 
   
 > [!NOTE]  
->  **Sys.dm_exec_query_transformation_stats**動的管理ビューは読み取り専用では識別します。 サポートされていません。 将来の互換性は保証されません。  
+>  **Dm_exec_query_transformation_stats**動的管理ビューは、情報提供のみを目的としています。 サポートされていません。 将来の互換性は保証されません。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [システム ビュー &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
+ [システムビュー &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   
 

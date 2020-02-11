@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4c8def0fad1ae7eddb9de2e7206923b872c41ed2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67046771"
 ---
-# <a name="mssqlserver2814"></a>MSSQLSERVER_2814
+# <a name="mssqlserver_2814"></a>MSSQLSERVER_2814
     
 ## <a name="details"></a>詳細  
   
@@ -37,7 +37,7 @@ ms.locfileid: "67046771"
   
  次の表に、再コンパイルの理由を示します。  
   
-|理由コード|説明|  
+|理由コード|[説明]|  
 |-----------------|-----------------|  
 |1|スキーマの変更|  
 |2|統計の変更|  
@@ -53,7 +53,8 @@ ms.locfileid: "67046771"
   
 ## <a name="user-action"></a>ユーザーの操作  
   
-1.  次のクエリを実行して、再コンパイルの原因になっているステートメントを確認します。 *sql_handle*、*starting_offset*、*ending_offset*、*plan_handle* の各プレースホルダーを、エラー メッセージで指定された値に置き換えます。 **database_name** 列と **object_name** 列は、アドホックおよび準備された [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントでは NULL になることに注意してください。  
+1.  次のクエリを実行して、再コンパイルの原因になっているステートメントを確認します。 *sql_handle*、*starting_offset*、*ending_offset*、*plan_handle* の各プレースホルダーを、エラー メッセージで指定された値に置き換えます。 
+  **database_name** 列と **object_name** 列は、アドホックおよび準備された [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントでは NULL になることに注意してください。  
   
      SELECT DB_NAME(st.dbid) AS database_name  
   
@@ -75,7 +76,7 @@ ms.locfileid: "67046771"
   
 3.  問題が継続して発生する場合は、マイクロソフト カスタマー サポート サービスに問い合わせてください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SQL:StmtRecompile イベント クラス](../event-classes/sql-stmtrecompile-event-class.md)  
   
   

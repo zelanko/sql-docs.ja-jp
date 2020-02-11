@@ -20,10 +20,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 1dd66834788896e6952a0352eb2a19fd1a828513
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75245961"
 ---
 # <a name="sysdm_db_resource_stats-azure-sql-database"></a>sys.dm_db_resource_stats (Azure SQL Database)
@@ -31,9 +31,9 @@ ms.locfileid: "75245961"
 
   [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]データベースの CPU、i/o、およびメモリの消費量を返します。 データベースにアクティビティがない場合でも、15 秒ごとに 1 つの行が存在します。 履歴データは約1時間保持されます。  
   
-|列|データ型|説明|  
+|[列]|データ型|[説明]|  
 |-------------|---------------|-----------------|  
-|end_time|**/**|UTC 時刻は、現在のレポート間隔の終了を示します。|  
+|end_time|**DATETIME**|UTC 時刻は、現在のレポート間隔の終了を示します。|  
 |avg_cpu_percent|**decimal (5, 2)**|サービス層の制限に対する割合での平均コンピューティング使用率。|  
 |avg_data_io_percent|**decimal (5, 2)**|サービス層の上限に対する平均データ i/o 使用率 (%)。 Hyperscale データベースについては、「[リソース使用率の統計情報のデータ IO](https://docs.microsoft.com/azure/sql-database/sql-database-hyperscale-performance-diagnostics#data-io-in-resource-utilization-statistics)」を参照してください。|  
 |avg_log_write_percent|**decimal (5, 2)**|サービス層の制限に対する割合としての、平均トランザクションログの書き込み (MBps)。|  
@@ -41,12 +41,12 @@ ms.locfileid: "75245961"
 |xtp_storage_percent|**decimal (5, 2)**|サービス層の制限 (レポート間隔の終了時) に対するインメモリ OLTP のストレージ使用率。 これには、メモリ最適化テーブル、インデックス、およびテーブル変数の、次のインメモリ OLTP オブジェクトのストレージに使用されるメモリが含まれます。 また、ALTER TABLE 操作の処理に使用されるメモリも含まれています。<br /><br /> インメモリ OLTP がデータベースで使用されていない場合は0を返します。|  
 |max_worker_percent|**decimal (5, 2)**|データベースのサービス階層の上限に対する割合での最大同時実行ワーカー (要求)。|  
 |max_session_percent|**decimal (5, 2)**|データベースのサービス層の上限に対する割合での最大同時セッション数。|  
-|dtu_limit|**通り**|この期間中のこのデータベースの現在の最大データベース DTU 設定です。 仮想コアベースのモデルを使用しているデータベースの場合、この列は NULL になります。|
+|dtu_limit|**int**|この期間中のこのデータベースの現在の最大データベース DTU 設定です。 仮想コアベースのモデルを使用しているデータベースの場合、この列は NULL になります。|
 |cpu_limit|**decimal (5, 2)**|この期間中のこのデータベースの仮想コア数。 DTU ベースのモデルを使用しているデータベースの場合、この列は NULL になります。|
 |avg_instance_cpu_percent|**decimal (5, 2)**|SQL DB プロセスに対する平均データベース CPU 使用率 (%)。|
 |avg_instance_memory_percent|**decimal (5, 2)**|SQL DB プロセスに対する平均データベースメモリ使用率 (%)。|
 |avg_login_rate_percent|**decimal (5, 2)**|単に情報を示すためだけに特定されます。 サポートされていません。 将来の互換性は保証されません。|
-|replica_role|**通り**|現在のレプリカのロールのうち、0がプライマリ、1がセカンダリ、2がフォワーダー (geo セカンダリのプライマリ) であることを表します。 読み取り可能なすべてのセカンダリに ReadOnly インテントを使用して接続すると、"1" と表示されます。 ReadOnly インテントを指定せずに geo セカンダリに接続すると、"2" (フォワーダーに接続) が表示されます。|
+|replica_role|**int**|現在のレプリカのロールのうち、0がプライマリ、1がセカンダリ、2がフォワーダー (geo セカンダリのプライマリ) であることを表します。 読み取り可能なすべてのセカンダリに ReadOnly インテントを使用して接続すると、"1" と表示されます。 ReadOnly インテントを指定せずに geo セカンダリに接続すると、"2" (フォワーダーに接続) が表示されます。|
 |||
   
 > [!TIP]  
@@ -55,7 +55,7 @@ ms.locfileid: "75245961"
 ## <a name="permissions"></a>アクセス許可  
  このビューには、VIEW DATABASE STATE 権限が必要です。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  **Dm_db_resource_stats**によって返されるデータは、実行しているサービス階層/パフォーマンスレベルに対して許容される最大制限の割合として表されます。
  
  過去60分以内にデータベースが別のサーバーにフェールオーバーされた場合、ビューはそのフェールオーバー以降にプライマリデータベースであった時間のデータのみを返します。  

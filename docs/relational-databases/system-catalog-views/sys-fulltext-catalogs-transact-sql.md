@@ -1,5 +1,5 @@
 ---
-title: sys.fulltext_catalogs (TRANSACT-SQL) |Microsoft Docs
+title: fulltext_catalogs (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,39 +20,39 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: 114109e0ee7bf7ba8855ad65f4ab7438c9815187
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68133857"
 ---
-# <a name="sysfulltextcatalogs-transact-sql"></a>sys.fulltext_catalogs (Transact-SQL)
+# <a name="sysfulltext_catalogs-transact-sql"></a>sys.fulltext_catalogs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  各フルテキスト カタログの行を格納します。  
+  フルテキストカタログごとに1行の値を格納します。  
   
 > [!NOTE]  
->  次の列は、の将来のリリースで削除が[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **data_space_id**、 **file_id**、および**パス**します。 新しい開発作業でこれらの列を使用しないようにしこれらの列のいずれかをできるだけ早く使用されているアプリケーションを変更します。  
+>  次の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]列は、の将来のリリースで削除される予定です: **data_space_id**、 **file_id**、および**パス**。 新しい開発作業ではこれらの列を使用しないようにし、現在これらの列を使用しているアプリケーションはできるだけ早く修正してください。  
  
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
-|fulltext_catalog_id|**int**|フルテキスト カタログの ID。 データベースのフルテキスト カタログ全体で一意です。|  
-|NAME|**sysname**|カタログの名前。 データベース内で一意です。|  
-|path|**nvarchar(260)**|ファイル システム内のカタログ ディレクトリの名前です。|  
-|is_default|**bit**|既定のフルテキスト カタログ。<br /><br /> True = 既定値です。<br /><br /> False = 既定値ではない|  
-|is_accent_sensitivity_on|**bit**|カタログのアクセントの区別に関する設定。<br /><br /> True = アクセントを区別します。<br /><br /> False = アクセントを区別しない|  
-|data_space_id|**int**|このカタログが作成されたファイル グループ。|  
-|file_id|**int**|カタログに関連付けられているフルテキスト ファイルのファイル ID。|  
-|principal_id|**int**|フルテキスト カタログを所有するデータベース プリンシパルの ID。|  
-|is_importing|**bit**|フルテキスト カタログがインポートされているかどうかを示します。<br /><br /> 1 = カタログがインポートされています。<br /><br /> 2 = カタログがインポートされていません。|  
+|fulltext_catalog_id|**int**|フルテキストカタログの ID。 データベース内のフルテキストカタログ全体で一意です。|  
+|name|**sysname**|カタログの名前。 データベース内で一意です。|  
+|path|**nvarchar (260)**|ファイルシステム内のカタログディレクトリの名前。|  
+|is_default|**bit**|既定のフルテキストカタログ。<br /><br /> True = が既定値です。<br /><br /> False = 既定値ではない|  
+|is_accent_sensitivity_on|**bit**|カタログのアクセントの区別に関する設定。<br /><br /> True = アクセントを区別する。<br /><br /> False = アクセントを区別しない|  
+|data_space_id|**int**|このカタログが作成されたファイルグループ。|  
+|file_id|**int**|カタログに関連付けられているフルテキストファイルのファイル ID。|  
+|principal_id|**int**|フルテキストカタログを所有するデータベースプリンシパルの ID。|  
+|is_importing|**bit**|フルテキストカタログがインポートされているかどうかを示します。<br /><br /> 1 = カタログがインポートされています。<br /><br /> 2 = カタログがインポートされていません。|  
   
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
- [ALTER FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)   
- [DROP FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/drop-fulltext-catalog-transact-sql.md)  
+ [Transact-sql&#41;&#40;のフルテキストカタログの作成](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
+ [Transact-sql&#41;&#40;のフルテキストカタログの変更](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)   
+ [Transact-sql&#41;&#40;のフルテキストカタログの削除](../../t-sql/statements/drop-fulltext-catalog-transact-sql.md)  
   
   

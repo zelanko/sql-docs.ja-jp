@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_session_space_usage (TRANSACT-SQL) |Microsoft Docs
+title: dm_db_session_space_usage (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/16/2015
 ms.prod: sql
@@ -21,54 +21,54 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5e4febf0882f57f7d1545f86cbe4c65e322226dc
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68263969"
 ---
 # <a name="sysdm_db_session_space_usage-transact-sql"></a>sys.dm_db_session_space_usage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  ページ割り当てし、解放は、データベースの各セッションでの数を返します。  
+  データベースの各セッションで割り当てられ、割り当てが解除されたページ数を返します。  
   
 > [!NOTE]  
->  このビューはのみに適用できる、 [tempdb データベース](../../relational-databases/databases/tempdb-database.md)します。  
+>  このビューは、 [tempdb データベース](../../relational-databases/databases/tempdb-database.md)にのみ適用できます。  
   
 > [!NOTE]  
->  これから[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]または[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]、名前を使用して、 **sys.dm_pdw_nodes_db_session_space_usage**します。  
+>  またはから[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]これを[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]呼び出すには、 **dm_pdw_nodes_db_session_space_usage**という名前を使用します。  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
-|**session_id**|**smallint**|セッション ID。<br /><br /> **session_id**マップ**session_id**で[sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)します。|  
+|**session_id**|**smallint**|セッション ID。<br /><br /> **session_id**は、 [sys. dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)の**session_id**にマップされます。|  
 |**database_id**|**smallint**|データベース ID。|  
-|**user_objects_alloc_page_count**|**bigint**|予約された、またはこのセッションでユーザー オブジェクトに割り当てられたページ数。|  
+|**user_objects_alloc_page_count**|**bigint**|このセッションによってユーザーオブジェクトに対して予約または割り当てられたページ数。|  
 |**user_objects_dealloc_page_count**|**bigint**|セッションで、ユーザー オブジェクトへの割り当てが解除され、予約されなくなったページの数。|  
 |**internal_objects_alloc_page_count**|**bigint**|セッションで、内部オブジェクトに予約された、または割り当てられたページの数。|  
-|**internal_objects_dealloc_page_count**|**bigint**|割り当てを解除し、内部オブジェクト用にこのセッションで不要になった予約ページ数。|  
-|**user_objects_deferred_dealloc_page_count**|**bigint**|遅延割り当て解除のマークされているページ数。<br /><br /> **注:** サービス パックで導入された[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]と[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]します。|  
-|**pdw_node_id**|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> この配布であるノードの識別子。|  
+|**internal_objects_dealloc_page_count**|**bigint**|このセッションによって内部オブジェクト用に割り当て解除され、予約されなくなったページの数。|  
+|**user_objects_deferred_dealloc_page_count**|**bigint**|遅延割り当て解除用にマークされているページの数。<br /><br /> **注:** および[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]のサービスパックで導入されました。|  
+|**pdw_node_id**|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
   
 ## <a name="permissions"></a>アクセス許可  
 
-[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]、必要があります`VIEW SERVER STATE`権限。   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium レベルでは、必要があります、`VIEW DATABASE STATE`データベースの権限。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard および Basic 階層は、必要があります、**サーバー管理者**または**Azure Active Directory 管理者**アカウント。   
+で[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]は、 `VIEW SERVER STATE`権限が必要です。   
+Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルでは、データベース`VIEW DATABASE STATE`の権限が必要です。 Standard [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
 
-## <a name="remarks"></a>コメント  
- IAM ページは、このビューでレポートされる割り当てや割り当て解除の数には含まれません。  
+## <a name="remarks"></a>解説  
+ IAM ページは、このビューによって報告された割り当て数または割り当て解除数に含まれていません。  
   
  ページ カウンターはセッションの開始時に 0 に初期化されます。 このカウンターによって、セッションで完了したタスクに割り当てられた、または割り当て解除されたページの合計数が記録されます。 カウンターはタスクが終了したときにだけ更新され、実行中のタスクは反映されません。  
   
- セッションは、複数の要求を同時にアクティブに持つことができます。 要求が並列クエリの場合、複数のスレッドやタスクを開始できます。  
+ セッションでは、同時に複数の要求をアクティブにすることができます。 要求が並列クエリの場合、複数のスレッドやタスクを開始できます。  
   
- セッション、要求、およびタスクの詳細については、[sys.dm_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)、 [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)、および [sys.dm_os_tasks と組み合わせます&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md) を参照してください。  
+ セッション、要求、およびタスクの詳細については、「 [sys. dm_exec_sessions &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)」 dm_exec_requests、「transact-sql [&#40;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)」、および「 [&#41;dm_os_tasks transact-sql &#40;](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)」を参照してください。  
   
-## <a name="user-objects"></a>ユーザー オブジェクト  
- 次のオブジェクトは、ユーザー オブジェクト ページ カウンターに含まれます。  
+## <a name="user-objects"></a>ユーザーオブジェクト  
+ ユーザーオブジェクトページカウンターには、次のオブジェクトが含まれています。  
   
 -   ユーザー定義テーブルとインデックス  
   
--   システム テーブルとインデックス  
+-   システムテーブルとインデックス  
   
 -   グローバル一時テーブルとインデックス  
   
@@ -79,31 +79,31 @@ ms.locfileid: "68263969"
 -   テーブル値関数で返されるテーブル  
   
 ## <a name="internal-objects"></a>内部オブジェクト  
- 内部オブジェクトにのみ含まれる**tempdb**します。 次のオブジェクトは、内部オブジェクト ページ カウンターに含まれます。  
+ 内部オブジェクトは**tempdb**にのみ存在します。 内部オブジェクトページカウンターには、次のオブジェクトが含まれています。  
   
--   カーソルまたはスプール操作と一時的なラージ オブジェクト (LOB) ストレージ用の作業テーブル  
+-   カーソルまたはスプール操作の作業テーブルと、一時的なラージオブジェクト (LOB) ストレージ  
   
 -   ハッシュ結合などの操作用の作業ファイル  
   
 -   並べ替え実行結果  
   
 ## <a name="physical-joins"></a>物理結合  
- ![Sys.dm_db_session_space_usage の物理結合](../../relational-databases/system-dynamic-management-views/media/join-dm-db-session-space-usage-1.gif "sys.dm_db_session_space_usage の物理への参加")  
+ ![sys.dm_db_session_space_usage の物理結合](../../relational-databases/system-dynamic-management-views/media/join-dm-db-session-space-usage-1.gif "sys.dm_db_session_space_usage の物理結合")  
   
-## <a name="relationship-cardinalities"></a>リレーションシップの基数  
+## <a name="relationship-cardinalities"></a>リレーションシップ基数  
   
-|From|変換先|リレーションシップ|  
+|移行元|To|リレーションシップ|  
 |----------|--------|------------------|  
-|dm_db_session_space_usage.session_id|dm_exec_sessions.session_id|一対一|  
+|dm_db_session_space_usage。 session_id|dm_exec_sessions。 session_id|一対一|  
   
 ## <a name="see-also"></a>参照  
  [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [データベース関連の動的管理ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
- [sys.dm_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)   
- [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
- [sys.dm_os_tasks と組み合わせます&#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)   
- [sys.dm_db_task_space_usage &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-task-space-usage-transact-sql.md)   
- [sys.dm_db_file_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md)  
+ [Transact-sql&#41;&#40;データベース関連の動的管理ビュー](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
+ [dm_exec_sessions &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)   
+ [dm_exec_requests &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
+ [dm_os_tasks &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)   
+ [dm_db_task_space_usage &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-task-space-usage-transact-sql.md)   
+ [dm_db_file_space_usage &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md)  
   
   
 

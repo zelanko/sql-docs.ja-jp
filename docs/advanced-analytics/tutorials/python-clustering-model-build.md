@@ -12,10 +12,10 @@ ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 9669686d0163b9ce1c362e7cdf2814c7a95bfaa8
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727103"
 ---
 # <a name="tutorial-build-a-model-in-python-to-categorize-customers-with-sql-server-machine-learning-services"></a>チュートリアル:モデルを Python にビルドし、SQL Server Machine Learning Services で顧客を分類する
@@ -37,7 +37,7 @@ ms.locfileid: "73727103"
 
 [パート 4 ](python-clustering-model-deploy.md)では、新しいデータに基づいて Python でクラスタリングを実行できるストアド プロシージャを SQL データベースに作成する方法について説明します。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 * このチュートリアルのパート 3 は、[**パート 1** ](python-clustering-model.md)の前提条件を満たし、[**パート 2** ](python-clustering-model-prepare-data.md)の手順を完了していることを前提としています。
 
@@ -149,7 +149,7 @@ cluster
 
 このチュートリアルを続行しない場合は、SQL Server から tpcxbb_1gb データベースを削除してください。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 このチュートリアル シリーズのパート 3 では、次の手順を完了しました。
 
@@ -160,4 +160,4 @@ cluster
 作成した機械学習モデルをデプロイするには、このチュートリアル シリーズのパート 4 の手順に従います。
 
 > [!div class="nextstepaction"]
-> [チュートリアル: SQL Server Machine Learning Services を使用して Python でクラスタリング モデルをデプロイする](python-clustering-model-deploy.md)
+> [チュートリアル:SQL Server Machine Learning Services を使用して Python でクラスタリング モデルをデプロイする](python-clustering-model-deploy.md)

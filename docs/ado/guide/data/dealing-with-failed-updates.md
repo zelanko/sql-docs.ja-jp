@@ -1,5 +1,5 @@
 ---
-title: 失敗した更新プログラムを扱う |Microsoft Docs
+title: 失敗した更新プログラムの処理 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,19 +13,19 @@ ms.assetid: 299c37bd-19ff-4261-8571-b9665687e075
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d442a9c397ad184658f9101343e139697c9b3756
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925634"
 ---
 # <a name="dealing-with-failed-updates"></a>失敗した更新の処理
-更新プログラムは、エラーの終了時に、種類と、エラーの重大度、およびアプリケーションのロジックに依存、エラーを解決する方法。 ただし、データベースは、他のユーザーと共有される場合、一般的なエラーは実行する前に、フィールドを変更他のユーザー。 この種のエラーは、競合と呼ばれます。 ADO では、このような状況を検出し、エラーを報告します。  
+更新がエラーで終了した場合、エラーの解決方法は、エラーの性質と重大度、およびアプリケーションのロジックによって異なります。 ただし、データベースが他のユーザーと共有されている場合、一般的なエラーとして、他のユーザーがフィールドを変更することがあります。 この種類のエラーは競合と呼ばれます。 ADO はこの状況を検出し、エラーを報告します。  
   
-## <a name="remarks"></a>コメント  
- 更新エラーがある場合は、エラー処理ルーチンにトラップされます。 競合する行のみが表示されるように、競合の定数を持つレコード セットをフィルター処理します。 この例で、エラーの解決方法は単なる作成者の印刷 (au_fname および au_lname) は、最初と最後の名前。  
+## <a name="remarks"></a>解説  
+ 更新エラーが発生した場合は、エラー処理ルーチンでトラップされます。 競合する行だけが表示されるように、Adfilter衝突 Tingrecords 定数でレコードセットをフィルター処理します。 この例では、エラー解決方法は、作成者の姓と名 (au_fname と au_lname) を出力するだけです。  
   
- 更新の競合をユーザーにアラートを生成するコードは、次のようになります。  
+ 更新の競合についてユーザーに通知するコードは、次のようになります。  
   
 ```  
 objRs.Filter = adFilterConflictingRecords  
@@ -36,5 +36,5 @@ Do While Not objRst.EOF
 Loop  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [バッチ モード](../../../ado/guide/data/batch-mode.md)

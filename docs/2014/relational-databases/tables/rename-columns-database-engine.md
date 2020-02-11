@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f5fca9032df4f1327933580a306215fd2fd47854
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211815"
 ---
 # <a name="rename-columns-database-engine"></a>列名の変更 (データベース エンジン)
@@ -30,7 +30,7 @@ ms.locfileid: "68211815"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **列名を変更する方法:**  
   
@@ -78,7 +78,7 @@ ms.locfileid: "68211815"
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  3\. 次の例では、`Sales.SalesTerritory` テーブル内の `TerritoryID` 列の名前を `TerrID` に変更します。 次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
+3.  3. 次の例では、`TerritoryID` テーブル内の `Sales.SalesTerritory` 列の名前を `TerrID` に変更します。 次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
   
     ```  
     USE AdventureWorks2012;  
@@ -87,6 +87,6 @@ ms.locfileid: "68211815"
     GO  
     ```  
   
- 詳細については、「[sp_rename &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-rename-transact-sql)」を参照してください。  
+ 詳細については、「 [sp_rename &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-rename-transact-sql)」を参照してください。  
   
   

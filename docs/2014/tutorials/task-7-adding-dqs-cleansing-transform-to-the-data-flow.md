@@ -1,5 +1,5 @@
 ---
-title: タスク 7:DQS クレンジング変換をデータ フローの追加 |Microsoft Docs
+title: 'タスク 7: DQS クレンジング変換をデータフローに追加する |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,56 +11,56 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 209659609c2cf19196cc35050fb32e39e079d1c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65488943"
 ---
-# <a name="task-7-adding-dqs-cleansing-transform-to-the-data-flow"></a>タスク 7:DQS クレンジング変換をデータ フローに追加する
-  ここでは、DQS クレンジング変換をデータ フローに追加して、入力済みの仕入先データを DQS を使用してクレンジングします。 参照してください **[DQS クレンジング変換](https://msdn.microsoft.com/library/ee677619.aspx)** 変換の詳細についてはします。  
+# <a name="task-7-adding-dqs-cleansing-transform-to-the-data-flow"></a>タスク 7: DQS クレンジング変換をデータ フローに追加する
+  ここでは、DQS クレンジング変換をデータ フローに追加して、入力済みの仕入先データを DQS を使用してクレンジングします。 変換の詳細については、「 **[DQS クレンジング変換](https://msdn.microsoft.com/library/ee677619.aspx)**」を参照してください。  
   
-1.  右クリックして**DQS クレンジング**で、**データ フロー**タブをクリックし、をクリックして**の名前を変更**します。 型**Cleanse Supplier Data**、キーを押します**ENTER**します。  
+1.  [**データフロー** ] タブで [ **DQS クレンジング**] を右クリックし、[**名前の変更**] をクリックします。 「**クレンジング Supplier Data**」と入力し、 **enter**キーを押します。  
   
-2.  選択**Read Supplier Data from Excel ファイル**; 青色コネクタをドラッグして**Cleanse Supplier Data**します。 これでコンポーネントが接続されました。  
+2.  [ **Excel ファイルから Supplier データを読み取る**] を選択します。blue コネクタをドラッグして、**仕入先データをクレンジング**します。 これでコンポーネントが接続されました。  
   
-     ![Read Supplier Data-> Cleanse Supplier Data](../../2014/tutorials/media/et-addingdqscleansingtransformtothedataflow-01.jpg "Read Supplier Data-> 仕入先データのクレンジング")  
+     ![Supplier データの読み取り-Supplier データのクレンジング >](../../2014/tutorials/media/et-addingdqscleansingtransformtothedataflow-01.jpg "仕入先データの読み取り -> 仕入先データのクレンジング")  
   
-3.  ダブルクリック**仕入先データ クレンジング**します。  
+3.  [**仕入先データのクレンジング**] をダブルクリックします。  
   
-4.  **DQS クレンジング変換エディター**、 をクリックして**新規**横に、**データ品質接続マネージャーの一覧から**します。  
+4.  [ **DQS クレンジング変換エディター**] で、[**データ品質接続マネージャー] ボックスの一覧**の横にある [**新規**] をクリックします。  
   
-5.  **DQS クレンジング接続マネージャー**ダイアログ ボックスに「 **(local)** または**期間**(.)、ローカル サーバーに接続します。 このレッスンは、ローカル サーバーに DQS がインストールされていることを前提としています。  
+5.  [ **DQS クレンジング接続マネージャー** ] ダイアログボックスで、ローカルサーバーに接続する場合は「 **(local)** 」または「**ピリオド**(.)」と入力します。 このレッスンは、ローカル サーバーに DQS がインストールされていることを前提としています。  
   
-6.  クリックして**接続のテスト**DQS サーバーへの接続をテストします。  
+6.  [**テスト接続**] をクリックして DQS サーバーへの接続をテストします。  
   
-7.  **[OK]** をクリックしてダイアログ ボックスを閉じます。  
+7.  [**OK**] をクリックして、ダイアログ ボックスを閉じます。  
   
-8.  選択**Suppliers**の**データ品質ナレッジ ベース**します。  
+8.  **データ品質ナレッジベース**の [**仕入先**] を選択します。  
   
      ![DQS クレンジング変換エディター - 仕入先 KB](../../2014/tutorials/media/et-addingdqscleansingtransformtothedataflow-02.jpg "DQS クレンジング変換エディター - 仕入先 KB")  
   
-9. 切り替えて、**マッピング**上部にあるタブ。  
+9. 上部の [**マッピング**] タブに切り替えます。  
   
-10. **使用できる入力列**、 **Supplier Name**、 **ContactEmailAddress**、 **Address Line**、 **市区町村**、**状態**、**国**、および**郵便番号/zip Code**チェック ボックスをオンします。  
+10. [**使用できる入力列**] で、チェックボックスをオンにして [ **Supplier Name**]、[ **ContactEmailAddress**]、[ **Address Line** **]、[****市区町村**]、[ **Country**]、[**郵便**番号] を選択します。  
   
      ![DQS クレンジング変換エディター - マッピング](../../2014/tutorials/media/et-addingdqscleansingtransformtothedataflow-03.jpg "DQS クレンジング変換エディター - マッピング")  
   
-11. 下のペインで、これらの列をマップでのドロップダウン リストを使用して、**ドメイン**列。  
+11. 下のペインで、[**ドメイン**] 列のドロップダウンリストを使用してこれらの列をマップします。  
   
-    |[列]|[ドメイン]|  
+    |列|Domain|  
     |------------|------------|  
     |Supplier Name|Supplier Name|  
-    |ContactEmailAddress|Contact Email|  
+    |ContactEmailAddress|連絡先のメール アドレス|  
     |Address Line|Address Line|  
     |City|City|  
-    |状態|状態|  
+    |State|State|  
     |Country|Country|  
     |Zip Code|Zip|  
   
-12. クリックして**OK**を閉じる、 **DQS クレンジング変換エディター**  ダイアログ ボックス。  
+12. [ **OK]** をクリックして [ **DQS クレンジング変換エディター** ] ダイアログボックスを閉じます。  
   
-## <a name="next-step"></a>次の手順  
- [タスク 8:クレンジングの出力を分割する条件分割変換を追加](../../2014/tutorials/task-8-adding-conditional-split-transform-to-split-cleansing-output.md)  
+## <a name="next-step"></a>次のステップ  
+ [タスク 8: 条件分割変換を追加してクレンジング出力を分割する](../../2014/tutorials/task-8-adding-conditional-split-transform-to-split-cleansing-output.md)  
   
   

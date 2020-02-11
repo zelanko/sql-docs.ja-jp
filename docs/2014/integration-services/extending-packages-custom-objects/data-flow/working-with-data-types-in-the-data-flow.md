@@ -15,17 +15,18 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 731dda855fe29a4aada9469a5d7744b9e1d5c3d1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62898930"
 ---
 # <a name="working-with-data-types-in-the-data-flow"></a>データ フロー内のデータ型の処理
   Integration Services のカスタム データ フロー コンポーネント開発には、データ フロー バッファーにデータをコピーしたり、データ フロー バッファーからデータを取得したり、値を変換したりするなど、常にデータ型の処理が伴います。 このトピックでは、[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] データ型の正しい選択と、それを扱うための適切なメソッドの使用について説明します。  
   
 ## <a name="inserting-data-into-the-data-flow"></a>データ フローへのデータの挿入  
- <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer> クラスには、データをバッファー列にコピーするための一連の `Set` メソッドと、これらに対応して、データをバッファー列から取得するための一連の `Get` メソッドが用意されています。 次の表は、[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] の各種データ型と使用できるメソッドの対応関係を示しています。  
+ 
+  <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer> クラスには、データをバッファー列にコピーするための一連の `Set` メソッドと、これらに対応して、データをバッファー列から取得するための一連の `Get` メソッドが用意されています。 次の表は、[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] の各種データ型と使用できるメソッドの対応関係を示しています。  
   
 ### <a name="set-methods-to-use-with-data-types"></a>データ型に対して使用する Set メソッド  
  次の表は、データ型と `Set` メソッドおよび `Get` メソッドの対応関係を一覧にしたものです。  
@@ -49,14 +50,14 @@ ms.locfileid: "62898930"
 |<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_I2>|<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.SetInt16%2A>|<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.GetInt16%2A>|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_I4>|<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.SetInt32%2A>|<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.GetInt32%2A>|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_I8>|<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.SetInt64%2A>|<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.GetInt64%2A>|  
-|<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_IMAGE>|<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.AddBlobData%2A> または <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.AddBlobData%2A>|<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.GetBlobData%2A>|  
-|<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_NTEXT>|<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.AddBlobData%2A> または <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.AddBlobData%2A>|<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.GetBlobData%2A>|  
+|<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_IMAGE>|<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.AddBlobData%2A>もしくは<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.AddBlobData%2A>|<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.GetBlobData%2A>|  
+|<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_NTEXT>|<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.AddBlobData%2A>もしくは<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.AddBlobData%2A>|<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.GetBlobData%2A>|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_NULL>|<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.SetNull%2A>|このデータ型に適用できる `Get` メソッドはありません。|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_NUMERIC>|<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.SetDecimal%2A>|<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.GetDecimal%2A>|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_R4>|<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.SetSingle%2A>|<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.GetSingle%2A>|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_R8>|<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.SetDouble%2A>|<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.GetDouble%2A>|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_STR>|<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.SetString%2A>|<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.GetString%2A>|  
-|<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_TEXT>|<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.AddBlobData%2A> または <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.AddBlobData%2A>|<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.GetBlobData%2A>|  
+|<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_TEXT>|<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.AddBlobData%2A>もしくは<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.AddBlobData%2A>|<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.GetBlobData%2A>|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_UI1>|<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.SetByte%2A>|<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.GetByte%2A>|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_UI2>|<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.SetUInt16%2A>|<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.GetUInt16%2A>|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_UI4>|<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.SetUInt32%2A>|<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.GetUInt32%2A>|  
@@ -67,14 +68,15 @@ ms.locfileid: "62898930"
   
 |Set メソッド|データ型|  
 |----------------|---------------|  
-|<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.AddBlobData%2A> または <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.AddBlobData%2A>|<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_IMAGE>、<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_NTEXT>、または <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_TEXT>|  
+|<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.AddBlobData%2A>もしくは<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.AddBlobData%2A>|<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_IMAGE>、 <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_NTEXT>、または<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_TEXT>|  
 |<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.SetBoolean%2A>|<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_BOOL>|  
 |<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.SetByte%2A>|<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_UI1>|  
 |<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.SetBytes%2A>|<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_BYTES>|  
 |<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.SetDate%2A>|<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_DBDATE>|  
-|<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.SetDateTime%2A>|<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_DATE>、 <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_DBTIMESTAMP>、<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_DBTIMESTAMP2>、または <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_FILETIME>|  
+|<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.SetDateTime%2A>|
+  <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_DATE>、<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_DBTIMESTAMP>、<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_DBTIMESTAMP2>、または <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_FILETIME>|  
 |<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.SetDateTimeOffset%2A>|<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_DBTIMESTAMPOFFSET>|  
-|<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.SetDecimal%2A>|<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_CY>、<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_DECIMAL>、または <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_NUMERIC>|  
+|<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.SetDecimal%2A>|<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_CY>、 <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_DECIMAL>、または<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_NUMERIC>|  
 |<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.SetDouble%2A>|<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_R8>|  
 |<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.SetGuid%2A>|<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_GUID>|  
 |<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.SetInt16%2A>|<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_I2>|  
@@ -83,23 +85,26 @@ ms.locfileid: "62898930"
 |<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.SetNull%2A>|<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_NULL>|  
 |<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.SetSByte%2A>|<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_I1>|  
 |<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.SetSingle%2A>|<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_R4>|  
-|<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.SetString%2A>|<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_STR> または <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_WSTR>|  
-|<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.SetTime%2A>|<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_DBTIME> または <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_DBTIME2>|  
+|<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.SetString%2A>|<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_STR>もしくは<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_WSTR>|  
+|<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.SetTime%2A>|<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_DBTIME>もしくは<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_DBTIME2>|  
 |<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.SetUInt16%2A>|<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_UI2>|  
 |<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.SetUInt32%2A>|<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_UI4>|  
 |<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.SetUInt64%2A>|<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_UI8>|  
   
 ## <a name="mapping-data-types-in-the-data-flow"></a>データ フローでのデータ型のマッピング  
- 変換を介して変換元から変換先にデータを移動する際に、<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType> 列挙で定義された [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 型と、**System** 名前空間で定義された [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] のマネージド データ型との間で、データ フロー コンポーネントによるデータ型の変換が必要になる場合があります。 また、[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] データ型をマネージド型に変換する前に、別の型への変換が必要になる場合もあります。  
+ 変換を介して変換元から変換先にデータを移動する際に、 列挙で定義された [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType> 型と、System[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 名前空間で定義された **** のマネージド データ型との間で、データ フロー コンポーネントによるデータ型の変換が必要になる場合があります。 また、[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] データ型をマネージド型に変換する前に、別の型への変換が必要になる場合もあります。  
   
 > [!NOTE]  
 >  既定で C:\Program Files\Microsoft SQL Server\120\DTS\MappingFiles にインストールされる XML 形式のマッピング ファイルは、このトピックで説明するデータ型のマッピングには関連しません。 これらのファイルは、データ型をあるデータベース バージョンまたはシステムから別のデータベース バージョンまたはシステムにマップ ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] から Oracle へのマッピングなど) したものであり、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインポートおよびエクスポート ウィザードでのみ使用されます。 これらのマッピング ファイルの詳細については、「[SQL Server インポートおよびエクスポート ウィザード](../../import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)」を参照してください。  
   
 ### <a name="mapping-between-integration-services-and-managed-data-types"></a>Integration Services とマネージド データ型とのマッピング  
- <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferTypeToDataRecordType%2A> メソッドおよび <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.DataRecordTypeToBufferType%2A> メソッドは、[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のデータ型をマネージド データ型にマップします。  
+ 
+  <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferTypeToDataRecordType%2A> メソッドおよび <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.DataRecordTypeToBufferType%2A> メソッドは、[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のデータ型をマネージド データ型にマップします。  
   
 > [!CAUTION]  
->  開発者が <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent> クラスのこれらのメソッドを使用する際には注意が必要です。また、カスタム コンポーネントの固有の要件により適した独自のデータ型マッピング メソッドのコーディングが必要になる場合もあります。 既存のメソッドでは、数値有効桁数や小数点以下桁数が考慮されていません。また、他のプロパティは、データ型そのものに密接に関連します。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] の将来のバージョンでは、これらのメソッドが変更または削除されたり、メソッドが実行するマッピングが変更されたりする可能性があります。  
+>  開発者が <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent> クラスのこれらのメソッドを使用する際には注意が必要です。また、カスタム コンポーネントの固有の要件により適した独自のデータ型マッピング メソッドのコーディングが必要になる場合もあります。 既存のメソッドでは、数値有効桁数や小数点以下桁数が考慮されていません。また、他のプロパティは、データ型そのものに密接に関連します。 
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)]
+  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] の将来のバージョンでは、これらのメソッドが変更または削除されたり、メソッドが実行するマッピングが変更されたりする可能性があります。  
   
  次の表に、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferTypeToDataRecordType%2A> メソッドおよび <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.DataRecordTypeToBufferType%2A> メソッドで、各種の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] データ型がどのようにマネージド データ型にマップされるかを示します。  
   
@@ -130,10 +135,14 @@ ms.locfileid: "62898930"
 |<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_UI8>|System.UInt64|  
   
 ### <a name="mapping-integration-services-data-types-to-fit-managed-data-types"></a>Integration Services データ型から適合マネージド データ型へのマッピング  
- [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] データ型をマネージド型に変換する前に、データ フロー コンポーネントによる別の型への変換が必要になる場合もあります。 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ConvertBufferDataTypeToFitManaged%2A> メソッド クラスは、[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] データ型を、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferTypeToDataRecordType%2A> メソッドを使ってマネージド データ型にマップすることのできる、他の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] データ型にマップします。  
+ 
+  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] データ型をマネージド型に変換する前に、データ フロー コンポーネントによる別の型への変換が必要になる場合もあります。 
+  <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ConvertBufferDataTypeToFitManaged%2A> メソッド クラスは、[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] データ型を、[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] メソッドを使ってマネージド データ型にマップすることのできる、他の <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferTypeToDataRecordType%2A> データ型にマップします。  
   
 > [!CAUTION]  
->  開発者が <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent> クラスのこれらのメソッドを使用する際には注意が必要です。また、カスタム コンポーネントの固有の要件により適した独自のデータ型マッピング メソッドのコーディングが必要になる場合もあります。 既存のメソッドでは、数値有効桁数や小数点以下桁数が考慮されていません。また、他のプロパティは、データ型そのものに密接に関連します。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] の将来のバージョンでは、これらのメソッドが変更または削除されたり、メソッドが実行するマッピングが変更されたりする可能性があります。  
+>  開発者が <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent> クラスのこれらのメソッドを使用する際には注意が必要です。また、カスタム コンポーネントの固有の要件により適した独自のデータ型マッピング メソッドのコーディングが必要になる場合もあります。 既存のメソッドでは、数値有効桁数や小数点以下桁数が考慮されていません。また、他のプロパティは、データ型そのものに密接に関連します。 
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)]
+  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] の将来のバージョンでは、これらのメソッドが変更または削除されたり、メソッドが実行するマッピングが変更されたりする可能性があります。  
   
  次の表に、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ConvertBufferDataTypeToFitManaged%2A> メソッドで、[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] データ型がどのように他の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] データ型にマップされるかを示します。  
   
@@ -153,9 +162,10 @@ ms.locfileid: "62898930"
 |<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_IMAGE>|<xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DataType.DT_BYTES>|  
   
 > [!NOTE]  
->  <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ConvertBufferDataTypeToFitManaged%2A> メソッドでは、DT_DBTIMESTAMPOFFSET データ型の値が返されず、<xref:Microsoft.SqlServer.Dts.Pipeline.UnsupportedBufferDataTypeException> が発生します。 DT_DBTIMESTAMPOFFSET データ型は、マネージド データ型にマップできる、[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のいずれかの日付/時刻データ型に変換する必要があります。 マネージド データ型にマップできる [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 日付/時刻データ型の一覧については、前のセクション「Integration Services とマネージド データ型とのマッピング」の表を参照してください。 変換するデータ型については、「[Integration Services のデータ型](../../data-flow/integration-services-data-types.md)」を参照してください。  
+>  
+  <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ConvertBufferDataTypeToFitManaged%2A> メソッドでは、DT_DBTIMESTAMPOFFSET データ型の値が返されず、<xref:Microsoft.SqlServer.Dts.Pipeline.UnsupportedBufferDataTypeException> が発生します。 DT_DBTIMESTAMPOFFSET データ型は、マネージド データ型にマップできる、[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のいずれかの日付/時刻データ型に変換する必要があります。 マネージド データ型にマップできる [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 日付/時刻データ型の一覧については、前のセクション「Integration Services とマネージド データ型とのマッピング」の表を参照してください。 変換するデータ型については、「[Integration Services のデータ型](../../data-flow/integration-services-data-types.md)」を参照してください。  
   
-![Integration Services のアイコン (小)](../../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。**<br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
+![Integration Services アイコン (小)](../../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services に関するページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
 ## <a name="see-also"></a>参照  
  <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferTypeToDataRecordType%2A>   

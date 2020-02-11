@@ -24,27 +24,28 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: eb674ea7bd9540f7ae74bf9ad8737bdb83c237f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68195629"
 ---
 # <a name="openxml-sql-server"></a>OPENXML (SQLServer)
+  
   [!INCLUDE[tsql](../../includes/tsql-md.md)] キーワードの 1 つである OPENXML を使用すると、インメモリ XML ドキュメントに対してテーブルやビューと同様の行セットが提供されます。 OPENXML を使用することで、リレーショナル行セット同様に XML データにアクセスできるようになります。 これを実現するため、XML ドキュメントの内部表現の行セット ビューが用意されています。 行セット内のレコードは、データベース テーブルに格納できます。  
   
  OPENXML を使用できるのは、行セット プロバイダー、ビュー、または OPENROWSET をソースとして指定できる SELECT ステートメントおよび SELECT INTO ステートメントです。 OPENXML の構文の詳細については、「 [OPENXML &#40;Transact-SQL&#41;](/sql/t-sql/functions/openxml-transact-sql)」を参照してください。  
   
- OPENXML を使用して XML ドキュメントに対するクエリを記述するには、まず`sp_xml_preparedocument`します。 このプロシージャは XML ドキュメントを解析し、使用準備が整った解析後のドキュメントへのハンドルを返します。 解析後のドキュメントは、XML ドキュメント内のさまざまなノードを DOM (ドキュメント オブジェクト モデル) ツリーで表現したものです。 このドキュメント ハンドルは OPENXML に渡されます。 OPENXML では渡されたパラメーターを基にドキュメントの行セット ビューを用意します。  
+ OPENXML を使用して XML ドキュメントに対するクエリを作成するには`sp_xml_preparedocument`、まずを呼び出す必要があります。 このプロシージャは XML ドキュメントを解析し、使用準備が整った解析後のドキュメントへのハンドルを返します。 解析後のドキュメントは、XML ドキュメント内のさまざまなノードを DOM (ドキュメント オブジェクト モデル) ツリーで表現したものです。 このドキュメント ハンドルは OPENXML に渡されます。 OPENXML では渡されたパラメーターを基にドキュメントの行セット ビューを用意します。  
   
 > [!NOTE]  
->  `sp_xml_preparedocument` MSXML パーサー、Msxmlsql.dll SQL 更新バージョンを使用します。 このバージョンの MSXML パーサーは、MSXML Version 2.6 との後方互換性を維持したまま [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] もサポートするように設計されました。  
+>  `sp_xml_preparedocument`では、SQL 更新バージョンの MSXML parser Msxmlsql.dll が使用されます。 このバージョンの MSXML パーサーは、MSXML Version 2.6 との後方互換性を維持したまま [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] もサポートするように設計されました。  
   
  XML ドキュメントの内部表現は、 **sp_xml_removedocument** システム ストアド プロシージャを呼び出してメモリを解放することによって、メモリから削除する必要があります。  
   
  次の図は、この処理を示しています。  
   
- ![OPENXML での XML の解析](../../database-engine/media/xmlsp.gif "OPENXML での XML の解析")  
+ ![OPENXML で解析された XML](../../database-engine/media/xmlsp.gif "OPENXML で解析された XML")  
   
  OPENXML を理解するには、XPath クエリと XML を詳しく理解している必要があります。 SQL Server での XPath のサポートの詳細については、「 [SQLXML 4.0 での XPath クエリの使用](../sqlxml-annotated-xsd-schemas-xpath-queries/using-xpath-queries-in-sqlxml-4-0.md)」を参照してください。  
   
@@ -54,7 +55,9 @@ ms.locfileid: "68195629"
 ## <a name="example"></a>例  
  次の例では、 `OPENXML` ステートメントと `INSERT` ステートメントで `SELECT` を使用します。 サンプルの XML ドキュメントには、 `<Customers>` 要素と `<Orders>` 要素が含まれています。  
   
- 最初に、 `sp_xml_preparedocument` ストアド プロシージャで XML ドキュメントを解析します。 この解析済みのドキュメントでは、XML ドキュメント内のノード (要素、属性、テキスト、コメント) がツリー形式で表示されます。 `OPENXML` は次に、この解析済みの XML ドキュメントを参照して、この XML ドキュメントのすべてまたは一部の行セットを表示します。 `INSERT` ステートメントで `OPENXML` を使用すると、このような行セットのデータをデータベース テーブルに挿入できます。 複数の `OPENXML` 呼び出しを使用することで、XML ドキュメントの各部の行セット ビューを提供し、各部を処理 (たとえば、別のテーブルに挿入) できます。 この処理は、テーブルへの XML の細分化とも呼ばれます。  
+ 最初に、 `sp_xml_preparedocument` ストアド プロシージャで XML ドキュメントを解析します。 この解析済みのドキュメントでは、XML ドキュメント内のノード (要素、属性、テキスト、コメント) がツリー形式で表示されます。 
+  `OPENXML` は次に、この解析済みの XML ドキュメントを参照して、この XML ドキュメントのすべてまたは一部の行セットを表示します。 
+  `INSERT` ステートメントで `OPENXML` を使用すると、このような行セットのデータをデータベース テーブルに挿入できます。 複数の `OPENXML` 呼び出しを使用することで、XML ドキュメントの各部の行セット ビューを提供し、各部を処理 (たとえば、別のテーブルに挿入) できます。 この処理は、テーブルへの XML の細分化とも呼ばれます。  
   
  次の例では、2 つの `<Customers>` ステートメントで `Customers` 要素を `<Orders>` テーブルに格納し、 `Orders` 要素を `INSERT` テーブルに格納することで、XML ドキュメントを細分化しています。 また、この例では、 `SELECT` を使用して XML ドキュメントから `OPENXML` と `CustomerID` を取得する `OrderDate` ステートメントも示しています。 この処理の最後に `sp_xml_removedocument`が呼び出されています。 これは、解析時に作成された内部 XML ツリー表現を保持するために割り当てられたメモリを解放するための処理です。  
   
@@ -110,10 +113,12 @@ EXEC sp_xml_removedocument @docHandle;
 -   行セット列と XML ノード間のマッピング  
   
 ### <a name="xml-document-handle-idoc"></a>XML ドキュメント ハンドル (idoc)  
- ドキュメント ハンドルは、によって返される、`sp_xml_preparedocument`ストアド プロシージャ。  
+ ドキュメントハンドルは、 `sp_xml_preparedocument`ストアドプロシージャによって返されます。  
   
 ### <a name="xpath-expression-to-identify-the-nodes-to-be-processed-rowpattern"></a>処理するノードを特定するための XPath 式 (rowpattern)  
- *rowpattern* として指定する XPath 式で、XML ドキュメントに含まれる一連のノードを特定します。 *rowpattern* によって特定される各ノードが、OPENXML で生成される行セット内の 1 行に相当します。  
+ 
+  *rowpattern* として指定する XPath 式で、XML ドキュメントに含まれる一連のノードを特定します。 
+  *rowpattern* によって特定される各ノードが、OPENXML で生成される行セット内の 1 行に相当します。  
   
  XPath 式で特定するノードは、XML ドキュメント内のどの XML ノードでもかまいません。 XML ドキュメント内の一連の要素を *rowpattern* で特定すると、特定した要素ノードごとに 1 行の行セットが形成されます。 たとえば、 *rowpattern* の結果が属性になる場合は、 *rowpattern*によって選択された属性ノードごとに行が作成されます。  
   
@@ -137,17 +142,17 @@ EXEC sp_xml_removedocument @docHandle;
   
  次の表で、エッジ テーブルの構造について説明します。  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
-|**id**|**bigint**|ドキュメント ノードの一意の ID。<br /><br /> ルート要素の ID 値は 0 です。 負の ID 値は予約済みです。|  
+|**番号**|**bigint**|ドキュメント ノードの一意の ID。<br /><br /> ルート要素の ID 値は 0 です。 負の ID 値は予約済みです。|  
 |**parentid**|**bigint**|ノードの親の識別子。 この ID で識別される親が親要素だとは限りません。 識別された親が親要素であるかどうかは、この ID で識別されるノードを親とするノードの NodeType によって決まります。 たとえば、ノードがテキスト ノードの場合、その親は属性ノードである可能性があります。<br /><br /> ノードが XML ドキュメントの最上位にある場合、その **ParentID** は NULL になります。|  
-|**node type**|**int**|XML DOM (オブジェクト モデル) でノードの種類に付けられている番号に応じた、ノードの種類を識別するための整数です。<br /><br /> この列に示される、ノードの種類を示す値を次に示します。<br /><br /> **1** = 要素ノード<br /><br /> **2** = 属性ノード<br /><br /> **3** = テキスト ノード<br /><br /> **4** = CDATA セクション ノード<br /><br /> **5** = エンティティ参照ノード<br /><br /> **6** = エンティティ ノード<br /><br /> **7** = 処理命令ノード<br /><br /> **8** = コメント ノード<br /><br /> **9** = ドキュメント ノード<br /><br /> **10** = ドキュメント型ノード<br /><br /> **11** = ドキュメント フラグメント ノード<br /><br /> **12** = 注釈ノード<br /><br /> 詳細については、Microsoft XML (MSXML) SDK の「nodeType Property」を参照してください。|  
+|**ノードの種類**|**int**|XML DOM (オブジェクト モデル) でノードの種類に付けられている番号に応じた、ノードの種類を識別するための整数です。<br /><br /> この列に示される、ノードの種類を示す値を次に示します。<br /><br /> **1** = 要素ノード<br /><br /> **2** = 属性ノード<br /><br /> **3** = テキストノード<br /><br /> **4** = CDATA セクションノード<br /><br /> **5** = エンティティ参照ノード<br /><br /> **6** = エンティティノード<br /><br /> **7** = 処理命令ノード<br /><br /> **8** = コメントノード<br /><br /> **9** = ドキュメントノード<br /><br /> **10** = ドキュメント型ノード<br /><br /> **11** = ドキュメントフラグメントノード<br /><br /> **12** = Notation ノード<br /><br /> 詳細については、Microsoft XML (MSXML) SDK の「nodeType Property」を参照してください。|  
 |**localname**|**nvarchar(max)**|要素または属性のローカル名。 DOM オブジェクトに名前がない場合は NULL になります。|  
-|**プレフィックス**|**nvarchar(max)**|ノード名の名前空間のプレフィックス。|  
-|**namespaceuri**|**nvarchar(max)**|ノードの名前空間 URI。 値が NULL の場合、名前空間はありません。|  
+|**外線**|**nvarchar(max)**|ノード名の名前空間のプレフィックス。|  
+|**空間**|**nvarchar(max)**|ノードの名前空間 URI。 値が NULL の場合、名前空間はありません。|  
 |**datatype**|**nvarchar(max)**|要素行または属性行の実際のデータ型です。それ以外は NULL になります。 データ型は、インライン DTD またはインライン スキーマから推定されます。|  
-|**prev**|**bigint**|前の兄弟要素の XML ID。 前に直接の兄弟がない場合は NULL になります。|  
-|**text**|**ntext**|テキスト形式で表した属性の値または要素のコンテンツです。 エッジ テーブルのエントリに値が必要ない場合は NULL になります。|  
+|**前**|**bigint**|前の兄弟要素の XML ID。 前に直接の兄弟がない場合は NULL になります。|  
+|**本文**|**ntext**|テキスト形式で表した属性の値または要素のコンテンツです。 エッジ テーブルのエントリに値が必要ない場合は NULL になります。|  
   
 #### <a name="using-the-with-clause-to-specify-an-existing-table"></a>WITH 句を使用した既存のテーブルの指定  
  WITH 句を使用して、既存のテーブルの名前を指定できます。 これを行うには、OPENXML で使用して行セットを生成できるスキーマを持つ既存のテーブルの名前を指定するだけです。  
@@ -164,26 +169,32 @@ EXEC sp_xml_removedocument @docHandle;
   
  マッピングの指定方法は 2 種類で、それらを同時に指定することもできます。  
   
--   *flags* パラメーターを使用する方法  
+-   
+  *flags* パラメーターを使用する方法  
   
-     *flags* パラメーターで指定されるマッピングは、XML ノードが行セット内の対応する同名の列にマップされるという名前の対応が前提になっています。  
+     
+  *flags* パラメーターで指定されるマッピングは、XML ノードが行セット内の対応する同名の列にマップされるという名前の対応が前提になっています。  
   
--   *ColPattern* パラメーターを使用する方法  
+-   
+  *ColPattern* パラメーターを使用する方法  
   
-     *ColPattern*は XPath 式であり、WITH 句で *SchemaDeclaration* の一部として指定されます。 *ColPattern* で指定されるマッピングは、 *flags* パラメーターで指定されるマッピングを上書きします。  
+     *ColPattern*(XPath 式) は、WITH 句で*SchemaDeclaration*の一部として指定されています。 
+  *ColPattern* で指定されるマッピングは、 *flags* パラメーターで指定されるマッピングを上書きします。  
   
-     *ColPattern* でマッピングの種類 (属性中心、要素中心など) を指定できます。ここでの指定は、 *flags*による既定のマッピングを上書きしたり、拡張したりするものです。  
+     *ColPattern*を使用すると、属性中心または要素中心のマッピングの種類を指定して、*フラグ*で指定された既定のマッピングを上書きまたは拡張することができます。  
   
-     *ColPattern* は次の場合に指定します。  
+     *ColPattern*は、次のような場合に指定します。  
   
     -   行セット内の列名が、マップされる要素名または属性名と異なっている場合。 このとき *ColPattern* は、行セットの列をマップする XML の要素名または属性名を特定するために使用されます。  
   
     -   メタプロパティ属性を列にマップする場合。 このとき *ColPattern* は、行セットの列をマップするメタプロパティを特定するために使用されます。 メタプロパティの使用方法の詳細については、「 [OPENXML 内でのメタプロパティの指定](../xml/specify-metaproperties-in-openxml.md)」を参照してください。  
   
- *flags* パラメーターと *ColPattern* パラメーターはどちらも省略できます。 マッピングの指定がない場合、属性中心のマッピングが想定されます。 属性中心のマッピングが、 *flags* パラメーターの既定値です。  
+ 
+  *flags* パラメーターと *ColPattern* パラメーターはどちらも省略できます。 マッピングの指定がない場合、属性中心のマッピングが想定されます。 属性中心のマッピングが、 *flags* パラメーターの既定値です。  
   
 #### <a name="attribute-centric-mapping"></a>属性中心のマッピング  
- OPENXML の *flags* パラメーターを 1 (XML_ATTRIBUTES) に設定すると、 **属性中心** のマッピングが指定されます。 *flags* に XML_ATTRIBUTES が含まれていると、公開される行セットで使用される行は、各 XML 要素が 1 行として表現されます。 XML 属性は名前の対応を基に、SchemaDeclaration で定義した属性、または WITH 句の Tablename で指定した属性にマップされます。 名前の対応とは、特定の名前の XML 属性が、行セット内の同名の列に格納されることを意味します。  
+ OPENXML の *flags* パラメーターを 1 (XML_ATTRIBUTES) に設定すると、 **属性中心** のマッピングが指定されます。 
+  *flags* に XML_ATTRIBUTES が含まれていると、公開される行セットで使用される行は、各 XML 要素が 1 行として表現されます。 XML 属性は名前の対応を基に、SchemaDeclaration で定義した属性、または WITH 句の Tablename で指定した属性にマップされます。 名前の対応とは、特定の名前の XML 属性が、行セット内の同名の列に格納されることを意味します。  
   
  列名がマップ先の属性名と異なっている場合は、 *ColPattern* を指定する必要があります。  
   
@@ -196,10 +207,10 @@ EXEC sp_xml_removedocument @docHandle;
   
 -   同名のサブ要素が複数ある場合、最初のノードが返されます。  
   
-## <a name="see-also"></a>関連項目  
- [sp_xml_preparedocument &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-xml-preparedocument-transact-sql)   
- [sp_xml_removedocument &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql)   
- [OPENXML &#40;Transact-SQL&#41;](/sql/t-sql/functions/openxml-transact-sql)   
+## <a name="see-also"></a>参照  
+ [sp_xml_preparedocument &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-xml-preparedocument-transact-sql)   
+ [sp_xml_removedocument &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql)   
+ [OPENXML &#40;Transact-sql&#41;](/sql/t-sql/functions/openxml-transact-sql)   
  [XML データ &#40;SQL Server&#41;](../xml/xml-data-sql-server.md)  
   
   

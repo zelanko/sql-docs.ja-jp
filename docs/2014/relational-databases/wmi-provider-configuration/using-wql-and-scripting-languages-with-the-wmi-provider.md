@@ -1,5 +1,5 @@
 ---
-title: WQL を使用して、スクリプティング言語での WMI Provider for Configuration Management |Microsoft Docs
+title: WMI Provider for Configuration Management での WQL およびスクリプト言語の使用 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: cc9994d4429e82f2bdd4f40797df1c5f628c6500
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68195821"
 ---
 # <a name="using-wql-and-scripting-languages-with-the-wmi-provider-for-configuration-management"></a>WQL およびスクリプティング言語での WMI Provider for Configuration Management の使用
@@ -32,12 +32,12 @@ ms.locfileid: "68195821"
   
 -   VBScript などのスクリプティング言語を使用する方法  
   
- または、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスおよびネットワーク設定は、SMO で WMI マネージド オブジェクトを使用してプログラムで管理することもできます。 WMI のプログラミングの詳細については、オブジェクトをマネージを参照してください。[管理サービスとネットワーク設定を使用して WMI プロバイダーによって](../server-management-objects-smo/tasks/managing-services-and-network-settings-by-using-wmi-provider.md)します。  
+ または、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスおよびネットワーク設定は、SMO で WMI マネージド オブジェクトを使用してプログラムで管理することもできます。 WMI マネージオブジェクトのプログラミングの詳細については、「 [Wmi プロバイダーを使用したサービスとネットワーク設定の管理](../server-management-objects-smo/tasks/managing-services-and-network-settings-by-using-wmi-provider.md)」を参照してください。  
   
- WMI provider for Configuration Management には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーおよび [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理コンソールを使用してアクセスすることができます。 ユーザー インターフェイスから WMI プロバイダーへのアクセスの詳細については、次を参照してください。[管理サービスの操作方法に関するトピック&#40;SQL Server 構成マネージャー&#41;](../../database-engine/managing-services-how-to-topics-sql-server-configuration-manager.md)します。  
+ WMI provider for Configuration Management には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーおよび [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理コンソールを使用してアクセスすることができます。 ユーザーインターフェイスから WMI プロバイダーにアクセスする方法の詳細については、「[サービスの管理方法に関するトピック &#40;SQL Server 構成マネージャー&#41;](../../database-engine/managing-services-how-to-topics-sql-server-configuration-manager.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [WQL を使用して構成管理用 WMI プロバイダーにアクセス](access-wmi-provider-for-configuration-management-using-wql.md)   
+ [WQL を使用した構成管理用 WMI プロバイダーへのアクセス](access-wmi-provider-for-configuration-management-using-wql.md)   
  [VBScript を使用して SQL Server サービスの詳細プロパティを変更する](access-wmi-provider-for-configuration-management-using-vbscript.md)  
   
   

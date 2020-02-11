@@ -14,17 +14,17 @@ ms.assetid: 250062a4-13c4-4bed-807d-8b9ad81536d4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 783ad55a2355759f7625d536272f5243cd1c61c4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67963287"
 ---
 # <a name="submitchanges-method-rds"></a>SubmitChanges メソッド (RDS)
-保留中のローカル キャッシュと更新の変更を送信する[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)で指定されたデータ ソースに、 [Connect](../../../ado/reference/rds-api/connect-property-rds.md)プロパティまたは[URL](../../../ado/reference/rds-api/url-property-rds.md)プロパティ。  
+ローカルにキャッシュされたレコードセットと更新可能な[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)の保留中の変更を、[接続](../../../ado/reference/rds-api/connect-property-rds.md)プロパティまたは[URL](../../../ado/reference/rds-api/url-property-rds.md)プロパティで指定されたデータソースに送信します。  
   
 > [!IMPORTANT]
->  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)します。  
+>  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および[Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416)」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,27 +35,27 @@ DataControl.SubmitChanges DataFactory.SubmitChanges Connection, Recordset
   
 #### <a name="parameters"></a>パラメーター  
  *DataControl*  
- オブジェクト変数を表す、 [rds.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)オブジェクト。  
+ RDS を表すオブジェクト変数です[。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)オブジェクト。  
   
  *DataFactory*  
- オブジェクト変数を表す、 [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)オブジェクト。  
+ [RDSServer DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)オブジェクトを表すオブジェクト変数です。  
   
- *Connection*  
- A**文字列**で作成された接続を表す値、 **rds.DataControl**オブジェクトの[Connect](../../../ado/reference/rds-api/connect-property-rds.md)プロパティ。  
+ *接続*  
+ RDS で作成された接続を表す**文字列**値です **。DataControl**オブジェクトの[Connect](../../../ado/reference/rds-api/connect-property-rds.md)プロパティ。  
   
- *レコード セット*  
- オブジェクト変数を表す、 **Recordset**オブジェクト。  
+ *レコードセット*  
+ **レコードセット**オブジェクトを表すオブジェクト変数です。  
   
-## <a name="remarks"></a>コメント  
- [Connect](../../../ado/reference/rds-api/connect-property-rds.md)、 [Server](../../../ado/reference/rds-api/server-property-rds.md)、および[SQL](../../../ado/reference/rds-api/sql-property.md)を使用するには、プロパティを設定する必要があります、 **SubmitChanges**メソッドを**RDS.DataControl**オブジェクト。  
+## <a name="remarks"></a>解説  
+ RDS で**SubmitChanges**メソッドを使用するには、先に[Connect](../../../ado/reference/rds-api/connect-property-rds.md)、 [Server](../../../ado/reference/rds-api/server-property-rds.md)、および[SQL](../../../ado/reference/rds-api/sql-property.md)の各プロパティを設定する必要があり**ます。DataControl**オブジェクト。  
   
- 呼び出す場合、 [CancelUpdate](../../../ado/reference/rds-api/cancelupdate-method-rds.md)メソッドを呼び出した後**SubmitChanges**同じ**Recordset**オブジェクト、 **CancelUpdate**変更がコミット済みの呼び出しは失敗します。  
+ 同じ**レコードセット**オブジェクトに対して**SubmitChanges**を呼び出した後に[cancelupdate](../../../ado/reference/rds-api/cancelupdate-method-rds.md)メソッドを呼び出すと、変更が既にコミットされているため、 **cancelupdate**呼び出しは失敗します。  
   
- 成功または失敗するすべての変更、変更、および変更のすべての変更されたレコードだけが送信されます。  
+ 変更されたレコードだけが変更され、すべての変更が成功するか、すべての変更が一緒に失敗します。  
   
- 使用することができます**SubmitChanges**既定値でのみ**RDSServer.DataFactory**オブジェクト。 カスタム ビジネス オブジェクトには、このメソッドを使用できません。  
+ **SubmitChanges**は、既定の**RDSServer**オブジェクトでのみ使用できます。 カスタムビジネスオブジェクトでは、この方法を使用できません。  
   
- 場合、 **URL**プロパティが設定されている、 **SubmitChanges** URL で指定された場所の変更を送信します。  
+ **Url**プロパティが設定されている場合、 **SubmitChanges**は url で指定された場所に変更を送信します。  
   
 ## <a name="applies-to"></a>適用対象  
   
@@ -63,9 +63,9 @@ DataControl.SubmitChanges DataFactory.SubmitChanges Connection, Recordset
 |-|-|  
 |[DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)|[DataFactory オブジェクト (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SubmitChanges メソッドの例 (VBScript)](../../../ado/reference/rds-api/submitchanges-method-example-vbscript.md)   
- [アドレス帳のコマンド ボタン](../../../ado/guide/remote-data-service/address-book-command-buttons.md)   
+ [アドレス帳のコマンドボタン](../../../ado/guide/remote-data-service/address-book-command-buttons.md)   
  [CancelUpdate メソッド (RDS)](../../../ado/reference/rds-api/cancelupdate-method-rds.md)   
  [Refresh メソッド (RDS)](../../../ado/reference/rds-api/refresh-method-rds.md)
 

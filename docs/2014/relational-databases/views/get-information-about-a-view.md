@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f439a52c1f2d13ed3d3d7fc96030df9c6e020b2e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211644"
 ---
 # <a name="get-information-about-a-view"></a>ビューに関する情報の取得
@@ -38,7 +38,7 @@ ms.locfileid: "68211644"
   
 -   **作業を開始する準備:**  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **以下を使用してビューに関する情報を取得するには:**  
   
@@ -112,7 +112,7 @@ ms.locfileid: "68211644"
      **データベース名**  
      このビューを含むデータベースの名前です。  
   
-     **[説明]**  
+     **説明**  
      現在のビューの簡単な説明です。  
   
      **[スキーマ]**  

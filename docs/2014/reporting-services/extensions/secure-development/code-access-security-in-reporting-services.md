@@ -18,18 +18,22 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3dd8d60c975efa1e0a230a08cc6b1ab1a9ce149b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62985738"
 ---
 # <a name="code-access-security-in-reporting-services"></a>Reporting Services のコード アクセス セキュリティ
-  コード アクセス セキュリティの中核を成す概念として、証拠、コード グループ、名前付き権限セットがあります。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]、レポート マネージャー、レポート デザイナー、およびレポート サーバー コンポーネントには、それぞれ、データ、配信、表示、セキュリティ拡張機能はもとより、カスタム アセンブリのコード アクセス セキュリティを設定するポリシー ファイルが存在します。 以下のセクションでは、コード アクセス セキュリティの概要について説明します。 このセクションで取り上げられているトピックの詳細については、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK ドキュメントの「セキュリティ ポリシー モデル」を参照してください。  
+  コード アクセス セキュリティの中核を成す概念として、証拠、コード グループ、名前付き権限セットがあります。 
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]、レポート マネージャー、レポート デザイナー、およびレポート サーバー コンポーネントには、それぞれ、データ、配信、表示、セキュリティ拡張機能はもとより、カスタム アセンブリのコード アクセス セキュリティを設定するポリシー ファイルが存在します。 以下のセクションでは、コード アクセス セキュリティの概要について説明します。 このセクションで説明しているトピックの詳細については、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK ドキュメントの「セキュリティポリシーモデル」を参照してください。  
   
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] はコード アクセス セキュリティを使用します。その理由は、レポート サーバーは [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] テクノロジに基づき構築されているものの、一般の [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] アプリケーションとレポート サーバーの間には根本的な相違があるからです。 一般的な [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] アプリケーションはユーザー コードを実行しません。 一方、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] ではオープンで拡張性のあるアーキテクチャが採用されています。これにより、ユーザーが、レポート定義言語の **Code** 要素を使用して、レポート定義ファイルを処理できるプログラムを作成すること、および特殊な機能を開発してレポートで使用するカスタム アセンブリに組み込むことが可能になります。 さらに、開発者は、レポート サーバーの能力を増強する強力な拡張機能を設計、展開できます。 この能力と柔軟性のために、最大限の防御とセキュリティが必要です。  
+ 
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] はコード アクセス セキュリティを使用します。その理由は、レポート サーバーは [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] テクノロジに基づき構築されているものの、一般の [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] アプリケーションとレポート サーバーの間には根本的な相違があるからです。 一般的な [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] アプリケーションはユーザー コードを実行しません。 一方、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] ではオープンで拡張性のあるアーキテクチャが採用されています。これにより、ユーザーが、レポート定義言語の **Code** 要素を使用して、レポート定義ファイルを処理できるプログラムを作成すること、および特殊な機能を開発してレポートで使用するカスタム アセンブリに組み込むことが可能になります。 さらに、開発者は、レポート サーバーの能力を増強する強力な拡張機能を設計、展開できます。 この能力と柔軟性のために、最大限の防御とセキュリティが必要です。  
   
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] の開発者はレポートの中で任意の [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] アセンブリを使用でき、グローバル アセンブリ キャッシュに展開されているアセンブリのすべての機能をネイティブに利用できます。 レポート サーバーによって制御されることは、レポートの式とロードされたカスタム アセンブリに与えられる権限だけです。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] では、カスタム アセンブリに既定で **Execute** 専用アクセス許可が与えられます。  
+ 
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] の開発者はレポートの中で任意の [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] アセンブリを使用でき、グローバル アセンブリ キャッシュに展開されているアセンブリのすべての機能をネイティブに利用できます。 レポート サーバーによって制御されることは、レポートの式とロードされたカスタム アセンブリに与えられる権限だけです。 
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] では、カスタム アセンブリに既定で **Execute** 専用アクセス許可が与えられます。  
   
 ## <a name="evidence"></a>証拠  
  証拠は、共通言語ランタイム (CLR) がコード アセンブリのセキュリティ ポリシーを決定するために使用する情報です。 証拠は、コードが固有の特性を持っていることを、ランタイムに知らせます。 証拠の共通の形式には、デジタル署名やアセンブリの場所が含まれます。 証拠は、アプリケーションにとって意味のある、他の情報を表すようにカスタマイズすることもできます。  
@@ -60,7 +64,8 @@ ms.locfileid: "62985738"
  名前付き権限セットは、管理者がコード グループに関連付けることができる権限のセットです。 ほとんどの名前付き権限セットは、少なくとも、1 つの権限、名前、および権限セットの説明から構成されます。 管理者は、名前付き権限セットを使用して、コード グループのセキュリティ ポリシーを作成または変更できます。 複数のコード グループを同じ名前付き権限セットに関連付けることができます。 CLR には、**Nothing**、**Execution**、**Internet**、**LocalIntranet**、**Everything**、**FullTrust** などの、組み込みの名前付きアクセス許可セットが用意されています。  
   
 > [!NOTE]  
->  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] のカスタム データ、配信、表示、およびセキュリティの拡張機能は、**FullTrust** アクセス許可セットの下で実行する必要があります。 システム管理者と協力して、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 拡張機能の適切なコード グループと構成メンバー条件を追加します。  
+>  
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] のカスタム データ、配信、表示、およびセキュリティの拡張機能は、**FullTrust** アクセス許可セットの下で実行する必要があります。 システム管理者と協力して、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 拡張機能の適切なコード グループと構成メンバー条件を追加します。  
   
  使用するカスタム アセンブリに対する自身のカスタム権限レベルを、レポートに関連付けることができます。 たとえば、アセンブリが特定のファイルにアクセスする場合、その特定のファイルに対する I/O アクセスを許可する名前付き権限セットを作成し、その権限セットをコード グループに割り当てます。 次の権限セットは、ファイル MyFile.xml に対する読み取り専用のアクセスを許可します。  
   

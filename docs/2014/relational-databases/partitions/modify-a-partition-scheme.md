@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 56148cca72ca9561219a9ea14025b0bd0f2204b5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206568"
 ---
 # <a name="modify-a-partition-scheme"></a>パーティション構成の変更
@@ -26,7 +26,7 @@ ms.locfileid: "68206568"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **以下を使用してパーティション テーブルまたはパーティション インデックスを作成するには:**  
   
@@ -53,7 +53,7 @@ ms.locfileid: "68206568"
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
  **パーティション構成を変更するには:**  
   
- この操作は、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]では実行できません。 パーティション構成を変更するには、最初にパーティション構成を削除し、パーティションの作成ウィザードを使用して必要なプロパティを持つ新しいパーティション構成を作成する必要があります。 詳細については、次を参照してください。[パーティション分割されてテーブルの作成と SQL Server Management Studio のインデックスを使用して](create-partitioned-tables-and-indexes.md#SSMSProcedure)**作成 Partitioned Tables and Indexes**します。  
+ この操作は、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]では実行できません。 パーティション構成を変更するには、最初にパーティション構成を削除し、パーティションの作成ウィザードを使用して必要なプロパティを持つ新しいパーティション構成を作成する必要があります。 詳細については、「**パーティションテーブルとパーティションインデックスの作成**」の「 [SQL Server Management Studio を使用したパーティションテーブルとパーティションインデックスの作成](create-partitioned-tables-and-indexes.md#SSMSProcedure)」を参照してください。  
   
 #### <a name="to-delete-a-partition-scheme"></a>パーティション構成を削除するには  
   

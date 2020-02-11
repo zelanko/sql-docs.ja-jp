@@ -1,5 +1,5 @@
 ---
-title: sp_delete_jobstep (TRANSACT-SQL) |Microsoft Docs
+title: sp_delete_jobstep (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: 421ede8e-ad57-474a-9fb9-92f70a3e77e3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8e55465dfe2424144d74bc40492fdb897d4aa72b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68130623"
 ---
-# <a name="spdeletejobstep-transact-sql"></a>sp_delete_jobstep (Transact-SQL)
+# <a name="sp_delete_jobstep-transact-sql"></a>sp_delete_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   ジョブからジョブ ステップを削除します。  
@@ -41,13 +41,13 @@ sp_delete_jobstep { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @job_id = ] job_id` ステップの削除元となるジョブの識別番号。 *job_id*は**uniqueidentifier**、既定値は NULL です。  
+`[ @job_id = ] job_id`ステップの削除元となるジョブの識別番号を指定します。 *job_id*は**uniqueidentifier**,、既定値は NULL です。  
   
-`[ @job_name = ] 'job_name'` ステップの削除元となるジョブの名前。 *job_name*は**sysname**、既定値は NULL です。  
+`[ @job_name = ] 'job_name'`ステップを削除するジョブの名前を指定します。 *job_name*は**sysname**,、既定値は NULL です。  
   
-> **注:** いずれか*job_id*または*job_name*指定する必要があります。 両方を指定することはできません。  
+> **注:***Job_id*または*job_name*のいずれかを指定する必要があります。両方を指定することはできません。  
   
-`[ @step_id = ] step_id` 削除するステップの識別番号。 *step_id*は**int**、既定値はありません。  
+`[ @step_id = ] step_id`削除するステップの識別番号を指定します。 *step_id*は**int**,、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -55,17 +55,17 @@ sp_delete_jobstep { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ## <a name="result-sets"></a>結果セット  
  なし  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  ジョブ ステップを削除すると、削除したステップを参照する他のジョブ ステップは自動的に更新されます。  
   
- 特定のジョブに関連する手順の詳細については、実行**sp_help_jobstep**します。  
+ 特定のジョブに関連付けられている手順の詳細については、 **sp_help_jobstep**を実行してください。  
   
-> **注:** 呼び出す**sp_delete_jobstep**で、 *step_id*ゼロの値はすべて、ジョブのジョブ ステップを削除します。  
+> **注:***Step_id*値が0の**sp_delete_jobstep**を呼び出すと、そのジョブのすべてのジョブステップが削除されます。  
   
  Microsoft SQL Server Management Studio は、ジョブを簡単に管理できるグラフィカルなツールです。ジョブのインフラストラクチャを作成し、管理するには、Microsoft SQL Server Management Studio を使用することをお勧めします。  
   
 ## <a name="permissions"></a>アクセス許可  
- 既定では、このストアド プロシージャを実行できるのは、 **sysadmin** 固定サーバー ロールのメンバーです。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
+ 既定では、 **sysadmin**固定サーバーロールのメンバーは、このストアドプロシージャを実行できます。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
   
 -   **SQLAgentUserRole**  
   
@@ -75,10 +75,10 @@ sp_delete_jobstep { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
   
  これらのロールの権限の詳細については、「 [SQL Server エージェントの固定データベース ロール](../../ssms/agent/sql-server-agent-fixed-database-roles.md)」を参照してください。  
   
- メンバーだけ**sysadmin**別のユーザーが所有するジョブ ステップを削除することができます。  
+ 別のユーザーが所有するジョブステップを削除できるのは、 **sysadmin**のメンバーだけです。  
   
-## <a name="examples"></a>使用例  
- 次の例では、ジョブ ステップを削除する`1`ジョブから`Weekly Sales Data Backup`します。  
+## <a name="examples"></a>例  
+ 次の例では、 `1`ジョブからジョブ`Weekly Sales Data Backup`ステップを削除します。  
   
 ```  
 USE msdb ;  
@@ -90,11 +90,11 @@ EXEC dbo.sp_delete_jobstep
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [表示またはジョブの変更](../../ssms/agent/view-or-modify-jobs.md)   
- [sp_add_jobstep &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)   
- [sp_update_jobstep &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql.md)   
- [sp_help_jobstep &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
- [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>参照  
+ [ジョブの表示または変更](../../ssms/agent/view-or-modify-jobs.md)   
+ [sp_add_jobstep &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)   
+ [sp_update_jobstep &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql.md)   
+ [sp_help_jobstep &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
+ [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

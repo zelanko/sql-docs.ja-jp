@@ -1,5 +1,5 @@
 ---
-title: レッスン 1:Services プロジェクト内での分析データ ソース ビューの定義 |Microsoft Docs
+title: 'レッスン 1: Analysis Services プロジェクト内でのデータソースビューの定義 |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 08d4d24f9049c2fd68e827664ecb07393262d8bf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079209"
 ---
-# <a name="lesson-1-defining-a-data-source-view-within-an-analysis-services-project"></a>レッスン 1:Analysis Services プロジェクト内でのデータ ソース ビューの定義
+# <a name="lesson-1-defining-a-data-source-view-within-an-analysis-services-project"></a>レッスン 1 : Analysis Services プロジェクト内でのデータ ソース ビューの定義
+  
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] でビジネス インテリジェンス アプリケーションを設計するには、まず、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] で [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]プロジェクトを作成します。 このプロジェクト内で、ソリューションに必要なすべての要素を定義します。最初に定義するのはデータ ソース ビューです。  
   
  このレッスンの内容は次のとおりです。  
@@ -34,16 +35,16 @@ ms.locfileid: "66079209"
  [既定のテーブル名の変更](lesson-1-4-modifying-default-table-names.md)  
  この実習では、この後で定義する [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] オブジェクトを識別しやすくするために、データ ソース ビューのテーブル名をわかりやすい名前に変更します。  
   
- 結果を、このレッスン用にビルドされたサンプル プロジェクト ファイルと比較してください。 このチュートリアルのサンプル プロジェクトのダウンロードの詳細については、CodePlex の製品サンプル ページで「[SSAS Multidimensional Model Projects for SQL Server 2012](https://go.microsoft.com/fwlink/p/?LinkID=221866)」を参照してください。  
+ 結果を、このレッスン用にビルドされたサンプル プロジェクト ファイルと比較してください。 このチュートリアルのサンプル プロジェクトのダウンロードの詳細については、CodePlex の製品サンプル ページで「 [SSAS Multidimensional Model Projects for SQL Server 2012](https://go.microsoft.com/fwlink/p/?LinkID=221866) 」を参照してください。  
   
 ## <a name="next-lesson"></a>次のレッスン  
- [レッスン 2:定義と、キューブの配置](lesson-2-defining-and-deploying-a-cube.md)  
+ [レッスン 2 : キューブの定義と配置](lesson-2-defining-and-deploying-a-cube.md)  
   
 ## <a name="see-also"></a>参照  
- [Analysis Services プロジェクトの作成 (SSDT)](multidimensional-models/create-an-analysis-services-project-ssdt.md)   
- [サポートされるデータ ソース&#40;SSAS 多次元&#41;](multidimensional-models/supported-data-sources-ssas-multidimensional.md)   
- [多次元モデルのデータ ソース ビュー](multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [Analysis Services のチュートリアル シナリオ](analysis-services-tutorial-scenario.md)   
- [多次元モデリング (Adventure Works チュートリアル)](multidimensional-modeling-adventure-works-tutorial.md)  
+ [SSDT&#41;&#40;Analysis Services プロジェクトを作成する](multidimensional-models/create-an-analysis-services-project-ssdt.md)   
+ [SSAS 多次元&#41;&#40;サポートされるデータソース](multidimensional-models/supported-data-sources-ssas-multidimensional.md)   
+ [多次元モデルのデータソースビュー](multidimensional-models/data-source-views-in-multidimensional-models.md)   
+ [Analysis Services チュートリアルのシナリオ](analysis-services-tutorial-scenario.md)   
+ [Adventure Works チュートリアル &#40;の多次元モデリング&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
   
   

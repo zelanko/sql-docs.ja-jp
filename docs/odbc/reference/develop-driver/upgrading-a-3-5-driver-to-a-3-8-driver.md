@@ -1,5 +1,5 @@
 ---
-title: 3\.5 ドライバーをドライバー 3.8 にアップグレードする |Microsoft Docs
+title: 3.5 ドライバーを 3.8 Driver にアップグレードする |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,66 +11,66 @@ ms.assetid: ffba36ac-d22e-40b9-911a-973fa9e10bd3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 97b100b1ade97e1e88cf1421f09a7723412c8b76
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67915497"
 ---
 # <a name="upgrading-a-35-driver-to-a-38-driver"></a>ドライバー 3.5 をドライバー 3.8 にアップグレードする
-このトピックでは、ガイドラインと、ODBC 3.8 ドライバーに、ODBC 3.5 ドライバーをアップグレードするための考慮事項を提供します。  
+このトピックでは、ODBC 3.5 ドライバーを ODBC 3.8 ドライバーにアップグレードする際のガイドラインと考慮事項について説明します。  
   
 ##### <a name="version-numbers"></a>バージョン番号  
  次のガイドラインは、バージョン番号に関連しています。  
   
--   ドライバーは、SQL_OV_ODBC2、SQL_OV_ODBC3、および SQL_OV_ODBC3_80 以外の値の SQL_ERROR を返す SQL_ATTR_ODBC_VERSION の SQL_OV_ODBC3_80 をサポートする必要があります。 将来のバージョンのドライバー マネージャーは、ドライバーでは、ドライバーはから SQL_SUCCESS を返す場合に、ODBC のコンプライアンス レベルがサポートするいると仮定して[SQLSetEnvAttr 関数](../../../odbc/reference/syntax/sqlsetenvattr-function.md)します。  
+-   ドライバーは、SQL_ATTR_ODBC_VERSION の SQL_OV_ODBC3_80 をサポートし、SQL_OV_ODBC2、SQL_OV_ODBC3、SQL_OV_ODBC3_80 以外の値に対して SQL_ERROR を返す必要があります。 ドライバーマネージャーの将来のバージョンでは、ドライバーが[SQLSetEnvAttr 関数](../../../odbc/reference/syntax/sqlsetenvattr-function.md)から SQL_SUCCESS を返す場合、ドライバーが ODBC 対応レベルをサポートしていると想定します。  
   
--   バージョン 3.8 ドライバーから 03.80 を返す必要があります**SQLGetInfo** SQL_DRIVER_ODBC_VER に渡された場合*情報の種類*します。 ただし、古いドライバー マネージャーでは、Microsoft Windows の以前のバージョンに含まれていたはバージョン 3.5 のドライバー、ドライバーを処理し、警告を発行します。  
+-   SQL_DRIVER_ODBC_VER が*InfoType*に渡されると、バージョン3.8 ドライバーは**SQLGetInfo**から03.80 を返す必要があります。 ただし、以前のバージョンの Microsoft Windows に含まれていた古いドライバーマネージャーは、ドライバーをバージョン3.5 のドライバーとして扱い、警告を発行します。  
   
-     Windows 7 では、ドライバー マネージャーのバージョンは、03.80 が。 Windows 8 のドライバー マネージャーのバージョンは SQLGetInfo SQL_DM_VER を介して 03.81 (*情報の種類*パラメーター)。 SQL_ODBC_VER 03.80 Windows 7 および Windows 8 の両方でバージョンを報告します。  
+     Windows 7 では、ドライバーマネージャーのバージョンは03.80 です。 Windows 8 では、ドライバーマネージャーのバージョンは、SQLGetInfo SQL_DM_VER (*InfoType*パラメーター) を介して03.81 です。 SQL_ODBC_VER は、Windows 7 と Windows 8 の両方でバージョンを03.80 として報告します。  
   
 ##### <a name="driver-specific-c-data-types"></a>ドライバー固有の C データ型  
- バージョン 3.8 の ODBC アプリケーションでうまく機能するときに、ドライバーが C データ型をカスタマイズしていることができます。 (詳細については、次を参照してください[ODBC における C データ型](../../../odbc/reference/develop-app/c-data-types-in-odbc.md)。)。ただし、3.8 のドライバー、ドライバー固有の C 型を実装するための要件はありません。 ドライバーは、C の型の範囲チェックを実行する必要がありますもが、ドライバー マネージャーは行いませんを 3.8 ドライバー。 ドライバーの開発を容易にドライバー固有の C データ型の値は、次の形式で定義できます。  
+ ドライバーは、バージョン3.8 の ODBC アプリケーションで動作するときに、C データ型をカスタマイズできます。 (詳細については、「 [ODBC での C データ型](../../../odbc/reference/develop-app/c-data-types-in-odbc.md)」を参照してください)。ただし、3.8 ドライバーがドライバー固有の C 型を実装する必要はありません。 ただし、ドライバーは引き続き C 型の範囲チェックを実行する必要があります。ドライバーマネージャーは、3.8 のドライバーに対してこれを実行しません。 ドライバーの開発を容易にするために、ドライバー固有の C データ型の値は、次の形式で定義できます。  
   
 ```  
 SQL_DRIVER_C_TYPE_BASE+0, SQL_DRIVER_C_TYPE_BASE+1  
 ```  
   
-##### <a name="driver-specific-data-types-descriptor-types-information-types-diagnostic-types-and-attributes"></a>ドライバー固有のデータ型、記述子の種類、情報の種類、診断型、および属性  
- 新しいドライバーを開発する場合は、データ型、記述子の種類、情報の種類、診断型、および属性のドライバー固有の範囲を使用する必要があります。 ドライバー固有の範囲とその基本型の値は、後ほど[ドライバー固有のデータ型、記述子の種類、情報の種類、診断型、および属性](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md)します。  
+##### <a name="driver-specific-data-types-descriptor-types-information-types-diagnostic-types-and-attributes"></a>ドライバー固有のデータ型、記述子の型、情報の種類、診断の種類、および属性  
+ 新しいドライバーを開発するときは、データ型、記述子の型、情報の種類、診断の種類、および属性に対してドライバー固有の範囲を使用する必要があります。 ドライバー固有の範囲とその基本型の値については[、「ドライバー固有のデータ型、記述子の型、情報の種類、診断の種類、および属性](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md)」を参照してください。  
   
 ##### <a name="connection-pooling"></a>接続のプール  
- 接続プールのより優れた管理は、ODBC 3.8 に SQL_ATTR_RESET_CONNECTION 接続属性が導入されています**SQLSetConnectAttr**します。 SQL_RESET_CONNECTION_YES は、この属性の唯一の有効な値です。 ドライバー マネージャーは、ドライバー、その他の接続属性を既定値にリセットすることができますの接続プール内の接続を配置する前に、SQL_ATTR_RESET_CONNECTION が設定されます。  
+ 接続プールの管理を強化するために、ODBC 3.8 では**SQLSetConnectAttr**の SQL_ATTR_RESET_CONNECTION 接続属性が導入されています。 SQL_RESET_CONNECTION_YES は、この属性の唯一の有効な値です。 SQL_ATTR_RESET_CONNECTION は、ドライバーマネージャーが接続プールに接続を配置する直前に設定されます。これにより、ドライバーは他の接続属性を既定値にリセットできます。  
   
- サーバーとの不要な通信を避けるためには、ドライバーは、接続がプールから再利用後に再設定、リモート サーバーで次の通信まで、接続属性を延期できます。  
+ サーバーとの不要な通信を回避するために、ドライバーは接続がプールから再利用された後、リモートサーバーとの次の通信が行われるまで、接続属性のリセットを遅延させることができます。  
   
- SQL_ATTR_RESET_CONNECTION がドライバー マネージャーとドライバーの間の通信にのみ使用されるに注意してください。 アプリケーションでは、直接この属性を設定できません。 バージョン 3.8 のすべてのドライバーでは、この接続属性を実装する必要があります。  
+ SQL_ATTR_RESET_CONNECTION は、ドライバーマネージャーとドライバー間の通信にのみ使用されることに注意してください。 アプリケーションでこの属性を直接設定することはできません。 すべてのバージョン3.8 ドライバーは、この接続属性を実装する必要があります。  
   
-##### <a name="streamed-output-parameters"></a>ストリームの出力パラメーター  
- ODBC バージョン 3.8 は、出力パラメーターを取得する、ストリームの出力パラメーターをよりスケーラブルな方法を紹介します。 (詳細については、次を参照してください[SQLGetData を使用して出力パラメーターを取得する](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)。)。この機能をサポートするドライバーをする必要があります設定 SQL_GD_OUTPUT_PARAMS 戻り値の SQL_GETDATA_EXTENSIONS が、*情報の種類*で、 **SQLGetInfo**呼び出します。 ストリームの出力パラメーターを持つ SQL の型のサポートは、ドライバーに実装する必要があります。 ドライバー マネージャーでは、無効な SQL 型のエラーは生成されません。 ストリーミングされる出力パラメーターをサポートする SQL 型は、ドライバーで定義されます。  
+##### <a name="streamed-output-parameters"></a>ストリーム出力パラメーター  
+ ODBC バージョン3.8 では、ストリーム出力パラメーターが導入されています。これは、出力パラメーターを取得するためのよりスケーラブルな方法です。 (詳細については、「 [SQLGetData を使用した出力パラメーターの取得](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)」を参照してください)。この機能をサポートするには、SQL_GETDATA_EXTENSIONS が**SQLGetInfo**呼び出しの*InfoType*である場合、ドライバーは戻り値に SQL_GD_OUTPUT_PARAMS を設定する必要があります。 ストリーム出力パラメーターを使用した SQL 型のサポートは、ドライバーで実装する必要があります。 ドライバーマネージャーでは、無効な SQL の種類に対してエラーは生成されません。 ストリーム出力パラメーターをサポートする SQL 型は、ドライバーで定義されています。  
   
- アプリケーションが使用されている場合、ドライバーは SQL_ERROR を返す必要があります**SQLGetData**によって返されるパラメーターと同じではないパラメーターを取得する**SQLParamData**します。  
+ アプリケーションが**SQLGetData**を使用して、 **sqlparamdata**によって返されるパラメーターとは異なるパラメーターを取得した場合、ドライバーは SQL_ERROR を返します。  
   
-##### <a name="asynchronous-execution-for-connection-operations-polling-method"></a>接続操作 (ポーリング メソッド) の非同期の実行  
- ドライバーは、さまざまな接続の操作の非同期サポートを有効にできます。  
+##### <a name="asynchronous-execution-for-connection-operations-polling-method"></a>接続操作の非同期実行 (ポーリングメソッド)  
+ ドライバーは、さまざまな接続操作の非同期サポートを有効にすることができます。  
   
- ODBC では Windows 7 以降では、ポーリング メソッド (詳細については、次を参照してください。[非同期実行 (ポーリング メソッド)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)します。 接続ハンドルで非同期操作を実装するために、バージョン 3.8 の ODBC ドライバーの要件はありません。 ドライバーが、SQL_ASYNC_DBC_FUNCTIONS を実装する必要がありますも、ドライバーが接続ハンドルで非同期操作を実装していない場合でも*情報の種類*戻って**SQL_ASYNC_DBC_NOT_CAPABLE**します。  
+ Windows 7 以降では、ODBC はポーリングメソッドをサポートしています (詳細については、「[非同期実行 (ポーリングメソッド)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)」を参照してください)。 バージョン3.8 の ODBC ドライバーでは、接続ハンドルに非同期操作を実装する必要はありません。 ドライバーが接続ハンドルに対して非同期操作を実装していない場合でも、ドライバーは SQL_ASYNC_DBC_FUNCTIONS *InfoType*を実装し、 **SQL_ASYNC_DBC_NOT_CAPABLE**を返します。  
   
- 非同期接続の操作を有効にすると、接続操作の実行時間、繰り返しのすべての呼び出しの合計時間です。 最後の呼び出しは、時間の合計が、SQL_ATTR_CONNECTION_TIMEOUT 接続属性で設定された値を超えていて、操作が完了していません後に発生しますを繰り返し、場合、ドライバーは SQL_ERROR を返しますと、SQLState HYT01 を使用して診断レコードを記録し、。メッセージの「接続のタイムアウトが期限切れ」です。 操作が完了している場合、タイムアウトはありません。  
+ 非同期接続操作が有効になっている場合、接続操作の実行時間は、すべての繰り返し呼び出しの合計時間になります。 合計時間が SQL_ATTR_CONNECTION_TIMEOUT 接続属性によって設定された値を超え、操作が完了していない状態で最後に繰り返し呼び出された場合、ドライバーは SQL_ERROR を返し、SQLState HYT01 と"接続タイムアウトが経過しました。" というメッセージが表示できます。 操作が終了した場合、タイムアウトはありません。  
   
 ##### <a name="sqlcancelhandle-function"></a>SQLCancelHandle 関数  
- ODBC 3.8 サポート[SQLCancelHandle 関数](../../../odbc/reference/syntax/sqlcancelhandle-function.md)接続とステートメントの両方の操作のキャンセルに使用されます。 サポートするドライバー **SQLCancelHandle**関数をエクスポートする必要があります。 ドライバーは、アプリケーションから呼び出す場合は、進行中の任意の同期または非同期接続関数をキャンセルしないでください**SQLCancel**または**SQLCancelHandle**ステートメント ハンドルでします。 同様に、ドライバーが、アプリケーションから呼び出す場合、進行中は任意のステートメントを同期または非同期関数をキャンセルしないでください**SQLCancelHandle**接続ハンドル。 また、ドライバーが閲覧操作をキャンセルする必要があります (**SQLBrowseConnect** SQL_NEED_DATA を返します)、アプリケーションから呼び出す場合**SQLCancelHandle**接続ハンドル。 このような場合は、ドライバーは HY010、「関数のシーケンス エラー」を返す必要があります。  
+ ODBC 3.8 では、接続とステートメントの両方の操作を取り消すために使用される[Sqlcancelhandle 関数](../../../odbc/reference/syntax/sqlcancelhandle-function.md)がサポートされています。 **Sqlcancelhandle**をサポートするドライバーは、関数をエクスポートする必要があります。 アプリケーションがステートメントハンドルで**SQLCancel**または**sqlcancelhandle**を呼び出す場合、実行中の同期または非同期接続関数は、ドライバーによってキャンセルされません。 同様に、アプリケーションが接続ハンドルで**Sqlcancelhandle**を呼び出す場合、実行中の同期または非同期のステートメント関数をドライバーで取り消すことはできません。 また、アプリケーションが接続ハンドルで**Sqlcancelhandle**を呼び出すと、ドライバーは参照操作をキャンセルしないようにする必要があります (**SQLBrowseConnect**は SQL_NEED_DATA を返します)。 このような場合、ドライバーは HY010 "関数シーケンスエラー" を返します。  
   
- 両方をサポートする必要はありません**SQLCancelHandle**と同時に操作を非同期接続します。 ドライバーは、非同期接続の操作をサポートできますが**SQLCancelHandle**、またはその逆です。  
+ **Sqlcancelhandle**と非同期接続の両方の操作を同時にサポートする必要はありません。 ドライバーは非同期接続操作をサポートできますが、 **Sqlcancelhandle**はサポートできません。また、その逆も可能です。  
   
-##### <a name="suspended-connections"></a>中断状態の接続  
- ODBC 3.8 ドライバー マネージャーは、接続を中断状態に配置できます。 アプリケーションが呼び出す**SQLDisconnect**接続に関連付けられたリソースを解放します。 この場合、ドライバーは接続の状態をチェックせず、できるだけ多くのリソースを解放するください。 中断状態の詳細については、次を参照してください。 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)します。  
+##### <a name="suspended-connections"></a>中断された接続  
+ ODBC 3.8 Driver Manager では、接続を中断状態にすることができます。 アプリケーションは**Sqldisconnect**を呼び出して、接続に関連付けられているリソースを解放します。 この場合、ドライバーは接続の状態を確認せずに、可能な限り多くのリソースを解放しようとします。 中断状態の詳細については、「 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)」を参照してください。  
   
 ##### <a name="driver-aware-connection-pooling"></a>ドライバー対応接続プール  
- Windows 8 での ODBC では、接続プールの動作をカスタマイズするドライバーを許可します。 詳細については、次を参照してください。[ドライバー対応接続プール](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)します。  
+ Windows 8 の ODBC を使用すると、ドライバーは接続プールの動作をカスタマイズできます。 詳細については、「[ドライバー対応接続プール](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)」を参照してください。  
   
 ##### <a name="asynchronous-execution-notification-method"></a>非同期実行 (通知方法)  
- ODBC 3.8 は、Windows 8 以降、非同期操作の通知方法をサポートします。 詳細については、次を参照してください。[非同期実行 (通知方法)](../../../odbc/reference/develop-app/asynchronous-execution-notification-method.md)します。  
+ ODBC 3.8 では、Windows 8 以降で使用できる非同期操作の通知方法がサポートされています。 詳細については、「[非同期実行 (通知方法)](../../../odbc/reference/develop-app/asynchronous-execution-notification-method.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [ODBC ドライバーの開発](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   

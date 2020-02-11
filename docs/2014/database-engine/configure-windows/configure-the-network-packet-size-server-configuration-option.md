@@ -16,14 +16,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4bd992f16158e7286db668256dc5963d83dbd4b8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62787001"
 ---
 # <a name="configure-the-network-packet-size-server-configuration-option"></a>network packet size サーバー構成オプションの構成
-  このトピックでは、構成する方法を説明します、`network packet size`サーバー構成オプション[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]を使用して[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]または[!INCLUDE[tsql](../../includes/tsql-md.md)]します。 `network packet size`オプションは、ネットワーク全体で使用されるパケット サイズ (単位: バイト) を設定します。 パケットとは、固定サイズのデータのチャンクで、クライアントとサーバー間で要求および結果を転送します。 既定のパケット サイズは 4,096 バイトです。  
+  このトピックでは、または`network packet size` [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、のサーバー構成オプションを構成する方法について説明します。 オプション`network packet size`は、ネットワーク全体で使用されるパケットサイズ (バイト単位) を設定します。 パケットとは、固定サイズのデータのチャンクで、クライアントとサーバー間で要求および結果を転送します。 既定のパケット サイズは 4,096 バイトです。  
   
 > [!NOTE]  
 >  パフォーマンスの向上が明確でない限り、パケット サイズは変更しないでください。 多くのアプリケーションでは、既定のパケット サイズが最適です。  
@@ -34,9 +34,9 @@ ms.locfileid: "62787001"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [推奨事項](#Recommendations)  
+     [Recommendations (推奨事項)](#Recommendations)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **以下を使用して network packet size オプションを構成するには:**  
   
@@ -44,7 +44,7 @@ ms.locfileid: "62787001"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **補足情報:** [ネットワーク パケット サイズのオプションを構成した後](#FollowUp)  
+-   **補足情報:** [network packet size オプションを構成した後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
@@ -75,9 +75,11 @@ ms.locfileid: "62787001"
   
 1.  オブジェクト エクスプローラーで、サーバーを右クリックし、 **[プロパティ]** をクリックします。  
   
-2.  **[詳細設定]** ノードをクリックします。  
+2.  
+  **[詳細設定]** ノードをクリックします。  
   
-3.  **[ネットワーク]** の **[ネットワーク パケット サイズ]** ボックスに値を指定します。  
+3.  
+  **[ネットワーク]** の **[ネットワーク パケット サイズ]** ボックスに値を指定します。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
@@ -105,10 +107,10 @@ GO
   
  詳細については、「 [サーバー構成オプション &#40;SQL Server&#41;](server-configuration-options-sql-server.md)」を参照してください。  
   
-##  <a name="FollowUp"></a>補足情報: ネットワーク パケット サイズのオプションを構成した後  
+##  <a name="FollowUp"></a>補足情報: network packet size オプションを構成した後  
  新しい設定は、サーバーを再起動しなくてもすぐに有効になります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [RECONFIGURE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reconfigure-transact-sql)   
  [サーバー構成オプション &#40;SQL Server&#41;](server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)  

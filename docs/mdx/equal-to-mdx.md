@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 189facb54de244ff220b41ec08c8b02faf5a2c27
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68139324"
 ---
 # <a name="-equal-to-mdx"></a>= (等しい) (MDX)
@@ -21,7 +21,7 @@ ms.locfileid: "68139324"
   1 つの多次元式 (MDX) 式の値が、別の MDX 式の値と等しいかどうかを判別する比較演算を実行します。  
   
 > [!NOTE]  
->  オブジェクトを比較する場合、 [IS &#40;MDX&#41; ](../mdx/is-mdx.md)演算子。 たとえば、クエリ軸上の現在のメンバーが特定のメンバーをチェックする場合は、IS 演算子を使用します。  
+>  オブジェクトを比較するに[は、is &#40;MDX&#41;](../mdx/is-mdx.md)演算子を使用します。 たとえば、クエリ軸の現在のメンバーが特定のメンバーであるかどうかを確認する場合は、IS 演算子を使用します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,14 +37,14 @@ MDX_Expression = MDX_Expression
 ## <a name="return-value"></a>戻り値  
  次の条件に基づくブール値。  
   
--   **true**最初のパラメーターの値が 2 番目のパラメーターの値に等しい場合。  
+-   最初のパラメーターの値が2番目のパラメーターの値と等しい場合は**true** 。  
   
--   **false**最初のパラメーターの値が 2 番目のパラメーターの値と等しくない場合。  
+-   最初のパラメーターの値が2番目のパラメーターの値と等しくない場合は**false** 。  
   
--   **true**かどうか両方のパラメーターが null の場合、または 1 つのパラメーターが null とその他のパラメーターが 0 です。  
+-   両方のパラメーターが null の場合、または1つのパラメーターが null で、もう一方のパラメーターが0の場合は**true** 。  
   
-## <a name="examples"></a>使用例  
- 次のクエリでは、これらの条件の例を示します。  
+## <a name="examples"></a>例  
+ 次のクエリは、これらの条件の例を示しています。  
   
  `With`  
   
@@ -74,7 +74,7 @@ MDX_Expression = MDX_Expression
   
  `From [Adventure Works]`  
   
-## <a name="see-also"></a>関連項目  
- [MDX 演算子リファレンス&#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
+## <a name="see-also"></a>参照  
+ [Mdx 演算子リファレンス &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

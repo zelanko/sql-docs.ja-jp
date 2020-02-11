@@ -1,5 +1,5 @@
 ---
-title: オプション (クエリ結果-SQL Server-マルチ-Server) |Microsoft Docs
+title: オプション (クエリ結果-マルチサーバー SQL Server) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 6019a328463d27b4495ae0db70e844eb4e05d747
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089964"
 ---
 # <a name="options-query-results-sql-server-multi-server"></a>[オプション] ([クエリ結果] - [SQL Server] - [マルチサーバー])
@@ -26,17 +26,17 @@ ms.locfileid: "66089964"
  結果をマージしない場合は、各サーバーからの結果セットが、それぞれのスキーマを使用した固有のグリッドに表示されます。  
   
 ## <a name="uielement-list"></a>UI 要素の一覧  
- **結果をマージします。**  
+ **[結果のマージ]**  
  複数のサーバーからの結果セットを同じグリッドに結合する場合は、このチェック ボックスをオンにします。  
   
- **サーバー名を結果に追加します。**  
+ **[サーバー名を結果に追加]**  
  各行を生成したサーバーの名前を表示する列を追加するには、このチェック ボックスをオンにします。  
   
- **ログイン名を結果に追加します。**  
+ **[ログイン名を結果に追加]**  
  各行を提供したサーバーへの接続に使用されたログインを表示する列を追加するには、このチェック ボックスをオンにします。  
   
 ## <a name="see-also"></a>参照  
- [中央管理サーバーおよびサーバー グループの作成&#40;SQL Server Management Studio&#41;](../ssms/register-servers/create-a-central-management-server-and-server-group.md)   
+ [中央管理サーバーとサーバーグループ &#40;SQL Server Management Studio を作成&#41;](../ssms/register-servers/create-a-central-management-server-and-server-group.md)   
  [複数のサーバーに対してステートメントを同時に実行する方法 &#40;SQL Server Management Studio&#41;](../ssms/register-servers/execute-statements-against-multiple-servers-simultaneously.md)  
   
   

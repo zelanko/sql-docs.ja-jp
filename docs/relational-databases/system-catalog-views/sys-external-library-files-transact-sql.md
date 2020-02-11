@@ -19,25 +19,25 @@ ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d7af0a7fcb639ae3beab6216e77f9b7b95a398da
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68471096"
 ---
-# <a name="sysexternal_library_files-transact-sql"></a>external_library_files (Transact-sql)  
+# <a name="sysexternal_library_files-transact-sql"></a>sys.external_library_files (Transact-SQL)  
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 外部ライブラリを構成するファイルごとに1行の情報を一覧表示します。
 
-|列名 |データ型 |説明|
+|列名 |データ型 |[説明]|
 |------|------|-----|
-|external_library_id | int |外部ライブラリオブジェクトの ID。 |
-|情報 |varbinary(max) |外部ライブラリファイルの成果物のコンテンツ。 |
-|プラットフォーム |TINYINT |SQL Server がインストールされているホストプラットフォームの ID。 |
+|external_library_id | INT |外部ライブラリオブジェクトの ID。 |
+|content |varbinary(max) |外部ライブラリファイルの成果物のコンテンツ。 |
+|プラットフォーム |tinyint |SQL Server がインストールされているホストプラットフォームの ID。 |
 |platform_desc | nvarchar(60) |ホストプラットフォームの名前。 有効な値は ' WINDOWS '、' LINUX ' です。 |
 
-### <a name="see-also"></a>関連項目  
+### <a name="see-also"></a>参照  
 
 [sys.external_libraries](sys-external-libraries-transact-sql.md)  
 [外部ライブラリの作成](../../t-sql/statements/create-external-library-transact-sql.md)  

@@ -1,5 +1,5 @@
 ---
-title: プログラミング言語 |マイクロソフトのドキュメント
+title: プログラミング言語 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,20 +18,21 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: feca89ac2ac888c2fa9f082595e761e898dea971
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211928"
 ---
 # <a name="programming-languages"></a>プログラミング言語
-  このセクションについて説明しますプログラム方法[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で管理オブジェクト (SMO) [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual c# .NET、および[!INCLUDE[msCoName](../../includes/msconame-md.md)]Visual C。  
+  このセクションでは、Visual Basic [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .Net、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# .net、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++ で管理オブジェクト (SMO) をプログラミングする方法について説明します。  
   
-|トピック|説明|  
+|トピック|[説明]|  
 |-----------|-----------------|  
-|[Visual Basic .NET の概要](../../database-engine/dev-guide/getting-started-in-visual-basic-net.md)|Visual Basic .NET で SMO プログラムの記述を開始する方法について説明します|  
-|[Visual C の概要&#35;.NET](smo-programming-getting-started-in-visual-csharp-net.md)|Visual c# .NET で SMO プログラムの記述を開始する方法について説明します|  
+|[Visual Basic .NET の概要](../../database-engine/dev-guide/getting-started-in-visual-basic-net.md)|Visual Basic&#xA0;.NET で SMO プログラムの作成を開始する方法を示します。|  
+|[Visual C&#35; .NET でのはじめに](smo-programming-getting-started-in-visual-csharp-net.md)|Visual C#&#xA0;.NET で SMO プログラムの作成を開始する方法を示します。|  
   
- SMO は .NET アセンブリです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework を使用してプログラムするには、共通言語ランタイムにサポートされている言語を選択する必要があります。 SMO のリファレンスは Visual Basic .NET および Visual c# .NET などのマネージ言語の構文があります。  
+ SMO は .NET アセンブリです。 
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework を使用してプログラムするには、共通言語ランタイムにサポートされている言語を選択する必要があります。 SMO のリファレンスには、Visual Basic&#xA0;.NET、Visual C#&#xA0;.NET などのマネージド プログラミング言語の構文が記載されています。  
   
   

@@ -1,5 +1,5 @@
 ---
-title: トランザクションの継承 |Microsoft Docs
+title: 継承されたトランザクション |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d8e22375e660e6bcd55c8075edaaba067160279d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058062"
 ---
 # <a name="inherited-transactions"></a>トランザクションの継承
@@ -37,13 +37,13 @@ ms.locfileid: "66058062"
   
  パッケージとタスクのトランザクション属性は次のとおりです。  
   
--   パッケージ A および C の**TransactionOption** は **Required** に設定されています。  
+-   パッケージ A および C の**Transactionoption**は**Required**に設定されています  
   
--   パッケージ B と D、およびパッケージ実行タスク B、パッケージ実行タスク D、パッケージ実行タスク F の**TransactionOption** は **Supported** に設定されています。  
+-   **Transactionoption**は、パッケージ b と D、およびパッケージ実行タスク b、パッケージ実行タスク d、およびパッケージ実行タスク F で**サポートさ**れるように設定されています。  
   
--   パッケージ E、およびパッケージ実行タスク C、パッケージ実行タスク E の**TransactionOption** は **NotSupported** に設定されています。  
+-   **Transactionoption**は、パッケージ e の場合は**NotSupported**に設定され、パッケージ実行タスク C と実行パッケージ e に設定されます。  
   
- ![トランザクションの継承のフロー](media/mw-dts-executepack.gif "トランザクションの継承のフロー")  
+ ![トランザクションの継承フロー](media/mw-dts-executepack.gif "トランザクションの継承フロー")  
   
  パッケージ B、D、および F のみが親パッケージのトランザクションを継承できます。  
   

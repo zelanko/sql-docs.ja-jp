@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: d4b91b06470c9cb22e98ac76ea52494728a7ca11
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68893102"
 ---
 # <a name="topcount-dmx"></a>TopCount (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  式によって指定された降順のランクで、指定された件数の上位行を返します。  
+  式によって指定された順位の降順で、指定された数の最上位行を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -28,19 +28,19 @@ TopCount(<table expression>, <rank expression>, <count>)
 ```  
   
 ## <a name="applies-to"></a>適用対象  
- テーブル列参照 > などのテーブルを返す\<式、またはテーブルを返す関数。  
+ テーブル列参照> などのテーブルを返す\<式、またはテーブルを返す関数。  
   
 ## <a name="return-type"></a>戻り値の型  
- \<テーブル式の >  
+ \<テーブル式の>  
   
-## <a name="remarks"></a>コメント  
- \<Rank expression > 引数によって指定された値によって、 \<テーブル式 > 引数に指定された行に対する順位の降順と、に指定されている最上位の行の数が決まります。\<カウント > 引数が返されます。  
+## <a name="remarks"></a>解説  
+ \<Rank expression> 引数によって指定された値によって、 \<テーブル式> 引数に指定された行の順位の降順が決定され、 \<count> 引数で指定された最上位行の数が返されます。  
   
  TopCount 関数は、最初に、結合された予測を有効にするために導入されており、一般的には、 **SELECT TOP**句と**ORDER BY**句を含むステートメントと同じ結果を生成します。 予測の数の指定をサポートする**Predict (DMX)** 関数を使用すると、結合された予測のパフォーマンスが向上します。  
   
- ただし、TopCount を使用する必要がある場合もあります。 たとえば、DMX は、サブ select ステートメントの**TOP**修飾子をサポートしていません。 [ &#40;PredictHistogram DMX&#41; ](../dmx/predicthistogram-dmx.md)関数では、 **TOP**の追加もサポートされていません。  
+ ただし、TopCount を使用する必要がある場合もあります。 たとえば、DMX は、サブ select ステートメントの**TOP**修飾子をサポートしていません。 また、 [PredictHistogram &#40;DMX&#41;](../dmx/predicthistogram-dmx.md)関数は、 **TOP**の追加をサポートしていません。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例は、「[基本的なデータマイニングチュートリアル](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)」で作成したアソシエーションモデルに対する予測クエリです。 クエリは同じ結果を返しますが、最初の例では TopCount を使用し、2番目の例では Predict 関数を使用します。  
   
  TopCount の動作を理解するために、入れ子になったテーブルのみを返す予測クエリを最初に実行すると便利な場合があります。  
@@ -54,11 +54,11 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
 ```  
   
 > [!NOTE]  
->  この例では、入力値として指定された値には単一引用符が含まれているため、この単一引用符の前にもう 1 つ単一引用符に追加してエスケープする必要があります。 エスケープ文字を挿入するための構文がわからない場合は、予測クエリ ビルダーを使用してクエリを作成できます。 ドロップダウン リストから値を選択すると、必要なエスケープ文字が挿入されます。 詳細については、「[データマイニングデザイナーでの単一クエリの作成](https://docs.microsoft.com/analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer)」を参照してください。  
+>  この例では、入力として指定された値に単一引用符が含まれているため、その前に別の単一引用符を付けてエスケープする必要があります。 エスケープ文字を挿入するための構文がわからない場合は、予測クエリビルダーを使用してクエリを作成できます。 ドロップダウンリストから値を選択すると、必要なエスケープ文字が挿入されます。 詳細については、「[データマイニングデザイナーでの単一クエリの作成](https://docs.microsoft.com/analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer)」を参照してください。  
   
- 例の結果を次に示します。  
+ 結果の例:  
   
-|[モデル]|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
+|モデル|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  
 |Sport-100|4334|0.291283016|0.252695851|  
 |Water Bottle|2866|0.192620472|0.175205052|  
@@ -69,7 +69,7 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
 |Cycling Cap|1473|0.098998589|0.094256014|  
 |Fender Set - Mountain|1415|0.095100477|0.090718432|  
 |Mountain Bottle Cage|1367|0.091874454|0.087780332|  
-|Road Bottle Cage|1195|0.080314537|0.077173962|  
+|道路ボトルケージ|1195|0.080314537|0.077173962|  
   
  TopCount 関数は、このクエリの結果を受け取り、指定された数の最小値の行を返します。  
   
@@ -88,19 +88,19 @@ NATURAL PREDICTION JOIN
   
  TopCount 関数の最初の引数は、テーブル列の名前です。 この例では、Predict 関数を呼び出し、INCLUDE_STATISTICS 引数を使用して、入れ子になったテーブルが返されます。  
   
- TopCount 関数の2番目の引数は、結果の並べ替えに使用する入れ子になったテーブルの列です。 この例では、INCLUDE_STATISTICS オプションによって $SUPPORT 列、$PROBABILTY 列、および $ADJUSTED PROBABILITY 列が返されます。 この例では、$SUPPORT を使用して結果に順位を付けます。  
+ TopCount 関数の2番目の引数は、結果の並べ替えに使用する入れ子になったテーブルの列です。 この例では、INCLUDE_STATISTICS オプションを使用して、列 $SUPPORT、$PROBABILTY、および $ADJUSTED 確率を返します。 この例では、$SUPPORT を使用して結果を順位付けします。  
   
- 3番目の引数、TopCount 関数は、返される行の数を整数として指定します。 $SUPPORT で順位が付けられた上位 3 製品を取得するには、「3」と入力します。  
+ 3番目の引数、TopCount 関数は、返される行の数を整数として指定します。 $SUPPORT 順に並べ替えられた上位3つの製品を取得するには、「3」と入力します。  
   
- 例の結果を次に示します。  
+ 結果の例:  
   
-|[モデル]|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
+|モデル|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  
 |Sport-100|4334|0.29...|0.25...|  
 |Water Bottle|2866|0.19...|0.17...|  
 |Patch kit|2113|0.14...|0.13...|  
   
- ただし、この種のクエリは、実稼働設定でのパフォーマンスに影響する可能性があります。 これは、クエリによってアルゴリズムからすべての予測のセットが返され、これらの予測が並べ替えられて上位 3 件が返されるためです。  
+ ただし、この種類のクエリは、実稼働設定のパフォーマンスに影響を与える可能性があります。 これは、クエリがアルゴリズムからすべての予測のセットを返し、これらの予測を並べ替え、上位3を返すためです。  
   
  次の例は、同じ結果を返すが実行時間が大幅に短縮される代替ステートメントを示しています。 この例では、TopCount を、引数として複数の予測を受け取る Predict 関数に置き換えます。 また、この例では、 **$SUPPORT**キーワードを使用して、入れ子になったテーブル列を直接取得します。  
   
@@ -108,13 +108,13 @@ NATURAL PREDICTION JOIN
 SELECT Predict ([Association].[v Assoc Seq Line Items], INCLUDE_STATISTICS, 3, $SUPPORT)  
 ```  
   
- 結果には、サポート値に基づいて並べ替えられた上位 3 件の予測が含まれます。 $SUPPORT を $PROBABILITY または $ADJUSTED_PROBABILITY に置き換えると、確率または調整済みの確率で順位付けされた予測を取得できます。 詳細については、「 **Predict (DMX)** 」を参照してください。  
+ 結果には、サポート値によって並べ替えられた上位3件の予測が含まれます。 $SUPPORT を $PROBABILITY または $ADJUSTED_PROBABILITY に置き換えると、確率または調整済みの確率で順位付けされた予測を取得できます。 詳細については、「 **Predict (DMX)**」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [DMX &#40;関数&#41;](../dmx/functions-dmx.md)   
- [一般的な予測&#40;関数 DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
- [DMX 数&#40;の合計&#41;](../dmx/bottomcount-dmx.md)   
- [TopPercent &#40;DMX&#41;](../dmx/toppercent-dmx.md)   
- [TopSum &#40;DMX&#41;](../dmx/topsum-dmx.md)  
+ [DMX&#41;&#40;関数](../dmx/functions-dmx.md)   
+ [DMX&#41;&#40;一般的な予測関数](../dmx/general-prediction-functions-dmx.md)   
+ [DMX&#41;&#40;下数](../dmx/bottomcount-dmx.md)   
+ [DMX&#41;&#40;TopPercent](../dmx/toppercent-dmx.md)   
+ [DMX&#41;&#40;TopSum](../dmx/topsum-dmx.md)  
   
   

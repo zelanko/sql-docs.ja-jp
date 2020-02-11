@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 3: Dta コマンド プロンプト ユーティリティの使用 |Microsoft Docs'
+title: 'レッスン 3: dta コマンドプロンプトユーティリティの使用 |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e2881a2a118306f9d567236516f05bb29ad2d60a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68186568"
 ---
-# <a name="lesson-3-using-the-dta-command-prompt-utility"></a>レッスン 3: DTA コマンド プロンプト ユーティリティの使用
-  **dta** コマンド プロンプト ユーティリティは、データベース エンジン チューニング アドバイザーの機能以外にも機能があります。  
+# <a name="lesson-3-using-the-dta-command-prompt-utility"></a>レッスン 3 : dta コマンド プロンプト ユーティリティの使用
+  **Dta**コマンドプロンプトユーティリティには、データベースエンジンチューニングアドバイザーによって提供される機能に加えて、機能も用意されています。  
   
- データベース エンジン チューニング アドバイザーの XML スキーマを使用すれば、使い慣れた XML ツールで、このユーティリティへの入力ファイルを作成できます。 このスキーマには、インストールするときにインストールされている[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で確認できます。C:\Program Files (x86) \Microsoft SQL Server\110\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd します。  
+ データベース エンジン チューニング アドバイザーの XML スキーマを使用すれば、使い慣れた XML ツールで、このユーティリティへの入力ファイルを作成できます。 このスキーマは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール時にインストールされ、C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd に格納されます。  
   
  データベース エンジン チューニング アドバイザーの XML スキーマは、 [Microsoft Web サイト](https://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409)から入手することもできます。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "68186568"
   
  ここで説明する内容は次のとおりです。  
   
--   **dta** コマンド プロンプト ユーティリティの起動とワークロードのチューニング  
+-   **Dta**コマンドプロンプトユーティリティの起動とワークロードのチューニング  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
  [dta コマンド プロンプト ユーティリティの起動とワークロードのチューニング](lesson-1-1-tuning-a-workload.md)  

@@ -14,13 +14,14 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: bacb199a87cd0d9e388b49b00cbc2e245571d2ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483704"
 ---
 # <a name="attribute-groups-master-data-services"></a>属性グループ (マスター データ サービス)
+  
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、属性グループがエンティティ内の属性の整理に役立ちます。 エンティティ内に多数の属性がある場合、属性グループを使用すると、 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web アプリケーションでのエンティティの表示が見やすくなります。  
   
 ## <a name="how-attribute-groups-change-the-display"></a>属性グループによる表示の変更  
@@ -34,7 +35,8 @@ ms.locfileid: "65483704"
   
 -   すべての属性が、 **エクスプローラー** の **[すべての属性]** タブに自動的に表示されます。  
   
--   **[すべての属性]** タブを非表示にすることはできません。  
+-   
+  **[すべての属性]** タブを非表示にすることはできません。  
   
  属性グループは、 **の** [システム管理] [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]機能領域で管理します。  
   
@@ -47,13 +49,13 @@ ms.locfileid: "65483704"
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  
-|新しい属性グループを作成して属性を追加する。|[属性グループを作成する (マスター データ サービス)](../../2014/master-data-services/create-an-attribute-group-master-data-services.md)|  
-|属性グループがユーザーに表示されるようにする。|[属性グループのユーザーへの表示 (マスター データ サービス)](make-an-attribute-group-visible-to-users-master-data-services.md)|  
-|既存の属性グループの名前を変更する。|[属性グループ名を変更する (マスター データ サービス)](../../2014/master-data-services/change-an-attribute-group-name-master-data-services.md)|  
-|既存の属性グループを削除する。|[属性グループを削除する (マスター データ サービス)](../../2014/master-data-services/delete-an-attribute-group-master-data-services.md)|  
+|新しい属性グループを作成して属性を追加する。|[属性グループ &#40;マスターデータサービスを作成し&#41;](../../2014/master-data-services/create-an-attribute-group-master-data-services.md)|  
+|属性グループがユーザーに表示されるようにする。|[属性グループをユーザー &#40;マスターデータサービスに表示させる&#41;](make-an-attribute-group-visible-to-users-master-data-services.md)|  
+|既存の属性グループの名前を変更する。|[属性グループ名を変更する &#40;マスターデータサービス&#41;](../../2014/master-data-services/change-an-attribute-group-name-master-data-services.md)|  
+|既存の属性グループを削除する。|[属性グループ &#40;マスターデータサービスの削除&#41;](../../2014/master-data-services/delete-an-attribute-group-master-data-services.md)|  
   
 ## <a name="related-content"></a>関連コンテンツ  
   
--   [属性 (マスター データ サービス)](../../2014/master-data-services/attributes-master-data-services.md)  
+-   [属性 &#40;マスターデータサービス&#41;](../../2014/master-data-services/attributes-master-data-services.md)  
   
   

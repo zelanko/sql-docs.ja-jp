@@ -24,10 +24,10 @@ ms.assetid: dbbff0e8-9e25-4f12-a1ba-e12221d16ac2
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 98e784be4bbe4e939ed4413a33d6a3ed36872558
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67902814"
 ---
 # <a name="create-event-notification-transact-sql"></a>CREATE EVENT NOTIFICATION (Transact-SQL)
@@ -100,7 +100,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
 > [!NOTE]  
 >  このオプションは、包含データベースでは使用できません。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] には、イベント通知用のメッセージ型とコントラクトが含まれています。 したがって、コントラクト名 (`https://schemas.microsoft.com/SQL/Notifications/PostEventNotification`) を指定する Service Broker 開始サービスが既に存在するため、開始サービスを作成する必要はありません  
   
  イベント通知を受け取る対象サービスは、この既存のコントラクトに従う必要があります。  
@@ -125,7 +125,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
   
  キュー スコープのイベント通知を作成するには、キューの ALTER 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 > [!NOTE]  
 >  以下に示す A と B の例では、`TO SERVICE 'NotifyService'` 句の GUID ('8140a771-3c4b-4479-8ac0-81008ab17984') は、例をセットアップしたコンピューターに固有の値です。 ここで示した例の場合は、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの GUID です。  

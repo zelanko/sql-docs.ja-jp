@@ -1,5 +1,5 @@
 ---
-title: サブジェクト領域データベース スキーマのオプション (スキーマ生成ウィザード) (Analysis Services - 多次元データ) |Microsoft Docs
+title: サブジェクト領域データベーススキーマのオプション (スキーマ生成ウィザード) (Analysis Services-多次元データ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,47 +13,48 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2173255654b9ef02c269ec34bd21f93f8bf629a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067974"
 ---
 # <a name="subject-area-database-schema-options-schema-generation-wizard-analysis-services---multidimensional-data"></a>[サブジェクト領域データベース スキーマのオプション] (スキーマ生成ウィザード) (Analysis Services - 多次元データ)
+  
   **[サブジェクト領域データベース スキーマのオプション]** ページを使用すると、スキーマの生成方法を制御したり、データの保存方法を定義したりできます。  
   
-## <a name="options"></a>および  
- **スキーマを所有しています。**  
+## <a name="options"></a>オプション  
+ **[所有しているスキーマ]**  
  新しいサブジェクト領域データベース内のスキーマの名前を指定します。  
   
- **ディメンション テーブルに主キーを作成します。**  
+ **[ディメンション テーブルに主キーを作成する]**  
  生成されたスキーマのディメンション テーブルに主キーを作成します。 このオプションを選択しない場合、インデックスは作成されません。  
   
 > [!NOTE]  
 >  このオプションを選択しない場合は、参照整合性が適用されます。  
   
- **インデックスを作成します。**  
+ **[インデックスを作成する]**  
  生成されたスキーマの外部キー列にインデックスを作成します。  
   
- **参照整合性を適用します。**  
+ **[参照整合性を適用する]**  
  生成されたスキーマで参照整合性を適用します。 このオプションを選択しない場合、リレーションシップは作成されますが適用されません。  
   
- **再生時にデータを保持します。**  
+ **[再生成時にデータを保存する]**  
  ウィザードの完了時にサブジェクト領域データベースのデータを保持します。 このオプションを選択しない場合、サブジェクト領域データベースのすべてのデータは警告なしに消去されます。  
   
- **Time テーブルを設定します。**  
+ **[Time テーブルの設定]**  
  ウィザードで Time テーブルにデータを設定する方法を指定します。 このオプションで使用できる値を次の表に示します。  
   
 > [!NOTE]  
 >  このオプションは、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] をプロジェクト モードで使用して [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] からスキーマ生成ウィザードが呼び出された場合だけ有効になります。  
   
-|値|説明|  
+|値|[説明]|  
 |-----------|-----------------|  
 |[設定]|サブジェクト領域の Time テーブルにデータが設定されます。|  
 |[設定しない]|サブジェクト領域の Time テーブルにデータは設定されません。|  
 |[空の場合のみ設定]|サブジェクト領域の Time テーブルは、空の場合にだけデータが設定されます。|  
   
-## <a name="see-also"></a>関連項目  
- [スキーマ生成ウィザードの F1 ヘルプ&#40;Analysis Services - 多次元データ&#41;](schema-generation-wizard-f1-help-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>参照  
+ [スキーマ生成ウィザードの F1 ヘルプ &#40;Analysis Services-多次元データ&#41;](schema-generation-wizard-f1-help-analysis-services-multidimensional-data.md)  
   
   

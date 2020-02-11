@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 26f2b31728fec77a6b94a64f35d0fb37096a1b41
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107718"
 ---
 # <a name="rendering-to-html-report-builder-and-ssrs"></a>HTML での表示 (レポート ビルダーおよび SSRS)
@@ -26,15 +26,15 @@ ms.locfileid: "66107718"
   
  状況によっては、レポート パラメーターを使用して、レポートが HTML で表示される際にスクリプト インジェクション攻撃を開始することも可能であることを意味します。 レポートのセキュリティ保護の詳細については、「 [レポートとリソースの保護](../security/secure-reports-and-resources.md)」を参照してください。  
   
- ブラウザーの詳細については、次を参照してください。 [Reporting Services と Power View のブラウザー サポートの計画&#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)します。  
+ ブラウザーの詳細については、「 [Planning for Reporting Services」および「Power View Browser Support &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)」を参照してください。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="RenderingMHTML"></a> MHTML での表示  
+##  <a name="RenderingMHTML"></a>MHTML での表示  
  HTML 表示拡張機能を使用すると、MHTML (MIME Encapsulation of Aggregate HTML Documents) でレポートを表示することもできます。 MHTML は、HTML を拡張して、画像などのエンコードされているオブジェクトを HTML ドキュメントに埋め込むことができるようにしたものです。 MHTML 表示拡張機能を使用すると、画像、ドキュメント、その他のバイナリ ファイルなどのリソースを、レポート HTML 内部の MIME 構造として単一のファイルに埋め込むことができます。 また、MHTML レポートは、すべてのリソースがレポートの中に含まれるので、電子メール メッセージに埋め込むのにも役立ちます。 実際に MHTML を表示するのは HTML 表示拡張機能ですが、この機能を MHTML 表示拡張機能と呼ぶこともあります。  
   
-##  <a name="BrowserSupport"></a> ブラウザー サポート  
+##  <a name="BrowserSupport"></a>ブラウザーサポート  
  この表示拡張機能では、次のブラウザー バージョンをサポートしています。  
   
 -   Internet Explorer 5.5 以降  
@@ -45,7 +45,7 @@ ms.locfileid: "66107718"
   
  各ブラウザーで適切に処理されるようにするため、表示されるレポートはブラウザーによって多少異なる場合があります。 たとえば、テキスト ボックスには WritingMode というプロパティが表示されます。 このプロパティは Firefox でサポートされていません。  
   
-##  <a name="HTMLSpecificRenderingRules"></a> HTML 固有の表示規則  
+##  <a name="HTMLSpecificRenderingRules"></a>HTML 固有の表示規則  
  表示する際は、次の HTML 固有の規則が適用されます。  
   
 -   各 `ReportItems` コレクション内にアイテムが複数存在する場合は、レンダラーによって、すべてのアイテムを格納するための HTML テーブル構造が構築されます。  
@@ -60,7 +60,7 @@ ms.locfileid: "66107718"
   
 -   その他すべての行と列は、各レポート アイテムのサイズに応じて拡張できます。  
   
--   すべての座標とレポート アイテム サイズはミリメートルに変換されます。 スタイル プロパティなどの他のすべてのサイズは、元の単位のままになります。 0\.2 mm に満たないサイズや位置の差は 0 mm として扱われます。  
+-   すべての座標とレポート アイテム サイズはミリメートルに変換されます。 スタイル プロパティなどの他のすべてのサイズは、元の単位のままになります。 0.2 mm に満たないサイズや位置の差は 0 mm として扱われます。  
   
 ##  <a name="Interactivity"></a> 対話性  
  HTML では、いくつかの対話型要素がサポートされています。 具体的な動作について説明します。  

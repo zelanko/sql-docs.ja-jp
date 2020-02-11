@@ -15,22 +15,22 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6ce7bfa0bbeec5c5ca83b7139f0ff28e3994021d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66093716"
 ---
-# <a name="osql-no-longer-supports-the-ed-and--commands"></a>osql は ED と !! をサポートしない コマンド
-  **Osql**ユーティリティではサポートされません、 **ED**と **!!** コマンド。  
+# <a name="osql-no-longer-supports-the-ed-and--commands"></a>osql は ED と !! をサポートしない commands
+  **Osql**ユーティリティでは、 **ED**と **!!** コ.  
   
 ## <a name="corrective-action"></a>修正措置  
- 参照を削除、 **ED**と **!!** スクリプトからコマンド。  
+ **ED**と **!!** への参照を削除します。 スクリプトからのコマンドです。  
   
- 使用する場合、 **ED**と **!!** コマンドを使用して、 **sqlcmd**ユーティリティの代わりに**osql**します。  
+ **ED**と **!!** を使用する場合は、 コマンドで、 **osql**の代わりに**sqlcmd**ユーティリティを使用します。  
   
 ## <a name="see-also"></a>参照  
- [データベース エンジンのアップグレードに関する問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 アップグレード アドバイザー&#91;新規&#93;](sql-server-2014-upgrade-advisor.md)  
+ [データベースエンジンのアップグレードに関する問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [SQL Server 2014 Upgrade Advisor &#91;新しい&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

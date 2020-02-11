@@ -14,13 +14,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8a02385a6cd12b85be1661c738488c000f810510
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68196726"
 ---
 # <a name="specify-default-values-for-columns"></a>列の既定値の指定
+  
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して列に入力される既定値を指定できます。 既定値を割り当てなかった場合、ユーザーが列に何も入力しないと、次のようになります。  
   
 -   NULL 値を許可するオプションを設定している場合は、列に NULL が挿入されます。  
@@ -33,7 +34,7 @@ ms.locfileid: "68196726"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **既定値を指定する方法:**  
   
@@ -66,7 +67,8 @@ ms.locfileid: "68196726"
   
 2.  既定値を指定する列を選択します。  
   
-3.  **[列のプロパティ]** タブで、 **[既定値またはバインド]** プロパティに新たな既定値を入力します。  
+3.  
+  **[列のプロパティ]** タブで、 **[既定値またはバインド]** プロパティに新たな既定値を入力します。  
   
     > [!NOTE]  
     >  数値の既定値を入力するには、数値を入力します。 オブジェクトまたは関数の場合は、その名前を入力します。 英数字の場合は、その値を単一引用符で囲んで入力します。  
@@ -95,6 +97,6 @@ ms.locfileid: "68196726"
   
     ```  
   
- 詳細については、「[ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)」を参照してください。  
+ 詳細については、「 [ALTER TABLE &#40;transact-sql&#41;](/sql/t-sql/statements/alter-table-transact-sql)」を参照してください。  
   
 ###  <a name="TsqlExample"></a>  

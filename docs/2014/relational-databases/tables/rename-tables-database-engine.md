@@ -16,13 +16,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3fc62dc5f0e716273df257aba7fdc137391d3055
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68196731"
 ---
 # <a name="rename-tables-database-engine"></a>テーブル名の変更 (データベース エンジン)
+  
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用してテーブルの名前を変更することができます。  
   
 > [!CAUTION]  
@@ -34,9 +35,9 @@ ms.locfileid: "68196731"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
--   **テーブル名を変更する方法:**  
+-   **次のものを使用してテーブルの名前を変更するには:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -58,13 +59,15 @@ ms.locfileid: "68196731"
   
 1.  オブジェクト エクスプローラーで、名前を変更するテーブルを右クリックし、ショートカット メニューの **[デザイン]** をクリックします。  
   
-2.  **[表示]** メニューの **[プロパティ]** をクリックします。  
+2.  
+  **[表示]** メニューの **[プロパティ]** をクリックします。  
   
-3.  **[プロパティ]** ウィンドウの **[オブジェクト名]** ボックスに、テーブルの新しい名前を入力します。  
+3.  
+  **[プロパティ]** ウィンドウの **[オブジェクト名]** ボックスに、テーブルの新しい名前を入力します。  
   
 4.  この操作を取り消すには、このフィールド外に移動する前に Esc キーを押します。  
   
-5.  **ファイル** メニューの **table name**_の保存_を選びます。  
+5.  [**ファイル**] メニューの [_テーブル名_の**保存**] をクリックします。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
@@ -74,7 +77,7 @@ ms.locfileid: "68196731"
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例では、 `Sales` スキーマの `SalesTerritory` テーブルの名前を `SalesTerr` に変更します。 次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
+3.  次の例では、`SalesTerritory` スキーマの `SalesTerr` テーブルの名前を `Sales` に変更します。 次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
   
     ```  
     USE AdventureWorks2012;   

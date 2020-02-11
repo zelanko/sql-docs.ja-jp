@@ -11,19 +11,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 085afa47a00875f5311e6996502e9030b6070920
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211222"
 ---
 # <a name="visual-database-tools"></a>Visual Database Tools
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] には、 [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリやテーブルを構築したり、データベース ダイアグラムを作成したりするためのビジュアル デザイナーが備わっています。  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]には、クエリ、 [!INCLUDE[tsql](../../includes/tsql-md.md)]テーブル、ダイアグラムデータベースを構築するためのビジュアルデザイナーが含まれています。  
   
 ## <a name="related-tasks"></a>Related Tasks  
  Visual Database Tools に関連したタスクを次に示します。  
   
-|**[説明]**|**トピック**|  
+|**説明**|**トピック**|  
 |---------------------|---------------|  
 |データベース ダイアグラム ツールについて説明します。|[データベース ダイアグラムのデザイン (Visual Database Tools)](design-database-diagrams-visual-database-tools.md)|  
 |ビジュアル テーブル デザイン ツールについて説明します。|[テーブルのデザイン (Visual Database Tools)](design-tables-visual-database-tools.md)|  

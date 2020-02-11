@@ -12,10 +12,10 @@ ms.assetid: 7c6ec469-bc7d-4d19-8e21-11dcf8ade108
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 8aaf6c9cb9f4c7ed0f006492e6e11ce82ef333f2
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251726"
 ---
 # <a name="data-quality-client-home-screen"></a>Data Quality Client のホーム画面
@@ -56,13 +56,13 @@ ms.locfileid: "75251726"
  **最近使用したデータ品質プロジェクト**  
  画面の一覧から、既に作成されているプロジェクトを選択します。 ロックされているプロジェクトは、自分でロックした場合にのみ開くことができます。 その場合、プロジェクトは閉じたときの状態で開かれます。状態はかっこの中に表示されます。 プロジェクトが完了している場合は、アクティビティのエクスポート手順で開かれます。  
   
-### <a name="administration"></a>[管理]  
+### <a name="administration"></a>管理  
  DQS 管理では、DQS を監視、構成、および保守することができます。  
   
  **アクティビティの監視**  
  接続されている [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]に関連するすべてのアクティビティ (現在のアクティビティと履歴アクティビティの両方) の状態のビューが表示されます。 監視対象となるアクティビティの種類は、ナレッジ マネージメント、データ品質プロジェクト、および SSIS ベースのデータ修正です。  
   
- **Configuration**  
+ **構成**  
  参照データサービスアカウントの構成プロパティ (Azure Marketplace を通じて、参照データサービスに直接)、全般設定 (インタラクティブなクレンジング、照合、プロファイル)、およびログの重大度設定を表示します。  
   
 ## <a name="see-also"></a>参照  

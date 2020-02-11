@@ -1,5 +1,5 @@
 ---
-title: 作成して、単純なコマンドを実行する |Microsoft Docs
+title: 単純なコマンドの作成と実行 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,25 +14,25 @@ ms.assetid: 0b81af6f-b9ae-4f7c-b59b-b5bdd775036f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7ae9cc9066f66d10d94370336e8a46155f1a03c2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925732"
 ---
 # <a name="creating-and-executing-a-simple-command"></a>簡単なコマンドの作成と実行
-単純なコマンドは、パラメーター化されていないと、永続化を必要としないものです。 作成して単純なコマンドを実行する 3 つの方法はあります。  
+単純なコマンドとは、パラメーター化されておらず、永続化が必要ないコマンドです。 簡単なコマンドを作成して実行するには、次の3つの方法があります。  
   
--   使用して、**コマンド**オブジェクト  
+-   **Command**オブジェクトの使用  
   
--   使用して、**接続**オブジェクト  
+-   **接続**オブジェクトの使用  
   
--   使用して、 **Recordset**オブジェクト  
+-   **レコードセット**オブジェクトの使用  
   
-## <a name="using-a-command-object"></a>コマンド オブジェクトを使用します。  
- 単純なコマンドを使用して作成する、**コマンド**オブジェクトに命令を割り当てる必要があります、 **CommandText**のプロパティを**コマンド**オブジェクトし、の適切な値を設定**CommandType**プロパティ。 コマンドを実行する必要がありますに開いている接続が割り当てられる、 **ActiveConnection**のプロパティ、**コマンド**への呼び出しの前に、オブジェクト、 **Execute**メソッド**コマンド**オブジェクト。  
+## <a name="using-a-command-object"></a>Command オブジェクトの使用  
+ **コマンド**オブジェクトを使用して簡単なコマンドを作成するには、**コマンド**オブジェクトの**CommandText**プロパティに命令を割り当て、 **CommandType**プロパティに適切な値を設定する必要があります。 コマンドを実行するには、開いている接続が**command**オブジェクトの**ActiveConnection**プロパティに割り当てられ、その後に**command**オブジェクトの**Execute**メソッドを呼び出す必要があります。  
   
- 次のコード スニペットを使用する基本的な方法を示しています、**コマンド**データ ソースに対してコマンドを実行するオブジェクト。 この例は、行を返すコマンドを使用し、としてコマンドの実行の結果を返します、 **Recordset**オブジェクト。  
+ 次のコードスニペットは、 **command**オブジェクトを使用してデータソースに対してコマンドを実行する基本的な方法を示しています。 この例では、行を返すコマンドを使用し、コマンド実行の結果を**レコードセット**オブジェクトとして返します。  
   
 ```  
     'BeginBasicCmd  
@@ -107,8 +107,8 @@ End Function
 'EndNewConnection  
 ```  
   
-## <a name="using-a-recordset-object"></a>レコード セット オブジェクトを使用します。  
- テキスト文字列と pas としてコマンドを作成することもできますに、**オープン**メソッドを**レコード セット**オブジェクト、コマンドの種類 (adCmdText) と共に実行します。 次のコード スニペットでは、これを実行します。  
+## <a name="using-a-recordset-object"></a>レコードセットオブジェクトの使用  
+ また、コマンドをテキスト文字列として作成し、そのコマンドをコマンドの種類 (adCmdText) と共に使用して、**レコードセット**オブジェクトの**Open**メソッドに対して実行することもできます。 次のコードスニペットはこれを示しています。  
   
 ```  
   
@@ -146,8 +146,8 @@ objRs.Close
 Set objRs = Nothing  
 ```  
   
-## <a name="using-a-connection-object"></a>接続オブジェクトを使用します。  
- 開いている接続オブジェクトのコマンドを実行することもできます。 上記のコード例になりますこの。  
+## <a name="using-a-connection-object"></a>接続オブジェクトの使用  
+ 開いている接続オブジェクトに対してコマンドを実行することもできます。 前のコード例は次のようになります。  
   
 ```  
 Const DS = "MySqlServer"  

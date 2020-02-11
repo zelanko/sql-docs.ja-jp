@@ -1,5 +1,5 @@
 ---
-title: sys.sysconfigures (TRANSACT-SQL) |Microsoft Docs
+title: sys. sysconfigures (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,29 +21,29 @@ ms.assetid: 146bf10a-c898-4676-a2a1-673fb1cee7a2
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: c785ee1c4d3c5382aa42adf48ad9880f00297137
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68089204"
 ---
 # <a name="syssysconfigures-transact-sql"></a>sys.sysconfigures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  ユーザーによって設定の構成オプションごとに 1 行が含まれています。 **sysconfigures**の最新の起動前に定義されている構成オプションを含む[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、以降、動的な構成オプションに設定します。  
+  ユーザーによって設定された構成オプションごとに1行の値を格納します。 **sysconfigures**には、の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]最後の起動前に定義されている構成オプションに加え、その後に設定された動的な構成オプションが含まれます。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
-|**value**|**int**|ユーザーが変更可能な変数の値です。 これは、使用して、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] RECONFIGURE が実行された場合にのみです。|  
-|**config**|**int**|構成変数番号です。|  
-|**comment**|**nvarchar (255)**|この構成オプションの説明です。|  
-|**status**|**smallint**|オプションの状態を示すビットマップです。 使用できる値は次のとおりです。<br /><br /> 0 = 静的。 設定はサーバーの再起動時に反映されます。<br /><br /> 1 = 動的。 変数は RECONFIGURE ステートメントの実行時に反映されます。<br /><br /> 2 = 詳細。 変数が表示される場合にのみ、**詳細オプションの表示**設定されます。 設定はサーバーの再起動時に反映されます。<br /><br /> 3 = 動的および詳細。|  
+|**数値**|**int**|ユーザーが変更可能な変数の値。 再構成が実行さ[!INCLUDE[ssDE](../../includes/ssde-md.md)]れている場合にのみ、によって使用されます。|  
+|**.config**|**int**|構成変数番号。|  
+|**関する**|**nvarchar(255)**|構成オプションの説明。|  
+|**オンライン**|**smallint**|オプションの状態を示すビットマップ。 次の値があります。<br /><br /> 0 = 静的。 設定は、サーバーの再起動時に有効になります。<br /><br /> 1 = 動的。 変数は、再構成ステートメントが実行されたときに有効になります。<br /><br /> 2 = 詳細。 変数は、 **[詳細の表示] オプション**が設定されている場合にのみ表示されます。 設定は、サーバーの再起動時に有効になります。<br /><br /> 3 = 動的および詳細。|  
   
 ## <a name="see-also"></a>参照  
- [システム ビューへのシステム テーブルのマッピング&#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
- [互換性ビュー &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
+ [システムビューへのシステムテーブルのマッピング &#40;Transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
+ [互換性ビュー &#40;Transact-sql&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

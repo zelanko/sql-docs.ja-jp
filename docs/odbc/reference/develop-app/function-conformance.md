@@ -1,5 +1,5 @@
 ---
-title: 関数への準拠 |Microsoft Docs
+title: 関数の準拠 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,78 +16,78 @@ ms.assetid: bb5d68cf-d238-481e-babc-2e9401b4700e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 45eb427b660496430334633b5d43ee8989211c0f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68069755"
 ---
 # <a name="function-conformance"></a>関数の適合性
-次の表では、これが適切に定義されている各 ODBC 関数の準拠レベルを示します。  
+次の表は、各 ODBC 関数が適切に定義されている場合の準拠レベルを示しています。  
   
-|関数|準拠レベル|  
+|Function|一致レベル|  
 |--------------|-----------------------|  
-|**SQLAllocHandle**|Core|  
-|**SQLBindCol**|Core|  
-|**SQLBindParameter**|[1] のコア|  
-|**SQLBrowseConnect**|レベル 1|  
-|**SQLBulkOperations**|レベル 1|  
-|**SQLCancel**|[1] のコア|  
-|**SQLCloseCursor**|Core|  
-|**SQLColAttribute**|[1] のコア|  
-|**SQLColumnPrivileges**|レベル 2|  
-|**SQLColumns**|Core|  
-|**SQLConnect**|Core|  
-|**SQLCopyDesc**|Core|  
-|**SQLDataSources**|Core|  
-|**SQLDescribeCol**|[1] のコア|  
-|**SQLDescribeParam**|レベル 2|  
-|**SQLDisconnect**|Core|  
-|**SQLDriverConnect**|Core|  
-|**SQLDrivers**|Core|  
-|**SQLEndTran**|[1] のコア|  
-|**SQLExecDirect**|Core|  
-|**SQLExecute**|Core|  
-|**SQLFetch**|Core|  
-|**SQLFetchScroll**|[1] のコア|  
-|**SQLForeignKeys**|レベル 2|  
-|**SQLFreeHandle**|Core|  
-|**SQLFreeStmt**|Core|  
-|**SQLGetConnectAttr**|Core|  
-|**SQLGetCursorName**|Core|  
-|**SQLGetData**|Core|  
-|**SQLGetDescField**|Core|  
-|**SQLGetDescRec**|Core|  
-|**SQLGetDiagField**|Core|  
-|**SQLGetDiagRec**|Core|  
-|**SQLGetEnvAttr**|Core|  
-|**SQLGetFunctions**|Core|  
-|**SQLGetInfo**|Core|  
-|**SQLGetStmtAttr**|Core|  
-|**SQLGetTypeInfo**|Core|  
-|**SQLMoreResults**|レベル 1|  
-|**SQLNativeSql**|Core|  
-|**SQLNumParams**|Core|  
-|**SQLNumResultCols**|Core|  
-|**SQLParamData**|Core|  
-|**SQLPrepare**|Core|  
-|**SQLPrimaryKeys**|レベル 1|  
-|**SQLProcedureColumns**|レベル 1|  
-|**SQLProcedures**|レベル 1|  
-|**SQLPutData**|Core|  
-|**SQLRowCount**|Core|  
-|**SQLSetConnectAttr**|[2] のコア|  
-|**SQLSetCursorName**|Core|  
-|**SQLSetDescField**|[1] のコア|  
-|**SQLSetDescRec**|Core|  
-|**SQLSetEnvAttr**|[2] のコア|  
+|**SQLAllocHandle**|コア|  
+|**SQLBindCol**|コア|  
+|**SQLBindParameter**|コア [1]|  
+|**SQLBrowseConnect**|[レベル 1]|  
+|**SQLBulkOperations**|[レベル 1]|  
+|**SQLCancel**|コア [1]|  
+|**SQLCloseCursor**|コア|  
+|**SQLColAttribute**|コア [1]|  
+|**SQLColumnPrivileges**|Level 2|  
+|**SQLColumns**|コア|  
+|**SQLConnect**|コア|  
+|**SQLCopyDesc**|コア|  
+|**SQLDataSources**|コア|  
+|**SQLDescribeCol**|コア [1]|  
+|**SQLDescribeParam**|Level 2|  
+|**SQLDisconnect**|コア|  
+|**SQLDriverConnect**|コア|  
+|**SQLDrivers**|コア|  
+|**SQLEndTran**|コア [1]|  
+|**SQLExecDirect**|コア|  
+|**SQLExecute**|コア|  
+|**SQLFetch**|コア|  
+|**SQLFetchScroll**|コア [1]|  
+|**SQLForeignKeys**|Level 2|  
+|**SQLFreeHandle**|コア|  
+|**SQLFreeStmt**|コア|  
+|**SQLGetConnectAttr**|コア|  
+|**SQLGetCursorName**|コア|  
+|**SQLGetData**|コア|  
+|**SQLGetDescField**|コア|  
+|**SQLGetDescRec**|コア|  
+|**SQLGetDiagField**|コア|  
+|**SQLGetDiagRec**|コア|  
+|**SQLGetEnvAttr**|コア|  
+|**SQLGetFunctions**|コア|  
+|**SQLGetInfo**|コア|  
+|**SQLGetStmtAttr**|コア|  
+|**SQLGetTypeInfo**|コア|  
+|**SQLMoreResults**|[レベル 1]|  
+|**SQLNativeSql**|コア|  
+|**SQLNumParams**|コア|  
+|**SQLNumResultCols**|コア|  
+|**SQLParamData**|コア|  
+|**SQLPrepare**|コア|  
+|**SQLPrimaryKeys**|[レベル 1]|  
+|**SQLProcedureColumns**|[レベル 1]|  
+|**SQLProcedures**|[レベル 1]|  
+|**SQLPutData**|コア|  
+|**SQLRowCount**|コア|  
+|**SQLSetConnectAttr**|コア [2]|  
+|**SQLSetCursorName**|コア|  
+|**SQLSetDescField**|コア [1]|  
+|**SQLSetDescRec**|コア|  
+|**SQLSetEnvAttr**|コア [2]|  
 |**SQLSetPos**|レベル 1 [1]|  
-|**SQLSetStmtAttr**|[2] のコア|  
-|**SQLSpecialColumns**|[1] のコア|  
-|**SQLStatistics**|Core|  
-|**SQLTablePrivileges**|レベル 2|  
-|**SQLTables**|Core|  
+|**SQLSetStmtAttr**|コア [2]|  
+|**SQLSpecialColumns**|コア [1]|  
+|**SQLStatistics**|コア|  
+|**SQLTablePrivileges**|Level 2|  
+|**SQLTables**|コア|  
   
- [この関数の 1] 重要な機能は、適合性の高いレベルでのみ利用します。  
+ [1] この関数の重要な機能は、より高い準拠レベルでのみ使用できます。  
   
- [2] を既定以外の値に特定の属性を設定すると、準拠のレベルに依存します。 詳細については、次のセクションを参照してください。[属性の適合性](../../../odbc/reference/develop-app/attribute-conformance.md)します。
+ [2] 特定の属性を既定値以外の値に設定することは、準拠レベルによって異なります。 詳細については、次のセクション「[属性の準拠](../../../odbc/reference/develop-app/attribute-conformance.md)」を参照してください。

@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 201b1496444888b207a1a72be640b9705ff1059d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62960149"
 ---
 # <a name="secure-the-publisher"></a>パブリッシャーのセキュリティ保護
@@ -60,18 +60,18 @@ ms.locfileid: "62960149"
  PAL を管理する場合は、「[パブリケーション アクセス リストのログインの管理](manage-logins-in-the-publication-access-list.md)」を参照してください。  
   
 ## <a name="snapshot-agent"></a>スナップショット エージェント  
- パブリケーションごとに 1 つのスナップショット エージェントがあります。 詳細については、「 [Create a Publication](../publish/create-a-publication.md)」を参照してください。  
+ パブリケーションごとに 1 つのスナップショット エージェントがあります。 詳しくは、「 [パブリケーションを作成](../publish/create-a-publication.md)」をご覧ください。  
   
 ## <a name="ftp-snapshot-delivery"></a>FTP スナップショット配信  
  UNC 共有ではなく FTP 共有によりスナップショットを使用できるように指定する場合、FTP アクセスの構成時にログインおよびパスワードを指定する必要があります。 詳細については、「[FTP でのスナップショットの配信](../publish/deliver-a-snapshot-through-ftp.md)」を参照してください。  
   
 ## <a name="log-reader-agent"></a>ログ リーダー エージェント (Log Reader Agent)  
- トランザクション レプリケーション用にパブリッシュされるデータベースには、それぞれ 1 つのログ リーダー エージェントがあります。 詳細については、「 [Create a Publication](../publish/create-a-publication.md)」を参照してください。  
+ トランザクション レプリケーション用にパブリッシュされるデータベースには、それぞれ 1 つのログ リーダー エージェントがあります。 詳しくは、「 [パブリケーションを作成](../publish/create-a-publication.md)」をご覧ください。  
   
 ## <a name="queue-reader-agent"></a>キュー リーダー エージェント (Queue Reader Agent)  
  あるディストリビューターに関連付けられたすべてのパブリッシャーおよびパブリケーション (キュー更新サブスクリプションを許可するパブリケーション) に対し、1 つのキュー リーダー エージェントがあります。 詳細については、「[トランザクション パブリケーションの更新可能なサブスクリプションの有効化](../publish/enable-updating-subscriptions-for-transactional-publications.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データベース エンジンへの暗号化接続の有効化 &#40;SQL Server 構成マネージャー&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
  [Replication Security Best Practices](replication-security-best-practices.md)   
  [SQL Server レプリケーションのセキュリティ](view-and-modify-replication-security-settings.md)  

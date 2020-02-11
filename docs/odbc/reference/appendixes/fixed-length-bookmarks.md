@@ -16,15 +16,15 @@ ms.assetid: cbd8185e-fb03-408f-b80b-1a2e164534fd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5877a6cb7a99803f854338321e333c87037c2e90
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67913582"
 ---
 # <a name="fixed-length-bookmarks"></a>固定長のブックマーク
-場合、ODBC *3.x*ドライバーは ODBC を使用する必要があります*2.x*アプリケーションは固定長のブックマーク、ドライバーが、次をサポートする必要があります。  
+ODBC *3.x ドライバーが*固定長のブックマークを使用する odbc 2.x*アプリケーションで*動作する必要がある場合、ドライバーは次の機能をサポートする必要があります。  
   
--   SQL_UB_ON SQL_USE_BOOKMARKS ステートメント オプションの値として。 (SQL_UB_ON が ODBC で非推奨と*3.x*)。  
+-   SQL_USE_BOOKMARKS ステートメントオプションの値として SQL_UB_ON ます。 (SQL_UB_ON は ODBC 3.x では非推奨と*されます*)。  
   
--   SQL_GET_BOOKMARK ステートメント オプション。
+-   SQL_GET_BOOKMARK ステートメントオプション。

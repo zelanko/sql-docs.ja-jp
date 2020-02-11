@@ -15,29 +15,29 @@ ms.assetid: a1145c4c-3094-4f3f-8cc2-e6bb1a930ab1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4980cfe64a5a8e8404c6b5b0bdc8b1aba484f0c0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68107331"
 ---
 # <a name="standards-compliant-applications-and-drivers"></a>標準に準拠したアプリケーションとドライバー
-標準に準拠したアプリケーションまたはドライバーを開いてグループ CAE 仕様に準拠している 1 つは、"データ管理。SQL 呼び出しレベルのインターフェイス (CLI)、"と ISO/IEC 9075-3:1995 (E) コールレベル インターフェイス (SQL/CLI)。  
+標準に準拠しているアプリケーションまたはドライバーは、Open Group CAE Specification "データ管理: SQL 呼び出しレベルインターフェイス (CLI)、および ISO/IEC 9075-3:1995 (E) の呼び出しレベルインターフェイス (SQL/CLI) に準拠しています。  
   
- ODBC *3.x*で、次の機能が保証されます。  
+ ODBC *3. x*では、次の機能が保証されます。  
   
--   Open Group および ISO CLI 仕様に記述されたアプリケーションは、ODBC *3.x*ドライバーまたは ODBC でコンパイルされるときに、標準に準拠したドライバー *3.x*ヘッダー ファイルし、リンクされています。ODBC *3.x*ライブラリ、ドライバーは ODBC へのアクセスを得る場合と*3.x*ドライバー マネージャー。  
+-   Open Group および ISO CLI 仕様に書き込まれるアプリケーションは、odbc *3.x ドライバーまた*は標準に準拠しているドライバーを使用してコンパイルされ、odbc *3. x ヘッダーファイル*を使用してコンパイルされ、odbc *3* . x ライブラリにリンクされている場合は *、odbc 3.x ドライバーマネージャー*を使用してドライバーへのアクセスを取得します。  
   
--   Open Group および ISO CLI 仕様に記述されたドライバーは ODBC *3.x*アプリケーションまたは ODBC でコンパイルされるときに、標準に準拠したアプリケーションを*3.x*ヘッダー ファイルし、リンクODBC を使って*3.x*ライブラリ、ODBC を使用してドライバー、アプリケーションがアクセスおよび*3.x*ドライバー マネージャー。  
+-   Open Group および ISO CLI 仕様に書き込まれるドライバーは *、odbc 3.x アプリケーションまた*は標準に準拠しているアプリケーションで動作します。 odbc *3. x ヘッダーファイル*を使用してコンパイルし、odbc *3* . x ライブラリにリンクし、アプリケーションが odbc *3. x*ドライバーマネージャーを使用してドライバーへのアクセスを取得したときに使用します。  
   
- 標準に準拠したアプリケーションとドライバーは、ODBC_STD コンパイル フラグを使用してコンパイルされます。  
+ 標準に準拠しているアプリケーションとドライバーは、ODBC_STD compile フラグを使用してコンパイルされます。  
   
- 標準に準拠したアプリケーションが、次の動作があります。  
+ 標準に準拠しているアプリケーションでは、次の動作が発生します。  
   
--   標準に準拠したアプリケーションから呼び出す場合**SQLAllocEnv** (ために発生する**SQLAllocEnv** 、Open Group と ISO CLI の有効な関数は、)、呼び出しにマップされて**SQLAllocHandleStd**コンパイル時にします。 その結果、実行時に、アプリケーション呼び出し**SQLAllocHandleStd**します。 この呼び出しの処理の中には、ドライバー マネージャーは SQL_ATTR_ODBC_VERSION 環境属性を SQL_OV_ODBC3 に設定します。 呼び出し**SQLAllocHandleStd**への呼び出しに相当**SQLAllocHandle**で、 *HandleType* sql_handle_env としてとへの呼び出しの**SQLSetEnvAttr**を SQL_ATTR_ODBC_VERSION を SQL_OV_ODBC3 に設定します。  
+-   標準に準拠しているアプリケーションが**Sqlallocenv**を呼び出す場合 ( **Sqlallocenv**が OPEN Group と ISO CLI の有効な関数であるために発生する可能性があります)、呼び出しはコンパイル時に**SQLAllocHandleStd**にマップされます。 その結果、実行時に、アプリケーションは**SQLAllocHandleStd**を呼び出します。 この呼び出しを処理する過程で、Driver Manager は SQL_ATTR_ODBC_VERSION environment 属性を SQL_OV_ODBC3 に設定します。 **SQLAllocHandleStd**の呼び出しは、 *handletype*が SQL_HANDLE_ENV で**SQLAllocHandle**を呼び出す場合と同じです。また、 **SQLSetEnvAttr**を SQL_OV_ODBC3 に設定する場合は、SQL_ATTR_ODBC_VERSION を呼び出します。  
   
--   標準に準拠したアプリケーションから呼び出す場合**SQLBindParam** (ために発生する**SQLBindParam**は、Open Group と ISO CLI の有効な関数です)、ODBC *3.x*ドライバー マネージャーで同等の呼び出しへの呼び出しをマップする**SQLBindParameter**します。 (を参照してください[SQLBindParam のマッピング](../../../odbc/reference/appendixes/sqlbindparam-mapping.md)付録 g:ドライバーに関するガイドラインの下位互換性です。)  
+-   標準に準拠しているアプリケーションが**SQLBindParam**を呼び出す場合 ( **SQLBindParam**が OPEN Group と ISO CLI の有効な関数であるために発生する可能性があります)、ODBC *3. x*ドライバーマネージャーは、呼び出しを**SQLBindParameter**の同等の呼び出しにマップします。 (「付録 G: 旧バージョンとの互換性のためのドライバーガイドライン」の「 [SQLBindParam Mapping](../../../odbc/reference/appendixes/sqlbindparam-mapping.md) 」を参照してください)。  
   
--   ISO cli で、ODBC に合わせて*3.x*ヘッダー ファイルへの呼び出しで使用される情報の種類の別名を含む**SQLGetInfo**します。 標準に準拠したアプリケーションは、これらの別名を使用して、ODBC ではなく*3.x*情報の種類。 詳細については、次のトピックを参照してください。[ヘッダー ファイル](../../../odbc/reference/develop-app/header-files.md)します。  
+-   ISO CLI に合わせるために、ODBC *3 .x*ヘッダーファイルには、 **SQLGetInfo**の呼び出しで使用される情報の種類のエイリアスが含まれています。 標準に準拠しているアプリケーションでは、ODBC *3. x*情報の種類ではなく、これらのエイリアスを使用できます。 詳細については、次のトピック「[ヘッダーファイル](../../../odbc/reference/develop-app/header-files.md)」を参照してください。  
   
--   標準に準拠したアプリケーションで動作するドライバーでサポートするすべての機能がサポートされていることを確認してください。 SQL_SCROLLABLE と設定を SQL_ATTR_CURSOR_SCROLLABLE ステートメント属性を設定 SQL_INSENSITIVE または SQL_SENSITIVE SQL_ATTR_CURSOR_SENSITIVITY ステートメント属性は、標準のオプション機能として利用可能な機能ODBC で含まれていない*3.x*コア レベルと可能性がありますでサポートされていないすべての ODBC *3.x*ドライバー。 標準に準拠したアプリケーションは、これらの機能を使用している場合、ドライバーでは動作をサポートしていることを確認する必要があります。
+-   標準に準拠しているアプリケーションでは、サポートしているすべての機能が、使用するドライバーでサポートされていることを確認する必要があります。 SQL_ATTR_CURSOR_SCROLLABLE statement 属性を SQL_SCROLLABLE に設定し、SQL_ATTR_CURSOR_SENSITIVITY statement 属性を SQL_INSENSITIVE または SQL_SENSITIVE に設定する機能は、標準のオプション機能としては使用できますが、ODBC 3.x*のコアレベル*には含まれないため、すべての odbc *3.x ドライバーで*サポートされていない可能性があります。 標準に準拠しているアプリケーションでこれらの機能を使用する場合は、それが動作するドライバーがサポートしているかどうかを確認する必要があります。

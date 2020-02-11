@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 52781de1cd4b6309f3ebeb9a2c59ae85b0b32dbd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62754593"
 ---
 # <a name="pause-or-resume-a-database-mirroring-session-sql-server"></a>データベース ミラーリング セッションの一時停止または再開 (SQL Server)
@@ -30,15 +30,15 @@ ms.locfileid: "62754593"
   
 -   **作業を開始する準備:**  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
--   **ReplaceThisText:**  
+-   **次のものを使用して、次のものを置換するには:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **補足情報:** [一時停止またはデータベース ミラーリングを再開した後](#FollowUp)  
+-   **補足情報:**  [データベースミラーリングを一時停止または再開した後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
  データベース ミラーリング セッションをいつでも中断して、ボトルネックの発生中にパフォーマンスを向上させることができます。また、中断したセッションはいつでも再開できます。  
@@ -58,9 +58,11 @@ ms.locfileid: "62754593"
   
 1.  データベース ミラーリング セッション中にプリンシパル サーバー インスタンスに接続します。次に、オブジェクト エクスプローラーで、サーバー名をクリックしてサーバー ツリーを展開します。  
   
-2.  **[データベース]** を展開し、データベースを選択します。  
+2.  
+  **[データベース]** を展開し、データベースを選択します。  
   
-3.  データベースを右クリックして **[タスク]** をポイントし、 **[ミラー]** をクリックします。 **[データベースのプロパティ]** ダイアログ ボックスの **[ミラーリング]** ページが開きます。  
+3.  データベースを右クリックして **[タスク]** をポイントし、 **[ミラー]** をクリックします。 
+  **[データベースのプロパティ]** ダイアログ ボックスの **[ミラーリング]** ページが開きます。  
   
 4.  セッションを一時停止するには、 **[一時停止]** をクリックします。  
   
@@ -82,7 +84,8 @@ ms.locfileid: "62754593"
   
      ALTER DATABASE *database_name* SET PARTNER SUSPEND  
   
-     *database_name* は、セッションを中断しようとしているミラー化データベースです。  
+     
+  *database_name* は、セッションを中断しようとしているミラー化データベースです。  
   
      次の例では、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] サンプル データベースを一時停止します。  
   
@@ -100,7 +103,8 @@ ms.locfileid: "62754593"
   
      ALTER DATABASE *database_name* SET PARTNER RESUME  
   
-     *database_name* は、再開するセッションのミラー化されたデータベースです。  
+     
+  *database_name* は、再開するセッションのミラー化されたデータベースです。  
   
      次の例では、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] サンプル データベースを一時停止します。  
   
@@ -108,21 +112,21 @@ ms.locfileid: "62754593"
     ALTER DATABASE AdventureWorks2012 SET PARTNER RESUME;  
     ```  
   
-##  <a name="FollowUp"></a>補足情報: 一時停止またはデータベース ミラーリングを再開した後  
+##  <a name="FollowUp"></a>補足情報: データベースミラーリングを一時停止または再開した後  
   
--   **データベース ミラーリングを一時停止した後**  
+-   **データベースミラーリングを一時停止した後**  
   
      プライマリ データベースで、トランザクション ログが満杯にならないように予防策をとります。 詳細については、「 [トランザクション ログ &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)」を参照してください。  
   
--   **データベース ミラーリングを再開した後**  
+-   **データベースミラーリングを再開した後**  
   
      データベース ミラーリングを再開することで、ミラー データベースを SYNCHRONIZING 状態にします。 安全性レベルが FULL の場合、プリンシパルに対するミラーの遅れが解消され、ミラー データベースが SYNCHRONIZED 状態になります。 この時点で、フェールオーバーが可能になります。 ミラーリング監視サーバーが存在していて、オンになっている場合は、自動フェールオーバーが可能です。 ミラーリング監視サーバーが存在しない場合は、手動フェールオーバーが可能です。  
   
 ##  <a name="RelatedTasks"></a> 関連タスク  
   
--   [データベース ミラーリングを削除する &#40;SQL Server&#41;](remove-database-mirroring-sql-server.md)  
+-   [データベースミラーリング &#40;SQL Server の削除&#41;](remove-database-mirroring-sql-server.md)  
   
 ## <a name="see-also"></a>参照  
- [データベース ミラーリング &#40;SQL Server&#41;](database-mirroring-sql-server.md)  
+ [データベースミラーリング &#40;SQL Server&#41;](database-mirroring-sql-server.md)  
   
   

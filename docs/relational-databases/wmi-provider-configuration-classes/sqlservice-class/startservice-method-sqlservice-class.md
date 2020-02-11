@@ -18,10 +18,10 @@ ms.assetid: 83dfb6bd-dbd5-45d8-aad2-a11926317f91
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 67297de6badb15b493a5f17cbfe63bacc940a882
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73660839"
 ---
 # <a name="startservice-method-sqlservice-class"></a>StartService メソッド (SqlService クラス)
@@ -36,16 +36,16 @@ object.StartService()
 ```  
   
 ## <a name="parts"></a>要素  
- *object*  
+ *素材*  
  サービスを表す [SqlService クラス](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) オブジェクト。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  次のスタートアップ状態のうちの 1 つを指定する uint32 値。  
   
  0  
- 正常終了しました。 要求が受け入れられました。  
+ 成功。 要求が受け入れられました。  
   
- 1  
+ 1 で保護されたプロセスとして起動されました  
  サポートされていません。 要求はサポートされていません。  
   
  2  
@@ -120,6 +120,6 @@ object.StartService()
 ## <a name="remarks"></a>解説  
   
 ## <a name="see-also"></a>参照  
- [サービスの開始と停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [サービスの開始および停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

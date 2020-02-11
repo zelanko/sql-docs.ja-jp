@@ -13,19 +13,19 @@ ms.assetid: 1a46196e-839f-4734-a59e-2c64609ffb9e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2606733b3efc5a9641f8de0f544b3cff7c7e9a31
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923342"
 ---
 # <a name="xslt-transformations"></a>XSLT 変換
-XSLT は、別の形式に変換して、生成される XML に適用できます。 ADO での XML 形式を理解することよりユーザー フレンドリな形式に変換する XSLT テンプレートの開発に役立ちます。  
+生成された XML に XSLT を適用して、別の形式に変換することができます。 ADO で XML 形式を理解することは、よりわかりやすい形式に変換できる XSLT テンプレートの開発に役立ちます。  
   
- たとえば、rs: データ要素内の z: 行要素として、レコード セットの各行が保存されているを認識します。 同様に、レコード セットの各フィールドは、この要素の属性値のペアとして保存されます。  
+ たとえば、レコードセットの各行は、rs: data 要素内の z: row 要素として保存されていることがわかります。 同様に、レコードセットの各フィールドは、この要素の属性と値のペアとして保存されます。  
   
-## <a name="remarks"></a>コメント  
- 次の XSLT スクリプトは、ブラウザーに表示される HTML テーブルに変換する前のセクションで示した XML を適用できます。  
+## <a name="remarks"></a>解説  
+ 次の XSLT スクリプトは、前のセクションで示した XML に適用して、ブラウザーに表示される HTML テーブルに変換できます。  
   
 ```  
 <?xml version="1.0" encoding="ISO-8859-1"?>  
@@ -50,7 +50,7 @@ XSLT は、別の形式に変換して、生成される XML に適用できま�
 </html>  
 ```  
   
- XSLT では、テーブルの見出しとレコード セットの各フィールドを表示する HTML テーブルに、ADO の Save メソッドによって生成される XML ストリームに変換します。 テーブルの見出しおよび行も割り当てられているさまざまなフォントおよび色。  
+ XSLT は、ADO Save メソッドによって生成された XML ストリームを HTML テーブルに変換します。このテーブルでは、レコードセットの各フィールドがテーブル見出しと共に表示されます。 テーブルの見出しと行にも、異なるフォントと色が割り当てられます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [レコードを XML 形式で保持する](../../../ado/guide/data/persisting-records-in-xml-format.md)

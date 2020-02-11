@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0c4da45e57342288cc23a9783709666f4c02d0bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63050015"
 ---
 # <a name="recover-from-failover-cluster-instance-failure"></a>フェールオーバー クラスター インスタンス障害からの復旧
@@ -27,9 +27,9 @@ ms.locfileid: "63050015"
   
 -   [修復不可能な障害からの復旧](#Scenario1)  
   
--   [ソフトウェア障害からの復旧](#Scenario2)  
+-   [ソフトウェアエラーからの回復](#Scenario2)  
   
-##  <a name="Scenario1"></a> 修復不可能な障害からの復旧  
+##  <a name="Scenario1"></a>修復不可能な障害からの復旧  
  修復不可能な障害から復旧するには、次の手順に従います。 この障害の原因としては、ディスク コントローラーやオペレーティング システムの異常などが考えられます。 この例では、2 ノード クラスターのノード 1 でハードウェア障害が発生したものとします。  
   
 1.  ノード 1 で障害が発生した後、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI がノード 2 にフェールオーバーされます。  
@@ -44,9 +44,10 @@ ms.locfileid: "63050015"
   
 6.  管理者アカウントは、すべてのクラスター ノードで同じになるようにします。  
   
-7.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップを実行してノード 1 を FCI に追加します。 詳細については、「[SQL Server フェールオーバー クラスターでのノードの追加または削除 &#40;セットアップ&#41;](../install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)」をご覧ください。  
+7.  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップを実行してノード 1 を FCI に追加します。 詳細については、「[SQL Server フェールオーバー クラスターでのノードの追加または削除 &#40;Setup&#41;](../install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)」を参照してください。  
   
-##  <a name="Scenario2"></a> 修復可能な障害からの復旧  
+##  <a name="Scenario2"></a>修復可能障害からの復旧  
  修復可能な障害から復旧するには、次の手順に従います。 このケースでは、障害の原因はダウンまたはオフラインになっているノード 1 です。ただし、復旧できないほどの損傷ではありません。 この障害の原因としては、オペレーティング システム、ハードウェア、または [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンス自体の障害が考えられます。  
   
 1.  ノード 1 で障害が発生した後、FCI がノード 2 にフェールオーバーされます。  

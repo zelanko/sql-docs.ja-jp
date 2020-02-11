@@ -18,18 +18,18 @@ ms.assetid: ee462617-1d79-4c88-afeb-b129cff34cc6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 307f0f54434fdcb4ebb19c38256a7a04f4a5c46d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67990716"
 ---
 # <a name="mapping-deprecated-functions"></a>非推奨の関数のマッピング
-このセクションには、どのように非推奨の関数がについて説明します、ODBC によってマップされます*3.x* ODBC の旧バージョンとの互換性を保証するために、ドライバー マネージャー *3.x* ODBC で使用されるドライバー *2.x*アプリケーション。 ドライバー マネージャーは、アプリケーションのバージョンに関係なく、このマッピングを実行します。 ODBC の各*2.x*関数は、次の一覧は、対応する ODBC にマップされて*3.x*関数、ODBC で呼び出されると*3.x*ドライバー、ODBC *3.x*ドライバーは ODBC を実装する必要はありません*2.x*関数。  
+このセクションでは、odbc 2.x アプリケーションで使用される ODBC *3.x ドライバーの*旧バージョンとの互換性を保証するために、非推奨の関数*が Odbc* *3.x ドライバーマネージャー*によってどのようにマップされるかについて説明します。 ドライバーマネージャーは、アプリケーションのバージョンに関係なく、このマッピングを実行します。 次の一覧に示す*odbc 2.x 関数は*それぞれ *、odbc 3.x ドライバーで*呼び出された場合に対応する odbc 3.x 関数にマップされるため *、ODBC 3.x ドライバーで**は odbc* *2.x 関数を*実装する必要はありません。  
   
- リスト内のマッピングは、ドライバーは ODBC ときにトリガーされる*3.x*ドライバーとドライバーがマップされる関数をサポートしていません。  
+ ドライバー*が ODBC 3.x*ドライバーであり、ドライバーがマップされている関数をサポートしていない場合、一覧内のマッピングがトリガーされます。  
   
- 次の表に、ODBC で導入された機能がすべての重複*3.x*します。  
+ 次の表は、ODBC *3. x*で導入されたすべての重複機能を示しています。  
   
 |ODBC *2.x*関数|ODBC *3.x*関数|  
 |-------------------------|-------------------------|  
@@ -38,10 +38,10 @@ ms.locfileid: "67990716"
 |**SQLAllocStmt**|**SQLAllocHandle**|  
 |**SQLBindParam**[1]|**SQLBindParameter**|  
 |**SQLColAttributes**|**SQLColAttribute**|  
-|**Sqlerror 関数**|**SQLGetDiagRec**|  
+|**SQLError**|**SQLGetDiagRec**|  
 |**SQLFreeConnect**|**SQLFreeHandle**|  
 |**SQLFreeEnv**|**SQLFreeHandle**|  
-|**SQLFreeStmt**で、*オプション*SQL_DROP の|**SQLFreeHandle**|  
+|SQL_DROP の*オプション*を使用した**SQLFreeStmt**|**SQLFreeHandle**|  
 |**SQLGetConnectOption**|**SQLGetConnectAttr**|  
 |**SQLGetStmtOption**|**SQLGetStmtAttr**|  
 |**SQLParamOptions**|**SQLSetStmtAttr**|  
@@ -51,9 +51,9 @@ ms.locfileid: "67990716"
 |**SQLSetStmtOption**|**SQLSetStmtAttr**|  
 |**SQLTransact**|**SQLEndTran**|  
   
- [1] この関数は、ODBC には存在しなかった場合でも*2.x*、Open Group と ISO 標準になっています。  
+ [1] この関数が ODBC 2.x に存在しなかった場合で*も、オープン*グループおよび ISO 標準になっています。  
   
- [2] これは、ODBC 1.0 関数です。  
+ [2] ODBC 1.0 関数です。  
   
  このセクションでは、次のトピックを扱います。  
   

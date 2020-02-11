@@ -1,5 +1,5 @@
 ---
-title: 'C から SQL へ: ビット |Microsoft Docs'
+title: 'C から SQL へ: Bit |Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,23 +15,23 @@ ms.assetid: 267c9fa9-599e-4ee6-b51b-0cae43f09183
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8cc5e26b30816d0989dca90566a1a5de008b71c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68019421"
 ---
 # <a name="c-to-sql-bit"></a>C から SQL へ: ビット
-ODBC C データ型の識別子を示します。  
+ビット ODBC C データ型の識別子は次のとおりです。  
   
  SQL_C_BIT  
   
- 次の表は、ODBC SQL データ型のビット C のデータを変換する可能性がありますを示します。 列とテーブルの用語の詳細については、次を参照してください。 [C から SQL データ型への変換データ](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)します。  
+ 次の表は、ビット C データの変換先となる ODBC SQL データ型を示しています。 テーブル内の列と用語の詳細については、「[データを C から SQL データ型に変換する](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)」を参照してください。  
   
 |SQL 型識別子|テスト|SQLSTATE|  
 |-------------------------|----------|--------------|  
-|SQL_CHAR SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR<br /><br /> SQL_WCHAR SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|なし|n/a|  
-|SQL_DECIMAL SQL_NUMERIC<br /><br /> SQL_TINYINT SQL_SMALLINT<br /><br /> SQL_INTEGER SQL_BIGINT<br /><br /> SQL_REAL 使用できます。<br /><br /> SQL_DOUBLE|なし|n/a|  
-|SQL_BIT|なし|n/a|  
+|SQL_CHAR SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR<br /><br /> SQL_WCHAR SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|なし|該当なし|  
+|SQL_DECIMAL SQL_NUMERIC<br /><br /> SQL_TINYINT SQL_SMALLINT<br /><br /> SQL_INTEGER SQL_BIGINT<br /><br /> SQL_REAL SQL_FLOAT<br /><br /> SQL_DOUBLE|なし|該当なし|  
+|SQL_BIT|なし|該当なし|  
   
- ドライバーでは、ビット C データ型からデータを変換するときに長さ/インジケーター値を無視し、データ バッファーのサイズがビット C データ型のサイズであると仮定します。 長さまたはインジケーターの値が渡さ、 *StrLen_or_Ind*引数**SQLPutData**とで指定したバッファー、 *StrLen_or_IndPtr* 引数**SQLBindParameter**します。 データ バッファーを指定した、 *DataPtr*引数**SQLPutData**と*ParameterValuePtr*引数**SQLBindParameter**.
+ ドライバーは、ビット C データ型からデータを変換するときに、長さ/インジケーターの値を無視し、データバッファーのサイズがビット C データ型のサイズであると想定しています。 長さ/インジケーターの値は、 **Sqlputdata**の*StrLen_or_Ind*引数と、 **SQLBindParameter**の*StrLen_or_IndPtr*引数で指定されたバッファーに渡されます。 データバッファーは、 **Sqlputdata**の*DataPtr*引数と**SQLBindParameter**の*parametervalueptr*引数を使用して指定します。

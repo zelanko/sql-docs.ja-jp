@@ -11,16 +11,17 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 8e46d7fc8a0c214501841de448a94d1211b95fa1
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892958"
 ---
 # <a name="understanding-the-requirements-for-a-time-series-model-intermediate-data-mining-tutorial"></a>時系列モデルの要件について (中級者向けデータ マイニング チュートリアル)
   予測モデルで使用するデータを準備する際に、時系列内のステップの識別に使用できる列がデータに含まれていることを確認する必要があります。 その列が `Key Time` 列として指定されて キーになるため、この列には一意の数値が含まれている必要があります。  
   
- `Key Time` 列の右の単位の選択は、分析を行う上で重要な要素になります。 たとえば、売上データを 1 分ごとに更新するとします。 このとき、必ずしも時系列の単位として分を使用する必要はなく、売上データを日、週、または月ごとにロール アップする方が重要です。 どの時間単位を使用すればよいかわからない場合は、各集計のための新しいデータ ソース ビューを作成し、関連モデルを構築することで、集計の各レベルで異なる傾向があるかどうかを確認できます。  
+ 
+  `Key Time` 列の右の単位の選択は、分析を行う上で重要な要素になります。 たとえば、売上データを 1 分ごとに更新するとします。 このとき、必ずしも時系列の単位として分を使用する必要はなく、売上データを日、週、または月ごとにロール アップする方が重要です。 どの時間単位を使用すればよいかわからない場合は、各集計のための新しいデータ ソース ビューを作成し、関連モデルを構築することで、集計の各レベルで異なる傾向があるかどうかを確認できます。  
   
  このチュートリアルでは、売上データについてはトランザクション売上データベースで毎日収集しますが、データ マイニングのデータについては、事前にビューを使用して月単位で集計します。  
   
@@ -31,23 +32,23 @@ ms.locfileid: "68892958"
   
 ### <a name="to-identify-the-time-key-for-the-forecasting-model"></a>予測モデルの時間キーを特定するには  
   
-1.  [ **Salesbyregion. dsv [Design]** ] ペインで、vTimeSeries テーブルを右クリックし、データの **[探索]** を選択します。  
+1.  [ **Salesbyregion. dsv [Design]**] ペインで、vTimeSeries テーブルを右クリックし、[データの**探索**] を選択します。  
   
      新しいタブが開き、" **VTimeSeries テーブルの探索**" というタイトルが表示されます。  
   
-2.  **[テーブル]** タブで、timeindex 列および Reporting Date 列に使用されているデータを確認します。  
+2.  [**テーブル**] タブで、timeindex 列および Reporting Date 列に使用されているデータを確認します。  
   
      どちらの列も一意の値を持つシーケンスであり、時系列キーとして使用できますが、列によってデータ型が異なります。 Microsoft Time Series アルゴリズムでは、`datetime` データ型は必要なく、値が一意であり、順序付けられていることのみが必要とされます。 したがって、どちらの列も予測モデルの時間キーとして使用できます。  
   
-3.  データソースビューデザイン画面で、レポートの日付 列を選択し、**プロパティ** を選択します。 次に、TimeIndex 列をクリックし、 **[プロパティ]** を選択します。  
+3.  データソースビューデザイン画面で、[レポートの日付] 列を選択し、[**プロパティ**] を選択します。 次に、TimeIndex 列をクリックし、[**プロパティ**] を選択します。  
   
      フィールド TimeIndex のデータ型は system.string であるのに対し、フィールドのレポート日付のデータ型は system.string です。 多くのデータ ウェアハウスでは、インデックス作成のパフォーマンスを高めるために、日付/時刻の値が整数に変換され、その整数列がキーとして使用されます。 ただし、この列を使用した場合、Microsoft Time Series アルゴリズムでは、201014、201014 などの将来の値を使用して予測が行われます。 カレンダーの日付を使用して売上データの予測を表す必要があるので、レポートの日付列を一意の系列 id として使用します。  
   
 ### <a name="to-set-the-key-in-the-data-source-view"></a>データ ソース ビューのキーを設定するには  
   
-1.  **[Salesbyregion. dsv]** ペインで、vTimeSeries テーブルを選択します。  
+1.  [ **Salesbyregion. dsv**] ペインで、vTimeSeries テーブルを選択します。  
   
-2.  Reporting Date 列を右クリックし、**論理主キーの設定** を選択します。  
+2.  [Reporting Date] 列を右クリックし、[**論理主キーの設定**] を選択します。  
   
 ## <a name="handling-missing-data-optional"></a>不足データの処理 (オプション)  
  系列に不足データがあると、モデルを処理しようとする際にエラーが表示されます。 不足データには、複数の方法で対処することができます。  
@@ -62,12 +63,12 @@ ms.locfileid: "68892958"
   
 #### <a name="to-close-the-data-source-view-designer"></a>データ ソース ビュー デザイナーを閉じるには  
   
--   タブを右クリックし、 **VTimeSeries テーブルを探索**して、 **[閉じる]** を選択します。  
+-   タブを右クリックし、 **VTimeSeries テーブルを探索**して、[**閉じる**] を選択します。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
- [予測構造とモデル&#40;中間データマイニングチュートリアルの作成&#41;](../../2014/tutorials/creating-a-forecasting-structure-and-model-intermediate-data-mining-tutorial.md)  
+ [中間データマイニングチュートリアル &#40;予測構造とモデルの作成&#41;](../../2014/tutorials/creating-a-forecasting-structure-and-model-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>参照  
- [Microsoft タイム シリーズ アルゴリズム](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)  
+ [Microsoft Time Series アルゴリズム](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)  
   
   

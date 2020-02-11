@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a2206980d241d3ef0aa683e4f987a4e337a86855
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62913807"
 ---
-# <a name="mssqlserver41368"></a>MSSQLSERVER_41368
+# <a name="mssqlserver_41368"></a>MSSQLSERVER_41368
     
 ## <a name="details"></a>詳細  
   
@@ -38,7 +38,7 @@ ms.locfileid: "62913807"
  BEGIN TRANSACTION を使用して開始された明示的なトランザクション、または IMPLICIT_TRANSACTIONS が ON に設定されている状況で暗黙的なトランザクションからメモリ最適化テーブルにアクセスする場合は、READ COMMITTED 分離レベルはサポートされません。  
   
 ## <a name="user-action"></a>ユーザーの操作  
- 明示的または暗黙的な READ COMMITTED トランザクションからメモリ最適化されたテーブルにアクセスする場合は、テーブルにアクセスするために SNAPSHOT を使用します。 これは、テーブル ヒント WITH (SNAPSHOT) を使用して実現できます (詳細については、次を参照してください[メモリ最適化テーブルでのトランザクション分離レベルに関するガイドライン](../in-memory-oltp/memory-optimized-tables.md)) またはデータベースを設定してオプション MEMORY_OPTIMIZED_ELEVATE_TO_。スナップショットのオプションを on (詳細については、次を参照してください。 [ALTER DATABASE SET Options &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options))。  
+ 明示的または暗黙的な READ COMMITTED トランザクションからメモリ最適化されたテーブルにアクセスする場合は、テーブルにアクセスするために SNAPSHOT を使用します。 これを実現するには、テーブルヒント WITH (SNAPSHOT) を使用します (詳細については、「[メモリ最適化テーブルを使用したトランザクション分離レベルのガイドライン](../in-memory-oltp/memory-optimized-tables.md)」を参照)。または、データベース MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT オプションを ON に設定する (詳細については、「 [ALTER database SET Options &#40;transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options))」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [インメモリ OLTP &#40;インメモリ最適化&#41;](../in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
