@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dfbfa64cb61332591fadef874b8c73da3ce1e7c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62913751"
 ---
-# <a name="mssqlserver5228"></a>MSSQLSERVER_5228
+# <a name="mssqlserver_5228"></a>MSSQLSERVER_5228
     
 ## <a name="details"></a>詳細  
   
@@ -30,7 +30,7 @@ ms.locfileid: "62913751"
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|DBCC4_ANTIMATTER_COLUMN_DETECTED|  
-|メッセージ テキスト|テーブル エラー:オブジェクト ID O_ID、インデックス ID I_ID、パーティション ID PN_ID、アロケーション ユニット ID A_ID (型 TYPE)、ページ PG_ID、行 R_ID。 DBCC により、オンラインのインデックス構築操作で不完全なクリーンアップが検出されました。 (問題のある列の値は VALUE です)。|  
+|メッセージ テキスト|テーブル エラー: オブジェクト ID O_ID、インデックス ID I_ID、パーティション ID PN_ID、アロケーション ユニット ID A_ID (型 TYPE)、ページ PG_ID、行 R_ID。 DBCC により、オンラインのインデックス構築操作で不完全なクリーンアップが検出されました。 (問題のある列の値は VALUE です)。|  
   
 ## <a name="explanation"></a>説明  
  オブジェクト *O_ID*、インデックス *I_ID*、およびパーティション *PN_ID* に対して完了していないオンライン インデックス構築が検出されました。 この現象は、問題のある列が行 *R_ID* に存在することによって生じます。 問題のある列は、オンライン インデックスの構築時に複数のソースからのレコードを調整するときに使用されます。 このエラー メッセージには、問題のある列の値も示されます。  

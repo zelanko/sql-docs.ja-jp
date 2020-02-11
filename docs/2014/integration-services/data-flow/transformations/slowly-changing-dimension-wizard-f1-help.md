@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5ccb8df947d31376707f81c0ce7cd7c28cc62d6c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900020"
 ---
 # <a name="slowly-changing-dimension-wizard-f1-help"></a>緩やかに変化するディメンション ウィザードの F1 ヘルプ
@@ -24,7 +24,7 @@ ms.locfileid: "62900020"
   
  このウィザードの詳細については、「 [Slowly Changing Dimension Transformation](slowly-changing-dimension-transformation.md)」を参照してください。  
   
- [[緩やかに変化するディメンション ウィザードへようこそ]](welcome-to-the-slowly-changing-dimension-wizard.md)  
+ [緩やかに変化するディメンション ウィザードへようこそ](welcome-to-the-slowly-changing-dimension-wizard.md)  
  緩やかに変化するディメンション ウィザードについて紹介します。  
   
  [[ディメンション テーブルおよびキーの選択] &#40;緩やかに変化するディメンション ウィザード&#41;](select-a-dimension-table-and-keys-slowly-changing-dimension-wizard.md)  
@@ -42,7 +42,7 @@ ms.locfileid: "62900020"
  [[推定ディメンション メンバー] &#40;緩やかに変化するディメンション ウィザード&#41;](inferred-dimension-members-slowly-changing-dimension-wizard.md)  
  推定ディメンション メンバーのオプションを指定します。  
   
- [[緩やかに変化するディメンション ウィザードの完了]](finish-the-slowly-changing-dimension-wizard.md)  
+ [緩やかに変化するディメンション ウィザードの完了](finish-the-slowly-changing-dimension-wizard.md)  
  ユーザーにより選択された構成オプションを表示します。  
   
 ## <a name="see-also"></a>参照  

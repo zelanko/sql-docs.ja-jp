@@ -13,16 +13,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b87d71f8299c55e033adc21e25e29e8fb3d5e9d6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900001"
 ---
 # <a name="use-a-recordset-destination"></a>レコードセット変換先を使用する
-  レコードセット変換先では、データは外部データ ソースに保存されません。 代わりに、レコードセット変換先では、`Object` データ型の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージ変数に格納されるレコードセットのメモリにデータが保存されます。 レコードセット変換先でデータが保存されたら、通常、Foreach ループ コンテナーと Foreach ADO 列挙子を使用して、一度に 1 つのレコードセット行を処理します。 Foreach ADO 列挙子によって、現在の行の各列の値が個別のパッケージ変数に保存されます。 その後、Foreach ループ コンテナー内で構成したタスクによって変数から値が読み取られ、その値を使用してアクションが実行されます。  
+  レコードセット変換先では、データは外部データ ソースに保存されません。 代わりに、レコードセット変換先では、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] データ型の `Object` パッケージ変数に格納されるレコードセットのメモリにデータが保存されます。 レコードセット変換先でデータが保存されたら、通常、Foreach ループ コンテナーと Foreach ADO 列挙子を使用して、一度に 1 つのレコードセット行を処理します。 Foreach ADO 列挙子によって、現在の行の各列の値が個別のパッケージ変数に保存されます。 その後、Foreach ループ コンテナー内で構成したタスクによって変数から値が読み取られ、その値を使用してアクションが実行されます。  
   
- レコードセット変換先は、さまざまなシナリオで使用できます。 次にいくつかの例を示します。  
+ レコードセット変換先は、さまざまなシナリオで使用できます。 次に例をいくつか示します。  
   
 -   メール送信タスクと [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 式言語を使用して、レコードセットの行ごとにカスタマイズされた電子メール メッセージを送信できます。  
   
@@ -68,21 +68,29 @@ ms.locfileid: "62900001"
   
 3.  **[変数]** ウィンドウで、レコードセットと現在の行の列値を格納する変数を作成します。  
   
-    1.  `BonusRecordset` という名前の変数を作成し、その型を `Object` に設定します。  
+    1.  
+  `BonusRecordset` という名前の変数を作成し、その型を `Object` に設定します。  
   
-         `BonusRecordset` 変数にはレコードセットが格納されます。  
+         
+  `BonusRecordset` 変数にはレコードセットが格納されます。  
   
-    2.  `EmailAddress` という名前の変数を作成し、その型を `String` に設定します。  
+    2.  
+  `EmailAddress` という名前の変数を作成し、その型を `String` に設定します。  
   
-         `EmailAddress` 変数には販売員の電子メール アドレスが格納されます。  
+         
+  `EmailAddress` 変数には販売員の電子メール アドレスが格納されます。  
   
-    3.  `FirstName` という名前の変数を作成し、その型を `String` に設定します。  
+    3.  
+  `FirstName` という名前の変数を作成し、その型を `String` に設定します。  
   
-         `FirstName` 変数には販売員の名が格納されます。  
+         
+  `FirstName` 変数には販売員の名が格納されます。  
   
-    4.  `Bonus` という名前の変数を作成し、その型を `Double` に設定します。  
+    4.  
+  `Bonus` という名前の変数を作成し、その型を `Double` に設定します。  
   
-         `Bonus` 変数には販売員のボーナス額が格納されます。  
+         
+  `Bonus` 変数には販売員のボーナス額が格納されます。  
   
 #### <a name="to-configure-the-connection-managers"></a>接続マネージャーを構成するには  
   
@@ -98,7 +106,7 @@ ms.locfileid: "62900001"
   
 1.  **デザイナーの** [制御フロー] [!INCLUDE[ssIS](../../includes/ssis-md.md)] タブで、データ フロー タスクをデザイン画面に追加します。  
   
-2.  **[データ フロー]** タブで、OLE DB ソースをデータ フロー タスクに追加し、**[OLE DB ソース エディター]** を開きます。  
+2.  **[データ フロー]** tab, add an OLE DB source to the [データ フロー] task, and then open the **[OLE DB ソース エディター]** を開きます。  
   
 3.  エディターの **[接続マネージャー]** ページで、次の設定を使用してソースを構成します。  
   
@@ -121,7 +129,7 @@ ms.locfileid: "62900001"
   
 5.  **[レコードセット変換先エディター]** を開いて、次の設定を使用して変換先を構成します。  
   
-    1.  **コンポーネントのプロパティ** タブの`VariableName`プロパティで、`User::BonusRecordset`します。  
+    1.  [**コンポーネント**の`VariableName`プロパティ] タブの [プロパティ] `User::BonusRecordset`で、[] を選択します。  
   
     2.  **[入力列]** タブで、使用可能な 3 つすべての列を選択します。  
   
@@ -131,9 +139,9 @@ ms.locfileid: "62900001"
   
 2.  **[Foreach ループ エディター]** を開いて、次の設定を使用してコンテナーを構成します。  
   
-    1.  **コレクション** ページの**列挙子**を選択します**Foreach ADO 列挙子**、および**ADO オブジェクト ソース変数**を選択します。`User::BonusRecordset`.  
+    1.  [**コレクション**] ページの [**列挙子**] で [ **Foreach ado Enumerator**] を選択し、[ **ADO オブジェクトソース変数**] でを選択`User::BonusRecordset`します。  
   
-    2.  **変数のマッピング**ページで、マップ`User::EmailAddress`をインデックス 0、`User::FirstName`をインデックス 1、および`User::Bonus`インデックス 2 にします。  
+    2.  [**変数のマッピング**] ページで`User::EmailAddress` 、インデックス0、 `User::FirstName`インデックス1、インデックス 2 `User::Bonus`にマップします。  
   
 3.  **[制御フロー]** タブで、Foreach ループ コンテナー内にメール送信タスクを追加します。  
   

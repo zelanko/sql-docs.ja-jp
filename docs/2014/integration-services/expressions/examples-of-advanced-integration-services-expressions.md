@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9272a6c11ce226f385c0b1f79f965a2a0f55835e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62901123"
 ---
 # <a name="examples-of-advanced-integration-services-expressions"></a>Integration Services 式の詳細の例
@@ -41,20 +41,23 @@ ms.locfileid: "62901123"
     ROUND(ListPrice / StandardCost,2) > 1.50  
     ```  
   
--   この例では、 **Product** テーブルを使用します。 式は、3 つの演算すべてが TRUE に評価された場合に TRUE を返します。 **Size** 列のデータ型と **BikeSize** 変数のデータ型に互換性がない場合、式には、2 番目の例で示すように明示的なキャストが必要です。 DT_WSTR へのキャストには、文字列の長さも含まれます。  
+-   この例では、 **Product** テーブルを使用します。 式は、3 つの演算すべてが TRUE に評価された場合に TRUE を返します。 
+  **Size** 列のデータ型と **BikeSize** 変数のデータ型に互換性がない場合、式には、2 番目の例で示すように明示的なキャストが必要です。 DT_WSTR へのキャストには、文字列の長さも含まれます。  
   
     ```  
     MakeFlag ==  TRUE && FinishedGoodsFlag == TRUE && Size != @BikeSize  
     MakeFlag ==  TRUE && FinishedGoodsFlag == TRUE  && Size != (DT_WSTR,10)@BikeSize  
     ```  
   
--   この例では、 **CurrencyRate** テーブルを使用します。 式は、テーブル内の値と変数を比較します。 **FromCurrencyCode** 列または **ToCurrencyCode** 列のエントリが変数の値と等しく、かつ **AverageRate** の値が **EndOfDayRate**の値よりも大きい場合、式は TRUE を返します。  
+-   この例では、 **CurrencyRate** テーブルを使用します。 式は、テーブル内の値と変数を比較します。 
+  **FromCurrencyCode** 列または **ToCurrencyCode** 列のエントリが変数の値と等しく、かつ **AverageRate** の値が **EndOfDayRate**の値よりも大きい場合、式は TRUE を返します。  
   
     ```  
     (FromCurrencyCode == @FromCur || ToCurrencyCode == @ToCur) && AverageRate > EndOfDayRate  
     ```  
   
--   この例では、 **Currency** テーブルを使用します。 **Name** 列の最初の文字が a または A でない場合、式は TRUE を返します。  
+-   この例では、 **Currency** テーブルを使用します。 
+  **Name** 列の最初の文字が a または A でない場合、式は TRUE を返します。  
   
     ```  
     SUBSTRING(UPPER(Name),1,1) != "A"  
@@ -69,13 +72,15 @@ ms.locfileid: "62901123"
 ## <a name="non-boolean-expressions"></a>ブール式以外の式  
  ブール式以外の式は、派生列変換、プロパティ式、および For ループ コンテナーで使用されます。  
   
--   この例では、 **Contact** テーブルを使用します。 式は、 **FirstName**、 **MiddleName**、および **LastName** 列から先頭および末尾のスペースを削除します。 **MiddleName** 列が NULL でない場合は最初の文字を抽出し、そのミドル ネーム イニシャルと **FirstName** および **LastName**の値を連結して、値の間に適切なスペースを挿入します。  
+-   この例では、 **Contact** テーブルを使用します。 式は、 **FirstName**、 **MiddleName**、および **LastName** 列から先頭および末尾のスペースを削除します。 
+  **MiddleName** 列が NULL でない場合は最初の文字を抽出し、そのミドル ネーム イニシャルと **FirstName** および **LastName**の値を連結して、値の間に適切なスペースを挿入します。  
   
     ```  
     TRIM(FirstName) + " " + (!ISNULL(MiddleName) ? SUBSTRING(MiddleName,1,1) + " " : "") + TRIM(LastName)  
     ```  
   
--   この例では、 **Contact** テーブルを使用します。 式は、 **Salutation** 列のエントリを検証します。 **Salutation** のエントリまたは空の文字列を返します。  
+-   この例では、 **Contact** テーブルを使用します。 式は、 **Salutation** 列のエントリを検証します。 
+  **Salutation** のエントリまたは空の文字列を返します。  
   
     ```  
     (Salutation == "Sr." || Salutation == "Ms." || Salutation == "Sra." || Salutation == "Mr.") ? Salutation : ""  

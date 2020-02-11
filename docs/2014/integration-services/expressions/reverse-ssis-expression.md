@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ce882ae32718f634efb6b2f39ed397dfb9cbf785
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62897339"
 ---
 # <a name="reverse-ssis-expression"></a>REVERSE (SSIS 式)
@@ -37,7 +37,7 @@ REVERSE(character_expression)
 ## <a name="result-types"></a>戻り値の型  
  DT_WSTR  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  *character_expression* 引数は、DT_WSTR データ型である必要があります。  
   
  *character_expression* が NULL の場合、REVERSE は NULL を返します。  

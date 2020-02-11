@@ -25,10 +25,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: af647a446366ea03063ea0deb84603a3f8f90dd8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62896130"
 ---
 # <a name="raising-and-defining-events-in-a-custom-task"></a>カスタム タスクでのイベントの発生と定義
@@ -37,13 +37,14 @@ ms.locfileid: "62896130"
  <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> インターフェイスでは、<xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> によってタスクの代わりに発生するイベントのセットが別に定義されています。 <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> は、検証および実行の前後にイベントを発生させます。これに対してタスクは、実行および検証中にイベントを発生させます。  
   
 ## <a name="creating-custom-events"></a>カスタム イベントの作成  
- カスタム タスクの開発者は、オーバーライドした <xref:Microsoft.SqlServer.Dts.Runtime.EventInfo> メソッドの実装に新しい <xref:Microsoft.SqlServer.Dts.Runtime.Task.InitializeTask%2A> を作成することにより、新しいカスタム イベントを定義できます。 <xref:Microsoft.SqlServer.Dts.Runtime.EventInfo> が作成されると、<xref:Microsoft.SqlServer.Dts.Runtime.EventInfos.Add%2A> メソッドを使用して `EventInfos` コレクションに追加されます。 次に、<xref:Microsoft.SqlServer.Dts.Runtime.EventInfos.Add%2A> メソッドのメソッド シグネチャを示します。  
+ カスタム タスクの開発者は、オーバーライドした <xref:Microsoft.SqlServer.Dts.Runtime.EventInfo> メソッドの実装に新しい <xref:Microsoft.SqlServer.Dts.Runtime.Task.InitializeTask%2A> を作成することにより、新しいカスタム イベントを定義できます。 
+  <xref:Microsoft.SqlServer.Dts.Runtime.EventInfo> が作成されると、`EventInfos` メソッドを使用して <xref:Microsoft.SqlServer.Dts.Runtime.EventInfos.Add%2A> コレクションに追加されます。 次に、<xref:Microsoft.SqlServer.Dts.Runtime.EventInfos.Add%2A> メソッドのメソッド シグネチャを示します。  
   
  `public void Add(string eventName, string description, bool allowEventHandlers, string[] parameterNames, TypeCode[] parameterTypes, string[] parameterDescriptions);`  
   
  次のコード例では、カスタム タスクの `InitializeTask` メソッドを示します。ここでは、2 つのカスタム イベントが作成され、そのプロパティが設定されます。 次に、新しいイベントが <xref:Microsoft.SqlServer.Dts.Runtime.EventInfos> コレクションに追加されます。  
   
- 最初のカスタム イベントの *eventName* は "**OnBeforeIncrement**" で、*description* は "**Fires after the initial value is updated**" です。 次のパラメーターの値は `true` であり、イベントを処理するために、イベント ハンドラーのコンテナーの作成を許可する必要があることを示します。 このイベント ハンドラーは、Package、Sequence、ForLoop、ForEachLoop などの他のコンテナーと同様、パッケージの構造およびサービスをタスクに提供するコンテナーです。 ときに、 *allowEventHandlers*パラメーターが`true`、<xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>イベントのオブジェクトが作成されます。 これで、イベント用に定義された任意のパラメーターが、<xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> の変数コレクション内の <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> で使用できます。  
+ 最初のカスタム イベントの *eventName* は "**OnBeforeIncrement**" で、*description* は "**Fires after the initial value is updated**" です。 次のパラメーターの値は `true` であり、イベントを処理するために、イベント ハンドラーのコンテナーの作成を許可する必要があることを示します。 このイベント ハンドラーは、Package、Sequence、ForLoop、ForEachLoop などの他のコンテナーと同様、パッケージの構造およびサービスをタスクに提供するコンテナーです。 *AllowEventHandlers*パラメーターが`true`の場合、 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>イベント用にオブジェクトが作成されます。 これで、イベント用に定義された任意のパラメーターが、<xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> の変数コレクション内の <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> で使用できます。  
   
 ```csharp  
 public override void InitializeTask(Connections connections,  
@@ -117,7 +118,7 @@ Nothing,  bFireOnBeforeIncrement)
 ```  
   
 ## <a name="sample"></a>サンプル  
- 次の例では、`InitializeTask` メソッドでカスタム イベントを定義し、<xref:Microsoft.SqlServer.Dts.Runtime.EventInfos> コレクションに追加するタスクを示します。このタスクは、次に <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireCustomEvent%2A> メソッドを呼び出して、`Execute` メソッドでカスタム イベントを発生させます。  
+ 次の例では、`InitializeTask` メソッドでカスタム イベントを定義し、<xref:Microsoft.SqlServer.Dts.Runtime.EventInfos> コレクションに追加するタスクを示します。このタスクは、次に `Execute` メソッドを呼び出して、<xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireCustomEvent%2A> メソッドでカスタム イベントを発生させます。  
   
 ```csharp  
 [DtsTask(DisplayName = "CustomEventTask")]  
@@ -189,10 +190,10 @@ Nothing,  bFireOnBeforeIncrement)
     End Class  
 ```  
   
-![Integration Services のアイコン (小)](../../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。**<br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
+![Integration Services アイコン (小)](../../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services に関するページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
-## <a name="see-also"></a>関連項目  
- [Integration Services &#40;SSIS&#41; のイベント ハンドラー](../../integration-services-ssis-event-handlers.md)   
+## <a name="see-also"></a>参照  
+ [SSIS&#41; イベントハンドラーの Integration Services &#40;](../../integration-services-ssis-event-handlers.md)   
  [パッケージにイベント ハンドラーを追加する](../../add-an-event-handler-to-a-package.md)  
   
   
