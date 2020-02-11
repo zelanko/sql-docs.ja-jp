@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: aec0ec20c9bd46a06560f5ce6ebd374e937f0343
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63193249"
 ---
 # <a name="use-raw-mode-with-for-xml"></a>FOR XML での RAW モードの使用
@@ -33,23 +33,23 @@ ms.locfileid: "63193249"
  バイナリ データを base64 エンコード形式で返すには、BINARY BASE64 オプションを FOR XML 句に指定する必要があります。 RAW モードでは、BINARY BASE64 オプションを指定しないでバイナリ データを取得すると、エラーが発生します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- ここでは、次の例について説明します。  
+ このセクションには、次の例が含まれています。  
   
 -   [例: XML での製品モデル情報の取得](example-retrieving-product-model-information-as-xml.md)  
   
--   [例: ELEMENTS ディレクティブで XSINIL を指定する](example-specifying-xsinil-with-the-elements-directive.md)  
+-   [例 : ELEMENTS ディレクティブで XSINIL を指定する](example-specifying-xsinil-with-the-elements-directive.md)  
   
 -   [例: XMLDATA オプションと XMLSCHEMA オプションを使用した結果としてのスキーマの要求](example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md)  
   
 -   [例: バイナリ データの取得](example-retrieving-binary-data.md)  
   
--   [例: &#60;row&#62; 要素の名前を変更する](example-renaming-the-row-element.md)  
+-   [例 : &#60;row&#62; 要素の名前を変更する](example-renaming-the-row-element.md)  
   
 -   [例: FOR XML で生成される XML のルート要素の指定](example-specifying-a-root-element-for-the-xml-generated-by-for-xml.md)  
   
 -   [例: XML 型の列のクエリ](example-querying-xmltype-columns.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [WITH XMLNAMESPACES を使用したクエリへの名前空間の追加](add-namespaces-to-queries-with-with-xmlnamespaces.md)   
  [FOR XML での AUTO モードの使用](use-auto-mode-with-for-xml.md)   
  [FOR XML での EXPLICIT モードの使用](use-explicit-mode-with-for-xml.md)   

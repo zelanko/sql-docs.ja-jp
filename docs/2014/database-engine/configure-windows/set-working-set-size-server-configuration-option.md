@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4fe39e83507b8455fb25ba63812a75a7e9040990
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62756240"
 ---
 # <a name="set-working-set-size-server-configuration-option"></a>set working set size サーバー構成オプション
@@ -25,7 +25,7 @@ ms.locfileid: "62756240"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [サーバー構成オプション &#40;SQL Server&#41;](server-configuration-options-sql-server.md)  
   
   

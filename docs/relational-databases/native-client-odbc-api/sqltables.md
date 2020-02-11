@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c6a77d041ef66a046697bbf6999fd6b728e7dae0
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73785175"
 ---
 # <a name="sqltables"></a>SQLTables
@@ -30,7 +30,7 @@ ms.locfileid: "73785175"
   
  使用可能なカタログ、スキーマ、およびテーブルの種類をレポートするために、SQLTables は空の文字列 (長さゼロのバイトポインター) を特別に使用します。 空文字列は、既定値 (NULL ポインター) ではありません。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、 *CatalogName*パラメーターの2部構成の名前を使用して、リンクサーバー上のテーブルの情報をレポートすることができます。 *Linked_Server_Name Catalog_Name*です。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC ドライバーでは、 *CatalogName*パラメーターに2つの部分で構成される名前を使用して、リンクサーバー上のテーブルに関する情報のレポートをサポートしています。 *Linked_Server_Name Catalog_Name*。  
   
  SQLTables は、名前が*TableName*に一致し、現在のユーザーが所有しているテーブルに関する情報を返します。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "73785175"
   
  テーブル、ビュー、およびシノニムは、テーブル型によって使用される名前空間とは異なる、共通の名前空間を共有します。 テーブルとビューを同じ名前にすることはできませんが、同じ名前のテーブルとテーブル型を同じカタログおよびスキーマ内に配置することはできます。  
   
- テーブル値パラメーターの詳細については、「[テーブル値パラメーター &#40;の&#41;ODBC](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)」を参照してください。  
+ テーブル値パラメーターの詳細については、「[テーブル値パラメーター &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)」を参照してください。  
   
 ## <a name="example"></a>例  
   
@@ -56,7 +56,7 @@ SQLTables(hstmt, (SQLCHAR*) "%", SQL_NTS, (SQLCHAR*)"", 0, (SQLCHAR*)"",
 ```  
   
 ## <a name="see-also"></a>参照  
- [Sqltables 関数](https://go.microsoft.com/fwlink/?LinkId=59374)   
+ [SQLTables 関数](https://go.microsoft.com/fwlink/?LinkId=59374)   
  [ODBC API 実装の詳細](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

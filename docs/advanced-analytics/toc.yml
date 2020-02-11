@@ -1,6 +1,6 @@
 - name: SQL Server Machine Learning Services のドキュメント
   href: ../advanced-analytics/index.yml
-- name: SQL Server へようこそ >
+- name: SQL Server のドキュメント >
   href: ../sql-server/index.yml
 - name: 概要
   expanded: true
@@ -47,11 +47,11 @@
   items:
     - name: Python
       items:
-        - name: Python スクリプトを作成する
+        - name: Python スクリプトを実行する
           href: ../advanced-analytics/tutorials/quickstart-python-create-script.md
-        - name: データ型とオブジェクトの処理
+        - name: データ構造とオブジェクト
           href: ../advanced-analytics/tutorials/quickstart-python-data-structures.md
-        - name: Python 関数を記述する
+        - name: Python 関数
           href: ../advanced-analytics/tutorials/quickstart-python-functions.md
         - name: モデルのトレーニングとスコア付け
           href: ../advanced-analytics/tutorials/quickstart-python-train-score-model.md
@@ -59,9 +59,9 @@
       items:
         - name: R スクリプトの作成
           href: ../advanced-analytics/tutorials/quickstart-r-create-script.md
-        - name: データ型とオブジェクトの処理
+        - name: データ型とオブジェクト
           href: ../advanced-analytics/tutorials/quickstart-r-data-types-and-objects.md
-        - name: R 関数の記述
+        - name: R 関数
           href: ../advanced-analytics/tutorials/quickstart-r-functions.md
         - name: モデルのトレーニングとスコア付け
           href: ../advanced-analytics/tutorials/quickstart-r-train-score-model.md
@@ -139,36 +139,36 @@
               href: ../advanced-analytics/tutorials/walkthrough-deploy-and-use-the-model.md
         - name: RevoScaleR の詳細情報
           items:
-            - name: 1. はじめに
+            - name: はじめに
               href: ../advanced-analytics/tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md
-            - name: 2. データベースとアクセス許可の作成
+            - name: 1. データベースとアクセス許可の作成
               href: ../advanced-analytics/tutorials/deepdive-work-with-sql-server-data-using-r.md
-            - name: 3. RxSqlServerData オブジェクトの作成
+            - name: 2. RxSqlServerData オブジェクトの作成
               href: ../advanced-analytics/tutorials/deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md
-            - name: 4. クエリおよびデータの変更
+            - name: 3. クエリおよびデータの変更
               href: ../advanced-analytics/tutorials/deepdive-query-and-modify-the-sql-server-data.md
-            - name: 5. コンピューティング コンテキストの定義
+            - name: 4. コンピューティング コンテキストの定義
               href: ../advanced-analytics/tutorials/deepdive-define-and-use-compute-contexts.md
-            - name: 6. 概要統計情報の計算
+            - name: 5. 概要統計情報の計算
               href: ../advanced-analytics/tutorials/deepdive-create-and-run-r-scripts.md
-            - name: 7. データの視覚化
+            - name: 6. データの視覚化
               href: ../advanced-analytics/tutorials/deepdive-visualize-sql-server-data-using-r.md
-            - name: 8. モデルを作成する
+            - name: 7. モデルを作成する
               href: ../advanced-analytics/tutorials/deepdive-create-models.md
-            - name: 9. 新しいデータのスコア付け
+            - name: 8. 新しいデータのスコア付け
               href: ../advanced-analytics/tutorials/deepdive-score-new-data.md
-            - name: 10. データの変換
+            - name: 9. データを変換する
               href: ../advanced-analytics/tutorials/deepdive-transform-data-using-r.md
-            - name: 11. rxImport を使用したデータの読み込み
+            - name: 10. rxImport を使用したデータの読み込み
               href: ../advanced-analytics/tutorials/deepdive-load-data-into-memory-using-rximport.md
-            - name: 12. rxDataStep を使用したテーブルの作成
+            - name: 11. rxDataStep を使用したテーブルの作成
               href: ../advanced-analytics/tutorials/deepdive-create-new-sql-server-table-using-rxdatastep.md
-            - name: 13. チャンク分析の実行
+            - name: 12. チャンク分析の実行
               href: ../advanced-analytics/tutorials/deepdive-perform-chunking-analysis-using-rxdatastep.md
-            - name: 14. SQL Server と XDF ファイル間のデータの移動
+            - name: 13. XDF ファイルを使用してデータを移動する
               href: ../advanced-analytics/tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md
-            - name: 15. rxExec を使用したカスタム R の送信
-              href: ../advanced-analytics/tutorials/r-tutorial-custom-r-functions.md
+            - name: 14. rxExec を使用したカスタム R の送信
+              href: ../advanced-analytics/tutorials/deepdive-custom-r-functions-using-rxexec.md
     - name: サンプル データ
       items:
         - name: 航空会社のデータ セット
@@ -203,7 +203,7 @@
               href: ../advanced-analytics/r/using-data-from-olap-cubes-in-r.md
             - name: olapR を使って MDX クエリを作成する方法
               href: ../advanced-analytics/r/how-to-create-mdx-queries-using-olapr.md
-    - name: データ探索と予測モデリング
+    - name: データ探索とモデリング
       items:
         - name: R
           items:
@@ -243,14 +243,28 @@
           items:
             - name: Python パッケージ情報の取得
               href: ../advanced-analytics/package-management/python-package-information.md
-            - name: Python パッケージのインストール
+            - name: sqlmlutils を使用してインストールする
               href: ../advanced-analytics/package-management/install-additional-python-packages-on-sql-server.md
+            - name: Python ツールを使用してインストールする
+              href: ../advanced-analytics/package-management/install-python-packages-standard-tools.md
         - name: 新しい R パッケージのインストール
           items:
             - name: R パッケージ情報の取得
               href: ../advanced-analytics/package-management/r-package-information.md
-            - name: R パッケージのインストール
+            - name: R ツールを使用してインストールする
+              href: ../advanced-analytics/package-management/install-r-packages-standard-tools.md
+            - name: sqlmlutils を使用してインストールする
               href: ../advanced-analytics/package-management/install-additional-r-packages-on-sql-server.md
+            - name: T-SQL を使用してインストールする
+              href: ../advanced-analytics/package-management/install-r-packages-with-tsql.md
+            - name: RevoScaleR の使用
+              items:
+                - name: RevoScaleR を使用してインストールする
+                  href: ../advanced-analytics/package-management/install-r-packages-with-revoscaler.md
+                - name: R のリモート管理を有効にする
+                  href: ../advanced-analytics/package-management/r-package-how-to-enable-or-disable.md
+                - name: R パッケージの同期
+                  href: ../advanced-analytics/package-management/package-install-uninstall-and-sync.md
             - name: miniCRAN リポジトリの作成
               href: ../advanced-analytics/package-management/create-a-local-package-repository-using-minicran.md
             - name: R パッケージを使用するためのヒント

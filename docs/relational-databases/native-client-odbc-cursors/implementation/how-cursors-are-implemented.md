@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 54603fc6e4945fde0e7b506d9aca9886b6194fdf
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73784701"
 ---
 # <a name="how-cursors-are-implemented"></a>カーソルの実装方法
@@ -40,7 +40,7 @@ ms.locfileid: "73784701"
   
  ODBC アプリケーションではカーソルの種類を設定すること以外に、1 回のフェッチで返される行数、コンカレンシー オプション、トランザクション分離レベルなど、他のオプションも設定します。 これらのオプションは、ODBC 形式のカーソル (順方向専用、静的、キーセット ドリブン、混合、および動的) または ISO 形式のカーソル (スクロール機能と感度) に対して設定できます。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、さまざまな種類のカーソルを物理的に実装するためのいくつかの方法がサポートされています。 このドライバーでは、いくつかの種類のカーソルは [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の既定の結果セットを使用して実装されます。また ODBC カーソル ライブラリを使用してサーバー カーソルとして実装される場合もあります。  
+ Native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client ODBC ドライバーでは、さまざまな種類のカーソルを物理的に実装するいくつかの方法がサポートされています。 このドライバーでは、いくつかの種類のカーソルは [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の既定の結果セットを使用して実装されます。また ODBC カーソル ライブラリを使用してサーバー カーソルとして実装される場合もあります。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
@@ -51,6 +51,6 @@ ms.locfileid: "73784701"
 -   [ODBC カーソル ライブラリ](../../../relational-databases/native-client-odbc-cursors/implementation/odbc-cursor-library.md)  
   
 ## <a name="see-also"></a>参照  
- [カーソル&#40;を使用した ODBC&#41;](../../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
+ [ODBC&#41;&#40;カーソルの使用](../../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
   
   

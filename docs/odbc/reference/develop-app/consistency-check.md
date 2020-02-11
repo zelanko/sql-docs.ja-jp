@@ -14,15 +14,15 @@ ms.assetid: deb80efa-ad1f-4ea5-b334-9817cd279e5c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 419e338a5e96821606dc26a53a4fccecbc72ae3e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68125542"
 ---
 # <a name="consistency-check"></a>整合性チェック
-アプリケーションが APD、ARD、または IPD の SQL_DESC_DATA_PTR フィールドを設定するたびに、整合性チェックがドライバーによって自動的に実行されます。 このフィールドが設定されるたびに、SQL_DESC_TYPE フィールドの値と同じのレコードの SQL_DESC_TYPE フィールドに適用可能な値が有効であり、一貫性のあるドライバーを確認します。  
+アプリケーションが APD、IPD、またはの SQL_DESC_DATA_PTR フィールドを設定するたびに、ドライバーによって整合性チェックが自動的に実行されます。 このフィールドが設定されている場合、ドライバーは、SQL_DESC_TYPE フィールドの値と、同じレコードの SQL_DESC_TYPE フィールドに適用できる値が有効で一貫性があることを確認します。  
   
- IPD の SQL_DESC_DATA_PTR フィールドが正常に設定されていません。ただし、アプリケーションは、IPD フィールドの整合性チェックを強制するために行うことができます。 IPD の SQL_DESC_DATA_PTR フィールドに設定されている値が実際に保存されていないとへの呼び出しで取得することはできません**SQLGetDescField**または**SQLGetDescRec**; のみを強制的には、設定、整合性チェックです。 整合性チェックは、IRD では実行できません。  
+ IPD の SQL_DESC_DATA_PTR フィールドは通常は設定されません。ただし、アプリケーションでは、IPD フィールドの整合性チェックを強制的に行うことができます。 IPD の SQL_DESC_DATA_PTR フィールドがに設定されている値は実際に格納されていないため、 **SQLGetDescField**または**Sqlgetdescrec**を呼び出すことによって取得することはできません。この設定は、整合性チェックを強制するためにのみ行われます。 IRD に対して整合性チェックを実行することはできません。  
   
- 整合性チェックの詳細については、次を参照してください。 [SQLSetDescRec](../../../odbc/reference/syntax/sqlsetdescrec-function.md)します。
+ 整合性チェックの詳細については、「 [SQLSetDescRec](../../../odbc/reference/syntax/sqlsetdescrec-function.md)」を参照してください。

@@ -24,10 +24,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1c53c039d6194edbc37438ef30ac4fef0113ae87
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211034"
 ---
 # <a name="start-a-trace"></a>トレースの開始
@@ -43,11 +43,11 @@ ms.locfileid: "68211034"
 > [!NOTE]  
 >  既存のトレースを使用する場合、プロパティを参照できますが、変更できません。 プロパティを変更するには、トレースを停止または一時停止する必要があります。  
   
-## <a name="see-also"></a>関連項目  
- [サーバーへの接続後の自動的なトレースの開始 &#40;SQL Server Profiler&#41;](start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)   
- [トレースの一時停止 &#40;SQL Server Profiler&#41;](pause-a-trace-sql-server-profiler.md)   
- [トレースの停止 &#40;SQL Server Profiler&#41;](stop-a-trace-sql-server-profiler.md)   
- [トレース ウィンドウの消去 &#40;SQL Server Profiler&#41;](clear-a-trace-window-sql-server-profiler.md)   
+## <a name="see-also"></a>参照  
+ [サーバー &#40;SQL Server プロファイラーに接続した後、トレースを自動的に開始&#41;](start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)   
+ [トレースを一時停止 &#40;SQL Server プロファイラー&#41;](pause-a-trace-sql-server-profiler.md)   
+ [トレース &#40;SQL Server プロファイラーの停止&#41;](stop-a-trace-sql-server-profiler.md)   
+ [トレースウィンドウ &#40;SQL Server プロファイラーをクリア&#41;](clear-a-trace-window-sql-server-profiler.md)   
  [一時停止または停止したトレースの再開 &#40;SQL Server Profiler&#41;](run-a-trace-after-it-has-been-paused-or-stopped-sql-server-profiler.md)  
   
   

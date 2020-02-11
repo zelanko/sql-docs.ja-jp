@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5c2db9621490f4dc718516e5829f6704b20ee0e9
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73761334"
 ---
 # <a name="using-database-mirroring"></a>データベース ミラーリングの使用
@@ -30,22 +30,24 @@ ms.locfileid: "73761334"
 
     
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)] 代わりに [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] を使用します。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]代わりに[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]を使用してください。  
   
- [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] で導入されたデータベース ミラーリングは、データベースの可用性とデータの冗長性を高めるためのソリューションです。 Native Client では、データベースミラーリングの暗黙的なサポートが提供されるため、開発者は、データベースに対して構成されたコードを記述したり、他のアクションを実行したりする必要はありません。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+ 
+  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] で導入されたデータベース ミラーリングは、データベースの可用性とデータの冗長性を高めるためのソリューションです。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client では、データベースミラーリングの暗黙的なサポートが提供されるため、開発者は、データベースに対して構成されたコードを記述したり、他のアクションを実行したりする必要はありません。  
   
  データベース ミラーリングは、データベースごとに実装され、スタンバイ サーバー上に [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 運用データベースのコピーを保持します。 このサーバーは、データベース ミラーリング セッションの構成および状態に応じて、ホット スタンバイ サーバーかウォーム スタンバイ サーバーのいずれかになります。 ホット スタンバイ サーバーはコミット済みトランザクションが失われない高速フェールオーバーをサポートし、ウォーム スタンバイ サーバーはサービスの強制 (データ損失の可能性あり) をサポートします。  
   
  運用データベースは*プリンシパル データベース*と呼ばれ、スタンバイ コピーは*ミラー データベース*と呼ばれます。 プリンシパル データベースおよびミラー データベースは、別個の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンス (サーバー インスタンス) に配置する必要があります。また、可能な場合は別個のコンピューターに配置してください。  
   
- *プリンシパル サーバー*と呼ばれる実稼働サーバー インスタンスは、*ミラー サーバー*と呼ばれるスタンバイ サーバーと通信します。 プリンシパル サーバーとミラー サーバーは、データベース ミラーリング *セッション*の中でパートナーとして機能します。 プリンシパル サーバーで障害が発生した場合、ミラー サーバーは*フェールオーバー*と呼ばれる処理を通じて、ミラー サーバーのデータベースをプリンシパル データベースにできます。 たとえば、Partner_A と Partner_B がパートナー サーバーで、初期時点ではプリンシパル データベースがプリンシパル サーバーである Partner_A にあり、ミラー データベースがミラー サーバーである Partner_B にあるとします。 Partner_A がオフラインになった場合、Partner_B がフェールオーバーして現在のプリンシパル データベースになることができます。 Partner_A がミラー化セッションに再び参加すると、このサーバーがミラー サーバーになり、このサーバーのデータベースがミラー データベースになります。  
+ 
+  *プリンシパル サーバー*と呼ばれる実稼働サーバー インスタンスは、*ミラー サーバー*と呼ばれるスタンバイ サーバーと通信します。 プリンシパル サーバーとミラー サーバーは、データベース ミラーリング *セッション*の中でパートナーとして機能します。 プリンシパル サーバーで障害が発生した場合、ミラー サーバーは*フェールオーバー*と呼ばれる処理を通じて、ミラー サーバーのデータベースをプリンシパル データベースにできます。 たとえば、Partner_A と Partner_B がパートナー サーバーで、初期時点ではプリンシパル データベースがプリンシパル サーバーである Partner_A にあり、ミラー データベースがミラー サーバーである Partner_B にあるとします。 Partner_A がオフラインになった場合、Partner_B がフェールオーバーして現在のプリンシパル データベースになることができます。 Partner_A がミラー化セッションに再び参加すると、このサーバーがミラー サーバーになり、このサーバーのデータベースがミラー データベースになります。  
   
  代替データベース ミラーリング構成は、さまざまなレベルのパフォーマンスとデータの安全性を提供し、さまざまな形態のフェールオーバーをサポートします。 詳細については、「[データベース ミラーリング &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-sql-server.md)」を参照してください。  
   
  ミラー データベース名を指定するときには別名を使用できます。  
   
 > [!NOTE]  
->  最初の接続試行およびミラー化されたデータベースへの再接続試行の詳細については、「[データベースミラーリングセッション&#40;へのクライアントの接続 SQL Server&#41;](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)」を参照してください。  
+>  最初の接続試行およびミラー化されたデータベースへの再接続試行の詳細については、「[データベースミラーリングセッションへのクライアントの接続 &#40;SQL Server&#41;](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)」を参照してください。  
   
 ## <a name="programming-considerations"></a>プログラミングの考慮事項  
  プリンシパル データベース サーバーに障害が発生した場合、クライアント アプリケーションの API 呼び出しの応答がエラーになり、データベースへの接続が失われたことが伝えられます。 このとき、データベースへのコミットされていない変更は反映されず、現在のトランザクションはロールバックされます。 その場合、アプリケーションは接続を閉じ (またはデータ ソース オブジェクトを解放し)、再度接続を開く必要があります。 再接続の結果、プリンパル サーバーの機能を引き継いだミラー データベースに自動的にリダイレクトされます。  
@@ -60,14 +62,14 @@ ms.locfileid: "73761334"
 >  また、サーバー名は大文字小文字が区別されませんが、データベース名は区別されます。 したがって、大文字小文字の使い方を DSN と接続文字列で統一してください。  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>SQL Server Native Client OLE DB プロバイダー  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、接続および接続文字列の属性を使用してデータベースミラーリングをサポートしています。 DBPROPSET_SQLSERVERDBINIT プロパティ セットには、SSPROP_INIT_FAILOVERPARTNER プロパティが追加されています。**FailoverPartner** キーワードは、DBPROP_INIT_PROVIDERSTRING の新しい接続文字列属性です。 詳細については、「 [SQL Server Native Client での接続文字列キーワードの使用](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)」を参照してください。  
+ Native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client OLE DB プロバイダーは、接続および接続文字列の属性を使用してデータベースミラーリングをサポートしています。 DBPROPSET_SQLSERVERDBINIT プロパティ セットには、SSPROP_INIT_FAILOVERPARTNER プロパティが追加されています。**FailoverPartner** キーワードは、DBPROP_INIT_PROVIDERSTRING の新しい接続文字列属性です。 詳細については、「 [SQL Server Native Client での接続文字列キーワードの使用](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)」を参照してください。  
   
- フェールオーバーキャッシュは、プロバイダーが読み込まれるまで保持されます。この場合、 **CoUninitialize**が呼び出されるか、またはデータソースオブジェクトなどの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーによって管理されているオブジェクトへの参照がアプリケーションに含まれている場合に限ります。  
+ フェールオーバーキャッシュは、プロバイダーが読み込まれるまで保持されます。これは、 **CoUninitialize**が呼び出されるか、または、アプリケーションに、データソースオブジェクト[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]などの Native Client OLE DB プロバイダーによって管理されるオブジェクトへの参照が含まれている限り保持されます。  
   
- Native Client OLE DB プロバイダーがデータベースミラーリングに対してサポートする [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の詳細については、「[初期化と承認のプロパティ](../../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md)」を参照してください。  
+ Native Client OLE DB [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]プロバイダーによるデータベースミラーリングのサポートの詳細については、「[初期化と承認のプロパティ](../../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md)」を参照してください。  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>SQL Server Native Client ODBC ドライバー  
- Native Client ODBC ドライバー [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、接続および接続文字列の属性を使用してデータベースミラーリングをサポートしています。 具体的には、SQL_COPT_SS_FAILOVER_PARTNER 属性は[SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)および[Sqlgetconnectattr](../../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md)関数で使用するために追加されています。また、 **Failover_Partner**キーワードが新しい接続文字列属性として追加されています。  
+ Native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client ODBC ドライバーでは、接続と接続文字列の属性を使用してデータベースミラーリングをサポートしています。 具体的には、SQL_COPT_SS_FAILOVER_PARTNER 属性は[SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)および[Sqlgetconnectattr](../../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md)関数で使用するために追加されています。また、 **Failover_Partner**キーワードが新しい接続文字列属性として追加されています。  
   
  アプリケーションに環境ハンドルが少なくとも 1 つ割り当てられている限り、フェールオーバー キャッシュが保持されます。 反対に、最後の環境ハンドルの割り当てが解除されると、キャッシュが消失します。  
   
@@ -76,7 +78,7 @@ ms.locfileid: "73761334"
   
 ## <a name="see-also"></a>参照  
  [SQL Server Native Client の機能](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
- [データベース ミラーリング セッションへのクライアントの接続 &#40;SQL Server&#41;](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)   
- [データベース ミラーリング &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-sql-server.md)  
+ [クライアントをデータベースミラーリングセッションに接続する &#40;SQL Server&#41;](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)   
+ [データベースミラーリング &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-sql-server.md)  
   
   

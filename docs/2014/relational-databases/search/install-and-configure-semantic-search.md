@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 164ae15bdd93034ebcca109a01142b3106a78592
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73637918"
 ---
 # <a name="install-and-configure-semantic-search"></a>セマンティック検索のインストールと構成
@@ -26,7 +26,7 @@ ms.locfileid: "73637918"
 ## <a name="installing-semantic-search"></a>セマンティック検索のインストール  
   
 ###  <a name="HowToCheckInstalled"></a>方法: セマンティック検索がインストールされているかどうかを確認する  
- **SERVERPROPERTY &#40;Transact-SQL&#41;** メタデータ関数の [IsFullTextInstalled](/sql/t-sql/functions/serverproperty-transact-sql) プロパティに対してクエリを実行します。  
+ [SERVERPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/serverproperty-transact-sql) メタデータ関数の **IsFullTextInstalled** プロパティに対してクエリを実行します。  
   
  戻り値 1 は、データベースに対してフルテキスト検索とセマンティック検索がインストールされていることを示します。戻り値 0 は、フルテキスト検索とセマンティック検索がインストールされていないことを示します。  
   
@@ -61,9 +61,9 @@ GO
   
     -   **のインストール メディアで** SemanticLanguageDatabase.msi [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] という名前の Windows インストーラー パッケージを見つけます。 対象のシステムに応じて、32 ビットまたは 64 ビット バージョンのインストーラー パッケージを探してください。 32 ビット バージョンのファイルか 64 ビット バージョンのファイルかは、それが格納されているフォルダーの名前で判断できます。ファイル名そのものは、どちらのバージョンも同じです。  
   
-    -   Microsoft からインストーラーパッケージをダウンロードしますか? [SQL Server。](https://go.microsoft.com/fwlink/?LinkID=296743)[!INCLUDE[msCoName](../../../includes/msconame-md.md)] ダウンロードセンターの2014セマンティック言語統計ページ。  
+    -   Microsoft からインストーラーパッケージをダウンロードしますか? [SQL Server。。2014セマンティック言語統計](https://go.microsoft.com/fwlink/?LinkID=296743) [!INCLUDE[msCoName](../../../includes/msconame-md.md)]ダウンロードセンターのページ。  
   
-2.  **SemanticLanguageDatabase.msi** Windows インストーラー パッケージを実行して、データベースおよびログ ファイルを抽出します。  
+2.  **Semanticlanguagedatabase.msi** Windows インストーラーパッケージを実行して、データベースとログファイルを抽出します。  
   
      抽出先のディレクトリは必要に応じて変更できます。 既定では、インストーラーは、32ビットまたは64ビットの Program Files フォルダー内の**Microsoft Semantic Language Database**という名前のフォルダーにファイルを抽出します。 MSI ファイルには、圧縮データベース ファイルおよびログ ファイルが格納されます。  
   
@@ -74,8 +74,9 @@ GO
 > [!IMPORTANT]  
 >  セマンティック言語統計データベースの抽出時に、ファイル システム内の既定の場所にあるデータベース ファイルおよびログ ファイルに制限付きの権限が割り当てられます。 そのため、データベースを既定の場所に残した場合、ユーザーによってはデータベースにアタッチする権限がない可能性があります。 データベースをアタッチしようとしたときにエラーが発生した場合は、ファイルを移動するか、ファイル システムの権限を確認し、必要に応じて修正してください。  
   
- **2.セマンティック言語統計データベースをアタッチします。**  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を使用するか、[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]CREATE DATABASE &#40;SQL Server Transact-SQL&#41;[ を ](/sql/t-sql/statements/create-database-sql-server-transact-sql)FOR ATTACH **構文で呼び出して、** のインスタンスにデータベースをアタッチします。 詳細については、「[データベースのデタッチとアタッチ &#40;SQL Server&#41;](../databases/database-detach-and-attach-sql-server.md)」を参照してください。  
+ **2. セマンティック言語統計データベースをアタッチします。**  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を使用するか、[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]CREATE DATABASE &#40;SQL Server Transact-SQL&#41;[ を ](/sql/t-sql/statements/create-database-sql-server-transact-sql)FOR ATTACH** 構文で呼び出して、** のインスタンスにデータベースをアタッチします。 詳細については、「[データベースのデタッチとアタッチ &#40;SQL Server&#41;](../databases/database-detach-and-attach-sql-server.md)」を参照してください。  
   
  既定では、データベースの名前が **semanticsdb**になります。 データベースをアタッチする際、必要に応じて、別の名前を付けてください。 この名前は、後続の手順でデータベースを登録する際に必要になります。  
   
@@ -89,7 +90,7 @@ GO
   
  このコード例では、データベースを既定の場所から新しい場所に移動済みであることを前提としています。  
   
- **3.セマンティック言語統計データベースを登録します。**  
+ **3. セマンティック言語統計データベースを登録します。**  
  データベースのアタッチ時に指定した名前を使用して、ストアド プロシージャ [sp_fulltext_semantic_register_language_statistics_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-fulltext-semantic-register-language-statistics-db-transact-sql) を次のように呼び出します。  
   
 ```sql  
@@ -122,7 +123,8 @@ GO
   
 ###  <a name="reqinstall"></a>セマンティック言語統計データベースをインストールおよび削除するための要件と制限  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンスでアタッチおよび登録できるセマンティック言語統計データベースは 1 つのみです。  
+-   
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンスでアタッチおよび登録できるセマンティック言語統計データベースは 1 つのみです。  
   
      1 台のコンピューターに存在する [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の各インスタンスには、それぞれ、セマンティック言語統計データベースの物理コピーが必要です。 個々のコピーをそれぞれのインスタンスにアタッチしてください。  
   

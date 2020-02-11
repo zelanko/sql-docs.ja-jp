@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 10149e8aa940f53bbde69b3b84ead047ff4a2523
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721644"
 ---
 # <a name="configure-peer-to-peer-topology-wizard"></a>ピア ツー ピア トポロジ構成ウィザード
@@ -34,6 +34,6 @@ ms.locfileid: "62721644"
   
 ## <a name="see-also"></a>参照  
  [ピア ツー ピア トポロジの管理 &#40;レプリケーション Transact-SQL プログラミング&#41;](administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
- [@loopback_detection](transactional/peer-to-peer-transactional-replication.md)  
+ [ピア ツー ピア トランザクション レプリケーション](transactional/peer-to-peer-transactional-replication.md)  
   
   

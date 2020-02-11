@@ -15,18 +15,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 88edec63a97ff6c463f07add895ff8399fc4268a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63046757"
 ---
 # <a name="sqlnumresultcols"></a>SQLNumResultCols
-  実行されるステートメントを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC ドライバーは結果セット内の列の数を報告するサーバーを利用しません。 この場合、`SQLNumResultCols`サーバーとのやり取りは行われません。 ような[SQLDescribeCol](sqldescribecol.md)と[SQLColAttribute](sqlcolattribute.md)を呼び出すと、`SQLNumResultCols`準備されていても実行されていないステートメントには、サーバーとのやり取りが生成されます。  
+  実行されたステートメント[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の場合、NATIVE Client ODBC ドライバーはサーバーにアクセスせず、結果セットの列数を報告しません。 この場合、 `SQLNumResultCols`はサーバーのラウンドトリップを発生させません。 [SQLDescribeCol](sqldescribecol.md)や[sqlcolattribute](sqlcolattribute.md)と同様、 `SQLNumResultCols`準備済みで実行されていないステートメントを呼び出すと、サーバーのラウンドトリップが生成されます。  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントまたはステートメント バッチが複数の結果行セットを返すときは、結果セットの列数を報告する場合、あるセットから別のセットへ結果セットを変更することができます。 `SQLNumResultCols` 各セットに対して呼び出す必要があります。 列数が変化すると、アプリケーションでは行の結果をフェッチする前に、データ値を再バインドする必要があります。 セットを返す複数の結果の処理の詳細についてを参照してください[SQLMoreResults](sqlmoreresults.md)します。  
+ 
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントまたはステートメント バッチが複数の結果行セットを返すときは、結果セットの列数を報告する場合、あるセットから別のセットへ結果セットを変更することができます。 `SQLNumResultCols`各セットに対してを呼び出す必要があります。 列数が変化すると、アプリケーションでは行の結果をフェッチする前に、データ値を再バインドする必要があります。 複数の結果セットを返す処理の詳細については、「 [Sqlmoreresults](sqlmoreresults.md)」を参照してください。  
   
- 以降では、データベース エンジンの機能強化[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]期待どおりの結果のより正確な記述を取得する SQLNumResultCols を許可します。 これらのより正確な結果の以前のバージョンの SQLNumResultCols によって返される値が異なる場合があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 詳細については、次を参照してください。[メタデータ検出](../native-client/features/metadata-discovery.md)します。  
+ 以降のデータベースエンジンの機能強化[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]により、SQLNumResultCols は、予期される結果についてより正確な説明を得ることができます。 これらのより正確な結果は、以前のバージョンの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SQLNumResultCols によって返される値とは異なる場合があります。 詳細については、「[メタデータの検出](../native-client/features/metadata-discovery.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [SQLNumResultCols 関数](https://go.microsoft.com/fwlink/?LinkId=59359)   

@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 1b640d9d27e9ad624dab83fdb97a301b3a54b1e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62468196"
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>SQL Server Management Studio によるインメモリ OLTP のサポート
@@ -99,9 +99,9 @@ ms.locfileid: "62468196"
   
     -   処理手順  
   
-    -   [レポート]  
+    -   Reports  
   
-    -   プロパティ  
+    -   Properties  
   
     -   データベース タスク:  
   
@@ -153,7 +153,7 @@ ms.locfileid: "62468196"
 ## <a name="unsupported-features-in-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>でサポートされない機能 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  インメモリ OLTP オブジェクトに対して、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、データベース エンジンでもサポートされない機能と操作はサポートしていません。  
   
- サポートされていないの詳細については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]については、「 [SQL Server でサポートされる機能](unsupported-sql-server-features-for-in-memory-oltp.md)します。  
+ サポートされてい[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ない機能の詳細については、「[サポートされる SQL Server 機能](unsupported-sql-server-features-for-in-memory-oltp.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server によるインメモリ OLTP のサポート](sql-server-support-for-in-memory-oltp.md)  

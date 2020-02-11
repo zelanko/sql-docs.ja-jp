@@ -19,16 +19,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 857022f04047178f9eaf2db2c59d2d99987afbaa
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73783143"
 ---
 # <a name="bcp_colfmt"></a>bcp_colfmt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  ユーザー ファイルのデータのコピー元またはコピー先の形式を指定します。 ソース形式として使用する場合、 **bcp_colfmt**は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルへの一括コピーのデータソースとして使用される既存のデータファイルの形式を指定します。 ターゲット形式として使用する場合は、 **bcp_colfmt**で指定された列形式を使用してデータファイルが作成されます。  
+  ユーザー ファイルのデータのコピー元またはコピー先の形式を指定します。 ソース形式として使用する場合、 **bcp_colfmt**は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]テーブルへの一括コピーのデータソースとして使用される既存のデータファイルの形式を指定します。 ターゲット形式として使用する場合は、 **bcp_colfmt**で指定された列形式を使用してデータファイルが作成されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -55,13 +55,14 @@ RETCODE bcp_colfmt (
  *eUserDataType*  
  ユーザー ファイル内にある列のデータ型です。 データベーステーブル (*Idxservercolumn*) の対応する列のデータ型と異なる場合は、可能であれば一括コピーによってデータが変換されます。  
   
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] では、 *Euserdatatype*パラメーターでの SQLXML および sqludt データ型のトークンのサポートが導入されました。  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]では、 *Euserdatatype*パラメーターでの SQLXML および sqludt データ型のトークンのサポートが導入されました。  
   
- *Euserdatatype*パラメーターは、ODBC C データ型の列挙子ではなく、sqlncli 内の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型トークンによって列挙されます。 たとえば、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]固有の SQLCHARACTER 型を使用して、文字列、ODBC 型 SQL_C_CHAR を指定できます。  
+ *Euserdatatype*パラメーターは、ODBC C データ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型の列挙子ではなく、sqlncli のデータ型のトークンによって列挙されます。 たとえば、固有の型 SQLCHARACTER を使用して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、文字列、ODBC 型 SQL_C_CHAR を指定できます。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ型に対して既定のデータ表現を指定するには、このパラメーターに 0 を設定します。  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ型に対して既定のデータ表現を指定するには、このパラメーターに 0 を設定します。  
   
- ファイルへの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の一括コピーを行う場合、 *Euserdatatype*が sqldecimal または sqldecimal の場合は、次のようになります。  
+ ファイルへの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]一括コピーを行う場合、 *euserdatatype*が SQLDECIMAL または sqldecimal の場合は、次のようになります。  
   
 -   ソース列が**decimal**または**numeric**でない場合は、既定の有効桁数と小数点以下桁数が使用されます。  
   
@@ -85,11 +86,13 @@ RETCODE bcp_colfmt (
   
  *Cbuserdata*を SQL_VARLEN_DATA に設定すると、各列のデータの長さがシステムによって決定されることになります。 これは、列によっては、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からコピーされるデータの前に長さのインジケーターや NULL インジケーターを生成したり、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にコピーするデータにインジケーターが必要になる場合があることを意味します。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 文字とバイナリデータ型の場合、 *Cbuserdata*には、SQL_VARLEN_DATA、SQL_NULL_DATA、0、または正の値を指定できます。 *Cbuserdata*が SQL_VARLEN_DATA 場合、システムは長さインジケーター (存在する場合) またはターミネータシーケンスを使用してデータの長さを決定します。 長さのインジケーターとターミネータ シーケンスの両方を指定した場合、一括コピーはコピーするデータ量が少なくなる方法を使用します。 *Cbuserdata*が SQL_VARLEN_DATA 場合、データ型は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 文字またはバイナリ型で、長さのインジケーターもターミネータシーケンスも指定されていないと、システムはエラーメッセージを返します。  
+ 文字[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ型とバイナリデータ型の場合、 *Cbuserdata*には SQL_VARLEN_DATA、SQL_NULL_DATA、0、または正の値を指定できます。 *Cbuserdata*が SQL_VARLEN_DATA 場合、システムは長さインジケーター (存在する場合) またはターミネータシーケンスを使用してデータの長さを決定します。 長さのインジケーターとターミネータ シーケンスの両方を指定した場合、一括コピーはコピーするデータ量が少なくなる方法を使用します。 *Cbuserdata*が SQL_VARLEN_DATA 場合、データ型は[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]文字型またはバイナリ型で、長さのインジケーターもターミネータシーケンスも指定されていないと、システムはエラーメッセージを返します。  
   
- *cbUserData* が 0 または正の値の場合、システムは最大データ長として *cbUserData* を使用します。 ただし、*cbUserData* に正の値を指定し、長さのインジケーターやターミネータ シーケンスを指定した場合、システムはコピーするデータ量が少なくなる方法を使用してデータ長を決定します。  
+ 
+  *cbUserData* が 0 または正の値の場合、システムは最大データ長として *cbUserData* を使用します。 ただし、*cbUserData* に正の値を指定し、長さのインジケーターやターミネータ シーケンスを指定した場合、システムはコピーするデータ量が少なくなる方法を使用してデータ長を決定します。  
   
- *cbUserData* の値はデータのバイト数を表します。 文字データが Unicode ワイド文字で表されている場合、*cbUserData* パラメーターが正の値のときは、各文字のサイズ (バイト数) に文字数を掛けた数を表します。  
+ 
+  *cbUserData* の値はデータのバイト数を表します。 文字データが Unicode ワイド文字で表されている場合、*cbUserData* パラメーターが正の値のときは、各文字のサイズ (バイト数) に文字数を掛けた数を表します。  
   
  *pUserDataTerm*  
  列に使用するターミネータ シーケンスです。 このパラメーターは主に文字データ型に対して有効です。これは、他のすべての型は固定長であったり、バイト数を正確に記録するために長さのインジケーターが必要になる (バイナリ データの場合) ためです。  
@@ -126,7 +129,7 @@ RETCODE bcp_colfmt (
   
 -   省略可能なターミネータ バイト シーケンスの長さ  
   
- **Bcp_colfmt**を呼び出すたびに、1つのユーザーファイル列の形式が指定されます。 たとえば、5つの列から構成されるユーザーデータファイルの3つの列の既定の設定を変更するには、まず[bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) **(5)** を呼び出し、 **bcp_colfmt**次に5回呼び出します。これらの呼び出しのうち3つを使用して、カスタム形式を設定します。 残りの2つの呼び出しでは、 *Euserdatatype*を0に設定し、 *cbindicator*、 *Cbuserdata*、および*cbuserdataterm*をそれぞれ0、SQL_VARLEN_DATA、および0に設定します。 このプロシージャでは、5 つの列すべてをコピーします。それらの列のうち 3 つはカスタマイズされた形式でコピーされ、2 つは既定の形式でコピーされます。  
+ **Bcp_colfmt**を呼び出すたびに、1つのユーザーファイル列の形式が指定されます。 たとえば、5つの列から構成されるユーザーデータファイルの3つの列の既定の設定を変更するには、まず[bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)**(5)** を呼び出し、 **bcp_colfmt**次に5回呼び出します。これらの呼び出しのうち3つを使用して、カスタム形式を設定します。 残りの2つの呼び出しでは、 *Euserdatatype*を0に設定し、 *cbindicator*、 *Cbuserdata*、および*cbuserdataterm*をそれぞれ0、SQL_VARLEN_DATA、および0に設定します。 このプロシージャでは、5 つの列すべてをコピーします。それらの列のうち 3 つはカスタマイズされた形式でコピーされ、2 つは既定の形式でコピーされます。  
   
  *Cbindicator*の場合、大きな値の型が有効であることを示す値8。 フィールドにプレフィックスを指定し、そのフィールドに対応する列が新しい max 型である場合、この値は 8 にしか設定できません。 詳細については、「 [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)」を参照してください。  
   
@@ -141,9 +144,9 @@ RETCODE bcp_colfmt (
  [Bcp_writefmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md)関数は、書式指定を永続化するために使用できます。  
   
 ## <a name="bcp_colfmt-support-for-enhanced-date-and-time-features"></a>bcp_colfmt による機能強化された日付と時刻のサポート  
- 日付型または時刻型の*Euserdatatype*パラメーターで使用される型の詳細については、「拡張された[日付/ &#40;時刻&#41;型に対する一括コピーの変更 OLE DB」および「ODBC](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)」を参照してください。  
+ 日付型または時刻型の*Euserdatatype*パラメーターで使用される型の詳細については、「 [&#40;OLE DB および ODBC&#41;の拡張された日付/時刻型に対する一括コピーの変更](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)」を参照してください。  
   
- 詳細については、「[日付と&#40;時刻&#41;の機能強化 ODBC](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)」を参照してください。  
+ 詳細については、「[日付と時刻の機能強化 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [一括コピー関数](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  

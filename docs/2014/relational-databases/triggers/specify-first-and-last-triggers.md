@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: a851a19a7f00afd055bb2ee8f00eaf4621a1e98f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62524138"
 ---
 # <a name="specify-first-and-last-triggers"></a>最初と最後のトリガーの指定
@@ -28,11 +28,11 @@ ms.locfileid: "62524138"
   
  AFTER トリガーの順序を指定するには、 **sp_settriggerorder** ストアド プロシージャを使用します。 **sp_settriggerorder** には次のオプションがあります。  
   
-|オプション|説明|  
+|オプション|[説明]|  
 |------------|-----------------|  
 |**First**|DML トリガーが、トリガー動作に対して起動される最初の AFTER トリガーであることを指定します。|  
 |**Last**|DML トリガーが、トリガー動作に対して起動される最後の AFTER トリガーであることを指定します。|  
-|**None**|DML トリガーを起動する特定の順番がないことを指定します。 主に最初または最後のトリガーのいずれかの順序をリセットするときに使用します。|  
+|**なし**|DML トリガーを起動する特定の順番がないことを指定します。 主に最初または最後のトリガーのいずれかの順序をリセットするときに使用します。|  
   
  次の例は、 **sp_settriggerorder**を使用する例を示しています。  
   

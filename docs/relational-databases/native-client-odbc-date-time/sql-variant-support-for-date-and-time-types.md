@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f795f1848f3e4c9fe1239df79677c35c38ba3b58
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73783510"
 ---
 # <a name="sql_variant-support-for-date-and-time-types"></a>sql_variant による日付型と時刻型のサポート
@@ -25,7 +25,7 @@ ms.locfileid: "73783510"
 
   このトピックでは、 **sql_variant**データ型が、強化された日付と時刻の機能をサポートする方法について説明します。  
   
- SQL_CA_SS_VARIANT_TYPE 列属性は、バリアント型結果列の C 型を返すために使用されます。 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] には、追加の属性 SQL_CA_SS_VARIANT_SQL_TYPE が導入されています。この属性は、実装行記述子 (IRD) のバリアント結果列の SQL 型を設定します。 SQL_CA_SS_VARIANT_SQL_TYPE を実装パラメーター記述子 (IPD) で使用して、型 SQL_SS_VARIANT で SQL_C_BINARY C 型にバインドされている SQL_SS_TIME2 または SQL_SS_TIMESTAMPOFFSET パラメーターの SQL 型を指定することもできます。  
+ SQL_CA_SS_VARIANT_TYPE 列属性は、バリアント型結果列の C 型を返すために使用されます。 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] では、SQL_CA_SS_VARIANT_SQL_TYPE 属性が追加されています。この属性は、実装行記述子 (IRD) 内のバリアント型結果列の SQL 型を設定します。 SQL_CA_SS_VARIANT_SQL_TYPE は、実装パラメーター記述子 (IPD) 内で、SQL_SS_VARIANT 型で SQL_C_BINARY C 型がバインドされた SQL_SS_TIME2 パラメーターまたは SQL_SS_TIMESTAMPOFFSET パラメーターの SQL 型を指定するためにも使用できます。  
   
  新しい型 SQL_SS_TIME2 と SQL_SS_TIMESTAMPOFFSET は、SQLColAttribute によって設定できます。 SQL_CA_SS_VARIANT_SQL_TYPE は、SQLGetDescField で返すことができます。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "73783510"
   
  次の表で説明するように、ドライバーは、SQL_SS_TIME2 パラメーターと SQL_SS_TIMESTAMPOFFSET パラメーターに対して C 値を**sql_variant**値に変換します。 パラメーターが SQL_C_BINARY としてバインドされ、かつ、サーバー型が SQL_SS_VARIANT である場合、アプリケーションで SQL_CA_SS_VARIANT_SQL_TYPE が別の SQL 型に設定されていない限り、バイナリ値として扱われます。 この場合は、SQL_CA_SS_VARIANT_SQL_TYPE が優先されます。つまり、SQL_CA_SS_VARIANT_SQL_TYPE が設定されている場合、C 型からバリアントの SQL 型を推定するという既定の動作がオーバーライドされます。  
   
-|C 型|サーバーの種類|コメント|  
+|C 型|サーバーの種類|説明|  
 |------------|-----------------|--------------|  
 |SQL_C_CHAR|varchar|SQL_CA_SS_VARIANT_SQL_TYPE は無視されます。|  
 |SQL_C_WCHAR|nvarcar|SQL_CA_SS_VARIANT_SQL_TYPE は無視されます。|  
@@ -41,9 +41,9 @@ ms.locfileid: "73783510"
 |SQL_C_STINYINT|smallint|SQL_CA_SS_VARIANT_SQL_TYPE は無視されます。|  
 |SQL_C_SHORT|smallint|SQL_CA_SS_VARIANT_SQL_TYPE は無視されます。|  
 |SQL_C_SSHORT|smallint|SQL_CA_SS_VARIANT_SQL_TYPE は無視されます。|  
-|SQL_C_USHORT|int|SQL_CA_SS_VARIANT_SQL_TYPE は無視されます。|  
-|SQL_C_LONG|int|SQL_CA_SS_VARIANT_SQL_TYPE は無視されます。|  
-|SQL_C_SLONG|int|SQL_CA_SS_VARIANT_SQL_TYPE は無視されます。|  
+|SQL_C_USHORT|INT|SQL_CA_SS_VARIANT_SQL_TYPE は無視されます。|  
+|SQL_C_LONG|INT|SQL_CA_SS_VARIANT_SQL_TYPE は無視されます。|  
+|SQL_C_SLONG|INT|SQL_CA_SS_VARIANT_SQL_TYPE は無視されます。|  
 |SQL_C_ULONG|bigint|SQL_CA_SS_VARIANT_SQL_TYPE は無視されます。|  
 |SQL_C_SBIGINT|bigint|SQL_CA_SS_VARIANT_SQL_TYPE は無視されます。|  
 |SQL_C_FLOAT|real|SQL_CA_SS_VARIANT_SQL_TYPE は無視されます。|  
@@ -56,11 +56,11 @@ ms.locfileid: "73783510"
 |SQL_C_TYPE_DATE|date|SQL_CA_SS_VARIANT_SQL_TYPE は無視されます。|  
 |SQL_C_TYPE_TIME|time(0)|SQL_CA_SS_VARIANT_SQL_TYPE は無視されます。|  
 |SQL_C_TYPE_TIMESTAMP|datetime2|Scale は SQL_DESC_PRECISION ( **SQLBindParameter**の*DecimalDigits*パラメーター) に設定されます。|  
-|SQL_C_NUMERIC|DECIMAL|有効桁数が SQL_DESC_PRECISION ( **SQLBindParameter**の*columnsize*パラメーター) に設定されています。<br /><br /> スケールセットを SQL_DESC_SCALE (SQLBindParameter の*DecimalDigits*パラメーター) に設定します。|  
+|SQL_C_NUMERIC|decimal|有効桁数が SQL_DESC_PRECISION ( **SQLBindParameter**の*columnsize*パラメーター) に設定されています。<br /><br /> スケールセットを SQL_DESC_SCALE (SQLBindParameter の*DecimalDigits*パラメーター) に設定します。|  
 |SQL_C_SS_TIME2|time|SQL_CA_SS_VARIANT_SQL_TYPE は無視されます。|  
 |SQL_C_SS_TIMESTAMPOFFSET|datetimeoffset|SQL_CA_SS_VARIANT_SQL_TYPE は無視されます。|  
   
 ## <a name="see-also"></a>参照  
- [日付と時刻の&#40;機能強化 ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+ [ODBC&#41;&#40;の日付と時刻の改善](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ddeee2e1c979a22f45aea8f4ba7279447c733df3
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73784452"
 ---
 # <a name="cursor-programming-details-odbc"></a>カーソル プログラミングの詳細 (ODBC)
@@ -30,13 +30,13 @@ ms.locfileid: "73784452"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
--   [暗黙のカーソル&#40;変換 ODBC&#41;](../../../relational-databases/native-client-odbc-cursors/programming/implicit-cursor-conversions-odbc.md)  
+-   [ODBC&#41;&#40;の暗黙的なカーソル変換](../../../relational-databases/native-client-odbc-cursors/programming/implicit-cursor-conversions-odbc.md)  
   
--   [Autofetch と ODBC カーソルの併用](../../../relational-databases/native-client-odbc-cursors/programming/using-autofetch-with-odbc-cursors.md)  
+-   [autofetch と ODBC カーソルの併用](../../../relational-databases/native-client-odbc-cursors/programming/using-autofetch-with-odbc-cursors.md)  
   
--   [高速順方向専用カーソル&#40;(ODBC)&#41;](../../../relational-databases/native-client-odbc-cursors/programming/fast-forward-only-cursors-odbc.md)  
+-   [ODBC&#41;&#40;高速順方向専用カーソル](../../../relational-databases/native-client-odbc-cursors/programming/fast-forward-only-cursors-odbc.md)  
   
 ## <a name="see-also"></a>参照  
- [カーソル&#40;を使用した ODBC&#41;](../../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
+ [ODBC&#41;&#40;カーソルの使用](../../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
   
   

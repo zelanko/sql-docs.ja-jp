@@ -11,16 +11,17 @@ ms.assetid: e3f346b5-7e26-481d-9821-1846e2e91289
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: a629ead2f102c20466126bdfa9952962311bb750
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728294"
 ---
 # <a name="categorized-web-service-operations-master-data-services"></a>Web サービス操作の分類 (Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
+  
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web サービスには、[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] がユーザー インターフェイスを通じて行うすべての機能をコード記述で制御できるようにするための操作が、完全なセットとして含まれています。 Web サービス操作は、<xref:Microsoft.MasterDataServices.IService> インターフェイスによって定義され、<xref:Microsoft.MasterDataServices.ServiceClient> クラスのメソッドとして実装されます。 このトピックでは、Web サービス API の使用方法を理解しやすくするために、Web サービス操作を概念ごとのカテゴリに分類します。  
   
 ## <a name="model-operations"></a>モデルの操作  
@@ -140,7 +141,7 @@ ms.locfileid: "73728294"
 |<xref:Microsoft.MasterDataServices.ServiceClient.StagingProcess%2A>|  
   
 ## <a name="data-export-operations"></a>データ エクスポートの操作  
- これらの操作は、サブスクリプション ビューを使用してデータをエクスポートするために使用されます。 詳細については、「[概要: データのエクスポート (マスター データ サービス)](../../master-data-services/overview-exporting-data-master-data-services.md)」を参照してください。  
+ これらの操作は、サブスクリプション ビューを使用してデータをエクスポートするために使用されます。 詳細については、「 [概要: データのエクスポート (マスター データ サービス)](../../master-data-services/overview-exporting-data-master-data-services.md)」を参照してください。  
   
 ||  
 |-|  
@@ -149,7 +150,7 @@ ms.locfileid: "73728294"
 |<xref:Microsoft.MasterDataServices.ServiceClient.ExportViewListGet%2A>|  
 |<xref:Microsoft.MasterDataServices.ServiceClient.ExportViewUpdate%2A>|  
   
-## <a name="security-operations"></a>セキュリティの操作  
+## <a name="security-operations"></a>セキュリティ運用担当者  
  これらの操作は、[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] データベースへのアクセスを制御するセキュリティ設定を変更するために使用されます。 詳細については、「[セキュリティ (マスター データ サービス)](../../master-data-services/security-master-data-services.md)」を参照してください。  
   
 ||  

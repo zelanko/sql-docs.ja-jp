@@ -1,5 +1,5 @@
 ---
-title: ODBC のトランザクション。マイクロソフトのドキュメント
+title: ODBC でのトランザクション |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ade18b71fa83c7acbb16cb7facd19dd3de61a2e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63143321"
 ---
 # <a name="transactions-in-odbc"></a>ODBC でのトランザクション
-  ODBC のトランザクションは接続レベルで管理されます。 アプリケーションはトランザクションの完了時に、その接続のすべてのステートメント ハンドルで完了したすべての作業を、コミットまたはロールバックします。 コミットするトランザクションをロールバックするか、アプリケーションを呼び出す必要があります[sqlendtran を呼び出してと](../../native-client-odbc-api/sqlendtran.md)COMMIT または ROLLBACK ステートメントを送信する代わりにします。  
+  ODBC のトランザクションは接続レベルで管理されます。 アプリケーションはトランザクションの完了時に、その接続のすべてのステートメント ハンドルで完了したすべての作業を、コミットまたはロールバックします。 トランザクションをコミットまたはロールバックするには、COMMIT または ROLLBACK ステートメントを送信するのではなく、アプリケーションで[SQLEndTran](../../native-client-odbc-api/sqlendtran.md)を呼び出す必要があります。  
   
- アプリケーションを呼び出す[SQLSetConnectAttr](../../native-client-odbc-api/sqlsetconnectattr.md)のトランザクションを管理する 2 つの ODBC のモードを切り替えます。  
+ アプリケーションは、 [SQLSetConnectAttr](../../native-client-odbc-api/sqlsetconnectattr.md)を呼び出して、トランザクションを管理する2つの ODBC モードを切り替えます。  
   
 -   自動コミット モード  
   
@@ -32,15 +32,15 @@ ms.locfileid: "63143321"
   
 -   手動コミット モード  
   
-     呼び出すことによって、明示的に停止されるまで、同じトランザクションで実行されるすべてのステートメントが含まれる**sqlendtran を呼び出してと**。  
+     実行されたすべてのステートメントは、 **SQLEndTran**を呼び出すことによって明示的に停止されるまで、同じトランザクションに含まれます。  
   
- 自動コミット モードは、ODBC の既定のトランザクション モードです。 までオート コミット ・ モードでは、接続が行われると、 **SQLSetConnectAttr**を自動コミット モードの設定を手動コミット モードに切り替えると呼ばれます。 アプリケーションが自動コミットを無効にすると、次にデータベースに送信されるステートメントでトランザクションが開始されます。 その後、トランザクションがアプリケーション呼び出しまで有効になります**SQLEndTran**した状態または SQL_ROLLBACK オプションを使用します。 後にデータベースに送信されたコマンド**sqlendtran を呼び出してと**次のトランザクションを開始します。  
+ 自動コミット モードは、ODBC の既定のトランザクション モードです。 接続が確立されると、 **SQLSetConnectAttr**が呼び出され、自動コミットモードをオフに設定して手動コミットモードに切り替えるまで、自動コミットモードになります。 アプリケーションが自動コミットを無効にすると、次にデータベースに送信されるステートメントでトランザクションが開始されます。 その後、トランザクションは、アプリケーションが SQL_COMMIT オプションまたは SQL_ROLLBACK オプションを使用して**SQLEndTran**を呼び出すまで有効になります。 **SQLEndTran**の後にデータベースに送信されるコマンドは、次のトランザクションを開始します。  
   
  手動コミット モードから自動コミット モードに切り替えると、ドライバーは接続で現在開かれているすべてのトランザクションをコミットします。  
   
- ODBC アプリケーションで BEGIN TRANSACTION、COMMIT TRANSACTION、ROLLBACK TRANSACTION などの Transact-SQL トランザクション ステートメントを使用すると、ドライバーの動作が不確定になる可能性があるので、このような Transact-SQL トランザクション ステートメントは使用しないでください。 ODBC アプリケーションする必要があります自動コミット モードで実行し、トランザクション管理関数やステートメントを使用して、または手動コミット モードで実行されず、ODBC を使用して、 **sqlendtran を呼び出してと**関数がコミットまたはトランザクションをロールバックします。  
+ ODBC アプリケーションで BEGIN TRANSACTION、COMMIT TRANSACTION、ROLLBACK TRANSACTION などの Transact-SQL トランザクション ステートメントを使用すると、ドライバーの動作が不確定になる可能性があるので、このような Transact-SQL トランザクション ステートメントは使用しないでください。 ODBC アプリケーションは自動コミットモードで実行する必要があり、トランザクション管理関数やステートメントを使用したり、手動コミットモードで実行したり、ODBC **SQLEndTran**関数を使用してトランザクションをコミットまたはロールバックしたりする必要があります。  
   
 ## <a name="see-also"></a>参照  
- [トランザクションを実行する&#40;ODBC&#41;](../../../database-engine/dev-guide/performing-transactions-odbc.md)  
+ [ODBC&#41;&#40;のトランザクションの実行](../../../database-engine/dev-guide/performing-transactions-odbc.md)  
   
   

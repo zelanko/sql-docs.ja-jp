@@ -1,5 +1,5 @@
 ---
-title: CLR UDF からネイティブ コードへのアクセス |Microsoft Docs
+title: CLR UDF からのネイティブコードへのアクセス |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5ccbf276057e5fb67cea9a0520f39e8b002eb4cc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62753894"
 ---
 # <a name="accessing-native-code-from-a-clr-udf"></a>CLR UDF からのネイティブ コードへのアクセス
   次の例は、アセンブリ内のユーザー定義関数に含まれるネイティブ (アンマネージ) C++ コードの関数をデータベースから呼び出す方法を示しています。  
   
- この例では、作業ディレクトリをする必要があります`c:\test`します。  
+ この例では、作業ディレクトリはで`c:\test`ある必要があります。  
   
  まず次の C++ コードをコンパイルします。  
   
@@ -103,6 +103,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [CLR &#40;共通言語ランタイム&#41; 統合の使用シナリオと例](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
+ [CLR&#41; 統合 &#40;共通言語ランタイムの使用シナリオと例](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

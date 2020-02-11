@@ -15,22 +15,22 @@ ms.assetid: 8edbf68f-d05d-4d77-92f6-e9500008f520
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: eb54ba7becad42d8d9d2c2870c02db37a3c7d89f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68093982"
 ---
 # <a name="odbc-drivers-subkey"></a>ODBC ドライバーのサブキー
-ODBC ドライバーのサブキーの下の値には、インストールされているドライバーが一覧表示します。 これらの値の形式は、次の表に示します。  
+[ODBC ドライバー] サブキーの下の値には、インストールされているドライバーが一覧表示されます。 これらの値の形式を次の表に示します。  
   
-|名前|データ型|data|  
+|Name|データ型|データ|  
 |----------|---------------|----------|  
-|*ドライバーの説明*|REG_SZ|**インストールされています。**|  
+|*ドライバー-説明*|REG_SZ|**ら**|  
   
- *ドライバー説明*名は、ドライバーの開発者によって定義されます。 これは通常、ドライバーに関連付けられている DBMS の名前です。  
+ *ドライバーの説明*名は、ドライバーの開発者によって定義されます。 通常は、ドライバーに関連付けられている DBMS の名前です。  
   
- たとえば、書式設定されたテキスト ファイルと SQL Server のドライバーがインストールされているとします。 ODBC ドライバーのサブキーの下の値は次のようになります。  
+ たとえば、フォーマットされたテキストファイルと SQL Server にドライバーがインストールされているとします。 ODBC ドライバーサブキーの下の値は次のようになります。  
   
 ```  
 Text : REG_SZ : Installed  

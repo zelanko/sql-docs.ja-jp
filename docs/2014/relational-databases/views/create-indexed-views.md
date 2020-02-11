@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2159178c2fd26aca54d099f7345dbb62039ee34e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68196429"
 ---
 # <a name="create-indexed-views"></a>インデックス付きビューの作成
@@ -42,10 +42,10 @@ ms.locfileid: "68196429"
   
 5.  ビューに一意のクラスター化インデックスを作成します。  
   
-###  <a name="Restrictions"></a> インデックス付きビューに必要な SET オプション  
+###  <a name="Restrictions"></a>インデックス付きビューに必要な SET オプション  
  クエリの実行時、異なる SET オプションがアクティブになっている場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] は同じ式を評価しても異なる結果を生成することがあります。 たとえば、SET オプションの CONCAT_NULL_YIELDS_NULL を ON に設定した後、式 **'** abc **'** + NULL を実行すると NULL 値が返されます。 CONCAT_NULL_YIELDS_NULL を OFF に設定した後、同じ式を実行すると値 **'** abc **'** が返されます。  
   
- ビューが正しく維持され、一貫性のある結果が返されるようにするには、インデックス付きビューで、いくつかの SET オプションに固定値が必要となります。 次の表の SET オプションに表示される値に設定する必要があります、 **RequiredValue**次の条件が発生するたびに、列。  
+ ビューが正しく維持され、一貫性のある結果が返されるようにするには、インデックス付きビューで、いくつかの SET オプションに固定値が必要となります。 次の条件が発生するたびに、次の表の SET オプションを**Requiredvalue**列に表示される値に設定する必要があります。  
   
 -   ビューが作成され、そのビューのインデックスも作成されている。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "68196429"
   
 -   クエリ オプティマイザーで、クエリ プランの生成にインデックス付きビューが使用される。  
   
-    |SET オプション|必要な値|既定のサーバー値|既定<br /><br /> OLE DB および ODBC 値|既定<br /><br /> DB-Library 値|  
+    |SET オプション|必須値|既定のサーバー値|Default<br /><br /> OLE DB および ODBC 値|Default<br /><br /> DB-Library 値|  
     |-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|  
     |ANSI_NULLS|ON|ON|ON|OFF|  
     |ANSI_PADDING|ON|ON|ON|OFF|  
@@ -86,11 +86,11 @@ ms.locfileid: "68196429"
   
 -   インデックスを作成する場合は、IGNORE_DUP_KEY オプションを OFF に設定する必要があります (既定の設定)。  
   
--   ビュー定義では、 _schema_ **.** _tablename_ という 2 つの部分から構成される名前でテーブルが参照されていること。  
+-   テーブルは、_スキーマ_という2つの部分で構成される名前で参照する必要があり**ます。** ビュー定義内の_tablename_ 。  
   
 -   ビューで参照されているユーザー定義関数が、WITH SCHEMABINDING オプションを使用して作成されていること。  
   
--   ビューで参照されているユーザー定義関数が、 _schema_ **.** _function_という 2 つの部分から構成される名前で参照されていること。  
+-   ビューで参照されるすべてのユーザー定義関数は、_スキーマ_という2つの部分で構成される名前で参照されている必要があり**ます。**_関数_。  
   
 -   ユーザー定義関数のデータ アクセス プロパティが NO SQL に、外部アクセス プロパティが NO に設定されている必要があります。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "68196429"
   
 -   ビュー定義で使用する CLR ユーザー定義型の CLR 関数やメソッドは、次の表のようにプロパティが設定されている必要があります。  
   
-    |プロパティ|注|  
+    |プロパティ|注意|  
     |--------------|----------|  
     |DETERMINISTIC = TRUE|Microsoft .NET Framework メソッドの属性として、明示的に宣言する必要があります。|  
     |PRECISE = TRUE|.NET Framework メソッドの属性として、明示的に宣言する必要があります。|  
@@ -116,7 +116,7 @@ ms.locfileid: "68196429"
     |[COUNT]|行セット関数 (OPENDATASOURCE、OPENQUERY、OPENROWSET、および OPENXML)|外部結合 (LEFT、RIGHT、または FULL)|  
     |派生テーブル (FROM 句で SELECT ステートメントを指定することで定義される)|自己結合|SELECT \* または SELECT *table_name*を使用して、列を指定します。*|  
     |DISTINCT|STDEV、STDEVP、VAR、VARP、または AVG|共通テーブル式 (CTE)|  
-    |`float`\*、 `text`、 `ntext`、 `image`、 `XML`、または`filestream`列|サブクエリ|順位付け関数または集計関数が含まれている OVER 句|  
+    |`float`\*、 `text`、 `ntext`、 `image`、 `XML`、また`filestream`は列|サブクエリ|順位付け関数または集計関数が含まれている OVER 句|  
     |フルテキスト述語 (CONTAIN、FREETEXT)|NULL 値を許容する式を参照する SUM 関数|ORDER BY|  
     |CLR ユーザー定義集計関数|TOP|CUBE、ROLLUP、または GROUPING SETS 演算子|  
     |MIN、MAX|UNION、EXCEPT、または INTERSECT 演算子。|TABLESAMPLE|  
@@ -124,23 +124,25 @@ ms.locfileid: "68196429"
     |スパース列セット|インラインまたは複数ステートメントのテーブル値関数|OFFSET|  
     |CHECKSUM_AGG|||  
   
-     \*インデックス付きビューに含めることができます`float`列。 ただし、このような列はクラスター化インデックス キーに含めることができません。  
+     \*インデックス付きビューには`float`列を含めることができます。ただし、このような列をクラスター化インデックスキーに含めることはできません。  
   
 -   GROUP BY が存在する場合、VIEW 定義には COUNT_BIG(*) を含める必要があります。HAVING を含めることはできません。 このような GROUP BY 制限は、インデックス付きビュー定義にのみ適用されます。 クエリがこの GROUP BY 制限を満たしていない場合でも、実行プランでインデックス付きビューを使用することはできます。  
   
 -   ビュー定義に GROUP BY 句を指定した場合、一意のクラスター化インデックスのキーでは、GROUP BY 句で指定した列のみを参照できること。  
   
 ###  <a name="Recommendations"></a> 推奨事項  
- インデックス付きビューで `datetime` 文字リテラルと `smalldatetime` 文字列リテラルを参照するときは、決定的な日付形式スタイルを使用して、そのリテラルを目的の日付型に明示的に変換することをお勧めします。 決定的な日付形式の一覧については、「[CAST および CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql)」を参照してください。 `datetime` 型または `smalldatetime` 型への文字列の暗黙的な変換が必要な式は非決定的であると見なされます。 これは、サーバー セッションの LANGUAGE および DATEFORMAT の設定によって結果が異なるためです。 たとえば、式 `CONVERT (datetime, '30 listopad 1996', 113)` では、言語が異なると文字列 '`listopad`' が異なる月を意味するので、結果が LANGUAGE の設定によって異なります。 同様に、式 `DATEADD(mm,3,'2000-12-01')`の場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では DATEFORMAT の設定に基づいて、文字列 `'2000-12-01'` が解釈されます。  
+ インデックス付きビューで `datetime` 文字リテラルと `smalldatetime` 文字列リテラルを参照するときは、決定的な日付形式スタイルを使用して、そのリテラルを目的の日付型に明示的に変換することをお勧めします。 決定的な日付形式の一覧については、「[CAST および CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql)」を参照してください。 
+  `datetime` 型または `smalldatetime` 型への文字列の暗黙的な変換が必要な式は非決定的であると見なされます。 これは、サーバー セッションの LANGUAGE および DATEFORMAT の設定によって結果が異なるためです。 たとえば、式 `CONVERT (datetime, '30 listopad 1996', 113)` では、言語が異なると文字列 '`listopad`' が異なる月を意味するので、結果が LANGUAGE の設定によって異なります。 同様に、式 `DATEADD(mm,3,'2000-12-01')`の場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では DATEFORMAT の設定に基づいて、文字列 `'2000-12-01'` が解釈されます。  
   
  照合順序間で行われる Unicode 以外の文字データの暗黙的な変換も非決定的であると見なされます。  
   
-###  <a name="Considerations"></a> 考慮事項  
+###  <a name="Considerations"></a>上  
  インデックス付きビューの列の **large_value_types_out_of_row** オプションの設定は、ベース テーブルの対応する列の設定が継承されます。 この値は、 [sp_tableoption](/sql/relational-databases/system-stored-procedures/sp-tableoption-transact-sql)を使用して設定します。 式から形成される列に対する既定の設定は 0 です。 つまり、大きい値の型は行内に格納されます。  
   
  インデックス付きビューはパーティション分割されたテーブルに作成でき、インデックス付きビュー自体をパーティション分割できます。  
   
- [!INCLUDE[ssDE](../../includes/ssde-md.md)] でインデックス付きビューが使用されないようにするには、クエリに OPTION (EXPAND VIEWS) ヒントを含めます。 これによって、オプションの 1 つが正しく設定されていない場合、オプティマイザーもビューのインデックスを使用できません。 OPTION (EXPAND VIEWS) ヒントの詳細については、「[SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql)」を参照してください。  
+ 
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)] でインデックス付きビューが使用されないようにするには、クエリに OPTION (EXPAND VIEWS) ヒントを含めます。 これによって、オプションの 1 つが正しく設定されていない場合、オプティマイザーもビューのインデックスを使用できません。 OPTION (EXPAND VIEWS) ヒントの詳細については、「[SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql)」を参照してください。  
   
  ビューが削除されると、ビューのすべてのインデックスも削除されます。 クラスター化インデックスが削除されると、ビューのすべての非クラスター化インデックスと自動的に作成された統計も削除されます。 ユーザーが作成したビューの統計は、保持されます。 非クラスター化インデックスは、個別に削除できます。 ビュー上のクラスター化インデックスを削除すると、格納された結果セットも削除され、オプティマイザーは、ビューの処理を標準的なビューと同様の処理に戻します。  
   
@@ -210,14 +212,14 @@ ms.locfileid: "68196429"
   
  詳細については、「[CREATE VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-view-transact-sql)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)   
- [SET ANSI_NULLS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-nulls-transact-sql)   
- [SET ANSI_PADDING &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-padding-transact-sql)   
- [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-warnings-transact-sql)   
- [SET ARITHABORT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-arithabort-transact-sql)   
- [SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-concat-null-yields-null-transact-sql)   
- [SET NUMERIC_ROUNDABORT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-numeric-roundabort-transact-sql)   
- [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-quoted-identifier-transact-sql)  
+ [SET ANSI_NULLS &#40;Transact-sql&#41;](/sql/t-sql/statements/set-ansi-nulls-transact-sql)   
+ [SET ANSI_PADDING &#40;Transact-sql&#41;](/sql/t-sql/statements/set-ansi-padding-transact-sql)   
+ [SET ANSI_WARNINGS &#40;Transact-sql&#41;](/sql/t-sql/statements/set-ansi-warnings-transact-sql)   
+ [SET ARITHABORT &#40;Transact-sql&#41;](/sql/t-sql/statements/set-arithabort-transact-sql)   
+ [SET CONCAT_NULL_YIELDS_NULL &#40;Transact-sql&#41;](/sql/t-sql/statements/set-concat-null-yields-null-transact-sql)   
+ [SET NUMERIC_ROUNDABORT &#40;Transact-sql&#41;](/sql/t-sql/statements/set-numeric-roundabort-transact-sql)   
+ [SET QUOTED_IDENTIFIER &#40;Transact-sql&#41;](/sql/t-sql/statements/set-quoted-identifier-transact-sql)  
   
   

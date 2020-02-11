@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bf393a3e0f117098dc4a85bae3e6c68728f43a64
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721810"
 ---
 # <a name="replication-programming-concepts"></a>レプリケーションのプログラミング概念
@@ -54,7 +54,9 @@ ms.locfileid: "62721810"
   
 -   レプリケーション トポロジと、そのレプリケーションの種類との対応。  
   
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] レプリケーションを初めて使用する場合は、「[レプリケーションの種類](../types-of-replication.md)」を参照してください。  
+ 
+  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] レプリケーションを初めて使用する場合は、「[レプリケーションの種類](../types-of-replication.md)」を参照してください。  
   
 ## <a name="defining-application-functionality"></a>アプリケーションの機能の定義  
  レプリケーション トポロジを定義した後で、アプリケーションに備える機能を決定します。 サブスクリプションをアプリケーションに同期させるスクリプトから、レプリケーションを構成するためのユーザー インターフェイスを備えたアプリケーションまで、幅広い機能を定義できます。 レプリケーションでは次の一般的なプログラミング作業がサポートされます。  
@@ -73,7 +75,8 @@ ms.locfileid: "62721810"
   
 |機能|例|  
 |-------------------|-------------|  
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) を使用したサーバー管理|管理者がレプリケーション トポロジ内でデータベースをパブリッシャーとしてアタッチし、構成できるアプリケーション|  
+|
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) を使用したサーバー管理|管理者がレプリケーション トポロジ内でデータベースをパブリッシャーとしてアタッチし、構成できるアプリケーション|  
 |ADO.NET を使用したデータ アクセス|ユーザーがオフライン時にローカル サブスクライバー データベース内のレプリケート済み販売データにプログラムからアクセスして変更でき、さらにボタンをクリックすることでプル サブスクリプションに接続して同期できるアプリケーション|  
   
 ## <a name="planning-for-security"></a>セキュリティの計画  
@@ -88,31 +91,33 @@ ms.locfileid: "62721810"
 ## <a name="choosing-a-development-environment"></a>開発環境の選択  
  レプリケーション アプリケーションの開発時に検討する基本開発環境は、3 種類あります。 どの開発環境からもほぼ同じレプリケーション機能を利用できますが、いくつか例外があります。 レプリケーション アプリケーションは、次の環境で開発できます。  
   
--   **マネージド コード**  
+-   **マネージコード**  
   
-     [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] プログラミングと .NET 共通言語ランタイム (CLR) を利用できる、オブジェクト指向開発環境です。 マネージド コードは、.NET 開発と [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] アプリケーションのどちらにも推奨されるプログラミング環境です。 マネージド レプリケーション インターフェイスを利用することで、[!INCLUDE[tsql](../../../includes/tsql-md.md)] がわからなくてもオブジェクト指向の方法でレプリケーション管理をプログラミングできます。さらに、スクリプトから使用できないレプリケーション エージェントを実行する場合に、コールバック機能も提供できます。 マネージド コードは、再利用可能なコンポーネントおよびユーザー インターフェイス アプリケーションの開発に最適な環境です。  
+     
+  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] プログラミングと .NET 共通言語ランタイム (CLR) を利用できる、オブジェクト指向開発環境です。 マネージド コードは、.NET 開発と [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] アプリケーションのどちらにも推奨されるプログラミング環境です。 マネージド レプリケーション インターフェイスを利用することで、[!INCLUDE[tsql](../../../includes/tsql-md.md)] がわからなくてもオブジェクト指向の方法でレプリケーション管理をプログラミングできます。さらに、スクリプトから使用できないレプリケーション エージェントを実行する場合に、コールバック機能も提供できます。 マネージド コードは、再利用可能なコンポーネントおよびユーザー インターフェイス アプリケーションの開発に最適な環境です。  
   
 -   **スクリプトの作成**  
   
      一連のコマンドを [!INCLUDE[tsql](../../../includes/tsql-md.md)] スクリプトでレプリケーション システムのストアド プロシージャとして実行するか、バッチ ファイル内のコマンドを実行する単純なアプリケーションです。 プロセス内で管理される [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] プロバイダーを使用して、管理対象の環境でスクリプトを実行できますが、管理対象のレプリケーション インターフェイスを使用することで同じ機能を利用できます。さらに、コールバック機能も提供されます。 スクリプトは、たとえばレプリケーション サーバーのインストールなど、数回のみ実行されるタスクを実行する場合や、コールバック機能が不要な場合に最適な環境です。  
   
--   **ネイティブ コード**  
+-   **ネイティブコード**  
   
      コードが CLR によって管理されない、システム オブジェクトや COM オブジェクトへの直接アクセスを利用するオブジェクト指向開発環境です。 ネイティブ コード レプリケーション インターフェイスは、非推奨または廃止になりました。 詳細については、「[SQL Server レプリケーションの非推奨の機能](../deprecated-features-in-sql-server-replication.md)」または「[レプリケーションの旧バージョンとの互換性](../replication-backward-compatibility.md)」を参照してください。  
   
 ## <a name="choose-the-appropriate-replication-programming-interface"></a>適切なレプリケーション プログラミング インターフェイスの選択  
  計画の最後の手順は、選択した開発環境で目的のレプリケーション機能を実装するためのレプリケーション プログラミング インターフェイスを適切に選択することです。 次の表に、使用できるレプリケーション プログラミング インターフェイスを示します。  
   
-|インターフェイス|環境|使用法|  
+|インターフェイス|環境|用途|  
 |---------------|-----------------|----------|  
 |[レプリケーション管理オブジェクトの概念](replication-management-objects-concepts.md)|マネージド コード|管理、監視、同期|  
 |<xref:Microsoft.SqlServer.Replication>|マネージド コード|同期|  
 |<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>|マネージド コード|カスタム ロジックとマージ同期プロセスを統合するためのビジネス ロジック ハンドラーの作成|  
-|[レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql)|スクリプトの作成|管理と監視。|  
-|[Replication Agent Executables Concepts](replication-agent-executables-concepts.md)|スクリプトの作成|同期|  
+|[レプリケーションストアドプロシージャ &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql)|スクリプトの作成|管理と監視。|  
+|[レプリケーションエージェント実行可能ファイルの概念](replication-agent-executables-concepts.md)|スクリプトの作成|同期|  
   
 ## <a name="example"></a>例  
- [!INCLUDE[ssSampleDBCoShort](../../../includes/sssampledbcoshort-md.md)] では、データを世界中の 200 人の販売担当者にパブリッシュする必要があります。 販売担当者は頻繁に出張するため、ラップトップ コンピューターや携帯情報端末 (PDA) を使用して顧客データを変更したり、新しい発注を追加したりする必要があります。 販売担当者がラップトップ コンピューターをネットワークに接続したときに、このような変更をパブリッシャーと同期する必要があります。  
+ 
+  [!INCLUDE[ssSampleDBCoShort](../../../includes/sssampledbcoshort-md.md)] では、データを世界中の 200 人の販売担当者にパブリッシュする必要があります。 販売担当者は頻繁に出張するため、ラップトップ コンピューターや携帯情報端末 (PDA) を使用して顧客データを変更したり、新しい発注を追加したりする必要があります。 販売担当者がラップトップ コンピューターをネットワークに接続したときに、このような変更をパブリッシャーと同期する必要があります。  
   
  このアプリケーションの場合、計画手順は次のようになります。  
   
@@ -120,9 +125,10 @@ ms.locfileid: "62721810"
   
 2.  販売アプリケーションに必要な一般的なデータ アクセスに加えて、このアプリケーションでは販売担当者が必要なときにボタンをクリックしてプル サブスクリプションを同期できるようにする必要があります。 さらに、販売担当者がこのアプリケーションをインストールして実行するため、クライアント側でサブスクリプションを構成し、初期スナップショットを適用できる必要があります。 場合によっては、このアプリケーションは Windows で提供されているインフラストラクチャを利用してワイヤレス接続を探し、接続が検出された場合はサブスクリプションを自動的に同期します。  
   
-3.  パブリッシャーに接続するときには、Windows 認証と仮想プライベート ネットワークの使用を含む、レプリケーションのセキュリティ ガイドラインすべてに従います。 Web 同期を実行する場合は、SSL (Secure Sockets Layer) 接続を使用します。 詳細については、「[Web 同期の構成](../configure-web-synchronization.md)」を参照してください。  
+3.  パブリッシャーに接続するときには、Windows 認証と仮想プライベート ネットワークの使用を含む、レプリケーションのセキュリティ ガイドラインすべてに従います。 Web 同期を実行する場合は、SSL (Secure Sockets Layer) 接続を使用します。 詳しくは、「 [Configure Web Synchronization](../configure-web-synchronization.md)」をご覧ください。  
   
-4.  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] の機能を利用するには、マネージド コード言語を使用してアプリケーションを開発します。  
+4.  
+  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] の機能を利用するには、マネージド コード言語を使用してアプリケーションを開発します。  
   
 5.  このような要件に基づき、このアプリケーションに必要なレプリケーション機能はレプリケーション管理オブジェクト (RMO) 管理インターフェイスによってすべて提供できます。  
   

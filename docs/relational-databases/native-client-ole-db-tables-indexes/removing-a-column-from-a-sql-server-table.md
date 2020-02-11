@@ -17,20 +17,22 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ff59a03f10e595601590201b4fede2d10424a7d2
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73761586"
 ---
 # <a name="removing-a-column-from-a-sql-server-table"></a>SQL Server テーブルからの列の削除
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、 **Itabledefinition::D ropcolumn**関数を公開します。 コンシューマーはこの関数を使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルから列を削除できます。  
+  Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB プロバイダーは、 **itabledefinition::D ropcolumn**関数を公開します。 コンシューマーはこの関数を使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルから列を削除できます。  
   
- コンシューマーはテーブル名は、*pTableID* パラメーターの *uName* 共用体の *pwszName* メンバーに Unicode 文字列で指定します。 *pTableID* の *eKind* メンバーを DBKIND_NAME にする必要があります。  
+ コンシューマーはテーブル名は、*pTableID* パラメーターの *uName* 共用体の *pwszName* メンバーに Unicode 文字列で指定します。 
+  *pTableID* の *eKind* メンバーを DBKIND_NAME にする必要があります。  
   
- コンシューマーは、 *pColumnID*パラメーターの*uName*共用体の*pwszName*メンバーに列名を示します。 列名は Unicode 文字列で指定します。 *pColumnID* の *eKind* メンバーを DBKIND_NAME にする必要があります。  
+ コンシューマーは、 *pColumnID*パラメーターの*uName*共用体の*pwszName*メンバーに列名を示します。 列名は Unicode 文字列で指定します。 
+  *pColumnID* の *eKind* メンバーを DBKIND_NAME にする必要があります。  
   
 ## <a name="example"></a>例  
   

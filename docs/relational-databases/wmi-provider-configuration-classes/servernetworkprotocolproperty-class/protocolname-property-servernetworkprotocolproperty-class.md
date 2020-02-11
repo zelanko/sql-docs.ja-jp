@@ -18,10 +18,10 @@ ms.assetid: b28d7e40-5fd8-4aad-a2a6-b4131d8152b2
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: d38a9cfd11f3f48c2e5827f58e525deacab56c60
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73657563"
 ---
 # <a name="protocolname-property-servernetworkprotocolproperty-class"></a>ProtocolName プロパティ (ServerNetworkProtocolProperty クラス)
@@ -36,8 +36,8 @@ object.PropertyName [= value]
 ```  
   
 ## <a name="parts"></a>要素  
- *object*  
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンス上のネットワークプロトコルの属性を表す[Servernetworkprotocolproperty クラス](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolproperty-class/servernetworkprotocolproperty-class.md)オブジェクト。  
+ *素材*  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)]の[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンス上のネットワークプロトコルの属性を表す[servernetworkprotocolproperty クラス](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolproperty-class/servernetworkprotocolproperty-class.md)オブジェクト。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  プロパティを所有するプロトコルの名前を指定する文字列値。  
@@ -45,6 +45,6 @@ object.PropertyName [= value]
 ## <a name="remarks"></a>解説  
   
 ## <a name="see-also"></a>参照  
- [サーバーネットワークプロトコルと Net-library の構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [サーバーのネットワーク プロトコルと Net-Library の構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

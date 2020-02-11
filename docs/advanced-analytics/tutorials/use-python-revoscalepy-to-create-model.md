@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 5faa8688f3036f80b947ccc5d99c09c4612f26fb
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73724449"
 ---
 # <a name="use-python-with-revoscalepy-to-create-a-model-that-runs-remotely-on-sql-server"></a>Python と revoscalepy を使用して、SQL Server でリモートで実行されるモデルを作成します
@@ -35,7 +35,7 @@ Microsoft の [revoscalepy](https://docs.microsoft.com/machine-learning-server/p
 > * **revoscalepy** を使用して線形モデルを作成する
 > * ローカルからリモート コンピューティング コンテキストへ操作をシフトする
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 この演習で使用されるサンプル データは、[**フライトデータ**](demo-data-airlinedemo-in-sql.md) データベースです。
 
@@ -172,7 +172,7 @@ SQL Server のコンピューティング コンテキストでは、バッチ �
 + このサンプルは 4 つのプロセッサを搭載したコンピューター上で実行されているため、`num_tasks` パラメーターを 4 に設定して、リソースを最大限に活用できるようにします。 
 + この値を0に設定した場合、SQL Server は既定値を使用します。これは、サーバーの現在の MAXDOP 設定により、できるだけ多くのタスクを並列処理します。 ただし、割り当てられる可能性のあるタスクの正確な数は、サーバーの設定や実行されている他のジョブなど、様々な要因によって異なります。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 これらの追加の Python サンプルとチュートリアルでは、より複雑なデータ ソースを使用したエンドツーエンドのシナリオだけでなく、リモート コンピューティング コンテキストの使用についても紹介します。
 

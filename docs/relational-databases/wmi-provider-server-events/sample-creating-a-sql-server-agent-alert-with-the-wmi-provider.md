@@ -15,10 +15,10 @@ ms.assetid: d44811c7-cd46-4017-b284-c863ca088e8f
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: b9ceab4fd40174a68bd512fedf2c1b6d5b159b99
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73660527"
 ---
 # <a name="sample-creating-a-sql-server-agent-alert-with-the-wmi-provider"></a>サンプル: WMI プロバイダーを使用した SQL Server エージェント警告の作成
@@ -30,12 +30,13 @@ ms.locfileid: "73660527"
   
  次に警告が作成されます。 スクリプトは、まず、警告が実行するジョブを作成し、ジョブ ステップをジョブに追加し、そのジョブを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の現在のインスタンスに指定します。 次に、スクリプトは警告を作成します。  
   
- このジョブステップでは、WMI イベントインスタンスの**TextData**プロパティを取得し、その値を**DeadlockEvents**テーブルの**DeadlockGraph**列に挿入します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、暗黙に文字列を XML 形式に変換することに注意してください。 このジョブ ステップでは [!INCLUDE[tsql](../../includes/tsql-md.md)] サブシステムを使用するので、プロシキは指定されません。  
+ このジョブステップでは、WMI イベントインスタンスの**TextData**プロパティを取得し、その値を**DeadlockEvents**テーブルの**DeadlockGraph**列に挿入します。 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、暗黙に文字列を XML 形式に変換することに注意してください。 このジョブ ステップでは [!INCLUDE[tsql](../../includes/tsql-md.md)] サブシステムを使用するので、プロシキは指定されません。  
   
  警告は、デッドロック グラフ トレース イベントのログが記録されるたびに、ジョブを実行します。 WMI 警告の場合、SQL Server エージェントは、指定された名前空間および WQL ステートメントを使用して通知クエリを作成します。 この警告の場合、SQL Server エージェントは、ローカル コンピューター上の既定のインスタンスを監視します。 WQL ステートメントは、既定のインスタンス内の任意の `DEADLOCK_GRAPH` イベントを要求します。 警告が監視するインスタンスを変更するには、警告する `MSSQLSERVER` 内の `@wmi_namespace` のインスタンス名を置き換えます。  
   
 > [!NOTE]  
->  SQL Server エージェントが WMI イベントを受信するには、 **msdb**と [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]で [!INCLUDE[ssSB](../../includes/sssb-md.md)] を有効にする必要があります。  
+>  SQL Server エージェントが WMI イベントを受信する[!INCLUDE[ssSB](../../includes/sssb-md.md)]には、 **msdb**および[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]でを有効にする必要があります。  
   
 ```  
 USE AdventureWorks ;  
@@ -90,7 +91,7 @@ GO
 ```  
   
 ## <a name="testing-the-sample"></a>サンプルのテスト  
- ジョブの実行を確認するには、デッドロックを発生させます。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、2つの**SQL クエリ**タブを開き、両方のクエリを同じインスタンスに接続します。 次のスクリプトを 2 つのクエリ タブのうちの 1 つで実行します。 このスクリプトは、1 つの結果セットを作成して終了します。  
+ ジョブの実行を確認するには、デッドロックを発生させます。 で[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、2つの**SQL クエリ**タブを開き、両方のクエリを同じインスタンスに接続します。 次のスクリプトを 2 つのクエリ タブのうちの 1 つで実行します。 このスクリプトは、1 つの結果セットを作成して終了します。  
   
 ```  
 USE AdventureWorks ;  
@@ -103,7 +104,7 @@ SELECT TOP(1) Name FROM Production.Product WITH (XLOCK) ;
 GO  
 ```  
   
- 2番目の [クエリ] タブで次のスクリプトを実行します。このスクリプトは、1つの結果セットを生成してからブロックし、`Production.Product`のロックの取得を待機します。  
+ 2番目の [クエリ] タブで次のスクリプトを実行します。このスクリプトは、1つの`Production.Product`結果セットを生成してからブロックし、ロックの取得を待機します。  
   
 ```  
 USE AdventureWorks ;  
@@ -119,7 +120,7 @@ SELECT TOP(1) Name FROM Production.Product WITH (XLOCK) ;
 GO  
 ```  
   
- 最初の [クエリ] タブで、次のスクリプトを実行します。このスクリプトはブロックし、`Production.Location`のロックの取得を待機しています。 すぐにタイムアウトになった後、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、このスクリプトとサンプル内のスクリプトのどちらかをデッドロックの対象として選択し、トランザクションを終了します。  
+ 最初の [クエリ] タブで、次のスクリプトを実行します。このスクリプトはブロックし、ロックの取得を`Production.Location`待機しています。 すぐにタイムアウトになった後、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、このスクリプトとサンプル内のスクリプトのどちらかをデッドロックの対象として選択し、トランザクションを終了します。  
   
 ```  
 SELECT TOP(1) Name FROM Production.Location WITH (XLOCK) ;  
@@ -133,7 +134,8 @@ SELECT * FROM DeadlockEvents ;
 GO  
 ```  
   
- `DeadlockGraph` 列には、デッドロック グラフ イベントのすべてのプロパティを示した XML ドキュメントが格納されているはずです。  
+ 
+  `DeadlockGraph` 列には、デッドロック グラフ イベントのすべてのプロパティを示した XML ドキュメントが格納されているはずです。  
   
 ## <a name="see-also"></a>参照  
  [WMI Provider for Server Events の概念](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)  

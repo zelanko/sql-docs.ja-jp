@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 77581cc6d8838e0cfed4bb7cc615f4d1f58de0d5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62761455"
 ---
 # <a name="create-unique-constraints"></a>UNIQUE 制約の作成
@@ -28,7 +28,7 @@ ms.locfileid: "62761455"
   
 -   **作業を開始する準備:**  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **UNIQUE 制約を作成する方法:**  
   
@@ -55,7 +55,7 @@ ms.locfileid: "62761455"
   
 4.  **[全般]** の下のグリッドで、 **[型]** をクリックし、プロパティの右にあるドロップダウン リスト ボックスの **[一意キー]** をクリックします。  
   
-5.  **[ファイル]** メニューの **[<_テーブル名_> を保存]** をクリックします。  
+5.  **[ファイル]** メニューの **[<** テーブル名 _> を保存]_ をクリックします。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
@@ -85,7 +85,7 @@ ms.locfileid: "62761455"
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 次の例では、`Person.Password` テーブルの `PasswordHash` および `PasswordSalt` 列に UNIQUE 制約を作成します。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 次の例では、`PasswordHash` テーブルの `PasswordSalt` および `Person.Password` 列に UNIQUE 制約を作成します。  
   
     ```  
     USE AdventureWorks2012;   
@@ -102,7 +102,7 @@ ms.locfileid: "62761455"
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 次の例では、テーブルを作成して `TransactionID` 列に UNIQUE 制約を定義します。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 次の例では、テーブルを作成して `TransactionID`列に UNIQUE 制約を定義します。  
   
     ```  
     USE AdventureWorks2012;  

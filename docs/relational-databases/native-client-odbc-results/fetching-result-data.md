@@ -24,10 +24,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6ecaeed10c5903b50d848a42ff3b12ee96ebeaf5
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73779142"
 ---
 # <a name="fetching-result-data"></a>結果データのフェッチ
@@ -59,11 +59,11 @@ ms.locfileid: "73779142"
   
  SQL_C_DEFAULT を使用して C 変数のデータ型を指定する場合は注意が必要です。 SQL_C_DEFAULT は、C 変数のデータ型と、列やパラメーターの SQL データ型を一致させることを指定します。 SQL_C_DEFAULT が**ntext**、 **nchar**、または**nvarchar**列に対して指定されている場合、Unicode データがアプリケーションに返されます。 そのため、アプリケーションが Unicode データを処理するようにコーディングされていないと、さまざまな問題が発生する可能性があります。 **Uniqueidentifier** (SQL_GUID) データ型でも、同じ種類の問題が発生する可能性があります。  
   
- 通常、 **text**、 **ntext**、および**image**型のデータは、1つのプログラム変数に格納するには大きすぎるため、通常は**SQLBindCol**ではなく**SQLGetData**を使用して処理されます。 サーバーカーソルを使用する場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは、行がフェッチされるときに、バインドされていない**text**、 **ntext**、または**image**型の列のデータを転送しないように最適化されています。 **Text**型、 **ntext**型、または**image**型のデータは、アプリケーションが列に対して**SQLGetData**を発行するまで、実際にはサーバーから取得されません。  
+ 通常、 **text**、 **ntext**、および**image**型のデータは、1つのプログラム変数に格納するには大きすぎるため、通常は**SQLBindCol**ではなく**SQLGetData**を使用して処理されます。 サーバーカーソルを使用する場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、NATIVE Client ODBC ドライバーは、行がフェッチされるときに、バインドされていない**text**、 **ntext**、または**image**型の列のデータを転送しないように最適化されています。 **Text**型、 **ntext**型、または**image**型のデータは、アプリケーションが列に対して**SQLGetData**を発行するまで、実際にはサーバーから取得されません。  
   
  この最適化をアプリケーションに適用すると、ユーザーがカーソルを上下にスクロールしている間に**text**、 **ntext**、または**image**データが表示されないようにすることができます。 ユーザーが行を選択すると、アプリケーションは**SQLGetData**を呼び出して、 **text**、 **ntext**、または**image**型のデータを取得できます。 これにより、ユーザーが選択していない行の**text**型、 **ntext**型、または**image**型のデータが送信され、大量のデータの転送を保存できるようになります。  
   
 ## <a name="see-also"></a>参照  
- [結果&#40;の処理 (ODBC)&#41;](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
+ [ODBC&#41;&#40;結果の処理](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: SqlServiceAdvancedProperty クラス |Microsoft Docs
+title: Sqlserviceadvanced プロパティクラス |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,18 +19,18 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 903c33c2679d4869bd26e95392e6eb5dcd2f9fb2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63188588"
 ---
 # <a name="sqlserviceadvancedproperty-class"></a>SqlServiceAdvancedProperty クラス
-  [SqlServiceAdvancedProperty クラス](sqlserviceadvancedproperty-class.md)によって参照されるサービスの高度なプロパティを表す、 [SqlService クラス](../sqlservice-class/sqlservice-class.md)オブジェクト。  
+  [Sqlserviceadvanced プロパティクラス](sqlserviceadvancedproperty-class.md)は、 [sqlservice クラス](../sqlservice-class/sqlservice-class.md)オブジェクトによって参照されるサービスの詳細プロパティを表します。  
   
- [AdvancedProperties プロパティ (SqlService クラス)](../sqlservice-class/advancedproperties-property-sqlservice-class.md)の配列を参照して[SqlServiceAdvancedProperty クラス](sqlserviceadvancedproperty-class.md)オブジェクト。  
+ [Advanced Properties プロパティ (Sqlservice クラス)](../sqlservice-class/advancedproperties-property-sqlservice-class.md)は、 [Sqlserviceadvanced property クラス](sqlserviceadvancedproperty-class.md)オブジェクトの配列を参照します。  
   
- [の開始と停止サービス](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)クラスは、サービスに固有のプロパティを表します。 関連付けられているプロパティの一覧でこれらのプロパティは、 [SqlService クラス](https://technet.microsoft.com/library/ms186497.aspx)クラス。 [SqlServiceAdvancedProperty クラス](https://technet.microsoft.com/library/ms182447.aspx)クラスは、文字列、数値、またはブール プロパティの表記を使用できます。 このクラスを使用すると、指定したサービスに固有のプロパティを表示できます。  
+ [開始および停止サービス](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)クラスは、サービスに固有のプロパティを表します。 これらのプロパティは、 [Sqlservice クラス](https://technet.microsoft.com/library/ms186497.aspx)クラスに関連付けられているプロパティの一覧に含まれていません。 [Sqlserviceadvanced Property クラス](https://technet.microsoft.com/library/ms182447.aspx)では、文字列、数値、またはブール型のプロパティを表現できます。 このクラスを使用すると、指定したサービスに固有のプロパティを表示できます。  
   
 ## <a name="see-also"></a>参照  
  [サービスの開始、停止、および一時停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

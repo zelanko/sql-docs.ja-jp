@@ -15,14 +15,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 87b7f550bf63c9cf14f16c829932398470848e6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63192336"
 ---
 # <a name="sqldrivers"></a>SQLDrivers
-  ODBC ドライバー マネージャーは、すべてを返します**SQLDrivers**属性指定文字列。 属性の文字列と値の定義の詳細については、次を参照してください。、[データ アクセスおよびストレージ デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=4173)、または表示することができます、 [ODBC プログラマ リファレンス](https://go.microsoft.com/fwlink/?LinkId=45250)オンライン。  
+  ODBC ドライバーマネージャーは、すべての**Sqldrivers**属性の指定文字列を返します。 属性文字列と値の定義の詳細については、「[データアクセスおよびストレージデベロッパーセンター](https://go.microsoft.com/fwlink/?LinkId=4173)」を参照するか、 [ODBC プログラマーズリファレンス](https://go.microsoft.com/fwlink/?LinkId=45250)をオンラインで参照してください。  
   
 ## <a name="see-also"></a>参照  
  [SQLDrivers](https://go.microsoft.com/fwlink/?LinkId=59341)   

@@ -19,10 +19,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d2752a1708c5727567de470b49d4cbcc63f90923
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73782656"
 ---
 # <a name="bcp_gettypename"></a>bcp_gettypename
@@ -43,7 +43,7 @@ RETCODE bcp_gettypename (
  *token*  
  BCP 型トークンを示す値です。  
   
- *field*  
+ *分野*  
  要求されたトークンが max 型かどうかを示します。  
   
 ## <a name="returns"></a>戻り値  
@@ -54,46 +54,46 @@ RETCODE bcp_gettypename (
   
  次の表では、指定できる BCP 型、それらの BCP 型が max 型かどうか、および予想される出力を示しています。  
   
-|BCP 型名|MaxType|出力|  
+|BCP 型名|MaxType|Output|  
 |-------------------|-------------|------------|  
-|**SQLDECIMAL**|接続前/接続後|**decimal**|  
-|**SQLNUMERIC**|接続前/接続後|**numeric**|  
-|**SQLINT1**|接続前/接続後|**tinyint**|  
-|**SQLINT2**|接続前/接続後|**smallint**|  
-|**SQLINT4**|接続前/接続後|**int**|  
-|**SQLMONEY**|接続前/接続後|**money**|  
-|**SQLFLT8**|接続前/接続後|**float**|  
-|**SQLDATETIME**|接続前/接続後|**datetime**|  
-|**SQLBITN**|接続前/接続後|**ビット-null**|  
-|**SQLBIT**|接続前/接続後|**bit**|  
+|**SQLDECIMAL**|使用できるのは|**decimal**|  
+|**SQLNUMERIC**|使用できるのは|**番号**|  
+|**SQLINT1**|使用できるのは|**tinyint**|  
+|**SQLINT2**|使用できるのは|**smallint**|  
+|**SQLINT4**|使用できるのは|**int**|  
+|**SQLMONEY**|使用できるのは|**money**|  
+|**SQLFLT8**|使用できるのは|**float**|  
+|**SQLDATETIME**|使用できるのは|**DATETIME**|  
+|**SQLBITN**|使用できるのは|**bit-null**|  
+|**SQLBIT**|使用できるのは|**bit**|  
 |**SQLBIGCHAR**|いいえ|**char**|  
 |**SQLCHARACTER**|いいえ|**char**|  
 |**SQLBIGVARCHAR**|いいえ|**varchar**|  
 |**SQLVARCHAR**|いいえ|**varchar**|  
-|**SQLTEXT**|接続前/接続後|**text**|  
-|**SQLBIGBINARY**|いいえ|**[バイナリ]**|  
-|**SQLBINARY**|いいえ|**Binary**|  
+|**SQLTEXT**|使用できるのは|**本文**|  
+|**SQLBIGBINARY**|いいえ|**binary**|  
+|**SQLBINARY**|いいえ|**バイナリ**|  
 |**SQLBIGVARBINARY**|いいえ|**可変長**|  
 |**SQLVARBINARY**|いいえ|**可変長**|  
-|**SQLIMAGE**|接続前/接続後|**[イメージ]**|  
-|**SQLINTN**|接続前/接続後|**int-null**|  
-|**SQLDATETIMN**|接続前/接続後|**datetime-null**|  
-|**SQLMONEYN**|接続前/接続後|**money-null**|  
-|**SQLFLTN**|接続前/接続後|**float-null**|  
-|**SQLAOPSUM**|接続前/接続後|**Sum**|  
-|**SQLAOPAVG**|接続前/接続後|**Avg**|  
-|**SQLAOPCNT**|接続前/接続後|**Count**|  
-|**SQLAOPMIN**|接続前/接続後|**Min**|  
-|**SQLAOPMAX**|接続前/接続後|**Max**|  
-|**SQLDATETIM4**|接続前/接続後|**smalldatetime**|  
-|**SQLMONEY4**|接続前/接続後|**Smallmoney**|  
-|**SQLFLT4**|接続前/接続後|**本当の**|  
-|**SQLUNIQUEID**|接続前/接続後|**uniqueidentifier**|  
+|**SQLIMAGE**|使用できるのは|**Image**|  
+|**SQLINTN**|使用できるのは|**int-null**|  
+|**SQLDATETIMN**|使用できるのは|**datetime-null**|  
+|**SQLMONEYN**|使用できるのは|**money-null**|  
+|**SQLFLTN**|使用できるのは|**float-null**|  
+|**SQLAOPSUM**|使用できるのは|**求め**|  
+|**SQLAOPAVG**|使用できるのは|**Avg**|  
+|**SQLAOPCNT**|使用できるのは|**数**|  
+|**SQLAOPMIN**|使用できるのは|**」**|  
+|**SQLAOPMAX**|使用できるのは|**制限**|  
+|**SQLDATETIM4**|使用できるのは|**smalldatetime**|  
+|**SQLMONEY4**|使用できるのは|**Smallmoney**|  
+|**SQLFLT4**|使用できるのは|**Real**|  
+|**SQLUNIQUEID**|使用できるのは|**UNIQUEIDENTIFIER**|  
 |**SQLNCHAR**|いいえ|**Nchar**|  
 |**SQLNVARCHAR**|いいえ|**Nvarchar**|  
-|**SQLNTEXT**|接続前/接続後|**Ntext**|  
-|**SQLVARIANT**|接続前/接続後|**sql_variant**|  
-|**SQLINT8**|接続前/接続後|**Bigint**|  
+|**SQLNTEXT**|使用できるのは|**Ntext**|  
+|**SQLVARIANT**|使用できるのは|**sql_variant**|  
+|**SQLINT8**|使用できるのは|**Bigint**|  
 |**SQLCHARACTER**|はい|**varchar(max)**|  
 |**SQLBIGCHAR**|はい|**varchar(max)**|  
 |**SQLBIGVARCHAR**|はい|**varchar(max)**|  
@@ -105,12 +105,12 @@ RETCODE bcp_gettypename (
 |**SQLNCHAR**|はい|**nvarchar(max)**|  
 |**SQLNVARCHAR**|はい|**nvarchar(max)**|  
 |**SQLXML**|はい|**Xml**|  
-|**SQLUDT**|接続前/接続後|**Udt**|  
+|**SQLUDT**|使用できるのは|**Udt**|  
   
 ## <a name="bcp_gettypename-support-for-enhanced-date-and-time-features"></a>bcp_gettypename による機能強化された日付と時刻のサポート  
- 日付型または時刻型のトークンパラメーター値については、「 [OLE DB および&#40;ODBC&#41;の拡張された日付と時刻の型に対する一括コピーの変更](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)」を参照してください。 返される値は、対応する行の "ファイル ストレージ型" 列に示されています。  
+ 日付/時刻型のトークンパラメーター値については、「 [&#40;OLE DB および ODBC&#41;の拡張された日付と時刻の型に対する一括コピーの変更](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)」を参照してください。 返される値は、対応する行の "ファイル ストレージ型" 列に示されています。  
   
- 詳細については、「[日付と&#40;時刻&#41;の機能強化 ODBC](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)」を参照してください。  
+ 詳細については、「[日付と時刻の機能強化 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [一括コピー関数](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
