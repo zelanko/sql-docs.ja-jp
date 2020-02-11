@@ -1,5 +1,5 @@
 ---
-title: TCP - IP プロパティ ([プロトコル] タブ) |Microsoft Docs
+title: '[TCP-IP のプロパティ] ([プロトコル] タブ) |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,18 +13,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b545fbe28e28739b5f66a7beca1ab7c0450ae08a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150458"
 ---
-# <a name="tcp---ip-properties-protocols-tab"></a>TCP - IP プロパティ ([プロトコル] タブ)
+# <a name="tcp---ip-properties-protocols-tab"></a>[TCP-IP のプロパティ] ([プロトコル] タブ)
   **[TCP/IP のプロパティ]** ダイアログ ボックスは、TCP/IP プロトコルのオプションを構成するために使用します。 左ペインで **[TCP/IP]** をクリックすると、詳細ペインに個々の IP アドレス構成が表示されます。  
   
  変更を有効にするには、Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を再起動する必要があります。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **有効**  
  可能な値は、 **[はい]** と **[いいえ]** です。  
   
@@ -35,7 +35,8 @@ ms.locfileid: "63150458"
  コンピューター上のネットワーク カードに割り当てられているすべての IP アドレスで SQL Server がリッスンするかどうかを指定します。 **[いいえ]** に設定した場合は、各 IP アドレスのプロパティ ダイアログ ボックスを使用して、IP アドレスごとに個別の構成を行ってください。 **[はい]** に設定した場合は、 **[IPAll]** プロパティ ボックスの設定がすべての IP アドレスに適用されます。 既定値は **[はい]** です。  
   
  **[遅延なし]**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、このプロパティに対する変更は実装されません。  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、このプロパティに対する変更は実装されません。  
   
 ## <a name="see-also"></a>参照  
  [ネットワーク プロトコルの選択](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)   

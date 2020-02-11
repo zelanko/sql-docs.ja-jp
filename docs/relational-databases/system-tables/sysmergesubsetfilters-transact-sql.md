@@ -1,5 +1,5 @@
 ---
-title: sysmergesubsetfilters (TRANSACT-SQL) |Microsoft Docs
+title: sysmergesubsetfilters (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -18,33 +18,33 @@ ms.assetid: f91d1c6c-3132-47f6-926c-88f56848cafe
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 84f9e2ce3026792b768d353e05b9e2299cf7ca5f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68029757"
 ---
-# <a name="sysmergesubsetfilters-transact-sql"></a>sysmergesubsetfilters (TRANSACT-SQL)
+# <a name="sysmergesubsetfilters-transact-sql"></a>sysmergesubsetfilters (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  パーティション分割されたアーティクルの結合フィルター情報を格納します。 このテーブルは、パブリケーション データベースとサブスクリプション データベースに保存されます。  
+  パーティション分割されたアーティクルの結合フィルター情報を格納します。 このテーブルは、パブリケーションデータベースとサブスクリプションデータベースに格納されます。  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
 |**filtername**|**sysname**|アーティクルを作成するときに使用したフィルターの名前。|  
 |**join_filterid**|**int**|結合フィルターを表すオブジェクトの ID。|  
-|**pubid**|**uniqueidentifier**|パブリケーションの ID。|  
-|**artid**|**uniqueidentifier**|アーティクルの ID。|  
+|**pubid**|**UNIQUEIDENTIFIER**|パブリケーションの ID です。|  
+|**artid**|**UNIQUEIDENTIFIER**|アーティクルの ID です。|  
 |**art_nickname**|**int**|アーティクルのニックネーム。|  
 |**join_articlename**|**sysname**|行が属しているかどうかを判断するために結合するテーブルの名前。|  
-|**join_nickname**|**int**|行が属しているかどうかを判断する結合するテーブルのニックネームです。|  
-|**join_unique_key**|**int**|一意なキーに基づいて結合を示します**join_tablename**:<br /><br /> 0 = 一意キーではない<br /><br /> 1 = 一意キー|  
-|**expand_proc**|**sysname**|行を識別するために、マージ エージェントで使用するストアド プロシージャの名前を送信またはサブスクライバーから削除する必要があります。|  
-|**join_filterclause**|**nvarchar(1000)**|フィルター句を結合に使用します。|  
-|**filter_type**|**tinyint**|フィルターの種類。次のいずれかになります。<br /><br /> 1 = 結合フィルター。<br /><br /> 2 = 論理レコード リンクします。<br /><br /> 3 = 両方の結合フィルターと論理レコード リンクします。|  
+|**join_nickname**|**int**|行が属しているかどうかを判断するために結合するテーブルのニックネーム。|  
+|**join_unique_key**|**int**|**Join_tablename**の一意のキーの結合を示します。<br /><br /> 0 = 一意キーではない<br /><br /> 1 = 一意キー|  
+|**expand_proc**|**sysname**|サブスクライバーから送信または削除する必要がある行を識別するためにマージエージェントによって使用されるストアドプロシージャの名前。|  
+|**join_filterclause**|**nvarchar (1000)**|結合に使用されるフィルター句。|  
+|**filter_type**|**tinyint**|フィルターの種類。次のいずれかになります。<br /><br /> 1 = 結合フィルター。<br /><br /> 2 = 論理レコードのリンク。<br /><br /> 3 = 結合フィルターと論理レコードリンクの両方。|  
   
-## <a name="see-also"></a>関連項目  
- [レプリケーション テーブル &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
+## <a name="see-also"></a>参照  
+ [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [レプリケーションビュー &#40;Transact-sql&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sys.external_file_formats (TRANSACT-SQL) |Microsoft Docs
+title: external_file_formats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,39 +14,39 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: eae119fe16b916f47f1acdcd2ebe15efd96e51e9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68048390"
 ---
-# <a name="sysexternalfileformats-transact-sql"></a>sys.external_file_formats (TRANSACT-SQL)
+# <a name="sysexternal_file_formats-transact-sql"></a>external_file_formats (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  1 行の現在のデータベースでは、各外部ファイル形式のデータを含む[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]、および[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]します。  
+  、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)]、および[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]の現在のデータベース内の外部ファイル形式ごとに1行のデータを格納します。  
   
- サーバーの場合は、各外部ファイル形式の行を格納[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]します。  
+ の[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]サーバー上の外部ファイル形式ごとに1行の値を格納します。  
   
-|列名|データ型|説明|範囲|  
+|列名|データ型|[説明]|Range|  
 |-----------------|---------------|-----------------|-----------|  
 |file_format_id|**int**|外部ファイル形式のオブジェクト ID。||  
-|NAME|**sysname**|ファイル形式の名前。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]、これは、データベースに一意です。 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]、これは、サーバーに一意です。||  
+|name|**sysname**|ファイル形式の名前。 と[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]では、これはデータベースに対して一意です。 で[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]は、これはサーバーに対して一意です。||  
 |format_type|**tinyint**|ファイル形式の種類。|DELIMITEDTEXT、RCFILE、ORC、PARQUET|  
-|field_terminator|**nvarchar(10)**|Format_type = DELIMITEDTEXT、フィールド ターミネータです。||  
-|string_delimiter|**nvarchar(10)**|Format_type = DELIMITEDTEXT、これは、文字列の区切り記号。||  
-|date_format|**nvarchar (50)**|Format_type = DELIMITEDTEXT、これは、ユーザー定義の日付と時刻の形式。||  
-|use_type_default|**bit**|Format_type = 区切りのテキスト、PolyBase にテキスト ファイルを HDFS からデータをインポートするときに、欠損値を処理する方法を指定します[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]します。|0 - は、文字列の 'NULL' として、不足値を格納します。<br /><br /> 1 - 列の既定値として、不足値を格納します。|  
-|serde_method|**nvarchar (255)**|Format_type = RCFILE、これは、シリアル化/逆シリアル化メソッドです。||  
-|row_terminator|**nvarchar(10)**|Format_type = DELIMITEDTEXT、これは、外部の Hadoop ファイル内の各行を終了する文字列。|常に ' \n' です。|  
-|encoding|**nvarchar(10)**|Format_type = DELIMITEDTEXT、これは、外部の Hadoop ファイルのエンコード方法です。|常に ' UTF8' とします。|  
-|data_compression|**nvarchar (255)**|外部データのデータ圧縮方法。|Format_type = DELIMITEDTEXT に。<br /><br /> -'org.apache.hadoop.io.compress.defaultcodec'<br />-'org.apache.hadoop.io.compress.gzipcodec'<br /><br /> Format_type RCFILE を = します。<br /><br /> -'org.apache.hadoop.io.compress.defaultcodec'<br /><br /> Format_type = ORC:<br /><br /> -'org.apache.hadoop.io.compress.defaultcodec'<br />-'org.apache.hadoop.io.compress.snappycodec'<br /><br /> Format_type = PARQUET:<br /><br /> -'org.apache.hadoop.io.compress.gzipcodec'<br />-'org.apache.hadoop.io.compress.snappycodec'|  
+|field_terminator|**nvarchar (10)**|Format_type = DELIMITEDTEXT の場合、これはフィールドターミネータです。||  
+|string_delimiter|**nvarchar (10)**|Format_type = DELIMITEDTEXT の場合、これは文字列の区切り記号です。||  
+|date_format|**nvarchar(50)**|Format_type = DELIMITEDTEXT の場合は、ユーザー定義の日付と時刻の形式です。||  
+|use_type_default|**bit**|Format_type = 区切られたテキストの場合、PolyBase が HDFS テキストファイルからに[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]データをインポートするときに欠損値を処理する方法を指定します。|0-文字列 ' NULL ' として欠損値を格納します。<br /><br /> 1-欠損値を列の既定値として格納します。|  
+|serde_method|**nvarchar(255)**|Format_type = RCFILE の場合、これはシリアル化/逆シリアル化の方法です。||  
+|row_terminator|**nvarchar (10)**|Format_type = DELIMITEDTEXT の場合、これは外部の Hadoop ファイル内の各行を終了する文字列です。|常に ' \n ' です。|  
+|encoding|**nvarchar (10)**|Format_type = DELIMITEDTEXT の場合、これは外部の Hadoop ファイルのエンコード方法です。|常に ' UTF8 ' です。|  
+|data_compression|**nvarchar(255)**|外部データのデータ圧縮方法。|Format_type = DELIMITEDTEXT の場合:<br /><br /> -' org. hadoop...........................<br />-' Org.apache.hadoop.io.compress.gzipcodec ' のようになります。<br /><br /> Format_type = RCFILE の場合:<br /><br /> -' org. hadoop...........................<br /><br /> Format_type = ORC の場合:<br /><br /> -' org. hadoop...........................<br />-' Org.apache.io.compress.snappycodec ' のようになります。<br /><br /> Format_type = PARQUET の場合:<br /><br /> -' Org.apache.hadoop.io.compress.gzipcodec ' のようになります。<br />-' Org.apache.io.compress.snappycodec ' のようになります。|  
   
 ## <a name="permissions"></a>アクセス許可  
- カタログ ビューでのメタデータの表示が、ユーザーが所有しているかそのユーザーが権限を許可されている、セキュリティ保護可能なメタデータに制限されます。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+ カタログ ビューでのメタデータの表示が、ユーザーが所有しているかそのユーザーが権限を許可されている、セキュリティ保護可能なメタデータに制限されます。 詳細については、「[メタデータ表示の構成](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- [sys.external_data_sources &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)   
- [sys.external_tables &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-tables-transact-sql.md)   
- [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)  
+## <a name="see-also"></a>参照  
+ [external_data_sources &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)   
+ [external_tables &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-external-tables-transact-sql.md)   
+ [Transact-sql&#41;&#40;外部ファイル形式を作成する](../../t-sql/statements/create-external-file-format-transact-sql.md)  
   
   
