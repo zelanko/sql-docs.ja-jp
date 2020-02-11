@@ -15,16 +15,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1f1100f1c19a658fa6fe4b90816dca948e640a76
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63262304"
 ---
 # <a name="sql-server-replication-publisher-settings-dialog-box"></a>SQL Server レプリケーションの [パブリッシャーの設定] ダイアログ ボックス
   **[パブリッシャーの設定]** ダイアログ ボックスを使用すると、レプリケーション モニターの左ペインに追加されているパブリッシャーの設定を変更できます。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **[パブリッシャー接続]**  
  クリックすると、 **[サーバーへの接続]** ダイアログ ボックスが表示されます。このダイアログ ボックスでは、レプリケーション モニターがパブリッシャーに接続するときに使用する接続プロパティおよび資格情報を表示および変更できます。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "63262304"
  **[新しいグループ]**  
  クリックすると、新しいパブリッシャー グループを作成できます。 パブリッシャー グループを利用すると、レプリケーション モニター内でパブリッシャーを容易に整理できます。 グループは、データのレプリケーションや、レプリケーション トポロジ内のサーバー間のリレーションシップには影響を与えません。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [レプリケーション モニターの開始](monitor/start-the-replication-monitor.md)   
  [レプリケーションの監視](monitoring-replication.md)  
   

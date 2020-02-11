@@ -1,5 +1,5 @@
 ---
-title: 変更と処理、マーケット バスケット モデル (中級者向けデータ マイニング チュートリアル) |Microsoft Docs
+title: マーケットバスケットモデルの変更と処理 (中級者向けデータマイニングチュートリアル) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,30 +11,30 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 4987e3497b7d52ff11f8f52bc403105340f7f508
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63301373"
 ---
 # <a name="modifying-and-processing-the-market-basket-model-intermediate-data-mining-tutorial"></a>マーケット バスケット モデルの変更と処理 (中級者向けデータ マイニング チュートリアル)
-  作成したアソシエーション マイニング モデルを処理する前に、2 つのパラメーターの既定値を変更する必要があります。*サポート*と*確率*します。  
+  作成した association マイニングモデルを処理する前に、*サポート*と*確率*の2つのパラメーターの既定値を変更する必要があります。  
   
--   *サポート*が有効と見なさ前に、のルールが存在するケースの割合を定義します。 ここでは、1% 以上のケースでルールが検出される必要があるように指定します。  
+-   *サポート*は、ルールが有効と見なされる前に存在している必要があるケースの割合を定義します。 ここでは、1% 以上のケースでルールが検出される必要があるように指定します。  
   
--   *確率*アソシエーションがどの程度必要がありますを定義する前に、有効と見なされます。 ここでは、確率が 10% 以上のアソシエーションを対象とします。  
+-   *確率*は、アソシエーションが有効と見なされるまでの確率を定義します。 ここでは、確率が 10% 以上のアソシエーションを対象とします。  
   
- サポートと確率の増減による影響の詳細については、次を参照してください。 [Microsoft アソシエーション アルゴリズム テクニカル リファレンス](../../2014/analysis-services/data-mining/microsoft-association-algorithm-technical-reference.md)します。  
+ サポートと確率の増減による影響の詳細については、「 [Microsoft アソシエーションアルゴリズムテクニカルリファレンス](../../2014/analysis-services/data-mining/microsoft-association-algorithm-technical-reference.md)」を参照してください。  
   
- 構造とパラメーターを定義した後、**アソシエーション**マイニング モデル、モデルが処理されます。  
+ **アソシエーション**マイニングモデルの構造とパラメーターを定義した後は、モデルを処理します。  
   
 ### <a name="to-adjust-the-parameters-of-the-association-model"></a>Association モデルのパラメーターを調整するには  
   
-1.  開く、**マイニング モデル**データ マイニング デザイナーのタブ。  
+1.  データマイニングデザイナーの [**マイニングモデル**] タブを開きます。  
   
-2.  右クリックし、**アソシエーション**クリックし、デザイナーのグリッドの列で**アルゴリズムのパラメーターを開くアルゴリズム パラメーターの設定** ダイアログ ボックス。  
+2.  デザイナーのグリッドで [ **Association** ] 列を右クリックし、[**アルゴリズムパラメーターの設定**] をクリックして [アルゴリズムパラメーター] ダイアログボックスを開きます。  
   
-3.  **値**の列、**アルゴリズム パラメーター**  ダイアログ ボックスで、次のパラメーターを設定します。  
+3.  [**アルゴリズムパラメーター** ] ダイアログボックスの [**値**] 列で、次のパラメーターを設定します。  
   
      MINIMUM_PROBABILITY = 0.1  
   
@@ -44,24 +44,24 @@ ms.locfileid: "63301373"
   
 ### <a name="to-process-the-mining-model"></a>マイニング モデルを処理するには  
   
-1.  **マイニング モデルの**のメニュー[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]を選択します**マイニング構造の処理とすべてのモデル。**  
+1.  の [**マイニングモデル**] メニュー [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で、[**マイニング構造とすべてのモデルの処理**] を選択します。  
   
-2.  プロジェクトをビルドおよび配置するかどうかを確認する警告をクリックし、**はい**します。  
+2.  プロジェクトをビルドして配置するかどうかを確認する警告が表示されたら、[**はい]** をクリックします。  
   
-     **マイニング構造の処理 - アソシエーション** ダイアログ ボックスが表示されます。  
+     [**マイニング構造の処理-アソシエーション**] ダイアログボックスが表示されます。  
   
 3.  **[実行]** をクリックします。  
   
-     **処理の進行状況**モデルの処理に関する情報を表示するダイアログ ボックスが開きます。 新しい構造とモデルの処理には、時間がかかることがあります。  
+     [**処理の進行状況**] ダイアログボックスが開き、モデルの処理に関する情報が表示されます。 新しい構造とモデルの処理には、時間がかかることがあります。  
   
-4.  処理が完了したら、クリックして**閉じる**を終了する、**処理の進行状況** ダイアログ ボックス。  
+4.  処理が完了したら、[**閉じる**] をクリックして [**処理の進行状況**] ダイアログボックスを閉じます。  
   
-5.  クリックして**閉じる**を終了するには、もう一度、**マイニング構造の処理 - アソシエーション** ダイアログ ボックス。  
+5.  もう一度 [**閉じる**] をクリックして [**マイニング構造の処理-アソシエーション**] ダイアログボックスを閉じます。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
- [マーケット バスケット モデルの検証&#40;中級者向けデータ マイニング チュートリアル&#41;](../../2014/tutorials/exploring-the-market-basket-models-intermediate-data-mining-tutorial.md)  
+ [&#40;中級者向けデータマイニングチュートリアルに関するマーケットバスケットモデルの調査&#41;](../../2014/tutorials/exploring-the-market-basket-models-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>参照  
- [処理の要件および注意事項 &#40;データ マイニング&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [データマイニング&#41;&#40;処理の要件と考慮事項](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

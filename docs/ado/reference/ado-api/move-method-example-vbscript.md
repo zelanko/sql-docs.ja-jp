@@ -15,20 +15,20 @@ ms.assetid: 29ec4b95-8986-4970-943f-3da3ecb207a2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8d2075987e8c3faae9003b0edc4010fe7e4cedb5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918164"
 ---
 # <a name="move-method-example-vbscript"></a>Move メソッドの例 (VBScript)
-この例では、[移動](../../../ado/reference/ado-api/move-method-ado.md)ユーザー入力に基づいて、レコードのポインターを配置するメソッド。  
+この例では、 [Move](../../../ado/reference/ado-api/move-method-ado.md)メソッドを使用して、ユーザー入力に基づいてレコードポインターを配置します。  
   
- 次の例を Active Server Page (ASP) で使用します。 この完全に機能の例を表示するには、C:\Program files \microsoft Platform SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb にある (SDK がインストールされた) AdvWorks.mdb をソースまたは反映するようにコード例ではパスを編集するデータかが必要このファイルの実際の場所。 これは、Microsoft Access データベース ファイルです。  
+ Active Server ページ (ASP) で次の例を使用します。 この完全に機能する例を表示するには、C:\Program た advworks-srv01 Platform SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb にあるデータソース (SDK と共にインストールされます) があることを確認するか、コード例のパスを編集して反映させる必要があります。このファイルの実際の場所です。 これは、Microsoft Access データベースファイルです。  
   
- 使用して、**検索**Adovbs.inc ファイルを見つけて、使用するディレクトリに配置します。 切り取り、メモ帳または別のテキスト エディターに次のコードを貼り付けてととして保存**MoveVBS.asp**します。 任意のブラウザーで結果を表示できます。  
+ [**検索**] を使用して Adovbs ファイルを検索し、使用する予定のディレクトリに配置します。 次のコードを切り取ってメモ帳または別のテキストエディターに貼り付け、 **Movevbs**として保存します。 結果は任意のブラウザーで表示できます。  
   
- 文字またはエラー処理の動作を確認する値を入力してください。  
+ エラー処理作業を確認するには、文字または整数を入力してください。  
   
 ```  
 <!-- BeginMoveVBS -->  
@@ -182,6 +182,6 @@ End Sub
 <!-- EndMoveVBS -->  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Move メソッド (ADO)](../../../ado/reference/ado-api/move-method-ado.md)   
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

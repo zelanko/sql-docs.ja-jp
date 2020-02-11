@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 74bb1b6e8178f104c3987cedba1986c599e6d42b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105318"
 ---
 # <a name="avg-function-report-builder-and-ssrs"></a>Avg 関数 (レポート ビルダーおよび SSRS)
@@ -38,12 +38,13 @@ Avg(expression, scope, recursive)
  (`String`) 省略可。 集計関数の適用先となるレポート アイテムを含むデータセット、グループ、またはデータ領域の名前です。 *scope* を指定しない場合、現在のスコープが使用されます。  
   
  *再帰*  
- (**列挙型**) 省略可。 `Simple` (既定値) または `RdlRecursive` です。 集計を再帰的に実行するかどうかを指定します。  
+ (**列挙型**) 省略可。 
+  `Simple` (既定値) または `RdlRecursive` です。 集計を再帰的に実行するかどうかを指定します。  
   
 ## <a name="return-type"></a>戻り値の型  
  10 進数型の式には `Decimal` 値が、その他すべての式には `Double` 値が返されます。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  式で指定されたデータセットは、同じデータ型である必要があります。 複数の数値データ型のデータを同じデータ型に変換するには、`CInt`、`CDbl`、`CDec` などの変換関数を使用します。 詳細については、「 [データ型変換関数](https://go.microsoft.com/fwlink/?LinkId=96142)」を参照してください。  
   
  *scope* の値は文字列定数である必要があり、式にすることはできません。 外部の集計または他の集計を指定しない集計では、 *scope* は現在のスコープまたはコンテナー スコープを参照する必要があります。 集計の集計では、入れ子になった集計に、子のスコープを指定できます。  
@@ -54,7 +55,7 @@ Avg(expression, scope, recursive)
   
 -   入れ子集計の*Scope* には、データセット名は使用できません。  
   
--   *式*する必要がありますが含まれていない`First`、 `Last`、 `Previous`、または`RunningValue`関数。  
+-   *式*には、 `First`、 `Last`、 `Previous`、また`RunningValue`は関数を含めることはできません。  
   
 -   *Expression* には、 *recursive*を指定する入れ子集計を含めることができません。  
   

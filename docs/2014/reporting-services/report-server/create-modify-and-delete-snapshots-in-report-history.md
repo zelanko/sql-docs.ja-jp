@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ecddbed328d1625f525069fe3d502c3348eb065a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103911"
 ---
 # <a name="create-modify-and-delete-snapshots-in-report-history"></a>レポート履歴のスナップショットの作成、変更および削除
@@ -62,8 +62,8 @@ ms.locfileid: "66103911"
 ## <a name="see-also"></a>参照  
  [レポート履歴の作成 (Reporting Services の SharePoint 統合モード)](create-report-history-reporting-services-in-sharepoint-integrated-mode.md)   
  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](../report-manager-ssrs-native-mode.md)   
- [レポート サーバー コンテンツの管理 (SSRS ネイティブ モード)](report-server-content-management-ssrs-native-mode.md)   
- [レポート履歴へのスナップショットの追加 (レポート マネージャー)](add-a-snapshot-to-report-history-report-manager.md)   
- [レポート履歴を制限する (レポート マネージャー)](../reports/limit-report-history-report-manager.md)  
+ [レポート サーバー コンテンツの管理 &#40;SSRS ネイティブ モード&#41;](report-server-content-management-ssrs-native-mode.md)   
+ [レポート履歴へのスナップショットの追加 &#40;レポート マネージャー&#41;](add-a-snapshot-to-report-history-report-manager.md)   
+ [レポート履歴を制限する &#40;レポート マネージャー&#41;](../reports/limit-report-history-report-manager.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: デスクトップ データベース ドライバーの互換性 |Microsoft Docs
+title: デスクトップデータベースドライバーの互換性 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,19 +18,19 @@ ms.assetid: dd695638-1a0b-4e27-8a6a-9510ebb5a5ee
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 31263162526b6bd2e0a116a473f09f9e2caeba94
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68077283"
 ---
 # <a name="desktop-database-driver-compatibility"></a>デスクトップ データベース ドライバーの互換性
-Unicode は、ソフトウェア文字エン コードのメソッドのすべての文字を 2 バイトの固定幅を持つものとして扱われます。 このメソッドは、1 バイト文字を表すためには、256 文字に限定されている Windows の ANSI 文字のエンコード、代替手段として使用されます。 文字は表されない多数の言語に対応 Unicode が 65,000 を超える文字を表すことのできるため、ANSI エンコーディングにします。  
+Unicode は、すべての文字を2バイトの固定幅として扱う、ソフトウェア文字エンコーディングの方法です。 このメソッドは、Windows ANSI 文字エンコーディングの代わりに使用されます。これは、1バイトの文字を表すため、256文字に制限されます。 Unicode は65000文字を超えることができるため、ANSI エンコーディングでは文字が表現されない多くの言語に対応します。  
   
- ODBC 3.5 (またはそれ以降) のドライバー マネージャーは、Unicode に対応します。 これは 2 つの主要な領域に影響します。 関数呼び出しと、文字列データ型。 ドライバー マネージャー マップ関数の文字列引数と文字列データはアプリケーションおよびドライバーによって必要に応じては Unicode 対応または ANSI 対応のいずれかをどちらもできます。  
+ ODBC 3.5 (またはそれ以降) ドライバーマネージャーが Unicode 対応になっています。 これは、関数呼び出しと文字列データ型の2つの主な領域に影響します。 ドライバーマネージャーは、関数の文字列引数と文字列データを、アプリケーションとドライバーの必要に応じてマップします。どちらも、Unicode 対応または ANSI 対応のどちらでもかまいません。  
   
- ODBC 3.5 (またはそれ以降) のドライバー マネージャーでは、Unicode アプリケーションと、ANSI アプリケーションの両方で Unicode ドライバーの使用をサポートします。 また、ANSI アプリケーションに、ANSI ドライバーの使用もサポートしています。 ドライバー マネージャーは、Unicode アプリケーションの場合、ANSI ドライバー操作の制限付きの Unicode から ANSI マッピングを提供します。 これにより、Jet の 3.5 データベースとすべての既存 ISAM ファイルの種類のサポートを利用できます。  
+ ODBC 3.5 (またはそれ以降) のドライバーマネージャーでは、unicode アプリケーションと ANSI アプリケーションの両方を使用した Unicode ドライバーの使用がサポートされています。 Ansi アプリケーションでの ANSI ドライバーの使用もサポートしています。 ドライバーマネージャーでは、ANSI ドライバーを使用する Unicode アプリケーションに対して、Unicode から ANSI へのマッピングが制限されています。 これにより、Jet 3.5 データベースにアクセスし、すべての既存の ISAM ファイルの種類をサポートできます。  
   
- ANSI アプリケーションが ODBC デスクトップ データベース ドライバー 4.0 を使用し、Microsoft Access 4.0 にアクセスするまたは後で、ドライバーとして公開するデータ型 SQL_CHAR、sql_varchar、SQL_LONGVARCHAR Jet 4.0 には、ワイド バージョンがサポートされています。 以前のバージョンの Jet では、SQL_WCHAR、SQL_WVARCHAR、SQL_WLONGVARCHAR は使用できません。 この制限は、Jet 4.0 データベース エンジンの以前の書式設定が使用されている場合にも適用されます。  
+ ANSI アプリケーションで ODBC デスクトップデータベースドライバー4.0 を使用していて、Microsoft Access 4.0 以降にアクセスする場合、Jet 4.0 ではワイドバージョンがサポートされていますが、ドライバーは SQL_CHAR、SQL_VARCHAR、または SQL_LONGVARCHAR としてデータ型を公開します。 以前のバージョンの Jet では、SQL_WCHAR、SQL_WVARCHAR、および SQL_WLONGVARCHAR はサポートされていません。 この制限は、Jet 4.0 データベースエンジンで古い形式が使用されている場合にも適用されます。  
   
- ODBC での Unicode の問題に関する詳細については、次を参照してください。 [Unicode](../../odbc/reference/develop-app/unicode.md)プログラミングの考慮事項。
+ ODBC に関する Unicode の問題の詳細については、「プログラミングにおける[unicode](../../odbc/reference/develop-app/unicode.md)の考慮事項」を参照してください。

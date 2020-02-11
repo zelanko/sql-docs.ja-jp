@@ -1,5 +1,5 @@
 ---
-title: フィールドのコレクション (ADO) |Microsoft Docs
+title: Fields コレクション (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,32 +18,32 @@ ms.assetid: 7c371474-b88f-4730-afa5-44163a0488d5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9c9216ee655e371633837c5653ebac56fac1a782
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918711"
 ---
 # <a name="fields-collection-ado"></a>Fields コレクション (ADO)
-すべてが含まれています、[フィールド](../../../ado/reference/ado-api/field-object.md)のオブジェクトを[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)または[レコード](../../../ado/reference/ado-api/record-object-ado.md)オブジェクト。  
+[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)または[レコード](../../../ado/reference/ado-api/record-object-ado.md)オブジェクトのすべての[フィールド](../../../ado/reference/ado-api/field-object.md)オブジェクトを格納します。  
   
-## <a name="remarks"></a>コメント  
- A **Recordset**オブジェクトには、**フィールド**から成るコレクション**フィールド**オブジェクト。 各**フィールド**オブジェクト内の列に対応して、 **Recordset**します。 設定することができます、**フィールド**コレクションを開始する前に、**レコード セット**呼び出すことによって、[更新](../../../ado/reference/ado-api/refresh-method-ado.md)コレクション メソッド。  
+## <a name="remarks"></a>解説  
+ **レコードセット**オブジェクトには、 **Field**オブジェクトで構成された**フィールド**コレクションがあります。 各**Field**オブジェクトは、**レコードセット**内の列に対応します。 コレクションの[Refresh](../../../ado/reference/ado-api/refresh-method-ado.md)メソッドを呼び出すことによって、**レコードセット**を開く前に**フィールド**コレクションを設定できます。  
   
 > [!NOTE]
->  参照してください、**フィールド**を使用する方法の詳細については、オブジェクト**フィールド**オブジェクト。  
+>  **Field**オブジェクトの使用方法の詳細については、「 **field**オブジェクト」を参照してください。  
   
- **フィールド**コレクションが、[追加](../../../ado/reference/ado-api/append-method-ado.md)メソッドでは、仮を作成し、追加、**フィールド**、コレクションにオブジェクトを**を更新**メソッドの追加または削除を終了します。  
+ **Fields**コレクションには、仮メソッドがあります。[このメソッドは](../../../ado/reference/ado-api/append-method-ado.md)、**フィールド**オブジェクトを作成し、コレクションに追加し、 **Update**メソッドを使用して、追加または削除を終了します。  
   
- A**レコード**オブジェクトが 2 つの特別なフィールドでインデックスを作成できる[FieldEnum](../../../ado/reference/ado-api/fieldenum.md)定数。 1 つの定数の既定のストリームを含むフィールドにアクセスする、**レコード**との絶対 URL 文字列を含むフィールドにアクセスする他、**レコード**します。  
+ **レコード**オブジェクトには、2つの特殊なフィールドがあります。これらのフィールドには、定数定数を使用[してインデックス](../../../ado/reference/ado-api/fieldenum.md)を作成できます。 一方の定数は、**レコード**の既定のストリームを格納しているフィールドにアクセスします。もう1つの定数は、**レコード**の絶対 URL 文字列を含むフィールドにアクセスします。  
   
- 特定のプロバイダー (たとえば、 [Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)) メンバー関数の呼び出し、**フィールド**使用可能なフィールドのサブセットをコレクション、 **レコード**または**Recordset**します。 最初に名前で参照またはコードによってインデックスが作成されるまで、他のフィールドは、コレクションに追加されません。  
+ 特定のプロバイダー (たとえば、 [Microsoft OLE DB Provider For Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)) では、**レコード**または**レコードセット**に使用できるフィールドのサブセットを**フィールド**コレクションに設定できます。 その他のフィールドは、名前によって最初に参照されるか、コードによってインデックスが作成されるまで、コレクションに追加されません。  
   
- 存在しないフィールドの名前で参照しようとした場合、新しい**フィールド**オブジェクトに追加されます、**フィールド**使用して、コレクション、[状態](../../../ado/reference/ado-api/status-property-ado-field.md)の**adFieldPendingInsert**します。 呼び出すと[Update](../../../ado/reference/ado-api/update-method.md)ADO は、プロバイダーによって許可されている場合に、データ ソース内の新しいフィールドが作成されます。  
+ 存在しないフィールドを名前で参照しようとすると、 **Adfieldpendinginsert**という[状態](../../../ado/reference/ado-api/status-property-ado-field.md)の**フィールドコレクションに**新しい**フィールド**オブジェクトが追加されます。 [Update](../../../ado/reference/ado-api/update-method.md)を呼び出すと、プロバイダーで許可されている場合、ADO によってデータソースに新しいフィールドが作成されます。  
   
- このセクションには、次のトピックが含まれています。  
+ ここでは、次のトピックについて説明します。  
   
--   [フィールド コレクションのプロパティ、メソッド、およびイベント](../../../ado/reference/ado-api/fields-collection-properties-methods-and-events.md)  
+-   [Fields コレクションのプロパティ、メソッド、およびイベント](../../../ado/reference/ado-api/fields-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Field オブジェクト](../../../ado/reference/ado-api/field-object.md)

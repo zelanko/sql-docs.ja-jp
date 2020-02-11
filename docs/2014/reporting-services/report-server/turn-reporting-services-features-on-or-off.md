@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cf44b6af30d5db32c006c5a7d9b59d1810840d18
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103188"
 ---
 # <a name="turn-reporting-services-features-on-or-off"></a>Reporting Services 機能の有効化と無効化
@@ -25,7 +25,7 @@ ms.locfileid: "66103188"
   
  このトピックの手順では、ネイティブ モードの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 機能を無効にする方法を示します。 機能の構成は、 `RsReportServer.config` ファイルを直接編集する、 **のポリシー ベースの管理の** [Reporting Services のセキュリティ構成] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ファセットを使用するなど、さまざまな方法で行うことができます。 次のリンクを使用して、機能を有効または無効にする方法を説明した手順を探します。  
   
--   [レポート サーバー Web サービス](#RSWebSvc)  
+-   [レポートサーバー Web サービス](#RSWebSvc)  
   
 -   [スケジュールされたイベントおよび処理](#Sched)  
   
@@ -33,13 +33,13 @@ ms.locfileid: "66103188"
   
 -   [レポート ビルダー](#ReportBuilder)  
   
--   [レポート データ ソース用 Windows 統合セキュリティ](#WinIntSec)  
+-   [レポートデータソースの Windows 統合セキュリティ](#WinIntSec)  
   
-##  <a name="RSWebSvc"></a> Report Server Web Service  
+##  <a name="RSWebSvc"></a>レポートサーバー Web サービス  
   
 #### <a name="to-turn-on-or-off-the-report-server-web-service-by-editing-configuration"></a>構成を編集してレポート サーバー Web サービスを有効または無効にするには  
   
-1.  テキスト エディターで `RsReportServer.config` ファイルを開きます。 詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「[Reporting Services の構成ファイル &#40;RSreportserver.config&#41; の変更](modify-a-reporting-services-configuration-file-rsreportserver-config.md)」を参照してください。  
+1.  テキスト エディターで `RsReportServer.config` ファイルを開きます。 詳細については、[ オンライン ブックの「](modify-a-reporting-services-configuration-file-rsreportserver-config.md)Reporting Services の構成ファイル &#40;RSreportserver.config&#41; の変更[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]」を参照してください。  
   
 2.  レポート サーバー Web サービスを有効にするには、`IsWebServiceEnabled` を `true` に設定します。  
   
@@ -57,25 +57,28 @@ ms.locfileid: "66103188"
   
 #### <a name="to-turn-on-or-off-the-report-server-web-service-by-using-sql-server-management-studio"></a>SQL Server Management Studio を使用してレポート サーバー Web サービスを有効または無効にするには  
   
-1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を開き、構成する [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] インスタンスに接続します。  
+1.  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を開き、構成する [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] インスタンスに接続します。  
   
 2.  オブジェクト エクスプローラーで [ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ] ノードを右クリックし、 **[ポリシー]** をポイントして、 **[ファセット]** をクリックします。  
   
-3.  **[ファセット]** ボックスの一覧で、 **[Reporting Services のセキュリティ構成]** を選択します。  
+3.  
+  **[ファセット]** ボックスの一覧で、 **[Reporting Services のセキュリティ構成]** を選択します。  
   
-4.  **[ファセットのプロパティ]** で次の操作を行います。  
+4.  
+  **[ファセットのプロパティ]** で次の操作を行います。  
   
-    -   レポート サーバー Web サービスを有効にするには設定**WebServiceAndHTTPAccessEnabled**に`True`します。  
+    -   レポートサーバー Web サービスを有効にするには、 **Webserviceandhttpaccessenabled**をに`True`設定します。  
   
-    -   レポート サーバー Web サービスを無効にするには、次のように設定します。 **WebServiceAndHTTPAccessEnabled**に`False`します。  
+    -   レポートサーバー Web サービスを無効にするには、 **Webserviceandhttpaccessenabled**をに`False`設定します。  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="Sched"></a> 定期的なイベントおよび配信  
+##  <a name="Sched"></a>Scheduled Events と配信  
   
 #### <a name="to-turn-on-or-off-scheduled-events-and-delivery-by-editing-configuration"></a>構成を編集して定期的なイベントおよび配信を有効または無効にするには  
   
-1.  テキスト エディターで RsReportServer.config ファイルを開きます。 詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「[Reporting Services の構成ファイル &#40;RSreportserver.config&#41; の変更](modify-a-reporting-services-configuration-file-rsreportserver-config.md)」を参照してください。  
+1.  テキスト エディターで RsReportServer.config ファイルを開きます。 詳細については、[ オンライン ブックの「](modify-a-reporting-services-configuration-file-rsreportserver-config.md)Reporting Services の構成ファイル &#40;RSreportserver.config&#41; の変更[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]」を参照してください。  
   
 2.  スケジュールされたレポート処理および配信を有効にするには、`IsSchedulingService`、`IsNotificationService`、および `IsEventService` を `true` に設定します。  
   
@@ -100,28 +103,31 @@ ms.locfileid: "66103188"
   
 #### <a name="to-turn-on-or-off-scheduled-events-and-delivery-by-using-sql-server-management-studio"></a>SQL Server Management Studio を使用して定期的なイベントおよび配信を有効または無効にするには  
   
-1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を開き、構成する [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] インスタンスに接続します。  
+1.  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を開き、構成する [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] インスタンスに接続します。  
   
 2.  オブジェクト エクスプローラーで [ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ] ノードを右クリックし、 **[ポリシー]** をポイントして、 **[ファセット]** をクリックします。  
   
-3.  **[ファセット]** ボックスの一覧で、 **[Reporting Services のセキュリティ構成]** を選択します。  
+3.  
+  **[ファセット]** ボックスの一覧で、 **[Reporting Services のセキュリティ構成]** を選択します。  
   
-4.  **[ファセットのプロパティ]** で次の操作を行います。  
+4.  
+  **[ファセットのプロパティ]** で次の操作を行います。  
   
-    -   スケジュールされたイベントおよび配信を有効にするのには、設定**ScheduleEventsAndReportDeliveryEnabled**に`True`します。  
+    -   スケジュールされたイベントおよび配信を有効**** にする`True`には、ScheduleEventsAndReportDeliveryEnabled をに設定します。  
   
-    -   スケジュールされたイベントおよび配信を無効にするには、次のように設定します。 **ScheduleEventsAndReportDeliveryEnabled**に`False`します。  
+    -   スケジュールされたイベントおよび配信をオフ**** にする`False`には、ScheduleEventsAndReportDeliveryEnabled をに設定します。  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 > [!NOTE]  
 >  バックグラウンド処理によって、サーバー処理に必要なデータベース メンテナンス機能が提供されているため、バックグラウンド処理を完全に無効にすることはできません。  
   
-##  <a name="ReportManager"></a> レポート マネージャー  
+##  <a name="ReportManager"></a>レポート マネージャー  
   
 #### <a name="to-turn-on-or-off-report-manager-by-editing-configuration"></a>構成を編集してレポート マネージャーを有効または無効にするには  
   
-1.  テキスト エディターで RsReportServer.config ファイルを開きます。 手順については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「[Reporting Services の構成ファイル &#40;RSreportserver.config&#41; の変更](modify-a-reporting-services-configuration-file-rsreportserver-config.md)」をご覧ください。  
+1.  テキスト エディターで RsReportServer.config ファイルを開きます。 手順については、[ オンライン ブックの「](modify-a-reporting-services-configuration-file-rsreportserver-config.md)Reporting Services の構成ファイル &#40;RSreportserver.config&#41; の変更[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]」をご覧ください。  
   
 2.  レポート マネージャーを有効にするには、`IsReportManagerEnabled` を `true` に設定します。  
   
@@ -139,29 +145,34 @@ ms.locfileid: "66103188"
   
 #### <a name="to-turn-on-or-off-report-manager-by-using-sql-server-management-studio"></a>SQL Server Management Studio を使用してレポート マネージャーを有効または無効にするには  
   
-1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を開き、構成する [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] インスタンスに接続します。  
+1.  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を開き、構成する [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] インスタンスに接続します。  
   
-2.  **オブジェクト エクスプローラー**で [ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ] ノードを右クリックし、 **[ポリシー]** をポイントして、 **[ファセット]** をクリックします。  
+2.  **オブジェクトエクスプローラー**で、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]ノードを右クリックして [**ポリシー**] をポイントし、[**ファセット**] をクリックします。  
   
-3.  **[ファセット]** ボックスの一覧で、 **[Reporting Services のセキュリティ構成]** を選択します。  
+3.  
+  **[ファセット]** ボックスの一覧で、 **[Reporting Services のセキュリティ構成]** を選択します。  
   
-4.  **[ファセットのプロパティ]** で次の操作を行います。  
+4.  
+  **[ファセットのプロパティ]** で次の操作を行います。  
   
-    -   レポート マネージャーを有効にするには設定**ReportManagerEnabled**に`True`します。  
+    -   レポートマネージャーをオンにするには、 **Reportmanagerenabled**をに`True`設定します。  
   
-    -   レポート マネージャーをオフにして、次のように設定します。 **ReportManagerEnabled**に`False`します。  
+    -   レポートマネージャーを無効にするには、 **Reportmanagerenabled**をに`False`設定します。  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="ReportBuilder"></a> レポート ビルダー  
+##  <a name="ReportBuilder"></a>レポート ビルダー  
   
 #### <a name="to-turn-on-or-off-report-builder-by-using-sql-server-management-studio"></a>SQL Server Management Studio を使用してレポート ビルダーを有効または無効にするには  
   
-1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を開き、構成する [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] インスタンスに接続します。  
+1.  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を開き、構成する [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] インスタンスに接続します。  
   
 2.  オブジェクト エクスプローラーで [ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ] ノードを右クリックし、 **[プロパティ]** をクリックします。  
   
-3.  **[サーバーのプロパティ]** ダイアログ ボックスの **[ページの選択]** で **[セキュリティ]** をクリックします。  
+3.  
+  **[サーバーのプロパティ]** ダイアログ ボックスの **[ページの選択]** で **[セキュリティ]** をクリックします。  
   
     -   レポート ビルダーを有効にするには、 **[アドホック レポート実行を有効にする]** オプションを選択します。  
   
@@ -169,19 +180,21 @@ ms.locfileid: "66103188"
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="WinIntSec"></a> Windows 統合セキュリティ  
+##  <a name="WinIntSec"></a>Windows 統合セキュリティ  
   
 #### <a name="to-turn-on-or-off-windows-integrated-security-by-using-sql-server-management-studio"></a>SQL Server Management Studio を使用して Windows 統合セキュリティを有効または無効にするには  
   
-1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を開き、構成する [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] インスタンスに接続します。  
+1.  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を開き、構成する [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] インスタンスに接続します。  
   
 2.  オブジェクト エクスプローラーで [ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ] ノードを右クリックし、 **[プロパティ]** をクリックします。  
   
-3.  **[サーバーのプロパティ]** ダイアログ ボックスの **[ページの選択]** で **[セキュリティ]** をクリックします。  
+3.  
+  **[サーバーのプロパティ]** ダイアログ ボックスの **[ページの選択]** で **[セキュリティ]** をクリックします。  
   
-    -   Windows 統合セキュリティを有効にするには、 **[レポート データ ソースで Windows 統合セキュリティを有効にする]** オプションを選択します。  
+    -   Windows 統合セキュリティを有効にするには、[**レポートデータソースに対して Windows 統合セキュリティを有効に**する] オプションを選択します。  
   
-    -   Windows 統合セキュリティを無効にするには、 **[レポート データ ソースで Windows 統合セキュリティを有効にする]** オプションを選択解除します。  
+    -   Windows 統合セキュリティを無効にするには、[**レポートデータソースに対して Windows 統合セキュリティを有効に**する] オプションの選択を解除します。  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

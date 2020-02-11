@@ -19,14 +19,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: bcbe0d14d95d7ba003969a31b8a87d692edb7435
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63246017"
 ---
 # <a name="propertyname-property-clientnetworkprotocolproperty-class"></a>PropertyName プロパティ (ClientNetworkProtocolProperty クラス)
-  によって参照される現在のプロパティの名前を取得、 [PropertyIdx プロパティ (ClientNetworkProtocolProperty クラス)](clientnetworkprotocolproperty-class.md)プロパティの値。  
+  [Propertyidx プロパティ (ClientNetworkProtocolProperty クラス)](clientnetworkprotocolproperty-class.md)のプロパティ値によって参照される現在のプロパティの名前を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,13 +37,14 @@ object
 ```  
   
 ## <a name="parts"></a>要素  
- *object*  
- [クライアントによって使用されるネットワーク プロトコルの属性を表す](clientnetworkprotocolproperty-class.md) ClientNetworkProtocolProperty クラス [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] オブジェクト。  
+ *素材*  
+ 
+  [クライアントによって使用されるネットワーク プロトコルの属性を表す](clientnetworkprotocolproperty-class.md) ClientNetworkProtocolProperty クラス [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] オブジェクト。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  現在のプロパティの名前を指定する文字列値。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
   
 ## <a name="see-also"></a>参照  
  [クライアント プロトコルの構成](../../../database-engine/configure-windows/configure-client-protocols.md)  

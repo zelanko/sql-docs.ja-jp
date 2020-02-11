@@ -15,16 +15,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f78dba913c4daa1c2e47682b282721b5f0fe27d2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63260692"
 ---
 # <a name="report-history-methods"></a>レポート履歴メソッド
   以下のメソッドを使用してアイテム履歴スナップショットを作成し、管理できます。  
   
-|方法|操作|  
+|方法|アクション|  
 |------------|------------|  
 |<xref:ReportService2010.ReportingService2010.CreateItemHistorySnapshot%2A>|指定したカタログ アイテムのアイテム履歴スナップショットを生成します。|  
 |<xref:ReportService2010.ReportingService2010.DeleteItemHistorySnapshot%2A>|指定したカタログ アイテムのアイテム履歴スナップショットを個別に削除します。|  

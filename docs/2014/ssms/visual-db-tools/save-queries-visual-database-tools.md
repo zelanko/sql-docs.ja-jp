@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8245c048d4c1a1314835ad70fc7305c7afabd3f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63284473"
 ---
 # <a name="save-queries-visual-database-tools"></a>クエリの保存 (Visual Database Tools)
@@ -27,19 +27,20 @@ ms.locfileid: "63284473"
   
 1.  クエリを作成します。  
   
-2.  **[ファイル]** メニューの **[<クエリ名> の保存]** をクリックします。  
+2.  
+  **[ファイル]** メニューの **[<クエリ名> の保存]** をクリックします。  
   
     > [!NOTE]  
-    >  新しく作成されたクエリにシステム名が与えられます。 クエリに任意の名前を付ける場合は、 **[名前を付けて <クエリ名> を保存]** を選択します。  
+    >  新しく作成されたクエリにシステム名が与えられます。 クエリに任意の名前を付ける場合は、**[名前を付けて <クエリ名> を保存]** を選択します。  
   
 3.  クエリは、ソリューション エクスプローラーのプロジェクトの Queries フォルダーに保存されます。  
   
-## <a name="see-also"></a>関連項目  
- [クエリを作成する&#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [クエリを実行して&#40;Visual Database Tools&#41;](run-queries-visual-database-tools.md)   
- [クエリに加えられた変更を破棄&#40;Visual Database Tools&#41;](discard-changes-made-to-queries-visual-database-tools.md)   
- [クエリおよびビューの操作方法に関するトピックを設計&#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
- [クエリの種類&#40;Visual Database Tools&#41;](types-of-queries-visual-database-tools.md)   
+## <a name="see-also"></a>参照  
+ [Visual Database Tools &#40;クエリの作成&#41;](visual-database-tools.md)   
+ [Visual Database Tools &#40;クエリの実行&#41;](run-queries-visual-database-tools.md)   
+ [Visual Database Tools &#40;クエリに対して行われた変更を破棄&#41;](discard-changes-made-to-queries-visual-database-tools.md)   
+ [クエリおよびビューのデザイン方法に関するトピック &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
+ [Visual Database Tools &#40;クエリの種類&#41;](types-of-queries-visual-database-tools.md)   
  [クエリに関する基本操作の実行 (Visual Database Tools)](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

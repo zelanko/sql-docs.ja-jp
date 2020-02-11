@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d88041f61c2f84e510c637b71f0ebb1bbb2a97cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63250924"
 ---
 # <a name="sql-server-agent-alerts-object"></a>SQL Server エージェントの Alerts オブジェクト
@@ -25,7 +25,7 @@ ms.locfileid: "63250924"
   
  次の表では、 **SQLAgent:Alerts** オブジェクトのカウンターを示します。  
   
-|名前|説明|  
+|Name|[説明]|  
 |----------|-----------------|  
 |**Activated alerts**|最後に SQL Server エージェントが再起動されてから SQL Server エージェントによってアクティブ化された警告の合計数が報告されます。|  
 |**Alerts activated/minute**|1 分間に SQL Server エージェントによってアクティブ化された警告の数が報告されます。|  

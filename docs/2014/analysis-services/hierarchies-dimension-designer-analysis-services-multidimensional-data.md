@@ -1,5 +1,5 @@
 ---
-title: 階層 ([ディメンション構造] タブ、ディメンション デザイナー) (Analysis Services - 多次元データ) |Microsoft Docs
+title: '[階層] ([ディメンション構造] タブ、ディメンションデザイナー) (Analysis Services 多次元データ) |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a68cd859e93105c2fb4aa570dbf727fe7112bdab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080789"
 ---
 # <a name="hierarchies-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>[階層] ([ディメンション構造] タブ、ディメンション デザイナー) (Analysis Services - 多次元データ)
+  
   **[階層]** ペインを使用すると、現在選択されているディメンションの階層とレベルを管理できます。 ユーザー定義階層の作成の詳細については、「 [ユーザー定義階層の作成](multidimensional-models/user-defined-hierarchies-create.md)」を参照してください。  
   
  [階層] ペインを使用すると、次の手順を実行できます。  
@@ -32,18 +33,19 @@ ms.locfileid: "66080789"
   
  **[階層] ペインを表示するには**  
   
-1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] プロジェクトを開き、目的のディメンションを開きます。  
+1.  
+  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] プロジェクトを開き、目的のディメンションを開きます。  
   
 2.  選択されていない場合は、 **[ディメンション構造]** タブをクリックします。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **階層**  
  現在作成されている階層を表示します。 各階層内には、階層のレベルを構成する属性があります。 属性リレーションシップも表示されますが、これらは読み取り専用です。  
   
 ## <a name="see-also"></a>参照  
- [ディメンション構造&#40;ディメンション デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)   
- [属性&#40;ディメンション構造 タブ、ディメンション デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](attributes-dimension-designer-analysis-services-multidimensional-data.md)   
- [データ ソース ビュー&#40;ディメンション構造 タブ、ディメンション デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](datasource-view-dimension-designer-analysis-services-multidimensional-data.md)   
- [ツールバー&#40;ディメンション構造 タブ、ディメンション デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](toolbar-dimension-structure-designer-analysis-services-multidimensional-data.md)  
+ [ディメンションデザイナー &#40;ディメンションデザイナーの&#41; &#40;Analysis Services-多次元データ&#41;](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)   
+ [属性 &#40;[ディメンション構造] タブ、ディメンションデザイナー&#41; &#40;Analysis Services-多次元データ&#41;](attributes-dimension-designer-analysis-services-multidimensional-data.md)   
+ [データソースビュー &#40;[ディメンション構造] タブ、ディメンションデザイナー&#41; &#40;Analysis Services-多次元データ&#41;](datasource-view-dimension-designer-analysis-services-multidimensional-data.md)   
+ [ツールバー &#40;[ディメンション構造] タブ、ディメンションデザイナー&#41; &#40;Analysis Services-多次元データ&#41;](toolbar-dimension-structure-designer-analysis-services-multidimensional-data.md)  
   
   

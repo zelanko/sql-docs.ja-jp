@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cda813db916faf4819f85d3d09213679fba2eeec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63459998"
 ---
 # <a name="add-new-rows-in-the-results-pane-visual-database-tools"></a>結果ペインに新しい行を追加する (Visual Database Tools)
@@ -54,7 +54,7 @@ ms.locfileid: "63459998"
 -   Esc キーを押すことにより、編集を取り消す。 変更したセル内で Esc キーを押すと、そのセルに加えた変更だけが取り消されます。 変更していないセル内で Esc キーを押すと、行全体に加えた変更が取り消されます。  
   
 ## <a name="see-also"></a>参照  
- [結果ウィンドウでデータを扱う&#40;Visual Database Tools&#41;](results-pane-visual-database-tools.md)   
+ [[結果] ウィンドウのデータを操作するには &#40;Visual Database Tools&#41;](results-pane-visual-database-tools.md)   
  [クエリに関する基本操作の実行 (Visual Database Tools)](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

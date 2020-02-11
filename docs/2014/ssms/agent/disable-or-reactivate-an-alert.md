@@ -21,22 +21,22 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 638ce62d8dd12764681c2b65a271d9ae13bb5d83
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68189341"
 ---
 # <a name="disable-or-reactivate-an-alert"></a>Disable or Reactivate an Alert
-  このトピックでは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの警告を無効化または再有効化する方法について説明します。  
+  このトピックでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]また[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]は[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、でエージェントの警告を無効化または再アクティブ化する方法について説明します。  
   
  **このトピックの内容**  
   
 -   **作業を開始する準備:**  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
--   **警告を無効化または再有効化する方法:**  
+-   **次のものを使用して警告を無効または再アクティブ化するには:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -53,7 +53,8 @@ ms.locfileid: "68189341"
   
 #### <a name="to-disable-or-reactivate-an-alert"></a>警告を無効にしたり、再び有効にするには  
   
-1.  **オブジェクト エクスプローラー**で、無効化または再有効化する警告を含むサーバーをプラス記号をクリックして展開します。  
+1.  
+  **オブジェクト エクスプローラー**で、無効化または再有効化する警告を含むサーバーをプラス記号をクリックして展開します。  
   
 2.  プラス記号をクリックして **[SQL Server エージェント]** を展開します。  
   
@@ -61,7 +62,8 @@ ms.locfileid: "68189341"
   
 4.  有効化する警告を右クリックし、 **[有効化]** を選択します。警告を無効化するには、無効化する警告を右クリックし、 **[無効化]** を選択します。  
   
-5.  **[警告の有効化]** または **[警告の無効化]** ダイアログ ボックスが表示され、プロセスの状態が示されます。 完了したら、 **[閉じる]** をクリックします。  
+5.  
+  **[警告の有効化]** または **[警告の無効化]** ダイアログ ボックスが表示され、プロセスの状態が示されます。 完了したら、 **[閉じる]** をクリックします。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
@@ -84,6 +86,6 @@ ms.locfileid: "68189341"
     GO  
     ```  
   
- 詳細については、次を参照してください。 [sp_update_alert &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-alert-transact-sql)します。  
+ 詳細については、「 [sp_update_alert &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-update-alert-transact-sql)」を参照してください。  
   
   

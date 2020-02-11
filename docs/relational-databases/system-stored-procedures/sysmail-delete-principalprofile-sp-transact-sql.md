@@ -1,5 +1,5 @@
 ---
-title: sysmail_delete_principalprofile_sp (TRANSACT-SQL) |Microsoft Docs
+title: sysmail_delete_principalprofile_sp (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: 8fc14700-e17a-4073-9a96-7fc23e775c69
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 86f9566ce86423939aff22fc37331c5c9db89904
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67909210"
 ---
-# <a name="sysmaildeleteprincipalprofilesp-transact-sql"></a>sysmail_delete_principalprofile_sp (Transact-SQL)
+# <a name="sysmail_delete_principalprofile_sp-transact-sql"></a>sysmail_delete_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   データベースのユーザーやロールから、パブリックまたはプライベートなデータベース メール プロファイルを使用する権限を削除します。  
@@ -40,29 +40,29 @@ sysmail_delete_principalprofile_sp  { [ @principal_id = ] principal_id | [ @prin
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @principal_id = ] principal_id` データベース ユーザーまたはロールの id、 **msdb**の関連付けを削除するデータベース。 *principal_id*は**int**、既定値は NULL です。 パブリック プロファイルをプライベート プロファイルにするために、プリンシパル ID を提供**0**またはプリンシパル名の **'public'** します。 いずれか*principal_id*または*principal_name*指定する必要があります。  
+`[ @principal_id = ] principal_id`関連付けを削除する**msdb**データベースのデータベースユーザーまたはロールの ID を示します。 *principal_id*は**int**,、既定値は NULL です。 パブリックプロファイルをプライベートプロファイルにするには、プリンシパル ID **0**またはプリンシパル名 **' public '** を指定します。 *Principal_id*または*principal_name*のいずれかを指定する必要があります。  
   
-`[ @principal_name = ] 'principal_name'` データベース ユーザーまたはロールの名前を指定します、 **msdb**の関連付けを削除するデータベース。 *principal_name*は**sysname**、既定値は NULL です。 パブリック プロファイルをプライベート プロファイルにするために、プリンシパル ID を提供**0**またはプリンシパル名の **'public'** します。 いずれか*principal_id*または*principal_name*指定する必要があります。  
+`[ @principal_name = ] 'principal_name'`関連付けを削除する**msdb**データベースのデータベースユーザーまたはロールの名前を指定します。 *principal_name*は**sysname**,、既定値は NULL です。 パブリックプロファイルをプライベートプロファイルにするには、プリンシパル ID **0**またはプリンシパル名 **' public '** を指定します。 *Principal_id*または*principal_name*のいずれかを指定する必要があります。  
   
-`[ @profile_id = ] profile_id` 関連付けを削除するプロファイルの ID です。 *profile_id*は**int**、既定値は NULL です。 いずれか*profile_id*または*profile_name*指定する必要があります。  
+`[ @profile_id = ] profile_id`関連付けを削除するプロファイルの ID を示します。 *profile_id*は**int**,、既定値は NULL です。 *Profile_id*または*profile_name*のいずれかを指定する必要があります。  
   
-`[ @profile_name = ] 'profile_name'` 関連付けを削除するプロファイルの名前です。 *profile_name*は**sysname**、既定値は NULL です。 いずれか*profile_id*または*profile_name*指定する必要があります。  
+`[ @profile_name = ] 'profile_name'`関連付けを削除するプロファイルの名前を指定します。 *profile_name*は**sysname**,、既定値は NULL です。 *Profile_id*または*profile_name*のいずれかを指定する必要があります。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>コメント  
- パブリック プロファイルをプライベート プロファイルにするために、提供 **'public'** プリンシパル名または**0**プリンシパルの id。  
+## <a name="remarks"></a>解説  
+ パブリックプロファイルをプライベートプロファイルにするには、プリンシパル名に **' public '** を指定するか、プリンシパル id に**0**を指定します。  
   
- ユーザーの既定のプライベート プロファイルや、既定のパブリック プロファイルを削除する場合は慎重に行ってください。 既定のプロファイルが使用できないときに**sp_send_dbmail**を引数としてプロファイルの名前が必要です。 そのため、既定のプロファイルを削除する可能性への呼び出し**sp_send_dbmail**が失敗します。 詳細については、次を参照してください。 [sp_send_dbmail &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md)します。  
+ ユーザーの既定のプライベート プロファイルや、既定のパブリック プロファイルを削除する場合は慎重に行ってください。 既定のプロファイルが使用できない場合、 **sp_send_dbmail**にはプロファイルの名前を引数として指定する必要があります。 したがって、既定のプロファイルを削除すると、 **sp_send_dbmail**の呼び出しが失敗する可能性があります。 詳細については、「 [sp_send_dbmail &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md)」を参照してください。  
   
- ストアド プロシージャ**sysmail_delete_principalprofile_sp**では、 **msdb**が所有するデータベースにあり、 **dbo**スキーマ。 現在のデータベースがない場合、3 つの部分の名前を持つプロシージャを実行する必要があります**msdb**します。  
+ ストアドプロシージャ**sysmail_delete_principalprofile_sp**は**msdb**データベースにあり、 **dbo**スキーマが所有しています。 現在のデータベースが**msdb**でない場合は、3つの部分で構成される名前を使用してプロシージャを実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
- このプロシージャの既定のメンバーへのアクセス許可を実行、 **sysadmin**固定サーバー ロール。  
+ このプロシージャの実行権限は、既定では**sysadmin**固定サーバーロールのメンバーに与えています。  
   
-## <a name="examples"></a>使用例  
- 次の例は、プロファイルの間の関連付けを削除する**AdventureWorks Administrator**とログインの**ApplicationUser**で、 **msdb**データベース。  
+## <a name="examples"></a>例  
+ 次の例では、 **msdb**データベースの Profile **AdventureWorks Administrator**と login **applicationuser**の関連付けを削除しています。  
   
 ```  
 EXECUTE msdb.dbo.sysmail_delete_principalprofile_sp  
@@ -72,7 +72,7 @@ EXECUTE msdb.dbo.sysmail_delete_principalprofile_sp
   
 ## <a name="see-also"></a>参照  
  [データベース メール](../../relational-databases/database-mail/database-mail.md)   
- [データベース メール構成オブジェクト](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
- [データベース メール ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [データベースメール構成オブジェクト](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
+ [Transact-sql&#41;&#40;のストアドプロシージャのデータベースメール](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

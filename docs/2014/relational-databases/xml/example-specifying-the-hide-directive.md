@@ -1,5 +1,5 @@
 ---
-title: '例: HIDE ディレクティブの指定 | Microsoft Docs'
+title: '例 : HIDE ディレクティブの指定 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 901fa0d72798862f54ebc23131870b704538cb8a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63287736"
 ---
-# <a name="example-specifying-the-hide-directive"></a>例: HIDE ディレクティブの指定
+# <a name="example-specifying-the-hide-directive"></a>例 : HIDE ディレクティブの指定
   この例では、 **HIDE** ディレクティブの使用方法を示します。 クエリから返されたユニバーサル テーブル内の行を並べ替える目的でクエリから属性を返し、最終的な結果の XML ドキュメントにはその属性を含めない場合に、このディレクティブが役立ちます。  
   
  このクエリでは、次の XML を生成します。  
@@ -81,7 +81,7 @@ go
 </ProductModel>  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [FOR XML での EXPLICIT モードの使用](use-explicit-mode-with-for-xml.md)  
   
   

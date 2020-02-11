@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ac2b8ca912f02aecc5e1b3e76d04d84b501db89b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63253493"
 ---
 # <a name="remove-joins-visual-database-tools"></a>結合の削除 (Visual Database Tools)
@@ -36,8 +36,8 @@ ms.locfileid: "63253493"
  クエリおよびビュー デザイナーが結合線を削除し、 [SQL ペイン](sql-pane-visual-database-tools.md)のステートメントを変更します。  
   
 ## <a name="see-also"></a>参照  
- [テーブルの自動結合&#40;Visual Database Tools&#41;](join-tables-automatically-visual-database-tools.md)   
- [テーブルを手動で結合&#40;Visual Database Tools&#41;](join-tables-manually-visual-database-tools.md)   
+ [Visual Database Tools &#40;テーブルを自動的に結合&#41;](join-tables-automatically-visual-database-tools.md)   
+ [Visual Database Tools &#40;テーブルを手動で結合&#41;](join-tables-manually-visual-database-tools.md)   
  [結合を使用したクエリ (Visual Database Tools)](query-with-joins-visual-database-tools.md)  
   
   

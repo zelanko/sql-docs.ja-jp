@@ -15,20 +15,20 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 68024e36dd5f8188097ebcc673056c1b6d11e59b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100886"
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Reporting Services の電子メール配信
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、個別のユーザーまたはグループに電子メールでレポートを送信するための電子メール配信拡張機能があります。 電子メール配信拡張機能を構成するには、Reporting Services 構成マネージャーを使用して [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ファイルを編集します。  
   
- 電子メールでレポートを配信または受信するには、標準のサブスクリプションまたはデータ ドリブン サブスクリプションのいずれかを定義します。 サブスクライブまたは配信は、一度に 1 つのレポートに対してのみ実行できます。 1 通の電子メール メッセージで複数のレポートを配信するサブスクリプションを作成することはできません。 サブスクリプションの詳細については、次を参照してください。 [Create, Modify, and 標準サブスクリプションの削除&#40;Reporting Services ネイティブ モードの&#41;](create-and-manage-subscriptions-for-native-mode-report-servers.md)します。  
+ 電子メールでレポートを配信または受信するには、標準のサブスクリプションまたはデータ ドリブン サブスクリプションのいずれかを定義します。 サブスクライブまたは配信は、一度に 1 つのレポートに対してのみ実行できます。 1 通の電子メール メッセージで複数のレポートを配信するサブスクリプションを作成することはできません。 サブスクリプションの詳細については、「[ネイティブモード&#41;での標準サブスクリプション &#40;Reporting Services の作成、変更、および削除](create-and-manage-subscriptions-for-native-mode-report-servers.md)」を参照してください。  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モード&#124;SharePoint 2010 および SharePoint 2013<br /><br /> **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モード|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Sharepoint モード &#124; sharepoint 2010 および SharePoint 2013<br /><br /> **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]ネイティブモード|  
   
 ## <a name="e-mail-delivery-options"></a>電子メール配信のオプション  
  レポート サーバーの電子メール配信では、以下の方法でレポートを配信できます。  
@@ -37,9 +37,9 @@ ms.locfileid: "66100886"
   
 -   電子メール メッセージの [件名] 行を使用して通知を送信します。 既定では、サブスクリプション定義の [件名] に以下の変数が含まれます。サブスクリプションが処理されると、これらの変数はレポート固有の情報に置き換えられます。  
   
-     **@ReportName** は、レポート名を指定します。  
+     **@ReportName**レポートの名前を指定します。  
   
-     **@ExecutionTime** は、レポートが実行された時間を指定します。  
+     **@ExecutionTime**レポートがいつ実行されたかを指定します。  
   
      これらの変数に静的なテキストを追加したり、各サブスクリプションの [件名] のテキストを変更することができます。  
   
@@ -47,7 +47,8 @@ ms.locfileid: "66100886"
   
      ブラウザーが HTML 4.0 および MHTML をサポートする場合、Web アーカイブ表示形式を選択すると、レポートがメッセージの一部として埋め込まれます。 その他すべての表示形式 (CSV、PDF など) では、添付ファイルとしてレポートを配信します。 RSReportServer 構成ファイルでこの機能を無効にすることができます。  
   
-     [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、レポートを送信する前に、添付ファイルまたはメッセージのサイズを確認しません。 添付ファイルまたはメッセージがメール サーバーで許可された最大サイズを超えると、レポートは配信されません。 レポートが大きい場合は、他の配信オプション (URL や通知など) のいずれかを選択します。  
+     
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、レポートを送信する前に、添付ファイルまたはメッセージのサイズを確認しません。 添付ファイルまたはメッセージがメール サーバーで許可された最大サイズを超えると、レポートは配信されません。 レポートが大きい場合は、他の配信オプション (URL や通知など) のいずれかを選択します。  
   
  サブスクリプションを作成したときにレポートをどのように配信するかを決定する配信オプションを設定します。 たとえば、サブスクリプションで **[リンクを含める]** を選択すると、電子メール メッセージには、レポートへのハイパーリンクが含まれます。  
   
@@ -71,18 +72,18 @@ ms.locfileid: "66100886"
   
  ネイティブ モード レポート サーバーの構成方法については、次のトピックを参照してください。  
   
--   [レポート サーバー電子メール配信用に構成&#40;SSRS 構成マネージャー&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
+-   [SSRS Configuration Manager &#40;電子メール配信用にレポートサーバーを構成&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
   
--   [電子メールの設定 - Configuration Manager &#40;SSRS ネイティブ モード&#41;](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)  
+-   [電子メールの設定-Configuration Manager &#40;SSRS ネイティブモード&#41;](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)  
   
  SharePoint モード レポート サーバーの構成方法については、次のトピックを参照してください。  
   
--   [Reporting Services サービス アプリケーションの電子メールの構成 (SharePoint 2010 および SharePoint 2013)](../install-windows/configure-e-mail-for-a-reporting-services-service-application.md)  
+-   [SharePoint 2010 および SharePoint 2013 &#40;Reporting Services サービスアプリケーションの電子メールを構成&#41;](../install-windows/configure-e-mail-for-a-reporting-services-service-application.md)  
   
 ## <a name="see-also"></a>参照  
  [タスクと権限](../security/tasks-and-permissions.md)   
  [サブスクリプションと配信 &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
- [データ ドリブン サブスクリプション](data-driven-subscriptions.md)   
+ [Data-Driven Subscriptions](data-driven-subscriptions.md)   
  [ロールの割り当て](../security/role-assignments.md)  
   
   

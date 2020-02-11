@@ -18,36 +18,36 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 12096cd9269718f9eb75ca4fcbd1dbc11e25e6c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100749"
 ---
-# <a name="schedules"></a>Schedules
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、レポートの処理および配信の制御を支援する共有スケジュールとレポート固有スケジュールが用意されています。 これら 2 種類のスケジュールでは、定義、格納、管理の方法が異なります。 2 種類のスケジュールの内部の構成は同じです。 すべてのスケジュールでは、毎月、毎週、または毎日という定期実行の種類を指定します。 定期実行の種類では、イベントが発生する頻度を表す間隔と範囲を設定します。 定期的な実行パターンの種類とパターンの指定方法は、共有スケジュールとレポート固有スケジュールのいずれを作成する場合でも同じです。  
+# <a name="schedules"></a>スケジュール
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、レポートの処理および配信の制御を支援する 共有スケジュール と レポート固有スケジュール が用意されています。 これら 2 種類のスケジュールでは、定義、格納、管理の方法が異なります。 2 種類のスケジュールの内部の構成は同じです。 すべてのスケジュールでは、毎月、毎週、または毎日という定期実行の種類を指定します。 定期実行の種類では、イベントが発生する頻度を表す間隔と範囲を設定します。 定期的な実行パターンの種類とパターンの指定方法は、共有スケジュールとレポート固有スケジュールのいずれを作成する場合でも同じです。  
   
- このトピックの内容  
+ このトピックの内容:  
   
--   [スケジュールで行うことができます。](#bkmk_whatyoucando)  
+-   [スケジュールで実行できる操作](#bkmk_whatyoucando)  
   
 -   [共有スケジュールとレポート固有スケジュールの比較](#bkmk_compare)  
   
--   [データ ソースを構成します。](#bkmk_configuredatasources)  
+-   [データソースを構成する](#bkmk_configuredatasources)  
   
--   [資格情報の格納と処理アカウント](#bkmk_credentials)  
+-   [資格情報と処理アカウントの保存](#bkmk_credentials)  
   
 -   [スケジュールおよび配信処理のしくみ](#bkmk_how_scheduling_works)  
   
 -   [サーバーの依存関係](#bkmk_serverdependencies)  
   
--   [SQL Server エージェントの停止の影響](#bkmk_stoppingagent)  
+-   [SQL Server エージェントを停止した場合の影響](#bkmk_stoppingagent)  
   
--   [レポート サーバー サービスの停止の影響](#bkmk_stoppingservice)  
+-   [レポートサーバーサービスを停止した場合の影響](#bkmk_stoppingservice)  
   
   
 ##  <a name="bkmk_whatyoucando"></a> スケジュールに対して実行できる操作  
- ネイティブ モードのレポート マネージャーおよび SharePoint モードの SharePoint サイト管理ページを使用して、スケジュールの作成と管理を行うことができます。 可能な代替手段としては以下の方法があります。  
+ ネイティブ モードのレポート マネージャーおよび SharePoint モードの SharePoint サイト管理ページを使用して、スケジュールの作成と管理を行うことができます。 次のようにすることができます。  
   
 -   標準のサブスクリプションまたはデータ ドリブン サブスクリプションでのレポート配信スケジュール  
   
@@ -96,7 +96,7 @@ ms.locfileid: "66100749"
 |目的|必要なタスク|ネイティブ モードの定義済みロール|SharePoint モードのグループ|  
 |----------------|-----------------------|----------------------------------|----------------------------|  
 |共有スケジュールの作成、変更、または削除|共有スケジュールの管理|システム管理者|所有者|  
-|共有スケジュールの選択|共有スケジュールの表示|システム ユーザー|Members|  
+|共有スケジュールの選択|共有スケジュールの表示|システム ユーザー|メンバー|  
 |ユーザー定義サブスクリプションでのレポート固有スケジュールの作成、変更、または削除|個別のサブスクリプションを管理|閲覧者、レポート ビルダー、個人用レポート、コンテンツ マネージャー|閲覧者、メンバー|  
 |その他すべてのスケジュール設定された操作用のレポート固有スケジュールの作成、変更、または削除|レポート履歴の管理、すべてのサブスクリプションの管理、レポートの管理|コンテンツ マネージャー|所有者|  
   
@@ -128,7 +128,7 @@ ms.locfileid: "66100749"
  Reporting Services では、すべてのスケジュールされた操作のイベント キューを管理します。 定期的にキューをポーリングし、新しいイベントがないかどうかを確認します。 既定では、10 秒間隔でキューがスキャンされます。 間隔を変更するには、RSReportServer.config ファイルで `PollingInterval`、`IsNotificationService`、および `IsEventService` の構成設定を変更します。 また、SharePoint モードでは、これらの設定に RSreporserver.config を使用するため、値はすべての [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションに適用されます。 詳しくは、「 [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md)」をご覧ください。  
   
 ##  <a name="bkmk_serverdependencies"></a> サーバーの依存関係  
- スケジュールおよび配信のプロセッサでは、レポート サーバー サービスと SQL Server エージェントが開始されている必要があります。 スケジュールおよび配信処理機能を有効にする必要があります、`ScheduleEventsAndReportDeliveryEnabled`のプロパティ、 **Reporting Services のセキュリティ構成**ポリシー ベースの管理ファセット。 スケジュールされた操作を実行するには、SQL Server エージェントおよびレポート サーバー サービスの両方が実行されている必要があります。  
+ スケジュールおよび配信のプロセッサでは、レポート サーバー サービスと SQL Server エージェントが開始されている必要があります。 ポリシーベースの管理の Reporting Services ファセットの`ScheduleEventsAndReportDeliveryEnabled` **セキュリティ構成**のプロパティを使用して、スケジュールおよび配信処理機能を有効にする必要があります。 スケジュールされた操作を実行するには、SQL Server エージェントおよびレポート サーバー サービスの両方が実行されている必要があります。  
   
 > [!NOTE]  
 >  **[Reporting Services のセキュリティ構成]** ファセットを使用して、一時的または永続的に、スケジュールされた操作を停止させることができます。 カスタム配信拡張機能を作成して配置することはできますが、それだけではスケジュールおよび配信のプロセッサを拡張できません。 イベントおよび通知の管理方法を変更することはできません。 機能を無効にするには、「 **Turn Reporting Services Features On or Off** 」の「 [定期的なイベントおよび配信](../report-server/turn-reporting-services-features-on-or-off.md)」を参照してください。  
@@ -145,7 +145,7 @@ ms.locfileid: "66100749"
 ## <a name="see-also"></a>参照  
  [レポート履歴のスナップショットの作成、変更および削除](../report-server/create-modify-and-delete-snapshots-in-report-history.md)   
  [サブスクリプションと配信 &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
- [データ ドリブン サブスクリプション](data-driven-subscriptions.md)   
+ [Data-Driven Subscriptions](data-driven-subscriptions.md)   
  [レポートのキャッシュ &#40;SSRS&#41;](../report-server/caching-reports-ssrs.md)   
  [レポート サーバー コンテンツの管理 &#40;SSRS ネイティブ モード&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
  [共有データセットのキャッシュ &#40;SSRS&#41;](../report-server/cache-shared-datasets-ssrs.md)  

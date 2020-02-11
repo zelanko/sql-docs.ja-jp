@@ -11,13 +11,14 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 0378394c274e66d71eebd642188f20194d29236b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65480002"
 ---
 # <a name="create-a-model-deployment-package-by-using-mdsmodeldeploy"></a>MDSModelDeploy を使用したモデルの配置パッケージの作成
+  
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、MDSModelDeploy ツールを使用して、パッケージを作成します。 指定するコマンドに応じて、次のどちらかを含むパッケージを作成できます。  
   
 -   モデル オブジェクトのみ。  
@@ -26,7 +27,7 @@ ms.locfileid: "65480002"
   
  モデル オブジェクトのみを含むパッケージを配置する必要がある場合は、代わりに、 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web アプリケーションのモデル配置ウィザードを使用できます。 詳細については、「 [ウィザードを使用したモデルの配置パッケージの作成](../../2014/master-data-services/create-a-model-deployment-package-by-using-the-wizard.md)」を参照してください。  
 > [!NOTE]  
-> MDSModelDeploy ツールのこのバージョンは、メモリのギガバイト (GB) よりも多く使用できません。 作成またはを使用して大規模なモデルをデプロイするときに**オブジェクトとデータをモデル化**オプション、「メモリ不足」または「Stream が長すぎます」エラーが発生する可能性があります。 この問題を解決するには、ステージング デプロイは、データを MDS を使用します。または、MDS 2016 または MDSModelDeploy ツールの更新されたバージョンが含まれる以降のバージョンにアップグレードします。
+> このバージョンの MDSModelDeploy ツールは、ギガバイト (GB) を超えるメモリを使用することはできません。 **モデルオブジェクトとデータ**オプションを使用して大規模なモデルを作成または配置すると、"メモリが不足しています" または "ストリームが長すぎます" というエラーが発生することがあります。 この問題を解決するには、MDS ステージングを使用してデータをデプロイします。または、最新バージョンの MDSModelDeploy ツールを含む MDS 2016 以降のバージョンにアップグレードします。
 ## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
@@ -46,7 +47,7 @@ ms.locfileid: "65480002"
   
     -   MDS エクスプローラー機能権限  
   
-    -   MDS 統合管理機能権限  
+    -   MDS 統合管理関数の権限  
   
     -   MDS システム管理機能権限  
   
@@ -58,7 +59,7 @@ ms.locfileid: "65480002"
   
  モデルのパッケージを作成するには、そのモデルが存在する必要があります。 詳細については、「[モデルを作成する (マスター データ サービス)](create-a-model-master-data-services.md)」を参照してください。  
   
- 詳細については、「 [管理者 &#40;マスター データ サービス&#41;](../../2014/master-data-services/administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
+ 詳細については、「 [管理者 (マスター データ サービス)](../../2014/master-data-services/administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
   
 ### <a name="to-create-a-model-deployment-package-by-using-mdsmodeldeploy"></a>MDSModelDeploy を使用してモデルの配置パッケージを作成するには  
   
@@ -66,17 +67,17 @@ ms.locfileid: "65480002"
   
 2.  MDSModelDeploy.exe がある場所に移動します。  
   
-    -   MDS が既定の場所にインストールされた場合、ファイルは*ドライブ*: \Program Files\Microsoft SQL server \120\master Data services \configuration にあります。  
+    -   MDS が既定の場所にインストールされている場合、ファイルは*ドライブ*: services\configuration にあります。  
   
     -   MDS を既定の場所にインストールしなかった場合は、ローカル コンピューター内で MDSModelDeploy.exe を検索します。  
   
-3.  任意。 オプションおよびヘルプを表示します。  
+3.  省略可能。 オプションおよびヘルプを表示します。  
   
     -   使用可能なすべてのオプションを表示するには、「 `MDSModelDeploy` 」と入力し、Enter キーを押します。  
   
     -   オプションのヘルプを表示するには、「 *」と入力します。* OptionName `MDSModelDeploy help OptionName`はオプションの名前です。  
   
-4.  任意。 Web アプリケーションが複数ある場合、次のコマンドを入力し、Enter キーを押して、配置するサービスの名前を確認します。  
+4.  省略可能。 Web アプリケーションが複数ある場合、次のコマンドを入力し、Enter キーを押して、配置するサービスの名前を確認します。  
   
     ```  
     MDSModelDeploy listservices  
@@ -98,8 +99,8 @@ ms.locfileid: "65480002"
   
 -   [MDSModelDeploy を使用したモデルの配置パッケージの配置](../../2014/master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)  
   
-## <a name="see-also"></a>関連項目  
- [モデル配置オプション (マスター データ サービス)](../../2014/master-data-services/model-deployment-options-master-data-services.md)   
- [モデルの配置 (マスター データ サービス)](../../2014/master-data-services/deploying-models-master-data-services.md)  
+## <a name="see-also"></a>参照  
+ [モデル配置オプション &#40;マスターデータサービス&#41;](../../2014/master-data-services/model-deployment-options-master-data-services.md)   
+ [モデルの配置 &#40;マスターデータサービス&#41;](../../2014/master-data-services/deploying-models-master-data-services.md)  
   
   

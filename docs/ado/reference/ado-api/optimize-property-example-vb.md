@@ -15,14 +15,14 @@ ms.assetid: 652194af-cfa4-4aa0-a6d6-fa409bbc3f98
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f36c0c574917e4f73533a400ea60f363aeb9d74b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917812"
 ---
 # <a name="optimize-property-example-vb"></a>Optimize プロパティの例 (VB)
-この例では、[フィールド](../../../ado/reference/ado-api/field-object.md)オブジェクトの動的**最適化**プロパティ。 ***Zip***のフィールド、***作成者***テーブルに、 ***Pubs***データベースのインデックス付けされていません。 設定、[最適化](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)プロパティを**True**上、 ***zip***フィールドのパフォーマンスを向上させるインデックスの構築に ADO の承認、 [を見つける](../../../ado/reference/ado-api/find-method-ado.md)メソッド。  
+この例では、[フィールド](../../../ado/reference/ado-api/field-object.md)オブジェクトの動的**Optimize**プロパティを示します。 ***Pubs***データベースの Authors テーブルの***zip***フィールドにはインデックスが***作成***されません。 ***Zip***フィールドの[Optimize](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)プロパティを**True**に設定すると、ADO によって、 [Find](../../../ado/reference/ado-api/find-method-ado.md)メソッドのパフォーマンスを向上させるインデックスが作成されます。  
   
 ```  
 'BeginOptimizeVB  
@@ -86,6 +86,6 @@ End Sub
 'EndOptimizeVB  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Field オブジェクト](../../../ado/reference/ado-api/field-object.md)   
  [Optimize プロパティ - 動的 (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)

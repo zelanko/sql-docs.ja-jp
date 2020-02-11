@@ -1,5 +1,5 @@
 ---
-title: SQLBindCol (カーソル ライブラリ) |Microsoft Docs
+title: SQLBindCol (カーソルライブラリ) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,24 +13,24 @@ ms.assetid: f4dd546a-0a6c-4397-8ee7-fafa6b9da543
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 71afc3c0bac0ea64285c450640d96fe5f5d709b0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68064975"
 ---
 # <a name="sqlbindcol-cursor-library"></a>SQLBindCol (カーソル ライブラリ)
 > [!IMPORTANT]  
->  この機能は、Windows の将来のバージョンで削除されます。 新しい開発作業でこの機能を使用しないようにして、現在この機能を使用しているアプリケーションの変更を検討してください。 ドライバーのカーソル機能を使用することをお勧めします。  
+>  この機能は、今後のバージョンの Windows では削除される予定です。 新しい開発作業ではこの機能の使用を避け、現在この機能を使用しているアプリケーションの変更を検討してください。 Microsoft では、ドライバーのカーソル機能を使用することをお勧めします。  
   
- このトピックの使用、 **SQLBindCol**カーソル ライブラリ内の関数。 に関する一般的な情報**SQLBindCol**を参照してください[SQLBindCol 関数](../../../odbc/reference/syntax/sqlbindcol-function.md)します。  
+ このトピックでは、カーソルライブラリでの**SQLBindCol**関数の使用について説明します。 **SQLBindCol**の一般的な情報については、「 [SQLBindCol 関数](../../../odbc/reference/syntax/sqlbindcol-function.md)」を参照してください。  
   
- アプリケーションでは、カーソル ライブラリで現在の行セットを返すには、1 つまたは複数のバッファーを割り当てます。 呼び出す**SQLBindCol**結果セットにこれらのバッファーをバインドする 1 つ以上の時間。  
+ アプリケーションでは、現在の行セットを返すために、カーソルライブラリの1つ以上のバッファーを割り当てます。 **SQLBindCol**を1回以上呼び出して、これらのバッファーを結果セットにバインドします。  
   
- アプリケーションが呼び出すことができます**SQLBindCol**結果を再バインドするには列を呼び出した後設定**SQLExtendedFetch**、 **SQLFetch**、または**SQLFetchScroll**C データ型、列のサイズ、およびバインドされた列の 10 進数字の同じ残っている限り、します。 アプリケーションでは、異なるアドレスに列を再バインドする、カーソルは閉じられません必要があります。  
+ アプリケーションで**SQLBindCol**を呼び出して、バインドされた列の C データ型、列サイズ、および10進数が同じである限り、 **SQLExtendedFetch**、 **Sqlfetch**、または**sqlfetchscroll**を呼び出した後に結果セット列を再バインドすることができます。 アプリケーションでは、別のアドレスに列を再バインドするためにカーソルを閉じる必要はありません。  
   
- カーソル ライブラリでは、バインドのオフセットを使用する SQL_ATTR_ROW_BIND_OFFSET_PTR ステートメント属性の設定をサポートします。 (**SQLBindCol**呼び出しが発生するこの再バインドする必要はありません)。Odbc カーソル ライブラリが使用されている場合*3.x*ドライバー、バインドのオフセットがない場合に使用**SQLFetch**が呼び出されます。 場合、バインドのオフセットが使用される**SQLFetch** odbc カーソル ライブラリが使用されるときに呼び出される*2.x*ドライバーのため**SQLFetch**にマップされ**SQLExtendedFetch**します。  
+ カーソルライブラリでは、バインドオフセットを使用するための SQL_ATTR_ROW_BIND_OFFSET_PTR ステートメント属性の設定がサポートされています。 この再バインドを実行するには、**SQLBindCol**を呼び出す必要はありません。カーソルライブラリが ODBC *3. x*ドライバーで使用されている場合、 **sqlfetch**が呼び出されるときにバインドオフセットは使用されません。 バインドオフセットは、カーソルライブラリ*が ODBC 2.x*ドライバーで使用されているときに sqlfetch が呼び出され**た場合に**使用されます。これは、 **sqlfetch**が**SQLExtendedFetch**にマップされるためです。  
   
- カーソル ライブラリ呼び出しをサポートする**SQLBindCol**ブックマーク列をバインドします。  
+ カーソルライブラリでは、ブックマーク列をバインドするための**SQLBindCol**の呼び出しをサポートしています。  
   
- ODBC を使用する場合*2.x*ドライバー、カーソル ライブラリは、SQLSTATE HY090 を返します (無効な文字列長またはバッファー長) と**SQLBindCol**が呼び出されない値にブックマーク列に対してバッファーの長さを設定するには4 に等しい。 ODBC を使用する場合*3.x*ドライバー、カーソル ライブラリにより、バッファーのサイズを変更します。
+ ODBC 2.x ドライバーを使用する場合、カーソルライブラリは SQLSTATE HY090 (無効な文字列またはバッファー長) を返します。 **SQLBindCol**を呼び出すと、ブックマーク列のバッファー長が4に等しくない値に設定さ*れます。* ODBC 3.x ドライバーを使用する場合、カーソルライブラリを使用すると、バッファーを任意のサイズにすることができ*ます。*

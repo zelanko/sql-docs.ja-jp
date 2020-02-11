@@ -17,14 +17,14 @@ ms.assetid: 475de5e2-f634-4954-9edf-0027a6ba38d6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0a83f101d46a94a4ea43a85424677fc1c8da08be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918939"
 ---
 # <a name="endofrecordset-event-ado"></a>EndOfRecordset イベント (ADO)
-**EndOfRecordset**イベントが呼び出されるは、行の末尾に移動する試みがあるときに、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)します。  
+**Endofrecordset**イベントは、[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)の末尾を越えて行を移動しようとしたときに呼び出されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,24 +34,24 @@ EndOfRecordset fMoreData, adStatus, pRecordset
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *fMoreData*  
- A **VARIANT_BOOL**値を VARIANT_TRUE に設定、複数の行に追加されたことを示します、 **Recordset**します。  
+ *その他のデータ*  
+ **VARIANT_BOOL**値。 VARIANT_TRUE に設定した場合、**レコードセット**に追加された行が多いことを示します。  
   
  *adStatus*  
- [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md)状態値。  
+ [Eventstatusenum](../../../ado/reference/ado-api/eventstatusenum.md)状態の値です。  
   
- ときに**EndOfRecordset**が呼び出されると、このパラメーターを設定**adStatusOK**イベントの原因となった操作が成功した場合。 設定されている**adStatusCantDeny**場合、このイベントは、このイベントの原因となった操作のキャンセルを要求できません。  
+ **Endofrecordset**が呼び出されると、このパラメーターは、イベントの原因となった操作が成功した場合に**adstatusok**に設定されます。 このイベントの原因となった操作のキャンセルをこのイベントが要求できない場合は、 **Adstatuscantdeny**に設定されます。  
   
- 前に**EndOfRecordset**戻り値は、このパラメーターに設定する**adStatusUnwantedEvent**後続通知しないように設定します。  
+ **Endofrecordset**が返される前に、このパラメーターを**adStatusUnwantedEvent**に設定して、後続の通知が行われないようにします。  
   
  *pRecordset*  
- A **Recordset**オブジェクト。 **Recordset**のこのイベントが発生しました。  
+ **レコードセット**オブジェクトです。 このイベントが発生した**レコードセット**。  
   
-## <a name="remarks"></a>コメント  
- **EndOfRecordset**場合に、イベントが発生する可能性があります、 [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)操作は失敗します。  
+## <a name="remarks"></a>解説  
+ MoveNext**レコードセット**イベントは、 [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)操作が失敗した場合に発生する可能性があります。  
   
- 末尾を越えた移動を試行したときに、このイベント ハンドラーが呼び出されます、 **Recordset**呼び出しの結果などのオブジェクト**MoveNext**します。 ただし、このイベント中にデータベースから複数のレコードを取得してそれらの末尾に追加、 **Recordset**します。 この場合は、 *fMoreData* 、VARIANT_TRUE とからの戻り値に**EndOfRecordset**します。 呼び出して**MoveNext**新しく取得したレコードにアクセスするには、もう一度です。  
+ このイベントハンドラーは、おそらく**MoveNext**を呼び出した結果として、**レコードセット**オブジェクトの末尾を越えて移動しようとしたときに呼び出されます。 ただし、このイベントでは、データベースからより多くのレコードを取得し、レコード**セット**の末尾に追加することができます。 その場合は、 *Ffar データ*を VARIANT_TRUE に設定し、 **endofrecordset**からを返します。 次に、再度**MoveNext**を呼び出して、新しく取得したレコードにアクセスします。  
   
-## <a name="see-also"></a>関連項目  
- [ADO イベント モデルの例 (vc++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
+## <a name="see-also"></a>参照  
+ [ADO Events モデルの例 (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [ADO イベント ハンドラーの概要](../../../ado/guide/data/ado-event-handler-summary.md)

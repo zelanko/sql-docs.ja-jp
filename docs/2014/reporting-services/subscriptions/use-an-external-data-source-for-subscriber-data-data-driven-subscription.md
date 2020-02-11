@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8c8dfb41890049918799bb3638f52dc222fc5dcf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100638"
 ---
 # <a name="use-an-external-data-source-for-subscriber-data-data-driven-subscription"></a>サブスクライバー データに対して外部データ ソースを使用する (データ ドリブン サブスクリプション)
@@ -60,7 +60,7 @@ ms.locfileid: "66100638"
 -   レポート サーバーでは、結果セットの行ごとにレポート配信が作成されます。 結果セットが 300 行の場合、レポート サーバーでは、300 個のレポートについて配信が試行されます。  
   
 ## <a name="setting-delivery-options-using-variable-data-from-a-subscriber-database"></a>サブスクライバー データベースの変数データを使用した配信オプションの設定  
- サブスクライバー データベースのデータを使用して、各受信者に関する配信オプションをカスタマイズできます。 利用可能なオプションは、使用している配信拡張機能の種類によって決まります。 レポート サーバーの電子メール配信拡張機能を使用している場合、クエリは、各サブスクライバーの電子メール エイリアスを含む必要があります。 ファイル共有配信を使用している場合、サブスクライバー固有のレポート ファイルの作成や配信先の指定に使用できる値をサブスクライバー データに含める必要があります。 詳細については、次を参照してください。 [File Share Delivery in Reporting Services](file-share-delivery-in-reporting-services.md)と[Reporting Services での電子メール配信](e-mail-delivery-in-reporting-services.md)します。  
+ サブスクライバー データベースのデータを使用して、各受信者に関する配信オプションをカスタマイズできます。 利用可能なオプションは、使用している配信拡張機能の種類によって決まります。 レポート サーバーの電子メール配信拡張機能を使用している場合、クエリは、各サブスクライバーの電子メール エイリアスを含む必要があります。 ファイル共有配信を使用している場合、サブスクライバー固有のレポート ファイルの作成や配信先の指定に使用できる値をサブスクライバー データに含める必要があります。 詳細については、「 [Reporting Services でのファイル共有の配信](file-share-delivery-in-reporting-services.md)」と「 [Reporting Services での電子メール配信](e-mail-delivery-in-reporting-services.md)」を参照してください。  
   
 ## <a name="passing-parameter-values-from-the-subscriber-database-to-the-report"></a>サブスクライバー データベースからレポートへのパラメーター値の受け渡し  
  パラメーター化されたレポート用のデータ ドリブン サブスクリプションを作成する場合、変数パラメーター値を使用して、各レポートの出力をカスタマイズできます。 たとえば、サブスクライバー データベースには、レポート データのフィルター処理に使用できる従業員 ID 番号、雇用日、職種、および勤務地情報が含まれていることがあります。 これらの列データまたは他の使用可能な列データに基づいたパラメーターをレポートが受け取ると、そのパラメーターを適切な列にマップすることができます。  
@@ -79,7 +79,7 @@ ms.locfileid: "66100638"
  これらの変更のいずれかを行う場合は、サブスクリプションを更新する必要があります。  
   
 ## <a name="see-also"></a>参照  
- [作成、変更、およびデータ ドリブン サブスクリプションの削除](data-driven-subscriptions.md)   
+ [データドリブンサブスクリプションの作成、変更、および削除](data-driven-subscriptions.md)   
  [Data-Driven Subscriptions](data-driven-subscriptions.md)   
  [サブスクリプションと配信 &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)  
   

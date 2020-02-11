@@ -1,5 +1,5 @@
 ---
-title: では (TRANSACT-SQL) |Microsoft Docs
+title: dbo. sysjobschedules (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -20,27 +20,27 @@ ms.assetid: ccdafec7-2a9b-4356-bffb-1caa3a12db59
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a7f2dfc6196bfba6c274eb45a45745159447cc39
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68061177"
 ---
-# <a name="dbosysjobschedules-transact-sql"></a>では (TRANSACT-SQL)
+# <a name="dbosysjobschedules-transact-sql"></a>dbo. sysjobschedules (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  によって実行されるジョブのスケジュール情報を含む[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント。 このテーブルに格納されます、 **msdb**データベース。  
+  エージェントによって[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]実行されるジョブのスケジュール情報を格納します。 このテーブルは、 **msdb**データベースに格納されます。  
   
-> **注:** **Sysjobschedules**テーブル更新 20 分ごと、によって返される値に影響する可能性があります、 **sp_help_jobschedule**ストアド プロシージャ。  
+> **注:****Sysjobschedules**テーブルは20分ごとに更新され、 **sp_help_jobschedule**ストアドプロシージャによって返される値に影響を与える可能性があります。  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
 |**schedule_id**|**int**|スケジュールの ID。|  
-|**job_id**|**uniqueidentifier**|ジョブの ID。|  
-|**next_run_date**|**int**|実行するジョブがスケジュールされている次の日。 日付の書式設定 yyyymmdd 形式で指定します。|  
-|**next_run_time**|**int**|ジョブが実行するスケジュールされた時刻。 時間は、HHMMSS の形式し、24 時間制を使用します。|  
+|**job_id**|**UNIQUEIDENTIFIER**|ジョブの ID。|  
+|**next_run_date**|**int**|ジョブの次回の実行予定日。 日付の形式は YYYYMMDD です。|  
+|**next_run_time**|**int**|ジョブの実行がスケジュールされている時刻。 時刻は HHMMSS 形式で、24時間制を使用します。|  
   
-## <a name="see-also"></a>関連項目  
- [dbo.sysschedules &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/dbo-sysschedules-transact-sql.md)  
+## <a name="see-also"></a>参照  
+ [Transact-sql&#41;&#40;の dbo の sysschedules](../../relational-databases/system-tables/dbo-sysschedules-transact-sql.md)  
   
   

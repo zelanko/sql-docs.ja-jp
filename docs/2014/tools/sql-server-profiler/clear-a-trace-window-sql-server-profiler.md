@@ -1,5 +1,5 @@
 ---
-title: オフに、トレース ウィンドウ (SQL Server Profiler) |Microsoft Docs
+title: トレースウィンドウの消去 (SQL Server プロファイラー) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 442c8ffca93052235db69394ed71ad2ff3157dfe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63316211"
 ---
 # <a name="clear-a-trace-window-sql-server-profiler"></a>トレース ウィンドウの消去 (SQL Server Profiler)
@@ -31,7 +31,7 @@ ms.locfileid: "63316211"
   
      トレース ウィンドウの内容が削除されます。 トレース ファイルまたはトレース テーブルを保存していた場合、トレース ファイルまたはトレース テーブルの内容は変わりません。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SQL Server Profiler](sql-server-profiler.md)  
   
   

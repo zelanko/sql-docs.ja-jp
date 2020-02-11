@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 257df5742c2f8dec7d48c6d3afb4d6c6373d058c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106890"
 ---
 # <a name="add-a-chart-to-a-report-report-builder-and-ssrs"></a>レポートへのグラフの追加 (レポート ビルダーおよび SSRS)
@@ -22,7 +22,7 @@ ms.locfileid: "66106890"
   
  グラフ データ領域をレポートに追加するには、グラフの新規作成ウィザードを実行するのが最も簡単な方法です。 このウィザードを使用して、縦棒グラフ、折れ線グラフ、円グラフ、横棒グラフ、および面グラフを作成できます。 これらのグラフおよびその他の種類のグラフは、手動で追加することもできます。  
   
- グラフ データ領域をデザイン画面に追加したら、グラフのグラフ データ ペインに数値データおよび非数値データのレポート データセット フィールドをドラッグします。 グラフをクリックして、グラフ データ ペインを表示します。このペインには、[系列グループ]、[カテゴリ グループ]、[値] という 3 つの領域があります。  
+ グラフ データ領域をデザイン画面に追加したら、グラフのグラフ データ ペインに数値データおよび非数値データのレポート データセット フィールドをドラッグします。 グラフをクリックすると、系列グループ、カテゴリ グループ、および値の 3 つの領域を持つグラフ データ ペインが表示されます。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -42,7 +42,7 @@ ms.locfileid: "66106890"
   
 ### <a name="to-add-a-chart-to-a-report"></a>レポートにグラフを追加するには  
   
-1.  レポートを作成し、データセットを定義します。 詳細については、次を参照してください。[レポートへのデータの追加&#40;レポート ビルダーおよび SSRS&#41;](../report-data/report-datasets-ssrs.md)します。  
+1.  レポートを作成し、データセットを定義します。 詳細については、「[レポート &#40;レポートビルダーおよび SSRS&#41;にデータを追加する](../report-data/report-datasets-ssrs.md)」を参照してください。  
   
 2.  **[挿入]** タブの **[グラフ]** をクリックし、次に **[グラフの挿入]** をクリックします。  
   

@@ -16,14 +16,14 @@ ms.assetid: 37000833-68f4-45f1-b2dd-7f75893d09d9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 71bc18b13061b844b35314239ffe4973155a0c87
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920724"
 ---
 # <a name="append-and-createparameter-methods-example-jscript"></a>Append および CreateParameter メソッドの例 (JScript)
-この例では、 [Append](../../../ado/reference/ado-api/append-method-ado.md)と[CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md)メソッドが入力パラメーターを持つストアド プロシージャを実行します。 切り取り、メモ帳または別のテキスト エディターに次のコードを貼り付けてととして保存**AppendJS.asp**します。  
+この例では、 [Append](../../../ado/reference/ado-api/append-method-ado.md)および[createparameter](../../../ado/reference/ado-api/createparameter-method-ado.md)メソッドを使用して、入力パラメーターを使用してストアドプロシージャを実行します。 次のコードを切り取ってメモ帳または別のテキストエディターに貼り付け、 **Appendjs**として保存します。  
   
 ```  
 <!-- BeginAppendJS -->  
@@ -141,9 +141,9 @@ body {
 <!-- EndAppendJS -->  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Append メソッド (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
  [CreateParameter メソッド (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   
  [Field オブジェクト](../../../ado/reference/ado-api/field-object.md)   
- [フィールド コレクション (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
+ [Fields コレクション (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Parameter オブジェクト](../../../ado/reference/ado-api/parameter-object.md)

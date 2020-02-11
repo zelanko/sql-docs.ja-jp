@@ -1,5 +1,5 @@
 ---
-title: sys.dm_pdw_query_stats_xe_file (TRANSACT-SQL) |Microsoft Docs
+title: dm_pdw_query_stats_xe_file (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -13,24 +13,24 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 6e1224db9ce74d214320231419301b1fbc1b84cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68044513"
 ---
-# <a name="sysdmpdwquerystatsxefile-transact-sql"></a>sys.dm_pdw_query_stats_xe_file (TRANSACT-SQL)
+# <a name="sysdm_pdw_query_stats_xe_file-transact-sql"></a>dm_pdw_query_stats_xe_file (Transact-sql)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  この DMV は非推奨し、将来のリリースで削除される予定です。 このリリースでは、0 行を返します。  
+  この DMV は非推奨とされており、今後のリリースでは削除される予定です。 このリリースでは、0行が返されます。  
   
-|列名|データ型|説明|範囲|  
+|列名|データ型|[説明]|Range|  
 |-----------------|---------------|-----------------|-----------|  
-|イベント|**nvarchar(60)**|このビューのキー。||  
+|イベント|**nvarchar (60)**|このビューのキー。||  
 |data|**xml**|||  
-|pdw_node_id|**int**|この Xevent のインスタンスが実行されているノードです。||  
+|pdw_node_id|**int**|この Xevent インスタンスが実行されているノード。||  
   
-## <a name="see-also"></a>関連項目  
- [SQL Data Warehouse と Parallel Data Warehouse の動的管理ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+## <a name="see-also"></a>参照  
+ [SQL Data Warehouse および並列データウェアハウスの動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

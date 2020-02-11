@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8019f762d6d80ced2688f0e93f7ad0e0a29bd3f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63313018"
 ---
 # <a name="print-dialog-box"></a>[印刷] ダイアログ ボックス
@@ -26,13 +26,13 @@ ms.locfileid: "63313018"
  **名前**  
  プリンターを指定します。 一覧からプリンターを選択します。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を閉じるか別のプリンターを選択するまで、選択したプリンターが既定のプリンターになります。 一覧の下のフィールドに表示される情報が、選択したプリンターに適用されます。  
   
- **ステータス**  
+ **状態**  
  選択したプリンターの状態を表します (ビジーや準備完了など)。  
   
- **型**  
+ **Type**  
  選択したプリンターを識別します。  
   
- **場所**  
+ **Where**  
  選択したプリンターと使用するプリンター ポートの場所を識別します。  
   
  **解説**  
@@ -48,10 +48,10 @@ ms.locfileid: "63313018"
  **すべて**  
  ドキュメント全体を印刷します。  
   
- **選択**  
+ **選択内容**  
  現在の選択部分だけを印刷します。 このオプションは、ドキュメントの一部または全体を選択すると使用できるようになります。  
   
- **[ページ]**  
+ **ページ**  
  **[ページ]** ボックスに入力したページを印刷します。  
   
 ## <a name="copies"></a>[印刷部数]  

@@ -15,14 +15,14 @@ ms.assetid: 135aab26-ff5c-4fd9-910f-65cdead0b47e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e3bcea9183d44b02e5f45b7bdb977573f283815b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67911705"
 ---
 # <a name="supports-method-example-vb"></a>Supports メソッドの例 (VB)
-この例では、[サポート](../../../ado/reference/ado-api/supports-method.md)レコード セットでサポートされるオプションを表示するメソッドが別のカーソルの種類で開かれています。 DisplaySupport プロシージャは、この手順を実行する必要があります。  
+この例では、[サポート](../../../ado/reference/ado-api/supports-method.md)メソッドを使用して、さまざまな種類のカーソルで開かれたレコードセットでサポートされているオプションを表示します。 この手順を実行するには、DisplaySupport プロシージャが必要です。  
   
 ```  
 'BeginSupportsVB  
@@ -161,6 +161,6 @@ End Sub
 'EndSupports2VB  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [RecordSet オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+## <a name="see-also"></a>参照  
+ [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Supports メソッド](../../../ado/reference/ado-api/supports-method.md)

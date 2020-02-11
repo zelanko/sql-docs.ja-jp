@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 82f3e362643df17d9105ad6987a851211bd22865
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479498"
 ---
 # <a name="edit-a-model-deployment-package"></a>モデルの配置パッケージの編集
@@ -27,13 +27,13 @@ ms.locfileid: "65479498"
 ## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
--   モデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスター データ サービス&#41;](administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
+-   モデル管理者である必要があります。 詳細については、「 [管理者 (マスター データ サービス)](administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
   
 -   モデル パッケージを編集するには、そのモデル パッケージが存在する必要があります。 詳細については、「[モデルの配置 (マスター データ サービス)](../../2014/master-data-services/deploying-models-master-data-services.md)」と「[ウィザードを使用したモデルの配置パッケージの作成](../../2014/master-data-services/create-a-model-deployment-package-by-using-the-wizard.md)」、または「[MDSModelDeploy を使用したモデルの配置パッケージの作成](../../2014/master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md)」を参照してください。  
   
 ### <a name="to-edit-a-model-deployment-package"></a>モデルの配置パッケージを編集するには  
   
-1.  Windows エクスプ ローラーの MDS サーバーで、移動*ドライブ*: \Program Files\Microsoft SQL server \120\master Data services \configuration にあります。  
+1.  MDS サーバーの Windows エクスプローラーで、*ドライブ*: 「services\configuration」に移動します。  
   
 2.  ModelPackageEditor.exe を実行します。  
   
@@ -43,7 +43,8 @@ ms.locfileid: "65479498"
   
 5.  配置する選択項目の一覧を確認します。 変更するには、 **[戻る]** をクリックして手順 4 を繰り返します。  
   
-6.  **[参照]** をクリックし、部分的なパッケージを保存するフォルダーに移動して、部分的なパッケージのファイル名を入力します (.pkg 拡張子を付けます)。 **[保存]** をクリックします。  
+6.  
+  **[参照]** をクリックし、部分的なパッケージを保存するフォルダーに移動して、部分的なパッケージのファイル名を入力します (.pkg 拡張子を付けます)。 **[保存]** をクリックします。  
   
 7.  **[完了]** をクリックします。  
   

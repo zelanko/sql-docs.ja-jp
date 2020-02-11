@@ -1,5 +1,5 @@
 ---
-title: sp_reinitmergepullsubscription (TRANSACT-SQL) |Microsoft Docs
+title: sp_reinitmergepullsubscription (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: 48464bc9-60aa-4886-b526-163f010102b8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 08a62e26c130b3753c90cfe05f7e4077ef86d5a4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68075711"
 ---
 # <a name="sp_reinitmergepullsubscription-transact-sql"></a>sp_reinitmergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  次回マージ エージェントの実行を再初期化のマージ プル サブスクリプションをマークします。 このストアド プロシージャは、サブスクリプション データベース内のサブスクライバーで実行されます。  
+  次回のマージエージェントの実行時に再初期化するために、マージプルサブスクリプションをマークします。 このストアドプロシージャは、サブスクライバー側のサブスクリプションデータベースで実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,19 +40,19 @@ sp_reinitmergepullsubscription [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publisher = ] 'publisher'` パブリッシャーの名前です。 *パブリッシャー*は**sysname**、既定値は ALL です。  
+`[ @publisher = ] 'publisher'`パブリッシャーの名前を指定します。 *publisher*は**sysname**で、既定値は ALL です。  
   
-`[ @publisher_db = ] 'publisher_db'` パブリッシャー データベースの名前です。 *publisher_db*は**sysname**、既定値は ALL です。  
+`[ @publisher_db = ] 'publisher_db'`パブリッシャーデータベースの名前を指定します。 *publisher_db*は**sysname**で、既定値は ALL です。  
   
-`[ @publication = ] 'publication'` パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値は ALL です。  
+`[ @publication = ] 'publication'`パブリケーションの名前を指定します。 *publication*は**sysname**,、既定値は ALL です。  
   
-`[ @upload_first = ] 'upload_first'` サブスクリプションを再初期化する前に、サブスクライバーでの変更をアップロードするかどうか。 *\@upload_first*は **nvarchar (5)** 、既定値は FALSE。 場合**true**変更をアップロードして、サブスクリプションを再初期化します。 場合**false**変更はアップロードされません。  
+`[ @upload_first = ] 'upload_first'`サブスクリプションを再初期化する前に、サブスクライバーでの変更をアップロードするかどうかを指定します。 *upload_first*は**nvarchar (5)**,、既定値は FALSE です。 **True**の場合、サブスクリプションが再初期化される前に変更がアップロードされます。 **False**の場合、変更はアップロードされません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>コメント  
- **sp_reinitmergepullsubscription**はマージ レプリケーションで使用します。  
+## <a name="remarks"></a>解説  
+ **sp_reinitmergepullsubscription**は、マージレプリケーションで使用します。  
   
  パラメーター化フィルターを追加、削除、変更する場合は、再初期化の際、サブスクライバーで保留中の変更をパブリッシャーにアップロードできません。 保留中の変更をアップロードしたい場合は、フィルターを変更する前にすべてのサブスクリプションを同期してください。  
   
@@ -63,11 +63,11 @@ sp_reinitmergepullsubscription [ [ @publisher = ] 'publisher' ]
  [!code-sql[HowTo#sp_reinitmergepullsubwithupload](../../relational-databases/replication/codesnippet/tsql/sp-reinitmergepullsubscr_2.sql)]  
   
 ## <a name="permissions"></a>アクセス許可  
- メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_reinitmergepullsubscription**します。  
+ **Sp_reinitmergepullsubscription**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [サブスクリプションの再初期化](../../relational-databases/replication/reinitialize-a-subscription.md)   
  [サブスクリプションの再初期化](../../relational-databases/replication/reinitialize-subscriptions.md)   
- [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

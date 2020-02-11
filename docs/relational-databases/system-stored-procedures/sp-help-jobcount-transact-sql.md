@@ -1,5 +1,5 @@
 ---
-title: sp_help_jobcount (TRANSACT-SQL) |Microsoft Docs
+title: sp_help_jobcount (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,16 @@ ms.assetid: ae8ef851-646c-4889-bc11-c8ec78762572
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1f874aa26001b7d595f319a59d5c116907aa096e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68054963"
 ---
-# <a name="sphelpjobcount-transact-sql"></a>sp_help_jobcount (Transact-SQL)
+# <a name="sp_help_jobcount-transact-sql"></a>sp_help_jobcount (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  関連付けられているスケジュールをジョブの数を提供します。  
+  スケジュールがアタッチされているジョブの数を示します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,9 +41,9 @@ sp_help_jobcount
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @schedule_id = ] schedule_id` 一覧表示するスケジュールの識別子。 *schedule_id*は**int**、既定値はありません。 いずれか*schedule_id*または*schedule_name*指定することがあります。  
+`[ @schedule_id = ] schedule_id`一覧表示するスケジュールの識別子を設定します。 *schedule_id*は**int**,、既定値はありません。 *Schedule_id*または*schedule_name*のいずれかを指定できます。  
   
-`[ @schedule_name = ] 'schedule_name'` 一覧表示するスケジュールの名前。 *schedule_name*は**sysname**、既定値はありません。 いずれか*schedule_id*または*schedule_name*指定することがあります。  
+`[ @schedule_name = ] 'schedule_name'`一覧表示するスケジュールの名前を指定します。 *schedule_name*は**sysname**であり、既定値はありません。 *Schedule_id*または*schedule_name*のいずれかを指定できます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -51,15 +51,15 @@ sp_help_jobcount
 ## <a name="result-sets"></a>結果セット  
  次の結果セットを返します。  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
-|**JobCount**|**int**|指定されたスケジュールに対するジョブの数。|  
+|**JobCount**|**int**|指定されたスケジュールのジョブの数。|  
   
-## <a name="remarks"></a>コメント  
- この手順では、指定されたスケジュールにアタッチされたジョブの数が一覧表示します。  
+## <a name="remarks"></a>解説  
+ この手順では、指定したスケジュールにアタッチされているジョブの数を一覧表示します。  
   
 ## <a name="permissions"></a>アクセス許可  
- 既定では、このストアド プロシージャを実行できるのは、 **sysadmin** 固定サーバー ロールのメンバーです。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
+ 既定では、 **sysadmin**固定サーバーロールのメンバーは、このストアドプロシージャを実行できます。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
   
 -   **SQLAgentUserRole**  
   
@@ -69,9 +69,9 @@ sp_help_jobcount
   
  これらのロールの権限の詳細については、「 [SQL Server エージェントの固定データベース ロール](../../ssms/agent/sql-server-agent-fixed-database-roles.md)」を参照してください。  
   
- メンバーだけ**sysadmin**他のユーザーによって所有されているジョブの数を表示できます。  
+ **Sysadmin**のメンバーだけが、他のユーザーによって所有されているジョブの数を表示できます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、`NightlyJobs` スケジュールにアタッチされたジョブの数を一覧表示します。  
   
 ```  
@@ -83,11 +83,11 @@ EXEC sp_help_jobcount
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [SQL Server エージェント ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
- [sp_add_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
- [sp_attach_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   
- [sp_delete_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
- [sp_detach_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)  
+## <a name="see-also"></a>参照  
+ [Transact-sql&#41;&#40;のストアドプロシージャの SQL Server エージェント](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+ [sp_add_schedule &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
+ [sp_attach_schedule &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   
+ [sp_delete_schedule &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
+ [sp_detach_schedule &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)  
   
   

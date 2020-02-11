@@ -1,5 +1,5 @@
 ---
-title: ADOX (ADO) プロバイダーのサポート |Microsoft Docs
+title: ADOX のプロバイダーサポート (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,51 +13,51 @@ ms.assetid: 64234ce5-dc46-4c8a-a316-61956b6b9abb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2b07f4563d54254310c08c8c132d0729b8ccdc6b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923214"
 ---
 # <a name="provider-support-for-adox-ado"></a>ADOX のプロバイダーのサポート (ADO)
-ADOX の特定の機能は、OLE DB データ プロバイダーによってサポートされているがします。 ADOX がで完全にサポート、 [OLE DB Provider for Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md)します。 サポートされていない機能、 [Microsoft OLE DB Provider for SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md)、 [Microsoft OLE DB Provider for ODBC](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md)、または[Microsoft OLE DB Provider for Oracle](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-oracle.md)は次の表に一覧表示されます。 ADOX は他の Microsoft OLE DB プロバイダーでサポートされていません。  
+OLE DB データプロバイダーによっては、ADOX の特定の機能がサポートされていません。 ADOX は、 [OLE DB Provider For Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md)で完全にサポートされています。 次の表に、 [microsoft OLE DB provider for SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md)、 [microsoft OLE DB provider for ODBC](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md)、または[Microsoft OLE DB Provider for Oracle](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-oracle.md)でサポートされていない機能を示します。 ADOX は、他の Microsoft OLE DB プロバイダーではサポートされていません。  
   
 ## <a name="microsoft-ole-db-provider-for-sql-server"></a>Microsoft OLE DB Provider for SQL Server  
   
 |オブジェクトまたはコレクション|使用制限|  
 |--------------------------|-----------------------|  
-|**テーブル**コレクション|プロパティは、既存のオブジェクトを参照するときに、オブジェクトの作成前に、読み取り専用読み取り/書き込みです。|  
-|**ビュー**コレクション|**ビュー**はサポートされていません。|  
-|**プロシージャ**コレクション|**Append**と**削除**メソッドはサポートされていません。|  
-|**プロシージャ**オブジェクト|**コマンド**プロパティがサポートされていません。|  
-|**キー**コレクション|**Append**と**削除**メソッドはサポートされていません。|  
-|**ユーザー**コレクション|**ユーザー**はサポートされていません。|  
-|**グループ**コレクション|**グループ**はサポートされていません。|  
+|**Tables**コレクション|プロパティは、オブジェクトの作成前には読み取り/書き込みが行われ、既存のオブジェクトを参照する場合は読み取り専用になります。|  
+|**Views**コレクション|**ビュー**はサポートされていません。|  
+|**Procedures**コレクション|**Append**メソッドと**Delete**メソッドはサポートされていません。|  
+|**プロシージャ**オブジェクト|**Command**プロパティはサポートされていません。|  
+|**Keys**コレクション|**Append**メソッドと**Delete**メソッドはサポートされていません。|  
+|**Users**コレクション|**ユーザー**はサポートされていません。|  
+|**Groups**コレクション|**グループ**はサポートされていません。|  
   
 ## <a name="microsoft-ole-db-provider-for-odbc"></a>Microsoft OLE DB Provider for ODBC  
   
 |オブジェクトまたはコレクション|使用制限|  
 |--------------------------|-----------------------|  
-|**カタログ**オブジェクト|**作成**メソッドがサポートされていません。|  
-|**テーブル**コレクション|**Append**と**削除**メソッドはサポートされていません。 プロパティは、既存のオブジェクトを参照するときに、オブジェクトの作成前に、読み取り専用読み取り/書き込みです。|  
-|**プロシージャ**コレクション|**Append**と**削除**メソッドはサポートされていません。|  
-|**プロシージャ**オブジェクト|**コマンド**プロパティがサポートされていません。|  
-|**インデックス**コレクション|**Append**と**削除**メソッドはサポートされていません。|  
-|**キー**コレクション|**Append**と**削除**メソッドはサポートされていません。|  
-|**ユーザー**コレクション|**ユーザー**はサポートされていません。|  
-|**グループ**コレクション|**グループ**はサポートされていません。|  
+|**Catalog**オブジェクト|**Create**メソッドはサポートされていません。|  
+|**Tables**コレクション|**Append**メソッドと**Delete**メソッドはサポートされていません。 プロパティは、オブジェクトの作成前には読み取り/書き込みが行われ、既存のオブジェクトを参照する場合は読み取り専用になります。|  
+|**Procedures**コレクション|**Append**メソッドと**Delete**メソッドはサポートされていません。|  
+|**プロシージャ**オブジェクト|**Command**プロパティはサポートされていません。|  
+|**Indexes**コレクション|**Append**メソッドと**Delete**メソッドはサポートされていません。|  
+|**Keys**コレクション|**Append**メソッドと**Delete**メソッドはサポートされていません。|  
+|**Users**コレクション|**ユーザー**はサポートされていません。|  
+|**Groups**コレクション|**グループ**はサポートされていません。|  
   
 ## <a name="microsoft-ole-db-provider-for-oracle"></a>Microsoft OLE DB Provider for Oracle  
   
 |オブジェクトまたはコレクション|使用制限|  
 |--------------------------|-----------------------|  
-|**カタログ**オブジェクト|**作成**メソッドがサポートされていません。|  
-|**テーブル**コレクション|**Append**と**削除**メソッドはサポートされていません。 プロパティは、既存のオブジェクトを参照するときに、オブジェクトの作成前に、読み取り専用読み取り/書き込みです。|  
-|**ビュー**コレクション|**Append**と**削除**メソッドはサポートされていません。|  
-|**ビュー**オブジェクト|**コマンド**プロパティがサポートされていません。|  
-|**プロシージャ**オブジェクト|**Append**と**削除**メソッドはサポートされていません。|  
-|**プロシージャ**オブジェクト|**コマンド**プロパティがサポートされていません。|  
-|**インデックス**コレクション|**Append**と**削除**メソッドはサポートされていません。|  
-|**キー**コレクション|**Append**と**削除**メソッドはサポートされていません。|  
-|**ユーザー**コレクション|**ユーザー**はサポートされていません。|  
-|**グループ**コレクション|**グループ**はサポートされていません。|
+|**Catalog**オブジェクト|**Create**メソッドはサポートされていません。|  
+|**Tables**コレクション|**Append**メソッドと**Delete**メソッドはサポートされていません。 プロパティは、オブジェクトの作成前には読み取り/書き込みが行われ、既存のオブジェクトを参照する場合は読み取り専用になります。|  
+|**Views**コレクション|**Append**メソッドと**Delete**メソッドはサポートされていません。|  
+|オブジェクトの**表示**|**Command**プロパティはサポートされていません。|  
+|**Procedures**オブジェクト|**Append**メソッドと**Delete**メソッドはサポートされていません。|  
+|**プロシージャ**オブジェクト|**Command**プロパティはサポートされていません。|  
+|**Indexes**コレクション|**Append**メソッドと**Delete**メソッドはサポートされていません。|  
+|**Keys**コレクション|**Append**メソッドと**Delete**メソッドはサポートされていません。|  
+|**Users**コレクション|**ユーザー**はサポートされていません。|  
+|**Groups**コレクション|**グループ**はサポートされていません。|

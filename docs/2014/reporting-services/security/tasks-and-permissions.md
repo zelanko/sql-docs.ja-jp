@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 01cbf00850c5dd57e7ca1575a1a0cb826c009714
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101459"
 ---
 # <a name="tasks-and-permissions"></a>タスクと権限
@@ -32,20 +32,20 @@ ms.locfileid: "66101459"
   
  タスクは、そのタスクがロールの一部であり、そのロールがロールの割り当てに含まれている場合にのみ実行できます。 そのため、たとえば "モデルの表示" タスクがロールに含まれていない場合や、そのロールがロールの割り当てに含まれていない場合、ユーザーはレポート モデルを表示できません。 次の図では、権限がタスクにどのように組み込まれるか、および特定のロールの割り当てに使用できるロールにタスクがどのように組み込まれるかを示します。  
   
- ![アクセス許可とタスク図](../media/report-securityobjects.gif "アクセス許可とタスク図")  
+ ![権限とタスク図](../media/report-securityobjects.gif "権限とタスク図")  
 権限とタスク図  
   
 ## <a name="system-and-item-level-tasks"></a>システムレベルおよびアイテムレベルのタスク  
  タスクは、システムレベルとアイテムレベルの 2 つのカテゴリに分類されます。 ロールは、単一のカテゴリからのみタスクを含めることができます。 次の表で、タスクの各カテゴリについて説明します。  
   
-|カテゴリ|説明|  
+|カテゴリ|[説明]|  
 |--------------|-----------------|  
 |[アイテムレベルのタスク](tasks-and-permissions-item-level-tasks.md)|フォルダー、レポート、レポート モデル、リソースなど、レポート サーバーで管理されるアイテムに対して実行されるアクションです。<br /><br /> アイテムレベルのタスクは、レポート サーバー フォルダーの名前空間に対して有効です。 レポート サーバーのフォルダーまたは URL によってアクセスするすべてのアイテムは、アイテムレベルのタスクを含んだロールの割り当てによってセキュリティ保護されています。|  
 |[システムレベルのタスク](tasks-and-permissions-system-level-tasks.md)|ジョブまたは共有スケジュールの管理などの、システムレベルで実行されるアクションです。これらのアクションは、多くのアイテムで使用できます。 システムレベルのタスクは、レポート サーバー フォルダーの名前空間の外部に対して有効です。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ロールの定義](role-definitions.md)   
- [Predefined Roles](role-definitions-predefined-roles.md)   
+ [定義済みロール](role-definitions-predefined-roles.md)   
  [ネイティブ モードのレポート サーバーに対する権限の許可](granting-permissions-on-a-native-mode-report-server.md)  
   
   

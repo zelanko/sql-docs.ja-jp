@@ -15,13 +15,14 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: af5bbc51420d8f32144bc91f687ae58b86d10d52
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479418"
 ---
 # <a name="derived-hierarchies-master-data-services"></a>派生階層 (Master Data Services)
+  
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] の派生階層は、モデル内のエンティティ間に既に存在するドメインベースの属性のリレーションシップから派生します。  
   
  派生階層を作成することで、モデル内の既存のドメイン ベースの属性リレーションシップを強調表示できます。  
@@ -53,7 +54,7 @@ ms.locfileid: "65479418"
   
  階層構造は、メンバーがグループ化されている方法を示します。 ほとんどのメンバーを持つエンティティは一番下に位置します。  
   
- ![モデル構造体から派生した階層](../../2014/master-data-services/media/mds-conc-derived-hierarchy-structure.gif "モデル構造から派生した階層")  
+ ![モデル構造から派生した階層](../../2014/master-data-services/media/mds-conc-derived-hierarchy-structure.gif "モデル構造から派生した階層")  
   
  派生階層では、Product と Subcategory 間のリレーションシップを強調表示してから、Subcategory と Category 間のリレーションシップを強調表示できます。 この階層内にメンバーを表示すると、ツリー内の各レベルに同じエンティティのメンバーが含まれています。  
   
@@ -70,22 +71,22 @@ ms.locfileid: "65479418"
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  
-|新しい派生階層を作成する。|[派生階層を作成する (マスター データ サービス)](../../2014/master-data-services/create-a-derived-hierarchy-master-data-services.md)|  
-|既存の派生階層のレベルを非表示にするか、または削除する。|[派生階層のレベルを非表示にするか削除する (マスター データ サービス)](../../2014/master-data-services/hide-or-delete-levels-in-a-derived-hierarchy-master-data-services.md)|  
-|既存の派生階層の名前を変更する。|[派生階層名を変更する (マスター データ サービス)](../../2014/master-data-services/change-a-derived-hierarchy-name-master-data-services.md)|  
-|既存の派生階層を削除する。|[派生階層を削除する (マスター データ サービス)](../../2014/master-data-services/delete-a-derived-hierarchy-master-data-services.md)|  
+|新しい派生階層を作成する。|[派生階層 &#40;マスターデータサービスを作成し&#41;](../../2014/master-data-services/create-a-derived-hierarchy-master-data-services.md)|  
+|既存の派生階層のレベルを非表示にするか、または削除する。|[派生階層のレベルの非表示または削除 &#40;マスターデータサービス&#41;](../../2014/master-data-services/hide-or-delete-levels-in-a-derived-hierarchy-master-data-services.md)|  
+|既存の派生階層の名前を変更する。|[派生階層名を変更する &#40;マスターデータサービス&#41;](../../2014/master-data-services/change-a-derived-hierarchy-name-master-data-services.md)|  
+|既存の派生階層を削除する。|[派生階層 &#40;マスターデータサービスの削除&#41;](../../2014/master-data-services/delete-a-derived-hierarchy-master-data-services.md)|  
 |||  
   
 ## <a name="related-content"></a>関連コンテンツ  
   
--   [ドメインベースの属性 (マスター データ サービス)](../../2014/master-data-services/domain-based-attributes-master-data-services.md)  
+-   [ドメインベースの属性 &#40;マスターデータサービス&#41;](../../2014/master-data-services/domain-based-attributes-master-data-services.md)  
   
--   [明示的階層 (マスター データ サービス)](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)  
+-   [明示的階層 &#40;マスターデータサービス&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)  
   
--   [再帰型階層 (マスター データ サービス)](../../2014/master-data-services/recursive-hierarchies-master-data-services.md)  
+-   [再帰型階層 &#40;マスターデータサービス&#41;](../../2014/master-data-services/recursive-hierarchies-master-data-services.md)  
   
--   [明示的なキャップを持つ派生階層 (マスター データ サービス)](../../2014/master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)  
+-   [明示的なキャップを持つ派生階層 &#40;マスターデータサービス&#41;](../../2014/master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)  
   
--   [コレクション (マスター データ サービス)](../../2014/master-data-services/collections-master-data-services.md)  
+-   [コレクション &#40;マスターデータサービス&#41;](../../2014/master-data-services/collections-master-data-services.md)  
   
   

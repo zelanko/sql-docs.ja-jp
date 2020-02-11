@@ -11,25 +11,26 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d2b4fbb59c21c66c7b6157a1ed06ce5bf040858a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479377"
 ---
 # <a name="import-statuses-master-data-services"></a>インポート状態 (マスター データ サービス)
+  
   **[ステージング バッチ]** ページの **[統合管理]** 機能領域に表示される状態は次のとおりです。  
   
-|状態|説明|Status_ID|  
+|Status|[説明]|Status_ID|  
 |------------|-----------------|----------------|  
-|実行用のキューに登録済み|バッチ処理が開始されていません。|1|  
+|実行用のキューに登録済み|バッチ処理が開始されていません。|1 で保護されたプロセスとして起動されました|  
 |実行中|バッチ処理中です。|2|  
-|[完了]|バッチ処理が完了しています。|3|  
+|Completed|バッチ処理が完了しています。|3|  
 |消去用のキューに登録済み|バッチ処理が完了しており、消去されます。|4|  
 |クリア|バッチ処理が消去されました。|5|  
   
 ## <a name="see-also"></a>参照  
- [読み込むか、ステージング処理を使用してマスター データ サービス内のメンバーを更新します。](add-update-and-delete-data-master-data-services.md)   
- [データのインポート&#40;マスター データ サービス&#41;](overview-importing-data-from-tables-master-data-services.md)  
+ [ステージング処理を使用したマスターデータサービスのメンバーの読み込みまたは更新](add-update-and-delete-data-master-data-services.md)   
+ [データのインポート &#40;マスターデータサービス&#41;](overview-importing-data-from-tables-master-data-services.md)  
   
   

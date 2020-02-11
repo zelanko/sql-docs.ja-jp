@@ -11,14 +11,14 @@ ms.assetid: 09063f43-f5f0-4cf0-baa9-12fec8898997
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 71f99fadf1b4a0885dd1615de781cbc393c6da33
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68069941"
 ---
 # <a name="executing-statements-odbc"></a>ステートメントの実行 (ODBC)
-ODBC アプリケーションでは、SQL ステートメントを実行することによってほとんどすべてのデータベースへのアクセスを実行します。 イベントの一般的な手順では、ステートメント ハンドルを割り当て、ステートメント属性を設定、ステートメントを実行して、すべての結果を取得およびステートメント ハンドルを解放します。  
+ODBC アプリケーションでは、SQL ステートメントを実行することで、ほぼすべてのデータベースアクセスが実行されます。 イベントの一般的なシーケンスは、ステートメントハンドルを割り当て、ステートメントの属性を設定し、ステートメントを実行し、結果を取得して、ステートメントハンドルを解放することです。  
   
  このセクションでは、次のトピックを扱います。  
   

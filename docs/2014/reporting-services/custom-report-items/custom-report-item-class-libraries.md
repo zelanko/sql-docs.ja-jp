@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b7fc20f857f42c854fcf01947c39ea88206bb5b8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63264893"
 ---
 # <a name="custom-report-item-class-libraries"></a>カスタム レポート アイテムのクラス ライブラリ
@@ -60,10 +60,11 @@ ms.locfileid: "63264893"
 |`InitializeNewComponent`|新しいカスタム レポート アイテムの作成時に呼び出されます。|  
 |`Invalidate`|コントロールの表面全体を再描画します。|  
 |`OnDragEnter`<br /><br /> `OnDragDrop`|オブジェクトをコントロールにドラッグすると呼び出されます。|  
-|`OnPaint`|`Paint` イベントに応答して呼び出されます。|  
+|`OnPaint`|
+  `Paint` イベントに応答して呼び出されます。|  
   
 ### <a name="microsoftreportdesignercustomreportitemattribute"></a>Microsoft.ReportDesigner.CustomReportItemAttribute  
- この属性は、カスタム レポート アイテムの種類を識別するために使用されます。 名前の値に一致する必要があります、<`Name`> の属性、`ReportItem`レポート デザイナー構成ファイル内の要素。  
+ この属性は、カスタム レポート アイテムの種類を識別するために使用されます。 名前はレポートデザイナー構成ファイル内の`Name` `ReportItem`要素の <> 属性の値と一致する必要があります。  
   
 #### <a name="public-methods"></a>パブリック メソッド  
   
@@ -81,15 +82,19 @@ ms.locfileid: "63264893"
 |`LocalizedNameAttribute`|LocalizedNameAttribute オブジェクトを構築します。|  
   
 ### <a name="microsoftreportdesigneradornment"></a>Microsoft.ReportDesigner.Adornment  
- `Adornment` クラスは、カスタム レポート アイテムのデザイン時コンポーネントによって、デザイン画面のメインの四角形の外に領域を作成するために使用されます。 これらの領域では、マウス クリックやドラッグ アンド ドロップ操作などのユーザー インターフェイス イベントを扱うことができます。  
+ 
+  `Adornment` クラスは、カスタム レポート アイテムのデザイン時コンポーネントによって、デザイン画面のメインの四角形の外に領域を作成するために使用されます。 これらの領域では、マウス クリックやドラッグ アンド ドロップ操作などのユーザー インターフェイス イベントを扱うことができます。  
   
 #### <a name="public-methods"></a>パブリック メソッド  
   
 |||  
 |-|-|  
-|`OnShow`|`Adornment` がアクティブになると呼び出されます。|  
-|`OnHide`|`Adornment` が非アクティブになると呼び出されます。|  
-|`Paint`|`Paint` イベントに応答して呼び出されます。|  
+|`OnShow`|
+  `Adornment` がアクティブになると呼び出されます。|  
+|`OnHide`|
+  `Adornment` が非アクティブになると呼び出されます。|  
+|`Paint`|
+  `Paint` イベントに応答して呼び出されます。|  
 |`OnDragEnter`<br /><br /> `OnDragOver`<br /><br /> `OnDragLeave`<br /><br /> `OnDragDrop`|オブジェクトを `Adornment` にドラッグすると呼び出されます。|  
   
 ### <a name="microsoftreportdesigneradornerservice"></a>Microsoft.ReportDesigner.AdornerService  
@@ -121,7 +126,8 @@ ms.locfileid: "63264893"
 |`EditValue`|式エディターを呼び出して、渡されたオブジェクト値で初期化します。|  
   
 ### <a name="microsoftreportdesignerifieldsdataobject"></a>Microsoft.ReportDesigner.IFieldsDataObject  
- このクラスは [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] フィールドのコレクションであり、デザイン環境でドラッグ アンド ドロップ イベントをサポートするために使用されます。 `IReportItemDataObject`から継承します。  
+ このクラスは [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] フィールドのコレクションであり、デザイン環境でドラッグ アンド ドロップ イベントをサポートするために使用されます。 
+  `IReportItemDataObject` から継承されます。  
   
 #### <a name="public-properties"></a>パブリック プロパティ  
   
@@ -131,7 +137,7 @@ ms.locfileid: "63264893"
 |`Fields`|ドロップされるフィールド (`Microsoft.ReportDesigner.Field`) のコレクション|  
   
 ## <a name="see-also"></a>参照  
- [レポート定義言語 (SSRS)](../reports/report-definition-language-ssrs.md)   
+ [レポート定義言語 &#40;SSRS&#41;](../reports/report-definition-language-ssrs.md)   
  [カスタム レポート アイテムの実行時コンポーネントの作成](creating-a-custom-report-item-run-time-component.md)   
  [カスタム レポート アイテムのデザイン時コンポーネントの作成](creating-a-custom-report-item-design-time-component.md)  
   

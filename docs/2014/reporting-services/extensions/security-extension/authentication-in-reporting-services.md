@@ -16,19 +16,24 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c4fc4d98eb32fb07def2fd317ebb7f5a6f6332cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63282156"
 ---
 # <a name="authentication-in-reporting-services"></a>Reporting Services での認証
   認証とは、ユーザーの本人性を立証するプロセスです。 ユーザー認証にはさまざまな方法がありますが、 最も一般的なのはユーザー パスワードを使用する方法です。 たとえば、フォーム認証を実装する場合は、ユーザーに対して資格情報の提示を要求し (通常は、ログイン名とパスワードを要求するインターフェイスを使用)、データベース テーブルや構成ファイルなどのデータ ストアと照合して、そのユーザーが本人かどうかを検証します。 資格情報の有効性を確認できない場合は、認証プロセスが失敗し、そのユーザーは匿名ユーザーであると見なされます。  
   
 ## <a name="custom-authentication-in-reporting-services"></a>Reporting Services でのカスタム認証  
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] では、統合セキュリティを使用するか、またはユーザーの資格情報を明示的に受信して検証することによって、Windows オペレーティング システムがユーザー認証を実施します。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] では、カスタム認証を開発して追加の認証方法をサポートできます。 そのためには、セキュリティ拡張機能インターフェイス <xref:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension> を使用します。 レポート サーバーであらゆる拡張機能を配置および使用できるように、すべての拡張機能が <xref:Microsoft.ReportingServices.Interfaces.IExtension> ベース インターフェイスから継承されます。 <xref:Microsoft.ReportingServices.Interfaces.IExtension> および <xref:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension> は、<xref:Microsoft.ReportingServices.Interfaces> 名前空間のメンバーです。  
+ 
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] では、統合セキュリティを使用するか、またはユーザーの資格情報を明示的に受信して検証することによって、Windows オペレーティング システムがユーザー認証を実施します。 
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] では、カスタム認証を開発して追加の認証方法をサポートできます。 そのためには、セキュリティ拡張機能インターフェイス <xref:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension> を使用します。 レポート サーバーであらゆる拡張機能を配置および使用できるように、すべての拡張機能が <xref:Microsoft.ReportingServices.Interfaces.IExtension> ベース インターフェイスから継承されます。 
+  <xref:Microsoft.ReportingServices.Interfaces.IExtension> および <xref:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension> は、<xref:Microsoft.ReportingServices.Interfaces> 名前空間のメンバーです。  
   
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] では、レポート サーバーに対して認証を行うための主要な手段として、<xref:ReportService2010.ReportingService2010.LogonUser%2A> メソッドがあります。 Reporting Services Web サービスのこのメンバーを使用して、検証するユーザーの資格情報をレポート サーバーに渡すことができます。 基になる、セキュリティ拡張機能の実装**IAuthenticationExtension.LogonUser**カスタム認証コードが含まれています。 フォーム認証のサンプルでは、**LogonUser** が指定された資格情報とデータベースのカスタム ユーザー ストアを比較する認証チェックを実行します。 **LogonUser** の実装例は、次のようになります。  
+ 
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] では、レポート サーバーに対して認証を行うための主要な手段として、<xref:ReportService2010.ReportingService2010.LogonUser%2A> メソッドがあります。 Reporting Services Web サービスのこのメンバーを使用して、検証するユーザーの資格情報をレポート サーバーに渡すことができます。 基になるセキュリティ拡張機能によって、カスタム認証コードを含む**Iauthenticationextension**が実装されます。 フォーム認証のサンプルでは、**LogonUser** が指定された資格情報とデータベースのカスタム ユーザー ストアを比較する認証チェックを実行します。 
+  **LogonUser** の実装例は、次のようになります。  
   
 ```  
 public bool LogonUser(string userName, string password, string authority)  
@@ -108,9 +113,10 @@ internal static bool VerifyPassword(string suppliedUserName,
   
 1.  クライアント アプリケーションは、ユーザーを認証するために Web サービス メソッド <xref:ReportService2010.ReportingService2010.LogonUser%2A> を呼び出します。  
   
-2.  Web サービスを呼び出すは、 <xref:ReportService2010.ReportingService2010.LogonUser%2A> 、セキュリティ拡張機能のメソッドを実装するクラスでは具体的には、 **IAuthenticationExtension**します。  
+2.  Web サービスは、セキュリティ拡張機能の<xref:ReportService2010.ReportingService2010.LogonUser%2A>メソッド (具体的には、 **iauthenticationextension**を実装するクラス) を呼び出します。  
   
-3.  <xref:ReportService2010.ReportingService2010.LogonUser%2A> の実装によって、ユーザー ストアまたはセキュリティ機関のユーザー名とパスワードが検証されます。  
+3.  
+  <xref:ReportService2010.ReportingService2010.LogonUser%2A> の実装によって、ユーザー ストアまたはセキュリティ機関のユーザー名とパスワードが検証されます。  
   
 4.  認証の完了後に、Web サービスがクッキーを作成し、セッション用にそれを管理します。  
   
@@ -132,9 +138,11 @@ internal static bool VerifyPassword(string suppliedUserName,
   
  フォーム認証では、ユーザーが資格情報を入力する必要があります。 Reporting Services Web サービスと直接通信する自動アプリケーションの場合は、フォーム認証とカスタム認証方法を併用する必要があります。  
   
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] でフォーム認証が適しているのは、次のような場合です。  
+ 
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] でフォーム認証が適しているのは、次のような場合です。  
   
--   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows アカウントを持たないユーザーを格納および認証する必要がある場合。  
+-   
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows アカウントを持たないユーザーを格納および認証する必要がある場合。  
   
 -   Web サイトの異なるページ間で、ログオン ページとしてユーザー インターフェイス フォームを提供する必要がある場合。  
   
@@ -142,9 +150,12 @@ internal static bool VerifyPassword(string suppliedUserName,
   
 -   フォーム認証を使用する場合は、インターネット インフォメーション サービス (IIS) のレポート サーバー仮想ディレクトリで匿名アクセスを有効にする必要があります。  
   
--   [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 認証を Forms に設定する必要があります。 レポート サーバーの Web.config ファイルで [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 認証を構成してください。  
+-   
+  [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 認証を Forms に設定する必要があります。 レポート サーバーの Web.config ファイルで [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 認証を構成してください。  
   
--   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] では、Windows 認証またはカスタム認証を使用してユーザーを認証および承認できますが、両方を使用することはできません。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] では、複数のセキュリティ拡張機能を同時に使用できません。  
+-   
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] では、Windows 認証またはカスタム認証を使用してユーザーを認証および承認できますが、両方を使用することはできません。 
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] では、複数のセキュリティ拡張機能を同時に使用できません。  
   
 ## <a name="see-also"></a>参照  
  [セキュリティ拡張機能の実装](../security-extension/implementing-a-security-extension.md)  

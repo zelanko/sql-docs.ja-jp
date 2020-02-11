@@ -1,5 +1,5 @@
 ---
-title: 設定のグローバル トレース オプション (SQL Server Profiler) |Microsoft Docs
+title: グローバルトレースオプションの設定 (SQL Server プロファイラー) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c09927de3c10ab3b937101edc6b9da37503abb11
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63267404"
 ---
 # <a name="set-global-trace-options-sql-server-profiler"></a>グローバル トレース オプションの設定 (SQL Server Profiler)
@@ -44,7 +44,7 @@ ms.locfileid: "63267404"
   
     -   **[再生スレッドの既定の数]** では、再生時に使用するプロセッサ スレッドの数を制御します。 スレッド数を多くすると、再生は早く完了しますが、再生時にサーバーのパフォーマンスが低下します。 推奨設定値は **4**です。 次の表は、使用可能な値の一覧です。  
   
-        |値|説明|  
+        |値|[説明]|  
         |-----------|-----------------|  
         |**2**|最小値です。 2 つのスレッドを使用して再生します。|  
         |**4**|既定値です。|  
@@ -52,7 +52,7 @@ ms.locfileid: "63267404"
   
     -   **[ヘルス モニターの既定の待機間隔 (秒)]** では、再生スレッドが他のプロセスをブロックできる最長時間を秒単位で設定します。 次の表は、その値を示しています。  
   
-        |値|説明|  
+        |値|[説明]|  
         |-----------|-----------------|  
         |**0**|最小値です。 **0** に設定すると、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] によってブロック プロセスが停止されません。|  
         |**3600**|既定値です。 **3600** 秒 (1 時間) を超えないブロック プロセスを使用できます。|  
@@ -60,7 +60,7 @@ ms.locfileid: "63267404"
   
     -   **[ヘルス モニターの既定のポーリング間隔 (秒)]** では、ブロック プロセスの再生スレッドを呼び出す頻度を設定します。 次の表は、その値を示しています。  
   
-        |値|説明|  
+        |値|[説明]|  
         |-----------|-----------------|  
         |**1**|最小値です。 **1** に設定すると、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] によって毎秒 1 回ブロック プロセスが呼び出されます。|  
         |**60**|既定値です。 毎分 1 回ブロック プロセスを呼び出します。|  

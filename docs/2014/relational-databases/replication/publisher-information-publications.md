@@ -1,5 +1,5 @@
 ---
-title: SQL Server レプリケーション ' パブリッシャー情報 ダイアログ ボックス |Microsoft Docs
+title: SQL Server レプリケーション [パブリッシャー情報] ダイアログボックス |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,32 +13,32 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 344b899905e844312ee6e5a66455fc2fa14b446f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63462520"
 ---
-# <a name="sql-server-replication-publisher-information-dialog-box"></a>SQL Server レプリケーション ' パブリッシャー情報 ダイアログ ボックス
+# <a name="sql-server-replication-publisher-information-dialog-box"></a>[パブリッシャー情報] ダイアログボックスの SQL Server レプリケーション
   **[パブリケーション]** タブを使用すると、左ペインで選択したパブリッシャーにおけるすべてのパブリケーションに関する要約情報を取得できます。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  グリッドにデータを表示する方法を変更するには、グリッドを右クリックし、次のいずれかのオプションをクリックします。  
   
 -   **[並べ替え]** : **[列の並べ替え]** ダイアログ ボックスで、1 つ以上の列を基準にして並べ替えを行います。  
   
 -   **[表示する列の選択]** : **[列の選択]** ダイアログ ボックスで、表示する列とその表示順序を選択します。  
   
--   **[フィルター]** : **[フィルターの設定]** ダイアログ ボックスで、列の値に基づいてグリッドの行をフィルター処理します。  
+-   **[フィルター]** : **[フィルターの設定]** ダイアログ ボックスで、列の値に基づいてグリッドの行をフィルター選択します。  
   
--   **[フィルターのクリア]** :グリッドのフィルター設定をすべてクリアします。  
+-   **[フィルターのクリア]** : グリッドのフィルター設定をすべてクリアします。  
   
  フィルター設定は各グリッドに固有です。 列の選択と並べ替えは、各パブリッシャーのパブリケーション グリッドなど、同じ種類のすべてのグリッドに適用されます。  
   
- **ステータス**  
+ **状態**  
  各パブリケーションの状態です。これは、サブスクリプションの最も優先度の高い状態により決定されます。 既定では、パブリケーション情報を表示するグリッドは **[状態]** 列の順序で並べられています。 表示される状態の値と、その値の並べ替え順 (たとえば、エラーは常にグリッドの上部に表示されます) を次に示します。  
   
--   [エラー]  
+-   エラー  
   
 -   [パフォーマンス クリティカル]  
   
@@ -49,7 +49,7 @@ ms.locfileid: "63462520"
  **[パフォーマンス クリティカル]** 状態は、トランザクション サブスクリプションとマージ サブスクリプションに関連しています。トランザクション サブスクリプションの場合は、しきい値が設定されている場合にのみ表示されます。 パフォーマンスの測定としきい値の設定については、「[Monitor Performance with Replication Monitor](monitor/monitor-performance-with-replication-monitor.md)」 (レプリケーション モニターを使用したパフォーマンスの監視) と「[レプリケーション モニターのしきい値と警告の設定](monitor/set-thresholds-and-warnings-in-replication-monitor.md)」を参照してください。  
   
  **パブリケーション**  
- 各パブケーションの名前です。*PublicationDatabaseName:PublicationName* という形式になります。  
+ 各パブケーションの名前です。 *PublicationDatabaseName: PublicationName*という形式になります。  
   
  **サブスクリプション**  
  各パブリケーションのサブスクリプションの数です。  
@@ -78,13 +78,13 @@ ms.locfileid: "63462520"
   
 -   悪い  
   
--   重大  
+-   Critical  
   
  パフォーマンス評価の定義方法とパフォーマンスしきい値の設定方法については、「[Monitor Performance with Replication Monitor](monitor/monitor-performance-with-replication-monitor.md)」 (レプリケーション モニターを使用したパフォーマンスの監視) を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [レプリケーション モニターの開始](monitor/start-the-replication-monitor.md)   
- [レプリケーション モニターを使用して情報を表示し、タスクを実行する](monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [レプリケーションモニターを使用して情報を表示し、タスクを実行する](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [レプリケーションの監視](monitoring-replication.md)  
   
   

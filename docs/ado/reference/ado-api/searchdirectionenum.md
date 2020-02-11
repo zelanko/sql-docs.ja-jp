@@ -1,5 +1,5 @@
 ---
-title: SearchDirectionEnum |Microsoft Docs
+title: Searchdirection 列挙型 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,27 +16,27 @@ ms.assetid: 81272ae3-2165-4f4e-adfe-9ede0368cb17
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f8926e932317096cb3891cc8c480164268751cea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67916998"
 ---
 # <a name="searchdirectionenum"></a>SearchDirectionEnum
-内のレコードの検索の方向を指定します、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)します。  
+レコード[セット](../../../ado/reference/ado-api/recordset-object-ado.md)内のレコード検索の方向を指定します。  
   
-|定数|Value|説明|  
+|常時|値|[説明]|  
 |--------------|-----------|-----------------|  
-|**adSearchBackward**|-1|先頭で停止する旧バージョンと、検索、 **Recordset**します。 一致が見つからない場合、レコード ポインターは[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)します。|  
-|**adSearchForward**|1|検索が転送の最後に停止する、 **Recordset**します。 一致が見つからない場合、レコード ポインターは[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)します。|  
+|**adSearchBackward**|-1|後方に検索し、**レコードセット**の先頭で停止します。 一致するものが見つからない場合、レコードポインターは[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)に配置されます。|  
+|**adSearchForward**|1 で保護されたプロセスとして起動されました|**レコードセット**の末尾で停止します。 一致するものが見つからない場合、レコードポインターは[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)に位置します。|  
   
-## <a name="adowfc-equivalent"></a>ADO と WFC と同等  
- パッケージ: **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>同等の ADO/WFC  
+ パッケージ: **com. ms. wfc. データ**  
   
-|定数|  
+|常時|  
 |--------------|  
-|AdoEnums.SearchDirection.BACKWARD|  
-|AdoEnums.SearchDirection.FORWARD|  
+|AdoEnums.|  
+|AdoEnums の順方向|  
   
 ## <a name="applies-to"></a>適用対象  
  [Find メソッド (ADO)](../../../ado/reference/ado-api/find-method-ado.md)

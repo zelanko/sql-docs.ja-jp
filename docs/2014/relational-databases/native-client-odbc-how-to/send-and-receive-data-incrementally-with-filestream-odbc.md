@@ -1,5 +1,5 @@
 ---
-title: FILESTREAM (ODBC) のインクリメンタル式でのデータの送受信 |Microsoft Docs
+title: FILESTREAM を使用したデータの増分送信と受信 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -11,23 +11,24 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ac4965e665013cad4cd17068633a812cc5813826
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68205527"
 ---
 # <a name="send-and-receive-data-incrementally-with-filestream-odbc"></a>FILESTREAM を使用したデータのインクリメンタル式での送受信 (ODBC)
   このサンプルでは、FILESTREAM 機能を使用して、SQLPutData と SQLGetData でデータをインクリメンタル式に送受信する方法を紹介します。  
   
- FILESTREAM 機能の詳細については、次を参照してください。 [FILESTREAM のサポート&#40;ODBC&#41;](../native-client/odbc/filestream-support-odbc.md)します。  
+ FILESTREAM 機能の詳細については、「 [Filestream Support &#40;ODBC&#41;](../native-client/odbc/filestream-support-odbc.md)」を参照してください。  
   
 ## <a name="example"></a>例  
- コンパイルして、このサンプルを実行する前に、FILESTREAM のサポートを有効にする ([Enable and Configure FILESTREAM](../blob/enable-and-configure-filestream.md))。  
+ このサンプルをコンパイルして実行する前に、FILESTREAM のサポートを有効にします ([filestream の有効化と構成](../blob/enable-and-configure-filestream.md))。  
   
- 1 つ目の ([!INCLUDE[tsql](../../includes/tsql-md.md)]) コード リストは、このサンプルで使用するデータベースを作成します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスには、このスクリプトを実行するための書き込みアクセス許可が必要です (たとえば、ローカル システム アカウントでログオンしてください)。  
+ 1 つ目の ([!INCLUDE[tsql](../../includes/tsql-md.md)]) コード リストは、このサンプルで使用するデータベースを作成します。 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスには、このスクリプトを実行するための書き込みアクセス許可が必要です (たとえば、ローカル システム アカウントでログオンしてください)。  
   
- 2 つ目のコード リストは C++ コードです。 サーバーを指定する必要があります。C++ コード リストで、"MyServer" を有効なサーバー名に変更してください。 INCLUDE 環境変数には、sqlncli.h を含むディレクトリが含まれています。 を確認します。 odbc32.lib、user32.lib、/D "_UNICODE"、/D "UNICODE"、odbc32.lib、および /EHsc を使用して C++ コード リストをコンパイルします。  
+ 2 つ目のコード リストは C++ コードです。 サーバーを指定する必要があります。C++ コード リストで、"MyServer" を有効なサーバー名に変更してください。 INCLUDE 環境変数に、sqlncli を含むディレクトリが含まれていることを確認します。 odbc32.lib、user32.lib、/D "_UNICODE"、/D "UNICODE"、odbc32.lib、および /EHsc を使用して C++ コード リストをコンパイルします。  
   
  3 つ目の ([!INCLUDE[tsql](../../includes/tsql-md.md)]) コード リストは、このサンプルで使用したデータベースを削除します。  
   

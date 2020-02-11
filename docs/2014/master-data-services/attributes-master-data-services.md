@@ -18,10 +18,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 88f1f0909e667db38c3b9b5d13bf11a2262b405b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65480155"
 ---
 # <a name="attributes-master-data-services"></a>属性 (マスター データ サービス)
@@ -32,7 +32,7 @@ ms.locfileid: "65480155"
   
  ![テーブルとして表されたマスター データ サービス エンティティ](../../2014/master-data-services/media/mds-conc-entity-table.gif "テーブルとして表されたマスター データ サービス エンティティ")  
   
- 多数の属性を含むエンティティを作成するときは、属性を属性グループに整理できます。 詳細については、「[属性グループ (マスター データ サービス)](attribute-groups-master-data-services.md)」を参照してください。  
+ 多数の属性を含むエンティティを作成するときは、属性を属性グループに整理できます。 詳細については、「 [属性グループ (マスター データ サービス)](attribute-groups-master-data-services.md)」を参照してください。  
   
 ## <a name="required-attributes"></a>必須の属性  
  エンティティを作成すると、Name 属性と Code 属性が自動的に作成されます。 Code 属性には値が必要であり、Code 属性はエンティティ内で一意であることが必要です。 Name 属性と Code 属性を削除することはできません。  
@@ -58,7 +58,7 @@ ms.locfileid: "65480155"
 -   浮動小数点数が含まれていると、値が " *ラウンド トリップ* " されない場合があります。 値のラウンド トリップとは、演算で元の浮動小数点数が別の形式に変換され、逆の演算で変換後の形式から浮動小数点数に戻されて、最終の浮動小数点数が元の浮動小数点数に等しくなる場合をいいます。 変換で最小有効数字が 1 桁以上失われるか、または変更された場合は、ラウンド トリップが失敗します。  
   
 ## <a name="attribute-examples"></a>属性の例  
- 次の例では、エンティティに Name、Code、Subcategory、StandardCost、ListPrice、FilePhoto という属性があることを示しています。 これらの属性はメンバーを表します。 各メンバーは、属性値の 1 行で表されます。  
+ 次の例では、エンティティに Name、Code、Subcategory、StandardCost、ListPrice、および FilePhoto という属性があります。 これらの属性はメンバーを表します。 各メンバーは、属性値の 1 行で表されます。  
   
  ![自転車製品エンティティ テーブル](../../2014/master-data-services/media/mds-conc-entity-table-w-data.gif "自転車製品エンティティ テーブル")  
   
@@ -78,26 +78,26 @@ ms.locfileid: "65480155"
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  
-|新しい自由形式のテキスト属性を作成する。|[テキスト属性を作成する (マスター データ サービス)](../../2014/master-data-services/create-a-text-attribute-master-data-services.md)|  
-|新しい自由形式の数値属性を作成する。|[数値属性を作成する (マスター データ サービス)](../../2014/master-data-services/create-a-numeric-attribute-master-data-services.md)|  
-|新しい自由形式のリンク属性を作成する。|[リンク属性を作成する (マスター データ サービス)](../../2014/master-data-services/create-a-link-attribute-master-data-services.md)|  
-|新しいファイル属性を作成する。|[ファイル属性を作成する (マスター データ サービス)](../../2014/master-data-services/create-a-file-attribute-master-data-services.md)|  
-|新しいドメインベース属性を作成する。|[ドメイン ベースの属性を作成する (マスター データ サービス)](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)|  
-|既存の属性の名前を変更する。|[属性名を変更&#40;マスター データ サービス&#41;](change-an-attribute-name-and-data-type-master-data-services.md)|  
-|変更の追跡グループに既存の属性を追加する。|[変更の追跡グループに属性を追加する (マスター データ サービス)](../../2014/master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)|  
-|既存の属性を削除する。|[属性を削除する (マスター データ サービス)](../../2014/master-data-services/delete-an-attribute-master-data-services.md)|  
-|属性の順序を変更する。|[属性の順序を変更する](../../2014/master-data-services/change-the-order-of-attributes.md)|  
+|新しい自由形式のテキスト属性を作成する。|[テキスト属性 &#40;マスターデータサービスを作成し&#41;](../../2014/master-data-services/create-a-text-attribute-master-data-services.md)|  
+|新しい自由形式の数値属性を作成する。|[数値属性 &#40;マスターデータサービスを作成し&#41;](../../2014/master-data-services/create-a-numeric-attribute-master-data-services.md)|  
+|新しい自由形式のリンク属性を作成する。|[リンク属性 &#40;マスターデータサービスを作成し&#41;](../../2014/master-data-services/create-a-link-attribute-master-data-services.md)|  
+|新しいファイル属性を作成する。|[ファイル属性 &#40;マスターデータサービスを作成し&#41;](../../2014/master-data-services/create-a-file-attribute-master-data-services.md)|  
+|新しいドメインベース属性を作成する。|[ドメインベースの属性 &#40;マスターデータサービスを作成&#41;](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)|  
+|既存の属性の名前を変更する。|[属性名を変更する &#40;マスターデータサービス&#41;](change-an-attribute-name-and-data-type-master-data-services.md)|  
+|変更の追跡グループに既存の属性を追加する。|[Change Tracking グループ &#40;マスターデータサービスに属性を追加&#41;](../../2014/master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)|  
+|既存の属性を削除する。|[属性 &#40;マスターデータサービスの削除&#41;](../../2014/master-data-services/delete-an-attribute-master-data-services.md)|  
+|属性の順序を変更する。|[属性の順序の変更](../../2014/master-data-services/change-the-order-of-attributes.md)|  
   
 ## <a name="related-content"></a>関連コンテンツ  
   
--   [ドメインベースの属性 (マスター データ サービス)](../../2014/master-data-services/domain-based-attributes-master-data-services.md)  
+-   [ドメインベースの属性 &#40;マスターデータサービス&#41;](../../2014/master-data-services/domain-based-attributes-master-data-services.md)  
   
--   [属性グループ (マスター データ サービス)](attribute-groups-master-data-services.md)  
+-   [属性グループ &#40;マスターデータサービス&#41;](attribute-groups-master-data-services.md)  
   
--   [メンバー (マスター データ サービス)](../../2014/master-data-services/members-master-data-services.md)  
+-   [メンバー &#40;マスターデータサービス&#41;](../../2014/master-data-services/members-master-data-services.md)  
   
--   [リーフ権限 (マスター データ サービス)](../../2014/master-data-services/leaf-permissions-master-data-services.md)  
+-   [リーフアクセス許可 &#40;マスターデータサービス&#41;](../../2014/master-data-services/leaf-permissions-master-data-services.md)  
   
--   [アクセス許可を統合&#40;マスター データ サービス&#41;](../../2014/master-data-services/consolidated-permissions-master-data-services.md)  
+-   [統合アクセス許可 &#40;マスターデータサービス&#41;](../../2014/master-data-services/consolidated-permissions-master-data-services.md)  
   
   

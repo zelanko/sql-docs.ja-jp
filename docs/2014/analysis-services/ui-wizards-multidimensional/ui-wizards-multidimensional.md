@@ -12,15 +12,15 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 62f475b38931f46789ea464f3002a891fc33236c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065704"
 ---
-# <a name="ui-wizards-for-multidimensional-analysis"></a>多次元分析のための UI ウィザード
+# <a name="ui-wizards-for-multidimensional-analysis"></a>多次元分析用の UI ウィザード
 
-このセクションには、多次元分析のためのユーザー インターフェイス (UI) ウィザードに関するドキュメントが含まれています。
+ここでは、多次元分析のためのユーザーインターフェイス (UI) ウィザードについて説明します。
 
 ## <a name="next-steps"></a>次の手順
 

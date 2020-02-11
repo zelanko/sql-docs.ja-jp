@@ -1,5 +1,5 @@
 ---
-title: 同時実行モデル (Visual FoxPro ODBC ドライバー) のサポート |Microsoft Docs
+title: サポートされている同時実行モデル (Visual FoxPro ODBC ドライバー) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,19 +15,19 @@ ms.assetid: c39ed963-3af1-4888-8631-6083692ddcd7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 597d1022fa6946e0ae768cb9600a3f4534c67a25
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68080689"
 ---
 # <a name="supported-concurrency-model-visual-foxpro-odbc-driver"></a>サポートされているコンカレンシー モデル (Visual FoxPro ODBC ドライバー)
-Visual FoxPro ODBC ドライバーをサポートしています*読み取り専用の同時実行*します。 アプリケーションが呼び出すことができます[SQLSetStmtOption](../../odbc/microsoft/sqlsetstmtoption-visual-foxpro-odbc-driver.md) SQL_CONCUR_READ_ONLY の SQL_CONCURRENCY オプションを使用します。  
+Visual FoxPro ODBC ドライバーでは、読み取り専用の*同時実行*がサポートされています。 アプリケーションでは、SQL_CONCUR_READ_ONLY の SQL_CONCURRENCY オプションを使用して[SQLSetStmtOption](../../odbc/microsoft/sqlsetstmtoption-visual-foxpro-odbc-driver.md)を呼び出すことができます。  
   
- 詳細についてを参照してください、 [ODBC プログラマーズ リファレンス](../../odbc/reference/odbc-programmer-s-reference.md)。  
+ 詳細については、 [ODBC プログラマーズリファレンス](../../odbc/reference/odbc-programmer-s-reference.md)を参照してください。  
   
 ## <a name="read-only-concurrency"></a>読み取り専用の同時実行  
- カーソルは更新できません。  
+ カーソルを更新できません。  
   
 ## <a name="row-versioning"></a>行のバージョン管理 (row versioning)  
- 基本的にタイムスタンプ サポート、更新時にでは、行のバージョンを比較します。
+ 基本的にはタイムスタンプサポート。更新時に行バージョンが比較されます。

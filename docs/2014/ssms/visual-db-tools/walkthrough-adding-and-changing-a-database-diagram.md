@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル:  データベース ダイアグラムの追加と変更 | Microsoft Docs'
+title: 'チュートリアル: データベース ダイアグラムの追加と変更 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 59225dd445ec2d075b9c7c8ca7eac52af2020a68
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63273742"
 ---
 # <a name="walkthrough-adding-and-changing-a-database-diagram"></a>チュートリアル: データベース ダイアグラムの追加と変更
@@ -44,7 +44,7 @@ ms.locfileid: "63273742"
   
 3.  [データベース ダイアグラム] ノードを右クリックし、 **[新しいデータベース ダイアグラム]** をクリックします。  
   
-     ダイアグラムの作成に必要なオブジェクトがデータベースに含まれていない場合: "**このデータベースには、データベース ダイアグラムの作成機能を使用するために必要な 1 つ以上のサポート オブジェクトが含まれていません。サポート オブジェクトを作成しますか?** " というメッセージが表示されます。 **[はい]** をクリックします。  
+     ダイアグラムの作成に必要なオブジェクトがデータベースに含まれていない場合、" **このデータベースには、データベース ダイアグラムの作成を使用するために必要な 1 つ以上のサポート オブジェクトが含まれていません。サポート オブジェクトを作成しますか?** " というメッセージが表示されます。 **[はい]** をクリックします。  
   
      **[テーブルの追加]** ダイアログ ボックスが表示されます。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "63273742"
   
 1.  `Address` テーブルを右クリックします。 ショートカット メニューの **[テーブル ビュー]** をポイントし、 **[標準]** をクリックします。  
   
-     テーブル グリッドには、次の 3 つの列が表示されます: **[列名]** 、 **[データ型]** 、 **[Null を許容]** 。  
+     テーブル グリッドに **[列名]** 、 **[データ型]** 、および **[Null を許容]** という 3 つの列が表示されます。  
   
 2.  `Address` テーブルを右クリックし、 **[テーブル ビュー]** をクリックして、 **[キー]** を選択します。  
   
@@ -70,17 +70,17 @@ ms.locfileid: "63273742"
   
 1.  ダイアグラム デザイナーで、既存のテーブル以外の場所を右クリックし、 **[新しいテーブル]** をクリックします。  
   
-2.  **名前の選択**ダイアログ ボックスで、をクリックして **[ok]** を既定の名前を受け入れる`Table1`。  
+2.  [**名前の選択**] ダイアログボックスで、[ **OK** ] をクリック`Table1`して既定の名前をそのまま使用します。  
   
-     新しいテーブル グリッドには次の 3 つの列が表示されます:  **[列名]** 、 **[データ型]** 、 **[Null を許容]** 。  
+     新しいテーブル グリッドに **[列名]** 、 **[データ型]** 、および **[Null を許容]** という 3 つの列が表示されます。  
   
-3.  次の情報を追加`Table1`:  
+3.  に次の情報を`Table1`追加します。  
   
     |**列名**|**[データ型]**|**[NULL を許容]**|  
     |---------------------|-------------------|---------------------|  
-    |`T1col1`|`int`|オン|  
-    |`T1col2`|`varchar(50)`|オン|  
-    |`T1col3`|`float`|オン|  
+    |`T1col1`|`int`|チェック|  
+    |`T1col2`|`varchar(50)`|チェック|  
+    |`T1col3`|`float`|チェック|  
   
 4.  [ `T1col1` ] を右クリックし、 **[主キーの設定]** をクリックします。  
   
@@ -88,7 +88,7 @@ ms.locfileid: "63273742"
   
 5.  **[ファイル]** メニューの **[Diagram1 を保存]** をクリックします。  
   
-6.  **名前の選択**ダイアログ ボックスで、をクリックして **[ok]** を既定の名前を受け入れる`Diagram1`。  
+6.  [**名前の選択**] ダイアログボックスで、[ **OK** ] をクリック`Diagram1`して既定の名前をそのまま使用します。  
   
 7.  **[上書き保存]** ダイアログ ボックスに、 `Table1` がデータベースに保存されることを示すメッセージが表示されます。 **[はい]** をクリックします。  
   
@@ -122,15 +122,15 @@ ms.locfileid: "63273742"
     |**列名**|**[データ型]**|**[NULL を許容]**|  
     |---------------------|-------------------|---------------------|  
     |`T2col1`|`int`|オフ|  
-    |`T2col2`|`varchar(50)`|オン|  
-    |`T2col3`|`xml`|オン|  
+    |`T2col2`|`varchar(50)`|チェック|  
+    |`T2col3`|`xml`|チェック|  
   
     > [!NOTE]  
     >  外部キー リレーションシップの主キー側の列は、主キーまたは UNIQUE 制約に含まれている必要があります。  
   
 2.  `T2col1` を `T1col1`にドラッグします。  
   
-     2 つのダイアログ ボックス、 **[外部キーのリレーションシップ]** ダイアログ ボックスと **[テーブルと列]** ダイアログ ボックスが表示されます。[テーブルと列] ダイアログ ボックスが手前に表示されます。  
+     **[外部キーのリレーションシップ]** ダイアログ ボックスと **[テーブルと列]** ダイアログ ボックスが表示されます。[テーブルと列] ダイアログ ボックスが手前に表示されます。  
   
 3.  **[OK]** をクリックして、新しいリレーションシップを保存します。  
   
@@ -207,12 +207,12 @@ ms.locfileid: "63273742"
 -   ビットマップへのダイアグラムのコピー  
   
 ## <a name="see-also"></a>参照  
- [ダイアグラムに表示される情報の量のカスタマイズ&#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [データベース ダイアグラム デザイナー設定&#40;Visual Database Tools&#41;](set-up-database-diagram-designer-visual-database-tools.md)   
- [ダイアグラムにテーブルを追加&#40;Visual Database Tools&#41;](add-tables-to-diagrams-visual-database-tools.md)   
- [ダイアグラムでテーブル間のリレーションシップを作成する&#40;Visual Database Tools&#41;](create-relationships-between-tables-on-a-diagram-visual-database-tools.md)   
- [XML インデックスを作成します。](../../relational-databases/xml/create-xml-indexes.md)   
- [データベース ダイアグラムのイメージをクリップボードにコピー &#40;Visual Database Tools&#41;](copy-an-image-of-a-database-diagram-to-the-clipboard-visual-database-tools.md)   
+ [Visual Database Tools &#40;ダイアグラムに表示される情報の量をカスタマイズ&#41;](visual-database-tools.md)   
+ [データベースダイアグラムデザイナー &#40;Visual Database Tools&#41;を設定する](set-up-database-diagram-designer-visual-database-tools.md)   
+ [Visual Database Tools &#40;ダイアグラムにテーブルを追加する&#41;](add-tables-to-diagrams-visual-database-tools.md)   
+ [ダイアグラムのテーブル間のリレーションシップの作成 &#40;Visual Database Tools&#41;](create-relationships-between-tables-on-a-diagram-visual-database-tools.md)   
+ [XML インデックスの作成](../../relational-databases/xml/create-xml-indexes.md)   
+ [データベースダイアグラムのイメージをクリップボードにコピーし &#40;Visual Database Tools&#41;](copy-an-image-of-a-database-diagram-to-the-clipboard-visual-database-tools.md)   
  [ダイアグラムのレイアウトの操作 (Visual Database Tools)](work-with-diagram-layout-visual-database-tools.md)  
   
   

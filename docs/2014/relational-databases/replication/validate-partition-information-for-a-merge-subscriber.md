@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3bada5fc49dc344510164260330699b60a3288cc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63255312"
 ---
 # <a name="validate-partition-information-for-a-merge-subscriber"></a>マージ サブスクライバーのパーティション情報の検証
@@ -34,8 +34,8 @@ ms.locfileid: "63255312"
  マージ エージェントがパーティションを検証するときには、フィルター式で使用するすべての関数から返される値に対してパーティションを検証するだけなく、メタデータのクリーンアップ操作やスキーマ変更などの変更が行われる前に、その変更で無効になったスナップショットが生成されていたかどうかもチェックします。 パーティション化されたスナップショットが古すぎる場合、マージ エージェントはエラーを返します。この場合は、現在の標準スナップショットに基づいてそのサブスクライバーのパーティション化されたスナップショットを再生成する必要があります。  
   
 ## <a name="see-also"></a>参照  
- [レプリケーション管理に関する FAQ](administration/frequently-asked-questions-for-replication-administrators.md)   
- [Best Practices for Replication Administration](administration/best-practices-for-replication-administration.md)   
+ [レプリケーションの管理に関する FAQ](administration/frequently-asked-questions-for-replication-administrators.md)   
+ [レプリケーション管理のベストプラクティス](administration/best-practices-for-replication-administration.md)   
  [サブスクリプションの再初期化](reinitialize-subscriptions.md)   
  [レプリケートされたデータの検証](validate-data-at-the-subscriber.md)  
   

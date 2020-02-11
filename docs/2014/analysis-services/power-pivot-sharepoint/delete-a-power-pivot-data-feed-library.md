@@ -1,5 +1,5 @@
 ---
-title: PowerPivot データ フィード ライブラリの削除 |Microsoft Docs
+title: PowerPivot データフィードライブラリを削除する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4f2e12e536cfaf91bab25e958ba279b072b39259
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66071482"
 ---
 # <a name="delete-a-powerpivot-data-feed-library"></a>PowerPivot データ フィード ライブラリの削除
@@ -24,13 +24,15 @@ ms.locfileid: "66071482"
   
 ### <a name="delete-a-data-feed-library"></a>データ フィード ライブラリの削除  
   
-1.  **[サイトの操作]** をクリックします。  
+1.  
+  **[サイトの操作]** をクリックします。  
   
-2.  **[サイトの設定]** をクリックします。  
+2.  
+  **[サイトの設定]** をクリックします。  
   
 3.  [サイトの管理] の **[サイトのライブラリとリスト]** をクリックします。  
   
-4.  クリックして**カスタマイズ"\<ライブラリ名 >"**  
+4.  [**ライブラリ名\<> のカスタマイズ**] をクリックします。  
   
 5.  [権限と管理] の **[このライブラリの削除]** をクリックします。  
   
