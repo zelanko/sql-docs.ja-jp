@@ -16,14 +16,14 @@ ms.assetid: f5e0abec-8f24-42e0-b94f-16dd1f2004fd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 649c00f1db486dab4a996138be4e26b0e270fbae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68106293"
 ---
 # <a name="arguments-in-catalog-functions"></a>カタログ関数の引数
-すべてのカタログ関数では、アプリケーションが返されるデータのスコープを制限する引数を受け取ります。 最初と 2 つ目の呼び出しなど**SQLTables** 3 番目の呼び出しは、Orders テーブルに関する情報を返すときに、すべてのテーブルに関する情報を含む結果セットを返す、次のコード。  
+すべてのカタログ関数は、返されるデータのスコープをアプリケーションが制限できる引数を受け取ります。 たとえば、次のコードの**Sqltables**の最初と2番目の呼び出しでは、すべてのテーブルに関する情報を含む結果セットが返されますが、3回目の呼び出しでは Orders テーブルに関する情報が返されます。  
   
 ```  
 SQLTables(hstmt1, NULL, 0, NULL, 0, NULL, 0, NULL, 0);  
@@ -31,20 +31,20 @@ SQLTables(hstmt2, NULL, 0, NULL, 0, "%", SQL_NTS, NULL, 0);
 SQLTables(hstmt3, NULL, 0, NULL, 0, "Orders", SQL_NTS, NULL, 0);  
 ```  
   
- カタログ関数の文字列引数が 4 つの種類に分類されます。 通常の引数 (OA)、パターンの引数 (PV) の値、id の引数 (ID)、および値リストの引数 (ボリューム ライセンス)。 ほとんどの文字列引数は、SQL_ATTR_METADATA_ID ステートメント属性の値に応じて、2 つのさまざまな種類のいずれかの指定できます。 次の表では、各カタログ関数の引数の一覧し、SQL_ATTR_METADATA_ID の値を SQL_TRUE または SQL_FALSE の引数の型について説明します。  
+ カタログ関数の文字列引数は、通常の引数 (OA)、パターン値の引数 (PV)、識別子の引数 (ID)、および値リストの引数 (VL) の4つの異なる型に分類されます。 文字列引数のほとんどは、SQL_ATTR_METADATA_ID statement 属性の値に応じて、2つの異なる型のいずれかになります。 次の表は、各カタログ関数の引数の一覧と、SQL_ATTR_METADATA_ID の SQL_TRUE または SQL_FALSE 値の引数の型を示しています。  
   
-|関数|引数|ときに、型 sql _<br /><br /> ATTR_METADATA_<br /><br /> ID = SQL_FALSE になります|ときに、型 sql _<br /><br /> ATTR_METADATA_<br /><br /> ID = SQL_TRUE|  
+|Function|引数|SQL_ 時に入力<br /><br /> ATTR_METADATA_<br /><br /> ID = SQL_FALSE|SQL_ 時に入力<br /><br /> ATTR_METADATA_<br /><br /> ID = SQL_TRUE|  
 |--------------|--------------|---------------------------------------------------------------|--------------------------------------------------------------|  
-|**SQLColumnPrivileges**|*CatalogName* *SchemaName* *TableName* *ColumnName*|OA OA OA PV|ID ID の ID の ID|  
-|**SQLColumns**|*CatalogName* *SchemaName* *TableName* *ColumnName*|OA PV PV PV|ID ID の ID の ID|  
-|**SQLForeignKeys**|*PKCatalogName* *PKSchemaName* *PKTableName* *FKCatalogName* *FKSchemaName* *FKTableName*|OA OA OA OA OA OA|ID ID ID ID の ID の ID|  
-|**SQLPrimaryKeys**|*CatalogName* *SchemaName* *TableName*|OA OA OA|ID の ID の ID|  
-|**SQLProcedureColumns**|*CatalogName* *SchemaName* *ProcName* *ColumnName*|OA PV PV PV|ID ID の ID の ID|  
-|**SQLProcedures**|*CatalogName* *SchemaName* *ProcName*|OA PV PV|ID の ID の ID|  
-|**SQLSpecialColumns**|*CatalogName* *SchemaName* *TableName*|OA OA OA|ID の ID の ID|  
-|**SQLStatistics**|*CatalogName* *SchemaName* *TableName*|OA OA OA|ID の ID の ID|  
-|**SQLTablePrivileges**|*CatalogName* *SchemaName* *TableName*|OA PV PV|ID の ID の ID|  
-|**SQLTables**|*CatalogName* *SchemaName* *TableName* *TableType*|PV PV PV ボリューム ライセンス|ID ID の ID のボリューム ライセンス|  
+|**SQLColumnPrivileges**|*CatalogName* *SchemaName* *TableName* *ColumnName*|OA OA OA PV|ID ID ID ID|  
+|**SQLColumns**|*CatalogName* *SchemaName* *TableName* *ColumnName*|OA PV PV PV|ID ID ID ID|  
+|**SQLForeignKeys**|*PKCatalogName* *PKSchemaName* *pktablename* *FKCatalogName* *FKSchemaName* *FKTableName*|OA OA OA|ID ID ID ID ID ID|  
+|**SQLPrimaryKeys**|*CatalogName* *SchemaName* *TableName*|OA OA|ID ID ID|  
+|**SQLProcedureColumns**|*CatalogName* *SchemaName* *ProcName* *ColumnName*|OA PV PV PV|ID ID ID ID|  
+|**SQLProcedures**|*CatalogName* *SchemaName* *ProcName*|OA PV PV|ID ID ID|  
+|**SQLSpecialColumns**|*CatalogName* *SchemaName* *TableName*|OA OA|ID ID ID|  
+|**SQLStatistics**|*CatalogName* *SchemaName* *TableName*|OA OA|ID ID ID|  
+|**SQLTablePrivileges**|*CatalogName* *SchemaName* *TableName*|OA PV PV|ID ID ID|  
+|**SQLTables**|*CatalogName* *SchemaName* *TableName* *TableType*|PV PV PV VL|ID ID ID VL|  
   
  このセクションでは、次のトピックを扱います。  
   

@@ -1,5 +1,5 @@
 ---
-title: シノニムを使用してストアド プロシージャ |Microsoft Docs
+title: ストアドプロシージャでのシノニムの使用 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,14 +14,14 @@ ms.assetid: 8620b039-a086-4534-8710-cc8b1787dc80
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6e798a9c7fa3365082a2e6dab562596d56649ec4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68088021"
 ---
 # <a name="using-synonyms-with-stored-procedures"></a>ストアド プロシージャでのシノニムの使用
 > [!IMPORTANT]  
->  この機能は、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 代わりに、Oracle によって提供される ODBC ドライバーを使用します。  
+>  この機能は、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 代わりに、Oracle によって提供される ODBC ドライバーを使用してください。  
   
- Microsoft ODBC Driver for Oracle のバージョン 2.0 および 2.5 ではストアド プロシージャの呼び出し元の Oracle とシノニムはサポートされません。 シノニムは、テーブルなどの他の Oracle データベース オブジェクトで使用する場合に期待どおりに動作します。
+ Microsoft ODBC Driver for Oracle バージョン2.0 および2.5 では、Oracle ストアドプロシージャを呼び出すときにシノニムはサポートされません。 シノニムは、テーブルなどの他の Oracle データベースオブジェクトと共に使用すると、想定どおりに動作します。
