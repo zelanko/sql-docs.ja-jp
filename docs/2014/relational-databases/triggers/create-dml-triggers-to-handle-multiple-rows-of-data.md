@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: d960ae015bb2e52daa183e1f55d6ff119f234b18
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62676455"
 ---
 # <a name="create-dml-triggers-to-handle-multiple-rows-of-data"></a>複数行のデータを処理するための DML トリガーの作成
@@ -32,7 +32,7 @@ ms.locfileid: "62676455"
 > [!NOTE]  
 >  パフォーマンスが低下する可能性があるので、トリガーにカーソルを使用することはお勧めしません。 複数行に影響を与えるトリガーを設計する場合は、カーソルではなく行セットをベースにしたロジックを使用してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例の DML トリガーはどれも、ある列の集計の途中経過を [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] サンプル データベースの別のテーブル内に保存するように設計されています。  
   
 ### <a name="a-storing-a-running-total-for-a-single-row-insert"></a>A. 単一の行を挿入する場合の集計途中経過の格納  

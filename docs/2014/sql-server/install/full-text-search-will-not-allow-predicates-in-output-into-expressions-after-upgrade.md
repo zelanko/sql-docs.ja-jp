@@ -1,5 +1,5 @@
 ---
-title: アップグレード後は、フルテキスト検索は述語を使用できません OUTPUT INTO 式で |Microsoft Docs
+title: アップグレード後、フルテキスト検索では、OUTPUT INTO expression | の述語を使用できません。Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,20 +11,20 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f5a99d7890a470a2026bfc0e972f8b5ae396d893
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66095010"
 ---
 # <a name="after-upgrade-full-text-search-will-not-allow-predicates-in-output-into-expression"></a>アップグレード後、フルテキスト検索では、OUTPUT INTO 式で述語を使用できません。
   データベースの互換性レベルが 100 以上に設定されている場合、OUTPUT 句でフルテキスト述語を使用することはできません。  
   
-## <a name="description"></a>説明  
- OUTPUT 句の詳細については、次を参照してください。 [OUTPUT 句&#40;TRANSACT-SQL&#41;](/sql/t-sql/queries/output-clause-transact-sql)します。  
+## <a name="description"></a>[説明]  
+ OUTPUT 句の詳細については、「 [Output 句 &#40;transact-sql&#41;](/sql/t-sql/queries/output-clause-transact-sql)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [アップグレード アドバイザーの使用](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   
+ [アップグレードアドバイザーの使用](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   
  [フルテキスト検索のアップグレードに関する問題](../../../2014/sql-server/install/full-text-search-upgrade-issues.md)  
   
   

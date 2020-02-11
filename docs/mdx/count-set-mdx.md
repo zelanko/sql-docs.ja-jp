@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: aac2f72cc8cd91e1964fd7734b858be8215cfdd8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68047296"
 ---
 # <a name="count-set-mdx"></a>Count (セット) (MDX)
@@ -33,18 +33,18 @@ Set_Expression.Count
   
 ## <a name="arguments"></a>引数  
  *Set_Expression*  
- セットを返す有効な多次元式 (MDX) です。  
+ セットを返す有効な多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>コメント  
- **Count (セット)** 関数を追加または使用する構文に応じて、空白のセルを除外します。 空のセルの除外またはを使用して、標準の構文を使用する場合、 **EXCLUDEEMPTY**または**INCLUDEEMPTY**フラグ、それぞれします。 代替構文を使用する場合、関数には常に空のセルが含まれます。  
+## <a name="remarks"></a>解説  
+ **Count (セット)** 関数は、使用する構文に応じて、空のセルを含めたり除外したりします。 標準構文を使用する場合は、 **Excludeempty**または**includeempty**フラグを使用して、空のセルを除外または含めることができます。 代替構文を使用する場合、関数には常に空のセルが含まれます。  
   
- セットの数の空のセルを除外する、標準の構文とオプションを使用して、 **EXCLUDEEMPTY**フラグ。  
+ セットの数に含まれる空のセルを除外するには、標準の構文とオプションの**Excludeempty**フラグを使用します。  
   
 > [!NOTE]  
->  **Count (セット)** 関数は、既定では空のセルをカウントします。 これに対し、**カウント**関数セットをカウントする OLE DB では、既定で空白セルを除外します。  
+>  **Count (セット)** 関数は、既定では空のセルをカウントします。 これに対して、セットをカウントする OLE DB の**Count**関数は、既定では空のセルを除外します。  
   
-## <a name="examples"></a>使用例  
- 次の例では、Product ディメンションの Model Name 属性階層の子で構成されるメンバーのセット内のセルの数をカウントします。  
+## <a name="examples"></a>例  
+ 次の例では、Product ディメンションのモデル名属性階層の子で構成されるメンバーのセットに含まれるセルの数をカウントします。  
   
 ```  
 WITH MEMBER measures.X AS  
@@ -53,14 +53,14 @@ SELECT Measures.X ON 0
 FROM [Adventure Works]  
 ```  
   
- 次の例では、Product ディメンションに製品の数をカウントを使用して、 **DrilldownLevel**関数と組み合わせて、**カウント**関数。  
+ 次の例では、**カウント**関数と共に**ドリルダウンレベル**関数を使用して、Product ディメンション内の製品の数をカウントします。  
   
 ```  
 Count(DrilldownLevel (   
    [Product].[Product].[Product]))  
 ```  
   
- 次の例でを使用して、前のカレンダー四半期と比べて売上が減少した再販業者を返して、**カウント**関数と組み合わせて、**フィルター**関数とその他の数関数。 このクエリを使用して、**集計**クライアント アプリケーションでドロップダウン リストから選択のための複数の地域のメンバーの選択をサポートする関数。  
+ 次の例では、 **Count**関数を**フィルター**関数およびその他の多くの関数と組み合わせて使用することによって、前の calendar quarter と比較して売上が減少している再販業者が返されます。 このクエリでは、**集計**関数を使用して、クライアントアプリケーションのドロップダウンリスト内から選択するなど、複数の geography メンバーの選択をサポートします。  
   
 ```  
 WITH MEMBER Measures.[Declining Reseller Sales] AS  
@@ -90,17 +90,17 @@ WHERE ([Geography].[State-Province].x,
   
 ```  
   
-## <a name="see-also"></a>関連項目  
- [カウント&#40;ディメンション&#41; &#40;MDX&#41;](../mdx/count-dimension-mdx.md)   
- [カウント&#40;階層レベル&#41; &#40;MDX&#41;](../mdx/count-hierarchy-levels-mdx.md)   
- [カウント&#40;タプル&#41; &#40;MDX&#41;](../mdx/count-tuple-mdx.md)   
- [DrilldownLevel &#40;MDX&#41;](../mdx/drilldownlevel-mdx.md)   
- [AddCalculatedMembers &#40;MDX&#41;](../mdx/addcalculatedmembers-mdx.md)   
+## <a name="see-also"></a>参照  
+ [&#40;ディメンション&#41; &#40;MDX&#41;のカウント](../mdx/count-dimension-mdx.md)   
+ [MDX&#41;&#41; &#40;&#40;階層レベルのカウント](../mdx/count-hierarchy-levels-mdx.md)   
+ [MDX&#41;&#41; &#40;組 &#40;数](../mdx/count-tuple-mdx.md)   
+ [MDX&#41;&#40;ドリルダウンレベル](../mdx/drilldownlevel-mdx.md)   
+ [MDX&#41;&#40;の Add演算メンバー](../mdx/addcalculatedmembers-mdx.md)   
  [Hierarchize &#40;MDX&#41;](../mdx/hierarchize-mdx.md)   
- [Properties &#40;MDX&#41;](../mdx/properties-mdx.md)   
- [Aggregate (MDX)](../mdx/aggregate-mdx.md)   
- [Filter &#40;MDX&#41;](../mdx/filter-mdx.md)   
+ [MDX&#41;&#40;プロパティ](../mdx/properties-mdx.md)   
+ [MDX&#41;の集計 &#40;](../mdx/aggregate-mdx.md)   
+ [MDX&#41;のフィルター処理 &#40;](../mdx/filter-mdx.md)   
  [PrevMember &#40;MDX&#41;](../mdx/prevmember-mdx.md)   
- [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Mdx 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

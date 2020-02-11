@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0643c6fbf8e9a6aa649d4d335117bcb4f5b35208
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206853"
 ---
 # <a name="maintenance-plans"></a>メンテナンス プラン
@@ -44,7 +44,7 @@ ms.locfileid: "68206853"
 ## <a name="maintenace-plan-functionality"></a>メンテナンス プラン機能  
  メンテナンス プランは、次のタスクを実行するように作成できます。  
   
--   新しい FILL FACTOR を使用してインデックスを再構築し、データ ページとインデックス ページのデータを再編成します。 この再構築によって、データ量と空き領域がすべてのデータベース ページに均等に分配されます。 また、その後の拡張を高速化できます。 詳細については、「[インデックスの FILL FACTOR の指定](../indexes/specify-fill-factor-for-an-index.md)」を参照してください。  
+-   新しい FILL FACTOR を使用してインデックスを再構築し、データ ページとインデックス ページのデータを再編成します。 この再構築によって、データ量と空き領域がすべてのデータベース ページに均等に分配されます。 また、その後の拡張を高速化できます。 詳細については、「 [インデックスの FILL FACTOR の指定](../indexes/specify-fill-factor-for-an-index.md)」を参照してください。  
   
 -   空のデータベース ページを削除してデータ ファイルを圧縮します。  
   
@@ -63,9 +63,10 @@ ms.locfileid: "68206853"
   
 |||  
 |-|-|  
-|**[説明]**|**トピック**|  
-|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用してメンテナンス プランを作成する方法について説明します。|[メンテナンス プランの作成](create-a-maintenance-plan.md)|  
-|メンテナンス プラン デザイン画面を使用してメンテナンス プランを作成する方法について説明します。|[メンテナンス プランの作成 &#40;メンテナンス プラン デザイン画面&#41;](create-a-maintenance-plan-maintenance-plan-design-surface.md)|  
-|オブジェクト エクスプローラーで利用できるメンテナンス プランの機能について説明します。|[[メンテナンス プラン] ノード &#40;オブジェクト エクスプローラー&#41;](../../ssms/object/object-explorer.md)|  
+|**説明**|**トピック**|  
+|
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用してメンテナンス プランを作成する方法について説明します。|[メンテナンス プランの作成](create-a-maintenance-plan.md)|  
+|メンテナンス プラン デザイン画面を使用してメンテナンス プランを作成する方法について説明します。|[メンテナンスプラン &#40;メンテナンスプランを作成デザインサーフェイス&#41;](create-a-maintenance-plan-maintenance-plan-design-surface.md)|  
+|オブジェクト エクスプローラーで利用できるメンテナンス プランの機能について説明します。|[メンテナンスプランノード &#40;オブジェクトエクスプローラー&#41;](../../ssms/object/object-explorer.md)|  
   
   

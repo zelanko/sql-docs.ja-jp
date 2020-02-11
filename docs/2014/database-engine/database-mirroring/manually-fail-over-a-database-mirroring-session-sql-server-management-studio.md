@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b42fdb9d53a4aa0444a98ee311000fb1c2929ff1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62756157"
 ---
 # <a name="manually-fail-over-a-database-mirroring-session-sql-server-management-studio"></a>データベース ミラーリング セッションの手動フェールオーバー (SQL Server Management Studio)
@@ -26,7 +26,7 @@ ms.locfileid: "62756157"
   
  手動フェールオーバー中、フェールオーバーが発生するデータベースに対するプリンシパル サーバーとミラー サーバーのロールが切り替わります。 その結果、ミラー データベースがプリンシパル データベースになり、プリンシパル データベースがミラー データベースになります。 次の表は、 `SQLDBENGINE0_1` と `SQLDBENGINE0_2`という 2 つのミラーリング パートナーを例にとって、そのロールが手動フェールオーバーによってどのように切り替わるかを示しています。  
   
-|[サーバー]|フェールオーバー前|フェールオーバー後|  
+|サーバー|フェールオーバー前|フェールオーバー後|  
 |------------|---------------------|--------------------|  
 |`SQLDBENGINE0_1`|PRINCIPAL|MIRROR|  
 |`SQLDBENGINE0_2`|MIRROR|PRINCIPAL|  
@@ -54,7 +54,7 @@ ms.locfileid: "62756157"
   
      ダイアログ ボックスが自動的に閉じられます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データベース プロパティ &#40;[ミラーリング] ページ&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
  [データベース ミラーリング &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [データベース ミラーリング セッションを手動でフェールオーバーする &#40;Transact-SQL&#41;](manually-fail-over-a-database-mirroring-session-transact-sql.md)   

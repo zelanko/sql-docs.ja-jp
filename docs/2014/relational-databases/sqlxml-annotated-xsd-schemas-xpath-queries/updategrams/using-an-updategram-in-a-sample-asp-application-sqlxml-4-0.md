@@ -1,5 +1,5 @@
 ---
-title: サンプル ASP アプリケーション (SQLXML 4.0) で、アップデート グラムを使用します。マイクロソフトのドキュメント
+title: サンプル ASP アプリケーションでのアップデートグラムの使用 (SQLXML 4.0) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e209a4f6118ae9581889299c09653ebaf1cfe2cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014629"
 ---
 # <a name="using-an-updategram-in-a-sample-asp-application-sqlxml-40"></a>サンプル ASP アプリケーションでのアップデートグラムの使用 (SQLXML 4.0)
@@ -76,7 +76,8 @@ ms.locfileid: "66014629"
 </ROOT>  
 ```  
   
- 次のコードは、ASP アプリケーション (SampleASP.asp) です。 このコードを、仮想ルートが関連付けられているディレクトリに保存します。仮想ルートはインターネット サービス マネージャー ユーティリティを使って作成します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 用の IIS 仮想ディレクトリ管理ユーティリティは使用しません。[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 用の IIS 仮想ディレクトリ管理ユーティリティでは、ASP アプリケーションにアクセスしたり、このアプリケーションを識別したりできません。  
+ 次のコードは、ASP アプリケーション (SampleASP.asp) です。 このコードを、仮想ルートが関連付けられているディレクトリに保存します。仮想ルートはインターネット サービス マネージャー ユーティリティを使って作成します。 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 用の IIS 仮想ディレクトリ管理ユーティリティは使用しません。[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 用の IIS 仮想ディレクトリ管理ユーティリティでは、ASP アプリケーションにアクセスしたり、このアプリケーションを識別したりできません。  
   
 > [!NOTE]  
 >  コードでは、"ServerName" に Microsoft インターネット インフォメーション サービス (IIS) を実行するサーバーの名前を指定する必要があります。  
@@ -158,7 +159,7 @@ You may update customer information below.<br><br>
 </html>  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [アップデート グラムのセキュリティに関する考慮事項&#40;SQLXML 4.0&#41;](../security/updategram-security-considerations-sqlxml-4-0.md)  
+## <a name="see-also"></a>参照  
+ [SQLXML 4.0&#41;&#40;アップデートグラムのセキュリティに関する考慮事項](../security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

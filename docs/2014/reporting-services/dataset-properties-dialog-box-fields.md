@@ -1,5 +1,5 @@
 ---
-title: データセットのプロパティ] ダイアログ ボックスの [フィールド |Microsoft Docs
+title: '[フィールド] ([データセットのプロパティ] ダイアログボックス)Microsoft Docs'
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -14,20 +14,21 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 133d905958f0613d9b7ecf2d28c439c15a59eedb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109403"
 ---
 # <a name="dataset-properties-dialog-box-fields"></a>[フィールド] ([データセットのプロパティ] ダイアログ ボックス)
+  
   **[データセットのプロパティ]** ダイアログ ボックスの **[フィールド]** を選択すると、レポート データセットのフィールド コレクションを変更できます。 フィールドの一覧は自動的に作成されますが、 **[フィールド]** を使用してクエリ フィールドや計算フィールドを追加、編集、および削除することができます。  
   
-## <a name="options"></a>および  
- **[追加]**  
- 新しいクエリ フィールドまたは計算フィールドをデータセットに追加します。  
+## <a name="options"></a>オプション  
+ **追加**  
+ 新しいクエリフィールドまたは計算フィールドをデータセットに追加します。  
   
- **削除**  
+ **デリート**  
  選択したフィールドをデータセットから削除します。  
   
  **フィールド名**  
@@ -45,7 +46,7 @@ ms.locfileid: "66109403"
   
 ## <a name="see-also"></a>参照  
  [データセット フィールド コレクション &#40;レポート ビルダーおよび SSRS&#41;](report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
- [レポートにデータを追加&#40;レポート ビルダーおよび SSRS&#41;](report-data/report-datasets-ssrs.md)   
+ [レポート &#40;レポートビルダーおよび SSRS&#41;にデータを追加する](report-data/report-datasets-ssrs.md)   
  [式 &#40;レポート ビルダーおよび SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)  
   
   

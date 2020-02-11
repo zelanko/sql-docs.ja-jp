@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b2cc984e4e519d9db0c0532ec5b1f917e18b4ec6
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75247410"
 ---
 # <a name="sql-server-native-client-support-for-high-availability-disaster-recovery"></a>SQL Server Native Client の HADR サポート
@@ -101,7 +101,7 @@ ms.locfileid: "75247410"
  
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC アプリケーションは、次に示した 3 つの関数のいずれかを使用して、接続を行うことができます。  
   
-|機能|説明|  
+|Function|[説明]|  
 |--------------|-----------------|  
 |[SQLBrowseConnect](../../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md)|
   **SQLBrowseConnect** から返されるサーバーの一覧に VNN は含まれません。 確認できるのはサーバーの一覧だけです。スタンドアロン サーバーであるのか、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] が有効な 2 つ以上の [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] インスタンスが含まれる Windows Server フェールオーバー クラスタリング (WSFC) クラスターのうちのプライマリ サーバーまたはセカンダリ サーバーであるのかは示されません。 サーバーへの接続時にエラーが返された場合、接続先のサーバーの構成に **ApplicationIntent** 設定との互換性がないことが原因として考えられます。<br /><br /> 
@@ -109,7 +109,7 @@ ms.locfileid: "75247410"
 |[SQLConnect](../../../relational-databases/native-client-odbc-api/sqlconnect.md)|**SQLConnect**は、データソース名 (DSN) または接続プロパティを介して**Applicationintent**と**MultiSubnetFailover**の両方をサポートします。|  
 |[SQLDriverConnect](../../../relational-databases/native-client-odbc-api/sqldriverconnect.md)|**SQLDriverConnect**では、接続文字列キーワード、接続プロパティ、または DSN を使用して**Applicationintent**と**MultiSubnetFailover**をサポートしています。|  
   
-## <a name="ole-db"></a>OLE DB  
+## <a name="ole-db"></a>OLE DB (OLE DB)  
  
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client の OLE DB では、**MultiSubnetFailover** キーワードはサポートされません。  
   
@@ -152,7 +152,7 @@ ms.locfileid: "75247410"
  暗黙的な接続が確立された場合、その接続には、親の接続のアプリケーション インテント設定が使用されます。 同様に、同じデータ ソースから作成されたセッションはいずれも、そのデータ ソースのアプリケーション インテント設定を継承します。  
   
 ## <a name="see-also"></a>参照  
- [SQL Server Native Client 機能](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
+ [SQL Server Native Client の機能](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
  [SQL Server Native Client での接続文字列キーワードの使用](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)  
   
   

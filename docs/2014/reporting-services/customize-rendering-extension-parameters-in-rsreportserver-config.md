@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: efdea595034f91497befdc7f7b12adacef8d73ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109551"
 ---
 # <a name="customize-rendering-extension-parameters-in-rsreportserverconfig"></a>RSReportServer.Config で表示拡張機能パラメーターをカスタマイズする
@@ -40,9 +40,11 @@ ms.locfileid: "66109551"
 ## <a name="finding-and-modifying-rsreportserverconfig"></a>RSReportServer.config の検索および変更  
  レポート出力形式の構成設定は、RSReportServer.config ファイルで表示拡張機能パラメーターとして指定します。 構成ファイルの表示拡張機能パラメーターを指定するには、表示パラメーターを設定する XML 構造の定義方法を理解しておく必要があります。 変更できる XML 構造は次の 2 つです。  
   
--   `OverrideNames` 要素は、表示拡張機能の表示名と言語を定義しています。  
+-   
+  `OverrideNames` 要素は、表示拡張機能の表示名と言語を定義しています。  
   
--   `DeviceInfo` XML 構造は、表示拡張機能で使用するデバイス情報設定を定義しています。 ほとんどの表示拡張機能パラメーターは、デバイス情報設定として指定されます。  
+-   
+  `DeviceInfo` XML 構造は、表示拡張機能で使用するデバイス情報設定を定義しています。 ほとんどの表示拡張機能パラメーターは、デバイス情報設定として指定されます。  
   
  テキスト エディターでファイルを変更できます。 RSReportServer.config ファイルは、\Reporting Services\Report Server\Bin フォルダーにあります。 構成ファイルの変更方法の詳細については、「[Reporting Services の構成ファイルの変更 &#40;RSreportserver.config&#41;](report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)」を参照してください。  
   
@@ -128,7 +130,7 @@ ms.locfileid: "66109551"
 </Render>  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [RSReportServer 構成ファイル](report-server/rsreportserver-config-configuration-file.md)   
  [RSReportDesigner 構成ファイル](report-server/rsreportdesigner-configuration-file.md)   
  [CSV デバイス情報設定](csv-device-information-settings.md)   

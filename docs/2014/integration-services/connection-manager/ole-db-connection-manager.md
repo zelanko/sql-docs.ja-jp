@@ -16,19 +16,20 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 00d28ef5dbe2c0a19e5a464981934f2a84df7a7c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62833731"
 ---
 # <a name="ole-db-connection-manager"></a>OLE DB 接続マネージャー
   OLE DB 接続マネージャーを使用すると、パッケージは OLE DB プロバイダーを使用してデータ ソースに接続できます。 たとえば、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続する OLE DB 接続マネージャーは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を使用できます。  
   
 > [!NOTE]
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11.0 OLEDB プロバイダーでは、マルチサブネット フェールオーバー クラスタリングの新しい接続文字列キーワード (MultiSubnetFailover=True) はサポートされません。 詳細については、次を参照してください。、 [SQL Server リリース ノート](https://go.microsoft.com/fwlink/?LinkId=247824)とブログの投稿、 [AlwaysOn マルチ サブネット フェールオーバーと SSIS](https://www.mattmasson.com/2012/03/alwayson-multi-subnet-failover-and-ssis/)、www.mattmasson.com にします。  
+>  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11.0 OLEDB プロバイダーでは、マルチサブネット フェールオーバー クラスタリングの新しい接続文字列キーワード (MultiSubnetFailover=True) はサポートされません。 詳細については、www.mattmasson.com の[リリースノート](https://go.microsoft.com/fwlink/?LinkId=247824)と、の[AlwaysOn マルチサブネットフェールオーバーおよび SSIS](https://www.mattmasson.com/2012/03/alwayson-multi-subnet-failover-and-ssis/)に関するブログ記事を参照し SQL Server てください。  
   
- いくつかの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] タスクとデータ フロー コンポーネントは、OLE DB 接続マネージャーを使用します。 たとえば、OLE DB ソースと OLE DB 変換先は、この接続マネージャーを使用してデータの抽出と読み込みを行います。また、SQL 実行タスクは、この接続マネージャーを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに接続し、クエリを実行できます。  
+ いくつ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]かのタスクとデータフローコンポーネントでは、OLE DB 接続マネージャーを使用します。 たとえば、OLE DB ソースと OLE DB 変換先は、この接続マネージャーを使用してデータの抽出と読み込みを行います。また、SQL 実行タスクは、この接続マネージャーを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに接続し、クエリを実行できます。  
   
  OLE DB 接続マネージャーは、C++ などの言語を使用するアンマネージ コードで記述されたカスタム タスク内で、OLE DB データ ソースにアクセスするためにも使用されます。  
   
@@ -46,22 +47,23 @@ ms.locfileid: "62833731"
   
 -   接続マネージャーから作成される接続を、実行時に保持するかどうかを指定します。  
   
-## <a name="logging"></a>ログの記録  
- OLE DB 接続マネージャーによる外部データ プロバイダーの呼び出しをログに記録できます。 このログ機能を使用すると、OLE DB 接続マネージャーによる外部データ ソースへの接続に関するトラブルシューティングを行うことができます。 OLE DB 接続マネージャーによる外部データ プロバイダーの呼び出しのログを記録するには、パッケージ ログ記録を有効にして、パッケージ レベルで **Diagnostic** イベントを選択する必要があります。 詳細については、「 [パッケージ実行のトラブルシューティング ツール](../troubleshooting/troubleshooting-tools-for-package-execution.md)」を参照してください。  
+## <a name="logging"></a>ログ記録  
+ OLE DB 接続マネージャーによる外部データ プロバイダーの呼び出しをログに記録できます。 このログ機能を使用すると、OLE DB 接続マネージャーによる外部データ ソースへの接続に関するトラブルシューティングを行うことができます。 OLE DB 接続マネージャーが外部データプロバイダーに対して行う呼び出しをログに記録するには、パッケージログ記録を有効にし、パッケージレベルで**Diagnostic**イベントを選択します。 詳細については、「[パッケージ実行のトラブルシューティング ツール](../troubleshooting/troubleshooting-tools-for-package-execution.md)」を参照してください。  
   
 ## <a name="configuration-of-the-oledb-connection-manager"></a>OLEDB 接続マネージャーの構成  
- プロパティを設定するには [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。 [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、「 [OLE DB 接続マネージャーの構成](../configure-ole-db-connection-manager.md)」を参照してください。 プログラムによって接続マネージャーを構成する方法の詳細については、開発者ガイドの **T:Microsoft.SqlServer.Dts.Runtime.ConnectionManager** クラスのドキュメントを参照してください。  
+ プロパティを設定するには [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。 
+  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、「 [OLE DB 接続マネージャーの構成](../configure-ole-db-connection-manager.md)」を参照してください。 プログラムによって接続マネージャーを構成する方法の詳細については、開発者ガイドの **T:Microsoft.SqlServer.Dts.Runtime.ConnectionManager** クラスのドキュメントを参照してください。  
   
 ## <a name="related-content"></a>関連コンテンツ  
   
--   social.technet.microsoft.com の Wiki の記事「 [SSIS から Oracle への接続](https://go.microsoft.com/fwlink/?LinkId=220670) 」  
+-   Wiki の記事「 [SSIS With Oracle connector with](https://go.microsoft.com/fwlink/?LinkId=220670) social.technet.microsoft.com」をご覧ください。  
   
 -   carlprothman.net の [OLE DB プロバイダー用接続文字列](https://go.microsoft.com/fwlink/?LinkId=220744)に関する技術記事  
   
 ## <a name="see-also"></a>参照  
  [OLE DB ソース](../data-flow/ole-db-source.md)   
- [OLE DB 変換先](../data-flow/ole-db-destination.md)   
+ [OLE DB の宛先](../data-flow/ole-db-destination.md)   
  [SQL 実行タスク](../control-flow/execute-sql-task.md)   
- [Integration Services &#40;SSIS&#41; の接続](integration-services-ssis-connections.md)  
+ [SSIS&#41; 接続の Integration Services &#40;](integration-services-ssis-connections.md)  
   
   

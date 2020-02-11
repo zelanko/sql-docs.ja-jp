@@ -1,5 +1,5 @@
 ---
-title: ブロックと ODBC のカーソルのスクロール可能な互換性 3.x |Microsoft Docs
+title: ブロックとスクロール可能なカーソルの ODBC 3. x の互換性 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,30 +17,30 @@ ms.assetid: 82f6cf68-cfde-4417-9788-d6382ca14bf8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7d12906f8dec0bfb12fc861c067e6e615e758a3b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68134987"
 ---
 # <a name="block-cursors-scrollable-cursors-and-backward-compatibility-for-odbc-3x-applications"></a>ODBC 3.x アプリケーション用のブロック カーソル、スクロール可能なカーソル、および下位互換性
-両方が存在する**SQLFetchScroll**と**SQLExtendedFetch** odbc の間で、アプリケーション プログラミング インターフェイス (API)、一連の関数である最初の平文の分割は、アプリケーションの呼び出し、およびサービス プロバイダー インターフェイス (SPI) 関数のセットである、ドライバーが実装されます。 この分割は ODBC の要件のバランスを取るために必要な*3.x*、使用する**SQLFetchScroll**に、標準の連携して、ODBC との互換性、 *2.x*、使用します。**SQLExtendedFetch**します。  
+**Sqlfetchscroll**と**SQLExtendedFetch**の両方が存在する場合は、アプリケーションプログラミングインターフェイス (API) と、アプリケーションが呼び出す一連の関数、およびドライバーが実装する関数のセットである SERVICE Provider Interface (SPI) との間の、ODBC での最初の clear split を表します。 この分割は、 **Sqlfetchscroll**を使用して標準に準拠し、 **SQLExtendedFetch***を使用する odbc 2.X*と互換性が*ある odbc 3.x*の要件とのバランスを取るために必要です。  
   
- ODBC *3.x*は API のセットにアプリケーション呼び出しの機能が含まれています**SQLFetchScroll**および関連するステートメント属性。 ODBC *3.x* 、SPI は、セットである関数のドライバーを実装して、含まれています**SQLFetchScroll**、 **SQLExtendedFetch**、および関連するステートメント属性。 ODBC は、この分割、API と SPI を正式には適用されません、ため、ODBC のことが*3.x*を呼び出すアプリケーション**SQLExtendedFetch**および関連するステートメント属性。 ただし、ODBC の理由はありません*3.x*これを行うアプリケーション。 Api および Spi の詳細についてはの概要を参照してください。 [ODBC アーキテクチャ](../../../odbc/reference/odbc-architecture.md)します。  
+ ODBC 3.x API は、アプリケーションが呼び出す関数のセットであり、 **Sqlfetchscroll**および関連するステートメント属性が含まれてい*ます。* ODBC 3.x はドライバーが実装する関数のセットであり、 **Sqlfetchscroll**、 **SQLExtendedFetch**、および関連するステートメント属性が含まれて*います。* ODBC では API と SPI の間にこの分割が正式に適用されないため、ODBC 3.x アプリケーションは**SQLExtendedFetch**および関連するステートメント属性を呼び出すことが*できます。* ただし、これを行うの*は ODBC 3.x*アプリケーションではありません。 Api と Spi の詳細については、「 [ODBC アーキテクチャ](../../../odbc/reference/odbc-architecture.md)の概要」を参照してください。  
   
- 方法については、ODBC *3.x*ドライバー マネージャーは odbc 呼び出しをマッピング*2.x*および ODBC *3.x*ドライバー、およびどのような関数とステートメント属性 ODBC *3.x*ドライバーがブロックとスクロール可能なカーソルを実装する必要がありますを参照してください[、ドライバーが何](../../../odbc/reference/appendixes/what-the-driver-does.md)で付録 g:旧バージョンとの互換性のためのガイドラインをドライバーです。  
+ Odbc *3.x ドライバーマネージャー*が odbc *2.x および odbc* *3.x ドライバーへ*の呼び出しをマップする方法、および odbc *3.x ドライバーが*ブロックおよびスクロール可能なカーソルに対して実装する必要がある関数とステートメントの属性の詳細については、「付録 G: ドライバーの旧バージョン[と](../../../odbc/reference/appendixes/what-the-driver-does.md)の互換性のためのガイドライン」を参照してください。  
   
- 次の表に、どのような機能とステートメント属性 ODBC *3.x*ブロックとカーソルのスクロール可能なアプリケーションを使用する必要があります。 ODBC の間での変更も一覧表示されます*2.x*および ODBC *3.x*この領域でその ODBC *3.x* ODBC と互換性がある注意すべきアプリケーション*2.x。* ドライバー。  
+ 次の表は、ODBC *3. x*アプリケーションで使用する必要がある関数とステートメントの属性と、ブロックカーソルおよびスクロール可能なカーソルをまとめたものです。 また *、odbc 2.x アプリケーションが* *odbc 2.x ドライバーと*互換性があることを認識している必要が*ある、odbc 2.x と odbc* *3. x*の間の変更についても示します。  
   
-|関数または<br /><br /> ステートメント属性|コメント|  
+|関数または<br /><br /> statement 属性|説明|  
 |-----------------------------------------|--------------|  
-|SQL_ATTR_FETCH_BOOKMARK_PTR|使用したブックマークを指す**SQLFetchScroll**します。<br /><br /> ときに、ODBC でのアプリケーション設定この*2.x*ドライバー、固定長のブックマークをポイントする必要があります。|  
-|SQL_ATTR_ROW_STATUS_PTR|埋められた行の状態配列を指す**SQLFetch**、 **SQLFetchScroll**、 **SQLBulkOperations**、および**SQLSetPos**します。<br /><br /> アプリケーションの ODBC でこれが設定されている場合*2.x*ドライバーと呼び出し**SQLBulkOperation**で、*操作*の呼び出しの前に SQL_ADD **SQLFetchScroll**、 **SQLFetch**、または**SQLExtendedFetch**、SQLSTATE HY011 (属性はここで設定することはできません) が返されます。<br /><br /> アプリケーションを呼び出すと**SQLFetch** odbc *2.x*ドライバー、 **SQLFetch**にマップされて**SQLExtendedFetch**のでこの配列内の値。|  
-|SQL_ATTR_ROWS_FETCHED_PTR|バッファーを指す**SQLFetch**と**SQLFetchScroll**フェッチされた行の数を返します。<br /><br /> アプリケーションを呼び出すと**SQLFetch** odbc *2.x*ドライバー、 **SQLFetch**にマップされて**SQLExtendedFetch**ので、このバッファー内の値。|  
-|SQL_ATTR_ROW_ARRAY_SIZE|行セットのサイズを設定します。<br /><br /> アプリケーションを呼び出す場合**SQLBulkOperations**で、*操作*odbc SQL_ADD の*2.x*呼び出し、SQL_ATTR_ROW_ARRAY_ いないドライバー、SQL_ROWSET_SIZE が使用されますサイズの呼び出しにマップされて**SQLSetPos**で、*操作*、SQL_ADD SQL_ROWSET_SIZE を使用するのです。<br /><br /> 呼び出す**SQLSetPos**で、*操作*SQL_ADD のまたは**SQLExtendedFetch** odbc *2.x*ドライバーは SQL_ROWSET_SIZE を使用します。<br /><br /> 呼び出す**SQLFetch**または**SQLFetchScroll** odbc *2.x*ドライバーは、SQL_ATTR_ROW_ARRAY_SIZE を使用します。|  
-|**SQLBulkOperations**|挿入とブックマークの操作を実行します。 ときに**SQLBulkOperations**で、*操作*SQL_ADD の ODBC で呼び出される*2.x*ドライバーにマップされます**SQLSetPos** で*操作*SQL_ADD の。 次に、実装の詳細を示します。<br /><br /> -ODBC の使用時に*2.x*ドライバー、アプリケーションに関連付けられている、暗黙的に割り当てられた ARD のみを使用する必要があります、 *StatementHandle*; ため、行を追加するため別 ARD を割り当てることができません、明示的な記述子の操作は、ODBC でサポートされていない*2.x*ドライバー。 アプリケーションを使用する必要があります**SQLBindCol**されません、ARD にバインドする**SQLSetDescField**または**SQLSetDescRec**します。<br />-ODBC の呼び出し時に*3.x*ドライバー、アプリケーションが呼び出すことができます**SQLBulkOperations**で、*操作*の呼び出しの前に SQL_ADD **SQLFetch**または**SQLFetchScroll**します。 ODBC の呼び出し時に*2.x*ドライバー、アプリケーションが呼び出す必要があります**SQLFetchScroll**呼び出す前に**SQLBulkOperations**操作の SQL_ADD とします。|  
-|**SQLFetch**|次の行セットを返します。 次に、実装の詳細を示します。<br /><br /> のアプリケーションを呼び出すと**SQLFetch** odbc *2.x*にマップされたドライバー、 **SQLExtendedFetch**します。<br />のアプリケーションを呼び出すと**SQLFetch** odbc *3.x* SQL_ATTR_ROW_ARRAY_SIZE ステートメント属性で指定された行の番号を返すドライバー。|  
-|**SQLFetchScroll**|指定した行セットを返します。 次に、実装の詳細を示します。<br /><br /> のアプリケーションを呼び出すと**SQLFetchScroll** odbc *2.x*ドライバー、SQLSTATE 01S01 を返します (行内のエラー) の 1 行に適用される各エラーの前にします。 だけであるためこれは、ODBC *3.x*ドライバー マネージャーをマップする**SQLExtendedFetch**と**SQLExtendedFetch**この SQLSTATE を返します。 アプリケーションを呼び出すと**SQLFetchScroll** odbc *3.x*ドライバー、決して返します SQLSTATE 01S01 (行内のエラー)。<br />のアプリケーションを呼び出すと**SQLFetchScroll** odbc *2.x*ドライバー *FetchOrientation* SQL_FETCH_BOOKMARK に設定、 *FetchOffset*引数を 0 に設定する必要があります。 SQLSTATE HYC00 オフセットに基づくブックマークをフェッチしていますが、ODBC で試行された場合は、(省略可能な機能が実装されていません) が返されます。 *2.x*ドライバー。|  
+|SQL_ATTR_FETCH_BOOKMARK_PTR|**Sqlfetchscroll**で使用するブックマークをポイントします。<br /><br /> アプリケーションが ODBC 2.x ドライバーでこれを設定する場合、これは固定長のブックマークを指す必要が*あります。*|  
+|SQL_ATTR_ROW_STATUS_PTR|**Sqlfetch**、 **sqlfetchscroll**、 **sqlbulkoperations**、 **SQLSetPos**によって入力された行ステータス配列を指します。<br /><br /> アプリケーション*が ODBC 2.x*ドライバーでこれを設定し、 **sqlbulkoperation**、 **Sqlfetch**、または**SQLExtendedFetch**を呼び出す前に SQL_ADD*操作*で**Sqlbulkoperation**を呼び出すと、SQLSTATE HY011 (属性を設定することはできません) が返されます。<br /><br /> アプリケーション*が ODBC 2.x*ドライバーで**sqlfetch**を呼び出すと、 **sqlfetch**は**SQLExtendedFetch**にマップされるため、この配列の値が返されます。|  
+|SQL_ATTR_ROWS_FETCHED_PTR|**Sqlfetch**および**sqlfetchscroll**がフェッチされた行の数を返すバッファーを指します。<br /><br /> アプリケーション*が ODBC 2.x*ドライバーで**sqlfetch**を呼び出すと、 **sqlfetch**は**SQLExtendedFetch**にマップされるため、このバッファーには値が返されます。|  
+|SQL_ATTR_ROW_ARRAY_SIZE|行セットのサイズを設定します。<br /><br /> アプリケーションが ODBC *2.x ドライバーで*SQL_ADD 操作を使用して**sqlbulkoperations**を呼び出した場合、SQL_ATTR_ROW_ARRAY_SIZE ではなく、呼び出しに対して SQL_ROWSET_SIZE が使用されます。これは、SQL_ROWSET_SIZE を使用する SQL_ADD の*操作*で、呼び出しが**SQLSetPos**にマップされるためです。 **<br /><br /> ODBC 2.x ドライバーで SQL_ADD または**SQLExtendedFetch**の*操作*を使用して**SQLSetPos**を呼び出すと、SQL_ROWSET_SIZE が使用され*ます。*<br /><br /> ODBC 2.x ドライバーで**Sqlfetch**または**sqlfetchscroll**を呼び出すと、SQL_ATTR_ROW_ARRAY_SIZE が使用され*ます。*|  
+|**SQLBulkOperations**|挿入操作とブックマーク操作を実行します。 SQL_ADD 操作を伴う**Sqlbulkoperations**が ODBC 2.x ドライバーで呼び出されると、SQL_ADD の*操作*によって**SQLSetPos**にマップさ*れます。* ** 実装の詳細は次のとおりです。<br /><br /> -ODBC 2.x ドライバーを使用する場合、アプリケーションでは、 *StatementHandle*に関連付けられている、暗黙的に割り当てられたもののみを使用する必要が*あります。* 明示的な記述子操作は ODBC *2.x ドライバーで*はサポートされていないため、行を追加するために別のを割り当てることはできません。 アプリケーションでは、 **SQLSetDescField**または**SQLSetDescRec**ではなく、 **SQLBindCol**を使用して、にバインドする必要があります。<br />-ODBC 3.x ドライバーを呼び出す場合、アプリケーションは、 **Sqlfetch**または**sqlbulkoperations**を呼び出す前に、SQL_ADD 操作を使用して**sqlbulkoperations**を呼び出すことが*できます。* ** ODBC 2.x ドライバーを呼び出すときに、アプリケーションは**Sqlfetchscroll**を呼び出してから、SQL_ADD 操作で**sqlfetchscroll**を呼び出す必要が*あります。*|  
+|**SQLFetch**|次の行セットを返します。 実装の詳細は次のとおりです。<br /><br /> -アプリケーション*が ODBC 2.x*ドライバーで**sqlfetch**を呼び出すと、 **SQLExtendedFetch**にマップされます。<br />-アプリケーションが ODBC *3. x*ドライバーで**sqlfetch**を呼び出すと、SQL_ATTR_ROW_ARRAY_SIZE statement 属性で指定された行数が返されます。|  
+|**SQLFetchScroll**|指定された行セットを返します。 実装の詳細は次のとおりです。<br /><br /> -アプリケーション*が ODBC 2.x*ドライバーで**sqlfetchscroll**を呼び出すと、1つの行に適用される各エラーの前に SQLSTATE 01S01 (行のエラー) が返されます。 これが行われるのは、ODBC *3.X ドライバーマネージャー*がこれを**SQLExtendedFetch**にマップし、 **SQLExtendedFetch**がこの SQLSTATE を返すためです。 アプリケーションが ODBC *3. x*ドライバーで**sqlfetchscroll**を呼び出すと、SQLSTATE 01S01 (行内のエラー) は返されません。<br />- *Fetchorientation*が SQL_FETCH_BOOKMARK に設定*された ODBC 2.x*ドライバーでアプリケーションが**sqlfetchscroll**を呼び出した場合、 *fetchoffset*引数を0に設定する必要があります。 ODBC 2.x ドライバーでオフセットベースのブックマークフェッチを*実行しよう*とすると、SQLSTATE HYC00 (省略可能な機能が実装されていません) が返されます。|  
   
 > [!NOTE]  
->  ODBC *3.x*アプリケーションは使用しないでください**SQLExtendedFetch**または SQL_ROWSET_SIZE ステートメントの属性。 代わりに、使用する必要があります**SQLFetchScroll**と SQL_ATTR_ROW_ARRAY_SIZE ステートメント属性。 ODBC *3.x*アプリケーションは使用しないでください**SQLSetPos**で、*操作*SQL_ADD の使用する必要がありますが、 **SQLBulkOperations** で*操作*SQL_ADD の。
+>  ODBC *3.x*アプリケーションでは、 **SQLExtendedFetch**または SQL_ROWSET_SIZE statement 属性を使用しないでください。 代わりに、 **Sqlfetchscroll**と SQL_ATTR_ROW_ARRAY_SIZE statement 属性を使用する必要があります。 ODBC *3. x*アプリケーションでは、SQL_ADD*操作*で**SQLSetPos**を使用することはできませんが、SQL_ADD 操作で**sqlbulkoperations**を使用する必要があります。 **

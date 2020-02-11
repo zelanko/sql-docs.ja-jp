@@ -1,5 +1,5 @@
 ---
-title: sys.dm_pdw_node_status (TRANSACT-SQL) |Microsoft Docs
+title: dm_pdw_node_status (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -13,35 +13,35 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 4cd8788d19b06329d0280efc43a13a9a218e056c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67899367"
 ---
-# <a name="sysdmpdwnodestatus-transact-sql"></a>sys.dm_pdw_node_status (TRANSACT-SQL)
+# <a name="sysdm_pdw_node_status-transact-sql"></a>dm_pdw_node_status (Transact-sql)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  追加情報を保持 (経由で[sys.dm_pdw_nodes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)) のパフォーマンスとアプライアンスのすべてのノードの状態に関するします。 アプライアンス内のノードごとに 1 行が一覧表示します。  
+  すべてのアプライアンスノードのパフォーマンスと状態に関する追加情報 ( [dm_pdw_nodes &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)) を保持します。 アプライアンス内のノードごとに1行が一覧表示されます。  
   
-|列名|データ型|説明|範囲|  
+|列名|データ型|[説明]|Range|  
 |-----------------|---------------|-----------------|-----------|  
-|pdw_node_id|**int**|ノードに関連付けられている一意の数値 id。<br /><br /> このビューのキー。|種類に関係なく、アプライアンスにわたって一意です。|  
+|pdw_node_id|**int**|ノードに関連付けられている一意の数値 id。<br /><br /> このビューのキー。|種類に関係なく、アプライアンス全体で一意です。|  
 |process_id|**int**|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]||  
-|process_name|**nvarchar (255)**|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]||  
-|allocated_memory|**bigint**|このノード上のメモリを割り当てられた合計数。||  
-|available_memory|**bigint**|このノードで使用可能なメモリを合計します。||  
-|process_cpu_usage|**bigint**|合計のプロセス CPU 使用率、タイマー刻みで。||  
-|total_cpu_usage|**bigint**|合計 CPU 使用率、タイマー刻みで。||  
-|thread_count|**bigint**|このノードで使用しているスレッドの合計数。||  
-|handle_count|**bigint**|このノードで使用中のハンドルの合計数。||  
-|total_elapsed_time|**bigint**|システムを起動または再起動後の経過時間の合計です。|システムを起動または再起動後の経過時間の合計です。 Total_elapsed_time では、整数値 (ミリ秒単位で 24.8 日) の最大値を超えるをオーバーフローしました期日の実体化エラーが発生します。<br /><br /> 最大値をミリ秒単位は 24.8 日に相当します。|  
-|is_available|**bit**|このノードが使用できるかどうかを示すフラグします。||  
-|sent_time|**datetime**|最後に、ネットワークのパッケージは、このノードに送信されました。||  
-|received_time|**datetime**|最後に、ネットワークのパッケージは、このノードによって受信されました。||  
-|error_id|**nvarchar(36)**|このノードで発生した最後のエラーの一意の識別子。||  
+|process_name|**nvarchar(255)**|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]||  
+|allocated_memory|**bigint**|このノードで割り当てられたメモリの合計。||  
+|available_memory|**bigint**|このノードで使用可能なメモリの合計。||  
+|process_cpu_usage|**bigint**|プロセス CPU 使用率の合計 (ティック単位)。||  
+|total_cpu_usage|**bigint**|合計 CPU 使用率 (ティック単位)。||  
+|thread_count|**bigint**|このノードで使用されているスレッドの合計数。||  
+|handle_count|**bigint**|このノードで使用されているハンドルの合計数。||  
+|total_elapsed_time|**bigint**|システムの開始または再起動からの経過時間の合計。|システムの開始または再起動からの経過時間の合計。 Total_elapsed_time が整数の最大値 (ミリ秒単位で24.8 日) を超えた場合、オーバーフローによる具体化エラーが発生します。<br /><br /> ミリ秒単位の最大値は24.8 日に相当します。|  
+|is_available|**bit**|このノードが使用可能かどうかを示すフラグです。||  
+|sent_time|**DATETIME**|ネットワークパッケージがこのノードによって最後に送信された時刻。||  
+|received_time|**DATETIME**|ネットワークパッケージがこのノードによって最後に受信された時刻。||  
+|error_id|**nvarchar (36)**|このノードで発生した最後のエラーの一意の識別子。||  
   
-## <a name="see-also"></a>関連項目  
- [SQL Data Warehouse と Parallel Data Warehouse の動的管理ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+## <a name="see-also"></a>参照  
+ [SQL Data Warehouse および並列データウェアハウスの動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

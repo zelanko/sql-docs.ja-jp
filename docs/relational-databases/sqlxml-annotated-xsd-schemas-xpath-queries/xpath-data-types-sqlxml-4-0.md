@@ -29,10 +29,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 089b2b006d0159c63e480c8627762ac37dec98b8
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75247086"
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>XPath のデータ型 (SQLXML 4.0)
@@ -76,7 +76,7 @@ ms.locfileid: "75247086"
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、ノード セットで位置の選択は実行されません。たとえば、XPath クエリ `Customer[3]` は 3 番目の顧客を意味しますが、このような位置の選択は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではサポートされていません。 したがって、XPath 仕様で説明されているように、ノードセットから**文字列**への変換またはノードセットから**数値**への変換は実装されていません。 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、XPath 仕様で "先頭" の意味で指定されているものが "任意" の意味として扱われます。 たとえば、W3C XPath 仕様に基づき、XPath クエリ`Order[OrderDetail/@UnitPrice > 10.0]`は、 **UnitPrice**が10.0 より大きい最初の**orderdetail**を持つ注文を選択します。 で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、この XPath クエリは、 **UnitPrice**が10.0 より大きい**orderdetail**を持つ注文を選択します。  
   
- **ブール型**に変換すると存在テストが生成されます。このため、XPath クエリ`Products[@Discontinued=true()]`は sql 式 "Products. 廃止されたが null" ではなく、sql 式 "Products. 廃止 = 1" に相当します。 後者の SQL 式と同等のクエリを作成するには、まず、ノードセットを**number**などの非**ブール**型に変換します。 たとえば、`Products[number(@Discontinued) = true()]` のように指定します。  
+ **ブール型**に変換すると存在テストが生成されます。このため、XPath クエリ`Products[@Discontinued=true()]`は sql 式 "Products. 廃止されたが null" ではなく、sql 式 "Products. 廃止 = 1" に相当します。 後者の SQL 式と同等のクエリを作成するには、まず、ノードセットを**number**などの非**ブール**型に変換します。 たとえば、「 `Products[number(@Discontinued) = true()]` 」のように入力します。  
   
  大半の演算子は、ノード セット内の 1 つ以上のノードに対して TRUE であれば TRUE となるように定義されているので、これらの演算はノード セットが空の場合は常に FALSE となります。 したがって、A が空の場合、`A = B` と `A != B` は両方とも FALSE になり、`not(A=B)` と `not(A!=B)` は TRUE になります。  
   
@@ -92,7 +92,7 @@ ms.locfileid: "75247086"
   
 |XDR データ型|同等の<br /><br /> XPath データ型|使用される SQL Server 変換|  
 |-------------------|------------------------------------|--------------------------------|  
-|Nonebin.base64bin.hex|なし|NoneEmployeeID|  
+|Nonebin.base64bin.hex|該当なし|NoneEmployeeID|  
 |boolean|boolean|CONVERT(bit, EmployeeID)|  
 |number、int、float,i1、i2、i4、i8、r4、r8ui1、ui2、ui4、ui8|number|CONVERT(float(53), EmployeeID)|  
 |id、idref、idrefsentity、entities、enumerationnotation、nmtoken、nmtokens、chardate、Timedate、Time.tz、string、uri、uuid|string|CONVERT(nvarchar(4000), EmployeeID, 126)|  

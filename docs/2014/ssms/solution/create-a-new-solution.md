@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8edec14b380a4df9868c97e9b4d9db4feefc4dd0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63282113"
 ---
 # <a name="create-a-new-solution"></a>新しいソリューションの作成
@@ -39,7 +39,7 @@ ms.locfileid: "63282113"
 6.  **[OK]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [ソリューション エクスプ ローラー](solution-explorer.md)   
+ [ソリューション エクスプローラー](solution-explorer.md)   
  [ソース管理からソリューションを開く](../../database-engine/open-solutions-from-source-control.md)  
   
   

@@ -19,10 +19,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0767886191923c15f65bde7b9fe4bfb7d270b271
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73782755"
 ---
 # <a name="bcp_exec"></a>bcp_exec
@@ -56,7 +56,7 @@ RETCODE bcp_exec (
   
  **bcp_exec**は、任意の期間に未処理である可能性のある唯一の一括コピー関数です。 そのため、非同期モードをサポートする唯一の一括コピー関数でもあります。 非同期モードを設定するには、 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)を使用して**bcp_exec**を呼び出す前に SQL_ATTR_ASYNC_ENABLE を SQL_ASYNC_ENABLE_ON に設定します。 完了をテストするには、同じパラメーターを使用して**bcp_exec**を呼び出します。 一括コピーがまだ完了していない場合、 **bcp_exec**は SUCCEED_ASYNC を返します。 また、 *pnRowsProcessed*は、サーバーに送信された行数の状態カウントを返します。 サーバーに送信された行は、バッチの終わりに到達するまではコミットされません。  
   
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]による一括コピーの重大な変更については、「[一括コピー操作&#40;の実行&#41;ODBC](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)」を参照してください。  
+ での[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]一括コピーの重大な変更については、「 [ODBC&#41;&#40;の一括コピー操作の実行](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  次の例では、 **bcp_exec**を使用する方法を示します。  

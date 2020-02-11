@@ -13,16 +13,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cc291a9677efe2acf875f5b5a37d9153fcb3eee3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62676927"
 ---
 # <a name="add-non-sql-server-subscriber"></a>[SQL Server 以外のサブスクライバーの追加]
   レプリケーションでは、Oracle サブスクライバーと IBM DB2 のサブスクライバーのスナップショット パブリケーションおよびトランザクション パブリケーションに対するプッシュ サブスクリプションの作成をサポートします。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **[追加するサブスクライバーの種類]**  
  Oracle サブスクライバーまたは IBM DB2 サブスクライバーを選択します。 これらのサブスクライバーのサポートの詳細については、「[SQL Server 以外のサブスクライバー](non-sql/non-sql-server-subscribers.md)」を参照してください。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "62676927"
 > [!NOTE]  
 >  データ ソース名と接続文字列は、ディストリビューション エージェントがサブスクリプションの初期化を試みるまでは [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって検証されません。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SQL Server 以外のサブスクライバーのサブスクリプションの作成](create-a-subscription-for-a-non-sql-server-subscriber.md)   
  [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md)   
  [パブリケーションのサブスクライブ](subscribe-to-publications.md)  

@@ -17,29 +17,29 @@ ms.assetid: c79a5e36-71fd-44c4-948d-d6a7a89bb3b5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6753c5a2cf70557868a25b2c4e2675a53d26d07b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67938627"
 ---
 # <a name="cubedefs-collection-ado-md"></a>CubeDefs コレクション (ADO MD)
-含まれています、 [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)多次元カタログからキューブを表すオブジェクト。  
+多次元カタログのキューブを表す[CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)オブジェクトを格納します。  
   
-## <a name="remarks"></a>コメント  
- **CubeDefs**は、標準の ADO のコレクションです。 プロパティとメソッドのコレクションでは、次の操作を実行できます。  
+## <a name="remarks"></a>解説  
+ **Cubedefs**は、標準の ADO コレクションです。 コレクションのプロパティとメソッドを使用して、次の操作を実行できます。  
   
--   使用して、コレクション内のオブジェクトの数を取得、[カウント](../../../ado/reference/ado-api/count-property-ado.md)プロパティ。  
+-   [Count](../../../ado/reference/ado-api/count-property-ado.md)プロパティを使用して、コレクション内のオブジェクトの数を取得します。  
   
--   既定値は、コレクションからオブジェクトを返す[項目](../../../ado/reference/ado-api/item-property-ado.md)プロパティ。  
+-   既定の[Item](../../../ado/reference/ado-api/item-property-ado.md)プロパティを使用して、コレクションからオブジェクトを返します。  
   
--   コレクション内のプロバイダーからオブジェクトを更新、[更新](../../../ado/reference/ado-api/refresh-method-ado.md)メソッド。  
+-   [更新](../../../ado/reference/ado-api/refresh-method-ado.md)メソッドを使用して、プロバイダーからコレクション内のオブジェクトを更新します。  
   
- このセクションには、次のトピックが含まれています。  
+ ここでは、次のトピックについて説明します。  
   
 -   [プロパティ、メソッド、およびイベント](../../../ado/reference/ado-md-api/cubedefs-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [カタログの例 (VB)](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
  [Catalog オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)   
  [CubeDef オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)

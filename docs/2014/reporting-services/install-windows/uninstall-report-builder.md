@@ -1,5 +1,5 @@
 ---
-title: レポート ビルダー (レポート ビルダー) のスタンドアロン バージョンのアンインストール |Microsoft Docs
+title: レポートビルダーのスタンドアロンバージョンをアンインストールする (レポートビルダー) |Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,15 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: eeb260942f378eb1e93751fc118f82e67a13d45b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108658"
 ---
 # <a name="uninstall-the-stand-alone-version-of-report-builder-report-builder"></a>スタンドアロン バージョンのレポート ビルダーのアンインストール (レポート ビルダー)
-  スタンドアロン バージョンのレポート ビルダーは、コントロール パネルまたはコマンド ラインからアンインストールできます。 [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] バージョンのレポート ビルダーをアンインストールするには、[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] をアンインストールする必要があります。  
+  スタンドアロン バージョンのレポート ビルダーは、コントロール パネルまたはコマンド ラインからアンインストールできます。 
+  [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] バージョンのレポート ビルダーをアンインストールするには、[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] をアンインストールする必要があります。  
   
  レポート ビルダーをコマンド ラインからアンインストールする場合に使用する構文は、/i オプションの代わりに /x オプションを使用する以外はレポート ビルダーをインストールする場合と同じです。 /quiet オプションやその他の標準のオプションも使用できます。 レポート ビルダーの Windows インストーラー パッケージ (ReportBuilder3_x86.msi) を削除してしまった場合は、コマンド ラインを使用してレポート ビルダーをアンインストールするのは容易ではありません。 GUID を使用してレポート ビルダーを削除する方法の詳細については、MSDN ライブラリの msiexec プログラムのドキュメントを参照してください。  
   
@@ -30,7 +31,8 @@ ms.locfileid: "66108658"
   
 2.  コントロール パネルで、 **[プログラムと機能]** をクリックします。  
   
-3.  **[名前]** の一覧で、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] レポート ビルダーを見つけてクリックします。  
+3.  
+  [名前][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の一覧で、**** レポート ビルダーを見つけてクリックします。  
   
 4.  **[アンインストール]** をクリックします。  
   
@@ -40,7 +42,7 @@ ms.locfileid: "66108658"
   
 1.  **[スタート]** メニューの **[ファイル名を指定して実行]** をクリックします。  
   
-2.  **オープン**テキスト ボックスに「 `cmd.`  
+2.  [**名前**] ボックスに「」と入力します。`cmd.`  
   
 3.  コマンド プロンプト ウィンドウで、ReportBuilder3_x86.msi が格納されているフォルダーに移動します。  
   
@@ -52,10 +54,10 @@ ms.locfileid: "66108658"
   
  `msiexec /x ReportBuilder3_x86.msi /quiet /l*v c:\junk\install.log`  
   
-1.  **Enter**キーを押します。  
+1.  **Enter** キーを押します。  
   
 ## <a name="see-also"></a>参照  
- [インストール、アンインストール、およびレポート ビルダーのサポート](../install-uninstall-and-report-builder-support.md)   
- [レポート ビルダーのスタンドアロン バージョンをインストール&#40;レポート ビルダー&#41;](install-report-builder.md)  
+ [インストール、アンインストール、およびレポートビルダーサポート](../install-uninstall-and-report-builder-support.md)   
+ [レポートビルダー &#40;レポートビルダーのスタンドアロンバージョンをインストール&#41;](install-report-builder.md)  
   
   

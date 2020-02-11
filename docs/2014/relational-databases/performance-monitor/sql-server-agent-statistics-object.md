@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 34539c79bc0e2d90841837abef895bdceb2eb20d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63250851"
 ---
 # <a name="sql-server-agent-statistics-object"></a>SQL Server エージェントの Statistics オブジェクト
@@ -25,7 +25,7 @@ ms.locfileid: "63250851"
   
  次の表では、 **SQLAgent:Statistics** カウンターを示します。  
   
-|名前|説明|  
+|Name|[説明]|  
 |----------|-----------------|  
 |**SQL Server restarted**|前回の SQL Server エージェントの起動以降に Microsoft SQL Server が SQL Server エージェントによって正常に再起動された回数。|  
   

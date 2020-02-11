@@ -17,14 +17,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: e2013a604c517ae93ee17640013e2260f50cf28e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62670928"
 ---
 # <a name="about-change-tracking-sql-server"></a>変更の追跡について (SQL Server)
-  変更の追跡は、アプリケーションの効率的な変更追跡メカニズムを提供する簡易ソリューションです。 一般に、データベース内のデータに対する変更のクエリをアプリケーションで実行し、その変更に関連する情報にアクセスできるようにするには、アプリケーション開発者がカスタムの変更追跡メカニズムを実装する必要がありました。 これらのメカニズムを作成、作業の手間は、通常、頻繁にトリガーの組み合わせを使用する必要がある`timestamp`列、追跡情報、およびカスタム クリーンアップ プロセスを格納する新しいテーブル。  
+  変更の追跡は、アプリケーションの効率的な変更追跡メカニズムを提供する簡易ソリューションです。 一般に、データベース内のデータに対する変更のクエリをアプリケーションで実行し、その変更に関連する情報にアクセスできるようにするには、アプリケーション開発者がカスタムの変更追跡メカニズムを実装する必要がありました。 通常、これらのメカニズムを作成するには多くの作業が関係し、多く`timestamp`の場合、トリガー、列、追跡情報を格納する新しいテーブル、およびカスタムクリーンアッププロセスを組み合わせて使用します。  
   
  変更に必要な情報量はアプリケーションの種類ごとに異なります。 アプリケーションでは、変更の追跡を使用して、ユーザー テーブルに加えられた変更に関する次の情報を取得することができます。  
   
@@ -47,12 +47,12 @@ ms.locfileid: "62670928"
 ### <a name="one-way-synchronization-applications"></a>一方向の同期アプリケーション  
  変更の追跡を使用するクライアントや中間層キャッシュ アプリケーションなどの一方向の同期アプリケーションを構築できます。 次の図に示すように、キャッシュ アプリケーションでは、データが [!INCLUDE[ssDE](../../includes/ssde-md.md)] に格納され、他のデータ ストアにキャッシュされる必要があります。 また、データベース テーブルに加えられた変更を含むように、キャッシュを最新の状態に保つ必要があります。 変更は [!INCLUDE[ssDE](../../includes/ssde-md.md)]に返されません。  
   
- ![一方向の同期アプリケーションを示す図](../../database-engine/media/one-waysync.gif "一方向の同期アプリケーションを示す図")  
+ ![一方向の同期アプリケーションを表示する](../../database-engine/media/one-waysync.gif "一方向の同期アプリケーションを表示する")  
   
 ### <a name="two-way-synchronization-applications"></a>双方向の同期アプリケーション  
  変更の追跡を使用する双方向の同期アプリケーションも構築できます。 このシナリオでは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスのデータが 1 つ以上のデータ ストアと同期されます。 これらのデータ ストアのデータは更新でき、変更は [!INCLUDE[ssDE](../../includes/ssde-md.md)]に返され、同期される必要があります。  
   
- ![双方向の同期アプリケーションを示す図](../../database-engine/media/two-waysync.gif "双方向の同期アプリケーションを示す図")  
+ ![二方向の同期アプリケーションを表示する](../../database-engine/media/two-waysync.gif "二方向の同期アプリケーションを表示する")  
   
  双方向の同期アプリケーションの好例として、常時接続でないアプリケーションが挙げられます。 この種のアプリケーションでは、クライアント アプリケーションによってローカル ストアに対するクエリおよび更新が行われます。 クライアントとサーバーの間で接続が確立されると、アプリケーションとサーバーが同期され、変更されたデータが双方向に送信されます。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "62670928"
   
 ## <a name="see-also"></a>参照  
  [変更の追跡の有効化と無効化 &#40;SQL Server&#41;](../track-changes/enable-and-disable-change-tracking-sql-server.md)   
- [変更の追跡のしくみ &#40;SQL Server&#41;](../track-changes/work-with-change-tracking-sql-server.md)   
+ [Change Tracking &#40;SQL Server の操作&#41;](../track-changes/work-with-change-tracking-sql-server.md)   
  [変更の追跡の管理 &#40;SQL Server&#41;](../track-changes/manage-change-tracking-sql-server.md)   
  [データ変更の追跡 &#40;SQL Server&#41;](../track-changes/track-data-changes-sql-server.md)  
   

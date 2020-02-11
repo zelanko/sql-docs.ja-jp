@@ -1,5 +1,5 @@
 ---
-title: SQLXML マネージ クラス オブジェクト モデル |Microsoft Docs
+title: SQLXML マネージクラスオブジェクトモデル |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,23 +15,24 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1f49961a48c096cf01fbf7f09de0d76ac9fd4bfe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62781809"
 ---
 # <a name="sqlxml-managed-classes-object-model"></a>SQLXML マネージド クラス オブジェクト モデル
   このセクションでは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML マネージド クラス オブジェクト モデルについて説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [SqlXmlCommand オブジェクト&#40;SQLXML マネージ クラス&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-4-0-net-framework-support-managed-classes.md)  
+ [SqlXmlCommand オブジェクト &#40;SQLXML マネージクラス&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-4-0-net-framework-support-managed-classes.md)  
  コマンドを実行するためのメソッドを提供します。  
   
- [SqlXmlParameter オブジェクト&#40;SQLXML マネージ クラス&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-managed-classes-sqlxmlparameter-object.md)  
+ [SqlXmlParameter オブジェクト &#40;SQLXML マネージクラス&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-managed-classes-sqlxmlparameter-object.md)  
  パラメーターの名前と値を表します。  
   
- [SqlXmlAdapter オブジェクト&#40;SQLXML マネージ クラス&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-managed-classes-sqlxmladapter-object.md)  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework のデータセットと対話するためのメソッドを提供します。  
+ [SqlXmlAdapter オブジェクト &#40;SQLXML マネージクラス&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-managed-classes-sqlxmladapter-object.md)  
+ 
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework のデータセットと対話するためのメソッドを提供します。  
   
   

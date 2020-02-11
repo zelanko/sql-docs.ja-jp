@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.custom: ''
 ms.date: 06/13/2017
 ms.openlocfilehash: 8f645ca9bdb6176505a6277af0f0482be5b62f09
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75245608"
 ---
 # <a name="hardware-and-software-requirements-for-analysis-services-server-in-sharepoint-mode-sql-server-2014"></a>SharePoint モードの Analysis Services サーバーのハードウェアとソフトウェアの要件 (SQL Server 2014)
@@ -59,7 +59,7 @@ ms.locfileid: "75245608"
 |---------------|-------------|-----------------|  
 |プロセッサ|64 ビット デュアルコア プロセッサ、3 GHz|16 コア|  
 |RAM|8 GB の RAM|64 GB の RAM|  
-|Storage|80 GB のストレージ|80 GB 以上|  
+|ストレージ|80 GB のストレージ|80 GB 以上|  
   
  Analysis Services サーバーを SharePoint モードで SharePoint ファームのサーバーにインストールする場合は、以下のリンクで、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] サーバーと SharePoint サーバー両方の最小システム要件を確認してください。  
   

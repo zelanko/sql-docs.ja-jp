@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 291d1429cdd7dbc4b4737f55b98dea2ba467512f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62679503"
 ---
 # <a name="specify-metaproperties-in-openxml"></a>OPENXML 内でのメタプロパティの指定
@@ -37,7 +37,7 @@ ms.locfileid: "62679503"
 > [!NOTE]  
 >  これらのメタプロパティは、XPath による位置指定では参照できません。  
   
-|メタプロパティ属性|説明|  
+|メタプロパティ属性|[説明]|  
 |----------------------------|-----------------|  
 |**\@mp:id**|DOM ノードに対して、システムによって生成されたドキュメント レベルの識別子を提供します。 この ID は、ドキュメントが再解析されない限り、同じ XML ノードを参照します。<br /><br /> XML ID が **0** の場合、その要素はルート要素です。 その親要素の XML ID は NULL になります。|  
 |**\@mp:localname**|ノードの名前のローカル部分を格納します。 要素ノードや属性ノードの名前付けの際に、プレフィックスおよび名前空間 URI と共に使用します。|  
@@ -48,14 +48,14 @@ ms.locfileid: "62679503"
   
  次の表には、用意されている追加の親プロパティを示します。これらのプロパティを使用すると、階層情報を取得できます。  
   
-|親メタプロパティ属性|説明|  
+|親メタプロパティ属性|[説明]|  
 |-----------------------------------|-----------------|  
 |**\@mp:parentid**|**../\@mp:id** と対応します。|  
 |**\@mp:parentlocalname**|**../\@mp:localname** と対応します。|  
 |**\@mp:parentnamespacerui**|**../\@mp:namespaceuri** と対応します。|  
 |**\@mp:parentprefix**|**../\@mp:prefix** と対応します。|  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次に、OPENXML を使用してさまざまな行セット ビューを作成する方法の例を示します。  
   
 ### <a name="a-mapping-the-openxml-rowset-columns-to-the-metaproperties"></a>A. OPENXML 行セット列のメタプロパティへのマップ  
@@ -164,7 +164,7 @@ EXEC sp_xml_removedocument @idoc
   
  SELECT ステートメントは OPENXML で提供される行セットを返します。  
   
- この例では、OPENXML によって生成された行セット内の列 (**ParentLocalName**) に対して **\@mp:parentlocalname** メタプロパティが設定されます。 その結果、この列には親要素のローカル名が含まれます。  
+ この例では、OPENXML によって生成された行セット内の列 (**ParentLocalName\@) に対して** **mp:parentlocalname** メタプロパティが設定されます。 その結果、この列には親要素のローカル名が含まれます。  
   
  行セットには他に 2 つの列 ( **parent** と **comment**) が指定されています。 **parent** 列は **\@mp:parentid** にマップされ、この列に、要素の親要素の XML ID が含まれることを示します。 comment 列は、 **\@mp:xmltext** メタプロパティにマップすることによって、オーバーフロー列として識別されます。  
   

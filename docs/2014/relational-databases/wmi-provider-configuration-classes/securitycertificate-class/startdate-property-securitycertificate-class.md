@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 893e72d73062dc78ddbe33deb9b66941c30fb2a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63209352"
 ---
 # <a name="startdate-property-securitycertificate-class"></a>StartDate プロパティ (SecurityCertificate クラス)
@@ -37,15 +37,15 @@ object
 ```  
   
 ## <a name="parts"></a>要素  
- *object*  
- [SecurityCertificate クラス] securitycertificate-class.md) セキュリティ証明書を表すオブジェクト。  
+ *素材*  
+ セキュリティ証明書を表す [SecurityCertificate Class] securitycertificate-class.md) オブジェクト。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  セキュリティ証明書が有効になる日付を指定する uint32 値。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
   
 ## <a name="see-also"></a>参照  
- [サーバー ネットワーク プロトコルとネットワーク ライブラリの構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [サーバーのネットワーク プロトコルと Net-Library の構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

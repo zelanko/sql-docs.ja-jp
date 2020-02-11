@@ -24,10 +24,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e48e9fb50ae749bd75162bb458268ecbe9b79d64
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73637821"
 ---
 # <a name="data-flow-performance-features"></a>データ フロー パフォーマンス機能
@@ -75,12 +75,17 @@ ms.locfileid: "73637821"
  並列実行を行うと、複数の物理プロセッサまたは論理プロセッサが搭載されているコンピューターのパフォーマンスが向上します。 パッケージ内で各種タスクの並列実行をサポートするには、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] で `MaxConcurrentExecutables` と `EngineThreads` の 2 つのプロパティを使用します。  
   
 #### <a name="the-maxconcurrentexcecutables-property"></a>MaxConcurrentExcecutables プロパティ  
- `MaxConcurrentExecutables` プロパティは、パッケージ自体のプロパティです。 このプロパティによって、同時に実行できるタスクの数が定義されます。 既定値は -1 です。これは、物理プロセッサまたは論理プロセッサの数に 2 を加えた数を示します。  
+ 
+  `MaxConcurrentExecutables` プロパティは、パッケージ自体のプロパティです。 このプロパティによって、同時に実行できるタスクの数が定義されます。 既定値は -1 です。これは、物理プロセッサまたは論理プロセッサの数に 2 を加えた数を示します。  
   
- このプロパティの動作を理解するために、3 つのデータ フロー タスクを含むサンプル パッケージについて考えてみます。 `MaxConcurrentExecutables` を 3 に設定すると、3 つすべてのデータ フロー タスクを同時に実行できます。 ただし、各データ フロー タスクに 10 個の変換元から変換先への実行ツリーが含まれているとすると、 `MaxConcurrentExecutables` を 3 に設定しても、各データ フロー タスク内の実行ツリーが並列実行されるかどうかは保証されません。  
+ このプロパティの動作を理解するために、3 つのデータ フロー タスクを含むサンプル パッケージについて考えてみます。 
+  `MaxConcurrentExecutables` を 3 に設定すると、3 つすべてのデータ フロー タスクを同時に実行できます。 ただし、各データ フロー タスクに 10 個の変換元から変換先への実行ツリーが含まれているとすると、 
+  `MaxConcurrentExecutables` を 3 に設定しても、各データ フロー タスク内の実行ツリーが並列実行されるかどうかは保証されません。  
   
 #### <a name="the-enginethreads-property"></a>EngineThreads プロパティ  
- `EngineThreads` プロパティは、各データ フロー タスクのプロパティです。 このプロパティによって、データ フロー エンジンが作成および並列実行できるスレッドの数が定義されます。 `EngineThreads` プロパティは、データ フロー エンジンが変換元用に作成するソース スレッドと、変換および変換先用に作成するワーカー スレッドの両方に適用されます。 したがって、`EngineThreads` を 10 に設定すると、エンジンはソース スレッドとワーカー スレッドをそれぞれ 10 個まで作成できます。  
+ 
+  `EngineThreads` プロパティは、各データ フロー タスクのプロパティです。 このプロパティによって、データ フロー エンジンが作成および並列実行できるスレッドの数が定義されます。 
+  `EngineThreads` プロパティは、データ フロー エンジンが変換元用に作成するソース スレッドと、変換および変換先用に作成するワーカー スレッドの両方に適用されます。 したがって、`EngineThreads` を 10 に設定すると、エンジンはソース スレッドとワーカー スレッドをそれぞれ 10 個まで作成できます。  
   
  このプロパティの動作を理解するために、3 つのデータ フロー タスクを含むサンプル パッケージについて考えてみます。 各データ フロー タスクには、10 個の変換元から変換先への実行ツリーが含まれています。 各データ フロー タスクで EngineThreads を 10 に設定すると、30 個すべての実行ツリーを同時に実行できます。  
   
@@ -99,7 +104,9 @@ ms.locfileid: "73637821"
  クエリを作成するには、手動で入力するか、クエリ ビルダーを使用することができます。  
   
 > [!NOTE]  
->  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]でパッケージを実行すると、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーの [進行状況] タブに警告が表示されます。 これには、データ フローで利用できるが、それに続く下流のデータ フロー コンポーネントでは使用されないデータ列を示す警告も含まれます。 `RunInOptimizedMode` プロパティを使ってこのような列を自動的に削除できます。  
+>  
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]でパッケージを実行すると、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーの [進行状況] タブに警告が表示されます。 これには、データ フローで利用できるが、それに続く下流のデータ フロー コンポーネントでは使用されないデータ列を示す警告も含まれます。 
+  `RunInOptimizedMode` プロパティを使ってこのような列を自動的に削除できます。  
   
 #### <a name="avoid-unnecessary-sorting"></a>不必要な並べ替えの回避  
  並べ替えは本質的に低速な処理であり、不必要な並べ替えを回避することで、パッケージのデータ フローのパフォーマンスを向上させることができます。  
@@ -110,7 +117,7 @@ ms.locfileid: "73637821"
   
 -   データを並べ替える並べ替えキー列を指定します。  
   
- 詳細については、「 [マージ変換およびマージ結合変換用にデータを並べ替える](transformations/sort-data-for-the-merge-and-merge-join-transformations.md)」を参照してください。  
+ 詳細については、「 [Sort Data for the Merge and Merge Join Transformations](transformations/sort-data-for-the-merge-and-merge-join-transformations.md)」(マージ変換およびマージ結合変換用にデータを並べ替える方法) を参照してください。  
   
  データ フロー内でデータを並べ替える必要がある場合は、並べ替え処理の回数を可能な限り少なくしたデータ フローをデザインすることで、パフォーマンスを向上させることができます。 たとえば、データ フローでマルチキャスト変換を使用してデータセットをコピーするとします。 この場合、変換後の複数の出力に対して並べ替えを行うのではなく、マルチキャスト変換の実行前に一度だけデータセットの並べ替えを行います。  
   
@@ -125,27 +132,27 @@ ms.locfileid: "73637821"
  このセクションの推奨事項に従うと、集計変換、あいまい参照変換、あいまいグループ化変換、参照変換、マージ結合変換、および緩やかに変化するディメンション変換のパフォーマンスが向上します。  
   
 #### <a name="aggregate-transformation"></a>集計変換  
- 集計変換には、`Keys`、`KeysScale`、`CountDistinctKeys`、および `CountDistinctScale` プロパティがあります。 これらのプロパティを使用すると、変換時にキャッシュされるデータに必要な量のメモリが事前に割り当てられるようになるため、パフォーマンスが向上します。 **グループ化**操作の結果として予想されるグループの正確な数または概数がわかっている場合は、`Keys` プロパティと `KeysScale` プロパティをそれぞれ設定します。 **個別のカウント**操作の結果として予想される個別の値の正確な数または概数がわかっている場合は、`CountDistinctKeys` プロパティと `CountDistinctScale` プロパティをそれぞれ設定します。  
+ 集計変換には、`Keys`、`KeysScale`、`CountDistinctKeys`、および `CountDistinctScale` プロパティがあります。 これらのプロパティを使用すると、変換時にキャッシュされるデータに必要な量のメモリが事前に割り当てられるようになるため、パフォーマンスが向上します。 **グループ化**操作の結果`Keys`として予想されるグループの正確な数または概数がわかっている場合`KeysScale`は、プロパティとプロパティをそれぞれ設定します。 **個別のカウント**操作の結果`CountDistinctKeys`として予想される個別の値の正確な数または概数がわかって`CountDistinctScale`いる場合は、プロパティとプロパティをそれぞれ設定します。  
   
  データ フロー内に複数の集計を作成する必要がある場合は、複数の変換を作成する代わりに、1 つの集計変換を使用した複数の集計を作成することを検討してください。 この方法は、集計が別の集計のサブセットである場合にパフォーマンスを向上させます。変換により内部ストレージを最適化でき、入力データのスキャンを一度だけ行えば済むためです。 たとえば、集計で GROUP BY 句と AVG 集計を使用する場合は、それらを 1 つの変換に結合することでパフォーマンスを向上させることができます。 ただし、1 つの集計変換内で複数の集計を実行すると集計操作がシリアル化されるので、複数の集計を個別に計算する必要がある場合は、パフォーマンスが向上しない可能性があります。  
   
 #### <a name="fuzzy-lookup-and-fuzzy-grouping-transformations"></a>あいまい参照変換とあいまいグループ化変換  
  あいまい参照変換とあいまいグループ化変換のパフォーマンスの最適化については、ホワイト ペーパー「 [SQL Server Integration Services 2005 のあいまい参照とあいまいグループ化](https://go.microsoft.com/fwlink/?LinkId=96604)」を参照してください。  
   
-#### <a name="lookup-transformation"></a>Lookup Transformation  
+#### <a name="lookup-transformation"></a>参照変換  
  必要な列のみを参照する SELECT ステートメントを入力することによって、メモリ内の参照データのサイズを最小限に抑えます。 この方法は、テーブルまたはビュー全体を選択して大量の不要なデータを返す場合に比べてパフォーマンスに優れています。  
   
-#### <a name="merge-join-transformation"></a>マージ結合変換  
+#### <a name="merge-join-transformation"></a>Merge Join Transformation  
  マイクロソフトが行った変更により、マージ結合変換によってメモリが過度に消費されるリスクが軽減したため、`MaxBuffersPerInput` プロパティの値を構成する必要はなくなりました。 この問題は、マージ結合の複数の入力からデータが不均一なレートで生成される場合に発生することがありました。  
   
-#### <a name="slowly-changing-dimension-transformation"></a>Slowly Changing Dimension Transformation  
+#### <a name="slowly-changing-dimension-transformation"></a>緩やかに変化するディメンション変換  
  緩やかに変化するディメンション ウィザードおよび緩やかに変化するディメンション変換は、ほとんどのユーザーのニーズを満たす汎用ツールです。 ただし、ウィザードで生成されるデータ フローは、パフォーマンスのために最適化されていません。  
   
  通常、緩やかに変化するディメンション変換の中で最も低速なコンポーネントは、一度に 1 行に対して UPDATE を実行する OLE DB コマンド変換です。 したがって、緩やかに変化するディメンション変換のパフォーマンスを向上させる最も効果的な方法は、OLE DB コマンド変換を置き換えることです。 この変換は、更新するすべての行をステージング テーブルに保存する変換先コンポーネントに置き換えることができます。 その後、同時にすべての行に対して単一セット ベースの Transact-SQL UPDATE を実行する SQL 実行タスクを追加できます。  
   
  上級ユーザーは、大きなディメンションのために最適化された、緩やかに変化するディメンション処理用のカスタム データ フローをデザインできます。 この方法の説明と例については、ホワイト ペーパー「 [プロジェクト REAL: ビジネス インテリジェンス ETL のデザイン方法](https://www.microsoft.com/download/details.aspx?id=14582)」の「特有のディメンション シナリオ」を参照してください。  
   
-### <a name="destinations"></a>変換先  
+### <a name="destinations"></a>Destinations  
  変換先のパフォーマンスを向上させるには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 変換先の使用と、変換先のパフォーマンスのテストを検討してください。  
   
 #### <a name="sql-server-destination"></a>SQL Server 変換先  
@@ -155,9 +162,12 @@ ms.locfileid: "73637821"
  変換先でのデータの保存には予想以上の時間がかかります。 変換先でデータを迅速に処理できないことが原因で時間がかかっているかどうかを判断するには、変換先を行数変換と置き換えます。 スループットが大幅に改善する場合は、データを読み込んでいる変換先がスローダウンを引き起こしている可能性があります。  
   
 ### <a name="review-the-information-on-the-progress-tab"></a>[進行状況] タブでの情報のレビュー  
- [!INCLUDE[ssIS](../../includes/ssis-md.md)] でパッケージを実行すると、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]デザイナーで制御フローとデータ フローの両方に関する情報を得られます。 **[進行状況]** タブにはタスクとコンテナーが実行順に表示され、パッケージ自体を含め、タスクやコンテナーごとに開始時刻、終了時刻、警告、エラー メッセージが表示されます。 一覧にはデータ フロー コンポーネントも実行順に表示され、進捗についての情報、完了の割合、処理された行数も表示されます。  
+ 
+  [!INCLUDE[ssIS](../../includes/ssis-md.md)] でパッケージを実行すると、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]デザイナーで制御フローとデータ フローの両方に関する情報を得られます。 
+  **[進行状況]** タブにはタスクとコンテナーが実行順に表示され、パッケージ自体を含め、タスクやコンテナーごとに開始時刻、終了時刻、警告、エラー メッセージが表示されます。 一覧にはデータ フロー コンポーネントも実行順に表示され、進捗についての情報、完了の割合、処理された行数も表示されます。  
   
- **[進行状況]** タブでのメッセージの表示を有効または無効にするには、 **[SSIS]** メニューの **[進行状況レポートのデバッグ]** オプションを切り替えます。 進行状況レポートを無効にすると、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]で複雑なパッケージを実行する際のパフォーマンスを向上させることができます。  
+ 
+  **[進行状況]** タブでのメッセージの表示を有効または無効にするには、 **[SSIS]** メニューの **[進行状況レポートのデバッグ]** オプションを切り替えます。 進行状況レポートを無効にすると、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]で複雑なパッケージを実行する際のパフォーマンスを向上させることができます。  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
@@ -172,7 +182,7 @@ ms.locfileid: "73637821"
   
 -   sqlcat.com の技術資料「 [同期変換を複数タスクに分割してパイプラインのスループットを向上](http://sqlcat.com/technicalnotes/archive/2010/08/18/increasing-throughput-of-pipelines-by-splitting-synchronous-transformations-into-multiple-tasks.aspx)」  
   
--   msdn.microsoft.com の技術記事: [Integration Services のパフォーマンス チューニング技法](https://go.microsoft.com/fwlink/?LinkId=220816)  
+-   msdn.microsoft.com の技術記事「 [Integration Services のパフォーマンス チューニング技法](https://go.microsoft.com/fwlink/?LinkId=220816)」  
   
 -   msdn.microsoft.com の技術記事「 [SSIS なら 1 TB を 30 分で読み込むことが可能](https://go.microsoft.com/fwlink/?LinkId=220817)」  
   
@@ -197,7 +207,7 @@ ms.locfileid: "73637821"
 -   technet.microsoft.com のビデオ「 [Balanced Data Distributor](https://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)」  
   
 ## <a name="see-also"></a>参照  
- [パッケージ開発のトラブルシューティング ツール](../troubleshooting/troubleshooting-tools-for-package-development.md)   
+ [パッケージ開発のトラブルシューティングツール](../troubleshooting/troubleshooting-tools-for-package-development.md)   
  [パッケージ実行のトラブルシューティング ツール](../troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
   

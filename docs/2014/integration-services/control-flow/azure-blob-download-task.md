@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: af99d5ba79919920b2fb1ff3dde8d0a134a8ef0c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62832927"
 ---
 # <a name="azure-blob-download-task"></a>Azure BLOB のダウンロード タスク
@@ -28,12 +28,13 @@ ms.locfileid: "62832927"
   
 |||  
 |-|-|  
-|**フィールド**|**[説明]**|  
+|**フィールド**|**説明**|  
 |AzureStorageConnection|既存の Azure ストレージ接続マネージャーを指定するか、Azure ストレージ アカウントを参照する新しい接続マネージャーを作成します。この接続マネージャーは、BLOB ファイルがホストされている場所をポイントします。|  
 |BlobContainer|ダウンロードする BLOB ファイルを含む BLOB コンテナーの名前を指定します。|  
 |BlobDirectory|ダウンロードする BLOB ファイルを含む BLOB ディレクトリを指定します。 BLOB ディレクトリは仮想階層構造です。|  
 |LocalDirectory|ダウンロードした BLOB ファイルが格納されるローカル ディレクトリを指定します。|  
-|FileName|指定した名前のパターンを持つファイルを選択するための名前フィルターを指定します。 例: MySheet*.xls\* には、MySheet001.xls や MySheetABC.xlsx などのファイルが含まれます。|  
-|TimeRangeFrom/TimeRangeTo|時間範囲フィルターを指定します。 **TimeRangeFrom** から **TimeRangeTo** までの間に変更されたファイルが含まれます。|  
+|FileName|指定された名前のパターンを使用したファイルを選択するための名前フィルターを指定します。 例:  MySheet*.xls\* には、MySheet001.xls や MySheetABC.xlsx などのファイルが含まれます。|  
+|TimeRangeFrom/TimeRangeTo|時間範囲フィルターを指定します。 
+  **TimeRangeFrom** から **TimeRangeTo** までの間に変更されたファイルが含まれます。|  
   
   

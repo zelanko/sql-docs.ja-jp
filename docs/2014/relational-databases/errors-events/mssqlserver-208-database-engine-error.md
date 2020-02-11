@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b87a950c29cf202124e27b319eb56fb6a6e1857d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62914917"
 ---
-# <a name="mssqlserver208"></a>MSSQLSERVER_208
+# <a name="mssqlserver_208"></a>MSSQLSERVER_208
     
 ## <a name="details"></a>詳細  
   
@@ -70,7 +70,7 @@ ms.locfileid: "62914917"
 -   ユーザーがオブジェクトへのアクセス権限を持っているかどうか。 オブジェクトに対するユーザーの権限を確認するには、**Has_Perms_By_Name** システム関数を使用します。  
   
 ## <a name="see-also"></a>参照  
- [USE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/use-transact-sql)   
+ [&#40;Transact-sql&#41;を使用する](/sql/t-sql/language-elements/use-transact-sql)   
  [メタデータ表示の構成](../security/metadata-visibility-configuration.md)   
  [HAS_PERMS_BY_NAME &#40;Transact-SQL&#41;](/sql/t-sql/functions/has-perms-by-name-transact-sql)  
   

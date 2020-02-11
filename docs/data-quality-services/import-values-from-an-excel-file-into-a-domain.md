@@ -14,10 +14,10 @@ ms.assetid: 04cde693-2043-477f-8417-fcc463ca7195
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 144a2b57fa671842f284445dee859e689e8adbe1
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75254817"
 ---
 # <a name="import-values-from-an-excel-file-into-a-domain"></a>値を Excel ファイルからドメインへインポートする
@@ -32,14 +32,14 @@ ms.locfileid: "75254817"
   
 -   値が含まれている既存のドメインに値をインポートします。この場合、新しい値だけがインポートされます。 既に含まれている値はインポートされません。  
   
-##  <a name="BeforeYouBegin"></a>開始する前に  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Prerequisites"></a>応募  
+###  <a name="Prerequisites"></a> 前提条件  
  Excel ファイルからドメイン値または完全なドメインをインポートするには、 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] アプリケーションがインストールされているコンピューターに Excel がインストールされていること、ドメイン値を含む Excel ファイルが作成されていること (「 [How the import works](#How)」を参照)、およびドメインをインポートするナレッジ ベースが作成されていて開いていることが必要です。  
   
-###  <a name="Security"></a>保護  
+###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a>許可  
+####  <a name="Permissions"></a> Permissions  
  Excel ファイルからドメイン値をインポートするには、DQS_MAIN データベースの dqs_kb_editor ロールまたは dqs_administrator ロールが必要です。  
   
 ##  <a name="Import"></a>Excel ファイルからドメインに値をインポートする  
@@ -67,7 +67,7 @@ ms.locfileid: "75254817"
   
 9. ワークシートの先頭の行がドメイン名を表し、残りのすべての行が有効なドメイン値を表す場合は、 **[先頭の行を見出しとして使用]** をオンにします。  
   
-10. [**OK**] をクリックすると、 進行状況バーに、正常にインポートされた値の数、インポートされなかった値の数、および値の総数が表示されます。 処理を取り消すには、 **[キャンセル]** ボタンをクリックします。  
+10. **[OK]** をクリックします。 進行状況バーに、正常にインポートされた値の数、インポートされなかった値の数、および値の総数が表示されます。 処理を取り消すには、 **[キャンセル]** ボタンをクリックします。  
   
 11. 
   **[ドメイン値のインポート]** ダイアログ ボックスに "インポート完了" と表示されていることを確認します。 このダイアログ ボックスで、正常にインポートされた値とインポートされなかった値を確認します。 ファイルの名前とパス、処理の完了状態、正常にインポートされた値の数、インポートされなかった値の数、および処理された値の総数が表示されます。  

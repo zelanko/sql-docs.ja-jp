@@ -1,5 +1,5 @@
 ---
-title: SQL Server テーブルから列を削除する |マイクロソフトのドキュメント
+title: SQL Server テーブルから列を削除する |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,18 +16,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 919bd28a82171068349e4019bb1bd5c190d08cd0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63213916"
 ---
 # <a name="removing-a-column-from-a-sql-server-table"></a>SQL Server テーブルからの列の削除
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーが公開、 **itabledefinition::dropcolumn**関数。 コンシューマーはこの関数を使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルから列を削除できます。  
+  Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB プロバイダーは、 **itabledefinition::D ropcolumn**関数を公開します。 コンシューマーはこの関数を使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルから列を削除できます。  
   
- コンシューマーはテーブル名は、*pTableID* パラメーターの *uName* 共用体の *pwszName* メンバーに Unicode 文字列で指定します。 *pTableID* の *eKind* メンバーを DBKIND_NAME にする必要があります。  
+ コンシューマーはテーブル名は、*pTableID* パラメーターの *uName* 共用体の *pwszName* メンバーに Unicode 文字列で指定します。 
+  *pTableID* の *eKind* メンバーを DBKIND_NAME にする必要があります。  
   
- コンシューマーで列の名前を示す、 *pwszName*のメンバー、 *uName*共用体の*pColumnID*パラメーター。 列名は Unicode 文字列で指定します。 *pColumnID* の *eKind* メンバーを DBKIND_NAME にする必要があります。  
+ コンシューマーは、 *pColumnID*パラメーターの*uName*共用体の*pwszName*メンバーに列名を示します。 列名は Unicode 文字列で指定します。 
+  *pColumnID* の *eKind* メンバーを DBKIND_NAME にする必要があります。  
   
 ## <a name="example"></a>例  
   

@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 73d0cf3a374a7f3dda7797238d2c1702360aa955
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62872331"
 ---
 # <a name="check-the-status-of-e-mail-messages-sent-with-database-mail"></a>データベース メールから送信された電子メール メッセージの状態の確認
@@ -27,7 +27,7 @@ ms.locfileid: "62872331"
   
 -   **作業を開始する準備:**  
   
--   **データベース メールを使用して、使用して送信される電子メールの状態を表示するには。** [Transact-SQL](#TsqlProcedure)  
+-   **データベース メールを使用して送信された電子メールの状態を表示するには、** を使用[Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
  データベース メールは、送信する電子メール メッセージのコピーを保持し、 **msdb**データベースの **sysmail_allitems**、 **sysmail_sentitems**、 **sysmail_unsentitems** 、および **sysmail_faileditems** の各ビューに表示します。 データベース メール外部プログラムは、利用状況をログに記録し、Windows アプリケーション イベント ログや **msdb** データベースの **sysmail_event_log** ビューでそのログを表示します。 電子メール メッセージの状態を確認するには、このビューに対してクエリを実行します。 電子メール メッセージの状態は、 **sent**、 **unsent**、 **retrying**、および **failed**のいずれかになります。  
@@ -38,13 +38,14 @@ ms.locfileid: "62872331"
 > [!NOTE]  
 >  この手順の例については、このセクションの後半の「 [例 (Transact-SQL)](#TsqlExample)」を参照してください。  
   
-1.  **sysmail_allitems** テーブルから選択して、**mailitem_id** または **sent_status** で対象のメッセージを指定します。  
+1.  
+  **sysmail_allitems** テーブルから選択して、 **mailitem_id** または **sent_status**で対象のメッセージを指定します。  
   
 2.  その電子メール メッセージについてデータベース メール外部プログラムから返される状態を確認するには、次のセクションに示すように、 **mailitem_id** 列で **sysmail_allitems** と **sysmail_event_log** ビューを結合します。  
   
      データベース メール外部プログラムの既定では、正常に送信されたメッセージについての情報がログに記録されません。 すべてのメッセージをログに記録するには、 **データベース メール構成ウィザード** の **[システム パラメーターの構成]** ページを使用して、ログのレベルを詳細に設定します。  
   
-###  <a name="TsqlExample"></a> 例 (Transact-SQL)  
+###  <a name="TsqlExample"></a>例 (Transact-sql)  
  次の例では、外部プログラムが正常に送信できなかった、 `danw` への電子メール メッセージに関する情報を表示します。 このステートメントは、件名、外部プログラムでメッセージの送信に失敗した日時、およびデータベース メール ログに記録されているエラー メッセージの一覧を表示します。  
   
 ```  
@@ -71,7 +72,7 @@ WHERE items.recipients LIKE '%danw%'
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データベース メールのログ記録と監査](database-mail-log-and-audits.md)  
   
   

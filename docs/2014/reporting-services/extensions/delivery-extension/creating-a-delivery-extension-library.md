@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 133d97cc2d4c04e147d5f4a88c13674429f5c784
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63164900"
 ---
 # <a name="creating-a-delivery-extension-library"></a>配信拡張機能ライブラリの作成
@@ -43,14 +43,16 @@ namespace CompanyName.ExtensionName
    ...  
 ```  
   
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 配信拡張機能をコンパイルする場合は、コンパイラに対して Microsoft.ReportingServices.Interfaces.dll への参照を指定する必要があります。配信拡張機能のインターフェイスとクラスがそこに格納されているためです。 <xref:Microsoft.ReportingServices.Interfaces> 名前空間は、<xref:Microsoft.ReportingServices.Interfaces.IExtension> インターフェイス、<xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension> インターフェイスなどを実装するために必要です。 たとえば、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 配信拡張機能を実装するために C# で書き込まれたコードを含むすべてのファイルが、拡張子 .cs が付いた 1 つのディレクトリに格納されている場合は、CompanyName.ExtensionName.dll に格納されたファイルをコンパイルするために、そのディレクトリから次のコマンドが発行されます。  
+ 
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 配信拡張機能をコンパイルする場合は、コンパイラに対して Microsoft.ReportingServices.Interfaces.dll への参照を指定する必要があります。配信拡張機能のインターフェイスとクラスがそこに格納されているためです。 
+  <xref:Microsoft.ReportingServices.Interfaces> 名前空間は、<xref:Microsoft.ReportingServices.Interfaces.IExtension> インターフェイス、<xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension> インターフェイスなどを実装するために必要です。 たとえば、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 配信拡張機能を実装するために C# で書き込まれたコードを含むすべてのファイルが、拡張子 .cs が付いた 1 つのディレクトリに格納されている場合は、CompanyName.ExtensionName.dll に格納されたファイルをコンパイルするために、そのディレクトリから次のコマンドが発行されます。  
   
 ```csharp  
 csc /t:library /out:CompanyName.ExtensionName.dll *.cs /r:System.dll   
 /r:Microsoft.ReportingServices.Interfaces.dll  
 ```  
   
- 次のコード例は、拡張子 .vb が付く [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] ファイルに使用されるコマンドを示しています。  
+ 次のコード例は、拡張子 .vb を持つファイルに[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]使用されるコマンドを示しています。  
   
 ```vb  
 vbc /t:library /out:CompanyName.ExtensionName.dll *.vb /r:System.dll   
@@ -58,7 +60,9 @@ vbc /t:library /out:CompanyName.ExtensionName.dll *.vb /r:System.dll
 ```  
   
 > [!NOTE]  
->  [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] を使用して、配信拡張機能を設計、開発、および構築することもできます。 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] でのアセンブリ開発の詳細については、[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ドキュメントを参照してください。  
+>  
+  [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] を使用して、配信拡張機能を設計、開発、および構築することもできます。 
+  [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] でのアセンブリ開発の詳細については、[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ドキュメントを参照してください。  
   
 ## <a name="see-also"></a>参照  
  [Reporting Services の拡張機能](../reporting-services-extensions.md)   

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 320530eeb7bad37f7fd40bab5df9a9af8e9b1d82
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62835691"
 ---
 # <a name="edit-the-advanced-properties"></a>詳細プロパティの編集
@@ -33,6 +33,6 @@ ms.locfileid: "62835691"
   
  入力可能なプロパティの説明については、「 [cdc.xdbcdc_config](the-oracle-cdc-databases.md#bkmk_cdcxdbcdc_config)」の使用可能なオプションの表を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [How to Manage a CDC Instance](manage-a-cdc-instance.md)   
  [CDC インスタンスのプロパティを編集する方法](how-to-edit-the-cdc-instance-properties.md)  

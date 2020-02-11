@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 1115707b08c3068b27d83e3e292e6baf64e6cbeb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63035679"
 ---
 # <a name="aliasname-property-sqlserveralias-class"></a>AliasName プロパティ (SqlServerAlias クラス)
@@ -37,11 +37,12 @@ object
 ```  
   
 ## <a name="parts"></a>要素  
- *object*  
- [の別名を表す](sqlserveralias-class.md) SqlServerAlias クラス [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] オブジェクト。  
+ *素材*  
+ 
+  [の別名を表す](sqlserveralias-class.md) SqlServerAlias クラス [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] オブジェクト。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  サーバー接続の別名を示す `string` 値です。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
   
