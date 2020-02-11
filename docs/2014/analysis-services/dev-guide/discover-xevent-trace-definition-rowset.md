@@ -11,21 +11,21 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 826389eafb4fdf6a32e8d3b62ebfc1f333b62d4d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62731914"
 ---
-# <a name="discoverxeventtracedefinition-rowset"></a>DISCOVER_XEVENT_TRACE_DEFINITION 行セット
+# <a name="discover_xevent_trace_definition-rowset"></a>DISCOVER_XEVENT_TRACE_DEFINITION 行セット
   サーバー上で現在アクティブになっている XEvent トレースに関する情報を提供します。  
   
- **適用対象:** 表形式モデル、多次元モデル  
+ **適用対象:** テーブルモデル、多次元モデル  
   
 ## <a name="rowset-columns"></a>行セットの列  
- `DISCOVER_XEVENT_TRACE_DEFINITION`行セットには、次の列が含まれています。  
+ 行`DISCOVER_XEVENT_TRACE_DEFINITION`セットには、次の列が含まれています。  
   
-|列名|型を表すインジケーター|長さ|説明|  
+|列名|型を表すインジケーター|Length|[説明]|  
 |-----------------|--------------------|------------|-----------------|  
 |`Data`|`DBTYPE_WSTR`||XEvent トレースの XML 定義。|  
   
@@ -36,14 +36,14 @@ ms.locfileid: "62731914"
   
  次の表に、この行セットを識別する GUID と文字列の値を示します。  
   
-|引数|値|  
+|引数|Value|  
 |--------------|-----------|  
 |GUID|a07ccd1c-8148-11d0-87bb-00c04fc33942|  
 |String|DISCOVER_XEVENT_TRACE_DEFINITION|  
   
 ## <a name="see-also"></a>参照  
  [XML for Analysis スキーマ行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/xml-for-analysis-schema-rowsets)   
- [SQL Server 拡張イベントを使用して、 &#40;Xevent&#41;サービス モニターは分析するには](../instances/monitor-analysis-services-with-sql-server-extended-events.md)   
- [動的管理ビュー (DMV) を使用した Analysis Services の監視](../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
+ [SQL Server 拡張イベント &#40;Xevent&#41; を使用して監視 Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md)   
+ [Dmv&#41; &#40;動的管理ビューを使用して Analysis Services を監視する](../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
   

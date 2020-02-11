@@ -28,10 +28,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7864be7bbf270e235fd1948a1f70f34417a8dec4
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982782"
 ---
 # <a name="create-certificate-transact-sql"></a>CREATE CERTIFICATE (Transact-SQL)
@@ -161,7 +161,7 @@ CREATE CERTIFICATE certificate_name
  ACTIVE FOR BEGIN_DIALOG = { **ON** | OFF }  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] メッセージ交換の発信側で証明書を使用できるようにします。 既定値は ON です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  証明書は、X.509 標準に準拠したデータベース レベルのセキュリティ保護可能なリソースであり、X.509 V1 フィールドをサポートします。 CREATE CERTIFICATE では、ファイル、バイナリ定数、またはアセンブリから証明書を読み込むことができます。 このステートメントでは、キー ペアを生成して自己署名証明書を作成することもできます。  
   
  秘密キーは、暗号化された形式で 2500 バイト以下でなければなりません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって生成される秘密キーの長さは、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] までは 1024 ビット、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降は 2048 ビットです。 外部ソースからインポートされる秘密キーの最小の長さは 384 ビットで、最大の長さは 4,096 ビットです。 インポートされる秘密キーの長さは、64 ビットの整数倍であることが必要です。 TDE に使用される証明書では、秘密キーのサイズが 3456 ビットに制限されています。  
@@ -186,7 +186,7 @@ CREATE CERTIFICATE certificate_name
 ## <a name="permissions"></a>アクセス許可  
  データベースに対する CREATE CERTIFICATE 権限が必要です。 証明書を所有できるのは、Windows ログイン、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン、およびアプリケーション ロールだけです。 グループとロールは証明書を所有できません。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-creating-a-self-signed-certificate"></a>A. 自己署名証明書を作成する  
  次の例では、`Shipping04` という証明書を作成します。 この証明書の秘密キーは、パスワードを使用して保護されます。  

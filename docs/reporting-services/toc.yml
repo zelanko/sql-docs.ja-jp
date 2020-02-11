@@ -15,13 +15,19 @@
     - name: Backward Compatibility
       href: ../reporting-services/reporting-services-backward-compatibility.md
       items:
-        - name: 非推奨の機能
+        - name: 2019 で非推奨の機能
+          href: ../reporting-services/deprecated-features-sql-server-2019-reporting-services-ssrs.md
+        - name: 2017 で非推奨の機能
+          href: ../reporting-services/deprecated-features-sql-server-2017-reporting-services-ssrs.md
+        - name: 2016 で非推奨の機能
           href: ../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md
-        - name: SQL Server 2016 の SSRS で廃止された機能
+        - name: 2019 で廃止された機能
+          href: ../reporting-services/discontinued-functionality-sql-server-reporting-services-2019.md
+        - name: 2016 で廃止された機能
           href: ../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md
-        - name: SQL Server 2016 の SSRS における重大な変更
+        - name: 2016 での破壊的変更
           href: ../reporting-services/breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md
-        - name: SQL Server 2016 における SQL Server Reporting Services の動作変更
+        - name: 2016 での動作変更
           href: ../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md
 - name: チュートリアル
   items:
@@ -32,13 +38,13 @@
         - name: 基本的なテーブル レポートの作成 (SSRS チュートリアル)
           href: ../reporting-services/create-a-basic-table-report-ssrs-tutorial.md
           items:
-            - name: 'レッスン 1:レポート サーバー プロジェクトの作成'
+            - name: 'レッスン 1 : レポート サーバー プロジェクトの作成'
               href: ../reporting-services/lesson-1-creating-a-report-server-project-reporting-services.md
-            - name: 'レッスン 2:接続情報の指定'
+            - name: 'レッスン 2 : 接続情報の指定'
               href: ../reporting-services/lesson-2-specifying-connection-information-reporting-services.md
-            - name: 'レッスン 3:テーブル レポートのデータセットの定義'
+            - name: 'レッスン 3 : テーブル レポートのデータセットの定義'
               href: ../reporting-services/lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md
-            - name: 'レッスン 4:レポートへのテーブルの追加'
+            - name: 'レッスン 4 : レポートへのテーブルの追加'
               href: ../reporting-services/lesson-4-adding-a-table-to-the-report-reporting-services.md
             - name: 'レッスン 5: レポートの書式設定'
               href: ../reporting-services/lesson-5-formatting-a-report-reporting-services.md
@@ -47,22 +53,22 @@
         - name: データ ドリブン サブスクリプションの作成 (SSRS チュートリアル)
           href: ../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md
           items:
-            - name: 'レッスン 1:サンプル サブスクライバー データベースの作成'
+            - name: 'レッスン 1 : サンプル サブスクライバー データベースの作成'
               href: ../reporting-services/lesson-1-creating-a-sample-subscriber-database.md
-            - name: 'レッスン 2:レポート データ ソースのプロパティの変更'
+            - name: 'レッスン 2: レポート データ ソースのプロパティの変更'
               href: ../reporting-services/lesson-2-modifying-the-report-data-source-properties.md
-            - name: 'レッスン 3:データ ドリブン サブスクリプションの定義'
+            - name: 'レッスン 3: データ ドリブン サブスクリプションの定義'
               href: ../reporting-services/lesson-3-defining-a-data-driven-subscription.md
         - name: ReportViewer を使用してパラメーターを含む詳細 (RDLC) レポートを作成する (SSRS チュートリアル)
           href: ../reporting-services/create-drillthrough-rdlc-report-with-parameters-reportviewer.md
           items:
-            - name: 'レッスン 1:新しい Web サイトを作成する'
+            - name: 'レッスン 1: 新しい Web サイトを作成する'
               href: ../reporting-services/lesson-1-create-a-new-web-site.md
-            - name: 'レッスン 2:親レポートのデータ接続とデータ テーブルを定義する'
+            - name: 'レッスン 2: 親レポートのデータ接続とデータ テーブルを定義する'
               href: ../reporting-services/lesson-2-define-a-data-connection-and-data-table-for-parent-report.md
-            - name: 'レッスン 3:レポート ウィザードを使用して親レポートを設計する'
+            - name: 'レッスン 3: レポート ウィザードを使用して親レポートを設計する'
               href: ../reporting-services/lesson-3-design-the-parent-report-using-the-report-wizard.md
-            - name: 'レッスン 4:子レポートのデータ接続とデータ テーブルを定義する'
+            - name: 'レッスン 4: 子レポートのデータ接続とデータ テーブルを定義する'
               href: ../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md
             - name: 'レッスン 5: レポート ウィザードを使用して子レポートを設計する'
               href: ../reporting-services/lesson-5-design-the-child-report-using-the-report-wizard.md
@@ -77,37 +83,37 @@
     - name: レポート ビルダー チュートリアル
       href: ../reporting-services/report-builder-tutorials.md
       items:
-        - name: 'チュートリアル:オフラインでのクイック グラフ レポートの作成'
+        - name: 'チュートリアル: オフラインでのクイック グラフ レポートの作成'
           href: ../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md
         - name: チュートリアルの前提条件
           href: ../reporting-services/prerequisites-for-tutorials-report-builder.md
         - name: 別の方法でデータ接続を取得する (レポート ビルダー)
           href: ../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md
-        - name: 'チュートリアル:基本的なテーブル レポートの作成'
+        - name: 'チュートリアル: 基本的な表レポートの作成'
           href: ../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md
-        - name: 'チュートリアル:マトリックス形式のレポートの作成'
+        - name: 'チュートリアル: マトリックス レポートの作成'
           href: ../reporting-services/tutorial-creating-a-matrix-report-report-builder.md
-        - name: 'チュートリアル:自由形式のレポートの作成'
+        - name: 'チュートリアル: 自由形式のレポートの作成'
           href: ../reporting-services/tutorial-creating-a-free-form-report-report-builder.md
-        - name: 'チュートリアル:テキストを書式設定する (レポート ビルダー)'
+        - name: 'チュートリアル: テキストの書式設定 (レポート ビルダー)'
           href: ../reporting-services/tutorial-format-text-report-builder.md
-        - name: 'チュートリアル:レポートへの縦棒グラフの追加 (レポート ビルダー)'
+        - name: 'チュートリアル: レポートへの縦棒グラフの追加 (レポート ビルダー)'
           href: ../reporting-services/tutorial-add-a-column-chart-to-your-report-report-builder.md
-        - name: 'チュートリアル:レポートへの円グラフの追加 (レポート ビルダー)'
+        - name: 'チュートリアル: レポートへの円グラフの追加 (レポート ビルダー)'
           href: ../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md
-        - name: 'チュートリアル:レポートへの横棒グラフの追加 (レポート ビルダー)'
+        - name: 'チュートリアル: レポートへの横棒グラフの追加 (レポート ビルダー)'
           href: ../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md
-        - name: 'チュートリアル:レポートへのスパークラインの追加 (レポート ビルダー)'
+        - name: 'チュートリアル: レポートへのスパークラインの追加 (レポート ビルダー)'
           href: ../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md
-        - name: 'チュートリアル:レポートへの KPI の追加'
+        - name: 'チュートリアル: レポートへの KPI の追加'
           href: ../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md
-        - name: 'チュートリアル:マップ レポート'
+        - name: 'チュートリアル: マップ レポート'
           href: ../reporting-services/tutorial-map-report-report-builder.md
-        - name: 'チュートリアル:レポートへのパラメーターの追加 (レポート ビルダー)'
+        - name: 'チュートリアル: レポートへのパラメーターの追加 (レポート ビルダー)'
           href: ../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md
-        - name: 'チュートリアル:詳細レポートとメイン レポートの作成'
+        - name: 'チュートリアル: 詳細レポートとメイン レポートの作成'
           href: ../reporting-services/tutorial-creating-drillthrough-and-main-reports-report-builder.md
-        - name: 'チュートリアル:式の概要'
+        - name: 'チュートリアル: 式の概要'
           href: ../reporting-services/tutorial-introducing-expressions.md
 - name: 計画
   items:
@@ -1014,15 +1020,19 @@
       href: ../reporting-services/report-builder/print-a-report-reporting-services-in-sharepoint-mode.md
 - name: SSRS でのレポート データ
   items:
-    - name: SSRS でのレポート データ
+    - name: レポート データの概要
       href: ../reporting-services/report-data/report-data-ssrs.md
-    - name: Reporting Services でサポートされるデータ ソース
+    - name: サポートされるデータ ソース
       href: ../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md
-    - name: データ接続、データ ソース、および接続文字列 (レポート ビルダーおよび SSRS)
+    - name: 接続文字列を作成する
       href: ../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md
     - name: データ接続を追加および確認する
       href: ../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md
-    - name: 共有データ ソースを作成、変更、および削除する
+    - name: 資格情報と接続情報を指定する
+      href: ../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md
+    - name: 共有データ ソースと埋め込みデータ ソースを比較する
+      href: ../reporting-services/report-data/compare-shared-embedded-data-sources-report-builder-ssrs.md
+    - name: 共有データ ソースを作成および変更する
       href: ../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md
     - name: 埋め込みデータ ソースを作成および変更する
       href: ../reporting-services/report-data/create-and-modify-embedded-data-sources.md
@@ -1326,7 +1336,7 @@
           items:
             - name: '[ドキュメント アウトライン]'
               href: ../reporting-services/tools/document-outline.md
-            - name: '[デザイン] ビュー'
+            - name: デザイン ビュー
               href: ../reporting-services/tools/design-view.md
             - name: '[プレビュー] ビュー'
               href: ../reporting-services/tools/preview-view.md
@@ -1894,7 +1904,7 @@
       href: ../reporting-services/custom-report-items/custom-report-item-implementation-requirements.md
     - name: カスタム レポート アイテム
       href: ../reporting-services/custom-report-items/custom-report-items.md
-    - name: '方法:カスタム レポート アイテムを配置する'
+    - name: カスタム レポート アイテムを配置する方法
       href: ../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md
     - name: 式を使用したカスタム アセンブリへのアクセス
       href: ../reporting-services/custom-assemblies/accessing-custom-assemblies-through-expressions.md
@@ -1902,7 +1912,7 @@
       href: ../reporting-services/custom-assemblies/asserting-permissions-in-custom-assemblies.md
     - name: カスタム アセンブリの配置
       href: ../reporting-services/custom-assemblies/deploying-a-custom-assembly.md
-    - name: '方法:カスタム アセンブリをデバッグする'
+    - name: カスタム アセンブリをデバッグする方法
       href: ../reporting-services/custom-assemblies/how-to-debug-custom-assemblies.md
     - name: カスタム アセンブリ オブジェクトの初期化
       href: ../reporting-services/custom-assemblies/initializing-custom-assembly-objects.md

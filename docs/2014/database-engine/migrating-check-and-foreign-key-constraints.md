@@ -1,5 +1,5 @@
 ---
-title: 移行のチェックと外部キー制約 |Microsoft Docs
+title: Check 制約と Foreign Key 制約の移行 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,34 +11,34 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2494ab96cc3b4964c26a1ce17593e9b5aece2e7e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774933"
 ---
 # <a name="migrating-check-and-foreign-key-constraints"></a>CHECK 制約と外部キー制約の移行
-  チェックと外部キー制約でサポートされていない[!INCLUDE[hek_2](../includes/hek-2-md.md)]で[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]します。 これらのコンストラクトは、通常は、スキーマ内の論理データの整合性を適用する使用し、アプリケーションの機能の正確性を維持するために重要なことができます。  
+  Check 制約と foreign key 制約は、 [!INCLUDE[hek_2](../includes/hek-2-md.md)]の[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]ではサポートされていません。 これらの構成体は、通常、スキーマで論理データの整合性を確保するために使用され、アプリケーションの機能の正確性を維持するために重要な場合があります。  
   
- チェックなどのテーブルに対する論理的な整合性を確認し、外部キー制約は、トランザクションで追加の処理が必要し、一般的にパフォーマンスを受けやすいアプリケーションを避ける必要があります。 ただし、そのようなチェックがアプリケーションに重要な場合は、存在、2 つの回避策。  
+ Check 制約や foreign key 制約などのテーブルに対する論理的な整合性チェックでは、トランザクションに対する追加の処理が必要であり、通常はパフォーマンスを重視するアプリケーションでは回避する必要があります。 ただし、このようなチェックがアプリケーションにとって重要である場合は、2つの回避策が存在します。  
   
-## <a name="checking-constraints-after-an-insert-update-or-delete-operation"></a>挿入、更新、または削除操作の後に制約のチェック  
- これは回避策は、オプティミスティック変更の大半が制約に違反していないことを前提に基づきます。 この回避策でデータが変更された最初の制約を評価する前にします。 制約に違反すると場合、検出された場合しますが、変更はロールバックされません。  
+## <a name="checking-constraints-after-an-insert-update-or-delete-operation"></a>挿入、更新、または削除操作の後の制約のチェック  
+ この回避策は、ほとんどの変更が制約に違反しないという前提に基づいています。 この回避策では、制約が評価される前にデータが最初に変更されます。 制約に違反した場合は、それが検出されますが、変更はロールバックされません。  
   
- この回避策では、データの変更は、制約チェックによってブロックされていないため、パフォーマンスに対する影響を最小限の利点があります。 ただし、1 つまたは複数の制約に違反する変更が発生した場合にその変更をロールバック プロセスには時間がかかる場合があります。  
+ この回避策は、データの変更が制約チェックによってブロックされないため、パフォーマンスへの影響が最小限になるという利点があります。 ただし、1つまたは複数の制約に違反する変更が発生した場合、その変更をロールバックするプロセスには時間がかかることがあります。  
   
-## <a name="enforcing-constraints-before-an-insert-update-or-delete-operation"></a>挿入、更新、または削除操作の前に制約を適用します。  
- この回避策の動作をエミュレートする[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]制約。 データの変更が発生し、チェックが失敗した場合に、トランザクションを終了する前に、制約がチェックされます。 このメソッドは、データの変更のパフォーマンスが低下がによりテーブル内のデータが常に、制約を満たしているようになります。  
+## <a name="enforcing-constraints-before-an-insert-update-or-delete-operation"></a>挿入、更新、または削除操作の前に制約を適用する  
+ この回避策は、制約[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の動作をエミュレートします。 制約は、データ変更が行われる前にチェックされ、チェックに失敗した場合はトランザクションを終了します。 この方法では、データ変更のパフォーマンスが低下しますが、テーブル内のデータは常に制約を満たしていることが保証されます。  
   
- 論理データの整合性が正確さに重要で、変更、制約に違反する可能性が高い場合は、この回避策を使用します。 ただし、整合性を保証するためにはこれらの規則を含むストアド プロシージャをすべてのデータ変更が発生する必要があります。 アドホック クエリおよびその他のストアド プロシージャによって変更が、これらの制約は適用されませんおよびしたがって可能性がありますに違反してに警告なしでします。  
+ この回避策は、論理データの整合性が正確であることが重要であり、制約に違反する変更がある場合に使用します。 ただし、整合性を保証するために、これらの実施を含むストアドプロシージャを使用して、すべてのデータ変更を行う必要があります。 アドホッククエリやその他のストアドプロシージャを使用して変更を行っても、これらの制約は適用されないため、警告を表示せずに違反することがあります。  
   
 ## <a name="sample-code"></a>サンプル コード  
- 次のサンプルは、AdventureWorks2012 データベースに基づいています。 具体的には、これらのサンプルは、[Sales] に基づいています。[SalesOrderDetail] テーブル、関連付けられているチェック、および一意のインデックスだけでなく外部キー制約。  
+ 次のサンプルは、AdventureWorks2012 データベースに基づいています。 具体的には、これらのサンプルは [Sales] に基づいています。[SalesOrderDetail] テーブルとそれに関連付けられている check 制約と foreign key 制約を一意のインデックスに追加します。  
   
- ここで指定したストアド プロシージャでは、埋め込み操作のみです。 ストアド プロシージャを更新および削除操作のような構造を持つ必要があります。  
+ ここで指定するストアドプロシージャは、埋め込み操作専用です。 更新操作と削除操作のためのストアドプロシージャには、同様の構造体が必要です。  
   
-## <a name="table-definition-for-the-workarounds"></a>回避策のテーブルの定義  
- 前に、メモリ最適化テーブルへの変換は、[Sales] の定義。[SalesOrderDetail] は次のとおりです。  
+## <a name="table-definition-for-the-workarounds"></a>回避策のテーブル定義  
+ メモリ最適化テーブルに変換する前に、[Sales] の定義。[SalesOrderDetail] は次のとおりです。  
   
 ```sql  
 USE [AdventureWorks2012]  
@@ -97,9 +97,9 @@ ALTER TABLE [Sales].[SalesOrderDetail] CHECK CONSTRAINT [CK_SalesOrderDetail_Uni
 GO  
 ```  
   
- 後は、メモリ最適化テーブルへの変換は、[Sales] の定義。[SalesOrderDetail] は次のとおりです。  
+ メモリ最適化テーブルに変換した後、[Sales] の定義。[SalesOrderDetail] は次のとおりです。  
   
- その rowguid はなくなりました ROWGUIDCOL ではサポートされていない[!INCLUDE[hek_2](../includes/hek-2-md.md)]します。 列が削除されました。 さらに、LineTotal は計算列と、この記事で取り上げませんためも削除されています。  
+ ではサポートされていないため、rowguid は ROWGUIDCOL で[!INCLUDE[hek_2](../includes/hek-2-md.md)]はなくなっていることに注意してください。 列が削除されました。 さらに、LineTotal は計算列であり、この記事の範囲外であるため、削除されています。  
   
 ```sql  
 USE [AdventureWorks2012]  
@@ -125,7 +125,7 @@ CREATE TABLE [Sales].[SalesOrderDetail]([SalesOrderID] [int] NOT NULL,
 GO  
 ```  
   
-## <a name="checking-constraints-after-an-insert-update-or-delete-operation"></a>挿入、更新、または削除操作の後に制約のチェック  
+## <a name="checking-constraints-after-an-insert-update-or-delete-operation"></a>挿入、更新、または削除操作の後の制約のチェック  
   
 ```sql  
 USE AdventureWorks2012  
@@ -183,7 +183,7 @@ BEGIN TRANSACTION
 END  
 ```  
   
-## <a name="enforcing-constraints-before-an-insert-update-or-delete-operation"></a>強制の制約を挿入する前に更新または削除操作  
+## <a name="enforcing-constraints-before-an-insert-update-or-delete-operation"></a>挿入、更新、または削除操作の前に制約を適用する  
   
 ```sql  
 USE AdventureWorks2012  

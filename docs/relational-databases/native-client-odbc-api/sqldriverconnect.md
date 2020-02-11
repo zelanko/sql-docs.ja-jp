@@ -15,24 +15,25 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9a76a653277b7f99ecf88c3b0277617eb053a41c
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73787098"
 ---
 # <a name="sqldriverconnect"></a>SQLDriverConnect
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
+  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、接続文字列のキーワードを置き換えたり、拡張したりするための接続属性を定義します。 接続文字列のいくつかのキーワードには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーが指定する既定値があります。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーで使用できるキーワードの一覧については、「 [SQL Server Native Client での接続文字列キーワードの使用](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)」を参照してください。  
+ Native Client ODBC ドライバーで使用できるキーワードの一覧については、「 [SQL Server Native Client での接続文字列キーワードの使用](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)」を参照してください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 接続属性とドライバーの既定の動作の詳細については、「 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)」を参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]接続属性とドライバーの既定の動作の詳細については、「 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)」を参照してください。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client で有効な接続文字列キーワードの詳細については、「 [SQL Server Native Client での接続文字列キーワードの使用](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)」を参照してください。  
+ Native Client で有効な接続文字列キーワードの詳細については、「 [SQL Server Native Client での接続文字列キーワードの使用](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)」を参照してください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
- **SQLDriverConnect**_drivercompletion_パラメーター値が SQL_DRIVER_PROMPT、SQL_DRIVER_COMPLETE、または SQL_DRIVER_COMPLETE_REQUIRED の場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは、表示されるダイアログボックスからキーワード値を取得します。 接続文字列でキーワード値が渡され、ユーザーがダイアログ ボックスでキーワードの値を変更しなかった場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは接続文字列の値を使用します。 接続文字列で値が設定されていない場合、ユーザーがダイアログ ボックスで割り当てを行わないと、ドライバーは既定値を使用します。  
+ **SQLDriverConnect**_drivercompletion_パラメーター値が SQL_DRIVER_PROMPT、SQL_DRIVER_COMPLETE、または SQL_DRIVER_COMPLETE_REQUIRED の場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは、表示されるダイアログボックスからキーワード値を取得します。 接続文字列でキーワード値が渡され、ユーザーがダイアログ ボックスでキーワードの値を変更しなかった場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは接続文字列の値を使用します。 接続文字列で値が設定されていない場合、ユーザーがダイアログ ボックスで割り当てを行わないと、ドライバーは既定値を使用します。  
   
  *Drivercompletion*の値でドライバーの接続ダイアログボックスを表示する必要がある (または必要になる可能性がある) 場合は、 **SQLDriverConnect**に有効な*WindowHandle*を指定する必要があります。 無効なハンドルを指定すると、SQL_ERROR が返されます。  
   
@@ -47,7 +48,7 @@ ms.locfileid: "73787098"
  *Drivercompletion*パラメーター値が SQL_DRIVER_COMPLETE または SQL_DRIVER_PROMPT で、言語またはデータベースが無効である場合、 **SQLDriverConnect**はダイアログボックスを再指定します。  
   
 ## <a name="sqldriverconnect-support-for-high-availability-disaster-recovery"></a>SQLDriverConnect の HADR サポート  
- **SQLDriverConnect**を使用して [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] クラスターに接続する方法の詳細については、「[高可用性、ディザスターリカバリーのサポートの SQL Server Native Client](../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)」を参照してください。  
+ **SQLDriverConnect**を使用して[!INCLUDE[ssHADR](../../includes/sshadr-md.md)]クラスターに接続する方法の詳細については、「[高可用性、ディザスターリカバリーのサポートの SQL Server Native Client](../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)」を参照してください。  
   
 ## <a name="sqldriverconnect-support-for-service-principal-names-spns"></a>SQLDriverConnect によるサービス プリンシパル名 (SPN) のサポート  
  SQLDDriverConnect では、プロンプトが有効になっているときに ODBC ログインダイアログボックスが使用されます。 これにより、プリンシパル サーバーとそのフェールオーバー パートナーの両方に対して SPN を入力できます。  
@@ -58,9 +59,9 @@ ms.locfileid: "73787098"
   
  接続が開いている場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client では、SQL_COPT_SS_MUTUALLY_AUTHENTICATED および SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD が、接続を開くときに使用された認証方式に設定されます。  
   
- Spn の詳細については、「[クライアント&#40;接続&#41; &#40;ODBC&#41;でのサービスプリンシパル名 spn](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)」を参照してください。  
+ Spn の詳細については、「[クライアント接続 &#40;ODBC&#41;のサービスプリンシパル名 &#40;spn&#41; ](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)」を参照してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の呼び出しは、 **SQLDriverConnect**に必要なデータ量の最小値を示しています。  
   
 ```  
@@ -81,9 +82,9 @@ SQLDriverConnect(hdbc, hwnd,
   
 ## <a name="see-also"></a>参照  
  [SQLDriverConnect 関数](https://go.microsoft.com/fwlink/?LinkId=59340)   
- [ODBC API 実装の詳細](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
- [SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md)   
- [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)   
- [Transact-sql の&#40;設定 ANSI_WARNINGS&#41;](../../t-sql/statements/set-ansi-warnings-transact-sql.md)  
+ [ODBC API の実装の詳細](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
+ [SET ANSI_NULLS &#40;Transact-sql&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md)   
+ [SET ANSI_PADDING &#40;Transact-sql&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)   
+ [SET ANSI_WARNINGS &#40;Transact-sql&#41;](../../t-sql/statements/set-ansi-warnings-transact-sql.md)  
   
   

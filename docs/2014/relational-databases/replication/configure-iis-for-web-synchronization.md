@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a5c3b456fa650cff94d0b5809c37f7ceca8b1b71
-ms.sourcegitcommit: 961c56bb78ff46ae6eb1a2cc5d2b1262ddf7a4fa
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74706669"
 ---
 # <a name="configure-iis-for-web-synchronization"></a>Web 同期用の IIS の構成
@@ -87,7 +87,7 @@ ms.locfileid: "74706669"
   
     4.  Web サーバー証明書ウィザードを実行します。  
   
-4.  [**OK**] をクリックすると、  
+4.  **[OK]** をクリックします。  
   
  CA からサーバー証明書を取得できない場合は、テスト用に証明書を指定できます。 テスト用に IIS 6.0 を構成するには、SelfSSL ユーティリティを使用して証明書をインストールします。 このユーティリティは、IIS 6.0 リソース キットで使用できます。 ツールは、 [Microsoft ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=5135)からダウンロードできます。 IIS 5.0 の場合は、 [Microsoft ヘルプとサポート](https://go.microsoft.com/fwlink/?LinkId=46229)を参照してください。  
   
@@ -171,8 +171,7 @@ ms.locfileid: "74706669"
   **[別名]** ボックスに仮想ディレクトリの別名を入力します。  
   
     2.  
-  **[パス]** ボックスに、仮想ディレクトリのパスを入力します。 たとえば、[**エイリアス**] ボックス`websync1`に「」と入力し`C:\Inetpub\wwwroot\websync1`た場合は、[**パス**] ボックスに「」と入力します。 
-  **[次へ]** をクリックします。  
+  **[パス]** ボックスに、仮想ディレクトリのパスを入力します。 たとえば、[**エイリアス**] ボックス`websync1`に「」と入力し`C:\Inetpub\wwwroot\websync1`た場合は、[**パス**] ボックスに「」と入力します。 **[次へ]** をクリックします。  
   
     3.  両方のダイアログ ボックスで **[はい]** をクリックします。 これにより、新しいフォルダーを作成し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ISAPI (インターネット サーバー API) の DLL をコピーします。 .  
   
@@ -316,7 +315,7 @@ ms.locfileid: "74706669"
   
     6.  ディレクトリにアクセスする必要がないユーザーまたはグループを選択し、 **[削除]** をクリックします。  
   
-    7.  [**OK**] をクリックすると、  
+    7.  **[OK]** をクリックします。  
   
 4.  
   **インターネット インフォメーション サービス (IIS) マネージャー**でアプリケーション プールを作成します。  
@@ -347,7 +346,7 @@ ms.locfileid: "74706669"
     4.  
   **[ユーザー名]** および **[パスワード]** フィールドに、手順 1. で作成したアカウントとパスワードを入力します。  
   
-    5.  [**OK**] をクリックすると、  
+    5.  **[OK]** をクリックします。  
   
 6.  Web 同期に使用する仮想ディレクトリにアプリケーション プールを関連付けます。  
   
@@ -359,7 +358,7 @@ ms.locfileid: "74706669"
     3.  
   **[** VirtualDirectoryName> のプロパティ]** ダイアログ ボックスの \<[仮想ディレクトリ]** タブで、手順 5. で作成したアプリケーション プールを **[アプリケーション プール]** ボックスから選択します。  
   
-    4.  [**OK**] をクリックすると、  
+    4.  **[OK]** をクリックします。  
   
 ## <a name="testing-the-connection-to-replisapidll"></a>replisapi.dll への接続のテスト  
  診断モードで Web 同期を実行すると、IIS を実行しているコンピューターへの接続をテストして、SSL (Secure Sockets Layer) 証明書が正しくインストールされているかどうかを確認できます。 診断モードで Web 同期を実行するには、IIS を実行しているコンピューターの管理者である必要があります。  
@@ -377,7 +376,7 @@ ms.locfileid: "74706669"
   
     4.  プロキシ サーバーを使用している場合は、 **[LAN にプロキシ サーバーを使用する]** と **[ローカル アドレスにはプロキシ サーバーを使用しない]** チェック ボックスをオンにします。  
   
-    5.  [**OK**] をクリックすると、  
+    5.  **[OK]** をクリックします。  
   
 2.  サブスクライバー側の Internet Explorer から診断モードでサーバーに接続します。診断モードで接続するには、replisapi.dll のアドレスの後に「 `?diag` 」を追加します。 (例: https://server.domain.com/directory/replisapi.dll?diag)。  
   

@@ -15,15 +15,15 @@ ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
 ms.openlocfilehash: 64c8416a15afd685559fe2d05c436c2e5fc1382d
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73632854"
 ---
 # <a name="overview-of-data-migration-assistant"></a>Data Migration Assistant の概要
 
-Data Migration Assistant (DMA) を使用すると、新しいバージョンの SQL Server または Azure SQL Database のデータベース機能に影響する可能性のある互換性の問題を検出することで、最新のデータプラットフォームにアップグレードできます。 DMA は、ターゲット環境でのパフォーマンスと信頼性の向上を推奨します。また、スキーマ、データ、および非包含オブジェクトを移行元サーバーから対象サーバーに移動することもできます。
+Data Migration Assistant (DMA) を使用すると、新しいバージョンの SQL Server または Azure SQL Database のデータベース機能に影響する可能性のある互換性の問題を検出することで、最新のデータプラットフォームにアップグレードできます。 DMA は、ターゲット環境のパフォーマンスと信頼性を高めるための推奨事項を提案し、スキーマ、データ、非コンテナー化オブジェクトをソース サーバーからターゲット サーバーに移動できるようにします。
 
 > [!NOTE]
 > 大規模な移行 (データベースの数とサイズの観点から) では、データベースを大規模に移行できる[Azure Database Migration Service](/azure/dms/dms-overview)を使用することをお勧めします。
@@ -32,15 +32,15 @@ Data Migration Assistant (DMA) を使用すると、新しいバージョンの 
 
 DMA をインストールするには、 [Microsoft ダウンロードセンター](https://www.microsoft.com/download/details.aspx?id=53595)から最新バージョンのツールをダウンロードし、 **DataMigrationAssistant**ファイルを実行します。
 
-## <a name="capabilities"></a>Capabilities
+## <a name="capabilities"></a>機能
 
-- Azure SQL database に移行するオンプレミスの SQL Server インスタンスを評価します。 評価ワークフローは、Azure SQL database の移行に影響する可能性がある次の問題を検出するのに役立ち、その解決方法についての詳細なガイダンスを提供します。
+- Azure SQL database に移行するオンプレミスの SQL Server インスタンスを評価します。評価ワークフローは、Azure SQL database の移行に影響する可能性がある次の問題を検出するのに役立ち、その解決方法についての詳細なガイダンスを提供します。
 
-  - 移行のブロックに関する問題: オンプレミスの SQL Server データベースの Azure SQL Database への移行をブロックする互換性の問題を検出します。 DMA は、これらの問題に対処するための推奨事項を提供します。
+  - 移行のブロックに関する問題: オンプレミスの SQL Server データベースの Azure SQL Database への移行をブロックする互換性の問題を検出します。DMA は、これらの問題に対処するための推奨事項を提供します。
 
-  - 部分的にサポートされている機能またはサポートされていない機能: ソース SQL Server インスタンスで現在使用されている機能またはサポートされていない機能を検出します。 DMA は、一連の推奨事項、Azure で利用できる代替アプローチ、および移行プロジェクトに組み込むことができるようにするための手順を軽減します。
+  - 部分的にサポートされている機能またはサポートされていない機能: ソース SQL Server インスタンスで現在使用されている機能またはサポートされていない機能を検出します。DMA は、一連の推奨事項、Azure で利用できる代替アプローチ、および移行プロジェクトに組み込むことができるようにするための手順を軽減します。
 
-- オンプレミスの SQL Server へのアップグレードに影響する可能性がある問題を検出します。 これらは、互換性の問題として記述され、次のカテゴリに分類されます。
+- オンプレミスの SQL Server へのアップグレードに影響する可能性がある問題を検出します。これらは、互換性の問題として記述され、次のカテゴリに分類されます。
 
   - 重大な変更
   - 動作の変更
@@ -49,7 +49,7 @@ DMA をインストールするには、 [Microsoft ダウンロードセンタ�
 - アップグレード後にデータベースが恩恵を受けることのできるターゲット SQL Server プラットフォームの新機能について説明します。 これらは、機能に関する推奨事項として説明されており、次のカテゴリに分類されています。
 
   - パフォーマンス
-  - セキュリティ
+  - Security
   - ストレージ
 
 - オンプレミスの SQL Server インスタンスを、オンプレミスでホストされている最新の SQL Server インスタンスに、またはオンプレミスネットワークからアクセス可能な Azure 仮想マシン (VM) に移行します。 Azure VM には、VPN またはその他のテクノロジを使用してアクセスできます。 移行ワークフローは、次のコンポーネントを移行するのに役立ちます。
@@ -83,9 +83,9 @@ DMA を使用すると、以前のバージョンの SQL Server アップグレ�
 - SQL Server 2012
 - SQL Server 2014
 - SQL Server 2016
-- Windows での SQL Server 2017
+-  Windows 上の SQL Server 2017
 
-**ターゲット**
+**対象サーバー**
 
 - SQL Server 2012
 - SQL Server 2014

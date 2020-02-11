@@ -15,10 +15,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8bd173abbb6ee355429d891a49f672bb0ac818d2
-ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74683611"
 ---
 # <a name="quick-start-installation-of-sql-server-2014"></a>SQL Server 2014 のクイック スタート インストール
@@ -53,7 +53,7 @@ ms.locfileid: "74683611"
   
      インストールウィザードを使用してをインストールする[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]手順については、「インストール[ウィザードから SQL Server 2014 をインストールする」 &#40;セットアップ&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)を参照してください。  
   
--   **コマンドプロンプト**  
+-   **コマンド プロンプト**  
   
      無人セットアップを実行するためのサンプル構文とインストールパラメーターについては[、「コマンドプロンプトから SQL Server 2014 をインストール](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)する」を参照してください。  
   
@@ -112,17 +112,17 @@ ms.locfileid: "74683611"
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] のさまざまなエディションでサポートされる機能の詳細を確認します。|[機能とエディション](features-supported-by-the-editions-of-sql-server-2014.md)|  
 |
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の最適なエディションおよびコンポーネントを決定します。|[SQL Server 2014 のエディションとコンポーネント](../sql-server/editions-and-components-of-sql-server-2016.md)|  
-|ハードウェア構成を確認し、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] フェールオーバー クラスターのインストールの準備について学習します。|[フェールオーバークラスタリングをインストールする前に](../sql-server/failover-clusters/install/before-installing-failover-clustering.md)|  
+|ハードウェア構成を確認し、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] フェールオーバー クラスターのインストールの準備について学習します。|[フェールオーバー クラスタリングをインストールする前に](../sql-server/failover-clusters/install/before-installing-failover-clustering.md)|  
   
 ###  <a name="BKMK_Upgrading"></a>へのアップグレード[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
  
   [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] の既存のインスタンスを [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] にアップグレードできます。 詳細については、「 [SQL Server 2014 へのアップグレード](../database-engine/install-windows/upgrade-sql-server.md)」を参照してください。 
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] セットアップを実行して [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] にアップグレードする前に、アップグレード プロセスに関する以下のトピックを参照してください。  
   
-|説明|トピック|  
+|[説明]|トピック|  
 |-----------------|-----------|  
 |サポートされる [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] へのアップグレード パスについて説明します。|[サポートされるアップグレード](../database-engine/install-windows/supported-version-and-edition-upgrades.md)|  
-|アップグレード アドバイザーについて説明します。アップグレード アドバイザーは、[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] のインスタンスを分析し、アップグレードに関する既知の問題を報告するツールです。|[アップグレードアドバイザーを使用してアップグレードを準備する](../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)|  
+|アップグレード アドバイザーについて説明します。アップグレード アドバイザーは、[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] のインスタンスを分析し、アップグレードに関する既知の問題を報告するツールです。|[アップグレード アドバイザーを使用したアップグレードの準備](../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)|  
 |分散再生ユーティリティについて説明します。分散再生ユーティリティは、複数のコンピューターを使用してトレース データを再生し、ミッションクリティカルなワークロードをシミュレートできるツールです。 
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] アップグレードの前後でテスト サーバーの再生を実行することで、パフォーマンスの差を測定したり、アップグレード時にアプリケーションに非互換性が発生するかどうかを調べることができます。|[分散再生ユーティリティを使用したアップグレードの準備](../../2014/sql-server/install/use-the-distributed-replay-utility-to-prepare-for-upgrades.md)|  
 |
@@ -137,10 +137,10 @@ ms.locfileid: "74683611"
 ###  <a name="BKMK_Install"></a>中[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
  次のトピックで、[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] のさまざまなインストール シナリオを確認してください。  
   
-|説明|トピック|  
+|[説明]|トピック|  
 |-----------------|-----------|  
 |
-  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] のさまざまなコンポーネントのインストールに関するトピックと、[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] のインストール手順に関するトピックへのリンクが記載されています。|[SQL Server 2014 をインストールする](../database-engine/install-windows/install-sql-server.md)|  
+  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] のさまざまなコンポーネントのインストールに関するトピックと、[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] のインストール手順に関するトピックへのリンクが記載されています。|[SQL Server 2014 のインストール](../database-engine/install-windows/install-sql-server.md)|  
 |このトピックを参照して、Windows Server Core に [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] をインストールします。|[Server Core への SQL Server 2014 のインストール](../database-engine/install-windows/install-sql-server-on-server-core.md)|  
 |このトピックを参照して、既存の [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] インスタンスに個々の機能を追加します。|[SQL Server 2014 &#40;セットアップのインスタンスに機能を追加&#41;](../database-engine/install-windows/add-features-to-an-instance-of-sql-server-setup.md)|  
 |このトピックを参照して、新しい [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスを作成します。|[セットアップ &#40;新しい SQL Server フェールオーバークラスターを作成し&#41;](../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)|  
@@ -156,16 +156,16 @@ ms.locfileid: "74683611"
  
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインストールが完了したら、グラフィカル ユーティリティやコマンド プロンプト ユーティリティを使用して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] をさらに構成できます。 初めて [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] を構成する場合は、次のトピックを参照してください。  
   
-|説明|トピック|  
+|[説明]|トピック|  
 |-----------------|-----------|  
 |このトピックでは、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] または PowerPivot for SharePoint へのアクセスを許可するためにファイアウォールのポートのブロックを解除する必要があるかどうかを判断するための情報を提供します。 このトピックで示す手順に従って、ポートとファイアウォールを構成できます。|[Analysis Services アクセスを許可するように Windows ファイアウォールを構成する](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)|  
-|このトピックでは、ファイアウォール構成の概要について説明し、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理者を対象とした情報がまとめられています。|[SQL Server アクセスを許可するように Windows ファイアウォールを構成する](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|  
-|このトピックでは、マルチホーム環境内の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスへのネットワーク接続用に [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] とセキュリティが強化された Windows ファイアウォールを構成する方法について説明します。|[SQL Server アクセス用にマルチホームコンピューターを構成する](../../2014/sql-server/install/configure-a-multi-homed-computer-for-sql-server-access.md)|  
+|このトピックでは、ファイアウォール構成の概要について説明し、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理者を対象とした情報がまとめられています。|[Configure the Windows Firewall to Allow SQL Server Access](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|  
+|このトピックでは、マルチホーム環境内の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスへのネットワーク接続用に [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] とセキュリティが強化された Windows ファイアウォールを構成する方法について説明します。|[SQL Server アクセス用のマルチホーム コンピューターの構成](../../2014/sql-server/install/configure-a-multi-homed-computer-for-sql-server-access.md)|  
   
 ###  <a name="BKMK_Uninstalling"></a>取り外し[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
  次のトピックでは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のスタンドアロン インスタンスとフェールオーバー クラスター インスタンスを手動でアンインストールする方法について説明します。  
   
-|説明|トピック|  
+|[説明]|トピック|  
 |-----------------|-----------|  
 |このトピックでは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のスタンドアロン インスタンスを手動でアンインストールする方法について説明します。|[SQL Server 2014 のアンインストール](../sql-server/install/uninstall-sql-server.md)|  
 |このトピックでは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のフェールオーバー クラスター インスタンスをアンインストールする方法について説明します。|[SQL Server のフェールオーバークラスターインスタンスを削除する &#40;セットアップ&#41;](../sql-server/failover-clusters/install/remove-a-sql-server-failover-cluster-instance-setup.md)|  

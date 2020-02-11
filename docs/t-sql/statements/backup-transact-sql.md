@@ -47,10 +47,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: c1065c56e3f07f1381e5056d1b2eca3a20ed0cd2
-ms.sourcegitcommit: c98c6e33d04d4a1888db7dbe89cb0b1bb3a66418
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74249730"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
@@ -715,7 +715,7 @@ BACKUP ステートメントは、明示的または暗黙的なトランザク�
 
 バックアップ操作がファイル管理または圧縮操作と重複すると、競合が発生します。 どの競合操作が最初に始まったかに関係なく、最初の操作によって設定されたロックがタイムアウトになるまで、2 番目の操作は待機します (タイムアウト時間は、セッション タイムアウト設定によって制御されます)。 ロックがタイムアウト期間内に解放されると、2 番目の操作が開始されます。 ロックがタイムアウトになると、2 番目の操作は実行されません。
 
-## <a name="metadata"></a>メタデータ
+## <a name="metadata"></a>Metadata
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には次のようなバックアップ履歴テーブルがあり、これによってバックアップ処理が追跡されます。
 
@@ -1238,7 +1238,7 @@ master データベースは差分バックアップできません。 master �
 
 差分バックアップは、前回の完全バックアップが正常に完了した場合にのみ許可されます。 たとえば、月曜日に Sales データベースの完全バックアップを作成し、バックアップが正常に完了したとします。 火曜日にも Sales データベースの完全バックアップを作成するが失敗します。 この失敗の後、月曜日の完全バックアップに基づいて差分バックアップを作成することはできません。 差分バックアップを作成するには、最初に完全バックアップを正常に作成する必要があります。
 
-## <a name="metadata"></a>メタデータ
+## <a name="metadata"></a>Metadata
 
 これらの動的管理ビューには、すべてのバックアップ操作、復元操作、読み込み操作に関する情報が含まれています。 情報は、システムの再起動の間で永続化します。
 

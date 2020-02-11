@@ -20,10 +20,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7949d646ac8890a9f4a5631de991168f9a0997e4
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73778971"
 ---
 # <a name="processing-results-odbc"></a>結果の処理 (ODBC)
@@ -37,9 +37,9 @@ ms.locfileid: "73778971"
   
  INSERT ステートメント、UPDATE ステートメント、および DELETE ステートメントからは、変更によって処理された行数だけを含む結果セットが返されます。 この数は、アプリケーションが[SQLRowCount](../../relational-databases/native-client-odbc-api/sqlrowcount.md)を呼び出したときに使用できるようになります。 ODBC 3.*x*アプリケーションは、 **SQLRowCount**を呼び出して結果セットを取得するか、 [sqlmoreresults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md)を呼び出して取り消す必要があります。 複数の INSERT、UPDATE、または DELETE ステートメントを含むバッチまたはストアドプロシージャを実行する場合は、各変更ステートメントの結果セットを**SQLRowCount**を使用して処理するか、 **Sqlmoreresults**を使用して取り消す必要があります。 バッチやストアド プロシージャに SET NOCOUNT ON ステートメントを含めることで、これらの数をキャンセルできます。  
   
- Transact-SQL には、NOCOUNT ステートメントが含まれています。 NOCOUNT オプションが on に設定されている場合、SQL Server は、ステートメントの影響を受ける行の数を返しません。また、 **SQLRowCount**は0を返します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーのバージョンでは、SQL_SOPT_SS_NOCOUNT_STATUS、NOCOUNT オプションがオンまたはオフになっているかどうかを報告するための、ドライバー固有の[SQLGetStmtAttr](../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md)オプションが導入されています。 **SQLRowCount**は常に0を返し、アプリケーションは SQL_SOPT_SS_NOCOUNT_STATUS をテストする必要があります。 SQL_NC_ON が返された場合、 **SQLRowCount**の値が0の場合は、SQL Server によって行数が返されなかったことを示します。 SQL_NC_OFF が返された場合は、NOCOUNT が無効になっていることを意味し、 **SQLRowCount**からの値が0の場合は、ステートメントが行に影響していないことを示します。 SQL_SOPT_SS_NOCOUNT_STATUS が SQL_NC_OFF 場合、アプリケーションには**SQLRowCount**の値が表示されません。 大きなバッチやストアド プロシージャには、複数の SET NOCOUNT ステートメントが含まれていることがあるので、プログラマは SQL_SOPT_SS_NOCOUNT_STATUS が一定であると想定することはできません。 **SQLRowCount**が0を返すたびに、オプションをテストする必要があります。  
+ Transact-SQL には、NOCOUNT ステートメントが含まれています。 NOCOUNT オプションが on に設定されている場合、SQL Server は、ステートメントの影響を受ける行の数を返しません。また、 **SQLRowCount**は0を返します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC ドライバーのバージョンでは、SQL_SOPT_SS_NOCOUNT_STATUS、NOCOUNT オプションがオンとオフのどちらであるかを報告するために、ドライバー固有の[SQLGetStmtAttr](../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md)オプションが導入されています。 **SQLRowCount**は常に0を返し、アプリケーションは SQL_SOPT_SS_NOCOUNT_STATUS をテストする必要があります。 SQL_NC_ON が返された場合、 **SQLRowCount**の値が0の場合は、SQL Server によって行数が返されなかったことを示します。 SQL_NC_OFF が返された場合は、NOCOUNT が無効になっていることを意味し、 **SQLRowCount**からの値が0の場合は、ステートメントが行に影響していないことを示します。 SQL_SOPT_SS_NOCOUNT_STATUS が SQL_NC_OFF 場合、アプリケーションには**SQLRowCount**の値が表示されません。 大きなバッチやストアド プロシージャには、複数の SET NOCOUNT ステートメントが含まれていることがあるので、プログラマは SQL_SOPT_SS_NOCOUNT_STATUS が一定であると想定することはできません。 **SQLRowCount**が0を返すたびに、オプションをテストする必要があります。  
   
- 他のいくつかの Transact-SQL ステートメントは、結果セットではなく、メッセージにデータを含めて返します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは、これらのメッセージを受信すると SQL_SUCCESS_WITH_INFO を返して、情報メッセージが使用可能であることをアプリケーションに知らせます。 その後、アプリケーションは**SQLGetDiagRec**を呼び出してこれらのメッセージを取得できます。 このように機能する [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを次に示します。  
+ 他のいくつかの Transact-SQL ステートメントは、結果セットではなく、メッセージにデータを含めて返します。 Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC ドライバーは、これらのメッセージを受信すると SQL_SUCCESS_WITH_INFO を返して、情報メッセージが使用可能であることをアプリケーションに知らせます。 その後、アプリケーションは**SQLGetDiagRec**を呼び出してこれらのメッセージを取得できます。 このように機能する [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを次に示します。  
   
 -   DBCC  
   
@@ -51,7 +51,7 @@ ms.locfileid: "73778971"
   
 -   RAISERROR  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは、重大度が11以上の RAISERROR で SQL_ERROR を返します。 RAISERROR の重大度が 19 以上の場合は、接続も削除されます。  
+ Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client ODBC ドライバーは、重大度が11以上の RAISERROR で SQL_ERROR を返します。 RAISERROR の重大度が 19 以上の場合は、接続も削除されます。  
   
  アプリケーションでは、SQL ステートメントから返される結果セットを処理するために次の処理を行います。  
   
@@ -67,20 +67,20 @@ ms.locfileid: "73778971"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
--   [結果セット&#40;ODBC の特性の決定&#41;](../../relational-databases/native-client-odbc-results/determining-the-characteristics-of-a-result-set-odbc.md)  
+-   [ODBC&#41;&#40;結果セットの特性の決定](../../relational-databases/native-client-odbc-results/determining-the-characteristics-of-a-result-set-odbc.md)  
   
 -   [ストレージの割り当て](../../relational-databases/native-client-odbc-results/assigning-storage.md)  
   
 -   [結果データのフェッチ](../../relational-databases/native-client-odbc-results/fetching-result-data.md)  
   
--   [データ型&#40;のマッピング ODBC&#41;](../../relational-databases/native-client-odbc-results/mapping-data-types-odbc.md)  
+-   [ODBC&#41;&#40;のデータ型のマッピング](../../relational-databases/native-client-odbc-results/mapping-data-types-odbc.md)  
   
 -   [データ型の使用方法](../../relational-databases/native-client-odbc-results/data-type-usage.md)  
   
 -   [文字データの自動変換](../../relational-databases/native-client-odbc-results/autotranslation-of-character-data.md)  
   
 ## <a name="see-also"></a>参照  
- [ &#40;ODBC&#41; ](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  の SQL Server Native Client  
- [結果の処理方法に関する&#40;トピック ODBC&#41;](https://msdn.microsoft.com/library/772d9064-c91d-4cac-8b60-fcc16bf76e10)  
+ [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
+ [結果の処理方法に関するトピック &#40;ODBC&#41;](https://msdn.microsoft.com/library/772d9064-c91d-4cac-8b60-fcc16bf76e10)  
   
   

@@ -24,10 +24,10 @@ helpviewer_keywords:
 - rank
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 376438a45d6b104cbf4e66dbdf8e5542cf3fd2c2
-ms.sourcegitcommit: 02449abde606892c060ec9e9e9a85a3f49c47c6c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74542048"
 ---
 # <a name="syssensitivity_classifications-transact-sql"></a>sys.sensitivity_classifications (Transact-SQL)
@@ -35,21 +35,21 @@ ms.locfileid: "74542048"
 
 データベース内の分類されたアイテムごとに1行のデータを返します。
 
-|列名|データ型|説明|
+|列名|データ型|[説明]|
 |-----------------|---------------|-----------------|  
-|**class**|**通り**|分類が存在する項目のクラスを識別します。 の値は常に 1 (列を表す) になります。|  
+|**講義**|**int**|分類が存在する項目のクラスを識別します。 の値は常に 1 (列を表す) になります。|  
 |**class_desc**|**varchar (16)**|分類が存在する項目のクラスの説明。 の値は常にになり*OBJECT_OR_COLUMN*|  
-|**major_id**|**通り**|All_objects に対応する、分類された列を含むテーブルの ID を表します。 object_id|  
-|**minor_id**|**通り**|All_columns に対応する、分類が存在する列の ID を表します。 column_id|   
+|**major_id**|**int**|All_objects に対応する、分類された列を含むテーブルの ID を表します。 object_id|  
+|**minor_id**|**int**|All_columns に対応する、分類が存在する列の ID を表します。 column_id|   
 |**タイトル**|**sysname**|秘密度の分類に割り当てられたラベル (人間が判読可能)|  
 |**label_id**|**sysname**|ラベルに関連付けられた ID。 Azure Information Protection (AIP) などの情報保護システムで使用できます。|  
 |**information_type**|**sysname**|秘密度の分類に割り当てられた情報の種類 (人間が判読可能)|  
 |**information_type_id**|**sysname**|情報の種類に関連付けられた ID。 Azure Information Protection (AIP) などの情報保護システムで使用できます。|  
-|**ランク**|**通り**|ランクの数値。 <br><br>NONE の場合は0<br>10 (低)<br>中20<br>高の場合は30<br>40 (重大)| 
+|**ランク**|**int**|ランクの数値。 <br><br>NONE の場合は0<br>10 (低)<br>中20<br>高の場合は30<br>40 (重大)| 
 |**rank_desc**|**sysname**|ランクのテキスト表現:  <br><br>なし、低、中、高、重大|  
 | &nbsp; | &nbsp; | &nbsp; |
 
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
 
 - このビューでは、データベースの分類状態を表示できます。 データベースの分類を管理したり、レポートを生成したりするために使用できます。
 - 現在、データベース列の分類のみがサポートされています。

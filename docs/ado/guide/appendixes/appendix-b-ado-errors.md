@@ -1,5 +1,5 @@
 ---
-title: 付録 B:ADO エラー |Microsoft Docs
+title: '付録 B: ADO のエラー |Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,14 +13,14 @@ ms.assetid: 0ce201c3-6657-4c87-ae81-0d7dc5b5a431
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 52a1968250f58102089b353e35e93689db653240
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926957"
 ---
-# <a name="appendix-b-ado-error-codes"></a>付録 B:ADO エラー コード
-特定のエラー メッセージの詳細については、次のトピックを参照してください。
+# <a name="appendix-b-ado-error-codes"></a>付録 B: ADO エラーコード
+特定のエラーメッセージの詳細については、次のトピックを参照してください。
 
 -   [ADO エラー コード](../../../ado/guide/appendixes/ado-error-codes.md)
 
@@ -30,5 +30,5 @@ ms.locfileid: "67926957"
 
 -   [インターネット インフォメーション サービスのエラー コード](../../../ado/guide/appendixes/internet-information-services-error-codes.md)
 
-## <a name="see-also"></a>関連項目
- [ADO の API リファレンス](../../../ado/reference/ado-api/ado-api-reference.md) [ADO コレクション](../../../ado/reference/ado-api/ado-collections.md) [ADO の動的プロパティ](../../../ado/reference/ado-api/ado-dynamic-properties.md) [ADO の列挙定数](../../../ado/reference/ado-api/ado-enumerated-constants.md) [ADO イベント](../../../ado/reference/ado-api/ado-events.md) [ADO メソッド](../../../ado/reference/ado-api/ado-methods.md) [ADO オブジェクト モデル](../../../ado/reference/ado-api/ado-object-model.md) [ADO オブジェクトとインターフェイス](../../../ado/reference/ado-api/ado-objects-and-interfaces.md) [ADO のプロパティ](../../../ado/reference/ado-api/ado-properties.md)
+## <a name="see-also"></a>参照
+ [ADO API リファレンス](../../../ado/reference/ado-api/ado-api-reference.md) [Ado コレクション](../../../ado/reference/ado-api/ado-collections.md) [Ado 動的プロパティ](../../../ado/reference/ado-api/ado-dynamic-properties.md) [ado 列挙定数](../../../ado/reference/ado-api/ado-enumerated-constants.md) [ado イベント](../../../ado/reference/ado-api/ado-events.md) [ado メソッド](../../../ado/reference/ado-api/ado-methods.md)ado[オブジェクトモデル](../../../ado/reference/ado-api/ado-object-model.md) [ado オブジェクトとインターフェイス](../../../ado/reference/ado-api/ado-objects-and-interfaces.md) [ado プロパティ](../../../ado/reference/ado-api/ado-properties.md)

@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 8ea941e45f5125beed0820c5d5242b0f86073f76
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401176"
 ---
 # <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>Parallel Data Warehouse 用の dwloader コマンドラインローダー
@@ -222,7 +222,7 @@ ASCII ファイルの場合、区切り記号を連続して配置すること�
 **-t** *field_delimiter*  
 行の各フィールド (列) の区切り記号。 フィールド区切り記号は、これらの ASCII エスケープ文字または ASCII 16 進値の1つ以上です。  
   
-|名前|Escape Character|16進文字|  
+|Name|Escape Character|16進文字|  
 |--------|--------------------|-----------------|  
 |Tab|\t|0x09|  
 |復帰 (CR)|\r|0x0d|  
@@ -490,7 +490,7 @@ CU 7.4 更新プログラムで使用可能で、読み込むことができる�
 ## <a name="return-code-values"></a>リターン コードの値  
 0 (成功) またはその他の整数値 (失敗)  
   
-コマンドウィンドウまたはバッチファイルで、を`errorlevel`使用してリターンコードを表示します。 例:  
+コマンドウィンドウまたはバッチファイルで、を`errorlevel`使用してリターンコードを表示します。 次に例を示します。  
   
 ```  
 dwloader  
@@ -552,7 +552,7 @@ For the maximum number of loads per appliance, see [Minimum and Maximum Values](
   
 追加モードでは、2つのフェーズでデータが読み込まれます。 フェーズ1では、ソースファイルからステージングテーブルにデータを同時に読み込みます (断片化が発生する可能性があります)。 フェーズ2では、ステージングテーブルから最終テーブルにデータを読み込みます。 2番目のフェーズでは、 **INSERT INTO...WITH (TABLOCK) 操作を選択し**ます。 次の表は、最後のテーブルのロック動作と、append モードを使用した場合のログ記録の動作を示しています。  
   
-|テーブルの種類|マルチトランザクション<br />モード (-m)|テーブルが空です|サポートされている同時実行|ログの記録|  
+|テーブルの種類|マルチトランザクション<br />モード (-m)|テーブルが空です|サポートされている同時実行|ログ記録|  
 |--------------|-----------------------------------|------------------|-------------------------|-----------|  
 |ヒープ|はい|はい|はい|最小限|  
 |ヒープ|はい|いいえ|はい|最小限|  

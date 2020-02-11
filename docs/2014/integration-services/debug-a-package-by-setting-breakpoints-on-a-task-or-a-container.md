@@ -1,5 +1,5 @@
 ---
-title: タスクまたはコンテナーにブレークポイントを設定してパッケージをデバッグ |Microsoft Docs
+title: タスクまたはコンテナーにブレークポイントを設定してパッケージをデバッグする |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 907caaa37c429dd2f788d0123f7f8ee0bbf8a27a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059659"
 ---
 # <a name="debug-a-package-by-setting-breakpoints-on-a-task-or-a-container"></a>タスクまたはコンテナーにブレークポイントを設定してパッケージをデバッグする
@@ -26,7 +26,8 @@ ms.locfileid: "66059659"
   
 ### <a name="to-set-breakpoints-in-a-package-a-task-or-a-container"></a>パッケージ、タスク、またはコンテナーにブレークポイントを設定するには  
   
-1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で、目的のパッケージが含まれている [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
+1.  
+  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で、目的のパッケージが含まれている [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
   
 2.  ブレークポイントを設定するパッケージをダブルクリックします。  
   
@@ -38,16 +39,17 @@ ms.locfileid: "66059659"
   
     -   イベント ハンドラーにブレークポイントを設定するには、 **[イベント ハンドラー]** タブをクリックし、タスク、For ループ コンテナー、Foreach ループ コンテナー、またはシーケンス コンテナーを右クリックし、 **[ブレークポイントの編集]** をクリックします。  
   
-4.  **[ブレークポイントの設定 - \<コンテナー名>]** ダイアログ ボックスで、有効にするブレークポイントを選択します。  
+4.  
+  **[ブレークポイントの設定 - \<コンテナー名>]** ダイアログ ボックスで、有効にするブレークポイントを選択します。  
   
 5.  必要に応じて、各ブレークポイントのヒット カウントの種類とヒット カウント数を変更します。  
   
 6.  パッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [パッケージ開発のトラブルシューティング ツール](troubleshooting/troubleshooting-tools-for-package-development.md)   
- [スクリプト タスクとスクリプト コンポーネントにブレークポイントを設定してスクリプトをデバッグする](data-flow/transformations/script-component.md)   
- [スクリプト タスクのコーディングおよびデバッグ](control-flow/script-task.md)   
+ [パッケージ開発のトラブルシューティングツール](troubleshooting/troubleshooting-tools-for-package-development.md)   
+ [スクリプトタスクとスクリプトコンポーネントにブレークポイントを設定してスクリプトをデバッグする](data-flow/transformations/script-component.md)   
+ [スクリプトタスクのコーディングおよびデバッグ](control-flow/script-task.md)   
  [スクリプト コンポーネントのコーディングおよびデバッグ](extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)  
   
   

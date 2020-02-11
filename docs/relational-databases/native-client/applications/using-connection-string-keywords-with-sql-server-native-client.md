@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 33612f7e4303ad9d02e4c6d3b7980e750e3a594b
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75258739"
 ---
 # <a name="using-connection-string-keywords-with-sql-server-native-client"></a>SQL Server Native Client での接続文字列キーワードの使用
@@ -58,7 +58,7 @@ ms.locfileid: "75258739"
   
  次の表に、ODBC 接続文字列と共に使用できるキーワードを示します。  
   
-|キーワード|説明|  
+|Keyword|[説明]|  
 |-------------|-----------------|  
 |**引き**|"Address" のシノニム。|  
 |**番地**|
@@ -66,10 +66,10 @@ ms.locfileid: "75258739"
   **Address** キーワードの完全な構文は次のとおりです。<br /><br /> [_プロトコル_**:**]*アドレス*[**、**_ポート &#124; \pipe\pipename_]<br /><br /> *プロトコル*には、 **tcp** (tcp/ip)、 **lpc** (共有メモリ)、または**np** (名前付きパイプ) を指定できます。 プロトコルの詳細については、「 [Configure Client プロトコル](../../../database-engine/configure-windows/configure-client-protocols.md)」を参照してください。<br /><br /> *Protocol*も**Network**キーワードも指定されてい[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ない場合、Native Client では Configuration Manager で[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]指定されたプロトコル順が使用されます。<br /><br /> *port*は、指定されたサーバー上の接続先のポートです。 既定では、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] はポート 1433 を使用します。|  
 |**AnsiNPW**|"yes" の場合、ANSI で定められた動作に従って NULL の比較、文字データの埋め込み、警告、および NULL 連結が処理されます。 "no" の場合、ANSI で定められた動作が公開されません。 ANSI NPW の動作の詳細については、「 [ISO オプションの効果](../../../relational-databases/native-client-odbc-queries/executing-statements/effects-of-iso-options.md)」を参照してください。|  
 |**アプリケーション**|[SQLDriverConnect](../../../relational-databases/native-client-odbc-api/sqldriverconnect.md)を呼び出すアプリケーションの名前 (省略可能)。 この値が指定されている場合、この値は**program_name** **マスター**列に格納され、 [sp_who](../../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)と[APP_NAME](../../../t-sql/functions/app-name-transact-sql.md)関数によって返されます。|  
-|**ApplicationIntent**|アプリケーションがサーバーに接続するときのワークロードのタイプを宣言します。 有効値は、**ReadOnly** と **ReadWrite** です。 既定値は**ReadWrite**です。  例:<br /><br /> `ApplicationIntent=ReadOnly`<br /><br /> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client によるの[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]サポートの詳細については、「[高可用性、ディザスターリカバリーのサポートの SQL Server Native Client](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)」を参照してください。|  
+|**ApplicationIntent**|アプリケーションがサーバーに接続するときのワークロードのタイプを宣言します。 有効値は、**ReadOnly** と **ReadWrite** です。 既定値は**ReadWrite**です。  次に例を示します。<br /><br /> `ApplicationIntent=ReadOnly`<br /><br /> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client によるの[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]サポートの詳細については、「[高可用性、ディザスターリカバリーのサポートの SQL Server Native Client](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)」を参照してください。|  
 |**AttachDBFileName**|アタッチできるデータベースのプライマリ ファイルの名前。 この名前には完全なパス名を指定します。また C 文字列変数を使用する場合は、\ 文字をエスケープしてください。<br /><br /> `AttachDBFileName=c:\\MyFolder\\MyDB.mdf`<br /><br /> このデータベースがアタッチされ、接続の既定のデータベースとして使用されます。 **AttachDBFileName**を使用するには、 [SQLDriverConnect](../../../relational-databases/native-client-odbc-api/sqldriverconnect.md)データベースパラメーターまたは SQL_COPT_CURRENT_CATALOG 接続属性でもデータベース名を指定する必要があります。 データベースが以前にアタッチされていた場合、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] により再アタッチされることはありません (アタッチされたデータベースがその接続の既定のデータベースとして使用されます)。|  
 |**AutoTranslate**|"yes" の場合、クライアントとサーバーの間で送受信される ANSI 文字列は、いったん Unicode に変換されます。これは、クライアントとサーバーのコード ページ間で拡張文字を照合するときに発生する問題を最小限に抑えるためです。<br /><br /> クライアント SQL_C_CHAR [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **CHAR**、 **varchar**、または**text**変数、パラメーター、または列に送信されるデータは、クライアントの ANSI コードページ (acp) を使用して文字から unicode に変換され、その後、サーバーの acp を使用して unicode から文字に変換されます。<br /><br /> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]クライアント SQL_C_CHAR 変数に送信される**char**、 **varchar**、または**text**データは、サーバーの acp を使用して文字から unicode に変換され、その後、クライアントの acp を使用して unicode から文字に変換されます。<br /><br /> この変換は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーによってクライアントで行われます。 また、サーバーで使用しているものと同じ ACP (ANSI コード ページ) がクライアントでも使用可能になっている必要があります。<br /><br /> 次の設定は、送受信時の変換に影響しません。<br /><br /> \*サーバー上の**char**型、 **varchar**型、または**text**型に送信される、Unicode SQL_C_WCHAR クライアントデータ。<br /><br /> クライアント上の Unicode SQL_C_WCHAR 変数に送信される**char**、 **varchar**、または**text** server のデータ &#42; ます。<br /><br /> \*ANSI SQL_C_CHAR サーバー上の Unicode **nchar**、 **nvarchar**、または**ntext**に送信されるクライアントデータ。<br /><br /> \*Unicode **nchar**、 **nvarchar**、または**ntext**サーバーのデータが、クライアントの ANSI SQL_C_CHAR 変数に送信されます。<br /><br /> "no" の場合、文字の変換は行われません。<br /><br /> Native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] client ODBC ドライバーは、サーバー上の**CHAR**、 **varchar**、または**text**変数、パラメーター、または列に送信される、クライアントの ANSI 文字 SQL_C_CHAR データを変換しません。 サーバーからクライアントの SQL_C_CHAR 変数に送信される**char**、 **varchar**、または**text**型のデータに対しては、変換は実行されません。<br /><br /> クライアントと [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] で使用する ACP が異なる場合、拡張文字の解釈が正しく行われない場合があります。|  
-|**データベース**|接続に使用する既定の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースの名前。 **データベース**が指定されていない場合は、ログイン用に定義された既定のデータベースが使用されます。 ODBC データ ソースの既定のデータベースは、ログインに定義されている既定のデータベースをオーバーライドします。 **AttachDBFileName**も指定しない限り、データベースは既存のデータベースである必要があります。 **AttachDBFileName**も指定した場合、参照先のプライマリファイルがアタッチされ、**データベース**によって指定されたデータベース名が割り当てられます。|  
+|**[データベース]**|接続に使用する既定の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースの名前。 **データベース**が指定されていない場合は、ログイン用に定義された既定のデータベースが使用されます。 ODBC データ ソースの既定のデータベースは、ログインに定義されている既定のデータベースをオーバーライドします。 **AttachDBFileName**も指定しない限り、データベースは既存のデータベースである必要があります。 **AttachDBFileName**も指定した場合、参照先のプライマリファイルがアタッチされ、**データベース**によって指定されたデータベース名が割り当てられます。|  
 |**Driver**|[Sqldrivers](../../../relational-databases/native-client-odbc-api/sqldrivers.md)によって返されるドライバーの名前。 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーに対するこのキーワードの値は "{SQL Server Native Client 11.0}" です。 **Driver**が指定され、 **drivercompletion**が SQL_DRIVER_NOPROMPT に設定されている場合は、 **Server**キーワードが必要です。<br /><br /> ドライバー名の詳細については、「 [SQL Server Native Client ヘッダーファイルとライブラリファイルの使用](../../../relational-databases/native-client/applications/using-the-sql-server-native-client-header-and-library-files.md)」を参照してください。|  
 |**ソース**|既存の ODBC ユーザー データ ソースまたはシステム データ ソースの名前。 このキーワードは、**サーバー**、**ネットワーク**、および**アドレス**キーワードに指定されている可能性のあるすべての値を上書きします。|  
@@ -79,10 +79,10 @@ ms.locfileid: "75258739"
 |**Failover_Partner**|プライマリ サーバーに接続できない場合に使用するフェールオーバー パートナー サーバーの名前。|  
 |**FailoverPartnerSPN**|フェールオーバー パートナーの SPN。 既定値は空の文字列です。 空の文字列の場合、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client はドライバーが生成した SPN を既定値として使用します。|  
 |**FileDSN**|既存の ODBC ファイル データ ソースの名前。|  
-|**言語**|
+|**Language**|
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 言語の名前 (省略可)。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]では、複数の言語のメッセージを**sysmessages**に格納できます。 複数の言語[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]でに接続する場合、**言語**では、接続に使用するメッセージのセットを指定します。|  
 |**MARS_Connection**|その接続で MARS (複数のアクティブな結果セット) を有効または無効にします。 認識できる値は "yes" と "no" です。 既定値は "no" です。|  
-|**MultiSubnetFailover**|可用性グループまたは[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]フェールオーバークラスターインスタンスの可用性グループリスナーに接続する場合は、常に**multiSubnetFailover = Yes**を指定します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **multiSubnetFailover = Yes**を[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]指定すると、Native Client は、(現在) アクティブなサーバーを迅速に検出して接続するように構成されます。 使用可能な値は**Yes**と**No**です。 既定値は **[いいえ]** です。 例:<br /><br /> `MultiSubnetFailover=Yes`<br /><br /> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client によるの[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]サポートの詳細については、「[高可用性、ディザスターリカバリーのサポートの SQL Server Native Client](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)」を参照してください。|  
+|**MultiSubnetFailover**|可用性グループまたは[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]フェールオーバークラスターインスタンスの可用性グループリスナーに接続する場合は、常に**multiSubnetFailover = Yes**を指定します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **multiSubnetFailover = Yes**を[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]指定すると、Native Client は、(現在) アクティブなサーバーを迅速に検出して接続するように構成されます。 可能な値は、 **[はい]** と **[いいえ]** です。 既定値は **[いいえ]** です。 次に例を示します。<br /><br /> `MultiSubnetFailover=Yes`<br /><br /> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client によるの[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]サポートの詳細については、「[高可用性、ディザスターリカバリーのサポートの SQL Server Native Client](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)」を参照してください。|  
 |**Net**|"Network" のシノニム。|  
 |**ネットワーク**|有効な値は、 **dbnmpntw** (名前付きパイプ) と**dbmssocn** (tcp/ip) です。<br /><br /> **Network**キーワードの値と**Server**キーワードのプロトコルプレフィックスの両方を指定すると、エラーになります。|  
 |**PWD**|UID パラメーターで指定されている [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログイン アカウントのパスワード。 **** ログインに NULL パスワードが含まれている場合、または Windows 認証 (`Trusted_Connection = yes`) を使用している場合は、PWD を指定する必要はありません。|  
@@ -93,7 +93,7 @@ ms.locfileid: "75258739"
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は従来の [!INCLUDE[tsql](../../../includes/tsql-md.md)] 規則に従って SQL ステートメントの引用符を処理します。 詳細については、「 [ISO オプションの効果](../../../relational-databases/native-client-odbc-queries/executing-statements/effects-of-iso-options.md)」を参照してください。|  
 |**地域**|"yes" の場合、通貨、日付、および時刻データが文字データに変換されるときに、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーではクライアントの設定が使用されます。 変換は一方向にのみ行われます。INSERT ステートメントや UPDATE ステートメントのパラメーターなどで日付文字列または通貨の値が ODBC 標準以外の形式で指定されている場合、ドライバーでは、これらの値は認識されません。 "no" の場合、文字データに変換される通貨、日付、および時刻データを表現するために ODBC 標準の文字列が使用されます。|  
 |**SaveFile**|接続が成功した場合に、現在の接続の属性を保存する ODBC データ ソース ファイルの名前。|  
-|**Server**|
+|**サーバー**|
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスの名前。 ネットワーク上のサーバーの名前、IP アドレス、または [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 構成マネージャーの別名を指定する必要があります。<br /><br /> **Address**キーワードは**Server**キーワードよりも優先されます。<br /><br /> 次のいずれかを指定することで、ローカル サーバー上の既定のインスタンスに接続できます。<br /><br /> **サーバー =;**<br /><br /> **サーバー =.;**<br /><br /> **Server = (local);**<br /><br /> **Server = (local);**<br /><br /> **Server = (localhost);**<br /><br /> **Server = (localdb)\\ ** _instancename_ **;**<br /><br /> LocalDB のサポートの詳細については、「 [SQL Server Native Client サポート localdb](../../../relational-databases/native-client/features/sql-server-native-client-support-for-localdb.md)」を参照してください。<br /><br /> の[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]名前付きインスタンスを指定するに**\\**は、 _InstanceName_を追加します。<br /><br /> サーバーを指定しなかった場合は、ローカル コンピューター上にある既定のインスタンスに接続されます。<br /><br /> IP アドレスを指定する場合は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 構成マネージャーで TCP/IP または名前付きパイプ プロトコルが有効になっていることを確認します。<br /><br /> 
   **Server** キーワードの完全な構文は次のとおりです。<br /><br /> **Server =**[_protocol_**:**]*サーバー*[**,**_port_]<br /><br /> *プロトコル*には、 **tcp** (tcp/ip)、 **lpc** (共有メモリ)、または**np** (名前付きパイプ) を指定できます。<br /><br /> 名前付きパイプを指定する例を次に示します。<br /><br /> `np:\\.\pipe\MSSQL$MYINST01\sql\query`<br /><br /> この行では、名前付きパイプのプロトコル、ローカル コンピューター上の名前付きパイプ (`\\.\pipe`)、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスの名前 (`MSSQL$MYINST01`)、および名前付きパイプの既定の名前 (`sql/query`) を指定しています。<br /><br /> *Protocol*も**Network**キーワードも指定されていない[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]場合、Native Client では Configuration Manager で[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]指定されたプロトコル順が使用されます。<br /><br /> *port*は、指定されたサーバー上の接続先のポートです。 既定では、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] はポート 1433 を使用します。<br /><br /> Native Client を使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]する場合、ODBC 接続文字列内の**サーバー**に渡される値の先頭では、スペースは無視されます。|  
 |**ServerSPN**|サーバーの SPN。 既定値は空の文字列です。 空の文字列の場合、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client はドライバーが生成した SPN を既定値として使用します。|  
@@ -157,7 +157,7 @@ ms.locfileid: "75258739"
   
  次の表に、DBPROP_INIT_PROVIDERSTRING と共に使用できるキーワードを示します。  
   
-|キーワード|初期化プロパティ|説明|  
+|Keyword|初期化プロパティ|[説明]|  
 |-------------|-----------------------------|-----------------|  
 |**引き**|SSPROP_INIT_NETWORKADDRESS|"Address" のシノニム。|  
 |**番地**|SSPROP_INIT_NETWORKADDRESS|組織内の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスのネットワーク アドレス。<br /><br /> 有効なアドレス構文の詳細については、このトピックの「 **address** ODBC キーワード」の説明を参照してください。|  
@@ -167,12 +167,12 @@ ms.locfileid: "75258739"
   **AttachDBFileName** を使用するには、プロバイダー文字列の Database キーワードでデータベース名を指定する必要もあります。 データベースが以前にアタッチされていた場合、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] により再アタッチされることはありません (アタッチされたデータベースがその接続の既定のデータベースとして使用されます)。|  
 |**自動翻訳**|SSPROP_INIT_AUTOTRANSLATE|"AutoTranslate" のシノニム。|  
 |**AutoTranslate**|SSPROP_INIT_AUTOTRANSLATE|OEM/ANSI 文字の変換を構成します。 認識できる値は "yes" と "no" です。|  
-|**データベース**|DBPROP_INIT_CATALOG|データベース名です。|  
+|**[データベース]**|DBPROP_INIT_CATALOG|データベース名です。|  
 |**DataTypeCompatibility**|SSPROP_INIT_DATATYPECOMPATIBILITY|使用するデータ型の処理モードを指定します。 認識できる値は、プロバイダー データ型を示す "0" および SQL Server 2000 データ型を示す "80" です。|  
 |**暗号化**|SSPROP_INIT_ENCRYPT|データをネットワークに送信する前に暗号化するかどうかを指定します。 有効値は、"yes" および "no" です。 既定値は "no" です。|  
 |**FailoverPartner**|SSPROP_INIT_FAILOVERPARTNER|データベース ミラーリングに使用するフェールオーバー サーバーの名前。|  
 |**FailoverPartnerSPN**|SSPROP_INIT_FAILOVERPARTNERSPN|フェールオーバー パートナーの SPN。 既定値は空の文字列です。 空の文字列の場合、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client はプロバイダーが生成した SPN を既定値として使用します。|  
-|**言語**|SSPROPT_INIT_CURRENTLANGUAGE|
+|**Language**|SSPROPT_INIT_CURRENTLANGUAGE|
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 言語。|  
 |**MarsConn**|SSPROP_INIT_MARSCONNECTION|その接続で MARS (複数のアクティブな結果セット) を有効または無効にします ([!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以降のサーバーの場合)。 有効値は、"yes" および "no" です。 既定値は "no" です。|  
 |**Net**|SSPROP_INIT_NETWORKLIBRARY|"Network" のシノニム。|  
@@ -182,7 +182,7 @@ ms.locfileid: "75258739"
 |**PersistSensitive**|DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO|文字列 "yes" と "no" を値として受け取ります。 "no" の場合、データ ソース オブジェクトには機密の認証情報を保存できません。|  
 |**PWD**|DBPROP_AUTH_PASSWORD|
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のログイン パスワード。|  
-|**Server**|DBPROP_INIT_DATASOURCE|組織内の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスの名前。<br /><br /> 指定されなかった場合は、ローカル コンピューター上にある既定のインスタンスに接続します。<br /><br /> 有効なアドレス構文の詳細については、このトピックの「 **Server** ODBC キーワードの説明」を参照してください。|  
+|**サーバー**|DBPROP_INIT_DATASOURCE|組織内の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスの名前。<br /><br /> 指定されなかった場合は、ローカル コンピューター上にある既定のインスタンスに接続します。<br /><br /> 有効なアドレス構文の詳細については、このトピックの「 **Server** ODBC キーワードの説明」を参照してください。|  
 |**ServerSPN**|SSPROP_INIT_SERVERSPN|サーバーの SPN。 既定値は空の文字列です。 空の文字列の場合、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client はプロバイダーが生成した SPN を既定値として使用します。|  
 |**タイムアウト**|DBPROP_INIT_TIMEOUT|データ ソースの初期化が完了するのを待機する秒数。|  
 |**Trusted_Connection**|DBPROP_AUTH_INTEGRATED|"yes" の場合、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーでログインを検証するときに Windows 認証モードが使用されます。 それ以外の場合は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーでログインを検証するときに [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のユーザー名とパスワードが使用され、UID キーワードと PWD キーワードの指定が必要になります。|  
@@ -218,7 +218,7 @@ ms.locfileid: "75258739"
   
  次の表では、**IDataInitialize::GetDataSource** と共に使用できるキーワードについて説明します。  
   
-|キーワード|初期化プロパティ|説明|  
+|Keyword|初期化プロパティ|[説明]|  
 |-------------|-----------------------------|-----------------|  
 |**アプリケーション名**|SSPROP_INIT_APPNAME|アプリケーションを識別する文字列。|  
 |**アプリケーションの目的**|SSPROP_INIT_APPLICATIONINTENT|アプリケーションがサーバーに接続するときのワークロードのタイプを宣言します。 有効値は、**ReadOnly** と **ReadWrite** です。<br /><br /> 既定値は**ReadWrite**です。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client によるの[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]サポートの詳細については、「[高可用性、ディザスターリカバリーのサポートの SQL Server Native Client](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)」を参照してください。|  
@@ -227,7 +227,7 @@ ms.locfileid: "75258739"
 |**接続のタイムアウト**|DBPROP_INIT_TIMEOUT|データ ソースの初期化が完了するのを待機する秒数。|  
 |**[現在の言語]**|SSPROPT_INIT_CURRENTLANGUAGE|
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 言語の名前。|  
-|**データソース**|DBPROP_INIT_DATASOURCE|組織内の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスの名前。<br /><br /> 指定されなかった場合は、ローカル コンピューター上にある既定のインスタンスに接続します。<br /><br /> 有効なアドレス構文の詳細については、このトピックで後述する「**サーバー** ODBC キーワードの説明」を参照してください。|  
+|**Data Source**|DBPROP_INIT_DATASOURCE|組織内の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスの名前。<br /><br /> 指定されなかった場合は、ローカル コンピューター上にある既定のインスタンスに接続します。<br /><br /> 有効なアドレス構文の詳細については、このトピックで後述する「**サーバー** ODBC キーワードの説明」を参照してください。|  
 |**DataTypeCompatibility**|SSPROP_INIT_DATATYPECOMPATIBILITY|使用するデータ型の処理モードを指定します。 認識できる値は、プロバイダー データ型を示す "0" および [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] データ型を示す "80" です。|  
 |**フェールオーバーパートナー**|SSPROP_INIT_FAILOVERPARTNER|データベース ミラーリングに使用するフェールオーバー サーバーの名前。|  
 |**フェールオーバー パートナー SPN**|SSPROP_INIT_FAILOVERPARTNERSPN|フェールオーバー パートナーの SPN。 既定値は空の文字列です。 空の文字列の場合、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client はプロバイダーが生成した SPN を既定値として使用します。|  
@@ -238,15 +238,15 @@ ms.locfileid: "75258739"
 |**ネットワークアドレス**|SSPROP_INIT_NETWORKADDRESS|組織内の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスのネットワーク アドレス。<br /><br /> 有効なアドレス構文の詳細については、このトピックの「 **address** ODBC キーワード」の説明を参照してください。|  
 |**ネットワークライブラリ**|SSPROP_INIT_NETWORKLIBRARY|組織内の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスへの接続を確立するために使用するネットワーク ライブラリ。|  
 |**パケットサイズ**|SSPROP_INIT_PACKETSIZE|ネットワーク パケットのサイズ。 既定値は 4096 です。|  
-|**Password**|DBPROP_AUTH_PASSWORD|
+|**パスワード**|DBPROP_AUTH_PASSWORD|
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のログイン パスワード。|  
 |**セキュリティ情報を保持する**|DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO|文字列 "true" と "false" を値として受け取ります。 "false" の場合、データ ソース オブジェクトには機密の認証情報を保存できません|  
-|**Provider**||
+|**プロバイダー**||
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client の場合は "SQLNCLI11"。|  
 |**サーバー SPN**|SSPROP_INIT_SERVERSPN|サーバーの SPN。 既定値は空の文字列です。 空の文字列の場合、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client はプロバイダーが生成した SPN を既定値として使用します。|  
 |**サーバー証明書を信頼する**|SSPROP_INIT_TRUST_SERVER_CERTIFICATE|文字列 "true" と "false" を値として受け取ります。 既定値は "false" です。これはサーバー証明書が検証されることを示します。|  
 |**データの暗号化を使用する**|SSPROP_INIT_ENCRYPT|データをネットワークに送信する前に暗号化するかどうかを指定します。 指定できる値は "true" と "false" です。 既定値は "false" です。|  
-|**ユーザー ID**|DBPROP_AUTH_USERID|
+|**User ID**|DBPROP_AUTH_USERID|
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のログイン名。|  
 |**[ワークステーション ID]**|SSPROP_INIT_WSID|ワークステーション識別子。|  
   
@@ -273,7 +273,7 @@ ms.locfileid: "75258739"
   
  次の表に、ADO 接続文字列と共に使用できるキーワードを示します。  
   
-|キーワード|初期化プロパティ|説明|  
+|Keyword|初期化プロパティ|[説明]|  
 |-------------|-----------------------------|-----------------|  
 |**アプリケーションの目的**|SSPROP_INIT_APPLICATIONINTENT|アプリケーションがサーバーに接続するときのワークロードのタイプを宣言します。 有効値は、**ReadOnly** と **ReadWrite** です。<br /><br /> 既定値は**ReadWrite**です。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client によるの[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]サポートの詳細については、「[高可用性、ディザスターリカバリーのサポートの SQL Server Native Client](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)」を参照してください。|  
 |**アプリケーション名**|SSPROP_INIT_APPNAME|アプリケーションを識別する文字列。|  
@@ -282,7 +282,7 @@ ms.locfileid: "75258739"
 |**接続のタイムアウト**|DBPROP_INIT_TIMEOUT|データ ソースの初期化が完了するのを待機する秒数。|  
 |**[現在の言語]**|SSPROPT_INIT_CURRENTLANGUAGE|
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 言語の名前。|  
-|**データソース**|DBPROP_INIT_DATASOURCE|組織内の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスの名前。<br /><br /> 指定されなかった場合は、ローカル コンピューター上にある既定のインスタンスに接続します。<br /><br /> 有効なアドレス構文の詳細については、このトピックの「 **Server** ODBC キーワードの説明」を参照してください。|  
+|**Data Source**|DBPROP_INIT_DATASOURCE|組織内の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスの名前。<br /><br /> 指定されなかった場合は、ローカル コンピューター上にある既定のインスタンスに接続します。<br /><br /> 有効なアドレス構文の詳細については、このトピックの「 **Server** ODBC キーワードの説明」を参照してください。|  
 |**DataTypeCompatibility**|SSPROP_INIT_DATATYPECOMPATIBILITY|使用するデータ型処理モードを指定します。 認識できる値は、プロバイダー データ型を示す "0" および SQL Server 2000 データ型を示す "80" です。|  
 |**フェールオーバーパートナー**|SSPROP_INIT_FAILOVERPARTNER|データベース ミラーリングに使用するフェールオーバー サーバーの名前。|  
 |**フェールオーバー パートナー SPN**|SSPROP_INIT_FAILOVERPARTNERSPN|フェールオーバー パートナーの SPN。 既定値は空の文字列です。 空の文字列の場合、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client はプロバイダーが生成した SPN を既定値として使用します。|  
@@ -293,21 +293,21 @@ ms.locfileid: "75258739"
 |**ネットワークアドレス**|SSPROP_INIT_NETWORKADDRESS|組織内の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスのネットワーク アドレス。<br /><br /> 有効なアドレス構文の詳細については、このトピックの「 **address** ODBC キーワードの説明」を参照してください。|  
 |**ネットワークライブラリ**|SSPROP_INIT_NETWORKLIBRARY|組織内の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスへの接続を確立するために使用するネットワーク ライブラリ。|  
 |**パケットサイズ**|SSPROP_INIT_PACKETSIZE|ネットワーク パケットのサイズ。 既定値は 4096 です。|  
-|**Password**|DBPROP_AUTH_PASSWORD|
+|**パスワード**|DBPROP_AUTH_PASSWORD|
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のログイン パスワード。|  
 |**セキュリティ情報を保持する**|DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO|文字列 "true" と "false" を値として受け取ります。 "false" の場合、データ ソース オブジェクトには機密の認証情報を保存できません。|  
-|**Provider**||
+|**プロバイダー**||
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client の場合は "SQLNCLI11"。|  
 |**サーバー SPN**|SSPROP_INIT_SERVERSPN|サーバーの SPN。 既定値は空の文字列です。 空の文字列の場合、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client はプロバイダーが生成した SPN を既定値として使用します。|  
 |**サーバー証明書を信頼する**|SSPROP_INIT_TRUST_SERVER_CERTIFICATE|文字列 "true" と "false" を値として受け取ります。 既定値は "false" です。これはサーバー証明書が検証されることを示します。|  
 |**データの暗号化を使用する**|SSPROP_INIT_ENCRYPT|データをネットワークに送信する前に暗号化するかどうかを指定します。 指定できる値は "true" と "false" です。 既定値は "false" です。|  
-|**ユーザー ID**|DBPROP_AUTH_USERID|
+|**User ID**|DBPROP_AUTH_USERID|
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のログイン名。|  
 |**[ワークステーション ID]**|SSPROP_INIT_WSID|ワークステーション識別子。|  
   
  **メモ**接続文字列では、"Old Password" プロパティによって SSPROP_AUTH_OLD_PASSWORD が設定されます。これは、プロバイダー文字列プロパティでは使用できない、現在の (有効期限切れの) パスワードです。  
   
 ## <a name="see-also"></a>参照  
- [SQL Server Native Client を使用したアプリケーションの構築](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
+ [SQL Server Native Client を使用したアプリケーションのビルド](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
   
   

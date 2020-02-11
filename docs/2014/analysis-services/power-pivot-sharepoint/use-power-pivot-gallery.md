@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 880baacd3cf629ee28f55a399fcb02019e836d44
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75229225"
 ---
 # <a name="use-powerpivot-gallery"></a>PowerPivot ギャラリーの使用
@@ -44,7 +44,7 @@ ms.locfileid: "75229225"
   
  [前提条件](#prereq)  
   
-##  <a name="prereq"></a>応募  
+##  <a name="prereq"></a> 前提条件  
   
 > [!NOTE]  
 >  Power Pivot ギャラリーには、Microsoft Silverlight が必要です。  Microsoft Edge ブラウザーでは、Silverlight がサポートされていません。   
@@ -57,7 +57,7 @@ ms.locfileid: "75229225"
 ##  <a name="icons"></a>PowerPivot ギャラリーのアイコン  
  アイコンは、コンテンツを使用できるかどうか、およびコンテンツの状態を視覚的に示すインジケーターです。  
   
-|アイコン|説明|  
+|アイコン|[説明]|  
 |----------|-----------------|  
 |![GMNI_PowerPivotGalleryIcon_Hourglass](../media/gmni-powerpivotgalleryicon-hourglass.gif "GMNI_PowerPivotGalleryIcon_Hourglass")|砂時計アイコンは、ドキュメントの各ページのサムネイル画像が生成されているときに表示されます。 ページを更新して、更新された画像を表示します。|  
 |![GMNI_PowerPivotGalleryIcon_Truncated](../media/gmni-powerpivotgalleryicon-truncated.gif "GMNI_PowerPivotGalleryIcon_Truncated")|ページ アイコンは、ブックまたはレポートに含まれるページ数が PowerPivot ギャラリーで表示できるページ数を超えているときに表示されます。 すべてのページを表示するには、クライアント アプリケーションを使用する必要があります。|  
@@ -155,8 +155,7 @@ ms.locfileid: "75229225"
   
 3.  右側にある下矢印をクリックし、 **[プロパティの編集]** を選択します。  
   
-4.  
-  **[保存]** をクリックします。 ドキュメントを保存すると、スナップショット サービスにより強制的にプレビュー画像が再生成されます。  
+4.  **[保存]** をクリックします。 ドキュメントを保存すると、スナップショット サービスにより強制的にプレビュー画像が再生成されます。  
   
 ##  <a name="bkmk_known_issues"></a>既知の問題  
   

@@ -13,16 +13,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 264eb3c9b16c5eb12a578090d55e4f64884177c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62649697"
 ---
 # <a name="external-tools"></a>[外部ツール]
   このダイアログ ボックスを使用すると、SQL Server 構成マネージャーやメモ帳などの外部ツールを **[ツール]** メニューに追加できます。 外部ツールを追加することにより、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で作業している間に他のアプリケーションを簡単に起動できます。 また、ツールを起動するときに引数や作業ディレクトリを指定できます。 さらに、一部のツールの出力は [出力] ウィンドウに表示できます。 **[外部ツール]** ダイアログ ボックスは、 **[ツール]** メニューから使用できます。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **[メニューの内容]**  
  **[ツール]** メニューに現在追加されている項目のタイトルを一覧表示します。 メニューに表示される項目の順序を変更するには、 **[上へ移動]** と **[下へ移動]** を使用します。 メニューから項目を削除するには、 **[削除]** ボタンを使用します。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "62649697"
  **[下へ移動]**  
  **[ツール]** メニューで表示されるツールの一覧に、選択したツールを表示する位置を下へ移動します。  
   
- **[追加]**  
+ **追加**  
  新しいツールを指定できるようにテキスト ボックスをクリアします。  
   
  **削除**  
@@ -41,7 +41,7 @@ ms.locfileid: "62649697"
  **Title**  
  **[ツール]** メニューの **[外部メニュー]** サブメニューに表示されるツールまたはコマンドの名前です。 ツールの名前の中でツールのアクセス キーとして使用する文字の前にアンパサンドを配置します。 たとえば、 `&Spy++` は **[ツール]** メニューの **[Spy++]** を表示します。  
   
- **Command**  
+ **コマンド**  
  起動する .exe、.com、.pif、.bat、.cmd などのファイルへのパスを指定します。 `.bat`[出力ウィンドウを使用] `.com`チェック ボックスがオンになっている場合は、 **や** などのファイルからの出力を [出力] ウィンドウに表示できます。  
   
  **引数**  
@@ -70,9 +70,9 @@ ms.locfileid: "62649697"
   
 2.  **[タイトル]** ボックスで、「 **SQL Server 構成マネージャー**」と入力します。  
   
-3.  **コマンド**ボックスへのパスを入力、[!INCLUDE[msCoName](../../includes/msconame-md.md)]など、実行可能ファイルの管理コンソール `C:\WINNT\system32\mmc.exe`  
+3.  [**コマンド**] ボックスに、 [!INCLUDE[msCoName](../../includes/msconame-md.md)]管理コンソールの実行可能ファイルへのパス (など) を入力します。`C:\WINNT\system32\mmc.exe`  
   
-4.  **引数**ボックスに、.msc ファイルへのパスを入力します。 `"C:\WINNT\system32\SQLServerManager.msc"`  
+4.  [**引数**] ボックスに、.msc ファイルへのパス (など) を入力します。`"C:\WINNT\system32\SQLServerManager.msc"`  
   
 > [!NOTE]  
 >  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [スタート] **メニューで** ショートカットのプロパティを表示して、コンピューター上のファイルの場所を確認します。  

@@ -15,10 +15,10 @@ author: chugugrace
 ms.author: chugu
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 1652d5eec9d6419e7b39f96a8b854eef8651bf26
-ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74687160"
 ---
 # <a name="perform-a-sql-server-integration-service-migration-assessment-with-data-migration-assistant"></a>Data Migration Assistant を使用して SQL Server 統合サービスの移行評価を実行する
@@ -73,7 +73,7 @@ SQL Server 統合サービス (SSIS) パッケージを評価するには、以�
 
 ![結果の表示](media/dma-assess-ssis/dma-assess-ssis-result.png)
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 - [オンプレミスの SSIS ワークロードを ADF の SSIS に移行する方法の概要](https://docs.microsoft.com/azure/data-factory/scenario-ssis-migration-overview)
 - [SQL Server Integration Services パッケージを Azure SQL Database マネージドインスタンスに移行する](https://docs.microsoft.com/azure/dms/how-to-migrate-ssis-packages-managed-instance)

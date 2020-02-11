@@ -11,17 +11,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d7e9edcba3a9645f1b327e698af2336b838915bb
-ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69530832"
 ---
-# <a name="lesson-9-defining-perspectives-and-translations"></a>レッスン 9: パースペクティブと翻訳の定義
+# <a name="lesson-9-defining-perspectives-and-translations"></a>レッスン 9 : パースペクティブと翻訳の定義
   このレッスンでは、パースペクティブと翻訳を定義する方法について学習します。 パースペクティブを定義すると、キューブの表示上の複雑さを軽減できます。翻訳を定義すると、ユーザーは希望する言語でキューブ メタデータを表示できます。  
   
 > [!NOTE]  
->  このチュートリアルの各レッスンの操作内容が反映されたプロジェクトを、オンラインで入手できます。 途中のレッスンから開始する場合は、前のレッスンの操作内容が反映されたプロジェクトを作業の開始点として使用できます。 このチュートリアルのサンプル プロジェクトをダウンロードするには、[ここ](https://go.microsoft.com/fwlink/?LinkID=221866) をクリックしてください。  
+>  このチュートリアルの各レッスンの操作内容が反映されたプロジェクトを、オンラインで入手できます。 途中のレッスンから開始する場合は、前のレッスンの操作内容が反映されたプロジェクトを作業の開始点として使用できます。 このチュートリアルで使用するサンプルプロジェクトをダウンロードするには、[ここをクリックし](https://go.microsoft.com/fwlink/?LinkID=221866)てください。  
   
  このレッスンの内容は次のとおりです。  
   
@@ -32,15 +32,15 @@ ms.locfileid: "69530832"
  この作業では、特定のメタデータの特定言語への翻訳を定義して表示します。  
   
 ## <a name="next-lesson"></a>次のレッスン  
- [レッスン 10:管理ロールの定義](lesson-10-defining-administrative-roles.md)  
+ [レッスン 10 : 管理ロールの定義](lesson-10-defining-administrative-roles.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Analysis Services チュートリアルのシナリオ](analysis-services-tutorial-scenario.md)   
- [多次元モデリング&#40;の Adventure works チュートリアル&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
+ [Adventure Works チュートリアル &#40;の多次元モデリング&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
  [ビジョン](https://docs.microsoft.com/analysis-services/multidimensional-models-olap-logical-cube-objects/perspectives)   
  [多次元モデルのパースペクティブ](multidimensional-models/perspectives-in-multidimensional-models.md)   
  [ディメンションの翻訳](multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)   
  [キューブの翻訳](multidimensional-models-olap-logical-cube-objects/cube-translations.md)   
- [翻訳&#40;Analysis Services&#41;](translations-analysis-services.md)  
+ [翻訳 &#40;Analysis Services&#41;](translations-analysis-services.md)  
   
   

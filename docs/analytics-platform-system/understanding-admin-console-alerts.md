@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: e33853f4d2e8965030e78cd878a13aef1d559da0
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74399784"
 ---
 # <a name="understanding-admin-console-alerts-in-analytics-platform-system"></a>Analytics Platform System の管理コンソールのアラートについて
@@ -29,7 +29,7 @@ Transact\-SQL を使用したアラート情報の取得の詳細については
 ## <a name="alert-list"></a>アラートの一覧  
 アラートは、**アラート名**のアルファベット順に一覧表示されます。 すべてのアラートが一覧に表示されるわけではありません。 一部のアラートの表現は、ベンダーによって多少異なります。  
   
-|**アラート名**|**操作が必要ですか?**|**State**|**重大度**|**記述**|**詳細情報**|  
+|**アラート名**|**操作が必要ですか?**|**State**|**重大度**|**説明**|**詳細情報**|  
 |------------------|------------------------|-------------|----------------|-------------------|------------------------|  
 |Ambari エージェントに重大な状態があります。|はい|Failed|エラー|この Ambari Agent リソースが失敗しました (状態: 4)。またはオフラインになっています (状態: 3)。 含まれているその他のオフライン状態は、オフラインの場合 (状態: 130)。 状態は、コンポーネントの "hadoop_service_status" プロパティで報告されます。|ヘッドノードとデータノードでクラスターリソースを確認します。|  
 |Ambari エージェントには、重大ではない状態があります。|はい|低下しています|警告|この Ambari Agent リソースは、次のいずれかの理由により重大ではない状態です:-リソースが継承された状態 (状態: 0)-リソースが保留状態 (状態: 128)-リソースがオンラインの保留状態 (状態: 129)-リソースが最初に実行されています検出 (状態: 1) の状態は、コンポーネントの "hadoop_service_status" プロパティで報告されます。|ヘッドノードとデータノードでクラスターリソースを確認します。|  

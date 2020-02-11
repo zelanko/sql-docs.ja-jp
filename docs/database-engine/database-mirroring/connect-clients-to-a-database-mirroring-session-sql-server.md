@@ -169,7 +169,7 @@ Server=123.34.45.56,4724;
   
  再試行時間は、次の式を使用して計算されます。  
   
- _RetryTime_ **=** _PreviousRetryTime_ **+(** 0.08 ***** _LoginTimeout_ **)**  
+ _RetryTime_ **=** _PreviousRetryTime_ **+(** 0.08 **&#42;** _LoginTimeout_ **)**  
   
  ここでは、 *PreviousRetryTime* の初期値は 0 です。  
   

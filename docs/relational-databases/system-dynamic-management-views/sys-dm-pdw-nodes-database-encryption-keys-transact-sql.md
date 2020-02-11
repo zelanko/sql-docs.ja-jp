@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: c319259d8997db2ff39d90b408056d03eb008782
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401645"
 ---
 # <a name="sysdm_pdw_nodes_database_encryption_keys-transact-sql"></a>dm_pdw_nodes_database_encryption_keys (Transact-sql)
@@ -24,20 +24,20 @@ ms.locfileid: "74401645"
 
   データベースの暗号化の状態と、それに関連付けられているデータベース暗号化キーに関する情報を返します。 **dm_pdw_nodes_database_encryption_keys**は、各ノードにこの情報を提供します。 データベース暗号化の詳細については、「 [Transparent Data Encryption (SQL Server PDW)](../../analytics-platform-system/transparent-data-encryption.md)」を参照してください。  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
-|database_id|**通り**|各ノード上の物理データベースの ID。|  
-|encryption_state|**通り**|このノードのデータベースが暗号化されているか、暗号化されていないかを示します。<br /><br /> 0 = データベース暗号化キーは存在しません。暗号化は行われません。<br /><br /> 1 = 暗号化されていない<br /><br /> 2 = 暗号化が進行中<br /><br /> 3 = 暗号化<br /><br /> 4 = キーの変更中<br /><br /> 5 = 暗号化解除中<br /><br /> 6 = 保護の変更中 (データベース暗号化キーを暗号化する証明書が変更されています)|  
-|create_date|**/**|暗号化キーが作成された日付が表示されます。|  
-|regenerate_date|**/**|暗号化キーが再生成された日付が表示されます。|  
-|modify_date|**/**|暗号化キーが変更された日付が表示されます。|  
-|set_date|**/**|暗号化キーがデータベースに適用された日付が表示されます。|  
-|opened_date|**/**|データベースキーが最後に開かれた日時を表示します。|  
+|database_id|**int**|各ノード上の物理データベースの ID。|  
+|encryption_state|**int**|このノードのデータベースが暗号化されているか、暗号化されていないかを示します。<br /><br /> 0 = データベース暗号化キーは存在しません。暗号化は行われません。<br /><br /> 1 = 暗号化されていない<br /><br /> 2 = 暗号化が進行中<br /><br /> 3 = 暗号化<br /><br /> 4 = キーの変更中<br /><br /> 5 = 暗号化解除中<br /><br /> 6 = 保護の変更中 (データベース暗号化キーを暗号化する証明書が変更されています)|  
+|create_date|**DATETIME**|暗号化キーが作成された日付が表示されます。|  
+|regenerate_date|**DATETIME**|暗号化キーが再生成された日付が表示されます。|  
+|modify_date|**DATETIME**|暗号化キーが変更された日付が表示されます。|  
+|set_date|**DATETIME**|暗号化キーがデータベースに適用された日付が表示されます。|  
+|opened_date|**DATETIME**|データベースキーが最後に開かれた日時を表示します。|  
 |key_algorithm|**varchar (?)**|キーに使用されるアルゴリズムが表示されます。|  
-|key_length|**通り**|キーの長さを表示します。|  
+|key_length|**int**|キーの長さを表示します。|  
 |encryptor_thumbprint|**varbin**|暗号化のサムプリントを表示します。|  
-|percent_complete|**real**|データベース暗号化状態の変更の完了率。 状態の変更がない場合、これは0になります。|  
-|node_id|**通り**|ノードに関連付けられている一意の数値 id。|  
+|percent_complete|**本当の**|データベース暗号化状態の変更の完了率。 状態の変更がない場合、これは0になります。|  
+|node_id|**int**|ノードに関連付けられている一意の数値 id。|  
   
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  

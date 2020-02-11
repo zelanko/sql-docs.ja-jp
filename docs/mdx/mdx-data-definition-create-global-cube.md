@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: d678622c67a83c279cce094b849829e668af30cb
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892148"
 ---
 # <a name="mdx-data-definition---create-global-cube"></a>MDX データ操作 - CREATE GLOBAL CUBE
 
 
-  サーバー上のキューブのサブキューブに基づいて、ローカルに保存されたキューブを作成して設定します。 ローカルに保存されたキューブに接続するために、サーバーへの接続は必要ありません。 ローカルキューブの詳細については、「[ローカルキューブ&#40;Analysis Services-&#41;多次元データ](https://docs.microsoft.com/analysis-services/multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data)」を参照してください。  
+  サーバー上のキューブのサブキューブに基づいて、ローカルに保存されたキューブを作成して設定します。 ローカルに保存されたキューブに接続するために、サーバーへの接続は必要ありません。 ローカルキューブの詳細については、「[ローカルキューブ &#40;Analysis Services-多次元データ&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data)」を参照してください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -92,28 +92,28 @@ FROM source_cube_name (<param list>)
  source_cube_name  
  ローカルキューブの基になるキューブの名前です。  
   
- source_cube_name.measure_name  
+ source_cube_name。 measure_name  
  ローカルキューブに含まれる、基になるメジャーの完全修飾名です。 メジャーディメンションの計算されるメンバーは使用できません。  
   
  measure_name  
  ローカルキューブ内のメジャーの名前。  
   
- source_cube_name.dimension_name  
+ source_cube_name。 dimension_name  
  ローカルキューブに含まれる、基になるディメンションの完全修飾名です。  
   
  dimension_name  
  ローカル キューブのディメンションの名前です。  
   
- From \<dim from 句 >  
+ FROM \<dim from 句>  
  派生ディメンションの定義のみの有効な仕様です。  
   
  NOT_RELATED_TO_FACTS  
  派生ディメンションの定義のみの有効な仕様です。  
   
- \<レベルの種類 >  
+ \<レベルの種類>  
  派生ディメンションの定義のみの有効な仕様です。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  ローカルキューブは、メジャーとそれを定義する定義の definedin 用語です。 ディメンションには、次の2種類があります。  
   
 -   ソースディメンション-これは、ソースキューブの1つに含まれていたディメンションです。  
@@ -157,7 +157,7 @@ FROM source_cube_name (<param list>)
   
 -   参照ディメンションが具体化され、標準のディメンションとして追加されます。  
   
--   多対多ディメンションを含める場合は、次の規則が適用されます。  
+-   多対多ディメンションを含めると、次のルールが適用されます。  
   
     -   多対多ディメンション全体を追加する必要があります。  
   
@@ -196,8 +196,8 @@ MEMBER [Date].[Fiscal].[Fiscal Year].&[2005]
    )  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [Mdx データ定義ステートメント&#40;mdx&#41;](../mdx/mdx-data-definition-statements-mdx.md)   
- [CREATE SESSION CUBE ステートメント&#40;MDX&#41;](../mdx/mdx-data-definition-create-session-cube.md)  
+## <a name="see-also"></a>参照  
+ [Mdx&#41;&#40;mdx データ定義ステートメント](../mdx/mdx-data-definition-statements-mdx.md)   
+ [CREATE SESSION CUBE ステートメント &#40;MDX&#41;](../mdx/mdx-data-definition-create-session-cube.md)  
   
   

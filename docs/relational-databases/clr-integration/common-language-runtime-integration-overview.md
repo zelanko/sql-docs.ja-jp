@@ -19,10 +19,10 @@ ms.assetid: 7be9e644-36a2-48fc-9206-faf59fdff4d7
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 1e4e98168841185f8135ea3b2730d8386b75694c
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75256179"
 ---
 # <a name="common-language-runtime-integration"></a>共通言語ランタイムの統合

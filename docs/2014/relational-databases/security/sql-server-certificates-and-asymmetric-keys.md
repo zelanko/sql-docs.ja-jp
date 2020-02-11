@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: ddb7e84f69f501a7857b0d55b1b8a14d11a85694
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244509"
 ---
 # <a name="sql-server-certificates-and-asymmetric-keys"></a>SQL Server の証明書と非対称キー
@@ -46,9 +46,9 @@ ms.locfileid: "75244509"
  証明書は、データベース ミラーリングで接続を保護したり、パッケージや他のオブジェクトに署名したり、データや接続を暗号化したりする場合に使用できます。 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の証明書に関するその他のリソースを次の表に示します。  
   
-|トピック|説明|  
+|トピック|[説明]|  
 |-----------|-----------------|  
-|[Transact-sql&#41;&#40;証明書の作成](/sql/t-sql/statements/create-certificate-transact-sql)|証明書を作成するためのコマンドについて説明します。|  
+|[CREATE CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql)|証明書を作成するためのコマンドについて説明します。|  
 |[デジタル署名を使用してパッケージのソースを特定する](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md)|証明書を使用してソフトウェア パッケージに署名する方法について説明します。|  
 |[Transact-sql&#41;&#40;データベースミラーリングエンドポイントに証明書を使用する](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)|データベース ミラーリングで証明書を使用する方法について説明します。|  
   
@@ -61,9 +61,9 @@ ms.locfileid: "75244509"
  非対称キーは、データを保護したり、プレーンテキストに署名したりする場合に使用できます。 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]での非対称キーに関するその他のリソースを次の表に示します。  
   
-|トピック|説明|  
+|トピック|[説明]|  
 |-----------|-----------------|  
-|[CREATE 非対称キー &#40;Transact-sql&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)|非対称キーを作成するためのコマンドについて説明します。|  
+|[CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)|非対称キーを作成するためのコマンドについて説明します。|  
 |[SIGNBYASYMKEY &#40;Transact-sql&#41;](/sql/t-sql/functions/signbyasymkey-transact-sql)|オブジェクトに署名するためのオプションについて説明します。|  
   
 ## <a name="tools"></a>ツール  
@@ -79,11 +79,11 @@ ms.locfileid: "75244509"
 ## <a name="related-tasks"></a>Related Tasks  
  [暗号化アルゴリズムの選択](encryption/choose-an-encryption-algorithm.md)  
   
- [CREATE SYMMETRIC KEY &#40;Transact-sql&#41;](/sql/t-sql/statements/create-symmetric-key-transact-sql)  
+ [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-symmetric-key-transact-sql)  
   
- [Transact-sql&#41;&#40;証明書の作成](/sql/t-sql/statements/create-certificate-transact-sql)  
+ [CREATE CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql)  
   
 ## <a name="see-also"></a>参照  
  [sys. 証明書 &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-certificates-transact-sql)   
- [Transparent Data Encryption &#40;TDE&#41;](encryption/transparent-data-encryption.md)  
+ [透過的なデータ暗号化 &#40;TDE&#41;](encryption/transparent-data-encryption.md)  
   

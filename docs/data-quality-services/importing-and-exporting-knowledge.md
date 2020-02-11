@@ -10,10 +10,10 @@ ms.assetid: 12537c9d-31e4-40b0-a411-cb343abbe96a
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 06f4b140ef90eb3d1ed942e5374643e80fb1b24e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75254810"
 ---
 # <a name="importing-and-exporting-knowledge"></a>ナレッジのインポートとエクスポート

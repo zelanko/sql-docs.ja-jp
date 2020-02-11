@@ -18,16 +18,16 @@ ms.assetid: 94840482-112c-4654-b480-9b456c4c2bca
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d506d7ea841e211d9ab6fb0715a6a9359cefa83d
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72305215"
 ---
 # <a name="sysmail_help_queue_sp-transact-sql"></a>sysmail_help_queue_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  データベース メールには、メール キューと状態キューの 2 つのキューがあります。 メール キューには、送信待ちのメール アイテムが格納され、 状態キューには、送信済みのアイテムの状態が格納されます。 このストアドプロシージャを使用すると、メールキューまたはステータスキューの状態を表示できます。 パラメーター **\@queue_type**が指定されていない場合、ストアドプロシージャは、キューごとに1つの行を返します。  
+  データベース メールには、メール キューと状態キューの 2 つのキューがあります。 メール キューには、送信待ちのメール アイテムが格納され、 状態キューには、送信済みのアイテムの状態が格納されます。 このストアドプロシージャを使用すると、メールキューまたはステータスキューの状態を表示できます。 パラメーター ** \@queue_type**が指定されていない場合、ストアドプロシージャは、キューごとに1つの行を返します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -39,7 +39,7 @@ sysmail_help_queue_sp  [ @queue_type = ] 'queue_type'
 ```  
   
 ## <a name="arguments"></a>引数  
-省略可能な引数 `[ @queue_type = ] 'queue_type'`、 *queue_type*として指定された種類の電子メールを削除します。 *queue_type*は**nvarchar (6)** で、既定値はありません。 有効なエントリは、 **mail**および**status**です。  
+`[ @queue_type = ] 'queue_type'`省略可能な引数は、 *queue_type*として指定された種類の電子メールを削除します。 *queue_type*は**nvarchar (6)** で、既定値はありません。 有効なエントリは、 **mail**および**status**です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -48,19 +48,19 @@ sysmail_help_queue_sp  [ @queue_type = ] 'queue_type'
   
 |列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
-|**queue_type**|**nvarchar(6)**|キューの種類。 指定できる値は、 **mail**および**status**です。|  
-|**長さ**|**int**|指定したキュー内のメール アイテムの数。|  
-|**state**|**nvarchar(64)**|モニターの状態です。 有効な値は、[**非**アクティブ] (キューが非アクティブ)、**通知**された (キューの通知が受信されたことを示す)、 **RECEIVES_OCCURRING** (キューは受信中) です。|  
+|**queue_type**|**nvarchar (6)**|キューの種類。 指定できる値は、 **mail**および**status**です。|  
+|**数**|**int**|指定したキュー内のメール アイテムの数。|  
+|**状態**|**nvarchar (64)**|モニターの状態です。 有効な値は、[**非**アクティブ] (キューが非アクティブ)、**通知**された (キューの通知が受信されたことを示す)、 **RECEIVES_OCCURRING** (キューは受信中) です。|  
 |**last_empty_rowset_time**|**/**|キューが最後に空だった日付と時刻。 [軍用時刻形式] と [GMT タイムゾーン]。|  
 |**last_activated_time**|**/**|キューが最後にアクティブ化された日時。 [軍用時刻形式] と [GMT タイムゾーン]。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  データベースメールのトラブルシューティングを行う場合は、 **sysmail_help_queue_sp**を使用して、キューにあるアイテムの数、キューの状態、および最後にアクティブ化された日時を確認します。  
   
 ## <a name="permissions"></a>アクセス許可  
  既定では、 **sysadmin**固定サーバーロールのメンバーだけがこのプロシージャにアクセスできます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、メール キューと状態キュー両方を返します。  
   
 ```  

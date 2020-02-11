@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 58209d617d7978ff4ed6da486bd5c89c076c05af
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73787415"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
@@ -31,7 +31,7 @@ ms.locfileid: "73787415"
   
  **Sqlcolumns**は、静的サーバーカーソルで実行できます。 更新可能なカーソル (動的カーソルまたはキーセットカーソル) で**Sqlcolumns**を実行しようとすると、カーソルの種類が変更されたことを示す SQL_SUCCESS_WITH_INFO が返されます。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、 *CatalogName*パラメーターの2部構成の名前を使用して、リンクサーバー上のテーブルの情報をレポートすることができます。 *Linked_Server_Name Catalog_Name*です。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC ドライバーでは、 *CatalogName*パラメーターに2つの部分で構成される名前を使用して、リンクサーバー上のテーブルに関する情報のレポートをサポートしています。 *Linked_Server_Name Catalog_Name*。  
   
  ODBC 2 の場合。*x*アプリケーションでは、 *tablename*でワイルドカードを使用していません。 **sqlcolumns**は、名前が*tablename*に一致し、現在のユーザーが所有しているテーブルに関する情報を返します。 現在のユーザーが*tablename*パラメーターと一致する名前を持つテーブルを所有していない場合、 **sqlcolumns**は、テーブル名が*tablename*パラメーターと一致する他のユーザーが所有しているテーブルに関する情報を返します。 ODBC 2 の場合。*x*アプリケーションワイルドカードを使用する**sqlcolumns**は、名前が*TableName*に一致するすべてのテーブルを返します。 ODBC 3 の場合。*x* Applications **sqlcolumns**は、所有者に関係なく名前が*TableName*に一致するすべてのテーブル、またはワイルドカードを使用するかどうかを返します。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "73787415"
 |列名|[説明]|  
 |-----------------|-----------------|  
 |DATA_TYPE|**VARCHAR (max)** データ型の SQL_VARCHAR、SQL_VARBINARY、または SQL_WVARCHAR を返します。|  
-|TYPE_NAME|**Varchar (max)** 、 **varbinary (max)** 、および**nvarchar (max)** データ型の "varchar"、"varbinary"、または "nvarchar" を返します。|  
+|TYPE_NAME|**Varchar (max)**、 **varbinary (max)**、および**nvarchar (max)** データ型の "varchar"、"varbinary"、または "nvarchar" を返します。|  
 |COLUMN_SIZE|**Varchar (max)** データ型の場合、列のサイズが無制限であることを示す SQL_SS_LENGTH_UNLIMITED を返します。|  
 |BUFFER_LENGTH|**Varchar (max)** データ型の場合、バッファーのサイズが無制限であることを示す SQL_SS_LENGTH_UNLIMITED を返します。|  
 |SQL_DATA_TYPE|**VARCHAR (max)** データ型の SQL_VARCHAR、SQL_VARBINARY、または SQL_WVARCHAR を返します。|  
@@ -56,42 +56,42 @@ ms.locfileid: "73787415"
   
  サーバーからパラメーターの UDT に関する追加のメタデータ プロパティを返したり、サーバーでこのメタデータ プロパティの情報が必要となる場合は、上記に定義したドライバー固有の新しい記述子を使用して、UDT のメタデータ プロパティの取得や設定を行えます。  
   
- クライアントが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続して SQLColumns を呼び出すと、カタログ入力パラメーターに NULL またはワイルドカード値を使用しても、他のカタログからの情報は返されません。 代わりに、現在のカタログに関する情報だけが返されます。 クライアントはまず SQLTables を呼び出して、目的のテーブルがあるカタログを特定できます。 その後、クライアントは、そのカタログ値を SQLColumns の呼び出しでカタログ入力パラメーターに使用して、そのテーブル内の列に関する情報を取得できます。  
+ クライアントがに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]接続して sqlcolumns を呼び出す場合、カタログ入力パラメーターに NULL またはワイルドカード値を使用しても、他のカタログからの情報は返されません。 代わりに、現在のカタログに関する情報だけが返されます。 クライアントはまず SQLTables を呼び出して、目的のテーブルがあるカタログを特定できます。 その後、クライアントは、そのカタログ値を SQLColumns の呼び出しでカタログ入力パラメーターに使用して、そのテーブル内の列に関する情報を取得できます。  
   
 ## <a name="sqlcolumns-and-table-valued-parameters"></a>SQLColumns とテーブル値パラメーター  
  SQLColumns によって返される結果セットは、SQL_SOPT_SS_NAME_SCOPE の設定によって異なります。 詳細については、「 [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)」を参照してください。 テーブル値パラメーター用に次の列が追加されました。  
   
-|列名|データ型|目次|  
+|列名|データ型|内容|  
 |-----------------|---------------|--------------|  
 |SS_IS_COMPUTED|Smallint|TABLE_TYPE の列では、列が計算列の場合は SQL_TRUE、それ以外の場合は SQL_FALSE になります。|  
 |SS_IS_IDENTITY|Smallint|列が ID 列の場合は SQL_TRUE、それ以外の場合は SQL_FALSE になります。|  
   
- テーブル値パラメーターの詳細については、「[テーブル値パラメーター &#40;の&#41;ODBC](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)」を参照してください。  
+ テーブル値パラメーターの詳細については、「[テーブル値パラメーター &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)」を参照してください。  
   
 ## <a name="sqlcolumns-support-for-enhanced-date-and-time-features"></a>SQLColumns による機能強化された日付と時刻のサポート  
  日付型または時刻型に対して返される値の詳細については、「[カタログメタデータ](../../relational-databases/native-client-odbc-date-time/metadata-catalog.md)」を参照してください。  
   
- 詳細については、「[日付と&#40;時刻&#41;の機能強化 ODBC](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)」を参照してください。  
+ 詳細については、「[日付と時刻の機能強化 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)」を参照してください。  
   
 ## <a name="sqlcolumns-support-for-large-clr-udts"></a>SQLColumns による大きな CLR UDT のサポート  
- **Sqlcolumns**は、大きな CLR ユーザー定義型 (udt) をサポートしています。 詳細については、「 [LARGE CLR ユーザー定義&#40;型&#41;ODBC](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)」を参照してください。  
+ **Sqlcolumns**は、大きな CLR ユーザー定義型 (udt) をサポートしています。 詳細については、「[大容量の CLR ユーザー定義型 &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)」を参照してください。  
   
 ## <a name="sqlcolumns-support-for-sparse-columns"></a>SQLColumns によるスパース列のサポート  
- SQLColumns の結果セットには、次の2つの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 固有の列が追加されています。  
+ SQLColumns の結果セットには、次の2つ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の特定の列が追加されています。  
   
 |列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
 |SS_IS_SPARSE|**Smallint**|列がスパース列の場合は SQL_TRUE、それ以外の場合は SQL_FALSE になります。|  
 |SS_IS_COLUMN_SET|**Smallint**|列が**column_set**列の場合、これは SQL_TRUE です。それ以外の場合は、SQL_FALSE ます。|  
   
- ODBC 仕様に準拠して、SS_IS_SPARSE と SS_IS_COLUMN_SET は、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]よりも前のバージョン [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に追加されたドライバー固有のすべての列の前、および ODBC 自体によって指定されたすべての列の前に表示されます。  
+ ODBC 仕様に準拠して、SS_IS_SPARSE と SS_IS_COLUMN_SET は、より[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]前のバージョンに追加されたドライバー固有のすべての列の前、および odbc 自体によって指定されたすべての列の前に表示されます。  
   
  SQLColumns によって返される結果セットは、SQL_SOPT_SS_NAME_SCOPE の設定によって異なります。 詳細については、「 [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)」を参照してください。  
   
- ODBC でのスパース列の詳細については、「[スパース列のサポート&#40;odbc&#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md)」を参照してください。  
+ ODBC でのスパース列の詳細については、「[スパース列のサポート &#40;odbc&#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [Sqlcolumns 関数](https://go.microsoft.com/fwlink/?LinkId=59336)   
+ [SQLColumns 関数](https://go.microsoft.com/fwlink/?LinkId=59336)   
  [ODBC API 実装の詳細](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

@@ -12,10 +12,10 @@ ms.assetid: f23e38e2-39e0-42d7-abd5-34d8fcca5d2a
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 34060c3fc5416f7244b400b506faad9097d66880
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75241799"
 ---
 # <a name="import-cleansing-project-values-into-a-domain"></a>ドメインへのクレンジング プロジェクトの値のインポート
@@ -25,17 +25,17 @@ ms.locfileid: "75241799"
   
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) では、データ品質プロジェクトのクレンジング プロセス中、または Integration Services パッケージの DQS クレンジング コンポーネントで収集されるデータ品質ナレッジをドメインにインポートできます。 これにより、信頼できるナレッジを保持し、ナレッジ ベースを継続的に改善することができます。  
   
-##  <a name="BeforeYouBegin"></a>開始する前に  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Prerequisites"></a>応募  
+###  <a name="Prerequisites"></a> 前提条件  
   
 -   クレンジング プロジェクトの値をドメインにインポートするには、そのドメインが、Data Quality Client のクレンジング プロジェクト、または DQS クレンジング コンポーネントを含む Integration Services パッケージで使用されている必要があります。  
   
 -   Data Quality Client のクレンジング プロジェクト、または DQS クレンジング コンポーネントを含む Integration Services パッケージが正常に完了している必要があります。  
   
-###  <a name="Security"></a>保護  
+###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a>許可  
+####  <a name="Permissions"></a> Permissions  
  クレンジング プロセス中に収集したデータ品質ナレッジ ベースをドメインにインポートするには、DQS_MAIN データベースの dqs_kb_editor ロールまたは dqs_administrator ロールが必要です。  
   
 ##  <a name="Import"></a>クレンジングプロジェクトの値をインポートする  
@@ -65,7 +65,7 @@ ms.locfileid: "75241799"
     -   
   **[[新規] タブから値を追加する]** を選択し、 **[適切]** タブと **[修正済み]** タブの値に加えて新しいタブの値を追加します。  
   
-    -   [**OK**] をクリックすると、  
+    -   **[OK]** をクリックします。  
   
 6.  
   **[ドメイン値]** のタブに戻ると、値が正常にインポートされた場合はメッセージが表示されます。 インポートされた値、つまりドメインに新しく追加された値は、 **"値"** テーブルに表示されます。  
@@ -76,8 +76,7 @@ ms.locfileid: "75241799"
   
 9. 特定の文字列を検索するには、 **[検索]** ボックスに文字列を入力します。 検索条件を満たす値を 1 つずつ調べるには、上矢印または下矢印をクリックします。 これらのは黄色で強調表示されます。  
   
-10. 
-  **[完了]** をクリックします。  
+10. **[完了]** をクリックします。  
   
     > [!NOTE]  
     >  

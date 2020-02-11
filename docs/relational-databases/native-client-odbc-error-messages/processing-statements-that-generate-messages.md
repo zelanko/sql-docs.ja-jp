@@ -26,15 +26,16 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d147e5c6fa257a6397635014d868d75e7c8833dd
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73783482"
 ---
 # <a name="processing-statements-that-generate-messages"></a>メッセージを生成するステートメントの処理
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
+  
   [!INCLUDE[tsql](../../includes/tsql-md.md)] SET ステートメントのオプション STATISTICS TIME と STATISTICS IO は、実行時間の長いクエリの診断に利用できる情報を取得する場合に使用します。 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、クエリ プランを分析するための SHOWPLAN オプションもサポートされています。 ODBC アプリケーションでは、次のステートメントを実行してこれらのオプションを設定できます。  
   
 ```  
@@ -44,7 +45,7 @@ SQLExecDirect(hstmt, "SET STATISTICS TIME ON", SQL_NTS90
 SQLExecDirect(hstmt, "SET STATISTICS IO ON", SQL_NTS);  
 ```  
   
- SET STATISTICS TIME または SET SHOWPLAN が ON に設定されている場合、 **Sqlexecute**と**SQLExecDirect**は SQL_SUCCESS_WITH_INFO を返します。その時点で、アプリケーションは**SQLGetDiagRec**を呼び出すことで SHOWPLAN または STATISTICS TIME の出力を取得できます。SQL_NO_DATA を返します。 SHOWPLAN データの各行は、次の形式で返されます。  
+ SET STATISTICS TIME または SET SHOWPLAN を ON に設定すると、 **Sqlexecute**と**SQLExecDirect** return SQL_SUCCESS_WITH_INFO が返されます。その時点で、アプリケーションは SQL_NO_DATA を返すまで**SQLGETDIAGREC**を呼び出して、SHOWPLAN または STATISTICS TIME の出力を取得できます。 SHOWPLAN データの各行は、次の形式で返されます。  
   
 ```  
 szSqlState="01000", *pfNativeError=6223,  
@@ -52,7 +53,8 @@ szErrorMsg="[Microsoft][SQL Server Native Client][SQL Server]
               Table Scan"  
 ```  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Version 7.0 では、SHOWPLAN オプションが SHOWPLAN_ALL オプションと SHOWPLAN_TEXT オプションに置き換えられました。これらの両方のオプションでは、一連のメッセージではなく、結果セットとして出力が返されます。  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Version 7.0 では、SHOWPLAN オプションが SHOWPLAN_ALL オプションと SHOWPLAN_TEXT オプションに置き換えられました。これらの両方のオプションでは、一連のメッセージではなく、結果セットとして出力が返されます。  
   
  STATISTICS TIME の各行は、次の形式で返されます。  
   
@@ -99,7 +101,7 @@ szErrorMsg="[Microsoft][ SQL Server Native Client][SQL Server]
 ```  
   
 ## <a name="using-print-and-raiserror-statements"></a>PRINT ステートメントと RAISERROR ステートメントの使用  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] PRINT ステートメントと RAISERROR ステートメントでは、 **SQLGetDiagRec**を呼び出すことによってもデータが返されます。 PRINT ステートメントを実行すると SQL_SUCCESS_WITH_INFO が返され、後続の**SQLGetDiagRec**の呼び出しでは*SQLState* 01000 が返されます。 重大度が 10 以下の RAISERROR の動作は PRINT と同様です。 重大度が11以上の RAISERROR では、execute は SQL_ERROR を返し、後続の**SQLGetDiagRec**の呼び出しでは*SQLState* 42000 が返されます。 たとえば、次のステートメントでは SQL_SUCCESS_WITH_INFO が返されます。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)]PRINT ステートメントと RAISERROR ステートメントでは、 **SQLGetDiagRec**を呼び出すことによってもデータが返されます。 PRINT ステートメントを実行すると SQL_SUCCESS_WITH_INFO が返され、後続の**SQLGetDiagRec**の呼び出しでは*SQLState* 01000 が返されます。 重大度が 10 以下の RAISERROR の動作は PRINT と同様です。 重大度が11以上の RAISERROR では、execute は SQL_ERROR を返し、後続の**SQLGetDiagRec**の呼び出しでは*SQLState* 42000 が返されます。 たとえば、次のステートメントでは SQL_SUCCESS_WITH_INFO が返されます。  
   
 ```  
 SQLExecDirect (hstmt, "PRINT  'Some message' ", SQL_NTS);  
@@ -144,7 +146,7 @@ szErrorMsg= "[Microsoft] [SQL Server Native Client][SQL Server]
   
  PRINT ステートメントまたは RAISERROR ステートメントからの出力が結果セットに含まれる場合、 **SQLGetDiagRec**の呼び出しのタイミングは重要です。 PRINT または RAISERROR 出力を取得する**SQLGetDiagRec**の呼び出しは、SQL_ERROR または SQL_SUCCESS_WITH_INFO を受け取るステートメントの直後に行う必要があります。 この操作は、上記の例のように、1 つの SQL ステートメントのみを実行するときは容易に実行できます。 このような場合、 **SQLExecDirect**または**sqlexecute**を呼び出すと、SQL_ERROR または SQL_SUCCESS_WITH_INFO が返され、 **SQLGetDiagRec**を呼び出すことができます。 SQL ステートメントのバッチの出力を処理するループをコーディングするとき、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ストアド プロシージャを実行するときは、1 つの SQL ステートメントのみを実行するときほど簡単ではありません。  
   
- この場合、バッチまたはストアド プロシージャで実行される SELECT ステートメントごとに、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] から結果セットが返されます。 バッチまたはプロシージャに PRINT ステートメントまたは RAISERROR ステートメントが含まれている場合、これらのステートメントの出力は SELECT ステートメントの結果セットと交互に返されます。 バッチまたはプロシージャの最初のステートメントが PRINT または RAISERROR の場合、 **Sqlexecute**または**SQLExecDirect**は SQL_SUCCESS_WITH_INFO または SQL_ERROR を返し、アプリケーションは SQL_NO_DATA を返すまで**SQLGetDiagRec**を呼び出す必要があります。印刷情報または RAISERROR 情報を取得します。  
+ この場合、バッチまたはストアド プロシージャで実行される SELECT ステートメントごとに、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] から結果セットが返されます。 バッチまたはプロシージャに PRINT ステートメントまたは RAISERROR ステートメントが含まれている場合、これらのステートメントの出力は SELECT ステートメントの結果セットと交互に返されます。 バッチまたはプロシージャの最初のステートメントが PRINT または RAISERROR の場合、 **Sqlexecute**または**SQLExecDirect**は SQL_SUCCESS_WITH_INFO または SQL_ERROR を返し、アプリケーションは SQL_NO_DATA を返して印刷情報または raiserror 情報を取得するまで、 **SQLGetDiagRec**を呼び出す必要があります。  
   
  PRINT ステートメントまたは RAISERROR ステートメントが SQL ステートメント (SELECT ステートメントなど) の後にある場合は、 [Sqlmoreresults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md)がエラーを含む結果セットに位置するときに、print または raiserror の情報が返されます。 **Sqlmoreresults**は、メッセージの重大度に応じて SQL_SUCCESS_WITH_INFO または SQL_ERROR を返します。 メッセージは SQL_NO_DATA が返されるまで、 **SQLGetDiagRec**を呼び出すことによって取得されます。  
   

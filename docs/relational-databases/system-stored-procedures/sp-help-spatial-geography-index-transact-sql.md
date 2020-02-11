@@ -18,10 +18,10 @@ ms.assetid: c9bf5675-eafc-4d71-bfdb-da963384fa0c
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 73bb564880cae238cdbaa7e3c13a1f18ab95dc99
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72304876"
 ---
 # <a name="sp_help_spatial_geography_index-transact-sql"></a>sp_help_spatial_geography_index (Transact-sql)
@@ -44,16 +44,16 @@ sp_help_spatial_geography_index [ @tabname =] 'tabname'
 ## <a name="arguments"></a>引数  
  「[空間インデックスストアドプロシージャの引数とプロパティ」を](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md)参照してください。  
   
-## <a name="properties"></a>プロパティ  
+## <a name="properties"></a>Properties  
  「[空間インデックスストアドプロシージャの引数とプロパティ」を](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md)参照してください。  
   
 ## <a name="permissions"></a>アクセス許可  
  プロシージャにアクセスするには、ユーザーに PUBLIC ロールが割り当てられている必要があります。 サーバーとオブジェクトに対する読み取りアクセス権限が必要です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
 ## <a name="example"></a>例  
- 次の例では、`sp_help_spatial_geography_index` を使用して、 **\@qs**で指定されたクエリサンプルのテーブル**geography_col**で定義されている**geography**空間インデックス**SIndx_SpatialTable_geography_col2**を調査します。 この例では、指定したインデックスのコアプロパティのみが返されます。  
+ 次の例で`sp_help_spatial_geography_index` **は、を**使用して、テーブル**geography_col**で定義されている、指定されたクエリサンプル** \@** のテーブルの**SIndx_SpatialTable_geography_col2**を調査します。 この例では、指定したインデックスのコアプロパティのみが返されます。  
   
 ```  
 declare @qs geography  
@@ -63,7 +63,7 @@ exec sp_help_spatial_geography_index 'geography_col', 'SIndx_SpatialTable_geogra
   
  **Geography**インスタンスの境界ボックスは、地球全体です。  
   
-## <a name="requirements"></a>の要件  
+## <a name="requirements"></a>必要条件  
   
 ## <a name="see-also"></a>参照  
  [空間インデックスストアドプロシージャ](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   

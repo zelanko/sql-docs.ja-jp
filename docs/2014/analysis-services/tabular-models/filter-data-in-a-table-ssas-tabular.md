@@ -1,5 +1,5 @@
 ---
-title: テーブル (SSAS テーブル) 内のデータをフィルター処理 |Microsoft Docs
+title: テーブル内のデータのフィルター処理 (SSAS テーブル) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 869185e56db9a4ffb07282d3ce51ced191a6bac8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067129"
 ---
 # <a name="filter-data-in-a-table-ssas-tabular"></a>テーブル内のデータのフィルター処理 (SSAS テーブル)
@@ -37,23 +37,25 @@ ms.locfileid: "66067129"
   
          値の数が極端に多い場合、個々のアイテムが一覧に表示されないことがあります。 その場合は、"アイテムが多すぎるため、表示できません" というメッセージが表示されます。  
   
-    -   列の種類に応じて **[数値フィルター]** または **[テキスト フィルター]** をクリックし、比較演算子コマンド ( **[等しい]** など) のいずれかをクリックするか、 **[カスタム フィルター]** をクリックします。 **[カスタム フィルター]** ダイアログ ボックスで、フィルターを作成し、 **[OK]** をクリックします。  
+    -   列の種類に応じて **[数値フィルター]** または **[テキスト フィルター]** をクリックし、比較演算子コマンド ( **[等しい]** など) のいずれかをクリックするか、 **[カスタム フィルター]** をクリックします。 
+  **[カスタム フィルター]** ダイアログ ボックスで、フィルターを作成し、 **[OK]** をクリックします。  
   
 ### <a name="to-clear-a-filter-for-a-column"></a>列のフィルターをクリアするには  
   
 1.  フィルターをクリアする列の見出しの矢印をクリックします。  
   
-2.  クリックして**フィルターをクリア\<列名 >** します。  
+2.  [**列名の\<>からフィルターをクリア] を**クリックします。  
   
 ### <a name="to-clear-all-filters-for-a-table"></a>テーブルのすべてのフィルターをクリアするには  
   
 1.  モデル デザイナーで、フィルターをクリアするテーブルを選択します。  
   
-2.  **[列]** メニューをクリックし、 **[すべてのフィルターをクリア]** をクリックします。  
+2.  
+  **[列]** メニューをクリックし、 **[すべてのフィルターをクリア]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [データのフィルター処理と並べ替え (SSAS テーブル)](../filter-and-sort-data-ssas-tabular.md)   
- [パースペクティブ (SSAS テーブル)](perspectives-ssas-tabular.md)   
- [ロール (SSAS テーブル)](roles-ssas-tabular.md)  
+ [SSAS 表形式&#41;&#40;データのフィルター処理と並べ替え](../filter-and-sort-data-ssas-tabular.md)   
+ [SSAS テーブル&#41;&#40;パースペクティブ](perspectives-ssas-tabular.md)   
+ [SSAS 表形式のロール &#40;&#41;](roles-ssas-tabular.md)  
   
   

@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: c6de9072c32155446b3ff40df3f81af9073c1090
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73706822"
 ---
 # <a name="revoscalepy-python-module-in-sql-server"></a>revoscalepy (SQL Server の Python モジュール)
@@ -35,7 +35,7 @@ ms.locfileid: "73706822"
 
 **revoscalepy** モジュールは Python 3.5 に基づいており、次のいずれかの Microsoft 製品またはダウンロードをインストールした場合にのみ利用できます。
 
-+ [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)
++ [SQL Server Machine Learning サービス](../install/sql-machine-learning-services-windows-install.md)
 + [Microsoft Machine Learning Server 9.2.0 以降](https://docs.microsoft.com/machine-learning-server/)
 + [データ サイエンス クライアント用の Python クライアント ライブラリ](setup-python-client-tools-sql.md)
 
@@ -52,7 +52,7 @@ ms.locfileid: "73706822"
 
 SQL Server と Python では、場合によっては異なるデータ型が使用されます。 SQL のデータ型と Python のデータ型の対応表が必要であれば、[Python と SQL のデータ型マッピング](python-libraries-and-data-types.md) ページを参照してください。
 
-| 機能| [説明]|
+| Function| 説明|
 | ------- | ---------- |
 | [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rxinsqlserver) |  SQL Server 計算コンテキスト オブジェクトを作成し、リモート インスタンスに計算をプッシュします。 一部の **revoscalepy** 関数では、計算コンテキストが引数として受け取られます。 コンテキストスイッチの例については、[revoscalepy を使用したモデルの作成](../tutorials/use-python-revoscalepy-to-create-model.md)に関するページを参照してください。|
 | [RxSqlServerData](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rxsqlserverdata) | SQL Server クエリまたはテーブルに基づいてデータ オブジェクトを作成します。 |
@@ -64,7 +64,7 @@ SQL Server と Python では、場合によっては異なるデータ型が使�
 
 ## <a name="2-data-manipulation-etl"></a>2 - データ操作 (ETL)
 
-| 機能 | [説明] |
+| Function | 説明 |
 |----------|-------------|
 |[rx_import](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-import) | .xdf ファイルまたはデータ フレームにデータをインポートします。|
 |[rx_data_step](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-data-step) | 入力データ セットのデータを出力データ セットに変換します。|
@@ -73,7 +73,7 @@ SQL Server と Python では、場合によっては異なるデータ型が使�
 
 ## <a name="3-training-and-summarization"></a>3 - トレーニングと概要
 
-| 機能| [説明]|
+| Function| 説明|
 | ------- | ---------- |
 |[rx_btrees](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-btrees) | 確率的勾配ブースト デシジョン ツリーを合わせる|
 |[rx_dforest](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-dforest) | 分類と回帰のデシジョン フォレストを合わせる|
@@ -88,7 +88,7 @@ SQL Server と Python では、場合によっては異なるデータ型が使�
 
 ## <a name="4-scoring-functions"></a>4 - スコアリング関数
 
-| 機能| [説明]|
+| Function| 説明|
 | ------- | ---------- |
 | [rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) | トレーニング済みのモデルから予測を生成する|) | トレーニング済みのモデルから予測を生成します。リアルタイムのスコアリングに使用できます。 |
 |[rx_predict_default](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict-default) | rx_lin_mod and rx_logit オブジェクトを利用し、予測値と残余を計算します。 |
@@ -120,5 +120,5 @@ from revoscalepy.etl.RxImport import rx_import_datasource
 ## <a name="see-also"></a>参照
 
 + [Python のチュートリアル](../tutorials/sql-server-python-tutorials.md)
-+ [チュートリアル: T-SQL に Python コードを埋め込む](../tutorials/run-python-using-t-sql.md)
++ [チュートリアル:T-SQL に Python コードを埋め込む](../tutorials/run-python-using-t-sql.md)
 + [Python リファレンス (Microsoft Machine Learning Server)](https://docs.microsoft.com/machine-learning-server/python-reference/introducing-python-package-reference)

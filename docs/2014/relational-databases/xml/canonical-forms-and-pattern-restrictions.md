@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: eec8bda347b52835e84f4c9a505d9ad82cdf1a40
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211557"
 ---
 # <a name="canonical-forms-and-pattern-restrictions"></a>正規の形式とパターン制限
@@ -31,7 +31,7 @@ ms.locfileid: "68211557"
   
  浮動小数点値の不正確なシリアル化にも同様の問題があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で使用されている浮動小数点のシリアル化アルゴリズムにより、近い値が同じ正規表現になることがあり得ます。 ただし、浮動小数点値がシリアル化され、再挿入される際に、その値がわずかに変化することがあります。 その結果、再挿入時にその型の **enumeration**、 **minInclusive**、 **minExclusive**、 **maxInclusive**、または **maxExclusive**の各ファセットに違反する値になることがまれにあります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではこれを回避するために、シリアル化や再挿入を行えない `xs:float` または `xs:double` から派生した値を拒否します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [サーバー上の XML スキーマ コレクションの要件と制限](requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
   
   

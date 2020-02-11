@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7c6410e6b21ec3ebbb3cfb01fa78ffe80b2196a3
-ms.sourcegitcommit: ea6603e20c723553c89827a6b8731a9e7b560b9c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/25/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74479248"
 ---
 # <a name="replicate-identity-columns"></a>ID 列のレプリケート
@@ -44,7 +44,7 @@ ms.locfileid: "74479248"
   
 -   手動。 サブスクライバーでの更新を使用しないスナップショット レプリケーションおよびトランザクション レプリケーション、ピア ツー ピア トランザクション レプリケーション、またはアプリケーションがプログラムを介して ID 範囲を管理する必要がある場合に使用されます。 手動による管理を指定した場合は、範囲をパブリッシャーおよび各サブスクライバーに割り当て、初期の範囲が使用された場合は新しい範囲を割り当てる必要があります。 レプリケーションによって、サブスクライバーの ID 列に NOT FOR REPLICATION オプションが設定されます。  
   
--   なし。 このオプションは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の以前のバージョンとの互換性が必要な場合のみ使用することをお勧めします。また、このオプションは、トランザクション パブリケーションのストアド プロシージャ インターフェイスからのみ使用できます。  
+-   [なし] : このオプションは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の以前のバージョンとの互換性が必要な場合のみ使用することをお勧めします。また、このオプションは、トランザクション パブリケーションのストアド プロシージャ インターフェイスからのみ使用できます。  
   
  ID 範囲の管理のオプションを指定するには、「[ID 列の管理](manage-identity-columns.md)」を参照してください。  
   

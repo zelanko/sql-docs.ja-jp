@@ -15,16 +15,17 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: df384324ba16aac03a4c889cf4f3959c23374510
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62874693"
 ---
 # <a name="sqltriggercontext-object"></a>SqlTriggerContext オブジェクト
-  `SqlTriggerContext` クラスでは、トリガーに関するコンテキスト情報が提供されます。 このコンテキスト情報には、トリガーを起動した動作の種類、UPDATE 操作で変更された列が含まれます。DDL (データ定義言語) トリガーの場合は、トリガー操作が記述されている XML `EventData` 構造体も含まれます。 詳細と使用方法の例について、`SqlTriggerContext`クラスを参照してください[CLR トリガー](../../database-engine/dev-guide/clr-triggers.md)します。  
   
- 詳細については、次を参照してください。、`Microsoft.SqlServer.Server.SqlTriggerContext`クラスの .NET Framework SDK ドキュメントのリファレンス ドキュメント。  
+  `SqlTriggerContext` クラスでは、トリガーに関するコンテキスト情報が提供されます。 このコンテキスト情報には、トリガーを起動した動作の種類、UPDATE 操作で変更された列が含まれます。DDL (データ定義言語) トリガーの場合は、トリガー操作が記述されている XML `EventData` 構造体も含まれます。 `SqlTriggerContext`クラスの使用方法の詳細と例については、「 [CLR Triggers](../../database-engine/dev-guide/clr-triggers.md)」を参照してください。  
+  
+ 詳細については、 `Microsoft.SqlServer.Server.SqlTriggerContext` .NET Framework SDK のドキュメントのクラスリファレンスドキュメントを参照してください。  
   
 ## <a name="see-also"></a>参照  
  [CLR トリガー](../../database-engine/dev-guide/clr-triggers.md)   

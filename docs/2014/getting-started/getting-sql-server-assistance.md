@@ -42,10 +42,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cfa159a88cfc159e65fe3ec39b334a3f6e8c5c8b
-ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74683603"
 ---
 # <a name="getting-sql-server-assistance"></a>SQL Server の参考資料の入手
@@ -62,8 +62,7 @@ ms.locfileid: "74683603"
   
  探している情報がこれらのソースで見つからない場合は、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] コミュニティのフォーラムやニュースグループに質問を投稿したり、[!INCLUDE[msCoName](../includes/msconame-md.md)] と協力してサポート ケースを調査したりできます。  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-books-online"></a>
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オンライン ブック  
+## <a name="includessnoversionincludesssnoversion-mdmd-books-online"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オンライン ブック  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]オンラインブックでは、を使用[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]するために必要な概念と手順について説明しています。 また、オンライン ブックには、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] を使用したデータの格納、取得、報告、および変更を行うための言語やプログラミング インターフェイスについての参考資料も含まれています。  
   
  オンライン ブックは次の方法で表示できます。  
@@ -95,7 +94,7 @@ ms.locfileid: "74683603"
 ## <a name="additional-online-information"></a>その他のオンライン情報  
  その他の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 情報は、次の [!INCLUDE[msCoName](../includes/msconame-md.md)] Web サイトから利用可能です。  
   
-|リソース|説明|  
+|リソース|[説明]|  
 |--------------|-----------------|  
 |[Microsoft SQL Server](https://go.microsoft.com/fwlink/?linkid=8504)|データ ストレージおよびビジネス インテリジェンス ツールとしての [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の評価に関する発売前情報を提供します。|  
 |[Microsoft サポート技術情報](https://go.microsoft.com/fwlink/?LinkId=42461)|

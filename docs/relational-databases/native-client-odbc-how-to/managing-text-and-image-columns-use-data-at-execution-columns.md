@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: bb282274f8c1246f3771f83cfca15872d6d30937
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73782512"
 ---
 # <a name="managing-text-and-image-columns---use-data-at-execution-columns"></a>text 列と image 列の管理 - 実行時データの使用
@@ -32,28 +32,33 @@ ms.locfileid: "73782512"
   
     -   4 番目のパラメーターとして、プログラム定義の列 ID を指定します。  
   
-2.  [SQLSetPos](https://go.microsoft.com/fwlink/?LinkId=58407) を呼び出すと、SQL_NEED_DATA が返されます。これは、実行時データ列を処理する準備ができていることを示します。  
+2.  
+  [SQLSetPos](https://go.microsoft.com/fwlink/?LinkId=58407) を呼び出すと、SQL_NEED_DATA が返されます。これは、実行時データ列を処理する準備ができていることを示します。  
   
 3.  実行時データの各列に対して次の操作を行います。  
   
-    -   [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) を呼び出して、列の配列のポインターを取得します。 実行時データ列が他にもある場合は、SQL_NEED_DATA が返されます。  
+    -   
+  [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) を呼び出して、列の配列のポインターを取得します。 実行時データ列が他にもある場合は、SQL_NEED_DATA が返されます。  
   
-    -   [SQLPutData](../../relational-databases/native-client-odbc-api/sqlputdata.md) を 1 回以上呼び出して、列データを length の長さまで送信します。  
+    -   
+  [SQLPutData](../../relational-databases/native-client-odbc-api/sqlputdata.md) を 1 回以上呼び出して、列データを length の長さまで送信します。  
   
-4.  [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) を呼び出して、最後の実行時データ列のデータがすべて送信されたことを確認します。 SQL_NEED_DATA は返されません。  
+4.  
+  [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) を呼び出して、最後の実行時データ列のデータがすべて送信されたことを確認します。 SQL_NEED_DATA は返されません。  
 
 ## <a name="example"></a>例  
  このサンプルでは、SQLGetData を使用して SQL_LONG 型の可変長文字データを読み取る方法を示します。 このサンプルは IA64 ではサポートされていません。  
   
- AdventureWorks と呼ばれる ODBC データ ソース (既定のデータベースは AdventureWorks サンプル データベース) が必要です (AdventureWorks サンプルデータベースは、 [Microsoft SQL Server のサンプルとコミュニティのプロジェクト](https://go.microsoft.com/fwlink/?LinkID=85384)のホームページからダウンロードできます)。このデータソースは、オペレーティングシステムによって提供される ODBC ドライバーに基づいている必要があります (ドライバー名は "SQL Server")。 このサンプルを 64 ビット オペレーティング システムで 32 ビット アプリケーションとしてビルドし、実行する場合、%windir%\SysWOW64\odbcad32.exe の ODBC アドミニストレーターを使用して ODBC データ ソースを作成する必要があります。  
+ AdventureWorks と呼ばれる ODBC データ ソース (既定のデータベースは AdventureWorks サンプル データベース) が必要です  (AdventureWorks サンプルデータベースは、 [Microsoft SQL Server のサンプルとコミュニティのプロジェクト](https://go.microsoft.com/fwlink/?LinkID=85384)のホームページからダウンロードできます)。このデータソースは、オペレーティングシステムによって提供される ODBC ドライバーに基づいている必要があります (ドライバー名は "SQL Server")。 このサンプルを 64 ビット オペレーティング システムで 32 ビット アプリケーションとしてビルドし、実行する場合、%windir%\SysWOW64\odbcad32.exe の ODBC アドミニストレーターを使用して ODBC データ ソースを作成する必要があります。  
   
- このサンプルでは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 名前付きインスタンスに接続するには、ODBC データ ソースの定義を変更し、server\namedinstance 形式でそのインスタンスを指定します。 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] は、既定で名前付きインスタンスとしてインストールされます。  
+ このサンプルでは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 名前付きインスタンスに接続するには、ODBC データ ソースの定義を変更し、server\namedinstance 形式でそのインスタンスを指定します。 
+  [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] は、既定で名前付きインスタンスとしてインストールされます。  
   
- 最初の ([!INCLUDE[tsql](../../includes/tsql-md.md)]) コードリストを実行して、サンプルで使用するテーブルを作成します。  
+ 最初の ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) コードリストを実行して、サンプルで使用するテーブルを作成します。  
   
  odbc32.lib を使用して 2 つ目の (C++) コード リストをコンパイルします。 次に、プログラムを実行します。  
   
- 3番目の ([!INCLUDE[tsql](../../includes/tsql-md.md)]) コードリストを実行して、サンプルで使用されているテーブルを削除します。  
+ 3番目の[!INCLUDE[tsql](../../includes/tsql-md.md)]() コードリストを実行して、サンプルによって使用されているテーブルを削除します。  
   
 ```  
 use AdventureWorks  
@@ -187,6 +192,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [Text 列と image 列の管理方法に&#40;関するトピック (ODBC)&#41;](https://msdn.microsoft.com/library/f97333ad-e2ab-4d26-9395-741ba25f2c28)  
+ [Text 列と image 列の管理方法に関するトピック &#40;ODBC&#41;](https://msdn.microsoft.com/library/f97333ad-e2ab-4d26-9395-741ba25f2c28)  
   
   

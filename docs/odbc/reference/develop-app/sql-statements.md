@@ -11,14 +11,14 @@ ms.assetid: 78133ee0-1e2f-4dc8-81f6-3bac8eb21332
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 712644352eeb7ac55af861dfef48292aad0d5adb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68107491"
 ---
 # <a name="sql-statements"></a>SQL ステートメント
-ODBC アプリケーションでは、SQL ステートメントを実行することによってほとんどすべてのデータベースへのアクセスを実行します。 これらのステートメントでは、ハードコーディングまたは実行時に、相互運用可能なやデータ ソースに固有で、構築の形式は、アプリケーションのニーズによって異なります。  
+ODBC アプリケーションでは、SQL ステートメントを実行することで、ほぼすべてのデータベースアクセスが実行されます。 これらのステートメントの形式は、実行時にハードコーディングまたは構築されているか、相互運用可能またはデータソース固有であり、アプリケーションのニーズによって異なります。  
   
  このセクションでは、次のトピックを扱います。  
   

@@ -17,14 +17,14 @@ ms.assetid: 6d2807b0-b861-4583-bcaf-fb0b82e0f2d0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 157e38c2c9c23ff8f7e92af40385b0962c6dcb70
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918074"
 ---
 # <a name="moverecord-method-ado"></a>MoveRecord メソッド (ADO)
-によって表されるエンティティの移動、[レコード](../../../ado/reference/ado-api/record-object-ado.md)別の場所にします。  
+[レコード](../../../ado/reference/ado-api/record-object-ado.md)によって表されるエンティティを別の場所に移動します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,46 +34,46 @@ Record.MoveRecord (Source, Destination, UserName, Password, Options, Async)
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *Source*  
- 任意。 A**文字列**を識別する URL を含む値、**レコード**移動します。 場合*ソース*を省略するか、空の文字列、これによって表されるオブジェクトを指定します**レコード**が移動します。 たとえば場合、**レコード**ファイル、ファイルの内容を表しますがで指定された場所に移動されます*先*します。  
+ *ソース*  
+ 省略可能。 移動する**レコード**を識別する URL を含む**文字列**値です。 *Source*を省略した場合、または空の文字列を指定した場合は、この**レコード**によって表されるオブジェクトが移動されます。 たとえば、**レコード**がファイルを表している場合、ファイルの内容は*Destination*によって指定された場所に移動されます。  
   
- *変換先*  
- 任意。 A**文字列**場所を指定する URL を含む値、*ソース*は移動されます。  
+ *宛先*  
+ 省略可能。 *ソース*を移動する場所を指定する URL を含む**文字列**値です。  
   
- *UserName*  
- 任意。 A**文字列**値が必要な場合へのアクセスを承認するユーザー ID を含む*先*します。  
+ *ユーザー名*  
+ 省略可能。 必要に応じて、*宛先*へのアクセスを承認するユーザー ID を表す**文字列**値です。  
   
- *Password*  
- 任意。 A**文字列**必要な場合は、以下のことを確認するためのパスワードを格納している*UserName*します。  
+ *パスワード*  
+ 省略可能。 必要に応じて*ユーザー名*を確認するパスワードを含む**文字列**。  
   
- *[オプション]*  
- 任意。 A [MoveRecordOptionsEnum](../../../ado/reference/ado-api/moverecordoptionsenum.md)値が既定値は**adMoveUnspecified**します。 このメソッドの動作を指定します。  
+ *オプション*  
+ 省略可能。 既定値が**Admoveunspecified**である[MoveRecordOptionsEnum](../../../ado/reference/ado-api/moverecordoptionsenum.md)値。 このメソッドの動作を指定します。  
   
- *Async*  
- 任意。 A**ブール**値と**True**、この操作を非同期にする必要がありますを指定します。  
+ *Io*  
+ 省略可能。 **ブール**値。 **True**の場合、この操作は非同期であることを指定します。  
   
 ## <a name="return-value"></a>戻り値  
- **文字列**値です。 値では通常、*先*が返されます。 ただし、返される正確な値は、プロバイダーによって異なります。  
+ **文字列**値です。 通常、 *Destination*の値が返されます。 ただし、返される正確な値はプロバイダーに依存します。  
   
-## <a name="remarks"></a>コメント  
- 値*ソース*と*先*することはできませんと同じです。 それ以外の場合、実行時エラーが発生します。 少なくとも、サーバー、パス、およびリソースの名前が異なる必要があります。  
+## <a name="remarks"></a>解説  
+ *Source*と*Destination*の値を同じにすることはできません。それ以外の場合は、実行時エラーが発生します。 少なくともサーバー、パス、およびリソース名が異なる必要があります。  
   
- インターネット、パブリッシング用プロバイダーを使用して移動、ファイルに対しては、このメソッドはそれ以外の場合に指定されていない場合に移動されるファイル内のすべてのハイパー テキスト リンクを更新*オプション*します。 このメソッドは失敗*先*しない限り (たとえば、ファイルまたはディレクトリ)、既存のオブジェクトを識別する**adMoveOverWrite**が指定されて。  
-  
-> [!NOTE]
->  使用して、 **adMoveOverWrite**慎重オプションします。 たとえば、ディレクトリにファイルを移動するときに、このオプションを指定するディレクトリを削除されファイルに置き換えます。  
-  
- 特定の属性、**レコード**オブジェクトなど、 [ParentURL](../../../ado/reference/ado-api/parenturl-property-ado.md)この操作の完了後、プロパティは更新されません。 更新、**レコード**オブジェクトのプロパティを閉じて、**レコード**、もう一度開いて、ファイルまたはディレクトリを移動した場所の URL。  
-  
- この場合**レコード**から取得された、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)、移動したファイルまたはディレクトリの新しい場所がすぐに反映されません、**レコード セット**します。 更新、**レコード セット**を閉じてから再度開くことができます。  
+ インターネット公開プロバイダーを使用して移動されたファイルの場合、このメソッドは、*オプション*で指定されていない限り、移動されるファイル内のすべてのハイパーテキストリンクを更新します。 このメソッドは、 **Admoveoverwrite**が指定されていない限り、 *Destination*が既存のオブジェクト (ファイルやディレクトリなど) を識別する場合に失敗します。  
   
 > [!NOTE]
->  Http スキームを使用して Url が自動的に呼び出さ、 [Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)します。 詳細については、次を参照してください。[絶対と相対 Url](../../../ado/guide/data/absolute-and-relative-urls.md)します。  
+>  **Admoveoverwrite**オプションは慎重に使用してください。 たとえば、ディレクトリにファイルを移動するときにこのオプションを指定すると、ディレクトリが削除され、ファイルに置き換えられます。  
+  
+ [Parenturl](../../../ado/reference/ado-api/parenturl-property-ado.md)プロパティなど、**レコード**オブジェクトの特定の属性は、この操作の完了後に更新されません。 レコードを閉じて**レコードオブジェクトのプロパティを更新****し、ファイル**またはディレクトリが移動された場所の URL で再度開いてください。  
+  
+ この**レコード**が[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)から取得された場合、移動したファイルまたはディレクトリの新しい場所は、**レコードセット**に直ちに反映されません。 レコードセットを閉じてから再度開いて、**レコードセット**を更新します。  
+  
+> [!NOTE]
+>  Http スキームを使用する Url は、[インターネット公開のために Microsoft OLE DB プロバイダー](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)を自動的に呼び出します。 詳細については、「[絶対 url と相対 url](../../../ado/guide/data/absolute-and-relative-urls.md)」を参照してください。  
   
 ## <a name="applies-to"></a>適用対象  
  [Record オブジェクト (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
   
 ## <a name="see-also"></a>参照  
  [Move メソッド (ADO)](../../../ado/reference/ado-api/move-method-ado.md)   
- [MoveFirst、MoveLast、MoveNext、MovePrevious メソッド (ADO)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
+ [MoveFirst、MoveLast、MoveNext、および MovePrevious メソッド (ADO)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
  [MoveFirst、MoveLast、MoveNext、MovePrevious メソッド (RDS)](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)

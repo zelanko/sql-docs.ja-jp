@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5e2ed258caa8019b13ddd8600a5ada2956913977
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105947"
 ---
 # <a name="exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs"></a>Tablix データ領域の柔軟性について (レポート ビルダーおよび SSRS)
@@ -28,7 +28,7 @@ ms.locfileid: "66105947"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="changing-a-table-to-a-matrix"></a>テーブルからマトリックスへの変更  
- 既定のテーブルには、レポート データセットの値が表示される詳細行が含まれています。 テーブルには通常、詳細データをグループ別に整理する行グループが含まれており、各グループに基づいて集計された値が含められます。 テーブルをマトリックスに変更するには、列グループを追加します。 データ領域に行グループと列グループが両方ともある場合は、通常詳細グループを削除します。そうすることによって、グループの集計値のみを表示できます。 詳細については、「 [データ領域でのグループの追加または削除 &#40;レポート ビルダーおよび SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)」を参照してください。  
+ 既定のテーブルには、レポート データセットの値が表示される詳細行が含まれています。 テーブルには通常、詳細データをグループ別に整理する行グループが含まれており、各グループに基づいて集計された値が含められます。 テーブルをマトリックスに変更するには、列グループを追加します。 データ領域に行グループと列グループが両方ともある場合は、通常詳細グループを削除します。そうすることによって、グループの集計値のみを表示できます。 詳細については、「 [&#40;レポートビルダーと SSRS&#41;」の「データ領域でのグループの追加または削除](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)」を参照してください。  
   
  定義上、マトリックスを作成するときに Tablix コーナー セルを追加します。 この領域のセルを結合し、ラベルを追加できます。 詳細については、「[データ領域内のセルの結合 &#40;レポート ビルダーおよび SSRS&#41;](merge-cells-in-a-data-region-report-builder-and-ssrs.md)」を参照してください。  
   

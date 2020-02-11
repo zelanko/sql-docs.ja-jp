@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6e90b37f594bf2dd80963d7acf7357a050a3e290
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62896699"
 ---
 # <a name="tokencount-ssis-expression"></a>TOKENCOUNT (SSIS 式)
@@ -36,7 +36,7 @@ TOKENCOUNT(character_expression, delimiter_string)
 ## <a name="result-types"></a>戻り値の型  
  DT_I4  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  TOKEN 関数には次の解説が適用されます。  
   
 -   区切り記号には 1 つ以上の区切り文字を含めることができます。  

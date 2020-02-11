@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 1f5627a5e35039420725795f53a7fc63d5582ab9
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.openlocfilehash: da725efe691aae60bf9776bbe73f80227067d2e2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73706848"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74200397"
 ---
 # <a name="known-issues-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services での既知の問題
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -211,7 +211,7 @@ Enterprise Edition では、外部スクリプト プロセスを管理するた
 
 `libc++.so` がインストールされていないクリーンな Linux マシンでは、`commonlauncher.so` で `libc++.so` を読み込めないため、Java または外部言語で `sp_execute_external_script` (SPEES) クエリを実行できません。
 
-例:
+次に例を示します。
 
 ```sql
 EXECUTE sp_execute_external_script @language = N'Java'
@@ -259,7 +259,7 @@ R ソリューションに影響する可能性があるその他の既知の問
 
 ### <a name="1-access-denied-warning-when-executing-r-scripts-on-sql-server-in-a-non-default-location"></a>1.既定以外の場所の SQL Server で R スクリプトを実行するときのアクセス拒否警告
 
-SQL Server のインスタンスが既定以外の場所にインストールされている場合 (`Program Files` フォルダーの外部など)、パッケージがインストールされるスクリプトを実行しようとすると、警告 ACCESS_DENIED が発生します。 例:
+SQL Server のインスタンスが既定以外の場所にインストールされている場合 (`Program Files` フォルダーの外部など)、パッケージがインストールされるスクリプトを実行しようとすると、警告 ACCESS_DENIED が発生します。 次に例を示します。
 
 > *`normalizePath(path.expand(path), winslash, mustWork)` 内: path[2]="~ExternalLibraries/R/8/1": アクセスが拒否されました*
 
@@ -403,7 +403,7 @@ R から binary データ型 (R の **raw** データ型) を返すときは、�
 
 この問題が発生した場合は、 `f` の定義内の、通常 `g`が `g` を呼び出す場所より前の任意の場所に、 `f`の定義を組み込むことで問題を回避できます。
 
-例:
+次に例を示します。
 
 ```R
 f <- function(x) { 2*x * 3 }
@@ -590,7 +590,7 @@ SQL Server 2017 累積的な更新プログラム 12 (CU12) 以降では、`sp_e
 
 ### <a name="6-bad-interpreter-error-when-installing-python-packages-with-pip-on-linux"></a>6.Linux で pip を使用して Python パッケージをインストールするときの不正インタープリター エラー 
 
-SQL Server 2019 で **pip** を使用しようとした場合。 例:
+SQL Server 2019 で **pip** を使用しようとした場合。 次に例を示します。
 
 ```bash
 /opt/mssql/mlservices/runtime/python/bin/pip -h
@@ -598,7 +598,7 @@ SQL Server 2019 で **pip** を使用しようとした場合。 例:
 
 次のエラーが表示されます。
 
-> *bash:/opt/mssql/mlservices/runtime/python/bin/pip:/opt/microsoft/mlserver/9.4.7/bin/python/python: 不正インタープリター: ファイルまたはディレクトリが存在しません*
+> *bash:/opt/mssql/mlservices/runtime/python/bin/pip:/opt/microsoft/mlserver/9.4.7/bin/python/python: 不正インタープリター: No such file or directory*
 
 **回避策**
 
@@ -617,7 +617,7 @@ wget 'https://bootstrap.pypa.io/get-pip.py'
 
 ### <a name="7-unable-to-install-python-packages-using-pip-after-installing-sql-server-2019-on-windows"></a>7.SQL Server 2019 を Windows にインストールした後、pip を使用して Python パッケージをインストールできない
 
-Windows に SQL Server 2019 をインストールした後、DOS コマンド ラインから **pip** を使用して python パッケージをインストールしようとすると失敗します。 例:
+Windows に SQL Server 2019 をインストールした後、DOS コマンド ラインから **pip** を使用して python パッケージをインストールしようとすると失敗します。 次に例を示します。
 
 ```bash
 pip install quantfolio
@@ -650,7 +650,7 @@ pip install quantfolio
 
 `libc++abi.so` がインストールされていないクリーンな Linux マシンでは、`sp_execute_external_script` (SPEES) クエリを実行すると、"そのようなファイルやディレクトリはない" というエラーで失敗します。
 
-例:
+次に例を示します。
 
 ```text
 EXEC sp_execute_external_script
@@ -703,12 +703,12 @@ Revolution R Enterprise の既存ライセンスがある場合は、[!INCLUDE[s
 
 一部のプレリリース版の [!INCLUDE[rsql_productname](../includes/rsql-productname-md.md)] には、Revolution Analytics によって作成された Windows 用の R 開発環境が含まれていました。 このツールは提供されなくなっており、サポートされていません。
 
-[!INCLUDE[rsql_productname](../includes/rsql-productname-md.md)] との互換性のため、代わりに Microsoft R Client をインストールすることをお勧めします。 [R Tools for Visual Studio](https://www.visualstudio.com/vs/rtvs/) と [Visual Studio Code](https://code.visualstudio.com/) でも、Microsoft R ソリューションがサポートされています。
+[!INCLUDE[rsql_productname](../includes/rsql-productname-md.md)] との互換性のため、代わりに Microsoft R Client をインストールすることをお勧めします。 [R Tools for Visual Studio](https://marketplace.visualstudio.com/items?itemName=MikhailArkhipov007.RTVS2019) と [Visual Studio Code](https://code.visualstudio.com/) でも、Microsoft R ソリューションがサポートされています。
 
 ### <a name="2-compatibility-issues-with-sqlite-odbc-driver-and-revoscaler"></a>2.SQLite ODBC ドライバーと RevoScaleR に関する互換性の問題
 
 SQLite ODBC ドライバーのリビジョン 0.92 は、RevoScaleR と互換性がありません。 リビジョン 0.88 - 0.91 および 0.93 以降には、互換性があることがわかっています。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 [SQL Server での機械学習のトラブルシューティング](machine-learning-troubleshooting-faq.md)

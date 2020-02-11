@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8fa0411d322e3e16b8fe1bebf6f84fb626b0f82e
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73781501"
 ---
 # <a name="using-cursors-how-to-topics-odbc"></a>カーソルを使用する方法に関するトピック (ODBC)
@@ -27,11 +27,11 @@ ms.locfileid: "73781501"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
--   [カーソル&#40;を使用する ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/use-cursors-odbc.md)  
+-   [ODBC &#40;カーソルの使用&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/use-cursors-odbc.md)  
   
--   [行セットバインド&#40;ODBC を使用する&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/use-rowset-binding-odbc.md)  
+-   [ODBC&#41;&#40;行セットバインドを使用する](../../../relational-databases/native-client-odbc-how-to/cursors/use-rowset-binding-odbc.md)  
   
--   [行セット&#40;のフェッチと更新 ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/fetch-and-update-rowsets-odbc.md)  
+-   [ODBC&#41;&#40;行セットのフェッチと更新](../../../relational-databases/native-client-odbc-how-to/cursors/fetch-and-update-rowsets-odbc.md)  
   
 ## <a name="see-also"></a>参照  
  [ODBC の使用法に関するトピック](../../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  

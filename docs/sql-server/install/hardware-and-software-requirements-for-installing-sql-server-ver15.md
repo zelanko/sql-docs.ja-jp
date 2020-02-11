@@ -44,12 +44,12 @@ helpviewer_keywords:
 ms.assetid: 09bcf20b-0a40-4131-907f-b61479d5e4d8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 88ed55a3c2890864e3e9623f3fa53ca3e747350c
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: aca31d10c030c360dcd82d6c4851df700bc3c4fe
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73536184"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74319048"
 ---
 # <a name="hardware-and-software-requirements-for-installing-sql-server"></a>SQL Server のインストールに必要なハードウェアおよびソフトウェア
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -107,7 +107,7 @@ ms.locfileid: "73536184"
 > [!NOTE]  
 > [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] は x64 プロセッサでのみイントールできます。 X86 プロセッサではインストールできません。  
   
- \* [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) の [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] コンポーネントをインストールする場合の最小メモリ要件は 2 GB の RAM で、[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] の最小メモリ要件とは異なります。 DQS のインストールの詳細については、「 [Install Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)」を参照してください。  
+ \*[!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) の [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] コンポーネントをインストールする場合の最小メモリ要件は 2 GB の RAM で、[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] の最小メモリ要件とは異なります。 DQS のインストールの詳細については、「 [Install Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)」を参照してください。  
 
 **Server Core サポート:**
 
@@ -127,13 +127,16 @@ Server Core への SQL Server のインストールの詳細については、�
   
 
 | SQL Server のエディション:               | Enterprise | Developer | Standard | Web | Express |  
-| :------------------------       | :--------- | :-------- | :------- | :-- | :------ | 
+| :------------------------         | :--------- | :-------- | :------- | :-- | :------ | 
 | Windows Server 2019 Datacenter    |    はい     |    はい    |    はい   | はい |   はい   |
 | Windows Server 2019 Standard      |    はい     |    はい    |    はい   | はい |   はい   |
 | Windows Server 2019 Essentials    |    はい     |    はい    |    はい   | はい |   はい   |
 | Windows Server 2016 Datacenter    |    はい     |    はい    |    はい   | はい |   はい   |
 | Windows Server 2016 Standard      |    はい     |    はい    |    はい   | はい |   はい   |
 | Windows Server 2016 Essentials    |    はい     |    はい    |    はい   | はい |   はい   |
+| Windows 10 Enterprise             |    いいえ      |    はい    |    はい   | いいえ  |   はい   |
+| Windows 10 Professional           |    いいえ      |    はい    |    はい   | いいえ  |   はい   |
+| Windows 10 Home                   |    いいえ      |    はい    |    はい   | いいえ  |   はい   |
 | &nbsp; | &nbsp; |
 
 

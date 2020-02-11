@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: fd62413ec8542aba9f3973d0e8483cb9c5c9128a
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401371"
 ---
 # <a name="apply-analytics-platform-system-hotfixes"></a>Analytics Platform System の修正プログラムの適用
 この記事では、Analytics Platform システムソフトウェアに修正プログラムを適用する方法について説明します。  
   
-## <a name="before-you-begin"></a>開始する前に  
+## <a name="before-you-begin"></a>はじめに  
   
 > [!WARNING]  
 > アプライアンスまたはアプライアンスのコンポーネントがダウンしているか、またはフェールオーバーされた状態である場合は、Analytics Platform System の修正プログラムを適用しないようにしてください。 その場合は、サポートにお問い合わせください。  

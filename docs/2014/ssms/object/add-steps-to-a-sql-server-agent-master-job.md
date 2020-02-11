@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 18c4af67230726d831c2c192a782135f9afe3743
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68188308"
 ---
 # <a name="add-steps-to-a-sql-server-agent-master-job"></a>Add Steps to a SQL Server Agent Master Job
@@ -26,7 +26,7 @@ ms.locfileid: "68188308"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **以下を使用して SQL Server エージェントのマスター ジョブにステップを追加するには:**  
   
@@ -56,7 +56,7 @@ ms.locfileid: "68188308"
   
 4.  ステップを追加するジョブを右クリックし、 **[プロパティ]** をクリックします。  
   
-5.  **[ジョブのプロパティ -** _<ジョブ名>]_ ダイアログ ボックスで、 **[ページの選択]** の **[ステップ]** を選択します。 このページで使用可能なオプションの詳細については、次を参照してください。[ジョブのプロパティ: 新しいジョブ&#40;手順ページ&#41;](../agent/job-properties-new-job-steps-page.md)します。  
+5.  **[ジョブのプロパティ -** _<ジョブ名>]_ ダイアログ ボックスで、 **[ページの選択]** の **[ステップ]** を選択します。 このページで使用可能なオプションの詳細については、「[ジョブのプロパティ: 新しいジョブ &#40;ステップページ&#41;](../agent/job-properties-new-job-steps-page.md)」を参照してください。  
 
 6.  完了したら、 **[OK]** をクリックします。  
   
@@ -86,6 +86,6 @@ ms.locfileid: "68188308"
     GO  
     ```  
   
- 詳細については、次を参照してください。 [sp_add_jobstep &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)します。  
+ 詳細については、「 [sp_add_jobstep &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)」を参照してください。  
   
   

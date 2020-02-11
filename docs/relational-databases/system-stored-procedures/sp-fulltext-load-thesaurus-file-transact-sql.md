@@ -20,10 +20,10 @@ ms.assetid: 73a309c3-6d22-42dc-a6fe-8a63747aa2e4
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 96fb5c880346c534c3b956e577f15622e598d48c
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72305212"
 ---
 # <a name="sp_fulltext_load_thesaurus_file-transact-sql"></a>sp_fulltext_load_thesaurus_file (Transact-SQL)
@@ -42,15 +42,15 @@ sys.sp_fulltext_load_thesaurus_file lcid [ , @loadOnlyIfNotLoaded  = action ]
   
 ## <a name="arguments"></a>引数  
  *lcid*  
- 類義語辞典 XML 定義を作成する言語のロケール識別子 (LCID) をマッピングする整数。 サーバーインスタンスで使用できる言語の lcid を取得するには、 [fulltext_languages &#40;transact-sql&#41; ](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)カタログビューを使用します。  
+ 類義語辞典 XML 定義を作成する言語のロケール識別子 (LCID) をマッピングする整数。 サーバーインスタンスで使用できる言語の Lcid を取得するには、 [fulltext_languages &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)カタログビューを使用します。  
   
- **\@loadOnlyIfNotLoaded** = *アクション*  
+ **\@loadonlyifnotloaded** = *アクション*  
  類義語辞典ファイルが既に読み込まれている場合でも、内部の類義語辞典テーブルに類義語辞典ファイルを読み込むかどうかを指定します。 *アクション*は次のいずれかです。  
   
-|値|定義|  
+|Value|定義|  
 |-----------|----------------|  
-|**0**|既に読み込まれているかどうかにかかわらず、類義語辞典ファイルを読み込みます。 これは、 **sp_fulltext_load_thesaurus_file**の既定の動作です。|  
-|1|類義語辞典ファイルがまだ読み込まれていない場合にのみ、類義語辞典ファイルを読み込みます。|  
+|**0**|既に読み込まれているかどうかにかかわらず、類義語辞典ファイルを読み込みます。 これは**sp_fulltext_load_thesaurus_file**の既定の動作です。|  
+|1 で保護されたプロセスとして起動されました|類義語辞典ファイルがまだ読み込まれていない場合にのみ、類義語辞典ファイルを読み込みます。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  なし  
@@ -58,17 +58,17 @@ sys.sp_fulltext_load_thesaurus_file lcid [ , @loadOnlyIfNotLoaded  = action ]
 ## <a name="result-sets"></a>結果セット  
  なし  
   
-## <a name="remarks"></a>コメント  
- 類義語辞典ファイルは、類義語辞典を使用するフルテキスト クエリによって自動的に読み込まれます。 フルテキストクエリのパフォーマンスへの影響を最初に回避するには、 **sp_fulltext_load_thesaurus_file**を実行することをお勧めします。  
+## <a name="remarks"></a>解説  
+ 類義語辞典ファイルは、類義語辞典を使用するフルテキスト クエリによって自動的に読み込まれます。 フルテキストクエリのパフォーマンスへの影響を初めて回避するには、 **sp_fulltext_load_thesaurus_file**を実行することをお勧めします。  
   
  フルテキスト検索に登録されている言語の一覧を更新するには、 [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)'**update_languages**' を使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
- **Sp_fulltext_load_thesaurus_file**ストアドプロシージャを実行できるのは、固定サーバーロール**sysadmin**またはシステム管理者のメンバーだけです。  
+ **Sp_fulltext_load_thesaurus_file**ストアドプロシージャを実行できるのは、 **sysadmin**固定サーバーロールのメンバー、またはシステム管理者だけです。  
   
  類義語辞典ファイルを更新、変更、または削除できるのはシステム管理者だけです。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-load-a-thesaurus-file-even-if-it-is-already-loaded"></a>A. 類義語辞典ファイルが既に読み込まれている場合でも類義語辞典ファイルを読み込む  
  次の例では、英語の類義語辞典ファイルを解析して読み込みます。  
@@ -84,8 +84,8 @@ EXEC sys.sp_fulltext_load_thesaurus_file 1033;
 EXEC sys.sp_fulltext_load_thesaurus_file 1025, @loadOnlyIfNotLoaded = 1;
 ```  
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[FULLTEXTSERVICEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextserviceproperty-transact-sql.md)  
-[システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+[FULLTEXTSERVICEPROPERTY &#40;Transact-sql&#41;](../../t-sql/functions/fulltextserviceproperty-transact-sql.md)  
+[システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
 [フルテキスト検索に使用する類義語辞典ファイルの構成と管理](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)

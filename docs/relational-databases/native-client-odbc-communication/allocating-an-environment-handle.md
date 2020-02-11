@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: eae9e11006a8a832523a7f72bdade6e943e57f50
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73784739"
 ---
 # <a name="allocating-an-environment-handle"></a>環境ハンドルの割り当て
@@ -31,6 +31,6 @@ ms.locfileid: "73784739"
  環境ハンドルを割り当てたら、使用する ODBC 関数呼び出しのバージョンを指定する環境属性を設定する必要があります。 ODBC 3 を使用する場合はです。*x*関数は、*属性*パラメーターを SQL_ATTR_ODBC_VERSION に設定し、 *valueptr*を SQL_OV_ODBC3 に設定して、 [SQLSetEnvAttr](../../relational-databases/native-client-odbc-api/sqlsetenvattr.md)を呼び出します。  
   
 ## <a name="see-also"></a>参照  
- [SQL Server &#40;ODBC との通信&#41;](../../relational-databases/native-client-odbc-communication/communicating-with-sql-server-odbc.md)  
+ [ODBC&#41;&#40;SQL Server との通信](../../relational-databases/native-client-odbc-communication/communicating-with-sql-server-odbc.md)  
   
   

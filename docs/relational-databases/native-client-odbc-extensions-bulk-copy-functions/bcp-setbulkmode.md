@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 46da93307d28b5be6aec3fbcbff31322e96ea634
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73782396"
 ---
 # <a name="bcp_setbulkmode"></a>bcp_setbulkmode
@@ -43,7 +43,7 @@ RETCODE bcp_setbulkmode (
  *hdbc*  
  一括コピーが有効な ODBC 接続ハンドルです。  
   
- *property*  
+ *"*  
  BYTE 型の定数です。 定数の一覧については、「解説」の表を参照してください。  
   
  *pField*  
@@ -66,9 +66,10 @@ RETCODE bcp_setbulkmode (
   
  bcp_setbulkmode は[bcp_setcolfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setcolfmt.md)と[bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)を使用する代わりに、関数呼び出しごとに1つの列の形式を指定できるようにするためのものです。  
   
- *property* パラメーターとして使用できる定数の一覧を次の表に示します。  
+ 
+  *property* パラメーターとして使用できる定数の一覧を次の表に示します。  
   
-|プロパティ|説明|  
+|プロパティ|[説明]|  
 |--------------|-----------------|  
 |BCP_OUT_CHARACTER_MODE|文字出力モードを指定します。<br /><br /> BCP の-c オプションに対応しています。EXE を実行し、 **BCP_FMT_TYPE**プロパティを**sqlcharacter**に設定して bcp_setcolfmt します。|  
 |BCP_OUT_WIDE_CHARACTER_MODE|Unicode 出力モードを指定します。<br /><br /> BCP の-w オプションに対応しています。EXE と bcp_setcolfmt **BCP_FMT_TYPE**プロパティが**sqlnchar**に設定されています。|  
