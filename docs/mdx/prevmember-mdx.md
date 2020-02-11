@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: e5aa91ac2ab5b4056a693535c19a9e250a865dd0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68020665"
 ---
 # <a name="prevmember-mdx"></a>PrevMember (MDX)
 
 
-  指定したメンバーを含むレベルで、前のメンバーを返します。  
+  指定されたメンバーを含むレベルの前のメンバーを返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -28,14 +28,14 @@ Member_Expression.PrevMember
 ```  
   
 ## <a name="arguments"></a>引数  
- *メンバー式*  
+ *Member_Expression*  
  メンバーを 1 つ返す有効な多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>コメント  
- **PrevMember**関数は、指定されたメンバーと同じレベルに前のメンバーを返します。  
+## <a name="remarks"></a>解説  
+ **Prevmember**関数は、指定されたメンバーと同じレベルにある前のメンバーを返します。  
   
 ## <a name="example"></a>例  
- 次の例では、簡単なクエリを使用して、 **PrevMember**行軸上の現在のメンバーの直前のメンバーの名前を表示する関数。  
+ 次の例は、 **prevmember**関数を使用して、rows 軸の現在のメンバーの直前にメンバーの名前を表示する簡単なクエリを示しています。  
   
  `WITH MEMBER MEASURES.PREVMEMBERDEMO AS`  
   
@@ -47,7 +47,7 @@ Member_Expression.PrevMember
   
  `FROM [Adventure Works]`  
   
- 次の例では、ユーザーが選択した State-province メンバー値に基づいて集計関数を使用して評価前の期間にわたって売上を辞退再販業者の数を返します。 **Hierarchize**と**DrillDownLevel**関数を使用して、Product ディメンションに製品カテゴリに関して減少した売上の値を返します。 **PrevMember**関数を使用して、前の期と現在の期間を比較します。  
+ 次の例では、 Aggregate 関数を使用して評価された、ユーザー選択の State-Province メンバー値に基づいて、1 つ前の期よりも売上が減少した再販業者の数を返します。 Product ディメンションの製品カテゴリに対して、減少した売上の値を返すには、 **Hierarchize**および**ドリルダウンレベル**関数を使用します。 **Prevmember**関数は、現在の期間と前の期間を比較するために使用されます。  
   
 ```  
 WITH MEMBER Measures.[Declining Reseller Sales] AS   
@@ -75,7 +75,7 @@ WHERE ([Geography].[State-Province].x,
     [Measures].[Declining Reseller Sales])  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>参照  
+ [Mdx 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

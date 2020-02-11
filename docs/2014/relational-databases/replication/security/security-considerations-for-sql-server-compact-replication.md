@@ -13,17 +13,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cf96d8118d35fab87e50f1a4237bafcb9b586c2e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62666866"
 ---
 # <a name="security-considerations-for-sql-server-compact-replication"></a>SQL Server Compact レプリケーションのセキュリティに関する注意点
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベース エンジンのインスタンスと [!INCLUDE[ssEW](../../../includes/ssew-md.md)] との間の接続をセキュリティで保護するには、Microsoft インターネット インフォメーション サービス (IIS) と [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の両方のセキュリティを正しく構成しておく必要があります。  
+  データベースエンジンのインスタンスとの[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]間の接続[!INCLUDE[ssEW](../../../includes/ssew-md.md)]をセキュリティで保護するには、Microsoft インターネットインフォメーションサービス (IIS [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) との両方のセキュリティを適切に構成する必要があります。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server レプリケーションのセキュリティ](view-and-modify-replication-security-settings.md)   
- [レプリケーション セキュリティの推奨事項](replication-security-best-practices.md)  
+ [レプリケーションのセキュリティに関するベストプラクティス](replication-security-best-practices.md)  
   
   

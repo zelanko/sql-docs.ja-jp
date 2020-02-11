@@ -1,5 +1,5 @@
 ---
-title: レベルのコレクション (ADO MD) |Microsoft Docs
+title: Levels コレクション (ADO MD) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,29 +17,29 @@ ms.assetid: fed8684a-b428-4ee4-8f8d-928abe4ad9ad
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 68b0f56de12ade676024933c3cfdbfd834f5cc46
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67949573"
 ---
 # <a name="levels-collection-ado-md"></a>Levels コレクション (ADO MD)
-含まれています、[レベル](../../../ado/reference/ado-md-api/level-object-ado-md.md)階層を構成するオブジェクト。  
+階層を構成する[レベル](../../../ado/reference/ado-md-api/level-object-ado-md.md)オブジェクトを格納します。  
   
-## <a name="remarks"></a>コメント  
- **レベル**は、標準の ADO のコレクションです。 コレクションのメソッドとプロパティを使用するには、次の操作を行うことができます。  
+## <a name="remarks"></a>解説  
+ **レベル**は、標準の ADO コレクションです。 コレクションのプロパティとメソッドを使用すると、次の操作を実行できます。  
   
--   使用して、コレクション内のオブジェクトの数を取得、[カウント](../../../ado/reference/ado-api/count-property-ado.md)プロパティ。  
+-   [Count](../../../ado/reference/ado-api/count-property-ado.md)プロパティを使用して、コレクション内のオブジェクトの数を取得します。  
   
--   既定値は、コレクションからオブジェクトを返す[項目](../../../ado/reference/ado-api/item-property-ado.md)プロパティ。  
+-   既定の[Item](../../../ado/reference/ado-api/item-property-ado.md)プロパティを使用して、コレクションからオブジェクトを返します。  
   
--   コレクション内のプロバイダーからオブジェクトを更新、[更新](../../../ado/reference/ado-api/refresh-method-ado.md)メソッド。  
+-   [更新](../../../ado/reference/ado-api/refresh-method-ado.md)メソッドを使用して、プロバイダーからコレクション内のオブジェクトを更新します。  
   
- このセクションには、次のトピックが含まれています。  
+ ここでは、次のトピックについて説明します。  
   
 -   [プロパティ、メソッド、およびイベント](../../../ado/reference/ado-md-api/levels-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [カタログの例 (VB)](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
  [Hierarchy オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)   
  [Level オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/level-object-ado-md.md)

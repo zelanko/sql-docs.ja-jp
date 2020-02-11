@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1589f171fd8d402572408186a10b3e6f4ac97982
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107584"
 ---
 # <a name="shared-dataset-design-view-report-builder"></a>共有データセット デザイン ビュー (レポート ビルダー)
@@ -22,21 +22,21 @@ ms.locfileid: "66107584"
   
  ![rs_SharedDatasetDesignMode](../media/rs-shareddatasetdesignmode.gif "rs_SharedDatasetDesignMode")  
   
- レポート内のデータの使用方法の詳細については、次を参照してください。[レポートへのデータの追加&#40;レポート ビルダーおよび SSRS&#41;](../report-data/report-datasets-ssrs.md)します。  
+ レポート内のデータの操作の詳細については、「[レポートにデータを追加する &#40;レポートビルダーと SSRS&#41;](../report-data/report-datasets-ssrs.md)」を参照してください。  
   
-##  <a name="Ribbon"></a> リボン  
- リボンを使用すると、タスクの実行に必要なコマンドを簡単に見つけることができます。 コマンドは、接続、データセット、およびクエリ デザイナーの各論理グループに分類されています。  
+##  <a name="Ribbon"></a>リボン  
+ リボンを使用すると、タスクの実行に必要なコマンドを簡単に見つけることができます。 コマンドは、接続、データセット、クエリ デザイナーの各論理グループに分類されています。  
   
 ### <a name="connection"></a>接続  
  レポートで共有データ ソースを選択するか、レポート サーバーで共有データ ソースを参照するには、接続グループの **[選択]** ボタンを使用します。  
   
 > [!NOTE]  
->  共有データセットは共有データ ソースに基づく必要があります。 必要なデータ ソースを使用できない場合は、レポート サーバー上にデータ ソースを作成する必要があります。 詳細については、次を参照してください。[作成、削除、または共有データ ソースを変更&#40;レポート マネージャー&#41; ](../create-delete-or-modify-a-shared-data-source-report-manager.md)の Reporting Services のドキュメントで[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][オンライン ブックの「](https://go.microsoft.com/fwlink/?linkid=121312)します。  
+>  共有データセットは共有データ ソースに基づく必要があります。 必要なデータ ソースを使用できない場合は、レポート サーバー上にデータ ソースを作成する必要があります。 詳細については、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][オンラインブック](https://go.microsoft.com/fwlink/?linkid=121312)の Reporting Services のドキュメントの「[共有データソースを作成、削除、または変更する &#40;レポートマネージャー&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md) 」を参照してください。  
   
  詳細については、「 [データ接続、データ ソース、および接続文字列](../data-connections-data-sources-and-connection-strings-in-report-builder.md)」を参照してください。  
   
 ### <a name="dataset"></a>データセット  
- 共有データセット プロパティを設定するには、 **[オプションの設定]** ボタンを使用します。 その一部を次に示します。  
+ 共有データセット プロパティを設定するには、 **[オプションの設定]** ボタンを使用します。 コーディネートは次のとおりです。  
   
 -   フィールド。 フィールド コレクションのフィールドを追加または編集できます。  
   
@@ -52,27 +52,27 @@ ms.locfileid: "66107584"
   
  詳細については、「 [レポート埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)と呼ばれます。  
   
- キャッシュ更新計画の詳細については、次を参照してください。[共有データセットのキャッシュ&#40;SSRS&#41; ](../report-server/cache-shared-datasets-ssrs.md)の Reporting Services のドキュメントで[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][オンライン ブックの「](https://go.microsoft.com/fwlink/?linkid=121312)します。  
+ キャッシュ更新計画の詳細については、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [オンラインブック](https://go.microsoft.com/fwlink/?linkid=121312)の Reporting Services のドキュメントの「[共有データセット &#40;SSRS&#41;をキャッシュ](../report-server/cache-shared-datasets-ssrs.md)する」を参照してください。  
   
 ### <a name="query-designer"></a>[クエリ デザイナー]  
  クエリ デザイナー ツール バーを使用すると、データ接続から取得するデータを指定するクエリを作成できます。 データ接続のデータ ソースの種類に関連付けられているクエリ デザイナーによって、表示されるツール バーが異なります。  
   
- 詳細については、データ ソースの種類に対応するトピックを参照してください[外部データ ソースからのデータの追加&#40;SSRS&#41; ](../report-data/add-data-from-external-data-sources-ssrs.md)と[クエリ デザイナー&#40;レポート ビルダー&#41; ](../query-designers-report-builder.md) .  
+ 詳細については、「[[外部データソースからのデータの追加] &#40;SSRS&#41;](../report-data/add-data-from-external-data-sources-ssrs.md) 」および「[クエリデザイナー &#40;レポートビルダー&#41;](../query-designers-report-builder.md)」のデータソースの種類に対応するトピックを参照してください。  
   
 
   
-##  <a name="DesignSurface"></a> クエリ デザイナー画面  
+##  <a name="DesignSurface"></a>クエリデザイナー画面  
  クエリ デザイナーを使用すると、外部データ ソースに対して必要な構文でクエリを作成できます。  
   
  一部のデータ ソースの種類ではグラフィカル クエリ デザイナーが提供されます。グラフィカル クエリ デザイナーを使用すると、外部データ ソースのメタデータを検索できます。 メタデータ ペインからクエリ デザイン画面に名前を対話的にドラッグすることも、使用する名前を対話的に選択することもできます。  
   
  一部のデータ ソースの種類では、テキスト ベースのクエリ デザイナーがサポートされています。テキスト ベースのクエリ デザイナーを使用すると、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]などの他のツールで作成したクエリを貼り付けることができます。  
   
- 外部データ ソースに対して使用できるクエリに関しては、データ ソースの種類ごとに特定の要件があります。 詳細については、データ ソースの種類に対応するトピックを参照してください[外部データ ソースからのデータの追加&#40;SSRS&#41; ](../report-data/add-data-from-external-data-sources-ssrs.md)と[Reporting Services でサポートされるデータ ソース&#40;SSRS&#41; 。](../create-deploy-and-manage-mobile-and-paginated-reports.md)の Reporting Services のドキュメントで[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][オンライン ブックの「](https://go.microsoft.com/fwlink/?linkid=121312)します。  
+ 外部データ ソースに対して使用できるクエリに関しては、データ ソースの種類ごとに特定の要件があります。 詳細については、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [オンラインブック](https://go.microsoft.com/fwlink/?linkid=121312)の&#41;のドキュメントで、「[外部データソースのデータを追加する &#40;ssrs&#41;](../report-data/add-data-from-external-data-sources-ssrs.md) 」および「 [Reporting Services &#40;ssrs Reporting Services でサポートされるデータ](../create-deploy-and-manage-mobile-and-paginated-reports.md)ソース」のデータソースの種類に対応するトピックを参照してください。  
   
 
   
-##  <a name="Results"></a> クエリ結果の表示  
+##  <a name="Results"></a>クエリ結果の表示  
  レポートの処理時には、共有データセット デザイン ビューで作成したクエリに基づいて、データ接続からデータが取得されます。  
   
  クエリを実行してデータ接続からサンプル データを表示し、期待した種類のデータが返されることを確認します。 結果セットの列は、データ接続のデータ スキーマのメタデータに基づいています。 列名がデータセット フィールド コレクションになります。 クエリの結果セットに示されるデータ値は、デザイン時のデータです。 共有データセットを共有データセット定義としてレポート サーバーに保存した後は、クエリ テキストのみが保存されます。 クエリの結果セットのデータは保存されません。  
@@ -86,18 +86,18 @@ ms.locfileid: "66107584"
   
  レポートにパラメーターが含まれている場合は、すべてのパラメーターに既定値があるときにのみレポートを自動的に実行できます。 パラメーターに既定値がない場合にレポートを実行するときは、パラメーターの値を選択してから、 **[実行]** タブの **[レポートの表示]** をクリックする必要があります。  
   
- 詳細については、「 [レポート パラメーター (レポート ビルダーおよびレポート デザイナー)](../report-design/report-parameters-report-builder-and-report-designer.md)」を参照してください。  
+ 詳細については、「 [レポート パラメーター (レポート ビルダーおよびレポート デザイナー)](../report-design/report-parameters-report-builder-and-report-designer.md)にあります。  
   
 
   
-##  <a name="Save"></a> 共有データセットの保存  
+##  <a name="Save"></a>共有データセットを保存しています  
  作成したクエリを保存するには、 **レポート ビルダー** のボタンの **[保存]** または **[名前を付けて保存]** をクリックします。 レポート サーバー上の適切なフォルダーに移動し、共有データセット定義を保存します。 レポート サーバーに保存しないと、共有データセットを他のユーザーが使用することはできません。  
   
 
   
 ## <a name="see-also"></a>参照  
- [レポートにデータを追加&#40;レポート ビルダーおよび SSRS&#41;](../report-data/report-datasets-ssrs.md)   
- [データのフィルター、グループ化、および並べ替え &#40;レポート ビルダーおよび SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [レポート パラメーター (レポート ビルダーおよびレポート デザイナー)](../report-design/report-parameters-report-builder-and-report-designer.md)  
+ [レポート &#40;レポートビルダーおよび SSRS&#41;にデータを追加する](../report-data/report-datasets-ssrs.md)   
+ [データのフィルター、グループ化、および並べ替え (レポート ビルダーおよび SSRS)](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [レポート パラメーター &#40;レポート ビルダーおよびレポート デザイナー&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)  
   
   

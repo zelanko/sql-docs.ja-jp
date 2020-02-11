@@ -1,5 +1,5 @@
 ---
-title: sys.dm_pdw_nodes_exec_query_profiles (Transact-sql) |Microsoft Docs
+title: dm_pdw_nodes_exec_query_profiles (Transact-sql) |Microsoft Docs
 description: クエリの実行中にリアルタイムのデータウェアハウスのクエリの進行状況を監視するために使用できる動的管理ビュー。
 ms.custom: ''
 ms.date: 10/14/2019
@@ -14,36 +14,36 @@ author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: 7237e7f7b49916e09f4a8c5cab0d7d49486cb971
-ms.sourcegitcommit: af6f66cc3603b785a7d2d73d7338961a5c76c793
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73145657"
 ---
-# <a name="sysdm_pdw_nodes_exec_query_profiles-transact-sql"></a>sys.dm_pdw_nodes_exec_query_profiles (Transact-sql)
+# <a name="sysdm_pdw_nodes_exec_query_profiles-transact-sql"></a>dm_pdw_nodes_exec_query_profiles (Transact-sql)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
 クエリの実行中にリアルタイムのデータウェアハウスのクエリの進行状況を監視します。   
   
 ## <a name="table-returned"></a>返されたテーブル  
-返されるカウンターは、スレッドごとの演算子ごとになります。 結果は動的であり、クエリの終了時にのみ出力を作成する `SET STATISTICS XML ON` などの既存のオプションの結果とは一致しません。  
+返されるカウンターは、スレッドごとの演算子ごとになります。 結果は動的であり、クエリの終了時にのみ出力を作成`SET STATISTICS XML ON`するなど、既存のオプションの結果とは一致しません。  
   
-|列名|データ型|Description|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
 |pdw_node_id|**int**|ノードに関連付けられている一意の数値 ID。|
 |session_id|**smallint**|このクエリが実行されるセッションを識別します。 dm_exec_sessions.session_id を参照します。|  
-|request_id|**int**|ターゲット要求を識別します。 Dm_exec_sessions request_id を参照します。|  
-|sql_handle|**varbinary(64)**|クエリが含まれているバッチまたはストアドプロシージャを一意に識別するトークンです。 Dm_exec_query_stats を参照します。|  
-|plan_handle|**varbinary(64)**|は、実行され、そのプランがプランキャッシュに存在するか、現在実行中のバッチのクエリ実行プランを一意に識別するトークンです。 Dm_exec_query_stats plan_handle を参照します。|  
-|physical_operator_name|**nvarchar (256)**|物理操作名。|  
+|request_id|**int**|ターゲット要求を識別します。 Dm_exec_sessions を参照しています。 request_id。|  
+|sql_handle|**varbinary (64)**|クエリが含まれているバッチまたはストアドプロシージャを一意に識別するトークンです。 Dm_exec_query_stats を参照しています。 sql_handle。|  
+|plan_handle|**varbinary (64)**|は、実行され、そのプランがプランキャッシュに存在するか、現在実行中のバッチのクエリ実行プランを一意に識別するトークンです。 Dm_exec_query_stats を参照しています。 plan_handle。|  
+|physical_operator_name|**nvarchar(256)**|物理操作名。|  
 |node_id|**int**|クエリ ツリー内の演算子ノードを識別します。|  
 |thread_id|**int**|同じクエリ演算子ノードに属している (並列クエリの) スレッドを識別します。|  
-|task_address|**varbinary (8)**|このスレッドが使用している SQLOS タスクを識別します。 Dm_os_tasks task_address を参照します。|  
+|task_address|**varbinary (8)**|このスレッドが使用している SQLOS タスクを識別します。 Dm_os_tasks を参照しています。 task_address。|  
 |row_count|**bigint**|これまでに演算子によって返された行の数。|  
 |rewind_count|**bigint**|これまでの巻き戻しの数。|  
 |rebind_count|**bigint**|これまでの再バインドの数。|  
 |end_of_scan_count|**bigint**|これまでのスキャンの終了の数。|  
-|estimate_row_count|**bigint**|予測行数。 Estimated_row_count を実際の row_count と比較すると便利な場合があります。|  
+|estimate_row_count|**bigint**|予測行数。 実際の row_count に estimated_row_count と比較すると便利な場合があります。|  
 |first_active_time|**bigint**|演算子が最初に呼び出されたときの時間 (ミリ秒単位)。|  
 |last_active_time|**bigint**|演算子が最後に呼び出された時刻 (ミリ秒単位)。|  
 |open_time|**bigint**|開いたときのタイムスタンプ (ミリ秒単位)。|  
@@ -66,17 +66,17 @@ ms.locfileid: "73145657"
 |segment_read_count|**int**|これまでのセグメント先行読み取りの数。|  
 |segment_skip_count|**int**|これまでにスキップされたセグメントの数。| 
 |actual_read_row_count|**bigint**|残存述語が適用される前に演算子によって読み取られた行の数。| 
-|estimated_read_row_count|**bigint**|**適用対象:** [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1 以降。 <br/>残存述語が適用される前に、演算子によって読み取られると推定される行の数。|  
+|estimated_read_row_count|**bigint**|**適用対象:**[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1 以降。 <br/>残存述語が適用される前に、演算子によって読み取られると推定される行の数。|  
   
-## <a name="remarks"></a>備考  
-[sys.dm_exec_query_profiles](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql?view=sql-server-ver15)でも同じ解説が適用されます。  
+## <a name="remarks"></a>解説  
+[Dm_exec_query_profiles](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql?view=sql-server-ver15)適用される同じコメント。  
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>アクセス許可  
  サーバーに対する `VIEW SERVER STATE` 権限が必要です。  
 
 ## <a name="see-also"></a>参照  
- [SQL Data Warehouse および並列データウェアハウスの動的管理&#40;ビュー transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+ [SQL Data Warehouse および並列データウェアハウスの動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
    
 
  ## <a name="next-steps"></a>次のステップ
- 開発のヒントについては、「 [SQL Data Warehouse 開発の概要](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-develop)」を参照してください。
+ 開発に関するその他のヒントについては、[SQL Data Warehouse の開発の概要](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-develop)に関する記事をご覧ください。

@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 917e41f6053aa499c7d3d7ca51a32b033591bdc1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084297"
 ---
 # <a name="linear-regression-model-query-examples"></a>線形回帰モデルのクエリ例
@@ -29,13 +29,13 @@ ms.locfileid: "66084297"
 > [!NOTE]  
 >  線形回帰アルゴリズムは、Microsoft デシジョン ツリー アルゴリズムの特殊なケースに基づいているため、これと多くの類似点があります。また、連続する予測可能属性を使用する一部のデシジョン ツリーには、回帰式を含めることができます。 詳細については、「 [Microsoft デシジョン ツリー アルゴリズム テクニカル リファレンス](microsoft-decision-trees-algorithm-technical-reference.md)」を参照してください。  
   
- **コンテンツ クエリ**  
+ **コンテンツクエリ**  
   
- [データ マイニング スキーマ行セットを使用してモデルに対して使用されたパラメーターを特定する](#bkmk_Query1)  
+ [データマイニングスキーマ行セットを使用してモデルに使用するパラメーターを特定する](#bkmk_Query1)  
   
  [DMX を使用してモデルの回帰式を取得する](#bkmk_Query2)  
   
- [モデルの係数のみを取得する](#bkmk_Query3)  
+ [モデルの係数のみを返す](#bkmk_Query3)  
   
  **予測クエリ**  
   
@@ -43,12 +43,12 @@ ms.locfileid: "66084297"
   
  [回帰モデルで予測関数を使用する](#bkmk_Query5)  
   
-##  <a name="bkmk_top"></a> 線形回帰モデルに関する情報の入手  
- 線形回帰モデルの構造は非常に単純であり、マイニング モデルではデータを単一のノードとして表現されます。このノードは回帰式を定義します。 詳細については、「[ロジスティック回帰モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-logistic-regression-models.md)」を参照してください。  
+##  <a name="bkmk_top"></a>線形回帰モデルに関する情報の検索  
+ 線形回帰モデルの構造は非常に単純であり、マイニング モデルではデータを単一のノードとして表現されます。このノードは回帰式を定義します。 詳細については、「 [ロジスティック回帰モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)](mining-model-content-for-logistic-regression-models.md)」を参照してください。  
   
- [トップに戻る](#bkmk_top)  
+ [先頭に戻る](#bkmk_top)  
   
-###  <a name="bkmk_Query1"></a> サンプル クエリ 1:データ マイニング スキーマ行セットを使用してモデルに使用されるパラメーターを確認するには  
+###  <a name="bkmk_Query1"></a>サンプルクエリ 1: データマイニングスキーマ行セットを使用してモデルに使用されるパラメーターを特定する  
  データ マイニング スキーマ行セットに対してクエリを実行すると、モデルに関するメタデータを取得できます。 このメタデータには、モデルが作成された日時、モデルが最後に処理された日時、モデルの基になるマイニング構造の名前、予測可能な属性として使用されている列の名前などが含まれます。 モデルが最初に作成されたときに使用されたパラメーターを取得することもできます。  
   
 ```  
@@ -66,9 +66,9 @@ WHERE MODEL_NAME = 'TM_PredictIncome'
 > [!NOTE]  
 >  パラメーター設定 "`FORCE_REGRESSOR =` " は、FORCE_REGRESSOR パラメーターの現在の値が NULL であることを示します。  
   
- [トップに戻る](#bkmk_top)  
+ [先頭に戻る](#bkmk_top)  
   
-###  <a name="bkmk_Query2"></a> サンプル クエリ 2:モデルの回帰式を取得します。  
+###  <a name="bkmk_Query2"></a>サンプルクエリ 2: モデルの回帰式を取得する  
  次のクエリでは、「 [Basic Data Mining Tutorial](../../tutorials/basic-data-mining-tutorial.md)」で使用したものと同じ Targeted Mailing データ ソースを使用して作成された線形回帰モデルのマイニング モデル コンテンツを返します。 このモデルでは、年齢に基づいて顧客の収入を予測します。  
   
  このクエリは、回帰式を含むノードのコンテンツを返します。 各変数と係数は、入れ子になった NODE_DISTRIBUTION テーブルの個別の行に保存されます。 完全な回帰式を表示する場合は、 [Microsoft ツリー ビューアー](browse-a-model-using-the-microsoft-tree-viewer.md)を使用します。 **[(すべて)]** ノードをクリックして **[マイニング凡例]** を開くと表示されます。  
@@ -79,13 +79,14 @@ FROM LR_PredictIncome.CONTENT
 ```  
   
 > [!NOTE]  
->  `SELECT <column name> from NODE_DISTRIBUTION`のようなクエリを使用して入れ子になったテーブルの個々の列を参照する場合、 **SUPPORT** や **PROBABILITY**などの一部の列名は、同名の予約済みキーワードと区別するために角かっこで囲む必要があります。  
+>  
+  `SELECT <column name> from NODE_DISTRIBUTION`のようなクエリを使用して入れ子になったテーブルの個々の列を参照する場合、 **SUPPORT** や **PROBABILITY**などの一部の列名は、同名の予約済みキーワードと区別するために角かっこで囲む必要があります。  
   
  期待される結果:  
   
 |T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VARIANCE|t.VALUETYPE|  
 |-----------------------|------------------------|---------------|-------------------|----------------|-----------------|  
-|Yearly Income|Missing|0|0.000457142857142857|0|1|  
+|Yearly Income|Missing|0|0.000457142857142857|0|1 で保護されたプロセスとして起動されました|  
 |Yearly Income|57220.8876687257|17484|0.999542857142857|1041275619.52776|3|  
 |Age|471.687717702463|0|0|126.969442359327|7|  
 |Age|234.680904692439|0|0|0|8|  
@@ -96,7 +97,8 @@ FROM LR_PredictIncome.CONTENT
   
  Yearly Income = 57,220.919 + 471.688 * (Age - 45.427)  
   
- **[マイニング凡例]** ではいくつかの数字が丸められますが、NODE_DISTRIBUTION テーブルと **[マイニング凡例]** には基本的に同じ値が格納されます。  
+ 
+  **[マイニング凡例]** ではいくつかの数字が丸められますが、NODE_DISTRIBUTION テーブルと **[マイニング凡例]** には基本的に同じ値が格納されます。  
   
  VALUETYPE 列の値を参照すると、各行に含まれている情報の種類がわかるため、結果をプログラムで処理する場合に役に立ちます。 次の表に、線形回帰式の出力となる値の種類を示します。  
   
@@ -114,9 +116,9 @@ FROM LR_PredictIncome.CONTENT
   
  回帰モデルの各値の種類の意味については、「 [線形回帰モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)」を参照してください。  
   
- [トップに戻る](#bkmk_top)  
+ [先頭に戻る](#bkmk_top)  
   
-###  <a name="bkmk_Query3"></a> サンプル クエリ 3:モデルの係数のみを取得します。  
+###  <a name="bkmk_Query3"></a>サンプルクエリ 3: モデルの係数のみを取得する  
  VALUETYPE 列挙を使用すると、次のクエリに示すように回帰式の係数のみを返すことができます。  
   
 ```  
@@ -135,7 +137,7 @@ FROM LR_PredictIncome.CONTENT
 |LR_PredictIncome|||  
 |LR_PredictIncome|35793.5477381267|11|  
   
- [トップに戻る](#bkmk_top)  
+ [先頭に戻る](#bkmk_top)  
   
 ## <a name="making-predictions-from-a-linear-regression-model"></a>線形回帰モデルから予測を作成する  
  データ マイニング デザイナーの [マイニング モデル予測] タブを使用して、線形回帰モデルに対する予測クエリを作成します。 予測クエリ ビルダーは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] と [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]の両方で使用できます。  
@@ -143,10 +145,10 @@ FROM LR_PredictIncome.CONTENT
 > [!NOTE]  
 >  また、Excel 用 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] データ マイニング アドインまたは Excel 用 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] データ マイニング アドインを使用して回帰モデルに対するクエリを作成することもできます。 Excel 用 データ マイニング アドインでは回帰モデルが作成されませんが、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のインスタンスに格納されているマイニング モデルを参照したり、照会したりすることはできます。  
   
- [トップに戻る](#bkmk_top)  
+ [先頭に戻る](#bkmk_top)  
   
-###  <a name="bkmk_Query4"></a> サンプル クエリ 4:単一クエリを使用して収入を予測します。  
- 回帰モデルで単一クエリを作成する最も簡単な方法は、 **[単一クエリ入力]** ダイアログ ボックスを使用することです。 など、適切な回帰モデルを選択して次の DMX クエリを作成する選択**単一クエリ**、」と入力し、`20`の値として**年齢**します。  
+###  <a name="bkmk_Query4"></a>サンプルクエリ 4: 単一クエリを使用して収入を予測する  
+ 回帰モデルで単一クエリを作成する最も簡単な方法は、 **[単一クエリ入力]** ダイアログ ボックスを使用することです。 たとえば、次の DMX クエリを作成するには、適切な回帰モデルを選択し、[**単一クエリ**] `20`を選択して、 **Age**の値として「」と入力します。  
   
 ```  
 SELECT [LR_PredictIncome].[Yearly Income]  
@@ -161,9 +163,9 @@ NATURAL PREDICTION JOIN
 |-------------------|  
 |45227.302092176|  
   
- [トップに戻る](#bkmk_top)  
+ [先頭に戻る](#bkmk_top)  
   
-###  <a name="bkmk_Query5"></a> サンプル クエリ 5:回帰モデルで予測関数を使用します。  
+###  <a name="bkmk_Query5"></a>サンプルクエリ 5: 回帰モデルで予測関数を使用する  
  線形回帰モデルでは多くの標準の予測関数を使用できます。 次の例は、予測クエリの結果にいくつかの説明的な統計情報を追加する方法を示しています。 これらの結果から、このモデルの平均からの偏差が相当あることがわかります。  
   
 ```  
@@ -182,28 +184,28 @@ NATURAL PREDICTION JOIN
 |-------------------|------------|  
 |45227.302092176|31827.1726561396|  
   
- [トップに戻る](#bkmk_top)  
+ [先頭に戻る](#bkmk_top)  
   
 ## <a name="list-of-prediction-functions"></a>予測関数の一覧  
  すべての [!INCLUDE[msCoName](../../includes/msconame-md.md)] アルゴリズムでは、共通の関数セットがサポートされています。 これに加え、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線形回帰アルゴリズムでは、次の表に示す関数もサポートされています。  
   
 |||  
 |-|-|  
-|予測関数|使用方法|  
-|[IsDescendant &#40;DMX&#41;](/sql/dmx/isdescendant-dmx)|あるノードがモデル内の別のノードの子であるかどうかを示します。|  
-|[IsInNode &#40;DMX&#41;](/sql/dmx/isinnode-dmx)|指定されたノードが現在のケースを含んでいるかどうかを示します。|  
+|予測関数|使用法|  
+|[DMX&#41;&#40;IsDescendant](/sql/dmx/isdescendant-dmx)|あるノードがモデル内の別のノードの子であるかどうかを示します。|  
+|[DMX&#41;&#40;IsInNode](/sql/dmx/isinnode-dmx)|指定されたノードが現在のケースを含んでいるかどうかを示します。|  
 |[PredictHistogram &#40;DMX&#41;](/sql/dmx/predicthistogram-dmx)|指定された列に対して、予測された値、または値のセットを返します。|  
-|[PredictNodeId &#40;DMX&#41;](/sql/dmx/predictnodeid-dmx)|各ケースの Node_ID を返します。|  
-|[PredictStdev &#40;DMX&#41;](/sql/dmx/predictstdev-dmx)|予測された値の標準偏差を返します。|  
-|[PredictSupport &#40;DMX&#41;](/sql/dmx/predictsupport-dmx)|指定された状態に対するサポート値を返します。|  
-|[PredictVariance &#40;DMX&#41;](/sql/dmx/predictvariance-dmx)|指定された列の分散を返します。|  
+|[&#40;DMX&#41;の PredictNodeId](/sql/dmx/predictnodeid-dmx)|各ケースの Node_ID を返します。|  
+|[&#40;DMX&#41;の PredictStdev](/sql/dmx/predictstdev-dmx)|予測された値の標準偏差を返します。|  
+|[&#40;DMX&#41;の PredictSupport](/sql/dmx/predictsupport-dmx)|指定された状態に対するサポート値を返します。|  
+|[&#40;DMX&#41;の PredictVariance](/sql/dmx/predictvariance-dmx)|指定された列の分散を返します。|  
   
  すべての [!INCLUDE[msCoName](../../includes/msconame-md.md)] アルゴリズムに共通する関数の一覧は、「[データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](data-mining-algorithms-analysis-services-data-mining.md)」を参照してください。 これらの関数の使用方法については、「[データ マイニング拡張機能 &#40;DMX&#41; 関数リファレンス](/sql/dmx/data-mining-extensions-dmx-function-reference)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [Microsoft 線形回帰アルゴリズム](microsoft-linear-regression-algorithm.md)   
- [データ マイニング クエリ](data-mining-queries.md)   
- [Microsoft 線形回帰アルゴリズム テクニカル リファレンス](microsoft-linear-regression-algorithm-technical-reference.md)   
- [線形回帰モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [データマイニングクエリ](data-mining-queries.md)   
+ [Microsoft 線形回帰アルゴリズムテクニカルリファレンス](microsoft-linear-regression-algorithm-technical-reference.md)   
+ [線形回帰モデルのマイニングモデルコンテンツ &#40;Analysis Services データマイニング&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

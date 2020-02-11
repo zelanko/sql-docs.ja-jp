@@ -1,5 +1,5 @@
 ---
-title: レコード セットの配置 |Microsoft Docs
+title: レコードセットの配置 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,18 +16,18 @@ ms.assetid: c8f6fbcb-6675-4133-b37e-430de43949c1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cdce4c7b08a8b15cdb0a9ee1111a216aeef005bf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924432"
 ---
 # <a name="recordset-positioning"></a>レコードセットを配置する
-使用して、 **AbsolutePosition**内の序数位置に基づいて、レコードに移動するプロパティ、**レコード セット**オブジェクト、または現在のレコードの序数位置を決定します。 プロバイダーは、このプロパティを使用するための適切な機能をサポートする必要があります。  
+**AbsolutePosition**プロパティを使用して、レコード**セット**オブジェクトの序数位置に基づいてレコードに移動するか、現在のレコードの位置を表す序数を指定します。 このプロパティを使用できるようにするには、プロバイダーが適切な機能をサポートしている必要があります。  
   
- **AbsolutePosition**は 1 に基づいており、現在のレコードが最初のレコードは 1 に等しい、 **Recordset**します。 前述のように、内のレコードの合計数を取得することができます、 **Recordset**オブジェクトから、 **RecordCount**プロパティ。  
+ **AbsolutePosition**は1から始まる、現在のレコードが**レコードセット**内の最初のレコードの場合は1になります。 前述のように、 **RecordCount**プロパティから、レコード**セット**オブジェクト内のレコードの合計数を取得できます。  
   
- 設定すると、 **AbsolutePosition**プロパティ、現在のキャッシュ内のレコードになった場合でも ADO キャッシュに再読み込みを指定したレコードとレコードの新しいグループにします。 **CacheSize**プロパティは、このグループのサイズを決定します。  
+ **AbsolutePosition**プロパティを設定すると、現在のキャッシュ内のレコードの場合でも、ADO は、指定したレコードで始まる新しいレコードのグループを使用してキャッシュを再読み込みします。 このグループのサイズは、 **CacheSize**プロパティによって決定されます。  
   
 > [!NOTE]
->  使用しないようにする、 **AbsolutePosition**プロパティ レコード番号の代わりにします。 前のレコードを削除すると、特定のレコードの位置を変更します。 特定のレコードと同じことが保証されていません**AbsolutePosition**場合、 **Recordset**オブジェクトのクエリを再実行または再度開きます。 ブックマークはあらゆる種類の配置の唯一の方法は、保持して、指定した位置に戻るをお勧め**Recordset**オブジェクト。
+>  **AbsolutePosition**プロパティは、サロゲートレコード番号として使用しないでください。 前のレコードを削除すると、特定のレコードの位置が変更されます。 また、**レコードセット**オブジェクトが再クエリまたは再度開かれた場合、特定のレコードの**AbsolutePosition**が同じであることは保証されません。 ブックマークは、特定の位置を保持して返す場合に推奨される方法であり、すべての種類の**レコードセット**オブジェクトに対して配置する唯一の方法です。

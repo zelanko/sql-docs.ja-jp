@@ -1,5 +1,5 @@
 ---
-title: ビューし、フィールド コレクションの例 (VB) |Microsoft Docs
+title: Views および Fields コレクションの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: d8304849-3f80-4cf3-9425-529d2a8ebedd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 16145ad1dd52a6ad535c9a51a64f410a85e12e18
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67964823"
 ---
 # <a name="views-and-fields-collections-example-vb"></a>Views および Fields コレクションの例 (VB)
-次のコードを使用する方法を示します、[コマンド](../../../ado/reference/adox-api/command-property-adox.md)プロパティおよび[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)ビューのフィールド情報を取得するオブジェクト。  
+次のコードは、[コマンド](../../../ado/reference/adox-api/command-property-adox.md)プロパティと[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトを使用して、ビューのフィールド情報を取得する方法を示しています。  
   
 ```  
 ' BeginViewFieldsVB  
@@ -77,9 +77,9 @@ End Sub
 ' EndViewFieldsVB  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ActiveConnection プロパティ (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
  [Catalog オブジェクト (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Command プロパティ (ADOX)](../../../ado/reference/adox-api/command-property-adox.md)   
- [ビュー オブジェクト (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)   
+ [View オブジェクト (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)   
  [Views コレクション (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)

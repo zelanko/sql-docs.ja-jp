@@ -17,16 +17,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d83b716d9919bf322097b8ded8409950982d961c
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70148358"
 ---
 # <a name="tracing-and-replaying-events"></a>イベントのトレースおよび再生
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  SMO では、 <xref:Microsoft.SqlServer.Management.Trace> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]名前空間の**Trace**オブジェクトと**Replay**オブジェクトによって、またはのインスタンスの監視に使用される機能にプログラムからアクセスできます。[!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] 各イベントに関するデータをキャプチャし、ファイルやテーブルに保存して、後で分析できます。 たとえば、実稼動環境を監視して、どのプロシージャの実行が遅く、パフォーマンスに影響を与えているかを確認できます。  
+  SMO では、 <xref:Microsoft.SqlServer.Management.Trace>名前空間の**Trace**オブジェクトと**Replay**オブジェクトによって、 [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)]または[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]のインスタンスの監視に使用される機能にプログラムからアクセスできます。 各イベントに関するデータをキャプチャし、ファイルやテーブルに保存して、後で分析できます。 たとえば、実稼動環境を監視して、どのプロシージャの実行が遅く、パフォーマンスに影響を与えているかを確認できます。  
   
  **Trace**オブジェクトと**Replay**オブジェクトには、の[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンスでトレースを作成するために使用できる一連のオブジェクトが用意されています。 これらのオブジェクトをユーザー独自のアプリケーションから使用して、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] または [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] に対してトレースを手動で作成することもできます。 また、SMO**トレース**オブジェクトを使用して、、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]、または DTS ログを監視することによって作成された SQL トレースファイルとテーブルを読み取ることができます。  
   

@@ -15,20 +15,20 @@ ms.assetid: ece0034f-1ea6-4fbe-8a01-e8d2d1914d44
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e2314aadfad1934e56f2d7caa67939818e133665
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68006253"
 ---
 # <a name="api-functions-odbc-driver-for-oracle"></a>API 関数 (ODBC Driver for Oracle)
 > [!IMPORTANT]  
->  この機能は、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 代わりに、Oracle によって提供される ODBC ドライバーを使用します。  
+>  この機能は、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 代わりに、Oracle によって提供される ODBC ドライバーを使用してください。  
   
- Microsoft ODBC Driver for Oracle では、コア レベル、レベル 1 およびレベル 2 API 関数をサポートします。 これらの関数の一覧は[ODBC 準拠レベル](../../odbc/microsoft/odbc-driver-for-oracle-conformance-levels.md)します。  
+ Microsoft ODBC Driver for Oracle は、コアレベル、レベル1、レベル2の API 関数をサポートしています。 これらの関数は、「 [ODBC 準拠レベル](../../odbc/microsoft/odbc-driver-for-oracle-conformance-levels.md)」に記載されています。  
   
--   [コア レベル インターフェイス](../../odbc/microsoft/core-level-api-functions-odbc-driver-for-oracle.md)(CLI) への準拠は、ISO CLI 仕様で定義されている機能と、開いているグループ CLI 仕様で定義されている必須の機能を提供します。  
+-   [コアレベルインターフェイス](../../odbc/microsoft/core-level-api-functions-odbc-driver-for-oracle.md)(CLI) 準拠は、ISO cli 仕様で定義されている機能と、OPEN Group CLI 仕様で定義されている必須機能を提供します。  
   
--   [レベル 1](../../odbc/microsoft/level-1-api-functions-odbc-driver-for-oracle.md)への準拠はトランザクションなどの追加機能のレベルのインターフェイスのコア機能を提供します。  
+-   [レベル 1](../../odbc/microsoft/level-1-api-functions-odbc-driver-for-oracle.md)の準拠には、コアレベルのインターフェイスの機能だけでなく、トランザクションなどの追加機能が用意されています。  
   
--   [レベル 2](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md)への準拠はブックマーク、動的パラメーターは、ODBC 関数の非同期実行などの追加機能の 1 レベルの機能を提供します。
+-   [レベル 2](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md)の準拠では、レベル1の機能に加えて、ブックマーク、動的パラメーター、ODBC 関数の非同期実行などの追加機能が提供されます。
