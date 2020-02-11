@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 51b69c7092a81fd84cc586e79dbb201c69c668ca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62912599"
 ---
-# <a name="mssqlserver8680"></a>MSSQLSERVER_8680
+# <a name="mssqlserver_8680"></a>MSSQLSERVER_8680
     
 ## <a name="details"></a>詳細  
   
@@ -30,7 +30,7 @@ ms.locfileid: "62912599"
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|REMOTE_ERR|  
-|メッセージ テキスト|内部クエリ プロセッサ エラー:リモート クエリ フェーズを処理中に、クエリ プロセッサで予期しないエラーが発生しました。|  
+|メッセージ テキスト|内部クエリ プロセッサ エラー: リモート クエリ フェーズを処理中に、クエリ プロセッサで予期しないエラーが発生しました。|  
   
 ## <a name="explanation"></a>説明  
  クエリ処理中に内部エラーが発生しました。  

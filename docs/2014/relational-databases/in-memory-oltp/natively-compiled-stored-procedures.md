@@ -13,23 +13,23 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: e9bdc0c104b212f3c26389c1792b6b617634a12a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62714919"
 ---
 # <a name="natively-compiled-stored-procedures"></a>ネイティブ コンパイル ストアド プロシージャ
   ネイティブ コンパイル ストアド プロシージャは、ネイティブ コードにコンパイルされる [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャであり、メモリ最適化テーブルにアクセスします。 ネイティブ コンパイル ストアド プロシージャにより、ストアド プロシージャ内でクエリやビジネス ロジックを効率的に実行できます。 ネイティブ コンパイル処理の詳細については、「 [テーブルとストアド プロシージャのネイティブ コンパイル](native-compilation-of-tables-and-stored-procedures.md)」を参照してください。 ディスク ベース ストアド プロシージャをネイティブ コンパイル ストアド プロシージャに移行する方法の詳細については、「 [ネイティブ コンパイル ストアド プロシージャの移行に関する問題](migration-issues-for-natively-compiled-stored-procedures.md)」を参照してください。  
   
 > [!NOTE]  
->  解釈された (ディスク ベースの) ストアド プロシージャとネイティブ コンパイル ストアド プロシージャの相違点の 1 つは、解釈されたストアド プロシージャは最初の実行時にコンパイルされ、ネイティブ コンパイル ストアド プロシージャは作成時にコンパイルされる点です。 ネイティブ コンパイル ストアド プロシージャ、多くのエラー条件 (算術オーバーフロー、型変換、および 0 除算のいくつかの条件) を検出できますで時間を作成し、失敗する場合は、ネイティブ コンパイル ストアド プロシージャの作成が発生します。 解釈されたストアド プロシージャでは、通常、このようなエラー状態によってストアド プロシージャの作成時にエラーが発生することはありませんが、実行はすべて失敗します。  
+>  解釈された (ディスク ベースの) ストアド プロシージャとネイティブ コンパイル ストアド プロシージャの相違点の 1 つは、解釈されたストアド プロシージャは最初の実行時にコンパイルされ、ネイティブ コンパイル ストアド プロシージャは作成時にコンパイルされる点です。 ネイティブコンパイルストアドプロシージャでは、多くのエラー条件 (算術オーバーフロー、型変換、および0除算の条件) を作成時に検出でき、ネイティブコンパイルストアドプロシージャの作成が失敗します。 解釈されたストアド プロシージャでは、通常、このようなエラー状態によってストアド プロシージャの作成時にエラーが発生することはありませんが、実行はすべて失敗します。  
   
  このセクションのトピック:  
   
 -   [ネイティブ コンパイル ストアド プロシージャの作成](creating-natively-compiled-stored-procedures.md)  
   
--   [ATOMIC ブロック](atomic-blocks-in-native-procedures.md)  
+-   [Atomic ブロック](atomic-blocks-in-native-procedures.md)  
   
 -   [ネイティブ コンパイル ストアド プロシージャ内でサポートされる構造](supported-features-for-natively-compiled-t-sql-modules.md)  
   
@@ -45,7 +45,7 @@ ms.locfileid: "62714919"
   
 -   [データ アクセス アプリケーションからのネイティブ コンパイル ストアド プロシージャの呼び出し](calling-natively-compiled-stored-procedures-from-data-access-applications.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [メモリ最適化テーブル](memory-optimized-tables.md)  
   
   

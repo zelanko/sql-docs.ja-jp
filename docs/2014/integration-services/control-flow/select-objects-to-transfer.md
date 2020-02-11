@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8ca32cdc72bb5c062be4c3745d3f742f39753afa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62830406"
 ---
 # <a name="select-objects-to-transfer"></a>[<転送するオブジェクト> の選択]
@@ -26,12 +26,12 @@ ms.locfileid: "62830406"
   
  特定のオブジェクトの転送を指定する場合は、オブジェクトが表示されているグリッド内の行の最初の列にあるチェック ボックスをオンにします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../integration-services-error-and-message-reference.md)   
- [[ジョブ転送タスク エディター] ([全般] ページ)](../general-page-of-integration-services-designers-options.md)   
+ [[ジョブ転送タスク エディター] &#40;[全般] ページ&#41;](../general-page-of-integration-services-designers-options.md)   
  [[ログイン転送タスク エディター] &#40;[ログイン] ページ&#41;](../transfer-logins-task-editor-logins-page.md)   
  [[SQL Server オブジェクトの転送タスク エディター] &#40;[オブジェクト] ページ&#41;](../transfer-sql-server-objects-task-editor-objects-page.md)   
- [[Master ストアド プロシージャ転送タスク エディター] ([ストアド プロシージャ] ページ)](../transfer-master-stored-procedures-task-editor-stored-procedures-page.md)   
- [[エラー メッセージ転送タスク エディター] ([メッセージ] ページ)](../transfer-error-messages-task-editor-messages-page.md)  
+ [[Master ストアド プロシージャ転送タスク エディター] &#40;[ストアド プロシージャ] ページ&#41;](../transfer-master-stored-procedures-task-editor-stored-procedures-page.md)   
+ [[エラー メッセージ転送タスク エディター] &#40;[メッセージ] ページ&#41;](../transfer-error-messages-task-editor-messages-page.md)  
   
   

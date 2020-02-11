@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 39b8e065b6b3cbd013089700de07376edc9a656c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770696"
 ---
 # <a name="derive-column-values-by-using-the-derived-column-transformation"></a>派生列変換を使用して列の値を取得する
@@ -58,12 +58,12 @@ ms.locfileid: "62770696"
   
 12. 更新したパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Derived Column Transformation](derived-column-transformation.md)   
  [Integration Services のデータ型](../integration-services-data-types.md)   
  [Integration Services の変換](integration-services-transformations.md)   
  [Integration Services のパス](../integration-services-paths.md)   
- [[データ フロー タスク]](../../control-flow/data-flow-task.md)   
- [Integration Services (SSIS) 式](../../expressions/integration-services-ssis-expressions.md)  
+ [データ フロー タスク](../../control-flow/data-flow-task.md)   
+ [Integration Services &#40;SSIS&#41; 式](../../expressions/integration-services-ssis-expressions.md)  
   
   
