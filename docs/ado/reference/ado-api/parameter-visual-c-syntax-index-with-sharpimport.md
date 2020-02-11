@@ -1,5 +1,5 @@
 ---
-title: 'パラメーター (Visual C 構文のインデックスで #import) |Microsoft Docs'
+title: 'Parameter (Visual C++ 構文インデックス #import) |Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,13 +16,13 @@ ms.assetid: 6b43cf70-9695-47b0-9e68-f36898859b6b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ad717081698efcc3c976376a8f1f1f3cab604e54
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917761"
 ---
-# <a name="parameter-visual-c-syntax-index-with-import"></a>パラメーター (Visual C 構文のインデックスで #import)
+# <a name="parameter-visual-c-syntax-index-with-import"></a>Parameter (Visual C++ 構文インデックス #import)
 ## <a name="methods"></a>メソッド  
   
 ```  
@@ -69,5 +69,5 @@ void PutValue( const _variant_t & pvar );
 __declspec(property(get=GetValue,put=PutValue)) _variant_t Value;  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Parameter オブジェクト](../../../ado/reference/ado-api/parameter-object.md)

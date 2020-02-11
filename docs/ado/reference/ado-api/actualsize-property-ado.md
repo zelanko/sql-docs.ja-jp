@@ -16,27 +16,27 @@ ms.assetid: 722803d0-cef5-4d4c-b79d-3f2f58052229
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6d405113044d10244d8c4fc3483c6220bf630dc5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921426"
 ---
 # <a name="actualsize-property-ado"></a>ActualSize プロパティ (ADO)
-フィールドの値をバイト単位の実際の長さを示します。  
+フィールドの値の実際の長さをバイト単位で示します。  
   
 ## <a name="settings-and-return-values"></a>設定と戻り値  
- 返します、**長い**値。  
+ **Long 型**の値を返します。  
   
-## <a name="remarks"></a>コメント  
- 使用して、 **ActualSize**の実際の長さを返すプロパティを[フィールド](../../../ado/reference/ado-api/field-object.md)オブジェクトの値。 すべてのフィールドについて、 **ActualSize**プロパティは読み取り専用です。 ADO の長さを判断できない場合、**フィールド**オブジェクトの値を**ActualSize**プロパティが返す**adUnknown**します。  
+## <a name="remarks"></a>解説  
+ **ActualSize**プロパティを使用して、[フィールド](../../../ado/reference/ado-api/field-object.md)オブジェクトの値の実際の長さを返します。 すべてのフィールドに対して、 **ActualSize**プロパティは読み取り専用です。 ADO が**フィールド**オブジェクトの値の長さを判断できない場合、 **ActualSize**プロパティは**adunknown**を返します。  
   
- **ActualSize**と[DefinedSize](../../../ado/reference/ado-api/definedsize-property.md)プロパティは、次の例に示すように異なります。 A**フィールド**の宣言された型を持つオブジェクト**adVarChar**し、50 文字の最大長を返します、 **DefinedSize** 50 のプロパティの値が、 **ActualSize**プロパティの値が返されますが、現在のレコードのフィールドに格納されたデータの長さ。 **フィールド**で、 **DefinedSize**可変長列として扱われます 255 バイトより大きい。  
+ 次の例に示すように、 **ActualSize**プロパティと[未定義サイズ](../../../ado/reference/ado-api/definedsize-property.md)プロパティは異なります。 **AdVarChar**の型が宣言され、最大長が50文字の**フィールド**オブジェクトは、定義済みの**size**プロパティ値50を返しますが、返される**ActualSize**プロパティ値は、現在のレコードのフィールドに格納されているデータの長さです。 255**バイトを超える値が**指定された**フィールド**は、可変長列として扱われます。  
   
 ## <a name="applies-to"></a>適用対象  
  [Field オブジェクト](../../../ado/reference/ado-api/field-object.md)  
   
-## <a name="see-also"></a>関連項目  
- [ActualSize および DefinedSize プロパティの例 (VB)](../../../ado/reference/ado-api/actualsize-and-definedsize-properties-example-vb.md)   
- [ActualSize および DefinedSize プロパティの例 (vc++)](../../../ado/reference/ado-api/actualsize-and-definedsize-properties-example-vc.md)   
+## <a name="see-also"></a>参照  
+ [ActualSize とのサイズプロパティの例 (VB)](../../../ado/reference/ado-api/actualsize-and-definedsize-properties-example-vb.md)   
+ [ActualSize とのサイズプロパティの例 (VC + +)](../../../ado/reference/ado-api/actualsize-and-definedsize-properties-example-vc.md)   
  [DefinedSize プロパティ](../../../ado/reference/ado-api/definedsize-property.md)

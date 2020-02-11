@@ -16,14 +16,14 @@ ms.assetid: aa366d98-8c7a-4189-bdd8-1d663b243d33
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 11250cf591f576052434c641d8c65ba681000666
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966245"
 ---
 # <a name="getpermissions-and-setpermissions-methods-example-vb"></a>GetPermissions および SetPermissions メソッドの例 (VB)
-この例では、 [GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md)と[SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md)メソッド。 次のコードでは、Orders テーブルのフル アクセスを管理ユーザーに与えられます。  
+この例では、 [Getpermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md)メソッドと[SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md)メソッドを示します。 次のコードでは、Orders テーブルへのフルアクセスが管理者ユーザーに与えられます。  
   
 ```  
 ' BeginGrantPermissionsVB  
@@ -94,9 +94,9 @@ End Sub
 ' EndGrantPermissionsVB  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Catalog オブジェクト (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [GetPermissions メソッド (ADOX)](../../../ado/reference/adox-api/getpermissions-method-adox.md)   
  [SetPermissions メソッド (ADOX)](../../../ado/reference/adox-api/setpermissions-method-adox.md)   
- [ユーザー オブジェクト (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)   
+ [User オブジェクト (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)   
  [Users コレクション (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)

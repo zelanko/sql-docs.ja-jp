@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 47940abbbbf4ebf41c85bb0c8a7ee6f986a570bf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62831882"
 ---
 # <a name="merge-in-integration-services-packages"></a>MERGE in Integration Services Packages
@@ -38,7 +38,9 @@ ms.locfileid: "62831882"
  MERGE ステートメントの使用をサポートする変換先コンポーネントのサンプルについては、CodePlex コミュニティのサンプル ( [MERGE Destination](https://go.microsoft.com/fwlink/?LinkId=141215)) を参照してください。  
   
 ## <a name="using-merge"></a>MERGE を使用する  
- 通常、MERGE ステートメントは、挿入、更新、および削除を含む変更をあるテーブルから別のテーブルに適用する場合に使用します。 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]より前のバージョンでこの処理を行うには、参照変換と複数の OLE DB コマンド変換の両方が必要でした。 参照変換で、1 行ずつ参照を実行して各行が新しいか変更されたかを判断し、 次に、OLE DB コマンド変換で、必要な INSERT、UPDATE および DELETE の操作を実行しました。 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]以降、1 つの MERGE ステートメントを、参照変換と対応する OLE DB コマンド変換に代わって使用できます。  
+ 通常、MERGE ステートメントは、挿入、更新、および削除を含む変更をあるテーブルから別のテーブルに適用する場合に使用します。 
+  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]より前のバージョンでこの処理を行うには、参照変換と複数の OLE DB コマンド変換の両方が必要でした。 参照変換で、1 行ずつ参照を実行して各行が新しいか変更されたかを判断し、 次に、OLE DB コマンド変換で、必要な INSERT、UPDATE および DELETE の操作を実行しました。 
+  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]以降、1 つの MERGE ステートメントを、参照変換と対応する OLE DB コマンド変換に代わって使用できます。  
   
 ### <a name="merge-with-incremental-loads"></a>増分読み込みを伴う MERGE  
  Change Data Capture 機能は [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] の新機能で、これを使用すると、データ ウェアハウスへの増分読み込みを簡単に実行できます。 パラメーター化された OLE DB コマンド変換を使用して挿入と更新を実行する代わりに、MERGE ステートメントを使用して両方の操作を組み合わせることができます。  
@@ -52,12 +54,12 @@ ms.locfileid: "62831882"
  データ ウェアハウスの FactBuyingHabits テーブルでは、各顧客が特定の製品を最後に購入した日付を追跡しています。 このテーブルは、ProductID、CustomerID、および PurchaseDate の各列で構成されています。 トランザクション データベースは、毎週、その週に行われた購入を記録する PurchaseRecords テーブルを生成します。 1 つの MERGE ステートメントを使用して PurchaseRecords テーブルの情報を FactBuyingHabits テーブルにマージすることが目的です。 製品と顧客の組み合わせが存在しない場合は、MERGE ステートメントによって新しい行が挿入されます。 製品と顧客の組み合わせが存在する場合は、MERGE ステートメントによって最新の購入日が更新されます。  
   
 ###### <a name="track-price-history"></a>価格履歴の追跡  
- DimBook テーブルは、書店の在庫にある書籍の一覧を表し、各書籍の価格履歴を示しています。 このテーブルには次の各列が含まれています: ISBN、ProductID、Price、Shelf、IsCurrent。 また、このテーブルでは、書籍の価格が変更されるたびに 1 行追加されます。 こうした行の 1 つに、現在の価格が含まれています。 現在の価格が含まれている行を示すために、その行の IsCurrent 列の値は 1 に設定されます。  
+ DimBook テーブルは、書店の在庫にある書籍の一覧を表し、各書籍の価格履歴を示しています。 このテーブルには、ISBN、ProductID、Price、Shelf、および IsCurrent の各列が含まれています。 また、このテーブルでは、書籍の価格が変更されるたびに 1 行追加されます。 こうした行の 1 つに、現在の価格が含まれています。 現在の価格が含まれている行を示すために、その行の IsCurrent 列の値は 1 に設定されます。  
   
  データベースは、毎週、その週の価格変更と、その週に追加された新しい書籍を記録する WeeklyChanges テーブルを生成します。 1 つの MERGE ステートメントを使用して、WeeklyChanges テーブルの変更を DimBook テーブルに適用できます。 MERGE ステートメントにより、新しく追加された書籍用に新しい行が挿入され、価格が変更された既存の書籍の行では IsCurrent 列が 0 に更新されます。 また、価格が変更された書籍用に新しい行が挿入され、その行では IsCurrent 列の値が 1 に設定されます。  
   
 ### <a name="merge-a-table-with-new-data-against-the-old-table"></a>新しいデータを含むテーブルと古いテーブルのマージ  
- データベースは、"オープン スキーマ"、つまり、各プロパティの名前と値の組み合わせが格納されているテーブルを使用して、オブジェクトのプロパティをモデル化します。 Properties テーブルには次の 3 つの列があります: EntityID、PropertyID、Value。 NewProperties テーブルは、Properties テーブルと同期する必要のある、新しいバージョンのテーブルです。 この 2 つのテーブルを同期するには、1 つの MERGE ステートメントを使用して次の操作を実行します。  
+ データベースは、"オープン スキーマ"、つまり、各プロパティの名前と値の組み合わせが格納されているテーブルを使用して、オブジェクトのプロパティをモデル化します。 Properties テーブルには EntityID、PropertyID、および Value という 3 つの列があります。 NewProperties テーブルは、Properties テーブルと同期する必要のある、新しいバージョンのテーブルです。 この 2 つのテーブルを同期するには、1 つの MERGE ステートメントを使用して次の操作を実行します。  
   
 -   Properties テーブルから、NewProperties テーブルに存在しないプロパティを削除します。  
   

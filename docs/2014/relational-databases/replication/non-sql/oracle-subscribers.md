@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e38cc3a111eb68688fcc9c30ef01bb607349afcb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022226"
 ---
 # <a name="oracle-subscribers"></a>Oracle サブスクライバー
@@ -31,7 +31,7 @@ ms.locfileid: "63022226"
   
 1.  ディストリビューターが Oracle サブスクライバーに接続できるように、Oracle クライアント ネットワーク ソフトウェアおよび Oracle OLE DB プロバイダーを [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ディストリビューターにインストールし、これらを構成します。 Oracle クライアント ネットワーク ソフトウェアは、最新バージョンであることが必要です。 Oracle では、最新バージョンのクライアント ソフトウェアをインストールすることを推奨しています。 このため、データベース ソフトウェアよりもクライアント ソフトウェアの方が新しいバージョンであることがよくあります。 最も簡単にソフトウェアをインストールする方法は、Oracle クライアント ディスクで Oracle Universal Installer を使用することです。 Oracle Universal Installer で、次の情報を指定します。  
   
-    |[情報]|説明|  
+    |Information|[説明]|  
     |-----------------|-----------------|  
     |Oracle ホーム|Oracle ソフトウェアのインストール ディレクトリのパスです。 既定値 (C:\oracle\ora90 など) をそのまま使用するか、別のパスを入力します。 Oracle ホームの詳細については、このトピックの「Oracle ホームに関する注意点」を参照してください。|  
     |Oracle ホーム名|Oracle ホーム パスの別名|  
@@ -41,7 +41,7 @@ ms.locfileid: "63022226"
   
      Oracle Universal Installer が完了したら、Net Configuration Assistant を使用してネットワーク接続を構成します。 ネットワーク接続を構成するには、4 つの情報を指定する必要があります。 Oracle データベース管理者は、データベースとリスナーをセットアップするときにネットワークを構成しています。この情報が不明な場合は、管理者に問い合わせてください。 以下の操作を行う必要があります。  
   
-    |操作|説明|  
+    |アクション|[説明]|  
     |------------|-----------------|  
     |データベースを識別する|データベースは 2 とおりの方法で識別できます。 1 つ目は、SID (Oracle System Identifier) を使用する方法で、すべての Oracle リリースで使用できます。 2 つ目は、サービス名を使用する方法で、Oracle リリース 8.0 以降で使用できます。 どちらの方法も、データベースの作成時に構成される値を使用します。データベースのリスナーの構成時に管理者が使用したものと同じ命名方法を、クライアント ネットワーク構成でも使用することが重要です。|  
     |データベースのネットワークの別名を識別する|Oracle データベースへのアクセスに使用するネットワークの別名を指定する必要があります。 ネットワークの別名とは、基本的にはデータベースの作成時に構成されたリモート SID またはサービス名へのポインターです。ネットワークの別名は、各種の Oracle リリースや製品では、ネット サービス名や TNS 別名など、複数の名前で呼ばれています。 SQL*Plus では、ログイン時に "ホスト文字列" パラメーターとしてこの別名の入力画面が表示されます。|  
@@ -62,11 +62,11 @@ ms.locfileid: "63022226"
   
 2.  「 `cmd` 」と入力して **[OK]** をクリックします。  
   
-3.  コマンド プロンプトで、次のように入力します。  
+3.  コマンド プロンプトに、次のコマンドを入力します。  
   
      `sqlplus <UserSchemaLogin>/<UserSchemaPassword>@<NetServiceName>`  
   
-     例 : `sqlplus replication/$tr0ngPasswerd@Oracle90Server`  
+     例: `sqlplus replication/$tr0ngPasswerd@Oracle90Server`  
   
 4.  ネットワーク構成が正常に行われていれば、ログインは成功し、 `SQL` プロンプトが表示されます。  
   
@@ -94,7 +94,7 @@ ms.locfileid: "63022226"
 ## <a name="mapping-data-types-from-sql-server-to-oracle"></a>SQL Server から Oracle へのデータ型のマッピング  
  次の表は、Oracle を実行しているサブスクライバーへのデータのレプリケーションで使用される、データ型のマッピングを示しています。  
   
-|SQL Server データ型|Oracle データ型|  
+|SQL Server のデータ型|Oracle データ型|  
 |--------------------------|----------------------|  
 |`bigint`|NUMBER(19,0)|  
 |`binary(1-2000)`|RAW(1-2000)|  
@@ -103,13 +103,13 @@ ms.locfileid: "63022226"
 |`char(1-2000)`|CHAR(1-2000)|  
 |`char(2001-4000)`|VARCHAR2(2001-4000)|  
 |`char(4001-8000)`|CLOB|  
-|`date`|[DATE]|  
-|`datetime`|[DATE]|  
+|`date`|DATE|  
+|`datetime`|DATE|  
 |`datetime2(0-7)`|Oracle 9 および Oracle 10 の場合は TIMESTAMP(7)、Oracle 8 の場合は VARCHAR(27)|  
 |`datetimeoffset(0-7)`|Oracle 9 および Oracle 10 の場合は TIMESTAMP(7) WITH TIME ZONE、Oracle 8 の場合は VARCHAR(34)|  
 |`decimal(1-38, 0-38)`|NUMBER(1-38, 0-38)|  
-|`float(53)`|[FLOAT]|  
-|`float`|[FLOAT]|  
+|`float(53)`|FLOAT|  
+|`float`|FLOAT|  
 |`geography`|BLOB|  
 |`geometry`|BLOB|  
 |`hierarchyid`|BLOB|  
@@ -123,11 +123,11 @@ ms.locfileid: "63022226"
 |`nvarchar(1-1000)`|VARCHAR2(1-2000)|  
 |`nvarchar(1001-4000)`|NCLOB|  
 |`nvarchar(max)`|NCLOB|  
-|`real`|real|  
-|`smalldatetime`|[DATE]|  
+|`real`|REAL|  
+|`smalldatetime`|DATE|  
 |`smallint`|NUMBER(5,0)|  
 |`smallmoney`|NUMBER(10,4)|  
-|`sql_variant`|なし|  
+|`sql_variant`|該当なし|  
 |`sysname`|VARCHAR2(128)|  
 |`text`|CLOB|  
 |`time(0-7)`|VARCHAR(16)|  
@@ -143,7 +143,7 @@ ms.locfileid: "63022226"
 |`xml`|NCLOB|  
   
 ## <a name="see-also"></a>参照  
- [Non-SQL Server Subscribers](non-sql-server-subscribers.md)   
+ [SQL Server 以外のサブスクライバー](non-sql-server-subscribers.md)   
  [パブリケーションのサブスクライブ](../subscribe-to-publications.md)  
   
   

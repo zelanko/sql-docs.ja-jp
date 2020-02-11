@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7e9580839c18ed40a6163ab933ce40276bc413ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63044057"
 ---
 # <a name="force-a-target-server-to-poll-the-master-server"></a>ターゲット サーバーからのマスター サーバーのポーリングの強制
@@ -30,9 +30,9 @@ ms.locfileid: "63044057"
 > [!NOTE]  
 >  ターゲット サーバーがジョブの状態をアップロードするときにマスター サーバーにアクセスできない場合、そのジョブの状態はマスター サーバーがアクセスできるようになるまでスプールされます。  
   
--   **作業を開始する準備:** [制限事項と制約事項](#Restrictions)、[セキュリティ](#Security)  
+-   **作業を開始する準備:**  [制限事項と制約事項](#Restrictions)、[セキュリティ](#Security)  
   
--   **ターゲット サーバーからマスター サーバーにポーリングさせるには、次を使用します。** [SQL Server Management Studio](#SSMS)  
+-   **対象サーバーからマスターサーバーへのポーリングを強制するために使用するもの:**  [SQL Server Management Studio](#SSMS)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
@@ -43,12 +43,14 @@ ms.locfileid: "63044057"
  詳細については、「 [Implement SQL Server Agent Security](implement-sql-server-agent-security.md) 」および「 [Choose the Right SQL Server Agent Service Account for Multiserver Environments](choose-the-right-sql-server-agent-service-account-for-multiserver-environments.md)」を参照してください。  
   
 ##  <a name="SSMS"></a> SQL Server Management Studio の使用  
- **対象サーバーからマスター サーバーにポーリングさせるには**  
+ **対象サーバーからマスターサーバーへのポーリングを強制するには**  
   
-1.  **オブジェクト エクスプローラー**で、マスター サーバーを展開します。  
+1.  
+  **オブジェクト エクスプローラー**で、マスター サーバーを展開します。  
   
-2.  **[SQL Server エージェント]** を右クリックし、 **[マルチ サーバーの管理]** をポイントして、 **[対象サーバーの管理]** をクリックします。  
+2.  
+  **[SQL Server エージェント]** を右クリックし、**[マルチ サーバーの管理]** をポイントして、**[ターゲット サーバーの管理]** をクリックします。  
   
-3.  ターゲット サーバーをクリックし、 **[強制的にポーリング]** をクリックします。  
+3.  ターゲット サーバーをクリックし、**[強制的にポーリング]** をクリックします。  
   
   

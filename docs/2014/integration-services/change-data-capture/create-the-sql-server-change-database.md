@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 72785cffa01da7bf00248d442b1d3ce4103c45a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771368"
 ---
 # <a name="create-the-sql-server-change-database"></a>SQL Server 変更データベースの作成
@@ -31,13 +31,13 @@ ms.locfileid: "62771368"
   
  [SQL Server への接続] ダイアログ ボックスへのデータの入力については、「 [SQL Server Connection for Instance Creation](sql-server-connection-for-instance-creation.md)」を参照してください。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **[Oracle CDC インスタンス]**  
  作成する CDC インスタンスに関する次の情報を入力します。  
   
--   **[名前]** :新しいサービスの名前を入力します。 この名前は、新しい変更データベースの名前にもなります。  
+-   **[名前]** : 新しいサービスの名前を入力します。 この名前は、新しい変更データベースの名前にもなります。  
   
--   **説明**:新しいインスタンスを識別するのに役立つ説明を入力します。 これは省略可能です。  
+-   **[説明]** : 新しいインスタンスを識別するのに役立つ説明を入力します。 これは省略可能です。  
   
  **[SQL Server 変更データベース]**  
  このセクションは、データベースの作成に使用されます。  

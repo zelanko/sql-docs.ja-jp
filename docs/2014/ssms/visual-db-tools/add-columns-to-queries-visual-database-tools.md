@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: aef64ed8031664dcbefa7d0e30bf9f63435b292c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63015703"
 ---
 # <a name="add-columns-to-queries-visual-database-tools"></a>クエリへの列の追加 (Visual Database Tools)
@@ -34,13 +34,13 @@ ms.locfileid: "63015703"
   
 -   **ダイアグラム ペイン**で、追加する列の横のチェック ボックスをオンにします。  
   
-     \- または -  
+     または  
   
 -   **抽出条件ペイン**で、最初の空白のグリッド行に移動し、 **[列]** 列のフィールドをクリックして、ドロップダウン リストの列名をクリックします。  
   
 ### <a name="to-add-all-columns-for-one-table-or-table-valued-object"></a>1 つのテーブルまたはテーブル値オブジェクトの列をすべて追加するには  
   
--   **ダイアグラム ペイン**、横にチェック ボックスをオン **\*(すべての列)** します。  
+-   **ダイアグラムペイン**で、[ ** \*(すべての列)**] の横にあるチェックボックスをオンにします。  
   
 ### <a name="to-add-all-columns-for-all-tables-and-table-structured-objects"></a>すべてのテーブルおよびテーブル構造オブジェクトの列をすべて追加するには  
   
@@ -50,11 +50,11 @@ ms.locfileid: "63015703"
   
 3.  プロパティ ウィンドウの **[すべての列を出力]** をクリックして、ドロップダウン リストの **[はい]** または **[いいえ]** をクリックします。  
   
-## <a name="see-also"></a>関連項目  
- [クエリ結果から列を削除&#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [クエリから列を削除する&#40;Visual Database Tools&#41;](remove-columns-from-queries-visual-database-tools.md)   
- [検索条件を指定&#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md)   
- [クエリ結果の要約&#40;Visual Database Tools&#41;](summarize-query-results-visual-database-tools.md)   
+## <a name="see-also"></a>参照  
+ [Visual Database Tools&#41;&#40;クエリ結果から列を削除する](visual-database-tools.md)   
+ [クエリからの列の削除 &#40;Visual Database Tools&#41;](remove-columns-from-queries-visual-database-tools.md)   
+ [Visual Database Tools &#40;検索条件を指定し&#41;](specify-search-criteria-visual-database-tools.md)   
+ [Visual Database Tools &#40;クエリ結果の概要&#41;](summarize-query-results-visual-database-tools.md)   
  [クエリに関する基本操作の実行 (Visual Database Tools)](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

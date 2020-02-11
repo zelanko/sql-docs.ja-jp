@@ -16,25 +16,25 @@ ms.assetid: adc109b9-79f4-4946-a5eb-658e22e9a8a5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a48d0d3a08095cde1da2c142ed59efafb0ba463f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918479"
 ---
 # <a name="getrowsoptionenum"></a>GetRowsOptionEnum
-取得するレコードの数を指定します、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)します。  
+レコード[セット](../../../ado/reference/ado-api/recordset-object-ado.md)から取得するレコードの数を指定します。  
   
-|定数|Value|説明|  
+|常時|値|[説明]|  
 |--------------|-----------|-----------------|  
-|**adGetRowsRest**|-1|内のレコードの残りの部分を取得、**レコード セット**、現在の位置またはで指定されたブックマークのいずれかから、*開始*のパラメーター、 [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)メソッド。|  
+|**adGetRowsRest**|-1|[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)メソッドの*Start*パラメーターによって指定された現在の位置またはブックマークから、**レコードセット**内の残りのレコードを取得します。|  
   
-## <a name="adowfc-equivalent"></a>ADO と WFC と同等  
- パッケージ: **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>同等の ADO/WFC  
+ パッケージ: **com. ms. wfc. データ**  
   
-|定数|  
+|常時|  
 |--------------|  
-|AdoEnums.GetRowsOption.REST|  
+|AdoEnums. GetRowsOption|  
   
 ## <a name="applies-to"></a>適用対象  
  [GetRows メソッド (ADO)](../../../ado/reference/ado-api/getrows-method-ado.md)

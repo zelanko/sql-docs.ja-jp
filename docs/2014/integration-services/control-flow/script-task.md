@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7c710065bf0a87b5ec3850010344f2ef5114022e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62830563"
 ---
 # <a name="script-task"></a>スクリプト タスク
@@ -64,21 +64,23 @@ ms.locfileid: "62830563"
  これらのプロパティは [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから設定するか、またはプログラムによって設定します。  
   
 ### <a name="configuring-the-script-task-in-the-designer"></a>デザイナーでのスクリプト タスクの構成  
- 次の表では、スクリプト タスクでログに記録できる `ScriptTaskLogEntry` イベントについて説明します。 `ScriptTaskLogEntry`でログ記録イベントが選択されている、**詳細**のタブ、 **SSIS ログの構成** ダイアログ ボックス。 詳しくは、「[Integration Services &#40;SSIS&#41; のログ記録](../performance/integration-services-ssis-logging.md)」と「[ログ記録用のカスタム メッセージ](../custom-messages-for-logging.md)」をご覧ください。  
+ 次の表では、スクリプト タスクでログに記録できる `ScriptTaskLogEntry` イベントについて説明します。 イベントは、[ **SSIS ログの構成**] ダイアログボックスの [詳細] タブで、ログ記録の対象として選択されます。 **** `ScriptTaskLogEntry` 詳細については、「[Integration Services (SSIS) のログ記録](../performance/integration-services-ssis-logging.md)」と「[ログ記録用のカスタム メッセージ](../custom-messages-for-logging.md)」を参照してください。  
   
-|ログ エントリ|説明|  
+|ログ エントリ|[説明]|  
 |---------------|-----------------|  
 |`ScriptTaskLogEntry`|スクリプト内でのログ記録の実装結果を報告します。 タスクは、`Log` オブジェクトの `Dts` メソッドを呼び出すたびにログ エントリを書き込みます。 タスクは、これらのエントリをコードの実行時に書き込みます。 詳細については、「 [スクリプト タスクでのログ記録](../extending-packages-scripting/task/logging-in-the-script-task.md)」を参照してください。|  
   
- [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックを参照してください。  
+ 
+  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックを参照してください。  
   
--   [[スクリプト タスク エディター] &#40;[全般] ページ&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [スクリプトタスクエディター &#40;[全般] ページ&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [[スクリプト タスク エディター] &#40;[スクリプト] ページ&#41;](../script-task-editor-script-page.md)  
+-   [スクリプトタスクエディター &#40;スクリプトページ&#41;](../script-task-editor-script-page.md)  
   
 -   [[式] ページ](../expressions/expressions-page.md)  
   
- [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでこれらのプロパティを設定する方法については、次のトピックを参照してください。  
+ 
+  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでこれらのプロパティを設定する方法については、次のトピックを参照してください。  
   
 -   [タスクまたはコンテナーのプロパティを設定する](../set-the-properties-of-a-task-or-container.md)  
   

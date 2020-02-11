@@ -13,16 +13,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 13ec38a90e0acf85dccf87edd94f6efa4cf3dfd6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62916960"
 ---
-# <a name="database-properties-general-page"></a>[データベースのプロパティ] \([全般] ページ)
+# <a name="database-properties-general-page"></a>[データベースのプロパティ] ([全般] ページ)
   このページを使用すると、選択されているデータベースのプロパティを表示または変更できます。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **[最終データベース バックアップ]**  
  データベースが最後にバックアップされた日付を表示します。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "62916960"
  **名前**  
  データベースの名前が表示されます。  
   
- **ステータス**  
+ **状態**  
  データベースの状態を表示します。 詳細については、「 [データベースの状態](database-states.md)」を参照してください。  
   
  **[所有者]**  
@@ -41,7 +41,7 @@ ms.locfileid: "62916960"
  **[作成日]**  
  データベースが作成された日時を表示します。  
   
- **Size**  
+ **[サイズ]**  
  データベースのサイズをメガバイト単位で表示します。  
   
  **[使用可能領域]**  
@@ -53,8 +53,8 @@ ms.locfileid: "62916960"
  **[照合順序名]**  
  データベースの照合順序を表示します。 照合順序は、 **[オプション]** ページで変更できます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
- [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)  
+ [データベース &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)  
   
   

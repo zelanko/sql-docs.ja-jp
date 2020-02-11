@@ -18,17 +18,17 @@ ms.assetid: c90a8050-0ff4-4c83-9925-261f2f2ccfe9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fb7cb94edab6b5422c315b71c2900662f85aa1e2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67963509"
 ---
 # <a name="refresh-method-rds"></a>Refresh メソッド (RDS)
-指定されたデータ ソースを再クエリ、 [Connect](../../../ado/reference/rds-api/connect-property-rds.md)プロパティと、クエリの結果を更新します。  
+[接続](../../../ado/reference/rds-api/connect-property-rds.md)プロパティで指定されたデータソースを再クエリし、クエリ結果を更新します。  
   
 > [!IMPORTANT]
->  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)します。  
+>  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および[Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416)」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,20 +39,20 @@ DataControl.Refresh
   
 #### <a name="parameters"></a>パラメーター  
  *DataControl*  
- オブジェクト変数を表す、 [rds.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)オブジェクト。  
+ RDS を表すオブジェクト変数です[。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)オブジェクト。  
   
-## <a name="remarks"></a>コメント  
- 設定する必要があります、 [Connect](../../../ado/reference/rds-api/connect-property-rds.md)、 [Server](../../../ado/reference/rds-api/server-property-rds.md)、および[SQL](../../../ado/reference/rds-api/sql-property.md)プロパティを使用する前に、**更新**メソッド。 関連付けられているフォーム上のすべてのデータ バインド コントロールを**rds.DataControl**オブジェクトが新しいレコード セットに反映されます。 既存の[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトがリリースされ、未保存の変更は破棄されます。 **更新**メソッドが現在のレコードに自動最初のレコードにで行います。  
+## <a name="remarks"></a>解説  
+ **Refresh**メソッドを使用する前に、 [Connect](../../../ado/reference/rds-api/connect-property-rds.md)、 [Server](../../../ado/reference/rds-api/server-property-rds.md)、および[SQL](../../../ado/reference/rds-api/sql-property.md)の各プロパティを設定する必要があります。 RDS に関連付けられているフォーム上のすべてのデータバインドコントロール。 **DataControl**オブジェクトには、新しいレコードのセットが反映されます。 既存の[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトがすべて解放され、保存されていない変更はすべて破棄されます。 **Refresh**メソッドでは、最初のレコードが自動的に現在のレコードになります。  
   
- 呼び出すことをお勧め、**更新**メソッド定期的に使用する場合のデータ。 データを取得してしばらくの間、クライアント コンピューターのままに古くなる可能性があります。 行った変更が失敗する、他のユーザーがレコードを変更したし、する前に変更を送信するために可能性があります。  
+ データを操作するときは、 **Refresh**メソッドを定期的に呼び出すことをお勧めします。 データを取得し、しばらくの間クライアントコンピューターに残しておくと、最新の状態にならない可能性があります。 他のユーザーがレコードを変更して変更を送信した可能性があるため、変更が失敗する可能性があります。  
   
 ## <a name="applies-to"></a>適用対象  
  [DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Refresh メソッドの例 (VB)](../../../ado/reference/ado-api/refresh-method-example-vb.md)   
  [Refresh メソッドの例 (VBScript)](../../../ado/reference/rds-api/refresh-method-example-vbscript.md)   
- [アドレス帳のコマンド ボタン](../../../ado/guide/remote-data-service/address-book-command-buttons.md)   
+ [アドレス帳のコマンドボタン](../../../ado/guide/remote-data-service/address-book-command-buttons.md)   
  [CancelUpdate メソッド (RDS)](../../../ado/reference/rds-api/cancelupdate-method-rds.md)   
  [Refresh メソッド (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)   
  [SubmitChanges メソッド (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)

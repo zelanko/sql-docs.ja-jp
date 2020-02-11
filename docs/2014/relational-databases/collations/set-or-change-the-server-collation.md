@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d4501bc77a28746de3b0ce97b7b619889093650d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62918578"
 ---
 # <a name="set-or-change-the-server-collation"></a>サーバーの照合順序の設定または変更
@@ -32,7 +32,7 @@ ms.locfileid: "62918578"
   
 -   すべてのユーザー データベースを削除します。  
   
--   **setup** コマンドの SQLCOLLATION プロパティで新しい照合順序を指定して、master データベースを再構築します。 例 :  
+-   **setup** コマンドの SQLCOLLATION プロパティで新しい照合順序を指定して、master データベースを再構築します。 次に例を示します。  
   
     ```  
     Setup /QUIET /ACTION=REBUILDDATABASE /INSTANCENAME=InstanceName   
@@ -50,7 +50,7 @@ ms.locfileid: "62918578"
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスの既定の照合順序を変更する代わりに、新しく作成するデータベースごとに既定の照合順序を指定することができます。  
   
 ## <a name="see-also"></a>参照  
- [Collation and Unicode Support](collation-and-unicode-support.md)   
+ [照合順序と Unicode のサポート](collation-and-unicode-support.md)   
  [データベースの照合順序の設定または変更](set-or-change-the-database-collation.md)   
  [列の照合順序の設定または変更](set-or-change-the-column-collation.md)   
  [システム データベースの再構築](../databases/system-databases.md)  

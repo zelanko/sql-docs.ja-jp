@@ -1,5 +1,5 @@
 ---
-title: sp_pdw_database_encryption_regenerate_system_keys (SQL Data Warehouse) | Microsoft Docs
+title: sp_pdw_database_encryption_regenerate_system_keys (SQL Data Warehouse) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -13,17 +13,17 @@ ms.author: rortloff
 ms.reviewer: ''
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 323b7602fd375bc393828663f1d2c749332dc9ac
-ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67463476"
 ---
-# <a name="sppdwdatabaseencryptionregeneratesystemkeys-sql-data-warehouse"></a>sp_pdw_database_encryption_regenerate_system_keys (SQL データ ウェアハウス)
+# <a name="sp_pdw_database_encryption_regenerate_system_keys-sql-data-warehouse"></a>sp_pdw_database_encryption_regenerate_system_keys (SQL Data Warehouse)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  使用**sp_pdw_database_encryption_regenerate_system_keys**アプライアンス上 TDE が有効になっているときに暗号化されている内部データベースの証明書とデータベースの暗号化キーを回転させる。 これが含まれています`tempdb`します。 これは、TDE が有効になっている場合にのみ成功します。  
+  アプライアンスで TDE が有効になっているときに暗号化される内部データベースの証明書とデータベース暗号化キーをローテーションするには、 **sp_pdw_database_encryption_regenerate_system_keys**を使用します。 ここには、`tempdb` が含まれています。 これは、TDE が有効になっている場合にのみ成功します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,16 +36,16 @@ sp_pdw_database_encryption_regenerate_system_keys  ;
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  プロシージャにパラメーターがありません。  
   
- アプライアンスのトラフィックが少ないときに、この手順を使用する必要があります。  
+ この手順は、アプライアンスのトラフィックが少ない場合に使用する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
- メンバーシップが必要です、 **sysadmin**固定データベース ロール、または**CONTROL SERVER**権限。  
+ **Sysadmin**固定データベースロールまたは**CONTROL SERVER**権限のメンバーシップが必要です。  
   
 ## <a name="example"></a>例  
- 次の例では、データベースの暗号化キーが再生成します。  
+ 次の例では、データベース暗号化キーを再生成します。  
   
 ```sql  
 EXEC sys.sp_pdw_database_encryption_regenerate_system_keys;  

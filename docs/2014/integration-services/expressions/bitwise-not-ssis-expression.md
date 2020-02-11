@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 73a67105a8b70b1b55b15d894ebc13c90417d8e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62769498"
 ---
 # <a name="-bitwise-not-ssis-expression"></a>~ (ビット演算 Not) (SSIS 式)
@@ -38,7 +38,7 @@ ms.locfileid: "62769498"
 ## <a name="result-types"></a>戻り値の型  
  データ型を返す *integer_expression*です。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  なし  
   
 ## <a name="expression-examples"></a>式の例  

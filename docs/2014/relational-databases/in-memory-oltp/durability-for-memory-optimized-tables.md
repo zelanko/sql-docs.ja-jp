@@ -11,13 +11,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 3a35d5cdb9db4c56579a4229b2d08014a99da542
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63072761"
 ---
 # <a name="durability-for-memory-optimized-tables"></a>メモリ最適化テーブルの持続性
+  
   [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] により、メモリ最適化テーブルには完全な持続性が提供されます。 メモリ最適化テーブルを変更したトランザクションがコミットされると、基になるストレージが使用可能な場合、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、(ディスク ベース テーブルの場合と同様に) この変更が永続的である (データベースの再起動後も保持される) ことが保証されます。 持続性には、トランザクション ログとディスク上ストレージでのデータ変更の保持という、2 つの主なコンポーネントがあります。  
   
 ## <a name="transaction-log"></a>トランザクション ログ  
@@ -55,7 +56,8 @@ ms.locfileid: "63072761"
  この操作では、1 つ以上のデータ ファイルとデルタ ファイルのペアをマージして、新しいデータ ファイルとデルタ ファイルのペアを作成します。  
   
  クラッシュ後の復旧の処理中  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を再起動するか、データベースがオンラインに戻ると、データ ファイルとデルタ ファイルのペアを使用してメモリ最適化データが取り込まれます。 デルタ ファイルは、対応するデータ ファイルから行を読み取るときに、削除された行のフィルターとして機能します。 データ ファイルとデルタ ファイルのペアは独立しているため、データをメモリに取り込む時間を削減するために、これらのファイルは並列処理で読み込まれます。 データがメモリに読み込まれると、インメモリ OLTP エンジンは、メモリ最適化データが完全になるように、まだチェックポイント ファイルで扱われていないアクティブなトランザクション ログ レコードを適用します。  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を再起動するか、データベースがオンラインに戻ると、データ ファイルとデルタ ファイルのペアを使用してメモリ最適化データが取り込まれます。 デルタ ファイルは、対応するデータ ファイルから行を読み取るときに、削除された行のフィルターとして機能します。 データ ファイルとデルタ ファイルのペアは独立しているため、データをメモリに取り込む時間を削減するために、これらのファイルは並列処理で読み込まれます。 データがメモリに読み込まれると、インメモリ OLTP エンジンは、メモリ最適化データが完全になるように、まだチェックポイント ファイルで扱われていないアクティブなトランザクション ログ レコードを適用します。  
   
  復元操作の処理中  
  インメモリ OLTP のチェックポイント ファイルはデータベースのバックアップから作成され、1 つ以上のトランザクション ログ バックアップが適用されます。 クラッシュ後の復旧の場合と同様に、インメモリ OLTP エンジンはデータを並列処理でメモリに読み込むので、復旧時間への影響を最小限に抑えることができます。  
@@ -87,8 +89,9 @@ ms.locfileid: "63072761"
   
  バックグラウンド スレッドでは、閉じているすべての CFP がマージ ポリシーを使用して評価され、該当する CFP に対して 1 つ以上のマージ要求が開始されます。 これらのマージ要求は、オフライン チェックポイント スレッドによって処理されます。 マージ ポリシーの評価は定期的に実行され、チェックポイントが閉じられるときにも行われます。  
   
-### <a name="includesssql14includessssql14-mdmd-merge-policy"></a>[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] マージ ポリシー  
- [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] には、次のマージ ポリシーが実装されています。  
+### <a name="includesssql14includessssql14-mdmd-merge-policy"></a>[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]マージポリシー  
+ 
+  [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] には、次のマージ ポリシーが実装されています。  
   
 -   削除済みの行を考慮したうえで 2 つ以上の連続する CFP が統合可能であり、結果の行が適切なサイズの 1 つの CFP に収まる場合、マージがスケジュールされます。 CFP の適切なサイズは次のように決定されます。  
   
@@ -108,12 +111,12 @@ ms.locfileid: "63072761"
   
  空き領域のある CFP がすべてマージに適合するとは限りません。 たとえば、2 つの隣接する CFP の入力率が 60% の場合、これらはマージの対象にならないため、各 CFP の 40% のストレージは未使用になります。 最悪のケースは、すべての CFP の入力率が 50% になり、ストレージが 50% しか使用されない場合です。 CFP がマージ対象にならず、削除済みの行がストレージに存在していても、それらの削除済みの行は、インメモリ ガベージ コレクションによって既にメモリからは削除されている場合があります。 ストレージとメモリの管理は、ガベージ コレクションから独立しています。 アクティブな CFP (すべての CFP が更新されるわけではありません) から取得されたストレージは、最大でメモリ内の持続性のあるテーブルのサイズの 2 倍になる可能性があります。  
   
- 手動マージを呼び出すことによって明示的に実行することができます必要な場合、 [sys.sp_xtp_merge_checkpoint_files &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-merge-checkpoint-files-transact-sql)します。  
+ 必要に応じて、手動マージは、 [sp_xtp_merge_checkpoint_files &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-merge-checkpoint-files-transact-sql)を呼び出すことによって明示的に実行できます。  
   
 ### <a name="life-cycle-of-a-cfp"></a>CFP のライフ サイクル  
- CPF は、割り当てが解除されるまでにいくつかの状態を遷移します。 任意の時点で、Cfp は、次のフェーズのいずれかでは。PRECREATED、UNDER CONSTRUCTION、ACTIVE、MERGE TARGET、MERGED SOURCE、REQUIRED FOR BACKUP/HA、IN TRANSITION TO TOMBSTONE、および廃棄 (tombstone)。 これらのフェーズの説明については、「[sys.dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql)」を参照してください。  
+ CPF は、割り当てが解除されるまでにいくつかの状態を遷移します。 どの時点でも、CFP は次のフェーズのいずれかにあります。PRECREATED、UNDER CONSTRUCTION、ACTIVE、MERGE TARGET、MERGED SOURCE、REQUIRED FOR BACKUP/HA、IN TRANSITION TO TOMBSTONE、および TOMBSTONE。 これらのフェーズの説明については、「[sys.dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql)」を参照してください。  
   
- さまざまな状態にある CFP によって取得されるストレージを考慮に入れると、持続性のあるメモリ最適化テーブルによって取得されるストレージ全体のサイズは、メモリ内のテーブルのサイズの 2 倍を大きく超える可能性があります。 DMV [sys.dm_db_xtp_checkpoint_files &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql)をフェーズは、メモリ最適化ファイルグループ内のすべての Cfp を一覧表示するクエリを実行できます。 CFP を MERGE SOURCE 状態から TOMBSTONE に移行すると、ガベージ コレクションが最終的に 5 個のチェックポイントを使用する可能性があり、データベースが完全復旧モデルまたは一括ログ復旧モデルを使用するように構成されている場合は、各チェックポイントの後にトランザクション ログ バックアップが続きます。  
+ さまざまな状態にある CFP によって取得されるストレージを考慮に入れると、持続性のあるメモリ最適化テーブルによって取得されるストレージ全体のサイズは、メモリ内のテーブルのサイズの 2 倍を大きく超える可能性があります。 [&#40;transact-sql&#41;DM_DB_XTP_CHECKPOINT_FILES](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql) DMV を照会して、メモリ最適化ファイルグループ内のすべての cfps (フェーズを含む) を一覧表示することができます。 CFP を MERGE SOURCE 状態から TOMBSTONE に移行すると、ガベージ コレクションが最終的に 5 個のチェックポイントを使用する可能性があり、データベースが完全復旧モデルまたは一括ログ復旧モデルを使用するように構成されている場合は、各チェックポイントの後にトランザクション ログ バックアップが続きます。  
   
  手動でチェックポイントとログのバックアップを強制してガベージ コレクションを早めることもできますが、その場合は 5 つの空の CFP (データ ファイルとデルタ ファイルのペアが 5 つ、各データ ファイルのサイズは 128 MB) が追加されます。 実稼動環境のシナリオでは、バックアップ方法の一環として実行される自動チェックポイントとログ バックアップにより、CFP はこれらのフェーズをシームレスに移行し、手動による操作は必要ありません。 ガベージ コレクション プロセスが実行されると、その影響として、メモリ最適化テーブルのあるデータベースのストレージ サイズがメモリ内のサイズに比べて大きくなる可能性があります。 CFP にとって、持続性のあるメモリ最適化テーブルのサイズがメモリ内サイズの 4 倍までになるのは珍しいことではありません。  
   

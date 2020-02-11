@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 01b6388dbec5ed563dd8e7fa4476335a3ace998d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770318"
 ---
 # <a name="term-lookup-transformation"></a>用語参照変換
@@ -60,7 +60,7 @@ ms.locfileid: "62770318"
 |----------|-----------|  
 |入力用語|Windows 7 Professional|  
 |参照用語|Windows, Windows 7 Professional|  
-|[出力]|Windows|  
+|Output|Windows|  
   
  用語参照変換は、特殊文字が含まれる名詞および名詞句を照合でき、参照テーブルのデータにもこれらの文字を含めることができます。 特殊文字とは、%、@、&、$、#、\*、:、;、.、 **,** 、!、?、\<、>、+、=、^、~、|、\\、/、(、)、[、]、{、}、“、‘ です。  
   
@@ -78,7 +78,8 @@ ms.locfileid: "62770318"
   
  変換出力列の InputColumnType プロパティが 0 または 2 に設定されている場合、1 つの列に CustomLineageID プロパティが含まれます。このプロパティには、上流のデータ フロー コンポーネントによって列に割り当てられた、系列 ID が含まれます。  
   
- 用語参照変換は、`Term` と `Frequency` という既定の名前野付いた 2 つの列を変換出力に追加します。 `Term` 列には参照テーブルからの用語が含まれ、`Frequency` 列には、入力データセットで参照テーブル内の用語が検出された回数が含まれます。 これらの列には、CustomLineageID プロパティは含まれません。  
+ 用語参照変換は、`Term` と `Frequency` という既定の名前野付いた 2 つの列を変換出力に追加します。 
+  `Term` 列には参照テーブルからの用語が含まれ、`Frequency` 列には、入力データセットで参照テーブル内の用語が検出された回数が含まれます。 これらの列には、CustomLineageID プロパティは含まれません。  
   
  参照テーブルは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] または Access データベースのテーブルである必要があります。 用語抽出変換の出力がテーブルに保存されている場合、このテーブルを参照テーブルとして使用できます。ただし、他のテーブルを使用することもできます。 フラット ファイルのテキスト、Excel ブック、または他の変換元を用語参照変換で使用するには、これらを、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースまたは Access データベースにインポートする必要があります。  
   
@@ -92,15 +93,17 @@ ms.locfileid: "62770318"
   
  プロパティを設定するには [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
- **[用語参照変換エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
+ 
+  **[用語参照変換エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [用語参照変換エディター ([参照テーブル] タブ)](../../term-lookup-transformation-editor-reference-table-tab.md)  
+-   [[用語参照変換エディター] &#40;[参照テーブル] タブ&#41;](../../term-lookup-transformation-editor-reference-table-tab.md)  
   
--   [用語参照変換エディター ([用語参照] タブ)](../../term-lookup-transformation-editor-term-lookup-tab.md)  
+-   [[用語参照変換エディター] &#40;[用語参照] タブ&#41;](../../term-lookup-transformation-editor-term-lookup-tab.md)  
   
--   [用語参照変換エディター ([詳細設定] タブ)](../../term-lookup-transformation-editor-advanced-tab.md)  
+-   [[用語参照変換エディター] &#40;[詳細設定] タブ&#41;](../../term-lookup-transformation-editor-advanced-tab.md)  
   
- **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
+ 
+  **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
 -   [共通プロパティ](../../common-properties.md)  
   

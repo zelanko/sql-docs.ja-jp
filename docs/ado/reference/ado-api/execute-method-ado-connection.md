@@ -17,14 +17,14 @@ ms.assetid: 03c69320-96b2-4d85-8d49-a13b13e31578
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4999b1e21ec145713cadae28ff7ee8a64dd460b7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932892"
 ---
 # <a name="execute-method-ado-connection"></a>Execute メソッド (ADO Connection)
-指定されたクエリ、SQL ステートメント、ストアド プロシージャ、またはプロバイダー固有のテキストを実行します。  
+指定されたクエリ、SQL ステートメント、ストアドプロシージャ、またはプロバイダー固有のテキストを実行します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,35 +35,35 @@ Set recordset = connection.Execute (CommandText, RecordsAffected, Options)
 ```  
   
 ## <a name="return-value"></a>戻り値  
- 返します、[レコード セット オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト参照。  
+ [レコードセットオブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト参照を返します。  
   
 #### <a name="parameters"></a>パラメーター  
  *CommandText*  
- A**文字列**値を含む SQL ステートメント、ストアド プロシージャ、URL、またはプロバイダー固有のテキストを実行します。 **必要に応じて**テーブル名は、プロバイダーが SQL 対応である場合にのみ使用できます。 「顧客」の場合、テーブル名の例を使用すると、ADO は自動的に先頭に追加を形成し、"SELECT * FROM Customers"を渡す標準の SQL Select 構文として、[!INCLUDE[tsql](../../../includes/tsql-md.md)]プロバイダーにステートメント。  
+ 実行する SQL ステートメント、ストアドプロシージャ、URL、またはプロバイダー固有のテキストを含む**文字列**値です。 **必要に応じ**て、プロバイダーが SQL 対応である場合にのみ、テーブル名を使用できます。 たとえば、"Customers" という名前のテーブルが使用されている場合、ADO は自動的に標準の SQL Select 構文を先頭に付加し、" [!INCLUDE[tsql](../../../includes/tsql-md.md)] SELECT * FROM Customers" をステートメントとしてプロバイダーに渡します。  
   
  *RecordsAffected*  
- 任意。 A**長い**変数を操作の影響を受けるレコードの数はプロバイダーに返されます。  
+ 省略可能。 操作によって影響を受けたレコードの数をプロバイダーが返す**長い**変数。  
   
- *[オプション]*  
- 任意。 A**長い**プロバイダーが CommandText 引数を評価する方法を示す値です。 1 つ以上のビットマスクを指定できます[CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)または[ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md)値。  
+ *オプション*  
+ 省略可能。 プロバイダーが CommandText 引数を評価する方法を示す**Long**値。 1つ以上の[Commandtypeenum](../../../ado/reference/ado-api/commandtypeenum.md)値または[executeoptionenum](../../../ado/reference/ado-api/executeoptionenum.md)値のビットマスクを指定できます。  
   
- **注**使用、 **ExecuteOptionEnum**値**adExecuteNoRecords**内部処理を最小限に抑えることで、Visual Basic 6.0 から移植するアプリケーションのパフォーマンスを向上させる。  
+ **メモ****Executeoptionenum**値**adExecuteNoRecords**を使用すると、内部処理を最小限に抑え、Visual Basic 6.0 から移植するアプリケーションに対して、パフォーマンスを向上させることができます。  
   
- 使用しない**adExecuteStream**で、 **Execute**のメソッド、**接続**オブジェクト。  
+ **Connection**オブジェクトの**Execute**メソッドで**adExecuteStream**を使用しないでください。  
   
- Execute を使用 adCmdFile または adCmdTableDirect CommandTypeEnum 値を使わないでください。 これらの値は、オプションとしてのみ使用できます、 [Open メソッド (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)と[Requery メソッド](../../../ado/reference/ado-api/requery-method.md)のメソッド、 **Recordset**します。  
+ Execute を使用して adCmdFile または adCmdTableDirect の CommandTypeEnum 値を使用しないでください。 これらの値は、**レコードセット**の[OPEN メソッド (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)および[Requery メソッド](../../../ado/reference/ado-api/requery-method.md)メソッドを使用したオプションとしてのみ使用できます。  
   
-## <a name="remarks"></a>コメント  
- 使用して、 **Execute**メソッドを[接続オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトは、指定した接続で CommandText 引数でメソッドに渡す任意のクエリを実行します。 新しい実行によって生成される結果を格納 CommandText 引数は、行を返すクエリを指定する場合**Recordset**オブジェクト。 プロバイダーが返すかどうか、コマンドを (たとえば、SQL UPDATE クエリ) の結果を返すことはありません**Nothing**オプション限り**adExecuteNoRecords**が指定されて; 実行それ以外の場合、閉じられた**Recordset**します。  
+## <a name="remarks"></a>解説  
+ [Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトに対して**Execute**メソッドを使用すると、指定された接続の CommandText 引数でメソッドに渡す任意のクエリが実行されます。 CommandText 引数で行を返すクエリが指定されている場合、実行によって生成される結果は、新しい**レコードセット**オブジェクトに格納されます。 コマンドが結果を返すことを意図していない場合 (SQL UPDATE クエリなど)、オプション**adExecuteNoRecords**が指定されていれば、プロバイダーは**何も**返しません。それ以外の場合は、終了した**レコードセット**が返されます。  
   
- 返された**Recordset**オブジェクトが読み取り専用、順方向専用カーソルでは常にします。 必要がある場合、 **Recordset**オブジェクトの多くの機能では、まず作成、**レコード セット**必要なプロパティの設定を持つオブジェクトを使用して、**レコード セット**オブジェクト[Open メソッド (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)をクエリを実行し、目的のカーソルの種類を返すメソッド。  
+ 返される**レコードセット**オブジェクトは、常に読み取り専用の順方向専用カーソルです。 より多くの機能を持つ**レコードセット**オブジェクトが必要な場合は、まず、必要なプロパティ設定を使用して**レコードセット**オブジェクトを作成し、次に**レコードセット**オブジェクトの[Open メソッド (ADO recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)メソッドを使用してクエリを実行し、目的のカーソルの種類を返します。  
   
- 内容、 *CommandText*引数は、プロバイダーに固有と標準の SQL 構文またはプロバイダーがサポートする任意の特殊なコマンド形式を指定できます。  
+ *CommandText*引数の内容はプロバイダーに固有であり、標準の SQL 構文、またはプロバイダーがサポートする特殊なコマンド形式にすることができます。  
   
- ExecuteComplete イベントは、この操作の終了時に発行されます。  
+ この操作が終了すると、ExecuteComplete イベントが発行されます。  
   
 > [!NOTE]
->  Http スキームを使用して Url が自動的に呼び出さ、 [Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)します。 詳細については、次を参照してください。[絶対と相対 Url](../../../ado/guide/data/absolute-and-relative-urls.md)します。  
+>  Http スキームを使用する Url は、[インターネット公開のために Microsoft OLE DB プロバイダー](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)を自動的に呼び出します。 詳細については、「[絶対 url と相対 url](../../../ado/guide/data/absolute-and-relative-urls.md)」を参照してください。  
   
 ## <a name="applies-to"></a>適用対象  
  [Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

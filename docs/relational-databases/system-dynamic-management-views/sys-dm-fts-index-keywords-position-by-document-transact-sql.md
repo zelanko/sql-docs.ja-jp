@@ -1,5 +1,5 @@
 ---
-title: sys.dm_fts_index_keywords_position_by_document (TRANSACT-SQL) |Microsoft Docs
+title: dm_fts_index_keywords_position_by_document (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,16 +19,16 @@ ms.assetid: 0d70184f-baa2-411b-a32d-a4c5af890edd
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: feaf2a222df364a41e51969a2c95a978f2d0a289
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67900956"
 ---
-# <a name="sysdmftsindexkeywordspositionbydocument-transact-sql"></a>sys.dm_fts_index_keywords_position_by_document (TRANSACT-SQL)
+# <a name="sysdm_fts_index_keywords_position_by_document-transact-sql"></a>dm_fts_index_keywords_position_by_document (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  インデックス付きドキュメント内のキーワードの位置情報を返します。  
+  インデックス付きドキュメント内のキーワード位置情報を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,30 +41,30 @@ OBJECT_ID('table_name')
 ```  
   
 ## <a name="arguments"></a>引数  
- db_id('*database_name*')  
- 呼び出し、 [DB_ID()](../../t-sql/functions/db-id-transact-sql.md)関数。 この関数は、データベース名を受け取り、どの sys.dm_fts_index_keywords_position_by_document は、指定されたデータベースの検索を使用して、データベースの ID を返します。  
+ db_id ('*database_name*')  
+ [DB_ID ()](../../t-sql/functions/db-id-transact-sql.md)関数の呼び出し。 この関数は、データベース名を受け取り、データベース ID を返します。この ID は、指定されたデータベースを検索するために使用 dm_fts_index_keywords_position_by_document ます。  
   
- object_id('*table_name*')  
- 呼び出し、 [OBJECT_ID()](../../t-sql/functions/object-id-transact-sql.md)関数。 この関数はテーブル名を受け取り、調べるフルテキスト インデックスが含まれているテーブルのテーブル ID を返します。  
+ object_id ('*table_name*')  
+ [OBJECT_ID ()](../../t-sql/functions/object-id-transact-sql.md)関数の呼び出し。 この関数は、テーブル名を受け取り、検査するフルテキストインデックスが含まれているテーブルのテーブル ID を返します。  
   
 ## <a name="table-returned"></a>返されるテーブル  
   
-|[列]|データ型|説明|  
+|列|データ型|[説明]|  
 |------------|---------------|-----------------|  
 |キーワード (keyword)|**varbinary (128)**|キーワードを表すバイナリ文字列。|  
-|display_term|**nvarchar (4000)**|人間が判読できる形式のキーワードです。 この形式は、フルテキスト インデックスに格納されている内部形式から派生しています。|  
-|column_id|**int**|現在のキーワードのフルテキスト インデックスが作成された列の ID です。|  
-|document_id|**bigint**|現在の用語のフルテキスト インデックスが作成されたドキュメントまたは行の ID です。 この ID は、ドキュメントまたは行のフル テキスト キー値に対応します。|  
+|display_term|**nvarchar(4000)**|キーワードの人間が判読できる形式。 この形式は、フルテキストインデックスに格納されている内部形式から派生します。|  
+|column_id|**int**|現在のキーワードがフルテキストインデックスを作成した列の ID。|  
+|document_id|**bigint**|現在の用語のフルテキストインデックスが作成されたドキュメントまたは行の ID。 この ID は、そのドキュメントまたは行のフルテキストキー値に対応します。|  
 |position|**int**|ドキュメント内のキーワードの位置。|  
   
-## <a name="remarks"></a>コメント  
- DMV を使用して、インデックス付きドキュメントにインデックス付けされた単語の場所を識別します。 この DMV のトラブルシューティングに使用できる際に問題**sys.dm_fts_index_keywords_by_document**単語は、フルテキスト インデックスが、それらの単語を使用してクエリを実行すると、ドキュメントは返されませんを示します。  
+## <a name="remarks"></a>解説  
+ DMV を使用して、インデックス付きドキュメント内のインデックス付けされた単語の場所を特定します。 この DMV を使用すると、 **dm_fts_index_keywords_by_document システム**がフルテキストインデックスに含まれていることを示す場合に問題のトラブルシューティングを行うことができますが、これらの単語を使用してクエリを実行すると、ドキュメントは返されません。  
   
 ## <a name="permissions"></a>アクセス許可  
  フルテキスト インデックスに含まれる列に対する SELECT 権限と、CREATE FULL TEXT CATALOG 権限が必要です。  
   
-## <a name="examples"></a>使用例  
- 次の例では、キーワードを返してのフルテキスト インデックスから、`Production.Document`のテーブル、`AdventureWorks`サンプル データベース。  
+## <a name="examples"></a>例  
+ 次の例では、 `Production.Document` `AdventureWorks`サンプルデータベースのテーブルのフルテキストインデックスからキーワードを返します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -78,7 +78,7 @@ SELECT * FROM sys.dm_fts_index_keywords_position_by_document
 GO  
 ```  
   
- さらに、場所を特定する、次の例クエリと同様に、その他の columns_id では、述語を追加できます。  
+ 次のクエリ例のように、他の columns_id に述語を追加して、場所をさらに分離することができます。  
   
 ```  
 SELECT * FROM sys.dm_fts_index_keywords_position_by_document  
@@ -89,13 +89,13 @@ SELECT * FROM sys.dm_fts_index_keywords_position_by_document
 WHERE document_id = 7 AND display_term = 'performance';  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [フルテキスト検索](../../relational-databases/search/full-text-search.md)   
- [フルテキスト インデックスのパフォーマンスを向上させる](../../relational-databases/search/improve-the-performance-of-full-text-indexes.md)   
- [フルテキスト検索およびセマンティック検索関数&#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/full-text-search-and-semantic-search-functions-transact-sql.md)   
- [フルテキスト検索とセマンティック検索の動的管理ビューおよび関数&#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
- [フルテキスト検索およびセマンティック検索ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)   
- [検索プロパティ リストを使用したドキュメント プロパティの検索](../../relational-databases/search/search-document-properties-with-search-property-lists.md)   
- [sys.dm_fts_index_keywords_by_document &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md)  
+ [フルテキストインデックスのパフォーマンスの向上](../../relational-databases/search/improve-the-performance-of-full-text-indexes.md)   
+ [フルテキスト検索およびセマンティック検索関数 &#40;Transact-sql&#41;](../../relational-databases/system-functions/full-text-search-and-semantic-search-functions-transact-sql.md)   
+ [Transact-sql&#41;&#40;のフルテキスト検索とセマンティック検索の動的管理ビューおよび関数](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
+ [Transact-sql&#41;&#40;のフルテキスト検索およびセマンティック検索ストアドプロシージャ](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)   
+ [検索プロパティリストを使用したドキュメントプロパティの検索](../../relational-databases/search/search-document-properties-with-search-property-lists.md)   
+ [dm_fts_index_keywords_by_document &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Move メソッドの例 (vc++) |Microsoft Docs
+title: Move メソッドの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 0e08af60-f668-4092-8b6a-9e8b6db90448
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5ad0cfea4762dc1e6e757a0fe6182505927b70c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932096"
 ---
 # <a name="move-method-example-vc"></a>Move メソッドの例 (VC++)
-この例では、[移動](../../../ado/reference/ado-api/move-method-ado.md)ユーザー入力に基づいてメソッドをレコード ポインターの位置します。  
+この例では、 [Move](../../../ado/reference/ado-api/move-method-ado.md)メソッドを使用して、ユーザー入力に基づいてレコードポインターを配置します。  
   
 ## <a name="example"></a>例  
   
@@ -234,14 +234,14 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="sample-input"></a>入力のサンプル  
+## <a name="sample-input"></a>サンプル入力  
   
 ```  
 1  
 0  
 ```  
   
-## <a name="sample-output"></a>出力例  
+## <a name="sample-output"></a>サンプル出力  
   
 ```  
 Record 1 of 23  
@@ -257,5 +257,5 @@ Enter number of records to Move
 (positive or negative, Enter to quit):  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Move メソッド (ADO)](../../../ado/reference/ado-api/move-method-ado.md)

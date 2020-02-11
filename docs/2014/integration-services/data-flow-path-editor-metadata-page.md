@@ -1,5 +1,5 @@
 ---
-title: データ フロー パス エディター (メタデータ ページ) |Microsoft Docs
+title: '[データフローパスエディター] ([メタデータ] ページ) |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,17 +15,18 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d0a1897ded7e3d266d701bd4a587c03c252105bd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059989"
 ---
 # <a name="data-flow-path-editor-metadata-page"></a>[データ フロー パス エディター] ([メタデータ] ページ)
+  
   **[データ フロー パス エディター]** ダイアログ ボックスの **[メタデータ]** ページを使用すると、パス列のメタデータを表示できます。  
   
-## <a name="options"></a>および  
- **[パスのメタデータ]**  
+## <a name="options"></a>オプション  
+ **パスメタデータ**  
  列のメタデータが一覧表示されます。 列のデータを並べ替えるには、列ヘッダーをクリックします。  
   
  **名前**  
@@ -34,37 +35,37 @@ ms.locfileid: "66059989"
  **[データ型]**  
  列のデータ型が一覧表示されます。  
   
- **Precision**  
+ **精度**  
  数値の桁数が一覧表示されます。  
   
- **Scale**  
+ **段階**  
  数値の中で小数点より右側の桁数が一覧表示されます。  
   
- **Length**  
+ **数**  
  列の現在の長さが一覧表示されます。  
   
- **コード ページ**  
+ **コードページ**  
  列のコード ページが一覧表示されます。 値 **0** は、その列でコード ページが使用されないことを示します。 これは、データが Unicode であるか、数値、日付、または時刻のデータ型である場合です。  
   
- **[並べ替えキーの位置]**  
+ **並べ替えキーの位置**  
  列の並べ替えキーの位置が一覧表示されます。 値 **0** は、その列が並べ替えられないことを示します。  
   
 > [!NOTE]  
 >  マイナス記号 (-) のプレフィックスは、列が降順で並べ替えられていることを示します。  
   
- **[比較フラグ]**  
+ **比較フラグ**  
  列に適用されている比較フラグが一覧表示されます。  
   
- **[基になるコンポーネント]**  
+ **変換元コンポーネント**  
  列の基になるデータ フロー コンポーネントが一覧表示されます。  
   
- **[クリップボードにコピー]**  
+ **クリップボードにコピー**  
  列のメタデータをクリップボードにコピーします。 既定では、すべてのメタデータ行が現在表示されている順序でコピーされます。  
   
 ## <a name="see-also"></a>参照  
- [データ フロー パス エディター &#40;[全般] ページ&#41;](general-page-of-integration-services-designers-options.md)   
- [データ フロー パス エディター&#40;データ ビューアー ページ&#41;](../../2014/integration-services/data-flow-path-editor-data-viewers-page.md)   
- [データ フロー](data-flow/data-flow.md)   
+ [データフローパスエディター &#40;[全般] ページ&#41;](general-page-of-integration-services-designers-options.md)   
+ [データフローパスエディターの [データビューアー] ページ &#40;&#41;](../../2014/integration-services/data-flow-path-editor-data-viewers-page.md)   
+ [データフロー](data-flow/data-flow.md)   
  [パッケージで注釈を使用する](use-annotations-in-packages.md)  
   
   

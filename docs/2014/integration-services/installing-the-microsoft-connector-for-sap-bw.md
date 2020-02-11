@@ -1,5 +1,5 @@
 ---
-title: Microsoft Connector 1.1 for SAP BW のインストール |Microsoft Docs
+title: Microsoft Connector for 1.1 SAP BW のインストール |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0e43a45f9b21e631638dec43a8a126b4f007429d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62767754"
 ---
 # <a name="installing-the-microsoft-connector-for-11-sap-bw"></a>Microsoft Connector 1.1 for SAP BW のインストール
-  インストールする、 [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 for SAP BW およびそのドキュメントをダウンロードして、SQL Server 機能パック Web ページから、Windows インストーラー パッケージを実行します。  
+  SAP BW とその[!INCLUDE[msCoName](../includes/msconame-md.md)]ドキュメントのコネクタ1.1 をインストールするには、SQL Server Feature Pack Web ページから Windows インストーラーパッケージをダウンロードして実行します。  
   
 > [!IMPORTANT]  
 >  Microsoft Connector 1.1 for SAP BW に関するドキュメントでは、SAP Netweaver BW 環境について理解していることを前提としています。 SAP Netweaver BW の詳細または SAP Netweaver BW オブジェクトやプロセスを構成する方法については、SAP のマニュアルを参照してください。  
@@ -27,12 +27,12 @@ ms.locfileid: "62767754"
 >  SAP Netweaver BW からデータを抽出するには、追加の SAP のライセンスが必要です。 これらの要件を確認するには、SAP にお問い合わせください。  
   
 ## <a name="required-sap-files"></a>必要な SAP のファイル  
- 使用する、 [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 for SAP BW では、されませんが、ローカル コンピューターに、SAP フロント エンド ソフトウェア (SAP GUI) をインストールします。  
+ SAP BW に[!INCLUDE[msCoName](../includes/msconame-md.md)]コネクタ1.1 を使用するには、Sap フロントエンドソフトウェア (sap GUI) をローカルコンピューターにインストールする必要はありません。  
   
  ただし、SAP の .NET コネクタ ファイルである librfc32.dll を、Windows フォルダー内の system サブフォルダーにコピーする必要があります (通常は、このフォルダーの場所は、 **C:\Windows\system32**です)。  
   
 ## <a name="considerations-for-64-bit-computers"></a>64 ビット コンピューターに関する注意事項  
- [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 for SAP BW の 64 ビット バージョンを完全にサポートする[!INCLUDE[msCoName](../includes/msconame-md.md)]Windows。 64 ビット コンピューターで、 [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 for SAP BW に次の追加要件。  
+ コネクタ[!INCLUDE[msCoName](../includes/msconame-md.md)] 1.1 for SAP BW は、Windows の[!INCLUDE[msCoName](../includes/msconame-md.md)] 64 ビットバージョンを完全にサポートしています。 64ビットコンピューターの場合、SAP BW の[!INCLUDE[msCoName](../includes/msconame-md.md)]コネクタ1.1 には、次の追加要件があります。  
   
 -   任意の 64 ビット Windows オペレーティング システムで、パッケージを 64 ビット モードで実行するには、SAP GUI ファイルの 64 ビット バージョンである librfc32.dll を、Windows フォルダー内の **system32** フォルダーにコピーします (通常は、このファイルの場所は、 **C:\Windows\system32**です)。  
   

@@ -1,5 +1,5 @@
 ---
-title: IsolationLevel プロパティ |Microsoft Docs
+title: IsolationLevel Property |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,29 +16,29 @@ ms.assetid: ea84e4b2-fbf2-4eef-b9ce-796b22e21800
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dc360bc91e977228a6f9139089a7bfa87d912e1f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918441"
 ---
 # <a name="isolationlevel-property"></a>IsolationLevel プロパティ
-分離のレベルを示します、[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクト。  
+[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトの分離レベルを示します。  
   
 ## <a name="settings-and-return-values"></a>設定と戻り値  
- 取得または設定、 [IsolationLevelEnum](../../../ado/reference/ado-api/isolationlevelenum.md)値。 既定値は**adXactReadCommitted**します。  
+ [IsolationLevelEnum](../../../ado/reference/ado-api/isolationlevelenum.md)値を設定または返します。 既定値は**adXactReadCommitted**です。  
   
-## <a name="remarks"></a>コメント  
- 使用して、 **IsolationLevel** 、分離のレベルを設定するプロパティを**接続**オブジェクト。 設定は無効になります次に呼び出すまで、 [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)メソッド。 更新することがなく、プロバイダーが次に高い分離レベルを返す可能性がありますを要求する分離レベルが使用できない場合、 **IsolationLevel**プロパティ。  
+## <a name="remarks"></a>解説  
+ **接続**オブジェクトの分離レベルを設定するには、 **IsolationLevel**プロパティを使用します。 この設定は、次に[BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)メソッドを呼び出したときまで有効になりません。 要求した分離レベルが使用できない場合、プロバイダーは、 **IsolationLevel**プロパティを更新せずに、次に高い分離レベルを返すことができます。  
   
- **IsolationLevel**読み取り/書き込みプロパティです。  
+ **IsolationLevel**プロパティは読み取り/書き込み可能です。  
   
 > [!NOTE]
->  **リモート データ サービスの使用状況**クライアント側で使用すると**接続**オブジェクト、 **IsolationLevel**にのみ設定できるプロパティ**adXactUnspecified**。 切断を操作するため、 **Recordset**オブジェクト クライアント サイド キャッシュ、マルチ ユーザーの問題がある可能性があります。 たとえば、2 人のユーザーが同じレコードを更新しようとすると、リモート データ サービスだけは、"win"を最初のレコードを更新したユーザー 2 番目のユーザーの更新要求はエラーで失敗します。  
+>  **リモートデータサービスの使用状況**クライアント側の**接続**オブジェクトで使用する場合、 **IsolationLevel**プロパティは**adXactUnspecified**にのみ設定できます。 ユーザーはクライアント側キャッシュで切断された**レコードセット**オブジェクトを操作しているため、マルチユーザーの問題が発生する可能性があります。 たとえば、2人のユーザーが同じレコードを更新しようとした場合、リモートデータサービスは、最初にレコードを更新するユーザーに "win" を許可します。 2番目のユーザーの更新要求は、エラーで失敗します。  
   
 ## <a name="applies-to"></a>適用対象  
  [Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
-## <a name="see-also"></a>関連項目  
- [IsolationLevel および Mode プロパティの例 (VB)](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vb.md)   
- [IsolationLevel および Mode プロパティの例 (vc++)](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vc.md)   
+## <a name="see-also"></a>参照  
+ [IsolationLevel と Mode プロパティの例 (VB)](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vb.md)   
+ [IsolationLevel と Mode プロパティの例 (VC + +)](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vc.md)   

@@ -1,5 +1,5 @@
 ---
-title: SQL Server (SQL Server 構成マネージャー) のインスタンスの自動開始の回避 |Microsoft Docs
+title: SQL Server のインスタンスの自動起動を禁止する (SQL Server 構成マネージャー) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6af4597a4ddf802c80bc98cb38363d59348fa0bb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62810052"
 ---
 # <a name="prevent-automatic-startup-of-an-instance-of-sql-server-sql-server-configuration-manager"></a>SQL Server のインスタンスの自動開始の回避 (SQL Server 構成マネージャー)
@@ -37,11 +37,12 @@ ms.locfileid: "62810052"
   
 3.  詳細ペインで、 **[MSSQLServer]** を右クリックし、 **[プロパティ]** をクリックします。  
   
-4.  **[SQL Server \<** _instancename_ **> のプロパティ]** ダイアログ ボックスの **[プロパティ]** ボックスで、 **[開始モード]** の値を **[手動]** に設定します。  
+4.  
+  **[SQL Server \<**_instancename_**> のプロパティ]** ダイアログ ボックスの **[プロパティ]** ボックスで、**[開始モード]** の値を **[手動]** に設定します。  
   
-5.  **[OK]** をクリックして **[SQL Server \<** _instancename_ **> のプロパティ]** ダイアログ ボックスを閉じ、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを閉じます。  
+5.  [ **OK** ] をクリックして [ **SQL Server \< ** _instancename_ **> のプロパティ**] ダイアログ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ボックスを閉じ、Configuration Manager を閉じます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データベース エンジン、SQL Server エージェント、SQL Server Browser サービスの開始、停止、一時停止、再開、および再起動](start-stop-pause-resume-restart-sql-server-services.md)  
   
   

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7823ce29facb7f1c85a51a12b31ee2076a0d023b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107422"
 ---
 # <a name="configure-data-source-properties-for-a-report--report-manager"></a>レポートのデータ ソースのプロパティを構成する (レポート マネージャー)
@@ -30,23 +30,27 @@ ms.locfileid: "66107422"
   
 2.  レポート マネージャーで **[コンテンツ]** ページに移動します。 レポート固有のデータ ソースを構成するレポートに移動し、そのレポートを開きます。  
   
-3.  **[プロパティ]** タブをクリックします。 **[全般]** プロパティ ページが開きます。  
+3.  [**プロパティ**] タブをクリックします。**[全般**プロパティ] ページが開きます。  
   
-4.  **[データ ソース]** タブをクリックします。レポートの [データ ソース] プロパティ ページが開きます。  
+4.  [**データソース**] タブをクリックします。これにより、レポートの [データソース] プロパティページが開きます。  
   
-5.  **[カスタム データ ソース]** をクリックして、レポート内のデータ ソース接続情報を指定します。  
+5.  
+  **[カスタム データ ソース]** をクリックして、レポート内のデータ ソース接続情報を指定します。  
   
-6.  **[接続の種類]** の一覧で、データ ソースから取得したデータの処理に使用するデータ処理拡張機能を指定します。  
+6.  
+  **[接続の種類]** の一覧で、データ ソースから取得したデータの処理に使用するデータ処理拡張機能を指定します。  
   
-7.  **[接続文字列]** でレポート サーバーがデータ ソースへの接続に使用する接続文字列を指定します。 接続文字列には資格情報を指定しないことをお勧めします。  
+7.  
+  **[接続文字列]** でレポート サーバーがデータ ソースへの接続に使用する接続文字列を指定します。 接続文字列には資格情報を指定しないことをお勧めします。  
   
-     以下に、ローカルの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースへの接続に使用する接続文字列の例を示します。  
+     次の例は、ローカル[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]データベースに接続するための接続文字列を示しています。  
   
     ```  
     data source=<localservername>; initial catalog=AdventureWorks2012  
     ```  
   
-8.  **[接続に使用する認証]** では、レポートが実行される際に資格情報を取得する方法を指定します。  
+8.  
+  **[接続に使用する認証]** では、レポートが実行される際に資格情報を取得する方法を指定します。  
   
     -   ユーザーにログオン名とパスワードを要求する場合は、 **[レポートの実行者により指定された資格情報]** をクリックします。  
   
@@ -58,12 +62,12 @@ ms.locfileid: "66107422"
   
  資格情報の構成の詳細については、「 [レポート データ ソースに関する資格情報と接続情報を指定する](specify-credential-and-connection-information-for-report-data-sources.md)」を参照してください。 自動実行アカウントについては、「[自動実行アカウントの構成 &#40;SSRS 構成マネージャー&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- [[コンテンツ] ページ (レポート マネージャー)](../contents-page-report-manager.md)   
- [[新しいデータ ソース] ページ (レポート マネージャー)](../new-data-source-page-report-manager.md)   
- [共有データ ソースを作成、変更、および削除する (SSRS)](create-modify-and-delete-shared-data-sources-ssrs.md)   
+## <a name="see-also"></a>参照  
+ [[コンテンツ] ページ &#40;レポートマネージャー&#41;](../contents-page-report-manager.md)   
+ [[新しいデータソース] ページ &#40;レポートマネージャー&#41;](../new-data-source-page-report-manager.md)   
+ [SSRS&#41;&#40;共有データソースを作成、変更、および削除します。](create-modify-and-delete-shared-data-sources-ssrs.md)   
  [レポート データ ソースを管理する](manage-report-data-sources.md)   
- [共有データ ソースを作成、削除、または変更する &#40;レポート マネージャー&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
- [[データ ソース] プロパティ ページ (レポート マネージャー)](../data-sources-properties-page-report-manager.md)  
+ [共有データソース &#40;レポートマネージャーの作成、削除、または変更&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
+ [[データソース] プロパティページ &#40;レポートマネージャー&#41;](../data-sources-properties-page-report-manager.md)  
   
   

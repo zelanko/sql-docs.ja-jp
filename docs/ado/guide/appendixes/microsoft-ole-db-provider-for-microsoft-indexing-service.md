@@ -1,5 +1,5 @@
 ---
-title: Microsoft OLE DB Provider for Microsoft インデックス サービス |Microsoft ドキュメント
+title: Microsoft OLE DB Provider for Microsoft インデックスサービス |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,25 +15,25 @@ ms.assetid: f86a0598-5097-471b-8318-d2c859d085f2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a5a81514fd12117a9f43e2c33bf0cda579fb363d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926663"
 ---
-# <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Microsoft OLE DB Provider for Microsoft サービスの概要をインデックス作成
-Microsoft OLE DB Provider for Microsoft インデックス サービスは、ファイル システムと Microsoft Indexing Service でインデックス付けされた Web データにプログラムでの読み取り専用アクセスを提供します。 ADO アプリケーションでは、コンテンツとファイルのプロパティ情報を取得する SQL クエリを発行できます。
+# <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Microsoft OLE DB Provider for Microsoft Indexing Service の概要
+Microsoft OLE DB Provider for Microsoft Indexing Service は、Microsoft Indexing Service によってインデックス付けされたファイルシステムおよび Web データへのプログラムによる読み取り専用アクセスを提供します。 ADO アプリケーションは、SQL クエリを発行してコンテンツとファイルのプロパティ情報を取得できます。
 
- プロバイダーは、フリー スレッドし、UNICODE に対応します。
+ プロバイダーは、フリースレッドで、UNICODE が有効になっています。
 
 ## <a name="connection-string-parameters"></a>接続文字列パラメーター
- このプロバイダーに接続するには、設定、**Provider =** への引数、 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)プロパティ。
+ このプロバイダーに接続するには、 **provider =** 引数を[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)プロパティに設定します。
 
 ```vb
 MSIDXS
 ```
 
- 読み取り、[Provider](../../../ado/reference/ado-api/provider-property-ado.md)プロパティは同様に、この文字列を返します。
+ [プロバイダー](../../../ado/reference/ado-api/provider-property-ado.md)プロパティを読み取ると、この文字列も返されます。
 
 ## <a name="typical-connection-string"></a>一般的な接続文字列
  このプロバイダーの一般的な接続文字列は次のとおりです。
@@ -42,29 +42,29 @@ MSIDXS
 "Provider=MSIDXS;Data Source=myCatalog;Locale Identifier=nnnn;"
 ```
 
- 文字列は、これらのキーワードで構成されます。
+ 文字列は、次のキーワードで構成されています。
 
-|Keyword|説明|
+|Keyword|[説明]|
 |-------------|-----------------|
-|**Provider**|Microsoft インテックス サービス用の OLE DB プロバイダーを指定します。 通常これは、接続文字列で指定された唯一のキーワードです。|
-|**Data Source**|インデックス サービスのカタログ名を指定します。 このキーワードが指定されていない場合は、既定のシステム カタログが使用されます。|
-|**Locale Identifier**|32 ビットに固有の番号 (1033 など) に関連するユーザーの言語の基本設定を指定するを指定します。 このキーワードが指定されていない場合は、既定のシステム ロケールの識別子が使用されます。|
+|**プロバイダー**|Microsoft インデックスサービスの OLE DB プロバイダーを指定します。 通常、これは接続文字列で指定されている唯一のキーワードです。|
+|**Data Source**|インデックスサービスのカタログ名を指定します。 このキーワードが指定されていない場合は、既定のシステムカタログが使用されます。|
+|**ロケール識別子**|ユーザーの言語に関連する設定を指定する32ビットの一意の数値 (1033 など) を指定します。 このキーワードが指定されていない場合は、既定のシステムロケール識別子が使用されます。|
 
 ## <a name="command-text"></a>コマンド テキスト
- インデックス作成サービスの SQL クエリ構文では、SQL 92 に拡張機能の **SELECT** ステートメントとその **FROM** と **WHERE** 句。 ADO で使用およびとして操作可能な OLE DB 行セットを使用して、クエリの結果が返されます [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) オブジェクト。
+ インデックス作成サービスの SQL クエリ構文は、SQL-92 **SELECT**ステートメントの拡張機能と、その**FROM**句および**WHERE**句によって構成されています。 クエリの結果は OLE DB 行セットを介して返されます。これは、ADO によって使用され、[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトとして操作できます。
 
- 正確な単語や語句を検索したり、ワイルドカードのパターンや単語の語幹検索を使用できます。 検索ロジックは、ブール型の意思決定、重み付け語句は、またはその他の語の近接度に基づいて作成できます。 「フリー テキストを」一致する正確な単語ではなく、意味のものを検索することもできます。
+ 単語や語句を検索したり、ワイルドカードを使用してパターンや単語の語幹を検索したりすることができます。 検索ロジックは、ブール値の決定、重み付けされた用語、または他の単語との距離に基づいて作成できます。 また、"自由なテキスト" で検索することもできます。これにより、正確な単語ではなく、意味に基づいて一致が検出されます。
 
- 特定のコマンド構文は、インデックス サービスに関するドキュメントのクエリ言語で完全に記載されています。
+ 特定のコマンド言語の詳細については、インデックスサービスのドキュメントのクエリ言語に関するドキュメントを参照してください。
 
- プロバイダーはストアド プロシージャの呼び出しまたは単純なテーブル名を受け付けません (たとえば、 [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md)プロパティが必ず**adCmdText**)。
+ プロバイダーは、ストアドプロシージャ呼び出しまたは単純なテーブル名を受け入れません (たとえば、 [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md)プロパティは常に**adcmdtext**になります)。
 
-## <a name="recordset-behavior"></a>レコード セットの動作
- 次の表で使用できる機能の一覧、**Recordset**オブジェクトをこのプロバイダーに開きます。 静的カーソルの種類のみ (**adOpenStatic**) は使用できます。
+## <a name="recordset-behavior"></a>レコードセットの動作
+ 次の表は、このプロバイダーで開かれた**レコードセット**オブジェクトで使用できる機能を示しています。 静的カーソルの種類 (**Adopenstatic**) のみを使用できます。
 
- 詳細については**Recordset**実行、プロバイダーの構成の動作、[Supports](../../../ado/reference/ado-api/supports-method.md)メソッドを列挙し、[Properties](../../../ado/reference/ado-api/properties-collection-ado.md)のコレクション、**Recordset**をプロバイダーに固有の動的なプロパティが存在するかどうかを判断します。
+ プロバイダー構成の**レコードセット**の動作の詳細については、[サポート](../../../ado/reference/ado-api/supports-method.md)メソッドを実行し、**レコードセット**の[properties](../../../ado/reference/ado-api/properties-collection-ado.md)コレクションを列挙して、プロバイダー固有の動的プロパティが存在するかどうかを判断します。
 
- **標準の ADO レコード セットのプロパティの可用性:**
+ **標準の ADO レコードセットプロパティの可用性:**
 
 |プロパティ|可用性|
 |--------------|------------------|
@@ -72,48 +72,48 @@ MSIDXS
 |[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|読み取り/書き込み|
 |[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)|読み取り専用|
 |[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|読み取り専用|
-|[Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md)*|読み取り/書き込み|
+|[ブックマーク](../../../ado/reference/ado-api/bookmark-property-ado.md)*|読み取り/書き込み|
 |[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|読み取り/書き込み|
-|[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|always **adUseServer**|
-|[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|always **adOpenStatic**|
-|[EditMode](../../../ado/reference/ado-api/editmode-property.md)|always **adEditNone**|
+|[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|常に**Aduseserver**|
+|[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|常に**Adopenstatic**|
+|[EditMode](../../../ado/reference/ado-api/editmode-property.md)|常に**adEditNone**|
 |[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|読み取り専用|
 |[Assert](../../../ado/reference/ado-api/filter-property.md)|読み取り/書き込み|
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|読み取り/書き込み|
-|[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|使用できません。|
-|[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)|読み取り/書き込み|
+|[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|使用できません|
+|[数](../../../ado/reference/ado-api/maxrecords-property-ado.md)|読み取り/書き込み|
 |[PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)|読み取り専用|
 |[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|読み取り/書き込み|
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|読み取り専用|
-|[Source](../../../ado/reference/ado-api/source-property-ado-recordset.md)|読み取り/書き込み|
+|[ソース](../../../ado/reference/ado-api/source-property-ado-recordset.md)|読み取り/書き込み|
 |[State](../../../ado/reference/ado-api/state-property-ado.md)|読み取り専用|
-|[Status](../../../ado/reference/ado-api/status-property-ado-recordset.md)|読み取り専用|
+|[状態](../../../ado/reference/ado-api/status-property-ado-recordset.md)|読み取り専用|
 
- \*この機能の順序で上に存在するプロバイダーのブックマークを有効にする必要があります、 **Recordset**します。
+ \*この機能が**レコードセット**に存在するためには、プロバイダーでブックマークを有効にする必要があります。
 
- **標準の ADO レコード セット メソッドの可用性:**
+ **標準の ADO レコードセットメソッドの可用性:**
 
-|方法|使用できるでしょうか。|
+|方法|ご?|
 |------------|----------------|
 |[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|いいえ|
-|[Cancel](../../../ado/reference/ado-api/cancel-method-ado.md)|はい|
+|[キャンセル](../../../ado/reference/ado-api/cancel-method-ado.md)|はい|
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|いいえ|
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|いいえ|
 |[Clone](../../../ado/reference/ado-api/clone-method-ado.md)|はい|
-|[Close](../../../ado/reference/ado-api/close-method-ado.md)|はい|
-|[Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|いいえ|
+|[Ok](../../../ado/reference/ado-api/close-method-ado.md)|はい|
+|[デリート](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|いいえ|
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|はい|
-|[Move](../../../ado/reference/ado-api/move-method-ado.md)|はい|
+|[[詳細ビュー]](../../../ado/reference/ado-api/move-method-ado.md)|はい|
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|はい|
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)|はい|
-|[Open](../../../ado/reference/ado-api/open-method-ado-recordset.md)|はい|
+|[開き](../../../ado/reference/ado-api/open-method-ado-recordset.md)|はい|
 |[Requery](../../../ado/reference/ado-api/requery-method.md)|はい|
-|[Resync](../../../ado/reference/ado-api/resync-method.md)|はい|
-|[Supports](../../../ado/reference/ado-api/supports-method.md)|はい|
+|[[再同期]](../../../ado/reference/ado-api/resync-method.md)|はい|
+|[サポート](../../../ado/reference/ado-api/supports-method.md)|はい|
 |[Update](../../../ado/reference/ado-api/update-method.md)|いいえ|
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|いいえ|
 
- 特定の実装の詳細と Microsoft インデックス サービスの機能について、Microsoft OLE DB プロバイダーを参照してください、 [OLE DB プログラマ ガイド](https://msdn.microsoft.com/library/windows/desktop/ms713643.aspx)、または Windows NT Server Web のサービスの Web ページを参照してくださいサイトです。
+ Microsoft OLE DB Provider for Microsoft Indexing Service に関する具体的な実装の詳細と機能については、『 [OLE DB プログラマーズガイド』](https://msdn.microsoft.com/library/windows/desktop/ms713643.aspx)を参照するか、Windows NT Server web サイトの web サービスに関するページを参照してください。
 
 ## <a name="see-also"></a>参照
- [CommandType プロパティ (ADO)](../../../ado/reference/ado-api/commandtype-property-ado.md) [ConnectionString プロパティ (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md) [Properties コレクション (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md) [Provider プロパティ (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) [RecordSet オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) [Supports メソッド](../../../ado/reference/ado-api/supports-method.md)
+ [CommandType property (ado](../../../ado/reference/ado-api/commandtype-property-ado.md) ) [CONNECTIONSTRING プロパティ (Ado)](../../../ado/reference/ado-api/connectionstring-property-ado.md) [Properties Collection (ADO](../../../ado/reference/ado-api/properties-collection-ado.md) ) [Provider PROPERTY (ado](../../../ado/reference/ado-api/provider-property-ado.md) ) [Recordset オブジェクト (ado)](../../../ado/reference/ado-api/recordset-object-ado.md)はメソッドを[サポート](../../../ado/reference/ado-api/supports-method.md)します

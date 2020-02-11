@@ -1,5 +1,5 @@
 ---
-title: SQL Server (MySQLToSQL) へのデータベース オブジェクトの変換後の読み込み |Microsoft Docs
+title: 変換されたデータベースオブジェクトを SQL Server に読み込んでいます (MySQLToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,99 +10,99 @@ ms.assetid: ac993a6d-0283-4823-8793-6b217677dfa3
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: a6966209300e6959e7ba9cb1afa11eb42b855d82
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67909012"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-mysqltosql"></a>SQL Server への変換されたデータベース オブジェクトの読み込み (MySQLToSQL)
-MySQL データベースを変換した後[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure には、結果のデータベース オブジェクトを読み込むことができます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure です。 SSMA は、オブジェクトを作成したか、またはオブジェクトをスクリプトし、自分でスクリプトを実行することができます。 SSMA によりの実際の内容で対象のメタデータを更新する、また、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure データベース。  
+MySQL データベースをまたは SQL Azure に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]変換した後、結果として得ら[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]れるデータベースオブジェクトをまたは SQL Azure に読み込むことができます。 SSMA を使用してオブジェクトを作成するか、オブジェクトのスクリプトを作成して自分でスクリプトを実行することができます。 また、SSMA では、または SQL Azure データベースの実際の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]内容でターゲットメタデータを更新することもできます。  
   
 ## <a name="choosing-between-synchronization-and-scripts"></a>同期とスクリプトの選択  
-変換されたデータベース オブジェクトを読み込む場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または変更なしの SQL Azure、SSMA を直接作成またはデータベース オブジェクトを再生成ができます。 メソッドを簡単に実行を定義する TRANSACT-SQL コードのカスタマイズは許可されませんが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure のオブジェクト。  
+変換されたデータベースオブジェクトを変更せず[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]にまたは SQL Azure に読み込む場合は、ssma を使用してデータベースオブジェクトを直接作成または再作成することができます。 この方法は短時間で簡単ですが、オブジェクト[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure オブジェクトを定義する transact-sql コードをカスタマイズすることはできません。  
   
-オブジェクトを作成するために使用する Transact SQL を変更する場合、またはオブジェクトの作成より詳細に制御したい場合は、SSMA を使用してスクリプトを作成します。 これらのスクリプトを変更し、個別に、各オブジェクトを作成しも SQL Server エージェントを使用して、これらのオブジェクトを作成するスケジュールを設定できます。  
+オブジェクトの作成に使用される Transact-sql を変更する場合、またはオブジェクトの作成をより細かく制御する場合は、SSMA を使用してスクリプトを作成します。 これらのスクリプトを変更し、各オブジェクトを個別に作成し、SQL Server エージェントを使用してこれらのオブジェクトの作成をスケジュールすることもできます。  
   
-## <a name="using-ssma-to-synchronize-objects-with-sql-server"></a>SSMA を使用して、SQL server オブジェクトを同期するには  
-SSMA を使用して、SQL Server または SQL Azure のデータベース オブジェクトを作成する、内のオブジェクトを選択する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure メタデータ エクスプ ローラーを持つオブジェクトの同期をとって[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure、次の手順で示すようにします。 内のオブジェクトに存在する場合、既定で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure のかどうかは、SSMA メタデータがいくつかのローカルの変更や更新プログラム、非常にこれらのオブジェクトの定義、SSMA でオブジェクトの定義が変更されます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure です。 編集して、既定の動作を変更する**プロジェクト設定**します。  
+## <a name="using-ssma-to-synchronize-objects-with-sql-server"></a>SSMA を使用してオブジェクトを SQL Server と同期させる  
+SSMA を使用して SQL Server または SQL Azure データベースオブジェクトを作成するには[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、または SQL Azure メタデータエクスプローラーでオブジェクトを選択[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]し、次の手順に示すように、または SQL Azure を使用してオブジェクトを同期します。 既定では、オブジェクトが既にまた[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は SQL Azure に存在する場合、ssma メタデータの一部のローカルな変更や、それらのオブジェクトの定義に対する更新がある場合、ssma はまたは SQL Azure の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オブジェクト定義を変更します。 既定の動作を変更するには、**プロジェクトの設定**を編集します。  
   
 > [!NOTE]  
-> 既存の選択[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure データベース オブジェクトの MySQL データベースからに変換されなかった。 ただし、これらのオブジェクトを再作成またはされません SSMA によって変更します。  
+> MySQL データベースから変換[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]されなかった既存のデータベースオブジェクトまたは SQL Azure データベースオブジェクトを選択できます。 ただし、これらのオブジェクトは SSMA によって再作成または変更されることはありません。  
   
 ##### <a name="to-synchronize-objects-with-sql-server-or-sql-azure"></a>SQL Server または SQL Azure とオブジェクトを同期するには  
   
-1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure メタデータ エクスプ ローラーで、上部の展開[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure のノードを展開し、**データベース**します。  
+1.  また[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は SQL Azure メタデータエクスプローラーで、上部[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または [SQL Azure] ノードを展開し、[**データベース**] を展開します。  
   
-2.  処理するオブジェクトを選択します。  
+2.  処理するオブジェクトを選択してください:  
   
-    -   完全なデータベースを同期するには、データベース名の横にあるチェック ボックスを選択します。  
+    -   データベース全体を同期するには、データベース名の横にあるチェックボックスをオンにします。  
   
-    -   個々 のオブジェクトまたはオブジェクトのカテゴリの省略を同期したり、選択するか、オブジェクトまたはフォルダーの横にあるチェック ボックスをオフにします。  
+    -   個々のオブジェクトまたはオブジェクトのカテゴリを同期または除外するには、オブジェクトまたはフォルダーの横にあるチェックボックスをオンまたはオフにします。  
   
-3.  SQL Server または SQL Azure メタデータ エクスプ ローラーで処理するオブジェクトを選択したら右**データベース**、順にクリックします**データベースと同期する**します。  
+3.  SQL Server または SQL Azure メタデータエクスプローラーで処理するオブジェクトを選択したら、[**データベース**] を右クリックし、[**データベースとの同期**] をクリックします。  
   
-    オブジェクトまたはその親フォルダーを右クリックし、をクリックして、個々 のオブジェクトまたはオブジェクトのカテゴリに分類を同期することも**データベースと同期する**します。  
+    オブジェクトまたはオブジェクトのカテゴリを右クリックし、[**データベースとの同期**] をクリックして、個々のオブジェクトまたはオブジェクトのカテゴリを同期させることもできます。  
   
-    その後、SSMA が表示されます、**データベースと同期する**ダイアログ ボックスで、2 つの項目のグループを確認できます。 左側にある、SSMA は、ツリーで表される選択されたデータベース オブジェクトを示します。 右側にある、SSMA メタデータ内の同じオブジェクトを表すツリーを表示できます。 ことができます、右または左クリックして、ツリーを展開 ' +' ボタンをクリックします。 同期の方向は、2 つのツリーの間に配置アクション 列に表示されます。  
+    その後、SSMA の [**データベースとの同期**] ダイアログボックスが表示され、2つのアイテムのグループが表示されます。 左側の SSMA は、ツリーで表される選択されたデータベースオブジェクトを示しています。 右側には、SSMA メタデータ内の同じオブジェクトを表すツリーが表示されます。 ツリーを展開するには、右または左の [+] ボタンをクリックします。 同期の方向は、2つのツリーの間に配置されたアクション列に表示されます。  
   
-    次の 3 つの状態では、アクションの符号になります。  
+    アクションの署名には、次の3つの状態があります。  
   
-    -   左矢印は、メタデータの内容は、データベース (既定値) に保存されますを意味します。  
+    -   左矢印は、メタデータの内容がデータベースに保存されることを意味します (既定値)。  
   
-    -   右向きの矢印は、データベースの内容は、SSMA メタデータで上書きされますを意味します。  
+    -   右矢印は、データベースの内容が SSMA メタデータを上書きすることを意味します。  
   
-    -   バツ印は、アクションは実行されませんを意味します。  
+    -   クロス署名は、何も実行されないことを意味します。  
   
-    -   状態を変更するアクションの記号をクリックします。 クリックすると、実際の同期が行われます**OK**のボタン、**データベースと同期する**ダイアログ。  
+    -   操作の署名をクリックして、状態を変更します。 実際の同期は、[**データベースとの同期**] ダイアログの [ **OK** ] ボタンをクリックしたときに実行されます。  
   
-## <a name="scripting-objects"></a>オブジェクトのスクリプト作成  
-保存する[!INCLUDE[tsql](../../includes/tsql-md.md)]、変換後のデータベース オブジェクトのオブジェクトの定義を変更し、自分でスクリプトの実行にまたは定義を保存できます変換されたデータベース オブジェクトの定義[!INCLUDE[tsql](../../includes/tsql-md.md)]スクリプト。  
+## <a name="scripting-objects"></a>スクリプトオブジェクト  
+変換さ[!INCLUDE[tsql](../../includes/tsql-md.md)]れたデータベースオブジェクトの定義を保存する、またはオブジェクトの定義を変更してスクリプトを実行するには、変換[!INCLUDE[tsql](../../includes/tsql-md.md)]されたデータベースオブジェクトの定義をスクリプトに保存します。  
   
 **オブジェクトをスクリプトとして保存するには**  
   
-1.  スクリプトを保存するオブジェクトを選択したら後で右クリック**データベース**、 をクリックし、**スクリプトとして保存**します。  
+1.  スクリプトに保存するオブジェクトを選択したら、[**データベース**] を右クリックし、[**スクリプトとして保存**] をクリックします。  
   
-    また、オブジェクトまたはその親フォルダーを右クリックし、をクリックして個々 のオブジェクトまたはオブジェクトのカテゴリをスクリプト**スクリプトとして保存**します。  
+    オブジェクトまたはその親フォルダーを右クリックし、[**スクリプトとして保存**] をクリックして、個々のオブジェクトまたはオブジェクトのカテゴリをスクリプト化することもできます。  
   
-2.  **名前を付けて保存** ダイアログ ボックスで、ファイルの名前を入力、スクリプトを保存フォルダーを探して、**ファイル名**ボックスで、し[!INCLUDE[clickOK](../../includes/clickok-md.md)]SSMA は、.sql というファイル名拡張子を追加します。  
+2.  [名前を**付けて保存**] ダイアログボックスで、スクリプトを保存するフォルダーに移動し、[ [!INCLUDE[clickOK](../../includes/clickok-md.md)] **ファイル名**] ボックスにファイル名を入力すると、ssma によって .sql ファイル名拡張子が追加されます。  
   
-### <a name="modifying-scripts"></a>スクリプトを変更します。  
-スクリプトとして、SQL Server または SQL Azure のオブジェクト定義を保存した後は、スクリプトを変更するのに SQL Server Management Studio を使用することができます。  
+### <a name="modifying-scripts"></a>スクリプトの変更  
+SQL Server または SQL Azure オブジェクトの定義をスクリプトとして保存した後、SQL Server Management Studio を使用してスクリプトを変更できます。  
   
 **スクリプトを変更するには**  
   
-1.  Management Studio で**ファイル**メニューで、**オープン**、 をクリックし、**ファイル**。  
+1.  [Management Studio**ファイル**] メニューの [**開く**] をポイントし、[**ファイル**] をクリックします。  
   
-2.  [開く] ダイアログ ボックスで、検索し、スクリプト ファイルを選択してクリックして**OK**します。  
+2.  [開く] ダイアログボックスで、スクリプトファイルを探して選択し、[ **OK**] をクリックします。  
   
-3.  クエリ エディターを使用して、スクリプト ファイルを編集します。クエリ エディターの詳細については、[エディター利便性のためのコマンドと機能] で SQL Server オンライン ブックを参照してください。  
+3.  クエリエディターを使用して、スクリプトファイルを編集します。クエリエディターの詳細については、SQL Server オンラインブックの「エディターの便利なコマンドと機能」を参照してください。  
   
-4.  [ファイル] メニューに、スクリプトを保存する選択**保存**します。  
+4.  スクリプトを保存するには、[ファイル] メニューの [**保存**] をクリックします。  
   
-### <a name="running-scripts"></a>スクリプトを実行します。  
-SQL Server Management Studio では、スクリプト、または個々 のステートメントを実行できます。  
+### <a name="running-scripts"></a>スクリプトの実行  
+SQL Server Management Studio では、スクリプトまたは個別のステートメントを実行できます。  
   
 **スクリプトを実行するには**  
   
-1.  SQL Server Management Studio で**ファイル**メニューで、**オープン** をクリックし、**ファイル**します。  
+1.  [SQL Server Management Studio**ファイル**] メニューの [**開く**] をポイントし、[**ファイル**] をクリックします。  
   
-2.  [開く] ダイアログ ボックスで、検索し、スクリプト ファイルを選択してクリックして**OK**します。  
+2.  [開く] ダイアログボックスで、スクリプトファイルを探して選択し、[ **OK**] をクリックします。  
   
-3.  完全なスクリプトを実行するキーを押して、 **F5**キー。  
+3.  スクリプト全体を実行するには、 **F5**キーを押します。  
   
-4.  一連のステートメントを実行するクエリ エディター ウィンドウで、ステートメントを選択し、キーを押します、 **F5**キー。  
+4.  一連のステートメントを実行するには、クエリエディターウィンドウでステートメントを選択し、 **F5**キーを押します。  
   
-5.  クエリ エディターを使用してスクリプトを実行する方法の詳細については、「SQL Server Management Studio Transact SQL クエリ」SQL Server オンライン ブックを参照してください。  
+5.  クエリエディターを使用してスクリプトを実行する方法の詳細については、「SQL Server オンラインブック」の「Transact-sql クエリの SQL Server Management Studio」を参照してください。  
   
-6.  使用して、コマンドラインからスクリプトを実行することも、 **sqlcmd**ユーティリティ、および SQL Server エージェントから。 詳細については**sqlcmd**、SQL Server オンライン ブックの「"sqlcmd ユーティリティ"を参照してください。 SQL Server エージェントの詳細については、「管理タスクを自動化する (SQL Server エージェント)」で SQL Server オンライン ブックを参照してください。  
+6.  また、 **sqlcmd**ユーティリティを使用してコマンドラインからスクリプトを実行したり、SQL Server エージェントからスクリプトを実行したりすることもできます。 **Sqlcmd**の詳細については、SQL Server オンラインブックの「sqlcmd ユーティリティ」を参照してください。 SQL Server エージェントの詳細については、SQL Server オンラインブックの「管理タスクの自動化 (SQL Server エージェント)」を参照してください。  
   
-## <a name="securing-objects-in-sql-server"></a>SQL Server のオブジェクトをセキュリティで保護します。  
-変換後のデータベース オブジェクトは、SQL Server に読み込まれるが後、を付与し、これらのオブジェクトに対する権限の拒否できます。 移行する前にそうことをお勧めする SQL Server のデータ。 SQL Server のセキュリティで保護されたオブジェクトを支援する方法については、「セキュリティの考慮事項のデータベースとデータベース アプリケーション」で SQL Server オンライン ブックを参照してください。  
+## <a name="securing-objects-in-sql-server"></a>SQL Server でのオブジェクトのセキュリティ保護  
+変換されたデータベースオブジェクトを SQL Server に読み込むと、これらのオブジェクトに対する権限を許可したり拒否したりできます。 SQL Server にデータを移行する前に、これを行うことをお勧めします。 SQL Server でオブジェクトをセキュリティで保護する方法の詳細については、「SQL Server オンラインブック」の「データベースとデータベースアプリケーションのセキュリティに関する考慮事項」を参照してください。  
   
-## <a name="next-step"></a>次の手順  
-移行プロセスでは、次の手順は[MySQL データを SQL Server - Azure SQL DB に移行する&#40;MySQLToSQL&#41;](../../ssma/mysql/migrating-mysql-data-into-sql-server-azure-sql-db-mysqltosql.md)  
+## <a name="next-step"></a>次のステップ  
+移行プロセスの次のステップでは、 [MySQL データを SQL Server に移行します。 AZURE SQL DB &#40;MySQLToSQL&#41;](../../ssma/mysql/migrating-mysql-data-into-sql-server-azure-sql-db-mysqltosql.md)  
   
-## <a name="see-also"></a>関連項目  
-[SQL Server - Azure SQL DB への移行 MySQL データベース&#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+## <a name="see-also"></a>参照  
+[MySQL データベースの SQL Server への移行-Azure SQL DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   
