@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 037eb57f53bf583195efdf1f91fcd55f94ebaddc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62676905"
 ---
 # <a name="working-with-policy-based-management-facets"></a>ポリシー ベースの管理ファセットの操作
@@ -29,13 +29,13 @@ ms.locfileid: "62676905"
   
  このトピックでは、ファセットの状態を XML ファイルにコピーする方法について説明します。  
   
-##  <a name="BeforeYouBegin"></a> 権限  
+##  <a name="BeforeYouBegin"></a> Permissions  
  このトピックの手順では、msdb データベースの PolicyAdministratorRole ロールのメンバーシップが必要です。  
   
 ## <a name="viewing-and-copying-facet-states"></a>ファセットの状態の表示とコピー  
- [SQL Server オブジェクトのポリシー ベースの管理ファセットの表示](view-the-policy-based-management-facets-on-a-sql-server-object.md)  
+ [SQL Server オブジェクトのポリシーベースの管理ファセットの表示](view-the-policy-based-management-facets-on-a-sql-server-object.md)  
   
- [XML ファイルへのポリシー ベースの管理ファセットの状態のコピー](copy-a-policy-based-management-facet-state-to-an-xml-file.md)  
+ [XML ファイルへのポリシーベースの管理ファセットの状態のコピー](copy-a-policy-based-management-facet-state-to-an-xml-file.md)  
   
 ## <a name="see-also"></a>参照  
  [ポリシー ベースの管理を使用したサーバーの管理](administer-servers-by-using-policy-based-management.md)  

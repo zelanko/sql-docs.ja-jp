@@ -1,5 +1,5 @@
 ---
-title: データ フロー パス エディターを使用して、パスのプロパティを設定 |Microsoft Docs
+title: データフローパスエディターを使用してパスのプロパティを設定する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1172143ebfa44deb19d15bf596db1df0e9399ed0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055731"
 ---
 # <a name="set-the-properties-of-a-path-by-using-the-data-flow-path-editor"></a>データ フロー パス エディターを使用してパスのプロパティを設定する
@@ -24,20 +24,23 @@ ms.locfileid: "66055731"
   
 ### <a name="to-set-path-properties"></a>パスのプロパティを設定するには  
   
-1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で、目的のパッケージが含まれている [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
+1.  
+  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で、目的のパッケージが含まれている [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
   
 2.  ソリューション エクスプローラーで、パッケージをダブルクリックして開きます。  
   
-3.  **[データ フロー]** タブをクリックし、パスをダブルクリックします。  
+3.  
+  **[データ フロー]** タブをクリックし、パスをダブルクリックします。  
   
-4.  **[データ フロー パス エディター]** ダイアログ ボックスで、 **[全般]** をクリックします。 ここで、パスの既定の名前を編集したり、パスに関する説明を入力できます。 PathAnnotation プロパティを変更することもできます。  
+4.  
+  **[データ フロー パス エディター]** ダイアログ ボックスで、 **[全般]** をクリックします。 ここで、パスの既定の名前を編集したり、パスに関する説明を入力できます。 PathAnnotation プロパティを変更することもできます。  
   
 5.  **[OK]** をクリックします。  
   
 6.  更新したパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [Integration Services のパス](data-flow/integration-services-paths.md)   
- [データ フロー](data-flow/data-flow.md)  
+ [Integration Services パス](data-flow/integration-services-paths.md)   
+ [Data Flow](data-flow/data-flow.md)  
   
   

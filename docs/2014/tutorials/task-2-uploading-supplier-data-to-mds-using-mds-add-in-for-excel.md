@@ -1,5 +1,5 @@
 ---
-title: タスク 2:Excel 用 MDS アドインを使用して MDS に仕入先データのアップロード |Microsoft Docs
+title: 'タスク 2: Excel 用 MDS アドインを使用して Supplier データを MDS にアップロードする |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,58 +11,58 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 57a5044ccee040ef1eba95925c689f48739c259f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65484660"
 ---
-# <a name="task-2-uploading-supplier-data-to-mds-using-mds-add-in-for-excel"></a>タスク 2:Excel 用 MDS アドインを使用して仕入先データを MDS にアップロードする
-  このタスクで、クレンジングされた仕入先データを発行する**MDS**を使用して、 **MDS アドインの Excel**します。 という名前のエンティティを作成する**Supplier**で、 **Suppliers**前のレッスンで作成したモデル。 エンティティは、Excel ファイルの各列に属性を持ちます。 Supplier エンティティの Code および Name 属性に対応して、 **SupplierID**と**Supplier Name** Excel の列。  
+# <a name="task-2-uploading-supplier-data-to-mds-using-mds-add-in-for-excel"></a>タスク 2: Excel 用 MDS アドインを使用して仕入先データを MDS にアップロードする
+  このタスクでは、 **Excel 用 MDS アドイン**を使用して、クレンジングおよび仕入先データを**MDS**に発行します。 **Supplier**という名前のエンティティを作成するには、前のレッスンで作成した**サプライヤー**モデルを使用します。 エンティティは、Excel ファイルの各列に属性を持ちます。 Supplier エンティティの Code 属性と Name 属性は、Excel の [**仕入**先] 列と [ **supplier name** ] 列に対応しています。  
   
-1.  開いている**クレンジングおよび照合 Suppliers.xls**で**Excel**します。  
+1.  **クレンジングされ、一致した仕入先 .xls**を**Excel**で開きます。  
   
-2.  キーを押して**CTRL + A**全体のデータを選択します。 **重要**スプレッドシートのデータ全体を選択します。  
+2.  Ctrl キーを押し**ながら A**キーを押してデータ全体を選択します。 スプレッドシートでデータ全体を選択することが**重要**です。  
   
-3.  クリックして**マスター データ**メニュー バーでします。  
+3.  メニューバーの [**マスターデータ**] をクリックします。  
   
-4.  クリックして**エンティティの作成**リボンのボタンをクリックします。  
+4.  リボンの [**エンティティの作成**] ボタンをクリックします。  
   
-     ![Excel - [マスター データ] タブ - エンティティ ボタンを作成する](../../2014/tutorials/media/et-ulingsdtomdsusingmdsaddinforexcel-01.jpg "Excel - [マスター データ] タブ - エンティティ ボタンを作成します。")  
+     ![Excel - [マスター データ] タブ - [エンティティの作成] ボタン](../../2014/tutorials/media/et-ulingsdtomdsusingmdsaddinforexcel-01.jpg "Excel - [マスター データ] タブ - [エンティティの作成] ボタン")  
   
-5.  **接続の管理**] ダイアログ ボックスへの接続が表示されない場合**ローカル MDS サーバー** [**既存の接続**次の操作を行います。  
+5.  [**接続の管理**] ダイアログボックスで、[**既存の接続**] に [**ローカル MDS サーバー**への接続] が表示されない場合は、次の手順を実行します。  
   
-    1.  選択**新しい接続を作成**、 をクリック**新規**ボタンをクリックします。  
+    1.  [**新しい接続の作成**] を選択し、[**新規**] ボタンをクリックします。  
   
-    2.  **新しい接続の追加**ダイアログ ボックスに「**ローカル MDS サーバー**の**説明**と **http://localhost/MDS** の**MDS サーバー アドレス**、 をクリック**OK**ダイアログ ボックスを閉じます。  
+    2.  [**新しい接続の追加**] ダイアログボックスで、[**説明**] に「 **http://localhost/MDS**ローカル mds サーバー」と入力し、 **Mds サーバーアドレス**に「**ローカル Mds サーバー** 」と入力して、[ **OK** ] をクリックしてダイアログボックスを閉じます。  
   
-6.  **接続の管理**ダイアログ ボックスで、**ローカル MDS サーバー** (http://localhost/MDS) 、 をクリックして**テスト**接続をテストします。 クリックして**OK**メッセージ ボックス。  
+6.  [**接続の管理**] ダイアログボックスで [**ローカル MDS サーバー** http://localhost/MDS)] を選択し、[**テスト**] をクリックして接続をテストします。 メッセージボックスで [ **OK]** をクリックします。  
   
-7.  クリックして**Connect** MDS サーバーに接続します。  
+7.  [**接続**] をクリックして MDS サーバーに接続します。  
   
-8.  **エンティティの作成**ダイアログ ボックスで、 **Suppliers**の**モデル**します。  
+8.  [**エンティティの作成**] ダイアログボックスで、**モデル**の [**仕入先**] を選択します。  
   
-9. いることを確認**VERSION_1**が選択されている**バージョン**します。  
+9. **VERSION_1**が**バージョン**に対して選択されていることを確認します。  
   
-10. 入力**Supplier**の**新しいエンティティ名**します。  
+10. **新しいエンティティ名**として「 **Supplier** 」と入力します。  
   
-11. 選択**SupplierID**の**一意の識別子を含む列**フィールド (してもコードを自動的に生成できます)。 本質的にマップする、 **SupplierID**列**Excel**を**コード**属性の**Supplier**エンティティ。  
+11. **一意の識別子フィールドを含む列**の [**仕入**先] を選択します (コードを自動的に生成することもできます)。 基本的には、 **Excel**の **"仕入先" 列を** **Supplier**エンティティの**Code**属性にマップします。  
   
-12. 選択**Supplier Name**の**名前を含む列**フィールド。 本質的にマップする、 **Supplier Name**列**Excel**を**名前**の属性、**サプライヤー**エンティティ。 **コード**と**名前**属性は、MDS のエンティティの必須属性。  
+12. [名前] フィールド**が含まれている列**の [ **Supplier Name** ] を選択します。 基本的には、 **Excel**の**supplier Name**列を**supplier**エンティティの**name**属性にマップします。 **Code**属性と**Name**属性は、MDS のエンティティの必須属性です。  
   
-     ![エンティティのダイアログ ボックスを作成する](../../2014/tutorials/media/et-ulingsdtomdsusingmdsaddinforexcel-02.jpg "エンティティ ダイアログ ボックスの作成")  
+     ![[エンティティの作成] ダイアログ ボックス](../../2014/tutorials/media/et-ulingsdtomdsusingmdsaddinforexcel-02.jpg "[エンティティの作成] ダイアログ ボックス")  
   
-13. クリックして**OK**を MDS にエンティティを作成するエンティティにマスター データを発行して閉じます**エンティティの作成** ダイアログ ボックス。  
+13. [ **OK]** をクリックして MDS にエンティティを作成し、マスターデータをエンティティにパブリッシュして、[**エンティティの作成**] ダイアログボックスを閉じます。  
   
-14. これで、タイトルの新しいシートを表示する必要があります**Supplier**、これは、Excel スプレッドシートに追加するエンティティの名前と、ワークシートの上部にあるワークシートが MDS サーバーに接続されていることを確認する必要があります。 注意して元のワークシート (「 **Sheet1**) がまだ存在します。  
+14. これで、" **Supplier**" という名前の新しいシートが表示されます。これは、Excel スプレッドシートに追加され、ワークシートの上部に、ワークシートが MDS サーバーに接続されていることを示します。 元のワークシート ( **Sheet1**) は依然として存在することに注意してください。  
   
-     ![Excel に仕入先と Sheet1 タブ](../../2014/tutorials/media/et-ulingsdtomdsusingmdsaddinforexcel-03.jpg "Excel に仕入先と Sheet1 タブ")  
+     ![Excel - [仕入先] と [Sheet1] タブ](../../2014/tutorials/media/et-ulingsdtomdsusingmdsaddinforexcel-03.jpg "Excel - [仕入先] と [Sheet1] タブ")  
   
-     ![Excel - MDS 接続の詳細を示す](../../2014/tutorials/media/et-ulingsdtomdsusingmdsaddinforexcel-04.jpg "Excel - MDS 接続の詳細を表示")  
+     ![Excel - MDS 接続の詳細の表示](../../2014/tutorials/media/et-ulingsdtomdsusingmdsaddinforexcel-04.jpg "Excel - MDS 接続の詳細の表示")  
   
-15. 保持**Excel**を開きます。  
+15. **Excel**を開いたままにします。  
   
 ## <a name="next-task"></a>次の作業  
- [タスク 3: マスター データ マネージャーでデータを検証します。](../../2014/tutorials/task-3-verifying-the-data-in-master-data-manager.md)  
+ [タスク 3: マスター データ マネージャーのデータを確認する](../../2014/tutorials/task-3-verifying-the-data-in-master-data-manager.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 'ジョブのプロパティ: 新しいジョブ ([ステップ] ページ) |Microsoft Docs'
+title: 'ジョブのプロパティ: [新しいジョブ] ([ステップ] ページ) |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,23 +13,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c9b7941f7d85404f56d24252534c518037d30a17
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62695657"
 ---
 # <a name="job-propertiesnew-job-steps-page"></a>ジョブのプロパティ: [新しいジョブ] ([ステップ] ページ)
-  このページを使用すると、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブのジョブ ステップを表示したり整理したりできます。  
+  このページを使用すると、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントジョブのジョブステップを表示および整理できます。  
   
-## <a name="options"></a>および  
- **[ジョブ ステップの一覧]**  
+## <a name="options"></a>オプション  
+ **ジョブステップの一覧**  
  このジョブのジョブ ステップを一覧表示します。  
   
- **[ステップの移動]**  
+ **ステップの移動**  
  一覧内で 1 ステップ上または下にジョブを移動します。  
   
- **[開始ステップ]**  
+ **開始ステップ**  
  ジョブを開始するときに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントが開始するステップを選択します。  
   
  **[新規作成]**  
@@ -41,7 +41,7 @@ ms.locfileid: "62695657"
  **[編集]**  
  選択したジョブ ステップを変更します。  
   
- **削除**  
+ **デリート**  
  選択したジョブ ステップを削除します。 ジョブ ステップが削除されるときに、そのジョブ ステップの出力ログは自動的に削除されます。  
   
 ## <a name="see-also"></a>参照  
