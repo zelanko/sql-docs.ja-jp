@@ -2,8 +2,7 @@
 title: SQL Server 移行の評価を実行する
 titleSuffix: Data Migration Assistant
 description: Data Migration Assistant を使用して、別の SQL Server またはに移行する前に、オンプレミスの SQL Server を評価する方法について説明し Azure SQL Database
-ms.custom: seo-lt-2019
-ms.date: 12/10/2019
+ms.date: 01/15/2020
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -15,16 +14,17 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-ms.openlocfilehash: b6d9fd3f31885641451b3ade2f0f4543d9f44455
-ms.sourcegitcommit: 56fb0b7750ad5967f5d8e43d87922dfa67b2deac
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 8b01469536655fc351ecf742ed284f3f6c68f707
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2019
-ms.locfileid: "75001907"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76037167"
 ---
 # <a name="perform-a-sql-server-migration-assessment-with-data-migration-assistant"></a>Data Migration Assistant を使用した SQL Server 移行評価の実行
 
-次の手順では、Data Migration Assistant を使用して、オンプレミスの SQL Server、SQL Server Azure VM で実行している、または Azure SQL Database に移行するための最初の評価を行う方法について説明します。
+次の手順に従って、オンプレミスの SQL Server に移行するための最初の評価、Azure VM での SQL Server 実行、または Data Migration Assistant を使用した Azure SQL Database を行うことができます。
 
    > [!NOTE]
    > Data Migration Assistant v1.0 では、アプリケーションコードでデータベース接続と埋め込み SQL クエリを分析するためのサポートが導入されています。 詳細については、 [Data Migration Assistant を使用したアプリケーションのデータアクセス層の評価に](https://techcommunity.microsoft.com/t5/Microsoft-Data-Migration/Using-Data-Migration-Assistant-to-assess-an-application-s-data/ba-p/990430)関するブログ記事を参照してください。
@@ -116,6 +116,9 @@ ms.locfileid: "75001907"
 
     ![ソースを追加して評価を開始する](../dma/media/dma-assesssqlonprem/select-database1.png)
 
+> [!NOTE]
+> 複数の評価を同時に実行し、**[All Assessments]\(すべての評価\)** ページを開いて評価の状態を表示できます。
+
 ## <a name="view-results"></a>結果の表示
 
 評価期間は、追加されたデータベースの数と各データベースのスキーマサイズによって異なります。 結果は、データベースが使用可能になるとすぐに表示されます。
@@ -158,4 +161,6 @@ Azure SQL Database の場合、評価によって、移行のブロックの問�
 
 すべてのデータベースで評価が完了したら、[**レポートのエクスポート**] を選択して、結果を JSON ファイルまたは CSV ファイルにエクスポートします。 その後、データを独自の便利な方法で分析できます。
 
-複数の評価を同時に実行し、**[All Assessments]\(すべての評価\)** ページを開いて評価の状態を表示できます。
+## <a name="save-and-load-assessments"></a>評価の保存と読み込み
+
+評価の結果をエクスポートするだけでなく、評価の詳細をファイルに保存し、評価ファイルを読み込んで後で確認することもできます。  詳細については、「 [Data Migration Assistant を使用した保存と読み込みの評価](../dma/dma-save-load-assessments.md)」を参照してください。

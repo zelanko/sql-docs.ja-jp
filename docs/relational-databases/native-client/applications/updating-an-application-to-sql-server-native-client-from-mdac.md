@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f8f6b7efd8d97f63e93061cbef1a54e1df3146d2
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243785"
 ---
 # <a name="updating-an-application-to-sql-server-native-client-from-mdac"></a>MDAC から SQL Server Native Client へのアプリケーションの更新
@@ -111,10 +111,10 @@ ms.locfileid: "75243785"
   
     |SQL Server 2005 の型|SQL Server 2000 の型|  
     |--------------------------|--------------------------|  
-    |**varchar (max)**|**本文**|  
-    |**nvarchar (max)**|**ntext**|  
-    |**varbinary (max)**|**絵**|  
-    |**udt**|**可変長**|  
+    |**varchar(max)**|**本文**|  
+    |**nvarchar(max)**|**ntext**|  
+    |**varbinary(max)**|**絵**|  
+    |**udt**|**varbinary**|  
     |**xml**|**ntext**|  
   
      この型マッピングは、列のメタデータに返される値に影響を与えます。 たとえば、**テキスト**列の最大サイズは2147483647ですが[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 、native client ODBC では最大サイズの**varchar (max)** 列が SQL_SS_LENGTH_UNLIMITED として報告[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]されます。また、native client OLE DB では、プラットフォームに応じて、 **varchar (max)** 列の最大サイズが2147483647または-1 として報告されます。  
@@ -133,6 +133,6 @@ ms.locfileid: "75243785"
  行のバージョン管理機能を使用した Read Committed トランザクション分離は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client と MDAC の両方でサポートされていますが、スナップショット トランザクション分離は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client のみでサポートされています  (プログラミング用語では、「行のバージョン管理機能を使用した Read Committed トランザクション分離」は「Read Committed トランザクション」と同義語です)。  
   
 ## <a name="see-also"></a>参照  
- [SQL Server Native Client を使用したアプリケーションの構築](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
+ [SQL Server Native Client を使用したアプリケーションのビルド](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
   
   
