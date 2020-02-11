@@ -19,17 +19,18 @@ ms.assetid: 7e9f1dfe-27e9-40e7-8fc7-bfc5cae6be10
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 9767c68f80c133a31c5ca33053731a399f1048db
-ms.sourcegitcommit: c70a0e2c053c2583311fcfede6ab5f25df364de0
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68670562"
 ---
 # <a name="system-information-schema-views-transact-sql"></a>システム情報スキーマビュー (Transact-sql)
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-情報スキーマビューは、メタデータを取得[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]するために用意されているいくつかの方法の1つです。 情報スキーマ ビューでは、システム テーブルに依存しない、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] メタデータの内部ビューが提供されます。 基になるシステム テーブルに大きな変更が加えられても、情報スキーマ ビューによって、アプリケーションは正しく動作できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に含まれる情報スキーマ ビューは、ISO 標準定義の INFORMATION_SCHEMA に従います。
+情報スキーマビューは、メタデータを取得[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]するために用意されているいくつかの方法の1つです。 情報スキーマ ビューでは、システム テーブルに依存しない、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] メタデータの内部ビューが提供されます。 基になるシステム テーブルに大きな変更が加えられても、情報スキーマ ビューによって、アプリケーションは正しく動作できます。 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に含まれる情報スキーマ ビューは、ISO 標準定義の INFORMATION_SCHEMA に従います。
 
 > [!IMPORTANT]
 > 情報スキーマ ビューに対しては、旧バージョンとの互換性を維持できない変更がいくつか加えられています。 これらの変更については、特定のビューのトピックで説明します。
@@ -38,10 +39,10 @@ ms.locfileid: "68670562"
 
 |SQL Server 名|この同等の SQL 標準名にマップされる|
 |---------------------|-----------------------------------------------|
-|[データベース]|Catalog|
+|データベース|Catalog|
 |スキーマ|スキーマ|
-|オブジェクト|オブジェクト|
-|ユーザー定義データ型|[ドメイン]|
+|Object|Object|
+|ユーザー定義データ型|Domain|
 
 この名前マッピング規則は、次の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の ISO 互換ビューに適用されます。
 
@@ -60,7 +61,7 @@ ms.locfileid: "68670562"
 
 また、いくつかのビューは、文字データやバイナリ データなど、別のクラスのデータへの参照を含んでいます。
 
-情報スキーマ ビューを参照する場合は、`INFORMATION_SCHEMA` スキーマ名を含む修飾名を使用する必要があります。 以下に例を示します。
+情報スキーマ ビューを参照する場合は、`INFORMATION_SCHEMA` スキーマ名を含む修飾名を使用する必要があります。 次に例を示します。
 
 ```sql
 SELECT TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME, COLUMN_DEFAULT
@@ -68,8 +69,8 @@ FROM AdventureWorks2012.INFORMATION_SCHEMA.COLUMNS
 WHERE TABLE_NAME = N'Product';
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [システムビュー &#40;transact-sql&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)
-- [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)
-- [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md) 
+- [システムビュー &#40;Transact-sql&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)
+- [データ型 &#40;Transact-sql&#41;](../../t-sql/data-types/data-types-transact-sql.md)
+- [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md) 

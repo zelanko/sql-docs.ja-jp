@@ -10,10 +10,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 099771b9900d4c39de40b176cde5c92fa0c95462
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014110"
 ---
 # <a name="query-spatial-data-for-nearest-neighbor"></a>空間データに対するニアレスト ネイバーのクエリ
@@ -50,26 +50,37 @@ SELECT TOP ( number )
 ```  
   
 ## <a name="nearest-neighbor-query-and-spatial-indexes"></a>ニアレスト ネイバー クエリと空間インデックス  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、`TOP` および `ORDER BY` 句は、空間データ列にニアレスト ネイバー クエリを実行するために使用されます。 `ORDER BY` 句には、空間列データ型の `STDistance()` メソッドの呼び出しが含まれます。 `TOP` 句は、クエリで返されるオブジェクトの数を示します。  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、`TOP` および `ORDER BY` 句は、空間データ列にニアレスト ネイバー クエリを実行するために使用されます。 
+  `ORDER BY` 句には、空間列データ型の `STDistance()` メソッドの呼び出しが含まれます。 
+  `TOP` 句は、クエリで返されるオブジェクトの数を示します。  
   
  ニアレスト ネイバー クエリで空間インデックスを使用するには、次の要件を満たす必要があります。  
   
 1.  空間インデックスが空間列の 1 つにあり、`STDistance()` メソッドが `WHERE` および `ORDER BY` 句でその列を使用する必要があります。  
   
-2.  `TOP`句は `PERCENT` ステートメントを含むことはできません。  
+2.  
+  `TOP`句は `PERCENT` ステートメントを含むことはできません。  
   
-3.  `WHERE` 句は `STDistance()` メソッドを含む必要があります。  
+3.  
+  `WHERE` 句は `STDistance()` メソッドを含む必要があります。  
   
-4.  `WHERE` 句に複数の述語がある場合、`STDistance()` メソッドを含む述語は、`AND` 結合で他の述語と接続する必要があります。  `STDistance()` メソッドは、`WHERE` 句のオプションの一部にすることはできません。  
+4.  
+  `WHERE` 句に複数の述語がある場合、`STDistance()` メソッドを含む述語は、`AND` 結合で他の述語と接続する必要があります。 
+  `STDistance()` メソッドは、`WHERE` 句のオプションの一部にすることはできません。  
   
-5.  `ORDER BY` 句の最初の式では `STDistance()` メソッドを使用する必要があります。  
+5.  
+  `ORDER BY` 句の最初の式では `STDistance()` メソッドを使用する必要があります。  
   
-6.  `ORDER BY` 句の最初の `STDistance()` 式の並べ替え順序は、`ASC` である必要があります。  
+6.  
+  `STDistance()` 句の最初の `ORDER BY` 式の並べ替え順序は、`ASC` である必要があります。  
   
-7.  `STDistance` が `NULL` を返すすべての行は、フィルターで除外する必要があります。  
+7.  
+  `STDistance` が `NULL` を返すすべての行は、フィルターで除外する必要があります。  
   
 > [!WARNING]  
->  `geography` または `geometry` データ型を引数として取るメソッドは、SRID がその型と同一でない場合、`NULL` を返します。  
+>  
+  `geography` または `geometry` データ型を引数として取るメソッドは、SRID がその型と同一でない場合、`NULL` を返します。  
   
  ニアレスト ネイバー クエリで使用されるインデックスでは、新しい空間インデックス テセレーションを使用することをお勧めします。 空間インデックス テセレーションの詳細については、「 [空間データ &#40;SQL Server&#41;](spatial-data-sql-server.md)である必要があります。  
   
@@ -100,7 +111,7 @@ ORDER BY SpatialLocation.STDistance(@g);
   
 ```  
   
- このクエリは、構文で指定した形式の `STDistance()` を使用する `WHERE` 句がないため、空間インデックスを使用できません。  
+ このクエリは、構文で指定した形式の `WHERE` を使用する `STDistance()` 句がないため、空間インデックスを使用できません。  
   
 ## <a name="see-also"></a>参照  
  [空間データ &#40;SQL Server&#41;](spatial-data-sql-server.md)  

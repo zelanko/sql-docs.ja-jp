@@ -1,5 +1,5 @@
 ---
-title: トレース テーブルのプロパティ ([全般] タブ) |Microsoft Docs
+title: '[トレーステーブルのプロパティ] ([全般] タブ)Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,39 +15,39 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 79976111570e2f9cb153c853567f0f2091f77eb6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66088740"
 ---
 # <a name="trace-table-properties-general-tab"></a>[トレース テーブルのプロパティ] ([全般] タブ)
-  使用して、**全般**のタブ、**トレース テーブルのプロパティ**トレース テーブルのプロパティを表示 ダイアログ ボックス。  
+  [**トレーステーブルのプロパティ**] ダイアログボックスの **[全般**] タブを使用すると、トレーステーブルのプロパティを表示できます。  
   
- このウィンドウを表示する使用[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 、トレース テーブルを開くにし、**ファイル** メニューのをクリックして**プロパティ**します。  
+ このウィンドウを表示するに[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]は、を使用してトレーステーブルを開き、[**ファイル**] メニューの [**プロパティ**] をクリックします。  
   
-## <a name="options"></a>および  
- **[テーブル名]**  
+## <a name="options"></a>オプション  
+ **テーブル名**  
  サーバー、データベース、スキーマ、表示しているトレース テーブルの名前を表示します。  
   
- **[トレース プロバイダー名]**  
+ **トレースプロバイダー名**  
  トレースの対象となった SQL Server のインスタンスの名前を表示します。  
   
- **[トレース プロバイダーの種類]**  
+ **トレースプロバイダーの種類**  
  トレースを提供したサーバーの種類を表示。  
   
- **version**  
+ **バージョン**  
  トレースを提供したサーバーのバージョンを表示。  
   
- **行数**  
+ **[行]**  
  トレース テーブルの行数を表示します。  
   
- **データ サイズ (ページ)**  
+ **[データ サイズ (ページ)]**  
  トレース テーブルのデータ ページ数を表示します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [トレース テーブルを開く &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)   
  [[SQL Server Profiler]](../tools/sql-server-profiler/sql-server-profiler.md)   
- [SQL Server プロファイラーのテンプレートと権限](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)  
+ [SQL Server プロファイラーのテンプレートとアクセス許可](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)  
   
   

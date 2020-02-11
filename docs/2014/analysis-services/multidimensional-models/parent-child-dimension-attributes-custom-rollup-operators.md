@@ -1,5 +1,5 @@
 ---
-title: 親子ディメンションのカスタム ロールアップ演算子 |Microsoft Docs
+title: 親子ディメンションのカスタムロールアップ演算子 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 20f25474b15ecf58c45383a8290bb13f956a5db8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073463"
 ---
 # <a name="custom-rollup-operators-in-parent-child-dimensions"></a>親子ディメンションのカスタム ロールアップ演算子
@@ -34,7 +34,7 @@ ms.locfileid: "66073463"
  優先順位の面では、階層内のレベルのソース属性のカスタム ロールアップ演算子は、前のレベルのカスタム メンバー式をオーバーライドします。 ただし、前のレベルのカスタムメンバー式は、レベルのカスタム ロールアップ演算子をオーバーライドします。  
   
 ## <a name="see-also"></a>参照  
- [カスタム メンバー式の定義](attribute-properties-define-custom-member-formulas.md)   
+ [カスタムメンバー式の定義](attribute-properties-define-custom-member-formulas.md)   
  [親子ディメンションの単項演算子](parent-child-dimension-attributes-unary-operators.md)  
   
   

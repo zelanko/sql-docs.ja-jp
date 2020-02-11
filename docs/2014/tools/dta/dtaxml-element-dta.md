@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0682c6100a96fbfb3016dec4bead4c385190192f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62470039"
 ---
 # <a name="dtaxml-element-dta"></a>DTAXML 要素 (DTA)
@@ -37,14 +37,15 @@ ms.locfileid: "62470039"
   
 ## <a name="element-attributes"></a>要素の属性  
   
-|属性|説明|  
+|Attribute|[説明]|  
 |---------------|-----------------|  
-|`xmlns:xsi`|必須。 XML Schema Instance 名前空間を識別します。 この名前空間の属性を使用して、データベース エンジン チューニング アドバイザーの XML ファイルの検証に使用するスキーマを参照します。<br /><br /> 必要な値: [http://www.w3.org/2001/XMLSchema-instance](http://www.w3.org/2001/XMLSchema-instance)|  
-|`xmlns`|必須。 データベース エンジン チューニング アドバイザーの名前空間を識別します。<br /><br /> [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]の XML エディターを使用してデータベース エンジン チューニング アドバイザーの XML ファイルを編集する場合、F1 ヘルプとダイナミック ヘルプでは、この値を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの参照トピックを検索します。<br /><br /> 必須値 :<br /><br /> [データベース エンジン チューニング アドバイザーの XML スキーマ](https://go.microsoft.com/fwlink/?LinkId=43100) の名前空間|  
+|`xmlns:xsi`|必須。 XML Schema Instance 名前空間を識別します。 この名前空間の属性を使用して、データベース エンジン チューニング アドバイザーの XML ファイルの検証に使用するスキーマを参照します。<br /><br /> 必須の値:[http://www.w3.org/2001/XMLSchema-instance](http://www.w3.org/2001/XMLSchema-instance)|  
+|`xmlns`|必須。 データベース エンジン チューニング アドバイザーの名前空間を識別します。<br /><br /> 
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]の XML エディターを使用してデータベース エンジン チューニング アドバイザーの XML ファイルを編集する場合、F1 ヘルプとダイナミック ヘルプでは、この値を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの参照トピックを検索します。<br /><br /> 必須値 :<br /><br /> [データベースエンジンチューニングアドバイザー XML スキーマ](https://go.microsoft.com/fwlink/?LinkId=43100)空間|  
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特性|説明|  
+|特徴|[説明]|  
 |--------------------|-----------------|  
 |**データ型と長さ**|[なし] :|  
 |**既定値**|[なし] :|  
@@ -55,16 +56,16 @@ ms.locfileid: "62470039"
 |リレーションシップ|要素|  
 |------------------|--------------|  
 |**親要素**|なし|  
-|**子要素**|[DTAInput 要素 &#40;DTA&#41;](dtainput-element-dta.md)<br /><br /> `DTAOutput` 要素 (を参照してください[データベース エンジン チューニング アドバイザー XML スキーマ](https://schemas.microsoft.com/sqlserver/)について)|  
+|**子要素**|[DTAInput 要素 &#40;DTA&#41;](dtainput-element-dta.md)<br /><br /> `DTAOutput`要素 (詳細については[データベースエンジンチューニングアドバイザー XML スキーマ](https://schemas.microsoft.com/sqlserver/)を参照してください)|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  XML 名前空間の詳細については、 [MSDN Library の「](https://go.microsoft.com/fwlink/?LinkId=7341) XML ドキュメントにおける名前空間 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 」を参照してください。  
   
 ## <a name="example"></a>例  
  一般的な **DTAXML** 要素の例については、「[XML 入力ファイル サンプル &#40;DTA&#41;](xml-input-file-samples-dta.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [XML 入力ファイル リファレンス &#40;データベース エンジン チューニング アドバイザー&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)   
+ [XML 入力ファイルの参照 &#40;データベースエンジンチューニングアドバイザー&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)   
  [データベース エンジン チューニング アドバイザーの起動および使用](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)  
   
   

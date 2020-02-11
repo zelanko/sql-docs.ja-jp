@@ -16,17 +16,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 718aeca12c90435b68fd6cedde150dfbdeb3c063
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62761655"
 ---
 # <a name="delete-columns-from-a-table"></a>テーブルからの列の削除
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用してテーブル列を削除する方法について説明します。  
   
 > [!CAUTION]  
->  テーブルから列を削除すると、列および列に含まれているすべてのデータがデータベースから削除されます。 このアクションを元に戻すことはできません。  
+>  テーブルから列を削除すると、列および列に含まれているすべてのデータがデータベースから削除されます。 この削除操作は元に戻すことができません。  
   
  **このトピックの内容**  
   
@@ -34,9 +34,9 @@ ms.locfileid: "62761655"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
--   **テーブルから列を削除する方法:**  
+-   **次のものを使用してテーブルから列を削除するには:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -60,7 +60,8 @@ ms.locfileid: "62761655"
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
-2.  **オブジェクト エクスプローラー**で、列を削除するテーブルを右クリックし、 **[削除]** をクリックします。  
+2.  
+  **オブジェクト エクスプローラー**で、列を削除するテーブルを右クリックし、 **[削除]** をクリックします。  
   
 3.  **[オブジェクトの削除]** ダイアログ ボックスで **[OK]** をクリックします。  
   

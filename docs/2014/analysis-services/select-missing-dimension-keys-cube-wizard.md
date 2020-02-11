@@ -1,5 +1,5 @@
 ---
-title: 欠落したディメンション キー (キューブ ウィザード) を選択します |。Microsoft Docs
+title: '[欠落したディメンションキーの選択] (キューブウィザード)Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,17 +13,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8abc1974d6bf7aedec63299f8127e759a4a88ffb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069398"
 ---
 # <a name="select-missing-dimension-keys-cube-wizard"></a>[欠落したディメンション キーの選択] (キューブ ウィザード)
+  
   **[欠落したディメンション キーの選択]** ページを使用すると、新しいディメンションで主テーブルに対してキーが定義されていない場合に使用するキー列を選択できます。  
   
-## <a name="options"></a>および  
- **ディメンションのキー**  
+## <a name="options"></a>オプション  
+ **ディメンション キー**  
  ディメンションの主テーブルから、ディメンションのキーとして使用する 1 つまたは複数のキー列を選択します。  
   
  複数のキー列を選択した場合は、複合キーが作成されます。  

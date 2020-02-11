@@ -1,5 +1,5 @@
 ---
-title: WideWorldImporters OLAP データベース カタログ - SQL |Microsoft Docs
+title: WideWorldImporters OLAP データベースカタログ-SQL |Microsoft Docs
 ms.prod: sql
 ms.prod_service: sql
 ms.technology: samples
@@ -11,93 +11,93 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
 ms.openlocfilehash: 7c3da2af72743cc8f89273bfce24fe74fc7e4dc1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68104294"
 ---
-# <a name="wideworldimportersdw-database-catalog"></a>WideWorldImportersDW データベース カタログ
+# <a name="wideworldimportersdw-database-catalog"></a>WideWorldImportersDW データベースカタログ
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
-スキーマ、テーブル、および WideWorldImportersDW データベース内のストアド プロシージャの説明。 
+WideWorldImportersDW データベースのスキーマ、テーブル、およびストアドプロシージャについて説明します。 
 
-WideWorldImportersDW データベースは、データ ウェアハウスと分析処理に使用されます。 売り上げ高と購入に関するトランザクション データは、WideWorldImporters データベースで生成され、WideWorldImportersDW を使って、データベースに読み込まれる、**毎日の ETL 処理**します。
+WideWorldImportersDW データベースは、データウェアハウスと分析処理に使用されます。 販売および購入に関するトランザクションデータは、WideWorldImporters データベースで生成され、**毎日の ETL プロセス**を使用して WideWorldImportersDW データベースに読み込まれます。
 
-WideWorldImportersDW 内のデータしたがって WideWorldImporters、内のデータをミラーリングしますが、テーブルは異なる方法で構成されています。 WideWorldImportersDW WideWorldImporters は従来の正規化されたスキーマが、使用して、[スター スキーマ](https://wikipedia.org/wiki/Star_schema)のテーブル設計のアプローチです。 データベースにはだけでなく、ファクト テーブルとディメンション テーブルは、ETL プロセスで使用されるステージング テーブルの数値が含まれています。
+そのため、WideWorldImportersDW 内のデータは WideWorldImporters のデータをミラー化しますが、テーブルの構成は異なります。 WideWorldImporters には従来の正規化されたスキーマがありますが、WideWorldImportersDW では、テーブルの設計に[スタースキーマ](https://wikipedia.org/wiki/Star_schema)のアプローチを使用します。 ファクトテーブルとディメンションテーブル以外にも、ETL プロセスで使用される多数のステージングテーブルがデータベースに含まれています。
 
 ## <a name="schemas"></a>スキーマ
 
-テーブルのさまざまな種類は、3 つのスキーマで編成されます。
+さまざまな種類のテーブルは、3つのスキーマで構成されています。
 
-|スキーマ|説明|
+|スキーマ|[説明]|
 |-----------------------------|---------------------|
-|[ディメンション]|ディメンション テーブル。|
-|Fact|ファクト テーブルです。|  
-|統合|ステージング テーブルと ETL に必要なその他のオブジェクト。|  
+|Dimension|ディメンションテーブル。|
+|ファクト|ファクトテーブル。|  
+|統合|ETL に必要なステージングテーブルおよびその他のオブジェクト。|  
 
 ## <a name="tables"></a>テーブル
 
-ディメンションとファクト テーブルは、以下に示します。 統合スキーマ内のテーブルは、ETL プロセスに対してのみ使用されは表示されません。
+ディメンションテーブルとファクトテーブルを以下に示します。 統合スキーマのテーブルは ETL プロセスでのみ使用され、一覧には表示されません。
 
-### <a name="dimension-tables"></a>ディメンション テーブル
+### <a name="dimension-tables"></a>ディメンションテーブル
 
-WideWorldImportersDW には、次のディメンション テーブルがあります。 説明には、WideWorldImporters データベース内のソース テーブルとの関係が含まれています。
+WideWorldImportersDW には、次のディメンションテーブルがあります。 説明には、WideWorldImporters データベース内のソーステーブルとのリレーションシップが含まれます。
 
-|テーブル|コピー元のテーブル|
+|テーブル|ソーステーブル|
 |-----------------------------|---------------------|
 |City|`Application.Cities`, `Application.StateProvinces`, `Application.Countries`.|
-|Customer|`Sales.Customers`, `Sales.BuyingGroups`, `Sales.CustomerCategories`.|
-|date|日付、会計年度などに関する情報を含む新しいテーブル (11 月 1 日に基づく会計年度の開始)。|
-|Employee|`Application.People`。|
+|顧客|`Sales.Customers`, `Sales.BuyingGroups`, `Sales.CustomerCategories`.|
+|Date|財務年度を含む、日付に関する情報を含む新しいテーブル (会計年度の最初の開始日に基づく)。|
+|Employee|`Application.People`.|
 |StockItem|`Warehouse.StockItems`, `Warehouse.Colors`, `Warehouse.PackageType`.|
 |業者|`Purchasing.Suppliers`, `Purchasing.SupplierCategories`.|
-|PaymentMethod|`Application.PaymentMethods`。|
-|TransactionType|`Application.TransactionTypes`。|
+|PaymentMethod|`Application.PaymentMethods`.|
+|TransactionType|`Application.TransactionTypes`.|
 
-### <a name="fact-tables"></a>ファクト テーブル
+### <a name="fact-tables"></a>ファクトテーブル
 
-WideWorldImportersDW が次のファクト テーブルです。 説明には、analytics/レポートのクエリで各ファクト テーブルが使用される通常のクラスと同様に、WideWorldImporters データベースでのソース テーブルとの関係が含まれています。
+WideWorldImportersDW には、次のファクトテーブルがあります。 説明には、WideWorldImporters データベース内のソーステーブルとの関係、および各ファクトテーブルが一般的に使用される分析/レポートクエリのクラスが含まれます。
 
-|テーブル|コピー元のテーブル|分析のサンプル|
+|テーブル|ソーステーブル|サンプル分析|
 |-----------------------------|---------------------|---------------------|
-|[オーダー]|`Sales.Orders` および `Sales.OrderLines`|売上は、人、ピッカー/packer の生産性とでは、注文を選択する時間です。 さらに、注文をバックアップする先頭の在庫切れの状況が低い。|
-|販売|`Sales.Invoices` および `Sales.InvoiceLines`|日付の売上、出荷日、時間の経過と共に収益性、販売員による収益性。|
-|購入|`Purchasing.PurchaseOrderLines`|Vs の予想される実際のリード タイム|
-|トランザクション|`Sales.CustomerTransactions` および `Purchasing.SupplierTransactions`|発行日付 vs 最終処理日、および量を測定します。|
-|移動|`Warehouse.StockTransactions`|時間の経過と共に移動します。|
-|株式を売ります|`Warehouse.StockItemHoldings`|手持ちの在庫レベルと値。|
+|Order|`Sales.Orders`そして`Sales.OrderLines`|販売員、ピッカー/packer 生産性、および時間における注文の選択。 さらに、注文のバックにつながる在庫状況が低いという状況もあります。|
+|Sale|`Sales.Invoices`そして`Sales.InvoiceLines`|販売日、配送日、時間の経過に伴う収益性、営業担当者による収益性。|
+|Purchase|`Purchasing.PurchaseOrderLines`|予想される時間と実際のリードタイム|
+|トランザクション|`Sales.CustomerTransactions`そして`Purchasing.SupplierTransactions`|発行日と終了日、および金額の測定。|
+|動かす|`Warehouse.StockTransactions`|時間の経過と共に移動します。|
+|在庫保持|`Warehouse.StockItemHoldings`|手持在庫のレベルと価値。|
 
 ## <a name="stored-procedures"></a>ストアド プロシージャ
 
-ストアド プロシージャは、主に、ETL プロセスと構成のために使用されます。
+ストアドプロシージャは、主に ETL プロセスと構成の目的で使用されます。
 
-サンプルのすべての拡張機能を使用することが推奨されます、 `Reports` Reporting Services レポートでは、スキーマ、 `PowerBI` Power BI へのアクセス用のスキーマ。
+このサンプルの拡張機能には、Reporting Services レポート`Reports`にスキーマを使用することと`PowerBI` 、power BI アクセス用のスキーマを使用することをお勧めします。
 
-### <a name="application-schema"></a>アプリケーションのスキーマ
+### <a name="application-schema"></a>アプリケーションスキーマ
 
-これらの手順は、サンプルの構成に使用されます。 PolyBase, を追加のサンプルでは、standard edition のバージョンに enterprise edition の機能を適用し、ETL の再シードを実行に使用されます。
+これらの手順は、サンプルを構成するために使用されます。 これらは、enterprise edition の機能を standard edition バージョンのサンプルに適用し、PolyBase を追加し、ETL を再シードするために使用されます。
 
 |手順|目的|
 |-----------------------------|---------------------|
-|Configuration_ApplyPartitionedColumnstoreIndexing|ファクト テーブルのパーティション分割と列ストア インデックスに適用されます。|
-|Configuration_ConfigureForEnterpriseEdition|パーティション分割、インデックス作成とインメモリ列ストアに適用されます。|
-|Configuration_EnableInMemory|SCHEMA_ONLY メモリ最適化テーブルは、ETL のパフォーマンスを向上させるには、統合ステージング テーブルを置き換えます。|
-|Configuration_ApplyPolyBase|外部データ ソース、ファイル形式、およびテーブルを構成します。|
-|Configuration_PopulateLargeSaleTable|Enterprise edition の変更を適用し、追加の履歴と 2012年のカレンダー年度の大量のデータを設定します。|
-|Configuration_ReseedETL|既存のデータを削除し、ETL のシードを再起動します。 これにより、OLAP データベースを再作成、OLTP データベースの更新された行と一致します。|
+|Configuration_ApplyPartitionedColumnstoreIndexing|ファクトテーブルのパーティション分割と列ストアインデックスの両方を適用します。|
+|Configuration_ConfigureForEnterpriseEdition|パーティション分割、列ストアインデックス作成、およびメモリ内に適用されます。|
+|Configuration_EnableInMemory|統合ステージングテーブルを SCHEMA_ONLY メモリ最適化テーブルに置き換えて、ETL のパフォーマンスを向上させます。|
+|Configuration_ApplyPolyBase|外部データソース、ファイル形式、およびテーブルを構成します。|
+|Configuration_PopulateLargeSaleTable|Enterprise edition の変更を適用した後、2012年のデータ量を追加の履歴として設定します。|
+|Configuration_ReseedETL|既存のデータを削除し、ETL シードを再起動します。 これにより、再作成は、OLTP データベースの更新された行と照合することができます。|
 
 ### <a name="integration-schema"></a>統合スキーマ
 
-ETL プロセスで使用されるプロシージャは、これらのカテゴリに分類されます。
-- ETL パッケージのすべての Get * プロシージャのヘルパー プロシージャ。
-- 移行するために、ETL パッケージによって使用されるプロシージャは、DW のテーブルのすべての移行 * プロシージャにデータをステージングします。
-- `PopulateDateDimensionForYear` -1 年間し、で、その年のすべての日付が設定されているように、`Dimension.Date`テーブル。
+ETL プロセスで使用されるプロシージャは、次のカテゴリに分類されます。
+- ETL パッケージのヘルパープロシージャ-すべての Get * プロシージャ。
+- ステージングデータを DW テーブルに移行するために ETL パッケージによって使用されるプロシージャ-All Migrate * プロシージャ。
+- `PopulateDateDimensionForYear`-年を取り、その年のすべての日付が`Dimension.Date`テーブルに設定されていることを確認します。
 
-### <a name="sequences-schema"></a>シーケンス スキーマ
+### <a name="sequences-schema"></a>シーケンススキーマ
 
-データベースで、シーケンスを構成する手順。
+データベース内のシーケンスを構成する手順。
 
 |手順|目的|
 |-----------------------------|---------------------|
-|ReseedAllSequences|プロシージャを呼び出す`ReseedSequenceBeyondTableValue`のすべてのシーケンス。|
-|ReseedSequenceBeyondTableValue|同じシーケンスを使用する任意のテーブルで、値を上回る次のシーケンス値の位置を変更するために使用します。 (など、`DBCC CHECKIDENT`のシーケンスが、可能性のある複数のテーブルの identity 列と同じです)。|
+|順序のリセット|すべてのシーケンス`ReseedSequenceBeyondTableValue`に対してプロシージャを呼び出します。|
+|ReseedSequenceBeyondTableValue|同じシーケンスを使用するテーブルの値を超えて、次のシーケンス値を再配置するために使用されます。 (シーケンスに`DBCC CHECKIDENT`相当する id 列の場合は、複数のテーブルにまたがる場合もあります)。|

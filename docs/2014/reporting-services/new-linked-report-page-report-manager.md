@@ -1,5 +1,5 @@
 ---
-title: 新しいリンク レポート ページ (レポート マネージャー) |Microsoft Docs
+title: '[新しいリンクレポート] ページ (レポートマネージャー) |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b6aab8fc0c8e083181779c13654b0d7d42531e50
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108166"
 ---
 # <a name="new-linked-report-page-report-manager"></a>[新しいリンク レポート] ページ (レポート マネージャー)
@@ -22,7 +22,7 @@ ms.locfileid: "66108166"
   
  リンク レポートは、独自の名前、説明、場所、パラメーター プロパティ、レポート実行プロパティ、レポート ヒストリ プロパティ、権限、およびサブスクリプションを設定することができます。 ただし、リンク レポートでは、レポート定義を提供する基本レポートのデータ ソース プロパティとレイアウトを使用する必要があります。  
   
-## <a name="navigation"></a>ナビゲーション  
+## <a name="navigation"></a>「ナビゲーション」  
  ユーザー インターフェイス (UI) のこの場所に移動するには、次の手順に従います。  
   
 ###### <a name="to-open-the-new-linked-report-page-from-the-contents-page"></a>[コンテンツ] ページから [新しいリンク レポート] ページを開くには  
@@ -43,22 +43,24 @@ ms.locfileid: "66108166"
   
 4.  アイテムのツール バーの **[リンク レポートの作成]** をクリックします。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **名前**  
- リンク レポートの名前を指定します。 名前には、少なくとも 1 つの英数字が含まれている必要があります。 また、スペースおよび特定の記号を含めることもできます。 ただし、名前を指定する場合は、次の文字は使用できません。; ? : \@ & = +, $/* \< > |"または/名前を指定します。  
+ リンク レポートの名前を指定します。 名前には、少なくとも 1 つの英数字が含まれている必要があります。 また、スペースおよび特定の記号を含めることもできます。 ただし、名前を指定する場合は、次の文字は使用できません。; ? : \@ & = +、$/* \< > |"またはの名前を指定する場合。  
   
- **[説明]**  
+ **説明**  
  レポートの内容の説明を入力します。 この説明は、レポートへのアクセス権を持っているユーザーの [コンテンツ] ページに表示されます。  
   
- **場所**  
- レポートを含むフォルダーのパスを指定します。 既定では、基本レポートの兄弟としてリンク レポートが作成されます。 **[場所の変更]** をクリックすると、別のフォルダーにリンク レポートを格納できます。  
+ **Location**  
+ レポートを含むフォルダーのパスを指定します。 既定では、基本レポートの兄弟としてリンク レポートが作成されます。 
+  **[場所の変更]** をクリックすると、別のフォルダーにリンク レポートを格納できます。  
   
  **[OK]**  
- **[OK]** をクリックすると、変更が保存され、基本レポートの [全般] プロパティ ページに戻ります。  
+ 
+  **[OK]** をクリックすると、変更が保存され、基本レポートの [全般] プロパティ ページに戻ります。  
   
 ## <a name="see-also"></a>参照  
- [リンク レポートを作成します。](reports/create-a-linked-report.md)   
- [全般プロパティ ページ、レポート &#40;レポート マネージャー&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
+ [リンクレポートを作成する](reports/create-a-linked-report.md)   
+ [[全般] プロパティページ、レポート &#40;レポートマネージャー&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
  [レポート マネージャー F1 ヘルプ](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

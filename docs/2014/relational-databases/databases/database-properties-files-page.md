@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 36b0d8b5d91b18ad4b97ac873ad3073ca97b133e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62871988"
 ---
 # <a name="database-properties-files-page"></a>「データベースのプロパティ」 ([ファイル] ページ)
@@ -26,7 +26,7 @@ ms.locfileid: "62871988"
  **データベース名**  
  データベースの名前を追加または表示します。  
   
- **所有者**  
+ **[所有者]**  
  データベースの所有者を一覧から選択して指定します。  
   
  **フルテキスト インデックスを使用する**  
@@ -74,10 +74,10 @@ ms.locfileid: "62871988"
   
  メモリ最適化ファイル グループのファイルを含めて、FILESTREAM ファイルの場合、このフィールドは無効です。  
   
- **[追加]**  
+ **追加**  
  データベースに新しいファイルを追加します。  
   
- **[削除]**  
+ **Remove**  
  選択されているファイルをデータベースから削除します。 空でないファイルは削除できません。 プライマリ データ ファイルおよびログ ファイルは削除できません。  
   
  ファイルの詳細については、「 [データベース ファイルとファイル グループ](database-files-and-filegroups.md)」を参照してください。  

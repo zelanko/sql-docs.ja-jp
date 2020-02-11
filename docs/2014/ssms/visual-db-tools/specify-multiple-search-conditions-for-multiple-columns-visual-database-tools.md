@@ -1,5 +1,5 @@
 ---
-title: 複数の列 (Visual Database Tools) に対して複数の検索条件の指定 |Microsoft Docs
+title: 複数の列に対して複数の検索条件を指定する方法 (Visual Database Tools) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3580f6365866ce752191e285b14f7d793be0cad0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63204949"
 ---
 # <a name="specify-multiple-search-conditions-for-multiple-columns-visual-database-tools"></a>複数の列に対して複数の検索条件を指定する (Visual Database Tools)
@@ -37,7 +37,8 @@ ms.locfileid: "63204949"
   
 #### <a name="to-specify-an-or-condition-for-two-different-columns"></a>2 つの異なる列に OR 条件を指定するには  
   
-1.  [抽出条件ペイン](visual-database-tools.md)に検索する列を追加します。  
+1.  
+  [抽出条件ペイン](visual-database-tools.md)に検索する列を追加します。  
   
 2.  最初に検索する列の **[フィルター]** 列に最初の条件を指定します。  
   
@@ -59,7 +60,8 @@ ms.locfileid: "63204949"
   
 #### <a name="to-specify-an-and-condition-for-two-different-columns"></a>AND 条件を指定して 2 つの異なる列を検索するには  
   
-1.  [抽出条件ペイン](visual-database-tools.md)に検索する列を追加します。  
+1.  
+  [抽出条件ペイン](visual-database-tools.md)に検索する列を追加します。  
   
 2.  最初に検索するデータ列の **[フィルター]** 列に最初の条件を指定します。  
   
@@ -76,9 +78,9 @@ ms.locfileid: "63204949"
 4.  条件を追加するたびに、手順 2. および手順 3. を繰り返します。  
   
 ## <a name="see-also"></a>参照  
- [AND が優先する場合の条件を結合&#40;Visual Database Tools&#41;](combine-conditions-when-and-has-precedence-visual-database-tools.md)   
- [OR が優先する場合の条件を結合&#40;Visual Database Tools&#41;](combine-conditions-when-or-has-precedence-visual-database-tools.md)   
- [抽出条件ペインで検索条件を結合するための規則&#40;Visual Database Tools&#41;](conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)   
+ [Visual Database Tools &#40;とが優先される場合の条件の結合&#41;](combine-conditions-when-and-has-precedence-visual-database-tools.md)   
+ [Visual Database Tools &#40;またはが優先される場合に条件を結合&#41;](combine-conditions-when-or-has-precedence-visual-database-tools.md)   
+ [抽出条件ペインで検索条件を組み合わせる場合の規則 &#40;Visual Database Tools&#41;](conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)   
  [検索基準の指定 (Visual Database Tools)](specify-search-criteria-visual-database-tools.md)  
   
   

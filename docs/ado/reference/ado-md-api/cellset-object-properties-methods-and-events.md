@@ -13,10 +13,10 @@ ms.assetid: fb303e33-5a85-4e4e-81db-acaaa6f53799
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ccee0a1b6f31bf9cb54272387e2d7363d2324530
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67911538"
 ---
 # <a name="cellset-object-properties-methods-and-events"></a>Cellset オブジェクトのプロパティ、メソッド、およびイベント
@@ -31,7 +31,7 @@ ms.locfileid: "67911538"
   
  [プロパティのコレクション](../../../ado/reference/ado-api/properties-collection-ado.md)  
   
- [ソースのプロパティ](../../../ado/reference/ado-md-api/source-property-ado-md.md)  
+ [Source プロパティ](../../../ado/reference/ado-md-api/source-property-ado-md.md)  
   
  [State プロパティ](../../../ado/reference/ado-md-api/state-property-ado-md.md)  
   
@@ -40,8 +40,8 @@ ms.locfileid: "67911538"
   
  [Open メソッド](../../../ado/reference/ado-md-api/open-method-ado-md.md)  
   
-## <a name="events"></a>イベント  
+## <a name="events"></a>events  
  [なし] :  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [CellSet オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)

@@ -11,14 +11,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fb9eaf62514b76e35b73ea87b7820751f670a90f
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70175579"
 ---
 # <a name="lesson-5-optional-encrypt-your-database-using-tde"></a>レッスン 5: (省略可) TDE を使用してデータベースを暗号化する
-  省略可能な手順として、新しく作成したデータベースを暗号化できます。 透過的なデータ暗号化 (TDE) では、データとログ ファイルの暗号化と暗号化解除がリアルタイムの I/O で実行されます。 この種の暗号化にはデータベース暗号化キー (DEK) が使用されます。これは、復旧時に使用できるようにデータベース ブート レコードに保存されます。 詳細については、「tde で[保護されたデータベースを別の SQL Server に移動する](security/encryption/move-a-tde-protected-database-to-another-sql-server.md) [Transparent Data Encryption &#40;&#41; ](security/encryption/transparent-data-encryption.md) 」を参照してください。  
+  省略可能な手順として、新しく作成したデータベースを暗号化できます。 透過的なデータ暗号化 (TDE) では、データとログ ファイルの暗号化と暗号化解除がリアルタイムの I/O で実行されます。 この種の暗号化にはデータベース暗号化キー (DEK) が使用されます。これは、復旧時に使用できるようにデータベース ブート レコードに保存されます。 詳細については、「 [tde&#41;の Transparent Data Encryption &#40;](security/encryption/transparent-data-encryption.md) [Tde で保護されたデータベースを別の SQL Server に移動する](security/encryption/move-a-tde-protected-database-to-another-sql-server.md)」を参照してください。  
   
  このレッスンは、次の手順を完了済みであることを前提としています。  
   
@@ -87,10 +87,10 @@ GO
   
 ```  
   
- このレッスンで使用した transact-sql ステートメントの詳細については、「 [create &#40;database SQL Server transact-sql&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)」、「 [ALTER database &#40;transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql)」、「 [create MASTER KEY &#40; 」を参照してください。&#41;](/sql/t-sql/statements/create-master-key-transact-sql)Transact-sql を作成します。 [CREATE CERTIFICATE &#40;transact-sql&#41;](/sql/t-sql/statements/create-certificate-transact-sql), と[ &#40;&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql)、この transact-sql を作成します。  
+ このレッスンで使用した Transact-sql ステートメントの詳細については、「 [CREATE database &#40;SQL Server transact-sql&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)」、「 [ALTER database &#40;transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql)」、「Create [MASTER KEY &#40;Transact-sql ](/sql/t-sql/statements/create-master-key-transact-sql)&#41;」、「 [create CERTIFICATE &#40;transact-sql ](/sql/t-sql/statements/create-certificate-transact-sql)&#41;、および dm_database_encryption_keys [&#40;transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql)」を参照してください。  
   
  **次のレッスン:**  
   
- [レッスン 6:オンプレミスのソースマシンから Azure のターゲットコンピューターにデータベースを移行する](lesson-5-backup-database-using-file-snapshot-backup.md)  
+ [レッスン 6: オンプレミスのソース コンピューターから Azure のターゲット コンピューターにデータベースを移行する](lesson-5-backup-database-using-file-snapshot-backup.md)  
   
   

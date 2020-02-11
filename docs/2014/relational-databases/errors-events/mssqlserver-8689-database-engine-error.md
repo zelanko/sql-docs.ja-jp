@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9f0853d7db0664e75140c0e5478af19c233a2517
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62761710"
 ---
-# <a name="mssqlserver8689"></a>MSSQLSERVER_8689
+# <a name="mssqlserver_8689"></a>MSSQLSERVER_8689
     
 ## <a name="details"></a>詳細  
   
@@ -38,8 +38,8 @@ ms.locfileid: "62761710"
 ## <a name="user-action"></a>ユーザーの操作  
  USE PLAN ヒントで指定したすべてのデータベースが存在することを確認します。  
   
-## <a name="see-also"></a>関連項目  
- [クエリ ヒント &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-query)   
+## <a name="see-also"></a>参照  
+ [Transact-sql&#41;&#40;クエリヒント](/sql/t-sql/queries/hints-transact-sql-query)   
  [プラン ガイド](../performance/plan-guides.md)  
   
   

@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 401a11a10f190cda8efeaffa04e1025ef7f4e681
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68105233"
 ---
 # <a name="isgeneration-mdx"></a>IsGeneration (MDX)
 
 
-  指定したメンバーが指定された世代内かどうかを返します。  
+  指定したメンバーが指定したジェネレーションに存在するかどうかを返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -28,19 +28,19 @@ IsGeneration(Member_Expression, Generation_Number)
 ```  
   
 ## <a name="arguments"></a>引数  
- *メンバー式*  
+ *Member_Expression*  
  メンバーを 1 つ返す有効な多次元式 (MDX) 式です。  
   
  *Generation_Number*  
  指定されたメンバーの評価対象となる世代を指定する有効な数値式です。  
   
-## <a name="remarks"></a>コメント  
- **IsGeneration**関数が返される**true**指定された世代番号が、指定されたメンバーの場合。 関数を返しますそれ以外の場合、 **false**します。 また、指定されたメンバーが空のメンバーに評価された場合、 **IsGeneration**関数が返される**false**します。  
+## <a name="remarks"></a>解説  
+ **Isgeneration**関数は、指定されたメンバーが指定されたジェネレーション番号に含まれる場合に**true**を返します。 それ以外の場合、関数は**false**を返します。 また、指定されたメンバーが空のメンバーに評価される場合、 **Isgeneration**関数は**false**を返します。  
   
  世代インデックスの作成上の目的から、リーフ メンバーの世代インデックスは 0 になっています。 非リーフ メンバーの世代インデックスを判別するには、まず指定されたメンバーのすべての子メンバーの和集合から最高の世代インデックスを取得し、そのインデックスに 1 を加算します。 非リーフ メンバーの世代インデックスはこのような方法で決定されるので、1 つの非リーフ メンバーが複数の世代に属することもあり得ます。  
   
 ## <a name="example"></a>例  
- 次の例では、場合は TRUE を返します。 [Date] です。[Fiscal] です。CurrentMember では、第 2 世代の一部を示します。  
+ 次の例では、[Date] の場合に TRUE を返します。[会計]。CurrentMember は2番目の生成の一部です。  
   
  `WITH MEMBER MEASURES.ISGENERATIONDEMO AS`  
   
@@ -52,7 +52,7 @@ IsGeneration(Member_Expression, Generation_Number)
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>関連項目  
- [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>参照  
+ [Mdx 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

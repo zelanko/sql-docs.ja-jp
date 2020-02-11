@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 69b9e356fcaf4b5abd97b56c69ecdd9881aaaee2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63285768"
 ---
 # <a name="issue-element-ssbdiagnose"></a>Issue 要素 (ssbdiagnose)
@@ -40,9 +40,9 @@ ms.locfileid: "63285768"
   
 ## <a name="element-attributes"></a>要素の属性  
   
-|属性|説明|  
+|Attribute|[説明]|  
 |---------------|-----------------|  
-|`type`|Issue 要素で報告する問題のカテゴリを次に示します。<br /><br /> **"Diagnosis"** では、 [!INCLUDE[ssSB](../../includes/sssb-md.md)] の構成の分析時に検出された構成の問題を報告します。<br /><br /> **"Problem"** では、 **ssbdiagnose** で分析を完了できない場合の原因となった問題を報告します。 問題を修正して、 **ssbdiagnose**を再実行します。<br /><br /> **"Event"** では、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] -RUNTIME **チェックの実行時に検出された** イベントを報告します。 イベントが報告されるのは、 **-SHOWEVENTS** が指定されている場合のみです。|  
+|`type`|Issue 要素で報告する問題のカテゴリを次に示します。<br /><br /> **"診断"** 構成の[!INCLUDE[ssSB](../../includes/sssb-md.md)]分析時に検出した構成の問題を報告します。<br /><br /> **"問題"****Ssbdiagnose**が分析を完了できなかった問題を報告します。 問題を修正して、 **ssbdiagnose**を再実行します。<br /><br /> **"イベント"**[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **-ランタイム**チェックを実行したときに検出したイベントを報告します。 イベントが報告されるのは、 **-SHOWEVENTS** が指定されている場合のみです。|  
 |`code`|メッセージのエラー番号を示します。|  
 |`server`|問題が検出された [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスを示します。 既定のインスタンスに問題があった場合、サーバー属性には、コンピューター名のみが含まれます。 既定のインスタンスに問題があった場合、サーバー属性は "ComputerName\ InstanceName" という形式になります。|  
 |`database`|問題が検出されたデータベースの名前を示します。|  
@@ -50,10 +50,10 @@ ms.locfileid: "63285768"
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特性|説明|  
+|特徴|[説明]|  
 |--------------------|-----------------|  
-|**データ型と長さ**|`string`、長さは制限されます。|  
-|**[値]**|エラー メッセージのテキストを返します。|  
+|**データ型と長さ**|`string`、長さは無制限です。|  
+|**Value**|エラー メッセージのテキストを返します。|  
 |**個数**|報告されたエラーにつき 1 個。|  
   
 ## <a name="element-relationships"></a>要素の関係  
