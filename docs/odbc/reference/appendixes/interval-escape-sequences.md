@@ -1,5 +1,5 @@
 ---
-title: Interval のエスケープ シーケンス |Microsoft Docs
+title: 間隔エスケープシーケンス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,17 +15,17 @@ ms.assetid: 303e8dab-8f13-4fa5-857f-15cc1f75bdd6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 69c674ee8838273af9bf4ed91ddcead7e1768fb9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68041639"
 ---
 # <a name="interval-escape-sequences"></a>Interval のエスケープ シーケンス
-ODBC では、interval のリテラルのエスケープ シーケンスを使用します。 このエスケープ シーケンスの構文は次のとおりです。  
+ODBC では、間隔リテラルにエスケープシーケンスを使用します。 このエスケープシーケンスの構文は次のとおりです。  
   
- {*間隔リテラル*}  
+ {*interval-リテラル*}  
   
- BNF 構文の*間隔リテラル*を参照してください、 [Interval のリテラル構文](../../../odbc/reference/appendixes/interval-literal-syntax.md)この付録で後述する「します。  
+ *Interval リテラル*の BNF 構文については、この付録の後半の「 [interval リテラル構文](../../../odbc/reference/appendixes/interval-literal-syntax.md)」を参照してください。  
   
- 間隔のデータ型が、データ ソースでサポートされている場合、間隔のリテラルのエスケープ シーケンスはサポートされています。 アプリケーションを呼び出す必要があります**SQLGetTypeInfo**をこれらのデータ型がサポートされているかどうかを判断します。
+ Interval リテラルエスケープシーケンスは、データソースで interval データ型がサポートされている場合にサポートされます。 アプリケーションは、これらのデータ型がサポートされているかどうかを判断するために**SQLGetTypeInfo**を呼び出す必要があります。

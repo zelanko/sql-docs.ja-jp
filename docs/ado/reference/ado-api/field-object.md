@@ -1,5 +1,5 @@
 ---
-title: オブジェクトをフィールド |Microsoft Docs
+title: Field オブジェクト |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,43 +16,43 @@ ms.assetid: b10a72fc-3c4b-4186-a70b-993dc9f7a092
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 04dbf3069896b9a7668d64a2f1d322f0b17ca5f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918684"
 ---
 # <a name="field-object"></a>Field オブジェクト
-一般的なデータ型のデータの列を表します。  
+共通のデータ型のデータ列を表します。  
   
-## <a name="remarks"></a>コメント  
- 各**フィールド**オブジェクト内の列に対応して、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)します。 使用する、[値](../../../ado/reference/ado-api/value-property-ado.md)プロパティの**フィールド**オブジェクトを設定または現在のレコードのデータを取得します。 機能によって、プロバイダーが公開していくつかのコレクション、メソッド、またはプロパティの**フィールド**オブジェクトを使用できない可能性があります。  
+## <a name="remarks"></a>解説  
+ 各**Field**オブジェクトは、[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)内の列に対応します。 現在のレコードのデータを設定または取得するには、 **Field**オブジェクトの[Value](../../../ado/reference/ado-api/value-property-ado.md)プロパティを使用します。 プロバイダーが公開する機能によっては、**フィールド**オブジェクトの一部のコレクション、メソッド、またはプロパティが使用できないことがあります。  
   
- コレクション、メソッド、およびプロパティの使用、**フィールド**オブジェクトを次を行うことができます。  
+ **Field**オブジェクトのコレクション、メソッド、およびプロパティを使用して、次の操作を実行できます。  
   
--   フィールドの名前を返す、[名前](../../../ado/reference/ado-api/name-property-ado.md)プロパティ。  
+-   [Name](../../../ado/reference/ado-api/name-property-ado.md)プロパティを持つフィールドの名前を返します。  
   
--   表示または変更が含まれるフィールドのデータ、**値**プロパティ。 **値**の既定のプロパティ、**フィールド**オブジェクト。  
+-   "**値**" プロパティを使用して、フィールド内のデータを表示または変更します。 **Value**は、 **Field**オブジェクトの既定のプロパティです。  
   
--   フィールドの基本的な特性を返す、[型](../../../ado/reference/ado-api/type-property-ado.md)、[精度](../../../ado/reference/ado-api/precision-property-ado.md)、および[NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md)プロパティ。  
+-   [型](../../../ado/reference/ado-api/type-property-ado.md)、[有効桁数](../../../ado/reference/ado-api/precision-property-ado.md)、および[numericscale](../../../ado/reference/ado-api/numericscale-property-ado.md)プロパティを使用して、フィールドの基本的な特性を返します。  
   
--   持つフィールドの宣言されたサイズを返す、 [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md)プロパティ。  
+-   定義済みの[size](../../../ado/reference/ado-api/definedsize-property.md)プロパティを使用して、フィールドの宣言されたサイズを返します。  
   
--   特定のフィールドに、データの実際のサイズを返す、 [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md)プロパティ。  
+-   [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md)プロパティを使用して、指定されたフィールド内のデータの実際のサイズを返します。  
   
--   指定されたフィールドにどのような種類の機能がサポートされているかを判断、[属性](../../../ado/reference/ado-api/attributes-property-ado.md)プロパティと[プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)コレクション。  
+-   [属性](../../../ado/reference/ado-api/attributes-property-ado.md)プロパティと[プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)コレクションを使用して、特定のフィールドでサポートされる機能の種類を決定します。  
   
--   長のバイナリまたは文字の長いデータを格納するフィールドの値を操作、 [AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md)と[GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md)メソッド。  
+-   [Appendchunk](../../../ado/reference/ado-api/appendchunk-method-ado.md)および[GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md)メソッドを使用して、長いバイナリまたは長い文字データを含むフィールドの値を操作します。  
   
--   プロバイダーは、バッチ更新をサポートする場合は、フィールド値の矛盾を解決でバッチを更新中に、 [OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md)と[UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)プロパティ。  
+-   プロバイダーがバッチ更新をサポートしている場合は、 [Originalvalue](../../../ado/reference/ado-api/originalvalue-property-ado.md)プロパティと[UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)プロパティを使用して、バッチ更新中にフィールド値の不一致を解決します。  
   
- すべてのメタデータ プロパティ (**名前**、**型**、 **DefinedSize**、**精度**、および**NumericScale**) が開く前に使用可能な**フィールド**オブジェクトの**Recordset**します。 その時点でそれらを設定することは、フォームを動的に構築するために便利です。  
+ **フィールド**オブジェクトの**レコードセット**を開く前に、すべてのメタデータプロパティ (**名前**、**型**、指定された**サイズ**、**有効桁数**、および**numericscale**) を使用できます。 その時点で設定すると、フォームを動的に構築する場合に便利です。  
   
- このセクションには、次のトピックが含まれています。  
+ ここでは、次のトピックについて説明します。  
   
 -   [Field オブジェクトのプロパティ、メソッド、およびイベント](../../../ado/reference/ado-api/field-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>関連項目  
- [フィールド コレクション (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
+## <a name="see-also"></a>参照  
+ [Fields コレクション (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Properties コレクション (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

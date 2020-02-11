@@ -13,20 +13,20 @@ ms.assetid: 7f94a6e2-9c34-405c-b2b0-304d94269715
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1adbde1b3df38d2b602f1ec42a2c96f36e8bd67b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67996378"
 ---
 # <a name="sqlparamoptions-visual-foxpro-odbc-driver"></a>SQLParamOptions (Visual FoxPro ODBC ドライバー)
 > [!NOTE]  
->  このトピックでには、Visual FoxPro ODBC ドライバー固有の情報が含まれています。 この関数の詳細については、該当するトピックを参照してください。 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)します。  
+>  このトピックには、Visual FoxPro ODBC ドライバー固有の情報が含まれています。 この関数の一般的な情報については、「 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)」の該当するトピックを参照してください。  
   
- サポート:[完全]  
+ サポート: 完全  
   
- ODBC API 準拠:レベル 1  
+ ODBC API の準拠: レベル1  
   
- アプリケーションによって割り当てられたパラメーターのセットの複数の値を指定できるように[SQLBindParameter](../../odbc/microsoft/sqlbindparameter-visual-foxpro-odbc-driver.md)します。 パラメーターのセットに複数の値を指定する機能は、一括挿入し、さまざまなパラメーター値で複数回、同じ SQL ステートメントを処理するデータ ソースを必要とするその他の作業に適しています。 たとえば、アプリケーションが 3 つのパラメーターに関連付けられている一連の値を指定できます、**挿入**ステートメントし、実行、**挿入**3 つを実行するステートメントを 1 回の挿入操作です。  
+ アプリケーションで、 [SQLBindParameter](../../odbc/microsoft/sqlbindparameter-visual-foxpro-odbc-driver.md)によって割り当てられた一連のパラメーターに対して複数の値を指定できるようにします。 一連のパラメーターに複数の値を指定する機能は、一括挿入や、データソースがさまざまなパラメーター値を使用して同じ SQL ステートメントを複数回処理する必要があるその他の作業に役立ちます。 たとえば、アプリケーションでは、 **insert**ステートメントに関連付けられた一連のパラメーターに対して3つの値のセットを指定し、insert ステートメントを1回**実行して**3 つの挿入操作を実行できます。  
   
- 詳細については、次を参照してください。 [SQLParamOptions](../../odbc/reference/syntax/sqlparamoptions-function.md)で、 *ODBC プログラマ リファレンス*します。
+ 詳細については、 *ODBC プログラマーリファレンス*の「 [sqlparamoptions](../../odbc/reference/syntax/sqlparamoptions-function.md) 」を参照してください。

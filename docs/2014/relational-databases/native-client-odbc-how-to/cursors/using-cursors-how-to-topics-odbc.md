@@ -1,5 +1,5 @@
 ---
-title: カーソルの使用方法に関するトピック (ODBC) を使用します。マイクロソフトのドキュメント
+title: カーソルの使用方法に関するトピック (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a8c565d924b6d8ed6340d60022f9436ec5a34347
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200425"
 ---
 # <a name="using-cursors-how-to-topics-odbc"></a>カーソルを使用する方法に関するトピック (ODBC)
@@ -24,13 +24,13 @@ ms.locfileid: "63200425"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
--   [カーソルを使用して&#40;ODBC&#41;](use-cursors-odbc.md)  
+-   [ODBC &#40;カーソルの使用&#41;](use-cursors-odbc.md)  
   
--   [行セットのバインドを使用して、 &#40;ODBC&#41;](use-rowset-binding-odbc.md)  
+-   [ODBC&#41;&#40;行セットバインドを使用する](use-rowset-binding-odbc.md)  
   
--   [フェッチおよび行セットを更新&#40;ODBC&#41;](fetch-and-update-rowsets-odbc.md)  
+-   [ODBC&#41;&#40;行セットのフェッチと更新](fetch-and-update-rowsets-odbc.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ODBC の使用法に関するトピック](../odbc-how-to-topics.md)  
   
   

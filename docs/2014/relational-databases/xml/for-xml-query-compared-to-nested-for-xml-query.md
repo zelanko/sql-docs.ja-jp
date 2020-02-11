@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3cccb676574fe4b767d567fbe48cdb887baddf8c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63205055"
 ---
 # <a name="for-xml-query-compared-to-nested-for-xml-query"></a>FOR XML クエリと入れ子になった FOR XML クエリの比較
@@ -118,7 +118,8 @@ FOR XML AUTO, TYPE
   
 -   内側の `FOR XML` クエリは、製品サブカテゴリの情報を取得しています。 要素中心の XML を生成するために、内側の `ELEMENTS` に `FOR XML` ディレクティブを追加しています。ここで生成した XML は外側のクエリで生成される XML に追加されます。 既定では、外側のクエリで属性中心の XML が生成されます。  
   
--   結果を `TYPE` xml **型にするために、内側のクエリに** ディレクティブを指定しています。 `TYPE` ディレクティブを指定しないと、結果は `nvarchar(max)` 型で返され、XML データはエンティティ化されます。  
+-   結果を `TYPE` xml **型にするために、内側のクエリに** ディレクティブを指定しています。 
+  `TYPE` ディレクティブを指定しないと、結果は `nvarchar(max)` 型で返され、XML データはエンティティ化されます。  
   
 -   外側のクエリでも `TYPE` ディレクティブを指定しています。 そのため、このクエリの結果は **xml** 型でクライアントに返されます。  
   

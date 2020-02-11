@@ -1,5 +1,5 @@
 ---
-title: トランスレーター DLL API リファレンス |Microsoft Docs
+title: Translation DLL API リファレンス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: 69033376-c315-4f52-8ee5-f23f07694bf8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 951545c9b72af4a432265d611e02b0a8ebe9e0c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68039375"
 ---
 # <a name="translation-dll-api-reference"></a>トランスレーター DLL API リファレンス
-このセクションでは、DLL の API は、2 つの関数は、変換の構文について説明します。**SQLDriverToDataSource**と**SQLDataSourceToDriver**します。 ドライバーの変換を実行する DLL には、これらの関数を含める必要があります。  
+このセクションでは、変換 DLL API の構文について説明します。この API は、 **SQLDriverToDataSource**と**Sqldatasourcetodriver**の2つの関数で構成されています。 これらの関数は、ドライバーの変換を実行する DLL に含まれている必要があります。  
   
  このセクションでは、次のトピックを扱います。  
   

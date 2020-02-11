@@ -1,5 +1,5 @@
 ---
-title: 設定すると、ログイン アカウントのデータベース ミラーリングまたは AlwaysOn 可用性グループ (SQL Server) |Microsoft Docs
+title: データベースミラーリングまたは AlwaysOn 可用性グループ (SQL Server) のログインアカウントを設定します。Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5fd397349bc3fa3ed7f69e9e1293415ea96fc75d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62754311"
 ---
 # <a name="set-up-login-accounts-for-database-mirroring-or-alwayson-availability-groups-sql-server"></a>データベース ミラーリングまたは AlwaysOn 可用性グループのログイン アカウントの設定 (SQL Server)
@@ -32,7 +32,7 @@ ms.locfileid: "62754311"
     > [!IMPORTANT]  
     >  より安全な環境を作成するには、各サーバー インスタンスに対して個別のドメイン アカウントを使用することを検討してください。  
   
-##  <a name="CreateLogin"></a> 異なるアカウントのログインの作成  
+##  <a name="CreateLogin"></a>別のアカウントのログインを作成する  
  2 つのサーバー インスタンスが異なるアカウントで実行される場合、システム管理者は CREATE LOGIN [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用して、リモート インスタンスのスタートアップ サービス アカウント用にログインを作成する必要があります。このログインは、各サーバー インスタンスに作成します。 詳細については、「[CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql)」を参照してください。  
   
 > [!IMPORTANT]  
@@ -49,20 +49,20 @@ ms.locfileid: "62754311"
 > [!NOTE]  
 >  ドメイン ユーザーではなくコンピューター アカウントを使用することにより、ネットワーク サービス アカウントで接続できます。 コンピューター アカウントを使用する場合は、そのアカウントを他方のサーバー インスタンスにユーザーとして追加する必要があります。  
   
-##  <a name="GrantConnect"></a> 接続権限の許可  
+##  <a name="GrantConnect"></a>Connect 権限の許可  
  サーバー インスタンスでログインを作成した後、サーバー インスタンスのデータベース ミラーリング エンドポイントに接続するための権限をそのログインに許可する必要があります。 システム管理者は、GRANT [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用して接続権限を許可します。 詳細については、「 [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql)と共に使用できるように構成する方法について説明します。  
   
 ##  <a name="RelatedTasks"></a> 関連タスク  
   
 -   [ログインの作成](../../relational-databases/security/authentication-access/create-a-login.md)  
   
--   [Windows 認証を使用してデータベース ミラーリング エンドポイントへのネットワーク アクセスを許可する &#40;SQL Server&#41;](../database-mirroring-allow-network-access-windows-authentication.md).  
+-   [Windows 認証を使用してデータベースミラーリングエンドポイントへのネットワークアクセスを許可する &#40;SQL Server&#41;](../database-mirroring-allow-network-access-windows-authentication.md)。  
   
--   [データベース ミラーリング エンドポイントでの証明書の使用 &#40;Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
+-   [Transact-sql&#41;&#40;データベースミラーリングエンドポイントに証明書を使用する](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
 ## <a name="see-also"></a>参照  
- [データベース ミラーリング エンドポイント &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)   
- [データベース ミラーリング構成のトラブルシューティング &#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)   
- [AlwaysOn 可用性グループの構成のトラブルシューティングを行う&#40;SQL Server&#41;](../availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
+ [データベースミラーリングエンドポイント &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)   
+ [データベースミラーリング構成 &#40;SQL Server のトラブルシューティング&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)   
+ [AlwaysOn 可用性グループ構成 &#40;SQL Server のトラブルシューティング&#41;](../availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
   
   

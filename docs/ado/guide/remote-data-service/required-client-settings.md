@@ -1,5 +1,5 @@
 ---
-title: 必須のクライアント設定 |Microsoft Docs
+title: 必要なクライアント設定 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,29 +13,29 @@ ms.assetid: e776b4e3-fcc4-4bfb-a7e8-5ffae1d83833
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bdb99cb3d792900f48ceb69c25c7ae720c339683
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67922293"
 ---
 # <a name="required-client-settings"></a>必要なクライアントの設定
 > [!IMPORTANT]
->  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)します。  
+>  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および[Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416)」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
   
- カスタムを使用する次の設定を指定**DataFactory**ハンドラー。  
+ カスタム**DataFactory**ハンドラーを使用するには、次の設定を指定します。  
   
--   指定"プロバイダー = MS リモート"で、[接続オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクト[プロバイダー プロパティ (ADO)](../../../ado/reference/ado-api/provider-property-ado.md)プロパティまたは**接続**接続文字列をオブジェクト"**プロバイダー**="キーワード。  
+-   [接続オブジェクト (ado)](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクト[プロバイダープロパティ (ado)](../../../ado/reference/ado-api/provider-property-ado.md)プロパティまたは**接続**オブジェクト接続文字列 "**Provider**=" キーワードで、"provider = MS Remote" を指定します。  
   
--   設定、 [CursorLocation プロパティ (ADO)](../../../ado/reference/ado-api/cursorlocation-property-ado.md)プロパティを**adUseClient**します。  
+-   [[カーソルの場所] プロパティ (ADO)](../../../ado/reference/ado-api/cursorlocation-property-ado.md)プロパティを**adUseClient**に設定します。  
   
--   使用するハンドラーの名前を指定、 [DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)オブジェクトの**ハンドラー**プロパティ、または[レコード セット オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトの接続文字列"**ハンドラー**="キーワード。 (でハンドラーを設定することはできません、**接続**オブジェクトの接続文字列です)。  
+-   [DataControl object (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)オブジェクトの**ハンドラー**プロパティ、または[レコードセットオブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトの接続文字列 "**handler**=" キーワードで使用するハンドラーの名前を指定します。 (**接続**オブジェクトの接続文字列でハンドラーを設定することはできません)。  
   
- RDS という名前のサーバーで、既定のハンドラーを提供する**MSDFMAP します。ハンドラー**します。 (既定のカスタマイズ ファイルの MSDFMAP を名前です。INI。)  
+ RDS では、Msdfmap という名前のサーバーに既定のハンドラーが用意されて**います。ハンドラー**。 (既定のカスタマイズファイルは、MSDFMAP という名前です。INI)  
   
  **例**  
   
- 以下のセクションを前提としています。 **MSDFMAP します。INI** AdvWorks、データ ソース名は既に定義されているとします。  
+ ここでは、Msdfmap の次のセクションについて説明し**ます。INI**とデータソース名た advworks-srv01 が既に定義されています。  
   
 ```console
 [connect CustomerDataBase]  
@@ -46,9 +46,9 @@ Connect="DSN=AdvWorks"
 SQL="SELECT * FROM Customers WHERE CustomerID = ?"  
 ```  
   
- Visual Basic では、次のコード スニペットが書き込まれます。  
+ 次のコードスニペットは Visual Basic で記述されています。  
   
-## <a name="rdsdatacontrol-version"></a>RDS.DataControl バージョン  
+## <a name="rdsdatacontrol-version"></a>RDS.DataControl のバージョン  
   
 ```vb
 Dim dc as New RDS.DataControl  
@@ -59,28 +59,28 @@ Set dc.SQL = "CustomerById(4)"
 dc.Refresh  
 ```  
   
-## <a name="recordset-version"></a>レコード セットのバージョン  
+## <a name="recordset-version"></a>レコードセットのバージョン  
   
 ```vb
 Dim rs as New ADODB.Recordset  
 rs.CursorLocation = adUseClient  
 ```  
   
- いずれかを指定、[ハンドラー プロパティ (RDS)](../../../ado/reference/rds-api/handler-property-rds.md)プロパティまたはキーワード;、[プロバイダー プロパティ (ADO)](../../../ado/reference/ado-api/provider-property-ado.md)プロパティまたはキーワード; および*CustomerById*と*CustomerDatabase*識別子。 開き、 **Recordset**オブジェクト  
+ [ハンドラプロパティ (RDS)](../../../ado/reference/rds-api/handler-property-rds.md)プロパティまたはキーワードを指定します。[Provider プロパティ (ADO)](../../../ado/reference/ado-api/provider-property-ado.md)プロパティまたはキーワードおよび*CustomerById*と*顧客のデータベース*識別子。 次に、**レコードセット**オブジェクトを開きます。  
   
- rs。"CustomerById(4)"開く"ハンドラー MSDFMAP を = です。_ (&)、ハンドラーです。"  
+ cmr."CustomerById (4)", "Handler = MSDFMAP" を開きます。ハンドラ; "& _  
   
 ```vb
 "Provider=MS Remote;Data Source=CustomerDatabase;" & _  
 "Remote Server=https://yourServer"  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [カスタマイズ ファイル Connect セクション](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
- [カスタマイズ ファイル SQL セクション](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
- [カスタマイズ ファイル UserList セクション](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
+## <a name="see-also"></a>参照  
+ [カスタマイズファイルの接続セクション](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
+ [カスタマイズファイル SQL セクション](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
+ [カスタマイズファイルの UserList セクション](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
  [DataFactory のカスタマイズ](../../../ado/guide/remote-data-service/datafactory-customization.md)   
  [必要なクライアント設定](../../../ado/guide/remote-data-service/required-client-settings.md)   
- [カスタマイズ ファイルの概要](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)   
+ [カスタマイズファイルについて](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)   
  [独自のカスタム ハンドラーの記述](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
 

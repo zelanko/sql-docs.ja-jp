@@ -16,14 +16,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7b041dc07afb30fff0c03d96fec9cd8a5d62f965
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63229010"
 ---
 # <a name="resynchronizing-rows"></a>行の再同期
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーのサポート**IRowsetResynch**で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]だけ行セットをカーソルでサポートされています。 **IRowsetResynch** を、要求時に使用することはできません。 コンシューマーは、行セットを開く前にインターフェイスを要求する必要があります。  
+  Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB プロバイダーは、カーソルが[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サポートされている行セットに対してのみ**IRowsetResynch**をサポートします。 **IRowsetResynch**は、オンデマンドでは利用できません。 コンシューマーは、行セットを開く前にインターフェイスを要求する必要があります。  
   
 ## <a name="see-also"></a>参照  
  [行セット内のデータの更新](updating-data-in-rowsets.md)  

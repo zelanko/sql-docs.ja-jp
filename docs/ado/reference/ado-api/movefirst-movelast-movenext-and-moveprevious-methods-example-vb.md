@@ -1,5 +1,5 @@
 ---
-title: レコード セットの例 (VB) のレコード ポインターの移動 |Microsoft Docs
+title: レコードセットのレコードポインターの移動の例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,14 +18,14 @@ ms.assetid: 31d3b083-c677-423e-8d26-a212eaeea281
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4ade95659b1e7111ff2f3c27a04008e859ded605
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932089"
 ---
-# <a name="movefirst-movelast-movenext-and-moveprevious-methods-example-vb"></a>MoveFirst、MoveLast、MoveNext、MovePrevious メソッドの例 (VB)
-この例では、 [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、および[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) のレコードポインターを移動するメソッド[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)指定されたコマンドに基づきます。 MoveAny プロシージャは、この手順を実行する必要があります。  
+# <a name="movefirst-movelast-movenext-and-moveprevious-methods-example-vb"></a>MoveFirst、MoveLast、MoveNext、および MovePrevious メソッドの例 (VB)
+この例では、 [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、および[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)メソッドを使用して、指定されたコマンドに基づいてレコード[セット](../../../ado/reference/ado-api/recordset-object-ado.md)のレコードポインターを移動します。 このプロシージャを実行するには、MoveAny プロシージャを指定する必要があります。  
   
 ```  
 'BeginMoveFirstVB  
@@ -123,6 +123,6 @@ End Sub
 'EndMoveFirstVB  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [MoveFirst、MoveLast、MoveNext、MovePrevious メソッド (ADO)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
+## <a name="see-also"></a>参照  
+ [MoveFirst、MoveLast、MoveNext、および MovePrevious メソッド (ADO)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

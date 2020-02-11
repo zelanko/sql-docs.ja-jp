@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 414cdedb8f2bc3dee4edc792c11b6438306818c6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62754542"
 ---
 # <a name="removing-database-mirroring-sql-server"></a>データベース ミラーリングの削除 (SQL Server)
@@ -54,7 +54,7 @@ ms.locfileid: "62754542"
 
   
 ## <a name="see-also"></a>参照  
- [ALTER DATABASE Database Mirroring &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)   
+ [ALTER DATABASE データベース ミラーリング &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)   
  [データベース ミラーリング &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [データベース ミラーリングの一時停止と再開 &#40;SQL Server&#41;](pausing-and-resuming-database-mirroring-sql-server.md)   
  [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)  
