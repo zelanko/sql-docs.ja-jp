@@ -17,14 +17,14 @@ ms.assetid: a362ed51-314c-4783-9598-538dbf755f3d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8c16ac4d18806b670c8b3e27dc09c9019d7ecdeb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67967248"
 ---
 # <a name="append-method-adox-tables"></a>Append メソッド (ADOX Tables)
-新しく追加[テーブル](../../../ado/reference/adox-api/table-object-adox.md)オブジェクトを[テーブル](../../../ado/reference/adox-api/tables-collection-adox.md)コレクション。  
+[Tables](../../../ado/reference/adox-api/tables-collection-adox.md)コレクションに新しい[Table](../../../ado/reference/adox-api/table-object-adox.md)オブジェクトを追加します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,15 +35,15 @@ Tables.Append Table
   
 #### <a name="parameters"></a>パラメーター  
  *Table*  
- A**バリアント**値への参照を含む、**テーブル**を追加または作成し、追加するテーブルの名前。  
+ 追加する**テーブル**への参照、または作成および追加するテーブルの名前を含む**バリアント**値です。  
   
-## <a name="remarks"></a>コメント  
- プロバイダーがテーブルの作成をサポートしていない場合、エラーが発生します。  
+## <a name="remarks"></a>解説  
+ プロバイダーがテーブルの作成をサポートしていない場合は、エラーが発生します。  
   
 ## <a name="applies-to"></a>適用対象  
  [Tables コレクション (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Columns および Tables Append メソッド、Name プロパティの例 (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
  [ParentCatalog プロパティの例 (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)   
  [Append メソッド (ADOX Columns)](../../../ado/reference/adox-api/append-method-adox-columns.md)   

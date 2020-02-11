@@ -1,5 +1,5 @@
 ---
-title: System.Transactions の使用 |Microsoft Docs
+title: Using system.string |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,20 +18,29 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: e39106ea1c4077d1aee90cedc17c5af07503a136
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62919532"
 ---
 # <a name="using-systemtransactions"></a>System.Transactions の使用
-  `System.Transactions` 名前空間では、ADO.NET と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR (共通言語ランタイム) 統合に完全に統合される新しいトランザクション フレームワークが提供されます。 `System.Transactions.TransactionScope` クラスは、接続を分散トランザクションに暗黙に参加させることで、コード ブロックをトランザクション対応にします。 `Complete` でマークされたコード ブロックの最後には、`TransactionScope` メソッドを呼び出す必要があります。 プログラムの実行がコード ブロックから離れる際には `Dispose` メソッドが呼び出され、このとき `Complete` メソッドが呼び出されなければ、トランザクションの続行が中止されます。 コードがスコープから離れるような例外がスローされると、このトランザクションは中止されたと見なされます。  
   
- `using` ブロックを使用することで、`Dispose` オブジェクトで `TransactionScope` ブロックの終了時に必ず `using` メソッドを呼び出すようにすることをお勧めします。 `TransactionScope` の既定のタイムアウトは 1 分なので、保留中のトランザクションのコミットまたはロールバックに失敗すると、パフォーマンスが大幅に低下する場合があります。 `using` ステートメントを使用しない場合は、`Try` ブロック内のすべての処理を実行し、`Dispose` ブロックで `Finally` メソッドを明示的に呼び出す必要があります。  
+  `System.Transactions` 名前空間では、ADO.NET と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR (共通言語ランタイム) 統合に完全に統合される新しいトランザクション フレームワークが提供されます。 
+  `System.Transactions.TransactionScope` クラスは、接続を分散トランザクションに暗黙に参加させることで、コード ブロックをトランザクション対応にします。 
+  `Complete` でマークされたコード ブロックの最後には、`TransactionScope` メソッドを呼び出す必要があります。 プログラムの実行がコード ブロックから離れる際には `Dispose` メソッドが呼び出され、このとき `Complete` メソッドが呼び出されなければ、トランザクションの続行が中止されます。 コードがスコープから離れるような例外がスローされると、このトランザクションは中止されたと見なされます。  
   
- `TransactionScope` 内で例外が発生すると、トランザクションには一貫性がないことを示すマークが付けられ、破棄されます。 `TransactionScope` が破棄されると、トランザクションはロールバックされます。 例外が発生しなければ、参加しているトランザクションがコミットされます。  
+ 
+  `using` ブロックを使用することで、`Dispose` オブジェクトで `TransactionScope` ブロックの終了時に必ず `using` メソッドを呼び出すようにすることをお勧めします。 
+  `TransactionScope` の既定のタイムアウトは 1 分なので、保留中のトランザクションのコミットまたはロールバックに失敗すると、パフォーマンスが大幅に低下する場合があります。 
+  `using` ステートメントを使用しない場合は、`Try` ブロック内のすべての処理を実行し、`Dispose` ブロックで `Finally` メソッドを明示的に呼び出す必要があります。  
   
- `TransactionScope` は、ローカルおよびリモート データ ソース、または外部リソース マネージャーにアクセスするときのみ使用してください。 これは、`TransactionScope` が常にトランザクションを昇格してしまうからです。コンテキスト接続内のみで使用した場合でさえ、そのようになります。  
+ 
+  `TransactionScope` 内で例外が発生すると、トランザクションには一貫性がないことを示すマークが付けられ、破棄されます。 
+  `TransactionScope` が破棄されると、トランザクションはロールバックされます。 例外が発生しなければ、参加しているトランザクションがコミットされます。  
+  
+ 
+  `TransactionScope` は、ローカルおよびリモート データ ソース、または外部リソース マネージャーにアクセスするときのみ使用してください。 これは、`TransactionScope` が常にトランザクションを昇格してしまうからです。コンテキスト接続内のみで使用した場合でさえ、そのようになります。  
   
 > [!NOTE]  
 >  既定では、`TransactionScope` クラスは、`System.Transactions.Transaction.IsolationLevel` が `Serializable` であるトランザクションを作成します。 アプリケーションによっては、分離レベルを低くして、アプリケーション内の競合を回避することを検討する必要があります。  
@@ -40,9 +49,12 @@ ms.locfileid: "62919532"
 >  リモート サーバーに対する分散トランザクション内では、大量のデータベース リソースが消費されるため、更新、挿入、および削除だけを実行することをお勧めします。 操作がローカル サーバーで実行される場合は、分散トランザクションは必要なく、ローカル トランザクションで十分です。 SELECT ステートメントは、不必要にデータベース リソースをロックすることがあります。また、選択に多くのトランザクションを要する場合もあります。 データベース以外の作業は、トランザクション処理を行う他のリソース マネージャーを必要とする場合を除き、トランザクションのスコープ外で行う必要があります。 トランザクションのスコープ内で例外が発生するとトランザクションのコミットは回避されますが、`TransactionScope` クラスには、トランザクションのスコープ外でユーザー コードによって行われた変更をロールバックする機能はありません。 トランザクションのロールバック時に操作が必要である場合は、`System.Transactions.IEnlistmentNotification` インターフェイスの独自の実装を作成し、明示的にトランザクションに参加する必要があります。  
   
 ## <a name="example"></a>例  
- `System.Transactions` を使用するには、System.Transactions.dll ファイルへの参照が必要です。  
+ 
+  `System.Transactions` を使用するには、System.Transactions.dll ファイルへの参照が必要です。  
   
- 次のコードでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の 2 つの異なるインスタンスに対して昇格可能なトランザクションを作成する方法を説明します。 これらのインスタンスは、2 つの異なる `System.Data.SqlClient.SqlConnection` オブジェクトで表され、`TransactionScope` ブロックにラップされます。 このコードでは、`TransactionScope` ステートメントを使用して `using` ブロックを作成し、最初の接続を開きます。これにより、トランザクションは `TransactionScope` に自動参加します。 最初、トランザクションは完全な分散トランザクションではなく、軽量トランザクションとして参加します。 このコードでは、条件ロジックが存在することを前提としています (説明を簡単にするために、このロジックは省略しています)。 必要な場合のみ 2 番目の接続を開き、`TransactionScope` に参加させます。 2 番目の接続が開かれると、トランザクションは完全な分散トランザクションに自動的に昇格します。 その後、`TransactionScope.Complete` を呼び出し、トランザクションをコミットします。 その接続の `using` ステートメントが終了すると、2 つの接続が破棄されます。 `TransactionScope.Dispose` の `TransactionScope` メソッドは、その `using` での `TransactionScope` ブロックの終了時に自動的に呼び出されます。 `TransactionScope` ブロックのどこかで例外がスローされた場合は、`Complete` が呼び出されません。また、分散トランザクションは、`TransactionScope` が破棄される際にロールバックされます。  
+ 次のコードでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の 2 つの異なるインスタンスに対して昇格可能なトランザクションを作成する方法を説明します。 これらのインスタンスは、2 つの異なる `System.Data.SqlClient.SqlConnection` オブジェクトで表され、`TransactionScope` ブロックにラップされます。 このコードでは、`TransactionScope` ステートメントを使用して `using` ブロックを作成し、最初の接続を開きます。これにより、トランザクションは `TransactionScope` に自動参加します。 最初、トランザクションは完全な分散トランザクションではなく、軽量トランザクションとして参加します。 このコードでは、条件ロジックが存在することを前提としています (説明を簡単にするために、このロジックは省略しています)。 必要な場合のみ 2 番目の接続を開き、`TransactionScope` に参加させます。 2 番目の接続が開かれると、トランザクションは完全な分散トランザクションに自動的に昇格します。 その後、`TransactionScope.Complete` を呼び出し、トランザクションをコミットします。 その接続の `using` ステートメントが終了すると、2 つの接続が破棄されます。 
+  `TransactionScope.Dispose` の `TransactionScope` メソッドは、その `using` での `TransactionScope` ブロックの終了時に自動的に呼び出されます。 
+  `TransactionScope` ブロックのどこかで例外がスローされた場合は、`Complete` が呼び出されません。また、分散トランザクションは、`TransactionScope` が破棄される際にロールバックされます。  
   
  Visual Basic  
   

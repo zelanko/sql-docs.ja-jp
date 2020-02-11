@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9de91ba98533e82fbf63376ed6d9c56ad73a000c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771028"
 ---
 # <a name="odbc-destination"></a>ODBC 入力先
@@ -31,7 +31,7 @@ ms.locfileid: "62771028"
   
 -   **バッチ**: このモードでは、ODBC 入力先は、把握した ODBC プロバイダーの機能に基づいて、最も効率的な挿入方法を使用します。 最新の ODBC プロバイダーの場合、これは、パラメーターを設定した INSERT ステートメントを準備し、行方向の配列パラメーター バインドを使用する方法です (このとき、配列のサイズは **BatchSize** プロパティによって制御します)。 **[バッチ]** を選択したが、この方法がプロバイダーでサポートされていない場合、ODBC 入力先は自動的に **[行ごと]** モードに切り替わります。  
   
--   **行ごと**: このモードでは、ODBC 入力先はパラメーターを設定した INSERT ステートメントを準備し、**SQL の Execute** を使用して一度に 1 行ずつ行を挿入します。  
+-   **行ごと**: このモードでは、ODBC 入力先はパラメーターを設定した INSERT ステートメントを準備し、 **SQL の Execute** を使用して一度に 1 行ずつ行を挿入します。  
   
 ## <a name="error-handling"></a>エラー処理  
  ODBC 入力先にはエラー出力があります。 コンポーネントのエラー出力には、次の出力列があります。  
@@ -44,7 +44,7 @@ ms.locfileid: "62771028"
   
  ODBC 入力先は、エラー動作の設定に応じて、抽出処理中に発生したエラー (データ変換、切り捨て) をエラー出力に返します。 詳細については、「[CDC ソース エディター &#40;[エラー出力] ページ&#41;](../odbc-source-editor-error-output-page.md)」を参照してください。  
   
-## <a name="parallelism"></a>並列処理  
+## <a name="parallelism"></a>Parallelism  
  並列実行できる ODBC 入力先コンポーネントの数に制限はありません。これは、同一テーブル上にある場合または異なるテーブル上にある場合、同一コンピューター上で実行する場合または異なるコンピューター上で実行する場合のいずれにも該当します (ただし、通常のグローバルなセッション制限を除きます)。  
   
  ただし、使用する ODBC プロバイダーの制限によって、プロバイダーを介するコンカレント接続数が制限される場合があります。 これらの制限によって、ODBC 入力先で使用できる並列インスタンス数のサポートが制限されます。 SSIS プロバイダーは、使用される ODBC プロバイダーの制限を把握し、SSIS パッケージを作成する際に考慮する必要があります。  
@@ -75,11 +75,11 @@ ms.locfileid: "62771028"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
--   [ODBC 変換先エディター &#40;[エラー出力] ページ&#41;](../odbc-destination-editor-error-output-page.md)  
+-   [ODBC 変換先エディター &#40;エラー出力ページ&#41;](../odbc-destination-editor-error-output-page.md)  
   
--   [ODBC 変換先エディター &#40;[マッピング] ページ&#41;](../odbc-destination-editor-mappings-page.md)  
+-   [ODBC 変換先エディター &#40;マッピングページ&#41;](../odbc-destination-editor-mappings-page.md)  
   
--   [ODBC 変換先エディター &#40;[接続マネージャー] ページ&#41;](../odbc-destination-editor-connection-manager-page.md)  
+-   [ODBC 変換先エディター &#40;接続マネージャーページ&#41;](../odbc-destination-editor-connection-manager-page.md)  
   
 -   [ODBC 入力先を使用したデータ読み込み](odbc-destination.md)  
   

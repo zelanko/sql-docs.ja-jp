@@ -16,10 +16,10 @@ ms.assetid: 0cc60267-3c56-4a88-8ad7-bb07f0255d56
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: b659aa13a8704a060be12bb015bd0de0fd126562
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67985996"
 ---
 # <a name="aggregate-functions---avg"></a>集計関数 - avg
@@ -36,39 +36,39 @@ fn:avg($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
   
 ## <a name="arguments"></a>引数  
  *$arg*  
- 平均を計算するアトミック値のシーケンス。  
+ 平均が計算されるアトミック値のシーケンス。  
   
-## <a name="remarks"></a>コメント  
- 渡されるアトミック値の型をすべて**avg()** する 3 つの組み込み数値基本データ型または xdt:untypedAtomic のいずれかのサブタイプである必要があります。 これらの型を混在させることはできません。 xdt:untypedAtomic 型の値は、xs:double として扱われます。 結果**avg()** xdt:untypedAtomic の場合は xs:double など、渡された型の基本型を受け取ります。  
+## <a name="remarks"></a>解説  
+ **Avg ()** に渡されるアトミック値のすべての型は、3つの組み込み数値基本型または xdt: untypedAtomic のいずれか1つのサブタイプである必要があります。 これらの型を混在させることはできません。 xdt:untypedAtomic 型の値は、xs:double として扱われます。 **Avg ()** の結果は、xdt: untypedAtomic の場合、xs: double など、渡された型の基本型を受け取ります。  
   
- 入力が静的に空の場合、結果が暗黙的し、静的エラーが発生します。  
+ 入力が静的に空の場合、空のが暗黙的に指定され、静的なエラーが発生します。  
   
- **Avg()** 関数は、計算される数値の平均値を返します。 例:  
+ **Avg ()** 関数は、計算された数値の平均を返します。 次に例を示します。  
   
- **sum (** *$arg* **) div 数 (** *$arg* **)**  
+ **sum (** *$arg* **) div count (** *$arg* **)**  
   
- 場合 *$arg*空のシーケンスが空のシーケンスが返されます。  
+ *$Arg*が空のシーケンスの場合は、空のシーケンスが返されます。  
   
- Xdt:untypedAtomic 値は、xs:double にキャストできない場合で、入力シーケンスの値が無視されます。 *$arg*します。  
+ Xdt: untypedAtomic 値を xs: double にキャストできない場合、入力シーケンスの値は無視されます ( *$arg*)。  
   
  他のすべての場合は、関数から静的エラーが返されます。  
   
-## <a name="examples"></a>使用例  
- このトピックではさまざまなに格納されている XML インスタンスに対して XQuery の例について**xml**型の列には、AdventureWorks データベース。  
+## <a name="examples"></a>例  
+ このトピックでは、AdventureWorks データベースのさまざまな**xml**型の列に格納されている xml インスタンスに対して XQuery の例を示します。  
   
-### <a name="a-using-the-avg-xquery-function-to-find-work-center-locations-in-the-manufacturing-process-in-which-labor-hours-are-greater-than-the-average-for-all-work-center-locations"></a>A. Avg() XQuery 関数を使用して、労働時間がすべてのワーク センター拠点の平均値より大きい製造プロセス内でのワーク センターの場所を検索します。  
- 指定したクエリを書き直すことができます[min 関数 (XQuery)](../xquery/aggregate-functions-min.md)を使用する、 **avg()** 関数。  
+### <a name="a-using-the-avg-xquery-function-to-find-work-center-locations-in-the-manufacturing-process-in-which-labor-hours-are-greater-than-the-average-for-all-work-center-locations"></a>A. Avg () XQuery 関数を使用して、製造プロセス内のワークセンターの場所を検索します。この場合、労働時間はすべてのワークセンターの場所の平均よりも大きくなります。  
+ [Min 関数 (XQuery)](../xquery/aggregate-functions-min.md)で指定されたクエリを書き直して、 **avg ()** 関数を使用することができます。  
   
 ## <a name="implementation-limitations"></a>実装の制限事項  
- 制限事項を次に示します。  
+ 制限事項は次のとおりです。  
   
--   **Avg()** 関数では、すべての整数値を xs:decimal にマップします。  
+-   **Avg ()** 関数では、すべての整数が xs: decimal にマップされます。  
   
--   **Avg()** xs:duration 型の値に対して関数がサポートされていません。  
+-   Xs: duration 型の値に対する**avg ()** 関数はサポートされていません。  
   
 -   基本データ型の境界を超えて複数の型が混在するシーケンスはサポートされません。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [xml データ型に対する XQuery 関数](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

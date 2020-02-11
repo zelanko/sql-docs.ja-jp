@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: baf35c096ec552c39b70729470263765570e79dd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62913633"
 ---
-# <a name="mssqlserver5242"></a>MSSQLSERVER_5242
+# <a name="mssqlserver_5242"></a>MSSQLSERVER_5242
     
 ## <a name="details"></a>詳細  
   
@@ -35,8 +35,8 @@ ms.locfileid: "62913633"
 ## <a name="explanation"></a>説明  
  エラー メッセージで参照されているデータベース ページで構造の一貫性が損なわれています。  
   
-## <a name="see-also"></a>関連項目  
- [DBCC CHECKDB &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql)   
+## <a name="see-also"></a>参照  
+ [DBCC CHECKDB &#40;Transact-sql&#41;](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql)   
  [データベース ファイルとファイル グループ](../databases/database-files-and-filegroups.md)  
   
   

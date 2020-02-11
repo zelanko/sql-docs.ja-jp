@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 26af58e208527d155b5ddf3506be4509627c1f7e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62918340"
 ---
 # <a name="management-data-warehouse"></a>管理データ ウェアハウス (management data warehouse)
@@ -39,7 +39,7 @@ ms.locfileid: "62918340"
   
  次の表では、core スキーマ内のデータベース テーブルについて説明します。 データ コレクターは、これらのデータベース テーブルで、データの出所、挿入者、データ ウェアハウスにアップロードされた時刻を追跡できます。  
   
-|テーブル名|説明|  
+|テーブル名|[説明]|  
 |----------------|-----------------|  
 |core.performance_counter_report_group_items|管理データ ウェアハウスのレポートがパフォーマンス カウンターをグループ化および集計する方法に関する情報を格納します。|  
 |core.snapshots_internal|それぞれの新しいスナップショットを識別します。 アップロード パッケージによってデータの新しいバッチのアップロードが開始されるたびに、このテーブルに新しい行が挿入されます。|  
@@ -75,7 +75,7 @@ ms.locfileid: "62918340"
   
     -   `snapshots.os_memory_clerks`  
   
-    -   **snapshots.os_memory_nodes**  
+    -   **スナップショット。 os_memory_nodes**  
   
     -   snapshots.sql_process_and_system_memory  
   
@@ -103,7 +103,7 @@ ms.locfileid: "62918340"
   
     -   snapshots.distinct_query_to_handle  
   
- **custom_snapshots スキーマ**  
+ **Custom_snapshots スキーマ**  
   
  custom_snapshots スキーマでは、標準のコレクター型またはサード パーティのコレクター型を使用してユーザー定義のコレクション セットを作成するときに作成される新しいテーブルとビューが記述されます。 コレクション アイテム用の新しいデータ テーブルを必要とするコレクター型がある場合は、このスキーマにそのテーブルを作成できます。 このスキーマに新しいテーブルを追加できるのは、mdw_writer ロールのメンバーです。 スキーマにそれ以外の変更を加えられるのは、mdw_admin ロールのメンバーだけです。  
   
@@ -126,9 +126,9 @@ ms.locfileid: "62918340"
 |「snapshots スキーマ」セクションのテーブルの一覧を更新しました。 snapshots.os_memory_clerks、snapshots.sql_process_and_system_memory、および snapshots.io_virtual_file_stats を追加しました。 snapshots.os_process_memory および snapshots.distinct_query_stats を削除しました。|  
   
 ## <a name="see-also"></a>参照  
- [管理データ ウェアハウスのストアド プロシージャ &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/management-data-warehouse-stored-procedures-transact-sql)   
- [データ コレクター ストアド プロシージャ &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql)   
- [データ コレクション](data-collection.md)   
- [コレクション セット レポートの表示 &#40;SQL Server Management Studio&#41;](view-a-collection-set-report-sql-server-management-studio.md)  
+ [管理データウェアハウスのストアドプロシージャ &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/management-data-warehouse-stored-procedures-transact-sql)   
+ [データコレクターストアドプロシージャ &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql)   
+ [データコレクション](data-collection.md)   
+ [コレクションセットのレポート &#40;SQL Server Management Studio の表示&#41;](view-a-collection-set-report-sql-server-management-studio.md)  
   
   

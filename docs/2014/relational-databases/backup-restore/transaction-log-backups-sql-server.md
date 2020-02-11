@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6dc94409e607c91944a2263ac5dfb3e8a3f4ce54
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62920688"
 ---
 # <a name="transaction-log-backups-sql-server"></a>トランザクション ログのバックアップ (SQL Server)
@@ -27,17 +27,17 @@ ms.locfileid: "62920688"
   
  少なくとも 1 つの完全バックアップを作成しておかなければ、ログ バックアップを作成できません。 完全バックアップを作成しておくと、いつでもトランザクション ログをバックアップできます。ただし、そのログのバックアップが既に進行中である場合、バックアップを開始できません。 作業損失の可能性を最小限に抑え、トランザクション ログを切り捨てられるように、ログ バックアップを頻繁に行うことをお勧めします。 一般的に、データベース管理者は完全バックアップを定期的に (たとえば週 1 回) 作成しますが、必要に応じて短い間隔で (たとえば 1 日 1 回) 差分データベース バックアップを作成します。 データベース バックアップとは別に、トランザクション ログのバックアップを頻繁に (たとえば 10 分おきに) 作成します。 最適なバックアップ間隔は、バックアップの種類に応じて、データの重要度、データベースのサイズ、サーバーの作業負荷などの要因によって異なります。  
   
- **このトピックの内容**  
+ **このトピックの内容:**  
   
--   [ログ バックアップのシーケンスのしくみ](#LogBackupSequence)  
+-   [一連のログバックアップの動作](#LogBackupSequence)  
   
--   [推奨事項](#Recommendations)  
+-   [Recommendations (推奨事項)](#Recommendations)  
   
--   [関連タスク](#RelatedTasks)  
+-   [Related Tasks](#RelatedTasks)  
   
 -   [関連コンテンツ](#RelatedContent)  
   
-##  <a name="LogBackupSequence"></a> ログ バックアップのシーケンスのしくみ  
+##  <a name="LogBackupSequence"></a>一連のログバックアップの動作  
  トランザクション ログのバックアップの *ログ チェーン* のシーケンスは、データのバックアップとは関連がありません。 たとえば、次の一連のイベントが発生したとします。  
   
 |Time|イベント|  
@@ -59,19 +59,19 @@ ms.locfileid: "62920688"
 -   既定では、バックアップ操作が成功するたびに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログおよびシステム イベント ログにエントリが 1 つ追加されます。 ログを頻繁にバックアップすると、これらの成功メッセージがすぐに蓄積され、他のメッセージを探すのが困難になるほどエラー ログが大きくなることがあります。 そのような場合、これらのエントリに依存するスクリプトがなければ、トレース フラグ 3226 を使用することによってこれらのログ エントリを除外できます。 詳細については、「[トレース フラグ &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql)」を参照してください。  
   
 ##  <a name="RelatedTasks"></a> 関連タスク  
- **トランザクション ログのバックアップを作成するには**  
+ **トランザクションログバックアップを作成するには**  
   
--   [トランザクション ログのバックアップ &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)  
+-   [トランザクションログ &#40;SQL Server のバックアップ&#41;](back-up-a-transaction-log-sql-server.md)  
   
--   <xref:Microsoft.SqlServer.Management.Smo.Backup.SqlBackup%2A> (SMO)  
+-   <xref:Microsoft.SqlServer.Management.Smo.Backup.SqlBackup%2A>SMO  
   
  バックアップ ジョブのスケジュールを設定するには、「 [Use the Maintenance Plan Wizard](../maintenance-plans/use-the-maintenance-plan-wizard.md)」を参照してください。  
   
 ##  <a name="RelatedContent"></a> 関連コンテンツ  
  [なし] :  
   
-## <a name="see-also"></a>関連項目  
- [トランザクション ログ &#40;SQL Server&#41;](../logs/the-transaction-log-sql-server.md)   
+## <a name="see-also"></a>参照  
+ [トランザクションログ &#40;SQL Server&#41;](../logs/the-transaction-log-sql-server.md)   
  [SQL Server データベースのバックアップと復元](back-up-and-restore-of-sql-server-databases.md)   
  [ログ末尾のバックアップ &#40;SQL Server&#41;](tail-log-backups-sql-server.md)   
  [トランザクション ログ バックアップの適用 &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)  

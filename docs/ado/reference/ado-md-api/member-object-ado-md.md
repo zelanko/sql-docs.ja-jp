@@ -1,5 +1,5 @@
 ---
-title: メンバー オブジェクト (ADO MD) |Microsoft Docs
+title: Member オブジェクト (ADO MD) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,84 +16,84 @@ ms.assetid: 3dedf755-0741-4c3f-8b4e-bff8ff8809c8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 44d6b5f06bffb1cea786ba34d3d2aa8a3efb45ee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67949494"
 ---
 # <a name="member-object-ado-md"></a>Member オブジェクト (ADO MD)
-キューブでは、レベルのメンバー、レベルのメンバーまたはセル セットの軸に沿った位置のメンバーの子を表します。  
+キューブ内のレベルのメンバー、レベルのメンバーの子、またはセルセットの軸に沿った位置のメンバーを表します。  
   
-## <a name="remarks"></a>コメント  
- プロパティを**メンバー**が使用されているコンテキストによって異なります。 A**メンバー**の[レベル](../../../ado/reference/ado-md-api/level-object-ado-md.md)で、 [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)が、[子](../../../ado/reference/ado-md-api/children-property-ado-md.md)プロパティを返す、**メンバー**で現在の階層内の次の下位レベル**メンバー**します。 **メンバー**の[位置](../../../ado/reference/ado-md-api/position-object-ado-md.md)、**子**コレクションが空では常にします。 また、[型](../../../ado/reference/ado-md-api/type-property-ado-md.md)プロパティにのみ適用されます**メンバー**の**レベル**します。  
+## <a name="remarks"></a>解説  
+ メンバーのプロパティは、**メンバー**が使用されているコンテキストによって異なります。 [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)の[レベル](../../../ado/reference/ado-md-api/level-object-ado-md.md)の**メンバー**には、現在の**メンバー**から階層内の次の下位レベルにある**メンバー**を返す[Children](../../../ado/reference/ado-md-api/children-property-ado-md.md)プロパティがあります。 [位置](../../../ado/reference/ado-md-api/position-object-ado-md.md)の**メンバー**の場合、**子**コレクションは常に空です。 また、 [Type](../../../ado/reference/ado-md-api/type-property-ado-md.md)プロパティは、**レベル**の**メンバー**にのみ適用されます。  
   
- A**メンバー**の**位置**が 2 つのプロパティを表示するときに利用できる、[セルセット](../../../ado/reference/ado-md-api/cellset-object-ado-md.md):[DrilledDown](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md)と[ParentSameAsPrev](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md)します。 これらのプロパティにアクセスする場合、エラーが発生する**メンバー**の**レベル**します。  
+ **Position**の**メンバー**には、[セルセット](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)を表示するときに便利な2つのプロパティがあります。 [Drilleddown](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md)および[parentsameasprev](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md)。 **レベル**の**メンバー**でこれらのプロパティにアクセスすると、エラーが発生します。  
   
- コレクションのプロパティと、**メンバー**のオブジェクトを**レベル**次を行うことができます。  
+ **レベル**の**メンバー**オブジェクトのコレクションとプロパティを使用して、次の操作を実行できます。  
   
--   識別、**メンバー**で、[名前](../../../ado/reference/ado-md-api/name-property-ado-md.md)と[UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)プロパティ。  
+-   [Name](../../../ado/reference/ado-md-api/name-property-ado-md.md)プロパティと[UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)プロパティを使用して**メンバー**を識別します。  
   
--   表示するときに使用する文字列を返す、**メンバー**で、[キャプション](../../../ado/reference/ado-md-api/caption-property-ado-md.md)プロパティ。  
+-   [Caption](../../../ado/reference/ado-md-api/caption-property-ado-md.md)プロパティを使用して**メンバー**を表示するときに使用する文字列を返します。  
   
--   メジャーまたは式を記述する意味のある文字列を返す**メンバー**で、[説明](../../../ado/reference/ado-md-api/description-property-ado-md.md)プロパティ。  
+-   [Description](../../../ado/reference/ado-md-api/description-property-ado-md.md)プロパティを持つメジャーまたは数式**メンバー**を表す意味のある文字列を返します。  
   
--   性質を特定、**メンバー**で、[型](../../../ado/reference/ado-md-api/type-property-ado-md.md)プロパティ。  
+-   [Type](../../../ado/reference/ado-md-api/type-property-ado-md.md)プロパティを使用して**メンバー**の性質を判断します。  
   
--   に関する情報を取得、**レベル**の**メンバー**で、 [LevelDepth](../../../ado/reference/ado-md-api/leveldepth-property-ado-md.md)と[LevelName](../../../ado/reference/ado-md-api/levelname-property-ado-md.md)プロパティ。  
+-   [Leveldepth](../../../ado/reference/ado-md-api/leveldepth-property-ado-md.md)プロパティと[leveldepth](../../../ado/reference/ado-md-api/levelname-property-ado-md.md)プロパティを使用して、**メンバー**の**レベル**に関する情報を取得します。  
   
--   取得関連**メンバー**で、[階層](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)で、[親](../../../ado/reference/ado-md-api/parent-property-ado-md.md)と[子](../../../ado/reference/ado-md-api/children-property-ado-md.md)プロパティ。  
+-   [親](../../../ado/reference/ado-md-api/parent-property-ado-md.md)と[子](../../../ado/reference/ado-md-api/children-property-ado-md.md)のプロパティを使用して、[階層](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)内の関連する**メンバー**を取得します。  
   
--   子の数、**メンバー**で、 [ChildCount](../../../ado/reference/ado-md-api/childcount-property-ado-md.md)プロパティ。  
+-   [Childcount](../../../ado/reference/ado-md-api/childcount-property-ado-md.md)プロパティを使用して**メンバー**の子をカウントします。  
   
--   標準の ADO を使用して[プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)コレクションに関する追加情報を取得、**レベル**オブジェクト。  
+-   標準の ADO[プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)コレクションを使用して、 **Level**オブジェクトに関する追加情報を取得します。  
   
- コレクションのプロパティと、**メンバー**の**位置**に沿って、[軸](../../../ado/reference/ado-md-api/axis-object-ado-md.md)次を行うことができます。  
+ [軸](../../../ado/reference/ado-md-api/axis-object-ado-md.md)に沿った**位置**の**メンバー**のコレクションとプロパティを使用して、次の操作を実行できます。  
   
--   識別、**メンバー**で、[名前](../../../ado/reference/ado-md-api/name-property-ado-md.md)と[UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)プロパティ。  
+-   [Name](../../../ado/reference/ado-md-api/name-property-ado-md.md)プロパティと[UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)プロパティを使用して**メンバー**を識別します。  
   
--   表示するときに使用する文字列を返す、**メンバー**で、[キャプション](../../../ado/reference/ado-md-api/caption-property-ado-md.md)プロパティ。  
+-   [Caption](../../../ado/reference/ado-md-api/caption-property-ado-md.md)プロパティを使用して**メンバー**を表示するときに使用する文字列を返します。  
   
--   メジャーまたは式を記述する意味のある文字列を返す**メンバー**で、[説明](../../../ado/reference/ado-md-api/description-property-ado-md.md)プロパティ。  
+-   [Description](../../../ado/reference/ado-md-api/description-property-ado-md.md)プロパティを持つメジャーまたは数式**メンバー**を表す意味のある文字列を返します。  
   
--   に関する情報を取得、**レベル**の**メンバー**で、 [LevelDepth](../../../ado/reference/ado-md-api/leveldepth-property-ado-md.md)と[LevelName](../../../ado/reference/ado-md-api/levelname-property-ado-md.md)プロパティ。  
+-   [Leveldepth](../../../ado/reference/ado-md-api/leveldepth-property-ado-md.md)プロパティと[leveldepth](../../../ado/reference/ado-md-api/levelname-property-ado-md.md)プロパティを使用して、**メンバー**の**レベル**に関する情報を取得します。  
   
--   子の数、**メンバー**で、 [ChildCount](../../../ado/reference/ado-md-api/childcount-property-ado-md.md)プロパティ。  
+-   [Childcount](../../../ado/reference/ado-md-api/childcount-property-ado-md.md)プロパティを使用して**メンバー**の子をカウントします。  
   
--   使用して、 [DrilledDown](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md)に少なくとも 1 つの子があるかどうかを決定するプロパティ、**軸**直後に続くこの**メンバー**。  
+-   この**メンバー**の直後にある**軸**に少なくとも1つの子があるかどうかを判断するには、 [drilの下](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md)のプロパティを使用します。  
   
--   使用、 [ParentSameAsPrev](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md)プロパティを確認するかどうかこの親**メンバー**その直前の親と同じです**メンバー**します。  
+-   この**メンバー**の親が直前の**メンバー**の親と同じであるかどうかを判断するには、 [parentsameasprev](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md)プロパティを使用します。  
   
--   標準の ADO を使用して[プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)コレクションに関する追加情報を取得、**レベル**オブジェクト。  
+-   標準の ADO[プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)コレクションを使用して、 **Level**オブジェクトに関する追加情報を取得します。  
   
- **プロパティ**コレクションには、プロバイダーが指定したプロパティが含まれています。 次の表は、使用可能な可能性があるプロパティを一覧表示します。 実際のプロパティの一覧は、プロバイダーの実装によって異なる場合があります。 使用可能なプロパティの詳細な一覧については、プロバイダーのドキュメントを参照してください。  
+ **Properties**コレクションには、プロバイダーが提供するプロパティが含まれています。 次の表に、使用可能なプロパティを示します。 実際のプロパティリストは、プロバイダーの実装によって異なる場合があります。 使用できるプロパティの詳細な一覧については、プロバイダーのドキュメントを参照してください。  
   
-|名前|説明|  
+|Name|[説明]|  
 |----------|-----------------|  
 |CatalogName|このキューブが所属するカタログの名前。|  
 |ChildrenCardinality|メンバーが持つ子の数。|  
 |CubeName|キューブの名前。|  
-|説明|メンバーのわかりやすい説明。|  
-|DimensionUniqueName|明確な名前、[ディメンション](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)します。|  
+|[説明]|メンバーのわかりやすい説明。|  
+|DimensionUniqueName|[ディメンション](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)の明確な名前です。|  
 |HierarchyUniqueName|階層の明確な名前。|  
-|LevelNumber|レベルと階層のルート間の距離。|  
-|LevelUniqueName|明確なレベルの名前。|  
+|LevelNumber|階層のレベルとルートとの間の距離。|  
+|LevelUniqueName|レベルの明確な名前。|  
 |MemberCaption|メンバーに関連付けられたラベルまたはキャプション。|  
 |MemberGUID|メンバーの GUID。|  
-|メンバー名|メンバーの名前。|  
+|MemberName|メンバーの名前。|  
 |MemberOrdinal|メンバーの序数。|  
 |MemberType|メンバーの種類。|  
 |MemberUniqueName|メンバーの明確な名前。|  
-|ParentCount|このメンバーが持つ親の数の数。|  
-|ParentLevel|メンバーの親のレベル数。|  
+|ParentCount|このメンバーが持つ親の数。|  
+|ParentLevel|メンバーの親のレベル番号。|  
 |ParentUniqueName|メンバーの親の明確な名前。|  
-|SchemaName|このキューブが所属するスキーマの名前。|  
+|SchemaName|このキューブが所属するスキーマの名前です。|  
   
- このセクションには、次のトピックが含まれています。  
+ ここでは、次のトピックについて説明します。  
   
 -   [プロパティ、メソッド、およびイベント](../../../ado/reference/ado-md-api/member-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [カタログの例 (VB)](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
  [Members コレクション (ADO MD)](../../../ado/reference/ado-md-api/members-collection-ado-md.md)   
  [Properties コレクション (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 98a8476ef317a0ddfa6f7fc27c0c9572ed12817a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770197"
 ---
 # <a name="unpivot-transformation"></a>ピボット解除変換
@@ -29,26 +29,28 @@ ms.locfileid: "62770197"
   
  次の図は、データが Product 列でピボット解除される前のデータセットを示しています。  
   
- ![ピボット解除後のデータセット](../../media/mw-dts-18.gif "ピボット解除後のデータセット")  
+ ![ピボット処理解除後のデータセット](../../media/mw-dts-18.gif "ピボット処理解除後のデータセット")  
   
  次の図は、データが Product 列でピボット解除された後のデータセットを示しています。  
   
- ![ピボット解除前のデータセット](../../media/mw-dts-17.gif "ピボット解除前のデータセット")  
+ ![ピボット処理解除前のデータセット](../../media/mw-dts-17.gif "ピボット処理解除前のデータセット")  
   
  状況によっては、ピボット解除された結果には予期しない値を持つ行が含まれる場合があります。 たとえば、図に示したサンプル データのピボット解除では、Fred のすべての Qty 列が NULL 値である場合、出力に含まれる Fred の行は 5 つではなく 1 つだけです。 Qty 列には、列データ型に応じて、NULL または 0 のいずれかが含まれます。  
   
 ## <a name="configuration-of-the-unpivot-transformation"></a>ピボット解除変換の構成  
- ピボット解除変換には、`PivotKeyValue` カスタム プロパティがあります。 このプロパティは、パッケージの読み込み時にプロパティ式で更新できます。 詳細については、「[Integration Services &#40;SSIS&#41; の式](../../expressions/integration-services-ssis-expressions.md)」、「[パッケージでプロパティ式を使用する](../../expressions/use-property-expressions-in-packages.md)」、および「[変換のカスタム プロパティ](transformation-custom-properties.md)」を参照してください。  
+ ピボット解除変換には、`PivotKeyValue` カスタム プロパティがあります。 このプロパティは、パッケージの読み込み時にプロパティ式で更新できます。 詳しくは、「[Integration Services &#40;SSIS&#41; の式](../../expressions/integration-services-ssis-expressions.md)」、「[パッケージでプロパティ式を使用する](../../expressions/use-property-expressions-in-packages.md)」、および「[変換のカスタム プロパティ](transformation-custom-properties.md)」をご覧ください。  
   
  この変換は 1 つの入力と 1 つの出力をとります。 エラー出力はありません。  
   
  プロパティを設定するには [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
- **[ピボット解除変換エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
+ 
+  **[ピボット解除変換エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
 -   [[ピボット解除変換エディター]](../../unpivot-transformation-editor.md)  
   
- **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
+ 
+  **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
 -   [共通プロパティ](../../common-properties.md)  
   

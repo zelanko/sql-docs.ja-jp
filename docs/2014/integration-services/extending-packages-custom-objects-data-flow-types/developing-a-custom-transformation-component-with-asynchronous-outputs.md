@@ -24,10 +24,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5bb52fc5c8a3789cc945a2ea850d0849335917e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62896633"
 ---
 # <a name="developing-a-custom-transformation-component-with-asynchronous-outputs"></a>非同期出力型のカスタム変換コンポーネントの開発
@@ -37,14 +37,15 @@ ms.locfileid: "62896633"
   
  上流コンポーネントの列が同期出力型コンポーネントで使用可能な場合、自動的に、その下流にあるコンポーネントでも使用可能となります。 したがって、同期出力型コンポーネントでは、出力列を定義しなくても次のコンポーネントに行や列を渡すことができます。 これに対し、非同期出力型コンポーネントでは、下流コンポーネントに行を渡すために出力列を定義する必要があります。 したがって、非同期出力型コンポーネントの方が、デザイン時や実行時に必要な処理が多いため、開発者はより多くのコードを実装する必要があります。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には非同期出力型の変換がいくつか組み込まれています。 たとえば並べ替え変換では、並べ替えを行う前に行がすべて必要であるため、非同期出力を使用して変換を実行しています。 行をすべて受け取ったら並べ替えを実行し、出力に行を追加します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]には、非同期出力型の変換がいくつか含まれています。 たとえば並べ替え変換では、並べ替えを行う前に行がすべて必要であるため、非同期出力を使用して変換を実行しています。 行をすべて受け取ったら並べ替えを実行し、出力に行を追加します。  
   
  ここでは、非同期出力型の変換を開発する方法の詳細について説明します。 変換元コンポーネントの開発の詳細については、「[カスタム変換元コンポーネントの開発](../extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md)」を参照してください。  
   
 ## <a name="design-time"></a>デザイン時  
   
 ### <a name="creating-the-component"></a>コンポーネントの作成  
- <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.SynchronousInputID%2A> オブジェクトの <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100> プロパティは、同期出力か非同期出力かの区別を示します。 非同期出力を作成するには、コンポーネントに出力を追加し、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.SynchronousInputID%2A> プロパティを 0 に設定します。 また、このプロパティを設定することにより、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer> オブジェクトをコンポーネントの入出力の両方に割り当てるか、単一のバッファーを割り当てて 2 つのオブジェクトで共有するかをデータ フロー タスクが判断します。  
+ 
+  <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.SynchronousInputID%2A> オブジェクトの <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100> プロパティは、同期出力か非同期出力かの区別を示します。 非同期出力を作成するには、コンポーネントに出力を追加し、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.SynchronousInputID%2A> プロパティを 0 に設定します。 また、このプロパティを設定することにより、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer> オブジェクトをコンポーネントの入出力の両方に割り当てるか、単一のバッファーを割り当てて 2 つのオブジェクトで共有するかをデータ フロー タスクが判断します。  
   
  次のサンプル コードは、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProvideComponentProperties%2A> を実装し、非同期出力を作成するコンポーネントを示します。  
   
@@ -147,7 +148,8 @@ End Sub
 ### <a name="understanding-the-buffers"></a>バッファーについて  
  コンポーネントが入力バッファーを受け取るのは、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> メソッドの実行中です。 このバッファーには、上流コンポーネントによってバッファーに追加された行が格納されます。 また、このバッファーには、上流コンポーネントの出力に存在しながら、非同期型コンポーネントの入力コレクションに含まれていない列を含め、コンポーネントの入力の列が格納されます。  
   
- <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PrimeOutput%2A> メソッドからコンポーネントに提供される出力バッファーには、最初は行が格納されていません。 コンポーネントは行をこのバッファーに追加し、バッファーがいっぱいになった時点で下流コンポーネントに渡します。 出力バッファーには、他の下流コンポーネントが出力に追加したすべての列を含め、出力列コレクションで定義されている列が格納されます。  
+ 
+  <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PrimeOutput%2A> メソッドからコンポーネントに提供される出力バッファーには、最初は行が格納されていません。 コンポーネントは行をこのバッファーに追加し、バッファーがいっぱいになった時点で下流コンポーネントに渡します。 出力バッファーには、他の下流コンポーネントが出力に追加したすべての列を含め、出力列コレクションで定義されている列が格納されます。  
   
  この動作は、単一のバッファーを共有する同期出力型コンポーネントの動作とは異なります。 同期出力型コンポーネントの共有バッファーには、上流コンポーネントと下流コンポーネントの出力に追加された列を含め、コンポーネントの入力列および出力列の両方が格納されます。  
   
@@ -161,9 +163,11 @@ End Sub
 #### <a name="adding-output-rows"></a>出力行の追加  
  出力バッファーへの行の追加は、出力バッファーで <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.AddRow%2A> メソッドを呼び出すことによって行います。これは、行を受け取るたびに出力バッファーに追加する場合でも、すべての行を受け取ってから追加する場合でも同じです。 行を追加したら、新しい行の各列に値を設定します。  
   
- 出力バッファーには、コンポーネントの出力列コレクションにはない列が含まれる場合があるため、値を設定するには、バッファーの該当する列のインデックスを探す必要があります。 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSBufferManager100.FindColumnByLineageID%2A> プロパティの <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferManager%2A> メソッドは、バッファー行のうち、指定された系列 ID を持つ列のインデックスを返します。これを使用して、バッファー列に値を割り当てます。  
+ 出力バッファーには、コンポーネントの出力列コレクションにはない列が含まれる場合があるため、値を設定するには、バッファーの該当する列のインデックスを探す必要があります。 
+  <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSBufferManager100.FindColumnByLineageID%2A> プロパティの <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferManager%2A> メソッドは、バッファー行のうち、指定された系列 ID を持つ列のインデックスを返します。これを使用して、バッファー列に値を割り当てます。  
   
- <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PreExecute%2A> メソッドは、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PrimeOutput%2A> メソッドまたは <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> メソッドの前に呼び出されますが、ここで初めて <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferManager%2A> プロパティが使用可能になり、初めて入力バッファーおよび出力バッファーの各列のインデックスを探すことができるようになります。  
+ 
+  <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PreExecute%2A> メソッドは、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PrimeOutput%2A> メソッドまたは <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> メソッドの前に呼び出されますが、ここで初めて <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferManager%2A> プロパティが使用可能になり、初めて入力バッファーおよび出力バッファーの各列のインデックスを探すことができるようになります。  
   
 ## <a name="sample"></a>サンプル  
  次の例は、行を受け取るたびに出力バッファーに行を追加する、非同期出力型の簡単な変換コンポーネントを示しています。 ただし、この例ではここで説明したメソッドや機能のすべてが使われているわけではありません。 カスタムの非同期出力型変換コンポーネントでオーバーライドしなければならない重要なメソッドは示していますが、デザイン時の検証のためのコードは含まれていません。 また、<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> メソッド内のコードは、入力列コレクションの各列に対応して、出力列コレクションに 1 つずつ出力列があるものと想定しています。  
@@ -318,7 +322,7 @@ Namespace Microsoft.Samples.SqlServer.Dts
 End Namespace  
 ```  
   
-![Integration Services のアイコン (小)](../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。**<br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
+![Integration Services アイコン (小)](../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services に関するページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
 ## <a name="see-also"></a>参照  
  [同期出力型のカスタム変換コンポーネントの開発](../extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md)   

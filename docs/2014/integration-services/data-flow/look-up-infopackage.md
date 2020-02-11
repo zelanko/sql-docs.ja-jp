@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 27063b71c307d1114f74977b81eac19130e70708
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62901779"
 ---
 # <a name="look-up-infopackage"></a>[インフォパッケージの参照]
@@ -56,16 +56,16 @@ ms.locfileid: "62901779"
  **インフォパッケージ**  
  SAP Netweaver BW システムで定義された InfoPackage の名前を表示します。  
   
- **型**  
+ **Type**  
  インフォパッケージの種類を表示します。 次の表に、種類として使用できる値の一覧を示します。  
   
-|値|説明|  
+|値|[説明]|  
 |-----------|-----------------|  
 |Trans.|トランザクション データ。|  
 |Attr.|属性データ。|  
 |テキスト|テキスト。|  
   
- **[説明]**  
+ **説明**  
  インフォパッケージの説明を表示します。  
   
  **インフォソース**  

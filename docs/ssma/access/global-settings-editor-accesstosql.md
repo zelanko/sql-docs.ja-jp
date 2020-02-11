@@ -1,5 +1,5 @@
 ---
-title: グローバル設定 (エディター) (AccessToSQL) |Microsoft Docs
+title: グローバル設定 (エディター) (Sql server による) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,20 +10,20 @@ ms.assetid: 5a0abfda-912a-4dfc-acf7-0e0a6cae15c5
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: d2c57efc70353d3499096a2faceb55ce21037411
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67986403"
 ---
-# <a name="global-settings-editor-accesstosql"></a>グローバル設定 (エディター) (AccessToSQL)
-エディター ページを使用して、**グローバル設定** ダイアログ ボックスのコード エディター ウィンドウの設定を指定します。  
+# <a name="global-settings-editor-accesstosql"></a>グローバル設定 (エディター) (Sql server による)
+[**グローバル設定**] ダイアログボックスの [エディター] ページを使用すると、コードエディターウィンドウの設定を指定できます。  
   
-エディターの設定にアクセスする、**ツール**メニューの [**グローバル設定**、] をクリックして**GUI**選択し、左側のウィンドウの下部にある**エディター**.  
+エディターの設定にアクセスするには、[**ツール**] メニューの [**グローバル設定**] を選択し、左側のウィンドウの下部にある [ **GUI** ] をクリックして、[**エディター**] を選択します。  
   
-## <a name="options"></a>および  
-**エディターで行番号を表示します。**  
-コード エディターのウィンドウで行番号を表示する  **True**します。  
+## <a name="options"></a>オプション  
+**エディターでの行番号の表示**  
+コードエディターウィンドウで行番号を表示するには、[ **True**] を選択します。  
   
-この設定を変更すると、コード エディター ウィンドウが選択した場合は、表示を更新する現在のオブジェクトを再度選択する必要があります。  
+この設定を変更したときにコードエディターウィンドウが選択されている場合は、現在のオブジェクトを再選択して表示を更新する必要がある場合があります。  
   

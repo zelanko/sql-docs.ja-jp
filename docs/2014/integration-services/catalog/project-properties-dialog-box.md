@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b27a3cc8a768f60a5e2d430fe04ca514aafe1f37
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771656"
 ---
 # <a name="project-properties-dialog-box"></a>[プロジェクトのプロパティ] ダイアログ ボックス
@@ -53,10 +53,10 @@ ms.locfileid: "62771656"
  **名前**  
  プロジェクト名を一覧表示します。  
   
- **[Identifier]**  
+ **識別子**  
  プロジェクト ID を一覧表示します。  
   
- **[説明]**  
+ **説明**  
  プロジェクトの説明を表示します (省略可)。  
   
  **プロジェクトのバージョン**  
@@ -74,7 +74,7 @@ ms.locfileid: "62771656"
  **名前**  
  ユーザーまたはロールの名前を一覧表示します。  
   
- **型**  
+ **Type**  
  ユーザーまたはロールの種類を一覧表示します。  
   
  **権限**  

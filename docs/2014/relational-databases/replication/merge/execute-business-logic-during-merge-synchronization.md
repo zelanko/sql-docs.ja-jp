@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 440419f1fb4670ff5bdfc2e49cd9cfe6fa5df65e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62999563"
 ---
 # <a name="execute-business-logic-during-merge-synchronization"></a>マージ同期中のビジネス ロジックの実行
@@ -59,7 +59,7 @@ ms.locfileid: "62999563"
      これは、特定のデータの値または操作をオーバーライドする必要があるアプリケーションに役立ちます。 たとえば、アプリケーションでは、行の削除を、その行の **status** 列を "削除" の値に設定するという特殊な更新方法に変更して、その削除を実行するクライアントの ID を追跡することができます。 これは、監査やワークフローにも役立ちます。  
   
 ### <a name="custom-conflict-resolution"></a>カスタム競合解決  
- マージ レプリケーションには、競合の検出機能と解決機能が用意されており、既定の解決方法を受け入れるか、競合に対するカスタム解決方法を選択することができます。 詳しくは、「 [Advanced Merge Replication Conflict Detection and Resolution](advanced-merge-replication-conflict-detection-and-resolution.md)を使用して、マージ アーティクル競合回避モジュールを指定する方法について説明します。 ビジネス ロジック ハンドラーは、競合しているデータの変更処理中に呼び出すことができ、次の 2 つの操作のいずれかを実行できます。  
+ マージ レプリケーションには、競合の検出機能と解決機能が用意されており、既定の解決方法を受け入れるか、競合に対するカスタム解決方法を選択することができます。 詳細については、「[高度なマージレプリケーションの競合の検出と解決](advanced-merge-replication-conflict-detection-and-resolution.md)」を参照してください。 ビジネス ロジック ハンドラーは、競合しているデータの変更処理中に呼び出すことができ、次の 2 つの操作のいずれかを実行できます。  
   
 -   既定の解決の受け入れ  
   
@@ -90,9 +90,9 @@ ms.locfileid: "62999563"
 -   インターネット インフォメーション サービス (IIS) サーバー (Web 同期を使用する場合)。 Web 同期を使用して同期されたプル サブスクリプションを使用します。ビジネス ロジック ハンドラーが IIS サーバーで実行されます。  
   
 ## <a name="see-also"></a>参照  
- [マージ レプリケーション](merge-replication.md)   
- [Subscribe to Publications](../subscribe-to-publications.md)   
+ [マージレプリケーション](merge-replication.md)   
+ [パブリケーションをサブスクライブする](../subscribe-to-publications.md)   
  [データの同期](../synchronize-data.md)   
- [Web Synchronization for Merge Replication](../web-synchronization-for-merge-replication.md)  
+ [マージ レプリケーションの Web 同期](../web-synchronization-for-merge-replication.md)  
   
   

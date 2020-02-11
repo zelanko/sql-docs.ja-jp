@@ -1,5 +1,5 @@
 ---
-title: sp_MShasdbaccess (TRANSACT-SQL) |Microsoft Docs
+title: sp_MShasdbaccess (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,16 @@ ms.assetid: a9a23b90-2c60-4460-80a7-d7e14cc5a6a8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 69651cedfa45df20d3a16966dbb8cd5574436bd8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67995511"
 ---
-# <a name="spmshasdbaccess-transact-sql"></a>sp_MShasdbaccess (TRANSACT-SQL)
+# <a name="sp_mshasdbaccess-transact-sql"></a>sp_MShasdbaccess (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  ユーザーがアクセスを持ってするすべてのデータベースの所有者と名前を一覧表示します。  
+  ユーザーがアクセスできるすべてのデータベースの名前と所有者を一覧表示します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,9 +42,9 @@ sp_MShasdbaccess
  0 (成功) または 1 (失敗)  
   
 ## <a name="permissions"></a>アクセス許可  
- 実行する権限が与えられて、**パブリック**ロール。  
+ 実行権限は、 **public**ロールに与えられています。  
   
-## <a name="see-also"></a>関連項目  
- [sys.sysdatabases &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysdatabases-transact-sql.md)  
+## <a name="see-also"></a>参照  
+ [sysdatabases &#40;Transact-sql&#41;](../../relational-databases/system-compatibility-views/sys-sysdatabases-transact-sql.md)  
   
   

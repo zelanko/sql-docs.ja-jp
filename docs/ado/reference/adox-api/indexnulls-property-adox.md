@@ -20,23 +20,23 @@ ms.assetid: 313b0bf7-3f37-4823-8fca-bd9c80e078a7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 25a319d81fb3ecde22691f5197e93acb38a5e04a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966004"
 ---
 # <a name="indexnulls-property-adox"></a>IndexNulls プロパティ (ADOX)
-インデックスのエントリをインデックス フィールドに null 値を持つレコードがあるかどうかを示します。  
+インデックスフィールドに null 値を持つレコードのインデックスエントリがあるかどうかを示します。  
   
 ## <a name="settings-and-return-values"></a>設定と戻り値  
- 設定し、返します、 [AllowNullsEnum](../../../ado/reference/adox-api/allownullsenum.md)値。 既定値は**adIndexNullsDisallow**します。  
+ [Allownullsenum](../../../ado/reference/adox-api/allownullsenum.md)値を設定して返します。 既定値は**Adindexnullsdisallow**です。  
   
-## <a name="remarks"></a>コメント  
- このプロパティは読み取り専用で[インデックス](../../../ado/reference/adox-api/index-object-adox.md)オブジェクトが既にコレクションに追加します。  
+## <a name="remarks"></a>解説  
+ このプロパティは、既にコレクションに追加されている[インデックス](../../../ado/reference/adox-api/index-object-adox.md)オブジェクトでは読み取り専用です。  
   
 ## <a name="applies-to"></a>適用対象  
  [Index オブジェクト (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [IndexNulls プロパティの例 (VB)](../../../ado/reference/adox-api/indexnulls-property-example-vb.md)
