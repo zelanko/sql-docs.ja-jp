@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9f00eb93492ca150278800c4bbdfa3565550fdef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721944"
 ---
 # <a name="replication-system-stored-procedures-concepts"></a>Replication System Stored Procedures Concepts
@@ -48,7 +48,7 @@ ms.locfileid: "62721944"
   
 -   レプリケーション ウィザードのスクリプト生成機能を使用する。または  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]。 詳しくは、「 [Scripting Replication](../scripting-replication.md)」をご覧ください。  
+-   [https://login.microsoftonline.com/consumers/]([!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]) 詳しくは、「 [Scripting Replication](../scripting-replication.md)」をご覧ください。  
   
 -   レプリケーション管理オブジェクト (RMO) を使用し、RMO オブジェクトを作成するためのスクリプトをプログラムから生成する。  
   
@@ -127,9 +127,9 @@ GO
  作成したレプリケーション スクリプトは、次のいずれかの方法で実行できます。  
   
 ### <a name="creating-a-sql-query-file-in-sql-server-management-studio"></a>SQL Server Management Studio を使った SQL クエリ ファイルの作成  
- レプリケーション [!INCLUDE[tsql](../../../includes/tsql-md.md)] スクリプト ファイルは、[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] プロジェクトで SQL クエリ ファイルとして作成できます。 スクリプトを作成した後、このクエリ ファイルが格納されたデータベースに接続することによってスクリプトを実行できます。 作成する方法についての詳細は[!INCLUDE[tsql](../../../includes/tsql-md.md)]スクリプトを使用して[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]を参照してください[クエリおよびテキスト エディター &#40;SQL Server Management Studio&#41;](../../scripting/query-and-text-editors-sql-server-management-studio.md))。  
+ レプリケーション [!INCLUDE[tsql](../../../includes/tsql-md.md)] スクリプト ファイルは、[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] プロジェクトで SQL クエリ ファイルとして作成できます。 スクリプトを作成した後、このクエリ ファイルが格納されたデータベースに接続することによってスクリプトを実行できます。 を使用[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]してスクリプトを作成[!INCLUDE[tsql](../../../includes/tsql-md.md)]する方法の詳細については、「[クエリエディターとテキストエディター &#40;SQL Server Management Studio&#41;](../../scripting/query-and-text-editors-sql-server-management-studio.md))」を参照してください。  
   
- スクリプト変数を含むスクリプトを使用するには、[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] を **sqlcmd** モードで実行する必要があります。 **sqlcmd** モードでは、変数の値として使用される `:setvar` などの **sqlcmd** に固有の追加の構文を Query Editor で使用できます。 **sqlcmd** モードの詳細については、「[クエリ エディターによる SQLCMD スクリプトの編集](../../scripting/edit-sqlcmd-scripts-with-query-editor.md)」を参照してください。 次のスクリプトでは、`$(DistPubServer)` 変数の値の指定に `:setvar` を使用しています。  
+ スクリプト変数を含むスクリプトを使用するには、[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] を **sqlcmd** モードで実行する必要があります。 **sqlcmd** モードでは、変数の値として使用される **などの**sqlcmd`:setvar` に固有の追加の構文を Query Editor で使用できます。 **sqlcmd** モードの詳細については、「[クエリ エディターによる SQLCMD スクリプトの編集](../../scripting/edit-sqlcmd-scripts-with-query-editor.md)」を参照してください。 次のスクリプトでは、`:setvar` 変数の値の指定に `$(DistPubServer)` を使用しています。  
   
 ```  
 :setvar DistPubServer N'MyPublisherAndDistributor';  
@@ -153,13 +153,13 @@ SET @publisher = $(DistPubServer);
 ```  
   
 ### <a name="using-the-sqlcmd-utility-from-the-command-line"></a>コマンド ラインからの sqlcmd ユーティリティの使用  
- 次の例に、[sqlcmd ユーティリティ](../../../tools/sqlcmd-utility.md)を使用してコマンド ラインから `instdistpub.sql` スクリプト ファイルを実行する方法を示します。  
+ 次の例に、`instdistpub.sql`sqlcmd ユーティリティ[を使用してコマンド ラインから ](../../../tools/sqlcmd-utility.md) スクリプト ファイルを実行する方法を示します。  
   
 ```  
 sqlcmd.exe -E -S sqlserverinstance -i C:\instdistpub.sql -o C:\output.log -v DistPubServer="N'MyDistributorAndPublisher'"  
 ```  
   
- この例の `-E` スイッチは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] との接続に Windows 認証を使用することを指定しています。 Windows 認証を使用した場合、ユーザー名やパスワードをスクリプト ファイルに格納する必要はありません。 スクリプト ファイルの名前とパスは `-i` スイッチで指定し、出力ファイルの名前は `-o` スイッチで指定します (このスイッチを使用した場合、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] からの出力はコンソールでなくこのファイルに書き込まれます)。 `sqlcmd` ユーティリティの `-v` スイッチを使用すると、実行時にスクリプト変数を [!INCLUDE[tsql](../../../includes/tsql-md.md)] スクリプトに渡すことができます。 この例では、`sqlcmd` によって、スクリプト中に出現するすべての `$(DistPubServer)` のインスタンスが、実行前に `N'MyDistributorAndPublisher'` という値に置き換えられます。  
+ この例の `-E` スイッチは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] との接続に Windows 認証を使用することを指定しています。 Windows 認証を使用した場合、ユーザー名やパスワードをスクリプト ファイルに格納する必要はありません。 スクリプト ファイルの名前とパスは `-i` スイッチで指定し、出力ファイルの名前は `-o` スイッチで指定します (このスイッチを使用した場合、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] からの出力はコンソールでなくこのファイルに書き込まれます)。 `sqlcmd` ユーティリティの [!INCLUDE[tsql](../../../includes/tsql-md.md)] スイッチを使用すると、実行時にスクリプト変数を `-v` スクリプトに渡すことができます。 この例では、`sqlcmd` によって、スクリプト中に出現するすべての `$(DistPubServer)` のインスタンスが、実行前に `N'MyDistributorAndPublisher'` という値に置き換えられます。  
   
 > [!NOTE]  
 >  `-X` スイッチを指定すると、スクリプト変数が無効化されます。  
@@ -222,7 +222,7 @@ REM -- The following must be supplied on one line.
   
 -   プル サブスクリプションを同期する。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [レプリケーションのプログラミング概念](replication-programming-concepts.md)   
  [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql)   
  [レプリケーションのスクリプト作成](../scripting-replication.md)  
