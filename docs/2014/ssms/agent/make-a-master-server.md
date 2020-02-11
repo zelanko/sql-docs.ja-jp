@@ -22,22 +22,22 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ca0e79c617db6cc2906ac9225efd92e156699951
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68189133"
 ---
-# <a name="make-a-master-server"></a>マスター サーバーの作成
+# <a name="make-a-master-server"></a>Make a Master Server
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用してマスター サーバー [!INCLUDE[tsql](../../includes/tsql-md.md)]を作成する方法について説明します。  
   
  **このトピックの内容**  
   
 -   **作業を開始する準備:**  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
--   **マスター サーバーを作成するために使用するもの:**  
+-   **マスターサーバーを作成するために使用するもの:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -48,7 +48,7 @@ ms.locfileid: "68189133"
 ###  <a name="Security"></a> セキュリティ  
  プロキシに関連付けられているステップがある分散ジョブは、ターゲット サーバーのプロキシ アカウントのコンテキストで実行されます。 次の条件を満たしていることを確認してください。満たしていないと、プロキシに関連付けられているジョブ ステップがマスター サーバーから対象サーバーにダウンロードされません。  
   
--   マスター サーバー レジストリのサブキー **\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<*instance_name*> \SQL Server Agent\AllowDownloadedJobsToMatchProxyName** (REG_DWORD) が 1 (true) に設定します。 既定では、この値は 0 (false) に設定されます。  
+-   マスターサーバーレジストリサブキー **\ HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server\\<*instance_name*> \ SQL server Agent\AllowDownloadedJobsToMatchProxyName** (REG_DWORD) が 1 (true) に設定されています。 既定では、この値は 0 (false) に設定されます。  
   
 -   ジョブ ステップを実行するマスター サーバー プロキシ アカウントと同じ名前を持つターゲット サーバーにプロキシ アカウントが存在すること。  
   
@@ -71,25 +71,30 @@ ms.locfileid: "68189133"
   
 1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続し、そのインスタンスを展開します。  
   
-2.  **[SQL Server エージェント]** を右クリックし、 **[マルチサーバーの管理]** をポイントして、 **[マスター サーバーに設定]** をクリックします。 **マスター サーバー ウィザード** を使用してマスター サーバーを作成し、対象サーバーを追加します。  
+2.  
+  **[SQL Server エージェント]** を右クリックし、 **[マルチサーバーの管理]** をポイントして、 **[マスター サーバーに設定]** をクリックします。 
+  **マスター サーバー ウィザード** を使用してマスター サーバーを作成し、ターゲット サーバーを追加します。  
   
-3.  **[マスター サーバー オペレーター]** ページで、マスター サーバーのオペレーターを設定します。電子メールまたはポケットベルを使用してオペレーターに通知を送信するには、電子メールが送信されるように [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを設定しておく必要があります。 **net send**を使用してオペレーターに通知を送信するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントが置かれているサーバーで Messenger サービスが実行されている必要があります。  
+3.  
+  **[マスター サーバー オペレーター]** ページで、マスター サーバーのオペレーターを設定します。電子メールまたはポケットベルを使用してオペレーターに通知を送信するには、電子メールが送信されるように [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを設定しておく必要があります。 
+  **net send**を使用してオペレーターに通知を送信するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントが置かれているサーバーで Messenger サービスが実行されている必要があります。  
   
-     **[電子メール アドレス]**  
+     **電子メールアドレス**  
      オペレーターの電子メール アドレスを設定します。  
   
-     **[ポケットベル アドレス]**  
+     **ポケットベルアドレス**  
      オペレーターのポケットベル メール アドレスを設定します。  
   
-     **[Net Send アドレス]**  
+     **Net send アドレス**  
      オペレーターの **net send** アドレスを設定します。  
   
-4.  **[対象サーバー]** ページで、マスター サーバーの対象サーバーを選択します。  
+4.  
+  **[ターゲット サーバー]** ページで、マスター サーバーのターゲット サーバーを選択します。  
   
-     **[登録済みサーバー]**  
+     **登録済みサーバー**  
      Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] に登録されているサーバーで、まだターゲット サーバーになっていないものを一覧表示します。  
   
-     **[対象サーバー]**  
+     **対象サーバー**  
      ターゲット サーバーであるサーバーを一覧表示します。  
   
      **>**  
@@ -104,15 +109,16 @@ ms.locfileid: "68189133"
      **<<**  
      すべてのサーバーをターゲット サーバーの一覧から削除します。  
   
-     **[接続の追加]**  
+     **接続の追加**  
      サーバーを登録せずにターゲット サーバーの一覧に追加します。  
   
-     **[接続]**  
+     **接続**  
      選択したサーバーの接続プロパティを変更します。  
   
-5.  **[マスター サーバー ログインの資格情報]** ページで、必要に応じて対象サーバーの新しいログインを作成してマスター サーバーへの権利を割り当てるかどうかを指定します。  
+5.  
+  **[マスター サーバー ログインの資格情報]** ページで、必要に応じてターゲット サーバーの新しいログインを作成してマスター サーバーへの権利を割り当てるかどうかを指定します。  
   
-     **[必要に応じて新しいログインを作成し、MSX へのアクセス権を割り当てる]**  
+     **必要に応じて新しいログインを作成し、MSX へのアクセス権を割り当てる**  
      指定されたログインが存在しない場合に、新しいログインをターゲット サーバーに作成します。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
@@ -134,7 +140,7 @@ EXEC dbo.sp_msx_enlist N'AdventureWorks1',
 GO;  
 ```  
   
- 詳細については、次を参照してください。 [sp_msx_enlist &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql)します。  
+ 詳細については、「 [sp_msx_enlist &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [マルチサーバー環境の作成](create-a-multiserver-environment.md)   
