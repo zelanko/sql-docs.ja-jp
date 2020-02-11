@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 97fa6d01fc4a06825814c8494268ecb668f1da7d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108112"
 ---
 # <a name="pass-a-report-parameter-within-a-url"></a>URL 内でレポート パラメーターを渡す
@@ -69,13 +69,15 @@ parameter
   
 ```  
   
- 例を次に示します。  
+ たとえば、次のように入力します。  
   
 ```  
 SalesOrderNumber:isnull=true  
 ```  
   
- `Boolean` 値を渡す場合、False には 0 を、True には 1 を使用します。 `Float` 値を渡すには、サーバー ロケールに応じた小数点の記号を指定します。  
+ 
+  `Boolean` 値を渡す場合、False には 0 を、True には 1 を使用します。 
+  `Float` 値を渡すには、サーバー ロケールに応じた小数点の記号を指定します。  
   
 > [!NOTE]  
 >  既定値を持つレポート パラメーターがレポートに含まれており、`Prompt` プロパティの値が `false` である場合 (つまりレポート マネージャーで Prompt User プロパティが選択されていない場合)、URL 内でそのレポート パラメーターに値を渡すことはできません。 管理者はこの方法を使用して、エンド ユーザーが特定のレポート パラメーターの値を追加したり変更したりすることを禁止できます。  
@@ -105,8 +107,8 @@ https://myserver/Reportserver?/SQL+Server+User+Education+Team/_ContentTeams/fold
 http://myserver/ReportServer/Pages/ReportViewer.aspx?%2fProduct_and_Sales_Report_AdventureWorks&SellStartDate=7/1/2005  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [URL アクセス &#40;SSRS&#41;](url-access-ssrs.md)   
+## <a name="see-also"></a>参照  
+ [URL アクセス (SSRS)](url-access-ssrs.md)   
  [URL アクセス パラメーター リファレンス](url-access-parameter-reference.md)  
   
   

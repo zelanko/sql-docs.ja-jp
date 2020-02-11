@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f1258594b9f80dcbae84a3df8f711eb594108cb1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62468179"
 ---
 # <a name="streaming-support-for-blob-output-parameters"></a>BLOB 出力パラメーターのストリーミング サポート
@@ -508,6 +508,6 @@ _Exit:
 ```  
   
 ## <a name="see-also"></a>参照  
- [Blob と OLE オブジェクト](blobs-and-ole-objects.md)  
+ [BLOB と OLE オブジェクト](blobs-and-ole-objects.md)  
   
   

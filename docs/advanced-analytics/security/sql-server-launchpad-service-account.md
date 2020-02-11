@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 1f05181e1a3069ec56f079751e43bd739424ce92
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727363"
 ---
 # <a name="sql-server-launchpad-service-configuration"></a>SQL Server Launchpad のサービスの構成
@@ -63,10 +63,10 @@ SQL Server サービスの実行に必要なアクセス許可の詳細につい
 
 次の表に、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の詳細設定と、許容される値を示します。
 
-|**設定名**|**型**|**[説明]**|
+|**設定名**|**Type**|**説明**|
 |----|----|----|
-|JOB\_CLEANUP\_ON\_EXIT|Integer |これは内部用の設定です。この値は変更しないでください。 </br></br>外部ランタイム セッションごとに作成された一時作業フォルダーを、セッションの完了後にクリーンアップするかどうかを指定します。 この設定はデバッグに便利です。 </br></br>サポートされる値は、**0** (無効) または **1** (有効) です。 </br></br>既定値は 1 です。これは、終了時にログ ファイルが削除されることを意味します。|
-|TRACE\_LEVEL|Integer |デバッグのために MSSQLLAUNCHPAD のトレースの詳細レベルを設定します。 これは、LOG_DIRECTORY 設定によって指定されたパスのトレース ファイルに影響します。 </br></br>サポートされている値は次のとおりです。**1** (エラー)、**2** (パフォーマンス)、**3** (警告)、**4** (情報)。 </br></br>既定値は 1 で、エラーのみの出力を意味します。|
+|JOB\_CLEANUP\_ON\_EXIT|整数 |これは内部用の設定です。この値は変更しないでください。 </br></br>外部ランタイム セッションごとに作成された一時作業フォルダーを、セッションの完了後にクリーンアップするかどうかを指定します。 この設定はデバッグに便利です。 </br></br>サポートされる値は、**0** (無効) または **1** (有効) です。 </br></br>既定値は 1 です。これは、終了時にログ ファイルが削除されることを意味します。|
+|TRACE\_LEVEL|整数 |デバッグのために MSSQLLAUNCHPAD のトレースの詳細レベルを設定します。 これは、LOG_DIRECTORY 設定によって指定されたパスのトレース ファイルに影響します。 </br></br>サポートされる値は次のとおりです。**1** (エラー)、**2** (パフォーマンス)、**3** (警告)、**4** (情報)。 </br></br>既定値は 1 で、エラーのみの出力を意味します。|
 
 すべての設定が、キーと値のペアの形をとり、各設定は個別の行に表示されます。 たとえば、トレース レベルを変更するには、`Default: TRACE_LEVEL=4` と記載した行を追加します。
 
@@ -80,7 +80,7 @@ SQL Server サービスの実行に必要なアクセス許可の詳細につい
 
 パスワードを定期的にリセットするには、このフラグを手動で設定するか、スクリプトを使用します。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 + [機能拡張フレームワーク](../concepts/extensibility-framework.md)
 + [セキュリティの概要](../concepts/security.md)

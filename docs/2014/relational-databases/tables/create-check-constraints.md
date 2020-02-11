@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a27b4bf288d6b1e436ba43fc9c1002d03cd9eaf4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62736202"
 ---
 # <a name="create-check-constraints"></a>CHECK 制約の作成
@@ -30,7 +30,7 @@ ms.locfileid: "62736202"
   
 -   **作業を開始する準備:**  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **新しい CHECK 制約を作成する方法:**  
   
@@ -74,7 +74,7 @@ ms.locfileid: "62736202"
   
 6.  **テーブル デザイナー** のカテゴリでは、制約が適用されるタイミングを設定できます。  
   
-    |**目的:**|**[はい] を選択するフィールド:**|  
+    |**To:**|**[はい] を選択するフィールド:**|  
     |-------------|---------------------------------------------|  
     |制約を作成する前に既に存在していたデータで制約をテストする|**[作成または有効化するときに既存データを確認]**|  
     |このテーブルでレプリケーション操作が発生するたびに制約を適用する|**[レプリケーションに対して適用]**|  

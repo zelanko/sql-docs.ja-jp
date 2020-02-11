@@ -1,5 +1,5 @@
 ---
-title: SQL Server からプロシージャが格納されている拡張を削除する |Microsoft Docs
+title: SQL Server | から拡張ストアドプロシージャを削除するMicrosoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,26 +16,26 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: bcb58ac180861641803147d1dfea621bd52df9a6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62512027"
 ---
 # <a name="removing-an-extended-stored-procedure-from-sql-server"></a>SQL Server からの拡張ストアド プロシージャの削除
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 代わりに CLR Integration を使用してください。  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]代わりに CLR 統合を使用してください。  
   
- ユーザー定義拡張ストアド プロシージャ DLL では、各拡張ストアド プロシージャ関数を削除するには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]システム管理者が実行する必要があります、 **sp_dropextendedproc**システム ストアド プロシージャの名前を指定します関数とその関数が存在する DLL の名前。 たとえば、このコマンドは、関数を削除します**xp_hello**から xp_hello.dll という名前の DLL に配置されている、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:。  
+ ユーザー定義の拡張ストアドプロシージャ DLL 内の各拡張ストアドプロシージャ関数を削除するに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、システム管理者が**sp_dropextendedproc**システムストアドプロシージャを実行して、関数の名前とその関数が存在する DLL の名前を指定する必要があります。 たとえば、次のコマンドは、xp_hello という DLL にある関数**xp_hello**をから[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]削除します。  
   
 ```  
 sp_dropextendedproc 'xp_hello'  
 ```  
   
- 以降で[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]、 **sp_dropextendedproc**システム拡張ストアド プロシージャを削除できません。 代わりに、システム管理者がする拡張ストアド プロシージャに対する EXECUTE 権限を拒否する必要があります、**パブリック**ロール。  
+ 以降で[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]は、 **sp_dropextendedproc**システムの拡張ストアドプロシージャは削除されません。 代わりに、システム管理者は、拡張ストアドプロシージャに対する EXECUTE 権限を**public**ロールに対して拒否する必要があります。  
   
 ## <a name="see-also"></a>参照  
- [sp_dropextendedproc &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropextendedproc-transact-sql)  
+ [sp_dropextendedproc &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-dropextendedproc-transact-sql)  
   
   

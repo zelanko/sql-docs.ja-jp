@@ -19,18 +19,21 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: c48db11ae347d1fb1c2a393e440aebb0c80def54
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62912136"
 ---
 # <a name="sqlservice-class"></a>SqlService クラス
+  
   [SqlService クラス](sqlservice-class.md) は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスのインスタンスを表します。  
   
- [SqlService クラス](sqlservice-class.md) は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスをプログラムによって管理するために使用されます。 [SqlService クラス](sqlservice-class.md) オブジェクトを使用すると、次のタスクを実行することができます。  
+ 
+  [SqlService クラス](sqlservice-class.md) は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスをプログラムによって管理するために使用されます。 
+  [SqlService クラス](sqlservice-class.md) オブジェクトを使用すると、次のタスクを実行することができます。  
   
--   サービスへの接続  
+-   サービスに接続します。  
   
 -   サービスへの接続に使用するアカウントとパスワードの変更  
   
@@ -39,6 +42,6 @@ ms.locfileid: "62912136"
 -   サービスのプロパティのチェック  
   
 ## <a name="see-also"></a>参照  
- [開始とサービスの停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [サービスの開始および停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

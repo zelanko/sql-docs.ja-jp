@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0553b1cbbd75196fa8534cf6bf64c58c1dad206b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770908"
 ---
 # <a name="recordset-destination"></a>レコードセット変換先
@@ -38,7 +38,7 @@ ms.locfileid: "62770908"
   
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [共通プロパティ](../common-properties.md)  
+-   [Common Properties](../common-properties.md)  
   
 -   [レコードセット変換先のカスタム プロパティ](recordset-destination-custom-properties.md)  
   

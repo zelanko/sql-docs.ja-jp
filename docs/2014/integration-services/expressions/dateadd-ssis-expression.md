@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3c744d3f28bc27373f3dc9798ba591848d4b720e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62769349"
 ---
 # <a name="dateadd-ssis-expression"></a>DATEADD (SSIS 式)
@@ -44,7 +44,7 @@ DATEADD(datepart, number, date)
 ## <a name="result-types"></a>戻り値の型  
  DT_DBTIMESTAMP  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  次の表に、式エバリュエーターで認識される日付要素 (datepart) と省略形を示します。 日付要素の名前では大文字と小文字が区別されません。  
   
 |datepart|省略形|  
@@ -55,10 +55,10 @@ DATEADD(datepart, number, date)
 |Dayofyear|dy、y|  
 |日|dd、d|  
 |Week|wk、ww|  
-|Weekday|dw、w|  
-|Hour|Hh|  
-|Minute|mi、n|  
-|第 2 週|ss、s|  
+|平日|dw、w|  
+|時|Hh|  
+|分|mi、n|  
+|秒|ss、s|  
 |Millisecond|Ms|  
   
  式が解析される際、 *number* 引数が使用できる必要があります。 引数には定数または変数を指定できます。 式が解析される際に既知の値が提供されないため、列の値を使用することはできません。  

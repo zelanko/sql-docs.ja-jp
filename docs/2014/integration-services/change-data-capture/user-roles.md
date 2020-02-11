@@ -1,5 +1,5 @@
 ---
-title: ユーザー ロールの変更データ キャプチャ Service for Oracle by Attunity |Microsoft Docs
+title: Change Data Capture Service for Oracle のユーザーロール (添付 Unity |)Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e11eea40558a8e44232eed22f08d9a60bcd7742b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771088"
 ---
 # <a name="user-roles-for-change-data-capture-service-for-oracle-by-attunity"></a>Change Data Capture Service for Oracle by Attunity のユーザー ロール
@@ -23,7 +23,7 @@ ms.locfileid: "62771088"
 ## <a name="windows-user-roles"></a>Windows ユーザー ロール  
  ここでは、Oracle CDC Service によって使用される Windows ユーザー ロールについて説明します。  
   
-### <a name="computer-administrator-oracle-cdc-service"></a>コンピューター管理者:Oracle CDC Service  
+### <a name="computer-administrator-oracle-cdc-service"></a>コンピューターの管理者: Oracle CDC Service  
  コンピューターの管理者は、コンピューターでの CDC Service の作成とメンテナンスを担当する Windows ユーザーです。 このユーザーは、ローカル コンピューターの Administrators グループに属している必要があります。  
   
  Oracle CDC Service のコンピューターの管理者が実行するタスクには次のものがあります。  
@@ -52,7 +52,7 @@ ms.locfileid: "62771088"
   
 -   CDC Service for Oracle がインストールされているコンピューターで管理者として承認されたコンピューターの管理者の業務遂行。 この人物は、CDC Service for Oracle をインストールし、CDC Service 構成コンソールを使用して CDC Service for Oracle をローカル コンピューターで構成します。  
   
-### <a name="service-account-oracle-cdc-service"></a>サービス アカウント:Oracle CDC Service  
+### <a name="service-account-oracle-cdc-service"></a>サービス アカウント: Oracle CDC Service  
  これは Oracle CDC Service Windows サービス アカウントで、Oracle CDC Service を実行するために使用する Windows アカウント (サービス アカウント) です。  
   
  サービス アカウントに必要な特権は、Oracle クライアントと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC プロバイダーを使用するための特権だけです。 このアカウントは、特定のプロバイダーで必要な場合を除いて、ファイルにアクセスする必要はありません (たとえば、 **tnsnames.ora** ファイルで Oracle クライアントの接続文字列が Oracle データベース インスタンスを参照している場合、サービス アカウントにはそのファイルへの読み取りアクセス権が必要です)。  

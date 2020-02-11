@@ -26,10 +26,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fd16879f512bf1529bec8dab6679880cd0a6b8dd
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243328"
 ---
 # <a name="query-and-text-editors-sql-server-management-studio"></a>クエリおよびテキスト エディター (SQL Server Management Studio)
@@ -65,10 +65,10 @@ ms.locfileid: "75243328"
 ## <a name="code-editor-components"></a>コード エディターのコンポーネント  
  コード エディターには、テキスト エディターや XML エディターに共通の機能に加えて、次の機能があります。  
   
- **生じ**  
+ **結果**  
  このウィンドウは、クエリの結果を表示するために使用します。 このウィンドウには、グリッド形式またはテキスト形式で結果が表示されます。結果をファイルに出力することもできます。 結果グリッドは、独立したタブ付きウィンドウとして表示できます。  
   
- **Tab**  
+ **IntelliSense**  
  エディターで **[編集]** メニューの **[IntelliSense]** をポイントすると、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense のオプションが表示されます。  
   
  **色分け**  
@@ -80,7 +80,7 @@ ms.locfileid: "75243328"
  **テンプレート**  
  テンプレートは、データベース内にオブジェクトを作成するのに必要なステートメントの基本構造が含まれたファイルです。 スクリプトの作成を迅速化するのに使用できます。  
   
- **送信**  
+ **メッセージ**  
  スクリプトの実行時にサーバーから返されるエラー、警告、および情報メッセージが表示されます。 メッセージの一覧は、スクリプトが再び実行されるまで変更されません。  
   
  **ステータス バー**  
@@ -104,7 +104,7 @@ ms.locfileid: "75243328"
   **[クエリ]** メニューの **[クライアント統計を含める]** をクリックすると、 **[クライアント統計]** ウィンドウがクエリ実行中に表示されます。 複数のクエリを連続して実行した場合、統計には平均値も表示されます。 
   **[クエリ]** メニューの **[クライアント統計のリセット]** をクリックすると、平均がリセットされます。  
   
- **コード スニペット**  
+ **コードスニペット**  
  データベース エンジン クエリ エディターでステートメントを追加する際のひな形として使用します。 SQL Server に付属の定義済みのスニペットを挿入できるほか、独自のスニペットを追加することもできます。  
   
  **SQLCMD モード**  
@@ -115,7 +115,7 @@ ms.locfileid: "75243328"
 |タスクの説明|トピック|  
 |----------------------|-----------|  
 |
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターの基本的な機能を表示し、使用する方法について説明します。|[データベースエンジンクエリエディター &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)|  
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターの基本的な機能を表示し、使用する方法について説明します。|[データベース エンジン クエリ エディター &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)|  
 |MDX クエリ エディターの基本的な機能を表示し、使用する方法について説明します。|[MDX クエリエディター &#40;Analysis Services-多次元データ&#41;](../../analysis-services/mdx-query-editor-analysis-services-multidimensional-data.md)|  
 |DMX クエリ エディターの基本的な機能を表示し、使用する方法について説明します。|[DMX クエリエディター &#40;Analysis Services-データマイニング&#41;](../../analysis-services/dmx-query-editor-analysis-services-data-mining.md)|  
 |XML/A エディターの基本的な機能を表示し、使用する方法について説明します。|[XML エディター &#40;SQL Server Management Studio&#41;](xml-editor-sql-server-management-studio.md)|  
@@ -124,10 +124,10 @@ ms.locfileid: "75243328"
   [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]でエディターを開くための、さまざまな方法について説明します。|[エディター &#40;SQL Server Management Studio を開き&#41;](open-an-editor-sql-server-management-studio.md)|  
 |右端での折り返し、ウィンドウの分割、タブなど、各種表示モードを管理する方法について説明します。|[エディターと表示モードの管理](manage-the-editor-and-view-mode.md)|  
 |テキストの非表示やインデントなど、書式設定オプションの設定方法について説明します。|[コードの書式設定の管理](manage-code-formatting.md)|  
-|インクリメンタル検索やジャンプなどの機能を使用して、エディター ウィンドウ内でテキストを検索する方法について説明します。|[コードとテキストの移動](navigate-code-and-text.md)|  
+|インクリメンタル検索やジャンプなどの機能を使用して、エディター ウィンドウ内でテキストを検索する方法について説明します。|[コード内とテキスト内の移動](navigate-code-and-text.md)|  
 |さまざまな構文の分類に対して色分けオプションを設定し、複雑なステートメントを見やすく表示する方法について説明します。|[クエリ エディターでのコードの色分け](color-coding-in-query-editors.md)|  
 |現在作業していない複雑なスクリプトを、コードのアウトライン表示機能を使用して部分的に非表示する方法について説明します。|[コードのアウトライン表示](code-outlining.md)|  
-|スクリプト内でドラッグ アンド ドロップによってテキストを移動する方法について説明します。|[テキストのドラッグアンドドロップ](drag-and-drop-text.md)|  
+|スクリプト内でドラッグ アンド ドロップによってテキストを移動する方法について説明します。|[テキストのドラッグ アンド ドロップ](drag-and-drop-text.md)|  
 |列名を変更する場合などに、検索と置換をグローバルに実行する方法について説明します。|[検索と置換](search-and-replace.md)|  
 |コードの重要箇所を見つけやすいようにブックマークを設定する方法について説明します。|[ブックマークの管理](../native-client-ole-db-rowsets/bookmarks.md)|  
 |スクリプトまたはその結果をウィンドウまたはグリッドから印刷する方法について説明します。|[コードと結果の印刷](print-code-and-results.md)|  
@@ -135,11 +135,11 @@ ms.locfileid: "75243328"
   [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターで sqlcmd の機能を使用する方法について説明します。|[クエリ エディターによる SQLCMD スクリプトの編集](edit-sqlcmd-scripts-with-query-editor.md)|  
 |オブジェクト名の入力時にオート コンプリート機能を利用したり、有効な位置へと確実にブレークポイントを設定したりできるなど、IntelliSense が備えている機能の使用方法について説明します。|[IntelliSense &#40;SQL Server Management Studio&#41;](intellisense-sql-server-management-studio.md)|  
 |
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターでのコード スニペットの使用方法について説明します。 スニペットは、使用頻度の高いステートメントまたはブロックのテンプレートです。特定用途のスニペットを追加して拡張したりカスタマイズしたりすることができます。|[Transact-sql コードスニペット](transact-sql-code-snippets.md)|  
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターでのコード スニペットの使用方法について説明します。 スニペットは、使用頻度の高いステートメントまたはブロックのテンプレートです。特定用途のスニペットを追加して拡張したりカスタマイズしたりすることができます。|[Transact-SQL コード スニペット](transact-sql-code-snippets.md)|  
 |
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーを使用してコードをステップ実行したり、デバッグ情報 (変数やパラメーターの値など) を表示したりする方法について説明します。|[Transact-sql デバッガー](transact-sql-debugger.md)|  
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーを使用してコードをステップ実行したり、デバッグ情報 (変数やパラメーターの値など) を表示したりする方法について説明します。|[Transact-SQL デバッガー](transact-sql-debugger.md)|  
 |
   [!INCLUDE[ssDE](../../includes/ssde-md.md)]の各インスタンスに対して独自の色を設定したり、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のクエリ エディターのウィンドウのステータス バーの背景としてそれらの色を設定する方法について説明します。|[ステータスバー &#40;データベースエンジンクエリエディター&#41;](status-bar-database-engine-query-editor.md)|  
   
 ## <a name="see-also"></a>参照  
- [SQL Server Management Studio のキーボードショートカット](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  
+ [SQL Server Management Studio のキーボード ショートカット](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 979a0e0a1e8a05b676d4de7ccda0c5876943d587
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62830583"
 ---
 # <a name="loop-through-excel-files-and-tables-by-using-a-foreach-loop-container"></a>Foreach ループ コンテナーを使用して Excel のファイルおよびテーブルをループ処理する
@@ -32,13 +32,16 @@ ms.locfileid: "62830583"
   
      Extended Properties 引数の値を格納している変数を使用しない場合は、接続文字列を含む式に引数の値を手動で追加する必要があります。  
   
-3.  Foreach ループ コンテナーを **[制御フロー]** タブに追加します。Foreach ループ コンテナーの構成方法については、「 [Foreach ループ コンテナーを構成する](foreach-loop-container.md)」を参照してください。  
+3.  [**制御フロー** ] タブに Foreach ループコンテナーを追加します。Foreach ループコンテナーの構成方法については、「 [Foreach ループコンテナーを構成](foreach-loop-container.md)する」を参照してください。  
   
-4.  **[Foreach ループ エディター]** の **[コレクション]** ページで [Foreach File 列挙子] を選択し、Excel ブックが存在するフォルダーを指定して、ファイル フィルター (通常は *.xls) を指定します。  
+4.  
+  **[Foreach ループ エディター]** の **[コレクション]** ページで [Foreach File 列挙子] を選択し、Excel ブックが存在するフォルダーを指定して、ファイル フィルター (通常は *.xls) を指定します。  
   
-5.  **[変数のマッピング]** ページで、ループの反復ごとに現在の Excel のパスとファイル名を受け取るユーザー定義文字列変数に、インデックス 0 をマップします。 (この手順の後半で示すサンプル式では、 `ExcelFile`という変数名を使用します)。  
+5.  
+  **[変数のマッピング]** ページで、ループの反復ごとに現在の Excel のパスとファイル名を受け取るユーザー定義文字列変数に、インデックス 0 をマップします。 (この手順の後半で示すサンプル式では、 `ExcelFile`という変数名を使用します)。  
   
-6.  **[Foreach ループ エディター]** を閉じます。  
+6.  
+  **[Foreach ループ エディター]** を閉じます。  
   
 7.  「 [パッケージの接続マネージャーを追加、削除、または共有する](../add-delete-or-share-a-connection-manager-in-a-package.md)」(パッケージでの接続マネージャーの追加、削除、または共有) の説明に従って、Excel 接続マネージャーをパッケージに追加します。 接続時に検証エラーが発生しないように、既存の Excel ブック ファイルを選択してください。  
   
@@ -49,7 +52,7 @@ ms.locfileid: "62830583"
   
 8.  新しい Excel 接続マネージャーを選択し、[プロパティ] ウィンドウで **[式]** プロパティをクリックして、参照ボタンをクリックします。  
   
-9. **プロパティ式エディター**を選択、`ConnectionString`プロパティ、省略記号ボタンをクリックします。  
+9. [**プロパティ式エディター**] で、 `ConnectionString`プロパティを選択し、省略記号をクリックします。  
   
 10. 式ビルダーで、次の式を入力します。  
   
@@ -69,29 +72,35 @@ ms.locfileid: "62830583"
   
 ### <a name="to-loop-through-excel-tables-by-using-the-foreach-adonet-schema-rowset-enumerator"></a>Foreach ADO.NET Schema Rowset 列挙子を使用して Excel テーブルをループ処理するには  
   
-1.  Microsoft Jet OLE DB Provider を使用して Excel ブックに接続する ADO.NET 接続マネージャーを作成します。 **[接続マネージャー]** ダイアログ ボックスの [すべて] ページで、Extended Properties プロパティの値として「Excel 8.0」と入力します。 詳細については、「 [パッケージの接続マネージャーを追加、削除、または共有する](../add-delete-or-share-a-connection-manager-in-a-package.md)」を参照してください。  
+1.  Microsoft Jet OLE DB Provider を使用して Excel ブックに接続する ADO.NET 接続マネージャーを作成します。 
+  **[接続マネージャー]** ダイアログ ボックスの [すべて] ページで、Extended Properties プロパティの値として「Excel 8.0」と入力します。 詳細については、「 [パッケージでの接続マネージャーの追加、削除、または共有](../add-delete-or-share-a-connection-manager-in-a-package.md)」 を参照してください。  
   
 2.  ループの反復ごとに現在のテーブルの名前を受け取る文字列変数を作成します。  
   
-3.  Foreach ループ コンテナーを **[制御フロー]** タブに追加します。Foreach ループ コンテナーの構成方法については、「 [Foreach ループ コンテナーを構成する](foreach-loop-container.md)」を参照してください。  
+3.  [**制御フロー** ] タブに Foreach ループコンテナーを追加します。Foreach ループコンテナーの構成方法については、「 [Foreach ループコンテナーを構成](foreach-loop-container.md)する」を参照してください。  
   
-4.  **[Foreach ループ エディター]** の **[コレクション]** ページで、Foreach ADO.NET Schema Rowset 列挙子を選択します。  
+4.  
+  **[Foreach ループ エディター]** の **[コレクション]** ページで、Foreach ADO.NET Schema Rowset 列挙子を選択します。  
   
-5.  **[コレクション]** の値として、以前に作成した ADO.NET 接続マネージャーを選択します。  
+5.  
+  **[コレクション]** の値として、以前に作成した ADO.NET 接続マネージャーを選択します。  
   
-6.  **[スキーマ]** の値として、[テーブル] を選択します。  
+6.  
+  **[スキーマ]** の値として、[テーブル] を選択します。  
   
     > [!NOTE]  
     >  Excel ブック内のテーブルの一覧には、ワークシート ($ サフィックスが付きます) と名前付き範囲が含まれます。 ワークシートのみ、または名前付き範囲のみを一覧からフィルター選択する場合は、そのためのカスタム コードをスクリプト タスクで記述する必要があります。 詳しくは、「 [スクリプト タスクを使用した Excel ファイルの操作](script-task.md)」をご覧ください。  
   
-7.  **[変数のマッピング]** ページで、以前に作成した文字列変数にインデックス 2 をマップし、現在のテーブルの名前を保持します。  
+7.  
+  **[変数のマッピング]** ページで、以前に作成した文字列変数にインデックス 2 をマップし、現在のテーブルの名前を保持します。  
   
-8.  **[Foreach ループ エディター]** を閉じます。  
+8.  
+  **[Foreach ループ エディター]** を閉じます。  
   
 9. Foreach ループ コンテナー内で、Excel 接続マネージャーを使用して、指定したブック内の各 Excel テーブルに対して同じ操作を実行するタスクを作成します。 スクリプト タスクを使用して、列挙されるテーブル名を調べたり各テーブルを操作したりする場合、スクリプト タスクの ReadOnlyVariables プロパティに文字列変数を追加することを忘れないでください。  
   
 ## <a name="see-also"></a>参照  
- [Excel からデータをインポートまたはデータを SQL Server Integration Services (SSIS) での Excel エクスポート](../load-data-to-from-excel-with-ssis.md) [Foreach ループ コンテナーを構成します。](foreach-loop-container.md)   
+ [SQL Server Integration Services (SSIS) を使用した excel からのデータのインポートまたは excel へのデータのエクスポート](../load-data-to-from-excel-with-ssis.md) [Foreach ループコンテナーの構成](foreach-loop-container.md)   
  [プロパティ式を追加または変更する](../expressions/add-or-change-a-property-expression.md)   
  [Excel 接続マネージャー](../connection-manager/excel-connection-manager.md)   
  [Excel ソース](../data-flow/excel-source.md)   

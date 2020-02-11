@@ -22,10 +22,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 87af92866658e2fa5b4f8648e2a22dbf3d1cb13f
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75252509"
 ---
 # <a name="annotated-schema-security-considerations-sqlxml-40"></a>注釈付きスキーマのセキュリティに関する注意点 (SQLXML 4.0)
@@ -36,7 +36,7 @@ ms.locfileid: "75252509"
   
 -   注釈を使用して指定する明示的なマッピングでは、データベース情報 (テーブル名、列名など) が公開されます。 このため、これらのスキーマはだれもがアクセスできる場所に置かないことをお勧めします。  
   
--   再帰を使用したマッピングスキーマに対して指定されたクエリ (**最大深度**注釈が高い値に設定されている) などの特定のクエリは、実行に時間がかかることがあります。 必要に応じて、[コマンドタイムアウト] プロパティを (秒単位で) 設定して、タイムアウトの制限を指定できます。 例:  
+-   再帰を使用したマッピングスキーマに対して指定されたクエリ (**最大深度**注釈が高い値に設定されている) などの特定のクエリは、実行に時間がかかることがあります。 必要に応じて、[コマンドタイムアウト] プロパティを (秒単位で) 設定して、タイムアウトの制限を指定できます。 次に例を示します。  
   
     ```  
     cn.Open "Provider=SQLOLEDB;Server=localhost;Database=tempdb;Integrated Security=SSPI;Command Properties='Command Time Out=50';"  

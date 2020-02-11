@@ -1,5 +1,5 @@
 ---
-title: エラー ログの監視 |Microsoft Docs
+title: エラーログの監視 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -25,10 +25,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5c376340af1674c05ac3a38c88cde202bd35f314
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211173"
 ---
 # <a name="monitoring-the-error-logs"></a>エラー ログの監視
@@ -41,7 +41,7 @@ ms.locfileid: "68211173"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|説明|  
+|トピック|[説明]|  
 |-----------|-----------------|  
 |[SQL Server エラー ログの表示](../../../2014/tools/configuration-manager/viewing-the-sql-server-error-log.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログとその表示方法について説明します。|  
 |[Windows アプリケーション ログの表示](viewing-the-windows-application-log.md)|Windows アプリケーション ログとその表示方法について説明します。|  

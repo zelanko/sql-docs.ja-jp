@@ -1,5 +1,5 @@
 ---
-title: VM 環境でインメモリ OLTP の使用 |Microsoft Docs
+title: VM 環境でのインメモリ OLTP の使用 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e7f7f04b04792167fe9c4733f3e066c362f3cae4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62843065"
 ---
 # <a name="using-in-memory-oltp-in-a-vm-environment"></a>VM 環境でのインメモリ OLTP の使用
   サーバー仮想化に伴い、各企業は IT の資本コストと運用コストを削減し、アプリケーションの準備、メンテナンス、可用性、バックアップと復旧の各プロセスを向上させることにより、IT 効率の大幅な上昇を達成しています。 最近の技術的な進歩により、仮想化を使用して、複雑なデータベース ワークロードを従来より容易に統合することができます。 ここでは、仮想化環境内での [!INCLUDE[hek_1](../includes/hek-1-md.md)] の使用に関して推奨されるベスト プラクティスについて取り扱います。  
   
-##  <a name="bkmk_memoryPreAllocation"></a> メモリの事前割り当て  
+##  <a name="bkmk_memoryPreAllocation"></a>メモリの事前割り当て  
  仮想化環境でのメモリに関して、パフォーマンス向上とサポート拡張は重要な考慮事項です。 仮想マシンの需要 (ピーク負荷とオフピーク負荷) に応じてメモリを迅速に仮想マシンに割り当てる能力が必須であり、メモリが浪費されていないことを確認する必要もあります。 Hyper-V 動的メモリ機能により、1 台のホスト上で実行する複数の仮想マシン間でのメモリ割り当てと管理がより迅速に行われます。  
   
  メモリ最適化テーブルを含むデータベースを仮想化する場合は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の仮想化と管理に関するいくつかのベスト プラクティスを変更する必要があります。 メモリ最適化されたテーブルが存在しない場合、次の 2 つのベスト プラクティスがあります。  

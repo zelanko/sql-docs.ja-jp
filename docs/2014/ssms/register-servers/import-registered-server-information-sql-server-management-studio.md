@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 manager: jroth
 ms.openlocfilehash: 32ef669c238c52ec5e5e20804c896b4364c8bc85
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75241350"
 ---
 # <a name="import-registered-server-information-sql-server-management-studio"></a>登録済みサーバー情報のインポート (SQL Server Management Studio)
@@ -37,24 +37,22 @@ ms.locfileid: "75241350"
   
 2.  サーバー グループを右クリックし、 **[インポート]** をクリックします。  
   
-3.  
-  **[登録済みサーバーのインポート]** ダイアログ ボックスで、インポートする登録済みサーバーのファイルをクリックし、 **[OK]** をクリックします。  
+3.  **[登録済みサーバーのインポート]** ダイアログ ボックスで、インポートする登録済みサーバーのファイルをクリックし、 **[OK]** をクリックします。  
   
-     **ファイルのインポート**  
-     インポート ファイルの名前をテキスト ボックスに入力します。または、参照ボタン (**[...]**) をクリックし、クライアント コンピューター上のインポート ファイルを指定します。 既存のファイルを選択した場合は、登録済みサーバー情報がファイルに追加されます。 あらかじめエクスポートされた登録済みサーバー ファイルだけを、インポート ファイルとして使用できます。 登録済みサーバー ファイルは、拡張子 .regsrvr を持ちます。  
+     **[インポート ファイル]**  
+     インポート ファイルの名前をテキスト ボックスに入力します。または、参照ボタン ( **[...]** ) をクリックし、クライアント コンピューター上のインポート ファイルを指定します。 既存のファイルを選択した場合は、登録済みサーバー情報がファイルに追加されます。 あらかじめエクスポートされた登録済みサーバー ファイルだけを、インポート ファイルとして使用できます。 登録済みサーバー ファイルは、拡張子 .regsrvr を持ちます。  
   
-     **インポート先のサーバーグループを選択します**  
+     **[インポート先のサーバー グループを選択]**  
      ファイル内の登録済みサーバーのエントリのインポート先のルート ノード、または特定のサーバー グループを選択します。 エクスポート ファイルには、すべての登録済みサーバー、特定のサーバー グループ内の登録済みサーバー、または単独の登録済みサーバーをインポートできます。 インポート機能は再帰的です。たとえば、サーバー グループ A にサーバー グループ B が含まれており、サーバー グループ B にサーバー グループ C および D が含まれている場合、サーバー グループ A をインポートすると、A、B、C、および D 内のすべてのエントリがエクスポートされます。  
   
      サーバー グループには、現在の登録済みサーバー ツリーのサーバー グループだけが表示されます。  
   
      既存のサーバー グループまたはサーバーをインポートする場合、既存のサーバーまたはサーバー グループを上書きするかどうかを確認するメッセージが表示されます。  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用するサーバー登録は、パスワードをユーザーごとに格納します。 ユーザーは、サーバー登録をインポートした後、それぞれのサーバーに初めて接続するときにパスワードを入力して、登録済みサーバーの一覧にパスワードを保存する必要があります。 Windows 認証を使用して登録されるサーバーの場合は、この操作は必要ありません。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用するサーバー登録は、パスワードをユーザーごとに格納します。 ユーザーは、サーバー登録をインポートした後、それぞれのサーバーに初めて接続するときにパスワードを入力して、登録済みサーバーの一覧にパスワードを保存する必要があります。 Windows 認証を使用して登録されるサーバーの場合は、この操作は必要ありません。  
   
 ## <a name="see-also"></a>参照  
  [サーバーの登録 &#40;変更 SQL Server Management Studio&#41;](change-a-server-s-registration-sql-server-management-studio.md) [登録済みサーバーの情報のエクスポート &#40;SQL Server Management Studio&#41;](export-registered-server-information-sql-server-management-studio.md)   
- [新しい登録済みサーバー &#40;SQL Server Management Studio を作成&#41;](create-a-new-registered-server-sql-server-management-studio.md)  
+ [新しい登録済みサーバーの作成 &#40;SQL Server Management Studio&#41;](create-a-new-registered-server-sql-server-management-studio.md)  
   
   

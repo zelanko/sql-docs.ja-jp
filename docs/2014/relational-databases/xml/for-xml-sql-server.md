@@ -20,10 +20,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5c7676d046a504a6f230df7a1352e791802ce7b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63288272"
 ---
 # <a name="for-xml-sql-server"></a>FOR XML (SQL Server)
@@ -80,13 +80,15 @@ FROM ServerName.AdventureWorks2012.Person.Person
 FOR XML AUTO  
 ```  
   
- `ServerName` がローカル サーバーの場合、クエリは次の値を返します。  
+ 
+  `ServerName` がローカル サーバーの場合、クエリは次の値を返します。  
   
 ```  
 <AdventureWorks2012.Person.Person LastName="Achong" />  
 ```  
   
- `ServerName` がネットワーク サーバーの場合、クエリは次の値を返します。  
+ 
+  `ServerName` がネットワーク サーバーの場合、クエリは次の値を返します。  
   
 ```  
 <ServerName.AdventureWorks2012.Person.Person LastName="Achong" />  
@@ -106,7 +108,7 @@ FOR XML AUTO
 <x LastName="Achong"/>  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [FOR XML 句の基本構文](basic-syntax-of-the-for-xml-clause.md)   
  [FOR XML での RAW モードの使用](use-raw-mode-with-for-xml.md)   
  [FOR XML での AUTO モードの使用](use-auto-mode-with-for-xml.md)   

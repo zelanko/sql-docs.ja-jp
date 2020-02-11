@@ -16,13 +16,13 @@ ms.assetid: 04f503a1-307c-4de0-bac6-e6e97d5b6940
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 18921fa57cfa203b0d8e5274caeb1e17c385405c
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68771298"
 ---
-# <a name="spchangedistributorproperty-transact-sql"></a>sp_changedistributor_property (Transact-SQL)
+# <a name="sp_changedistributor_property-transact-sql"></a>sp_changedistributor_property (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   ディストリビューターのプロパティを変更します。 このストアドプロシージャは、ディストリビューター側で任意のデータベースに対して実行されます。  
@@ -40,17 +40,17 @@ sp_changedistributor_property [ [ @property= ] 'property' ]
 ## <a name="arguments"></a>引数  
 `[ @property = ] 'property'`特定のディストリビューターのプロパティを指定します。 *プロパティ*は**sysname**で、次のいずれかの値を指定できます。  
   
-|[値]|説明|  
+|値|[説明]|  
 |-----------|-----------------|  
 |**heartbeat_interval**|エージェントが進行状況のメッセージをログに記録せずに実行を継続できる最大時間 (分) です。|  
 |NULL (既定値)|使用可能なすべての*プロパティ*値が出力されます。|  
   
-`[ @value = ] 'value'`指定されたディストリビュータープロパティの値です。 *値*は**varchar (255)** ,、既定値は NULL です。  
+`[ @value = ] 'value'`指定されたディストリビュータープロパティの値です。 *値*は**varchar (255)**,、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  **sp_changedistributor_property**は、すべての種類のレプリケーションで使用されます。  
   
 ## <a name="example"></a>例  
@@ -59,11 +59,11 @@ sp_changedistributor_property [ [ @property= ] 'property' ]
 ## <a name="permissions"></a>アクセス許可  
  **Sp_changedistributor_property**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
-## <a name="see-also"></a>関連項目  
- [View and Modify Distributor and Publisher Properties (ディストリビューターとパブリッシャーのプロパティの表示および変更)](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
- [sp_adddistributor &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)   
- [sp_dropdistributor &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md)   
- [sp_helpdistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
- [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>参照  
+ [ディストリビューターとパブリッシャーのプロパティの表示および変更](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
+ [sp_adddistributor &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)   
+ [sp_dropdistributor &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md)   
+ [sp_helpdistributor &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
+ [レプリケーションストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

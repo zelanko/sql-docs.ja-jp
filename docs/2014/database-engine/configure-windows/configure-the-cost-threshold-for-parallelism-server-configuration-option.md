@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ae87ebd3afa2ee49b55471be4d955cbb4d894ca7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62811605"
 ---
 # <a name="configure-the-cost-threshold-for-parallelism-server-configuration-option"></a>cost threshold for parallelism サーバー構成オプションの構成
@@ -28,9 +28,9 @@ ms.locfileid: "62811605"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [推奨事項](#Recommendations)  
+     [Recommendations (推奨事項)](#Recommendations)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **以下を使用して cost threshold for parallelism オプションを構成するには:**  
   
@@ -79,9 +79,11 @@ FROM sys.dm_os_sys_info
   
 1.  オブジェクト エクスプローラーで、サーバーを右クリックし、 **[プロパティ]** をクリックします。  
   
-2.  **[詳細設定]** ノードをクリックします。  
+2.  
+  **[詳細設定]** ノードをクリックします。  
   
-3.  **[並列処理]** で、 **[CostThresholdForParallelism]** オプションを目的の値に変更します。 0 ～ 32767 の値を、入力または選択します。  
+3.  
+  **[並列処理]** で、 **[CostThresholdForParallelism]** オプションを目的の値に変更します。 0 ～ 32767 の値を、入力または選択します。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
@@ -108,13 +110,13 @@ GO
   
  詳細については、「 [サーバー構成オプション &#40;SQL Server&#41;](server-configuration-options-sql-server.md)」を参照してください。  
   
-##  <a name="FollowUp"></a>補足情報: cost threshold for parallelism オプションを構成した後  
+##  <a name="FollowUp"></a>補足情報: [並列処理のコストしきい値] オプションを構成した後  
  新しい設定は、サーバーを再起動しなくてもすぐに有効になります。  
   
 ## <a name="see-also"></a>参照  
  [並列インデックス操作の構成](../../relational-databases/indexes/configure-parallel-index-operations.md)   
- [クエリ ヒント &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-query)   
- [ALTER WORKLOAD GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-workload-group-transact-sql)   
+ [Transact-sql&#41;&#40;クエリヒント](/sql/t-sql/queries/hints-transact-sql-query)   
+ [ALTER ワークロードグループ &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-workload-group-transact-sql)   
  [affinity mask サーバー構成オプション](affinity-mask-server-configuration-option.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reconfigure-transact-sql)   
  [サーバー構成オプション &#40;SQL Server&#41;](server-configuration-options-sql-server.md)   

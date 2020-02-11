@@ -16,16 +16,16 @@ ms.assetid: db0b7d94-3fa6-488f-96d6-6a9a7d6eda23
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 29e5718debadb4725bc9d9ebcd499c261ed23d54
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67985752"
 ---
 # <a name="aggregate-functions---min"></a>集計関数 - min
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  アトミック値のシーケンスを返します *$arg*値が小さいよりも、他のすべての項目を 1 つ。  
+  アトミック値のシーケンス ( *$arg*) から、その値が他の項目よりも小さい値を持つ1つの項目を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,20 +36,20 @@ fn:min($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
   
 ## <a name="arguments"></a>引数  
  *$arg*  
- 最小値を取得する項目のシーケンス。  
+ 最小値を返す対象となる項目のシーケンス。  
   
-## <a name="remarks"></a>コメント  
- すべての種類に渡されるアトミック値の**min()** 同じ基本型のサブタイプにする必要があります。 受け付けられるベースの型をサポートする型では、 **gt**操作。 これらの型には、次の 3 つの組み込み数値基本データ型、日付/時刻の基本型、xs:string、xs:boolean、および xdt:untypedAtomic が含まれます。 Xdt:untypedAtomic 型の値は、xs:double にキャストされます。 これらの型の混在がある場合、またはその他の種類の他の値が渡された場合は、静的エラーが発生します。  
+## <a name="remarks"></a>解説  
+ **Min ()** に渡されるアトミック値のすべての型は、同じ基本型のサブタイプである必要があります。 許容される基本型は、 **gt**操作をサポートする型です。 これらの型には、3つの組み込み数値基本型、日付/時刻の基本型、xs: string、xs: boolean、および xdt: untypedAtomic が含まれます。 Xdt: untypedAtomic 型の値は、xs: double にキャストされます。 これらの型が混在している場合、または他の型の他の値が渡された場合は、静的エラーが発生します。  
   
- 結果**min()** xdt:untypedAtomic の場合は xs:double など、渡された型の基本型を受け取ります。 入力が静的に空の場合、結果が暗黙的し、静的エラーが返されます。  
+ **Min ()** の結果は、Xdt: untypedAtomic の場合、xs: double など、渡された型の基本型を受け取ります。 入力が静的に空の場合、空のが暗黙的に指定され、静的なエラーが返されます。  
   
- **Min()** 関数は、入力シーケンス内の他のよりも小さいをシーケンスの 1 つの値を返します。 Xs:string 値の場合は、既定の Unicode コード ポイント照合順序が使用されています。 Xdt:untypedAtomic 値は、xs:double にキャストできない場合で、入力シーケンスの値が無視されます。 *$arg*します。 入力が動的に計算された空のシーケンスの場合は、空のシーケンスが返されます。  
+ **Min ()** 関数は、入力シーケンス内の他の値より小さいシーケンス内の1つの値を返します。 Xs: string 値の場合、既定の Unicode コードポイント照合順序が使用されます。 Xdt: untypedAtomic 値を xs: double にキャストできない場合、入力シーケンスの値は無視されます ( *$arg*)。 入力が動的に計算された空のシーケンスである場合は、空のシーケンスが返されます。  
   
-## <a name="examples"></a>使用例  
- このトピックではさまざまなに格納されている XML インスタンスに対して XQuery の例について**xml**型の列には、AdventureWorks データベース。  
+## <a name="examples"></a>例  
+ このトピックでは、AdventureWorks データベースのさまざまな**xml**型の列に格納されている xml インスタンスに対して XQuery の例を示します。  
   
 ### <a name="a-using-the-min-xquery-function-to-find-the-work-center-location-that-has-the-fewest-labor-hours"></a>A. min() XQuery 関数を使用した、労働時間が最も短いワーク センター拠点の検索  
- 次のクエリは、製品モデルの製造プロセス内のすべての作業・ センターの場所を取得 (ProductModelID = 7) 最小限の労働時間があります。 通常、次に示すように 1 つの拠点が返されます。 複数の場所の最小の労働時間数が等しい場合は、それらがすべて返されます。  
+ 次のクエリでは、労働時間が最も少ない製品モデル (ProductModelID = 7) の製造プロセスに含まれるすべてのワークセンターの場所を取得します。 通常、次に示すように 1 つの拠点が返されます。 複数の場所に最低労働時間が同じである場合は、すべてが返されます。  
   
 ```  
 select ProductModelID, Name, Instructions.query('  
@@ -68,11 +68,11 @@ WHERE ProductModelID=7
   
  上のクエリに関して、次の点に注意してください。  
   
--   **名前空間**XQuery プロローグ内のキーワード名前空間プレフィックスを定義します。 このプレフィックスは、XQuery の本文で使用されます。  
+-   XQuery プロローグの**namespace**キーワードは、名前空間プレフィックスを定義します。 このプレフィックスは、XQuery の本文で使用されます。  
   
- XQuery の本文を持つ XML の構築、\<場所 > WCID を持つ要素と**LaborHrs**属性。  
+ XQuery 本文は、WCID 属性と\< **LaborHrs**属性を持つ Location> 要素を持つ XML を構築します。  
   
--   クエリではまた、ProductModelID を取得し、名前の値。  
+-   このクエリでは、ProductModelID と名前の値も取得します。  
   
  結果を次に示します。  
   
@@ -83,17 +83,17 @@ ProductModelID   Name              Result
 ```  
   
 ## <a name="implementation-limitations"></a>実装の制限事項  
- 制限事項を次に示します。  
+ 制限事項は次のとおりです。  
   
--   **Min()** 関数では、すべての整数値を xs:decimal にマップします。  
+-   **Min ()** 関数は、すべての整数を xs: decimal にマップします。  
   
--   **Min()** xs:duration 型の値に対して関数がサポートされていません。  
+-   Xs: duration 型の値に対する**min ()** 関数はサポートされていません。  
   
 -   基本データ型の境界を超えて複数の型が混在するシーケンスはサポートされません。  
   
--   照合順序を指定する構文オプションはサポートされていません。  
+-   照合順序を提供する構文オプションはサポートされていません。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [xml データ型に対する XQuery 関数](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

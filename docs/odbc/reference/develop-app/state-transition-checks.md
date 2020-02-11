@@ -15,11 +15,11 @@ ms.assetid: 0706db7d-e125-4845-a13a-7fe4308f7360
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b337d317092ad6ae20cc91236d69c1314de96bce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68107284"
 ---
 # <a name="state-transition-checks"></a>状態遷移の確認
-ドライバー マネージャーは、環境、接続、またはステートメントの状態が呼び出される関数に適していることを確認します。 などの接続が割り当て済みである必要があります状態**SQLConnect**が呼び出されます。 ステートメントが準備済みである必要があります状態**SQLExecute**が呼び出されます。 ドライバー マネージャーは、状態遷移のエラーの SQL_ERROR を返します。
+ドライバーマネージャーは、環境、接続、またはステートメントの状態が、呼び出される関数に適しているかどうかを確認します。 たとえば、 **SQLConnect**が呼び出されたときに、接続が割り当て済みの状態になっている必要があります。**Sqlexecute**が呼び出されると、ステートメントは準備済みの状態である必要があります。 ドライバーマネージャーは、状態遷移エラーの SQL_ERROR を返します。

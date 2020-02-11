@@ -18,15 +18,15 @@ ms.assetid: 806fafa8-bf89-4ce8-a082-8081dde9fcc3
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: bf88421f5f7d54beab0dcc69ac37858817d43bd1
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73659624"
 ---
 # <a name="cinstance-class---instancename-property"></a>CInstance クラス - InstanceName プロパティ
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クライアントのインスタンスの名前を取得します。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]クライアントの[!INCLUDE[msCoName](../../includes/msconame-md.md)]インスタンスの名前を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,11 +36,13 @@ object.InstanceName [= value]
 ```  
   
 ## <a name="parts"></a>要素  
- *object*  
- [クライアント インスタンスを表す](../../relational-databases/wmi-provider-configuration-classes/cinstance-class.md) CInstance クラス [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクト。  
+ *素材*  
+ 
+  [クライアント インスタンスを表す](../../relational-databases/wmi-provider-configuration-classes/cinstance-class.md) CInstance クラス [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクト。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クライアントのインスタンスの名前を指定する文字列値。  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クライアントのインスタンスの名前を指定する文字列値。  
   
 ## <a name="remarks"></a>解説  
   

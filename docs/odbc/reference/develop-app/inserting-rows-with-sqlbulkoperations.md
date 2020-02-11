@@ -1,5 +1,5 @@
 ---
-title: SQLBulkOperations による行の挿入 |Microsoft Docs
+title: SQLBulkOperations を使用した行の挿入 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,23 +15,23 @@ ms.assetid: ed585ea7-4d56-4df9-8dc3-53ca82382450
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 05b8f71d6f4c885c7dc64887dd92b1f600005ca7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68138923"
 ---
 # <a name="inserting-rows-with-sqlbulkoperations"></a>SQLBulkOperations による行の挿入
-データを挿入する**SQLBulkOperations**でデータを更新するような**SQLBulkOperations**バインドされたアプリケーション バッファーからデータを使用しているためです。  
+**Sqlbulkoperations**を使用したデータの挿入は、バインドされたアプリケーションバッファーのデータを使用するため、 **sqlbulkoperations**でデータを更新することと似ています。  
   
- 新しい行の各列の値を持つ、ように SQL_COLUMN_IGNORE の長さまたはインジケーターの値を持つ列をすべてバインドとバインドされていないすべての列の NULL 値を受け入れるか、既定値がある必要があります。  
+ 新しい行の各列に値が含まれるように、長さ/インジケーターの値が SQL_COLUMN_IGNORE でバインドされているすべての列が NULL 値を受け入れるか、既定値を持つ必要があります。  
   
- 行を挿入する**SQLBulkOperations**アプリケーションは次の処理します。  
+ **Sqlbulkoperations**を使用して行を挿入するために、アプリケーションは次の処理を実行します。  
   
-1.  SQL_ATTR_ROW_ARRAY_SIZE ステートメント属性を挿入する行の数に設定し、新しいデータ値をバインドされたアプリケーションのバッファーに配置します。 長い形式のデータを送信する方法については**SQLBulkOperations**を参照してください[長い形式のデータ、SQLSetPos および SQLBulkOperations](../../../odbc/reference/develop-app/long-data-and-sqlsetpos-and-sqlbulkoperations.md)します。  
+1.  SQL_ATTR_ROW_ARRAY_SIZE ステートメントの属性を、挿入する行の数に設定し、バインドされたアプリケーションバッファーに新しいデータ値を格納します。 **Sqlbulkoperations**で長いデータを送信する方法の詳細については、「 [Long data And SQLSetPos And sqlbulkoperations](../../../odbc/reference/develop-app/long-data-and-sqlsetpos-and-sqlbulkoperations.md)」を参照してください。  
   
-2.  必要に応じて、各列の長さ/インジケーター バッファーの値を設定します。 これは、SQL_NTS またはデータのバイト長のバイナリのバッファーを NULL に設定する列の SQL_NULL_DATA バインドされている列のデータのバイト長の文字列のバッファーにバインドされている列です。 アプリケーションでは、(存在する場合、既定値に設定するのにはそれらの列または SQL_COLUMN_IGNORE を NULL (1 つでない場合) の長さ/インジケーター バッファーの値を設定します。  
+2.  各列の長さ/インジケーターバッファーの値を必要に応じて設定します。 これは、文字列バッファーにバインドされている列のデータまたは SQL_NTS のバイト長、バイナリバッファーにバインドされた列のデータのバイト長、および NULL に設定する列の SQL_NULL_DATA です。 アプリケーションは、既定値に設定される列 (存在する場合) または NULL (存在しない場合) に設定される列の長さ/インジケーターバッファーの値を SQL_COLUMN_IGNORE に設定します。  
   
-3.  呼び出し**SQLBulkOperations**で、*操作*引数 SQL_ADD に設定します。  
+3.  *操作*引数が SQL_ADD に設定された**sqlbulkoperations**を呼び出します。  
   
- 後**SQLBulkOperations**返します、現在の行は変更されません。 ブックマーク列 (列 0) がバインドされている場合**SQLBulkOperations**その列にバインドされている行セットのバッファーに挿入された行のブックマークを返します。
+ **Sqlbulkoperations**が戻ると、現在の行は変更されません。 ブックマーク列 (列 0) がバインドされている場合、 **Sqlbulkoperations**は、その列にバインドされている行セットバッファー内の挿入された行のブックマークを返します。

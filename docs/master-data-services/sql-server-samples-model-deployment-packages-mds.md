@@ -9,27 +9,28 @@ ms.technology: master-data-services
 ms.topic: conceptual
 keywords:
 - マスター データ サービス
-- sample
+- サンプル
 ms.assetid: 9b31b7b6-319b-4840-b67d-eb383e7762b1
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 19b4cc9cc9282fff784059e6ac39bf74792f95a4
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73727879"
 ---
 # <a name="sql-server-examples-model-deployment-packages-mds"></a>SQL Server の例: モデルの配置パッケージ (MDS)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
+  
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]をインストールすると、データの入ったサンプル モデル パッケージが追加されます。 サンプル モデル パッケージの既定の場所は、\<ドライブ>\Program Files\Microsoft SQL Server\130\Master Data Services\Samples\Packages です。  
   
  サンプル モデル パッケージを配置する方法については、「 [サンプル モデルとデータを配置する](../master-data-services/master-data-services-installation-and-configuration.md#deploySample)」を参照してください。 サンプル モデル パッケージは、 [MDSModelDeploy ツール](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)を使用して配置します。  
   
 > [!IMPORTANT]
->  **サンプルの更新: [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]**  
+>  **のサンプル更新プログラム[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]**  
 > 
 >  次の新しい機能をサポートするためにサンプル パッケージが更新されました。  
 > 

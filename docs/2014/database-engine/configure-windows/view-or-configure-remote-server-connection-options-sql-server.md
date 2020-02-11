@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5dfc0aa145f106fc57c25a6249b928ee27ab4b87
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62757202"
 ---
 # <a name="view-or-configure-remote-server-connection-options-sql-server"></a>リモート サーバー接続オプションの表示または構成 (SQL Server)
@@ -28,7 +28,7 @@ ms.locfileid: "62757202"
   
 -   **作業を開始する準備:**  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **リモート サーバー接続オプションを構成する方法:**  
   
@@ -51,7 +51,8 @@ ms.locfileid: "62757202"
   
 1.  オブジェクト エクスプローラーでサーバーを右クリックし、 **[プロパティ]** をクリックします。  
   
-2.  **[サーバーのプロパティ - \<***server_name***>]** ダイアログ ボックスで、 **[接続]** をクリックします。  
+2.  
+  **[サーバーのプロパティ - \<***server_name***>]** ダイアログ ボックスで、**[接続]** をクリックします。  
   
 3.  **[接続]** ページで、 **[リモート サーバー接続]** の設定を確認し、必要に応じて変更します。  
   
@@ -89,7 +90,7 @@ EXEC sp_serveroption 'SEATTLE3', 'collation compatible', 'true';
 ##  <a name="FollowUp"></a>補足情報: リモート サーバー接続オプションを構成した後  
  設定を有効にするには、リモート サーバーを停止し、再起動する必要があります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [サーバー構成オプション &#40;SQL Server&#41;](server-configuration-options-sql-server.md)   
  [リモート サーバー](remote-servers.md)   
  [リンク サーバー &#40;データベース エンジン&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)   

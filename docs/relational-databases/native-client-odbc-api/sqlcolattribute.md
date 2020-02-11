@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4d1d929f2d514b12050c79c8251cd58cfeadb6b6
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73787421"
 ---
 # <a name="sqlcolattribute"></a>SQLColAttribute
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  **Sqlcolattribute**を使用すると、準備済みまたは実行済みの ODBC ステートメントの結果セット列の属性を取得できます。 準備されたステートメントで**Sqlcolattribute**を呼び出すと、ラウンドトリップが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは、ステートメントの実行の一部として結果セットの列データを受け取ります。そのため、 **Sqlexecute**または**SQLExecDirect**の完了後に**sqlcolattribute**を呼び出すと、サーバーのラウンドトリップは行われません。  
+  **Sqlcolattribute**を使用すると、準備済みまたは実行済みの ODBC ステートメントの結果セット列の属性を取得できます。 準備されたステートメントで**Sqlcolattribute**を呼び[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]出すと、との間にラウンドトリップが発生します。 Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client ODBC ドライバーは、ステートメントの実行の一部として結果セットの列データを受け取ります。そのため **、Sqlexecute**または**SQLExecDirect**の完了後に**sqlcolattribute**を呼び出すと、サーバーのラウンドトリップが発生しません。  
   
 > [!NOTE]  
 >  すべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の結果セットで、ODBC 列の ID 属性は使用できません。  
@@ -41,7 +41,7 @@ ms.locfileid: "73787421"
 |SQL_DESC_TABLE_NAME|サーバー カーソルを生成するステートメントから取得した結果セットで使用できます。または、FOR BROWSE 句を含む実行済みの SELECT ステートメントで使用できます。|  
 |SQL_DESC_UNNAMED|結果セット内にあるすべての列に対する SQL_NAMED が返されます。ただしこれは、式の一部にラベル割り当てが含まれておらず、列がこの式の結果ではない場合に限ります。 SQL_DESC_UNNAMED が SQL_UNNAMED を返すときは、すべての ODBC 列の ID 属性には、その列に対して長さゼロの文字列が含まれます。|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、FMTONLY ステートメントを使用して、 **Sqlcolattribute**が prepared ステートメントや unexecuted ステートメントに対して呼び出されるときに、サーバーのオーバーヘッドが軽減されます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC ドライバーは、SET FMTONLY ステートメントを使用して、 **Sqlcolattribute**が prepared ステートメントや unexecuted ステートメントに対して呼び出されるときに、サーバーのオーバーヘッドを軽減します。  
   
  大きな値型の場合、 **Sqlcolattribute**は次の値を返します。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "73787421"
   
  すべてのバージョンで、準備された SQL ステートメントのバッチによって複数の結果セットが生成されるときは、最初の結果セットのみの列属性が報告されます。  
   
- 次の列属性は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーによって公開される拡張機能です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは、 *Numericattrptr*パラメーター内のすべての値を返します。 WORD 配列へのポインターである SQL_CA_SS_COMPUTE_BYLIST を除き、SDWORD 型 (符号付き long 型) として値が返されます。  
+ 次の列属性は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC ドライバーによって公開される拡張機能です。 Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client ODBC ドライバーは、 *numericattrptr*パラメーター内のすべての値を返します。 WORD 配列へのポインターである SQL_CA_SS_COMPUTE_BYLIST を除き、SDWORD 型 (符号付き long 型) として値が返されます。  
   
 |フィールド ID|返される値|  
 |----------------------|--------------------|  
@@ -74,11 +74,11 @@ ms.locfileid: "73787421"
 |SQL_CA_SS_NUM_COMPUTES|現在の Transact-SQL SELECT ステートメントで指定されている COMPUTE 句の数。|  
 |SQL_CA_SS_NUM_ORDERS|ODBC または Transact-SQL SELECT ステートメントの ORDER BY 句で指定されている列の数。|  
   
- ステートメント属性 SQL_SOPT_SS_HIDDEN_COLUMNS が SQL_HC_ON に設定されている場合は、\* 使用できます。  
+ \*ステートメント属性 SQL_SOPT_SS_HIDDEN_COLUMNS が SQL_HC_ON に設定されている場合に使用できます。  
   
- では、XML スキーマコレクション名、スキーマ名、およびカタログ名を示す追加情報を提供するために、ドライバー固有の記述子フィールドが導入されました。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] これらのプロパティでは、英数字以外の文字が含まれる場合でも、引用符やエスケープ文字は必要ありません。 次の表では、追加された新しい記述子フィールドについて説明します。  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]では、XML スキーマコレクション名、スキーマ名、およびカタログ名を示す追加情報を提供するために、ドライバー固有の記述子フィールドが導入されました。 これらのプロパティでは、英数字以外の文字が含まれる場合でも、引用符やエスケープ文字は必要ありません。 次の表では、追加された新しい記述子フィールドについて説明します。  
   
-|列名|[型]|[説明]|  
+|列名|種類|[説明]|  
 |-----------------|----------|-----------------|  
 |SQL_CA_SS_XML_SCHEMACOLLECTION_CATALOG_NAME|CharacterAttributePtr|XML スキーマ コレクション名が定義されているカタログの名前です。 カタログ名が見つからない場合は、この変数に空文字列が含まれます。<br /><br /> この情報は、IRD の SQL_DESC_SS_XML_SCHEMACOLLECTION_CATALOG_NAME レコード フィールドから返されます。このレコード フィールドは読み取りと書き込みが可能なフィールドです。|  
 |SQL_CA_SS_XML_SCHEMACOLLECTION_SCHEMA_NAM E|CharacterAttributePtr|XML スキーマ コレクション名が定義されているスキーマの名前です。 スキーマ名が見つからない場合は、この変数に空文字列が含まれます。<br /><br /> この情報は、IRD の SQL_DESC_SS_XML_SCHEMACOLLECTION_SCHEMA_NAME レコード フィールドから返されます。このレコード フィールドは読み取りと書き込み可能なフィールドです。|  
@@ -86,7 +86,7 @@ ms.locfileid: "73787421"
   
  また、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] では、結果セットのユーザー定義型 (UDT) 列に関する追加情報、またはストアド プロシージャやパラメーター化クエリの UDT パラメーターに関する追加情報を提供するために、ドライバー固有の新しい記述子フィールドが導入されました。 これらのプロパティでは、英数字以外の文字が含まれる場合でも、引用符やエスケープ文字は必要ありません。 次の表では、追加された新しい記述子フィールドについて説明します。  
   
-|列名|[型]|[説明]|  
+|列名|種類|[説明]|  
 |-----------------|----------|-----------------|  
 |SQL_CA_SS_UDT_CATALOG_NAME|CharacterAttributePtr|UDT を含むカタログの名前。|  
 |SQL_CA_SS_UDT_SCHEMA_NAME|CharacterAttributePtr|UDT を含むスキーマの名前。|  
@@ -98,19 +98,19 @@ ms.locfileid: "73787421"
 ## <a name="sqlcolattribute-support-for-enhanced-date-and-time-features"></a>SQLColAttribute による機能強化された日付と時刻のサポート  
  日付型または時刻型に対して返される値については、「[パラメーターと結果のメタデータ](../../relational-databases/native-client-odbc-date-time/metadata-parameter-and-result.md)」の「IRD フィールドで返される情報」セクションを参照してください。  
   
- 詳細については、「[日付と&#40;時刻&#41;の機能強化 ODBC](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)」を参照してください。  
+ 詳細については、「[日付と時刻の機能強化 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)」を参照してください。  
   
 ## <a name="sqlcolattribute-support-for-large-clr-udts"></a>SQLColAttribute による大きな CLR UDT のサポート  
- **Sqlcolattribute**は、大きな CLR ユーザー定義型 (udt) をサポートしています。 詳細については、「 [LARGE CLR ユーザー定義&#40;型&#41;ODBC](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)」を参照してください。  
+ **Sqlcolattribute**は、大きな CLR ユーザー定義型 (udt) をサポートしています。 詳細については、「[大容量の CLR ユーザー定義型 &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)」を参照してください。  
   
 ## <a name="sqlcolattribute-support-for-sparse-columns"></a>SQLColAttribute によるスパース列のサポート  
  SQLColAttribute は、新しい実装行記述子 (IRD) フィールド SQL_CA_SS_IS_COLUMN_SET を照会して、列が**column_set**列かどうかを判断します。  
   
- 詳細については、「[スパース&#40;列&#41;のサポート ODBC](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md)」を参照してください。  
+ 詳細については、「[スパース列のサポート &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [Sqlcolattribute 関数](https://go.microsoft.com/fwlink/?LinkId=59334)   
- [ODBC API 実装の詳細](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
+ [SQLColAttribute 関数](https://go.microsoft.com/fwlink/?LinkId=59334)   
+ [ODBC API の実装の詳細](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
  [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)  
   
   

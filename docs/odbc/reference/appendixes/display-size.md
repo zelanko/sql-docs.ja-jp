@@ -1,5 +1,5 @@
 ---
-title: サイズの表示 |Microsoft Docs
+title: 表示サイズ |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,31 +16,31 @@ ms.assetid: 9f7f766f-2492-463c-aab7-f2476e222042
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 61afd5c9932f58c49e54b4aff8b053d0a25a6e3f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68130017"
 ---
 # <a name="display-size"></a>表示サイズ
-列の表示サイズは、文字形式でデータを表示するために必要な文字の最大数です。 次の表では、各 ODBC SQL データ型の表示サイズを定義します。  
+列の表示サイズは、文字形式でデータを表示するために必要な最大文字数です。 次の表では、各 ODBC SQL データ型の表示サイズを定義します。  
   
-|SQL 型識別子|ディスプレイ サイズ|  
+|SQL 型識別子|表示サイズ|  
 |-------------------------|------------------|  
-|すべての文字の種類 [a]|(固定型) に対して定義されているか (変数の型) の最大文字形式でデータを表示するために必要な文字数。|  
-|SQL_DECIMAL SQL_NUMERIC|列と 2 の有効桁数 (記号、*精度*桁の数字と小数点 10 進数)。 たとえば、NUMERIC(10,3) として定義されている列の表示サイズには 12 です。|  
+|すべての文字型 [a]|定義された (固定型の場合) または最大値 (変数型の場合)。データを文字形式で表示するために必要な文字数。|  
+|SQL_DECIMAL SQL_NUMERIC|列の有効桁数に2を加えた値 (符号、*有効*桁数、および小数点)。 たとえば、NUMERIC (10, 3) として定義されている列の表示サイズは12です。|  
 |SQL_BIT|1 (1 桁)。|  
-|SQL_TINYINT|4 (記号、および 3 桁の数字) が署名されている場合、または 3 (3 桁) が署名されていない場合。|  
-|SQL_SMALLINT|6 (記号、および 5 桁の数字) が署名されている場合、または 5 (5 桁の数字) が署名されていない場合。|  
-|SQL_INTEGER|11 (記号、および 10 桁) に署名されている場合、または 10 (10 進数) が署名されていない場合。|  
-|SQL_BIGINT|20 (符号と 19 桁署名されている場合、または署名されていない場合、20 桁)。|  
-|SQL_REAL|14 (、記号、7 桁の数字、小数点 10 進数文字*E*、記号、および 2 桁の数字)。|  
-|SQL_DOUBLE を使用できます。|24 (、記号、15 桁、小数点 10 進数文字*E*、記号、および 3 桁)。|  
-|[A] すべてのバイナリ型|定義済みまたは (変数の型) の最大の列の長さが 2 を倍です。 (各バイナリ バイトは、2 桁の 16 進数で表される)。|  
-|SQL_TYPE_DATE|10 (形式で日付 *- yyyy-mm-dd*)。|  
-|SQL_TYPE_TIME|8 (形式の時刻*hh:mm:ss*)<br /><br /> または<br /><br /> 9 + *s* (形式の時刻*hh:mm:ss*[.fff...]、場所*s*秒の小数部の有効桁数です)。|  
-|SQL_TYPE_TIMESTAMP|19 (のタイムスタンプを *- yyyy-mm-dd hh:mm:ss*形式)<br /><br /> または<br /><br /> 20 + *s* (のタイムスタンプを *- yyyy-mm-dd hh:mm:ss*[.fff...] 形式、場所*s*秒の小数部の有効桁数です)。|  
-|間隔のすべてのデータ型|参照してください[Interval データ型の長さ](../../../odbc/reference/appendixes/interval-data-type-length.md)します。|  
-|SQL_GUID|36 (文字数、 *aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee*形式|  
+|SQL_TINYINT|符号付きの場合は 4 (符号と3桁)、符号なしの場合は 3 (3 桁)。|  
+|SQL_SMALLINT|符号付きの場合は 6 (符号と5桁)、または符号なし (5 桁) の場合は5です。|  
+|SQL_INTEGER|符号付きの場合は 11 (符号と10桁)、符号なし (10 桁) の場合は10。|  
+|SQL_BIGINT|20 (符号付きの場合は符号、数字の場合は19桁、符号なしの場合は20桁)。|  
+|SQL_REAL|14 (符号、7桁、小数点、文字*E*、符号、および2桁)。|  
+|SQL_FLOAT SQL_DOUBLE|24 (符号、15桁、小数点、文字*E*、符号、3桁)。|  
+|すべてのバイナリ型 [a]|列の定義済みまたは最大値 (変数型の場合) の長さ2。 (各バイナリバイトは2桁の16進数で表されます)。|  
+|SQL_TYPE_DATE|10 ( *yyyy-mm-dd*形式の日付)。|  
+|SQL_TYPE_TIME|8 ( *hh: mm: ss*の形式の時刻)<br /><br /> - または -<br /><br /> 9 + *s* ( *hh: mm: ss*[. fff...] という形式の時刻)。 *s*は秒の小数部の有効桁数です。|  
+|SQL_TYPE_TIMESTAMP|19 ( *yyyy-mm-dd hh: mm: ss*形式のタイムスタンプの場合)<br /><br /> - または -<br /><br /> 20 + *s* ( *yyyy-mm-dd hh: mm: ss*[. fff...] 形式のタイムスタンプの場合、 *s*は秒の小数部の有効桁数)。|  
+|すべての interval データ型|「 [Interval データ型の長さ](../../../odbc/reference/appendixes/interval-data-type-length.md)」を参照してください。|  
+|SQL_GUID|36 ( *aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee*形式の文字数|  
   
- [a] 変数の型の列またはパラメーターの長さを判断できないのは、ドライバー、SQL_NO_TOTAL が返されます。
+ [a] 変数の型の列またはパラメーターの長さをドライバーが判別できない場合、SQL_NO_TOTAL が返されます。

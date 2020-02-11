@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0b4323715155ddb433012624f9d7a5df9bb0a29c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62767664"
 ---
 # <a name="integration-services-ssis-queries"></a>Integration Services (SSIS) のクエリ
@@ -55,9 +55,9 @@ ms.locfileid: "62767664"
  詳細については、「 [クエリ ビルダー](../../2014/integration-services/query-builder.md)」を参照してください。  
   
 ## <a name="sql-in-files"></a>ファイルの SQL  
- SQL 実行タスクの SQL ステートメントを、別のファイルに格納しておくことも可能です。 たとえば、 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]のクエリ エディターのようなツールを使用してクエリを記述し、ファイルに保存して、パッケージを実行するときにファイルからクエリを読み込むことができます。 ファイルには、実行する SQL ステートメントとコメントのみを含めることができます。 ファイルに格納された SQL ステートメントを使用するには、ファイル名とファイルの場所を指定するファイル接続を用意する必要があります。 詳しくは「 [File Connection Manager](connection-manager/file-connection-manager.md)」をご覧ください。  
+ SQL 実行タスクの SQL ステートメントを、別のファイルに格納しておくことも可能です。 たとえば、 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]のクエリ エディターのようなツールを使用してクエリを記述し、ファイルに保存して、パッケージを実行するときにファイルからクエリを読み込むことができます。 ファイルには、実行する SQL ステートメントとコメントのみを含めることができます。 ファイルに格納された SQL ステートメントを使用するには、ファイル名とファイルの場所を指定するファイル接続を用意する必要があります。 詳細については、「 [File Connection Manager](connection-manager/file-connection-manager.md)」を参照してください。  
   
 ## <a name="sql-in-variables"></a>変数の SQL  
- SQL 実行タスクの SQL ステートメントのソースが変数の場合、クエリが格納されている変数の名前を指定します。 変数の Value プロパティにクエリのテキストを格納します。 変数の ValueType プロパティを文字列データ型に設定し、Value プロパティに SQL ステートメントを入力またはコピーします。 詳細については、「[Integration Services &#40;SSIS&#41; の変数](integration-services-ssis-variables.md)」と「[パッケージで変数を使用する](../../2014/integration-services/use-variables-in-packages.md)」をご覧ください。  
+ SQL 実行タスクの SQL ステートメントのソースが変数の場合、クエリが格納されている変数の名前を指定します。 変数の Value プロパティにクエリのテキストを格納します。 変数の ValueType プロパティを文字列データ型に設定し、Value プロパティに SQL ステートメントを入力またはコピーします。 詳細については、「[Integration Services &#40;SSIS&#41; の変数](integration-services-ssis-variables.md)」と「[パッケージで変数を使用する](../../2014/integration-services/use-variables-in-packages.md)」を参照してください。  
   
   

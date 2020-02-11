@@ -1,5 +1,5 @@
 ---
-title: データベース ファイルから別のデバイスにバックアップ ファイルがある必要があります |Microsoft Docs
+title: バックアップファイルは、データベースファイルとは別のデバイスに配置する必要があります。Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 09c54c8229351cf27e0f42c8895f2633b8aa7ccb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62812626"
 ---
 # <a name="backup-files-must-be-on-separate-devices-from-the-database-files"></a>バックアップ ファイルはデータベース ファイルとは別のデバイスに配置する
@@ -29,7 +29,7 @@ ms.locfileid: "62812626"
 >  このポリシーでは、マウント ポイントを介して別個の物理デバイスを検出することはできません。  
   
 ## <a name="for-more-information"></a>詳細情報  
- [バックアップ デバイス &#40;SQL Server&#41;](../relational-databases/backup-restore/backup-devices-sql-server.md)  
+ [バックアップデバイス &#40;SQL Server&#41;](../relational-databases/backup-restore/backup-devices-sql-server.md)  
   
  [SQL Server データベースのバックアップと復元](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)  
   

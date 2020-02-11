@@ -1,5 +1,5 @@
 ---
-title: サブスクリプションの場合、同期の履歴 (マージ サブスクリプション、SQL Server 2005 以降) |Microsoft Docs
+title: サブスクリプション、[同期の履歴] (マージサブスクリプション、SQL Server 2005 以降) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,25 +14,25 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 38bc4d44b988192be76ed613f52793dc2e8daefc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62629713"
 ---
 # <a name="subscription-synchronization-history-merge-subscription-sql-server-2005-and-later"></a>サブスクリプション、[同期の履歴] (マージ サブスクリプション、SQL Server 2005 以降)
   **[同期の履歴]** タブには、マージ エージェントの状態、アーティクル統計、履歴、情報メッセージ、エラー メッセージなど詳細情報が表示されます。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  表示するマージ エージェント セッションを **[表示]** メニューで選択した後、 **[マージ エージェントのセッション]** という名前のグリッドで特定のセッションを選択します。 **[選択されたセッションで処理されるアーティクル]** というラベルの付いたグリッド内に、このセッションの詳細情報が表示されます。  
   
- **[表示]**  
+ **表示**  
  表示するマージ エージェント セッションを選択します。  
   
- **ステータス**  
+ **状態**  
  セッションの最後のマージ エージェントの状態です。 表示される状態の種類を、次に示します。  
   
--   [エラー]  
+-   エラー  
   
 -   [完了]  
   
@@ -58,7 +58,7 @@ ms.locfileid: "62629713"
  **エラー メッセージ**  
  セッションがエラーで終了した場合、このフィールドにはマージ エージェントによってログに記録された最後のエラー メッセージが表示されます。 セッションがエラーで終了しなかった場合は、このフィールドは空白です。  
   
- **[アーティクル]**  
+ **記事**  
  パブリケーション内の各アーティクルの名前です。パブリケーション全体に対して以下の処理フェーズがあります。  
   
 -   **[初期化]** 。 マージ エージェントを開始することを示しています。スナップショットの適用が行われるサブスクリプションの初期化とは同期しません。  
@@ -80,7 +80,7 @@ ms.locfileid: "62629713"
  **Inserts**  
  選択されたセッションの該当フェーズで挿入された行数です。  
   
- **Updates**  
+ **更新プログラム**  
  選択されたセッションの該当フェーズで更新された行数です。  
   
  **Deletes**  
@@ -97,7 +97,7 @@ ms.locfileid: "62629713"
   
 ## <a name="see-also"></a>参照  
  [レプリケーション モニターの開始](monitor/start-the-replication-monitor.md)   
- [レプリケーション モニターを使用して情報を表示し、タスクを実行する](monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [レプリケーションモニターを使用して情報を表示し、タスクを実行する](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [レプリケーションの監視](monitoring-replication.md)   
  [レプリケーション エージェントの概要](agents/replication-agents-overview.md)  
   

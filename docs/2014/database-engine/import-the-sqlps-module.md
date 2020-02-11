@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1916be8c443799fa41680341e72889bd10551b4a
-ms.sourcegitcommit: 381595e990f2294dbf324ef31071e2dd2318b8dd
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74200426"
 ---
 # <a name="import-the-sqlps-module"></a>SQLPS モジュールのインポート
@@ -24,7 +24,7 @@ ms.locfileid: "74200426"
   
 2.  **モジュールを読み込むには:**  [sqlps モジュールを読み込む](#LoadSqlps)  
   
-## <a name="before-you-begin"></a>開始する前に  
+## <a name="before-you-begin"></a>はじめに  
  
   `sqlps` モジュールを Windows PowerShell にインポートした後は、次のことができます。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "74200426"
 > [!NOTE]  
 >  2 つの SQL Server コマンドレット (`Encode-Sqlname` および `Decode-Sqlname`) の名前で使用されている動詞は、Windows PowerShell 2.0 で承認されている動詞と一致しません。 このことは、コマンドレットの操作には影響しませんが、`sqlps` モジュールがセッションにインポートされるときに、Windows PowerShell による警告が発生します。  
   
-###  <a name="Security"></a>保護  
+###  <a name="Security"></a> セキュリティ  
  既定では、Windows PowerShell 実行時のスクリプト実行ポリシーは **[Restricted]** に設定されます。これにより、Windows PowerShell スクリプトの実行が防止されます。 
   `sqlps` モジュールを読み込む際は、`Set-ExecutionPolicy` コマンドレットを使用すると、署名されたスクリプトまたは任意のスクリプトの実行を有効化できます。 信頼できるソースからのスクリプト以外は実行しないでください。また、適切な NTFS 権限を使用して、すべての入力ファイルと出力ファイルのセキュリティを保護してください。 Windows PowerShell スクリプトの有効化の詳細については、「 [Windows PowerShell スクリプトの実行](https://docs.microsoft.com/powershell/scripting/getting-started/starting-windows-powershell?view=powershell-6#how-to-enable-windows-powershell-ise-on-earlier-releases-of-windows)」を参照してください。  
   
@@ -69,4 +69,4 @@ Import-Module "sqlps" -DisableNameChecking
 ## <a name="see-also"></a>参照  
  [SQL Server PowerShell](../powershell/sql-server-powershell.md)   
  [SQL Server PowerShell プロバイダー](../powershell/sql-server-powershell-provider.md)   
- [データベースエンジンコマンドレットを使用する](../../2014/database-engine/use-the-database-engine-cmdlets.md)  
+ [データベース エンジン コマンドレットの使用](../../2014/database-engine/use-the-database-engine-cmdlets.md)  

@@ -1,5 +1,5 @@
 ---
-title: sys.dm_tran_version_store_space_usage (TRANSACT-SQL) |Microsoft Docs
+title: dm_tran_version_store_space_usage (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/24/2018
 ms.prod: sql
@@ -21,32 +21,32 @@ ms.author: pariks
 manager: ajayj
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2a4fac732f784a401206f37fb2af9d3d8e0688ba
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68262662"
 ---
-# <a name="sysdmtranversionstorespaceusage-transact-sql"></a>sys.dm_tran_version_store_space_usage (TRANSACT-SQL)
+# <a name="sysdm_tran_version_store_space_usage-transact-sql"></a>dm_tran_version_store_space_usage (Transact-sql)
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
 
-各データベースのバージョン ストア レコードで使われている tempdb の領域の合計を表示するテーブルを返します。 **sys.dm_tran_version_store_space_usage**効率的でが高く低コストの個別のバージョン ストア レコードを移動しないと返しますデータベースごとに tempdb で消費されるバージョン ストア領域の集計を実行します。
+各データベースのバージョンストアレコードで使用される tempdb 内の領域の合計を表示するテーブルを返します。 **dm_tran_version_store_space_usage**は、個別のバージョンストアレコード間を移動せず、データベースごとに tempdb で使用される集計バージョンストアの領域を返すため、効率的で実行コストがかかりません。
   
-バージョン管理された各レコードは、いくつかの追跡または状態情報と共に、バイナリ データとして格納されます。 データベース テーブル内のレコードと同様、バージョン ストア レコードは 8,192 バイトのページに格納されます。 レコードが 8,192 バイトを超える場合は、2 つのレコードに分割されます。  
+バージョン管理された各レコードは、追跡情報や状態情報と共に、バイナリデータとして格納されます。 データベース テーブル内のレコードと同様、バージョン ストア レコードは 8,192 バイトのページに格納されます。 レコードが 8,192 バイトを超える場合は、2 つのレコードに分割されます。  
   
-バージョン レコードはバイナリであるため、異なるデータベース照合順序の異なる問題はありません。 使用**sys.dm_tran_version_store_space_usage** tempdb のサイズの SQL Server インスタンスのデータベース バージョン ストア領域の使用量に基づくを監視して計画します。
+バージョン付きのレコードはバイナリとして格納されるため、異なるデータベースからの異なる照合順序に関する問題はありません。 SQL Server インスタンス内のデータベースのバージョンストアの使用領域に基づいて、tempdb のサイズを監視および計画するには、 **dm_tran_version_store_space_usage**を使用します。
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|データベースのデータベース ID。|  
-|**reserved_page_count**|**bigint**|Tempdb のバージョンで予約済みページの合計数は、データベースのレコードを格納します。|  
-|**reserved_space_kb**|**bigint**|バージョンの tempdb のキロバイト単位で使用される領域の合計は、データベースのレコードを格納します。|  
+|**reserved_page_count**|**bigint**|データベースのバージョンストアレコードの tempdb に予約されているページの合計数。|  
+|**reserved_space_kb**|**bigint**|データベースのバージョンストアレコードの tempdb で使用されている合計領域 (kb 単位)。|  
   
 ## <a name="permissions"></a>アクセス許可  
-[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]、必要があります`VIEW SERVER STATE`権限。   
+で[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]は、 `VIEW SERVER STATE`権限が必要です。   
 
-## <a name="examples"></a>使用例  
-内の各データベースのバージョン ストアによって、tempdb で消費される領域を決定する、次のクエリを使用できます、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンス。 
+## <a name="examples"></a>例  
+次のクエリを使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンス内の各データベースのバージョンストアによって、tempdb で消費された領域を調べることができます。 
   
 ```sql  
 SELECT 
@@ -67,7 +67,7 @@ AdventureWorks2016DW      0                    0
 WideWorldImporters        20                   160             
 ```
  
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [トランザクション関連の動的管理ビューおよび関数  &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [トランザクション関連の動的管理ビューおよび関数 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   

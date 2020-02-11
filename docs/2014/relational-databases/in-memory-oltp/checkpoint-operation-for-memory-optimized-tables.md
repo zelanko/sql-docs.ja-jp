@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: ddcdec0f624c1d6f70c57e593eaf9da66cbe0419
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63065530"
 ---
 # <a name="checkpoint-operation-for-memory-optimized-tables"></a>メモリ最適化テーブルのチェックポイント操作
@@ -28,7 +28,7 @@ ms.locfileid: "63065530"
   
  ディスクベースのテーブルの場合、recovery interval 構成オプションに基づいて自動チェックポイントが取得されます (詳細については、「[データベースのターゲットの復旧時間の変更 &#40;SQL Server&#41;](../logs/change-the-target-recovery-time-of-a-database-sql-server.md)」を参照してください)。  
   
- メモリ最適化テーブルでは、最後のチェックポイントから 512 MB より大きいトランザクション ログ ファイルになったとき、自動チェックポイントは取得されます。 512 MB には、両方は、ディスク ベースおよびメモリ最適化テーブルのトランザクション ログ レコードが含まれています。  
+ メモリ最適化テーブルでは、最後のチェックポイント以降にトランザクションログファイルが 512 MB より大きくなると、自動チェックポイントが作成されます。 512 MB には、ディスクベーステーブルとメモリ最適化テーブルの両方のトランザクションログレコードが含まれています。  
   
 ## <a name="see-also"></a>参照  
  [メモリ最適化オブジェクト用ストレージの作成と管理](creating-and-managing-storage-for-memory-optimized-objects.md)  

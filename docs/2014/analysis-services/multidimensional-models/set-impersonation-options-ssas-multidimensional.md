@@ -1,5 +1,5 @@
 ---
-title: 権限借用の設定 (SSAS - 多次元) |Microsoft Docs
+title: 権限借用オプションの設定 (SSAS-多次元) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a3bd6de297f4b5b677db10861e594afc36f74bb5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072959"
 ---
 # <a name="set-impersonation-options-ssas---multidimensional"></a>権限借用オプションの設定 (SSAS - 多次元)
@@ -37,19 +37,20 @@ ms.locfileid: "66072959"
 3.  このトピックの「 [権限借用のオプション](#bkmk_options) 」で説明するオプションを選択します。  
   
 ## <a name="set-impersonation-options-in-management-studio"></a>Management Studio での権限借用オプションの設定  
- [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]で、次のダイアログ ボックスのプロパティの参照ボタン ( **[...]** ) をクリックして、**[権限借用情報]** ダイアログ ボックスを開きます。  
+ 
+  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]で、次のダイアログ ボックスのプロパティの参照ボタン ( **[...]** ) をクリックして、**[権限借用情報]** ダイアログ ボックスを開きます。  
   
--   **[データベースのプロパティ]** ダイアログ ボックスの、[データ ソースの権限借用情報] プロパティ。  
+-   [**データベースのプロパティ**] ダイアログボックス。データソースの権限借用情報プロパティを使用します。  
   
--   **[データ ソースのプロパティ]** ダイアログ ボックスの、[権限借用情報] プロパティ。  
+-   [**データソースのプロパティ**] ダイアログボックスで、[権限借用情報] プロパティを使用します。  
   
--   **[アセンブリのプロパティ]** ダイアログ ボックスの、[権限借用情報] プロパティ。  
+-   [**アセンブリのプロパティ**] ダイアログボックスで、[権限借用情報] プロパティを使用します。  
   
-##  <a name="bkmk_options"></a> 権限借用のオプション  
+##  <a name="bkmk_options"></a>権限借用オプション  
  ダイアログ ボックスのすべてのオプションを使用できますが、すべてのオプションが各シナリオに適しているわけではありません。 以下の情報を参考にして、シナリオに最適なオプションを判断してください。  
   
- **[特定のユーザー名とパスワードを使用する]**  
- このオプションを選択、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]オブジェクトは、この形式で指定された Windows ユーザー アカウントのセキュリティ資格情報を使用します。*\<ドメイン名 >***\\***\<ユーザー アカウント名 >* します。  
+ **特定のユーザー名とパスワードを使用する**  
+ このオプションを選択すると[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 、オブジェクトは、 * \<ドメイン名>***\\*** \<ユーザーアカウント名>* の形式で指定された Windows ユーザーアカウントのセキュリティ資格情報を使用します。  
   
  データ アクセスのために特別に作成した専用の最小特権 Windows ユーザー ID を使用する場合に、このオプションを選択します。 たとえば、レポートで使用されるデータを取得するための汎用アカウントを定期的に作成している場合は、ここでそのアカウントを指定できます。  
   
@@ -59,10 +60,11 @@ ms.locfileid: "66072959"
   
  DMX OPENQUERY ステートメントの場合、このオプションは無視され、指定したユーザーのアカウントではなく現在のユーザーの資格情報が使用されます。  
   
- **[サービス アカウントを使用する]**  
+ **サービスアカウントを使用する**  
  このオプションを選択すると、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトを管理する [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サービスに関連付けられているセキュリティ資格情報が使用されます。 既定のオプションです。 以前のリリースでは、これが、使用できる唯一のオプションでした。 個々のユーザー アカウントではなく、サービス レベルでデータ アクセスを監視する場合は、このオプションを選択することをお勧めします。  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]では、使用しているオペレーティング システムに応じて、サービス アカウントとして NetworkService または特定の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンス用に作成された組み込み仮想アカウントが使用されます。 Windows 認証を使用する接続にサービス アカウントを使用する場合は、処理時にデータの取得に使用されるため、このアカウント用のデータベース ログインを忘れずに作成して読み取り権限を付与してください。 サービス アカウントの詳細については、「 [Windows サービス アカウントと権限の構成](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)」をご覧ください。  
+ 
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]では、使用しているオペレーティング システムに応じて、サービス アカウントとして NetworkService または特定の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンス用に作成された組み込み仮想アカウントが使用されます。 Windows 認証を使用する接続にサービス アカウントを使用する場合は、処理時にデータの取得に使用されるため、このアカウント用のデータベース ログインを忘れずに作成して読み取り権限を付与してください。 サービス アカウントの詳細については、「 [Windows サービス アカウントと権限の構成](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)」をご覧ください。  
   
 > [!NOTE]  
 >  データベース認証を使用する際、Analysis Services の専用の仮想アカウントでサービスを実行する場合は、 **[サービス アカウントを使用する]** 権限借用オプションを選択してください。 このアカウントには、ローカル ファイルにアクセスする権限が付与されます。 一方、サービスを NetworkService として実行する場合は、 **[ローカル ログオンを許可する]** 権限を持つ最小特権の Windows ユーザー アカウントを使用する方が適しています。 指定するアカウントによっては、Analysis Services プログラム フォルダーに対するファイル アクセスの権限も付与する必要があります。  
@@ -74,41 +76,45 @@ ms.locfileid: "66072959"
  DMX OPENQUERY ステートメント、ローカル キューブ、およびマイニング モデルの場合、サービス アカウント オプションを選択しても、現在のユーザーの資格情報が使用されます。 サービス アカウント オプションは、不一致バインドではサポートされていません。  
   
 > [!NOTE]  
->  サービス アカウントに Analysis Services インスタンスに対する管理者権限がない場合、キューブからデータ マイニング モデルを処理するときにエラーが発生することがあります。 詳細については、次を参照してください。[マイニング構造。DataSource が OLAP キューブの場合の処理中に問題](https://go.microsoft.com/fwlink/?LinkId=251610)します。  
+>  サービス アカウントに Analysis Services インスタンスに対する管理者権限がない場合、キューブからデータ マイニング モデルを処理するときにエラーが発生することがあります。 詳細については、「 [マイニング構造: DataSource が OLAP キューブの場合の処理に関する問題](https://go.microsoft.com/fwlink/?LinkId=251610)」を参照してください。  
   
- **[現在のユーザーの資格情報を使用する]**  
+ **現在のユーザーの資格情報を使用する**  
  このオプションを選択すると、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトにより、不一致バインド、DMX OPENQUERY、ローカル キューブ、マイニング モデルに現在のユーザーのセキュリティ資格情報が使用されます。  
   
  このオプションは表形式のデータベースではサポートされていません。  
   
  ローカル キューブおよび不一致バインドを使用した処理を除き、このオプションは多次元データベースではサポートされていません。  
   
- **[既定]** または **[継承]**  
- **[既定]** はデータベース レベルで設定されている権限借用オプションで使用され、 **[継承]** はデータ ソース レベルで設定されている権限借用オプションで使用されます。  
+ **既定値**または**継承**  
+ 
+  **[既定]** はデータベース レベルで設定されている権限借用オプションで使用され、 **[継承]** はデータ ソース レベルで設定されている権限借用オプションで使用されます。  
   
- **データ ソースの [継承] オプション**  
+ **データソース-Inherit オプション**  
   
- データ ソース レベルでは、 **[継承]** によって [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] が親オブジェクトの権限借用オプションを使用することが指定されます。 多次元モデルでは、親オブジェクトは [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースです。 **[継承]** オプションを選択すると、対象のデータ ソースおよび同じデータベースに含まれる他のデータ ソースの権限借用設定を一元的に管理できます。 このオプションを有効にするには、データベース レベルで特定の Windows ユーザー名とパスワードを選択します。 データベース レベルで Windows ユーザー名とパスワードが指定されていない場合、データ ソースの **[継承]** とデータベースの **[既定]** の組み合わせは、サービス アカウント オプションを使用するのと同じです。  
+ データ ソース レベルでは、 **[継承]** によって [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] が親オブジェクトの権限借用オプションを使用することが指定されます。 多次元モデルでは、親オブジェクトは [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースです。 
+  **[継承]** オプションを選択すると、対象のデータ ソースおよび同じデータベースに含まれる他のデータ ソースの権限借用設定を一元的に管理できます。 このオプションを有効にするには、データベース レベルで特定の Windows ユーザー名とパスワードを選択します。 データベース レベルで Windows ユーザー名とパスワードが指定されていない場合、データ ソースの **[継承]** とデータベースの **[既定]** の組み合わせは、サービス アカウント オプションを使用するのと同じです。  
   
  データベース レベルで Windows ユーザー名とパスワードを指定するには、次の操作を行います。  
   
-1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] でデータベースを右クリックし、 **[プロパティ]** をクリックします。  
+1.  
+  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] でデータベースを右クリックし、 **[プロパティ]** をクリックします。  
   
-2.  **[データ ソースの権限借用情報]** で、Windows ユーザー名とパスワードを指定します。  
+2.  
+  **[データ ソースの権限借用情報]** で、Windows ユーザー名とパスワードを指定します。  
   
 3.  各データ ソースを右クリックし、プロパティを表示して、データ ソースが **[継承]** オプションを使用していることを確認します。  
   
  データベース レベルでの既定の設定に関する詳細については、「[多次元データベースのプロパティ設定 &#40;Analysis Services&#41;](set-multidimensional-database-properties-analysis-services.md)」を参照してください。  
   
- **データベースの既定のオプション**  
+ **Databases-既定のオプション**  
   
- 表形式データベースの**既定**サービス アカウントを使用することを意味します。  
+ 表形式データベースの場合、**既定**ではサービスアカウントが使用されます。  
   
  多次元データベースの場合、 **[既定]** はサービス アカウントを使用し、データ マイニング操作に現在のユーザーを使用することを意味します。  
   
-## <a name="see-also"></a>関連項目  
- [データ ソースの作成 &#40;SSAS 多次元&#41;](create-a-data-source-ssas-multidimensional.md)   
- [データ ソースのプロパティを設定&#40;SSAS 多次元&#41;](set-data-source-properties-ssas-multidimensional.md)   
- [DirectQuery の配置シナリオ&#40;SSAS 表形式&#41;](../directquery-deployment-scenarios-ssas-tabular.md)  
+## <a name="see-also"></a>参照  
+ [SSAS 多次元&#41;&#40;データソースを作成する](create-a-data-source-ssas-multidimensional.md)   
+ [SSAS 多次元&#41;&#40;データソースプロパティを設定する](set-data-source-properties-ssas-multidimensional.md)   
+ [SSAS 表形式&#41;&#40;DirectQuery デプロイシナリオ](../directquery-deployment-scenarios-ssas-tabular.md)  
   
   

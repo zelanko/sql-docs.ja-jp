@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_external_operations (TRANSACT-SQL) |Microsoft Docs
+title: dm_exec_external_operations (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -23,28 +23,28 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d410afc256f0a1c12694f826bc73570cfee84172
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68097765"
 ---
-# <a name="sysdmexecexternaloperations-transact-sql"></a>sys.dm_exec_external_operations (TRANSACT-SQL)
+# <a name="sysdm_exec_external_operations-transact-sql"></a>dm_exec_external_operations (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  外部の PolyBase 操作に関する情報をキャプチャします。  
+  外部 PolyBase 操作に関する情報をキャプチャします。  
   
-|列名|データ型|説明|範囲|  
+|列名|データ型|[説明]|Range|  
 |-----------------|---------------|-----------------|-----------|  
-|execution_id|**nvarchar(32)**|PolyBase クエリに関連付けられているクエリの一意の識別子|内の ID を参照してください[sys.dm_exec_requests &#40;TRANSACT-SQL。&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|  
-|step_index|**int**|クエリ ステップのインデックス|Step_index を参照してください[sys.dm_exec_distributed_request_steps &#40;TRANSACT-SQL。&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md)|  
-|処理の種類|**nvarchar(128)**|Hadoop 操作またはその他の外部の操作について説明します|' 外部 Hadoop Operation'|  
-|処理の名前|**nvarchar (4000)**|示す方法 (量は、入力を使用) の割合で、ジョブの状態|0-1 - 率 100 (完了) を掛けた値|  
-|map _ の進行状況|**float**|存在する場合、パーセンテージで示した、reduce の状態のジョブを示します|0-1 - 率 100 (完了) を掛けた値|  
+|execution_id|**nvarchar (32)**|PolyBase クエリに関連付けられた一意のクエリ識別子|詳細については、「 [sys. dm_exec_requests &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) 」を参照してください。|  
+|step_index|**int**|クエリステップのインデックス|詳細については、「step_index」を参照してください[。 dm_exec_distributed_request_steps &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md)|  
+|operation_ の種類|**nvarchar(128**|Hadoop 操作またはその他の外部操作について説明します。|' 外部 Hadoop 操作 '|  
+|operation_ 名|**nvarchar(4000)**|ジョブの状態をパーセントで示します (入力の消費量)|0-1-係数 100 (完了) を乗算|  
+|map_ の進行状況|**float**|Reduce ジョブのステータス (存在する場合) をパーセントで示します。|0-1-係数 100 (完了) を乗算|  
   
-## <a name="see-also"></a>関連項目  
- [PolyBase 動的管理ビューでのトラブルシューティング](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
+## <a name="see-also"></a>参照  
+ [動的管理ビューを使用した PolyBase のトラブルシューティング](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
  [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [データベース関連の動的管理ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
+ [Transact-sql&#41;&#40;データベース関連の動的管理ビュー](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   

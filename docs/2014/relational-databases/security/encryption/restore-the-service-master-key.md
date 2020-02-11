@@ -14,10 +14,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: 21abdf4e5781f179c8168ff02aa611bd7dffd39f
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74957175"
 ---
 # <a name="restore-the-service-master-key"></a>サービス マスター キーの復元
@@ -32,13 +32,13 @@ ms.locfileid: "74957175"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [保護](#Security)  
+     [セキュリティ](#Security)  
   
 -   [Transact-sql を使用してサービスマスターキーを復元するには](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a>開始する前に  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a>制限事項と制約事項  
+###  <a name="Restrictions"></a> 制限事項と制約事項  
   
 -   サービス マスター キーを復元するとき、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、現在のサービス マスター キーで暗号化されているすべてのキーとシークレットの暗号化が解除され、次にそれらがバックアップ ファイルから読み込まれたサービス マスター キーで暗号化されます。  
   
@@ -49,22 +49,20 @@ ms.locfileid: "74957175"
 > [!CAUTION]  
 >  サービス マスター キーは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 暗号化階層のルートになります。 サービス マスター キーでは、直接または間接的に、そのツリー内の他のすべてのキーが保護されます。 強制復元で、依存関係のあるキーの暗号化を解除できなかった場合、そのキーで保護されているデータは失われます。  
   
-###  <a name="Security"></a>保護  
+###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a>許可  
+####  <a name="Permissions"></a> Permissions  
  サーバーに対する CONTROL SERVER 権限が必要です。  
   
-##  <a name="SSMSProcedure"></a>Transact-sql の使用  
+##  <a name="SSMSProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-restore-the-service-master-key"></a>サービス マスター キーを復元するには  
   
 1.  バックアップしたサービス マスター キーのコピーを、物理バックアップ メディアまたはローカル ファイル システム上のディレクトリから取得します。  
   
-2.  
-  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]のインスタンスに接続します。  
+2.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]のインスタンスに接続します。  
   
-3.  
-  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
+3.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
 4.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
   

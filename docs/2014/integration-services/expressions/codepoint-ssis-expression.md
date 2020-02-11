@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 10d2eeb6991c0c75e8dbe8102f94148f60f0a361
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62769379"
 ---
 # <a name="codepoint-ssis-expression"></a>CODEPOINT (SSIS 式)
@@ -37,7 +37,7 @@ CODEPOINT(character_expression)
 ## <a name="result-types"></a>戻り値の型  
  DT_UI2  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  *character_expression* は、DT_WSTR データ型である必要があります。  
   
  *character_expression* が NULL または空の文字列の場合、CODEPOINT は NULL を返します。  
@@ -55,7 +55,7 @@ CODEPOINT("Mountain Bike")
 CODEPOINT(@Name)  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [関数 (SSIS 式)](functions-ssis-expression.md)  
   
   

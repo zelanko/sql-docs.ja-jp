@@ -1,5 +1,5 @@
 ---
-title: sp_dbfixedrolepermission (TRANSACT-SQL) |Microsoft Docs
+title: sp_dbfixedrolepermission (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,16 @@ ms.assetid: b8c30191-f532-49cd-83f3-c271f63ce572
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 91a7278230a0e7201e78354a38af58f417ac26ce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68108164"
 ---
-# <a name="spdbfixedrolepermission-transact-sql"></a>sp_dbfixedrolepermission (TRANSACT-SQL)
+# <a name="sp_dbfixedrolepermission-transact-sql"></a>sp_dbfixedrolepermission (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  固定データベース ロールの権限を表示します。 **sp_dbfixedrolepermission**正しい情報が返されます[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]します。 出力がで実装された権限の階層への変更を反映していない[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]します。 詳細については、次を参照してください。[権限&#40;データベース エンジン&#41;](../../relational-databases/security/permissions-database-engine.md)します。  
+  固定データベース ロールの権限を表示します。 **sp_dbfixedrolepermission**では、に[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]正しい情報が返されます。 出力には、に[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]実装された権限階層への変更は反映されません。 詳細については、「[アクセス許可 &#40;データベースエンジン&#41;](../../relational-databases/security/permissions-database-engine.md)」を参照してください。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
@@ -42,42 +42,42 @@ sp_dbfixedrolepermission [ [ @rolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @rolename = ] 'role'` 有効な名前を指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]固定データベース ロール。 *ロール*は**sysname**、既定値は NULL です。 場合*ロール*が指定されていない、すべての固定データベース ロールのアクセス許可が表示されます。  
+`[ @rolename = ] 'role'`有効な[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]固定データベースロールの名前を指定します。 *role*の部分は**sysname**で、既定値は NULL です。 *Role*が指定されていない場合は、すべての固定データベースロールの権限が表示されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
 |**DbFixedRole**|**sysname**|固定データベース ロールの名前。|  
-|**権限**|**nvarchar(70)**|アクセス許可に関連付けられている**DbFixedRole**|  
+|**権限**|**nvarchar (70)**|**Dbfixedrole**に関連付けられている権限|  
   
-## <a name="remarks"></a>コメント  
- 固定データベース ロールの一覧を表示するには、実行**sp_helpdbfixedrole**します。 次の表では、固定データベース ロールを示します。  
+## <a name="remarks"></a>解説  
+ 固定データベースロールの一覧を表示するには、 **sp_helpdbfixedrole**を実行します。 次の表は、固定データベースロールを示しています。  
   
-|固定データベース ロール|説明|  
+|固定データベースロール|[説明]|  
 |-------------------------|-----------------|  
 |**db_owner**|データベース所有者|  
 |**db_accessadmin**|データベース アクセス管理者|  
-|**db_securityadmin**|データベース セキュリティ管理者|  
+|**db_securityadmin**|データベースセキュリティ管理者|  
 |**db_ddladmin**|データベース データ定義言語 (DDL) 管理者|  
-|**db_backupoperator**|データベース バックアップ オペレーター|  
-|**db_datareader**|データベース データ リーダー|  
-|**db_datawriter**|データベース データ ライター|  
+|**db_backupoperator**|データベースバックアップオペレーター|  
+|**db_datareader**|データベースデータリーダー|  
+|**db_datawriter**|データベースデータライター|  
 |**db_denydatareader**|データベース否定データ リーダー|  
-|**db_denydatawriter**|データベース否定データ ライター|  
+|**db_denydatawriter**|データベース拒否データライター|  
   
- メンバー、 **db_owner**固定データベース ロールには、その他のすべての固定データベース ロールの権限します。 固定サーバー ロールのアクセス許可を表示するには、実行**sp_srvrolepermission**します。  
+ **Db_owner**固定データベースロールのメンバーは、他のすべての固定データベースロールの権限を持っています。 固定サーバーロールの権限を表示するには、 **sp_srvrolepermission**を実行します。  
   
- 結果セットが含まれています、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントを実行することができ、データベース ロールのメンバーが実行できるその他の特別な操作です。  
+ 結果セットには、 [!INCLUDE[tsql](../../includes/tsql-md.md)]実行可能なステートメントと、データベースロールのメンバーによって実行可能なその他の特別な操作が含まれます。  
   
 ## <a name="permissions"></a>アクセス許可  
- ロール **public** のメンバーシップが必要です。  
+ **Public**ロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例  
- 次のクエリは、固定データベース ロールが指定されていないために、すべての固定データベース ロールのアクセス許可を返します。  
+## <a name="examples"></a>例  
+ 次のクエリでは、固定データベースロールが指定されていないため、すべての固定データベースロールの権限が返されます。  
   
 ```  
 EXEC sp_dbfixedrolepermission;  
@@ -85,11 +85,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [セキュリティ ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
- [sp_droprolemember の各&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
- [sp_helpdbfixedrole &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdbfixedrole-transact-sql.md)   
- [sp_srvrolepermission &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-srvrolepermission-transact-sql.md)   
- [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [セキュリティストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [sp_addrolemember &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
+ [sp_droprolemember &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
+ [sp_helpdbfixedrole &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpdbfixedrole-transact-sql.md)   
+ [sp_srvrolepermission &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-srvrolepermission-transact-sql.md)   
+ [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

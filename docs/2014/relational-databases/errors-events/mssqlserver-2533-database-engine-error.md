@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0b1882c04d4aacd76b59cb952781205edac84012
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62914820"
 ---
-# <a name="mssqlserver2533"></a>MSSQLSERVER_2533
+# <a name="mssqlserver_2533"></a>MSSQLSERVER_2533
     
 ## <a name="details"></a>詳細  
   
@@ -30,7 +30,7 @@ ms.locfileid: "62914820"
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|DBCC_PAGE_WAS_NOT_SEEN|  
-|メッセージ テキスト|テーブル エラー:オブジェクト ID O_ID、インデックス ID I_ID、パーティション ID PN_ID に割り当てられたページ P_ID、アロケーション ユニット ID A_ID (型 TYPE) が見つかりませんでした。 このページが無効であるか、ページのヘッダー内に不適切なアロケーション ユニット ID がある可能性があります。|  
+|メッセージ テキスト|テーブル エラー : オブジェクト ID O_ID、インデックス ID I_ID、パーティション ID PN_ID、アロケーション ユニット ID A_ID (型 TYPE) に割り当てられたページ P_ID が見つかりませんでした。 このページが無効であるか、ページのヘッダー内に不適切なアロケーション ユニット ID がある可能性があります。|  
   
 ## <a name="explanation"></a>説明  
  アロケーション ユニット ID、*A_ID* にページが割り当てられましたが、このアロケーション ユニット ID がページのヘッダー内にありません。 ヘッダー内には別のアロケーション ユニット ID があります。 ページのヘッダー内にあるアロケーション ユニット ID が有効なオブジェクトに対するものであれば、対応する MSSQLEngine_2534 エラーがこのページで生じている可能性があります。  

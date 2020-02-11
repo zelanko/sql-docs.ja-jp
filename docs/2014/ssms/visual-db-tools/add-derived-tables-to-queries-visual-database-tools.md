@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6f1898dce975655758c52068590dd4c0720c9f67
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63311938"
 ---
 # <a name="add-derived-tables-to-queries-visual-database-tools"></a>クエリへの派生テーブルの追加 (Visual Database Tools)
@@ -33,10 +33,10 @@ ms.locfileid: "63311938"
   
      derivedtbl_*N* という名前で新しいテーブルが追加され、派生テーブルの SELECT ステートメントがクエリの FROM 句に追加されます。  
   
-## <a name="see-also"></a>関連項目  
- [クエリに関する基本操作を実行&#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [クエリを作成する&#40;Visual Database Tools&#41;](create-queries-visual-database-tools.md)   
- [クエリを開く&#40;Visual Database Tools&#41;](open-queries-visual-database-tools.md)   
+## <a name="see-also"></a>参照  
+ [Visual Database Tools &#40;クエリで基本的な操作を実行&#41;](visual-database-tools.md)   
+ [Visual Database Tools &#40;クエリの作成&#41;](create-queries-visual-database-tools.md)   
+ [Visual Database Tools &#40;クエリを開く&#41;](open-queries-visual-database-tools.md)   
  [SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql)  
   
   

@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 47dc8180fd6c8f59050520477724ff8adbc46a6a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63061015"
 ---
 # <a name="stored-procedures-event-category"></a>Stored Procedures イベント カテゴリ
@@ -28,7 +28,7 @@ ms.locfileid: "63061015"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|説明|  
+|トピック|[説明]|  
 |-----------|-----------------|  
 |[RPC:Completed イベント クラス](rpc-completed-event-class.md)|リモート プロシージャ コール (RPC) が完了したことを示します。|  
 |[PreConnect:Completed イベント クラス](preconnect-completed-event-class.md)|リソース ガバナー分類子関数の実行が終了したことを示します。|  
@@ -45,7 +45,7 @@ ms.locfileid: "63061015"
 |[SP:StmtCompleted イベント クラス](sp-stmtcompleted-event-class.md)|ストアド プロシージャ内の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントが完了したことを示します。|  
 |[SP:StmtStarting イベント クラス](sp-stmtstarting-event-class.md)|ストアド プロシージャ内の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントが開始されたことを示します。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [拡張イベント](../extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   

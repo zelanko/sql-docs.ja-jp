@@ -1,5 +1,5 @@
 ---
-title: IHpublishertables (TRANSACT-SQL) |Microsoft Docs
+title: IHpublishertables (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -18,27 +18,27 @@ ms.assetid: 7d16ac39-633a-4fe2-8f22-1d9afc191ee9
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9a75e78c8423b925ca2dfc617cbbae7e4bdcc11d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67990155"
 ---
-# <a name="ihpublishertables-transact-sql"></a>IHpublishertables (TRANSACT-SQL)
+# <a name="ihpublishertables-transact-sql"></a>IHpublishertables (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **IHpublishertables**システム テーブルは、パブリッシャー側で格納されているメタデータを表します。 このテーブルには、1 行から、SQL Server 以外のパブリッシャー、現在のディストリビューターを使用してパブリッシュされた各ソース テーブルのデータが含まれています。 このテーブルは、ディストリビューション データベースに格納されます。  
+  **IHpublishertables**システムテーブルは、パブリッシャーに格納されているメタデータを表します。 このテーブルは、現在のディストリビューターを使用する SQL&#xA0;Server 以外のパブリッシャーからパブリッシュされたソース テーブルごとに 1 行を保持します。 このテーブルは、ディストリビューションデータベースに格納されます。  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
 |**table_id**|**int**|パブリッシュされたテーブルを識別します。|  
-|**publisher_id**|**smallint**|-SQL Server 以外のパブリッシャーのテーブルのパブリッシュされるを識別します。|  
+|**publisher_id**|**smallint**|テーブルをパブリッシュしている SQL&#xA0;Server 以外のパブリッシャーを識別します。|  
 |**name**|**sysname**|パブリッシュされたテーブルの名前。|  
-|**owner**|**sysname**|テーブルの所有者。|  
+|**責任**|**sysname**|テーブルの所有者。|  
   
-## <a name="see-also"></a>関連項目  
- [異種データベース レプリケーション](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
- [レプリケーション テーブル &#40;Transact-SQL&#41;。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
+## <a name="see-also"></a>参照  
+ [異種データベースレプリケーション](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
+ [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [レプリケーションビュー &#40;Transact-sql&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

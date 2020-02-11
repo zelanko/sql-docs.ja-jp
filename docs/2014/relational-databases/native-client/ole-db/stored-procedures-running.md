@@ -1,5 +1,5 @@
 ---
-title: ストアド プロシージャ (OLE DB) の実行 |Microsoft Docs
+title: ストアドプロシージャの実行 (OLE DB) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0102fa66e65fa11f47eec9f49cd1fa90fb11f877
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62638758"
 ---
 # <a name="running-stored-procedures-ole-db"></a>ストアド プロシージャの実行 (OLE DB)
   ステートメントの実行時、データ ソースに対して (クライアント アプリケーション内で直接ステートメントを実行または準備せずに) ストアド プロシージャを呼び出すと、次のような利点があります。  
   
--   高いパフォーマンス。  
+-   パフォーマンスの向上。  
   
 -   ネットワーク オーバーヘッドの軽減。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "62638758"
   
 -   機能の追加。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは 3 つのメカニズムをサポートしているを[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]データを返すストアド プロシージャを使用します。  
+ Native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client OLE DB プロバイダーでは、ストアドプロシージャが[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]データを返すために使用する3つのメカニズムがサポートされています。  
   
 -   プロシージャ内のすべての SELECT ステートメントで結果セットを生成する。  
   
@@ -44,11 +44,11 @@ ms.locfileid: "62638758"
   
  アプリケーションでは、ストアド プロシージャからのこれらすべての出力を処理できる必要があります。  
   
- 結果の処理中には、さまざまな OLE DB プロバイダーからさまざまなタイミングで出力パラメーターと戻り値が返されます。 場合、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーでは、出力パラメーターおよびリターン コードが指定されていないまで、コンシューマーが取得またはストアド プロシージャによって返される結果セットが取り消されました。 これらのリターン コードと出力パラメーターは、サーバーからの最後の TDS パケットで返されます。  
+ 結果の処理中には、さまざまな OLE DB プロバイダーからさまざまなタイミングで出力パラメーターと戻り値が返されます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーの場合、ストアドプロシージャによって返された結果セットをコンシューマーが取得またはキャンセルするまで、出力パラメーターとリターンコードは提供されません。 これらのリターン コードと出力パラメーターは、サーバーからの最後の TDS パケットで返されます。  
   
  プロバイダーでは、DBPROP_OUTPUTPARAMETERAVAILABILITY プロパティを使用して、出力パラメーターと戻り値を返すタイミングを報告します。 このプロパティは、DBPROPSET_DATASOURCEINFO プロパティ セットに含まれています。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、DBPROP_OUTPUTPARAMETERAVAILABILITY プロパティを DBPROPVAL_OA_ATROWRELEASE を示すリターン コードと出力パラメーターは返されないこと、結果セットが処理または解放されるまでに設定します。  
+ Native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client OLE DB プロバイダーは、DBPROP_OUTPUTPARAMETERAVAILABILITY プロパティを DBPROPVAL_OA_ATROWRELEASE に設定して、結果セットが処理または解放されるまでリターンコードと出力パラメーターが返されないことを示します。  
   
 ## <a name="see-also"></a>参照  
  [ストアド プロシージャ](stored-procedures.md)  

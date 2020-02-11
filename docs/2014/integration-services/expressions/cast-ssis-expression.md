@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6549e2ad8faca23e32621e1cc871a62870c9effb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62899040"
 ---
 # <a name="cast-ssis-expression"></a>Cast (SSIS 式)
@@ -38,13 +38,14 @@ ms.locfileid: "62899040"
  *type_spec*  
  有効な [!INCLUDE[ssIS](../../includes/ssis-md.md)] データ型です。  
   
- *式 (expression)*  
+ *条件*  
  有効な式です。  
   
 ## <a name="result-types"></a>戻り値の型  
- *type_spec*のデータ型です。 詳細については、「 [Integration Services Data Types](../data-flow/integration-services-data-types.md)」を参照してください。  
+ 
+  *type_spec*のデータ型です。 詳細については、「 [Integration Services Data Types](../data-flow/integration-services-data-types.md)」を参照してください。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  次の図は、有効なキャスト演算を示しています。  
   
  ![データ型間の有効および無効なキャスト](../media/data-conversion.gif "データ型間の有効および無効なキャスト")  
@@ -53,12 +54,12 @@ ms.locfileid: "62899040"
   
 |データ型|パラメーター|例|  
 |---------------|---------------|-------------|  
-|DT_STR|*charcount*<br /><br /> *codepage*|(DT_STR,30,1252) は、1252 コード ページを使用して、30 バイトまたは 30 文字を DT_STR データ型にキャストします。|  
+|DT_STR|*charcount*<br /><br /> *コードページ*|(DT_STR,30,1252) は、1252 コード ページを使用して、30 バイトまたは 30 文字を DT_STR データ型にキャストします。|  
 |DT_WSTR|*Charcount*|(DT_WSTR,20) は、20 バイト ペアまたは 20 Unicode 文字を DT_WSTR データ型にキャストします。|  
 |DT_BYTES|*Bytecount*|(DT_BYTES,50) は、50 バイトを DT_BYTES データ型にキャストします。|  
-|DT_DECIMAL|*Scale*|(DT_DECIMAL,2) は、数値を小数点以下 2 桁の DT_DECIMAL データ型にキャストします。|  
-|DT_NUMERIC|*有効桁数*<br /><br /> *Scale*|(DT_NUMERIC,10,3) は、数値を有効桁数 10 桁で小数点以下 3 桁の DT_NUMERIC データ型にキャストします。|  
-|DT_TEXT|*Codepage*|(DT_TEXT,1252) は、1252 コード ページを使用して、値を DT_TEXT データ型にキャストします。|  
+|DT_DECIMAL|*段階*|(DT_DECIMAL,2) は、数値を小数点以下 2 桁の DT_DECIMAL データ型にキャストします。|  
+|DT_NUMERIC|*精度*<br /><br /> *段階*|(DT_NUMERIC,10,3) は、数値を有効桁数 10 桁で小数点以下 3 桁の DT_NUMERIC データ型にキャストします。|  
+|DT_TEXT|*コードページ*|(DT_TEXT,1252) は、1252 コード ページを使用して、値を DT_TEXT データ型にキャストします。|  
   
  文字列を DT_DATE にキャストする場合、またはその逆のキャストを行う場合、変換のロケールが使用されます。 ただし、ロケール設定で ISO 形式を使用するかどうかにかかわらず、日付は YYYY-MM-DD の ISO 形式となります。  
   
@@ -144,8 +145,8 @@ ms.locfileid: "62899040"
   
 ## <a name="see-also"></a>参照  
  [演算子の優先順位と結合規則](operator-precedence-and-associativity.md)   
- [演算子 &#40;SSIS 式&#41;](operators-ssis-expression.md)   
- [Integration Services &#40;SSIS&#41; 式](integration-services-ssis-expressions.md)   
+ [SSIS 式 &#40;の演算子&#41;](operators-ssis-expression.md)   
+ [SSIS&#41; 式の Integration Services &#40;](integration-services-ssis-expressions.md)   
  [式における Integration Services データ型](integration-services-data-types-in-expressions.md)  
   
   

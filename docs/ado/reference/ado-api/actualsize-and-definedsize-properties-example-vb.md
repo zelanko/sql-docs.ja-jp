@@ -16,10 +16,10 @@ ms.assetid: bff2c273-b535-4b32-83b3-0336a406859c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4aa9738232eae175c78596f741d3f1bcce0910b6
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68887387"
 ---
 # <a name="actualsize-and-definedsize-properties-example-vb"></a>ActualSize とのサイズプロパティの例 (VB)
@@ -87,7 +87,7 @@ End Sub
 'EndActualSizeVB  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ActualSize プロパティ (ADO)](../../../ado/reference/ado-api/actualsize-property-ado.md)   
  ["未定義のサイズ" プロパティ](../../../ado/reference/ado-api/definedsize-property.md)   
  [Field オブジェクト](../../../ado/reference/ado-api/field-object.md)

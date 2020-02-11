@@ -1,5 +1,5 @@
 ---
-title: クエリを実行方法に関するトピック (ODBC) |Microsoft Docs
+title: クエリの実行方法に関するトピック (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6b892adaf02f13ec7de150ae1de9966a65ac1d7b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200388"
 ---
 # <a name="executing-queries-how-to-topics-odbc"></a>クエリを実行する方法に関するトピック (ODBC)
@@ -24,15 +24,15 @@ ms.locfileid: "63200388"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
--   [ステートメントを使用して&#40;ODBC&#41;](use-a-statement-odbc.md)  
+-   [ODBC &#40;ステートメントを使用する&#41;](use-a-statement-odbc.md)  
   
--   [カーソル オプションを設定&#40;ODBC&#41;](set-cursor-options-odbc.md)  
+-   [ODBC&#41;&#40;カーソルオプションの設定](set-cursor-options-odbc.md)  
   
--   [ステートメントを直接実行&#40;ODBC&#41;](execute-a-statement-directly-odbc.md)  
+-   [ODBC&#41;&#40;直接ステートメントを実行する](execute-a-statement-directly-odbc.md)  
   
--   [準備し、ステートメントを実行&#40;ODBC&#41;](prepare-and-execute-a-statement-odbc.md)  
+-   [ODBC&#41;&#40;ステートメントの準備と実行](prepare-and-execute-a-statement-odbc.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ODBC の使用法に関するトピック](../odbc-how-to-topics.md)  
   
   

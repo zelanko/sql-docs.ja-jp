@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 779a06881d49cf7853f20a5241c52b25d4ccfc24
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73783468"
 ---
 # <a name="handling-errors-and-messages"></a>エラーとメッセージの処理
@@ -34,15 +34,15 @@ ms.locfileid: "73783468"
   
  診断情報を開発時に使用すると、ハードコードした SQL ステートメントに存在する、無効なハンドルや構文エラーなどのプログラミング エラーを把握できます。 実行時に使用すると、ユーザーが入力した SQL ステートメントのデータの切り捨て、規則違反、構文エラーなどの実行時エラーや警告を確認できます。 一般的に、プログラミング ロジックはリターン コードを基に組み立てます。  
   
- たとえば、アプリケーションが**Sqlfetch**を呼び出して結果セット内の行を取得した後、結果セットの末尾に到達したか (SQL_NO_DATA)、情報メッセージが返されたかどうか (SQL_SUCCESS_WITH_INFO)、またはエラーが発生しました (SQL_ERROR)。  
+ たとえば、アプリケーションが**Sqlfetch**を呼び出して結果セットの行を取得すると、結果セットの末尾に到達したか (SQL_NO_DATA)、情報メッセージが返されたか (SQL_SUCCESS_WITH_INFO)、エラーが発生したか (SQL_ERROR) が返されます。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーが SQL_SUCCESS 以外のものを返す場合、アプリケーションは**SQLGetDiagRec**を呼び出して、情報メッセージまたはエラーメッセージを取得できます。 複数のメッセージがある場合は、 **SQLGetDiagRec**を使用してメッセージセットを上下にスクロールします。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC ドライバーが SQL_SUCCESS 以外のものを返した場合、アプリケーションは、情報メッセージまたはエラーメッセージを取得するために**SQLGetDiagRec**を呼び出すことができます。 複数のメッセージがある場合は、 **SQLGetDiagRec**を使用してメッセージセットを上下にスクロールします。  
   
  リターン コード SQL_INVALID_HANDLE は常にプログラミング エラーを示します。実行時にはこのコードが返されないようにしてください。 それ以外のリターン コードは実行時の情報を含んでいます。ただし、SQL_ERROR はプログラミング エラーを示す場合もあります。  
   
- 元の [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ネイティブ API、DB-LIBRARY (C 用) を使用すると、アプリケーションで、エラーまたはメッセージを返すコールバックエラー処理関数とメッセージ処理関数をインストールできます。 PRINT、RAISERROR、DBCC、SET など、一部の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントは、結果セットではなく DB-Library メッセージ ハンドラー関数に結果を返します。 しかし、ODBC API にはそのようなコールバック機能がありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]から返されたメッセージを検出すると、ODBC リターンコードが SQL_SUCCESS_WITH_INFO または SQL_ERROR に設定され、そのメッセージが1つ以上の診断レコードとして返されます。 そのため、ODBC アプリケーションでは、これらのリターンコードを注意深くテストし、 **SQLGetDiagRec**を呼び出してメッセージデータを取得する必要があります。  
+ 元[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のネイティブ API である db-library (C) を使用すると、アプリケーションは、エラーまたはメッセージを返すコールバックエラー処理関数およびメッセージ処理関数をインストールできます。 PRINT、RAISERROR、DBCC、SET など、一部の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントは、結果セットではなく DB-Library メッセージ ハンドラー関数に結果を返します。 しかし、ODBC API にはそのようなコールバック機能がありません。 から[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返さ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]れたメッセージが Native Client odbc ドライバーによって検出されると、odbc リターンコードが SQL_SUCCESS_WITH_INFO または SQL_ERROR に設定され、そのメッセージが1つ以上の診断レコードとして返されます。 そのため、ODBC アプリケーションでは、これらのリターンコードを注意深くテストし、 **SQLGetDiagRec**を呼び出してメッセージデータを取得する必要があります。  
   
- エラーのトレースの詳細については、「[データ アクセスのトレース](https://go.microsoft.com/fwlink/?LinkId=125805)」を参照してください。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]に追加されたエラートレースの機能強化の詳細については、「[拡張イベントログの診断情報](../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md)へのアクセス」を参照してください。  
+ エラーのトレースの詳細については、「[データ アクセスのトレース](https://go.microsoft.com/fwlink/?LinkId=125805)」を参照してください。 で[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]追加されたエラートレースの機能強化の詳細については、「[拡張イベントログの診断情報へのアクセス](../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md)」を参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   

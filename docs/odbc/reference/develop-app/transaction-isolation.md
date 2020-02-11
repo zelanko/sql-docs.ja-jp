@@ -1,5 +1,5 @@
 ---
-title: トランザクションの分離 |Microsoft Docs
+title: トランザクション分離 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,14 +14,14 @@ ms.assetid: 351bfe5c-3b26-4010-9b9c-22e796135f3b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0cf11d125bbdfab3c65d08fbf7d27a5ebe7f9096
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67985095"
 ---
 # <a name="transaction-isolation"></a>トランザクション分離
-*トランザクション分離*複数の同時実行トランザクション間の相互作用の度合いを示します。 これが重要な理由を表示するには、シリアル化可能性の概念を紹介する必要があります。  
+*トランザクションの分離*とは、複数の同時実行トランザクション間の相互作用の程度を指します。 これが重要な理由を確認するには、まず、直列化の概念を確認する必要があります。  
   
  このセクションでは、次のトピックを扱います。  
   

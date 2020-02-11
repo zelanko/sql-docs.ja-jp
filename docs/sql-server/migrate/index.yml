@@ -1,0 +1,103 @@
+### YamlMime:Landing
+title: SQL Server の移行に関するドキュメント
+summary: オンプレミスおよびクラウドの SQL Server への移行に役立つ技術ドキュメントです。
+metadata:
+  title: SQL Server の移行に関するドキュメント
+  description: 該当する SQL Server の移行パスを選択してください。
+  ms.prod: sql
+  ms.topic: landing-page
+  author: MashaMSFT
+  ms.author: mathoma
+  ms.date: 12/09/2019
+  ms.reviewer: jtoland
+  ms.openlocfilehash: 4ca06be03cadd08c7f49561f7b8066c7883f33f3
+  ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+  ms.translationtype: HT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 01/31/2020
+  ms.locfileid: "75322365"
+landingContent:
+- title: SQL から SQL Server へ
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Data Migration Assistant (DMA)
+      url: ../../dma/dma-overview.md
+    - text: Database Experimentation Assistant
+      url: ../../dea/database-experimentation-assistant-overview.md
+  - linkListType: download
+    links:
+    - text: Data Migration Assistant (DMA)
+      url: https://www.microsoft.com/download/details.aspx?id=53595
+    - text: Database Experimentation Assistant
+      url: https://www.microsoft.com/download/details.aspx?id=54090
+- title: SQL 以外から SQL と Azure へ
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: SQL Server Migration Assistant (SSMA)
+      url: ../../ssma/sql-server-migration-assistant.md
+  - linkListType: get-started
+    links:
+    - text: Oracle から
+      url: ../../ssma/oracle/sql-server-migration-assistant-for-oracle-oracletosql.md
+    - text: Access から
+      url: ../../ssma/access/sql-server-migration-assistant-for-access-accesstosql.md
+    - text: DB2 から
+      url: ../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md
+    - text: MySQL から
+      url: ../../ssma/mysql/sql-server-migration-assistant-for-mysql-mysqltosql.md
+    - text: Sybase から
+      url: ../../ssma/sybase/sql-server-migration-assistant-for-sybase-sybasetosql.md
+- title: SQL から Azure SQL へ
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Azure SQL データベース
+      url: /azure/sql-database/sql-database-technical-overview
+    - text: Azure SQL Server 仮想マシン
+      url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
+  - linkListType: deploy
+    links:
+    - text: Database Migration Service (DMS)
+      url: /azure/dms/
+    - text: Data Migration Assistant (DMA)
+      url: ../../dma/dma-overview.md
+  - linkListType: concept
+    links:
+    - text: さらに広範な移行プロセス
+      url: /azure/cloud-adoption-framework/migrate/expanded-scope/sql-migration
+- title: リソース
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: SQL Server Migration Center
+      url: https://azure.microsoft.com/migration/sql-server/
+    - text: データベース移行ガイド
+      url: https://datamigration.microsoft.com/
+    - text: Azure 移行サービス
+      url: https://azure.microsoft.com/services/azure-migrate/
+    - text: データ移行に関するブログ
+      url: https://techcommunity.microsoft.com/t5/Microsoft-Data-Migration/bg-p/MicrosoftDataMigration
+    - text: SQL Server の最新化 (SQL PASS)
+      url: https://www.youtube.com/watch?v=5RPkuQHcxxs
+  - linkListType: download
+    links:
+    - text: Microsoft Assessment and Planning Toolkit
+      url: https://www.microsoft.com/download/details.aspx?id=7826
+- title: サポート終了
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: 概要
+      url: ../end-of-support/sql-server-end-of-life-overview.md
+    - text: SQL Server 2008 および R2
+      url: https://www.microsoft.com/cloud-platform/windows-sql-server-2008
+    - text: 拡張サポート更新プログラム (ESU)
+      url: ../end-of-support/sql-server-extended-security-updates.md
+    - text: Azure VM での無料 ESU
+      url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-2008-eos-extend-support
+  - linkListType: download
+    links:
+    - text: 拡張セキュリティ更新プログラム データシート PDF
+      url: http://download.microsoft.com/download/A/3/F/A3F0908A-0FD8-494C-82BC-E75F313F3FAD/Extended_Security_Updates_for_Windows_Server_2008_and_SQL_Server_2008_End_of_Service.pdf
