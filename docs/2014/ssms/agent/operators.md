@@ -24,14 +24,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 03deab738f374716002c4d78e07078e90fb41822
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68189019"
 ---
-# <a name="operators"></a>演算子
-  オペレーターとは、ジョブの完了時や警告の発生時に電子通知を受け取ることのできる人またはグループの別名です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスでは、オペレーターを経由した管理者の通知がサポートされています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの通知機能および監視機能はオペレーターが有効にします。  
+# <a name="operators"></a>オペレーター
+  オペレーターとは、ジョブの完了時や警告の発生時に電子通知を受け取ることのできる人またはグループの別名です。 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスでは、オペレーターを経由した管理者の通知がサポートされています。 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの通知機能および監視機能はオペレーターが有効にします。  
   
 ## <a name="operator-attributes-and-concepts"></a>オペレーターの属性と概念  
  オペレーターの主な属性は次のとおりです。  
@@ -47,9 +49,9 @@ ms.locfileid: "68189019"
  オペレーターの連絡先情報では、オペレーターに通知する方法を定義します。 オペレーターへの通知には、電子メール、ポケットベル、または **net send** コマンドを使用できます。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の今後のバージョンでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントからポケットベル オプションと **net send** オプションが削除される予定です。 新しい開発作業では、これらの機能の使用を避け、現在これらの機能を使用しているアプリケーションは修正するようにしてください。  
+>  ポケットベルと**net send**のオプションは、の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]将来の[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バージョンでエージェントから削除される予定です。 新しい開発作業では、これらの機能の使用を避け、現在これらの機能を使用しているアプリケーションは修正するようにしてください。  
   
--   **電子メールによる通知**  
+-   **電子メール通知**  
   
      電子メールによる通知では、電子メール メッセージがオペレーターに送信されます。 電子メールによる通知を使用するには、オペレーターの電子メール アドレスを指定します。  
   
@@ -71,21 +73,23 @@ ms.locfileid: "68189019"
   
          すべてのオペレーターが同じポケットベル プロバイダーを利用している場合は、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、ポケットベル電子メール間システムが要求する特別な電子メール書式を指定できます。 この特別な書式は、プレフィックスまたはサフィックスの形式で、電子メールの次の行に含めることができます。  
   
-         **Subject:**  
+         **件名：**  
   
          **Cc**:  
   
-         **To**:  
+         **対象**:  
   
     > [!NOTE]  
     >  容量の小さい英数字のポケットベル システムを使用している場合は、エラーのテキストをポケットベルの通知から除外することで、送信されるテキストを短縮できます。 容量の小さい英数字のポケットベル システムには、1 ページあたりのバイト数が 64 バイトに制限されているものなどがあります。  
   
 -   **net sendnotification**  
   
-     この方法では、 **net send** コマンドを使用して、オペレーターにメッセージを送信します。 **net send**では、ネットワーク メッセージの受信者 (コンピューターまたはユーザー) を指定します。  
+     この方法では、 **net send** コマンドを使用して、オペレーターにメッセージを送信します。 
+  **net send**では、ネットワーク メッセージの受信者 (コンピューターまたはユーザー) を指定します。  
   
     > [!NOTE]  
-    >  **net send** コマンドでは、Microsoft Windows Messenger を使用します。 警告を正しく送信するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行しているコンピューターと、オペレーターが使用しているコンピューターの両方で、このサービスを実行する必要があります。  
+    >  
+  **net send** コマンドでは、Microsoft Windows Messenger を使用します。 警告を正しく送信するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行しているコンピューターと、オペレーターが使用しているコンピューターの両方で、このサービスを実行する必要があります。  
   
 ## <a name="alerting-and-fail-safe-operators"></a>警告通知先オペレーターと緊急時のオペレーター  
  警告に応答して通知を受けるオペレーターを選択できます。 警告のスケジュールを設定して、オペレーターへの通知を順番に割り当てることも可能です。 たとえば、月曜日、水曜日、金曜日に発生した警告は管理者 A に通知し、火曜日、木曜日、土曜日に発生した警告は管理者 B に通知することができます。  
@@ -98,9 +102,10 @@ ms.locfileid: "68189019"
   
      プライマリ オペレーターに通知できなかった理由には、ポケットベル アドレスが誤っているか、オペレーターが非番であるなどがあります。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントが **msdb** データベースのシステム テーブルにアクセスできない場合  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントは、 **msdb**データベースのシステムテーブルにアクセスできません。  
   
-     **sysnotifications** システム テーブルは、警告に関してオペレーターが担う責任を指定します。  
+     
+  **sysnotifications** システム テーブルは、警告に関してオペレーターが担う責任を指定します。  
   
  緊急時のオペレーターは、安全のための機能です。 緊急時の職務を他のオペレーターに割り当て直すか、または緊急時の割り当てを削除しなければ、緊急時の職務に割り当てられたオペレーターを削除することはできません。  
   
@@ -111,17 +116,18 @@ ms.locfileid: "68189019"
   
 -   ポケットベル通知機能を使用する場合は、サードパーティによるポケットベルとメール間のソフトウェアとハードウェアが必要です。  
   
--   **net send**を使用するには、指定のコンピューターにオペレーターがログオンしており、そのコンピューターで Windows Messenger からのメッセージの受信が許可されている必要があります。  
+-   
+  **net send**を使用するには、指定のコンピューターにオペレーターがログオンしており、そのコンピューターで Windows Messenger からのメッセージの受信が許可されている必要があります。  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
 |||  
 |-|-|  
-|**タスク**|**トピック**|  
+|**処理手順**|**トピック**|  
 |オペレーターの作成に関連するタスク|[オペレーターの作成](create-an-operator.md)<br /><br /> [Designate a Fail-Safe Operator](designate-a-fail-safe-operator.md)|  
-|警告の割り当てに関連するタスク|[オペレーターへの警告の割り当て](assign-alerts-to-an-operator.md)<br /><br /> [警告への応答の定義 (SQL Server Management Studio)](define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br /> [sp_add_notification &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql)<br /><br /> [オペレーターへの警告の割り当て](assign-alerts-to-an-operator.md)|  
+|警告の割り当てに関連するタスク|[オペレーターへの警告の割り当て](assign-alerts-to-an-operator.md)<br /><br /> [アラート &#40;SQL Server Management Studio への応答を定義&#41;](define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br /> [sp_add_notification &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql)<br /><br /> [オペレーターへの警告の割り当て](assign-alerts-to-an-operator.md)|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データベース メール](../../relational-databases/database-mail/database-mail.md)  
   
   

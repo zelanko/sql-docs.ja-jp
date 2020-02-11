@@ -1,5 +1,5 @@
 ---
-title: sys.sp_cdc_stop_job (TRANSACT-SQL) |Microsoft Docs
+title: sp_cdc_stop_job (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,13 +20,13 @@ ms.assetid: 421fc21c-c7a4-407c-8b31-359273b68c63
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 3c166fe18ad7fdd651f07025aa7deb6ea2f599e2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67905156"
 ---
-# <a name="sysspcdcstopjob-transact-sql"></a>sys.sp_cdc_stop_job (TRANSACT-SQL)
+# <a name="syssp_cdc_stop_job-transact-sql"></a>sp_cdc_stop_job (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   現在のデータベースに対して変更データ キャプチャ機能のクリーンアップ ジョブまたはキャプチャ ジョブを停止します。  
@@ -41,7 +41,7 @@ sys.sp_cdc_stop_job [ [ @job_type = ] 'job_type' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ [ @job_type = ] 'job_type_' ]` 追加するジョブの種類。 *job_type*は**nvarchar (20)** 、既定値は**キャプチャ**します。 有効な入力は**キャプチャ**と**クリーンアップ**します。  
+`[ [ @job_type = ] 'job_type_' ]`追加するジョブの種類。 *job_type*は**nvarchar (20)** で、既定値は**capture**です。 有効な入力は**キャプチャ**と**クリーンアップ**です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -49,13 +49,13 @@ sys.sp_cdc_stop_job [ [ @job_type = ] 'job_type' ]
 ## <a name="result-sets"></a>結果セット  
  なし  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  管理者は sys.sp_cdc_stop_job を使用してキャプチャ ジョブまたはクリーンアップ ジョブのいずれかを明示的に停止できます。  
   
 ## <a name="permissions"></a>アクセス許可  
  db_owner 固定データベース ロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、`AdventureWorks2012` データベースのクリーンアップ ジョブを停止します。  
   
 ```  
@@ -65,8 +65,8 @@ EXEC sys.sp_cdc_stop_job @job_type = N'capture';
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [dbo.cdc_jobs &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
- [sys.sp_cdc_start_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-start-job-transact-sql.md)  
+## <a name="see-also"></a>参照  
+ [dbo. cdc_jobs &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
+ [sp_cdc_start_job &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-start-job-transact-sql.md)  
   
   

@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f53e1780beaea56ba659c11771d469163a964971
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73790468"
 ---
 # <a name="table-valued-parameters-odbc"></a>テーブル値パラメーター (ODBC)
@@ -26,7 +26,7 @@ ms.locfileid: "73790468"
 
   ODBC のテーブル値パラメーターのサポートにより、クライアント アプリケーションは、1 回の呼び出しで複数の行をサーバーに送信することで、パラメーター化されたデータをサーバーに効率的に送信できます。  
   
- サーバー上のテーブル値パラメーターの詳細については、「[テーブル値パラメーター &#40;の&#41;使用データベースエンジン](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)」を参照してください。  
+ サーバー上のテーブル値パラメーターの詳細については、「[テーブル値パラメーターの使用 &#40;データベースエンジン&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)」を参照してください。  
   
  ODBC でテーブル値パラメーターをサーバーに送信するには、次の 2 つの方法があります。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "73790468"
  一般的なタスクの実行方法について説明します。  
   
 ## <a name="see-also"></a>参照  
- [ &#40;ODBC&#41; ](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  の SQL Server Native Client  
+ [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
  [テーブル値パラメーター &#40;SQL Server Native Client&#41;](../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md)  
   
   

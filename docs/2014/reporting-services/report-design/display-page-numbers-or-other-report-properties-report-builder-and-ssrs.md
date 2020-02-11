@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8530a13af0e0ae6f1b769adcaa7cb6e9a3fbc0ae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106036"
 ---
 # <a name="display-page-numbers-or-other-report-properties-report-builder-and-ssrs"></a>ページ番号またはその他のレポート プロパティの表示 (レポート ビルダーおよび SSRS)
@@ -22,19 +22,19 @@ ms.locfileid: "66106036"
   
 -   [実行時間]  
   
--   [ページ番号]  
+-   ページ番号  
   
 -   [レポート フォルダー]  
   
--   [レポート名]  
+-   レポート名  
   
 -   [レポート サーバー URL]  
   
 -   [総ページ数]  
   
--   [ユーザー ID]  
+-   User ID  
   
--   [言語]  
+-   言語  
   
  ページ番号については、番号の前に "ページ" という語を追加したり、 総ページ数を表示したりすることもできます。  
   
@@ -60,9 +60,9 @@ ms.locfileid: "66106036"
   
 ### <a name="to-add-the-word-page-before-the-page-number"></a>ページ番号の前に "ページ" という語を追加するには  
   
-1.  [&PageNumber] が含まれているテキスト ボックスを右クリックし、**[式]** をクリックします。  
+1.  [&PageNumber] が含まれているテキスト ボックスを右クリックし、 **[式]** をクリックします。  
   
-     **[式の設定:値]** テキスト ボックスに、=Globals!PageNumber という式が含まれています。  
+     **[式の設定: 値]** テキスト ボックスに、=Globals!PageNumber という式が含まれています。  
   
 2.  = (等号) の後ろにカーソルを置き、「`"Page " &`」と入力します。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "66106036"
   
 1.  式が含まれているテキスト ボックスを右クリックし、 **[式]** をクリックします。  
   
-2.  式の末尾に「**&"/"&**」と入力します。  
+2.  式の末尾に「 **&"/"&** 」と入力します。  
   
 3.  [カテゴリ] ペインで、 **[組み込みフィールド]** を展開し、 **[TotalPages]** をダブルクリックします。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "66106036"
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ページ ヘッダーとページ フッター &#40;レポート ビルダーおよび SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)   
  [テキスト ボックス内のテキストの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](format-text-in-a-text-box-report-builder-and-ssrs.md)  
   

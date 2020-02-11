@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ab4f9b06758d29ff1f988f37b95ce92206f34d39
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107674"
 ---
 # <a name="save-a-report-to-a-sharepoint-library-report-builder"></a>SharePoint ライブラリへのレポートの保存 (レポート ビルダー)
@@ -37,6 +37,6 @@ ms.locfileid: "66107674"
     >  レポートを変更した後、保存せずに 10 時間経過すると、サーバーから切断されます。変更内容は保存されません。 その場合は、右下のステータス バーで **[切断]** をクリックしてから **[接続]** をクリックします。 使用可能なサーバーのリストに、直近のサーバーが表示されます。 それを選択すると、レポートが再度接続されます。  
   
 ## <a name="see-also"></a>参照  
- [レポートの検索、表示、管理 (レポート ビルダーおよび SSRS)](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
+ [レポートの検索、表示、管理 &#40;レポート ビルダーおよび SSRS&#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

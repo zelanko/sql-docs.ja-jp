@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9334e4d44663f5d0637d6933eb7a72eae74d4a84
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243648"
 ---
 # <a name="search-an-active-document-incrementally"></a>アクティブ ドキュメントのインクリメンタル検索
@@ -30,8 +30,7 @@ ms.locfileid: "75243648"
   
 1.  検索するファイルまたはウィンドウを開きます。  
   
-2.  
-  **[編集]** メニューの **[詳細設定]** をポイントし、 **[インクリメンタル検索]** をクリックします。  
+2.  **[編集]** メニューの **[詳細設定]** をポイントし、 **[インクリメンタル検索]** をクリックします。  
   
      カーソルのアイコンが、検索方向を示す矢印の付いた双眼鏡に変わり、ステータス バーに [インクリメンタル検索] と表示されます。  
   
@@ -50,9 +49,9 @@ ms.locfileid: "75243648"
   
 ## <a name="see-also"></a>参照  
  [検索と置換](search-and-replace.md)   
- [ドキュメントを対話形式で検索する](search-documents-interactively.md)   
- [結果一覧を使用してドキュメントを検索する](search-documents-using-results-lists.md)   
- [ワイルドカードを使用してテキストを検索する](search-text-with-wildcards.md)   
+ [ドキュメントの対話形式の検索](search-documents-interactively.md)   
+ [結果一覧を使用してドキュメントを検索する方法](search-documents-using-results-lists.md)   
+ [ワイルドカードを使用したテキスト検索](search-text-with-wildcards.md)   
  [正規表現によるテキストの検索](search-text-with-regular-expressions.md)  
   
   

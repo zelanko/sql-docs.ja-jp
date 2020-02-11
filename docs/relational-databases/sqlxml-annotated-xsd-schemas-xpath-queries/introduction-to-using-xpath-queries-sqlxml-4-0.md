@@ -16,10 +16,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f82c330e2d18f05d0f358171a4ffeabc63ac9c3c
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75246593"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>XPath クエリの使用について (SQLXML 4.0)
@@ -72,7 +72,7 @@ ms.locfileid: "75246593"
     > [!NOTE]  
     >  場合によっては、**リレーションシップ**注釈の**キーフィールド**の注釈またはキーによって、明確なドキュメント順序が生成されることがあります。 ただし、これはこれらの注釈を主に使用することではありません。詳細については、「 [sql: キーフィールドを使用したキー列の識別 &#40;sqlxml 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md) 」と「 [sql:&#41;4.0 &#40;Relationship を使用したリレーションシップの指定](../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-relationships-using-sql-relationship-sqlxml-4-0.md)」を参照してください。  
   
--   **データの種類**  
+-   **データ型**  
   
      SQLXML 4.0 では、XPath**文字列**、**数値**、および**ブール**データ型の実装に制限があります。 詳細については、「 [XPath データ型 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/xpath-data-types-sqlxml-4-0.md)」を参照してください。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "75246593"
 ## <a name="supported-functionality"></a>サポートされる機能  
  次の表は、SQLXML 4.0 で実装されている XPath 言語の機能です。  
   
-|機能|item|サンプル クエリへのリンク|  
+|機能|アイテム|サンプル クエリへのリンク|  
 |-------------|----------|----------------------------|  
 |軸|**属性**、**子**、**親**、および**自己**軸|[XPath クエリでの軸の指定 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-axes-in-xpath-queries-sqlxml-4-0.md)|  
 |連続する述語や入れ子になった述語など、ブール値を使用する述語||[XPath クエリでの算術演算子の指定 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
@@ -105,7 +105,7 @@ ms.locfileid: "75246593"
 ## <a name="unsupported-functionality"></a>サポートされない機能  
  次の表は、SQLXML 4.0 で実装されていない XPath 言語の機能です。  
   
-|機能|item|  
+|機能|アイテム|  
 |-------------|----------|  
 |軸|**先祖**、**先祖、また**は self、**子孫**、**子孫、または自己 (//)**、**次**の**兄弟**、**名前空間**、**先行**、**前の兄弟**|  
 |数値を使用する述語||  

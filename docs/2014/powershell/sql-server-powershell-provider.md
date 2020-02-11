@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3e8fc0f770d8763ccb330b3c7588a97604d876e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62762844"
 ---
 # <a name="sql-server-powershell-provider"></a>SQL Server PowerShell Provider
@@ -33,9 +33,10 @@ ms.locfileid: "62762844"
 ## <a name="the-sql-server-powershell-hierarchy"></a>SQL Server PowerShell の階層  
  データまたはオブジェクトのモデルを階層で表すことができる製品は、Windows PowerShell プロバイダーを使用して階層を公開できます。 階層は、Windows ファイル システムで使用されるものに似たドライブおよびパス構造を使用して公開されます。  
   
- それぞれの Windows PowerShell プロバイダーは 1 つ以上のドライブを実装します。 各ドライブは、関連するオブジェクトの階層のルート ノードです。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] プロバイダーは、SQLSERVER: ドライブを実装します。 プロバイダーは、SQLSERVER: ドライブの主要フォルダーのセットも定義します。 各フォルダーおよびそのサブフォルダーは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理オブジェクト モデルを使用してアクセスできるオブジェクトのセットを表します。 これらのいずれかの主要フォルダーで始まるパスでサブフォルダーにフォーカスを設定すると、関連付けられたオブジェクト モデルのメソッドを使用して、このノードによって表されるオブジェクトの操作を実行できます。 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] プロバイダーが実装する Windows PowerShell フォルダーを次の表に示します。  
+ それぞれの Windows PowerShell プロバイダーは 1 つ以上のドライブを実装します。 各ドライブは、関連するオブジェクトの階層のルート ノードです。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] プロバイダーは、SQLSERVER: ドライブを実装します。 プロバイダーは、SQLSERVER: ドライブの主要フォルダーのセットも定義します。 各フォルダーおよびそのサブフォルダーは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理オブジェクト モデルを使用してアクセスできるオブジェクトのセットを表します。 これらのいずれかの主要フォルダーで始まるパスでサブフォルダーにフォーカスを設定すると、関連付けられたオブジェクト モデルのメソッドを使用して、このノードによって表されるオブジェクトの操作を実行できます。 
+  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] プロバイダーが実装する Windows PowerShell フォルダーを次の表に示します。  
   
-|フォルダー|SQL Server オブジェクト モデルの名前空間|オブジェクト|  
+|Folder|SQL Server オブジェクト モデルの名前空間|Objects|  
 |------------|---------------------------------------|-------------|  
 |SQLSERVER:\SQL|<xref:Microsoft.SqlServer.Management.Smo><br /><br /> <xref:Microsoft.SqlServer.Management.Smo.Agent><br /><br /> <xref:Microsoft.SqlServer.Management.Smo.Broker><br /><br /> <xref:Microsoft.SqlServer.Management.Smo.Mail>|データベース オブジェクト (テーブル、ビュー、ストアド プロシージャなど)|  
 |SQLSERVER:\SQLPolicy|<xref:Microsoft.SqlServer.Management.Dmf><br /><br /> <xref:Microsoft.SqlServer.Management.Facets>|ポリシー ベースの管理オブジェクト (ポリシーやファセットなど)|  
@@ -58,7 +59,7 @@ SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012\Tables\Purchasing.
   
  パスに含まれるコレクション ノードは、関連付けられたオブジェクト モデルのコレクション クラスに関連付けられます。 オブジェクト名ノードは、次の表に示すように、関連付けられたオブジェクト モデルのオブジェクト クラスに関連付けられます。  
   
-|パス|SMO クラス|  
+|Path|SMO クラス|  
 |----------|---------------|  
 |SQLSERVER:\SQL\MyComputer\DEFAULT\Databases|<xref:Microsoft.SqlServer.Management.Smo.DatabaseCollection>|  
 |SQLSERVER:\SQL\MyComputer\DEFAULT\Databases\AdventureWorks2012|<xref:Microsoft.SqlServer.Management.Smo.Database>|  

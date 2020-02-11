@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bea56ada3ef490225fd08892128abb482b9342a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62999538"
 ---
 # <a name="shared-memory-properties"></a>[共有メモリのプロパティ] ダイアログ ボックス
@@ -24,7 +24,7 @@ ms.locfileid: "62999538"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を再起動しないと、このプロトコルを有効または無効にできません。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **有効**  
  可能な値は、 **[はい]** と **[いいえ]** です。 既定では、共有メモリ プロトコルは有効になっています。  
   

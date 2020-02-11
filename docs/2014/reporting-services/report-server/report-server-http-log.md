@@ -13,29 +13,30 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ca3437315803ff8435640bf58219fe93f96e242a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103395"
 ---
 # <a name="report-server-http-log"></a>レポート サーバーの HTTP ログ
+  
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーの HTTP ログ ファイルには、レポート サーバーによって処理された HTTP 要求および HTTP 応答がすべて記録されます。 要求のオーバーフローやタイムアウト エラーは、レポート サーバーに到達しないため、ログ ファイルには記録されません。  
   
- HTTP ログは既定では有効になっていません。 HTTP ログ記録を有効にするには、 **ReportingServicesService.exe.config**インストールでこの機能を使用する構成ファイル。  
+ HTTP ログは既定では有効になっていません。 HTTP ログを有効にするには、インストールでこの機能を使用するように**Reportingservices**の構成ファイルを変更します。  
   
 ## <a name="viewing-log-information"></a>ログ情報の表示  
  ログは、ASCII テキスト ファイルです。 任意のテキスト エディターでファイルを閲覧できます。 レポート サーバーの HTTP ログ ファイルは、IIS における W3C 拡張ログ ファイルに相当し、同様のフィールドが使用されています。そのため、既存の IIS ログ ファイル ビューアーを使用して、レポート サーバーの HTTP ログ ファイルを閲覧することもできます。 次の表に、HTTP ログ ファイルの補足情報を示します。  
   
 |||  
 |-|-|  
-|**[ファイル名]**|既定では、ログ ファイル名は次のとおりです。<br /><br /> `ReportServerService_HTTP_<timestamp>.log.`<br /><br /> ReportingServicesService.exe.config ファイルで HttpTraceFileName 属性を変更することにより、ファイル名のプレフィックスをカスタマイズできます。 タイムスタンプには、協定世界時 (UTC) が使用されます。|  
+|**ファイル名**|既定では、ログ ファイル名は次のとおりです。<br /><br /> `ReportServerService_HTTP_<timestamp>.log.`<br /><br /> ReportingServicesService.exe.config ファイルで HttpTraceFileName 属性を変更することにより、ファイル名のプレフィックスをカスタマイズできます。 タイムスタンプには、協定世界時 (UTC) が使用されます。|  
 |**ファイルの場所**|ファイルは、次の場所に書き込まれます。<br /><br /> `\Microsoft SQL Server\<SQL Server Instance>\Reporting Services\LogFiles`|  
 |**ファイル形式**|このファイルは EN-US 形式です。 ASCII テキスト ファイルです。|  
-|**ファイルの作成と保存**|HTTP ログは、構成ファイルでログ機能を有効にし、サービスを再開した後、レポート サーバーによって HTTP 要求が処理されて初めて作成されます。 設定を構成したにもかかわらず、ログ ファイルが確認できない場合は、レポートを開くか、レポート サーバー アプリケーション (レポート マネージャーなど) を起動して、HTTP 要求を生成すると、ログ ファイルが作成されます。<br /><br /> ログ ファイルの新しいインスタンスは、各サービスが再開され、その後、HTTP 要求がレポート サーバーに送信されると作成されます。<br /><br /> 既定では、トレース ログのサイズの上限は 32 MB であり、14 日後に削除されます。|  
+|**ファイルの作成および保存**|HTTP ログは、構成ファイルでログ機能を有効にし、サービスを再開した後、レポート サーバーによって HTTP 要求が処理されて初めて作成されます。 設定を構成したにもかかわらず、ログ ファイルが確認できない場合は、レポートを開くか、レポート サーバー アプリケーション (レポート マネージャーなど) を起動して、HTTP 要求を生成すると、ログ ファイルが作成されます。<br /><br /> ログ ファイルの新しいインスタンスは、各サービスが再開され、その後、HTTP 要求がレポート サーバーに送信されると作成されます。<br /><br /> 既定では、トレース ログのサイズの上限は 32 MB であり、14 日後に削除されます。|  
   
 ## <a name="configuration-settings-for-report-server-http-log"></a>レポート サーバーの HTTP ログの構成設定  
- レポート サーバーの HTTP ログを構成するには、メモ帳を使用して変更する、 **ReportingServicesService.exe.config**ファイル。 構成ファイルは、\Program Files\Microsoft SQL Server\MSSQL.n\Reporting Services\ReportServer\Bin フォルダーに格納されています。  
+ レポートサーバーの HTTP ログを構成するには、メモ帳を使用して、 **Reportingservices の app.config**ファイルを変更します。 構成ファイルは、\Program Files\Microsoft SQL Server\MSSQL.n\Reporting Services\ReportServer\Bin フォルダーに格納されています。  
   
  HTTP サーバーを有効にするには、`http:4` を、ReportingServicesService.exe.config ファイルの RStrace セクションに追加します。 その他の HTTP ログ ファイル エントリはすべてオプションです。 次の例には、RStrace セクションに上書きする形でセクション全体を貼り付けて、不要な設定を削除するだけで済むように、すべての設定が含まれています。  
   
@@ -54,18 +55,18 @@ ms.locfileid: "66103395"
 ```  
   
 ## <a name="log-file-fields"></a>ログ ファイル フィールド  
- 次の表は、ログで利用できるフィールドの一覧です。 ログに含めるフィールドは、`HTTPTraceSwitches` 構成設定で指定できます。 **既定**列を指定、フィールドを追加するどうか、ログ ファイルに自動的に指定しない場合`HTTPTraceSwitches`します。  
+ 次の表は、ログで利用できるフィールドの一覧です。 ログに含めるフィールドは、`HTTPTraceSwitches` 構成設定で指定できます。 を**** 指定`HTTPTraceSwitches`しない場合、既定の列によって、フィールドがログファイルに自動的に含まれるかどうかが指定されます。  
   
-|フィールド|説明|既定|  
+|フィールド|[説明]|Default|  
 |-----------|-----------------|-------------|  
 |HttpTraceFileName|この値は省略可能です。 既定値は ReportServerServiceHTTP_ です。 別のファイル名前付け規則 (ログ ファイルを一元管理する場合はサーバー名など) を使用する場合は、異なる値を指定できます。|はい|  
 |HTTPTraceSwitches|この値は省略可能です。 指定した場合、ログ ファイルに使用するフィールドをコンマ区切り形式で構成できます。|いいえ|  
-|date|アクティビティが発生した日付。|いいえ|  
+|Date|アクティビティが発生した日付。|いいえ|  
 |Time|アクティビティが発生した時刻。|いいえ|  
 |ClientIp|レポート サーバーにアクセスしているクライアントの IP アドレス。|はい|  
 |UserName|レポート サーバーにアクセスしたユーザー名。|いいえ|  
 |ServerPort|接続に使用されたポート番号。|いいえ|  
-|ホスト|ホスト ヘッダーの内容。|いいえ|  
+|Host|ホスト ヘッダーの内容。|いいえ|  
 |方法|クライアントから呼び出されたアクションまたは SOAP メソッド。|はい|  
 |UriStem|アクセスされたリソース。|はい|  
 |UriQuery|リソースへのアクセスに使用されたクエリ。|いいえ|  
@@ -78,7 +79,7 @@ ms.locfileid: "66103395"
 |CookieSent|サーバーによって送信されたクッキーの内容。|いいえ|  
 |Referrer|クライアントが直前に訪問したサイト。|いいえ|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Report Server Service Trace Log](report-server-service-trace-log.md)   
  [Reporting Services のログ ファイルとソース](../report-server/reporting-services-log-files-and-sources.md)   
  [エラーとイベントのリファレンス (Reporting Services)](../troubleshooting/errors-and-events-reference-reporting-services.md)  

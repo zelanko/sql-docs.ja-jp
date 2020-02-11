@@ -13,11 +13,11 @@ ms.assetid: 942f53f8-7755-418c-b453-047b3e030156
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 71e2fc3c9b7697837575e76d91dfa3ac3a2a5527
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68093071"
 ---
 # <a name="sqlstate"></a>SQLSTATE
-データ ソースで発生するエラーの場合は、ODBC ドライバーは、返されたネイティブ エラーを適切な SQLSTATE にマップします。 ドライバーまたは ODBC ドライバーをドライバー マネージャーによって検出されたエラーまたはドライバー マネージャーが適切な SQLSTATE を生成します。
+データソースで発生したエラーの場合、ODBC ドライバーは返されたネイティブエラーを適切な SQLSTATE にマップします。 ドライバーまたはドライバーマネージャーによって検出されたエラーについては、ODBC ドライバーまたはドライバーマネージャーによって、適切な SQLSTATE が生成されます。

@@ -1,5 +1,5 @@
 ---
-title: sys.service_broker_endpoints (TRANSACT-SQL) |Microsoft Docs
+title: service_broker_endpoints (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,38 +20,39 @@ ms.assetid: 6979ec9b-0043-411e-aafb-0226fa26c5ba
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 33d94bf5a709c2581c6ee99a1e019f4eebcabe0d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68132955"
 ---
-# <a name="sysservicebrokerendpoints-transact-sql"></a>sys.service_broker_endpoints (TRANSACT-SQL)
+# <a name="sysservice_broker_endpoints-transact-sql"></a>service_broker_endpoints (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  このカタログ ビューには、Service Broker エンドポイントの 1 つの行が含まれています。 このビューですべての行については、同じ行に対応**endpoint_id**で、 **sys.tcp_endpoints** TCP 構成メタデータを含むビュー。 Service Broker で使用できるプロトコルは TCP のみです。  
+  このカタログビューには、Service Broker エンドポイントの1つの行が含まれています。 このビューのすべての行には、TCP 構成メタデータを含む、 **tcp_endpoints**ビューに同じ**endpoint_id**を持つ対応する行があります。 Service Broker で使用できるプロトコルは TCP のみです。  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
-|**\<列を継承 >**|**--**|列を継承[sys.endpoints &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)します。|  
-|**is_message_forwarding_enabled**|**bit**|エンドポイントは、メッセージ転送をサポートします。 初期設定**0** (無効)。 Null を許容しません。|  
-|**message_forwarding_size**|**int**|最大のメガバイト数**tempdb**に転送されるメッセージに使用する領域が許可されています。 初期設定**10**します。 Null を許容しません。|  
-|**connection_auth**|**tinyint**|エンドポイントへの接続に必要な接続認証の種類。次のいずれかになります。<br /><br /> **1** - NTLM<br /><br /> **2** -KERBEROS<br /><br /> **3** -ネゴシエート<br /><br /> **4** -証明書<br /><br /> **5** -NTLM、CERTIFICATE<br /><br /> **6** -KERBEROS、CERTIFICATE<br /><br /> **7** -NEGOTIATE、CERTIFICATE<br /><br /> **8** -CERTIFICATE、NTLM<br /><br /> **9** -証明書、KERBEROS<br /><br /> **10** -CERTIFICATE、NEGOTIATE<br /><br /> Null を許容しません。|  
-|**connection_auth_desc**|**nvarchar(60)**|このエンドポイントは、のいずれかへの接続に必要な接続認証の種類の説明です。<br /><br /> NTLM<br /><br /> KERBEROS<br /><br /> ネゴシエート<br /><br /> CERTIFICATE<br /><br /> NTLM、CERTIFICATE<br /><br /> KERBEROS、CERTIFICATE<br /><br /> NEGOTIATE、CERTIFICATE<br /><br /> CERTIFICATE、NTLM<br /><br /> CERTIFICATE、KERBEROS<br /><br /> CERTIFICATE、NEGOTIATE<br /><br /> NULL 値を許容します。|  
-|**certificate_id**|**int**|認証で使用される証明書の ID (存在する場合)。<br /><br /> 0 = Windows 認証が使用されます。|  
-|**encryption_algorithm**|**tinyint**|暗号化アルゴリズムです。 その説明および対応する DDL オプションで使用可能な値を次に示します。<br /><br /> **0** :NONE。 対応する DDL オプション:無効。<br /><br /> **1** :RC4 です。 対応する DDL オプション: {0} に必要な&#124;アルゴリズム RC4 が必要}。<br /><br /> **2** :AES です。 対応する DDL オプション:アルゴリズム AES が必要です。<br /><br /> **3** :NONE、RC4 です。 対応する DDL オプション: {サポートされている&#124;アルゴリズム RC4 をサポートされています。<br /><br /> **4** :NONE、AES です。 対応する DDL オプション:アルゴリズム AES をサポートします。<br /><br /> **5** :RC4、AES を使用します。 対応する DDL オプション:アルゴリズム RC4 が必要な AES です。<br /><br /> **6** :AES、RC4 です。 対応する DDL オプション:アルゴリズム AES RC4 が必要です。<br /><br /> **7** :NONE、RC4、AES です。 対応する DDL オプション:アルゴリズム RC4 をサポートされている AES です。<br /><br /> **8** :NONE、AES、RC4 です。 対応する DDL オプション:アルゴリズム AES RC4 をサポートします。<br /><br /> Null を許容しません。|  
-|**encryption_algorithm_desc**|**nvarchar(60)**|暗号化アルゴリズムの説明。 使用可能な値と対応する DDL オプションは、以下に示します。<br /><br /> NONE:Disabled<br /><br /> RC4: {0} に必要な&#124;アルゴリズム RC4 が必要}<br /><br /> AES:アルゴリズム AES が必要<br /><br /> NONE、RC4: {サポート&#124;アルゴリズム RC4 をサポート}<br /><br /> NONE、AES:アルゴリズム AES をサポート<br /><br /> RC4、AES:アルゴリズム RC4 が必要な AES<br /><br /> AES、RC4:必要なアルゴリズム AES RC4<br /><br /> NONE、RC4、AES:アルゴリズム RC4 をサポートされている AES<br /><br /> NONE、AES、RC4:サポートされているアルゴリズム AES RC4<br /><br /> NULL 値を許容します。|  
+|**\<継承された列>**|**--**|[では、transact-sql&#41;&#40;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)から列を継承しています。|  
+|**is_message_forwarding_enabled**|**bit**|エンドポイントがメッセージの転送をサポートします。 これは、最初は**0** (無効) に設定されます。 NULL 値は許容されません。|  
+|**message_forwarding_size**|**int**|転送されるメッセージに使用できる**tempdb**領域の最大値 (mb)。 初期設定は**10**に設定されています。 NULL 値は許容されません。|  
+|**connection_auth**|**tinyint**|エンドポイントへの接続に必要な接続認証の種類。次のいずれかになります。<br /><br /> **1** -NTLM<br /><br /> **2** -KERBEROS<br /><br /> **3** -ネゴシエート<br /><br /> **4** -証明書<br /><br /> **5** -NTLM、証明書<br /><br /> **6** -KERBEROS、証明書<br /><br /> **7** -NEGOTIATE、CERTIFICATE<br /><br /> **8** -証明書、NTLM<br /><br /> **9** -証明書、KERBEROS<br /><br /> **10** -証明書、ネゴシエート<br /><br /> NULL 値は許容されません。|  
+|**connection_auth_desc**|**nvarchar (60)**|このエンドポイントへの接続に必要な接続認証の種類の説明。次のいずれかになります。<br /><br /> NTLM<br /><br /> KERBEROS<br /><br /> ネゴシエーション<br /><br /> CERTIFICATE<br /><br /> NTLM、証明書<br /><br /> KERBEROS、証明書<br /><br /> NEGOTIATE、CERTIFICATE<br /><br /> CERTIFICATE、NTLM<br /><br /> CERTIFICATE、KERBEROS<br /><br /> 証明書、ネゴシエート<br /><br /> NULLABLE.|  
+|**certificate_id**|**int**|認証で使用される証明書の ID (存在する場合)。<br /><br /> 0 = Windows 認証が使用されています。|  
+|**encryption_algorithm**|**tinyint**|暗号化アルゴリズム。 使用可能な値とその説明および対応する DDL オプションを次に示します。<br /><br /> **0** : なし。 対応する DDL オプション: Disabled。<br /><br /> **1** : RC4。 対応する DDL オプション: {必須 &#124; アルゴリズム RC4}。<br /><br /> **2** : AES。 対応する DDL オプション: アルゴリズム AES が必要です。<br /><br /> **3** : なし、RC4。 対応する DDL オプション: {supported &#124; サポートされているアルゴリズム RC4}。<br /><br /> **4** : NONE、AES。 対応する DDL オプション: アルゴリズム AES がサポートされています。<br /><br /> **5** : RC4、AES。 対応する DDL オプション: アルゴリズム RC4 AES が必要です。<br /><br /> **6** : AES、RC4。 対応する DDL オプション: アルゴリズム AES RC4 が必要です。<br /><br /> **7** : NONE、RC4、AES。 対応する DDL オプション: アルゴリズム RC4 AES がサポートされています。<br /><br /> **8** : NONE、AES、RC4。 対応する DDL オプション: アルゴリズム AES RC4 がサポートされています。<br /><br /> NULL 値は許容されません。|  
+|**encryption_algorithm_desc**|**nvarchar (60)**|暗号化アルゴリズムの説明。 有効な値とそれに対応する DDL オプションを以下に示します。<br /><br /> なし: 無効<br /><br /> RC4: {必須 &#124; アルゴリズム RC4}<br /><br /> AES: アルゴリズム AES が必要です。<br /><br /> なし、RC4: {サポートされている &#124; アルゴリズム RC4}<br /><br /> NONE、AES: サポートされているアルゴリズム AES<br /><br /> RC4、AES: アルゴリズム RC4 AES が必要です。<br /><br /> AES、RC4: アルゴリズム AES RC4 が必要<br /><br /> NONE、RC4、AES: サポートされているアルゴリズム RC4 AES<br /><br /> NONE、AES、RC4: サポートされているアルゴリズム AES RC4<br /><br /> NULLABLE.|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
   
 > [!NOTE]  
->  RC4 アルゴリズムは、旧バージョンとの互換性のためにのみサポートされています。 データベース互換性レベルが 90 または 100 の場合、新しい素材は RC4 または RC4_128 を使用してのみ暗号化できます (非推奨)。AES アルゴリズムのいずれかなど、新しいアルゴリズムを使用してください。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降のバージョンでは、どの互換性レベルでも、RC4 または RC4_128 を使用して暗号化された素材を暗号化解除できます。  
+>  RC4 アルゴリズムは、旧バージョンとの互換性のためにのみサポートされています。 データベース互換性レベルが 90 または 100 の場合、新しい素材は RC4 または RC4_128 を使用してのみ暗号化できます (非推奨)。AES アルゴリズムのいずれかなど、新しいアルゴリズムを使用してください。 
+  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降のバージョンでは、どの互換性レベルでも、RC4 または RC4_128 を使用して暗号化された素材を復号できます。  
   
 ## <a name="permissions"></a>アクセス許可  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]詳細については、「[メタデータ表示の構成](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)   
- [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md)  
+## <a name="see-also"></a>参照  
+ [ALTER ENDPOINT &#40;Transact-sql&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)   
+ [Transact-sql&#41;&#40;エンドポイントの作成](../../t-sql/statements/create-endpoint-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Integration Services 配置ウィザード |Microsoft Docs
+title: Integration Services の配置ウィザード |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,42 +13,47 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 721953c31a44a2ea02f480c9830e6347adfd4eb3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058006"
 ---
 # <a name="integration-services-deployment-wizard"></a>Integration Services 配置ウィザード
+  
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 配置ウィザードでは、プロジェクト配置モデルを使用して、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスの SSISDB カタログにプロジェクトが配置されます。  
   
- 開始する、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]で開いているプロジェクトからの展開ウィザード[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]を選択します**デプロイ**から、**プロジェクト**メニュー。 ウィザードを起動する[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]、展開、 **Integration Services カタログ** > **SSISDB**オブジェクト エクスプ ローラーでノードを右クリックし、**プロジェクト**フォルダー、およびクリック**プロジェクトの配置**します。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]で[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]開いているプロジェクトから配置ウィザードを起動するには、[**プロジェクト**] メニューの [**配置**] をクリックします。 で[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]ウィザードを開始するには、オブジェクトエクスプローラーで [ **Integration Services カタログ** > ] [**SSISDB** ] ノードの順に展開し、[**プロジェクト**] フォルダーを右クリックして、[**プロジェクトの配置**] をクリックします。  
   
- このウィザードでは、次の 4 つの手順を行います。 をクリックして **[次へ]** 次の手順に移動するまたは**前**前の手順に戻ります。  
+ このウィザードでは、次の 4 つの手順を行います。 次の手順に移動する場合は [**次**へ] をクリックし、前の手順に戻る場合は [**前**へ] をクリックします。  
   
-1.  **ソースの選択**- 選択、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]に展開するプロジェクト。  
+1.  **[ソースの選択]** -デプロイする[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]プロジェクトを選択します。  
   
-2.  **変換先を選択します。** -プロジェクトの配置先を選択します。  
+2.  **[変換先] を選択**し、プロジェクトの変換先を選択します。  
   
-3.  **レビュー** -選択内容を表示します。  
+3.  **レビュー** -選択内容が表示されます。  
   
-4.  **配置/結果**: プロジェクトを配置し、結果が表示されます。  
+4.  [**配置/結果**]-プロジェクトを配置し、結果を表示します。  
   
-## <a name="select-source"></a>[ソースの選択]  
- 作成したプロジェクト配置ファイルを展開するには、選択**プロジェクト配置ファイル**.ispac ファイルにパスを入力するかをクリックし、**参照**で検索する、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]プロジェクト フォルダーです。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] カタログにあるプロジェクトを配置するには、 **[Integration Services カタログ]** を選択し、サーバー名とカタログ内のプロジェクトのパスを入力します。  
+## <a name="select-source"></a>ソースを選択する  
+ 作成したプロジェクト配置ファイルを配置するには、[**プロジェクト配置ファイル**] を選択し、ispac ファイルのパス**** を入力するか、[ [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]参照] をクリックしてプロジェクトフォルダー内で検索します。 
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] カタログにあるプロジェクトを配置するには、 **[Integration Services カタログ]** を選択し、サーバー名とカタログ内のプロジェクトのパスを入力します。  
   
- [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] でウィザードを起動すると、既定では、開いているプロジェクトがソースとして選択され、この手順が省略されます。 この手順に戻って、別のソースを選択してをクリックします。**前** をクリックまたは**ソースの選択**左側のウィンドウでします。  
+ 
+  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] でウィザードを起動すると、既定では、開いているプロジェクトがソースとして選択され、この手順が省略されます。 この手順に戻り、別のソースを選択するには、[**前**へ] をクリックするか、左ペインで [**ソースの選択**] をクリックします。  
   
 ## <a name="select-destination"></a>[配置先の選択]  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] カタログでプロジェクトの配置先フォルダーを選択するには、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスを入力するか、 **[参照]** をクリックしてサーバーの一覧から選択します。 SSISDB でプロジェクトのパスを入力するか、 **[参照]** をクリックしてプロジェクトを選択します。  
+ 
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] カタログでプロジェクトの配置先フォルダーを選択するには、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスを入力するか、 **[参照]** をクリックしてサーバーの一覧から選択します。 SSISDB でプロジェクトのパスを入力するか、 **[参照]** をクリックしてプロジェクトを選択します。  
   
- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] でウィザードを起動すると、既定では、接続されているサーバー インスタンスが選択され、選択したプロジェクトのパスが入力されます。 プロジェクトを別の場所に配置するようにこれらの値を変更できます。  
+ 
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] でウィザードを起動すると、既定では、接続されているサーバー インスタンスが選択され、選択したプロジェクトのパスが入力されます。 プロジェクトを別の場所に配置するようにこれらの値を変更できます。  
   
-## <a name="review"></a>確認  
+## <a name="review"></a>レビュー  
  プロジェクトを配置する前に、選択した設定をウィザードで確認できます。 選択内容を変更するには、 **[戻る]** をクリックするか、左ペインでいずれかの手順をクリックします。  
   
 ## <a name="deployresults"></a>配置/結果  
- クリックすると**デプロイ**から、**レビュー**  ページで、プロジェクトが展開されていると、**結果**ページは、各アクションの成否が表示されます。 アクションが失敗した場合は、 **[結果]** 列の **[失敗]** をクリックすると、エラーの説明が表示されます。 クリックして**レポートを保存しています.** 結果を XML ファイルに保存します。  
+ [**レビュー** ] ページの [**配置**] をクリックすると、プロジェクトが配置され、[**結果**] ページに各アクションの成功または失敗が表示されます。 アクションが失敗した場合は、 **[結果]** 列の **[失敗]** をクリックすると、エラーの説明が表示されます。 結果を XML ファイルに保存するには、[**レポートの保存...** ] をクリックします。  
   
  **[閉じる]** をクリックしてウィザードを終了します。  
   

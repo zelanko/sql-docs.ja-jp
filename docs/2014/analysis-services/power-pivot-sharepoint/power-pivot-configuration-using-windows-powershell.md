@@ -11,13 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9282fce8e0004495ae8c10b0b3f75fec205d6b34
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72782806"
 ---
 # <a name="powerpivot-configuration-using-windows-powershell"></a>Windows PowerShell を使用した PowerPivot の構成
+  
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] には、 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]のインストールを構成するために使用できる Windows PowerShell コマンドレットが含まれています。 PowerShell によりインストールを完全に構成するには、SharePoint コマンドレットと PowerPivot for SharePoint コマンドレットの両方を使用する必要があります。 構成の大部分は [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ツールのいずれかを使用して実行することができます。 ツールの詳細については、「 [PowerPivot 構成ツール](power-pivot-configuration-tools.md)」を参照してください。  
   
 > [!IMPORTANT]  
@@ -27,11 +28,12 @@ ms.locfileid: "72782806"
  Windows  PowerShell スクリプト (.ps1) ファイルを作成して構成タスクを自動化できます。 この方法は、任意のサーバーで実行できるスクリプト化されたインストール手順および構成手順が必要な場合に推奨されます。 このようなスクリプトは、ハードウェア障害が発生したときにサーバーを再構築するディザスター リカバリー計画の一環として必要になる場合があります。  
   
 ## <a name="view-a-list-of-the-powerpivot-cmdlets-on-a-server"></a>サーバーで PowerPivot コマンドレットの一覧を表示する  
- @No__t_0 コマンドレットの内容と例については、「 [PowerShell Reference for PowerPivot for SharePoint](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)」を参照してください。  
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]コマンドレットの内容と例については、「 [PowerShell Reference for PowerPivot for SharePoint](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)」を参照してください。  
   
  PowerShell を使用して PowerPivot コマンドレットの一覧を表示するには  
   
-1.  **[管理者として実行]** オプションを使用して SharePoint 管理シェルを開きます。  
+1.  
+  **[管理者として実行]** オプションを使用して SharePoint 管理シェルを開きます。  
   
 2.  次のコマンドを入力します。  
   
@@ -39,7 +41,7 @@ ms.locfileid: "72782806"
     Get-Help *powerpivot*  
     ```  
   
-     コマンドレット名に PowerPivot を含むコマンドレットの一覧が表示されます。 たとえば、 `Get-PowerPivotServiceApplication`があります。 使用できるコマンドレットの数は、使用している Analysis Services のバージョンによって異なります。  
+     コマンドレット名に PowerPivot を含むコマンドレットの一覧が表示されます。 たとえば、「 `Get-PowerPivotServiceApplication`」のように指定します。 使用できるコマンドレットの数は、使用している Analysis Services のバージョンによって異なります。  
   
     -   SharePoint モードで構成された SQL Server 2012 SP1 Analysis Services サーバーおよび SharePoint 2013 では、10 個のコマンドレットを使用できます。 2012 SP1 バージョンで使用される新しいアーキテクチャでは、分析サーバーを SharePoint ファームの外部で実行できるため、必要な管理 Windows PowerShell コマンドレットが少なくて済みます。  
   
@@ -47,7 +49,8 @@ ms.locfileid: "72782806"
   
      一覧にコマンドが返されない場合、または "`get-help could not find *powerpivot* in a help file in this session.`" のようなエラーメッセージが表示される場合は、このトピックの次のセクションを参照して、サーバーで PowerPivot コマンドレットを有効にする方法を確認してください。  
   
-     すべてのコマンドレットに、オンライン ヘルプが用意されています。 `New-PowerPivotServiceApplication` コマンドレットのオンライン ヘルプを表示する方法を次の例に示します。  
+     すべてのコマンドレットに、オンライン ヘルプが用意されています。 
+  `New-PowerPivotServiceApplication` コマンドレットのオンライン ヘルプを表示する方法を次の例に示します。  
   
     ```powershell
     Get-Help new-powerpivotserviceapplication -Full  
@@ -62,7 +65,8 @@ ms.locfileid: "72782806"
 ## <a name="enable-powerpivot-cmdlets-on-a-server"></a>サーバーで PowerPivot コマンドレットを有効にする  
  PowerPivot コマンドレットは、PowerPivot for SharePoint のインストールとファーム ソリューションの配置が完了した後で利用できるようになります。 ソリューションは、PowerPivot 構成ツールを実行すると配置されます。 コマンドレットの使用を有効にするには、次の手順を実行します。  
   
-1.  **[管理者として実行]** オプションを使用して SharePoint 管理シェルを開きます。  
+1.  
+  **[管理者として実行]** オプションを使用して SharePoint 管理シェルを開きます。  
   
 2.  最初のコマンドレットを実行します。  
   
@@ -78,11 +82,12 @@ ms.locfileid: "72782806"
     Install-SPSolution -Identity PowerPivotFarm.wsp -GACDeployment -Force  
     ```  
   
-4.  ウィンドウを閉じます。 **[管理者として実行]** を使用してもう一度ウィンドウを開きます。  
+4.  ウィンドウを閉じます。 
+  **[管理者として実行]** を使用してもう一度ウィンドウを開きます。  
   
 ## <a name="related-content"></a>関連コンテンツ  
  [サーバーの全体管理での PowerPivot サーバーの管理と構成](power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
- [PowerPivot 構成ツール](power-pivot-configuration-tools.md)  
+ [PowerPivot Configuration Tools](power-pivot-configuration-tools.md)  
   
- [PowerPivot for SharePoint の PowerShell リファレンス](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)  
+ [PowerShell リファレンス (PowerPivot for SharePoint)](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)  

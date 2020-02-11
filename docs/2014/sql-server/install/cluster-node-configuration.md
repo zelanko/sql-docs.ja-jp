@@ -1,5 +1,5 @@
 ---
-title: クラスター ノードの構成 |Microsoft Docs
+title: クラスターノードの構成 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,18 +14,18 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fd1abb5a1bdce0e758d4f36c861917064b20fee9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66096433"
 ---
 # <a name="cluster-node-configuration"></a>クラスター ノードの構成
   フェールオーバー クラスター インスタンスにノードを追加したりノードを削除したりするには、[クラスター ノードの構成] ページを使用します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスターをインストールまたはアップグレードするには、フェールオーバー クラスターの各ノードでセットアップ プログラムを実行する必要があります。 既存の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスターにノードを追加するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスに追加するノードで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップを実行する必要があります。  
   
-## <a name="options"></a>および  
- **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス名** - ドロップダウン リスト ボックスを使用して、変更する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスを選択します。  
+## <a name="options"></a>オプション  
+ [インスタンス名]-ドロップダウンリストを使用して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、変更するフェールオーバークラスターインスタンスを選択します。 ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **  
   
- **[このノードの名前]** - このフィールドには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップを実行しているコンピューターの名前が代入されます。 このコンピューターが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスで追加または削除されるフェールオーバー クラスター ノードです。  
+ [**このノードの名前**]-このフィールドには、セットアップを実行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]しているコンピューターの名前が入力されます。 このコンピューターが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスで追加または削除されるフェールオーバー クラスター ノードです。  
   
   

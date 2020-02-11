@@ -16,16 +16,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6269474edbde55f1ebf506bfbd5599f5c3287bc9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63250791"
 ---
 # <a name="sql-server-availability-replica"></a>SQL Server、Availability Replica
+  
   **SQLServer:Availability Replica** パフォーマンス オブジェクトには、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の AlwaysOn 可用性グループの可用性レプリカに関する情報を報告するパフォーマンス カウンターが含まれています。 可用性レプリカのパフォーマンス カウンターはすべてプライマリ レプリカとセカンダリ レプリカの両方に適用され、送信/受信カウンターによってローカル レプリカの状態が示されます。 ほとんどの場合、プライマリ レプリカがデータの大部分を送信し、セカンダリ レプリカがデータを受信します。 ただし、セカンダリ レプリカは、ACK と他のバックグラウンド トラフィックをプライマリ レプリカに送信します。 可用性レプリカでは、ローカル レプリカの現在のロール (プライマリまたはセカンダリ) に応じて一部のカウンターが値 0 を示します。  
   
-|カウンター名|説明|  
+|カウンター名|[説明]|  
 |------------------|-----------------|  
 |**レプリカからの受信バイト数/秒**|可用性レプリカから 1 秒あたりに受信したバイト数。 ユーザーによる更新のないデータベースでも、ping と状態の更新でネットワーク トラフィックが発生します。|  
 |**レプリカへの送信バイト数/秒**|リモート可用性レプリカに 1 秒あたりに送信されたバイト数。 プライマリ レプリカの場合、これはセカンダリ レプリカに送信されたバイト数です。 セカンダリ レプリカの場合、これはプライマリ レプリカに送信されたバイト数です。|  
@@ -38,7 +39,7 @@ ms.locfileid: "63250791"
 |**トランスポートへの送信/秒**|リモート可用性レプリカにネットワーク経由で 1 秒あたりに送信された実際の AlwaysOn メッセージ数。 プライマリ レプリカの場合、これはセカンダリ レプリカに送信されたメッセージ数です。 セカンダリ レプリカの場合、これはプライマリ レプリカに送信されたメッセージ数です。|  
   
 ## <a name="see-also"></a>参照  
- [リソースの利用状況の監視 &#40;システム モニター&#41;](monitor-resource-usage-system-monitor.md)   
+ [リソースの利用状況の監視 &#40;System Monitor&#41;](monitor-resource-usage-system-monitor.md)   
  [SQL Server、Database Replica](sql-server-database-replica.md)   
  [AlwaysOn 可用性グループ (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  
   

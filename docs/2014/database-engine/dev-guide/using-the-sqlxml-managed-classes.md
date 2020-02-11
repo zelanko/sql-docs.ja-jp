@@ -1,5 +1,5 @@
 ---
-title: SQLXML を使用してマネージ クラス |Microsoft Docs
+title: SQLXML マネージクラスの使用 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,27 +16,27 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ad1756d3943f6a9db68633c59013bcb85037ffa7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62780331"
 ---
 # <a name="using-the-sqlxml-managed-classes"></a>SQLXML マネージド クラスの使用
   ここでは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML マネージド クラスの使用方法を説明するためのサンプル アプリケーションを紹介します。  
   
- アクセスして、データの変更について[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]内、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework、およびデータを更新する Diffgram を使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]テーブルを参照してください[.NET環境でのSQLXML機能へのアクセス](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/accessing-sqlxml-functionality-in-the-net-environment.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .NET Framework 内のデータへのアクセスと変更、 [!INCLUDE[msCoName](../../includes/msconame-md.md)]および diffgram を使用したテーブルの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データの更新の詳細については、「 [.net 環境での SQLXML 機能へのアクセス](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/accessing-sqlxml-functionality-in-the-net-environment.md)」を参照してください。  
   
 > [!NOTE]  
->  XML 一括読み込みを使用して XML ドキュメントの一括読み込みを行う [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio アプリケーションを作成することもできます。 詳細については、次を参照してください。 [XML データの一括読み込みを実行する&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)します。 作成するアプリケーションには、XML 一括読み込みの DLL (Xblkld4.dll) への参照を追加する必要があります。 これは COM DLL で、Visual Studio .NET ではこのラッパー ライブラリが自動的に作成されます。  
+>  XML 一括読み込みを使用して XML ドキュメントの一括読み込みを行う [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio アプリケーションを作成することもできます。 詳細については、「 [XML データの一括読み込みの実行 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)」を参照してください。 作成するアプリケーションには、XML 一括読み込みの DLL (Xblkld4.dll) への参照を追加する必要があります。 これは COM DLL で、Visual Studio .NET ではこのラッパー ライブラリが自動的に作成されます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [SQL クエリの実行&#40;SQLXML マネージ クラス&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-4-0-net-framework-support-managed-classes.md)  
-  [ExecuteXMLReader メソッドを使用した SQL クエリの実行](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-by-using-the-executexmlreader-method.md)  
-  [クライアント側の XML 処理&#40;SQLXML マネージ クラス&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/processing-xml-on-the-client-side-sqlxml-managed-classes.md)  
-  [XPath クエリの実行&#40;SQLXML マネージ クラス&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-xpath-queries-sqlxml-managed-classes.md)  
-  [XPath クエリの名前空間を持つ実行&#40;SQLXML マネージ クラス&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-xpath-queries-with-namespaces-sqlxml-managed-classes.md)  
-  [CommandText プロパティを使用したテンプレート ファイルの実行](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-template-files-by-using-the-commandtext-property.md)  
-  [CommandStream プロパティを使用したテンプレート ファイルの実行](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-template-files-by-using-the-commandstream-property.md)  
-  [XSL 変換の適用&#40;SQLXML マネージ クラス&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/applying-an-xsl-transformation-sqlxml-managed-classes.md)  
+ [SQLXML マネージクラス &#40;の SQL クエリの実行&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-4-0-net-framework-support-managed-classes.md)  
+  [ExecuteXMLReader メソッドを使用した、SQL クエリの実行](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-by-using-the-executexmlreader-method.md)  
+  [クライアント側での XML の処理 &#40;SQLXML マネージクラス&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/processing-xml-on-the-client-side-sqlxml-managed-classes.md)  
+  [SQLXML マネージクラス &#40;の XPath クエリの実行&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-xpath-queries-sqlxml-managed-classes.md)  
+  [SQLXML マネージクラス &#40;名前空間を使用した XPath クエリの実行&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-xpath-queries-with-namespaces-sqlxml-managed-classes.md)  
+  [CommandText プロパティを使用した、テンプレート ファイルの実行](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-template-files-by-using-the-commandtext-property.md)  
+  [CommandStream プロパティを使用した、テンプレート ファイルの実行](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-template-files-by-using-the-commandstream-property.md)  
+  [SQLXML マネージクラス &#40;の XSL 変換の適用&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/applying-an-xsl-transformation-sqlxml-managed-classes.md)  
   

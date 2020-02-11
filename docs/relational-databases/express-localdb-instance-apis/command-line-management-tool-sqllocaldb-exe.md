@@ -1,5 +1,5 @@
 ---
-title: 'コマンド ライン管理ツール: SqlLocalDB.exe |Microsoft Docs'
+title: 'コマンドライン管理ツール: SqlLocalDB |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -13,10 +13,10 @@ ms.assetid: dd0882b1-a8a9-447a-8bdf-0f9d7f36d336
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: a41daed808b51df59ba80e0113b84e46c501c9b4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68126949"
 ---
 # <a name="command-line-management-tool-sqllocaldbexe"></a>コマンド ライン管理ツール: SqlLocalDB.exe
@@ -28,7 +28,7 @@ ms.locfileid: "68126949"
 ## <a name="sqllocaldb-options"></a>SqlLocalDB オプション  
  SqlLocalDB では、次のオプションがサポートされています。  
   
-|OPTION|実行内容|  
+|オプション|実行内容|  
 |------------|------------------|  
 |`-?`|ヘルプ テキストを出力します。|  
 |`create\|c "instance name" [version-number] [-s]`|指定された名前とバージョンで LocalDB インスタンスを新規作成します。<br /><br /> [version-number] パラメーターを省略した場合、既定で SqlLocalDB ビルド バージョンになります。<br /><br /> -s は、LocalDB インスタンスの新規作成後に、そのインスタンスを起動します。|  
@@ -43,7 +43,7 @@ ms.locfileid: "68126949"
 |||  
 |`trace\|t on\|off`|トレースのオンとオフを切り替えます。|  
   
- SqlLocalDB では、スペースを区切り文字として扱います。スペースと特殊文字が含まれるインスタンス名は、引用符で囲む必要があります。 以下に例を示します。  
+ SqlLocalDB では、スペースを区切り文字として扱います。スペースと特殊文字が含まれるインスタンス名は、引用符で囲む必要があります。 次に例を示します。  
   
  `SqlLocalDB create "My instance name with spaces"`  
   

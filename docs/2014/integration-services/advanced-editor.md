@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fe860a52cb847aec473763c02f24348701766478
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62772195"
 ---
 # <a name="advanced-editor"></a>[詳細エディター]
@@ -42,7 +42,7 @@ ms.locfileid: "62772195"
   
  表示されるプロパティはコンポーネントによって異なります。 **[詳細エディター]** に表示される可能性のあるプロパティの詳細については、次のトピックを参照してください。  
   
--   [共通プロパティ](../../2014/integration-services/common-properties.md)  
+-   [Common Properties](../../2014/integration-services/common-properties.md)  
   
 -   [変換のカスタム プロパティ](data-flow/transformations/transformation-custom-properties.md)  
   
@@ -52,7 +52,7 @@ ms.locfileid: "62772195"
   
 -   [Integration Services の変換](data-flow/transformations/integration-services-transformations.md)  
   
-## <a name="see-also"></a>関連項目  
- [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)  
+## <a name="see-also"></a>参照  
+ [Integration Services のエラーとメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0b092c85ea678ce05c3b9c8bbff4f78d47589bdb
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244957"
 ---
 # <a name="database-engine-scripting"></a>データベース エンジン スクリプト
@@ -87,13 +87,13 @@ ms.locfileid: "75244957"
 |タスクの説明|トピック|  
 |----------------------|-----------|  
 |
-  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] スクリプトを対話形式で開発、デバッグ、および実行するために、 [!INCLUDE[tsql](../../includes/tsql-md.md)] のコード エディターとテキスト エディターを使用する方法について説明します。|[クエリエディターとテキストエディター &#40;SQL Server Management Studio&#41;](../scripting/query-and-text-editors-sql-server-management-studio.md)|  
-|対話形式でスクリプトを開発する機能も含めて、コマンド プロンプトから `sqlcmd` スクリプトを実行するために、[!INCLUDE[tsql](../../includes/tsql-md.md)] ユーティリティを使用する方法について説明します。|[sqlcmd の操作方法に関するトピック](../../database-engine/sqlcmd-how-to-topics.md)|  
+  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] スクリプトを対話形式で開発、デバッグ、および実行するために、 [!INCLUDE[tsql](../../includes/tsql-md.md)] のコード エディターとテキスト エディターを使用する方法について説明します。|[クエリおよびテキスト エディター &#40;SQL Server Management Studio&#41;](../scripting/query-and-text-editors-sql-server-management-studio.md)|  
+|対話形式でスクリプトを開発する機能も含めて、コマンド プロンプトから `sqlcmd` スクリプトを実行するために、[!INCLUDE[tsql](../../includes/tsql-md.md)] ユーティリティを使用する方法について説明します。|[sqlcmd 操作方法のトピック](../../database-engine/sqlcmd-how-to-topics.md)|  
 |Windows PowerShell 2.0 環境に SQL Server コンポーネントを統合し、SQL Server インスタンスおよびオブジェクトを管理するための PowerShell スクリプトを作成する方法について説明します。|[SQL Server PowerShell](../../powershell/sql-server-powershell.md)|  
 |データベースの 1 つまたは複数のオブジェクトを再作成する **スクリプトを作成するために、** スクリプトの生成とパブリッシュ [!INCLUDE[tsql](../../includes/tsql-md.md)] ウィザードを使用する方法について説明します。|[スクリプトの生成 &#40;SQL Server Management Studio&#41;](generate-scripts-sql-server-management-studio.md)|  
   
 ## <a name="see-also"></a>参照  
  [sqlcmd ユーティリティ](../../tools/sqlcmd-utility.md)   
- [チュートリアル: Transact-sql ステートメントの記述](../../t-sql/tutorial-writing-transact-sql-statements.md)  
+ [チュートリアル: Transact-SQL ステートメントの作成](../../t-sql/tutorial-writing-transact-sql-statements.md)  
   
   

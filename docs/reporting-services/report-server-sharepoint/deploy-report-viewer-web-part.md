@@ -8,10 +8,10 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3dc42904701ce69e762a203e09cb320cc797c15c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579991"
 ---
 # <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>SQL Server Reporting Services レポート ビューアー Web パーツを SharePoint サイトに展開する
@@ -38,7 +38,7 @@ SharePoint Server 2013、SharePoint Server 2016 または SharePoint Server 2019
 
 **サポートされている Reporting Services のバージョン:**  
 * SQL Server 2008 Reporting Services (ネイティブ モード) 以降。
-* Power BI レポート サーバー
+* Power BI Report Server
 
 ## <a name="download-the-report-viewer-web-part-solution-package"></a>レポート ビューアー Web パーツのソリューション パッケージのダウンロード
 
@@ -102,7 +102,7 @@ Get-SPWebApplication "<web application url>" | Get-SPSite -Limit ALL |
         }
 ```
 
-## <a name="remove-the-solution"></a>ソリューションの削除
+## <a name="remove-the-solution"></a>ソリューションを削除する
 
 SharePoint サーバーの全体管理でソリューションの取り消しを実行できますが、インストールや修正プログラムの配置に関する問題のトラブルシューティングを体系的に行う場合を除いて、**ReportViewerWebPart.wsp** ファイルを取り消す必要はありません。
 
@@ -168,7 +168,7 @@ Web パーツでサポートされている言語は以下のとおりです。
     2. SSDT をアンインストールする
     3. レポート ビューアー Web パーツを再インストールする
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 レポート ビューアー Web パーツを展開してアクティブ化したら、SharePoint ページに Web パーツを追加できます。 詳細については、「[SharePoint ページへのレポート ビューアー Web パーツの追加](add-report-viewer-web-part-to-page.md)」を参照してください。
 
