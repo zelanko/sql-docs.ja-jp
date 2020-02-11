@@ -17,10 +17,10 @@ ms.assetid: 390eef67-1a49-4185-a971-e07765be9717
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ebe6db6130b3d9f058c1c8c65572263348f3dd99
-ms.sourcegitcommit: 82a1ad732fb31d5fa4368c6270185c3f99827c97
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/21/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72689842"
 ---
 # <a name="data-type-synonyms-transact-sql"></a>データ型のシノニム (Transact-SQL)
@@ -38,8 +38,8 @@ ISO との互換性を保つために、[!INCLUDE[ssNoVersion](../../includes/ss
 |**character varying(** _n_ **)**|**varchar(n)**|  
 |**Dec**|**decimal**|  
 |**Double precision**|**float**|  
-|**float**[ **(** n **)** ] for _n_ = 1-7|**real**|  
-|**float**[ **(** n **)** ] for _n_ = 8-15|**float**|  
+|**float**[ **(** _n_ **)** ] for _n_ = 1-7|**real**|  
+|**float**[ **(** _n_ **)** ] for _n_ = 8-15|**float**|  
 |**integer**|**int**|  
 |**national character(** _n_ **)**|**nchar(n)**|  
 |**national char(** _n_ **)**|**nchar(n)**|  

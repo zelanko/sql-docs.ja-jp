@@ -14,23 +14,24 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 004746516545278470515753361b31a1ac38ef47
-ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70911277"
 ---
 # <a name="smo-object-model-diagram"></a>SMO オブジェクト モデル ダイアグラム
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  このダイアグラムでは、SMO オブジェクト階層およびオブジェクト型間のリレーションシップを示します。 <xref:Microsoft.SqlServer.Management.Smo.Server> オブジェクトはトップ レベル オブジェクトです。  
+  このダイアグラムでは、SMO オブジェクト階層およびオブジェクト型間のリレーションシップを示します。 
+  <xref:Microsoft.SqlServer.Management.Smo.Server> オブジェクトはトップ レベル オブジェクトです。  
   
- ![階層関係を示す図](../../relational-databases/server-management-objects-smo/media/object-diagram.gif "階層関係を示す図")  
+ ![階層リレーションシップ](../../relational-databases/server-management-objects-smo/media/object-diagram.gif "階層リレーションシップ")  
   
- ![オブジェクトモデル、階層を示すツリービュー](../../relational-databases/server-management-objects-smo/media/object-diagram-02.gif "オブジェクトモデル、階層を示すツリービュー")  
+ ![オブジェクト モデル、階層を示すツリー ビュー](../../relational-databases/server-management-objects-smo/media/object-diagram-02.gif "オブジェクト モデル、階層を示すツリー ビュー")  
   
- ![オブジェクトモデル、階層を示すツリービュー](../../relational-databases/server-management-objects-smo/media/object-diagram-03.gif "オブジェクトモデル、階層を示すツリービュー")  
+ ![オブジェクト モデル、階層を示すツリー ビュー](../../relational-databases/server-management-objects-smo/media/object-diagram-03.gif "オブジェクト モデル、階層を示すツリー ビュー")  
   
- ![オブジェクトモデル、階層を示すツリービュー](../../relational-databases/server-management-objects-smo/media/object-diagram-04.gif "オブジェクトモデル、階層を示すツリービュー")  
+ ![オブジェクト モデル、階層を示すツリー ビュー](../../relational-databases/server-management-objects-smo/media/object-diagram-04.gif "オブジェクト モデル、階層を示すツリー ビュー")  
   
   

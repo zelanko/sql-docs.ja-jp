@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4d1ae35d9dae03292edf31cd2b06acf97dc0db0c
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72783241"
 ---
 # <a name="altering-memory-optimized-tables"></a>メモリ最適化テーブルの変更
@@ -63,13 +63,13 @@ ms.locfileid: "72783241"
     select @permissions  
     ```  
   
-4.  テーブルのコピーを作成し、元のテーブルからテーブルのコピーにデータをコピーします。 コピーは、次の [!INCLUDE[tsql](../../includes/tsql-md.md)]<sup>1</sup>を使用して作成できます。  
+4.  テーブルのコピーを作成し、元のテーブルからテーブルのコピーにデータをコピーします。 コピーは、次[!INCLUDE[tsql](../../includes/tsql-md.md)]の<sup>1</sup>を使用して作成できます。  
   
     ```sql  
     select * into dbo.T_copy from dbo.T  
     ```  
   
-     使用可能なメモリが十分にある場合、`T_copy` はメモリ最適化テーブルである可能性があります。これにより、データのコピーが高速になります。<sup>2</sup>  
+     使用可能なメモリが十分に`T_copy`ある場合、はメモリ最適化テーブルである可能性があります。これにより、データのコピーが高速になります。<sup>2</sup>  
   
 5.  元のテーブルを参照するスキーマ バインド オブジェクトを削除します。  
   
@@ -77,15 +77,21 @@ ms.locfileid: "72783241"
   
 7.  新しいインデックスを含むスクリプトで、新しいテーブル (`T`) を作成します。  
   
-8.  `T_copy` から `T` にデータをコピーします。  
+8.  
+  `T_copy` から `T` にデータをコピーします。  
   
 9. 参照しているスキーマ バインド オブジェクトを再作成し、権限を適用します。  
   
-10. `T` のワークロードを起動します。  
+10. 
+  `T` のワークロードを起動します。  
   
- <sup>1</sup>この例では、`T_copy` がディスクに保存されていることに注意してください。 `T` のバックアップが使用可能であれば、`T_copy` に一時的または持続性のないテーブルを指定することもできます。  
+ <sup>1</sup>この例`T_copy`では、がディスクに保存されていることに注意してください。 
+  `T` のバックアップが使用可能であれば、`T_copy` に一時的または持続性のないテーブルを指定することもできます。  
   
- <sup>2</sup> `T_copy`に十分なメモリが必要です。 `DROP TABLE` ではメモリがすぐには解放されません。 `T_copy` がメモリ最適化されている場合は、`T` のコピーを 2 つ作成するための十分なメモリが必要です。 `T_copy` がディスク ベース テーブルの場合は、`T` の古いバージョンを削除した後にガベージ コレクターによって補完されるため、`T` の付加的なコピーを 1 つ作成するためのメモリがあれば問題ありません。  
+ <sup>2</sup>に`T_copy`十分なメモリが必要です。 
+  `DROP TABLE` ではメモリがすぐには解放されません。 
+  `T_copy` がメモリ最適化されている場合は、`T` のコピーを 2 つ作成するための十分なメモリが必要です。 
+  `T_copy` がディスク ベース テーブルの場合は、`T` の古いバージョンを削除した後にガベージ コレクターによって補完されるため、`T` の付加的なコピーを 1 つ作成するためのメモリがあれば問題ありません。  
   
 ## <a name="changing-schema-powershell"></a>スキーマの変更 (PowerShell)  
  次の PowerShell スクリプトは、テーブルや関連する権限のスクリプトを作成することで、スキーマの変更に備えます。  
@@ -223,7 +229,7 @@ Write-Host ""
   
  次の PowerShell スクリプトでは、前のサンプルでスクリプトを作成したスキーマの変更を実行します。 このスクリプトは、テーブルを引数として受け取り、このテーブルや関連付けられたストアド プロシージャ用に生成されたスキーマ変更スクリプトを実行します。  
   
- 使用法: execute_schema_change *server_name * * db_name`schema_name`table_name*  
+ 使用法: execute_schema_change *server_name * *`schema_name`db_name table_name*  
   
 ```powershell
 # stop execution once an error occurs  
@@ -293,5 +299,5 @@ Write-Host "--done--"
 Write-Host ""  
 ```  
   
-## <a name="see-also"></a>「  
- [Memory-Optimized Tables](memory-optimized-tables.md)  
+## <a name="see-also"></a>参照  
+ [メモリ最適化テーブル](memory-optimized-tables.md)  

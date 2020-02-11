@@ -18,10 +18,10 @@ ms.assetid: 8cad1dcc-b43e-43bd-bea0-cb0055c84169
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1b44f5962e8241afa95b9e68cf75d493dff01ad5
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72304804"
 ---
 # <a name="sp_help_category-transact-sql"></a>sp_help_category (Transact-SQL)
@@ -42,31 +42,31 @@ sp_help_category [ [ @class = ] 'class' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-要求される情報についてのクラスを `[ @class = ] 'class'` します。 *クラス*は**varchar (8)** ,、既定値は**JOB**です。 *クラス*には、次のいずれかの値を指定できます。  
+`[ @class = ] 'class'`要求する情報に関するクラス。 *クラス*は**varchar (8)**,、既定値は**JOB**です。 *クラス*には、次のいずれかの値を指定できます。  
   
-|ReplTest1|[説明]|  
+|値|[説明]|  
 |-----------|-----------------|  
-|**JOB**|ジョブカテゴリに関する情報を提供します。|  
+|**補足**|ジョブカテゴリに関する情報を提供します。|  
 |**アラート**|アラートカテゴリに関する情報を提供します。|  
 |**OPERATOR**|オペレーター カテゴリに関する情報|  
   
-情報を要求するカテゴリの種類 `[ @type = ] 'type'` ます。 *型*は**varchar (12)** ,、既定値は NULL の場合、これらの値のいずれかを指定できます。  
+`[ @type = ] 'type'`情報を要求するカテゴリの種類。 *型*は**varchar (12)**,、既定値は NULL の場合、これらの値のいずれかを指定できます。  
   
-|ReplTest1|[説明]|  
+|値|[説明]|  
 |-----------|-----------------|  
-|**LOCAL**|ローカルジョブカテゴリ。|  
-|**マルチサーバー**|マルチサーバージョブカテゴリ。|  
-|**NONE**|**JOB**以外のクラスのカテゴリ。|  
+|**地元の**|ローカルジョブカテゴリ。|  
+|**MULTI -SERVER**|マルチサーバージョブカテゴリ。|  
+|**存在**|**JOB**以外のクラスのカテゴリ。|  
   
-情報が要求されるカテゴリの名前 `[ @name = ] 'name'` ます。 *名前* は **sysname** 、既定値は NULL です。  
+`[ @name = ] 'name'`情報が要求されるカテゴリの名前。 *名前*は**sysname**,、既定値は NULL です。  
   
-`[ @suffix = ] suffix` 結果セットの**category_type**列が ID と名前のどちらであるかを指定します。 *サフィックス*は**ビット**,、既定値は**0**です。 **1**は**category_type**を名前として示し、 **0**は ID として表示します。  
+`[ @suffix = ] suffix`結果セットの**category_type**列が ID と名前のどちらであるかを指定します。 *サフィックス*は**ビット**,、既定値は**0**です。 **1**は**category_type**を名前として示し、 **0**は ID として表示します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- **\@suffix**が**0**の場合、 **sp_help_category**は次の結果セットを返します。  
+ ** \@サフィックス**が**0**の場合、 **sp_help_category**は次の結果セットを返します。  
   
 |列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
@@ -74,7 +74,7 @@ sp_help_category [ [ @class = ] 'class' ]
 |**category_type**|**tinyint**|カテゴリの種類:<br /><br /> **1** = ローカル<br /><br /> **2** = マルチサーバー<br /><br /> **3** = なし|  
 |**name**|**sysname**|カテゴリ名|  
   
- **\@サフィックス**が**1**の場合、 **sp_help_category**は次の結果セットを返します。  
+ ** \@サフィックス**が**1**の場合、 **sp_help_category**は次の結果セットを返します。  
   
 |列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
@@ -82,13 +82,13 @@ sp_help_category [ [ @class = ] 'class' ]
 |**category_type**|**sysname**|カテゴリの種類。 **LOCAL**、 **MULTI SERVER**、または**NONE**のいずれか|  
 |**name**|**sysname**|カテゴリ名|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **sp_help_category**は、 **msdb**データベースから実行する必要があります。  
   
  パラメーターを指定しない場合、結果セットではすべてのジョブ カテゴリに関する情報が提供されます。  
   
 ## <a name="permissions"></a>アクセス許可  
- 既定では、このストアド プロシージャを実行できるのは、 **sysadmin** 固定サーバー ロールのメンバーです。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
+ 既定では、 **sysadmin**固定サーバーロールのメンバーは、このストアドプロシージャを実行できます。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
   
 -   **SQLAgentUserRole**  
   
@@ -96,9 +96,9 @@ sp_help_category [ [ @class = ] 'class' ]
   
 -   **SQLAgentOperatorRole**  
   
- これらのロールの権限の詳細については、「[SQL Server エージェントの固定データベース ロール](../../ssms/agent/sql-server-agent-fixed-database-roles.md)」を参照してください。  
+ これらのロールの権限の詳細については、「 [SQL Server エージェントの固定データベース ロール](../../ssms/agent/sql-server-agent-fixed-database-roles.md)」を参照してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-returning-local-job-information"></a>A. ローカルジョブ情報を返す  
  次の例では、ローカルで管理されるジョブに関する情報を返します。  
@@ -112,7 +112,7 @@ EXEC dbo.sp_help_category
 GO  
 ```  
   
-### <a name="b-returning-alert-information"></a>b. アラート情報を返す  
+### <a name="b-returning-alert-information"></a>B. アラート情報を返す  
  次の例では、レプリケーションの警告カテゴリに関する情報を返します。  
   
 ```  
@@ -126,9 +126,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [transact-sql &#40;  の&#41; sp_add_category](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)  
- [transact-sql &#40;  の&#41; sp_delete_category](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)  
- [transact-sql &#40;  の&#41; sp_update_category](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)  
- [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [sp_add_category &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
+ [sp_delete_category &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
+ [sp_update_category &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
+ [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

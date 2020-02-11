@@ -18,10 +18,10 @@ ms.assetid: b393ecef-baa8-4d05-a268-b2f309fce89a
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 42e3cd2c0431a1d23f3d67f7f1e983421b9b1e9a
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72278333"
 ---
 # <a name="getfilenamespacepath-transact-sql"></a>GetFileNamespacePath (Transact-SQL)
@@ -37,32 +37,32 @@ ms.locfileid: "72278333"
 ```  
   
 ## <a name="arguments"></a>引数  
- *column-name*  
+ *列名*  
  FileTable 内の VARBINARY (MAX) **file_stream**列の列名。  
   
  *列名*の値は、有効な列名である必要があります。 式、または別のデータ型の列から変換またはキャストされた値を指定することはできません。  
   
  *is_full_path*  
- 相対パスと絶対パスのどちらを返すかを指定する整数式です。 *is_full_path*は、次のいずれかの値を持つことができます。  
+ 相対パスと絶対パスのどちらを返すかを指定する整数式です。 *is_full_path*には、次のいずれかの値を指定できます。  
   
-|値|説明|  
+|値|[説明]|  
 |-----------|-----------------|  
-|**0**|データベース レベルのディレクトリ内の相対パスを返します。<br /><br /> これは既定値です。|  
-|**1**|@No__t-0 で始まる完全な UNC パスを返します。|  
+|**0**|データベース レベルのディレクトリ内の相対パスを返します。<br /><br /> これは、既定値です。|  
+|**1**|で始まる完全な UNC パスを返し`\\computer_name`ます。|  
   
- *\@ オプション*  
- パスのサーバーコンポーネントをどのように書式設定するかを定義する整数式です。 *\@option*には、次のいずれかの値を指定できます。  
+ *\@オプション*  
+ パスのサーバー コンポーネントの書式設定の方法を定義する整数式です。 オプションには、次のいずれかの値を指定できます。 * \@*  
   
-|値|説明|  
+|値|[説明]|  
 |-----------|-----------------|  
-|**0**|サーバー名を次のような NetBIOS 形式に変換して返します。<br /><br /> `\\SERVERNAME\MSSQLSERVER\MyDocumentDatabase`<br /><br /> これは既定値です。|  
+|**0**|サーバー名を次のような NetBIOS 形式に変換して返します。<br /><br /> `\\SERVERNAME\MSSQLSERVER\MyDocumentDatabase`<br /><br /> これが既定値です。|  
 |**1**|次のように、サーバー名を変換せずに返します。<br /><br /> `\\ServerName\MSSQLSERVER\MyDocumentDatabase`|  
 |**2**|次のような、完全なサーバー パスを返します。<br /><br /> `\\ServerName.MyDomain.com\MSSQLSERVER\MyDocumentDatabase`|  
   
 ## <a name="return-type"></a>戻り値の型  
  **nvarchar(max)**  
   
- @No__t 0 のインスタンスがフェールオーバークラスターにクラスター化されている場合、このパスの一部として返されるコンピューター名は、クラスター化されたインスタンスの仮想ホスト名になります。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスがフェールオーバークラスターでクラスター化されている場合、このパスの一部として返されるコンピューター名は、クラスター化されたインスタンスの仮想ホスト名になります。  
   
  データベースが Always On 可用性グループに属している場合、 **FileTableRootPath**関数は、コンピューター名ではなく仮想ネットワーク名 (vnn) を返します。  
   
@@ -86,9 +86,9 @@ SELECT @fullPath = @root + file_stream.GetFileNamespacePath() FROM DocumentStore
 WHERE Name = N'document.docx';  
 ```  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例は、 **GetFileNamespacePath**関数を呼び出して、FileTable 内のファイルまたはディレクトリの UNC パスを取得する方法を示しています。  
   
 ```  
@@ -101,7 +101,7 @@ SELECT file_stream.GetFileNamespacePath(1, Null) AS FilePath FROM DocumentStore
 WHERE Name = N'document.docx';  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [FileTable 内のディレクトリとパスの操作](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)  
   
   

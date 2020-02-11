@@ -10,10 +10,10 @@ ms.assetid: 9e77e4b0-40c0-455c-8431-ca5d43849aa7
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 10be1dc3652c944b9de08a01b0f4cdff5ae5849a
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70176239"
 ---
 # <a name="connecting-to-azure-sql-db-sybasetosql"></a>Azure SQL DB への接続 (SybaseToSQL)
@@ -26,21 +26,21 @@ Azure SQL DB のインスタンスに関するメタデータは、自動的に�
 ## <a name="required-azure-sql-db-permissions"></a>必要な Azure SQL DB アクセス許可  
 Azure SQL DB への接続に使用するアカウントには、アカウントで実行されるアクションに応じて、異なるアクセス許可が必要です。  
   
-1.  Sybase オブジェクトを構文に[!INCLUDE[tsql](../../includes/tsql-md.md)]変換したり、azure sql db からメタデータを更新したり、変換された構文をスクリプトに保存したりするには、アカウントに Azure SQL DB のインスタンスにログオンするためのアクセス許可が必要です。  
+1.  Sybase オブジェクトを構文に[!INCLUDE[tsql](../../includes/tsql-md.md)]変換したり、AZURE sql db からメタデータを更新したり、変換された構文をスクリプトに保存したりするには、アカウントに AZURE SQL DB のインスタンスにログオンするためのアクセス許可が必要です。  
   
-2.  データベースオブジェクトを Azure SQL DB に読み込むには、ターゲットデータベースの**db_owner**データベースロールのメンバーシップである最低限の権限が必要です。  
+2.  データベースオブジェクトを Azure SQL DB に読み込むには、最小権限の要件は、ターゲットデータベースの**db_owner**データベースロールのメンバーシップです。  
   
 ## <a name="establishing-an-azure-sql-db-connection"></a>Azure SQL DB 接続の確立  
 Sybase データベースオブジェクトを Azure SQL DB 構文に変換する前に、Sybase データベースの移行先となる Azure SQL DB インスタンスへの接続を確立する必要があります。  
   
-接続プロパティを定義するときに、オブジェクトとデータを移行するデータベースも指定します。 このマッピングは、Azure SQL DB に接続した後に Sybase スキーマレベルでカスタマイズできます。 詳細については、「 [SYBASE ASE スキーマの SQL Server &#40;スキーマへのマッピング&#41; sybasetosql](../../ssma/sybase/mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql.md) 」を参照してください。  
+接続プロパティを定義するときに、オブジェクトとデータを移行するデータベースも指定します。 このマッピングは、Azure SQL DB に接続した後に Sybase スキーマレベルでカスタマイズできます。 詳細については、「 [SQL Server スキーマ &#40;SybaseToSQL&#41;への SYBASE ASE スキーマのマッピング](../../ssma/sybase/mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql.md)」を参照してください。  
   
 > [!WARNING]  
 > Azure SQL DB に接続する前に、Azure SQL DB のインスタンスが実行されていて、接続を受け入れることができることを確認してください。  
   
 **Azure SQL DB に接続するには**  
   
-1.  **[ファイル]** メニューの **[Azure SQL DB への接続]** を選択します (このオプションは、プロジェクトの作成後に有効になります)。  
+1.  [**ファイル**] メニューの [ **Azure SQL DB への接続**] を選択します (このオプションは、プロジェクトの作成後に有効になります)。  
   
     以前に Azure SQL DB に接続している場合は、コマンド名が**AZURE SQL db に再接続**されます。  
   
@@ -48,13 +48,14 @@ Sybase データベースオブジェクトを Azure SQL DB 構文に変換す�
   
 3.  データベース名を入力、選択、または**参照**します。  
   
-4.  **[ユーザー名]** を入力または選択します。  
+4.  [**ユーザー名**] を入力または選択します。  
   
 5.  **パスワード**を入力します。  
   
 6.  SSMA では、Azure SQL DB への暗号化接続を推奨しています。  
   
-7.  **[接続]** をクリックします。  
+7.  
+  **[接続]** をクリックします。  
   
 > [!IMPORTANT]  
 > SSMA for Sybase は、Azure SQL DB の**master**データベースへの接続をサポートしていません。  
@@ -70,19 +71,19 @@ Azure SQL DB データベースに関するメタデータは自動的に更新�
   
     たとえば、すべてのデータベースのメタデータを更新するには、[データベース] の横にあるチェックボックスをオンにします。  
   
-3.  データベース、または個々のデータベースまたはデータベーススキーマを右クリックし、**データベースとの同期** を選択します。  
+3.  [データベース]、または個々のデータベースまたはデータベーススキーマを右クリックし、[**データベースとの同期**] を選択します。  
   
-## <a name="next-step"></a>次の手順  
+## <a name="next-step"></a>次のステップ  
 移行の次のステップは、プロジェクトのニーズによって異なります。  
   
--   Sybase スキーマと Azure SQL DB データベースおよびスキーマ間のマッピングをカスタマイズするには、「 [SYBASE ASE スキーマの&#40;SQL Server スキーマへの&#41;マッピング sybasetosql](../../ssma/sybase/mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql.md) 」を参照してください。  
+-   Sybase スキーマと Azure SQL DB データベースおよびスキーマ間のマッピングをカスタマイズするには、「 [SYBASE ASE スキーマを SQL Server スキーマ &#40;SybaseToSQL&#41;にマップ](../../ssma/sybase/mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql.md)する」を参照してください。  
   
--   プロジェクトの構成オプションをカスタマイズするには、「[プロジェクト&#40;オプションの設定 sybasetosql&#41; ](../../ssma/sybase/setting-project-options-sybasetosql.md) 」を参照してください。  
+-   プロジェクトの構成オプションをカスタマイズするには、「 [SybaseToSQL&#41;&#40;プロジェクトオプションを設定](../../ssma/sybase/setting-project-options-sybasetosql.md)する」を参照してください。  
   
--   ソースとターゲットのデータ型のマッピングをカスタマイズするには、「 [SYBASE ASE と SQL Server &#40;データ型のマッピング&#41; sybasetosql](../../ssma/sybase/mapping-sybase-ase-and-sql-server-data-types-sybasetosql.md) 」を参照してください。  
+-   ソースとターゲットのデータ型のマッピングをカスタマイズするには、「 [SYBASE ASE と SQL Server のデータ型 &#40;SybaseToSQL](../../ssma/sybase/mapping-sybase-ase-and-sql-server-data-types-sybasetosql.md) 」を参照してください&#41;  
   
--   これらのタスクを実行する必要がない場合は、Sybase データベースオブジェクト定義を Azure SQL DB オブジェクト定義に変換できます。 詳細については、「 [SYBASE ASE データベース&#40;オブジェクトの変換 sybasetosql&#41; ](../../ssma/sybase/converting-sybase-ase-database-objects-sybasetosql.md) 」を参照してください。  
+-   これらのタスクを実行する必要がない場合は、Sybase データベースオブジェクト定義を Azure SQL DB オブジェクト定義に変換できます。 詳細については、「 [SYBASE ASE データベースオブジェクトの &#40;SybaseToSQL&#41;の変換](../../ssma/sybase/converting-sybase-ase-database-objects-sybasetosql.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
-[SQL Server への Sybase ASE データベースの移行-Azure &#40;sql DB sybasetosql&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+## <a name="see-also"></a>参照  
+[Sybase ASE データベースの SQL Server への移行-Azure SQL DB &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

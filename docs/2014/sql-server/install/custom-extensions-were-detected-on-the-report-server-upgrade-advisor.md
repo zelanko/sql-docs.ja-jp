@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: f985f41104dd194d851760c3d1c3e5479a65b7e8
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71952594"
 ---
 # <a name="custom-extensions-were-detected-on-the-report-server-upgrade-advisor"></a>レポート サーバーでカスタム拡張機能が検出された (アップグレード アドバイザー)
@@ -28,13 +28,13 @@ ms.locfileid: "71952594"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モード | [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モード。|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]ネイティブモード &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モード。|  
   
 ## <a name="component"></a>コンポーネント  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
 ## <a name="description"></a>[説明]  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、データ処理、配信、表示、セキュリティ、および認証用のカスタム拡張機能を開発者が作成するための拡張可能なアーキテクチャを提供します。  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]には拡張可能なアーキテクチャが用意されており、開発者はデータの処理、配信、表示、セキュリティ、および認証用のカスタム拡張機能を作成できます。  
   
  現在インストールされている [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] でカスタム拡張機能またはアセンブリを使用している場合、セットアップを使用してアップグレードを実行できますが、アップグレードの完了後に拡張機能を新しいインストール場所に移動するか、アップグレードの前に手順を実行する必要が生じることがあります。  
   
@@ -46,13 +46,13 @@ ms.locfileid: "71952594"
 ## <a name="corrective-action"></a>修正措置  
  次のセクションに従って、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のアップグレードに加えて、またはアップグレードの前に実行する手順を確認してください。  
   
- [カスタムデータ処理または配信拡張機能](#dataprocdeliver)  
+ [データ処理または配信のカスタム拡張機能](#dataprocdeliver)  
   
  [カスタム表示拡張機能](#render)  
   
  [SQL Server 2000 レポートサーバーでのカスタムセキュリティまたは認証の拡張機能](#secauth2000)  
   
- [SQL Server 2005 レポートサーバーでのカスタムセキュリティまたは認証の拡張機能](#secauth2005)  
+ [SQL Server 2005 レポート サーバーのセキュリティまたは認証のカスタム拡張機能](#secauth2005)  
   
  アップグレードの完了後、拡張機能アセンブリを新しいインストール フォルダーに移動し、カスタム拡張機能が想定どおりに動作することを確認します。 拡張機能が動作しない場合は、再コンパイルが必要なことがあります。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "71952594"
   
 ##### <a name="post-upgrade-steps-for-custom-data-processing-or-delivery-extensions"></a>データ処理または配信のカスタム拡張機能のアップグレード後に行う手順  
   
-1.  1 つまたは複数の拡張機能ファイルを、レポート サーバーの新しいプログラム フォルダーに移動します。 既定では、レポートサーバーのプログラムフォルダーは、SQL Server \ MSRS10_50 にあります。*instance_name*> レポートサーバーを\<します。  
+1.  1 つまたは複数の拡張機能ファイルを、レポート サーバーの新しいプログラム フォルダーに移動します。 既定では、レポートサーバーのプログラムフォルダーは、SQL Server \ MSRS10_50 にあります。\<> レポートサーバーを*instance_name*します。  
   
  詳細については、SQL Server オンライン ブックの「データ処理拡張機能の配置」および「配信拡張機能の実装」を参照してください。  
   
@@ -96,12 +96,14 @@ ms.locfileid: "71952594"
  詳細については、SQL Server オンライン ブックの「表示拡張機能の実装」を参照してください。  
   
 ###  <a name="secauth2000"></a>SQL Server 2000 レポートサーバーでのカスタムセキュリティまたは認証の拡張機能  
- [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] レポート サーバーのセキュリティまたは認証のカスタム拡張機能がアップグレード アドバイザーによって検出された場合、アップグレード プロセスはブロックされます。 アップグレードを可能にするための手順を実行する必要があります。または、代わりに [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の移行を選択できます。 いずれの場合も、Microsoft.ReportingServices.Interfaces.dll の最新のインターフェイスを使用して、拡張機能を更新および再コンパイルする必要があります。これは、[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] と [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ではインターフェイスが異なるためです。  
+ 
+  [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] レポート サーバーのセキュリティまたは認証のカスタム拡張機能がアップグレード アドバイザーによって検出された場合、アップグレード プロセスはブロックされます。 アップグレードを可能にするための手順を実行する必要があります。または、代わりに [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の移行を選択できます。 いずれの場合も、Microsoft.ReportingServices.Interfaces.dll の最新のインターフェイスを使用して、拡張機能を更新および再コンパイルする必要があります。これは、[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] と [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ではインターフェイスが異なるためです。  
   
 > [!IMPORTANT]  
 >  更新されたセキュリティまたは認証の拡張機能が想定どおりに動作することをテストして確認するまで、レポート サーバーをアップグレードまたは移行しないでください。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2000 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 用に作成したカスタム認証拡張機能を使用する場合は、モデル ドリブン レポート用に導入された新しいクラスとメンバーをサポートするようにソース コードを変更する必要があります。  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2000 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 用に作成したカスタム認証拡張機能を使用する場合は、モデル ドリブン レポート用に導入された新しいクラスとメンバーをサポートするようにソース コードを変更する必要があります。  
   
 ##### <a name="to-upgrade-custom-security-or-authentication-extensions-from-a-sql-server-2000-report-server"></a>SQL Server 2000 レポートサーバーからカスタムセキュリティまたは認証の拡張機能をアップグレードするには  
   
@@ -116,7 +118,8 @@ ms.locfileid: "71952594"
  詳細については、SQL Server オンライン ブックの「セキュリティ拡張機能の実装」を参照してください。  
   
 ###  <a name="secauth2005"></a>SQL Server 2005 レポートサーバーでのカスタムセキュリティまたは認証の拡張機能  
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] レポート サーバーのセキュリティまたは認証のカスタム拡張機能がアップグレード アドバイザーによって検出された場合、アップグレード プロセスはブロックされます。 アップグレードを可能にするための手順を実行する必要があります。または、代わりに [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の移行を選択できます。  
+ 
+  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] レポート サーバーのセキュリティまたは認証のカスタム拡張機能がアップグレード アドバイザーによって検出された場合、アップグレード プロセスはブロックされます。 アップグレードを可能にするための手順を実行する必要があります。または、代わりに [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の移行を選択できます。  
   
 ##### <a name="to-upgrade-custom-security-or-authentication-extensions-from-a-sql-server-2005-report-server"></a>SQL Server 2005 レポート サーバーのセキュリティまたは認証のカスタム拡張機能をアップグレードするには  
   
@@ -142,6 +145,6 @@ ms.locfileid: "71952594"
 3.  新しいインスタンスで拡張機能を構成します。  
   
 ## <a name="see-also"></a>参照  
- [アップグレードに関する&#40;問題の Reporting Services アップグレードアドバイザー&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
+ [アップグレードに関する問題を Reporting Services &#40;アップグレードアドバイザー&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
   
   

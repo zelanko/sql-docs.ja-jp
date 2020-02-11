@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b9830334843fd2c350091f7dc2af5493141bcfb1
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70874440"
 ---
 # <a name="estimate-the-interruption-of-service-during-role-switching-database-mirroring"></a>役割の交代中に発生するサービスの中断時間の算出 (データベース ミラーリング)
@@ -48,7 +48,8 @@ ms.locfileid: "70874440"
 >  インデックスまたはテーブルを作成し、変更するトランザクション中にフェールオーバーが発生した場合、フェールオーバーには通常より長い時間がかかる可能性があります。  たとえば、BEGIN TRANSACTION、テーブルに対する CREATE INDEX、SELECT INTO という一連の操作では、フェールオーバーの時間が増加する場合があります。 このようなトランザクションでは、COMMIT TRANSACTION ステートメントまたは ROLLBACK TRANSACTION ステートメントを使用してトランザクションを完了するまで、フェールオーバーの時間が増加する可能性は残ります。  
   
 ### <a name="the-redo-queue"></a>再実行キュー  
- データベースのロールフォワードでは、現在ミラー サーバー上の再実行キューにあるすべてのログ レコードが適用されます。 *再実行キュー* は、ミラー サーバー上のディスクに再実行用として書き込まれていて、ミラー データベースへはロールフォワードされていないログ レコードで構成されています。  
+ データベースのロールフォワードでは、現在ミラー サーバー上の再実行キューにあるすべてのログ レコードが適用されます。 
+  *再実行キュー* は、ミラー サーバー上のディスクに再実行用として書き込まれていて、ミラー データベースへはロールフォワードされていないログ レコードで構成されています。  
   
  データベースのフェールオーバー時間は、再実行キュー内のログがミラー サーバーからロールフォワードされる速度によって決まります。つまり、主にシステムのハードウェアと現在のワークロードによって決まります。 場合によっては、プリンシパル データベースがビジーになり、ミラー サーバーからログがロールフォワードされる速度よりも、プリンシパル サーバーからミラー サーバーにログが送信される速度の方が大幅に速くなることがあります。 この状況では、ミラー サーバーが再実行キューのログをロールフォワードする間、フェールオーバーに相当な時間がかかる場合があります。 再実行キューの現在のサイズを調べるには、データベース ミラーリング パフォーマンス オブジェクトの **Redo Queue** カウンターを使用します。 詳しくは、「 [SQL Server:Database Mirroring オブジェクト](../../relational-databases/performance-monitor/sql-server-database-mirroring-object.md)」を参照してください。  
   
@@ -57,9 +58,11 @@ ms.locfileid: "70874440"
   
  フェールオーバー時のロールフォワード時間を測定する方法は、再実行フェーズ中にミラー サーバーによって使用されるスレッドの数によって異なります。 スレッドの数は以下の条件によって異なります。  
   
--   [!INCLUDE[ssStandard](../../includes/ssstandard-md.md)]の場合、データベースのロールフォワードにミラー サーバーが使用するスレッドは常に 1 つです。  
+-   
+  [!INCLUDE[ssStandard](../../includes/ssstandard-md.md)]の場合、データベースのロールフォワードにミラー サーバーが使用するスレッドは常に 1 つです。  
   
--   [!INCLUDE[ssEnterprise](../../includes/ssenterprise-md.md)]では、5 基未満の CPU が搭載されたコンピューター上のミラー サーバーでも、1 つのスレッドのみが使用されます。 5 基以上の CPU が搭載されている場合、ミラー サーバーでは、フェールオーバー時にロールフォワード操作が複数スレッドに分散されます (これは、 *並列再実行*と呼ばれています)。 並列再実行は、4 基の CPU ごとに 1 つのスレッドを使用するように最適化されています。  
+-   
+  [!INCLUDE[ssEnterprise](../../includes/ssenterprise-md.md)]では、5 基未満の CPU が搭載されたコンピューター上のミラー サーバーでも、1 つのスレッドのみが使用されます。 5 基以上の CPU が搭載されている場合、ミラー サーバーでは、フェールオーバー時にロールフォワード操作が複数スレッドに分散されます (これは、 *並列再実行*と呼ばれています)。 並列再実行は、4 基の CPU ごとに 1 つのスレッドを使用するように最適化されています。  
   
 #### <a name="estimating-the-single-threaded-redo-rate"></a>シングルスレッドでの再実行速度の測定  
  シングルスレッドでの再実行では、フェールオーバー時にミラー データベースをロールフォワードすると、ログ バックアップの復元で同量のログをロールフォワードするのと同程度の時間がかかります。 フェールオーバー時間を測定するには、ミラーリングを実行しようとしている環境にテスト データベースを作成します。 次に、実稼働データベースからログ バックアップを取得します。 そのログのバックアップの再実行速度を測定するには、ログ バックアップを WITH NORECOVERY でテスト データベースに復元するのにかかる時間を測定します。  
@@ -67,7 +70,8 @@ ms.locfileid: "70874440"
  ミラー サーバーの再実行速度がわかったら、特定の時点にデータベースをフェールオーバーするのにかかる時間を測定できます。この値は、( **Redo Queue** パフォーマンス カウンターで測定した) ミラー上で再実行される現在のログのサイズを、再実行速度で割ることによって取得できます。 通常の状況下では、プリンシパルからの読み込みに対してミラー サーバーが遅延していない場合、 **Redo Queue** は小さい値であるかゼロに近く、フェールオーバーには数秒しかかかりません。  
   
 #### <a name="estimating-the-parallel-redo-rate"></a>並列再実行速度の測定  
- [!INCLUDE[ssEnterprise](../../includes/ssenterprise-md.md)]では、並列再実行は、4 基の CPU ごとに 1 つのスレッドを使用するように最適化されています。 並列再実行のロールフォワード時間を測定するには、テスト データベースにアクセスするよりも、稼働中のテスト システムにアクセスした方がより正確な値を得られます。 ミラー サーバー上の再実行キューを監視している間は、プリンシパル サーバー上の負荷を増やします。 通常の運用では、再実行キューはゼロに近くなります。 Redo Queue が継続的に増加し始めるまでは、プリンシパル サーバー上の負荷を増やします。そうすると、システムが最大の再実行速度になり、この時点で **Redo Bytes/sec** パフォーマンス カウンターは、最大の再実行速度を示します。 詳しくは、「 [SQL Server:Database Mirroring オブジェクト](../../relational-databases/performance-monitor/sql-server-database-mirroring-object.md)」を参照してください。  
+ 
+  [!INCLUDE[ssEnterprise](../../includes/ssenterprise-md.md)]では、並列再実行は、4 基の CPU ごとに 1 つのスレッドを使用するように最適化されています。 並列再実行のロールフォワード時間を測定するには、テスト データベースにアクセスするよりも、稼働中のテスト システムにアクセスした方がより正確な値を得られます。 ミラー サーバー上の再実行キューを監視している間は、プリンシパル サーバー上の負荷を増やします。 通常の運用では、再実行キューはゼロに近くなります。 Redo Queue が継続的に増加し始めるまでは、プリンシパル サーバー上の負荷を増やします。そうすると、システムが最大の再実行速度になり、この時点で **Redo Bytes/sec** パフォーマンス カウンターは、最大の再実行速度を示します。 詳しくは、「 [SQL Server:Database Mirroring オブジェクト](../../relational-databases/performance-monitor/sql-server-database-mirroring-object.md)」を参照してください。  
   
 ## <a name="estimating-interruption-of-service-during-automatic-failover"></a>自動フェールオーバー中に発生するサービスの中断時間の算出  
  下の図は、 **Partner_B**で自動フェールオーバーが完了するのに必要な時間に、エラー検出とフェールオーバー時間がどのように影響しているのかを示します。 フェールオーバーには、データベースをロールフォワードする (再実行フェーズ) ための時間に加え、データベースをオンラインにするための短い時間が必要です。 コミットされていないトランザクションのロールバックを実行する元に戻すフェーズは、新しいプリンシパル データベースがオンラインになった後に発生し、フェールオーバー後に続行します。 元に戻すフェーズの間、データベースは使用できます。  
@@ -75,8 +79,8 @@ ms.locfileid: "70874440"
  ![エラー検出とフェールオーバー時間](../media/dbm-failovauto-time.gif "エラー検出とフェールオーバー時間")  
   
 ## <a name="see-also"></a>参照  
- [データベース ミラーリングの動作モード](database-mirroring-operating-modes.md)   
- [データベース ミラーリング セッション中の役割の交代 &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)   
- [データベース ミラーリングの監視 &#40;SQL Server&#41;](monitoring-database-mirroring-sql-server.md)  
+ [データベースミラーリングの動作モード](database-mirroring-operating-modes.md)   
+ [データベースミラーリングセッション中の役割の交代 &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)   
+ [データベースミラーリングの監視 &#40;SQL Server&#41;](monitoring-database-mirroring-sql-server.md)  
   
   

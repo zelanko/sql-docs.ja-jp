@@ -11,26 +11,28 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 373b2b9d90512293e1776d06ab5797faaf47a210
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72797770"
 ---
 # <a name="encode-and-decode-sql-server-identifiers"></a>SQL Server 識別子のエンコードとデコード
   SQL Server の区切られた識別子には、Windows PowerShell パスでサポートされない文字が含まれる場合があります。 これらの文字は、16 進数値にエンコードすることによって指定できます。  
   
-1.  **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions)  
+1.  **作業を開始する準備:**  [制限事項と制約事項](#LimitationsRestrictions)  
   
-2.  **特殊文字を処理する方法:**  [識別子のエンコード](#EncodeIdent)、 [識別子のデコード](#DecodeIdent)  
+2.  **特殊文字を処理する:**  [識別子のエンコード](#EncodeIdent)、[識別子のデコード](#DecodeIdent)  
   
-## <a name="before-you-begin"></a>作業を開始する準備  
+## <a name="before-you-begin"></a>はじめに  
  Windows PowerShell パス名でサポートされない文字は、" **%** xx" のように、"%" 文字の後に文字を表すビット パターンの 16 進値を付加して表す、つまりエンコードすることができます。 エンコードは、Windows PowerShell パスでサポートされない文字を処理する場合にいつでも使用できます。  
   
  **Encode-SqlName** コマンドレットは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 識別子を入力として受け取ります。 また、Windows PowerShell 言語ではサポートされないすべての文字が "%xx" でエンコードされた文字列を出力します。 **Decode-SqlName** コマンドレットは、エンコードされた [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 識別子を入力として受け取り、元の識別子を返します。  
   
 ###  <a name="LimitationsRestrictions"></a> 制限事項と制約事項  
- `Encode-Sqlname` コマンドレットと `Decode-Sqlname` コマンドレットでエンコードまたはデコードできるのは、SQL Server の区切られた識別子ではサポートされるが PowerShell パスではサポートされない文字のみです。 **Encode-SqlName** によってエンコードされ、 **Decode-sqlname**によってデコードされる文字を次に示します。  
+ 
+  `Encode-Sqlname` コマンドレットと `Decode-Sqlname` コマンドレットでエンコードまたはデコードできるのは、SQL Server の区切られた識別子ではサポートされるが PowerShell パスではサポートされない文字のみです。 
+  **Encode-SqlName** によってエンコードされ、 **Decode-sqlname**によってデコードされる文字を次に示します。  
   
 |||||||||||||  
 |-|-|-|-|-|-|-|-|-|-|-|-|  
@@ -73,5 +75,5 @@ Decode-SqlName "Table%3ATest"
   
 ## <a name="see-also"></a>参照  
  [PowerShell での SQL Server 識別子](sql-server-identifiers-in-powershell.md)   
- [SQL Server PowerShell Provider](sql-server-powershell-provider.md)   
+ [SQL Server PowerShell プロバイダー](sql-server-powershell-provider.md)   
  [SQL Server PowerShell](sql-server-powershell.md)  

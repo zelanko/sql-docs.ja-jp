@@ -14,30 +14,30 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dcc35614e156301efa5892d59a09156c189e0fac
-ms.sourcegitcommit: 82a1ad732fb31d5fa4368c6270185c3f99827c97
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/21/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72688878"
 ---
 # <a name="bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc"></a>SQL Server ODBC ドライバーで一括コピーを行う方法に関するトピック (ODBC)
   Microsoft SQL Server 2005 で使用する場合、SQL Server ODBC ドライバーは、DB-LIBRARY API でサポートされているのと同じ一括コピー関数をサポートします。  
   
- @No__t_0 による一括コピーの重大な変更については、「[一括コピー操作&#40;の&#41;実行 ODBC](../../native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)」を参照してください。  
+ での[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]一括コピーの重大な変更の詳細については、「 [ODBC&#41;&#40;の一括コピー操作の実行](../../native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)」を参照してください。  
   
-## <a name="in-this-section"></a>トピックの内容  
+## <a name="in-this-section"></a>このセクションの内容  
   
--   [フォーマットファイル&#40;を使用しない一括コピー ODBC&#41;](bulk-copy-without-a-format-file-odbc.md)  
+-   [フォーマットファイルを使用しない一括コピー &#40;ODBC&#41;](bulk-copy-without-a-format-file-odbc.md)  
   
--   [SELECT 結果セット&#40;の一括コピー ODBC&#41;](bulk-copy-a-select-result-set-odbc.md)  
+-   [SELECT 結果セットの一括コピー &#40;ODBC&#41;](bulk-copy-a-select-result-set-odbc.md)  
   
--   [一括コピーフォーマットファイル&#40;を作成する ODBC&#41;](create-a-bulk-copy-format-file-odbc.md)  
+-   [&#40;ODBC&#41;の一括コピーフォーマットファイルを作成する](create-a-bulk-copy-format-file-odbc.md)  
   
--   [フォーマットファイル&#40;を使用した一括コピー ODBC&#41;](bulk-copy-by-using-a-format-file-odbc.md)  
+-   [フォーマットファイルを使用した一括コピー &#40;ODBC&#41;](bulk-copy-by-using-a-format-file-odbc.md)  
   
--   [プログラム変数&#40;ODBC からの一括データコピー&#41;](bulk-copy-data-from-program-variables-odbc.md)  
+-   [プログラム変数からの一括データコピー &#40;ODBC&#41;](bulk-copy-data-from-program-variables-odbc.md)  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>参照  
  [ODBC の使用法に関するトピック](../odbc-how-to-topics.md)  
   
   

@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 530cca00459ed1ae170272dfd20a54928f039b38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900338"
 ---
 # <a name="sort-data-for-the-merge-and-merge-join-transformations"></a>マージ変換およびマージ結合変換用にデータを並べ替える
@@ -38,7 +38,7 @@ ms.locfileid: "62900338"
   
      並べ替え変換では Windows 照合順序を使用して文字列値を並べ替えます。  
   
-     \- または -  
+     または  
   
 -   Transact-SQL の CAST 演算子を使用して最初に `varchar` 値を `nvarchar` 値にキャストし、次に Transact-SQL ORDER BY 句を使用してデータを並べ替えます。  
   
@@ -51,7 +51,8 @@ ms.locfileid: "62900338"
 -   データが並べ替えられているかどうかを示す、出力の `IsSorted` プロパティ。 このプロパティは `True` に設定する必要があります。  
   
     > [!IMPORTANT]  
-    >  `IsSorted` プロパティの値を `True` に設定しても、データは並べ替えられません。 このプロパティでは、データが既に並べ替えられている下流コンポーネントにヒントのみを提供します。  
+    >  
+  `IsSorted` プロパティの値を `True` に設定しても、データは並べ替えられません。 このプロパティでは、データが既に並べ替えられている下流コンポーネントにヒントのみを提供します。  
   
 -   列を並べ替えるかどうか、並べ替える場合はその列の並べ替え順、および複数の列の並べ替えの順序を示す、出力列の `SortKeyPosition` プロパティ。 このプロパティは、並べ替えられるデータの各列に対して設定する必要があります。  
   
@@ -71,7 +72,7 @@ ms.locfileid: "62900338"
   
 5.  **[入力プロパティと出力プロパティ]** タブをクリックします。  
   
-6.  クリックして **\<コンポーネント名 > 出力**、設定、`IsSorted`プロパティを`True`します。  
+6.  [ ** \<コンポーネント名> 出力**] をクリックし`IsSorted` 、プロパティ`True`をに設定します。  
   
     > [!NOTE]  
     >  出力の `IsSorted` プロパティを手動で `True` に設定したにもかかわらず、データが並べ替えられない場合、パッケージの実行時に、下流の結合変換またはマージ結合変換で、データの欠落、または不良データの比較が生じている可能性があります。  
@@ -88,7 +89,8 @@ ms.locfileid: "62900338"
   
     -   既定値は 0 で、その列が並べ替えられないことを示します。 並べ替えに加えない出力列では、値を 0 のままにします。  
   
-     `SortKeyPosition` プロパティの設定方法の例として、データを変換元に読み込む、次の Transact-SQL ステートメントについて考えてみます。  
+     
+  `SortKeyPosition` プロパティの設定方法の例として、データを変換元に読み込む、次の Transact-SQL ステートメントについて考えてみます。  
   
      `SELECT * FROM MyTable ORDER BY ColumnA, ColumnB DESC, ColumnC`  
   
@@ -111,6 +113,6 @@ ms.locfileid: "62900338"
  [マージ結合変換](merge-join-transformation.md)   
  [Integration Services の変換](integration-services-transformations.md)   
  [Integration Services のパス](../integration-services-paths.md)   
- [[データ フロー タスク]](../../control-flow/data-flow-task.md)  
+ [データ フロー タスク](../../control-flow/data-flow-task.md)  
   
   

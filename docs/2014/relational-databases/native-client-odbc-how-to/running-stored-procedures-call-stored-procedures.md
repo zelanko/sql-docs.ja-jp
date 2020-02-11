@@ -13,16 +13,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a960df20b7b07bffab900589ae4d520541d720c1
-ms.sourcegitcommit: 82a1ad732fb31d5fa4368c6270185c3f99827c97
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/21/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72688662"
 ---
 # <a name="call-stored-procedures-odbc"></a>ストアド プロシージャの呼び出し (ODBC)
   SQL ステートメントで ODBC CALL エスケープ句を使用してストアドプロシージャを呼び出すと、Microsoft SQL Server ドライバーは、リモートストアドプロシージャコール (RPC) メカニズムを使用して SQL Server にプロシージャを送信します。 RPC 要求は、SQL Server でのステートメント解析やパラメーター処理の多くを省略するため、Transact-SQL の EXECUTE ステートメントを使用するよりも高速です。  
   
- この機能を示すサンプルアプリケーションについては、「[リターンコードと出力&#40;パラメーター&#41;の処理 ODBC](running-stored-procedures-process-return-codes-and-output-parameters.md)」を参照してください。  
+ この機能を示すサンプルアプリケーションについては、「[リターンコードを処理する」および「ODBC&#41;&#40;出力パラメーター ](running-stored-procedures-process-return-codes-and-output-parameters.md)」を参照してください。  
   
 ### <a name="to-run-a-procedure-as-an-rpc"></a>プロシージャを RPC として実行するには  
   
@@ -40,10 +40,10 @@ ms.locfileid: "72688662"
 >  アプリケーションでプロシージャの送信に (ODBC CALL エスケープ シーケンスではなく) Transact-SQL の EXECUTE 構文を使用した場合、プロシージャ コールは、SQL Server ODBC ドライバーから SQL Server に、RPC ではなく SQL ステートメントとして渡されます。 また、Transact-SQL の EXECUTE ステートメントを使用した場合、出力パラメーターは返されません。  
   
 ## <a name="see-also"></a>参照  
- [ストアドプロシージャの実行方法に関する&#40;トピック&#41; ODBC](../../database-engine/dev-guide/running-stored-procedures-how-to-topics-odbc.md)   
+ [ストアドプロシージャの実行方法に関するトピック &#40;ODBC&#41;](../../database-engine/dev-guide/running-stored-procedures-how-to-topics-odbc.md)   
  [ストアドプロシージャ呼び出しのバッチ処理](../native-client-odbc-stored-procedures/batching-stored-procedure-calls.md)   
  [ストアドプロシージャの実行](../native-client-odbc-stored-procedures/running-stored-procedures.md)   
- [ストアドプロシージャ  の呼び出し](../native-client-odbc-stored-procedures/calling-a-stored-procedure.md)  
+ [ストアドプロシージャの呼び出し](../native-client-odbc-stored-procedures/calling-a-stored-procedure.md)   
  [手順](../native-client-odbc-queries/executing-statements/procedures.md)  
   
   

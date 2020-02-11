@@ -1,5 +1,5 @@
 ---
-title: managed_backup sp_backup_on_demand (Transact-sql) |Microsoft Docs
+title: managed_backup。 sp_backup_on_demand (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,13 +21,13 @@ ms.assetid: 638f809f-27fa-4c44-a549-9cf37ecc920c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e34cf20585ea7dcd3690d80ee415fc274bf852ca
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70155399"
 ---
-# <a name="managed_backupsp_backup_on_demand-transact-sql"></a>managed_backup sp_backup_on_demand (Transact-sql)
+# <a name="managed_backupsp_backup_on_demand-transact-sql"></a>managed_backup。 sp_backup_on_demand (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   指定[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]されたデータベースのバックアップを実行するように要求します。  
@@ -48,22 +48,22 @@ EXEC managed_backup.sp_backup_on_demand
   
 ```  
   
-##  <a name="Arguments"></a> 引数  
+##  <a name="Arguments"></a>数値  
  @database_name  
- バックアップの実行対象となるデータベースの名前。 @database_nameは **SYSNAME** します。  
+ バックアップを実行するデータベースの名前を指定します。 @database_nameは**SYSNAME**です。  
   
  @type  
- 実行するバックアップの種類。データベースまたはログ。 パラメーターは**NVARCHAR (32)** です。 @type  
+ 実行するバックアップの種類: Database または Log。 @typeパラメーターは**NVARCHAR (32)** です。  
   
 ## <a name="return-code-value"></a>リターン コード値  
  0 (成功) または 1 (失敗)  
   
-## <a name="security"></a>セキュリティ  
+## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>アクセス許可  
  **Db_backupoperator**データベースロールのメンバーシップ、 **ALTER ANY CREDENTIAL**権限、および**Sp_delete_backuphistory**ストアドプロシージャに対する**EXECUTE**権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、データベース ' TestDB ' のデータベースバックアップ要求を作成します。 このデータベースは[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]有効になっています。  
   
 ```  

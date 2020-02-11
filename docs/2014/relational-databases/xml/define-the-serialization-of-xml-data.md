@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 39f3ccc462fb063ecb314b1e9968dcfa8a095cbb
-ms.sourcegitcommit: 82a1ad732fb31d5fa4368c6270185c3f99827c97
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/21/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72688884"
 ---
 # <a name="define-the-serialization-of-xml-data"></a>XML データのシリアル化の定義
@@ -31,7 +31,7 @@ ms.locfileid: "72688884"
 ## <a name="serialization-encoding"></a>シリアル化のエンコード  
  SQL の対象型が VARBINARY の場合、結果は UTF-16 バイト順マークを前に付け、XML 宣言を付けずに、UTF-16 でシリアル化されます。 対象型が小さすぎる場合は、エラーが発生します。  
   
- 例 :  
+ 次に例を示します。  
   
 ```sql
 select CAST(CAST(N'<Δ/>' as XML) as VARBINARY(MAX))  
@@ -45,7 +45,7 @@ select CAST(CAST(N'<Δ/>' as XML) as VARBINARY(MAX))
   
  SQL の対象型が NVARCHAR または NCHAR の場合、結果はバイト順マークを前に付けず、XML 宣言を付けずに、UTF-16 でシリアル化されます。 対象型が小さすぎる場合は、エラーが発生します。  
   
- 例 :  
+ 次に例を示します。  
   
 ```sql
 select CAST(CAST(N'<Δ/>' as XML) as NVARCHAR(MAX))  
@@ -59,13 +59,13 @@ select CAST(CAST(N'<Δ/>' as XML) as NVARCHAR(MAX))
   
  SQL の対象型が VARCHAR または NCHAR の場合、結果はバイト順マークまたは XML 宣言を付けずに、データベースの照合順序のコード ページに対応するエンコードでシリアル化されます。 対象型が小さすぎるか、または対象の照合順序のコード ページに値をマップできない場合、エラーが発生します。  
   
- 例 :  
+ 次に例を示します。  
   
 ```sql
 select CAST(CAST(N'<Δ/>' as XML) as VARCHAR(MAX))  
 ```  
   
- 現在の照合順序のコードページが Unicode 文字&#x10300;を表すことができない場合、または特定のエンコードで表現される場合、エラーが発生する可能性があります。  
+ 現在の照合順序のコードページが Unicode 文字 & # x10300; を表すことができない場合、または特定のエンコードで表現される場合、エラーが発生する可能性があります。  
   
  XML の結果がクライアント側に返されるときは、UTF-16 エンコードでデータが送信されます。 クライアント側のプロバイダーでは、API の規則に従ってデータを公開します。  
   
@@ -77,7 +77,7 @@ select CAST(CAST(N'<Δ/>' as XML) as VARCHAR(MAX))
   
 -   &、\<、> の文字が属性値や要素のコンテンツ内に出現する場合、常に、それぞれ &amp;、&lt;、&gt; にエンティティ変換されます。  
   
--   SQL Server では属性値を囲むために引用符 (U+0022) が使用されるので、属性値の引用符は &quot; にエンティティ変換されます。  
+-   SQL Server では属性値を囲むために引用符 (U+0022) が使用されるので、属性値の引用符は &quot;にエンティティ変換されます。  
   
 -   サーバーのみでキャストする場合は、サロゲート ペアが 1 つの数字参照としてエンティティ変換されます。 たとえば、サロゲート ペア U+D800 U+DF00 は、数字参照 &\#x00010300; にエンティティ変換されます。  
   
@@ -87,7 +87,7 @@ select CAST(CAST(N'<Δ/>' as XML) as VARCHAR(MAX))
   
 -   空白文字だけが含まれているテキスト ノードを保護するために、空白文字の 1 つ (通常は最後の空白文字) が数字参照としてエンティティ変換されます。 このようにすると、解析時の空白文字の処理の設定とは無関係に、再解析時に空白文字のテキスト ノードが保持されます。  
   
- 例 :  
+ 次に例を示します。  
   
 ```sql
 declare @u NVARCHAR(50)  

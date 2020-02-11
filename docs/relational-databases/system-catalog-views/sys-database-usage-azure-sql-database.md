@@ -21,10 +21,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 0a0789ebd9a5aa4bd10605d69afa59a586ce75b2
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70155540"
 ---
 # <a name="sysdatabase_usage-azure-sql-database"></a>sys.database_usage (Azure SQL データベース)
@@ -32,7 +32,7 @@ ms.locfileid: "70155540"
 
   **注: これは Azure SQL Database V11 にのみ適用されます。**  
   
- [!INCLUDE[ssSDS](../../includes/sssds-md.md)] サーバー上のデータベースの数、種類、および期間を一覧表示します。  
+ [!INCLUDE[ssSDS](../../includes/sssds-md.md)]サーバー上のデータベースの数、種類、および期間を一覧表示します。  
   
  **Database_usage**ビューには、次の列が含まれています。  
   
@@ -40,16 +40,16 @@ ms.locfileid: "70155540"
 |-----------------|-----------------|  
 |time|使用状況イベントが発生した日付。|  
 |sku|データベースのサービス階層の種類: **Web**、 **Business**、 **Basic**、 **Standard**、 **Premium**|  
-|quantity|その日に存在していた SKU の種類のデータベースの最大数。|  
+|quantity|その日に存在した、SKU の種類のデータベースの最大数。|  
   
 ## <a name="permissions"></a>アクセス許可  
  このビューへの読み取り専用アクセスは、 **master**データベースに接続する権限を持つすべてのユーザーが使用できます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **Database_usage**ビューでは、サブスクリプションの日ごとに1つの行が返されます。  
   
 ## <a name="see-also"></a>参照  
- [SQL Database 料金の詳細](https://go.microsoft.com/fwlink/?LinkID=394978)   
- [Azure SQL Database のアカウントと課金](https://msdn.microsoft.com/library/windowsazure/ee621788.aspx)  
+ [SQL Database の料金詳細](https://go.microsoft.com/fwlink/?LinkID=394978)   
+ [Azure SQL データベースのアカウントと課金](https://msdn.microsoft.com/library/windowsazure/ee621788.aspx)  
   
   
