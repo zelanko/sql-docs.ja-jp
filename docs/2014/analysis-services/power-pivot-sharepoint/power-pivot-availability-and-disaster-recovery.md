@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 731550d385d073c7b2f2e2758d4fcaf2353db746
-ms.sourcegitcommit: 9b8b11961b33e66fc9f433d094fc5c0f9b473772
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74908994"
 ---
 # <a name="powerpivot-availability-and-disaster-recovery-sql-server-2014"></a>PowerPivot の可用性と災害復旧 (SQL Server 2014)
@@ -83,7 +83,7 @@ ms.locfileid: "74908994"
 ##  <a name="bkmk_sql_server_technologies"></a>PowerPivot サービスアプリケーションデータベースと SQL Server の可用性と復旧のテクノロジ  
  SharePoint の高可用性実現計画には、 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] サービス アプリケーション データベースを加えてください。 データベースの既定の名前は、 `DefaultPowerPivotServiceApplicationDB-<GUID>`です。 以下の表は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースと組み合わせて使用される [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] の可用性テクノロジと推奨事項をまとめたものです。 詳細については、「 [サポートされている SharePoint データベース用の高可用性とディザスター リカバリーのオプション (SharePoint 2013)](https://technet.microsoft.com/library/jj841106.aspx)」を参照してください。  
   
-||備考|  
+||説明|  
 |-|--------------|  
 |
   [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] と [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] の同期ミラーリングを同じファーム内で行うことによる可用性の確保|サポートはされますが、推奨はされません。 AlwaysOn は同期コミットモードで使用することをお勧めします。|  

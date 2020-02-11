@@ -1,5 +1,5 @@
 ---
-title: managed_backup.sp_backup_config_schedule (TRANSACT-SQL) |Microsoft Docs
+title: managed_backup。 sp_backup_config_schedule (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,16 +21,16 @@ ms.assetid: 82541160-d1df-4061-91a5-6868dd85743a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 52df69439cecad5fddf3d38b8852a1ce86cc4dbd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67942072"
 ---
-# <a name="managedbackupspbackupconfigschedule-transact-sql"></a>managed_backup.sp_backup_config_schedule (TRANSACT-SQL)
+# <a name="managed_backupsp_backup_config_schedule-transact-sql"></a>managed_backup。 sp_backup_config_schedule (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  自動またはカスタム スケジュールのオプションを構成します。[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]します。  
+  の自動またはカスタムスケジュールオプション[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]を構成します。  
     
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,41 +47,41 @@ EXEC managed_backup.sp_backup_config_schedule
     ,[@log_backup_freq = ] 'frequency of log backup'  
 ```  
   
-##  <a name="Arguments"></a> 引数  
+##  <a name="Arguments"></a>数値  
  @database_name  
- 特定のデータベースでマネージ バックアップを有効にするためのデータベース名。 NULL の場合、または *、この管理対象のバックアップは、サーバー上のすべてのデータベースに適用されます。  
+ 特定のデータベースでマネージバックアップを有効にするためのデータベース名。 NULL または * の場合、このマネージバックアップはサーバー上のすべてのデータベースに適用されます。  
   
  @scheduling_option  
- バックアップ スケジュールのシステム管理の対象には、'System' を指定します。 カスタム スケジュールをその他のパラメーターで定義されている 'Custom' を指定します。  
+ システム制御のバックアップスケジュールには ' System ' を指定してください。 他の paratmeters によって定義されたカスタムスケジュールには、' Custom ' を指定します。  
   
  @full_backup_freq_type  
- 頻度の種類の管理対象のバックアップ操作で、'毎日' または '毎週' に設定することができます。  
+ マネージバックアップ操作の頻度の種類。 ' Daily ' または ' Weekly ' に設定できます。  
   
  @days_of_week  
- バックアップの曜日と@full_backup_freq_type毎週に設定されます。 '月曜日' のような完全な文字列の名前を指定します。  1 日の名、パイプで区切られた複数指定できます。 たとえば N'Monday |水曜日 |金曜日 ' です。  
+ が毎週に設定されている場合@full_backup_freq_typeのバックアップの曜日。 ' Monday ' のような完全な文字列名を指定してください。  複数の曜日名をパイプで区切って指定することもできます。 例: N'Monday |水曜日 |金曜日  
   
  @backup_begin_time  
- バックアップ ウィンドウの開始時刻。 組み合わせによって定義されている時間枠の外部でのバックアップは開始されません@backup_begin_timeと@backup_durationします。  
+ バックアップウィンドウの開始時刻。 バックアップは、と@backup_begin_time @backup_durationの組み合わせによって定義される時間枠の外側では開始されません。  
   
  @backup_duration  
- バックアップの時間枠の期間です。 によって定義された時間枠中にバックアップが完了することの保証がないことに注意してください。@backup_begin_timeと@backup_durationします。 この時間帯で開始されるウィンドウの期間を超えるバックアップ操作はキャンセルできません。  
+ バックアップ時間枠の期間。 と@backup_begin_time @backup_durationで定義された時間枠でバックアップが完了する保証はないことに注意してください。 この時間枠内に開始され、ウィンドウの期間を超えるバックアップ操作は取り消されません。  
   
  @log_backup_freq  
- これは、トランザクション ログ バックアップの頻度を決定します。 これらのバックアップは、データベースのバックアップに指定されたスケジュールではなく、一定の間隔で行われます。 @log_backup_freq 0 が有効でないことを示しますログ バックアップ、数分または数時間でできます。 ログ バックアップを無効にするだけでしょう単純復旧モデルでデータベースの適切です。  
+ これにより、トランザクションログバックアップの頻度が決まります。 これらのバックアップは、データベースバックアップに指定されたスケジュールではなく、一定の間隔で行われます。 @log_backup_freqには、分または時間を指定できます。0は有効で、ログバックアップがないことを示します。 ログバックアップを無効にすることは、単純復旧モデルのデータベースにのみ適しています。  
   
 > [!NOTE]  
->  復旧モデルは、完全に単純なものから変更された場合は、0 以外の値を 0 から log_backup_freq を再構成する必要があります。  
+>  復旧モデルが単純から完全に変更された場合は、log_backup_freq を0から0以外の値に再構成する必要があります。  
   
 ## <a name="return-code-value"></a>リターン コード値  
  0 (成功) または 1 (失敗)  
   
-## <a name="security"></a>セキュリティ  
+## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>アクセス許可  
- メンバーシップが必要です**db_backupoperator**データベース ロール、 **ALTER ANY CREDENTIAL**アクセス許可、および**EXECUTE**に対する**sp_deletebackuphistory**ストアド プロシージャ。  
+ **Db_backupoperator**データベースロールのメンバーシップ、 **ALTER ANY CREDENTIAL**権限、および**Sp_delete_backuphistory**ストアドプロシージャに対する**EXECUTE**権限が必要です。  
   
-## <a name="see-also"></a>関連項目  
- [managed_backup.sp_backup_config_basic (TRANSACT-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md)   
- [managed_backup.sp_backup_config_advanced &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)  
+## <a name="see-also"></a>参照  
+ [managed_backup。 sp_backup_config_basic (Transact-sql)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md)   
+ [managed_backup sp_backup_config_advanced &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)  
   
   

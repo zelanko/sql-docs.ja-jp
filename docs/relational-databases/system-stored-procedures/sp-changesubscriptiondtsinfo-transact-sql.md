@@ -16,13 +16,13 @@ ms.assetid: 64fc085f-f81b-493b-b59a-ee6192d9736d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a091df0cbbeb2883ff9905d7c5b3718d50efa86b
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68762548"
 ---
-# <a name="spchangesubscriptiondtsinfo-transact-sql"></a>sp_changesubscriptiondtsinfo (Transact-SQL)
+# <a name="sp_changesubscriptiondtsinfo-transact-sql"></a>sp_changesubscriptiondtsinfo (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   サブスクリプションのデータ変換サービス (DTS) パッケージのプロパティを変更します。 このストアドプロシージャは、サブスクライバー側のサブスクリプションデータベースで実行されます。  
@@ -40,27 +40,27 @@ sp_changesubscriptiondtsinfo [ [ @job_id = ] job_id ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @job_id = ] job_id`プッシュサブスクリプションのディストリビューションエージェントのジョブ ID を示します。 *job_id*は**varbinary (16)** ,、既定値はありません。 配布ジョブ ID を検索するには、 **sp_helpsubscription**または**sp_helppullsubscription**を実行します。  
+`[ @job_id = ] job_id`プッシュサブスクリプションのディストリビューションエージェントのジョブ ID を示します。 *job_id*は**varbinary (16)**,、既定値はありません。 配布ジョブ ID を検索するには、 **sp_helpsubscription**または**sp_helppullsubscription**を実行します。  
   
-`[ @dts_package_name = ] 'dts_package_name'`DTS パッケージの名前を指定します。 *dts_package_name*は**sysname**,、既定値は NULL です。 たとえば、 **DTSPub_Package**という名前のパッケージを指定するには`@dts_package_name = N'DTSPub_Package'`、を指定します。  
+`[ @dts_package_name = ] 'dts_package_name'`DTS パッケージの名前を指定します。 *dts_package_name*は**sysname**で、既定値は NULL です。 たとえば、 **DTSPub_Package**という名前のパッケージを指定するには`@dts_package_name = N'DTSPub_Package'`、を指定します。  
   
-`[ @dts_package_password = ] 'dts_package_password'`パッケージのパスワードを指定します。 *dts_package_password*は**sysname**既定値は NULL です。これは、password プロパティを変更せずに残すことを指定します。  
+`[ @dts_package_password = ] 'dts_package_password'`パッケージのパスワードを指定します。 *dts_package_password*は**sysname**で、既定値は NULL です。これは、password プロパティを変更せずに残すことを指定します。  
   
 > [!NOTE]  
 >  DTS パッケージには、パスワードが必要です。  
   
-`[ @dts_package_location = ] 'dts_package_location'`パッケージの場所を指定します。 *dts_package_location*は**nvarchar (12)** ,、既定値は NULL の場合、パッケージの場所を変更しないことを指定します。 パッケージの場所は、**ディストリビューター**または**サブスクライバー**に変更できます。  
+`[ @dts_package_location = ] 'dts_package_location'`パッケージの場所を指定します。 *dts_package_location*は**nvarchar (12)**,、既定値は NULL の場合、パッケージの場所を変更しないことを指定します。 パッケージの場所は、**ディストリビューター**または**サブスクライバー**に変更できます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  **sp_changesubscriptiondtsinfo**は、プッシュサブスクリプションのみのスナップショットレプリケーションおよびトランザクションレプリケーションに使用されます。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sp_changesubscriptiondtsinfo**を実行できるのは、 **sysadmin**固定サーバーロールのメンバー、 **db_owner**固定データベースロールのメンバー、またはサブスクリプションの作成者だけです。  
   
-## <a name="see-also"></a>関連項目  
- [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>参照  
+ [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

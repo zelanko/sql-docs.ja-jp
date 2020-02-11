@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7de13f529dc0aab0c897ebe3dc1cb19220b13fd7
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70154583"
 ---
 # <a name="databases"></a>データベース
@@ -42,7 +42,7 @@ ms.locfileid: "70154583"
 |-|-|  
 |[システム データベース](system-databases.md)|[データまたはログ ファイルのデータベースからの削除](delete-data-or-log-files-from-a-database.md)|  
 |[包含データベース](contained-databases.md)|[データベースのデータ領域とログ領域情報の表示](display-data-and-log-space-information-for-a-database.md)|  
-|[Azure でのデータファイルの SQL Server](sql-server-data-files-in-microsoft-azure.md)|[データベースのサイズを大きくする](increase-the-size-of-a-database.md)|  
+|[Azure 内の SQL Server データ ファイル](sql-server-data-files-in-microsoft-azure.md)|[データベースのサイズを大きくする](increase-the-size-of-a-database.md)|  
 |[データベース ファイルとファイル グループ](database-files-and-filegroups.md)|[データベースの名前変更](rename-a-database.md)|  
 |[データベースの状態](database-states.md)|[データベースをシングル ユーザー モードに設定する](set-a-database-to-single-user-mode.md)|  
 |[ファイルの状態](file-states.md)|[データベースの圧縮](shrink-a-database.md)|  
@@ -51,14 +51,14 @@ ms.locfileid: "70154583"
 |[データベースのデタッチとアタッチ &#40;SQL Server&#41;](database-detach-and-attach-sql-server.md)|[SQL Server インスタンス上のデータベースの一覧表示](view-a-list-of-databases-on-an-instance-of-sql-server.md)|  
 |[データベースに対するデータ ファイルまたはログ ファイルの追加](add-data-or-log-files-to-a-database.md)|[データベースの互換性レベルの表示または変更](view-or-change-the-compatibility-level-of-a-database.md)|  
 |[データベースの構成設定の変更](change-the-configuration-settings-for-a-database.md)|[メンテナンス プラン ウィザードの使用](../maintenance-plans/use-the-maintenance-plan-wizard.md)|  
-|[ データベースの作成](create-a-database.md)|[ユーザー定義データ型の別名の作成](create-a-user-defined-data-type-alias.md)|  
-|[データベースの削除](delete-a-database.md)|[Database Snapshots &#40;SQL Server&#41;](database-snapshots-sql-server.md)|  
+|[データベースの作成](create-a-database.md)|[ユーザー定義データ型の別名の作成](create-a-user-defined-data-type-alias.md)|  
+|[データベースの削除](delete-a-database.md)|[データベーススナップショット &#40;SQL Server&#41;](database-snapshots-sql-server.md)|  
   
 ## <a name="related-content"></a>関連コンテンツ  
  [インデックス](../indexes/indexes.md)  
   
- [ビュー](../views/views.md)  
+ [表示モード](../views/views.md)  
   
- [ストアド プロシージャ &#40;データベース エンジン&#41;](../stored-procedures/stored-procedures-database-engine.md)  
+ [ストアドプロシージャ &#40;データベースエンジン&#41;](../stored-procedures/stored-procedures-database-engine.md)  
   
   
