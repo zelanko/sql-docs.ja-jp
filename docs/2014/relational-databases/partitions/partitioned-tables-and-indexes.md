@@ -16,17 +16,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5f96f82919b9f4a130ce8a533e6ffcf31e765f5f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65092040"
 ---
 # <a name="partitioned-tables-and-indexes"></a>パーティション テーブルとパーティション インデックス
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、テーブルおよびインデックスのパーティション分割をサポートします。 パーティション テーブルとパーティション インデックスのデータは、データベース内の複数のファイル グループに分散できるように、複数の単位に分割されます。 行のグループが各パーティションにマップされるように、データは行方向にパーティション分割されます。 1 つのインデックスまたはテーブルのすべてのパーティションは、同じデータベース内に存在する必要があります。 データに対するクエリまたは更新の実行時は、テーブルやインデックスが 1 つの論理エンティティとして扱われます。 パーティション テーブルとパーティション インデックスは、[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのエディションで使用できるわけではありません。 エディションでサポートされている機能の一覧については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を参照してください[機能は、SQL Server 2014 の各エディションでサポートされている](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、テーブルおよびインデックスのパーティション分割をサポートします。 パーティション テーブルとパーティション インデックスのデータは、データベース内の複数のファイル グループに分散できるように、複数の単位に分割されます。 行のグループが各パーティションにマップされるように、データは行方向にパーティション分割されます。 1 つのインデックスまたはテーブルのすべてのパーティションは、同じデータベース内に存在する必要があります。 データに対するクエリまたは更新の実行時は、テーブルやインデックスが 1 つの論理エンティティとして扱われます。 パーティション テーブルとパーティション インデックスは、[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのエディションで使用できるわけではありません。 の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各エディションでサポートされる機能の一覧については、「 [SQL Server 2014 の各エディションがサポートする機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)」を参照してください。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、既定で最大 15,000 個のパーティションをサポートします。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]より前のバージョンでは、パーティションの数は既定で 1,000 個に限られていました。x86 ベースのシステムでは、パーティション数が 1,000 個を超えるテーブルまたはインデックスを作成できますが、それはサポートされていません。  
+>  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、既定で最大 15,000 個のパーティションをサポートします。 
+  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]より前のバージョンでは、パーティションの数は既定で 1,000 個に限られていました。x86 ベースのシステムでは、パーティション数が 1,000 個を超えるテーブルまたはインデックスを作成できますが、それはサポートされていません。  
   
 ## <a name="benefits-of-partitioning"></a>パーティション分割の利点  
  大きなテーブルやインデックスをパーティション分割することで、次のような管理上およびパフォーマンス上の利点が得られます。  
@@ -37,7 +38,9 @@ ms.locfileid: "65092040"
   
 -   頻繁に実行するクエリの種類とハードウェア構成に基づいて、クエリのパフォーマンスを改善できる場合があります。 たとえば、クエリ オプティマイザーで 2 つ以上のパーティション テーブル間の等結合クエリを行う場合、そのテーブル内のパーティション分割列が同じであれば、パーティション自体を結合できるので処理がより迅速になります。  
   
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] により I/O 操作用にデータの並べ替えが実行される場合、まずパーティションでデータが並べ替えられます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、一度に 1 つのドライブにしかアクセスできないので、パフォーマンスが低下することがあります。 データの並べ替えのパフォーマンスを向上させるには、RAID を構成して複数のディスク間でパーティションのデータ ファイルをストライプします。 この方法を使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では今までどおりデータがパーティションで並べ替えられますが、すべてのドライブの各パーティションに同時にアクセスできるようになります。  
+     
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] により I/O 操作用にデータの並べ替えが実行される場合、まずパーティションでデータが並べ替えられます。 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、一度に 1 つのドライブにしかアクセスできないので、パフォーマンスが低下することがあります。 データの並べ替えのパフォーマンスを向上させるには、RAID を構成して複数のディスク間でパーティションのデータ ファイルをストライプします。 この方法を使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では今までどおりデータがパーティションで並べ替えられますが、すべてのドライブの各パーティションに同時にアクセスできるようになります。  
   
      さらに、テーブル全体ではなくパーティション レベルでのロックのエスカレーションを有効にしてパフォーマンスを向上させることができます。 これにより、テーブルでのロックの競合を減らすことができます。  
   
@@ -51,7 +54,9 @@ ms.locfileid: "65092040"
  パーティション関数のパーティションを一連のファイル グループにマップするデータベース オブジェクト。 パーティションを別々のファイル グループに配置する主な理由は、パーティションのバックアップ操作を個別に実行できるようにすることです。 これは、バックアップを個別のファイル グループで実行できるからです。  
   
  パーティション分割列  
- パーティション関数が、テーブルまたはインデックスをパーティション分割するために使用するテーブルまたはインデックスの列。 パーティション関数に参加する計算列は、明示的に PERSISTED とマークされている必要があります。 `timestamp` 型を除き、インデックス列として使用できるすべてのデータ型をパーティション分割列として使用できます。 `ntext` 型、`text` 型、`image` 型、`xml` 型、`varchar(max)` 型、`nvarchar(max)` 型、および `varbinary(max)` 型は指定できません。 また、Microsoft .NET Framework 共通言語ランタイム (CLR) ユーザー定義型の列とエイリアス データ型の列を指定することはできません。  
+ パーティション関数が、テーブルまたはインデックスをパーティション分割するために使用するテーブルまたはインデックスの列。 パーティション関数に参加する計算列は、明示的に PERSISTED とマークされている必要があります。 
+  `timestamp` 型を除き、インデックス列として使用できるすべてのデータ型をパーティション分割列として使用できます。 
+  `ntext` 型、`text` 型、`image` 型、`xml` 型、`varchar(max)` 型、`nvarchar(max)` 型、および `varbinary(max)` 型は指定できません。 また、Microsoft .NET Framework 共通言語ランタイム (CLR) ユーザー定義型の列とエイリアス データ型の列を指定することはできません。  
   
  固定されたインデックス  
  対応するテーブルと同じパーティション構成に基づいて構築されたインデックス。 テーブルとインデックスが固定されている状態では、両者のパーティション構造を保ったまま SQL Server がパーティションをすばやく効率的に切り替えることができます。 ベース テーブルに固定させるために、インデックスを同じ名前のパーティション関数に加える必要はありません。 ただし、インデックスとベース テーブルのパーティション関数は、本質的に同一 (つまり、1) 引数のデータ型が同一、2) 定義されるパーティションの数が同一、3) 定義されるパーティションの境界値が同一) である必要があります。  
@@ -96,27 +101,28 @@ ms.locfileid: "65092040"
  パーティション分割列以外の列に対して TOP や MAX/MIN のような演算子を使用するクエリは、すべてのパーティションを評価する必要があるため、パーティション分割によってパフォーマンスが低下する可能性があります。  
   
 ## <a name="behavior-changes-in-statistics-computation-during-partitioned-index-operations"></a>パーティション インデックス操作中の統計計算での動作の変更  
- [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]以降では、パーティション インデックスが作成または再構築された場合、テーブル内のすべての行をスキャンして統計を作成することはできません。 代わりに、クエリ オプティマイザーが既定のサンプリング アルゴリズムを使用して統計を生成します。 パーティション インデックスでデータベースをアップグレードした後で、これらのインデックスのヒストグラム データに違いが見つかる場合があります。 この動作の変更はクエリ パフォーマンスに影響しない可能性があります。 テーブル内のすべての行をスキャンしてパーティション インデックスの統計を作成するには、FULLSCAN 句で CREATE STATISTICS または UPDATE STATISTICS を使用します。  
+ 
+  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]以降では、パーティション インデックスが作成または再構築された場合、テーブル内のすべての行をスキャンして統計を作成することはできません。 代わりに、クエリ オプティマイザーが既定のサンプリング アルゴリズムを使用して統計を生成します。 パーティション インデックスでデータベースをアップグレードした後で、これらのインデックスのヒストグラム データに違いが見つかる場合があります。 この動作の変更はクエリ パフォーマンスに影響しない可能性があります。 テーブル内のすべての行をスキャンしてパーティション インデックスの統計を作成するには、FULLSCAN 句で CREATE STATISTICS または UPDATE STATISTICS を使用します。  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
 |||  
 |-|-|  
-|**タスク**|**トピック**|  
+|**処理手順**|**トピック**|  
 |パーティション関数とパーティション構成の作成方法、およびそれらをテーブルおよびインデックスに適用する方法について説明します。|[パーティション テーブルとパーティション インデックスの作成](create-partitioned-tables-and-indexes.md)|  
 |||  
   
 ## <a name="related-content"></a>関連コンテンツ  
  次のホワイトペーパーには、パーティション テーブルおよびパーティション インデックスの戦略と有用な実装について記述されています。  
   
--   [SQL Server 2008 を使用したパーティション テーブルとパーティション インデックス](https://msdn.microsoft.com/library/dd578580\(SQL.100\).aspx)  
+-   [SQL Server 2008 を使用したパーティションテーブルとパーティションインデックスの方法](https://msdn.microsoft.com/library/dd578580\(SQL.100\).aspx)  
   
--   [自動スライディング ウィンドウを実装する方法](https://msdn.microsoft.com/library/aa964122\(SQL.90\).aspx)  
+-   [自動スライディングウィンドウを実装する方法](https://msdn.microsoft.com/library/aa964122\(SQL.90\).aspx)  
   
--   [パーティション テーブルの一括読み込み](https://msdn.microsoft.com/library/cc966380.aspx)  
+-   [パーティションテーブルへの一括読み込み](https://msdn.microsoft.com/library/cc966380.aspx)  
   
 -   [パーティション テーブルとパーティション インデックスに対するクエリ処理の機能強化](https://msdn.microsoft.com/library/ms345599.aspx)  
   
--   [大規模なリレーショナル データ ウェアハウスを構築するためのトップ 10 のベスト プラクティス](http://sqlcat.com/top10lists/archive/2008/02/06/top-10-best-practices-for-building-a-large-scale-relational-data-warehouse.aspx)  
+-   [大規模なリレーショナルデータウェアハウスを構築するためのトップ10のベストプラクティス](http://sqlcat.com/top10lists/archive/2008/02/06/top-10-best-practices-for-building-a-large-scale-relational-data-warehouse.aspx)  
   
   

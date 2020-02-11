@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3f51e8f62a6be442c123c5a1309293e204caf08f
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72783219"
 ---
 # <a name="defect-a-target-server-from-a-master-server"></a>マスター サーバーからのターゲット サーバーの参加の解除
@@ -32,7 +32,7 @@ ms.locfileid: "72783219"
   
      [セキュリティ](#Security)  
   
--   **マスター サーバーからターゲット サーバーの参加を解除するために使用するもの:**  
+-   **対象サーバーの参加を解除するために使用するもの:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -44,18 +44,21 @@ ms.locfileid: "72783219"
   
 ###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> アクセス許可  
+####  <a name="Permissions"></a> Permissions  
  このストアド プロシージャを実行するには、`sysadmin` 固定サーバー ロールのメンバーであることが必要です。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-defect-a-target-server-from-a-master-server"></a>マスター サーバーからターゲット サーバーの参加を解除するには  
   
-1.  **オブジェクト エクスプローラー**で、ターゲット サーバーとして構成するサーバーを展開します。  
+1.  
+  **オブジェクト エクスプローラー**で、ターゲット サーバーとして構成するサーバーを展開します。  
   
-2.  **[SQL Server エージェント]** を右クリックし、 **[マルチ サーバーの管理]** をポイントして、 **[参加解除]** をクリックします。  
+2.  
+  **[SQL Server エージェント]** を右クリックし、 **[マルチ サーバーの管理]** をポイントして、 **[参加解除]** をクリックします。  
   
-3.  **[はい]** をクリックして、マスター サーバーからこのターゲット サーバーの参加を解除することを確認します。  
+3.  
+  **[はい]** をクリックして、マスター サーバーからこのターゲット サーバーの参加を解除することを確認します。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
@@ -71,12 +74,12 @@ ms.locfileid: "72783219"
 sp_msx_defect ;  
 ```  
   
- 詳細については、「 [transact-sql &#40;&#41;の sp_msx_defect](/sql/relational-databases/system-stored-procedures/sp-msx-defect-transact-sql)」を参照してください。  
+ 詳細については、「 [sp_msx_defect &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-msx-defect-transact-sql)」を参照してください。  
   
 ##  <a name="PowerShellProcedure"></a>SQL Server 管理オブジェクト (SMO) の使用  
- `MsxDefect Method`を使用します。  
+ を使用`MsxDefect Method`します。  
   
 ## <a name="see-also"></a>参照  
  [マルチサーバー環境の作成](create-a-multiserver-environment.md)   
- [エンタープライズ全体の管理の自動化](automated-administration-across-an-enterprise.md)   
+ [企業全体の管理の自動化](automated-administration-across-an-enterprise.md)   
  [マスター サーバーからの複数のターゲット サーバーの参加の解除](defect-multiple-target-servers-from-a-master-server.md)  

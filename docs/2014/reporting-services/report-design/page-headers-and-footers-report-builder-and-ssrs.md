@@ -24,10 +24,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7b746f27653f5e8d1c24a584ac19c8fbac05a57c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105530"
 ---
 # <a name="page-headers-and-footers-report-builder-and-ssrs"></a>ページ ヘッダーとページ フッター (レポート ビルダーおよび SSRS)
@@ -60,9 +60,9 @@ ms.locfileid: "66105530"
 |レポート本文のテキスト ボックス|はい|いいえ|  
 |&PageNumber|はい|いいえ|  
 |&TotalPages|はい|いいえ|  
-|集計関数|可能。 例を次に示します。<br /><br /> `=First(ReportItems!TXT_LastName.Value)`|可能。 例を次に示します。<br /><br /> `=Max(Quantity.Value,"DataSet1")`|  
-|ページ上のアイテムのフィールド コレクション|間接的。 例を次に示します。<br /><br /> `=Sum(ReportItems!Textbox1.Value)`|可能。 例を次に示します。<br /><br /> `=Sum(Fields!Quantity.Value,"DataSet1")`|  
-|データバインド画像|間接的。 例を次に示します。 `=ReportItems!TXT_Photo.Value`|可能。 例を次に示します。<br /><br /> `=First(Fields!Photo.Value,"DataSet1")`|  
+|集計関数|はい。 たとえば、次のように入力します。<br /><br /> `=First(ReportItems!TXT_LastName.Value)`|はい。 たとえば、次のように入力します。<br /><br /> `=Max(Quantity.Value,"DataSet1")`|  
+|ページ上のアイテムのフィールド コレクション|間接的。 たとえば、次のように入力します。<br /><br /> `=Sum(ReportItems!Textbox1.Value)`|はい。 たとえば、次のように入力します。<br /><br /> `=Sum(Fields!Quantity.Value,"DataSet1")`|  
+|データバインド画像|間接的。 たとえば、`=ReportItems!TXT_Photo.Value` のように指定します。|はい。 たとえば、次のように入力します。<br /><br /> `=First(Fields!Photo.Value,"DataSet1")`|  
   
  このトピックの以下のセクションでは、ヘッダーおよびフッターで一般的に使用される変数データを取得するための、すぐに使用できる式を示します。 また、Excel 表示拡張機能でヘッダーおよびフッターが処理される方法についても説明します。 式の詳細については、「[式 &#40;レポート ビルダーおよび SSRS&#41;](expressions-report-builder-and-ssrs.md)」を参照してください。  
   
@@ -126,8 +126,8 @@ ms.locfileid: "66105530"
   
  詳細については、「 [Microsoft Excel へのエクスポート &#40;レポート ビルダーおよび SSRS&#41;](../report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)で操作できます。  
   
-## <a name="see-also"></a>関連項目  
- [レポートへの画像の埋め込み (レポート ビルダーおよび SSRS)](embed-an-image-in-a-report-report-builder-and-ssrs.md)   
- [四角形と線 (レポート ビルダーおよび SSRS)](rectangles-and-lines-report-builder-and-ssrs.md)  
+## <a name="see-also"></a>参照  
+ [レポートへの画像の埋め込み &#40;レポート ビルダーおよび SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md)   
+ [四角形と線 &#40;レポート ビルダーおよび SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)  
   
   

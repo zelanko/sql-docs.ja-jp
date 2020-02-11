@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cd6cefd41ea223b91445042ff3cee9090074feeb
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72783193"
 ---
 # <a name="delete-a-job-step-log"></a>Delete a Job Step Log
@@ -29,9 +29,9 @@ ms.locfileid: "72783193"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
--   **SQL Server エージェントのジョブ ステップのログを削除する方法:**  
+-   **次のものを使用して SQL Server エージェントジョブステップのログを削除するには:**  
   
      [SQL Server Management Studio](#SSMS)  
   
@@ -44,10 +44,11 @@ ms.locfileid: "72783193"
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
  ジョブ ステップが削除されるときに、そのジョブ ステップの出力ログは自動的に削除されます。  
   
-###  <a name="Security"></a> Security  
+###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> アクセス許可  
- **sysadmin** 固定サーバー ロールのメンバー以外は、所有しているジョブしか変更できません。  
+####  <a name="Permissions"></a> Permissions  
+ 
+  **sysadmin** 固定サーバー ロールのメンバー以外は、所有しているジョブしか変更できません。  
   
 ##  <a name="SSMS"></a> SQL Server Management Studio の使用  
   
@@ -55,9 +56,11 @@ ms.locfileid: "72783193"
   
 1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続し、そのインスタンスを展開します。  
   
-2.  **[SQL Server エージェント]** 、 **[ジョブ]** の順に展開し、変更するジョブを右クリックします。次に、 **[プロパティ]** をクリックします。  
+2.  
+  **[SQL Server エージェント]**、 **[ジョブ]** の順に展開し、変更するジョブを右クリックします。次に、 **[プロパティ]** をクリックします。  
   
-3.  **[ジョブのプロパティ]** ダイアログ ボックスで、選択したジョブ ステップを削除します。  
+3.  
+  **[ジョブのプロパティ]** ダイアログ ボックスで、選択したジョブ ステップを削除します。  
   
 ##  <a name="TSQL"></a> Transact-SQL の使用  
   

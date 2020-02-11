@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e44e658d2aaf8be9a9e591f627f60798f6ba4121
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105397"
 ---
 # <a name="range-charts-report-builder-and-ssrs"></a>範囲グラフ (レポート ビルダーおよび SSRS)
@@ -29,11 +29,11 @@ ms.locfileid: "66105397"
   
 ## <a name="variations"></a>バリエーション  
   
--   **平滑範囲**: 平滑範囲グラフでは、直線ではなく曲線が表示されます。  
+-   **Smooth range**。 平滑範囲グラフでは、直線ではなく曲線が表示されます。  
   
--   **範囲縦棒**: 範囲縦棒グラフでは、領域ではなく縦棒を使用して範囲を表示します。  
+-   **列の範囲**。 範囲縦棒グラフでは、領域ではなく縦棒を使用して範囲を表示します。  
   
--   **範囲横棒**: 範囲横棒グラフでは、領域ではなく横棒を使用して範囲を表示します。  
+-   **バーの範囲**。 範囲横棒グラフでは、領域ではなく横棒を使用して範囲を表示します。  
   
 ## <a name="data-considerations-for-range-charts"></a>範囲グラフのデータに関する注意点  
   
@@ -51,7 +51,7 @@ ms.locfileid: "66105397"
   
 -   ガント チャートは、範囲横棒グラフを使用して作成できます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [グラフ &#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [グラフの種類 &#40;レポート ビルダーおよび SSRS&#41;](chart-types-report-builder-and-ssrs.md)   
  [グラフの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)  

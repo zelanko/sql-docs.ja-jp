@@ -1,5 +1,5 @@
 ---
-title: データ フローの分析 |Microsoft Docs
+title: データフローの分析 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e67c5448a6625b37c7fb17bc24ea6bdd7cb879ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061600"
 ---
 # <a name="analysis-of-data-flow"></a>データ フローの分析
-  使用することができます、 [catalog.execution_data_statistics](../relational-databases/statistics/statistics.md) `SSISDB`データベース パッケージのデータ フローを分析するビュー。 このビューは、データ フロー コンポーネントが下流コンポーネントへデータを送信するたびに 1 行表示します。 この情報を使用して、各コンポーネントに送信される行をより詳しく理解できます。  
+  [Execution_data_statistics](../relational-databases/statistics/statistics.md) `SSISDB`データベースビューを使用すると、パッケージのデータフローを分析できます。 このビューは、データ フロー コンポーネントが下流コンポーネントへデータを送信するたびに 1 行表示します。 この情報を使用して、各コンポーネントに送信される行をより詳しく理解できます。  
   
 > [!NOTE]  
 >  catalog.execution_data_statistics ビューに関する情報を取得するために、ログ レベルは **詳細** に設定する必要があります。  
@@ -36,13 +36,13 @@ order by source_component_name, destination_component_name
   
  以下の例では、特定の実行で各コンポーネントによって送信された 1 ミリ秒あたりの行数が計算されます。 計算される値は次のとおりです。  
   
--   **total_rows** - コンポーネントによって送信されたすべての行の合計数  
+-   **total_rows** -コンポーネントによって送信されたすべての行の合計  
   
--   **wall_clock_time_ms** - コンポーネントごとの実行の合計経過時間 (ミリ秒単位)  
+-   **wall_clock_time_ms** -各コンポーネントの実行時間の合計 (ミリ秒単位)  
   
--   **num_rows_per_millisecond** - 各コンポーネントによって送信された 1 ミリ秒あたりの行数  
+-   **num_rows_per_millisecond** -各コンポーネントによって送信された1ミリ秒あたりの行数  
   
- `HAVING`句の計算で 0 除算エラーを防ぐために使用されます。  
+ `HAVING`句は、計算で0除算エラーを防ぐために使用されます。  
   
 ```  
 use SSISDB  
@@ -63,7 +63,7 @@ order by source_component_name desc
   
  [パッケージ実行のトラブルシューティング ツール](troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データ フロー内のデータ](data-flow/data-in-data-flows.md)  
   
   

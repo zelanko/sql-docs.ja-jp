@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 44cdff7d7b6813e6fbdf52282621d8845d0643b9
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68890524"
 ---
 # <a name="data-mining-query-transformation"></a>データ マイニング クエリ変換
@@ -28,19 +28,22 @@ ms.locfileid: "68890524"
  同じデータ マイニング構造で複数のモデルが構築されている場合、1 回の変換で複数の予測クエリを実行することもできます。 詳細については、「[データマイニングクエリインターフェイス](https://docs.microsoft.com/analysis-services/data-mining/data-mining-query-tools)」を参照してください。  
   
 ## <a name="configuration-of-the-data-mining-query-transformation"></a>データ マイニング クエリ変換の構成  
- データ マイニング クエリ変換は、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 接続マネージャーを使用して [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] プロジェクト、またはマイニング構造とマイニング モデルを含む [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] のインスタンスに接続します。 詳細については、「 [Analysis Services 接続マネージャー](../../connection-manager/analysis-services-connection-manager.md)」を参照してください。  
+ データ マイニング クエリ変換は、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 接続マネージャーを使用して [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] プロジェクト、またはマイニング構造とマイニング モデルを含む [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] のインスタンスに接続します。 詳しくは、「 [Analysis Services 接続マネージャー](../../connection-manager/analysis-services-connection-manager.md)」をご覧ください。  
   
  この変換は 1 つの入力と 1 つの出力をとります。 エラー出力はサポートされていません。  
   
  プロパティを設定するには [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
- **[データ マイニング クエリ変換エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
+ 
+  **[データ マイニング クエリ変換エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [[データ マイニング クエリ変換エディター] ([マイニング モデル] タブ)](../../data-mining-query-transformation-editor-mining-model-tab.md)  
+-   [データマイニングクエリ変換エディター &#40;[マイニングモデル] タブ&#41;](../../data-mining-query-transformation-editor-mining-model-tab.md)  
   
--   [[データ マイニング クエリ変換エディター] &#40;[マイニング モデル] タブ&#41;](../../data-mining-query-transformation-editor-mining-model-tab.md)  
+-   [データマイニングクエリ変換エディター &#40;[マイニングモデル] タブ&#41;](../../data-mining-query-transformation-editor-mining-model-tab.md)  
   
- **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
+ 
+  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 
+  **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
 -   [共通プロパティ](../../common-properties.md)  
   
