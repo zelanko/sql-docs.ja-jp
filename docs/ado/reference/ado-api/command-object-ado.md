@@ -1,5 +1,5 @@
 ---
-title: コマンド オブジェクト (ADO) |Microsoft Docs
+title: Command オブジェクト (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,68 +16,68 @@ ms.assetid: a02c22fb-542d-465e-a629-30fd59dcbebf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bbce299e2e9f67b705f940480913c7d8ac367d0d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919794"
 ---
 # <a name="command-object-ado"></a>Command オブジェクト (ADO)
-データ ソースに対して実行する特定のコマンドを定義します。  
+データソースに対して実行する特定のコマンドを定義します。  
   
-## <a name="remarks"></a>コメント  
- 使用して、**コマンド**データベースを照会して、レコードを取得するオブジェクト、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト、データベースの構造を操作したり、一括操作を実行します。 プロバイダーの機能をいくつかに応じて**コマンド**参照されている場合、コレクション、メソッド、またはプロパティすると、エラーが発生する可能性があります。  
+## <a name="remarks"></a>解説  
+ **コマンド**オブジェクトを使用して、データベースに対してクエリを実行し、レコード[セット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトのレコードを返します。また、一括操作を実行したり、データベースの構造を操作したりします。 プロバイダーの機能によっては、**コマンド**のコレクション、メソッド、またはプロパティによっては、参照時にエラーが発生することがあります。  
   
- コレクション、メソッド、およびプロパティの使用、**コマンド**オブジェクトを次を行うことができます。  
+ **Command**オブジェクトのコレクション、メソッド、およびプロパティを使用して、次の操作を実行できます。  
   
--   コマンド (たとえば、SQL ステートメント) の実行可能ファイルのテキストの定義、 [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)プロパティ。 または、コマンドまたはクエリ構造よりも単純なその他の文字列 (たとえば、XML テンプレートのクエリ) を定義してコマンドを[CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md)プロパティ。  
+-   [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)プロパティを使用して、コマンドの実行可能テキスト (たとえば、SQL ステートメント) を定義します。 また、単純な文字列以外のコマンドまたはクエリ構造 (XML テンプレートクエリなど) の場合は、 [Commandstream](../../../ado/reference/ado-api/commandstream-property-ado.md)プロパティを使用してコマンドを定義します。  
   
--   必要に応じてで使用されるコマンド言語を示す、 **CommandText**または**CommandStream**で、[言語](../../../ado/reference/ado-api/dialect-property.md)プロパティ。  
+-   必要に応じて、 **CommandText**プロパティと**commandstream**で使用されるコマンド[の言語](../../../ado/reference/ado-api/dialect-property.md)を指定します。  
   
--   パラメーター化クエリまたはストアド プロシージャの引数と定義[パラメーター](../../../ado/reference/ado-api/parameter-object.md)オブジェクトと[パラメーター](../../../ado/reference/ado-api/parameters-collection-ado.md)コレクション。  
+-   [パラメーター](../../../ado/reference/ado-api/parameter-object.md)オブジェクトと[パラメーター](../../../ado/reference/ado-api/parameters-collection-ado.md)コレクションを使用して、パラメーター化クエリまたはストアドプロシージャ引数を定義します。  
   
--   使用してプロバイダーをパラメーター名を渡す必要があるかどうかを示す、 [NamedParameters](../../../ado/reference/ado-api/namedparameters-property-ado.md)プロパティ。  
+-   [Namedparameters](../../../ado/reference/ado-api/namedparameters-property-ado.md)プロパティを使用して、プロバイダーにパラメーター名を渡す必要があるかどうかを示します。  
   
--   コマンドを実行し、返す、 **Recordset**オブジェクトで該当する場合、 [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md)メソッド。  
+-   [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md)メソッドに該当する場合は、コマンドを実行し、**レコードセット**オブジェクトを返します。  
   
--   コマンドの種類を指定、 [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md)パフォーマンスを最適化するために実行する前にプロパティ。  
+-   パフォーマンスを最適化するには、実行前に[CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md)プロパティを使用してコマンドの種類を指定します。  
   
--   プロバイダーを実行する前に、コマンドの準備済み (またはコンパイル済み) のバージョンを保存するかどうかを制御、[準備](../../../ado/reference/ado-api/prepared-property-ado.md)プロパティ。  
+-   [準備されたプロパティを](../../../ado/reference/ado-api/prepared-property-ado.md)使用して、準備済み (またはコンパイル済み) のコマンドを実行前に保存するかどうかを制御します。  
   
--   プロバイダーがコマンドの実行を待機する秒数を設定、 [CommandTimeout](../../../ado/reference/ado-api/commandtimeout-property-ado.md)プロパティ。  
+-   [CommandTimeout](../../../ado/reference/ado-api/commandtimeout-property-ado.md)プロパティを使用して、コマンドの実行をプロバイダーが待機する秒数を設定します。  
   
--   開いている接続を関連付ける、**コマンド**オブジェクトを設定してその[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)プロパティ。  
+-   [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)プロパティを設定して、開いている接続を**Command**オブジェクトに関連付けます。  
   
--   設定、[名前](../../../ado/reference/ado-api/name-property-ado.md)プロパティを識別するために、**コマンド**オブジェクトに関連付けられているメソッドとして[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクト。  
+-   [Name](../../../ado/reference/ado-api/name-property-ado.md)プロパティを設定して、関連付けられている[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトのメソッドとして**コマンド**オブジェクトを識別します。  
   
--   渡す、**コマンド**オブジェクトを[ソース](../../../ado/reference/ado-api/source-property-ado-recordset.md)のプロパティを**レコード セット**データを取得します。  
+-   データを取得するために、**レコードセット**の[Source](../../../ado/reference/ado-api/source-property-ado-recordset.md)プロパティに**Command**オブジェクトを渡します。  
   
--   プロバイダーに固有の属性へのアクセス、[プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)コレクション。  
+-   [プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)コレクションを使用して、プロバイダー固有の属性にアクセスします。  
   
 > [!NOTE]
->  クエリの実行を使用せずに、**コマンド**オブジェクト、クエリ文字列を渡す、 [Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md)のメソッド、**接続**オブジェクトまたは、 [を開く](../../../ado/reference/ado-api/open-method-ado-recordset.md)のメソッド、 **Recordset**オブジェクト。 ただし、**コマンド**コマンド テキストを保持し、再実行するか、またはクエリ パラメーターを使用する場合は、オブジェクトが必要です。  
+>  **Command**オブジェクトを使用せずにクエリを実行するには、**接続**オブジェクトの[Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md)メソッド、または**レコードセット**オブジェクトの[Open](../../../ado/reference/ado-api/open-method-ado-recordset.md)メソッドにクエリ文字列を渡します。 ただし、コマンドのテキストを永続化して再実行する場合、またはクエリパラメーターを使用する場合は、 **command**オブジェクトが必要です。  
   
- 作成する、**コマンド**以前に定義されたとは無関係にオブジェクト**接続**オブジェクト、設定、 **ActiveConnection**プロパティを有効な接続文字列にします。 ADO が作成されますが、**接続**オブジェクトが、これはそのオブジェクトに割り当てませんオブジェクト変数です。 ただし、複数を関連付ける場合**コマンド**同じ接続では、オブジェクトを明示的に作成し、開く、**接続**オブジェクトこの割り当て、 **の接続。** オブジェクト変数にオブジェクト。 確認、**接続**に割り当てる前に、オブジェクトが正常に開かれた、 **ActiveConnection**のプロパティ、**コマンド**オブジェクトを割り当てるため、閉じられた**接続**オブジェクト、エラーが発生します。 設定しない場合、 **ActiveConnection**のプロパティ、**コマンド**ADO 新たに作成しますが、このオブジェクトの変数にオブジェクト**接続**オブジェクトごとに**コマンド**オブジェクト、同じ接続文字列を使用する場合でもです。  
+ 以前に定義した**接続**オブジェクトとは別に**Command**オブジェクトを作成するには、 **ActiveConnection**プロパティを有効な接続文字列に設定します。 ADO は**接続**オブジェクトを作成しますが、そのオブジェクトをオブジェクト変数に割り当てません。 ただし、複数の**Command**オブジェクトを同じ接続に関連付ける場合は、**接続**オブジェクトを明示的に作成して開く必要があります。これにより、**接続**オブジェクトがオブジェクト変数に割り当てられます。 **Connection**オブジェクトを**Command**オブジェクトの**ActiveConnection**プロパティに割り当てる前に、正常に開かれたことを確認してください。閉じた**接続**オブジェクトを割り当てるとエラーが発生します。 **Command**オブジェクトの**ActiveConnection**プロパティをこのオブジェクト変数に設定しなかった場合、同じ接続文字列を使用していても、ADO によって**コマンド**オブジェクトごとに新しい**接続**オブジェクトが作成されます。  
   
- 実行する、**コマンド**、呼び出すことの[名前](../../../ado/reference/ado-api/name-property-ado.md)プロパティに関連付けられている**接続**オブジェクト。 **コマンド**必要があります、 **ActiveConnection**プロパティに設定、**接続**オブジェクト。 場合、**コマンド**はその値を引数としてメソッドに渡すパラメーターがあります。  
+ コマンドを実行するには、関連付けられている**接続**オブジェクトの[Name](../../../ado/reference/ado-api/name-property-ado.md)プロパティを使って**コマンド**を呼び出します。 **コマンド**の**ActiveConnection**プロパティが**接続**オブジェクトに設定されている必要があります。 **コマンド**にパラメーターがある場合は、その値を引数としてメソッドに渡します。  
   
- 2 つ以上の場合**コマンド**オブジェクトが同じ接続し、いずれかで実行される**コマンド**オブジェクトが出力パラメーターを使用してストアド プロシージャであり、エラーが発生します。 各を実行する**コマンド**オブジェクト、個別の接続を使用して、またはその他のすべての接続を切断**コマンド**接続からのオブジェクト。  
+ 同じ接続で2つ以上の**command**オブジェクトが実行され、いずれかの**command**オブジェクトが出力パラメーターを持つストアドプロシージャである場合、エラーが発生します。 各**コマンド**オブジェクトを実行するには、別の接続を使用するか、接続から他のすべての**コマンド**オブジェクトを切断します。  
   
- **パラメーター**コレクションがの既定のメンバー、**コマンド**オブジェクト。 その結果、次の 2 つのコード ステートメントは同等です。  
+ **Parameters**コレクションは、 **Command**オブジェクトの既定のメンバーです。 その結果、次の2つのコードステートメントは等価です。  
   
 ```  
 objCmd.Parameters.Item(0)  
 objCmd(0)  
 ```  
   
--   **コマンド**オブジェクトは、スクリプトを実行することはありません。  
+-   **コマンド**オブジェクトは、スクリプト作成には安全ではありません。  
   
- このセクションには、次のトピックが含まれています。  
+ ここでは、次のトピックについて説明します。  
   
--   [コマンド オブジェクトのプロパティ、メソッド、およびイベント](../../../ado/reference/ado-api/command-object-properties-methods-and-events.md)  
+-   [Command オブジェクトのプロパティ、メソッド、およびイベント](../../../ado/reference/ado-api/command-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>関連項目  
- [接続オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
+## <a name="see-also"></a>参照  
+ [Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Parameters コレクション (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
  [Properties コレクション (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
  [付録 A: プロバイダー](../../../ado/guide/appendixes/appendix-a-providers.md)

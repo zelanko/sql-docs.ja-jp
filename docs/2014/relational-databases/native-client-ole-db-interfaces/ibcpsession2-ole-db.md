@@ -13,16 +13,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: caa99de2383a022ff73c04dd5fcdeeb151ca086d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62691852"
 ---
 # <a name="ibcpsession2-ole-db"></a>IBCPSession2 (OLE DB)
-  IBCPSession2 インターフェイスでは、代わりに、各列に対して ibcpsession::bcpcolfmt を呼び出すことであるメンバー関数は、IBCPSession の拡張機能です。  IBCPSession2 では、IBCPSession から継承し、1 つの新しいメソッドを追加します。[Ibcpsession 2::bcpsetbulkmode](ibcpsession2-bcpsetbulkmode.md)します。  
+  IBCPSession2 インターフェイスは、IBCPSession の拡張機能であり、各列に対して IBCPSession:: BCPColFmt を呼び出す代わりに、メンバー関数を提供します。  IBCPSession2 は IBCPSession から継承し、新しいメソッドを[IBCPSession2:: BCPSetBulkMode](ibcpsession2-bcpsetbulkmode.md)1 つ追加します。  
   
 ## <a name="see-also"></a>参照  
- [インターフェイス&#40;OLE DB&#41;](../../database-engine/dev-guide/interfaces-ole-db.md)  
+ [インターフェイス &#40;OLE DB&#41;](../../database-engine/dev-guide/interfaces-ole-db.md)  
   
   

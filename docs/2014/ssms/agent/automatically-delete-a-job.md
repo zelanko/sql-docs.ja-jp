@@ -18,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7c5e165380c0f920ebf1366855e7801b6bb9089a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62472995"
 ---
 # <a name="automatically-delete-a-job"></a>Automatically Delete a Job
-  このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または SQL Server 管理オブジェクトを使用して、ジョブの成功時、失敗時、または完了時に自動的にそのジョブが削除されるように [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを構成する方法について説明します。  
+  このトピックでは、また[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は SQL Server 管理オブジェクト[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]を使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]して、ジョブの成功時、失敗時、または完了時にジョブが自動的に削除されるようにエージェントを構成する方法について説明します。  
   
  ジョブ応答により、データベース管理者はジョブの完了日時や実行頻度を確認できます。 以下に、一般的なジョブ応答を示します。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "62472995"
   
 -   **作業を開始する準備:**  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **ジョブ応答を指定する方法:**  
   
@@ -64,11 +64,14 @@ ms.locfileid: "62472995"
   
 1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続し、そのインスタンスを展開します。  
   
-2.  **[SQL Server エージェント]** を展開し、 **[ジョブ]** を展開します。次に、編集するジョブを右クリックし、 **[プロパティ]** をクリックします。  
+2.  
+  **[SQL Server エージェント]** を展開し、 **[ジョブ]** を展開します。次に、編集するジョブを右クリックし、 **[プロパティ]** をクリックします。  
   
-3.  **[通知]** ページをクリックします。  
+3.  
+  **[通知]** ページをクリックします。  
   
-4.  **[自動的にジョブを削除]** チェック ボックスをオンにし、次のいずれかを選択します。  
+4.  
+  **[自動的にジョブを削除]** チェック ボックスをオンにし、次のいずれかを選択します。  
   
     -   ジョブが正常に完了したときにジョブの状態を削除する場合は、 **[ジョブ成功時]** をクリックします。  
   
@@ -76,7 +79,7 @@ ms.locfileid: "62472995"
   
     -   完了時の状態にかかわらずジョブを削除する場合は、 **[ジョブ完了時]** をクリックします。  
   
-##  <a name="SMO"></a> SQL Server 管理オブジェクトの使用  
+##  <a name="SMO"></a>SQL Server 管理オブジェクトの使用  
  **ジョブを自動的に削除するには**  
   
  Visual Basic、Visual C#、PowerShell などのプログラミング言語で `DeleteLevel` クラスの `Job` プロパティを使用します。 詳細については、「 [SQL Server 管理オブジェクト (SMO) プログラミング ガイド](https://msdn.microsoft.com/library/ms162169.aspx)」を参照してください。  

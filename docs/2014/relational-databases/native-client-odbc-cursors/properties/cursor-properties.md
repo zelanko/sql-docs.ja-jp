@@ -1,5 +1,5 @@
 ---
-title: カーソルのプロパティ |Microsoft Docs
+title: Cursor プロパティ |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 92ceb297f1004770903f4eadd7323bfef98e7cd1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62711467"
 ---
 # <a name="cursor-properties"></a>カーソルのプロパティ
@@ -27,11 +27,11 @@ ms.locfileid: "62711467"
   
 -   [カーソルの行セット サイズ](cursor-rowset-size.md)  
   
--   [カーソルのコンカレンシー &#40;ODBC&#41;](cursor-concurrency-odbc.md)  
+-   [カーソルの同時実行 &#40;ODBC&#41;](cursor-concurrency-odbc.md)  
   
 -   [カーソルのトランザクション分離レベル](cursor-transaction-isolation-level.md)  
   
-## <a name="see-also"></a>関連項目  
- [カーソルを使用して&#40;ODBC&#41;](../using-cursors-odbc.md)  
+## <a name="see-also"></a>参照  
+ [ODBC&#41;&#40;カーソルの使用](../using-cursors-odbc.md)  
   
   

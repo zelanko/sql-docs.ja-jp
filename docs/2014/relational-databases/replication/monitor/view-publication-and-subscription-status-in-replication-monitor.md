@@ -22,14 +22,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9dad3a2c5f7073ea63608ba5234061a3ffa2102c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62666967"
 ---
 # <a name="view-publication-and-subscription-status-in-replication-monitor"></a>レプリケーション モニターでのパブリケーションおよびサブスクリプションの状態の表示
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] レプリケーション モニターには、パブリケーションおよびサブスクリプションの状態情報が表示されます。  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]レプリケーションモニターには、パブリケーションとサブスクリプションの状態情報が表示されます。  
   
 -   パブリケーションの状態は、そのサブスクリプションの最も優先度の高い状態によって決定されます。 たとえば、あるパブリケーションに対する 1 つのサブスクリプションにエラーが発生し、別のサブスクリプションにはパフォーマンス上の問題がある場合、そのパブリケーションに対してはエラーの状態が表示されます。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "62666967"
   
 -   有効期限切れサブスクリプション  
   
-     この状態値は、すべての種類のレプリケーションに適用されます。 詳細については、「 [レプリケーション モニターのしきい値と警告の設定](set-thresholds-and-warnings-in-replication-monitor.md)」を参照してください。  
+     この状態値は、すべての種類のレプリケーションに適用されます。 詳細については、「 [Set Thresholds and Warnings in Replication Monitor](set-thresholds-and-warnings-in-replication-monitor.md)」を参照してください。  
   
 -   [パフォーマンス クリティカル]  
   
@@ -53,18 +53,18 @@ ms.locfileid: "62666967"
   
  **パブリケーションおよびサブスクリプションの状態を表示するには**  
   
--   レプリケーション モニター:[レプリケーション モニターを使用して情報を表示し、タスクを実行する](view-information-and-perform-tasks-replication-monitor.md)
+-   レプリケーションモニター:[レプリケーションモニターを使用して情報を表示し、タスクを実行](view-information-and-perform-tasks-replication-monitor.md)します。
   
   
 ## <a name="publication-status-values"></a>パブリケーションの状態の値  
  次の表は、パブリケーションの状態の値と対応するアイコンを優先度順に示しています。  
   
-|状態|アイコン|  
+|Status|アイコン|  
 |------------|----------|  
-|[エラー]|![UI アイコン: エラー](../media/repl-icon-error.gif "UI アイコン: エラー")|  
+|エラー|![UI アイコン: エラー](../media/repl-icon-error.gif "UI アイコン: エラー")|  
 |[パフォーマンス クリティカル]|![UI アイコン: 警告](../media/repl-icon-warn.gif "UI アイコン: 警告")|  
 |[失敗したコマンドの再試行]|![UI アイコン: レプリケーション エージェントの再試行](../media/repl-icon-retry.gif "UI アイコン: レプリケーション エージェントの再試行")|  
-|[OK]|なし|  
+|OK|なし|  
   
 ## <a name="subscription-status-values"></a>サブスクリプションの状態値  
  次の表は、サブスクリプションの状態値と対応するアイコンを優先度順に示しています。 サブスクリプションは、" **まもなく期限切れ/期限切れ** " と " **失敗したコマンドの再試行**" など同時に 2 つの状態になることがあります。その場合、最も優先度の高い状態が表示されます。  
@@ -73,9 +73,9 @@ ms.locfileid: "62666967"
   
 ### <a name="transactional-subscriptions"></a>トランザクション サブスクリプション  
   
-|状態|アイコン|  
+|Status|アイコン|  
 |------------|----------|  
-|[エラー]|![UI アイコン: エラー](../media/repl-icon-error.gif "UI アイコン: エラー")|  
+|エラー|![UI アイコン: エラー](../media/repl-icon-error.gif "UI アイコン: エラー")|  
 |[パフォーマンス クリティカル]|![UI アイコン: 警告](../media/repl-icon-warn.gif "UI アイコン: 警告")|  
 |まもなく期限切れ/期限切れ|![UI アイコン: 警告](../media/repl-icon-warn.gif "UI アイコン: 警告")|  
 |[初期化されていないサブスクリプション]|![UI アイコン: 警告](../media/repl-icon-warn.gif "UI アイコン: 警告")|  
@@ -85,9 +85,9 @@ ms.locfileid: "62666967"
   
 ### <a name="merge-subscriptions"></a>マージ サブスクリプション  
   
-|状態|アイコン|  
+|Status|アイコン|  
 |------------|----------|  
-|[エラー]|![UI アイコン: エラー](../media/repl-icon-error.gif "UI アイコン: エラー")|  
+|エラー|![UI アイコン: エラー](../media/repl-icon-error.gif "UI アイコン: エラー")|  
 |[パフォーマンス クリティカル]|![UI アイコン: 警告](../media/repl-icon-warn.gif "UI アイコン: 警告")|  
 |[長期マージ]|![UI アイコン: 警告](../media/repl-icon-warn.gif "UI アイコン: 警告")|  
 |まもなく期限切れ/期限切れ|![UI アイコン: 警告](../media/repl-icon-warn.gif "UI アイコン: 警告")|  
@@ -98,10 +98,10 @@ ms.locfileid: "62666967"
   
 ### <a name="snapshot-subscriptions"></a>スナップショット サブスクリプション  
   
-|状態|アイコン|  
+|Status|アイコン|  
 |------------|----------|  
-|[エラー]|![UI アイコン: エラー](../media/repl-icon-error.gif "UI アイコン: エラー")|  
-|[まもなく期限切れ/期限切れ]|![UI アイコン: 警告](../media/repl-icon-warn.gif "UI アイコン: 警告")|  
+|エラー|![UI アイコン: エラー](../media/repl-icon-error.gif "UI アイコン: エラー")|  
+|まもなく期限切れ/期限切れ|![UI アイコン: 警告](../media/repl-icon-warn.gif "UI アイコン: 警告")|  
 |[初期化されていないサブスクリプション]|![UI アイコン: 警告](../media/repl-icon-warn.gif "UI アイコン: 警告")|  
 |[失敗したコマンドの再試行]|![UI アイコン: レプリケーション エージェントの再試行](../media/repl-icon-retry.gif "UI アイコン: レプリケーション エージェントの再試行")|  
 |[同期中]|![UI アイコン: レプリケーション エージェントの実行](../media/repl-icon-running.gif "UI アイコン: レプリケーション エージェントの実行")|  

@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 794dfea63b193ff79fb5831cb3a4e519d7d5f63e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62691385"
 ---
 # <a name="set-the-max-degree-of-parallelism-option-for-optimal-performance"></a>最適なパフォーマンスを実現するための max degree of parallelism オプションの設定
@@ -26,7 +26,7 @@ ms.locfileid: "62691385"
  sp_configure を使用して max degree of parallelism オプションを 8 以下に設定してください。  
   
 ## <a name="for-more-information"></a>詳細情報  
- [サポート技術情報の資料 329204](https://go.microsoft.com/fwlink/?linkid=117786)  
+ [マイクロソフトサポート技術情報の記事329204](https://go.microsoft.com/fwlink/?linkid=117786)  
   
  [max degree of parallelism サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: sys.remote_data_archive_databases (TRANSACT-SQL) |Microsoft Docs
+title: remote_data_archive_databases (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,24 +19,24 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: 339d960a136e9cf939032068c21ec737f4d37ceb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68018200"
 ---
-# <a name="stretch-database-catalog-views---sysremotedataarchivedatabases"></a>カタログ ビューでの Stretch Database sys.remote_data_archive_databases
+# <a name="stretch-database-catalog-views---sysremote_data_archive_databases"></a>Stretch Database カタログビュー-sys. remote_data_archive_databases
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Stretch が有効なローカル データベースからデータを格納する各リモート データベースの 1 つの行が含まれています。  
+  Stretch が有効なローカルデータベースのデータを格納するリモートデータベースごとに1行のデータを格納します。  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
-|**remote_database_id**|**int**|自動生成されたローカルの識別子、リモート データベース。|  
-|**remote_database_name**|**sysname**|リモート データベースの名前。|  
-|**data_source_id**|**int**|リモート サーバーへの接続に使用するデータ ソース|  
+|**remote_database_id**|**int**|リモートデータベースの自動生成されたローカル識別子。|  
+|**remote_database_name**|**sysname**|リモートデータベースの名前。|  
+|**data_source_id**|**int**|リモートサーバーへの接続に使用されるデータソース|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Stretch Database](../../sql-server/stretch-database/stretch-database.md)  
   
   

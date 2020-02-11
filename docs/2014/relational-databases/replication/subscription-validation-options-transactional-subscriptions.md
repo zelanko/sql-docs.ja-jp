@@ -1,5 +1,5 @@
 ---
-title: '[サブスクリプションの検証オプション] (トランザクション サブスクリプション) | Microsoft Docs'
+title: '[サブスクリプションの検証オプション](トランザクション サブスクリプション) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,16 +15,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a82e13202209121897a5e5878a141c8d53800a47
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62745423"
 ---
 # <a name="subscription-validation-options-transactional-subscriptions"></a>[サブスクリプションの検証オプション]\(トランザクション サブスクリプション)
   **[サブスクリプションの検証オプション]** ダイアログ ボックスを使用すると、検証に行数のみを使用するか、行数とバイナリ チェックサムを使用するかを指定できます。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **[サブスクライバーとパブリッシャーでレプリケートされたデータの行数が同じであることを確認します。]**  
  実行する行数の検証の種類を選択します。 Oracle パブリケーションの場合、使用できるオプションは **[テーブルに直接クエリすることにより、実際の行数を計算する]** のみとなります。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "62745423"
  **[検証完了後にディストリビューション エージェントを停止する]**  
  既定では、ディストリビューション エージェントは継続的に実行されます。 検証の実行後にエージェントを停止するには、このオプションを選択します。 これにより、サブスクライバーへのデータのレプリケートを継続する前に、検証が成功したかどうかをチェックできます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [サブスクライバーでのデータの検証](validate-data-at-the-subscriber.md)   
  [レプリケートされたデータの検証](validate-data-at-the-subscriber.md)  
   

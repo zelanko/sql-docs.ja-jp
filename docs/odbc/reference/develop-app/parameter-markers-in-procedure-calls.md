@@ -1,5 +1,5 @@
 ---
-title: プロシージャ呼び出しのパラメーター マーカー |Microsoft Docs
+title: プロシージャ呼び出しのパラメーターマーカー |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ ms.assetid: cda56f2b-6eec-4cbc-8dbb-36d8fa9f9216
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3bb24fb628e9e49fd94104af05217511a8f57c3e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67912314"
 ---
 # <a name="parameter-markers-in-procedure-calls"></a>プロシージャ呼び出しのパラメーター マーカー
-パラメーターを受け取るプロシージャを呼び出すときに、相互運用可能なアプリケーションは、リテラル パラメーター値の代わりにパラメーター マーカーを使用する必要があります。 一部のデータ ソースでは、プロシージャの呼び出しでのパラメーターをリテラル値の使用の使用はサポートされません。 パラメーターの詳細については、次を参照してください。[ステートメント パラメーター](../../../odbc/reference/develop-app/statement-parameters.md)します。 プロシージャの呼び出しの詳細については、次を参照してください。[プロシージャ呼び出し](../../../odbc/reference/develop-app/procedure-calls.md)、このセクションで後述します。
+パラメーターを受け取るプロシージャを呼び出す場合、相互運用可能なアプリケーションでは、リテラルパラメーター値ではなくパラメーターマーカーを使用する必要があります。 一部のデータソースでは、プロシージャ呼び出しでのリテラルパラメーター値の使用はサポートされていません。 パラメーターの詳細については、「[ステートメントパラメーター](../../../odbc/reference/develop-app/statement-parameters.md)」を参照してください。 プロシージャの呼び出しの詳細については、このセクションで後述する「[プロシージャ呼び出し](../../../odbc/reference/develop-app/procedure-calls.md)」を参照してください。

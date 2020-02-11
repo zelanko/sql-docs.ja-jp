@@ -10,37 +10,37 @@ ms.assetid: 7a3846ee-b221-47a5-ac8c-d08a962931af
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 4ef40fbc5acafeaaba76953940f763c663cb121c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67908851"
 ---
 # <a name="new-project-ssma-mysqltosql"></a>新しいプロジェクト (SSMA) (MySQLToSQL)
-使用して、**新しいプロジェクト**新しい SSMA プロジェクトを作成する ダイアログ ボックス。 アクセスする、**新しいプロジェクト** ダイアログ ボックスで、**ファイル** メニューのをクリックして**新しいプロジェクト**します。  
+新しい SSMA プロジェクトを作成するには、[**新しいプロジェクト**] ダイアログボックスを使用します。 [**新しいプロジェクト**] ダイアログボックスにアクセスするには、[**ファイル**] メニューの [**新しいプロジェクト**] をクリックします。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
 **名前**  
   
-プロジェクトの名前を入力します。 SSMA は、ファイル拡張子を追加します。  
+プロジェクトの名前を入力します。 SSMA によってファイル拡張子が追加されます。  
   
-**場所**  
+**Location**  
   
-入力するか、フォルダーまたはプロジェクトを保存するネットワークの場所を参照します。  
+フォルダーまたはネットワークの場所を入力するか、参照してプロジェクトを保存します。  
   
 **MigrateTo**  
   
-下の一覧からターゲット データベースのバージョンのいずれかを選択します。  
+次の一覧から、ターゲットデータベースのバージョンのいずれかを選択します。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2008  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2016  
   
 -   SQL Azure  
   

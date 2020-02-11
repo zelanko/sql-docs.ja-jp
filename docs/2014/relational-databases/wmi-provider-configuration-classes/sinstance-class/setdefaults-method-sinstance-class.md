@@ -19,14 +19,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: ad13821341291a91a989297f29e1459a40de5afe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62720940"
 ---
 # <a name="setdefaults-method-sinstance-class"></a>SetDefaults メソッド (SInstance クラス)
-  インスタンスのすべての既定値を設定[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]既存のデータを上書きするオプションを使用します。  
+  既存のデータを上書きするオプションを使用[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]して、のインスタンスのすべての既定値を設定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,21 +40,22 @@ OverwriteAll
 ```  
   
 ## <a name="parts"></a>要素  
- *object*  
- [SInstance クラス](sinstance-class.md)サーバー インスタンスを表すオブジェクト。  
+ *素材*  
+ サーバーインスタンスを表す[Sinstance クラス](sinstance-class.md)オブジェクト。  
   
 #### <a name="parameters"></a>パラメーター  
   
-|パラメーター|説明|  
+|パラメーター|[説明]|  
 |---------------|-----------------|  
-|*OverwriteAll*|インスタンス上の既存の値を上書きするかどうかを指定するブール値、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]クライアント:`true`既存のデータが上書きされる場合または`false`場合、既存のデータは上書きされません。|  
+|*OverwriteAll*|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]クライアントのインスタンスの既存の値を上書きするかどうかを指定するブール`true`値。既存のデータを上書き`false`する場合は、既存のデータを上書きしない場合はです。|  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
- `uint32` 値。サービスが正常に変更された場合は 0、要求がサポートされていない場合は 1 になります。それ以外の数値はエラーを示します。  
+ 
+  `uint32` 値。サービスが正常に変更された場合は 0、要求がサポートされていない場合は 1 になります。それ以外の数値はエラーを示します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
   
 ## <a name="see-also"></a>参照  
- [サーバー ネットワーク プロトコルとネットワーク ライブラリの構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [サーバーのネットワーク プロトコルと Net-Library の構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: be3d21665d41fe7748e6a3a4d070f4001ca306a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62762038"
 ---
-# <a name="mssqlserver7933"></a>MSSQLSERVER_7933
+# <a name="mssqlserver_7933"></a>MSSQLSERVER_7933
     
 ## <a name="details"></a>詳細  
   
@@ -30,7 +30,7 @@ ms.locfileid: "62762038"
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|DBCC2_FS_ORPHANED_ROWSET_DIRECTORY|  
-|メッセージ テキスト|テーブル エラー:Filestream ディレクトリ ID F_ID は、パーティションが、対応するパーティションが存在するは、データベースではありません。|  
+|メッセージ テキスト|テーブル エラー: パーティションの FileStream ディレクトリ ID F_ID は存在しますが、対応するパーティションがデータベース内に存在しません。|  
   
 ## <a name="explanation"></a>説明  
  DBCC CHECKDB の実行中に、FILESTREAM データ領域で行セット ディレクトリが見つかりましたが、対応するパーティションがデータベース内にありません。  
@@ -48,6 +48,6 @@ ms.locfileid: "62762038"
  問題がハードウェアに関するものではなく、また既知のクリーン バックアップがある場合は、そのバックアップを使用してデータベースを復元します。  
   
 ### <a name="run-dbcc-checkdb"></a>DBCC CHECKDB の実行  
- 該当なし。 このエラーを自動的に修正することはできません。 バックアップからデータベースを復元できない場合は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] カスタマー サポート サービス (CSS) にご連絡ください。  
+ 適用不可。 このエラーを自動的に修正することはできません。 バックアップからデータベースを復元できない場合は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] カスタマー サポート サービス (CSS) にご連絡ください。  
   
   

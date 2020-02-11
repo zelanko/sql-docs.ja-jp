@@ -16,28 +16,28 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 43ae01b9173693370d5e422d4f26b6175101ff12
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721037"
 ---
 # <a name="recompile-a-stored-procedure"></a>ストアド プロシージャの再コンパイル
-  このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]でストアド プロシージャを再コンパイルする方法について説明します。 これを行う 3 つの方法:`WITH RECOMPILE`プロシージャ定義内またはプロシージャが呼び出されると、オプション、`RECOMPILE`を使用して個々 のステートメントでクエリ ヒント、`sp_recompile`システム ストアド プロシージャ。 このトピックでは、プロシージャ定義の作成時および既存のプロシージャの実行時に WITH RECOMPILE オプションを使用する方法について説明します。 さらに、sp_recompile システム ストアド プロシージャを使用して既存のプロシージャを再コンパイルする方法についても説明します。  
+  このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]でストアド プロシージャを再コンパイルする方法について説明します。 この操作を行うには、プロシージャ`WITH RECOMPILE`の定義でオプションを使用するか、プロシージャを呼び出すとき`RECOMPILE`に、個々のステートメントに対してクエリヒント`sp_recompile`を使用するか、またはシステムストアドプロシージャを使用します。 このトピックでは、プロシージャ定義の作成時および既存のプロシージャの実行時に WITH RECOMPILE オプションを使用する方法について説明します。 さらに、sp_recompile システム ストアド プロシージャを使用して既存のプロシージャを再コンパイルする方法についても説明します。  
   
  **このトピックの内容**  
   
 -   **作業を開始する準備:**  
   
-     [推奨事項](#Recommendations)  
+     [Recommendations (推奨事項)](#Recommendations)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **ストアド プロシージャを再コンパイルするために使用するもの:**  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Recommendations"></a> 推奨事項  
   
@@ -54,15 +54,15 @@ ms.locfileid: "62721037"
 ###  <a name="Security"></a> セキュリティ  
   
 ####  <a name="Permissions"></a> Permissions  
- `WITH RECOMPILE` オプション  
+ `WITH RECOMPILE`オプション  
  プロシージャ定義を作成するときにこのオプションを使用する場合、データベースの CREATE PROCEDURE 権限とプロシージャが作成されるスキーマに対する ALTER 権限が必要です。  
   
  EXECUTE ステートメントでこのオプションを使用する場合、プロシージャに対する EXECUTE 権限が必要です。 EXECUTE ステートメント自体に対する権限は必要がありませんが、EXECUTE ステートメント内で参照されているプロシージャに対する実行権限が必要です。 詳細については、「 [EXECUTE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/execute-transact-sql)」を参照してください。  
   
- `RECOMPILE` クエリ ヒント  
+ `RECOMPILE`クエリヒント  
  この機能は、プロシージャが作成され、ヒントがプロシージャの [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントに含まれている場合に使用されます。 したがって、データベースの CREATE PROCEDURE 権限と、プロシージャを作成するスキーマに対する ALTER 権限が必要です。  
   
- `sp_recompile` システム ストアド プロシージャ  
+ `sp_recompile`システムストアドプロシージャ  
  指定したプロシージャに対する ALTER 権限が必要です。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
@@ -113,7 +113,7 @@ GO
   
 ```  
   
-#### <a name="to-recompile-a-stored-procedure-by-using-sprecompile"></a>sp_recompile を使用してストアド プロシージャを実行するには  
+#### <a name="to-recompile-a-stored-procedure-by-using-sp_recompile"></a>sp_recompile を使用してストアド プロシージャを実行するには  
   
 1.  [!INCLUDE[ssDE](../../../includes/ssde-md.md)]に接続します。  
   
@@ -132,11 +132,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [ストアド プロシージャの作成](../stored-procedures/create-a-stored-procedure.md)   
- [ストアド プロシージャの変更](../stored-procedures/modify-a-stored-procedure.md)   
- [ストアド プロシージャの名前の変更](rename-a-stored-procedure.md)   
- [ストアド プロシージャの定義の表示](view-the-definition-of-a-stored-procedure.md)   
- [ストアド プロシージャの依存関係の表示](view-the-dependencies-of-a-stored-procedure.md)   
- [DROP PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-procedure-transact-sql)  
+ [ストアドプロシージャの作成](../stored-procedures/create-a-stored-procedure.md)   
+ [ストアドプロシージャの変更](../stored-procedures/modify-a-stored-procedure.md)   
+ [ストアドプロシージャの名前の変更](rename-a-stored-procedure.md)   
+ [ストアドプロシージャの定義を表示する](view-the-definition-of-a-stored-procedure.md)   
+ [ストアドプロシージャの依存関係の表示](view-the-dependencies-of-a-stored-procedure.md)   
+ [DROP PROCEDURE &#40;Transact-sql&#41;](/sql/t-sql/statements/drop-procedure-transact-sql)  
   
   

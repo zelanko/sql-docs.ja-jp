@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 636fe00c73e508363eaab385f6acd9909374166c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62704723"
 ---
 # <a name="view-or-change-the-properties-of-a-connection-in-a-project"></a>プロジェクト内の接続のプロパティを表示または変更する方法
@@ -32,9 +32,9 @@ ms.locfileid: "62704723"
   
 2.  接続のプロパティが [プロパティ] ウィンドウに表示されます。 変更できるプロパティは、 **[実行タイムアウト]** 、 **[データベース]** 、および **[ログイン タイムアウト]** です。  
   
-## <a name="see-also"></a>関連項目  
- [ソリューション エクスプ ローラー](solution-explorer.md)   
- [プロジェクト内の接続とクエリを関連付け](associate-a-query-with-a-connection-in-a-project.md)   
+## <a name="see-also"></a>参照  
+ [ソリューション エクスプローラー](solution-explorer.md)   
+ [クエリをプロジェクト内の接続に関連付ける](associate-a-query-with-a-connection-in-a-project.md)   
  [クエリに関連付けられた接続の変更](change-the-connection-associated-with-a-query.md)  
   
   

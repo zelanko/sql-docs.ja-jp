@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 690b52fceb74269501880565bab65b020206fa61
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62761527"
 ---
 # <a name="delete-primary-keys"></a>主キーの削除
@@ -28,7 +28,7 @@ ms.locfileid: "62761527"
   
 -   **作業を開始する準備:**  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **主キー制約を削除する方法:**  
   
@@ -62,7 +62,7 @@ ms.locfileid: "62761527"
     > [!NOTE]  
     >  この操作を元に戻すには、変更を保存せずにテーブルを閉じます。 主キーの削除を元に戻すと、テーブルに対するその他の変更はすべて失われます。  
   
-3.  **[ファイル]** メニューの **[<_テーブル名_> を保存]** をクリックします。  
+3.  **[ファイル]** メニューの **[<** テーブル名 _> を保存]_ をクリックします。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   

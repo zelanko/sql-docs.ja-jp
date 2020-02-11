@@ -11,14 +11,14 @@ ms.assetid: ee9cd360-07e5-4f8a-804b-ad95aecae3e4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 33aa08b86767b855b3c5cfc70ceaef785c419aef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68002201"
 ---
 # <a name="constructing-sql-statements"></a>SQL ステートメントの構築
-3 つの方法のいずれかで、SQL ステートメントを構築できます。 開発、構築、実行時またはユーザーが直接入力中に、ハードコーディングします。  
+SQL ステートメントは、開発時にハードコーディングするか、実行時に構築するか、ユーザーが直接入力するという3つの方法のいずれかで構築できます。  
   
  このセクションでは、次のトピックを扱います。  
   

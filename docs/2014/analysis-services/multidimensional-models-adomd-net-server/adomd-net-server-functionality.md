@@ -1,5 +1,5 @@
 ---
-title: ADOMD.NET のサーバー機能 |Microsoft Docs
+title: ADOMD.NET サーバーの機能 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,22 +14,23 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cc127a8bafc9ad2f53465caeca013d5033e5c396
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62702975"
 ---
 # <a name="adomdnet-server-functionality"></a>ADOMD.NET のサーバー機能
   すべての ADOMD.NET サーバー オブジェクトは、サーバー上のデータやメタデータへの読み取り専用アクセスを提供します。 データやメタデータを取得するには、ADOMD.NET サーバー オブジェクト モデルを使用します。スキーマ行セットはサポートされていません。  
   
- ユーザー定義関数 (UDF) またはのストアド プロシージャを作成する、ADOMD.NET サーバー オブジェクトと[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]します。 これらのインプロセス メソッドは、多次元式 (MDX)、データ マイニング拡張機能 (DMX)、SQL などの言語で作成されたクエリ ステートメントを通じて呼び出されます。 また、これらのインプロセス メソッドを使用すると、ネットワーク通信に関連する待機時間なしに追加の機能を利用できます。  
+ ADOMD.NET server オブジェクトを使用すると、の[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ユーザー定義関数 (UDF) またはストアドプロシージャを作成できます。 これらのインプロセス メソッドは、多次元式 (MDX)、データ マイニング拡張機能 (DMX)、SQL などの言語で作成されたクエリ ステートメントを通じて呼び出されます。 また、これらのインプロセス メソッドを使用すると、ネットワーク通信に関連する待機時間なしに追加の機能を利用できます。  
   
 > [!NOTE]  
->  <xref:Microsoft.AnalysisServices.AdomdServer.AdomdCommand> オブジェクトでサポートされているのは DMX だけです。  
+>  
+  <xref:Microsoft.AnalysisServices.AdomdServer.AdomdCommand> オブジェクトでサポートされているのは DMX だけです。  
   
 ## <a name="what-is-a-udf"></a>UDF とは  
- A *UDF*は、次の特性を持つメソッドです。  
+ *UDF*は、次の特性を持つメソッドです。  
   
 -   クエリのコンテキストで呼び出すことができます。  
   
@@ -46,11 +47,11 @@ FROM SalesModel
 ```  
   
 ## <a name="what-is-a-stored-procedure"></a>ストアド プロシージャとは  
- A*ストアド プロシージャ*は、次の特性を持つメソッドです。  
+ *ストアドプロシージャ*は、次の特性を持つメソッドです。  
   
--   呼び出すストアド プロシージャに、MDX を使用した独自[呼び出す](/sql/mdx/mdx-data-manipulation-call)ステートメント。  
+-   MDX [call](/sql/mdx/mdx-data-manipulation-call)ステートメントを使用して、独自のストアドプロシージャを呼び出します。  
   
--   ストアド プロシージャには、パラメーターの任意の数を取得できます。  
+-   ストアドプロシージャは、任意の数のパラメーターを受け取ることができます。  
   
 -   データセット、`IDataReader`、または空の結果を返すことができます。  
   

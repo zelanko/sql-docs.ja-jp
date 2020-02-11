@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 451b7ca4cc06269f116c62be2ef7f01f0e33abd2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721892"
 ---
 # <a name="replication-agent-executables-concepts"></a>レプリケーション エージェント実行可能ファイルの概念
@@ -34,7 +34,7 @@ ms.locfileid: "62721892"
   
  次のレプリケーション エージェントのインスタンスは、実行可能ファイルを使用して実行できます。  
   
--   [レプリケーション ディストリビューション エージェント](../agents/replication-distribution-agent.md)  
+-   [Replication Distribution Agent](../agents/replication-distribution-agent.md)  
   
 -   [レプリケーション ログ リーダー エージェント](../agents/replication-log-reader-agent.md)  
   
@@ -42,11 +42,11 @@ ms.locfileid: "62721892"
   
 -   [レプリケーション キュー リーダー エージェント](../agents/replication-queue-reader-agent.md)  
   
--   [レプリケーション スナップショット エージェント](../agents/replication-snapshot-agent.md)  
+-   [Replication Snapshot Agent](../agents/replication-snapshot-agent.md)  
   
- レプリケーション エージェントを呼び出す際、パフォーマンス プロファイルを使用することで、あらかじめ定義された一連のパラメーターを自動的にエージェント実行可能ファイルに渡すことができます。 詳しくは、「 [Replication Agent Profiles](../agents/replication-agent-profiles.md)」をご覧ください。  
+ レプリケーション エージェントを呼び出す際、パフォーマンス プロファイルを使用することで、あらかじめ定義された一連のパラメーターを自動的にエージェント実行可能ファイルに渡すことができます。 詳しくは、「 [レプリケーション エージェント プロファイル](../agents/replication-agent-profiles.md)」をご覧ください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例は、レプリケーション エージェントをコマンド プロンプトから呼び出す方法を示しています。 レプリケーション エージェントは、レプリケーション管理オブジェクト (RMO) を使用して呼び出すこともできます。 詳細については、「[サブスクリプションの同期 &#40;レプリケーション&#41;](../synchronize-data.md)」を参照してください。  
   
 > [!NOTE]  
