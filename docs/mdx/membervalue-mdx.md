@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 4db81766060f8f1afde2241d0c89407ad3cbb864
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68001404"
 ---
 # <a name="membervalue-mdx"></a>MemberValue (MDX)
@@ -28,15 +28,15 @@ Member_Expression.MemberValue
 ```  
   
 ## <a name="arguments"></a>引数  
- *メンバー式*  
+ *Member_Expression*  
  メンバーに評価される有効な多次元式 (MDX) 式です。  
   
 ## <a name="return-value"></a>戻り値  
- 返されるメンバーの値には、この情報は、戻り値に表示される順序で一覧表示、次の情報が含まれています。  
+ 返されるメンバーの値には、次の情報が含まれています。この情報は、戻り値に表示される順序で示されています。  
   
--   値のバインド、定義済みの場合。  
+-   値のバインド (定義されている場合)。  
   
--   名前のバインドがないか、キーとキャプションが同じ列にバインドされている場合は、元のデータ型を持つキー。  
+-   名前のバインドが存在しない場合、またはキーとキャプションが同じ列にバインドされている場合は、元のデータ型のキー。  
   
 -   メンバーのキャプション。  
   
@@ -52,7 +52,7 @@ SELECT {Measures.ValueColumn, Measures.KeyColumn, Measures.NameColumn}  ON 0
 from [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>参照  
+ [Mdx 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

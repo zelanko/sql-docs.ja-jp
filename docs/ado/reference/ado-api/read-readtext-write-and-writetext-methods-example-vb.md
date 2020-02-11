@@ -1,5 +1,5 @@
 ---
-title: 読み取り、ReadText、Write、および WriteText メソッドの例 (VB) |Microsoft Docs
+title: Read、ReadText、Write、WriteText の各メソッドの例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,14 +18,14 @@ ms.assetid: 699b73f7-04f9-4d46-94b2-6cb12be6de56
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f77b2d395b76b537107ad87cf1487bb4d25a430c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931442"
 ---
-# <a name="read-readtext-write-and-writetext-methods-example-vb"></a>読み取り、ReadText、Write、および WriteText メソッドの例 (VB)
-この例では、両方のテキストにテキスト ボックスの内容を読み取る[Stream](../../../ado/reference/ado-api/stream-object-ado.md)とバイナリ**Stream**します。 その他のプロパティと示されているメソッドが含まれて[位置](../../../ado/reference/ado-api/position-property-ado.md)、[サイズ](../../../ado/reference/ado-api/size-property-ado-parameter.md)、 [Charset](../../../ado/reference/ado-api/charset-property-ado.md)、および[SetEOS](../../../ado/reference/ado-api/seteos-method.md)します。  
+# <a name="read-readtext-write-and-writetext-methods-example-vb"></a>Read、ReadText、Write、WriteText の各メソッドの例 (VB)
+この例では、テキストボックスの内容をテキスト[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)とバイナリ**ストリーム**の両方に読み取る方法を示します。 表示されるその他のプロパティとメソッドには、 [Position](../../../ado/reference/ado-api/position-property-ado.md)、 [Size](../../../ado/reference/ado-api/size-property-ado-parameter.md)、 [Charset](../../../ado/reference/ado-api/charset-property-ado.md)、および[SetEOS](../../../ado/reference/ado-api/seteos-method.md)があります。  
   
 ```  
 'BeginReadVB  
@@ -110,7 +110,7 @@ End Sub
 'EndReadVB  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Charset プロパティ (ADO)](../../../ado/reference/ado-api/charset-property-ado.md)   
  [Position プロパティ (ADO)](../../../ado/reference/ado-api/position-property-ado.md)   
  [Read メソッド](../../../ado/reference/ado-api/read-method.md)   

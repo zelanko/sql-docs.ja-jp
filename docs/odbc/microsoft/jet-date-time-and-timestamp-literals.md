@@ -1,5 +1,5 @@
 ---
-title: 'Jet: 日付、時刻、およびタイムスタンプのリテラル |Microsoft Docs'
+title: 'Jet: Date、Time、および Timestamp リテラル |Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,17 +17,17 @@ ms.assetid: 37db1ae1-ca4e-4cd8-9b47-7f1a38e7fcad
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1bb7f0fb02049b6d2f1897c4f495035aee2858f6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68085490"
 ---
 # <a name="jet-date-time-and-timestamp-literals"></a>Jet: 日付、時刻、およびタイムスタンプのリテラル
-相互運用性を最大に、アプリケーションは、エスケープ句の構文を使用して ODBC 正規の形式で日付リテラルを渡す必要があります。  
+相互運用性を最大にするために、アプリケーションは、エスケープ句の構文を使用して、ODBC 標準形式で日付リテラルを渡す必要があります。  
   
--   日付リテラル値、{d '*値*'} ここで、 *valu*e は"yyyy mm dd"の形式  
+-   日付リテラルの場合は {d '*値*'}。ここで、 *valu*e の形式は "yyyy-mm-dd" です。  
   
--   時刻のリテラル値、{t '*値*'} ここで、 *valu*e は"hh:mm:ss"の形式  
+-   時刻リテラルの場合は {t '*値*'}。ここで、 *valu*e の形式は "hh: mm: ss" です。  
   
- タイムスタンプのリテラルの {ts'*値*'} ここで、 *valu*e がフォームでは"- yyyy-mm-dd hh:mm:ss [. f.]"。
+ タイムスタンプリテラル {ts '*値*'}。ここで、 *valu*e は、"yyyy-mm-dd hh: mm: ss [...]" という形式になっています。

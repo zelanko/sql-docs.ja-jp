@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 447b91ee1aa99642647dd1377976feef026b9a08
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62778953"
 ---
 # <a name="full-text-search-f1-help"></a>フルテキスト検索の F1 ヘルプ
@@ -22,18 +22,18 @@ ms.locfileid: "62778953"
   
 |||  
 |-|-|  
-|[新しいフルテキスト カタログ&#40;[全般] ページ&#41;](new-full-text-catalog-general-page.md)|[フルテキスト インデックス プロパティ&#40;[スケジュール] ページ&#41;](../../2014/database-engine/full-text-index-properties-schedules-page.md)|  
-|[フルテキスト カタログ プロパティ&#40;[全般] ページ&#41;](../../2014/database-engine/full-text-catalog-properties-general-page.md)|[新しいフルテキスト ストップ リスト&#40;[全般] ページ&#41;](../../2014/database-engine/new-full-text-stoplist-general-page.md)|  
-|[フルテキスト カタログ プロパティ&#40;作成スケジュール ページ&#41;](../../2014/database-engine/full-text-catalog-properties-population-schedule-page.md)|[フルテキスト ストップ リストのプロパティ](../../2014/database-engine/full-text-stoplist-properties.md)|  
-|[フルテキスト カタログ プロパティ&#40;テーブルし、ビュー ページ&#41;](../../2014/database-engine/full-text-catalog-properties-tables-and-views-page.md)|[新しい検索プロパティ リスト](../../2014/database-engine/new-search-property-list.md)|  
-|[フルテキスト インデックス プロパティ&#40;[全般] ページ&#41;](../../2014/database-engine/full-text-index-properties-general-page.md)|[検索プロパティ リスト エディター](../../2014/database-engine/search-property-list-editor.md)|  
-|[フルテキスト インデックス プロパティ&#40;列 ページ&#41;](../../2014/database-engine/full-text-index-properties-columns-page.md)||  
+|[新しいフルテキストカタログ &#40;全般ページ&#41;](new-full-text-catalog-general-page.md)|[フルテキストインデックスのプロパティ &#40;スケジュール] ページ&#41;](../../2014/database-engine/full-text-index-properties-schedules-page.md)|  
+|[[全般] ページ&#41;&#40;[フルテキストカタログのプロパティ]](../../2014/database-engine/full-text-catalog-properties-general-page.md)|[新しいフルテキストストップリスト &#40;全般ページ&#41;](../../2014/database-engine/new-full-text-stoplist-general-page.md)|  
+|[[フルテキストカタログのプロパティ &#40;作成スケジュール] ページ&#41;](../../2014/database-engine/full-text-catalog-properties-population-schedule-page.md)|[[フルテキスト ストップリストのプロパティ]](../../2014/database-engine/full-text-stoplist-properties.md)|  
+|[[テーブルとビュー] ページ &#40;のフルテキストカタログのプロパティ&#41;](../../2014/database-engine/full-text-catalog-properties-tables-and-views-page.md)|[新しい検索プロパティ リスト](../../2014/database-engine/new-search-property-list.md)|  
+|[[全般] ページ&#41;&#40;[フルテキストインデックスのプロパティ]](../../2014/database-engine/full-text-index-properties-general-page.md)|[検索プロパティ リスト エディター](../../2014/database-engine/search-property-list-editor.md)|  
+|[[列] ページの [フルテキストインデックスのプロパティ &#40;&#41;](../../2014/database-engine/full-text-index-properties-columns-page.md)||  
   
 ## <a name="see-also"></a>参照  
  [フルテキスト検索](../relational-databases/search/full-text-search.md)   
- [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)   
- [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-index-transact-sql)   
- [CREATE FULLTEXT STOPLIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql)   
- [CREATE SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-search-property-list-transact-sql)  
+ [Transact-sql&#41;&#40;のフルテキストカタログの作成](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)   
+ [Transact-sql&#41;&#40;のフルテキストインデックスの作成](/sql/t-sql/statements/create-fulltext-index-transact-sql)   
+ [Transact-sql&#41;&#40;のフルテキストストップリストの作成](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql)   
+ [Transact-sql&#41;&#40;の検索プロパティリストの作成](/sql/t-sql/statements/create-search-property-list-transact-sql)  
   
   

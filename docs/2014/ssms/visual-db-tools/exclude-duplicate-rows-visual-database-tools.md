@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 63ec11b8575017ffbb3a1b1468ef3150a20326e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63028353"
 ---
 # <a name="exclude-duplicate-rows-visual-database-tools"></a>重複する行の除外 (Visual Database Tools)
@@ -39,7 +39,7 @@ ms.locfileid: "63028353"
     >  DISTINCT キーワードを使用する場合、結果ペインで結果セットを変更できない場合があります。  
   
 ## <a name="see-also"></a>参照  
- [検索条件を指定&#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [Visual Database Tools &#40;検索条件を指定し&#41;](visual-database-tools.md)   
  [クエリ結果の並べ替えおよびグループ化 (Visual Database Tools)](sort-and-group-query-results-visual-database-tools.md)  
   
   

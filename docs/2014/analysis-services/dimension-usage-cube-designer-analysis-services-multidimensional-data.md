@@ -1,5 +1,5 @@
 ---
-title: ディメンションの使用法 (キューブ デザイナー) (Analysis Services - 多次元データ) |Microsoft Docs
+title: ディメンションの使用法 (キューブデザイナー) (Analysis Services-多次元データ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 90eddd7949cee5067e5a00c4d9918d997a2d0df3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081668"
 ---
 # <a name="dimension-usage-cube-designer-analysis-services---multidimensional-data"></a>[ディメンションの使用法] (キューブ デザイナー) (Analysis Services - 多次元データ)
@@ -26,19 +26,19 @@ ms.locfileid: "66081668"
   
 |ペイン|定義|  
 |----------|----------------|  
-|**[ツール バー]**|ツール バーを使用して、一般的な操作をこのタブで実行します。このペインの詳細については、「[Toolbar (Dimension Usage Tab, Cube Designer) (Analysis Services - Multidimensional Data)](toolbar-dimension-usage-cube-designer-analysis-services-multidimensional-data.md)」(ツール バー (キューブ デザイナーの [ディメンションの使用法] タブ) (Analysis Services - 多次元データ)) を参照してください。|  
-|**グリッド**|グリッドを使用して、キューブ ディメンションとキューブのメジャー グループとの間のディメンション リレーションシップを表示および編集します。 このペインの詳細については、「[Grid (Dimension Usage Tab, Cube Designer) (Analysis Services - Multidimensional Data)](grid-dimension-usage-tab-cube-designer-analysis-services-multidimensional-data.md)」(グリッド (キューブ デザイナーの [ディメンションの使用法] タブ) (Analysis Services - 多次元データ)) を参照してください。|  
+|**ツール バー**|ツールバーを使用して、このタブで一般的な操作を実行します。このペインの詳細については、「[ツールバー &#40;[ディメンションの使用法] タブ」、「キューブデザイナー&#41; &#40;Analysis Services-多次元データ&#41;](toolbar-dimension-usage-cube-designer-analysis-services-multidimensional-data.md)」を参照してください。|  
+|**行列**|グリッドを使用して、キューブ ディメンションとキューブのメジャー グループとの間のディメンション リレーションシップを表示および編集します。 このペインの詳細については、「[Grid (Dimension Usage Tab, Cube Designer) (Analysis Services - Multidimensional Data)](grid-dimension-usage-tab-cube-designer-analysis-services-multidimensional-data.md)」(グリッド (キューブ デザイナーの [ディメンションの使用法] タブ) (Analysis Services - 多次元データ)) を参照してください。|  
   
 ## <a name="see-also"></a>参照  
- [ディメンション リレーションシップ](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
- [キューブ デザイナー &#40;Analysis Services - 多次元データ&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [キューブ構造&#40;キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
- [計算&#40;キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](calculations-cube-designer-analysis-services-multidimensional-data.md)   
- [Kpi&#40;キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](kpis-cube-designer-analysis-services-multidimensional-data.md)   
- [アクション&#40;キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](actions-cube-designer-analysis-services-multidimensional-data.md)   
- [パーティション&#40;キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](partitions-cube-designer-analysis-services-multidimensional-data.md)   
- [パースペクティブ&#40;キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](perspectives-cube-designer-analysis-services-multidimensional-data.md)   
- [翻訳&#40;キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](translations-cube-designer-analysis-services-multidimensional-data.md)   
- [ブラウザー&#40;キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](browser-cube-designer-analysis-services-multidimensional-data.md)  
+ [ディメンションのリレーションシップ](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
+ [キューブデザイナー &#40;Analysis Services-多次元データ&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [キューブ構造 &#40;キューブデザイナーの&#41; &#40;Analysis Services-多次元データ&#41;](cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
+ [キューブデザイナーの計算 &#40;&#41; &#40;Analysis Services-多次元データ&#41;](calculations-cube-designer-analysis-services-multidimensional-data.md)   
+ [Kpi &#40;キューブデザイナー&#41; &#40;Analysis Services-多次元データ&#41;](kpis-cube-designer-analysis-services-multidimensional-data.md)   
+ [アクション &#40;キューブデザイナー&#41; &#40;Analysis Services-多次元データ&#41;](actions-cube-designer-analysis-services-multidimensional-data.md)   
+ [パーティション &#40;キューブデザイナー&#41; &#40;Analysis Services-多次元データ&#41;](partitions-cube-designer-analysis-services-multidimensional-data.md)   
+ [パースペクティブ &#40;キューブデザイナー&#41; &#40;Analysis Services-多次元データ&#41;](perspectives-cube-designer-analysis-services-multidimensional-data.md)   
+ [キューブデザイナーの翻訳 &#40;&#41; &#40;Analysis Services-多次元データ&#41;](translations-cube-designer-analysis-services-multidimensional-data.md)   
+ [ブラウザー &#40;キューブデザイナー&#41; &#40;Analysis Services-多次元データ&#41;](browser-cube-designer-analysis-services-multidimensional-data.md)  
   
   

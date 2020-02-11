@@ -1,5 +1,5 @@
 ---
-title: カーソルの使用 (ODBC) |マイクロソフトのドキュメント
+title: カーソルの使用 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bc53253c93f5f52c6bbe00941eadbf14b65d5f64
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206822"
 ---
 # <a name="using-cursors-odbc"></a>カーソルの使用 (ODBC)
@@ -32,21 +32,24 @@ ms.locfileid: "68206822"
   
 -   複数のコンカレンシー オプション。  
   
--   位置指定更新します。  
+-   位置指定更新。  
   
- ODBC アプリケーションでは、カーソルを宣言して開いたり、カーソル関連の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用することはほとんどありません。 ODBC では、SQL ステートメントから返されたすべての結果セットに対して自動的にカーソルを開きます。 カーソルの特性を設定するステートメント属性によって制御されます[SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md) SQL する前にステートメントが実行されます。 結果セットの処理に使用する ODBC API 関数では、フェッチ、スクロール、位置指定更新など、すべてのカーソル機能がサポートされます。  
+ ODBC アプリケーションでは、カーソルを宣言して開いたり、カーソル関連の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用することはほとんどありません。 ODBC では、SQL ステートメントから返されたすべての結果セットに対して自動的にカーソルを開きます。 カーソルの特性は、SQL ステートメントが実行される前に、 [SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md)で設定されたステートメント属性によって制御されます。 結果セットの処理に使用する ODBC API 関数では、フェッチ、スクロール、位置指定更新など、すべてのカーソル機能がサポートされます。  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトと ODBC アプリケーションのカーソル操作の比較を次に示します。  
+ 
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトと ODBC アプリケーションのカーソル操作の比較を次に示します。  
   
-|操作|[!INCLUDE[tsql](../../includes/tsql-md.md)]|ODBC|  
+|アクション|[!INCLUDE[tsql](../../includes/tsql-md.md)]|ODBC|  
 |------------|------------------------|----------|  
-|カーソル動作を定義する|DECLARE CURSOR パラメーターによる指定|使用してカーソルの属性を設定[SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md)|  
-|カーソルを開く|開いているカーソルの宣言*cursor_name*|**SQLExecDirect**または**SQLExecute**|  
-|行をフェッチする|FETCH|**SQLFetch**または[SQLFetchScroll](../native-client-odbc-api/sqlfetchscroll.md)|  
+|カーソル動作を定義する|DECLARE CURSOR パラメーターによる指定|[SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md)を使用してカーソルの属性を設定する|  
+|カーソルを開く|カーソルを開く*cursor_name*を宣言|**SQLExecDirect**または**sqlexecute**|  
+|行をフェッチする|FETCH|**Sqlfetch**または[sqlfetchscroll](../native-client-odbc-api/sqlfetchscroll.md)|  
 |位置指定更新を行う|UPDATE または DELETE の WHERE CURRENT OF 句|**SQLSetPos**|  
-|カーソルを閉じる|閉じる*cursor_name* DEALLOCATE|[SQLCloseCursor](../native-client-odbc-api/sqlclosecursor.md)|  
+|カーソルを閉じる|割り当て解除*CURSOR_NAME*終了|[SQLCloseCursor](../native-client-odbc-api/sqlclosecursor.md)|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に実装されているサーバー カーソルでは、ODBC カーソル モデルの機能がサポートされます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ドライバーでは、サーバー カーソルを使用して ODBC API のカーソル機能がサポートされます。  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に実装されているサーバー カーソルでは、ODBC カーソル モデルの機能がサポートされます。 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ドライバーでは、サーバー カーソルを使用して ODBC API のカーソル機能がサポートされます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
@@ -58,19 +61,19 @@ ms.locfileid: "68206822"
   
 -   [カーソルのプロパティ](properties/cursor-properties.md)  
   
--   [カーソル プログラミングの詳細&#40;ODBC&#41;](programming/cursor-programming-details-odbc.md)  
+-   [ODBC&#41;&#40;のカーソルプログラミングの詳細](programming/cursor-programming-details-odbc.md)  
   
 -   [行のスクロールとフェッチ](../native-client-ole-db-rowsets/fetching-rows.md)  
   
--   [位置指定更新&#40;ODBC&#41;](positioned-updates-odbc.md)  
+-   [位置指定更新 &#40;ODBC&#41;](positioned-updates-odbc.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SQL Server Native Client &#40;ODBC&#41;](../native-client/odbc/sql-server-native-client-odbc.md)   
- [CLOSE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/close-transact-sql)   
- [カーソル](../../relational-databases/cursors.md)   
- [DEALLOCATE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/deallocate-transact-sql)   
- [DECLARE CURSOR &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/declare-cursor-transact-sql)   
- [FETCH &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/fetch-transact-sql)   
- [OPEN &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/open-transact-sql)  
+ [Transact-sql&#41;を閉じる &#40;](/sql/t-sql/language-elements/close-transact-sql)   
+ [求](../../relational-databases/cursors.md)   
+ [Transact-sql&#41;の割り当てを解除 &#40;](/sql/t-sql/language-elements/deallocate-transact-sql)   
+ [Transact-sql&#41;&#40;カーソルの宣言](/sql/t-sql/language-elements/declare-cursor-transact-sql)   
+ [Transact-sql&#41;をフェッチ &#40;](/sql/t-sql/language-elements/fetch-transact-sql)   
+ [Transact-sql&#41;を開く &#40;](/sql/t-sql/language-elements/open-transact-sql)  
   
   

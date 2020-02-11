@@ -1,5 +1,5 @@
 ---
-title: インベントリ スキーマ (AccessToSQL) へのアクセス |Microsoft Docs
+title: インベントリスキーマにアクセスする (アクセス可能 Sql) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -37,148 +37,148 @@ ms.assetid: fdd3cff2-4d62-4395-8acf-71ea8f17f524
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: c140489877be5f34bc6d7a5b20a4ce36fdb3820f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68068953"
 ---
-# <a name="access-inventory-schemas-accesstosql"></a>Access インベントリ スキーマ (AccessToSQL)
-次のセクションでは、SSMA によってへのアクセスのスキーマをエクスポートするときに作成されるテーブルを記述する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
+# <a name="access-inventory-schemas-accesstosql"></a>インベントリスキーマへのアクセス (アクセスアクセス Sql)
+次のセクションでは、にアクセススキーマを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エクスポートするときに ssma によって作成されるテーブルについて説明します。  
   
 ## <a name="databases"></a>データベース  
-データベース メタデータにエクスポートするが、 **SSMA_Access_InventoryDatabases**テーブル。 このテーブルには、次の列が含まれています。  
+データベースメタデータは**SSMA_Access_InventoryDatabases**テーブルにエクスポートされます。 このテーブルには、次の列が含まれています。  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |---------------|-------------|---------------|  
-|**DatabaseId**|**uniqueidentifier**|各データベースを一意に識別する GUID。 この列がテーブルの主キーもあります。|  
-|**DatabaseName**|**nvarchar (4000)**|Access データベースの名前。|  
-|**ExportTime**|**datetime**|このメタデータが SSMA によって作成された日付と時刻。|  
-|**ファイル パス**|**nvarchar (4000)**|Access データベースの完全パスとファイル名。|  
-|**FileSize**|**bigint**|サポート技術情報で Access データベースのサイズ。|  
-|**FileOwner**|**nvarchar (4000)**|Access データベースの所有者として指定されている Windows アカウント。|  
-|**DateCreated**|**datetime**|日付と、Access データベースが作成された時刻。|  
-|**DateModified**|**datetime**|日付と、Access データベースが最後に変更します。|  
-|**TablesCount**|**int**|Access データベース内のテーブルの数。|  
-|**QueriesCount**|**int**|Access データベースにクエリの数。|  
-|**FormsCount**|**int**|Access データベース内のフォームの数。|  
-|**ModulesCount**|**int**|Access データベース内のモジュールの数。|  
-|**ReportsCount**|**int**|Access データベースでのレポートの数。|  
+|**DatabaseId**|**UNIQUEIDENTIFIER**|各データベースを一意に識別する GUID。 この列は、テーブルの主キーでもあります。|  
+|**DatabaseName**|**nvarchar(4000)**|Access データベースの名前。|  
+|**ExportTime**|**DATETIME**|このメタデータが SSMA によって作成された日付と時刻。|  
+|**ファイル パス**|**nvarchar(4000)**|Access データベースの完全なパスとファイル名です。|  
+|**FileSize**|**bigint**|Access データベースのサイズ (KB 単位)。|  
+|**FileOwner**|**nvarchar(4000)**|Access データベースの所有者として指定されている Windows アカウント。|  
+|**DateCreated**|**DATETIME**|Access データベースが作成された日付と時刻。|  
+|**DateModified**|**DATETIME**|Access データベースが最後に変更された日付と時刻。|  
+|**各行数**|**int**|Access データベース内のテーブルの数。|  
+|**QueriesCount**|**int**|Access データベース内のクエリの数。|  
+|**フォーム数**|**int**|Access データベース内のフォームの数。|  
+|**モジュール数**|**int**|Access データベース内のモジュールの数。|  
+|**レポート数**|**int**|Access データベース内のレポートの数。|  
 |**MacrosCount**|**int**|Access データベース内のマクロの数。|  
-|**AccessVersion**|**nvarchar (4000)**|データベースのアクセスのバージョン。|  
-|**照合順序**|**nvarchar (4000)**|Access データベースの照合順序です。 データベースの並べ替えし、文字列を比較、照合順序が決定します。|  
-|**JetVersion**|**nvarchar (4000)**|Jet データベース エンジンのバージョン。 Access データベースは、基になる Jet データベース エンジンを使用します。|  
-|**IsUpdatable**|**bit**|データベースを更新できるかどうかを示します。 値が 1 の場合は、データベースは更新可能にします。 値が 0 の場合、データベースは読み取り専用です。|  
-|**QueryTimeout**|**int**|構成されている ODBC クエリのタイムアウト値 (秒)、データベース。 既定値は 60 秒です。|  
+|**AccessVersion**|**nvarchar(4000)**|データベースのアクセスバージョン。|  
+|**Collation**|**nvarchar(4000)**|Access データベースの照合順序です。 照合順序は、データベースが文字列の並べ替えと比較を行う方法を決定します。|  
+|**JetVersion**|**nvarchar(4000)**|Jet データベースエンジンのバージョンです。 データベースにアクセスするには、基になる Jet データベースエンジンを使用します。|  
+|**Isupable**|**bit**|データベースを更新できるかどうかを示します。 値が1の場合、データベースは更新可能です。 値が0の場合、データベースは読み取り専用です。|  
+|**QueryTimeout**|**int**|データベースの構成済み ODBC クエリタイムアウト値 (秒単位)。 既定値は 60 秒です。|  
   
 ## <a name="tables"></a>テーブル  
-テーブルのメタデータをエクスポート、 **SSMA_Access_InventoryTables**テーブル。 このテーブルには、次の列が含まれています。  
+テーブルのメタデータが**SSMA_Access_InventoryTables**テーブルにエクスポートされます。 このテーブルには、次の列が含まれています。  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |---------------|-------------|---------------|  
-|**DatabaseId**|**uniqueidentifier**|このテーブルを含むデータベースを識別します。|  
-|**TableId**|**uniqueidentifier**|テーブルを一意に識別する GUID。 この列がテーブルの主キーもあります。|  
-|**TableName**|**nvarchar (4000)**|テーブルの名前です。|  
+|**DatabaseId**|**UNIQUEIDENTIFIER**|このテーブルを含むデータベースを識別します。|  
+|**TableId**|**UNIQUEIDENTIFIER**|テーブルを一意に識別する GUID。 この列は、テーブルの主キーでもあります。|  
+|**テーブル**|**nvarchar(4000)**|テーブルの名前。|  
 |**RowsCount**|**int**|テーブルに含まれる行数です。|  
-|**ValidationRule**|**nvarchar (4000)**|テーブルの有効な入力を定義するルール。 検証規則が存在しない場合、フィールドには空の文字列が含まれます。|  
-|**LinkedTable**|**nvarchar (4000)**|別のテーブル、存在する場合、テーブルにリンクさせます。 このテーブルを使用して、追加、削除、およびその他のテーブルの更新をテーブルをリンクできます。|  
-|**ExternalSource**|**nvarchar (4000)**|データ ソースに存在する場合に関連付けられているテーブル。 テーブルがリンクされている場合、このフィールドで指定された外部データ ソースがあります。|  
+|**ValidationRule**|**nvarchar(4000)**|テーブルの有効な入力を定義するルール。 検証規則が存在しない場合、フィールドには空の文字列が含まれます。|  
+|**LinkedTable**|**nvarchar(4000)**|テーブルにリンクされている別のテーブル (存在する場合)。 テーブルをリンクすると、このテーブルを使用して、他のテーブルの追加、削除、および更新を行うことができます。|  
+|**ExternalSource**|**nvarchar(4000)**|テーブルに関連付けられているデータソース (存在する場合)。 テーブルがリンクされている場合、このフィールドには外部データソースが指定されています。|  
   
 ## <a name="columns"></a>[列]  
-列のメタデータをエクスポート、 **SSMA_Access_InventoryColumns**テーブル。 このテーブルには、次の列が含まれています。  
+列のメタデータが**SSMA_Access_InventoryColumns**テーブルにエクスポートされます。 このテーブルには、次の列が含まれています。  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |---------------|-------------|---------------|  
-|**DatabaseId**|**uniqueidentifier**|この列を含むデータベースを識別します。|  
-|**TableId**|**uniqueidentifier**|この列を含むテーブルを識別します。|  
-|**ColumnId**|**int**|列を識別するインクリメント整数。 **ColumnId**テーブルの主キーします。|  
-|**[ColumnName]**|**nvarchar (4000)**|列の名前です。|  
-|**IsNullable**|**bit**|列が null 値を含めることができるかどうかを指定します。 値が 1 の場合、列は null 値を含めることができます。 値が 0 の場合、列は null 値を含めることはできません。 検証規則は null 値を防ぐためにも使用できますに注意してください。|  
-|**DataType**|**nvarchar (4000)**|データ アクセスなどの列の入力**テキスト**または**長い**します。|  
-|**IsAutoIncrement**|**bit**|列が整数値を自動的にインクリメントするかどうかを指定します。 値が 1 の場合、整数が自動的にインクリメントします。|  
-|**Ordinal**|**smallint**|0 から始まる、テーブル内の列の順序。|  
-|**DefaultValue**|**nvarchar (4000)**|列の既定値です。|  
-|**ValidationRule**|**nvarchar (4000)**|データの検証に使用する規則を追加または列で更新します。|  
+|**DatabaseId**|**UNIQUEIDENTIFIER**|この列を含むデータベースを識別します。|  
+|**TableId**|**UNIQUEIDENTIFIER**|この列を含むテーブルを識別します。|  
+|**ColumnId**|**int**|列を識別するインクリメント整数。 **ColumnId**は、テーブルの主キーです。|  
+|**ColumnName**|**nvarchar(4000)**|列の名前です。|  
+|**IsNullable**|**bit**|列に null 値を含めることができるかどうかを指定します。 値が1の場合、列に null 値を含めることができます。 値が0の場合、列に null 値を含めることはできません。 検証規則は、null 値を防ぐためにも使用できます。|  
+|**DataType**|**nvarchar(4000)**|**Text**や**Long**など、列のアクセスデータ型。|  
+|**IsAutoIncrement**|**bit**|列が自動的に整数値をインクリメントするかどうかを指定します。 値が1の場合、整数は自動的にインクリメントされます。|  
+|**Ordinal**|**smallint**|テーブル内の列の順序。0から始まります。|  
+|**既定**|**nvarchar(4000)**|列の既定値です。|  
+|**ValidationRule**|**nvarchar(4000)**|列に追加または更新されたデータの検証に使用されるルール。|  
   
 ## <a name="indexes"></a>インデックス  
-インデックスのメタデータにエクスポートするが、 **SSMA_Access_InventoryIndexes**テーブル。 このテーブルには、次の列が含まれています。  
+インデックスメタデータは**SSMA_Access_InventoryIndexes**テーブルにエクスポートされます。 このテーブルには、次の列が含まれています。  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |---------------|-------------|---------------|  
-|**DatabaseId**|**uniqueidentifier**|このインデックスを含むデータベースを識別します。|  
-|**TableId**|**uniqueidentifier**|このインデックスを含むテーブルを識別します。|  
+|**DatabaseId**|**UNIQUEIDENTIFIER**|このインデックスを含むデータベースを識別します。|  
+|**TableId**|**UNIQUEIDENTIFIER**|このインデックスを含むテーブルを識別します。|  
 |**IndexId**|**int**|インデックスを識別するインクリメント整数。 この列は、テーブルの主キーです。|  
-|**IndexName**|**nvarchar (4000)**|インデックスの名前です。|  
-|**ColumnsIncluded**|**nvarchar (4000)**|インデックスに含まれる列を一覧表示します。 列名は、セミコロンで区切られます。|  
-|**IsUnique**|**bit**|かどうか、インデックス内の各項目が一意である必要がありますを指定します。 複数列のインデックスの値の組み合わせは一意である必要があります。 値が 1 の場合、インデックスは一意の値を適用します。|  
-|**IsPK**|**bit**|かどうか、インデックスが主キーの定義の一部として自動的に作成を指定します。|  
-|**IsClustered**|**bit**|インデックスがクラスター化されているを指定します。 クラスター化インデックスは、データの物理記憶域を並べ替えます。 テーブルには、1 つだけのクラスター化インデックスを持つことができます。|  
+|**IndexName**|**nvarchar(4000)**|インデックスの名前です。|  
+|**含まれるコラム**|**nvarchar(4000)**|インデックスに含まれる列を一覧表示します。 列名はセミコロンで区切られます。|  
+|**IsUnique**|**bit**|インデックス内の各項目が一意である必要があるかどうかを指定します。 複数列のインデックスでは、値の組み合わせは一意である必要があります。 値が1の場合、インデックスによって一意の値が適用されます。|  
+|**IsPK**|**bit**|主キーの定義の一部として、インデックスが自動的に作成されたかどうかを指定します。|  
+|**IsClustered**|**bit**|インデックスがクラスター化されているかどうかを指定します。 クラスター化インデックスは、データの物理ストレージを並べ替えます。 テーブルにはクラスター化インデックスを1つだけ含めることができます。|  
   
 ## <a name="foreign-keys"></a>外部キー  
-外部キーのメタデータをエクスポート、 **SSMA_Access_InventoryForeignKeys**テーブル。 このテーブルには、次の列が含まれています。  
+外部キーのメタデータが**SSMA_Access_InventoryForeignKeys**テーブルにエクスポートされます。 このテーブルには、次の列が含まれています。  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |---------------|-------------|---------------|  
-|**DatabaseId**|**uniqueidentifier**|この外部キーを含むデータベースを識別します。|  
-|**TableId**|**uniqueidentifier**|この外部キーを含むテーブルを識別します。|  
+|**DatabaseId**|**UNIQUEIDENTIFIER**|この外部キーを含むデータベースを識別します。|  
+|**TableId**|**UNIQUEIDENTIFIER**|この外部キーを含むテーブルを識別します。|  
 |**ForeignKeyId**|**int**|外部キーを識別するインクリメント整数。 この列は、テーブルの主キーです。|  
-|**ForeignKeyName**|**nvarchar (4000)**|インデックスの名前です。|  
-|**ReferencedTableId**|**uniqueidentifier**|ソース列を含むテーブルを識別します。|  
-|**SourceColumns**|**nvarchar (4000)**|外部キー列または列を一覧表示します。|  
-|**ReferencedColumns**|**nvarchar (4000)**|主キー列または外部キーによって参照されている列を一覧表示します。|  
-|**IsCascadeForUpdate**|**bit**|主キーの値が更新された場合、そのキー値を参照するすべての行も更新を指定します。|  
-|**IsCascadeForDelete**|**bit**|主キーの値が削除された場合、そのキー値を参照するすべての行も削除を指定します。|  
-|**IsEnforced**|**bit**|外部キー制約が適用されることを指定します。|  
+|**ForeignKeyName**|**nvarchar(4000)**|インデックスの名前です。|  
+|**ReferencedTableId**|**UNIQUEIDENTIFIER**|ソース列を含むテーブルを識別します。|  
+|**SourceColumns**|**nvarchar(4000)**|外部キー列の一覧を表示します。|  
+|**ReferencedColumns**|**nvarchar(4000)**|外部キーによって参照される主キー列を一覧表示します。|  
+|**IsCascadeForUpdate**|**bit**|主キーの値が更新された場合に、そのキー値を参照するすべての行も更新されることを指定します。|  
+|**IsCascadeForDelete**|**bit**|主キーの値を削除すると、そのキー値を参照するすべての行も削除されることを指定します。|  
+|**IsEnforced**|**bit**|Foreign key 制約を適用することを指定します。|  
   
 ## <a name="queries"></a>クエリ  
-クエリのメタデータにエクスポートするが、 **SSMA_Access_InventoryQueries**テーブル。 このテーブルには、次の列が含まれています。  
+クエリメタデータは**SSMA_Access_InventoryQueries**テーブルにエクスポートされます。 このテーブルには、次の列が含まれています。  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |---------------|-------------|---------------|  
-|**DatabaseId**|**uniqueidentifier**|このクエリを含むデータベースを識別します。|  
+|**DatabaseId**|**UNIQUEIDENTIFIER**|このクエリを含むデータベースを識別します。|  
 |**QueryId**|**int**|クエリを識別するインクリメント整数。 この列は、テーブルの主キーです。|  
-|**QueryName**|**nvarchar (4000)**|クエリ名を返します。|  
-|**QueryText**|**nvarchar (4000)**|SELECT ステートメントなどの SQL クエリ コード。|  
-|**IsUpdateable**|**bit**|クエリは更新可能または読み取り専用のかどうかを指定します。|  
-|**QueryType**|**nvarchar (4000)**|などのクエリの種類を指定**選択**または**SetOperation**します。|  
-|**ExternalSource**|**nvarchar (4000)**|クエリでは、外部データ ソースを参照する場合、クエリで使用される接続文字列です。|  
+|**QueryName**|**nvarchar(4000)**|クエリの名前。|  
+|**QueryText**|**nvarchar(4000)**|SQL クエリコード (SELECT ステートメントなど)。|  
+|**IsUpdateable シリアライズ)**|**bit**|クエリを更新可能にするか、読み取り専用にするかを指定します。|  
+|**QueryType**|**nvarchar(4000)**|**Select**や**SetOperation**など、クエリの種類を指定します。|  
+|**ExternalSource**|**nvarchar(4000)**|クエリが外部データソースを参照している場合は、クエリによって使用される接続文字列です。|  
   
 ## <a name="forms"></a>フォーム  
-フォームのメタデータをエクスポートするのには**SSMA_Access_InventoryForms**テーブル。 このテーブルには、次の列が含まれています。  
+フォームメタデータは**SSMA_Access_InventoryForms**テーブルにエクスポートされます。 このテーブルには、次の列が含まれています。  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |---------------|-------------|---------------|  
-|**DatabaseId**|**uniqueidentifier**|このフォームを含むデータベースを識別します。|  
+|**DatabaseId**|**UNIQUEIDENTIFIER**|このフォームが格納されているデータベースを識別します。|  
 |**FormId**|**int**|フォームを識別するインクリメント整数。 この列は、テーブルの主キーです。|  
-|**FormName**|**nvarchar (4000)**|フォームの名前。|  
+|**FormName**|**nvarchar(4000)**|フォームの名前。|  
   
-## <a name="macros"></a>[マクロ]  
-マクロのメタデータにエクスポートするが、 **SSMA_Access_InventoryMacros**テーブル。 このテーブルには、次の列が含まれています。  
+## <a name="macros"></a>マクロ  
+マクロのメタデータが**SSMA_Access_InventoryMacros**テーブルにエクスポートされます。 このテーブルには、次の列が含まれています。  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |---------------|-------------|---------------|  
-|**DatabaseId**|**uniqueidentifier**|マクロを含むデータベースを識別します。|  
-|**MacroId**|**int**|マクロを識別するインクリメント整数。 この列は、テーブルの主キーです。|  
-|**マクロ名**|**nvarchar (4000)**|マクロの名前。|  
+|**DatabaseId**|**UNIQUEIDENTIFIER**|マクロを含むデータベースを識別します。|  
+|**マクロ Id**|**int**|マクロを識別するインクリメント整数。 この列は、テーブルの主キーです。|  
+|**マクロ**|**nvarchar(4000)**|マクロの名前。|  
   
-## <a name="reports"></a>レポート  
-レポートのメタデータにエクスポートするが、 **SSMA_Access_InventoryReports**テーブル。 このテーブルには、次の列が含まれています。  
+## <a name="reports"></a>Reports  
+レポートのメタデータが**SSMA_Access_InventoryReports**テーブルにエクスポートされます。 このテーブルには、次の列が含まれています。  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |---------------|-------------|---------------|  
-|**DatabaseId**|**uniqueidentifier**|レポートを含むデータベースを識別します。|  
+|**DatabaseId**|**UNIQUEIDENTIFIER**|レポートが格納されているデータベースを識別します。|  
 |**ReportId**|**int**|レポートを識別するインクリメント整数。 この列は、テーブルの主キーです。|  
-|**ReportName**|**nvarchar (4000)**|レポートの名前です。|  
+|**ReportName**|**nvarchar(4000)**|レポートの名前です。|  
   
 ## <a name="modules"></a>モジュール  
-モジュールのメタデータにエクスポートするが、 **SSMA_Access_InventoryModules**テーブル。 このテーブルには、次の列が含まれています。  
+モジュールのメタデータは**SSMA_Access_InventoryModules**テーブルにエクスポートされます。 このテーブルには、次の列が含まれています。  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |---------------|-------------|---------------|  
-|**DatabaseId**|**uniqueidentifier**|モジュールを含むデータベースを識別します。|  
+|**DatabaseId**|**UNIQUEIDENTIFIER**|モジュールを含むデータベースを識別します。|  
 |**ModuleId**|**int**|モジュールを識別するインクリメント整数。 この列は、テーブルの主キーです。|  
-|**ModuleName**|**nvarchar (4000)**|モジュールの名前。|  
+|**ModuleName**|**nvarchar(4000)**|モジュールの名前。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
 [Access インベントリのエクスポート](exporting-an-access-inventory-accesstosql.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: IndexNulls プロパティの例 (vc++) |Microsoft Docs
+title: IndexNulls プロパティの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: ee407e03-4889-4a22-b031-ca542d637c96
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6b6a51a16abf767924ee83e93016743693a9f335
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9e119dba2a24df76a918e87a6a5a28d66e381400
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67965961"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76929431"
 ---
 # <a name="indexnulls-property-example-vc"></a>IndexNulls プロパティの例 (VC++)
-この例では、 [IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md)のプロパティ、[インデックス](../../../ado/reference/adox-api/index-object-adox.md)します。 コードは、新しいインデックスが作成されの値を設定**IndexNulls**ユーザー入力に基づいて。 次に、**インデックス**に追加されますが、**従業員**[テーブル](../../../ado/reference/adox-api/table-object-adox.md)で、 *Northwind* [カタログ](../../../ado/reference/adox-api/catalog-object-adox.md)します。 新しい**インデックス**に適用される、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)に基づいて、**従業員**テーブル、および**レコード セット**が開かれます。 新しいレコードを追加、**従業員**テーブルで、 **Null**インデックス付きフィールドの値。 この新しいレコードを表示するかどうかの設定によって異なります、 **IndexNulls**プロパティ。  
+この例では、[インデックス](../../../ado/reference/adox-api/index-object-adox.md)の[IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md)プロパティを示します。 このコードは、新しいインデックスを作成し、ユーザー入力に基づいて**IndexNulls**の値を設定します。 次に、 *Northwind* [カタログ](../../../ado/reference/adox-api/catalog-object-adox.md)の**Employees** [テーブル](../../../ado/reference/adox-api/table-object-adox.md)に**インデックス**が追加されます。 **Employees**テーブルに基づいて[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)に新しい**インデックス**が適用され、**レコードセット**が開かれます。 **Employees**テーブルに新しいレコードが追加され、インデックス付きフィールドに**Null**値が設定されます。 この新しいレコードが表示されるかどうかは、 **IndexNulls**プロパティの設定によって異なります。  
   
 ```  
 // BeignIndexNullCpp.cpp  
@@ -169,7 +169,7 @@ void IndexNullsX(_bstr_t strSel) {
       printf("\n\tSource :  %s \n\tdescription : %s \n ", (LPCSTR)bstrSource, (LPCSTR)bstrDescription);  
    }  
    catch(...) {  
-      cout << "Error occured in include files...." << endl;  
+      cout << "Error occurred in include files...." << endl;  
    }  
   
    if (m_pRstEmployees)  

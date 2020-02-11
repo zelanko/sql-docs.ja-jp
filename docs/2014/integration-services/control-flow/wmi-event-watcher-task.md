@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4add98b6c085d52238a528c313008bc688ae6e54
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62829505"
 ---
 # <a name="wmi-event-watcher-task"></a>WMI イベント監視タスク
@@ -38,7 +38,7 @@ ms.locfileid: "62829505"
 -   [WMI データ リーダー タスク](wmi-data-reader-task.md)  
   
 ## <a name="wql-queries"></a>WQL クエリ  
- WQL は SQL 言語仕様の 1 つで、WMI イベント通知やその他 WMI 固有の機能をサポートする拡張機能が付いています。 WQL の詳細については、 [MSDN ライブラリ](https://go.microsoft.com/fwlink/?linkid=62553)にある Windows Management Instrumentation のマニュアルを参照してください。  
+ WQL は SQL 言語仕様の 1 つで、WMI イベント通知やその他 WMI 固有の機能をサポートする拡張機能が付いています。 WQL の詳細については、 [MSDN ライブラリ](https://go.microsoft.com/fwlink/?linkid=62553)にある Windows Management Instrumentation のマニュアルをご覧ください。  
   
 > [!NOTE]  
 >  WMI クラスは、Windows のバージョンによって異なります。  
@@ -56,7 +56,7 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
 ```  
   
 ## <a name="custom-logging-messages-available-on-the-wmi-event-watcher-task"></a>WMI イベント監視タスクで使用できるカスタム ログ メッセージ  
- 次の表は、WMI イベント監視タスクのカスタム ログ エントリの一覧です。 詳しくは、「[Integration Services &#40;SSIS&#41; のログ記録](../performance/integration-services-ssis-logging.md)」と「[ログ記録用のカスタム メッセージ](../custom-messages-for-logging.md)」をご覧ください。  
+ 次の表は、WMI イベント監視タスクのカスタム ログ エントリの一覧です。 詳細については、「[Integration Services (SSIS) のログ記録](../performance/integration-services-ssis-logging.md)」と「[ログ記録用のカスタム メッセージ](../custom-messages-for-logging.md)」を参照してください。  
   
 |ログ エントリ|説明|  
 |---------------|-----------------|  
@@ -75,9 +75,9 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
   
 -   イベントに対するタスクの応答方法を定義します。 タスクは、イベントに応じて、成功または失敗するように構成できます。または、単にイベントを再度監視するように構成することもできます。  
   
--   WMI クエリがタイムアウトしたときに、タスクが実行するアクションを指定します。タイムアウトとタイムアウト後の状態のログを記録できます。または、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のカスタム イベントを発生させ、WMI イベントのタイムアウトを示し、タイムアウトとタイムアウトの状態のログを記録できます。  
+-   WMI クエリがタイムアウトしたときにタスクが実行するアクションを指定します。タイムアウトとタイムアウト後の状態をログに記録したり、カスタム[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]イベントを発生させて、WMI イベントがタイムアウトし、タイムアウトとタイムアウトの状態をログに記録したりすることができます。  
   
--   タイムアウトに対するタスクの応答方法を定義します。タスクは成功または失敗するように構成できます。または、単にイベントを再度監視するように構成することもできます。  
+-   タスクがタイムアウトにどのように応答するかを定義します。タスクは成功または失敗するように構成できます。また、タスクはイベントを再度監視することもできます。  
   
 -   タスクがイベントを監視する回数を指定します。  
   
@@ -89,15 +89,17 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
   
  プロパティを設定するには [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
- [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
+ 
+  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [[WMI イベント監視タスク エディター] &#40;[全般] ページ&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [[WMI イベント監視タスクエディター] &#40;[全般] ページ&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [[WMI イベント監視タスク エディター] &#40;[WMI オプション] ページ&#41;](../wmi-event-watcher-task-editor-wmi-options-page.md)  
+-   [Wmi イベント監視タスクエディター &#40;WMI オプションページ&#41;](../wmi-event-watcher-task-editor-wmi-options-page.md)  
   
 -   [[式] ページ](../expressions/expressions-page.md)  
   
- [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでこれらのプロパティを設定する方法については、次のトピックを参照してください。  
+ 
+  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでこれらのプロパティを設定する方法については、次のトピックを参照してください。  
   
 -   [タスクまたはコンテナーのプロパティを設定する](../set-the-properties-of-a-task-or-container.md)  
   

@@ -12,20 +12,20 @@ ms.assetid: b7a49774-f458-44ce-9a04-a0457501405b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5073d7efcb2cb99e51fe0d9cd0382806501cfd0a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68085463"
 ---
 # <a name="odbc-api-reference"></a>ODBC API リファレンス
-このセクションのトピックでは、アルファベット順では、各 ODBC 関数について説明します。 各関数は、C のプログラミング言語の関数として定義されます。 説明を以下に示します。  
+このセクションのトピックでは、各 ODBC 関数についてアルファベット順に説明します。 各関数は、C プログラミング言語の関数として定義されています。 説明には次のものがあります。  
   
 -   目的  
   
 -   ODBC のバージョン  
   
--   標準の CLI への準拠レベル  
+-   標準 CLI 準拠レベル  
   
 -   構文  
   
@@ -35,20 +35,20 @@ ms.locfileid: "68085463"
   
 -   診断  
   
--   使用状況と実装に関するコメント  
+-   使用法と実装に関するコメント  
   
--   コードの例  
+-   コード例  
   
 -   関連する関数への参照  
   
- 標準の CLI への準拠レベルには、次のいずれかを指定できます。ISO の 92年では、グループ、ODBC を開くか、非推奨とされます。 Open Group が ISO 92 の純粋なスーパー セットであるのため、ISO 92 準拠は、Open Group 1、バージョンにも表示されますようにタグ付け関数。 開いているグループ準拠としてタグ付けされた関数は、ODBC 3 も表示されます。*x*ので、ODBC 3 *。x* Open Group バージョン 1 の純粋なスーパー セットです。 ODBC 準拠としてタグ付け関数は、どちらも標準で表示されます。 ODBC 3 で非推奨としてタグ付けされた関数が廃止されました。*x*します。  
+ 標準 CLI 準拠レベルは、次のいずれかになります。 ISO 92、Open Group、ODBC、または非推奨です。 Open Group は ISO 92 の純粋なスーパーセットであるため、ISO 92-準拠としてタグ付けされた関数は、オープングループバージョン1でも表示されます。 Open Group 準拠としてタグ付けされた関数は、ODBC 3 にも表示されます。*x*(ODBC 3)。*x*は、オープングループバージョン1の純粋スーパーセットです。 ODBC 準拠としてタグ付けされた関数は、標準ではありません。 非推奨としてタグ付けされた関数は、ODBC 3 では非推奨となりました。*x*。  
   
- 診断情報の処理については、「、 [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)関数の説明。 SQLSTATE 値に関連付けられているテキストは、条件の説明を提供するものですが、特定のテキストを規定するものではありません。  
+ 診断情報の処理については、 [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)関数の説明を参照してください。 SQLSTATE 値に関連付けられたテキストは、条件の説明を提供するために含まれていますが、特定のテキストを指定するためのものではありません。  
   
 > [!NOTE]  
->  ドライバー固有の ODBC 関数については、ドライバーのセクションを参照してください。  
+>  ODBC 関数に関するドライバー固有の情報については、ドライバーの「」セクションを参照してください。  
   
- このセクションには、次の関数のトピックが含まれています。  
+ このセクションには、次の関数に関するトピックが含まれています。  
   
 -   [SQLAllocConnect 関数](../../../odbc/reference/syntax/sqlallocconnect-function.md)  
   

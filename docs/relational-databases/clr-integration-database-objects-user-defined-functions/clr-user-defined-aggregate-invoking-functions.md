@@ -18,25 +18,26 @@ ms.assetid: 5a188b50-7170-4069-acad-5de5c915f65d
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 53cd38b80b6884e9be5c41042fac34b68ec2cda0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68028371"
 ---
 # <a name="clr-user-defined-aggregate---invoking-functions"></a>CLR ユーザー定義集計 - 関数の呼び出し
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  
   [!INCLUDE[tsql](../../includes/tsql-md.md)] の SELECT ステートメントでは、CLR (共通言語ランタイム) ユーザー定義集計を呼び出すことができます。CLR ユーザー定義集計には、システム集計関数に適用されるすべての規則が適用されます。  
   
  さらに、次の規則も適用されます。  
   
--   現在のユーザーがいる必要があります**EXECUTE**ユーザー定義集計に対する権限。  
+-   現在のユーザーは、ユーザー定義集計に対する**EXECUTE**権限を持っている必要があります。  
   
--   ユーザー定義集計は、の形式で 2 つの部分名を使用して呼び出す必要がある*schema_name.udagg_name*します。  
+-   ユーザー定義集計は、2つの部分で構成される名前を使用して、 *schema_name udagg_name*の形式で呼び出す必要があります。  
   
--   ユーザー定義集計の引数の型が一致かに暗黙的に変換する必要があります、 *input_type*で定義されているように、集計の**CREATE AGGREGATE**ステートメント。  
+-   ユーザー定義集計の引数の型は、 **CREATE aggregate**ステートメントで定義されているように、一致しているか、集計の*input_type*に暗黙的に変換可能である必要があります。  
   
--   ユーザー定義集計の戻り値の型が一致する必要があります、 *return_type*で、 **CREATE AGGREGATE**ステートメント。  
+-   ユーザー定義集計の戻り値の型は、 **CREATE aggregate**ステートメントの*return_type*と一致している必要があります。  
   
 ## <a name="example-1"></a>例 1  
  次の例は、テーブルの列から取得した一連の文字列値を連結するユーザー定義集計関数を示します。  
@@ -196,7 +197,7 @@ Public Class Concatenate
 End Class  
 ```  
   
- コードをコンパイルすると**MyAgg.dll**で集計を登録する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]次のようにします。  
+ コードを**Myagg .dll**にコンパイルしたら、次のようにの集計を[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に登録できます。  
   
 ```  
 CREATE ASSEMBLY MyAgg FROM 'C:\MyAgg.dll';  
@@ -208,7 +209,7 @@ EXTERNAL NAME MyAgg.Concatenate;
 > [!NOTE]  
 >  スカラー値関数など、/clr:pure コンパイラ オプションを指定してコンパイルした Visual C++ のデータベース オブジェクトは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では実行できません。  
   
- ロジックの大部分がほとんどの集計で、 **Accumulate**メソッド。 ここでは、パラメーターとして渡される文字列、 **Accumulate**にメソッドが追加されます、 **StringBuilder**で初期化されたオブジェクト、 **Init**メソッド。 これは初めてではないと仮定、 **Accumulate**メソッドが呼び出されたにもコンマを追加、 **StringBuilder**渡された文字列を追加する前にします。 計算のタスクの終了時に、 **Terminate**メソッドが呼び出されると、返された、 **StringBuilder**を文字列として。  
+ ほとんどの集計と同様に、ロジックの大部分は**累積**メソッドに含まれています。 ここで、**蓄積**されたメソッドにパラメーターとして渡される文字列は、 **Init**メソッドで初期化された**StringBuilder**オブジェクトに追加されます。 **累積**メソッドが初めて呼び出されたときではないと仮定すると、渡された文字列を追加する前に、 **StringBuilder**にコンマも追加されます。 計算タスクの最後に、Terminate**を文字列とし**て返す**Terminate**メソッドが呼び出されます。  
   
  たとえば、次のスキーマを持つテーブルについて考えてみます。  
   
@@ -236,12 +237,12 @@ GROUP BY BookID;
   
 |BookID|AuthorName|  
 |------------|------------------|  
-|1|Johnson|  
+|1 で保護されたプロセスとして起動されました|Johnson|  
 |2|Taylor, Mayler|  
 |3|Roberts, Michaels, Steven|  
   
 ## <a name="example-2"></a>例 2  
- 次の例では、上の 2 つのパラメーターを持つ集計を**Accumulate**メソッド。  
+ 次の例は、**累積**メソッドに2つのパラメーターを持つ集計を示しています。  
   
  [C#]  
   
@@ -441,7 +442,7 @@ SELECT dbo.WeightedAvg(ItemValue, ItemWeight) FROM @myTable;
 go  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [CLR ユーザー定義集計](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md)  
   
   

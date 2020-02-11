@@ -17,10 +17,10 @@ ms.assetid: 62470d42-e511-494c-bec4-ad4591734b7b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 62b78b608526ae0d6943a7416a21687fd1e51412
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918782"
 ---
 # <a name="executecomplete-event-ado"></a>ExecuteComplete イベント (ADO)
@@ -35,28 +35,28 @@ ExecuteComplete RecordsAffected, pError, adStatus, pCommand, pRecordset, pConnec
   
 #### <a name="parameters"></a>パラメーター  
  *RecordsAffected*  
- A**長い**コマンドによって影響を受けたレコード数を示す値。  
+ コマンドの影響を受けるレコードの数を示す**Long 型**の値。  
   
  *pError*  
- [エラー](../../../ado/reference/ado-api/error-object.md)オブジェクト。 場合に発生したエラーを説明の値**adStatus**は**adStatusErrorsOccurred**; 未設定がそれ以外の場合。  
+ [エラー](../../../ado/reference/ado-api/error-object.md)オブジェクトです。 **Adstatus**の値が**adstatuserrorて**いる場合に発生したエラーについて説明します。それ以外の場合は設定されません。  
   
  *adStatus*  
- [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md)状態値。 このパラメーターに設定されているこのイベントが呼び出されると、 **adStatusOK**イベントの原因となった操作が成功した場合または**adStatusErrorsOccurred**操作に失敗した場合。  
+ [Eventstatusenum](../../../ado/reference/ado-api/eventstatusenum.md)状態の値です。 このイベントが呼び出されると、このパラメーターは、イベントの原因となった操作が成功した場合は**Adstatusok**に、操作が失敗した場合は**Adstatuserrorの curred**に設定されます。  
   
- このイベントから制御が戻る前に、このパラメーターを設定**adStatusUnwantedEvent**後続通知しないように設定します。  
+ このイベントが返される前に、このパラメーターを**adStatusUnwantedEvent**に設定して、後続の通知が行われないようにします。  
   
  *pCommand*  
- [コマンド](../../../ado/reference/ado-api/command-object-ado.md)が実行されたオブジェクト。 含まれています、**コマンド**オブジェクトの呼び出し時にも**Connection.Execute**または**Recordset.Open**明示的に作成せず、**コマンド**、どのような場合、**コマンド**オブジェクトは ADO によって内部的に作成します。  
+ 実行された[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクト。 コマンドオブジェクト**が**含まれてい**ます。** **コマンドを明示**的に**作成せず****に、コマンドオブジェクトが**ADO によって内部で作成されます。  
   
  *pRecordset*  
- A [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)実行されたコマンドの結果を表すオブジェクト。 これは、 **Recordset**空にすることがあります。 このイベント ハンドラー内からこのレコード セット オブジェクトは破棄しないでください。 ADO が、存在しなくなったオブジェクトにアクセスしようとしています。 これがアクセス違反に発生します。  
+ 実行されたコマンドの結果である[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト。 この**レコードセット**は空にすることができます。 このイベントハンドラー内からは、このレコードセットオブジェクトを破棄しないでください。 これを行うと、存在しなくなったオブジェクトに ADO がアクセスしようとしたときにアクセス違反が発生します。  
   
  *pConnection*  
- A[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクト。 操作の実行を接続します。  
+ [接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトです。 操作が実行された接続です。  
   
-## <a name="remarks"></a>コメント  
- **ExecuteComplete**ためにイベントが発生する、**接続**。[実行](../../../ado/reference/ado-api/execute-method-ado-connection.md)、**コマンド**。[実行](../../../ado/reference/ado-api/execute-method-ado-command.md)、**レコード セット**。[オープン](../../../ado/reference/ado-api/open-method-ado-recordset.md)、**レコード セット**。[Requery](../../../ado/reference/ado-api/requery-method.md)、または**レコード セット**。[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)メソッド。  
+## <a name="remarks"></a>解説  
+ 接続が原因で**ExecuteComplete**イベントが発生する可能性があり**ます。** コマンドを[実行](../../../ado/reference/ado-api/execute-method-ado-connection.md)**します。**[Execute](../../../ado/reference/ado-api/execute-method-ado-command.md)、 **Recordset。** レコードセットを[開き](../../../ado/reference/ado-api/open-method-ado-recordset.md)**ます。**[Requery](../../../ado/reference/ado-api/requery-method.md)、または**レコードセット。**[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)メソッド。  
   
-## <a name="see-also"></a>関連項目  
- [ADO イベント モデルの例 (vc++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
+## <a name="see-also"></a>参照  
+ [ADO Events モデルの例 (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [ADO イベント ハンドラーの概要](../../../ado/guide/data/ado-event-handler-summary.md)

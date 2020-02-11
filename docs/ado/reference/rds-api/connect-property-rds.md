@@ -1,5 +1,5 @@
 ---
-title: 接続プロパティ (RDS) |Microsoft Docs
+title: Connect プロパティ (RDS) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,19 +14,19 @@ ms.assetid: dbad5e77-b213-4eb8-aecf-d60f203fdb59
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ba8b5aa1f59fbb161da878f5930f83d2f6ff0bdd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67964564"
 ---
 # <a name="connect-property-rds"></a>Connect プロパティ (RDS)
-クエリと更新操作の実行元となるデータベース名を示します。  
+クエリおよび更新操作の実行元のデータベース名を示します。  
   
- 設定することができます、 **Connect**でデザイン時にプロパティ、 [rds.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)オブジェクトのオブジェクトのタグ、または実行時にスクリプト コード (たとえば、VBScript など)。  
+ RDS では、デザイン時に**Connect**プロパティを設定でき[ます。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)オブジェクトのオブジェクトタグ、またはスクリプトコード (VBScript など) の実行時。  
   
 > [!IMPORTANT]
->  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)します。  
+>  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および[Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416)」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,21 +37,21 @@ Run time: DataControl.Connect = "ConnectionString"
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *ConnectionString*  
- 有効な接続文字列。 接続文字列の概要については、次を参照してください。、 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)プロパティまたはプロバイダーのドキュメント。  
+ *文字列*  
+ 有効な接続文字列です。 接続文字列の一般的な情報については、「 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)プロパティ」またはプロバイダーのドキュメントを参照してください。  
   
 > [!NOTE]
->  プロバイダーとして MS Remote の指定、 **rds.DataControl** 4 層のシナリオを作成します。 3 つのレベルよりも大きいシナリオでは、テストされていないと、必要はありません。  
+>  MS Remote を RDS のプロバイダーとして指定し**ます。DataControl**は、4層のシナリオを作成します。 3層を超えるシナリオはテストされていないため、必要ありません。  
   
  *DataControl*  
- オブジェクト変数を表す、 **rds.DataControl**オブジェクト。  
+ RDS を表すオブジェクト変数です **。DataControl**オブジェクト。  
   
 ## <a name="applies-to"></a>適用対象  
  [DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>関連項目  
- [接続プロパティの例 (VBScript)](../../../ado/reference/rds-api/connect-property-example-vbscript.md)   
- [クエリ メソッド (RDS)](../../../ado/reference/rds-api/query-method-rds.md)   
+## <a name="see-also"></a>参照  
+ [Connect プロパティの例 (VBScript)](../../../ado/reference/rds-api/connect-property-example-vbscript.md)   
+ [Query メソッド (RDS)](../../../ado/reference/rds-api/query-method-rds.md)   
  [Refresh メソッド (RDS)](../../../ado/reference/rds-api/refresh-method-rds.md)   
  [SubmitChanges メソッド (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)
 

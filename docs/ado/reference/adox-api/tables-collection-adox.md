@@ -1,5 +1,5 @@
 ---
-title: テーブルのコレクション (ADOX) |Microsoft Docs
+title: Tables コレクション (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,40 +17,40 @@ ms.assetid: 38d750e7-f3fb-426e-b4b4-55eea4f1a654
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0bf28af10084a30a5c81c76fe7e44781178979ad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965130"
 ---
 # <a name="tables-collection-adox"></a>Tables コレクション (ADOX)
-すべてを含む[テーブル](../../../ado/reference/adox-api/table-object-adox.md)カタログのオブジェクト。  
+カタログのすべての[テーブル](../../../ado/reference/adox-api/table-object-adox.md)オブジェクトが含まれます。  
   
-## <a name="remarks"></a>コメント  
- [Append](../../../ado/reference/adox-api/append-method-adox-tables.md)のメソッド、**テーブル**コレクションは ADOX に一意です。 可能な代替手段としては以下の方法があります。  
+## <a name="remarks"></a>解説  
+ **Tables**コレクションの[Append](../../../ado/reference/adox-api/append-method-adox-tables.md)メソッドは、ADOX で一意です。 次のようにすることができます。  
   
--   新しいテーブルを使用して、コレクションに追加、 **Append**メソッド。  
+-   **追加**メソッドを使用して、新しいテーブルをコレクションに追加します。  
   
- 残りのプロパティとメソッドは、ADO のコレクションに標準的です。 可能な代替手段としては以下の方法があります。  
+ その他のプロパティとメソッドは、ADO コレクションの標準です。 次のようにすることができます。  
   
--   使用して、コレクション内のテーブルへのアクセス、[項目](../../../ado/reference/ado-api/item-property-ado.md)プロパティ。  
+-   [Item](../../../ado/reference/ado-api/item-property-ado.md)プロパティを使用して、コレクション内のテーブルにアクセスします。  
   
--   コレクションに含まれているテーブルの数を返す、[カウント](../../../ado/reference/ado-api/count-property-ado.md)プロパティ。  
+-   [Count](../../../ado/reference/ado-api/count-property-ado.md)プロパティを使用して、コレクションに含まれるテーブルの数を返します。  
   
--   テーブルを使用して、コレクションから削除、[削除](../../../ado/reference/adox-api/delete-method-adox-collections.md)メソッド。  
+-   [Delete](../../../ado/reference/adox-api/delete-method-adox-collections.md)メソッドを使用して、テーブルをコレクションから削除します。  
   
--   現在のデータベース スキーマを反映するようにコレクション内のオブジェクトを更新、[更新](../../../ado/reference/ado-api/refresh-method-ado.md)メソッド。  
+-   [更新](../../../ado/reference/ado-api/refresh-method-ado.md)メソッドを使用して、現在のデータベーススキーマを反映するように、コレクション内のオブジェクトを更新します。  
   
- 一部のプロバイダーで、ビューなどの他のスキーマ オブジェクトを返す可能性があります、**テーブル**コレクション。 そのため、一部の ADOX のコレクションでは、同じオブジェクトに複数の参照を含めることができます。 1 つのコレクションからオブジェクトを削除する必要があります、変更は表示されませんまで、削除されたオブジェクトを参照する別のコレクションで、**更新**メソッドが、コレクションで呼び出されます。 たとえばで、OLE DB Provider for Microsoft Jet、ビューが返されますと、**テーブル**コレクション。 更新する必要があります、ビューを削除する場合、**テーブル**コレクション、コレクション変更が反映される前にします。  
+ プロバイダーによっては、 **Tables**コレクション内の他のスキーマオブジェクト (ビューなど) が返される場合があります。 そのため、一部の ADOX コレクションには、同じオブジェクトへの複数の参照を含めることができます。 オブジェクトを1つのコレクションから削除すると、その変更は、コレクションで**Refresh**メソッドが呼び出されるまで、削除されたオブジェクトを参照する別のコレクションに表示されません。 たとえば、Microsoft Jet の OLE DB Provider を使用すると、 **Tables**コレクションと共にビューが返されます。 ビューを削除する場合は、コレクションに変更が反映される前に、 **Tables**コレクションを更新する必要があります。  
   
- このセクションには、次のトピックが含まれています。  
+ ここでは、次のトピックについて説明します。  
   
 -   [Tables コレクションのプロパティ、メソッド、およびイベント](../../../ado/reference/adox-api/tables-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>関連項目  
- [カタログ ActiveConnection プロパティの例 (VB)](../../../ado/reference/adox-api/catalog-activeconnection-property-example-vb.md)   
+## <a name="see-also"></a>参照  
+ [Catalog ActiveConnection プロパティの例 (VB)](../../../ado/reference/adox-api/catalog-activeconnection-property-example-vb.md)   
  [Columns および Tables Append メソッド、Name プロパティの例 (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
  [Connection Close メソッド、Table Type プロパティの例 (VB)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   
- [Keys Append メソッド、キーの種類、RelatedColumn、RelatedTable、UpdateRule プロパティの例 (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
+ [Keys Append メソッド、Key Type、UpdateRule プロパティの例 (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
  [Catalog オブジェクト (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Table オブジェクト (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)

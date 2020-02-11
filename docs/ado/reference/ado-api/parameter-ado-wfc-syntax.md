@@ -1,5 +1,5 @@
 ---
-title: パラメーター (ADO - WFC 構文) |Microsoft Docs
+title: Parameter (ADO-WFC 構文) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,14 +14,14 @@ ms.assetid: d00d1e1e-14b1-41a2-a00f-2a3cb7396f15
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 22f9d928cf008396346067a3e166fa281be4093d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931716"
 ---
 # <a name="parameter-ado---wfc-syntax"></a>Parameter (ADO - WFC 構文)
-## <a name="package-commswfcdata"></a>パッケージ com.ms.wfc.data  
+## <a name="package-commswfcdata"></a>パッケージ com.. wfc. データ  
   
 ### <a name="constructor"></a>コンストラクター  
   
@@ -64,14 +64,14 @@ public void setValue(Object v)
 public AdoProperties getProperties()  
 ```  
   
-## <a name="parameter-accessor-methods"></a>パラメーターのアクセサー メソッド  
- [値](../../../ado/reference/ado-api/value-property-ado.md)のプロパティを[パラメーター](../../../ado/reference/ado-api/parameter-object.md)オブジェクトを取得またはそのオブジェクトの内容を設定します。 コンテンツは、バリアントの値を割り当てることができるオブジェクトの型と任意のいくつかのデータ型として表されます。  
+## <a name="parameter-accessor-methods"></a>パラメーターアクセサーメソッド  
+ [Parameter](../../../ado/reference/ado-api/parameter-object.md)オブジェクトの[Value](../../../ado/reference/ado-api/value-property-ado.md)プロパティは、そのオブジェクトのコンテンツを取得または設定します。 コンテンツは、値と複数のデータ型のいずれかを割り当てることができる、バリアント型のオブジェクトで表されます。  
   
- ADO と WFC を実装して、**値**プロパティを**getValue** 、バリアント オブジェクトを返すメソッドと**setValue**メソッドを引数としてのバリアント。 バリアントは、Microsoft Visual Basic などの特定の言語で効率的です。  
+ ADO/WFC は、VARIANT オブジェクトを返す**getValue**メソッドを使用して**Value**プロパティを実装します。また、 **setValue**を引数として受け取る setValue メソッドもあります。 バリアントは、Microsoft Visual Basic などの特定の言語では非常に効率的です。  
   
- 加え、**値**プロパティ、ADO と WFC 提供*アクセサー*メソッドを取得および設定のコンテンツ Java データ型を使用する**パラメーター**オブジェクト。 これらのメソッドのほとんどは、フォームの名前を持つ**取得**_DataType_または**設定**_DataType_します。  
+ ADO/WFC は、 **Value**プロパティに加えて、Java データ型を使用して**パラメーター**オブジェクトのコンテンツを取得および設定する*アクセサー*メソッドを提供します。 これらのメソッドのほとんどには、 **get**_datatype_または**set**_datatype_という形式の名前があります。  
   
- 1 つの注目すべき例外があります。ない**注意する必要**プロパティが代わりに、 **isNull**フィールドが null かどうかを示すブール値を返します。  
+ 注目すべき例外が1つあります。 **Getnull**プロパティがありません。その代わりに、フィールドが null かどうかを示すブール値を返す**isNull**プロパティがあります。  
   
 ```  
 public boolean getBoolean()  
@@ -94,5 +94,5 @@ public boolean isNull()
 public void setNull()  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Parameter オブジェクト](../../../ado/reference/ado-api/parameter-object.md)

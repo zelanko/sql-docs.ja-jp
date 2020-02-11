@@ -14,11 +14,11 @@ ms.assetid: 2273e058-f6a3-4fc3-875f-e506cb1015ac
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 91e4851197dd8798641eaf400084694afe667dfc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68063393"
 ---
-# <a name="sorting-limitations"></a>並べ替えの制限事項
-GROUP BY 句、ORDER BY 句、SELECT DISTINCT ステートメント、または外部結合での並べ替えキーの最大長は 255 バイトです。並べ替え行内のすべての並べ替えキーの最大長は、65,500 バイトです。
+# <a name="sorting-limitations"></a>制限事項を並べ替え
+GROUP BY 句、ORDER BY 句、SELECT DISTINCT ステートメント、または外部結合の並べ替えキーの最大長は255バイトです。並べ替え行のすべての並べ替えキーの最大長は65500バイトです。

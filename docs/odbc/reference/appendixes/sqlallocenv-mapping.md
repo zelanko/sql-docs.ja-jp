@@ -1,5 +1,5 @@
 ---
-title: SQLAllocEnv のマッピング |Microsoft Docs
+title: SQLAllocEnv Mapping |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,21 +14,21 @@ ms.assetid: 4bb51845-ee91-4b97-9dd4-2fab977f2aec
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: afbd1404cb40408166ecfc59993db7b183ae5ed2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68065014"
 ---
 # <a name="sqlallocenv-mapping"></a>SQLAllocEnv のマッピング
-アプリケーションを呼び出すと**SQLAllocEnv** ODBC を通じて*3.x*ドライバーでは、呼び出し**SQLAllocEnv**(*phenv*)にマップされて**SQLAllocHandle**次のようにします。  
+アプリケーションが ODBC *3. x*ドライバーを使用して**sqlallocenv**を呼び出すと **、sqlallocenv**(*phenv*) への呼び出しは次のように**SQLAllocHandle**にマップされます。  
   
-1.  ドライバー マネージャーは、環境ハンドルを割り当てるし、アプリケーションに返します。 ドライバー マネージャー呼び出し**SQLSetEnvAttr** SQL_OV_ODBC2 を SQL_ATTR_ODBC_VERSION 環境属性を設定します。  
+1.  ドライバーマネージャーは、環境ハンドルを割り当ててアプリケーションに返します。 ドライバーマネージャーは**SQLSetEnvAttr**を呼び出して、SQL_ATTR_ODBC_VERSION 環境属性を SQL_OV_ODBC2 に設定します。  
   
-2.  ドライバー マネージャーは、アプリケーションがドライバーには、最初の接続を確立する場合  
+2.  アプリケーションがドライバーへの最初の接続を確立すると、ドライバーマネージャーはを呼び出します。  
   
     ```  
     SQLAllocHandle(SQL_HANDLE_ENV, SQL_NULL_HANDLE, OutputHandlePtr)  
     ```  
   
-     ドライバーで*OutputHandlePtr*設定*phenv*します。
+     *OutputHandlePtr*が*phenv*に設定されているドライバー。

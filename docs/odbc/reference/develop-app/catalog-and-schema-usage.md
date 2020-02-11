@@ -1,5 +1,5 @@
 ---
-title: カタログとスキーマの使用状況 |Microsoft Docs
+title: カタログとスキーマの使用 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,11 +17,11 @@ ms.assetid: 84f7ef61-1ef1-46f3-9678-b087aa8e8e34
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4e10460df120451502d798376453d69d111051ec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68064414"
 ---
 # <a name="catalog-and-schema-usage"></a>カタログとスキーマの使用状況
-データ ソースが、すべての SQL ステートメント内でのオブジェクト名の識別子としてのカタログとスキーマ名を必ずしもにサポートしません。 データ ソースは、SQL ステートメントの次のクラスの 1 つ以上のカタログとスキーマ名をサポートする場合があります。データ操作言語 (DML) ステートメント、プロシージャの呼び出し、テーブル定義ステートメント、インデックス定義ステートメント、および特権定義ステートメント。 カタログとスキーマ名を使用できる SQL ステートメントのクラスを確認するには、アプリケーションが呼び出す**SQLGetInfo** SQL_CATALOG_USAGE および SQL_SCHEMA_USAGE のオプションを使用します。
+データソースは、すべての SQL ステートメントで、カタログ名とスキーマ名をオブジェクト名の識別子としてサポートするとは限りません。 データソースでは、次の SQL ステートメントの1つ以上のクラスでカタログ名とスキーマ名がサポートされている場合があります。データ操作言語 (DML) ステートメント、プロシージャ呼び出し、テーブル定義ステートメント、インデックス定義ステートメント、および特権定義命令. アプリケーションでは、カタログ名とスキーマ名を使用できる SQL ステートメントのクラスを特定するために、SQL_CATALOG_USAGE オプションと SQL_SCHEMA_USAGE オプションを使用して**SQLGetInfo**を呼び出します。

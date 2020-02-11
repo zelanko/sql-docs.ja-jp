@@ -11,18 +11,18 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a9d3f1a5e021eb564e4570e9f115e40329edcdd9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66094020"
 ---
 # <a name="license-terms"></a>ライセンス条項
   [ライセンス条項] ページを使用して、このリリースのライセンス条項に同意します。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  インストールを続行するには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のライセンス条項に同意する必要があります。  
   
- 使用して、**印刷**このリリースのライセンス条項のコピーを印刷するボタンをクリックします。 インストールを終了するには、次のようにクリックします。**キャンセル**します。  
+ [**印刷**] ボタンを使用して、このリリースのライセンス条項のコピーを印刷します。 インストールを終了するには、[**キャンセル**] をクリックします。  
   
   

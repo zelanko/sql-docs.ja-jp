@@ -11,16 +11,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1c61e1b980e729cb936c00410a156d8c0dc47d0b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62842978"
 ---
 # <a name="sql-server-management-tools-backward-compatibility"></a>SQL Server 管理ツールの旧バージョンとの互換性
   旧バージョンとの互換性のセクションの各トピックでは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 各バージョンでの動作の相違について説明します。  
   
-|**トピック**|**[説明]**|  
+|**トピック**|**説明**|  
 |---------------|---------------------|  
 |[SQL Server 2014 の非推奨の管理ツール機能](../../2014/database-engine/deprecated-management-tools-features-in-sql-server-2014.md)|このリリースの非推奨の管理ツール機能。|  
 |[SQL Server 2014 で廃止された管理ツール機能](../../2014/database-engine/discontinued-management-tools-features-in-sql-server-2014.md)|このリリースで廃止された管理ツール機能|  
