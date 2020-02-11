@@ -1,5 +1,5 @@
 ---
-title: SQLGetData およびブロック カーソル |Microsoft Docs
+title: SQLGetData カーソルとブロックカーソル |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,13 +16,13 @@ ms.assetid: 12599cdc-7725-4faf-bcae-e163ea0f5851
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4841d8d923ff73d187569df3d7f9e29daf0f4e48
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68107397"
 ---
 # <a name="sqlgetdata-and-block-cursors"></a>SQLGetData およびブロック カーソル
-**SQLGetData**は 1 つの行の 1 つの列を操作し、複数の行からデータを格納する配列をフェッチできません。 これは、プライマリの使用のため**SQLGetData**パートでは、長い形式のデータをフェッチするには、一度に 1 つ以上の行に対して行うほとんどまたはまったくない理由があるとします。  
+**SQLGetData**は1つの行の1つの列に対して動作し、複数の行のデータを含む配列をフェッチすることはできません。 これは、 **SQLGetData**の主な用途は、長いデータを部分的にフェッチすることであり、一度に複数の行に対してこれを行う理由はほとんどありません。  
   
- 使用する**SQLGetData**アプリケーションの最初の呼び出しをブロック カーソル、 **SQLSetPos**に単一の行にカーソルを移動します。 呼び出して**SQLGetData**内の該当する行の列にします。 ただし、この動作は省略可能です。 ドライバーの使用をサポートしているかどうか**SQLGetData**アプリケーションを呼び出すと、ブロック カーソルと**SQLGetInfo** SQL_GETDATA_EXTENSIONS オプションを使用します。
+ ブロックカーソルで**SQLGetData**を使用するには、アプリケーションはまず**SQLSetPos**を呼び出して、カーソルを1行に配置します。 次に、その行の列に対して**SQLGetData**を呼び出します。 ただし、この動作は省略可能です。 ドライバーがブロックカーソルで**SQLGetData**の使用をサポートしているかどうかを判断するために、アプリケーションは SQL_GETDATA_EXTENSIONS オプションを指定して**SQLGetInfo**を呼び出します。

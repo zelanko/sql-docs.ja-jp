@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: e604f66e48c8c8bb93ff5fd4abb174449f0fcdd9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68088439"
 ---
 # <a name="mtd-mdx"></a>Mtd (MDX)
@@ -28,16 +28,16 @@ Mtd( [ Member_Expression ] )
 ```  
   
 ## <a name="arguments"></a>引数  
- *メンバー式*  
+ *Member_Expression*  
  メンバーを 1 つ返す有効な多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>コメント  
- メンバー式が指定されていない、既定値は最初の階層の現在のメンバーの種類のレベルを持つ*か月間*型の最初の次元の*時間*メジャー グループ内。  
+## <a name="remarks"></a>解説  
+ メンバー式が指定されていない場合、既定値は、メジャーグループ内の*Time*型の最初の次元の*月*のレベルを持つ最初の階層の現在のメンバーになります。  
   
- **Mtd**関数のショートカット関数では、 [PeriodsToDate](../mdx/periodstodate-mdx.md)レベルを基になる属性階層の Type プロパティ設定されている場合に機能*か月間*します。 つまり、`Mtd(Member_Expression)`と等価`PeriodsToDate(Month_Level_Expression,Member_Expression)`します。  
+ **Mtd**関数は、レベルの基になる属性階層の Type プロパティが*Months*に設定されている場合の、 [PeriodsToDate](../mdx/periodstodate-mdx.md)関数のショートカット関数です。 つまり、 `Mtd(Member_Expression)`はと同じです`PeriodsToDate(Month_Level_Expression,Member_Expression)`。  
   
 ## <a name="example"></a>例  
- 次の例では、2002 年 7 月 20 日目から年 7 月、月のインターネット販売の運送料の日付を月の合計を返します。  
+ 次の例では、2002年7月の20日目から7月までのインターネット販売について、その月の総運賃コストの合計を返します。  
   
 ```  
 WITH MEMBER Measures.x AS SUM   
@@ -49,8 +49,8 @@ SELECT Measures.x ON 0
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [合計&#40;MDX&#41;](../mdx/sum-mdx.md)   
- [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>参照  
+ [MDX&#41;の合計 &#40;](../mdx/sum-mdx.md)   
+ [Mdx 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

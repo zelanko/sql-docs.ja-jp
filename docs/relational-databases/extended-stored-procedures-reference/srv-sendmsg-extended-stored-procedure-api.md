@@ -20,17 +20,18 @@ ms.assetid: efcb50b9-f8ff-4121-bf67-05830171b928
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 62fa2db01ff17008a0b6a7cd4e5fd0a2bce71189
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: HT
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67910912"
 ---
-# <a name="srvsendmsg-extended-stored-procedure-api"></a>srv_sendmsg (拡張ストアド プロシージャ API)
+# <a name="srv_sendmsg-extended-stored-procedure-api"></a>srv_sendmsg (拡張ストアド プロシージャ API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]代わりに CLR Integration をご使用ください。  
+>  
+  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]代わりに CLR Integration をご使用ください。  
   
  クライアントにメッセージを送信します。  
   
@@ -81,10 +82,10 @@ msglen
  *msgnum*  
  4 バイトのメッセージ番号です。  
   
- *class*  
+ *講義*  
  エラーの重大度を指定します。 重大度が 10 以下の場合は、情報メッセージと見なされます。  
   
- *state*  
+ *状態*  
  現在のメッセージのエラー状態番号を指定します。 エラー状態番号により、エラーの内容に関する情報を得ることができます。 有効な状態番号の範囲は 0 ～ 255 です。  
   
  *rpcname*  
@@ -96,16 +97,18 @@ msglen
  *linenum*  
  メッセージが該当する言語コマンド バッチ内の行番号です。 行番号は 1 から始まります。 メッセージに *linenum* が不要である場合は、0 に設定します。  
   
- *message*  
+ *メッセージ*  
  クライアントに送信される文字列を指すポインターです。  
   
  *msglen*  
- *message* の長さをバイト数で指定します。 *message* が NULL 終端である場合は、*msglen* を SRV_NULLTERM に設定します。  
+ 
+  *message* の長さをバイト数で指定します。 
+  *message* が NULL 終端である場合は、*msglen* を SRV_NULLTERM に設定します。  
   
 ## <a name="returns"></a>戻り値  
  SUCCEED または FAIL を返します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この関数は、エラー メッセージまたは情報メッセージをクライアントに送信する場合に使用します。 メッセージが送信されるたびに呼び出されます。  
   
  メッセージは、**srv_sendrow** によるすべての行 (あれば) の送信前後に任意の順序で **srv_sendmsg** を使用してクライアントに送信できます。 すべてのメッセージ (あれば) は **srv_senddone** で完了状態が送信される前にクライアントに送信しておく必要があります。  

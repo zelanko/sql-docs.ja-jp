@@ -16,18 +16,19 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 40a621af401b33394b996468c581e85e3635355c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63137607"
 ---
-# <a name="extended-stored-procedures-programmer39s-reference"></a>拡張ストアド プロシージャのプログラマ&#39;リファレンス
+# <a name="extended-stored-procedures-programmer39s-reference"></a>拡張ストアドプロシージャプログラマー&#39;s リファレンス
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]代わりに CLR Integration をご使用ください。  
+>  
+  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]代わりに CLR Integration をご使用ください。  
   
- 以前 Open Data Services の一部であった [!INCLUDE[msCoName](../../includes/msconame-md.md)] 拡張ストアド プロシージャ API は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の機能を拡張するためのサーバー ベースのアプリケーション プログラミング インターフェイスです。 この API は、アプリケーションの構築に使用する C および C++ の関数とマクロで構成されています。  
+ 拡張[!INCLUDE[msCoName](../../includes/msconame-md.md)]ストアドプロシージャ api は、既に Open Data Services に含まれており、機能を拡張[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]するためのサーバーベースのアプリケーションプログラミングインターフェイス (API) を提供します。 この API は、アプリケーションの構築に使用する C および C++ の関数とマクロで構成されています。  
   
  拡張ストアド プロシージャへのニーズは、現在は CLR 統合などの強力な新しいテクノロジにほとんど移行しています。  
   

@@ -1,5 +1,5 @@
 ---
-title: レプリケーション テーブル (TRANSACT-SQL) |Microsoft Docs
+title: レプリケーションテーブル (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,28 +16,28 @@ ms.assetid: 5696ee73-5d7c-4f26-b7ee-6831c9c3edf7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3dc89ce68529212246d85bdbafa8d9487b77a067
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67910236"
 ---
 # <a name="replication-tables-transact-sql"></a>レプリケーション テーブル (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  レプリケーション トポロジは、レプリケーション システム テーブルによってサポートされます。 ユーザー データベースがパブリッシャーまたはサブスクライバーとして構成されると、レプリケーションによりシステム テーブルがデータベースに追加されます。 これらのテーブルは、レプリケーション トポロジからユーザー データベースが削除されると、削除されます。 一般的な規則についてシステム テーブルを使用して、参照してください[システム テーブル&#40;TRANSACT-SQL&#41;](system-tables-transact-sql.md)します。  
+  レプリケーショントポロジは、レプリケーションシステムテーブルでサポートされています。 ユーザーデータベースがパブリッシャーまたはサブスクライバーとして構成されている場合、レプリケーションによってシステムテーブルがデータベースに追加されます。 これらのテーブルは、ユーザーデータベースがレプリケーショントポロジから削除されると削除されます。 システムテーブルの使用に関する一般的な規則については、「[システムテーブル &#40;transact-sql&#41;](system-tables-transact-sql.md)」を参照してください。  
   
 ## <a name="replication-tables"></a>レプリケーション テーブル  
  次に、レプリケーションで使用するシステム テーブルの一覧をデータベースごとにグループ化して示します。  
   
-### <a name="replication-tables-in-the-master-database"></a>master データベース内のレプリケーション テーブル  
+### <a name="replication-tables-in-the-master-database"></a>Master データベース内のレプリケーションテーブル  
   
 |||  
 |-|-|  
-|[MSreplication_options &#40;TRANSACT-SQL&#41;](msreplication-options-transact-sql.md)||  
+|[MSreplication_options &#40;Transact-sql&#41;](msreplication-options-transact-sql.md)||  
 | &nbsp; | &nbsp; |
  
-### <a name="replication-tables-in-the-msdb-database"></a>msdb データベース内のレプリケーション テーブル  
+### <a name="replication-tables-in-the-msdb-database"></a>Msdb データベース内のレプリケーションテーブル  
 
 |||  
 |-|-|  
@@ -49,7 +49,7 @@ ms.locfileid: "67910236"
 |[MSdistributor](msdistributor-transact-sql.md)              |[sysreplicationalerts](sysreplicationalerts-transact-sql.md)|
 | &nbsp; | &nbsp; |
 
-### <a name="replication-tables-in-the-distribution-database"></a>ディストリビューション データベース内のレプリケーション テーブル  
+### <a name="replication-tables-in-the-distribution-database"></a>ディストリビューションデータベース内のレプリケーションテーブル  
 
 |||  
 |-|-|  
@@ -73,7 +73,7 @@ ms.locfileid: "67910236"
 |[MSqreader_history](msqreader-history-transact-sql.md)            ||
 | &nbsp; | &nbsp; |
   
- ディストリビューション データベース内のこれらのテーブルが以外からデータをレプリケートするため[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。 詳細については、次を参照してください。[非 SQL Server パブリッシャー](../../relational-databases/replication/non-sql/non-sql-server-publishers.md)します。  
+ ディストリビューションデータベース内のこれらのテーブルは、以外の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーからデータをレプリケートするために使用されます。 詳細については、「 [SQL Server 以外のパブリッシャー](../../relational-databases/replication/non-sql/non-sql-server-publishers.md)」を参照してください。  
   
 |||  
 |-|-|  
@@ -87,11 +87,11 @@ ms.locfileid: "67910236"
 | &nbsp; | &nbsp; | 
  
 
-### <a name="replication-tables-in-the-publication-database"></a>パブリケーション データベース内のレプリケーション テーブル  
+### <a name="replication-tables-in-the-publication-database"></a>パブリケーションデータベースのレプリケーションテーブル  
  
 |||  
 |-|-|  
-|[conflict _\<スキーマ > _\<テーブル >](conflict-schema-table-transact-sql.md)       |[MSpeer_request](mspeer-request-transact-sql.md)|
+|[conflict_\<スキーマ>_\<テーブル>](conflict-schema-table-transact-sql.md)       |[MSpeer_request](mspeer-request-transact-sql.md)|
 |[MSdynamicsnapshotjobs](msdynamicsnapshotjobs-transact-sql.md)             |[MSpeer_response](mspeer-response-transact-sql.md)|
 |[MSdynamicsnapshotviews](msdynamicsnapshotviews-transact-sql.md)           |[MSpeer_topologyrequest](mspeer-topologyrequest-transact-sql.md)|  
 |[MSmerge_altsyncpartners](msmerge-altsyncpartners-transact-sql.md)         |[MSpeer_topologyresponse](mspeer-topologyresponse-transact-sql.md)|  
@@ -116,7 +116,7 @@ ms.locfileid: "67910236"
 | &nbsp; | &nbsp; | 
 
 
-### <a name="replication-tables-in-the-subscription-database"></a>サブスクリプション データベース内のレプリケーション テーブル  
+### <a name="replication-tables-in-the-subscription-database"></a>サブスクリプションデータベースのレプリケーションテーブル  
  
 |||  
 |-|-|  
@@ -139,7 +139,7 @@ ms.locfileid: "67910236"
 | &nbsp; | &nbsp; |
 
 ## <a name="see-also"></a>参照  
- [パブリッシングとディストリビューションの構成](../../relational-databases/replication/configure-publishing-and-distribution.md)   
- [パブリッシングおよびディストリビューションの無効化](../../relational-databases/replication/disable-publishing-and-distribution.md)   
- [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
+ [パブリッシングおよびディストリビューションの構成](../../relational-databases/replication/configure-publishing-and-distribution.md)   
+ [パブリッシングおよびディストリビューションを無効にする](../../relational-databases/replication/disable-publishing-and-distribution.md)   
+ [レプリケーションビュー &#40;Transact-sql&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

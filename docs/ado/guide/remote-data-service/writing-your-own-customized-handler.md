@@ -1,5 +1,5 @@
 ---
-title: カスタマイズされた独自のハンドラーの記述 |Microsoft Docs
+title: 独自のカスタマイズされたハンドラーを作成する |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,49 +14,49 @@ ms.assetid: d447712a-e123-47b5-a3a4-5d366cfe8d72
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 98e2ec3538de68bffa5b22acc94dda3d81e5c6f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921887"
 ---
 # <a name="writing-your-own-customized-handler"></a>独自のカスタム ハンドラーの記述
-RDS のサポート、既定値を希望する IIS サーバー管理者がいるかどうか、独自のハンドラーを記述したい場合がありますが、ユーザーの要求より詳細に制御し、アクセス権。  
+既定の RDS サポートを必要とするが、ユーザーの要求とアクセス権をより細かく制御できる IIS サーバー管理者の場合は、独自のハンドラーを作成することもできます。  
   
- MSDFMAP します。ハンドラーの実装、 **IDataFactoryHandler**インターフェイス。  
+ MSDFMAP。ハンドラーは、 **IDataFactoryHandler**インターフェイスを実装します。  
   
 > [!IMPORTANT]
->  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)します。  
+>  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および[Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416)」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
   
 ## <a name="idatafactoryhandler-interface"></a>IDataFactoryHandler インターフェイス  
- このインターフェイスは、2 つのメソッドを持って**GetRecordset**と**再接続**します。 どちらの方法では、する必要があります、 [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)プロパティに設定する**adUseClient**します。  
+ このインターフェイスには、 **Getrecordset**と**Reconnect**の2つのメソッドがあります。 どちらの方法でも、[カーソル位置](../../../ado/reference/ado-api/cursorlocation-property-ado.md)プロパティを**adUseClient**に設定する必要があります。  
   
- どちらの方法は、最初のコンマの後に表示される引数を受け取る、"**ハンドラー =** "キーワード。 たとえば、`"Handler=progid,arg1,arg2;"`の引数の文字列を渡す`"arg1,arg2"`と`"Handler=progid"`null 引数を渡します。  
+ どちらのメソッドも、"**Handler =**" キーワードの最初のコンマの後に表示される引数を受け取ります。 たとえば、 `"Handler=progid,arg1,arg2;"`は引数の`"arg1,arg2"`文字列を`"Handler=progid"`渡し、は null 引数を渡します。  
   
 ## <a name="getrecordset-method"></a>GetRecordset メソッド  
- このメソッドは、データ ソース クエリを実行し、新たに作成[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトの指定された引数を使用します。 **Recordset**で開く必要がある**adLockBatchOptimistic**され、非同期的に開かれませんする必要があります。  
+ このメソッドは、指定された引数を使用して、データソースに対してクエリを行い、新しい[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトを作成します。 **レコードセット**は**Adlockbatchoptimistic**で開かれている必要があり、非同期に開くことはできません。  
   
 ### <a name="arguments"></a>引数  
- ***conn***接続文字列。  
+ ***conn*** 接続文字列。  
   
- ***args***ハンドラーの引数。  
+ ***args*** ハンドラーの引数。  
   
- ***クエリ***クエリを行うためのコマンド テキスト。  
+ ***クエリ*** クエリを作成するためのコマンドテキスト。  
   
- ***ppRS***ポインター位置、**レコード セット**返される必要があります。  
+ ***ppRS*** **レコードセット**が返される位置のポインター。  
   
-## <a name="reconnect-method"></a>メソッドを再接続します。  
- このメソッドは、データ ソースを更新します。 新たに作成、[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトとの接続、指定された**レコード セット**します。  
+## <a name="reconnect-method"></a>Reconnect メソッド  
+ このメソッドは、データソースを更新します。 このメソッドは、新しい[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトを作成し、指定された**レコードセット**をアタッチします。  
   
 ### <a name="arguments"></a>引数  
- ***conn***接続文字列。  
+ ***conn*** 接続文字列。  
   
- ***args***ハンドラーの引数。  
+ ***args*** ハンドラーの引数。  
   
- ***Pr*** A **Recordset**オブジェクト。  
+ ***pr*** **レコードセット**オブジェクトです。  
   
-## <a name="msdfhdlidl"></a>msdfhdl.idl  
- これは、インターフェイス定義**IDataFactoryHandler**に表示される、 **msdfhdl.idl**ファイル。  
+## <a name="msdfhdlidl"></a>msdfhdl .idl  
+ これは、 **msdfhdl .idl**ファイルに表示される**IDataFactoryHandler**のインターフェイス定義です。  
   
 ```cpp
 [  
@@ -99,11 +99,11 @@ HRESULT _stdcall GetRecordset(
 };  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [カスタマイズ ファイル Connect セクション](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
- [カスタマイズ ファイル Logs セクション](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
- [カスタマイズ ファイル SQL セクション](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
- [カスタマイズ ファイル UserList セクション](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
+## <a name="see-also"></a>参照  
+ [カスタマイズファイルの接続セクション](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
+ [カスタマイズファイルログセクション](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
+ [カスタマイズファイル SQL セクション](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
+ [カスタマイズファイルの UserList セクション](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
  [DataFactory のカスタマイズ](../../../ado/guide/remote-data-service/datafactory-customization.md)   
  [必要なクライアント設定](../../../ado/guide/remote-data-service/required-client-settings.md)   
  [カスタマイズ ファイルの概要](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)
