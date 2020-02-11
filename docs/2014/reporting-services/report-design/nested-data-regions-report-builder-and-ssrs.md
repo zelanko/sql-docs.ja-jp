@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 293bfe1f270d32bc64d4344c5363a0be2cd74b84
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105522"
 ---
 # <a name="nested-data-regions-report-builder-and-ssrs"></a>入れ子になったデータ領域 (レポート ビルダーおよび SSRS)
@@ -36,13 +36,13 @@ ms.locfileid: "66105522"
   
  次の一覧は Tablix セルでのスコープを領域別に説明したものです。  
   
--   **Tablix コーナー** スコープは Tablix データ領域にリンクされたデータ領域のデータ。ただし、データセットと外側の Tablix に対するフィルターおよび並べ替え式が適用されます。  
+-   **Tablix コーナー**スコープは、tablix データ領域にリンクされているデータ領域内のデータで、データセットと外側の tablix のフィルターおよび並べ替え式が適用された後に適用されます。  
   
--   **Tablix 列グループ** 最も内側の列グループのデータ。ただし、データセット、外側の Tablix、およびその列グループに対するフィルターおよび並べ替え式が適用されます。  
+-   **Tablix 列グループ**最も内側の列グループのデータ。データセット、外側の tablix、および列グループに対するフィルターおよび並べ替え式が適用されます。  
   
--   **Tablix 行グループ** 最も内側の行グループのデータ。ただし、データセット、外側の Tablix、およびその行グループに対するフィルターおよび並べ替え式が適用されます。  
+-   **Tablix 行グループ**最も内側の行グループのデータ。データセット、外側の tablix、および行グループに対するフィルターおよび並べ替え式が適用されます。  
   
--   **Tablix 本体** 最も内側の行グループと列グループが重なる部分のデータ。ただし、データセット、外側の Tablix、およびその行グループと列グループに対するフィルターおよび並べ替え式が適用されます。  
+-   **Tablix 本体**行グループと列グループの交差部分によって表される最も内側のグループのデータ。データセット、外側の tablix、および行グループと列グループのフィルターおよび並べ替え式が適用されます。  
   
  詳細については、「[Tablix データ領域部分 &#40;レポート ビルダーおよび SSRS&#41;](tablix-data-region-areas-report-builder-and-ssrs.md)」を参照してください。  
   
@@ -70,7 +70,8 @@ ms.locfileid: "66105522"
   
  ゲージの目盛りに表示される最大値と最小値を指定する必要があります。 ゲージの最大値を指定するために `=Max!MyField.Value`のような式を使用できます。 ただし、この式はそのセルのデータ スコープ内でのみ評価されるので、個々のゲージの実際の最大値は Tablix のすべての行で同じになりません。 このことにより、Tablix 内のゲージ間の比較はわかりにくいものになります。 代わりに、静的な値を最大値に指定することもできます。 Tablix 内のすべての行でこの最大値がゲージに表示されます。 詳細については、「[ゲージへの最小値または最大値の設定 &#40;レポート ビルダーおよび SSRS&#41;](set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)」を参照してください。  
   
- ゲージに表示されるデータが大きすぎる場合は、表示される数値の桁数を減らすために目盛りの縮尺を指定できます。 縮尺を指定するには、目盛りを右クリックして **[スケールのプロパティ]** を選択します。 **[スケールのプロパティ]** ダイアログ ボックスが開いたら、 **[乗数]** の値を指定します。  
+ ゲージに表示されるデータが大きすぎる場合は、表示される数値の桁数を減らすために目盛りの縮尺を指定できます。 縮尺を指定するには、目盛りを右クリックして **[スケールのプロパティ]** を選択します。 
+  **[スケールのプロパティ]** ダイアログ ボックスが開いたら、 **[乗数]** の値を指定します。  
   
 ## <a name="nesting-a-table-or-matrix-and-a-chart-in-a-list"></a>リストに表またはマトリックスとグラフを挿入するには  
  リストに複数のデータ領域を入れ子にするには、まず長方形を追加し、その後でその長方形に複数のデータ領域を追加します。  
@@ -78,15 +79,15 @@ ms.locfileid: "66105522"
  リストのデータ領域にグループを定義できます。さらに Tablix とグラフを追加して同じデータの異なったビューを提供できます。 それには、埋め込まれた Tablix とグラフに同じグループ化と並べ替えの式を定義する必要があります。 Tablix とグラフは親となるリストのデータ領域のデータを使用するように定義されています。  
   
 > [!NOTE]  
->  既定では、デザイン画面にリスト データ領域を追加すると、そのリストには詳細行が含まれています。 この既定動作を変更して、詳細行を取り除き、グループ行を追加できます。 詳細については、「[Tablix データ領域の柔軟性について &#40;レポート ビルダーおよび SSRS&#41;](exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)」を参照してください。  
+>  既定では、デザイン画面にリスト データ領域を追加すると、そのリストには詳細行が含まれています。 この既定動作を変更して、詳細行を取り除き、グループ行を追加できます。 詳細については、「[Tablix データ領域の柔軟性について (レポート ビルダーおよび SSRS)](exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)」を参照してください。  
   
  詳細については、「[グループについて &#40;レポート ビルダーおよび SSRS&#41;](understanding-groups-report-builder-and-ssrs.md)」と「[テーブル、マトリックス、または一覧の追加、移動、または削除 &#40;レポート ビルダーおよび SSRS&#41;](add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- [データのフィルター、グループ化、および並べ替え &#40;レポート ビルダーおよび SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>参照  
+ [データのフィルター、グループ化、および並べ替え (レポート ビルダーおよび SSRS)](filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [一覧 &#40;レポート ビルダーおよび SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [グラフ &#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md)   
- [ゲージ (レポート ビルダーおよび SSRS)](gauges-report-builder-and-ssrs.md)   
+ [ゲージ &#40;レポート ビルダーおよび SSRS&#41;](gauges-report-builder-and-ssrs.md)   
  [式 &#40;レポート ビルダーおよび SSRS&#41;](expressions-report-builder-and-ssrs.md)   
  [レポート アイテムの書式設定 (レポート ビルダーおよび SSRS)](formatting-report-items-report-builder-and-ssrs.md)   
  [チュートリアル: レポートへの KPI の追加 &#40;レポート ビルダー&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md)   

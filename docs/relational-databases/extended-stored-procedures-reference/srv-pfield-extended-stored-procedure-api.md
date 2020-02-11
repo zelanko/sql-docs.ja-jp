@@ -20,17 +20,18 @@ ms.assetid: a61e4c1f-e65b-48ea-a7d1-3e1544af389d
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 8cb43ad9128160dfbd8e943ec3db02930eb3ac53
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: HT
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68131579"
 ---
 # <a name="srv_pfield-extended-stored-procedure-api"></a>srv_pfield (拡張ストアド プロシージャ API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]代わりに CLR Integration をご使用ください。  
+>  
+  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]代わりに CLR Integration をご使用ください。  
   
  データベース接続に関する情報を返します。  
   
@@ -54,10 +55,10 @@ len
  *srvproc*  
  データベース接続を特定するポインターです。  
   
- *field*  
+ *分野*  
  その接続について返すデータを指定します。  
   
-|[値]|戻り値|  
+|Value|戻り値|  
 |-----------|-------------|  
 |SRV_APPLNAME|接続の確立時にクライアントから提供されたアプリケーション名。|  
 |SRV_BCPFLAG|クライアントが一括コピー操作の準備中である場合は TRUE、それ以外の場合は FALSE を示すフラグ。|  
@@ -72,15 +73,19 @@ len
 |SRV_PIPEHANDLE|接続されたクライアントのパイプ ハンドルを格納した文字列。名前付きパイプを使用しないネットワークにクライアントが接続されている場合は NULL。 このハンドルを [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows で有効なパイプ ハンドルとして使用するには、この文字列を整数に変換します。|  
 |SRV_RMTSERVER|クライアント プロセスのログイン元であるサーバー。 クライアントからのログインの場合、この値は空文字列になります。|  
 |SRV_ROWSENT|現在の結果セットについて、*srvproc* で送信済みの行数。|  
-|SRV_SPID|*srvproc* のサーバー スレッド ID。 拡張ストアド プロシージャでは、この値は **sys.sysprocesses** の **kpid** 列に等しく、時間の経過に伴って変化します。|  
+|SRV_SPID|
+  *srvproc* のサーバー スレッド ID。 拡張ストアド プロシージャでは、この値は **sys.sysprocesses** の **kpid** 列に等しく、時間の経過に伴って変化します。|  
 |SRV_SPROC_CODEPAGE|マルチバイト データを解釈するためにサーバーで使用するコード ページ。|  
-|SRV_STATUS|*srvproc* の現在の状態 (running または closed)。|  
-|SRV_TYPE|*srvproc* の接続の種類。 server が返される場合、*srvproc* は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを拠点としています。 client が返される場合、*srvproc* は DB-Library クライアントまたは ODBC クライアントを拠点としています。|  
+|SRV_STATUS|
+  *srvproc* の現在の状態 (running または closed)。|  
+|SRV_TYPE|
+  *srvproc* の接続の種類。 server が返される場合、*srvproc* は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを拠点としています。 client が返される場合、*srvproc* は DB-Library クライアントまたは ODBC クライアントを拠点としています。|  
 |SRV_USER|接続のユーザー名。|  
 |||  
   
  *len*  
- 返された *field* 値の長さを格納した **int** 型変数を指すポインターです。 *len* が NULL の場合、文字列の長さは返されていません。  
+ 返された **field** 値の長さを格納した *int* 型変数を指すポインターです。 
+  *len* が NULL の場合、文字列の長さは返されていません。  
   
 ## <a name="returns"></a>戻り値  
  SRV_PROC 構造体にある指定されたフィールドの現在値を格納した NULL 終端文字列へのポインターを返します。 フィールドが空の場合は空文字列への有効なポインターが返され、*len* は 0 になります。 フィールドが指定されていない場合は NULL を返し、*len* は -1 になります。  

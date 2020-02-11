@@ -23,29 +23,32 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 95ffdd52ff4c71039a87f177e67d51cb81830c68
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63011924"
 ---
 # <a name="server-level-roles"></a>サーバー レベルのロール
+  
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、サーバー上の権限を管理するためのサーバー レベルのロールを提供します。 これらのロールは、他のプリンシパルをグループ化するセキュリティ プリンシパルです。 サーバー レベルのロールは、その権限のスコープがサーバー全体に及びます (*ロール* は、Windows オペレーティング システムの *グループ* に似ています)。  
   
  固定サーバー ロールは、旧バージョンとの互換性を維持するために便宜的に提供されています。 可能な限り、より詳細な権限を割り当ててください。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、9 つの固定サーバー ロールを提供します。 固定サーバー ロールに許可される権限は変更できません。 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]以降では、ユーザー定義のサーバー ロールを作成し、そのユーザー定義のサーバー ロールにサーバー レベルの権限を追加できます。  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、9 つの固定サーバー ロールを提供します。 固定サーバー ロールに許可される権限は変更できません。 
+  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]以降では、ユーザー定義のサーバー ロールを作成し、そのユーザー定義のサーバー ロールにサーバー レベルの権限を追加できます。  
   
  サーバー レベルのロールには、サーバー レベルのプリンシパル ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログイン、Windows アカウント、および Windows グループ) を追加できます。 固定サーバー ロールの各メンバーは、そのロールに他のログインを追加することができます。 ユーザー定義のサーバー ロールのメンバーは、そのロールに他のサーバー プリンシパルを追加できません。  
   
 ## <a name="fixed-server-level-roles"></a>固定サーバー レベル ロール  
  次の表に、固定サーバー レベル ロールとその機能を示します。  
   
-|固定サーバー レベル ロール|説明|  
+|固定サーバー レベル ロール|[説明]|  
 |------------------------------|-----------------|  
 |sysadmin|sysadmin 固定サーバー ロールのメンバーは、サーバーに対するすべての操作を実行できます。|  
 |serveradmin|serveradmin 固定サーバー ロールのメンバーは、サーバー全体の構成オプションを変更したり、サーバーをシャットダウンしたりできます。|  
-|securityadmin|securityadmin 固定サーバー ロールのメンバーは、ログインとログインのプロパティを管理します。 このメンバーは、サーバー レベルの権限を許可、拒否、および禁止できます。 また、データベースにアクセスできる場合は、データベース レベルの権限も許可、拒否、および禁止できます。 また、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログインのパスワードをリセットできます。<br /><br /> **\*\* セキュリティに関する注意 \*\*** セキュリティ管理者は、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] へのアクセスを許可する権限およびユーザー権限を構成する権限を使用して、ほとんどのサーバー権限を割り当てることができます。 `securityadmin`ロールを扱う必要がありますに相当する、`sysadmin`ロール。|  
+|securityadmin|securityadmin 固定サーバー ロールのメンバーは、ログインとログインのプロパティを管理します。 このメンバーは、サーバー レベルの権限を許可、拒否、および禁止できます。 また、データベースにアクセスできる場合は、データベース レベルの権限も許可、拒否、および禁止できます。 また、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログインのパスワードをリセットできます。<br /><br /> **セキュリティに\*関する注意\* \* **セキュリティ管理者は、への[!INCLUDE[ssDE](../../../includes/ssde-md.md)]アクセスを許可し、ユーザーのアクセス許可を構成する機能を使用して、ほとんどのサーバーアクセス許可を割り当てることができます。 `securityadmin`ロールは、 `sysadmin`ロールと同等のものとして扱う必要があります。|  
 |processadmin|processadmin 固定サーバー ロールのメンバーは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンス内で実行中のプロセスを終了できます。|  
 |setupadmin|setupadmin 固定サーバー ロールのメンバーは、 [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントを使用して、リンク サーバーを追加および削除できます。 (sysadmin メンバーシップは、 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]を使用するときに必要になります)。|  
 |bulkadmin|bulkadmin 固定サーバー ロールのメンバーは、BULK INSERT ステートメントを実行できます。|  
@@ -57,7 +60,8 @@ ms.locfileid: "63011924"
  各固定サーバー ロールには、特定の権限が割り当てられます。 サーバー ロールに割り当てられる権限のチャートについては、「 [データベース エンジンの固定サーバー ロールおよび固定データベース ロール](https://social.technet.microsoft.com/wiki/contents/articles/2024.database-engine-fixed-server-and-fixed-database-roles.aspx)」を参照してください。  
   
 > [!IMPORTANT]  
->  `CONTROL SERVER` 権限は `sysadmin` 固定サーバー ロールと似ていますが、同じではありません。 権限があることはロールのメンバーシップを意味せず、ロールのメンバーシップによって権限は付与されません。 (例: `CONTROL SERVER` メンバーシップを意味しません、`sysadmin`固定サーバー ロール)。ただし、ロールと同等の権限の間で借用が可能な場合があります。 ほとんどの `DBCC` コマンドと多くのシステム プロシージャには、`sysadmin` 固定サーバー ロールのメンバーシップが必要です。 ストアド プロシージャを必要とする 171 のシステムの一覧について`sysadmin`メンバーシップ、ブログの投稿では、Andreas Wolter を参照してください[CONTROL SERVER と sysadmin/sa: 権限、システム プロシージャ、DBCC、自動スキーマ作成および権限。エスカレーション - 注意事項](http://www.insidesql.org/blogs/andreaswolter/2013/08/control-server-vs-sysadmin-sa-permissions-privilege-escalation-caveats)します。  
+>  
+  `CONTROL SERVER` 権限は `sysadmin` 固定サーバー ロールと似ていますが、同じではありません。 権限があることはロールのメンバーシップを意味せず、ロールのメンバーシップによって権限は付与されません。 ( `CONTROL SERVER`は、 `sysadmin`固定サーバーロールのメンバーシップを意味しません)。ただし、ロールと同等の権限の間で偽装が可能な場合もあります。 ほとんどの `DBCC` コマンドと多くのシステム プロシージャには、`sysadmin` 固定サーバー ロールのメンバーシップが必要です。 メンバーシップが必要`sysadmin`な171システムストアドプロシージャの一覧については、Andreas WOLTER CONTROL SERVER と sysadmin/sa による次のブログ投稿を参照してください。[アクセス許可、システムプロシージャ、DBCC、自動スキーマ作成、および特権エスカレーション-警告](http://www.insidesql.org/blogs/andreaswolter/2013/08/control-server-vs-sysadmin-sa-permissions-privilege-escalation-caveats)。  
   
 ## <a name="server-level-permissions"></a>サーバーレベルの権限  
  ユーザー定義のサーバー ロールに追加できるのは、サーバー レベルの権限のみです。 サーバー レベルの権限の一覧を表示するには、次のステートメントを実行します。 サーバー レベルの権限は、次のとおりです。  
@@ -71,28 +75,29 @@ SELECT * FROM sys.fn_builtin_permissions('SERVER') ORDER BY permission_name;
 ## <a name="working-with-server-level-roles"></a>サーバー レベルのロールの操作  
  次の表では、サーバー レベルのロールを操作するためのコマンド、ビュー、および関数について説明します。  
   
-|機能|型|説明|  
+|機能|種類|[説明]|  
 |-------------|----------|-----------------|  
-|[sp_helpsrvrole &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpsrvrole-transact-sql)|メタデータ|サーバー レベルのロールの一覧を返します。|  
-|[sp_helpsrvrolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpsrvrolemember-transact-sql)|メタデータ|サーバー レベルのロールのメンバーに関する情報を返します。|  
-|[sp_srvrolepermission &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-srvrolepermission-transact-sql)|メタデータ|サーバー レベルのロールの権限を表示します。|  
-|[IS_SRVROLEMEMBER &#40;Transact-SQL&#41;](/sql/t-sql/functions/is-srvrolemember-transact-sql)|メタデータ|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログインが、指定されたサーバー レベルのロールのメンバーであるかどうかを示します。|  
-|[sys.server_role_members &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-role-members-transact-sql)|メタデータ|各サーバー レベルのロールのメンバーごとに 1 行のデータを返します。|  
-|[sp_addsrvrolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql)|コマンド|ログインをサーバー レベルのロールのメンバーとして追加します。 使用しないでください。 代わりに [ALTER SERVER ROLE](/sql/t-sql/statements/alter-server-role-transact-sql) を使用してください。|  
-|[sp_dropsrvrolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql)|コマンド|サーバー レベルのロールから、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログインや、Windows ユーザーまたはグループを削除します。 使用しないでください。 代わりに [ALTER SERVER ROLE](/sql/t-sql/statements/alter-server-role-transact-sql) を使用してください。|  
-|[CREATE SERVER ROLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-server-role-transact-sql)|コマンド|ユーザー定義サーバー ロールを作成します。|  
-|[ALTER SERVER ROLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-server-role-transact-sql)|コマンド|サーバー ロールのメンバーシップを変更、またはユーザー定義のサーバー ロールの名前を変更します。|  
-|[DROP SERVER ROLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-server-role-transact-sql)|コマンド|ユーザー定義サーバー ロールを削除します。|  
-|[IS_SRVROLEMEMBER &#40;Transact-SQL&#41;](/sql/t-sql/functions/is-srvrolemember-transact-sql)|関数|サーバー ロールのメンバーシップを決定します。|  
+|[sp_helpsrvrole &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-helpsrvrole-transact-sql)|Metadata|サーバー レベルのロールの一覧を返します。|  
+|[sp_helpsrvrolemember &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-helpsrvrolemember-transact-sql)|Metadata|サーバー レベルのロールのメンバーに関する情報を返します。|  
+|[sp_srvrolepermission &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-srvrolepermission-transact-sql)|Metadata|サーバー レベルのロールの権限を表示します。|  
+|[IS_SRVROLEMEMBER &#40;Transact-sql&#41;](/sql/t-sql/functions/is-srvrolemember-transact-sql)|Metadata|
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログインが、指定されたサーバー レベルのロールのメンバーであるかどうかを示します。|  
+|[server_role_members &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-server-role-members-transact-sql)|Metadata|各サーバー レベルのロールのメンバーごとに 1 行のデータを返します。|  
+|[sp_addsrvrolemember &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql)|command|ログインをサーバー レベルのロールのメンバーとして追加します。 非推奨になりました。 代わりに [ALTER SERVER ROLE](/sql/t-sql/statements/alter-server-role-transact-sql) を使用してください。|  
+|[sp_dropsrvrolemember &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql)|command|サーバー レベルのロールから、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログインや、Windows ユーザーまたはグループを削除します。 非推奨になりました。 代わりに [ALTER SERVER ROLE](/sql/t-sql/statements/alter-server-role-transact-sql) を使用してください。|  
+|[Transact-sql&#41;&#40;サーバーの役割を作成する](/sql/t-sql/statements/create-server-role-transact-sql)|command|ユーザー定義サーバー ロールを作成します。|  
+|[ALTER SERVER ROLE &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-server-role-transact-sql)|command|サーバー ロールのメンバーシップを変更、またはユーザー定義のサーバー ロールの名前を変更します。|  
+|[Transact-sql&#41;&#40;サーバーロールを削除する](/sql/t-sql/statements/drop-server-role-transact-sql)|command|ユーザー定義サーバー ロールを削除します。|  
+|[IS_SRVROLEMEMBER &#40;Transact-sql&#41;](/sql/t-sql/functions/is-srvrolemember-transact-sql)|Function|サーバー ロールのメンバーシップを決定します。|  
   
 ## <a name="see-also"></a>参照  
- [データベース レベルのロール](../authentication-access/database-level-roles.md)   
- [セキュリティ カタログ ビュー &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/security-catalog-views-transact-sql)   
- [セキュリティ関数 &#40;Transact-SQL&#41;](/sql/t-sql/functions/security-functions-transact-sql)   
- [SQL Server の保護](../securing-sql-server.md)   
- [GRANT (サーバー プリンシパルの権限の許可) &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-server-principal-permissions-transact-sql)   
- [REVOKE (サーバー プリンシパルの権限の取り消し) &#40;Transact-SQL&#41;](/sql/t-sql/statements/revoke-server-principal-permissions-transact-sql)   
- [DENY (サーバー プリンシパルの権限の拒否) &#40;Transact-SQL&#41;](/sql/t-sql/statements/deny-server-principal-permissions-transact-sql)   
- [サーバー ロールの作成](../authentication-access/create-a-server-role.md)  
+ [データベースレベルのロール](../authentication-access/database-level-roles.md)   
+ [セキュリティカタログビュー &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/security-catalog-views-transact-sql)   
+ [セキュリティ関数 &#40;Transact-sql&#41;](/sql/t-sql/functions/security-functions-transact-sql)   
+ [SQL Server のセキュリティ保護](../securing-sql-server.md)   
+ [Transact-sql&#41;&#40;サーバープリンシパルの権限を付与する](/sql/t-sql/statements/grant-server-principal-permissions-transact-sql)   
+ [Transact-sql&#41;&#40;のサーバープリンシパルの権限の取り消し](/sql/t-sql/statements/revoke-server-principal-permissions-transact-sql)   
+ [Transact-sql&#41;&#40;のサーバープリンシパルの権限の拒否](/sql/t-sql/statements/deny-server-principal-permissions-transact-sql)   
+ [サーバーロールを作成する](../authentication-access/create-a-server-role.md)  
   
   

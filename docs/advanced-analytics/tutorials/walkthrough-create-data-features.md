@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 67d2c0bf73e24bc3f70e94cd6cf7ce94d13e5297
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73723859"
 ---
 # <a name="create-data-features-using-r-and-sql-server-walkthrough"></a>R と SQL Server を使用したデータ機能の作成 (チュートリアル)
@@ -31,7 +31,7 @@ ms.locfileid: "73723859"
 
 目標は、元の列と新しい数値機能 *direct_distance* を含む新しい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ セットを作成することです。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 この手順では、進行中の R セッションは、このチュートリアルの前の手順に基づいていることを前提としています。 ここでは、これらの手順で作成した接続文字列とデータ ソース オブジェクトを使用します。 スクリプトの実行には、次のツールとパッケージが使用されます。
 
@@ -248,7 +248,7 @@ SQL 関数を呼び出すときにデータ変換にかかる時間を確認す�
 > [!TIP]
 > 非常に多くの場合、[!INCLUDE[tsql](../../includes/tsql-md.md)] を使用する機能エンジニアリングの方が R よりも高速になります。たとえば、T-SQL には、移動平均や *n* タイルのロールなど、一般的なデータ サイエンス計算に適用できる高速ウィンドウ関数と順位付け関数が含まれています。 データとタスクに基づいて、最も効率的な方法を選択してください。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [R モデルを構築して SQL に保存する](walkthrough-build-and-save-the-model.md)

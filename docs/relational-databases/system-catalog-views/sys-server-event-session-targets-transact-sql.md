@@ -1,5 +1,5 @@
 ---
-title: sys.server_event_session_targets (Transact-SQL) |Microsoft Docs
+title: server_event_session_targets (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,10 +21,10 @@ ms.assetid: dda4879d-57ae-4267-b410-1ef5c37404c7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d9d3000b38f8cc59ef1349a1e0cd9219a3eb385f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68133189"
 ---
 # <a name="sysserver_event_session_targets-transact-sql"></a>sys.server_event_session_targets (Transact-SQL)
@@ -32,26 +32,26 @@ ms.locfileid: "68133189"
 
   イベント セッションのイベント ターゲットごとに 1 行のデータを返します。  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
-|event_session_id|**int**|イベント セッションの ID。 NULL 値は許可されません。|  
-|target_id|**int**|ターゲットの ID。 ID、イベント セッション オブジェクト内で一意です。 NULL 値は許可されません。|  
-|name|**sysname**|イベント ターゲットの名前。 NULL 値は許可されません。|  
-|package|**sysname**|イベント ターゲットを含むイベント パッケージの名前。 NULL 値は許可されません。|  
-|module|**sysname**|イベント ターゲットを含むモジュールの名前。 NULL 値は許可されません。|  
+|event_session_id|**int**|イベントセッションの ID。 NULL 値は許可されません。|  
+|target_id|**int**|ターゲットの ID。 ID は、イベントセッションオブジェクト内で一意です。 NULL 値は許可されません。|  
+|name|**sysname**|イベントターゲットの名前。 NULL 値は許可されません。|  
+|パッケージ|**sysname**|イベントターゲットを含むイベントパッケージの名前。 NULL 値は許可されません。|  
+|第|**sysname**|イベント ターゲットを含むモジュールの名前。 NULL 値は許可されません。|  
   
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
-## <a name="remarks"></a>コメント  
- このビューには、次のリレーションシップの基数があります。  
+## <a name="remarks"></a>解説  
+ このビューには、次のリレーションシップ基数があります。  
   
 ||||  
 |-|-|-|  
-|From|変換先|リレーションシップ|  
-|sys.server_event_session_targets.event_session_id|sys.server_event_sessions.event_session_id|多対一|  
+|移行元|To|リレーションシップ|  
+|sys.server_event_session_targets.event_session_id|server_event_sessions。 event_session_id|多対一|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Extended Events Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)   
  [拡張イベント](../../relational-databases/extended-events/extended-events.md)  

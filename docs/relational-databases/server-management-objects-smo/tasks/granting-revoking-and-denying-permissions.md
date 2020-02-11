@@ -17,21 +17,22 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 15b5e67dcb5d272eacec84f83734a5db667be975
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74095168"
 ---
 # <a name="granting-revoking-and-denying-permissions"></a>権限の許可、取り消し、および拒否
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
+  
   <xref:Microsoft.SqlServer.Management.Smo.ServerPermission> オブジェクトに対して権限のセットや個別のサーバー権限を割り当てるには、<xref:Microsoft.SqlServer.Management.Smo.ServerPermissionSet> オブジェクトを使用します。 サーバー レベルの権限については、ログオンが参照されます。 Windows によって認証されたログオンは、Windows ユーザー名としてリストされます。 このコード例を実行すると、権限付与対象ユーザーから権限が取り消され、<xref:Microsoft.SqlServer.Management.Smo.Server.EnumServerPermissions%2A> メソッドを使用してこの権限が削除されたことが確認されます。  
   
  データベース権限およびデータベース オブジェクト権限は、<xref:Microsoft.SqlServer.Management.Smo.DatabasePermissionSet> オブジェクトおよび <xref:Microsoft.SqlServer.Management.Smo.ObjectPermissionSet> オブジェクトを使用して、同じように割り当てることができます。  
   
 ## <a name="example"></a>例  
- 提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、「 [Visual Studio&#35; .Net での Visual C SMO プロジェクトの作成](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)」を参照してください。  
+ 提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、「 [Visual Studio .net で Visual C&#35; SMO プロジェクトを作成する](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)」を参照してください。  
   
 ## <a name="granting-server-permissions-in-visual-basic"></a>Visual Basic でのサーバー権限の付与  
  このコード例では、指定されたログインへの Create Endpoint 権限および Alter Any Endpoint 権限を許可し、これらの権限の列挙および表示を行います。 これらの権限のうちの 1 つが呼び出されて、権限が再び列挙されます。 この例では、指定されたログインには、当初に必要な指定の権限があることを前提としています。  
@@ -255,6 +256,6 @@ foreach ( $spi in $spis)
 ```  
   
 ## <a name="see-also"></a>参照  
- [権限の階層 &#40;データベース エンジン&#41;](../../../relational-databases/security/permissions-hierarchy-database-engine.md)  
+ [権限の階層 &#40;データベースエンジン&#41;](../../../relational-databases/security/permissions-hierarchy-database-engine.md)  
   
   

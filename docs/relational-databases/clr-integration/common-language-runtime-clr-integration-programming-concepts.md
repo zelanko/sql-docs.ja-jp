@@ -17,10 +17,10 @@ ms.assetid: 951bf851-3e6e-4361-ae6a-2bcd5b837ebd
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: c314745122f0735b2b26ac2bb021f20f637b2a28
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75256189"
 ---
 # <a name="common-language-runtime-clr-integration-programming-concepts"></a>CLR (共通言語ランタイム) 統合のプログラミング概念
@@ -66,7 +66,7 @@ ms.locfileid: "75256189"
  [CLR 統合アセンブリの管理](../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)  
  CLR 統合のアセンブリの作成および削除方法について説明します。  
   
- [マネージデータベースオブジェクトの監視とトラブルシューティング](../../relational-databases/clr-integration/monitoring-and-troubleshooting-managed-database-objects.md)  
+ [マネージド データベース オブジェクトの監視とトラブルシューティング](../../relational-databases/clr-integration/monitoring-and-troubleshooting-managed-database-objects.md)  
  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で実行されるマネージド データベース オブジェクトとアセンブリの監視およびトラブルシューティングに使用できるツールに関する情報を提供します。  
   

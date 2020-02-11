@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8afa4b2dfb2b140d67644289e93aa2d96eb1697c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63460022"
 ---
 # <a name="delete-rows-in-the-results-pane-visual-database-tools"></a>結果ペイン内の行の削除 (Visual Database Tools)
@@ -43,7 +43,7 @@ ms.locfileid: "63460022"
 >  選択した行をデータベースから削除できない場合、行の削除は行われず、削除できない行を通知するメッセージが表示されます。  
   
 ## <a name="see-also"></a>参照  
- [削除クエリの作成&#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [Visual Database Tools&#41;&#40;Delete クエリを作成する](visual-database-tools.md)   
  [検索基準の指定 (Visual Database Tools)](specify-search-criteria-visual-database-tools.md)  
   
   

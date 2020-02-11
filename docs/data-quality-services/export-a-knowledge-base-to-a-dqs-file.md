@@ -10,10 +10,10 @@ ms.assetid: a324ead5-c8aa-4e26-abe3-ef415add00f8
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 1462fe698ada4786bd0c252f33c8c19e0c5bae7e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251610"
 ---
 # <a name="export-a-knowledge-base-to-a-dqs-file"></a>.dqs ファイルへのナレッジ ベースのエクスポート
@@ -26,14 +26,14 @@ ms.locfileid: "75251610"
   
  エクスポート処理で作成された .dqs データ ファイルは暗号化されるため、内容を表示することはできません。  
   
-##  <a name="BeforeYouBegin"></a>開始する前に  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Prerequisites"></a>応募  
+###  <a name="Prerequisites"></a> 前提条件  
  ナレッジ ベースを .dqs データ ファイルにエクスポートするには、ナレッジ ベースを作成して開いておく必要があります。 エクスポート先の .dqs ファイルを用意する必要はありません。1 .dqs ファイルは作成されます。  
   
-###  <a name="Security"></a>保護  
+###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a>許可  
+####  <a name="Permissions"></a> Permissions  
  ナレッジ ベースを .dqs データ ファイルにエクスポートするには、DQS_MAIN データベースの dqs_kb_editor ロールまたは dqs_administrator ロールが必要です。  
   
 ##  <a name="Export"></a>ナレッジベースを dqs ファイルにエクスポートする  
@@ -49,7 +49,7 @@ ms.locfileid: "75251610"
   **[データ ファイルにエクスポート]** ダイアログ ボックスで、ファイルを保存するフォルダーに移動し、ファイルに名前を付けるかナレッジ ベース名のままにし、**[ファイルの種類]\* を **[DQS データ ファイル (**.dqs)]** のままにして、**[保存]** をクリックします。  
   
 5.  
-  **[ナレッジ ベースのエクスポート]** ダイアログ ボックスで、ステータス行にエクスポートの完了が表示されていることを確認します。 [**OK**] をクリックすると、  
+  **[ナレッジ ベースのエクスポート]** ダイアログ ボックスで、ステータス行にエクスポートの完了が表示されていることを確認します。 **[OK]** をクリックします。  
   
 ##  <a name="FollowUp"></a>補足情報: dqs ファイルにドメインをエクスポートした後  
  ナレッジ ベースを .dqs ファイルにエクスポートした後で、そのナレッジ ベースを (新しい名前で) 同じ [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] にインポートしたり、異なる [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]にインポートしたりできます。  

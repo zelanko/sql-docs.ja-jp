@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: c11561ac71aa72469a809ea25297d62133aa93da
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68891219"
 ---
 # <a name="identifiers-mdx"></a>識別子 (MDX)
@@ -32,19 +32,19 @@ ms.locfileid: "68891219"
   
 1.  最初の文字が次のいずれかである必要があります。  
   
-    -   Unicode 規格 &#xa0;2.0 で定義されている文字。 Unicode の文字の定義には、他の言語の文字に加えて、a ~ z および A ~ Z のラテン文字も含まれます。  
+    -   Unicode 規格&#xA0;2.0 で定義されている文字。 Unicode の文字の定義には、他の言語の文字に加えて、a ~ z および A ~ Z のラテン文字も含まれます。  
   
     -   アンダースコア (_)。  
   
-2.  名前の先頭以外では、次の文字を使用できます。  
+2.  後続の文字は次のようになります。  
   
-    -   Unicode 規格 &#xa0;2.0 で定義されているようになりました。  
+    -   Unicode 規格&#xA0;2.0 で定義されている文字  
   
     -   Basic Latin スクリプトまたはその他の各国スクリプトの 10 進数  
   
     -   アンダースコア (_)。  
   
-3.  MDX の予約されたキーワードを識別子にすることはできません。 MDX では、予約済みキーワードの大文字と小文字は区別されません。 詳細については、「 [Reserved &#40;Keywords&#41;MDX 構文](../mdx/reserved-keywords-mdx-syntax.md)」を参照してください。  
+3.  MDX の予約されたキーワードを識別子にすることはできません。 MDX では、予約済みキーワードの大文字と小文字は区別されません。 詳細については、「 [MDX 構文の予約済みキーワード &#40;&#41;](../mdx/reserved-keywords-mdx-syntax.md)」を参照してください。  
   
 4.  埋め込み型スペースおよび特殊文字は使用できません。  
   
@@ -93,7 +93,7 @@ ms.locfileid: "68891219"
 -   識別子の本体に右角かっこ (]) が含まれている場合は、2つの右角かっこ (]) を指定する必要があります。  
   
 ### <a name="examples-of-delimited-identifiers"></a>区切られた識別子の例  
- 次の MDX ステートメント`Sales Volume` `Sales Cube`では、、、および`select`は区切られた識別子です。  
+ 次の MDX ステートメント`Sales Volume`では、、 `Sales Cube`、および`select`は区切られた識別子です。  
   
  `-- The [Sales Volume] and [Sales Cube] identifiers contain a space.`  
   
@@ -109,9 +109,10 @@ ms.locfileid: "68891219"
   
  `[Total Profit [Domestic]]]`  
   
- `Domestic` の前の左角かっこを変更せずに、区切られた識別子を作成できることに注意してください。 しかし、`Domestic` の後の右角かっこは、2 つの右角かっこに置き換える必要があります。  
+ 
+  `Domestic` の前の左角かっこを変更せずに、区切られた識別子を作成できることに注意してください。 しかし、`Domestic` の後の右角かっこは、2 つの右角かっこに置き換える必要があります。  
   
-### <a name="delimiting-identifiers-with-multiple-parts"></a>複数の部分に区切られた識別子  
+### <a name="delimiting-identifiers-with-multiple-parts"></a>複数の部分で識別子を区切る  
  修飾されたオブジェクト名を使用する場合、オブジェクト名を構成する識別子の1つ以上を区切る必要があります。 たとえば、次のコードのフロントブレーキ識別子には、区切り記号を使用する必要があります。  
   
  [Measures] を選択します。列のメンバー、  
@@ -122,9 +123,9 @@ ms.locfileid: "68891219"
   
  また、前の例の Measures 識別子は、複数の識別子を区切るために区切られています。  
   
-## <a name="see-also"></a>関連項目  
- [MDX 言語リファレンス &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)   
+## <a name="see-also"></a>参照  
+ [Mdx 言語リファレンス &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)   
  [MDX クエリの基礎 &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)   
- [Mdx 構文要素&#40;mdx&#41;](../mdx/mdx-syntax-elements-mdx.md)  
+ [Mdx 構文要素 &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

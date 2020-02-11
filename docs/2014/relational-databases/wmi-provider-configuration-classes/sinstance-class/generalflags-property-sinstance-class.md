@@ -1,5 +1,5 @@
 ---
-title: GeneralFlags プロパティ (SInstance クラス) |Microsoft Docs
+title: 一般フラグプロパティ (SInstance クラス) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,14 +19,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: b5d59bf8398d43304f4888f3a3ad3a93b98b70ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63137263"
 ---
 # <a name="generalflags-property-sinstance-class"></a>GeneralFlags プロパティ (SInstance クラス)
-  関連付けられている一般的なフラグを取得のインスタンス[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]します。  
+  の[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンスに関連付けられた一般的なフラグを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,15 +37,16 @@ object
 ```  
   
 ## <a name="parts"></a>要素  
- *object*  
- [SInstance クラス](sinstance-class.md)サーバー インスタンスを表すオブジェクト。  
+ *素材*  
+ サーバーインスタンスを表す[Sinstance クラス](sinstance-class.md)オブジェクト。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスによってサポートされる一般的なフラグを表すオブジェクトの配列。  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスによってサポートされる一般的なフラグを表すオブジェクトの配列。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
   
 ## <a name="see-also"></a>参照  
- [サーバー ネットワーク プロトコルとネットワーク ライブラリの構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [サーバーのネットワーク プロトコルと Net-Library の構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

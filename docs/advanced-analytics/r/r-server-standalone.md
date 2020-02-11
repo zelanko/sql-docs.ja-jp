@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 2412bfb8bcd3cacc2db2702879353b92e328b09a
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727387"
 ---
 # <a name="what-are-standalone-machine-learning-server-or-r-server-in-sql-server"></a>SQL Server でのスタンドアロン Machine Learning Server または R Server とは
@@ -30,7 +30,7 @@ SQL Server 2016 では、この機能は **R Server (スタンドアロン)** �
 
 SQL Server 2016 は R のみです。 SQL Server 2017 では、R と Python がサポートされています。 次の表では、各バージョンの機能について説明します。
 
-| コンポーネント | [説明] |
+| コンポーネント | 説明 |
 |-----------|-------------|
 | R パッケージ | [**RevoScaleR**](ref-r-revoscaler.md) は、データ操作、変換、視覚化、および分析を行うための機能を備えた、スケーラブルな R のためのプライマリ ライブラリです。  <br/>[**MicrosoftML**](ref-r-microsoftml.md) は、機械学習アルゴリズムを追加して、テキスト分析、画像分析、感情分析のためのカスタム モデルを作成します。 <br/>[**sqlRUtils**](ref-r-sqlrutils.md) には、R スクリプトを T-SQL ストアド プロシージャに配置したり、ストアド プロシージャをデータベースに登録したり、R 開発環境からストアド プロシージャを実行したりするためのヘルパー関数が用意されています。<br/>[**mrsdeploy**](operationalization-with-mrsdeploy.md) では、Web サービスのデプロイが提供されます (SQL Server 2017 のみ)。 <br/>[**olapR**](ref-r-olapr.md) は、R で MDX クエリを指定するためのものです。|
 | Microsoft R Open (MRO) | [**MRO**](https://mran.microsoft.com/open) は、Microsoft による R のオープンソース ディストリビューションです。パッケージとインタープリターが含まれています。 セットアップでバンドルされているバージョンの MRO を常に使用してください。 |
@@ -50,7 +50,7 @@ SQL Server から切り離された独立したサーバーとして、R およ�
 
 SQL Server の付属物として、スタンドアロン サーバーは、ローカルとリモートの両方のコンピューティングが必要な場合に、強力な開発環境としても役立ちます。 スタンドアロン サーバー上の R および Python パッケージは、データベース エンジンのインストールで提供されるものと同じであり、コードの移植性を確保して、[コンピューティング コンテキストの切り替え](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-compute-context)を可能にします。
 
-## <a name="how-to-get-started"></a>開始する方法
+## <a name="how-to-get-started"></a>ファースト ステップ
 
 セットアップを開始し、お気に入りの開発ツールにバイナリ ファイルをアタッチして、最初のスクリプトを記述します。
 
@@ -74,7 +74,7 @@ RevoScaleR、revoscalepy、および機械学習アルゴリズムの関数を�
   
   + [25 個の関数で R と RevoScaleR を探索する](https://docs.microsoft.com/machine-learning-server/r/tutorial-r-to-revoscaler):基本的な R コマンドから始めて、R ソリューションにハイ パフォーマンスとスケーリングを提供する、RevoScaleR の再頒布可能な分析関数に進みます。 最も一般的な R モデリング パッケージ (K-平均法クラスタリング、デシジョン ツリー、デシジョン フォレストなど) の並列化可能なバージョンの多くと、データ操作のツールを含みます。
 
-  + [クイックスタート: microsoftml Python パッケージを使用した二項分類の例](https://docs.microsoft.com/machine-learning-server/python/quickstart-binary-classification-with-microsoftml):microsoftml の関数と周知の乳がんデータセットを使用して、二項分類モデルを作成します。
+  + [クイック スタート: microsoftml Python パッケージを使用した二項分類の例](https://docs.microsoft.com/machine-learning-server/python/quickstart-binary-classification-with-microsoftml):microsoftml の関数と周知の乳がんデータセットを使用して、二項分類モデルを作成します。
 
 タスクに最適な言語を選択します。 R は、SQL を使用して実装するのが困難な統計計算に最適です。 データに対するセット ベースの処理の場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の機能を活用して最大のパフォーマンスを実現します。 列の計算を非常に高速で行うには、メモリ内データベース エンジンを使用します。
 

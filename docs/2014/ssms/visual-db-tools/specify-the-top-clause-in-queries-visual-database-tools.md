@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7f9587a5e653d2df8cbe169fe5030542b86d8aaf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63194964"
 ---
 # <a name="specify-the-top-clause-in-queries-visual-database-tools"></a>クエリでの TOP 句の指定 (Visual Database Tools)
@@ -51,8 +51,8 @@ ms.locfileid: "63194964"
 > [!NOTE]  
 >  SQL ペインで TOP 句を編集することで、 **[Top の指定]** の子プロパティの値を変更することもできます。  
   
-## <a name="see-also"></a>関連項目  
- [クエリおよびビューの操作方法に関するトピックを設計&#40;Visual Database Tools&#41;](visual-database-tools.md)   
+## <a name="see-also"></a>参照  
+ [クエリおよびビューのデザイン方法に関するトピック &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [クエリのプロパティ (Visual Database Tools)](query-properties-visual-database-tools.md)  
   
   

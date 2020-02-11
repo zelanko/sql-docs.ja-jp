@@ -1,6 +1,6 @@
 ---
-title: '[カスタマイズ] ([コマンド] ページ) | Microsoft Docs'
-ms.custom: ''
+title: '[カスタマイズ] \([コマンド] ページ)'
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,22 +12,22 @@ f1_keywords:
 ms.assetid: c8965f2c-51d9-437d-a6f3-8ac2075ede6b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2fd07b342977603f6983c4d9389ac1c6b7934629
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 8c4e138eb6b530377b76fcb6e6fb21a2694bce63
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68259424"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255700"
 ---
 # <a name="customize-commands-page"></a>[カスタマイズ] \([コマンド] ページ)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 このダイアログ ボックスでは、ツール バーおよびメニューのコマンドを追加したり、削除したりできます。また、ツール バー ボタンやメニュー コマンドに使用されているイメージを変更できます。 **[コマンド]** ページにアクセスするには、 **[ツール]** メニューの **[カスタマイズ]** をクリックし、次に **[コマンド]** をクリックします。  
   
 ## <a name="uielement-list"></a>UI 要素の一覧  
-**カテゴリ**  
+**Categories (カテゴリ)**  
 **[コマンド]** リスト ボックスに表示されるコマンドのセットを指定します。 コマンドのカテゴリは、現在の環境がサポートしているツールおよびデザイナーによって提供されたメニュー タイトルに基づいています。 このタイトルの一覧は動的であるため、カテゴリの順序とメニュー タイトルは、ツールとデザイナーおよび実行されたカスタマイズによって異なります。 したがって、異なるデザイナーの 2 つのメニューが同じ名前を持つ可能性があります。その場合、同じタイトルが 2 回表示されても別のコマンド セットが表示されます。  
   
-**[コマンド]**  
+**コマンド**  
 選択されているカテゴリに基づいて、コマンドおよびコマンド イメージを表示します。 コマンドをカスタマイズするツール バーにドラッグします。  
   
 **[選択したボタンの編集]**  

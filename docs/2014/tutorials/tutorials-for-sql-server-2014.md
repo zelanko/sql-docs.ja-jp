@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: be20c79c4c44d65b4d6b1177d06cea5ef66c164b
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75242055"
 ---
 # <a name="tutorials-for-sql-server-2014"></a>SQL Server 2014 チュートリアル
@@ -42,15 +42,12 @@ ms.locfileid: "75242055"
 ## <a name="in-this-section"></a>このセクションの内容  
  チュートリアルは、以下の [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] テクノロジに対して使用できます。  
   
-|テクノロジ|説明|  
+|テクノロジ|[説明]|  
 |----------------|-----------------|  
-|[Analysis Services チュートリアル &#40;SSAS&#41;](https://docs.microsoft.com/analysis-services/analysis-services-tutorials-ssas)|
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] テーブルまたは多次元モデルを開発および配置する方法について説明します。 また、PowerPivot などのツールを使用して、モデル内のデータを分析する方法についても説明します。|  
-|[SSRS&#41;&#40;チュートリアル Reporting Services](../reporting-services/reporting-services-tutorials-ssrs.md)|基本的なレポートとサブスクリプションを作成する方法について説明します。|  
-|[Integration Services チュートリアル](../integration-services/integration-services-tutorials.md)|
-  [!INCLUDE[ssIS](../includes/ssis-md.md)] パッケージの作成と配置の方法を学習します。|  
-|[データベースエンジンチュートリアル](../relational-databases/database-engine-tutorials.md)|データベース エンジンのインスタンスに接続してから、Transact-SQL ステートメントを構築および実行する方法について説明します。|  
-|[レプリケーションのチュートリアル](../relational-databases/replication/replication-tutorials.md)|
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]を使用してレプリケーション トポロジをセットアップして実行する方法について説明します。|  
+|[Analysis Services チュートリアル (SSAS)](https://docs.microsoft.com/analysis-services/analysis-services-tutorials-ssas)|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] テーブルまたは多次元モデルを開発および配置する方法について説明します。 また、PowerPivot などのツールを使用して、モデル内のデータを分析する方法についても説明します。|  
+|[Reporting Services チュートリアル &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)|基本的なレポートとサブスクリプションを作成する方法について説明します。|  
+|[Integration Services のチュートリアル](../integration-services/integration-services-tutorials.md)|[!INCLUDE[ssIS](../includes/ssis-md.md)] パッケージの作成と配置の方法を学習します。|  
+|[データベース エンジンのチュートリアル](../relational-databases/database-engine-tutorials.md)|データベース エンジンのインスタンスに接続してから、Transact-SQL ステートメントを構築および実行する方法について説明します。|  
+|[レプリケーションのチュートリアル](../relational-databases/replication/replication-tutorials.md)|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]を使用してレプリケーション トポロジをセットアップして実行する方法について説明します。|  
 |[Enterprise Information Management のチュートリアル](../../2014/tutorials/enterprise-information-management-tutorials.md)|Microsoft EIM テクノロジを使用して企業の情報を管理する方法について説明します。|  
   

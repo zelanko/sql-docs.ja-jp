@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 4e8e38a3ff3f40f44c911a277f99ab9b629c7c87
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68038194"
 ---
 # <a name="mdx-data-definition---drop-member"></a>MDX データ操作 - DROP MEMBER
@@ -32,13 +32,13 @@ DROP MEMBER
   
 ## <a name="arguments"></a>引数  
  *Cube_Name*  
- キューブ名を提供する有効な文字列式。  
+ キューブ名を提供する有効な文字列式です。  
   
  *Member_Identifier*  
- メンバー名またはメンバー キーを提供する有効な文字列式。  
+ メンバー名またはメンバーキーを提供する有効な文字列式です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [CREATE MEMBER ステートメント &#40;MDX&#41;](../mdx/mdx-data-definition-create-member.md)   
- [MDX データ定義ステートメント&#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
+ [Mdx&#41;&#40;mdx データ定義ステートメント](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

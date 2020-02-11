@@ -1,5 +1,5 @@
 ---
-title: 何かテーブル以外のアイテム (Visual Database Tools) を使用してクエリを作成する |Microsoft Docs
+title: テーブル以外のものを使用してクエリを作成する方法 (Visual Database Tools) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f6cd83135da7e5c9f4dac9e41ff562551d14ab20
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63184326"
 ---
 # <a name="create-queries-using-something-besides-a-table-visual-database-tools"></a>テーブル以外のアイテムを使用したクエリの作成 (Visual Database Tools)
@@ -147,6 +147,6 @@ FROM
   
 ```  
   
- "VPA30890F" は、取得の対象となる組織の管理者の emp_id を示しています。 ユーザー定義関数をクエリに追加する方法については、「[クエリへのテーブルの追加 (Visual Database Tools)](visual-database-tools.md)」を参照してください。 ユーザー定義関数の詳しい説明については、「[ユーザー定義関数](../../relational-databases/user-defined-functions/user-defined-functions.md)」を参照してください。  
+ "VPA30890F" は、取得の対象となる組織の管理者の emp_id を示しています。 ユーザー定義関数をクエリに追加する方法については、「[クエリへのテーブルの追加 (Visual Database Tools)](visual-database-tools.md)」を参照してください。 ユーザー定義関数の詳しい説明については、「 [ユーザー定義関数](../../relational-databases/user-defined-functions/user-defined-functions.md)」を参照してください。  
   
   

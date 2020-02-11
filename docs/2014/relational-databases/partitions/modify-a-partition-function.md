@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0d43e86596e30352286cb94e8994177247856a7c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206982"
 ---
 # <a name="modify-a-partition-function"></a>パーティション関数の変更
@@ -29,7 +29,7 @@ ms.locfileid: "68206982"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **次を使用してパーティション関数を変更するには:**  
   
@@ -43,7 +43,7 @@ ms.locfileid: "68206982"
   
 -   ALTER PARTITION FUNCTION は、1 つのパーティションを 2 つに分割するか、または 2 つのパーティションを 1 つにマージする目的にのみ使用できます。 テーブルまたはインデックスのパーティション分割方法を変更する (たとえば 10 個のパーティションから 5 個のパーティションに変更する) には、次のいずれかの方法を使用できます。  
   
-    -   適切なパーティション関数でパーティション テーブルを新規作成し、INSERT INTO ...SELECT FROM [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントまたは [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の**パーティションの管理ウィザード**で古いテーブルから新しいテーブルにデータを挿入します。  
+    -   適切なパーティション関数でパーティション テーブルを新規作成し、INSERT INTO ...SELECT FROM [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントまたは **の** パーティションの管理ウィザード [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で古いテーブルから新しいテーブルにデータを挿入します。  
   
     -   パーティション分割されたクラスター化インデックスを、ヒープ上に作成します。  
   

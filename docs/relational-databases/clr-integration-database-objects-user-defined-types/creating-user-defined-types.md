@@ -14,18 +14,20 @@ helpviewer_keywords:
 ms.assetid: 0feb8b08-4062-467b-8433-e88e4e302738
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3f08067c55110b801cd989e0be1c9fbc6955cb61
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 54aa7db3d2c2ea0d268874f0d59c3096b8e1a0ae
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68028272"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76911086"
 ---
 # <a name="creating-user-defined-types"></a>ユーザー定義型の作成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にインストールできる UDT (ユーザー定義型) を作成するには、まず、サポートされるいずれかの .NET Framework プログラミング言語 (Visual C# や Visual Basic など) のクラスを作成する必要があります。これは、UDT の作成に関する仕様に準拠しています。 その後、クラスを DLL (ダイナミック リンク ライブラリ) にコンパイルできます。この DLL は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に読み込むことができます。 また、Visual Studio を使用して UDT を作成し、配置することもできます。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、CLR (共通言語ランタイム) コードを実行する機能は、既定ではオフに設定されています。 使用して、CLR を有効にすることができます、 **sp_configure** 、次に示すように、システム ストアド プロシージャ、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメント。  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、CLR (共通言語ランタイム) コードを実行する機能は、既定ではオフに設定されています。 CLR を有効にするには、 **** 次[!INCLUDE[tsql](../../includes/tsql-md.md)]のステートメントに示すように、sp_configure システムストアドプロシージャを使用します。  
   
 ```  
 sp_configure 'clr enabled', 1  
@@ -40,9 +42,9 @@ Reconfigure
  ユーザー定義型の作成に関連するコーディング技法について説明します。  
   
 ## <a name="example"></a>例  
- 次のコード リストはで詳しく説明されている Point UDT の定義[Coding User-Defined 型](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md)します。  
+ 次のコードリストでは、Point UDT を定義しています。これについては、「[ユーザー定義型のコーディング](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md)」で詳しく説明します。  
   
- このセクションで説明している他の例の完全なコード リストは、CLR サンプルをインストールして入手できます。 これらのサンプルをインストールする方法の詳細については、次を参照してください。 [SQL Server データベース エンジン サンプル](https://msftengprodsamples.codeplex.com/)します。  
+ このセクションで説明している他の例の完全なコード リストは、CLR サンプルをインストールして入手できます。 これらのサンプルをインストールする手順については、「 [SQL Server データベースエンジンサンプル](https://msftengprodsamples.codeplex.com/)」を参照してください。  
   
  C#  
   
@@ -84,7 +86,7 @@ public struct Point : INullable
     public override string ToString()  
     {  
         // Since InvokeIfReceiverIsNull defaults to 'true'  
-        // this test is unneccesary if Point is only being called  
+        // this test is unnecessary if Point is only being called  
         // from SQL.  
         if (this.IsNull)  
             return "NULL";  
@@ -233,7 +235,7 @@ Imports System.Text
     ' Use StringBuilder to provide string representation of UDT.  
     Public Overrides Function ToString() As String  
         ' Since InvokeIfReceiverIsNull defaults to 'true'  
-        ' this test is unneccesary if Point is only being called  
+        ' this test is unnecessary if Point is only being called  
         ' from SQL.  
         If Me.IsNull Then  
             Return "NULL"  

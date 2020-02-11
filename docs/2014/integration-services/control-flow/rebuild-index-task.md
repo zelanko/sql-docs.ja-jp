@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9e89c081c1c543c198a827955ab4865709ead391
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62830426"
 ---
 # <a name="rebuild-index-task"></a>インデックスの再構築タスク
@@ -41,7 +41,7 @@ ms.locfileid: "62830426"
 -   ONLINE = ON と設定すると、テーブルをロックしたままにせず、インデックスの再構築中に基になるテーブルに対するクエリまたは更新を行えるようになります。  
   
 > [!NOTE]  
->  オンラインでのインデックス操作は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 エディションでサポートされている機能の一覧については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を参照してください[機能は、SQL Server 2014 の各エディションでサポートされている](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  
+>  オンラインでのインデックス操作は、[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのエディションで使用できるわけではありません。 の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各エディションでサポートされる機能の一覧については、「 [SQL Server 2014 の各エディションがサポートする機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)」を参照してください。  
   
  ALTER INDEX ステートメントおよびインデックスの再構築オプションの詳細については、「[ALTER INDEX (Transact-SQL)](/sql/t-sql/statements/alter-index-transact-sql)」を参照してください。  
   
@@ -51,9 +51,10 @@ ms.locfileid: "62830426"
 ## <a name="configuration-of-the-rebuild-index-task"></a>インデックスの再構築タスクの構成  
  プロパティは、 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーから設定できます。 このタスクは、 **デザイナーの** [ツールボックス] **の** [メンテナンス プランのタスク] [!INCLUDE[ssIS](../../../includes/ssis-md.md)] に表示されます。  
   
- [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックを参照してください。  
+ 
+  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックを参照してください。  
   
- [[インデックスの再構築タスク] (メンテナンス プラン)](../../relational-databases/maintenance-plans/rebuild-index-task-maintenance-plan.md)  
+ [インデックスの再構築タスク &#40;メンテナンスプラン&#41;](../../relational-databases/maintenance-plans/rebuild-index-task-maintenance-plan.md)  
   
 ## <a name="related-tasks"></a>Related Tasks  
  これらのプロパティを [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーで設定する方法の詳細については、「 [タスクまたはコンテナーのプロパティを設定する](../set-the-properties-of-a-task-or-container.md)」を参照してください。  

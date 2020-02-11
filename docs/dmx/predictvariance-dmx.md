@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 83bcd95d6eb946d15884d57550b826bc7379fb64
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68041695"
 ---
 # <a name="predictvariance-dmx"></a>PredictVariance (DMX)
@@ -28,16 +28,16 @@ PredictVariance(<scalar column reference>)
 ```  
   
 ## <a name="applies-to"></a>適用対象  
- スカラー列です。  
+ スカラー列。  
   
 ## <a name="return-type"></a>戻り値の型  
- 指定された型のスカラー値 *\<スカラー列参照 >* します。  
+ * \<スカラー列参照>* によって指定された型のスカラー値。  
   
-## <a name="remarks"></a>コメント  
- 列参照が不連続で場合**PredictVariance**不連続の値から分散を計算することはできませんので、0 を返します。  
+## <a name="remarks"></a>解説  
+ 列参照が不連続の場合、 **Predictvariance**は0を返します。これは、不連続値から分散を計算できないためです。  
   
-## <a name="examples"></a>使用例  
- 次の例では、自然予測結合を使用して、個人が TM Decision Tree マイニング モデルに基づいた自転車購入者である可能性を判断し、予測の分散も判断します。  
+## <a name="examples"></a>例  
+ 次の例では、自然予測結合を使用して、個人が TM デシジョンツリーマイニングモデルに基づいた自転車購入者である可能性があるかどうかを判断し、さらに予測の分散を決定します。  
   
 ```  
 SELECT  
@@ -53,9 +53,9 @@ NATURAL PREDICTION JOIN
   0 AS [Number Children At Home]) AS t  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [データ マイニング拡張機能&#40;DMX&#41;関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [関数&#40;DMX&#41;](../dmx/functions-dmx.md)   
- [一般的な予測関数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
+## <a name="see-also"></a>参照  
+ [DMX&#41; 関数リファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [DMX&#41;&#40;関数](../dmx/functions-dmx.md)   
+ [DMX&#41;&#40;一般的な予測関数](../dmx/general-prediction-functions-dmx.md)  
   
   

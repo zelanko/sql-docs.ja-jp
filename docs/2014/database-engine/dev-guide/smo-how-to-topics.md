@@ -11,19 +11,21 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4b100c23c1600a9c5fe4af9a39e16f8bd861656f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62781937"
 ---
 # <a name="smo-how-to-topics"></a>SMO の使用法に関するトピック
   SMO に関するトピックでは、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .NET プログラミング環境を設定して、[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] または C# でプログラムを作成する方法について説明します。  
   
  [Visual Studio .NET での Visual Basic SMO プロジェクトの作成](../../../2014/database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)  
- [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .NET プログラミング環境を設定し、[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] を使用して SMO コンソール アプリケーションを作成する方法を説明します。  
+ 
+  [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .NET プログラミング環境を設定し、[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] を使用して SMO コンソール アプリケーションを作成する方法を説明します。  
   
- [Visual C の作成&#35;Visual Studio .NET での SMO プロジェクト](../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)  
- [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .NET プログラミング環境を設定し、Visual C# を使用して SMO コンソール アプリケーションを作成する方法を説明します。  
+ [Visual Studio .NET で Visual C&#35; SMO プロジェクトを作成する](../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)  
+ 
+  [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .NET プログラミング環境を設定し、Visual C# を使用して SMO コンソール アプリケーションを作成する方法を説明します。  
   
   

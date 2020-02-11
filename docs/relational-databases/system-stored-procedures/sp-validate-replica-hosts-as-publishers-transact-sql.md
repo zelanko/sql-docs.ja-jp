@@ -17,10 +17,10 @@ ms.assetid: 45001fc9-2dbd-463c-af1d-aa8982d8c813
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 9375be2a2af2b7653b3f0f036405533f1571ff3f
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75320006"
 ---
 # <a name="sp_validate_replica_hosts_as_publishers-transact-sql"></a>sp_validate_replica_hosts_as_publishers (Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "75320006"
 
   **sp_validate_replica_hosts_as_publishers**は、現在のプライマリレプリカだけではなく、すべてのセカンダリレプリカを検証できるようにする**sp_validate_redirected_publisher**の拡張機能です。 **sp_validate_replicat_hosts_as_publisher**は Always On レプリケーショントポロジ全体を検証します。 **sp_validate_replica_hosts_as_publishers**は、ダブルホップセキュリティエラー (21892) を回避するために、リモートデスクトップセッションを使用してディストリビューターで直接実行する必要があります。  
   
- ![トピックリンクアイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-sql 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
@@ -51,9 +51,9 @@ sp_validate_replica_hosts_as_publishers
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- なし。  
+ [なし] :  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  パブリッシャーとパブリッシングデータベースのエントリが存在しない場合、 **sp_validate_redirected_publisher**出力パラメーター * \@redirected_publisher*に null が返されます。 それ以外の場合は、成功と失敗の両方で、関連するリダイレクトされたパブリッシャーが返されます。  
   
  検証が成功した場合、 **sp_validate_redirected_publisher**は成功を示す値を返します。  

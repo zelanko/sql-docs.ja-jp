@@ -1,5 +1,5 @@
 ---
-title: Ibcpsession::bcpinit (OLE DB) |Microsoft Docs
+title: 'IBCPSession:: BCPInit (OLE DB) |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fc9983cea171eb78f4b3b4f2b9c5cb9f31ecb2d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63033595"
 ---
 # <a name="ibcpsessionbcpinit-ole-db"></a>IBCPSession::BCPInit (OLE DB)
@@ -37,12 +37,16 @@ const wchar_t *pwszErrorFile,
 inteDirection);  
 ```  
   
-## <a name="remarks"></a>コメント  
- **BCPInit** メソッドは、他のすべての一括コピー メソッドの前に呼び出す必要があります。 **BCPInit** メソッドにより、ワークステーションと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] との間のデータの一括コピーに必要な初期化が実行されます。  
+## <a name="remarks"></a>解説  
+ 
+  **BCPInit** メソッドは、他のすべての一括コピー メソッドの前に呼び出す必要があります。 
+  **BCPInit** メソッドにより、ワークステーションと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] との間のデータの一括コピーに必要な初期化が実行されます。  
   
- **BCPInit** メソッドは、データ ファイルではなく、データベースのコピー元テーブルまたはコピー先テーブルの構造を調べます。 また、データベース テーブル、ビュー、または SELECT 結果セット内の各列に基づいてデータ ファイルのデータ形式値を指定します。 このデータ形式値には、各列のデータ型、長さや NULL のインジケーターとターミネータのバイト文字列がデータ内に存在するかどうか、および固定長データ型の幅の指定などが含まれます。 **BCPInit** メソッドでは、これらの値を次のように設定します。  
+ 
+  **BCPInit** メソッドは、データ ファイルではなく、データベースのコピー元テーブルまたはコピー先テーブルの構造を調べます。 また、データベース テーブル、ビュー、または SELECT 結果セット内の各列に基づいてデータ ファイルのデータ形式値を指定します。 このデータ形式値には、各列のデータ型、長さや NULL のインジケーターとターミネータのバイト文字列がデータ内に存在するかどうか、および固定長データ型の幅の指定などが含まれます。 
+  **BCPInit** メソッドでは、これらの値を次のように設定します。  
   
--   指定するデータ型は、データベース テーブル、ビュー、または SELECT 結果セット内の列のデータ型です。 データ型によって列挙[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で指定されたネイティブ データ型、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ヘッダー ファイル (sqlncli.h)。 列挙される値の形式は、BCP_TYPE_XXX です。 データはそのコンピューターの形式で表されます。 つまり、integer データ型の列のデータは、データ ファイルを作成したコンピューターに基づいて、ビッグ エンディアンまたはリトル エンディアンの 4 バイト シーケンスで表されます。  
+-   指定するデータ型は、データベース テーブル、ビュー、または SELECT 結果セット内の列のデータ型です。 データ型は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native Client ヘッダーファイル (sqlncli) で指定されたネイティブデータ型によって列挙されます。 列挙される値の形式は、BCP_TYPE_XXX です。 データはそのコンピューターの形式で表されます。 つまり、integer データ型の列のデータは、データ ファイルを作成したコンピューターに基づいて、ビッグ エンディアンまたはリトル エンディアンの 4 バイト シーケンスで表されます。  
   
 -   データベースのデータ型が固定長の場合は、データ ファイルのデータも固定長になります。 データを処理する一括コピー メソッド ([IBCPSession::BCPExec](ibcpsession-bcpexec-ole-db.md) など) では、データ行が解析されます。データ ファイル内のデータの長さは、データベース テーブル、ビュー、または SELECT 列リスト内で指定されるデータの長さと同じでなければなりません。 たとえば、`char(13)` で定義されているデータベース列のデータは、ファイル内の各データ行に 13 文字で表す必要があります。 データベース列で NULL 値を許容する場合は、固定長データにプレフィックスとして NULL インジケーターを付けることができます。  
   
@@ -50,12 +54,13 @@ inteDirection);
   
 -   データを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にコピーするときは、データ ファイル内の列の序数位置がデータベース テーブル内の列の序数位置と同じであることが必要です。 データを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からコピーするときは、**BCPExec** メソッドによりデータベース テーブル内の列の序数位置に基づいてデータが配置されます。  
   
--   データベースのデータ型が可変長 (`varbinary(22)` など) の場合、またはデータベース列に NULL 値を格納できる場合は、データ ファイル内のデータにプレフィックスとして長さのインジケーターや NULL インジケーターを付けることができます。 インジケーターの幅は、データ型と一括コピーのバージョンによって異なります。 [IBCPSession::BCPControl](ibcpsession-bcpcontrol-ole-db.md) メソッドのオプションである BCP_OPTION_FILEFMT では、データ内のインジケーターの幅が必要な幅より狭くなる時点を示すことで、以前の一括コピー データ ファイルと最新バージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行しているサーバーとの間の互換性を確保しています。  
+-   データベースのデータ型が可変長 (`varbinary(22)` など) の場合、またはデータベース列に NULL 値を格納できる場合は、データ ファイル内のデータにプレフィックスとして長さのインジケーターや NULL インジケーターを付けることができます。 インジケーターの幅は、データ型と一括コピーのバージョンによって異なります。 
+  [IBCPSession::BCPControl](ibcpsession-bcpcontrol-ole-db.md) メソッドのオプションである BCP_OPTION_FILEFMT では、データ内のインジケーターの幅が必要な幅より狭くなる時点を示すことで、以前の一括コピー データ ファイルと最新バージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行しているサーバーとの間の互換性を確保しています。  
   
 > [!NOTE]  
 >  データ ファイルに指定したデータ形式値を変更するには、[IBCPSession::BCPColumns](ibcpsession-bcpcolumns-ole-db.md) メソッドと [IBCPSession::BCPColFmt](ibcpsession-bcpcolfmt-ole-db.md) メソッドを使用します。  
   
- テーブルにインデックスが含まれていない場合は、データベース オプション **select into/bulkcopy** を設定することにより、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への一括コピーを最適化できます。  
+ テーブルにインデックスが含まれていない場合は、データベース オプション [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]select into/bulkcopy** を設定することにより、** への一括コピーを最適化できます。  
   
 ## <a name="arguments"></a>引数  
  *pwszTable*[in]  
@@ -69,9 +74,9 @@ inteDirection);
  コピー操作の対象になるユーザー ファイルの名前を指定します。  
   
  *pwszErrorFile*[in]  
- 進行状況メッセージ、エラー メッセージ、およびユーザー ファイルからテーブルにコピーできなかった行のコピーを格納するエラー ファイルの名前を指定します。 場合、 *pwszErrorFile*引数が NULL に設定されている、エラー ファイルは使用されません。  
+ 進行状況メッセージ、エラー メッセージ、およびユーザー ファイルからテーブルにコピーできなかった行のコピーを格納するエラー ファイルの名前を指定します。 *PwszErrorFile*引数が NULL に設定されている場合、エラーファイルは使用されません。  
   
- *eDirection*[in]  
+ *Edirection*[in]  
  コピー操作の方向として、BCP_DIRECTION_IN か BCP_DIRECTION _OUT のいずれかを設定します。 BCP_DIRECTION _IN はユーザー ファイルからデータベース テーブルへのコピーを示します。BCP_DIRECTION _OUT はデータベース テーブルからユーザー ファイルへのコピーを示します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  

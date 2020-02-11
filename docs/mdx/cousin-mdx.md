@@ -1,5 +1,5 @@
 ---
-title: Cousin (MDX) |Microsoft Docs
+title: いとこ (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 8a98d496467e2fd75924b0067257f192c79cdf6e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68047248"
 ---
-# <a name="cousin-mdx"></a>Cousin (MDX)
+# <a name="cousin-mdx"></a>いとこ (MDX)
 
 
-  同じ相対位置として、指定した子メンバーの親メンバーの子メンバーを返します。  
+  親メンバーの下で、指定した子メンバーと同じ相対位置にある子メンバーを返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -28,17 +28,17 @@ Cousin( Member_Expression , Ancestor_Member_Expression )
 ```  
   
 ## <a name="arguments"></a>引数  
- *メンバー式*  
+ *Member_Expression*  
  メンバーを 1 つ返す有効な多次元式 (MDX) 式です。  
   
  *Ancestor_Member_Expression*  
- 先祖メンバーを返す有効な多次元式 (MDX) メンバー式。  
+ 先祖メンバーを返す有効な多次元式 (MDX) メンバー式です。  
   
-## <a name="remarks"></a>コメント  
- この関数は、順序、レベル内のメンバーの位置では動作します。 2 つの階層が存在し、一方の階層に 4 つ、他方の階層に 5 つのレベルがあるとすると、一方の階層の 3 番目のレベルに対応する "いとこ" の位置関係に当たる子メンバーは他方の階層の 3 番目のレベルです。  
+## <a name="remarks"></a>解説  
+ この関数は、レベル内のメンバーの順序と位置を操作します。 2 つの階層が存在し、一方の階層に 4 つ、他方の階層に 5 つのレベルがあるとすると、一方の階層の 3 番目のレベルに対応する "いとこ" の位置関係に当たる子メンバーは他方の階層の 3 番目のレベルです。  
   
-## <a name="examples"></a>使用例  
- 次の例では、2003 会計年度の year レベルでは、その先祖に基づいて、2002 会計年度の第 4 四半期の子メンバーを取得します。 取得される子メンバーは、2003 会計年度の第 4 四半期です。  
+## <a name="examples"></a>例  
+ 次の例では、2003年の年のレベルにある先祖に基づいて、2002会計年度の第4四半期のいとこを取得します。 取得される子メンバーは、2003 会計年度の第 4 四半期です。  
   
 ```  
 SELECT Cousin   
@@ -48,7 +48,7 @@ SELECT Cousin
 FROM [Adventure Works]  
 ```  
   
- 次の例では、2004 会計年度の第 2 四半期の quarter レベルでは、その先祖に基づいて 2002 会計年度の 7 月の子メンバーを取得します。 取得される子メンバーは、2003 年 10 月の 1 か月です。  
+ 次の例では、2004年の第2四半期の四半期レベルで、その先祖に基づいて2002年7月の会計年度のいとこを取得します。 取得したいとこは、2003年10月の月です。  
   
 ```  
 SELECT Cousin   
@@ -59,6 +59,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>参照  
- [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Mdx 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

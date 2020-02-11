@@ -13,16 +13,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4dd5d28bb3b40417ab9c16b957b48db04f44599f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63255452"
 ---
 # <a name="types-of-replication"></a>レプリケーションの種類
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、以下の種類のレプリケーションを分散アプリケーションで利用できます。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]には、分散アプリケーションで使用する次の種類のレプリケーションが用意されています。  
   
--   トランザクション レプリケーション。 詳細については、「[Transactional Replication](transactional/transactional-replication.md)」 (トランザクション レプリケーション) を参照してください。  
+-   トランザクション レプリケーション。 詳細については、「 [Transactional Replication](transactional/transactional-replication.md)」 (トランザクション レプリケーション) を参照してください。  
   
 -   マージ レプリケーション。 詳細については、「[Merge Replication](merge/merge-replication.md)」 (マージ レプリケーション) をご覧ください。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "63255452"
   
  スナップショット レプリケーションでは、データの変更は追跡されず、スナップショットが適用されるたびに、既存のデータがすべて上書きされます。 トランザクション レプリケーションでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] トランザクション ログを使用して変更が追跡され、マージ レプリケーションでは、トリガーとメタデータ テーブルを使用して変更が追跡されます。  
   
-## <a name="see-also"></a>関連項目  
- [レプリケーション エージェントの概要](agents/replication-agents-overview.md)  
+## <a name="see-also"></a>参照  
+ [レプリケーションエージェントの概要](agents/replication-agents-overview.md)  
   
   

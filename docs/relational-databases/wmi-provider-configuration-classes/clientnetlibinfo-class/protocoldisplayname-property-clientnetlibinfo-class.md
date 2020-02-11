@@ -18,10 +18,10 @@ ms.assetid: b90755fd-7cac-4bdb-8e45-e95119a7665c
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 32f13ed373bb13b05040bcda3f68cb9890e2d301
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73659410"
 ---
 # <a name="protocoldisplayname-property-clientnetlibinfo-class"></a>ProtocolDisplayName プロパティ (ClientNetLibInfo クラス)
@@ -36,7 +36,7 @@ object.ProtocolDisplayName [= value]
 ```  
   
 ## <a name="parts"></a>要素  
- *object*  
+ *素材*  
  クライアント ネットワーク ライブラリに関する情報を表す [ClientNetLibInfo クラス](../../../relational-databases/wmi-provider-configuration-classes/clientnetlibinfo-class/clientnetlibinfo-class.md) オブジェクト。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  

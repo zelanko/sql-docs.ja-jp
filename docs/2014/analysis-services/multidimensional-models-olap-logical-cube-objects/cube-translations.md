@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c34024f61f5c7b42030e0acb848783e1acae3d6e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62728506"
 ---
 # <a name="cube-translations"></a>キューブの翻訳
@@ -29,7 +29,8 @@ ms.locfileid: "62728506"
   
  簡単な <xref:Microsoft.AnalysisServices.Translation> オブジェクトは、言語 ID 番号およびキャプションの翻訳で構成されます。 言語 ID 番号は、言語 ID を含む `Integer` です。 キャプションの翻訳は、翻訳されたテキストです。  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]キューブの翻訳は、キャプションや表示フォルダーなどのキューブ オブジェクトの名前の言語固有の表現。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]  では、ディメンション名およびメンバー名の翻訳もサポートされています。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]は、キューブの翻訳は、キャプションや表示フォルダーなど、キューブオブジェクトの名前を言語固有で表現したものです。 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]  では、ディメンション名およびメンバー名の翻訳もサポートされています。  
   
  翻訳によって、複数言語を使用するクライアント アプリケーションをサーバーがサポートできるようになります。 同じキューブ データが、異なる国々のユーザーによって表示されることがよくあります。 キューブのさまざまな要素を異なる言語に翻訳できれば、異なる国々のユーザーがキューブのメタデータを表示し、理解するのに役立ちます。 たとえば、フランスのビジネス ユーザーは、フランス語のロケール設定のワークステーションからキューブにアクセスし、オブジェクト プロパティの値をフランス語で表示できます。 同様に、ドイツのビジネス ユーザーがドイツ語のロケール設定のワークステーションから同じキューブにアクセスすると、オブジェクト プロパティの値をドイツ語で表示できます。  
   
@@ -37,7 +38,7 @@ ms.locfileid: "62728506"
   
 ## <a name="see-also"></a>参照  
  [ディメンションの翻訳](../multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)   
- [翻訳&#40;Analysis Services&#41;](../translations-analysis-services.md)   
- [グローバリゼーションのヒントとベスト プラクティス (Analysis Services)](../globalization-tips-and-best-practices-analysis-services.md)  
+ [翻訳 &#40;Analysis Services&#41;](../translations-analysis-services.md)   
+ [グローバリゼーションのヒントとベストプラクティス &#40;Analysis Services&#41;](../globalization-tips-and-best-practices-analysis-services.md)  
   
   

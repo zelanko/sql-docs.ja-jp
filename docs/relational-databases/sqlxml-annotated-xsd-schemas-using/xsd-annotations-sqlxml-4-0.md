@@ -15,17 +15,17 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: acd1dc15531f2e4830993eed1404db4d7205feef
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75246796"
 ---
 # <a name="xsd-annotations-sqlxml-40"></a>XSD 注釈 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   次の表では、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] で導入された XSD 注釈の一覧を示し、これらを [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] で導入された XDR 注釈と比較します。  
   
-|XSD 注釈|説明|トピックリンク|XDR 注釈|  
+|XSD 注釈|[説明]|トピックリンク|XDR 注釈|  
 |--------------------|-----------------|----------------|--------------------|  
 |**sql:encode**|XML 要素または属性を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] BLOB 列にマップするときに、参照 URI を要求します。 この URI は、後で BLOB データを返すために使用できます。|[Sql: encode &#40;SQLXML 4.0&#41;を使用した BLOB データへの URL 参照の要求](../../relational-databases/sqlxml-annotated-xsd-schemas-using/requesting-url-references-to-blob-data-using-sql-encode-sqlxml-4-0.md)|**url エンコード**|  
 |**sql: guid**|列に対し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] により生成される GUID 値を使用するか、アップデートグラムで提供される値を使用するかを指定します。|[sql:identity 注釈と sql:guid 注釈の使用](../../relational-databases/sqlxml-annotated-xsd-schemas-using/using-the-sql-identity-and-sql-guid-annotations.md)|サポートされていません|  

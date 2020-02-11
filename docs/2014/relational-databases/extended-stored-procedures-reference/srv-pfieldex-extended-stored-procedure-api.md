@@ -21,16 +21,17 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 8bacfd4f955f60b17b439c8066a3b1cba2c52392
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63126950"
 ---
 # <a name="srv_pfieldex-extended-stored-procedure-api"></a>srv_pfieldex (拡張ストアド プロシージャ API)
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]代わりに CLR Integration をご使用ください。  
+>  
+  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]代わりに CLR Integration をご使用ください。  
   
  要求された SRV_PROC フィールドを格納したデータへのポインターを返します。  
   
@@ -52,24 +53,28 @@ len
  *srvproc*  
  特定のクライアント接続のためのハンドルである SRV_PROC 構造体を指すポインターです。 この構造体には、アプリケーションとクライアントの間の通信やデータを管理するために、拡張ストアド プロシージャ API ライブラリで使用する情報が格納されます。  
   
- *field*  
+ *分野*  
  返す *srvproc* フィールドを指定します。  
   
-|フィールド|説明|戻り値の型|  
+|フィールド|[説明]|戻り値の型|  
 |-----------|-----------------|------------------|  
 |SRV_MSGLCID|現在のセッションのメッセージ LCID。|ULONG*|  
 |SRV_INSTANCENAME|インスタンス名 (指定されている場合)。それ以外の場合は NULL を返します。|WCHAR*|  
   
  *len*  
- 返される *field* 値の長さ (バイト単位) を格納した **int** 型変数を指すポインターです。 *len* が NULL の場合、長さは返されていません。 NULL が返されると、**len* は 0 に設定されます。  
+ 返される **field** 値の長さ (バイト単位) を格納した *int* 型変数を指すポインターです。 
+  *len* が NULL の場合、長さは返されていません。 NULL が返されると、**len* は 0 に設定されます。  
   
 ## <a name="returns"></a>戻り値  
- *field* によってデータ型が決定されるデータを指すポインターです。 *len* または *srvproc* が NULL の場合は NULL が返されます。 *field* が不明の場合は NULL が返されます。 NULL が返されると、**len* は 0 に設定されます。  
+ 
+  *field* によってデータ型が決定されるデータを指すポインターです。 
+  *len* または *srvproc* が NULL の場合は NULL が返されます。 
+  *field* が不明の場合は NULL が返されます。 NULL が返されると、**len* は 0 に設定されます。  
   
 > [!IMPORTANT]  
 >  サーバーから返されるバッファーは読み取り専用にする必要があります。 そうでない場合、サーバーの状態が壊れることがあります。  
   
-## <a name="remarks"></a>コメント  
- **セキュリティに関する注意** 拡張ストアド プロシージャのソース コードを十分に確認し、コンパイルした DLL をテストしたうえで実稼働サーバーにインストールしてください。 セキュリティの確認およびテストについて詳しくは、[Microsoft の Web サイト](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/)をご覧ください。  
+## <a name="remarks"></a>解説  
+ **セキュリティ**に関する注意拡張ストアドプロシージャのソースコードを十分に確認し、コンパイル済みの Dll を実稼働サーバーにインストールする前にテストする必要があります。 セキュリティの確認およびテストについて詳しくは、[Microsoft の Web サイト](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/)をご覧ください。  
   
   

@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9de758c6a54ca1993efc8873a02293331a129b33
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62870980"
 ---
 # <a name="database-engine-error-severities"></a>データベース エンジン エラーの重大度
@@ -29,7 +29,7 @@ ms.locfileid: "62870980"
 ## <a name="levels-of-severity"></a>重大度レベル  
  次の表は、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]によって発生したエラーの重大度レベルについて示しています。  
   
-|重大度レベル|説明|  
+|重大度レベル|[説明]|  
 |--------------------|-----------------|  
 |0-9|ステータス情報を返すか、重大ではないエラーを報告する情報メッセージです。 重大度 0 ～ 9 のシステム エラーが [!INCLUDE[ssDE](../../includes/ssde-md.md)] によって発生することはありません。|  
 |10|ステータス情報を返すか、重大ではないエラーを報告する情報メッセージです。 互換性の理由から、呼び出し側アプリケーションにエラー情報を返す前に [!INCLUDE[ssDE](../../includes/ssde-md.md)] によって重大度 10 から重大度 0 に変換されます。|  
@@ -63,12 +63,12 @@ ms.locfileid: "62870980"
   
  接続が終了すると実行は中断されるため、データベース接続を終了させるエラー (通常の場合、重大度 20 ～ 25 のエラー) は CATCH ブロックでは処理されません。  
   
- 詳細については、「 [TRY...CATCH &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/try-catch-transact-sql)に発生した問題の種類がエラーの重大度によって示されます。  
+ 詳細については、「 [TRY...CATCH &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/try-catch-transact-sql)」を参照してください。  
   
 ## <a name="retrieving-error-severity"></a>エラーの重大度の取得  
  システム関数 ERROR_SEVERITY を使用して、TRY...CATCH コンストラクトの CATCH ブロックを実行したエラーの重大度を取得することができます。 CATCH ブロックの範囲外で呼び出された場合、ERROR_SEVERITY は NULL を返します。 詳細については、「[ERROR_SEVERITY &#40;Transact-SQL&#41;](/sql/t-sql/functions/error-severity-transact-sql)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データベース エンジン エラーについて](../native-client-ole-db-errors/errors.md)   
  [sys.messages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages)   
  [システム関数 &#40;Transact-SQL&#41;](/sql/t-sql/functions/system-functions-transact-sql)   

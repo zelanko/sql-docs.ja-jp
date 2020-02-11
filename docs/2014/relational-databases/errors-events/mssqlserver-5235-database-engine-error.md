@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d6cbfac91613c2374e42da5b33e75ed5cade2bcf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62913759"
 ---
-# <a name="mssqlserver5235"></a>MSSQLSERVER_5235
+# <a name="mssqlserver_5235"></a>MSSQLSERVER_5235
     
 ## <a name="details"></a>詳細  
   
@@ -30,7 +30,7 @@ ms.locfileid: "62913759"
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|DBCC4_ERRORLOG_SUMMARY_PREMATURE_TERMINATION|  
-|メッセージ テキスト|[EMERGENCY] エラー状態 ERROR_STATE により、USER_NAME から実行された DBCC DBCC_COMMAND_DETAILS が異常終了しました。 経過時間:HOURS 時間 MINUTES 分 SECONDS 秒。|  
+|メッセージ テキスト|[EMERGENCY] エラー状態 ERROR_STATE により、USER_NAME から実行された DBCC DBCC_COMMAND_DETAILS が異常終了しました。 経過時間: HOURS 時間 MINUTES 分 SECONDS 秒。|  
   
 ## <a name="explanation"></a>説明  
  これは、コマンドの実行中に予期しない異常終了が発生した場合に DBCC によって [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログに出力される概要メッセージです。 予期しない異常終了の種類は、メッセージで報告されるエラー状態で示されます。  
@@ -49,16 +49,17 @@ ms.locfileid: "62913759"
 ## <a name="user-action"></a>ユーザーの操作  
  次の表に、指定されたエラー状態に対応するユーザーのアクションを示します。  
   
-|エラー状態|ユーザーのアクション|  
+|エラー状態|ユーザー アクション|  
 |-----------------|-----------------|  
 |状態 0|バックアップからの復元を行います。|  
-|状態 1|[!INCLUDE[msCoName](../../includes/msconame-md.md)] カスタマー サポート サービス (CSS) に問い合わせます。|  
+|状態 1|
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] カスタマー サポート サービス (CSS) に問い合わせます。|  
 |状態 2|バックアップからの復元を行います。|  
 |状態 3|バックアップからの復元を行います。|  
 |状態 4|CSS に問い合わせます。|  
 |状態 5|コマンドを再実行します。 問題が解決しない場合は、CSS に問い合わせます。|  
   
 ## <a name="see-also"></a>参照  
- [DBCC &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-transact-sql)  
+ [DBCC &#40;Transact-sql&#41;](/sql/t-sql/database-console-commands/dbcc-transact-sql)  
   
   

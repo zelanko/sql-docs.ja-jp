@@ -17,32 +17,33 @@ author: mikeraymsft
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 87d19bc837219b5573dd237310b11dab9f146406
-ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68811039"
 ---
 # <a name="columnstore-indexes-described"></a>Columnstore Indexes Described
-  @No__t_0*インメモリ列ストアインデックス*は、列ベースのデータストレージと列ベースのクエリ処理を使用して、データを格納および管理します。 列ストア インデックスは、主に一括読み込みと読み取り専用のクエリを実行するデータ ウェアハウスのワークロードで適切に動作します。 従来の行指向ストレージの最大 **10 倍のクエリ パフォーマンス**と、非圧縮データ サイズの最大 **7 倍のデータ圧縮**を達成するために列ストア インデックスを使用します。  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] *インメモリ列ストアインデックス*は、列ベースのデータストレージと列ベースのクエリ処理を使用して、データを格納および管理します。 列ストア インデックスは、主に一括読み込みと読み取り専用のクエリを実行するデータ ウェアハウスのワークロードで適切に動作します。 従来の行指向ストレージの最大 **10 倍のクエリ パフォーマンス** と、非圧縮データ サイズの最大 **7 倍のデータ圧縮** を達成するために列ストア インデックスを使用します。  
   
 > [!NOTE]  
 >  大規模なデータ ウェアハウス ファクト テーブルを格納するために、クラスター化列ストア インデックスが標準とされており、ほとんどのデータ ウェアハウス シナリオで使用されることが予想されます。 クラスター化列ストア インデックスは更新可能であるため、ワークロードで多数の挿入、更新、および削除操作を実行できます。  
   
-## <a name="contents"></a>目次  
+## <a name="contents"></a>内容  
   
--   [基本操作](#basics)  
+-   [方](#basics)  
   
 -   [データの読み込み](#dataload)  
   
 -   [パフォーマンスに関するヒント](#performance)  
   
--   [関連するタスクとトピック](#related)  
+-   [関連タスクおよびトピック](#related)  
   
-##  <a name="basics"></a> 基本操作  
- *columnstore index* は、列ストアと呼ばれる列指向データ形式を使用してデータを格納、取得、および管理するためのテクノロジです。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、クラスター化列ストア インデックスと非クラスター化列ストア インデックスの両方がサポートされています。 どちらでも同じインメモリ列ストア テクノロジが使用されますが、目的とサポートされる機能に違いがあります。  
+##  <a name="basics"></a>方  
+ *列ストアインデックス*は、列ストアと呼ばれる列形式のデータ形式を使用してデータを格納、取得、および管理するためのテクノロジです。 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、クラスター化列ストア インデックスと非クラスター化列ストア インデックスの両方がサポートされています。 どちらでも同じインメモリ列ストア テクノロジが使用されますが、目的とサポートされる機能に違いがあります。  
   
-###  <a name="benefits"></a> 利点  
+###  <a name="benefits"></a>効果  
  列ストア インデックスは、主に大きいデータ セットに対して分析を実行する読み取り専用のクエリで効果的に動作します。 多くの場合、これらはデータ ウェアハウスのワークロードのクエリです。 列ストア インデックスは、フル テーブル スキャンを使用するクエリで高いパフォーマンスを発揮しますが、データをシークして特定の値を検索するクエリには適していません。  
   
  列ストア インデックスの利点:  
@@ -62,9 +63,10 @@ ms.locfileid: "68811039"
   
 ||  
 |-|  
-|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]|  
+|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]から[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。|  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]でのクラスター化列ストア インデックス:  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]でのクラスター化列ストア インデックス:  
   
 -   Enterprise Edition、Developer Edition、および Evaluatio Edition で使用できます。  
   
@@ -82,9 +84,10 @@ ms.locfileid: "68811039"
   
 ||  
 |-|  
-|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]|  
+|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]から[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。|  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]での非クラスター化列ストア インデックス:  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]での非クラスター化列ストア インデックス:  
   
 -   クラスター化インデックスまたはヒープ内の列のサブセットにインデックスを作成できます。 たとえば、頻繁に使用される列にインデックスを設定できます。  
   
@@ -102,13 +105,16 @@ ms.locfileid: "68811039"
  ここでは、列ストア インデックスに関連する主な用語と概念について説明します。  
   
  列ストア インデックス  
- *columnstore index* は、列ストアと呼ばれる列指向データ形式を使用してデータを格納、取得、および管理するためのテクノロジです。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、クラスター化列ストア インデックスと非クラスター化列ストア インデックスの両方がサポートされています。 どちらでも同じインメモリ列ストア テクノロジが使用されますが、目的とサポートされる機能に違いがあります。  
+ *列ストアインデックス*は、列ストアと呼ばれる列形式のデータ形式を使用してデータを格納、取得、および管理するためのテクノロジです。 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、クラスター化列ストア インデックスと非クラスター化列ストア インデックスの両方がサポートされています。 どちらでも同じインメモリ列ストア テクノロジが使用されますが、目的とサポートされる機能に違いがあります。  
   
  列ストア  
- *列ストア* は、行と列を含むテーブルとして論理的に編成され、列方向のデータ形式で物理的に格納されているデータです。  
+ 
+  *列ストア* は、行と列を含むテーブルとして論理的に編成され、列方向のデータ形式で物理的に格納されているデータです。  
   
  行ストア  
- *行ストア* は、行と列を含むテーブルとして論理的に編成され、行方向のデータ形式で物理的に格納されているデータです。 これは、リレーショナル テーブル データを格納する従来の方法です。  
+ 
+  *行ストア* は、行と列を含むテーブルとして論理的に編成され、行方向のデータ形式で物理的に格納されているデータです。 これは、リレーショナル テーブル データを格納する従来の方法です。  
   
  行グループと列セグメント  
  高パフォーマンスと高い圧縮率を実現するために、列ストア インデックスは、テーブルを行グループと呼ばれる行のグループにスライスし、各行グループを列方向に圧縮します。 行グループ内の行数は、圧縮率を向上させるのに十分な大きさで、インメモリ操作の利点を十分に小さくする必要があります。  
@@ -117,7 +123,7 @@ ms.locfileid: "68811039"
  行*グループは、* 同時に列ストア形式に圧縮される行のグループです。  
   
  列セグメント  
- *列セグメント* は、行グループ内のデータ列です。  
+ *列セグメント*は、行グループ内のデータの列です。  
   
 -   通常、1 つの行グループには、行グループあたりの最大行数である 1,048,576 行が含まれます。  
   
@@ -137,7 +143,7 @@ ms.locfileid: "68811039"
  クラスター化列ストア インデックス  
  *クラスター化列ストアインデックス*は、テーブル全体の物理ストレージであり、テーブルの唯一のインデックスです。 クラスター化インデックスは更新可能です。 インデックスに対して挿入、削除、および更新操作を実行したり、インデックスへのデータの一括読み込みを行ったりできます。  
   
- ![クラスター化列ストアインデックス](../../database-engine/media/sql-server-pdw-columnstore-physicalstorage.gif "クラスター化列ストア インデックス")  
+ ![クラスター化列ストア インデックス](../../database-engine/media/sql-server-pdw-columnstore-physicalstorage.gif "クラスター化列ストア インデックス")  
   
  列セグメントの断片化を低減し、パフォーマンスを高めるために、列ストア インデックスでは、一部のデータおよび削除された行に対応する ID の B-Tree を一時的に行ストア テーブルに格納することがあります。 デルタストア操作は内部で処理されます。 列ストア インデックスは、正しいクエリ結果を返すために、列ストアとデルタストアの両方からのクエリ結果を結合します。  
   
@@ -151,16 +157,16 @@ ms.locfileid: "68811039"
 ##  <a name="dataload"></a>データの読み込み  
   
 ###  <a name="dataload_nci"></a>非クラスター化列ストアインデックスへのデータの読み込み  
- データを非クラスター化列ストアインデックスに読み込むには、まず、ヒープまたはクラスター化インデックスとして格納されている従来の行ストアテーブルにデータを読み込み、次に[CREATE 列ストアインデックス&#40;&#41; ](/sql/t-sql/statements/create-columnstore-index-transact-sql)を使用して非クラスター化列ストアインデックスを作成します。 transact-sql.  
+ データを非クラスター化列ストアインデックスに読み込むには、まず、ヒープまたはクラスター化インデックスとして格納されている従来の行ストアテーブルにデータを読み込み、次に[transact-sql&#41;&#40;CREATE 列ストアインデックス](/sql/t-sql/statements/create-columnstore-index-transact-sql)を使用して非クラスター化列ストアインデックスを作成します。  
   
- ![列ストアインデックスへのデータの読み込み](../../database-engine/media/sql-server-pdw-columnstore-loadprocess-nonclustered.gif "列ストアインデックスへのデータの読み込み")  
+ ![列ストア インデックスへのデータの読み込み](../../database-engine/media/sql-server-pdw-columnstore-loadprocess-nonclustered.gif "列ストア インデックスへのデータの読み込み")  
   
  非クラスター化列ストア インデックスを持つテーブルは、インデックスが削除または無効化されるまで読み取り専用になります。 テーブルと非クラスター化列ストアインデックスを更新するには、パーティションを切り替えることができます。また、インデックスを無効にし、テーブルを更新してから、インデックスを再構築することもできます。  
   
  詳細については、「 [Using Nonclustered Columnstore Indexes](indexes.md)」を参照してください。  
   
 ###  <a name="dataload_cci"></a>クラスター化列ストアインデックスへのデータの読み込み  
- ![クラスター化列ストアインデックスへの読み込み](../../database-engine/media/sql-server-pdw-columnstore-loadprocess.gif "クラスター化列ストアインデックスへの読み込み")  
+ ![クラスター化列ストア インデックスへの読み込み](../../database-engine/media/sql-server-pdw-columnstore-loadprocess.gif "クラスター化列ストア インデックスへの読み込み")  
   
  図が示すように、クラスター化列ストア インデックスにデータを読み込むには、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]は次のように動作します。  
   
@@ -198,18 +204,18 @@ ms.locfileid: "68811039"
 ### <a name="nonclustered-columnstore-indexes"></a>非クラスター化列ストア インデックス  
  一般的なタスクについては、「 [Using Nonclustered Columnstore Indexes](../../database-engine/using-nonclustered-columnstore-indexes.md)」を参照してください。  
   
--   [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql)  
+-   [Transact-sql&#41;&#40;列ストアインデックスの作成](/sql/t-sql/statements/create-columnstore-index-transact-sql)  
   
--   [ALTER INDEX &#40;transact-sql&#41; ](/sql/t-sql/statements/alter-index-transact-sql)と REBUILD  
+-   [ALTER INDEX &#40;transact-sql&#41;](/sql/t-sql/statements/alter-index-transact-sql)を再構築します。  
   
 -   [DROP INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-index-transact-sql)  
   
 ### <a name="clustered-columnstore-indexes"></a>クラスター化列ストア インデックス  
  一般的なタスクについては、「 [Using Clustered Columnstore Indexes](../../database-engine/using-clustered-columnstore-indexes.md)」を参照してください。  
   
--   [クラスター化列ストア&#40;インデックスの作成 transact-sql&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql)  
+-   [Transact-sql&#41;&#40;のクラスター化列ストアインデックスの作成](/sql/t-sql/statements/create-columnstore-index-transact-sql)  
   
--   [ALTER INDEX &#40;transact-sql&#41; ](/sql/t-sql/statements/alter-index-transact-sql)と再構築または再構成。  
+-   [ALTER INDEX &#40;transact-sql&#41;](/sql/t-sql/statements/alter-index-transact-sql)を再構築または再構成します。  
   
 -   [DROP INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-index-transact-sql)  
   
@@ -219,19 +225,19 @@ ms.locfileid: "68811039"
   
 -   [DELETE &#40;Transact-SQL&#41;](/sql/t-sql/statements/delete-transact-sql)  
   
-### <a name="metadata"></a>[ブラウザー]  
+### <a name="metadata"></a>Metadata  
  列ストア インデックス内のすべての列は、付加列としてメタデータに格納されます。 列ストア インデックスにキー列はありません。  
   
--   [sys.indexes &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql)  
+-   [SQL&#41;&#40;Transact-sql のインデックス](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql)  
   
--   [sys.index_columns &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-index-columns-transact-sql)  
+-   [index_columns &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-index-columns-transact-sql)  
   
--   [sys.partitions &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-partitions-transact-sql)  
+-   [SQL&#41;&#40;Transact-sql のパーティション分割](/sql/relational-databases/system-catalog-views/sys-partitions-transact-sql)  
   
--   [sys.column_store_segments &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-column-store-segments-transact-sql)  
+-   [column_store_segments &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-column-store-segments-transact-sql)  
   
--   [sys.column_store_dictionaries &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql)  
+-   [column_store_dictionaries &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql)  
   
--   [sys.column_store_row_groups &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql)  
+-   [column_store_row_groups &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql)  
   
   

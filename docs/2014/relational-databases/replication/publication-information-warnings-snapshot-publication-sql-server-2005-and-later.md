@@ -1,5 +1,5 @@
 ---
-title: パブリケーション情報、[警告] (スナップショット パブリケーション、SQL Server 2005 以降) |Microsoft Docs
+title: パブリケーション情報、[警告] (スナップショットパブリケーション、SQL Server 2005 以降) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 35399614c69d63f3d7daae2a64f670d7ccfbaef0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63021651"
 ---
 # <a name="publication-information-warnings-snapshot-publication-sql-server-2005-and-later"></a>パブリケーション情報、[警告] (スナップショット パブリケーション、SQL Server 2005 以降)
@@ -33,7 +33,7 @@ ms.locfileid: "63021651"
   
  しきい値に到達した場合は、レプリケーション モニターに警告を表示でき、さらに通知を発行することができます。 通知を定義するには、 **[警告の構成]** をクリックし、 **[レプリケーションの警告の構成]** ダイアログ ボックスに情報を入力します。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **有効**  
  警告を有効にする場合に選択します。その場合は、しきい値を指定します。  
   

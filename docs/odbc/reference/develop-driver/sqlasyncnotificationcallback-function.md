@@ -11,24 +11,24 @@ ms.assetid: c56aedc9-f7f7-4641-b605-f0f98ed4400c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 96073b8d5e68d10caaff268aae4c5af60554ef76
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67915543"
 ---
 # <a name="sqlasyncnotificationcallback-function"></a>SQLAsyncNotificationCallback 関数
-**準拠**  
- バージョンが導入されました。ODBC 3.8  
+**互換性**  
+ 導入されたバージョン: ODBC 3.8  
   
- 標準への準拠:なし  
+ 標準への準拠: なし  
   
- **概要**  
- **SQLAsyncNotificationCallback**ドライバーに SQL_STILL_EXECUTING が返された後に、現在の非同期操作のいくつかの進行状況がある場合に、ドライバー マネージャーをコールバックするためのドライバーを使用します。 **SQLAsyncNotificationCallback**だけで、ドライバーによって呼び出されることができます。  
+ **まとめ**  
+ ドライバーが SQL_STILL_EXECUTING を返した後、現在の非同期操作の進行状況が発生したときに、ドライバーがドライバーマネージャーにコールバックできるようにするには、 **Sqlasyncnotificationcallback**を使用します。 **Sqlasyncnotificationcallback**は、ドライバーによってのみ呼び出すことができます。  
   
- ドライバーは呼び出さないでください**SQLAsyncNotificationCallback**関数の名前を持つ**SQLAsyncNotificationCallback**します。 代わりに、ドライバー マネージャーは、関数のポインターを渡しますドライバーに対応する接続ハンドルまたはステートメントのハンドルの SQL_ATTR_ASYNC_DBC_NOTIFICATION_CALLBACK または SQL_ATTR_ASYNC_STMT_NOTIFICATION_CALLBACK 属性の値としてそれぞれします。 別のハンドルには、別の関数ポインターの値を割り当てることができます。 関数ポインターの型は、SQL_ASYNC_NOTIFICATION_CALLBACK として定義されます。  
+ ドライバーは、 **sqlasyncnotificationcallback 関数名を**指定して**sqlasyncnotificationcallback**を呼び出しません。 代わりに、ドライバーマネージャーは、対応する接続ハンドルまたはステートメントハンドルの SQL_ATTR_ASYNC_DBC_NOTIFICATION_CALLBACK または SQL_ATTR_ASYNC_STMT_NOTIFICATION_CALLBACK 属性の値として関数ポインターをドライバーに渡します。4.3. 異なるハンドルに異なる関数ポインターの値を割り当てることができます。 関数ポインターの型は SQL_ASYNC_NOTIFICATION_CALLBACK として定義されます。  
   
- **SQLAsyncNotificationCallback**スレッド セーフです。 複数のスレッドの呼び出しを使用するドライバーを選択できます**SQLAsyncNotificationCallback**でさまざまな処理に同時にします。  
+ **Sqlasyncnotificationcallback**はスレッドセーフです。 ドライバーでは、複数のスレッドを使用して、異なるハンドルで同時に**Sqlasyncnotificationcallback**を呼び出すことができます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,24 +39,24 @@ typedef SQLRETURN (SQL_API *SQL_ASYNC_NOTIFICATION_CALLBACK)(
 ```  
   
 ## <a name="arguments"></a>引数  
- *pContex*  
- ドライバー マネージャーによって定義されているデータ構造体へのポインター。 値は、SQLSetConnectAttr(SQL_ATTR_ASYNC_DBC_NOTIFICATION_CONTEXT) または SQLSetStmtAttr(SQL_ATTR_ASYNC_STMT_NOTIFICATION_CONTEXT) を使用して、ドライバーに渡されます。  ドライバーでは、値へのアクセスはありません。  
+ *Pcontrol Ex*  
+ ドライバーマネージャーによって定義されたデータ構造体へのポインター。 値は、SQLSetConnectAttr (SQL_ATTR_ASYNC_DBC_NOTIFICATION_CONTEXT) または SQLSetStmtAttr (SQL_ATTR_ASYNC_STMT_NOTIFICATION_CONTEXT) を使用してドライバーに渡されます。  ドライバーは、値にアクセスできません。  
   
  *fLast*  
- ドライバーを使用すると、このコールバック関数の呼び出しが、現在の非同期操作の最後の 1 つであることを示します。 ドライバー マネージャーがもう一度、関数を呼び出すときに、ドライバーは SQL_STILL_EXECUTING 以外のリターン コードを返します。 ドライバー マネージャーは、事前に、アプリケーションは、非同期操作の完了を通知するために、この情報を使用できます。  
+ このコールバック関数呼び出しが、現在の非同期操作の最後の呼び出しであることを示すために、ドライバーによって使用されます。 ドライバーマネージャーが関数を再度呼び出すときに、ドライバーは SQL_STILL_EXECUTING 以外のリターンコードを返します。 ドライバーマネージャーは、たとえば、この情報を使用して、非同期操作が完了する前にアプリケーションに通知することができます。  
   
- 場合*処理*で指定された型の有効なハンドルではありません*HandleType*、 **SQLCancelHandle** SQL_INVALID_HANDLE が返されます。  
+ *Handle*が*handletype*によって指定された型の有効なハンドルでない場合、 **sqlcancelhandle**は SQL_INVALID_HANDLE を返します。  
   
 ## <a name="returns"></a>戻り値  
- SQL_SUCCESS や SQL_ERROR します。  
+ SQL_SUCCESS または SQL_ERROR。  
   
 ## <a name="diagnostics"></a>診断  
- **SQLAsyncNotificationCallback** SQL_ERROR を (ドライバーまたはドライバー マネージャーでの実装の問題を示します次の 2 つの状況に戻すことができます。  
+ **Sqlasyncnotificationcallback**は、次の2つの状況で SQL_ERROR を返すことができます (これらは、ドライバーまたはドライバーマネージャーの実装の問題を示します)。  
   
-|Error|説明|  
+|エラー|[説明]|  
 |-----------|-----------------|  
-|接続やステートメントは、通知を要求しませんでした。||  
-|無効な*処理*|ドライバーは、内部のドライバー マネージャーの検証テストに失敗した、無効なハンドルで渡されます。|  
+|接続またはステートメントが通知を要求しませんでした。||  
+|無効な*ハンドル*|ドライバーが無効なハンドルで渡されました。このハンドルは、内部ドライバーマネージャーの検証テストに失敗しました。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [非同期実行 (ポーリング メソッド)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)

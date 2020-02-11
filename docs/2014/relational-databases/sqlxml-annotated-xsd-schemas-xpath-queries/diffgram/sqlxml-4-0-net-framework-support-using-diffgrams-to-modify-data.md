@@ -1,5 +1,5 @@
 ---
-title: Diffgram を使用した SQLXML 4.0 でのデータを変更する |マイクロソフトのドキュメント
+title: データを変更するための Diffgram の使用 4.0 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -26,14 +26,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9e704688537684c367bf4d8f2eec95db2affcc0e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66012699"
 ---
 # <a name="using-diffgrams-to-modify-data-in-sqlxml-40"></a>SQLXML 4.0 での、DiffGram を使用したデータ変更
-  DiffGram 形式がで導入された、**データセット**のコンポーネントである、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework です。 .NET Framework では、DiffGram を作成して、Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースのテーブルのデータを変更するときに使用できます。  
+  DiffGram 形式は、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework の**データセット**コンポーネントで導入されました。 .NET Framework では、DiffGram を作成して、Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースのテーブルのデータを変更するときに使用できます。  
   
 > [!NOTE]  
 >  ここでは、DiffGram の概要について説明し、使用例を紹介します。 .NET Framework での DiffGram の機能について理解していることを前提としています。 このドキュメントでは、SQLXML に固有の DiffGram に関する問題を中心に説明します。  
@@ -42,13 +42,13 @@ ms.locfileid: "66012699"
  [SQLXML 4.0 の DiffGram の概要](introduction-to-diffgrams-in-sqlxml-4-0.md)  
  DiffGram についての基本的な情報を提供します。  
   
- [DiffGram の例&#40;SQLXML 4.0&#41;](diffgram-examples-sqlxml-4-0.md)  
+ [&#40;SQLXML 4.0&#41;の DiffGram の例](diffgram-examples-sqlxml-4-0.md)  
  DiffGram の使用例を紹介します。  
   
- [ADO を使用した、DiffGram の実行&#40;SQLXML 4.0&#41;](executing-a-diffgram-by-using-ado-sqlxml-4-0.md)  
+ [ADO を使用した DiffGram の実行 &#40;SQLXML 4.0&#41;](executing-a-diffgram-by-using-ado-sqlxml-4-0.md)  
  ADO (ActiveX Data Objects) での DiffGram の実行例を紹介します。  
   
- [SQLXML マネージド クラスを使用した DiffGram の実行](../net-framework-classes/sqlxml-4-0-net-framework-support-managed-classes.md)  
+ [SQLXML マネージド クラスを使用した、DiffGram の実行](../net-framework-classes/sqlxml-4-0-net-framework-support-managed-classes.md)  
  SQLXML マネージド クラスでの DiffGram の実行例を紹介します。  
   
   

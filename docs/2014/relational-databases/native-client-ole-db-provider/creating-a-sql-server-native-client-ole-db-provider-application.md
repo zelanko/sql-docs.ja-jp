@@ -1,5 +1,5 @@
 ---
-title: SQL Server Native Client OLE DB プロバイダー アプリケーションの作成 |マイクロソフトのドキュメント
+title: SQL Server Native Client OLE DB プロバイダーアプリケーションの作成 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,20 +15,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0e422ac6535900a287ae610a85241dc67172c4f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63209760"
 ---
 # <a name="creating-a-sql-server-native-client-ole-db-provider-application"></a>SQL Server Native Client OLE DB プロバイダー アプリケーションの作成
-  作成、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダー アプリケーションがこれらの手順が含まれます。  
+  Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB プロバイダーアプリケーションを作成するには、次の手順を実行します。  
   
 1.  データ ソースへの接続の確立。  
   
 2.  コマンドの実行。  
   
-3.  結果を処理します。  
+3.  結果を処理しています。  
   
 > [!NOTE]  
 >  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保存する必要がある場合は、[Win32 CryptoAPI](https://go.microsoft.com/fwlink/?LinkId=9504) を使用して暗号化してください。  

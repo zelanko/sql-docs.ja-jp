@@ -16,10 +16,10 @@ ms.assetid: 318e370d-0444-4812-afe4-307df7ef9f3b
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 56f2dde1899340f036024253405379e094de59a6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68039043"
 ---
 # <a name="boolean-constructor-functions---true-xquery"></a>ブール値コンストラクター関数 - true (XQuery)
@@ -33,11 +33,11 @@ ms.locfileid: "68039043"
 fn:true() as xs:boolean  
 ```  
   
-## <a name="examples"></a>使用例  
- このトピックではさまざまなに格納されている XML インスタンスに対して XQuery の例について**xml**型の列には、AdventureWorks データベース。  
+## <a name="examples"></a>例  
+ このトピックでは、AdventureWorks データベースのさまざまな**xml**型の列に格納されている xml インスタンスに対して XQuery の例を示します。  
   
 ### <a name="a-using-the-true-xquery-boolean-function"></a>A. XQuery 論理関数 true() の使用  
- 次の例は、型指定されていないクエリ**xml**変数。 内の式、 **value()** メソッドはブール値を返します**true()** "aaa"属性値である場合。 **Value()** のメソッド、 **xml**データ型がビットにブール値を変換し、それを返します。  
+ 次の例では、型指定されていない**xml**変数をクエリします。 **Value ()** メソッドの式は、"aaa" が属性値の場合にブール値**true ()** を返します。 **Xml**データ型の**value ()** メソッドは、ブール値をビットに変換して返します。  
   
 ```  
 DECLARE @x XML  
@@ -47,11 +47,11 @@ go
 -- result = 1  
 ```  
   
- 次の例では、クエリを指定する型指定されたに対して**xml**列。 `if` 式では、<`ROOT`> 要素の型指定されたブール値が確認され、その結果に応じて、構築された XML が返されます。 この例では、次の操作が実行されます。  
+ 次の例では、型指定された**xml**列に対してクエリが指定されています。 式`if`は、<`ROOT`> 要素の型指定されたブール値をチェックし、それに従って構築された XML を返します。 この例では、次の処理を実行します。  
   
--   xs:boolean 型の <`ROOT`> 要素を定義する、XML スキーマ コレクションを作成します。  
+-   Xs: boolean 型の <`ROOT`> 要素を定義する XML スキーマコレクションを作成します。  
   
--   型指定されたテーブルを作成します。 **xml** XML スキーマ コレクションを使用して列。  
+-   XML スキーマコレクションを使用して、型指定された**xml**列を含むテーブルを作成します。  
   
 -   XML インスタンスを列に保存し、クエリを実行します。  
   
@@ -89,6 +89,6 @@ go
 ```  
   
 ## <a name="see-also"></a>参照  
- [ブール値コンス トラクター関数&#40;XQuery&#41;](https://msdn.microsoft.com/library/fa907f39-d4b7-4495-b829-c788928e0f64)  
+ [ブール型コンストラクター関数 &#40;XQuery&#41;](https://msdn.microsoft.com/library/fa907f39-d4b7-4495-b829-c788928e0f64)  
   
   

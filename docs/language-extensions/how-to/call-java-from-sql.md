@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: bdff924b63b11eda850378987498e8601367d3fe
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73658894"
 ---
 # <a name="how-to-call-the-java-runtime-in-sql-server-language-extensions"></a>SQL Server 言語拡張で Java ランタイムを呼び出す方法
@@ -115,6 +115,6 @@ with result sets ((column1 int))
 
 詳細については、「[CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)」を参照してください。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
-+ [チュートリアル: Java で正規表現を使用して文字列を検索する](../tutorials/search-for-string-using-regular-expressions-in-java.md)
++ [チュートリアル:Java で正規表現を使用して文字列を検索する](../tutorials/search-for-string-using-regular-expressions-in-java.md)

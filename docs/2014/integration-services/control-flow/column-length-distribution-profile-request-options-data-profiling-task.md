@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a34e5f5af82103709b1e08c22860b1f87288422e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62832568"
 ---
 # <a name="column-length-distribution-profile-request-options-data-profiling-task"></a>[列長分布プロファイル要求] のオプション (データ プロファイル タスク)
@@ -25,7 +25,7 @@ ms.locfileid: "62832568"
 > [!NOTE]  
 >  このトピックで説明するオプションは、 **[データ プロファイル タスク エディター]** の **[プロファイル要求]** ページに表示されます。 エディターのこのページの詳細については、「[Data Profiling Task Editor &#40;Profile Requests Page&#41;](data-profiling-task-editor-profile-requests-page.md)」(データ プロファイル タスク エディター &#40;[プロファイル要求] ページ&#41;)を参照してください。  
   
- データ プロファイル タスクの使用方法の詳細については、「[データ プロファイル タスクのセットアップ](data-profiling-task.md)」を参照してください。 Data Profile Viewer を使用してデータ プロファイル タスクの出力を分析する方法の詳細については、「 [Data Profile Viewer (Data Profile Viewer)](data-profile-viewer.md)」を参照してください。  
+ データ プロファイル タスクの使用方法の詳細については、「 [データ プロファイル タスクのセットアップ](data-profiling-task.md)」を参照してください。 Data Profile Viewer を使用してデータ プロファイル タスクの出力を分析する方法の詳細については、「 [Data Profile Viewer](data-profile-viewer.md)」を参照してください。  
   
 ## <a name="request-properties-options"></a>[要求プロパティ] のオプション  
  **[要求プロパティ]** ペインに表示される **[列長分布プロファイル要求]** のオプション グループは次のとおりです。  
@@ -34,7 +34,7 @@ ms.locfileid: "62832568"
   
 -   **全般**  
   
--   **Options**  
+-   **[オプション]**  
   
 ### <a name="data-options"></a>[データ] のオプション  
  **[ConnectionManager]**  
@@ -45,7 +45,7 @@ ms.locfileid: "62832568"
   
  詳細については、このトピックの「[TableorView] のオプション」を参照してください。  
   
- **[Column]**  
+ **列**  
  プロファイル対象の既存の列を選択します。 すべての列をプロファイルするには、 **[(\*)]** を選択します。  
   
  詳細については、このトピックの「[列] のオプション」を参照してください。  
@@ -59,7 +59,7 @@ ms.locfileid: "62832568"
   
 #### <a name="column-options"></a>[列] のオプション  
  **IsWildCard**  
- **[(\*)]** ワイルドカードが選択されているかどうかを示します。 **[(\*)]** を選択してすべての列をプロファイルする場合、このオプションは **[True]** に設定されます。 個々の列をプロファイル対象として選択した場合、このオプションは **[False]** になります。 このオプションは読み取り専用です。  
+ **[(\*)]** ワイルドカードが選択されているかどうかを示します。 **[(** )] **を選択してすべての列をプロファイルする場合、このオプションは \*[True]** に設定されます。 個々の列をプロファイル対象として選択した場合、このオプションは **[False]** になります。 このオプションは読み取り専用です。  
   
  **[ColumnName]**  
  選択した列の名前を表示します。 **[(\*)]** を選択してすべての列をプロファイルする場合、このオプションは空白になります。 このオプションは読み取り専用です。  
@@ -71,15 +71,15 @@ ms.locfileid: "62832568"
  **RequestID**  
  このプロファイル要求を識別するわかりやすい名前を入力します。 通常、自動生成された値を変更する必要はありません。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>オプション  
  **[IgnoreLeadingSpaces]**  
  プロファイルが文字列値を比較する際に、先頭の空白を無視するかどうかを指定します。 このオプションの既定値は **[False]** です。  
   
  **[IgnoreTrailingSpaces]**  
  プロファイルが文字列値を比較する際に、末尾の空白を無視するかどうかを指定します。 このオプションの既定値は **[true]** です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データ プロファイル タスク エディター ([全般] ページ)](../general-page-of-integration-services-designers-options.md)   
- [単一テーブル クイック プロファイル フォーム (データ プロファイル タスク)](single-table-quick-profile-form-data-profiling-task.md)  
+ [単一テーブル クイック プロファイル フォーム &#40;データ プロファイル タスク&#41;](single-table-quick-profile-form-data-profiling-task.md)  
   
   

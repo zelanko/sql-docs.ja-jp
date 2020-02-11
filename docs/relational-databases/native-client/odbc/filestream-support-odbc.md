@@ -14,18 +14,19 @@ ms.assetid: 87982955-1542-4551-9c06-447ffe8193b9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4e7d2e57b68ed9ab3ae117c543361f810952ba9c
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73761190"
 ---
 # <a name="filestream-support-odbc"></a>FILESTREAM のサポート (ODBC)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client の ODBC では、強化された FILESTREAM 機能がサポートされています。 この機能の詳細については、「 [FILESTREAM のサポート](../../../relational-databases/native-client/features/filestream-support.md)」を参照してください。 FILESTREAM の ODBC サポートを示すサンプルについては、「 [ &#40;filestream ODBC&#41;を使用した増分データの送信と受信](../../../relational-databases/native-client-odbc-how-to/send-and-receive-data-incrementally-with-filestream-odbc.md)」を参照してください。  
   
- 2 GB を超える**varbinary (max)** 値を送受信するには、アプリケーションで SQLBindParameter を使用してパラメーターをバインドし、 *columnsize*を**SQL_SS_LENGTH_UNLIMITED**に設定し、 *StrLen_or_IndPtr*の内容をに**設定する必要があります。** SQLExecDirect または SQLExecute の前に SQL_DATA_AT_EXEC します。  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client の ODBC では、強化された FILESTREAM 機能がサポートされています。 この機能の詳細については、「 [FILESTREAM のサポート](../../../relational-databases/native-client/features/filestream-support.md)」を参照してください。 FILESTREAM の ODBC サポートを示すサンプルについては、「 [filestream &#40;ODBC&#41;を使用した増分データの送受信](../../../relational-databases/native-client-odbc-how-to/send-and-receive-data-incrementally-with-filestream-odbc.md)」を参照してください。  
+  
+ 2 GB を超える**varbinary (max)** 値を送受信するには、アプリケーションで SQLBindParameter を使用してパラメーターをバインドし、 *columnsize*を**SQL_SS_LENGTH_UNLIMITED**に設定して、SQLExecDirect または sqlexecute の前に*StrLen_or_IndPtr*の内容を**SQL_DATA_AT_EXEC**に設定する必要があります。  
   
  実行時データパラメーターと同様に、データは SQLParamData および Sqlparamdata と共に提供されます。  
   
@@ -45,7 +46,7 @@ author varchar(64),
 document VARBINARY(MAX) FILESTREAM NULL)  
 ```  
   
-### <a name="read"></a>読み取り  
+### <a name="read"></a>Read  
   
 ```  
 void selectFilestream (LPCWSTR dstFilePath) {  
@@ -101,7 +102,7 @@ ODBCError(henv, hdbc, hstmt, NULL, true); exit(-1);
 }  
 ```  
   
-### <a name="insert"></a>Insert  
+### <a name="insert"></a>挿入  
   
 ```  
 void insertFilestream(LPCWSTR srcFilePath) {  

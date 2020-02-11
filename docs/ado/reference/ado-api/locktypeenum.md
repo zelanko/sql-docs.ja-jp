@@ -16,33 +16,33 @@ ms.assetid: d2894eaf-4450-4ace-aa51-c8b875fd3010
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0ae822794b1b06a975e1cc3cd397b5a5f00036dc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918256"
 ---
 # <a name="locktypeenum"></a>LockTypeEnum
-編集中に、レコードに適用されるロックの種類を指定します。  
+編集中にレコードに適用されるロックの種類を指定します。  
   
-|定数|Value|説明|  
+|常時|値|[説明]|  
 |--------------|-----------|-----------------|  
-|**adLockBatchOptimistic**|4|オプティミスティックな一括更新を示します。 バッチ更新モードで必要です。|  
-|**adLockOptimistic**|3|レコードごとのオプティミスティック ロックを示します。 プロバイダーを使用してオプティミスティック ロックを呼び出した場合にのみ、レコードのロック、 [Update](../../../ado/reference/ado-api/update-method.md)メソッド。|  
-|**adLockPessimistic**|2|レコードごとの排他的ロックを示します。 プロバイダーでは何が成功したレコードの編集、通常は編集後すぐに、データ ソースのレコードをロックすることを確認するために必要です。|  
-|**adLockReadOnly**|1|読み取り専用レコードを示します。 データを変更することはできません。|  
-|**adLockUnspecified**|-1|ロックの種類を指定しません。 クローンが元と同じ種類のロックで、複製が作成されます。|  
+|**adLockBatchOptimistic**|4|オプティミスティックバッチ更新を示します。 バッチ更新モードでは必須です。|  
+|**adLockOptimistic**|3|オプティミスティックロック、レコードごとのレコードを示します。 プロバイダーはオプティミスティックロックを使用し、 [Update](../../../ado/reference/ado-api/update-method.md)メソッドを呼び出したときにのみレコードをロックします。|  
+|**adLockPessimistic**|2|ペシミスティックロック、レコードごとのレコードを示します。 プロバイダーは、レコードを正常に編集するために必要な処理を実行します。通常は、編集後すぐにデータソースのレコードをロックします。|  
+|**adLockReadOnly**|1 で保護されたプロセスとして起動されました|読み取り専用レコードを示します。 データを変更することはできません。|  
+|**adLockUnspecified**|-1|はロックの種類を指定していません。 複製の場合、複製は元と同じロックの種類で作成されます。|  
   
-## <a name="adowfc-equivalent"></a>ADO と WFC と同等  
- パッケージ: **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>同等の ADO/WFC  
+ パッケージ: **com. ms. wfc. データ**  
   
-|定数|  
+|常時|  
 |--------------|  
-|AdoEnums.LockType.BATCHOPTIMISTIC|  
-|AdoEnums.LockType.OPTIMISTIC|  
-|AdoEnums.LockType.PESSIMISTIC|  
-|AdoEnums.LockType.READONLY|  
-|AdoEnums.LockType.UNSPECIFIED|  
+|AdoEnums. BATCHOPTIMISTIC|  
+|AdoEnums|  
+|AdoEnums|  
+|AdoEnums|  
+|AdoEnums|  
   
 ## <a name="applies-to"></a>適用対象  
   

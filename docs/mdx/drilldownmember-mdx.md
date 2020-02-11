@@ -1,5 +1,5 @@
 ---
-title: DrilldownMember (MDX) |Microsoft Docs
+title: ドリルダウンメンバー (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: af2d52f176b67b27a29eafb662ca539ced53ebbc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68139098"
 ---
 # <a name="drilldownmember-mdx"></a>DrilldownMember (MDX)
@@ -31,31 +31,31 @@ DrillDownMember(<Set_Expression1>, <Set_Expression2> [,[<Target_Hierarchy>]] [,[
   
 ## <a name="arguments"></a>引数  
  *Set_Expression1*  
- セットを返す有効な多次元式 (MDX) です。  
+ セットを返す有効な多次元式 (MDX) 式です。  
   
  *Set_Expression2*  
- セットを返す有効な多次元式 (MDX) です。  
+ セットを返す有効な多次元式 (MDX) 式です。  
   
  *Target_Hierarchy*  
- 階層を返す有効な多次元式 (MDX) 式。  
+ 階層を返す有効な多次元式 (MDX) 式です。  
   
- *再帰*  
+ *繰り返し*  
  セットの再帰的な比較を示すキーワードです。  
   
  *Include_Calc_Members*  
  計算されるメンバーがドリルダウン結果に含まれるようにするキーワード。  
   
-## <a name="remarks"></a>コメント  
- この関数は、階層によって順序付けられた子メンバーのセットを返しも、2 番目のセットに存在する最初のセットで指定されたメンバーが含まれています。 最初のセットに親メンバーと 1 つ以上の子が含まれている場合、親メンバーはドリル ダウンされません。 1 番目のセットの次元は任意ですが、2 番目には 1 次元のセットを指定する必要があります。 1 番目のセット内の元のメンバー間で順序を維持、それぞれの親メンバーの結果に含まれるすべての子メンバーを設定する点を除いて、関数がすぐに含まれています。 関数は、子が 2 番目のセットに存在することも、最初のセット内の各メンバーを取得して、結果セットを構築します。 場合**再帰**を指定すると、関数は、再帰的に比較が以上までは 2 つ目のセットに存在することも、結果セット内の各メンバーの子を取得する 2 番目のセットに対して結果のメンバーを設定するには2 番目のセットには、結果セットからメンバーを確認できます。  
+## <a name="remarks"></a>解説  
+ この関数は、階層によって順序付けられた子メンバーのセットを返します。このセットには、最初のセットで指定されたメンバーのうち、2 番目のセット内にも存在するメンバーが格納されます。 最初のセットに親メンバーと 1 つ以上の子が含まれている場合、親メンバーはドリル ダウンされません。 1 番目のセットの次元は任意ですが、2 番目には 1 次元のセットを指定する必要があります。 順序は、最初のセットの元のメンバーの間で保持されます。ただし、関数の結果セットに含まれるすべての子メンバーは、その親メンバーの直下に含まれます。 関数は、2番目のセットにも存在する1番目のセット内の各メンバーの子を取得することによって、結果セットを構築します。 **RECURSIVE**が指定されている場合、関数は、結果セットのメンバーを2番目のセットに対して再帰的に比較し、結果セットのメンバーが2番目のセットに存在しないようになるまで、2番目のセットにも存在します。  
   
- XMLA プロパティのクエリを実行する**MdpropMdxDrillFunctions**サーバーがドリル関数が提供するサポートのレベルを確認することができます表示[サポートされる XMLA プロパティ&#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)。詳細についてはします。  
+ XMLA プロパティ**MdpropMdxDrillFunctions**に対してクエリを実行すると、ドリル機能に対してサーバーが提供するサポートのレベルを確認できます。詳細については、「[サポートされる Xmla プロパティ &#40;xmla&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) 」を参照してください。  
   
- 最初のセットは、メンバーではなく組を含めることができます。 組のドリル ダウンは OLE DB の拡張機能であり、メンバーではなく組のセットを返します。  
+ 1番目のセットには、メンバーではなく組を含めることができます。 組のドリルダウンは OLE DB の拡張機能であり、メンバーではなく組のセットを返します。  
   
 > [!IMPORTANT]  
->  メンバーがないドリルダウン場合、その子のいずれかですぐにその後にします。 ドリル ダウン * と Drillup、セット内のメンバーの順序は重要です\*関数のファミリです。  
+>  メンバーは、直後にその子の1つが続く場合、にドリルダウンされません。 セット内のメンバーの順序は、ドリルダウン * 関数とドリルアップ\*ファミリ関数の両方にとって重要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、最初のセットのメンバーであり 2 番目のセットにも存在する、Australia へのドリル ダウンを行っています。  
   
 ```  
@@ -80,7 +80,7 @@ SELECT DrilldownMember
    FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>参照  
+ [Mdx 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

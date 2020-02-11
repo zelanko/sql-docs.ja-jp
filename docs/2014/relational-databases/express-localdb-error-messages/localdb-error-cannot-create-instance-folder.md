@@ -1,5 +1,5 @@
 ---
-title: LOCALDB_ERROR_CANNOT_CREATE_INSTANCE_FOLDER | Microsoft Docs
+title: LOCALDB_ERROR_CANNOT_CREATE_INSTANCE_FOLDER |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a5375c391b976de111813f55d422a367b3ea874a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62519546"
 ---
-# <a name="localdberrorcannotcreateinstancefolder"></a>LOCALDB_ERROR_CANNOT_CREATE_INSTANCE_FOLDER
+# <a name="localdb_error_cannot_create_instance_folder"></a>LOCALDB_ERROR_CANNOT_CREATE_INSTANCE_FOLDER
     
 ## <a name="details"></a>詳細  
   
@@ -27,7 +27,7 @@ ms.locfileid: "62519546"
 |イベント ID|256|  
 |イベント ソース|SQL Server Local Database Runtime 12.0|  
 |コンポーネント|Local Database Runtime API|  
-|メッセージ テキスト|ローカル データベース インスタンスのフォルダーを作成できません: %%LOCALAPPDATA%%\Microsoft\Microsoft SQL Server のローカル DB\Instances\\< インスタンス名\>します。|  
+|メッセージ テキスト|ローカルデータベースインスタンスのフォルダーを作成できません:%% LOCALAPPDATA%% \ Microsoft\Microsoft SQL Server ローカル Db\\\インスタンス<インスタンス\>名。|  
   
 ## <a name="explanation"></a>説明  
  %userprofile% の下にはフォルダーを作成できません。  

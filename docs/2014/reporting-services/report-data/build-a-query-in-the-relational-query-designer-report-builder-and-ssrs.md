@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 901abf5be70f0b3c70b89b0415c59f19a9327b29
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107434"
 ---
 # <a name="build-a-query-in-the-relational-query-designer-report-builder-and-ssrs"></a>リレーショナル クエリ デザイナーでのクエリの作成 (レポート ビルダーおよび SSRS)
@@ -23,7 +23,7 @@ ms.locfileid: "66107434"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
- データセットはデータ ソースに基づきます。 データセット クエリを定義するときに開くクエリ デザイナーは、データ ソースの種類と作成環境によって決まります。 クエリ デザイナーの機能は、基になるデータ ソースによって異なります。 データ層の詳細については、次を参照してください[データ接続、データ ソース、およびレポート ビルダーでの接続文字列](../data-connections-data-sources-and-connection-strings-in-report-builder.md)または[データ接続、データ ソース、および Reporting Services の接続文字列](../data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
+ データセットはデータ ソースに基づきます。 データセット クエリを定義するときに開くクエリ デザイナーは、データ ソースの種類と作成環境によって決まります。 クエリ デザイナーの機能は、基になるデータ ソースによって異なります。 データ層の詳細については、「Reporting Services でのデータ[接続、データソース、およびレポートビルダー](../data-connections-data-sources-and-connection-strings-in-report-builder.md)または[データ接続、データソース、および接続文字列](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)」を参照してください。  
   
  クエリ デザイナーでは、次のタスクを実行できます。  
   
@@ -67,11 +67,14 @@ ms.locfileid: "66107434"
   
 2.  適用されたフィルター ペインのツール バーで、 **[フィルターの追加]** をクリックします。 新しいフィルター行が表示されます。  
   
-3.  **[フィールド名]** で、クリックしてフィールドのドロップダウン リストを表示し、フィルター処理の基準にするフィールドの名前をクリックします。 たとえば、数量を基準にフィルター処理を行うには、アイテムの数を格納するフィールドをクリックします。  
+3.  
+  **[フィールド名]** で、クリックしてフィールドのドロップダウン リストを表示し、フィルター処理の基準にするフィールドの名前をクリックします。 たとえば、数量を基準にフィルター処理を行うには、アイテムの数を格納するフィールドをクリックします。  
   
-4.  **[演算子]** で、クリックして演算子のドロップダウン リストを表示し、フィルターで使用する比較演算子を選択します。  
+4.  
+  **[演算子]** で、クリックして演算子のドロップダウン リストを表示し、フィルターで使用する比較演算子を選択します。  
   
-5.  **[値]** に、フィルター処理の基準にする値を入力します。 たとえば、100 よりも大きい数量をフィルター処理の対象とするには、「100」と入力します。  
+5.  
+  **[値]** に、フィルター処理の基準にする値を入力します。 たとえば、100 よりも大きい数量をフィルター処理の対象とするには、「100」と入力します。  
   
 6.  ユーザーがフィルター値を指定できるようにデータセット パラメーターを作成する場合は、この行のパラメーター オプションを選択します。 データセット パラメーターに対応するレポート パラメーターが自動的に生成されます。  
   
@@ -83,20 +86,20 @@ ms.locfileid: "66107434"
   
 ### <a name="to-view-a-query-result-set"></a>クエリの結果セットを表示するには  
   
-1.  クエリ デザイナーのツール バーで、 **[クエリの実行]\(!)** をクリックします。  
+1.  クエリ デザイナーのツール バーで、 **[クエリの実行] (!)** をクリックします。  
   
     > [!NOTE]  
     >  クエリ デザイナーでは、デザイン時の資格情報を使用してクエリを実行し、結果セットを取得します。 詳細については、「 [レポート ビルダーでの資格情報の指定](../specify-credentials-in-report-builder.md)」を参照してください。  
   
  データ ソースに対してクエリが実行され、サンプル データがクエリ結果ペインに表示されます。  
   
-## <a name="see-also"></a>関連項目  
- [レポートにデータを追加&#40;レポート ビルダーおよび SSRS&#41;](report-datasets-ssrs.md)   
- [外部データ ソースのデータを追加する &#40;SSRS&#41;](add-data-from-external-data-sources-ssrs.md)   
- [クエリ デザイナー &#40;レポート ビルダー&#41;](../query-designers-report-builder.md)   
- [共有データセットまたは埋め込みデータセットの作成 &#40;レポート ビルダーおよび SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>参照  
+ [レポート &#40;レポートビルダーおよび SSRS&#41;にデータを追加する](report-datasets-ssrs.md)   
+ [SSRS&#41;&#40;外部データソースからデータを追加する](add-data-from-external-data-sources-ssrs.md)   
+ [クエリデザイナー &#40;レポートビルダー&#41;](../query-designers-report-builder.md)   
+ [レポートビルダーおよび SSRS を &#40;共有データセットまたは埋め込みデータセットを作成&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
  [レポート デザイン ビュー (レポート ビルダー)](../report-builder/report-design-view-report-builder.md)   
- [共有データセット デザイン ビュー (レポート ビルダー)](../report-builder/shared-dataset-design-view-report-builder.md)   
+ [共有データセットデザインビュー &#40;レポートビルダー&#41;](../report-builder/shared-dataset-design-view-report-builder.md)   
  [Reporting Services クエリ デザイナー](../reporting-services-query-designers.md)  
   
   

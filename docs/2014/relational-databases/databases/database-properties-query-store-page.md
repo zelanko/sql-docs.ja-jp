@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 51116c993cf795e6390ac463f67f75e2ddff3e0e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917213"
 ---
 # <a name="database-properties-query-store-page"></a>データベースのプロパティ (クエリのストアのページ)
@@ -24,9 +24,9 @@ ms.locfileid: "62917213"
   
 ||  
 |-|  
-|**に適用されます**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]です。|  
+|**適用対象**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。|  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  [有効化]  
  クエリのストアを有効化または無効化します。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "62917213"
  クエリのストアの目的の操作モードを取得、および設定します。  
   
  データ フラッシュ間隔 (分)  
- クエリに書き込まれるデータ ストアが永続化する頻度を決定をディスクにします。 パフォーマンスを最適化するため、クエリ ストアで収集したデータは非同期的にディスクに書き込まれます。 この非同期転送が発生する頻度が構成されます。  
+ クエリ ストアに書き込まれるデータがディスクに永続化される頻度を決定します。 パフォーマンスを最適化するため、クエリ ストアで収集したデータは非同期的にディスクに書き込まれます。 この非同期転送が発生する頻度が構成されます。  
   
  統計情報の収集間隔  
  統計情報の収集間隔を取得、および設定します。  
@@ -59,11 +59,11 @@ ms.locfileid: "62917213"
   
  右側のグラフには、現在使用されているクエリのストアのクォータの部分が表示されます。 クォータは、左側のグラフには表示されないことにご注意ください。 クォータが、データベースの現在のサイズを超える場合があります。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  クエリのストアの機能により、クエリ プランの選択やパフォーマンスに関する洞察が DBA に提供されます。 これにより、クエリ プランの変更によって生じるパフォーマンスの違いがすばやくわかるようになり、パフォーマンス上のトラブルシューティングを簡略化できます。 この機能により、クエリ、プラン、ランタイム統計情報の履歴が自動的にキャプチャされ、レビュー用に保持されます。 データは時間枠で区分されるため、データベースの使用パターンを表示して、サーバー上でクエリ プランが変わった時点を確認することができます。 クエリのストアは、クエリのストアのデータベース プロパティ ページを使用するか、 [ALTER DATABASE SET](/sql/t-sql/statements/alter-database-transact-sql-set-options) オプションを使用して構成できます。 クエリのストアは、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ダイアログ ボックスを使用して情報を表示します。 クエリのストアの詳細については、「 [Monitoring Performance By Using the Query Store](../performance/monitoring-performance-by-using-the-query-store.md)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
- [クエリ ストアのストアド プロシージャ &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql)   
- [クエリ ストアのカタログ ビュー &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/query-store-catalog-views-transact-sql)  
+ [Transact-sql&#41;&#40;のストアドプロシージャのクエリストア](/sql/relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql)   
+ [クエリストアカタログビュー &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/query-store-catalog-views-transact-sql)  
   
   

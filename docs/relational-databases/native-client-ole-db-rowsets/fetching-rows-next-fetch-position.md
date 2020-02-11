@@ -17,16 +17,18 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 632622f985e363d87cd820729afb6f69826c903b
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73788985"
 ---
 # <a name="fetching-rows---next-fetch-position"></a>行のフェッチ - 次のフェッチ位置
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、次のフェッチ位置を追跡して、 **GetNextRows**メソッドへの呼び出しのシーケンス (スキップ、方向の変更、また**は FindNextRow、Seek、RestartPosition**メソッド) 行をスキップまたは繰り返さずに行セット全体を読み取ります。 **IRowset::GetNextRows**、**IRowset::RestartPosition**、または **IRowsetIndex::Seek** を呼び出すか、**pBookmark** 値に NULL を指定して *FindNextRow* を呼び出すことにより、次のフェッチ位置が変更されます。 **pBookmark** 値に NULL 以外の値を指定して *FindNextRow* を呼び出しても、次のフェッチ位置には影響しません。  
+  Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB プロバイダーは、次のフェッチ位置を追跡します。これにより、 **GetNextRows**メソッド (スキップ、方向の変更、または**FindNextRow**、 **Seek**、または**RestartPosition**メソッドへの介在する呼び出しを除く) の一連の呼び出しによって行セット全体が読み取られます。行をスキップしたり、繰り返したりする必要はありません。 
+  **IRowset::GetNextRows**、**IRowset::RestartPosition**、または **IRowsetIndex::Seek** を呼び出すか、**pBookmark** 値に NULL を指定して *FindNextRow* を呼び出すことにより、次のフェッチ位置が変更されます。 
+  **pBookmark** 値に NULL 以外の値を指定して *FindNextRow* を呼び出しても、次のフェッチ位置には影響しません。  
   
 ## <a name="see-also"></a>参照  
  [行のフェッチ](../../relational-databases/native-client-ole-db-rowsets/fetching-rows.md)  

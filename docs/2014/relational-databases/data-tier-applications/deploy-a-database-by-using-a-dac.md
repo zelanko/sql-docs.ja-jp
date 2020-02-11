@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2dfc75b2af19165931dc50e76f04bc7362b59ea8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62873053"
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>DAC を使用したデータベースの配置
@@ -76,65 +76,70 @@ ms.locfileid: "62873053"
   
     -   [[概要] ページ](#Summary)  
   
-    -   [[結果]](#Results)  
+    -   [結果](#Results)  
   
-##  <a name="Introduction"></a> [説明] ページ  
+##  <a name="Introduction"></a>[はじめに] ページ  
  このページには、 **データベース配置** ウィザードの手順が示されています。  
   
- **[オプション]**  
+ **オプション**  
   
--   **[次回からこのページを表示しない]** : 今後 [説明] ページを表示しないようにするには、このチェック ボックスをオンにします。  
+-   **次回からこのページを表示しない** : 今後 [説明] ページを表示しないようにするには、このチェック ボックスをオンにします。  
   
--   **[次へ]** : **[配置設定]** ページに進みます。  
+-   **[次へ**]: [**配置設定**] ページに進みます。  
   
 -   **[キャンセル]** : 操作を取り消し、ウィザードを閉じます。  
   
-##  <a name="Deployment_settings"></a> [配置設定] ページ  
+##  <a name="Deployment_settings"></a>[展開設定] ページ  
  このページを使用して、配置先サーバーと、新しいデータベースの詳細を指定します。  
   
- **[ローカル ホスト]**  
+ **ローカルホスト:**  
   
--   **[サーバー接続]** : サーバー接続の詳細を指定し、 **[接続]** をクリックして接続を検証します。  
+-   **サーバー接続**-サーバー接続の詳細を指定し、[**接続**] をクリックして接続を確認します。  
   
--   **[新しいデータベース名]** : 新しいデータベースの名前を指定します。  
+-   **新しいデータベース名**-新しいデータベースの名前を指定します。  
   
- **[!INCLUDE[ssSDS](../../includes/sssds-md.md)] データベースの設定:**  
+ **[!INCLUDE[ssSDS](../../includes/sssds-md.md)]データベースの設定:**  
   
--   **[!INCLUDE[ssSDS](../../includes/sssds-md.md)] のエディション**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] のエディションをドロップダウン メニューから選択します。  
+-   [エディション]-ドロップダウン[!INCLUDE[ssSDS](../../includes/sssds-md.md)]メニューからエディションを選択します。 ** [!INCLUDE[ssSDS](../../includes/sssds-md.md)] **  
   
--   **[データベースの最大サイズ (GB)]** : データベースの最大サイズをドロップダウン メニューから選択します。  
+-   [**データベースの最大サイズ**]-ドロップダウンメニューからデータベースの最大サイズを選択します。  
   
  **その他の設定:**  
   
 -   一時ファイル (BACPAC アーカイブ ファイル) のローカル ディレクトリを指定します。 このファイルは指定した場所に作成され、操作の完了後もそのまま残されます。  
   
-##  <a name="Summary"></a> [概要] ページ  
- このページを使用すると、操作の指定ソースとターゲットの設定を確認できます。 指定した設定で配置操作を実行するには、 **[完了]** をクリックします。 配置操作をキャンセルしてウィザードを終了するには、 **[キャンセル]** をクリックします。  
+##  <a name="Summary"></a>[概要] ページ  
+ このページを使用すると、操作の指定ソースとターゲットの設定を確認できます。 指定した設定で配置操作を実行するには、 **[完了]** をクリックします。 配置操作をキャンセルしてウィザードを終了するには、[**キャンセル**] をクリックします。  
   
-##  <a name="Progress"></a> [進行状況] ページ  
+##  <a name="Progress"></a>[進行状況] ページ  
  このページには、操作の進行状況を示す進行状況バーが表示されます。 詳細な状態を表示するには、 **[詳細表示]** をクリックします。  
   
-##  <a name="Results"></a> [結果] ページ  
+##  <a name="Results"></a>[結果] ページ  
  このページでは、配置操作の成功と失敗が報告され、各アクションの結果が示されます。 エラーが発生したアクションには、 **[結果]** 列にリンクが表示されます。 そのアクションのエラーのレポートを表示するには、リンクをクリックします。  
   
- **[完了]** をクリックして、ウィザードを終了します。  
+ 
+  **[完了]** をクリックして、ウィザードを終了します。  
   
 ## <a name="using-a-net-framework-application"></a>.Net Framework アプリケーションの使用  
- **.Net Framework アプリケーションで DacStoreExport() メソッドおよび Import() メソッドを使用してデータベースを配置するには**  
+ **.Net Framework アプリケーションで DacStoreExport () メソッドおよび Import () メソッドを使用してデータベースを配置するには**  
   
  コード例を参照するには、 [Codeplex](https://go.microsoft.com/fwlink/?LinkId=219575)上の DAC サンプル アプリケーションをダウンロードしてください。  
   
 1.  SMO サーバー オブジェクトを作成し、配置するデータベースがあるインスタンスまたはサーバーに設定します。  
   
-2.  `ServerConnection` オブジェクトを開いて、同じインスタンスに接続します。  
+2.  
+  `ServerConnection` オブジェクトを開いて、同じインスタンスに接続します。  
   
-3.  `Export` 型の `Microsoft.SqlServer.Management.Dac.DacStore` メソッドを使用して、BACPAC ファイルにデータベースをエクスポートします。 エクスポートするデータベースの名前と、BACPAC ファイルの出力先となるフォルダーのパスを指定します。  
+3.  
+  `Export` 型の `Microsoft.SqlServer.Management.Dac.DacStore` メソッドを使用して、BACPAC ファイルにデータベースをエクスポートします。 エクスポートするデータベースの名前と、BACPAC ファイルの出力先となるフォルダーのパスを指定します。  
   
 4.  SMO サーバー オブジェクトを作成し、配置先インスタンスまたはサーバーに設定します。  
   
-5.  `ServerConnection` オブジェクトを開いて、同じインスタンスに接続します。  
+5.  
+  `ServerConnection` オブジェクトを開いて、同じインスタンスに接続します。  
   
-6.  `Import` 型の `Microsoft.SqlServer.Management.Dac.DacStore` メソッドを使用して、BACPAC をインポートします。 エクスポートによって作成された BACPAC ファイルを指定します。  
+6.  
+  `Import` 型の `Microsoft.SqlServer.Management.Dac.DacStore` メソッドを使用して、BACPAC をインポートします。 エクスポートによって作成された BACPAC ファイルを指定します。  
   
 ## <a name="see-also"></a>参照  
  [データ層アプリケーション](data-tier-applications.md)   

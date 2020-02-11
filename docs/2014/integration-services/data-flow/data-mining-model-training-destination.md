@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5dac84fe42185806ae468593876a6bd439c1c689
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68890642"
 ---
 # <a name="data-mining-model-training-destination"></a>データ マイニング モデル トレーニング変換先
@@ -35,17 +35,20 @@ ms.locfileid: "68890642"
   
  この変換先は 1 つの入力をとりますが、出力はありません。  
   
- データ マイニング モデル トレーニング変換先を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスに接続するには、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 接続マネージャーを使用します。 詳細については、「 [Analysis Services 接続マネージャー](../connection-manager/analysis-services-connection-manager.md)」を参照してください。  
+ データマイニングモデルトレーニング変換先は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]接続マネージャーを使用して[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 、プロジェクト、または[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]変換先がトレーニングするマイニング構造とマイニングモデルを含むのインスタンスに接続します。 詳しくは、「 [Analysis Services 接続マネージャー](../connection-manager/analysis-services-connection-manager.md)」をご覧ください。  
   
  プロパティを設定するには [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
- **[データ マイニング モデル トレーニング エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
+ 
+  **[データ マイニング モデル トレーニング エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [データ マイニング モデル トレーニング エディター ([接続] タブ)](../data-mining-model-training-editor-connection-tab.md)  
+-   [データマイニングモデルトレーニングエディター &#40;[接続] タブ&#41;](../data-mining-model-training-editor-connection-tab.md)  
   
--   [データ マイニング モデル トレーニング エディター([列] タブ)](../data-mining-model-training-editor-columns-tab.md)  
+-   [データマイニングモデルトレーニングエディター &#40;[列] タブ&#41;](../data-mining-model-training-editor-columns-tab.md)  
   
- **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
+ 
+  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 
+  **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
 -   [共通プロパティ](../common-properties.md)  
   

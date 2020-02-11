@@ -1,5 +1,5 @@
 ---
-title: sp_fulltext_pendingchanges (TRANSACT-SQL) |Microsoft Docs
+title: sp_fulltext_pendingchanges (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -19,16 +19,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d4d8cbd7082a3ec8d19ccc6df7212a70b101e6b8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68124222"
 ---
-# <a name="spfulltextpendingchanges-transact-sql"></a>sp_fulltext_pendingchanges (TRANSACT-SQL)
+# <a name="sp_fulltext_pendingchanges-transact-sql"></a>sp_fulltext_pendingchanges (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  保留中の挿入、更新、および削除の場合は、指定したテーブルを使用している変更の追跡など返しますが、変更にまだ処理されていません。  
+  変更の追跡を使用している指定されたテーブルについて、保留中の挿入、更新、削除などの未処理の変更を返します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,31 +41,32 @@ sp_fulltext_pendingchanges table_id
   
 ## <a name="arguments"></a>引数  
  *table_id*  
- テーブルの ID。 テーブルがない場合、フルテキスト インデックスを作成、またはテーブルの変更の追跡が有効でない、エラーが返されます。  
+ テーブルの ID。 テーブルでフルテキストインデックスが作成されていない場合、またはテーブルで変更の追跡が有効になっていない場合は、エラーが返されます。  
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
 |**[キー]**|*|指定したテーブルからのフルテキスト キー値。|  
 |**DocId**|**bigint**|キー値に対応する内部ドキュメント識別子 (DocId) 列。|  
-|**状態**|**int**|0 = 行は、フルテキスト インデックスから削除されます。<br /><br /> 1 = 行にはフルテキスト インデックスが作成されます。<br /><br /> 2 = 行は最新です。<br /><br /> -1 = 行は、遷移 (一括処理されたがコミットされていない) 状態またはエラー状態にします。|  
+|**状態**|**int**|0 = 行は、フルテキストインデックスから削除されます。<br /><br /> 1 = 行にはフルテキスト インデックスが作成されます。<br /><br /> 2 = 行は最新です。<br /><br /> -1 = 行は遷移中 (バッチ処理されているがコミットされていない) 状態またはエラー状態です。|  
 |**DocState**|**tinyint**|内部ドキュメント識別子 (Docld) のマップ ステータス列の行ダンプ。|  
   
- <sup>* キーのデータ型は、ベース テーブルのフルテキスト キー列のデータ型と同じです。</sup>  
+ <sup>* Key のデータ型は、ベース テーブルのフルテキスト キー列のデータ型と同じです。</sup>  
   
 ## <a name="permissions"></a>アクセス許可  
- **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
+ 
+  **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  未処理の変更がない場合、空の行セットが返されます。  
   
- フルテキスト検索のクエリを持つ行が返されない、**状態**0 の値。 これは、行がベース テーブルから削除されて、フルテキスト インデックスから削除するを待機しているためです。  
+ フルテキスト検索クエリでは、 **Status**値が0の行は返されません。 これは、行がベーステーブルから削除され、フルテキストインデックスから削除されるのを待機しているためです。  
   
- いくつの変更が保留中を検索する特定のテーブルを使用して、 **TableFullTextPendingChanges** OBJECTPROPERTYEX 関数のプロパティ。  
+ 特定のテーブルに対して保留中の変更の数を確認するには、OBJECTPROPERTYEX 関数の**TableFullTextPendingChanges**プロパティを使用します。  
   
-## <a name="see-also"></a>関連項目  
- [フルテキスト検索およびセマンティック検索ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>参照  
+ [Transact-sql&#41;&#40;のフルテキスト検索およびセマンティック検索ストアドプロシージャ](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)   
  [OBJECTPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/objectpropertyex-transact-sql.md)  
   
   

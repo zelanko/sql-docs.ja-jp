@@ -1,5 +1,5 @@
 ---
-title: OriginalValue および UnderlyingValue プロパティの例 (vc++) |Microsoft Docs
+title: OriginalValue プロパティと UnderlyingValue プロパティの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: c5762ad2-f43b-453d-b44a-9c70210eb00f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6b4950634f473ca70c26b7b2b2c8159fb9a75fb0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931825"
 ---
-# <a name="originalvalue-and-underlyingvalue-properties-example-vc"></a>OriginalValue および UnderlyingValue プロパティの例 (vc++)
-この例では、 [OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md)と[UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)にレコードのデータを基になる場合は、メッセージを表示することでプロパティが変更された、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)バッチ更新します。  
+# <a name="originalvalue-and-underlyingvalue-properties-example-vc"></a>OriginalValue プロパティと UnderlyingValue プロパティの例 (VC + +)
+この例では、レコードの基になるデータがレコード[セット](../../../ado/reference/ado-api/recordset-object-ado.md)のバッチ更新中に変更された場合にメッセージを表示することによって、 [Originalvalue](../../../ado/reference/ado-api/originalvalue-property-ado.md)プロパティと[UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)プロパティを示します。  
   
 ## <a name="example"></a>例  
   
@@ -195,31 +195,31 @@ void PrintComError(_com_error &e) {
 ```  
   
  **データが変更されました。**  
-**タイトルの ID。PS1372**  
+**タイトル ID: PS1372**  
 **現在の値: self_help**   
 **元の値: 心理学**   
-**基になる値: 社会学**   
+**基になる値: 経済学**   
 **データが変更されました。**  
-**タイトルの ID。PS2091**  
+**タイトル ID: PS2091**  
 **現在の値: self_help**   
 **元の値: 心理学**   
-**基になる値: 社会学**   
+**基になる値: 経済学**   
 **データが変更されました。**  
-**タイトルの ID。PS2106**  
+**タイトル ID: PS2106**  
 **現在の値: self_help**   
 **元の値: 心理学**   
-**基になる値: 社会学**   
+**基になる値: 経済学**   
 **データが変更されました。**  
-**タイトルの ID。PS3333**  
+**タイトル ID: PS3333**  
 **現在の値: self_help**   
 **元の値: 心理学**   
-**基になる値: 社会学**   
+**基になる値: 経済学**   
 **データが変更されました。**  
-**タイトルの ID。PS7777**  
+**タイトル ID: PS7777**  
 **現在の値: self_help**   
 **元の値: 心理学**   
-**基になる値: 社会学**    
-## <a name="see-also"></a>関連項目  
+**基になる値: 経済学**    
+## <a name="see-also"></a>参照  
  [OriginalValue プロパティ (ADO)](../../../ado/reference/ado-api/originalvalue-property-ado.md)   
- [RecordSet オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [UnderlyingValue プロパティ](../../../ado/reference/ado-api/underlyingvalue-property.md)

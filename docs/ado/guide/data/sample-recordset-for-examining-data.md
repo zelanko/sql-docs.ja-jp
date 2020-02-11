@@ -1,5 +1,5 @@
 ---
-title: データを確認するためのレコード セットのサンプル |Microsoft Docs
+title: データを検査するためのサンプルレコードセットMicrosoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,14 +14,14 @@ ms.assetid: e770e626-68b1-4ddf-a217-d7b30311e2ee
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1882c5298d92e17a7ddaa165288fddfab7fdb02b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924302"
 ---
 # <a name="sample-recordset-for-examining-data"></a>データを確認するためのサンプルのレコードセット
-最初に、見て、**レコード セット**Microsoft SQL server ベースの Northwind サンプル データに対して実行される次の SQL クエリを使用して返されるオブジェクトします。  
+まず、Microsoft SQL Server で Northwind サンプルデータベースに対して実行される、次の SQL クエリを使用して返された**レコードセット**オブジェクトを見てみましょう。  
   
 ```  
 SELECT ProductID,ProductName,UnitPrice   
@@ -29,16 +29,16 @@ FROM Products
 WHERE CategoryID = 7    
 ```  
   
- 結果として得られる**Recordset**オブジェクトには、次の表に示すように、データベース内のすべての生成が含まれています。  
+ 結果の**レコードセット**オブジェクトには、次の表に示すように、データベースで生成されたすべてのが含まれます。  
   
 |ProductID|ProductName|UnitPrice|  
 |---------------|-----------------|---------------|  
-|7|おじさん Bob の有機的な乾燥なし|30.0000|  
-|14|階層|23.2500|  
-|28|Rssle ザワークラウト|45.6000|  
-|51|りんご|53.0000|  
-|74|Longlife 階層|10.0000|  
+|7|あなた Bob's 有機理屈 Pears|30.0000|  
+|14|Tofu|23.2500|  
+|28|Rssle ラウト|45.6000|  
+|51|Manjimup 理屈リンゴ|53.0000|  
+|74|Longlife Tofu|10.0000|  
   
- 自分でこれらの結果を取得する場合は、次の JScript の例を試してください。  
+ これらの結果を自分で取得することに関心がある場合は、次の JScript の例を試してください。  
   
--   [レコード セットを返す JScript の例](../../../ado/guide/data/jscript-code-example-to-return-a-recordset.md)
+-   [レコードセットを返す JScript の例](../../../ado/guide/data/jscript-code-example-to-return-a-recordset.md)

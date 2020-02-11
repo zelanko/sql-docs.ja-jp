@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0d3ee86b85a2eadf990caddc6c92499cf0e706d4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63306216"
 ---
 # <a name="location-dialog-box-visual-database-tools"></a>場所ダイアログ ボックス (Visual Database Tools)
@@ -24,7 +24,7 @@ ms.locfileid: "63306216"
   
 -   **[ファイル]** メニューの **[新規作成]** を選択し、 **[プロジェクト]** を選択します。 **[新しいプロジェクト]** ダイアログ ボックスが表示されたら、 **[参照]** を選択します。 " **プロジェクトの場所** " というタイトルの **場所**ダイアログ ボックスが開きます。  
   
- **[探す場所]**  
+ **Look in**  
  必要なフォルダーをこの一覧から見つけます。 選択したフォルダーのサブフォルダーが表示されます。  
   
 ## <a name="my-places-bar"></a>マイ プレース バー  
@@ -44,7 +44,7 @@ ms.locfileid: "63306216"
  **[ファイル]**  
  **[フォルダー名]** フィールドで選択されているフォルダーのパスを呼び出し元のダイアログ ボックスに返します。  
   
-## <a name="toolbar"></a>[ツール バー]  
+## <a name="toolbar"></a>ツール バー  
  **最近参照した場所**  
  最近参照したフォルダー、ドライブ、またはインターネットの場所を返します。  
   

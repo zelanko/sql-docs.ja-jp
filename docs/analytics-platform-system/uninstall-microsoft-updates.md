@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: a5ebe1ee911f7500505cdbd1962d28c35461a635
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74399467"
 ---
 # <a name="uninstall-microsoft-updates-in-analytics-platform-system"></a>Analytics Platform System での Microsoft 更新プログラムのアンインストール
 この記事では、以前にインストールされた Microsoft update を Analytics Platform System appliance にアンインストールする方法について説明します。  
   
-## <a name="before-you-begin"></a>開始する前に  
+## <a name="before-you-begin"></a>はじめに  
   
 ### <a name="prerequisites"></a>前提条件  
 これらの手順を実行するには、次のものが必要です。  
@@ -38,8 +38,8 @@ ms.locfileid: "74399467"
     C:\pdwinst\media\setup.exe /action="RemoveMicrosoftUpdate" /DomainAdminPasswords="<password>"  
     ```  
   
-## <a name="next-steps"></a>次の手順
-詳細については、次のドキュメントを参照してください。
+## <a name="next-steps"></a>次のステップ
+詳細については、次を参照してください。
 - [Microsoft Update &#40;Analytics Platform System&#41;をダウンロードして適用します](download-and-apply-microsoft-updates.md) 
 - [Analytics platform system の修正プログラム &#40;analytics Platform System&#41;を適用します](apply-analytics-platform-system-hotfixes.md)  
 - [Analytics platform system の修正プログラム &#40;Analytics Platform System&#41;をアンインストールする](uninstall-analytics-platform-system-hotfixes.md)  
