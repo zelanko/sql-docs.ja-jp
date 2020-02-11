@@ -16,10 +16,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: a5993a5ba452e3d46709462e75a316dba02f7540
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74055969"
 ---
 # <a name="keep-identity-values-when-bulk-importing-data-sql-server"></a>データの一括インポート時の ID 値の保持 (SQL Server)
@@ -35,16 +35,16 @@ ID 値を含んでいるデータ ファイルを Microsoft SQL Server のイン
 ## ID 値を維持する <a name="keep_identity"></a>  
 テーブルにデータ行を一括インポートするときに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が ID 値を割り当てないようにするには、適切な keep-identity コマンド修飾子を使用します。  keep-identity 修飾子を指定すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではデータ ファイルの ID 値を使用します。  このような修飾子は次のとおりです。
 
-|コマンド|Keep-identity 修飾子|修飾子の種類|  
+|command|Keep-identity 修飾子|修飾子の種類|  
 |-------------|------------------------------|--------------------|  
-|bcp|-E|スイッチ|  
+|bcp|-E|Switch|  
 |BULK INSERT|KEEPIDENTITY|引数|  
 |INSERT ...SELECT * FROM OPENROWSET(BULK...)|KEEPIDENTITY|テーブル ヒント|  
    
  詳細については、「[bcp Utility](../../tools/bcp-utility.md)」、「[BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)」、「[OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)」、「[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)」、「[SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)」、「[Table Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)」を参照してください。  
 
 > [!NOTE]
->  複数のテーブルで使用できる自動的に増分する番号、またはテーブルを参照せずにアプリケーションから呼び出すことができる自動的に増分する番号を作成するには、「 [シーケンス番号](../../relational-databases/sequence-numbers/sequence-numbers.md)」を参照してください。
+>  複数のテーブルで使用できる自動的に増分する番号、またはテーブルを参照せずにアプリケーションから呼び出すことができる自動的に増分する番号を作成するには、「[シーケンス番号](../../relational-databases/sequence-numbers/sequence-numbers.md)」を参照してください。
  
 ## テスト条件の例<a name="etc"></a>  
 このトピックの例は、以下に定義されたテーブル、データ ファイル、およびフォーマット ファイルに基づいています。
@@ -324,7 +324,7 @@ SELECT * FROM TestDatabase.dbo.myIdentity;
   
 ## <a name="see-also"></a>参照  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
- [bcp Utility](../../tools/bcp-utility.md)   
+ [bcp ユーティリティ](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [テーブル ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)  

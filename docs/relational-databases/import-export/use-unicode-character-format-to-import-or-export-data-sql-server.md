@@ -15,10 +15,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: d016e4f45a91a61c5918a4bfdfb9dd1073521c02
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056313"
 ---
 # <a name="use-unicode-character-format-to-import-or-export-data-sql-server"></a>Unicode 文字形式を使用したデータのインポートまたはエクスポート (SQL Server)
@@ -41,7 +41,7 @@ ms.locfileid: "74056313"
 ## Unicode 文字形式の使用に関する注意点<a name="considerations"></a>
 Unicode 文字形式を使用するときは、以下の点をご考慮ください。  
 
-* 既定では、[bcp ユーティリティ](../../tools/bcp-utility.md)は、文字データ フィールド間の区切りにはタブ文字を、レコードの終わりには改行文字を使用します。  別のターミネータの指定方法の詳細については、「[フィールド ターミネータと行ターミネータの指定 &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)」を参照してください。
+* 既定では、 [bcp ユーティリティ](../../tools/bcp-utility.md) は、文字データ フィールド間の区切りにはタブ文字を、レコードの終わりには改行文字を使用します。  別のターミネータの指定方法の詳細については、「[フィールド ターミネータと行ターミネータの指定 &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)」を参照してください。
 
 * Unicode 文字形式のデータ ファイルに格納されている [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) データの動作は、 [char](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) データではなく [nchar](../../t-sql/data-types/char-and-varchar-transact-sql.md) データとして格納されている点を除いて、文字形式のデータ ファイルの場合と同様になります。 文字形式の詳細については、「 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。  
 
@@ -82,11 +82,11 @@ Unicode 文字形式のデータは [bcp](../../tools/bcp-utility.md)、[BULK IN
   
 Unicode 文字形式は、次のコマンド オプションでサポートされています。  
   
-|コマンド|オプション|[説明]|  
+|command|オプション|説明|  
 |-------------|------------|-----------------|  
 |bcp|**-w**|Unicode 文字形式を使用します。|  
 |BULK INSERT|DATAFILETYPE **='widechar'**|データの一括インポート時に Unicode 文字形式を使用します。|  
-|OPENROWSET|なし|フォーマット ファイルを使用する必要があります|
+|OPENROWSET|該当なし|フォーマット ファイルを使用する必要があります|
   
 > [!NOTE]
 >  また、フォーマット ファイルでフィールドごとに形式を指定することもできます。 詳細については、「 [データのインポートまたはエクスポート用のフォーマット ファイル &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)」を参照してください。
@@ -238,10 +238,10 @@ SELECT * FROM TestDatabase.dbo.myWidechar;
 -   [Unicode ネイティブ形式を使用したデータのインポートまたはエクスポート &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
 ## <a name="see-also"></a>参照  
- [bcp Utility](../../tools/bcp-utility.md)   
+ [bcp ユーティリティ](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)  
+ [照合順序と Unicode のサポート](../../relational-databases/collations/collation-and-unicode-support.md)  
   
   
