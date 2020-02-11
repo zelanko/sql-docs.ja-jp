@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3d58ac84e394d7b8dfe342430991f2ddefa678be
-ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74684457"
 ---
 # <a name="user-assistance-in-sql-server-management-studio"></a>SQL Server Management Studio のユーザー サポート
@@ -34,14 +34,14 @@ ms.locfileid: "74684457"
      
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の一般的なタスクに関する有用なトピックのページがリンクによって階層的にまとめられています。 内容はコンポーネント別、タスク別に編成されており、たとえば、レプリケーションならレプリケーションに関するトピックがひとまとめになっています。  
   
--   **Search**  
+-   **検索**  
   
      トピックの検索を実行します。事前定義のフィルターを指定することも可能です。 
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の検索機能は、別個のタブ付きのページになっています。 トピックの種類、言語、テクノロジに基づく事前定義のフィルターを 1 つ以上指定して検索の精度を高めることもできます。 既定では、事前定義のフィルターなしで検索が実行され、インストールされているコレクション内のトピックだけが検索対象になります。  
   
      オンライン ヘルプを有効にして、検索対象にオンライン リソースを含めることも可能です。 詳細については、この後の「MSDN オンラインと [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] コミュニティ」を参照してください。  
   
--   **ダイナミックヘルプ**  
+-   **ダイナミック ヘルプを表示する**  
   
      ユーザーが [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 環境内で作業しているときに、関連する情報へのリンクが自動的に表示されます。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "74684457"
   
 ## <a name="msdn-online-and-sql-server-communities"></a>MSDN オンラインと SQL Server コミュニティ  
  
-  [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] のヘルプには、Web 上の MSDN オンラインと [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]コミュニティから情報を得るための方法も用意されています。 次の操作を行います。  
+  [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] のヘルプには、Web 上の MSDN オンラインと [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]コミュニティから情報を得るための方法も用意されています。 次のようにすることができます。  
   
 -   [操作方法] ページから [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] コミュニティにアクセスする。  
   
@@ -76,8 +76,7 @@ ms.locfileid: "74684457"
   
 #### <a name="to-enable-online-search"></a>オンライン検索を有効にするには  
   
-1.  
-  **[ツール]** メニューの **[オプション]** をクリックします。 
+1.  **[ツール]** メニューの **[オプション]** をクリックします。 
   **[オプション]** ダイアログ ボックスで、必要に応じて **[環境]** ノード、 **[ヘルプ]** ノードの順に展開し、 **[オンライン]** をクリックします。  
   
 2.  
@@ -88,7 +87,7 @@ ms.locfileid: "74684457"
   
 4.  選択した検索プロバイダーの 1 つが **[Codezone コミュニティ]** の場合は、 **[Codezone コミュニティ]** 一覧で、必要に応じて各項目をオンまたはオフにします。  
   
-5.  [**OK**] をクリックすると、  
+5.  **[OK]** をクリックします。  
   
 #### <a name="to-search-msdn-online-and-sql-server-focused-communities-from-the-search-page"></a>[検索] ページから MSDN オンラインと SQL Server コミュニティを検索するには  
   

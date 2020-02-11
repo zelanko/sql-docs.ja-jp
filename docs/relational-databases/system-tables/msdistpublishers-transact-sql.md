@@ -1,5 +1,5 @@
 ---
-title: MSdistpublishers (Transact-SQL) |Microsoft Docs
+title: MSdistpublishers (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,33 +18,34 @@ ms.assetid: 31844099-4b33-4dc9-84b4-bac70aa82598
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2c19f2d8e75a3c9744318d65683b29d1d84857ff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67907424"
 ---
-# <a name="msdistpublishers-transact-sql"></a>MSdistpublishers (Transact-SQL)
+# <a name="msdistpublishers-transact-sql"></a>MSdistpublishers (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  **MSdistpublishers**テーブルには、ローカル ディストリビューターによってサポートされている各リモート パブリッシャーに 1 つの行が含まれています。 このテーブルに格納されます、 **msdb**データベース。  
+  **Msdistpublishers**テーブルには、ローカルディストリビューターによってサポートされるリモートパブリッシャーごとに1つの行が含まれます。 このテーブルは、 **msdb**データベースに格納されます。  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|パブリッシャーのディストリビューターの名前。|  
-|**distribution_db**|**sysname**|ディストリビューション データベースの名前。|  
-|**working_directory**|**nvarchar (255)**|パブリケーションのデータとスキーマ ファイルを格納するために使用する作業ディレクトリの名前。|  
-|**security_mode**|**int**|ディストリビューターで実装されているセキュリティ モード。<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。<br /><br /> **1** = Windows 認証。|  
-|**login**|**sysname**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証のログイン ID です。|  
-|**password**|**nvarchar(524)**|(暗号化) パスワード[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。|  
-|**active**|**bit**|ローカルのディストリビューターがリモート パブリッシャーによって使用するかどうかを示します。|  
-|**trusted**|**bit**|リモート パブリッシャーがローカル ディストリビューターと同じパスワードを使用するかどうかを示します。<br /><br /> **0** = A、ディストリビューターに接続するリモートのパブリッシャーでパスワードが必要です。<br /><br /> **1** = No パスワードが必要です。|  
-|**third_party**|**bit**|パブリッシャーがのインストールであるかどうか[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インストール **。1** = 異種データ ソース。|  
-|**publisher_type**|**sysname**|パブリッシャーの種類:<br /><br /> **MSSQLSERVER**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。<br /><br /> **ORACLE**標準の Oracle パブリッシャーを = です。<br /><br /> **ORACLE GATEWAY** = Oracle ゲートウェイ パブリッシャーです。|  
-|**storage_connection_string**|**nvarchar(779)**|Azure SQL Database ストレージ接続文字列の値。|  
+|**name**|**sysname**|パブリッシャーディストリビューターの名前。|  
+|**distribution_db**|**sysname**|ディストリビューションデータベースの名前。|  
+|**working_directory**|**nvarchar(255)**|パブリケーションのデータとスキーマファイルを格納するために使用する作業ディレクトリの名前。|  
+|**security_mode**|**int**|ディストリビューターで実装されているセキュリティ モード。<br /><br /> **** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証。<br /><br /> **1** = Windows 認証。|  
+|**ログイン**|**sysname**|
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証のログイン ID です。|  
+|**入力**|**nvarchar (524)**|認証用の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パスワード (暗号化されたもの)。|  
+|**能動的**|**bit**|ローカルディストリビューターがリモートパブリッシャーによって使用されているかどうかを示します。|  
+|**テッド**|**bit**|リモートパブリッシャーがローカルディストリビューターと同じパスワードを使用するかどうかを示します。<br /><br /> **0** = ディストリビューターに接続するために、リモートパブリッシャーでパスワードが必要です。<br /><br /> **1** = パスワードは必要ありません。|  
+|**third_party**|**bit**|パブリッシャーがインストールされている[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]かどうかを示します。<br /><br /> **** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインストール。**1** = 異種データソース。|  
+|**publisher_type**|**sysname**|パブリッシャーの種類:<br /><br /> **** =  MSSQLSERVER[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャー。<br /><br /> **Oracle** = Standard oracle パブリッシャー。<br /><br /> **ORACLE gateway** = Oracle ゲートウェイパブリッシャー。|  
+|**storage_connection_string**|**nvarchar (779)**|Azure SQL Database ストレージ接続文字列の値。|  
 
   
-## <a name="see-also"></a>関連項目  
- [レプリケーション テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
+## <a name="see-also"></a>参照  
+ [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [レプリケーションビュー &#40;Transact-sql&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   
