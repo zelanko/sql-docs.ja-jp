@@ -25,13 +25,13 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a56192c7aa54d9b5fe215b8f793d90d6e814238e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67929052"
 ---
-# <a name="set-deadlockpriority-transact-sql"></a>SET DEADLOCK_PRIORITY (Transact-SQL)
+# <a name="set-deadlock_priority-transact-sql"></a>SET DEADLOCK_PRIORITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   別のセッションとデッドロックとなる場合、現在のセッションでの処理の継続の相対的な優先度を指定します。  
@@ -66,7 +66,7 @@ SET DEADLOCK_PRIORITY { LOW | NORMAL | HIGH | <numeric-priority> | @deadlock_var
  **@** *deadlock_intvar*  
  デッドロックの優先度を表す整数変数を指定します。 変数は -10 ～ 10 の範囲の整数値に設定する必要があります。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  デッドロックは、2 つのセッションが両方とも、一方のセッションによりロックされているリソースへのアクセスを待機しているときに発生します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスにより、2 つのセッションがデッドロックされていることが検出されると、セッションの 1 つをデッドロックの対象として選択することにより、デッドロックが解決します。 デッドロック対象セッションの現在のトランザクションがロールバックされて、デッドロック エラー メッセージ 1205 がクライアントに返されます。 これによって、そのセッションが保持しているすべてのロックが解放され、他のセッションを続行できるようになります。  
   
  どのセッションがデッドロックの対象となるかは、各セッションのデッドロックの優先度によります。  
@@ -80,7 +80,7 @@ SET DEADLOCK_PRIORITY { LOW | NORMAL | HIGH | <numeric-priority> | @deadlock_var
 ## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、デッドロック優先度を `LOW` に設定する変数を使用します。  
   
 ```  

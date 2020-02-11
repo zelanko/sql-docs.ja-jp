@@ -85,10 +85,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: ebf82ec10f01b52b606a1250266884bbcd0a4497
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75557782"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>コマンド プロンプトからの SQL Server のインストール
@@ -171,7 +171,7 @@ C:\SQLMedia\SQLServer2019> setup.exe /help
 ##  <a name="Install"></a> インストール パラメーター  
  次の表にあるパラメーターを使用して、インストール用のコマンドライン スクリプトを作成します。  
   
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] コンポーネント|パラメーター|[説明]|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] コンポーネント|パラメーター|説明|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ コントロール|/ACTION<br /><br /> **必須**|インストール ワークフローを示すために必要です。<br /><br /> サポートされる値:**インストール**。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/SUPPRESSPRIVACYSTATEMENTNOTICE<br /><br /> **自動インストールのために /Q パラメーターまたは /QS パラメーターを指定した場合にのみ必須です。**|プライバシーに関する声明を非表示にします。 このフラグを使用すると、[プライバシーに関する声明](../../sql-server/sql-server-privacy.md)に同意したことになります。  |  
@@ -226,7 +226,7 @@ C:\SQLMedia\SQLServer2019> setup.exe /help
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/INSTALLSQLDATADIR<br /><br /> **省略可能**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ ファイルのデータ ディレクトリを指定します。 既定値:<br /><br /> 64 ビットの WOW モード: `%Program Files(x86)%\Microsoft SQL Server\`<br /><br /> 他のすべてのインストール: `%Program Files%\Microsoft SQL Server\`|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SAPWD<br /><br /> **/SECURITYMODE=SQL の場合に必須**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SA** アカウントのパスワードを指定します。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SECURITYMODE<br /><br /> **省略可能**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセキュリティ モードを指定します。<br /><br /> このパラメーターを指定しない場合、Windows 限定の認証モードがサポートされます。<br /><br /> サポートされる値:**SQL**|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLBACKUPDIR<br /><br /> **省略可能**|バックアップ ファイルのディレクトリを指定します。<br /><br /> [既定値]\: [すべての要求] `<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Backup`|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLBACKUPDIR<br /><br /> **省略可能**|バックアップ ファイルのディレクトリを指定します。<br /><br /> 既定値:`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Backup`|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLCOLLATION<br /><br /> **省略可能**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の照合順序の設定を指定します。<br /><br /> 既定のインストール設定はオペレーティング システム (OS) ロケールによって決定されます。 サーバーレベルの照合順序はセットアップ中に変更するか、インストール前に OS ロケールを変更することで変更できます。 既定の照合順序は、特定のロケール別に関連付けられている中で最も古いバージョンに設定されます。 これは下位互換性によるものです。 そのため、これが常に推奨される照合順序になるとは限りません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の機能を活用するには、Windows 照合順序を使用するように既定のインストール設定を変更します。 たとえば、OS のロケールが**英語 (米国)** (コード ページ 1252) の場合、セットアップ中、既定の照合順序は **SQL_Latin1_General_CP1_CI_AS** になります。これは Windows 照合順序でそれに最も近い **Latin1_General_100_CI_AS_SC** に変更できます。 <br /><br />詳細については、「[照合順序と Unicode のサポート](../../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/ADDCURRENTUSERASSQLADMIN<br /><br /> **省略可能**|現在のユーザーを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sysadmin** 固定サーバー ロールに追加します。 /ADDCURRENTUSERASSQLADMIN パラメーターは、Express エディションをインストールする場合、または /Role=ALLFeatures_WithDefaults が指定されている場合に使用できます。 詳細については、後述の /ROLE をご覧ください。<br /><br /> /ADDCURRENTUSERASSQLADMIN の使用はオプションですが、/ADDCURRENTUSERASSQLADMIN または /SQLSYSADMINACCOUNTS のどちらかを指定する必要があります。 既定値:<br /><br /> **のエディション:** True [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]<br /><br /> 他のすべてのエディション:**False**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCACCOUNT<br /><br /> **必須**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスの開始アカウントを指定します。|  
@@ -240,9 +240,9 @@ C:\SQLMedia\SQLServer2019> setup.exe /help
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILEGROWTH<br /><br /> **省略可能**|各 tempdb データ ファイルのファイル拡張増分値を MB 単位で指定します。 0 は、自動拡張がオフで、領域を追加できないことを示します。 最大 1024 のサイズまで指定できます。<br /><br /> 既定値:64。 許容範囲: 最小値 = 0、最大値 = 1024|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILESIZE<br /><br /> **省略可能**|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] で導入されました。 各 tempdb ログ ファイルの初期サイズを指定します。<br/><br/>既定値 = [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] の場合は 4 MB、その他のエディションの場合は 8 MB。<br/><br/>最小値 = (4 MB または 8 MB)。<br/><br/>最大値 = 1024 MB ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] の場合は 262,144 MB)。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILEGROWTH<br /><br /> **省略可能**|各 tempdb データ ファイルのファイル拡張増分値を MB 単位で指定します。 0 は、自動拡張がオフで、領域を追加できないことを示します。 最大 1024 のサイズまで指定できます。<br /><br /> 既定値:64。 許容範囲: 最小値 = 0、最大値 = 1024|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBDIR<br /><br /> **省略可能**|ユーザー データベースのデータ ファイルのディレクトリを指定します。<br /><br /> [既定値]\: [すべての要求] `<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBDIR<br /><br /> **省略可能**|ユーザー データベースのデータ ファイルのディレクトリを指定します。<br /><br /> 既定値:`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCINSTANTFILEINIT<br /><br /> **省略可能**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス アカウントのファイルの瞬時初期化を有効にします。 セキュリティとパフォーマンスに関する考慮事項については、「 [データベースのファイルの瞬時初期化](../../relational-databases/databases/database-instant-file-initialization.md)」をご覧ください。<br /><br /> 既定値:"False"<br /><br /> 省略可能な値:"True"|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBLOGDIR<br /><br /> **省略可能**|ユーザー データベースのログ ファイルのディレクトリを指定します。<br /><br /> [既定値]\: [すべての要求] `<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBLOGDIR<br /><br /> **省略可能**|ユーザー データベースのログ ファイルのディレクトリを指定します。<br /><br /> 既定値:`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLMAXDOP=parameter <br /><br /> **省略可能** <br /> 無人 (サイレント) インストール時に省略した場合、MAXDOP は[並列処理の最大限度のガイドライン](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)に従います。 |並列処理の最大限度を指定します。これにより、1 つのステートメントの実行中に 1 つのステートメントで使用できるプロセッサの数が決まります。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降でのみ使用できます。 <br /><br /> 既定値は、[max degree of parallelism のガイドライン](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)に従います。|
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/USESQLRECOMMENDEDMEMORYLIMITS<br /><br /> **省略可能** <br /> 無人 (サイレント) インストールで /USESQLRECOMMENDEDMEMORYLIMITS、/SQLMINMEMORY、/SQLMAXMEMORY を省略した場合、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] では [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定のメモリ構成が使用されます。|スタンドアロン [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの[サーバー メモリ構成ガイドライン](../../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually)と一致する計算された推奨値を [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] で使用することを指定します。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降でのみ使用できます。<br /><br /> **注:** このパラメーターを /SQLMINMEMORY および /SQLMAXMEMORY と共に使用することはできません。 |  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLMINMEMORY<br /><br /> **省略可能** <br /> 無人 (サイレント) インストールで /USESQLRECOMMENDEDMEMORYLIMITS、/SQLMINMEMORY、/SQLMAXMEMORY を省略した場合、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] では [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定のメモリ構成が使用されます。|Min Server Memory 構成を MB 単位で指定します。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降でのみ使用できます。<br /><br /> 既定値:0。<br /><br /> **注:** このパラメーターを /USESQLRECOMMENDEDMEMORYLIMITS と共に使用することはできません。 |  
@@ -279,7 +279,7 @@ setup.exe /q /ACTION=Install /FEATURES=SQL /INSTANCENAME=MSSQLSERVER /SQLSVCACCO
 #### <a name="prepare-image-parameters"></a>イメージの準備パラメーター  
  次の表に示すパラメーターは、SQL Server のインスタンスを準備する (構成は行わない) ためのコマンド ライン スクリプトを作成する場合に使用します。 
   
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] コンポーネント|パラメーター|[説明]|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] コンポーネント|パラメーター|説明|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ コントロール|/ACTION<br /><br /> **必須**|インストール ワークフローを示すために必要です。<br /><br /> サポートされる値:**PrepareImage**|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ コントロール|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **自動インストールのために /Q パラメーターまたは /QS パラメーターを指定した場合にのみ必須です。**|ライセンス条項への同意を確認するために必要です。|  
@@ -312,7 +312,7 @@ setup.exe /q /ACTION=PrepareImage /FEATURES=SQL,RS /InstanceID =<MYINST> /IACCEP
 #### <a name="complete-image-parameters"></a>イメージの完了パラメーター  
  次の表に示すパラメーターは、準備された SQL Server のインスタンスを完了および構成するためのコマンド ライン スクリプトを作成する場合に使用します。 
   
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネント|パラメーター|[説明]|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネント|パラメーター|説明|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ コントロール|/ACTION<br /><br /> **必須**|インストール ワークフローを示すために必要です。<br /><br /> サポートされる値:**CompleteImage**|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ コントロール|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **自動インストールのために /Q パラメーターまたは /QS パラメーターを指定した場合にのみ必須です。**|ライセンス条項への同意を確認するために必要です。|  
@@ -354,8 +354,8 @@ setup.exe /q /ACTION=PrepareImage /FEATURES=SQL,RS /InstanceID =<MYINST> /IACCEP
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILESIZE<br /><br /> **省略可能**|tempdb ログ ファイルの初期サイズを MB 単位で指定します。 最大 1024 のサイズまで指定できます。<br /><br /> 既定値:<br /><br /> [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]: 4<br /><br /> 他のすべてのエディション: 8<br /><br /> 許容範囲: 最小値 = 既定値 (4 または 8)、最大値 = 1024|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILEGROWTH<br /><br /> **省略可能**|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] で導入されました。 各 tempdb ログ ファイルの初期サイズを指定します。<br/><br/>既定値 = [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] の場合は 4 MB、その他のエディションの場合は 8 MB。<br/><br/>最小値 = (4 MB または 8 MB)。<br/><br/>最大値 = 1024 MB ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] の場合は 262,144 MB)。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILECOUNT<br /><br /> **省略可能**|セットアップで追加する tempdb データ ファイルの数を指定します。 この値はコアの数まで増やすことができます。 既定値:<br /><br /> [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]: 1<br /><br /> 他のすべてのエディション: 8 またはコアの数のうち、小さい方の値<br /><br /> **重要:** tempdb のプライマリ データベース ファイルは引き続き tempdb.mdf になります。 その他の tempdb ファイルには、tempdb_mssql_#.ndf という名前が付けられます。# は、セットアップ中に作成されたその他の各 tempdb データベース ファイルの一意の番号を表します。 この名前付け規則は、各データベース ファイルを一意にすることを目的としています。 SQL Server のインスタンスをアンインストールすると、tempdb_mssql_#.ndf 名前付け規則を使用するファイルが削除されます。 ユーザー データベース ファイルには tempdb_mssql_\*.ndf 名前付け規則を使用しないでください。<br /><br /> **警告:** このパラメーターの構成では [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] はサポートされていません。 セットアップでインストールされる tempdb データ ファイルは 1 つだけです。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBDIR<br /><br /> **省略可能**|ユーザー データベースのデータ ファイルのディレクトリを指定します。<br /><br /> [既定値]\: [すべての要求] `<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBLOGDIR<br /><br /> **省略可能**|ユーザー データベースのログ ファイルのディレクトリを指定します。<br /><br /> [既定値]\: [すべての要求] `<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBDIR<br /><br /> **省略可能**|ユーザー データベースのデータ ファイルのディレクトリを指定します。<br /><br /> 既定値:`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBLOGDIR<br /><br /> **省略可能**|ユーザー データベースのログ ファイルのディレクトリを指定します。<br /><br /> 既定値:`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`|  
 |FILESTREAM|/FILESTREAMLEVEL<br /><br /> **省略可能**|FILESTREAM 機能のアクセス レベルを指定します。 サポートされる値:<br /><br /> 0 = [このインスタンスに対する FILESTREAM サポートを無効にする] (既定値)<br /><br /> 1 = [ [!INCLUDE[tsql](../../includes/tsql-md.md)] アクセスに対して FILESTREAM を有効にする]<br /><br /> 2 = [ [!INCLUDE[tsql](../../includes/tsql-md.md)] アクセスおよびファイル I/O ストリーム アクセスに対して FILESTREAM を有効にする] (クラスター シナリオに対しては無効です)<br /><br /> 3 = [リモート クライアントに FILESTREAM データへのストリーム アクセスを許可する]|  
 |FILESTREAM|/FILESTREAMSHARENAME<br /><br /> **省略可能**<br /><br /> **FILESTREAMLEVEL が 1 より大きい場合は必須。**|FILESTREAM データを格納する Windows 共有の名前を指定します。|  
 |SQL Server フルテキスト|/FTSVCACCOUNT<br /><br /> **省略可能**|フルテキスト フィルター ランチャー サービスのアカウントを指定します。<br /><br /> このパラメーターは、[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 以降では無視されます。 ServiceSID は、SQL Server と Full-text Filter Daemon 間の通信を確立するのに使用されます。 この値を指定しない場合、フルテキスト フィルター ランチャー サービスが無効になります。 サービス アカウントを変更し、フルテキスト機能を有効にするには、SQL Server コントロール マネージャーを使用する必要があります。<br /><br /> 既定値:ローカル サービス アカウント|  
@@ -377,7 +377,7 @@ setup.exe /q /ACTION=CompleteImage /INSTANCENAME=MYNEWINST /INSTANCEID=<MYINST> 
 ##  <a name="Upgrade"></a> アップグレード パラメーター  
  次の表に示すパラメーターは、アップグレード用のコマンド ライン スクリプトを作成する場合に使用します。 
   
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] コンポーネント|パラメーター|[説明]|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] コンポーネント|パラメーター|説明|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/ACTION<br /><br /> **必須**|インストール ワークフローを示すために必要です。 サポートされる値:<br /><br /> **アップグレード**<br /><br /> **EditionUpgrade**<br /><br /> <br /><br /> 値 **EditionUpgrade** は、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の既存のエディションを別のエディションにアップグレードするときに使用します。 サポートされるバージョンとエディションのアップグレードについては、「 [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)」を参照してください。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **自動インストールのために /Q パラメーターまたは /QS パラメーターを指定した場合にのみ必須です。**|ライセンス条項への同意を確認するために必要です。|  
@@ -415,7 +415,7 @@ setup.exe /q /ACTION=upgrade /INSTANCEID = <INSTANCEID>/INSTANCENAME=MSSQLSERVER
 ##  <a name="Repair"></a> 修復パラメーター  
  次の表に示すパラメーターは、修復用のコマンド ライン スクリプトを作成する場合に使用します。 
   
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] コンポーネント|パラメーター|[説明]|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] コンポーネント|パラメーター|説明|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/ACTION<br /><br /> **必須**|修復ワークフローを示すために必要です。<br /><br /> サポートされる値:**修復**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/ENU<br /><br /> **省略可能**|ローカライズされたオペレーティング システムに [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] の英語版をインストールする場合に、オペレーティング システムに対応する言語と英語の両方の言語パックがインストール メディアに含まれているときは、このパラメーターを使用します。|  
@@ -439,7 +439,7 @@ setup.exe /q /ACTION=Repair /INSTANCENAME=<instancename>
 ##  <a name="Rebuild"></a> 再構築システム データベース パラメーター  
  次の表に示すパラメーターは、master、model、msdb、および tempdb の各システム データベースを再構築するコマンド ライン スクリプトを作成する場合に使用します。 詳細については、「 [システム データベースの再構築](../../relational-databases/databases/rebuild-system-databases.md)」を参照してください。 
   
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] コンポーネント|パラメーター|[説明]|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] コンポーネント|パラメーター|説明|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/ACTION<br /><br /> **必須**|データベースの再構築に関するワークフローを示すのに必要です。<br /><br /> サポートされる値:**Rebuilddatabase**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/INSTANCENAME<br /><br /> **必須**|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] インスタンス名を指定します。<br /><br /> 詳細については、「 [Instance Configuration](../../sql-server/install/instance-configuration.md)」を参照してください。|  
@@ -458,7 +458,7 @@ setup.exe /q /ACTION=Repair /INSTANCENAME=<instancename>
 ##  <a name="Uninstall"></a> アンインストール パラメーター  
  次の表に示すパラメーターは、アンインストール用のコマンド ライン スクリプトを作成する場合に使用します。 
   
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] コンポーネント|パラメーター|[説明]|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] コンポーネント|パラメーター|説明|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/ACTION<br /><br /> **必須**|アンインストール ワークフローを示すために必要です。<br /><br /> サポートされる値:**アンインストール**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/CONFIGURATIONFILE<br /><br /> **省略可能**|使用する [ConfigurationFile](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md) を指定します。|  
@@ -547,12 +547,12 @@ setup.exe /Action=Uninstall /FEATURES=SQL,AS,RS,IS,Tools /INSTANCENAME=MSSQLSERV
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/INSTALLSQLDATADIR<br /><br /> **必須**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ ファイルのデータ ディレクトリを指定します。<br /><br /> データ ディレクトリは、共有クラスター ディスク上に指定する必要があります。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SAPWD<br /><br /> **/SECURITYMODE=SQL の場合に必須**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SA** アカウントのパスワードを指定します。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SECURITYMODE<br /><br /> **省略可能**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセキュリティ モードを指定します。<br /><br /> このパラメーターを指定しない場合、Windows 限定の認証モードがサポートされます。<br /><br /> サポートされる値:**SQL**|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLBACKUPDIR<br /><br /> **省略可能**|バックアップ ファイルのディレクトリを指定します。<br /><br /> [既定値]\: [すべての要求]`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Backup`|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLBACKUPDIR<br /><br /> **省略可能**|バックアップ ファイルのディレクトリを指定します。<br /><br /> 既定値:`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Backup`|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLCOLLATION<br /><br /> **省略可能**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の照合順序の設定を指定します。<br /><br /> 既定値は、Windows オペレーティング システムのロケールに基づいています。 詳細については、「 [セットアップでの照合順序の設定](../../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCACCOUNT<br /><br /> **必須**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスの開始アカウントを指定します。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCPASSWORD<br /><br /> [必須](#Accounts)|SQLSVCACCOUNT のパスワードを指定します。 管理されたサービス アカウント、仮想アカウント、またはビルトイン アカウントの使用時、このパラメーターは省略できます。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSYSADMINACCOUNTS<br /><br /> **必須**|**sysadmin**ロールのメンバーになるためにログインを準備するには、このパラメーターを使用します。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBDIR<br /><br /> **省略可能**|ユーザー データベースのデータ ファイルのディレクトリを指定します。<br /><br /> [既定値]\: [すべての要求]`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBDIR<br /><br /> **省略可能**|ユーザー データベースのデータ ファイルのディレクトリを指定します。<br /><br /> 既定値:`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBDIR<br /><br /> **省略可能**|tempdb データ ファイルのディレクトリを指定します。 複数のディレクトリを指定する場合、各ディレクトリを空白で区切ります。 複数のディレクトリが指定されている場合、tempdb データ ファイルはラウンド ロビン形式ですべてのディレクトリにまたがるようになります。<br /><br /> 既定値:`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data` (システム データ ディレクトリ)<br /><br /> 注:このパラメーターは、RebuildDatabase シナリオにも追加されます。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGDIR<br /><br /> **省略可能**|tempdb のログ ファイルのディレクトリを指定します。<br /><br /> 既定値:`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data` (システム データ ディレクトリ)<br /><br /> 注:このパラメーターは、RebuildDatabase シナリオにも追加されます。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILECOUNT<br /><br /> **省略可能**|セットアップで追加する tempdb データ ファイルの数を指定します。 この値はコアの数まで増やすことができます。 既定値:<br /><br /> [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]: 1<br /><br /> 他のすべてのエディション: 8 またはコアの数のうち、小さい方の値<br /><br /> **重要:** tempdb のプライマリ データベース ファイルは引き続き tempdb.mdf になります。 その他の tempdb ファイルには、tempdb_mssql_#.ndf という名前が付けられます。# は、セットアップ中に作成されたその他の各 tempdb データベース ファイルの一意の番号を表します。 この名前付け規則は、各データベース ファイルを一意にすることを目的としています。 SQL Server のインスタンスをアンインストールすると、tempdb_mssql_#.ndf 名前付け規則を使用するファイルが削除されます。 ユーザー データベース ファイルには tempdb_mssql_\*.ndf 名前付け規則を使用しないでください。<br /><br /> **警告:** このパラメーターの構成では [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] はサポートされていません。 セットアップでインストールされる tempdb データ ファイルは 1 つだけです。|  
@@ -560,7 +560,7 @@ setup.exe /Action=Uninstall /FEATURES=SQL,AS,RS,IS,Tools /INSTANCENAME=MSSQLSERV
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBFILEGROWTH<br /><br /> **省略可能**|各 tempdb データ ファイルのファイル拡張増分値を MB 単位で指定します。 0 は、自動拡張がオフで、領域を追加できないことを示します。 最大 1024 のサイズまで指定できます。<br /><br /> 既定値:64<br /><br /> 許容範囲: 最小値 = 0、最大値 = 1024|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILESIZE<br /><br /> **省略可能**|tempdb ログ ファイルの初期サイズを MB 単位で指定します。 最大 1024 のサイズまで指定できます。 <br /> 既定値:<br /><br /> [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]: 4<br /><br /> 他のすべてのエディション: 8<br /><br /> 許容範囲: 最小値 = 既定値 (4 または 8)、最大値 = 1024|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGFILEGROWTH<br /><br /> **省略可能**|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] で導入されました。 各 tempdb ログ ファイルの初期サイズを指定します。<br/><br/>既定値 = [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] の場合は 4 MB、その他のエディションの場合は 8 MB。<br/><br/>最小値 = (4 MB または 8 MB)。<br/><br/>最大値 = 1024 MB ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] の場合は 262,144 MB)。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBLOGDIR<br /><br /> **省略可能**|ユーザー データベースのログ ファイルのディレクトリを指定します。<br /><br /> [既定値]\: [すべての要求] `<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBLOGDIR<br /><br /> **省略可能**|ユーザー データベースのログ ファイルのディレクトリを指定します。<br /><br /> 既定値:`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`|  
 |FILESTREAM|/FILESTREAMLEVEL<br /><br /> **省略可能**|FILESTREAM 機能のアクセス レベルを指定します。 サポートされる値:<br /><br /> 0 = [このインスタンスに対する FILESTREAM サポートを無効にする] (既定値)<br /><br /> 1 = [ [!INCLUDE[tsql](../../includes/tsql-md.md)] アクセスに対して FILESTREAM を有効にする]<br /><br /> 2 = [ [!INCLUDE[tsql](../../includes/tsql-md.md)] アクセスおよびファイル I/O ストリーム アクセスに対して FILESTREAM を有効にする] (クラスター シナリオに対しては無効です)<br /><br /> 3 = [リモート クライアントに FILESTREAM データへのストリーム アクセスを許可する]|  
 |FILESTREAM|/FILESTREAMSHARENAME<br /><br /> **省略可能**<br /><br /> **FILESTREAMLEVEL が 1 より大きい場合は必須。**|FILESTREAM データを格納する Windows 共有の名前を指定します。|  
 |SQL Server フルテキスト|/FTSVCACCOUNT<br /><br /> **省略可能**|フルテキスト フィルター ランチャー サービスのアカウントを指定します。<br /><br /> このパラメーターは、[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 以降では無視されます。 ServiceSID は、SQL Server と Full-text Filter Daemon 間の通信を確立するのに使用されます。<br /><br /> この値を指定しない場合、フルテキスト フィルター ランチャー サービスが無効になります。 サービス アカウントを変更し、フルテキスト機能を有効にするには、SQL Server コントロール マネージャーを使用する必要があります。<br /><br /> 既定値:ローカル サービス アカウント|  
@@ -588,7 +588,7 @@ setup.exe /q /ACTION=InstallFailoverCluster /InstanceName=MSSQLSERVER /INDICATEP
 #### <a name="prepare-failover-cluster-parameters"></a>フェールオーバー クラスターの準備パラメーター  
  次の表に示すパラメーターは、フェールオーバー クラスターを準備するコマンド ライン スクリプトを作成する場合に使用します。 ここでは、フェールオーバー クラスターのすべてのノードにフェールオーバー クラスター インスタンスを準備するのに必要な、クラスターの高度なインストールの最初の手順がわかります。 詳細については、「[Always On フェールオーバー クラスター インスタンス &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)」を参照してください。 
   
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] コンポーネント|パラメーター|[説明]|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] コンポーネント|パラメーター|説明|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/ACTION<br /><br /> **必須**|フェールオーバー クラスターの準備に関するワークフローを示すために必要です。<br /><br /> サポートされる値:**PrepareFailoverCluster**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **自動インストールのために /Q パラメーターまたは /QS パラメーターを指定した場合にのみ必須です。**|ライセンス条項への同意を確認するために必要です。|  
@@ -653,7 +653,7 @@ setup.exe /q /ACTION=PrepareFailoverCluster /InstanceName="<Insert Instance name
 #### <a name="complete-failover-cluster-parameters"></a>フェールオーバー クラスターの完了パラメーター  
  次の表に示すパラメーターは、フェールオーバー クラスターを完了するコマンド ライン スクリプトを作成する場合に使用します。 ここでは、フェールオーバー クラスターの高度なインストール オプションについて、2 番目の手順がわかります。 すべてのフェールオーバー クラスター ノードで準備を実行した後、共有ディスクを所有するノードでこのコマンドを実行します。 詳細については、「[Always On フェールオーバー クラスター インスタンス &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)」を参照してください。 
   
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] コンポーネント|パラメーター|[説明]|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] コンポーネント|パラメーター|説明|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/ACTION<br /><br /> **必須**|フェールオーバー クラスターの完了に関するワークフローを示すために必要です。<br /><br /> サポートされる値:**CompleteFailoverCluster**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/ENU<br /><br /> **省略可能**|ローカライズされたオペレーティング システムに SQL Server の英語版をインストールする場合に、オペレーティング システムに対応する言語と英語の両方の言語パックがインストール メディアに含まれているときは、このパラメーターを使用します。|  
@@ -684,11 +684,11 @@ setup.exe /q /ACTION=PrepareFailoverCluster /InstanceName="<Insert Instance name
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/INSTALLSQLDATADIR<br /><br /> **必須**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ ファイルのデータ ディレクトリを指定します。<br /><br /> データ ディレクトリは、共有クラスター ディスク上に指定する必要があります。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SAPWD<br /><br /> **/SECURITYMODE=SQL の場合に必須**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SA** アカウントのパスワードを指定します。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SECURITYMODE<br /><br /> **省略可能**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセキュリティ モードを指定します。<br /><br /> このパラメーターを指定しない場合、Windows 限定の認証モードがサポートされます。<br /><br /> サポートされる値:**SQL**|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLBACKUPDIR<br /><br /> **省略可能**|バックアップ ファイルのディレクトリを指定します。<br /><br /> [既定値]\: [すべての要求] `<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Backup`|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLBACKUPDIR<br /><br /> **省略可能**|バックアップ ファイルのディレクトリを指定します。<br /><br /> 既定値:`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Backup`|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLCOLLATION<br /><br /> **省略可能**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の照合順序の設定を指定します。<br /><br /> 既定値は、Windows オペレーティング システムのロケールに基づいています。 詳細については、「 [セットアップでの照合順序の設定](../../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSYSADMINACCOUNTS<br /><br /> **必須**|sysadmin ロールのメンバーになるためにログインを準備するには、このパラメーターを使用します。|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBDIR<br /><br /> **省略可能**|ユーザー データベースのデータ ファイルのディレクトリを指定します。<br /><br /> [既定値]\: [すべての要求] `<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBLOGDIR<br /><br /> **省略可能**|ユーザー データベースのログ ファイルのディレクトリを指定します。<br /><br /> [既定値]\: [すべての要求] `<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBDIR<br /><br /> **省略可能**|ユーザー データベースのデータ ファイルのディレクトリを指定します。<br /><br /> 既定値:`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLUSERDBLOGDIR<br /><br /> **省略可能**|ユーザー データベースのログ ファイルのディレクトリを指定します。<br /><br /> 既定値:`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data`|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSINSTALLMODE<br /><br /> **ファイル専用モードのみで使用可**| SQL Server 2017 以降では適用できなくなりました。  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]のインストール モードを指定します。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBDIR<br /><br /> **省略可能**|tempdb データ ファイルのディレクトリを指定します。 複数のディレクトリを指定する場合、各ディレクトリを空白で区切ります。 複数のディレクトリが指定されている場合、tempdb データ ファイルはラウンド ロビン形式ですべてのディレクトリにまたがるようになります。<br /><br /> 既定値:`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data` (システム データ ディレクトリ)<br /><br /> 注:このパラメーターは、RebuildDatabase シナリオにも追加されます。|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLTEMPDBLOGDIR<br /><br /> **省略可能**|tempdb のログ ファイルのディレクトリを指定します。<br /><br /> 既定値:`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Data` (システム データ ディレクトリ)<br /><br /> 注:このパラメーターは、RebuildDatabase シナリオにも追加されます。|  
@@ -716,7 +716,7 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName="<Insert Instance Nam
 #### <a name="upgrade-failover-cluster-parameters"></a>フェールオーバー クラスターのアップグレード パラメーター  
  次の表に示すパラメーターは、フェールオーバー クラスターのアップグレード用コマンド ライン スクリプトを作成する場合に使用します。 詳細については、[[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]フェールオーバー クラスター インスタンスのアップグレード &#40;セットアップ&#41;](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance-setup.md)に関するページと「[Always On フェールオーバー クラスター インスタンス &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)」をご覧ください。 
   
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] コンポーネント|パラメーター|[説明]|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] コンポーネント|パラメーター|説明|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/ACTION<br /><br /> **必須**|インストール ワークフローを示すために必要です。<br /><br /> サポートされる値:**アップグレード**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **自動インストールのために /Q パラメーターまたは /QS パラメーターを指定した場合にのみ必須です。**|ライセンス条項への同意を確認するために必要です。|  
@@ -746,7 +746,7 @@ setup.exe /q /ACTION=CompleteFailoverCluster /InstanceName="<Insert Instance Nam
 ####  <a name="AddNode"></a> ノード追加パラメーター  
  次の表に示すパラメーターは、ノード追加用のコマンド ライン スクリプトを作成する場合に使用します。 
   
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] コンポーネント|パラメーター|[説明]|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] コンポーネント|パラメーター|説明|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/ACTION<br /><br /> **必須**|AddNode ワークフローを示すために必要です。<br /><br /> サポートされる値:**AddNode**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **自動インストールのために /Q パラメーターまたは /QS パラメーターを指定した場合にのみ必須です。**|ライセンス条項への同意を確認するために必要です。|  
@@ -791,7 +791,7 @@ setup.exe /q /ACTION=AddNode /INSTANCENAME="<Insert Instance Name>" /SQLSVCACCOU
 #### <a name="remove-node-parameters"></a>ノード削除パラメーター  
  次の表に示すパラメーターは、ノード削除用のコマンド ライン スクリプトを作成する場合に使用します。 フェールオーバー クラスターをアンインストールするには、各フェールオーバー クラスター ノードで RemoveNode を実行する必要があります。 詳細については、「[Always On フェールオーバー クラスター インスタンス &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)」を参照してください。 
   
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] コンポーネント|パラメーター|[説明]|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] コンポーネント|パラメーター|説明|  
 |-----------------------------------------|---------------|-----------------|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/ACTION<br /><br /> **必須**|RemoveNode ワークフローを示すために必要です。<br /><br /> サポートされる値:**RemoveNode**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] セットアップ コントロール|/CONFIGURATIONFILE<br /><br /> **省略可能**|使用する [ConfigurationFile](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md) を指定します。|  
@@ -833,7 +833,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 ##  <a name="Feature"></a> 機能パラメーター  
  特定の機能をインストールするには、/FEATURES パラメーターを使用して、以下の表の親機能の値または機能の値を指定します。 SQL Server の各エディションでサポートされる機能の一覧については、「[[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] の各エディションとサポートされている機能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。 
   
-|親機能パラメーター|機能パラメーター|[説明]|  
+|親機能パラメーター|機能パラメーター|説明|  
 |:---|:---|:---|  
 |SQL||[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]、レプリケーション、フルテキスト、および [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]をインストールします。|  
 ||SQLEngine|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のみをインストールします。|  
@@ -873,7 +873,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
   
 ### <a name="feature-parameter-examples"></a>機能パラメーターの例:  
   
-|パラメーターおよび値|[説明]| 
+|パラメーターおよび値|説明| 
 |---------------|-----------------|  
 |/FEATURES=SQLEngine|レプリケーションおよびフルテキストなしの [!INCLUDE[ssDE](../../includes/ssde-md.md)] をインストールします。|  
 |/FEATURES=SQLEngine,FullText|[!INCLUDE[ssDE](../../includes/ssde-md.md)] とフルテキストをインストールします。|  
@@ -886,7 +886,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
   
  AllFeatures_WithDefaults ロールは、 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] のエディションの既定の動作であり、このロールを指定した場合は、ユーザーに対して表示されるダイアログ ボックスの数が減少します。 このロールは、 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]以外の SQL Server エディションをインストールするときに、コマンド ラインから指定できます。 
   
-|Role|[説明]|インストールされる機能|  
+|Role|説明|インストールされる機能|  
 |----------|-----------------|---------------|  
 |SPI_AS_ExistingFarm|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] を [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 名前付きインスタンスとして、既存の [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] ファームまたはスタンドアロン サーバーにインストールします。|メモリ内のデータの格納と処理用にあらかじめ構成された、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 計算エンジン。<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ソリューション パッケージ<br /><br /> [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] のインストーラー プログラム<br /><br /> SQL Server オンライン ブック|  
 |SPI_AS_NewFarm|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] および [!INCLUDE[ssDE](../../includes/ssde-md.md)] を [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] の名前付きインスタンスとして、新しい未構成の Office [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] ファームまたはスタンドアロン サーバーにインストールします。 SQL Server セットアップは、機能ロールのインストール時にファームを構成します。|メモリ内のデータの格納と処理用にあらかじめ構成された、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 計算エンジン。<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ソリューション パッケージ<br /><br /> SQL Server オンライン ブック<br /><br /> [!INCLUDE[ssDE](../../includes/ssde-md.md)]<br /><br /> 構成ツール (Configuration Tools)<br /><br /> [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|  

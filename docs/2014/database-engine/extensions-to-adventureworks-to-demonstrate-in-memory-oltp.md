@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4b317ffdb38c06cafe09ff786004b7ac144d0b18
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75228473"
 ---
 # <a name="extensions-to-adventureworks-to-demonstrate-in-memory-oltp"></a>インメモリ OLTP を実証する AdventureWorks の拡張
@@ -31,18 +31,17 @@ ms.locfileid: "75228473"
   
  このサンプルのドキュメントは、次の内容で構成されています。  
   
--   サンプルをインストールしてデモワークロードを実行するための[前提条件](#Prerequisites)  
+-   サンプルをインストールしてデモ ワークロードを実行するための[前提条件](#Prerequisites)  
   
--   
-  [AdventureWorksに基づくインメモリOLTPサンプルのインストール](#InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks)する手順  
+-   [AdventureWorksに基づくインメモリOLTPサンプルのインストール](#InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks)する手順  
   
 -   [サンプルテーブルおよびプロシージャの説明](#Descriptionofthesampletablesandprocedures)- [!INCLUDE[hek_2](../includes/hek-2-md.md)]サンプルによって adventureworks に追加されたテーブルとプロシージャの説明、および一部の adventureworks テーブルをメモリ最適化に移行する際の考慮事項についても説明します。  
   
 -   [デモワークロードを使用してパフォーマンス測定](#PerformanceMeasurementsusingtheDemoWorkload)を実行する手順-これには、ostress をインストールして実行する手順、ワークロードを実行するために使用するツール、およびデモワークロード自体を実行する手順が含まれます。  
   
--   [サンプルでのメモリとディスク領域の使用率](#MemoryandDiskSpaceUtilizationintheSample)  
+-   [サンプルにおけるメモリおよびディスク領域の使用率](#MemoryandDiskSpaceUtilizationintheSample)  
   
-##  <a name="Prerequisites"></a>応募  
+##  <a name="Prerequisites"></a> 前提条件  
   
 -   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]RTM-評価版、Developer edition、または Enterprise edition  
   
@@ -60,8 +59,7 @@ ms.locfileid: "75228473"
 2.  
   **AdventureWorks2014.bak** ファイルを C:\temp などのローカル フォルダーに解凍します。  
   
-3.  
-  [!INCLUDE[tsql](../includes/tsql-md.md)] または [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]を使用して、データベース バックアップを復元します  
+3.  [!INCLUDE[tsql](../includes/tsql-md.md)] または [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]を使用して、データベース バックアップを復元します  
   
     1.  データ ファイルの対象フォルダーおよびファイル名を特定します。次に例を示します  
   
@@ -124,7 +122,7 @@ ms.locfileid: "75228473"
   
         4.  [実行] ボタンをクリックしてスクリプトを実行します  
   
-##  <a name="Descriptionofthesampletablesandprocedures"></a>サンプルテーブルとプロシージャの説明  
+##  <a name="Descriptionofthesampletablesandprocedures"></a> サンプル テーブルおよびプロシージャの説明  
  サンプルでは、AdventureWorks の既存のテーブルに基づいて、製品および販売注文ごとに新しいテーブルを作成します。 新しいテーブルのスキーマは既存のテーブルと似ていますが、以下に示すように、異なる点がいくつかあります。  
   
  新しいメモリ最適化テーブルには、"_inmem" というサフィックスが付いています。 また、サンプルにはこれに対応するテーブルも含まれており、このテーブルには "_ondisk" というサフィックスが付いています。これらのテーブルを使用することで、システム上のメモリ最適化テーブルのパフォーマンスと、ディスク ベース テーブルのパフォーマンスを一対一で比較できます。  
@@ -183,14 +181,13 @@ ms.locfileid: "75228473"
   
  Sales.SalesOrderHeader_inmem  
   
--   *既定の制約*はメモリ最適化テーブルでサポートされており、既定の制約のほとんどはとして移行されます。 ただし、元の Sales.SalesOrderHeader テーブルには、現在の日付を取得する既定の制約が 2 つあります。OrderDate 列の制約と ModifiedDate 列の制約です。 コンカレンシーが多くスループットが高い注文処理ワークロードでは、グローバル リソースが競合ポイントになる可能性があります。 たとえば、このようなグローバル リソースにはシステム時刻があります。販売注文を挿入する [!INCLUDE[hek_2](../includes/hek-2-md.md)] ワークロードを実行しているとき、特に、販売注文ヘッダーおよび販売注文の詳細に含まれる複数の列に対して、システム時刻を取得する必要がある場合は、このシステム時刻がボトルネックになることがわかっています。 このサンプルでは、挿入された販売注文ごとに 1 度だけシステム時刻を取得することで問題に対処します。そして、ストアド プロシージャ Sales.usp_InsertSalesOrder_inmem で、SalesOrderHeader_inmem と SalesOrderDetail_inmem にある datetime 列に対して、その値を使用します。  
+-   *既定の制約* はメモリ最適化テーブルでサポートされ、そのほとんどがそのまま移行されています。 ただし、元の Sales.SalesOrderHeader テーブルには、現在の日付を取得する既定の制約が 2 つあります。OrderDate 列の制約と ModifiedDate 列の制約です。 コンカレンシーが多くスループットが高い注文処理ワークロードでは、グローバル リソースが競合ポイントになる可能性があります。 たとえば、このようなグローバル リソースにはシステム時刻があります。販売注文を挿入する [!INCLUDE[hek_2](../includes/hek-2-md.md)] ワークロードを実行しているとき、特に、販売注文ヘッダーおよび販売注文の詳細に含まれる複数の列に対して、システム時刻を取得する必要がある場合は、このシステム時刻がボトルネックになることがわかっています。 このサンプルでは、挿入された販売注文ごとに 1 度だけシステム時刻を取得することで問題に対処します。そして、ストアド プロシージャ Sales.usp_InsertSalesOrder_inmem で、SalesOrderHeader_inmem と SalesOrderDetail_inmem にある datetime 列に対して、その値を使用します。  
   
--   *別名 udt* -元のテーブルでは、2つの別名ユーザー定義データ型 (udt) dbo が使用されます。OrderNumber および dbo。Dbo.accountnumber 列と AccountNumber 列の AccountNumber。 
-  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] では、メモリ最適化テーブルに対してエイリアス UDT がサポートされていません。したがって、新しいテーブルでは、システム データ型 nvarchar(25) と nvarchar(15) が個別に使用されます。  
+-   *別名 udt* -元のテーブルでは、2つの別名ユーザー定義データ型 (udt) dbo が使用されます。OrderNumber および dbo。Dbo.accountnumber 列と AccountNumber 列の AccountNumber。 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] では、メモリ最適化テーブルに対してエイリアス UDT がサポートされていません。したがって、新しいテーブルでは、システム データ型 nvarchar(25) と nvarchar(15) が個別に使用されます。  
   
--   *インデックスキー内の null*値を許容する列-元のテーブルでは、列 SalesPersonID は null 値を許容しますが、新しいテーブルでは、列には null 値が許容されず、既定の制約 (-1) が設定されています。 これは、メモリ最適化テーブルのインデックスでは、インデックス キーに NULL 値を許容する列を使用できないためです。この場合は、-1 が NULL のサロゲートです。  
+-   *インデックス キーの NULL 値を許容する列* - 元のテーブルでは、SalesPersonID 列は NULL 値を許容しますが、新しいテーブルのこの列では NULL 値が許容されず、既定の制約として値 -1 が設定されています。 これは、メモリ最適化テーブルのインデックスでは、インデックス キーに NULL 値を許容する列を使用できないためです。この場合は、-1 が NULL のサロゲートです。  
   
--   *計算列*-メモリ最適化テーブルでは計算列がサポートさ[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]れていないため、計算列 SalesOrderNumber と TotalDue は省略されています。 新しい Sales.vSalesOrderHeader_extended_inmem ビューには、SalesOrderNumber 列と TotalDue 列が反映されています。 したがって、これらの列が必要な場合は、このビューを使用します。  
+-   *計算列* - [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] のメモリ最適化テーブルでは計算列がサポートされていないため、計算列である SalesOrderNumber および TotalDue は省略されます。 新しい Sales.vSalesOrderHeader_extended_inmem ビューには、SalesOrderNumber 列と TotalDue 列が反映されています。 したがって、これらの列が必要な場合は、このビューを使用します。  
   
 -   *Foreign key 制約*は、の[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]メモリ最適化テーブルではサポートされていません。 また、SalesOrderHeader_inmem はサンプル ワークロードのホット テーブルであり、外部キー制約には、すべての DML 操作に対して追加の処理が必要です。これは、このテーブルには、この制約で参照される他のすべてのテーブル内の参照が必要だからです。 したがって、アプリによって参照整合性が確保されているものと見なされ、行の挿入時には参照整合性は検証されません。 このテーブルのデータの参照整合性は、ストアド プロシージャ dbo.usp_ValidateIntegrity を使用して、次のスクリプトで確認できます。  
   
@@ -206,15 +203,15 @@ ms.locfileid: "75228473"
     EXEC dbo.usp_ValidateIntegrity @o  
     ```  
   
--   *Rowguid* -rowguid 列は省略されています。 uniqueidentifier はメモリ最適化テーブルでサポートされますが、ROWGUIDCOL オプションは [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]ではサポートされません。 この種類の列は、通常、マージ レプリケーション、または filestream 列を持つテーブルで使用されます。 このサンプルには、どちらも含まれていません。  
+-   *Rowguid* - rowguid 列は省略されます。 uniqueidentifier はメモリ最適化テーブルでサポートされますが、ROWGUIDCOL オプションは [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]ではサポートされません。 この種類の列は、通常、マージ レプリケーション、または filestream 列を持つテーブルで使用されます。 このサンプルには、どちらも含まれていません。  
   
  Sales.SalesOrderDetail  
   
--   *既定の制約*-SalesOrderHeader と同様、システムの日付/時刻を必要とする既定の制約は移行されません。代わりに、販売注文を挿入するストアドプロシージャでは、最初の挿入時に現在のシステムの日付/時刻の挿入が処理されます。  
+-   "*既定の制約*" - SalesOrderHeader と同様、システムの日付/時刻を必要とする既定の制約は移行されません。現在のシステムの日付/時刻の挿入は、販売注文を挿入するストアド プロシージャによる初回挿入時に行われます。  
   
--   *計算列*-の[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]メモリ最適化テーブルでは計算列がサポートされていないため、計算列 linetotal は移行されませんでした。 この列にアクセスするには、Sales.vSalesOrderDetail_extended_inmem ビューを使用します。  
+-   "*計算列*" - [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] のメモリ最適化テーブルでは計算列がサポートされていないため、計算列である LineTotal は計算列としては移行されませんでした。 この列にアクセスするには、Sales.vSalesOrderDetail_extended_inmem ビューを使用します。  
   
--   *Rowguid* -rowguid 列は省略されています。 詳細については、SalesOrderHeader テーブルの説明を参照してください。  
+-   *Rowguid* - rowguid 列は省略されます。 詳細については、SalesOrderHeader テーブルの説明を参照してください。  
   
 -   "CHECK" ** 制約および "外部キー" ** 制約については、SalesOrderHeader の説明を参照してください。 次のスクリプトを使用すると、このテーブルのドメインと参照整合性を確認できます。  
   
@@ -225,11 +222,11 @@ ms.locfileid: "75228473"
   
  Production.Product  
   
--   *別名 udt* -元のテーブルでは、ユーザー定義データ型 dbo が使用されます。フラグ。これは、システムデータ型のビットに相当します。 移行したテーブルでは、代わりに bit データ型が使用されます。  
+-   "*エイリアス UDT*" - 元のテーブルでは、ユーザー定義データ型 dbo.Flag が使用されます。これは、システム データ型 bit と同じです。 移行したテーブルでは、代わりに bit データ型が使用されます。  
   
 -   *BIN2 collation* -列名と productnumber は、インデックスキーに含まれます。したがって、で[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]は BIN2 照合順序を持つ必要があります。 ここでは、アプリケーションが、照合順序の詳細 (大文字と小文字を区別など) に依存しないものと見なされます。  
   
--   *Rowguid* -rowguid 列は省略されています。 詳細については、SalesOrderHeader テーブルの説明を参照してください。  
+-   *Rowguid* - rowguid 列は省略されます。 詳細については、SalesOrderHeader テーブルの説明を参照してください。  
   
 -   *Unique*、 *Check* 、および*Foreign Key 制約*については、次の2つの方法で考慮されます。ストアドプロシージャ product. usp_InsertProduct_inmem と product. usp_DeleteProduct_inmem を使用して、製品を挿入および削除できます。これらのプロシージャはドメインと参照整合性を検証し、整合性に違反した場合は失敗します。 次のスクリプトを使用して、ドメインと参照整合性をそのままの状態で検証することもできます。  
   
@@ -249,7 +246,7 @@ ms.locfileid: "75228473"
     EXEC dbo.usp_ValidateIntegrity @o  
     ```  
   
--   *Rowguid* -rowguid 列は省略されています。 詳細については、SalesOrderHeader テーブルの説明を参照してください。  
+-   *Rowguid* - rowguid 列は省略されます。 詳細については、SalesOrderHeader テーブルの説明を参照してください。  
   
  Sales.SpecialOfferProduct  
   
@@ -260,7 +257,7 @@ ms.locfileid: "75228473"
     EXEC dbo.usp_ValidateIntegrity @o  
     ```  
   
--   *Rowguid* -rowguid 列は省略されています。 詳細については、SalesOrderHeader テーブルの説明を参照してください。  
+-   *Rowguid* - rowguid 列は省略されます。 詳細については、SalesOrderHeader テーブルの説明を参照してください。  
   
 #### <a name="considerations-for-indexes-on-memory-optimized-tables"></a>メモリ最適化テーブルのインデックスに関する注意点  
  メモリ最適化テーブルのベースライン インデックスは、非クラスター化インデックスです。このインデックスでは、ポイント参照 (等値述語に対するインデックスのシーク)、範囲スキャン (非等値述語に対するインデックスのシーク)、フル インデックス スキャン、および並べ替えられたスキャンがサポートされます。 また、インデックス キーの先頭列での検索もサポートされます。 実際、メモリ最適化された非クラスター化インデックスでは、ディスク ベースの非クラスター化インデックスでサポートされる操作が、後方スキャンを除き、すべてサポートされています。 したがって、非クラスター化インデックスは、インデックスとしては安全な選択肢です。  
@@ -313,46 +310,43 @@ ms.locfileid: "75228473"
   
     -   出力パラメーター:  
   
-        -   @SalesOrderIDint-挿入された販売注文の SalesOrderID  
+        -   @SalesOrderID int - 挿入された販売注文の SalesOrderID  
   
     -   入力パラメーター (必須):  
   
-        -   @DueDatedatetime2  
+        -   @DueDate datetime2  
   
-        -   @CustomerID通り  
+        -   @CustomerID int  
   
-        -   @BillToAddressID通り  
+        -   @BillToAddressID [int]  
   
-        -   @ShipToAddressID通り  
+        -   @ShipToAddressID [int]  
   
-        -   @ShipMethodID通り  
+        -   @ShipMethodID [int]  
   
         -   @SalesOrderDetailsSalesOrderDetailType_inmem-注文の品目を含む TVP  
   
     -   入力パラメーター (省略可能):  
   
-        -   @Statustinyint  
+        -   @Status [tinyint]  
   
-        -   @OnlineOrderFlag16-bit  
+        -   @OnlineOrderFlag [bit]  
   
-        -   
-  @PurchaseOrderNumber [nvarchar](25\)  
+        -   @PurchaseOrderNumber [nvarchar](25\)  
   
-        -   
-  @AccountNumber [nvarchar](15\)  
+        -   @AccountNumber [nvarchar](15\)  
   
-        -   @SalesPersonID通り  
+        -   @SalesPersonID [int]  
   
-        -   @TerritoryID通り  
+        -   @TerritoryID [int]  
   
-        -   @CreditCardID通り  
+        -   @CreditCardID [int]  
   
-        -   
-  @CreditCardApprovalCode [varchar](15\)  
+        -   @CreditCardApprovalCode [varchar](15\)  
   
-        -   @CurrencyRateID通り  
+        -   @CurrencyRateID [int]  
   
-        -   @Commentnvarchar(128  
+        -   @Comment nvarchar(128)  
   
 -   Sales.usp_UpdateSalesOrderShipInfo_inmem  
   
@@ -392,7 +386,7 @@ ms.locfileid: "75228473"
   
     -   これはヘルパー プロシージャ dbo.usp_GenerateCKCheck、dbo.usp_GenerateFKCheck、および dbo.GenerateUQCheck を使用して、整合性チェックの実行に必要な T-SQL を生成します。  
   
-##  <a name="PerformanceMeasurementsusingtheDemoWorkload"></a>デモワークロードを使用したパフォーマンス測定  
+##  <a name="PerformanceMeasurementsusingtheDemoWorkload"></a> デモ ワークロードを使用したパフォーマンス測定  
  ostress は、 [!INCLUDE[msCoName](../includes/msconame-md.md)] の CSS [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] サポート チームによって開発されたコマンド ライン ツールです。 このツールを使用すると、クエリやストアド プロシージャを並列実行できます。 指定された T-SQL ステートメントが並列実行されるようにスレッドの数を構成できるほか、そのスレッドでステートメントを実行する回数を指定できます。ostress はスレッドをスピン アップし、すべてのスレッド内のステートメントを並列実行します。 すべてのスレッドに対する実行が完了したら、その実行が完了するまでの所要時間を報告します。  
   
 ### <a name="installing-ostress"></a>ostress のインストール  
@@ -411,7 +405,7 @@ ms.locfileid: "75228473"
   
  Windows Server 2012 [R2] および Windows 8/8.1 で、Windows キーをクリックして [スタート] メニューを開き、「rml」と入力します。 検索結果の一覧に表示される [RML Cmd Prompt] をクリックします。  
   
- コマンド プロンプトが、RML ユーティリティのインストール フォルダーにあることを確認します。 例:  
+ コマンド プロンプトが、RML ユーティリティのインストール フォルダーにあることを確認します。 次に例を示します。  
   
  ![](../../2014/database-engine/media/SQLServer2014RTMIn-MemoryOLTP01.jpg)  
   
@@ -494,7 +488,7 @@ ostress.exe -n10 -r5 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 0, @od S
 ```  
   
 #### <a name="running-the-workload"></a>ワークロードの実行  
- 拡張性をテストするために、100 個の接続を使用して、1,000 万個の販売注文を挿入します。 このテストは、適度なサーバー (たとえば、8 個の物理コアと 16 個の論理コア) と、ログ用の基本 SSD ストレージで問題なく実行されます。 テストがハードウェアで適切に動作しない場合は、「[実行速度の遅いテストのトラブルシューティング](#Troubleshootingslow-runningtests)」セクションを参照してください。このテストのストレスレベルを下げたい場合は、パラメーター '-n ' を変更して接続数を減らします。 たとえば、接続数を 40 に下げるには、"-n100" パラメーターを "-n40" に変更します。  
+ 拡張性をテストするために、100 個の接続を使用して、1,000 万個の販売注文を挿入します。 このテストは、適度なサーバー (たとえば、8 個の物理コアと 16 個の論理コア) と、ログ用の基本 SSD ストレージで問題なく実行されます。 ご利用のハードウェアでテストを正常に実行できない場合は、「[実行速度の遅いテストのトラブルシューティング](#Troubleshootingslow-runningtests)」セクションをご覧ください。このテストのストレス レベルを下げるには、"-n" パラメーターを変更して接続数を減らします。 たとえば、接続数を 40 に下げるには、"-n100" パラメーターを "-n40" に変更します。  
   
  ワークロードのパフォーマンス評価基準として、ワークロードの実行後に ostress.exe によって報告された経過時間を使用します。  
   
@@ -544,7 +538,7 @@ ostress.exe -S. -E -dAdventureWorks2014 -Q"EXEC Demo.usp_DemoReset"
   
  デモの実行が完了するたびに、リセットすることをお勧めします。 このワークロードは挿入のみであるため、実行のたびに多くのメモリを消費します。このため、メモリ不足が発生しないようにリセットが必要です。 実行後に消費されるメモリ量について、セクション「 [ワークロード実行後のメモリ使用率](#Memoryutilizationafterrunningtheworkload)」で説明しています。  
   
-###  <a name="Troubleshootingslow-runningtests"></a>実行速度の遅いテストのトラブルシューティング  
+###  <a name="Troubleshootingslow-runningtests"></a> 実行速度の遅いテストのトラブルシューティング  
  テスト結果は、通常、ハードウェアと、テスト実行で使用されたコンカレンシーのレベルによって変わります。 期待した結果を得られない場合に確認することをいくつか次に示します。  
   
 -   同時実行トランザクションの数: 1 つのスレッドでワークロードを実行すると、 [!INCLUDE[hek_2](../includes/hek-2-md.md)] によるパフォーマンス向上が 2 倍に満たない場合があります。 高レベルのコンカレンシーがある場合、唯一大きな問題になるのがラッチ競合です。  
@@ -553,15 +547,15 @@ ostress.exe -S. -E -dAdventureWorks2014 -Q"EXEC Demo.usp_DemoReset"
   
     -   現象: ディスク ベース テーブルでワークロードを実行しているときに CPU 使用率が高い場合、競合の数はそれほど多くありません。これは、コンカレンシーが不足していることを示します。  
   
--   ログ ドライブの速度: ログ ドライブが、システム内のトランザクション スループット レベルに対応できない場合、ワークロードはログ IO でボトルネックになります。 
+-   ログ ドライブの速度:ログ ドライブが、システム内のトランザクション スループット レベルに対応できない場合、ワークロードはログ IO でボトルネックになります。 
   [!INCLUDE[hek_2](../includes/hek-2-md.md)]でのログ記録は効率的ですが、ログ IO がボトルネックになっていると、パフォーマンス向上の可能性は限られます。  
   
     -   現象: メモリ最適化テーブルでワークロードを実行しているとき、CPU 使用率が 100% からかけ離れている場合、または、その変動が激しい場合は、ログ IO ボトルネックが存在する可能性があります。 これを確認するには、リソース モニターを開き、ログ ドライブのキュー長を確認します。  
   
-##  <a name="MemoryandDiskSpaceUtilizationintheSample"></a>サンプルでのメモリとディスク領域の使用率  
+##  <a name="MemoryandDiskSpaceUtilizationintheSample"></a> サンプルにおけるメモリおよびディスク領域の使用率  
  ここでは、サンプル データベースのメモリおよびディスク領域の使用率に関して期待すべき事項について説明します。 また、16 個の論理コアを備えたテスト サーバーでの結果も示します。  
   
-###  <a name="Memoryutilizationforthememory-optimizedtables"></a>メモリ最適化テーブルのメモリ使用率  
+###  <a name="Memoryutilizationforthememory-optimizedtables"></a> メモリ最適化テーブルのメモリ使用率  
   
 #### <a name="overall-utilization-of-the-database"></a>データベースの全体的な使用率  
  次のクエリを使用すると、システムの [!INCLUDE[hek_2](../includes/hek-2-md.md)] の合計メモリ使用率を取得できます。  
@@ -577,11 +571,11 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
   
 ||||  
 |-|-|-|  
-|**各種**|**指定**|**pages_MB**|  
-|MEMORYCLERK_XTP|既定|94|  
+|**type**|**name**|**pages_MB**|  
+|MEMORYCLERK_XTP|Default|94|  
 |MEMORYCLERK_XTP|DB_ID_5|877|  
-|MEMORYCLERK_XTP|既定|0|  
-|MEMORYCLERK_XTP|既定|0|  
+|MEMORYCLERK_XTP|Default|0|  
+|MEMORYCLERK_XTP|Default|0|  
   
  既定のメモリ クラークは比較的小さく、システム全体のメモリ構造が含まれています。 ユーザー データベースのメモリ クラーク (この場合は ID 5 のデータベース) は約 900 MB です。  
   
@@ -614,7 +608,7 @@ WHERE t.type='U'
   
  ここで印象的なのは、インデックスに割り当てられているメモリのサイズです (テーブル データのサイズと比較)。 このサイズになるのは、サンプルのハッシュ インデックスが、大きなデータ サイズに合わせて事前にサイズ調整されているためです。 ハッシュ インデックスのサイズは固定されているため、テーブルのデータのサイズに合わせて大きくなることはありません。  
   
-####  <a name="Memoryutilizationafterrunningtheworkload"></a>ワークロードの実行後のメモリ使用率  
+####  <a name="Memoryutilizationafterrunningtheworkload"></a> ワークロード実行後のメモリ使用率  
  1,000 万個の販売注文を挿入した後の全体的なメモリ使用率は次のようになります。  
   
 ```  
@@ -626,11 +620,11 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
   
 ||||  
 |-|-|-|  
-|**各種**|**指定**|**pages_MB**|  
-|MEMORYCLERK_XTP|既定|146|  
+|**type**|**name**|**pages_MB**|  
+|MEMORYCLERK_XTP|Default|146|  
 |MEMORYCLERK_XTP|DB_ID_5|7374|  
-|MEMORYCLERK_XTP|既定|0|  
-|MEMORYCLERK_XTP|既定|0|  
+|MEMORYCLERK_XTP|Default|0|  
+|MEMORYCLERK_XTP|Default|0|  
   
  このように、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] がサンプル データベースのメモリ最適化テーブルおよびインデックスに対して使用しているビットは 8 GB を下回ります。  
   
@@ -672,15 +666,15 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
   
 ||||  
 |-|-|-|  
-|**各種**|**指定**|**pages_MB**|  
-|MEMORYCLERK_XTP|既定|2261|  
+|**type**|**name**|**pages_MB**|  
+|MEMORYCLERK_XTP|Default|2261|  
 |MEMORYCLERK_XTP|DB_ID_5|7396|  
-|MEMORYCLERK_XTP|既定|0|  
-|MEMORYCLERK_XTP|既定|0|  
+|MEMORYCLERK_XTP|Default|0|  
+|MEMORYCLERK_XTP|Default|0|  
   
  これは想定されている動作です。メモリはトランザクション ワークロードの実行中に再利用されます。  
   
- 2 回目のデモ ワークロードの実行を開始すると、前に削除された行がクリーンアップされるため、メモリ使用率は最初は減少します。 ある時点で、メモリ サイズは再び増加し、ワークロードが終了するまで増加し続けます。 デモをリセットしてから 1,000 万行を挿入した後のメモリ使用率は、最初の実行後の使用率とよく似ています。 例:  
+ 2 回目のデモ ワークロードの実行を開始すると、前に削除された行がクリーンアップされるため、メモリ使用率は最初は減少します。 ある時点で、メモリ サイズは再び増加し、ワークロードが終了するまで増加し続けます。 デモをリセットしてから 1,000 万行を挿入した後のメモリ使用率は、最初の実行後の使用率とよく似ています。 次に例を示します。  
   
 ```  
 SELECT type  
@@ -691,11 +685,11 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
   
 ||||  
 |-|-|-|  
-|**各種**|**指定**|**pages_MB**|  
-|MEMORYCLERK_XTP|既定|1863|  
+|**type**|**name**|**pages_MB**|  
+|MEMORYCLERK_XTP|Default|1863|  
 |MEMORYCLERK_XTP|DB_ID_5|7390|  
-|MEMORYCLERK_XTP|既定|0|  
-|MEMORYCLERK_XTP|既定|0|  
+|MEMORYCLERK_XTP|Default|0|  
+|MEMORYCLERK_XTP|Default|0|  
   
 ### <a name="disk-utilization-for-memory-optimized-tables"></a>メモリ最適化テーブルのディスク使用率  
  特定の時点におけるデータベースのチェックポイント ファイルに対する、全体的なディスク上のサイズを確認するには、次のクエリを使用します。  
@@ -722,7 +716,7 @@ WHERE f.type=N'FX'
   
 ||  
 |-|  
-|**ディスク上のサイズ (MB)**|  
+|**On-disk size in MB**|  
 |2312|  
   
  チェックポイント ファイルのディスク上のサイズ (2.3 GB) と実際のデータ サイズ (約 30 MB) に大きな違いがあることがわかります。  
@@ -748,7 +742,7 @@ ORDER BY state, file_type
   
 |||||  
 |-|-|-|-|  
-|**state_desc**|**file_type_desc**|**数**|**ディスク上のサイズ (MB)**|  
+|**state_desc**|**file_type_desc**|**count**|**on-disk size MB**|  
 |PRECREATED|DATA|16|2048|  
 |PRECREATED|DELTA|16|128|  
 |UNDER CONSTRUCTION|DATA|1 で保護されたプロセスとして起動されました|128|  
@@ -770,7 +764,7 @@ WHERE f.type=N'FX'
   
 ||  
 |-|  
-|**ディスク上のサイズ (MB)**|  
+|**On-disk size in MB**|  
 |8828|  
   
  ディスク上のサイズは 9 GB に迫っています。これは、データのインメモリ サイズに近い数値です。  
@@ -794,7 +788,7 @@ ORDER BY state, file_type
   
 |||||  
 |-|-|-|-|  
-|**state_desc**|**file_type_desc**|**数**|**ディスク上のサイズ (MB)**|  
+|**state_desc**|**file_type_desc**|**count**|**on-disk size MB**|  
 |PRECREATED|DATA|16|2048|  
 |PRECREATED|DELTA|16|128|  
 |UNDER CONSTRUCTION|DATA|1 で保護されたプロセスとして起動されました|128|  
@@ -818,7 +812,7 @@ WHERE f.type=N'FX'
   
 ||  
 |-|  
-|**ディスク上のサイズ (MB)**|  
+|**On-disk size in MB**|  
 |11839|  
   
  ディスク サイズは 12 GB 近くあり、デモをリセットする前の 9 GB を大幅に上回っています。 これは、一部のチェックポイント ファイルのマージが開始されたにもかかわらず、まだインストールされていないマージ ターゲットがあるためです。また、クリーン アップされていないマージ ソース ファイルの存在も原因となっています。これを次に示します。  
@@ -840,7 +834,7 @@ ORDER BY state, file_type
   
 |||||  
 |-|-|-|-|  
-|**state_desc**|**file_type_desc**|**数**|**ディスク上のサイズ (MB)**|  
+|**state_desc**|**file_type_desc**|**count**|**on-disk size MB**|  
 |PRECREATED|DATA|16|2048|  
 |PRECREATED|DELTA|16|128|  
 |ACTIVE|DATA|38|5152|  
@@ -854,7 +848,7 @@ ORDER BY state, file_type
   
  2 回目のデモ ワークロードを実行してからデモをリセットし、1,000 万個の販売注文を挿入すると、最初のワークロードの実行中に作成されたファイルはクリーンアップされています。 ワークロードの実行中に前のクエリを複数回実行した場合、チェックポイント ファイルはさまざまな段階を経て進行します。  
   
- 2 回目のワークロードを実行してから 1,000 万個の販売注文を挿入した場合、そのディスク使用率は最初の実行後の使用率とよく似ています。ただし、システムはもともと動的であるため、必ずしも同じであるとは限りません。 例:  
+ 2 回目のワークロードを実行してから 1,000 万個の販売注文を挿入した場合、そのディスク使用率は最初の実行後の使用率とよく似ています。ただし、システムはもともと動的であるため、必ずしも同じであるとは限りません。 次に例を示します。  
   
 ```  
 SELECT state_desc  
@@ -873,7 +867,7 @@ ORDER BY state, file_type
   
 |||||  
 |-|-|-|-|  
-|**state_desc**|**file_type_desc**|**数**|**ディスク上のサイズ (MB)**|  
+|**state_desc**|**file_type_desc**|**count**|**on-disk size MB**|  
 |PRECREATED|DATA|16|2048|  
 |PRECREATED|DELTA|16|128|  
 |UNDER CONSTRUCTION|DATA|2|268|  

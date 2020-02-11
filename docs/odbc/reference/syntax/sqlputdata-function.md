@@ -20,18 +20,18 @@ ms.assetid: 9a60f004-1477-4c54-a20c-7378e1116713
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 676f9fb526996e96b27bb758a7343c86afaac460
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68053650"
 ---
 # <a name="sqlputdata-function"></a>SQLPutData 関数
-**準拠**  
- バージョンが導入されました。ODBC 1.0 規格に準拠します。ISO 92  
+**互換性**  
+ 導入されたバージョン: ODBC 1.0 標準準拠: ISO 92  
   
  **まとめ**  
- **SQLPutData**により、ステートメントの実行時にドライバーをパラメーターまたは列のデータを送信するアプリケーション。 この関数は、部分の文字、バイナリ、またはデータ ソースに固有のデータ型 (たとえば、SQL_LONGVARBINARY、SQL_LONGVARCHAR または型のパラメーター) の列に文字またはバイナリ データ値を送信する使用できます。 **SQLPutData**基になるドライバーが Unicode データをサポートしていない場合でも、Unicode の C データ型へのバインドをサポートしています。  
+ **Sqlputdata**を使用すると、ステートメントの実行時に、アプリケーションからドライバーにパラメーターまたは列のデータを送信できます。 この関数を使用すると、文字、バイナリ、またはデータソース固有のデータ型 (たとえば、SQL_LONGVARBINARY または SQL_LONGVARCHAR 型のパラメーター) を使用して、部分的に文字またはバイナリデータ値を列に送信できます。 **Sqlputdata**は、基になるドライバーが unicode データをサポートしていない場合でも、unicode C データ型へのバインドをサポートします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -45,73 +45,73 @@ SQLRETURN SQLPutData(
   
 ## <a name="arguments"></a>引数  
  *StatementHandle*  
- [入力]ステートメント ハンドルです。  
+ 代入ステートメントハンドル。  
   
  *DataPtr*  
- [入力]パラメーターまたは列の実際のデータを格納するバッファーへのポインター。 データがで指定された C データ型である必要があります、 *ValueType*の引数**SQLBindParameter** (のパラメーターのデータ)、または*TargetType*の引数**SQLBindCol** (の列のデータ)。  
+ 代入パラメーターまたは列の実際のデータを格納しているバッファーへのポインター。 データは、 **SQLBindParameter**の*ValueType*引数で指定された C データ型 (パラメーターデータの場合) または**SQLBindCol**の*TargetType*引数 (列データの場合) である必要があります。  
   
  *StrLen_or_Ind*  
- [入力]長さ\* *DataPtr*します。 呼び出しに送信されるデータ量を指定します**SQLPutData**します。 データの量は、指定されたパラメーターまたは列の各呼び出しで異なります。 *StrLen_or_Ind*次の条件のいずれかを満たしていない場合は無視されます。  
+ 代入\* *DataPtr*の長さ。 **Sqlputdata**の呼び出しで送信されるデータの量を指定します。 データの量は、指定されたパラメーターまたは列の呼び出しごとに変化する可能性があります。 *StrLen_or_Ind*は、次のいずれかの条件を満たしている場合を除き、無視されます。  
   
--   *StrLen_or_Ind*は SQL_NTS、SQL_NULL_DATA、または SQL_DEFAULT_PARAM します。  
+-   *StrLen_or_Ind*は、SQL_NTS、SQL_NULL_DATA、または SQL_DEFAULT_PARAM です。  
   
--   C データ型がで指定された**SQLBindParameter**または**SQLBindCol** SQL_C_CHAR または SQL_C_BINARY です。  
+-   **SQLBindParameter**または**SQLBindCol**で指定された C データ型は、SQL_C_CHAR または SQL_C_BINARY です。  
   
--   C データ型は SQL_C_DEFAULT、および指定した SQL データ型の既定の C データ型は、SQL_C_CHAR または SQL_C_BINARY します。  
+-   C データ型は SQL_C_DEFAULT で、指定された SQL データ型の既定の C データ型は SQL_C_CHAR または SQL_C_BINARY です。  
   
- 他のすべての種類を C のデータの場合*StrLen_or_Ind* SQL_NULL_DATA または SQL_DEFAULT_PARAM ではないことが前提とドライバーのサイズ、 \* *DataPtr*バッファーが指定された C データ型のサイズ*ValueType*または*TargetType*データ値全体を送信します。 詳細については、次を参照してください[C から SQL データ型への変換データ](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)付録 d:。データ型。  
+ 他のすべての種類の C データでは、 *StrLen_or_Ind*が SQL_NULL_DATA または SQL_DEFAULT_PARAM でない場合、ドライバーは\* *DataPtr*バッファーのサイズが*ValueType*または*TargetType*で指定された C データ型のサイズであると想定し、データ値全体を送信します。 詳細については、「付録 D: データ型」の「 [C から SQL データ型へのデータの変換」を](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)参照してください。  
   
 ## <a name="returns"></a>戻り値  
- SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_STILL_EXECUTING、SQL_ERROR、または SQL_INVALID_HANDLE します。  
+ SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_STILL_EXECUTING、SQL_ERROR、または SQL_INVALID_HANDLE。  
   
 ## <a name="diagnostics"></a>診断  
- ときに**SQLPutData** SQL_ERROR または SQL_SUCCESS_WITH_INFO、関連付けられている SQLSTATE 値を返しますを呼び出すことによって取得できる**SQLGetDiagRec**で、 *HandleType* sql _ のHANDLE_STMT と*処理*の*StatementHandle*します。 次の表に、一般的にによって返される SQLSTATE 値**SQLPutData** ; この関数のコンテキストでそれぞれについて説明しますと表記"(DM)"の前にドライバー マネージャーによって返されるについての説明。 SQLSTATE 値ごとに関連付けられているリターン コードは明記しない限り、SQL_ERROR です。  
+ **Sqlputdata**が SQL_ERROR または SQL_SUCCESS_WITH_INFO を返す場合、関連付けられた SQLSTATE 値を取得するには、 *Handletype* SQL_HANDLE_STMT と*StatementHandle*の*ハンドル*を指定して**SQLGetDiagRec**を呼び出します。 次の表に、 **Sqlputdata**によって一般的に返される SQLSTATE 値と、この関数のコンテキストにおけるそれぞれの説明を示します。"(DM)" という表記は、ドライバーマネージャーによって返される SQLSTATEs の説明の前にあります。 特に記載がない限り、各 SQLSTATE 値に関連付けられているリターンコードは SQL_ERROR ます。  
   
-|SQLSTATE|[エラー]|説明|  
+|SQLSTATE|エラー|[説明]|  
 |--------------|-----------|-----------------|  
-|01000|一般的な警告|ドライバー固有の情報メッセージです。 (関数は、SQL_SUCCESS_WITH_INFO を返します)。|  
-|01004|文字列データで、右側が切り捨てられました|文字列またはバイナリ データが出力パラメーターに対して返される空白文字または NULL 以外のバイナリ データの切り捨てが発生しました。 文字列値がいた場合は、右側から切り捨てられますことでした。 (関数は、SQL_SUCCESS_WITH_INFO を返します)。|  
-|07006|制限付きのデータ型の属性違反|識別されるデータ値、 *ValueType*引数**SQLBindParameter**のバインドされたパラメーターがで識別されるデータ型に変換できませんでした、 *ParameterType*引数**SQLBindParameter**します。|  
-|07S01|既定のパラメーターの使い方が正しくありません。|パラメーターの値の設定で**SQLBindParameter**が SQL_DEFAULT_PARAM、および対応するパラメーターは、既定値はありませんでした。|  
-|08S01|通信リンク エラー|関数が完了した処理の前に、ドライバーとドライバーが接続されているデータ ソース間の通信リンクに失敗しました。|  
-|22001|文字列データの右側が切り捨てられました|文字値または列にバイナリ値の割り当ては、空白 (文字) または null 以外 (バイナリ) の文字またはバイトの切り捨てが発生しました。<br /><br /> SQL_NEED_LONG_DATA_LEN 情報の種類で**SQLGetInfo**が"Y"と指定された以外 (データ型は SQL_LONGVARCHAR、SQL_LONGVARBINARY、または長い形式のデータ ソースに固有のデータ型)、long 型パラメーターのより多くのデータが送信されました。*StrLen_or_IndPtr*引数**SQLBindParameter**します。<br /><br /> SQL_NEED_LONG_DATA_LEN 情報の種類で**SQLGetInfo** "Y"で指定された数より長い列 (データ型は SQL_LONGVARCHAR、SQL_LONGVARBINARY、または長い形式のデータ ソースに固有のデータ型) のより多くのデータが送信された、追加または更新されたデータの行の列に対応する長バッファー **SQLBulkOperations**またはで更新された**SQLSetPos**します。|  
-|22003|数値が範囲外|列に関連付けられているテーブル列に割り当てられたときに切り詰められる数値の (ではなく小数部) 全体の一部が原因となったまたはバインドされている数値パラメーターのデータが送信されます。<br /><br /> 1 つまたは複数の入力/出力または出力パラメーター (数値または文字列) としての数値の値が返される原因となる (ではなく小数部) 整数部分が切り捨てられる数値。|  
-|22007|無効な datetime 形式|それぞれ、無効な日付、時刻、またはタイムスタンプ パラメーターまたは列の日付、時刻、またはタイムスタンプの構造体にバインドされた送信されるデータがでした。<br /><br /> または入力/出力の出力パラメーターは、日付、時刻、またはタイムスタンプ C 構造体にバインドされていたし、返されるパラメーターの値が、それぞれ、無効な日付、時刻、またはタイムスタンプ。 (関数は、SQL_SUCCESS_WITH_INFO を返します)。|  
-|22008|Datetime フィールド オーバーフロー|Datetime 式が入力/出力の計算または出力パラメーターの日付、時刻、または無効なタイムスタンプ C の構造体が発生しました。|  
-|22012|0 による除算|算術式の入力/出力の計算または 0 による除算で出力パラメーターが発生しました。|  
-|22015|Interval フィールド オーバーフロー|間隔 SQL データ型にパラメーターの有効桁数が失われる原因となったまたは正確な数値または間隔の列のデータが送信されます。<br /><br /> データは、間隔の列または複数のフィールドを持つパラメーターの送信された、数値データ型に変換された、および数値データ型の表現がなかった。<br /><br /> 列に送信されるデータまたはパラメーターのデータは、SQL 型、期間に割り当てられたし、SQL の種類の間隔で C 型の値の表現はありませんでした。<br /><br /> 正確な numeric または間隔 C 列またはパラメーター C の間隔の種類を送信するデータには、有効桁数の損失が発生します。<br /><br /> 列に送信されるデータまたはパラメーターのデータは、間隔 C 構造体に割り当てられたし、間隔のデータ構造内のデータの表現はありませんでした。|  
-|22018|キャストの無効な文字の値|C 型は、真数または概数の数値、datetime、またはデータ間隔の種類。列の SQL 型が文字データ型。列またはパラメーターの値がバインドされた C 型の有効なリテラルではありませんでした。<br /><br /> SQL 型が、真数または概数の数値、datetime、またはデータ間隔の種類。C 型が SQL_C_CHAR;列またはパラメーターの値がバインドされた SQL 型の有効なリテラルではありませんでした。|  
-|HY000|一般的なエラー|これがなかった固有の SQLSTATE とする実装に固有の SQLSTATE が定義されていない、エラーが発生しました。 によって返されるエラー メッセージ**SQLGetDiagRec**で、  *\*MessageText*バッファーは、エラーとその原因について説明します。|  
-|HY001|メモリの割り当てエラー|ドライバーは、実行または関数の完了をサポートするために必要なメモリを割り当てることができませんでした。|  
-|HY008|操作が取り消されました|非同期処理が有効に、 *StatementHandle*します。 関数が呼び出された、および実行を完了する前に**SQLCancel**または**SQLCancelHandle**が呼び出されて、 *StatementHandle*します。 後でもう一度関数が呼び出された、 *StatementHandle*します。<br /><br /> 関数が呼び出された、および実行を完了する前に**SQLCancel**または**SQLCancelHandle**が呼び出されて、 *StatementHandle*から別のスレッドで、マルチ スレッド アプリケーションです。|  
-|HY009|無効な null ポインターの使用|(DM) 引数*DataPtr*が null ポインターの場合は、および引数*StrLen_or_Ind*でした SQL_DEFAULT_PARAM、または SQL_NULL_DATA は 0。|  
-|HY010|関数のシーケンス エラー|(DM) 前の関数呼び出しはへの呼び出しではない**SQLPutData**または**SQLParamData**します。<br /><br /> (DM) を非同期的に実行中の関数が呼び出された接続ハンドルに関連付けられているため、 *StatementHandle*します。 この非同期関数は、SQLPutData 関数が呼び出されたときにまだ実行中だった。<br /><br /> (DM) **SQLExecute**、 **SQLExecDirect**、または**SQLMoreResults**に対して呼び出された、 *StatementHandle* SQL_PARAM_DATA_ を返されます。ご利用いただけます。 ストリームのすべてのパラメーターのデータが取得される前に、この関数が呼び出されました。<br /><br /> (DM) を非同期的に実行中の関数 (いないこの"1") が呼び出された、 *StatementHandle*この関数が呼び出されたときに実行されているとします。|  
-|HY013|メモリ管理エラー|基になるメモリ オブジェクトにアクセスできませんでした、場合によってメモリ不足が原因であるために、関数呼び出しを処理できませんでした。|  
-|HY019|部分で送信される文字またはバイナリ以外のデータ|**SQLPutData**が呼び出された複数の 1 回のパラメーターまたは列、およびそれが使用されていない文字、バイナリ、またはデータのソースに固有のデータ型の列に文字データを送信する、または文字の列にバイナリの C データを送信するには、バイナリ、またはデータ ソースに固有のデータ型。|  
-|HY020|Null 値を連結しようとしてください。|**SQLPutData** 、SQL_NEED_DATA が返されますの呼び出し後、これらの呼び出しのいずれかで複数回呼び出された、 *StrLen_or_Ind* SQL_NULL_DATA または SQL_DEFAULT_PARAM 引数が含まれています。|  
-|HY090|文字列またはバッファーの長さが無効です。|引数*DataPtr*が null ポインターの場合は、および引数*StrLen_or_Ind* SQL_NTS または SQL_NULL_DATA 等しくありませんが、0 より小さいをでした。|  
-|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、次を参照してください。 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)します。|  
-|HYT01|接続がタイムアウトしました|データ ソースが要求に応答する前に、接続のタイムアウト期間が終了しました。 によって、接続タイムアウト期間が設定されます**SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT します。|  
-|IM001|ドライバーでは、この関数はサポートされていません|(DM) に、ドライバーが関連付けられている、 *StatementHandle*関数をサポートしていません。|  
-|IM017|非同期通知モードでのポーリングは無効です。|通知のモデルを使用すると、常にポーリングは無効です。|  
-|IM018|**SQLCompleteAsync**このハンドルに対する前の非同期操作を完了が呼び出されていません。|通知モードが有効になっている場合、ハンドルでは、前の関数呼び出しに SQL_STILL_EXECUTING が返された場合と**SQLCompleteAsync**後処理を行い、操作を完了するハンドルで呼び出す必要があります。|  
+|01000|一般警告|ドライバー固有の情報メッセージ。 (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
+|01004|文字列データ、右側が切り捨てられました|出力パラメーターに対して返された文字列またはバイナリデータにより、空白以外の文字または NULL 以外のバイナリデータが切り捨てられました。 文字列値の場合は、右側が切り捨てられました。 (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
+|07006|制限されたデータ型の属性違反|バインドされたパラメーターの**SQLBindParameter**の*ValueType*引数によって識別されるデータ値を、 **SQLBindParameter**の*ParameterType*引数で識別されるデータ型に変換できませんでした。|  
+|07S01|既定のパラメーターの使い方が正しくありません|**SQLBindParameter**で設定されたパラメーター値が SQL_DEFAULT_PARAM ましたが、対応するパラメーターに既定値がありませんでした。|  
+|08S01|通信リンクの失敗|関数が処理を完了する前に、ドライバーと、ドライバーが接続されていたデータソースとの間の通信リンクが失敗しました。|  
+|22001|文字列データ、右切り捨て|文字またはバイナリ値が列に割り当てられた結果、空白文字 (文字) または null 以外 (バイナリ) の文字またはバイトが切り捨てられました。<br /><br /> **SQLGetInfo**の SQL_NEED_LONG_DATA_LEN 情報の種類は "Y" であり、長いパラメーター (データ型は SQL_LONGVARCHAR、SQL_LONGVARBINARY、または長いデータソース固有のデータ型) に対して、 **SQLBindParameter**の*StrLen_or_IndPtr*引数で指定されたデータよりも多くのデータが送信されました。<br /><br /> **SQLGetInfo**の SQL_NEED_LONG_DATA_LEN 情報の種類は "Y" で、long 型の列 (データ型は SQL_LONGVARCHAR、SQL_LONGVARBINARY、または長いデータソース固有のデータ型) に対して、 **sqlbulkoperations**で追加または更新されたか、 **SQLSetPos**で更新されたデータ行の列に対応する長さバッファーに指定されたデータ型です。|  
+|22003|数値が有効範囲にありません|バインドされた数値パラメーターまたは列に対して送信されたデータにより、関連付けられたテーブル列に割り当てられたときに、数値の一部 (小数部分ではなく) が切り捨てられます。<br /><br /> 1つ以上の入力/出力パラメーターまたは出力パラメーターに対して数値または文字列として数値または文字列として数値を返すと、切り捨てられる数値の一部 (小数部分ではなく) が発生する可能性があります。|  
+|22007|無効な datetime 形式|日付、時刻、またはタイムスタンプの構造にバインドされたパラメーターまたは列に対して送信されるデータは、それぞれ無効な日付、時刻、またはタイムスタンプになりました。<br /><br /> 入力/出力パラメーターまたは出力パラメーターが日付、時刻、またはタイムスタンプ C 構造体にバインドされました。返されたパラメーターの値は、それぞれ無効な日付、時刻、またはタイムスタンプです。 (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
+|22008|Datetime フィールドオーバーフロー|入力/出力パラメーターまたは出力パラメーターに対して計算された datetime 式で、無効だった日付、時刻、またはタイムスタンプの C 構造体が返されました。|  
+|22012|0による除算|入力/出力パラメーターまたは出力パラメーターに対して計算された算術式により、0除算が発生しました。|  
+|22015|間隔フィールドオーバーフロー|完全な数値または間隔の列またはパラメーターに対して送信されたデータが interval SQL データ型に対して返されたため、有効桁数が失われました。<br /><br /> 複数のフィールドを含む interval 列またはパラメーターのデータが送信されましたが、数値データ型に変換されましたが、数値データ型には表現がありませんでした。<br /><br /> 列またはパラメーターのデータに送信されたデータは、interval SQL 型に割り当てられていますが、interval SQL 型では C 型の値が表現されていませんでした。<br /><br /> 数値または間隔が C の正確な列またはパラメーターに対して送信されたデータの範囲 C 型に対して、有効桁数の損失が発生しました。<br /><br /> 列またはパラメーターのデータに送信されたデータは、期間 C の構造体に割り当てられており、interval データ構造体にデータは表示されませんでした。|  
+|22018|キャストの指定に無効な文字値があります|C 型は、正確な数値、概数、datetime、または interval データ型でした。列の SQL 型は文字データ型でした。また、列またはパラメーターの値が、バインドされた C 型の有効なリテラルではありませんでした。<br /><br /> SQL 型は、正確な数値、概数、datetime、または interval データ型でした。C 型が SQL_C_CHAR でした。また、列またはパラメーターの値が、バインドされた SQL 型の有効なリテラルではありませんでした。|  
+|HY000|一般的なエラー|特定の SQLSTATE がなく、実装固有の SQLSTATE が定義されていないエラーが発生しました。 Messagetext バッファーの**SQLGetDiagRec**によって返されるエラーメッセージには、エラーとその原因が記述されています。 * \**|  
+|HY001|メモリ割り当てエラー|ドライバーは、関数の実行または完了をサポートするために必要なメモリを割り当てることができませんでした。|  
+|HY008|操作が取り消されました|*StatementHandle*に対して非同期処理が有効になりました。 関数が呼び出され、実行が完了する前に、 **SQLCancel**または**Sqlcancelhandle**が*StatementHandle*で呼び出されました。 次に、 *StatementHandle*で関数が再度呼び出されました。<br /><br /> 関数が呼び出され、実行が完了する前に、マルチスレッドアプリケーションの別のスレッドの*StatementHandle*で**SQLCancel**または**sqlcancelhandle**が呼び出されました。|  
+|HY009|Null ポインターの使い方が正しくありません|(DM) 引数*DataPtr*が null ポインターであり、 *StrLen_or_Ind*引数が0、SQL_DEFAULT_PARAM、または SQL_NULL_DATA ではありませんでした。|  
+|HY010|関数のシーケンスエラー|(DM) 前の関数呼び出しは**Sqlputdata**または**sqlputdata**への呼び出しではありませんでした。<br /><br /> (DM) 非同期的に実行する関数が、 *StatementHandle*に関連付けられている接続ハンドルに対して呼び出されました。 この非同期関数は、SQLPutData 関数が呼び出されたときにまだ実行されていました。<br /><br /> (DM) **Sqlexecute**、 **SQLExecDirect**、または**Sqlmoreresults**が*StatementHandle*に対して呼び出され、SQL_PARAM_DATA_AVAILABLE が返されました。 この関数は、ストリーミングされたすべてのパラメーターのデータが取得される前に呼び出されました。<br /><br /> (DM) 非同期的に実行されている関数 (この1つではない) が*StatementHandle*に対して呼び出され、この関数が呼び出されたときにまだ実行されています。|  
+|HY013|メモリ管理エラー|基になるメモリオブジェクトにアクセスできなかったため、関数呼び出しを処理できませんでした。メモリ不足の状態が原因である可能性があります。|  
+|HY019|文字以外のデータおよびバイナリ以外のデータが部分的に送信される|**Sqlputdata**がパラメーターまたは列に対して複数回呼び出されました。このデータは、文字、バイナリ、またはデータソース固有のデータ型の列に文字 c データを送信するために使用されていないか、またはバイナリ c データを文字、バイナリ、またはデータソース固有のデータ型の列に送信していません|  
+|HY020|Null 値を連結しようとしました|SQL_NEED_DATA を返した呼び出しと、これらの呼び出しのいずれかで**Sqlputdata**が2回以上呼び出されました。 *StrLen_or_Ind*引数は SQL_NULL_DATA または SQL_DEFAULT_PARAM に含まれていました。|  
+|HY090|文字列またはバッファーの長さが無効です|引数*DataPtr*が null ポインターではなく、引数*StrLen_or_Ind*が0未満ですが、SQL_NTS または SQL_NULL_DATA と等しくありません。|  
+|HY117|トランザクションの状態が不明なため、接続が中断されました。 切断と読み取り専用の機能のみが許可されます。|(DM) 中断状態の詳細については、「 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)」を参照してください。|  
+|HYT01|接続タイムアウトの期限が切れました|データソースが要求に応答する前に、接続のタイムアウト期間が経過しました。 接続タイムアウト期間は、 **SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT によって設定されます。|  
+|IM001|ドライバーはこの機能をサポートしていません|(DM) *StatementHandle*に関連付けられているドライバーでは、関数はサポートされていません。|  
+|IM017|非同期通知モードでは、ポーリングは無効になっています|通知モデルが使用されるたびに、ポーリングは無効になります。|  
+|IM018|**Sqlcompleteasync**は、このハンドルで前の非同期操作を完了するために呼び出されていません。|ハンドルに対する前の関数呼び出しが SQL_STILL_EXECUTING を返し、通知モードが有効になっている場合は、処理を完了するために、ハンドルに対して**Sqlcompleteasync**を呼び出す必要があります。|  
   
- 場合**SQLPutData**と呼ばれますが、SQL ステートメントでパラメーターのデータを送信中に、ステートメントを実行すると呼ばれる関数によって返される任意の SQLSTATE を返すこと (**SQLExecute**または**SQLExecDirect**)。 列のデータを送信中に呼び出された場合更新または追加**SQLBulkOperations**で更新されているまたは**SQLSetPos**、によって返される任意の SQLSTATE を返すことができます**SQLBulkOperations**または**SQLSetPos**します。  
+ SQL ステートメントでパラメーターのデータを送信しているときに**Sqlputdata**が呼び出された場合、ステートメントを実行するために呼び出された関数 (**sqlexecute**または**SQLExecDirect**) から返されるすべての SQLSTATE を返すことができます。 **Sqlbulkoperations**で更新または追加された列または**sqlsetpos**で更新されている列のデータの送信中に呼び出された場合は、 **Sqlbulkoperations**または**sqlsetpos**で返すことができる SQLSTATE を返すことができます。  
   
-## <a name="comments"></a>コメント  
- **SQLPutData**実行時のデータのデータを 2 つの使用を提供するということができますパラメーターのデータへの呼び出しで使用される**SQLExecute**または**SQLExecDirect**、または行が更新されたときに使用される列のデータ。呼び出しで追加または**SQLBulkOperations**への呼び出しによって更新または**SQLSetPos**します。  
+## <a name="comments"></a>説明  
+ **Sqlputdata**を呼び出すと、 **Sqlexecute**または**SQLExecDirect**の呼び出しで使用されるパラメーターデータ、または**sqlputdata**への呼び出しによって行が更新または追加されたとき、または**SQLSetPos**の呼び出しによって更新されたときに使用される列データを、実行時データに渡すことができます。  
   
- アプリケーションを呼び出すと**SQLParamData**データを決定する送信先と、ドライバーは、アプリケーションは、パラメーター データを送信する決定に使用できる、または列のデータがあるインジケーターを返します。 また、インジケーターを呼び出す必要があるアプリケーションには、SQL_NEED_DATA を返します**SQLPutData**データを送信します。 *DataPtr*引数**SQLPutData**、アプリケーション パラメーターまたは列の実際のデータを格納するバッファーへのポインターを渡します。  
+ アプリケーションが**Sqlparamdata**を呼び出して送信するデータを決定すると、ドライバーは、送信するパラメーターデータまたは列のデータがどこにあるかを判断するためにアプリケーションで使用できるインジケーターを返します。 また、SQL_NEED_DATA も返されます。これは、データを送信するために**Sqlputdata**を呼び出す必要があることをアプリケーションに示すインジケーターです。 **Sqlputdata**の*DataPtr*引数には、パラメーターまたは列の実際のデータを格納しているバッファーへのポインターが渡されます。  
   
- ドライバーに関係なく SQL_SUCCESS を返しますと**SQLPutData**、アプリケーション呼び出し**SQLParamData**もう一度です。 **SQLParamData** SQL_NEED_DATA より多くのデータを送信する必要がある場合は、アプリケーションが返されます**SQLPutData**もう一度です。 実行時のデータのすべてのデータが送信された場合は関係なく SQL_SUCCESS を返します。 その後、アプリケーションを呼び出す**SQLParamData**もう一度です。 ドライバーが SQL_NEED_DATA とで別のインジケーターを返す場合 *\*ValuePtrPtr*、もう 1 つのパラメーターまたは列にデータを必要と**SQLPutData**が再度呼び出されます。 データが送信され、SQL ステートメントを実行することができる場合ドライバー SQL_SUCCESS を返します、し、すべての実行時データまたは**SQLBulkOperations**または**SQLSetPos**呼び出しを処理できます。  
+ ドライバーが**Sqlputdata**の SQL_SUCCESS を返すと、アプリケーションは**sqlputdata**を再度呼び出します。 **Sqlparamdata**は、より多くのデータを送信する必要がある場合に SQL_NEED_DATA を返します。この場合、アプリケーションは**sqlparamdata**を再度呼び出します。 実行時データのすべてのデータが送信された場合は、SQL_SUCCESS を返します。 次に、アプリケーションは**Sqlparamdata**を再度呼び出します。 ドライバーが SQL_NEED_DATA と* \*valueptrptr*内の別のインジケーターを返した場合、別のパラメーターまたは列のデータが必要であり、 **sqlputdata**が再度呼び出されます。 ドライバーが SQL_SUCCESS を返す場合は、実行時データのすべてのデータが送信され、SQL ステートメントを実行するか、 **Sqlbulkoperations**または**SQLSetPos**の呼び出しを処理できます。  
   
- 方法の実行時データ パラメーターのデータの詳細については、ステートメントの実行時に渡されるを参照してください「パラメーターの値を渡す」で[SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md)と[長い形式のデータを送信する](../../../odbc/reference/develop-app/sending-long-data.md)します。 詳細については、方法、実行時データ列のデータが更新または追加を参照してください"を使用して SQLSetPos" [SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md)、「を実行する一括更新プログラムを使用してブックマーク」で[SQLBulkOperations](../../../odbc/reference/syntax/sqlbulkoperations-function.md)と[長い形式のデータ、SQLSetPos および SQLBulkOperations](../../../odbc/reference/develop-app/long-data-and-sqlsetpos-and-sqlbulkoperations.md)します。  
+ ステートメントの実行時に実行時データパラメーターのデータを渡す方法の詳細については、「 [SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md) 」の「パラメーター値の引き渡し」と「[長い形式のデータの送信](../../../odbc/reference/develop-app/sending-long-data.md)」を参照してください。 実行時データ列のデータを更新または追加する方法の詳細については、「 [sqlsetpos](../../../odbc/reference/syntax/sqlsetpos-function.md)での Sqlsetpos の使用」、「 [sqlbulkoperations](../../../odbc/reference/syntax/sqlbulkoperations-function.md)」の「ブックマークを使用した一括更新の実行」、および「Long Data」と「SQLSetPos」および「 [sqlbulkoperations](../../../odbc/reference/develop-app/long-data-and-sqlsetpos-and-sqlbulkoperations.md)」を参照してください。  
   
 > [!NOTE]  
->  アプリケーションで使用できます**SQLPutData**文字、バイナリ、またはデータのソースに固有のデータ型の列に文字データを送信するときにのみ、または列が文字、バイナリ、C のバイナリ データを送信するときに、部分のデータまたはデータを送信するにはソースに固有のデータを入力します。 場合**SQLPutData**というが複数回、他の条件下で SQL_ERROR と返す SQLSTATE HY019 (文字またはバイナリ以外のデータが分割されて送信されました)。  
+>  アプリケーションでは、文字、バイナリ、またはデータソース固有のデータ型の列に文字 C データを送信する場合、または文字、バイナリ、またはデータソース固有のデータ型を持つ列にバイナリ C データを送信する場合にのみ、 **Sqlputdata**を使用してデータを部分的に送信できます。 **Sqlputdata**がその他の条件の下で複数回呼び出された場合、SQL_ERROR と SQLSTATE HY019 (非文字およびバイナリ以外のデータが部分的に送信されます) が返されます。  
   
 ## <a name="example"></a>例  
- 次の例は、テストと呼ばれるデータ ソース名を想定しています。 関連付けられているデータベースには、次のように、作成できるテーブルが必要です。  
+ 次の例では、Test というデータソース名を前提としています。 関連付けられたデータベースには、次のように作成できるテーブルが必要です。  
   
 ```sql  
 CREATE TABLE emp4 (NAME char(30), AGE int, BIRTHDAY datetime, Memo1 text)  
@@ -275,12 +275,12 @@ int main() {
   
 ## <a name="related-functions"></a>関連する関数  
   
-|詳細|参照先|  
+|対象|以下を参照してください。|  
 |---------------------------|---------|  
-|バッファーをパラメーターにバインドします。|[SQLBindParameter 関数](../../../odbc/reference/syntax/sqlbindparameter-function.md)|  
-|ステートメントの処理をキャンセル|[SQLCancel 関数](../../../odbc/reference/syntax/sqlcancel-function.md)|  
-|SQL ステートメントを実行します。|[SQLExecDirect 関数](../../../odbc/reference/syntax/sqlexecdirect-function.md)|  
-|準備された SQL ステートメントを実行します。|[SQLExecute 関数](../../../odbc/reference/syntax/sqlexecute-function.md)|  
+|バッファーをパラメーターにバインドする|[SQLBindParameter 関数](../../../odbc/reference/syntax/sqlbindparameter-function.md)|  
+|ステートメント処理の取り消し|[SQLCancel 関数](../../../odbc/reference/syntax/sqlcancel-function.md)|  
+|SQL ステートメントの実行|[SQLExecDirect 関数](../../../odbc/reference/syntax/sqlexecdirect-function.md)|  
+|準備された SQL ステートメントの実行|[SQLExecute 関数](../../../odbc/reference/syntax/sqlexecute-function.md)|  
 |データを送信する次のパラメーターを返す|[SQLParamData 関数](../../../odbc/reference/syntax/sqlparamdata-function.md)|  
   
 ## <a name="see-also"></a>参照  

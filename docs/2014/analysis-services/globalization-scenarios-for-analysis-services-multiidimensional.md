@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e7b0d6e4d99c08556cefb31c33deb5238f33c636
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75225385"
 ---
 # <a name="globalization-scenarios-for-analysis-services-multiidimensional"></a>Analysis Services 多次元のグローバル化のシナリオ
@@ -73,7 +73,7 @@ ms.locfileid: "75225385"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|説明|  
+|トピック|[説明]|  
 |-----------|-----------------|  
 |[言語と照合順序 &#40;Analysis Services&#41;](languages-and-collations-analysis-services.md)|
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスに対して既定の言語と Windows 照合順序を指定します。 選択内容に応じて、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]によって管理されるデータおよびメタデータに影響が及びます。|  

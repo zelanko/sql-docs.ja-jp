@@ -31,10 +31,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b0d61f3262d68bcc14abc6b03f83c53ed3a8ba95
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75232089"
 ---
 # <a name="database-lifecycle-management"></a>データベースのライフサイクル管理
@@ -45,9 +45,9 @@ ms.locfileid: "75232089"
  トピック全体を確認するには、「 [データベース ライフ サイクル管理 (DLM)](https://go.microsoft.com/fwlink/?LinkId=276949)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [Azure ホームページ](https://www.windowsazure.com/)   
- [Azure デベロッパーセンター](https://www.windowsazure.com/develop/overview/)   
+ [Azure ホーム ページ](https://www.windowsazure.com/)   
+ [Azure デベロッパー センター](https://www.windowsazure.com/develop/overview/)   
  [Azure 管理センター](https://www.windowsazure.com/manage/overview/)   
- [Azure チームのブログ](https://www.windowsazure.com/community/blog/)   
- [Azure のサポートオプション](https://www.windowsazure.com/support/contact/)  
+ [Azure チーム ブログ](https://www.windowsazure.com/community/blog/)   
+ [Azure サポート オプション](https://www.windowsazure.com/support/contact/)  
   

@@ -1,5 +1,5 @@
 ---
-title: IDSOShapeExtensions インターフェイス |Microsoft Docs
+title: Idsoの拡張機能の Interface |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,14 +13,14 @@ ms.assetid: ad4ba313-1161-4bc7-b8f6-4083305bc81e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: deca1648d6ef4f9ba3a1dfd020dc5193c8cc0d25
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932420"
 ---
 # <a name="idsoshapeextensions-interface"></a>IDSOShapeExtensions インターフェイス
-SHAPE プロバイダーの基になる OLE DB データ ソース オブジェクトを取得します。  
+図形プロバイダーの基になる OLE DB データソースオブジェクトを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,10 +38,10 @@ public:
   
 |||  
 |-|-|  
-|[GetDataProviderDSO メソッド](../../../ado/reference/ado-api/getdataproviderdso-method.md)|Shape プロバイダーから基になる OLE DB データ ソース オブジェクトを取得します。|  
+|[GetDataProviderDSO メソッド](../../../ado/reference/ado-api/getdataproviderdso-method.md)|基になる OLE DB データソースオブジェクトをシェイププロバイダーから取得します。|  
   
 ## <a name="requirements"></a>必要条件  
- **バージョン：** ADO 2.0 以降  
+ **バージョン:** ADO 2.0 以降  
   
  **ライブラリ:** msado15.dll  
   

@@ -12,10 +12,10 @@ ms.assetid: a5f010a5-b762-41c9-881b-bf0c192dca83
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 91f5e7effe54b9955537d90d639a820b5428a5c3
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75246008"
 ---
 # <a name="open-a-knowledge-base"></a>ナレッジ ベースを開く
@@ -24,14 +24,14 @@ ms.locfileid: "75246008"
 
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) で既存のナレッジ ベースを開き、ドメイン管理、ナレッジ検出、または照合ポリシーの追加の準備を行う方法について説明します。  
   
-##  <a name="BeforeYouBegin"></a>開始する前に  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Prerequisites"></a>応募  
+###  <a name="Prerequisites"></a> 前提条件  
  ナレッジ ベースを開くには、ナレッジ ベースが既に作成されていて、発行済みであるか (他のユーザーが作成した場合) または閉じられている (自分で作成した場合) 必要があります。  
   
-###  <a name="Security"></a>保護  
+###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a>許可  
+####  <a name="Permissions"></a> Permissions  
  ナレッジ ベースを開くには、DQS_MAIN データベースの dqs_kb_editor ロールまたは dqs_administrator ロールを所有している必要があります。  
   
 ##  <a name="Open"></a>ナレッジベースを開く  
@@ -58,8 +58,7 @@ ms.locfileid: "75246008"
     -   
   **[照合ポリシー]** を選択すると、照合ポリシーを作成してナレッジ ベースに追加します。  
   
-5.  
-  **[開く]** をクリックします。  
+5.  **[開く]** をクリックします。  
   
     > [!NOTE]  
     >  ナレッジ ベースを右クリックし、[開く] をクリックしてナレッジ ベースを開くこともできます。 ショートカット メニューの他のコマンドでは、別の名前を付けて保存、ロックの解除、変更の破棄、名前の変更、プロパティの表示などの操作を実行できます。  

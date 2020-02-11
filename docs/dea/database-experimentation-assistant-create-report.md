@@ -1,7 +1,7 @@
 ---
 title: 分析レポートの作成
 description: Database Experimentation Assistant で分析レポートを作成する
-ms.date: 11/21/2019
+ms.date: 01/24/2020
 ms.prod: sql
 ms.prod_service: dea
 ms.suite: sql
@@ -12,12 +12,12 @@ author: HJToland3
 ms.author: jtoland
 ms.reviewer: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 4d3f057ffcfb1030b473b69f96b7204b3a975613
-ms.sourcegitcommit: aaa42f26c68abc2de10eb58444fe6b490c174eab
+ms.openlocfilehash: f82aba87632abea4ac5fbc8b54daa6dfd0eb5b4a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74307976"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76831885"
 ---
 # <a name="create-analysis-reports-in-database-experimentation-assistant-sql-server"></a>Database Experimentation Assistant で分析レポートを作成する (SQL Server)
 
@@ -25,29 +25,24 @@ ms.locfileid: "74307976"
 
 ## <a name="create-an-analysis-report"></a>分析レポートを作成する
 
-DEA で、メニューアイコンを選択します。 展開されたメニューで、チェックリストアイコンの横にある [**分析レポート**] を選択します。
+1. DEA で、リストアイコンを選択し、サーバー名と認証の種類を指定して、シナリオに応じて [**接続の暗号化**] と [**サーバー証明書の信頼**] チェックボックスをオンまたはオフにし、[**接続**] を選択します。
 
-![[分析] メニュー](./media/database-experimentation-assistant-create-report/dea-create-reports-menu.png)
+   ![トレースファイルを使用したサーバーへの接続](./media/database-experimentation-assistant-create-report/dea-connect-to-server-with-trace-files.png)
 
-[**分析レポート**] で、[**新しい分析レポート**] を選択します。
+2. [**分析レポート**] 画面で、[**新しい分析レポート**] を選択します。
 
-![新しい分析レポートメニュー](./media/database-experimentation-assistant-create-report/dea-create-reports-new-report.png)
+   ![新しい分析レポートの作成](./media/database-experimentation-assistant-create-report/dea-create-an-analysis-report.png)
 
-次の情報を入力または選択します。
+3. [**新しい分析レポート**] 画面で、レポートの名前、ストレージの場所、ターゲット1とターゲット2のトレースファイルのパスを指定し、[**開始**] を選択します。
 
-- **レポート名**: レポートの名前を入力します。 レポート名は、A と B の両方のデータベースで使用されます。 例: *(または B)* + *レポート名* + の*一意の識別子*。
-- **サーバー名**:、B、および分析データベースに含めるサーバーコンピューターの名前を入力します。
-- **SQL Server インスタンス名**: レポートに使用する SQL Server インスタンスの名前を入力します。
-- [**ソースサーバーのトレース**]: SQL Server (2008 R2) 最初のトレース (.trc) ファイルを入力します。
-- [**対象サーバーのトレース**]: ターゲット SQL Server (2014) の最初の .Trc ファイルを入力します。
+   ![新しい分析レポートの詳細を指定します](./media/database-experimentation-assistant-create-report/dea-new-analysis-report-details.png)
 
-![[新しい分析レポート] ページ](./media/database-experimentation-assistant-create-report/dea-create-reports-inputs.png)
+   入力した情報が有効な場合は、分析レポートが作成されます。
 
-## <a name="generate-a-report"></a>レポートの生成
+   ![新しく作成された分析レポート](./media/database-experimentation-assistant-create-report/dea-newly-created-analysis-report.png)
 
-[**新しい分析レポート**] ページで必要な情報を入力または選択したら、[**開始**] を選択してレポートの作成を開始します。 入力した情報が有効な場合は、分析レポートが作成されます。 そうしないと、無効な情報を含むテキストボックスが赤色で強調表示されます。 正しい値を入力し、[**開始**] を選択してください。
-
-新しい分析レポートが生成されます。 分析データベースは、[名前付けスキーム分析 +*ユーザー指定のレポート名* + の*一意識別子*に従います。
+      > [!NOTE]
+      > 入力した情報のいずれかが無効な場合は、正しくない情報を含むテキストボックスが赤色で強調表示されます。 必要に応じて修正を行い、もう一度 [**開始**] を選択します。
 
 ## <a name="frequently-asked-questions-about-analysis-reports"></a>分析レポートに関してよく寄せられる質問
 
@@ -59,13 +54,9 @@ DEA は、統計テストを使用してワークロードを分析し、各ク�
 
 いいえ。  現時点では、競合を防ぐために一度に生成できるレポートは1つだけです。 ただし、複数のキャプチャと再生を同時に実行することはできます。
 
-**Q: DEA をバージョン2.0 にアップグレードしました。古いレポートを表示して使用することはできますか。**
-
-対応 以前に生成されたレポートを表示するには、レポートのスキーマを更新する必要があります。 詳細については、「dea [2.0: データベーススキーマを更新する](https://blogs.msdn.microsoft.com/datamigration/2017/03/24/dea-2-0-updating-db-schema-for-analysis-report-in-the-database-experimentation-assistant/)」を参照してください。
-
 **Q: コマンドプロンプトを使用して分析レポートを生成することはできますか。**
 
-対応 分析レポートは、コマンドプロンプトで生成できます。 その後、UI でレポートを表示できます。 詳細については、「[コマンドプロンプトでの実行](database-experimentation-assistant-run-command-prompt.md)」を参照してください。
+はい。 分析レポートは、コマンドプロンプトで生成できます。 その後、UI でレポートを表示できます。 詳細については、「[コマンドプロンプトでの実行](database-experimentation-assistant-run-command-prompt.md)」を参照してください。
 
 ## <a name="troubleshoot-analysis-reports"></a>分析レポートのトラブルシューティング
 
@@ -97,7 +88,7 @@ DEA をインストールした後に初めて分析レポートを生成する�
 |---|---|  
 |RInterop は起動時にエラーになります。 RInterop ログを確認してから、操作をやり直してください。|DEA は、依存する R パッケージをダウンロードするためにインターネットアクセスを必要とします。 % Temp%\\RInterop の rinterop ログを確認し、% temp%\\dea のログを破棄してください。 RInterop が正しく初期化されなかった場合、または正しい R パッケージを使用せずに初期化された場合は、DEA ログの初期化前の手順の後に "新しい分析レポートを生成できませんでした" という例外が表示されることがあります。<br><br>RInterop ログには、"jsonlite パッケージが使用できません" というエラーが表示されることもあります。 コンピューターがインターネットにアクセスできない場合は、必要な jsonlite R パッケージを手動でダウンロードできます。<br><br><li>コンピューターのファイルシステムの%\\userprofile% dearpackages フォルダーにアクセスします。 このフォルダーは、DEA で R が使用するパッケージで構成されています。</li><br><li>インストールされているパッケージの一覧に jsonlite フォルダーがない場合は、インターネットにアクセスできるコンピューターで、のバージョンの jsonlite\_1.4 .zip [https://cran.r-project.org/web/packages/jsonlite/index.html](https://cran.r-project.org/web/packages/jsonlite/index.html)をダウンロードする必要があります。</li><br><li>DEA を実行しているコンピューターに .zip ファイルをコピーします。  Jsonlite フォルダーを抽出し、% userprofile%\\dearpackages にコピーします。 この手順により、自動的に jsonlite パッケージが R にインストールされます。フォルダーは**jsonlite**という名前にする必要があります。コンテンツは、以下の1レベルではなくフォルダー内に直接配置する必要があります。</li><br><li>DEA を閉じて再度開いてから、もう一度分析を試してください。</li><br>RGUI を使用することもできます。 [**パッケージ** > ] [**zip からインストール**] にアクセスします。 前の手順でダウンロードしたパッケージにアクセスし、をインストールします。<br><br>RInterop が初期化され、正しく設定されている場合は、RInterop ログに "依存する R パッケージ jsonlite をインストールしています" と表示されます。|  
 |SQL Server インスタンスに接続できません。サーバー名が正しいことを確認し、ログインしているユーザーに必要なアクセス権があるかどうかを確認してください。|サーバーにアクセス権がないか、サーバー名が正しくない可能性があります。|
-|RInterop プロセスがタイムアウトしました。DEA および RInterop ログを確認し、タスクマネージャーで RInterop プロセスを停止してから、操作をやり直してください。<br><br>または<br><br>RInterop は faulted 状態にあります。 タスクマネージャーで RInterop プロセスを停止してから、操作をやり直してください。|% Temp%\\rinterop でログを確認して、エラーを確認してください。 タスクマネージャーから RInterop プロセスを削除してから、操作をやり直してください。 問題が解決しない場合は、製品チームにお問い合わせください。|
+|RInterop プロセスがタイムアウトしました。DEA および RInterop ログを確認し、タスクマネージャーで RInterop プロセスを停止してから、操作をやり直してください。<br><br>or<br><br>RInterop は faulted 状態にあります。 タスクマネージャーで RInterop プロセスを停止してから、操作をやり直してください。|% Temp%\\rinterop でログを確認して、エラーを確認してください。 タスクマネージャーから RInterop プロセスを削除してから、操作をやり直してください。 問題が解決しない場合は、製品チームにお問い合わせください。|
 
 **Q: レポートが生成されましたが、データが不足しています**
 
@@ -105,7 +96,7 @@ SQL Server を実行している分析コンピューターのデータベース
 
 データが存在しない場合は、データが正しくコピーされていないか、データベースが破損している可能性があります。 一部のデータのみが不足している場合は、キャプチャまたは再生で作成されたトレースファイルがワークロードを正確にキャプチャしていない可能性があります。 データがある場合は、% temp%\\dea のログファイルを調べて、エラーがログに記録されたかどうかを確認してください。 その後、もう一度分析レポートの生成を試みます。
 
-他にも質問やフィードバックがありますか? 左下隅にあるスマイルアイコンをクリックして、DEA ツールを通じてフィードバックを送信します。 
+他にも質問やフィードバックがありますか? 左下隅にあるスマイルアイコンをクリックして、DEA ツールを通じてフィードバックを送信します。
 
 ## <a name="see-also"></a>参照
 

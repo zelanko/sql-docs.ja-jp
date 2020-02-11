@@ -1,11 +1,7 @@
 ---
-title: 方法:スキーマ比較を使用して各種のデータベース定義を比較する | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: スキーマ比較を使用して各種のデータベース定義を比較する
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.schemacompare.SchemaCompareOptionsDialog
@@ -16,14 +12,19 @@ f1_keywords:
 ms.assetid: 7f0905a4-081c-46e2-bd7d-325b63e5c675
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ce83808ac5953902f8f655c619f87feeffa4e8c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: f31d543906e4bfedb16e412be703ebc8cd797a04
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68097509"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75226853"
 ---
 # <a name="how-to-use-schema-compare-to-compare-different-database-definitions"></a>方法:スキーマ比較を使用して各種のデータベース定義を比較する
+
 SQL Server Data Tools (SSDT) に付属しているスキーマ比較ユーティリティを使用して、2 つのデータベース定義を比較できます。  比較のソースとターゲットには、接続されているデータベース、SQL Server データベース プロジェクトまたはスナップショット、または .dacpac ファイルを指定できます。  比較結果は、ターゲットをソースと同じにするためにターゲットに実行する必要があるアクションのセットとして表示されます。  比較が完了したら、ターゲットを直接更新するか (ターゲットがプロジェクトまたはデータベースの場合)、同じ効果がある更新スクリプトを生成することができます。  
   
 ソースとターゲットとの相違点はグリッドに表示されるので、簡単に確認できます。  それぞれの相違点を結果グリッドまたはスクリプト形式でドリル インして確認できます。  確認後、特定の相違点を選択的に除外できます。  

@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ddcb099e81ef99ff3a2f0d0cf7bbf23adc0bc16b
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75242969"
 ---
 # <a name="use-the-properties-window-in-management-studio"></a>Management Studio の [プロパティ] ウィンドウの使用
@@ -42,8 +42,7 @@ ms.locfileid: "75242969"
   
 ### <a name="to-view-the-properties-of-a-showplan-operator"></a>プラン表示操作のプロパティを表示するには  
   
-1.  
-  **[クエリ]** メニューの **[実際の実行プランを含める]** をクリックします。  
+1.  **[クエリ]** メニューの **[実際の実行プランを含める]** をクリックします。  
   
 2.  SQL クエリ エディターで、クエリを入力して実行します。  
   
@@ -52,6 +51,6 @@ ms.locfileid: "75242969"
 4.  SQL クエリ エディターの **[実行プラン]** タブでオペレーターのアイコンをクリックすると、[プロパティ] ウィンドウにそのオペレーターの情報が表示されます。  
   
 ## <a name="see-also"></a>参照  
- [プロパティウィンドウ &#40;Management Studio&#41;](../../ssms/properties-window-management-studio.md)  
+ [[プロパティ] ウィンドウ &#40;Management Studio&#41;](../../ssms/properties-window-management-studio.md)  
   
   

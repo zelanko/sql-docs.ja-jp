@@ -14,10 +14,10 @@ ms.assetid: cce77a06-ca31-47b6-8146-22edf001d605
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 3a50b48b4c498020b3428af2eca2c9d045187682
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251784"
 ---
 # <a name="create-a-matching-policy"></a>照合ポリシーの作成
@@ -28,14 +28,14 @@ ms.locfileid: "75251784"
   
  照合ポリシーを作成する手順は、データ ソースを特定してドメインを列にマップするマップ プロセス、1 つ以上の照合ルールを作成してそれぞれを個別にテストする照合ポリシー プロセス、およびすべての照合ルールをまとめて実行し、問題がなければポリシーをナレッジ ベースに追加する照合結果プロセスの 3 つのステージで構成されます。 照合ポリシー アクティビティのウィザードでは、これらの各プロセスをそれぞれ異なるページで実行します。前後の各ページに移動したり、プロセスを再実行したり、特定の照合ポリシー プロセスを完了した後にそのプロセスの同じステージに戻ることも可能です。 すべてのルールをまとめてテストした後、必要に応じて **[照合ポリシー]** ページに戻り、個々のルールを調整して再び個別にテストすることもできます。その後、 **[照合結果]** ページに戻り、もう一度すべてのルールをまとめて実行します。 DQS から提供されるソース データ、照合ルール、および照合結果に関する統計情報に基づいて照合ポリシーに関する決定を行い、照合ポリシーを調整することができます。  
   
-##  <a name="BeforeYouBegin"></a>開始する前に  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Prerequisites"></a>応募  
+###  <a name="Prerequisites"></a> 前提条件  
  ソース データが Excel ファイルに含まれている場合は、 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] コンピューターに Microsoft Excel がインストールされている必要があります。 Excel がインストールされていないと、マップ ステージで Excel ファイルを選択できません。 Microsoft Excel で作成されるファイルの拡張子は、.xlsx、.xls、または .csv です。 64 ビット バージョンの Excel を使用する場合は、Excel 2003 ファイル (.xls) のみがサポートされます。Excel 2007 または 2010 ファイル (.xlsx) はサポートされません。 64 ビット バージョンの Excel 2007 または 2010 を使用している場合は、ファイルを .xls ファイルまたは .csv ファイルとして保存するか、32 ビット バージョンの Excel をインストールしてください。  
   
-###  <a name="Security"></a>保護  
+###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a>許可  
+####  <a name="Permissions"></a> Permissions  
  照合ポリシーを作成するには、DQS_MAIN データベースの dqs_kb_editor ロールまたは dqs_administrator ロールが必要です。  
   
 ##  <a name="MatchingRules"></a>照合ルールのパラメーターを設定する方法  

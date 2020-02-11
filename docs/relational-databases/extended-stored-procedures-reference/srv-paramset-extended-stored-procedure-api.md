@@ -20,10 +20,10 @@ ms.assetid: 2a509206-a1b8-4b20-b0a2-ef680cef7bd8
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: c3ec0de44aacbcfb2d4e6b96d7525da900017e01
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75253550"
 ---
 # <a name="srv_paramset-extended-stored-procedure-api"></a>srv_paramset (拡張ストアド プロシージャ API)
@@ -58,10 +58,10 @@ len
  *srvproc*  
  特定のクライアント接続のためのハンドル (この場合は、リモート ストアド プロシージャ呼び出しを受け取るハンドル) である SRV_PROC 構造体を指すポインターです。 この構造体には、アプリケーションとクライアントの間の通信やデータを管理するために、拡張ストアド プロシージャ API ライブラリで使用する情報が格納されます。  
   
- *非該当*  
+ *n*  
  設定するパラメーターの番号を示します。 最初のパラメーターは 1 です。  
   
- *データ*  
+ *data*  
  リモート ストアド プロシージャの戻りパラメーターとしてクライアントに返されるデータ値を指すポインターです。  
   
  *len*  
@@ -90,7 +90,7 @@ len
 |IG は値が無視されることを示します。||  
 |valid はデータを指す任意の有効なポインターを示します。||  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  パラメーターには、リモート ストアド プロシージャを使用してクライアントとアプリケーションとの間で受け渡しされるデータが格納されます。 クライアントは戻りパラメーターとして特定のパラメーターを指定できます。 この戻りパラメーターには、Open Data Services サーバー アプリケーションがクライアントに返す値を格納することができます。 戻りパラメーターの使用は、パラメーターの参照渡しに類似しています。  
   
  戻りパラメーターとして呼び出されていないパラメーターには、戻り値を設定できません。 パラメーターがどのように呼び出されたかを判別するには **srv_paramstatus** を使用します。  

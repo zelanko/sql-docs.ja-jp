@@ -17,10 +17,10 @@ ms.author: rajpo
 manager: jroth
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 6f9d3d97d939586683015f38ab17c00dd03ca122
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75253511"
 ---
 # <a name="assess-the-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql-database-using-the-data-migration-assistant"></a>Data Migration Assistant を使用して Azure SQL Database に移行する SQL Server のデータ資産の準備状況を評価する
@@ -73,13 +73,11 @@ Azure Migrate のプロジェクトは、評価または移行しようとして
    > [!NOTE]
    > プロジェクトを作成するときは、少なくとも1つのアセスメントツールまたは移行ツールを追加する必要があります。
 
-8. [**評価ツールの選択**] タブの [ **Azure Migrate: データベース評価**は、追加する評価ツールとして表示されます。 現在評価ツールが必要ない場合は、[**今すぐの評価ツールの追加をスキップ**する] チェックボックスをオンにします。 
-  **[次へ]** を選択します。
+8. [**評価ツールの選択**] タブの [ **Azure Migrate: データベース評価**は、追加する評価ツールとして表示されます。 現在評価ツールが必要ない場合は、[**今すぐの評価ツールの追加をスキップ**する] チェックボックスをオンにします。 **[次へ]** を選択します。
 
     ![Azure Migrate-[評価ツール] タブの選択](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-select-assessment-tool.png)
 
-9. [**移行ツールの選択**] タブの**Azure Migrate: [データベースの移行**] が、追加する移行ツールとして表示されます。 移行ツールを現在必要としていない場合は、**今すぐ移行ツールの追加をスキップ**します。 
-  **[次へ]** を選択します。
+9. [**移行ツールの選択**] タブの**Azure Migrate: [データベースの移行**] が、追加する移行ツールとして表示されます。 移行ツールを現在必要としていない場合は、**今すぐ移行ツールの追加をスキップ**します。 **[次へ]** を選択します。
 
     ![Azure Migrate-[移行ツール] タブの選択](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-select-migration-tool.png)
 
@@ -105,7 +103,7 @@ Azure Migrate のプロジェクトは、評価または移行しようとして
 
     オンプレミスの SQL Server インスタンスを SQL Server の新しいバージョンまたは Azure VM でホストされている SQL Server にアップグレードする場合は、ソースとターゲットのサーバーの種類を**SQL Server**に設定します。 Azure SQL Database (PaaS) ターゲット準備の評価の対象サーバーの種類を**Azure SQL Database Managed Instance**に設定します。
 
-3. [**作成**] を選択します。
+3. **作成** を選択します。
 
    ![Azure Migrate-Data Migration Assistant インターフェイス](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-dma-interface.png)
 
@@ -119,8 +117,7 @@ Azure Migrate のプロジェクトは、評価または移行しようとして
 
    ![Azure Migrate-Data Migration Assistant 評価オプション画面](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-dma-options-screen.png)
 
-2. 
-  **[次へ]** を選択します。
+2. **[次へ]** を選択します。
 
 ### <a name="add-databases-to-assess"></a>評価するデータベースの追加
 

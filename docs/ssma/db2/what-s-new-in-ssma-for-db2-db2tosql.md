@@ -2,23 +2,40 @@
 title: SSMA for DB2 の新機能 (DB2ToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
-ms.date: 12/04/2019
+ms.date: 01/22/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1cc38f85-3caa-42d0-8c76-a380c1d15c67
 author: HJToland3
 ms.author: Shamikg
-ms.openlocfilehash: 75fbcbef02dc19dac47d96431118b75df262b685
-ms.sourcegitcommit: 26868c8ac3217176b370d972a26d307598a10328
+ms.openlocfilehash: 9b4fc1f9d0ce1128306f27a5f7bf6658377528cd
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74834298"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76516569"
 ---
 # <a name="whats-new-in-ssma-for-db2-db2tosql"></a>SSMA for DB2 の新機能 (DB2ToSQL)
 
 この記事では、各リリースでの DB2 変更の SQL Server Migration Assistant (SSMA) を示します。
+
+## <a name="ssma-v86"></a>SSMA v 8.6
+
+ユーザビリティとパフォーマンスの向上を目的とした一連の修正に加えて、SSMA for DB2 のリリースは、ユーザーが変換されたコードで SSMA 拡張プロパティを省略できるようにする設定を追加することによって強化されました。
+
+Ssma for DB2 でこの設定を利用するには、[**ツール** > ] [プロジェクト] [**設定** > ]**[全般** > **変換**] の順に移動し、[その**他**] の [**拡張プロパティを省略**する] 設定の値を **[はい]** に更新します。
+
+![拡張プロパティの設定を省略する](../db2/media/ssma-omit-extended-properties.png)
+
+さらに、SSMA for DB2 は次の機能を提供するようになりました。
+
+-   既定の引数値を使用する関数の変換の修正プログラム
+-   PARAMETER 句での関数の解析が改善されました。
+- LEAVE ステートメントを変換する権限です。
+
+> [!IMPORTANT]
+> SSMA v1.0 以降では、.Net 4.7.2 はインストールの前提条件です。 このバージョンをインストールする必要がある場合は、[ここ](https://dotnet.microsoft.com/download/dotnet-framework/net472)からランタイムファイルをダウンロードできます。
 
 ## <a name="ssma-v85"></a>SSMA v1.0
 
@@ -168,7 +185,7 @@ SSMA for DB2 の v2.0 リリースには、次の変更が含まれています�
 
 * Windows と Linux CTP1 の SQL Server 2017 は、現在、移行のためにサポートされているターゲットプラットフォームです。 この機能は technical preview にあり、SQL server を対象とするスキーマとデータの移動を可能にします。
 * 最新バージョンの SSMA が利用可能になるとすぐにダウンロードするための自動更新のサポート。
-* SSMA のインストール可能なバイナリは、Windows インストーラパッケージファイル (.msi) を介して配信されるようになりました。
+* SSMA のインストール可能なバイナリが Windows インストーラーパッケージファイル (.msi) を介して配信されるようになりました。
 
 ## <a name="may-2016"></a>2016 年 5 月
 

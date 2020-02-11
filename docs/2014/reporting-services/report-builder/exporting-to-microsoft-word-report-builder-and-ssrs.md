@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a2808ff3bb6cfab084854a8d9cd7cf5511dfd0fc
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244501"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Exporting to Microsoft Word (Report Builder and SSRS)
@@ -43,7 +43,7 @@ ms.locfileid: "75244501"
   
  ニュースレター形式のカラム レポートは、Word ではレンダリングされません。 レポート本文およびページ背景の画像およびカラーはレンダリングされません。  
   
-##  <a name="Pagination"></a>ページ  
+##  <a name="Pagination"></a> ページ割り付け  
  レポートを Word で開くと、レポート全体の改ページ位置が、ページ サイズに基づいて自動的に修正されます。 改ページ位置の修正によって、想定しない場所に改ページが挿入されることがあります。場合によっては、エクスポートされたレポートに連続して 2 つの改ページが挿入されたり、空白のページが追加されたりすることもあります。 Word の改ページは、ページ余白を調整することによって変更できます。  
   
  このレンダラーでは、論理的な改ページのみがサポートされます。  
@@ -59,11 +59,11 @@ ms.locfileid: "75244501"
 ##  <a name="DocumentProperties"></a>ドキュメントのプロパティ  
  Word レンダラーでは、次のメタデータが DOCX ファイルに書き込まれます。  
   
-|レポート要素のプロパティ|説明|  
+|レポート要素のプロパティ|[説明]|  
 |-------------------------------|-----------------|  
 |Report Title (レポート タイトル)|タイトル|  
 |Report.Author|作成者|  
-|Report.Description|備考|  
+|Report.Description|説明|  
   
 ##  <a name="ReportHeadersFooters"></a>ページヘッダーとページフッター  
  ページのヘッダーとフッターは、Word のヘッダー領域およびフッター領域としてレンダリングされます。 ページ ヘッダーまたはページ フッターに、レポートの合計ページ数を表すページ番号 (または式) が表示される場合、これらは、レンダリング後のレポートに正確なページ番号が表示されるように、Word のフィールドに変換されます。 レポートで設定されたヘッダーまたはフッターの高さは、Word では反映されません。 状況によっては、PrintOnFirstPage プロパティを使用して、ページ ヘッダーとページ フッターのテキストをレポートの最初のページに印刷するかどうかを指定できます。 表示レポートに複数のページがあり、ページごとに 1 つのセクションのみが含まれる場合は、PrintOnFirstPage を False に設定でき、最初のページのテキストは非表示になります。それ以外の場合は、PrintOnFirstPage プロパティの値に関係なく、テキストが印刷されます。  
@@ -84,7 +84,7 @@ ms.locfileid: "75244501"
   
  この問題を回避するには、フッターおよびヘッダーで式を使用するときに 1 つの複合式ではなく複数のテキスト ランを使用します。 次の 2 つの式は等価です。 最初の式は複合式で、2 番目の式はテキスト ランを使用しています。 Word レンダラーでは、2 番目の式のみが正しく解析されます。  
   
-##  <a name="Interactivity"></a>双  
+##  <a name="Interactivity"></a> 対話性  
  Word では、いくつかの対話型要素がサポートされています。 具体的な動作について説明します。  
   
 ### <a name="show-and-hide"></a>表示/非表示  
@@ -194,13 +194,13 @@ ms.locfileid: "75244501"
 ##  <a name="Differences"></a>Word と Word 2003 レンダラーの違い  
  Word レンダラーまたは Word 2003 レンダラーを使用して表示されたレポートは、見た目では区別できない傾向にあります。 ただし、Word または Word 2003 の 2 つの形式の間で若干の違いが見つかる場合があります。  
   
-##  <a name="DeviceInfo"></a>デバイス情報の設定  
+##  <a name="DeviceInfo"></a> デバイス情報設定  
  このレンダラーでは、デバイス情報設定を変更することによって、一部の既定の設定を変更できます。たとえば、ハイパーリンクやドリルスルー リンクを省略することも、展開表示と縮小表示の切り替えが可能な項目について、レンダリング時の状態に関係なく、すべての項目を展開することもできます。 詳しくは、「 [Word Device Information Settings](../word-device-information-settings.md)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
- [Reporting Services &#40;レポートビルダーおよび SSRS&#41;での改ページ](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [レポートビルダーおよび SSRS&#41;&#40;レンダリング動作](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [さまざまなレポート表示拡張機能の対話機能 &#40;レポートビルダーと SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
- [レポートビルダーおよび SSRS&#41;&#40;レポートアイテムのレンダリング](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
- [テーブル、マトリックス、および一覧 &#40;レポートビルダーと SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
+ [Reporting Services の改ページ &#40;レポート ビルダーおよび SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [レンダリングの動作 &#40;レポート ビルダーおよび SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [さまざまなレポート表示拡張機能の対話機能 &#40;レポート ビルダーおよび SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [レポート アイテムのレンダリング &#40;レポート ビルダーおよび SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
+ [テーブル、マトリックス、および一覧 &#40;レポート ビルダーおよび SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   

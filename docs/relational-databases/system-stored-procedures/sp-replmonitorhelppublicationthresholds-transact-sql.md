@@ -17,10 +17,10 @@ ms.assetid: d6b1aa4b-3369-4255-a892-c0e5cc9cb693
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d351db8ca696263f294f5a52f364d42ac48bad24
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75320779"
 ---
 # <a name="sp_replmonitorhelppublicationthresholds-transact-sql"></a>sp_replmonitorhelppublicationthresholds (Transact-sql)
@@ -28,7 +28,7 @@ ms.locfileid: "75320779"
 
   監視されるパブリケーションに設定されたしきい値メトリックを返します。 レプリケーションを監視するために使用されるこのストアドプロシージャは、ディストリビューター側のディストリビューションデータベースで実行されます。  
   
- ![トピックリンクアイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-sql 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
@@ -50,27 +50,27 @@ sp_replmonitorhelppublicationthresholds [ @publisher = ] 'publisher'
   
 `[ @publication_type = ] publication_type`パブリケーションの種類。 *publication_type*は**int**,、これらの値のいずれかを指定できます。  
   
-|値|説明|  
+|値|[説明]|  
 |-----------|-----------------|  
 |**0**|トランザクションパブリケーション。|  
-|**1 で保護されたプロセスとして起動されました**|スナップショットパブリケーション。|  
-|**3**|マージ パブリケーションです。|  
+|**1**|スナップショットパブリケーション。|  
+|**2**|マージ パブリケーションです。|  
 |NULL (既定値)|レプリケーションは、パブリケーションの種類を特定しようとします。|  
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
-|**metric_id**|**通り**|レプリケーションパフォーマンスメトリックの ID。次のいずれかを指定できます。<br /><br /> **1 有効期限**-トランザクションパブリケーションに対するサブスクリプションの期限が迫っていないかを監視します。<br /><br /> **2latency** -トランザクションパブリケーションに対するサブスクリプションのパフォーマンスを監視します。<br /><br /> **4mergeexpiration 期限**-マージパブリケーションに対するサブスクリプションの期限が迫っていないかを監視します。<br /><br /> **5mergeslowrunduration** -低帯域 (ダイヤルアップ) 接続でのマージ同期の期間を監視します。<br /><br /> **6mergefastrunduration** -高帯域 (LAN) 接続でのマージ同期の期間を監視します。<br /><br /> **7mergefastrunspeed** -高帯域 (LAN) 接続でのマージ同期の同期率を監視します。<br /><br /> **8mergeslowrunspeed** -低帯域 (ダイヤルアップ) 接続でのマージ同期の同期率を監視します。|  
+|**metric_id**|**int**|レプリケーションパフォーマンスメトリックの ID。次のいずれかを指定できます。<br /><br /> **1 有効期限**-トランザクションパブリケーションに対するサブスクリプションの期限が迫っていないかを監視します。<br /><br /> **2latency** -トランザクションパブリケーションに対するサブスクリプションのパフォーマンスを監視します。<br /><br /> **4mergeexpiration 期限**-マージパブリケーションに対するサブスクリプションの期限が迫っていないかを監視します。<br /><br /> **5mergeslowrunduration** -低帯域 (ダイヤルアップ) 接続でのマージ同期の期間を監視します。<br /><br /> **6mergefastrunduration** -高帯域 (LAN) 接続でのマージ同期の期間を監視します。<br /><br /> **7mergefastrunspeed** -高帯域 (LAN) 接続でのマージ同期の同期率を監視します。<br /><br /> **8mergeslowrunspeed** -低帯域 (ダイヤルアップ) 接続でのマージ同期の同期率を監視します。|  
 |**題**|**sysname**|レプリケーション パフォーマンス測定基準の名前。|  
-|**数値**|**通り**|パフォーマンスメトリックのしきい値。|  
+|**数値**|**int**|パフォーマンスメトリックのしきい値。|  
 |**shouldalert**|**bit**|メトリックがこのパブリケーションに対して定義されたしきい値を超えた場合にアラートを生成するかどうかを指定します。値**1**は、警告を発生させることを示します。|  
 |**isenabled**|**bit**|このパブリケーションのこのレプリケーションパフォーマンスメトリックで監視が有効になっているかどうかを示します。値が**1**の場合は、監視が有効になっていることを示します。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  **sp_replmonitorhelppublicationthresholds**は、すべての種類のレプリケーションで使用されます。  
   
 ## <a name="permissions"></a>アクセス許可  

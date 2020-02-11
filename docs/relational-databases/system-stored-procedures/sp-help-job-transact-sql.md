@@ -18,10 +18,10 @@ ms.assetid: 8a8b6104-e0e4-4d07-a2c3-f4243ee0d6fa
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 29870a0ffb3d2c3b1872acbb40266aef0d16b62c
-ms.sourcegitcommit: 94f6a4b506dfda242fc3efb2403847e22a36d340
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/30/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75546565"
 ---
 # <a name="sp_help_job-transact-sql"></a>sp_help_job (Transact-sql)
@@ -30,7 +30,7 @@ ms.locfileid: "75546565"
   自動化された操作を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で実行するときに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントで使用されるジョブに関する情報を返します。  
   
  
- ![トピックリンクアイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-sql 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
@@ -61,9 +61,9 @@ sp_help_job { [ @job_id = ] job_id
   
 `[ @job_aspect = ] 'job_aspect'`表示するジョブ属性。 *job_aspect*は**varchar (9)**,、既定値は NULL の場合、これらの値のいずれかを指定できます。  
   
-|値|説明|  
+|値|[説明]|  
 |-----------|-----------------|  
-|**すべての**|ジョブのすべての属性情報|  
+|**ALL**|ジョブのすべての属性情報|  
 |**補足**|ジョブ情報|  
 |**出荷**|スケジュール情報|  
 |**よう**|ジョブ ステップ情報|  
@@ -81,13 +81,13 @@ sp_help_job { [ @job_id = ] job_id
   
 `[ @execution_status = ] status`ジョブの実行状態です。 *状態*は**int**,、既定値は NULL の場合、これらの値のいずれかを指定できます。  
   
-|値|説明|  
+|値|[説明]|  
 |-----------|-----------------|  
 |**0**|アイドルまたは中断されていないジョブのみを返します。|  
-|**1 で保護されたプロセスとして起動されました**|実行.|  
-|**3**|スレッド待機中。|  
+|**1**|実行.|  
+|**2**|スレッド待機中。|  
 |**番**|再試行の間隔。|  
-|**4/4**|[アイドル]。|  
+|**4**|[アイドル]。|  
 |**5/5**|状態.|  
 |**7**|完了操作の実行中。|  
   
@@ -105,107 +105,107 @@ sp_help_job { [ @job_id = ] job_id
 ## <a name="result-sets"></a>結果セット  
  引数を指定しない場合、 **sp_help_job**はこの結果セットを返します。  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
-|**job_id**|**一意**|ジョブの一意の ID。|  
+|**job_id**|**UNIQUEIDENTIFIER**|ジョブの一意の ID。|  
 |**originating_server**|**nvarchar (30)**|ジョブの送信元のサーバーの名前。|  
-|**指定**|**sysname**|ジョブの名前。|  
+|**name**|**sysname**|ジョブの名前。|  
 |**enabled**|**tinyint**|ジョブの実行が有効かどうかを示します。|  
 |**記述**|**nvarchar(512)**|ジョブの説明。|  
-|**start_step_id**|**通り**|実行を開始するジョブのステップの ID。|  
+|**start_step_id**|**int**|実行を開始するジョブのステップの ID。|  
 |**別**|**sysname**|ジョブ カテゴリ。|  
 |**責任**|**sysname**|ジョブ所有者。|  
-|**notify_level_eventlog**|**通り**|どのような場合に、通知イベントを Microsoft Windows アプリケーションログに記録するかを示す**ビットマスク**。 次のいずれかの値を指定できます。<br /><br /> **0** = なし<br /><br /> **1** = ジョブが成功した場合<br /><br /> **2** = ジョブが失敗したとき<br /><br /> **3** = ジョブが完了するたびに (ジョブの結果に関係なく)|  
-|**notify_level_email**|**通り**|どのような場合に、ジョブの完了時に通知電子メールを送信するかを示す**ビットマスク**。 指定できる値は、 **notify_level_eventlog**の場合と同じです。|  
-|**notify_level_netsend**|**通り**|どのような場合に、ジョブの完了時にネットワークメッセージを送信するかを示す**ビットマスク**。 指定できる値は、 **notify_level_eventlog**の場合と同じです。|  
-|**notify_level_page**|**通り**|どのような場合に、ジョブの完了時にページを送信するかを示す**ビットマスク**。 指定できる値は、 **notify_level_eventlog**の場合と同じです。|  
+|**notify_level_eventlog**|**int**|どのような場合に、通知イベントを Microsoft Windows アプリケーションログに記録するかを示す**ビットマスク**。 次のいずれかの値を指定できます。<br /><br /> **0** = なし<br /><br /> **1** = ジョブが成功した場合<br /><br /> **2** = ジョブが失敗したとき<br /><br /> **3** = ジョブが完了するたびに (ジョブの結果に関係なく)|  
+|**notify_level_email**|**int**|どのような場合に、ジョブの完了時に通知電子メールを送信するかを示す**ビットマスク**。 指定できる値は、 **notify_level_eventlog**の場合と同じです。|  
+|**notify_level_netsend**|**int**|どのような場合に、ジョブの完了時にネットワークメッセージを送信するかを示す**ビットマスク**。 指定できる値は、 **notify_level_eventlog**の場合と同じです。|  
+|**notify_level_page**|**int**|どのような場合に、ジョブの完了時にページを送信するかを示す**ビットマスク**。 指定できる値は、 **notify_level_eventlog**の場合と同じです。|  
 |**notify_email_operator**|**sysname**|通知するオペレーターの電子メール名。|  
 |**notify_netsend_operator**|**sysname**|ネットワークメッセージを送信するときに使用するコンピューターまたはユーザーの名前。|  
 |**notify_page_operator**|**sysname**|ページを送信するときに使用するコンピューターまたはユーザーの名前。|  
-|**delete_level**|**通り**|どのような場合に、ジョブの完了時にジョブを削除するかを示す**ビットマスク**。 指定できる値は、 **notify_level_eventlog**の場合と同じです。|  
-|**date_created**|**/**|ジョブが作成された日付。|  
-|**date_modified**|**/**|ジョブが最後に変更された日付。|  
-|**version_number**|**通り**|ジョブのバージョン (ジョブを変更するたびに自動的に更新されます)。|  
-|**last_run_date**|**通り**|ジョブの実行を最後に開始した日付。|  
-|**last_run_time**|**通り**|ジョブの実行を最後に開始した時刻。|  
-|**last_run_outcome**|**通り**|最後に実行したときのジョブの結果:<br /><br /> **0** = 失敗<br /><br /> **1** = 成功<br /><br /> **3** = キャンセル<br /><br /> **5** = 不明|  
-|**next_run_date**|**通り**|ジョブが次に実行されるようにスケジュールされている日付。|  
-|**next_run_time**|**通り**|ジョブの次回実行予定時刻。|  
-|**next_run_schedule_id**|**通り**|次回の実行スケジュールの識別番号。|  
-|**current_execution_status**|**通り**|現在の実行状態:<br /><br /> **1** = 実行中<br /><br /> **2** = スレッドを待機しています<br /><br /> **3** = 再試行の間隔<br /><br /> **4** = アイドル<br /><br /> **5** = 中断<br /><br /> **6** = 互換性のために残されています<br /><br /> **7** = PerformingCompletionActions|  
+|**delete_level**|**int**|どのような場合に、ジョブの完了時にジョブを削除するかを示す**ビットマスク**。 指定できる値は、 **notify_level_eventlog**の場合と同じです。|  
+|**date_created**|**DATETIME**|ジョブが作成された日付。|  
+|**date_modified**|**DATETIME**|ジョブが最後に変更された日付。|  
+|**version_number**|**int**|ジョブのバージョン (ジョブを変更するたびに自動的に更新されます)。|  
+|**last_run_date**|**int**|ジョブの実行を最後に開始した日付。|  
+|**last_run_time**|**int**|ジョブの実行を最後に開始した時刻。|  
+|**last_run_outcome**|**int**|最後に実行したときのジョブの結果:<br /><br /> **0** = 失敗<br /><br /> **1** = 成功<br /><br /> **3** = キャンセル<br /><br /> **5** = 不明|  
+|**next_run_date**|**int**|ジョブが次に実行されるようにスケジュールされている日付。|  
+|**next_run_time**|**int**|ジョブの次回実行予定時刻。|  
+|**next_run_schedule_id**|**int**|次回の実行スケジュールの識別番号。|  
+|**current_execution_status**|**int**|現在の実行状態:<br /><br /> **1** = 実行中<br /><br /> **2** = スレッドを待機しています<br /><br /> **3** = 再試行の間隔<br /><br /> **4** = アイドル<br /><br /> **5** = 中断<br /><br /> **6** = 互換性のために残されています<br /><br /> **7** = PerformingCompletionActions|  
 |**current_execution_step**|**sysname**|ジョブの現在の実行ステップ。|  
-|**current_retry_attempt**|**通り**|ジョブが実行中で、ステップが再試行されている場合は、これが現在の再試行です。|  
-|**has_step**|**通り**|ジョブに含まれるジョブステップの数。|  
-|**has_schedule**|**通り**|ジョブのジョブ スケジュール数。|  
-|**has_target**|**通り**|ジョブのターゲット サーバー数。|  
-|**各種**|**通り**|ジョブの種類。<br /><br /> 1 = ローカルジョブ。<br /><br /> **2** = マルチサーバージョブ。<br /><br /> **0** = ジョブに対象サーバーがありません。|  
+|**current_retry_attempt**|**int**|ジョブが実行中で、ステップが再試行されている場合は、これが現在の再試行です。|  
+|**has_step**|**int**|ジョブに含まれるジョブステップの数。|  
+|**has_schedule**|**int**|ジョブのジョブ スケジュール数。|  
+|**has_target**|**int**|ジョブのターゲット サーバー数。|  
+|**type**|**int**|ジョブの種類。<br /><br /> 1 = ローカルジョブ。<br /><br /> **2** = マルチサーバージョブ。<br /><br /> **0** = ジョブに対象サーバーがありません。|  
   
  *Job_id*または*job_name*が指定されている場合、 **sp_help_job**は、ジョブステップ、ジョブスケジュール、およびジョブ対象サーバーに対してこれらの追加の結果セットを返します。  
   
  次に、ジョブ ステップに関する結果セットを示します。  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
-|**step_id**|**通り**|ステップの (このジョブで) 一意の ID。|  
+|**step_id**|**int**|ステップの (このジョブで) 一意の ID。|  
 |**step_name**|**sysname**|ステップの名前。|  
 |**サブ**|**nvarchar (40)**|ステップ コマンドを実行するサブシステム。|  
 |**メニュー**|**nvarchar (3200)**|実行するコマンド。|  
 |**示す**|**nvarchar(4000)**|ステップの動作を制御する値の**ビットマスク**。|  
-|**cmdexec_success_code**|**通り**|**CmdExec**ステップの場合、これは成功したコマンドのプロセス終了コードです。|  
+|**cmdexec_success_code**|**int**|**CmdExec**ステップの場合、これは成功したコマンドのプロセス終了コードです。|  
 |**on_success_action**|**nvarchar(4000)**|ステップが成功した場合の対処方法:<br /><br /> **1** = 正常に終了します。<br /><br /> **2** = エラーで終了します。<br /><br /> **3** = 次の手順に進みます。<br /><br /> **4** = ステップに進みます。|  
-|**on_success_step_id**|**通り**|**On_success_action**が**4**の場合は、次に実行する手順を示します。|  
+|**on_success_step_id**|**int**|**On_success_action**が**4**の場合は、次に実行する手順を示します。|  
 |**on_fail_action**|**nvarchar(4000)**|ステップが失敗した場合に実行する動作。 値は**on_success_action**の場合と同じです。|  
-|**on_fail_step_id**|**通り**|**On_fail_action**が**4**の場合は、次に実行する手順を示します。|  
+|**on_fail_step_id**|**int**|**On_fail_action**が**4**の場合は、次に実行する手順を示します。|  
 |**server**|**sysname**|予約済み。|  
 |**database_name**|**sysname**|[!INCLUDE[tsql](../../includes/tsql-md.md)]ステップの場合、これはコマンドを実行するデータベースです。|  
 |**database_user_name**|**sysname**|
   [!INCLUDE[tsql](../../includes/tsql-md.md)] ステップの場合は、コマンドを実行するデータベース ユーザー コンテキスト。|  
-|**retry_attempts**|**通り**|ステップを正常に実行できない場合、コマンドを再試行する最大回数。この回数に達すると、ステップが失敗したと判断されます。|  
-|**retry_interval**|**通り**|再試行の間隔 (分単位)。|  
+|**retry_attempts**|**int**|ステップを正常に実行できない場合、コマンドを再試行する最大回数。この回数に達すると、ステップが失敗したと判断されます。|  
+|**retry_interval**|**int**|再試行の間隔 (分単位)。|  
 |**os_run_priority**|**varchar (4000)**|予約済み。|  
 |**output_file_name**|**varchar (200)**|コマンド出力を書き込むファイル ([!INCLUDE[tsql](../../includes/tsql-md.md)]および**CmdExec**ステップのみ)。|  
-|**last_run_outcome**|**通り**|最後に実行したときのステップの結果。<br /><br /> **0** = 失敗<br /><br /> **1** = 成功<br /><br /> **3** = キャンセル<br /><br /> **5** = 不明|  
-|**last_run_duration**|**通り**|最後に実行したときのステップの経過時間 (秒単位)。|  
-|**last_run_retries**|**通り**|最後にステップを実行したときにコマンドが再試行された回数。|  
-|**last_run_date**|**通り**|ステップの実行を最後に開始した日付。|  
-|**last_run_time**|**通り**|ステップの実行を最後に開始した時刻。|  
-|**proxy_id**|**通り**|ジョブステップのプロキシ。|  
+|**last_run_outcome**|**int**|最後に実行したときのステップの結果。<br /><br /> **0** = 失敗<br /><br /> **1** = 成功<br /><br /> **3** = キャンセル<br /><br /> **5** = 不明|  
+|**last_run_duration**|**int**|最後に実行したときのステップの経過時間 (秒単位)。|  
+|**last_run_retries**|**int**|最後にステップを実行したときにコマンドが再試行された回数。|  
+|**last_run_date**|**int**|ステップの実行を最後に開始した日付。|  
+|**last_run_time**|**int**|ステップの実行を最後に開始した時刻。|  
+|**proxy_id**|**int**|ジョブステップのプロキシ。|  
   
  これは、ジョブスケジュールの結果セットです。  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
-|**schedule_id**|**通り**|すべてのジョブで一意なスケジュール識別子。|  
+|**schedule_id**|**int**|すべてのジョブで一意なスケジュール識別子。|  
 |**schedule_name**|**sysname**|スケジュールの名前 (このジョブでのみ一意)。|  
-|**enabled**|**通り**|スケジュールがアクティブである (**1**) かどうか (**0**)。|  
-|**freq_type**|**通り**|ジョブをいつ実行するかを示す値。<br /><br /> **1** = 1 回<br /><br /> **4** = 日単位<br /><br /> **8** = 週単位<br /><br /> **16** = 月単位<br /><br /> **32** = 毎月、 **freq_interval**に対して相対的<br /><br /> **64** = **SQLServerAgent**サービスの開始時に実行します。|  
-|**freq_interval**|**通り**|ジョブが実行された日。 値は**freq_type**の値によって異なります。 詳細については、「 [sp_add_schedule &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md) 」を参照してください。|  
+|**enabled**|**int**|スケジュールがアクティブである (**1**) かどうか (**0**)。|  
+|**freq_type**|**int**|ジョブをいつ実行するかを示す値。<br /><br /> **1** = 1 回<br /><br /> **4** = 日単位<br /><br /> **8** = 週単位<br /><br /> **16** = 月単位<br /><br /> **32** = 毎月、 **freq_interval**に対して相対的<br /><br /> **64** = **SQLServerAgent**サービスの開始時に実行します。|  
+|**freq_interval**|**int**|ジョブが実行された日。 値は**freq_type**の値によって異なります。 詳細については、「 [sp_add_schedule &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md) 」を参照してください。|  
 |**freq_subday_type**|**通り**|**Freq_subday_interval**の単位。 詳細については、「 [sp_add_schedule &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md) 」を参照してください。|  
-|**freq_subday_interval**|**通り**|ジョブの各実行間に発生する**freq_subday_type**期間の数。 詳細については、「 [sp_add_schedule &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md) 」を参照してください。|  
-|**freq_relative_interval**|**通り**|スケジュールされたジョブの各月の**freq_interval**の発生。 詳細については、「 [sp_add_schedule &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md) 」を参照してください。|  
-|**freq_recurrence_factor**|**通り**|スケジュールされたジョブの実行間隔 (月数)。|  
-|**active_start_date**|**通り**|ジョブの実行を開始する日付。|  
-|**active_end_date**|**通り**|ジョブの実行を終了する日付。|  
-|**active_start_time**|**通り**|Active_start_date でジョブの実行を開始する時刻 **。**|  
-|**active_end_time**|**通り**|**Active_end_date**でジョブの実行を終了する時刻。|  
-|**date_created**|**/**|スケジュールが作成された日付。|  
+|**freq_subday_interval**|**int**|ジョブの各実行間に発生する**freq_subday_type**期間の数。 詳細については、「 [sp_add_schedule &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md) 」を参照してください。|  
+|**freq_relative_interval**|**int**|スケジュールされたジョブの各月の**freq_interval**の発生。 詳細については、「 [sp_add_schedule &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md) 」を参照してください。|  
+|**freq_recurrence_factor**|**int**|スケジュールされたジョブの実行間隔 (月数)。|  
+|**active_start_date**|**int**|ジョブの実行を開始する日付。|  
+|**active_end_date**|**int**|ジョブの実行を終了する日付。|  
+|**active_start_time**|**int**|Active_start_date でジョブの実行を開始する時刻 **。**|  
+|**active_end_time**|**int**|**Active_end_date**でジョブの実行を終了する時刻。|  
+|**date_created**|**DATETIME**|スケジュールが作成された日付。|  
 |**schedule_description**|**nvarchar(4000)**|スケジュールの英語の説明 (要求された場合)。|  
-|**next_run_date**|**通り**|スケジュールによってジョブが次に実行される日付。|  
-|**next_run_time**|**通り**|スケジュールによってジョブが次に実行される時刻。|  
-|**schedule_uid**|**一意**|スケジュールの識別子。|  
-|**job_count**|**通り**|このスケジュールを参照するジョブの数。|  
+|**next_run_date**|**int**|スケジュールによってジョブが次に実行される日付。|  
+|**next_run_time**|**int**|スケジュールによってジョブが次に実行される時刻。|  
+|**schedule_uid**|**UNIQUEIDENTIFIER**|スケジュールの識別子。|  
+|**job_count**|**int**|このスケジュールを参照するジョブの数。|  
   
  次に、ジョブターゲット サーバーに関する結果セットを示します。  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
-|**server_id**|**通り**|対象サーバーの識別子。|  
+|**server_id**|**int**|対象サーバーの識別子。|  
 |**server_name**|**nvarchar (30)**|対象サーバーのコンピューター名。|  
-|**enlist_date**|**/**|対象サーバーをマスターサーバーに参加させた日付。|  
-|**last_poll_date**|**/**|対象サーバーが最後にマスターサーバーをポーリングした日付。|  
-|**last_run_date**|**通り**|ターゲット サーバーでジョブの実行を最後に開始した日付。|  
-|**last_run_time**|**通り**|ターゲット サーバーでジョブの実行を最後に開始した時刻。|  
-|**last_run_duration**|**通り**|対象サーバーで最後に実行されたときのジョブの期間。|  
+|**enlist_date**|**DATETIME**|対象サーバーをマスターサーバーに参加させた日付。|  
+|**last_poll_date**|**DATETIME**|対象サーバーが最後にマスターサーバーをポーリングした日付。|  
+|**last_run_date**|**int**|ターゲット サーバーでジョブの実行を最後に開始した日付。|  
+|**last_run_time**|**int**|ターゲット サーバーでジョブの実行を最後に開始した時刻。|  
+|**last_run_duration**|**int**|対象サーバーで最後に実行されたときのジョブの期間。|  
 |**last_run_outcome**|**tinyint**|このサーバーで最後に実行されたときのジョブの結果:<br /><br /> **0** = 失敗<br /><br /> **1** = 成功<br /><br /> **3** = キャンセル<br /><br /> **5** = 不明|  
 |**last_outcome_message**|**nvarchar (1024)**|この対象サーバーで最後に実行されたときのジョブからの結果メッセージ。|  
   

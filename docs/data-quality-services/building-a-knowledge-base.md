@@ -10,10 +10,10 @@ ms.assetid: 51eff161-6ecd-4ee4-8187-1dd8ef4814bd
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: b718cd04b5c6133d931a9bea03de0a78ebc7a886
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75258841"
 ---
 # <a name="building-a-knowledge-base"></a>ナレッジ ベースの作成
@@ -28,9 +28,9 @@ ms.locfileid: "75258841"
   
 |||  
 |-|-|  
-|ナレッジ ベースを既存のナレッジ ベースまたは .dqs データ ファイルから新規に作成します。|[ナレッジベースの作成](../data-quality-services/create-a-knowledge-base.md)|  
+|ナレッジ ベースを既存のナレッジ ベースまたは .dqs データ ファイルから新規に作成します。|[ナレッジ ベースの作成](../data-quality-services/create-a-knowledge-base.md)|  
 |既存のナレッジ ベースを開き、ナレッジ検出やドメイン管理の実行、または照合ポリシーの追加を行います。|[ナレッジ ベースを開く](../data-quality-services/open-a-knowledge-base.md)|  
-|ナレッジ ベースでの管理操作 (ナレッジ ベースを開く、ナレッジ ベースのロックの解除、ナレッジ ベースでの作業内容の破棄、ナレッジ ベース名の変更、ナレッジ ベースの削除、ナレッジ ベースのプロパティの表示など) を実行します。|[ナレッジベースの管理](../data-quality-services/manage-a-knowledge-base.md)|  
+|ナレッジ ベースでの管理操作 (ナレッジ ベースを開く、ナレッジ ベースのロックの解除、ナレッジ ベースでの作業内容の破棄、ナレッジ ベース名の変更、ナレッジ ベースの削除、ナレッジ ベースのプロパティの表示など) を実行します。|[ナレッジ ベースの管理](../data-quality-services/manage-a-knowledge-base.md)|  
 |ナレッジ検出を通じたナレッジ ベースへのナレッジの追加、ドメイン値の管理、照合ポリシーの追加、ナレッジ、ドメイン、値のインポート、または既定のナレッジ ベースの DQS データの使用を行います。|[ナレッジ ベースへのナレッジの追加](../data-quality-services/adding-knowledge-to-a-knowledge-base.md)|  
 |データ品質基準のデータ サンプルを分析します。|[ナレッジ検出の実行](../data-quality-services/perform-knowledge-discovery.md)|  
   

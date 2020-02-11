@@ -19,10 +19,10 @@ ms.assetid: de8a2b04-4673-4beb-b4cf-96a28cdf3a93
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 666e7fdbc080af3ed259dae978bd782e437eae2e
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75557808"
 ---
 # <a name="open-unlock-rename-and-delete-a-data-quality-project---data-quality-services-dqs"></a>データ品質プロジェクトを開く、ロックを解除する、名前を変更する、削除する-Data Quality Services (DQS)
@@ -31,9 +31,9 @@ ms.locfileid: "75557808"
 
   このトピックでは、データ品質プロジェクトを開く、ロック解除、名前の変更、削除などの、 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] を使用したデータ品質プロジェクトの管理方法について説明します。  
   
-##  <a name="BeforeYouBegin"></a>開始する前に  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="LimitationsRestrictions"></a>制限事項と制約事項  
+###  <a name="LimitationsRestrictions"></a> 制限事項と制約事項  
   
 -   他のユーザーによって作成された、ロックされているプロジェクトは開くことができません。  
   
@@ -43,12 +43,12 @@ ms.locfileid: "75557808"
   
 -   自分が作成したデータ品質プロジェクトのみロックを解除することができます。  
   
-###  <a name="Prerequisites"></a>応募  
+###  <a name="Prerequisites"></a> 前提条件  
  管理対象のデータ品質プロジェクトが少なくとも 1 つ必要です。  
   
-###  <a name="Security"></a>保護  
+###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a>許可  
+####  <a name="Permissions"></a> Permissions  
  データ品質プロジェクトを管理するには、DQS_MAIN データベースに対する dqs_kb_editor または dqs_kb_operator ロールが必要です。  
   
 ##  <a name="Open"></a>データ品質プロジェクトを開く  
@@ -109,7 +109,6 @@ ms.locfileid: "75557808"
 3.  
   **[プロジェクトを開く]** 画面で、自分が作成したロックされていないデータ品質プロジェクトを右クリックし、ショートカット メニューの **[削除]** をクリックします。  
   
-4.  確認メッセージが表示されます。 
-  **[はい]** をクリックします。  
+4.  確認メッセージが表示されます。 **[はい]** をクリックします。  
   
   

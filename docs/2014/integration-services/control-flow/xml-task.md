@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e89f4835b95b1fe497df32ad9f773be84ccb161b
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75232725"
 ---
 # <a name="xml-task"></a>XML タスク
@@ -53,12 +53,12 @@ ms.locfileid: "75232725"
 ## <a name="predefined-xml-operations"></a>定義済み XML 操作  
  XML タスクには、XML ドキュメントを処理するための定義済み操作のセットが含まれています。 次の表では、これらの操作について説明します。  
   
-|Operation|説明|  
+|Operation|[説明]|  
 |---------------|-----------------|  
 |[Diff]|2 つの XML ドキュメントを比較します。 XML ソース ドキュメントを基本ドキュメントとして使用し、Diff 操作は、そのドキュメントを 2 番目の XML ドキュメントと比較し、それらの違いを検出して XML DiffGram ドキュメントに書き込みます。 この操作には、比較をカスタマイズするためのプロパティが含まれています。|  
-|［結合］|2 つの XML ドキュメントをマージします。 マージ操作は、XML ソース ドキュメントを基本ドキュメントとして使用し、2 番目のドキュメントの内容を基本ドキュメントに追加します。 この操作では、基本ドキュメント内のマージ場所を指定できます。|  
+|Merge|2 つの XML ドキュメントをマージします。 マージ操作は、XML ソース ドキュメントを基本ドキュメントとして使用し、2 番目のドキュメントの内容を基本ドキュメントに追加します。 この操作では、基本ドキュメント内のマージ場所を指定できます。|  
 |修正プログラム|DiffGram ドキュメントと呼ばれる Diff 操作の出力を XML ドキュメントに適用し、DiffGram ドキュメントの内容を含む新しい親ドキュメントを作成します。|  
-|[検証]|文書型定義 (DTD) または XML スキーマ定義 (XSD) スキーマに対して XML ドキュメントを検証します。|  
+|検証|文書型定義 (DTD) または XML スキーマ定義 (XSD) スキーマに対して XML ドキュメントを検証します。|  
 |XPath|XPath クエリと評価を実行します。|  
 |XSLT (XSLT)|XML ドキュメントに対して XSL 変換を実行します。|  
   
@@ -67,7 +67,7 @@ ms.locfileid: "75232725"
   
  Diff 操作には、XML 比較をカスタマイズするオプションのセットが含まれています。 次の表では、このオプションについて説明します。  
   
-|オプション|説明|  
+|オプション|[説明]|  
 |------------|-----------------|  
 |**IgnoreComments**|この値で、コメント ノードを比較するかどうかを指定します。|  
 |**IgnoreNamespaces**|この値で、要素名および属性名の名前空間の Uniform Resource Identifier (URI) を比較するかどうかを指定します。 このオプションを `true` に設定した場合、ローカル名が同じで、異なる名前空間を持つ 2 つの要素は、同一と見なされます。|  
@@ -114,7 +114,7 @@ ms.locfileid: "75232725"
 ## <a name="custom-logging-messages-available-on-the-xml-task"></a>XML タスクで使用できるカスタム ログ メッセージ  
  次の表では、XML タスクのカスタム ログ エントリを説明します。 詳細については、「[Integration Services (SSIS) のログ記録](../performance/integration-services-ssis-logging.md)」と「[ログ記録用のカスタム メッセージ](../custom-messages-for-logging.md)」を参照してください。  
   
-|ログ エントリ|説明|  
+|ログ エントリ|[説明]|  
 |---------------|-----------------|  
 |`XMLOperation`|タスクで実行される操作に関する情報を提供します。|  
   
@@ -126,7 +126,7 @@ ms.locfileid: "75232725"
   
 -   [[XML タスクエディター] &#40;[全般] ページ&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [XML タスクを使用した XML の検証](xml-task.md)  
+-   [Validate XML with the XML Task](xml-task.md)  
   
 -   [[式] ページ](../expressions/expressions-page.md)  
   

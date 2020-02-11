@@ -33,10 +33,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a71a5c756953c6b70e51422b5c1032b117eb7785
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75246710"
 ---
 # <a name="sql-server-xml-bulk-load-object-model-sqlxml-40"></a>SQL Server XML 一括読み込みオブジェクト モデル (SQLXML 4.0)
@@ -44,10 +44,10 @@ ms.locfileid: "75246710"
   Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] XML 一括読み込みオブジェクトモデルは、SQLXMLBulkLoad オブジェクトで構成されています。 このオブジェクトでは、次のメソッドとプロパティがサポートされます。  
   
 ## <a name="methods"></a>メソッド  
- Execute  
+ 実行  
  パラメーターとして渡されるスキーマ ファイルとデータ ファイル (またはストリーム) を使用して、データの一括読み込みを行います。  
   
-## <a name="properties"></a>プロパティ  
+## <a name="properties"></a>Properties  
  BulkLoad  
  一括読み込みを実行するかどうかを指定します。 このプロパティは、スキーマのみを生成する場合に便利です (以降の SchemaGen、SGDropTables、SGUseID の各プロパティを参照してください)。一括読み込みは実行されません。 このプロパティはブール値をとります。 このプロパティを TRUE に設定すると、XML 一括読み込みが行われます。 FALSE に設定すると、XML 一括読み込みは行われません。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "75246710"
  このプロパティを TRUE に設定すると、XML 一括読み込みで挿入される値ごとに制約がチェックされ、制約違反があるとエラーが発生します。  
   
 > [!NOTE]  
->  このプロパティを FALSE のままにしておくには、対象テーブルに対する**ALTER TABLE**権限が必要です。 詳細については、「[ALTER TABLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-table-transact-sql.md)」を参照してください。  
+>  このプロパティを FALSE のままにしておくには、対象テーブルに対する**ALTER TABLE**権限が必要です。 詳細については、「 [ALTER TABLE &#40;transact-sql&#41;](../../../t-sql/statements/alter-table-transact-sql.md)」を参照してください。  
   
  既定値は FALSE です。 FALSE に設定した場合、XML 一括読み込みでは挿入操作中、制約が無視されます。 現在の実装では、マッピング スキーマの主キーと外部キーのリレーションシップの順序でテーブルを定義する必要があります。 つまり、主キーが設定されているテーブルは、外部キーが設定されている対応テーブルよりも前に定義する必要があります。このように定義しない場合、XML 一括読み込みは失敗します。  
   
@@ -86,7 +86,7 @@ ms.locfileid: "75246710"
  TRUE に設定した場合は、挿入操作中、トリガーが通常どおり起動されます。  
   
 > [!NOTE]  
->  このプロパティを FALSE のままにしておくには、対象テーブルに対する**ALTER TABLE**権限が必要です。 詳細については、「[ALTER TABLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-table-transact-sql.md)」を参照してください。  
+>  このプロパティを FALSE のままにしておくには、対象テーブルに対する**ALTER TABLE**権限が必要です。 詳細については、「 [ALTER TABLE &#40;transact-sql&#41;](../../../t-sql/statements/alter-table-transact-sql.md)」を参照してください。  
   
  ID 配布が実行されている場合は、このオプションは適用されず、トリガーはオンのままになる点に注意してください。 これに該当するのは、親が ID フィールドで、その値が生成時に子に指定されるリレーションシップが定義されており、かつ `KeepIdentity=False` の場合です。  
   
@@ -111,7 +111,7 @@ ms.locfileid: "75246710"
  このプロパティの値は、一括読み込みの対象となるすべての列に適用されます。 既定値は TRUE です。  
   
 > [!NOTE]  
->  このプロパティを TRUE のままにするには、対象テーブルに対する**ALTER TABLE**権限が必要です。 この権限がない場合は、値を FALSE に設定する必要があります。 詳細については、「[ALTER TABLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-table-transact-sql.md)」を参照してください。  
+>  このプロパティを TRUE のままにするには、対象テーブルに対する**ALTER TABLE**権限が必要です。 この権限がない場合は、値を FALSE に設定する必要があります。 詳細については、「 [ALTER TABLE &#40;transact-sql&#41;](../../../t-sql/statements/alter-table-transact-sql.md)」を参照してください。  
   
  KeepNulls  
  列に対応する属性または子要素が XML ドキュメントに見つからない場合に、その列に使用する値を指定します。 このプロパティはブール値をとります。 このプロパティを TRUE に設定すると、XML 一括読み込みでは列に NULL 値が割り当てられます。 サーバーで列の既定値が設定されている場合でも、その既定値は割り当てられません。 このプロパティの値は、一括読み込みの対象となるすべての列に適用されます。  

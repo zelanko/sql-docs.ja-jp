@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 50d1eb4d7a6070572e674f5ee7f8794837e63aa1
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75225264"
 ---
 # <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc"></a>機能強化された日付型と時刻型向けの一括コピーの変更 (OLE DB および ODBC)
@@ -32,8 +32,8 @@ ms.locfileid: "75225264"
 |-----------------------|-------------------------|-----------------------------------------------------------------------------------------------------|  
 |Datetime|SQLDATETIME|d|  
 |Smalldatetime|SQLDATETIM4|D|  
-|日付|SQLDATE|de|  
-|［時間］|SQLTIME|te|  
+|Date|SQLDATE|de|  
+|Time|SQLTIME|te|  
 |Datetime2|SQLDATETIME2|d2|  
 |Datetimeoffset|SQLDATETIMEOFFSET|do|  
 ||||
@@ -72,7 +72,7 @@ ms.locfileid: "75225264"
   
 |ファイル保存形式|ストレージ サイズ (バイト単位)|  
 |-----------------------|---------------------------|  
-|datetime|8|  
+|DATETIME|8|  
 |smalldatetime|4|  
 |date|3|  
 |time|6|  
@@ -95,12 +95,12 @@ ms.locfileid: "75225264"
 ## <a name="bcp-types-in-sqlnclih"></a>sqlncli.h 内の BCP 型  
  sqlncli.h では、ODBC の BCP API 拡張機能で使用する次の型が定義されています。 これらの型は、OLE DB の IBCPSession:: BCPColFmt の*Euserdatatype*パラメーターを使用して渡されます。  
   
-|ファイル保存形式|ホスト ファイル データ型|IBCPSession:: BCPColFmt と共に使用するには、sqlncli に「」と入力します。|値|  
+|ファイル保存形式|ホスト ファイル データ型|IBCPSession:: BCPColFmt と共に使用するには、sqlncli に「」と入力します。|Value|  
 |-----------------------|-------------------------|-----------------------------------------------------------|-----------|  
 |Datetime|SQLDATETIME|BCP_TYPE_SQLDATETIME|0x3d|  
 |Smalldatetime|SQLDATETIM4|BCP_TYPE_SQLDATETIME4|0x3a|  
-|日付|SQLDATE|BCP_TYPE_SQLDATE|0x28|  
-|［時間］|SQLTIME|BCP_TYPE_SQLTIME|0x29|  
+|Date|SQLDATE|BCP_TYPE_SQLDATE|0x28|  
+|Time|SQLTIME|BCP_TYPE_SQLTIME|0x29|  
 |Datetime2|SQLDATETIME2|BCP_TYPE_SQLDATETIME2|0x2a|  
 |Datetimeoffset|SQLDATETIMEOFFSET|BCP_TYPE_SQLDATETIMEOFFSET|0x2b|  
 |||||
@@ -110,23 +110,23 @@ ms.locfileid: "75225264"
   
  **OLE DB メモ**次の変換は、IBCPSession によって実行されます。 IRowsetFastLoad は、[クライアントからサーバーへの変換](../../relational-databases/native-client-ole-db-date-time/conversions-performed-from-client-to-server.md)で定義されている OLE DB 変換を使用します。 次に示すクライアントでの変換が実行されると、datetime 値は 1/300 秒単位に丸められ、smalldatetime 値の秒は 0 に設定されます。 datetime の丸め処理は、時間と分に適用されますが、日付には適用されません。  
   
-|To --><br /><br /> 移行元|date|time|smalldatetime|datetime|datetime2|datetimeoffset|char|wchar|  
+|To --><br /><br /> 移行元|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|char|wchar|  
 |------------------------|----------|----------|-------------------|--------------|---------------|--------------------|----------|-----------|  
-|日付|1 で保護されたプロセスとして起動されました|-|1、6|1、6|1、6|1、5、6|1、3|1、3|  
-|［時間］|なし|1、10|1、7、10|1、7、10|1、7、10|1、5、7、10|1、3|1、3|  
+|Date|1 で保護されたプロセスとして起動されました|-|1、6|1、6|1、6|1、5、6|1、3|1、3|  
+|Time|該当なし|1、10|1、7、10|1、7、10|1、7、10|1、5、7、10|1、3|1、3|  
 |Smalldatetime|1、2|1、4、10|1 で保護されたプロセスとして起動されました|1 で保護されたプロセスとして起動されました|1、10|1、5、10|1、11|1、11|  
 |Datetime|1、2|1、4、10|1、12|1 で保護されたプロセスとして起動されました|1、10|1、5、10|1、11|1、11|  
 |Datetime2|1、2|1、4、10|1、10 (ODBC) 1、12 (OLE DB)|1、10|1、10|1、5、10|1、3|1、3|  
 |Datetimeoffset|1、2、8|1、4、8、10|1、8、10|1、8、10|1、8、10|1、10|1、3|1、3|  
-|Char/wchar (date)|9|-|9、6 (ODBC) 9、6、12 (OLE DB)|9、6 (ODBC) 9、6、12 (OLE DB)|9、6|9、5、6|なし|なし|  
-|Char/wchar (time)|-|9、10|9、7、10 (ODBC) 9、7、10、12 (OLE DB)|9、7、10 (ODBC) 9、7、10、12 (OLE DB)|9、7、10|9、5、7、10|なし|なし|  
-|Char/wchar (datetime)|9、2|9、4、10|9、10 (ODBC) 9、10、12 (OLE DB)|9、10 (ODBC) 9、10、12 (OLE DB)|9、10|9、5、10|なし|なし|  
-|Char/wchar (datetimeoffset)|9、2、8|9、4、8、10|9、8、10 (ODBC) 9、8、10、12 (OLE DB)|9、8、10 (ODBC) 9、8、10、12 (OLE DB)|9、8、10|9、10|なし|なし|  
+|Char/wchar (date)|9|-|9、6 (ODBC) 9、6、12 (OLE DB)|9、6 (ODBC) 9、6、12 (OLE DB)|9、6|9、5、6|該当なし|該当なし|  
+|Char/wchar (time)|-|9、10|9、7、10 (ODBC) 9、7、10、12 (OLE DB)|9、7、10 (ODBC) 9、7、10、12 (OLE DB)|9、7、10|9、5、7、10|該当なし|該当なし|  
+|Char/wchar (datetime)|9、2|9、4、10|9、10 (ODBC) 9、10、12 (OLE DB)|9、10 (ODBC) 9、10、12 (OLE DB)|9、10|9、5、10|該当なし|該当なし|  
+|Char/wchar (datetimeoffset)|9、2、8|9、4、8、10|9、8、10 (ODBC) 9、8、10、12 (OLE DB)|9、8、10 (ODBC) 9、8、10、12 (OLE DB)|9、8、10|9、10|該当なし|該当なし|  
 ||||||||||
 
 #### <a name="key-to-symbols"></a>記号の説明  
   
-|シンボル|意味|  
+|Symbol|意味|  
 |------------|-------------|  
 |-|変換はサポートされていません。<br /><br /> "データ型の属性に関する制限に違反しました" というメッセージで SQLSTATE 07006 の ODBC 診断レコードが生成されます。|  
 |1 で保護されたプロセスとして起動されました|指定したデータが無効な場合、"datetime 形式が無効です" というメッセージで SQLSTATE 22007 の ODBC 診断レコードが生成されます。 datetimeoffset 値の場合は、UTC への変換が必要なくても、時刻部分は UTC への変換後の範囲内に収まっている必要があります。 TDS とサーバーは datetimeoffset 値の時刻を常に UTC 用に正規化するためです。 したがって、クライアントは、時刻部分が、UTC への変換後にサポートされる範囲内に収まっていることを確認する必要があります。|  
@@ -141,7 +141,7 @@ ms.locfileid: "75225264"
 |10|クライアントからサーバーへの変換で、データの損失を伴う切り捨てが行われると、エラーが通知される (OLE DB) か、"Datetime フィールド オーバーフロー" というメッセージで SQLSTATE 22008 の ODBC 診断レコードが生成されます。 サーバーが使用する UTC の範囲で表すことができる範囲の外に値がある場合にも、このエラーが発生します。 サーバーからクライアントへの変換で、秒または秒の小数部の切り捨てが行われた場合は、警告のみが発生します。|  
 |11|データの損失を伴う切り捨てが行われると、診断レコードが生成されます。<br /><br /> サーバーからクライアントへの変換では、これは警告 (ODBC SQLSTATE S1000) です。<br /><br /> クライアントからサーバーへの変換では、これはエラー (ODBC SQLSTATE 22001) です。|  
 |12|秒は 0 に設定され、秒の小数部は破棄されます。 切り捨てエラーは発生しません。|  
-|なし|既存の [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以前のバージョンの動作が維持されます。|  
+|該当なし|既存の [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以前のバージョンの動作が維持されます。|  
 |||
 
 ## <a name="see-also"></a>参照  

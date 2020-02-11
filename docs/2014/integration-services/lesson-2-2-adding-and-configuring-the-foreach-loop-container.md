@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 07c5118c654faccea2d9bab01040ce17b1d5699a
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75232467"
 ---
 # <a name="step-2-adding-and-configuring-the-foreach-loop-container"></a>手順 2: Foreach ループ コンテナーの追加と構成
@@ -42,12 +42,11 @@ ms.locfileid: "75232467"
 1.  
   **SQL Server Data Tools**で **[制御フロー]** タブをクリックします。  
   
-2.  
-  **SSIS ツールボックス**で **[コンテナー]** を展開し、 **[ForEach ループ コンテナー]** を **[制御フロー]** タブのデザイン画面にドラッグします。  
+2.  **SSIS ツールボックス**で **[コンテナー]** を展開し、 **[ForEach ループ コンテナー]** を **[制御フロー]** タブのデザイン画面にドラッグします。  
   
 3.  新しく追加した **[ForEach ループ コンテナー]** を右クリックし、 **[編集]** をクリックします。  
   
-4.  [ **Foreach ループエディター** ] ダイアログボックスの **[全般**] ページで、[**名前**] `Foreach File in Folder`に「」と入力します。 [**OK**] をクリックすると、  
+4.  [ **Foreach ループエディター** ] ダイアログボックスの **[全般**] ページで、[**名前**] `Foreach File in Folder`に「」と入力します。 **[OK]** をクリックします。  
   
 5.  [Foreach ループコンテナー] を右クリックし、[**プロパティ**] をクリックします。プロパティウィンドウ`LocaleID`で、プロパティが**英語 (米国)** に設定されていることを確認します。  
   
@@ -59,8 +58,7 @@ ms.locfileid: "75232467"
 2.  
   **[コレクション]** をクリックします。  
   
-3.  
-  **[コレクション]** ページで、 **[Foreach File 列挙子]** を選択します。  
+3.  **[コレクション]** ページで、 **[Foreach File 列挙子]** を選択します。  
   
 4.  
   **[列挙子の構成]** で、 **[参照]** をクリックします。  
@@ -91,7 +89,7 @@ ms.locfileid: "75232467"
     > [!IMPORTANT]  
     >  変数名では大文字と小文字が区別されます。  
   
-4.  [**OK**] をクリックすると、  
+4.  **[OK]** をクリックします。  
   
 5.  再び **[OK]** をクリックし、 **[Foreach ループ エディター]** ダイアログ ボックスを閉じます。  
   
@@ -100,7 +98,7 @@ ms.locfileid: "75232467"
 -   [ **Extract Sample Currency data** ] データフロータスクを、名前を変更`Foreach File in Folder`した Foreach ループコンテナーにドラッグします。  
   
 ## <a name="next-lesson-task"></a>次のレッスンの作業  
- [手順 3: フラットファイル接続マネージャーの変更](lesson-2-3-modifying-the-flat-file-connection-manager.md)  
+ [手順 3: フラット ファイル接続マネージャーの変更](lesson-2-3-modifying-the-flat-file-connection-manager.md)  
   
 ## <a name="see-also"></a>参照  
  [Foreach ループコンテナーの構成](control-flow/foreach-loop-container.md)   

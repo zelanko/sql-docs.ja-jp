@@ -1,6 +1,6 @@
 ---
-title: '[フィルターの設定] (オブジェクト エクスプローラーおよびユーティリティ エクスプローラー) | Microsoft Docs'
-ms.custom: ''
+title: '[フィルターの設定] \(オブジェクト エクスプローラーおよびユーティリティ エクスプローラー)'
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 4aab04bc-e1ab-4d4b-ab74-b287fc805bc2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e3a5cfecc4bf111e16da6451b56637abe9214c65
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: fe88e33261171b0c1584c89561e9fac2f081b816
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264107"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257179"
 ---
 # <a name="filter-settings-object-explorer-and-utility-explorer"></a>[フィルターの設定] \(オブジェクト エクスプローラーおよびユーティリティ エクスプローラー)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,14 +28,14 @@ ms.locfileid: "68264107"
 **プロパティ**  
 フィルター処理の対象となるプロパティを表示します。  
   
-**[演算子]**  
+**[オペレーター]**  
 フィルターの値をプロパティに適用する方法を選択します。 次のオプションがあります。  
   
 -   **[等しい]**  
   
     このフィルターは、プロパティとこの値が厳密に一致する項目を表示します。  
   
--   **[値を含む]**  
+-   **Contains**  
   
     このフィルターは、プロパティにこの値が含まれている項目を表示します。 プロパティには他のテキストが含まれていてもかまいません。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "68264107"
   
     日付に使用できるこのフィルターは、指定された 2 つの日付で示される範囲よりも前または後の日付を持つ項目を表示します。 **[次の値の範囲外]** を選択し、Tab キーを押して **[オペレーター]** 列の外に移動すると、2 番目の日付を入力するための行が追加されます。  
   
-**[値]**  
+**Value**  
 プロパティと比較する値を入力します。 日付の場合は、矢印をクリックして日付を選択するためのカレンダーを表示します。  
   
 **[フィルターのクリア]**  

@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 96afef098b711c65e1bcb46d5f687c95061f2c94
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75228411"
 ---
 # <a name="installation-for-sql-server-2014"></a>SQL Server 2014 のインストール
@@ -57,7 +57,7 @@ ms.locfileid: "75228411"
  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードを使用する場合でも、コマンド プロンプトから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]をインストールする場合でも、セットアップ時には以下の手順を実行する必要があります。  
   
- [SQL Server インストールの計画](../../sql-server/install/planning-a-sql-server-installation.md)  
+ [SQL Server のインストール計画](../../sql-server/install/planning-a-sql-server-installation.md)  
  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用にコンピューターを準備する方法について説明します。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "75228411"
   
 -   セキュリティに関する注意点  
   
- [SQL Server 2014 をインストールする](install-sql-server.md)  
+ [SQL Server 2014 のインストール](install-sql-server.md)  
  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインストール オプションについて説明します。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "75228411"
  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]のアンインストール手順について説明します。  
   
- [SQL Server フェールオーバークラスターのインストール](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)  
+ [SQL Server フェールオーバー クラスターのインストール](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)  
  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ ドキュメントのこのセクションでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスターをインストールして構成する方法について説明します。  
   

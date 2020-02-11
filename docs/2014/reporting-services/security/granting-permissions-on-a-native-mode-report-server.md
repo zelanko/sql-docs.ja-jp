@@ -22,12 +22,12 @@ ms.assetid: 260dc2e9-546c-4f04-9fa1-977e23c9d68c
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 310ab4f332c3262b20e73211f5ec3d4a5f19786a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d779c02d895088cff2ae59aff6722acd8db79adf
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66101942"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76971391"
 ---
 # <a name="granting-permissions-on-a-native-mode-report-server"></a>ネイティブ モードのレポート サーバーに対する権限の許可
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、ロールベースの承認および認証サブシステムを使用して、操作の実行およびレポート サーバーのアイテムへのアクセスを行えるユーザーを決定します。 ロールベースの承認では、ユーザーまたはグループが実行できる一連のアクションがロールに分類されます。 認証は、組み込みの Windows 認証、または指定したカスタム認証モジュールに基づいて行われます。 どちらの種類の認証でも、定義済みロールまたはカスタム ロールを使用できます。  
@@ -53,11 +53,9 @@ ms.locfileid: "66101942"
 >  SharePoint 統合モードで実行するようにレポート サーバーを構成した場合、SharePoint サイトに対する権限を、レポート サーバー アイテムへのアクセスを許可するように設定する必要があります。 詳細については、「 [SharePoint サイトのレポート サーバー アイテムに対する権限の付与](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)」を参照してください。  
   
 ## <a name="who-sets-permissions"></a>権限の設定者  
- 初期状態では、レポート サーバーにアクセスできるのは、ローカルの Administrators グループのメンバーであるユーザーだけです。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、ローカルの Administrators グループのメンバーにアイテムレベルおよびシステムレベルのアクセスを許可する 2 つの既定のロールの割り当てと共にインストールされます。 このような組み込みのロールの割り当てにより、ローカルの Administrators は、他のユーザーにレポート サーバーへのアクセスを許可したり、レポート サーバー アイテムを管理したりできます。 組み込みのロールの割り当ては削除できません。 ローカル管理者は、常に、レポート サーバー インスタンスを完全に管理する権限が与えられています。  
-  
- レポート サーバーの完全な権限にはアイテムレベルの権限とシステムレベルの権限が含まれるため、ローカル管理者は次のロールに割り当てられます。  
-  
- Windows Vista または Windows Server 2008 を実行しているローカル コンピューター上のレポート サーバー インスタンスを管理するには、追加の構成が必要となります。 詳細については、「 [ローカル管理用のネイティブ モードのレポート サーバー &#40;SSRS&#41; の構成](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)。  
+ 初期状態では、レポート サーバーにアクセスできるのは、ローカルの Administrators グループのメンバーであるユーザーだけです。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、ローカルの Administrators グループのメンバーにアイテムレベルおよびシステムレベルのアクセスを許可する 2 つの既定のロールの割り当てと共にインストールされます。 ローカル管理者は、これらの組み込みのロールの割り当てを使用して、レポートサーバーへのアクセスを他のユーザーに許可したり、レポートサーバーアイテムを管理したりできます。 組み込みのロールの割り当ては削除できません。 ローカル管理者は、常に、レポート サーバー インスタンスを完全に管理する権限が与えられています。  
+ 
+ Windows Vista または Windows Server 2008 を実行しているローカル コンピューター上のレポート サーバー インスタンスを管理するには、追加の構成が必要となります。 詳細については、「 [ローカル管理用のネイティブ モードのレポート サーバー &#40;SSRS&#41; の構成](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)」を参照してください。  
   
 ## <a name="how-permissions-are-stored"></a>権限が格納されるしくみ  
  ロールの割り当てと定義はレポート サーバー データベースに格納されます。 さまざまなクライアント ツールやプログラム インターフェイスを使用している場合、すべてのアクセスは、レポート サーバー インスタンス全体を対象として定義されている権限に従います。 スケールアウト配置で複数のレポート サーバーを構成している場合、あるインスタンスで定義したロールの割り当ては共有データベースに格納され、同じスケールアウト配置内のその他すべてのインスタンスで使用されます。 ロールの割り当てはセキュリティで保護されているアイテムと共に格納されるので、定義した権限を維持したまま、データベースを別のレポート サーバーに移動することができます。  
@@ -74,8 +72,8 @@ ms.locfileid: "66101942"
  [定義済みロール](role-definitions-predefined-roles.md)   
  [SharePoint サイトのレポート サーバー アイテムに対する権限の付与](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [レポート サーバーでの認証](authentication-with-the-report-server.md)   
- (作成-と-管理-ロール-assignments.md)   
+ (create-and-manage-role-assignments.md)   
  [Reporting Services のセキュリティと保護](reporting-services-security-and-protection.md)   
- [レポート サーバー コンテンツの管理 (SSRS ネイティブ モード)](../report-server/report-server-content-management-ssrs-native-mode.md)  
+ [レポート サーバー コンテンツの管理 &#40;SSRS ネイティブ モード&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)  
   
   

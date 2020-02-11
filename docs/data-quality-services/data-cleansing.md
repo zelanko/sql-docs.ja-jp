@@ -10,10 +10,10 @@ ms.assetid: e67136cc-f8c6-4cb3-ba0b-c966c636256c
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 46ca0fe453548cab780d1e2b32c6a8d98a32de11
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251762"
 ---
 # <a name="data-cleansing"></a>Data Cleansing
@@ -102,7 +102,7 @@ ms.locfileid: "75251762"
   
  クレンジング データ品質プロジェクト ウィザードの **[エクスポート]** ページでクレンジング済みデータをエクスポートするときに、 **[出力の標準化]** チェック ボックスで、クレンジング済みデータを標準形式でエクスポートするかどうかを指定します。 既定では、このチェック ボックスはオンになっており、クレンジング済みデータは標準化された形式でエクスポートされます。 クレンジング済みデータをエクスポートする方法の詳細については、「[DQS &#40;内部&#41; ナレッジを使用したデータのクレンジング](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)」を参照してください。  
   
-##  <a name="Related"></a>関連タスク  
+##  <a name="Related"></a> 関連タスク  
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  

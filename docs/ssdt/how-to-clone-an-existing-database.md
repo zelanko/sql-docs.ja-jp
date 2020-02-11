@@ -1,23 +1,24 @@
 ---
-title: 方法:既存のデータベースを複製する | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: 既存のデータベースを複製する
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: aad3594a-11cf-4e68-a622-071a93d43875
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d32b782c8508952a85f0a9a22b55d32dab096d6b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 79dc8d87ab950336766283be20d79536b31a3cdd
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68017620"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241589"
 ---
 # <a name="how-to-clone-an-existing-database"></a>方法:既存のデータベースを複製する
+
 このタスクでは、これまでに学んだいくつかの手順を利用して、新しいデータベースを作成し、既存のデータを移行します。 また、「[スキーマ比較を使用して各種のデータベース定義を比較する方法](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)」に示されている手順を使用して、ソースのスキーマとプロジェクト データベースを同期します。  
   
 これらの手順を使用すると、運用データベースから、同じスキーマおよびデータを持つ開発用またはテスト用のデータベースを容易に作成できます。 運用データベースの使用を妨害することなく、テスト用データベースの開発を接続モードで続行することも、オフラインの開発用およびテスト用にデータベース プロジェクトを作成することもできます。  
@@ -54,5 +55,5 @@ ms.locfileid: "68017620"
 7.  データ エディターを使用して、新しい `TradeDev` データベースのすべてのテーブルにデータが設定されていることを確認します。  
   
 ## <a name="see-also"></a>参照  
-[方法:スキーマ比較を使用して各種のデータベース定義を比較する](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
+[方法:  スキーマ比較を使用して各種のデータベース定義を比較する](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
   

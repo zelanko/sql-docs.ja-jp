@@ -9,12 +9,12 @@ manager: kfile
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 12/15/2019
-ms.openlocfilehash: 3305e682f6ccbbee4ac9710e29ae522eb7339910
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: a5f9e9b52186a2d4569ac30a591ae95acfa36101
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75241209"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "75656589"
 ---
 # <a name="compare-business-intelligence-capabilities-in-different-microsoft-environments"></a>さまざまな Microsoft 環境での Business Intelligence 機能の比較
 
@@ -62,11 +62,11 @@ SharePoint Server と SharePoint Online の比較に関する詳細について�
 
  **<sup>1</sup>**  [Microsoft Power BI](https://apps.microsoft.com/windows/app/microsoft-power-bi/b7e7c94d-2ea3-4fa6-a277-9d19a1f697ba)。  
   
- **<sup>2</sup>**  [データソースとしての PowerPivot ブック](https://blogs.technet.com/b/excel_services__powerpivot_for_sharepoint_support_blog/archive/2013/02/15/powerpivot-workbook-as-a-data-source.aspx)  
+ **<sup>2</sup>**  [データソースとしての PowerPivot ブック](https://support.office.com/article/Power-Pivot-Powerful-data-analysis-and-data-modeling-in-Excel-A9C2C6E2-CC49-4976-A7D7-40896795D045)  
   
  **<sup>3</sup>**  [ビジネスインテリジェンス (BI) ツールでのモバイルサポート](https://msdn.microsoft.com/library/dn151146\(v=sql.110\).aspx)と、 [Reporting Services と Power View のブラウザーサポートの計画 (Reporting Services 2014)](https://msdn.microsoft.com/library/ms156511.aspx)」を参照してください。  
   
-## <a name="more-information"></a>詳細  
+## <a name="more-information"></a>詳細情報  
   
 - [Excel および Office 365 の BI 機能](https://support.office.com/article/BI-capabilities-in-Excel-and-Office-365-26c0548e-124c-4fd3-aab3-5f64568cb743)。  
   

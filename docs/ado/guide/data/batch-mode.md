@@ -1,5 +1,5 @@
 ---
-title: バッチ モード |Microsoft Docs
+title: バッチモード |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,20 +15,20 @@ ms.assetid: 0cb548e0-fcb4-4c49-98c8-be287911f826
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 188a95f985ac1d578bca8c7e10ac4c4054c935c0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925955"
 ---
 # <a name="batch-mode"></a>バッチ モード
-バッチ モードが有効なときに、 **LockType**プロパティに設定されて**adLockBatchOptimistic**バッチ更新プロバイダーによってサポートされています。 カーソル位置に応じて特定のロックの種類の設定が利用できません。 たとえば、ペシミスティック ロックの種類場合は使用できません、 **CursorLocation**に設定されている**adUseClient**します。 逆に、プロバイダーは、サーバー カーソルの場所がある場合、バッチ オプティミスティック ロックをサポートできません。 バッチ更新を keyset または static カーソルのみを使用する必要があります。  
+バッチモードは、 **LockType**プロパティが**Adlockbatchoptimistic**に設定され、バッチ更新がプロバイダーによってサポートされている場合に有効になります。 特定のロックの種類の設定は、カーソルの場所によっては使用できません。 たとえば、**カーソル位置**が**adUseClient**に設定されている場合、ペシミスティックロックの種類は使用できません。 逆に、プロバイダーは、カーソル位置がサーバー上にある場合にバッチオプティミスティックロックをサポートできません。 バッチ更新は、キーセットまたは静的カーソルのいずれかでのみ使用してください。  
   
- **UpdateBatch**メソッドを使用して、送信**Recordset**変更は、データ ソースを更新するサーバーに、コピー バッファーに保持します。 次のセクションで開くが、**レコード セット**バッチ モードで、コピー バッファーに変更を加えるし、呼び出しに使用してデータ ソースに変更を送信**UpdateBatch**します。  
+ **UpdateBatch**メソッドを使用して、コピーバッファーに保持されている**レコードセット**の変更をサーバーに送信し、データソースを更新します。 次のセクションでは、**レコードセット**をバッチモードで開き、コピーバッファーに変更を加えた後、 **UpdateBatch**の呼び出しを使用して変更をデータソースに送信します。  
   
- このセクションでは、次のトピックについて説明します。  
+ このセクションのトピックは次のとおりです。  
   
--   [更新プログラムの送信。UpdateBatch メソッド](../../../ado/guide/data/sending-the-updates-updatebatch-method.md)  
+-   [更新プログラムの送信: UpdateBatch メソッド](../../../ado/guide/data/sending-the-updates-updatebatch-method.md)  
   
 -   [更新されたレコードのフィルター処理](../../../ado/guide/data/filtering-for-updated-records.md)  
   
@@ -38,4 +38,4 @@ ms.locfileid: "67925955"
   
 -   [レコードセットの切断と再接続](../../../ado/guide/data/disconnecting-and-reconnecting-the-recordset.md)  
   
--   [結合の結果を更新します。一意テーブル](../../../ado/guide/data/updating-joined-results-unique-table.md)
+-   [JOINed の結果の更新: Unique Table](../../../ado/guide/data/updating-joined-results-unique-table.md)

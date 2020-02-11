@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 80f8f63b4ddb3e8641ef503a615d57c63be35164
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243267"
 ---
 # <a name="start-the-sqlcmd-utility"></a>sqlcmd ユーティリティの起動
@@ -23,8 +23,7 @@ ms.locfileid: "75243267"
   
 > [!NOTE]  
 >  
-  `sqlcmd` の既定の認証は Windows 認証です。 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用するには、 **-U** オプションと **-P** オプションを追加して、ユーザー名とパスワードを指定する必要があります。  
+  `sqlcmd` の既定の認証は Windows 認証です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用するには、 **-U** オプションと **-P** オプションを追加して、ユーザー名とパスワードを指定する必要があります。  
   
 > [!NOTE]  
 >  既定では、 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] は名前付きインスタンスの **sqlexpress**としてインストールされます。  
@@ -34,8 +33,7 @@ ms.locfileid: "75243267"
   
 ### <a name="to-start-the-sqlcmd-utility-and-connect-to-a-default-instance-of-sql-server"></a>sqlcmd ユーティリティを起動し、SQL Server の既定のインスタンスに接続するには  
   
-1.  [**スタート**] メニューの [**実行**] をクリックします。 
-  **[名前]** ボックスに「 **cmd**」と入力して、 **[OK]** をクリックします。コマンド プロンプト ウィンドウが開きます  
+1.  **[スタート]** ボタンをクリックし、 **[ファイル名を指定して実行]** をクリックします。 **[名前]** ボックスに「 **cmd**」と入力して、 **[OK]** をクリックします。コマンド プロンプト ウィンドウが開きます  
   
 2.  コマンド プロンプトで「 `sqlcmd`」と入力します。  
   
@@ -49,8 +47,7 @@ ms.locfileid: "75243267"
   
 ### <a name="to-start-the-sqlcmd-utility-and-connect-to-a-named-instance-of-sql-server"></a>sqlcmd ユーティリティを起動し、SQL サーバーの名前付きインスタンスに接続するには  
   
-1.  コマンドプロンプトウィンドウを開き、「 `sqlcmd -S` *my\ インスタンス*名」と入力します。 
-  *myServer\instanceName* には、コンピューターの実際の名前と、接続先の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを指定してください。  
+1.  コマンドプロンプトウィンドウを開き、「 `sqlcmd -S` *my\ インスタンス*名」と入力します。 *myServer\instanceName* には、コンピューターの実際の名前と、接続先の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを指定してください。  
   
 2.  Enter キーを押します。  
   
@@ -60,6 +57,6 @@ ms.locfileid: "75243267"
     >  入力した [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントはバッファーに格納されます。 GO コマンドが見つかると、ステートメントがバッチとして実行されます。  
   
 ## <a name="see-also"></a>参照  
- [Sqlcmd を使用した Transact-sql スクリプトファイルの実行](sqlcmd-run-transact-sql-script-files.md)  
+ [sqlcmd を使用した Transact-SQL スクリプト ファイルの実行](sqlcmd-run-transact-sql-script-files.md)  
   
   

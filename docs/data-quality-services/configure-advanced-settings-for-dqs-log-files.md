@@ -13,10 +13,10 @@ ms.assetid: 1d565748-9759-425c-ae38-4d2032a86868
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: f4c0431afb7d1c2de0fc5e4fae5e7c7c25639002
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75255610"
 ---
 # <a name="configure-advanced-settings-for-dqs-log-files"></a>DQS ログ ファイルの詳細設定の構成
@@ -28,11 +28,11 @@ ms.locfileid: "75255610"
 > [!NOTE]  
 >  これらのアクティビティは [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]を使用して実行できません。また、これらのアクティビティは上級ユーザーだけが実行できます。  
   
-##  <a name="BeforeYouBegin"></a>開始する前に  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Security"></a>保護  
+###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a>許可  
+####  <a name="Permissions"></a> Permissions  
   
 -   DQS_MAIN データベースの A_CONFIGURATION テーブルで構成の設定を変更するには、Windows ユーザー アカウントが SQL Server インスタンスの sysadmin 固定サーバー ロールのメンバーであることが必要です。  
   

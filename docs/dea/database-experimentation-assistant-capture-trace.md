@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: rajsell
 ms.reviewer: mathoma
-ms.openlocfilehash: 999fd3f6caca13ecd768a9560915c53c732af27c
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 1c87d791d5a5a16ec3b0d07c6a630f133a7f673c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75258535"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76831543"
 ---
 # <a name="capture-a-trace-in-database-experimentation-assistant"></a>Database Experimentation Assistant でトレースをキャプチャする
 
@@ -125,7 +125,7 @@ DEA を使用すると、サーバー内のすべてのデータベースまた�
 
 **Q: トレースではなく Xevent を収集することはできますか。 Xevent を再生できますか。**
 
-対応 DEA は Xevent をサポートしています。 DEA の最新バージョンをダウンロードし、試してみてください。
+はい。 DEA は Xevent をサポートしています。 DEA の最新バージョンをダウンロードし、試してみてください。
 
 ## <a name="troubleshoot-trace-captures"></a>トレースキャプチャのトラブルシューティング
 
@@ -133,7 +133,7 @@ DEA を使用すると、サーバー内のすべてのデータベースまた�
 
 - SQL Server を実行しているコンピューターの名前が有効です。 確認するには、SQL Server Management Studio (SSMS) を使用して SQL Server を実行しているコンピューターに接続します。
 - ファイアウォールの構成により、SQL Server を実行しているコンピューターへの接続がブロックされることはありません。
-- このユーザーには、ブログ投稿の再生に関する[FAQ](https://blogs.msdn.microsoft.com/datamigration/2017/03/24/dea-2-0-replay-faq/)に記載されているアクセス許可があります。
+- ユーザーには、[再生 FAQ](https://docs.microsoft.com/sql/dea/database-experimentation-assistant-replay-trace?view=sql-server-ver15#frequently-asked-questions-about-trace-replay)に記載されているアクセス許可があります。
 - トレース名は、標準のロールオーバー規則 (Capture\_1) に従っていません。 代わりに、Capture\_1A や Capture1 などのトレース名を試してください。
 
 表示される可能性のあるエラーとその解決策を次に示します。

@@ -13,10 +13,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: 5435b9056d98a5b2dc0835bfcd0e60865c1686b4
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74957266"
 ---
 # <a name="back-up-a-database-master-key"></a>データベース マスター キーのバックアップ
@@ -28,29 +28,28 @@ ms.locfileid: "74957266"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [保護](#Security)  
+     [セキュリティ](#Security)  
   
 -   [Transact-sql を使用してデータベースマスターキーをバックアップするには](#Procedure)  
   
-##  <a name="BeforeYouBegin"></a>開始する前に  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a>制限事項と制約事項  
+###  <a name="Restrictions"></a> 制限事項と制約事項  
   
 -   マスター キーは開かれている必要があります。したがって、バックアップ前に暗号化を解除する必要があります。 マスター キーがサービス マスター キーで暗号化されている場合は、明示的に開く必要はありません。 パスワードのみで暗号化されている場合は、明示的に開く必要があります。  
   
 -   マスター キーは作成後すぐにバックアップし、安全な別の場所に保存することをお勧めします。  
   
-###  <a name="Security"></a>保護  
+###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a>許可  
+####  <a name="Permissions"></a> Permissions  
  データベースに対する CONTROL 権限が必要です。  
   
 ##  <a name="Procedure"></a>Transact-sql での SQL Server Management Studio の使用  
   
 #### <a name="to-back-up-the-database-master-key"></a>データベース マスター キーをバックアップするには  
   
-1.  
-  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]で、バックアップするデータベース マスター キーが格納されている [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスに接続します。  
+1.  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]で、バックアップするデータベース マスター キーが格納されている [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスに接続します。  
   
 2.  バックアップ メディアでデータベース マスター キーの暗号化に使用するパスワードを指定します。 このパスワードに対しては、複雑性がチェックされます。  
   
@@ -58,11 +57,9 @@ ms.locfileid: "74957266"
   
 4.  キーのバックアップを作成する NTFS ディレクトリを指定します。 このディレクトリは、次の手順で指定するファイルの作成先となります。 このディレクトリは、制限の厳しいアクセス制御リスト (ACL) で保護する必要があります。  
   
-5.  
-  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]のインスタンスに接続します。  
+5.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]のインスタンスに接続します。  
   
-6.  
-  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
+6.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
 7.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
   

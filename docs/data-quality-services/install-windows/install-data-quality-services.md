@@ -10,10 +10,10 @@ ms.assetid: 486e4216-a946-4c6e-828c-61bc905f7ec1
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: b7a9d9ce36a3419883adae9050ffabd0d1f9b012
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75252189"
 ---
 # <a name="install-data-quality-services"></a>Data Quality Services のインストール
@@ -22,7 +22,7 @@ ms.locfileid: "75252189"
 
   [!INCLUDE[ssDQSnoversionLong](../../includes/ssdqsnoversionlong-md.md)](DQS) には、 **[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]** と**[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]** の2つのコンポーネントが含まれています。  
   
-|DQS コンポーネント|説明|  
+|DQS コンポーネント|[説明]|  
 |-------------------|-----------------|  
 |[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|
   [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] は、 [!INCLUDE[ssNoversion](../../includes/ssNoVersion-md.md)] データベース エンジンの上にインストールされ、DQS_MAIN、DQS_PROJECTS、および DQS_STAGING_DATA の 3 つのデータベースを含んでいます。 DQS_MAIN には、DQS ストアド プロシージャ、DQS エンジン、パブリッシュ済みナレッジ ベースが含まれています。 DQS_PROJECTS には、データ品質プロジェクトの情報が含まれています。 DQS_STAGING_DATA は、ソース データをコピーし、DQS 操作を実行して処理後のデータをエクスポートするためのステージング領域です。|  
@@ -71,7 +71,7 @@ ms.locfileid: "75252189"
 ##  <a name="DQSInstallation"></a>Data Quality Services のインストールタスク  
  DQS のコンポーネントをインストールするには、 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] セットアップを使用する必要があります。 SQL Server セットアップを実行するときは、インストール ウィザードの一連のページに従いながら、要件に基づいて適切なオプションを選択する必要があります。 インストール ウィザードのページのうち、選択するオプションによって DQS のインストールに影響するページのみを次の表に示します。  
   
-|ページ|操作|  
+|ページ|アクション|  
 |----------|------------|  
 |特徴選択|選択肢:<br /><br /> **データベースエンジン Services**の**Data Quality services**をインストールする[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]には、をインストールします。 <br />
   **[Data Quality Services]** チェック ボックスをオンにすると、SQL Server セットアップでインストーラー ファイル DQSInstaller.exe がコンピューターの SQL Server インスタンス ディレクトリにコピーされます。 

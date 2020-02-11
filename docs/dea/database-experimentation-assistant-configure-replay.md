@@ -2,7 +2,7 @@
 title: SQL Server アップグレードの再生の構成
 description: Database Experimentation Assistant の分散再生を構成する
 ms.custom: seo-lt-2019
-ms.date: 11/21/2019
+ms.date: 01/24/2020
 ms.prod: sql
 ms.prod_service: dea
 ms.suite: sql
@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: jtoland
 ms.reviewer: mathoma
-ms.openlocfilehash: 2ef570f531bcd37a2a5f7be1f3a900c4b8a4c112
-ms.sourcegitcommit: 9e026cfd9f2300f106af929d88a9b43301f5edc2
+ms.openlocfilehash: ae7c3c2a987d9fb048c1c3fa494978626abce06a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74317737"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76761536"
 ---
 # <a name="configure-distributed-replay-for-database-experimentation-assistant"></a>Database Experimentation Assistant の分散再生を構成する
 
@@ -48,10 +48,12 @@ Database Experimentation Assistant (DEA) は、SQL Server インストールの�
 3. Services.msc を開き、 **SQL Server 分散再生 Controller**サービスにアクセスします。
 4. サービスを右クリックし、[**プロパティ**] を選択します。 サービスアカウントを、ネットワーク内のコントローラーとクライアントコンピューターに共通のアカウントに設定します。
 5. [ **OK** ] を選択して、[**プロパティ**] ウィンドウを閉じます。
-6. Services.msc から**SQL Server 分散再生 Controller**サービスを再起動します。 また、コマンドラインで次のコマンドを実行して、サービスを再起動することもできます。<br/>
-   `NET STOP "SQL Server Distributed Replay Controller"`<br/>
+6. Services.msc から**SQL Server 分散再生 Controller**サービスを再起動します。 また、コマンドラインで次のコマンドを実行して、サービスを再起動することもできます。
+
+   `NET STOP "SQL Server Distributed Replay Controller"`</br>
    `NET START "SQL Server Distributed Replay Controller"`
-7. 構成オプションの詳細については、「 [Configure 分散再生](https://docs.microsoft.com/sql/tools/distributed-replay/configure-distributed-replay)」を参照してください。
+
+構成オプションの詳細については、「 [Configure 分散再生](https://docs.microsoft.com/sql/tools/distributed-replay/configure-distributed-replay)」を参照してください。
 
 ## <a name="configure-dcom"></a>DCOM を構成する
 
@@ -68,9 +70,10 @@ Database Experimentation Assistant (DEA) は、SQL Server インストールの�
 9. 再生を開始するユーザーを追加します。 ユーザーにローカルアクセス許可を与えます。 ユーザーがコントローラーサービスへのリモートアクセスを計画している場合は、ユーザーにリモートアクセス権限を付与します。
 10. [ **OK** ] を選択して変更をコミットし、[**セキュリティ**] タブに戻ります。
 11. [ **OK** ] を選択して変更をコミットします。
-12. Services.msc から SQL Server 分散再生 Controller サービスを再起動します。 また、コマンドラインで次のコマンドを実行して、サービスを再起動することもできます。<br/>
-   `NET STOP "SQL Server Distributed Replay Controller"`<br/>
-   `NET START "SQL Server Distributed Replay Controller"`
+12. Services.msc から SQL Server 分散再生 Controller サービスを再起動します。 また、コマンドラインで次のコマンドを実行して、サービスを再起動することもできます。
+
+    `NET STOP "SQL Server Distributed Replay Controller"`</br>
+    `NET START "SQL Server Distributed Replay Controller"`
 
 ## <a name="set-up-the-client-service"></a>クライアントサービスを設定する
 
@@ -81,12 +84,16 @@ Database Experimentation Assistant (DEA) は、SQL Server インストールの�
 3. サービスを右クリックし、[**プロパティ**] を選択します。 サービスアカウントを、ネットワーク内のコントローラーコンピューターとクライアントコンピューターの両方に共通するアカウントに設定します。
 4. [ **OK** ] を選択して、[**プロパティ**] ウィンドウを閉じます。 分散再生クライアントを構成するために SQL Server インストーラーウィザードの手順をスキップした場合は、構成ファイルを使用して構成できます。 一般的なインストールでは、構成ファイルは C:\Program Files (x86) \Microsoft SQL Server\<version\>\Tools\DReplayClient\DReplayClient.config. にあります。
 5. DReplayClient .config ファイルにコントローラーとして登録するためのコントローラーの名前が含まれていることを確認します。
-6. Services.msc から SQL Server 分散再生クライアントサービスを再起動します。 また、コマンドラインから次のコマンドを実行してサービスを再起動することもできます。<br/>
-    `NET STOP "SQL Server Distributed Replay Client"`<br/>
+6. Services.msc から SQL Server 分散再生クライアントサービスを再起動します。 また、コマンドラインから次のコマンドを実行してサービスを再起動することもできます。
+
+    `NET STOP "SQL Server Distributed Replay Client"`</br>
     `NET START "SQL Server Distributed Replay Client"`
-7. 分散再生コントローラーのログは、C:\Program Files (x86) \Microsoft SQL Server\<version\>\Tools\DReplayClient\Log. にあります。 ログには、クライアントが自身をコントローラーに登録できるかどうかが示されます。
-8. 構成が成功すると、ログに "controller <controller name\>に登録されました" というメッセージが表示されます。
-9. 構成オプションの詳細については、「 [Configure 分散再生](https://docs.microsoft.com/sql/tools/distributed-replay/configure-distributed-replay)」を参照してください。
+
+    分散再生コントローラーのログは、C:\Program Files (x86) \Microsoft SQL Server\<version\>\Tools\DReplayClient\Log. にあります。 ログには、クライアントが自身をコントローラーに登録できるかどうかが示されます。
+
+    構成が成功した場合、ログには**コントローラー <コントローラー名\>に登録さ**れているメッセージが表示されます。
+
+構成オプションの詳細については、「 [Configure 分散再生](https://docs.microsoft.com/sql/tools/distributed-replay/configure-distributed-replay)」を参照してください。
 
 ## <a name="set-up-distributed-replay-administration-tools"></a>分散再生管理ツールのセットアップ
 

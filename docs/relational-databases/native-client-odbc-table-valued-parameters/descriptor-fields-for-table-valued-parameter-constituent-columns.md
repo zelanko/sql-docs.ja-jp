@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 070029c5f1bf8445a699abacf61e6e988dbdbe2a
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75246506"
 ---
 # <a name="descriptor-fields-for-table-valued-parameter-constituent-columns"></a>テーブル値パラメーターを構成する列の記述子フィールド
@@ -25,17 +25,17 @@ ms.locfileid: "75246506"
 
   このセクションで説明するテーブル値パラメーターの記述子フィールドは、実装パラメーター記述子 (IPD) のハンドルと共に[SQLSetDescField](../../relational-databases/native-client-odbc-api/sqlsetdescfield.md)と[SQLSetDescField](../../relational-databases/native-client-odbc-api/sqlsetdescfield.md)を使用して操作します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  SQL_DESC_AUTO_UNIQUE_VALUE は、その他の機能と同様にテーブル値パラメーターで使用されます。  
   
-|属性名|種類|説明|  
+|属性名|種類|[説明]|  
 |--------------------|----------|-----------------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE|SQLINTEGER|SQL_TRUE はこの列が ID 列であることを示します。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、この情報を使用してパフォーマンスを最適化できますが、id 列に対してアプリケーションを設定する必要はありません。|  
 ||||
 
  アプリケーション パラメーター記述子 (APD) および実装パラメーター記述子 (IPD) のすべてのパラメーターの型に追加される属性を次に示します。  
   
-|属性名|種類|説明|  
+|属性名|種類|[説明]|  
 |--------------------|----------|-----------------|  
 |SQL_CA_SS_COLUMN_COMPUTED|SQLSMALLINT|SQL_TRUE はこの列が計算列であることを示します。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、この情報を使用してパフォーマンスを最適化できますが、計算列にアプリケーションを設定する必要はありません。<br /><br /> テーブル値パラメーターの列以外のバインドでは、この属性は無視されます。|  
 |SQL_CA_SS_COLUMN_IN_UNIQUE_KEY|SQLSMALLINT|SQL_TRUE はテーブル値パラメーターの列が一意キーに参加することを示します。 これにより、クエリのパフォーマンスが向上します。 テーブル値パラメーターの列以外のバインドでは、この属性は無視されます。|  

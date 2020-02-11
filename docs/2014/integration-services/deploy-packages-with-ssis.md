@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 89db7def474b26ffd25da1495e3efaf0e1af43dd
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75232687"
 ---
 # <a name="ssis-tutorial-deploying-packages"></a>SSIS チュートリアル : パッケージの配置
@@ -47,7 +47,7 @@ ms.locfileid: "75232687"
 ## <a name="what-you-will-learn"></a>学習する内容  
  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]で[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]使用できる新しいツール、コントロール、および機能について理解を深めるには、それらを使用することをお勧めします。 このチュートリアルでは、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを作成し、パッケージとその他の必要なファイルをプロジェクトに追加する手順を紹介します。 プロジェクトが完成したら、配置バンドルを作成し、バンドルを目的のコンピューターにコピーして、そのコンピューターにパッケージをインストールします。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  このチュートリアルは、ファイルシステムの基本的な操作について理解しているが、で[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]利用可能な新機能の公開を制限しているユーザーを対象としています。 このチュートリアルで使用[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]する基本的な概念について理解を深めるために、最初に次[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]のチュートリアルを完了しておくと役に立つ場合があります。 [SQL Server インポートおよびエクスポートウィザード](import-export-data/start-the-sql-server-import-and-export-wizard.md)と[SSIS チュートリアル: 簡単な ETL パッケージの作成](../integration-services/ssis-how-to-create-an-etl-package.md)。  
   
  **ソースコンピューター。** 配置バンドルを作成するコンピューターには、次のコンポーネントがインストールされている必要があります。  

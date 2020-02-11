@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 manager: jroth
 ms.openlocfilehash: 05161b2c9e3266b57841ff4268f4dc64ede90434
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244649"
 ---
 # <a name="change-a-server39s-registration-sql-server-management-studio"></a>サーバーの登録の変更 (SQL Server Management Studio)
@@ -29,8 +29,7 @@ ms.locfileid: "75244649"
   
 1.  [登録済みサーバー] で、サーバーを右クリックして **[プロパティ]** をクリックします。  
   
-2.  
-  **[サーバー登録プロパティの編集]** ダイアログ ボックスで、サーバー、ログイン情報、または接続プロパティを変更し、 **[保存]** をクリックします。  
+2.  **[サーバー登録プロパティの編集]** ダイアログ ボックスで、サーバー、ログイン情報、または接続プロパティを変更し、 **[保存]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
  [サーバーの登録](register-servers.md)  

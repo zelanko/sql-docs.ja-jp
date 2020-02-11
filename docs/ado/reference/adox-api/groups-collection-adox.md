@@ -1,5 +1,5 @@
 ---
-title: グループのコレクション (ADOX) |Microsoft Docs
+title: Groups コレクション (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,39 +18,39 @@ ms.assetid: 09aa7b0a-69d5-4564-80a7-20ad8189670f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e39be3cf32f04a60e554928f66cdc6123322f19c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966182"
 ---
 # <a name="groups-collection-adox"></a>Groups コレクション (ADOX)
-すべてを含む保存[グループ](../../../ado/reference/adox-api/group-object-adox.md)カタログまたはユーザーのオブジェクト。  
+カタログまたはユーザーの格納されているすべての[グループ](../../../ado/reference/adox-api/group-object-adox.md)オブジェクトが含まれます。  
   
-## <a name="remarks"></a>コメント  
- **グループ**のコレクションを[カタログ](../../../ado/reference/adox-api/catalog-object-adox.md)すべてのカタログのグループ アカウントを表します。 **グループ**のコレクションを[ユーザー](../../../ado/reference/adox-api/user-object-adox.md)ユーザーが所属するグループのみを表します。  
+## <a name="remarks"></a>解説  
+ [カタログ](../../../ado/reference/adox-api/catalog-object-adox.md)の**Groups**コレクションは、すべてのカタログのグループアカウントを表します。 [ユーザー](../../../ado/reference/adox-api/user-object-adox.md)の**Groups**コレクションは、ユーザーが属しているグループのみを表します。  
   
- [Append](../../../ado/reference/adox-api/append-method-adox-groups.md)のメソッド、**グループ**コレクションは ADOX に一意です。 可能な代替手段としては以下の方法があります。  
+ **Groups**コレクションの[Append](../../../ado/reference/adox-api/append-method-adox-groups.md)メソッドは、ADOX で一意です。 次のようにすることができます。  
   
--   新しいセキュリティ グループを使用して、コレクションに追加、 **Append**メソッド。  
+-   **追加**メソッドを使用して、新しいセキュリティグループをコレクションに追加します。  
   
- 残りのプロパティとメソッドは、ADO のコレクションに標準的です。 可能な代替手段としては以下の方法があります。  
+ その他のプロパティとメソッドは、ADO コレクションの標準です。 次のようにすることができます。  
   
--   使用して、コレクション内のグループへのアクセス、[項目](../../../ado/reference/ado-api/item-property-ado.md)プロパティ。  
+-   [項目](../../../ado/reference/ado-api/item-property-ado.md)プロパティを使用して、コレクション内のグループにアクセスします。  
   
--   使用して、コレクションに含まれるグループの数を返す、[カウント](../../../ado/reference/ado-api/count-property-ado.md)プロパティ。  
+-   [Count](../../../ado/reference/ado-api/count-property-ado.md)プロパティを使用して、コレクションに含まれるグループの数を返します。  
   
--   グループを使用して、コレクションから削除、[削除](../../../ado/reference/adox-api/delete-method-adox-collections.md)メソッド。  
+-   [Delete](../../../ado/reference/adox-api/delete-method-adox-collections.md)メソッドを使用して、コレクションからグループを削除します。  
   
--   現在のデータベース スキーマを反映するようにコレクション内のオブジェクトを更新、[更新](../../../ado/reference/ado-api/refresh-method-ado.md)メソッド。  
+-   [更新](../../../ado/reference/ado-api/refresh-method-ado.md)メソッドを使用して、現在のデータベーススキーマを反映するように、コレクション内のオブジェクトを更新します。  
   
 > [!NOTE]
->  追加の前に、**グループ**オブジェクトを**グループ**のコレクションを**ユーザー**オブジェクト、**グループ**オブジェクトと同じ[名前](../../../ado/reference/adox-api/name-property-adox.md)ように追加する 1 つに既に存在する必要があります、**グループ**のコレクション、**カタログ**します。  
+>  **グループ**オブジェクトを**ユーザー**オブジェクトの**groups**コレクションに追加する前に、追加するオブジェクトと同じ[名前](../../../ado/reference/adox-api/name-property-adox.md)の**グループ**オブジェクトが、**カタログ**の**groups**コレクションに既に存在している必要があります。  
   
- このセクションには、次のトピックが含まれています。  
+ ここでは、次のトピックについて説明します。  
   
 -   [Groups コレクションのプロパティ、メソッド、およびイベント](../../../ado/reference/adox-api/groups-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Catalog オブジェクト (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Group オブジェクト (ADOX)](../../../ado/reference/adox-api/group-object-adox.md)

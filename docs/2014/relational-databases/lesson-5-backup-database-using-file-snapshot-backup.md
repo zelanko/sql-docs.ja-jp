@@ -11,13 +11,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 689c3a734a5b4eb424511da52032dc348b5757ea
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75231804"
 ---
-# <a name="lesson-6-migrate-a-database-from-a-source-machine-on-premises-to-a-destination-machine-in-azure"></a>レッスン 6: オンプレミスのソースマシンから Azure のターゲットコンピューターにデータベースを移行する
+# <a name="lesson-6-migrate-a-database-from-a-source-machine-on-premises-to-a-destination-machine-in-azure"></a>レッスン 6: オンプレミスのソース コンピューターから Azure のターゲット コンピューターにデータベースを移行する
   このレッスンでは、別のオンプレミスコンピューターまたは Azure の仮想マシンに存在する可能性がある別の SQL Server が既にあることを前提としています。 Azure で SQL Server 仮想マシンを作成する方法の詳細については、「 [azure での SQL Server 仮想マシンのプロビジョニング](https://www.windowsazure.com/manage/windows/common-tasks/install-sql-server/)」を参照してください。 Azure に SQL Server 仮想マシンをプロビジョニングした後、別のコンピューターの SQL Server Management Studio を使用して、この仮想マシンの SQL Server のインスタンスに接続できることを確認してください。  
   
  このレッスンは、次の手順を完了済みであることも前提としています。  
@@ -129,7 +129,7 @@ ms.locfileid: "75231804"
   
 1.  **オブジェクトエクスプローラー**で、SQL Server データベースエンジンのインスタンスに接続し、そのインスタンスを展開します。  
   
-2.  [**データベース**] を右クリックし、[**新しいデータベース**] をクリックします。 次に [TestDB1] を右クリックします。 [タスク] をクリックし、[デタッチ] をクリックします。 [デタッチ] ダイアログ ウィンドウで、[接続の削除] チェック ボックスをオンにします。 [**OK**] をクリックすると、  
+2.  [**データベース**] を右クリックし、[**新しいデータベース**] をクリックします。 次に [TestDB1] を右クリックします。 [タスク] をクリックし、[デタッチ] をクリックします。 [デタッチ] ダイアログ ウィンドウで、[接続の削除] チェック ボックスをオンにします。 **[OK]** をクリックします。  
   
 3.  SQL Server 2014 CTP2 以降がインストールされたターゲット コンピューターに接続します。 ターゲット コンピューターを準備するには、ターゲット コンピューターで、TestDB1 を格納した同じコンテナーを指す SQL Server 資格情報を作成する必要があります。 同じコンピューターで再アタッチする場合、別の資格情報を作成する必要はありません。  
   
@@ -141,11 +141,11 @@ ms.locfileid: "75231804"
   
      [ファイル名] に「 `TestDB1Data.mdf`」と入力します。  
   
-6.  [**OK**] をクリックすると、  
+6.  **[OK]** をクリックします。  
   
      ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-6-7.gif "SQL 14 CTP2")  
   
  **次のレッスン:**  
   
- [レッスン 7: Azure Storage にデータファイルを移動する](../relational-databases/lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup.md)  
+ [レッスン 7: Azure Storage にデータ ファイルを移動する](../relational-databases/lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup.md)  
   

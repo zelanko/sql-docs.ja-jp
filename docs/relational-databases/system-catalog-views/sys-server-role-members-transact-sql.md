@@ -1,5 +1,5 @@
 ---
-title: sys.server_role_members (TRANSACT-SQL) |Microsoft Docs
+title: server_role_members (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,31 +21,31 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 11f39b29817716799ec693d6161135010c35a233
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68133034"
 ---
-# <a name="sysserverrolemembers-transact-sql"></a>sys.server_role_members (Transact-SQL)
+# <a name="sysserver_role_members-transact-sql"></a>sys.server_role_members (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
 
   固定サーバー ロールおよびユーザー定義サーバー ロールのメンバーごとに 1 行のデータを返します。  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
 |**role_principal_id**|**int**|ロールのサーバー プリンシパル ID。|  
 |**member_principal_id**|**int**|メンバーのサーバー プリンシパル ID。|  
   
- を追加またはサーバー ロールのメンバーシップを削除するには使用、 [ALTER SERVER ROLE &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md)ステートメント。  
+ サーバーロールのメンバーシップを追加または削除するには、 [ALTER SERVER role &#40;transact-sql&#41;](../../t-sql/statements/alter-server-role-transact-sql.md)ステートメントを使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
- ログインは、独自のサーバー ロールのメンバーシップを表示でき、固定サーバー ロールのメンバーの principal_id を表示できます。 すべてのサーバー ロールのメンバーシップを表示する必要があります、 **VIEW DEFINITION ON SERVER ROLE**権限またはメンバーシップ、 **securityadmin**固定サーバー ロール。  
+ ログインでは、独自のサーバーロールのメンバーシップを表示でき、固定サーバーロールのメンバーの principal_id を表示できます。 すべてのサーバーロールのメンバーシップを表示するには、 **VIEW DEFINITION ON SERVER role**権限、または**securityadmin**固定サーバーロールのメンバーシップが必要です。  
   
- 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+ 詳細については、「[メタデータ表示の構成](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="examples"></a>使用例  
- 次の例では、名前と id のロールとメンバーを返します。  
+## <a name="examples"></a>例  
+ 次の例では、ロールとそのメンバーの名前と id を返します。  
   
 ```  
 SELECT sys.server_role_members.role_principal_id, role.name AS RoleName,   
@@ -57,10 +57,10 @@ JOIN sys.server_principals AS member
     ON sys.server_role_members.member_principal_id = member.principal_id;  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [セキュリティ カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
- [サーバー レベルのロール](../../relational-databases/security/authentication-access/server-level-roles.md)   
- [プリンシパル &#40;データベース エンジン&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
+ [セキュリティカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
+ [サーバーレベルのロール](../../relational-databases/security/authentication-access/server-level-roles.md)   
+ [プリンシパル &#40;データベースエンジン&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   
   
