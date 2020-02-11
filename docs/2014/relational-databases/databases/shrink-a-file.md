@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f567c92632e99bef38fc1a6eb7a0179929f467c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62871214"
 ---
 # <a name="shrink-a-file"></a>ファイルの圧縮
@@ -37,9 +37,9 @@ ms.locfileid: "62871214"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [推奨事項](#Recommendations)  
+     [Recommendations (推奨事項)](#Recommendations)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **以下を使用してデータ ファイルまたはログ ファイルを圧縮するには:**  
   
@@ -78,13 +78,13 @@ ms.locfileid: "62871214"
      **ファイルの種類**  
      ファイルの種類を選択します。 選択できるファイルの種類は **[データ]** および **[ログ]** です。 既定の選択は **[データ]** です。 別のファイル グループの種類を選択すると、その選択に応じて他のフィールドの選択が変更されます。  
   
-     **ファイル グループ**  
+     **[ファイル グループ]**  
      上記で選択した **[ファイルの種類]** に関連付けられたファイル グループの一覧から、ファイル グループを選択します。 別のファイル グループを選択すると、その選択に応じて他のフィールドの選択が変更されます。  
   
      **[ファイル名]**  
      選択したファイル グループおよびファイルの種類で利用可能なファイルの一覧からファイルを選択します。  
   
-     **場所**  
+     **Location**  
      現在選択されているファイルへの完全なパスを表示します。 このパスは編集できませんが、クリップボードにコピーできます。  
   
      **[現在割り当てられている領域]**  
@@ -131,7 +131,7 @@ ms.locfileid: "62871214"
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、 [DBCC SHRINKFILE](/sql/t-sql/database-console-commands/dbcc-shrinkfile-transact-sql) を使用して、 `UserDB` データベースに存在する `DataFile1` という名前のデータ ファイルのサイズを 7 MB に圧縮します。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、 [DBCC SHRINKFILE](/sql/t-sql/database-console-commands/dbcc-shrinkfile-transact-sql) を使用して、 `DataFile1` データベースに存在する `UserDB` という名前のデータ ファイルのサイズを 7 MB に圧縮します。  
   
  [!code-sql[DBCC#DBCC_SHRINKFILE1](../../snippets/tsql/SQL14/tsql/dbcc/transact-sql/dbcc_other.sql#dbcc_shrinkfile1)]  
   

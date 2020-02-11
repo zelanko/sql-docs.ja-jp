@@ -15,10 +15,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: ab0560e0df37c80a82017e5f076af969931a79e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63012004"
 ---
 # <a name="create-a-credential"></a>資格情報の作成
@@ -34,7 +34,7 @@ ms.locfileid: "63012004"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **資格情報を作成する方法:**  
   
@@ -77,7 +77,7 @@ ms.locfileid: "63012004"
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-###  <a name="Credential"></a> 資格情報を作成するには  
+###  <a name="Credential"></a>資格情報を作成するには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]のインスタンスに接続します。  
   

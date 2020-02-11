@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b6d973d4628e9c80b47c4fea0ef3476dbd05131f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107451"
 ---
 # <a name="bind-a-report-or-model-to-a-shared-data-source-ssrs"></a>レポートまたはモデルを共有データ ソースにバインドする (SSRS)
@@ -28,17 +28,20 @@ ms.locfileid: "66107451"
   
 ### <a name="to-bind-a-report-or-model-to-a-shared-data-source-on-a-report-server-running-in-native-mode"></a>ネイティブ モードで実行されているレポート サーバー上の共有データ ソースにレポートまたはモデルをバインドするには  
   
-1.  **レポート マネージャー**で、サーバーにアップロードしたレポートまたはモデルの名前をクリックします。  
+1.  
+  **レポート マネージャー**で、サーバーにアップロードしたレポートまたはモデルの名前をクリックします。  
   
      [プロパティ] タブが開きます。  
   
-2.  **[データ ソース]** をクリックします。  
+2.  
+  **[データ ソース]** をクリックします。  
   
-3.  **[参照]** をクリックし、レポートまたはモデルをバインドするデータ ソースを参照します。  
+3.  
+  **[参照]** をクリックし、レポートまたはモデルをバインドするデータ ソースを参照します。  
   
 4.  データ ソースを選択し、 **[OK]** をクリックします。  
   
-5.  **[適用]** をクリックします。  
+5.  **[Apply]** をクリックします。  
   
      選択したデータ ソースにレポートまたはモデルがバインドされます。  
   
@@ -48,13 +51,17 @@ ms.locfileid: "66107451"
   
 2.  レポートまたはモデルをポイントし、下矢印をクリックします。  
   
-3.  **[データ ソースの管理]** をクリックします。  
+3.  
+  **[データ ソースの管理]** をクリックします。  
   
-4.  **[dataSource1]** をクリックします。  
+4.  
+  **[dataSource1]** をクリックします。  
   
-5.  **[接続の種類]** 領域で、 **[共有データ ソース]** が選択されていることを確認します。  
+5.  
+  **[接続の種類]** 領域で、 **[共有データ ソース]** が選択されていることを確認します。  
   
-6.  **[データ ソース リンク]** 領域で、省略記号ボタン ( [...] ) をクリックします。  
+6.  
+  **[データ ソース リンク]** 領域で、省略記号ボタン ( [...] ) をクリックします。  
   
 7.  使用するデータ ソースを探します。  
   
@@ -65,11 +72,11 @@ ms.locfileid: "66107451"
 10. **[閉じる]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [ファイルまたはレポートをアップロードする (レポート マネージャー)](../reports/upload-a-file-or-report-report-manager.md)   
- [SharePoint ライブラリへのドキュメントのアップロード (Reporting Services の SharePoint モード)](../upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)   
- [共有データ ソースを作成および管理する (Reporting Services の SharePoint 統合モード)](../create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)   
- [共有データ ソースを作成、削除、または変更する &#40;レポート マネージャー&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
- [データ接続、データ ソース、および Reporting Services の接続文字列](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
- [Reporting Services でサポートされるデータ ソース (SSRS)](../create-deploy-and-manage-mobile-and-paginated-reports.md)  
+ [ファイルまたはレポートをアップロード &#40;レポートマネージャー&#41;](../reports/upload-a-file-or-report-report-manager.md)   
+ [Sharepoint モードで Reporting Services &#40;ドキュメントを SharePoint ライブラリにアップロード&#41;](../upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)   
+ [SharePoint 統合モードで Reporting Services &#40;共有データソースを作成および管理&#41;](../create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)   
+ [共有データソース &#40;レポートマネージャーの作成、削除、または変更&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
+ [Reporting Services のデータ接続、データソース、および接続文字列](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
+ [Reporting Services &#40;SSRS&#41;でサポートされるデータソース](../create-deploy-and-manage-mobile-and-paginated-reports.md)  
   
   

@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 07f94c3ed850af10120b1de7d95941bc5c90e826
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68088221"
 ---
 # <a name="openingperiod-mdx"></a>OpeningPeriod (MDX)
 
 
-  指定したレベル、オプションで指定されたメンバーの子孫のうち、最初の兄弟を返します。  
+  指定されたレベルの子孫の中で最初の兄弟を返します。オプションで、指定したメンバーでも取得できます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -29,25 +29,25 @@ OpeningPeriod( [ Level_Expression [ , Member_Expression ] ] )
   
 ## <a name="arguments"></a>引数  
  *Level_Expression*  
- レベルを返す有効な多次元式 (MDX) 式。  
+ レベルを返す有効な多次元式 (MDX) 式です。  
   
- *メンバー式*  
+ *Member_Expression*  
  メンバーを 1 つ返す有効な多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>コメント  
- この関数がある主な対象は、時間ディメンションの使用がどのディメンションでも使用できます。  
+## <a name="remarks"></a>解説  
+ この関数は、主に時間ディメンションを使用することを目的としていますが、どのディメンションでも使用できます。  
   
--   レベル式が指定されている場合、 **OpeningPeriod**関数は、階層を指定されたレベルを含み、指定されたレベルで既定のメンバーの子孫のうち、最初の兄弟を返しますを使用します。  
+-   レベル式が指定されている場合、 **OpeningPeriod**関数は、指定されたレベルを含む階層を使用して、指定したレベルの既定のメンバーの子孫の中から最初の兄弟を返します。  
   
--   レベル式もメンバー式が指定されている場合、 **OpeningPeriod**関数は、指定されたを含む階層内で指定されたレベルで指定されたメンバーの子孫のうち、最初の兄弟を返しますレベルです。  
+-   レベル式とメンバー式の両方が指定されている場合、 **OpeningPeriod**関数は、指定されたレベルを含む階層内で、指定されたメンバーの子孫の中から、最初の兄弟を返します。  
   
--   レベル式もメンバー式が指定されている場合、 **OpeningPeriod**関数と Time 型の既定のレベルと、ディメンションのメンバーを使用します。  
+-   レベル式もメンバー式も指定されていない場合、 **OpeningPeriod**関数では、Time 型の既定のレベルとディメンションのメンバーが使用されます。  
   
 > [!NOTE]  
->  [ClosingPeriod](../mdx/closingperiod-mdx.md)機能に似ています、 **OpeningPeriod**関数点を除いて、 **ClosingPeriod**関数は、1 つ目ではなく、最後の兄弟を返します兄弟です。  
+>  [Closingperiod](../mdx/closingperiod-mdx.md)関数は、 **OpeningPeriod**関数に似ていますが、 **closingperiod**関数は、最初の兄弟ではなく最後の兄弟を返す点が異なります。  
   
-## <a name="examples"></a>使用例  
- 次の例では、(時間の種類がある) Date ディメンションの FY2002 メンバーの既定のメジャーの値を返します。 このメンバーが返されるは、Fiscal Year レベルが [All] レベルの最初の子孫であるため、階層コレクション内の最初のユーザー定義階層であり、fy 2002 メンバーが、最初の兄弟のため、Fiscal 階層は、既定の階層このレベルの階層。  
+## <a name="examples"></a>例  
+ 次の例では、Date ディメンション (Time 型) の FY2002 メンバーの既定のメジャーの値を返します。 このメンバーが返されるのは、会計年度レベルが [All] レベルの最初の子孫であるためです。これは、会計階層が階層コレクション内の最初のユーザー定義階層であり、FY2002 メンバーがの最初の兄弟であるためです。このレベルの階層です。  
   
 ```  
 SELECT OpeningPeriod() ON 0  
@@ -55,7 +55,7 @@ FROM [Adventure Works]
   
 ```  
   
- 次の例では、2001 年 7 月 1 日の既定のメジャー値を返します、Date.Date 属性階層の Date.Date.Date レベルにあるメンバー。 このメンバーは、Date.Date 属性階層の [All] レベルの子孫の最初の兄弟です。  
+ 次の例では、date. date の属性階層の date. date. date レベルにある、2001年7月1日の既定のメジャーの値を返します。 このメンバーは、Date 属性階層の [All] レベルの子孫の最初の兄弟です。  
   
 ```  
 SELECT OpeningPeriod([Date].[Date].[Date]) ON 0  
@@ -79,9 +79,9 @@ FROM [Adventure Works]
   
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [TopCount &#40;MDX&#41;](../mdx/topcount-mdx.md)   
- [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
+ [Mdx 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
  [FirstSibling &#40;MDX&#41;](../mdx/firstsibling-mdx.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: CLR データベース オブジェクトからのデータ アクセス |Microsoft Docs
+title: CLR データベースオブジェクトからのデータアクセス |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,21 +24,21 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 4561c7b8979a919ea144bab6d9b42f722b089e48
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62874079"
 ---
 # <a name="data-access-from-clr-database-objects"></a>CLR データベース オブジェクトからのデータ アクセス
-  共通言語ランタイム (CLR) のルーチンのインスタンスに格納されているデータにアクセスする簡単に[!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)]でこれを実行する、リモート インスタンスに格納されているデータだけでなく。 ルーチンからどのデータにアクセスできるかは、コードが実行されているユーザー コンテキストによって決まります。 .NET Framework Data Provider for を使用して CLR データベース オブジェクトからのデータにアクセス[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]マネージ クライアントと中間層アプリケーションからのデータ。 このため、クライアント アプリケーションや中間層アプリケーションでは、ADO.NET と `SqlClient` の知識を活用できます。  
+  共通言語ランタイム (CLR) ルーチンは、リモートインスタンスに格納されている[!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)]データだけでなく、実行されるのインスタンスに格納されているデータにも簡単にアクセスできます。 ルーチンからどのデータにアクセスできるかは、コードが実行されているユーザー コンテキストによって決まります。 マネージクライアントおよび中間層アプリケーションからのデータに対して .NET Framework Data Provider [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]を使用して、CLR データベースオブジェクト内からデータにアクセスします。 このため、クライアント アプリケーションや中間層アプリケーションでは、ADO.NET と `SqlClient` の知識を活用できます。  
   
 > [!NOTE]  
 >  ユーザー定義型メソッドとユーザー定義関数では、既定ではデータ アクセスの実行が許可されていません。 UDT (ユーザー定義型) メソッドやユーザー定義関数からの読み取り専用データ アクセスを可能にするには、`DataAccess` または `SqlMethodAttribute` の `SqlFunctionAttribute` プロパティを `DataAccessKind.Read` に設定する必要があります。 UDT またはユーザー定義関数によるデータ変更操作は許可されません。この操作を実行しようとすると、実行時に例外がスローされます。  
   
  ここでは、CLR データベース オブジェクト内からデータにアクセスする際の機能や動作の具体的な違いについて説明します。 ADO.NET の機能の詳細については、.NET Framework SDK に付属の ADO.NET のドキュメントを参照してください。  
   
- 次の表は、このセクションのトピックを一覧表示します。  
+ 次の表に、このセクションの各トピックの一覧を示します。  
   
  [コンテキスト接続](context-connection.md)  
  SQL Server へのコンテキスト接続について説明します。  
@@ -53,6 +53,7 @@ ms.locfileid: "62874079"
  System.Transactions 名前空間で提供される新しいトランザクション フレームワークを ADO.NET および [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] CLR 統合と統合する方法について説明します。  
   
  [CLR データベース オブジェクトからの XML シリアル化](../../../database-engine/dev-guide/xml-serialization-from-clr-database-objects.md)  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 内部で CLR データベース オブジェクトの XML シリアル化のシナリオを有効にする方法について説明します。  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 内部で CLR データベース オブジェクトの XML シリアル化のシナリオを有効にする方法について説明します。  
   
   

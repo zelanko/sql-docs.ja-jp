@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cbd284d3657a94e9c002ec252812e010e7014cd4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771242"
 ---
 # <a name="how-to-manage-a-cdc-service-from-the-cdc-designer-console"></a>CDC デザイナー コンソールから CDC サービスを管理する方法
@@ -28,7 +28,7 @@ ms.locfileid: "62771242"
   
 3.  管理するサービスを選択します。  
   
-     **注**:CDC デザイナー コンソールに表示されるサービスが存在しない場合は、CDC Service 構成コンソールを使用して新しいインスタンスを作成する必要があります。 新しいサービスの作成の詳細については、サービス構成コンソールのオンライン ヘルプを参照してください。  
+     **注**: CDC デザイナー コンソールに表示されるサービスが存在しない場合は、CDC Service 構成コンソールを使用して新しいインスタンスを作成する必要があります。 新しいサービスの作成の詳細については、サービス構成コンソールのオンライン ヘルプを参照してください。  
   
 4.  CDC サービスでは、以下のタスクを実行できます。  
   
