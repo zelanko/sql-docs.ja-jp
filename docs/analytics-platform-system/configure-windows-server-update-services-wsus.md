@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 2fef7b88514357deb6cf0a009d12272cc3cf79a2
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.openlocfilehash: 089b76d7167b8561c93b01837dc2189c833362fd
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74401401"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76761906"
 ---
 # <a name="configure-windows-server-update-services-wsus-in-analytics-platform-system"></a>Analytics Platform System での Windows Server Update Services (WSUS) の構成
 ここでは、Windows Server Update Services (WSUS) 構成ウィザードを使用して、Analytics Platform System 用に WSUS を構成する手順について説明します。 ソフトウェア更新プログラムをアプライアンスに適用する前に、WSUS を構成する必要があります。 WSUS はアプライアンスの VMM 仮想マシンに既にインストールされています。  
@@ -24,7 +24,7 @@ WSUS の構成の詳細については、wsus の web サイトの「[ステッ�
 > [!WARNING]  
 > この構成プロセス中にエラーが発生した場合は、を停止し、サポートにお問い合わせください。 エラーを無視したり、エラーを受信した後にプロセスを続行したりしないでください。  
   
-## <a name="before-you-begin"></a>開始する前に  
+## <a name="before-you-begin"></a>はじめに  
 WSUS を構成するには、次のことを行う必要があります。  
   
 -   Analytics Platform System アプライアンスのドメイン管理者アカウントのログイン情報を取得します。  
@@ -83,8 +83,7 @@ WSUS を構成するには、次のことを行う必要があります。
   
     #### <a name="to-update-by-using-microsoft-update"></a>Microsoft Update を使用して更新するには  
   
-    1.  Microsoft Update と同期することを選択した場合は、 **[アップストリームサーバーの選択**] ページに変更を加える必要はありません。 
-  **[次へ]** をクリックします。  
+    1.  Microsoft Update と同期することを選択した場合は、 **[アップストリームサーバーの選択**] ページに変更を加える必要はありません。 **[次へ]** をクリックします。  
   
         ![WSUS: 上流サーバーの同期](./media/configure-windows-server-update-services-wsus/WSUS_Wiz4a.png "WSUS_Wiz4a")  
   
@@ -140,11 +139,14 @@ WSUS を構成するには、次のことを行う必要があります。
 8.  [製品] を選択します。  
   
     > [!NOTE]  
-    > アップストリームサーバーを使用している場合は、製品を選択できないことがあります。 このオプションが使用できない場合は、この手順をスキップします。  
+    > アップストリームサーバーを使用している場合は、製品を選択できないことがあります。 このオプションが使用できない場合は、この手順をスキップします。
+
+    > [!WARNING]  
+    > SQL Server 2016 の更新プログラムをすべて除外してください。
   
     選択した更新プログラムをすべて選択解除します。  
   
-    [ **Windows Server 2012 r2**] および [ **System Center 2012 r2-Virtual Machine Manager**] を選択し、[**次へ**] をクリックします。  
+    **SQL Server 2012**、 **SQL Server 2014**、 **Windows Server 2012 r2**、および**System Center 2012 R2-Virtual Machine Manager**を選択し、[**次へ**] をクリックします。  
   
 9. [分類] を選択します。  
   
@@ -169,8 +171,7 @@ WSUS を構成するには、次のことを行う必要があります。
   
 12. 完了。  
   
-    
-  **[完了]** をクリックします。  
+    **[完了]** をクリックします。  
   
 ## <a name="bkmk_WSUSGroup"></a>WSUS でアプライアンスサーバーをグループ化する  
 Analytics Platform System の WSUS を構成した後、次の手順ではアプライアンスサーバーをグループ化します。 すべてのアプライアンスサーバーをグループに追加することで、WSUS はアプライアンス内のすべてのサーバーにソフトウェアの更新を適用できるようになります。  

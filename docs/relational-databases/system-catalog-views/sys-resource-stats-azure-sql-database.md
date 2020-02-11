@@ -20,10 +20,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: e88d3916f5122564b443bc3c439200526b1f2d5e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75246911"
 ---
 # <a name="sysresource_stats-azure-sql-database"></a>sys.resource_stats (Azure SQL データベース)
@@ -35,25 +35,25 @@ ms.locfileid: "75246911"
   
  次の表では、v12 サーバーで使用できる列について説明します。  
   
-|列|データ型|説明|  
+|[列]|データ型|[説明]|  
 |----------------------------|---------------|-----------------|  
-|start_time|**/**|5分間のレポート間隔の開始を示す UTC 時刻。|  
-|end_time|**/**|5分間のレポート間隔の終了を示す UTC 時刻。|  
-|database_name|**nvarchar(128)**|ユーザーデータベースの名前。|  
-|sku|**nvarchar(128)**|データベースのサービス階層。 使用できる値を次に示します。<br /><br /> 基本<br /><br /> 標準<br /><br /> Premium<br /><br />汎用<br /><br />Business Critical|  
-|storage_in_megabytes|**点**|データベースデータ、インデックス、ストアドプロシージャ、およびメタデータを含む、期間の最大ストレージサイズ (mb)。|  
+|start_time|**DATETIME**|5分間のレポート間隔の開始を示す UTC 時刻。|  
+|end_time|**DATETIME**|5分間のレポート間隔の終了を示す UTC 時刻。|  
+|database_name|**nvarchar(128**|ユーザーデータベースの名前。|  
+|sku|**nvarchar(128**|データベースのサービス階層。 使用できる値を次に示します。<br /><br /> Basic<br /><br /> Standard<br /><br /> Premium<br /><br />汎用<br /><br />Business Critical|  
+|storage_in_megabytes|**float**|データベースデータ、インデックス、ストアドプロシージャ、およびメタデータを含む、期間の最大ストレージサイズ (mb)。|  
 |avg_cpu_percent|**decimal (5, 2)**|サービス層の制限に対する割合での平均コンピューティング使用率。|  
 |avg_data_io_percent|**decimal (5, 2)**|サービス層の制限に基づく平均 i/o 使用率 (%)。 Hyperscale データベースについては、「[リソース使用率の統計情報のデータ IO](https://docs.microsoft.com/azure/sql-database/sql-database-hyperscale-performance-diagnostics#data-io-in-resource-utilization-statistics)」を参照してください。|  
 |avg_log_write_percent|**decimal (5, 2)**|サービス層の上限に対するパーセンテージで示した、平均書き込みリソース使用率。|  
 |max_worker_percent|**decimal (5, 2)**|データベースのサービスレベルの上限に基づく割合の最大同時実行ワーカー (要求)。<br /><br /> 現在、最大値は、同時実行ワーカー数の15秒のサンプルに基づいて、5分間隔で計算されます。|  
 |max_session_percent|**decimal (5, 2)**|データベースのサービス階層の上限に基づく割合の最大同時セッション数。<br /><br /> 現在、最大値は、同時セッション数の15秒のサンプルに基づいて、5分間隔で計算されます。|  
-|dtu_limit|**通り**|この期間中のこのデータベースの現在の最大データベース DTU 設定です。 |
+|dtu_limit|**int**|この期間中のこのデータベースの現在の最大データベース DTU 設定です。 |
 |xtp_storage_percent|**decimal (5, 2)**|サービス層の制限 (レポート間隔の終了時) に対するインメモリ OLTP のストレージ使用率。 これには、メモリ最適化テーブル、インデックス、およびテーブル変数の、次のインメモリ OLTP オブジェクトのストレージに使用されるメモリが含まれます。 また、ALTER TABLE 操作の処理に使用されるメモリも含まれています。<br /><br /> インメモリ OLTP がデータベースで使用されていない場合は0を返します。|
 |avg_login_rate_percent|**decimal (5, 2)**|単に情報を示すためだけに特定されます。 サポートされていません。 将来の互換性は保証されません。|
 |avg_instance_cpu_percent|**decimal (5, 2)**|SQL DB プロセスに対する平均データベース CPU 使用率 (%)。|
 |avg_instance_memory_percent|**decimal (5, 2)**|SQL DB プロセスに対する平均データベースメモリ使用率 (%)。|
 |cpu_limit|**decimal (5, 2)**|この期間中のこのデータベースの仮想コア数。 DTU ベースのモデルを使用しているデータベースの場合、この列は NULL になります。|
-|allocated_storage_in_megabytes|**点**|データベースデータを格納するために使用できる、フォーマットされたファイル領域のサイズ (MB)。 フォーマットされたファイル領域は、割り当てられたデータ領域とも呼ばれます。  詳細については、「 [SQL DB でのファイル領域管理](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)」を参照してください。|
+|allocated_storage_in_megabytes|**float**|データベースデータを格納するために使用できる、フォーマットされたファイル領域のサイズ (MB)。 フォーマットされたファイル領域は、割り当てられたデータ領域とも呼ばれます。  詳細については、「 [SQL DB でのファイル領域管理](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)」を参照してください。|
   
 > [!TIP]  
 >  これらの制限とサービスレベルの詳細については、「[サービスレベル](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)」を参照してください。  
@@ -61,7 +61,7 @@ ms.locfileid: "75246911"
 ## <a name="permissions"></a>アクセス許可  
  このビューは、仮想**master**データベースに接続するためのアクセス許可を持つすべてのユーザーロールで使用できます。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  **Resource_stats**によって返されるデータは、実行しているサービス階層/パフォーマンスレベルに対して許容される最大制限の割合として表されます。  
   
  データベースがエラスティックプールのメンバーである場合、パーセント値として表示されるリソース統計は、エラスティックプール構成で設定されたデータベースの上限に対する比率として表されます。  

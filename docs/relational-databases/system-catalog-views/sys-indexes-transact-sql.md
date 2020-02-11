@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3d4d307ea18127586ac46b0f6afb973ef62cf6ba
-ms.sourcegitcommit: ede04340adbf085e668a2536d4f7114abba14a0c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74761481"
 ---
 # <a name="sysindexes-transact-sql"></a>sys.indexes (Transact-SQL)
@@ -32,15 +32,15 @@ ms.locfileid: "74761481"
 
   テーブル、ビュー、テーブル値関数など、テーブル オブジェクトのインデックスまたはヒープごとに 1 行のデータを格納します。  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**通り**|このインデックスが所属するオブジェクトの ID。|  
-|**指定**|**sysname**|インデックスの名前。 **name**は、オブジェクト内でのみ一意です。<br /><br /> NULL = ヒープ|  
-|**index_id**|**通り**|インデックスの ID。 **index_id**は、オブジェクト内でのみ一意です。<br /><br /> 0 = ヒープ<br /><br /> 1 = クラスター化インデックス<br /><br /> > 1 = 非クラスター化インデックス|  
-|**各種**|**tinyint**|インデックスの種類:<br /><br /> 0 = ヒープ<br /><br /> 1 = クラスター化<br /><br /> 2 = 非クラスター化<br /><br /> 3 = XML<br /><br /> 4 = 空間<br /><br /> 5 = クラスター化列ストアインデックス。 **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]以降。<br /><br /> 6 = 非クラスター化列ストアインデックス。 **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]以降。<br /><br /> 7 = 非クラスター化ハッシュインデックス。 **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]以降。|  
-|**type_desc**|**nvarchar (60)**|インデックスの種類の説明:<br /><br /> HEAP<br /><br /> CLUSTERED<br /><br /> NONCLUSTERED<br /><br /> XML<br /><br /> SPATIAL<br /><br /> クラスター化列ストア: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]以降**に適用さ**れます。<br /><br /> 非クラスター化列ストア: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]以降**に適用さ**れます。<br /><br /> 非クラスター化ハッシュ: 非クラスター化ハッシュインデックスは、メモリ最適化テーブルでのみサポートされています。 sys.hash_indexes ビューでは、現在のハッシュ インデックスとハッシュ プロパティが表示されます。 詳細については、「 [sys. hash_indexes &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-hash-indexes-transact-sql.md)」を参照してください。 **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]以降。|  
+|**object_id**|**int**|このインデックスが所属するオブジェクトの ID。|  
+|**name**|**sysname**|インデックスの名前。 **name**は、オブジェクト内でのみ一意です。<br /><br /> NULL = ヒープ|  
+|**index_id**|**int**|インデックスの ID。 **index_id**は、オブジェクト内でのみ一意です。<br /><br /> 0 = ヒープ<br /><br /> 1 = クラスター化インデックス<br /><br /> > 1 = 非クラスター化インデックス|  
+|**type**|**tinyint**|インデックスの種類:<br /><br /> 0 = ヒープ<br /><br /> 1 = クラスター化<br /><br /> 2 = 非クラスター化<br /><br /> 3 = XML<br /><br /> 4 = 空間<br /><br /> 5 = クラスター化列ストアインデックス。 **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。<br /><br /> 6 = 非クラスター化列ストアインデックス。 **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。<br /><br /> 7 = 非クラスター化ハッシュインデックス。 **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。|  
+|**type_desc**|**nvarchar (60)**|インデックスの種類の説明:<br /><br /> HEAP<br /><br /> CLUSTERED<br /><br /> NONCLUSTERED<br /><br /> XML<br /><br /> SPATIAL<br /><br /> クラスター化列ストア: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]以降**に適用さ**れます。<br /><br /> 非クラスター化列ストア: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]以降**に適用さ**れます。<br /><br /> 非クラスター化ハッシュ: 非クラスター化ハッシュインデックスは、メモリ最適化テーブルでのみサポートされています。 sys.hash_indexes ビューでは、現在のハッシュ インデックスとハッシュ プロパティが表示されます。 詳細については、「 [sys. hash_indexes &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-hash-indexes-transact-sql.md)」を参照してください。 **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。|  
 |**is_unique**|**bit**|1 = インデックスは一意です。<br /><br /> 0 = インデックスは一意ではありません。<br /><br /> クラスター化列ストア インデックスの場合、常に 0 です。|  
-|**data_space_id**|**通り**|インデックスのデータ領域の ID。 データ領域は、ファイル グループまたはパーティション構成です。<br /><br /> 0 = **object_id**はテーブル値関数またはメモリ内インデックスです。|  
+|**data_space_id**|**int**|インデックスのデータ領域の ID。 データ領域は、ファイル グループまたはパーティション構成です。<br /><br /> 0 = **object_id**はテーブル値関数またはメモリ内インデックスです。|  
 |**ignore_dup_key**|**bit**|1 = IGNORE_DUP_KEY は ON です。<br /><br /> 0 = IGNORE_DUP_KEY はオフです。|  
 |**is_primary_key**|**bit**|1 = インデックスは PRIMARY KEY 制約の一部です。<br /><br /> クラスター化列ストア インデックスの場合、常に 0 です。|  
 |**is_unique_constraint**|**bit**|1 = インデックスは UNIQUE 制約の一部です。<br /><br /> クラスター化列ストア インデックスの場合、常に 0 です。|  
@@ -51,7 +51,7 @@ ms.locfileid: "74761481"
 |**allow_row_locks**|**bit**|1 = インデックスは行ロックを許可します。<br /><br /> 0 = インデックスは行ロックを許可しません。<br /><br /> クラスター化列ストア インデックスの場合、常に 0 です。|  
 |**allow_page_locks**|**bit**|1 = インデックスはページロックを許可します。<br /><br /> 0 = インデックスはページロックを許可しません。<br /><br /> クラスター化列ストア インデックスの場合、常に 0 です。|  
 |**has_filter**|**bit**|1 = インデックスにはフィルターがあり、フィルター定義を満たす行のみが含まれます。<br /><br /> 0 = インデックスにフィルターがありません。|  
-|**filter_definition**|**nvarchar (max)**|フィルター選択されたインデックスに含まれる行のサブセットの式。<br /><br /> ヒープまたはフィルター選択されたインデックス以外のインデックスの場合は、NULL です。|  
+|**filter_definition**|**nvarchar(max)**|フィルター選択されたインデックスに含まれる行のサブセットの式。<br /><br /> ヒープまたはフィルター選択されたインデックス以外のインデックスの場合は、NULL です。|  
 |**auto_created**|**bit**|1 = インデックスは自動チューニングによって作成されました。<br /><br />0 = インデックスはユーザーによって作成されました。
 |**optimize_for_sequential_key**|**bit**|1 = インデックスの最後のページ挿入最適化が有効になっています。<br><br>0 = 既定値。 インデックスの最後のページ挿入最適化が無効になっています。|
 
@@ -89,7 +89,7 @@ GO
   
 ## <a name="see-also"></a>参照  
  [オブジェクトカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [Transact-sql&#41;&#40;カタログビュー](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [index_columns &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
  [xml_indexes &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-xml-indexes-transact-sql.md)   
  [sys &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   

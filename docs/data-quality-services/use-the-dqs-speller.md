@@ -10,10 +10,10 @@ ms.assetid: 65e4e53e-2699-4cae-a9e0-fe78547755b5
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 087d7c7636b456e9cba07eb16abdd135abb43c4e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75257754"
 ---
 # <a name="use-the-dqs-speller"></a>DQS のスペル チェックの使用
@@ -34,14 +34,14 @@ ms.locfileid: "75257754"
   
  スペル チェックは、string データ型の単一ドメインでのみ機能します。 単一ドメイン内の string データ型のすべての値がスペル チェックに送られて検証されます。 スペル チェックは複合ドメインに対しては機能しません。また、string 型以外のドメイン、複合値 (文字と数字がスペースなしで連結された値など)、ローマ数字、単一の文字、および大文字のみの値も検証されません。  
   
-##  <a name="BeforeYouBegin"></a>開始する前に  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Prerequisites"></a>応募  
+###  <a name="Prerequisites"></a> 前提条件  
  スペル チェックを実行するには、ナレッジ検出アクティビティまたはドメイン管理アクティビティでナレッジ ベースとドメインを開いておく必要があります。また、スペル チェックを実行するドメインおよびページでスペル チェックを有効にし、ドメインの言語プロパティを指定する必要があります。  
   
-###  <a name="Security"></a>保護  
+###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a>許可  
+####  <a name="Permissions"></a> Permissions  
  スペル チェックを実行するには、DQS_MAIN データベースの dqs_kb_editor ロールまたは dqs_administrator ロールが必要です。  
   
 ##  <a name="Enable"></a>スペルチェックを有効にする  

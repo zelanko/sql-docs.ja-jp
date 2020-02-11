@@ -16,35 +16,35 @@ ms.assetid: f0ec0c92-8253-47c6-9a14-e5dbccbad219
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 886825b4d32354572a5162487add419b00ec35d6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931065"
 ---
 # <a name="seekenum"></a>SeekEnum
-型を指定[シーク](../../../ado/reference/ado-api/seek-method.md)を実行します。  
+実行する[シーク](../../../ado/reference/ado-api/seek-method.md)の種類を指定します。  
   
-|定数|Value|説明|  
+|常時|値|[説明]|  
 |--------------|-----------|-----------------|  
-|**adSeekFirstEQ**|1|等しい最初のキーをシーク*KeyValues*します。|  
-|**adSeekLastEQ**|2|最後のキーと等しいをシーク*KeyValues*します。|  
-|**adSeekAfterEQ**|4|等しいか、キーをシーク*KeyValues*またはと一致するが、発生した後だけです。|  
-|**adSeekAfter**|8|場所の直後に、キーをシークとの一致*KeyValues*発生します。|  
-|**adSeekBeforeEQ**|16|等しいか、キーをシーク*KeyValues*かその直前まで一致するが発生した場所。|  
-|**adSeekBefore**|32|キーの場所と一致する直前にシーク*KeyValues*発生します。|  
+|**Adseekの Steq**|1 で保護されたプロセスとして起動されました|*Keyvalues*と等しい最初のキーをシークします。|  
+|**adSeekLastEQ**|2|*Keyvalues*と等しい最後のキーをシークします。|  
+|**adSeekAfterEQ**|4|*Keyvalues*と等しいキー、またはその直後に一致したキーをシークします。|  
+|**adSeekAfter**|8|*Keyvalues*との一致が発生した直後にキーをシークします。|  
+|**adSeekBeforeEQ**|16|*Keyvalues*と等しいキー、またはその一致が発生した直前のキーをシークします。|  
+|**adSeekBefore**|32|*Keyvalues*との一致が発生する直前に、キーをシークします。|  
   
-## <a name="adowfc-equivalent"></a>ADO と WFC と同等  
- パッケージ: **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>同等の ADO/WFC  
+ パッケージ: **com. ms. wfc. データ**  
   
-|定数|  
+|常時|  
 |--------------|  
-|AdoEnums.Seek.FIRSTEQ|  
-|AdoEnums.Seek.LASTEQ|  
-|AdoEnums.Seek.AFTEREQ|  
-|AdoEnums.Seek.AFTER|  
-|AdoEnums.Seek.BEFOREEQ|  
-|AdoEnums.Seek.BEFORE|  
+|AdoEnums を検索します。|  
+|AdoEnums を検索します。|  
+|AdoEnums. AFTEREQ|  
+|AdoEnums|  
+|AdoEnums。|  
+|AdoEnums|  
   
 ## <a name="applies-to"></a>適用対象  
  [Seek メソッド](../../../ado/reference/ado-api/seek-method.md)

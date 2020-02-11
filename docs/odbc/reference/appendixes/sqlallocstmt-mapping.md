@@ -1,5 +1,5 @@
 ---
-title: SQLAllocStmt のマッピング |Microsoft Docs
+title: SQLAllocStmt Mapping |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,23 +14,23 @@ ms.assetid: a2449dbb-1b6c-4b49-81b9-ebdddd4442fd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cf79d3ef813e87e785cea588cfc1d6e3eed44ee4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68064990"
 ---
 # <a name="sqlallocstmt-mapping"></a>SQLAllocStmt のマッピング
-アプリケーションを呼び出すと**SQLAllocStmt** ODBC を通じて*3.x*ドライバーへの呼び出し。  
+アプリケーション*が ODBC 3.x*ドライバーを介して**sqlallocstmt**を呼び出すと、次のような呼び出しが行われます。  
   
 ```  
 SQLAllocStmt(hdbc, phstmt)  
 ```  
   
- マップされて**SQLAllocHandle**ドライバー マネージャーによってドライバーとして次のとおりです。  
+ は、ドライバーのドライバーマネージャーによって次のように**SQLAllocHandle**にマップされます。  
   
 ```  
 SQLAllocHandle(SQL_HANDLE_STMT, InputHandle, OutputHandlePtr)  
 ```  
   
- *InputHandle*に設定*hdbc*と*OutputHandlePtr*設定*phstmt*します。
+ *InputHandle*を*hdbc*に設定し、 *OutputHandlePtr*を*phstmt*に設定します。

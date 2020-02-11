@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8f177f8b2c399be020817ccc4228c58f11976512
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63228360"
 ---
 # <a name="rename-a-database-diagram-visual-database-tools"></a>データベース ダイアグラムの名前変更 (Visual Database Tools)
@@ -39,7 +39,7 @@ ms.locfileid: "63228360"
   
      新しい名前のデータベース ダイアグラムが、オブジェクト エクスプローラーに表示されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データベース ダイアグラムの使用 (Visual Database Tools)](visual-database-tools.md)  
   
   

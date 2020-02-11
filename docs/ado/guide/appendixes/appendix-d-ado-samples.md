@@ -1,5 +1,5 @@
 ---
-title: 付録 D:ADO のサンプル |Microsoft Docs
+title: '付録 D: ADO Samples |Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,23 +14,23 @@ ms.assetid: 1582e411-55ac-40f0-bd3d-9a10654e4b67
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5b4a1289755d04c2d9f861fbdcb704fad3d8707d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926866"
 ---
-# <a name="appendix-d-ado-samples-in-the-windows-sdk"></a>付録 D:Windows SDK での ADO サンプル
-Windows SDK には、ADO と RDS のコードの使用を示すいくつかのサンプル アプリケーションが含まれています。 これらのサンプルでは、ADO と RDS を使用する方法を学習するが、実稼働サーバー上に展開するためのものはありません。
+# <a name="appendix-d-ado-samples-in-the-windows-sdk"></a>付録 D: Windows SDK の ADO サンプル
+Windows SDK には、ADO と RDS コードの使用方法を示すサンプルアプリケーションがいくつか含まれています。 これらのサンプルは、ADO と RDS の使用方法を学習するのに役立ちますが、実稼働サーバーに配置するためのものではありません。
 
 > [!NOTE]
->  企業、名前、およびサンプルで使用されるデータは、明記しない限り、架空のものです。
+>  サンプルで使用されている企業、名前、データは、特に明記されていない限り、架空のものです。
 
- ADO のサンプルを検索するには、C:\Program files \microsoft SDKs\Windows\v6.0 など、Windows SDK のルート フォルダーに移動します。 Samples\dataaccess\ADO サブフォルダーに移動します。
+ ADO サンプルを検索するには、C:\Program SDKs\Windows\v6.0. などの Windows SDK のルートフォルダーに移動します。 次に、Samples\dataaccess\ADO サブフォルダーに移動します。
 
- RDS の ADO サンプル アプリケーションで最初に、それぞれ、ADO と RDS のサンプル フォルダーから default.htm を開きます。 これらのファイルは、各利用可能なサンプル アプリケーションについて説明して、構成およびサンプル ソース コードを参照する方法、サンプルを実行する方法について説明します。
+ ADO および RDS サンプルアプリケーションの使用を開始するには、ADO および RDS samples フォルダーから default.htm をそれぞれ開きます。 これらのファイルには、使用可能な各サンプルアプリケーションが記述されています。サンプルソースコードを参照する方法については、サンプルの構成方法と実行方法を説明します。
 
- ADO のドキュメントには、このオンライン ヘルプのトピックとして含まれている複数の言語でのコード例も含まれています。 これらの例の詳細については、次を参照してください。 [ADO のコード例](../../../ado/reference/ado-api/ado-code-examples.md)します。
+ ADO ドキュメントには、このオンラインヘルプのトピックとして記載されている複数の言語のコード例も含まれています。 これらの例の詳細については、「 [ADO コード例](../../../ado/reference/ado-api/ado-code-examples.md)」を参照してください。
 
-## <a name="see-also"></a>関連項目
- [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md) [ADO の API リファレンス](../../../ado/reference/ado-api/ado-api-reference.md) [ADO のコード例](../../../ado/reference/ado-api/ado-code-examples.md) [Visual Basic での ADO のコード例](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md) [ADO コード例として VBScript](../../../ado/reference/ado-api/ado-code-examples-vbscript.md) [ビジュアルでの ADO のコード例C++ ](../../../ado/reference/ado-api/ado-code-examples-in-visual-c.md) [付録 a:プロバイダー](../../../ado/guide/appendixes/appendix-a-providers.md) [RDS の構成](../../../ado/guide/remote-data-service/configuring-rds.md)[付録 c:ADO を使用したプログラミング](../../../ado/guide/appendixes/appendix-c-programming-with-ado.md) [ADO 履歴](../../../ado/guide/ado-history.md)
+## <a name="see-also"></a>参照
+ [Microsoft ActiveX データオブジェクト (ado)](../../../ado/microsoft-activex-data-objects-ado.md) [ado API リファレンス](../../../ado/reference/ado-api/ado-api-reference.md) [ado コード例](../../../ado/reference/ado-api/ado-code-examples.md)ado コード例[Visual Basic](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md) [ADO コード例](../../../ado/reference/ado-api/ado-code-examples-vbscript.md) [Visual C++](../../../ado/reference/ado-api/ado-code-examples-in-visual-c.md) [付録 a: プロバイダー](../../../ado/guide/appendixes/appendix-a-providers.md) [構成 RDS](../../../ado/guide/remote-data-service/configuring-rds.md) [付録 C: ado](../../../ado/guide/appendixes/appendix-c-programming-with-ado.md) [ado 履歴](../../../ado/guide/ado-history.md)を使用したプログラミング

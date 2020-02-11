@@ -1,6 +1,6 @@
 ---
-title: '[ツールボックス アイテムの選択] ([メンテナンス タスク] ページ) | Microsoft Docs'
-ms.custom: ''
+title: '[ツールボックス アイテムの選択] \([メンテナンス タスク] ページ)'
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b92c9054-7479-45d8-a54c-c1bb6699bdb3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ffbc5973d32de6d7fdf8a880ebc2bdf758ff2e73
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: decc1918fbc8da03ce4724dfb0dd5ec69f8fed35
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265296"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257734"
 ---
 # <a name="choose-toolbox-items-maintenance-tasks-page"></a>[ツールボックス アイテムの選択] \([メンテナンス タスク] ページ)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "68265296"
 ## <a name="options"></a>オプション  
 **[メンテナンス タスク]** タブには次の列が表示されます。  
   
-**[名前]**  
+**Name**  
 使用可能なコンポーネントの名前が表示されます。 それぞれの名前の前に、チェック ボックスがあります。 このチェック ボックスがオンの場合、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] がコンピューターのレジストリでそのコンポーネントのエントリを検出したことを示します。 そのコンポーネントはアクティブな **[ツールボックス]** タブに既に表示されているか、 **[OK]** をクリックすると追加されます。 このチェック ボックスがオフの場合、コンポーネントが現在 **[ツールボックス]** に表示されていないか、 **[OK]** をクリックすると **[ツールボックス]** から削除されます。  
   
 **[パス]**  
@@ -41,9 +41,9 @@ ms.locfileid: "68265296"
 名前をクリックすると、 **[言語]** ボックスおよび **[バージョン]** ボックスにコンポーネントの属性とアイコンが表示されます。  
   
 ## <a name="options"></a>オプション  
-**[言語]**  
+**Language**  
 コンポーネントの言語です。  
   
-**[バージョン]**  
+**Version**  
 コンポーネントのバージョンです。  
   

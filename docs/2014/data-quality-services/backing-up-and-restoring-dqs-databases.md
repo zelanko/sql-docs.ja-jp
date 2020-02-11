@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 50b051cf2780fc1a94830c461d9ae30674bb7dad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65481152"
 ---
 # <a name="backing-up-and-restoring-dqs-databases"></a>DQS データベースのバックアップと復元
@@ -38,7 +38,7 @@ ms.locfileid: "65481152"
   
 -   DQS の実行中のアクティビティを終了させたり実行中のプロセスを停止させたりするには、DQS_MAIN データベースの dqs_administrator ロールが必要です。  
   
-##  <a name="BackupRestore"></a> DQS データベースのバックアップと復元  
+##  <a name="BackupRestore"></a>DQS データベースのバックアップと復元  
   
 1.  Microsoft SQL Server Management Studio を起動し、適切な SQL Server インスタンスに接続します。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "65481152"
   
 6.  SQL Server の現在のインスタンスから切断し、データベースを復元する SQL Server インスタンスに接続します。  
   
-7.  DQS_MAIN データベースを復元します。 SQL Server データベースを復元する手順については、次を参照してください。[データベース バックアップを復元&#40;SQL Server Management Studio&#41;](../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)します。  
+7.  DQS_MAIN データベースを復元します。 SQL Server データベースを復元するための詳細な手順については、「 [restore a Database Backup &#40;SQL Server Management Studio&#41;](../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)」を参照してください。  
   
 8.  DQS_PROJECTS データベースを復元します。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "65481152"
   
 10. オブジェクト エクスプローラーでサーバーを右クリックし、 **[新しいクエリ]** をクリックします。  
   
-11. クエリ エディター ウィンドウに次の SQL ステートメントをコピーし、 *\<PASSWORD>* を DQS サーバーのインストール中に入力したデータベース マスター キーのパスワードで置き換えます。  
+11. クエリエディターウィンドウで、次の SQL ステートメントをコピーし、 * \<パスワード>* を、DQS のインストール時にデータベースマスターキーのインストール時に指定したパスワードに置き換えます。  
   
     ```  
     USE [DQS_MAIN]  
@@ -70,9 +70,9 @@ ms.locfileid: "65481152"
   
     ```  
   
-12. F5 キーを押してステートメントを実行します。 **[結果]** ペインを確認してステートメントが正常に実行されたことを確認します。  
+12. F5 キーを押してステートメントを実行します。 [**結果**] ウィンドウで、ステートメントが正常に実行されたことを確認します。  
   
 ## <a name="see-also"></a>参照  
- [DQS データベースの管理](../../2014/data-quality-services/manage-dqs-databases.md)  
+ [Manage DQS Databases](../../2014/data-quality-services/manage-dqs-databases.md)  
   
   

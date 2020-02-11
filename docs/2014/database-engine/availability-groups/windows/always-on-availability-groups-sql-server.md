@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2e040fb9c05683be9d737ea134710c03d36317cd
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75229008"
 ---
 # <a name="always-on-availability-groups-sql-server"></a>AlwaysOn 可用性グループ (SQL Server)
@@ -155,11 +155,11 @@ ms.locfileid: "75229008"
 > [!WARNING]  
 >  で[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]他の機能を使用する場合の制限事項と制限事項については、「 [Always On 可用性グループ: 相互運用性」を参照してください。SQL Server;](always-on-availability-groups-interoperability-sql-server.md)。  
   
-##  <a name="RelatedTasks"></a>関連タスク  
+##  <a name="RelatedTasks"></a> 関連タスク  
   
 -   [Always On 可用性グループを使用したはじめにSQL Server;](getting-started-with-always-on-availability-groups-sql-server.md)  
   
-##  <a name="RelatedContent"></a>関連するコンテンツ  
+##  <a name="RelatedContent"></a> 関連コンテンツ  
   
 -   **Blog**  
   
@@ -175,7 +175,7 @@ ms.locfileid: "75229008"
   
 -   **ペーパー**  
   
-     [高可用性とディザスターリカバリーのための Microsoft SQL Server Always On ソリューションガイド](https://go.microsoft.com/fwlink/?LinkId=227600)  
+     [高可用性と災害復旧のための Microsoft SQL Server AlwaysOn ソリューション ガイド](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
   
   

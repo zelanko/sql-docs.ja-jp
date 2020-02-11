@@ -9,27 +9,27 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 1f72832fd684dd59e27ce58576a7f65fa8796347
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68074809"
 ---
 # <a name="identifiers-dmx"></a>識別子 (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  すべてのオブジェクトで[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]に識別子を設定する必要があります。 オブジェクトの名前が識別子となります。 サーバー、データベース、およびデータベース オブジェクト (データ ソース、データ ソース ビュー、キューブ、ディメンション、マイニング モデルなど) は識別子を持っています。  
+  内のすべて[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]のオブジェクトには識別子が必要です。 オブジェクトの名前は識別子です。 サーバー、データベース、およびデータベースオブジェクト (データソース、データソースビュー、キューブ、ディメンション、マイニングモデルなど) には識別子があります。  
   
- データ マイニング拡張機能 (DMX) には 2 つのクラスの識別子があります。  
+ データマイニング拡張機能 (DMX) には、次の2つの識別子のクラスがあります。  
   
 -   [標準識別子](#RegularIdentifiers)  
   
 -   [区切られた識別子](#DelimitedIdentifiers)  
   
- オブジェクト識別子は、オブジェクトの定義時に作成されます。 オブジェクトを参照するには、この作成された識別子を使用します。 識別子は 100 文字以下である必要があります。  
+ オブジェクト識別子は、オブジェクトを定義するときに作成されます。 次に、識別子を使用してオブジェクトを参照します。 識別子は100文字以下でなければなりません。  
   
-##  <a name="RegularIdentifiers"></a> 標準識別子  
- DMX の標準識別子は、識別子の形式に関する [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] の規則に準拠しています。 DMX の標準識別子には区切り記号は必要ありません。 通常、区切られていない識別子を使用する DMX ステートメントの例を次に示します。  
+##  <a name="RegularIdentifiers"></a>標準識別子  
+ DMX の標準識別子は、識別子の形式に関する [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] の規則に準拠しています。 DMX の標準識別子には区切り記号は必要ありません。 次に、通常の非区切られた識別子を使用する DMX ステートメントの例を示します。  
   
 ```  
 SELECT * FROM Clustering.CONTENT;  
@@ -40,26 +40,26 @@ SELECT * FROM Clustering.CONTENT;
   
 1.  標準識別子の最初の文字は、次のうちのいずれかである必要があります。  
   
-    -   Unicode 規格 &#xa0;2.0 で定義されている文字。 これには、ラテン文字 a ~ z、a ~ Z、およびその他の言語の文字が含まれます。  
+    -   Unicode 規格&#xA0;2.0 で定義されている文字。 これには、a ~ z、A ~ Z、および他の言語の文字文字が含まれます。  
   
     -   アンダースコア (_)。  
   
-2.  名前の先頭以外では、次の文字を使用できます。  
+2.  後続の文字は次のようになります。  
   
-    -   Unicode 規格 &#xa0;2.0 で定義されているようになりました。  
+    -   Unicode 規格&#xA0;2.0 で定義されている文字  
   
     -   Basic Latin スクリプトまたはその他の各国スクリプトの 10 進数  
   
     -   アンダースコア (_)。  
   
-3.  DMX 予約語を識別子として使用することはできません。 DMX では、予約語の大文字と小文字は区別されません。 詳細については、次を参照してください。[予約済みキーワード&#40;DMX&#41;](../dmx/reserved-keywords-dmx.md)します。  
+3.  DMX 予約語を識別子として使用することはできません。 予約語は、DMX では大文字と小文字が区別されません。 詳細については、「 [DMX&#41;&#40;の予約済みキーワード](../dmx/reserved-keywords-dmx.md)」を参照してください。  
   
-4.  埋め込まれたスペースや特殊文字を識別子に含めることはできません。  
+4.  識別子には、空白や特殊文字を埋め込むことはできません。  
   
- これらの規則に準拠していない識別子を DMX ステートメントで使用する場合は、その識別子をかっこで区切る必要があります。  
+ これらの規則に準拠していない識別子は、DMX ステートメントで使用するときに、角かっこで区切る必要があります。  
   
-##  <a name="DelimitedIdentifiers"></a> 区切られた識別子  
- 区切られた識別子はかっこ ([ ]) で囲みます。  これらの規則に準拠した区切られた識別子を使用した DMX ステートメントの例は、次のとおりです。  
+##  <a name="DelimitedIdentifiers"></a>区切られた識別子  
+ 区切られた識別子は、角かっこ ([]) で囲みます。  これらの規則に準拠した区切られた識別子を使用した DMX ステートメントの例は、次のとおりです。  
   
 ```  
 SELECT * FROM [Marketing_Clusters].CONTENT;  
@@ -71,38 +71,39 @@ SELECT * FROM [Marketing_Clusters].CONTENT;
 SELECT * FROM [Targeted Mailing].CONTENT;  
 ```  
   
- 区切られた識別子を使用するのは、次のような場合です。  
+ 区切られた識別子は、次のような場合に使用します。  
   
 -   予約語をオブジェクト名やオブジェクト名の一部に使用する場合。  
   
-     予約キーワードはオブジェクト名に使用しないことをお勧めします。 以前のバージョンからアップグレードしたデータベースに[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]の以前のバージョンで予約されていなかった単語を含む識別子が含まれている可能性があります[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]の予約語であるが、[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]します。 オブジェクト名の変更が可能になるまで、このようなオブジェクトを参照するには、区切られた識別子を使用します。  
+     予約されたキーワードをオブジェクト名として使用しないことをお勧めします。 以前のバージョン[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]のからアップグレードしたデータベースには、以前の[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]バージョンので予約されていないものの、に[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]予約されている単語を含む識別子が含まれる場合があります。 オブジェクトの名前を変更できるようにするには、区切られた識別子を使用して、このようなオブジェクトを参照します。  
   
 -   修飾された識別子として示されていない文字を使用する場合。  
   
-     [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] では、現在のコード ページ内の文字はすべて区切られた識別子に使用することができますが、特殊文字を区別しないでオブジェクト名に使用すると、DMX ステートメントの読み取りおよびメンテナンスが難しくなる場合があります。  
+     
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] では、現在のコード ページ内の文字はすべて区切られた識別子に使用することができますが、特殊文字を区別しないでオブジェクト名に使用すると、DMX ステートメントの読み取りおよびメンテナンスが難しくなる場合があります。  
   
-### <a name="rules-for-delimited-identifiers"></a>区切られた識別子に関する規則  
+### <a name="rules-for-delimited-identifiers"></a>区切られた識別子の規則  
  区切られた識別子の形式に関する規則は、次のとおりです。  
   
-1.  区切られた識別子は、標準識別子の場合と同じ文字数、つまり、区切り記号を除いた 1 ～ 100 文字で構成されます。  
+1.  区切られた識別子には、標準識別子と同じ文字数を含めることができます (区切り文字を含まない 1 ~ 100 文字)。  
   
-2.  識別子の本体は、区切り記号を含め、現在のコード ページ内で使用される文字の任意の組み合わせで構成されます。 識別子の本体に区切り記号が含まれている場合は、特別な処理が必要になります。  
+2.  識別子の本体には、現在のコードページで使用されている文字の任意の組み合わせを含めることができます (区切り文字自体を含む)。 識別子の本体に区切り文字が含まれている場合は、特別な処理が必要です。  
   
-    -   識別子の本体に左かっこ ([) が含まれている場合は、処理を行う必要はありません。  
+    -   識別子の本体に左角かっこ ([) が含まれている場合は、追加の処理は必要ありません。  
   
-    -   識別子の本体に右かっこ (]) が含まれている場合は、コード ページ内で表現するために右かっこを 2 つ (]]) 指定する必要があります。  
+    -   識別子の本体に右角かっこ (]) が含まれている場合は、コードページ内で表現するために2つの右角かっこ ([]]) を指定する必要があります。  
   
-### <a name="delimiting-identifiers-with-multiple-parts"></a>複数の部分に区切られた識別子  
- 修飾されたオブジェクト名を使用する際、場合によってはオブジェクト名を構成している複数の識別子を区切る必要があります。 各識別子は個々に区切ってください。  
+### <a name="delimiting-identifiers-with-multiple-parts"></a>複数の部分で識別子を区切る  
+ 修飾されたオブジェクト名を使用する場合、オブジェクト名を構成する識別子の1つ以上を区切る必要がある場合があります。 各識別子は個々に区切ってください。  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング拡張機能 &#40;DMX&#41; リファレンス](../dmx/data-mining-extensions-dmx-reference.md)   
- [データ マイニング拡張機能&#40;DMX&#41;構文要素](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
- [データ マイニング拡張機能&#40;DMX&#41;関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [データ マイニング拡張機能&#40;DMX&#41;演算子リファレンス](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [データ マイニング拡張機能&#40;DMX&#41;ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)   
- [データ マイニング拡張機能&#40;DMX&#41;構文表記規則](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
- [一般的な予測関数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
+ [DMX&#41; リファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-reference.md)   
+ [DMX&#41; の構文要素を &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
+ [DMX&#41; 関数リファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [DMX&#41; オペレーターリファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [DMX&#41; ステートメントリファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-statements.md)   
+ [DMX&#41; 構文表記規則を &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
+ [DMX&#41;&#40;一般的な予測関数](../dmx/general-prediction-functions-dmx.md)   
  [構造と DMX 予測クエリの使用](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [DMX 選択ステートメントについて](../dmx/understanding-the-dmx-select-statement.md)  
   

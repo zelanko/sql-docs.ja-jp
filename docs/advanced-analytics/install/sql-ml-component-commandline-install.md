@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 2bc231a064862c5e2a16f60d85a5166fd4765566
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727587"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-components-from-the-command-line"></a>コマンド ラインから SQL Server Machine Learning R および Python コンポーネントをインストールする
@@ -48,7 +48,7 @@ ms.locfileid: "73727587"
 コマンド プロンプトを使用してインストールする場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、/Q パラメーターを使用した非表示モード、または /QS パラメーターを使用した簡易非表示モードがサポートされます。 /QS スイッチでは、進捗状況のみが表示され、入力はできません。また、該当する場合でもエラー メッセージは表示されません。 /QS パラメーターは、/Action=install を指定した場合にのみサポートされます。
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-| 引数 | [説明] |
+| 引数 | 説明 |
 |-----------|-------------|
 | /FEATURES = AdvancedAnalytics | In-Database バージョンをインストールします:SQL Server R Services (In-Database)。  |
 | /FEATURES = SQL_SHARED_MR | スタンドアロン バージョンの R 機能をインストールします:SQL Server R Server (スタンドアロン)。 スタンドアロン サーバーは、データベース エンジンのインスタンスにバインドされない "共有機能" です。|
@@ -59,7 +59,7 @@ ms.locfileid: "73727587"
 ::: moniker-end
 
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-| 引数 | [説明] |
+| 引数 | 説明 |
 |-----------|-------------|
 | /FEATURES = AdvancedAnalytics | In-Database バージョンをインストールします:SQL Server Machine Learning Services (In-Database)。  |
 | /FEATURES = SQL_INST_MR | AdvancedAnalytics と組み合わせて使用します。 Microsoft R Open や R の専用パッケージなど、(In-Database) R 機能をインストールします。 |
@@ -70,11 +70,11 @@ ms.locfileid: "73727587"
 | /IACCEPTPYTHONLICENSETERMS | Python コンポーネントを使用するためのライセンス条項に同意したことを示します。 |
 | /IACCEPTSQLSERVERLICENSETERMS | SQL Server を使用するためのライセンス条項に同意したことを示します。|
 | /MRCACHEDIRECTORY | オフライン セットアップでは、R コンポーネントの CAB ファイルを含んだフォルダーを設定します。 |
-| /MPYCACHEDIRECTORY | 将来の使用のために予約されています。 インターネットに接続されていないコンピューターへのインストール用に、%TEMP% を使って Python コンポーネントの CAB ファイルを格納します。 |
+| /MPYCACHEDIRECTORY | 将来利用するために予約されています。 インターネットに接続されていないコンピューターへのインストール用に、%TEMP% を使って Python コンポーネントの CAB ファイルを格納します。 |
 ::: moniker-end
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
-| 引数 | [説明] |
+| 引数 | 説明 |
 |-----------|-------------|
 | /FEATURES = AdvancedAnalytics | In-Database バージョンをインストールします:SQL Server Machine Learning Services (In-Database)。  |
 | /FEATURES = SQL_INST_MR | AdvancedAnalytics と組み合わせて使用します。 Microsoft R Open や R の専用パッケージなど、(In-Database) R 機能をインストールします。 |
@@ -86,7 +86,7 @@ ms.locfileid: "73727587"
 | /IACCEPTPYTHONLICENSETERMS | Python コンポーネントを使用するためのライセンス条項に同意したことを示します。 |
 | /IACCEPTSQLSERVERLICENSETERMS | SQL Server を使用するためのライセンス条項に同意したことを示します。|
 | /MRCACHEDIRECTORY | オフライン セットアップでは、R コンポーネントの CAB ファイルを含んだフォルダーを設定します。 |
-| /MPYCACHEDIRECTORY | 将来の使用のために予約されています。 インターネットに接続されていないコンピューターへのインストール用に、%TEMP% を使って Python コンポーネントの CAB ファイルを格納します。 |
+| /MPYCACHEDIRECTORY | 将来利用するために予約されています。 インターネットに接続されていないコンピューターへのインストール用に、%TEMP% を使って Python コンポーネントの CAB ファイルを格納します。 |
 ::: moniker-end
 
 ## <a name="indb"></a> In-Database インスタンスのインストール
@@ -216,16 +216,16 @@ Python コマンドを開くには、`\Program files\Microsoft SQL Server\150 (o
 
 * [SQL Server のカスタム レポート](../r/monitor-r-services-using-custom-reports-in-management-studio.md)
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
-R 開発者はいくつかの簡単な例を試して、SQL Server での R の動作方法の基本を確認できます。 次の手順については、以下のリンクをご覧ください。
+R 開発者はいくつかの簡単な例を試して、SQL Server での R の動作方法の基本を確認できます。 次の手順については、以下のリンクを参照してください。
 
-+ [チュートリアル: T-SQL での R の実行](../tutorials/quickstart-r-create-script.md)
-+ [チュートリアル: R 開発者向けのデータベース内分析](../tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [チュートリアル:T-SQL での R の実行](../tutorials/quickstart-r-create-script.md)
++ [チュートリアル:R 開発者向けのデータベース内分析](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 
 Python 開発者は、次のチュートリアルに従って、SQL Server で Python を使用する方法を学習できます。
 
-+ [チュートリアル: T-SQL での Python の実行](../tutorials/run-python-using-t-sql.md)
-+ [チュートリアル: Python 開発者向けのデータベース内分析](../tutorials/sqldev-in-database-python-for-sql-developers.md)
++ [チュートリアル:T-SQL での Python の実行](../tutorials/run-python-using-t-sql.md)
++ [チュートリアル:Python 開発者向けのデータベース内分析](../tutorials/sqldev-in-database-python-for-sql-developers.md)
 
 実際のシナリオに基づいた機械学習の例については、[機械学習のチュートリアル](../tutorials/machine-learning-services-tutorials.md)を参照してください。

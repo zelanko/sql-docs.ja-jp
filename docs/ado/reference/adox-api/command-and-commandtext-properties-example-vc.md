@@ -1,5 +1,5 @@
 ---
-title: Command プロパティおよび CommandText プロパティの例 (vc++) |Microsoft Docs
+title: Command プロパティと CommandText プロパティの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5a007b9a-be11-4fba-96db-6252993f97b8
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b3c1a54ea3f101449d18fcae00373344b7ecf11c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1dace0f436d748ca3ab6d482a9eda4920f2f866d
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67966733"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76910528"
 ---
 # <a name="command-and-commandtext-properties-example-vc"></a>Command プロパティおよび CommandText プロパティの例 (VC++)
-次のコードを使用する方法を示します、[コマンド](../../../ado/reference/adox-api/command-property-adox.md)プロシージャのテキストを更新するプロパティ。  
+次のコードは、 [Command](../../../ado/reference/adox-api/command-property-adox.md)プロパティを使用してプロシージャのテキストを更新する方法を示しています。  
   
 ```  
 // BeginCommandTextCpp  
@@ -83,12 +83,12 @@ int main() {
       printf("\n\tSource :  %s \n\tdescription : %s \n ", (LPCSTR)bstrSource, (LPCSTR)bstrDescription);  
    }  
    catch(...) {  
-      cout << "Error occured in ProcedureTextX...."<< endl;  
+      cout << "Error occurred in ProcedureTextX...."<< endl;  
    }  
   
    ::CoUninitialize();  
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Command プロパティ (ADOX)](../../../ado/reference/adox-api/command-property-adox.md)

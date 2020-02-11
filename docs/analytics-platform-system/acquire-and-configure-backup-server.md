@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: e160c606b19933934ec844b477ffec08475307d8
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401490"
 ---
 # <a name="acquire-and-configure-a-backup-server-for-parallel-data-warehouse"></a>並列データウェアハウスのバックアップサーバーを取得して構成する
@@ -89,7 +89,7 @@ PDW は UNC ファイル共有を使用してバックアップサーバーに�
   
 5.  バックアップドメインアカウントの資格情報を PDW に追加します。  
   
-    例:  
+    次に例を示します。  
   
     ```sql  
     EXEC sp_pdw_add_network_credentials '10.192.147.63', 'seattle\david', '********';  
@@ -109,7 +109,7 @@ PDW は UNC ファイル共有を使用してバックアップサーバーに�
 > [!IMPORTANT]  
 > 必ず、バックアップサーバーの InfiniBand IP アドレスを使用してください。 それ以外の場合、データは InfiniBand ではなくイーサネット経由でコピーされます。  
   
-例:  
+次に例を示します。  
   
 ```sql  
 BACKUP DATABASE Invoices TO DISK = '\\10.172.14.255\backups\yearly\Invoices2013Full';  
@@ -118,7 +118,7 @@ RESTORE DATABASE Invoices2013Full
 FROM DISK = '\\10.172.14.255\backups\yearly\Invoices2013Full'  
 ```  
   
-詳細については、次のドキュメントを参照してください。 
+詳細については、次を参照してください。 
   
 -   [BACKUP DATABASE](../t-sql/statements/backup-database-parallel-data-warehouse.md)   
   

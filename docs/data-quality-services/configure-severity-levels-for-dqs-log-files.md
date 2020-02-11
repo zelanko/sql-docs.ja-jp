@@ -18,10 +18,10 @@ ms.assetid: 66ffcdec-4bf7-4dd5-a221-fd9baefeeef4
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 4215cda5bfc82f0c6d195f336a1099309ab18154
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75255637"
 ---
 # <a name="configure-severity-levels-for-dqs-log-files"></a>DQS ログ ファイルの重大度レベルの構成
@@ -42,11 +42,11 @@ ms.locfileid: "75255637"
   
  DQS の各種のアクティビティやモジュールの重大度レベルを構成することで、DQS の対応するアクティビティやモジュールについて、DQS ログ ファイルに書き込む情報をフィルター処理できます。 たとえば、DQS のアクティビティの重大度レベルを **Warn**に設定すると、DQS のアクティビティに関連するメッセージのうち、警告メッセージとそれよりも重大度が高いメッセージ (Error と Fatal) だけがログに記録されます。  
   
-##  <a name="BeforeYouBegin"></a>開始する前に  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Security"></a>保護  
+###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a>許可  
+####  <a name="Permissions"></a> Permissions  
  ログの重大度設定を構成するには、DQS_MAIN データベースの dqs_administrator ロールが必要です。  
   
 ##  <a name="ConfigureActivity"></a>アクティビティレベルでの重大度レベルの構成  
@@ -65,7 +65,7 @@ ms.locfileid: "75255637"
     > [!NOTE]  
     >  既定では、各アクティビティについて **[Error]** が選択されています。 つまり、既定では、各アクティビティのエラー メッセージと重大なメッセージが DQS ログ ファイルに書き込まれます。  
   
-5.  [**閉じる**] をクリックします。  
+5.  **[閉じる]** をクリックします。  
   
 ##  <a name="ConfigureModule"></a>モジュールレベルでの重大度レベルの構成 (詳細)  
  
@@ -94,7 +94,7 @@ ms.locfileid: "75255637"
 4.  必要に応じて、他のモジュールに対して手順 2. および 3. を繰り返します。 
   **[モジュールを追加します]** アイコンと **[モジュールを削除します]** アイコンをクリックして、グリッドの行を追加したり削除したりすることもできます。  
   
-5.  [**閉じる**] をクリックします。  
+5.  **[閉じる]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
  [DQS ログ ファイルの詳細設定の構成](../data-quality-services/configure-advanced-settings-for-dqs-log-files.md)  

@@ -18,10 +18,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: fc99b725f4c5895306d544df14bf2a9390189066
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244533"
 ---
 # <a name="security-center-for-sql-server-database-engine-and-azure-sql-database"></a>SQL Server データベース エンジンと Azure SQL Database のセキュリティ センター
@@ -94,7 +94,7 @@ ms.locfileid: "75244533"
   
 -   [権限の階層 &#40;データベースエンジン&#41;](permissions-hierarchy-database-engine.md)  
   
--   [許可](permissions-database-engine.md)  
+-   [アクセス許可](permissions-database-engine.md)  
   
 -   [[セキュリティ保護可能なリソース]](securables.md)  
   
@@ -111,14 +111,14 @@ ms.locfileid: "75244533"
   
 -   [行レベルのセキュリティ](https://msdn.microsoft.com/library/azure/dn765131.aspx)  
   
--   [動的データ マスク](https://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)  
+-   [動的なデータ マスキング](https://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)  
   
 -   [署名されたオブジェクト](/sql/t-sql/statements/add-signature-transact-sql)  
   
  ![小さいファイルフォルダーアイコン](../../integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン")**接続のセキュリティ: 制限とセキュリティ保護**  
  **ファイアウォールによる保護**  
   
--   [データベースエンジンアクセスできるように Windows ファイアウォールを構成する](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)  
+-   [データベース エンジン アクセスを有効にするための Windows ファイアウォールを構成する](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)  
   
 -   [ファイアウォール設定の Azure SQL Database](/sql/relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database)  
   
@@ -133,7 +133,7 @@ ms.locfileid: "75244533"
  ![小さいファイルフォルダーアイコン](../../integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン")の**監査: アクセスの記録**  
  **自動監査**  
   
--   [SQL Server 監査 &#40;データベースエンジン&#41;](auditing/sql-server-audit-database-engine.md)  
+-   [SQL Server Audit &#40;Database Engine&#41;](auditing/sql-server-audit-database-engine.md)  
   
 -   [SQL Database 監査](https://azure.microsoft.com/documentation/articles/sql-database-auditing-get-started/)  
   
@@ -155,10 +155,10 @@ ms.locfileid: "75244533"
  [SQL Server のセキュリティ保護](securing-sql-server.md)   
  [プリンシパル &#40;データベースエンジン&#41;](authentication-access/principals-database-engine.md)   
  [証明書と非対称キーの SQL Server](sql-server-certificates-and-asymmetric-keys.md)   
- [SQL Server 暗号化](encryption/sql-server-encryption.md)   
+ [SQL Server の暗号化](encryption/sql-server-encryption.md)   
  [セキュリティ構成](surface-area-configuration.md)   
  [強力なパスワード](strong-passwords.md)   
  [信頼可能データベースのプロパティ](trustworthy-database-property.md)   
- [データベースエンジンの機能とタスク](../../database-engine/database-engine-features-and-tasks.md)  
+ [データベース エンジンの機能とタスク](../../database-engine/database-engine-features-and-tasks.md)  
   
   

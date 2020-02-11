@@ -1,5 +1,5 @@
 ---
-title: ODBC サービス プロバイダー インターフェイス (SPI) リファレンス |Microsoft Docs
+title: ODBC サービスプロバイダーインターフェイス (SPI) リファレンス |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,20 +11,20 @@ ms.assetid: cdeffb4a-f344-4abe-97f3-be2ede1c8e59
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 88053620fa413c50a8faff4cc47cbbe1457249f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68073835"
 ---
 # <a name="odbc-service-provider-interface-spi-reference"></a>ODBC サービス プロバイダー インターフェイス (SPI) リファレンス
-これまでは、ODBC アプリケーション プログラミング インターフェイス (API) を定義します。 アプリケーションは、API 内の関数を呼び出すことができるし、ドライバー マネージャーとドライバーの両方で実装する必要があります。  
+従来、ODBC では、アプリケーションプログラミングインターフェイス (API) が定義されていました。 API 内の関数は、アプリケーションから呼び出すことができ、ドライバーマネージャーとドライバーの両方で実装する必要があります。  
   
- ドライバー対応接続プール機能の追加により、ODBC には、サービス プロバイダー インターフェイス (SPI) が導入されています。 SPI 内の関数は、ドライバー マネージャーとドライバーの間の通信に使用されます。 SPI 関数は、ドライバーによって実装されます。ドライバー マネージャーは、アプリケーションに SPI 関数を公開しません。 アプリケーションでは、これらの関数を直接呼び出さないでください。  
+ ODBC では、ドライバー対応の接続プール機能が追加され、service provider interface (SPI) が導入されています。 SPI 内の関数は、ドライバーマネージャーとドライバーの間の通信に使用されます。 SPI 関数はドライバーによって実装されます。ドライバーマネージャーは、アプリケーションに対して SPI 関数を公開しません。 アプリケーションはこれらの関数を直接呼び出すことはできません。  
   
- ODBC ドライバーの開発の sqlspi.h が含まれます。  
+ ODBC ドライバーの開発には sqlspi. h を含めます。  
   
- このセクションには、次のトピックが含まれています。  
+ このセクションでは、以下のトピックについて説明します。  
   
 -   [SQLCleanupConnectionPoolID](../../../odbc/reference/syntax/sqlcleanupconnectionpoolid-function.md)  
   
@@ -40,7 +40,7 @@ ms.locfileid: "68073835"
   
 -   [SQLSetDriverConnectInfo](../../../odbc/reference/syntax/installation-and-configuration-wwi-oltp.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ODBC ドライバーの開発](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
- [ODBC ドライバー対応接続プールの開発](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)   
+ [ODBC ドライバーでの接続プール認識の開発](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)   
  [ドライバー マネージャーの接続プール](../../../odbc/reference/develop-app/driver-manager-connection-pooling.md)

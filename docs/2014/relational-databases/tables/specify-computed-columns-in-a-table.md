@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3ca62d8d45ab5a116ab657646abf2393c69e73c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211802"
 ---
 # <a name="specify-computed-columns-in-a-table"></a>テーブルの計算列の指定
@@ -28,7 +28,7 @@ ms.locfileid: "68211802"
   
      [制限事項と制約事項](#Limitations)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **計算列を指定する方法:**  
   
@@ -62,7 +62,7 @@ ms.locfileid: "68211802"
 4.  **[(数式)]** 子プロパティで、列の式を右側のグリッド セルに入力します。 たとえば、 `SalesTotal` 列に `SubTotal+TaxAmt+Freight`という数式を入力した場合、テーブル内の各行のこれらの列の値が加算されます。  
   
     > [!IMPORTANT]  
-    >  数式でデータ型が異なる 2 つの式を結合すると、データ型の優先順位の規則によって、優先順位の低いデータ型を優先順位の高いデータ型に変換することが指定されます。 暗黙的な変換がサポートされていない場合は、「`Error validating the formula for column column_name.`」というエラーが返されます。 データ型の競合を解決するには、CAST 関数または CONVERT 関数を使用します。 たとえば、`nvarchar` 型の列を `int` 型の列と結合する場合は、この数式 `('Prod'+CONVERT(nvarchar(23),ProductID))` のように、整数型を `nvarchar` に変換する必要があります。 詳細については、「[CAST and CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql)」を参照してください。  
+    >  数式でデータ型が異なる 2 つの式を結合すると、データ型の優先順位の規則によって、優先順位の低いデータ型を優先順位の高いデータ型に変換することが指定されます。 暗黙的な変換がサポートされていない場合は、「`Error validating the formula for column column_name.`」というエラーが返されます。 データ型の競合を解決するには、CAST 関数または CONVERT 関数を使用します。 たとえば、`nvarchar` 型の列を `int` 型の列と結合する場合は、この数式 `nvarchar` のように、整数型を `('Prod'+CONVERT(nvarchar(23),ProductID))` に変換する必要があります。 詳細については、「[CAST and CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql)」を参照してください。  
   
 5.  **[Is Persisted]** 子プロパティのドロップダウンの **[はい]** または **[いいえ]** をクリックし、データを永続化するかどうかを指定します。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "68211802"
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、 `QtyAvailable` 列の値と `UnitPrice` 列の値を乗算する計算列を含むテーブルを作成します。  
+3.  次の例をコピーし、クエリウィンドウに貼り付けて、[**実行**] をクリックします。 この例では、 `QtyAvailable` 列の値と `UnitPrice` 列の値を乗算する計算列を含むテーブルを作成します。  
   
     ```  
     CREATE TABLE dbo.Products   
@@ -111,7 +111,7 @@ ms.locfileid: "68211802"
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 次の例では、前の例で作成したテーブルに新しい列を追加します。  
+3.  次の例をコピーし、クエリウィンドウに貼り付けて、[**実行**] をクリックします。 次の例では、前の例で作成したテーブルに新しい列を追加します。  
   
     ```  
     ALTER TABLE dbo.Products ADD RetailValue AS (QtyAvailable * UnitPrice * 1.35);  
@@ -124,7 +124,7 @@ ms.locfileid: "68211802"
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  既存の列を計算列に変更するには、計算列を削除してから再作成する必要があります。 次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 次の例では、前の例で追加した列を変更します。  
+3.  既存の列を計算列に変更するには、計算列を削除してから再作成する必要があります。 次の例をコピーし、クエリウィンドウに貼り付けて、[**実行**] をクリックします。 次の例では、前の例で追加した列を変更します。  
   
     ```  
     ALTER TABLE dbo.Products DROP COLUMN RetailValue;  
@@ -133,6 +133,6 @@ ms.locfileid: "68211802"
   
     ```  
   
-     詳細については、「[ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)」を参照してください。  
+     詳細については、「 [ALTER TABLE &#40;transact-sql&#41;](/sql/t-sql/statements/alter-table-transact-sql)」を参照してください。  
   
 ###  <a name="TsqlExample"></a>  

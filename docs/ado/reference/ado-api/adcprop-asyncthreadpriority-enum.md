@@ -16,32 +16,32 @@ ms.assetid: f0965617-17d8-41e0-98d0-f824274735a6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 22a8cd4bb8d1bdddbaaa68e92349d9c728557ac0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921468"
 ---
-# <a name="adcpropasyncthreadpriorityenum"></a>ADCPROP_ASYNCTHREADPRIORITY_ENUM
-RDS の[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト、データを取得する非同期のスレッドの実行の優先順位を指定します。  
+# <a name="adcprop_asyncthreadpriority_enum"></a>ADCPROP_ASYNCTHREADPRIORITY_ENUM
+RDS[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトの場合は、データを取得する非同期スレッドの実行の優先度を指定します。  
   
- これらの定数を使用して、**レコード セット**"**バック グラウンド スレッド優先順位**"動的プロパティを ADO、OLE DB の動的プロパティのインデックスで参照されていると記載されて、 [OLE DB 用の Microsoft カーソル サービス](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md)ドキュメント。  
+ これらの定数は、**レコードセット**の "**バックグラウンドスレッド優先順位**" 動的プロパティと共に使用します。これは、ADO から OLE DB の動的プロパティインデックスで参照され、 [OLE DB のドキュメントについては Microsoft Cursor Service](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md)に記載されています。  
   
-|定数|Value|説明|  
+|常時|値|[説明]|  
 |--------------|-----------|-----------------|  
-|**adPriorityAboveNormal**|4|通常と最高の優先順位を設定します。|  
-|**adPriorityBelowNormal**|2|最も低いと通常の優先順位を設定します。|  
-|**adPriorityHighest**|5|指定できる最大の優先順位を設定します。|  
-|**AdPriorityLowest**|1|最下位の優先順位を設定します。|  
-|**adPriorityNormal**|3|優先度を normal に設定します。|  
+|**adPriorityAboveNormal**|4|通常と最高の間の優先順位を設定します。|  
+|**adPriorityBelowNormal**|2|最低と通常の優先順位を設定します。|  
+|**Adの優先順位**|5|優先順位を可能な限り高く設定します。|  
+|**Adの優先順位の下限**|1 で保護されたプロセスとして起動されました|優先順位を可能な限り低く設定します。|  
+|**Ad優先度標準**|3|優先順位を normal に設定します。|  
   
-## <a name="adowfc-equivalent"></a>ADO と WFC と同等  
- パッケージ: **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>同等の ADO/WFC  
+ パッケージ: **com. ms. wfc. データ**  
   
-|定数|  
+|常時|  
 |--------------|  
-|AdoEnums.AdcPropAsyncThreadPriority.ABOVENORMAL|  
-|AdoEnums.AdcPropAsyncThreadPriority.BELOWNORMAL|  
-|AdoEnums.AdcPropAsyncThreadPriority.HIGHEST|  
-|AdoEnums.AdcPropAsyncThreadPriority.LOWEST|  
-|AdoEnums.AdcPropAsyncThreadPriority.NORMAL|
+|AdoEnums を ABOVENORMAL します。|  
+|AdoEnums を BELOWNORMAL します。|  
+|AdoEnums を最大にします。|  
+|AdoEnums を最小にします。|  
+|AdoEnums。通常の場合は、|

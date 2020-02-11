@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 manager: jroth
 ms.openlocfilehash: 00ddaf35a859c0d95172e240537f825b3e9e8b1a
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251807"
 ---
 # <a name="remove-a-server-group-sql-server-management-studio"></a>サーバー グループの削除 (SQL Server Management Studio)
@@ -32,10 +32,9 @@ ms.locfileid: "75251807"
   
 1.  [登録済みサーバー] で、サーバー グループを右クリックして **[削除]** をクリックします。  
   
-2.  
-  **[削除の確認]** ダイアログ ボックスで **[はい]** をクリックします。  
+2.  **[削除の確認]** ダイアログ ボックスで **[はい]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [登録済みサーバーまたは登録済みサーバーグループを &#40;SQL Server Management Studio に移動する&#41;](move-a-registered-server-or-registered-server-group.md)  
+ [登録済みサーバーまたは登録済みサーバー グループの移動 &#40;SQL Server Management Studio&#41;](move-a-registered-server-or-registered-server-group.md)  
   
   

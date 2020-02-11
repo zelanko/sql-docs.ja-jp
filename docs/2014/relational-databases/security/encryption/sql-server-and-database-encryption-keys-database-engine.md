@@ -13,17 +13,16 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: e9ddec585f530cf57481c56477d5be4aeaedb44a
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74957126"
 ---
 # <a name="sql-server-and-database-encryption-keys-database-engine"></a>SQL Server とデータベースの暗号化キー (データベース エンジン)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]では、暗号化キーを使用して、サーバーデータベースに格納されているデータ、資格情報、および接続情報をセキュリティで保護します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]には、*対称*と*非対称*の2種類のキーがあります。 対称キーでは、データの暗号化と暗号化解除に同じパスワードが使用されます。 非対称キーでは、データを暗号化するパスワード ( *公開* キー) とデータの暗号化を解除するパスワード ( *秘密* キー) が使い分けられます。  
   
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の暗号化キーでは、公開キー、秘密キー、対称キーを組み合わせて機密データの保護に使用します。 対称キーは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスを最初に起動するときの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 初期化時に作成されます。 
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の暗号化キーでは、公開キー、秘密キー、対称キーを組み合わせて機密データの保護に使用します。 対称キーは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスを最初に起動するときの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 初期化時に作成されます。 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、このキーを使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]に格納されている機密データを暗号化します。 公開キーと秘密キーはオペレーティング システムによって作成され、これらのキーを使用して対称キーが保護されます。 公開キーと秘密キーのペアは、データベースに機密データを格納する [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスごとに作成されます。  
   
 ## <a name="applications-for-sql-server-and-database-keys"></a>SQL Server およびデータベース キーの用途  
@@ -73,33 +72,33 @@ ms.locfileid: "74957126"
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]でサード パーティのキー管理システムを使用する方法について説明します。  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [サービスマスターキーのバックアップ](back-up-the-service-master-key.md)  
+ [サービス マスター キーのバックアップ](back-up-the-service-master-key.md)  
   
- [サービスマスターキーの復元](restore-the-service-master-key.md)  
+ [サービス マスター キーの復元](restore-the-service-master-key.md)  
   
  [データベースマスターキーの作成](create-a-database-master-key.md)  
   
  [データベースマスターキーのバックアップ](back-up-a-database-master-key.md)  
   
- [データベースマスターキーの復元](restore-a-database-master-key.md)  
+ [データベース マスター キーの復元](restore-a-database-master-key.md)  
   
- [2つのサーバーに同一の対称キーを作成する](create-identical-symmetric-keys-on-two-servers.md)  
+ [2 台のサーバーでの同じ対称キーの作成](create-identical-symmetric-keys-on-two-servers.md)  
   
- [Azure Key Vault &#40;SQL Server を使用した拡張キー管理&#41;](extensible-key-management-using-azure-key-vault-sql-server.md)  
+ [Azure Key Vault を使用する拡張キー管理 &#40;SQL Server&#41;](extensible-key-management-using-azure-key-vault-sql-server.md)  
   
  [EKM を使用して TDE を有効にする](enable-tde-on-sql-server-using-ekm.md)  
   
 ## <a name="related-content"></a>関連コンテンツ  
- [CREATE MASTER KEY &#40;Transact-sql&#41;](/sql/t-sql/statements/create-master-key-transact-sql)  
+ [CREATE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql)  
   
  [ALTER SERVICE MASTER KEY &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-service-master-key-transact-sql)  
   
  [データベースマスターキーの復元](restore-a-database-master-key.md)  
   
 ## <a name="see-also"></a>参照  
- [暗号化キーのバックアップと復元 Reporting Services](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
- [SSRS Configuration Manager&#41;&#40;暗号化キーを削除して再作成します](../../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
- [SSRS Configuration Manager &#40;のスケールアウト配置に対する暗号化キーの追加と削除&#41;](../../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
- [Transparent Data Encryption &#40;TDE&#41;](transparent-data-encryption.md)  
+ [Reporting Services の暗号化キーのバックアップと復元](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
+ [暗号化キーの削除と再作成  &#40;SSRS 構成マネージャー&#41;](../../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
+ [スケールアウト配置に関する暗号化キーの追加と削除 &#40;SSRS 構成マネージャー&#41;](../../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
+ [透過的なデータ暗号化 &#40;TDE&#41;](transparent-data-encryption.md)  
   
   

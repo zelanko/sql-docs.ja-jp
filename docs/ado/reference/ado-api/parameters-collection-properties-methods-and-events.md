@@ -13,17 +13,17 @@ ms.assetid: 63b3f9a3-1c36-4d06-a6b0-49b5eb5adf06
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bffb3dfc89f07169bdbedc0d8960325e3f780085
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931686"
 ---
 # <a name="parameters-collection-properties-methods-and-events"></a>Parameters コレクションのプロパティ、メソッド、およびイベント
 ## <a name="properties"></a>Properties  
  [Count プロパティ](../../../ado/reference/ado-api/count-property-ado.md)  
   
- [項目のプロパティ](../../../ado/reference/ado-api/item-property-ado.md)  
+ [Item プロパティ](../../../ado/reference/ado-api/item-property-ado.md)  
   
 ## <a name="methods"></a>メソッド  
  [Append メソッド](../../../ado/reference/ado-api/append-method-ado.md)  
@@ -32,8 +32,8 @@ ms.locfileid: "67931686"
   
  [Refresh メソッド](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
-## <a name="events"></a>イベント  
+## <a name="events"></a>events  
  [なし] :  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Parameters コレクション (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)

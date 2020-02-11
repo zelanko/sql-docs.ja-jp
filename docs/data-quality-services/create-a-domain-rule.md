@@ -13,10 +13,10 @@ ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: c6a73d3f0dca65d0feb74cf572754351ccf86c7a
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75245479"
 ---
 # <a name="create-a-domain-rule"></a>ドメイン ルールの作成
@@ -25,14 +25,14 @@ ms.locfileid: "75245479"
 
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) でドメイン ルールを作成する方法について説明します。 ドメイン ルールとは、ドメイン値の検証、修正、および標準化のために使用される条件です。 ドメイン値が正確で、ビジネス要件に準拠していると見なされるためには、ドメイン ルールがドメイン全体に当てはまる必要があります。 ドメイン ルールには検証規則を含めることができます。検証規則は、データ品質プロジェクトでドメイン値の検証に使用され、データの修正には使用されません。 また、標準化規則を含めることもできます。標準化規則は、有効なデータに対して適用され、データ修正で使用されます。  
   
-##  <a name="BeforeYouBegin"></a>開始する前に  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Prerequisites"></a>応募  
+###  <a name="Prerequisites"></a> 前提条件  
  ドメイン ルールを作成するには、ドメイン管理アクティビティでナレッジ ベースとドメインを開いておく必要があります。  
   
-###  <a name="Security"></a>保護  
+###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a>許可  
+####  <a name="Permissions"></a> Permissions  
  ドメイン ルールを作成するには、DQS_MAIN データベースの dqs_kb_editor ロールまたは dqs_administrator ロールが必要です。  
   
 ##  <a name="Build"></a>ドメインルールの作成  
@@ -121,7 +121,7 @@ ms.locfileid: "75245479"
   
  ドメイン ルールを作成するときには、いくつかの選択肢があります。 たとえば、値が A、B、C のいずれかの文字で始まるかどうかを検証するには、複雑な条件を含む単純なルール (パイプ文字を含む正規表現など) を作成することも、複数の単純な条件を含む複雑なルールを作成することもできます。 たとえば、前者の例は "Value contains regular expression (^A|^B|^C)" です。 後者の例は、"'Value begins with A' OR 'Value begins with B' OR 'Value begins with C'" です。  
   
-|条件|説明|例|  
+|条件|[説明]|例|  
 |---------------|-----------------|-------------|  
 |長さが次の値と等しい|オペランドで指定された文字数の文字で構成される値のみが有効になります。|オペランドの例: 3<br /><br /> 有効な値: BB1<br /><br /> 無効な値: AA|  
 |長さが次の値以上|オペランドで指定された文字数以上の文字で構成される値のみが有効になります。|オペランドの例: 3<br /><br /> 有効な値: BB1、BBAA<br /><br /> 無効な値: AA|  

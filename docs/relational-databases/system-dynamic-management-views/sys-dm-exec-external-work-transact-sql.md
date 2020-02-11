@@ -23,10 +23,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b0ba7eecc8e117e429f6992622d0c7bb2073f86a
-ms.sourcegitcommit: 26868c8ac3217176b370d972a26d307598a10328
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74834335"
 ---
 # <a name="sysdm_exec_external_work-transact-sql"></a>dm_exec_external_work (Transact-sql)
@@ -36,7 +36,7 @@ ms.locfileid: "74834335"
   
  Dm_exec_external_work を照会して、外部データソース (Hadoop、外部 SQL Server など) と通信するためにスピンアップされる作業を識別します。  
   
-|列名|データ型|説明|Range|  
+|列名|データ型|[説明]|Range|  
 |-----------------|---------------|-----------------|-----------|  
 |execution_id|`nvarchar(32)`|関連する PolyBase クエリの一意の識別子。|『 [Transact-sql&#41;&#40;dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)の*request_ID*を参照してください。|  
 |step_index|`int`|このワーカーが実行している要求。|『 [Transact-sql&#41;&#40;dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)の*step_index*を参照してください。|  
@@ -56,7 +56,7 @@ ms.locfileid: "74834335"
 
 ## <a name="see-also"></a>参照  
  [動的管理ビューを使用した PolyBase のトラブルシューティング](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
- [Transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Transact-sql&#41;&#40;データベース関連の動的管理ビュー](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   

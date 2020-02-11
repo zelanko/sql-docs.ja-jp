@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9cd3f00b89de1d2bad683e7ce7005605d3c61f18
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211762"
 ---
 # <a name="use-table-valued-parameters-database-engine"></a>テーブル値パラメーターの使用 (データベース エンジン)
@@ -34,9 +34,9 @@ ms.locfileid: "68211762"
   
  **このトピックの内容**  
   
- [利点](#Benefits)  
+ [メリット](#Benefits)  
   
- [制限](#Restrictions)  
+ [制限事項](#Restrictions)  
   
  [テーブル値パラメーターと BULK INSERT 操作](#BulkInsert)  
   
@@ -63,10 +63,11 @@ ms.locfileid: "68211762"
   
 -   ストアド プロシージャで使用すると、一時テーブルのようにキャッシュされます。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]以降では、テーブル値パラメーターはパラメーター化クエリ用にもキャッシュされます。  
   
-##  <a name="Restrictions"></a> 制限  
+##  <a name="Restrictions"></a>おける  
  テーブル値パラメーターには、次の制限があります。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でテーブル値パラメーターの列の統計が保持されません。  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でテーブル値パラメーターの列の統計が保持されません。  
   
 -   テーブル値パラメーターは、READONLY 入力パラメーターとして [!INCLUDE[tsql](../../includes/tsql-md.md)] ルーチンに渡す必要があります。 ルーチン本体でテーブル値パラメーターに対して UPDATE、DELETE、INSERT などの DML 操作を実行することはできません。  
   
@@ -79,7 +80,7 @@ ms.locfileid: "68211762"
   
  テーブル値パラメーターは、同等のパラメーター配列の実装と同様またはそれ以上のパフォーマンスを実現します。  
   
-##  <a name="Example"></a> 例  
+##  <a name="Example"></a>よう  
  次の例では、 [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、テーブル値パラメーターの型を作成してその型を参照する変数を宣言し、パラメーター一覧を入力して値をストアド プロシージャに渡す方法を示します。  
   
 ```  
@@ -119,13 +120,13 @@ EXEC usp_InsertProductionLocation @LocationTVP;
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [CREATE TYPE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-type-transact-sql)   
- [DECLARE @local_variable &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/declare-local-variable-transact-sql)   
- [sys.types &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-types-transact-sql)   
- [sys.parameters &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-parameters-transact-sql)   
- [sys.parameter_type_usages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-parameter-type-usages-transact-sql)   
- [CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)   
+## <a name="see-also"></a>参照  
+ [Transact-sql&#41;&#40;型の作成](/sql/t-sql/statements/create-type-transact-sql)   
+ [Transact-sql @local_variable&#41;の宣言 &#40;](/sql/t-sql/language-elements/declare-local-variable-transact-sql)   
+ [sys &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-types-transact-sql)   
+ [Transact-sql&#41;&#40;のパラメーター](/sql/relational-databases/system-catalog-views/sys-parameters-transact-sql)   
+ [parameter_type_usages &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-parameter-type-usages-transact-sql)   
+ [CREATE PROCEDURE &#40;Transact-sql&#41;](/sql/t-sql/statements/create-procedure-transact-sql)   
  [CREATE FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-function-transact-sql)  
   
   

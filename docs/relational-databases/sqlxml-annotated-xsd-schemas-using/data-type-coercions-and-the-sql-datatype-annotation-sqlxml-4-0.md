@@ -23,10 +23,10 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 98f2ee047bccf7cd3843fe34aaf8f5caec0dc11a
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75257476"
 ---
 # <a name="data-type-conversions-and-the-sqldatatype-annotation-sqlxml-40"></a>データ型の変換と sql: datatype 注釈 (SQLXML 4.0)
@@ -43,11 +43,11 @@ ms.locfileid: "75257476"
 |XSD データ型|SQL Server の変換|  
 |-------------------|---------------------------|  
 |Boolean|CONVERT(bit, COLUMN)|  
-|日付|LEFT(CONVERT(nvarchar(4000), COLUMN, 126), 10)|  
+|Date|LEFT(CONVERT(nvarchar(4000), COLUMN, 126), 10)|  
 |decimal|CONVERT(money, COLUMN)|  
 |id/idref/idrefs|id-prefix + CONVERT(nvarchar(4000), COLUMN, 126)|  
 |nmtoken/nmtokens|id-prefix + CONVERT(nvarchar(4000), COLUMN, 126)|  
-|［時間］|SUBSTRING(CONVERT(nvarchar(4000), COLUMN, 126), 1+CHARINDEX(N'T', CONVERT(nvarchar(4000), COLUMN, 126)), 24)|  
+|Time|SUBSTRING(CONVERT(nvarchar(4000), COLUMN, 126), 1+CHARINDEX(N'T', CONVERT(nvarchar(4000), COLUMN, 126)), 24)|  
 |その他すべて|追加の変換はありません。|  
   
 > [!NOTE]  
@@ -60,31 +60,31 @@ ms.locfileid: "75257476"
 |SQL Server のデータ型|XSD データ型|  
 |--------------------------|-------------------|  
 |**bigint**|**長い**|  
-|**バイナリ**|**base64Binary**|  
-|**bit**|**演算**|  
+|**binary**|**base64Binary**|  
+|**bit**|**boolean**|  
 |**char**|**文字列**|  
-|**/**|**/**|  
-|**位**|**位**|  
-|**点**|**小数**|  
+|**DATETIME**|**/**|  
+|**decimal**|**decimal**|  
+|**float**|**double**|  
 |**絵**|**base64Binary**|  
-|**通り**|**通り**|  
-|**money**|**位**|  
+|**int**|**int**|  
+|**money**|**decimal**|  
 |**nchar**|**文字列**|  
 |**ntext**|**文字列**|  
 |**nvarchar**|**文字列**|  
-|**番号**|**位**|  
-|**real**|**点**|  
+|**番号**|**decimal**|  
+|**本当の**|**float**|  
 |**smalldatetime**|**/**|  
 |**smallint**|**short**|  
-|**smallmoney**|**位**|  
+|**smallmoney**|**decimal**|  
 |**sql_variant**|**文字列**|  
 |**sysname**|**文字列**|  
 |**本文**|**文字列**|  
-|**タイムスタンプ**|**/**|  
+|**timestamp**|**/**|  
 |**tinyint**|**unsignedByte**|  
-|**可変長**|**base64Binary**|  
+|**varbinary**|**base64Binary**|  
 |**varchar**|**文字列**|  
-|**一意**|**文字列**|  
+|**UNIQUEIDENTIFIER**|**文字列**|  
   
 ## <a name="sqldatatype-annotation"></a>sql:datatype 注釈  
  **Sql: datatype**注釈は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ型を指定するために使用されます。この注釈は、次の場合に指定する必要があります。  

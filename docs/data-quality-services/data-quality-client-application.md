@@ -10,10 +10,10 @@ ms.assetid: 25d1547e-4113-4b34-a9f8-8897db1acf16
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 4a789386fbbef91590ec025787e47c7655753a3b
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251734"
 ---
 # <a name="data-quality-client-application"></a>Data Quality Client アプリケーション
@@ -41,8 +41,8 @@ ms.locfileid: "75251734"
   
 |コンテンツの説明|トピック|  
 |-------------------------|-----------|  
-|DQS でナレッジ ベースとドメインを使用する方法について説明します。|[DQS のナレッジベースとドメイン](../data-quality-services/dqs-knowledge-bases-and-domains.md)|  
-|DQS でデータをクレンジングする方法について説明します。|[データクレンジング](../data-quality-services/data-cleansing.md)|  
+|DQS でナレッジ ベースとドメインを使用する方法について説明します。|[DQS のナレッジ ベースとドメイン](../data-quality-services/dqs-knowledge-bases-and-domains.md)|  
+|DQS でデータをクレンジングする方法について説明します。|[Data Cleansing](../data-quality-services/data-cleansing.md)|  
 |DQS で照合を実行する方法について説明します。|[データ照合](../data-quality-services/data-matching.md)|  
 |DQS を管理する方法について説明します。|[DQS 管理](../data-quality-services/dqs-administration.md)|  
   

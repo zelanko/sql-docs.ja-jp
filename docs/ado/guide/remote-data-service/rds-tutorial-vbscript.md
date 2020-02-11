@@ -1,5 +1,5 @@
 ---
-title: RDS のチュートリアル (VBScript) |Microsoft Docs
+title: RDS チュートリアル (VBScript) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,19 +15,19 @@ ms.assetid: e2a48c4d-88b1-43ff-a202-9cdec54997d2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d45347bcdf212158fb6a0ee9f4599e1e1b00ff54
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67922425"
 ---
 # <a name="rds-tutorial-vbscript"></a>RDS のチュートリアル (VBScript)
-これは、RDS チュートリアルでは、Microsoft Visual Basic Scripting Edition で書き込まれます。 このチュートリアルの目的については、次を参照してください。、 [RDS チュートリアル](../../../ado/guide/remote-data-service/rds-tutorial.md)します。  
+これは、Microsoft Visual Basic Scripting Edition で記述された RDS チュートリアルです。 このチュートリアルの目的の詳細については、 [RDS チュートリアル](../../../ado/guide/remote-data-service/rds-tutorial.md)を参照してください。  
   
 > [!IMPORTANT]
->  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)します。  
+>  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および[Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416)」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
   
- このチュートリアルで[rds.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)と[rds.DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md)作成はデザイン時にで定義される次のように、オブジェクト タグ:`<OBJECT>...</OBJECT>`します。 または、実行時に作成する可能性があります、 [CreateObject メソッド (RDS)](../../../ado/reference/rds-api/createobject-method-rds.md)メソッド。 たとえば、 **rds.DataControl**このようなオブジェクトを作成できます。  
+ このチュートリアルでは、 [RDS.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)と[RDS。領域スペース](../../../ado/reference/rds-api/dataspace-object-rds.md)はデザイン時に作成され`<OBJECT>...</OBJECT>`ます。つまり、というオブジェクトタグで定義されます。 または、実行時に[CreateObject メソッド (RDS)](../../../ado/reference/rds-api/createobject-method-rds.md)メソッドを使用して作成することもできます。 たとえば、RDS のように**なります。DataControl**オブジェクトは次のように作成できます。  
   
 ```vb
 Set DC = Server.CreateObject("RDS.DataControl")  
@@ -48,24 +48,24 @@ Set DC = Server.CreateObject("RDS.DataControl")
    Dim DF1   
 ```  
   
-## <a name="step-1---specify-a-server-program"></a>手順 1 - サーバー プログラムを指定します。  
- VBScript は、VBScript にアクセスすることで実行されている IIS Web サーバーの名前を検出できる**Request.ServerVariables** Active Server Pages を使用できるメソッド。  
+## <a name="step-1---specify-a-server-program"></a>手順 1-サーバープログラムを指定する  
+ VBScript は、VBScript 要求にアクセスすることによって、実行されている IIS Web サーバーの名前を検出できます。 Active Server のページで使用可能な**ServerVariables**メソッドです。  
   
 ```vb
 "https://<%=Request.ServerVariables("SERVER_NAME")%>"  
 ```  
   
- ただし、このチュートリアルでは、虚数部のサーバーでは、「通常」を使用します。  
+ ただし、このチュートリアルでは、"サーバー" という架空のサーバーを使用します。  
   
 > [!NOTE]
->  データ型に注意を払う**ByRef**引数。 VBScript では常に渡す必要がありますので、変数の型を指定することはできません、**バリアント**します。 RDS がすると、バリアントをでを起動する場合は、非バリアント型を受け取るメソッドに渡すことが HTTP を使用する場合、 **rds.DataSpace**オブジェクト[CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md)メソッド。 DCOM や、プロセスでサーバーを使用する場合はクライアントとサーバー側でパラメーターの型と一致する必要があります。 または「型の不一致」エラーが表示されます。  
+>  **ByRef**引数のデータ型に注意してください。 VBScript を使用して変数の型を指定することはできないため、常に**Variant**を渡す必要があります。 HTTP を使用する場合、rds では、非バリアントを予期しているメソッドに Variant を渡すことができ**ます。領域スペース**オブジェクトの[CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md)メソッド。 DCOM またはインプロセスサーバーを使用する場合は、クライアント側とサーバー側でパラメーターの型を一致させる必要があります。一致しない場合は、"型の不一致" エラーが表示されます。  
   
 ```vb
 Set DF1 = DS1.CreateObject("RDSServer.DataFactory", "https://yourServer")  
 ```  
   
-## <a name="step-2a---invoke-the-server-program-with-rdsdatacontrol"></a>手順 2 a - RDS に関するサーバー プログラムを呼び出すDataControl  
- この例を示すコメントだけでは、既定の動作、 **rds.DataControl**指定されたクエリを実行することです。  
+## <a name="step-2a---invoke-the-server-program-with-rdsdatacontrol"></a>手順 2a-RDS を使用してサーバープログラムを起動します。DataControl  
+ この例は、RDS の既定の動作を示すコメントにすぎ**ません。DataControl**は、指定されたクエリを実行します。  
   
 ```vb
 <OBJECT CLASSID="clsid:BD96C556-65A3-11D0-983A-00C04FC29E33" ID="DC1">  
@@ -83,17 +83,17 @@ Sub RDSTutorial2A()
 ...  
 ```  
   
-## <a name="step-2b---invoke-the-server-program-with-rdsserverdatafactory"></a>手順 2 b - RDSServer.DataFactory とサーバー プログラムを呼び出す  
+## <a name="step-2b---invoke-the-server-program-with-rdsserverdatafactory"></a>手順 2b-RDSServer を使用してサーバープログラムを呼び出す  
   
-## <a name="step-3---server-obtains-a-recordset"></a>手順 3 - サーバーは、レコード セットを取得します。  
+## <a name="step-3---server-obtains-a-recordset"></a>手順 3-サーバーがレコードセットを取得する  
   
-## <a name="step-4---server-returns-the-recordset"></a>手順 4 - サーバーをレコード セットを返します。  
+## <a name="step-4---server-returns-the-recordset"></a>手順 4-サーバーがレコードセットを返す  
   
 ```vb
 Set RS = DF1.Query("DSN=Pubs;", "SELECT * FROM Authors")  
 ```  
   
-## <a name="step-5---datacontrol-is-made-usable-by-visual-controls"></a>手順 5: DataControl がビジュアル コントロールで使用可能な作成します。  
+## <a name="step-5---datacontrol-is-made-usable-by-visual-controls"></a>手順 5-DataControl をビジュアルコントロールで使用できるようにする  
   
 ```vb
 ' Assign the returned recordset to the DataControl.  
@@ -101,8 +101,8 @@ Set RS = DF1.Query("DSN=Pubs;", "SELECT * FROM Authors")
 DC1.SourceRecordset = RS  
 ```  
   
-## <a name="step-6a---changes-are-sent-to-the-server-with-rdsdatacontrol"></a>手順 6 - 変更は、RDS に関するサーバーに送信されますDataControl  
- この例は、単なるコメントを示す方法、 **rds.DataControl**更新プログラムを実行します。  
+## <a name="step-6a---changes-are-sent-to-the-server-with-rdsdatacontrol"></a>手順 6a-RDS を使用してサーバーに変更が送信されます。DataControl  
+ この例は、RDS の動作を示すコメントにすぎ**ません。DataControl**は更新を実行します。  
   
 ```vb
 <OBJECT CLASSID="clsid:BD96C556-65A3-11D0-983A-00C04FC29E33" ID="DC1">  
@@ -125,7 +125,7 @@ Set DC1.SourceRecordset = RS
 DC1.SubmitChanges  
 ```  
   
-## <a name="step-6b---changes-are-sent-to-the-server-with-rdsserverdatafactory"></a>手順 6 - 変更 RDSServer.DataFactory でサーバーに送信されます  
+## <a name="step-6b---changes-are-sent-to-the-server-with-rdsserverdatafactory"></a>手順 6b-RDSServer を使用してサーバーに変更が送信されます。 DataFactory  
   
 ```vb
 DF.SubmitChanges "DSN=Pubs", RS  

@@ -26,11 +26,11 @@
           href: ../integration-services/ssis-quickstart-deploy-tsql-vscode.md
         - name: コマンド プロンプトからの配置
           href: ../integration-services/ssis-quickstart-deploy-cmdline.md
-        - name: PowerShell を使用した配置
+        - name: PowerShell でデプロイする
           href: ../integration-services/ssis-quickstart-deploy-powershell.md
         - name: 'C# を使用した配置'
           href: ../integration-services/ssis-quickstart-deploy-dotnet.md
-    - name: '[実行]'
+    - name: ラン
       items:
         - name: SSMS を使用しての実行
           href: ../integration-services/ssis-quickstart-run-ssms.md
@@ -78,6 +78,8 @@
   href: ../integration-services/integration-services-ssis-development-and-management-tools.md
 - name: '[プロジェクトおよびソリューション]'
   href: ../integration-services/integration-services-ssis-projects-and-solutions.md
+- name: SSIS DevOps
+  href: ../integration-services/devops/ssis-devops-overview.md
 - name: ユーザー インターフェイス
   href: ../integration-services/integration-services-user-interface.md
   items:
@@ -188,7 +190,7 @@
       href: ../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md
     - name: WMI 接続マネージャー
       href: ../integration-services/connection-manager/wmi-connection-manager.md
-- name: '[制御フロー]'
+- name: 制御フロー
   items:
     - name: 概要
       href: ../integration-services/control-flow/control-flow.md
@@ -367,7 +369,7 @@
               href: ../integration-services/control-flow/validate-xml-with-the-xml-task.md
     - name: 優先順位制約
       href: ../integration-services/control-flow/precedence-constraints.md
-- name: データ フロー
+- name: Data Flow
   items:
     - name: 概要
       href: ../integration-services/data-flow/data-flow.md
@@ -444,7 +446,7 @@
         - name: Data Streaming Destination
           href: ../integration-services/data-flow/data-streaming-destination.md
           items:
-            - name: 'チュートリアル:SQL ビューとして SSIS パッケージを公開する'
+            - name: 'チュートリアル: SSIS パッケージを SQL ビューとして公開する'
               href: ../integration-services/data-flow/walkthrough-publish-an-ssis-package-as-a-sql-view.md
         - name: DataReader 変換先
           href: ../integration-services/data-flow/datareader-destination.md
@@ -475,7 +477,7 @@
         - name: OData ソース
           href: ../integration-services/data-flow/odata-source.md
           items:
-            - name: 'チュートリアル:OData ソースの使用'
+            - name: 'チュートリアル: OData ソースの使用'
               href: ../integration-services/data-flow/tutorial-using-the-odata-source.md
             - name: 実行時の OData ソース クエリの提供
               href: ../integration-services/data-flow/modify-odata-source-query-at-runtime.md
@@ -756,7 +758,7 @@
               href: ../integration-services/expressions/expressions-page.md
             - name: '[プロパティ式エディター]'
               href: ../integration-services/expressions/property-expressions-editor.md
-            - name: '[式ビルダー]'
+            - name: 式ビルダー
               href: ../integration-services/expressions/expression-builder.md
     - name: 式における Integration Services データ型
       href: ../integration-services/expressions/integration-services-data-types-in-expressions.md
@@ -819,7 +821,7 @@
           href: ../integration-services/expressions/greater-than-or-equal-to-ssis-expression.md
         - name: <= (以下) (SSIS 式)
           href: ../integration-services/expressions/less-than-or-equal-to-ssis-expression.md
-        - name: '? :(条件) (SSIS 式)'
+        - name: '? : (条件) (SSIS 式)'
           href: ../integration-services/expressions/conditional-ssis-expression.md
     - name: 関数 (SSIS 式)
       href: ../integration-services/expressions/functions-ssis-expression.md
@@ -931,7 +933,7 @@
       href: ../integration-services/scale-out/integration-services-ssis-scale-out.md
     - name: 1 台のコンピューターでの SSIS Scale Out の概要
       href: ../integration-services/scale-out/get-started-with-ssis-scale-out-onebox.md
-    - name: 'チュートリアル:Integration Services Scale Out を設定する'
+    - name: 'チュートリアル: Integration Services Scale Out をセットアップする'
       href: ../integration-services/scale-out/walkthrough-set-up-integration-services-scale-out.md
     - name: Scale Out でのパッケージの実行
       href: ../integration-services/scale-out/run-packages-in-integration-services-ssis-scale-out.md
@@ -1089,7 +1091,7 @@
   items:
     - name: 概要
       href: ../integration-services/system-stored-procedures/stored-procedures-integration-services-catalog.md
-    - name: '[追加]'
+    - name: 追加
       items:
         - name: catalog.add_data_tap
           href: ../integration-services/system-stored-procedures/catalog-add-data-tap.md
@@ -1211,7 +1213,7 @@
           href: ../integration-services/system-stored-procedures/catalog-update-logdb-info.md
         - name: catalog.update_master_address (SSISDB データベース)
           href: ../integration-services/system-stored-procedures/catalog-update-master-address.md
-    - name: '[検証]'
+    - name: 検証
       items:
         - name: catalog.validate_package
           href: ../integration-services/system-stored-procedures/catalog-validate-package-ssisdb-database.md
@@ -1465,12 +1467,23 @@
   items:
     - name: Oracle 接続マネージャー
       href: ../integration-services/data-flow/oracle-connection-manager.md
-    - name: Oracle 変換元
+    - name: Oracle ソース
       href: ../integration-services/data-flow/oracle-source.md
     - name: Oracle 変換先
       href: ../integration-services/data-flow/oracle-destination.md
     - name: データ型のサポート
       href: ../integration-services/data-flow/oracle-data-type-support.md
+- name: Microsoft Connector for Teradata
+  href: ../integration-services/data-flow/Teradata-connector.md
+  items:
+    - name: Teradata 接続マネージャー
+      href: ../integration-services/data-flow/Teradata-connection-manager.md
+    - name: Teradata ソース
+      href: ../integration-services/data-flow/Teradata-source.md
+    - name: Teradata 変換先
+      href: ../integration-services/data-flow/Teradata-destination.md
+    - name: データ型のサポート
+      href: ../integration-services/data-flow/Teradata-data-type-support.md
 - name: Microsoft Connectors for Oracle and Teradata by Attunity
   href: ../integration-services/attunity-connectors.md
 - name: SQL Server インポートおよびエクスポート ウィザード
@@ -1636,7 +1649,7 @@
               href: ../integration-services/change-data-capture/how-to-manage-a-cdc-service-from-the-cdc-designer-console.md
             - name: SQL Server 変更データベース インスタンスを作成する方法
               href: ../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md
-            - name: CDC インスタンスを管理する方法
+            - name: How to Manage a CDC Instance
               href: ../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md
             - name: CDC インスタンスのプロパティを編集する方法
               href: ../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md
@@ -1646,7 +1659,7 @@
           href: ../integration-services/change-data-capture/sql-server-connection-for-instance-creation.md
         - name: 高度な接続プロパティ
           href: ../integration-services/change-data-capture/advanced-connection-properties.md
-        - name: スクリプトを実行するための Oracle 資格情報
+        - name: Oracle Credentials for Running Script
           href: ../integration-services/change-data-capture/oracle-credentials-for-running-script.md
         - name: Oracle の補足ログ スクリプト
           href: ../integration-services/change-data-capture/oracle-supplemental-logging-script.md
@@ -1679,7 +1692,7 @@
               href: ../integration-services/change-data-capture/connection-to-sql-server-for-delete.md
             - name: Oracle CDC Service の作成と編集
               href: ../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md
-            - name: Oracle CDC Service の管理
+            - name: Manage an Oracle CDC Service
               href: ../integration-services/change-data-capture/manage-an-oracle-cdc-service.md
             - name: CDC 用の SQL Server の準備
               href: ../integration-services/change-data-capture/prepare-sql-server-for-cdc.md
@@ -1717,7 +1730,7 @@
     - name: パッケージを作成する
       href: ../integration-services/ssis-how-to-create-an-etl-package.md
       items:
-        - name: 'レッスン 1:プロジェクトと基本パッケージの作成'
+        - name: 'レッスン 1: プロジェクトと基本パッケージの作成'
           href: ../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md
           items:
             - name: レッスン 1-1 - 新しい Integration Services プロジェクトの作成
@@ -1738,7 +1751,7 @@
               href: ../integration-services/lesson-1-8-making-the-lesson-1-package-easier-to-understand.md
             - name: レッスン 1-9 - レッスン 1 のチュートリアル パッケージのテスト
               href: ../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md
-        - name: 'レッスン 2:ループの追加'
+        - name: 'レッスン 2: ループの追加'
           href: ../integration-services/lesson-2-adding-looping-with-ssis.md
           items:
             - name: レッスン 2-1 - レッスン 1 のパッケージのコピー
@@ -1749,7 +1762,7 @@
               href: ../integration-services/lesson-2-3-modifying-the-flat-file-connection-manager.md
             - name: レッスン 2-4 - レッスン 2 のチュートリアル パッケージのテスト
               href: ../integration-services/lesson-2-4-testing-the-lesson-2-tutorial-package.md
-        - name: 'レッスン 3:ログ機能の追加'
+        - name: 'レッスン 3: ログの追加'
           href: ../integration-services/lesson-3-add-logging-with-ssis.md
           items:
             - name: レッスン 3-1 - レッスン 2 のパッケージのコピー
@@ -1758,7 +1771,7 @@
               href: ../integration-services/lesson-3-2-adding-and-configuring-logging.md
             - name: レッスン 3-3 - レッスン 3 のチュートリアル パッケージのテスト
               href: ../integration-services/lesson-3-3-testing-the-lesson-3-tutorial-package.md
-        - name: 'レッスン 4:エラー フロー リダイレクションの追加'
+        - name: 'レッスン 4: エラー フロー リダイレクションの追加'
           href: ../integration-services/lesson-4-add-error-flow-redirection-with-ssis.md
           items:
             - name: レッスン 4-1 - レッスン 3 のパッケージのコピー
@@ -1796,7 +1809,7 @@
     - name: パッケージの配置
       href: ../integration-services/deploy-packages-with-ssis.md
       items:
-        - name: 'レッスン 1:配置バンドルを作成する準備'
+        - name: 'レッスン 1: 配置バンドルを作成する準備'
           href: ../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md
           items:
             - name: レッスン 1-1 - 作業フォルダーと環境変数の作成
@@ -1809,14 +1822,14 @@
               href: ../integration-services/lesson-1-4-adding-package-configurations.md
             - name: レッスン 1-5 - 更新したパッケージのテスト
               href: ../integration-services/lesson-1-5-testing-the-updated-packages.md
-        - name: 'レッスン 2:配置バンドルの作成'
+        - name: 'レッスン 2: 配置バンドルの作成'
           href: ../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md
           items:
             - name: レッスン 2-1 - 配置ユーティリティの構築
               href: ../integration-services/lesson-2-1-building-the-deployment-utility.md
             - name: レッスン 2-2 - 配置バンドルの確認
               href: ../integration-services/lesson-2-2-verifying-the-deployment-bundle.md
-        - name: 'レッスン 3:パッケージのインストール'
+        - name: 'レッスン 3: インストール パッケージ'
           href: ../integration-services/lesson-3-install-ssis-packages.md
           items:
             - name: レッスン 3-1 - 配置バンドルのコピー

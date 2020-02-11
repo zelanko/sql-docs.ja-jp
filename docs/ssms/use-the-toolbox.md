@@ -1,6 +1,6 @@
 ---
-title: ツールボックスの使用 | Microsoft Docs
-ms.custom: ''
+title: ツールボックスの使用
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 16733e39-4dc5-416f-ab10-c1d823f79d2d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6564bd4d2c8c88c4415be8c19e8a0b791d48dea9
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 6a7d9029d775b2d1255d683e6b4c3b9d44ccdb31
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263366"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252195"
 ---
 # <a name="use-the-toolbox"></a>ツールボックスの使用
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "68263366"
   
 ツールボックス内のアイテムは、タブと呼ばれるセクションにグループ分けされています。 よく使用されるツールボックスのタスクとその実行方法について、参照用一覧を次に示します。  
   
-|変換先|方法|  
+|ターゲット|方法|  
 |------|-----------|  
 |ツールボックスを開く|**[表示]** メニューの **[ツールボックス]** をクリックします。|  
 |ツールボックスを自動的に閉じる|ツールボックスを開きます。 **[ウィンドウ]** メニューの **[自動的に隠す]** をオンにします。|  

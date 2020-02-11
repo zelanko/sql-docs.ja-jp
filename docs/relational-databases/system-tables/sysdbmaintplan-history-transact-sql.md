@@ -1,5 +1,5 @@
 ---
-title: sysdbmaintplan_history (TRANSACT-SQL) |Microsoft Docs
+title: sysdbmaintplan_history (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,33 +18,33 @@ ms.assetid: 02d36f08-ac93-4463-bb59-284c5cd6ed04
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4470b6b5d1b30f5698bf588a04066c50bb4c7197
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68130450"
 ---
-# <a name="sysdbmaintplanhistory-transact-sql"></a>sysdbmaintplan_history (Transact-SQL)
+# <a name="sysdbmaintplan_history-transact-sql"></a>sysdbmaintplan_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  このテーブルに格納されます、 **msdb**データベース。  
+  このテーブルは、 **msdb**データベースに格納されます。  
   
  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)]  
   
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
 |**sequence_id**|**int**|データベース メンテナンス プランで実行された履歴のシーケンス|  
-|**plan_id**|**uniqueidentifier**|データベース メンテナンス プランの id。|  
+|**plan_id**|**UNIQUEIDENTIFIER**|データベースメンテナンスプランの ID。|  
 |**plan_name**|**sysname**|データベース メンテナンス プランの名前。|  
-|**database_name**|**sysname**|データベース メンテナンス プランに関連付けられているデータベースの名前。|  
+|**database_name**|**sysname**|データベースメンテナンスプランに関連付けられているデータベースの名前。|  
 |**server_name**|**sysname**|システム名|  
-|**activity**|**nvarchar(128)**|(トランザクション ログのバックアップおよびなど)。 データベース メンテナンス プランで実行されたアクティビティ。|  
+|**演習**|**nvarchar(128**|データベースメンテナンスプラン (バックアップトランザクションログなど) によって実行されるアクティビティ。|  
 |**succeeded**|**bit**|**0** = 成功**1** = 失敗|  
-|**end_time**|**datetime**|操作が完了した時刻|  
-|**duration**|**int**|データベース メンテナンス プラン操作が完了するまでの所用時間|  
-|**start_time**|**datetime**|操作が開始された時刻。|  
-|**error_number**|**int**|エラー発生時に報告されたエラー番号。|  
-|**message**|**nvarchar(512)**|によって生成されたメッセージ**sqlmaint**します。|  
+|**end_time**|**DATETIME**|操作が完了した時刻|  
+|**全**|**int**|データベース メンテナンス プラン操作が完了するまでの所用時間|  
+|**start_time**|**DATETIME**|アクションが開始した時刻。|  
+|**error_number**|**int**|エラーが発生した場合に報告されるエラー番号。|  
+|**メッセージ**|**nvarchar(512)**|**Sqlmaint**によって生成されたメッセージ。|  
   
   

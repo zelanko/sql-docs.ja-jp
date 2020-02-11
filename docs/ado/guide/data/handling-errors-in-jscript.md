@@ -1,5 +1,5 @@
 ---
-title: JScript でのエラー処理 |Microsoft Docs
+title: JScript でのエラーの処理 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: 3de527e5-2e65-4ab0-9b7f-6d317c4478de
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a92077bf72c025fa183292525b3bd756a4bf4b87
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925171"
 ---
 # <a name="handling-errors-in-jscript"></a>JScript でエラーを処理する
-Microsoft® JScript® コードを確認する必要があります、**カウント**のプロパティ、**接続**オブジェクトの**エラー**コレクション。 値が 0 より大きい場合は、コレクションを反復処理し、その他の言語のいずれかで行うように値を出力します。  
+Microsoft® JScript®コードでは、**接続**オブジェクトの**Errors**コレクションの**Count**プロパティを確認する必要があります。 値が0より大きい場合は、コレクションを反復処理し、他の言語の場合と同じように値を出力します。  
   
 ```  
 <!-- BeginErrorExampleJS -->  
