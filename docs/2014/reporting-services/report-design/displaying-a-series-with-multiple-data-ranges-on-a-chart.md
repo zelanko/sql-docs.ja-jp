@@ -1,5 +1,5 @@
 ---
-title: グラフ (レポート ビルダーおよび SSRS) 上で複数のデータ範囲を持つ系列の表示 |Microsoft Docs
+title: グラフ上の複数のデータ範囲を持つ系列の表示 (レポートビルダーおよび SSRS) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8c226cc9603aa687616d54fa95ee82c7f2b86792
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106003"
 ---
 # <a name="displaying-a-series-with-multiple-data-ranges-on-a-chart-report-builder-and-ssrs"></a>グラフ上で複数のデータ範囲を持つ系列の表示 (レポート ビルダーおよび SSRS)
@@ -26,11 +26,12 @@ ms.locfileid: "66106003"
   
  グラフの読みやすさは、以下のいずれかの方法で向上させることができます。  
   
--   **スケールの区切り線を有効にする**: データが 2 つ以上のデータ範囲を形成している場合は、スケール区切りを使用して、範囲間のすきまを削除します。 スケール区切りは、プロット エリアに描画される線であり、系列の高値と低値の間の区切りを示します。  
+-   **スケール区切りを有効に**します。 データが 2 つ以上のデータ範囲を形成している場合は、スケール区切りを使用して、範囲間のすきまを削除します。 スケール区切りは、プロット エリアに描画される線であり、系列の高値と低値の間の区切りを示します。  
   
--   **不要な値を除外する**: グラフ上に表示する必要のある重要なデータ範囲を覆っているデータ ポイントがある場合は、レポート フィルターを使用して、不要なポイントを削除します。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のグラフにフィルターを追加する方法の詳細については、｢[データセット フィルター、データ領域フィルター、およびグループ フィルターの追加 &#40;レポート ビルダーおよび SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)」を参照してください。  
+-   **不要な値**を除外します。 グラフ上に表示する必要のある重要なデータ範囲を覆っているデータ ポイントがある場合は、レポート フィルターを使用して、不要なポイントを削除します。 
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のグラフにフィルターを追加する方法の詳細については、｢[データセット フィルター、データ領域フィルター、およびグループ フィルターの追加 &#40;レポート ビルダーおよび SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)」を参照してください。  
   
--   **各データ範囲を複数の系列を比較するための別々の系列としてプロットする**: データ範囲が 3 つ以上ある場合は、各データ範囲を別々の系列に分離すると効果的です。 詳細については、「 [グラフ上の複数の系列 (レポート ビルダーおよび SSRS)](multiple-series-on-a-chart-report-builder-and-ssrs.md):  
+-   **複数の系列を比較するために、各データ範囲を別々の系列としてプロット**します。 データ範囲が 3 つ以上ある場合は、各データ範囲を別々の系列に分離すると効果的です。 詳細については、「 [グラフ上の複数の系列 (レポート ビルダーおよび SSRS)](multiple-series-on-a-chart-report-builder-and-ssrs.md):  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -58,14 +59,14 @@ ms.locfileid: "66106003"
   
 -   グラフの種類が極座標グラフ、レーダー グラフ、円グラフ、ドーナツ グラフ、じょうごグラフ、ピラミッド グラフ、または積み上げグラフである場合  
   
- スケール区切り付きのグラフについては、サンプル レポートに例が含まれています。 このサンプル レポートおよびその他のサンプル レポートをダウンロードする方法の詳細については、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][のレポート ビルダーおよびレポート デザイナーのサンプル レポートに関するページ](https://go.microsoft.com/fwlink/?LinkId=198283)を参照してください。  
+ スケール区切り付きのグラフについては、サンプル レポートに例が含まれています。 このサンプルレポートのダウンロードの詳細については、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]「[サンプルレポートのレポートビルダーとレポートデザイナー](https://go.microsoft.com/fwlink/?LinkId=198283)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [グラフ上の複数の系列 (レポート ビルダーおよび SSRS)](multiple-series-on-a-chart-report-builder-and-ssrs.md)   
+ [グラフ上の複数の系列 &#40;レポートビルダーと SSRS&#41;](multiple-series-on-a-chart-report-builder-and-ssrs.md)   
  [グラフの書式設定 (レポート ビルダーおよび SSRS)](formatting-a-chart-report-builder-and-ssrs.md)   
- [グラフに対する 3D、傾斜、およびその他の効果 (レポート ビルダーおよび SSRS)](chart-effects-3d-bevel-and-other-report-builder.md)   
+ [グラフに対する 3D、傾斜、およびその他の効果 &#40;レポート ビルダーおよび SSRS&#41;](chart-effects-3d-bevel-and-other-report-builder.md)   
  [グラフ &#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md)   
- [[軸のオプション] ([軸のプロパティ] ダイアログ ボックス) (レポート ビルダーおよび SSRS)](../axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md)   
- [円グラフの小さいスライスをまとめる (レポート ビルダーおよび SSRS)](collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)  
+ [[軸のプロパティ] ダイアログ ボックス、[軸のオプション] &#40;レポート ビルダーおよび SSRS&#41;](../axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md)   
+ [円グラフの小さいスライスをまとめる &#40;レポート ビルダーおよび SSRS&#41;](collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)  
   
   
