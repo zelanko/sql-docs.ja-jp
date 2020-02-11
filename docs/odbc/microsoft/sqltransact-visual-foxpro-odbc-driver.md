@@ -13,22 +13,22 @@ ms.assetid: 92cf86c0-f7a8-44d7-b59f-a1342677440b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e554a8669b6e6e95e234a5b939477a8bb2f7b8cc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67948866"
 ---
 # <a name="sqltransact-visual-foxpro-odbc-driver"></a>SQLTransact (Visual FoxPro ODBC ドライバー)
 > [!NOTE]  
->  このトピックでには、Visual FoxPro ODBC ドライバー固有の情報が含まれています。 この関数の詳細については、該当するトピックを参照してください。 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)します。  
+>  このトピックには、Visual FoxPro ODBC ドライバー固有の情報が含まれています。 この関数の一般的な情報については、「 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)」の該当するトピックを参照してください。  
   
- サポート:[完全]  
+ サポート: 完全  
   
- ODBC API 準拠:コア レベル  
+ ODBC API の準拠: コアレベル  
   
- すべてのステートメント ハンドルのすべてのアクティブな操作をコミットまたはロールバック操作の要求 (*hstmt*s) 接続または、環境ハンドルに関連付けられているすべての接続に関連付けられた*henv*します。 **SQLTransact**にあるデータ ソースに対してのみ機能[データベース](../../odbc/microsoft/visual-foxpro-terminology.md)します。  
+ 接続に関連付けられているすべてのステートメントハンドル (*hstmt*s) のすべてのアクティブな操作、または環境ハンドル*henv*に関連付けられているすべての接続に対して、コミットまたはロールバックの操作を要求します。 **Sqltransact**は、[データベース](../../odbc/microsoft/visual-foxpro-terminology.md)であるデータソースに対してのみ機能します。  
   
- トランザクションはアクティブなまま手動モードの場合、コミットに失敗した場合トランザクションをロールバックまたはコミット操作を再試行することができます。 自動トランザクション モードのときに、コミット操作が失敗した場合、トランザクションは自動的にロールバックします。トランザクションを非アクティブにすることはできません。  
+ 手動モードでコミットが失敗した場合、トランザクションはアクティブのままです。トランザクションをロールバックするか、コミット操作を再試行するかを選択できます。 自動トランザクションモードでコミット操作が失敗した場合、トランザクションは自動的にロールバックされます。トランザクションを非アクティブにすることはできません。  
   
- 詳細については、次を参照してください。 [SQLTransact](../../odbc/reference/syntax/sqltransact-function.md)で、 *ODBC プログラマ リファレンス*します。
+ 詳細については、 *ODBC プログラマーリファレンス*の「 [sqltransact](../../odbc/reference/syntax/sqltransact-function.md) 」を参照してください。

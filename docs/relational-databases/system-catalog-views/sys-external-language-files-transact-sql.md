@@ -1,5 +1,5 @@
 ---
-title: sys.external_language_files (TRANSACT-SQL) - SQL Server |Microsoft Docs
+title: external_language_files (Transact-sql)-SQL Server |Microsoft Docs
 ms.custom: ''
 ms.date: 05/22/2019
 ms.prod: sql
@@ -20,34 +20,34 @@ ms.author: negust
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 0d1325311ef0b708f5a3abd5f4494e099863efc2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65995090"
 ---
-# <a name="sysexternal_language_files-transact-sql"></a>sys.external_language_files (TRANSACT-SQL)
+# <a name="sysexternal_language_files-transact-sql"></a>external_language_files (Transact-sql)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-このカタログ ビューでは、データベース内の外部の言語拡張機能ファイルの一覧を示します。 **R** と **Python** は予約済みの名前であり、それらの特定の名前で外部言語を作成することはできません。
+このカタログビューには、データベース内の外部言語拡張ファイルの一覧が表示されます。 **R**と**Python**は予約された名前であり、これらの特定の名前を使用して外部言語を作成することはできません。
 
-外部の言語が、file_spec から作成されると、拡張機能自体とそのプロパティがこのビューで表示します。 このビューは、OS ごとに、言語ごとに 1 つのエントリが含まれます。
+File_spec から外部言語が作成されると、拡張機能自体とそのプロパティがこのビューに表示されます。 このビューには、OS ごとに1つのエントリが含まれます。
 
 ## <a name="sysexternal_languages"></a>sys.external_languages
 
-カタログ ビューの sys.external_language_files には、データベース内の各外部言語拡張機能の行が一覧表示します。 パラメーター
+カタログビューの external_language_files には、データベース内の外部言語拡張機能ごとに1行のデータが表示されます。 パラメーター
 
-|列名 |データ型 | 説明|
+|列名 |データ型 | [説明]|
 |------|------|------|
-|external_language_id |int | 外部の言語の ID|
-|コンテンツ|varbinary(max) |外部の言語拡張機能のファイルの内容|
-|file_name|nvarchar(266)|言語拡張機能のファイルの名前|
-|プラットフォーム|TINYINT|SQL Server がインストールされているホスト プラットフォームの ID|
-|platform_desc |nvarchar(60)|ホストのプラットフォームの名前です。 有効な値は、'WINDOWS'、'LINUX' です。|
-|パラメーター|nvarchar (4000)|外部の言語のパラメーター|
-|environment_variables |nvarchar (4000)|外部の言語環境変数|
+|external_language_id |INT | 外部言語の ID|
+|content|varbinary(max) |外部言語拡張ファイルの内容|
+|file_name|nvarchar (266)|言語拡張ファイルの名前|
+|プラットフォーム|tinyint|SQL Server がインストールされているホストプラットフォームの ID|
+|platform_desc |nvarchar(60)|ホストプラットフォームの名前。 有効な値は ' WINDOWS '、' LINUX ' です。|
+|parameters|nvarchar(4000)|外部言語 prameters|
+|environment_variables |nvarchar(4000)|外部言語環境変数|
 
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
 
 + [sys.external_languages](sys-external-languages-transact-sql.md)  
-+ [外部の言語を作成します。](../../t-sql/statements/create-external-language-transact-sql.md)  
++ [外部言語の作成](../../t-sql/statements/create-external-language-transact-sql.md)  

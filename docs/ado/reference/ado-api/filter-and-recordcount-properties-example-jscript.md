@@ -16,14 +16,14 @@ ms.assetid: 677fa67e-9cb9-4d7d-a786-beeb5bee5236
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0832ddbbb16c54ee62c8fcec8749aeadb4f98449
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932657"
 ---
-# <a name="filter-and-recordcount-properties-example-jscript"></a>Filter および RecordCount プロパティの例 (JScript)
-この例を開いて、**レコード セット**Northwind データベースおよび、使用の企業のテーブルで、[フィルター](../../../ado/reference/ado-api/filter-property.md) CompanyName フィールドが文字で始まるこれらの場所に表示されているレコードを制限するプロパティD. 切り取り、メモ帳または別のテキスト エディターに次のコードを貼り付けてととして保存**貼り付けて filterjs.asp という名前**します。  
+# <a name="filter-and-recordcount-properties-example-jscript"></a>Filter プロパティと RecordCount プロパティの例 (JScript)
+この例では、Northwind データベースの企業テーブルで**レコードセット**を開き、[フィルター](../../../ado/reference/ado-api/filter-property.md)プロパティを使用して、CompanyName フィールドが D 文字で始まるレコードだけを表示するように制限します。次のコードを切り取ってメモ帳などのテキストエディターに貼り付け、 **filterjs**として保存します。  
   
 ```  
 <!-- BeginFilterJS -->  
@@ -148,7 +148,7 @@ BODY {
 <!-- EndFilterJS -->  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [プロパティをフィルター処理します。](../../../ado/reference/ado-api/filter-property.md)   
+## <a name="see-also"></a>参照  
+ [Filter プロパティ](../../../ado/reference/ado-api/filter-property.md)   
  [RecordCount プロパティ (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)   
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

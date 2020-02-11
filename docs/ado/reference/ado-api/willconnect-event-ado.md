@@ -1,5 +1,5 @@
 ---
-title: WillConnect イベント (ADO) |Microsoft Docs
+title: 接続イベント (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,16 +17,16 @@ ms.assetid: da561d58-eb58-446c-a4fd-1838c76073c0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9fc1ac74e7e3d521bae587957f5f95771e5a5268
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67945857"
 ---
 # <a name="willconnect-event-ado"></a>WillConnect イベント (ADO)
-**WillConnect**の接続を開始する前に、イベントが呼び出されます。  
+接続が開始**される前に、イベントが**呼び出されます。  
   
- **適用対象します。** [Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+ **適用対象:** [接続オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,33 +36,33 @@ WillConnect ConnectionString, UserID, Password, Options, adStatus, pConnection
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *ConnectionString*  
- A**文字列**保留中の接続の接続情報を格納します。  
+ *文字列*  
+ 保留中の接続の接続情報を含む**文字列**。  
   
  *UserID*  
- A**文字列**保留中の接続のユーザー名を格納しています。  
+ 保留中の接続のユーザー名を含む**文字列**。  
   
- *Password*  
- A**文字列**保留中の接続のパスワードを格納しています。  
+ *パスワード*  
+ 保留中の接続のパスワードを含む**文字列**。  
   
- *[オプション]*  
- A**長い**プロバイダーを評価する方法を示す値、 *ConnectionString*します。 唯一の選択肢は**adAsyncOpen**します。  
+ *オプション*  
+ プロバイダーが*ConnectionString*を評価する方法を示す**Long 型**の値。 唯一のオプションは**adAsyncOpen**です。  
   
  *adStatus*  
- [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md)状態値。  
+ [Eventstatusenum](../../../ado/reference/ado-api/eventstatusenum.md)状態の値です。  
   
- このパラメーターに設定されているこのイベントが呼び出されると、 **adStatusOK**既定。 設定されている**adStatusCantDeny**場合は、イベントが保留中の操作のキャンセルを要求できません。  
+ このイベントが呼び出されると、このパラメーターは既定で**Adstatusok**に設定されます。 イベントが保留中の操作の取り消しを要求できない場合は、 **Adstatuscantdeny**に設定されます。  
   
- このイベントから制御が戻る前に、このパラメーターを設定**adStatusUnwantedEvent**後続通知しないように設定します。 このパラメーターに設定**adStatusCancel**この通知の取り消しの原因となった接続操作を要求します。  
+ このイベントが返される前に、このパラメーターを**adStatusUnwantedEvent**に設定して、後続の通知が行われないようにします。 このパラメーターを**Adstatuscancel**に設定して、この通知の取り消しの原因となった接続操作を要求します。  
   
  *pConnection*  
- [接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトをこのイベント通知が適用されます。 パラメーターへの変更、**接続**によって、 **WillConnect**イベント ハンドラーは効果がありません、**接続**します。  
+ このイベント通知を適用する[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクト。 に**よって接続の**パラメーターを**変更して****も、接続**に影響はありません。  
   
-## <a name="remarks"></a>コメント  
- ときに**WillConnect**が呼び出される、 *ConnectionString*、 *UserID*、*パスワード*、および*オプション*パラメーターは、(保留中の接続)、このイベントの原因し、イベントを返します。 前に変更することができる操作によって確立されている値に設定されます。 **WillConnect**保留中の接続をキャンセルする要求を返す可能性があります。  
+## <a name="remarks"></a>解説  
+ を**呼び出すと、** *ConnectionString*、 *UserID*、 *Password*、および*Options*の各パラメーターは、このイベントの原因となった操作によって確立された値 (保留中の接続) に設定され、イベントが返される前に変更できます。 **接続**によって、保留中の接続が取り消されたという要求が返される場合があります。  
   
- このイベントが取り消されると、 **ConnectComplete**呼び出しに使用されるその*adStatus*パラメーターに設定**adStatusErrorsOccurred**します。  
+ このイベントがキャンセルされると、 **Connectcomplete**が呼び出され、 *Adstatus*パラメーターが**Adstatuserrorの curred**に設定されます。  
   
-## <a name="see-also"></a>関連項目  
- [ADO イベント モデルの例 (vc++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
+## <a name="see-also"></a>参照  
+ [ADO Events モデルの例 (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [ADO イベント ハンドラーの概要](../../../ado/guide/data/ado-event-handler-summary.md)

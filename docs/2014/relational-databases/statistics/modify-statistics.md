@@ -14,20 +14,21 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2da978efd869a748bb48f6d494d59ae2f4cfb019
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211860"
 ---
 # <a name="modify-statistics"></a>統計の変更
+  
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して既存の統計を変更できます。  
   
  **このトピックの内容**  
   
 -   **作業を開始する準備:**  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **統計を変更するために使用するもの:**  
   
@@ -50,7 +51,8 @@ ms.locfileid: "68211860"
   
 #### <a name="to-modify-statistics"></a>統計を変更するには  
   
-1.  **オブジェクト エクスプローラー**で、統計を変更するデータベースをプラス記号をクリックして展開します。  
+1.  
+  **オブジェクト エクスプローラー**で、統計を変更するデータベースをプラス記号をクリックして展開します。  
   
 2.  プラス記号をクリックして **[テーブル]** フォルダーを展開します。  
   
@@ -60,7 +62,9 @@ ms.locfileid: "68211860"
   
 5.  変更する統計オブジェクトを右クリックし、 **[プロパティ]** を選択します。  
   
-6.  **[統計のプロパティ -** *statistics_name* ] ダイアログ ボックスの **[全般]** ページで **[追加]** , **[削除]** , **[上へ移動]** 、 **[下へ移動]** 、 any combination, to alter the properties of the statistics. **[統計の列]** グリッド内の列の位置は、統計の使いやすさに影響する可能性があることに注意してください。  
+6.  
+  **[統計のプロパティ -** *statistics_name* ] ダイアログ ボックスの **[全般]** ページで **[追加]**, **[削除]**, **[上へ移動]**、 **[下へ移動]**、 any combination, to alter the properties of the statistics. 
+  **[統計の列]** グリッド内の列の位置は、統計の使いやすさに影響する可能性があることに注意してください。  
   
 7.  **[OK]** をクリックします。  
   

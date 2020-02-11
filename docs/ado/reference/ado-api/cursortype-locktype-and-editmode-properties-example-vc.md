@@ -1,5 +1,5 @@
 ---
-title: CursorType、LockType、EditMode プロパティの例 (vc++) |Microsoft Docs
+title: CursorType、LockType、および EditMode プロパティの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,14 +17,14 @@ ms.assetid: b2a80e44-03d8-426e-81b6-dd9dfc30e181
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: be094e6886cceb8e6f4e42e3b60f9e7355df7592
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933254"
 ---
-# <a name="cursortype-locktype-and-editmode-properties-example-vc"></a>CursorType、LockType、EditMode プロパティの例 (vc++)
-この例の設定、 [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)と[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)プロパティを開く前に、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)します。 値も表示されます、 [EditMode](../../../ado/reference/ado-api/editmode-property.md)さまざまな条件下でのプロパティ。 EditModeOutput 関数は、この手順を実行する必要があります。  
+# <a name="cursortype-locktype-and-editmode-properties-example-vc"></a>CursorType、LockType、および EditMode プロパティの例 (VC + +)
+この例では、[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)を開く前に、 [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)プロパティと[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)プロパティを設定します。 また、さまざまな条件下での[EditMode](../../../ado/reference/ado-api/editmode-property.md)プロパティの値も表示されます。 このプロシージャを実行するには、EditModeOutput 関数が必要です。  
   
 ## <a name="example"></a>例  
   
@@ -155,13 +155,13 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-  **AddNew: の後**   
- **EditMode adEditAdd を =**  
-**後の更新。**    
- **EditMode adEditNone を =**  
-**[編集]: の後**   
- **EditMode adEditInProgress を =**   
-## <a name="see-also"></a>関連項目  
+  **AddNew 後:**   
+ **EditMode = adEditAdd**  
+**更新後:**   
+ **EditMode = adEditNone**  
+**編集後:**   
+ **EditMode = adEditInProgress**   
+## <a name="see-also"></a>参照  
  [CursorType プロパティ (ADO)](../../../ado/reference/ado-api/cursortype-property-ado.md)   
  [EditMode プロパティ](../../../ado/reference/ado-api/editmode-property.md)   
  [LockType プロパティ (ADO)](../../../ado/reference/ado-api/locktype-property-ado.md)   

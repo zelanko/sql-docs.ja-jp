@@ -1,5 +1,5 @@
 ---
-title: IHextendedSubscriptionView (Transact-SQL) |Microsoft Docs
+title: IHextendedSubscriptionView (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -18,40 +18,40 @@ ms.assetid: 124756a4-463a-4a81-bf5b-de7e8ffc7a62
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8f080f5defd5143d3822e86eeeb3c7242b51d08d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68029585"
 ---
 # <a name="ihextendedsubscriptionview-transact-sql"></a>IHextendedSubscriptionView (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **IHextendedSubscriptionView**ビューは、SQL Server 以外のパブリケーションに対するサブスクリプションに関する情報を公開します。 このビューは、**配布**データベース。  
+  **IHextendedSubscriptionView**ビューでは、非 SQL Server パブリケーションのサブスクリプションに関する情報が公開されます。 このビューは、**ディストリビューション**データベースに格納されます。  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
 |**article_id**|**int**|アーティクルの一意識別子。|  
 |**dest_db**|**sysname**|転送先データベースの名前。|  
-|**srvid**|**smallint**|サブスクライバーの一意の識別子。|  
-|**login_name**|**sysname**|サブスクライバーに接続するために使用されるログイン。|  
-|**distribution_jobid**|**binary**|ディストリビューション エージェント ジョブを識別します。|  
-|**publisher_database_id**|**int**|パブリケーション データベースを識別します。|  
-|**subscription_type**|**int**|サブスクリプションの種類です。<br /><br /> **0** = プッシュ、ディストリビューション エージェントがサブスクライバーで実行されます。<br /><br /> **1** = プル、ディストリビューション エージェントがディストリビューターで実行されます。|  
+|**srvid**|**smallint**|サブスクライバーの一意の識別子です。|  
+|**login_name**|**sysname**|サブスクライバーへの接続に使用されるログインです。|  
+|**distribution_jobid**|**binary**|ディストリビューションエージェントジョブを識別します。|  
+|**publisher_database_id**|**int**|パブリケーションデータベースを識別します。|  
+|**subscription_type**|**int**|サブスクリプションの種類。<br /><br /> **0** = プッシュ-ディストリビューションエージェントはサブスクライバーで実行されます。<br /><br /> **1** = プル-ディストリビューションエージェントはディストリビューターで実行されます。|  
 |**sync_type**|**tinyint**|初期同期の種類。<br /><br /> **1** = 自動<br /><br /> **2** = なし|  
-|**status**|**tinyint**|サブスクリプションの状態:<br /><br /> **0** = 非アクティブ<br /><br /> **1** = サブスクライブ<br /><br /> **2** = アクティブ|  
-|**snapshot_seqno_flag**|**bit**|スナップショットのシーケンス番号を使用しているかを示します。|  
-|**independent_agent**|**bit**|このパブリケーションに対して、スタンドアロンのディストリビューション エージェントがあるかどうかを示します。<br /><br /> **0** = パブリケーションは共有ディストリビューション エージェントを使用して、パブリッシャー データベース/サブスクライバー データベースの各ペアが 1 つの共有エージェント。<br /><br /> **1** = このパブリケーション用のスタンドアロン ディストリビューション エージェントが存在します。|  
-|**subscription_time**|**datetime**|内部使用のみです。|  
-|**loopback_detection**|**bit**|双方向トランザクション レプリケーション トポロジの一部であるサブスクリプションに適用されます。 ディストリビューション エージェントが、サブスクライバーで発生したトランザクションをサブスクライバーに戻すかどうかを示します。<br /><br /> **1** = は送信しません。<br /><br /> **0** = 戻す。|  
-|**agent_id**|**int**|ディストリビューション エージェントの一意の識別子。|  
-|**update_mode**|**tinyint**|更新モードで、次のいずれかの種類を示します。<br /><br /> **0** = 読み取り専用です。<br /><br /> **1** = 即時更新します。<br /><br /> **2** = メッセージ キューを使用するキュー更新。<br /><br /> **3**イミディ エイト = メッセージ キューを使用してフェールオーバーとしてキュー更新で更新します。<br /><br /> **4** = SQL Server キューを使用するキュー更新。<br /><br /> **5** = SQL Server キューを使用して、キュー更新フェールオーバーを行う即時更新します。|  
+|**オンライン**|**tinyint**|サブスクリプションの状態。<br /><br /> **0** = 非アクティブ<br /><br /> **1** = サブスクライブ済み<br /><br /> **2** = アクティブ|  
+|**snapshot_seqno_flag**|**bit**|スナップショットシーケンス番号が使用されているかどうかを示します。|  
+|**independent_agent**|**bit**|このパブリケーションに対して、スタンドアロンのディストリビューション エージェントがあるかどうかを示します。<br /><br /> **0** = パブリケーションは共有ディストリビューションエージェントを使用し、各パブリッシャーデータベース/サブスクライバーデータベースのペアには1つの共有エージェントがあります。<br /><br /> **1** = このパブリケーションには、スタンドアロンのディストリビューションエージェントがあります。|  
+|**subscription_time**|**DATETIME**|内部使用のみです。|  
+|**loopback_detection**|**bit**|双方向トランザクションレプリケーショントポロジの一部であるサブスクリプションに適用されます。 ディストリビューション エージェントが、サブスクライバーで発生したトランザクションをサブスクライバーに戻すかどうかを示します。<br /><br /> **1** = を返しません。<br /><br /> **0** = 返送します。|  
+|**agent_id**|**int**|ディストリビューションエージェントの一意の識別子。|  
+|**update_mode**|**tinyint**|更新モードの種類を示します。以下のいずれかを指定できます。<br /><br /> **0** = 読み取り専用。<br /><br /> **1** = 即時更新。<br /><br /> **2** = メッセージキューを使用した更新がキューに登録されました。<br /><br /> **3** = メッセージキューを使用して、フェールオーバーとしてキュー更新を使用する即時更新。<br /><br /> **4** = SQL Server キューを使用したキュー更新。<br /><br /> **5** = キュー更新フェールオーバーを使用した即時更新。 SQL Server キューを使用します。|  
 |**publisher_seqno**|**varbinary(16)**|このサブスクリプションに対するパブリッシャー側のトランザクションのシーケンス番号。|  
 |**ss_cplt_seqno**|**varbinary(16)**|同時実行スナップショット処理の完了を示すために使用するシーケンス番号。|  
   
-## <a name="see-also"></a>関連項目  
- [異種データベース レプリケーション](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
- [レプリケーション テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
+## <a name="see-also"></a>参照  
+ [異種データベースレプリケーション](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
+ [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [レプリケーションビュー &#40;Transact-sql&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

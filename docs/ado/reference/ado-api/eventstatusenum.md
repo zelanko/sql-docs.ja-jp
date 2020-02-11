@@ -16,33 +16,33 @@ ms.assetid: ebfd4cda-4017-4873-9d28-38b1c7db12a8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8883679a85d1e134b1759c90cde524bb97995130
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932862"
 ---
 # <a name="eventstatusenum"></a>EventStatusEnum
 イベントの実行の現在の状態を指定します。  
   
-|定数|Value|説明|  
+|常時|値|[説明]|  
 |--------------|-----------|-----------------|  
-|**adStatusCancel**|4|イベントの発生の原因となった操作のキャンセルを要求します。|  
-|**adStatusCantDeny**|3|操作が保留中の操作のキャンセルを要求できないことを示します。|  
-|**adStatusErrorsOccurred**|2|エラーまたはエラーのために、イベントの原因となった操作が失敗したことを示します。|  
-|**adStatusOK**|1|イベントの原因となった操作が成功したことを示します。|  
-|**adStatusUnwantedEvent**|5|イベント メソッドの実行が完了する前に、後続の通知をできないようにします。|  
+|**adStatusCancel**|4|イベントの発生原因となった操作のキャンセルを要求します。|  
+|**adStatusCantDeny**|3|操作が保留中の操作の取り消しを要求できないことを示します。|  
+|**Adstatuserrorの Curred**|2|イベントの原因となった操作がエラーまたはエラーのために失敗したことを示します。|  
+|**adStatusOK**|1 で保護されたプロセスとして起動されました|イベントの原因となった操作が成功したことを示します。|  
+|**adStatusUnwantedEvent**|5|イベントメソッドの実行が完了する前に、後続の通知を実行しないようにします。|  
   
-## <a name="adowfc-equivalent"></a>ADO と WFC と同等  
- パッケージ: **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>同等の ADO/WFC  
+ パッケージ: **com. ms. wfc. データ**  
   
-|定数|  
+|常時|  
 |--------------|  
-|AdoEnums.EventStatus.CANCEL|  
-|AdoEnums.EventStatus.CANTDENY|  
-|AdoEnums.EventStatus.ERRORSOCCURRED|  
-|AdoEnums.EventStatus.OK|  
-|AdoEnums.EventStatus.UNWANTEDEVENT|  
+|AdoEnums (キャンセル)|  
+|AdoEnums. CANTDENY|  
+|AdoEnums. ERRORの CURRED|  
+|AdoEnums。 OK|  
+|AdoEnums. UNWANTEDEVENT|  
   
 ## <a name="applies-to"></a>適用対象  
   

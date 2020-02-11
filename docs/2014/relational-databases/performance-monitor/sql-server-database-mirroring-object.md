@@ -16,16 +16,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7834d2f5d0fc8a8e849f796eab93259682ea377c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63250667"
 ---
 # <a name="sql-server-database-mirroring-object"></a>SQL Server:Database Mirroring オブジェクト
   **SQLServer:Database Mirroring** パフォーマンス オブジェクトには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータベース ミラーリングに関する情報を報告するパフォーマンス カウンターが含まれています。 次の表は、このオブジェクトに含まれているカウンターを示します。  
   
-|名前|説明|  
+|Name|[説明]|  
 |----------|-----------------|  
 |**Bytes Received/sec**|1 秒間に受信されたバイト数。|  
 |**Bytes Sent/sec**|1 秒間に送信されたバイト数。|  
@@ -52,7 +52,7 @@ ms.locfileid: "63250667"
 > [!NOTE]  
 >  各パートナーでは、一部のカウンターの値が 0 を示します。値が 0 になるカウンターは、パートナーが現在担っている役割によって異なります。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  パフォーマンス カウンターを使用して、データベース ミラーリングのパフォーマンスを監視できます。 たとえば、データベース ミラーリングがプリンシパル サーバーのパフォーマンスに影響を及ぼしているかどうかを確認するには、 **Transaction Delay** カウンターを調べることができます。また、ミラー データベースとプリンシパル データベース間の遅延時間がいかに少ないかを確認するには、 **Redo Queue** カウンターと **Log Send Queue** カウンターを調べることができます。 1 秒間に送信されたログの量を監視する場合は、 **Log Bytes Sent/sec** カウンターを調べることができます。  
   
 ## <a name="see-also"></a>参照  

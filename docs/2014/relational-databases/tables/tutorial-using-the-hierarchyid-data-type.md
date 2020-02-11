@@ -1,5 +1,5 @@
 ---
-title: チュートリアル:Hierarchyid データ型の使用 |Microsoft Docs
+title: 'チュートリアル: hierarchyid データ型の使用 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,22 +14,22 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e3718b45b69870969dae85b4eb1ad2e9e80adc85
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211776"
 ---
-# <a name="tutorial-using-the-hierarchyid-data-type"></a>チュートリアル:hierarchyid データ型の使用
+# <a name="tutorial-using-the-hierarchyid-data-type"></a>チュートリアル : hierarchyid データ型の使用
   このチュートリアルは、[!INCLUDE[tsql](../../includes/tsql-md.md)] については理解しているが、`hierarchyid` データ型は初めて使用するユーザーを対象としています。  
   
 ## <a name="what-you-will-learn"></a>学習する内容  
  このチュートリアルは、次の 2 つのレッスンで構成されています。  
   
- [レッスン 1:テーブルの階層構造への変換](lesson-1-converting-a-table-to-a-hierarchical-structure.md)  
+ [レッスン 1: テーブルの階層構造への変換](lesson-1-converting-a-table-to-a-hierarchical-structure.md)  
  このレッスンでは、親子階層として構成されている既存の従業員テーブルを使用し、`hierarchyid` データ型を使用して階層を表す新しいテーブルにデータを移動します。 このレッスンを学習するには、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] サンプル データベースが必要です。  
   
- [レッスン 2:作成して、階層テーブルでデータを管理します。](lesson-2-creating-and-managing-data-in-a-hierarchical-table.md)  
+ [レッスン 2: 階層テーブルでのデータの作成と管理](lesson-2-creating-and-managing-data-in-a-hierarchical-table.md)  
  このレッスンでは、`hierarchyid` データ型を使用して階層構造を表すテーブルを作成します。 その後、階層的な手法を使用して、テーブル内のデータを操作します。  
   
 ## <a name="requirements"></a>必要条件  
@@ -41,11 +41,11 @@ ms.locfileid: "68211776"
   
 -   Internet Explorer 6 以降。  
   
-## <a name="see-also"></a>関連項目  
- [チュートリアル: データベース エンジンの概要](../tutorial-getting-started-with-the-database-engine.md)   
- [チュートリアル: TRANSACT-SQL ステートメントの作成](../../t-sql/tutorial-writing-transact-sql-statements.md)   
- [hierarchyid データ型メソッド リファレンス](/sql/t-sql/data-types/hierarchyid-data-type-method-reference)   
- [階層データ&#40;SQL Server&#41;](../hierarchical-data-sql-server.md)   
+## <a name="see-also"></a>参照  
+ [チュートリアル: データベースエンジンを使用したはじめに](../tutorial-getting-started-with-the-database-engine.md)   
+ [チュートリアル: Transact-sql ステートメントの記述](../../t-sql/tutorial-writing-transact-sql-statements.md)   
+ [hierarchyid データ型メソッドリファレンス](/sql/t-sql/data-types/hierarchyid-data-type-method-reference)   
+ [階層データ &#40;SQL Server&#41;](../hierarchical-data-sql-server.md)   
  [hierarchyid &#40;Transact-SQL&#41;](/sql/t-sql/data-types/hierarchyid-data-type-method-reference)  
   
   

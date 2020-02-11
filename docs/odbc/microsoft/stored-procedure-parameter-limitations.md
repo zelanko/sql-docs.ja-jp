@@ -1,5 +1,5 @@
 ---
-title: ストアド プロシージャ パラメーターの制限事項 |Microsoft Docs
+title: ストアドプロシージャパラメーターの制限 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,19 +14,19 @@ ms.assetid: 8b804bcf-4cce-4e6f-aa45-00bab9ef9921
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 36f1c5a18eb9f0b1939a2c3602f1ebe7695741f7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67948822"
 ---
 # <a name="stored-procedure-parameter-limitations"></a>ストアド プロシージャのパラメーターの制限
 > [!IMPORTANT]  
->  この機能は、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 代わりに、Oracle によって提供される ODBC ドライバーを使用します。  
+>  この機能は、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 代わりに、Oracle によって提供される ODBC ドライバーを使用してください。  
   
- 10 を使用するプロシージャが格納されている Oracle を実行しているか、複数の出力パラメーター、アクセス違反または ActiveX Data Objects (ADO) エラーが発生、ストアド プロシージャの呼び出しは失敗します。 これは、Microsoft ODBC Driver をバージョン 8.0.4.0.0 と、Oracle クライアント ソフトウェアの 8.0.4.0.4 for Oracle を使用する場合に発生します。  
+ 10個以上の出力パラメーターを使用する Oracle ストアドプロシージャを実行すると、ストアドプロシージャの呼び出しは失敗し、アクセス違反または ActiveX データオブジェクト (ADO) エラーが発生します。 これは、Microsoft ODBC Driver for Oracle と、Oracle クライアントソフトウェアのバージョン8.0.4.0.0 および8.0.4.0.4 を使用する場合に発生する可能性があります。  
   
- 問題を修正するには、Oracle クライアント ソフトウェアは、8.0.4.2.0 バージョンにアップグレードするまたは上位になければなりません。 詳細については、連絡先 Oracle Corporation、[パッチ](../../odbc/microsoft/oracle-software-patches.md)します。  
+ この問題を解決するには、Oracle クライアントソフトウェアをバージョン8.0.4.2.0 以上にアップグレードする必要があります。 [修正プログラム](../../odbc/microsoft/oracle-software-patches.md)の詳細については、Oracle Corporation にお問い合わせください。  
   
 > [!NOTE]  
->  この問題は、Oracle クライアント ソフトウェア version 8.0.3.0.0 の初期リリースでは発生しません。
+>  この問題は、Oracle クライアントソフトウェアバージョン8.0.3.0.0 の初期リリースでは発生しません。

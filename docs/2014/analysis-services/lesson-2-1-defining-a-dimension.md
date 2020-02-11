@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 74561047f149ae6a6bdcd0cd54347d842e49569f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079090"
 ---
 # <a name="defining-a-dimension"></a>ディメンションの定義
@@ -27,45 +27,53 @@ ms.locfileid: "66079090"
   
 1.  ソリューション エクスプローラー (Microsoft Visual Studio の右側) で、 **[ディメンション]** を右クリックし、 **[新しいディメンション]** をクリックします。 ディメンション ウィザードが表示されます。  
   
-2.  **[ディメンション ウィザードへようこそ]** ページで **[次へ]** をクリックします。  
+2.  
+  **[ディメンション ウィザードへようこそ]** ページで **[次へ]** をクリックします。  
   
-3.  **[作成方法の選択]** ページで **[既存のテーブルの使用]** オプションが選択されていることを確認し、 **[次へ]** をクリックします。  
+3.  
+  **[作成方法の選択]** ページで **[既存のテーブルの使用]** オプションが選択されていることを確認し、 **[次へ]** をクリックします。  
   
-4.  **[基になる情報の指定]** ページで、 **Adventure Works DW 2012** データ ソース ビューが選択されていることを確認します。  
+4.  
+  **[基になる情報の指定]** ページで、 **Adventure Works DW 2012** データ ソース ビューが選択されていることを確認します。  
   
-5.  **[メイン テーブル]** ボックスの一覧で、 **[Date]** を選択します。  
+5.  
+  **[メイン テーブル]** ボックスの一覧で、 **[Date]** を選択します。  
   
 6.  **[次へ]** をクリックします。  
   
-7.  **[ディメンション属性の選択]** ページで、次の属性の横にあるチェック ボックスをオンにします。  
+7.  
+  **[ディメンション属性の選択]** ページで、次の属性の横にあるチェック ボックスをオンにします。  
   
-    -   **Date Key**  
+    -   **日付キー**  
   
-    -   **Full Date Alternate Key**  
+    -   **完全な日付の代替キー**  
   
-    -   **English Month Name**  
+    -   **英語の月の名前**  
   
     -   **Calendar Quarter**  
   
-    -   **Calendar Year**  
+    -   **暦年**  
   
-    -   **Calendar Semester**  
+    -   **カレンダー半期**  
   
-8.  **Full Date Alternate Key** 属性の **[属性の型]** 列の設定を **Regular** から **Date**に変更します。 これを行うには、 **[属性の型]** 列で **[Regular]** をクリックします。 次に、矢印をクリックしてオプションを展開し、 **[Date]**  >  **[Calendar]**  >  **[Date]** の順にクリックします。 **[OK]** をクリックします。 次の属性について同じ手順を繰り返し、属性の型を次のように変更します。  
+8.  
+  **Full Date Alternate Key** 属性の **[属性の型]** 列の設定を **Regular** から **Date**に変更します。 これを行うには、 **[属性の型]** 列で **[Regular]** をクリックします。 次に、矢印をクリックしてオプションを展開し、 次に、 **[** > **カレンダー** > の日付]**をクリックします。** **[OK]** をクリックします。 次の属性について同じ手順を繰り返し、属性の型を次のように変更します。  
   
-    -   **English Month Name** から **Month**  
+    -   **English Month Name** to **Month**  
   
-    -   **Calendar Quarter** から **Quarter**  
+    -   **Calendar quarter**から**quarter**  
   
-    -   **Calendar Year** から **Year**  
+    -   **Calendar year** to **year**  
   
-    -   **Calendar Semester** から **Half Year**  
+    -   **暦年****から半期**まで  
   
 9. **[次へ]** をクリックします。  
   
-10. **[ウィザードの完了]** ページの [プレビュー] ペインで、 **Date** ディメンションとその属性を確認できます。  
+10. 
+  **[ウィザードの完了]** ページの [プレビュー] ペインで、 **Date** ディメンションとその属性を確認できます。  
   
-11. **[完了]** をクリックしてウィザードを終了します。  
+11. 
+  **[完了]** をクリックしてウィザードを完了します。  
   
      ソリューション エクスプローラーでは、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial プロジェクトの **[ディメンション]** フォルダー内に Date ディメンションが表示されます。 開発環境の中央では、ディメンション デザイナーに Date ディメンションが表示されます。  
   
@@ -74,9 +82,9 @@ ms.locfileid: "66079090"
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
  [キューブの定義](lesson-2-2-defining-a-cube.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [多次元モデル内のディメンション](multidimensional-models/dimensions-in-multidimensional-models.md)   
- [既存のテーブルを使用したディメンションを作成します。](multidimensional-models/create-a-dimension-by-using-an-existing-table.md)   
+ [既存のテーブルを使用してディメンションを作成する](multidimensional-models/create-a-dimension-by-using-an-existing-table.md)   
  [ディメンション ウィザードを使用したディメンションの作成](multidimensional-models/create-a-dimension-using-the-dimension-wizard.md)  
   
   

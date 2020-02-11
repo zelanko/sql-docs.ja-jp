@@ -16,13 +16,13 @@ ms.assetid: 50357c2e-71aa-4e13-9e2e-0977a3655cc9
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: b434d4bda50cf03442020ba2f0c029aaa1e09cd9
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68771230"
 ---
-# <a name="spreplicationagentcheckup-transact-sql"></a>sp_replication_agent_checkup (Transact-SQL)
+# <a name="sp_replication_agent_checkup-transact-sql"></a>sp_replication_agent_checkup (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   各ディストリビューションデータベースで、実行中のレプリケーションエージェントがあるかどうかを確認します。ただし、指定されたハートビート間隔内に履歴が記録されていません。 このストアドプロシージャは、ディストリビューター側で任意のデータベースに対して実行されます。  
@@ -40,15 +40,15 @@ sp_replication_agent_checkup [ [ @heartbeat_interval = ] heartbeat_interval ]
 `[ @heartbeat_interval = ] 'heartbeat_interval'`エージェントが進行状況メッセージをログに記録しなくてもよい最大時間を分単位で指定します。 *heartbeat_interval*は**int**,、既定値は10分です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **sp_replication_agent_checkup**は、問題として検出された各エージェントに対してエラー14151を発生させます。 また、これらのエージェントに関する障害履歴メッセージをログに記録します。  
+ **sp_replication_agent_checkup**では、問題があると検出された各エージェントに対してエラー14151が発生します。 また、これらのエージェントに関する障害履歴メッセージをログに記録します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  **sp_replication_agent_checkup**は、スナップショットレプリケーション、トランザクションレプリケーション、およびマージレプリケーションで使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sp_replication_agent_checkup**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
-## <a name="see-also"></a>関連項目  
- [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>参照  
+ [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

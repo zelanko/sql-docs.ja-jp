@@ -1,5 +1,5 @@
 ---
-title: エラー出力の構成 |Microsoft Docs
+title: エラー出力を構成する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,18 +13,19 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 18318775c63cd7126686154dec2ee1f02733763f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060634"
 ---
 # <a name="configure-error-output"></a>[エラー出力の構成]
+  
   **[エラー出力の構成]** ダイアログ ボックスを使用すると、エラー出力をサポートするデータ フロー変換のエラー処理オプションを構成できます。  
   
  エラー出力の操作の詳細については、「 [データのエラー処理](data-flow/error-handling-in-data.md)」を参照してください。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **入力または出力**  
  出力の名前を表示します。  
   
@@ -41,7 +42,7 @@ ms.locfileid: "66060634"
   
  **関連トピック:** [データのエラー処理](data-flow/error-handling-in-data.md)  
   
- **[説明]**  
+ **説明**  
  操作の説明を表示します。  
   
  **[選択したセルに設定する値]**  
@@ -50,7 +51,7 @@ ms.locfileid: "66060634"
  **[適用]**  
  選択したセルにエラー処理オプションを適用します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

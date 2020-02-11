@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 80c5c5b2f4e6d4f691b7c3977ae2f715f5424e7f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011688"
 ---
 # <a name="use-a-format-file-to-skip-a-table-column-sql-server"></a>フォーマット ファイルを使用したテーブル列のスキップ (SQL Server)
@@ -47,7 +47,8 @@ GO
   
 ```  
   
- `myTestSkipCol2.dat` から `myTestSkipCol` テーブルにデータを一括インポートするには、フォーマット ファイルで最初のデータ フィールドを `Col1`にマップし、 `Col3`をスキップして 2 番目のフィールドを `Col2`にマップする必要があります。  
+ 
+  `myTestSkipCol2.dat` から `myTestSkipCol` テーブルにデータを一括インポートするには、フォーマット ファイルで最初のデータ フィールドを `Col1`にマップし、 `Col3`をスキップして 2 番目のフィールドを `Col2`にマップする必要があります。  
   
 ## <a name="using-a-non-xml-format-file"></a>XML 以外のフォーマット ファイルの使用  
  XML 以外のフォーマット ファイルを変更して、テーブル列をスキップすることができます。 通常、この作業は、 **bcp** ユーティリティを使用して XML 以外の既定のフォーマット ファイルを作成して、その既定のファイルをテキスト エディターで変更する必要があります。 変更後のフォーマット ファイルでは、既存の各フィールドを対応するテーブル列にマップし、スキップする列を指定する必要があります。 XML 以外の既定のデータ ファイルを変更するには、2 つの方法があります。 どちらの方法も、データ ファイルにデータ フィールドが存在しないこと、および対応するテーブル列にデータが挿入されないことを示します。  
@@ -66,7 +67,7 @@ bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.fmt -c
   
  次の図に、この既定のフォーマット ファイルのサンプルで使用されている値を示します。 図には、各フォーマット ファイル フィールドの名前も示しています。  
   
- ![myTestSkipCol 用の既定の XML 以外のフォーマット ファイル](../../database-engine/media/mytestskipcol-f-c-default-fmt.gif "myTestSkipCol 用の既定の XML 以外のフォーマット ファイル")  
+ ![myTestSkipCol の既定の XML 以外のフォーマットファイル](../../database-engine/media/mytestskipcol-f-c-default-fmt.gif "myTestSkipCol 用の既定の非 XML 形式ファイル")  
   
 > [!NOTE]  
 >  フォーマット ファイル フィールドの詳細については、「[XML 以外のフォーマット ファイル &#40;SQL Server&#41;](xml-format-files-sql-server.md)」をご覧ください。  
@@ -76,7 +77,8 @@ bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.fmt -c
   
 -   推奨されている方法には、3 つの基本的な手順が含まれています。 まず、データ ファイルに存在しないフィールドを記述しているフォーマット ファイルの行をすべて削除します。 次に、削除したフォーマット ファイルの行に続く各行の "ホスト ファイル フィールドの順序" の値を減らします。 "ホスト ファイル フィールドの順序" の値が、データ ファイル内での各データ フィールドの実際の場所を反映した 1 ～ *n*の通し番号になるようにします。 最後に、データ ファイル内の実際のフィールド数が反映されるように、"列の数" フィールドの値を減らします。  
   
-     次の例は、このトピックの「XML 以外の既定のフォーマット ファイルの作成」で既に作成した `myTestSkipCol` テーブルの既定のフォーマット ファイルを基にしています。 変更後のフォーマット ファイルは、最初のデータ フィールドを `Col1`にマップし、 `Col2`をスキップして、2 番目のデータ フィールドを `Col3`にマップしています。 `Col2` に相当する行は削除されています。 他の変更点は太字で示してあります。  
+     次の例は、このトピックの「XML 以外の既定のフォーマット ファイルの作成」で既に作成した `myTestSkipCol` テーブルの既定のフォーマット ファイルを基にしています。 変更後のフォーマット ファイルは、最初のデータ フィールドを `Col1`にマップし、 `Col2`をスキップして、2 番目のデータ フィールドを `Col3`にマップしています。 
+  `Col2` に相当する行は削除されています。 他の変更点は太字で示してあります。  
   
     ```  
     9.0  
@@ -99,11 +101,12 @@ bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.fmt -c
     3       SQLCHAR       0       100     "\r\n"   3     Col3         SQL_Latin1_General_CP1_CI_AS  
     ```  
   
-### <a name="examples"></a>使用例  
+### <a name="examples"></a>例  
  以下の例は、このトピックの「サンプル テーブルとデータ ファイル」で既に作成した `myTestSkipCol` サンプル テーブルおよび `myTestSkipCol2.dat` サンプル データ ファイルを基にしています。  
   
 #### <a name="using-bulk-insert"></a>BULK INSERT の使用  
- 次の例を動作させるには、このトピックの「XML 以外のフォーマット ファイルを変更する方法」で既に作成した、変更後の XML 以外のフォーマット ファイルの 1 つを使用します。 この例では、変更後のフォーマット ファイルの名前を `C:\myTestSkipCol2.fmt`とします。 `BULK INSERT` を使用して `myTestSkipCol2.dat` データ ファイルを一括インポートするには、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] のクエリ エディターで次のコードを実行します。  
+ 次の例を動作させるには、このトピックの「XML 以外のフォーマット ファイルを変更する方法」で既に作成した、変更後の XML 以外のフォーマット ファイルの 1 つを使用します。 この例では、変更後のフォーマット ファイルの名前を `C:\myTestSkipCol2.fmt`とします。 
+  `BULK INSERT` を使用して `myTestSkipCol2.dat` データ ファイルを一括インポートするには、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] のクエリ エディターで次のコードを実行します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -151,8 +154,9 @@ bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.xml -c
 > [!NOTE]  
 >  XML フォーマット ファイルの構造については、「[XML フォーマット ファイル &#40;SQL Server&#41;](xml-format-files-sql-server.md)」をご覧ください。  
   
-### <a name="examples"></a>使用例  
- ここに記載している例は、このトピックの「サンプル テーブルとデータ ファイル」で既に作成した `myTestSkipCol` サンプル テーブルおよび `myTestSkipCol2.dat` サンプル データ ファイルを使用します。 `myTestSkipCol2.dat` から `myTestSkipCol` テーブルにデータをインポートするため、変更した XML フォーマット ファイル `myTestSkipCol2-x.xml`を使用します。 このファイルは、このトピックの「既定の XML フォーマット ファイルの作成」で既に作成したフォーマット ファイルを基にしています。  
+### <a name="examples"></a>例  
+ ここに記載している例は、このトピックの「サンプル テーブルとデータ ファイル」で既に作成した `myTestSkipCol` サンプル テーブルおよび `myTestSkipCol2.dat` サンプル データ ファイルを使用します。 
+  `myTestSkipCol2.dat` から `myTestSkipCol` テーブルにデータをインポートするため、変更した XML フォーマット ファイル `myTestSkipCol2-x.xml`を使用します。 このファイルは、このトピックの「既定の XML フォーマット ファイルの作成」で既に作成したフォーマット ファイルを基にしています。  
   
 ```  
 <?xml version="1.0"?>  
@@ -171,7 +175,8 @@ bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.xml -c
 #### <a name="using-openrowsetbulk"></a>OPENROWSET(BULK...) の使用  
  次の例では、 `OPENROWSET` 一括行セット プロバイダーと `myTestSkipCol2.xml` フォーマット ファイルを使用します。 この例では、 `myTestSkipCol2.dat` データ ファイルを `myTestSkipCol` テーブルに一括インポートします。 必要に応じて、ステートメントでは、選択リストおよびターゲット テーブルの列の一覧を明示的に指定します。  
   
- [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] のクエリ エディターで、次のコードを実行します。  
+ 
+  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] のクエリ エディターで、次のコードを実行します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -188,7 +193,8 @@ GO
 #### <a name="using-bulk-import-on-a-view"></a>ビューに対する BULK IMPORT の使用  
  次の例では、 `v_myTestSkipCol` テーブルに `myTestSkipCol` ビューを作成します。 このビューでは 2 番目のテーブル列である `Col2`がスキップされます。 その後、 `BULK INSERT` を使用して `myTestSkipCol2.dat` データ ファイルをこのビューにインポートします。  
   
- [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] のクエリ エディターで、次のコードを実行します。  
+ 
+  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] のクエリ エディターで、次のコードを実行します。  
   
 ```  
 CREATE VIEW v_myTestSkipCol AS  
@@ -205,11 +211,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [bcp Utility](../../tools/bcp-utility.md)   
+ [bcp ユーティリティ](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
- [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
- [フォーマット ファイルを使用したデータ フィールドのスキップ &#40;SQL Server&#41;](use-a-format-file-to-skip-a-data-field-sql-server.md)   
- [フォーマット ファイルを使用したテーブル列とデータ ファイル フィールドのマッピング &#40;SQL Server&#41;](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)   
- [データの一括インポートでのフォーマット ファイルの使用 &#40;SQL Server&#41;](use-a-format-file-to-bulk-import-data-sql-server.md)  
+ [OPENROWSET &#40;Transact-sql&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
+ [フォーマットファイルを使用して、データフィールド &#40;SQL Server をスキップし&#41;](use-a-format-file-to-skip-a-data-field-sql-server.md)   
+ [フォーマットファイルを使用して、テーブル列をデータファイルフィールド &#40;SQL Server にマップ&#41;](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)   
+ [フォーマットファイルを使用して SQL Server &#40;データを一括インポートする&#41;](use-a-format-file-to-bulk-import-data-sql-server.md)  
   
   

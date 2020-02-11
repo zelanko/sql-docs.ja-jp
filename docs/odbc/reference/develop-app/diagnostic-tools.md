@@ -13,14 +13,14 @@ ms.assetid: a580492c-1b41-4393-9604-faa0bd28854b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3aadec3adbf7b3928f182c99e5545165b5cfd372
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68039873"
 ---
 # <a name="diagnostic-tools"></a>診断ツール
-2 つの機能は、ODBC アプリケーションで問題を診断に役立ちます。 両方に ODBC アドミニストレーターを使用し、ドライバー マネージャーによって実装されています。 *トレース*関数呼び出しのシーケンスのログ ファイルに記録する手段を提供します。 Visual Studio Analyzer では、分散環境でコンポーネントの相互作用に関する情報の分析ができます。  
+ODBC アプリケーションでの問題の診断には、2つの機能が役立ちます。 どちらも ODBC 管理者が使用でき、ドライバーマネージャーによって実装されます。 *トレース*は、一連の関数呼び出しをログファイルに記録する手段を提供します。 Visual Studio Analyzer を使用すると、分散環境におけるコンポーネントの相互作用に関する情報を分析できます。  
   
  このセクションでは、次のトピックを扱います。  
   

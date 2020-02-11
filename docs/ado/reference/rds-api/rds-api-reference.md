@@ -13,17 +13,17 @@ ms.assetid: ca9fa99e-1a9f-4deb-80d4-6942555fb22a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 14df0a3e29068b671f9320e90fac624b2aabbddc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67963788"
 ---
 # <a name="rds-api-reference"></a>RDS の API リファレンス
 > [!IMPORTANT]
->  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)します。  
+>  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および[Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416)」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
   
- ADO のドキュメントのこのセクションには各 RDS オブジェクト、プロパティ、メソッド、参照トピックが含まれていて、イベントと RDS のコード サンプル。  
+ ADO ドキュメントのこのセクションには、rds のオブジェクト、プロパティ、メソッド、およびイベントのリファレンストピックと、RDS のコードサンプルが含まれています。  
   
 -   [RDS オブジェクト](../../../ado/reference/rds-api/rds-objects.md)  
   

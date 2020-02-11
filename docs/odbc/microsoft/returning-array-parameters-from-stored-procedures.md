@@ -1,5 +1,5 @@
 ---
-title: ストアド プロシージャから配列パラメーターを取得する |Microsoft Docs
+title: ストアドプロシージャから配列パラメーターを返す |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,17 +14,17 @@ ms.assetid: 2018069b-da5d-4cee-a971-991897d4f7b5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: be89e4c9cc544048dada325c563ac1faa6cfd2d6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67987972"
 ---
 # <a name="returning-array-parameters-from-stored-procedures"></a>ストアド プロシージャから返される配列パラメーター
 > [!IMPORTANT]  
->  この機能は、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 代わりに、Oracle によって提供される ODBC ドライバーを使用します。  
+>  この機能は、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 代わりに、Oracle によって提供される ODBC ドライバーを使用してください。  
   
- Oracle 7.3、PL/SQL プログラムから除く PL/SQL レコードの種類にアクセスする方法はありません。 パッケージ化されたプロシージャまたは関数を仮引数の PL/SQL レコードの種類として定義されている場合、パラメーターとしてその仮引数をバインドすることはできません。 Microsoft ODBC Driver for Oracle のテーブルの PL/SQL 型を使用して、適切なエスケープ シーケンスを含むプロシージャから配列パラメーターを呼び出します。  
+ Oracle 7.3 では、pl/sql プログラム以外の種類の PL/SQL レコードにアクセスする方法はありません。 パッケージ化されたプロシージャまたは関数に仮引数が PL/SQL レコード型として定義されている場合、その仮引数をパラメーターとしてバインドすることはできません。 Microsoft ODBC Driver for Oracle の PL/SQL テーブル型を使用して、正しいエスケープシーケンスを含むプロシージャから配列パラメーターを呼び出します。  
   
  プロシージャを呼び出すには、次の構文を使用します。  
   
@@ -35,13 +35,13 @@ ms.locfileid: "67987972"
 ```  
   
 > [!NOTE]  
->  \<最大レコード要求 > パラメーターが、結果セットに存在する行の数以上にする必要があります。 それ以外の場合、Oracle では、ドライバーによって、ユーザーに渡されるエラーを返します。  
+>  Max \<records 要求の> パラメーターには、結果セットに含まれる行数以上の値を指定する必要があります。 それ以外の場合、Oracle は、ドライバーによってユーザーに渡されるエラーを返します。  
 >   
->  PL/SQL レコードは、配列パラメーターとして使用できません。 各配列パラメーターには、データベース テーブルの 1 つだけの列を表すことができます。  
+>  PL/SQL レコードを配列パラメーターとして使用することはできません。 各配列パラメーターは、データベーステーブルの1つの列のみを表すことができます。  
   
- 次の例は、異なる結果セットを返す 2 つの手順を含むパッケージを定義し、パッケージから結果セットを返す 2 つの方法を提供します。  
+ 次の例では、異なる結果セットを返す2つのプロシージャを含むパッケージを定義し、パッケージから結果セットを返す2つの方法を提供します。  
   
-## <a name="package-definition"></a>パッケージの定義:  
+## <a name="package-definition"></a>パッケージ定義:  
   
 ```  
 CREATE OR REPLACE PACKAGE SimplePackage AS  
@@ -105,37 +105,37 @@ END proc2;
 END SimplePackage;  
 ```  
   
-#### <a name="to-invoke-procedure-proc1"></a>手順 1 のプロシージャを呼び出す  
+#### <a name="to-invoke-procedure-proc1"></a>プロシージャ手順1を呼び出すには  
   
-1.  1 つの結果セット内のすべての列が返されます。  
+1.  1つの結果セット内のすべての列を返します。  
   
     ```  
     {call SimplePackage.Proc1( {resultset  3, o_id , ao_course, ao_dept  } ) }  
     ```  
   
-2.  各列を 1 つの結果セットとして返されます。  
+2.  各列を1つの結果セットとして返します。  
   
     ```  
     {call SimplePackage.Proc1( {resultset 3, o_id},  {resultset 3, ao_course}, {resultset 3, ao_dept} ) }  
     ```  
   
-     各列に 3 つの結果セットが返されます。  
+     これにより、各列に1つずつ、3つの結果セットが返されます。  
   
-#### <a name="to-invoke-procedure-proc2"></a>手順 2 のプロシージャを呼び出す  
+#### <a name="to-invoke-procedure-proc2"></a>プロシージャ手順2を呼び出すには  
   
-1.  1 つの結果セット内のすべての列が返されます。  
+1.  1つの結果セット内のすべての列を返します。  
   
     ```  
     {call SimplePackage.Proc2( 5 , {resultset  5, ao_Arg2, ao_Arg3} ) }  
     ```  
   
-2.  各列を 1 つの結果セットとして返されます。  
+2.  各列を1つの結果セットとして返します。  
   
     ```  
     {call SimplePackage.Proc2( 5 , {resultset 5, ao_Arg2}, {resultset 5, ao_Arg3} ) }  
     ```  
   
- すべての結果セットを使用して、アプリケーションがフェッチことを確認、 [SQLMoreResults](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md) API。 詳細についてを参照してください、 *ODBC プログラマ リファレンス*します。  
+ [Sqlmoreresults](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md) API を使用して、アプリケーションがすべての結果セットをフェッチするようにします。 詳細については、 *ODBC プログラマーズリファレンス*を参照してください。  
   
 > [!NOTE]  
->  Oracle バージョン 2.0 の ODBC ドライバーでは、結果セットを返す PL/SQL 配列を返す関数を Oracle を使用できません。
+>  ODBC Driver for Oracle version 2.0 では、PL/SQL 配列を返す Oracle 関数を使用して結果セットを返すことはできません。

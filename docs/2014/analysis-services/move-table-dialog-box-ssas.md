@@ -1,5 +1,5 @@
 ---
-title: テーブル ダイアログ ボックス (SSAS) の移動 |Microsoft Docs
+title: '[テーブルの移動] ダイアログボックス (SSAS) |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,17 +13,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d6c680dd48f3588b92a2c87d9fa8d3c3a04dde39
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077608"
 ---
 # <a name="move-table-dialog-box-ssas"></a>[テーブルの移動] ダイアログ ボックス (SSAS)
+  
   **[テーブルの移動]** ダイアログ ボックスを使用すると、モデル デザイナー内のテーブルの表示順序を変更できます。 このダイアログ ボックスにアクセスするには、移動するテーブルの下にあるタブを右クリックし、 **[移動]** を選択します。  
   
 ## <a name="uielement-list"></a>UI 要素の一覧  
- **表の前に、選択したテーブルを移動します。**  
+ **[選択したテーブルをこのテーブルの前に移動します]**  
  移動するテーブルは、この一覧から選択したテーブルの前の位置に移動します。 テーブルを一連のテーブルの最後に移動する場合は、 **[(末尾に移動)]** を選択します。  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 管理データ ウェアハウスのストアド プロシージャ (TRANSACT-SQL) |Microsoft Docs
+title: 管理データウェアハウスのストアドプロシージャ (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -16,24 +16,24 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 14ec2b0e98b2d6934233adb7a5b0b4159ed37333
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67941993"
 ---
 # <a name="management-data-warehouse-stored-procedures-transact-sql"></a>管理データ ウェアハウスのストアド プロシージャ (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  データ コレクターは、管理データ ウェアハウスのデータとデータ コレクターの種類の情報を格納します。 次のストアド プロシージャは、データを更新し、管理データ ウェアハウス内のテーブルの変更に使用されます。  
+  データコレクターは、データとデータコレクターの種類の情報を管理データウェアハウスに格納します。 次のストアドプロシージャは、管理データウェアハウスのデータを更新したり、テーブルを変更したりするために使用されます。  
   
 |||  
 |-|-|  
-|[core.sp_create_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/core-sp-create-snapshot-transact-sql.md)|[core.sp_update_data_source &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/core-sp-update-data-source-transact-sql.md)|  
-|[core.sp_add_collector_type &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/core-sp-add-collector-type-transact-sql.md)|[core.sp_remove_collector_type &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/core-sp-remove-collector-type-transact-sql.md)|  
-|[core.sp_purge_data &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/core-sp-purge-data-transact-sql.md)||  
+|[コア sp_create_snapshot &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/core-sp-create-snapshot-transact-sql.md)|[コア sp_update_data_source &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/core-sp-update-data-source-transact-sql.md)|  
+|[コア sp_add_collector_type &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/core-sp-add-collector-type-transact-sql.md)|[コア sp_remove_collector_type &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/core-sp-remove-collector-type-transact-sql.md)|  
+|[コア sp_purge_data &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/core-sp-purge-data-transact-sql.md)||  
   
-## <a name="see-also"></a>関連項目  
- [データ コレクター ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>参照  
+ [データコレクターストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)  
   
   

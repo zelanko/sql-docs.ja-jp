@@ -1,5 +1,5 @@
 ---
-title: エラー オブジェクトのプロパティ、メソッド、およびイベント |Microsoft Docs
+title: Error オブジェクトのプロパティ、メソッド、およびイベント |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,10 +13,10 @@ ms.assetid: cd69e4b7-82bf-4ffc-bc53-c535ba20161f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: def593c725f2faa004e13bbdb3e6ded3287f51ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933010"
 ---
 # <a name="error-object-properties-methods-and-events"></a>Error オブジェクトのプロパティ、メソッド、およびイベント
@@ -25,7 +25,7 @@ ms.locfileid: "67933010"
   
  [HelpContext、HelpFile プロパティ](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)  
   
- [NativeError プロパティ](../../../ado/reference/ado-api/nativeerror-property-ado.md)  
+ ["エラー" プロパティ](../../../ado/reference/ado-api/nativeerror-property-ado.md)  
   
  [Number プロパティ](../../../ado/reference/ado-api/number-property-ado.md)  
   
@@ -36,8 +36,8 @@ ms.locfileid: "67933010"
 ## <a name="methods"></a>メソッド  
  [なし] :  
   
-## <a name="events"></a>イベント  
+## <a name="events"></a>events  
  [なし] :  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Error オブジェクト](../../../ado/reference/ado-api/error-object.md)

@@ -1,5 +1,5 @@
 ---
-title: Version プロパティの例 (vc++) |Microsoft Docs
+title: Version プロパティの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,27 +15,27 @@ ms.assetid: 2440b6ff-2536-497c-a5f4-41db0cf1945e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 04000b62ea8d48b78d7673444003564ae0701193
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67938696"
 ---
 # <a name="version-property-example-vc"></a>Version プロパティの例 (VC++)
-この例では、[バージョン](../../../ado/reference/ado-api/version-property-ado.md)のプロパティを[接続](../../../ado/reference/ado-api/connection-object-ado.md)ADO の現在のバージョンを表示するオブジェクト。 表示するいくつかの動的プロパティを使用します。  
+この例では、 [Connection](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトの[version](../../../ado/reference/ado-api/version-property-ado.md)プロパティを使用して、現在の ADO バージョンを表示します。 また、いくつかの動的プロパティを使用して表示します。  
   
--   現在の DBMS 名とバージョン。  
+-   現在の DBMS の名前とバージョン。  
   
--   OLE DB バージョンです。  
+-   OLE DB バージョン。  
   
--   プロバイダーの名前およびバージョン。  
+-   プロバイダーの名前とバージョン。  
   
--   ODBC のバージョンです。  
+-   ODBC のバージョン。  
   
--   ODBC ドライバーの名前およびバージョン。  
+-   ODBC ドライバーの名前とバージョン。  
   
 > [!NOTE]
->  Windows 認証をサポートするデータ ソース プロバイダーに接続するかどうかは、する必要がありますを指定する**Trusted_Connection = yes**または**Integrated Security = SSPI**ユーザー ID とパスワードの代わりに接続文字列の情報です。  
+>  Windows 認証をサポートするデータソースプロバイダーに接続する場合は、接続文字列にユーザー ID とパスワードの情報ではなく、 **Trusted_Connection = yes**または**INTEGRATED Security = SSPI**を指定する必要があります。  
   
 ```  
 // BeginVersionCpp.cpp  
@@ -134,6 +134,6 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [接続オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
+## <a name="see-also"></a>参照  
+ [Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Version プロパティ (ADO)](../../../ado/reference/ado-api/version-property-ado.md)

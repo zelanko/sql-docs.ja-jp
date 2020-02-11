@@ -1,5 +1,5 @@
 ---
-title: データ アクセサー関数 |Microsoft Docs
+title: データアクセサー関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,31 +15,31 @@ ms.assetid: 31bad04f-7c74-4773-9f83-612704fdd21c
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: b3726686a2c0e5229a0fccf4d9f51c0e1404f1a3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68038952"
 ---
 # <a name="data-accessor-functions"></a>データ アクセサー関数
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  このセクションのトピックでは、について説明し、データ アクセサー関数のサンプル コードを指定します。  
+  このセクションのトピックでは、データアクセサー関数のサンプルコードについて説明します。  
   
 ## <a name="understanding-fndata-fnstring-and-text"></a>fn:data()、fn:string()、text() について  
- XQuery 関数を持つ**fn:data()** ノード、ノード テストからスカラー、型指定された値を抽出する**text()** テキスト ノード、および関数を返す**fn:string()** を返す、ノードの文字列値。 この 3 つのアクセサーの使用方法が紛らわしい場合があります。 次に、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] でこれらを使用する場合のガイドラインを示します。 XML インスタンス\<age > 12\<age/> の図のために使用されます。  
+ XQuery には、スカラー値を抽出するための関数**fn: data ()** 、ノードからの型指定された値、テキストノードを返すノードテスト**テキスト (** )、およびノードの文字列値を返す関数**fn: string ()** があります。 この 3 つのアクセサーの使用方法が紛らわしい場合があります。 次に、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] でこれらを使用する場合のガイドラインを示します。 例とし\<て、XML\<インスタンス age>12/age> が使用されています。  
   
--   型指定されていない XML:パスの式/age/text() はテキスト ノード「12」を返します。 関数 fn:data (/age) は、文字列値「12」を返しますおよび fn:string します。  
+-   型指定されていない XML: パス式/age/text () は、テキストノード "12" を返します。 関数 fn: data (/age) は文字列値 "12" を返します。したがって、fn: string (/age) が返されます。  
   
--   型指定された XML:式/age/text() は任意の単純型の静的なエラーを返します\<age > 要素。 一方、fn:data (/age) は、12 の整数を返します。 fn:string(/age) は文字列 "12" を返します。  
+-   型指定された XML: 式/age/text () は、任意の単純\<型の age> 要素に対して静的なエラーを返します。 一方、fn: data (/age) は整数12を返します。 fn:string(/age) は文字列 "12" を返します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
--   [string 関数&#40;XQuery&#41;](../xquery/data-accessor-functions-string-xquery.md)  
+-   [string 関数 &#40;XQuery&#41;](../xquery/data-accessor-functions-string-xquery.md)  
   
--   [data 関数&#40;XQuery&#41;](../xquery/data-accessor-functions-data-xquery.md)  
+-   [データ関数 &#40;XQuery&#41;](../xquery/data-accessor-functions-data-xquery.md)  
   
-## <a name="see-also"></a>関連項目  
- [パス式&#40;XQuery&#41;](../xquery/path-expressions-xquery.md)  
+## <a name="see-also"></a>参照  
+ [パス式 &#40;XQuery&#41;](../xquery/path-expressions-xquery.md)  
   
   

@@ -14,23 +14,23 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f880dcacbd4571c188d0368a0378a89c45787af2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011723"
 ---
 # <a name="use-a-format-file-to-skip-a-data-field-sql-server"></a>フォーマット ファイルを使用したデータ フィールドのスキップ (SQL Server)
   データ ファイルには、テーブルの列数よりも多くのフィールドを格納できます。 このトピックでは、XML 以外のフォーマット ファイルと XML フォーマット ファイルの両方を変更し、データ ファイルに多くのフィールドを格納する方法について説明します。この操作は、テーブル列を対応するデータ フィールドにマップし、余分なフィールドを無視することによって行います。  
   
 > [!NOTE]  
->  XML 以外のフォーマット ファイルまたは XML フォーマット ファイルを使用して、データ ファイルをテーブルに一括インポートできます。この操作は、**bcp** コマンド、BULK INSERT ステートメント、INSERT ... SELECT * FROM OPENROWSET(BULK...) ステートメントのいずれかを使用して実行します。 詳細については、「[データの一括インポートでのフォーマット ファイルの使用 &#40;SQL Server&#41;](use-a-format-file-to-bulk-import-data-sql-server.md)」を参照してください。  
+>  XML 以外のフォーマットファイルまたは XML フォーマットファイルを使用して、データファイルをテーブルに一括インポートするには、 **bcp**コマンド、BULK INSERT ステートメント、または INSERT...SELECT * FROM OPENROWSET (BULK...) ステートメント。 詳細については、「[データの一括インポートでのフォーマット ファイルの使用 &#40;SQL Server&#41;](use-a-format-file-to-bulk-import-data-sql-server.md)」を参照してください。  
   
 ## <a name="sample-data-file-and-table"></a>サンプル データ ファイルとサンプル テーブル  
  このトピックで例として変更するフォーマット ファイルは、次のテーブルとデータ ファイルに基づいています。  
   
 ### <a name="sample-table"></a>サンプル テーブル  
- 以下の例を実行するには、`myTestSkipField` スキーマに基づいて、`dbo` という名前のテーブルを [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] サンプル データベース内に作成する必要があります。 このテーブルを作成するには、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] クエリ エディターで次のコードを実行します。  
+ 以下の例を実行するには、`myTestSkipField` スキーマに基づいて、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] という名前のテーブルを `dbo` サンプル データベース内に作成する必要があります。 このテーブルを作成するに[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]は、クエリエディターで次のコードを実行します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -53,7 +53,8 @@ GO
 1,Skipme,DataField3,DataField4  
 ```  
   
- `myTestSkipField-c.dat` から `myTestSkipField` テーブルにデータを一括インポートするには、フォーマット ファイルで次の操作を行う必要があります。  
+ 
+  `myTestSkipField-c.dat` から `myTestSkipField` テーブルにデータを一括インポートするには、フォーマット ファイルで次の操作を行う必要があります。  
   
 -   最初のデータ フィールドを最初の列 `PersonID`にマップします。  
   
@@ -61,12 +62,13 @@ GO
   
 -   3 番目のデータ フィールドを 2 番目の列 `FirstName`にマップします。  
   
--   4 番目のデータ フィールドを 3 番目の列 `LastName` にマップします。  
+-   4 番目のデータ フィールドを 3 番目の列 `LastName`にマップします。  
   
 ## <a name="non-xml-format-file-for-more-data-fields"></a>より多くのデータ フィールドを格納するための XML 以外のフォーマット ファイル  
  次のフォーマット ファイル `myTestSkipField.fmt` は、`myTestSkipField-c.dat` のフィールドを `myTestSkipField` テーブルの列にマップします。 このフォーマット ファイルでは、文字データ形式が使用されます。 列マッピングをスキップするには、フォーマット ファイルの `ExtraField` 列に示すように、その列の順序の値を 0 に変更する必要があります。  
   
- `myTestSkipField.fmt` フォーマット ファイルには、次の情報が含まれています。  
+ 
+  `myTestSkipField.fmt` フォーマット ファイルには、次の情報が含まれています。  
   
 ```  
 9.0  
@@ -81,10 +83,11 @@ GO
 > [!NOTE]  
 >  XML 以外のフォーマット ファイルの詳細については、「[XML以外のフォーマット ファイル &#40;SQL Server&#41;](xml-format-files-sql-server.md)」を参照してください。  
   
-### <a name="examples"></a>使用例  
- 次の例では、`INSERT ... SELECT * FROM OPENROWSET(BULK...)` フォーマット ファイルを使用して、`myTestSkipField.fmt` を使用します。 この例では、`myTestSkipField-c.dat` データ ファイルを `myTestSkipField` テーブルに一括インポートします。 サンプルのテーブルとデータ ファイルを作成するには、このトピックの「サンプル データ ファイルとサンプル テーブル」を参照してください。  
+### <a name="examples"></a>例  
+ 次の例では、`INSERT ... SELECT * FROM OPENROWSET(BULK...)` フォーマット ファイルを使用して、`myTestSkipField.fmt` を使用します。 この例では、 `myTestSkipField-c.dat` データ ファイルを `myTestSkipField` テーブルに一括インポートします。 サンプルのテーブルとデータ ファイルを作成するには、このトピックの「サンプル データ ファイルとサンプル テーブル」を参照してください。  
   
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] クエリ エディターで、次のコードを実行します。  
+ 
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] クエリ エディターで、次のコードを実行します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -102,7 +105,8 @@ GO
   
  次のフォーマット ファイル `myTestSkipField.xml` は、`myTestSkipField-c.dat` のフィールドを `myTestSkipField` テーブルの列にマップします。 このフォーマット ファイルでは、文字データ形式が使用されます。  
   
- `myTestSkipField.xml` フォーマット ファイルには、次の情報が含まれています。  
+ 
+  `myTestSkipField.xml` フォーマット ファイルには、次の情報が含まれています。  
   
 ```  
 <?xml version="1.0"?>  
@@ -121,10 +125,11 @@ GO
 </BCPFORMAT>  
 ```  
   
-### <a name="examples"></a>使用例  
- 次の例では、`INSERT ... SELECT * FROM OPENROWSET(BULK...)` フォーマット ファイルを使用して、`myTestSkipField.Xml` を使用します。 この例では、`myTestSkipField-c.dat` データ ファイルを `myTestSkipField` テーブルに一括インポートします。 サンプルのテーブルとデータ ファイルを作成するには、このトピックの「サンプル データ ファイルとサンプル テーブル」を参照してください。  
+### <a name="examples"></a>例  
+ 次の例では、`INSERT ... SELECT * FROM OPENROWSET(BULK...)` フォーマット ファイルを使用して、`myTestSkipField.Xml` を使用します。 この例では、 `myTestSkipField-c.dat` データ ファイルを `myTestSkipField` テーブルに一括インポートします。 サンプルのテーブルとデータ ファイルを作成するには、このトピックの「サンプル データ ファイルとサンプル テーブル」を参照してください。  
   
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] クエリ エディターで、次のコードを実行します。  
+ 
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] クエリ エディターで、次のコードを実行します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -139,13 +144,13 @@ GO
 ```  
   
 > [!NOTE]  
->  XML スキーマの構文と XML フォーマット ファイルのその他のサンプルの詳細については、「[XML フォーマット ファイル &#40;SQL Server&#41;](xml-format-files-sql-server.md)」を参照してください。  
+>  XML スキーマの構文と XML フォーマット ファイルのその他のサンプルに関する詳細については、「[XML フォーマット ファイル &#40;SQL Server&#41;](xml-format-files-sql-server.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [bcp Utility](../../tools/bcp-utility.md)   
+ [bcp ユーティリティ](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
- [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
- [フォーマット ファイルを使用したテーブル列のスキップ &#40;SQL Server&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md)   
- [フォーマット ファイルを使用したテーブル列とデータ ファイル フィールドのマッピング &#40;SQL Server&#41;](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
+ [OPENROWSET &#40;Transact-sql&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
+ [フォーマットファイルを使用してテーブル列をスキップする &#40;SQL Server&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md)   
+ [フォーマットファイルを使用して、テーブル列をデータファイルフィールド &#40;SQL Server にマップ&#41;](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
   

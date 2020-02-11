@@ -1,5 +1,5 @@
 ---
-title: ディメンション オブジェクト (ADO MD) |Microsoft Docs
+title: Dimension オブジェクト (ADO MD) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,50 +16,50 @@ ms.assetid: 66adbbd2-23a3-4c19-a91b-84c31309aa1b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f7a13ad87d56f5e7855070d8fe577bb408d6ce9e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67938539"
 ---
 # <a name="dimension-object-ado-md"></a>Dimension オブジェクト (ADO MD)
-1 つまたは複数のメンバーの階層を含む多次元キューブのディメンションの 1 つを表します。  
+メンバーの1つ以上の階層を含む多次元キューブのディメンションの1つを表します。  
   
-## <a name="remarks"></a>コメント  
- コレクションのプロパティと、**ディメンション**オブジェクトを次を行うことができます。  
+## <a name="remarks"></a>解説  
+ **ディメンション**オブジェクトのコレクションとプロパティを使用して、次の操作を実行できます。  
   
--   識別、**ディメンション**で、[名前](../../../ado/reference/ado-md-api/name-property-ado-md.md)と[UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)プロパティ。  
+-   [Name](../../../ado/reference/ado-md-api/name-property-ado-md.md)プロパティと[UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)プロパティを使用して、**ディメンション**を識別します。  
   
--   説明するわかりやすい文字列を返す、**ディメンション**で、[説明](../../../ado/reference/ado-md-api/description-property-ado-md.md)プロパティ。  
+-   [Description](../../../ado/reference/ado-md-api/description-property-ado-md.md)プロパティを使用して、**ディメンション**を説明する意味のある文字列を返します。  
   
--   返す、[階層](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)を構成するオブジェクト、**ディメンション**で、[階層](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)コレクション。  
+-   Hierarchy[コレクションを使用して](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)、**ディメンション**を構成する[階層](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)オブジェクトを返します。  
   
--   標準の ADO を使用して[プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)コレクションに関する追加情報を取得、**ディメンション**オブジェクト。  
+-   標準の ADO[プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)コレクションを使用して、**ディメンション**オブジェクトに関する追加情報を取得します。  
   
- **プロパティ**コレクションには、プロバイダーが指定したプロパティが含まれています。 次の表は、使用可能な可能性があるプロパティを一覧表示します。 実際のプロパティの一覧は、プロバイダーの実装によって異なる場合があります。 使用可能なプロパティの詳細な一覧については、プロバイダーのドキュメントを参照してください。  
+ **Properties**コレクションには、プロバイダーが提供するプロパティが含まれています。 次の表に、使用可能なプロパティを示します。 実際のプロパティリストは、プロバイダーの実装によって異なる場合があります。 使用できるプロパティの詳細な一覧については、プロバイダーのドキュメントを参照してください。  
   
-|名前|説明|  
+|Name|[説明]|  
 |----------|-----------------|  
 |CatalogName|このキューブが所属するカタログの名前。|  
 |CubeName|キューブの名前。|  
 |DefaultHierarchy|既定の階層の一意の名前。|  
-|説明|キューブのわかりやすい説明。|  
-|DimensionCaption|ラベルまたはキャプションをディメンションに関連付けられています。|  
-|DimensionCardinality|ディメンションのメンバーの数。|  
-|DimensionGUID|ディメンションの GUID です。|  
+|[説明]|キューブについてのわかりやすい説明。|  
+|DimensionCaption|ディメンションに関連付けられているラベルまたはキャプション。|  
+|DimensionCardinality|ディメンション内のメンバーの数。|  
+|DimensionGUID|ディメンションの GUID。|  
 |DimensionName|ディメンションの名前。|  
-|DimensionOrdinal|キューブを形成するディメンションのグループ内の次元の序数。|  
+|DimensionOrdinal|キューブを形成するディメンションのグループ間のディメンションの序数です。|  
 |DimensionType|ディメンションの種類。|  
-|DimensionUniqueName|ディメンションの明確な名前。|  
-|SchemaName|このキューブが所属するスキーマの名前。|  
+|DimensionUniqueName|ディメンションの明確な名前です。|  
+|SchemaName|このキューブが所属するスキーマの名前です。|  
   
- このセクションには、次のトピックが含まれています。  
+ ここでは、次のトピックについて説明します。  
   
 -   [プロパティ、メソッド、およびイベント](../../../ado/reference/ado-md-api/dimension-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [CubeDef の例 (VBScript)](../../../ado/reference/ado-md-api/cubedef-example-vbscript.md)   
  [CubeDef オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)   
  [Dimensions コレクション (ADO MD)](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)   
- [Hierarchies コレクション (ADO MD)](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)   
+ [Hierarchy コレクション (ADO MD)](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)   
  [Properties コレクション (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

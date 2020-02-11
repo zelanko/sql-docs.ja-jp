@@ -20,14 +20,14 @@ ms.assetid: d5d44659-e0d9-46d9-a297-99c43555082f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dd4e2f1485c18ce1fecc76d4eb23aa4132d85329
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67938682"
 ---
 # <a name="willchangerecordset-and-recordsetchangecomplete-events-ado"></a>WillChangeRecordset および RecordsetChangeComplete イベント (ADO)
-**WillChangeRecordset**保留中の操作を変更する前に、イベントが呼び出される、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)します。 **RecordsetChangeComplete**イベントが呼び出された後、 **Recordset**が変更されました。  
+**WillChangeRecordset**イベントは、保留中の操作によって[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)が変更される前に呼び出されます。 **RecordsetChangeComplete**イベントは、**レコードセット**が変更された後に呼び出されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,32 +39,32 @@ RecordsetChangeComplete adReason, pError, adStatus, pRecordset
   
 #### <a name="parameters"></a>パラメーター  
  *adReason*  
- [EventReasonEnum](../../../ado/reference/ado-api/eventreasonenum.md)このイベントの理由を指定する値。 その値を指定できます**adRsnRequery**、 **adRsnResynch**、 **adRsnClose**、 **adRsnOpen**します。  
+ このイベントの理由を指定する[Eventreason 列挙](../../../ado/reference/ado-api/eventreasonenum.md)値。 この値には、 **Adrsnrequery**、 **adrsnrequery 同期**、adrsnrequery、 **adRsnOpen**を指定できます。 ****  
   
  *adStatus*  
- [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md)状態値。  
+ [Eventstatusenum](../../../ado/reference/ado-api/eventstatusenum.md)状態の値です。  
   
- ときに**WillChangeRecordset**が呼び出されると、このパラメーターを設定**adStatusOK**イベントの原因となった操作が成功した場合。 設定されている**adStatusCantDeny**場合、このイベントは、保留中の操作のキャンセルを要求できません。  
+ **WillChangeRecordset**が呼び出されると、イベントの原因となった操作が成功した場合、このパラメーターは**adstatusok**に設定されます。 このイベントが保留中の操作の取り消しを要求できない場合は、 **Adstatuscantdeny**に設定されます。  
   
- ときに**RecordsetChangeComplete**が呼び出されると、このパラメーターを設定**adStatusOK**場合は、イベントの原因となった操作が成功すると、 **adStatusErrorsOccurred**場合操作に失敗しました、または**adStatusCancel**場合は、操作は、以前に受け入れられたに関連付けられている**WillChangeRecordset**イベントが取り消されました。  
+ **RecordsetChangeComplete**が呼び出されると、このパラメーターは、イベントの原因となった操作が成功した場合は**adstatusok** 、操作が失敗した場合は**Adstatuserror curred** 、以前に受け入れられた**WillChangeRecordset**イベントに関連付けられている操作が取り消された場合は**adstatusok**に設定されます。  
   
- 前に**WillChangeRecordset**戻り値は、このパラメーターに設定する**adStatusCancel**保留中の操作のキャンセルを要求または後続を防ぐために adStatusUnwantedEvent にこのパラメーターを設定通知します。  
+ **WillChangeRecordset**が返される前に、このパラメーターを**adstatuscancel**に設定して保留中の操作の取り消しを要求するか、このパラメーターを adStatusUnwantedEvent に設定して、後続の通知が行われないようにします。  
   
- 前に**WillChangeRecordset**または**RecordsetChangeComplete**戻り値は、このパラメーターに設定する**adStatusUnwantedEvent**後続通知しないように設定します。  
+ **WillChangeRecordset**または**RecordsetChangeComplete**がを返す前に、このパラメーターを**adStatusUnwantedEvent**に設定して、後続の通知が行われないようにします。  
   
  *pError*  
- [エラー](../../../ado/reference/ado-api/error-object.md)オブジェクト。 場合に発生したエラーを説明の値*adStatus*は**adStatusErrorsOccurred**; 未設定がそれ以外の場合。  
+ [エラー](../../../ado/reference/ado-api/error-object.md)オブジェクトです。 *Adstatus*の値が**adstatuserrorて**いる場合に発生したエラーについて説明します。それ以外の場合は設定されません。  
   
  *pRecordset*  
- A **Recordset**オブジェクト。 **Recordset**のこのイベントが発生しました。  
+ **レコードセット**オブジェクトです。 このイベントが発生した**レコードセット**。  
   
-## <a name="remarks"></a>コメント  
- A **WillChangeRecordset**または**RecordsetChangeComplete**ためのイベントが発生する、 **Recordset** [Requery](../../../ado/reference/ado-api/requery-method.md)または[オープン](../../../ado/reference/ado-api/open-method-ado-recordset.md)メソッド。  
+## <a name="remarks"></a>解説  
+ **WillChangeRecordset**または**RecordsetChangeComplete**イベントは、**レコードセット**の再[実行または](../../../ado/reference/ado-api/requery-method.md) [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md)メソッドが原因で発生する可能性があります。  
   
- プロバイダーは、ブックマークをサポートしていない場合、 **RecordsetChange**イベント通知が新しい行は、プロバイダーから取得されるたびに発生します。 このイベントの頻度によって異なります、 **RecordsetCacheSize**プロパティ。  
+ プロバイダーがブックマークをサポートしていない場合、プロバイダーから新しい行が取得されるたびに**RecordsetChange**イベント通知が発生します。 このイベントの頻度は、 **RecordsetCacheSize**プロパティによって異なります。  
   
- 設定する必要があります、 **adStatus**パラメーターを**adStatusUnwantedEvent**の可能性のある各**adReason**値が含まれるすべてのイベントのイベント通知を完全に停止するには**adReason**パラメーター。  
+ **AdReason**パラメーターを含むイベントのイベント通知を完全に停止するには、使用可能な**adReason**値ごとに**adstatus**パラメーターを**adStatusUnwantedEvent**に設定する必要があります。  
   
-## <a name="see-also"></a>関連項目  
- [ADO イベント モデルの例 (vc++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
+## <a name="see-also"></a>参照  
+ [ADO Events モデルの例 (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [ADO イベント ハンドラーの概要](../../../ado/guide/data/ado-event-handler-summary.md)

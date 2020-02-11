@@ -1,5 +1,5 @@
 ---
-title: OData ソース エディター ([接続] ページ) |Microsoft Docs
+title: '[OData ソースエディター] ([接続] ページ)Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0e36c0a3449566db9a2acee360243c77ee548f92
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66057316"
 ---
 # <a name="odata-source-editor-connection-page"></a>[OData ソース エディター] ([接続] ページ)
@@ -32,9 +32,9 @@ ms.locfileid: "66057316"
  **コレクションまたはリソースのパスを使用します。**  
  ソースからデータを選択する方法を指定します。  
   
-|オプション|説明|  
+|オプション|[説明]|  
 |------------|-----------------|  
-|Collection|コレクション名を使用して、Odata ソースからデータを取得します。|  
+|コレクション|コレクション名を使用して、Odata ソースからデータを取得します。|  
 |リソースのパス|リソースのパスを使用して、Odata ソースからデータを取得します。|  
   
  **クエリ オプション**  
@@ -49,16 +49,16 @@ ms.locfileid: "66057316"
 ## <a name="dynamic-options"></a>動的オプション  
   
 ### <a name="use-collection-or-resource-path--collection"></a>コレクション、またはリソースのパス = Collection を使用します。  
- **Collection**  
+ **コレクション**  
  ドロップダウン リストからコレクションを選択します。  
   
 ### <a name="use-collection-or-resource-path--resource-path"></a>コレクションまたはリソースのパス = Resource Path を使用します。  
  **Resource path**  
- リソースのパスを入力します。 例 :Employees  
+ リソースのパスを入力します。 次に例を示します。Employees  
   
-## <a name="see-also"></a>関連項目  
- [OData ソース エディター ([列] ページ)](../../2014/integration-services/odata-source-editor-columns-page.md)   
- [OData ソース エディター ([エラー出力] ページ)](../../2014/integration-services/odata-source-editor-error-output-page.md)   
- [OData Connection Manager](connection-manager/odata-connection-manager.md)  
+## <a name="see-also"></a>参照  
+ [OData ソースエディター &#40;列のページ&#41;](../../2014/integration-services/odata-source-editor-columns-page.md)   
+ [OData ソースエディター &#40;エラー出力ページ&#41;](../../2014/integration-services/odata-source-editor-error-output-page.md)   
+ [OData 接続マネージャー](connection-manager/odata-connection-manager.md)  
   
   

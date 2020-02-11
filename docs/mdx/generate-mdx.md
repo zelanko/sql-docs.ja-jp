@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: c7a6008129d6b0a4c59412428c31f6e5de625f1f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68005908"
 ---
-# <a name="generate-mdx"></a>Generate (MDX)
+# <a name="generate-mdx"></a>生成 (MDX)
 
 
-  あるセットを別のセットの各メンバーに適用し、その結果セットを和集合で結合します。 また、この関数は、セットに対して文字列式を評価することによって作成される連結文字列を返します。  
+  あるセットを別のセットの各メンバーに適用し、その結果セットを和集合で結合します。 または、この関数は、セットに対して文字列式を評価することによって作成された連結文字列を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -33,26 +33,26 @@ Generate( Set_Expression1 ,  String_Expression [ ,Delimiter ]  )
   
 ## <a name="arguments"></a>引数  
  *Set_Expression1*  
- セットを返す有効な多次元式 (MDX) です。  
+ セットを返す有効な多次元式 (MDX) 式です。  
   
  *Set_Expression2*  
- セットを返す有効な多次元式 (MDX) です。  
+ セットを返す有効な多次元式 (MDX) 式です。  
   
  *String_Expression*  
  有効な文字列式です。通常は、指定されたセット内の各組の現在のメンバーの名前 (CurrentMember.Name) です。  
   
- *区切り記号*  
+ *Delimiter*  
  文字列式として表された有効な区切り記号です。  
   
-## <a name="remarks"></a>コメント  
- 2 番目のセットが指定されている場合、**Generate**関数は、2 番目のセット内の組を最初のセット内の各組に適用することによって生成されるセットを返し、その結果を結合するセットを和集合。 場合**すべて**を指定すると、結果セット内の重複部分を保持します。  
+## <a name="remarks"></a>解説  
+ 2番目のセットを指定した場合、 **Generate**関数は、2番目のセット内の組を1つ目のセット内の各組に適用して生成されたセットを返し、和集合によって結果セットを結合します。 **ALL**を指定した場合、関数は結果セット内の重複部分を保持します。  
   
- 文字列式が指定されている場合、**Generate**関数は、最初のセット内の各組に対して指定された文字列式を評価し、結果を連結して生成される文字列を返します。 必要に応じて、文字列は連結結果の文字列では、各結果を分離すること、区切られてすることができます。  
+ 文字列式が指定されている場合、 **Generate**関数は、最初のセット内の各組に対して指定された文字列式を評価し、結果を連結することによって生成される文字列を返します。 必要に応じて、文字列を区切り、結果として連結された文字列内の各結果を区切ることができます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
-### <a name="set"></a>Set  
- 次の例では、クエリは、セット [Date] に 4 つのメンバーがあるために 4 回、Internet Sales amount メジャーを格納しているセットを返します。[Calendar Year] です。[Calendar Year] です。メンバー:  
+### <a name="set"></a>オン  
+ 次の例では、set [Date] に4つのメンバーがあるため、Internet Sales amount メジャーを含むセットが返されます。[Calendar Year]。[Calendar Year]。属する  
   
 ```  
 SELECT   
@@ -72,7 +72,7 @@ ON 0
 FROM [Adventure Works]  
 ```  
   
- 実際の最も一般的な使用**Generate**はセット評価する、複雑なメンバーのセットに対して TopCount などの式。 次のクエリの例では、行の Calendar Year ごとの上位 10 製品が表示されます。  
+ **Generate**の最も一般的な用途は、メンバーのセットに対して TopCount などの複雑なセット式を評価することです。 次のクエリの例では、行に各暦年の上位10個の製品が表示されます。  
   
 ```  
 SELECT   
@@ -89,7 +89,7 @@ ON 1
 FROM [Adventure Works]  
 ```  
   
- それぞれの年とする別の上位 10 個が表示されることに注意してください。 の使用**Generate**この結果を取得する唯一の方法です。 単に年ごとの年と上位 10 製品のセットが表示されます上位 10 製品、全期間の次の例に示すように、各年に対して繰り返されます。  
+ 年ごとに異なる上位10件が表示され、この結果を取得する唯一の方法は [**生成**の使用] であることに注意してください。 次の例に示すように、Calendar year と上位10製品のセットをクロス結合するだけで、すべての時間について上位10製品が表示されます。  
   
 ```  
 SELECT   
@@ -105,7 +105,7 @@ FROM [Adventure Works]
 ```  
   
 ### <a name="string"></a>String  
- 次の例は、の使用を示しています。**Generate**文字列を返します。  
+ 次の例は、 **Generate**を使用して文字列を返す方法を示しています。  
   
 ```  
 WITH   
@@ -124,9 +124,9 @@ FROM [Adventure Works]
 ```  
   
 > [!NOTE]  
->  この形式の**Generate**関数場合に利用でき、計算のデバッグ、セット内のすべてのメンバーの名前を表示する文字列を返すことができるためです。 一連の厳密な MDX 表記よりも読みやすいことが考えられますが、 [SetToStr &#40;MDX&#41; ](../mdx/settostr-mdx.md)関数が返される。  
+>  この形式の**Generate**関数は、計算をデバッグするときに便利です。これにより、セット内のすべてのメンバーの名前を表示する文字列を返すことができます。 これは、 [Settostr &#40;MDX&#41;](../mdx/settostr-mdx.md)関数が返すセットの厳密な MDX 表現よりも読みやすくなる可能性があります。  
   
 ## <a name="see-also"></a>参照  
- [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Mdx 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

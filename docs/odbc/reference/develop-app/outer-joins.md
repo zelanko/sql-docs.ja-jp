@@ -14,26 +14,26 @@ ms.assetid: be1a0203-5da9-4871-9566-4bd3fbc0895c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a4bf875b3afd21f6b8cb211c999401b0ecb80879
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67987814"
 ---
 # <a name="outer-joins"></a>外部結合
-ODBC は、sql-92 左、右、および完全外部結合の構文をサポートします。 外部結合のエスケープ シーケンスします。  
+ODBC では、SQL-92 の left、right、および full outer join 構文がサポートされています。 外部結合のエスケープシーケンスは、  
   
- **{oj** _外部結合_ **}**  
+ **{oj** _外部結合_**}**  
   
- 場所*外部結合*は  
+ *外部結合*の場合  
   
- *テーブル参照*{**LEFT &#124; RIGHT &#124; FULL} OUTER JOIN** {*テーブル参照* &#124; *外部結合*} **ON** _検索条件_  
+ *テーブル参照*{**左 &#124; 右 &#124; 完全} 外部結合**{*テーブル参照*&#124;*外部結合* **}** _検索条件_  
   
- *テーブル参照*テーブル名を指定し、*検索条件*間の結合条件を指定します、*テーブル参照*。  
+ テーブル*参照*はテーブル名を指定し、*検索条件*では*テーブル参照*間の結合条件を指定します。  
   
- 外部結合要求は、 **FROM**キーワードの後、**WHERE**句の前に存在する必要があります（存在する場合）。 完全な構文については、次を参照してください[外部結合エスケープ シーケンス](../../../odbc/reference/appendixes/outer-join-escape-sequence.md)付録 c:。SQL 文法。  
+ 外部結合要求は、 **FROM**キーワードの後、 **WHERE**句 (存在する場合) の前に記述する必要があります。 構文の詳細については、「付録 C: SQL 文法」の「[外部結合のエスケープシーケンス](../../../odbc/reference/appendixes/outer-join-escape-sequence.md)」を参照してください。  
   
- たとえば、次の SQL ステートメントは、すべての顧客の一覧に未処理注文が表示されるのと同じ結果セットを作成します。 最初のステートメントでは、エスケープ シーケンス構文を使用します。 2 番目のステートメントでは、Oracle のネイティブの構文を使用して、相互運用可能なではありません。  
+ たとえば、次の SQL ステートメントでは、すべての顧客を一覧表示し、開いている注文があることを示す同じ結果セットが作成されます。 最初のステートメントでは、エスケープシーケンス構文を使用します。 2番目のステートメントでは、Oracle のネイティブ構文を使用し、相互運用できません。  
   
 ```  
 SELECT Customers.CustID, Customers.Name, Orders.OrderID, Orders.Status  
@@ -45,4 +45,4 @@ SELECT Customers.CustID, Customers.Name, Orders.OrderID, Orders.Status
    WHERE (Orders.Status='OPEN') AND (Customers.CustID= Orders.CustID(+))  
 ```  
   
- データソースとドライバーをサポートする外部結合の種類を判断するには、アプリケーションが呼び出す**SQLGetInfo** SQL_OJ_CAPABILITIES フラグします。 サポート可能性のある外部結合の種類、left、right、完全なまたは外部結合は; を入れ子になった外部結合を内の列名で、 **ON**句内のそれぞれのテーブル名と同じ順序がない、 **OUTER JOIN**句; 外部結合は; を使用して外部結合と組み合わせて内部結合任意の ODBC 比較演算子。 SQL_OJ_CAPABILITIES 情報の種類では、0 を返します、外部結合句はサポートされません。
+ アプリケーションでは、データソースとドライバーがサポートする外部結合の種類を特定するために、SQL_OJ_CAPABILITIES フラグを使用して**SQLGetInfo**を呼び出します。 サポートされる可能性のある外部結合の種類は、left、right、full、または nested outer join です。外部結合。 **ON**句の列名の順序は、**外部結合**句でのそれぞれのテーブル名と同じではありません。外部結合と組み合わせた内部結合。また、外部結合では、任意の ODBC 比較演算子を使用します。 SQL_OJ_CAPABILITIES 情報の種類が0を返す場合、外部結合句はサポートされません。

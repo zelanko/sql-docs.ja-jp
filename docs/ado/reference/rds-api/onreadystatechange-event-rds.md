@@ -14,17 +14,17 @@ ms.assetid: bf2ae3ac-bfe4-4709-b50a-ea7c282c3164
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3558fc1fecd343fff480cca3b45c468860a801f8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67963838"
 ---
 # <a name="onreadystatechange-event-rds"></a>onReadyStateChange イベント (RDS)
-**OnReadyStateChange**イベントが呼び出されるたびの値、 [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md)プロパティの変更。  
+**OnReadyStateChange**イベントは、 [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md)プロパティの値が変更されるたびに呼び出されます。  
   
 > [!IMPORTANT]
->  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)します。  
+>  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および[Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416)」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,14 +36,14 @@ onReadyStateChange
 #### <a name="parameters"></a>パラメーター  
  [なし] :  
   
-## <a name="remarks"></a>コメント  
- **ReadyState**プロパティの進行状況を反映する、 [rds.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)オブジェクトにデータを非同期的に取得されてその[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト。 使用して、 **onReadyStateChange**変更を監視するイベント、 **ReadyState**プロパティが出現するたびにします。 これは、プロパティの値を定期的に確認するよりも効率的です。  
+## <a name="remarks"></a>解説  
+ **ReadyState**プロパティは、RDS の進行状況を反映し[ます。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)オブジェクトは、データ[セット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトにデータを非同期的に取得します。 **OnReadyStateChange**イベントは、 **ReadyState**プロパティが発生するたびに、その変更を監視するために使用します。 これは、プロパティの値を定期的にチェックするよりも効率的です。  
   
 ## <a name="applies-to"></a>適用対象  
  [DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>関連項目  
- [ADO イベント モデルの例 (vc++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
+## <a name="see-also"></a>参照  
+ [ADO Events モデルの例 (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [ADO イベント ハンドラーの概要](../../../ado/guide/data/ado-event-handler-summary.md)
 
 

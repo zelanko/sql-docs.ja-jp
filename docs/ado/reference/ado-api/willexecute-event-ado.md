@@ -1,5 +1,5 @@
 ---
-title: WillExecute イベント (ADO) |Microsoft Docs
+title: イベント実行 (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,14 +17,14 @@ ms.assetid: dd755e46-f589-48a3-93a9-51ff998d44b5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e0e7c29be102e9c5c7709816895a6647c95337c2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67936614"
 ---
 # <a name="willexecute-event-ado"></a>WillExecute イベント (ADO)
-**WillExecute**接続で保留中のコマンドを実行する前に、イベントが呼び出されます。  
+この**イベントは、接続**で保留中のコマンドが実行される直前に呼び出されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,40 +35,40 @@ WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordse
   
 #### <a name="parameters"></a>パラメーター  
  *ソース*  
- A**文字列**SQL コマンドまたはストアド プロシージャ名を格納しています。  
+ SQL コマンドまたはストアドプロシージャ名を含む**文字列**。  
   
  *CursorType*  
- A [CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md)のカーソルの種類を格納している、 **Recordset**は開かれます。 このパラメーターを使用中に任意の型にカーソルを変更することができます、 **Recordset**[Open メソッド (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)操作。 *CursorType*の他の操作は無視されます。  
+ 開かれる**レコードセット**のカーソルの種類が格納されている[cursor typeenum](../../../ado/reference/ado-api/cursortypeenum.md) 。 このパラメーターを使用すると、**レコードセット**の[OPEN メソッド (ADO recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)操作中に、カーソルを任意の型に変更できます。 *CursorType*は、他の操作では無視されます。  
   
  *LockType*  
- A [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md)のロックの種類を格納している、 **Recordset**は開かれます。 このパラメーターを使用中に任意の型をロックを変更することができます、 **RecordsetOpen**操作。 *LockType*の他の操作は無視されます。  
+ 開かれる**レコードセット**のロックの種類を格納する[locktypeenum](../../../ado/reference/ado-api/locktypeenum.md) 。 このパラメーターを使用すると、 **RecordsetOpen**操作中に任意の型にロックを変更できます。 他の操作では、 *LockType*は無視されます。  
   
- *[オプション]*  
- A**長い**コマンドを実行したり、開いたりに使用できるオプションを示す値、 **Recordset**します。  
+ *オプション*  
+ コマンドを実行したり、**レコードセット**を開いたりするために使用できるオプションを示す**Long 型**の値です。  
   
  *adStatus*  
- [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md)可能性のある状態値**adStatusCantDeny**または**adStatusOK**このイベントが呼び出された場合。 場合は**adStatusCantDeny**、このイベントは、保留中の操作のキャンセルを要求しない場合があります。  
+ このイベントが呼び出されたときに**Adstatuscantdeny**または**Adstatusok**となる[eventstatusenum](../../../ado/reference/ado-api/eventstatusenum.md)ステータス値。 **Adstatuscantdeny**の場合、このイベントは保留中の操作の取り消しを要求しない可能性があります。  
   
  *pCommand*  
- [コマンド オブジェクト (ADO)](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトをこのイベント通知が適用されます。  
+ このイベント通知を適用する対象の[コマンドオブジェクト (ADO)](../../../ado/reference/ado-api/command-object-ado.md)オブジェクト。  
   
  *pRecordset*  
- [レコード セット オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトをこのイベント通知が適用されます。  
+ このイベント通知を適用する[ADO (Recordset オブジェクト](../../../ado/reference/ado-api/recordset-object-ado.md)) オブジェクト。  
   
  *pConnection*  
- [接続オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトをこのイベント通知が適用されます。  
+ このイベント通知を適用する[接続オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクト。  
   
-## <a name="remarks"></a>コメント  
- A **WillExecute**接続によるイベントが発生します。  [Execute メソッド (ADO Connection)](../../../ado/reference/ado-api/execute-method-ado-connection.md)、 [Execute メソッド (ADO Command)](../../../ado/reference/ado-api/execute-method-ado-command.md)、または[Open メソッド (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)メソッド、 *pConnection*パラメーターにする必要があります常に有効な参照を含める、**接続**オブジェクト。 イベントが原因である場合**Connection.Execute**、 *pRecordset*と*pCommand*パラメーターに設定されて**Nothing**します。 イベントが原因である場合**Recordset.Open**、 *pRecordset*パラメーターで参照、 **Recordset**オブジェクトと*pCommand*パラメーターを設定する**Nothing**します。 イベントが原因である場合**Command.Execute**、 *pCommand*パラメーターで参照、**コマンド**オブジェクトと*pRecordset*パラメーターを設定する**Nothing**します。  
+## <a name="remarks"></a>解説  
+ 接続によっ**てイベントが発生する可能性**があります。  [Execute メソッド (Ado Connection)](../../../ado/reference/ado-api/execute-method-ado-connection.md)、 [EXECUTE メソッド (ado Command)](../../../ado/reference/ado-api/execute-method-ado-command.md)、または[Open method (Ado Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)メソッド。 *Pconnection*パラメーターには、常に**接続**オブジェクトへの有効な参照を含める必要があります。 イベントが接続によって発生した場合、 *Precordset*および*Precordset*パラメーターは**Nothing**に設定され**ます**。 イベントが**レコードセット**によって発生した場合、 *Precordset*パラメーターは**レコードセット**オブジェクトを参照し、 *precordset*パラメーターは**Nothing**に設定されます。 イベントが**コマンドの実行**によって発生した場合、 *Pcommand*パラメーターは**コマンド**オブジェクトを参照し、 *pcommand*パラメーターは**Nothing**に設定されます。  
   
- **WillExecute**確認し、保留中の実行のパラメーターを変更することができます。 このイベントは、保留中のコマンドをキャンセルする要求を返す可能性があります。  
+ を**実行**すると、保留中の実行パラメーターを確認および変更できます。 このイベントは、保留中のコマンドがキャンセルされたことを示す要求を返す場合があります。  
   
 > [!NOTE]
->  元のソースの場合、**コマンド**によって指定されたストリームは、 [CommandStream プロパティ (ADO)](../../../ado/reference/ado-api/commandstream-property-ado.md)プロパティを新しい文字列を割り当てる、 **WillExecute** _ソース_パラメーターのソースの変更、**コマンド**します。 **CommandStream**プロパティがクリアして、 [CommandText プロパティ (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md)プロパティは、新しいソースで更新されます。 指定された元のストリーム**CommandStream**がリリースされ、アクセスできません。  
+>  **コマンド**の元のソースが[COMMANDSTREAM プロパティ (ADO)](../../../ado/reference/ado-api/commandstream-property-ado.md)プロパティによって指定されたストリームである場合は、新しい文字列をに渡し**て、****コマンド**_のソースを_変更します。 **Commandstream**プロパティがクリアされ、 [COMMANDTEXT プロパティ (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md)プロパティが新しいソースで更新されます。 **Commandstream**によって指定された元のストリームは解放され、アクセスできなくなります。  
   
- 新しいソース文字列の言語が、元の設定と異なるかどうか、 [Dialect プロパティ](../../../ado/reference/ado-api/dialect-property.md)プロパティ (これに対応する、 **CommandStream**)、適切な言語を設定して指定する必要があります**言語**プロパティによって参照されるコマンド オブジェクトの*pCommand*します。  
+ 新しいソース文字列の言語が、 [Dialect プロパティ](../../../ado/reference/ado-api/dialect-property.md)プロパティ ( **commandstream**にこれ) の元の設定と異なる場合は、 *pcommand*によって参照されるコマンドオブジェクトの**dialect**プロパティを設定して、正しい言語を指定する必要があります。  
   
-## <a name="see-also"></a>関連項目  
- [ADO イベント モデルの例 (vc++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
- [ADO イベント ハンドラーの概要](../../../ado/guide/data/ado-event-handler-summary.md)   
+## <a name="see-also"></a>参照  
+ [ADO Events モデルの例 (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
+ [ADO イベントハンドラーの概要](../../../ado/guide/data/ado-event-handler-summary.md)   
  [Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

@@ -14,18 +14,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f4d18ef352c3e5ab6342e573d16bc3deaed5db72
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211993"
 ---
 # <a name="create-a-resource-pool"></a>リソース プールの作成
   リソース プールを作成するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用します。  
   
--   **作業を開始する準備:** [制限事項と制約事項](#LimitationsRestrictions)、[権限](#Permissions)  
+-   **作業を開始する準備:**  [制限事項と制約](#LimitationsRestrictions)事項、[アクセス許可](#Permissions)  
   
--   **リソース プールの作成に使用するもの:** [SQL Server Management Studio](#CreRPProp)、[Transact-SQL](#CreRPTSQL)  
+-   **リソースプールを作成するために使用するもの:**  [SQL Server Management Studio](#CreRPProp)、 [transact-sql](#CreRPTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
@@ -37,27 +37,32 @@ ms.locfileid: "68211993"
 ###  <a name="Permissions"></a> Permissions  
  リソース プールを作成するには、CONTROL SERVER 権限が必要です。  
   
-##  <a name="CreRPProp"></a> SQL Server Management Studio を使用してリソース プールを作成する  
- **を使用してリソース プールを作成するには [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
+##  <a name="CreRPProp"></a>SQL Server Management Studio を使用してリソースプールを作成する  
+ **を使用してリソースプールを作成するには[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
-1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でオブジェクト エクスプローラーを開き、 **[管理]** ノードを **[リソース ガバナー]** ノードまで再帰的に展開します。  
+1.  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でオブジェクト エクスプローラーを開き、 **[管理]** ノードを **[リソース ガバナー]** ノードまで再帰的に展開します。  
   
-2.  **[リソース ガバナー]** を右クリックし、 **[プロパティ]** をクリックします。  
+2.  
+  **[リソース ガバナー]** を右クリックし、 **[プロパティ]** をクリックします。  
   
-3.  **[リソース プール]** グリッドで、空白行の最初の列をクリックします。 この列にアスタリスク (*) がラベルとして付加されます。  
+3.  
+  **[リソース プール]** グリッドで、空白行の最初の列をクリックします。 この列にアスタリスク (*) がラベルとして付加されます。  
   
-4.  **[名前]** 列の空のセルをダブルクリックします。 リソース プールに使用する名前を入力します。  
+4.  
+  **[名前]** 列の空のセルをダブルクリックします。 リソース プールに使用する名前を入力します。  
   
 5.  変更する行の他のセルをクリックまたはダブルクリックし、新しい値を入力します。  
   
 6.  変更を保存するには、 **[OK]** をクリックします。  
   
-##  <a name="CreRPTSQL"></a> Transact-SQL を使用してリソース プールを作成する  
- **を使用してリソース プールを作成するには [!INCLUDE[tsql](../../includes/tsql-md.md)]**  
+##  <a name="CreRPTSQL"></a>Transact-sql を使用してリソースプールを作成する  
+ **を使用してリソースプールを作成するには[!INCLUDE[tsql](../../includes/tsql-md.md)]**  
   
 1.  設定するプロパティ値を指定する `CREATE RESOURCE POOL` ステートメントを実行します。  
   
-2.  **ALTER RESOURCE GOVERNOR RECONFIGURE** ステートメントを実行します。  
+2.  
+  **ALTER RESOURCE GOVERNOR RECONFIGURE** ステートメントを実行します。  
   
 ### <a name="example-transact-sql"></a>例 (Transact-SQL)  
  次の例では、 `poolAdhoc`というリソース プールを作成します。  
@@ -70,16 +75,16 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [リソース ガバナー](resource-governor.md)   
- [リソース ガバナーの有効化](enable-resource-governor.md)   
- [リソース ガバナー リソース プール](resource-governor-resource-pool.md)   
- [リソース プールの設定の変更](change-resource-pool-settings.md)   
- [リソース プールの削除](delete-a-resource-pool.md)   
- [テンプレートを使用してリソース ガバナーを構成する](configure-resource-governor-using-a-template.md)   
- [リソース ガバナー ワークロード グループ](resource-governor-workload-group.md)   
- [リソース ガバナーの分類子関数](resource-governor-classifier-function.md)   
- [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-resource-pool-transact-sql)   
+## <a name="see-also"></a>参照  
+ [Resource Governor](resource-governor.md)   
+ [Resource Governor を有効にする](enable-resource-governor.md)   
+ [リソースプールの Resource Governor](resource-governor-resource-pool.md)   
+ [リソースプールの設定を変更する](change-resource-pool-settings.md)   
+ [リソースプールの削除](delete-a-resource-pool.md)   
+ [テンプレートを使用して Resource Governor を構成する](configure-resource-governor-using-a-template.md)   
+ [ワークロードグループの Resource Governor](resource-governor-workload-group.md)   
+ [Resource Governor 分類子関数](resource-governor-classifier-function.md)   
+ [Transact-sql&#41;&#40;リソースプールの作成](/sql/t-sql/statements/create-resource-pool-transact-sql)   
  [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-resource-governor-transact-sql)  
   
   

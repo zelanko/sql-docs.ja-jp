@@ -1,5 +1,5 @@
 ---
-title: sp_detach_schedule (TRANSACT-SQL) |Microsoft Docs
+title: sp_detach_schedule (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: 9a1fc335-1bef-4638-a33a-771c54a5dd19
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: aed989cc09922b7b480a7dd7b3ca6820d6b77ab2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67936743"
 ---
-# <a name="spdetachschedule-transact-sql"></a>sp_detach_schedule (Transact-SQL)
+# <a name="sp_detach_schedule-transact-sql"></a>sp_detach_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   スケジュールとジョブ間の関連付けを削除します。  
@@ -42,21 +42,21 @@ sp_detach_schedule
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @job_id = ] job_id` スケジュールを削除するジョブのジョブ識別番号。 *job_id*は**uniqueidentifier**、既定値は NULL です。  
+`[ @job_id = ] job_id`スケジュールを削除するジョブの識別番号を指定します。 *job_id*は**uniqueidentifier**,、既定値は NULL です。  
   
-`[ @job_name = ] 'job_name'` スケジュールを削除するジョブの名前。 *job_name*は**sysname**、既定値は NULL です。  
-  
-> [!NOTE]  
->  いずれか*job_id*または*job_name*指定する必要がありますが、両方を指定することはできません。  
-  
-`[ @schedule_id = ] schedule_id` ジョブから削除するスケジュールの識別番号を指定します。 *schedule_id*は**int**、既定値は NULL です。  
-  
-`[ @schedule_name = ] 'schedule_name'` ジョブから削除するスケジュールの名前。 *schedule_name*は**sysname**、既定値は NULL です。  
+`[ @job_name = ] 'job_name'`スケジュールを削除するジョブの名前を指定します。 *job_name*は**sysname**,、既定値は NULL です。  
   
 > [!NOTE]  
->  いずれか*schedule_id*または*schedule_name*指定する必要がありますが、両方を指定することはできません。  
+>  *Job_id*または*job_name*のいずれかを指定する必要がありますが、両方を指定することはできません。  
   
-`[ @delete_unused_schedule = ] delete_unused_schedule` 未使用のジョブ スケジュールを削除するかどうかを指定します。 *@delete_unused_schedule*は**ビット**、既定値は**0**、つまりすべてのスケジュールを保持することでもジョブ参照されていない場合にします。 場合設定**1**ジョブを参照しない場合、未使用のジョブ スケジュールは削除されます。  
+`[ @schedule_id = ] schedule_id`ジョブから削除するスケジュールの識別番号を指定します。 *schedule_id*は**int**,、既定値は NULL です。  
+  
+`[ @schedule_name = ] 'schedule_name'`ジョブから削除するスケジュールの名前を指定します。 *schedule_name*は**sysname**,、既定値は NULL です。  
+  
+> [!NOTE]  
+>  *Schedule_id*または*schedule_name*のいずれかを指定する必要がありますが、両方を指定することはできません。  
+  
+`[ @delete_unused_schedule = ] delete_unused_schedule`未使用のジョブスケジュールを削除するかどうかを指定します。 *delete_unused_schedule*の部分は**ビット**で、既定値は**0**です。これは、ジョブが参照していない場合でも、すべてのスケジュールが保持されることを意味します。 **1**に設定すると、ジョブが参照していない場合、未使用のジョブスケジュールが削除されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -65,7 +65,7 @@ sp_detach_schedule
  なし  
   
 ## <a name="permissions"></a>アクセス許可  
- 既定では、このストアド プロシージャを実行できるのは、 **sysadmin** 固定サーバー ロールのメンバーです。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
+ 既定では、 **sysadmin**固定サーバーロールのメンバーは、このストアドプロシージャを実行できます。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
   
 -   **SQLAgentUserRole**  
   
@@ -73,14 +73,15 @@ sp_detach_schedule
   
 -   **SQLAgentOperatorRole**  
   
- ジョブの所有者が、ジョブをスケジュールにアタッチおよびにスケジュール所有者にならなくても、ジョブ、スケジュールをデタッチできますに注意してください。 ただし場合は、デタッチがのままにジョブがいずれも、呼び出し元が、スケジュール所有者でない限り、スケジュールを削除できません。  
+ ジョブの所有者はスケジュールにジョブをアタッチし、スケジュールの所有者でなくてもジョブをスケジュールからデタッチできることに注意してください。 ただし、呼び出し元がスケジュールの所有者でない限り、デタッチによってジョブが存在しない場合、スケジュールを削除することはできません。  
   
  これらのロールの権限の詳細については、「 [SQL Server エージェントの固定データベース ロール](../../ssms/agent/sql-server-agent-fixed-database-roles.md)」を参照してください。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、ユーザーがスケジュールを所有しているかどうかが判断されます。 メンバーのみ、 **sysadmin**固定サーバー ロールは、別のユーザーが所有するジョブからスケジュールをデタッチできます。  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、ユーザーがスケジュールを所有しているかどうかが判断されます。 **Sysadmin**固定サーバーロールのメンバーだけが、別のユーザーが所有するジョブからスケジュールをデタッチできます。  
   
-## <a name="examples"></a>使用例  
- 次の例では、間のアソシエーションの削除、`'NightlyJobs'`スケジュールと`'BackupDatabase'`ジョブ。  
+## <a name="examples"></a>例  
+ 次の例では、 `'NightlyJobs'`スケジュールと`'BackupDatabase'`ジョブの関連付けを削除します。  
   
 ```  
 USE msdb ;  
@@ -92,9 +93,9 @@ EXEC dbo.sp_detach_schedule
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [sp_add_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
- [sp_attach_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   
- [sp_delete_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)  
+## <a name="see-also"></a>参照  
+ [sp_add_schedule &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
+ [sp_attach_schedule &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   
+ [sp_delete_schedule &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)  
   
   

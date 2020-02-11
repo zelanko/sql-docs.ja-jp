@@ -16,16 +16,16 @@ ms.assetid: 4ace57dd-b66e-4b60-a2b9-a1b0f1a0831d
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 1c27e432dc258b4d2b9d21bfe0ab28df8ee5b510
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67946532"
 ---
 # <a name="numeric-values-functions---floor"></a>数値関数 - floor
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  引数の値より大きくない小数部のないと最大数を返します。 引数が空のシーケンスの場合は、空のシーケンスを返します。  
+  引数の値を超えない分数部分を含まない最大の数値を返します。 引数が空のシーケンスの場合は、空のシーケンスを返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,26 +36,26 @@ fn:floor ($arg as numeric?) as numeric?
   
 ## <a name="arguments"></a>引数  
  *$arg*  
- 関数を適用する番号です。  
+ 関数が適用される番号。  
   
-## <a name="remarks"></a>コメント  
- 場合の種類 *$arg*は 3 つの数値基本データ型の 1 つ**xs:float**、 **xs:double**、または**xs:decimal**、戻り値の型は同じですが、 *$arg*型。 場合の種類 *$arg* 、数値型のいずれかから派生した型は、戻り値の型が基本の数値型。  
+## <a name="remarks"></a>解説  
+ *$Arg*の型が、 **xs: float**、 **xs: double**、または**xs: decimal**の3つの数値基本データ型のいずれかである場合、戻り値の型は *$arg*の型と同じになります。 *$Arg*の型が数値型の1つから派生した型である場合、戻り値の型は基本数値型です。  
   
- Fn:floor、fn:ceiling、または fn:round 関数への入力が場合**xdt:untypedAtomic**、型指定されていないデータは、暗黙的にキャストされた**xs:double**します。 その他の型のデータが入力されると、静的エラーが生成されます。  
+ Fn: floor、fn: シーリング、または fn: round 関数への入力が**xdt: untypedAtomic**で、型指定されていないデータの場合、 **xs: double**に暗黙的にキャストされます。 その他の型のデータが入力されると、静的エラーが生成されます。  
   
-## <a name="examples"></a>使用例  
- このトピックではさまざまなに格納されている XML インスタンスに対して XQuery の例について**xml**型の列に、AdventureWorks サンプル データベース。  
+## <a name="examples"></a>例  
+ このトピックでは、AdventureWorks サンプルデータベースのさまざまな**xml**型の列に格納されている xml インスタンスに対して XQuery の例を示します。  
   
- 作業用サンプルを使用することができます、 [ceiling 関数 (XQuery)](../xquery/numeric-values-functions-ceiling.md)の**floor()** XQuery 関数。 置換を行う必要があるすべてが、 **ceiling()** 関数を使用したクエリで、 **floor()** 関数。  
+ **Floor ()** xquery 関数には、[天井関数 (xquery)](../xquery/numeric-values-functions-ceiling.md)のワーキングサンプルを使用できます。 クエリの**天井 ()** 関数を**floor ()** 関数に置き換えるだけで済みます。  
   
 ## <a name="implementation-limitations"></a>実装の制限事項  
- 制限事項を次に示します。  
+ 制限事項は次のとおりです。  
   
--   **Floor()** 関数では、すべての整数値を xs:decimal にマップします。  
+-   **Floor ()** 関数は、すべての整数値を xs: decimal にマップします。  
   
-## <a name="see-also"></a>関連項目  
- [ceiling 関数&#40;XQuery&#41;](../xquery/numeric-values-functions-ceiling.md)   
- [round 関数&#40;XQuery&#41;](../xquery/numeric-values-functions-round.md)   
+## <a name="see-also"></a>参照  
+ [シーリング関数 &#40;XQuery&#41;](../xquery/numeric-values-functions-ceiling.md)   
+ [round 関数 &#40;XQuery&#41;](../xquery/numeric-values-functions-round.md)   
  [xml データ型に対する XQuery 関数](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

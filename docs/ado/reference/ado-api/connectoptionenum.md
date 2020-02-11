@@ -16,27 +16,27 @@ ms.assetid: bff07eeb-dee3-4e4e-9b2d-d56061ea744d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 819fb89d7f8c43e76ba9260a72fafa68084bf880
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933443"
 ---
 # <a name="connectoptionenum"></a>ConnectOptionEnum
-指定するかどうか、[オープン](../../../ado/reference/ado-api/open-method-ado-connection.md)のメソッド、[接続](../../../ado/reference/ado-api/connection-object-ado.md)(同期的に) 接続が確立された後、またはオブジェクトを返す必要があります (非同期)。  
+接続の確立後に (同期的に)、またはそれ以前 (非同期) に[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトの[Open](../../../ado/reference/ado-api/open-method-ado-connection.md)メソッドを返すかどうかを指定します。  
   
-|定数|Value|説明|  
+|常時|値|[説明]|  
 |--------------|-----------|-----------------|  
-|**adAsyncConnect**|16|非同期的に接続を開きます。 [ConnectComplete](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)イベントを使用して、接続が使用可能な場合があります。|  
-|**adConnectUnspecified**|-1|既定値です。 同期的に接続を開きます。|  
+|**adAsyncConnect**|16|接続を非同期的に開きます。 接続が使用可能かどうかを判断するには、 [Connectcomplete](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)イベントを使用できます。|  
+|**指定された Adの場合**|-1|既定。 接続を同期的に開きます。|  
   
-## <a name="adowfc-equivalent"></a>ADO と WFC と同等  
- パッケージ: **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>同等の ADO/WFC  
+ パッケージ: **com. ms. wfc. データ**  
   
-|定数|  
+|常時|  
 |--------------|  
-|AdoEnums.ConnectOption.ASYNCCONNECT|  
-|AdoEnums.ConnectOption.CONNECTUNSPECIFIED|  
+|AdoEnums ConnectOption|  
+|AdoEnums ConnectOption.|  
   
 ## <a name="applies-to"></a>適用対象  
  [Open メソッド (ADO Connection)](../../../ado/reference/ado-api/open-method-ado-connection.md)

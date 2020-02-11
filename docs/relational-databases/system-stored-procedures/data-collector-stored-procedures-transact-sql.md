@@ -1,5 +1,5 @@
 ---
-title: データ コレクター ストアド プロシージャ (TRANSACT-SQL) |Microsoft Docs
+title: データコレクターのストアドプロシージャ (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,16 +17,16 @@ ms.assetid: 9dd2824f-ea55-439b-8cd5-3a81fedb1432
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 522efa96e554a7b6eecb6e36c0771cbe95163a37
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67942400"
 ---
-# <a name="data-collector-stored-procedures-transact-sql"></a>データ コレクター ストアド プロシージャ (TRANSACT-SQL)
+# <a name="data-collector-stored-procedures-transact-sql"></a>データコレクターのストアドプロシージャ (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  SQL Server データ コレクターと、次のコンポーネントを操作するために使用する次のシステム ストアド プロシージャをサポートしています。 コレクション セット、コレクション アイテム、およびコレクション型。  
+  SQL Server は、データコレクターおよび次のコンポーネント (コレクションセット、コレクションアイテム、コレクション型) を操作するために使用される次のシステムストアドプロシージャをサポートしています。  
   
 > [!IMPORTANT]  
 >  通常のストアド プロシージャとは異なり、データ コレクターで使用するストアド プロシージャではパラメーターのデータ型が厳密に定義されており、データ型の自動変換はサポートされていません。 これらのパラメーターが、引数の説明で指定されている正しいデータ型で呼び出されないと、このストアド プロシージャではエラーが返されます。  
@@ -44,7 +44,7 @@ ms.locfileid: "67942400"
 |[sp_syscollector_enable_collector](../../relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql.md)|[sp_syscollector_update_collector_type](../../relational-databases/system-stored-procedures/sp-syscollector-update-collector-type-transact-sql.md)|  
 |[sp_syscollector_set_cache_directory](../../relational-databases/system-stored-procedures/sp-syscollector-set-cache-directory-transact-sql.md)|[sp_syscollector_upload_collection_set](../../relational-databases/system-stored-procedures/sp-syscollector-upload-collection-set-transact-sql.md)|  
   
- 次のストアド プロシージャは内部でのみ使用されます。  
+ 次のストアドプロシージャは、内部でのみ使用されます。  
   
 -   sp_syscollector_get_warehouse_connection_string  
   
@@ -66,7 +66,7 @@ ms.locfileid: "67942400"
   
 -   sp_syscollector_event_onstatsupdate  
   
-## <a name="see-also"></a>関連項目  
- [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>参照  
+ [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

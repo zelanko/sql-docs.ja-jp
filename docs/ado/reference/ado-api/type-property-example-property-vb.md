@@ -1,5 +1,5 @@
 ---
-title: プロパティの例 (プロパティ) (VB) を入力します |。Microsoft Docs
+title: Type プロパティの例 (プロパティ) (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,16 +15,16 @@ ms.assetid: 2ee8e4c5-1d66-4a77-8892-6dad7e07e611
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a8def5c7089be85c9b6eb7700a8a5bcdaeebe99e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67937857"
 ---
 # <a name="type-property-example-property-vb"></a>Type プロパティの例 (プロパティ) (VB)
-この例では、[型](../../../ado/reference/ado-api/type-property-ado.md)プロパティ。 これは、モデルなどの名前と、コレクションの型を一覧表示するためのユーティリティの[プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)、[フィールド](../../../ado/reference/ado-api/fields-collection-ado.md)など。  
+この例では、 [Type](../../../ado/reference/ado-api/type-property-ado.md)プロパティを示します。 これは、[プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)、[フィールド](../../../ado/reference/ado-api/fields-collection-ado.md)などのコレクションの名前と種類を一覧表示するためのユーティリティのモデルです。  
   
- 開く必要はありません、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)へのアクセスをその**プロパティ**コレクションが存在することになるときに、**レコード セット**オブジェクトがインスタンス化します。 ただし、設定、 [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)プロパティを**adUseClient**をいくつかの動的プロパティを追加、**レコード セット**オブジェクトの**プロパティ**コレクション、例では、もう少し興味深いものを作成します。 図では、単純に明示的に使用して、[項目](../../../ado/reference/ado-api/item-property-ado.md)プロパティにアクセスする各[プロパティ](../../../ado/reference/ado-api/property-object-ado.md)オブジェクト。  
+ **プロパティ**コレクションにアクセスするために[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)を開く必要はありません。これらは、**レコードセット**オブジェクトがインスタンス化されるときに存在します。 ただし、[[カーソルの場所](../../../ado/reference/ado-api/cursorlocation-property-ado.md)] プロパティを**adUseClient**に設定すると、**レコードセット**オブジェクトの**properties**コレクションに動的なプロパティがいくつか追加されるため、この例はもう少し興味深いものになります。 具体的には、 [Item](../../../ado/reference/ado-api/item-property-ado.md)プロパティを使用して各[プロパティ](../../../ado/reference/ado-api/property-object-ado.md)オブジェクトにアクセスします。  
   
 ```  
 'BeginTypePropertyVB  
@@ -147,6 +147,6 @@ End Sub
 'EndTypePropertyVB  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [オブジェクトのプロパティ (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
+## <a name="see-also"></a>参照  
+ [Property オブジェクト (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
  [Type プロパティ (ADO)](../../../ado/reference/ado-api/type-property-ado.md)

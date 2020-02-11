@@ -1,5 +1,5 @@
 ---
-title: Recordset、SourceRecordset プロパティ (RDS) |Microsoft Docs
+title: Recordset、SourceRecordset Properties (RDS) |Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,19 +14,19 @@ ms.assetid: a29e3fb9-306d-497a-9a59-1856a914e5e9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f0cca4735e65ce5d96d431fa455181de921e4474
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67963570"
 ---
 # <a name="recordset-sourcerecordset-properties-rds"></a>Recordset、SourceRecordset プロパティ (RDS)
-示す、**レコード セット**カスタム ビジネス オブジェクトからオブジェクトが返されます。  
+カスタムビジネスオブジェクトから返される**レコードセット**オブジェクトを示します。  
   
- **適用対象します。** [DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ **適用対象:** [DATACONTROL オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
 > [!IMPORTANT]
->  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)します。  
+>  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および[Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416)」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,26 +38,26 @@ Recordset = DataControl.Recordset
   
 #### <a name="parameters"></a>パラメーター  
  *DataControl*  
- オブジェクト変数を表す、 [rds.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)オブジェクト。  
+ RDS を表すオブジェクト変数です[。DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)オブジェクト。  
   
- *レコード セット*  
- オブジェクト変数を表す、 **Recordset**オブジェクト。  
+ *レコードセット*  
+ **レコードセット**オブジェクトを表すオブジェクト変数です。  
   
-## <a name="remarks"></a>コメント  
- 設定することができます、 **SourceRecordset**プロパティを[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)カスタム ビジネス オブジェクトから返されます。  
+## <a name="remarks"></a>解説  
+ **SourceRecordset**プロパティは、カスタムビジネスオブジェクトから返された[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)に設定できます。  
   
- これらのプロパティをカスタム プロセスを使用してバインド プロセスを処理するために使用できます。 ラップされた行セットを受信した、**レコード セット**を直接操作できるように、 **Recordset**プロパティの設定などのアクションを実行、または反復処理に使用、**レコード セット**.  
+ これらのプロパティを使用すると、アプリケーションはカスタムプロセスを使用してバインドプロセスを処理できます。 レコードセットを直接操作し**て、プロパティ**の設定や**レコードセット**の反復処理などのアクションを実行できるように、**レコード**セットにラップされた行セットを受け取ります。  
   
- 設定することができます、 **SourceRecordset**プロパティまたは読み取り、 **Recordset**スクリプト コードの実行時にプロパティ。  
+ **SourceRecordset**プロパティを設定するか、スクリプトコードで実行時に**レコードセット**プロパティを読み取ることができます。  
   
- **SourceRecordset**とは異なり、書き込み専用のプロパティは、 **Recordset**プロパティは読み取り専用プロパティです。  
+ **SourceRecordset**は、読み取り専用プロパティである**Recordset**プロパティとは対照的に、書き込み専用のプロパティです。  
   
 ## <a name="applies-to"></a>適用対象  
  [DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>関連項目  
- [レコード セットと SourceRecordset プロパティの例 (VBScript)](../../../ado/reference/rds-api/recordset-and-sourcerecordset-properties-example-vbscript.md)   
+## <a name="see-also"></a>参照  
+ [Recordset および SourceRecordset プロパティの例 (VBScript)](../../../ado/reference/rds-api/recordset-and-sourcerecordset-properties-example-vbscript.md)   
  [CreateRecordset メソッド (RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)   
- [クエリ メソッド (RDS)](../../../ado/reference/rds-api/query-method-rds.md)
+ [Query メソッド (RDS)](../../../ado/reference/rds-api/query-method-rds.md)
 
 

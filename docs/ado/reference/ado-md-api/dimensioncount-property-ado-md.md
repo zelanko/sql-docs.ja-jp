@@ -17,21 +17,21 @@ ms.assetid: 87929cbc-9c38-491a-8616-62d45c51e299
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8ccb2ae99761ecfa1fc52cef44e4cf35a5600531
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67938494"
 ---
 # <a name="dimensioncount-property-ado-md"></a>DimensionCount プロパティ (ADO MD)
-ディメンションの数を示します、[軸](../../../ado/reference/ado-md-api/axis-object-ado-md.md)します。  
+[軸](../../../ado/reference/ado-md-api/axis-object-ado-md.md)上のディメンションの数を示します。  
   
 ## <a name="return-values"></a>戻り値  
- 返します、**長い**整数は読み取り専用とします。  
+ は**長**整数を返し、は読み取り専用です。  
   
 ## <a name="applies-to"></a>適用対象  
  [Axis オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)  
   
-## <a name="see-also"></a>関連項目  
- [軸の例 (VBScript)](../../../ado/reference/ado-md-api/axis-example-vbscript.md)   
+## <a name="see-also"></a>参照  
+ [Axis の例 (VBScript)](../../../ado/reference/ado-md-api/axis-example-vbscript.md)   
  [Dimension オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)

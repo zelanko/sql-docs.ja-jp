@@ -1,5 +1,5 @@
 ---
-title: sp_OASetProperty (TRANSACT-SQL) |Microsoft Docs
+title: sp_OASetProperty (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,16 @@ ms.assetid: 0fe7d554-6b67-4d55-9d3e-4096802c47f8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ecbfba038b1954565839a3d931ef96431b77f50b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68008938"
 ---
-# <a name="spoasetproperty-transact-sql"></a>sp_OASetProperty (Transact-SQL)
+# <a name="sp_oasetproperty-transact-sql"></a>sp_OASetProperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  OLE オブジェクトのプロパティ値に新しい値を設定します。  
+  OLE オブジェクトのプロパティを新しい値に設定します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,32 +40,32 @@ sp_OASetProperty objecttoken , propertyname , newvalue [ , index... ]
   
 ## <a name="arguments"></a>引数  
  *objecttoken*  
- によって以前に作成された OLE オブジェクトのオブジェクト トークン**sp_OACreate**します。  
+ 以前に**sp_OACreate**によって作成された OLE オブジェクトのオブジェクトトークンです。  
   
  *propertyname*  
- 新しい値を設定する OLE オブジェクトのプロパティ名を指定します。  
+ 新しい値に設定する OLE オブジェクトのプロパティ名を指定します。  
   
  *newvalue*  
  プロパティの新しい値を指定します。指定する場合は、適切なデータ型の値にする必要があります。  
   
- *index*  
- インデックス パラメーターです。 指定した場合*インデックス*適切なデータ型の値を指定する必要があります。  
+ *インデックス*  
+ はインデックスパラメーターです。 指定する場合、*インデックス*は、適切なデータ型の値である必要があります。  
   
- プロパティの一部はパラメーターを持っています。 このようなプロパティをインデックス付きプロパティ、パラメーターをインデックス パラメーターと呼びます。 1 つのプロパティが複数のインデックス パラメーターを持つことができます。  
+ 一部のプロパティにはパラメーターがあります。 これらのプロパティはインデックス付きプロパティと呼ばれ、パラメーターはインデックスパラメーターと呼ばれます。 プロパティは、複数のインデックスパラメーターを持つことができます。  
   
 > [!NOTE]  
->  このストアド プロシージャのパラメーターは、名前ではなく位置で指定されます。  
+>  このストアドプロシージャのパラメーターは、名前ではなく位置によって指定されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- 成功した場合は 0、失敗した場合は OLE オートメーション オブジェクトによって返される HRESULT の 0 以外の整数値を返します。  
+ 0 (成功) または0以外の数 (失敗)。これは、OLE オートメーションオブジェクトによって返される HRESULT の整数値です。  
   
- HRESULT のリターン コードの詳細については、次を参照してください。 [OLE オートメーションのリターン コードとエラー情報](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md)します。  
+ HRESULT のリターンコードの詳細については、「 [OLE オートメーションのリターンコードとエラー情報](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md)」を参照してください。  
   
 ## <a name="permissions"></a>アクセス許可  
- メンバーシップが必要です、 **sysadmin**固定サーバー ロールまたはアクセス許可をこのストアド プロシージャを直接実行します。 `Ole Automation Procedures` 構成でなければなりません**有効になっている**OLE オートメーションに関連するすべてのシステム プロシージャを使用します。  
+ **Sysadmin**固定サーバーロールのメンバーシップ、またはこのストアドプロシージャに対して直接実行権限が必要です。 `Ole Automation Procedures`OLE オートメーションに関連するシステムプロシージャを使用するには、構成を**有効**にする必要があります。  
   
-## <a name="examples"></a>使用例  
- 次の例のセット、`HostName`プロパティ (の前に作成**SQLServer**オブジェクト) に新しい値。  
+## <a name="examples"></a>例  
+ 次の例では`HostName` 、以前に作成した**SQLServer**オブジェクトのプロパティを新しい値に設定します。  
   
 ```  
 EXEC @hr = sp_OASetProperty @object, 'HostName', 'Gizmo';  
@@ -77,7 +77,7 @@ END'
 ```  
   
 ## <a name="see-also"></a>参照  
- [OLE オートメーション ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;の OLE オートメーションストアドプロシージャ](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
  [OLE オートメーションのサンプル スクリプト](../../relational-databases/stored-procedures/ole-automation-sample-script.md)  
   
   
