@@ -17,24 +17,24 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ee86e6d70949da906767f18890df235fd229dbf9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62780295"
 ---
 # <a name="sqlxmloledb-provider-sqlxml-40"></a>SQLXMLOLEDB プロバイダー (SQLXML 4.0)
   SQLXMLOLEDB プロバイダーは、ADO を介して [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML 機能へのアクセスを提供する OLE DB プロバイダーです。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [SQLXMLOLEDB プロバイダーの概要&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/introduction-to-the-sqlxmloledb-provider-sqlxml-4-0.md)  
+ [SQLXMLOLEDB プロバイダーの概要 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/introduction-to-the-sqlxmloledb-provider-sqlxml-4-0.md)  
  SQLXMLOLEDB プロバイダーに関する基本情報を提供し、SQLXMLOLEDB 固有のプロパティを一覧で示します。  
   
- [SQLXMLOLEDB プロバイダーを使用して&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/using-the-sqlxmloledb-provider-sqlxml-4-0.md)  
+ [SQLXMLOLEDB プロバイダー &#40;SQLXML 4.0&#41;の使用](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/using-the-sqlxmloledb-provider-sqlxml-4-0.md)  
  SQLXMLOLEDB プロバイダーを使用するさまざまなタスクの例を示します。  
   
-## <a name="see-also"></a>関連項目  
- [SQLXML マネージ クラス](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-4-0-net-framework-support-managed-classes.md)   
+## <a name="see-also"></a>参照  
+ [SQLXML マネージクラス](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-4-0-net-framework-support-managed-classes.md)   
  [SQL Server Native Client プログラミング](../../relational-databases/native-client/sql-server-native-client-programming.md)  
   
   

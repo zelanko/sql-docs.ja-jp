@@ -16,18 +16,18 @@ ms.assetid: f948febd-c885-4621-823b-421e116fec4e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fad40c6daed6fd86f93da3f658af6a21c33ca762
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67928627"
 ---
 # <a name="actionenum"></a>ActionEnum
-ときに実行されるアクションの種類を指定します[SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md)が呼び出されます。  
+[SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md)が呼び出されたときに実行されるアクションの種類を指定します。  
   
-|定数|Value|説明|  
+|常時|値|[説明]|  
 |--------------|-----------|-----------------|  
-|**adAccessDeny**|3|グループまたはユーザーに指定されたアクセス許可が拒否されます。|  
-|**adAccessGrant**|1|グループまたはユーザーが、少なくとも、要求されたアクセス許可。|  
-|**adAccessRevoke**|4|グループまたはユーザーの任意の明示的なアクセス権が取り消されます。|  
-|**adAccessSet**|2|グループまたはユーザーは、正確に要求されたアクセス許可を持ちます。|
+|**adAccessDeny**|3|グループまたはユーザーは、指定されたアクセス許可を拒否されます。|  
+|**adAccessGrant**|1 で保護されたプロセスとして起動されました|グループまたはユーザーには、少なくとも要求されたアクセス許可が付与されます。|  
+|**adAccessRevoke**|4|グループまたはユーザーの明示的なアクセス権はすべて取り消されます。|  
+|**adAccessSet**|2|グループまたはユーザーには、要求されたアクセス許可だけが付与されます。|

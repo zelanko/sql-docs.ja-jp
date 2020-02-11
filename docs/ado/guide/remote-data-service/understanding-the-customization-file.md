@@ -1,5 +1,5 @@
 ---
-title: カスタマイズ ファイルの概要 |Microsoft Docs
+title: カスタマイズファイルを理解する |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,19 +13,19 @@ ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 81a73044c1ab413fb2b49286814f3e6b3951c6c9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921968"
 ---
 # <a name="understanding-the-customization-file"></a>カスタマイズ ファイルの概要
-カスタマイズ ファイルの各セクション ヘッダーは、角かっこで構成されます ( **[]** ) 型とパラメーターを格納します。 次の 4 つのセクションの種類は、リテラル文字列で示されます。**connect**、 **sql**、 **userlist**、または**logs**です。 パラメーターは、リテラル文字列、既定値、ユーザー指定の識別子では、または何もです。  
+カスタマイズファイルの各セクションヘッダーは、型とパラメーターを含む角かっこ (**[]**) で構成されています。 4つのセクションの種類は、**接続**、 **sql**、 **userlist**、または**ログ**のリテラル文字列によって示されます。 パラメーターは、リテラル文字列、既定値、ユーザー指定の識別子、または nothing です。  
   
 > [!IMPORTANT]
->  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)します。  
+>  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および[Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416)」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
   
- そのため、各セクションでは、次のセクション ヘッダーのいずれかでマークされます。  
+ したがって、各セクションは、次のセクションヘッダーのいずれかでマークされます。  
   
 ```console
   
@@ -39,38 +39,38 @@ identifier
   
 ```  
   
- セクション ヘッダーには、次の一部が含まれています。  
+ セクションヘッダーには、次の部分があります。  
   
-|要素|説明|  
+|要素|[説明]|  
 |----------|-----------------|  
-|**connect**|接続文字列を変更するリテラル文字列。|  
-|**sql**|リテラル文字列をコマンド文字列を変更します。|  
+|**関連付け**|接続文字列を変更するリテラル文字列。|  
+|**sql**|コマンド文字列を変更するリテラル文字列。|  
 |**userlist**|特定のユーザーのアクセス権を変更するリテラル文字列。|  
-|**logs**|操作上のエラーを記録するログ ファイルを示すリテラル文字列。|  
-|**default**|識別子のないを指定または検索された場合に使用されるリテラル文字列。|  
-|*identifier*|文字列に一致する文字列、**接続**または**コマンド**文字列。<br /><br /> セクションを使用してこのセクションのヘッダーが含まれている場合**connect**接続文字列で、識別子の文字列があるとします。<br />セクションを使用してこのセクションのヘッダーが含まれている場合**sql**コマンド文字列内に識別子の文字列があるとします。<br />セクションを使用してこのセクションのヘッダーが含まれている場合**userlist**識別子文字列と一致して、**connect**セクションの識別子。|  
+|**ログアウト**|操作エラーを記録するログファイルを指定するリテラル文字列。|  
+|**標準**|識別子が指定されていない場合、または見つからない場合に使用されるリテラル文字列。|  
+|*識別子 (identifier)*|**接続**文字列または**コマンド**文字列内の文字列に一致する文字列。<br /><br /> -このセクションは、セクションヘッダーに**connect**が含まれており、識別子文字列が接続文字列で見つかった場合に使用します。<br />-このセクションは、セクションヘッダーに**sql**が含まれており、識別子文字列がコマンド文字列で見つかった場合に使用します。<br />-セクションヘッダーに**userlist**が含まれており、識別子文字列が**connect**セクション識別子と一致する場合は、このセクションを使用します。|  
   
- **DataFactory**クライアント パラメーターを渡して、ハンドラーが呼び出されます。 ハンドラーは、該当するセクション ヘッダー内の識別子に一致するクライアント パラメーターで全体の文字列を検索します。 一致が見つかった場合、そのセクションの内容は、クライアント パラメーターに適用されます。  
+ **DataFactory**は、クライアントパラメーターを渡すハンドラーを呼び出します。 ハンドラーは、適切なセクションヘッダー内の識別子と一致する文字列全体をクライアントパラメーターで検索します。 一致が見つかった場合は、そのセクションの内容がクライアントパラメーターに適用されます。  
   
  特定のセクションは、次の状況で使用されます。  
   
--   A**接続**セクションを使用して、クライアントの値の部分文字列のキーワードを接続する場合は"**データ ソース =** _値_"と一致する、**接続**セクションの識別子です。 
+-   接続**セクションは**、クライアント接続文字列キーワード "**Data Source =**_value_" の値部分が**connect**セクション識別子と一致する場合に使用されます。 
   
--   **Sql** セクションには、クライアントのコマンド文字列に一致する文字列が含まれている場合、使用、 **sql** セクションの識別子。  
+-   Sql**セクション**は、クライアントのコマンド文字列に**sql**セクション識別子と一致する文字列が含まれている場合に使用されます。  
   
--   **connect**または**sql**既定パラメーターを持つセクションは、一致する識別子が存在しない場合に使用します。  
+-   一致する識別子がない場合は、既定のパラメーターを使用した**connect**または**sql**セクションが使用されます。  
   
--   **userlist** セクションは場合、使用、 **userlist** 識別子と一致するセクション、**connect** セクションの識別子。 内容、一致がある場合、 **userlist** セクションは、制約を受ける接続に適用されます、**connect** セクションです。  
+-   **Userlist** section 識別子が**connect**セクション識別子と一致する場合、 **userlist**セクションが使用されます。 一致するものがある場合は、 **userlist**セクションの内容が**connect**セクションによって管理される接続に適用されます。  
   
--   接続またはコマンド文字列内の文字列がいずれかで識別子と一致しない場合**connect** または**sql** セクションのヘッダー、およびがない**connect** または**sql** 変更せずに、クライアントの文字列を使用し、既定のパラメーターを持つヘッダーをセクションです。  
+-   接続またはコマンド文字列内の文字列が**connect**または**sql**セクションヘッダーの識別子と一致せず、既定のパラメーターを持つ**connect**または**sql** section ヘッダーがない場合、クライアント文字列は変更なしで使用されます。  
   
--   **logs** セクションは、使用されるたびに、 **DataFactory** の操作ができます。  
+-   **ログ**セクションは、 **DataFactory**が操作中のときに常に使用されます。  
   
 ## <a name="see-also"></a>参照  
- [カスタマイズ ファイル Connect セクション](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
- [カスタマイズ ファイル Logs セクション](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
- [カスタマイズ ファイル SQL セクション](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
- [カスタマイズ ファイル UserList セクション](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
+ [カスタマイズファイルの接続セクション](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
+ [カスタマイズファイルログセクション](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
+ [カスタマイズファイル SQL セクション](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
+ [カスタマイズファイルの UserList セクション](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
  [DataFactory のカスタマイズ](../../../ado/guide/remote-data-service/datafactory-customization.md)   
  [必要なクライアント設定](../../../ado/guide/remote-data-service/required-client-settings.md)   
  [独自のカスタム ハンドラーの記述](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)

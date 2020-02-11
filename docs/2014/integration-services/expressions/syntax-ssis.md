@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ed5ea8e711fcc3013a682f8c63a01dc042556f40
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768838"
 ---
 # <a name="syntax-ssis"></a>構文 (SSIS)
@@ -26,7 +26,7 @@ ms.locfileid: "62768838"
 > [!NOTE]  
 >  前のリリースの [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]では、式の評価結果の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] データ型が DT_WSTR または DT_STR であるとき、結果の文字数が 4,000 文字に制限されていました。 この制限はなくなっています。  
   
- 特定の演算子と関数を使用するサンプル式については、「[演算子 &#40;SSIS 式&#41;](operators-ssis-expression.md)」と「[関数 &#40;SSIS 式&#41;](functions-ssis-expression.md)」の演算子または関数別のトピックを参照してください。  
+ 特定の演算子と関数を使用するサンプル式については、「[演算子 (SSIS 式)](operators-ssis-expression.md)」および「[関数 (SSIS 式)](functions-ssis-expression.md)」の各演算子と関数のトピックを参照してください。  
   
  複数の演算子と関数、および識別子とリテラルを使用するサンプル式については、「 [Integration Services 式の詳細の例](examples-of-advanced-integration-services-expressions.md)」を参照してください。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "62768838"
 ## <a name="literals"></a>リテラル  
  式には、数値、文字列、およびブール値のリテラルを含めることができます。 文字列リテラルを式で使用するには、引用符で囲む必要があります。 数値リテラルおよびブール値のリテラルには、引用符は付けません。 式言語には、通常エスケープされる文字のエスケープ シーケンスが含まれます。 詳細については、「[リテラル (SSIS)](numeric-string-and-boolean-literals.md)」を参照してください。  
   
-## <a name="operators"></a>演算子  
+## <a name="operators"></a>オペレーター  
  式エバリュエーターで提供される演算子セットの機能は、Transact-SQL、C++、C# などの言語に含まれる、演算子セットの機能と同様です。 ただし、式言語には別の演算子が含まれており、周知の記号とは異なる記号が使用されます。 詳細については、「[演算子 (SSIS)](operators-ssis-expression.md)」を参照してください。  
   
 ### <a name="namespace-resolution-operator"></a>名前空間を解決する演算子  

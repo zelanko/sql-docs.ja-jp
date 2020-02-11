@@ -15,14 +15,14 @@ ms.assetid: 2666ad1c-b48e-4b2c-b269-5a9f4e4a7810
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1b099a1eb5d513285b33b26f5623f1e14b322731
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67911578"
 ---
 # <a name="cellset-example-vb"></a>セルセットの例 (VB)
-この Visual Basic プロジェクトでは、ADO MD を使用してキューブ データにアクセスするの基本について説明します。 メンバーのキャプション列と行のヘッダーを表示し、書式、セル セット内の特定のセルの値を表示します。  
+この Visual Basic プロジェクトでは、ADO MD を使用してキューブデータにアクセスする方法の基本について説明します。 列ヘッダーと行ヘッダーのメンバーキャプションが表示され、セルセット内の特定のセルの書式設定された値が表示されます。  
   
 ```  
 Private Sub cmdCellSettoDebugWindow_Click()  

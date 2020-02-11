@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 87ada4ef6cf9266720ac0c9742440d0d60345c88
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62827959"
 ---
 # <a name="create-infosource-for-master-data"></a>[マスター データのインフォソースの作成]
@@ -37,11 +37,11 @@ ms.locfileid: "62827959"
   
 5.  **[インフォソースの作成]** ダイアログ ボックスで、 **[マスター データ]** を選択して **[OK]** をクリックします。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **インフォオブジェクトの名前**  
  新しいインフォソースの基にするインフォオブジェクトの名前を入力します。  
   
- **参照**  
+ **[参照]**  
  インフォオブジェクトを参照します。 このオプションは、インフォオブジェクトを選択できる **[インフォオブジェクトの参照]** ダイアログ ボックスを開きます。 このダイアログ ボックスの詳細については、「 [インフォオブジェクトの参照](look-up-infoobject.md)」を参照してください。  
   
  インフォオブジェクトを選択すると、選択したインフォオブジェクトの名前が **[インフォオブジェクトの名前]** ボックスに設定されます。  
@@ -60,10 +60,10 @@ ms.locfileid: "62827959"
  **転送元システム**  
  新しいインフォソースに関連付ける転送元システムを選択します。  
   
- **アプリケーション**  
+ **Application**  
  新しいインフォソースに関連付けるアプリケーションの名前を入力します。  
   
- **Attributes**  
+ **属性**  
  マスター データが複数の属性で構成されることを示します。  
   
  **テキスト**  
@@ -72,7 +72,7 @@ ms.locfileid: "62827959"
  **保存と有効化**  
  新しいインフォソースを保存してアクティブ化します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [[インフォソースの作成]](create-infosource.md)   
  [Microsoft Connector 1.1 for SAP BW の F1 ヘルプ](../microsoft-connector-for-sap-bw-f1-help.md)  
   

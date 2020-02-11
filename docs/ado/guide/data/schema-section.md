@@ -1,5 +1,5 @@
 ---
-title: スキーマ セクション |Microsoft Docs
+title: スキーマセクション |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,14 +13,14 @@ ms.assetid: 4ac6e524-2c92-48e8-b871-0a4b5c8fda18
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5b6e591ecc9f366f3914986b0ae11e0e301b782d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924297"
 ---
 # <a name="schema-section"></a>スキーマ セクション
-スキーマ セクションが必要です。 前の例に示すように、ADO は更新可能な限りデータ値のセマンティクスを保持するには、各列に関する詳細なメタデータを書き込みます。 ただし、XML に読み込むには、ADO のみが必要です、列および所属する行セットの名前。 最小限のスキーマの例を次に示します。  
+スキーマセクションが必要です。 前の例で示したように、ADO では、各列に関する詳細なメタデータを書き込み、データ値のセマンティクスを更新可能な限り保持します。 ただし、XML に読み込むために必要なのは、列の名前と、それらが属する行セットだけです。 最小スキーマの例を次に示します。  
   
 ```  
 <xml xmlns:s="uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882"  
@@ -40,10 +40,10 @@ ms.locfileid: "67924297"
 </xml>  
 ```  
   
- 前の例では、スキーマの型情報が含まれていないために、ADO は、可変長の文字列としてデータを扱います。  
+ 前の例では、スキーマに型情報が含まれていないため、ADO はデータを可変長文字列として扱います。  
   
-## <a name="creating-aliases-for-column-names"></a>列名のエイリアスの作成  
- Rs: name 属性を使用して、フレンドリ名の行セットによって公開されている列情報が含まれるおよびデータ セクションに短い名前を使用するように、列名のエイリアスを作成できます。 たとえば、前のスキーマを変更して、運送を s1、s2、CompanyName にマップし、次のように、s3 に電話するでした。  
+## <a name="creating-aliases-for-column-names"></a>列名の別名の作成  
+ Rs: name 属性では、列名の別名を作成できます。これにより、行セットによって公開される列情報にわかりやすい名前が表示され、データセクションで短い名前が使用される可能性があります。 たとえば、次のように、ShipperID を s1、CompanyName から s2、Phone から s3 にマップするように、前のスキーマを変更できます。  
   
 ```  
 <s:Schema id="RowsetSchema">   
@@ -62,19 +62,19 @@ ms.locfileid: "67924297"
 </s:Schema>  
 ```  
   
- その後、データのセクションで、行は、その列を参照する、name 属性 (rs: 名ではなく) を使用します。  
+ 次に、data セクションで、行は name 属性 (rs: name ではなく) を使用してその列を参照します。  
   
 ```  
 "<row s1="1" s2="Speedy Express" s3="(503) 555-9831"/>  
 ```  
   
- 列名が有効な属性または xml タグ名ではないときに、列名のエイリアスを作成することが必要です。 たとえば、"LastName"は別名を持つ必要がありますに埋め込まれたスペース名が無効な属性であるためです。 次の行は正しく処理されません、XML パーサーで、埋め込みスペースがない別の名前に別名を作成する必要がありますようにします。  
+ 列名が XML の有効な属性またはタグ名でない場合は、列名のエイリアスを作成する必要があります。 たとえば、"LastName" はエイリアスを持つ必要があります。これは、スペースが埋め込まれた名前が無効な属性であるためです。 次の行は XML パーサーによって正しく処理されません。そのため、スペースが埋め込まれていない他の名前のエイリアスを作成する必要があります。  
   
 ```  
 <row last name="Jones"/>  
 ```  
   
- Name 属性を使用する値は、XML ドキュメントのスキーマとデータの両方のセクションで、列が参照されている適切な各場所で常に使用する必要があります。 次の例は、s1 の一貫した使用を示しています。  
+ Name 属性に使用する値は、XML ドキュメントのスキーマとデータの両方のセクションで列が参照される場所で常に使用する必要があります。 次の例は、s1 の一貫した使用方法を示しています。  
   
 ```  
 <s:Schema id="RowsetSchema">  
@@ -95,10 +95,10 @@ ms.locfileid: "67924297"
 </rs:data>  
 ```  
   
- 同様があるため、エイリアスに対して定義されていない`CompanyName`前の例では、`CompanyName`ドキュメント全体で一貫して使用する必要があります。  
+ 同様に、前の例でに`CompanyName`定義された別名が`CompanyName`ないため、はドキュメント全体で一貫して使用する必要があります。  
   
 ## <a name="data-types"></a>データ型  
- データ型は、dt:type 属性を持つ列に適用できます。 使用できる XML 型に説明するものでは、データ型を参照してください、 [W3C の XML データの指定](http://www.w3.org/TR/1998/NOTE-XML-data/)します。 2 つの方法でデータ型を指定できます。 列の定義自体で直接 dt:type 属性を指定するか、入れ子になった列定義の要素として s:datatype コンストラクトを使用します。 例を次に示します。  
+ Dt: type 属性を使用して、列にデータ型を適用できます。 許可される XML 型についての明確なガイドについては、 [W3C XML データ仕様](http://www.w3.org/TR/1998/NOTE-XML-data/)の「データ型」を参照してください。 データ型を指定するには、次の2つの方法があります。列定義に対して dt: type 属性を直接指定するか、または、列定義の入れ子になった要素として、-datatype コンストラクトを使用します。 たとえば、次のように入力します。  
   
 ```  
 <s:AttributeType name="Phone" >  
@@ -106,17 +106,17 @@ ms.locfileid: "67924297"
 </s:AttributeType>  
 ```  
   
- 上記の式は、次の式と同じです。  
+ は次と同等  
   
 ```  
 <s:AttributeType name="Phone" dt:type="string"/>  
 ```  
   
- 既定では、行の定義全体から dt:type 属性を省略した場合、列の型は可変長の文字列になります。  
+ 行定義から dt: type 属性を完全に省略した場合、既定では列の型は可変長文字列になります。  
   
- 単純型名 (たとえば、dt:maxLength) よりも多くの型情報があれば、そのことが見やすくなります s:datatype の子要素を使用します。 これは単なる慣習、ただし、および要件ではありません。  
+ 型名以外の型情報がある場合 (たとえば、dt: maxLength)、には、-datatype 子要素を使用する方が読みやすくなります。 ただし、これは単なる規則であり、要件ではありません。  
   
- 次の例では、さらに、スキーマに型情報を含める方法を示します。  
+ 次の例は、スキーマに型情報を追加する方法を示しています。  
   
 ```  
 <!-- 1. String with no max length -->  
@@ -138,10 +138,10 @@ ms.locfileid: "67924297"
 <s:AttributeType name="title_id" dt:type="int"/>  
 ```  
   
- これは、2 番目の例では、rs: fixedlength 属性の微妙な使用です。 Rs: fixedlength 属性を持つ列は、データがスキーマで定義された長さの必要な場合は true を設定します。 この場合、title_id の有効な値は「123456、」は「123」 ただし、「123」は有効なためにできません、長さが 3、6 ではなくです。 OLE DB プログラマーズ ガイドより完了 fixedlength プロパティの説明を参照してください。  
+ 2番目の例では、rs: fixedlength 属性が微妙に使用されています。 Rs: fixedlength 属性が true に設定されている列は、データの長さがスキーマで定義されている必要があることを意味します。 この場合、title_id の有効な値は "123456" です ("123")。 ただし、"123" は、長さが6ではなく3であるため、有効ではありません。 Fixedlength プロパティの詳細については、OLE DB プログラマーガイドを参照してください。  
   
-## <a name="handling-nulls"></a>Null 値の処理  
- Null 値は、rs: maybenull 属性によって処理されます。 この属性設定されている場合は true、列の内容は、null 値を含めることができます。 さらに、行のデータの列が見つからない場合、行セットからデータを読み取り、ユーザーは null 状態 IRowset::GetData() から受け取ります。 Shippers テーブルから次の列の定義を検討してください。  
+## <a name="handling-nulls"></a>Null の処理  
+ Null 値は rs: maybenull 属性によって処理されます。 この属性が true に設定されている場合、列の内容に null 値を含めることができます。 さらに、列がデータ行に見つからない場合、行セットからデータを読み取るユーザーは、IRowset:: GetData () から null 状態になります。 仕入先テーブルの次の列の定義について考えてみましょう。  
   
 ```  
 <s:AttributeType name="ShipperID">  
@@ -152,27 +152,27 @@ ms.locfileid: "67924297"
 </s:AttributeType>  
 ```  
   
- 定義により`CompanyName`、null にすることが、 `ShipperID` null 値を含めることはできません。 永続化プロバイダーでのデータの状態を設定とデータ セクションに次の行が含まれている場合、 `CompanyName` OLE DB 状態定数 DBSTATUS_S_ISNULL 列。  
+ この定義で`CompanyName`は、を null に`ShipperID`することはできますが、null 値を含めることはできません。 Data セクションに次の行が含まれている場合、永続化プロバイダーは、 `CompanyName`列のデータの状態を OLE DB 状態の定数 DBSTATUS_S_ISNULL に設定します。  
   
 ```  
 <z:row ShipperID="1"/>  
 ```  
   
- 行が次のようにまったく空があった場合、永続化プロバイダーは、OLE DB のリターン ステータスの DBSTATUS_E_UNAVAILABLE`ShipperID`と CompanyName を DBSTATUS_S_ISNULL します。  
+ 行が完全に空の場合、次のように永続化プロバイダーは DBSTATUS_E_UNAVAILABLE の OLE DB 状態を`ShipperID`返し、CompanyName に DBSTATUS_S_ISNULL します。  
   
 ```  
 <z:row/>   
 ```  
   
- 長さ 0 の文字列が null の場合と同じに注意してください。  
+ 長さ0の文字列は null と同じではないことに注意してください。  
   
 ```  
 <z:row ShipperID="1" CompanyName=""/>  
 ```  
   
- 前の行では、永続化プロバイダーは DBSTATUS_S_OK の両方の列の OLE DB 状態を返します。 `CompanyName`ここでは単に""(長さ 0 の文字列)。  
+ 前の行では、永続化プロバイダーは両方の列に対して DBSTATUS_S_OK の OLE DB 状態を返します。 `CompanyName`この場合のは単に "" (長さ0の文字列) です。  
   
- For OLE DB、XML ドキュメントのスキーマ内で使用可能な構造、OLE DB の詳細については、の定義を参照してください"urn: スキーマ-microsoft-com:rowset"と OLE DB プログラマ ガイド。  
+ OLE DB の XML ドキュメントのスキーマ内で使用できる OLE DB コンストラクトの詳細については、「urn: schema-microsoft-com: rowset」と『 OLE DB プログラマーズガイド』の定義を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [レコードを XML 形式で保持する](../../../ado/guide/data/persisting-records-in-xml-format.md)

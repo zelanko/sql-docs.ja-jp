@@ -1,5 +1,5 @@
 ---
-title: RDS での関連テクノロジの使用 |Microsoft Docs
+title: RDS を使用した関連テクノロジの使用 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,10 +13,10 @@ ms.assetid: a98a7245-06a7-455c-82ef-950807b9f1e7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ca2a49e1a0eb9d69baa875d8ee956a5ec1ccb374
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921895"
 ---
 # <a name="using-related-technologies-with-rds"></a>RDS での関連テクノロジの使用
@@ -27,23 +27,23 @@ ms.locfileid: "67921895"
 -   [コンポーネント サービスでのビジネス オブジェクトの実行](../../../ado/guide/remote-data-service/running-business-objects-in-component-services.md)  
   
 > [!IMPORTANT]
->  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)します。  
+>  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および[Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416)」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
   
- その他の多くのテクノロジは、リモート データ サービスと対話またはその実装で使用されます。  
+ 他の多くのテクノロジは、リモートデータサービスと対話するか、実装で使用されます。  
   
- **インターネット インフォメーション サービス**Microsoft インターネット インフォメーション サービス (IIS) に関する詳細については、Microsoft インターネット インフォメーション サービス Web サイトを参照してください。  
+ **インターネットインフォメーションサービス**Microsoft インターネットインフォメーションサービス (IIS) の詳細については、Microsoft インターネットインフォメーションサービスの Web サイトを参照してください。  
   
- **Active Server Pages** Microsoft Active Server Pages (ASP) に関する詳細については、Microsoft アクティブ サーバー ページの Web サイトを参照してください。  
+ **Active Server ページ**Microsoft Active Server Pages (ASP) の詳細については、Microsoft Active Server ページの Web サイトを参照してください。  
   
- **Microsoft コンポーネント サービス**コンポーネント サービスの詳細については、Microsoft Transaction Server Web サイトを参照してください。  
+ **Microsoft コンポーネントサービス**コンポーネントサービスの詳細については、Microsoft トランザクションサーバーの Web サイトを参照してください。  
   
- **Microsoft SQL Server** Microsoft SQL Server の詳細については、Microsoft SQL Server Web サイトを参照してください。  
+ **Microsoft SQL Server**Microsoft SQL Server の詳細については、Microsoft SQL Server Web サイトを参照してください。  
   
- **Microsoft Internet Explorer** Microsoft Internet Explorer の詳細については、Microsoft インターネット ExplorerWeb サイトと、MSDN ライブラリと Web のワーク ショップの Web サイトを参照してください。  
+ **Microsoft Internet Explorer**Microsoft Internet Explorer の詳細については、Microsoft Internet ExplorerWeb サイトおよび MSDN ライブラリおよび Web ワークショップの Web サイトを参照してください。  
   
- **Microsoft Windows NT Server または Windows 2000 Server** Microsoft Windows NT Server または Windows 2000 Server でのセキュリティの詳細については、Microsoft Windows Web サイトを参照してください。  
+ **Microsoft WINDOWS NT server/windows 2000 server**Microsoft Windows NT Server または Windows 2000 Server のセキュリティの詳細については、Microsoft Windows Web サイトを参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [RDS の基礎](../../../ado/guide/remote-data-service/rds-fundamentals.md)
 
 

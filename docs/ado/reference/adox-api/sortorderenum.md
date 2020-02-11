@@ -16,18 +16,18 @@ ms.assetid: 0b9d46e7-29d9-4ca1-a23a-056403106a71
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 012e8d1dde25021aa0eb8c0bac740e9213596485
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965182"
 ---
 # <a name="sortorderenum"></a>SortOrderEnum
 インデックス付き列の並べ替え順序を指定します。  
   
-|定数|Value|説明|  
+|常時|値|[説明]|  
 |--------------|-----------|-----------------|  
-|**adSortAscending**|1|既定値です。 列の並べ替え順序は昇順です。|  
+|**adSortAscending**|1 で保護されたプロセスとして起動されました|既定。 列の並べ替え順序は昇順です。|  
 |**adSortDescending**|2|列の並べ替え順序は降順です。|  
   
 ## <a name="applies-to"></a>適用対象  

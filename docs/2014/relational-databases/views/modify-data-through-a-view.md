@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5d87430c64bac133523d7001a88a894bb3985a5f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211676"
 ---
 # <a name="modify-data-through-a-view"></a>ビューを使用したデータ変更
@@ -30,9 +30,9 @@ ms.locfileid: "68211676"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
--   **ビューを介してテーブル データを変更するを使用します。**  
+-   **以下を使用してビューを介してテーブル データを変更するには:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -53,13 +53,15 @@ ms.locfileid: "68211676"
   
 #### <a name="to-modify-table-data-through-a-view"></a>ビューを介してテーブル データを変更するには  
   
-1.  **オブジェクト エクスプローラー**で、ビューを含むデータベースを展開し、 **[ビュー]** を展開します。  
+1.  
+  **オブジェクト エクスプローラー**で、ビューを含むデータベースを展開し、 **[ビュー]** を展開します。  
   
 2.  ビューを右クリックし、 **[上位 200 行の編集]** を選択します。  
   
 3.  場合により、変更対象の行を取得するために **SQL** ペインの SELECT ステートメントを変更する必要があります。  
   
-4.  **結果** ペインで、変更または削除する行を見つけます。 行を削除するには、行を右クリックし、 **[削除]** を選択します。 1 つ以上の列のデータを変更するには、目的の列のデータを変更します。  
+4.  
+  **結果** ペインで、変更または削除する行を見つけます。 行を削除するには、行を右クリックし、 **[削除]** を選択します。 1 つ以上の列のデータを変更するには、目的の列のデータを変更します。  
   
     > [!IMPORTANT]  
     >  ビューが複数のベース テーブルを参照している場合は、行を削除できません。 1 つのベース テーブルに属している列のみを更新することができます。  

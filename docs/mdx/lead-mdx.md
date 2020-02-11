@@ -1,5 +1,5 @@
 ---
-title: Lead (MDX) |Microsoft Docs
+title: 潜在顧客 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: cc4d362fbc7656e9427548a352b32d5d8297071e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67905740"
 ---
-# <a name="lead-mdx"></a>Lead (MDX)
+# <a name="lead-mdx"></a>潜在顧客 (MDX)
 
 
-  次のメンバーのレベルにある指定されたメンバーの位置の指定した数であるメンバーを返します。  
+  メンバーのレベルに沿って指定されたメンバーの後に指定された位置の数であるメンバーを返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -28,25 +28,25 @@ Member_Expression.Lead( Index )
 ```  
   
 ## <a name="arguments"></a>引数  
- *メンバー式*  
+ *Member_Expression*  
  メンバーを 1 つ返す有効な多次元式 (MDX) 式です。  
   
- *Index*  
+ *化*  
  メンバーの位置の数を指定する有効な数値式です。  
   
-## <a name="remarks"></a>コメント  
- レベル内でメンバーの位置は、属性階層の自然な順序によって決まります。 メンバーの位置の基点は 0 です。  
+## <a name="remarks"></a>解説  
+ レベル内のメンバーの位置は、属性階層の自然な順序によって決まります。 メンバーの位置の基点は 0 です。  
   
- 指定したの潜在顧客がゼロ (0) の場合、**Lead**関数は、指定されたメンバーを返します。  
+ 指定された潜在顧客がゼロ (0) の場合、 **lead**関数は、指定されたメンバーを返します。  
   
- 指定したの潜在顧客が負の場合、**Lead**関数は後方のメンバーを返します。  
+ 指定された潜在顧客が負の場合、 **lead**関数は前のメンバーを返します。  
   
- `Lead(1)` 同じですが、 [NextMember](../mdx/nextmember-mdx.md)関数。 `Lead(-1)` 同じですが、 [PrevMember](../mdx/prevmember-mdx.md)関数。  
+ `Lead(1)`は、 [Nextmember](../mdx/nextmember-mdx.md)関数と同じです。 `Lead(-1)`は、 [Prevmember](../mdx/prevmember-mdx.md)関数に相当します。  
   
- **Lead**機能に似ています、 [Lag](../mdx/lag-mdx.md)関数点を除いて、 **Lag**関数は方向が逆になります、**Lead**関数。 つまり、`Lead(n)`と等価`Lag(-n)`します。  
+ **Lead**関数は[lag](../mdx/lag-mdx.md)関数に似ていますが、 **lag**関数は、 **lead**関数に反対方向を検索します。 つまり、 `Lead(n)`はと同じです`Lag(-n)`。  
   
 ## <a name="example"></a>例  
- 次の例では、2001 年 12 月の値を返します。  
+ 次の例では、2001年12月の値が返されます。  
   
 ```  
 SELECT [Date].[Fiscal].[Month].[February 2002].Lead(-2) ON 0  
@@ -63,6 +63,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>参照  
- [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Mdx 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

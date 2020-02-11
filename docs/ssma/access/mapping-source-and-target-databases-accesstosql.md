@@ -1,5 +1,5 @@
 ---
-title: ソースとターゲット データベース (AccessToSQL) のマッピング |Microsoft Docs
+title: ソースデータベースとターゲットデータベースのマッピング (Sql server の場合) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,57 +18,57 @@ ms.assetid: 69bee937-7b2c-49ee-8866-7518c683fad4
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 192db2e6c074305ca258d76652351175c8a82751
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67907156"
 ---
-# <a name="mapping-source-and-target-databases-accesstosql"></a>ソースとターゲット データベース (AccessToSQL) のマッピング
-接続すると[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure の移行のターゲット データベースを指定する必要があります。 複数データベースにアクセスした場合も複数とそれらにマップできます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース (またはスキーマ) または接続されている SQL Azure データベースで複数のスキーマにします。  
+# <a name="mapping-source-and-target-databases-accesstosql"></a>ソースデータベースとターゲットデータベースのマッピング (Sql server)
+または SQL Azure に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]接続する場合は、移行するターゲットデータベースを指定する必要があります。 複数の Access データベースがある場合は、複数[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のデータベース (またはスキーマ)、または接続されている SQL Azure データベースの複数のスキーマにマップできます。  
   
-## <a name="sql-server-or-sql-azure-database-schemas"></a>SQL Server または SQL Azure データベースのスキーマ  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースでは、スキーマの概念を使用して、データベース内のオブジェクトを論理グループに分割します。 たとえば、ライブラリのデータベースでという名前の 3 つのスキーマを使用して**ブックの「** 、**オーディオ**、および**ビデオ**から他の書籍オーディオ、およびビデオのオブジェクトを分離しますします。 既定では、access データベースにマップされて**マスター**データベースと**dbo**でスキーマ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に接続されているデータベースと**dbo** SQL Azure でのスキーマ。  
+## <a name="sql-server-or-sql-azure-database-schemas"></a>SQL Server または SQL Azure データベーススキーマ  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースでは、スキーマの概念を使用して、データベース内のオブジェクトを論理グループに分割します。 たとえば、ライブラリデータベースでは、 **books**、 **audio**、video という3つのスキーマを使用して、書籍、オーディオ、およびビデオオブジェクトを相互に**分離すること**ができます。 既定では、access データベースは、の**master**データベースおよび**dbo**スキーマ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に、SQL Azure の接続されたデータベースおよび**dbo**スキーマにマップされます。  
   
-各アクセス データベースの間のマッピングをカスタマイズしない限り、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースおよびスキーマを SSMA は、すべてのスキーマとマップされている既定のデータベースに access データベースに関連付けられているデータが移行されます。  
+各 Access データベースと[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースおよびスキーマ間のマッピングをカスタマイズしない限り、ssma は、access データベースに関連付けられているすべてのスキーマとデータを、マップされた既定のデータベースに移行します。  
   
-## <a name="modifying-the-target-database-and-schema"></a>ターゲット データベースおよびスキーマの変更  
-SSMA では、各 Access データベースをマップできます。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]や SQL Azure データベース、スキーマ。 次の手順では、データベースごとのマッピングをカスタマイズする方法について説明します。  
+## <a name="modifying-the-target-database-and-schema"></a>ターゲットデータベースとスキーマの変更  
+SSMA を使用すると、各 Access [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースをまたは SQL Azure データベースおよびスキーマにマップできます。 次の手順では、データベースごとにマッピングをカスタマイズする方法について説明します。  
   
-**ターゲット データベースとスキーマを変更するには**  
+**ターゲットデータベースとスキーマを変更するには**  
   
-1.  アクセス メタデータ エクスプ ローラー ウィンドウで選択**アクセス メタデータ**します。  
+1.  [メタデータエクスプローラーにアクセス] ウィンドウで、[**アクセス-メタデータ**] を選択します。  
   
-    スキーマのマッピングは、選択した場合にも使用可能な**データベース**ノードまたはデータベースの任意のノード。 スキーマ マッピングの一覧は、選択したオブジェクトをカスタマイズします。  
+    スキーママッピングは、[**データベース**] ノードまたは任意のデータベースノードを選択した場合にも使用できます。 [スキーママッピング] の一覧は、選択したオブジェクトに合わせてカスタマイズされています。  
   
-2.  右側のウィンドウでをクリックして、**スキーマ マッピング**タブ。  
+2.  右ペインで、[**スキーママッピング**] タブをクリックします。  
   
-    アクセスを含むテーブルを参照してください、データベース名および対応する ssNoVersion や Sql Azure のスキーマ。 ターゲット スキーマは、2 部構成の表記 (database.schema) で示されます。  
+    Access データベース名とそれに対応する ssNoVersion または Sql Azure スキーマを含むテーブルが表示されます。 ターゲットスキーマは、2つの部分表記 (データベーススキーマ) で示されます。  
   
-3.  クリックして、カスタマイズするマッピングが含まれている行を選択**変更**します。  
+3.  カスタマイズするマッピングが含まれている行を選択し、[**変更**] をクリックします。  
   
-4.  **ターゲット スキーマの選択**ダイアログ ボックスで、使用可能なターゲット データベース スキーマや型、データベースとスキーマの 2 部構成の表記 (database.schema) で、テキスト ボックスに名前をクリックを参照することがあります**OK**.  
+4.  [**ターゲットスキーマの選択**] ダイアログボックスで、使用可能なターゲットデータベースとスキーマを参照するか、2つの部分表記 (データベーススキーマ) のテキストボックスにデータベースとスキーマ名を入力し、[ **OK**] をクリックします。  
   
 **マッピングのモード**  
   
 -   SQL Server へのマッピング  
   
-ソース データベースは、任意のターゲット データベースにマップできます。 既定では、ソース データベースがマップされているターゲットに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SSMA を使用してを接続したデータベース。 マップされるターゲット データベースが存在しないかどうか[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、メッセージが表示されますが、 **"、データベースやスキーマがターゲットに存在しません[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メタデータ。これが同期中に作成されます。続行することでしょうか。"** [はい] をクリックします。 同様に、ターゲットの存在しないスキーマをスキーマにマップできます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]同期中に作成されるデータベース。  
+ソースデータベースを任意のターゲットデータベースにマップできます。 既定では、ソースデータベースは SSMA を使用して接続したターゲット[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースにマップされます。 マップされているターゲットデータベースがに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]存在しない場合は、 **"データベースまたはスキーマがターゲット[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メタデータに存在しません" というメッセージが表示されます。同期中に作成されます。続行しますか? "** [はい] をクリックします。 同様に、スキーマを、同期中に作成される[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ターゲットデータベース下に存在しないスキーマにマップすることもできます。  
   
 -   SQL Azure へのマッピング  
   
-接続されているターゲットをソース データベースにマップできます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースまたは接続されているターゲットのスキーマに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース。 ソース スキーマ 接続されているターゲット データベースでは、存在しないスキーマをマップするかどうかは、メッセージが表示されるが **"スキーマが対象のメタデータには存在できません。これが同期中に作成されます。続行しますか?"** はい をクリックします。  
+接続[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]先データベースまたは接続先[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースの任意のスキーマに、ソースデータベースをマップできます。 送信元スキーマを [接続されたターゲットデータベース] の既存ではないスキーマにマップすると、 **"スキーマはターゲットメタデータに存在しません" というメッセージが表示されます。同期中に作成されます。続行しますか?[はい] をクリックし**ます。  
   
-## <a name="reverting-to-your-initial-database-and-schema"></a>初期データベースとスキーマを元に戻す  
-Access データベースの間のマッピングをカスタマイズする場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]や SQL Azure データベース、スキーマ、データベースに接続するときに指定したマッピングを戻すことができます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure です。  
+## <a name="reverting-to-your-initial-database-and-schema"></a>最初のデータベースとスキーマに戻す  
+Access データベースと、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure データベースとスキーマ間のマッピングをカスタマイズする場合は、に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]接続したとき、または SQL Azure したときに指定したデータベースにマッピングを戻すことができます。  
   
-**既定のデータベースとスキーマをリセットするには**  
+**既定のデータベースとスキーマにリセットするには**  
   
-1.  スキーマ マッピング タブで、任意の行を選択し をクリックして**既定値にリセット**既定のデータベースとスキーマに戻す。  
+1.  [スキーママッピング] タブで、任意の行を選択し、[既定**値にリセット**] をクリックして既定のデータベースとスキーマに戻します。  
   
-## <a name="next-step"></a>次の手順  
-移行プロセスでは、次の手順は[データベース オブジェクトの変換](converting-access-database-objects-accesstosql.md)  
+## <a name="next-step"></a>次のステップ  
+移行プロセスの次の手順では、[データベースオブジェクトを変換](converting-access-database-objects-accesstosql.md)します。  
   
-## <a name="see-also"></a>関連項目  
-[SQL Server へのアクセス データベースの移行](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
+## <a name="see-also"></a>参照  
+[Access データベースの SQL Server への移行](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

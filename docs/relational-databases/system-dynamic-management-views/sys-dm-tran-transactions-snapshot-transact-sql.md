@@ -1,5 +1,5 @@
 ---
-title: sys.dm_tran_transactions_snapshot (TRANSACT-SQL) |Microsoft Docs
+title: dm_tran_transactions_snapshot (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: sql
@@ -21,22 +21,22 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b91ac554186c37b2e074dd3faded49a01259222e
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68262686"
 ---
-# <a name="sysdmtrantransactionssnapshot-transact-sql"></a>sys.dm_tran_transactions_snapshot (TRANSACT-SQL)
+# <a name="sysdm_tran_transactions_snapshot-transact-sql"></a>dm_tran_transactions_snapshot (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  仮想テーブルを返します、 **sequence_number**の各スナップショット トランザクションときにアクティブなトランザクションを開始します。 このビューで返される情報を基に、次のことを確認できます。  
+  各スナップショットトランザクションの開始時にアクティブになっているトランザクションの**sequence_number**の仮想テーブルを返します。 このビューで返される情報を基に、次のことを確認できます。  
   
--   現在アクティブなスナップショット トランザクションの数を調べます。  
+-   現在アクティブなスナップショットトランザクションの数を調べます。  
   
--   特定のスナップショット トランザクションで無視されるデータ変更。 スナップショット トランザクションの開始時にアクティブになっているトランザクションですべてのデータ変更トランザクションによってそのトランザクションがコミットした後でもは無視されます、スナップショット トランザクションで。  
+-   特定のスナップショット トランザクションで無視されるデータ変更。 スナップショットトランザクションの開始時にアクティブなトランザクションの場合、そのトランザクションによって行われたすべてのデータ変更は、そのトランザクションがコミットした後でも、スナップショットトランザクションによって無視されます。  
   
- たとえば、次の出力から**sys.dm_tran_transactions_snapshot**:  
+ たとえば、 **dm_tran_transactions_snapshot**からの次の出力を考えてみます。  
   
 ```  
 transaction_sequence_num snapshot_id snapshot_sequence_num  
@@ -52,11 +52,13 @@ transaction_sequence_num snapshot_id snapshot_sequence_num
 60                       3           60  
 ```  
   
- `transaction_sequence_num` 列は、現在のスナップショット トランザクションのトランザクション シーケンス番号 (XSN) です。 2 つの出力を示しています。`59`と`60`します。 `snapshot_sequence_num` 列は、各スナップショット トランザクションの開始時にアクティブ状態にあったトランザクションのトランザクション シーケンス番号です。  
+ 
+  `transaction_sequence_num` 列は、現在のスナップショット トランザクションのトランザクション シーケンス番号 (XSN) です。 出力には、 `59`と`60`の2つが示されています。 
+  `snapshot_sequence_num` 列は、各スナップショット トランザクションの開始時にアクティブ状態にあったトランザクションのトランザクション シーケンス番号です。  
   
- スナップショット トランザクション xsn-59 の開始、xsn-57 と xsn-58 では、2 つのアクティブなトランザクションの中に出力結果が実行されています。 Xsn-57 または xsn-58 では、データの変更を加え場合、xsn-59 では、変更を無視し、データベースのトランザクション上一貫性のあるビューを維持するために行のバージョン管理を使用します。  
+ 出力には、2つのアクティブなトランザクション (XSN-57 と XSN-58) が実行されている間にスナップショットトランザクション XSN-59 が開始されることが示されています。 XSN-57 または XSN-58 によってデータが変更された場合、XSN-59 では変更が無視され、行のバージョン管理を使用してデータベースのトランザクション上の一貫性のあるビューが維持されます。  
   
- スナップショット トランザクション xsn-60 では、xsn-57 と xsn-58 でおよび xsn-59 によって行われたデータ変更を無視します。  
+ スナップショットトランザクション XSN-60 では、xsn-57 と XSN-58 および XSN 59 によって行われたデータ変更は無視されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -67,25 +69,25 @@ dm_tran_transactions_snapshot
   
 ## <a name="table-returned"></a>返されるテーブル  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
-|**transaction_sequence_num**|**bigint**|スナップショット トランザクションのトランザクション シーケンス番号 (XSN)。|  
-|**snapshot_id**|**int**|それぞれのスナップショット ID[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントは、read committed を使用して開始行のバージョン管理します。 Read committed を使用して実行されている各クエリをサポートしているデータベースのトランザクション上一貫性のあるビューの生成にこの値が使用される行のバージョン管理します。|  
+|**transaction_sequence_num**|**bigint**|スナップショットトランザクションのトランザクションシーケンス番号 (XSN)。|  
+|**snapshot_id**|**int**|各[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントのスナップショット ID は、行のバージョン管理を使用して read committed で開始されます。 この値は、行のバージョン管理を使用して read committed で実行されている各クエリをサポートする、トランザクション上一貫性のあるデータベースのビューを生成するために使用されます。|  
 |**snapshot_sequence_num**|**bigint**|スナップショット トランザクションが開始したときに有効となっていたトランザクション シーケンス番号。|  
   
 ## <a name="permissions"></a>アクセス許可
 
-[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]、必要があります`VIEW SERVER STATE`権限。   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium レベルでは、必要があります、`VIEW DATABASE STATE`データベースの権限。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard および Basic 階層は、必要があります、**サーバー管理者**または**Azure Active Directory 管理者**アカウント。   
+で[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]は、 `VIEW SERVER STATE`権限が必要です。   
+Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルでは、データベース`VIEW DATABASE STATE`の権限が必要です。 Standard [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
   
-## <a name="remarks"></a>コメント  
- スナップショット トランザクションの開始時に、[!INCLUDE[ssDE](../../includes/ssde-md.md)]の時点でアクティブになっているトランザクションがすべて記録します。 **sys.dm_tran_transactions_snapshot**すべての現在アクティブなスナップショット トランザクションは、この情報を報告します。  
+## <a name="remarks"></a>解説  
+ スナップショットトランザクションが開始されると[!INCLUDE[ssDE](../../includes/ssde-md.md)] 、その時点でアクティブになっているすべてのトランザクションがによって記録されます。 dm_tran_transactions_snapshot は、現在アクティブなすべてのスナップショットトランザクションについて、この情報を報告し**ます。**  
   
- 各トランザクションは、トランザクションの開始時に割り当てられるトランザクション シーケンス番号によって識別されます。 トランザクションは、BEGIN TRANSACTION または BEGIN WORK ステートメントが実行されたときに開始されますが、 トランザクション シーケンス番号は、BEGIN TRANSACTION または BEGIN WORK ステートメントの後、最初にデータにアクセスする [!INCLUDE[ssDE](../../includes/ssde-md.md)] ステートメントが実行されたときに[!INCLUDE[tsql](../../includes/tsql-md.md)]によって割り当てられます。 トランザクション シーケンス番号は 1 ずつ増加します。  
+ 各トランザクションは、トランザクションの開始時に割り当てられたトランザクションシーケンス番号によって識別されます。 トランザクションは、BEGIN TRANSACTION または BEGIN WORK ステートメントが実行されたときに開始されますが、 トランザクション シーケンス番号は、BEGIN TRANSACTION または BEGIN WORK ステートメントの後、最初にデータにアクセスする [!INCLUDE[ssDE](../../includes/ssde-md.md)] ステートメントが実行されたときに[!INCLUDE[tsql](../../includes/tsql-md.md)]によって割り当てられます。 トランザクション シーケンス番号は 1 ずつ増加します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [トランザクション関連の動的管理ビューおよび関数  &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [トランザクション関連の動的管理ビューおよび関数 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   
 

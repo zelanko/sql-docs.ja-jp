@@ -1,5 +1,5 @@
 ---
-title: 図形の APPEND 句 |Microsoft Docs
+title: Shape APPEND 句 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: f90fcf55-6b24-401d-94e1-d65bd24bd342
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e09113b42f655a3b94ab3877ff81f2553a363931
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924180"
 ---
 # <a name="shape-append-clause"></a>Shape の APPEND 句
-Shape コマンドの APPEND 句を追加、列または列を**Recordset**します。 これらの列が子を参照しているチャプター列には多くの場合、 **Recordset**します。  
+Shape コマンド APPEND 句は、1つまたは複数の列を**レコードセット**に追加します。 多くの場合、これらの列は、子**レコードセット**を参照するチャプター列です。  
   
 ## <a name="syntax"></a>構文  
   
@@ -30,31 +30,31 @@ Shape コマンドの APPEND 句を追加、列または列を**Recordset**し�
 SHAPE [parent-command [[AS] parent-alias]] APPEND column-list  
 ```  
   
-## <a name="description"></a>説明  
+## <a name="description"></a>[説明]  
  この句の部分は次のとおりです。  
   
- *parent-command*  
- 次のいずれかです (省略することができます、*親コマンド*完全に)。  
+ *親-コマンド*  
+ 0または次のいずれかです (*親コマンド*を完全に省略できます)。  
   
--   中かっこで囲まれているプロバイダー コマンド ("{}") を返す、 **Recordset**オブジェクト。 基になるデータ プロバイダーに、コマンドが発行され、その構文は、そのプロバイダーの要件によって異なります。 通常これは、SQL 言語では、ADO では、特定のクエリ言語は必要ありません。  
+-   **レコードセット**オブジェクトを返す、中かっこ{}("") で囲まれたプロバイダーコマンド。 コマンドは基になるデータプロバイダーに対して発行され、その構文はそのプロバイダーの要件によって異なります。 これは通常 SQL 言語ですが、ADO では特定のクエリ言語を必要としません。  
   
--   別の図形のコマンドは、かっこ内に埋め込まれます。  
+-   かっこで囲まれた別の shape コマンド。  
   
--   テーブル キーワードは、後に、データ プロバイダーでのテーブルの名前。  
+-   テーブルキーワードと、その後にデータプロバイダーのテーブル名を指定します。  
   
  *parent-alias*  
- 省略可能な親を参照する別名**Recordset**します。  
+ 親**レコードセット**を参照する、省略可能なエイリアス。  
   
- *column-list*  
- 1 つ、または、次の詳細:  
+ *列一覧*  
+ 次の1つまたは複数を実行します。  
   
 -   集計列。  
   
--   計算列です。  
+-   計算列。  
   
 -   新しい句を使用して作成された新しい列。  
   
--   チャプター列。 チャプター列の定義は、かっこ (「()」) で囲まれます。 次の構文を参照してください。  
+-   チャプター列。 チャプター列定義は、かっこ ("()") で囲まれています。 次の構文を参照してください。  
   
 ```  
 SHAPE [parent-command [[AS] parent-alias]]  
@@ -64,51 +64,51 @@ SHAPE [parent-command [[AS] parent-alias]]
    [, ... ]  
 ```  
   
-## <a name="remarks"></a>コメント  
- *child-recordset*  
- -   中かっこで囲まれているプロバイダー コマンド ("{}") を返す、 **Recordset**オブジェクト。 基になるデータ プロバイダーに、コマンドが発行され、その構文は、そのプロバイダーの要件によって異なります。 通常これは、SQL 言語では、ADO では、特定のクエリ言語は必要ありません。  
+## <a name="remarks"></a>解説  
+ *子レコードセット*  
+ -   **レコードセット**オブジェクトを返す、中かっこ{}("") で囲まれたプロバイダーコマンド。 コマンドは基になるデータプロバイダーに対して発行され、その構文はそのプロバイダーの要件によって異なります。 これは通常 SQL 言語ですが、ADO では特定のクエリ言語を必要としません。  
   
--   別の図形のコマンドは、かっこ内に埋め込まれます。  
+-   かっこで囲まれた別の shape コマンド。  
   
--   既存の型の名前**Recordset**します。  
+-   既存の形状が指定された**レコードセット**の名前。  
   
--   テーブル キーワードは、後に、データ プロバイダーでのテーブルの名前。  
+-   テーブルキーワードと、その後にデータプロバイダーのテーブル名を指定します。  
   
- *child-alias*  
- 子を参照する別名**Recordset**します。  
+ *子-エイリアス*  
+ 子**レコードセット**を参照する別名。  
   
- *parent-column*  
- 内の列、 **Recordset**によって返される、*親コマンド。*  
+ *親列*  
+ *親コマンド*によって返される**レコードセット**内の列。  
   
- *child-column*  
- 内の列、 **Recordset**によって返される、*子コマンド*します。  
+ *子列*  
+ *子コマンド*によって返される**レコードセット**内の列。  
   
- *param-number*  
- 参照してください[パラメーター化コマンドの操作](../../../ado/guide/data/operation-of-parameterized-commands.md)します。  
+ *param-数値*  
+ 「[パラメーター化コマンドの操作」を](../../../ado/guide/data/operation-of-parameterized-commands.md)参照してください。  
   
- *チャプター エイリアス*  
- 親に追加されたチャプター列を参照する別名です。  
-  
-> [!NOTE]
->  *"親列*TO*子列"* 句がリストでは実際には、各リレーションシップが定義されてがコンマで区切られています。  
+ *章-エイリアス*  
+ 親に追加されたチャプター列を参照する別名。  
   
 > [!NOTE]
->  追加のキーワードの後に、句一覧を示します実際には、それぞれの句はコンマで区切られます、親に追加する別の列を定義します。  
+>  *"親列*から*子列*への" 句は実際にはリストです。各リレーションシップは、コンマで区切られます。  
   
-## <a name="remarks"></a>コメント  
- SHAPE コマンドの一部としてユーザー入力からプロバイダーのコマンドを構築する際に図形はユーザーが指定した不透明な文字列としてプロバイダー コマンドを処理します。 およびにプロバイダーに渡します。 次の図形コマンドでなど  
+> [!NOTE]
+>  APPEND キーワードの後の句は実際にはリストです。各句はコンマで区切り、親に追加する別の列を定義します。  
+  
+## <a name="remarks"></a>解説  
+ SHAPE コマンドの一部としてユーザー入力からプロバイダーコマンドを構築すると、SHAPE はユーザーが指定したプロバイダーコマンドを不透明な文字列として扱い、そのコマンドをプロバイダーに忠実に渡します。 たとえば、次の SHAPE コマンドでは、  
   
 ```  
 SHAPE {select * from t1} APPEND ({select * from t2} RELATE k1 TO k2)  
 ```  
   
- 図形は 2 つのコマンドを実行します。`select * from t1`と (`select * from t2 RELATE k1 TO k2)`します。 場合はセミコロンで区切られた複数のプロバイダー コマンドで構成される複合コマンドを指定すると、図形は、違いを区別することはありません。 次の図形のコマンドのようになります  
+ 図形は2つ`select * from t1`のコマンド (`select * from t2 RELATE k1 TO k2)`と) を実行します。 ユーザーが複数のプロバイダーコマンドで構成される複合コマンドをセミコロンで区切って指定した場合、図形はその違いを区別できません。 したがって、次の SHAPE コマンドでは、  
   
 ```  
 SHAPE {select * from t1; drop table t1} APPEND ({select * from t2} RELATE k1 TO k2)  
 ```  
   
- 図形を実行します`select * from t1; drop table t1`と (`select * from t2 RELATE k1 TO k2),`を認識しないまま`drop table t1`独立した、この場合、危険な場合は、プロバイダー コマンドでします。 アプリケーションでは、ユーザーをこのような潜在的なハッカーの攻撃が発生していることを防ぐために入力を常に検証する必要があります。  
+ 図形`drop table t1`が`select * from t1; drop table t1`実行さ`select * from t2 RELATE k1 TO k2),`れます (これは独立したものであり、この場合は危険なプロバイダーコマンドです)。 アプリケーションは、このようなハッカー攻撃が発生するのを防ぐために、常にユーザー入力を検証する必要があります。  
   
  このセクションでは、次のトピックを扱います。  
   
@@ -120,7 +120,7 @@ SHAPE {select * from t1; drop table t1} APPEND ({select * from t2} RELATE k1 TO 
   
 -   [介在する Shape COMPUTE 句](../../../ado/guide/data/intervening-shape-compute-clauses.md)  
   
-## <a name="see-also"></a>関連項目  
- [データ シェイプの例](../../../ado/guide/data/data-shaping-example.md)   
- [Shape の正式文法](../../../ado/guide/data/formal-shape-grammar.md)   
+## <a name="see-also"></a>参照  
+ [データシェイプの例](../../../ado/guide/data/data-shaping-example.md)   
+ [仮形の文法](../../../ado/guide/data/formal-shape-grammar.md)   
  [一般的な Shape コマンド](../../../ado/guide/data/shape-commands-in-general.md)

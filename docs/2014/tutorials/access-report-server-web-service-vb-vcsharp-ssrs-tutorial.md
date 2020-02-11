@@ -1,5 +1,5 @@
 ---
-title: Visual Basic または Visual c# (SSRS チュートリアル) を使用してレポート サーバー Web サービスへのアクセス |Microsoft Docs
+title: Visual Basic または Visual C# を使用したレポートサーバー Web サービスへのアクセス (SSRS チュートリアル) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,19 +17,19 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 9f8c549bef9d07f7b206f4dd8a9a652c8c72896f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62824538"
 ---
 # <a name="accessing-the-report-server-web-service-using-visual-basic-or-visual-c-ssrs-tutorial"></a>Visual Basic または Visual C# を使用したレポート サーバー Web サービスへのアクセス (SSRS チュートリアル)
-  次のチュートリアルで作成されたアプリケーションからレポート サーバー Web サービスにアクセスする方法を示します[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[vbprvb](../includes/vbprvb-md.md)]または[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[csprcs](../includes/csprcs-md.md)]します。  
+  次の[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]チュートリアルでは、または[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[csprcs](../includes/csprcs-md.md)]で作成されたアプリケーションからレポートサーバー Web サービスにアクセスする方法を説明します。  
   
 ## <a name="what-you-will-learn"></a>学習する内容  
  このチュートリアルでは次の作業を行います。  
   
--   使用してクライアント アプリケーションを作成、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)]コンソール アプリケーション プロジェクト テンプレート。  
+-   コンソールアプリケーションプロジェクトテンプレートを使用[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)]して、クライアントアプリケーションを作成します。  
   
 -   レポート サーバー Web サービスの Web 参照を追加する。  
   
@@ -42,24 +42,24 @@ ms.locfileid: "62824538"
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)] または類似[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]-互換性のある開発ツール。  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)]または、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]互換性のある同等の開発ツール。  
   
 -   レポート サーバーが配置されているコンピューター上の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] レポート サーバー Web サービスにアクセスできる十分な権限。  
   
--   レポート サーバーにインストールされているレポート。 このチュートリアルでは、サンプル レポート Company Sales を使用します。 サンプル レポートの詳細については、次を参照してください。 [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889)します。  
+-   レポート サーバーにインストールされているレポート。 このチュートリアルでは、サンプル レポート Company Sales を使用します。 サンプルレポートの詳細については、「 [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889)」を参照してください。  
   
 > [!NOTE]  
->  サンプルはセットアップ中に自動的にインストールされませんが、いつでもインストールできます。 サンプルについては、次を参照してください。 [SQL Server Product Samples](https://go.microsoft.com/fwlink/?LinkId=182887)します。  
+>  サンプルはセットアップ中に自動的にインストールされませんが、いつでもインストールできます。 サンプルの詳細については、「 [SQL Server Product samples](https://go.microsoft.com/fwlink/?LinkId=182887)」を参照してください。  
   
- **このチュートリアルの推定所要時間:** 60 分  
+ **チュートリアルの推定所要時間:** 60 分  
   
 ## <a name="tasks"></a>処理手順  
- [レッスン 1:Web サービス クライアント プロジェクトの作成](../../2014/tutorials/lesson-1-creating-the-web-service-client-project.md)  
+ [レッスン 1: Web サービス クライアント プロジェクトの作成](../../2014/tutorials/lesson-1-creating-the-web-service-client-project.md)  
   
- [レッスン 2:Web 参照を追加します。](../../2014/tutorials/lesson-2-adding-a-web-reference.md)  
+ [レッスン 2 : Web 参照の追加](../../2014/tutorials/lesson-2-adding-a-web-reference.md)  
   
- [レッスン 3:Web サービスにアクセスします。](../../2014/tutorials/lesson-3-accessing-the-web-service.md)  
+ [レッスン 3 : Web サービスへのアクセス](../../2014/tutorials/lesson-3-accessing-the-web-service.md)  
   
- [レッスン 4:アプリケーションを実行している&#40;VB VC&#35;&#41;](../../2014/tutorials/lesson-4-running-the-application-vb-vcsharp.md)  
+ [レッスン 4: アプリケーションの実行 &#40;VB-VC&#35;&#41;](../../2014/tutorials/lesson-4-running-the-application-vb-vcsharp.md)  
   
   

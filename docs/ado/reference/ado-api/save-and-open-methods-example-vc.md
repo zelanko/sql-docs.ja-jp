@@ -1,5 +1,5 @@
 ---
-title: 保存および開く方法の例 (vc++) |Microsoft Docs
+title: Save および Open メソッドの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,16 +16,16 @@ ms.assetid: 334ae655-8cac-48e6-8d00-1d28f3436e1e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 245affed25c7fb3d0ccc91504de0cfaaeee1807a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917072"
 ---
-# <a name="save-and-open-methods-example-vc"></a>保存および開く方法の例 (vc++)
-これら 3 つの例を示す方法、[保存](../../../ado/reference/ado-api/save-method.md)と**オープン**メソッドを併用することができます。  
+# <a name="save-and-open-methods-example-vc"></a>Save および Open メソッドの例 (VC + +)
+次の3つの例は、 [Save](../../../ado/reference/ado-api/save-method.md)メソッドと**Open**メソッドを一緒に使用する方法を示しています。  
   
- 出張しているし、データベースからテーブルを実行すると仮定します。 としてデータにアクセスするにする前に、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)移動可能な形式で保存します。 目的地に到着する場合にアクセスする、 **Recordset**として、ローカル切断**レコード セット**します。 変更を加える、**レコード セット**、もう一度保存します。 最後に、home、戻るときに再度データベースに接続し、外出先で行われた変更で更新します。  
+ データベースからテーブルを使用して、ビジネストリップを行うことを想定しています。 前に、データを[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)としてアクセスし、転送可能な形式で保存します。 宛先に到達すると、**レコードセット**にローカルの切断された**レコードセット**としてアクセスします。 **レコードセット**に変更を加えた後、再度保存します。 最後に、home を返したときに、もう一度データベースに接続し、その時点で行った変更を反映して更新します。  
   
 ```  
 // BeginSaveCpp.cpp  
@@ -260,7 +260,7 @@ bool FileExists() {
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Open メソッド (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
- [RecordSet オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Save メソッド](../../../ado/reference/ado-api/save-method.md)

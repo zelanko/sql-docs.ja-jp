@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7fe9955ba4f20c4a20e24d99924adce7ff0d992a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62828149"
 ---
 # <a name="comparing-string-data"></a>比較、文字列データ
@@ -33,7 +33,7 @@ ms.locfileid: "62828149"
   
 -   条件分割変換は、式の内部で文字列比較を使用し、データ行を送信する出力を決定できます。 詳細については、「 [Conditional Split Transformation](transformations/conditional-split-transformation.md)」を参照してください。  
   
--   派生列変換は、式の内部で文字列比較を使用し、新しい列の値を生成できます。 詳細については、「 [Derived Column Transformation](transformations/derived-column-transformation.md)」を参照してください。  
+-   派生列変換は、式の内部で文字列比較を使用し、新しい列の値を生成できます。 詳細については、「 [派生列変換](transformations/derived-column-transformation.md)」を参照してください。  
   
  変数、変数マッピング、および優先順位制約でも、文字列比較を含めた式を使用できます。 式の詳細については、「[Integration Services &#40;SSIS&#41; の式](../expressions/integration-services-ssis-expressions.md)」を参照してください。  
   
@@ -63,11 +63,11 @@ ms.locfileid: "62828149"
  また、フラット ファイル接続マネージャーや、複数のフラット ファイル接続マネージャー用のロケールも指定できます。  
   
 ## <a name="setting-comparison-options"></a>比較オプションの設定  
- ロケールは、文字列データの比較に関する基本ルールを提供します。 たとえば、ロケールは、アルファベット内の各文字の並べ替えの位置を指定します。 ただし、こうしたルールは一部の変換が実行する比較に対しては十分でない場合があり、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ではロケールの比較ルールよりも詳細な比較オプションのセットがサポートされています。 これらの比較オプションは、列レベルで設定されます。 たとえば、詳細比較オプションの 1 つを使用すると、分音文字を無視できます。 このオプションの効果が分音文字など、"a"と「å」と同じですが、アクセントを無視する比較のためです。  
+ ロケールは、文字列データの比較に関する基本ルールを提供します。 たとえば、ロケールは、アルファベット内の各文字の並べ替えの位置を指定します。 ただし、こうしたルールは一部の変換が実行する比較に対しては十分でない場合があり、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ではロケールの比較ルールよりも詳細な比較オプションのセットがサポートされています。 これらの比較オプションは、列レベルで設定されます。 たとえば、詳細比較オプションの 1 つを使用すると、分音文字を無視できます。 このオプションの効果は、アクセントなどの分音文字を無視することです。これにより、比較のために "a" と "時間" が同一になります。  
   
  次の表では、比較オプションと並べ替えスタイルについて説明します。  
   
-|比較オプション|説明|  
+|比較オプション|[説明]|  
 |-----------------------|-----------------|  
 |大文字と小文字を区別しない|比較時に、大文字と小文字を区別するかどうかを示します。 このオプションを設定した場合、文字列比較で大文字と小文字は区別されません。 たとえば、"ABC" は "abc" と同一になります。|  
 |カタカナを区別しない|日本語の比較で、2 種類のかな文字である、ひらがなとカタカナを区別するかどうかを指定します。 このオプションを設定した場合、文字列比較でひらがなとカタカナは区別されません。|  

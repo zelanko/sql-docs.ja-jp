@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5b1317bc41be836cfad5159339a4e7c90fcfbc83
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62811286"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>拡張保護を使用したデータベース エンジンへの接続
@@ -48,7 +48,7 @@ ms.locfileid: "62811286"
  チャネル バインドでは、クライアントと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス インスタンスとの間に、セキュリティで保護されたチャネル (Schannel) を確立します。 サービスでは、クライアントとサービス自身のチャネル固有のチャネル バインド トークン (CBT) を比較することにより、クライアントが本物かどうかが確認されます。 チャネル バインドでは、おびき寄せによる攻撃となりすましによる攻撃の両方に対処できますが、 すべてのセッション トラフィックのトランスポート層セキュリティ (TLS) 暗号化が必要になるため、実行時のコストが大きくなります。 チャネル バインドが発生するのは、暗号化がクライアントとサーバーのどちらで強制されているかにかかわらず、クライアント アプリケーションが暗号化を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に接続する場合です。  
   
 > [!WARNING]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 向けの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [!INCLUDE[msCoName](../../includes/msconame-md.md)] データ プロバイダーでは、SSL 3.0、TLS 1.0 がサポートされています。 オペレーティング システムの SChannel 層を変更して別のプロトコル (TLS 1.1、TLS 1.2 など) を適用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への接続に失敗する可能性があります。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [!INCLUDE[msCoName](../../includes/msconame-md.md)] 向けの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ プロバイダーでは、SSL 3.0、TLS 1.0 がサポートされています。 オペレーティング システムの SChannel 層を変更して別のプロトコル (TLS 1.1、TLS 1.2 など) を適用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への接続に失敗する可能性があります。  
   
 ### <a name="operating-system-support"></a>オペレーティング システムのサポート  
  Windows による **拡張保護**のサポートの詳細については、以下のリンク先を参照してください。  
@@ -85,7 +85,8 @@ ms.locfileid: "62811286"
   
 1.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]** 、 **[Microsoft SQL Server]** の順にポイントして、 **[SQL Server 構成マネージャー]** をクリックします。  
   
-2.  **[SQL Server ネットワークの構成]** を展開し、 **[ *\<* InstanceName *>* のプロトコル]** を右クリックして、 **[プロパティ]** をクリックします。  
+2.  
+  **[SQL Server ネットワークの構成]** を展開し、**[** *\<InstanceName**> のプロトコル]* を右クリックして、**[プロパティ]** をクリックします。  
   
 3.  チャネル バインドとサービス バインドの両方について、 **[詳細設定]** タブで **[拡張保護]** を適切な値に設定します。  
   
@@ -100,7 +101,7 @@ ms.locfileid: "62811286"
   
  IIS を使用して HTTP 接続または HTTPS 接続経由で [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データにアクセスする場合は、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] で IIS によって提供される拡張保護を利用できます。 拡張保護を使用するように IIS を構成する方法の詳細については、「 [IIS 7.5 における拡張保護の構成](https://go.microsoft.com/fwlink/?LinkId=181105)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [サーバー ネットワークの構成](server-network-configuration.md)   
  [クライアント ネットワーク構成](client-network-configuration.md)   
  [認証の拡張保護の概要](https://go.microsoft.com/fwlink/?LinkID=177943)   
