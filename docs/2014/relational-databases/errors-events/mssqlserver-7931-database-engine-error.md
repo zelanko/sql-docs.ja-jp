@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4b05013b888978d268d30a31dc6375b0f70d625d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62762105"
 ---
-# <a name="mssqlserver7931"></a>MSSQLSERVER_7931
+# <a name="mssqlserver_7931"></a>MSSQLSERVER_7931
     
 ## <a name="details"></a>詳細  
   
@@ -30,7 +30,7 @@ ms.locfileid: "62762105"
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|DBCC2_FS_DOUBLE_ROWSET_ACTUAL_FACT|  
-|メッセージ テキスト|データベース エラー:パーティションの FileStream ディレクトリ ID F_ID が 2 回見られました。|  
+|メッセージ テキスト|データベース エラー: パーティションの FILESTREAM ディレクトリ ID F_ID が 2 回出現しました。|  
   
 ## <a name="explanation"></a>説明  
  FILESTREAM ディレクトリの同じパーティション ID がメタデータで検出されました。  
@@ -48,6 +48,6 @@ ms.locfileid: "62762105"
  問題がハードウェアに関するものではなく、また既知のクリーン バックアップがある場合は、そのバックアップを使用してデータベースを復元します。  
   
 ### <a name="run-dbcc-checkdb"></a>DBCC CHECKDB の実行  
- 該当なし。 このエラーを自動的に修正することはできません。 バックアップからデータベースを復元できない場合は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] カスタマー サポート サービス (CSS) にご連絡ください。  
+ 適用不可。 このエラーを自動的に修正することはできません。 バックアップからデータベースを復元できない場合は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] カスタマー サポート サービス (CSS) にご連絡ください。  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sys.remote_data_archive_tables (TRANSACT-SQL) |Microsoft Docs
+title: remote_data_archive_tables (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,27 +19,27 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: 65e42e6303b467abd38ddadb6be0c0d0fece46e5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68018189"
 ---
-# <a name="stretch-database-catalog-views---sysremotedataarchivetables"></a>カタログ ビューでの Stretch Database sys.remote_data_archive_tables
+# <a name="stretch-database-catalog-views---sysremote_data_archive_tables"></a>Stretch Database カタログビュー-sys. remote_data_archive_tables
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Stretch が有効なローカル テーブルからデータを格納する各リモート テーブルの 1 つの行が含まれています。  
+  Stretch が有効なローカルテーブルのデータを格納するリモートテーブルごとに1行のデータを格納します。  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|Stretch が有効なローカル テーブルのオブジェクトの ID。|  
-|**remote_database_id**|**int**|自動生成されたローカルの識別子、リモート データベース。|  
-|**remote_table_name**|**sysname**|Stretch が有効なローカル テーブルに対応するリモートのデータベース内のテーブルの名前です。|  
-|**filter_predicate**|**nvarchar(max)**|フィルター述語では、存在する場合、移行するテーブル内の行を識別します。 値が null の場合、テーブル全体が移行の対象になります。<br /><br /> 詳細については、次を参照してください。[テーブルに対して Stretch Database を有効にする](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)と[フィルター述語を使用して移行する行を選択します。](~/sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)します。|  
-|**migration_direction**|**tinyint**|これでデータが現在移行中の方向。 使用可能な値、次に示します。<br/>1 (送信)<br/>2 (受信)|  
-|**migration_direction_desc**|**nvarchar(60)**|これでデータが現在移行中の方向の説明です。 使用可能な値、次に示します。<br/>送信 (1)<br/>受信 (2)|  
-|**is_migration_paused**|**bit**|移行が現在一時停止しているかどうかを示します。|  
-|**is_reconciled**|**bit**| リモート SQL Server のテーブルとが同期するかどうかを示します。<br/><br/>ときに、値の**is_reconciled** 1 (true) には、リモート SQL Server のテーブルとは同期、およびリモートのデータを含むクエリを実行することができます。<br/><br/>ときに、値の**is_reconciled**は 0 (false)、リモート SQL Server のテーブルと同期されていません。最近移行済みの行は、もう一度移行する必要があります。 これは、リモート Azure データベースを復元するとき、またはリモート テーブルから行を手動で削除するときに発生します。 テーブルを調整するまで、リモート データを含むクエリを実行することはできません。 テーブルを調整するために実行[sys.sp_rda_reconcile_batch](../../relational-databases/system-stored-procedures/sys-sp-rda-reconcile-batch-transact-sql.md)します。 |  
+|**object_id**|**int**|Stretch が有効なローカルテーブルのオブジェクト ID。|  
+|**remote_database_id**|**int**|リモートデータベースの自動生成されたローカル識別子。|  
+|**remote_table_name**|**sysname**|Stretch が有効なローカルテーブルに対応するリモートデータベースのテーブルの名前。|  
+|**filter_predicate**|**nvarchar(max)**|移行するテーブル内の行を識別するフィルター述語 (存在する場合)。 値が null の場合、テーブル全体が移行の対象になります。<br /><br /> 詳細については、「[テーブルの Stretch Database を有効にする](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)」および「[フィルター述語を使用して移行する行を選択](~/sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)する」を参照してください。|  
+|**migration_direction**|**tinyint**|データが現在移行されている方向。 使用できる値は次のとおりです。<br/>1 (送信)<br/>2 (受信)|  
+|**migration_direction_desc**|**nvarchar (60)**|データが現在移行されている方向の説明。 使用できる値は次のとおりです。<br/>送信 (1)<br/>受信 (2)|  
+|**is_migration_paused**|**bit**|移行が現在一時停止されているかどうかを示します。|  
+|**is_reconciled**|**bit**| リモートテーブルと SQL Server テーブルが同期されているかどうかを示します。<br/><br/>**Is_reconciled**の値が 1 (true) の場合、リモートテーブルと SQL Server テーブルが同期され、リモートデータを含むクエリを実行できます。<br/><br/>**Is_reconciled**の値が 0 (false) の場合、リモートテーブルと SQL Server テーブルは同期されていません。最近移行された行は、再度移行する必要があります。 このエラーは、リモートの Azure データベースを復元した場合、またはリモートテーブルから手動で行を削除した場合に発生します。 テーブルを調整するまで、リモートデータを含むクエリを実行することはできません。 テーブルを調整するには、 [sp_rda_reconcile_batch](../../relational-databases/system-stored-procedures/sys-sp-rda-reconcile-batch-transact-sql.md)を実行します。 |  
   
 ## <a name="see-also"></a>参照  
  [Stretch Database](../../sql-server/stretch-database/stretch-database.md)  

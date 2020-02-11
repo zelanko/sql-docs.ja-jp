@@ -22,10 +22,10 @@ ms.assetid: 6a98ac8c-0e69-4c03-83a4-2062cb782049
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: e5ceaa0e9812ba69820b8ac912ba8b5441cc73fe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68009601"
 ---
 # <a name="accessing-user-defined-types---retrieving-udt-data"></a>ユーザー定義型へのアクセス - UDT データの取得
@@ -33,28 +33,28 @@ ms.locfileid: "68009601"
   クライアント側で UDT (ユーザー定義型) を作成するには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに UDT として登録されたアセンブリをクライアント アプリケーションで使用できるようにしておく必要があります。 この UDT アセンブリは、アプリケーションと同じディレクトリまたは GAC (グローバル アセンブリ キャッシュ) に配置できます。 また、プロジェクト内で、このアセンブリへの参照を設定することもできます。  
   
 ## <a name="requirements-for-using-udts-in-adonet"></a>ADO.NET で UDT を使用するための要件  
- クライアント側で UDT を作成するには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に読み込まれたアセンブリとクライアント側に存在するアセンブリとの間に互換性がなくてはなりません。 Udt で定義されている、**Native**、シリアル化形式のアセンブリは、互換性のある構造的である必要があります。 アセンブリで定義されているため、 **UserDefined**形式、アセンブリは、クライアントで使用可能なである必要があります。  
+ クライアント側で UDT を作成するには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に読み込まれたアセンブリとクライアント側に存在するアセンブリとの間に互換性がなくてはなりません。 **ネイティブ**シリアル化形式で定義された udt の場合、アセンブリは構造的に互換性がある必要があります。 定義可能な形式で定義さ**れたアセンブリ**の場合、アセンブリはクライアントで使用できる必要があります。  
   
  テーブルの UDT 列からデータをそのまま取得するために、クライアントに UDT アセンブリをコピーする必要はありません。  
   
 > [!NOTE]  
->  **SqlClient**の UDT のバージョンが一致しないまたはその他の問題が発生した場合、UDT の読み込みに失敗します。 この場合、通常のトラブルシューティング メカニズムを使用して、呼び出し元のアプリケーションで UDT を含むアセンブリが検出されない原因を特定します。 詳細については、.NET Framework のドキュメントのトピック「マネージド デバッグ アシスタントによるエラーの診断」を参照してください。  
+>  UDT のバージョンが一致しない場合や他の問題が発生した場合に、 **SqlClient**が udt の読み込みに失敗することがあります。 この場合、通常のトラブルシューティング メカニズムを使用して、呼び出し元のアプリケーションで UDT を含むアセンブリが検出されない原因を特定します。 詳細については、.NET Framework のドキュメントのトピック「マネージド デバッグ アシスタントによるエラーの診断」を参照してください。  
   
 ## <a name="accessing-udts-with-a-sqldatareader"></a>SqlDataReader による UDT へのアクセス  
- A **System.Data.SqlClient.SqlDataReader**オブジェクトのインスタンスとして公開される、UDT 列を含む結果セットを取得するクライアント コードから使用することができます。  
+ クライアントコードからは、system.string を使用して、オブジェクトのインスタンスとして公開されている UDT 列を含む結果セットを**取得できます**。  
   
 ### <a name="example"></a>例  
- この例は、使用する方法を示します、 **Main**新たに作成するメソッド**SqlDataReader**オブジェクト。 このコード例では、次の操作が行われます。  
+ この例では、 **Main**メソッドを使用して新しい**SqlDataReader**オブジェクトを作成する方法を示します。 このコード例では、次の操作が行われます。  
   
-1.  Main メソッドを作成する新しい**SqlDataReader**オブジェクトし、ポイントをという名前の UDT 列のあるポイント テーブルから値を取得します。  
+1.  Main メソッドは、新しい**SqlDataReader**オブジェクトを作成し、Points テーブルから値を取得します。このテーブルには Point という名前の UDT 列があります。  
   
 2.  Point UDT では、整数型として定義されている X 座標と Y 座標が公開されます。  
   
-3.  UDT の定義、**Distance**メソッドと**GetDistanceFromXY**メソッド。  
+3.  UDT は、 **Distance**メソッドと**GetDistanceFromXY**メソッドを定義します。  
   
 4.  このサンプル コードでは、UDT の機能を例示するために主キーと UDT 列の値を取得します。  
   
-5.  サンプル コードでは、 **Point.Distance**と**Point.GetDistanceFromXY**メソッド。  
+5.  このサンプルコード**では、** GetDistanceFromXY メソッドと**point.......** のメソッドを呼び出します。  
   
 6.  結果はコンソール ウィンドウに表示されます。  
   
@@ -157,10 +157,10 @@ static void Main()
 ```  
   
 ## <a name="binding-udts-as-bytes"></a>バイト型としての UDT のバインド  
- 場合によっては、UDT 列からそのままデータを取得する必要が生じることもあります。 たとえば、型がローカルに存在しない場合や、UDT のインスタンスを作成したくない場合などです。 使用してバイト配列に生バイトを読み取ることができます、 **GetBytes**のメソッド、 **SqlDataReader**します。 このメソッドでは、バイトのストリームを、指定した列オフセットから、指定したバッファー オフセットから始まる配列のバッファーに読み取ることができます。 いずれかを使用することも、 **GetSqlBytes**または**GetSqlBinary**メソッドと 1 つの操作の内容のすべての読み取り。 どちらの場合も、UDT オブジェクトのインスタンスが作成されることはないので、クライアントのアセンブリで UDT への参照を設定する必要はありません。  
+ 場合によっては、UDT 列からそのままデータを取得する必要が生じることもあります。 たとえば、型がローカルに存在しない場合や、UDT のインスタンスを作成したくない場合などです。 **SqlDataReader**の**GetBytes**メソッドを使用して、生バイトをバイト配列に読み取ることができます。 このメソッドでは、バイトのストリームを、指定した列オフセットから、指定したバッファー オフセットから始まる配列のバッファーに読み取ることができます。 別の方法として、 **Getsqlbytes**メソッドまたは**getsqlbytes**メソッドのいずれかを使用して、すべての内容を1回の操作で読み取ることもできます。 どちらの場合も、UDT オブジェクトのインスタンスが作成されることはないので、クライアントのアセンブリで UDT への参照を設定する必要はありません。  
   
 ### <a name="example"></a>例  
- この例は、取得する方法を示します、**Point**を使用してバイト配列に未処理のバイトとしてのデータを**SqlDataReader**します。 コードを使用して、 **System.Text.StringBuilder**生バイトをコンソール ウィンドウに表示される文字列形式に変換します。  
+ この例では、 **SqlDataReader**を使用して、生バイトとしての**ポイント**データをバイト配列に取得する方法を示します。 このコードでは、**システムのテキスト**を使用して、生バイトをコンソールウィンドウに表示される文字列形式に変換します。  
   
 ```vb  
 Option Explicit On  
@@ -266,7 +266,7 @@ class GetRawBytes
 ```  
   
 ### <a name="example-using-getsqlbytes"></a>GetSqlBytes メソッドの使用例  
- この例では、取得、**Point**を使用して、1 つの操作で未処理のバイトとしてのデータ、 **GetSqlBytes**メソッド。 コードを使用して、 **StringBuilder**生バイトをコンソール ウィンドウに表示される文字列形式に変換します。  
+ この例では、 **Getsqlbytes**メソッドを使用して、1回の操作で生バイトとして**ポイント**データを取得する方法を示します。 このコードでは、 **StringBuilder**を使用して、生バイトをコンソールウィンドウに表示される文字列形式に変換します。  
   
 ```vb  
 Option Explicit On  
@@ -374,13 +374,13 @@ class GetRawBytes
  ADO.NET コードでは、UDT は入力パラメーターと出力パラメーターのどちらとしても使用することができます。  
   
 ## <a name="using-udts-in-query-parameters"></a>クエリ パラメーターでの UDT の使用  
- Udt は、設定するときにパラメーター値として使用できる、 **SqlParameter**の**System.Data.SqlClient.SqlCommand**オブジェクト。 **SqlDbType.Udt**の列挙体を**SqlParameter**を呼び出すときに、パラメーターが UDT ことを示すためにオブジェクトが使用される、**Add**メソッドを**Parameters**コレクション。 **UdtTypeName**のプロパティを**SqlCommand**オブジェクトはデータベースを使用して、UDT の完全修飾名を指定するために使用、 *database.schema_name.object_name*構文があります。 必須ではありませんが、完全修飾名を使用すると、コードを明確にすることができます。  
+ Udt は、 **SqlParameter** **オブジェクトの**ために、パラメーター値として使用できます。 **SqlParameter**オブジェクトの**SqlDbType**列挙体は、 **Add**メソッドを**Parameters**コレクションに呼び出すときに、パラメーターが Udt であることを示すために使用されます。 **SqlCommand**オブジェクトの**udttypename**プロパティは、データベース内の UDT の完全修飾名を指定するために使用されます。 *schema_name object_name*構文を使用します。 必須ではありませんが、完全修飾名を使用すると、コードを明確にすることができます。  
   
 > [!NOTE]  
 >  クライアント プロジェクトが、UDT アセンブリのローカル コピーを使用できることが前提です。  
   
 ### <a name="example"></a>例  
- この例では、コード作成**SqlCommand**と**SqlParameter**テーブルの UDT 列にデータを挿入するオブジェクト。 コードを使用して、 **SqlDbType.Udt**列挙データ型を指定し、 **UdtTypeName**のプロパティ、 **SqlParameter**完全修飾名を指定するオブジェクトデータベースに UDT します。  
+ この例のコードでは、テーブルの UDT 列にデータを挿入する**SqlCommand**オブジェクトと**SqlParameter**オブジェクトを作成します。 このコードでは、 **SqlDbType**列挙体を使用してデータ型を指定し、 **SqlParameter**オブジェクトの**udttypename**プロパティを使用して、データベース内の Udt の完全修飾名を指定します。  
   
 ```vb  
 Option Explicit On  
@@ -456,7 +456,7 @@ static void Main()
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ADO.NET でのユーザー定義型へのアクセス](../../relational-databases/clr-integration-database-objects-user-defined-types/accessing-user-defined-types-in-ado-net.md)  
   
   

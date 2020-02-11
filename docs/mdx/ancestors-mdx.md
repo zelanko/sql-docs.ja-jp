@@ -1,5 +1,5 @@
 ---
-title: Ancestors (MDX) |Microsoft Docs
+title: 先祖 (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 8551e6fdac54b3eb4c20f13f6722936df1c92feb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68017103"
 ---
 # <a name="ancestors-mdx"></a>Ancestors (MDX)
 
 
-  メンバーから指定したレベルまたは指定された距離にある指定したメンバーのすべてのAncestorsのセットを返す関数。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、返されるセットは常に - 1 つのメンバーで構成されている[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]は、1 つのメンバーの複数の親をサポートしていません。  
+  指定されたレベルまたはメンバーから指定された距離にある、指定されたメンバーのすべての先祖のセットを返す関数。 で[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]は、返されるセットは常に1つのメンバー [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]で構成されます。1つのメンバーに対して複数の親はサポートされません。  
   
 ## <a name="syntax"></a>構文  
   
@@ -32,30 +32,30 @@ Ancestors(Member_Expression, Distance)
 ```  
   
 ## <a name="arguments"></a>引数  
- *メンバー式*  
+ *Member_Expression*  
  メンバーを 1 つ返す有効な多次元式 (MDX) 式です。  
   
  *Level_Expression*  
- レベルを返す有効な多次元式 (MDX) 式。  
+ レベルを返す有効な多次元式 (MDX) 式です。  
   
- *Distance*  
+ *単位*  
  指定されたメンバーからの距離を指定する有効な数値式です。  
   
-## <a name="remarks"></a>コメント  
- **Ancestors**関数の場合、関数、MDX メンバー式を提供して指定のメンバーのAncestorsであるレベルの MDX 式または数値式のレベル数を表すそのメンバー上。 この情報により、**Ancestors**関数は、そのレベル (される 1 つのメンバーで構成されるセット) のメンバーのセットを返します。  
+## <a name="remarks"></a>解説  
+ **先祖**関数では、mdx メンバー式を使用して関数を指定し、そのメンバーの先祖であるレベルの mdx 式、またはそのメンバーの上位レベルの数を表す数値式のいずれかを指定します。 この情報を使用すると、**先祖**関数は、そのレベルでメンバーのセット (1 つのメンバーで構成されるセット) を返します。  
   
 > [!NOTE]  
->  AncestorsのセットではなくAncestorsメンバーを使用して返される、[Ancestors](../mdx/ancestor-mdx.md)関数。  
+>  先祖のセットではなく先祖メンバーを返すには、[先祖](../mdx/ancestor-mdx.md)関数を使用します。  
   
- レベル式が指定されている場合、**Ancestors**関数は、指定されたレベルで指定されたメンバーのすべてのAncestorsのセットを返します。 指定されたレベルと同じ階層内で指定されたメンバーでない場合、関数はエラーを返します。  
+ レベル式が指定されている場合、**先祖**関数は、指定されたレベルにある指定されたメンバーのすべての先祖のセットを返します。 指定したメンバーが指定したレベルと同じ階層内にない場合、関数はエラーを返します。  
   
- 距離が指定されている場合、**Ancestors**関数は、メンバー式で指定された階層内で指定されたステップ数であるすべてのメンバーのセットを返します。 メンバーは、メンバーの属性階層、ユーザー定義階層の場合、または場合によっては、親子階層として指定する場合があります。 番号 1 は、親レベルでメンバーのセットを返し、(存在する場合に、数値として 2 が、親の親レベルでメンバーのセットを返します。 数値として 0 が指定された場合はそのメンバー自体のみを含むセットを返します。  
+ 距離が指定されている場合、**先祖**関数は、メンバー式で指定された階層内で指定されたステップ数であるすべてのメンバーのセットを返します。 メンバーは、属性階層、ユーザー定義階層、または場合によっては親子階層のメンバーとして指定することができます。 1を指定すると、親レベルでメンバーのセットが返され、2を指定すると、親レベル (存在する場合) のメンバーのセットが返されます。 数値として 0 が指定された場合はそのメンバー自体のみを含むセットを返します。  
   
 > [!NOTE]  
->  この形式の使用、**Ancestors**関数の場合、親のレベルが不明またはということはできません。  
+>  この形式の**先祖**関数は、親のレベルが不明な場合、または名前を指定できない場合に使用します。  
   
-## <a name="examples"></a>使用例  
- 次の例では、**Ancestors**関数、メンバー、親、およびその親の親の Internet Sales Amount メジャーを返します。 この例では、レベル式を使用して、返すレベルを指定します。 レベルは、メンバー式で指定されたメンバーと同じ階層には。  
+## <a name="examples"></a>例  
+ 次の例では、**先祖**関数を使用して、メンバー、その親、およびその親の親の Internet Sales Amount メジャーを返します。 この例では、レベル式を使用して、返すレベルを指定します。 レベルは、メンバー式で指定されたメンバーと同じ階層にあります。  
   
 ```  
 SELECT {  
@@ -67,7 +67,7 @@ SELECT {
 FROM [Adventure Works]  
 ```  
   
- 次の例では、**Ancestors**関数、メンバー、親、およびその親の親の Internet Sales Amount メジャーを返します。 この例では、数値式を使用して、返されるレベルを指定します。 レベルは、メンバー式で指定されたメンバーと同じ階層には。  
+ 次の例では、**先祖**関数を使用して、メンバー、その親、およびその親の親の Internet Sales Amount メジャーを返します。 この例では、数値式を使用して、返されるレベルを指定します。 レベルは、メンバー式で指定されたメンバーと同じ階層にあります。  
   
 ```  
 SELECT {  
@@ -85,7 +85,7 @@ SELECT {
 FROM  [Adventure Works]  
 ```  
   
- 次の例では、**Ancestors**関数 Internet Sales Amount メジャー、属性階層のメンバーの親を返します。 この例では、数値式を使用して、返されるレベルを指定します。 メンバー式に含まれるメンバーは、属性階層のメンバーであるために、その親は、[All] レベルになります。  
+ 次の例では、**先祖**関数を使用して、属性階層のメンバーの親の Internet Sales Amount メジャーを返します。 この例では、数値式を使用して、返されるレベルを指定します。 メンバー式のメンバーは属性階層のメンバーであるため、その親は [All] レベルです。  
   
 ```  
 SELECT {  
@@ -97,7 +97,7 @@ SELECT {
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>参照  
+ [Mdx 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

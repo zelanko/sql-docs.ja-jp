@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4db539979cf6a9e06d93b38fbc2aa92c8cdbabfb
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68811070"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>メモリ最適化テーブルのクエリ処理のガイド
@@ -36,7 +36,7 @@ ms.locfileid: "68811070"
   
 -   不適切なクエリ プランを修正する方法。  
   
-## <a name="example-query"></a>クエリの例  
+## <a name="example-query"></a>サンプル クエリ  
  次の例を使用して、この記事で説明するクエリ処理の概念を示します。  
   
  ここでは、Customer と Order という 2 個のテーブルについて検討します。 次の [!INCLUDE[tsql](../../../includes/tsql-md.md)] スクリプトには、2 個のテーブルおよび関連するインデックスの定義が (従来の) ディスク ベース形式で含まれています。  
@@ -79,7 +79,8 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
 -   Order テーブルのデータは、CustomerID 列の非クラスター化インデックスを使用して取得されます。 このインデックスには、結合に使用される CustomerID 列と、ユーザーに返す主キー列 OrderID の両方が含まれています。 Order テーブルから追加の列を返す場合は、Order テーブルのクラスター化インデックス内の参照が必要です。  
   
--   `Inner Join` 論理操作は、`Merge Join` 物理操作により実装されます。 その他の物理結合の種類は、`Nested Loops` と `Hash Join` です。 この `Merge Join` 操作では、両方のインデックスが結合列 CustomerID を基準に並べ替えられていることを利用します。  
+-   
+  `Inner Join` 論理操作は、`Merge Join` 物理操作により実装されます。 その他の物理結合の種類は、`Nested Loops` と `Hash Join` です。 この `Merge Join` 操作では、両方のインデックスが結合列 CustomerID を基準に並べ替えられていることを利用します。  
   
  これを少し変えたバリエーションとして、OrderID だけでなく、Order テーブルのすべての行を返すクエリを検討します。  
   
@@ -100,7 +101,7 @@ SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID =
  ![SQL Server クエリ処理パイプライン。](../../database-engine/media/hekaton-query-plan-3.gif "SQL Server クエリ処理パイプライン。")  
 SQL Server クエリ処理パイプライン。  
   
- このシナリオでは、次のようになります。  
+ このシナリオでは:  
   
 1.  ユーザーがクエリを実行します。  
   
@@ -114,7 +115,7 @@ SQL Server クエリ処理パイプライン。
   
 6.  Access Methods は、バッファー プールのインデックスおよびデータ ページから行を取得し、必要に応じてバッファー プールにディスクからページを読み込みます。  
   
- 最初のクエリ例では、実行エンジンは、ユーザーのクラスター化インデックスの行と、アクセスメソッドから順番に非クラスター化インデックスの行を要求します。 Access Methods は、要求された行を取得するために B ツリー インデックス構造をスキャンします。 この場合は、プランがフル インデックス スキャンを必要とするため、すべての行が取得されます。  
+ クエリの最初の例の場合、実行エンジンは、Customer のクラスター化インデックスおよび Order の非クラスター化インデックスの行を Access Methods から要求します。 Access Methods は、要求された行を取得するために B ツリー インデックス構造をスキャンします。 この場合は、プランがフル インデックス スキャンを必要とするため、すべての行が取得されます。  
   
 ## <a name="interpreted-includetsqlincludestsql-mdmd-access-to-memory-optimized-tables"></a>解釈された [!INCLUDE[tsql](../../../includes/tsql-md.md)] によるメモリ最適化テーブルへのアクセス  
  [!INCLUDE[tsql](../../../includes/tsql-md.md)] アドホック バッチおよびストアド プロシージャは、解釈された [!INCLUDE[tsql](../../../includes/tsql-md.md)]とも呼ばれます。 "解釈された" とは、クエリ プラン内の各演算子について、クエリ実行エンジンによってクエリ プランが解釈されることを意味します。 実行エンジンは、演算子とそのパラメーターを読み取り、操作を実行します。  
@@ -170,7 +171,8 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
     -   クラスター化インデックスは、メモリ最適化テーブルでサポートされていません。 代わりに、すべてのメモリ最適化テーブルには 1 つ以上の非クラスター化インデックスが必要です。メモリ最適化テーブルのすべてのインデックスは、そのテーブル内のすべての列に効率的にアクセスできます。列をインデックスに格納したり、クラスター化されたインデックスを参照したりする必要はありません。  
   
--   このプランには、`Hash Match` ではなく `Merge Join` が含まれます。 Order テーブルと Customer テーブルの両方のインデックスはハッシュ インデックスになるため、順序付けされません。 `Merge Join` では並べ替え操作が必要であり、それによってパフォーマンスが低下していました。  
+-   このプランには、`Hash Match` ではなく `Merge Join` が含まれます。 Order テーブルと Customer テーブルの両方のインデックスはハッシュ インデックスになるため、順序付けされません。 
+  `Merge Join` では並べ替え操作が必要であり、それによってパフォーマンスが低下していました。  
   
 ## <a name="natively-compiled-stored-procedures"></a>ネイティブ コンパイル ストアド プロシージャ  
  ネイティブ コンパイル ストアド プロシージャは、クエリ実行エンジンによって解釈されるのではなく、マシン語コードにコンパイルされる [!INCLUDE[tsql](../../../includes/tsql-md.md)] ストアド プロシージャです。 次のスクリプトは、(クエリの例のセクションの) クエリの例を実行する、ネイティブ コンパイル ストアド プロシージャを作成します。  
@@ -195,17 +197,18 @@ END
 |-|-----------------------|-----------------|  
 |最初のコンパイル|作成時。|最初の実行時。|  
 |自動再コンパイル|データベースまたはサーバーの再起動後、プロシージャの最初の実行時。|サーバーの再起動時。 または、通常はスキーマや統計の変更またはメモリ不足に基づく、プラン キャッシュからの削除時。|  
-|手動での再コンパイル|サポートされていません。 回避策は、ストアド プロシージャを削除して再作成することです。|`sp_recompile` を使用してください。 たとえば DBCC FREEPROCCACHE を使用して、キャッシュからプランを手動で削除できます。 また、WITH RECOMPILE ストアド プロシージャを作成することもできます。このストアド プロシージャは、実行のたびに再コンパイルされます。|  
+|手動での再コンパイル|サポートされていません。 回避策は、ストアド プロシージャを削除して再作成することです。|
+  `sp_recompile`を使用します。 たとえば DBCC FREEPROCCACHE を使用して、キャッシュからプランを手動で削除できます。 また、WITH RECOMPILE ストアド プロシージャを作成することもできます。このストアド プロシージャは、実行のたびに再コンパイルされます。|  
   
 ### <a name="compilation-and-query-processing"></a>コンパイルとクエリ処理  
  次の図は、ネイティブ コンパイル ストアド プロシージャのコンパイル処理を示しています。  
   
- ![ストアド プロシージャのネイティブでのコンパイル。](../../database-engine/media/hekaton-query-plan-6.gif "ストアド プロシージャのネイティブでのコンパイル。")  
+ ![ストアド プロシージャのネイティブでのコンパイル](../../database-engine/media/hekaton-query-plan-6.gif "ストアド プロシージャのネイティブでのコンパイル")  
 ストアド プロシージャのネイティブでのコンパイル  
   
  この処理は次のとおりです。  
   
-1.  ユーザーは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に対して `CREATE PROCEDURE` ステートメントを実行します。  
+1.  ユーザーは、`CREATE PROCEDURE` に対して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ステートメントを実行します。  
   
 2.  パーサーと algebrizer は、プロシージャの処理フロー、およびストアド プロシージャ内の [!INCLUDE[tsql](../../../includes/tsql-md.md)] クエリのクエリ ツリーを作成します。  
   
@@ -217,7 +220,7 @@ END
   
  ネイティブ コンパイル ストアド プロシージャの呼び出しは、DLL 内の関数の呼び出しに変換されます。  
   
- ![ネイティブ コンパイル ストアド プロシージャの実行。](../../database-engine/media/hekaton-query-plan-7.gif "ネイティブ コンパイル ストアド プロシージャの実行。")  
+ ![ネイティブコンパイルストアドプロシージャの実行。](../../database-engine/media/hekaton-query-plan-7.gif "ネイティブ コンパイル ストアド プロシージャの実行。")  
 ネイティブ コンパイル ストアド プロシージャの実行。  
   
  ネイティブ コンパイル ストアド プロシージャの呼び出しは、次のとおりです。  
@@ -232,14 +235,14 @@ END
   
 4.  DLL のマシン語コードが実行され、その結果がクライアントに返されます。  
   
- **パラメーターを見つけ出す**  
+ **パラメータースニッフィング**  
   
  解釈された [!INCLUDE[tsql](../../../includes/tsql-md.md)] ストアド プロシージャは最初の実行時にコンパイルされますが、ネイティブ コンパイル ストアド プロシージャは作成時にコンパイルされます。 解釈されたストアド プロシージャが呼び出し時にコンパイルされる場合、この呼び出しに指定されたパラメーターの値が、実行プランの生成時にオプティマイザーによって使用されます。 コンパイル時にパラメーターをこのように使用することを、"パラメーターを見つけ出す" と表現します。  
   
  パラメーターを見つけ出すことは、ネイティブ コンパイル ストアド プロシージャのコンパイルには使用されません。 ストアド プロシージャに対するすべてのパラメーターは、UNKNOWN 値があると見なされます。 解釈されたストアド プロシージャと同様に、ネイティブ コンパイル ストアド プロシージャでも、`OPTIMIZE FOR` ヒントがサポートされます。 詳細については、「[クエリ ヒント &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-query)」を参照してください。  
   
 ### <a name="retrieving-a-query-execution-plan-for-natively-compiled-stored-procedures"></a>ネイティブ コンパイル ストアド プロシージャ用のクエリ実行プランの取得  
- ネイティブ コンパイル ストアド プロシージャ用のクエリ実行プランは、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] の **推定実行プラン** または [!INCLUDE[tsql](../../../includes/tsql-md.md)]の SHOWPLAN_XML オプションを使用して取得できます。 例:  
+ ネイティブ コンパイル ストアド プロシージャ用のクエリ実行プランは、 ** の **推定実行プラン[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] または [!INCLUDE[tsql](../../../includes/tsql-md.md)]の SHOWPLAN_XML オプションを使用して取得できます。 次に例を示します。  
   
 ```sql  
 SET SHOWPLAN_XML ON  
@@ -250,7 +253,8 @@ SET SHOWPLAN_XML OFF
 GO  
 ```  
   
- クエリ オプティマイザーによって生成される実行プランは、ノード上のクエリ演算子を含むツリーおよびツリーのリーフで構成されます。 ツリーの構造により、演算子間の対話 (演算子間での行のフロー) が決定されます。 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]のグラフィカルなビューでは、フローは右から左に流れます。 たとえば、図 1 のクエリ プランは、2 個のインデックス スキャン操作を含み、マージ結合操作に行を渡しています。 マージ結合操作が選択操作に行を渡します。 選択操作は、最終的にはクライアントに行を返します。  
+ クエリ オプティマイザーによって生成される実行プランは、ノード上のクエリ演算子を含むツリーおよびツリーのリーフで構成されます。 ツリーの構造により、演算子間の対話 (演算子間での行のフロー) が決定されます。 
+  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]のグラフィカルなビューでは、フローは右から左に流れます。 たとえば、図 1 のクエリ プランは、2 個のインデックス スキャン操作を含み、マージ結合操作に行を渡しています。 マージ結合操作が選択操作に行を渡します。 選択操作は、最終的にはクライアントに行を返します。  
   
 ### <a name="query-operators-in-natively-compiled-stored-procedures"></a>ネイティブ コンパイル ストアド プロシージャのクエリ演算子  
  次の表は、ネイティブ コンパイル ストアド プロシージャの内部でサポートされるクエリ演算子をまとめたものです。  
@@ -260,12 +264,13 @@ GO
 |SELECT|`SELECT OrderID FROM dbo.[Order]`|  
 |INSERT|`INSERT dbo.Customer VALUES ('abc', 'def')`|  
 |UPDATE|`UPDATE dbo.Customer SET ContactName='ghi' WHERE CustomerID='abc'`|  
-|Del|`DELETE dbo.Customer WHERE CustomerID='abc'`|  
+|DELETE|`DELETE dbo.Customer WHERE CustomerID='abc'`|  
 |Compute Scalar|この操作は、組み込み関数と型変換の両方で使用されます。 一部の関数と型変換は、ネイティブ コンパイル ストアド プロシージャの内部でサポートされません。<br /><br /> `SELECT OrderID+1 FROM dbo.[Order]`|  
 |Nested Loops 結合|Nested Loops は、ネイティブ コンパイル ストアド プロシージャでサポートされている唯一の結合操作です。 解釈された [!INCLUDE[tsql](../../../includes/tsql-md.md)] として実行される同じクエリのプランにハッシュ結合またはマージ結合が含まれている場合でも、結合を含むすべてのプランは Nested Loops 操作を使用します。<br /><br /> `SELECT o.OrderID, c.CustomerID`  <br /> `FROM dbo.[Order] o INNER JOIN dbo.[Customer] c`|  
 |並べ替え|`SELECT ContactName FROM dbo.Customer`  <br /> `ORDER BY ContactName`|  
 |TOP|`SELECT TOP 10 ContactName FROM dbo.Customer`|  
-|Top-sort|`TOP` 式 (返される行数) が 8,000 行を超えることはできません。 クエリに結合演算子および集計演算子がある場合、処理できる行数はこれより少なくなります。 一般的に結合と集計を行うと、並べ替える行数は、ベース テーブルの行数より少なくなります。<br /><br /> `SELECT TOP 10 ContactName FROM dbo.Customer`  <br /> `ORDER BY ContactName`|  
+|Top-sort|
+  `TOP` 式 (返される行数) が 8,000 行を超えることはできません。 クエリに結合演算子および集計演算子がある場合、処理できる行数はこれより少なくなります。 一般的に結合と集計を行うと、並べ替える行数は、ベース テーブルの行数より少なくなります。<br /><br /> `SELECT TOP 10 ContactName FROM dbo.Customer`  <br /> `ORDER BY ContactName`|  
 |Stream Aggregate|Hash Match 操作が集計をサポートしていないことに注意してください。 したがって、解釈された [!INCLUDE[tsql](../../../includes/tsql-md.md)] 内の同じクエリに対するプランが Hash Match 操作を使用しても、ネイティブ コンパイル ストアド プロシージャ内のすべての集計は Stream Aggregate 操作を使用します<br /><br /> `SELECT count(CustomerID) FROM dbo.Customer`|  
   
 ## <a name="column-statistics-and-joins"></a>列統計と結合  
@@ -300,9 +305,10 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
 -   IX_CustomerID でのフル インデックス スキャンは、インデックス シークで置き換えられました。 これにより、スキャンの対象は 5 行となり、フル インデックス スキャンに必要な 830 行ではなくなります。  
   
 ### <a name="statistics-and-cardinality-for-memory-optimized-tables"></a>メモリ最適化テーブルの統計およびカーディナリティ  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、メモリ最適化テーブルの列レベルの統計が保持されます。 また、テーブルの実際の行数も保持されます。 ただし、ディスク ベース テーブルとは異なり、メモリ最適化テーブルの統計は自動更新されません。 このため、テーブルに重要な変更が発生した場合は、統計を手動で更新する必要があります。 詳細については、「 [メモリ最適化テーブルの統計](memory-optimized-tables.md)」を参照してください。  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、メモリ最適化テーブルの列レベルの統計が保持されます。 また、テーブルの実際の行数も保持されます。 ただし、ディスク ベース テーブルとは異なり、メモリ最適化テーブルの統計は自動更新されません。 このため、テーブルに重要な変更が発生した場合は、統計を手動で更新する必要があります。 詳細については、「 [メモリ最適化テーブルの統計](memory-optimized-tables.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [メモリ最適化テーブル](memory-optimized-tables.md)  
   
   

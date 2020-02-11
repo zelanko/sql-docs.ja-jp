@@ -1,5 +1,5 @@
 ---
-title: sys.dm_cdc_log_scan_sessions (TRANSACT-SQL) |Microsoft Docs
+title: dm_cdc_log_scan_sessions (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,49 +20,49 @@ ms.assetid: d337e9d0-78b1-4a07-8820-2027d0b9f87c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 52abdd077d892982c7fb63a34cec8bbdbd973379
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68017995"
 ---
-# <a name="change-data-capture---sysdmcdclogscansessions"></a>変更データ キャプチャ - sys.dm_cdc_log_scan_sessions
+# <a name="change-data-capture---sysdm_cdc_log_scan_sessions"></a>変更データキャプチャ-sys. dm_cdc_log_scan_sessions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  現在のデータベース内のログ スキャン セッションごとに 1 行のデータを返します。 返された行の最後は、現在のセッションを表します。 このビューを使用すると、現在のログ スキャン セッションのステータス情報を取得できます。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが開始されてからのすべてのセッションの集計情報を取得することもできます。  
+  現在のデータベース内のログスキャンセッションごとに1行のデータを返します。 最後に返された行は、現在のセッションを表します。 このビューを使用すると、現在のログ スキャン セッションのステータス情報を取得できます。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが開始されてからのすべてのセッションの集計情報を取得することもできます。  
    
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
-|**session_id**|**int**|セッションの ID を指定します。<br /><br /> 0 = で返されるデータは、この行は以降のインスタンスのすべてのセッションの集計[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が最後に起動します。|  
-|**start_time**|**datetime**|セッションの開始時刻です。<br /><br /> ときに**session_id**集計されたデータの収集が開始された時間、0 を = です。|  
-|**end_time**|**datetime**|セッションの時間が終了しました。<br /><br /> NULL は、セッションがアクティブであることを表します。<br /><br /> ときに**session_id** 0、最後のセッションが終了した時刻を = です。|  
-|**duration**|**bigint**|セッションの実行時間 (秒単位) です。<br /><br /> 変更データ キャプチャ トランザクションがセッションに存在しない場合は 0 になります。<br /><br /> ときに**session_id** = 0、変更データ キャプチャ トランザクションですべてのセッションの期間を秒単位での合計。|  
-|**scan_phase**|**nvarchar(200)**|セッションの現在のフェーズです。 使用可能な値とその説明を次に示します。<br /><br /> 1:構成の読み取り<br />2:最初のスキャン、ハッシュ テーブルの作成<br />3:1 番目のスキャン<br />4:1 番目のスキャン<br />5:1 番目のスキャン<br />6:スキーマのバージョン管理<br />7:最後のスキャン<br />8:完成です<br /><br /> ときに**session_id** = 0 の場合、この値は"Aggregate"は常にします。|  
-|**error_count**|**int**|発生したエラーの数です。<br /><br /> ときに**session_id** = 0、すべてのセッションのエラーの合計数。|  
-|**start_lsn**|**nvarchar(23)**|セッションの開始 LSN です。<br /><br /> ときに**session_id** = 0 の場合、最後のセッションの開始の LSN。|  
-|**current_lsn**|**nvarchar(23)**|現在スキャン中の LSN です。<br /><br /> ときに**session_id** = 0 の場合、現在の LSN は 0。|  
-|**end_lsn**|**nvarchar(23)**|セッションの最終 LSN です。<br /><br /> NULL は、セッションがアクティブであることを表します。<br /><br /> ときに**session_id** = 0 の場合は、最後のセッションの LSN を終了します。|  
-|**tran_count**|**bigint**|処理された変更データ キャプチャ トランザクションの数です。 このカウンターはフェーズ 2 で設定されます。<br /><br /> ときに**session_id** = 0、すべてのセッションで処理されたトランザクションの数。|  
-|**last_commit_lsn**|**nvarchar(23)**|処理された最終コミット ログ レコードの LSN です。<br /><br /> ときに**session_id** = 0、任意のセッションの最終コミット ログ レコードの LSN。|  
-|**last_commit_time**|**datetime**|最終コミット ログ レコードが処理された時刻です。<br /><br /> ときに**session_id** 0、任意のセッションの最終コミット ログ レコードの時間を = です。|  
-|**log_record_count**|**bigint**|スキャンされたログ レコードの数です。<br /><br /> ときに**session_id** = 0、すべてのセッションのスキャン レコードの数。|  
-|**schema_change_count**|**int**|検出されたデータ定義言語 (DDL) 操作の数です。 このカウンターはフェーズ 6 で設定されます。<br /><br /> ときに**session_id** = 0、すべてのセッションの処理済み DDL 操作の数。|  
-|**command_count**|**bigint**|処理されたコマンドの数です。<br /><br /> ときに**session_id** = 0、すべてのセッションで処理されたコマンドの数。|  
-|**first_begin_cdc_lsn**|**nvarchar(23)**|変更データ キャプチャ トランザクションを含んでいた最初の LSN です。<br /><br /> ときに**session_id** = 0、変更データ キャプチャ トランザクションに含まれる最初の LSN。|  
-|**last_commit_cdc_lsn**|**nvarchar(23)**|変更データ キャプチャ トランザクションを含んでいた最終コミット ログ レコードの LSN です。<br /><br /> ときに**session_id**任意のセッションに含まれる変更データ キャプチャ トランザクションの 0、最後のコミット ログ レコードの LSN を =|  
-|**last_commit_cdc_time**|**datetime**|変更データ キャプチャ トランザクションを含んでいた最終コミット ログ レコードが処理された時刻です。<br /><br /> ときに**session_id** 0、最後のコミット ログ レコードのセッションに含まれる変更データ キャプチャ トランザクションが時間を = です。|  
-|**latency**|**int**|差を秒単位で間**end_time**と**last_commit_cdc_time**セッションでします。 このカウンターはフェーズ 7 の最後に設定されます。<br /><br /> ときに**session_id** = 0、セッションによって記録された最後の待機時間が 0 以外の値。|  
-|**empty_scan_count**|**int**|変更データ キャプチャ トランザクションが含まれていなかった、連続するセッションの数です。|  
-|**failed_sessions_count**|**int**|失敗したセッションの数です。|  
+|**session_id**|**int**|セッションの ID。<br /><br /> 0 = この行で返されるデータは、の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスが最後に起動されてからのすべてのセッションの集計です。|  
+|**start_time**|**DATETIME**|セッションの開始時刻です。<br /><br /> **Session_id** = 0 の場合、集計されたデータの収集が開始されます。|  
+|**end_time**|**DATETIME**|セッションが終了した時刻。<br /><br /> NULL は、セッションがアクティブであることを表します。<br /><br /> **Session_id** = 0 の場合、最後のセッションが終了した時刻。|  
+|**全**|**bigint**|セッションの実行時間 (秒単位) です。<br /><br /> 0 = セッションには変更データキャプチャトランザクションが含まれていません。<br /><br /> **Session_id** = 0 の場合、変更データキャプチャトランザクションを含むすべてのセッションの期間 (秒単位) の合計。|  
+|**scan_phase**|**nvarchar(200)**|セッションの現在のフェーズです。 使用可能な値とその説明を次に示します。<br /><br /> 1: 構成の読み取り<br />2: 最初のスキャン、ハッシュテーブルの作成<br />3: 2 回目のスキャン<br />4: 2 回目のスキャン<br />5: 2 回目のスキャン<br />6: スキーマのバージョン管理<br />7: 前回のスキャン<br />8: 完了<br /><br /> **Session_id** = 0 の場合、この値は常に "Aggregate" になります。|  
+|**error_count**|**int**|発生したエラーの数。<br /><br /> **Session_id** = 0 の場合、すべてのセッションで発生したエラーの合計数。|  
+|**start_lsn**|**nvarchar (23)**|セッションの開始 LSN です。<br /><br /> **Session_id** = 0 の場合、最後のセッションの開始 LSN です。|  
+|**current_lsn**|**nvarchar (23)**|スキャンされている現在の LSN。<br /><br /> **Session_id** = 0 の場合、現在の LSN は0です。|  
+|**end_lsn**|**nvarchar (23)**|セッションの最終 LSN です。<br /><br /> NULL は、セッションがアクティブであることを表します。<br /><br /> **Session_id** = 0 の場合、最後のセッションの終了 LSN です。|  
+|**tran_count**|**bigint**|処理された変更データキャプチャトランザクションの数。 このカウンターはフェーズ2で設定されます。<br /><br /> **Session_id** = 0 の場合、すべてのセッションで処理されたトランザクションの数。|  
+|**last_commit_lsn**|**nvarchar (23)**|最後に処理されたコミットログレコードの LSN。<br /><br /> **Session_id** = 0 の場合、任意のセッションの最後のコミットログレコードの LSN。|  
+|**last_commit_time**|**DATETIME**|最後のコミットログレコードが処理された時刻。<br /><br /> **Session_id** = 0 の場合、任意のセッションの最後のコミットログレコードの時刻。|  
+|**log_record_count**|**bigint**|スキャンされたログレコードの数。<br /><br /> **Session_id** = 0 の場合、すべてのセッションについてスキャンされたレコードの数。|  
+|**schema_change_count**|**int**|検出されたデータ定義言語 (DDL) 操作の数。 このカウンターはフェーズ6で設定されます。<br /><br /> **Session_id** = 0 の場合、すべてのセッションで処理された DDL 操作の数。|  
+|**command_count**|**bigint**|処理されたコマンドの数。<br /><br /> **Session_id** = 0 の場合、すべてのセッションで処理されたコマンドの数。|  
+|**first_begin_cdc_lsn**|**nvarchar (23)**|変更データ キャプチャ トランザクションを含んでいた最初の LSN です。<br /><br /> **Session_id** = 0 の場合、変更データキャプチャトランザクションを含んでいる最初の LSN です。|  
+|**last_commit_cdc_lsn**|**nvarchar (23)**|変更データキャプチャトランザクションが含まれていた最後のコミットログレコードの LSN。<br /><br /> **Session_id** = 0 の場合、変更データキャプチャトランザクションが含まれているすべてのセッションの最後のコミットログレコードの LSN|  
+|**last_commit_cdc_time**|**DATETIME**|変更データ キャプチャ トランザクションを含んでいた最終コミット ログ レコードが処理された時刻です。<br /><br /> **Session_id** = 0 の場合、変更データキャプチャトランザクションが含まれているセッションの最後のコミットログレコードの時刻。|  
+|**短い**|**int**|セッションの**end_time**と**last_commit_cdc_time**の差 (秒単位)。 このカウンターはフェーズ7の最後に設定されます。<br /><br /> **Session_id** = 0 の場合、セッションによって記録された最後の0以外の待機時間の値。|  
+|**empty_scan_count**|**int**|変更データキャプチャトランザクションが含まれていない連続したセッションの数。|  
+|**failed_sessions_count**|**int**|失敗したセッションの数。|  
   
-## <a name="remarks"></a>コメント  
- この動的管理ビューでは値がリセットされるたびに、インスタンスの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が開始します。  
+## <a name="remarks"></a>解説  
+ この動的管理ビューの値は、の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスが起動されるたびにリセットされます。  
   
 ## <a name="permissions"></a>アクセス許可  
- クエリに対する VIEW DATABASE STATE 権限が必要です、 **sys.dm_cdc_log_scan_sessions**動的管理ビュー。 動的管理ビューに対する権限の詳細については、次を参照してください。[動的管理ビューおよび関数&#40;TRANSACT-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)します。  
+ **Dm_cdc_log_scan_sessions**動的管理ビューに対してクエリを実行するには、VIEW DATABASE STATE 権限が必要です。 動的管理ビューに対する権限の詳細については、「 [transact-sql&#41;&#40;の動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)」を参照してください。  
   
-## <a name="examples"></a>使用例  
- 次の例では、最新のセッションの情報を返します。  
+## <a name="examples"></a>例  
+ 次の例では、最新のセッションに関する情報を返します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -78,7 +78,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [sys.dm_cdc_errors &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-errors.md)  
+ [dm_cdc_errors &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-errors.md)  
   
   
 

@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4badd9c961f5a0d7ca2d3e32185a7ab742628d97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62901786"
 ---
 # <a name="look-up-rfc-destination"></a>[RFC 転送先の参照]
@@ -37,20 +37,21 @@ ms.locfileid: "62901786"
   
      **[SAP BW 変換元エディター]** で、 **[RFC 転送先]** は、 **[実行モード]** の値が **[P - プロセス チェーンをトリガー]** または **[W - 通知を待機]** である場合にのみ表示されます。  
   
-## <a name="options"></a>および  
- **変換先**  
+## <a name="options"></a>オプション  
+ **宛先**  
  SAP Netweaver BW システムで定義された RFC 転送先の名前を表示します。  
   
  **ゲートウェイ ホスト**  
  ゲートウェイ ホストのサーバー名または IP アドレスを表示します。 通常、IP アドレスの名前は、SAP アプリケーション サーバーの名前と同じです。  
   
  **ゲートウェイ サービス**  
- `sapgwNN` という形式でゲートウェイ サービスの名前を表示します。`NN` はシステム番号です。  
+ 
+  `sapgwNN` という形式でゲートウェイ サービスの名前を表示します。`NN` はシステム番号です。  
   
  **プログラム ID**  
  RFC 転送先に関連付けられているプログラム ID を表示します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SAP BW ソース エディター &#40;[接続マネージャー] ページ&#41;](sap-bw-source-editor-connection-manager-page.md)   
  [SAP BW 変換先エディター &#40;[接続マネージャー] ページ&#41;](sap-bw-destination-editor-connection-manager-page.md)   
  [Microsoft Connector 1.1 for SAP BW の F1 ヘルプ](../microsoft-connector-for-sap-bw-f1-help.md)  

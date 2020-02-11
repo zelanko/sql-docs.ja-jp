@@ -16,16 +16,16 @@ ms.assetid: 4d977268-de9d-4bf0-b310-b63f6a0fb0db
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: a2c5adad052a33dc4d8b86b488ca1cc44737790e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68039019"
 ---
 # <a name="comments-in-xquery"></a>XQuery のコメント
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  XQuery にコメントを追加することができます。 使用して、コメントの文字列が追加されて、"`(:`「と」`:)`"区切り記号。 以下に例を示します。  
+  XQuery にコメントを追加できます。 コメント文字列は、"`(:`" および "`:)`" 区切り記号を使用して追加されます。 次に例を示します。  
   
 ```  
 declare @x xml  
@@ -36,7 +36,7 @@ SELECT @x.query('
 ')  
 ```  
   
- 次に、別の例の Instruction 列に対してクエリが指定されて、 **xml**型。  
+ **Xml**型の命令列に対してクエリを指定するもう1つの例を次に示します。  
   
 ```  
 SELECT Instructions.query('  

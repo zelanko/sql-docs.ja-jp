@@ -16,14 +16,14 @@ ms.assetid: f536acac-06ea-4b39-bfba-ee9902b01615
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 43ee83f0c08e5ea686758c5fe913d0afc9be572d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965550"
 ---
 # <a name="primarykey-and-unique-properties-example-vb"></a>PrimaryKey および Unique プロパティの例 (VB)
-この例では、 [PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md)と[Unique](../../../ado/reference/adox-api/unique-property-adox.md)のプロパティ、[インデックス](../../../ado/reference/adox-api/index-object-adox.md)します。 コードでは、2 つの列を含む新しいテーブルを作成します。 **PrimaryKey**と**Unique**プロパティを使用して 1 つの列、主キーが重複する値が許可されていません。  
+この例では、[インデックス](../../../ado/reference/adox-api/index-object-adox.md)の[PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md)および[Unique](../../../ado/reference/adox-api/unique-property-adox.md)プロパティを示します。 このコードでは、2つの列を持つ新しいテーブルを作成します。 **PrimaryKey**および**Unique**プロパティを使用して、重複する値が許可されない主キーを1つの列に設定します。  
   
 ```  
 ' BeginPrimaryKeyVB  
@@ -112,7 +112,7 @@ End Sub
 ' EndPrimaryKeyVB  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Index オブジェクト (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
  [PrimaryKey プロパティ (ADOX)](../../../ado/reference/adox-api/primarykey-property-adox.md)   
  [Unique プロパティ (ADOX)](../../../ado/reference/adox-api/unique-property-adox.md)

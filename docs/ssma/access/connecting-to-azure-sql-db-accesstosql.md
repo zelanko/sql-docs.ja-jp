@@ -1,5 +1,5 @@
 ---
-title: Azure SQL DB (AccessToSQL) への接続 |Microsoft Docs
+title: Azure SQL DB に接続しています (接続先) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,93 +19,94 @@ ms.assetid: 1ba0d113-dc05-4431-8689-e14a8821bafd
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 6c35168f1c77f0574b202b77da515dab497a3ec7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68006660"
 ---
-# <a name="connecting-to-azure-sql-db-accesstosql"></a>Azure SQL DB (AccessToSQL) への接続
-Access データベースを SQL Azure に移行するには、SQL Azure のターゲット インスタンスに接続する必要があります。 接続するときに、SSMA は SQL Azure のインスタンスのすべてのデータベースに関するメタデータを取得し、SQL Azure メタデータ エクスプ ローラーでデータベースのメタデータを表示します。 SSMA では、SQL Azure のインスタンスについてに接続しているがパスワードを保存しない情報を格納します。  
+# <a name="connecting-to-azure-sql-db-accesstosql"></a>Azure SQL DB への接続 (Sql server への接続)
+Access データベースを SQL Azure に移行するには、SQL Azure のターゲットインスタンスに接続する必要があります。 接続すると、SSMA は SQL Azure インスタンス内のすべてのデータベースに関するメタデータを取得し、SQL Azure メタデータエクスプローラーにデータベースのメタデータを表示します。 SSMA には、接続している SQL Azure のインスタンスに関する情報が格納されますが、パスワードは保存されません。  
   
-プロジェクトを閉じるまで SQL Azure への接続をアクティブに保ちます。 プロジェクトを再度開くと、アクティブなサーバーに接続する場合 SQL Azure に再接続する必要があります。 SQL Azure にデータベース オブジェクトを読み込むし、データを移行するまで、オフライン使用できます。  
+SQL Azure への接続は、プロジェクトを閉じるまでアクティブなままになります。 プロジェクトを再度開いたときに、サーバーへのアクティブな接続が必要な場合は SQL Azure に再接続する必要があります。 データベースオブジェクトを SQL Azure に読み込んでデータを移行するまで、オフラインで作業することができます。  
   
-SQL Azure のインスタンスに関するメタデータは、自動的に同期されません。 代わりに、SQL Azure メタデータ エクスプ ローラー内のメタデータを更新するには、SQL Azure メタデータを手動で更新する必要があります。 詳細については、このトピックの後半の「SQL Azure メタデータの同期」セクションを参照してください。  
+SQL Azure のインスタンスに関するメタデータは、自動的には同期されません。 代わりに SQL Azure メタデータエクスプローラーでメタデータを更新するには、SQL Azure メタデータを手動で更新する必要があります。 詳細については、このトピックで後述する「SQL Azure メタデータの同期」を参照してください。  
   
-## <a name="required-sql-azure-permissions"></a>SQL Azure に必要なアクセス許可  
-SQL Azure への接続に使用されるアカウントには、アカウントで実行された操作に応じてさまざまなアクセス許可が必要です。  
+## <a name="required-sql-azure-permissions"></a>必要な SQL Azure アクセス許可  
+SQL Azure に接続するために使用するアカウントには、アカウントが実行するアクションに応じて、異なるアクセス許可が必要です。  
   
--   アクセス オブジェクトに変換する[!INCLUDE[tsql](../../includes/tsql-md.md)]スクリプトの構文は、SQL Azure からメタデータを更新するかに変換された構文を保存する、アカウントは SQL Azure のインスタンスにログオンする権限が必要です。  
+-   Access オブジェクトを構文に[!INCLUDE[tsql](../../includes/tsql-md.md)]変換したり、SQL Azure からメタデータを更新したり、変換された構文をスクリプトに保存したりするには、アカウントに SQL Azure のインスタンスにログオンする権限が必要です。  
   
--   を SQL Azure にデータベース オブジェクトを読み込むにはアクセス許可の最小要件、メンバーシップ、 **db_owner**ターゲット データベースのデータベース ロール。  
+-   データベースオブジェクトを SQL Azure に読み込むには、ターゲットデータベースの**db_owner**データベースロールのメンバーシップである最低限の権限が必要です。  
   
-## <a name="establishing-a-sql-azure-connection"></a>SQL Azure を確立する接続  
-Access データベース オブジェクトを SQL Azure の構文に変換する前に、Access データベースまたはデータベースを移行する SQL Azure のインスタンスへの接続を確立する必要があります。  
+## <a name="establishing-a-sql-azure-connection"></a>SQL Azure 接続の確立  
+Access データベースオブジェクトを SQL Azure 構文に変換する前に、Access データベースを移行する SQL Azure のインスタンスへの接続を確立する必要があります。  
   
-接続のプロパティを定義するときに、オブジェクトとデータを移行するデータベースを指定します。 SQL Azure に接続した後は、アクセス、スキーマ レベルでは、このマッピングをカスタマイズできます。 詳細については、次を参照してください[Access データベースを SQL Server スキーマへのマッピング。](mapping-source-and-target-databases-accesstosql.md)  
+接続プロパティを定義するときに、オブジェクトとデータを移行するデータベースも指定します。 このマッピングは、SQL Azure に接続した後、Access スキーマレベルでカスタマイズできます。 詳細については、「 [Access データベースの SQL Server スキーマへのマッピング](mapping-source-and-target-databases-accesstosql.md)」を参照してください。  
   
 > [!IMPORTANT]  
-> SQL Azure に接続する前に、SQL Azure のインスタンスが実行されていて、接続を受け入れることを確認します。  
+> SQL Azure に接続する前に、SQL Azure のインスタンスが実行されていて、接続を受け入れることができることを確認してください。  
   
 **SQL Azure に接続するには**  
   
-1.  **ファイル**メニューの  **SQL Azure への接続**(このオプションは、プロジェクトの作成後に有効です)。  
+1.  [**ファイル**] メニューの [ **SQL Azure に接続**] を選択します (このオプションは、プロジェクトの作成後に有効になります)。  
   
-    SQL Azure に接続されていた場合、コマンド名になります**SQL Azure に再接続**します。  
+    以前に SQL Azure に接続している場合は、コマンド名が**SQL Azure に再接続**されます。  
   
-2.  接続ダイアログ ボックスで入力するか、SQL Azure のサーバー名を選択します。  
+2.  [接続] ダイアログボックスで、SQL Azure のサーバー名を入力または選択します。  
   
-3.  入力を選択または**参照**データベース名。  
+3.  データベース名を入力、選択、または**参照**します。  
   
-4.  入力または選択**UserName**します。  
+4.  [**ユーザー名**] を入力または選択します。  
   
-5.  入力、**パスワード**します。  
+5.  **パスワード**を入力します。  
   
-6.  SSMA では、SQL Azure に暗号化された接続をお勧めします。  
+6.  SSMA では、SQL Azure への暗号化接続を推奨しています。  
   
-7.  **[接続]** をクリックします。  
+7.  
+  **[接続]** をクリックします。  
   
 > [!IMPORTANT]  
-> アクセス用の SSMA がへの接続をサポートしていません**マスター** SQL Azure データベース。  
+> SSMA for Access は、SQL Azure の**master**データベースへの接続をサポートしていません。  
   
-使用して最初にデータベースを作成するには、SQL Azure アカウントには、データベースがない場合、 **Azure データベースの作成**のクリックで表示されるオプション**参照**ボタンをクリックします。  
+SQL Azure アカウントにデータベースが存在しない場合は、[**参照**のクリック] ボタンに表示される [ **Azure データベースの作成**] オプションを使用して最初のデータベースを作成できます。  
   
-## <a name="synchronizing-sql-azure-metadata"></a>SQL Azure の同期メタデータ  
-SQL Azure データベースに関するメタデータは、自動的に更新されません。 SQL Azure メタデータ エクスプ ローラー内のメタデータは、SQL Azure に最初に接続すると、最後を手動でメタデータのスナップショットには、メタデータが更新されました。 すべてのデータベースまたは任意の 1 つのデータベースまたはデータベース オブジェクトのメタデータを手動で更新することができます。  
+## <a name="synchronizing-sql-azure-metadata"></a>SQL Azure メタデータの同期  
+SQL Azure データベースに関するメタデータは自動的に更新されません。 SQL Azure メタデータエクスプローラーのメタデータは、最初に SQL Azure に接続したとき、またはメタデータを手動で更新したときにメタデータのスナップショットになります。 すべてのデータベース、または任意の1つのデータベースまたはデータベースオブジェクトのメタデータを手動で更新できます。  
   
 **メタデータを同期するには**  
   
 1.  SQL Azure に接続していることを確認します。  
   
-2.  SQL Azure メタデータ エクスプ ローラーで、データベースまたはデータベースのスキーマを更新する横のチェック ボックスを選択します。  
+2.  SQL Azure メタデータエクスプローラーで、更新するデータベースまたはデータベーススキーマの横にあるチェックボックスをオンにします。  
   
-    たとえば、すべてのデータベースのメタデータを更新するには、データベースの横にあるボックスを選択します。  
+    たとえば、すべてのデータベースのメタデータを更新するには、[データベース] の横にあるチェックボックスをオンにします。  
   
-3.  データベース、または個々 のデータベースまたはデータベースのスキーマを右クリックし、**データベースと同期する**します。  
+3.  [データベース]、または個々のデータベースまたはデータベーススキーマを右クリックし、[**データベースとの同期**] を選択します。  
   
-## <a name="refreshing-sql-azure-metadata"></a>SQL Azure の更新のメタデータ  
-SQL Azure のスキーマは、接続した後に変更する場合は、サーバーからメタデータを更新できます。  
+## <a name="refreshing-sql-azure-metadata"></a>SQL Azure メタデータの更新  
+接続後に SQL Azure スキーマが変更された場合は、サーバーからメタデータを更新できます。  
   
 **SQL Azure メタデータを更新するには**  
   
--   SQL Azure メタデータ エクスプ ローラーで右クリックして**データベース**、し、**データベースからの更新**します。  
+-   SQL Azure メタデータエクスプローラーで、[**データベース**] を右クリックし、[**データベースから更新**] を選択します。  
   
-## <a name="reconnecting-to-sql-azure"></a>SQL Azure への再接続  
-プロジェクトを閉じるまで SQL Azure への接続をアクティブに保ちます。 プロジェクトを再度開くと、アクティブなサーバーに接続する場合 SQL Azure に再接続する必要があります。 SQL Azure にデータベース オブジェクトを読み込むし、データを移行するまで、オフライン使用できます。  
+## <a name="reconnecting-to-sql-azure"></a>SQL Azure に再接続しています  
+SQL Azure への接続は、プロジェクトを閉じるまでアクティブなままになります。 プロジェクトを再度開いたときに、サーバーへのアクティブな接続が必要な場合は SQL Azure に再接続する必要があります。 データベースオブジェクトを SQL Azure に読み込んでデータを移行するまで、オフラインで作業することができます。  
   
-SQL Azure に再接続するための手順では、接続を確立するための手順と同じです。  
+SQL Azure に再接続する手順は、接続を確立する手順と同じです。  
   
-## <a name="next-step"></a>次の手順  
-移行の次の手順は、プロジェクトのニーズによって異なります。  
+## <a name="next-step"></a>次のステップ  
+移行の次のステップは、プロジェクトのニーズによって異なります。  
   
--   Access スキーマと SQL Azure データベースとスキーマ間のマッピングをカスタマイズするを参照してください。 [SQL Server スキーマへのマッピングの Access データベース](mapping-source-and-target-databases-accesstosql.md)します。  
+-   Access スキーマと SQL Azure データベースおよびスキーマ間のマッピングをカスタマイズするには、「 [SQL Server スキーマへの Access データベースのマッピング](mapping-source-and-target-databases-accesstosql.md)」を参照してください。  
   
--   プロジェクトの構成オプションをカスタマイズするを参照してください。[プロジェクト オプションの設定](setting-conversion-and-migration-options-accesstosql.md)します。  
+-   プロジェクトの構成オプションをカスタマイズするには、「[プロジェクトオプションの設定](setting-conversion-and-migration-options-accesstosql.md)」を参照してください。  
   
--   ソースとターゲットのデータ型のマッピングをカスタマイズするを参照してください。[マッピング ソースとターゲットのデータ型](mapping-source-and-target-data-types-accesstosql.md)します。  
+-   ソースとターゲットのデータ型のマッピングをカスタマイズするには、「[ソースとターゲットのデータ型のマッピング](mapping-source-and-target-data-types-accesstosql.md)」を参照してください。  
   
--   これらのタスクを実行する必要はありません場合、Access データベース オブジェクトの定義を SQL Azure のオブジェクトの定義に変換できます。 詳細については、次を参照してください[Access データベースの変換。](converting-access-database-objects-accesstosql.md)  
+-   これらのタスクを実行する必要がない場合は、Access データベースオブジェクト定義を SQL Azure オブジェクト定義に変換できます。 詳細については、「 [Access データベースの変換](converting-access-database-objects-accesstosql.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
-[SQL Server へのアクセス データベースの移行](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
+## <a name="see-also"></a>参照  
+[Access データベースの SQL Server への移行](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

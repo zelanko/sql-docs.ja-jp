@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_xtp_hash_index_stats (TRANSACT-SQL) |Microsoft Docs
+title: dm_db_xtp_hash_index_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -21,49 +21,49 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f2bbaaaa6770c5644da227c7e64a9ff9e0fc2c13
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68026842"
 ---
-# <a name="sysdmdbxtphashindexstats-transact-sql"></a>sys.dm_db_xtp_hash_index_stats (Transact-SQL)
+# <a name="sysdm_db_xtp_hash_index_stats-transact-sql"></a>dm_db_xtp_hash_index_stats (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   これらの統計は、バケット数を理解してチューニングするために役立ちます。 また、インデックス キーに多数の重複があるケースを検出するためにも使用できます。  
   
- チェーンの平均の長さが長いことは、多数の行が同じバケットにハッシュされていることを示します。 これは、次の理由で発生する可能性があります。  
+ 平均チェーン長が大きい場合は、同じバケットに多数の行がハッシュされていることを示します。 これは、次の場合に発生する可能性があります。  
   
--   空のバケットの数が少ない場合、またはチェーンの長さの平均値が最大値に近い場合は、合計バケット数が少なすぎる可能性があります。 これにより、多くの異なるインデックス キーが同じバケットにハッシュされます。  
+-   空のバケットの数が少ない場合、またはチェーンの長さの平均値が最大値に近い場合は、バケット数の合計が少なすぎる可能性があります。 これにより、多くの異なるインデックスキーが同じバケットにハッシュされます。  
   
--   空のバケットの数が多い場合、またはチェーンの長さの最大値が平均値よりも高い場合、インデックス キーの値が重複していて行が多数あるか、キーの値にスキューがある可能性があります。 インデックス キーの値が同じである行はすべて同じバケットにハッシュされるため、そのバケット内のチェーンの長さは長くなります。  
+-   空のバケットの数が多い場合、またはチェーンの長さの最大値が平均値よりも高い場合、インデックス キーの値が重複していて行が多数あるか、キーの値にスキューがある可能性があります。 同じインデックスキー値を持つすべての行が同じバケットにハッシュされるため、そのバケットには長いチェーン長が存在します。  
   
-チェーンの長さが長いことは、SELECT と INSERT を含む個々の列に対して行われるすべての操作のパフォーマンスに著しい影響を与える可能性があります。 チェーンの長さが短く、空のバケット数が多いことは、bucket_count の値が高すぎることを意味します。 これにより、インデックス スキャンのパフォーマンスが低下します。  
+長いチェーン長は、SELECT や INSERT など、個々の行に対するすべての DML 操作のパフォーマンスに大きな影響を与える可能性があります。 チェーンの長さが短く、空のバケット数が多いことは、bucket_count の値が高すぎることを意味します。 これにより、インデックス スキャンのパフォーマンスが低下します。  
   
 > [!WARNING]
-> **sys.dm_db_xtp_hash_index_stats**テーブル全体をスキャンします。 そのため、データベースの大規模なテーブルがある場合**sys.dm_db_xtp_hash_index_stats**実行時間がかかる場合があります。  
+> **dm_db_xtp_hash_index_stats**は、テーブル全体をスキャンします。 そのため、データベースに大きなテーブルがある場合は、 **dm_db_xtp_hash_index_stats**に長時間かかることがあります。  
   
-詳細については、次を参照してください。[メモリ最適化テーブルのハッシュ インデックス](../../relational-databases/sql-server-index-design-guide.md#hash_index)します。  
+詳細については、「[メモリ最適化テーブルのハッシュインデックス](../../relational-databases/sql-server-index-design-guide.md#hash_index)」を参照してください。  
   
-|列名|型|説明|  
+|列名|種類|[説明]|  
 |-----------------|----------|-----------------|  
 |object_id|**int**|親テーブルのオブジェクト ID。|  
-|xtp_object_id|**bigint**|メモリ最適化テーブルの ID です。|  
+|xtp_object_id|**bigint**|メモリ最適化テーブルの ID。|  
 |index_id|**int**|インデックス ID。|  
 |total_bucket_count|**bigint**|インデックス内のハッシュ バケットの総数。|  
 |empty_bucket_count|**bigint**|インデックス内の空のハッシュ バケットの数。|  
-|avg_chain_length|**bigint**|インデックス内のすべてのハッシュ バケットを対象とした行チェーンの長さの平均値。|  
-|max_chain_length|**bigint**|ハッシュ バケット内の行チェーンの長さの最大値。|  
-|xtp_object_id|**bigint**|メモリ最適化テーブルに対応する、インメモリ OLTP オブジェクトの ID。|  
+|avg_chain_length|**bigint**|インデックス内のすべてのハッシュバケットに対する行チェーンの平均の長さ。|  
+|max_chain_length|**bigint**|ハッシュバケット内の行チェーンの最大長。|  
+|xtp_object_id|**bigint**|メモリ最適化テーブルに対応するインメモリ OLTP オブジェクト ID。|  
   
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW DATABASE STATE 権限が必要です。  
 
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-troubleshooting-hash-index-bucket-count"></a>A. ハッシュ インデックスのバケット数のトラブルシューティング
 
-既存のテーブルのハッシュ インデックスのバケット数のトラブルシューティングを行うには、次のクエリを使用できます。 クエリでは、ユーザー テーブルで空のバケットとハッシュ インデックスのすべてのチェーンの長さの割合に関する統計情報を返します。
+次のクエリを使用して、既存のテーブルのハッシュインデックスバケット数のトラブルシューティングを行うことができます。 このクエリは、ユーザーテーブルのすべてのハッシュインデックスについて、空のバケットの割合とチェーン長に関する統計を返します。
 
 ```sql
   SELECT  
@@ -87,11 +87,11 @@ ms.locfileid: "68026842"
   ORDER BY [table], [index];  
 ``` 
 
-このクエリの結果を解釈する方法の詳細については、次を参照してください。[メモリ最適化テーブルのハッシュ インデックスのトラブルシューティング](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md)します。  
+このクエリの結果を解釈する方法の詳細については、「[メモリ最適化テーブルのハッシュインデックスのトラブルシューティング](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md)」を参照してください。  
 
-### <a name="b-hash-index-statistics-for-internal-tables"></a>B. 内部テーブルのハッシュ インデックスの統計
+### <a name="b-hash-index-statistics-for-internal-tables"></a>B. 内部テーブルのハッシュインデックスの統計
 
-特定の機能は、ハッシュ インデックスをメモリ最適化テーブルの列ストア インデックスなどを利用する内部テーブルを使用します。 次のクエリでは、ユーザー テーブルにリンクされている内部テーブルのハッシュ インデックスの統計を返します。
+一部の機能では、メモリ最適化テーブルの列ストアインデックスなど、ハッシュインデックスを利用する内部テーブルが使用されます。 次のクエリは、ユーザーテーブルにリンクされている内部テーブルのハッシュインデックスの統計を返します。
 
 ```sql
   SELECT  
@@ -112,9 +112,9 @@ ms.locfileid: "68026842"
   ORDER BY [user_table], [internal_table_type], [index]; 
 ```
 
-内部テーブルのインデックスの BUCKET_COUNT を変更することはできません、したがってこのクエリの出力と見なす役に立つだけのことに注意してください。 必要な操作はありません。  
+内部テーブルのインデックスの BUCKET_COUNT を変更することはできないため、このクエリの出力は有益であると見なされる必要があります。 操作は必要ありません。  
 
-このクエリは、内部テーブルのハッシュ インデックスを利用する機能を使用している場合を除き、行を返す必要はありません。 次のメモリ最適化テーブルには、列ストア インデックスが含まれています。 このテーブルを作成すると、内部テーブルのハッシュ インデックスが表示されます。
+内部テーブルでハッシュインデックスを利用する機能を使用している場合を除き、このクエリは行を返すとは限りません。 次のメモリ最適化テーブルには、列ストアインデックスが含まれています。 このテーブルを作成すると、内部テーブルにハッシュインデックスが表示されます。
 
 ```sql
   CREATE TABLE dbo.table_columnstore
@@ -125,6 +125,6 @@ ms.locfileid: "68026842"
 ```
 
 ## <a name="see-also"></a>参照  
- [メモリ最適化テーブルの動的管理ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [メモリ最適化テーブルの動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

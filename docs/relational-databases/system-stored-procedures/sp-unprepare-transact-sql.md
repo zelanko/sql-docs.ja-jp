@@ -1,5 +1,5 @@
 ---
-title: sp_unprepare (TRANSACT-SQL) |Microsoft Docs
+title: sp_unprepare (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -19,16 +19,16 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ee74778b48476328b21c7bdfe4d4e5dd895d8204
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68027659"
 ---
-# <a name="spunprepare-transact-sql"></a>sp_unprepare (Transact-SQL)
+# <a name="sp_unprepare-transact-sql"></a>sp_unprepare (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-  Sp_prepare ストアド プロシージャによって作成された実行プランを破棄します。 sp_unprepare は、ID を指定して呼び出される、表形式データ ストリーム (TDS) パケットで 15 を = です。  
+  Sp_prepare ストアドプロシージャによって作成された実行プランを破棄します。 sp_unprepare は、ID = 15 を指定した場合に表形式のデータストリーム (TDS) パケットで呼び出されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,23 +39,11 @@ sp_unprepare handle
 ```  
   
 ## <a name="arguments"></a>引数  
- *handle*  
- *処理*sp_prepare から返される値。  
+ *扱え*  
+ Sp_prepare によって返される*ハンドル*値です。  
   
-## <a name="examples"></a>使用例  
- 次の例では、準備するを実行するおよび単純なステートメントを準備します。  
-  
-```SQL  
-DECLARE @P1 int;  
-EXEC sp_prepare @P1 output,   
-    N'@P1 nvarchar(128), @P2 nvarchar(100)',  
-    N'SELECT database_id, name FROM sys.databases WHERE name = @P1 AND state_desc = @P2';  
-EXEC sp_execute @P1, N'tempdb', N'ONLINE';  
-EXEC sp_unprepare @P1;  
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 次の例では、準備するを実行するおよび単純なステートメントを準備します。  
+## <a name="examples"></a>例  
+ 次の例では、単純なステートメントを準備し、実行し、準備を解除します。  
   
 ```SQL  
 DECLARE @P1 int;  
@@ -66,6 +54,18 @@ EXEC sp_execute @P1, N'tempdb', N'ONLINE';
 EXEC sp_unprepare @P1;  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ 次の例では、単純なステートメントを準備し、実行し、準備を解除します。  
+  
+```SQL  
+DECLARE @P1 int;  
+EXEC sp_prepare @P1 output,   
+    N'@P1 nvarchar(128), @P2 nvarchar(100)',  
+    N'SELECT database_id, name FROM sys.databases WHERE name = @P1 AND state_desc = @P2';  
+EXEC sp_execute @P1, N'tempdb', N'ONLINE';  
+EXEC sp_unprepare @P1;  
+```  
+  
+## <a name="see-also"></a>参照  
  [sp_prepare &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-prepare-transact-sql.md)   
 

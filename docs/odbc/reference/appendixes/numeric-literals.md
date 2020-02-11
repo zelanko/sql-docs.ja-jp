@@ -16,16 +16,16 @@ ms.assetid: 9dc23656-61e1-4b62-a07f-64ab716e45d2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3409376b5fd2f71ecff8d510d17ce3771e63fa73
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67990686"
 ---
 # <a name="numeric-literals"></a>数値リテラル
-数値リテラルは、文字の文字列に数値データの値が格納されている場合に使用されます。 SQL_C_CHAR の文字列を数値の SQL データの変換または SQL_CHAR、SQL_VARCHAR または文字列に数値の C データの変換の場合は、数値リテラルの構文は、ターゲット内に格納されるかを指定に使用されます。 数値の SQL データを SQL_C_CHAR 文字列として格納されている数値または数値の C データを SQL_CHAR 文字列として格納されている数値の変換は、この構文は、ソースに格納されている検証に使用されます。  
+数値リテラルは、数値データ値が文字列に格納されるときに使用されます。 数値の SQL データから SQL_C_CHAR 文字列への変換、または数値 C データから SQL_CHAR または SQL_VARCHAR 文字列への変換では、数値リテラル構文を使用して、ターゲットに格納されている内容を指定します。 SQL_C_CHAR 文字列として格納されている数値を数値の SQL データに変換する場合、または数値の C データに SQL_CHAR 文字列として格納する数値を変換する場合は、この構文を使用して、ソースに格納されている内容を検証します。  
   
- 数値リテラルは、セクションで定義されている構文に従う必要があります[数値リテラルの構文](../../../odbc/reference/appendixes/numeric-literal-syntax.md)付録 c:SQL 文法。  
+ 数値リテラルは、「付録 C: SQL 文法」の「[数値リテラル構文](../../../odbc/reference/appendixes/numeric-literal-syntax.md)」で定義されている構文に準拠している必要があります。  
   
  このセクションでは、次のトピックを扱います。  
   

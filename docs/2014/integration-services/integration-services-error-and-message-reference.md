@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ec7f81ec412a2ed597f8cd282b637fc5adf73ebf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62892660"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Integration Services のエラーおよびメッセージのリファレンス
@@ -44,7 +44,8 @@ ms.locfileid: "62892660"
 -   [データ フロー コンポーネントのエラー メッセージ (DTSBC_E_*)](#msgPipeline)  
   
 ##  <a name="msgError"></a> エラー メッセージ  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のエラー メッセージのシンボル名は、`DTS_E_` で始まります。  
+ 
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のエラー メッセージのシンボル名は、`DTS_E_` で始まります。  
   
 |16 進コード|10 進コード|シンボル名|説明|  
 |----------------------|------------------|-------------------|-----------------|  
@@ -375,7 +376,7 @@ ms.locfileid: "62892660"
 |0xC00220E4|-1073602332|DTS_E_TKEXECPACKAGE_UNABLETOLOAD|エラー 0x%1!8.8X! がパッケージの読み込みを準備中に発生しました。 %2。|  
 |0xC0024102|-1073594110|DTS_E_TASKVALIDATIONFAILED|タスクの Validate メソッドが失敗し、エラー コード 0x%1!8.8X! (%2) が検出されました。 タスクの Validate メソッドが成功し、"out" パラメーターを使用して結果が示される必要があります。|  
 |0xC0024104|-1073594108|DTS_E_TASKEXECUTEFAILED|タスクの Execute メソッドが失敗し、エラー コード 0x%1!8.8X! (%2) が検出されました。 タスクの Execute メソッドは成功し、"out" パラメーターを使用して結果が示される必要があります。|  
-|0xC0024105|-1073594107|DTS_E_RETRIEVINGDEPENDENCIES|タスク "%1" で依存関係を取得中にエラー 0x%2!8.8X! が 発生しました。 エラーが発生したとき、ランタイムがタスクの依存関係のコレクションから依存関係を取得しようとしていました。 タスクにより、いずれかの依存関係のインターフェイスが正しく実装されなかった可能性があります。|  
+|0xC0024105|-1073594107|DTS_E_RETRIEVINGDEPENDENCIES|タスク "%1" で依存関係を取得中にエラー 0x%2!8.8X! 発生しました。 エラーが発生したとき、ランタイムがタスクの依存関係のコレクションから依存関係を取得しようとしていました。 タスクにより、いずれかの依存関係のインターフェイスが正しく実装されなかった可能性があります。|  
 |0xC0024107|-1073594105|DTS_E_TASKVALIDATIONERROR|タスクの検証中にエラーが発生しました。|  
 |0xC0024108|-1073594104|DTS_E_CONNECTIONSTRINGFORMAT|接続文字列の形式が無効です。 セミコロンで区切った X=Y という形式が 1 つ以上含まれている必要があります。 このエラーは、データベース接続マネージャーに、コンポーネントを持たない接続文字列が設定されている場合に発生します。|  
 |0xC0024109|-1073594103|DTS_E_UNQUOTEDSEMICOLON|接続文字列コンポーネントには、引用符で囲まれていないセミコロンを含めることはできません。 値にセミコロンを含める必要がある場合は、値全体を引用符で囲みます。 このエラーは、InitialCatalog プロパティなどの接続文字列の値に引用符で囲まれていないセミコロンが含まれている場合に発生します。|  
@@ -1413,7 +1414,7 @@ ms.locfileid: "62892660"
 |0xC02020D6|-1071636266|DTS_E_TXSAMPLINGINVALIDROWS|行数 %2!ld! は、"%1" プロパティでは有効ではありません。 行数は 0 よりも大きな値にする必要があります。|  
 |0xC02020D7|-1071636265|DTS_E_RAWSTRINGINPUTTOOLONG|アダプターは、長さ %1!I64d! バイトの文字列を書き込むように要求されましたが、 すべてのデータの長さは 4,294,967,295 バイト未満である必要があります。|  
 |0xC02020D9|-1071636263|DTS_E_ATLEASTONEINPUTMUSTBEMAPPEDTOOUTPUT|入力が出力にマップされませんでした。 "%1" は、少なくとも 1 つの入力列を出力列にマップする必要があります。|  
-|0xC02020DB|-1071636261|DTS_E_CANNOTCONVERTDATATYPESWITHDIFFERENTCODEPAGES|コード ページ %2!d! の "%1" から コード ページ %4!d! の "%3" への変換は サポートされていません。|  
+|0xC02020DB|-1071636261|DTS_E_CANNOTCONVERTDATATYPESWITHDIFFERENTCODEPAGES|コード ページ %2!d! の "%1" から コード ページ %4!d! の "%3" への変換は はサポートされていません。|  
 |0xC02020DC|-1071636260|DTS_E_COLUMNNOTMAPPEDTOEXTERNALMETADATACOLUMN|%1 に対する外部メタデータ列マッピングは無効です。  外部メタデータ列 ID を 0 にすることはできません。|  
 |0xC02020DD|-1071636259|DTS_E_COLUMNMAPPEDTONONEXISTENTEXTERNALMETADATACOLUMN|%1 が、存在しない外部メタデータ列にマップされています。|  
 |0xC02020E5|-1071636251|DTS_E_UNABLETOWRITELOBDATATOBUFFER|DT_TEXT、DT_NTEXT、または DT_IMAGE 型の大きなサイズのオブジェクト データを、列 "%1" のデータ フロー タスク バッファーに書き込めませんでした。|  
@@ -1459,7 +1460,7 @@ ms.locfileid: "62892660"
 |0xC0204010|-1071628272|DTS_E_CANONLYSETCOMPFLAGSONSOURCE|"%2" はソース出力ではないので、"%1" の ComparisonFlags プロパティを 0 以外の値に設定することはできません。 出力 "outputname" (ID) がソース出力ではないので、出力列 "colname" (ID) の ComparisonFlags プロパティを 0 以外に設定することはできません。|  
 |0xC0204011|-1071628271|DTS_E_NONSTRINGCOMPARISONFLAGSNOTZERO|"%1" は文字列型でないため、比較フラグを 0 にする必要があります。 文字列型の列では ComparisonFlags を 0 以外にしか設定できません。|  
 |0xC0204012|-1071628270|DTS_E_COMPFLAGSONLYONSORTCOL|"%1" の SortKeyPosition が 0 に設定されているため、ComparisonFlags プロパティを 0 以外に設定することはできません。 出力列の SortKeyPosition が 0 以外の場合のみ、ComparisonFlags も 0 以外に設定できます。|  
-|0xC0204013|-1071628269|DTS_E_READONLYSTOCKPROPERTY|プロパティは読み取り専用です。|  
+|0xC0204013|-1071628269|DTS_E_READONLYSTOCKPROPERTY|このプロパティは読み取り専用です。|  
 |0xC0204014|-1071628268|DTS_E_INVALIDDATATYPE|%1 には無効なデータ型の値 (%2!ld!) が設定されています。|  
 |0xC0204015|-1071628267|DTS_E_CODEPAGEREQUIRED|"%1" にはコード ページを設定する必要がありますが、渡された値は 0 でした。|  
 |0xC0204016|-1071628266|DTS_E_INVALIDSTRINGLENGTH|"%1" の長さは無効です。 %2!ld! から %3!ld! までの長さにする %3!ld! までです。|  
@@ -2018,7 +2019,8 @@ ms.locfileid: "62892660"
 |||DTS_E_COMPONENTINITFAILED|エラー 0x%2!8.8X! " %3!s!" によって コンポーネント %1!s! の初期化に失敗しました 。|  
   
 ##  <a name="msgWarning"></a> 警告メッセージ  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の警告メッセージのシンボル名は、`DTS_W_` で始まります。  
+ 
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の警告メッセージのシンボル名は、`DTS_W_` で始まります。  
   
 |16 進コード|10 進コード|シンボル名|説明|  
 |----------------------|------------------|-------------------|-----------------|  
@@ -2164,7 +2166,8 @@ ms.locfileid: "62892660"
 |0x930D|37645|DTS_W_EXTERNALTABLECOLSOUTOFSYNC|テーブル "%1" は変更されています。 このテーブルに新しい列が追加されている可能性があります。|  
   
 ##  <a name="msgInfo"></a> 情報メッセージ  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の情報メッセージのシンボル名は、`DTS_I_` で始まります。  
+ 
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の情報メッセージのシンボル名は、`DTS_I_` で始まります。  
   
 |16 進コード|10 進コード|シンボル名|説明|  
 |----------------------|------------------|-------------------|-----------------|  
@@ -2263,7 +2266,8 @@ ms.locfileid: "62892660"
 |0x4020F42C|1075901484|DTS_I_OLEDBDESTZEROMAXCOMMITSIZE|OLE DB 変換先 "%1" の挿入コミット サイズの最大値プロパティは 0 に設定されています。 このプロパティの設定により、実行中のパッケージは応答を停止する可能性があります。 詳細については、[OLE DB 変換先エディター] ([接続マネージャー] ページ) の F1 ヘルプ トピックを参照してください。|  
   
 ##  <a name="msgGeneral"></a> 一般的なメッセージおよびイベント メッセージ  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のエラー メッセージのシンボル名は、`DTS_MSG_` で始まります。  
+ 
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のエラー メッセージのシンボル名は、`DTS_MSG_` で始まります。  
   
 |16 進コード|10 進コード|シンボル名|説明|  
 |----------------------|------------------|-------------------|-----------------|  
@@ -2302,7 +2306,8 @@ ms.locfileid: "62892660"
 |0x4010310E|1074802958|DTS_MSG_EVENTLOGENTRY_INFORMATION|イベント名: %1<br /><br /> メッセージ: %9<br /><br /> 演算子: %2<br /><br /> ソース名: %3<br /><br /> ソース ID: %4<br /><br /> 実行 ID: %5<br /><br /> 開始時刻: %6<br /><br /> 終了時刻: %7<br /><br /> データ コード: %8|  
   
 ##  <a name="msgSuccess"></a> 成功時のメッセージ  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の成功時のメッセージのシンボル名は、`DTS_S_` で始まります。  
+ 
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の成功時のメッセージのシンボル名は、`DTS_S_` で始まります。  
   
 |16 進コード|10 進コード|シンボル名|説明|  
 |----------------------|------------------|-------------------|-----------------|  
@@ -2311,7 +2316,8 @@ ms.locfileid: "62892660"
 |0x200001|2097153|DTS_S_EXPREVALTRUNCATIONOCCURRED|式の評価中に切り捨てが発生しました。 評価中に切り捨てが発生しました。たとえば、中間手順のある時点で発生した可能性があります。|  
   
 ##  <a name="msgPipeline"></a> データ フロー コンポーネントのエラー メッセージ  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のエラー メッセージのシンボル名は、`DTSBC_E_` で始まります。"BC" は、ほとんどの Microsoft データ フロー コンポーネントが派生しているネイティブ基本クラスであることを示します。  
+ 
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のエラー メッセージのシンボル名は、`DTSBC_E_` で始まります。"BC" は、ほとんどの Microsoft データ フロー コンポーネントが派生しているネイティブ基本クラスであることを示します。  
   
 |16 進コード|10 進コード|シンボル名|説明|  
 |----------------------|------------------|-------------------|-----------------|  

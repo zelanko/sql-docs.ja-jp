@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 102485ede0e52389d43bdb64742a2564aaa71419
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68016794"
 ---
 # <a name="closingperiod-mdx"></a>ClosingPeriod (MDX)
@@ -29,36 +29,36 @@ ClosingPeriod( [ Level_Expression [ ,Member_Expression ] ] )
   
 ## <a name="arguments"></a>引数  
  *Level_Expression*  
- レベルを返す有効な多次元式 (MDX) 式。  
+ レベルを返す有効な多次元式 (MDX) 式です。  
   
- *メンバー式*  
+ *Member_Expression*  
  メンバーを 1 つ返す有効な多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>コメント  
- この関数は、Time 型のディメンションに対して使用する主な対象が、どのディメンションでも使用できます。  
+## <a name="remarks"></a>解説  
+ この関数は、主に Time 型のディメンションに対して使用することを目的としていますが、どのディメンションでも使用できます。  
   
--   レベル式が指定されている場合、 **ClosingPeriod**関数は、ディメンションを指定されたレベルを含み、指定されたレベルで既定のメンバーの子孫のうち、最後の兄弟を返しますを使用します。  
+-   レベル式が指定されている場合、 **Closingperiod**関数は、指定されたレベルを含むディメンションを使用し、指定されたレベルの既定のメンバーの子孫のうち、最後の兄弟を返します。  
   
--   レベル式もメンバー式が指定されている場合、 **ClosingPeriod**関数は、指定されたレベルで指定されたメンバーの子孫のうち、最後の兄弟を返します。  
+-   レベル式とメンバー式の両方が指定されている場合、 **Closingperiod**関数は、指定されたレベルで指定されたメンバーの子孫のうち、最後の兄弟を返します。  
   
--   レベル式もメンバー式が指定されている場合、 **ClosingPeriod**関数を使用して既定のレベルと、ディメンションのメンバー (存在する場合) 時の型を持つキューブでします。  
+-   レベル式もメンバー式も指定されていない場合、 **Closingperiod**関数は、Time 型のキューブ内のディメンションの既定のレベルとメンバー (存在する場合) を使用します。  
   
- **ClosingPeriod**関数は、次の MDX ステートメントと同等です。  
+ **Closingperiod**関数は、次の MDX ステートメントと同じです。  
   
- `Tail(Descendants(Member_Expression, Level_Expression), 1)`。  
+ `Tail(Descendants(Member_Expression, Level_Expression), 1)`.  
   
 > [!NOTE]  
->  [OpeningPeriod](../mdx/openingperiod-mdx.md)機能に似ています、 **ClosingPeriod**関数点を除いて、 **OpeningPeriod**最後ではなく、最初の兄弟を返します兄弟です。  
+>  [OpeningPeriod](../mdx/openingperiod-mdx.md)関数は、 **OpeningPeriod**関数が最後の兄弟ではなく最初の兄弟を返す点を除いて、 **closingperiod**関数に似ています。  
   
-## <a name="examples"></a>使用例  
- 次の例では、(時間のセマンティックの種類がある) Date ディメンションの FY2007 メンバーの既定のメジャーの値を返します。 このメンバーが返されるのは、[All] レベルの最初の子孫が Fiscal Year レベルであるためです。Fiscal 階層は、階層コレクション内の最初のユーザー定義階層であるため既定の階層です。また、FY 2007 メンバーはこの階層内のこのレベルにある最後の兄弟です。  
+## <a name="examples"></a>例  
+ 次の例では、Date ディメンションの FY2007 メンバーの既定のメジャーの値を返します (これにはセマンティックの種類が Time である)。 このメンバーが返されるのは、[All] レベルの最初の子孫が Fiscal Year レベルであるためです。Fiscal 階層は、階層コレクション内の最初のユーザー定義階層であるため既定の階層です。また、FY 2007 メンバーはこの階層内のこのレベルにある最後の兄弟です。  
   
 ```  
 SELECT ClosingPeriod() ON 0  
 FROM [Adventure Works]  
 ```  
   
- 次の例では、2006 年 11 月 30 日の既定のメジャー値を返します、Date.Date 属性階層の Date.Date.Date レベルにあるメンバー。 このメンバーは、Date.Date 属性階層の [All] レベルの子孫の最後の兄弟です。  
+ 次の例では、日付と時刻の属性階層の date. date. date レベルにある、2006年11月30日の既定のメジャーの値を返します。 このメンバーは、Date 属性階層の [All] レベルの子孫の最後の兄弟です。  
   
 ```  
 SELECT ClosingPeriod ([Date].[Date].[Date]) ON 0  
@@ -72,16 +72,16 @@ SELECT ClosingPeriod ([Date].[Calendar].[Month],[Date].[Calendar].[Calendar Year
 FROM [Adventure Works]  
 ```  
   
- 次の例では、既定のメジャーの値は、6 月、年にある 2003年メンバーの子孫の最後の兄弟である 2003年メンバーのレベルを返します、Fiscal ユーザー定義階層です。  
+ 次の例では、6月の2003メンバーの既定のメジャーの値を返します。これは、会計ユーザー定義階層の year レベルにある2003メンバーの子孫の最後の兄弟です。  
   
 ```  
 SELECT ClosingPeriod ([Date].[Fiscal].[Month],[Date].[Fiscal].[Fiscal Year].&[2003]) ON 0  
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [OpeningPeriod &#40;MDX&#41;](../mdx/openingperiod-mdx.md)   
- [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
+ [Mdx 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
  [LastSibling &#40;MDX&#41;](../mdx/lastsibling-mdx.md)  
   
   

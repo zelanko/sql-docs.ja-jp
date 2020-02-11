@@ -16,13 +16,13 @@ ms.assetid: b6dd1846-2259-4d29-93af-a70a5d25a0c5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 960da4d98ea33ceb3ecdb48e36d565854484feb9
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68768856"
 ---
-# <a name="spdropdistributiondb-transact-sql"></a>sp_dropdistributiondb (Transact-SQL)
+# <a name="sp_dropdistributiondb-transact-sql"></a>sp_dropdistributiondb (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   ディストリビューションデータベースを削除します。 別のデータベースで使用されていない場合に、データベースによって使用されている物理ファイルを削除します。 このストアドプロシージャは、ディストリビューター側で任意のデータベースに対して実行されます。  
@@ -42,12 +42,12 @@ sp_dropdistributiondb [ @database= ] 'database'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  **sp_dropdistributiondb**は、すべての種類のレプリケーションで使用されます。  
   
  **Sp_dropdistributor**を実行してディストリビューターを削除する前に、このストアドプロシージャを実行する必要があります。  
   
- **sp_dropdistributiondb**は、ディストリビューションデータベース (存在する場合) のキューリーダーエージェントジョブも削除します。  
+ **sp_dropdistributiondb**は、ディストリビューションデータベースのキューリーダーエージェントジョブが存在する場合にも削除します。  
   
  ディストリビューションを無効にするには、ディストリビューションデータベースがオンラインである必要があります。 ディストリビューションデータベースに対してデータベーススナップショットが存在する場合は、ディストリビューションを無効にする前に削除する必要があります。 データベーススナップショットは、データベースの読み取り専用のオフラインコピーであり、レプリケーションスナップショットに関連付けられていません。 詳細については、「[データベース スナップショット &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)」を参照してください。  
   
@@ -57,11 +57,11 @@ sp_dropdistributiondb [ @database= ] 'database'
 ## <a name="permissions"></a>アクセス許可  
  **Sp_dropdistributiondb**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
-## <a name="see-also"></a>関連項目  
- [パブリッシングおよびディストリビューションの無効化](../../relational-databases/replication/disable-publishing-and-distribution.md)   
- [sp_adddistributiondb &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)   
- [sp_changedistributiondb &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md)   
- [sp_helpdistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   
- [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>参照  
+ [パブリッシングおよびディストリビューションを無効にする](../../relational-databases/replication/disable-publishing-and-distribution.md)   
+ [sp_adddistributiondb &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)   
+ [sp_changedistributiondb &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md)   
+ [sp_helpdistributiondb &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   
+ [レプリケーションストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

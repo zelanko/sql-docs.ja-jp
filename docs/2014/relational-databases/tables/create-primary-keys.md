@@ -13,13 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1203872d92c1b9d424cfe457437cbde16b8e2120
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62761519"
 ---
 # <a name="create-primary-keys"></a>主キーの作成
+  
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して主キーを定義できます。 主キーを作成すると、対応する一意なクラスター化または非クラスター化インデックスが自動的に作成されます。  
   
  **このトピックの内容**  
@@ -28,9 +29,9 @@ ms.locfileid: "62761519"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
--   **主キーを変更する方法:**  
+-   **主キーを作成する方法:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -57,7 +58,8 @@ ms.locfileid: "62761519"
   
 1.  オブジェクト エクスプローラーで、UNIQUE 制約を追加するテーブルを右クリックし **、[デザイン]** をクリックします。  
   
-2.  **テーブル デザイナー**で、主キーとして定義するデータベース列の行セレクターをクリックします。 複数列を選択する場合は、Ctrl キーを押しながら、他の列の行セレクターをクリックします。  
+2.  
+  **テーブル デザイナー**で、主キーとして定義するデータベース列の行セレクターをクリックします。 複数列を選択する場合は、Ctrl キーを押しながら、他の列の行セレクターをクリックします。  
   
 3.  列の行セレクターを右クリックし、 **[主キーの設定]** をクリックします。  
   
@@ -95,7 +97,7 @@ ms.locfileid: "62761519"
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 次の例では、テーブルを作成して `TransactionID` 列に主キーを定義します。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 次の例では、テーブルを作成して `TransactionID`列に主キーを定義します。  
   
     ```  
     USE AdventureWorks2012;  

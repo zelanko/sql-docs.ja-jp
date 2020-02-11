@@ -1,5 +1,5 @@
 ---
-title: sysmergearticlecolumns (Transact-SQL) |Microsoft Docs
+title: sysmergearticlecolumns (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -18,24 +18,24 @@ ms.assetid: 1ad8663f-a624-42a2-8641-fefac3433c97
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2edf9a5656eaf9dd3f18adff28562e279db892e7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68029963"
 ---
-# <a name="sysmergearticlecolumns-transact-sql"></a>sysmergearticlecolumns (Transact-SQL)
+# <a name="sysmergearticlecolumns-transact-sql"></a>sysmergearticlecolumns (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **Sysmergearticlecolumns**テーブルには、マージ パブリケーションでパブリッシュされ、各列はマージ アーティクルにマップされるテーブル列ごとに 1 つの行が含まれています。 このテーブルは、パブリケーション データベース内に保存されます。  
+  **Sysmergearticlecolumns**テーブルは、マージパブリケーションでパブリッシュされるテーブル列ごとに1行のデータを格納し、各列をマージアーティクルにマップします。 このテーブルは、パブリケーションデータベースに格納されます。  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
 |**artid**|**int**|アーティクルを識別します。|  
 |**colid**|**smallint**|アーティクル内の列を識別します。|  
   
-## <a name="see-also"></a>関連項目  
- [レプリケーション テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
+## <a name="see-also"></a>参照  
+ [レプリケーションテーブル &#40;Transact-sql&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [レプリケーションビュー &#40;Transact-sql&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   
