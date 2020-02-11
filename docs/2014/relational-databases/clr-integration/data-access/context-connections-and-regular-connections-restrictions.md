@@ -1,5 +1,5 @@
 ---
-title: 標準モードとコンテキスト接続に関する制限事項 |Microsoft Docs
+title: 通常の接続とコンテキスト接続に関する制限事項 |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 3b721409f0915cb1e13861f6481909e02af37cb2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62919167"
 ---
 # <a name="restrictions-on-regular-and-context-connections"></a>通常の接続とコンテキスト接続に関する制限事項
-  このトピックで説明して実行するコードに関する制限事項、[!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)]コンテキストと通常の接続を処理します。  
+  このトピックでは、コンテキストと通常の接続を[!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)]使用してプロセスで実行されるコードに関連する制限事項について説明します。  
   
 ## <a name="restrictions-on-context-connections"></a>コンテキスト接続に関する制限事項  
  アプリケーションを開発するときは、コンテキスト接続に適用される次の制限事項を考慮してください。  
@@ -34,24 +34,28 @@ ms.locfileid: "62919167"
   
 -   コンテキスト接続では、更新バッチ処理がサポートされません。  
   
--   `SqlNotificationRequest` は、コンテキスト接続に対して実行するコマンドと併用できません。  
+-   
+  `SqlNotificationRequest` は、コンテキスト接続に対して実行するコマンドと併用できません。  
   
--   コンテキスト接続に対して実行しているコマンドはキャンセルできません。 `SqlCommand.Cancel` メソッドでは、この要求が暗黙に無視されます。  
+-   コンテキスト接続に対して実行しているコマンドはキャンセルできません。 
+  `SqlCommand.Cancel` メソッドでは、この要求が暗黙に無視されます。  
   
 -   "context connection=true" を使用する場合は、他の接続文字列キーワードを使用できません。  
   
--   `SqlConnection.DataSource` の接続文字列が、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンス名ではなく、"context connection=true" である場合、`SqlConnection` プロパティは NULL を返します。  
+-   
+  `SqlConnection.DataSource` の接続文字列が、`SqlConnection` のインスタンス名ではなく、"context connection=true" である場合、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] プロパティは NULL を返します。  
   
 -   コンテキスト接続に対してコマンドを実行する場合に `SqlCommand.CommandTimeout` プロパティを設定しても、影響はありません。  
   
 ## <a name="restrictions-on-regular-connections"></a>通常の接続に関する制限事項  
  アプリケーションを開発するときは、通常の接続に適用される次の制限事項を考慮してください。  
   
--   内部サーバーに対する非同期コマンドの実行はサポートされません。 コマンドの接続文字列に "async=true" を含めてコマンドを実行すると、`System.NotSupportedException` がスローされます。 このメッセージが表示されます。"内部で実行される非同期処理はサポートされていません、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]プロセスです"。  
+-   内部サーバーに対する非同期コマンドの実行はサポートされません。 コマンドの接続文字列に "async=true" を含めてコマンドを実行すると、`System.NotSupportedException` がスローされます。 このメッセージが表示されます。 "プロセス内で実行中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の非同期処理はサポートされていません。"  
   
--   `SqlDependency` オブジェクトはサポートされません。  
+-   
+  `SqlDependency` オブジェクトはサポートされません。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [コンテキスト接続](context-connection.md)  
   
   

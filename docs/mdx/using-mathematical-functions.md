@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: a1ad62871870dc98b5de1e514150cc837ac16e4c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68097147"
 ---
 # <a name="using-mathematical-functions"></a>数学関数の使用
@@ -22,7 +22,7 @@ ms.locfileid: "68097147"
   
  特に指定しない限り、数学関数に引き渡される数字は、倍精度浮動小数点数として解釈されます。  
   
-## <a name="see-also"></a>関連項目  
- [関数&#40;MDX 構文&#41;](../mdx/functions-mdx-syntax.md)  
+## <a name="see-also"></a>参照  
+ [関数 &#40;MDX 構文&#41;](../mdx/functions-mdx-syntax.md)  
   
   

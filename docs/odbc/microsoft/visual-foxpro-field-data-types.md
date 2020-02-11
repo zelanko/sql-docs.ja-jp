@@ -14,25 +14,25 @@ ms.assetid: 50b733dc-679a-4b10-bc5d-98bb474dead2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 217058bf328677bf375d346ae7201c6eb81efa4e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68087955"
 ---
 # <a name="visual-foxpro-field-data-types"></a>Visual FoxPro フィールドのデータ型
-次の表の値、 *FieldType* ALTER TABLE と CREATE TABLE で引数を示し、かどうか*nFieldWidth*と*nPrecision*引数必須。  
+次の表に、ALTER TABLE と CREATE TABLE の*FieldType*引数の値を示し、 *Nfieldwidth*引数と*nprecision*引数が必要かどうかを示します。  
   
-|*FieldType*|*NFieldWidth*|*nPrecision*|説明|  
+|*FieldType*|*NFieldWidth*|*nPrecision*|[説明]|  
 |-----------------|-------------------|------------------|-----------------|  
-|B|-|d|Double|  
-|c|N|-|文字のフィールドの幅の*n*|  
-|D|-|-|date|  
-|F|N|d|数値フィールドの幅を浮動*n*で*d*小数点以下桁数|  
+|B|-|d|DOUBLE|  
+|C|N|-|幅*n*の文字フィールド|  
+|D|-|-|Date|  
+|F|N|d|*小数点以下を*含む幅*n*の浮動小数点数値フィールド|  
 |G|-|-|全般|  
-|I|-|-|整数型|  
+|I|-|-|整数|  
 |L|-|-|論理|  
 |M|-|-|メモ|  
-|N|N|d|数値フィールドの幅の*n*で*d*小数点以下桁数|  
+|N|N|d|*D*小数点以下を含む幅*n*の数値フィールド|  
 |T|-|-|DateTime|  
-|Y|-|-|通貨|
+|Y|-|-|Currency|

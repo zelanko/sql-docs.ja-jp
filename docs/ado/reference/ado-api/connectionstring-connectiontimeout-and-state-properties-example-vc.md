@@ -1,5 +1,5 @@
 ---
-title: 接続プロパティの例 (vc++) |Microsoft Docs
+title: 接続プロパティの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,17 +17,17 @@ ms.assetid: c6bd2609-4c49-462f-a1aa-7bee0f615adb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d69cbde12b14a481e19856882f0b91844a1deb69
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919454"
 ---
-# <a name="connectionstring-connectiontimeout-and-state-properties-example-vc"></a>ConnectionString、ConnectionTimeout、および状態のプロパティの例 (vc++)
-この例を使用してさまざまな方法を示しています、 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)プロパティを開き、[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクト。 またを使用して、 [ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)接続タイムアウトを設定するプロパティと[状態](../../../ado/reference/ado-api/state-property-ado.md)接続の状態を確認するプロパティ。 GetState 関数は、この手順を実行する必要があります。  
+# <a name="connectionstring-connectiontimeout-and-state-properties-example-vc"></a>ConnectionString、ConnectionTimeout、State プロパティの例 (VC + +)
+この例では、 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)プロパティを使用して[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトを開くさまざまな方法を示します。 また、 [ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)プロパティを使用して接続タイムアウト期間を設定し、 [state](../../../ado/reference/ado-api/state-property-ado.md)プロパティを使用して接続の状態を確認します。 このプロシージャを実行するには、GetState 関数が必要です。  
   
 > [!NOTE]
->  Windows 認証をサポートするデータ ソース プロバイダーに接続するかどうかは、する必要がありますを指定する**Trusted_Connection = yes**または**Integrated Security = SSPI**ユーザー ID とパスワードの代わりに接続文字列の情報です。  
+>  Windows 認証をサポートするデータソースプロバイダーに接続する場合は、接続文字列にユーザー ID とパスワードの情報ではなく、 **Trusted_Connection = yes**または**INTEGRATED Security = SSPI**を指定する必要があります。  
   
 ```  
 // ConnectionStringSampleCpp.cpp  
@@ -166,8 +166,8 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [接続オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
+## <a name="see-also"></a>参照  
+ [Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [ConnectionString プロパティ (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md)   
  [ConnectionTimeout プロパティ (ADO)](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)   
  [State プロパティ (ADO)](../../../ado/reference/ado-api/state-property-ado.md)

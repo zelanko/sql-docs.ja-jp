@@ -1,5 +1,5 @@
 ---
-title: システム要件、アドレスの予約アプリケーション |Microsoft Docs
+title: アドレス帳アプリケーションのシステム要件 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,44 +14,44 @@ ms.assetid: da385405-1c9a-478b-9bf6-fba70015324c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2450cc97229a6629d4c2895f3960e3033d129789
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67922036"
 ---
 # <a name="system-requirements-for-the-address-book-application"></a>アドレス帳アプリケーションのシステム要件
-アドレス帳のサンプル アプリケーションをセットアップするには、次のソフトウェアとデータベースの要件を満たす必要があります。  
+アドレス帳のサンプルアプリケーションを設定するには、次のソフトウェアとデータベースの要件を満たしている必要があります。  
   
 > [!IMPORTANT]
->  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)します。  
+>  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および[Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416)」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
   
-## <a name="software-requirements"></a>ソフトウェア要件  
- この Web アプリケーションを実行するためのサーバー コンピューターのソフトウェア要件は次のとおりです。  
+## <a name="software-requirements"></a>ソフトウェアの要件  
+ この Web アプリケーションを実行するためのサーバーコンピューターソフトウェアの要件は次のとおりです。  
   
--   Microsoft Windows NT® Server 4.0、Service Pack 3 以降または Microsoft Windows® 2000 Server。  
+-   Microsoft Windows NT® Server 4.0、Service Pack 3 以降、または Microsoft Windows® 2000 Server。  
   
--   Microsoft インターネット インフォメーション サービス (IIS) バージョン 3.0 以降、Active Server Pages を使用します。  
+-   Active Server ページを含む Microsoft インターネットインフォメーションサービス (IIS) バージョン3.0 以降。  
   
- この Web アプリケーションを実行するためのクライアント コンピューターのソフトウェア要件は次のとおりです。  
+ この Web アプリケーションを実行するためのクライアントコンピューターソフトウェアの要件は次のとおりです。  
   
--   Microsoft Internet Explorer 4.0 またはそれ以降。  
+-   Microsoft Internet Explorer 4.0 以降。  
   
--   Microsoft Windows NT 4.0 のワークステーションまたはサーバー、Windows 2000、または Microsoft Windows 98 です。  
+-   Microsoft Windows NT 4.0 Workstation または Server、Windows 2000、または Microsoft Windows 98。  
   
 ## <a name="database-requirements"></a>データベース要件  
- このサンプルを使用するには、が必要です。  
+ このサンプルを使用するには、次のものが必要です。  
   
--   運用上の Microsoft® SQL Server バージョン 6.5 以降のデータベース サーバーを使用して。  
+-   運用中の Microsoft® SQL Server バージョン6.5 以降のデータベースサーバー。  
   
--   データベースを作成し、サンプル データを追加する特権。  
+-   データベースを作成し、サンプルデータを設定する権限。  
   
--   Enterprise Manager または ISQL ユーティリティ (SQL Server 7.0 で呼び出されたクエリ アナライザー) を使用して設定されたデータを検証します。  
+-   Enterprise Manager または ISQL ユーティリティ (SQL Server 7.0 のクエリアナライザーと呼ばれます) を使用して、データが設定されたことを確認します。  
   
- 特権がいない場合、データベース管理者は、システムおよびアクセス許可をデータベースまたはデータベースを設定することを設定する必要があります。  
+ 権限を持っていない場合は、データベース管理者がシステムをセットアップし、データベースへのアクセス許可を付与するか、データベースをセットアップする必要があります。  
   
-## <a name="see-also"></a>関連項目  
- [アドレス帳の SQL スクリプトを実行します。](../../../ado/guide/remote-data-service/running-the-address-book-sql-script.md)   
+## <a name="see-also"></a>参照  
+ [アドレス帳 SQL スクリプトの実行](../../../ado/guide/remote-data-service/running-the-address-book-sql-script.md)   
  [DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [アドレス帳のサンプル アプリケーションの実行](../../../ado/guide/remote-data-service/running-the-address-book-sample-application.md)
 

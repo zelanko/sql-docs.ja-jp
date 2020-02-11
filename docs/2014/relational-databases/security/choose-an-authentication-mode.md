@@ -24,14 +24,14 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 5e06e33048548baad245bee78b9989e9c4cc700b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63011339"
 ---
 # <a name="choose-an-authentication-mode"></a>認証モードの選択
-  セットアップ中に、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]の認証モードを選択する必要があります。 これには 2 つのモードがあります。Windows 認証モードと混在モードの場合は。 Windows 認証モードを選択すると、Windows 認証が有効になり、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証が無効になります。 混合モードを選択すると、Windows 認証と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証の両方が有効になります。 Windows 認証は常に使用可能であり、無効にすることはできません。  
+  セットアップ中に、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]の認証モードを選択する必要があります。 Windows 認証モードと混在モードという 2 つのモードを使用できます。 Windows 認証モードを選択すると、Windows 認証が有効になり、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証が無効になります。 混合モードを選択すると、Windows 認証と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証の両方が有効になります。 Windows 認証は常に使用可能であり、無効にすることはできません。  
   
 ## <a name="configuring-the-authentication-mode"></a>認証モードの構成  
  セットアップ中に混合モード認証を選択した場合は、sa という組み込みの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム管理者アカウントの強力なパスワードを入力して確認する必要があります。 sa アカウントは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用して接続します。  
@@ -67,7 +67,7 @@ ms.locfileid: "63011339"
   
 1.  **[スタート]** メニューの **[ファイル名を指定して実行]** をクリックします。  
   
-2.  **実行**ダイアログ ボックスに「 `secpol.msc`、順にクリックします**OK**します。  
+2.  [**実行**] ダイアログボックスで、 `secpol.msc`「」と入力し、[ **OK**] をクリックします。  
   
 3.  **[ローカル セキュリティ設定]** アプリケーションで、 **[セキュリティの設定]** 、 **[アカウント ポリシー]** の順に展開して、 **[パスワードのポリシー]** をクリックします。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "63011339"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、すべてのユーザーが Windows ドメインで認証されていない、オペレーティング システムが混在する環境をサポートできます。  
   
--   ユーザーが、不明なドメインや信頼されていないドメインから接続できます。 たとえば、既存の顧客が、割り当てられた [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを使用して接続し、発注状況を確認するアプリケーションの場合です。  
+-   ユーザーが不明または信頼されていないドメインから接続できる場合。 たとえば、既存の顧客が、割り当てられた [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを使用して接続し、発注状況を確認するアプリケーションの場合です。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、ユーザーが独自の ID を作成する Web ベースのアプリケーションをサポートできます。  
   

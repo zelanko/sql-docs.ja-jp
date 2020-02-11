@@ -17,24 +17,24 @@ ms.assetid: a8fcdd00-6cb3-4871-9489-6018b3d0d65f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 74c9a97c2511bc9c9a738b9e63548a9179552489
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68086343"
 ---
 # <a name="new-features"></a>新機能
-ODBC では、次の新しい機能が導入されました*3.x*します。 ODBC *3.x* odbc 作業アプリケーション*2.x*ドライバーでは、この機能を使用できません。 ODBC *3.x* ODBC を使用する場合に、ドライバー マネージャーでこれらの機能がマップされていない*2.x*ドライバー。  
+ODBC 3.x では、次の新機能が導入されまし*た。* *Odbc 2.x アプリケーションで*odbc 2.x ドライバーを操作すると、この機能を使用できなく*なります。* *Odbc 2.x* driver Manager では *、odbc 2.x*ドライバーを使用する場合、これらの機能はマップされません。  
   
--   記述子を受け取る関数は、引数として処理します。**Sqlsetdescfield による**、 **SQLGetDescField**、 **SQLSetDescRec**、 **SQLGetDescRec**、および**SQLCopyDesc**します。  
+-   記述子ハンドルを引数として受け取る関数: **SQLSetDescField**、 **SQLGetDescField**、 **SQLSetDescRec**、 **Sqlgetdescrec**、および**sqlcopydesc**。  
   
--   関数は、 **SQLSetEnvAttr**と**SQLGetEnvAttr**します。  
+-   関数**SQLSetEnvAttr**と**SQLGetEnvAttr**。  
   
--   使用**SQLAllocHandle**記述子ハンドルを割り当てられません。 (使用**SQLAllocHandle**環境、接続、およびステートメント ハンドルの割り当てには、重複のない新しい機能です)。  
+-   **SQLAllocHandle**を使用して記述子ハンドルを割り当てます。 ( **SQLAllocHandle**を使用して環境、接続、およびステートメントハンドルを割り当てることは、新機能ではなく複製されています)。  
   
--   使用**SQLGetConnectAttr** SQL_ATTR_AUTO_IPD 接続属性を取得します。 (の使用**SQLSetConnectAttr**を設定して**SQLGetConnectAttr**を取得するその他の接続属性には重複のない新しい機能です)。  
+-   **Sqlgetconnectattr**を使用して、SQL_ATTR_AUTO_IPD 接続属性を取得します。 ( **SQLSetConnectAttr**を設定し、 **Sqlgetconnectattr**を取得するために使用します。その他の接続属性は重複していますが、新機能ではありません)。  
   
--   使用**SQLSetStmtAttr**を設定して**SQLGetStmtAttr** 、次のステートメント属性を取得します。 (の使用**SQLSetStmtAttr**を設定して**SQLGetStmtAttr**を取得するその他のステートメント属性には重複のない新しい機能です)。  
+-   **SQLSetStmtAttr**を使用して、次のステートメント属性を設定し、 **SQLGetStmtAttr**を取得します。 ( **SQLSetStmtAttr**を使用してを設定し、 **SQLGetStmtAttr**を取得するために、新しい機能ではなく、他のステートメント属性が複製されています)。  
   
      SQL_ATTR_APP_ROW_DESC  
   
@@ -66,46 +66,46 @@ ODBC では、次の新しい機能が導入されました*3.x*します。 ODB
   
      SQL_ATTR_ROW_ARRAY_SIZE  
   
--   使用**SQLGetStmtAttr**次のステートメント属性を取得します。 (使用**SQLGetStmtAttr**属性が重複している機能、いない新しい機能を他のステートメントを取得します)。  
+-   **SQLGetStmtAttr**を使用して、次のステートメント属性を取得します。 ( **SQLGetStmtAttr**を使用して他のステートメント属性を取得することは、新機能ではなく、重複する機能です)。  
   
      SQL_ATTR_IMP_ROW_DESC SQL_ATTR_IMP_PARAM_DESC  
   
--   C interval データ型、間隔の SQL データ型、BIGINT C データ型で、SQL_C_NUMERIC データ構造体の使用。  
+-   Interval C データ型、interval SQL データ型、BIGINT C データ型、および SQL_C_NUMERIC データ構造体の使用。  
   
 -   パラメーターの行方向のバインド。  
   
--   呼び出しなど、オフセットに基づくブックマークをフェッチ**SQLFetchScroll**で、 *FetchOrientation* SQL_FETCH_BOOKMARK と 0 以外のオフセットを指定する引数。  
+-   オフセットベースのブックマークをフェッチします。たとえば、SQL_FETCH_BOOKMARK の*Fetchorientation*引数を使用して**sqlfetchscroll**を呼び出し、0以外のオフセットを指定します。  
   
--   **SQLFetch**行の状態配列で呼び出しを混在させないで、複数の行のフェッチ、フェッチされた行の数を返す**SQLFetchScroll**、および混在呼び出し**SQLBulkOperations**または**SQLSetPos**します。 詳細については、次のセクションを参照してください。[ブロック カーソル、スクロール可能なカーソル、および ODBC 3.x アプリケーション用の旧バージョンとの互換性](../../../odbc/reference/develop-app/block-cursors-scrollable-backward-compatibility-odbc-3-x-applications.md)します。  
+-   **Sqlfetch**は、行の状態の配列、フェッチされた行数を返します。複数の行をフェッチし、 **sqlfetchscroll**を使用して混在させ呼び出しを、 **Sqlbulkoperations**または**SQLSetPos**を使用して混在させを呼び出します。 詳細については、次のセクション、[ブロックカーソル、スクロール可能なカーソル、および ODBC 3. x アプリケーションの旧バージョンとの互換性](../../../odbc/reference/develop-app/block-cursors-scrollable-backward-compatibility-odbc-3-x-applications.md)に関するセクションを参照してください。  
   
 -   名前付きパラメーター。  
   
--   ODBC のいずれかの*3.x*-特定**SQLGetInfo**オプション。 (場合、ODBC *3.x* odbc 作業アプリケーション*2.x*ドライバーは、いくつかの ODBC に置き換えられている SQL_XXX_CURSOR_ATTRIBUTES1 の情報の種類を呼び出す*2.x*情報の種類、一部の情報は、信頼性が高く、かもしれませんが信頼性の高いものがあります。 詳細については、次を参照してください[SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)。)。  
+-   ODBC *3. x*固有の**SQLGetInfo**オプションのいずれか。 ( *Odbc 2.x アプリケーションが* *odbc 2.x ドライバーを*使用して動作している場合、いくつかの odbc *2.* x 情報の種類に置き換えられた SQL_XXX_CURSOR_ATTRIBUTES1 情報の種類を呼び出すと、一部の情報が信頼できるようになりますが、信頼性が低い場合があります。 詳細については、「 [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)」を参照してください。)  
   
 -   オフセットをバインドします。  
   
--   更新、更新、およびブックマークを削除した (呼び出しを通じて**SQLBulkOperations**)。  
+-   ( **Sqlbulkoperations**を呼び出すことによって) ブックマークによる更新、更新、および削除。  
   
--   呼び出す**SQLBulkOperations**または**SQLSetPos** S5 状態にします。  
+-   S5 状態の**Sqlbulkoperations**または**SQLSetPos**を呼び出しています。  
   
--   診断レコードの ROW_NUMBER、目のフィールド (置換関数で取得する必要が**SQLGetDiagField**または**SQLGetDiagRec**)。  
+-   診断レコードの ROW_NUMBER および COLUMN_NUMBER フィールド (置換関数**SQLGetDiagField**または**SQLGetDiagRec**によって取得される必要があります)。  
   
--   おおよその行をカウントします。  
+-   おおよその行数。  
   
--   警告情報 (から SQL_ROW_SUCCESS_WITH_INFO **SQLFetchScroll**)。  
+-   警告情報 ( **Sqlfetchscroll**からの SQL_ROW_SUCCESS_WITH_INFO)。  
   
 -   可変長のブックマーク。  
   
 -   パラメーターの配列の拡張エラー情報。  
   
--   すべてのカタログ関数によって返される結果セットに新しい列。  
+-   カタログ関数によって返される結果セット内のすべての新しい列。  
   
--   使用**SQLDescribeCol**と**SQLColAttribute**列 0 にします。  
+-   列0で**SQLDescribeCol**と**sqlcolattribute**を使用します。  
   
--   任意の ODBC を使用*3.x*-特定の列の属性への呼び出しで**SQLColAttribute**します。  
+-   **Sqlcolattribute**の呼び出しでの ODBC *3. x*固有の列属性の使用。  
   
--   複数の環境ハンドルを使用します。  
+-   複数の環境ハンドルの使用。  
   
- このセクションには、次のトピックが含まれています。  
+ ここでは、次のトピックについて説明します。  
   
 -   [ODBC 3.x アプリケーション用のブロック カーソル、スクロール可能なカーソル、および下位互換性](../../../odbc/reference/develop-app/block-cursors-scrollable-backward-compatibility-odbc-3-x-applications.md)

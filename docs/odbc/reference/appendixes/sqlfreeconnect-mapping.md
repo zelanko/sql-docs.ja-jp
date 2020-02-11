@@ -1,5 +1,5 @@
 ---
-title: SQLFreeConnect のマッピング |Microsoft Docs
+title: SQLFreeConnect Mapping |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,23 +14,23 @@ ms.assetid: 8a844538-93c0-4709-bab6-35c45e771d80
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 062894547aca57ca01ca105f4060f2dcd39e942f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68086439"
 ---
 # <a name="sqlfreeconnect-mapping"></a>SQLFreeConnect のマッピング
-アプリケーションを呼び出すと**SQLFreeConnect** ODBC を通じて*3.x*ドライバーへの呼び出し  
+アプリケーションが ODBC *3. x*ドライバーを介して**SQLFreeConnect**を呼び出すとき、  
   
 ```  
 SQLFreeConnect(hdbc)   
 ```  
   
- をマップされます。  
+ がにマップされています  
   
 ```  
 SQLFreeHandle(SQL_HANDLE_DBC,Handle)  
 ```  
   
- *処理*引数の値に設定*hdbc*します。
+ *Handle*引数を*hdbc*の値に設定します。

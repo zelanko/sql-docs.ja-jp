@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: adb00f8b0e7cb009420e9843532c3f3d4deb0833
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63028419"
 ---
 # <a name="full-text-index-dialog-box-visual-database-tools"></a>[フルテキスト インデックス] ダイアログ ボックス (Visual Database Tools)
@@ -26,13 +26,13 @@ ms.locfileid: "63028419"
 >  フルテキスト インデックスを作成する場合、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 、Enterprise Manager などの外部ツールを使用して、あらかじめデータベースのフルテキスト カタログを作成しておく必要があります。  
   
 > [!NOTE]  
->  フルテキスト インデックスの機能は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで利用できるわけではありません。 エディションでサポートされている機能の一覧については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を参照してください[機能は、SQL Server 2014 の各エディションでサポートされている](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  
+>  フルテキスト インデックスの機能は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで利用できるわけではありません。 の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各エディションでサポートされる機能の一覧については、「 [SQL Server 2014 の各エディションがサポートする機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)」を参照してください。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **[選択されたフルテキスト インデックス]**  
  既存のフルテキスト インデックスを一覧表示します。 インデックスを選択すると、右のグリッドにそのインデックスのプロパティが表示されます。 一覧が空の場合、テーブルにフルテキスト インデックスは定義されていません。  
   
- **[追加]**  
+ **追加**  
  新しいフルテキスト インデックスを作成します。  
   
  **削除**  
@@ -59,11 +59,11 @@ ms.locfileid: "63028419"
  **[テーブル デザイナー] カテゴリ**  
  展開してインデックスの実行方法を指定するプロパティを表示します。  
   
- **Active**  
+ **アクティブ**  
  該当するフルテキスト インデックスを使用して、フルテキスト検索を現在実行できるかどうかを示します。  
   
  **[トラッキング設定の変更]**  
- 該当するインデックスの変更履歴の状態を示します([手動]、[自動]、または [オフ])。  
+ 該当するインデックスの変更履歴の状態を示します。[手動]、[自動]、または [オフ]。  
   
  **[クロールの完了]**  
  最近のクロールが完了したかどうかを示します。 このプロパティ値が [いいえ] の場合、クロールは現在進行中です。  
@@ -87,13 +87,13 @@ ms.locfileid: "63028419"
  次のクロールが開始する日時を表示します。  
   
  **[現在または最近のクロールの種類]**  
- 現在のクロールまたは最近のクロールの種類を表示します(空き領域なし、インクリメンタル、更新、自動伝達)。  
+ 現在のクロールまたは最近のクロールの型を表示します。[空き領域なし]、[インクリメンタル]、[更新]、または [自動伝達]。  
   
  **[一意のインデックス名]**  
  一意の単一列インデックスを持つ、データベース内のすべての列の名前を一覧表示します。 これらの列は、フルテキスト インデックスの作成に使用できます。  
   
 ## <a name="see-also"></a>参照  
- [フルテキスト インデックス作成ウィザードを使用してください。](../../relational-databases/search/use-the-full-text-indexing-wizard.md)   
- [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-index-transact-sql)  
+ [フルテキストインデックス作成ウィザードの使用](../../relational-databases/search/use-the-full-text-indexing-wizard.md)   
+ [Transact-sql&#41;&#40;のフルテキストインデックスの作成](/sql/t-sql/statements/create-fulltext-index-transact-sql)  
   
   

@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0ffd514fcdf5479f91e31d3bb5f261bba7ab4cd2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62999636"
 ---
 # <a name="manage-objects-by-using-object-explorer"></a>オブジェクト エクスプローラーを使用したオブジェクトの管理
@@ -50,14 +50,14 @@ ms.locfileid: "62999636"
 ### <a name="open-a-connected-query-editor"></a>接続先のクエリ エディターを開く  
  オブジェクト エクスプローラーからサーバーに接続すると、オブジェクト エクスプローラーの接続設定を使用してコード エディターの新しいウィンドウを開くことができます。 コード エディターの新しいウィンドウを開くには、オブジェクト エクスプローラーでサーバー名を右クリックして **[新しいクエリ]** をクリックします。 特定のデータベースを使用してコード エディターのウィンドウを開くには、データベース名を右クリックして **[新しいクエリ]** をクリックします。 Analysis Services サーバーに対する新しいクエリを開くときには、DMX、MDX、XMLA のいずれかのクエリを選択できます。  
   
-### <a name="start-powershell"></a>PowerShell を開始する  
- PowerShell セッションを起動するには、オブジェクト エクスプローラー ツリーで、一部を除くいずれかのフォルダーまたはオブジェクトを右クリックし、 **[PowerShell の起動]** をクリックします。 これにより、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell サポートが有効になった PowerShell セッションが起動し、パスがオブジェクト エクスプローラーで右クリックしたオブジェクトに設定されます。 これで、対話型の PowerShell 環境で PowerShell コマンドを入力できます。 詳細については、「 [SQL Server PowerShell](../../powershell/sql-server-powershell.md)」を参照してください。  
+### <a name="start-powershell"></a>PowerShell を起動する  
+ PowerShell セッションを起動するには、オブジェクト エクスプローラー ツリーで、一部を除くいずれかのフォルダーまたはオブジェクトを右クリックし、 **[PowerShell の起動]** をクリックします。 これにより、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell サポートが有効になった PowerShell セッションが起動し、パスがオブジェクト エクスプローラーで右クリックしたオブジェクトに設定されます。 これで、対話型の PowerShell 環境で PowerShell コマンドを入力できます。 詳細については、「[SQL Server PowerShell](../../powershell/sql-server-powershell.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- [オブジェクト エクスプ ローラー](object-explorer.md)   
- [開き、オブジェクト エクスプ ローラーを構成します。](open-and-configure-object-explorer.md)   
- [オブジェクト エクスプ ローラーからインスタンスに接続します。](connect-to-an-instance-from-object-explorer.md)   
- [オブジェクト エクスプ ローラーの詳細 ペイン](object-explorer-details-pane.md)   
+## <a name="see-also"></a>参照  
+ [オブジェクト エクスプローラー](object-explorer.md)   
+ [オブジェクトエクスプローラーを開いて構成する](open-and-configure-object-explorer.md)   
+ [オブジェクトエクスプローラーからインスタンスに接続する](connect-to-an-instance-from-object-explorer.md)   
+ [オブジェクトエクスプローラーの詳細ペイン](object-explorer-details-pane.md)   
  [Management Studio におけるカスタム レポート](custom-reports-in-management-studio.md)  
   
   

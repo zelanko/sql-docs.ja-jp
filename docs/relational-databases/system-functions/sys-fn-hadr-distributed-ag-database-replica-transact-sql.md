@@ -1,5 +1,5 @@
 ---
-title: sys.fn_hadr_distributed_ag_database_replica (TRANSACT-SQL) |Microsoft Docs
+title: fn_hadr_distributed_ag_database_replica (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2016
 ms.prod: sql
@@ -20,16 +20,16 @@ ms.assetid: 0e6202a1-e872-4f53-99d7-c16b6f712efc
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 2acff9f5d78549fe1e00397d566053ec19f628a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68120238"
 ---
-# <a name="sysfnhadrdistributedagdatabasereplica-transact-sql"></a>sys.fn_hadr_distributed_ag_database_replica (TRANSACT-SQL)
+# <a name="sysfn_hadr_distributed_ag_database_replica-transact-sql"></a>fn_hadr_distributed_ag_database_replica (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  分散型可用性グループ内のデータベースをローカルの可用性グループ内のデータベースにマップするために使用します。  
+  分散型可用性グループ内のデータベースを、ローカル可用性グループ内のデータベースにマップするために使用します。  
    
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,22 +42,22 @@ sys.fn_hadr_distributed_ag_database_replica( lag_Id, database_id )
   
 ## <a name="arguments"></a>引数  
  '*lag_Id*'  
- 分散型可用性グループの識別子です。 *lag_Id*型は、 **uniqueidentifier**します。  
+ 分散型可用性グループの識別子を示します。 *lag_Id*型は**uniqueidentifier**です。  
   
  '*database_id*'  
- 分散型可用性グループ内のデータベースの識別子です。 *database_id*型は、 **uniqueidentifier**します。  
+ 分散型可用性グループ内のデータベースの識別子を示します。 *database_id*型は**uniqueidentifier**です。  
   
 ## <a name="tables-returned"></a>返されるテーブル  
  次の情報を返します。  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
-|**group_database_id**|**uniqueidentifier**|ローカルの可用性グループ内のデータベースの ID。|  
+|**group_database_id**|**UNIQUEIDENTIFIER**|ローカル可用性グループ内のデータベースの ID。|  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
-### <a name="using-sysfnhadrdistributedagdatabasereplica"></a>Sys.fn_hadr_distributed_ag_database_replica を使用します。  
- 次の例は、分散型可用性グループで、データベース id を渡します。 ローカルの可用性グループに関連付けられたデータベースの ID を持つテーブルを返します。  
+### <a name="using-sysfn_hadr_distributed_ag_database_replica"></a>Fn_hadr_distributed_ag_database_replica の使用  
+ 次の例では、分散型可用性グループのデータベース ID を渡します。 このメソッドは、ローカル可用性グループに関連付けられているデータベース ID を含むテーブルを返します。  
   
 ```  
 DECLARE @lagId uniqueidentifier = '4A03D1A8-4AE6-B153-E7E9-ED22A546008D'  
@@ -67,10 +67,10 @@ SELECT * FROM sys.fn_hadr_distributed_ag_database_replica(@lagId, @databaseId)
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [Always On 可用性グループの関数&#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)   
- [AlwaysOn 可用性グループ &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
- [可用性グループを分散&#40;Always On 可用性グループ&#41;](../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md)   
+## <a name="see-also"></a>参照  
+ [Always On 可用性グループの関数 &#40;Transact-sql&#41;](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)   
+ [Always On 可用性グループ &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
+ [分散型可用性グループ &#40;Always On 可用性グループ&#41;](../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md)   
  [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)  
   

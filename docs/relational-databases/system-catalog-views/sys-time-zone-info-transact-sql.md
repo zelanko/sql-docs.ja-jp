@@ -1,5 +1,5 @@
 ---
-title: sys.time_zone_info (TRANSACT-SQL) |Microsoft Docs
+title: time_zone_info (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2018
 ms.prod: sql
@@ -19,26 +19,26 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 69bfcbb7e1eeaf6b456a2e10d1f3bfcc581c3d76
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68106703"
 ---
-# <a name="systimezoneinfo-transact-sql"></a>sys.time_zone_info (TRANSACT-SQL)
+# <a name="systime_zone_info-transact-sql"></a>sys.time_zone_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
-  サポートされているタイム ゾーンに関する情報を返します。 コンピューターにインストールされているすべてのタイム ゾーンは、次のレジストリ ハイブに格納されます。  
-`KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones`。  
+  サポートされているタイムゾーンに関する情報を返します。 コンピューターにインストールされているすべてのタイムゾーンは、次のレジストリハイブに格納されます。  
+`KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones`.  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|Windows 標準の形式でタイム ゾーンの名前です。 たとえば、 **cen です。オーストラリア標準時**または**中央ヨーロピアン標準時**します。|  
-|**current_utc_offset**|**nvarchar(12)**|現在の utc オフセットです。 たとえば、 **+01: 00**または **-07:00**します。|  
-|**is_currently_dst**|**bit**|夏時間が現在監視している場合は true。|  
+|**name**|**sysname**|タイムゾーンの名前 (Windows 標準形式)。 たとえば、中央の**オーストラリア標準時**または**中央ヨーロッパ標準時**です。|  
+|**current_utc_offset**|**nvarchar (12)**|UTC への現在のオフセット。 たとえば、 **+ 01:00**や **-07:00**のようになります。|  
+|**is_currently_dst**|**bit**|現在夏時間を観察している場合は True。|  
   
-## <a name="see-also"></a>関連項目  
- [GETUTCDATE &#40;TRANSACT-SQL&#41;](../../t-sql/functions/getutcdate-transact-sql.md)   
- [AT TIME ZONE &#40;Transact-SQL&#41;](../../t-sql/queries/at-time-zone-transact-sql.md)   
- [日付と時刻のデータ型および関数 (Transact-SQL)](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)   
- [サーバー全体の構成に関するカタログ ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/server-wide-configuration-catalog-views-transact-sql.md)  
+## <a name="see-also"></a>参照  
+ [GETUTCDATE &#40;Transact-sql&#41;](../../t-sql/functions/getutcdate-transact-sql.md)   
+ [AT TIME ZONE &#40;Transact-sql&#41;](../../t-sql/queries/at-time-zone-transact-sql.md)   
+ [日付と時刻のデータ型および関数 &#40;Transact-sql&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)   
+ [サーバー全体の構成のカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/server-wide-configuration-catalog-views-transact-sql.md)  

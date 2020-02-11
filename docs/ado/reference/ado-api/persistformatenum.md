@@ -16,29 +16,29 @@ ms.assetid: ebe1a2ab-e9f1-43a2-8f94-b190c9613d70
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2a26fd370e80cb288ee62b0fc53ed6670300172e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917612"
 ---
 # <a name="persistformatenum"></a>PersistFormatEnum
-保存先となる形式を指定します、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)します。  
+[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)を保存する形式を指定します。  
   
-|定数|Value|説明|  
+|常時|値|[説明]|  
 |--------------|-----------|-----------------|  
-|**adPersistADTG**|0|Microsoft 高度なデータ TableGram (adtg 形式) の形式を示します。|  
-|**adPersistADO**|1|ADO の拡張マークアップ言語 (XML) 形式が使用されることを示します。 この値は adPersistXML と同じでは、下位互換のためです。|  
-|**adPersistXML**|1|拡張マークアップ言語 (XML) 形式を示します。|  
-|**adPersistProviderSpecific**|2|プロバイダーは保持になっていることを示します、**レコード セット**独自形式を使用します。|  
+|**adPersistADTG**|0|Microsoft Advanced Data TableGram (ADTG) 形式を示します。|  
+|**adPersistADO**|1 で保護されたプロセスとして起動されました|ADO の独自の拡張マークアップ言語 (XML) 形式が使用されることを示します。 この値は adPersistXML と同じであり、旧バージョンとの互換性のために用意されています。|  
+|**adPersistXML**|1 で保護されたプロセスとして起動されました|拡張マークアップ言語 (XML) 形式を示します。|  
+|**adPersistProviderSpecific**|2|プロバイダーが独自の形式を使用して**レコードセット**を永続化することを示します。|  
   
-## <a name="adowfc-equivalent"></a>ADO と WFC と同等  
- パッケージ: **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>同等の ADO/WFC  
+ パッケージ: **com. ms. wfc. データ**  
   
-|定数|  
+|常時|  
 |--------------|  
-|AdoEnums.PersistFormat.ADTG|  
-|AdoEnums.PersistFormat.XML|  
+|AdoEnums ADTG|  
+|AdoEnums の形式|  
   
 ## <a name="applies-to"></a>適用対象  
  [Save メソッド](../../../ado/reference/ado-api/save-method.md)

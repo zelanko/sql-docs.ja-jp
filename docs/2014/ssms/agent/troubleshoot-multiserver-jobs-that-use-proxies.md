@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 47e3c3991bd4732d542bf1ce79e83000e738ff77
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63245423"
 ---
 # <a name="troubleshoot-multiserver-jobs-that-use-proxies"></a>プロキシを使用するマルチサーバー ジョブのトラブルシューティング
@@ -25,7 +25,7 @@ ms.locfileid: "63245423"
   
 -   "ジョブ ステップではプロキシ アカウントが必要ですが、ターゲット サーバーで一致するプロキシが無効です。"  
   
-     このエラーを解決するには、 **\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.** _\<n_> **\SQLServerAgent\AllowDownloadedJobsToMatchProxyName** レジストリ サブキーを **1 (true)** に設定します。 既定では、このサブキーに設定**0** (`false`)。 **MSSQL.** \<*n*> の値はインスタンス名です (例: **MSSQL.1**、**MSSQL.3**)。  
+     このエラーを解決するには、 **\ HKEY_LOCAL_MACHINE \SOFTWARE\MICROSOFT\MICROSOFT SQL Server\MSSQL.** を設定します。>**** _ \<n_\SQLServerAgent\AllowDownloadedJobsToMatchProxyName レジストリサブキーを**1 (true)** にします。 既定では、このサブキーは**0** (`false`) に設定されています。 MSSQL の値 **。**\< *n*> はインスタンス名です。たとえば、 **mssql. 1**または**mssql. 3**のようになります。  
   
 -   "プロキシ アカウントが見つかりませんでした。"  
   

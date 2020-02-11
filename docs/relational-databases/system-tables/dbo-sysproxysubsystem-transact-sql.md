@@ -1,5 +1,5 @@
 ---
-title: dbo.sysproxysubsystem (TRANSACT-SQL) |Microsoft Docs
+title: dbo. sysproxysubsystem (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,27 +20,27 @@ ms.assetid: 6d7713f5-1253-4a19-b1fb-635c377c95c1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f3a140a4cf1c82deda3b9d6a15b419b33b411974
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68097017"
 ---
-# <a name="dbosysproxysubsystem-transact-sql"></a>dbo.sysproxysubsystem (TRANSACT-SQL)
+# <a name="dbosysproxysubsystem-transact-sql"></a>dbo. sysproxysubsystem (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  各プロキシ アカウントで、どの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのサブシステムが使用されているかを記録します。 このテーブルに格納されます、 **msdb**データベース。  
+  各プロキシ アカウントで、どの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのサブシステムが使用されているかを記録します。 このテーブルは、 **msdb**データベースに格納されます。  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
-|**subsystem_id**|**int**|サブシステムの ID。 この値に対応、 **subsystem_id**内の列、 **syssubsystems**テーブル。|  
-|**proxy_id**|**int**|プロキシ アカウントの ID。 この値に対応、 **proxy_id**内の列、 **sysproxies**テーブル。|  
+|**subsystem_id**|**int**|サブシステムの ID。 この値は、 **syssubsystems システム**テーブルの**subsystem_id**列に対応しています。|  
+|**proxy_id**|**int**|プロキシアカウントの ID。 この値は、 **sysproxies**テーブルの**proxy_id**列に対応しています。|  
   
-## <a name="remarks"></a>コメント  
- メンバーのみ、 **sysadmin**固定サーバー ロールがこのテーブルにアクセスできます。  
+## <a name="remarks"></a>解説  
+ このテーブルにアクセスできるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
-## <a name="see-also"></a>関連項目  
- [dbo.syssubsystems &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/dbo-syssubsystems-transact-sql.md)   
- [dbo.sysproxies &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md)  
+## <a name="see-also"></a>参照  
+ [dbo. syssubsystems システム &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-syssubsystems-transact-sql.md)   
+ [dbo .SQL プロキシ &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md)  
   
   

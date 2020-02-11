@@ -17,40 +17,40 @@ ms.assetid: cfd37a82-aad2-41cd-8d13-1566c43d95f0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 25ea858995c884af202d3d80f4de675c9f4cda27
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923057"
 ---
 # <a name="referencing-the-ado-libraries-in-a-visual-basic-6-application"></a>Visual Basic 6 アプリケーションで ADO ライブラリを参照する
-Microsoft Visual Basic 6 アプリケーションには、ADO ライブラリをインポートするには、Visual Basic プロジェクトで参照を設定する必要があります。  
+Microsoft Visual Basic 6 アプリケーションに ADO ライブラリをインポートするには、Visual Basic プロジェクトで参照を設定する必要があります。  
   
-### <a name="to-set-a-reference-to-the-ado-libraries-in-a-visual-basic-project"></a>Visual Basic プロジェクトで ADO ライブラリへの参照を設定するには  
+### <a name="to-set-a-reference-to-the-ado-libraries-in-a-visual-basic-project"></a>Visual Basic プロジェクト内の ADO ライブラリへの参照を設定するには  
   
 1.  新しいを作成するか、既存の Visual Basic プロジェクトを開きます。  
   
-2.  をクリックして、**プロジェクト**クリックしてメニュー項目**参照.** ドロップダウン メニューのパネルから。  
+2.  [**プロジェクト**] メニュー項目をクリックし、ドロップダウンメニューパネルから [**参照**] を選択します。  
   
-3.  **使用可能な参照**、チェック ボックスをオン**Microsoft ActiveX Data Objects *n.n*ライブラリ**ここで、 ***n.n***最新を表しますバージョン番号です。 **場所**下にあるフィールドとして選択したを識別する必要があります *$installDir\msado15.dll*ここで、 *$installDir*先のディレクトリのパスを表す、ADO ライブラリインストールされています。  
+3.  [**使用可能な参照**] で、[ **Microsoft ActiveX データオブジェクト*n. n*ライブラリ**] のチェックボックスをオンにします。 n は最新のバージョン番号***を表します***。 下の [**場所**] フィールドでは *$installDir \msado15.dll*として選択する必要があります。ここで *$installDir*は、ADO ライブラリがインストールされているディレクトリのパスを表します。  
   
-4.  ADO MD を使用する場合は、手順 3 を繰り返し選択 **Microsoft ActiveX Data Objects (多次元) *n.n* ライブラリ** します。 **場所**フィールドとしてこの選択肢を識別する必要があります *$installDir\msadomd.dll*します。  
+4.  ADO MD を使用する場合は、手順 3. を繰り返して**Microsoft ActiveX データオブジェクト (多次元) *n. n*ライブラリ**を選択します。 [**場所**] フィールドでは、この選択を *$installDir*として指定する必要があります。  
   
-5.  ADOX を使用する場合は、手順 3 を繰り返し選択 **Microsoft ADO 内線 *n.n* DDL とセキュリティの** します。 **場所**フィールドとしてこの選択肢を識別する必要があります *$installDir\msadox.dll*します。  
+5.  ADOX を使用する場合は、手順 3. を繰り返して、 **DDL およびセキュリティ用に MICROSOFT ADO Ext. *n. n* **を選択します。 [**場所**] フィールドでは、この選択を *$installDir \msadox.dll*として指定する必要があります。  
   
-6.  クリックして**OK**参照の設定を完了します。  
+6.  [ **OK** ] をクリックして、参照の設定を完了します。  
   
 ## <a name="backward-compatibility"></a>Backward Compatibility  
- ADO をインストールすると、次のタイプ ライブラリの以前のバージョンもコピーします。  
+ ADO をインストールすると、以前のバージョンの次のタイプライブラリもコピーされます。  
   
--   *msado27.tlb*、ADO 2.7 タイプ ライブラリ  
+-   *msado27*、ADO 2.7 タイプライブラリ  
   
--   *msado26.tlb*、ADO 2.6 のタイプ ライブラリ  
+-   *msado26*、ADO 2.6 タイプライブラリ  
   
--   *msado25.tlb*、ADO 2.5 のタイプ ライブラリ  
+-   *msado25*、ADO 2.5 タイプライブラリ  
   
--   *msado21.tlb*、ADO 2.1 のタイプ ライブラリ  
+-   *msado21*、ADO 2.1 タイプライブラリ  
   
--   *msado20.tlb*、ADO 2.0 のタイプ ライブラリ  
+-   *msado20*、ADO 2.0 タイプライブラリ  
   
- アプリケーションは、旧バージョンと互換性の理由からこれらの ADO ライブラリのいずれかを使用する必要がありますは、タイプ ライブラリの適切なバージョンをインポートする必要があります。 これを行うには、前のセクションの手順に従います置き換え*msado15.dll*によって*msadoXX.tlb*ここで、 *XX*をインポートする必要があります。 バージョン番号を表します。
+ 旧バージョンとの互換性を保つために、アプリケーションでこれらの ADO ライブラリを使用する必要がある場合は、適切なバージョンのタイプライブラリをインポートする必要があります。 これを行うには、前のセクションの手順に従って、 *msadoXX*で*msado15.dll*を置き換えます。ここで、 *XX*はインポートする必要があるバージョン番号を表します。

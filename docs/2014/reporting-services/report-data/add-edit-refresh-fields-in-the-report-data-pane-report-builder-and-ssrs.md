@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d5d243ef273badd182066fcc42484fa95fa13461
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107485"
 ---
 # <a name="add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs"></a>レポート データ ペインでのフィールドの追加、編集、更新 (レポート ビルダーおよび SSRS)
@@ -91,9 +91,9 @@ ms.locfileid: "66107485"
   
 ## <a name="see-also"></a>参照  
  [データセット フィールド コレクション &#40;レポート ビルダーおよび SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)   
- [レポートにデータを追加&#40;レポート ビルダーおよび SSRS&#41;](report-datasets-ssrs.md)   
+ [レポート &#40;レポートビルダーおよび SSRS&#41;にデータを追加する](report-datasets-ssrs.md)   
  [レポート埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Reporting Services クエリ デザイナー](../reporting-services-query-designers.md)   
- [クエリ デザイナー (レポート ビルダー)](../query-designers-report-builder.md)  
+ [クエリデザイナー &#40;レポートビルダー&#41;](../query-designers-report-builder.md)  
   
   

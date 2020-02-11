@@ -1,5 +1,5 @@
 ---
-title: sys.numbered_procedures (TRANSACT-SQL) |Microsoft Docs
+title: numbered_procedures (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,34 +21,34 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1d0fa4c5ef671d643f85fa2a1a2d0caa62d00d86
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68102299"
 ---
-# <a name="sysnumberedprocedures-transact-sql"></a>sys.numbered_procedures (Transact-SQL)
+# <a name="sysnumbered_procedures-transact-sql"></a>sys.numbered_procedures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-  番号付きプロシージャとして作成された各 SQL Server のストアド プロシージャの行を格納します。 1 行ベースのデータは表示されません (番号 = 1) ストアド プロシージャ。 ベース ストアド プロシージャのエントリで見つかるビューなど**sys.objects**と**sys.procedures**します。  
+  番号付きプロシージャとして作成された SQL Server ストアドプロシージャごとに1行の値を格納します。 この場合、ベース (number = 1) ストアドプロシージャの行は表示されません。 基本ストアドプロシージャのエントリは、 **sys. objects**や**sys. プロシージャ**などのビューにあります。  
   
 > [!IMPORTANT]  
->  番号付きプロシージャは非推奨とされます。 番号付きプロシージャの使用はお勧めします。 このカタログ ビューを使用するクエリをコンパイルすると、DEPRECATION_ANNOUNCEMENT イベントが発生します。  
+>  番号付きプロシージャは非推奨とされます。 番号付きプロシージャの使用は推奨されません。 このカタログビューを使用するクエリがコンパイルされると、DEPRECATION_ANNOUNCEMENT イベントが発生します。  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|ストアド プロシージャのオブジェクトの ID。|  
-|**procedure_number**|**smallint**|2 以上、オブジェクト内でこの手順の数。|  
-|**definition**|**nvarchar(max)**|このプロシージャを定義する SQL Server のテキストです。<br /><br /> NULL は、暗号化されていることを示します。|  
+|**object_id**|**int**|ストアドプロシージャのオブジェクトの ID。|  
+|**procedure_number**|**smallint**|オブジェクト内のこのプロシージャの数 (2 以上)。|  
+|**カスタム**|**nvarchar(max)**|このプロシージャを定義する SQL Server テキスト。<br /><br /> NULL = 暗号化されています。|  
   
 > [!NOTE]  
 >  XML および CLR パラメーターは、番号付きプロシージャではサポートされていません。  
   
 ## <a name="permissions"></a>アクセス許可  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]詳細については、「[メタデータ表示の構成](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [オブジェクト カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [オブジェクトカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: SQLGetStmtOption (カーソル ライブラリ) |Microsoft Docs
+title: SQLGetStmtOption (カーソルライブラリ) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,19 +13,19 @@ ms.assetid: 986170b3-fba8-4323-9224-60b381c7effb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1f3749cf860463c79b5f489243544529498222a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68073819"
 ---
 # <a name="sqlgetstmtoption-cursor-library"></a>SQLGetStmtOption (カーソル ライブラリ)
 > [!IMPORTANT]  
->  この機能は、Windows の将来のバージョンで削除されます。 新しい開発作業でこの機能を使用しないようにして、現在この機能を使用しているアプリケーションの変更を検討してください。 ドライバーのカーソル機能を使用することをお勧めします。  
+>  この機能は、今後のバージョンの Windows では削除される予定です。 新しい開発作業ではこの機能の使用を避け、現在この機能を使用しているアプリケーションの変更を検討してください。 Microsoft では、ドライバーのカーソル機能を使用することをお勧めします。  
   
- このトピックの使用、 **SQLGetStmtOption**カーソル ライブラリ内の関数。 に関する一般的な情報**SQLGetStmtOption**を参照してください[SQLGetStmtOption 関数](../../../odbc/reference/syntax/sqlgetstmtoption-function.md)します。  
+ このトピックでは、カーソルライブラリでの**SQLGetStmtOption**関数の使用について説明します。 **SQLGetStmtOption**の一般的な情報については、「 [SQLGetStmtOption 関数](../../../odbc/reference/syntax/sqlgetstmtoption-function.md)」を参照してください。  
   
- カーソル ライブラリでは、次のステートメント オプションをサポートしている**SQLGetStmtOption**:  
+ カーソルライブラリでは、 **SQLGetStmtOption**を使用した次のステートメントオプションがサポートされています。  
   
 |||  
 |-|-|  

@@ -1,5 +1,5 @@
 ---
-title: sys.conversation_groups (TRANSACT-SQL) |Microsoft Docs
+title: conversation_groups (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,24 +20,24 @@ ms.assetid: 3f35815e-2de4-42a2-a972-8f0141dad0b3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7c822d5f405b353a9c07902fc1ef8f9272ad4353
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68109492"
 ---
-# <a name="sysconversationgroups-transact-sql"></a>sys.conversation_groups (TRANSACT-SQL)
+# <a name="sysconversation_groups-transact-sql"></a>conversation_groups (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   メッセージ交換グループごとに 1 行のデータを格納するカタログ ビューです。  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
-|**conversation_group_id**|**uniqueidentifier**|メッセージ交換グループの識別子。 Null を許容しません。|  
-|**service_id**|**int**|このグループのメッセージ交換で使用されるサービスの識別子。 Null を許容しません。|  
-|**is_system**|**bit**|システム インスタンスであるかどうかを示します。 NULL 値を許容します。|  
+|**conversation_group_id**|**UNIQUEIDENTIFIER**|メッセージ交換グループの識別子。 NULL 値は許容されません。|  
+|**service_id**|**int**|このグループのメッセージ交換で使用されるサービスの識別子。 NULL 値は許容されません。|  
+|**is_system**|**bit**|システム インスタンスであるかどうかを示します。 NULLABLE.|  
   
 ## <a name="permissions"></a>アクセス許可  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]詳細については、「[メタデータ表示の構成](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
   

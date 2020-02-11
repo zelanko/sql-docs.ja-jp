@@ -1,5 +1,5 @@
 ---
-title: 十分な TempDB 領域を確保 |Microsoft Docs
+title: 十分な TempDB 領域を確保する |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,49 +13,49 @@ ms.assetid: 09130db1-6248-4234-a1e5-a9c8e1622c06
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fe377cd15f2b95577a561e6784f78113b2843d07
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67922655"
 ---
 # <a name="ensuring-sufficient-tempdb-space"></a>十分な TempDB 領域の確保
-処理中にエラーが発生した場合[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Microsoft SQL Server 6.5 の領域を処理する必要があるオブジェクトの場合は、TempDB のサイズを大きく必要があります。 (いくつかのクエリが一時的な処理容量が必要ですたとえば、ORDER BY 句を使用してクエリには、並べ替えが必要です。 の、 **Recordset**、いくつかの一時領域必要があります。)。  
+Microsoft SQL Server 6.5 の処理領域を必要とする[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトの処理中にエラーが発生した場合は、TempDB のサイズを大きくすることが必要になることがあります。 (クエリによっては、一時的な処理領域が必要になる場合があります。たとえば、ORDER BY 句を使用するクエリには、いくつかの一時領域を必要とする**レコードセット**の並べ替えが必要です)。  
   
 > [!IMPORTANT]
->  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)します。  
+>  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および[Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416)」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
   
 > [!IMPORTANT]
->  として簡単に展開されていると、デバイスを圧縮することがないため、操作を実行する前に、この手順を読みます。  
+>  展開後にデバイスを圧縮するのは簡単ではないため、操作を実行する前にこの手順をお読みください。  
   
 > [!NOTE]
->  形状の既定で SQL Server 7.0 以降、TempDB が自動的に拡大に応じて設定されます。 そのため、この手順は、7.0 より前のバージョンを実行するサーバーで必要のみにあります。  
+>  既定では、inMicrosoft SQL Server 7.0 以降では、TempDB は必要に応じて自動的に拡張されるように設定されます。 このため、この手順が必要になるのは、7.0 より前のバージョンを実行しているサーバーだけです。  
   
-### <a name="to-increase-the-tempdb-space-on-sql-server-65"></a>SQL Server 6.5 で TempDB の領域を増やす  
+### <a name="to-increase-the-tempdb-space-on-sql-server-65"></a>SQL Server 6.5 の TempDB 領域を増やすには  
   
-1.  Microsoft SQL Server Enterprise Manager を起動、サーバーのツリーをオープンし、データベース デバイス ツリーを開きます。  
+1.  Microsoft SQL Server Enterprise Manager を起動し、サーバーのツリーを開き、[データベースデバイス] ツリーを開きます。  
   
-2.  展開し、マスターなど (物理) デバイスを選択し、開くデバイスをダブルクリックして、**データベース デバイスの編集** ダイアログ ボックス。  
+2.  展開する (物理) デバイス ([Master] など) を選択し、デバイスをダブルクリックして [**データベースデバイスの編集**] ダイアログボックスを開きます。  
   
-     このダイアログ ボックスには、現在のデータベースを使用している領域の量が表示されます。  
+     このダイアログボックスには、現在のデータベースで使用されている領域が表示されます。  
   
-3.  **サイズ**ボックスに、必要な量 (たとえば、50 メガバイト (MB) のハード_ディスク領域) にデバイスを大ききます。  
+3.  [**サイズ**] ボックスで、デバイスを目的の量に増やします (たとえば、ハードディスク領域の 50 mb)。  
   
-4.  クリックして**今すぐ変更**を (論理) の TempDB の拡張可能領域の量を増やします。  
+4.  [**今すぐ変更**] をクリックして、(論理) TempDB を拡張できる領域を増やします。  
   
-5.  サーバーで、データベースのツリーを開き、ダブルクリック**TempDB**を開く、**データベースの編集** ダイアログ ボックス。 **データベース**タブには、TempDB に現在割り当てられている領域の量が一覧表示されます (**データ サイズ**)。 既定では、2 MB になります。  
+5.  サーバーで [データベース] ツリーを開き、[ **TempDB** ] をダブルクリックして [**データベースの編集**] ダイアログボックスを開きます。 [**データベース**] タブには、現在 TempDB に割り当てられている領域の**サイズ (データサイズ**) が表示されます。 既定値は 2 MB です。  
   
-6.  で、**サイズ**グループで、**展開**します。 グラフの各物理デバイスに使用できる割り当て領域を表示します。 茶色のバーでは、使用可能な領域を表します。  
+6.  [**サイズ**] グループの [**展開**] をクリックします。 グラフには、各物理デバイスで使用可能な領域と割り当てられた領域が表示されます。 茶色のバーは、使用可能な領域を表します。  
   
-7.  選択、**ログ デバイス**、マスターで使用可能なサイズを表示するなど、**サイズ (MB)** ボックス。  
+7.  [Master] などの**ログデバイス**を選択すると、[**サイズ (MB)** ] ボックスに使用可能なサイズが表示されます。  
   
-8.  をクリックして**今すぐ展開**TempDB データベースにその領域を割り当てます。  
+8.  [**今すぐ展開**] をクリックして、その領域を TempDB データベースに割り当てます。  
   
-     **データベースの編集** ダイアログ ボックスが表示されます、新しい TempDB のサイズに割り当てられます。  
+     [**データベースの編集**] ダイアログボックスに、TempDB に割り当てられた新しいサイズが表示されます。  
   
- 詳細については、このトピックでは、「データベースの [展開] ダイアログ ボックス」は、Microsoft SQL Server Enterprise Manager のヘルプ ファイルを検索します。  
+ このトピックの詳細については、Microsoft SQL Server Enterprise Manager のヘルプファイルで [データベースの展開] ダイアログボックスを検索してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [RDS の基礎](../../../ado/guide/remote-data-service/rds-fundamentals.md)
 
 

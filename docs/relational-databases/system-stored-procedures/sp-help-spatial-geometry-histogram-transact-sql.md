@@ -1,5 +1,5 @@
 ---
-title: sp_help_spatial_geometry_histogram (TRANSACT-SQL) |Microsoft Docs
+title: sp_help_spatial_geometry_histogram (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,16 @@ ms.assetid: 036aaf61-df3e-40f7-aa4e-62983c5a37bd
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 640d292dfbef7adae9fc99b53cb3b450f698b651
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68085119"
 ---
-# <a name="sphelpspatialgeometryhistogram-transact-sql"></a>sp_help_spatial_geometry_histogram (Transact-SQL)
+# <a name="sp_help_spatial_geometry_histogram-transact-sql"></a>sp_help_spatial_geometry_histogram (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  境界ボックスと空間インデックスのグリッドのパラメーターのキーの更新が容易になります。  
+  空間インデックスの境界ボックスおよびグリッドパラメーターのキーイングを容易にします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,43 +44,43 @@ sp_help_spatial_geometry_histogram [ @tabname =] 'tabname'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @tabname = ] 'tabname'` 空間インデックスが指定されているテーブルの修飾付きまたは修飾なしの名前です。  
+`[ @tabname = ] 'tabname'`空間インデックスが指定されているテーブルの修飾名または修飾され名を指定します。  
   
- 引用符は、修飾されたテーブルが指定されている場合にのみ必要です。 データベース名を含む、完全修飾名が指定されている場合、データベース名は、現在のデータベースの名前である必要があります。 *tabname $* は**sysname**、既定値はありません。  
+ 引用符は、修飾されたテーブルが指定されている場合にのみ必要です。 データベース名を含む完全修飾名を指定する場合は、データベース名を現在のデータベースの名前にする必要があります。 *tabname*は**sysname**,、既定値はありません。  
   
-`[ @colname = ] 'colname'` 指定された空間列の名前です。 *colname*は、 **sysname**、既定値はありません。  
+`[ @colname = ] 'colname'`指定された空間列の名前を指定します。 *colname*は**sysname**であり、既定値はありません。  
   
-`[ @resolution = ] 'resolution'` 境界ボックスの解像度です。 有効な値は 10 ～ 5000 です。 *解像度*は、 **tinyint**、既定値はありません。  
+`[ @resolution = ] 'resolution'`境界ボックスの解像度です。 有効な値は 10 ～ 5000 です。 *解決策*は**tinyint**,、既定値はありません。  
   
-`[ @xmin = ] 'xmin'` X の最小値の境界ボックス プロパティです。 *xmin*は、 **float**、既定値はありません。  
+`[ @xmin = ] 'xmin'`"X の最小値" 境界ボックスプロパティです。 *xmin*は**float**,、既定値はありません。  
   
-`[ @ymin = ] 'ymin'` Y の最小値の境界ボックス プロパティです。 *ymin*は、 **float**、既定値はありません。  
+`[ @ymin = ] 'ymin'`"Y の最小値" 境界ボックスプロパティです。 *ymin*は**float**,、既定値はありません。  
   
-`[ @xmax = ] 'xmax'` X の最大値の境界ボックス プロパティです。 *xmax*は、 **float**、既定値はありません。  
+`[ @xmax = ] 'xmax'`は、"X の最大値" 境界ボックスプロパティです。 *xmax*は**float**,、既定値はありません。  
   
-`[ @ymax = ] 'ymax'` Y の最大値の境界ボックス プロパティです。 *ymax*は、 **float**、既定値はありません。  
+`[ @ymax = ] 'ymax'`"Y の最大値" 境界ボックスプロパティです。 *ymax*は**float**,、既定値はありません。  
   
-`[ @sample = ] 'sample'` 使用するテーブルの割合です。 有効な値は 0 ~ 100 です。 *サンプル*は、 **float**します。 既定値は 100 です。  
+`[ @sample = ] 'sample'`使用するテーブルの割合を示します。 有効な値は 0 ~ 100 です。 *sample*は**float**です。 既定値は100です。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
- テーブルの値が返されます。 次の表では、テーブルの列の内容について説明します。  
+ テーブル値が返されます。 次のグリッドでは、テーブルの列の内容について説明します。  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
-|**cellid**|**int**|カウントは 1 から始まります、各セルの一意の ID を表します。|  
-|**セル**|**geometry**|それぞれのセルを表す四角形です。 セルの形は、空間インデックス作成用に使用されたセルの形と同じです。|  
-|**row_count**|**bigint**|接しているか、またはセルを含む空間オブジェクトの数を示します。|  
+|**cellid**|**int**|各セルの一意の ID を表します。カウントは1から始まります。|  
+|**cell**|**geometry**|それぞれのセルを表す四角形です。 セルの形は、空間インデックス作成用に使用されたセルの形と同じです。|  
+|**row_count**|**bigint**|セルをタッチまたは格納している空間オブジェクトの数を示します。|  
   
 ## <a name="permissions"></a>アクセス許可  
- ユーザーのメンバーである必要があります、**パブリック**ロール。 サーバーとオブジェクトの読み取りアクセス許可が必要です。  
+ ユーザーは、 **public**ロールのメンバーである必要があります。 サーバーとオブジェクトに対する読み取りアクセス権限が必要です。  
   
-## <a name="remarks"></a>コメント  
- SSMS 空間タブでは、結果がグラフィカルに表示されます。 結果の項目のおおよその数を取得する空間ウィンドウに対して結果を照会できます。 セルの合計が実際のオブジェクトの数よりも大きい可能性がありますのでテーブル内のオブジェクトは、複数のセルをカバーして可能性があります。  
+## <a name="remarks"></a>解説  
+ SSMS 空間タブでは、結果がグラフィカルに表示されます。 空間ウィンドウに対して結果にクエリを実行すると、結果項目の概数を取得できます。 テーブル内のオブジェクトは複数のセルに対応している場合があるため、セルの合計が実際のオブジェクトの数よりも大きくなる可能性があります。  
   
- 境界ボックスの外部にあるオブジェクトまたは境界ボックスの境界に接しているオブジェクトの数を格納する追加の行が結果セットに追加される場合があります。 **Cellid** 0 は、この行の**セル**この行が含まれている、 **LineString**境界ボックスを表します。 この行は、境界ボックス外領域全体を表します。  
+ 境界ボックスの外部にあるオブジェクトまたは境界ボックスの境界に接しているオブジェクトの数を格納する追加の行が結果セットに追加される場合があります。 この行の**cellid**は0で、この行の**セル**には、境界ボックスを表す**LineString**が含まれています。 この行は、境界ボックス外の領域全体を表します。  
   
-## <a name="examples"></a>使用例  
- 次の例は、サンプル テーブルを作成しを呼び出して**sp_help_spatial_geometry_histogram**テーブルにします。  
+## <a name="examples"></a>例  
+ 次の例では、サンプルテーブルを作成し、テーブルに対して**sp_help_spatial_geometry_histogram**を呼び出します。  
   
  `USE AdventureWorksDW2012`  
   
@@ -146,7 +146,7 @@ sp_help_spatial_geometry_histogram [ @tabname =] 'tabname'
   
  `GO`  
   
-## <a name="see-also"></a>関連項目  
- [空間インデックス ストアド プロシージャ&#40;TRANSACT-SQL&#41;](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)  
+## <a name="see-also"></a>参照  
+ [空間インデックスストアドプロシージャ &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)  
   
   

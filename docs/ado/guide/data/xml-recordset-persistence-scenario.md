@@ -1,5 +1,5 @@
 ---
-title: XML レコード セットの保持シナ リオ |Microsoft Docs
+title: XML レコードセット永続化シナリオ |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,35 +13,35 @@ ms.assetid: 353d569a-043a-4397-9ee6-564c4af8d5f6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 55ea62fac0cb2fe73b368429bb164cd28147fa7d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923367"
 ---
 # <a name="xml-recordset-persistence-scenario"></a>XML レコードセットの保持シナリオ
-このシナリオでは、ASP の応答オブジェクトに直接レコード セット オブジェクトの内容を保存する Active Server Pages (ASP) アプリケーションを作成します。  
+このシナリオでは、レコードセットオブジェクトの内容を ASP 応答オブジェクトに直接保存する Active Server Pages (ASP) アプリケーションを作成します。  
   
 > [!NOTE]
->  このシナリオには、サーバーがインターネット インフォメーション サーバー 5.0 (iis) や、後でインストールされている必要があります。  
+>  このシナリオでは、サーバーにインターネットインフォメーションサーバー 5.0 (IIS) 以降がインストールされている必要があります。  
   
- Internet Explorer で表示される、返されたレコード セットを使用して、 [DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)します。  
+ 返されたレコードセットは、Internet Explorer の[DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)を使用して表示されます。  
   
- 次の手順では、このシナリオを作成する必要があります。  
+ このシナリオを作成するには、次の手順を実行する必要があります。  
   
--   アプリケーションを設定します。  
+-   アプリケーションを設定する  
   
--   データを取得します。  
+-   データを取得する  
   
--   データを送信します。  
+-   データを送信する  
   
--   受信して、データの表示  
+-   データの受信と表示  
   
-## <a name="step-1-set-up-the-application"></a>手順 1:アプリケーションを設定します。  
- スクリプトのアクセス許可を持つ"XMLPersist"をという名前の IIS 仮想ディレクトリを作成します。 仮想ディレクトリがポイントする、1 つ名前付き"XMLResponse.asp、"、他の名前付き"Default.htm"フォルダー内の 2 つの新しいテキスト ファイルを作成します。  
+## <a name="step-1-set-up-the-application"></a>手順 1: アプリケーションをセットアップする  
+ スクリプト権限を使用して、"XMLPersist" という名前の IIS 仮想ディレクトリを作成します。 仮想ディレクトリが指すフォルダーに、"XMLResponse .asp" という名前の2つの新しいテキストファイルを作成します。 "default.htm" という名前を付けます。  
   
-## <a name="step-2-get-the-data"></a>手順 2:データを取得します。  
- この手順では、ADO レコード セットを開くし、クライアントに送信するための準備にコードを記述します。 メモ帳などのテキスト エディターで XMLResponse.asp ファイルを開き、次のコードを挿入します。  
+## <a name="step-2-get-the-data"></a>手順 2: データを取得する  
+ この手順では、ADO レコードセットを開いてクライアントに送信するための準備を行うコードを記述します。 ファイル XMLResponse .asp をメモ帳などのテキストエディターで開き、次のコードを挿入します。  
   
 ```  
 <%@ language="VBScript" %>  
@@ -65,12 +65,12 @@ ms.locfileid: "67923367"
   adoRec.Open strSQL, adoCon, adOpenStatic, adLockOptimistic, adCmdText  
 ```  
   
- 値を変更してください、`Data Source`パラメーター `strCon` Microsoft SQL Server コンピューターの名前にします。  
+ の`Data Source` `strCon`パラメーターの値は、必ず Microsoft SQL Server コンピューターの名前に変更してください。  
   
- オープンで、次の手順に進んでください、ファイルを保持します。  
+ ファイルを開いたままにして、次の手順に進みます。  
   
-## <a name="step-3-send-the-data"></a>手順 3:データを送信します。  
- レコード セットがある場合は、できたは、ASP の応答オブジェクトを XML として保存して、クライアントに送信する必要があります。 XMLResponse.asp の一番下には、次のコードを追加します。  
+## <a name="step-3-send-the-data"></a>手順 3: データを送信する  
+ レコードセットを取得したので、それをクライアントに送信する必要があります。これは、XML として ASP 応答オブジェクトに保存することによって行います。 XMLResponse. asp の下に次のコードを追加します。  
   
 ```  
   Response.ContentType = "text/xml"  
@@ -84,12 +84,12 @@ ms.locfileid: "67923367"
 %>  
 ```  
   
- レコード セットの変換先として指定されていますが、ASP の応答オブジェクト[Save メソッド](../../../ado/reference/ado-api/save-method.md)します。 Save メソッドの宛先は、ADO など、IStream インターフェイスをサポートする任意のオブジェクトを指定できます[Stream オブジェクト (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)、またはレコード セットが保存される完全なパスを含むファイル名。  
+ ASP 応答オブジェクトが、レコードセットの[保存方法](../../../ado/reference/ado-api/save-method.md)の送信先として指定されていることに注意してください。 Save メソッドの送信先には、IStream インターフェイスをサポートする任意のオブジェクト[(Ado ストリームオブジェクト (ado) など)](../../../ado/reference/ado-api/stream-object-ado.md)、またはレコードセットを保存する完全なパスを含むファイル名を指定できます。  
   
- 保存して、次の手順に進む前に XMLResponse.asp を閉じます。 Adovbs.inc ファイルを既定 ADO ライブラリのインストール フォルダーから同じ XMLResponse.asp ファイルを保存したフォルダーにコピーします。  
+ 次の手順に進む前に、XMLResponse .asp を保存して閉じます。 また、adovbs ファイルを既定の ADO ライブラリインストールフォルダーから、XMLResponse .asp ファイルを保存したフォルダーにコピーします。  
   
-## <a name="step-4-receive-and-display-the-data"></a>手順 4:受信して、データの表示  
- この手順では、埋め込みの HTML ファイルを作成します[DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)オブジェクトを指し示す XMLResponse.asp ファイルをレコード セットを取得します。 Default.htm をメモ帳などのテキスト エディターで開き、次のコードを追加します。 URL に"sqlserver"をサーバーの名前に置き換えます。  
+## <a name="step-4-receive-and-display-the-data"></a>手順 4: データを受信して表示する  
+ この手順では、レコードセットを取得するために XMLResponse. .asp ファイルをポイントする埋め込みの[DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)オブジェクトを含む HTML ファイルを作成します。 メモ帳などのテキストエディターを使用して default.htm を開き、次のコードを追加します。 URL の "sqlserver" をサーバーの名前に置き換えます。  
   
 ```  
 <HTML>  
@@ -110,8 +110,8 @@ ms.locfileid: "67923367"
 </HTML>  
 ```  
   
- Default.htm ファイルを閉じて XMLResponse.asp が保存されている同じフォルダーに保存します。 Internet Explorer 4.0 を使用して、または後で、URL https:// を開いて*sqlserver*/XMLPersist/default.htm し、結果を確認します。 データは、バインドされた DHTML テーブルに表示されます。 開く URL https:// *sqlserver* /XMLPersist/XMLResponse.asp し、結果を確認します。 XML が表示されます。  
+ Default.htm ファイルを閉じ、XMLResponse .asp を保存したフォルダーに保存します。 Internet Explorer 4.0 以降を使用して、https://*sqlserver*/XMLPersist/default.htm URL を開き、結果を確認します。 データは、バインドされた DHTML テーブルに表示されます。 ここで、https:// *sqlserver* /XMLPersist/XMLResponse.asp という URL を開き、結果を確認します。 XML が表示されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Save メソッド](../../../ado/reference/ado-api/save-method.md)   
  [レコードを XML 形式で保持する](../../../ado/guide/data/persisting-records-in-xml-format.md)

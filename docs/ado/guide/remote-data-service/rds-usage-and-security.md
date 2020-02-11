@@ -1,5 +1,5 @@
 ---
-title: RDS の使用方法とセキュリティ |Microsoft Docs
+title: RDS の使用とセキュリティ |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,17 +14,17 @@ ms.assetid: b8ac3739-05d3-4818-8201-a763795fb8b4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 26d3a5d785db3ae138e26225ea5b37b182f6b076
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67922400"
 ---
 # <a name="rds-usage-and-security"></a>RDS の使用方法とセキュリティ
-このセクションの情報を使用して、サーバーに設定して、すばやく RDS を使用します。 このセクションには、RDS とその他のテクノロジの間でキーのリレーションシップの一部について説明します、RDS を実装するときに実行する必要がある特定の構成手順が含まれていて、設定するときに発生する問題の解決策を識別するのに役立ちます、RDS ソリューションです。  
+サーバーをセットアップし、RDS をすばやく使用するには、このセクションの情報を参照してください。 ここでは、RDS を実装するときに必要になる可能性がある特定の構成手順、RDS と他のテクノロジ間の重要な関係について説明します。また、を設定するときに発生する可能性がある問題の解決策を特定するのに役立ちます。RDS ソリューション。  
   
 > [!IMPORTANT]
->  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)します。  
+>  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および[Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416)」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
   
  このセクションでは、次のトピックを扱います。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "67922400"
   
 -   [RDS のトラブルシューティング](../../../ado/guide/remote-data-service/troubleshooting-rds.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [RDS の基礎](../../../ado/guide/remote-data-service/rds-fundamentals.md)   
  [RDS のシナリオ](../../../ado/guide/remote-data-service/rds-scenario.md)   
  [RDS チュートリアル](../../../ado/guide/remote-data-service/rds-tutorial.md)

@@ -46,14 +46,14 @@ ms.assetid: e11484bb-c5c7-42d8-9bb8-21572125d727
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6fe7e807fc38d6f1cf6f72e5b19539bb839e9c08
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918360"
 ---
 # <a name="item-property-ado"></a>Item プロパティ (ADO)
-名前または序数で、コレクションの特定のメンバーを示します。  
+名前または序数を指定して、コレクションの特定のメンバーを示します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -65,13 +65,13 @@ Set object = collection.Item ( Index )
  オブジェクト参照を返します。  
   
 ## <a name="parameters"></a>パラメーター  
- *Index*  
- A**バリアント**名前またはコレクション内のオブジェクトの序数のいずれかに評価される式。  
+ *化*  
+ コレクション内のオブジェクトの名前または序数に評価される**バリアント**式。  
   
-## <a name="remarks"></a>コメント  
- 使用して、**項目**コレクションに特定のオブジェクトを返すプロパティ。 場合**項目**に対応するコレクションでオブジェクトを検索することはできません、*インデックス*引数、エラーが発生します。 また、一部のコレクションが名前付きのオブジェクトをサポートしません。これらのコレクションの序数参照を使用する必要があります。  
+## <a name="remarks"></a>解説  
+ コレクション内の特定のオブジェクトを返すには、 **Item**プロパティを使用します。 **Item**が*Index*引数に対応するコレクション内のオブジェクトを見つけられない場合、エラーが発生します。 また、一部のコレクションでは名前付きオブジェクトがサポートされていません。これらのコレクションでは、序数参照を使用する必要があります。  
   
- **項目**プロパティは、すべてのコレクションの既定のプロパティ。 そのため、次の構文形式を交換できます。  
+ **Item**プロパティは、すべてのコレクションの既定のプロパティです。したがって、次の構文形式は置き換えることができます。  
   
 ```  
 collection.Item (Index)  
@@ -90,6 +90,6 @@ collection (Index)
 |[Properties コレクション (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)|[Tables コレクション (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)|[Users コレクション (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)|  
 |[Views コレクション (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)|||  
   
-## <a name="see-also"></a>関連項目  
- [項目プロパティの例 (VB)](../../../ado/reference/ado-api/item-property-example-vb.md)   
+## <a name="see-also"></a>参照  
+ [Item プロパティの例 (VB)](../../../ado/reference/ado-api/item-property-example-vb.md)   
  [Item プロパティの例 (VC++)](../../../ado/reference/ado-api/item-property-example-vc.md)   

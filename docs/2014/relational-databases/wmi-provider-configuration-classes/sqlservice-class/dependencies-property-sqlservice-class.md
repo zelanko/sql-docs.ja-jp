@@ -1,5 +1,5 @@
 ---
-title: 依存関係プロパティ (SqlService クラス) |Microsoft Docs
+title: Dependencies プロパティ (SqlService クラス) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: eae8ad534ba452acd7f65e4faf66dfcf4bc73791
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63223276"
 ---
 # <a name="dependencies-property-sqlservice-class"></a>Dependencies プロパティ (SqlService クラス)
@@ -37,15 +37,15 @@ object
 ```  
   
 ## <a name="parts"></a>要素  
- *object*  
+ *素材*  
  サービスを表す [SqlService クラス](sqlservice-class.md) オブジェクト。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  参照されたサービスに依存するサービスのリストを格納する string[] 配列。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
   
 ## <a name="see-also"></a>参照  
- [開始とサービスの停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [サービスの開始および停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

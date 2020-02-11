@@ -1,5 +1,5 @@
 ---
-title: ConnectComplete および Disconnect イベント (ADO) |Microsoft Docs
+title: ConnectComplete イベントと Disconnect イベント (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -20,14 +20,14 @@ ms.assetid: 568f5252-d069-4d99-a01b-2ada87ad1304
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 448270ddf0e8cd7efb5ec39a93d4ff993360730e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919579"
 ---
 # <a name="connectcomplete-and-disconnect-events-ado"></a>ConnectComplete および Disconnect イベント (ADO)
-**ConnectComplete**接続が開始した後にイベントが呼び出されます。 **切断**接続が終了した後にイベントが呼び出されます。  
+**Connectcomplete**イベントは、接続の開始後に呼び出されます。 **切断**イベントは、接続が終了した後に呼び出されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,18 +39,18 @@ Disconnect adStatus, pConnection
   
 #### <a name="parameters"></a>パラメーター  
  *pError*  
- [エラー](../../../ado/reference/ado-api/error-object.md)オブジェクト。 場合に発生したエラーを説明の値*adStatus*は**adStatusErrorsOccurred**; 未設定がそれ以外の場合。  
+ [エラー](../../../ado/reference/ado-api/error-object.md)オブジェクトです。 *Adstatus*の値が**adstatuserrorて**いる場合に発生したエラーについて説明します。それ以外の場合は設定されません。  
   
  *adStatus*  
- [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md)値を返しますでは常に**adStatusOK**します。  
+ 常に**Adstatusok**を返す[eventstatusenum](../../../ado/reference/ado-api/eventstatusenum.md)値。  
   
- ときに**ConnectComplete**が呼び出されると、このパラメーターを設定**adStatusCancel**場合、 **WillConnect**イベントが保留中の接続のキャンセルを要求します。  
+ **Connectcomplete**が呼び出されると、このパラメーターは、が保留中の接続のキャンセルを**要求した**場合に**adstatuscancel**に設定されます。  
   
- どちらのイベントから制御が戻る前に、このパラメーターを設定**adStatusUnwantedEvent**後続通知しないように設定します。 ただし、終了および再開、[接続](../../../ado/reference/ado-api/connection-object-ado.md)これらのイベントを再度発生させます。  
+ いずれかのイベントが返される前に、このパラメーターを**adStatusUnwantedEvent**に設定して、後続の通知を防止します。 ただし、[接続](../../../ado/reference/ado-api/connection-object-ado.md)を閉じて再度開くと、これらのイベントが再び発生します。  
   
  *pConnection*  
- **接続**オブジェクトをこのイベントが適用されます。  
+ このイベントが適用される**接続**オブジェクト。  
   
-## <a name="see-also"></a>関連項目  
- [ADO イベント モデルの例 (vc++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
+## <a name="see-also"></a>参照  
+ [ADO Events モデルの例 (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [ADO イベント ハンドラーの概要](../../../ado/guide/data/ado-event-handler-summary.md)

@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 410dd8785ce58f87b35c6c18b5c5dc00ffcd9faa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63240780"
 ---
 # <a name="reference-the-built-in-xml-schema-collection-sys"></a>組み込みの XML スキーマ コレクション (sys) の参照
@@ -147,7 +147,7 @@ data(/ns:root[1]) instance of sqltypes:varchar?')
 GO  
 ```  
   
- `@var` 変数に関連付けられているスキーマに従うと、<`root`> 要素の値の型が **varchar** 型の派生型であるため、`instance of sqltypes:varchar?` 式は TRUE を返します。  
+ `instance of sqltypes:varchar?` 変数に関連付けられているスキーマに従うと、<`root`> 要素の値の型が **varchar** 型の派生型であるため、`@var` 式は TRUE を返します。  
   
 ## <a name="see-also"></a>参照  
  [XML スキーマ コレクション &#40;SQL Server&#41;](xml-schema-collections-sql-server.md)  

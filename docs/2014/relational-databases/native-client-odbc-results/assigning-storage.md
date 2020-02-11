@@ -1,5 +1,5 @@
 ---
-title: ストレージを割り当てます。マイクロソフトのドキュメント
+title: ストレージの割り当て |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,16 +22,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0aefbfdeb984aa6b384c5c123ed69ec4fdaa41ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200041"
 ---
 # <a name="assigning-storage"></a>ストレージの割り当て
   アプリケーションでは、SQL ステートメントの実行前後に、結果用のストレージを割り当てることができます。 アプリケーションで最初に SQL ステートメントを準備または実行すると、結果のストレージを割り当てる前に、結果セットに関する情報を取得できます。 たとえば、結果セットが不明であれば、アプリケーションでは、列にストレージを割り当てる前に、列数を取得する必要があります。  
   
- アプリケーションの呼び出しにデータの列の記憶領域を関連付けるには、 [SQLBindCol](../native-client-odbc-api/sqlbindcol.md)し、それを渡します。  
+ データの列にストレージを関連付けるために、アプリケーションは[SQLBindCol](../native-client-odbc-api/sqlbindcol.md)を呼び出し、それを渡します。  
   
 -   データの変換先のデータ型。  
   
@@ -45,19 +45,19 @@ ms.locfileid: "63200041"
   
 -   使用できるデータのバイト数を返すストレージ バッファーのアドレス。  
   
- また、アプリケーションは、結果セットの列をプログラム変数の配列にバインドして、結果セットの行をブロック単位でフェッチする機能をサポートすることもできます。 配列バインディングの 2 つのさまざまな種類があります。  
+ また、アプリケーションは、結果セットの列をプログラム変数の配列にバインドして、結果セットの行をブロック単位でフェッチする機能をサポートすることもできます。 配列バインディングには、次の2種類があります。  
   
 -   列方向のバインドは、各列を変数の独自の配列にバインドすると終了します。  
   
-     呼び出すことによって、列方向のバインドが指定されて[SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md)で*属性*SQL_ATTR_ROW_BIND_TYPE に、 *ValuePtr* SQL_BIND_BY_COLUMN に設定します。 すべての配列には、同じ数の要素を保持する必要があります。  
+     列方向のバインドは、*属性*を SQL_ATTR_ROW_BIND_TYPE に設定し、 *valueptr*を SQL_BIND_BY_COLUMN に設定して、 [SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md)を呼び出すことによって指定します。 すべての配列には、同じ数の要素を保持する必要があります。  
   
 -   行方向のバインドは、SQL ステートメント内のすべてのパラメーターを 1 単位として、パラメーターの各変数を保持する構造体の配列にバインドすると終了します。  
   
-     呼び出すことによって、行方向のバインドが指定されて**SQLSetStmtAttr**で*属性*SQL_ATTR_ROW_BIND_TYPE に、 *ValuePtr*いる構造体のサイズに設定、列の結果を受け取る変数に設定します。  
+     行**方向のバインド**を指定するには、*属性*を SQL_ATTR_ROW_BIND_TYPE に設定し、 *valueptr*に結果セットの列を受け取る変数を保持する構造体のサイズを設定します。  
   
  また、アプリケーションでは、SQL_ATTR_ROW_ARRAY_SIZE を列または行の配列内の要素数に設定し、SQL_ATTR_ROW_STATUS_PTR と SQL_ATTR_ROWS_FETCHED_PTR も設定します。  
   
-## <a name="see-also"></a>関連項目  
- [結果の処理&#40;ODBC&#41;](processing-results-odbc.md)  
+## <a name="see-also"></a>参照  
+ [ODBC&#41;&#40;結果の処理](processing-results-odbc.md)  
   
   

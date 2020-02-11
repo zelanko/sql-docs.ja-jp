@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8387cdaf85d6fd7750229fda86c8cb3122b61d90
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62913557"
 ---
 # <a name="create-scripts-using-templates"></a>テンプレートを使用したスクリプトの作成
@@ -24,15 +24,21 @@ ms.locfileid: "62913557"
   
 #### <a name="to-create-a-script-using-a-template"></a>テンプレートを使用してスクリプトを作成するには  
   
-1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]で、 **[表示]** メニューの **[テンプレート エクスプローラー]** をクリックします。  
+1.  
+  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]で、 **[表示]** メニューの **[テンプレート エクスプローラー]** をクリックします。  
   
-2.  テンプレート エクスプローラーではテンプレートがグループ別に表示されます。 **[Database]** を展開し、 **[Create Database]** をダブルクリックします。  
+2.  テンプレート エクスプローラーではテンプレートがグループ別に表示されます。 
+  **[Database]** を展開し、 **[Create Database]** をダブルクリックします。  
   
-3.  **[データベース エンジンへの接続]** ダイアログ ボックスで接続情報を指定し、 **[接続]** をクリックします。 新しいクエリ エディター ウィンドウが開き、 **Create Database** テンプレートの内容が表示されます。  
+3.  
+  **[データベース エンジンへの接続]** ダイアログ ボックスで接続情報を指定し、 **[接続]** をクリックします。 新しいクエリ エディター ウィンドウが開き、 **Create Database** テンプレートの内容が表示されます。  
   
-4.  **[クエリ]** メニューの **[テンプレート パラメーターの値の指定]** をクリックします。  
+4.  
+  **[クエリ]** メニューの **[テンプレート パラメーターの値の指定]** をクリックします。  
   
-5.  **[テンプレート パラメーターの値の指定]** ダイアログ ボックスの **[値]** 列には、 **Database_Name** パラメーターの推奨値が表示されます。 **Database Name** パラメーターの [値] 列のボックスに「 **Marketing**」と入力し、 **[OK]** をクリックします。 スクリプトの複数の場所に "Marketing" が挿入されていることを確認します。  
+5.  
+  **[テンプレート パラメーターの値の指定]** ダイアログ ボックスの **[値]** 列には、 **Database_Name** パラメーターの推奨値が表示されます。 
+  **Database Name** パラメーターの [値] 列のボックスに「 **Marketing**」と入力し、[ **OK**] をクリックします。 スクリプトの複数の場所に "Marketing" が挿入されていることを確認します。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
  [カスタム テンプレートの作成](lesson-3-2-create-custom-templates.md)  

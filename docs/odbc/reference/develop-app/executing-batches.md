@@ -1,5 +1,5 @@
 ---
-title: 実行中のバッチ |Microsoft Docs
+title: バッチの実行 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,16 +14,16 @@ ms.assetid: f082c717-4f82-4820-a2fa-ba607d8fd872
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 84d3cf65284d767d437987c8ff2b21793466106e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67901266"
 ---
 # <a name="executing-batches"></a>バッチの実行
-アプリケーションでは、ステートメントのバッチを実行する前に、サポートされているかどうかをまずおください。 これは、アプリケーション呼び出しを行う**SQLGetInfo** SQL_BATCH_SUPPORT、SQL_PARAM_ARRAY_ROW_COUNTS、および SQL_PARAM_ARRAY_SELECTS オプションを使用します。 最初のオプションは、行の数を生成して、結果セットを生成するステートメントは明示的なバッチおよび行の数と結果の可用性に関する情報を返しますの設定で後者の 2 つのオプションの中に、プロシージャでサポートされてがパラメーター化するかどうかを返します実行します。  
+アプリケーションでは、ステートメントのバッチを実行する前に、ステートメントがサポートされているかどうかを確認する必要があります。 これを行うには、アプリケーションは、SQL_BATCH_SUPPORT、SQL_PARAM_ARRAY_ROW_COUNTS、および SQL_PARAM_ARRAY_SELECTS オプションを使用して**SQLGetInfo**を呼び出します。 最初のオプションは、行カウント生成ステートメントと結果セット生成ステートメントが明示的なバッチおよびプロシージャでサポートされているかどうかを返します。後者の2つのオプションは、パラメーター化された行数と結果セットの可用性に関する情報を返します。例外.  
   
- ステートメントのバッチがを通じて実行された**SQLExecute**または**SQLExecDirect**します。 たとえば、次の呼び出しは、明示的なバッチのステートメントを新しい販売注文を開くを実行します。  
+ ステートメントのバッチは、 **Sqlexecute**または**SQLExecDirect**を使用して実行されます。 たとえば、次の呼び出しでは、ステートメントの明示的なバッチが実行され、新しい販売注文が開かれます。  
   
 ```  
 SQLCHAR *BatchStmt =  
@@ -37,9 +37,9 @@ SQLCHAR *BatchStmt =
 SQLExecDirect(hstmt, BatchStmt, SQL_NTS);  
 ```  
   
- バッチの結果を生成するときにステートメントが実行される、1 つを返しますまたは詳細行の数または結果を設定します。 これらを取得する方法については、次を参照してください。[複数結果](../../../odbc/reference/develop-app/multiple-results.md)します。  
+ 結果生成ステートメントのバッチが実行されると、1つ以上の行カウントまたは結果セットが返されます。 これらを取得する方法の詳細については、「[複数の結果](../../../odbc/reference/develop-app/multiple-results.md)」を参照してください。  
   
- ステートメントのバッチには、パラメーター マーカーが含まれている場合は、その他のステートメントでは、パラメーターの順序を増やすことでこれら番号が付けられます。 次のステートメントのバッチが 1 ~ 21 です。 番号付きのパラメーターを持ちなど最初にある**挿入**ステートメントは、番号付き 1 ~ 5 と最後の**挿入**ステートメントは番号付きの 18 ~ 21 です。  
+ ステートメントのバッチにパラメーターマーカーが含まれている場合は、他のステートメントのように、パラメーターの順序が増加します。 たとえば、次のバッチステートメントには、1 ~ 21 のパラメーター番号が付いています。最初の**insert**ステートメントでは、1 ~ 5 の番号が付けられています。最後の**insert**ステートメントには、18 ~ 21 の番号が付けられています。  
   
 ```  
 INSERT INTO Orders (OrderID, CustID, OpenDate, SalesPerson, Status)  
@@ -50,4 +50,4 @@ INSERT INTO Lines (OrderID, Line, PartID, Quantity) VALUES (?, ?, ?, ?);
 INSERT INTO Lines (OrderID, Line, PartID, Quantity) VALUES (?, ?, ?, ?);  
 ```  
   
- パラメーターの詳細については、次を参照してください。[ステートメント パラメーター](../../../odbc/reference/develop-app/statement-parameters.md)、このセクションで後述します。
+ パラメーターの詳細については、このセクションで後述する「[ステートメントパラメーター](../../../odbc/reference/develop-app/statement-parameters.md)」を参照してください。

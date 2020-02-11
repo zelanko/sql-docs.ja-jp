@@ -1,5 +1,5 @@
 ---
-title: 仕様のサブキー |Microsoft Docs
+title: トランスレーター指定サブキー |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,26 +16,26 @@ ms.assetid: 3c0edeee-d43a-4466-a177-bf2d2435707a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ec94f3e02b720617e8f7369b12a916c2bbbe7b16
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68093804"
 ---
 # <a name="translator-specification-subkeys"></a>ドライバーの仕様のサブキー
-ODBC トランスレーターのサブキーで表示されている各翻訳には、独自のサブキーがあります。 このサブキーは、ODBC トランスレーターのサブキーの下の対応する値として同じ名前を持ちます。 このサブキーの下の値は、翻訳者とトランスレーター セットアップ Dll と使用率カウントの完全なパスを一覧表示します。 値の形式は、次の表に示すようにします。  
+ODBC トランスレーターのサブキーに記載されている各トランスレーターには、独自のサブキーがあります。 このサブキーには、ODBC トランスレーターサブキーの下にある対応する値と同じ名前が付けられています。 このサブキーの下の値には、translator および translator セットアップ Dll の完全なパスと使用量が一覧表示されます。 値の形式を次の表に示します。  
   
-|名前|データ型|data|  
+|Name|データ型|データ|  
 |----------|---------------|----------|  
-|[変換者]|REG_SZ|*トランスレーター DLL のパス*|  
-|セットアップ|REG_SZ|*セットアップ DLL へのパス*|  
+|Translator|REG_SZ|*translator-DLL-パス*|  
+|セットアップ|REG_SZ|*setup.exe-path*|  
 |UsageCount|REG_DWORD|*count*|  
   
- 使用状況カウントの詳細については、次を参照してください。[使用状況のカウント](../../../odbc/reference/install/usage-counting.md)このセクションで前述しました。  
+ 使用量の詳細については、このセクションで前述した[使用量のカウント](../../../odbc/reference/install/usage-counting.md)に関するセクションを参照してください。  
   
- アプリケーションでは、使用率カウントは設定しないでください。 ODBC では、この数を維持します。  
+ アプリケーションで使用状況カウントを設定しないでください。 ODBC ではこのカウントが維持されます。  
   
- たとえば、Microsoft のコード ページの翻訳者が翻訳 Mscpxl32.dll、トランスレーター セットアップの機能が同じの DLL に含まれるという名前の DLL と 3 回、変換プログラムがインストールされているとします。 Microsoft コード ページのトランスレーターのサブキーの下の値が次のようにあります。  
+ たとえば、Microsoft コードページトランスレーターに Mscpxl32 という名前の翻訳 DLL があるとします。トランスレーターセットアップ関数は同じ DLL 内にあり、変換プログラムは3回インストールされています。 Microsoft コードページトランスレーターサブキーの下の値は、次のようになります。  
   
 ```  
 Translator : REG_SZ : C:\WINDOWS\SYSTEM32\MSCPXL32.DLL  

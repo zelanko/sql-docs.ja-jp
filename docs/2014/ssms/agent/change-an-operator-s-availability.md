@@ -23,10 +23,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 11e5b26a9e2a953aff319b41749d2c12be1a880e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63017103"
 ---
 # <a name="change-an-operator39s-availability"></a>オペレーターの可用性の変更
@@ -36,9 +36,9 @@ ms.locfileid: "63017103"
   
 -   **作業を開始する準備:**  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
--   **オペレーターが通知を受信できるかどうかを設定する方法:**  
+-   **オペレーターの可用性を変更するために使用するもの:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -55,7 +55,8 @@ ms.locfileid: "63017103"
   
 #### <a name="to-change-an-operators-availability"></a>オペレーターが通知を受信できるかどうかを設定するには  
   
-1.  **オブジェクト エクスプローラー**で、有効または無効にするオペレーターを含むサーバーをプラス記号をクリックして展開します。  
+1.  
+  **オブジェクト エクスプローラー**で、有効または無効にするオペレーターを含むサーバーをプラス記号をクリックして展開します。  
   
 2.  プラス記号をクリックして **[SQL Server エージェント]** を展開します。  
   
@@ -63,7 +64,7 @@ ms.locfileid: "63017103"
   
 4.  有効または無効にするオペレーターを右クリックし、 **[プロパティ]** を選択した後、 **[全般]** タブをクリックします。  
   
-5.  [_operator_name_ **のプロパティ**] ダイアログ ボックスで、 **[有効]** チェック ボックスをオンまたはオフにします。  
+5.  [ _Operator_name_の**プロパティ**] ダイアログボックスで、[**有効**] チェックボックスをオンまたはオフにします。  
   
 6.  **[OK]** をクリックします。  
   
@@ -88,6 +89,6 @@ ms.locfileid: "63017103"
     GO  
     ```  
   
- 詳細については、次を参照してください。 [sp_update_operator &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-operator-transact-sql)します。  
+ 詳細については、「 [sp_update_operator &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-update-operator-transact-sql)」を参照してください。  
   
   

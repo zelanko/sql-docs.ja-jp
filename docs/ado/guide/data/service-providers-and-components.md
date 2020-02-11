@@ -1,5 +1,5 @@
 ---
-title: サービス プロバイダーとコンポーネント |Microsoft Docs
+title: サービスプロバイダーとコンポーネント |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,17 +15,17 @@ ms.assetid: 1fd7a374-587b-4ca9-9204-3a4019b67a71
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a78db07f5ba445c54108558b2ff222bd217c2bbe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924245"
 ---
 # <a name="service-providers-and-components"></a>サービス プロバイダーとコンポーネント
-サービス プロバイダーは、データ ストアによってネイティブでサポートされていない拡張インターフェイスを実装するデータ プロバイダーの機能を拡張するコンポーネントです。  
+サービスプロバイダーは、データストアによってネイティブでサポートされていない拡張インターフェイスを実装することによって、データプロバイダーの機能を拡張するコンポーネントです。  
   
- Universal Data Access の提供、*コンポーネント アーキテクチャ*劣るストア上、データベースの機能や「サービス」の個別のセットを実装するために、特殊化された個々 のコンポーネント。 したがって、独自の拡張機能の実装を提供するには、各データ ストアまたは強制的にデータベースの機能を内部的に実装する汎用アプリケーションではなくサービス コンポーネント、一般的な実装を提供できる任意のアプリケーション任意のデータ ストアにアクセスするときに使用します。 一部の機能が汎用的なコンポーネントをデータ ストアとネイティブ実装されているという事実は、アプリケーションに対して透過的です。  
+ ユニバーサルデータアクセスは、個々の特殊なコンポーネントがデータベース機能の個別セットを実装できるようにする*コンポーネントアーキテクチャ*を提供します。また、サポートされていないストアの上に "サービス" を提供します。 したがって、各データストアに対して、拡張機能の独自の実装を提供したり、内部的にデータベース機能を実装する汎用アプリケーションを強制したりするのではなく、サービスコンポーネントは共通の実装を提供します。任意のデータストアにアクセスするときに使用します。 一部の機能はデータストアによってネイティブに実装され、一部の機能は汎用コンポーネントによってアプリケーションに対して透過的に行われます。  
   
- たとえば、カーソル エンジンをなど[for OLE DB、カーソル サービス](https://msdn.microsoft.com/57638feb-4ecd-4051-becb-8f828d21cf44)はスクロール可能なデータを生成するために、シーケンシャルな前方参照専用のデータ ストアからデータを使用できるサービス コンポーネントです。 ADO でよく使用されるその他のサービス プロバイダーには、 [Microsoft OLE DB Persistence Provider (サービス プロバイダーの ADO)](../../../ado/guide/appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md) (ファイルにデータを保存します)、用、 [Microsoft Data Shaping Service for OLE DB (ADO サービス プロバイダー)](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) (の階層**レコード セット**)、および[Microsoft OLE DB リモート処理 Provider (サービス プロバイダーの ADO)](../../../ado/guide/appendixes/microsoft-ole-db-remoting-provider-ado-service-provider.md) (リモート コンピューター上のデータ プロバイダーの呼び出し) にします。  
+ たとえば、cursor [service for OLE DB](https://msdn.microsoft.com/57638feb-4ecd-4051-becb-8f828d21cf44)などのカーソルエンジンは、順次的な順方向専用データストアのデータを使用して、スクロール可能なデータを生成するサービスコンポーネントです。 ADO によって一般的に使用されるその他のサービスプロバイダーには、 [microsoft OLE DB 永続化プロバイダー (Ado サービスプロバイダー)](../../../ado/guide/appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md) 、OLE DB (データをファイルに保存するため)、Microsoft[データ整形サービス](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)(階層的な**レコードセット**用)、 [Microsoft OLE DB リモート処理プロバイダー (ado サービスプロバイダー)](../../../ado/guide/appendixes/microsoft-ole-db-remoting-provider-ado-service-provider.md) (リモートコンピューターでデータプロバイダーを呼び出す場合) などがあります。  
   
- サービスおよびデータ プロバイダーの詳細については、次を参照してください[付録 a:。プロバイダー](../../../ado/guide/appendixes/appendix-a-providers.md)します。
+ サービスプロバイダーとデータプロバイダーの詳細については、「[付録 a: providers](../../../ado/guide/appendixes/appendix-a-providers.md)」を参照してください。

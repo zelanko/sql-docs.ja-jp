@@ -13,10 +13,10 @@ ms.assetid: 21f67a7d-6273-4648-9abd-2236650efa4c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3a0f281d1bce5e75b9158a18e1ea97256ba85625
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917508"
 ---
 # <a name="property-object-properties-methods-and-events"></a>Property オブジェクトのプロパティ、メソッド、およびイベント
@@ -32,8 +32,8 @@ ms.locfileid: "67917508"
 ## <a name="methods"></a>メソッド  
  [なし] :  
   
-## <a name="events"></a>イベント  
+## <a name="events"></a>events  
  [なし] :  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Property オブジェクト (ADO)](../../../ado/reference/ado-api/property-object-ado.md)

@@ -1,5 +1,5 @@
 ---
-title: 作成して、テーブル (テキスト ファイル ドライバー) を開く |Microsoft Docs
+title: テーブルの作成とオープン (テキストファイルドライバー) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,11 +13,11 @@ ms.assetid: e6a07dda-a665-4f5b-a8d6-9ff479700513
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b36c02d772682088a799cfca66f5bbf3e169a67f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68096541"
 ---
 # <a name="creating-and-opening-tables-text-file-driver"></a>テーブルを作成して開く (テキスト ファイル ドライバー)
-テキストのドライバーを使用すると、Odbcinst.ini で指定された形式を使用して新しいテーブルが作成されます。 指定しない場合、CSVDELIMITED 形式でテーブルが作成されます。 既定では、既定を 11 文字の整数型の列および FLOAT 列の既定値は 22 文字。 日付列では、YYYY-MM-DD の形式を使用します。 CHAR と LONGCHAR 列は、CREATE ステートメントで指定された幅です。
+テキストドライバーが使用されている場合は、Odbcinst に指定された形式を使用して、新しいテーブルが作成されます。 指定しない場合、テーブルは CSVDELIMITED 形式で作成されます。 既定では、整数型の列の既定値は11文字で、FLOAT 型の列の既定値は22文字です。 日付列では、yyyy-mm-dd 形式が使用されます。 CHAR および LONGCHAR 列は、CREATE ステートメントで指定された幅です。

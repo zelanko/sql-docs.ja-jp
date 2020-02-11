@@ -17,15 +17,16 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: eac36b2aaaa5cd3b28d5476c760bab3152c460f2
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73789614"
 ---
 # <a name="ibcpsessionbcpdone-ole-db"></a>IBCPSession::BCPDone (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
+  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に送信される残りの行をコミットします。  
   
 ## <a name="syntax"></a>構文  
@@ -35,8 +36,9 @@ ms.locfileid: "73789614"
 HRESULT BCPDone(void);  
 ```  
   
-## <a name="remarks"></a>Remarks  
- [BCPDone](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md) メソッドを呼び出すと、それ以後は **IBCPSession** インターフェイスの他の操作を呼び出すことはできません。 ただし、一括コピー操作を新しく開始する [IBCPSession::BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) メソッドだけは呼び出すことができます。 これは [IRowsetFastLoad::Commit](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-commit-ole-db.md) メソッドを呼び出した後の状態と同様です。  
+## <a name="remarks"></a>解説  
+ 
+  [BCPDone](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md) メソッドを呼び出すと、それ以後は **IBCPSession** インターフェイスの他の操作を呼び出すことはできません。 ただし、一括コピー操作を新しく開始する [IBCPSession::BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) メソッドだけは呼び出すことができます。 これは [IRowsetFastLoad::Commit](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-commit-ole-db.md) メソッドを呼び出した後の状態と同様です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  S_OK  
@@ -64,7 +66,7 @@ insert into fltest values (4, 4, 0xFAD)
   
  BCP を使用する次のコマンドで、このデータをテーブルに追加し直すことができます。  
   
- **bcp master..fltest in outfile.dat -n -T -S** *サーバー*  
+ **bcp マスター..\n-T-S サーバーでの fltest** **  
   
  このサンプルをコンパイルする際には、sqlncli11.lib を指定する必要があります。  
   
@@ -464,7 +466,7 @@ void wmain() {
 ```  
   
 ## <a name="see-also"></a>参照  
- [Ibcpsession &#40;OLE DB&#41; ](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
+ [IBCPSession &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
  [一括コピー操作の実行](../../relational-databases/native-client/features/performing-bulk-copy-operations.md)  
   
   

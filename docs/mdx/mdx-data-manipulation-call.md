@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: de74590ac4c43a9141c0ab2092babf41ffd23ba5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68106299"
 ---
 # <a name="mdx-data-manipulation---call"></a>MDX データ操作 - CALL
 
 
-  現在のスコープ内、または指定されたキューブで必要に応じて、void を返すストアド プロシージャを実行します。  
+  現在のスコープまたは必要に応じて指定したキューブで void を返すストアドプロシージャを実行します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,16 +41,16 @@ CALL SP_Name
  *Cube_Expression*  
  キューブの名前を指定する有効な文字列キューブ式です。  
   
-## <a name="remarks"></a>コメント  
- **呼び出す**ステートメントを指定した登録されているストアド プロシージャを実行、指定したストアド プロシージャの 1 つまたは複数の引数を含めることもできます。 **呼び出す**ステートメントは白い隙間を返すストアド プロシージャでのみ使用されます。 MDX 式の中でこのステートメントと他の関数や演算子を併用することはできません。 値を返す登録済みのストアド プロシージャについては、MDX 式の中で直接呼び出すことも、MDX の他の関数や演算子と併用することも可能です。  
+## <a name="remarks"></a>解説  
+ **CALL**ステートメントは、指定された登録済みストアドプロシージャを実行します。オプションで、指定したストアドプロシージャの1つ以上の引数を含めることができます。 **CALL**ステートメントは、値を返さないストアドプロシージャでのみ使用されます。 MDX 式の中でこのステートメントと他の関数や演算子を併用することはできません。 値を返す登録済みのストアド プロシージャについては、MDX 式の中で直接呼び出すことも、MDX の他の関数や演算子と併用することも可能です。  
   
- キューブが指定されていない場合、ステートメントでは、現在のキューブでのストアド プロシージャが実行されます。  
+ キューブが指定されていない場合、ステートメントは、現在のキューブに対してストアドプロシージャを実行します。  
   
 > [!NOTE]  
->  クライアントでは、ストアド プロシージャが登録されていない場合、**呼び出す**ステートメントのインスタンスからストアド プロシージャを呼び出すしよう[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]します。  
+>  ストアドプロシージャがクライアントに登録されていない場合、 **call**ステートメントはの[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]インスタンスからストアドプロシージャを呼び出そうとします。  
   
-## <a name="see-also"></a>関連項目  
- [MDX データ操作ステートメント &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
- [ストアド プロシージャの使用 &#40;MDX&#41;](../mdx/using-stored-procedures-mdx.md)  
+## <a name="see-also"></a>参照  
+ [Mdx&#41;&#40;MDX データ操作ステートメント](../mdx/mdx-data-manipulation-statements-mdx.md)   
+ [MDX&#41;&#40;のストアドプロシージャの使用](../mdx/using-stored-procedures-mdx.md)  
   
   

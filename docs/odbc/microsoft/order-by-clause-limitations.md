@@ -14,11 +14,11 @@ ms.assetid: fd4ddc7c-9c7e-4a0c-a781-e5427dfb2e18
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b58afff444c09622027f50a87bd77fcd6ed45640
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68100784"
 ---
 # <a name="order-by-clause-limitations"></a>ORDER BY 句の制限事項
-GROUP BY 句と ORDER BY 句が SELECT ステートメントが含まれる場合、ORDER BY 句は結果セット内の列のみまたは GROUP BY 句で式を含めることができます。
+SELECT ステートメントに GROUP BY 句と ORDER BY 句が含まれている場合、ORDER BY 句には、結果セット内の列、または GROUP BY 句の式のみを含めることができます。

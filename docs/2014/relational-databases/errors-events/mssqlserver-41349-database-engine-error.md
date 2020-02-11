@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7c5bd805a6c737862adbfe9fdef507e61d4035eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62914018"
 ---
-# <a name="mssqlserver41349"></a>MSSQLSERVER_41349
+# <a name="mssqlserver_41349"></a>MSSQLSERVER_41349
     
 ## <a name="details"></a>詳細  
   
@@ -30,9 +30,9 @@ ms.locfileid: "62914018"
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|HK_ENCRYPTION_ON|  
-|メッセージ テキスト|警告:持続性が SCHEMA_AND_DATA のメモリ最適化テーブルを含むデータベースで暗号化が有効にされました。 これらのメモリ最適化テーブル内のデータは暗号化されません。|  
+|メッセージ テキスト|警告: 持続性が SCHEMA_AND_DATA のメモリ最適化テーブルを含むデータベースで暗号化が有効にされました。 これらのメモリ最適化テーブル内のデータは暗号化されません。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [インメモリ OLTP &#40;インメモリ最適化&#41;](../in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   
