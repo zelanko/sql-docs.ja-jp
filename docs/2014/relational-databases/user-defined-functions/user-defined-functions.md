@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1ce64f821edd68dceaa1809a62a6b894ded6a868
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211697"
 ---
 # <a name="user-defined-functions"></a>ユーザー定義関数
@@ -31,15 +31,15 @@ ms.locfileid: "68211697"
   
  [ガイドライン](#Guidelines)  
   
- [関数で有効なステートメント](#ValidStatements)  
+ [関数内の有効なステートメント](#ValidStatements)  
   
  [スキーマ バインド関数](#SchemaBound)  
   
- [パラメーターを指定します。](#Parameters)  
+ [パラメーターの指定](#Parameters)  
   
- [関連タスク](#Tasks)  
+ [Related Tasks](#Tasks)  
   
-##  <a name="Benefits"></a> ユーザー定義関数の利点  
+##  <a name="Benefits"></a>ユーザー定義関数の利点  
  次に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でユーザー定義関数を使用する利点を示します。  
   
 -   モジュール プログラミングが可能になります。  
@@ -48,9 +48,11 @@ ms.locfileid: "68211697"
   
 -   実行が高速になります。  
   
-     [!INCLUDE[tsql](../../includes/tsql-md.md)] ユーザー定義関数を使用すると、ストアド プロシージャと同様に、プランがキャッシュされ、これを再利用して繰り返し実行することで、[!INCLUDE[tsql](../../includes/tsql-md.md)] コードのコンパイル コストを削減できます。 つまり、ユーザー定義関数は、使用するたびに解析し直したり、最適化し直す必要がないので、実行時間が短縮されます。  
+     
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] ユーザー定義関数を使用すると、ストアド プロシージャと同様に、プランがキャッシュされ、これを再利用して繰り返し実行することで、[!INCLUDE[tsql](../../includes/tsql-md.md)] コードのコンパイル コストを削減できます。 つまり、ユーザー定義関数は、使用するたびに解析し直したり、最適化し直す必要がないので、実行時間が短縮されます。  
   
-     計算や文字列の操作、ビジネス ロジックの場合は CLR 関数を使用することで、[!INCLUDE[tsql](../../includes/tsql-md.md)] 関数に比べてかなり高いパフォーマンスが得られます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 関数は、データ アクセスの多いロジックに適しています。  
+     計算や文字列の操作、ビジネス ロジックの場合は CLR 関数を使用することで、[!INCLUDE[tsql](../../includes/tsql-md.md)] 関数に比べてかなり高いパフォーマンスが得られます。 
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] 関数は、データ アクセスの多いロジックに適しています。  
   
 -   ネットワーク トラフィックが減少します。  
   
@@ -59,7 +61,7 @@ ms.locfileid: "68211697"
 > [!NOTE]  
 >  クエリの [!INCLUDE[tsql](../../includes/tsql-md.md)] ユーザー定義関数は、1 つのスレッドでのみ実行できます (直列実行プラン)。  
   
-##  <a name="FunctionTypes"></a> 関数の種類  
+##  <a name="FunctionTypes"></a>関数の種類  
  スカラー関数  
  ユーザー定義のスカラー関数は、RETURNS 句で定義された型の単一のデータ値を返します。 インライン スカラー関数の場合、スカラー値は単一ステートメントの結果であり、関数の本体がありません。 複数ステートメントを持つスカラー関数の場合、BEGIN...END ブロックで定義された関数本体に、単一の値を返す一連の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントが含まれています。 この関数の戻り値には、`text`、`ntext`、`image`、`cursor`、および `timestamp` 以外の任意のデータ型を指定できます。  
   
@@ -67,10 +69,12 @@ ms.locfileid: "68211697"
  ユーザー定義テーブル値関数は、`table` データ型を返します。 インライン テーブル値関数の場合、テーブルは単一の SELECT ステートメントの結果セットであり、関数の本体がありません。  
   
  システム関数  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、さまざまな操作を実行するために使用できる多数のシステム関数が用意されています。 システム関数は変更できません。 詳細については、「[組み込み関数 &#40;Transact-SQL&#41;](/sql/t-sql/functions/functions)」、「[システム ストアド関数 &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/system-functions-for-transact-sql)」、および「[動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views)」を参照してください。  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、さまざまな操作を実行するために使用できる多数のシステム関数が用意されています。 システム関数は変更できません。 詳細については、「[組み込み関数 &#40;Transact-SQL&#41;](/sql/t-sql/functions/functions)」、「[システム ストアド関数 &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/system-functions-for-transact-sql)」、および「[動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views)」を参照してください。  
   
-##  <a name="Guidelines"></a> ガイドライン  
- [!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントが取り消されて、モジュール (トリガーやストアド プロシージャ) 内の次のステートメントが続行されるようなエラーについては、関数内では扱いが異なります。 関数内では、このようなエラーによって関数自体の実行が停止されます。 そのため、次に関数を呼び出したステートメントも取り消されることになります。  
+##  <a name="Guidelines"></a>ヒント  
+ 
+  [!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントが取り消されて、モジュール (トリガーやストアド プロシージャ) 内の次のステートメントが続行されるようなエラーについては、関数内では扱いが異なります。 関数内では、このようなエラーによって関数自体の実行が停止されます。 そのため、次に関数を呼び出したステートメントも取り消されることになります。  
   
  BEGIN...END ブロック内のステートメントは、副作用を伴いません。 関数の副作用とは、データベース テーブルの変更など、その関数の有効範囲外のリソースの状態を永続的に変更してしまうことです。 関数内のステートメントが変更できる内容は、ローカル カーソルまたはローカル変数など、その関数に対してローカルなオブジェクトの変更のみです。 データベース テーブルの変更、関数に対してローカルではないカーソルの操作、電子メールの送信、カタログ変更、ユーザーへ返す結果セットの生成などの操作は、関数では実行できません。  
   
@@ -79,7 +83,7 @@ ms.locfileid: "68211697"
   
  クエリで指定した関数が実際に実行される回数は、オプティマイザーで作成された実行プランによって異なります。 WHERE 句のサブクエリによって起動された関数がその一例です。 サブクエリとその関数が実行された回数は、オプティマイザーが選択したアクセス パスの違いによって変わります。  
   
-##  <a name="ValidStatements"></a> 関数で有効なステートメント  
+##  <a name="ValidStatements"></a>関数内の有効なステートメント  
  関数では、次の種類のステートメントが有効です。  
   
 -   関数に対してローカルなデータ変数やカーソルを定義するために使用できる DECLARE ステートメント。  
@@ -120,7 +124,7 @@ ms.locfileid: "68211697"
   
  決定的および非決定的な組み込みシステム関数の一覧については、「[決定的関数と非決定的関数](../user-defined-functions/deterministic-and-nondeterministic-functions.md)」を参照してください。  
   
-##  <a name="SchemaBound"></a> スキーマ バインド関数  
+##  <a name="SchemaBound"></a>スキーマバインド関数  
  CREATE FUNCTION は、SCHEMABINDING 句をサポートしています。この句は、テーブル、ビュー、およびその他のユーザー定義関数など、参照対象オブジェクトのスキーマにその関数をバインドします。 スキーマ バインド関数によって参照されるオブジェクトを変更または削除しようとすると、失敗します。  
   
  CREATE FUNCTION に SCHEMABINDING を指定するには、次の条件を満たしている必要があります。  
@@ -133,7 +137,7 @@ ms.locfileid: "68211697"
   
  ALTER FUNCTION を使用して、スキーマ バインドを削除できます。 関数を再定義するには、ALTER FUNCTION ステートメントを使用します。WITH SCHEMABINDING は指定しないでください。  
   
-##  <a name="Parameters"></a> パラメーターを指定します。  
+##  <a name="Parameters"></a>パラメーターの指定  
  ユーザー定義関数は、0 個またはそれ以上の入力パラメーターを受け取り、スカラー値またはテーブルのいずれかを返します。 1 つの関数では、最大で 1,024 個の入力パラメーターを受け取ることができます。 関数のパラメーターが既定値を持つ場合は、既定値を得るために、関数を呼び出すときに DEFAULT キーワードを指定する必要があります。 この動作はユーザー定義ストアド プロシージャ内の既定値を持つパラメーターとは異なります。ユーザー定義ストアド プロシージャの場合は、パラメーターを省略すると既定値が暗黙的に使用されます。 ユーザー定義関数では、出力パラメーターがサポートされません。  
   
 ##  <a name="Tasks"></a> 関連タスク  

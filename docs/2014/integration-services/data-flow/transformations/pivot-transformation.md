@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4bf9e58296b70f29e3e328782b463ecbbf7f6aab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770345"
 ---
 # <a name="pivot-transformation"></a>ピボット変換
@@ -62,7 +62,8 @@ ms.locfileid: "62770345"
  **一致しないピボット キー値を無視して DataFlow の実行後に報告する**  
  パッケージが実行されるときに、 **[ピボット キー]** 列に不明な値が含まれている行を無視して、ピボット キーの値をすべてログ メッセージに出力するようにピボット変換を構成するには、このオプションを選択します。  
   
- `PassThroughUnmatchedPivotKeys` カスタム プロパティを `True` に設定することで、値を出力するように変換を構成することもできます。  
+ 
+  `PassThroughUnmatchedPivotKeys` カスタム プロパティを `True` に設定することで、値を出力するように変換を構成することもできます。  
   
  **値からピボット出力列を生成**  
  ピボット変換によって出力列が値ごとに作成されるようにするには、このボックスにピボット キーの値を入力します。 パッケージを実行する前に値を入力するか、または次の操作を実行できます。  
@@ -93,7 +94,7 @@ ms.locfileid: "62770345"
   
  次の表は、データが **Year** 列でピボットされる前のデータセットを示しています。  
   
-|Year|製品名|Total|  
+|年|製品名|合計|  
 |----------|------------------|-----------|  
 |2004|HL Mountain Tire|1504884.15|  
 |2003|Road Tire Tube|35920.50|  
@@ -126,14 +127,14 @@ ms.locfileid: "62770345"
   
  **[詳細エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [共通プロパティ](../../common-properties.md)  
+-   [Common Properties](../../common-properties.md)  
   
 -   [変換のカスタム プロパティ](transformation-custom-properties.md)  
   
 ## <a name="related-content"></a>関連コンテンツ  
- このコンポーネントのプロパティの設定方法の詳細については、「 [データ フロー コンポーネントのプロパティを設定する](../set-the-properties-of-a-data-flow-component.md)」をご覧ください。  
+ このコンポーネントのプロパティの設定方法の詳細については、「 [データ フロー コンポーネントのプロパティを設定する](../set-the-properties-of-a-data-flow-component.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ピボット解除変換](pivot-transformation.md)   
  [データ フロー](../data-flow.md)   
  [Integration Services の変換](integration-services-transformations.md)  

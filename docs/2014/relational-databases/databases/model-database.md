@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c2886fffebdf06ea16ebe8b6992387be3c22e0bf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62916948"
 ---
 # <a name="model-database"></a>model データベース
@@ -35,17 +35,20 @@ ms.locfileid: "62916948"
  **model** データベースを変更すると、変更後に作成したすべてのデータベースにその変更が継承されます。 たとえば、権限やデータベース オプションを設定したり、テーブル、関数、ストアド プロシージャなどのオブジェクトを追加できます。 **model** データベースのファイル プロパティは例外で、データ ファイルの初期サイズを除き、無視されます。  
   
 ## <a name="physical-properties-of-model"></a>model データベースの物理プロパティ  
- **model** データベースのデータ ファイルとログ ファイルの初期構成値を次の表に示します。 これらのファイルのサイズは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のエディションによって多少異なる場合があります。  
+ 
+  **model** データベースのデータ ファイルとログ ファイルの初期構成値を次の表に示します。 これらのファイルのサイズは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のエディションによって多少異なる場合があります。  
   
 |ファイル|論理名|物理名|ファイル拡張|  
 |----------|------------------|-------------------|-----------------|  
 |プライマリ データ|modeldev|model.mdf|ディスクがいっぱいになるまで 10% ずつ自動拡張|  
-|Log|modellog|modellog.ldf|最大 2 TB まで 10% ずつ自動拡張|  
+|ログ|modellog|modellog.ldf|最大 2 TB まで 10% ずつ自動拡張|  
   
- **model** データベースまたはログ ファイルを移動するには、「 [システム データベースの移動](system-databases.md)」を参照してください。  
+ 
+  **model** データベースまたはログ ファイルを移動するには、「 [システム データベースの移動](system-databases.md)」を参照してください。  
   
 ### <a name="database-options"></a>データベース オプション  
- **model** データベースの各データベース オプションの既定値とそのオプションを変更できるかどうかを次の表に示します。 これらのオプションの現在の設定を表示するには、 [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) カタログ ビューを使用します。  
+ 
+  **model** データベースの各データベース オプションの既定値とそのオプションを変更できるかどうかを次の表に示します。 これらのオプションの現在の設定を表示するには、 [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) カタログ ビューを使用します。  
   
 |データベース オプション|既定値|変更可否|  
 |---------------------|-------------------|---------------------|  
@@ -56,9 +59,9 @@ ms.locfileid: "62916948"
 |ANSI_WARNINGS|OFF|はい|  
 |ARITHABORT|OFF|はい|  
 |AUTO_CLOSE|OFF|はい|  
-|AUTO_CREATE_STATISTICS|ON|[はい]|  
-|AUTO_SHRINK|OFF|[はい]|  
-|AUTO_UPDATE_STATISTICS|ON|[はい]|  
+|AUTO_CREATE_STATISTICS|ON|はい|  
+|AUTO_SHRINK|OFF|はい|  
+|AUTO_UPDATE_STATISTICS|ON|はい|  
 |AUTO_UPDATE_STATISTICS_ASYNC|OFF|はい|  
 |CHANGE_TRACKING|OFF|いいえ|  
 |CONCAT_NULL_YIELDS_NULL|OFF|はい|  
@@ -73,23 +76,24 @@ ms.locfileid: "62916948"
 |PARAMETERIZATION|SIMPLE|はい|  
 |QUOTED_IDENTIFIER|OFF|はい|  
 |READ_COMMITTED_SNAPSHOT|OFF|はい|  
-|RECOVERY|依存[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]edition<sup>1</sup>|はい|  
+|RECOVERY|エディション 1 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に<sup></sup>依存|はい|  
 |RECURSIVE_TRIGGERS|OFF|はい|  
 |Service Broker のオプション|DISABLE_BROKER|いいえ|  
 |TRUSTWORTHY|OFF|いいえ|  
   
- <sup>1</sup>データベースの現在の復旧モデルを確認するを参照してください[表示または変更、データベースの復旧モデル&#40;SQL Server&#41; ](../backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md)または[sys.databases &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)。  
+ <sup>1</sup>データベースの現在の復旧モデルを確認するには、「[データベースの復旧モデルを表示または変更](../backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md)する」を参照してください &#40;SQL Server&#41;または[&#41;&#40;transact-sql ](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)。  
   
  これらのデータベース オプションの説明は、「[ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)」を参照してください。  
   
 ## <a name="restrictions"></a>制限  
- **model** データベースでは、次の操作を実行できません。  
+ 
+  **model** データベースでは、次の操作を実行できません。  
   
 -   ファイルまたはファイル グループの追加。  
   
 -   照合順序の変更。 既定の照合順序はサーバーの照合順序です。  
   
--   データベース所有者の変更。 **model** は **sa**が所有します。  
+-   データベース所有者の変更。 **モデル**は**sa**が所有しています。  
   
 -   データベースの削除。  
   
@@ -107,14 +111,15 @@ ms.locfileid: "62916948"
   
 -   プライマリ ファイル グループの READ_ONLY への設定。  
   
--   WITH ENCRYPTION オプションを使用したプロシージャ、ビュー、またはトリガーの作成。 暗号化キーは、オブジェクトが作成されたデータベースに関連付けられています。 **model** データベースで作成された暗号化オブジェクトは、 **model**データベースのみで使用できます。  
+-   WITH ENCRYPTION オプションを使用したプロシージャ、ビュー、またはトリガーの作成。 暗号化キーは、オブジェクトが作成されたデータベースに関連付けられています。 
+  **model** データベースで作成された暗号化オブジェクトは、 **model**データベースのみで使用できます。  
   
 ## <a name="related-content"></a>関連コンテンツ  
  [システム データベース](system-databases.md)  
   
- [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)  
+ [データベース &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)  
   
- [sys.master_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-master-files-transact-sql)  
+ [master_files &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-master-files-transact-sql)  
   
  [データベース ファイルの移動](move-database-files.md)  
   

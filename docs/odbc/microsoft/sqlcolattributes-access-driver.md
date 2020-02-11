@@ -1,5 +1,5 @@
 ---
-title: SQLColAttributes (Access ドライバー) |Microsoft Docs
+title: SQLColAttributes (Access Driver) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,22 +14,22 @@ ms.assetid: adb6f81d-e8c7-4748-9b1d-f7a053788bbc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0c78229da8a577670ba31ae82c679bfefbef4f80
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67903981"
 ---
 # <a name="sqlcolattributes-access-driver"></a>SQLColAttributes (Access ドライバー)
 > [!NOTE]  
->  このトピックでは、Access ドライバー固有の情報を提供します。 この関数の詳細については、該当するトピックを参照してください。 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)します。  
+>  このトピックでは、ドライバー固有の情報にアクセスします。 この関数の一般的な情報については、「 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)」の該当するトピックを参照してください。  
   
-|属性|コメント|  
+|Attribute|説明|  
 |---------------|--------------|  
-|SQL_COLUMN_DISPLAY_SIZE|LONGVARBINARY データ、SQL_COLUMN_DISPLAY_SIZE は 2 時間列の最大長いない列の最大長です。|  
-|SQL_OWNER_NAME|空の文字列 ("") の所有者名がサポートされていないために、この列に返されます。|  
-|SQL_QUALIFIER_NAME|データベース ファイルへのパスが返されます。|  
-|SQL_COLUMN_SEARCHABLE|LONGVARBINARY および LONGVARCHAR 列は、SQL_UNSEARCHABLE として報告されます。<br /><br /> 固定長および可変長のバイナリおよび文字データ型は LONGVARBINARY および LONGVARCHAR がない場合でも、検索可能です。|  
+|SQL_COLUMN_DISPLAY_SIZE|LONGVARBINARY データの場合、SQL_COLUMN_DISPLAY_SIZE は列の最大長であり、列の最大長では2ではありません。|  
+|SQL_OWNER_NAME|この列には、所有者名がサポートされていないため、空の文字列 ("") が返されます。|  
+|SQL_QUALIFIER_NAME|データベースファイルへのパスが返されます。|  
+|SQL_COLUMN_SEARCHABLE|LONGVARBINARY および LONGVARBINARY 列は SQL_UNSEARCHABLE として報告されます。<br /><br /> 固定長と可変長のバイナリおよび文字データ型は、LONGVARBINARY と LONGVARBINARY がない場合でも検索できます。|  
   
 > [!NOTE]  
->  上記はによって返される属性の完全な一覧ではない**SQLColAttributes**します。
+>  上記は、 **Sqlcolattributes**によって返される属性の完全な一覧ではありません。

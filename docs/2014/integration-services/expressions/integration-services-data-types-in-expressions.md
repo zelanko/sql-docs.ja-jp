@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f3b2c9137f34a76ec77f179eb329042d92be5cd1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62769112"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>式における Integration Services データ型
@@ -26,13 +26,14 @@ ms.locfileid: "62769112"
 ## <a name="variables"></a>変数:  
  また、式は変数を使用することもできます。 変数は variant データ型で、式エバリュエーターは、変数のデータ型を variant サブタイプから [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のデータ型に変換してから式を評価します。 変数では、 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のデータ型のサブセットのみが使用できます。 たとえば、変数はバイナリ ラージ オブジェクト (BLOB) データ型を使用することはできません。  
   
- [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のデータ型と [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のデータ型に対する ｖariant データ型のマッピングについては、「 [Integration Services のデータ型](../data-flow/integration-services-data-types.md)」を参照してください。  
+ 
+  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のデータ型と [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のデータ型に対する ｖariant データ型のマッピングについては、「 [Integration Services のデータ型](../data-flow/integration-services-data-types.md)」を参照してください。  
   
 ## <a name="literals"></a>リテラル  
  式には、文字列、ブール、および数値リテラルも含めることができます。 数値リテラルの [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 数値データ型への変換の詳細については、「[ &#40;SSIS&#41;](numeric-string-and-boolean-literals.md)」を参照してください。  
   
 ## <a name="implicit-data-conversion"></a>暗黙的なデータ変換  
- データ型の暗黙的な変換は、式エバリュエーターがあるデータ型を別のデータ型に自動的に変換するときに行われます。 たとえば場合、`smallint`と比較されます、 `int`、`smallint`に暗黙的に変換されます`int`比較を実行する前にします。  
+ データ型の暗黙的な変換は、式エバリュエーターがあるデータ型を別のデータ型に自動的に変換するときに行われます。 たとえば、 `smallint`がと比較`int`される場合、は、 `smallint`比較が実行さ`int`れる前に、暗黙的にに変換されます。  
   
  引数やオペランドに互換性のないデータ型がある場合は、式エバリュエーターは暗黙的なデータ変換を実行できません。 また、式エバリュエーターは、どのような値もブール値に暗黙的に変換することはできません。 代わりに、キャスト演算子を使用して引数とオペランドを明示的に変換する必要があります。 詳細については、「[Cast &#40;SSIS 式&#41;](cast-ssis-expression.md)」を参照してください。  
   
@@ -47,23 +48,24 @@ ms.locfileid: "62769112"
 > [!NOTE]  
 >  ブール値は論理値であり、数値ではありません。 ブール値は一部の環境で数値として表示される場合がありますが、数値として格納されることはありません。また、.NET Framework のメソッドと同様に、さまざまなプログラミング言語でブール値が個別の数値として表されます。  
 >   
->  たとえば、Visual Basic で利用できる変換関数では `True` は -1 に変換されますが、.NET Framework の `System.Convert.ToInt32` メソッドでは `True` は +1 に変換されます。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] の式言語では `True` は -1 に変換されます。  
+>  たとえば、Visual Basic で利用できる変換関数では `True` は -1 に変換されますが、.NET Framework の `System.Convert.ToInt32` メソッドでは `True` は +1 に変換されます。 
+  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] の式言語では `True` は -1 に変換されます。  
 >   
 >  エラーや予期しない結果が発生しないように、`True` および `False` については、特定の数値を参照するようなコードは記述しないでください。 可能な限り、ブール型の変数には、仕様で定められている論理値以外の値を使用しないようにしてください。  
   
- 詳細については、次の各トピックを参照してください。  
+ 詳細については、次のトピックを参照してください。  
   
--   [== &#40;等しい&#41; &#40;SSIS 式&#41;](equal-ssis-expression.md)  
+-   [= = &#40;&#41; &#40;SSIS 式&#41;](equal-ssis-expression.md)  
   
--   [\!= &#40;等しくない&#41; &#40;SSIS 式&#41;](unequal-ssis-expression.md)  
+-   [! = &#40;等しくない&#41; &#40;SSIS 式&#41;](unequal-ssis-expression.md)  
   
 -   [&#62; &#40;より大きい&#41; &#40;SSIS 式&#41;](greater-than-ssis-expression.md)  
   
--   [&#60; &#40;より小さい&#41; &#40;SSIS 式&#41;](less-than-ssis-expression.md)  
+-   [&#60; &#40;未満&#41; &#40;SSIS 式&#41;](less-than-ssis-expression.md)  
   
--   [&#62;= &#40;以上&#41; &#40;SSIS 式&#41;](greater-than-or-equal-to-ssis-expression.md)  
+-   [&#62;= SSIS 式&#41; &#40;以上の &#40;&#41;](greater-than-or-equal-to-ssis-expression.md)  
   
--   [&#60;= &#40;以下&#41; &#40;SSIS 式&#41;](less-than-or-equal-to-ssis-expression.md)  
+-   [&#60;= SSIS 式&#41; &#40;以下の &#40;&#41;](less-than-or-equal-to-ssis-expression.md)  
   
  関数の引数が 1 つの場合、その関数は引数と同じデータ型の結果を返します。ただし、次の場合は除きます。  
   
@@ -78,9 +80,11 @@ ms.locfileid: "62769112"
 ## <a name="requirements-for-data-used-in-expressions"></a>式で使用されるデータの要件  
  式エバリュエーターは、 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のすべてのデータ型をサポートします。 ただし、演算または関数によっては、オペランドや引数で特定のデータ型が必要になります。 式エバリュエーターは、式で使用されるデータに対し、次のデータ型を要求します。  
   
--   **論理** 演算で使用するオペランドは、ブール型に評価される必要があります。 たとえば、ColumnA > 1&&ColumnB < 2 などの場合です。  
+-   
+  **論理** 演算で使用するオペランドは、ブール型に評価される必要があります。 たとえば、ColumnA > 1&&ColumnB < 2 などの場合です。  
   
--   **数学的** 演算で使用するオペランドは、数値に評価される必要があります。 たとえば、23.75 * 4 などの場合です。  
+-   
+  **数学的** 演算で使用するオペランドは、数値に評価される必要があります。 たとえば、23.75 * 4 などの場合です。  
   
 -   論理演算や等価演算などの比較演算で使用するオペランドは、互換性のあるデータ型に評価される必要があります。  
   
@@ -92,11 +96,11 @@ ms.locfileid: "62769112"
   
 -   数学関数に渡される引数は、数値データ型に評価される必要があります。 関数または演算によっては、特定の数値データ型が必要となる場合があります。 たとえば HEX 関数では、符号付き整数または符号なし整数が必要です。  
   
--   文字列関数に渡される引数は、次の文字データ型に評価される必要があります。DT_STR または DT_WSTR。 たとえば、UPPER("flower") などの場合です。 SUBSTRING などの一部の文字列関数では、さらに、文字列の開始位置や長さを指定するために整数の引数が必要となります。  
+-   文字列関数に渡される引数は、DT_STR または DT_WSTR の文字データ型に評価される必要があります。 たとえば、UPPER("flower") などの場合です。 SUBSTRING などの一部の文字列関数では、さらに、文字列の開始位置や長さを指定するために整数の引数が必要となります。  
   
 -   日付と時刻の関数に渡される引数は、有効な日付に評価される必要があります。 たとえば、DAY(GETDATE()) などの場合です。 DATEADD などの一部の関数では、さらに、関数が日付に追加する日数を指定するために整数の引数が必要となります。  
   
- 符号なし 8 バイト整数と符号付き整数を結合する演算では、結果の形式を明確にするために明示的なキャストが必要です。 詳細については、「[Cast &#40;SSIS 式&#41;](cast-ssis-expression.md)」をご覧ください。  
+ 符号なし 8 バイト整数と符号付き整数を結合する演算では、結果の形式を明確にするために明示的なキャストが必要です。 詳細については、「[Cast &#40;SSIS 式&#41;](cast-ssis-expression.md)」を参照してください。  
   
  演算や関数の結果のデータ型は、多くの場合、定義済みのものです。 つまり、引数のデータ型、または式エバリュエーターが結果をキャストするデータ型として定義されています。 たとえば、論理 OR 演算子 (||) の結果は常にブール型で、ABS 関数の結果は引数と同じ数値データ型になります。また、乗算の結果は、結果を失うことなく保持可能な最小の数値データ型になります。 結果のデータ型については、「[ &#40;SSIS Expression&#41;](operators-ssis-expression.md)」と「[ &#40;SSIS Expression&#41;](functions-ssis-expression.md)」を参照してください。  
   

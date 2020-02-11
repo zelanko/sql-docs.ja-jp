@@ -1,5 +1,5 @@
 ---
-title: 大きなデータの設定 |Microsoft Docs
+title: 大きなデータを設定する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: da56cbf334bca884e71469c63429135d6db84953
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63140621"
 ---
 # <a name="setting-large-data"></a>大きなデータの設定
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーでは、コンシューマー ストレージ オブジェクトへのポインターを渡すことによって BLOB データを設定することができます。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーでは、コンシューマーストレージオブジェクトへのポインターを渡すことによって BLOB データを設定できます。  
   
  コンシューマーは、データを保持するストレージ オブジェクトを作成し、このストレージ オブジェクトへのポインターをプロバイダーに渡します。 次に、プロバイダーがコンシューマー ストレージ オブジェクトからデータを読み取り、BLOB 列に書き込みます。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "63140621"
 ## <a name="how-to-set-large-data"></a>大きなデータを設定する方法  
  コンシューマーは、独自のストレージ オブジェクトへのポインターを渡すために、BLOB 列の値をバインドするアクセサーを作成します。次に、**IRowsetChange::SetData** メソッドまたは **IRowsetChange::InsertRow** メソッドを呼び出します。 BLOB データを設定するには、次の手順を実行します。  
   
-1.  BLOB 列へのアクセス方法を説明する DBOBJECT 構造体を作成します。 DBOBJECT 構造体の *dwFlag* 要素に STGM_READ を設定し、*iid* 要素に IID_ISequentialStream (公開されるインターフェイス) を設定します。  
+1.  BLOB 列へのアクセス方法を説明する DBOBJECT 構造体を作成します。 DBOBJECT 構造体の*Dwflag*要素を STGM_READ に設定し、 *iid*要素を IID_ISequentialStream (公開するインターフェイス) に設定します。  
   
 2.  行セットが更新可能になるように、DBPROPSET_ROWSET プロパティ グループのプロパティを設定します。  
   
@@ -49,7 +49,9 @@ ms.locfileid: "63140621"
   
 4.  DBBINDINGS 構造体の配列内のバインド情報を使用して、アクセサーを作成します。  
   
-5.  **GetNextRows** を呼び出して、次の行を行セットにフェッチします。 **GetData** を呼び出して、その行セットからデータを読み取ります。  
+5.  
+  **GetNextRows** を呼び出して、次の行を行セットにフェッチします。 
+  **GetData** を呼び出して、その行セットからデータを読み取ります。  
   
 6.  データ (および長さのインジケーター) を保持するストレージ オブジェクトを作成し、次に BLOB 列をバインドするアクセサーを指定して **IRowsetChange::SetData** (または **IRowsetChange::InsertRow**) を呼び出し、データを設定します。  
   
@@ -717,8 +719,8 @@ Exit:
 } //end function  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [BLOB と OLE オブジェクト](blobs-and-ole-objects.md)   
- [大きな値の型の使用](../native-client/features/using-large-value-types.md)  
+## <a name="see-also"></a>参照  
+ [Blob と OLE オブジェクト](blobs-and-ole-objects.md)   
+ [大きな値をとるデータ型の使用](../native-client/features/using-large-value-types.md)  
   
   

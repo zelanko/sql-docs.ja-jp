@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 201ccae98886e5126eb347c10d16985cbeeddffe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62779137"
 ---
 # <a name="considerations-for-installing-sql-server-using-sysprep"></a>SysPrep を使用した SQL Server のインストールに関する注意点
@@ -28,7 +28,7 @@ ms.locfileid: "62779137"
   
      この手順では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の準備済みインスタンスの構成を完了できます。 ここでは、コンピューター、ネットワーク、およびアカウントに固有の情報を入力できます。  
   
- インストールする方法の詳細についての[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SysPrep を使用して、参照してください[SQL Server 2014 を使用して SysPrep インストール](install-sql-server-using-sysprep.md)します。  
+ SysPrep を使用してをインストール[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]する方法の詳細については、「 [Sysprep を使用して SQL Server 2014 をインストール](install-sql-server-using-sysprep.md)する」を参照してください。  
   
 ## <a name="common-uses-for-includessnoversionincludesssnoversion-mdmd-sysprep"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep の一般的な使用方法  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 機能は、次のいずれかの方法で使用できます。  
@@ -65,7 +65,7 @@ ms.locfileid: "62779137"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Writer は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスを準備すると自動的に準備され、 イメージの完了手順で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを完了させると完了します。  
   
- エディションがサポートされているについて[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を参照してください[機能は、SQL Server 2014 の各エディションでサポートされている](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  
+ サポートされているの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エディションの詳細については、「 [SQL Server 2014 の各エディションがサポートする機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)」を参照してください。  
   
  準備済み [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスの構成時に、エディションをアップグレードできます。 このオプションは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Edition ではサポートされていません。  
   

@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 06ae79e51fa7526ab0e6bad2747c32d0bc5ca6bd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771605"
 ---
 # <a name="certification-by-sap"></a>SAP による認定
@@ -26,7 +26,7 @@ ms.locfileid: "62771605"
   
 |SAP インターフェイス|SAP リリース レベル|認定日|関連するコンポーネント|  
 |-------------------|------------------------|------------------------|-----------------------|  
-|BW-OHS 7.0 - SAP NetWeaver Business Intelligence - オープン ハブ サービス 7.0|Business Intelligence 7.0|2012 年 12 月|ソース|  
-|BW-STA 3.5 - SAP BW 3.5 用ステージング BAPI|Business Intelligence 3.5、7.0|2012 年 12 月|[Destination]|  
+|BW-OHS 7.0 - SAP NetWeaver Business Intelligence - オープン ハブ サービス 7.0|Business Intelligence 7.0|2012 年 12 月|source|  
+|BW-STA 3.5 - SAP BW 3.5 用ステージング BAPI|Business Intelligence 3.5、7.0|2012 年 12 月|宛先|  
   
   

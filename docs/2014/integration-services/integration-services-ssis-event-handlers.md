@@ -22,10 +22,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 54702cd96ba9327fe8bba8e4c82275dbdaef1bf8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62767728"
 ---
 # <a name="integration-services-ssis-event-handlers"></a>Integration Services (SSIS) のイベント ハンドラー
@@ -45,11 +45,13 @@ ms.locfileid: "62767728"
   
  ![パッケージ、For ループ、タスク ホスト、および SQL 実行タスク](media/mw-dts-eventhandlerpkg.gif "パッケージ、For ループ、タスク ホスト、および SQL 実行タスク")  
   
- `OnError` イベントに対するイベント ハンドラーを持つのは、パッケージのみです。 SQL 実行タスクの実行時にエラーが発生した場合、パッケージの `OnError` イベント ハンドラーが実行されます。 次の図は、パッケージの `OnError` イベント ハンドラーにより実行される呼び出しの順序を示しています。  
+ 
+  `OnError` イベントに対するイベント ハンドラーを持つのは、パッケージのみです。 SQL 実行タスクの実行時にエラーが発生した場合、パッケージの `OnError` イベント ハンドラーが実行されます。 次の図は、パッケージの `OnError` イベント ハンドラーにより実行される呼び出しの順序を示しています。  
   
  ![イベント ハンドラーのフロー](media/mw-dts-eventhandlers.gif "イベント ハンドラーのフロー")  
   
- イベント ハンドラーは、イベント ハンドラー コレクションのメンバーであり、このコレクションはすべてのコンテナーに含まれています。 [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーを使用してパッケージを作成すると、イベント ハンドラー コレクションのメンバーは、 **デザイナーの** [パッケージ エクスプローラー] **タブ上の** [イベント ハンドラー] [!INCLUDE[ssIS](../includes/ssis-md.md)] フォルダー内に表示されます。  
+ イベント ハンドラーは、イベント ハンドラー コレクションのメンバーであり、このコレクションはすべてのコンテナーに含まれています。 
+  [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーを使用してパッケージを作成すると、イベント ハンドラー コレクションのメンバーは、 **デザイナーの** [パッケージ エクスプローラー] **タブ上の** [イベント ハンドラー] [!INCLUDE[ssIS](../includes/ssis-md.md)] フォルダー内に表示されます。  
   
  イベント ハンドラーのコンテナーは、次の方法で構成できます。  
   
@@ -64,7 +66,8 @@ ms.locfileid: "62767728"
 -   イベント ハンドラーが使用するログ モードを指定します。  
   
 ## <a name="event-handler-content"></a>イベント ハンドラーの内容  
- イベント ハンドラーの作成方法は、パッケージの構築方法と同様です。つまり、イベント ハンドラーには、制御フロー内で順序付けられたタスクとコンテナーがあります。また、イベント ハンドラーにデータ フローを含めることもできます。 [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーには **[イベント ハンドラー]** タブが含まれており、これを使用してカスタム イベント ハンドラーを作成します。 詳細については、次を参照してください。 [SSIS パッケージのイベント ハンドラー](integration-services-ssis-event-handlers.md)します。  
+ イベント ハンドラーの作成方法は、パッケージの構築方法と同様です。つまり、イベント ハンドラーには、制御フロー内で順序付けられたタスクとコンテナーがあります。また、イベント ハンドラーにデータ フローを含めることもできます。 
+  [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーには **[イベント ハンドラー]** タブが含まれており、これを使用してカスタム イベント ハンドラーを作成します。 詳細については、「 [SSIS パッケージのイベントハンドラー](integration-services-ssis-event-handlers.md)」を参照してください。  
   
  イベント ハンドラーは、プログラムによって作成することもできます。 詳細については、「 [プログラムによるイベントの処理](building-packages-programmatically/handling-events-programmatically.md)」を参照してください。  
   
@@ -73,27 +76,38 @@ ms.locfileid: "62767728"
   
 |イベント ハンドラー|イベント|  
 |-------------------|-----------|  
-|`OnError`|イベント ハンドラー、`OnError`イベント。 このイベントは、エラー発生時に実行可能ファイルから発生します。|  
-|**OnExecStatusChanged**|**OnExecStatusChanged** イベントのイベント ハンドラーです。 このイベントは、実行状態が変化したときに実行可能ファイルから発生します。|  
-|**OnInformation**|**OnInformation** イベントのイベント ハンドラーです。 このイベントは、実行可能ファイルの検証時および実行時に、情報をレポートするために発生します。 このイベントは情報を伝達するだけのもので、エラーや警告は発生しません。|  
-|**OnPostExecute**|**OnPostExecute** イベントのイベント ハンドラーです。 このイベントは、実行可能ファイルの実行完了直後に、実行可能ファイルから発生します。|  
-|**OnPostValidate**|**OnPostValidate** イベントのイベント ハンドラーです。 このイベントは、実行可能ファイルの検証が完了したときに、実行可能ファイルから発生します。|  
-|**OnPreExecute**|**OnPreExecute** イベントのイベント ハンドラーです。 このイベントは、実行可能ファイルが実行される直前に、実行可能ファイルから発生します。|  
-|**OnPreValidate**|**OnPreValidate** イベントのイベント ハンドラーです。 このイベントは、実行可能ファイルの検証を開始するときに、実行可能ファイルから発生します。|  
-|**OnProgress**|**OnProgress** イベントのイベント ハンドラーです。 このイベントは、実行可能ファイルで重要な進行があったときに、実行可能ファイルから発生します。|  
-|**OnQueryCancel**|**OnQueryCancel** イベントのイベント ハンドラーです。 このイベントは、実行可能ファイルの実行を停止するかどうかを決定するために、実行可能ファイルから発生します。|  
-|**OnTaskFailed**|**OnTaskFailed** イベントのイベント ハンドラーです。 このイベントは、タスクが失敗したときにタスクから発生します。|  
-|**OnVariableValueChanged**|**OnVariableValueChanged** イベントのイベント ハンドラーです。 このイベントは、変数の値が変化したときに実行可能ファイルから発生します。 イベントは、変数が定義されている実行可能ファイルで発生します。 設定した場合、このイベントは発生しませんが、 **RaiseChangeEvent**プロパティに変数を`False`します。 詳細については、「 [Integration Services &#40;SSIS&#41; の変数](integration-services-ssis-variables.md)」を参照してください。|  
-|**OnWarning**|**OnWarning** イベントのイベント ハンドラーです。 このイベントは、警告の発生時に実行可能ファイルから発生します。|  
+|`OnError`|`OnError`イベントのイベントハンドラー。 このイベントは、エラー発生時に実行可能ファイルから発生します。|  
+|**OnExecStatusChanged**|
+  **OnExecStatusChanged** イベントのイベント ハンドラーです。 このイベントは、実行状態が変化したときに実行可能ファイルから発生します。|  
+|**OnInformation**|
+  **OnInformation** イベントのイベント ハンドラーです。 このイベントは、実行可能ファイルの検証時および実行時に、情報をレポートするために発生します。 このイベントは情報を伝達するだけのもので、エラーや警告は発生しません。|  
+|**OnPostExecute**|
+  **OnPostExecute** イベントのイベント ハンドラーです。 このイベントは、実行可能ファイルの実行完了直後に、実行可能ファイルから発生します。|  
+|**OnPostValidate**|
+  **OnPostValidate** イベントのイベント ハンドラーです。 このイベントは、実行可能ファイルの検証が完了したときに、実行可能ファイルから発生します。|  
+|**OnPreExecute**|
+  **OnPreExecute** イベントのイベント ハンドラーです。 このイベントは、実行可能ファイルが実行される直前に、実行可能ファイルから発生します。|  
+|**OnPreValidate**|
+  **OnPreValidate** イベントのイベント ハンドラーです。 このイベントは、実行可能ファイルの検証を開始するときに、実行可能ファイルから発生します。|  
+|**OnProgress**|
+  **OnProgress** イベントのイベント ハンドラーです。 このイベントは、実行可能ファイルで重要な進行があったときに、実行可能ファイルから発生します。|  
+|**OnQueryCancel**|
+  **OnQueryCancel** イベントのイベント ハンドラーです。 このイベントは、実行可能ファイルの実行を停止するかどうかを決定するために、実行可能ファイルから発生します。|  
+|**OnTaskFailed**|
+  **OnTaskFailed** イベントのイベント ハンドラーです。 このイベントは、タスクが失敗したときにタスクから発生します。|  
+|**OnVariableValueChanged**|
+  **OnVariableValueChanged** イベントのイベント ハンドラーです。 このイベントは、変数の値が変化したときに実行可能ファイルから発生します。 イベントは、変数が定義されている実行可能ファイルで発生します。 変数の**RaiseChangeEvent**プロパティをに`False`設定すると、このイベントは発生しません。 詳細については、「 [Integration Services &#40;SSIS&#41; の変数](integration-services-ssis-variables.md)」を参照してください。|  
+|**OnWarning**|
+  **OnWarning** イベントのイベント ハンドラーです。 このイベントは、警告の発生時に実行可能ファイルから発生します。|  
   
 ## <a name="configuration-of-an-event-handler"></a>イベント ハンドラーの構成  
- プロパティは、[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] の **[プロパティ]** ウィンドウで設定することも、プログラムで設定することもできます。  
+ プロパティは、 **の** [プロパティ] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ウィンドウで設定することも、プログラムで設定することもできます。  
   
  これらのプロパティを [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で設定する方法については、「 [タスクまたはコンテナーのプロパティを設定する](../../2014/integration-services/set-the-properties-of-a-task-or-container.md)」を参照してください。  
   
  これらのプロパティのプログラムでの設定については、「 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>」を参照してください。  
   
 ## <a name="related-tasks"></a>Related Tasks  
- パッケージにイベント ハンドラーを追加する方法については、「[パッケージにイベント ハンドラーを追加する](../../2014/integration-services/add-an-event-handler-to-a-package.md)」を参照してください。  
+ パッケージにイベント ハンドラーを追加する方法については、「 [パッケージにイベント ハンドラーを追加する](../../2014/integration-services/add-an-event-handler-to-a-package.md)」を参照してください。  
   
   

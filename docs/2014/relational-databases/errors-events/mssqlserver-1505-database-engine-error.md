@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6ada58ff37b3fb7dd2760427483b0935d9bc47cb
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67727741"
 ---
-# <a name="mssqlserver1505"></a>MSSQLSERVER_1505
+# <a name="mssqlserver_1505"></a>MSSQLSERVER_1505
     
 ## <a name="details"></a>詳細  
   
@@ -50,7 +50,7 @@ ms.locfileid: "67727741"
   
  エラー メッセージ 1505 では、一意性制約に違反する最初の行が返されます。 これ以外にも重複行がテーブルに含まれている可能性があります。 重複行をすべて検出するには、指定されたテーブルに対してクエリを実行し、GROUP BY 句と HAVING 句を使用して重複行を抽出します。 たとえば、次のクエリを実行すると、姓と名が重複する **Employee** テーブル内の行が返されます。  
   
- SELECT LastName, FirstName, count(\*) FROM dbo.Employee GROUP BY LastName, FirstName HAVING count(\*) > 1;  
+ Dbo から LastName、FirstName、count\*() を選択します。従業員グループ (LastName、FirstName HAVING count (\*) > 1)  
   
 ## <a name="user-action"></a>ユーザーの操作  
  次の解決策について検討してください。  
@@ -61,9 +61,9 @@ ms.locfileid: "67727741"
   
 -   重複値の原因がデータ エントリのエラーである場合は、そのデータを手動で修正してから、インデックスまたは制約を作成します。 テーブル内の重複行を削除する方法の詳細については、サポート技術情報の記事 139444「[テーブルから重複行を削除する方法](https://support.microsoft.com/kb/139444)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)   
- [Unique インデックスを作成します。](../indexes/indexes.md)   
+ [一意のインデックスの作成](../indexes/indexes.md)   
  [UNIQUE 制約の作成](../tables/create-unique-constraints.md)  
   
   

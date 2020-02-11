@@ -1,5 +1,5 @@
 ---
-title: 手順 1:配置ユーティリティの構築 | Microsoft Docs
+title: '手順 1: 配置ユーティリティの構築 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b788f82fc28ee39e7d65ae484da49313eea7c610
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62767584"
 ---
-# <a name="step-1-building-the-deployment-utility"></a>手順 1:配置ユーティリティの構築
+# <a name="step-1-building-the-deployment-utility"></a>手順 1: 配置ユーティリティの構築
   ここでは、Deployment Tutorial プロジェクト用の配置ユーティリティを構成し、構築します。  
   
  配置ユーティリティを構築する前に、Deployment Tutorial プロジェクトのプロパティを変更する必要があります。 これらのプロパティを構成するには、 **[Deployment Tutorial プロパティ ページ]** ダイアログ ボックスを使用します。 このダイアログ ボックスでは、配置中に構成を更新する機能を有効にし、構築プロセスによる配置ユーティリティの生成を指定する必要があります。 プロパティを設定したら、プロジェクトを構成します。  
@@ -34,7 +34,7 @@ ms.locfileid: "62767584"
   
 4.  **[Deployment Tutorial プロパティ ページ]** ダイアログ ボックスで、[構成プロパティ] を展開し、[配置ユーティリティ] をクリックします。  
   
-5.  右側のウィンドウで、 **Deployment Tutorial プロパティ ページ** ダイアログ ボックスで、ことを確認します`AllowConfigurationChanges`に設定されている`true`に設定して、`CreateDeploymentUtility`に`true`、オプションの既定値を更新および`DeploymentOutputPath`。  
+5.  [**配置チュートリアルプロパティページ**] ダイアログ`AllowConfigurationChanges`ボックスの右ペインで、がに`true`設定されている`CreateDeploymentUtility`こと`true`を確認し、をに設定し`DeploymentOutputPath`、必要に応じての既定値を更新します。  
   
 6.  **[OK]** をクリックします。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "62767584"
   
 4.  出力ウィンドウに、次のような情報が表示されます。  
   
-     ビルド開始:SQL Integration Services プロジェクト:インクリメンタル...  
+     ビルド開始:  SQL Integration Services プロジェクト: インクリメンタル...  
   
      配置ユーティリティを作成しています  
   
@@ -56,16 +56,16 @@ ms.locfileid: "62767584"
   
      ビルドの完了 -- エラー 0 個、警告 0 個  
   
-     ========== ビルド:0 正常終了、0 失敗、1 更新、0 スキップ ==========  
+     ========== ビルド: 0 正常終了、0 失敗、1 更新、0 スキップ ==========  
   
 5.  **[ファイル]** メニューの **[終了]** をクリックします。 Deployment Tutorial アイテムへの変更の保存を指示するメッセージが表示されたら、 **[はい]** をクリックします。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
- [手順 2:配置バンドルの確認](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
+ [手順 2: 配置バンドルの確認](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
   
-![Integration Services のアイコン (小)](media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。**<br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
+![Integration Services アイコン (小)](media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services に関するページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
 ## <a name="see-also"></a>参照  
- [配置ユーティリティを作成する](../../2014/integration-services/create-a-deployment-utility.md)  
+ [Create a Deployment Utility](../../2014/integration-services/create-a-deployment-utility.md)  
   
   

@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 49c5b559d675ec29ab85a68b9ac31a619e2538ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62830285"
 ---
 # <a name="select-variables-page"></a>[変数の選択] ページ
@@ -27,17 +27,17 @@ ms.locfileid: "62830285"
   
  **[変数の選択]** ダイアログ ボックスを開くには、 **[スクリプト変換エディター]** ダイアログ ボックスの **[スクリプト]** ページで、 **[カスタム プロパティ]** の下にある **ReadOnlyVariables** プロパティまたは **ReadWriteVariables** プロパティのいずれかを探して、そのプロパティに関連付けられている参照ボタン ( [...] ) をクリックします。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  選択ボックス  
  特定の変数またはすべての変数を選択したり、すべての変数の選択を解除したりします。  
   
  **名前**  
  変数の名前を指定します。  
   
- **型**  
+ **Type**  
  変数のデータ型を指定します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [[スクリプト タスク エディター] &#40;[スクリプト] ページ&#41;](../script-task-editor-script-page.md)  
   
   

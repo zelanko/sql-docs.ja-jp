@@ -1,5 +1,5 @@
 ---
-title: データベース ミラーリング エンドポイントで発信接続 (Transact SQL) の証明書の使用を許可する |Microsoft Docs
+title: データベースミラーリングエンドポイントで発信接続に証明書を使用できるようにする (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 43a55174bae1bb03034ea005749055701884848f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62806875"
 ---
 # <a name="allow-a-database-mirroring-endpoint-to-use-certificates-for-outbound-connections-transact-sql"></a>データベース ミラーリング エンドポイントで発信接続に証明書を使用できるようにする (Transact-SQL)
@@ -43,7 +43,7 @@ ms.locfileid: "62806875"
   
 ## <a name="procedure"></a>手順  
   
-#### <a name="to-configure-server-instances-for-outbound-mirroring-connections-on-hosta"></a>ミラーリングの発信接続用に (HOST_A 上で) サーバー インスタンスを構成するには  
+#### <a name="to-configure-server-instances-for-outbound-mirroring-connections-on-host_a"></a>ミラーリングの発信接続用に (HOST_A 上で) サーバー インスタンスを構成するには  
   
 1.  **master** データベースで、データベース マスター キーが存在しない場合は作成します。 データベースの既存のキーを表示するには、 [sys.symmetric_keys](/sql/relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql) カタログ ビューを使用します。  
   
@@ -164,22 +164,22 @@ GO
  任意の安全な方法を使用し、証明書を他のシステムにコピーします。 すべての証明書をセキュリティで保護された状態で保管するよう十分に注意してください。  
   
 > [!IMPORTANT]  
->  発信接続を設定した後、各サーバー インスタンスの着信接続を他のサーバー インスタンス用に構成する必要があります。 詳細については、「[データベース ミラーリング エンドポイントで着信接続に証明書を使用できるようにする &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-inbound-connections.md)」を参照してください。  
+>  発信接続を設定した後、各サーバー インスタンスの着信接続を他のサーバー インスタンス用に構成する必要があります。 詳細については、「 [データベース ミラーリング エンドポイントで着信接続に証明書を使用できるようにする &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-inbound-connections.md)を使用します。  
   
  Transact-SQL の例を含む、ミラー データベースを作成する方法の詳細については、「[ミラーリングのためのミラー データベースの準備 &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)」を参照してください。  
   
- 高パフォーマンス モード セッションを確立する TRANSACT-SQL 例では、次を参照してください。[例。データベース ミラーリングを使用して証明書設定&#40;TRANSACT-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md)します。  
+ 高パフォーマンス モード セッションを確立する Transact-SQL 例については、「 [証明書を使用したデータベース ミラーリングの設定の例 &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md)」を参照してください。  
   
 ## <a name="net-framework-security"></a>.NET Framework のセキュリティ  
  ネットワークがセキュリティで保護されていることを保証できる場合を除いて、データベース ミラーリング接続に対して暗号化を使用することをお勧めします。  
   
  証明書を別のシステムにコピーする場合は、セキュリティで保護されたコピー方法を使用してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [暗号化アルゴリズムの選択](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
  [ミラーリングのためのミラー データベースの準備 &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)   
  [ALTER ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-endpoint-transact-sql)   
- [例:データベース ミラーリングを使用して証明書設定&#40;TRANSACT-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md)   
+ [証明書を使用したデータベース ミラーリングの設定の例 &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md)   
  [データベース ミラーリング エンドポイント &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)   
  [データベース ミラーリング構成のトラブルシューティング &#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)   
  [暗号化されたミラー データベースの設定](set-up-an-encrypted-mirror-database.md)  

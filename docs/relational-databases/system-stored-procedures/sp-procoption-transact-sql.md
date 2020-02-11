@@ -1,5 +1,5 @@
 ---
-title: sp_procoption (TRANSACT-SQL) |Microsoft Docs
+title: sp_procoption (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,16 @@ ms.assetid: 6f0221bd-70b4-4b04-b15d-722235aceb3c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: bc004c611c218324ce2d2d8b764b3ab05cb73e5d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67896594"
 ---
-# <a name="spprocoption-transact-sql"></a>sp_procoption (Transact-SQL)
+# <a name="sp_procoption-transact-sql"></a>sp_procoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  ストアド プロシージャの自動実行を設定または解除します。 ストアド プロシージャに設定されている自動実行の実行時間のすべてのインスタンスを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が開始します。  
+  ストアド プロシージャの自動実行を設定または解除します。 自動実行に設定されているストアドプロシージャは、の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスが起動されるたびに実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,22 +41,23 @@ sp_procoption [ @ProcName = ] 'procedure'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @ProcName = ] 'procedure'` オプションを設定する対象のプロシージャの名前です。 *プロシージャ*は**nvarchar (776)** 、既定値はありません。  
+`[ @ProcName = ] 'procedure'`オプションを設定するプロシージャの名前を指定します。 *プロシージャ*は**nvarchar (776)**,、既定値はありません。  
   
-`[ @OptionName = ] 'option'` 設定するオプションの名前です。 値だけ*オプション*は**スタートアップ**します。  
+`[ @OptionName = ] 'option'`設定するオプションの名前を指定します。 *オプション*の値は**startup**だけです。  
   
-`[ @OptionValue = ] 'value'` オプションを設定するかどうか (**true**または**で**) かオフ (**false**または**オフ**)。 *値*は**varchar (12)** 、既定値はありません。  
+`[ @OptionValue = ] 'value'`オプションを on (**true**または**on**) に設定するか、オフ (**false**または**off**) にするかを指定します。 *値*は**varchar (12)**,、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- 0 (成功) またはエラーの数 (失敗)  
+ 0 (成功) またはエラー番号 (失敗)  
   
-## <a name="remarks"></a>コメント  
- スタートアップ プロシージャがである必要があります、**マスター**データベースし、入力または出力パラメーターを含めることはできません。 ストアド プロシージャの実行は、すべてのデータベースが復旧され、「回復が完了した」メッセージが起動時にログインするとを起動します。  
+## <a name="remarks"></a>解説  
+ スタートアッププロシージャは、 **master**データベースに存在する必要があり、入力パラメーターまたは出力パラメーターを含めることはできません。 ストアドプロシージャの実行は、すべてのデータベースが復旧され、"復旧が完了しました" というメッセージが起動時にログに記録されると開始されます。  
   
 ## <a name="permissions"></a>アクセス許可  
- **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
+ 
+  **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例は、プロシージャの自動実行を設定します。  
   
 ```  
@@ -73,7 +74,7 @@ EXEC sp_procoption @ProcName = N'<procedure name>'
     , @OptionValue = 'off';   
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ストアド プロシージャの実行](../../relational-databases/stored-procedures/execute-a-stored-procedure.md)  
   
   

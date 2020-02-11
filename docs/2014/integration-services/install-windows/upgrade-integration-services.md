@@ -16,13 +16,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d1e40954a5a5eb7a69ba4f70b798356f38175fed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768088"
 ---
 # <a name="upgrade-integration-services"></a>Integration Services のアップグレード
+  
   [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] または [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] がコンピューターに現在インストールされている場合は、[!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] にアップグレードできます。  
   
  [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] の以前のバージョンのいずれかがインストールされているコンピューターで [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] にアップグレードすると、 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] は以前のバージョンに対してサイド バイ サイドでインストールされます。  
@@ -36,7 +37,7 @@ ms.locfileid: "62768088"
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]にアップグレードする前に、アップグレード アドバイザーを実行することをお勧めします。 アップグレード アドバイザーは、既存の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で使用される新しいパッケージ形式に移行する場合に発生する可能性がある問題を報告します。 詳細については、「 [Use Upgrade Advisor to Prepare for Upgrades](../../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)」を参照してください。  
   
 > [!NOTE]
->  現在のリリースでの移行またはデータ変換サービス (DTS) パッケージの実行のサポートは廃止されました[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]します。 次の DTS 機能は廃止されました。  
+>  現在の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]リリースのでは、データ変換サービス (DTS) パッケージの移行または実行のサポートは廃止されました。 次の DTS 機能は廃止されました。  
 > 
 >  -   DTS ランタイム  
 > -   DTS API  
@@ -45,40 +46,47 @@ ms.locfileid: "62768088"
 > -   DTS 2000 パッケージ実行タスク  
 > -   アップグレード アドバイザーによる DTS パッケージのスキャン  
 > 
->  その他の提供が中止された機能については、次を参照してください。[提供が中止された Integration Services の機能で SQL Server 2014](../discontinued-integration-services-functionality-in-sql-server-2014.md)します。  
+>  廃止されたその他の機能の詳細については、 [SQL Server 2014 の「廃止](../discontinued-integration-services-functionality-in-sql-server-2014.md)された Integration Services 機能」を参照してください。  
   
 ## <a name="upgrading-integration-services"></a>Integration Services のアップグレード  
  次の方法のいずれかを使用してアップグレードできます。  
   
--   実行[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]セットアップするオプションを選択および**SQL Server 2005、SQL Server 2008 または SQL Server 2008 R2 からアップグレード**、または **[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]** します。  
+-   セットアップ[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]を実行し、 **SQL Server 2005、SQL Server 2008 または SQL Server 2008 R2**、または**[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]** からアップグレードするオプションを選択します。  
   
--   実行**setup.exe**コマンド プロンプトで指定し、`/ACTION=upgrade`オプション。 詳細については、このセクションを参照してください。"インストール スクリプト」 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]、"で[コマンド プロンプトから SQL Server 2014 のインストール](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)します。  
+-   コマンドプロンプトで**setup.exe**を実行し、 `/ACTION=upgrade`オプションを指定します。 詳細については、「 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)][コマンドプロンプトからのインストール SQL Server 2014](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)」の「のインストールスクリプト」を参照してください。  
   
  アップグレードでは、次の操作は実行できません。  
   
 -   既にインストールされている [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]の再構成  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の 32 ビット版から 64 ビット版への移動または 64 ビット版から 32 ビット版への移動  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の 32 ビット版から 64 ビット版への移動または 64 ビット版から 32 ビット版への移動  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のローカライズ版どうしの間での移動  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のローカライズ版どうしの間での移動  
   
- アップグレード時には、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] と [!INCLUDE[ssDE](../../includes/ssde-md.md)]の両方をアップグレードするか、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のみ、または [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]のみをアップグレードすることができます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のみをアップグレードすると、[!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] または [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] は引き続き機能しますが、[!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] の機能は使用できません。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]のみをアップグレードすると、 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] は完全に機能しますが、 [!INCLUDE[ssDECurrent](../../includes/ssdecurrent-md.md)] のインスタンスを別のコンピューターで使用できない限り、パッケージを格納できる場所はファイル システムのみになります。  
+ アップグレード時には、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] と [!INCLUDE[ssDE](../../includes/ssde-md.md)]の両方をアップグレードするか、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のみ、または [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]のみをアップグレードすることができます。 
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)]のみをアップグレードすると、[!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] または [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] は引き続き機能しますが、[!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] の機能は使用できません。 
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]のみをアップグレードすると、 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] は完全に機能しますが、 [!INCLUDE[ssDECurrent](../../includes/ssdecurrent-md.md)] のインスタンスを別のコンピューターで使用できない限り、パッケージを格納できる場所はファイル システムのみになります。  
   
 ## <a name="upgrading-both-integration-services-and-the-database-engine-to-includesscurrentincludessscurrent-mdmd"></a>Integration Services とデータベース エンジンの両方を [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  ここでは、次の条件を満たしたアップグレードを実行した場合の影響について説明します。  
   
--   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] と [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスをどちらも [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]にアップグレードする。  
+-   
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] と [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスをどちらも [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]にアップグレードする。  
   
--   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] と [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスがどちらも同じコンピューター上にある。  
+-   
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] と [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスがどちらも同じコンピューター上にある。  
   
 ### <a name="what-the-upgrade-process-does"></a>アップグレード プロセスで実行されるタスク  
  アップグレード プロセスでは次のタスクが行われます。  
   
--   [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] のファイル、サービス、およびツール ([!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] と [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]) をインストールします。 同じコンピューター上に [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] または [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] の複数のインスタンスが存在する場合は、どのインスタンスであっても、最初に [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] にアップグレードするときに、[!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] のファイル、サービス、およびツールがインストールされます。  
+-   
+  [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] のファイル、サービス、およびツール ([!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] と [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]) をインストールします。 同じコンピューター上に [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] または [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] の複数のインスタンスが存在する場合は、どのインスタンスであっても、最初に [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] にアップグレードするときに、[!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] のファイル、サービス、およびツールがインストールされます。  
   
--   インスタンスをアップグレード、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]または[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)]を[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]バージョン。  
+-   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]または[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスを[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]バージョンにアップグレードします。  
   
--   データを移動、[!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)]または[!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)]システム テーブル、[!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]システム テーブルに次のようにします。  
+-   次のように[!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] 、 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)]またはシステムテーブル[!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]からシステムテーブルにデータを移動します。  
   
     -   パッケージを変更せずに msdb.dbo.sysdtspackages90 システム テーブルから msdb.dbo.sysssispackages システム テーブルに移動します。  
   
@@ -89,59 +97,69 @@ ms.locfileid: "62768088"
   
     -   ログ データを msdb.sysdtslog90 システム テーブルから msdb.sysssislog システム テーブルに移動します。  
   
--   新しい msdb.sysssis\* テーブルにデータを移動した後に、msdb.sysdts\*90 システム テーブルとシステム テーブルへのアクセスに使用されるストアド プロシージャを削除します。 ただしアップグレードにより、sysdtslog90 テーブルは sysdtslog90 という名前のビューに置き換わります。 この新しい sysdtslog90 ビューでは、新しい msdb.sysssislog システム テーブルが公開されます。 これにより、ログ テーブルに基づいたレポートは、中断されることなく引き続き実行されます。  
+-   新しい msdb.sysssis\* テーブルにデータを移動した後に、msdb.sysdts*90 システム テーブルとシステム テーブルへのアクセスに使用されるストアド プロシージャを削除します。 ただしアップグレードにより、sysdtslog90 テーブルは sysdtslog90 という名前のビューに置き換わります。 この新しい sysdtslog90 ビューでは、新しい msdb.sysssislog システム テーブルが公開されます。 これにより、ログ テーブルに基づいたレポートは、中断されることなく引き続き実行されます。  
   
 -   パッケージへのアクセスを制御するために、db_ssisadmin、db_ssisltduser、および db_ssisoperator という 3 つの固定データベース レベル ロールを新しく作成します。 db_dtsadmin、db_dtsltduser、および db_dtsoperator という [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ロールは削除されませんが、対応する新しいロールのメンバーになります。  
   
--   場合、[!INCLUDE[ssIS](../../includes/ssis-md.md)]パッケージ ストア (で管理されているファイル システムの場所は、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]サービス) が既定の場所で **\SQL Server\90**、 **\SQL Server\100**、または **\SQL Server\110**下で新しい既定の場所にそれらのパッケージを移動 **\SQL Server\120**します。  
+-   [!INCLUDE[ssIS](../../includes/ssis-md.md)]パッケージストア[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (サービスによって管理されるファイルシステムの場所) が**sql server**の既定の場所である場合 (サービスによって管理されるファイルシステムの場所) が、sql server の既定の場所である [sql server]**の下に**ある場合**は、既定**の場所**に移動し**ます。  
   
--   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のアップグレード済みのインスタンスを指すように [!INCLUDE[ssDE](../../includes/ssde-md.md)]サービス構成ファイルを更新します。  
+-   
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のアップグレード済みのインスタンスを指すように [!INCLUDE[ssDE](../../includes/ssde-md.md)]サービス構成ファイルを更新します。  
   
 ### <a name="what-the-upgrade-process-does-not-do"></a>アップグレード プロセスで実行されないタスク  
  アップグレード プロセスでは、次のタスクは行われません。  
   
--   **いない**削除、[!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)]または[!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)]サービス。  
+-   [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)]または[!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)]サービスは削除**されません**。  
   
 -   既存の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で使用される新しいパッケージ形式に移行されません。 パッケージの移行方法については、「 [Integration Services パッケージのアップグレード](upgrade-integration-services-packages.md)」をご覧ください。  
   
 -   パッケージは、サービス構成ファイルに追加されたファイル システムの場所からは移行されません。ただし、この場所が既定の場所である場合は移行できます。 既にサービス構成ファイルを編集してファイル システム フォルダーを追加している場合、追加したフォルダーに格納されているパッケージは新しい場所に移行されません。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dtexec **ユーティリティ (dtexec.exe) を直接呼び出す** エージェント ジョブ ステップでは、 **dtexec** ユーティリティのファイル システム パスが更新されません。 これらのジョブ ステップを手動で編集し、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の **dtexec** ユーティリティの場所を指定するようにファイル システム パスを更新する必要があります。  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dtexec **ユーティリティ (dtexec.exe) を直接呼び出す** エージェント ジョブ ステップでは、 **dtexec** ユーティリティのファイル システム パスが更新されません。 これらのジョブ ステップを手動で編集し、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の **dtexec** ユーティリティの場所を指定するようにファイル システム パスを更新する必要があります。  
   
 ### <a name="what-you-can-do-after-upgrading"></a>アップグレード後に実行できるタスク  
  アップグレード プロセスが完了したら、次のタスクを実行できます。  
   
 -   パッケージを実行する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブを実行できます。  
   
--   使用[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]を管理する[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]のインスタンスに格納されているパッケージ[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]または[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]します。 サービス構成ファイルを変更して、サービスによって管理される場所の一覧に [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] のインスタンスを追加する必要があります。  
+-   また[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]はの[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]インスタンスに格納されているパッケージを[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]管理するには、を使用します。 サービス構成ファイルを変更して、サービスによって管理される場所の一覧に [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] のインスタンスを追加する必要があります。  
   
     > [!NOTE]  
     >  以前のバージョンの [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] では、 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] サービス に接続することはできません。  
   
 -   packageformat 列の値を確認することによって、msdb.dbo.sysssispackages システム テーブル内のパッケージのバージョンを識別できます。 このテーブルには、各パッケージのバージョンを識別する packageformat 列があります。 packageformat 列の値が 2 の場合は、[!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] パッケージであることを示します。値が 3 の場合は、[!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] パッケージであることを示します。 パッケージを新しいパッケージ形式に移行するまで、packageformat 列の値は変わりません。  
   
--   使用することはできません、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]または[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]デザイン、実行、または管理するためのツール[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]パッケージ。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ツールおよび [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ツールには、各バージョンの [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザード、パッケージ実行ユーティリティ (dtexecui.exe) などがあります。 アップグレード プロセスは削除されません、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]または[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]ツール。 ただし、アップグレードしたサーバー上でこれらのツールを使用して、引き続き [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] パッケージまたは [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] パッケージで作業することはできません。  
+-   または[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]ツールを使用して、パッケージをデザイン、実行[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 、または管理することはできません。 
+  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ツールおよび [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ツールには、各バージョンの [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザード、パッケージ実行ユーティリティ (dtexecui.exe) などがあります。 アップグレードプロセスでは、 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]または[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]ツールは削除されません。 ただし、アップグレードしたサーバー上でこれらのツールを使用して、引き続き [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] パッケージまたは [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] パッケージで作業することはできません。  
   
--   既定では、アップグレード インストールで、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] はパッケージの実行に関連するイベントをアプリケーション イベント ログに記録するように構成されます。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]のデータ コレクター機能を使用すると、この設定によって大量のイベント ログ エントリが生成される場合があります。 ログに記録されるイベントは、EventID 12288 の "パッケージが起動されました。" や EventID 12289 の "パッケージが正常に完了しました。" などです。 これら 2 つのイベントがアプリケーション イベント ログに記録されないようにするには、レジストリを編集用に開きます。 次に、レジストリ内で HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\SSIS ノードを見つけ、LogPackageExecutionToEventLog 設定の DWORD 値を 1 から 0 に変更します。  
+-   既定では、アップグレード インストールで、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] はパッケージの実行に関連するイベントをアプリケーション イベント ログに記録するように構成されます。 
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]のデータ コレクター機能を使用すると、この設定によって大量のイベント ログ エントリが生成される場合があります。 ログに記録されるイベントは、EventID 12288 の "パッケージが起動されました。" や EventID 12289 の "パッケージが正常に完了しました。" などです。 これら 2 つのイベントがアプリケーション イベント ログに記録されないようにするには、レジストリを編集用に開きます。 次に、レジストリ内で HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\SSIS ノードを見つけ、LogPackageExecutionToEventLog 設定の DWORD 値を 1 から 0 に変更します。  
   
 ## <a name="upgrading-only-the-database-engine-to-includesscurrentincludessscurrent-mdmd"></a>データベース エンジンのみを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  ここでは、次の条件を満たしたアップグレードを実行した場合の影響について説明します。  
   
--   [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスのみをアップグレードする。 つまり、[!INCLUDE[ssDE](../../includes/ssde-md.md)]は [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のインスタンスであるが、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のインスタンスおよびクライアント ツールは [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] または [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] である状態。  
+-   
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスのみをアップグレードする。 つまり、[!INCLUDE[ssDE](../../includes/ssde-md.md)]は [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のインスタンスであるが、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のインスタンスおよびクライアント ツールは [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] または [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] である状態。  
   
--   [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスが、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] およびクライアント ツールとは別のコンピューター上にある。  
+-   
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスが、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] およびクライアント ツールとは別のコンピューター上にある。  
   
 ### <a name="what-you-can-do-after-upgrading"></a>アップグレード後に実行できるタスク  
- [!INCLUDE[ssDE](../../includes/ssde-md.md)]のアップグレード済みのインスタンスのパッケージを格納するシステム テーブルは、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] または [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] で使用されるシステム テーブルとは異なります。 そのため、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]または[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]のバージョンの[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]と[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]のアップグレード済みのインスタンスのシステム テーブル内のパッケージを検出することはできません、[!INCLUDE[ssDE](../../includes/ssde-md.md)]します。 このため、これらのパッケージに対して実行できるタスクには制限があります。  
+ 
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)]のアップグレード済みのインスタンスのパッケージを格納するシステム テーブルは、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] または [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] で使用されるシステム テーブルとは異なります。 このため、 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]および[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]のバージョンでは、のアップグレードされたインスタンスのシステムテーブル内のパッケージ[!INCLUDE[ssDE](../../includes/ssde-md.md)]を検出できません。 このため、これらのパッケージに対して実行できるタスクには制限があります。  
   
--   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ツールまたは [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ツール、[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]、および [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] は、[!INCLUDE[ssDE](../../includes/ssde-md.md)]のアップグレード済みのインスタンスのパッケージを読み込んだり管理したりするコンピューターに対しては使用できません。  
+-   
+  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ツールまたは [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ツール、[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]、および [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] は、[!INCLUDE[ssDE](../../includes/ssde-md.md)]のアップグレード済みのインスタンスのパッケージを読み込んだり管理したりするコンピューターに対しては使用できません。  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssDE](../../includes/ssde-md.md)]のアップグレード済みのインスタンスのパッケージはまだ新しいパッケージ形式に移行されていませんが、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ツールまたは [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ツールで検出することはできません。 したがって、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ツールまたは [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ツールではこれらのパッケージを使用できません。  
+    >  
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)]のアップグレード済みのインスタンスのパッケージはまだ新しいパッケージ形式に移行されていませんが、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ツールまたは [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ツールで検出することはできません。 したがって、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ツールまたは [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ツールではこれらのパッケージを使用できません。  
   
--   使用することはできません[!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)]または[!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)]のアップグレードされたインスタンス上の msdb に格納されているパッケージを実行するには、他のコンピューターで、[!INCLUDE[ssDE](../../includes/ssde-md.md)]します。  
+-   または[!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)]を他のコンピューターで使用して、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のアップグレード済みのインスタンスの msdb に格納されているパッケージを実行することはできません。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブは、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]のアップグレード済みのインスタンスに格納されている [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] パッケージまたは [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] パッケージを実行する [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] コンピューターまたは [!INCLUDE[ssDE](../../includes/ssde-md.md)] コンピューターでは使用できません。  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブは、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]のアップグレード済みのインスタンスに格納されている [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] パッケージまたは [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] パッケージを実行する [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] コンピューターまたは [!INCLUDE[ssDE](../../includes/ssde-md.md)] コンピューターでは使用できません。  
   
 ## <a name="external-resources"></a>外部リソース  
  blogs.msdn.com のブログ記事「 [既存のカスタムSSIS拡張機能とアプリケーションをデナリで動作させる](https://go.microsoft.com/fwlink/?LinkId=238157)」  

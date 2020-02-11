@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a8306fa98194fbf314796b199fea98ddd53cb1fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62769428"
 ---
 # <a name="ceiling-ssis-expression"></a>CEILING (SSIS 式)
@@ -37,7 +37,7 @@ CEILING(numeric_expression)
 ## <a name="result-types"></a>戻り値の型  
  関数に送信された数値式のデータ型です。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  引数が NULL の場合、CEILING は NULL を返します。  
   
 ## <a name="expression-examples"></a>式の例  
@@ -53,13 +53,13 @@ CEILING(123.74)
 CEILING(-124.27)  
 ```  
   
- -124.00 を返します。  
+ -124.00 を返します  
   
 ```  
 CEILING(0.00)  
 ```  
   
- 0.00 を返します。  
+ 0\.00 を返します。  
   
 ## <a name="see-also"></a>参照  
  [FLOOR &#40;SSIS 式&#41;](floor-ssis-expression.md)   

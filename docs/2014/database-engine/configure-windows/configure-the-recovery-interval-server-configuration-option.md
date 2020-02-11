@@ -20,14 +20,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 89449cbc31e1ec36fa37a5bb36b1f505cdd2e14d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62787137"
 ---
 # <a name="configure-the-recovery-interval-server-configuration-option"></a>recovery interval サーバー構成オプションの構成
-  このトピックでは、 **または** を使用して、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] recovery interval [!INCLUDE[tsql](../../includes/tsql-md.md)]サーバー構成オプションを構成する方法について説明します。 **recovery interval** オプションは、データベースの復旧に必要な時間の上限を定義します。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] は、 [自動チェックポイント](../../relational-databases/logs/database-checkpoints-sql-server.md) が特定のデータベースに対して発行されるおおよその頻度を、このオプションに指定された値を使用して決定します。  
+  このトピックでは、 **または** を使用して、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] recovery interval [!INCLUDE[tsql](../../includes/tsql-md.md)]サーバー構成オプションを構成する方法について説明します。 **recovery interval** オプションは、データベースの復旧に必要な時間の上限を定義します。 
+  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] は、 [自動チェックポイント](../../relational-databases/logs/database-checkpoints-sql-server.md) が特定のデータベースに対して発行されるおおよその頻度を、このオプションに指定された値を使用して決定します。  
   
  recovery-interval の既定値は 0 で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] によって自動的に復旧間隔が構成されます。 既定の recovery interval では、通常、アクティブなデータベースの自動チェックポイントの発生間隔は約 1 分、復旧時間は 1 分未満になります。 既定値より大きな値は、おおよその最大リカバリ時間 (分単位) を示します。 たとえば、recovery interval を '3' に設定した場合は、最大リカバリ時間は約 3 分になります。  
   
@@ -37,9 +38,9 @@ ms.locfileid: "62787137"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [推奨事項](#Recommendations)  
+     [Recommendations (推奨事項)](#Recommendations)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **recovery interval サーバー構成オプションを構成する方法:**  
   

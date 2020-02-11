@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3a42d496a59f489238d270fcb6bb17f3e1ff6421
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62809006"
 ---
 # <a name="server-properties-security-page"></a>[サーバーのプロパティ] ([セキュリティ] ページ)
@@ -36,7 +36,7 @@ ms.locfileid: "62809006"
 >  セキュリティ構成を変更するには、サービスを再起動する必要があります。 [サーバー認証] を [SQL Server 認証モードと Windows 認証モード] に変更する場合、SA アカウントは自動的に有効にはなりません。 SA アカウントを使用するには、ENABLE オプションを指定して [ALTER LOGIN](/sql/t-sql/statements/alter-login-transact-sql) を実行します。  
   
 ## <a name="login-auditing"></a>[ログインの監査]  
- **None**  
+ **なし**  
  ログインの監査をオフにします。  
   
  **[失敗したログインのみ]**  
@@ -61,10 +61,10 @@ ms.locfileid: "62809006"
  **[プロキシ アカウント]**  
  使用されるプロキシ アカウントを指定します。  
   
- **Password**  
+ **パスワード**  
  プロキシ アカウントのパスワードを指定します。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **[C2 監査トレースを有効にする]**  
  ステートメントおよびオブジェクトへのアクセスの試行をすべて監査し、\MSSQL\Data ディレクトリ ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の既定のインスタンスの場合)、または \MSSQL$*instancename*\Data ディレクトリ ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の名前付きインスタンスの場合) のファイルに記録します。 詳細については、「 [c2 audit mode サーバー構成オプション](c2-audit-mode-server-configuration-option.md)」を参照してください。  
   

@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3034ec95573d2f3c43ab28f2ad31e5ba41661cfc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62773368"
 ---
 # <a name="view-file-status"></a>ファイルの状態の表示
@@ -32,7 +32,7 @@ ms.locfileid: "62773368"
   
 -   バージョンが作成された日付。  
   
--   任意のバージョンに関連付けられているユーザーのコメント。  
+-   任意のバージョンに関連付けられているユーザーコメント。  
   
 -   ファイルを共有するプロジェクトへのパス  
   
@@ -40,12 +40,12 @@ ms.locfileid: "62773368"
   
 1.  ソリューション エクスプローラーで、項目を選択します。  
   
-2.  **ファイル**メニューで、**ソース管理**、 をクリック**SourceSafe プロパティ**します。  
+2.  [**ファイル**] メニューの [**ソース管理**] をポイントし、[ **SourceSafe のプロパティ**] をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [設定し、バージョン情報の取得](../../2014/database-engine/set-and-retrieve-version-information.md)   
+ [バージョン情報の設定と取得](../../2014/database-engine/set-and-retrieve-version-information.md)   
  [プロジェクト履歴の表示](../../2014/database-engine/view-project-history.md)   
- [ファイルを取得します。](../../2014/database-engine/retrieve-files.md)   
+ [ファイルの取得](../../2014/database-engine/retrieve-files.md)   
  [ファイルの比較](../../2014/database-engine/compare-files.md)  
   
   

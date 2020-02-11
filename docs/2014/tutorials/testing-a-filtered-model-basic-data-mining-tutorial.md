@@ -1,5 +1,5 @@
 ---
-title: テストのフィルター選択されたモデル (基本的なデータ マイニング チュートリアル) |Microsoft Docs
+title: フィルター選択されたモデルのテスト (基本的なデータマイニングチュートリアル) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -11,31 +11,32 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: baa4910b2849c4eb2dd04c6d0115c83683ee8bea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63044097"
 ---
 # <a name="testing-a-filtered-model-basic-data-mining-tutorial"></a>フィルター選択されたモデルのテスト (基本的なデータ マイニング チュートリアル)
-  確認しましたところ、`TM_Decision_Tree`最も正確なモデルは、のニーズに合うように、モデルのカスタマイズ、[!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]絞り込みメール配信キャンペーン。 具体的には、マーケティング部門では男性顧客と女性顧客に違いがあるかどうかを知りたいと考えています。 情報には、広告のために使用する雑誌を決定するためでしたやにダイレクト_メールで特集する製品です。  
+  `TM_Decision_Tree`モデルが最も正確であると判断したので、 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]絞り込みメール配信キャンペーンのニーズに合わせてモデルをカスタマイズします。 具体的には、マーケティング部門では男性顧客と女性顧客に違いがあるかどうかを知りたいと考えています。 この情報は、広告媒体として使用する雑誌やダイレクト メールで特集する製品を決定する際に役立つ可能性があります。  
   
 ## <a name="using-filters"></a>フィルターの使用  
  フィルター選択を行うと、データのサブセットに基づくモデルを簡単に作成できます。 フィルターはモデルにのみ適用され、基になるデータ ソースは変更しません。  
   
  このレッスンでは、性別に基づいてフィルター処理を実行するモデルを作成し、男性と女性それぞれの購買行動に最も大きな影響を及ぼす特性を予測します。  
   
- 最初のコピーを作成するが、`TM_Decision_Tree`モデル。  
+ まず、 `TM_Decision_Tree`モデルのコピーを作成します。  
   
 #### <a name="to-copy-the-decision-tree-model"></a>デシジョン ツリー モデルをコピーするには  
   
-1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]、ソリューション エクスプ ローラーで選択**BasicDataMining**します。  
+1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]の [ソリューションエクスプローラーで、[ **BasicDataMining**] を選択します。  
   
-2.  **[マイニング モデル]** タブをクリックします。  
+2.  
+  **[マイニング モデル]** タブをクリックします。  
   
-3.  右クリックして、`TM_Decision_Tree`モデル、および選択**新しいマイニング モデルです。**  
+3.  `TM_Decision_Tree`モデルを右クリックし、[**新しいマイニングモデル**] をクリックします。  
   
-4.  **モデル名**フィールドに「`TM_Decision_Tree_Male`します。  
+4.  [**モデル名**] フィールドに「 `TM_Decision_Tree_Male`」と入力します。  
   
 5.  **[OK]** をクリックします。  
   
@@ -43,101 +44,103 @@ ms.locfileid: "63044097"
   
 #### <a name="to-create-a-case-filter-on-a-mining-model"></a>マイニング モデルに対してケース フィルターを作成するには  
   
-1.  右クリックし、`TM_Decision_Tree_Male`マイニング モデルのショートカット メニューを開きます。  
+1.  `TM_Decision_Tree_Male`マイニングモデルを右クリックして、ショートカットメニューを開きます。  
   
-     または  
+     -- または --  
   
-     モデルを選択します。 **[マイニング モデル]** メニューの **[モデル フィルターの設定]** をクリックします。  
+     モデルを選択します。 
+  **[マイニング モデル]** メニューの **[モデル フィルターの設定]** をクリックします。  
   
-2.  **[モデル フィルター]** ダイアログ ボックスで、 **[マイニング構造列]** ボックスのグリッドの先頭行をクリックします。  
+2.  
+  **[モデル フィルター]** ダイアログ ボックスで、 **[マイニング構造列]** ボックスのグリッドの先頭行をクリックします。  
   
      ドロップダウン リストに、そのテーブルの列の名前のみが表示されます。  
   
-3.  マイニング構造列] ボックスで、[**性別**します。  
+3.  [マイニング構造列] ボックスで、[**性別**] を選択します。  
   
      テキスト ボックスの左側のアイコンが変化して、選択されたアイテムがテーブルであるか列であるかが示されます。  
   
-4.  をクリックして、**演算子**テキスト ボックスを一覧から等号 (=) 演算子を選択します。  
+4.  [**演算子**] ボックスをクリックし、一覧から等号 (=) 演算子を選択します。  
   
-5.  をクリックして、**値**テキスト ボックス、および種類**M**します。  
+5.  [**値**] テキストボックスをクリックし、「 **M**」と入力します。  
   
 6.  グリッドの次の行をクリックします。  
   
-7.  をクリックして**OK**を閉じる、**モデル フィルター**  ダイアログ ボックス。  
+7.  [ **OK]** をクリックして [**モデルフィルター** ] ダイアログボックスを閉じます。  
   
-     フィルターが表示されます、**プロパティ**ウィンドウ。 または、起動することができます、**モデル フィルター**ダイアログから、**プロパティ**ウィンドウ。  
+     フィルターが [**プロパティ**] ウィンドウに表示されます。 または、[**プロパティ**] ウィンドウから [**モデルフィルター** ] ダイアログを起動することもできます。  
   
-8.  上記の手順では、今回の名前、モデルを繰り返して`TM_Decision_Tree_Female`と種類**F**で、**値**テキスト ボックス。  
+8.  上記の手順を繰り返しますが、今度はモデル`TM_Decision_Tree_Female`の名前を指定し、[**値**] テキストボックスに「 **F** 」と入力します。  
   
 ## <a name="process-the-filtered-models"></a>フィルター選択されたモデルの処理  
- モデルを使用するには、事前にそのモデルを配置して処理する必要があります。 処理モデルの詳細については、次を参照してください。[メーリング対象となる構造の処理モデル&#40;Basic Data Mining Tutorial&#41;](../../2014/tutorials/processing-models-in-the-targeted-mailing-structure-basic-data-mining-tutorial.md)します。  
+ モデルを使用するには、事前にそのモデルを配置して処理する必要があります。 モデルの処理の詳細については、「 [&#40;基本的なデータマイニングチュートリアル&#41;](../../2014/tutorials/processing-models-in-the-targeted-mailing-structure-basic-data-mining-tutorial.md)」を参照してください。  
   
 #### <a name="to-process-the-filtered-model"></a>フィルター選択されたモデルを処理するには  
   
-1.  右クリックし、`TM_Decision_Tree_Male`モデルし、選択**および全モデルのマイニング構造の処理**s  
+1.  モデルを右クリック`TM_Decision_Tree_Male`し、[**マイニング構造の処理] と [すべてのモデル**] を選択します。  
   
-2.  クリックして**実行**新しいモデルを処理します。  
+2.  [**実行**] をクリックして、新しいモデルを処理します。  
   
-3.  処理が完了したら、クリックして**閉じる**両方の処理ウィンドウにします。  
+3.  処理が完了したら、両方の処理ウィンドウで [**閉じる**] をクリックします。  
   
-     2 つの新しいモデルに表示されるようになりましたがある、**マイニング モデル**タブ。  
+     [**マイニングモデル**] タブに2つの新しいモデルが表示されるようになりました。  
   
 ## <a name="evaluate-the-results"></a>結果の評価  
- 結果を表示してフィルター選択されたモデルの精度を評価する方法は、前の 3 つのモデルの場合とほぼ同じです。 詳細については、以下をご覧ください。  
+ 結果を表示してフィルター選択されたモデルの精度を評価する方法は、前の 3 つのモデルの場合とほぼ同じです。 詳細については、次を参照してください。  
   
- [デシジョン ツリー モデルの検証&#40;基本的なデータ マイニング チュートリアル&#41;](../../2014/tutorials/exploring-the-decision-tree-model-basic-data-mining-tutorial.md)  
+ [デシジョンツリーモデルの調査 &#40;基本的なデータマイニングチュートリアル&#41;](../../2014/tutorials/exploring-the-decision-tree-model-basic-data-mining-tutorial.md)  
   
- [リフト チャートを使用した精度テスト (基本的なデータ マイニング チュートリアル)](../../2014/tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
+ [リフトチャートを使用した精度のテスト &#40;基本的なデータマイニングチュートリアル&#41;](../../2014/tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
   
 #### <a name="to-explore-the-filtered-models"></a>フィルター選択されたモデルを調査するには  
   
-1.  選択、**マイニング モデル ビューアー** ] タブの [**データ マイニング デザイナー**します。  
+1.  **データマイニングデザイナー**で [**マイニングモデルビューアー** ] タブを選択します。  
   
-2.  マイニング モデル ボックスで選択`TM_Decision_Tree_Male`します。  
+2.  [マイニングモデル] ボックスで、 `TM_Decision_Tree_Male`を選択します。  
   
-3.  スライド**レベルを表示する**に`3`します。  
+3.  スライド**ショーレベル**を`3`にスライドします。  
   
-4.  変更、**バック グラウンド**値を`1`します。  
+4.  [**背景**値をに`1`変更します。  
   
-5.  カーソルを置くというラベルの付いたノード**すべて**自転車非購入者との自転車購入者の数を確認します。  
+5.  "**すべて**" というラベルが付いたノードの上にカーソルを置き、自転車購入者と非自転車購入者の数を確認します。  
   
-6.  手順 1 ~ 5 を繰り返します`TM_Decision_Tree_Female`します。  
+6.  に対して手順`TM_Decision_Tree_Female`1-5 を繰り返します。  
   
-7.  結果を検証、`TM_Decision_Tree`モデルが性別のフィルター処理します。 すべての自転車購入者と比較すると、男性の自転車購入者および女性の自転車購入者には、フィルター選択されていない自転車購入者と同じ特性もいくつかありますが、この 3 者には興味深い相違点もあります。 これは、有用な情報を[!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]を使用してマーケティング キャンペーンを開発できます。  
+7.  `TM_Decision_Tree`および性別に対してフィルター処理されたモデルの結果を調べます。 すべての自転車購入者と比較すると、男性の自転車購入者および女性の自転車購入者には、フィルター選択されていない自転車購入者と同じ特性もいくつかありますが、この 3 者には興味深い相違点もあります。 これは、マーケティングキャンペーン[!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]の開発に使用できる有用な情報です。  
   
 #### <a name="to-test-the-lift-of-the-filtered-models"></a>フィルター選択されたモデルのリフトをテストするには  
   
-1.  切り替えて、**マイニング精度チャート** タブで、データ マイニング デザイナーで[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]を選択し、**入力の選択**タブ。  
+1.  の[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]データマイニングデザイナーの [**マイニング精度チャート**] タブに切り替えて、[**入力の選択**] タブを選択します。  
   
-2.  **精度チャートに使用するデータセットの選択**グループ ボックスで、**マイニング構造のテスト_ケースを使用して、** します。  
+2.  [**精度チャートに使用するデータセットの選択**] グループボックスで、[**マイニング構造のテストケースを使用**する] を選択します。  
   
-3.  **入力の選択]** データ マイニング デザイナーのタブ [**リフト チャートに表示する予測可能なマイニング モデル列の選択**、チェック ボックスをオン**予測可能列を同期し、値**します。  
+3.  データマイニングデザイナーの [**入力の選択**] タブの [**リフトチャートに表示する予測可能なマイニングモデル列の選択**] で、[**予測列と値の同期**] のチェックボックスをオンにします。  
   
-4.  **予測可能列名**列、いることを確認**Bike Buyer**が各モデルの選択されています。  
+4.  [**予測可能列の名前**] 列で、各モデルに対して [**自転車購入**者] が選択されていることを確認します。  
   
-5.  **表示**列で、モデルの選択ごと。  
+5.  [**表示]** 列で、各モデルを選択します。  
   
-6.  **予測値**列で、`1`します。  
+6.  [**予測値**] 列でを`1`選択します。  
   
-7.  選択、**リフト チャート**リフト チャートを表示するタブ。  
+7.  [**リフトチャート**] タブを選択すると、リフトチャートが表示されます。  
   
      3 つすべてのデシジョン ツリー モデルでランダム推測モデルよりも大幅なリフトが見られ、クラスター モデルや Naive Bayes モデルより高精度であることがわかります。  
   
 ## <a name="related-tasks"></a>Related Tasks  
- フィルターの詳細については、次を参照してください。[マイニング モデルのフィルター選択&#40;Analysis Services - データ マイニング&#41;](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)します。  
+ フィルターの詳細については、「 [Analysis Services データマイニング&#41;&#40;マイニングモデルのフィルター ](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)」を参照してください。  
   
- 入れ子になったテーブルにフィルターを適用する方法の例は、次を参照してください。[中級者向けデータ マイニング チュートリアル&#40;Analysis Services - データ マイニング&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)します。  
+ 入れ子になったテーブルにフィルターを適用する方法の例については、「中級者向け[データマイニングチュートリアル &#40;Analysis Services データマイニング&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)」を参照してください。  
   
 ## <a name="previous-task-in-lesson"></a>このレッスンの前の作業  
- [リフト チャートを使用した精度テスト (基本的なデータ マイニング チュートリアル)](../../2014/tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
+ [リフトチャートを使用した精度のテスト &#40;基本的なデータマイニングチュートリアル&#41;](../../2014/tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
   
 ## <a name="next-lesson"></a>次のレッスン  
- [レッスン 6:予測の作成と操作&#40;基本的なデータ マイニング チュートリアル&#41;](../../2014/tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
+ [レッスン 6: 予測の作成と操作 &#40;基本的なデータマイニングチュートリアル&#41;](../../2014/tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>参照  
- [中級者向けデータ マイニング チュートリアル&#40;Analysis Services - データ マイニング&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)   
- [マイニング モデル タスクと操作方法](../../2014/analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
- [マイニング モデルからフィルターを削除します。](../../2014/analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)   
- [マイニング モデルのフィルター &#40;Analysis Services - データ マイニング&#41;](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)  
+ [中級者向けデータマイニングチュートリアル &#40;Analysis Services データマイニング&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)   
+ [マイニングモデルタスクと操作方法](../../2014/analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
+ [マイニングモデルからのフィルターの削除](../../2014/analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)   
+ [マイニングモデルのフィルター &#40;Analysis Services データマイニング&#41;](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)  
   
   

@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7dbb63c958b50d3fac51cd8686b8580c93dacdb2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62778962"
 ---
 # <a name="indexes-on-memory-optimized-tables"></a>メモリ最適化テーブルのインデックス
@@ -22,7 +22,7 @@ ms.locfileid: "62778962"
   
 -   [メモリ最適化テーブルでのインデックス使用のガイドライン](../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
--   [ハッシュ インデックス](hash-indexes.md)  
+-   [ハッシュインデックス](hash-indexes.md)  
   
 -   [ハッシュ インデックスの適切なバケット数の決定](../../2014/database-engine/determining-the-correct-bucket-count-for-hash-indexes.md)  
   

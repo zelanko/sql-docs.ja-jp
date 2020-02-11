@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8380b3ff1502088e0131b182149e90e31d2be42c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771653"
 ---
 # <a name="validate-dialog-box"></a>[検証] ダイアログ ボックス
@@ -46,7 +46,7 @@ ms.locfileid: "62771653"
 5.  プロジェクトまたはパッケージを右クリックし、 **[検証]** をクリックします。  
   
 ##  <a name="general"></a> [全般] ページのオプションの設定  
- **環境**  
+ **Environment**  
  プロジェクトまたはパッケージの検証に使用する環境を選択します。  
   
  **32 ビット ランタイム**  
@@ -60,7 +60,7 @@ ms.locfileid: "62771653"
  **パラメーター**  
  パラメーターの名前を一覧表示します。  
   
- **[値]**  
+ **Value**  
  パラメーター値を一覧表示します。  
   
  **[接続マネージャー]** タブには、プロジェクトまたはパッケージの検証に使用する接続マネージャーのプロパティ値が表示されます。  
@@ -76,7 +76,7 @@ ms.locfileid: "62771653"
  **プロパティ名**  
  接続マネージャーのプロパティの名前を一覧表示します。  
   
- **[値]**  
+ **Value**  
  接続マネージャーのプロパティに割り当てられた値を一覧表示します。  
   
   

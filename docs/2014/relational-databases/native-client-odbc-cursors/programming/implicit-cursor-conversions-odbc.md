@@ -1,5 +1,5 @@
 ---
-title: 暗黙のカーソル変換 (ODBC) |マイクロソフトのドキュメント
+title: 暗黙のカーソル変換 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,23 +15,23 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 300ce02538a59ef043424d866ad4ce49267fcfa4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62711570"
 ---
 # <a name="implicit-cursor-conversions-odbc"></a>暗黙のカーソル変換 (ODBC)
-  アプリケーションでのカーソルの種類を要求できます。 [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md) 、要求された型のサーバー カーソルでサポートされていない SQL ステートメントを実行します。 呼び出し**SQLExecute**または**SQLExecDirect** sql_success_with_info と**SQLGetDiagRec**を返します。  
+  アプリケーションでは、 [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md)を使用してカーソルの種類を要求した後、要求された種類のサーバーカーソルでサポートされていない SQL ステートメントを実行できます。 **Sqlexecute**または**SQLExecDirect**を呼び出すと SQL_SUCCESS_WITH_INFO が返され、 **SQLGetDiagRec**はを返します。  
   
 ```  
 szSqlState = "01S02", *pfNativeError = 0,  
 szErrorMsg="[Microsoft][SQL Server Native Client] Cursor type changed"  
 ```  
   
- カーソルの種類は、呼び出すことによって使用されているようになりましたが、アプリケーションが判断できます**SQLGetStmtOption** SQL_CURSOR_TYPE を設定します。 カーソルの種類の変換は、1 つのステートメントにのみ適用されます。 次**SQLExecDirect**または**SQLExecute**行われます元のステートメントのカーソル設定を使用します。  
+ アプリケーションでは、SQL_CURSOR_TYPE に設定された**SQLGetStmtOption**を呼び出すことによって現在使用されているカーソルの種類を特定できます。 カーソルの種類の変換は、1 つのステートメントにのみ適用されます。 次の**SQLExecDirect**または**sqlexecute**は、元のステートメントのカーソル設定を使用して実行されます。  
   
-## <a name="see-also"></a>関連項目  
- [カーソル プログラミングの詳細&#40;ODBC&#41;](cursor-programming-details-odbc.md)  
+## <a name="see-also"></a>参照  
+ [ODBC&#41;&#40;のカーソルプログラミングの詳細](cursor-programming-details-odbc.md)  
   
   

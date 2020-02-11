@@ -15,23 +15,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c96977ac3b2ed36ab9709d2af86a0d9f79e8eb73
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62653879"
 ---
 # <a name="modify-a-sql-server-agent-master-job"></a>SQL Server エージェントのマスター ジョブの変更
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント マスター ジョブを変更する方法については、次のトピックを参照してください。  
+  次のトピックでは、エージェントの[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]マスタージョブを変更する方法について説明します。  
   
  [Change the Scheduling Details for a SQL Server Agent Master Job](change-the-scheduling-details-for-a-sql-server-agent-master-job.md)  
   
- [SQL Server エージェントのマスター ジョブへのステップの追加](../object/add-steps-to-a-sql-server-agent-master-job.md)  
+ [Add Steps to a SQL Server Agent Master Job](../object/add-steps-to-a-sql-server-agent-master-job.md)  
   
  [Change Steps of a SQL Server Agent Master Job](change-steps-of-a-sql-server-agent-master-job.md)  
   
  [Remove Steps from a SQL Server Agent Master Job](remove-steps-from-a-sql-server-agent-master-job.md)  
   
- [SQL Server エージェントのマスター ジョブに関連付けられているターゲット サーバーの変更](modify-the-target-server-s-associated-with-a-sql-server-agent-master-job.md)  
+ [SQL Server エージェントマスタージョブに関連付けられている対象サーバー&#40;s&#41; を変更する](modify-the-target-server-s-associated-with-a-sql-server-agent-master-job.md)  
   
   

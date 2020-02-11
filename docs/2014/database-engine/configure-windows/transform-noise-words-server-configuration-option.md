@@ -17,18 +17,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6c5ddad15af74e45313d3e71b059fae36d166560
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62808693"
 ---
 # <a name="transform-noise-words-server-configuration-option"></a>transform noise words サーバー構成オプション
-  使用して、`transform noise words`サーバー構成オプションをエラー メッセージを抑制するかどうかノイズ ワード、つまり[ストップ ワード](../../relational-databases/search/full-text-search.md)、ゼロ行を返すフルテキスト クエリのブール演算が発生します。 フルテキスト クエリに使用されている CONTAINS 述語に、ノイズ ワードを含んだブール演算または NEAR 演算が存在する場合、このオプションを使用すると便利です。 次の表に、このオプションで使用可能な値を示します。  
+  ノイズワード`transform noise words` ([ストップワード](../../relational-databases/search/full-text-search.md)) が原因でフルテキストクエリのブール演算がゼロ行を返す場合は、サーバー構成オプションを使用してエラーメッセージを非表示にします。 フルテキスト クエリに使用されている CONTAINS 述語に、ノイズ ワードを含んだブール演算または NEAR 演算が存在する場合、このオプションを使用すると便利です。 次の表に、このオプションで使用可能な値を示します。  
   
-|値|Description|  
+|値|[説明]|  
 |-----------|-----------------|  
-|0|ノイズ ワード (ストップワード) は変換されません。 フルテキスト クエリにノイズ ワードが含まれている場合、クエリから返される行数は 0 件となり、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] から警告が生成されます。 これは既定の動作です。<br /><br /> 警告は実行時の警告であることに注意してください。 そのため、クエリ内のフルテキスト句が実行されていない場合、警告は発生しません。 ローカル クエリの場合、複数のフルテキスト クエリ句がある場合でも、発生する警告は 1 つだけです。 リモート クエリの場合、リンク サーバーがエラーを中継しない場合があるので、警告が発生しないことがあります。|  
+|0|ノイズ ワード (ストップワード) は変換されません。 フルテキスト クエリにノイズ ワードが含まれている場合、クエリから返される行数は 0 件となり、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] から警告が生成されます。 これは既定の動作です。<br /><br /> 警告は実行時の警告です。 そのため、クエリ内のフルテキスト句が実行されていない場合、警告は発生しません。 ローカル クエリの場合、複数のフルテキスト クエリ句がある場合でも、発生する警告は 1 つだけです。 リモート クエリの場合、リンク サーバーがエラーを中継しない場合があるので、警告が発生しないことがあります。|  
 |1|ノイズ ワード (ストップワード) の変換が行われます。 これらは無視されて、残りのクエリが評価されます。<br /><br /> 近接語句内にノイズ ワードが指定された場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって削除されます。 たとえば、ノイズ ワードである " `is` " は、 `CONTAINS(<column_name>, 'NEAR (hello,is,goodbye)')`から削除され、検索クエリは `CONTAINS(<column_name>, 'NEAR(hello,goodbye)')`に変換されます。 `CONTAINS(<column_name>, 'NEAR(hello,is)')` は、有効な検索用語が 1 つしか存在しないため、単純に `CONTAINS(<column_name>, hello)` に変換されます。|  
   
 ## <a name="effects-of-the-transform-noise-words-setting"></a>transform noise words 設定の影響  
@@ -67,7 +67,7 @@ RECONFIGURE;
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [サーバー構成オプション &#40;SQL Server&#41;](server-configuration-options-sql-server.md)   
  [CONTAINS &#40;Transact-SQL&#41;](/sql/t-sql/queries/contains-transact-sql)  
   

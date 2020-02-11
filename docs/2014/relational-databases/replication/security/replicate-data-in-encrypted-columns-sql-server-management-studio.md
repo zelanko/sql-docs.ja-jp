@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 97fd1ef113ec76a00394da298f1def188168a37d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62955845"
 ---
 # <a name="replicate-data-in-encrypted-columns-sql-server-management-studio"></a>暗号化された列のデータをレプリケートする (SQL Server Management Studio)
@@ -50,13 +50,16 @@ ms.locfileid: "62955845"
     > [!IMPORTANT]  
     >  KEY_SOURCE の値は、対象キーの再作成およびデータの暗号化解除に使用できる重要なデータです。 KEY_SOURCE は、常に安全に格納および送信する必要があります。  
   
-2.  [OPEN SYMMETRIC KEY](/sql/t-sql/statements/open-symmetric-key-transact-sql) を実行して新しいキーを開きます。  
+2.  
+  [OPEN SYMMETRIC KEY](/sql/t-sql/statements/open-symmetric-key-transact-sql) を実行して新しいキーを開きます。  
   
-3.  [EncryptByKey](/sql/t-sql/functions/encryptbykey-transact-sql) 関数を使用して、パブリッシャーで列データを暗号化します。  
+3.  
+  [EncryptByKey](/sql/t-sql/functions/encryptbykey-transact-sql) 関数を使用して、パブリッシャーで列データを暗号化します。  
   
-4.  [CLOSE SYMMETRIC KEY](/sql/t-sql/statements/close-symmetric-key-transact-sql) を実行してキーを閉じます。  
+4.  
+  [CLOSE SYMMETRIC KEY](/sql/t-sql/statements/close-symmetric-key-transact-sql) を実行してキーを閉じます。  
   
-5.  暗号化された列を含むテーブルをパブリッシュします。 詳細については、「 [Create a Publication](../publish/create-a-publication.md)」を参照してください。  
+5.  暗号化された列を含むテーブルをパブリッシュします。 詳しくは、「 [Create a Publication](../publish/create-a-publication.md)」をご覧ください。  
   
 6.  パブリケーションにサブスクライブします。 詳細については、「[プル サブスクリプションの作成](../create-a-pull-subscription.md)」または「[プッシュ サブスクリプションの作成](../create-a-push-subscription.md)」を参照してください。  
   
@@ -67,11 +70,14 @@ ms.locfileid: "62955845"
     > [!IMPORTANT]  
     >  KEY_SOURCE の値は、対象キーの再作成およびデータの暗号化解除に使用できる重要なデータです。 KEY_SOURCE は、常に安全に格納および送信する必要があります。  
   
-9. [OPEN SYMMETRIC KEY](/sql/t-sql/statements/open-symmetric-key-transact-sql) を実行して新しいキーを開きます。  
+9. 
+  [OPEN SYMMETRIC KEY](/sql/t-sql/statements/open-symmetric-key-transact-sql) を実行して新しいキーを開きます。  
   
-10. [DecryptByKey](/sql/t-sql/functions/decryptbykey-transact-sql) 関数を使用して、サブスクライバーでレプリケートされたデータを暗号解除します。  
+10. 
+  [DecryptByKey](/sql/t-sql/functions/decryptbykey-transact-sql) 関数を使用して、サブスクライバーでレプリケートされたデータを暗号解除します。  
   
-11. [CLOSE SYMMETRIC KEY](/sql/t-sql/statements/close-symmetric-key-transact-sql) を実行してキーを閉じます。  
+11. 
+  [CLOSE SYMMETRIC KEY](/sql/t-sql/statements/close-symmetric-key-transact-sql) を実行してキーを閉じます。  
   
 ## <a name="example"></a>例  
  この例では、対称キー、対称キーを保護するために使用される証明書、およびマスター キーを作成しています。 これらのキーは、パブリケーション データベースで作成されます。 これらは、 `SalesOrderHeader` テーブル内の暗号化された列 (EncryptedCreditCardApprovalCode) の作成に使用されます。 この列は、暗号化していない CreditCardApprovalCode 列の代わりに、AdvWorksSalesOrdersMerge パブリケーションでパブリッシュされます。 可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。 スクリプト ファイルに資格情報を格納する必要がある場合は、不正アクセスを防ぐために、ファイルを保護します。  

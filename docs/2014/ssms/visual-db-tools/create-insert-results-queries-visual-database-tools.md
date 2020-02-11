@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ebffc2246f0940c4643af2267086e727882a0633
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63031973"
 ---
 # <a name="create-insert-results-queries-visual-database-tools"></a>結果の挿入クエリの作成 (Visual Database Tools)
@@ -76,11 +76,11 @@ WHERE (pub_id = '0766')
     > [!NOTE]  
     >  クエリおよびビュー デザイナーは、更新できるテーブルおよびビューを事前に判別できません。 そのため、 **[挿入先のテーブル選択]** ダイアログ ボックスの **[テーブル名]** ボックスには、クエリを実行するデータ接続で使用できるテーブルおよびビューがすべて表示されます。行をコピーできないテーブルおよびビューも表示されます。  
   
-4.  テーブルまたはテーブル値オブジェクトを示す四角形で、内容をコピーする列の名前を選択します。 行全体をコピーする **\* (すべての列)** します。  
+4.  テーブルまたはテーブル値オブジェクトを示す四角形で、内容をコピーする列の名前を選択します。 行全体をコピーするには、[ ** \* (すべての列)**] を選択します。  
   
      選択した列が、抽出条件ペインの **[列]** 列に追加されます。  
   
-5.  抽出条件ペインの **[追加]** 列で、コピーする各列に対してコピー先テーブルの目的の列を選択します。 選択*tablename\* 。* 行全体をコピーする場合。 コピー先テーブルの列は、コピー元テーブルの列と同じデータ型か、互換性のあるデータ型である必要があります。  
+5.  抽出条件ペインの **[追加]** 列で、コピーする各列に対してコピー先テーブルの目的の列を選択します。 行全体をコピーする場合は、[tablename] を選択し*ます\* * 。 コピー先テーブルの列は、コピー元テーブルの列と同じデータ型か、互換性のあるデータ型である必要があります。  
   
 6.  特定の順序で行をコピーする場合は、並べ替え順序を指定します。 詳細については、「[クエリ結果の並べ替えおよびグループ化 (Visual Database Tools)](sort-and-group-query-results-visual-database-tools.md)」を参照してください。  
   
@@ -93,10 +93,10 @@ WHERE (pub_id = '0766')
   
 8.  集計情報をコピーする場合は、[グループ化] オプションを指定します。 詳細については、「[クエリ結果の要約 (Visual Database Tools)](summarize-query-results-visual-database-tools.md)」を参照してください。  
   
- 結果の挿入クエリを実行しても、[結果ペイン](results-pane-visual-database-tools.md)に結果は表示されません。 代わりに、コピーされた行数を示すメッセージが表示されます。  
+ 結果の挿入クエリを実行しても、 [結果ペイン](results-pane-visual-database-tools.md)に結果は表示されません。 代わりに、コピーされた行数を示すメッセージが表示されます。  
   
 ## <a name="see-also"></a>参照  
- [クエリの種類&#40;Visual Database Tools&#41;](types-of-queries-visual-database-tools.md)   
+ [Visual Database Tools &#40;クエリの種類&#41;](types-of-queries-visual-database-tools.md)   
  [クエリおよびビューのデザインの操作方法に関するトピック (Visual Database Tools)](design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
   

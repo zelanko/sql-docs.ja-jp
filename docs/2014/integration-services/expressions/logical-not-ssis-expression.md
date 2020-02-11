@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bfcd8337105766d91e097d35201d749c86ca840e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62769038"
 ---
 # <a name="-logical-not-ssis-expression"></a>! (論理 Not) (SSIS 式)
@@ -41,10 +41,10 @@ ms.locfileid: "62769038"
 ## <a name="result-types"></a>戻り値の型  
  DT_BOOL  
   
-## <a name="remarks"></a>コメント  
- 次の表は、! 指定します。  
+## <a name="remarks"></a>解説  
+ 次の表は、! 操作を完了するための次の手順について引き続き調査中です。  
   
-|元のブール式|! 演算子の適用後 演算子 (operator)|  
+|元のブール式|! 演算子の適用後 operator|  
 |---------------------------------|------------------------------------|  
 |TRUE|FALSE|  
 |NULL|NULL|  

@@ -33,21 +33,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3d75dee637a5579ca3f189e14333fbf9356623d0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917279"
 ---
 # <a name="database-files-and-filegroups"></a>データベース ファイルとファイル グループ
+  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各データベースには、データ ファイルとログ ファイルという少なくとも 2 つのオペレーティング システム ファイルがあります。 データ ファイルには、テーブル、インデックス、ストアド プロシージャ、およびビューなどのデータおよびオブジェクトが含まれます。 ログ ファイルには、データベース内のすべてのトランザクションを復旧するために必要な情報が含まれます。 データ ファイルは、割り当てと管理の目的でファイル グループにまとめることができます。  
   
 ## <a name="database-files"></a>データベース ファイル  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースには、次の表で示すように 3 種類のファイルがあります。  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースには、次の表で示すように 3 種類のファイルがあります。  
   
-|ファイル|説明|  
+|ファイル|[説明]|  
 |----------|-----------------|  
-|1 次式|プライマリ データ ファイルにはデータベースの起動情報が含まれており、データベース内の他のファイルを指し示します。 ユーザー データおよびオブジェクトは、このファイルまたはセカンダリ データ ファイルに格納できます。 各データベースには 1 つのプライマリ データ ファイルがあります。 プライマリ データ ファイルに推奨されるファイル名拡張子は .mdf です。|  
+|プライマリ|プライマリ データ ファイルにはデータベースの起動情報が含まれており、データベース内の他のファイルを指し示します。 ユーザー データおよびオブジェクトは、このファイルまたはセカンダリ データ ファイルに格納できます。 各データベースには 1 つのプライマリ データ ファイルがあります。 プライマリ データ ファイルに推奨されるファイル名拡張子は .mdf です。|  
 |セカンダリ|セカンダリ データ ファイルは省略可能です。また、ユーザー定義であり、ユーザー データが格納されます。 セカンダリ ファイルを使用すると、各ファイルを異なるディスク ドライブに配置することにより、複数のディスクにデータを分散できます。 また、データベースが 1 つの Windows ファイルの最大サイズを超えた場合には、セカンダリ データ ファイルを使用してデータベースを拡張できます。<br /><br /> セカンダリ データ ファイルに推奨されるファイル名拡張子は .ndf です。|  
 |トランザクション ログ|トランザクション ログ ファイルには、データベースの復旧に使用されるログ情報が格納されます。 1 つのデータベースにトランザクション ログ ファイルが少なくとも 1 つ必要です。 トランザクション ログに推奨されるファイル名拡張子は .ldf です。|  
   
@@ -62,9 +64,9 @@ ms.locfileid: "62917279"
   
  すべてのデータ ファイルは、次の表に一覧表示されているファイル グループに格納されます。  
   
-|[ファイル グループ]|説明|  
+|[ファイル グループ]|[説明]|  
 |---------------|-----------------|  
-|1 次式|プライマリ ファイルが含まれているファイル グループ。 すべてのシステム テーブルがプライマリ ファイル グループに割り当てられます。|  
+|プライマリ|プライマリ ファイルが含まれているファイル グループ。 すべてのシステム テーブルがプライマリ ファイル グループに割り当てられます。|  
 |ユーザー定義|ユーザーがデータベースを最初に作成したとき、または後で変更したときに、ユーザーが特別に作成したファイル グループ。|  
   
 ### <a name="default-filegroup"></a>既定のファイル グループ  
@@ -73,9 +75,9 @@ ms.locfileid: "62917279"
  PRIMARY ファイル グループは、ALTER DATABASE ステートメントを使用して変更しない限り、既定のファイル グループです。 システム オブジェクトとシステム テーブルは、変更後の既定のファイル グループではなく、引き続き PRIMARY ファイル グループに格納されます。  
   
 ## <a name="related-content"></a>関連コンテンツ  
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)  
+ [CREATE DATABASE &#40;SQL Server Transact-sql&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)  
   
- [ALTER DATABASE の File および Filegroup オプション &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options)  
+ [Transact-sql&#41;&#40;の ALTER DATABASE の File および Filegroup オプション](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options)  
   
  [データベースのデタッチとアタッチ &#40;SQL Server&#41;](database-detach-and-attach-sql-server.md)  
   

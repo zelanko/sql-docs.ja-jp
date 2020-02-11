@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: eaa81c35dc13c60a06196d1c61ab4dce9106f9b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62711122"
 ---
 # <a name="copy-items-in-a-solution"></a>ソリューションの項目のコピー
@@ -38,7 +38,7 @@ ms.locfileid: "62711122"
 >  接続を別のプロジェクトにコピーすることはできません。 接続が関連付けられたクエリを別のプロジェクトにコピーする場合、関連する接続はコピー先のプロジェクトにコピーされません。 宛先のプロジェクトで接続を手動で作成する必要があります。  
   
 ## <a name="see-also"></a>参照  
- [ソリューション エクスプ ローラー](solution-explorer.md)   
+ [ソリューション エクスプローラー](solution-explorer.md)   
  [ソリューションのアイテムの移動](move-items-in-a-solution.md)  
   
   

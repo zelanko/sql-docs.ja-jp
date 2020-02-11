@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0849d4e10df746dd98e271bb3eb35696cb20337b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774826"
 ---
 # <a name="remove-a-secondary-database-from-a-log-shipping-configuration-sql-server"></a>ログ配布構成からのセカンダリ データベースの削除 (SQL Server)
@@ -30,15 +30,15 @@ ms.locfileid: "62774826"
   
 -   **作業を開始する準備:**  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
--   **以下を使用してログ配布セカンダリ データベースを削除するには:**  
+-   **以下を使用してログ配布セカンダリデータベースを削除するには:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
--   [関連タスク](#RelatedTasks)  
+-   [Related Tasks](#RelatedTasks)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
@@ -53,15 +53,19 @@ ms.locfileid: "62774826"
   
 1.  現在のログ配布プライマリ サーバーである [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続し、そのインスタンスを展開します。  
   
-2.  **[データベース]** を展開し、ログ配布プライマリ データベースを右クリックして **[プロパティ]** をクリックします。  
+2.  
+  **[データベース]** を展開し、ログ配布プライマリ データベースを右クリックして **[プロパティ]** をクリックします。  
   
-3.  **[ページの選択]** の **[トランザクション ログの配布]** をクリックします。  
+3.  
+  **[ページの選択]** の **[トランザクション ログの配布]** をクリックします。  
   
-4.  **[セカンダリ サーバー インスタンスとデータベース]** で、削除するデータベースをクリックします。  
+4.  
+  **[セカンダリ サーバー インスタンスとデータベース]** で、削除するデータベースをクリックします。  
   
 5.  **[削除]** をクリックします。  
   
-6.  **[OK]** をクリックすると構成が更新されます。  
+6.  
+  **[OK]** をクリックすると構成が更新されます。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
@@ -78,22 +82,22 @@ ms.locfileid: "62774826"
   
 ##  <a name="RelatedTasks"></a> 関連タスク  
   
--   [SQL Server 2014 へのログ配布のアップグレード&#40;TRANSACT-SQL&#41;](upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
+-   [ログ配布を SQL Server 2014 &#40;Transact-sql&#41;にアップグレードする](upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
   
--   [ログ配布の構成 &#40;SQL Server&#41;](configure-log-shipping-sql-server.md)  
+-   [ログ配布 &#40;SQL Server&#41;を構成する](configure-log-shipping-sql-server.md)  
   
--   [ログ配布構成へのセカンダリ データベースの追加 &#40;SQL Server&#41;](add-a-secondary-database-to-a-log-shipping-configuration-sql-server.md)  
+-   [ログ配布構成 &#40;SQL Server にセカンダリデータベースを追加&#41;](add-a-secondary-database-to-a-log-shipping-configuration-sql-server.md)  
   
--   [ログ配布の削除 &#40;SQL Server&#41;](remove-log-shipping-sql-server.md)  
+-   [ログ配布 &#40;SQL Server の削除&#41;](remove-log-shipping-sql-server.md)  
   
--   [ログ配布レポートの表示 &#40;SQL Server Management Studio&#41;](view-the-log-shipping-report-sql-server-management-studio.md)  
+-   [ログ配布レポート &#40;SQL Server Management Studio を表示&#41;](view-the-log-shipping-report-sql-server-management-studio.md)  
   
--   [ログ配布の監視 &#40;Transact-SQL&#41;](monitor-log-shipping-transact-sql.md)  
+-   [Transact-sql&#41;&#40;ログ配布の監視](monitor-log-shipping-transact-sql.md)  
   
--   [ログ配布のセカンダリへのフェールオーバー &#40;SQL Server&#41;](fail-over-to-a-log-shipping-secondary-sql-server.md)  
+-   [ログ配布のセカンダリ &#40;SQL Server にフェールオーバーする&#41;](fail-over-to-a-log-shipping-secondary-sql-server.md)  
   
 ## <a name="see-also"></a>参照  
  [ログ配布について &#40;SQL Server&#41;](about-log-shipping-sql-server.md)   
- [ログ配布テーブルとストアド プロシージャ](log-shipping-tables-and-stored-procedures.md)  
+ [Log Shipping Tables and Stored Procedures](log-shipping-tables-and-stored-procedures.md)  
   
   

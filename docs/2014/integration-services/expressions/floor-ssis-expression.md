@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9addd13deb4dcf3c81a4975e0ed33783799ae2a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62769168"
 ---
 # <a name="floor-ssis-expression"></a>FLOOR (SSIS 式)
@@ -37,7 +37,7 @@ FLOOR(numeric_expression)
 ## <a name="result-types"></a>戻り値の型  
  引数の式の数値データ型です。 結果は、 *numeric_expression*と同じデータ型の、計算値の整数部分になります。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  引数が NULL の場合、FLOOR は NULL を返します。  
   
 ## <a name="expression-examples"></a>式の例  
@@ -47,7 +47,7 @@ FLOOR(numeric_expression)
 FLOOR(123.45)  
 ```  
   
- 123\.00 を返します  
+ 123.00 を返します  
   
 ```  
 FLOOR(-123.45)  
@@ -61,7 +61,7 @@ FLOOR(0.00)
   
  0\.00 を返します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [CEILING (SSIS 式)](ceiling-ssis-expression.md)   
  [関数 (SSIS 式)](functions-ssis-expression.md)  
   

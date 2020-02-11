@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: eb0d8dc1c8a60a3546c24e6d7bcd0faa600769bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771068"
 ---
 # <a name="load-data-by-using-the-odbc-destination"></a>ODBC 入力先を使用したデータ読み込み
@@ -34,9 +34,9 @@ ms.locfileid: "62771068"
   
 6.  データのアクセス方法を選択します。  
   
-    -   **[テーブル名 - バッチ]**: バッチ モードで動作する ODBC 入力先を構成するには、このオプションを選択します。 このオプションを選択すると、 **[バッチ サイズ]** を設定できます。  
+    -   **[テーブル名 - バッチ]** バッチモードで動作する ODBC 入力先を構成するには、このオプションを選択します。 このオプションを選択すると、 **[バッチ サイズ]** を設定できます。  
   
-    -   **[テーブル名 - 行ごと]**: 一度に 1 行ずつ、入力先テーブルに各行を挿入するように ODBC 入力先を構成するには、このオプションを選択します。 このオプションを選択すると、データは一度に 1 行ずつ、テーブルに読み込まれます。  
+    -   **[テーブル名 - 行ごと]** : 一度に 1 行ずつ、入力先に各行を挿入する ODBC 入力先を構成するには、このオプションを選択します。 このオプションを選択すると、データは一度に 1 行ずつ、テーブルに読み込まれます。  
   
 7.  **[テーブル名またはビュー名]** フィールドで、使用できるテーブルまたはビューを一覧のデータベースから選択するか、正規表現を入力してテーブルを指定します。この一覧には、最初の 1,000 テーブルのみが表示されます。 データベースに 1,000 を超えるテーブルがある場合、テーブル名の最初の文字を入力するか、名前の一部の入力にワイルドカード (*) を使用すると、目的のテーブルが表示されます。  
   
@@ -46,13 +46,13 @@ ms.locfileid: "62771068"
   
 10. エラー出力を構成するには、 **[エラー出力]** をクリックします。  
   
-11. [**OK**] をクリックします。  
+11. **[OK]** をクリックします。  
   
 12. 更新したパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
   
-## <a name="see-also"></a>関連項目  
- [ODBC 変換先エディター ([接続マネージャー] ページ)](../odbc-destination-editor-connection-manager-page.md)   
- [ODBC 変換先エディター ([マッピング] ページ)](../odbc-destination-editor-mappings-page.md)   
- [ODBC ソース エディター ([エラー出力] ページ)](../odbc-source-editor-error-output-page.md)  
+## <a name="see-also"></a>参照  
+ [ODBC 変換先エディター &#40;[接続マネージャー] ページ&#41;](../odbc-destination-editor-connection-manager-page.md)   
+ [[ODBC 変換先エディター] &#40;[マッピング] ページ&#41;](../odbc-destination-editor-mappings-page.md)   
+ [[ODBC ソース エディター] &#40;[エラー出力] ページ&#41;](../odbc-source-editor-error-output-page.md)  
   
   

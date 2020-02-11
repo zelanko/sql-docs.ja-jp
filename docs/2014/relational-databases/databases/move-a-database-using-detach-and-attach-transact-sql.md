@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 16fa57c35c2c40d307b73809c21ccfbedc54f705
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917095"
 ---
 # <a name="move-a-database-using-detach-and-attach-transact-sql"></a>デタッチとアタッチを使用してデータベースを移動する方法 (Transact-SQL)
@@ -46,12 +46,12 @@ ms.locfileid: "62917095"
     > [!NOTE]  
     >  ログ ファイルを指定せずにデータベースのインポートを試みると、アタッチ操作は元の場所でログ ファイルを検索します。 ログのコピーが依然として元の場所にある場合は、そのコピーがアタッチされます。 元のログ ファイルが使用されないようにするには、新しいログ ファイルのパスを指定するか、ログ ファイルの元のコピーを (新しい場所にコピーした後で) 削除します。  
   
-3.  コピーしたファイルをアタッチします。 詳細については、「 [Attach a Database](attach-a-database.md)」を参照してください。  
+3.  コピーしたファイルをアタッチします。 詳細については、「[データベースのアタッチ](attach-a-database.md)」をご覧ください。  
   
 ## <a name="example"></a>例  
- 次の例のコピーを作成する、[!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)]ステートメントに接続されている、サーバー インスタンスがアタッチされているクエリ エディター ウィンドウで実行されます。  
+ 次の例では、 [!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)]ステートメントのコピーを、がアタッチされているサーバーインスタンスに接続されているクエリエディターウィンドウで実行します。  
   
-1.  デタッチ、[!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)]ステートメント。  
+1.  ステートメントを[!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)]デタッチします。  
   
     ```  
     USE master;  
@@ -60,7 +60,7 @@ ms.locfileid: "62917095"
     GO  
     ```  
   
-2.  任意の方法で、データベース ファイル (AdventureWorks208R2_Data.mdf と AdventureWorks208R2_log) をC:\MySQLServer\AdventureWorks208R2_Data.mdf と C:\MySQLServer\AdventureWorks208R2_Log.ldf にそれぞれコピーします。  
+2.  任意の方法で、データベース ファイル (AdventureWorks208R2_Data.mdf と AdventureWorks208R2_log) を C:\MySQLServer\AdventureWorks208R2_Data.mdf と C:\MySQLServer\AdventureWorks208R2_Log.ldf にそれぞれコピーします。  
   
     > [!IMPORTANT]  
     >  実稼動データベースの場合は、データベースとトランザクション ログを別のディスクに配置します。  

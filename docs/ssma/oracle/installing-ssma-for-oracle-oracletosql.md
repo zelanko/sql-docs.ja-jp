@@ -1,5 +1,5 @@
 ---
-title: SSMA for Oracle (OracleToSQL) のインストール |Microsoft Docs
+title: SSMA for Oracle のインストール (OracleToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,28 +11,28 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 0b146c1585bdcddcf2d45c6b9efbd24f7e90d718
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68263016"
 ---
 # <a name="installing-ssma--for-oracle-oracletosql"></a>SSMA for Oracle のインストール (OracleToSQL)
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) for Oracle を使用する oracle からの移行を実行するクライアント アプリケーションから成る[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と Azure SQL DB します。 移行されたデータベースのデータの移行と、Oracle のシステム関数の使用をサポートする拡張機能パックも含まれています。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Migration Assistant (SSMA) for Oracle は、Oracle から[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]および AZURE SQL DB への移行を実行するために使用するクライアントアプリケーションで構成されています。 また、データの移行と、移行したデータベースでの Oracle システム関数の使用をサポートする拡張パックも含まれています。  
   
-クライアント アプリケーションは、元は、移行手順を実行するコンピューターにインストールします。 移行されたデータベースをホストするコンピューター上の拡張機能パック ファイルをインストールする必要があります。 そのコンピューターを実行する必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
+移行手順を実行するコンピューターにクライアントアプリケーションをインストールします。 移行されたデータベースをホストするコンピューターに拡張パックファイルをインストールする必要があります。 コンピューターが実行され[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ている必要があります。  
   
-## <a name="upgrading-ssma-for-oracle"></a>アップグレードの SSMA for Oracle  
-SSMA for Oracle の以降のバージョンにアップグレードする場合は、まず、クライアントとサーバー拡張機能パックをアンインストールしてから新しいバージョンをインストールください。  
+## <a name="upgrading-ssma-for-oracle"></a>SSMA for Oracle のアップグレード  
+SSMA for Oracle の新しいバージョンにアップグレードする場合は、最初にクライアントとサーバー拡張機能パックをアンインストールしてから、新しいバージョンをインストールする必要があります。  
   
-## <a name="contents"></a>目次  
+## <a name="contents"></a>内容  
   
-|トピック|説明|  
+|トピック|[説明]|  
 |---------|---------------|  
-|[SSMA for Oracle クライアントのインストール&#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-for-oracle-client-oracletosql.md)|SSMA クライアントをインストールするための情報と手順を提供します。|  
-|[SQL Server での SSMA コンポーネントのインストール&#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-components-on-sql-server-oracletosql.md)|インスタンスに拡張機能パックをインストールするための情報と手順を提供します。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。|  
-|[SSMA for Oracle コンポーネントの削除&#40;OracleToSQL&#41;](../../ssma/oracle/removing-ssma-for-oracle-components-oracletosql.md)|クライアントをアンインストールする方法についてのプログラムと拡張機能パックを提供します。|  
+|[SSMA for Oracle Client &#40;OracleToSQL&#41;のインストール](../../ssma/oracle/installing-ssma-for-oracle-client-oracletosql.md)|SSMA クライアントをインストールするための情報と手順について説明します。|  
+|[SQL Server &#40;OracleToSQL&#41;での SSMA コンポーネントのインストール](../../ssma/oracle/installing-ssma-components-on-sql-server-oracletosql.md)|の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスに拡張機能パックをインストールするための情報と手順について説明します。|  
+|[SSMA for Oracle コンポーネントの削除 &#40;OracleToSQL&#41;](../../ssma/oracle/removing-ssma-for-oracle-components-oracletosql.md)|クライアントプログラムと拡張機能パックをアンインストールする手順について説明します。|  
   
-## <a name="see-also"></a>関連項目  
-[SQL Server にデータベースを移行する Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
+## <a name="see-also"></a>参照  
+[Oracle データベースの SQL Server &#40;OracleToSQL&#41;への移行](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

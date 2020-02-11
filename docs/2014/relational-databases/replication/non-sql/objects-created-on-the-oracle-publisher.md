@@ -13,16 +13,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 99e1d1f0692e5460e2c7003b0ab8dca860deca4f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022145"
 ---
 # <a name="objects-created-on-the-oracle-publisher"></a>Oracle パブリッシャー上で作成されたオブジェクト
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] レプリケーションでは、変更の追跡と転送を行えるように、Oracle パブリッシャーにデータベース オブジェクトがインストールされます ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] によって Oracle パブリッシャーにバイナリ ファイルがインストールされることはありません)。 次の表に、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ディストリビューターで Oracle パブリッシャーがパブリッシャーとして認識されたときに、Oracle パブリッシャーで作成されるオブジェクトの一覧を示します。 オブジェクトの説明は、情報の提供のみを目的としています。 これらのオブジェクトは変更しないでください。  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]レプリケーションでは、変更の追跡と転送を可能にするために[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 、oracle パブリッシャーにデータベースオブジェクトがインストールされます (では、oracle パブリッシャーにバイナリファイルはインストールされません)。 次の表に、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ディストリビューターで Oracle パブリッシャーがパブリッシャーとして認識されたときに、Oracle パブリッシャーで作成されるオブジェクトの一覧を示します。 オブジェクトの説明は、情報の提供のみを目的としています。 これらのオブジェクトは変更しないでください。  
   
-|[オブジェクト名]|[オブジェクトの種類]|説明|  
+|オブジェクト名|オブジェクトの種類|[説明]|  
 |-----------------|-----------------|-----------------|  
 |HREPL_ArticleNlog_V|テーブル|パブリッシュされたテーブルが変更されたときに情報を格納するために使用する変更追跡テーブル。 変更追跡テーブルは、パブリッシュされたテーブルごとに作成されます。|  
 |HREPL_Changes|テーブル|トランザクション セットに割り当てられるのを待機している変更の数を判断するために、Xactset ジョブによって内部的に使用されるテーブル。 このジョブの詳細については、「[Oracle パブリッシャーのパフォーマンス チューニング](performance-tuning-for-oracle-publishers.md)」を参照してください。|  
@@ -40,7 +40,7 @@ ms.locfileid: "63022145"
 |HREPL_Stmt|Sequence|ステートメント ID を生成するために使われるシーケンス。|  
 |HREPL|パッケージとパッケージ本体|パブリッシャーで作成された、パブリッシャー サポート コードのパッケージ。|  
 |MSSQLSERVERDISTRIBUTOR|パブリック シノニム|HREPL_Distributor テーブル用のパブリック シノニム。 Oracle パブリッシャーを使用するようにディストリビューターを構成すると、このシノニムが既にデータベースにある場合に、削除されてから再作成されます。<br /><br /> パブリック シノニムと、CASCADE オプションで構成した Oracle レプリケーション ユーザーを削除すると、Oracle パブリッシャーからすべてのレプリケーション オブジェクトが削除されます。|  
-|HREPL_Len_I_J_K|関数|Oracle パブリッシング パッケージ コードの外で定義された関数。LONG 列の長さに対するクエリを実行するために使用します (パブリッシュされた LONG 列を含むテーブルに対してパラメーター化されたコマンドを生成する際に使用されます)。 関数は、LONG 列を含むパブリッシュされたテーブルごとに作成されます。|  
+|HREPL_Len_I_J_K|Function|Oracle パブリッシング パッケージ コードの外で定義された関数。LONG 列の長さに対するクエリを実行するために使用します (パブリッシュされた LONG 列を含むテーブルに対してパラメーター化されたコマンドを生成する際に使用されます)。 関数は、LONG 列を含むパブリッシュされたテーブルごとに作成されます。|  
 |HREPL_DropPublisher|手順|Oracle パブリッシング パッケージ コードの外で定義されたプロシージャで、Oracle パブリッシャーを削除するために使用します。|  
 |HREPL_ExecuteCommand|手順|Oracle パブリッシング パッケージ コードの外で定義されたプロシージャで、パブリッシャーでコマンドを実行するために使用します。|  
 |HREPL_ArticleN_Trigger_Row|トリガー|パブリッシュされたテーブルごとに生成されるトリガーで、行の変更を追跡するために使用します。|  
@@ -50,7 +50,7 @@ ms.locfileid: "63022145"
   
 ## <a name="see-also"></a>参照  
  [Oracle パブリッシャーの構成](configure-an-oracle-publisher.md)   
- [Oracle パブリッシングの用語](glossary-of-terms-for-oracle-publishing.md)   
+ [Oracle パブリッシングの用語集](glossary-of-terms-for-oracle-publishing.md)   
  [Oracle パブリッシングの概要](oracle-publishing-overview.md)  
   
   

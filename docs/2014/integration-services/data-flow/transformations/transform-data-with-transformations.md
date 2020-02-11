@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9fb4014688f1899e813d1df3e677caf9ad7bfbf1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770305"
 ---
 # <a name="transform-data-with-transformations"></a>変換を使用してデータを変換する
@@ -26,7 +26,7 @@ ms.locfileid: "62770305"
   
  次の図は、1 つの変換元、2 つの変換、および 1 つの変換先を持つ、簡単なデータ フローを示しています。  
   
- ![Data flow](../../media/mw-dts-08.gif "Data flow")  
+ ![データ フロー](../../media/mw-dts-08.gif "Data flow")  
   
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] の変換では、次の機能が用意されています。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "62770305"
 -   [データ フロー コンポーネントのプロパティを設定する](../set-the-properties-of-a-data-flow-component.md)  
   
 ## <a name="see-also"></a>参照  
- [[データ フロー タスク]](../../control-flow/data-flow-task.md)   
+ [データ フロー タスク](../../control-flow/data-flow-task.md)   
  [データ フロー](../data-flow.md)   
  [パスを使用してコンポーネントを連結する](../../connect-components-with-paths.md)   
  [データのエラー処理](../error-handling-in-data.md)   

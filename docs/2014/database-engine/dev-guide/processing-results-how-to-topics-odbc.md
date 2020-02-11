@@ -1,5 +1,5 @@
 ---
-title: 結果の操作方法に関するトピック (ODBC) の処理 |Microsoft Docs
+title: 結果の処理方法に関するトピック (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,22 +13,22 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: acd65a4dfc708c88dd30b6d2e15b189c0d340849
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62780797"
 ---
 # <a name="processing-results-how-to-topics-odbc"></a>結果を処理する方法に関するトピック (ODBC)
-  ODBC アプリケーションの結果の処理は、まず、結果セットの特性を確認し、いずれかを使用してプログラム変数にデータを取得する[SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)または[SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md).  
+  ODBC アプリケーションでの結果の処理では、最初に結果セットの特性を判断し、次に[SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)または[SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md)のいずれかを使用してプログラム変数にデータを取得します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
--   [結果セットの情報を取得&#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/processing-results-retrieve-result-set-information.md)  
+-   [ODBC&#41;&#40;結果セットの情報を取得します。](../../relational-databases/native-client-odbc-how-to/processing-results-retrieve-result-set-information.md)  
   
--   [結果を処理&#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/processing-results-process-results.md)  
+-   [ODBC&#41;&#40;の結果の処理](../../relational-databases/native-client-odbc-how-to/processing-results-process-results.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ODBC の使用法に関するトピック](../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  
   
   

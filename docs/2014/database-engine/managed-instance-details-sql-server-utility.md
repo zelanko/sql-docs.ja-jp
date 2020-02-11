@@ -1,5 +1,5 @@
 ---
-title: マネージ インスタンスの詳細 (SQL Server ユーティリティ) |Microsoft Docs
+title: Managed Instance の詳細 (SQL Server ユーティリティ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d2b01eceff763d554644065fdb5137695bd82f69
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774344"
 ---
 # <a name="managed-instance-details-sql-server-utility"></a>マネージド インスタンスの詳細 (SQL Server ユーティリティ)
@@ -26,7 +26,7 @@ ms.locfileid: "62774344"
   
  正常性状態アイコンにより、各 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスの状態が使用率カテゴリごとに示されます。  
   
--   緑のチェック - ![](../../2014/database-engine/media/well-utilized.gif "Well_utilized") - リソース使用率のポリシーに違反していない、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のマネージド インスタンスの数。 リソースは適正使用です。  
+-   緑のチェック - ![](../../2014/database-engine/media/well-utilized.gif "Well_utilized") - リソース使用率のポリシーに違反していない、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のマネージド インスタンスの数。 リソースは適正使用です。  
   
 -   緑の下向き矢印 - ![](../../2014/database-engine/media/utility-down-arrow.gif "Utility_down_arrow") - リソースは過小使用です。  
   
@@ -38,11 +38,11 @@ ms.locfileid: "62774344"
   
  既定では、次の列に、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の各マネージド インスタンスに関する正常性状態の情報が表示されます。  
   
--   [インスタンスの CPU] - この [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]インスタンスに割り当てられたプロセッサ使用率の正常性状態が表示されます。 このパラメーターの正常性状態は、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンス用に設定された CPU 使用率ポリシーと、変動の多いリソースの評価ポリシーの構成設定に従って決定されます。 詳細については、「[CPU 使用率のポリシーにおけるノイズの軽減 &#40;SQL Server ユーティリティ&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)」を参照してください。  
+-   [インスタンスの CPU] - この [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]インスタンスに割り当てられたプロセッサ使用率の正常性状態が表示されます。 このパラメーターの正常性状態は、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンス用に設定された CPU 使用率ポリシーと、変動の多いリソースの評価ポリシーの構成設定に従って決定されます。 詳細については、「 [CPU 使用ポリシーのノイズを減らす」 &#40;SQL Server ユーティリティ&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)」を参照してください。  
   
      この [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスのプロセッサ使用率の履歴を表示するか、またはポリシーの制限を表示または変更するには、**[CPU 使用率]** タブをクリックします。  
   
--   [コンピューターの CPU] - コンピューターのプロセッサ使用率の正常性状態が表示されます。 このパラメーターの正常性状態は、コンピューター用に設定された CPU 使用率ポリシーと、変動の多いリソースの評価ポリシーの構成設定に従って決定されます。 詳細については、「[CPU 使用率のポリシーにおけるノイズの軽減 &#40;SQL Server ユーティリティ&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)」を参照してください。  
+-   [コンピューターの CPU] - コンピューターのプロセッサ使用率の正常性状態が表示されます。 このパラメーターの正常性状態は、コンピューター用に設定された CPU 使用率ポリシーと、変動の多いリソースの評価ポリシーの構成設定に従って決定されます。 詳細については、「 [CPU 使用ポリシーのノイズを減らす」 &#40;SQL Server ユーティリティ&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)」を参照してください。  
   
      この [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスのプロセッサ使用率の履歴を表示するか、またはポリシーの制限を表示または変更するには、**[CPU 使用率]** タブをクリックします。  
   
@@ -68,17 +68,17 @@ ms.locfileid: "62774344"
   
 -   [SQL Server のエディション]  
   
--   クラスター化します。(True または False)  
+-   [クラスター化]\([True] または [False])  
   
 -   [バックアップ ディレクトリ]  
   
 -   [照合順序]  
   
--   大文字小文字を区別します。(True または False)  
+-   [大文字と小文字を区別]\([True] または [False])  
   
--   [言語]  
+-   Language:  
   
--   最終報告日時:この列は、UCP のローカル日付と時刻の datetime データ型を使用して表示されます。 詳細については、SQL Server オンライン ブックの「 [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) 」を参照してください。 ユーティリティ オブジェクト モデルを使用する場合は、SSMS で datetimeoffset データ型が使用されることに注意してください。 詳細については、SQL Server オンライン ブックの「[datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713)」を参照してください。  
+-   [最終報告日時] - この列には、UCP のローカル日時が datetime データ型で表示されます。 詳細については、SQL Server オンライン ブックの「 [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) 」を参照してください。 ユーティリティ オブジェクト モデルを使用する場合は、SSMS で datetimeoffset データ型が使用されることに注意してください。 詳細については、SQL Server オンライン ブックの「[datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713)」を参照してください。  
   
  [CPU 使用率] タブ  
  [CPU 使用率] タブには、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスとコンピューターの CPU 使用率を示す履歴データのグラフが並んで表示されます。  
@@ -96,7 +96,7 @@ ms.locfileid: "62774344"
 -   [1 年] : 1 か月間隔で表示されます。  
   
  [ストレージの使用率] タブ  
- [ストレージの使用率] タブには、記憶域使用率の詳細が表示されるツリー ビューがあります。 時間データとして、UCP のローカル日時が datetime データ型で表示されることに注意してください。 詳細については、SQL Server オンライン ブックの「 [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) 」を参照してください。 ユーティリティ オブジェクト モデルを使用する場合は、SSMS で datetimeoffset データ型が使用されることに注意してください。 詳細については、SQL Server オンライン ブックの「 [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) 」を参照してください。  
+ [ストレージの使用率] タブには、記憶域使用率の詳細が表示されるツリー ビューがあります。 時間データとして、UCP のローカル日時が datetime データ型で表示されることに注意してください。 詳細については、SQL Server オンライン ブックの「[datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071)」を参照してください。 ユーティリティ オブジェクト モデルを使用する場合は、SSMS で datetimeoffset データ型が使用されることに注意してください。 詳細については、SQL Server オンライン ブックの「[datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713)」を参照してください。  
   
  表示内容は、データベースまたはボリュームごとにグループ化できます。 データベース ツリー ビューを使用するには、 **[ファイルのグループ化]** の選択項目で **[データベース]** オプション ボタンをクリックします。 個々のデータベース ファイルの記憶域使用率の状態を表示するには、ツリー ビューでデータベース名の横にあるプラス記号をクリックします。 一覧表示されるデータベース ファイルには、リスト ビューで選択した [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のマネージド インスタンスに属する、すべてのシステム データベースとユーザー データベースが含まれます。  
   
@@ -149,7 +149,8 @@ ms.locfileid: "62774344"
  ポリシー違反の許容範囲変更の詳細については、「[CPU 使用率のポリシーにおけるノイズの軽減 &#40;SQL Server ユーティリティ&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)」を参照してください。  
   
  [プロパティの詳細] タブ  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスで一覧表示されるプロパティの詳細には、次のカテゴリがあります。  
+ 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスで一覧表示されるプロパティの詳細には、次のカテゴリがあります。  
   
 -   [プロセッサ名]  
   
@@ -165,20 +166,20 @@ ms.locfileid: "62774344"
   
 -   [SQL Server のエディション]  
   
--   クラスター化します。(True または False)  
+-   [クラスター化]\([True] または [False])  
   
 -   [バックアップ ディレクトリ]  
   
 -   [照合順序]  
   
--   大文字小文字を区別します。(True または False)  
+-   [大文字と小文字を区別]\([True] または [False])  
   
--   [言語]  
+-   Language:  
   
-## <a name="see-also"></a>関連項目  
- [配置済みのデータ層アプリケーションの詳細 &#40;SQL Server ユーティリティ&#41;](../../2014/database-engine/deployed-data-tier-application-details-sql-server-utility.md)   
- [ユーティリティ ダッシュ ボード&#40;SQL Server ユーティリティ&#41;](../../2014/database-engine/utility-dashboard-sql-server-utility.md)   
- [SQL Server ユーティリティでの SQL Server のインスタンスの監視](../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
+## <a name="see-also"></a>参照  
+ [配置されたデータ層アプリケーションの詳細 &#40;SQL Server ユーティリティ&#41;](../../2014/database-engine/deployed-data-tier-application-details-sql-server-utility.md)   
+ [ユーティリティダッシュボード &#40;SQL Server ユーティリティ&#41;](../../2014/database-engine/utility-dashboard-sql-server-utility.md)   
+ [SQL Server ユーティリティ内の SQL Server のインスタンスを監視する](../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
  [SQL Server ユーティリティの機能とタスク](../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
  [SQL Server ユーティリティのトラブルシューティング](../../2014/database-engine/troubleshoot-the-sql-server-utility.md)  
   

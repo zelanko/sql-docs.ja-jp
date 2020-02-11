@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ca584a81b8ba70073ee833d8033cd5f664747741
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62807473"
 ---
 # <a name="database-mirroring-and-log-shipping-sql-server"></a>データベース ミラーリングとログ配布 (SQL Server)
@@ -61,7 +61,8 @@ ms.locfileid: "62807473"
  ローカル ログ配布モニターを使用している場合、このシナリオのために特別に考慮が必要な事項はありません。 このシナリオでリモート監視インスタンスを使用する際の詳細については、このトピックの「リモート監視インスタンスでのデータベース ミラーリングの影響」を参照してください。  
   
 ## <a name="failing-over-from-the-principal-to-the-mirror-database"></a>プリンシパルからミラー データベースへのフェールオーバー  
- 次の図に、自動フェールオーバーを伴う高い安全性モードでミラーリングを実行する際の、ログ配布とデータベース ミラーリングの連係動作を示します。 **Server_A** はミラーリング用のプリンシパル サーバーであり、ログ配布用のプライマリ サーバーでもあります。 **Server_B** はミラー サーバーであり、プライマリ サーバーとして構成されています。現在はアクティブになっていません。 **Server_C** および **Server_D** はログ配布のセカンダリ サーバーです。 ログ配布セッションの可用性を最大にするため、バックアップの場所は独立したホスト コンピューターの共有ディレクトリに作成します。  
+ 次の図に、自動フェールオーバーを伴う高い安全性モードでミラーリングを実行する際の、ログ配布とデータベース ミラーリングの連係動作を示します。 
+  **Server_A** はミラーリング用のプリンシパル サーバーであり、ログ配布用のプライマリ サーバーでもあります。 **Server_B**はミラーサーバーであり、現在非アクティブになっているプライマリサーバーとして構成されています。 **Server_C**と**Server_D**は、ログ配布のセカンダリサーバーです。 ログ配布セッションの可用性を最大にするため、バックアップの場所は独立したホスト コンピューターの共有ディレクトリに作成します。  
   
  ![ログ配布とデータベース ミラーリング](../media/logshipping-and-dbm-automatic-failover.gif "ログ配布とデータベース ミラーリング")  
   
@@ -75,7 +76,7 @@ ms.locfileid: "62807473"
 ## <a name="setting-up-mirroring-and-log-shipping-together"></a>ミラーリングとログ配布を合わせた設定  
  データベース ミラーリングとログ配布を合わせて設定するには、次の手順を実行する必要があります。  
   
-1.  NORECOVERY が設定されたプリンシパル/プライマリ データベースのバックアップを別のサーバー インスタンスに復元します。このバックアップは、後でデータベース ミラーリングのプリンシパル/プライマリ データベースに対するミラー データベースとして使用します。 詳細については、「[ミラーリングのためのミラー データベースの準備 &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)」を参照してください。  
+1.  NORECOVERY が設定されたプリンシパル/プライマリ データベースのバックアップを別のサーバー インスタンスに復元します。このバックアップは、後でデータベース ミラーリングのプリンシパル/プライマリ データベースに対するミラー データベースとして使用します。 詳細については、「 [ミラーリングのためのミラー データベースの準備 &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)のすべてのエディションで使用できるわけではありません。  
   
 2.  データベース ミラーリングをセットアップする。 詳細については、「[Windows 認証を使用してデータベース ミラーリング セッションを確立する &#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md)」または「[データベース ミラーリングの設定 &#40;SQL Server&#41;](setting-up-database-mirroring-sql-server.md)」を参照してください。  
   
@@ -91,9 +92,9 @@ ms.locfileid: "62807473"
   
      手動フェールオーバーを実行するには、次の手順を実行します。  
   
-    -   [データベース ミラーリング セッションを手動でフェールオーバーする方法 &#40;SQL Server Management Studio&#41;](manually-fail-over-a-database-mirroring-session-sql-server-management-studio.md)  
+    -   [データベースミラーリングセッションを手動でフェールオーバーする &#40;SQL Server Management Studio&#41;](manually-fail-over-a-database-mirroring-session-sql-server-management-studio.md)  
   
-    -   [データベース ミラーリング セッションを手動でフェールオーバーする方法 &#40;Transact-SQL&#41;](manually-fail-over-a-database-mirroring-session-transact-sql.md)  
+    -   [Transact-sql&#41;&#40;データベースミラーリングセッションを手動でフェールオーバーする](manually-fail-over-a-database-mirroring-session-transact-sql.md)  
   
 6.  プライマリ データベースである新しいプリンシパル (以前のミラー) にログ配布を設定します。  
   
@@ -102,7 +103,8 @@ ms.locfileid: "62807473"
   
      手順 4. で使用したものと同一のバックアップ共有を使用する必要があります。  
   
-     **の** [トランザクション ログの配布] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] インターフェイスで、ログ配布構成ごとにサポートされるプライマリ データベースは 1 つのみです。 このため、新しいプリンシパルをプライマリとして設定するにはストアド プロシージャを使用する必要があります。  
+     
+  **の** [トランザクション ログの配布] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] インターフェイスで、ログ配布構成ごとにサポートされるプライマリ データベースは 1 つのみです。 このため、新しいプリンシパルをプライマリとして設定するにはストアド プロシージャを使用する必要があります。  
   
 7.  元のプリンシパルにフェールバックするには、別の手動フェールオーバーを実行します。  
   

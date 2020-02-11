@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3c643ad9a84c6afe5b6ff08fd6716753ef42f79e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62807269"
 ---
 # <a name="database-mirroring-and-database-snapshots-sql-server"></a>データベース ミラーリングとデータベース スナップショット (SQL Server)
@@ -41,7 +41,8 @@ ms.locfileid: "62807269"
   
  データベース ミラーリング セッションのデータベースが [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]であるとします。 この例では、 `AdventureWorks` ドライブにある `F` データベースのミラー コピーでデータベース スナップショットを 3 つ作成します。 これらのスナップショットには、おおよその作成時間を識別するために `AdventureWorks_0600`、 `AdventureWorks_1200`、および `AdventureWorks_1800` という名前が付けられています。  
   
-1.  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]のミラーで最初のデータベース スナップショットを作成します。  
+1.  
+  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]のミラーで最初のデータベース スナップショットを作成します。  
   
     ```  
     CREATE DATABASE AdventureWorks_0600  
@@ -49,7 +50,8 @@ ms.locfileid: "62807269"
        AS SNAPSHOT OF AdventureWorks2012  
     ```  
   
-2.  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]のミラーで 2 番目のデータベース スナップショットを作成します。 まだ `AdventureWorks_0600` を使用している場合は、このスナップショットを引き続き使用できます。  
+2.  
+  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]のミラーで 2 番目のデータベース スナップショットを作成します。 まだ `AdventureWorks_0600` を使用している場合は、このスナップショットを引き続き使用できます。  
   
     ```  
     CREATE DATABASE AdventureWorks_1200  
@@ -59,7 +61,8 @@ ms.locfileid: "62807269"
   
      この時点で、新しいクライアント接続をプログラムによって最新のスナップショットに出力できます。  
   
-3.  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]のミラーで 3 番目のスナップショットを作成します。 まだ `AdventureWorks_0600` または `AdventureWorks_1200` を使用している場合は、このスナップショットを引き続き使用できます。  
+3.  
+  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]のミラーで 3 番目のスナップショットを作成します。 まだ `AdventureWorks_0600` または `AdventureWorks_1200` を使用している場合は、このスナップショットを引き続き使用できます。  
   
     ```  
     CREATE DATABASE AdventureWorks_1800  
@@ -71,15 +74,15 @@ ms.locfileid: "62807269"
   
 ##  <a name="RelatedTasks"></a> 関連タスク  
   
--   [データベース スナップショットの作成 &#40;Transact-SQL&#41;](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md)  
+-   [Transact-sql&#41;&#40;データベーススナップショットを作成する](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md)  
   
--   [データベース スナップショットの表示 &#40;SQL Server&#41;](../../relational-databases/databases/view-a-database-snapshot-sql-server.md)  
+-   [データベーススナップショット &#40;SQL Server の表示&#41;](../../relational-databases/databases/view-a-database-snapshot-sql-server.md)  
   
--   [データベース スナップショットの削除 &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
+-   [Transact-sql&#41;&#40;データベーススナップショットを削除する](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
 
   
-## <a name="see-also"></a>関連項目  
- [Database Snapshots &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)   
+## <a name="see-also"></a>参照  
+ [データベーススナップショット &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)   
  [データベース ミラーリング セッションへのクライアントの接続 &#40;SQL Server&#41;](connect-clients-to-a-database-mirroring-session-sql-server.md)  
   
   

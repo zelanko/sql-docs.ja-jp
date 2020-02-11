@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 998d42d262e3f980b4b35ed82b26904399d6b33c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62809383"
 ---
 # <a name="server-properties-advanced-page"></a>[サーバーのプロパティ] ([詳細設定] ページ)
@@ -76,7 +76,7 @@ ms.locfileid: "62809383"
   
  フルテキスト カタログが使用できない場合は、関連付けられたフルテキスト インデックスが再構築されます。 このオプションは [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] データベースでのみ使用できます。  
   
- **Rebuild**  
+ **リビルド**  
  フルテキスト カタログは、導入された新しい拡張機能であるワード ブレーカーを使用して再構築されます。 インデックスの再構築には時間がかかり、アップグレード後にかなりの量の CPU とメモリが必要になる可能性があります。  
   
  **リセット**  
@@ -112,7 +112,7 @@ ms.locfileid: "62809383"
   
  設定を変更すると即座に反映されます。  
   
-## <a name="parallelism"></a>[並列処理]  
+## <a name="parallelism"></a>並行処理:  
  **[並列処理のコストしきい値]**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がクエリの並列プランを作成して実行する場合のしきい値を指定します。 コストとは、特定のハードウェア構成で、直列プランを実行するための予想所要時間を秒単位で表したものです。 symmetric multiprocessors の場合のみ設定してください。 詳細については、「 [cost threshold for parallelism サーバー構成オプションの構成](configure-the-cost-threshold-for-parallelism-server-configuration-option.md)」を参照してください。  
   

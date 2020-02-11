@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f53a0cdb7ccc30afb425197d12dad2b9ca5fa345
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62676307"
 ---
 # <a name="create-make-table-queries-visual-database-tools"></a>テーブルの作成クエリの作成 (Visual Database Tools)
@@ -59,13 +59,15 @@ WHERE country = 'UK'
   
 1.  ダイアグラム ペインにコピー元テーブルを追加します。  
   
-2.  **[クエリ デザイナー]** メニューの **[クエリ タイプの変更]** をポイントし、 **[テーブルの作成]** をクリックします。  
+2.  
+  **[クエリ デザイナー]** メニューの **[クエリ タイプの変更]** をポイントし、 **[テーブルの作成]** をクリックします。  
   
-3.  **[テーブルの作成]** ダイアログ ボックスで、コピー先テーブルの名前を入力します。 クエリおよびビュー デザイナーでは、名前が既に使用されているかどうかや、テーブルを作成する権限があるかどうかなどの確認は行われません。  
+3.  
+  **[テーブルの作成]** ダイアログ ボックスで、コピー先テーブルの名前を入力します。 クエリおよびビュー デザイナーでは、名前が既に使用されているかどうかや、テーブルを作成する権限があるかどうかなどの確認は行われません。  
   
      他のデータベースにコピー先テーブルを作成するには、目的のデータベース名、所有者 (必要な場合)、およびテーブル名を含む完全なテーブル名を指定します。  
   
-4.  コピーする列を指定するために、クエリに列を追加します。 詳しくは、「[クエリに列を追加する方法 (Visual Database Tools)](visual-database-tools.md)」をご覧ください。 クエリに追加した列だけがコピーされます。 行全体をコピーする **\* (すべての列)** します。  
+4.  コピーする列を指定するために、クエリに列を追加します。 詳しくは、「[クエリに列を追加する方法 (Visual Database Tools)](visual-database-tools.md)」をご覧ください。 クエリに追加した列だけがコピーされます。 行全体をコピーするには、[ ** \* (すべての列)**] を選択します。  
   
      クエリおよびビュー デザイナーにより、選択した列が、抽出条件ペインの **[列]** 列に追加されます。  
   
@@ -83,7 +85,7 @@ WHERE country = 'UK'
  テーブルの作成クエリを実行しても、 [結果ペイン](results-pane-visual-database-tools.md)には結果が表示されません。 代わりに、コピーされた行数を示すメッセージが表示されます。  
   
 ## <a name="see-also"></a>参照  
- [クエリおよびビューの操作方法に関するトピックを設計&#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
+ [クエリおよびビューのデザイン方法に関するトピック &#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
  [クエリの種類 (Visual Database Tools)](types-of-queries-visual-database-tools.md)  
   
   

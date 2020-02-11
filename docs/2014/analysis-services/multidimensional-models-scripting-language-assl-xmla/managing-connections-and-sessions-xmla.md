@@ -1,5 +1,5 @@
 ---
-title: 接続およびセッション (XMLA) の管理 |Microsoft Docs
+title: 接続とセッションの管理 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,16 +18,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3bbd5ef006674a61830bf07de31f73c3915b0d4e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62701994"
 ---
 # <a name="managing-connections-and-sessions-xmla"></a>接続およびセッションの管理 (XMLA)
-  *状態保持*は id およびコンテキストをメソッド呼び出しの間でのクライアントのサーバーを保持する条件です。 *状態を保持しない*は、サーバーは覚えていない id とクライアントのコンテキスト メソッドの呼び出しが完了したら条件です。  
+  *状態保持*は、サーバーがメソッド呼び出し間でクライアントの id とコンテキストを保持する条件です。 *状態*は、メソッドの呼び出しが完了した後に、サーバーがクライアントの id とコンテキストを記憶しない条件です。  
   
- XML for Analysis (XMLA) のサポート状態保持を提供する*セッション*一連のステートメントをまとめて実行できるようにします。 そのような一連のステートメントの例としては、後続のクエリで使用するための計算されるメンバーの作成があります。  
+ 状態保持を提供するために、XML for Analysis (XMLA) は、一連のステートメントをまとめて実行できる*セッション*をサポートしています。 そのような一連のステートメントの例としては、後続のクエリで使用するための計算されるメンバーの作成があります。  
   
  一般に、XMLA のセッションは、OLE DB 2.6 の仕様で概説されている以下の動作に従います。  
   
@@ -35,13 +35,13 @@ ms.locfileid: "62701994"
   
 -   複数のコマンドを単一のセッションのコンテキストで実行できます。  
   
--   XMLA のコンテキストにおけるトランザクションのサポートはプロバイダー固有のコマンドで送信される、 [Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute)メソッド。  
+-   XMLA コンテキストでのトランザクションのサポートは、 [Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute)メソッドと共に送信されるプロバイダー固有のコマンドを介して行われます。  
   
  XMLA は、Distributed Authoring and Versioning (DAV) プロトコルが疎結合環境でロックを実装するために使用しているアプローチと同様の手法で、Web 環境のセッションをサポートする方法を定義します。 この実装は、プロバイダーがさまざまな理由 (たとえば、タイムアウトや接続エラーなど) でセッションの有効期限を終了させることができるという点で、DAV と類似しています。 セッションがサポートされる場合、Web サービスは、中断されて再開が必要なコマンドのセットを認識し、処理する準備を整えている必要があります。  
   
  World Wide Web Consortium (W3C) による Simple Object Access Protocol (SOAP) 仕様は、新しいプロトコルを作成するには SOAP メッセージの先頭に SOAP ヘッダーを使用することを推奨しています。 次の表は、XMLA がセッションの開始、維持、終了のために定義する SOAP ヘッダー要素と属性の一覧を示しています。  
   
-|SOAP ヘッダー|説明|  
+|SOAP ヘッダー|[説明]|  
 |-----------------|-----------------|  
 |BeginSession|プロバイダーに新しいセッションの作成を要求します。 プロバイダーは、新しいセッションを作成し、SOAP 応答の Session ヘッダーの一部としてセッション ID を返すことによって応答します。|  
 |SessionId|値域には、セッションの残りの部分での各メソッド呼び出しで使用する必要のあるセッション ID が含まれます。 プロバイダーは SOAP 応答の中でこのタグを送信します。クライアントも、Session ヘッダー要素ごとに、この属性を送信する必要があります。|  
@@ -72,7 +72,7 @@ ms.locfileid: "62701994"
     </SOAP-ENV:Envelope>  
     ```  
   
-2.  プロバイダーからの SOAP 応答メッセージは XMLA ヘッダー タグを使用しての戻り値のヘッダー領域で、セッション ID を含む\<SessionId >。  
+2.  プロバイダーからの SOAP 応答メッセージには、XMLA ヘッダータグ\<SessionId> を使用して、返されるヘッダー領域にセッション ID が含まれています。  
   
     ```  
     <SOAP-ENV:Header>  
@@ -93,7 +93,7 @@ ms.locfileid: "62701994"
     </SOAP-ENV:Header>  
     ```  
   
-4.  セッションが完了すると、 \<EndSession > タグを使用すると、関連するセッション ID 値を格納します。  
+4.  セッションが完了すると、関連\<するセッション ID 値を含む endsession> タグが使用されます。  
   
     ```  
     <SOAP-ENV:Header>  

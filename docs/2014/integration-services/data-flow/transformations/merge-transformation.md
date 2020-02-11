@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 741ea39f6a60d7c9f52fb901a1b038a352e948b5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770421"
 ---
 # <a name="merge-transformation"></a>マージ変換
@@ -56,7 +56,8 @@ ms.locfileid: "62770421"
 ## <a name="configuration-of-the-merge-transformation"></a>マージ変換の構成  
  プロパティを設定するには [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
- **[マージ変換エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、「 [マージ変換エディター](../../merge-transformation-editor.md)」を参照してください。  
+ 
+  **[マージ変換エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、「 [マージ変換エディター](../../merge-transformation-editor.md)」を参照してください。  
   
  プログラムによって設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
@@ -71,10 +72,10 @@ ms.locfileid: "62770421"
   
 -   [マージ変換およびマージ結合変換用にデータを並べ替える](sort-data-for-the-merge-and-merge-join-transformations.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [マージ結合変換](merge-join-transformation.md)   
  [全体結合変換](union-all-transformation.md)   
- [データ フロー](../data-flow.md)   
+ [データフロー](../data-flow.md)   
  [Integration Services の変換](integration-services-transformations.md)  
   
   

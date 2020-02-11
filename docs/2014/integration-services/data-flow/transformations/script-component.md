@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d9a601a710531aa6905f35a2fe5ca7f02a9177f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770681"
 ---
 # <a name="script-component"></a>スクリプト コンポーネント
@@ -31,7 +31,8 @@ ms.locfileid: "62770681"
   
 -   既存の .NET アセンブリのビジネス ルールにアクセスします。 たとえば、スクリプトによって `Income` 列で有効な値の範囲を指定するビジネス ルールを適用できます。  
   
--   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 式の文法で定められた関数や演算子以外のカスタム式とカスタム関数を使用します。 たとえば、LUHN 式を使用して、クレジット カード番号を検証します。  
+-   
+  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 式の文法で定められた関数や演算子以外のカスタム式とカスタム関数を使用します。 たとえば、LUHN 式を使用して、クレジット カード番号を検証します。  
   
 -   列データを検証し、無効なデータを含むレコードをスキップします。 たとえば、スクリプトを使用すると、郵送料が妥当かどうかを査定して、極端に高い場合や極端に安い場合にレコードをスキップできます。  
   
@@ -53,10 +54,12 @@ ms.locfileid: "62770681"
  スクリプト コンポーネントがパッケージにとって適切な選択である場合、入力と出力を構成し、コンポーネントが使用するスクリプトを開発して、コンポーネント自体を構成する必要があります。  
   
 ## <a name="understanding-the-script-component-modes"></a>スクリプト コンポーネントのモードについて  
- [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーでは、スクリプト コンポーネントにメタデータ デザイン モードとコード デザイン モードの 2 つのモードがあります。 メタデータ デザイン モードでは、スクリプト コンポーネントの入力と出力を追加および変更できますが、コードは記述できません。 すべての入力と出力を構成した後に、コード デザイン モードに切り替え、スクリプトを記述します。 スクリプト コンポーネントは、入力と出力のメタデータから、基本コードを自動的に生成します。 スクリプト コンポーネントで基本コードを生成した後にメタデータを変更すると、更新された基本コードと互換性がない可能性があるため、記述したコードをコンパイルできないことがあります。  
+ 
+  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーでは、スクリプト コンポーネントにメタデータ デザイン モードとコード デザイン モードの 2 つのモードがあります。 メタデータ デザイン モードでは、スクリプト コンポーネントの入力と出力を追加および変更できますが、コードは記述できません。 すべての入力と出力を構成した後に、コード デザイン モードに切り替え、スクリプトを記述します。 スクリプト コンポーネントは、入力と出力のメタデータから、基本コードを自動的に生成します。 スクリプト コンポーネントで基本コードを生成した後にメタデータを変更すると、更新された基本コードと互換性がない可能性があるため、記述したコードをコンパイルできないことがあります。  
   
 ## <a name="writing-the-script-that-the-component-uses"></a>コンポーネントが使用するスクリプトの記述  
- スクリプト コンポーネントでは、スクリプトを記述する環境として [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) を使用します。 **スクリプト変換エディター**から VSTA にアクセスします。 詳細については、「 [スクリプト変換エディター ([スクリプト] ページ)](../../script-transformation-editor-script-page.md)」を参照してください。  
+ スクリプトコンポーネントでは[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 、スクリプトを記述する環境として Tools for Applications (VSTA) を使用します。 
+  **スクリプト変換エディター**から VSTA にアクセスします。 詳細については、「 [スクリプト変換エディター ([スクリプト] ページ)](../../script-transformation-editor-script-page.md)」を参照してください。  
   
  スクリプト コンポーネントでは、コンポーネントのメタデータを表す、ScriptMain という名前の自動生成クラスが含まれる VSTA プロジェクトが用意されています。 たとえば、スクリプト コンポーネントを 3 つの出力を持つ変換として使用する場合、ScriptMain には各出力のメソッドが含まれます。 ScriptMain は、スクリプトに対するエントリ ポイントです。  
   
@@ -75,7 +78,8 @@ ms.locfileid: "62770681"
 -   参照する入力列を選択します。  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーを使用する場合、入力は 1 つのみ構成できます。  
+    >  
+  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーを使用する場合、入力は 1 つのみ構成できます。  
   
 -   コンポーネントが実行するスクリプトを指定します。  
   
@@ -88,24 +92,27 @@ ms.locfileid: "62770681"
  プロパティを設定するには [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
 ### <a name="configuring-the-script-component-in-the-designer"></a>デザイナーでのスクリプト コンポーネントの構成  
- **[スクリプト変換エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
+ 
+  **[スクリプト変換エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [スクリプト変換エディター ([入力列] ページ)](../../script-transformation-editor-input-columns-page.md)  
+-   [[スクリプト変換エディター] &#40;[入力列] ページ&#41;](../../script-transformation-editor-input-columns-page.md)  
   
--   [スクリプト変換エディター ([入力および出力] ページ)](../../script-transformation-editor-inputs-and-outputs-page.md)  
+-   [[スクリプト変換エディター] の [入力および出力] ページ &#40;&#41;](../../script-transformation-editor-inputs-and-outputs-page.md)  
   
--   [スクリプト変換エディター ([スクリプト] ページ)](../../script-transformation-editor-script-page.md)  
+-   [スクリプト変換エディター &#40;スクリプトページ&#41;](../../script-transformation-editor-script-page.md)  
   
--   [スクリプト変換エディター ([接続マネージャー] ページ)](../../script-transformation-editor-connection-managers-page.md)  
+-   [[スクリプト変換エディター] &#40;[接続マネージャー] ページ&#41;](../../script-transformation-editor-connection-managers-page.md)  
   
- [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーでこれらのプロパティを設定する方法については、次のトピックを参照してください。  
+ 
+  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーでこれらのプロパティを設定する方法については、次のトピックを参照してください。  
   
 -   [データ フロー コンポーネントのプロパティを設定する](../set-the-properties-of-a-data-flow-component.md)  
   
 ### <a name="configuring-the-script-component-programmatically"></a>プログラムによるスクリプト コンポーネントの構成  
- **[プロパティ]** ウィンドウまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
+ 
+  **[プロパティ]** ウィンドウまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [Common Properties](../../common-properties.md)  
+-   [共通プロパティ](../../common-properties.md)  
   
 -   [変換のカスタム プロパティ](transformation-custom-properties.md)  
   

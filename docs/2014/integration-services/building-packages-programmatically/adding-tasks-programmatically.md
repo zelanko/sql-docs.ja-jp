@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: da9a2e5bf8338b8188f00f3c340d50ef32f1204f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771838"
 ---
 # <a name="adding-tasks-programmatically"></a>プログラムによるタスクの追加
@@ -43,7 +43,8 @@ ms.locfileid: "62771838"
  パッケージにタスクを追加するには、<xref:Microsoft.SqlServer.Dts.Runtime.Executables> の既存のコレクションを持つコンテナーが必要です。 ほとんどの場合、コレクションに追加するタスクはパッケージです。 新しいタスクの実行可能ファイルをそのコンテナーのコレクションに追加するには、<xref:Microsoft.SqlServer.Dts.Runtime.Executables.Add%2A> メソッドを呼び出します。 このメソッドには単一の文字列パラメーターがあり、CLSID、PROGID、STOCK モニカー、または、追加するタスクの <xref:Microsoft.SqlServer.Dts.Runtime.TaskInfo.CreationName%2A> が格納されます。  
   
 ## <a name="task-names"></a>タスク名  
- 名前または ID でタスクを指定できますが、<xref:Microsoft.SqlServer.Dts.Runtime.Executables.Add%2A> メソッドで最もよく使用されるパラメーターは `STOCK` モニカーです。 `STOCK` モニカーによって識別される実行可能ファイルにタスクを追加するには、次の構文を使用します。  
+ 名前または ID でタスクを指定できますが、`STOCK` メソッドで最もよく使用されるパラメーターは <xref:Microsoft.SqlServer.Dts.Runtime.Executables.Add%2A> モニカーです。 
+  `STOCK` モニカーによって識別される実行可能ファイルにタスクを追加するには、次の構文を使用します。  
   
 ```csharp  
 Executable exec = package.Executables.Add("STOCK:BulkInsertTask");  
@@ -317,7 +318,7 @@ End Module
   
  タスク固有のクラスにキャストする代わりに <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> クラスをコードで使用する場合、次の利点があります。  
   
--   <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost.Properties%2A> プロバイダーは、コード内でアセンブリを参照する必要がありません。  
+-   <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost><xref:Microsoft.SqlServer.Dts.Runtime.TaskHost.Properties%2A> プロバイダーは、コード内でアセンブリを参照する必要がありません。  
   
 -   コンパイル時にタスクの名前を知る必要がないため、すべてのタスクで動作する汎用ルーチンをコーディングできます。 このような汎用ルーチンには、タスク名を引数として受け取るメソッドが含まれます。このメソッド コードはすべてのタスクで動作します。 これは、テスト コードを記述するのに適したメソッドです。  
   
@@ -412,7 +413,7 @@ End Module
 ## <a name="external-resources"></a>外部リソース  
  blogs.msdn.com のブログ「[EzAPI - Updated for SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=243223)」(EzAPI - SQL Server 2012 用の更新)  
   
-![Integration Services のアイコン (小)](../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。**<br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
+![Integration Services アイコン (小)](../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services に関するページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
 ## <a name="see-also"></a>参照  
  [プログラムによるタスクの接続](../building-packages-programmatically/connecting-tasks-programmatically.md)  

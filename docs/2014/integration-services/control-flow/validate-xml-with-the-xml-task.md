@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 76d84c3ea8da6d564db01fba3d02ac15a72fffc3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62829599"
 ---
 # <a name="validate-xml-with-the-xml-task"></a>Validate XML with the XML Task
@@ -25,14 +25,15 @@ ms.locfileid: "62829599"
   
  次のスクリーン ショットは、 **XML タスク エディター** と、XML 検証で詳細なエラー出力を取得するのに必要な設定を示しています。  
   
- ![XML タスク エディターの XML タスク　プロパティ](../media/xmltaskproperties.jpg "XML タスク エディターの XML タスク プロパティ")  
+ ![Xml タスクエディターの XML タスクプロパティ](../media/xmltaskproperties.jpg "Xml タスクエディターの XML タスクプロパティ")  
   
- `ValidationDetails` プロパティが利用できるようになる前は、XML タスクによる XML 検証では、true や false のみの結果が返され、エラーやその場所に関する情報は返されませんでした。 次に、設定`ValidationDetails`を true に、出力ファイルに行番号と位置を含むすべてのエラーに関する詳細情報が含まれています。 この情報を使って、XML ドキュメントのエラーを把握、特定、修正できます。  
+ 
+  `ValidationDetails` プロパティが利用できるようになる前は、XML タスクによる XML 検証では、true や false のみの結果が返され、エラーやその場所に関する情報は返されませんでした。 これで、を true `ValidationDetails`に設定すると、出力ファイルには、行番号と位置を含むすべてのエラーに関する詳細情報が含まれるようになりました。 この情報を使って、XML ドキュメントのエラーを把握、特定、修正できます。  
   
  この XML 検証機能は、大きなサイズの XML ドキュメントや大量のエラーにも、簡単に規模を変更して対応できます。 出力ファイル自体が XML 形式なので、出力に対するクエリの実行と分析が可能です。 たとえば、出力に大量のエラーが含まれている場合、このトピックで説明する方法で [!INCLUDE[tsql](../../../includes/tsql-md.md)] クエリを使用して、エラーをグループ化することができます。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) 導入された、`ValidationDetails`プロパティ[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]Service Pack 2。 使用可能なプロパティも[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]と SQL Server 2016 でします。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) では`ValidationDetails` 、Service [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Pack 2 でプロパティが導入されました。 プロパティは[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 、および SQL Server 2016 でも使用できます。  
   
 ## <a name="sample-output-for-xml-thats-valid"></a>有効な XML のサンプル出力  
  有効な XML ファイルの検証結果が記載されたサンプル出力ファイルを次に示します。  
@@ -54,7 +55,8 @@ ms.locfileid: "62829599"
 ```  
   
 ## <a name="sample-output-for-xml-thats-not-valid"></a>無効な XML のサンプル出力  
- 少数のエラーのある XML ファイルの検証結果が記載されたサンプル出力ファイルを次に示します。 \<error> 要素のテキストは、読みやすくするために折り返されています。  
+ 少数のエラーのある XML ファイルの検証結果が記載されたサンプル出力ファイルを次に示します。 
+  \<error> 要素のテキストは、読みやすくするために折り返されています。  
   
 ```xml  
   
@@ -120,6 +122,6 @@ ORDER BY 2 DESC, COALESCE(error, 'Z');
   
 ## <a name="see-also"></a>参照  
  [XML タスク](xml-task.md)   
- [XML タスク エディター ([全般] ページ)](../xml-task-editor-general-page.md)  
+ [[XML タスクエディター] &#40;[全般] ページ&#41;](../xml-task-editor-general-page.md)  
   
   

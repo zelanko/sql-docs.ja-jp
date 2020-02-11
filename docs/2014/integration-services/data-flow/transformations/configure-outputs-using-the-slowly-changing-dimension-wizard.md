@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c0e64b60c027f7d6750a1afdb9988e1d6aac3ac1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770614"
 ---
 # <a name="configure-outputs-using-the-slowly-changing-dimension-wizard"></a>緩やかに変化するディメンション ウィザードを使用して出力を構成する
@@ -48,11 +48,11 @@ ms.locfileid: "62770614"
   
 4.  各列に対し、変更の種類を選択します。  
   
-    -   **[変化する属性]** は、レコード内の既存の値を上書きします。  
+    -   **属性を変更すると**、レコード内の既存の値が上書きされます。  
   
-    -   **[履歴属性]** は、既存のレコードを更新せず、新しいレコードを作成します。  
+    -   **履歴属性**は、既存のレコードを更新するのではなく、新しいレコードを作成します。  
   
-    -   **[固定属性]** は、列の値は変更できないことを示します。  
+    -   **Fixed 属性**は、列の値が変更されないことを示します。  
   
 5.  固定属性および変化する属性のオプションを設定します。  
   
@@ -80,6 +80,6 @@ ms.locfileid: "62770614"
  緩やかに変化するディメンションの変換出力の構成を最も簡単に更新するには、緩やかに変化するディメンション ウィザードを再実行し、ウィザード ページからプロパティを変更します。 また、 **[詳細エディター]** ダイアログ ボックスまたはプログラムによっても、緩やかに変化するディメンションの変換を更新できます。  
   
 ## <a name="see-also"></a>参照  
- [Slowly Changing Dimension Transformation](slowly-changing-dimension-transformation.md)  
+ [緩やかに変化するディメンション変換](slowly-changing-dimension-transformation.md)  
   
   

@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 78dfc544d7fd01f6641df6c0968d4a59a668cdd3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62960036"
 ---
 # <a name="securing-replication-over-the-internet"></a>インターネット経由のレプリケーションのセキュリティ
@@ -37,7 +37,7 @@ ms.locfileid: "62960036"
 ## <a name="web-synchronization-through-iis"></a>IIS による Web 同期  
  マージ レプリケーション用の Web 同期オプションを使用すると、HTTPS プロトコルを使用してデータをレプリケートできます。この方法は、ファイアウォール越しにデータをレプリケートする場合に便利です。 詳細については、「[Web 同期の構成](../configure-web-synchronization.md)」および「[Web 同期のセキュリティ アーキテクチャ](security-architecture-for-web-synchronization.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Replication Security Best Practices](replication-security-best-practices.md)   
  [SQL Server レプリケーションのセキュリティ](view-and-modify-replication-security-settings.md)  
   

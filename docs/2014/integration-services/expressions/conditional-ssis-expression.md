@@ -1,5 +1,5 @@
 ---
-title: '? :(条件) (SSIS 式) | Microsoft Docs'
+title: '? : (条件) (SSIS 式) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: baf066638eb8c42dbf4ba7f488c9b0c1ca9acdb2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62769399"
 ---
-# <a name="--conditional-ssis-expression"></a>? :(条件) (SSIS 式)
+# <a name="--conditional-ssis-expression"></a>? : (条件) (SSIS 式)
   ブール式の評価に基づいて 2 つの式のうちのいずれかの式を返します。 ブール式が TRUE に評価された場合、最初の式が評価対象となり、その結果が式の結果になります。 ブール式が FALSE に評価された場合、2 番目の式が評価対象となり、その結果が式の結果になります。  
   
 ## <a name="syntax"></a>構文  
@@ -36,15 +36,15 @@ boolean_expression?expression1:expression2
  TRUE、FALSE、または NULL に評価される、任意の有効な式です。  
   
  *expression1*  
- 有効な式を指定します。  
+ 任意の有効な式です。  
   
  *expression2*  
- 有効な式を指定します。  
+ 任意の有効な式です。  
   
 ## <a name="result-types"></a>戻り値の型  
  *expression1* または *expression2*のデータ型です。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  *boolean_expression* が NULL に評価された場合、式の結果は NULL になります。 選択された式 ( *expression1* または *expression2* のいずれか) が NULL の場合、結果は NULL になります。 選択された式が NULL でなく、選択されていない式が NULL の場合、結果は選択された式の値になります。  
   
  *expression1* と *expression2* のデータ型が同じ場合、結果はそのデータ型になります。 次の追加のルールが結果の型に適用されます。  
@@ -55,11 +55,11 @@ boolean_expression?expression1:expression2
   
  式セットである *expression1* および *expression2*は、有効なデータ型および次のルールのいずれかに従って評価される必要があります。  
   
--   **数値** *expression1* と *expression2* の両方が数値データ型である必要があります。 データ型の積集合は、式エバリュエーターが実行する暗黙的な数値変換に関する規則で指定されているように、数値データ型である必要があります。 2 つの数値データ型の積集合を NULL にすることはできません。 詳しくは、「 [式における Integration Services データ型](integration-services-data-types-in-expressions.md)」をご覧ください。  
+-   **数値***expression1* と *expression2* の両方が数値データ型である必要があります。 データ型の積集合は、式エバリュエーターが実行する暗黙的な数値変換に関する規則で指定されているように、数値データ型である必要があります。 2 つの数値データ型の積集合を NULL にすることはできません。 詳しくは、「 [式における Integration Services データ型](integration-services-data-types-in-expressions.md)」をご覧ください。  
   
--   **文字列** *expression1* と *expression2* のいずれも次の文字列データ型にする必要があります。DT_STR または DT_WSTR。 2 つの式が評価される文字列データ型は、異なっていてもかまいません。 DT_WSTR データ型の結果の長さは、長いほうの引数の長さと同じです。  
+-   **文字列***expression1* と *expression2* は、どちらも DT_STR または DT_WSTR の文字列データ型である必要があります。 2 つの式が評価される文字列データ型は、異なっていてもかまいません。 DT_WSTR データ型の結果の長さは、長いほうの引数の長さと同じです。  
   
--   **日付、時刻、または日付/時刻** *expression1* と *expression2* は、どちらも次のいずれかのデータ型に評価される必要があります。DT_DBDATE、DT_DATE、DT_DBTIME、DT_DBTIME2、DT_DBTIMESTAMP、DT_DBTIMESTAMP2、DT_DBTIMESTAPMOFFSET、DT_FILETIME。  
+-   **日付、時刻、または日付/時刻***expression1* と *expression2* は、どちらも DT_DBDATE、DT_DATE、DT_DBTIME、DT_DBTIME2、DT_DBTIMESTAMP、DT_DBTIMESTAMP2、DT_DBTIMESTAPMOFFSET、または DT_FILETIME のいずれかのデータ型に評価される必要があります。  
   
     > [!NOTE]  
     >  時刻データ型に評価される式と、日付データ型または日付/時刻データ型に評価される式との間の比較はサポートされていません。 システムによってエラーが生成されます。  
@@ -97,7 +97,7 @@ boolean_expression?expression1:expression2
 ListPrice < 350.00 ? ListPrice * .2 : ListPrice * .1  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [演算子の優先順位と結合規則](operator-precedence-and-associativity.md)   
  [演算子 &#40;SSIS 式&#41;](operators-ssis-expression.md)  
   

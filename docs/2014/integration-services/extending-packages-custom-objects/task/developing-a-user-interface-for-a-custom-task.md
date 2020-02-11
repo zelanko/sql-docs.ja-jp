@@ -22,10 +22,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6268fe16c31c931dc71ad1a62bd72e08b1ecb537
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768918"
 ---
 # <a name="developing-a-user-interface-for-a-custom-task"></a>カスタム タスク用ユーザー インターフェイスの開発
@@ -33,7 +33,7 @@ ms.locfileid: "62768918"
   
  タスク用のカスタム ユーザー インターフェイスを開発するには、2 つの重要なクラスを使用します。 次の表は、これらのクラスを示しています。  
   
-|クラス|説明|  
+|クラス|[説明]|  
 |-----------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute>|マネージド タスクを識別する属性。この属性のプロパティによってデザイン時の情報を提供し、[!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーでのオブジェクトの表示方法と操作方法を制御します。|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI>|タスクとカスタム ユーザー インターフェイスを関連付けるためにタスクが使用するインターフェイス。|  
@@ -49,12 +49,12 @@ ms.locfileid: "62768918"
   
  次の表は、<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> 属性のプロパティを示しています。  
   
-|プロパティ|説明|  
+|プロパティ|[説明]|  
 |--------------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Localization.DtsLocalizableAttribute.DisplayName%2A>|制御フロー ツールボックスに表示するタスク名。|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Localization.DtsLocalizableAttribute.Description%2A>|タスクの説明 (<xref:Microsoft.SqlServer.Dts.Runtime.Localization.DtsLocalizableAttribute> から継承)。 ツールヒントに表示されるプロパティです。|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.IconResource%2A>|[!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーに表示するアイコン。|  
-|<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.RequiredProductLevel%2A>|使用する場合は、<xref:Microsoft.SqlServer.Dts.Runtime.DTSProductLevel> 列挙のいずれかの値に設定します。 たとえば、`RequiredProductLevel = DTSProductLevel.None` のようにします。|  
+|<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.RequiredProductLevel%2A>|使用する場合は、<xref:Microsoft.SqlServer.Dts.Runtime.DTSProductLevel> 列挙のいずれかの値に設定します。 たとえば、「 `RequiredProductLevel = DTSProductLevel.None` 」のように入力します。|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.TaskContact%2A>|タスクでテクニカル サポートが必要な場合の連絡先に関する情報。|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.TaskType%2A>|タスクに割り当てる型。|  
 |Attribute.TypeId|派生クラスに実装した場合、この属性の一意の識別子を取得します。 詳細については、.NET Framework クラス ライブラリの「`Attribute.TypeID` プロパティ」を参照してください。|  
@@ -117,7 +117,8 @@ End Class 'MyTask
   
  デザイナーは <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI.GetView%2A> メソッドを呼び出して、[!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーで表示するウィンドウを要求します。 タスクは、タスクのユーザー インターフェイスを含むウィンドウのインスタンスを作成し、ユーザー インターフェイスをデザイナーに返して表示させます。 通常、オーバーロードされたコンストラクターを介して、<xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> オブジェクトおよび <xref:Microsoft.SqlServer.Dts.Runtime.Connections> オブジェクトがウィンドウに渡されるため、これを使用してタスクを構成できます。  
   
- [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーはタスク ユーザー インターフェイスの <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI.GetView%2A> メソッドを呼び出して、タスク用のユーザー インターフェイスを表示します。 タスク ユーザー インターフェイスはこのメソッドから Windows フォームを返し、[!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーは、このフォームをモーダル ダイアログ ボックスとして表示します。 フォームを閉じると、[!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーはフォームの `DialogResult` プロパティの値を確認し、タスクが変更されたかどうか、およびその変更を保存する必要があるかどうかを判断します。 `DialogResult` プロパティの値が `OK` の場合、[!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーはタスクの持続メソッドを呼び出して変更を保存します。それ以外の場合は、変更は破棄されます。  
+ [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーはタスク ユーザー インターフェイスの <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI.GetView%2A> メソッドを呼び出して、タスク用のユーザー インターフェイスを表示します。 タスク ユーザー インターフェイスはこのメソッドから Windows フォームを返し、[!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーは、このフォームをモーダル ダイアログ ボックスとして表示します。 フォームを閉じると、[!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーはフォームの `DialogResult` プロパティの値を確認し、タスクが変更されたかどうか、およびその変更を保存する必要があるかどうかを判断します。 
+  `DialogResult` プロパティの値が `OK` の場合、[!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーはタスクの持続メソッドを呼び出して変更を保存します。それ以外の場合は、変更は破棄されます。  
   
  次のコード例は、<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI> インターフェイスを実装します。ここでは、SampleTaskForm という名前の Windows フォーム クラスが存在するものと想定しています。  
   
@@ -197,11 +198,11 @@ Public Class HelloWorldTaskUI
 End Class  
 ```  
   
-![Integration Services のアイコン (小)](../../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。**<br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
+![Integration Services アイコン (小)](../../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services に関するページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
 ## <a name="see-also"></a>参照  
- [カスタム タスクの作成](creating-a-custom-task.md)   
- [カスタム タスクのコーディング](coding-a-custom-task.md)   
+ [カスタムタスクの作成](creating-a-custom-task.md)   
+ [カスタムタスクのコーディング](coding-a-custom-task.md)   
  [カスタム タスク用ユーザー インターフェイスの開発](developing-a-user-interface-for-a-custom-task.md)  
   
   

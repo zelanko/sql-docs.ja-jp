@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d57f5938cb888a955645f5a9e0b01eeacfc1142b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62812791"
 ---
 # <a name="change-source-control-connections"></a>ソース管理接続の変更
@@ -31,11 +31,11 @@ ms.locfileid: "62812791"
   
 #### <a name="to-open-the-source-control-user-interface-from-the-studio-environment"></a>Studio 環境からソース管理ユーザー インターフェイスを開くには  
   
-1.  **ファイル**メニューで、**ソース管理**、 をクリックし、**起動 Microsoft Visual SourceSafe**します。  
+1.  [**ファイル**] メニューの [**ソース管理**] をポイントし、[ **Microsoft Visual SourceSafe の起動**] をクリックします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ソース管理の基礎](../../2014/database-engine/source-control-basics.md)   
- [ソース管理オプションを設定します。](../../2014/database-engine/set-source-control-options.md)   
+ [ソース管理オプションの設定](../../2014/database-engine/set-source-control-options.md)   
  [ソース管理からのファイルの除外](../../2014/database-engine/exclude-files-from-source-control.md)  
   
   

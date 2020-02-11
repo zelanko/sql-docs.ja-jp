@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 521d40529501d761b8e50300c16a816284109695
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770889"
 ---
 # <a name="request-log"></a>[要求のログ]
@@ -41,14 +41,14 @@ ms.locfileid: "62770889"
     > [!NOTE]  
     >  **[プレビュー]** をクリックすると、 **[プレビュー]** ダイアログ ボックスが表示されます。 このダイアログ ボックスの詳細については、「 [プレビュー](preview.md)」を参照してください。  
   
-## <a name="options"></a>および  
- **[時刻]**  
+## <a name="options"></a>オプション  
+ **Time**  
  イベントが記録された時刻を表示します。  
   
- **型**  
+ **Type**  
  記録されたイベントの種類を表示します。 次の表は、使用可能なイベントの種類を示しています。  
   
-|値|説明|  
+|値|[説明]|  
 |-----------|-----------------|  
 |S|成功メッセージ|  
 |E|エラー メッセージ|  

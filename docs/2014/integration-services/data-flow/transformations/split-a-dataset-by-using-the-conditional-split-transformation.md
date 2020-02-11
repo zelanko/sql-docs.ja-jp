@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6585733a4b864e14815990189fd6924e217de546
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770683"
 ---
 # <a name="split-a-dataset-by-using-the-conditional-split-transformation"></a>条件分割変換を使用してデータセットを分割する
@@ -59,12 +59,12 @@ ms.locfileid: "62770683"
   
 12. 更新したパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Conditional Split Transformation](conditional-split-transformation.md)   
  [Integration Services の変換](integration-services-transformations.md)   
  [Integration Services のパス](../integration-services-paths.md)   
  [Integration Services のデータ型](../integration-services-data-types.md)   
- [[データ フロー タスク]](../../control-flow/data-flow-task.md)   
- [Integration Services (SSIS) 式](../../expressions/integration-services-ssis-expressions.md)  
+ [データ フロー タスク](../../control-flow/data-flow-task.md)   
+ [Integration Services &#40;SSIS&#41; 式](../../expressions/integration-services-ssis-expressions.md)  
   
   

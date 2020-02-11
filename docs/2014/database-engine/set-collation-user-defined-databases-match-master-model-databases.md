@@ -1,5 +1,5 @@
 ---
-title: マスターのものと一致し、model データベースの照合順序のユーザー定義データベースの設定 |Microsoft Docs
+title: ユーザー定義データベースの照合順序を、master および model データベースの照合順序と一致するように設定します。Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dfb00b1cc1a9930f7a374403b40e2c0d793eb090
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62773315"
 ---
 # <a name="set-the-collation-of-user-defined-databases-to-match-those-of-the-master-and-model-databases"></a>ユーザー定義データベースの照合順序が master データベースおよび model データベースの照合順序と一致するように設定
@@ -29,7 +29,7 @@ ms.locfileid: "62773315"
   
 -   データをユーザー データベースからエクスポートし、照合順序が master データベースおよび model データベースと同じ新しいテーブルにインポートします。  
   
--   ユーザー データベースの照合順序と一致する照合順序を使用するようにシステム データベースを再構築します。 システム データベースを再構築する方法の詳細については、次を参照してください。[システム データベースの再構築](../relational-databases/databases/system-databases.md)します。  
+-   ユーザー データベースの照合順序と一致する照合順序を使用するようにシステム データベースを再構築します。 システムデータベースを再構築する方法の詳細については、「[システムデータベースの再構築](../relational-databases/databases/system-databases.md)」を参照してください。  
   
 -   ユーザー テーブルを tempdb 内のテーブルに結合するストアド プロシージャを、ユーザー データベースの照合順序を使用して tempdb にテーブルを作成するように変更します。 これを行うには、次の例に示すように、一時テーブルの列定義に `COLLATE database_default` 句を追加します。  
   
@@ -44,13 +44,13 @@ ms.locfileid: "62773315"
   
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)  
   
- [COLLATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/collations)  
+ [COLLATE &#40;Transact-sql&#41;](/sql/t-sql/statements/collations)  
   
- [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)  
+ [データベース &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)  
   
- [Microsoft Knowledge Base article 325335](https://go.microsoft.com/fwlink/?linkid=117751)  
+ [マイクロソフトサポート技術情報の記事325335](https://go.microsoft.com/fwlink/?linkid=117751)  
   
- [方法:コマンド プロンプトから SQL Server 2008 をインストールします。](https://go.microsoft.com/fwlink/?LinkId=81585)  
+ [コマンド プロンプトから SQL Server 2008 をインストールする方法](https://go.microsoft.com/fwlink/?LinkId=81585)  
   
 ## <a name="see-also"></a>参照  
  [ポリシー ベースの管理を使用したベスト プラクティスの監視と実行](../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)  
