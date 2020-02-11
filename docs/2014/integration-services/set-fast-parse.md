@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7d41b15325586733ab54a37f4c3f007ce0253eaf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055823"
 ---
 # <a name="set-fast-parse"></a>高速解析を設定する
@@ -24,11 +24,13 @@ ms.locfileid: "66055823"
   
 1.  フラット ファイル ソースまたはデータ変換の変換を右クリックし、 **[詳細エディターの表示]** をクリックします。  
   
-2.  **[詳細エディター]** ダイアログ ボックスの **[入力プロパティと出力プロパティ]** タブをクリックします。  
+2.  
+  **[詳細エディター]** ダイアログ ボックスの **[入力プロパティと出力プロパティ]** タブをクリックします。  
   
-3.  **[入力および出力]** ペインで、高速解析を有効にする列をクリックします。  
+3.  
+  **[入力および出力]** ペインで、高速解析を有効にする列をクリックします。  
   
-4.  [プロパティ] ウィンドウで、展開、**カスタム プロパティ**ノード、および設定して、`FastParse`プロパティを`True`します。  
+4.  プロパティウィンドウで、[**カスタムプロパティ**] ノードを展開し、 `FastParse`プロパティをに`True`設定します。  
   
 5.  **[OK]** をクリックします。  
   
