@@ -1,5 +1,5 @@
 ---
-title: RDS のコード Visual Basic での例 |Microsoft Docs
+title: Visual Basic での RDS のコード例 |Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,20 +16,20 @@ ms.assetid: d9cb84a1-4ec2-4d41-8f92-dec2e17cde67
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 292f963ef1534cb9eb70e1e5a73d5f86af264181
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67963775"
 ---
 # <a name="rds-code-examples-in-visual-basic"></a>Visual Basic での RDS のコード例
 > [!IMPORTANT]
->  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)します。  
+>  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および[Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416)」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
   
- 次のコード例を使用して、Visual Basic で記述するときに、RDS プロパティを使用する方法について説明します。  
+ Visual Basic での書き込み時に RDS プロパティを使用する方法については、次のコード例を参照してください。  
   
 > [!NOTE]
->  全体のコード例は、End Sub にサブディレクトリをコード エディターに貼り付けます。 例を部分的に使用した場合や段落のフォーマットが失われた場合、この例は正しく動作しない可能性があります。  
+>  Sub から End Sub までのコード例全体をコードエディターに貼り付けます。 部分例が使用されている場合や段落の書式設定が失われた場合、この例は正常に実行されない可能性があります。  
   
 ## <a name="properties"></a>Properties  
   

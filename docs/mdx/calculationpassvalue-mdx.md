@@ -1,5 +1,5 @@
 ---
-title: CalculationPassValue (MDX) |Microsoft Docs
+title: 電卓 Ationpass Value (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: ae667d2cecb65f2525aaf855d3d1b70d40a59b21
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68016874"
 ---
 # <a name="calculationpassvalue-mdx"></a>CalculationPassValue (MDX)
@@ -32,36 +32,36 @@ CalculationPassValue(String_Expression ,Pass_Value [, ABSOLUTE | RELATIVE [,ALL]
   
 ## <a name="arguments"></a>引数  
  *Numeric_Expression*  
- 有効な数値式は、通常、数値を返すセル座標の多次元式 (MDX) 式です。  
+ 有効な数値式です。通常は、数値を返すセル座標の多次元式 (MDX) 式です。  
   
  *String_Expression*  
- 有効な文字列式であり、セルの有効な多次元式 (MDX) 式では通常は、文字列として表された数値を返すを調整します。  
+ 有効な文字列式です。通常は、文字列として表現された数値を返すセル座標の有効な多次元式 (MDX) 式です。  
   
  *Pass_Value*  
  計算パス番号を指定する有効な数値式です。  
   
  ABSOLUTE  
- 指定するアクセス フラグ値、 *Pass_Value*パラメーターには、計算パスの 0 から始まるインデックスが含まれています。 アクセス フラグ値が指定されていない場合は、ABSOLUTE が既定のアクセス フラグ値になります。  
+ *Pass_Value*パラメーターに、計算パスの0から始まるインデックスが含まれていることを示すアクセスフラグ値。 アクセス フラグ値が指定されていない場合は、ABSOLUTE が既定のアクセス フラグ値になります。  
   
  RELATIVE  
- 指定するアクセス フラグ値、 *Pass_Value*パラメーターには、トリガーを起動する計算の計算パスからの相対的なオフセットが含まれています。 このオフセットが 0 より小さい計算パス インデックスになる場合は、計算パス 0 が使用されます。したがって、エラーは発生しません。  
+ *Pass_Value*パラメーターに、トリガーする計算の計算パスからの相対オフセットが含まれていることを示すアクセスフラグ値。 このオフセットが 0 より小さい計算パス インデックスになる場合は、計算パス 0 が使用されます。したがって、エラーは発生しません。  
   
  ALL  
- このフラグを設定すると、すべての値は null 以外に、ストレージ エンジンによって読み込まれます。 このフラグが設定されていない場合は、何の計算も適用されずに値が集計されます。  
+ このフラグが設定されている場合、ストレージエンジンによって読み込まれた値を除き、すべての値が null になります。 このフラグが設定されていない場合は、何の計算も適用されずに値が集計されます。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  数値式が指定されると、この関数は、指定された計算パス内で指定されている (さらに、必要に応じてアクセス フラグとアクセス フラグ修飾子で修飾されている) MDX 数値式を評価し、数値を返します。  
   
- 文字列式が指定されている場合、関数が、指定された計算パスで指定された MDX 文字列式を評価することによって文字列値を返し、必要に応じてアクセス フラグとアクセス フラグ修飾子で変更*します。*  
+ 文字列式が指定されている場合、関数は、指定された計算パスで指定された MDX 文字列式を評価し、必要に応じてアクセスフラグとアクセスフラグ修飾子で修飾することによって、文字列値を返し*ます。*  
   
- 再帰を自動解決[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、この関数は、小さな実際に使用します。  
+ での[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]自動再帰解決を使用すると、この関数はあまり実用的ではありません。  
   
 > [!NOTE]  
->  管理者のみが使用できる、 **CalculationPassValue** MDX スクリプト内の関数。 エラーは、この関数を含む MDX スクリプトが管理者特権がないロールのコンテキストで実行される場合に発生します。  
+>  MDX スクリプト内では、管理者のみが計算**Ationpass value**関数を使用できます。 この関数を含む MDX スクリプトが、管理者特権を持たないロールのコンテキストで実行されている場合、エラーが発生します。  
   
-## <a name="see-also"></a>関連項目  
- [CalculationCurrentPass (MDX)](../mdx/calculationcurrentpass-mdx.md)   
+## <a name="see-also"></a>参照  
+ [計算 Ationcurrentpass &#40;MDX&#41;](../mdx/calculationcurrentpass-mdx.md)   
  [IIf &#40;MDX&#41;](../mdx/iif-mdx.md)   
- [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Mdx 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

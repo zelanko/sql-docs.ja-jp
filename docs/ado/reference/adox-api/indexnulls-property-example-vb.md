@@ -15,14 +15,14 @@ ms.assetid: 45204669-32c0-4690-aab9-ddf0fd71ae48
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c5976cf913a98e5fa7db313144463ca12373d6bb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965992"
 ---
 # <a name="indexnulls-property-example-vb"></a>IndexNulls プロパティの例 (VB)
-この例では、 [IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md)のプロパティ、[インデックス](../../../ado/reference/adox-api/index-object-adox.md)します。 コードは、新しいインデックスが作成されの値を設定**IndexNulls** (List1 という名前のリスト ボックス) からのユーザー入力に基づいて。 次に、**インデックス**に追加されますが、**従業員**[テーブル](../../../ado/reference/adox-api/table-object-adox.md)で、 *Northwind* [カタログ](../../../ado/reference/adox-api/catalog-object-adox.md)します。 新しい**インデックス**に適用される、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)に基づいて、**従業員**テーブル、および**レコード セット**が開かれます。 新しいレコードを追加、**従業員**テーブルで、 **Null**インデックス付きフィールドの値。 この新しいレコードを表示するかどうかの設定によって異なります、 **IndexNulls**プロパティ。  
+この例では、[インデックス](../../../ado/reference/adox-api/index-object-adox.md)の[IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md)プロパティを示します。 このコードは、新しいインデックスを作成し、ユーザー入力に基づいて**IndexNulls**の値を設定します (List1 という名前のリストボックスから)。 次に、 *Northwind* [カタログ](../../../ado/reference/adox-api/catalog-object-adox.md)の**Employees** [テーブル](../../../ado/reference/adox-api/table-object-adox.md)に**インデックス**が追加されます。 **Employees**テーブルに基づいて[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)に新しい**インデックス**が適用され、**レコードセット**が開かれます。 **Employees**テーブルに新しいレコードが追加され、インデックス付きフィールドに**Null**値が設定されます。 この新しいレコードが表示されるかどうかは、 **IndexNulls**プロパティの設定によって異なります。  
   
 ```  
 ' BeginIndexNullsVB  
@@ -108,6 +108,6 @@ End Sub
 ' EndIndexNullsVB  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Index オブジェクト (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
  [IndexNulls プロパティ (ADOX)](../../../ado/reference/adox-api/indexnulls-property-adox.md)

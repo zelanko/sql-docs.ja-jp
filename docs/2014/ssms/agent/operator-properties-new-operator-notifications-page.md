@@ -1,5 +1,5 @@
 ---
-title: '[オペレーターのプロパティ]:[新しいオペレーター] ([通知] ページ) |Microsoft Docs'
+title: 'オペレーターのプロパティ: [新しいオペレーター] ([通知] ページ) |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,40 +13,41 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a04465712667205674ddd8ea8bab7d82c3250261
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62630692"
 ---
-# <a name="operator-properties-new-operator-notifications-page"></a>[オペレーターのプロパティ]:[新しいオペレーター] ([通知] ページ)
+# <a name="operator-properties-new-operator-notifications-page"></a>オペレーターのプロパティ: [新しいオペレーター] ([通知] ページ)
   このページを使用すると、オペレーターに通知する警告およびジョブを設定できます。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **警告**  
  インスタンス内の警告を表示します。  
   
  **ジョブ**  
  インスタンス内のジョブを表示します。  
   
- **[警告の一覧]**  
+ **アラートの一覧**  
  インスタンス内の警告を一覧表示します。  
   
- **[ジョブ一覧]**  
+ **ジョブ一覧**  
  インスタンス内のジョブを一覧表示します。  
   
  次のオプションは、警告の一覧とジョブの一覧の両方で使用できます。  
   
- **電子メール**  
+ **メッセージ**  
  電子メールを使用してこのオペレーターに通知します。  
   
  **ポケットベル**  
  電子メールをポケット ベルに送信することによって、このオペレーターに通知します。  
   
  **Net send**  
- **net send**を使用してこのオペレーターに通知します。  
+ 
+  **net send**を使用してこのオペレーターに通知します。  
   
 ## <a name="see-also"></a>参照  
- [演算子](operators.md)  
+ [オペレーター](operators.md)  
   
   

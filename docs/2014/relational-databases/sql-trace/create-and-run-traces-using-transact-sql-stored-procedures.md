@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7922638ed06f52740a3c34f6e66ff72dbb5bbd98
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62714809"
 ---
 # <a name="create-and-run-traces-using-transact-sql-stored-procedures"></a>Transact-SQL ストアド プロシージャを使用したトレースの作成と実行
@@ -39,7 +39,7 @@ ms.locfileid: "62714809"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|説明|  
+|トピック|[説明]|  
 |-----------|-----------------|  
 |[SQL トレースの最適化](sql-trace.md)|システム パフォーマンスへのトレースの影響を軽減する方法について説明します。|  
 |[トレースへのフィルターの適用](filter-a-trace.md)|トレースでのフィルターの使用について説明します。|  

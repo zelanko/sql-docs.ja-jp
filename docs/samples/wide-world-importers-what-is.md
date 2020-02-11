@@ -10,10 +10,10 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 872892d307883bb7df31b08de701b2030d9aeb1f
-ms.sourcegitcommit: bcc3b2c7474297aba17b7a63b17c103febdd0af9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68794608"
 ---
 # <a name="wide-world-importers-sample-databases-for-microsoft-sql"></a>Microsoft SQL 用の大規模なインポーターのサンプルデータベース
@@ -31,7 +31,7 @@ WWI は、分野、おもちゃの製造元、その他の分野卸売などの�
 ## <a name="workflow-for-warehouse-stock-items"></a>倉庫の在庫品目のワークフロー
 
 項目の在庫と分散の一般的なフローは次のとおりです。
-- WWI は発注書を作成し、仕入先に送信します。
+- WWI は注文書を作成し、仕入先に注文を送信します。
 - サプライヤーは、項目を送信し、WWI を受け取り、倉庫で在庫します。
 - 顧客が WWI から品目を注文する
 - WWI は倉庫の在庫品目に顧客の注文を入力します。在庫が十分でない場合は、サプライヤーから追加の在庫を注文します。
@@ -60,7 +60,7 @@ SQL Server Analysis Services は、ディメンションデータモデルのデ
 
 この会社は、11月1日に開始する財務年度を操作します。
 
-## <a name="terms-of-use"></a>利用規約
+## <a name="terms-of-use"></a>使用条件
 
 サンプルデータベースとサンプルコードのライセンスについては、「 [license.txt](https://github.com/Microsoft/sql-server-samples/blob/master/license.txt) 」を参照してください。
 

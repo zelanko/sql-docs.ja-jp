@@ -1,5 +1,5 @@
 ---
-title: ストアド プロシージャ |Microsoft Docs
+title: ストアド プロシージャ | Microsoft Docs
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -15,14 +15,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d4a2c55573807feb4de947f1fa3b5af685b9f168
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62638321"
 ---
 # <a name="stored-procedures"></a>ストアド プロシージャ
-  ストアド プロシージャ ([Stored Procedures&#40;データベース エンジン&#41;](../../stored-procedures/stored-procedures-database-engine.md)) は、データベースに格納されている実行可能オブジェクトです。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では次に示すオブジェクトをサポートしています。  
+  ストアドプロシージャ ([ストアドプロシージャ &#40;データベースエンジン&#41;](../../stored-procedures/stored-procedures-database-engine.md)) は、データベースに格納されている実行可能オブジェクトです。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]対応  
   
 -   ストアド プロシージャ  
   
@@ -34,11 +34,11 @@ ms.locfileid: "62638321"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
--   [ストアド プロシージャの実行 &#40;OLE DB&#41;](stored-procedures-running.md)  
+-   [ストアドプロシージャの実行 &#40;OLE DB&#41;](stored-procedures-running.md)  
   
--   [ストアド プロシージャの呼び出し &#40;OLE DB&#41;](stored-procedures-calling.md)  
+-   [ストアドプロシージャの呼び出し &#40;OLE DB&#41;](stored-procedures-calling.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SQL Server Native Client &#40;OLE DB&#41;](sql-server-native-client-ole-db.md)  
   
   

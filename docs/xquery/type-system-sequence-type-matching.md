@@ -1,5 +1,5 @@
 ---
-title: シーケンス型の照合 |Microsoft Docs
+title: シーケンスの型の一致 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,32 +16,32 @@ ms.assetid: 8c56fb69-ca04-4aba-b55a-64ae216c492d
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 164092d91a6450815662c5022ac6eb62941e3b16
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67946223"
 ---
 # <a name="type-system---sequence-type-matching"></a>型システム - シーケンス型の照合
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  XQuery 式の値は必ず 0 個以上のアイテムのシーケンスになります。 項目には、アトミック値またはノードのいずれかを指定できます。 シーケンス型は、特定の種類と、クエリ式によって返されるシーケンス型と一致する機能を指します。 例:  
+  XQuery 式の値は必ず 0 個以上のアイテムのシーケンスになります。 項目は、アトミック値またはノードのいずれかになります。 シーケンス型は、クエリ式によって返されるシーケンス型を特定の型と一致させる機能を表します。 次に例を示します。  
   
--   式の値がアトミックの場合は、integer、decimal、または文字列型を把握したい場合があります。  
+-   式の値が atomic の場合、整数、10進数、または文字列型であるかどうかを調べる必要があります。  
   
 -   式の値が XML ノードの場合、その値がコメント ノード、処理命令ノード、またはテキスト ノードであるかどうかを確認できます。  
   
--   XML 要素または属性ノード、特定の名前と型のかどうか、式を返しますを把握したい場合があります。  
+-   式が特定の名前と型の XML 要素または属性ノードを返すかどうかを調べることができます。  
   
- 使用することができます、`instance of`シーケンス型の照合のブール演算子。 詳細については、`instance of`式を参照してください[SequenceType 式&#40;XQuery&#41;](../xquery/sequencetype-expressions-xquery.md)します。  
+ ブール演算子は、 `instance of`シーケンス型の照合に使用できます。 式の`instance of`詳細については、「 [sequencetype 式 &#40;XQuery&#41;](../xquery/sequencetype-expressions-xquery.md)」を参照してください。  
   
 ## <a name="comparing-the-atomic-value-type-returned-by-an-expression"></a>式から返されるアトミック値の型の比較  
- 式には、アトミック値のシーケンスが返された場合は、シーケンス内の値の型を確認する必要があります。 次の例は、シーケンス型の構文を使用して式から返されるアトミック値の型を評価する方法を示しています。  
+ 式がアトミック値のシーケンスを返す場合、シーケンス内の値の型を検索することが必要になる場合があります。 次の例は、シーケンス型の構文を使用して式から返されるアトミック値の型を評価する方法を示しています。  
   
-### <a name="example-determining-whether-a-sequence-is-empty"></a>例:シーケンスが空かどうかを判断します。  
- **Empty()** シーケンスの種類は、指定された式で返されるシーケンスが空のシーケンスであるかどうかを確認するシーケンス型の式で使用できます。  
+### <a name="example-determining-whether-a-sequence-is-empty"></a>例: シーケンスが空かどうかを確認する  
+ **空の ()** シーケンス型は、指定された式によって返されるシーケンスが空のシーケンスであるかどうかを判断するために、シーケンス型の式で使用できます。  
   
- XML スキーマは、次の例では、<`root`> 要素を nilled します。  
+ 次の例では、XML スキーマを使用し`root`て、<> 要素を nilled できます。  
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  
@@ -51,7 +51,7 @@ CREATE XML SCHEMA COLLECTION SC AS N'
 GO  
 ```  
   
- ここでは、型指定された XML インスタンスの値を指定する場合、<`root`> 要素、 `instance of empty()` False を返します。  
+ ここで、型指定された XML インスタンスが <`root`> 要素の値`instance of empty()`を指定した場合、は False を返します。  
   
 ```  
 DECLARE @var XML(SC1)  
@@ -61,7 +61,7 @@ SELECT @var.query('data(/root[1]) instance of  empty() ')
 GO  
 ```  
   
- 場合、<`root`> 要素は、インスタンスで nilled は、その値は空のシーケンスと`instance of empty()`True を返します。  
+ インスタンスで <`root`> 要素が nilled の場合、その値は空のシーケンスであり、 `instance of empty()`は True を返します。  
   
 ```  
 DECLARE @var XML(SC)  
@@ -70,8 +70,8 @@ SELECT @var.query('data(/root[1]) instance of  empty() ')
 GO  
 ```  
   
-### <a name="example-determining-the-type-of-an-attribute-value"></a>例:属性値の型を決定します。  
- 場合によっては、処理する前に、式によって返されるシーケンス型を評価することがあります。 たとえば、ノードが union 型として定義されている XML スキーマがあります。 次の例では、コレクション内の XML スキーマ定義属性`a`10 進数または文字列の値を持つができる union 型として型。  
+### <a name="example-determining-the-type-of-an-attribute-value"></a>例 : 属性値の型の判断  
+ 場合によっては、処理する前に、式によって返されるシーケンスの型を評価することが必要になることがあります。 たとえば、ノードが共用体型として定義されている XML スキーマがあるとします。 次の例では、コレクションの XML スキーマは、値が`a` decimal または string 型である共用体型として属性を定義しています。  
   
 ```  
 -- Drop schema collection if it exists.  
@@ -93,7 +93,7 @@ CREATE XML SCHEMA COLLECTION SC AS N'
 GO  
 ```  
   
- 型指定された XML インスタンスを処理する前に、属性 `a` の値の型を確認できます。 次の例では、属性 `a` の値は小数型です。 そのため`, instance of xs:decimal`True を返します。  
+ 型指定された XML インスタンスを処理する前に、属性 `a` の値の型を確認できます。 次の例では、属性 `a` の値は小数型です。 したがっ`, instance of xs:decimal`て、True が返されます。  
   
 ```  
 DECLARE @var XML(SC)  
@@ -111,8 +111,8 @@ SELECT @var.query('data((/root/@a)[1]) instance of xs:string')
 GO  
 ```  
   
-### <a name="example-cardinality-in-sequence-expressions"></a>例:シーケンス式のカーディナリティ  
- この例では、シーケンス式のカーディナリティの効果を示します。 次の XML スキーマ定義を <`root`> 内のバイト型、nillable 要素。  
+### <a name="example-cardinality-in-sequence-expressions"></a>例: シーケンス式のカーディナリティ  
+ この例は、シーケンス式でのカーディナリティの効果を示しています。 次の XML スキーマでは、 `root`バイト型の <> 要素が nillable に定義されています。  
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  
@@ -131,7 +131,7 @@ SELECT @var.query('data(/root[1]) instance of  xs:byte ')
 GO  
 ```  
   
- 行った場合、<`root`> 要素 nil、値は空のシーケンス。 つまり、式 `/root[1]` から空のシーケンスが返されます。 そのため、 `instance of xs:byte` False を返します。 この場合の既定のカーディナリティは 1 であることに注意してください。  
+ <`root`を要素 nil> すると、その値は空のシーケンスになります。 つまり、式 `/root[1]` から空のシーケンスが返されます。 したがって`instance of xs:byte` 、は False を返します。 この場合の既定のカーディナリティは 1 であることに注意してください。  
   
 ```  
 DECLARE @var XML(SC)  
@@ -151,16 +151,16 @@ GO
 -- result = true  
 ```  
   
- 2 つの段階で、シーケンス型の式でのテストが完了したことに注意してください。  
+ シーケンス型の式でのテストは、次の2つの段階で完了することに注意してください。  
   
-1.  最初に、テストを決定式の型が指定した型と一致するかどうか。  
+1.  まず、テストでは、式の型が指定した型と一致するかどうかを判断します。  
   
-2.  その場合、テストは、式によって返される項目の数が指定された出現インジケーターと一致するかどうか決定をします。  
+2.  その場合、テストは、式によって返される項目の数が、指定された出現インジケーターと一致するかどうかを判断します。  
   
  どちらにも該当する場合、`instance of` 式から True が返されます。  
   
-### <a name="example-querying-against-an-xml-type-column"></a>例:Xml 型の列に対するクエリを実行します。  
- 次の例では、クエリがの Instructions 列に対して指定されて**xml**で入力、[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]データベース。 Instructions 列にはスキーマが関連付けられているので、この列は型指定された XML 列です。 XML スキーマで整数型の `LocationID` 属性が定義されます。 そのため、シーケンス式で、 `instance of xs:integer?` True を返します。  
+### <a name="example-querying-against-an-xml-type-column"></a>例: xml 型の列に対するクエリ  
+ 次の例では、 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]データベースの**Xml**型の命令列に対してクエリを指定しています。 Instructions 列にはスキーマが関連付けられているので、この列は型指定された XML 列です。 XML スキーマで整数型の `LocationID` 属性が定義されます。 したがって、シーケンス式では、 `instance of xs:integer?`は True を返します。  
   
 ```  
 SELECT Instructions.query('   
@@ -170,23 +170,23 @@ FROM Production.ProductModel
 WHERE ProductModelID = 7  
 ```  
   
-## <a name="comparing-the-node-type-returned-by-an-expression"></a>式によって返されるノードの型の比較  
- 式ノードのシーケンスを返す場合は、シーケンス内のノードの型を確認する必要があります。 次の例では、シーケンス型の構文を使用して、式によって返されるノードの種類を評価する方法を示します。 次のシーケンス型を使用できます。  
+## <a name="comparing-the-node-type-returned-by-an-expression"></a>式によって返されるノードの種類の比較  
+ 式がノードのシーケンスを返す場合、シーケンス内のノードの型を見つける必要がある場合があります。 次の例は、シーケンス型の構文を使用して、式によって返されるノード型を評価する方法を示しています。 次のシーケンス型を使用できます。  
   
--   **item()** -シーケンス内の任意の項目に一致します。  
+-   **item ()** -シーケンス内の任意の項目と一致します。  
   
--   **node()** -シーケンスがノードであるかどうかを決定します。  
+-   **node ()** -シーケンスがノードであるかどうかを判断します。  
   
--   **processing-instruction()** -式が処理命令を返すかどうかを決定します。  
+-   **processing-命令 ()** -式が処理命令を返すかどうかを判断します。  
   
--   **comment()** -式がコメントを返すかどうかを決定します。  
+-   **comment ()** -式がコメントを返すかどうかを判断します。  
   
--   **document-node()** -式がドキュメント ノードを返すかどうかを決定します。  
+-   **document-node ()** -式がドキュメントノードを返すかどうかを判断します。  
   
- 次の例では、これらのシーケンス型を示します。  
+ これらのシーケンス型の例を次に示します。  
   
-### <a name="example-using-sequence-types"></a>例:シーケンス型の使用  
- この例では、いくつかのクエリは、型指定されていない XML 変数に対して実行されます。 これらのクエリでは、シーケンス型の使用について説明します。  
+### <a name="example-using-sequence-types"></a>例: シーケンス型の使用  
+ この例では、型指定されていない XML 変数に対していくつかのクエリを実行します。 これらのクエリは、シーケンス型の使用方法を示しています。  
   
 ```  
 DECLARE @var XML  
@@ -198,14 +198,14 @@ SET @var = '<?xml-stylesheet href="someValue" type="text/xsl" ?>
 </root>'  
 ```  
   
- 最初のクエリでは、式は型指定された要素の値を返します。 <`a`>。 2 番目のクエリでは、式は要素を返します。 <`a`>。 どちらもアイテム。 そのため、両方のクエリは、True を返します。  
+ 最初のクエリでは、式によって <`a`> 要素の型指定された値が返されます。 2番目のクエリでは、式は`a`要素 <> を返します。 両方とも項目です。 したがって、どちらのクエリも True を返します。  
   
 ```  
 SELECT @var.query('data(/root[1]/a[1]) instance of item()')  
 SELECT @var.query('/root[1]/a[1] instance of item()')  
 ```  
   
- 次の 3 つのクエリのすべての XQuery 式が要素ノードの子を返す、<`root`> 要素。 そのため、シーケンス型の式 `instance of node()` から True が返され、他の 2 つの式 `instance of text()` と `instance of document-node()` からは False が返されます。  
+ 次の3つのクエリのすべての XQuery 式は、<`root`> 要素の子要素ノードを返します。 そのため、シーケンス型の式 `instance of node()` から True が返され、他の 2 つの式 `instance of text()` と `instance of document-node()` からは False が返されます。  
   
 ```  
 SELECT @var.query('(/root/*)[1] instance of node()')  
@@ -213,27 +213,27 @@ SELECT @var.query('(/root/*)[1] instance of text()')
 SELECT @var.query('(/root/*)[1] instance of document-node()')   
 ```  
   
- 次のクエリで、`instance of document-node()`ために、式が True を返しますの親、<`root`> 要素はドキュメント ノードです。  
+ 次のクエリでは、 `instance of document-node()` <`root`> 要素の親がドキュメントノードであるため、式は True を返します。  
   
 ```  
 SELECT @var.query('(/root/..)[1] instance of document-node()') -- true  
 ```  
   
- 次のクエリでは、式は、XML インスタンスから最初のノードを取得します。 このノードは処理命令ノードなので、`instance of processing-instruction()` 式により True が返されます。  
+ 次のクエリでは、式は XML インスタンスから最初のノードを取得します。 このノードは処理命令ノードなので、`instance of processing-instruction()` 式により True が返されます。  
   
 ```  
 SELECT @var.query('(/node())[1] instance of processing-instruction()')  
 ```  
   
 ### <a name="implementation-limitations"></a>実装の制限事項  
- 特定の制限事項を次に示します。  
+ 具体的な制限は次のとおりです。  
   
--   **document-node()** コンテンツ タイプの構文はサポートされません。  
+-   コンテンツの種類が構文の**ドキュメント-node ()** はサポートされていません。  
   
--   **processing-instruction (name)** 構文がサポートされていません。  
+-   **処理命令 (name)** 構文はサポートされていません。  
   
 ## <a name="element-tests"></a>要素のテスト  
- 要素のテストを使用して、特定の名前と型を持つ要素ノード、式から返された要素ノードと一致します。 次のような要素のテストを使用できます。  
+ 要素テストは、式によって返された要素ノードと、特定の名前および型を持つ要素ノードとを照合するために使用されます。 次のような要素のテストを使用できます。  
   
 ```  
 element ()  
@@ -243,7 +243,7 @@ element(*, ElementType?)
 ```  
   
 ## <a name="attribute-tests"></a>属性のテスト  
- 属性のテストでは、式から返された属性が属性ノードであるかどうかが判断されます。 これらの属性のテストを使用することができます。  
+ 属性のテストでは、式から返された属性が属性ノードであるかどうかが判断されます。 これらの属性テストを使用できます。  
   
  `attribute()`  
   
@@ -255,7 +255,7 @@ element(*, ElementType?)
  次の例は、要素のテストおよび属性のテストが役立つシナリオを示しています。  
   
 ### <a name="example-a"></a>例 A  
- 次の XML スキーマ定義、`CustomerType`複合型を <`firstName`> と <`lastName`> 要素は省略可能です。 指定された XML インスタンスの場合は、特定の顧客名が存在するかどうかを確認する必要があります。  
+ 次の XML スキーマでは`CustomerType` 、<`firstName`> と <`lastName`> 要素が省略可能な複合型を定義しています。 指定された XML インスタンスでは、特定の顧客に対して最初の名前が存在するかどうかを判断する必要がある場合があります。  
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  
@@ -279,7 +279,7 @@ SET @var = '<x:customer xmlns:x="myNS">
 </x:customer>'  
 ```  
   
- 次のクエリは、`instance of element (firstName)`を決定する式かどうかの最初の子要素 <`customer`> 名を持つ要素は、<`firstName`>。 この場合、True が返されます。  
+ 次のクエリでは`instance of element (firstName)` 、式を使用して、<`customer`> の最初の子要素が> <`firstName`名前を持つ要素であるかどうかを判断します。 この場合、True が返されます。  
   
 ```  
 SELECT @var.query('declare namespace x="myNS";   
@@ -287,18 +287,18 @@ SELECT @var.query('declare namespace x="myNS";
 GO  
 ```  
   
- 削除する場合、<`firstName`> インスタンス要素は、クエリは False を返します。  
+ インスタンスから <`firstName`> 要素を削除すると、クエリは False を返します。  
   
- また、次を使用することができます。  
+ 次の項目を使用することもできます。  
   
--   `element(ElementName, ElementType?)`に次のクエリで示すように、型の構文をシーケンス処理します。 この構文では、名前が `firstName` で型が `xs:string` の NULL 要素ノードまたは NULL 以外の要素ノードが照合されます。  
+-   次`element(ElementName, ElementType?)`のクエリに示すように、シーケンス型の構文。 この構文では、名前が `firstName` で型が `xs:string` の NULL 要素ノードまたは NULL 以外の要素ノードが照合されます。  
   
     ```  
     SELECT @var.query('declare namespace x="myNS";   
     (/x:customer/*)[1] instance of element (firstName, xs:string?)')  
     ```  
   
--   `element(*, type?)`に次のクエリで示すように、型の構文をシーケンス処理します。 型がある場合、要素ノードに一致する`xs:string`の名前に関係なく、します。  
+-   次`element(*, type?)`のクエリに示すように、シーケンス型の構文。 型が`xs:string`である場合は、その名前に関係なく、要素ノードと一致します。  
   
     ```  
     SELECT @var.query('declare namespace x="myNS"; (/x:customer/*)[1] instance of element (*, xs:string?)')  
@@ -306,9 +306,9 @@ GO
     ```  
   
 ### <a name="example-b"></a>例 B  
- 次の例では、式によって返されたノードが特定の名前を持つ要素ノードであるかどうかを確認する方法を示します。 使用して、 **element()** をテストします。  
+ 次の例は、式によって返されるノードが特定の名前を持つ要素ノードであるかどうかを確認する方法を示しています。 **要素 ()** テストを使用します。  
   
- 次の例では、2 つの <`Customer`> の 2 つのさまざまな種類のクエリ対象の XML インスタンス内の要素は`CustomerType`と`SpecialCustomerType`します。 型を認識することを前提としています、<`Customer`> 式によって返される要素。 次の XML スキーマ コレクションでは、`CustomerType` 型と `SpecialCustomerType` 型を定義しています。  
+ 次の例では、クエリ対象`Customer`の XML インスタンス内の2つの <> 要素に、 `CustomerType`とと`SpecialCustomerType`いう2つの異なる型があります。 式によって返される <`Customer`> 要素の型を知りたいとします。 次の XML スキーマ コレクションでは、`CustomerType` 型と `SpecialCustomerType` 型を定義しています。  
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  
@@ -335,7 +335,7 @@ CREATE XML SCHEMA COLLECTION SC AS N'
 GO  
 ```  
   
- この XML スキーマ コレクションの作成に使用する型指定された**xml**変数。 この変数に割り当てられている XML インスタンスでは、2 つがあります <`customer`> の 2 つの異なる型の要素。 最初の要素は `CustomerType` 型で、2 つ目の要素は `SpecialCustomerType` 型です。  
+ この XML スキーマコレクションは、型指定された**xml**変数を作成するために使用されます。 この変数に割り当てられた XML インスタンスに`customer`は、2つの異なる型の2つの <> 要素があります。 最初の要素は `CustomerType` 型で、2 つ目の要素は `SpecialCustomerType` 型です。  
   
 ```  
 DECLARE @var XML(SC)  
@@ -358,10 +358,10 @@ SELECT @var.query('declare namespace x="myNS";
     (/x:customer)[1] instance of element (*, x:SpecialCustomerType ?)')  
 ```  
   
- 以前のクエリの式の変更を 2 つ目を取得するかどうかは <`customer`> 要素 (`/x:customer)[2]`)、`instance of`は True を返します。  
+ 前のクエリの式を変更し、2番目の <`customer`> 要素 (`/x:customer)[2]`) を`instance of`取得した場合、は True を返します。  
   
 ### <a name="example-c"></a>例 C  
- この例では、属性のテストを使用します。 次の XML スキーマでは、CustomerID、Age 属性 CustomerType 複合型を定義します。 Age 属性は省略可能です。 特定の XML インスタンスに対して Age 属性に存在するかどうかを判断することがあります、<`customer`> 要素。  
+ この例では、属性のテストを使用します。 次の XML スキーマでは、CustomerID 属性と Age 属性を使用して、顧客の Type 複合型を定義しています。 Age 属性は省略可能です。 特定の XML インスタンスの場合は、Age 属性が <`customer`> 要素に存在するかどうかを判断できます。  
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  
@@ -382,7 +382,7 @@ CREATE XML SCHEMA COLLECTION SC AS N'
 GO  
 ```  
   
- 次のクエリでは、クエリ対象の XML インスタンスに `Age` という名前の属性ノードが存在するので、True が返されます。 この式では、`attribute(Age)` 属性のテストを使用しています。 属性の順序が決まっていないので、クエリでは FLWOR 式を使用してすべての属性を取得し、`instance of` 式を使用して各属性をテストします。 例では、最初に、型指定された XML スキーマ コレクションを作成**xml**変数。  
+ 次のクエリでは、クエリ対象の XML インスタンスに `Age` という名前の属性ノードが存在するので、True が返されます。 この式では、`attribute(Age)` 属性のテストを使用しています。 属性の順序が決まっていないので、クエリでは FLWOR 式を使用してすべての属性を取得し、`instance of` 式を使用して各属性をテストします。 この例では、まず XML スキーマコレクションを作成して、型指定された**xml**変数を作成します。  
   
 ```  
 DECLARE @var XML(SC)  
@@ -403,7 +403,7 @@ GO
   
  省略可能な `Age` 属性をインスタンスから削除すると、上記のクエリにより False が返されます。  
   
- 属性名と型を指定することができます (`attribute(name,type)`) 属性のテスト。  
+ 属性の名前と型 (`attribute(name,type)`) は、属性のテストで指定できます。  
   
 ```  
 SELECT @var.query('declare namespace x="myNS";   
@@ -415,24 +415,24 @@ RETURN
         ()')  
 ```  
   
- または、指定することができます、`attribute(*, type)`シーケンス型の構文。 これは、属性の型が名前に関係なく、指定した型と一致する場合で、属性ノードと一致します。  
+ または、シーケンス型の`attribute(*, type)`構文を指定することもできます。 名前に関係なく、属性の型が指定した型と一致する場合、これは属性ノードと一致します。  
   
 ### <a name="implementation-limitations"></a>実装の制限事項  
- 特定の制限事項を次に示します。  
+ 具体的な制限は次のとおりです。  
   
--   要素のテストには、出現インジケーターで、型名を続けて ( **?** )。  
+-   要素のテストでは、型名の後に出現インジケーター (**?**) を続ける必要があります。  
   
--   **element (ElementName, TypeName)** はサポートされていません。  
+-   **要素 (ElementName、TypeName)** はサポートされていません。  
   
 -   **要素 (\*、TypeName)** はサポートされていません。  
   
--   **schema-element()** はサポートされていません。  
+-   **スキーマ要素 ()** はサポートされていません。  
   
--   **schema-attribute (attributename)** はサポートされていません。  
+-   **スキーマ属性 (AttributeName)** はサポートされていません。  
   
--   明示的に照会する**xsi:type**または**xsi:nil**はサポートされていません。  
+-   **Xsi: type**または**xsi: nil**の明示的なクエリはサポートされていません。  
   
-## <a name="see-also"></a>関連項目  
- [システム入力&#40;XQuery&#41;](../xquery/type-system-xquery.md)  
+## <a name="see-also"></a>参照  
+ [型システム &#40;XQuery&#41;](../xquery/type-system-xquery.md)  
   
   

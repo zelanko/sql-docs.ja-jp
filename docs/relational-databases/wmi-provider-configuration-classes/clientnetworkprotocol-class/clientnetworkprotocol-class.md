@@ -17,15 +17,15 @@ ms.assetid: 19ccc16b-0afe-4e28-a7ac-d5ff25b873b6
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 8d049434b53fee9f90d02a35e9e0284a4a266812
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73659131"
 ---
 # <a name="clientnetworkprotocol-class"></a>ClientNetworkProtocol クラス
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  [Clientnetworkprotocol クラス](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md)は、ネットワーク経由で [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスとの通信を可能にするクライアントインスタンスにインストールされているネットワークプロトコルを表します。  
+  [Clientnetworkprotocol クラス](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md)は、ネットワーク経由でのインスタンスとの[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]通信を可能にするクライアントインスタンスにインストールされているネットワークプロトコルを表します。  
   
  [Clientnetworkprotocol クラス](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md)を使用すると、次のタスクを実行できます。  
   

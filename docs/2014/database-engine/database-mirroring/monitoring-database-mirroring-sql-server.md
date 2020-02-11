@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 23c8c3c76b881f342f56490e5722a0ae641464ac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62755366"
 ---
 # <a name="monitoring-database-mirroring-sql-server"></a>データベース ミラーリングの監視 (SQL Server)
@@ -82,7 +82,7 @@ ms.locfileid: "62755366"
   
      次の表では、データベース ミラーリング モニターとは別にデータベース ミラーリングの監視を管理および使用するためのストアド プロシージャについて説明します。  
   
-    |手順|説明|  
+    |手順|[説明]|  
     |---------------|-----------------|  
     |[sp_dbmmonitoraddmonitoring](/sql/relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql)|サーバー インスタンス上のミラー化されたデータベースごとに、定期的に状態情報を更新するジョブを作成します。|  
     |[sp_dbmmonitorchangemonitoring](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql)|データベース ミラーリング監視パラメーターの値を変更します。|  
@@ -129,8 +129,8 @@ ms.locfileid: "62755366"
   
      システム管理者は、 **sp_dbmmonitorresults** システム ストアド プロシージャを使用して状態テーブルを表示できます。また、前回の更新から 15 秒以内に更新が行われていない場合には、必要に応じて状態テーブルを更新できます。 このプロシージャは、 **sp_dbmmonitorupdate** プロシージャを呼び出し、プロシージャ コールでの要求数に応じて 1 つ以上の履歴行を返します。 返される結果セットの状態に関する詳細については、「 [sp_dbmmonitorresults &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql)」を参照してください。  
   
-#### <a name="monitoring-database-mirroring-status-by-dbmmonitor-members"></a>データベース ミラーリングの状態の監視 (dbm_monitor メンバーの場合)  
- 既に説明したように、 **sp_dbmmonitorupdate** の初回実行時に、 **dbm_monitor** 固定データベース ロールが **msdb** データベースに作成されます。 **dbm_monitor** 固定データベース ロールのメンバーは、データベース ミラーリング モニターまたは **sp_dbmmonitorresults** ストアド プロシージャを使用して既存のミラーリングの状態を表示できます。 ただし、これらのユーザーは状態テーブルを更新できません。 表示された状態の古さを調べるには、 **[状態]** ページの **[プリンシパル ログ (***\<time>***)]** ラベルと **[ミラー ログ (***\<time>***)]** ラベルで時刻を確認できます。  
+#### <a name="monitoring-database-mirroring-status-by-dbm_monitor-members"></a>データベース ミラーリングの状態の監視 (dbm_monitor メンバーの場合)  
+ 既に説明したように、 **sp_dbmmonitorupdate** の初回実行時に、 **dbm_monitor** 固定データベース ロールが **msdb** データベースに作成されます。 **dbm_monitor** 固定データベース ロールのメンバーは、データベース ミラーリング モニターまたは **sp_dbmmonitorresults** ストアド プロシージャを使用して既存のミラーリングの状態を表示できます。 ただし、これらのユーザーは状態テーブルを更新できません。 表示された状態の古さを調べるには、**[状態]*** ページの \<[プリンシパル ログ (***** time>**)]*** ラベルと \<[ミラー ログ (***** time>**)]** ラベルで時刻を確認できます。  
   
  **dbm_monitor** 固定データベース ロールのメンバーは、 **[データベース ミラーリング モニターのジョブ]** を使用して定期的に状態テーブルを更新します。 ジョブが存在しない場合や [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントが停止している場合、状態が急速に古くなり、ミラーリング セッションの構成を反映しなくなることがあります。 たとえば、フェールオーバー後、パートナーがプリンシパルまたはミラーなどの同じロールを共有しているように見えたり、現在のプリンシパル サーバーがミラー サーバーとして表示され、その一方で現在のミラー サーバーがプリンシパルとして表示されたりすることがあります。  
   
@@ -154,7 +154,7 @@ ms.locfileid: "62755366"
   
 -   現在のロール  
   
-     サーバー インスタンスの現在のロール。 表示される状態は次のとおりです。  
+     サーバー インスタンスの現在のロール。 可能性のある状態は次のとおりです。  
   
     -   プリンシパル  
   
@@ -162,7 +162,7 @@ ms.locfileid: "62755366"
   
 -   ミラーリング状態  
   
-     表示される状態は次のとおりです。  
+     可能性のある状態は次のとおりです。  
   
     -   Unknown  
   
@@ -170,17 +170,17 @@ ms.locfileid: "62755366"
   
     -   同期済み  
   
-    -   中断  
+    -   Suspended  
   
-    -   切断済み  
+    -   [Disconnected]\(切断済み\)  
   
 -   ミラーリング監視サーバーの接続  
   
-     ミラーリング監視サーバーの接続状態。 表示される状態は次のとおりです。  
+     ミラーリング監視サーバーの接続状態。 可能性のある状態は次のとおりです。  
   
     -   Unknown  
   
-    -   接続済み  
+    -   接続中  
   
     -   [接続解除されました。]  
   
@@ -295,7 +295,7 @@ ms.locfileid: "62755366"
   
 -   **Database Mirroring State Change** イベント クラス  
   
-     ミラー化されたデータベースのミラーリングの状態が変更された時点を示します。 詳細については、「 [Database Mirroring State Change Event Class](../../relational-databases/event-classes/database-mirroring-state-change-event-class.md)」を参照してください。  
+     ミラー化されたデータベースのミラーリングの状態が変更された時点を示します。 詳しくは、「 [Database Mirroring State Change Event Class](../../relational-databases/event-classes/database-mirroring-state-change-event-class.md)」をご覧ください。  
   
 -   **Audit Database Mirroring Login** イベント クラス  
   

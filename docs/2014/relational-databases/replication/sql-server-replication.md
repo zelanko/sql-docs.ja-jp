@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: be03754ea8eeb61d838357667da6e37e1be6bc31
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62626154"
 ---
 # <a name="sql-server-replication"></a>SQL Server のレプリケーション
@@ -37,42 +37,42 @@ ms.locfileid: "62626154"
 
  ## <a name="replication-security"></a>レプリケーションのセキュリティ
   
--   [レプリケーションのセキュリティ設定の表示および変更](security/view-and-modify-replication-security-settings.md)  
+-   [レプリケーションのセキュリティ設定を表示および変更する](security/view-and-modify-replication-security-settings.md)  
 -   [パブリケーション アクセス リストのログインの管理](security/manage-logins-in-the-publication-access-list.md)  
   
 ## <a name="publishing-and-distribution"></a>パブリッシングおよびディストリビューション  
   
 -   [パブリッシングおよびディストリビューションの構成](configure-publishing-and-distribution.md)   
--   [パブリケーション プロパティの表示および変更](publish/view-and-modify-publication-properties.md)   
+-   [パブリケーションのプロパティの表示および変更](publish/view-and-modify-publication-properties.md)   
 -   [パブリッシングおよびディストリビューションの無効化](disable-publishing-and-distribution.md)  
   
 ## <a name="publications-and-articles"></a>パブリケーションおよびアーティクル 
   
--   [パブリケーションの作成](publish/create-a-publication.md)    
+-   [パブリケーションを作成する](publish/create-a-publication.md)    
 -   [アーティクルの定義](publish/define-an-article.md)   
--   [パブリケーション プロパティの表示および変更](publish/view-and-modify-publication-properties.md)   
+-   [パブリケーションのプロパティの表示および変更](publish/view-and-modify-publication-properties.md)   
 -   [アーティクルのプロパティの表示および変更](publish/view-and-modify-article-properties.md)    
--   [パブリケーションの削除](publish/delete-a-publication.md)   
+-   [パブリケーションを削除する](publish/delete-a-publication.md)   
 -   [アーティクルの削除](publish/delete-an-article.md)    
--   [Oracle データベースからのパブリケーションの作成](publish/create-a-publication-from-an-oracle-database.md)   
--   [サブスクリプションの有効期限の設定](publish/set-the-expiration-period-for-subscriptions.md)  
--   [スキーマ オプションの指定](publish/specify-schema-options.md)  
+-   [Oracle Database からのパブリケーションの作成](publish/create-a-publication-from-an-oracle-database.md)   
+-   [サブスクリプションの有効期限を設定する](publish/set-the-expiration-period-for-subscriptions.md)  
+-   [スキーマオプションの指定](publish/specify-schema-options.md)  
 -   [スキーマ変更のレプリケート](publish/replicate-schema-changes.md)    
--   [ID 列の管理](publish/manage-identity-columns.md)   
+-   [Id 列の管理](publish/manage-identity-columns.md)   
 -   [マージ パブリケーションの互換性レベルの設定](publish/set-the-compatibility-level-for-merge-publications.md)  
   
 ### <a name="snapshot-options"></a>スナップショット オプション  
   
 -   [スナップショットのプロパティの構成](publish/configure-snapshot-properties-replication-transact-sql-programming.md)    
--   [FTP でのスナップショットの配信](publish/deliver-a-snapshot-through-ftp.md) 
+-   [FTP を使用してスナップショットを配信する](publish/deliver-a-snapshot-through-ftp.md) 
   
 ### <a name="filter-data"></a>データのフィルター選択  
   
 -   [列フィルターの定義および変更](publish/define-and-modify-a-column-filter.md)    
--   [静的行フィルターの定義および変更](publish/define-and-modify-a-static-row-filter.md)    
--   [Define and Modify a Parameterized Row Filter for a Merge Article](publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)    
+-   [静的行フィルターを定義および変更する](publish/define-and-modify-a-static-row-filter.md)    
+-   [マージアーティクルのパラメーター化された行フィルターを定義および変更する](publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)    
 -   [パラメーター化された行フィルターの最適化](publish/optimize-parameterized-row-filters.md)    
--   [マージ アーティクル間の結合フィルターの定義および変更](publish/define-and-modify-a-join-filter-between-merge-articles.md)  
+-   [マージアーティクル間の結合フィルターを定義および変更する](publish/define-and-modify-a-join-filter-between-merge-articles.md)  
   
 ### <a name="transactional-replication-options"></a>トランザクション レプリケーション オプション  
   
@@ -81,58 +81,58 @@ ms.locfileid: "62626154"
   
 ### <a name="merge-replication-options"></a>マージ レプリケーション オプション  
   
--   [マージ テーブル アーティクル間に論理レコード リレーションシップを定義する](publish/define-a-logical-record-relationship-between-merge-table-articles.md)    
--   [マージ レプリケーションのプロパティの指定](publish/specify-merge-replication-properties.md)    
+-   [マージテーブルアーティクル間に論理レコードリレーションシップを定義する](publish/define-a-logical-record-relationship-between-merge-table-articles.md)    
+-   [マージレプリケーションのプロパティの指定](publish/specify-merge-replication-properties.md)    
 -   [マージ アーティクル競合回避モジュールの指定](publish/specify-a-merge-article-resolver.md)    
 
   
 ## <a name="manage-subscriptions"></a>サブスクリプションを管理する  
   
--   [Create a Pull Subscription](create-a-pull-subscription.md)    
+-   [プル サブスクリプションの作成](create-a-pull-subscription.md)    
 -   [プル サブスクリプションのプロパティの表示または変更](view-and-modify-pull-subscription-properties.md)    
 -   [プル サブスクリプションの削除](delete-a-pull-subscription.md)    
 -   [プッシュ サブスクリプションの作成](create-a-push-subscription.md)   
 -   [プッシュ サブスクリプションのプロパティの表示または変更](view-and-modify-push-subscription-properties.md)   
 -   [プッシュ サブスクリプションの削除](delete-a-push-subscription.md)   
 -   [同期スケジュールの指定](specify-synchronization-schedules.md)    
--   [トランザクション パブリケーションの更新可能なサブスクリプションの作成](publish/create-an-updatable-subscription-to-a-transactional-publication.md)  
+-   [トランザクションパブリケーションに対する更新可能なサブスクリプションの作成](publish/create-an-updatable-subscription-to-a-transactional-publication.md)  
 -   [SQL Server 以外のサブスクライバーのサブスクリプションの作成](create-a-subscription-for-a-non-sql-server-subscriber.md)  
   
 ## <a name="synchronize-subscriptions"></a>サブスクリプションの同期  
   
--   [初期スナップショットの作成および適用](create-and-apply-the-initial-snapshot.md)   
+-   [初期スナップショットを作成して適用する](create-and-apply-the-initial-snapshot.md)   
 -   [パラメーター化されたフィルターを使用したパブリケーションのスナップショットの作成](create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)    
--   [バックアップからトランザクション サブスクリプションを初期化します。](initialize-a-transactional-subscription-from-a-backup.md)    
--   [手動によるサブスクリプションの初期化](initialize-a-subscription-manually.md)    
--   [プル サブスクリプションの同期](synchronize-a-pull-subscription.md)    
--   [プッシュ サブスクリプションの同期](synchronize-a-push-subscription.md)   
+-   [バックアップからのトランザクション サブスクリプションの初期化](initialize-a-transactional-subscription-from-a-backup.md)    
+-   [サブスクリプションを手動で初期化する](initialize-a-subscription-manually.md)    
+-   [プルサブスクリプションの同期](synchronize-a-pull-subscription.md)    
+-   [プッシュサブスクリプションの同期](synchronize-a-push-subscription.md)   
 -   [サブスクリプションの再初期化](reinitialize-a-subscription.md)    
--   [同期中にスクリプトを実行します。](execute-scripts-during-synchronization-replication-transact-sql-programming.md)    
--   [マージ アーティクルのビジネス ロジック ハンドラーの実装](implement-a-business-logic-handler-for-a-merge-article.md)  
--   [ビジネス ロジック ハンドラーのデバッグ&#40;レプリケーション プログラミング&#41;](debug-a-business-logic-handler-replication-programming.md)    
--   [同期中にトリガーと制約の動作を制御します。](control-behavior-of-triggers-and-constraints-in-synchronization.md)    
--   [マージ アーティクルのカスタム競合回避モジュールの実装](implement-a-custom-conflict-resolver-for-a-merge-article.md)  
+-   [同期中のスクリプトの実行](execute-scripts-during-synchronization-replication-transact-sql-programming.md)    
+-   [マージアーティクルのビジネスロジックハンドラーの実装](implement-a-business-logic-handler-for-a-merge-article.md)  
+-   [ビジネスロジックハンドラーのデバッグ &#40;レプリケーションプログラミング&#41;](debug-a-business-logic-handler-replication-programming.md)    
+-   [同期中にトリガーと制約の動作を制御する](control-behavior-of-triggers-and-constraints-in-synchronization.md)    
+-   [マージアーティクルのカスタム競合回避モジュールの実装](implement-a-custom-conflict-resolver-for-a-merge-article.md)  
   
-## <a name="administeration"></a>Administeration 
+## <a name="administeration"></a>このように 
   
--   [レプリケーション エージェント プロファイルの操作](agents/work-with-replication-agent-profiles.md)   
+-   [レプリケーション エージェント プロファイルを操作する](agents/work-with-replication-agent-profiles.md)   
 -   [サブスクライバーでのデータの検証](validate-data-at-the-subscriber.md)    
--   [パラメーター化されたフィルターによるマージ パブリケーションのパーティションの管理](publish/manage-partitions-for-a-merge-publication-with-parameterized-filters.md)    
--   [マージ パブリケーション内のテーブルにデータを一括読み込み](bulk-load-data-into-tables-in-a-merge-publication.md)    
--   [マージ メタデータをクリーンアップします。](administration/clean-up-merge-metadata-replication-transact-sql-programming.md)    
--   [マージ アーティクルのダミー更新を実行します。](administration/perform-a-dummy-update-for-a-merge-article-replication-transact-sql-programming.md)    
--   [レプリケートされたコマンドとディストリビューション データベースの他の情報を表示](monitor/view-replicated-commands-and-information-in-distribution-database.md)    
--   [トランザクション レプリケーションの連携バックアップを有効にします。](administration/enable-coordinated-backups-for-transactional-replication.md)   
--   [ピア ツー ピア トポロジを管理します。](administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)    
--   [レプリケーション トポロジの停止](administration/quiesce-a-replication-topology-replication-transact-sql-programming.md)    
--   [Oracle パブリッシャーのトランザクション セット ジョブを構成します。](administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
--   [レプリケーション スクリプトをアップグレードします。](administration/upgrade-replication-scripts-replication-transact-sql-programming.md)  
+-   [パラメーター化されたフィルターを使用してマージパブリケーションのパーティションを管理する](publish/manage-partitions-for-a-merge-publication-with-parameterized-filters.md)    
+-   [マージ パブリケーションでのテーブルへのデータの一括読み込み](bulk-load-data-into-tables-in-a-merge-publication.md)    
+-   [マージメタデータのクリーンアップ](administration/clean-up-merge-metadata-replication-transact-sql-programming.md)    
+-   [マージアーティクルのダミー更新の実行](administration/perform-a-dummy-update-for-a-merge-article-replication-transact-sql-programming.md)    
+-   [ディストリビューションデータベース内のレプリケートされたコマンドおよびその他の情報を表示する](monitor/view-replicated-commands-and-information-in-distribution-database.md)    
+-   [トランザクション レプリケーションの連携バックアップの有効化](administration/enable-coordinated-backups-for-transactional-replication.md)   
+-   [ピアツーピアトポロジの管理](administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)    
+-   [レプリケーショントポロジの停止](administration/quiesce-a-replication-topology-replication-transact-sql-programming.md)    
+-   [Oracle パブリッシャー用のトランザクション セット ジョブの構成](administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
+-   [レプリケーションスクリプトのアップグレード](administration/upgrade-replication-scripts-replication-transact-sql-programming.md)  
   
-## <a name="monitor"></a>監視
+## <a name="monitor"></a>モニター
   
 -   [管理者以外のユーザーがレプリケーション モニターを使用できるようにする](monitor/allow-non-administrators-to-use-replication-monitor.md)    
 -   [プログラムによるレプリケーションの監視](monitor/programmatically-monitor-replication.md)    
--   [レプリケートされたコマンドとディストリビューション データベースの他の情報を表示](monitor/view-replicated-commands-and-information-in-distribution-database.md)    
+-   [ディストリビューションデータベース内のレプリケートされたコマンドおよびその他の情報を表示する](monitor/view-replicated-commands-and-information-in-distribution-database.md)    
 -   [マージ パブリケーションの競合情報の表示](view-conflict-information-for-merge-publications.md) 
--   [トランザクション レプリケーションの待機時間の計測および接続の検証](monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
+-   [トランザクションレプリケーションの待機時間を計測して接続を検証する](monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
   

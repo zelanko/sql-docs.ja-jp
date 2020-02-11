@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cb2a08d874dd022fdad3646ea263d34dd65b9739
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62677029"
 ---
 # <a name="view-the-policy-based-management-facets-on-a-sql-server-object"></a>SQL Server オブジェクトのポリシー ベースの管理ファセットの表示
@@ -26,9 +26,9 @@ ms.locfileid: "62677029"
   
 -   **作業を開始する準備:**  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
--   **以下を使用してオブジェクトのすべてのファセットを表示するには:**  
+-   **次のものを使用してオブジェクト内のすべてのファセットを表示するには:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -45,7 +45,7 @@ ms.locfileid: "62677029"
   
 1.  オブジェクト エクスプローラーで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンス、インスタンス オブジェクト、データベース、またはデータベース オブジェクトを右クリックし、 **[ファセット]** をクリックします。  
   
-2.  **[ファセットの表示 - _object_name_]** ダイアログ ボックスの **[ファセット]** ボックスの一覧で、プロパティを表示するファセットを選択します。 このダイアログ ボックスで利用可能なオプションの詳細については、「 [View Facets Dialog Box](view-facets-dialog-box.md)」を参照してください。  
+2.  [ファ**セットの表示-**_object_name_ ] ダイアログボックスの [**ファセット**] ボックスの一覧で、プロパティを表示するファセットを選択します。 このダイアログ ボックスで利用可能なオプションの詳細については、「 [View Facets Dialog Box](view-facets-dialog-box.md)」を参照してください。  
   
 3.  完了したら、 **[OK]** をクリックします。  
   

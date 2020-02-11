@@ -1,5 +1,5 @@
 ---
-title: ストリームと永続性 |Microsoft Docs
+title: ストリームと永続化 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,23 +14,23 @@ ms.assetid: ad5bf52c-fd10-4cfa-bf7d-fcedcaa41eea
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 22fbf503196c467a7816bf4e9c76151276cc6d4a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924028"
 ---
 # <a name="streams-and-persistence"></a>ストリームと永続性
-[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト[保存](../../../ado/reference/ado-api/save-method.md)メソッド ストア、または*が解決しない*、**レコード セット**ファイルでは、および[を開く](../../../ado/reference/ado-api/open-method-ado-recordset.md)メソッドの復元、 **Recordset**そのファイルから。  
+[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトの[Save](../../../ado/reference/ado-api/save-method.md)メソッド*では、***レコードセット**がファイルに保存されるか、保存されます。 [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md)メソッドでは、そのファイルから**レコードセット**が復元されます。  
   
- 2\.7 以降、ADO を使用した、**保存**と**オープン**メソッドを永続化できる、**レコード セット**を[Stream](../../../ado/reference/ado-api/stream-object-ado.md)もオブジェクトです。 この機能は、リモート データ サービス (RDS) や Active Server Pages (ASP) を使用する場合に便利です。  
+ ADO 2.7 以降では、 **Save**メソッドと**Open**メソッドを使用して、**レコードセット**を[Stream](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクトにも永続化できます。 この機能は、リモートデータサービス (RDS) および Active Server ページ (ASP) を使用する場合に特に便利です。  
   
- ASP ページで永続化を単独で使用する方法の詳細については、ASP の現在のドキュメントを参照してください。  
+ ASP ページで永続化を単独で使用する方法の詳細については、現在の ASP ドキュメントを参照してください。  
   
- 次に、いくつかのシナリオを示す方法**Stream**オブジェクトや永続化を使用できます。  
+ **ストリーム**オブジェクトと永続化を使用する方法を示すいくつかのシナリオを次に示します。  
   
 ## <a name="scenario-1"></a>シナリオ 1  
- このシナリオは単に保存、 **Recordset** 、ファイルに、 **Stream**します。 別に、永続化ストリームを開きます**Recordset**します。  
+ このシナリオでは、単に**レコードセット**をファイルに保存し、次に**ストリーム**に保存します。 次に、永続化されたストリームを別の**レコードセット**に開きます。  
   
 ```  
 Dim rs1 As ADODB.Recordset  
@@ -50,7 +50,7 @@ rs2.Open stm
 ```  
   
 ## <a name="scenario-2"></a>シナリオ 2  
- このシナリオが引き続き発生する、**レコード セット**に、 **Stream** XML 形式でします。 これは、後、読み取ります、 **Stream**を調べて、操作、または表示できる文字列にします。  
+ このシナリオでは、**レコードセット**は XML 形式の**ストリーム**に保持されます。 次に、**ストリーム**を、確認、操作、または表示できる文字列に読み取ります。  
   
 ```  
 Dim rs As ADODB.Recordset  
@@ -76,7 +76,7 @@ strRst = stm.ReadText(adReadAll)
 ```  
   
 ## <a name="scenario-3"></a>シナリオ 3  
- このコード例は、ASP のコードの永続化を示しています、 **Recordset**に直接 XML として、**応答**オブジェクト。  
+ 次のコード例では、ASP コードを使用して、**レコードセット**を XML として**応答**オブジェクトに直接永続化します。  
   
 ```  
 ...  
@@ -100,11 +100,11 @@ Set rs = nothing
 ```  
   
 ## <a name="scenario-4"></a>シナリオ 4  
- このシナリオでは、ASP コードの内容を書き込みます。、 **Recordset**クライアント adtg 形式の形式でします。 [OLE DB 用の Microsoft カーソル サービス](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md)このデータを使用して、作成、接続が切断された**Recordset**します。  
+ このシナリオでは、ASP コードによって、**レコードセット**の内容が ADTG 形式でクライアントに書き込まれます。 [OLE DB 用の Microsoft Cursor Service](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md)では、このデータを使用して、切断された**レコードセット**を作成できます。  
   
- RDS での新しいプロパティ[DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)、 [URL](../../../ado/reference/rds-api/url-property-rds.md)、によって生成される .asp ページを指す、**レコード セット**します。 つまり、**レコード セット**オブジェクトを取得できる RDS せず、サーバー側を使用して[DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)オブジェクトまたはユーザーのビジネス オブジェクトを記述します。 これにより、RDS のプログラミング モデルが大幅に合理化されます。  
+ RDS [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)の新しいプロパティである[URL](../../../ado/reference/rds-api/url-property-rds.md)は、**レコードセット**を生成する .asp ページを指します。 これは、サーバー側の[DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)オブジェクトを使用して、またはビジネスオブジェクトを記述するユーザーを使用しないで、**レコードセット**オブジェクトを取得できることを意味します。 これにより、RDS プログラミングモデルが大幅に簡略化されます。  
   
- という名前のサーバー側コード https://server/directory/recordset.asp:  
+ サーバー側コード、という名前https://server/directory/recordset.asp:  
   
 ```  
 <%  
@@ -147,7 +147,7 @@ rs.Save response, adPersistADTG
 </HTML>  
 ```  
   
- 開発者を使用するオプションもある、 **Recordset**クライアント上のオブジェクト。  
+ また、開発者はクライアントで**レコードセット**オブジェクトを使用することもできます。  
   
 ```  
 ...  
@@ -160,7 +160,7 @@ function GetRs()
 ...  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Open メソッド (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [Record オブジェクト (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [Save メソッド](../../../ado/reference/ado-api/save-method.md)

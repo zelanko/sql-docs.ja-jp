@@ -1,5 +1,5 @@
 ---
-title: レコード セットのベース テーブル (ADO) にコントロールが変更された |Microsoft Docs
+title: レコードセットベーステーブルへの変更の制御 (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,39 +16,39 @@ ms.assetid: d0e775d8-e353-46a1-ad10-ed4cc240dfaa
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1b70920cd223223d5efb14925a6808168ca9cc16
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67911677"
 ---
-# <a name="unique-table-unique-schema-unique-catalog-properties-dynamic-ado"></a>一意のテーブル、一意なスキーマに固有のカタログのプロパティ-動的 (ADO)
-特定のベース テーブルに密接に変更をコントロールに有効にする、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)の複数のベース テーブルに対して結合操作をして形式がありません。  
+# <a name="unique-table-unique-schema-unique-catalog-properties-dynamic-ado"></a>一意のテーブル、一意のスキーマ、一意のカタログのプロパティ-動的 (ADO)
+複数のベーステーブルに対する結合操作によって形成された[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)内の特定のベーステーブルに対する変更を厳密に制御できます。  
   
--   **一意テーブル**更新、挿入、および削除を許可するとなるベース テーブルの名前を指定します。  
+-   **一意のテーブル**更新、挿入、および削除が許可されるベーステーブルの名前を指定します。  
   
--   **一意のスキーマ**を指定します、*スキーマ*、またはテーブルの所有者の名前。  
+-   [**一意のスキーマ**]*スキーマ*またはテーブルの所有者の名前を指定します。  
   
--   **Unique Catalog**を指定します、*カタログ*、またはテーブルを含むデータベースの名前。  
+-   **一意のカタログ***カタログ*を指定します。または、テーブルを含むデータベースの名前を指定します。  
   
 ## <a name="settings-and-return-values"></a>設定と戻り値  
- 設定または取得を**文字列**テーブル、スキーマ、またはカタログの名前を指定する値。  
+ テーブル、スキーマ、またはカタログの名前を示す**文字列**値を設定または返します。  
   
-## <a name="remarks"></a>コメント  
- 目的の基底のテーブルは、カタログ、スキーマ、およびテーブル名によって一意に識別されます。 ときに、**一意テーブル**プロパティが設定の値、**一意のスキーマ**または**Unique Catalog**ベース テーブルを検索するプロパティを使用します。 これは、必須ではありませんがそのいずれかまたは両方、**一意のスキーマ**と**固有のカタログ**プロパティを設定する前に、**一意テーブル**プロパティを設定します。  
+## <a name="remarks"></a>解説  
+ 目的のベーステーブルは、そのカタログ名、スキーマ名、およびテーブル名によって一意に識別されます。 一意の**テーブル**プロパティが設定されている場合は、**一意のスキーマ**または一意の**カタログ**プロパティの値を使用してベーステーブルが検索されます。 一意の**テーブル**プロパティが設定される前に、一意の**スキーマ**と**一意のカタログ**プロパティのどちらかまたは両方が設定されていることを前提としていますが、必須ではありません。  
   
- 主キー、**一意テーブル**全体の主キーとして扱われる**レコード セット**します。 これは、主キーを必要とするすべてのメソッドで使用されるキーです。  
+ **一意のテーブル**の主キーは、**レコードセット**全体の主キーとして扱われます。 これは、主キーを必要とする任意のメソッドに使用されるキーです。  
   
- 中に**一意テーブル**が設定されている、[削除](../../../ado/reference/ado-api/delete-method-ado-recordset.md)メソッドは、名前付きのテーブルのみに影響します。 [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)、[再同期](../../../ado/reference/ado-api/resync-method.md)、 [Update](../../../ado/reference/ado-api/update-method.md)、および[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)メソッド、の適切な基になるベーステーブルが影響**Recordset**します。  
+ **一意のテーブル**が設定されている間、 [Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)メソッドは、指定されたテーブルのみに影響します。 [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)、 [Resync](../../../ado/reference/ado-api/resync-method.md)、 [Update](../../../ado/reference/ado-api/update-method.md)、および[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)の各メソッドは、**レコードセット**の基になるベーステーブルに影響します。  
   
- **一意テーブル**カスタムの再同期を実行する前に指定する必要があります。 場合**一意テーブル**が指定されていません、 [Resync Command](../../../ado/reference/ado-api/resync-command-property-dynamic-ado.md)プロパティには効果はありません。  
+ カスタムの再同期を実行する前に、**一意のテーブル**を指定する必要があります。 **一意のテーブル**が指定されていない場合、再[同期コマンド](../../../ado/reference/ado-api/resync-command-property-dynamic-ado.md)のプロパティは無効になります。  
   
- 実行時エラーは、一意のベース テーブルが見つからない場合になります。  
+ 一意のベーステーブルが見つからない場合、実行時エラーが発生します。  
   
- これらの動的プロパティはすべてに追加、 **Recordset**オブジェクト[プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)コレクション時に、 [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)プロパティに設定されて**adUseClient**します。  
+ [カーソル位置](../../../ado/reference/ado-api/cursorlocation-property-ado.md)プロパティが**adUseClient**に設定されている場合、これらの動的プロパティはすべて、**レコードセット**オブジェクトの[プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)コレクションに追加されます。  
   
 ## <a name="applies-to"></a>適用対象  
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

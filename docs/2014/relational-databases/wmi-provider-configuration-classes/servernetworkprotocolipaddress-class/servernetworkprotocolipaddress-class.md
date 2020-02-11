@@ -19,18 +19,18 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: b987e8770b4bef8c09974fc8b0770f4a8a6b45cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62643378"
 ---
 # <a name="servernetworkprotocolipaddress-class"></a>ServerNetworkProtocolIPAddress クラス
-  [ServerNetworkProtocolIPAddress クラス] servernetworkprotocolipaddress-class.md) は、サーバー ネットワーク プロトコルによってサポートされている IP アドレスを表します。  
+  [ServerNetworkProtocolIPAddress Class] ServerNetworkProtocolIPAddress-class.md) は、サーバーネットワークプロトコルによってサポートされる IP アドレスを表します。  
   
- [ServerNetworkProtocolIPAddress クラス] servernetworkprotocolipaddress-class.md) では、次のタスクを実行できます。  
+ [ServerNetworkProtocolIPAddress Class] ServerNetworkProtocolIPAddress-class.md) では、次のタスクを実行できます。  
   
--   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンスの名前の確認  
+-   の[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンスの名前を確認します。  
   
 -   IP アドレス名およびプロトコル名の確認  
   
@@ -38,7 +38,7 @@ ms.locfileid: "62643378"
   
 -   IP アドレスの有効化および無効化  
   
-## <a name="see-also"></a>関連項目  
- [サーバー ネットワーク プロトコルとネットワーク ライブラリの構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+## <a name="see-also"></a>参照  
+ [サーバーのネットワーク プロトコルと Net-Library の構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

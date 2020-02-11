@@ -16,10 +16,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 867c341443b7ce1c459806eaac5427a06a8bbebe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62473233"
 ---
 # <a name="logon-triggers"></a>ログオン トリガー
@@ -50,7 +50,7 @@ ms.locfileid: "62473233"
 -   重大度が 20 を超えるエラーがトリガー内部で発生した。  
   
 ## <a name="disabling-a-logon-trigger"></a>ログオン トリガーを無効にする  
- ログオン トリガーを使用すると、`sysadmin` 固定サーバー ロールのメンバーを含むすべてのユーザーの[!INCLUDE[ssDE](../../../includes/ssde-md.md)]への接続を効率的に禁止できます。 ログオン トリガーによって接続が禁止されているときでも、`sysadmin` 固定サーバー ロールのメンバーは、専用管理者接続を使用するか、または[!INCLUDE[ssDE](../../../includes/ssde-md.md)]を最小構成モード (-f) で起動することにより、接続できます。 詳細については、「[データベース エンジン サービスのスタートアップ オプション](../../database-engine/configure-windows/database-engine-service-startup-options.md)」を参照してください。  
+ ログオン トリガーを使用すると、[!INCLUDE[ssDE](../../../includes/ssde-md.md)] 固定サーバー ロールのメンバーを含むすべてのユーザーの`sysadmin`への接続を効率的に禁止できます。 ログオン トリガーによって接続が禁止されているときでも、`sysadmin` 固定サーバー ロールのメンバーは、専用管理者接続を使用するか、または[!INCLUDE[ssDE](../../../includes/ssde-md.md)]を最小構成モード (-f) で起動することにより、接続できます。 詳細については、「 [データベース エンジン サービスのスタートアップ オプション](../../database-engine/configure-windows/database-engine-service-startup-options.md)」を参照してください。  
   
 ## <a name="related-tasks"></a>Related Tasks  
   

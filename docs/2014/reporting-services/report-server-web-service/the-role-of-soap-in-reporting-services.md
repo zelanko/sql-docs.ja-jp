@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4e0b418e44436912b5ed1368ad7a316951872266
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62519204"
 ---
 # <a name="the-role-of-soap-in-reporting-services"></a>Reporting Services における SOAP の役割
@@ -29,7 +29,8 @@ ms.locfileid: "62519204"
   
  レポート サーバーは SOAP サーバーとして動作します。SOAP サーバーは、SOAP クライアントから要求を受け取り、適切な応答を作成できる SOAP 対応サービスです。 サーバーは要求を処理し、クライアントにエンコードされた応答を送り返します。  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の SOAP メッセージは、クライアントで行われた要求の種類によってさまざまな形式を取ります。 次の例は、レポート サーバー データベースからアイテムを削除する簡単な SOAP クライアント要求を表しています。  
+ 
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の SOAP メッセージは、クライアントで行われた要求の種類によってさまざまな形式を取ります。 次の例は、レポート サーバー データベースからアイテムを削除する簡単な SOAP クライアント要求を表しています。  
   
 ```  
 <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
@@ -41,7 +42,7 @@ ms.locfileid: "62519204"
 </soap:Envelope>  
 ```  
   
- SOAP 自体は、メッセージを `Envelope` 要素に入れるよう要求します。メッセージは一括して `Body` 要素内に入ります。 この例では、Body には <xref:ReportService2010.ReportingService2010.DeleteItem%2A> メソッドの呼び出しが入っています。このメソッドは、削除するアイテムのパスを表す文字列パラメーターを取ります。 すべての SOAP 操作をメソッドにカプセル化する [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] クライアント プロキシ クラスを作成できます。 次の [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] メソッドは上記の SOAP の例を表しています。  
+ SOAP 自体は、メッセージを `Envelope` 要素に入れるよう要求します。メッセージは一括して `Body` 要素内に入ります。 この例では、Body には <xref:ReportService2010.ReportingService2010.DeleteItem%2A> メソッドの呼び出しが入っています。このメソッドは、削除するアイテムのパスを表す文字列パラメーターを取ります。 すべての SOAP 操作[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]をメソッドにカプセル化するクライアントプロキシクラスを作成できます。 次[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)]のメソッドは、前に示した SOAP の例を表しています。  
   
 ```  
 public void DeleteItem(string item);  
@@ -57,12 +58,13 @@ public void DeleteItem(string item);
 </soap:Envelope>  
 ```  
   
- <xref:ReportService2010.ReportingService2010.DeleteItem%2A> メソッドに戻り値はないため、空の応答が返されます。  
+ 
+  <xref:ReportService2010.ReportingService2010.DeleteItem%2A> メソッドに戻り値はないため、空の応答が返されます。  
   
 ## <a name="see-also"></a>参照  
  [SOAP API へのアクセス](accessing-the-soap-api.md)   
  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](../report-manager-ssrs-native-mode.md)   
- [Reporting Services Report Server](../reporting-services-report-server.md)   
+ [レポートサーバーの Reporting Services](../reporting-services-report-server.md)   
  [レポート サーバー web サービス](report-server-web-service.md)  
   
   

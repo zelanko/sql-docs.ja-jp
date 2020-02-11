@@ -15,24 +15,24 @@ ms.assetid: 708efd50-2905-4168-b7e4-91b2e9b23539
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 023ee009831cb3576691f0af5dfb85752d51fcc1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67938740"
 ---
 # <a name="version-property-example-vb"></a>Version プロパティの例 (VB)
-この例では、[バージョン](../../../ado/reference/ado-api/version-property-ado.md)のプロパティを[接続](../../../ado/reference/ado-api/connection-object-ado.md)ADO の現在のバージョンを表示するオブジェクト。 表示するいくつかの動的プロパティを使用します。  
+この例では、 [Connection](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトの[version](../../../ado/reference/ado-api/version-property-ado.md)プロパティを使用して、現在の ADO バージョンを表示します。 また、いくつかの動的プロパティを使用して表示します。  
   
--   現在の DBMS 名とバージョン。  
+-   現在の DBMS の名前とバージョン。  
   
--   OLE DB バージョンです。  
+-   OLE DB バージョン。  
   
--   プロバイダーの名前およびバージョン。  
+-   プロバイダーの名前とバージョン。  
   
--   ODBC のバージョンです。  
+-   ODBC のバージョン。  
   
--   ODBC ドライバーの名前およびバージョン。  
+-   ODBC ドライバーの名前とバージョン。  
   
 ```  
 'BeginVersionVB  
@@ -77,6 +77,6 @@ End Sub
 'EndVersionVB  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [接続オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
+## <a name="see-also"></a>参照  
+ [Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Version プロパティ (ADO)](../../../ado/reference/ado-api/version-property-ado.md)

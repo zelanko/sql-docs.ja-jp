@@ -1,5 +1,5 @@
 ---
-title: キーのオブジェクト (ADOX) |Microsoft Docs
+title: Key オブジェクト (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,39 +16,39 @@ ms.assetid: 55f116fe-4d56-4892-bffe-0cdd6fc727c9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f7e405cfdde86a4f19590a87035ff574e1d255c9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965908"
 ---
 # <a name="key-object-adox"></a>Key オブジェクト (ADOX)
-データベース テーブルから、外部キー、または一意のキー フィールドを表します。  
+データベーステーブルの主キー、外部キー、または一意キーフィールドを表します。  
   
-## <a name="remarks"></a>コメント  
- 次のコード作成、新しい**キー**:  
+## <a name="remarks"></a>解説  
+ 次のコードでは、新しい**キー**が作成されます。  
   
 ```  
 Dim obj As New Key  
 ```  
   
- プロパティのコレクションと、**キー**オブジェクトのことができます。  
+ **キー**オブジェクトのプロパティとコレクションを使用すると、次のことができます。  
   
--   キーを識別、[名前](../../../ado/reference/adox-api/name-property-adox.md)プロパティ。  
+-   [Name](../../../ado/reference/adox-api/name-property-adox.md)プロパティを使用してキーを識別します。  
   
--   キーは、プライマリ、外部キー、または内で一意かどうかを判断、[型](../../../ado/reference/adox-api/type-property-key-adox.md)プロパティ。  
+-   [Type](../../../ado/reference/adox-api/type-property-key-adox.md)プロパティを使用して、キーがプライマリ、外部、または一意であるかどうかを確認します。  
   
--   データベースでキーの列へのアクセス、[列](../../../ado/reference/adox-api/columns-collection-adox.md)コレクション。  
+-   [Columns](../../../ado/reference/adox-api/columns-collection-adox.md)コレクションを使用して、キーのデータベース列にアクセスします。  
   
--   関連テーブルの名前を指定、 [RelatedTable](../../../ado/reference/adox-api/relatedtable-property-adox.md)プロパティ。  
+-   関連テーブルの名前を "関連付け[テーブル](../../../ado/reference/adox-api/relatedtable-property-adox.md)" プロパティと共に指定します。  
   
--   削除またはとの主キーの更新プログラムで実行されるアクションを決定、 [DeleteRule](../../../ado/reference/adox-api/deleterule-property-adox.md)と[UpdateRule](../../../ado/reference/adox-api/updaterule-property-adox.md)プロパティ。  
+-   [DeleteRule](../../../ado/reference/adox-api/deleterule-property-adox.md)プロパティと[UpdateRule](../../../ado/reference/adox-api/updaterule-property-adox.md)プロパティを使用して、主キーの削除または更新に対して実行されるアクションを確認します。  
   
- このセクションには、次のトピックが含まれています。  
+ ここでは、次のトピックについて説明します。  
   
 -   [Key オブジェクトのプロパティ、メソッド、およびイベント](../../../ado/reference/adox-api/key-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>関連項目  
- [Keys Append メソッド、キーの種類、RelatedColumn、RelatedTable、UpdateRule プロパティの例 (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
- [列のコレクション (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
+## <a name="see-also"></a>参照  
+ [Keys Append メソッド、Key Type、UpdateRule プロパティの例 (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
+ [Columns コレクション (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
  [Keys コレクション (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)

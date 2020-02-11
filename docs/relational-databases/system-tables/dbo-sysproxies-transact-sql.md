@@ -1,5 +1,5 @@
 ---
-title: dbo.sysproxies (TRANSACT-SQL) |Microsoft Docs
+title: dbo. sysproxies (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,33 +20,33 @@ ms.assetid: a73da875-be22-45fc-b5e2-ea7ebd48e2d6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1dd486757a912d8f0364f55570a368292cf39ab7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67984895"
 ---
-# <a name="dbosysproxies-transact-sql"></a>dbo.sysproxies (TRANSACT-SQL)
+# <a name="dbosysproxies-transact-sql"></a>dbo. sysproxies (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  属性を定義、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント プロキシ アカウント。 このテーブルに格納されます、 **msdb**データベース。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントプロキシアカウントの属性を定義します。 このテーブルは、 **msdb**データベースに格納されます。  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
-|**proxy_id**|**int**|プロキシ アカウントの ID。|  
-|**name**|**sysname**|プロキシ アカウントの名前。|  
-|**credential_id**|**int**|プロキシ アカウントが使用する資格情報の ID。|  
-|**enabled**|**tinyint**|プロキシ アカウントの状態。<br /><br /> **0** = 無効になっています。 **1** = 有効にします。|  
-|**description**|**nvarchar(512)**|プロキシ アカウントの作成時に、ユーザーが入力した説明。|  
-|**user_sid**|**varbinary(85)**|Microsoft Windows *security_identifier*ユーザーまたはグループがプロキシ資格情報に関連付けられているのです。|  
-|**credential_date_created**|**datetime**|日付と、資格情報が作成された時刻。|  
+|**proxy_id**|**int**|プロキシアカウントの ID。|  
+|**name**|**sysname**|プロキシアカウントの名前。|  
+|**credential_id**|**int**|プロキシアカウントが使用する資格情報の ID。|  
+|**enabled**|**tinyint**|プロキシ アカウントの状態。<br /><br /> **0** = 無効です。 **1** = 有効。|  
+|**記述**|**nvarchar(512)**|プロキシアカウントの作成時にユーザーが入力した説明。|  
+|**user_sid**|**varbinary (85)**|プロキシ資格情報に関連付けられているユーザーまたはグループの Microsoft Windows *security_identifier* 。|  
+|**credential_date_created**|**DATETIME**|資格情報が作成された日付と時刻。|  
   
-## <a name="remarks"></a>コメント  
- メンバーのみ、 **sysadmin**固定サーバー ロールがアクセスできる、 **sysproxies**テーブル。  
+## <a name="remarks"></a>解説  
+ **Sysproxies**テーブルにアクセスできるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
-## <a name="see-also"></a>関連項目  
- [dbo.sysproxylogin &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/dbo-sysproxylogin-transact-sql.md)   
- [dbo.sysproxysubsystem &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/dbo-sysproxysubsystem-transact-sql.md)   
- [dbo.syssubsystems &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/dbo-syssubsystems-transact-sql.md)  
+## <a name="see-also"></a>参照  
+ [dbo. sysproxylogin &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-sysproxylogin-transact-sql.md)   
+ [dbo. sysproxysubsystem &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-sysproxysubsystem-transact-sql.md)   
+ [dbo. syssubsystems システム &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-syssubsystems-transact-sql.md)  
   
   

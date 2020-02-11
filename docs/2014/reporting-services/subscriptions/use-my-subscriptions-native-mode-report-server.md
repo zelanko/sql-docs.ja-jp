@@ -14,27 +14,27 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 650fe0fe02841c55caf0cfba864eb739386ca48a
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72783144"
 ---
 # <a name="use-my-subscriptions"></a>個人用サブスクリプションを使用する
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] レポートマネージャーには、すべてのサブスクリプションを1か所にまとめた **[個人用サブスクリプション**] ページが含まれています。 [個人用サブスクリプション] を使用して、既存のサブスクリプションを表示、変更、および削除できます。 ただし、このページは、サブスクリプションの作成には使用できません。  
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]レポートマネージャーには、すべてのサブスクリプションを1か所にまとめた **[個人用サブスクリプション**] ページが含まれています。 [個人用サブスクリプション] を使用して、既存のサブスクリプションを表示、変更、および削除できます。 ただし、このページは、サブスクリプションの作成には使用できません。  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] ネイティブ モード|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]ネイティブモード|  
   
  [個人用サブスクリプション] 内では、フォルダー、レポート、説明、トリガー、最後に実行された日時、状態によるサブスクリプションの並べ替えが可能です。 日時順に並べ替えられる [最終実行] を除いて、すべての値はアルファベット順に並べ替えられます。  
   
  [個人用サブスクリプション] では、自分で作成したサブスクリプションだけが表示されます。 他のユーザーが所有しているサブスクリプションにサブスクライバーとして自分が追加されていても、そのサブスクリプションは一覧表示されません。データ ドリブン サブスクリプションも表示されません。  
   
- サブスクリプションを名前で検索することはできません。また、トリガー情報、状態情報などを基にサブスクリプションを検索することもできません。 詳細については、「[ネイティブ&#40;&#41;モードでの標準サブスクリプションの作成、変更、および削除 Reporting Services](create-and-manage-subscriptions-for-native-mode-report-servers.md)」を参照してください。  
+ サブスクリプションを名前で検索することはできません。また、トリガー情報、状態情報などを基にサブスクリプションを検索することもできません。 詳細については、「[ネイティブモード&#41;での標準サブスクリプション &#40;Reporting Services の作成、変更、および削除](create-and-manage-subscriptions-for-native-mode-report-servers.md)」を参照してください。  
   
 ## <a name="how-to-use-my-subscriptions"></a>個人用サブスクリプションを使用する方法  
- 個人用サブスクリプションはレポート マネージャーから利用できます。 個人用サブスクリプションにアクセスするには、レポートマネージャーグローバルツールバーの **[個人用サブスクリプション]** をクリックします。  
+ 個人用サブスクリプションはレポート マネージャーから利用できます。 個人用サブスクリプションにアクセスするには、レポートマネージャーグローバルツールバーの [**個人用サブスクリプション**] をクリックします。  
   
 ## <a name="use-windows-powershell-to-list-mysubscriptions"></a>Windows PowerShell を使用した個人用サブスクリプションの一覧表示  
  ![PowerShell 関連コンテンツ](../media/rs-powershellicon.jpg "PowerShell 関連コンテンツ")  

@@ -17,18 +17,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1ba38b6a3c425972ef0b893d302df78e3d835f85
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72783389"
 ---
 # <a name="view-the-job-history"></a>View the Job History
-  このトピックでは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../includes/tsql-md.md)]、または SQL Server 管理オブジェクトを使用して、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのジョブ履歴ログを表示する方法について説明します。  
+  このトピックでは、、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)]、または SQL Server 管理オブジェクトを使用して、でエージェントのジョブ履歴ログを表示する方法について説明します。  
   
 -   **作業を開始する準備:**  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **ジョブ履歴ログを表示する方法:**  
   
@@ -40,7 +40,7 @@ ms.locfileid: "72783389"
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Security"></a> Security  
+###  <a name="Security"></a> セキュリティ  
  詳細については、「 [SQL Server エージェントのセキュリティの実装](implement-sql-server-agent-security.md)」をご覧ください。  
   
 ##  <a name="SSMS"></a> SQL Server Management Studio の使用  
@@ -49,7 +49,8 @@ ms.locfileid: "72783389"
   
 1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続し、そのインスタンスを展開します。  
   
-2.  **[SQL Server エージェント]** を展開し、 **[ジョブ]** を展開します。  
+2.  
+  **[SQL Server エージェント]** を展開し、 **[ジョブ]** を展開します。  
   
 3.  ジョブを右クリックし、 **[履歴の表示]** をクリックします。  
   

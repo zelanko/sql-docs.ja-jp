@@ -19,14 +19,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9f6da8b7376e03ff5c0ab516aeaef0e6ac538b48
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62523625"
 ---
 # <a name="delete-an-alert"></a>Delete an Alert
-  このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの警告を削除する方法について説明します。  
+  このトピックでは、また[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は[!INCLUDE[tsql](../../includes/tsql-md.md)]を使用[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]して、でエージェントの警告を削除する方法について説明します。  
   
  **このトピックの内容**  
   
@@ -34,9 +34,9 @@ ms.locfileid: "62523625"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
--   **警告を削除する方法:**  
+-   **アラートを削除する方法:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -56,7 +56,8 @@ ms.locfileid: "62523625"
   
 #### <a name="to-delete-an-alert"></a>警告を削除するには  
   
-1.  **オブジェクト エクスプローラー** で、削除する SQL Server エージェントの警告を含むサーバーをプラス記号をクリックして展開します。  
+1.  
+  **オブジェクト エクスプローラー** で、削除する SQL Server エージェントの警告を含むサーバーをプラス記号をクリックして展開します。  
   
 2.  プラス記号をクリックして **[SQL Server エージェント]** を展開します。  
   
@@ -64,7 +65,8 @@ ms.locfileid: "62523625"
   
 4.  削除する警告を右クリックして、 **[削除]** を選択します。  
   
-5.  **[オブジェクトの削除]** ダイアログ ボックスで、正しい警告が選択されていることを確認し、 **[OK]** をクリックします。  
+5.  
+  **[オブジェクトの削除]** ダイアログ ボックスで、正しい警告が選択されていることを確認し、 **[OK]** をクリックします。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
@@ -86,6 +88,6 @@ ms.locfileid: "62523625"
     GO  
     ```  
   
- 詳細については、s を参照してください。[sp_delete_alert &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-alert-transact-sql)します。  
+ 詳細については、「s[sp_delete_alert &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-alert-transact-sql)」を参照してください。  
   
   

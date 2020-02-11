@@ -1,5 +1,5 @@
 ---
-title: Count プロパティの例 (vc++) |Microsoft Docs
+title: Count プロパティの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 54dfb1dd-636c-4560-8a3f-32b1f6aa07d7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 73557703a1375128a141de8194929f9284b86930
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919337"
 ---
 # <a name="count-property-example-vc"></a>Count プロパティの例 (VC++)
-この例では、[カウント](../../../ado/reference/ado-api/count-property-ado.md)で 2 つのコレクションのプロパティ、***従業員***データベース。 プロパティは、各コレクション内のオブジェクトの数を取得し、これらのコレクションを列挙するループの上限を設定します。  
+この例では、 ***Employee***データベースに2つのコレクションがある[Count](../../../ado/reference/ado-api/count-property-ado.md)プロパティを示します。 プロパティは、各コレクション内のオブジェクトの数を取得し、これらのコレクションを列挙するループの上限を設定します。  
   
 ```  
 // BeginCountCpp.cpp  
@@ -130,5 +130,5 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Count プロパティ (ADO)](../../../ado/reference/ado-api/count-property-ado.md)

@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6329b0ff8f4d502916d2046e404fcecac8fc5869
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73759336"
 ---
 # <a name="stored-procedures---running"></a>ストアド プロシージャ - 実行
@@ -37,7 +37,7 @@ ms.locfileid: "73759336"
   
 -   機能の追加。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ストアドプロシージャがデータを返すために使用する、次の3つのメカニズムをサポートしています。  
+ Native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client OLE DB プロバイダーでは、ストアドプロシージャが[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]データを返すために使用する3つのメカニズムがサポートされています。  
   
 -   プロシージャ内のすべての SELECT ステートメントで結果セットを生成する。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "73759336"
   
  プロバイダーでは、DBPROP_OUTPUTPARAMETERAVAILABILITY プロパティを使用して、出力パラメーターと戻り値を返すタイミングを報告します。 このプロパティは、DBPROPSET_DATASOURCEINFO プロパティ セットに含まれています。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、DBPROP_OUTPUTPARAMETERAVAILABILITY プロパティを DBPROPVAL_OA_ATROWRELEASE に設定して、結果セットが処理または解放されるまでリターンコードと出力パラメーターが返されないことを示します。  
+ Native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client OLE DB プロバイダーは、DBPROP_OUTPUTPARAMETERAVAILABILITY プロパティを DBPROPVAL_OA_ATROWRELEASE に設定して、結果セットが処理または解放されるまでリターンコードと出力パラメーターが返されないことを示します。  
   
 ## <a name="see-also"></a>参照  
  [ストアド プロシージャ](../../../relational-databases/native-client/ole-db/stored-procedures.md)  

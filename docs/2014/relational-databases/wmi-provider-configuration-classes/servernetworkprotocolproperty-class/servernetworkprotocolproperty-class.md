@@ -19,16 +19,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 39d0a86147d40bb4f2eaf85dbf5b9ae92bfe540d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62642913"
 ---
 # <a name="servernetworkprotocolproperty-class"></a>ServerNetworkProtocolProperty クラス
-  [ServerNetworkProtocolProperty クラス] servernetworkprotocolproperty-class.md) は、サーバー ネットワーク プロトコルのプロパティを表します。  
+  [ServerNetworkProtocolProperty クラス] servernetworkprotocolproperty-class.md) は、サーバーネットワークプロトコルのプロパティを表します。  
   
- [ServerNetworkProtocolProperty クラス] servernetworkprotocolproperty-class.md)、次のタスクを実行できます。  
+ [ServerNetworkProtocolProperty クラス] servernetworkprotocolproperty) を使用すると、次のタスクを実行できます。  
   
 -   現在のプロパティが属するプロトコルの確認  
   
@@ -41,6 +41,6 @@ ms.locfileid: "62642913"
 -   現在のプロパティに対するフラグの設定  
   
 ## <a name="see-also"></a>参照  
- [サーバー ネットワーク プロトコルとネットワーク ライブラリの構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [サーバーのネットワーク プロトコルと Net-Library の構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

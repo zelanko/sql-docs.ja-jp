@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 89818f172ee9af09a44654dffc800bf6adc35de4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62630376"
 ---
 # <a name="subscription-expiration-and-deactivation"></a>サブスクリプションの有効期限と非アクティブ化
@@ -33,7 +33,7 @@ ms.locfileid: "62630376"
  保有期間を設定する場合は、「[サブスクリプションの有効期限の設定](publish/set-the-expiration-period-for-subscriptions.md)」、「[トランザクション パブリケーションのディストリビューションの保有期間の設定 &#40;SQL Server Management Studio&#41;](set-distribution-retention-period-for-transactional-publications.md)」および「[パブリッシングおよびディストリビューションの構成](configure-publishing-and-distribution.md)」を参照してください。  
   
 ## <a name="transactional-replication"></a>トランザクション レプリケーション  
- トランザクション レプリケーションでは、ディストリビューションの最大保有期間 ([sp_adddistributiondb &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql) の **@max_distretention** パラメーター) およびパブリケーションの保有期間 ([sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) の **@retention** パラメーター) を使用します。  
+ トランザクションレプリケーションでは、ディストリビューションの最大保有期間**@max_distretention** ( [sp_adddistributiondb &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql)) とパブリケーションの保有期間 ( **@retention** [sp_addpublication &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)のパラメーター) を使用します。  
   
 -   ディストリビューションの最大保有期間 (既定値は 72 時間) 内にサブスクリプションが同期されず、ディストリビューション データベース内にサブスクライバーに配信されていない変更がある場合、そのサブスクリプションは、ディストリビューターで実行される **ディストリビューションのクリーンアップ** ジョブによって非アクティブ化にマークされます。 サブスクリプションを再初期化する必要があります。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "62630376"
      プッシュ サブスクリプションの期限が切れた場合は完全に削除されますが、プル サブスクリプションの場合は削除されません。 プル サブスクリプションは、サブスクライバーでクリーンアップする必要があります。 詳細については、「 [Delete a Pull Subscription](delete-a-pull-subscription.md)」を参照してください。  
   
 ## <a name="merge-replication"></a>マージ レプリケーション  
- マージ レプリケーションでは、パブリケーションの保有期間 ([sp_addmergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql) の **@retention** パラメーターと **@retention_period_unit** パラメーター) を使用します。 サブスクリプションが期限切れになると、そのサブスクリプションのメタデータが削除されるため、サブスクリプションを再初期化する必要があります。 再初期化されていないサブスクリプションは、パブリッシャーで実行される、 **有効期限が切れたサブスクリプションのクリーンアップ** ジョブによって削除されます。 既定では、このジョブは毎日実行されます。このジョブにより、パブリケーションの保有期間の 2 倍の期間にわたって同期されなかったすべてのプッシュ サブスクリプションが削除されます。 以下に例を示します。  
+ マージレプリケーションでは、パブリケーションの保有期間**@retention** ( **@retention_period_unit** [sp_addmergepublication &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)のパラメーターとパラメーター) を使用します。 サブスクリプションが期限切れになると、そのサブスクリプションのメタデータが削除されるため、サブスクリプションを再初期化する必要があります。 再初期化されていないサブスクリプションは、パブリッシャーで実行される、 **有効期限が切れたサブスクリプションのクリーンアップ** ジョブによって削除されます。 既定では、このジョブは毎日実行されます。このジョブにより、パブリケーションの保有期間の 2 倍の期間にわたって同期されなかったすべてのプッシュ サブスクリプションが削除されます。 次に例を示します。  
   
 -   パブリケーションの保有期間が 14 日間である場合、サブスクリプションは 14 日以内に同期されなかった場合に期限切れになる可能性があります。  
   
@@ -61,13 +61,13 @@ ms.locfileid: "62630376"
   
     -   保有期間が終了するまで、パブリケーションおよびサブスクリプション データベースでメタデータをクリーンアップすることはできません。 レプリケーション パフォーマンスを低下させる可能性があるため、保有期間に大きな値を指定する際は注意してください。 すべてのサブスクライバーが保有期間内で定期的に同期されることを確実に予測できる場合は、小さい値を使用することをお勧めします。  
   
-    -   サブスクリプションの期限が切れないように、 **@retention** に値 0 を指定することは可能ですが、メタデータをクリーンアップできなくなるため、この値は使用しないことを強くお勧めします。  
+    -   サブスクリプションが期限切れにならないように指定することができます**@retention**(の値は 0)。ただし、メタデータをクリーンアップできないため、この値は使用しないことを強くお勧めします。  
   
 -   リパブリッシャーの保有期間は、元のパブリッシャーで設定されている保有期間以下の値に設定する必要があります。 また、すべてのパブリッシャーとその代替同期パートナーに対するパブリケーションの保有期間の値は、同じにする必要があります。 異なる値を使用すると、集約されなくなる可能性があります。 パブリケーションの保有期間の値を変更する必要がある場合は、サブスクライバーを再初期化して、データの未集約が発生しないようにします。  
   
 -   クリーンアップ後、パブリケーションの保有期間を延長し、既にメタデータを削除したパブリッシャーとのマージをサブスクリプションが試行した場合、保有期間の値が増加しているため、そのサブスクリプションは期限切れになりません。 ただし、パブリッシャーには、サブスクライバーに変更をダウンロードするための十分なメタデータが存在しないため、未集約が発生します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [サブスクリプションの再初期化](reinitialize-subscriptions.md)   
  [レプリケーション エージェントの管理](agents/replication-agent-administration.md)   
  [パブリケーションのサブスクライブ](subscribe-to-publications.md)  

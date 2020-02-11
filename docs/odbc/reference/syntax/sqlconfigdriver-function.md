@@ -20,20 +20,20 @@ ms.assetid: 4f681961-ac9f-4d88-b065-5258ba112642
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e324b1f49bd6f8d0cad15ac2bcde73f558220330
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68121446"
 ---
 # <a name="sqlconfigdriver-function"></a>SQLConfigDriver 関数
-**準拠**  
- バージョンが導入されました。ODBC 2.5  
+**互換性**  
+ 導入されたバージョン: ODBC 2.5  
   
- **概要**  
- **SQLConfigDriver**適切なドライバーのセットアップ DLL と呼び出しを読み込み、 **ConfigDriver**関数。  
+ **まとめ**  
+ **Sqlconfigdriver**は適切なドライバーセットアップ DLL を読み込み、 **configdriver**関数を呼び出します。  
   
- 機能**SQLConfigDriver**にアクセスすることも[ODBCCONF します。EXE](../../../odbc/odbcconf-exe.md)します。  
+ **Sqlconfigdriver**の機能には、ODBCCONF を使用してアクセスすることもでき[ます。EXE](../../../odbc/odbcconf-exe.md)。  
   
 ## <a name="syntax"></a>構文  
   
@@ -51,69 +51,69 @@ BOOL SQLConfigDriver(
   
 ## <a name="arguments"></a>引数  
  *hwndParent*  
- [入力]親ウィンドウ ハンドル。 関数では、ハンドルが null の場合、ダイアログ ボックスは表示されません。  
+ 代入親ウィンドウハンドル。 ハンドルが null の場合、この関数はダイアログボックスを表示しません。  
   
- *起こり*  
- [入力]要求の種類。 *起こり*値は次のいずれかを含める必要があります。  
+ *fRequest*  
+ 代入要求の種類。 *Frequest*には、次のいずれかの値が含まれている必要があります。  
   
- ODBC_CONFIG_DRIVER:接続プール、ドライバーによって使用されるタイムアウトを変更します。  
+ ODBC_CONFIG_DRIVER: ドライバーによって使用される接続プーリングのタイムアウトを変更します。  
   
- ODBC_INSTALL_DRIVER:新しいドライバーをインストールします。  
+ ODBC_INSTALL_DRIVER: 新しいドライバーをインストールします。  
   
- ODBC_REMOVE_DRIVER:既存のドライバーを削除します。  
+ ODBC_REMOVE_DRIVER: 既存のドライバーを削除します。  
   
- このオプションは、ドライバー固有を場合にも、*起こり*最初のオプションが ODBC_CONFIG_DRIVER_MAX + 1 から開始する必要があります。 *起こり*追加のオプションは ODBC_CONFIG_DRIVER_MAX + 1 より大きい値から開始もする必要があります。  
+ このオプションは、ドライバー固有のものにすることもできます。この場合、最初のオプションの*Frequest*は ODBC_CONFIG_DRIVER_MAX + 1 から始める必要があります。 また、任意の追加オプションの*Frequest*は、ODBC_CONFIG_DRIVER_MAX + 1 よりも大きい値から始める必要があります。  
   
  *lpszDriver*  
- [入力]システム情報に登録されているドライバーの名前。  
+ 代入システム情報に登録されているドライバーの名前。  
   
  *lpszArgs*  
- [入力]ドライバー固有の引数を含む null で終わる文字列*起こり*します。  
+ 代入ドライバー固有の*Frequest*の引数を格納している null で終わる文字列。  
   
  *lpszMsg*  
- [出力]ドライバーのセットアップから、出力メッセージを含む null で終わる文字列。  
+ Outputドライバーセットアップからの出力メッセージを含む null で終わる文字列。  
   
  *cbMsgMax*  
- [入力]長さ*lpszMsg します。*  
+ 代入*Lpszmsg*の長さ。  
   
  *pcbMsgOut*  
- [出力]返される使用可能なバイトの合計数*lpszMsg*します。 返される使用可能なバイト数がより大きいかに等しい場合*cbMsgMax*、内の出力メッセージ*lpszMsg*に切り捨てられます*cbMsgMax* null 終了マイナス文字。 *PcbMsgOut*引数が null ポインターを指定できます。  
+ Output*Lpszmsg*で返される、使用可能な合計バイト数。 返すことのできるバイト数が*Cbmsgmax*以上の場合、 *lpszmsg*の出力メッセージは、 *cbmsgmax*から null 終了文字を引いた値に切り捨てられます。 *Pcbmsgout*引数には null ポインターを指定できます。  
   
 ## <a name="returns"></a>戻り値  
- 関数は、成功した場合、FALSE が失敗した場合に TRUE を返します。  
+ 関数は、成功した場合は TRUE、失敗した場合は FALSE を返します。  
   
 ## <a name="diagnostics"></a>診断  
- ときに**SQLConfigDriver** 、関連付けられている FALSE が返されます *\*pfErrorCode*を呼び出して値を取得する**SQLInstallerError**します。 次の表、  *\*pfErrorCode*によって返される値**SQLInstallerError**とこの関数のコンテキストでそれぞれについて説明します。  
+ **Sqlconfigdriver**が FALSE を返す場合は、 **sqlインストーラエラー**を呼び出すことによって、関連* \*する pferrorcode*値を取得できます。 次の表は、 **sqlインストーラエラー**によって返される可能性がある* \*pferrorcode*値と、この関数のコンテキストにおけるそれぞれの値を示しています。  
   
-|*\*pfErrorCode*|[エラー]|説明|  
+|*\*pfErrorCode*|エラー|[説明]|  
 |---------------------|-----------|-----------------|  
-|ODBC_ERROR_GENERAL_ERR|一般的なインストーラーのエラー|エラーが発生する特定のインストーラーのエラーがなかった。|  
-|ODBC_ERROR_INVALID_BUFF_LEN|無効なバッファーの長さ|*LpszMsg*引数が無効です。|  
-|ODBC_ERROR_INVALID_HWND|無効なウィンドウ ハンドル|*HwndParent*引数が無効です。|  
-|ODBC_ERROR_INVALID_REQUEST_TYPE|要求の型が無効です。|*起こり*引数が、次のいずれか。<br /><br /> ODBC_INSTALL_DRIVER ODBC_REMOVE_DRIVER<br /><br /> *起こり*引数があった ODBC_CONFIG_DRIVER_MAX 小さいドライバー固有のオプション。|  
-|ODBC_ERROR_INVALID_NAME|無効なドライバーまたは翻訳者名|*LpszDriver*引数が無効です。 レジストリに見つかりませんでした。|  
-|ODBC_ERROR_INVALID_KEYWORD_VALUE|無効なキーワードと値のペア|*LpszArgs*引数には、構文エラーが含まれています。|  
-|ODBC_ERROR_REQUEST_FAILED|*要求*できませんでした|インストーラーによって要求された操作を実行できませんでした、*起こり*引数。 呼び出し**ConfigDriver**できませんでした。|  
-|ODBC_ERROR_LOAD_LIBRARY_FAILED|ドライバーまたはトランスレーター セットアップ ライブラリを読み込むことができません。|ドライバーのセットアップのライブラリを読み込むことができませんでした。|  
-|ODBC_ERROR_OUT_OF_MEM|メモリ不足|インストーラーは、メモリ不足のため、関数を実行できませんでした。|  
+|ODBC_ERROR_GENERAL_ERR|一般的なインストーラーエラー|特定のインストーラーエラーがなかったためにエラーが発生しました。|  
+|ODBC_ERROR_INVALID_BUFF_LEN|バッファーの長さが無効です|*Lpszmsg*引数が無効でした。|  
+|ODBC_ERROR_INVALID_HWND|ウィンドウハンドルが無効です|*HwndParent*引数が無効でした。|  
+|ODBC_ERROR_INVALID_REQUEST_TYPE|要求の種類が無効です|*Frequest*引数は、次のいずれかではありませんでした:<br /><br /> ODBC_INSTALL_DRIVER ODBC_REMOVE_DRIVER<br /><br /> *Frequest*引数は、ODBC_CONFIG_DRIVER_MAX 以下のドライバー固有のオプションでした。|  
+|ODBC_ERROR_INVALID_NAME|ドライバーまたは翻訳者名が無効です|*Lpszdriver*引数が無効でした。 レジストリに見つかりませんでした。|  
+|ODBC_ERROR_INVALID_KEYWORD_VALUE|無効なキーワードと値のペア|*Lpszargs*引数に構文エラーが含まれていました。|  
+|ODBC_ERROR_REQUEST_FAILED|失敗した*要求*|インストーラーは、 *Frequest*引数によって要求された操作を実行できませんでした。 **Configdriver**を呼び出すことができませんでした。|  
+|ODBC_ERROR_LOAD_LIBRARY_FAILED|ドライバーまたはトランスレーターセットアップライブラリを読み込めませんでした|ドライバーセットアップライブラリを読み込めませんでした。|  
+|ODBC_ERROR_OUT_OF_MEM|メモリ不足|メモリ不足のため、インストーラーで関数を実行できませんでした。|  
   
-## <a name="comments"></a>コメント  
- **SQLConfigDriver**により、アプリケーションを呼び出してドライバーの**ConfigDriver**ルーチンに名前を知っているし、ドライバー固有のセットアップ DLL を読み込む必要はありません。 セットアップ プログラムは、DLL がインストールされているドライバーのセットアップ後に、この関数を呼び出します。 呼び出し元のプログラムはこの関数が使用できないことのすべてのドライバーが認識することはあります。 このような場合は、呼び出し元のプログラムは、エラーなく続行する必要があります。  
+## <a name="comments"></a>説明  
+ **Sqlconfigdriver**を使用すると、アプリケーションはドライバーの**configdriver**ルーチンを呼び出すことができます。その際、名前を知り、ドライバー固有のセットアップ DLL を読み込む必要はありません。 セットアッププログラムは、ドライバーのセットアップ DLL がインストールされた後に、この関数を呼び出します。 呼び出し元プログラムでは、この関数がすべてのドライバーで使用できるとは限りません。 このような場合、呼び出し元のプログラムはエラーなしで続行されます。  
   
 ## <a name="driver-specific-options"></a>ドライバー固有のオプション  
- アプリケーションを使用して、ドライバーによって公開されているドライバー固有の機能を要求できます、*起こり*引数。 *起こり*ODBC_CONFIG_DRIVER_MAX + 1、最初のオプションとなり、追加のオプションはその値から 1 ずつ増えます。 その関数が null で終わる文字列で指定する必要がありますのドライバーが必要な引数が渡された、 *lpszArgs*引数。 このような機能を提供するドライバーは、ドライバー固有のオプションのテーブルを維持する必要があります。 オプションは、ドライバーのマニュアルで完全に記述する必要があります。 ドライバー固有のオプションを使用しているアプリケーションの作成者は、このような使用、アプリケーションは小さい相互運用可能な対応にあります。  
+ アプリケーションは、 *Frequest*引数を使用して、ドライバーによって公開されているドライバー固有の機能を要求できます。 最初のオプションの*Frequest*は ODBC_CONFIG_DRIVER_MAX + 1 になり、追加のオプションはその値から1ずつ増加します。 その関数のドライバーに必要な引数は、 *Lpszargs*引数で渡される null で終わる文字列で指定する必要があります。 このような機能を提供するドライバーでは、ドライバー固有のオプションの表を保持する必要があります。 これらのオプションは、ドライバーのドキュメントに記載されています。 ドライバー固有のオプションを使用するアプリケーションライターでは、この使用によってアプリケーションの相互運用性が低下することに注意してください。  
   
-## <a name="setting-connection-pooling-timeout"></a>接続プーリングのタイムアウトの設定  
- ドライバーの構成を設定すると、接続プール タイムアウト プロパティを設定できます。 **SQLConfigDriver**を呼び出すと、*起こり*ODBC_CONFIG_DRIVER のおよび*lpszArgs*に設定**CPTimeout**します。 **CPTimeout**使用しなくても、接続プール内の接続が保持できる時間の期間を決定します。 タイムアウトの期限が切れるは、接続の終了し、プールから削除します。 既定のタイムアウトは、60 秒です。  
+## <a name="setting-connection-pooling-timeout"></a>接続プールのタイムアウトを設定しています  
+ 接続プールのタイムアウトプロパティは、ドライバーの構成を設定するときに設定できます。 **Sqlconfigdriver**は、ODBC_CONFIG_DRIVER の*Frequest*と、 **cptimeout**に設定された*lpszargs*を使用して呼び出されます。 **Cptimeout**は、接続が使用されないまま接続プールに保持できる期間を決定します。 タイムアウトが経過すると、接続が閉じられ、プールから削除されます。 既定のタイムアウトは60秒です。  
   
- ときに**SQLConfigDriver**を使用して呼び出した*起こり*ODBC_INSTALL_DRIVER または ODBC_REMOVE_DRIVER に設定すると、ドライバー マネージャー、適切なドライバーのセットアップ DLL と読み込みの呼び出し、 **ConfigDriver**関数。 ときに**SQLConfigDriver**を呼び出すと、*起こり*ODBC_CONFIG_DRIVER のすべての処理が、ODBC インストーラーの実行、ドライバーのセットアップ DLL が読み込まれる必要があるないようにします。  
+ *Frequest*が ODBC_INSTALL_DRIVER または ODBC_REMOVE_DRIVER に設定された状態で**sqlconfigdriver**が呼び出されると、ドライバーマネージャーは適切なドライバーセットアップ DLL を読み込み、 **configdriver**関数を呼び出します。 ODBC_CONFIG_DRIVER の*Frequest*を使用して**sqlconfigdriver**が呼び出されると、すべての処理が ODBC インストーラーで実行されるため、ドライバーのセットアップ DLL を読み込む必要がなくなります。  
   
-## <a name="messages"></a>Messages  
- ドライバーのセットアップ ルーチンは、アプリケーション内の null で終わる文字列としてテキスト メッセージを送信することができます、 *lpszMsg*バッファー。 メッセージに切り捨てられます*cbMsgMax*によって null 終了文字マイナス、 **ConfigDriver**する以上の場合は機能*cbMsgMax*文字。  
+## <a name="messages"></a>メッセージ  
+ ドライバーのセットアップルーチンは、テキストメッセージを*Lpszmsg*バッファー内の null で終わる文字列としてアプリケーションに送信できます。 このメッセージは、cbmsgmax*文字以上*の場合、 **configdriver**関数によって*cbmsgmax*から null 終了文字を引いた値に切り捨てられます。  
   
 ## <a name="related-functions"></a>関連する関数  
   
-|詳細|参照先|  
+|対象|以下を参照してください。|  
 |---------------------------|---------|  
-|追加、変更、またはドライバーを削除します。|[ConfigDriver](../../../odbc/reference/syntax/configdriver-function.md)(で DLL のセットアップ)|  
-|既定のデータ ソースを削除します。|[SQLRemoveDefaultDataSource](../../../odbc/reference/syntax/sqlremovedefaultdatasource-function.md)|
+|ドライバーの追加、変更、または削除|[Configdriver](../../../odbc/reference/syntax/configdriver-function.md)(セットアップ DLL 内)|  
+|既定のデータソースの削除|[SQLRemoveDefaultDataSource](../../../odbc/reference/syntax/sqlremovedefaultdatasource-function.md)|

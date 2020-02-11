@@ -16,30 +16,33 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 678c6d2312261475f4b970b1535ce1faa1f00930
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62729074"
 ---
 # <a name="monitoring-traces-xmla"></a>トレースの監視 (XMLA)
-  使用することができます、[購読](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/subscribe-element-xmla)XML for Analysis (XMLA) のインスタンスで定義されている既存のトレースを監視するためにコマンド[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]します。 `Subscribe` コマンドは、トレースの結果を行セットとして返します。  
+  XML for Analysis (XMLA) の[Subscribe](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/subscribe-element-xmla)コマンドを使用すると、の[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]インスタンスで定義されている既存のトレースを監視できます。 
+  `Subscribe` コマンドは、トレースの結果を行セットとして返します。  
   
 ## <a name="specifying-a-trace"></a>トレースの指定  
- [オブジェクト](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla)のプロパティ、`Subscribe`コマンドは、いずれかへのオブジェクト参照を含める必要があります、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]インスタンスまたはでトレースを[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]インスタンス。 `Object` プロパティが指定されていない場合、またはトレース識別子が `Object` プロパティで指定されていない場合、`Subscribe` コマンドは、コマンドの SOAP ヘッダーで指定されている明示的なセッションに対する既定のセッション トレースを監視します。  
+ コマンドの[object](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla)プロパティには、インスタンスまたはインスタンスの[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]トレースへ[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のオブジェクト参照が含まれている必要があります。 `Subscribe` 
+  `Object` プロパティが指定されていない場合、またはトレース識別子が `Object` プロパティで指定されていない場合、`Subscribe` コマンドは、コマンドの SOAP ヘッダーで指定されている明示的なセッションに対する既定のセッション トレースを監視します。  
   
 ## <a name="returning-results"></a>結果の返送  
- `Subscribe` コマンドは、指定されたトレースによってキャプチャされたトレース イベントを含む行セットを返します。 `Subscribe`によってコマンドが取り消されるまでトレース結果を返します、[キャンセル](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/cancel-element-xmla)コマンド。  
+ 
+  `Subscribe` コマンドは、指定されたトレースによってキャプチャされたトレース イベントを含む行セットを返します。 `Subscribe`コマンドは、 [Cancel](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/cancel-element-xmla)コマンドによってコマンドが取り消されるまで、トレース結果を返します。  
   
  行セットに含まれる列は、次の表のとおりです。  
   
-|[列]|データ型|説明|  
+|列|データ型|[説明]|  
 |------------|---------------|-----------------|  
-|EventClass|Integer|トレースによって受信されたイベントのイベント クラス。|  
+|EventClass|整数|トレースによって受信されたイベントのイベント クラス。|  
 |EventSubclass|Long integer|トレースによって受信されたイベントのイベント サブクラス。|  
-|CurrentTime|DATETIME|イベントの開始時刻 (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
-|StartTime|DATETIME|イベントの開始時刻 (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
-|EndTime|DATETIME|イベントの終了時刻 (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。<br /><br /> プロセスまたはアクションの開始を記述するイベント クラスの場合、この列は設定されません。|  
+|CurrentTime|Datetime|イベントの開始時刻 (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
+|StartTime|Datetime|イベントの開始時刻 (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。|  
+|EndTime|Datetime|イベントの終了時刻 (取得できた場合)。 フィルター選択を行うには、'YYYY-MM-DD' および 'YYYY-MM-DD HH:MM:SS' の形式である必要があります。<br /><br /> プロセスまたはアクションの開始を記述するイベント クラスの場合、この列は設定されません。|  
 |Duration|Long integer|イベントで経過した時間の合計 (ミリ秒単位)。|  
 |CPUTime|Long integer|イベントで経過したプロセッサ時間 (ミリ秒単位)。|  
 |JobID|Long integer|プロセスのジョブ識別子。|  
@@ -52,21 +55,22 @@ ms.locfileid: "62729074"
 |ObjectName|String|イベントが発生したオブジェクトの名前。|  
 |ObjectPath|String|イベントが発生したオブジェクトの階層パス。 パスは、ObjectName で指定されたオブジェクトの親に関するオブジェクト識別子の、コンマ区切りの文字列として表されます。|  
 |ObjectReference|String|ObjectName で指定されたオブジェクトへのオブジェクト参照を表す XML 表現。|  
-|NestLevel|Integer|イベントが発生したトランザクションのレベル。|  
+|NestLevel|整数|イベントが発生したトランザクションのレベル。|  
 |NumSegments|Long integer|イベントが発生したコマンドによって影響を受ける、またはアクセスされるデータ セグメントの数。|  
-|重大度|Integer|イベントの例外の重大度レベル。 この列には、以下の値のいずれかが含まれます。<br /><br /> 値: 0 = 成功<br /><br /> 値: 1 = 情報<br /><br /> 値: 2 = 警告<br /><br /> 値: 3 = エラー|  
-|成功|ブール値|コマンドが成功したか、失敗したかを示します。|  
-|[エラー]|Long integer|イベントのエラー番号 (ある場合)。|  
+|重大度|整数|イベントの例外の重大度レベル。 この列には、以下の値のいずれかが含まれます。<br /><br /> 値: 0 = 成功<br /><br /> 値: 1 = 情報<br /><br /> 値: 2 = 警告<br /><br /> 値: 3 = エラー|  
+|成功|Boolean|コマンドが成功したか、失敗したかを示します。|  
+|エラー|Long integer|イベントのエラー番号 (ある場合)。|  
 |ConnectionID|String|イベントが発生した接続の識別子。|  
 |DatabaseName|String|イベントが発生したデータベースの名前。|  
 |NTUserName|String|イベントに関連付けられているユーザーの Windows ユーザー名。|  
 |NTDomainName|String|イベントに関連付けられているユーザーの Windows ドメイン。|  
 |ClientHostName|String|クライアント アプリケーションが実行されているコンピューターの名前。 この列には、クライアント アプリケーションによって渡された値が格納されます。|  
 |ClientProcessID|Long integer|クライアント アプリケーションのプロセス識別子。|  
-|ApplicationName|String|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスへの接続を作成したクライアント アプリケーションの名前。 この列には、プログラムの表示名ではなく、クライアント アプリケーションによって渡された値が格納されます。|  
+|ApplicationName|String|
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスへの接続を作成したクライアント アプリケーションの名前。 この列には、プログラムの表示名ではなく、クライアント アプリケーションによって渡された値が格納されます。|  
 |NTCanonicalUserName|String|イベントに関連付けられているユーザーの Windows の正規のユーザー名。|  
 |SPID|String|イベントが発生したセッションのサーバー プロセス ID (SPID)。 この列の値は、イベントが発生した XMLA メッセージの SOAP ヘッダーで指定されたセッション ID に直接対応します。|  
-|TextData|String|イベントに関連付けられたテキスト データ。 この列の内容は、イベント クラス、およびイベントのサブクラスによって異なります。|  
+|TextData|String|イベントに関連付けられているテキストデータ。 この列の内容は、イベント クラス、およびイベントのサブクラスによって異なります。|  
 |ServerName|String|イベントが発生した [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスの名前。|  
 |RequestParameters|String|イベントが発生したパラメーター化クエリまたは XMLA コマンドのパラメーター。|  
 |RequestProperties|String|イベントが発生した XMLA メソッドのプロパティ。|  

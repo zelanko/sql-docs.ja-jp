@@ -1,5 +1,5 @@
 ---
-title: BeginTrans、CommitTrans、および RollbackTrans メソッドの例 (vc++) |Microsoft Docs
+title: BeginTrans、CommitTrans、および RollbackTrans メソッドの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 4ac19647-73e7-4edf-9913-25c8fd927e36
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f99cab327d9171aaa53b6c273c4a519bf13680b7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9d91809adccee64e6f9ed4b9c2501718e82c31a4
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67920427"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76940441"
 ---
-# <a name="begintrans-committrans-and-rollbacktrans-methods-example-vc"></a>BeginTrans、CommitTrans、および RollbackTrans メソッドの例 (vc++)
-次の例は、すべての心理学の本の書籍の種類を変更、***タイトル***データベースのテーブル。 後に、 [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)メソッドに加えられたすべての変更を分離するトランザクションの開始、***タイトル***、テーブル、 [CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)メソッドは、変更を保存します。 使用することができます、[ロールバック](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)メソッドを使用して保存した変更を元に戻す、 [Update](../../../ado/reference/ado-api/update-method.md)メソッド。  
+# <a name="begintrans-committrans-and-rollbacktrans-methods-example-vc"></a>BeginTrans、CommitTrans、および RollbackTrans メソッドの例 (VC + +)
+この例では、データベースの***Titles***テーブルにあるすべての心理学ブックの書籍の種類を変更します。 [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)メソッドによって、 ***Titles***テーブルに対して行われたすべての変更を分離するトランザクションが開始された後、 [CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)メソッドは変更を保存します。 [Rollback](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)メソッドを使用して、 [Update](../../../ado/reference/ado-api/update-method.md)メソッドを使用して保存した変更を元に戻すことができます。  
   
 ## <a name="example"></a>例  
   
@@ -196,7 +196,7 @@ void BeginTransX() {
          printf("%s -  %s\n", titlrs.m_szT_title, titlrs.m_szT_type);  
          rstTitles->MoveNext();  
       }  
-      // Restore original data becasue this is a demonstration.  
+      // Restore original data because this is a demonstration.  
       rstTitles->MoveFirst();  
   
       while (VARIANT_FALSE == rstTitles->EndOfFile) {  
@@ -266,6 +266,6 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [BeginTrans、CommitTrans、および RollbackTrans メソッド (ADO)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)   
  [Update メソッド](../../../ado/reference/ado-api/update-method.md)

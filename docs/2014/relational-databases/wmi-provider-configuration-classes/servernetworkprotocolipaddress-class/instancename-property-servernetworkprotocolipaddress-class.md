@@ -19,14 +19,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 79637e9f891c70a79e5388a4932957cbff8377f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62643389"
 ---
 # <a name="instancename-property-servernetworkprotocolipaddress-class"></a>InstanceName プロパティ (ServerNetworkProtocolIPAddress クラス)
-  サーバー ネットワーク プロトコルがインストールされている [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスの名前を取得します。  
+  サーバーネットワークプロトコルがインストールされ[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ているのインスタンスの名前を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,15 +37,17 @@ object
 ```  
   
 ## <a name="parts"></a>要素  
- *object*  
- [ServerNetworkProtocolIPAdress クラス](servernetworkprotocolipaddress-class.md) オブジェクト。  
+ *素材*  
+ 
+  [ServerNetworkProtocolIPAdress クラス](servernetworkprotocolipaddress-class.md) オブジェクト。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンスの名前を指定する文字列値。  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンスの名前を指定する文字列値。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
   
 ## <a name="see-also"></a>参照  
- [サーバー ネットワーク プロトコルとネットワーク ライブラリの構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [サーバーのネットワーク プロトコルと Net-Library の構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

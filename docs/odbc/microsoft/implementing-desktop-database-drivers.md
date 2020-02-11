@@ -1,5 +1,5 @@
 ---
-title: デスクトップ データベース ドライバーを実装する |Microsoft Docs
+title: デスクトップデータベースドライバーの実装 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,14 +15,14 @@ ms.assetid: a8bf304b-eff1-447c-887c-dabdb5353a2d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cb4f4c2b1e9658e1e0199ec6d856ef21db80cf07
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67952351"
 ---
 # <a name="implementing-desktop-database-drivers"></a>デスクトップ データベース ドライバーの実装
-手順とテクニカル ノートを実装し、Microsoft ODBC のデスクトップ データベース ドライバーを設定する方法の詳細については、ODBC データ ソース アドミニストレーターのオンライン ヘルプで確認できます。 このファイルからドライバーのセットアップ ルーチンにアクセスできる、 [Microsoft ODBC データ ソース アドミニストレーター](../../odbc/admin/odbc-data-source-administrator.md)します。  
+Microsoft ODBC Desktop データベースドライバを実装およびセットアップする方法については、ODBC データソースアドミニストレーターのオンラインヘルプを参照してください。 このファイルには、 [MICROSOFT ODBC データソースアドミニストレーター](../../odbc/admin/odbc-data-source-administrator.md)のドライバーセットアップルーチンの実行中にアクセスできます。  
   
  このセクションでは、次のトピックを扱います。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "67952351"
   
 -   [ハードウェアとソフトウェアの要件](../../odbc/microsoft/hardware-and-software-requirements-odbc.md)  
   
--   [デスクトップ データベース ドライバーと記述子](../../odbc/microsoft/descriptors-and-desktop-database-drivers.md)  
+-   [記述子とデスクトップデータベースドライバー](../../odbc/microsoft/descriptors-and-desktop-database-drivers.md)  
   
 -   [デスクトップ データベース ドライバーの診断](../../odbc/microsoft/diagnostics-for-desktop-database-drivers.md)  
   

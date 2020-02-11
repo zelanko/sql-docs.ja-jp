@@ -18,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ab7695b6a80772ddcd01996e783fffd806447c59
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62473203"
 ---
 # <a name="assign-a-job-to-a-job-category"></a>ジョブ カテゴリへのジョブの割り当て
-  このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../includes/tsql-md.md)]、または SQL Server 管理オブジェクトを使用して、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブをジョブ カテゴリに割り当てる方法について説明します。  
+  このトピックでは、で[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、、または SQL Server 管理オブジェクトを使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]して[!INCLUDE[tsql](../../includes/tsql-md.md)] 、エージェントジョブをジョブカテゴリに割り当てる方法について説明します。  
   
  ジョブ カテゴリを使用してジョブを管理すると、フィルター操作やグループ化を簡単に行うことができます。 たとえば、データベース バックアップに関するすべてのジョブを [データベースのメンテナンス] カテゴリとしてまとめます。 ジョブは、ビルトイン ジョブ カテゴリに割り当てたり、ユーザー定義ジョブ カテゴリを作成し、そこに割り当てたりすることができます。  
   
@@ -41,7 +41,8 @@ ms.locfileid: "62473203"
   
 #### <a name="to-assign-a-job-to-a-job-category"></a>ジョブ カテゴリにジョブを割り当てるには  
   
-1.  **オブジェクト エクスプ ローラー**で、プラス記号をクリックして、ジョブ カテゴリにジョブを割り当てるサーバーを展開します。  
+1.  
+  **オブジェクト エクスプ ローラー**で、プラス記号をクリックして、ジョブ カテゴリにジョブを割り当てるサーバーを展開します。  
   
 2.  プラス記号をクリックして **[SQL Server エージェント]** を展開します。  
   
@@ -49,7 +50,7 @@ ms.locfileid: "62473203"
   
 4.  編集するジョブを右クリックし、 **[プロパティ]** を選択します。  
   
-5.  [ **ジョブのプロパティ -** _job_name_ ] ダイアログ ボックスの **[カテゴリ]** 一覧で、ジョブに割り当てるジョブ カテゴリを選択します。  
+5.  [**ジョブのプロパティ-**_job_name_ ] ダイアログボックスの [**カテゴリ**] ボックスの一覧で、ジョブに割り当てるジョブカテゴリを選択します。  
   
 6.  **[OK]** をクリックします。  
   
@@ -74,14 +75,14 @@ ms.locfileid: "62473203"
     GO  
     ```  
   
- 詳細については、次を参照してください。 [sp_update_job &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql)します。  
+ 詳細については、「 [sp_update_job &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql)」を参照してください。  
   
   
   
-##  <a name="SMO"></a> SQL Server 管理オブジェクトの使用  
- **ジョブ カテゴリにジョブを割り当てるには**  
+##  <a name="SMO"></a>SQL Server 管理オブジェクトの使用  
+ **ジョブカテゴリにジョブを割り当てるには**  
   
- 使用して、 `JobCategory` Visual Basic、Visual c#、PowerShell など、選択したプログラミング言語を使用してクラス。  
+ Visual Basic、 `JobCategory` Visual C#、PowerShell など、選択したプログラミング言語でクラスを使用します。  
   
   
   

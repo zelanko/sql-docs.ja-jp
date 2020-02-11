@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6bfb1bf3cd43bac47dfb06e4f24c74dc4835709b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62629750"
 ---
 # <a name="join-filters"></a>結合フィルター
@@ -43,7 +43,7 @@ ms.locfileid: "62629750"
 LoginID = SUSER_SNAME()  
 ```  
   
- このフィルターを指定すると、各従業員のサブスクリプションには、当該従業員に関連する **HumanResources.Employee** テーブルのデータのみ (この例では単一の行) が格納されます。 詳細については、「 [Parameterized Row Filters](parameterized-filters-parameterized-row-filters.md)」を参照してください。  
+ このフィルターを指定すると、各従業員のサブスクリプションには、当該従業員に関連する **HumanResources.Employee** テーブルのデータのみ (この例では単一の行) が格納されます。 詳しくは、「 [Parameterized Row Filters](parameterized-filters-parameterized-row-filters.md)」をご覧ください。  
   
  次の手順で、このフィルターを各関連テーブルに拡張します。フィルターの拡張に使用する構文は、2 つのテーブルの結合の指定に使用する構文とほぼ同じです。 最初の結合フィルター句を次のように指定します。  
   
@@ -87,7 +87,7 @@ SalesOrderHeader.SalesOrderID = SalesOrderDetail.SalesOrderID
      上記のようなロジックを使用する場合、サブクエリではなく結合フィルターを使用することを強くお勧めします。 アプリケーションでサブクエリを使用する行フィルターが必要な場合は、サブクエリが参照するデータが変更されない読み取り専用データであることを確認してください。  
   
 ## <a name="see-also"></a>参照  
- [マージ レプリケーション用にパブリッシュされたデータのフィルター選択](filter-published-data-for-merge-replication.md)   
+ [マージ レプリケーション用にパブリッシュされたデータのフィルター処理](filter-published-data-for-merge-replication.md)   
  [パラメーター化された行フィルター](parameterized-filters-parameterized-row-filters.md)  
   
   

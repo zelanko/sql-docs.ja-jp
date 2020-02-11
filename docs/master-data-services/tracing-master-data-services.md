@@ -1,5 +1,5 @@
 ---
-title: 追跡
+title: トレース
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: erikre
 ms.openlocfilehash: fe2c0096aecd1296f7f10ce90a1acae706f3f3af
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73727847"
 ---
 # <a name="tracing-master-data-services"></a>トレース (マスター データ サービス)
@@ -60,13 +60,13 @@ ms.locfileid: "73727847"
   
 -   ログの形式は CSV です。 次の表に、ログの形式について説明します。  
   
-    |要素|説明|  
+    |要素|[説明]|  
     |-------------|-----------------|  
-    |[時刻]|トレースのエントリが発生した時刻。|  
+    |Time|トレースのエントリが発生した時刻。|  
     |CorrelationID|要求ごとに 1 つの関連付け ID が割り当てられます。 この要求によってトリガーされるすべてのトレースは、同じ関連付け ID を共有します。<br /><br /> UI でエラーが発生すると、エラー メッセージに関連付け ID が表示されます。|  
-    |操作|要求操作の名前。 要求が Web UI 要求の場合、URL が操作名になります。 要求が API 要求の場合、サービス名が操作名になります。|  
-    |レベル|このトレース エントリのレベル。|  
-    |メッセージ|トレースのメッセージ本文。|  
+    |Operation|要求操作の名前。 要求が Web UI 要求の場合、URL が操作名になります。 要求が API 要求の場合、サービス名が操作名になります。|  
+    |Level|このトレース エントリのレベル。|  
+    |Message|トレースのメッセージ本文。|  
   
 ## <a name="external-resources"></a>外部リソース  
  msdn.com のブログ記事「 [Troubleshooting Logging Improvement (トラブルシューティングのためのログ記録の改善)](https://go.microsoft.com/fwlink/p/?LinkId=615377)」  

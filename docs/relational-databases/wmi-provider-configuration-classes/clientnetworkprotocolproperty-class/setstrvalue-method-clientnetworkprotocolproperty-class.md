@@ -18,14 +18,15 @@ ms.assetid: 4ff80124-6e2e-4d96-a692-57c17b53c55e
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 07cc2bfc18ebbb6d2ddafa94bc29b14144f27c01
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73660708"
 ---
 # <a name="setstrvalue-method-clientnetworkprotocolproperty-class"></a>SetStrValue メソッド (ClientNetworkProtocolProperty クラス)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+  
   [PropertyIdx プロパティ (ClientNetworkProtocolProperty クラス)](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/propertyidx-property-clientnetworkprotocolproperty-class.md) の値によって参照される現在のプロパティの文字列値を設定します。  
   
 ## <a name="syntax"></a>構文  
@@ -36,12 +37,13 @@ object.SetStrValue(StrValue)
 ```  
   
 ## <a name="parts"></a>要素  
- *object*  
- [クライアントによって使用されるネットワーク プロトコルの属性を表す](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md) ClientNetworkProtocolProperty クラス [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] オブジェクト。  
+ *素材*  
+ 
+  [クライアントによって使用されるネットワーク プロトコルの属性を表す](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md) ClientNetworkProtocolProperty クラス [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] オブジェクト。  
   
 #### <a name="parameters"></a>パラメーター  
   
-|パラメーター|説明|  
+|パラメーター|[説明]|  
 |---------------|-----------------|  
 |*StrValue*|現在のプロパティの新しい値を指定する文字列値|  
   

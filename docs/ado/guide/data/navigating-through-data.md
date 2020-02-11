@@ -1,5 +1,5 @@
 ---
-title: データの移動 |Microsoft Docs
+title: データを移動する |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: 8d88c9aa-8ec8-4969-8fa1-1663fd29bfc4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a0b58000da5f29824fbfdd134a701088775c90af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924781"
 ---
 # <a name="navigating-through-data"></a>データ内の移動
-**レコード セット**さまざまなメソッドや結果のデータセットをナビゲートするプロパティをサポートしています。 サンプルをいくつかのシナリオを経由してこの機能を調べる**Recordset**オブジェクト。  
+**レコードセット**は、結果のデータセット内を移動するためのさまざまなメソッドとプロパティをサポートしています。 この機能を確認するには、サンプルの**レコードセット**オブジェクトを使用していくつかのシナリオを実行します。  
   
  このセクションでは、次のトピックを扱います。  
   

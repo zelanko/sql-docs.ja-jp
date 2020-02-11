@@ -1,5 +1,5 @@
 ---
-title: コマンドの構文 |マイクロソフトのドキュメント
+title: コマンド構文 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,14 +16,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 00ab769ee2051edc499d586ab7d5ee1fa47dd854
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62468219"
 ---
 # <a name="command-syntax"></a>コマンドの構文
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、DBGUID_SQL マクロで指定されたコマンド構文を認識します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーを指定子が示す ODBC SQL、ISO などのステートメントの混在と[!INCLUDE[tsql](../../includes/tsql-md.md)]は有効な構文です。 たとえば、次の SQL ステートメントでは、ODBC SQL のエスケープ シーケンスを使用して、LCASE 文字列関数を指定しています。  
+  Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB プロバイダーは、DBGUID_SQL マクロで指定されたコマンド構文を認識します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーの場合、指定子は、ODBC SQL、ISO、および[!INCLUDE[tsql](../../includes/tsql-md.md)]の混在が有効な構文であることを示します。 たとえば、次の SQL ステートメントでは、ODBC SQL のエスケープ シーケンスを使用して、LCASE 文字列関数を指定しています。  
   
 ```  
 SELECT customerid={fn LCASE(CustomerID)} FROM Customers  
@@ -35,10 +35,10 @@ SELECT customerid={fn LCASE(CustomerID)} FROM Customers
 SELECT customerid=LOWER(CustomerID) FROM Customers  
 ```  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、コマンドのテキストとして指定されたときに正常にステートメントのいずれかの形式を処理します。  
+ Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB プロバイダーは、コマンドのテキストとして指定した場合に、ステートメントのいずれかの形式を正常に処理します。  
   
 ## <a name="stored-procedures"></a>ストアド プロシージャ  
- 実行するときに、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ストアド プロシージャを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダー コマンド、コマンド テキストで ODBC CALL エスケープ シーケンスを使用します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーのリモート プロシージャ コールのメカニズムを使用し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]コマンド処理を最適化します。 たとえば次のような場合、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント形式ではなく、ODBC SQL ステートメントをコマンド テキストとして使用することをお勧めします。  
+ Native Client OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider コマンドを使用してストアドプロシージャを実行する場合は、コマンドテキストで ODBC CALL エスケープシーケンスを使用します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 次[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に、Native Client OLE DB プロバイダーは、の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]リモートプロシージャコール機構を使用して、コマンド処理を最適化します。 たとえば次のような場合、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント形式ではなく、ODBC SQL ステートメントをコマンド テキストとして使用することをお勧めします。  
   
 -   ODBC SQL  
   
@@ -53,6 +53,6 @@ SELECT customerid=LOWER(CustomerID) FROM Customers
     ```  
   
 ## <a name="see-also"></a>参照  
- [[コマンド]](commands.md)  
+ [コマンド](commands.md)  
   
   

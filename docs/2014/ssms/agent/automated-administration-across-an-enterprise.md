@@ -21,27 +21,27 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b3be16ea856b5d632ba5a0285bad2c4d2d93709c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62473150"
 ---
 # <a name="automated-administration-across-an-enterprise"></a>エンタープライズ全体の管理の自動化
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の複数のインスタンスにわたって管理を自動化することを*マルチサーバー管理*といいます。 次の場合に、マルチサーバー管理を行います。  
+  の複数の[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンスにわたって管理を自動化することを*マルチサーバー管理*といいます。 次の場合に、マルチサーバー管理を行います。  
   
 -   2 台以上のサーバーを管理する場合  
   
 -   データ ウェアハウジングのために、企業サーバーの情報フローをスケジュールする場合  
   
 > [!NOTE]  
->  一部として[!INCLUDE[msCoName](../../includes/msconame-md.md)]、所有権の総コストを削減する継続的な取り組み[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]2 つの機能が導入されました: ポリシー ベースの管理と構成サーバーとサーバーを使用するマルチ サーバー クエリに呼び出されるサーバーを管理する方法グループ。 この 2 つの機能は、ここで説明する機能の一部と組み合わせたり、それらの代わりとして使用したりすることができます。 詳細については、次を参照してください。[でポリシー ベースの管理サーバーの管理](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)と[複数サーバーを使用して中央管理サーバーの管理](../../relational-databases/administer-multiple-servers-using-central-management-servers.md)します。  
+>  総保有コスト[!INCLUDE[msCoName](../../includes/msconame-md.md)]を削減するための継続的な取り組みの一環[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]として、では、ポリシーベースの管理と呼ばれるサーバーを管理する方法と、構成サーバーとサーバーグループを使用するマルチサーバークエリの2つの機能が導入されました。 この 2 つの機能は、ここで説明する機能の一部と組み合わせたり、それらの代わりとして使用したりすることができます。 詳細については、「[ポリシーベースの管理を使用](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)してサーバーを管理する」および「[中央管理サーバーを使用して複数のサーバーを管理する](../../relational-databases/administer-multiple-servers-using-central-management-servers.md)」を参照してください。  
   
  マルチサーバー管理機能を活用するには、1 台以上のマスター サーバーと 1 台以上のターゲット サーバーが必要です。 マスター サーバーは、ターゲット サーバーに対してジョブを分散し、ターゲット サーバーからイベントを受け取ります。 また、マスター サーバーは、ターゲット サーバーで実行されるジョブについて、ジョブ定義の中央コピーも保存します。 ターゲット サーバーは、定期的にマスター サーバーに接続して、ジョブのスケジュールを更新します。 マスター サーバー上に新しいジョブがあれば、ターゲット サーバーはそのジョブをダウンロードします。 ターゲット サーバーは、ジョブを完了した後、マスター サーバーに再接続してジョブのステータスをレポートします。  
   
  次の図は、マスター サーバーとターゲット サーバーの関係を示します。  
   
- ![マルチ サーバー管理構成](../../database-engine/media/multisvr.gif "マルチ サーバー管理構成")  
+ ![マルチサーバー管理構成](../../database-engine/media/multisvr.gif "マルチサーバー管理構成")  
   
  大企業の複数の部門別サーバーを管理する場合は、次のアイテムを定義できます。  
   
@@ -61,9 +61,10 @@ ms.locfileid: "62473150"
  マスター サーバーおよびターゲット サーバーを作成および管理する方法について説明します。  
   
  [マルチサーバー環境に適した SQL Server エージェント サービス アカウントの選択](choose-the-right-sql-server-agent-service-account-for-multiserver-environments.md)  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント サービスに管理者以外の Windows アカウントまたはローカル システム アカウントを使用することによる、マルチサーバー環境への影響について説明します。  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント サービスに管理者以外の Windows アカウントまたはローカル システム アカウントを使用することによる、マルチサーバー環境への影響について説明します。  
   
- [対象サーバーでの暗号化オプションの設定](set-encryption-options-on-target-servers.md)  
+ [ターゲット サーバーでの暗号化オプションの設定](set-encryption-options-on-target-servers.md)  
  ターゲット サーバーの MsxEncryptChannelOptions [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントのレジストリ サブキーの設定について説明します。  
   
  [エンタープライズ全体におけるジョブの管理](manage-jobs-across-an-enterprise.md)  
@@ -82,18 +83,18 @@ ms.locfileid: "62473150"
  マルチサーバー環境で自動化された管理により [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の自己チューニング機能を活用する方法について説明します。  
   
 ## <a name="see-also"></a>参照  
- [SQL Server データベース エンジンの旧バージョンとの互換性](../../database-engine/sql-server-database-engine-backward-compatibility.md)   
+ [SQL Server データベースエンジン旧バージョンとの互換性](../../database-engine/sql-server-database-engine-backward-compatibility.md)   
  [サーバーの登録](../register-servers/register-servers.md)   
- [sp_add_targetservergroup &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql)   
- [sp_delete_targetserver &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-targetserver-transact-sql)   
- [sp_delete_targetservergroup &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-targetservergroup-transact-sql)   
- [sp_help_downloadlist &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-downloadlist-transact-sql)   
- [sp_help_jobserver &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-jobserver-transact-sql)   
- [sp_help_targetservergroup &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-targetservergroup-transact-sql)   
- [sp_resync_targetserver &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-resync-targetserver-transact-sql)   
- [sp_update_targetservergroup &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql)   
- [dbo.sysjobservers &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobservers-transact-sql)   
- [sys.syslogins &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-compatibility-views/sys-syslogins-transact-sql)   
- [dbo.systargetservers &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-tables/dbo-systargetservers-transact-sql)  
+ [sp_add_targetservergroup &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql)   
+ [sp_delete_targetserver &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-targetserver-transact-sql)   
+ [sp_delete_targetservergroup &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-targetservergroup-transact-sql)   
+ [sp_help_downloadlist &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-help-downloadlist-transact-sql)   
+ [sp_help_jobserver &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-help-jobserver-transact-sql)   
+ [sp_help_targetservergroup &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-help-targetservergroup-transact-sql)   
+ [sp_resync_targetserver &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-resync-targetserver-transact-sql)   
+ [sp_update_targetservergroup &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql)   
+ [&#40;Transact-sql&#41;の dbo. sysjobservers](/sql/relational-databases/system-tables/dbo-sysjobservers-transact-sql)   
+ [sys &#40;Transact-sql&#41;](/sql/relational-databases/system-compatibility-views/sys-syslogins-transact-sql)   
+ [systargetservers &#40;Transact-sql&#41;](/sql/relational-databases/system-tables/dbo-systargetservers-transact-sql)  
   
   

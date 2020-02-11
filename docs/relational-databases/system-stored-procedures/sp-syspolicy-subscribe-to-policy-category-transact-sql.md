@@ -1,5 +1,5 @@
 ---
-title: sp_syspolicy_subscribe_to_policy_category は (TRANSACT-SQL) |Microsoft Docs
+title: sp_syspolicy_subscribe_to_policy_category (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,16 @@ ms.assetid: de88cc49-bcc8-4dc6-8e59-ad85cfbfb2fb
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: c5bc3b603c7dba345def7132e37d46a7554e864f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68035407"
 ---
-# <a name="spsyspolicysubscribetopolicycategory-transact-sql"></a>sp_syspolicy_subscribe_to_policy_category は (TRANSACT-SQL)
+# <a name="sp_syspolicy_subscribe_to_policy_category-transact-sql"></a>sp_syspolicy_subscribe_to_policy_category (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  指定したデータベースのポリシー カテゴリ サブスクリプションを追加します。  
+  指定されたデータベースのポリシーカテゴリのサブスクリプションを追加します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -39,20 +39,20 @@ sp_syspolicy_subscribe_to_policy_category [ @policy_category = ] 'policy_categor
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @policy_category = ] 'policy_category'` データベースでサブスクライブするポリシー カテゴリの名前です。 *policy_category*は**sysname**、必要があります。  
+`[ @policy_category = ] 'policy_category'`データベースでサブスクライブするポリシーカテゴリの名前を指定します。 *policy_category*は**sysname**であり、必須です。  
   
- 値を取得する*policy_category*、msdb.dbo.syspolicy_policy_categories システム ビューをクエリします。  
+ *Policy_category*の値を取得するには、syspolicy_policy_categories システムビューに対してクエリを実行します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  sp_syspolicy_subscribe_to_policy_category は、ポリシー カテゴリを追加するデータベースのコンテキストで実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
  db_owner 固定データベース ロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、指定したデータベースの 'Finance' ポリシーのカテゴリにサブスクリプションを追加します。  
   
 ```  
@@ -63,8 +63,8 @@ EXEC sys.sp_syspolicy_subscribe_to_policy_category @policy_category = N'Finance'
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [ポリシー ベースの管理ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
- [sp_syspolicy_unsubscribe_from_policy_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-unsubscribe-from-policy-category-transact-sql.md)  
+## <a name="see-also"></a>参照  
+ [Transact-sql&#41;&#40;のポリシーベースの管理ストアドプロシージャ](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
+ [sp_syspolicy_unsubscribe_from_policy_category &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-unsubscribe-from-policy-category-transact-sql.md)  
   
   

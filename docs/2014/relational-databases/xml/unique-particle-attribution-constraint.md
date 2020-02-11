@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2f6361e3e6a295398bdd88d56a6c70a79e92b526
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62467418"
 ---
 # <a name="unique-particle-attribution-constraint"></a>一意のパーティクル属性の制約
@@ -80,11 +80,11 @@ ms.locfileid: "62467418"
 ## <a name="finding-more-information"></a>詳細情報  
  次のドキュメントは W3C (World Wide Web Consortium) が発行したもので、一意のパーティクル属性の制約に関する技術的な説明が含まれています。  
   
- "XML Schema Part 1。Structures Second Edition, W3C Proposed Edited Recommendation」。  
+ 『XML Schema Part 1: Structures Second Edition, W3C Proposed Edited Recommendation』  
   
--   セクション 3.8.6:On Model Group Schema Components の制約  
+-   「Section 3.8.6: Constraints on Model Group Schema Components」  
   
--   付録 h:Unique Particle Attribution Constraint (標準以外) の分析  
+-   「Appendix H: Analysis of the Unique Particle Attribution Constraint (non-normative)」  
   
  ドキュメントを表示するには、[http://www.w3.org/TR/xmlschema-1](https://go.microsoft.com/fwlink/?linkid=48881) を参照してください。  
   

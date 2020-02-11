@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0fee60fa1a78c2d6d0becb63b2319105016adf1c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62754675"
 ---
 # <a name="remove-the-witness-from-a-database-mirroring-session-sql-server"></a>データベース ミラーリング セッションからのミラーリング監視の削除 (SQL Server)
@@ -28,15 +28,15 @@ ms.locfileid: "62754675"
   
 -   **作業を開始する準備:**  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
--   **ミラーリング監視サーバーの削除に使用するツール:**  
+-   **次を使用してミラーリング監視サーバーの削除を置き換えるには:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **補足情報:** [ミラーリング監視サーバーを削除した後](#FollowUp)  
+-   **補足情報:**  [ミラーリング監視サーバーを削除した後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
@@ -51,9 +51,11 @@ ms.locfileid: "62754675"
   
 1.  プリンシパル サーバー インスタンスに接続し、 **[オブジェクト エクスプローラー]** ペインでサーバー名をクリックして、サーバー ツリーを展開します。  
   
-2.  **[データベース]** を展開し、削除するミラーリング監視が設定されているデータベースをクリックします。  
+2.  
+  **[データベース]** を展開し、削除するミラーリング監視が設定されているデータベースをクリックします。  
   
-3.  データベースを右クリックして **[タスク]** を選択し、 **[ミラー]** をクリックします。 **[データベースのプロパティ]** ダイアログ ボックスの **[ミラーリング]** ページが開きます。  
+3.  データベースを右クリックして **[タスク]** をポイントし、 **[ミラー]** をクリックします。 
+  **[データベースのプロパティ]** ダイアログ ボックスの **[ミラーリング]** ページが開きます。  
   
 4.  ミラーリング監視サーバーを削除するには、 **[ミラーリング監視]** フィールドからそのサーバー ネットワーク アドレスを削除します。  
   
@@ -70,9 +72,10 @@ ms.locfileid: "62754675"
   
 3.  次のステートメントを実行します。  
   
-     [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring) *database_name* SET WITNESS OFF  
+     [ALTER database](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring) *database_name* SET 監視をオフにします。  
   
-     *database_name* はミラー化されたデータベースの名前です。  
+     
+  *database_name* はミラー化されたデータベースの名前です。  
   
      次の例では、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースからミラーリング監視サーバーを削除します。  
   
@@ -92,14 +95,14 @@ ms.locfileid: "62754675"
   
 ##  <a name="RelatedTasks"></a> 関連タスク  
   
--   [Windows 認証を使用してデータベースのミラーリング監視を追加する &#40;Transact-SQL&#41;](add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)  
+-   [Windows 認証 &#40;使用してデータベースミラーリング監視サーバーを追加する Transact-sql&#41;](add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)  
   
--   [データベース ミラーリング監視サーバーを追加または置き換える方法 &#40;SQL Server Management Studio&#41;](../database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
+-   [データベースミラーリング監視サーバーを追加または置き換える &#40;SQL Server Management Studio&#41;](../database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
   
 ## <a name="see-also"></a>参照  
- [ALTER DATABASE データベース ミラーリング &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)   
- [データベース ミラーリング セッションでのトランザクションの安全性の変更 &#40;Transact-SQL&#41;](change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)   
- [Windows 認証を使用してデータベースのミラーリング監視を追加する &#40;Transact-SQL&#41;](add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)   
+ [ALTER DATABASE データベースミラーリング &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)   
+ [データベースミラーリングセッションでのトランザクションの安全性の変更 Transact-sql&#41;の &#40;](change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)   
+ [Windows 認証 &#40;使用してデータベースミラーリング監視サーバーを追加する Transact-sql&#41;](add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)   
  [データベース ミラーリング監視サーバー](database-mirroring-witness.md)  
   
   

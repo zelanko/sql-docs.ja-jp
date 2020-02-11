@@ -20,18 +20,18 @@ ms.assetid: 930d1d89-337a-4429-85a2-84ee10555ac9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bbd8df72bcb0e76c8abcc3d738c2ff8da61a7bfe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68039485"
 ---
 # <a name="sqlvaliddsn-function"></a>SQLValidDSN 関数
-**準拠**  
- バージョンが導入されました。ODBC 2.0  
+**互換性**  
+ 導入されたバージョン: ODBC 2.0  
   
- **概要**  
- **SQLValidDSN**名前は、システムの情報を追加する前に、長さとデータ ソース名の有効性を確認します。  
+ **まとめ**  
+ **Sqlvaliddsn**は、システム情報に名前を追加する前に、データソース名の長さと有効性をチェックします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -43,28 +43,28 @@ BOOL SQLValidDSN(
   
 ## <a name="arguments"></a>引数  
  *lpszDSN*  
- [入力]データ ソースの名前を確認します。  
+ 代入確認するデータソース名。  
   
 ## <a name="returns"></a>戻り値  
- 関数は、データ ソース名が有効な場合に TRUE を返します。 データ ソース名が無効であるか、関数呼び出しに失敗した場合は FALSE を返します。  
+ 関数は、データソース名が有効である場合に TRUE を返します。 データソース名が無効な場合、または関数呼び出しが失敗した場合は、FALSE を返します。  
   
 ## <a name="diagnostics"></a>診断  
- ときに**SQLValidDSN** 、関連付けられている FALSE が返されます *\*pfErrorCode*を呼び出して値を取得する**SQLInstallerError**します。 A  *\*pfErrorCode*が返されるだけ、関数呼び出しが失敗したかどうか、データ ソース名が無効なために、FALSE が返された場合にありません。 次の表、  *\*pfErrorCode*によって返される値**SQLInstallerError**とこの関数のコンテキストでそれぞれについて説明します。  
+ **Sqlvaliddsn**から FALSE が返された場合、 **sqlインストーラエラー**を呼び出すことによって、関連* \*する pferrorcode*値を取得できます。 データソース名が無効であるために FALSE が返された場合にのみ、関数呼び出しが失敗した場合にのみ、 * \*pferrorcode*が返されます。 次の表は、 **sqlインストーラエラー**によって返される可能性がある* \*pferrorcode*値と、この関数のコンテキストにおけるそれぞれの値を示しています。  
   
-|*\*pfErrorCode*|[エラー]|説明|  
+|*\*pfErrorCode*|エラー|[説明]|  
 |---------------------|-----------|-----------------|  
-|ODBC_ERROR_GENERAL_ERR|一般的なインストーラーのエラー|エラーが発生する特定のインストーラーのエラーがなかった。|  
-|ODBC_ERROR_OUT_OF_MEM|メモリ不足|インストーラーは、メモリ不足のため、関数を実行できませんでした。|  
+|ODBC_ERROR_GENERAL_ERR|一般的なインストーラーエラー|特定のインストーラーエラーがなかったためにエラーが発生しました。|  
+|ODBC_ERROR_OUT_OF_MEM|メモリ不足|メモリ不足のため、インストーラーで関数を実行できませんでした。|  
   
-## <a name="comments"></a>コメント  
- **SQLValidDSN**ドライバーのによって呼び出される[ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md)をデータ ソース名の長さと、データ ソースの個別の文字の有効性を確認します。 Sqlext.h で定義されている名前の長さが SQL_MAX_DSN_LENGTH より大きいかどうかを確認します。 (データ ソース名の長さがによってチェックも[SQLWriteDSNToIni](../../../odbc/reference/syntax/sqlwritedsntoini-function.md))。**SQLValidDSN**の次の無効な文字がデータ ソース名に含めるかどうかを確認します。  
+## <a name="comments"></a>説明  
+ **Sqlvaliddsn**は、データソース名の長さとデータソース名の個々の文字の有効性を確認するために、ドライバーの[configdsn](../../../odbc/reference/syntax/configdsn-function.md)によって呼び出されます。 名前の長さが SQL_MAX_DSN_LENGTH より大きいかどうかをチェックします。 Sqlext の定義に従ってください。 (データソース名の長さも[Sqlwritedsntoini](../../../odbc/reference/syntax/sqlwritedsntoini-function.md)によって確認されます)。**Sqlvaliddsn**は、次の無効な文字のいずれかがデータソース名に含まれているかどうかを確認します。  
   
  [ ] { } ( ) , ; ? * = ! \@ \  
   
 ## <a name="related-functions"></a>関連する関数  
   
-|詳細|参照先|  
+|対象|以下を参照してください。|  
 |---------------------------|---------|  
-|追加、変更、またはデータ ソースを削除します。|[ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md) (で DLL のセットアップ)|  
-|追加、変更、またはデータ ソースを削除します。|[SQLConfigDataSource](../../../odbc/reference/syntax/sqlconfigdatasource-function.md)|  
-|システム情報へのデータ ソース名の書き込み|[SQLWriteDSNToIni](../../../odbc/reference/syntax/sqlwritedsntoini-function.md)|
+|データソースの追加、変更、または削除|[Configdsn](../../../odbc/reference/syntax/configdsn-function.md) (セットアップ DLL 内)|  
+|データソースの追加、変更、または削除|[SQLConfigDataSource](../../../odbc/reference/syntax/sqlconfigdatasource-function.md)|  
+|システム情報へのデータソース名の書き込み|[SQLWriteDSNToIni](../../../odbc/reference/syntax/sqlwritedsntoini-function.md)|

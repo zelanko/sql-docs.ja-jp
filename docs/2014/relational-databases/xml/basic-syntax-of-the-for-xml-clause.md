@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0bb04374ede05406fdf6d273a76a246bb35f5dac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62637872"
 ---
 # <a name="basic-syntax-of-the-for-xml-clause"></a>FOR XML 句の基本構文
@@ -29,7 +29,7 @@ ms.locfileid: "62637872"
 > [!IMPORTANT]  
 >  FOR XML オプションに対する XMLDATA ディレクティブは非推奨とされます。 RAW モードと AUTO モードの場合は、XSD 世代を使用してください。 EXPLICIT モードでは、XMLDATA ディレクティブに代わる機能はありません。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- 「 [FOR 句 (Transact-SQL)](/sql/t-sql/queries/select-for-clause-transact-sql)」で説明している基本構文を次に示します。  
+ [FOR 句 (transact-sql)](/sql/t-sql/queries/select-for-clause-transact-sql)で説明されている基本的な構文を次に示します。  
   
 ```  
 [ FOR { BROWSE | <XML> } ]  
@@ -88,7 +88,7 @@ XML
  TYPE  
  クエリが結果を **xml** 型で返すことを指定します。 詳細については、「 [FOR XML クエリの TYPE ディレクティブ](type-directive-in-for-xml-queries.md)」を参照してください。  
   
- ROOT [('*RootName*')]  
+ ルート [('*RootName*')]  
  結果の XML に、1 つの最上位要素が追加されることを指定します。 必要に応じて、生成するルート要素名を指定することもできます。 既定値は "root" です。  
   
 ## <a name="see-also"></a>参照  

@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 60c0d0b594c8526d5106dd554652dce45f945585
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73759722"
 ---
 # <a name="sql-server-native-client-error-mssqlserver_50000"></a>SQL Server Native Client エラー MSSQLSERVER_50000
@@ -28,7 +28,7 @@ ms.locfileid: "73759722"
 |||  
 |-|-|  
 |製品名|SQL Server|  
-|[製品バージョン]|11.0|  
+|製品バージョン|11.0|  
 |イベント ID|50000|  
 |イベント ソース|SETUP|  
 |コンポーネント|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client|  

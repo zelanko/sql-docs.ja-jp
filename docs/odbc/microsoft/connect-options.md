@@ -1,5 +1,5 @@
 ---
-title: 接続のオプション |Microsoft Docs
+title: 接続オプション |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,26 +15,26 @@ ms.assetid: abfdc133-cb33-435f-a467-fbe15444f687
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4358756deaa595ee5e10df0490522631201b9c87
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68023375"
 ---
 # <a name="connect-options"></a>接続のオプション
 > [!IMPORTANT]  
->  この機能は、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 代わりに、Oracle によって提供される ODBC ドライバーを使用します。  
+>  この機能は、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 代わりに、Oracle によって提供される ODBC ドライバーを使用してください。  
   
- これらのオプションは、アプリケーション内でデータベース接続のカスタマイズを許可します。  
+ これらのオプションを使用すると、アプリケーション内のデータベース接続をカスタマイズできます。  
   
-|接続オプション|メモ|  
+|Connect オプション|メモ|  
 |--------------------|-----------|  
-|SQL_AUTOCOMMIT|アプリケーションのコミットまたはとのトランザクションをロールバックする必要があります明示的に SQL_AUTOCOMMIT_OFF 場合は、 [SQLTransact](../../odbc/microsoft/core-level-api-functions-odbc-driver-for-oracle.md)します。|  
-|SQL_ODBC_CURSORS|この接続属性は、ドライバー マネージャーで実装されます。|  
-|SQL_OPT_TRACE|この接続属性は、ドライバー マネージャーで実装されます。|  
-|SQL_OPT_TRACEFILE|この接続属性は、ドライバー マネージャーで実装されます。|  
-|SQL_TRANSLATE_DLL|エラーが返されます。"Driver できません。"|  
-|SQL_TRANSLATE_OPTION|翻訳の .dll に 32 ビット値が渡されます。|  
-|SQL_TXN_ISOLATION|ドライバーでは、SQL_TXN_READ_COMMITTED のみ使用できます。<br /><br /> 次の vParams がサポートされていません。<br /><br /> SQL_TXN_READ_UNCOMMITTED<br /><br /> SQL_TXN_REAPEATABLE_READ<br /><br /> SQL_TXN_SERIALIZABLE|  
-|SQL_ATTR_ENLIST_IN_DTC|この ODBC 3.0 接続属性を使用すると、Oracle の Microsoft コンポーネント サービス (または Windows NT を使用している場合は、MTS) によってコーディネートされる分散トランザクションで ODBC ドライバーを使用できます。 インターフェイス ポインターを提供します*pITransaction*としてトランザクションに、 *vParam*引数。|  
-|SQL_ATTR_CONNECTION_DEAD|この読み取り専用の 3.5 インチの ODBC 接続属性では、Oracle サーバーへの接続が失敗したかどうかを判断できます。 Get だけです。設定できません。|
+|SQL_AUTOCOMMIT|SQL_AUTOCOMMIT_OFF を選択した場合、アプリケーションは[Sqltransact](../../odbc/microsoft/core-level-api-functions-odbc-driver-for-oracle.md)を使用してトランザクションを明示的にコミットまたはロールバックする必要があります。|  
+|SQL_ODBC_CURSORS|この接続属性は、ドライバーマネージャーに実装されます。|  
+|SQL_OPT_TRACE|この接続属性は、ドライバーマネージャーに実装されます。|  
+|SQL_OPT_TRACEFILE|この接続属性は、ドライバーマネージャーに実装されます。|  
+|SQL_TRANSLATE_DLL|"ドライバーに対応していません" というエラーが返されます。|  
+|SQL_TRANSLATE_OPTION|変換 .dll に渡される32ビット値。|  
+|SQL_TXN_ISOLATION|ドライバーは SQL_TXN_READ_COMMITTED のみを許可します。<br /><br /> 次の vParams はサポートされていません。<br /><br /> SQL_TXN_READ_UNCOMMITTED<br /><br /> SQL_TXN_REAPEATABLE_READ<br /><br /> SQL_TXN_SERIALIZABLE|  
+|SQL_ATTR_ENLIST_IN_DTC|この ODBC 3.0 接続属性を使用すると、Microsoft コンポーネントサービス (または Windows NT を使用している場合は MTS) によって調整された分散トランザクションで、ODBC Driver for Oracle を使用できます。 このメソッドは、 *Vparam*引数としてトランザクションに*pITransaction*インターフェイスポインターを提供します。|  
+|SQL_ATTR_CONNECTION_DEAD|この読み取り専用 ODBC 3.5 接続属性を使用すると、Oracle サーバーへの接続に失敗したかどうかを判断できます。 Get のみ。を設定できません。|

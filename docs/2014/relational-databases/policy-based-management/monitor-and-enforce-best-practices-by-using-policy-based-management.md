@@ -13,17 +13,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: bfc7cc16c9751ebdf64a8e9cd110547255c944ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62626049"
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>ポリシー ベースの管理を使用したベスト プラクティスの監視と実行
-  ポリシー ベースの管理を許可するためのベスト プラクティスの監視、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ベスト プラクティスのポリシーとしてインポートし、インスタンス、インスタンス オブジェクト、データベース、またはデータベース オブジェクトを含む対象セットに対してポリシーを評価できる一連のポリシー ファイルを提供します。 ポリシーを手動で評価したり、スケジュールまたはイベントに従って対象セットを評価するようにポリシーを設定したりできます。 条件と各ファセットおよびポリシーとの関係の詳細については、「 [ポリシー ベースの管理を使用したサーバーの管理](administer-servers-by-using-policy-based-management.md)」を参照してください。  
+  ポリシーベースの管理では、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のベストプラクティスを監視できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、ベストプラクティスポリシーとしてインポートできる一連のポリシーファイルを提供し、インスタンス、インスタンスオブジェクト、データベース、またはデータベースオブジェクトを含む対象セットに対してポリシーを評価します。 ポリシーを手動で評価したり、スケジュールまたはイベントに従って対象セットを評価するようにポリシーを設定したりできます。 条件と各ファセットおよびポリシーとの関係の詳細については、「 [ポリシー ベースの管理を使用したサーバーの管理](administer-servers-by-using-policy-based-management.md)」を参照してください。  
   
 ## <a name="policy-and-rules-for-database-engine"></a>データベース エンジンのポリシーとルール  
- 次の表に、ポリシーのインストールに含まれている[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と各ポリシーで評価するベスト プラクティス ルールに関する情報が含まれています。 ポリシーは XML ファイルとして格納され、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]にインポートする必要があります。 ポリシーのインポート方法については、「 [ポリシー ベースの管理ポリシーのインポート](import-a-policy-based-management-policy.md)」を参照してください。  
+ 次の表に、の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インストールに含まれているポリシーと、各ポリシーで評価されるベストプラクティス規則に関する情報を示します。 ポリシーは XML ファイルとして格納され、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]にインポートする必要があります。 ポリシーのインポート方法については、「 [ポリシー ベースの管理ポリシーのインポート](import-a-policy-based-management-policy.md)」を参照してください。  
   
 |ポリシー名|ベスト プラクティス ルール|  
 |-----------------|------------------------|  
@@ -38,8 +38,8 @@ ms.locfileid: "62626049"
 |guest の権限|[ユーザー データベースに対する guest の権限](guest-permissions-on-user-databases.md)|  
 |最後にバックアップが正常終了した日付|[期限切れのバックアップ](outdated-backup.md)|  
 |パブリックに許可されていないサーバー権限|[サーバーのパブリック権限](server-public-permissions.md)|  
-|SQL Server の 32 ビットの関係マスクの重複|[正しい Affinity Mask オプションと関係マスクの重複の入出力](correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md)|  
-|SQL Server 64 ビットの関係マスクの重複|[正しい Affinity Mask オプションと関係マスクの重複の入出力](correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md)|  
+|SQL Server 32-ビット関係マスクの重複|[Affinity Mask と Affinity の入力出力マスクが重複しています](correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md)|  
+|SQL Server 64 ビットの関係マスクの重複|[Affinity Mask と Affinity の入力出力マスクが重複しています](correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md)|  
 |SQL Server 関係マスク|[関係マスクの既定値の保持](keep-the-affinity-mask-default-value.md)|  
 |SQL Server のブロック対象プロセスのしきい値|[blocked process threshold の増加または無効化](increase-or-disable-blocked-process-threshold.md)|  
 |SQL Server の既定のトレース|[既定のトレース ログ ファイルの無効化](default-trace-log-files-disabled.md)|  
@@ -60,8 +60,8 @@ ms.locfileid: "62626049"
 |Windows イベント ログのクラスター ディスク リソース破損エラー|[SCSI ホスト アダプターの問題の検出](detect-scsi-host-adapter-issues.md)|  
 |Windows イベント ログのデバイス ドライバー制御エラー|[デバイス ドライバー制御エラー](device-driver-control-error.md)|  
 |Windows イベント ログのデバイス準備未完了エラー|[デバイス準備未完了エラー](device-not-ready-error.md)|  
-|Windows イベント ログの I_O 要求失敗エラー|[失敗した入出力要求を検出します。](detect-failed-input-and-output-requests.md)|  
-|Windows イベント ログの I_O 遅延警告|[ディスク I/O サブシステムの I/O 遅延問題の確認](check-disk-input-and-output-subsystem-for-io-delay-problems.md)|  
+|Windows イベント ログの I_O 要求失敗エラー|[失敗した入力出力要求の検出](detect-failed-input-and-output-requests.md)|  
+|Windows イベント ログの I_O 遅延警告|[ディスクの入出力サブシステムで IO 遅延の問題を確認する](check-disk-input-and-output-subsystem-for-io-delay-problems.md)|  
 |Windows イベント ログのハード ページ フォールト エラー時の I_O エラー|[ハード ページ フォールト中の I/O エラー](input-and-output-error-during-hard-page-fault.md)|  
 |Windows イベント ログの読み取り再試行エラー|[ディスク I/O サブシステムの読み取り再試行の問題の確認](check-disk-input-output-subsystem-for-read-retry-problems.md)|  
 |Windows イベント ログのストレージ システム I_O タイムアウト エラー|[ストレージ システムの入出力のタイムアウト](storage-system-input-output-time-out.md)|  

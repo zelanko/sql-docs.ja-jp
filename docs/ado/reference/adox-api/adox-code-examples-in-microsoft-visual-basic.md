@@ -1,5 +1,5 @@
 ---
-title: Microsoft Visual Basic での ADOX のコード例 |Microsoft Docs
+title: Microsoft Visual Basic の ADOX のコード例 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,17 +15,17 @@ ms.assetid: ed072a35-e1ae-4cf9-b8d2-0db1e32641fa
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 92b978e3019e6dfbabcf4421f53a111c7d520112
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67952133"
 ---
 # <a name="adox-code-examples-in-microsoft-visual-basic"></a>Microsoft Visual Basic での ADOX コードの例
-これらのトピックでは、ADOX を使用する方法を理解するのに役立つサンプル コードを提供します。 すべてのコード例では、Microsoft Visual Basic を使用して書き込まれます。  
+これらのトピックでは、ADOX の使用方法を理解するのに役立つサンプルコードを提供しています。 すべてのコード例は、Microsoft Visual Basic を使用して記述されています。  
   
 > [!NOTE]
->  全体のコード例は、End Sub にサブディレクトリをコード エディターに貼り付けます。 部分的な例を使用する場合、または段落の書式設定が失われた場合、例が正しく動作しない可能性があります。  
+>  Sub から End Sub までのコード例全体をコードエディターに貼り付けます。 部分例を使用する場合や、段落の書式設定が失われた場合、この例は正しく動作しない可能性があります。  
   
 ## <a name="methods"></a>メソッド  
   
@@ -43,7 +43,7 @@ ms.locfileid: "67952133"
   
 -   [Indexes Append メソッドの例 (VB)](../../../ado/reference/adox-api/indexes-append-method-example-vb.md)  
   
--   [Keys Append メソッド、キーの種類、RelatedColumn、RelatedTable、および UpdateRule プロパティの例 (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)  
+-   [Keys Append メソッド、Key Type、関連性列、関連性テーブル、および UpdateRule プロパティの例 (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)  
   
 -   [Procedures Append メソッドの例 (VB)](../../../ado/reference/adox-api/procedures-append-method-example-vb.md)  
   
@@ -67,9 +67,9 @@ ms.locfileid: "67952133"
   
 -   [Command プロパティおよび CommandText プロパティの例 (VB)](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vb.md)  
   
--   [Command プロパティ、パラメーター コレクションの例 (VB)](../../../ado/reference/adox-api/parameters-collection-command-property-example-vb.md)  
+-   [Command プロパティ、Parameters コレクションの例 (VB)](../../../ado/reference/adox-api/parameters-collection-command-property-example-vb.md)  
   
--   [CommandText プロパティ ビュー コレクションの例 (VB)](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)  
+-   [CommandText プロパティ、Views コレクションの例 (VB)](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)  
   
 -   [DateCreated および DateModified プロパティの例 (VB)](../../../ado/reference/adox-api/datecreated-and-datemodified-properties-example-vb.md)  
   
@@ -79,7 +79,7 @@ ms.locfileid: "67952133"
   
 -   [IndexNulls プロパティの例 (VB)](../../../ado/reference/adox-api/indexnulls-property-example-vb.md)  
   
--   [キーの種類、RelatedColumn、RelatedTable、UpdateRule プロパティ、キーの Append メソッドの例 (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)  
+-   [キーの種類、UpdateRule の列、関連性のあるテーブル、およびプロパティの Keys Append メソッドの例 (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)  
   
 -   [Name プロパティ、Columns および Tables Append メソッドの例 (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)  
   
@@ -91,7 +91,7 @@ ms.locfileid: "67952133"
   
 -   [SortOrder プロパティの例 (VB)](../../../ado/reference/adox-api/sortorder-property-example-vb.md)  
   
--   [テーブル型、Connection Close メソッド、プロパティの例 (VB)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)  
+-   [Table Type プロパティ、Connection Close メソッド、Example (VB)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)  
   
 ## <a name="collections"></a>コレクション  
   

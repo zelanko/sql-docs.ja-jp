@@ -22,15 +22,15 @@ ms.assetid: 95069d22-b05d-4670-b053-15ee2a664e33
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: f1ff346abc41ee4589a8d0b2193b167fb2cf24e0
-ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70212381"
 ---
 # <a name="clr-integration-custom-attributes-for-clr-routines"></a>CLR ルーチン用の CLR 統合のカスタム属性
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  一覧表示されている属性は、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]に登録されている共通言語ランタイム (CLR) ルーチン、ユーザー定義型、およびユーザー定義集計に適用できます。 属性が適用されない場合、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は既定値を想定します。 一覧表示される属性は、 **Microsoft の SqlServer**名前空間で定義されています。  
+  ここに示されている属性は、に[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]登録されている共通言語ランタイム (CLR) ルーチン、ユーザー定義型、およびユーザー定義集計に適用できます。 属性が適用されない場合、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は既定値を想定します。 一覧表示される属性は、 **Microsoft の SqlServer**名前空間で定義されています。  
   
 ## <a name="the-sqluserdefinedaggregate-attribute"></a>SqlUserDefinedAggregate 属性  
  **Sqluserdefinedaggregate**属性は、メソッドをユーザー定義集計として登録する必要があることを示します。 すべてのユーザー定義集計にこのカスタム属性で注釈を付ける必要があります。  
@@ -58,7 +58,8 @@ ms.locfileid: "70212381"
  詳細については、「 [Sqltriggercontext](https://go.microsoft.com/fwlink/?LinkId=128022) 」と「 [sqltriggercontext](https://go.microsoft.com/fwlink/?LinkId=203898)」を参照してください。  
   
 ## <a name="the-sqluserdefinedtypeattribute"></a>SqlUserDefinedTypeAttribute  
- SqlUserDefinedTypeAttribute をアセンブリのクラス定義に適用できます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、これにより、このカスタム属性を持つクラス定義にバインドされたユーザー定義型が作成されます。  
+ SqlUserDefinedTypeAttribute をアセンブリのクラス定義に適用できます。 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、これにより、このカスタム属性を持つクラス定義にバインドされたユーザー定義型が作成されます。  
   
  詳細については、「 [SqlUserDefinedTypeAttribute](https://go.microsoft.com/fwlink/?LinkId=128024)」を参照してください。  
   
