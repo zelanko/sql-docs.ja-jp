@@ -1,5 +1,5 @@
 ---
-title: テーブルの例 (VB) 間に新しい外部キー リレーションシップの作成 |Microsoft Docs
+title: テーブル間に新しい外部キーリレーションシップを作成する例 (VB) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -19,14 +19,14 @@ ms.assetid: 13b5b1c3-6af6-439e-bb65-976578ba6bc2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6873b964adfcfc5bffed5d093bed48f4fbd29a20
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965862"
 ---
 # <a name="keys-append-method-key-type-relatedcolumn-relatedtable-and-updaterule-properties-example-vb"></a>Keys Append メソッド、Key Type、RelatedColumn、RelatedTable、UpdateRule プロパティの例 (VB)
-次のコードは、という名前の 2 つの既存のテーブル間に新しい外部キー リレーションシップを作成する方法を示します**顧客**と**注文**します。  
+次のコードは、 **Customers**と**Orders**という名前の2つの既存のテーブル間に新しい外部キーリレーションシップを作成する方法を示しています。  
   
 ```  
 ' BeginCreateKeyVB  
@@ -72,17 +72,17 @@ End Sub
 ' EndCreateKeyVB  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Append メソッド (ADOX Columns)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
  [Append メソッド (ADOX Keys)](../../../ado/reference/adox-api/append-method-adox-keys.md)   
  [Catalog オブジェクト (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [列オブジェクト (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
- [列のコレクション (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
- [キー オブジェクト (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)   
+ [Column オブジェクト (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
+ [Columns コレクション (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
+ [Key オブジェクト (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)   
  [Keys コレクション (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)   
  [Name プロパティ (ADOX)](../../../ado/reference/adox-api/name-property-adox.md)   
- [RelatedColumn プロパティ (ADOX)](../../../ado/reference/adox-api/relatedcolumn-property-adox.md)   
- [RelatedTable プロパティ (ADOX)](../../../ado/reference/adox-api/relatedtable-property-adox.md)   
+ ["関連性列" プロパティ (ADOX)](../../../ado/reference/adox-api/relatedcolumn-property-adox.md)   
+ ["関連性テーブル" プロパティ (ADOX)](../../../ado/reference/adox-api/relatedtable-property-adox.md)   
  [Table オブジェクト (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)   
  [Tables コレクション (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)   
  [Type プロパティ (キー) (ADOX)](../../../ado/reference/adox-api/type-property-key-adox.md)   

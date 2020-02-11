@@ -1,5 +1,5 @@
 ---
-title: '例: CDATA ディレクティブの指定 | Microsoft Docs'
+title: '例 : CDATA ディレクティブの指定 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fa5cec5be4153547d60e1592c21f00470ab1a5fe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63287769"
 ---
-# <a name="example-specifying-the-cdata-directive"></a>例:CDATA ディレクティブの指定
+# <a name="example-specifying-the-cdata-directive"></a>例 : CDATA ディレクティブの指定
   **CDATA**ディレクティブが指定されている場合、含まれているデータはエンティティとしてエンコードされず、CDATA セクションに配置されます。 **CDATA** 属性は、無名でなければなりません。  
   
  次のクエリでは、製品モデルの概要説明を CDATA セクションに配置しています。  

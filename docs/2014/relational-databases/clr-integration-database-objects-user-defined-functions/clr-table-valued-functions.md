@@ -19,10 +19,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 7dfd3db3a8193e92f9670213c602d55dc45f5c7f
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75232290"
 ---
 # <a name="clr-table-valued-functions"></a>CLR テーブル値関数
@@ -58,7 +58,7 @@ Public Shared Sub FillRow ( <Out()> ByRef value As SqlInt32)
 ```  
   
 ### <a name="defining-a-table-valued-function-in-transact-sql"></a>Transact-SQL のテーブル値関数の定義  
- CLR テーブル値関数を定義するための構文は [!INCLUDE[tsql](../../includes/tsql-md.md)] テーブル値関数の構文と似ていますが、`EXTERNAL NAME` 句が追加されています。 例:  
+ CLR テーブル値関数を定義するための構文は [!INCLUDE[tsql](../../includes/tsql-md.md)] テーブル値関数の構文と似ていますが、`EXTERNAL NAME` 句が追加されています。 次に例を示します。  
   
 ```  
 CREATE FUNCTION GetEmpFirstLastNames()  

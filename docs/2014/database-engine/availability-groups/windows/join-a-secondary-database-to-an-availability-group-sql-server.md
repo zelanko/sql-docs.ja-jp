@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5de4600d4f4c3d52d1757218e1f2d9b32f554286
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72797667"
 ---
 # <a name="join-a-secondary-database-to-an-availability-group-sql-server"></a>可用性グループへのセカンダリ データベースの参加 (SQL Server)
@@ -34,7 +34,7 @@ ms.locfileid: "72797667"
   
      [セキュリティ](#Security)  
   
--   **以下を使用してセカンダリ データベースを準備するには:**  
+-   **次のものを使用してセカンダリデータベースを準備するには:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -43,21 +43,21 @@ ms.locfileid: "72797667"
      [PowerShell](#PowerShellProcedure)  
   
 > [!NOTE]  
->  セカンダリデータベースがグループに参加した後の動作については、「 [ &#40;AlwaysOn 可用性グループ&#41;SQL Server の概要](overview-of-always-on-availability-groups-sql-server.md)」を参照してください。  
+>  セカンダリデータベースがグループに参加した後の動作については、「 [AlwaysOn 可用性グループ &#40;SQL Server&#41;の概要](overview-of-always-on-availability-groups-sql-server.md)」を参照してください。  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Prerequisites"></a> の前提条件  
+###  <a name="Prerequisites"></a> 前提条件  
   
 -   セカンダリ レプリカをホストするサーバー インスタンスに接続されている必要があります。  
   
 -   セカンダリ レプリカがあらかじめ可用性グループに参加している必要があります。 詳細については、「 [可用性グループへのセカンダリ レプリカの参加 &#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md)」を参照してください。  
   
--   セカンダリ データベースが最近準備されたものである必要があります。 詳細については、「[可用性グループに対するセカンダリ データベースの手動準備 &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)」を参照してください。  
+-   セカンダリ データベースが最近準備されたものである必要があります。 詳細については、「 [可用性グループに対するセカンダリ データベースの手動準備 &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)、または PowerShell を使用して、AlwaysOn 可用性グループにセカンダリ データベースを参加させる方法について説明します。  
   
 ###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> アクセス許可  
+####  <a name="Permissions"></a> Permissions  
  可用性グループの ALTER AVAILABILITY GROUP 権限、CONTROL AVAILABILITY GROUP 権限、ALTER ANY AVAILABILITY GROUP 権限、または CONTROL SERVER 権限が必要です。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
@@ -65,7 +65,8 @@ ms.locfileid: "72797667"
   
 1.  オブジェクト エクスプローラーで、セカンダリ レプリカをホストするサーバー インスタンスに接続し、サーバー ツリーを展開します。  
   
-2.  **[AlwaysOn 高可用性]** ノードと **[可用性グループ]** ノードを展開します。  
+2.  
+  **[AlwaysOn 高可用性]** ノードと **[可用性グループ]** ノードを展開します。  
   
 3.  変更する可用性グループを展開し、 **[可用性データベース]** ノードを展開します。  
   
@@ -78,13 +79,14 @@ ms.locfileid: "72797667"
   
 1.  セカンダリ レプリカをホストするサーバー インスタンスに接続します。  
   
-2.  [ALTER DATABASE ステートメントの SET HADR 句](/sql/t-sql/statements/alter-database-transact-sql-set-hadr) を使用します。次にその例を示します。  
+2.  
+  [ALTER DATABASE ステートメントの SET HADR 句](/sql/t-sql/statements/alter-database-transact-sql-set-hadr) を使用します。次にその例を示します。  
   
      ALTER DATABASE *database_name* SET HADR AVAILABILITY GROUP = *group_name*  
   
      ここで、 *database_name* は参加させるデータベースの名前で、 *group_name* は可用性グループの名前です。  
   
-     次の例では、セカンダリ データベース `Db1`を、 `MyAG` 可用性グループのローカル セカンダリ レプリカに参加させます。  
+     次の例では、セカンダリ データベース `Db1` を、`MyAG` 可用性グループのローカル セカンダリ レプリカに参加させます。  
   
     ```sql
     ALTER DATABASE Db1 SET HADR AVAILABILITY GROUP = MyAG;  
@@ -93,12 +95,13 @@ ms.locfileid: "72797667"
     > [!NOTE]  
     >  コンテキストで使用するこの [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントを確認するには、「[可用性グループの作成 &#40;Transact-SQL&#41;](create-an-availability-group-transact-sql.md)」を参照してください。  
   
-##  <a name="PowerShellProcedure"></a> PowerShell の使用  
- **セカンダリ データベースを可用性グループに参加させるには**  
+##  <a name="PowerShellProcedure"></a>PowerShell の使用  
+ **セカンダリデータベースを可用性グループに参加させるには**  
   
 1.  ディレクトリ変更コマンド (`cd`) を使用して、セカンダリ レプリカをホストするサーバー インスタンスに移動します。  
   
-2.  `Add-SqlAvailabilityDatabase` コマンドレットを使用して、セカンダリ データベース (複数可) を可用性グループに参加させます。  
+2.  
+  `Add-SqlAvailabilityDatabase` コマンドレットを使用して、セカンダリ データベース (複数可) を可用性グループに参加させます。  
   
      たとえば、次のコマンドでは、セカンダリ レプリカをホストするいずれかのサーバー インスタンスで可用性グループ `Db1`にセカンダリ データベース `MyAG` を参加させます。  
   
@@ -111,15 +114,15 @@ ms.locfileid: "72797667"
   
  **SQL Server PowerShell プロバイダーを設定して使用するには**  
   
--   [SQL Server PowerShell プロバイダー](../../../powershell/sql-server-powershell-provider.md)  
+-   [SQL Server PowerShell Provider](../../../powershell/sql-server-powershell-provider.md)  
   
 ##  <a name="RelatedTasks"></a> 関連タスク  
   
--   [可用性グループへのセカンダリ レプリカの参加 &#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md)  
+-   [セカンダリレプリカを可用性グループに参加させる &#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
--   [可用性グループに対するセカンダリ データベースの手動準備 &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
+-   [可用性グループのセカンダリデータベースを手動で準備 &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
   
 ## <a name="see-also"></a>参照  
- [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-availability-group-transact-sql)   
- [AlwaysOn 可用性グループ&#40;SQL Server&#41;の概要](overview-of-always-on-availability-groups-sql-server.md)   
- [AlwaysOn 可用性グループ構成&#40;SQL Server&#41;削除された問題のトラブルシューティング](troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
+ [ALTER AVAILABILITY GROUP &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-availability-group-transact-sql)   
+ [AlwaysOn 可用性グループ &#40;SQL Server の概要&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [SQL Server&#41;削除された AlwaysOn 可用性グループ構成 &#40;のトラブルシューティング](troubleshoot-always-on-availability-groups-configuration-sql-server.md)  

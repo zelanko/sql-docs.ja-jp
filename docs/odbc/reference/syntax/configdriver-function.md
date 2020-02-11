@@ -20,18 +20,18 @@ ms.assetid: 9473f48f-bcae-4784-89c1-7839bad4ed13
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9e6c7759cf63611da167bf54a2e88487abc7b1cc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68016747"
 ---
 # <a name="configdriver-function"></a>ConfigDriver 関数
-**準拠**  
- バージョンが導入されました。ODBC 2.5  
+**互換性**  
+ 導入されたバージョン: ODBC 2.5  
   
- **概要**  
- **ConfigDriver**により、セットアップ プログラムをインストールを実行し、関数を呼び出すプログラムを必要とせずアンインストール**ConfigDSN**します。 この関数では、ドライバー固有のシステム情報を作成し、インストール中に、DSN の変換を実行するだけでなくアンインストール中に、システム情報の変更をクリーンアップなどのドライバー固有の関数を実行します。 この関数は、ドライバーのセットアップ DLL または別のセットアップ DLL によって公開されます。  
+ **まとめ**  
+ **Configdriver**を使用すると、プログラムが**configdriver**を呼び出さなくても、インストールおよびアンインストール機能を実行できます。 この関数では、ドライバー固有のシステム情報の作成やインストール時の DSN 変換の実行、アンインストール中のシステム情報のクリーンアップなど、ドライバー固有の機能が実行されます。 この関数は、ドライバーのセットアップ DLL または別のセットアップ DLL によって公開されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -49,52 +49,52 @@ BOOL ConfigDriver(
   
 ## <a name="arguments"></a>引数  
  *hwndParent*  
- [入力]親ウィンドウ ハンドル。 関数では、ハンドルが null の場合、ダイアログ ボックスは表示されません。  
+ 代入親ウィンドウハンドル。 ハンドルが null の場合、この関数はダイアログボックスを表示しません。  
   
- *起こり*  
- [入力]要求の種類。 *起こり*引数は、次の値のいずれかを含める必要があります。  
+ *fRequest*  
+ 代入要求の種類。 *Frequest*引数には、次のいずれかの値が含まれている必要があります。  
   
- ODBC_INSTALL_DRIVER:新しいドライバーをインストールします。  
+ ODBC_INSTALL_DRIVER: 新しいドライバーをインストールします。  
   
- ODBC_REMOVE_DRIVER:ドライバーを削除します。  
+ ODBC_REMOVE_DRIVER: ドライバーを削除します。  
   
- このオプションは、ドライバー固有を場合にも、*起こり*ODBC_CONFIG_DRIVER_MAX + 1 から最初のオプションの引数を起動する必要があります。 *起こり*ODBC_CONFIG_DRIVER_MAX + 1 より大きい値から、追加のオプションの引数を開始する必要がありますもします。  
+ このオプションは、ドライバー固有のものにすることもできます。この場合、最初のオプションの*Frequest*引数は ODBC_CONFIG_DRIVER_MAX + 1 から始める必要があります。 任意の追加オプションの*Frequest*引数も ODBC_CONFIG_DRIVER_MAX + 1 よりも大きい値から開始する必要があります。  
   
  *lpszDriver*  
- [入力]システム情報の Odbcinst.ini のキーに登録されているドライバーの名前。  
+ 代入システム情報の Odbcinst .ini キーに登録されているドライバーの名前。  
   
  *lpszArgs*  
- [入力]ドライバー固有の引数を含む null で終わる文字列*起こり*します。  
+ 代入ドライバー固有の*Frequest*の引数を格納している null で終わる文字列。  
   
  *lpszMsg*  
- [出力]ドライバーのセットアップからの出力メッセージを含む null で終わる文字列。  
+ Outputドライバーセットアップからの出力メッセージを格納している null で終わる文字列。  
   
  *cbMsgMax*  
- [入力]長さ*lpszMsg*します。  
+ 代入*Lpszmsg*の長さ。  
   
  *pcbMsgOut*  
- [出力]返される使用可能なバイトの合計数*lpszMsg*します。  
+ Output*Lpszmsg*で返される、使用可能な合計バイト数。  
   
- 返される使用可能なバイト数がより大きいかに等しい場合*cbMsgMax*、内の出力メッセージ*lpszMsg*に切り捨てられます*cbMsgMax* null 終了マイナス文字。 *PcbMsgOut*引数が null ポインターを指定できます。  
+ 返すことのできるバイト数が*Cbmsgmax*以上の場合、 *lpszmsg*の出力メッセージは、 *cbmsgmax*から null 終了文字を引いた値に切り捨てられます。 *Pcbmsgout*引数には null ポインターを指定できます。  
   
 ## <a name="returns"></a>戻り値  
- 関数は、成功した場合、FALSE が失敗した場合に TRUE を返します。  
+ 関数は、成功した場合は TRUE、失敗した場合は FALSE を返します。  
   
 ## <a name="diagnostics"></a>診断  
- ときに**ConfigDriver** 、関連付けられている FALSE が返されます *\*pfErrorCode*インストーラー エラー バッファーへの呼び出しで値が投稿された**SQLPostInstallerError**呼び出すことによって取得できる**SQLInstallerError**します。 次の表、  *\*pfErrorCode*によって返される値**SQLInstallerError**とこの関数のコンテキストでそれぞれについて説明します。  
+ **Configdriver**が FALSE を返す場合、関連* \*する pferrorcode*値は、 **sqlpostインストーラエラー**の呼び出しによってインストーラーエラーバッファーにポストされ、 **sqlインストーラエラー**を呼び出すことによって取得できます。 次の表は、 **sqlインストーラエラー**によって返される可能性がある* \*pferrorcode*値と、この関数のコンテキストにおけるそれぞれの値を示しています。  
   
-|*\*pfErrorCode*|[エラー]|説明|  
+|*\*pfErrorCode*|エラー|[説明]|  
 |---------------------|-----------|-----------------|  
-|ODBC_ERROR_INVALID_HWND|無効なウィンドウ ハンドル|*HwndParent*引数が無効です。|  
-|ODBC_ERROR_INVALID_REQUEST_TYPE|要求の型が無効です。|*起こり*引数が、次のいずれか。<br /><br /> ODBC_INSTALL_DRIVER ODBC_REMOVE_DRIVER<br /><br /> ドライバー固有のオプションは、ODBC_CONFIG_DRIVER_MAX 以下でした。|  
-|ODBC_ERROR_INVALID_NAME|無効なドライバーまたは翻訳者名|*LpszDriver*引数が無効です。 レジストリに見つかりませんでした。|  
-|ODBC_ERROR_REQUEST_FAILED|*要求*できませんでした|によって要求された操作を実行できませんでした、*起こり*引数。|  
-|ODBC_ERROR_DRIVER_SPECIFIC|ドライバーに translator 固有のエラー|定義された ODBC インストーラーのエラーがないドライバー固有のエラーです。 *SzError*への呼び出しの引数、 **SQLPostInstallerError**関数は、ドライバー固有のエラー メッセージを含める必要があります。|  
+|ODBC_ERROR_INVALID_HWND|ウィンドウハンドルが無効です|*HwndParent*引数が無効でした。|  
+|ODBC_ERROR_INVALID_REQUEST_TYPE|要求の種類が無効です|*Frequest*引数は、次のいずれかではありませんでした:<br /><br /> ODBC_INSTALL_DRIVER ODBC_REMOVE_DRIVER<br /><br /> ドライバー固有のオプションは ODBC_CONFIG_DRIVER_MAX 以下です。|  
+|ODBC_ERROR_INVALID_NAME|ドライバーまたは翻訳者名が無効です|*Lpszdriver*引数が無効でした。 レジストリに見つかりませんでした。|  
+|ODBC_ERROR_REQUEST_FAILED|失敗した*要求*|*Frequest*引数によって要求された操作を実行できませんでした。|  
+|ODBC_ERROR_DRIVER_SPECIFIC|ドライバーまたはトランスレーター固有のエラー|ODBC インストーラーエラーが定義されていないドライバー固有のエラー。 **Sqlpostインストーラ error**関数の呼び出しの*szerror*引数には、ドライバー固有のエラーメッセージが含まれている必要があります。|  
   
-## <a name="comments"></a>コメント  
+## <a name="comments"></a>説明  
   
 ### <a name="driver-specific-options"></a>ドライバー固有のオプション  
- アプリケーションを使用して、ドライバーによって公開されているドライバー固有の機能を要求できます、*起こり*引数。 *起こり*ODBC_CONFIG_DRIVER_MAX に 1 を加えた、最初のオプションは使用し、追加のオプションはその値から 1 ずつ増えます。 その関数が null で終わる文字列で指定する必要がありますのドライバーが必要な引数が渡された、 *lpszArgs*引数。 このような機能を提供するドライバーは、ドライバー固有のオプションのテーブルを維持する必要があります。 オプションは、ドライバーのマニュアルで完全に記述する必要があります。 ドライバー固有のオプションを使用しているアプリケーションの作成者は、これにより、アプリケーション小さい相互運用可能な対応にあります。  
+ アプリケーションは、 *Frequest*引数を使用して、ドライバーによって公開されているドライバー固有の機能を要求できます。 最初のオプションの*Frequest*は 1 ODBC_CONFIG_DRIVER_MAX 加算され、追加のオプションはその値から1ずつ増加します。 その関数のドライバーに必要な引数は、 *Lpszargs*引数で渡される null で終わる文字列で指定する必要があります。 このような機能を提供するドライバーでは、ドライバー固有のオプションの表を保持する必要があります。 これらのオプションは、ドライバーのドキュメントに記載されています。 ドライバー固有のオプションを使用するアプリケーションライターでは、アプリケーションの相互運用性が低下することに注意してください。  
   
-### <a name="messages"></a>Messages  
- ドライバーのセットアップ ルーチンは null で終わる文字列としてアプリケーションにテキスト メッセージを送信することができます、 *lpszMsg*バッファー。 メッセージに切り捨てられます*cbMsgMax*によって null 終了文字マイナス、 **ConfigDriver**する以上の場合は機能*cbMsgMax*文字。
+### <a name="messages"></a>メッセージ  
+ ドライバーのセットアップルーチンは、テキストメッセージを*Lpszmsg*バッファー内の null で終わる文字列としてアプリケーションに送信できます。 このメッセージは、cbmsgmax*文字以上*の場合、 **configdriver**関数によって*cbmsgmax*から null 終了文字を引いた値に切り捨てられます。

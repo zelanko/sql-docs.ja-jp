@@ -1,5 +1,5 @@
 ---
-title: SSMA for MySQL (MySqlToSql) のインストール |Microsoft Docs
+title: SSMA for MySQL のインストール (MySqlToSql) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,29 +12,29 @@ ms.assetid: e89b45bd-59c1-4d23-8bd7-3dafc1947448
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: e944daafdbcfc0bf9fdcec3498a6d2f75342fdc6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68086813"
 ---
 # <a name="installing-ssma-for-mysql-mysqltosql"></a>SSMA for MySQL のインストール (MySQLToSQL)
-SQL Server Migration Assistant (SSMA) for MySQL から MySQL への移行を実行するために使用するクライアント アプリケーションから成る[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure です。 移行されたデータベースでデータの移行と MySQL システム関数の使用をサポートする拡張機能パックも含まれています。  
+MySQL の SQL Server Migration Assistant (SSMA) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、mysql からまたは SQL Azure への移行を実行するために使用するクライアントアプリケーションで構成されています。 また、データの移行と、移行したデータベースでの MySQL システム関数の使用をサポートする拡張パックも含まれています。  
   
-元は、移行手順を実行するコンピューターにクライアント アプリケーションをインストールします。 移行されたデータベースをホストするコンピューター上の拡張機能パック ファイルをインストールする必要があります。  そのコンピューターには、SQL Server を実行する必要があります。  
+移行手順を実行するコンピューターにクライアントアプリケーションをインストールします。 移行されたデータベースをホストするコンピューターに拡張パックファイルをインストールする必要があります。  このコンピューターは SQL Server を実行している必要があります。  
   
-## <a name="upgrading-ssma-for-mysql"></a>アップグレードの SSMA for MySQL  
-以降のバージョンの SSMA for MySQL にアップグレードする場合は、まず、クライアントとサーバー拡張機能パックをアンインストールしてから新しいバージョンをインストールください。  
+## <a name="upgrading-ssma-for-mysql"></a>SSMA for MySQL のアップグレード  
+SSMA for MySQL の新しいバージョンにアップグレードする場合は、最初にクライアントとサーバー拡張機能パックをアンインストールしてから、新しいバージョンをインストールする必要があります。  
   
-## <a name="contents"></a>目次  
+## <a name="contents"></a>内容  
   
 |||  
 |-|-|  
-|**トピック**|**[説明]**|  
-|[SSMA for MySQL クライアントのインストール&#40;MySQLToSQL&#41;](../../ssma/mysql/installing-ssma-for-mysql-client-mysqltosql.md)|SSMA クライアントをインストールするための情報と手順を提供します。|  
-|[SQL Server (MySQL to SQL) での SSMA コンポーネントのインストール](https://msdn.microsoft.com/6772d0c5-258f-4d7b-afb0-b5f810e71af1)|インスタンスに拡張機能パックをインストールするための情報と手順を提供します。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。|  
-|[MySQL コンポーネント用の SSMA の削除&#40;MySQLToSql&#41;](../../ssma/mysql/removing-the-ssma-for-mysql-components-mysqltosql.md)|クライアント プログラムをアンインストールする方法について説明します。|  
+|**トピック**|**説明**|  
+|[SSMA for MySQL クライアント &#40;MySQLToSQL&#41;のインストール](../../ssma/mysql/installing-ssma-for-mysql-client-mysqltosql.md)|SSMA クライアントをインストールするための情報と手順について説明します。|  
+|[SQL Server での SSMA コンポーネントのインストール (MySQL から SQL)](https://msdn.microsoft.com/6772d0c5-258f-4d7b-afb0-b5f810e71af1)|の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスに拡張機能パックをインストールするための情報と手順について説明します。|  
+|[SSMA for MySQL コンポーネントの削除 &#40;MySQLToSql&#41;](../../ssma/mysql/removing-the-ssma-for-mysql-components-mysqltosql.md)|クライアントプログラムをアンインストールする手順について説明します。|  
   
-## <a name="see-also"></a>関連項目  
-[SQL Server - Azure SQL DB への移行 MySQL データベース&#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+## <a name="see-also"></a>参照  
+[MySQL データベースの SQL Server への移行-Azure SQL DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   
