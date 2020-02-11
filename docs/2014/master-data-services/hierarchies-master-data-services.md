@@ -14,13 +14,14 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3cf9d0651b1a0ce5bbb49a575aea10723667ee2f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479460"
 ---
 # <a name="hierarchies-master-data-services"></a>階層 (Master Data Services)
+  
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]の階層とは、次の処理に使用できるツリー構造です。  
   
 -   編成を目的として、類似するメンバーをグループ化する。  
@@ -30,7 +31,7 @@ ms.locfileid: "65479460"
 ## <a name="what-hierarchies-contain"></a>階層の内容  
  各階層には、1 つ以上のエンティティのメンバーが含まれます。 メンバーを追加、変更、または削除すると、すべての階層が更新されます。 これにより、すべての階層でデータの正確さが確保されます。 また、階層を使用すると、各メンバーが 1 回だけカウントされるようにすることができます。  
   
- メンバーのサブセットのグループを作成する場合は、コレクションの使用を検討してください。 詳細については、「[コレクション (マスター データ サービス)](collections-master-data-services.md)」を参照してください。  
+ メンバーのサブセットのグループを作成する場合は、コレクションの使用を検討してください。 詳細については、「 [コレクション (マスター データ サービス)](collections-master-data-services.md)」を参照してください。  
   
 ## <a name="kinds-of-hierarchies"></a>階層の種類  
  さまざまな方法でメンバーを表示したり編成したりするために、複数の階層を作成できます。 次の階層を作成できます。  
@@ -56,21 +57,21 @@ ms.locfileid: "65479460"
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  
-|明示的階層とコレクションに対してエンティティを有効にする。|[明示的階層およびコレクションに対してエンティティを有効にする&#40;マスター データ サービス&#41;](../../2014/master-data-services/enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)|  
-|明示的階層を作成する。|[明示的階層を作成する (マスター データ サービス)](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)|  
-|派生階層を作成する。|[派生階層を作成する (マスター データ サービス)](../../2014/master-data-services/create-a-derived-hierarchy-master-data-services.md)|  
-|既存の派生階層のレベルを非表示にするか、または削除する。|[派生階層のレベルを非表示にするか削除する (マスター データ サービス)](../../2014/master-data-services/hide-or-delete-levels-in-a-derived-hierarchy-master-data-services.md)|  
+|明示的階層とコレクションに対してエンティティを有効にする。|[明示的階層およびコレクションに対してエンティティを有効にする &#40;マスターデータサービス&#41;](../../2014/master-data-services/enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)|  
+|明示的階層を作成する。|[明示的階層 &#40;マスターデータサービスを作成し&#41;](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)|  
+|派生階層を作成する。|[派生階層 &#40;マスターデータサービスを作成し&#41;](../../2014/master-data-services/create-a-derived-hierarchy-master-data-services.md)|  
+|既存の派生階層のレベルを非表示にするか、または削除する。|[派生階層のレベルの非表示または削除 &#40;マスターデータサービス&#41;](../../2014/master-data-services/hide-or-delete-levels-in-a-derived-hierarchy-master-data-services.md)|  
   
 ## <a name="related-content"></a>関連コンテンツ  
   
--   [明示的階層 (マスター データ サービス)](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)  
+-   [明示的階層 &#40;マスターデータサービス&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)  
   
--   [派生階層 (マスター データ サービス)](../../2014/master-data-services/derived-hierarchies-master-data-services.md)  
+-   [派生階層 &#40;マスターデータサービス&#41;](../../2014/master-data-services/derived-hierarchies-master-data-services.md)  
   
--   [再帰型階層 (マスター データ サービス)](../../2014/master-data-services/recursive-hierarchies-master-data-services.md)  
+-   [再帰型階層 &#40;マスターデータサービス&#41;](../../2014/master-data-services/recursive-hierarchies-master-data-services.md)  
   
--   [明示的なキャップを持つ派生階層 (マスター データ サービス)](../../2014/master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)  
+-   [明示的なキャップを持つ派生階層 &#40;マスターデータサービス&#41;](../../2014/master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)  
   
--   [コレクション (マスター データ サービス)](collections-master-data-services.md)  
+-   [コレクション &#40;マスターデータサービス&#41;](collections-master-data-services.md)  
   
   

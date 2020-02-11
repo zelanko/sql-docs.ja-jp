@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 32498fbed24ddab591745ae1d01c5f123e976114
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109010"
 ---
 # <a name="image-device-information-settings"></a>画像デバイス情報設定
@@ -27,18 +27,19 @@ ms.locfileid: "66109010"
 |-------------|-----------|  
 |**[列]**|レポートに設定する列の数。 この値により、レポートの元の設定はオーバーライドされます。|  
 |**ColumnSpacing**|レポートに設定する列の間隔。 この値により、レポートの元の設定はオーバーライドされます。|  
-|`DpiX`|出力画像の水平方向の解像度。 既定値は **96**です。 適用対象`BMP`、 `GIF`、 `PNG`、および`TIFF`出力形式。|  
-|`DpiY`|出力画像の垂直方向の解像度。 既定値は **96**です。 適用対象`BMP`、 `GIF`、 `PNG`、および`TIFF`出力形式。|  
+|`DpiX`|出力画像の水平方向の解像度。 既定値は **96**です。 、 `BMP` `GIF`、 `PNG`、および`TIFF`の各出力形式に適用されます。|  
+|`DpiY`|出力画像の垂直方向の解像度。 既定値は **96**です。 、 `BMP` `GIF`、 `PNG`、および`TIFF`の各出力形式に適用されます。|  
 |**EndPage**|表示するレポートの最後のページ。 既定値は `StartPage` の値です。|  
 |**MarginBottom**|レポートに設定する下余白の値 (インチ単位)。 整数または小数の値の後に "in" を付ける必要があります (たとえば、`1in`)。 この値により、レポートの元の設定はオーバーライドされます。|  
 |**MarginLeft**|レポートに設定する左余白の値 (インチ単位)。 整数または小数の値の後に "in" を付ける必要があります (たとえば、`1in`)。 この値により、レポートの元の設定はオーバーライドされます。|  
 |**MarginRight**|レポートに設定する右余白の値 (インチ単位)。 整数または小数の値の後に "in" を付ける必要があります (たとえば、`1in`)。 この値により、レポートの元の設定はオーバーライドされます。|  
 |**MarginTop**|レポートに設定する上余白の値 (インチ単位)。 整数または小数の値の後に "in" を付ける必要があります (たとえば、`1in`)。 この値により、レポートの元の設定はオーバーライドされます。|  
-|**OutputFormat**|[!INCLUDE[ndptecgdiexpanded](../includes/ndptecgdiexpanded-md.md)] ([!INCLUDE[ndptecgdi](../includes/ndptecgdi-md.md)]) でサポートされるいずれかの出力形式。`BMP`、`EMF`、`GIF`、`JPEG`、`PNG`、または `TIFF` です。|  
+|**OutputFormat**|
+  [!INCLUDE[ndptecgdiexpanded](../includes/ndptecgdiexpanded-md.md)] ([!INCLUDE[ndptecgdi](../includes/ndptecgdi-md.md)]) でサポートされるいずれかの出力形式。`BMP`、`EMF`、`GIF`、`JPEG`、`PNG`、または `TIFF` です。|  
 |**PageHeight**|レポートに設定するページの高さ (インチ単位)。 整数または小数の値の後に "in" を付ける必要があります (たとえば、`11in`)。 この値により、レポートの元の設定はオーバーライドされます。|  
 |**PageWidth**|レポートに設定するページの幅 (インチ単位)。 整数または小数の値の後に "in" を付ける必要があります (たとえば、`8.5in`)。 この値により、レポートの元の設定はオーバーライドされます。|  
-|**PrintDpiX**|出力画像の水平方向の解像度。 既定値は `300` です。 拡張メタファイルに適用されます (`EMF`) 出力形式。|  
-|**PrintDpiY**|出力画像の垂直方向の解像度。 既定値は `300` です。 拡張メタファイルに適用されます (`EMF`) 出力形式。|  
+|**PrintDpiX**|出力画像の水平方向の解像度。 既定値は `300` です。 拡張メタファイル (`EMF`) の出力形式に適用されます。|  
+|**PrintDpiY**|出力画像の垂直方向の解像度。 既定値は `300` です。 拡張メタファイル (`EMF`) の出力形式に適用されます。|  
 |`StartPage`|表示するレポートの最初のページ。 値 `0` はすべてのページを表示することを示します。 既定値は `1` です。|  
   
 ## <a name="see-also"></a>参照  

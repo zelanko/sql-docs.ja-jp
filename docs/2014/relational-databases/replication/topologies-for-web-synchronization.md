@@ -14,16 +14,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 62fd4cd78beaeff479fc7cc9ec3abbd79e227e04
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63273547"
 ---
 # <a name="topologies-for-web-synchronization"></a>Web 同期トポロジ
-  さまざまな [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Web 同期レプリケーション トポロジを選択できます。 Web 同期の一般的な構成には以下のものがあります。  
+  さまざま[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]な Web 同期レプリケーショントポロジから選択できます。 Web 同期の一般的な構成には以下のものがあります。  
   
--   シングル サーバー  
+-   単一サーバー  
   
 -   2 台のサーバー  
   
@@ -37,19 +37,20 @@ ms.locfileid: "63273547"
 > [!NOTE]  
 >  この構成は、イントラネットを使用する場合にのみお勧めします。 他のケースでは、IIS サーバーと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パブリッシャー/ディストリビューターを別々のコンピューター上に配置することをお勧めします。  
   
- ![1 台のサーバーとの Web 同期](media/web-sync02.gif "1 台のサーバーとの Web 同期")  
+ ![シングル サーバーでの Web 同期](media/web-sync02.gif "シングル サーバーでの Web 同期")  
   
 ## <a name="two-servers"></a>2 台のサーバー  
  IIS を展開しているサーバーとは別のサーバーに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のパブリッシャーとディストリビューターを構成することもできます。 IIS を実行しているサーバーは、ファイアウォールを使用してインターネットから切り離すことができます。 サブスクライバーは IIS に接続することによって同期します。  
   
- ![2 台のサーバーとの Web 同期](media/web-sync03.gif "2 台のサーバーとの Web 同期")  
+ ![2 台のサーバーでの Web 同期](media/web-sync03.gif "2 台のサーバーでの Web 同期")  
   
 ## <a name="multiple-iis-systems-and-sql-server-republishing"></a>複数台の IIS システムと SQL Server の再パブリッシュ  
  多数のサブスクライバーをサポートし、それらを同時に同期する必要がある場合は、IIS を実行している複数のコンピューターに処理の負荷を分散させることができます。  
   
- ![複数の IIS サーバーとの Web 同期](media/web-sync04.gif "複数の IIS サーバーとの Web 同期")  
+ ![複数の IIS サーバーでの Web 同期](media/web-sync04.gif "複数の IIS サーバーでの Web 同期")  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を実行しているコンピューターにも負荷の分散が必要となった場合は、複数のコンピューターに再パブリッシュの階層を作成することもできます。 最上位レベルのパブリッシャーはデータをサブスクライバーにパブリッシュし、これを受けてサブスクライバーはデータを再パブリッシュします。結果としてサブスクライバーからの要求の負荷が分散されます。  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を実行しているコンピューターにも負荷の分散が必要となった場合は、複数のコンピューターに再パブリッシュの階層を作成することもできます。 最上位レベルのパブリッシャーはデータをサブスクライバーにパブリッシュし、これを受けてサブスクライバーはデータを再パブリッシュします。結果としてサブスクライバーからの要求の負荷が分散されます。  
   
 > [!NOTE]  
 >  サブスクライバーは、特定のパブリッシャーとのみ同期できます。 たとえば、リパブリッシャー A が使用できない場合に、リパブリッシャー A に対するサブスクライバーをリパブリッシャー B と同期することはできません。  

@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 28e7ee81273d47e285b9903575bdc40ccededbb5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63151019"
 ---
 # <a name="sql-server-wait-statistics-object"></a>SQL Server: Wait Statistics オブジェクト
@@ -25,7 +25,7 @@ ms.locfileid: "63151019"
   
  Wait Statistics オブジェクトに含まれるカウンターを次の表に示します。  
   
-|SQL Server Wait Statistics カウンター|説明|  
+|SQL Server Wait Statistics カウンター|[説明]|  
 |-----------------------------------------|-----------------|  
 |**Lock waits**|ロックを待機しているプロセスの統計。|  
 |**Log buffer waits**|ログ バッファーが使用可能になるのを待機しているプロセスの統計。|  
@@ -42,14 +42,14 @@ ms.locfileid: "63151019"
   
  オブジェクトの各カウンターには、次のインスタンスが含まれています。  
   
-|アイテム|説明|  
+|アイテム|[説明]|  
 |----------|-----------------|  
 |**平均待機時間 (ミリ秒)**|選択した待機の種類の平均時間。|  
 |**1 秒あたりの累積待機時間 (ミリ秒)**|選択した待機の種類の 1 秒あたりに集計された待機時間。|  
 |**待機中**|次の種類で現在待機しているプロセスの数。|  
 |**1 秒あたりに開始された待機回数**|選択した待機の種類の 1 秒あたりに開始された待機の回数。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [リソースの利用状況の監視 &#40;システム モニター&#41;](monitor-resource-usage-system-monitor.md)  
   
   

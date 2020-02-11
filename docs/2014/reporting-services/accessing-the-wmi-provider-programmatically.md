@@ -11,17 +11,19 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 84c8d4f9ed6eccbf7e58be46a9b84c53559a317d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63232417"
 ---
 # <a name="accessing-the-wmi-provider-programmatically"></a>プログラムによる WMI プロバイダーへのアクセス
   このトピックは作成中です。  
   
 ## <a name="wmi-provider-overview"></a>WMI プロバイダーの概要  
- このトピックに示すコード サンプルで [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] の情報を取得するために使用する名前空間は、**System.Management** 名前空間です。これは [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] にあります。 **System.Management** 名前空間により、管理情報にアクセスしてその情報を操作するときに [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] アプリケーションで使用するマネージド コード クラスのセットが提供されます。 **System.Management** 名前空間による Reporting Services の WMI クラスの使用の詳細については、[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK の「System.Management による管理情報へのアクセス」を参照してください。  
+ このトピックに示すコード サンプルで [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] の情報を取得するために使用する名前空間は、**System.Management** 名前空間です。これは [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] にあります。 
+  **System.Management** 名前空間により、管理情報にアクセスしてその情報を操作するときに [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] アプリケーションで使用するマネージド コード クラスのセットが提供されます。 
+  **System.Management** 名前空間による Reporting Services の WMI クラスの使用の詳細については、[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK の「System.Management による管理情報へのアクセス」を参照してください。  
   
 ## <a name="finding-a-report-server-instance"></a>レポート サーバー インスタンスの検索  
  レポート サーバーのインストールの情報を検索するさらに適切な方法は、WMI インスタンスのコレクションを使用して列挙することです。 以下の例は、コレクションを作成し、コレクションによってループしてプロパティを表示することによって、レポート サーバー インスタンスごとにプロパティを検索する方法を示します。  
@@ -127,7 +129,7 @@ class Class1
 ```  
   
 ## <a name="see-also"></a>参照  
- [Reporting Services WMI プロバイダーへのアクセス](tools/access-the-reporting-services-wmi-provider.md)   
- [RSReportServer 構成ファイル](report-server/rsreportserver-config-configuration-file.md)  
+ [Reporting Services WMI プロバイダーにアクセスする](tools/access-the-reporting-services-wmi-provider.md)   
+ [RSReportServer Configuration File](report-server/rsreportserver-config-configuration-file.md)  
   
   

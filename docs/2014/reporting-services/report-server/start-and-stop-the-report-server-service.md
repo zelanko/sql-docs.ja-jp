@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bef23ec8291be1a1eeab8796a00e45487b82f60c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103166"
 ---
 # <a name="start-and-stop-the-report-server-service"></a>Start and Stop the Report Server Service
@@ -47,7 +47,8 @@ ms.locfileid: "66103166"
   
 ### <a name="to-start-or-stop-the-service-using-sql-server-configuration-manager"></a>SQL Server 構成マネージャーを使用してサービスを開始または停止するには  
   
-1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを起動します。  
+1.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを起動します。  
   
 2.  [SQL Server のサービス] を選択し、 **[SQL Server Reporting Services]** を右クリックして、 **[停止]** または **[再起動]** をクリックします。  
   

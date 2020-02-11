@@ -11,14 +11,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0e7a87ad14dbe1b12abb4ca4fe0af6b0a439c57b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63149781"
 ---
 # <a name="distributed-replay-requirements"></a>Distributed Replay Requirements
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散再生機能を使用する前に、このトピックで説明する製品の要件を検討してください。  
+  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散再生機能を使用する前に、このトピックで説明する製品の要件を検討してください。  
   
 ## <a name="input-trace-requirements"></a>入力トレースの要件  
  トレース データを正常に再生するには、バージョンと形式の要件を満たし、必要なイベントと列が含まれている必要があります。  
@@ -39,15 +41,18 @@ ms.locfileid: "63149781"
 ### <a name="input-trace-formats"></a>入力トレースの形式  
  次のいずれかの形式の入力トレース データを使用できます。  
   
--   `.trc` 拡張子を持つ 1 つのトレース ファイル。  
+-   
+  `.trc` 拡張子を持つ 1 つのトレース ファイル。  
   
 -   ファイル ロールオーバー名前付け規則に準拠したロールオーバー トレース ファイルのセット。例: `<TraceFile>.trc`、`<TraceFile>_1.trc`、`<TraceFile>_2.trc`、`<TraceFile>_3.trc`、... `<TraceFile>_n.trc`。  
   
 ### <a name="input-trace-events-and-columns"></a>入力トレースのイベントと列  
- 入力トレース データには、分散再生で再生される特定のイベントと列を含める必要があります。 **内の** TSQL_Replay [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] テンプレートには、すべての必要なイベントおよび列と、追加情報が含まれています。 このテンプレートの詳細については、「 [再生を実行するための必要条件](../sql-server-profiler/replay-requirements.md)」を参照してください。  
+ 入力トレース データには、分散再生で再生される特定のイベントと列を含める必要があります。 
+  **内の** TSQL_Replay [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] テンプレートには、すべての必要なイベントおよび列と、追加情報が含まれています。 このテンプレートの詳細については、「 [再生を実行するための必要条件](../sql-server-profiler/replay-requirements.md)」を参照してください。  
   
 > [!WARNING]  
->  **TSQL_Replay** テンプレートを使用して入力トレース データをキャプチャしない場合、または入力トレースの要件が満たされない場合、予期しない再生結果となる場合があります。  
+>  
+  **TSQL_Replay** テンプレートを使用して入力トレース データをキャプチャしない場合、または入力トレースの要件が満たされない場合、予期しない再生結果となる場合があります。  
   
  また、次のイベントが含まれる場合に限り、カスタム トレース テンプレートを作成し、それを使用して分散再生でイベントを再生することもできます。  
   
@@ -93,7 +98,7 @@ ms.locfileid: "63149781"
   
 -   TextData  
   
--   Application Name  
+-   アプリケーション名  
   
 -   LoginName  
   
@@ -107,7 +112,7 @@ ms.locfileid: "63149781"
   
 -   SPID  
   
--   Start Time  
+-   開始時刻  
   
 -   EndTime  
   
@@ -120,12 +125,12 @@ ms.locfileid: "63149781"
 |---------------------------------|------------------------------------------------------------------------------------|  
 |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
-|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
-|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
+|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
+|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
   
-## <a name="operating-system-requirements"></a>必要なオペレーティング システム  
- 管理ツールおよびコントローラーとクライアント サービスを実行するためにサポートされるオペレーティング システムは、使用している [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスと同じです。 サポートされるオペレーティング システムに関する詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスは、「 [Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)します。  
+## <a name="operating-system-requirements"></a>オペレーティング システムの要件  
+ 管理ツールおよびコントローラーとクライアント サービスを実行するためにサポートされるオペレーティング システムは、使用している [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスと同じです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスでサポートされているオペレーティングシステムの詳細については、「 [SQL Server 2014 をインストールするためのハードウェアおよびソフトウェアの要件](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)」を参照してください。  
   
  分散再生機能は、x86 ベースおよび x64 ベースの両方のオペレーティング システムでサポートされています。 x64 ベース オペレーティング システムでは、Windows on Windows (WOW) モードのみがサポートされます。  
   
@@ -134,8 +139,10 @@ ms.locfileid: "63149781"
   
 |分散再生機能|再生環境ごとのインストール数の上限|  
 |--------------------------------|--------------------------------------------------|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散再生コントローラー サービス|1|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散再生クライアント サービス|16 (物理コンピューターまたは仮想コンピューター)|  
+|
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散再生コントローラー サービス|1 で保護されたプロセスとして起動されました|  
+|
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散再生クライアント サービス|16 (物理コンピューターまたは仮想コンピューター)|  
 |管理ツール|無制限|  
   
 > [!NOTE]  
@@ -158,7 +165,7 @@ ms.locfileid: "63149781"
  失われたログインや不正なログインに関連付けられたイベントを再生すると、再生エラーとなります。ただし、再生の処理は継続されます。  
   
 ## <a name="see-also"></a>参照  
- [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
+ [SQL Server 分散再生](sql-server-distributed-replay.md)   
  [分散再生のセキュリティ](distributed-replay-security.md)   
  [分散再生のインストール](install-distributed-replay-overview.md)  
   

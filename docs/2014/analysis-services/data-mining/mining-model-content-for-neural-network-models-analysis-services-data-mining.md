@@ -1,5 +1,5 @@
 ---
-title: ニューラル ネットワーク モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング) |Microsoft Docs
+title: ニューラルネットワークモデルのマイニングモデルコンテンツ (Analysis Services データマイニング) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -21,14 +21,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7e19dfcdc284f048cffbb3a95e076b6e3a57294d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083585"
 ---
 # <a name="mining-model-content-for-neural-network-models-analysis-services---data-mining"></a>Mining Model Content for Neural Network Models (Analysis Services - Data Mining)
-  このトピックでは、Microsoft ニューラル ネットワーク アルゴリズムを使用するモデルに固有のマイニング モデル コンテンツについて説明します。 すべてのモデルの種類に共通の統計および構造を解釈する方法の説明、およびマイニング モデル コンテンツに関連する用語の一般的な定義については、「[マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-analysis-services-data-mining.md)」を参照してください。  
+  このトピックでは、Microsoft ニューラル ネットワーク アルゴリズムを使用するモデルに固有のマイニング モデル コンテンツについて説明します。 すべてのモデルの種類に共通の統計および構造を解釈する方法の説明、およびマイニング モデル コンテンツに関連する用語の一般的な定義については、「 [マイニング モデル コンテンツ (Analysis Services - データ マイニング)](mining-model-content-analysis-services-data-mining.md)」を参照してください。  
   
 ## <a name="understanding-the-structure-of-a-neural-network-model"></a>ニューラル ネットワーク モデルの構造について  
  各ニューラル ネットワーク モデルには、モデルとそのメタデータを表す 1 つの親ノードと、入力属性に関する説明的な統計情報を提供するマージナル統計ノード (NODE_TYPE = 24) があります。 マージナル統計ノードの便利な点は、入力値に関する情報が要約されるため、個々のノードのデータにクエリを実行する必要がないことです。  
@@ -39,7 +39,7 @@ ms.locfileid: "66083585"
   
 -   後続のノードには、それぞれ異なる *サブネットワーク* (NODE_TYPE = 17) が含まれています。 各サブネットワークには、そのサブネットワークの非表示層 (NODE_TYPE = 19) と出力層 (NODE_TYPE = 20) が常に含まれます。  
   
- ![ニューラル ネットワーク モデルのコンテンツの構造](../media/modelcontentstructure-nn.gif "ニューラル ネットワーク モデルのコンテンツの構造")  
+ ![ニューラル ネットワークのモデル コンテンツの構造](../media/modelcontentstructure-nn.gif "ニューラル ネットワークのモデル コンテンツの構造")  
   
  入力層の情報は簡単です。各入力層の最初のノード (NODE_TYPE = 18) は、入力ノード (NODE_TYPE = 21) のコレクションのオーガナイザーの役割を果たします。 次の表では、入力ノードの内容について説明します。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "66083585"
  データを処理したり、モデルと入力および出力との関係性を確認したりするには、 **Microsoft ニューラル ネットワーク ビューアー**を使用します。 このカスタム ビューアーを使用して、入力属性およびその値をフィルター処理したり、出力への影響をグラフィカルに表示したりできます。 このビューアーのツールヒントには、入力値と出力値の各ペアに関連付けられている確率とリフトが示されます。 詳細については、「 [Microsoft ニューラル ネットワーク ビューアーを使用したモデルの参照](browse-a-model-using-the-microsoft-neural-network-viewer.md)」を参照してください。  
   
 ## <a name="model-content-for-a-neural-network-model"></a>ニューラル ネットワーク モデルのモデル コンテンツ  
- ここでは、マイニング モデル コンテンツの列のうち、ニューラル ネットワーク モデルに関連する列についてのみ詳細と例を紹介します。 ここに記載されていないスキーマ行セットの汎用の列 (MODEL_CATALOG や MODEL_NAME など) の詳細や、マイニング モデルの用語の説明については、「[マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-analysis-services-data-mining.md)」を参照してください。  
+ ここでは、マイニング モデル コンテンツの列のうち、ニューラル ネットワーク モデルに関連する列についてのみ詳細と例を紹介します。 ここに記載されていないスキーマ行セットの汎用の列 (MODEL_CATALOG や MODEL_NAME など) の詳細や、マイニング モデルの用語の説明については、「 [マイニング モデル コンテンツ (Analysis Services - データ マイニング)](mining-model-content-analysis-services-data-mining.md)」を参照してください。  
   
  MODEL_CATALOG  
  モデルが格納されているデータベースの名前。  
@@ -66,7 +66,7 @@ ms.locfileid: "66083585"
  ATTRIBUTE_NAME  
  このノードに対応する属性の名前です。  
   
-|ノード|コンテンツ|  
+|Node|コンテンツ|  
 |----------|-------------|  
 |モデル ルート|空白|  
 |マージナル統計|空白|  
@@ -78,7 +78,7 @@ ms.locfileid: "66083585"
 |出力ノード|出力属性名|  
   
  NODE_NAME  
- ノードの名前。 この列には NODE_UNIQUE_NAME と同じ値が格納されます。  
+ ノード名。 この列には NODE_UNIQUE_NAME と同じ値が格納されます。  
   
  NODE_UNIQUE_NAME  
  ノードの一意の名前。  
@@ -88,9 +88,9 @@ ms.locfileid: "66083585"
  NODE_TYPE  
  ニューラル ネットワーク モデルでは次のノードの種類が出力されます。  
   
-|ノードの種類の ID|説明|  
+|ノードの種類の ID|[説明]|  
 |------------------|-----------------|  
-|1|モデル。|  
+|1 で保護されたプロセスとして起動されました|モデル。|  
 |17|サブネットワークのオーガナイザー ノード。|  
 |18|入力層のオーガナイザー ノード。|  
 |19|非表示層のオーガナイザー ノード。|  
@@ -106,7 +106,7 @@ ms.locfileid: "66083585"
  CHILDREN_CARDINALITY  
  ノードの子の推定数。  
   
-|ノード|コンテンツ|  
+|Node|コンテンツ|  
 |----------|-------------|  
 |モデル ルート|子ノードの数を示します。1 つ以上のネットワーク、1 つの必須マージナル ノード、および 1 つの必須入力層が含まれます。 たとえば、値が 5 の場合はサブネットワークが 3 つあります。|  
 |マージナル統計|常に 0 です。|  
@@ -125,7 +125,7 @@ ms.locfileid: "66083585"
  NODE_DESCRIPTION  
  ノードについてのわかりやすい説明。  
   
-|ノード|コンテンツ|  
+|Node|コンテンツ|  
 |----------|-------------|  
 |モデル ルート|空白|  
 |マージナル統計|空白|  
@@ -139,7 +139,7 @@ ms.locfileid: "66083585"
  NODE_RULE  
  ノードに埋め込まれたルールの XML による記述。  
   
-|ノード|コンテンツ|  
+|Node|コンテンツ|  
 |----------|-------------|  
 |モデル ルート|空白|  
 |マージナル統計|空白|  
@@ -171,7 +171,7 @@ ms.locfileid: "66083585"
  特定の値に対するトレーニング ケースでのサポートについて情報を得るには、マージナル統計ノードを参照してください。  
   
  MSOLAP_MODEL_COLUMN  
- |ノード|コンテンツ|  
+ |Node|コンテンツ|  
 |----------|-------------|  
 |モデル ルート|空白|  
 |マージナル統計|空白|  
@@ -188,10 +188,10 @@ ms.locfileid: "66083585"
  MSOLAP_NODE_SHORT_CAPTION  
  ニューラル ネットワーク モデルでは常に空白です。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  ニューラル ネットワーク モデルをトレーニングする目的は、入力から中間点へ、および中間点からエンドポイントへの各遷移に関連付けられた重みを特定することです。 したがって、モデルの入力層は、主に、モデルの作成に使用された実際の値を格納するために存在します。 非表示層は、計算された重みを格納し、元の入力属性へのポインターを提供します。 出力層は、予測可能な値を格納し、非表示層内の中間点へのポインターも提供します。  
   
-##  <a name="bkmk_NodeIDs"></a> ノードの名前と ID の使用  
+##  <a name="bkmk_NodeIDs"></a>ノード名と Id の使用  
  ニューラル ネットワーク モデルのノードの名前付けでは、非表示層と入力層との間、および出力層と非表示層との間の関連をわかりやすくするため、ノードの種類に関する追加情報が提供されます。 次の表に、各層のノードに割り当てられる ID の規則を示します。  
   
 |ノードの種類|ノード ID の規則|  
@@ -210,15 +210,15 @@ ms.locfileid: "66083585"
   
  同様に、出力属性に関連付けられた非表示層を確認するには、出力ノード (NODE_TYPE = 23) の NODE_DISTRIBUTION テーブルを表示します。 NODE_DISTRIBUTION テーブルの各行には、非表示層ノードの ID と、関連付けられた係数が含まれています。  
   
-##  <a name="bkmk_NodeDistTable"></a> NODE_DISTRIBUTION テーブル内の情報の解釈  
+##  <a name="bkmk_NodeDistTable"></a>NODE_DISTRIBUTION テーブルの情報の解釈  
  ノードによっては、NODE_DISTRIBUTION テーブルが空の場合があります。 しかし、入力ノード、非表示層ノード、および出力ノードの NODE_DISTRIBUTION テーブルには、モデルに関する重要かつ興味深い情報が格納されます。 情報を解釈しやすいよう、NODE_DISTRIBUTION テーブルの各行の VALUETYPE 列には、ATTRIBUTE_VALUE 列の値が不連続値 (4)、分離された値 (5)、連続値 (3) のいずれであるかが表示されます。  
   
 ### <a name="input-nodes"></a>入力ノード  
  入力層には、モデルで使用された属性の値ごとに 1 つのノードが含まれます。  
   
- **不連続属性:** 入力ノードは、ATTRIBUTE_NAME 列と ATTRIBUTE_VALUE 列で、属性とその値の名前のみを格納します。 たとえば、列が [勤務シフト] の場合、モデルで使用されたその列の値 (AM や PM など) ごとに個別のノードが作成されます。 各ノードの NODE_DISTRIBUTION テーブルには、属性の現在の値だけが表示されます。  
+ **不連続属性:** 入力ノードには、属性の名前とその値だけが ATTRIBUTE_NAME と ATTRIBUTE_VALUE の列に格納されます。 たとえば、列が [勤務シフト] の場合、モデルで使用されたその列の値 (AM や PM など) ごとに個別のノードが作成されます。 各ノードの NODE_DISTRIBUTION テーブルには、属性の現在の値だけが表示されます。  
   
- **分離された数値属性:** 入力ノードには、属性と、値は、範囲、または特定の値の名前が格納されます。 すべての値は式で表されます。たとえば [問題あたりの時間] の場合の値は、"77.4 - 87.4" や "< 64.0" などと表現されます。 各ノードの NODE_DISTRIBUTION テーブルには、属性の現在の値だけが表示されます。  
+ **分離数値属性:** 入力ノードには、属性の名前と値を格納します。この値には、範囲または特定の値を指定できます。 すべての値は式で表されます。たとえば [問題あたりの時間] の場合の値は、"77.4 - 87.4" や "< 64.0" などと表現されます。 各ノードの NODE_DISTRIBUTION テーブルには、属性の現在の値だけが表示されます。  
   
  **連続属性:** 入力ノードには、属性の平均値が格納されます。 各ノードの NODE_DISTRIBUTION テーブルには、属性の現在の値だけが表示されます。  
   
@@ -230,15 +230,15 @@ ms.locfileid: "66083585"
   
  属性の型に応じて、NODE_DISTRIBUTION テーブルには次の追加情報が含まれます。  
   
- **不連続属性:** NODE_DISTRIBUTION テーブルの最後の 2 行には、ノード全体と、属性の現在の値としての係数が含まれます。  
+ **不連続属性:** NODE_DISTRIBUTION テーブルの最後の2行には、ノード全体の係数と、属性の現在の値が含まれています。  
   
- **分離された数値属性:** 不連続属性の場合と同じです、属性の値が値の範囲である点が異なります。  
+ **分離数値属性:** 属性の値が値の範囲である点を除いて、不連続属性と同じです。  
   
- **連続属性:** NODE_DISTRIBUTION テーブルの最後の 2 行には、属性、ノード全体の係数の平均および係数の分散が含まれます。  
+ **連続属性:** NODE_DISTRIBUTION テーブルの最後の2行には、属性の平均、ノード全体の係数、および係数の分散が含まれます。  
   
-## <a name="see-also"></a>関連項目  
- [Microsoft Neural Network Algorithm](microsoft-neural-network-algorithm.md)   
- [Microsoft Neural Network Algorithm Technical Reference](microsoft-neural-network-algorithm-technical-reference.md)   
+## <a name="see-also"></a>参照  
+ [Microsoft ニューラルネットワークアルゴリズム](microsoft-neural-network-algorithm.md)   
+ [Microsoft ニューラルネットワークアルゴリズムテクニカルリファレンス](microsoft-neural-network-algorithm-technical-reference.md)   
  [Neural Network Model Query Examples](neural-network-model-query-examples.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: カーソルのトランザクション分離レベル |Microsoft Docs
+title: カーソルトランザクション分離レベル |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fef68bfdb62527f7b631b8d7433e095eba4d1c88
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63207141"
 ---
 # <a name="cursor-transaction-isolation-level"></a>カーソルのトランザクション分離レベル
-  カーソルのロック動作全体は、コンカレンシー属性とクライアントが設定したトランザクション分離レベルの相互作用の影響を受けます。 トランザクション分離レベルを使用して、ODBC クライアントの設定、 [SQLSetConnectAttr](../../native-client-odbc-api/sqlsetconnectattr.md) SQL_ATTR_TXN_ISOLATION または SQL_COPT_SS_TXN_ISOLATION 属性。 特定のカーソル環境のロック動作は、コンカレンシーのロック動作とトランザクション分離レベルのオプションを組み合わせることによって決まります。  
+  カーソルのロック動作全体は、コンカレンシー属性とクライアントが設定したトランザクション分離レベルの相互作用の影響を受けます。 ODBC クライアントでは、 [SQLSetConnectAttr](../../native-client-odbc-api/sqlsetconnectattr.md) SQL_ATTR_TXN_ISOLATION または SQL_COPT_SS_TXN_ISOLATION 属性を使用してトランザクション分離レベルを設定します。 特定のカーソル環境のロック動作は、コンカレンシーのロック動作とトランザクション分離レベルのオプションを組み合わせることによって決まります。  
   
- 次のカーソルのトランザクション分離レベルがサポートされている、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバー。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] NATIVE Client ODBC ドライバーでは、次のカーソルトランザクション分離レベルがサポートされています。  
   
 -   READ COMMITTED (SQL_TXN_READ_COMMITTED)  
   
@@ -38,9 +38,9 @@ ms.locfileid: "63207141"
   
 -   SNAPSHOT (SQL_TXN_SS_SNAPSHOT)  
   
- ODBC API を別のトランザクション分離レベルを指定しますではサポートされていません[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]または[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC ドライバー。  
+ ODBC API では、追加のトランザクション分離レベルが指定されています[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]が、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]または Native Client ODBC ドライバーではサポートされていないことに注意してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [カーソルのプロパティ](cursor-properties.md)  
   
   

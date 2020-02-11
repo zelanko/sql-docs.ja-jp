@@ -1,5 +1,5 @@
 ---
-title: URL アクセスと SOAP の選択 |Microsoft Docs
+title: URL アクセスと SOAP | を選択するMicrosoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,19 +16,22 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 070d37a1e6ca210694d16ab593e9de40882611f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63192981"
 ---
 # <a name="choosing-between-url-access-and-soap"></a>URL アクセスまたは SOAP の選択
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] をカスタム アプリケーションへ統合するのは、必ずしも容易な作業ではありません。 ただし、その原因はプログラミング モデルや API が複雑なためではなく、統合方法が多数存在することです。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] はもともと開発者向けプラットフォームとして設計されているので、プログラミングを柔軟に行えるようになっています。 柔軟性を得るには、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のレポート ナビゲーション機能と管理機能を既存ビジネス アプリケーションに統合することに関して重要な意思決定を行う必要があります。  
+  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] をカスタム アプリケーションへ統合するのは、必ずしも容易な作業ではありません。 ただし、その原因はプログラミング モデルや API が複雑なためではなく、統合方法が多数存在することです。 
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] はもともと開発者向けプラットフォームとして設計されているので、プログラミングを柔軟に行えるようになっています。 柔軟性を得るには、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のレポート ナビゲーション機能と管理機能を既存ビジネス アプリケーションに統合することに関して重要な意思決定を行う必要があります。  
   
  ![Reporting Services のプログラミング シナリオ](../../../2014/reporting-services/media/bk-ext-04.gif "Reporting Services のプログラミング シナリオ")  
 Reporting Services のプログラミングは、幅広いシナリオをサポートします。  
   
- 2 つの方法を統合する[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]をカスタム アプリケーションにします。URL アクセスと Reporting Services SOAP API。 どちらの方法を使用するかは、いくつかの要因によって異なります。 状況によっては、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] をカスタム ビジネス アプリケーションに統合する場合に URL アクセスと SOAP の両方が必要です。 決定に際して、次の事項を考慮する必要があります。  
+ 
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] をカスタム アプリケーションに統合するには、URL アクセスと Reporting Services SOAP API という 2 つの方法があります。 どちらの方法を使用するかは、いくつかの要因によって異なります。 状況によっては、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] をカスタム ビジネス アプリケーションに統合する場合に URL アクセスと SOAP の両方が必要です。 決定に際して、次の事項を考慮する必要があります。  
   
 -   自分自身、またはエンド ユーザーにとって、どのようなエンタープライズ レポート機能が必要か。 レポートの起動や操作はできるだけ簡単な方がよいのか、あるいは、カスタム ビジネス ソリューションの高度なレポート サーバー管理機能を使用する必要があるのか。  
   
@@ -41,7 +44,7 @@ Reporting Services のプログラミングは、幅広いシナリオをサポ�
   
  レポート ツール バーの詳細については、「[HTML Viewer and the Report Toolbar](../html-viewer-and-the-report-toolbar.md)」(HTML ビューアーとレポート ツール バー) を参照してください。  
   
- URL アクセスの詳細については、次を参照してください。 [URL アクセス&#40;SSRS&#41;](../url-access-ssrs.md)します。  
+ URL アクセスの詳細については、「 [Url アクセス &#40;SSRS&#41;](../url-access-ssrs.md)」を参照してください。  
   
  URL アクセスはレポートの表示に便利ですが、エンタープライズ レポート機能に不可欠なレポートと名前空間の管理機能はありません。 このような場合は、Reporting Services SOAP API の幅広く豊富な機能をお勧めします。 SOAP API を使用すると、レポートの管理と配置、スケジュールの作成、サーバーのプロパティの構成、レポート サーバー名前空間の管理、サブスクリプションの作成などが可能です。 SOAP API は、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の管理機能の完全なセットを提供します。 SOAP API では、API の <xref:ReportExecution2005.ReportExecutionService.Render%2A> メソッドを通してレポートを表示およびナビゲートすることもできます。 ただし、SOAP API を通してレポートを表示する場合は、レポート ツール バーの組み込み表示機能を使用できず、URL アクセスのようなレポート対話機能も自動的に処理されません。  
   

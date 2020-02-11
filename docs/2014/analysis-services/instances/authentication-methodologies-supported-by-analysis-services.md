@@ -1,5 +1,5 @@
 ---
-title: Analysis Services でサポートされる認証方法 |Microsoft Docs
+title: Analysis Services によってサポートされる認証方法Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a57aff903d41e8bcddef25e21def39a45e33d23f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080342"
 ---
 # <a name="authentication-methodologies-supported-by-analysis-services"></a>Analysis Services でサポートされる認証方法
@@ -34,18 +34,19 @@ ms.locfileid: "66080342"
   
  BI および Analysis Services の認証フローの詳細については、「 [Microsoft BI 認証と ID 委任](https://go.microsoft.com/fwlink/?LinkID=286576)」をご覧ください。  
   
-##  <a name="bkmk_auth"></a> 別の認証手法について  
+##  <a name="bkmk_auth"></a>認証方法を理解する  
  Analysis Services データベースへの接続には、Windows ユーザーまたはグループの ID と、関連付けられた権限が必要です。 ID は、レポートを表示する必要のある任意のユーザーが使用する、一般的な目的のログインである場合もありますが、通常のシナリオでは、個々のユーザーの ID です。  
   
  多くの場合、表形式または多次元のモデルには、だれが要求しているかに応じて、オブジェクトごとに、またはデータ自体の内部にさまざまなレベルのデータ アクセスがあります。 この要件を満たすには、NTLM、Kerberos、EffectiveUserName、または基本認証を使用できます。 これらの手法はすべて、各接続で異なるユーザー ID を渡すための方法です。 ただし、これらのほとんどは、シングルホップの制限の対象です。 委任を伴う Kerberos でのみ、元のユーザー ID を、リモート サーバー上のバックエンド データ ストアへの複数のコンピューター接続にわたって使用できます。  
   
  **NTLM**  
   
- `SSPI=Negotiate`を指定した接続では、Kerberos ドメイン コントローラーを使用できない場合に、NTLM がバックアップ認証サブシステムとして使用されます。 NTLM では、あらゆるユーザーまたはクライアント アプリケーションがサーバー リソースにアクセスできます。ただし、要求がクライアントからサーバーへの直接接続で、接続を要求しているユーザーにリソースへのアクセス権があり、クライアント コンピューターとサーバー コンピューターが同じドメインにある場合に限ります。  
+ 
+  `SSPI=Negotiate`を指定した接続では、Kerberos ドメイン コントローラーを使用できない場合に、NTLM がバックアップ認証サブシステムとして使用されます。 NTLM では、あらゆるユーザーまたはクライアント アプリケーションがサーバー リソースにアクセスできます。ただし、要求がクライアントからサーバーへの直接接続で、接続を要求しているユーザーにリソースへのアクセス権があり、クライアント コンピューターとサーバー コンピューターが同じドメインにある場合に限ります。  
   
  多層ソリューションでは、NLTM のシングルホップ制限が大きな制約となる場合があります。 要求を行っているユーザー ID は、ただ 1 台のリモート サーバーでのみ権限を借用できます。それ以上は不可能です。 現在の操作に、複数のコンピューターで動作しているサービスが必要な場合は、セキュリティ トークンの再利用によって、同じ ID がバックエンド サーバーでも使用できるように、Kerberos の制約付き委任を構成する必要があります。 別の方法として、保存された資格情報または基本認証を使用して、シングルホップ接続上に新しい ID 情報を渡すこともできます。  
   
- **Kerberos 認証および Kerberos 制約付き委任**  
+ **Kerberos 認証と Kerberos の制約付き委任**  
   
  Kerberos 認証は、Active Directory ドメインの Windows 統合セキュリティの基礎です。 NTLM のように、委任を有効にしない限り、Kerberos での権限借用はシングルホップに制限されます。  
   
@@ -72,17 +73,17 @@ ms.locfileid: "66080342"
   
  基本と匿名は、IIS と msmdpump.dll を使用して接続を確立し、Analysis Services を HTTP アクセス向けに構成した場合にのみ使用できます。 詳細については、「 [インターネット インフォメーション サービス &#40;IIS&#41; 8.0 上の Analysis Services への HTTP アクセスの構成](configure-http-access-to-analysis-services-on-iis-8-0.md)」をご覧ください。  
   
- **Stored Credentials**  
+ **保存された資格情報**  
   
  中間層アプリケーションのほとんどには、ユーザー名とパスワードを保存する機能が含まれており、これを使用して、以降の動作で、Analysis Services や SQL Server リレーショナル エンジンなどの下位データ ストアからデータを取得します。 そのため、保存された資格情報は、データを取得するための第 5 の方法となります。 このアプローチでの制限としては、ユーザー名とパスワードを最新の状態に保つためのメンテナンスのオーバーヘッドと、接続での単一の ID の使用があります。 本来の呼び出し元の ID がソリューションに必要な場合、保存された資格情報は、利用可能な方法ではありません。  
   
  保存された資格情報の詳細については、「[共有データ ソースを作成、変更、および削除する &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)」および「[SharePoint Server 2013 の Secure Store Service で Excel Services を使用する](https://go.microsoft.com/fwlink/?LinkID=309869)」をご覧ください。  
   
-## <a name="see-also"></a>関連項目  
- [トランスポート セキュリティでの権限借用の使用](https://go.microsoft.com/fwlink/?LinkId=311727)   
- [インターネット インフォメーション サービス &#40;IIS&#41; 8.0 上の Analysis Services への HTTP アクセスの構成](configure-http-access-to-analysis-services-on-iis-8-0.md)   
- [Kerberos の制約付き委任のための Analysis Services の構成](configure-analysis-services-for-kerberos-constrained-delegation.md)   
- [Analysis Services インスタンスの SPN 登録](spn-registration-for-an-analysis-services-instance.md)   
+## <a name="see-also"></a>参照  
+ [トランスポートセキュリティでの権限借用の使用](https://go.microsoft.com/fwlink/?LinkId=311727)   
+ [インターネットインフォメーションサービス &#40;IIS&#41; 8.0 の Analysis Services への HTTP アクセスを構成する](configure-http-access-to-analysis-services-on-iis-8-0.md)   
+ [Kerberos の制約付き委任の Analysis Services を構成する](configure-analysis-services-for-kerberos-constrained-delegation.md)   
+ [Analysis Services インスタンスの SPN の登録](spn-registration-for-an-analysis-services-instance.md)   
  [Analysis Services への接続](connect-to-analysis-services.md)  
   
   

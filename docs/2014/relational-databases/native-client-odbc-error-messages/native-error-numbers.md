@@ -1,5 +1,5 @@
 ---
-title: ネイティブ エラー番号 |マイクロソフトのドキュメント
+title: ネイティブエラー番号 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7e7cd24a3eb1ccdeea1b6e6cbb97e2d0f222193f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63223497"
 ---
 # <a name="native-error-numbers"></a>ネイティブ エラー番号
-  データ ソースで発生するエラー (によって返される[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーによって返されたネイティブ エラー番号を返します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 ドライバーで検出されたエラー、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは、ネイティブ エラー番号は 0 を返します。 ネイティブ エラー番号の一覧については、のエラー列を参照して、 **sysmessages**システム テーブルに、**マスター**データベース[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
+  データソースで発生したエラー (によって[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]返される) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の場合、native Client ODBC ドライバーは、によっ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]て返されたネイティブエラー番号を返します。 ドライバーによって検出された[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エラーの場合、NATIVE Client ODBC ドライバーは、ネイティブエラー番号0を返します。 ネイティブエラー番号の一覧の詳細については、の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **master**データベースにある**sysmessages**システムテーブルの error 列を参照してください。  
   
- 状態エラー コードについては、次を参照してください。 [SQLSTATE &#40;ODBC エラー コード&#41;](sqlstate-odbc-error-codes.md)します。 Net-Library から返されたエラーについては、ネイティブ エラー番号は基になるネットワーク ソフトウェアから返されます。  
+ 状態エラーコードの詳細については、「 [SQLSTATE &#40;ODBC エラーコード&#41;](sqlstate-odbc-error-codes.md)」を参照してください。 Net-Library から返されたエラーについては、ネイティブ エラー番号は基になるネットワーク ソフトウェアから返されます。  
   
 ## <a name="see-also"></a>参照  
  [エラーとメッセージの処理](handling-errors-and-messages.md)  

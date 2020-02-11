@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7a3dfc7b81bf6f6a3ef0b9b74a2d1a78f3e3e1db
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200110"
 ---
 # <a name="web-synchronization-for-merge-replication"></a>マージ レプリケーションの Web 同期
@@ -29,11 +29,13 @@ ms.locfileid: "63200110"
   
 -   モバイル ユーザーからのデータをインターネット上で同期します。  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース間で、企業のファイアウォールを経由してデータを同期します。  
+-   企業のファイア[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ウォールを越えてデータベース間でデータを同期します。  
   
- たとえば、移動中の営業担当者は Web 同期を使用することができます。 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]の営業担当者は、担当地域内の多数の店舗や納入業者を回ります。 長い移動の際にはホテルに滞在するため、一日の終わりに販売データをアップロードしたり、製品の更新をダウンロードするための便利な方法が必要になります。  
+ たとえば、移動中の営業担当者は Web 同期を使用することができます。 
+  [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]の営業担当者は、担当地域内の多数の店舗や納入業者を回ります。 長い移動の際にはホテルに滞在するため、一日の終わりに販売データをアップロードしたり、製品の更新をダウンロードするための便利な方法が必要になります。  
   
- [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] の IT 部門は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で各ポータブル コンピューターを構成し、マージ レプリケーションで Web 同期を使用できるようにしました。 各ポータブル コンピューターのマージ エージェントでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] インターネット インフォメーション サービス (IIS) を実行しているコンピューターにインストールされたレプリケーション コンポーネントを指すインターネットの URL を保持しています。 これらのコンポーネントにより、パブリッシャーとサブスクライバーが同期されます。 これで各担当者は、リモート ダイアルアップ接続を行わなくても、任意のインターネット接続経由で必要なデータのアップロードやダウンロードが行えるようになります。 インターネット接続では SSL (Secure Sockets Layer) を使用するため、仮想プライベート ネットワーク (VPN) は必要ありません。  
+ 
+  [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] の IT 部門は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で各ポータブル コンピューターを構成し、マージ レプリケーションで Web 同期を使用できるようにしました。 各ポータブル コンピューターのマージ エージェントでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] インターネット インフォメーション サービス (IIS) を実行しているコンピューターにインストールされたレプリケーション コンポーネントを指すインターネットの URL を保持しています。 これらのコンポーネントにより、パブリッシャーとサブスクライバーが同期されます。 これで各担当者は、リモート ダイアルアップ接続を行わなくても、任意のインターネット接続経由で必要なデータのアップロードやダウンロードが行えるようになります。 インターネット接続では SSL (Secure Sockets Layer) を使用するため、仮想プライベート ネットワーク (VPN) は必要ありません。  
   
  Web 同期に必要なコンポーネントを構成する方法については、「[Configure Web Synchronization (Web 同期の構成)](configure-web-synchronization.md)」、「[Configure IIS for Web Synchronization (Web 同期用の IIS の構成)](configure-iis-for-web-synchronization.md)」、「[Configure IIS 7 for Web Synchronization (Web 同期用の IIS 7 の構成)](configure-iis-7-for-web-synchronization.md)」をご覧ください。  
   
@@ -49,7 +51,8 @@ ms.locfileid: "63200110"
   
  Web 同期は、プル サブスクリプションだけのオプションなので、サブスクライバー上では必ずマージ エージェントが動作します。 標準のマージ エージェント、マージ エージェントの ActiveX コントロール、またはレプリケーション管理オブジェクト (RMO) によって同期機能を提供するアプリケーションのいずれかを使用できます。 IIS を実行しているコンピューターの場所を指定するには、マージ エージェントの **-InternetUrl** パラメーターを使用します。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レプリケーション リスナー (Replisapi.dll) は、IIS を実行しているコンピューター上で構成され、パブリッシャーとサブスクライバーからサーバーに送信されたメッセージを処理します。 トポロジの各ノードは、マージ レプリケーション競合回避モジュール (Replrec.dll) を使用して XML データ ストリームを処理します。  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レプリケーション リスナー (Replisapi.dll) は、IIS を実行しているコンピューター上で構成され、パブリッシャーとサブスクライバーからサーバーに送信されたメッセージを処理します。 トポロジの各ノードは、マージ レプリケーション競合回避モジュール (Replrec.dll) を使用して XML データ ストリームを処理します。  
   
  Web 同期に参加するすべてのコンピューターに、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降が必要です。  
   
@@ -81,7 +84,7 @@ ms.locfileid: "63200110"
 3.  その後、サブスクライバーのマージ エージェントは HTTPS 応答を受け取り、サブスクリプション データベースに変更のダウンロードを適用します。  
   
 ## <a name="see-also"></a>参照  
- [Configure Web Synchronization](configure-web-synchronization.md)   
- [Topologies for Web Synchronization](topologies-for-web-synchronization.md)  
+ [Web 同期の構成](configure-web-synchronization.md)   
+ [Web 同期のトポロジ](topologies-for-web-synchronization.md)  
   
   

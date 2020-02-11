@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 1dbc3dd467aab0cf60cdb255165767fc12a0f518
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63156772"
 ---
 # <a name="best-practices-for-calling-natively-compiled-stored-procedures"></a>ネイティブ コンパイル ストアド プロシージャの呼び出しに関するベスト プラクティス
@@ -50,7 +50,7 @@ ms.locfileid: "63156772"
   
  同様に、同じ XEvent `hekaton_slow_parameter_passing` を `reason=parameter_conversion` と共に使用して、一致しない型の使用を検出することができます。  
   
- メモリ最適化テーブルを使用するときは (多くのシナリオで) 再試行ロジックを実装する必要があり、特定の機能制限に対処する必要があるため、インタープリターによって処理されるラッパー形式の [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャを作成する必要が生じることがあります。 例については、次を参照してください。 [Retry Logic for Transactions on Memory-Optimized Tables に関するガイドライン](memory-optimized-tables.md)します。  
+ メモリ最適化テーブルを使用するときは (多くのシナリオで) 再試行ロジックを実装する必要があり、特定の機能制限に対処する必要があるため、インタープリターによって処理されるラッパー形式の [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャを作成する必要が生じることがあります。 例については、「[メモリ最適化テーブルでのトランザクションの再試行ロジックのガイドライン](memory-optimized-tables.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [ネイティブ コンパイル ストアド プロシージャ](natively-compiled-stored-procedures.md)  

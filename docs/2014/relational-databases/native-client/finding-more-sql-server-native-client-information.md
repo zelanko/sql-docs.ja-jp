@@ -1,5 +1,5 @@
 ---
-title: 詳細については SQL Server Native Client の検索 |マイクロソフトのドキュメント
+title: その他の SQL Server Native Client 情報の検索 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 639796b9abcf95c9f701d3ed88fbb5e71078eb8f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63205843"
 ---
 # <a name="finding-more-sql-server-native-client-information"></a>SQL Server Native Client に関する詳細情報
+  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client とその他のデータ アクセス プログラミングの詳細については、次のオンライン リソースを参照してください。  
   
  [データ アクセスおよびストレージ デベロッパー センター](https://go.microsoft.com/fwlink?linkid=4173)  
@@ -34,9 +35,9 @@ ms.locfileid: "63205843"
   
  Window DAC SDK には、ADO (ActiveX Data Objects)、OLE DB、および ODBC (Open Database Connectivity) のドキュメントが含まれています。  
   
- に関する追加情報[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client を検索して見つかんだことができます、 [Microsoft サポート](https://support.microsoft.com)します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client の詳細については、 [Microsoft サポート](https://support.microsoft.com)を検索してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SQL Server Native Client プログラミング](sql-server-native-client-programming.md)  
   
   

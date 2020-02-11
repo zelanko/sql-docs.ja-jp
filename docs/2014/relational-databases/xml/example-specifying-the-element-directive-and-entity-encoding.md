@@ -1,5 +1,5 @@
 ---
-title: '例: ELEMENT ディレクティブとエンティティのエンコードを指定する | Microsoft Docs'
+title: '例 : ELEMENT ディレクティブとエンティティのエンコードを指定する | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 28e0e9f808820acc1959ccc11266174e5610600c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63287237"
 ---
-# <a name="example-specifying-the-element-directive-and-entity-encoding"></a>例:ELEMENT ディレクティブとエンティティのエンコードの指定
+# <a name="example-specifying-the-element-directive-and-entity-encoding"></a>例 : ELEMENT ディレクティブとエンティティのエンコードを指定する
   この例では、 **ELEMENT** ディレクティブと **XML** ディレクティブの違いを説明します。 **ELEMENT** ディレクティブを指定した場合はデータがエンティティとしてエンコードされますが、 **XML** ディレクティブを指定した場合はその処理が行われません。 このクエリでは、\<Summary> 要素に、`<Summary>This is summary description</Summary>` のように XML が割り当てられています。  
   
  次のクエリについて考えてみます。  
@@ -92,7 +92,7 @@ ORDER BY [ProductModel!1!ProdModelID],Tag
 FOR XML EXPLICIT  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [FOR XML での EXPLICIT モードの使用](use-explicit-mode-with-for-xml.md)  
   
   

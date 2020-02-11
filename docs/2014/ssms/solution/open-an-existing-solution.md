@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 80f13a2818810c71703fb5cccb82a1066361c3c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63154645"
 ---
 # <a name="open-an-existing-solution"></a>既存のソリューションを開く
@@ -30,7 +30,7 @@ ms.locfileid: "63154645"
 2.  **[プロジェクトを開く]** ダイアログ ボックスで、目的のソリューションがある場所に移動し、ソリューションをクリックして **[開く]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [ソリューション エクスプ ローラー](solution-explorer.md)   
+ [ソリューション エクスプローラー](solution-explorer.md)   
  [新しいソリューションの作成](create-a-new-solution.md)  
   
   

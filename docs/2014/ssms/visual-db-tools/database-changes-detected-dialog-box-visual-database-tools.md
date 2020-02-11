@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0d5850ce71e483ea33bb99972c243140a63da5f0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63270541"
 ---
 # <a name="database-changes-detected-dialog-box-visual-database-tools"></a>[データベースの変更を確認] ダイアログ ボックス (Visual Database Tools)
@@ -27,14 +27,14 @@ ms.locfileid: "63270541"
 > [!NOTE]  
 >  テーブルやデータベース ダイアグラムに加えた変更を元に戻すことはできませんが、テーブルやダイアグラムを保存するまでは、変更はデータベースに保存されません。 **[いいえ]** を選択して、すべての開いているダイアグラムの変更を保存せずに閉じると、まだ保存していない変更を破棄できます。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **[相違点の検出に関する警告]**  
  データベース ダイアグラムまたは選択したテーブルを次に保存しようとするときにこのダイアログ ボックスを表示するかどうかを指定します。 このチェック ボックスをオンにすると、データベースの最新の内容と異なるダイアグラムやテーブルを保存しようとするたびにダイアログ ボックスが表示されます。 オフにすると、ダイアログ ボックスが表示されなくなります。 既定では、このチェック ボックスはオンです。 このオプションをオフにした場合は、 **[オプション]** ダイアログ ボックスで再びオンにできます。  
   
  **はい**  
  一覧に表示されているすべての変更を適用してデータベースを更新します。  
   
- **[いいえ]**  
+ **いいえ**  
  保存操作を取り消します。  
   
 > [!NOTE]  
@@ -44,7 +44,7 @@ ms.locfileid: "63270541"
  **[名前を付けて保存]** ダイアログ ボックスが表示され、データベースへの変更の一覧を保存するテキスト ファイルの場所を指定できます。  
   
 ## <a name="see-also"></a>参照  
- [データベースの変更のデータベース ダイアグラムへの反映&#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [変更されたデータベースを使用してデータベースダイアグラムを調整する &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [マルチユーザー環境 (Visual Database Tools)](multiuser-environments-visual-database-tools.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: トレース ファイルのプロパティ ([全般] タブ) |Microsoft Docs
+title: '[トレースファイルのプロパティ] ([全般] タブ)Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,42 +15,43 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bf665b0ea1cae89257d6368af9b307845a2cb3c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089607"
 ---
 # <a name="trace-file-properties-general-tab"></a>[トレース ファイルのプロパティ] ([全般] タブ)
+  
   **[トレース ファイルのプロパティ]** ダイアログ ボックスの **[全般]** タブを使用すると、トレース ファイルのプロパティを表示できます。  
   
  このウィンドウを表示するには、トレース ファイルを開きます。 次に、 **[ファイル]** メニューの **[プロパティ]** をクリックします。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **ファイル名**  
  表示するトレース ファイルのパスと名前。  
   
- **[トレース プロバイダー名]**  
+ **トレースプロバイダー名**  
  トレースされた [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスの名前を表示。  
   
- **[トレース プロバイダーの種類]**  
+ **トレースプロバイダーの種類**  
  トレースを提供したサーバーの種類を表示。  
   
- **version**  
+ **バージョン**  
  トレースを提供したサーバーのバージョンを表示。  
   
- **[ファイル サイズ (KB)]**  
+ **ファイルサイズ (KB)**  
  トレース ファイルのサイズ (KB)。  
   
- **Created**  
+ **作成済み**  
  トレース ファイルを作成した日付と時刻。  
   
- **[更新日時]**  
+ **修正済み**  
  トレース ファイルを変更した日付と時刻。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [トレース ファイルを開く &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)   
  [[SQL Server Profiler]](../tools/sql-server-profiler/sql-server-profiler.md)   
- [SQL Server プロファイラーのテンプレートと権限](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)  
+ [SQL Server プロファイラーのテンプレートとアクセス許可](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)  
   
   

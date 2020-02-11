@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dd8e26099ec7152aac08a11b6f7e38550834d248
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63184246"
 ---
 # <a name="create-self-joins-manually-visual-database-tools"></a>自己結合の手動作成 (Visual Database Tools)
@@ -125,7 +125,7 @@ Cheryl Carson       Abraham Bennet
 7.  出力列、検索条件、並べ替え順序など、クエリの他のオプションを指定します。  
   
 ## <a name="see-also"></a>参照  
- [作成する自己結合の自動&#40;Visual Database Tools&#41;](create-self-joins-automatically-visual-database-tools.md)   
+ [Visual Database Tools &#40;自動的に自己結合を作成&#41;](create-self-joins-automatically-visual-database-tools.md)   
  [結合を使用したクエリ (Visual Database Tools)](query-with-joins-visual-database-tools.md)  
   
   

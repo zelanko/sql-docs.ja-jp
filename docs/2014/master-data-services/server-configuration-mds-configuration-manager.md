@@ -1,5 +1,5 @@
 ---
-title: マスター データ サービス サーバーの構成 ページ (構成マネージャー) |Microsoft Docs
+title: マスターデータサービスサーバーの構成] ページ (Configuration Manager) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4d2fabec1bd022a1d73c3abc669995d04bfc9856
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65478852"
 ---
 # <a name="master-data-services-server-configuration-page-configuration-manager"></a>マスター データ サービスの [サーバーの構成] ページ (構成マネージャー)
@@ -24,9 +24,9 @@ ms.locfileid: "65478852"
   
 ## <a name="server-configuration"></a>[サーバーの構成]  
   
-|コントロール名|説明|  
+|コントロール名|[説明]|  
 |------------------|-----------------|  
 |**Windows PowerShell**|ローカル コンピューターにインストールされている Windows PowerShell のバージョンが表示されます。 マスター データ サービス構成マネージャーを使用するには、Windows PowerShell Version 1.0 以降が必要です。|  
-|**[インターネット インフォメーション サービス]**|ローカル コンピューターにインストールされているインターネット インフォメーション サービス (IIS) のバージョンが表示されます。 マスター データ サービス構成マネージャーを使用するには、IIS Version 1.0 以降が必要です。|  
+|**インターネット インフォメーション サービス**|ローカル コンピューターにインストールされているインターネット インフォメーション サービス (IIS) のバージョンが表示されます。 マスター データ サービス構成マネージャーを使用するには、IIS Version 1.0 以降が必要です。|  
   
   

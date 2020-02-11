@@ -19,27 +19,28 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b35715487638a21e71f76788650b3238a3c9290c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63213508"
 ---
 # <a name="supporting-distributed-transactions"></a>分散トランザクションのサポート
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーのコンシューマーが使用できる、 **itransactionjoin::jointransaction** Microsoft 分散トランザクション コーディネーター (MS DTC) によってコーディネートされる分散トランザクションに参加するメソッド。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーのコンシューマーは、 **ITransactionJoin:: jointransaction**メソッドを使用して、Microsoft 分散トランザクションコーディネーター (MS DTC) によって調整された分散トランザクションに参加できます。  
   
- MS DTC が公開する COM オブジェクトを使用すると、クライアントは、さまざまなデータ ストアに対する複数の接続にまたがってコーディネートされるトランザクションを起動したり、このトランザクションに参加することができます。 トランザクションを開始する、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーのコンシューマーが MS DTC を使用して**ITransactionDispenser**インターフェイス。 **ITransactionDispenser** の **BeginTransaction** メンバーは、分散トランザクション オブジェクト上の参照を返します。 この参照を渡した、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーを使用して**JoinTransaction**します。  
+ MS DTC が公開する COM オブジェクトを使用すると、クライアントは、さまざまなデータ ストアに対する複数の接続にまたがってコーディネートされるトランザクションを起動したり、このトランザクションに参加することができます。 トランザクションを開始するために[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、Native Client OLE DB プロバイダーコンシューマーは MS DTC **ITransactionDispenser**インターフェイスを使用します。 
+  **ITransactionDispenser** の **BeginTransaction** メンバーは、分散トランザクション オブジェクト上の参照を返します。 この参照は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **jointransaction**を使用して Native Client OLE DB プロバイダーに渡されます。  
   
  MS DTC は、分散トランザクションでの非同期のコミットとアボートをサポートします。 非同期トランザクションの状態を通知する場合、コンシューマーは、**ITransactionOutcomeEvents** インターフェイスを実装し、そのインターフェイスを MS DTC トランザクション オブジェクトに接続します。  
   
- 分散トランザクションの場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーの実装**itransactionjoin::jointransaction**パラメーターとして次のとおりです。  
+ 分散トランザクションの場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、次のように**ITransactionJoin:: jointransaction**パラメーターを実装します。  
   
-|パラメーター|説明|  
+|パラメーター|[説明]|  
 |---------------|-----------------|  
 |*punkTransactionCoord*|MS DTC トランザクション オブジェクトへのポインター。|  
-|*IsoLevel*|によって無視されます、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダー。 MS DTC によりコーディネートされるトランザクションの分離レベルは、コンシューマーが MS DTC からトランザクション オブジェクトを取得するときに決まります。|  
-|*IsoFlags*|0 を指定する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]コンシューマーがその他の値が指定されている場合、Native Client OLE DB プロバイダーは XACT_E_NOISORETAIN を返します。|  
-|*POtherOptions*|NULL 以外の場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーはインターフェイスからオプションのオブジェクトを要求します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]場合は、Native Client OLE DB プロバイダーは XACT_E_NOTIMEOUT を返しますのオプション オブジェクトの*ulTimeout*メンバーは 0 ではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーの値は無視されます、 *szDescription*メンバー。|  
+|*IsoLevel*|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーによって無視されます。 MS DTC によりコーディネートされるトランザクションの分離レベルは、コンシューマーが MS DTC からトランザクション オブジェクトを取得するときに決まります。|  
+|*IsoFlags*|0 を指定する必要があります。 他[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の値がコンシューマーによって指定されている場合、Native Client OLE DB プロバイダーは XACT_E_NOISORETAIN を返します。|  
+|*Poruncommand オプション*|NULL 以外の場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、インターフェイスから options オブジェクトを要求します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、オプションオブジェクトの*ultimeout*メンバーが0でない場合に XACT_E_NOTIMEOUT を返します。 Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB プロバイダーは、 *szdescription*メンバーの値を無視します。|  
   
  次の例では、MS DTC を使用してトランザクションをコーディネートします。  
   

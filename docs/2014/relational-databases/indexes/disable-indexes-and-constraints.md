@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 047fffdc729b276979720e9d245862a692a86be0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63162405"
 ---
 # <a name="disable-indexes-and-constraints"></a>インデックスと制約の無効化
@@ -39,7 +39,7 @@ ms.locfileid: "63162405"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **以下を使用してインデックスを無効化するには**  
   
@@ -127,9 +127,9 @@ ms.locfileid: "63162405"
  インデックスが作成されているテーブルまたはビューの名前を表示します。  
   
  **[インデックスの種類]**  
- インデックスの種類が表示されます。**クラスター化された**、**非クラスター化**、**空間**、または**XML**します。  
+ インデックスの種類 ( **[クラスター化]** 、 **[非クラスター化]** 、 **[空間]** 、または **[XML]** ) を表示します。  
   
- **ステータス**  
+ **状態**  
  無効化操作の状態を表示します。 実行後の値は、次のいずれかになります。  
   
 -   空白  

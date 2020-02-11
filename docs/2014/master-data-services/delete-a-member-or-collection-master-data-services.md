@@ -17,14 +17,15 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f3164bca23e709fd434c6ba7850ec21179a076ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479712"
 ---
 # <a name="delete-a-member-or-collection-master-data-services"></a>メンバーまたはコレクションを削除する (マスター データ サービス)
-  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で、不要になったメンバーまたはコレクションを削除します。 複数のメンバーを一括で削除する場合は、代わりにステージング処理を使用します。 詳細については、次を参照してください。[非アクティブ化またはステージング処理を使用してメンバーの削除&#40;Master Data Services&#41;](add-update-and-delete-data-master-data-services.md)します。  
+  
+  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で、不要になったメンバーまたはコレクションを削除します。 複数のメンバーを一括で削除する場合は、代わりにステージング処理を使用します。 詳細については、「 [&#40;マスターデータサービス&#41;のステージング処理を使用したメンバーの非アクティブ化または削除](add-update-and-delete-data-master-data-services.md)」を参照してください。  
   
 > [!NOTE]  
 >  別のメンバーのドメイン ベースの属性値として使用されているメンバーは削除できません。  
@@ -32,19 +33,23 @@ ms.locfileid: "65479712"
 ## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
--   **[エクスプローラー]** 機能領域にアクセスする権限が必要です。  
+-   
+  **[エクスプローラー]** 機能領域にアクセスする権限が必要です。  
   
--   メンバーの場合の最小値があります**Update**からメンバーを削除するリーフ モデル オブジェクトに対する権限。  
+-   メンバーの場合は、メンバーを削除するリーフモデルオブジェクトに対する**更新**権限が最低限必要です。  
   
 -   コレクションの場合は、削除するリーフ コレクション オブジェクトに対する **更新** 権限が最低限必要です。  
   
 ### <a name="to-delete-a-member-or-collection"></a>メンバーまたはコレクションを削除するには  
   
-1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] のホーム ページで、 **[モデル]** ボックスの一覧からモデルを選択します。  
+1.  
+  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] のホーム ページで、 **[モデル]** ボックスの一覧からモデルを選択します。  
   
-2.  **[バージョン]** ボックスの一覧からバージョンを選択します。  
+2.  
+  **[バージョン]** ボックスの一覧からバージョンを選択します。  
   
-3.  **[エクスプローラー]** をクリックします。  
+3.  
+  **[エクスプローラー]** をクリックします。  
   
 4.  次の操作を実行します。  
   
@@ -56,13 +61,14 @@ ms.locfileid: "65479712"
   
 5.  グリッドで、削除するメンバーまたはコレクションの行をクリックします。  
   
-6.  **[メンバーの削除]** 、 **[削除]** 、または **[コレクションの削除]** をクリックします。  
+6.  
+  **[メンバーの削除]**、 **[削除]**、または **[コレクションの削除]** をクリックします。  
   
 7.  確認のダイアログ ボックスで **[OK]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [メンバーまたはコレクションを再アクティブ化する (マスター データ サービス)](../../2014/master-data-services/reactivate-a-member-or-collection-master-data-services.md)   
- [メンバー (マスター データ サービス)](../../2014/master-data-services/members-master-data-services.md)   
- [コレクション (マスター データ サービス)](../../2014/master-data-services/collections-master-data-services.md)  
+ [メンバーまたはコレクションを再アクティブ化する &#40;マスターデータサービス&#41;](../../2014/master-data-services/reactivate-a-member-or-collection-master-data-services.md)   
+ [メンバー &#40;マスターデータサービス&#41;](../../2014/master-data-services/members-master-data-services.md)   
+ [コレクション &#40;マスターデータサービス&#41;](../../2014/master-data-services/collections-master-data-services.md)  
   
   

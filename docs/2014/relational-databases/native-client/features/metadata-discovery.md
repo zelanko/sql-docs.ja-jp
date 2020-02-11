@@ -1,5 +1,5 @@
 ---
-title: メタデータの検出 |マイクロソフトのドキュメント
+title: メタデータの検出 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,21 +11,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e808f1fc82dfe0a9fd6fa96999e6e2c5320ee452
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63162012"
 ---
 # <a name="metadata-discovery"></a>メタデータの検出
-  メタデータ検出機能が強化、[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]により[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]書式を設定する前に指定したネイティブ クライアント アプリケーションがそのクエリの実行から返された列またはパラメーター メタデータが同じか、メタデータと互換性のあることを確認するにはクエリを実行しました。 クエリの実行後に返されたメタデータにクエリの実行前に指定したメタデータ形式との互換性がない場合は、エラーが発生します。  
+  の[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]メタデータ検出の機能[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]強化により、ネイティブクライアントアプリケーションでは、クエリの実行によって返される列またはパラメーターのメタデータが、クエリを実行する前に指定したメタデータ形式と同じか、または互換性があるかを確認できます。 クエリの実行後に返されたメタデータにクエリの実行前に指定したメタデータ形式との互換性がない場合は、エラーが発生します。  
   
  bcp 関数と ODBC 関数、および IBCPSession インターフェイスと IBCPSession2 インターフェイスでは、遅延読み取り (遅延メタデータ検出) を指定して、クエリ出力操作でメタデータ検出を回避できます。 その結果、パフォーマンスが向上し、メタデータ検出のエラーを回避できます。  
   
- 使用して、アプリケーションを開発する場合は[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client に[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]サーバー バージョンへの接続がよりも前[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]メタデータの検出機能は、サーバーのバージョンに対応します。  
+ で[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client を使用しているアプリケーションを開発しているが、より[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]前のサーバーバージョンに接続している場合、メタデータ検出機能はサーバーのバージョンに対応します。  
   
-## <a name="remarks"></a>コメント  
- [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] では次の bcp 関数が機能強化され、メタデータ検出機能が向上しています。  
+## <a name="remarks"></a>解説  
+ 
+  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] では次の bcp 関数が機能強化され、メタデータ検出機能が向上しています。  
   
 -   [bcp_columns](../../native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)  
   
@@ -37,11 +38,12 @@ ms.locfileid: "63162012"
   
 -   [bcp_setcolfmt](../../native-client-odbc-extensions-bulk-copy-functions/bcp-setcolfmt.md)  
   
- 使用してメタデータ形式を指定するときにパフォーマンスの向上も表示されます[bcp_setbulkmode](../../native-client-odbc-extensions-bulk-copy-functions/bcp-setbulkmode.md)します。  
+ [Bcp_setbulkmode](../../native-client-odbc-extensions-bulk-copy-functions/bcp-setbulkmode.md)を使用してメタデータ形式を指定すると、パフォーマンスが向上します。  
   
- [bcp_control](../../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)が新しい*eOption* bcp_readfmt の動作を制御する:`BCPDELAYREADFMT`します。  
+ [bcp_control](../../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)には、 ** bcp_readfmt `BCPDELAYREADFMT`の動作を制御する新しい eOption があります。  
   
- [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] では次の ODBC 関数が機能強化され、メタデータ検出機能が向上しています。  
+ 
+  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] では次の ODBC 関数が機能強化され、メタデータ検出機能が向上しています。  
   
 -   [SQLNumResultCols](../../native-client-odbc-api/sqlnumresultcols.md)  
   
@@ -51,17 +53,19 @@ ms.locfileid: "63162012"
   
 -   [SQLDescribeParam](../../native-client-odbc-api/sqldescribeparam.md)  
   
- [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] では次の OLE DB メンバー関数が機能強化され、メタデータ検出機能が向上しています。  
+ 
+  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] では次の OLE DB メンバー関数が機能強化され、メタデータ検出機能が向上しています。  
   
 -   IColumnsInfo::GetColumnInfo  
   
 -   IColumnsRowset::GetColumnsRowset  
   
--   Icommandwithparameters::getparameterinfo (を参照してください[ICommandWithParameters](../../native-client-ole-db-interfaces/icommandwithparameters.md)詳細)  
+-   ICommandWithParameters:: GetParameterInfo (詳細については、 [ICommandWithParameters](../../native-client-ole-db-interfaces/icommandwithparameters.md)を参照してください)  
   
  IBCPSession::BCPSetBulkMode を使用してメタデータ形式を指定したときのパフォーマンスも向上しています。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client でのメタデータ検出機能の強化は、[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] への次の 2 つのストアド プロシージャの追加により実現されました。  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client でのメタデータ検出機能の強化は、[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] への次の 2 つのストアド プロシージャの追加により実現されました。  
   
 -   sp_describe_first_result_set  
   

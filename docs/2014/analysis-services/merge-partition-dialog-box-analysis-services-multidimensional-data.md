@@ -1,5 +1,5 @@
 ---
-title: マージ パーティション ダイアログ ボックス (Analysis Services - 多次元データ) |Microsoft Docs
+title: '[パーティションのマージ] ダイアログボックス (Analysis Services 多次元データ) |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,17 +13,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 26751f2cc00330716f160c115d0e839cc6d9527a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077826"
 ---
 # <a name="merge-partition-dialog-box-analysis-services---multidimensional-data"></a>[パーティションのマージ] ダイアログ ボックス (Analysis Services - 多次元データ)
-  **SQL Server Management Studio** の **[パーティションのマージ]** ダイアログ ボックスを使用すると、キューブ内のメジャー グループのパーティションをマージできます。 **[パーティションのマージ]** ダイアログ ボックスを表示するには、 **オブジェクト エクスプローラー** で [パーティション] フォルダーまたはパーティションを右クリックし、ショートカット メニューの **[パーティションのマージ]** をクリックします。  
   
-## <a name="options"></a>および  
- **[サーバー]**  
+  **SQL Server Management Studio** の **[パーティションのマージ]** ダイアログ ボックスを使用すると、キューブ内のメジャー グループのパーティションをマージできます。 
+  **[パーティションのマージ]** ダイアログ ボックスを表示するには、 **オブジェクト エクスプローラー** で [パーティション] フォルダーまたはパーティションを右クリックし、ショートカット メニューの **[パーティションのマージ]** をクリックします。  
+  
+## <a name="options"></a>オプション  
+ **サーバー**  
  対象パーティションを含む Analysis Services インスタンスの名前を選択します。  
   
  **名前**  
@@ -32,7 +34,7 @@ ms.locfileid: "66077826"
  **フォルダー**  
  [名前] で選択されたパーティションで Analysis Services インスタンスの既定のフォルダーが使用されていない場合は、ターゲット パーティションが含まれるフォルダーの名前を表示します。  
   
- **基になるパーティション**  
+ **[基になるパーティション]**  
  対象パーティションにマージ可能な、基になるパーティションが含まれているグリッドを表示します。  
   
 > [!NOTE]  
@@ -40,14 +42,14 @@ ms.locfileid: "66077826"
   
  このグリッドには次の列が含まれています。  
   
-|[列]|説明|  
+|列|[説明]|  
 |------------|-----------------|  
-|**Merge**|選択すると、基になるパーティションを対象パーティションにマージできます。|  
-|**[パーティション名]**|基になるパーティションの名前を表示します。|  
-|**最後に処理されました。**|基になるパーティションが最後に処理された日時を表示します。|  
+|**マージ**|選択すると、基になるパーティションを対象パーティションにマージできます。|  
+|**パーティション名**|基になるパーティションの名前を表示します。|  
+|**[最終処理]**|基になるパーティションが最後に処理された日時を表示します。|  
   
-## <a name="see-also"></a>関連項目  
- [パーティション &#40;Analysis Services - 多次元データ&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
- [Analysis Services でのパーティションのマージ (SSAS - 多次元)](multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md)  
+## <a name="see-also"></a>参照  
+ [パーティション &#40;Analysis Services-多次元データ&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
+ [Analysis Services &#40;SSAS のパーティションのマージ-多次元&#41;](multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md)  
   
   

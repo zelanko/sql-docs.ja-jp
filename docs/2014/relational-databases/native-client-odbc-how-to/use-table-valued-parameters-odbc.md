@@ -1,5 +1,5 @@
 ---
-title: テーブル値パラメーター (ODBC) の使用 |マイクロソフトのドキュメント
+title: テーブル値パラメーターの使用 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,25 +11,26 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ec4d66af36ff74b5b0a9160529990c9fc52fc961
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200279"
 ---
 # <a name="use-table-valued-parameters-odbc"></a>テーブル値パラメーターの使用 (ODBC)
   このサンプルでは、テーブル値パラメーターを使用して、サーバーへの 1 度の呼び出しで複数の行を複数の列と共に挿入する方法を示します。  
   
- テーブル値パラメーターの詳細については、次を参照してください。[テーブル値パラメーター &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)します。 テーブル値パラメーターを使用して他のサンプルでは、次を参照してください。 [ODBC Table-Valued パラメーターのプログラミング例](../../database-engine/dev-guide/odbc-table-valued-parameter-programming-examples.md)します。  
+ テーブル値パラメーターの詳細については、「[テーブル値パラメーター &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)」を参照してください。 テーブル値パラメーターを使用したその他のサンプルについては、「 [ODBC テーブル値パラメーターのプログラミング例](../../database-engine/dev-guide/odbc-table-valued-parameter-programming-examples.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  TVPDemo という名前の ODBC データ ソースが必要です。 TVPDemo 用の既定のデータベースには、コンピューター上にある任意のテスト データベースを使用できます。 このデータ ソースには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 用の ODBC ドライバーが使用されている必要があります。  
   
  このサンプルを 64 ビット オペレーティング システムで 32 ビット アプリケーションとしてビルドし、実行する場合、%windir%\SysWOW64\odbcad32.exe の ODBC アドミニストレーターを使用して ODBC データ ソースを作成する必要があります。  
   
- このサンプルでは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 名前付きインスタンスに接続するには、ODBC データ ソースの定義を変更し、server\namedinstance 形式でそのインスタンスを指定します。 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] は、既定で名前付きインスタンスとしてインストールされます。  
+ このサンプルでは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 名前付きインスタンスに接続するには、ODBC データ ソースの定義を変更し、server\namedinstance 形式でそのインスタンスを指定します。 
+  [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] は、既定で名前付きインスタンスとしてインストールされます。  
   
- odbc32.lib と user32.lib を使用して (C++) コード リストをコンパイルします。 INCLUDE 環境変数には、sqlncli.h を含むディレクトリが含まれています。 を確認します。  
+ odbc32.lib と user32.lib を使用して (C++) コード リストをコンパイルします。 INCLUDE 環境変数に、sqlncli を含むディレクトリが含まれていることを確認します。  
   
 ```  
 // compile with: odbc32.lib user32.lib  

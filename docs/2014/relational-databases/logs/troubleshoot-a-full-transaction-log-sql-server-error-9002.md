@@ -19,20 +19,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2c0dc1566693ad8d8c86d7efe47403248788b076
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63144728"
 ---
 # <a name="troubleshoot-a-full-transaction-log-sql-server-error-9002"></a>満杯になったトランザクション ログのトラブルシューティング (SQL Server エラー 9002)
-  このトピックでは、トランザクション ログが満杯になった場合の対処法について説明し、今後トランザクション ログが満杯になるのを防ぐ方法を示します。 トランザクション ログが満杯になると、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]から 9002 エラーが発行されます。 データベースがオンラインまたは復旧中の場合、ログが満杯になることがあります。 データベースがオンラインの時にログが満杯になると、データベースはオンラインのままですが、読み取り専用になり、更新できません。 復旧中にログが満杯になった場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] によりデータベースが RESOURCE PENDING としてマークされます。 いずれの場合も、ログ領域を使用可能にするためのユーザー操作が必要です。  
+  このトピックでは、トランザクション ログが満杯になった場合の対処法について説明し、今後トランザクション ログが満杯になるのを防ぐ方法を示します。 トランザクション ログが満杯になると、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]から 9002 エラーが発行されます。 データベースがオンラインまたは復旧中の場合、ログが満杯になることがあります。 データベースがオンラインのときにログ ファイルがいっぱいになった場合、データベースはオンラインのままです。ただし、更新はできず、読み取りだけが可能です。 復旧中にログが満杯になった場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] によりデータベースが RESOURCE PENDING としてマークされます。 いずれの場合も、ログ領域を使用可能にするためのユーザー操作が必要です。  
   
 ## <a name="responding-to-a-full-transaction-log"></a>トランザクション ログが満杯になった場合の対処法  
  トランザクション ログが満杯になった状況によっては、適切な対処法が異なる場合があります。 特定の条件でログの切り捨てができなくなっている原因を見つけるには、**sys.database** カタログ ビューの **log_reuse_wait** 列と **log_reuse_wait_desc** 列を使用します。 詳細については、「[sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)」を参照してください。 ログの切り捨てが遅れる要因については、「[トランザクション ログ &#40;SQL Server&#41;](the-transaction-log-sql-server.md)」を参照してください。  
   
 > [!IMPORTANT]  
->  場合は、データベースの復旧、問題を解決したら、9002 エラーが発生したときに、ALTER DATABASE を使用して、データベースを回復*database_name*をオンラインに設定します。  
+>  データベースの復旧中に 9002 エラーが発生した場合、問題を解決した後で ALTER DATABASE *database_name* SET ONLINE ステートメントを使用してデータベースを復旧します。  
   
  満杯になったトランザクション ログのその他の対処法には、以下があります。  
   
@@ -53,14 +53,14 @@ ms.locfileid: "63144728"
 ### <a name="backing-up-the-log"></a>ログのバックアップ  
  完全復旧モデルまたは一括ログ復旧モデルでは、トランザクション ログを長期間バックアップしていないと、バックアップによりログの切り捨てが妨げられる場合があります。 これまでにログのバックアップをまったく行っていない場合は、2 つのログ バックアップを作成して、[!INCLUDE[ssDE](../../includes/ssde-md.md)]が最後にバックアップされた時点までログを切り捨てられるようにする必要があります。 ログを切り捨てると新しいログ レコード用の領域が解放されます。 ログが再び満杯にならないようにするには、ログを頻繁にバックアップするようにしてください。  
   
- **トランザクション ログのバックアップを作成するには**  
+ **トランザクションログバックアップを作成するには**  
   
 > [!IMPORTANT]  
 >  データベースが破損している場合、「[ログ末尾のバックアップ &#40;SQL Server&#41;](../backup-restore/tail-log-backups-sql-server.md)」を参照してください。  
   
--   [トランザクション ログのバックアップ &#40;SQL Server&#41;](../backup-restore/back-up-a-transaction-log-sql-server.md)  
+-   [トランザクションログ &#40;SQL Server のバックアップ&#41;](../backup-restore/back-up-a-transaction-log-sql-server.md)  
   
--   <xref:Microsoft.SqlServer.Management.Smo.Backup.SqlBackup%2A> (SMO)  
+-   <xref:Microsoft.SqlServer.Management.Smo.Backup.SqlBackup%2A>SMO  
   
 ### <a name="freeing-disk-space"></a>ディスク領域の解放  
  他のファイルを削除または移動することによって、データベースのトランザクション ログ ファイルが保存されているディスク ドライブのディスク領域を解放できる場合があります。 ディスク領域を解放すると、ログ ファイルは自動的に拡張します。  
@@ -78,7 +78,7 @@ ms.locfileid: "63144728"
 ### <a name="increasing-the-size-of-a-log-file"></a>ログ ファイルのサイズの拡張  
  ログ ディスク上に使用可能な領域がある場合、ログ ファイルのサイズを増やすことができます。 各ログ ファイルの最大サイズは、2 テラバイト (TB) です。  
   
- **ファイル サイズを大きくには**  
+ **ファイル サイズを増やすには**  
   
  自動拡張が無効に設定されており、データベースがオンラインで、ディスク上に十分な空き領域がある場合、次のいずれかを実行します。  
   
@@ -96,10 +96,10 @@ ms.locfileid: "63144728"
   
 -   [データベースに対するデータ ファイルまたはログ ファイルの追加](../databases/add-data-or-log-files-to-a-database.md)  
   
-## <a name="see-also"></a>関連項目  
- [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
- [トランザクション ログ ファイルのサイズの管理](manage-the-size-of-the-transaction-log-file.md)   
- [トランザクション ログのバックアップ &#40;SQL Server&#41;](../backup-restore/transaction-log-backups-sql-server.md)   
- [sp_add_log_file_recover_suspect_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-log-file-recover-suspect-db-transact-sql)  
+## <a name="see-also"></a>参照  
+ [ALTER DATABASE &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
+ [トランザクションログファイルのサイズを管理する](manage-the-size-of-the-transaction-log-file.md)   
+ [トランザクションログのバックアップ &#40;SQL Server&#41;](../backup-restore/transaction-log-backups-sql-server.md)   
+ [sp_add_log_file_recover_suspect_db &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-add-log-file-recover-suspect-db-transact-sql)  
   
   

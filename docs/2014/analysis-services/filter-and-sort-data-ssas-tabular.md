@@ -1,5 +1,5 @@
 ---
-title: フィルター処理し、並べ替え (SSAS テーブル) データ |Microsoft Docs
+title: データのフィルター処理と並べ替え (SSAS テーブル) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: faa6198bc9fa42b55be63ec57ff49ed6703ef260
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081256"
 ---
 # <a name="filter-and-sort-data-ssas-tabular"></a>データのフィルター処理と並べ替え (SSAS テーブル)
@@ -24,9 +24,9 @@ ms.locfileid: "66081256"
   
 ## <a name="related-tasks"></a>Related Tasks  
   
-|トピック|説明|  
+|トピック|[説明]|  
 |-----------|-----------------|  
-|[テーブル内のデータを並べ替える&#40;SSAS 表形式&#41;](tabular-models/sort-data-in-a-table-ssas-tabular.md)テーブル内のデータを並べ替える|このトピックのタスクでは、テーブル内のデータを文字または数字の順で並べ替える方法について説明します。|  
-|[テーブル内のデータをフィルター処理&#40;SSAS 表形式&#41;](tabular-models/filter-data-in-a-table-ssas-tabular.md)|このトピックのタスクでは、カスタム フィルターを適用して行の表示方法を制御する方法について説明します。|  
+|[SSAS 表形式&#41;&#40;テーブル内のデータを並べ替える](tabular-models/sort-data-in-a-table-ssas-tabular.md)テーブル内のデータの並べ替え|このトピックのタスクでは、テーブル内のデータを文字または数字の順で並べ替える方法について説明します。|  
+|[SSAS 表形式&#41;&#40;テーブルのデータをフィルター処理する](tabular-models/filter-data-in-a-table-ssas-tabular.md)|このトピックのタスクでは、カスタム フィルターを適用して行の表示方法を制御する方法について説明します。|  
   
   

@@ -1,5 +1,5 @@
 ---
-title: XTP Cursors |Microsoft Docs
+title: XTP カーソル |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,18 +11,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b591aa8e89200ca863b1e8196c383c506401fc3e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63151066"
 ---
 # <a name="xtp-cursors"></a>XTP Cursors
   XTP Cursors パフォーマンス オブジェクトには、XTP エンジンの内部カーソルに関連するカウンターが含まれています。 カーソルとは、XTP エンジンが [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリを処理するために使用する、低レベルの構成要素です。 このため、通常はユーザー側でカーソルを直接管理することはありません。  
   
- この表は、 **XTP Cursors**カウンター。  
+ 次の表では、 **XTP カーソル**カウンターについて説明します。  
   
-|カウンター|説明|  
+|カウンター|[説明]|  
 |-------------|-----------------|  
 |**Cursor deletes/sec**|カーソルの削除回数に関する 1 秒あたりの平均です。|  
 |**Cursor inserts/sec**|カーソルの挿入回数に関する 1 秒あたりの平均です。|  
@@ -38,6 +38,6 @@ ms.locfileid: "63151066"
 |**Tentatively-deleted rows touched/sec**|カーソルによって操作された、間もなく期限切れになる行の数に関する 1 秒あたりの平均です。 行が間もなく期限切れになるのは、その行を削除したトランザクションが依然としてアクティブな場合 (つまり、コミットや中止がまだ行われていない場合) です。|  
   
 ## <a name="see-also"></a>参照  
- [XTP &#40;、インメモリ OLTP&#41;パフォーマンス カウンター](../../integration-services/performance/performance-counters.md)  
+ [XTP &#40;インメモリ OLTP&#41; パフォーマンスカウンター](../../integration-services/performance/performance-counters.md)  
   
   

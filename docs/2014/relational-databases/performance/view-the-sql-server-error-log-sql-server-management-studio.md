@@ -17,19 +17,20 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 494b57b50115b5ed3cf5089448215b89e9422ccb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150449"
 ---
 # <a name="view-the-sql-server-error-log-sql-server-management-studio"></a>SQL Server エラー ログの表示 (SQL Server Management Studio)
+  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログには、ユーザー定義のイベントや特定のシステム イベントが含まれています。 このエラー ログを使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に関連する問題のトラブルシューティングを行うことができます。  
   
 ### <a name="to-view-the-sql-server-error-log"></a>SQL Server エラー ログを表示するには  
   
-1.  **オブジェクト エクスプ ローラー**展開し、サーバーを展開し、**管理**、順に展開**SQL Server ログ**します。  
+1.  **オブジェクトエクスプローラー**で、サーバーを展開し、[**管理**]、[ **SQL Server ログ**] の順に展開します。  
   
-2.  ログを右クリックし、 **[SQL Server ログの表示]** をクリックします。  
+2.  ログを右クリックし、**[SQL Server ログの表示]** をクリックします。  
   
   

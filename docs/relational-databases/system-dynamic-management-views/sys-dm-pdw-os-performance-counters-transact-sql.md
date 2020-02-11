@@ -1,5 +1,5 @@
 ---
-title: sys.dm_pdw_os_performance_counters (TRANSACT-SQL) |Microsoft Docs
+title: dm_pdw_os_performance_counters (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -13,27 +13,27 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 8f275d48131ef7011307f39f38d37a8bfff4ea18
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67899315"
 ---
-# <a name="sysdmpdwosperformancecounters-transact-sql"></a>sys.dm_pdw_os_performance_counters (TRANSACT-SQL)
+# <a name="sysdm_pdw_os_performance_counters-transact-sql"></a>dm_pdw_os_performance_counters (Transact-sql)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  Windows パフォーマンス カウンター内のノードに関する情報が含まれます[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]します。  
+  のノードの Windows パフォーマンスカウンターに関する情報が[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]含まれています。  
   
-|列名|データ型|説明|範囲|  
+|列名|データ型|[説明]|Range|  
 |-----------------|---------------|-----------------|-----------|  
-|pdw_node_id|**int**|カウンターを含むノードの ID。<br /><br /> pdw_node_id と counter_name は、このビューのキーを形成します。|Node_id を参照してください。 [sys.dm_pdw_nodes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)します。|  
-|counter_name|**nvarchar (255)**|Windows パフォーマンス カウンターの名前。||  
-|counter_category|**nvarchar (255)**|Windows パフォーマンス カウンター カテゴリの名前です。||  
-|instance_name|**nvarchar (255)**|カウンターの特定のインスタンスの名前です。||  
-|counter_value|**Decimal(38,10)**|カウンターの現在の値。||  
-|last_update_time|**Datetime2(3)**|値が更新された最後の時刻のタイムスタンプ。||  
+|pdw_node_id|**int**|カウンターを含むノードの ID。<br /><br /> このビューのキーは pdw_node_id と counter_name によって形成されます。|『 [Transact-sql&#41;&#40;dm_pdw_nodes](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)の node_id を参照してください。|  
+|counter_name|**nvarchar(255)**|Windows パフォーマンスカウンターの名前。||  
+|counter_category|**nvarchar(255)**|Windows パフォーマンスカウンターカテゴリの名前。||  
+|instance_name|**nvarchar(255)**|カウンターの特定のインスタンスの名前。||  
+|counter_value|**10進数 (38, 10)**|カウンターの現在の値。||  
+|last_update_time|**Datetime2 (3)**|値が最後に更新されたときのタイムスタンプ。||  
   
-## <a name="see-also"></a>関連項目  
- [SQL Data Warehouse と Parallel Data Warehouse の動的管理ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+## <a name="see-also"></a>参照  
+ [SQL Data Warehouse および並列データウェアハウスの動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

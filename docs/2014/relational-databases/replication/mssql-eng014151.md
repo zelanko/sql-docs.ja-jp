@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1f292841c227db26f1c518b2eaef896f7ce3570c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63191461"
 ---
-# <a name="mssqleng014151"></a>MSSQL_ENG014151
+# <a name="mssql_eng014151"></a>MSSQL_ENG014151
     
 ## <a name="message-details"></a>メッセージの詳細  
   
@@ -51,10 +51,10 @@ ms.locfileid: "63191461"
 ## <a name="see-also"></a>参照  
  [レプリケーション エージェントの管理](agents/replication-agent-administration.md)   
  [エラーとイベントのリファレンス &#40;レプリケーション&#41;](errors-and-events-reference-replication.md)   
- [レプリケーション ディストリビューション エージェント](agents/replication-distribution-agent.md)   
- [レプリケーション ログ リーダー エージェント](agents/replication-log-reader-agent.md)   
- [レプリケーション マージ エージェント](agents/replication-merge-agent.md)   
+ [Replication Distribution Agent](agents/replication-distribution-agent.md)   
+ [Replication Log Reader Agent](agents/replication-log-reader-agent.md)   
+ [Replication Merge Agent](agents/replication-merge-agent.md)   
  [レプリケーション キュー リーダー エージェント](agents/replication-queue-reader-agent.md)   
- [レプリケーション スナップショット エージェント](agents/replication-snapshot-agent.md)  
+ [Replication Snapshot Agent](agents/replication-snapshot-agent.md)  
   
   

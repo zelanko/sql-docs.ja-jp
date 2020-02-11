@@ -11,16 +11,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b3eb41d807a1b4678882c791a7bdeb7693de7b08
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107921"
 ---
 # <a name="exporting-to-a-pdf-file-report-builder-and-ssrs"></a>PDF ファイルへのエクスポート (レポート ビルダーおよび SSRS)
   PDF 表示拡張機能を使用すると、Adobe Acrobat および PDF 1.3 をサポートするその他のサードパーティ製 PDF ビューアーで開くことのできるファイルとしてレポートが表示されます。 PDF 1.3 は Adobe Acrobat 4 以降のバージョンと互換性がありますが、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では Adobe Acrobat 6 以降がサポートされています。 この表示拡張機能では、レポートの表示処理に Adobe 製のソフトウェアは必要ありません。 ただし、レポートを PDF 形式で表示または印刷するには、Adobe Acrobat などの PDF ビューアーが必要です。  
   
- PDF 表示拡張機能では ANSI 文字がサポートされ、日本語、韓国語、繁体中国語、簡体中国語、キリル文字、ヘブライ語、アラビア語の Unicode 文字を変換できます (一部制限事項があります)。 制限事項の詳細については、次を参照してください。[レポートのエクスポート&#40;レポート ビルダーおよび SSRS&#41;](export-reports-report-builder-and-ssrs.md)します。  
+ PDF 表示拡張機能では ANSI 文字がサポートされ、日本語、韓国語、繁体中国語、簡体中国語、キリル文字、ヘブライ語、アラビア語の Unicode 文字を変換できます (一部制限事項があります)。 制限の詳細については、「[レポートのエクスポート &#40;レポートビルダーと SSRS&#41;](export-reports-report-builder-and-ssrs.md)」を参照してください。  
   
  PDF レンダラーは物理的なページ レンダラーなので、HTML や Excel などの他のレンダラーとは異なり、改ページ機能があります。 ここでは、PDF レンダラー固有の情報を提供し、規則の例外について説明します。  
   
@@ -62,10 +62,14 @@ ms.locfileid: "66107921"
   
 |PDF プロパティ|作成元|  
 |------------------|------------------|  
-|`Title`|`Name` RDL 要素の `Report` 属性です。|  
-|`Author`|`Author` RDL 要素です。|  
-|`Subject`|`Description` RDL 要素です。|  
-|`Creator`|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 製品の名前およびバージョンです。|  
+|`Title`|
+  `Name` RDL 要素の `Report` 属性です。|  
+|`Author`|
+  `Author` RDL 要素です。|  
+|`Subject`|
+  `Description` RDL 要素です。|  
+|`Creator`|
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 製品の名前およびバージョンです。|  
 |`Producer`|表示拡張機能の名前とバージョンです。|  
 |`CreationDate`|PDF `datetime` 形式でのレポートの実行時間です。|  
   
@@ -80,7 +84,7 @@ ms.locfileid: "66107921"
 ### <a name="document-map"></a>ドキュメント マップ  
  ドキュメント マップ ラベルがレポートに存在する場合、PDF ファイルにドキュメント アウトラインが追加されます。 各ドキュメント マップ ラベルは、ドキュメント アウトラインのエントリとして、レポートに表示される順番で表示されます。 Acrobat で、対象のブックマークがドキュメント アウトラインに追加されるのは、そのブックマークが存在するページが表示されている場合のみです。  
   
- 1 ページしか表示されていない場合、ドキュメント アウトラインは追加されません。 ドキュメント マップは、レポート内の入れ子レベルを反映するために階層状に配置されます。 ドキュメント アウトラインは、Acrobat の [しおり] タブからアクセスできます。ドキュメント アウトライン内のエントリをクリックすると、ドキュメントでブックマークが設定された場所に移動できます。  
+ 1 ページしか表示されていない場合、ドキュメント アウトラインは追加されません。 ドキュメント マップは、レポート内の入れ子レベルを反映するために階層状に配置されます。 ドキュメントアウトラインは、Acrobat の [ブックマーク] タブに表示されます。ドキュメントアウトライン内のエントリをクリックすると、ドキュメントはブックマークが付けられた場所に移動します。  
   
 ### <a name="bookmarks"></a>ブックマーク  
  PDF 表示では、ブックマークはサポートされていません。  
@@ -93,7 +97,7 @@ ms.locfileid: "66107921"
   
   
   
-##  <a name="Compression"></a> 圧縮  
+##  <a name="Compression"></a>機能  
  画像の圧縮は、画像の元のファイルの種類に基づいて行われます。 PDF 表示拡張機能は、既定で PDF ファイルを圧縮します。  
   
  PDF ファイルに含まれる画像の圧縮を可能な限り保持するために、JPEG 画像は JPEG として保存され、その他の種類の画像はすべて BMP として保存されます。  

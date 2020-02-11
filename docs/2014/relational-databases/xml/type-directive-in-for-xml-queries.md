@@ -14,23 +14,25 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 21ff73c95bb85167dfba64d434ed7b6c42051c07
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63193287"
 ---
 # <a name="type-directive-in-for-xml-queries"></a>FOR XML クエリの TYPE ディレクティブ
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サポート、 [xml &#40;TRANSACT-SQL&#41; ](/sql/t-sql/xml/xml-transact-sql) FOR XML クエリの結果として返す要求オプションには、 `xml` TYPE ディレクティブを指定することによってデータ型。 これにより、サーバーで FOR XML クエリの結果を処理できるようになります。 たとえば、それに対して XQuery を指定に結果を割り当てる、`xml`変数、または書き込み[入れ子になった FOR XML クエリ](use-nested-for-xml-queries.md)します。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][xml &#40;transact-sql&#41;](/sql/t-sql/xml/xml-transact-sql)のサポートにより、必要に応じて、type ディレクティブを指定することにより、for xml `xml`クエリの結果をデータ型として返すように要求できます。 これにより、サーバーで FOR XML クエリの結果を処理できるようになります。 たとえば、XQuery を指定したり、その結果を`xml`型の変数に割り当てたり、[入れ子になった FOR XML クエリ](use-nested-for-xml-queries.md)を記述したりできます。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、TYPE ディレクティブを使用した FOR XML クエリなど、サーバーでのさまざまな構成の結果として、または SQL テーブルの列および出力パラメーターの XML インスタンス データ値を返すために `xml` データ型が使用された場合に、XML データ型のインスタンス データをクライアントに返します。 クライアント アプリケーション コードでは、ADO.NET プロバイダーが、この XML データ型の情報をサーバーからバイナリ エンコードで送信するように要求します。 ただし、TYPE ディレクティブを指定せずに FOR XML を使用した場合、この XML データは文字列型として返されます。 どんな場合でも、クライアント プロバイダーは常にいずれかの形式の XML を処理できます。 TYPE ディレクティブを指定していない最上位レベルでの FOR XML 句は、カーソルと共に使用できません。  
+>  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、TYPE ディレクティブを使用した FOR XML クエリなど、サーバーでのさまざまな構成の結果として、または SQL テーブルの列および出力パラメーターの XML インスタンス データ値を返すために `xml` データ型が使用された場合に、XML データ型のインスタンス データをクライアントに返します。 クライアント アプリケーション コードでは、ADO.NET プロバイダーが、この XML データ型の情報をサーバーからバイナリ エンコードで送信するように要求します。 ただし、TYPE ディレクティブを指定せずに FOR XML を使用した場合、この XML データは文字列型として返されます。 どんな場合でも、クライアント プロバイダーは常にいずれかの形式の XML を処理できます。 TYPE ディレクティブを指定していない最上位レベルでの FOR XML 句は、カーソルと共に使用できません。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例は、FOR XML クエリでの TYPE ディレクトリの使用方法を示しています。  
   
 ### <a name="retrieving-for-xml-query-results-as-xml-type"></a>FOR XML クエリの結果の xml 型としての取得  
- 次のクエリでは、 `Contacts` テーブルから顧客の連絡先に関する情報を取得します。 `TYPE` に `FOR XML` ディレクティブが指定されているので、結果は `xml` 型として返されます。  
+ 次のクエリでは、 `Contacts` テーブルから顧客の連絡先に関する情報を取得します。 
+  `TYPE` に `FOR XML` ディレクティブが指定されているので、結果は `xml` 型として返されます。  
   
 ```  
 USE AdventureWorks2012;  
@@ -50,7 +52,8 @@ FOR XML AUTO, TYPE;
  `...`  
   
 ### <a name="assigning-for-xml-query-results-to-an-xml-type-variable"></a>FOR XML クエリ結果の xml 型の変数への代入  
- 次の例では、FOR XML の結果が `xml` 型の変数 `@x` に代入されます。 クエリなど、連絡先情報を取得します、 `BusinessEntityID`、 `FirstName`、 `LastName`、およびその他からの電話番号、`AdditionalContactInfo`の列`xml``TYPE`します。 `FOR XML` 句に `TYPE` ディレクティブを指定するので、この XML は `xml` 型として返され、変数に代入されます。  
+ 次の例では、FOR XML の結果が `xml` 型の変数 `@x` に代入されます。 クエリでは、 `BusinessEntityID`の`FirstName` `LastName` `AdditionalContactInfo` `xml``TYPE`列から、、、、追加の電話番号などの連絡先情報を取得します。 
+  `FOR XML` 句に `TYPE` ディレクティブを指定するので、この XML は `xml` 型として返され、変数に代入されます。  
   
 ```  
 USE AdventureWorks2012;  
@@ -73,7 +76,7 @@ GO
 ### <a name="querying-results-of-a-for-xml-query"></a>FOR XML クエリの結果のクエリ  
  FOR XML クエリにより、XML が返されます。 したがって、FOR XML クエリにより返された XML 結果には、`xml` や `query()` などの `value()` 型のメソッドを適用できます。  
   
- 次のクエリでは、`xml` データ型の `query()` メソッドを使用して、`FOR XML` クエリの結果にクエリします。 詳細については、「[クエリ&#40;&#41; メソッド &#40;xml データ型&#41;](/sql/t-sql/xml/query-method-xml-data-type)」を参照してください。  
+ 次のクエリでは、`query()` データ型の `xml` メソッドを使用して、`FOR XML` クエリの結果にクエリします。 詳細については、「[クエリ&#40;&#41; メソッド &#40;xml データ型&#41;](/sql/t-sql/xml/query-method-xml-data-type)」を参照してください。  
   
 ```  
 USE AdventureWorks2012;  
@@ -87,7 +90,7 @@ FROM Person.Person
 FOR XML AUTO, TYPE).query('/Person.Person[1]');  
 ```  
   
- 内側の `SELECT ... FOR XML` クエリにより `xml` 型の結果が返され、外側の `SELECT` によりその `xml` 型の結果に `query()` メソッドが適用されます。 `TYPE` ディレクティブが指定されていることに注意してください。  
+ 内側の `SELECT ... FOR XML` クエリにより `xml` 型の結果が返され、外側の `SELECT` によりその `query()` 型の結果に `xml` メソッドが適用されます。 `TYPE` ディレクティブが指定されていることに注意してください。  
   
  結果を次に示します。  
   
@@ -103,7 +106,7 @@ FOR XML AUTO, TYPE).query('/Person.Person[1]');
   
  `</Person.Person>`  
   
- 次のクエリでは、`xml` データ型の `value()` メソッドを使用して、`SELECT...FOR XML` クエリにより返された XML 結果から値を取得します。 詳細については、「[value&#40;&#41; メソッド &#40;xml データ型&#41;](/sql/t-sql/xml/value-method-xml-data-type)」を参照してください。  
+ 次のクエリでは、`value()` データ型の `xml` メソッドを使用して、`SELECT...FOR XML` クエリにより返された XML 結果から値を取得します。 詳細については、「[value&#40;&#41; メソッド &#40;xml データ型&#41;](/sql/t-sql/xml/value-method-xml-data-type)」を参照してください。  
   
 ```  
 USE AdventureWorks2012;  
@@ -147,7 +150,7 @@ SELECT (SELECT XmlCol.query('/Root')
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [FOR XML &#40;SQL Server&#41;](../xml/for-xml-sql-server.md)  
   
   

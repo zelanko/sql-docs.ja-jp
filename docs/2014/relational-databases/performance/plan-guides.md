@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ea11c177533a6101bb0654ca0450e85ea855d9a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150819"
 ---
 # <a name="plan-guides"></a>プラン ガイド
@@ -33,7 +33,7 @@ ms.locfileid: "63150819"
  作成できるプラン ガイドの総数の上限は、使用可能なシステム リソースによって決まります。 ただし、プラン ガイドは、ミッションクリティカルなクエリのパフォーマンスの向上と安定化を図る目的にのみ使用する必要があります。 プラン ガイドの使用により配置済みのアプリケーションのクエリ負荷の多くが影響を受けることがないようにしてください。  
   
 > [!NOTE]  
->  プラン ガイドは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 エディションでサポートされている機能の一覧については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を参照してください[機能は、SQL Server 2014 の各エディションでサポートされている](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。 プラン ガイドはどのエディションでも表示できます。 また、プラン ガイドを含むデータベースは、どのエディションに対してもアタッチできます。 アップグレード済みのバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]にデータベースを復元またはアタッチした場合、プラン ガイドはまったく影響を受けません。  
+>  プラン ガイドは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各エディションでサポートされる機能の一覧については、「 [SQL Server 2014 の各エディションがサポートする機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)」を参照してください。 プラン ガイドはどのエディションでも表示できます。 また、プラン ガイドを含むデータベースは、どのエディションに対してもアタッチできます。 アップグレード済みのバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]にデータベースを復元またはアタッチした場合、プラン ガイドはまったく影響を受けません。  
   
 ## <a name="types-of-plan-guides"></a>プラン ガイドの種類  
  次の種類のプラン ガイドを作成できます。  
@@ -41,7 +41,8 @@ ms.locfileid: "63150819"
  OBJECT プラン ガイド  
  OBJECT プラン ガイドでは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャ、スカラー ユーザー定義関数、複数ステートメント テーブル値ユーザー定義関数、および DML トリガーのコンテキストで実行されるクエリが照合されます。  
   
- `@Country`_`region` パラメーターを受け取る次のストアド プロシージャが、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースに対して配置されたデータベース アプリケーションに存在するとします。  
+ 
+  `@Country`_`region` パラメーターを受け取る次のストアド プロシージャが、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースに対して配置されたデータベース アプリケーションに存在するとします。  
   
 ```  
 CREATE PROCEDURE Sales.GetSalesOrderByCountry (@Country_region nvarchar(60))  
@@ -97,7 +98,8 @@ sp_create_plan_guide
 ```  
   
 > [!IMPORTANT]  
->  `@module_or_batch` ステートメントの `@params` 引数と `sp_create_plan guide` 引数に指定する値は、実際のクエリで送信される、対応するテキストと一致している必要があります。 詳細については、「 [sp_create_plan_guide &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql) ステートメントの [SQL Server Profiler を使用したプラン ガイドの作成とテスト](plan-guides.md)の実際のクエリのテキストを直接変更することが不可能な場合や望ましくない場合に、プラン ガイドを使用してクエリのパフォーマンスを最適化することができます。  
+>  
+  `@module_or_batch` ステートメントの `@params` 引数と `sp_create_plan guide` 引数に指定する値は、実際のクエリで送信される、対応するテキストと一致している必要があります。 詳細については、「 [sp_create_plan_guide &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql) ステートメントの [SQL Server Profiler を使用したプラン ガイドの作成とテスト](plan-guides.md)の実際のクエリのテキストを直接変更することが不可能な場合や望ましくない場合に、プラン ガイドを使用してクエリのパフォーマンスを最適化することができます。  
   
  PARAMETERIZATION データベース オプションを FORCED に設定するか、またはクエリのクラスをパラメーター化するように指定して TEMPLATE プラン ガイドを作成すると、同じ形式にパラメーター化されるクエリに SQL プラン ガイドを作成することもできます。  
   
@@ -125,7 +127,7 @@ sp_create_plan_guide
   
  SQL ベースのプラン ガイドまたは TEMPLATE ベースのプラン ガイドでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] により、引数 @module_or_batch と引数 @params の値が文字単位で比較されてクエリと照合されます。 つまり、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で受け取られる実際のバッチ テキストと厳密に同じテキストを指定する必要があります。  
   
- @type = 'SQL' で、@module_or_batch が NULL に設定されている場合、@module_or_batch の値は @stmt の値に設定されます。つまり、 *statement_text* の値は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に送信するときと同一の形式で、同じ文字で指定する必要があります。 この適合を容易にするために内部変換は実行されません。  
+ = @type ' SQL ' で、 @module_or_batchが NULL に設定されている@module_or_batch場合、の値はの@stmt値に設定されます。つまり、 *statement_text*の値は、に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]送信されるときと同じ形式で、同じ文字で指定する必要があります。 この適合を容易にするために内部変換は実行されません。  
   
  通常の (SQL または OBJECT) プラン ガイドと TEMPLATE プラン ガイドの両方をステートメントに適用可能な場合、通常のプラン ガイドのみが使用されます。  
   
@@ -148,11 +150,11 @@ sp_create_plan_guide
 |プラン ガイドを作成およびテストするために SQL Server Profiler を使用する方法について説明します。|[SQL Server Profiler を使用したプラン ガイドの作成とテスト](plan-guides.md)|  
 |プラン ガイドを検証する方法について説明します。|[アップグレード後のプラン ガイドの検証](validate-plan-guides-after-upgrade.md)|  
   
-## <a name="see-also"></a>関連項目  
- [sp_create_plan_guide &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
- [sp_create_plan_guide_from_handle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql)   
- [sp_control_plan_guide &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql)   
- [sys.plan_guides &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-plan-guides-transact-sql)   
- [sys.fn_validate_plan_guide &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-validate-plan-guide-transact-sql)  
+## <a name="see-also"></a>参照  
+ [sp_create_plan_guide &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
+ [sp_create_plan_guide_from_handle &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql)   
+ [sp_control_plan_guide &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql)   
+ [plan_guides &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-plan-guides-transact-sql)   
+ [fn_validate_plan_guide &#40;Transact-sql&#41;](/sql/relational-databases/system-functions/sys-fn-validate-plan-guide-transact-sql)  
   
   

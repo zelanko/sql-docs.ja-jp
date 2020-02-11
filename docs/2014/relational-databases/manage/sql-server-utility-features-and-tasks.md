@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1d3f61904a1a820df58583212dcbd2e998dbabbd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63190429"
 ---
 # <a name="sql-server-utility-features-and-tasks"></a>SQL Server ユーティリティの機能とタスク
@@ -48,9 +48,9 @@ ms.locfileid: "63190429"
 |ユーティリティ エクスプローラーを使用して SQL Server ユーティリティを管理する方法について説明します。|[ユーティリティ エクスプローラーを使用した SQL Server ユーティリティの管理](use-utility-explorer-to-manage-the-sql-server-utility.md)|  
 |SQL Server ユーティリティで SQL Server のインスタンスを監視する方法について説明します。|[SQL Server ユーティリティでの SQL Server のインスタンスの監視](monitor-instances-of-sql-server-in-the-sql-server-utility.md)|  
 |リソース正常性ポリシーの結果を表示する方法について説明します。|[リソース正常性ポリシーの結果の表示 &#40;SQL Server ユーティリティ&#40;](view-resource-health-policy-results-sql-server-utility.md)|  
-|リソース正常性ポリシーの定義を変更する方法について説明します。|[リソース正常性ポリシーの定義の変更 &#40;SQL Server ユーティリティ&#41;](modify-a-resource-health-policy-definition-sql-server-utility.md)|  
-|UCP データ ウェアハウスを構成する方法について説明します。|[ユーティリティ コントロール ポイント データ ウェアハウスの構成 &#40;SQL Server ユーティリティ&#41;](configure-your-utility-control-point-data-warehouse-sql-server-utility.md)|  
-|ユーティリティ正常性ポリシーを構成する方法について説明します。|[正常性ポリシーの構成 &#40;SQL Server ユーティリティ&#41;](configure-health-policies-sql-server-utility.md)|  
+|リソース正常性ポリシーの定義を変更する方法について説明します。|[リソース正常性ポリシーの定義の変更 &#40;SQL Server Utility&#41;](modify-a-resource-health-policy-definition-sql-server-utility.md)|  
+|UCP データ ウェアハウスを構成する方法について説明します。|[ユーティリティ コントロール ポイント データ ウェアハウスの構成 &#40;SQL Server Utility&#41;](configure-your-utility-control-point-data-warehouse-sql-server-utility.md)|  
+|ユーティリティ正常性ポリシーを構成する方法について説明します。|[正常性ポリシーの構成 &#40;SQL Server Utility&#41;](configure-health-policies-sql-server-utility.md)|  
 |CPU 使用ポリシーの減弱を調整する方法について説明します。|[CPU 使用率のポリシーにおけるノイズの軽減 &#40;SQL Server ユーティリティ&#41;](reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)|  
 |SQL Server のインスタンスを UCP から削除する方法について説明します。|[SQL Server ユーティリティからの SQL Server のインスタンスの削除](remove-an-instance-of-sql-server-from-the-sql-server-utility.md)|  
 |SQL Server のマネージド インスタンスでユーティリティ コレクション セットのプロキシ アカウントを変更する方法について説明します。|[SQL Server のマネージド インスタンスにおけるユーティリティ コレクション セットのプロキシ アカウントの変更 &#40;SQL Server ユーティリティ&#41;](change-proxy-account-for-utility-collection-on-managed-sql-server.md)|  

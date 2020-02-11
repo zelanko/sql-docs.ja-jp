@@ -1,5 +1,5 @@
 ---
-title: ステートメント パラメーターの使用 |マイクロソフトのドキュメント
+title: ステートメントのパラメーターを使用する |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a16f070623503dcb17788bc75bd5695bc1584d7e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200246"
 ---
 # <a name="using-statement-parameters"></a>ステートメント パラメーターの使用
@@ -32,9 +32,9 @@ ms.locfileid: "63200246"
   
 -   クエリ条件を作成する際のユーザーとの対話を強化する。  
   
--   管理**テキスト**、 **ntext**、および**イメージ**データと[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-特定の C データ型。  
+-   **Text**、 **ntext**、および**Image**データおよび[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]特定の C データ型を管理します。  
   
- たとえば、**パーツ**という名前の列がテーブルに**PartID**、**説明**と**価格**します。 パラメーターを使用しないで部品を追加するには、次のような SQL ステートメントを構築する必要があります。  
+ たとえば、 **Parts**テーブルには、 **PartID**、 **Description**、および**Price**という名前の列があります。 パラメーターを使用しないで部品を追加するには、次のような SQL ステートメントを構築する必要があります。  
   
 ```  
 INSERT INTO Parts (PartID, Description, Price) VALUES (2100, 'Drive shaft', 50.00)  
@@ -55,6 +55,6 @@ INSERT INTO Parts (PartID, Description, Price) VALUES (?, ?, ?)
 -   [パラメーターのバインド](using-statement-parameters-binding-parameters.md)  
   
 ## <a name="see-also"></a>参照  
- [クエリの実行&#40;ODBC&#41;](executing-queries-odbc.md)  
+ [ODBC&#41;&#40;クエリの実行](executing-queries-odbc.md)  
   
   

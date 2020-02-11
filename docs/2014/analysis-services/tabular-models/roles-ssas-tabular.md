@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bd4e54a0099e459d52577de23acc5c4f2989edc5
-ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67284857"
 ---
 # <a name="roles-ssas-tabular"></a>ロール (SSAS テーブル)
@@ -23,7 +23,7 @@ ms.locfileid: "67284857"
 > [!IMPORTANT]  
 >  ユーザーがレポート生成用またはデータ分析用のクライアント アプリケーションを使用して任意の配置済みモデルに接続できるようにするため、それらのユーザーがメンバーである、最低でも読み取り権限はあるロールを 1 つ以上作成する必要があります。  
   
- このトピックで提供する情報は、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で [ロール マネージャー] ダイアログ ボックスを使用してロールを定義するテーブル モデル作成者向けです。 モデル作成時に定義されたロールは、モデル ワークスペース データベースに適用されます。 モデル データベースの配置が完了した後は、モデル データベース管理者は [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用してロール メンバーの管理 (追加、編集、削除) を行うことができます。 配置済みデータベースでのロールのメンバーの管理については、「[テーブル モデル ロール &#40;SSAS テーブル&#41;](tabular-model-roles-ssas-tabular.md)」をご覧ください。  
+ このトピックで提供する情報は、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で [ロール マネージャー] ダイアログ ボックスを使用してロールを定義するテーブル モデル作成者向けです。 モデル作成時に定義されたロールは、モデル ワークスペース データベースに適用されます。 モデル データベースの配置が完了した後は、モデル データベース管理者は [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用してロール メンバーの管理 (追加、編集、削除) を行うことができます。 配置済みデータベースでのロールのメンバーの管理については、「[テーブル モデル ロール &#40;SSAS テーブル&#41;](tabular-model-roles-ssas-tabular.md)」をご覧ください。  
   
  「[テーブル モデリング &#40;Adventure Works チュートリアル&#41;](../tabular-modeling-adventure-works-tutorial.md)」には、この機能の使用方法に関する追加情報とレッスンが含まれます。  
   
@@ -31,26 +31,27 @@ ms.locfileid: "67284857"
   
 -   [ロールについて](#bkmk_underst)  
   
--   [Permissions](#bkmk_permissions)  
+-   [アクセス許可](#bkmk_permissions)  
   
 -   [行フィルター](#bkmk_rowfliters)  
   
 -   [ロールのテスト](#bkmk_testroles)  
   
--   [関連タスク](#bkmk_rt)  
+-   [Related Tasks](#bkmk_rt)  
   
-##  <a name="bkmk_underst"></a> ロールについて  
- ロールは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] で使用されます。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] には、次の 2 種類のロールがあります。  
+##  <a name="bkmk_underst"></a>ロールについて  
+ ロールは、および[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]データの[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]セキュリティを管理するために、で使用されます。 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]には、次の 2 種類のロールがあります。  
   
 -   サーバー ロール。管理者が [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]インスタンスにアクセスできるようにするための固定ロールです。  
   
 -   データベース ロール。管理者以外のユーザーによるモデル データベースとデータへのアクセスを制限するために、モデル作成者と管理者によって定義されるロールです。  
   
- テーブル モデル向けに定義されているロールは、データベース ロールです。 つまり、このロールに含まれるメンバーは Windows ユーザーまたは Windows グループで構成され、これらのユーザーまたはグループは、このロールのメンバーがモデル データベースに対して実行できる操作が定義された特定の権限を持っています。 データベース ロールは、データベース内に個別のオブジェクトとして作成され、そのロールが作成されたデータベースのみに適用されます。 Windows ユーザーまたは Windows グループあるいはその両方は、モデル作成者によりこのロールに組み込まれます。このモデル作成者には、既定ではワークスペース データベース サーバー上での管理者権限があります。これは、配置済みモデルを対象とし、管理者ごとに異なります。  
+ 表形式モデルに定義されたロールはデータベース ロールです。 つまり、このロールに含まれるメンバーは Windows ユーザーまたは Windows グループで構成され、これらのユーザーまたはグループは、このロールのメンバーがモデル データベースに対して実行できる操作が定義された特定の権限を持っています。 データベース ロールは、データベース内に個別のオブジェクトとして作成され、そのロールが作成されたデータベースにのみ適用されます。 Windows ユーザーまたは Windows グループあるいはその両方は、モデル作成者によりこのロールに組み込まれます。このモデル作成者には、既定ではワークスペース データベース サーバー上での管理者権限があります。これは、配置済みモデルを対象とし、管理者ごとに異なります。  
   
  テーブル モデルでのロールは、行フィルターでさらに定義できます。 行フィルターでは、DAX 式を使用して、テーブル内の行とユーザーがクエリを実行できる多くの方向の関連行を定義します。 DAX 式を使用する行フィルターを定義できるのは、読み取りおよび読み取りと処理の権限に対してだけです。 詳しくは、後の「 [行フィルター](#bkmk_rowfliters) 」をご覧ください。  
   
- 既定では、テーブル モデル プロジェクトの新規作成時点では、モデル プロジェクトにロールはありません。 ロールは、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]の [ロール マネージャー] ダイアログ ボックスを使用して定義できます。 モデルを作成しているときにロールを定義すると、それらのロールはモデル ワークスペース データベースに適用されます。 モデルを配置すると、同じロールが配置済みモデルに適用されます。 モデルの配置が完了した後、サーバー ロール ([!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 管理者) のメンバーとデータベース管理者は、そのモデルに関連付けられたロールおよび各ロールに関連付けられたメンバーを [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用して管理できます。  
+ 既定では、新しい表形式モデル プロジェクトを作成するときに、モデル プロジェクトはロールを持ちません。 ロールは、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]の [ロール マネージャー] ダイアログ ボックスを使用して定義できます。 モデルを作成しているときにロールを定義すると、それらのロールはモデル ワークスペース データベースに適用されます。 モデルをデプロイすると、デプロイされたモデルに同じロールが適用されます。 モデルの配置が完了した後、サーバー ロール ([!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 管理者) のメンバーとデータベース管理者は、そのモデルに関連付けられたロールおよび各ロールに関連付けられたメンバーを [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用して管理できます。  
   
 > [!NOTE]  
 >  DirectQuery モード用に構成されたモデルのために定義されたロールでは、行フィルターを使用できません。ただし、各ロールに対して定義された権限は適用されます。  
@@ -62,42 +63,44 @@ ms.locfileid: "67284857"
   
  各ロールに対して、次のうちいずれかの権限を定義できます。  
   
-|アクセス許可|説明|DAX を使用する行フィルター|  
+|アクセス許可|[説明]|DAX を使用する行フィルター|  
 |-----------------|-----------------|----------------------------|  
 |なし|メンバーは、モデルのデータベース スキーマを変更したり、データを照会したりすることはできません。|行フィルターは適用されません。 このロールのユーザーには、データは表示されません。|  
 |Read|メンバーは、(行フィルターに基づいて) データに対してクエリを実行できますが、SSMS のモデル データベースを表示することはできず、モデルのデータベース スキーマを変更することはできません。また、ユーザーはモデルを処理できません。|行フィルターが適用されます。 行フィルター DAX 式で指定されたデータのみがユーザーに表示されます。|  
-|読み取りと処理|メンバーは、(行レベル フィルターに基づいて) データを照会でき、処理コマンドを埋め込んだパッケージまたはスクリプトを実行することで処理操作を実行できますが、データベースを変更することはできません。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でモデル データベースを表示することはできません。|行フィルターが適用されます。 行フィルター DAX 式で指定されたデータのみ照会できます。|  
-|[処理]|メンバーは、処理コマンドを埋め込んだパッケージまたはスクリプトを実行することで、処理操作を実行できます。 モデルのデータベース スキーマを変更することはできません。 データを照会することはできません。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でモデル データベースを照会することはできません。|行フィルターは適用されません。 この役割ではデータを照会できません。|  
+|Read and Process (読み取りとプロセス)|メンバーは、(行レベル フィルターに基づいて) データを照会でき、処理コマンドを埋め込んだパッケージまたはスクリプトを実行することで処理操作を実行できますが、データベースを変更することはできません。 
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でモデル データベースを表示することはできません。|行フィルターが適用されます。 行フィルター DAX 式で指定されたデータのみ照会できます。|  
+|プロセス|メンバーは、処理コマンドを埋め込んだパッケージまたはスクリプトを実行することで、処理操作を実行できます。 モデルのデータベース スキーマを変更することはできません。 データを照会することはできません。 
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でモデル データベースを照会することはできません。|行フィルターは適用されません。 この役割ではデータを照会できません。|  
 |管理者|メンバーは、モデル デザイナー、レポート クライアント、および [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でモデル スキーマを変更したり、すべてのデータを照会したりできます。|行フィルターは適用されません。 この役割ではすべてのデータを照会することはできません。|  
   
-##  <a name="bkmk_rowfliters"></a> 行フィルター  
- 行フィルターは、特定のロールのメンバーが照会できるテーブル内の行を定義します。 行フィルターは、DAX 式を使用してモデル内の各テーブルに対して定義されます。  
+##  <a name="bkmk_rowfliters"></a>行フィルター  
+ 行フィルターは、特定のロールのメンバーがクエリできるテーブル内の行を定義します。 行フィルターは、DAX 数式を使用して、モデル内の各テーブルに対して定義されます。  
   
- 行フィルターを定義できるのは、読み取りおよび読み取りと処理の権限を持つロールに対してだけです。 既定では、ある特定のテーブルに対して行フィルターが定義されていない場合、読み取り権限または読み取りと処理の権限を持つロールのメンバーは、別のテーブルからのクロスフィルター処理が適用されていない限り、テーブル内のすべての行を照会できます。  
+ 行フィルターは、Read (読み取り) アクセス許可および Read and Process (読み取りとプロセス) アクセス許可を持つロールに対してのみ定義できます。 既定では、ある特定のテーブルに対して行フィルターが定義されていない場合、読み取り権限または読み取りと処理の権限を持つロールのメンバーは、別のテーブルからのクロスフィルター処理が適用されていない限り、テーブル内のすべての行を照会できます。  
   
- ある特定のテーブルに対して行フィルターが定義されると、DAX 式 (これは TRUE/FALSE 値に評価される必要がある) によりその特定のロールのメンバーが照会できる行が定義されます。 DAX 式に含まれていない行は照会できません。 たとえば、Sales ロールのメンバーの場合、次の行を持つ Customers テーブル フィルター、式、 *= Customers [Country] ="USA"* 、Sales ロールのメンバーは、米国内の顧客を参照してください。 できます。  
+ ある特定のテーブルに対して行フィルターが定義されると、DAX 式 (これは TRUE/FALSE 値に評価される必要がある) によりその特定のロールのメンバーが照会できる行が定義されます。 DAX 式に含まれていない行は照会できません。 たとえば、Sales ロールのメンバーの場合、 *= customers [Country] = "USA"* という行フィルター式を持つ customers テーブルでは、米国内の顧客のみが表示されています。  
   
- 行フィルターは、指定行と関連行に適用されます。 1 つのテーブルに複数のリレーションシップがある場合、フィルターによりセキュリティがアクティブなリレーションシップに適用されます。 行フィルターには、関連テーブルに対して定義された他の行フィルターと類似する点があります。次に例を示します。  
+ 行フィルターは、指定行と関連行に適用されます。 テーブルに複数のリレーションシップがある場合、フィルターはアクティブなリレーションシップのセキュリティを適用します。 行フィルターには、関連テーブルに対して定義された他の行フィルターと類似する点があります。次に例を示します。  
   
-|テーブル|DAX 式|  
+|テーブル|DAX 数式|  
 |-----------|--------------------|  
-|Region|=Region[Country]="USA"|  
+|リージョン|=Region[Country]="USA"|  
 |ProductCategory|=ProductCategory[Name]="Bicycles"|  
 |トランザクション|=Transactions[Year]=2008|  
   
  Transactions テーブルに対するこれらの権限の実質的な影響は、顧客が米国内に存在し、製品カテゴリが自転車で、しかも年度が 2008 であるデータ行をメンバーが照会できることです。 メンバーは、顧客が米国外にいるか、製品が自転車でないか、または年度が 2008 年でないトランザクションは照会できません。ただし、これらの権限を付与された別のロールのメンバーである場合を除きます。  
   
- *=FALSE()* というフィルターを使用すると、テーブル全体のすべての行に対するアクセスを拒否することができます。  
+ フィルター *=FALSE()* を使用して、テーブル全体のすべての行へのアクセスを拒否できます。  
   
 ### <a name="dynamic-security"></a>動的なセキュリティ  
  動的なセキュリティには、現在ログオンしているユーザーの名前、または接続文字列から返された CustomData プロパティに基づいて、行レベルのセキュリティを定義する方法が用意されています。 動的なセキュリティを実装するために、ユーザーのログイン値 (Windows ユーザー名) および特定の権限を定義できるフィールドを含むテーブルをモデルに含める必要があります。たとえば、ログイン ID (domain\username) と、各従業員の部署の値を含む dimEmployees テーブルなどです。  
   
  動的なセキュリティを実装する場合、DAX 式に次の関数を使用すると、現在ログオンしているユーザーの名前、または接続文字列の CustomData プロパティが返されます。  
   
-|関数|説明|  
+|Function|[説明]|  
 |--------------|-----------------|  
-|[USERNAME 関数&#40;DAX&#41;](/dax/username-function-dax)|現在ログオンしているユーザーの domain\username を返します。|  
-|[CUSTOMDATA 関数&#40;DAX&#41;](/dax/customdata-function-dax)|接続文字列の CustomData プロパティを返します。|  
+|[ユーザー名関数 &#40;DAX&#41;](/dax/username-function-dax)|現在ログオンしているユーザーの domain\username を返します。|  
+|[CUSTOMDATA 関数 &#40;DAX&#41;](/dax/customdata-function-dax)|接続文字列の CustomData プロパティを返します。|  
   
  LOOKUPVALUE 関数を使用すると、USERNAME 関数で返されるユーザー名または CustomData 関数で返される文字列と同じ Windows ユーザー名を含む列の値が返されます。 同じテーブルまたは関連テーブルの中で、LOOKUPVALUE で返された値と一致する値だけが照会されるように制限できます。  
   
@@ -111,8 +114,8 @@ ms.locfileid: "67284857"
   
 |LastName|FirstName|LoginID|DepartmentName|DepartmentId|  
 |--------------|---------------|-------------|--------------------|------------------|  
-|Brown|Kevin|Adventure-works\kevin0|マーケティング|7|  
-|Bradley|David|Adventure-works\david0|マーケティング|7|  
+|Brown|Kevin|Adventure-works\kevin0|Marketing|7|  
+|Bradley|David|Adventure-works\david0|Marketing|7|  
 |Dobney|JoLynn|Adventure-works\JoLynn0|Production|4|  
 |Baretto DeMattos|Paula|Adventure-works\Paula0|Human Resources|2|  
   
@@ -120,28 +123,28 @@ ms.locfileid: "67284857"
   
 |DepartmentId|DepartmentName|  
 |------------------|--------------------|  
-|1|Corporate|  
+|1 で保護されたプロセスとして起動されました|Corporate|  
 |2|Executive General and Administration|  
 |3|Inventory Management|  
-|4|Manufacturing|  
+|4|製造|  
 |5|Quality Assurance|  
 |6|Research and Development|  
 |7|Sales and Marketing|  
   
-##  <a name="bkmk_testroles"></a> ロールのテスト  
+##  <a name="bkmk_testroles"></a>ロールのテスト  
  モデル プロジェクトの作成時に、Excel で分析機能を使用して、定義したロールの有効性をテストできます。 モデル デザイナーで **[モデル]** メニューの **[Excel で分析]** をクリックすると、Excel が開く前に **[資格情報とパースペクティブの選択]** ダイアログ ボックスが表示されます。 このダイアログ ボックスでは、データ ソースとしてワークスペース モデルに接続するために使用する、現在のユーザー名、別のユーザー名、ロール、およびパースペクティブを指定できます。 詳しくは、後の「 [Excel で分析 &#40;SSAS テーブル&#41;](analyze-in-excel-ssas-tabular.md)で [ロール マネージャー] ダイアログ ボックスを使用してロールを定義するテーブル モデル作成者向けです。  
   
 ##  <a name="bkmk_rt"></a> 関連タスク  
   
-|トピック|説明|  
+|トピック|[説明]|  
 |-----------|-----------------|  
-|[ロールの作成および管理 &#40;SSAS テーブル&#41;](create-and-manage-roles-ssas-tabular.md)|このトピックのタスクでは、 **[ロール マネージャー]** ダイアログ ボックスを使用して、ロールを作成し管理する方法について説明されています。|  
+|[SSAS 表形式&#41;&#40;のロールの作成と管理](create-and-manage-roles-ssas-tabular.md)|このトピックのタスクでは、 **[ロール マネージャー]** ダイアログ ボックスを使用して、ロールを作成し管理する方法について説明されています。|  
   
 ## <a name="see-also"></a>参照  
- [パースペクティブ &#40;SSAS テーブル&#41;](perspectives-ssas-tabular.md)   
- [Excel で分析 &#40;SSAS テーブル&#41;](analyze-in-excel-ssas-tabular.md)   
- [USERNAME 関数&#40;DAX&#41;](/dax/username-function-dax)   
- [LOOKUPVALUE 関数&#40;DAX&#41;](/dax/lookupvalue-function-dax)   
- [CUSTOMDATA 関数&#40;DAX&#41;](/dax/customdata-function-dax)  
+ [SSAS テーブル&#41;&#40;パースペクティブ](perspectives-ssas-tabular.md)   
+ [Excel での分析 &#40;SSAS 表形式&#41;](analyze-in-excel-ssas-tabular.md)   
+ [ユーザー名関数 &#40;DAX&#41;](/dax/username-function-dax)   
+ [LOOKUPVALUE 関数 &#40;DAX&#41;](/dax/lookupvalue-function-dax)   
+ [CUSTOMDATA 関数 &#40;DAX&#41;](/dax/customdata-function-dax)  
   
   

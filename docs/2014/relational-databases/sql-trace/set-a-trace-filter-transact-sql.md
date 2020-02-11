@@ -1,5 +1,5 @@
 ---
-title: SetBoolValue メソッド (SqlServiceAdvancedProperty クラス) |Microsoft Docs
+title: Setブール値メソッド (Sqlserviceadvanced Property クラス) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 302ac36150d21dfecca1e6c6edfbcf6fd86c42f0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63226142"
 ---
 # <a name="setboolvalue-method-sqlserviceadvancedproperty-class"></a>SetBoolValue メソッド (SqlServiceAdvancedProperty クラス)
@@ -37,22 +37,23 @@ object
 ```  
   
 ## <a name="parts"></a>要素  
- *object*  
+ *素材*  
  詳細プロパティを表す [SqlServiceAdvancedProperty クラス](../wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md) オブジェクト。  
   
 #### <a name="parameters"></a>パラメーター  
   
-|パラメーター|説明|  
+|パラメーター|[説明]|  
 |---------------|-----------------|  
-|*BoolValue*|詳細プロパティの値を指定するブール値|  
+|*ブール値*|詳細プロパティの値を指定するブール値|  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
- `uint32` 値。サービスが正常に変更された場合は 0、要求がサポートされていない場合は 1 になります。それ以外の数値はエラーを示します。  
+ 
+  `uint32` 値。サービスが正常に変更された場合は 0、要求がサポートされていない場合は 1 になります。それ以外の数値はエラーを示します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  プロパティをブール値に設定するには、プロパティ値の型がブール型である必要があります。  
   
-## <a name="see-also"></a>関連項目  
- [開始とサービスの停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+## <a name="see-also"></a>参照  
+ [サービスの開始および停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

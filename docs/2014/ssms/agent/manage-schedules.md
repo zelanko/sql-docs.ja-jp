@@ -13,17 +13,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c2371109c8fa28c579cd90735a51a4ad3a790385
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63255072"
 ---
 # <a name="manage-schedules"></a>[スケジュールの管理]
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのジョブ スケジュールのプロパティを表示および変更できます。  
+  エージェントのジョブスケジュールの[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]プロパティを表示および変更できます。  
   
-## <a name="options"></a>および  
- **[利用可能なスケジュール]**  
+## <a name="options"></a>オプション  
+ **利用可能なスケジュール**  
  このユーザーが利用可能なスケジュールの一覧を表示します。 ジョブの所有者とスケジュールの所有者は同じである必要があります。 したがって、この一覧には、このジョブの所有者によって所有されているスケジュールだけが表示されます。  
   
  **名前**  
@@ -32,22 +32,22 @@ ms.locfileid: "63255072"
  **有効**  
  スケジュールを有効にするには、このオプションを選択します。  
   
- **[説明]**  
+ **説明**  
  ジョブを実行するスケジュールの条件を説明します。  
   
- **[スケジュール済みのジョブ]**  
+ **スケジュールされるジョブ**  
  スケジュールにアタッチされているジョブの番号を表示します。 番号をクリックすると、ジョブのプロパティが表示されます。  
   
- **新規**  
+ **[新規作成]**  
  新しいスケジュールを作成するには、このボタンをクリックします。  
   
- **削除**  
+ **デリート**  
  選択されているスケジュールを削除するには、このボタンをクリックします。  
   
- **プロパティ**  
+ **Properties**  
  選択されているスケジュールのプロパティを変更するには、このボタンをクリックします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [スケジュールの作成とジョブへのアタッチ](create-and-attach-schedules-to-jobs.md)  
   
   

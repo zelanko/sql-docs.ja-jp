@@ -1,5 +1,5 @@
 ---
-title: モデル メソッド |Microsoft Docs
+title: モデルメソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6a1246d422b8ed88b0e9411dc5df5b398d0bfef6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63283440"
 ---
 # <a name="model-methods"></a>モデルのメソッド
   これらのメソッドを使用して、モデルを管理できます。  
   
-|方法|操作|  
+|方法|アクション|  
 |------------|------------|  
 |<xref:ReportService2010.ReportingService2010.GenerateModel%2A>|共有データ ソース上に既定のモデルを生成します。|  
 |<xref:ReportService2010.ReportingService2010.GetModelItemPermissions%2A>|モデル アイテムに関連付けられたユーザー アクセス許可を取得します。|  

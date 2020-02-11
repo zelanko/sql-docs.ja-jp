@@ -19,14 +19,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: e1dae21a1a02ea92e6f75a2471a1180e2634b2d1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63242875"
 ---
 # <a name="clientsettings-class"></a>ClientSettings クラス
-  [ClientSettings クラス](clientsettings-class.md)を表す、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]クライアントで設定します。  
+  [Clientsettings クラス](clientsettings-class.md)は、クライアント[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の設定を表します。  
   
  このクラスにより、プログラムによるクライアントの管理が可能になります。  
   

@@ -13,13 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 991185cbf8545fab21270d77ab90267c09380566
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083438"
 ---
 # <a name="mining-structure-tasks-and-how-tos"></a>マイニング構造のタスクと操作方法
+  
   **のデータ マイニング デザイナーの** [マイニング構造] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] タブには、マイニング構造の作成、編集、および処理に使用できるツールが含まれています。  
   
 ## <a name="in-this-section"></a>このセクションの内容  

@@ -14,22 +14,22 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cd5c9a9cb2e40c7b0a235ff848c1f9a0025773a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63184302"
 ---
 # <a name="create-outer-joins-visual-database-tools"></a>外部結合の作成 (Visual Database Tools)
   [クエリおよびビュー デザイナー](visual-database-tools.md) の既定では、テーブル間に内部結合が作成されます。 つまり、内部結合では、他方のテーブルの行と一致しない行は除外されます。 これに対し、外部結合からは、FROM 句で指定された少なくとも 1 つのテーブルまたはビューにあり、任意の WHERE 検索条件または HAVING 検索条件を満たしているすべての行が返されます。 結合テーブルに一致しないデータ行を結果セットに含める場合は、外部結合を作成します。  
   
- 外部結合を作成するときは、SQL ステートメントでのテーブルの表示順序 (SQL ペインに反映される) が重要です。 最初に追加したテーブルは "左" テーブルに、次に追加したテーブルが "右" テーブルになります。 ([ダイアグラム ペイン](diagram-pane-visual-database-tools.md)に実際に表示されるテーブルの順序は重要ではありません)。左外部結合または右外部結合とは、クエリにテーブルを追加した順序、および [SQL ペイン](sql-pane-visual-database-tools.md)の SQL ステートメントでテーブルが表示される順序を示します。  
+ 外部結合を作成するときは、SQL ステートメントでのテーブルの表示順序 (SQL ペインに反映される) が重要です。 最初に追加したテーブルは "左" テーブルに、次に追加したテーブルが "右" テーブルになります。 ( [ダイアグラム ペイン](diagram-pane-visual-database-tools.md) に実際に表示されるテーブルの順序は重要ではありません)。左外部結合または右外部結合とは、クエリにテーブルを追加した順序、および [SQL ペイン](sql-pane-visual-database-tools.md)の SQL ステートメントでテーブルが表示される順序を示します。  
   
 ### <a name="to-create-an-outer-join"></a>外部結合を作成するには  
   
 1.  結合を自動または手動で作成します。 詳細については、「[テーブルの自動結合 (Visual Database Tools)](join-tables-automatically-visual-database-tools.md)」または「[手動でのテーブルの結合 (Visual Database Tools)](join-tables-manually-visual-database-tools.md)」を参照してください。  
   
-2.  ダイアグラム ペインからに結合線を選択、**クエリ デザイナー** ] メニューの [選択**からのすべての行を選択\<tablename >** テーブルを含んでいるコマンドの追加を選択します。行が含まれます。  
+2.  ダイアグラムペインで結合線を選択し、[**クエリデザイナー** ] メニューの [ **Tablename>から\<すべての行を選択**] を選択し、追加の行を含めるテーブルを含むコマンドを選択します。  
   
     -   左外部結合を作成するには、最初のテーブルを選択します。  
   
@@ -58,7 +58,7 @@ WHERE (jobs.job_id IS NULL)
 ```  
   
 ## <a name="see-also"></a>参照  
- [結合を使用したクエリ&#40;Visual Database Tools&#41;](query-with-joins-visual-database-tools.md)   
+ [Visual Database Tools &#40;Join を使用したクエリ&#41;](query-with-joins-visual-database-tools.md)   
  [[結合] ダイアログ ボックス (Visual Database Tools)](join-dialog-box-visual-database-tools.md)  
   
   

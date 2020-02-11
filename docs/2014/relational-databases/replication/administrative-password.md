@@ -13,17 +13,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 628e9cb70e17271f34ce9b2c7573e918bd9009bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63186954"
 ---
 # <a name="administrative-password"></a>管理パスワード
   このウィザードの **[ディストリビューター]** ページで、このパブリッシャーに対してリモート ディストリビューターを選択した場合、レプリケーションがパブリッシャーとディストリビューターの間に作成した接続に対するパスワードを、 **distributor_admin** ログインを使用して入力する必要があります。 入力するパスワードは、ディストリビューションの構成ウィザードの **[ディストリビューター パスワード]** ページまたは **[ディストリビューターのプロパティ]** ダイアログ ボックスの **[パブリッシャー]** ページで指定されたパスワードと一致する必要があります。  
   
-## <a name="options"></a>および  
- **Password**  
+## <a name="options"></a>オプション  
+ **パスワード**  
  パブリッシャーとリモート ディストリビューターの間の接続のパスワードを入力します。  
   
  **[パスワードの確認入力]**  
@@ -31,7 +31,7 @@ ms.locfileid: "63186954"
   
 ## <a name="see-also"></a>参照  
  [データとデータベース オブジェクトのパブリッシュ](publish/publish-data-and-database-objects.md)   
- [パブリッシングおよびディストリビューションの構成](configure-publishing-and-distribution.md)   
+ [パブリッシングとディストリビューションの構成](configure-publishing-and-distribution.md)   
  [Create a Publication](publish/create-a-publication.md)   
  [View and Modify Distributor and Publisher Properties (ディストリビューターとパブリッシャーのプロパティの表示および変更)](view-and-modify-distributor-and-publisher-properties.md)   
  [ディストリビューターとパブリッシャーのプロパティの表示および変更](view-and-modify-distributor-and-publisher-properties.md)  

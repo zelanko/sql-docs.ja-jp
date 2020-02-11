@@ -1,5 +1,5 @@
 ---
-title: レッスン 1:SQL Server Management Studio での基本操作 |Microsoft Docs
+title: 'レッスン 1: SQL Server Management Studio での基本操作 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 09cccd43b4d20b5be2306c0922ff3bf40ff1b033
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63151525"
 ---
-# <a name="lesson-1-basic-navigation-in-sql-server-management-studio"></a>レッスン 1:SQL Server Management Studio での基本操作
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は強力で柔軟なツールです。 しかし、Microsoft Visual Studio を初めて使用するユーザーは、必要な機能をすぐに見つけられない可能性があります。 このレッスンでは、設計を容易に行えるようにするため、各ウィンドウがどのように機能し、どのように連携しているかについて説明します。 ここでは、不要なウィンドウを非表示にする方法、必要な情報をウィンドウにすばやく表示する方法、頻繁に行う作業に合わせて画面を構成する方法を学習します。  
+# <a name="lesson-1-basic-navigation-in-sql-server-management-studio"></a>レッスン 1 : SQL Server Management Studio での基本操作
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]は強力で柔軟なツールです。 しかし、Microsoft Visual Studio を初めて使用するユーザーは、必要な機能をすぐに見つけられない可能性があります。 このレッスンでは、設計を容易に行えるようにするため、各ウィンドウがどのように機能し、どのように連携しているかについて説明します。 ここでは、不要なウィンドウを非表示にする方法、必要な情報をウィンドウにすばやく表示する方法、頻繁に行う作業に合わせて画面を構成する方法を学習します。  
   
  このレッスンの内容は次のとおりです。  
   
@@ -30,9 +30,9 @@ ms.locfileid: "63151525"
   
 -   ドキュメント ウィンドウの表示  
   
--   オブジェクト エクスプ ローラーの詳細ページの表示  
+-   [オブジェクトエクスプローラーの詳細] ページを表示する  
   
--   キーボード ショートカット スキームの選択  
+-   キーボードショートカットスキームの選択  
   
 -   起動オプションの設定  
   

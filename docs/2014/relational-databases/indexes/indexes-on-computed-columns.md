@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c5aa2bd118d99afea6a1ee6ea8f41c646146c32f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63162454"
 ---
 # <a name="indexes-on-computed-columns"></a>計算列のインデックス
@@ -36,11 +36,11 @@ ms.locfileid: "63162454"
   
 -   SET オプションの要件  
   
- **Ownership Requirements**  
+ **所有権の要件**  
   
  計算列のすべての関数参照の所有者がテーブルの所有者と同じである必要があります。  
   
- **Determinism Requirements**  
+ **決定性の要件**  
   
 > [!IMPORTANT]  
 >  指定された一連の入力に対して式から必ず同じ結果が返される場合、その式は決定的です。 **COLUMNPROPERTY** 関数の [IsDeterministic](/sql/t-sql/functions/columnproperty-transact-sql) プロパティは、 *computed_column_expression* が決定的であるかどうかを示します。  
@@ -58,17 +58,19 @@ ms.locfileid: "63162454"
  共通言語ランタイム (CLR) 式を含むすべての計算列は決定的であり、インデックスを作成する前に PERSISTED に設定されている必要があります。 CLR ユーザー定義型の式を、計算列の定義に使用できます。 計算列の型が CLR ユーザー定義型の場合、その型が比較可能である限り、計算列にインデックスを作成できます。 詳細については、「 [CLR ユーザー定義型](../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)」を参照してください。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインデックス付き計算列で日付データ型の文字列リテラルを参照するときは、決定的な日付形式スタイルを使用して、そのリテラルを目的の日付型に明示的に変換することをお勧めします。 決定的な日付形式の一覧については、「 [CAST および CONVERT](/sql/t-sql/functions/cast-and-convert-transact-sql)」を参照してください。 日付データ型への文字列の暗黙的な変換が必要な式は、データベース互換性レベルが 80 以下に設定されている場合を除いて、非決定的であると見なされます。 これは、サーバー セッションの [LANGUAGE](/sql/t-sql/statements/set-language-transact-sql) および [DATEFORMAT](/sql/t-sql/statements/set-dateformat-transact-sql) の設定によって結果が異なるためです。 たとえば、式 `CONVERT (datetime, '30 listopad 1996', 113)` では、言語が異なると文字列 '`30 listopad 1996`' が異なる月を意味するので、結果が LANGUAGE の設定によって異なります。 同様に、式 `DATEADD(mm,3,'2000-12-01')`では、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] により、文字列 `'2000-12-01'` が DATEFORMAT の設定に基づいて解釈されます。  
+>  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインデックス付き計算列で日付データ型の文字列リテラルを参照するときは、決定的な日付形式スタイルを使用して、そのリテラルを目的の日付型に明示的に変換することをお勧めします。 決定的な日付形式の一覧については、「 [CAST および CONVERT](/sql/t-sql/functions/cast-and-convert-transact-sql)」を参照してください。 日付データ型への文字列の暗黙的な変換が必要な式は、データベース互換性レベルが 80 以下に設定されている場合を除いて、非決定的であると見なされます。 これは、サーバー セッションの [LANGUAGE](/sql/t-sql/statements/set-language-transact-sql) および [DATEFORMAT](/sql/t-sql/statements/set-dateformat-transact-sql) の設定によって結果が異なるためです。 たとえば、式 `CONVERT (datetime, '30 listopad 1996', 113)` では、言語が異なると文字列 '`30 listopad 1996`' が異なる月を意味するので、結果が LANGUAGE の設定によって異なります。 同様に、式 `DATEADD(mm,3,'2000-12-01')`では、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] により、文字列 `'2000-12-01'` が DATEFORMAT の設定に基づいて解釈されます。  
 >   
 >  照合順序間で行われる Unicode 以外の文字データの暗黙的な変換も、互換性レベルが 80 以下の場合を除いて、非決定的であると見なされます。  
 >   
 >  データベース互換性レベルの設定が 90 の場合は、それらの式を含む計算列にインデックスを作成することはできません。 ただし、アップグレードされたデータベースから、このような式を含む既存の計算列をメンテナンスできます。 文字列から日付への暗黙的な変換を行うインデックス付き計算列を使用する場合は、インデックスが破損しないように、データベースやアプリケーション内で LANGUAGE と DATEFORMAT の設定の一貫性を確保してください。  
   
- **Precision Requirements**  
+ **精度の要件**  
   
  *computed_column_expression* は正確である必要があります。 *computed_column_expression* は、次の 1 つ以上の条件に該当する場合は正確です。  
   
--   `float` データ型または `real` データ型の式ではない。  
+-   
+  `float` データ型または `real` データ型の式ではない。  
   
 -   式の定義に `float` データ型や `real` データ型を使用していない。 たとえば、次のステートメントでは、列 `y` は `int` 型で決定的ですが、正確ではありません。  
   
@@ -82,19 +84,23 @@ ms.locfileid: "63162454"
     ```  
   
 > [!NOTE]  
->  `float` 型や `real` 型の式はすべて不正確であると見なされ、インデックスのキーにできません。つまり、`float` 型または `real` 型の式はインデックス付きビューで使用できますが、キーとしては使用できません。 このことは、計算列にも当てはまります。 `float` 型や `real` 型の任意の式が含まれている関数、式、またはユーザー定義関数はすべて不正確であると見なされます。 これには、論理式 (比較) も含まれます。  
+>  
+  `float` 型や `real` 型の式はすべて不正確であると見なされ、インデックスのキーにできません。つまり、`float` 型または `real` 型の式はインデックス付きビューで使用できますが、キーとしては使用できません。 このことは、計算列にも当てはまります。 
+  `float` 型や `real` 型の任意の式が含まれている関数、式、またはユーザー定義関数はすべて不正確であると見なされます。 これには、論理式 (比較) も含まれます。  
   
  COLUMNPROPERTY 関数の **IsPrecise** プロパティは、 *computed_column_expression* が正確であるかどうかを示します。  
   
- **Data Type Requirements**  
+ **データ型の要件**  
   
--   *Computed_column_expression*として評価できません、計算列の定義、 `text`、 `ntext`、または`image`データ型。  
+-   計算列に定義された*computed_column_expression*は`text`、 `ntext`、、または`image`データ型に評価できません。  
   
--   `image`、`ntext`、`text`、`varchar(max)`、`nvarchar(max)`、`varbinary(max)`、および `xml` データ型から派生した計算列には、計算列のデータ型をインデックス キー列として使用できる限り、インデックスを作成できます。  
+-   
+  `image`、`ntext`、`text`、`varchar(max)`、`nvarchar(max)`、`varbinary(max)`、および `xml` データ型から派生した計算列には、計算列のデータ型をインデックス キー列として使用できる限り、インデックスを作成できます。  
   
--   `image`、`ntext`、および `text` データ型から派生した計算列は、計算列のデータ型を非キー インデックス列として使用できる限り、非クラスター化インデックスの非キー列 (付加列) にすることができます。  
+-   
+  `image`、`ntext`、および `text` データ型から派生した計算列は、計算列のデータ型を非キー インデックス列として使用できる限り、非クラスター化インデックスの非キー列 (付加列) にすることができます。  
   
- **SET Option Requirements**  
+ **SET オプションの要件**  
   
 -   計算列を定義する CREATE TABLE ステートメントまたは ALTER TABLE ステートメントの実行時に、ANSI_NULLS 接続レベルのオプションが ON に設定されている必要があります。 [OBJECTPROPERTY](/sql/t-sql/functions/objectpropertyex-transact-sql) 関数の **IsAnsiNullsOn** プロパティは、このオプションが ON に設定されているかどうかを示します。  
   
@@ -117,7 +123,7 @@ ms.locfileid: "63162454"
      ANSI_WARNINGS を ON に設定すると、データベース互換性レベルが 90 以上に設定されている場合、暗黙的に ARITHABORT が ON に設定されます。  
   
 ##  <a name="BKMK_persisted"></a> 保存される計算列でのインデックスの作成  
- 決定的でも不正確である式を使用して定義されている計算列が CREATE TABLE ステートメントまたは ALTER TABLE ステートメントで PERSISTED に設定されている場合、計算列にインデックスを作成できます。 つまり、[!INCLUDE[ssDE](../../../includes/ssde-md.md)]列のインデックスを作成し、インデックスがクエリで参照されている場合は、これらの永続化された値を使用します。 このオプションでは、計算列にインデックスを作成することができる場合[!INCLUDE[ssDE](../../../includes/dnprdnshort-md.md)]、決定的かつ正確には。  
+ 決定的でも不正確である式を使用して定義されている計算列が CREATE TABLE ステートメントまたは ALTER TABLE ステートメントで PERSISTED に設定されている場合、計算列にインデックスを作成できます。 つまり、は、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]列にインデックスを作成するとき、およびインデックスがクエリで参照されるときに、これらの永続化された値を使用します。 このオプションを使用すると、が決定的かつ正確である[!INCLUDE[ssDE](../../../includes/dnprdnshort-md.md)]場合に、計算列にインデックスを作成できます。  
   
 ## <a name="related-content"></a>関連コンテンツ  
  [COLUMNPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/columnproperty-transact-sql)  

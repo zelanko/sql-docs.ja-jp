@@ -19,14 +19,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: e0d2245dbba51d69d6dd31fd91044d3efd5b07b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63192027"
 ---
 # <a name="numberofprops-property-clientnetworkprotocol-class"></a>NumberOfProps プロパティ (ClientNetworkProtocol クラス)
-  取得、クライアントのプロパティの数のネットワークによって指定されたプロトコル、 [SetOrderValue メソッド (ClientNetworkProtocol クラス)](clientnetworkprotocol-class.md)します。  
+  [Setordervalue メソッド (ClientNetworkProtocol クラス)](clientnetworkprotocol-class.md)によって指定されたクライアントネットワークプロトコルのプロパティの数を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,13 +37,14 @@ object
 ```  
   
 ## <a name="parts"></a>要素  
- *object*  
- [クライアントによって使用されるネットワーク プロトコルを表す](clientnetworkprotocol-class.md) ClientNetworkProtocol クラス [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] オブジェクト。  
+ *素材*  
+ 
+  [クライアントによって使用されるネットワーク プロトコルを表す](clientnetworkprotocol-class.md) ClientNetworkProtocol クラス [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] オブジェクト。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  クライアント ネットワーク プロトコルのプロパティの数を指定する uint32 値。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
   
 ## <a name="see-also"></a>参照  
  [クライアント プロトコルの構成](https://technet.microsoft.com/library/ms181035.aspx)  

@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 249b338148dc762e091d0be47bc081fe87c72fcd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63162395"
 ---
 # <a name="configure-the-general-properties-of-policy-based-management"></a>ポリシー ベースの管理の全般プロパティの構成
@@ -28,9 +28,9 @@ ms.locfileid: "63162395"
   
 -   **作業を開始する準備:**  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
--   **ポリシー ベースの管理を構成するために使用するもの:**  
+-   **ポリシーベースの管理を構成するために使用するもの:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -47,13 +47,16 @@ ms.locfileid: "63162395"
   
 #### <a name="to-configure-policy-based-management"></a>ポリシー ベースの管理を構成するには  
   
-1.  **オブジェクト エクスプローラー**で、プラス記号をクリックして、ポリシー ベースの管理のプロパティを構成するサーバーを展開します。  
+1.  
+  **オブジェクト エクスプローラー**で、プラス記号をクリックして、ポリシー ベースの管理のプロパティを構成するサーバーを展開します。  
   
 2.  プラス記号をクリックして **[管理]** フォルダーを展開します。  
   
-3.  **[ポリシー管理]** を右クリックし、 **[プロパティ]** をクリックします。  
+3.  
+  **[ポリシー管理]** を右クリックし、 **[プロパティ]** をクリックします。  
   
-     **[ポリシー管理のプロパティ]** ダイアログ ボックスでは、次のオプションを使用できます。  
+     
+  **[ポリシー管理のプロパティ]** ダイアログ ボックスでは、次のオプションを使用できます。  
   
      **有効**  
      ポリシー ベースの管理を有効にするかどうかを指定します。  

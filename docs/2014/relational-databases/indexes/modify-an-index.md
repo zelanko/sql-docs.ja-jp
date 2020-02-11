@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1da4462f3ba23d263cd30d222f7b9026285b1159
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63162370"
 ---
 # <a name="modify-an-index"></a>インデックスの変更
@@ -73,13 +73,13 @@ ms.locfileid: "63162370"
   
 1.  インデックス列の位置を追加、削除、または変更するには、インデックスを削除してから再作成する必要があります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)   
- [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)   
- [INDEXPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/indexproperty-transact-sql)   
- [sys.indexes &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql)   
- [sys.index_columns &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-index-columns-transact-sql)   
- [インデックス オプションの設定](set-index-options.md)   
+ [ALTER INDEX &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-index-transact-sql)   
+ [INDEXPROPERTY &#40;Transact-sql&#41;](/sql/t-sql/functions/indexproperty-transact-sql)   
+ [SQL&#41;&#40;Transact-sql のインデックス](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql)   
+ [index_columns &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-index-columns-transact-sql)   
+ [インデックスオプションの設定](set-index-options.md)   
  [インデックスの名前変更](indexes.md)  
   
   

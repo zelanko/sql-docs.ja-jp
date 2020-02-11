@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 781963ddd2011c9e16cf67fdcd878039527546cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63294458"
 ---
 # <a name="query-definitions-differ-dialog-box-visual-database-tools"></a>[クエリの定義が異なります] ダイアログ ボックス (Visual Database Tools)
@@ -40,7 +40,7 @@ ms.locfileid: "63294458"
 > [!NOTE]  
 >  ダイアグラム ペインおよび抽出条件ペインが非表示になっている場合、 **[クエリの定義が異なります]** ダイアログ ボックスは表示されません。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **[無視] ボタン**  
  SQL ステートメントを受け入れてさらに編集するか実行する場合は、このボタンをクリックします。 ステートメントを受け入れると、ダイアグラム ペインと抽出条件ペインが淡色表示になり、SQL ペインのステートメントを反映しないことが示されます。  
   

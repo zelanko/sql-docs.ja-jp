@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 478c7e49fcdef335a65e0574eeaa80843f5b1c29
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63205068"
 ---
 # <a name="for-xml-support-for-various-sql-server-data-types"></a>各種 SQL Server データ型の FOR XML サポート
@@ -25,9 +25,9 @@ ms.locfileid: "63205068"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|説明|  
+|トピック|[説明]|  
 |-----------|-----------------|  
-|[xml データ型に対する FOR XML サポート](for-xml-support-for-the-xml-data-type.md)|FOR XML が **xml** データ型でどのように機能するのかを説明します。|  
+|[XML データ型に対する FOR XML サポート](for-xml-support-for-the-xml-data-type.md)|FOR XML が **xml** データ型でどのように機能するのかを説明します。|  
 |[文字列データ型の FOR XML のサポート](for-xml-support-for-string-data-types.md)|FOR XML が文字列データ型 ( **varchar** や **nvarchar**など) でどのように機能するのかを説明します。|  
 |[ユーザー定義データ型 &#40;UDT&#41; の FOR XML サポート](for-xml-support-for-the-user-defined-data-types-udt.md)|FOR XML がユーザー定義データ型でどのように機能するのかを説明します。|  
 |[timestamp データ型に対する FOR XML サポート](for-xml-support-for-the-timestamp-data-type.md)|FOR XML が **timestamp** データ型でどのように機能するのかを説明します。|  

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 15a48d24af5b8781f1ffe8af9a8cca434699f76a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106716"
 ---
 # <a name="add-and-modify-a-line-report-builder-and-ssrs"></a>罫線の追加および変更 (レポート ビルダーおよび SSRS)
@@ -34,7 +34,7 @@ ms.locfileid: "66106716"
 3.  罫線のプロパティを変更するには、デザイン画面上で罫線を選択し、 **[ホーム]** タブの **[罫線]** セクションでその罫線のプロパティを編集します。  
   
     > [!NOTE]  
-    >  線のスタイルを設定した場合**二重**と線の幅が 1 1/2 ポイントより狭いします線が表示されるか double レポート ビルダー、レポート デザイナーまたはレポート マネージャーでレポートを実行するとします。 レポートを他の形式 (Microsoft Word、Acrobat PDF など) にエクスポートすると、二重に表示されます。  
+    >  線のスタイルを [**二重**線] に設定し、線の幅が 1 1/2 pt または狭い場合は、レポートをレポートビルダー、レポートデザイナー、またはレポートマネージャーで実行すると、線が二重に表示されないことがあります。 レポートを他の形式 (Microsoft Word、Acrobat PDF など) にエクスポートすると、二重に表示されます。  
   
 ## <a name="see-also"></a>参照  
  [四角形と線 &#40;レポート ビルダーおよび SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)  

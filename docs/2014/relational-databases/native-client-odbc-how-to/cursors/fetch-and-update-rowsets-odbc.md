@@ -1,5 +1,5 @@
 ---
-title: フェッチおよび更新行セット (ODBC) |マイクロソフトのドキュメント
+title: 行セットのフェッチおよび更新 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,37 +13,38 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f04184e968b60a58c4adfa067d516b58b0a43292
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200441"
 ---
 # <a name="fetch-and-update-rowsets-odbc"></a>行セットのフェッチおよび更新 (ODBC)
     
 ### <a name="to-fetch-and-update-rowsets"></a>行セットをフェッチおよび更新するには  
   
-1.  必要に応じて、呼び出す[SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md) sql_row_array_size (R)、行セット内の行の数の変更を使用して使用します。  
+1.  必要に応じて、SQL_ROW_ARRAY_SIZE を指定して[SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md)を呼び出し、行セット内の行数 (R) を変更します。  
   
-2.  呼び出す[SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401)または[SQLFetchScroll](../../native-client-odbc-api/sqlfetchscroll.md)行セットを取得します。  
+2.  [Sqlfetch](https://go.microsoft.com/fwlink/?LinkId=58401)または[sqlfetchscroll](../../native-client-odbc-api/sqlfetchscroll.md)を呼び出して、行セットを取得します。  
   
 3.  バインドされた列が使用されている場合は、行セットのバインドされた列のバッファーでデータ値とデータの長さが使用できるようになります。  
   
-     行の呼び出しごとに、バインドされていない列が使用かどうか[SQLSetPos](https://go.microsoft.com/fwlink/?LinkId=58407) SQL_POSITION、カーソルの位置を設定するとして、その各非バインド列。  
+     バインドされていない列を使用する場合は、行ごとに[SQLSetPos](https://go.microsoft.com/fwlink/?LinkId=58407)を呼び出し、カーソル位置を設定するために SQL_POSITION を使用します。次に、バインド解除した列ごとに、次のようにします。  
   
-    -   呼び出す[SQLGetData](../../native-client-odbc-api/sqlgetdata.md)データを取得する 1 つまたは複数回は、最後の行セットの列バインドされた列をバインド解除されました。 呼び出す[SQLGetData](../../native-client-odbc-api/sqlgetdata.md)の列番号の昇順にする必要があります。  
+    -   [SQLGetData](../../native-client-odbc-api/sqlgetdata.md)を1回以上呼び出して、行セットの最後にバインドされた列の後にバインドされていない列のデータを取得します。 [SQLGetData](../../native-client-odbc-api/sqlgetdata.md)の呼び出しは、列番号の昇順にする必要があります。  
   
-    -   [SQLGetData](../../native-client-odbc-api/sqlgetdata.md) を複数回呼び出して、text または image 列からデータを取得します。  
+    -   
+  [SQLGetData](../../native-client-odbc-api/sqlgetdata.md) を複数回呼び出して、text または image 列からデータを取得します。  
   
 4.  実行時データ text または image 列をセットアップします。  
   
-5.  呼び出す[SQLSetPos](https://go.microsoft.com/fwlink/?LinkId=58407)または[SQLBulkOperations](https://go.microsoft.com/fwlink/?LinkId=58398)カーソルの位置を設定するには、更新、更新、削除、または行セット内の行を追加します。  
+5.  [SQLSetPos](https://go.microsoft.com/fwlink/?LinkId=58407)または[sqlbulkoperations](https://go.microsoft.com/fwlink/?LinkId=58398)を呼び出して、行セット内のカーソル位置の設定、更新、更新、削除、または行の追加を行います。  
   
      実行時データ text または image 列が更新または追加操作に使用されている場合は、それらの列を処理します。  
   
-6.  必要に応じて、カーソル名を指定する、位置指定更新または削除ステートメントを実行 (から使用可能な[SQLGetCursorName](../../native-client-odbc-api/sqlgetcursorname.md)) と同じ接続上で別のステートメント ハンドルを使用します。  
+6.  必要に応じて、位置指定の UPDATE または DELETE ステートメントを実行して、カーソル名 ( [Sqlgetcursor name](../../native-client-odbc-api/sqlgetcursorname.md)から使用可能) を指定し、同じ接続で別のステートメントハンドルを使用します。  
   
 ## <a name="see-also"></a>参照  
- [カーソルの操作方法に関するトピックを使用して&#40;ODBC&#41;](using-cursors-how-to-topics-odbc.md)  
+ [カーソルの使用方法に関するトピック &#40;ODBC&#41;](using-cursors-how-to-topics-odbc.md)  
   
   
