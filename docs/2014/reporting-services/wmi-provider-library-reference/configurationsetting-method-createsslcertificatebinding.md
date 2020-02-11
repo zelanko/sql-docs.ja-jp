@@ -13,13 +13,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f16b86b1343d83c44819427b8ba6c43726798e93
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098539"
 ---
-# <a name="createsslcertificatebinding-method-wmi-msreportserverconfigurationsetting"></a>CreateSSLCertificateBinding メソッド (WMI MSReportServer_ConfigurationSetting)
+# <a name="createsslcertificatebinding-method-wmi-msreportserver_configurationsetting"></a>CreateSSLCertificateBinding メソッド (WMI MSReportServer_ConfigurationSetting)
   SSL 証明書のバインドを作成します。  
   
 ## <a name="syntax"></a>構文  
@@ -38,7 +38,7 @@ public void CreateSSLCertificateBinding(string application,
 ```  
   
 ## <a name="parameters"></a>パラメーター  
- *アプリケーション*  
+ *Application*  
  証明書のバインドを作成する必要があるアプリケーションの名前。  
   
  *CertificateHash*  
@@ -47,7 +47,7 @@ public void CreateSSLCertificateBinding(string application,
  *IPAddress*  
  アプリケーションの IP アドレス。  
   
- *ポート*  
+ *Port*  
  バインドに関連付けられた SSL ポート。  
   
  *Lcid*  
@@ -60,9 +60,9 @@ public void CreateSSLCertificateBinding(string application,
  [out] 呼び出しの成功または失敗を示す値。  
   
 ## <a name="return-value"></a>戻り値  
- メソッド呼び出しの成功または失敗を示す *HRESULT* を返します。 値が 0 の場合はメソッド呼び出しが正常に完了したことを示します。エラー コードの場合は呼び出しが失敗したことを示します。  
+ メソッド呼び出しの成功または失敗を示す*HRESULT*を返します。 値が 0 の場合はメソッド呼び出しが正常に完了したことを示します。エラー コードの場合は呼び出しが失敗したことを示します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  このメソッドは、アプリケーションの rsreportserver.config にバインドを追加します。 バインドが HTTP.SYS に存在しない場合は作成されます。  
   
  バインドを作成する前に、メソッドの呼び出しによって、指定されたアプリケーションの URL 予約が調査され、SSL 証明書のバインドが有効かどうかが確認されます。  
@@ -80,7 +80,7 @@ public void CreateSSLCertificateBinding(string application,
 5.  ホスト名を指定する URL 予約は存在するが、ホスト名が証明書のホスト名と一致しない。  
   
 ## <a name="requirements"></a>必要条件  
- **名前空間:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **名前空間:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>参照  
  [MSReportServer_ConfigurationSetting メンバー](msreportserver-configurationsetting-members.md)  

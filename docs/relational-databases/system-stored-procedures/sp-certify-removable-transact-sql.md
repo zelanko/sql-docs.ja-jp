@@ -1,5 +1,5 @@
 ---
-title: sp_certify_removable (TRANSACT-SQL) |Microsoft Docs
+title: sp_certify_removable (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -18,10 +18,10 @@ ms.assetid: ca12767f-0ae5-4652-b523-c23473f100a1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c39665f54a915282a6c59fe7d57b24d0cde0a5e7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68045930"
 ---
 # <a name="sp_certify_removable-transact-sql"></a>sp_certify_removable (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "68045930"
 
   リムーバブル メディア上でデータベースが配布用に正しく構成されているかどうか確認し、問題があればユーザーにレポートします。  
   
-> **重要!!** [!INCLUDE[ssNoteDepFutureAvoid](../../t-sql/statements/create-database-sql-server-transact-sql.md) instead.  
+> **重要!!** [!代わりに[ssNoteDepFutureAvoid](../../t-sql/statements/create-database-sql-server-transact-sql.md)を含めてください。  
   
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -43,15 +43,15 @@ sp_certify_removable [ @dbname= ] 'dbname'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @dbname = ] 'dbname'` 確認するデータベースを指定します。 *dbname*は**sysname**します。  
+`[ @dbname = ] 'dbname'`確認するデータベースを指定します。 *dbname*は**sysname**です。  
   
-`[ @autofix = ] 'auto'` システム管理者に、データベースとすべてのデータベース オブジェクトの所有権を与え、ユーザーが作成したデータベース ユーザーと既定以外の権限を削除します。 *自動*は**nvarchar (4)** 、既定値は NULL です。  
+`[ @autofix = ] 'auto'`データベースとすべてのデータベースオブジェクトの所有権をシステム管理者に付与し、ユーザーが作成したデータベースユーザーと既定以外の権限を削除します。 *auto*は**nvarchar (4)**,、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>コメント  
- データベースが正しく構成されている場合**sp_certify_removable**次を実行します。  
+## <a name="remarks"></a>解説  
+ データベースが正しく構成されている場合、 **sp_certify_removable**は次の処理を実行します。  
   
 -   ファイルをコピーできるように、データベースをオフラインに設定します。  
   
@@ -59,41 +59,41 @@ sp_certify_removable [ @dbname= ] 'dbname'
   
 -   データ ファイル グループを読み取り専用としてマークし、ファイルを読み取り専用メディアにコピーできるようにする。  
   
- システム管理者は、データベースとすべてのデータベース オブジェクトの所有者であることが必要です。 システム管理者が実行されているすべてのサーバー上に存在する既知のユーザー [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]し、データベースが後で配布され、インストールされているときに存在するが期待できます。  
+ システム管理者は、データベースとすべてのデータベース オブジェクトの所有者であることが必要です。 システム管理者は、を実行[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]しているすべてのサーバー上に存在する既知のユーザーであり、データベースが後で配布およびインストールされるときに存在することが予想されます。  
   
- 実行する場合**sp_certify_removable**せず、**自動**値とは、次の条件のいずれかに関する情報を返します。  
+ **Auto**値を指定せずに**sp_certify_removable**を実行すると、次のいずれかの条件に関する情報が返されます。  
   
--   システム管理者は、データベース所有者ではありません。  
+-   システム管理者は、データベースの所有者ではありません。  
   
--   すべてのユーザーが作成したユーザーが存在します。  
+-   ユーザーが作成したユーザーが存在します。  
   
--   システム管理者は、データベース内のすべてのオブジェクトを所有していません。  
+-   システム管理者は、データベース内のすべてのオブジェクトを所有しているわけではありません。  
   
 -   既定値以外の権限が与えられている。  
   
- 次の方法では、これらの条件を修正できます。  
+ これらの条件は、次の方法で修正できます。  
   
--   使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ツールと手順、および実行し**sp_certify_removable**もう一度です。  
+-   ツール[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と手順を使用し、 **sp_certify_removable**を再実行します。  
   
--   実行するだけで**sp_certify_removable**で、**自動**値。  
+-   **Auto**値を指定して**sp_certify_removable**を実行するだけです。  
   
- このストアド プロシージャが、ユーザーおよびユーザーのアクセス許可のチェックだけに注意してください。 データベースにはグループを追加でき、そのグループに権限を与えることができます。 詳細については、「 [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)と共に使用できるように構成する方法について説明します。  
+ このストアドプロシージャでは、ユーザーとユーザーの権限のみがチェックされることに注意してください。 データベースにはグループを追加でき、そのグループに権限を与えることができます。 詳細については、「 [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)と共に使用できるように構成する方法について説明します。  
   
 ## <a name="permissions"></a>アクセス許可  
- 実行のアクセス許可がのメンバーに制限されます、 **sysadmin**固定サーバー ロール。  
+ 実行権限は、 **sysadmin**固定サーバーロールのメンバーに制限されています。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、`inventory` データベースを削除できるかどうかを確認します。  
   
 ```  
 EXEC sp_certify_removable inventory, AUTO;  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データベースのデタッチとアタッチ &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
- [sp_create_removable &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-removable-transact-sql.md)   
- [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [sp_dbremove &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbremove-transact-sql.md)   
- [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [sp_create_removable &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-create-removable-transact-sql.md)   
+ [ALTER DATABASE &#40;Transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
+ [sp_dbremove &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dbremove-transact-sql.md)   
+ [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

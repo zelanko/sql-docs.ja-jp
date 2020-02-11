@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 14d0a9f95ea3abccd2d50f469fe068459baa9364
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101957"
 ---
 # <a name="modify-or-delete-a-role-assignment-report-manager"></a>ロールの割り当てを変更または削除する (レポート マネージャー)
@@ -38,7 +38,8 @@ ms.locfileid: "66101957"
   
 1.  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](../report-manager-ssrs-native-mode.md) を開始します。  
   
-2.  **[サイトの設定]** をクリックします。  
+2.  
+  **[サイトの設定]** をクリックします。  
   
 3.  **[セキュリティ]** をクリックします。 現在、サーバーまたはスケールアウト配置に対して定義されているシステムレベルのロールの割り当てが、アカウント名ごとに一覧表示されます。  
   
@@ -50,7 +51,8 @@ ms.locfileid: "66101957"
   
 ### <a name="to-modify-or-delete-an-item-role-assignment"></a>アイテム ロールの割り当てを変更または削除するには  
   
-1.  **レポート マネージャー** を起動し、ロールの割り当てを編集または削除するアイテムを探します。  
+1.  
+  **レポート マネージャー** を起動し、ロールの割り当てを編集または削除するアイテムを探します。  
   
 2.  アイテムの上にマウス ポインターを移動し、下矢印をクリックします。  
   
@@ -62,10 +64,10 @@ ms.locfileid: "66101957"
   
 6.  ロールの割り当てを削除するには、ユーザーまたはグループ名の隣にあるチェック ボックスをオンにして、 **[削除]** をクリックします。  
   
-## <a name="see-also"></a>関連項目  
- (作成-と-管理-ロール-assignments.md)   
+## <a name="see-also"></a>参照  
+ (create-and-manage-role-assignments.md)   
  [ロールの割り当て](role-assignments.md)   
- [[サイトの設定] ページ &#40;レポート マネージャー&#41;](../site-settings-page-report-manager.md)   
- [新しいシステム ロールの割り当て:システム ロールの割り当て ページを編集&#40;レポート マネージャー&#41;](../new-system-role-assignments-edit-system-role-assignments-page-report-manager.md)  
+ [[サイトの設定] ページ &#40;レポートマネージャー&#41;](../site-settings-page-report-manager.md)   
+ [[新しいシステムロールの割り当て]: [システムロールの割り当てを編集] ページ &#40;レポートマネージャー&#41;](../new-system-role-assignments-edit-system-role-assignments-page-report-manager.md)  
   
   

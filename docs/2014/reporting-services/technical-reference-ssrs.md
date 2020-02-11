@@ -17,19 +17,19 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c9d14f27e1b41bf2a636f53ecb13c4fd88a9e4bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100612"
 ---
 # <a name="technical-reference-ssrs"></a>テクニカル リファレンス (SSRS)
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] には、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] を使用または管理するためのツールおよび PowerShell のリファレンス ドキュメントがあります。  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)]で[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]のの使用または管理[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]に関するツールと PowerShell のリファレンスドキュメントを参照してください。  
   
- ![小さいファイル フォルダー アイコン](../../2014/integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン") **エラーとイベント**  
+ ![小さいファイルフォルダーアイコン](../../2014/integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン")**エラーとイベント**  
  [Reporting Services エラーの原因と解決方法](troubleshooting/cause-and-resolution-of-reporting-services-errors.md)  
   
- ![小さいファイル フォルダー アイコン](../../2014/integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン") **機能リファレンス**  
+ ![小さいファイルフォルダーアイコン](../../2014/integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン")**機能リファレンス**  
  [レポート デザイナーの F1 ヘルプ](tools/report-designer-f1-help.md)  
   
  [レポート マネージャー F1 ヘルプ](../../2014/reporting-services/report-manager-f1-help.md)  
@@ -40,20 +40,20 @@ ms.locfileid: "66100612"
   
  [HTML ビューアーとレポート ツールバー](html-viewer-and-the-report-toolbar.md)  
   
- [表示拡張機能のデバイス情報設定 (Reporting Services)](device-information-settings-for-rendering-extensions-reporting-services.md)  
+ [表示拡張機能のデバイス情報設定 &#40;Reporting Services&#41;](device-information-settings-for-rendering-extensions-reporting-services.md)  
   
- ![小さいファイル フォルダー アイコン](../../2014/integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン") **レポート サーバーのコマンド プロンプト ユーティリティ**  
- [RS.exe ユーティリティ &#40;SSRS&#41;](tools/rs-exe-utility-ssrs.md)  
+ ![小さいファイルフォルダーアイコン](../../2014/integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン")**レポートサーバーのコマンドプロンプトユーティリティ**  
+ [RS .exe ユーティリティ &#40;SSRS&#41;](tools/rs-exe-utility-ssrs.md)  
   
  [rsconfig ユーティリティ &#40;SSRS&#41;](tools/rsconfig-utility-ssrs.md)  
   
- [rskeymgmt ユーティリティ &#40;SSRS&#41;](tools/rskeymgmt-utility-ssrs.md)  
+ [rskeymgmt Utility &#40;SSRS&#41;](tools/rskeymgmt-utility-ssrs.md)  
   
- ![小さいファイル フォルダー アイコン](../../2014/integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン") **Reporting Services WMI プロバイダー クラス ライブラリ**  
- [Reporting Services WMI プロバイダー ライブラリ リファレンス &#40;SSRS&#41;](wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs.md)  
+ ![小さいファイルフォルダーアイコン](../../2014/integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン") **Reporting Services WMI プロバイダークラスライブラリ**  
+ [Reporting Services WMI プロバイダー ライブラリ リファレンス (SSRS)](wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs.md)  
   
 ## <a name="see-also"></a>参照  
- [Reporting Services のトラブルシューティングに関する TechNet Wiki の記事](https://go.microsoft.com/fwlink/?LinkID=209153)   
- [Reporting Services SharePoint モードのトラブルシューティングに関する TechNet Wiki の記事](https://go.microsoft.com/fwlink/?LinkID=209158)  
+ [トラブルシューティング Reporting Services に関する TechNet wiki の記事](https://go.microsoft.com/fwlink/?LinkID=209153)   
+ [トラブルシューティング Reporting Services SharePoint モードに関する TechNet wiki の情報](https://go.microsoft.com/fwlink/?LinkID=209158)  
   
   

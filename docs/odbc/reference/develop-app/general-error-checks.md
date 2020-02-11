@@ -1,5 +1,5 @@
 ---
-title: 一般的なエラー チェック |Microsoft Docs
+title: 一般的なエラーチェック |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ ms.assetid: 0c9a3425-0a7c-48de-9ff6-73601c26283e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f6b7c37febee411571b8ac8316d3800912e35758
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68069921"
 ---
 # <a name="general-error-checks"></a>一般的なエラー チェック
-ドライバー マネージャーは、1 つの一般的なエラーを確認します。 次のエラーが発生したときに常に SQL_ERROR を返します。関数は、ドライバーでサポートする必要があります。
+ドライバーマネージャーは、1つの一般的なエラーをチェックします。 次のエラーが発生した場合は、常に SQL_ERROR を返します。この関数は、ドライバーでサポートされている必要があります。

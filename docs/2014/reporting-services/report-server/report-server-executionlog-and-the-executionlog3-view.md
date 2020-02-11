@@ -1,5 +1,5 @@
 ---
-title: レポート サーバー実行ログと ExecutionLog3 ビュー |Microsoft Docs
+title: レポートサーバーの実行ログと ExecutionLog3 View |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 649795e5e142563b64014f2ccf970f0df5de134b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103471"
 ---
 # <a name="report-server-execution-log-and-the-executionlog3-view"></a>レポート サーバー実行ログと ExecutionLog3 ビュー
@@ -30,7 +30,7 @@ ms.locfileid: "66103471"
   
  レポート サーバー実行ログはレポート サーバー データベースに格納されます。このデータベースの既定の名前は **ReportServer**です。 実行ログの情報は、SQL ビューに表示されます。 より新しいリリースで追加された "2" および "3" のビューには、新しいフィールドが追加されています。また、以前のリリースよりもわかりやすい名前に変更されたフィールドもあります。 古いビューも引き続き利用できるため、それらに依存するカスタム アプリケーションへの影響はありません。 ExecutionLog などの古いビューに依存していない場合は、最新のビューである ExecutionLog**3**を使用することをお勧めします。  
   
- このトピックの内容  
+ このトピックの内容:  
   
 -   [SharePoint モードのレポート サーバーの構成設定](#bkmk_sharepoint)  
   
@@ -108,26 +108,26 @@ select * from ExecutionLog3 order by TimeStart DESC
   
  次の表に、レポート実行ログに取得されるデータを示します。  
   
-|[列]|説明|  
+|列|[説明]|  
 |------------|-----------------|  
 |InstanceName|要求を処理したレポート サーバー インスタンスの名前。 レポート サーバーが複数ある環境では、InstanceName のディストリビューションを分析することで、ネットワーク負荷分散を監視し、要求がレポート サーバー間で想定どおりに分散されているかどうかを確認することができます。|  
 |ItemPath|レポートまたはレポート アイテムの格納場所のパス。|  
 |UserName|ユーザー識別子。|  
 |[ExecutionID]|要求に関連付けられた内部識別子。 同じユーザー セッションの要求は、同じ実行 ID を共有します。|  
-|RequestType|有効値は次のとおりです。<br />**対話型**<br />**サブスクリプション**<br /><br /> <br /><br /> RequestType=Subscription でフィルター処理したログ データを TimeStart で並べ替えて分析すると、サブスクリプションが集中している時間が見つかることがあります。この情報を基に、レポートのサブスクリプションの一部を別の時間に変更することができます。|  
-|形式|表示形式。|  
-|Parameters|レポート実行に使用するパラメーター値。|  
-|ItemAction|有効値は次のとおりです。<br /><br /> **Render**<br /><br /> **Sort**<br /><br /> **BookMarkNavigation**<br /><br /> **DocumentNavigation**<br /><br /> **GetDocumentMap**<br /><br /> **Findstring**<br /><br /> **実行**<br /><br /> **RenderEdit**|  
+|RequestType|有効値は次のとおりです。<br />**Interactive**<br />**サブスクリプション**<br /><br /> <br /><br /> RequestType=Subscription でフィルター処理したログ データを TimeStart で並べ替えて分析すると、サブスクリプションが集中している時間が見つかることがあります。この情報を基に、レポートのサブスクリプションの一部を別の時間に変更することができます。|  
+|Format|表示形式。|  
+|パラメーター|レポート実行に使用するパラメーター値。|  
+|ItemAction|指定できる値<br /><br /> **Render**<br /><br /> **並べ替え**<br /><br /> **BookMarkNavigation**<br /><br /> **DocumentNavigation**<br /><br /> **GetDocumentMap**<br /><br /> **Findstring**<br /><br /> **おい**<br /><br /> **RenderEdit**|  
 |TimeStart|レポート処理の期間を示す開始時刻と終了時刻。|  
 |TimeEnd||  
 |TimeDataRetrieval|データの取得にかかった時間 (単位はミリ秒)。|  
 |TimeProcessing|レポートの処理にかかった時間 (単位はミリ秒)。|  
 |TimeRendering|レポートの表示にかかった時間 (単位はミリ秒)。|  
-|ソース|レポート実行のソース。 有効値は次のとおりです。<br /><br /> **Live**<br /><br /> **キャッシュ**:たとえば、データセットのクエリでライブ実行されませんが、キャッシュされた実行を示します。<br /><br /> **スナップショット**<br /><br /> **履歴**<br /><br /> **アドホック**:レポートのドリルスルーに基づくモデル動的に生成されたレポートまたはレポート サーバーの処理とレンダリングを使用するクライアントでプレビューされているレポート ビルダーのレポートのいずれかを示します。<br /><br /> **セッション**:既に確立されたセッション内のフォロー アップ要求を示します。  たとえば、最初の要求がページ 1 の表示であり、フォローアップ要求は現在のセッション状態での Excel へのエクスポートである場合などが考えられます。<br /><br /> **Rdce**:レポート定義カスタマイズ拡張機能を示します。 RDCE カスタム拡張機能では、レポート実行時にレポート定義を処理エンジンに渡す前に動的にカスタマイズできます。|  
-|状態|状態 (rsSuccess またはエラー コード。複数のエラーが発生する場合は、最初のエラーのみ記録)。|  
+|source|レポート実行のソース。 指定できる値<br /><br /> **ライブ**<br /><br /> **Cache**: キャッシュされた実行を示します。たとえば、データセットクエリはライブでは実行されません。<br /><br /> **スナップショット**<br /><br /> **履歴**<br /><br /> **アドホック**: ドリルスルーレポートに基づいて動的に生成されたレポートモデル、または処理と表示のためにレポートサーバーを使用しているクライアントでプレビューされているレポートビルダーレポートのいずれかを示します。<br /><br /> **Session**: 既に確立されたセッション内のフォローアップ要求を示します。  たとえば、最初の要求がページ 1 の表示であり、フォローアップ要求は現在のセッション状態での Excel へのエクスポートである場合などが考えられます。<br /><br /> **Rdce**: レポート定義のカスタマイズ拡張機能を示します。 RDCE カスタム拡張機能では、レポート実行時にレポート定義を処理エンジンに渡す前に動的にカスタマイズできます。|  
+|Status|状態 (rsSuccess またはエラー コード。複数のエラーが発生する場合は、最初のエラーのみ記録)。|  
 |ByteCount|表示されるレポートのサイズ (バイト単位)。|  
 |RowCount|クエリから返される行数。|  
-|AdditionalInfo|実行に関する追加情報を格納する XML プロパティ バッグ。 内容は行ごとに異なります。|  
+|AdditionalInfo:|実行に関する追加情報を格納する XML プロパティ バッグ。 内容は行ごとに異なります。|  
   
 ##  <a name="bkmk_additionalinfo"></a> AdditionalInfo フィールド  
  AdditionalInfo フィールドは、実行に関する追加情報を格納する XML プロパティ バッグ (構造) です。 内容はログの行ごとに異なります。  
@@ -222,13 +222,13 @@ select * from ExecutionLog3 order by TimeStart DESC
   
 ```  
   
- AdditionalInfo フィールドに表示されるプロパティの一部を次に示します。  
+ 次に、AdditionalInfo フィールドに表示されるいくつかのプロパティについて説明します。  
   
--   **ProcessingEngine**:1 = SQL Server 2005、2 = 新しいオンデマンド処理エンジン。 ほとんどのレポートでこの値が 1 になっている場合は、レポートを設計し直す方法を調べて、効率が向上した新しいオンデマンド処理エンジンを使用することをお勧めします。  
+-   **Processingengine**: 1 = SQL Server 2005、2 = 新しいオンデマンド処理エンジン。 ほとんどのレポートでこの値が 1 になっている場合は、レポートを設計し直す方法を調べて、効率が向上した新しいオンデマンド処理エンジンを使用することをお勧めします。  
   
      `<ProcessingEngine>2</ProcessingEngine>`  
   
--   **ScalabilityTime**:処理エンジンでスケール関連の操作の実行にかかった時間 (単位はミリ秒)。 値が 0 の場合は、スケール操作に特に時間はかからず、要求時にメモリ不足にならなかったことを示します。  
+-   スケーリング可能な**時間**: 処理エンジンでスケール関連の操作を実行するために費やされた時間 (ミリ秒単位)。 値が 0 の場合は、スケール操作に特に時間はかからず、要求時にメモリ不足にならなかったことを示します。  
   
     ```  
     <ScalabilityTime>  
@@ -236,7 +236,7 @@ select * from ExecutionLog3 order by TimeStart DESC
     </ScalabilityTime>  
     ```  
   
--   **EstimatedMemoryUsageKB**:特定の要求について各コンポーネントで消費される最大メモリ量の推定値 (単位は KB)。  
+-   **EstimatedMemoryUsageKB**: 特定の要求中に各コンポーネントによって消費されるメモリのピーク量の推定値。  
   
     ```  
     <EstimatedMemoryUsageKB>  
@@ -244,7 +244,7 @@ select * from ExecutionLog3 order by TimeStart DESC
     </EstimatedMemoryUsageKB>  
     ```  
   
--   **DataExtension**:レポートで使用されているデータ拡張機能またはデータ ソースの種類。 数値は、そのデータ ソースが使用されている回数を示します。  
+-   **Dataextension**: レポートで使用されるデータ拡張機能またはデータソースの種類。 数値は、そのデータ ソースが使用されている回数を示します。  
   
     ```  
     <DataExtension>  
@@ -252,7 +252,7 @@ select * from ExecutionLog3 order by TimeStart DESC
     </DataExtension>  
     ```  
   
--   **ExternalImages**値 (ミリ秒) です。 このデータはパフォーマンスに関する問題の診断に使用できます。 外部 Web サーバーからイメージを取得するのに時間がかかり、レポートの実行全体が遅くなる場合があります。 追加される[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]します。  
+-   **Externalimages**値はミリ秒にあります。 このデータはパフォーマンスに関する問題の診断に使用できます。 外部 Web サーバーからイメージを取得するのに時間がかかり、レポートの実行全体が遅くなる場合があります。 で[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]追加されました。  
   
     ```  
     <ExternalImages>  
@@ -262,7 +262,7 @@ select * from ExecutionLog3 order by TimeStart DESC
     </ExternalImages>  
     ```  
   
--   **接続**:複数のレベルから成る構造体。 追加される[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]します。  
+-   **Connections**: 複数の平準化構造。 で[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]追加されました。  
   
     ```  
     <Connections>  
@@ -307,26 +307,26 @@ select * from ExecutionLog2 order by TimeStart DESC
   
  次の表に、レポート実行ログに取得されるデータを示します。  
   
-|[列]|説明|  
+|列|[説明]|  
 |------------|-----------------|  
 |InstanceName|要求を処理したレポート サーバー インスタンスの名前。|  
 |ReportPath|レポートのパス構造。  たとえば、"test" というレポートがレポート マネージャーのルート フォルダーにある場合、ReportPath は "/test" となります。<br /><br /> "test" という名前のレポートがレポート マネージャー "samples" フォルダーに保存されている場合は、ReportPath は "/Samples/test/" となります。|  
 |UserName|ユーザー識別子。|  
 |[ExecutionID]||  
 |RequestType|要求の種類 (ユーザーまたはシステム)。|  
-|形式|表示形式。|  
-|Parameters|レポート実行に使用するパラメーター値。|  
-|ReportAction|有効値は次のとおりです。Render, Sort, BookMarkNavigation, DocumentNavigation, GetDocumentMap, Findstring|  
+|Format|表示形式。|  
+|パラメーター|レポート実行に使用するパラメーター値。|  
+|ReportAction|有効値: Render、Sort、BookMarkNavigation、DocumentNavigation、GetDocumentMap、Findstring。|  
 |TimeStart|レポート処理の期間を示す開始時刻と終了時刻。|  
 |TimeEnd||  
 |TimeDataRetrieval|データの取得、レポートの処理、レポートの表示にかかった時間 (単位はミリ秒)。|  
 |TimeProcessing||  
 |TimeRendering||  
-|ソース|レポート実行のソース (1 = 実行中、2 = キャッシュ、3 = スナップショット、4 = 履歴)。|  
+|source|レポート実行のソース (1 = 実行中、2 = キャッシュ、3 = スナップショット、4 = 履歴)。|  
 |Status|状態 (rsSuccess またはエラー コード。複数のエラーが発生する場合は、最初のエラーのみ記録)。|  
 |ByteCount|表示されるレポートのサイズ (バイト単位)。|  
 |RowCount|クエリから返される行数。|  
-|AdditionalInfo|実行に関する追加情報を格納する XML プロパティ バッグ。|  
+|AdditionalInfo:|実行に関する追加情報を格納する XML プロパティ バッグ。|  
   
 ##  <a name="bkmk_executionlog"></a> ログのフィールド (ExecutionLog)  
  ExecutionLog ビューから行を取得する Transact-SQL ステートメントの例を次に示します。 この例では、レポート サーバー データベースの名前が **ReportServer**であることを前提にしています。  
@@ -339,21 +339,21 @@ select * from ExecutionLog order by TimeStart DESC
   
  次の表に、レポート実行ログに取得されるデータを示します。  
   
-|[列]|説明|  
+|列|[説明]|  
 |------------|-----------------|  
 |InstanceName|要求を処理したレポート サーバー インスタンスの名前。|  
 |ReportID|レポート識別子。|  
 |UserName|ユーザー識別子。|  
-|RequestType|有効値は次のとおりです。<br /><br /> True = サブスクリプション要求<br /><br /> False = 対話型の要求|  
-|形式|表示形式。|  
-|Parameters|レポート実行に使用するパラメーター値。|  
+|RequestType|指定できる値<br /><br /> True = サブスクリプション要求<br /><br /> False = 対話型の要求|  
+|Format|表示形式。|  
+|パラメーター|レポート実行に使用するパラメーター値。|  
 |TimeStart|レポート処理の期間を示す開始時刻と終了時刻。|  
 |TimeEnd||  
 |TimeDataRetrieval|データの取得、レポートの処理、レポートの表示にかかった時間 (単位はミリ秒)。|  
 |TimeProcessing||  
 |TimeRendering||  
-|Source|レポート実行のソース。 有効値は次のとおりです。(1 = 実行中、2 = キャッシュ、3 = スナップショット、4 = 履歴、5 = アドホック、6 = セッション、7 = RDCE)。|  
-|状態|有効値: rsSuccess、rsProcessingAborted、またはエラー コード。 複数のエラーが発生した場合は、最初のエラーだけが記録されます。|  
+|source|レポート実行のソース。 有効値: 1 = 実行中、2 = キャッシュ、3 = スナップショット、4 = 履歴、5 = アドホック、6 = セッション、7 = RDCE。|  
+|Status|有効値: rsSuccess、rsProcessingAborted、またはエラー コード。 複数のエラーが発生した場合は、最初のエラーだけが記録されます。|  
 |ByteCount|表示されるレポートのサイズ (バイト単位)。|  
 |RowCount|クエリから返される行数。|  
   

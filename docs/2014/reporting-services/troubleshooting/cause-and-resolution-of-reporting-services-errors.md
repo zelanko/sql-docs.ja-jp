@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fa98b9f760485b80f4fa4ac74f3b8008dc3bbec3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099378"
 ---
 # <a name="cause-and-resolution-of-reporting-services-errors"></a>Reporting Services エラーの原因と解決方法
@@ -26,7 +26,7 @@ ms.locfileid: "66099378"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|[エラー]|メッセージ|  
+|エラー|Message|  
 |-----------|-------------|  
 |[rsAccessedDenied - Reporting Services エラー](rsaccesseddenied-reporting-services-error.md)|ユーザー 'mydomain\myAccount' には、この操作を行うのに必要な権限が与えられていません。 (rsAccessDenied) (ReportingServicesLibrary)。|  
 |[rsInternalError - Reporting Services エラー](rsinternalerror-reporting-services-error.md)|レポート サーバーで内部エラーが発生しました。 詳細については、エラー ログを参照してください。|  

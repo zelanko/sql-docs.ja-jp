@@ -1,5 +1,5 @@
 ---
-title: SET EXCLUSIVE コマンド |Microsoft Docs
+title: SET EXCLUSIVE Command |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: d4fe12c5-7e8b-4d20-9ea4-2bcaffb271f2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9d1a37043d332b54d0d5c5ebb7b2ba9f3acce000
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68071759"
 ---
 # <a name="set-exclusive-command"></a>SET EXCLUSIVE コマンド
-テーブルのファイルが、ネットワーク上で排他モードと共有の使用の開かれたかどうかを指定します。  
+ネットワーク上でテーブルファイルを排他的に使用するか共有するかを指定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -31,13 +31,13 @@ SET EXCLUSIVE ON | OFF
   
 ## <a name="arguments"></a>引数  
  ON  
- それを開いたユーザーのネットワーク上で開かれたテーブルへのアクセスを制限します。 テーブルに、ネットワーク上の他のユーザーにアクセスできません。 また、排他 ON の設定を行うと、その他のすべてのユーザー読み取り専用アクセス権を持つできなくなります。  
+ ネットワーク上で開かれているテーブルのアクセシビリティを、そのネットワークを開いたユーザーに制限します。 このテーブルには、ネットワーク上の他のユーザーがアクセスできません。 [排他モードに設定すると、他のすべてのユーザーに読み取り専用アクセスを許可しないようにすることもできます。  
   
  OFF  
- ドライバーの既定値 (Visual FoxPro の既定値は、プライベート データ セッションのセッションのグローバル データと OFF ON は)。ネットワーク共有およびネットワーク上のすべてのユーザーが変更に開かれたテーブルを使用できます。  
+ (ドライバーの既定値は、グローバルデータセッションでは Visual FoxPro、プライベートデータセッションでは OFF です)。ネットワーク上で開いているテーブルをネットワーク上の任意のユーザーが共有および変更できるようにします。  
   
-## <a name="remarks"></a>コメント  
- 排他的な設定の設定を変更する前に開かれたテーブルの状態は変更されません。 たとえば、設定排他 ON に設定を開くと、テーブル、排他的な設定は後で変更を OFF に、場合の表に、その排他使用状態が保持されます。  
+## <a name="remarks"></a>解説  
+ SET EXCLUSIVE の設定を変更しても、以前に開いたテーブルの状態は変更されません。 たとえば、SET EXCLUSIVE が ON に設定された状態でテーブルを開き、SET EXCLUSIVE を後で OFF に変更した場合、テーブルはその排他使用状態を保持します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ODBC Visual FoxPro セットアップ ダイアログ ボックス](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)

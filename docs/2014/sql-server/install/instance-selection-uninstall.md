@@ -11,16 +11,17 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6de0fbb9f2e6a5ee621c24c4832a13b900919048
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66094225"
 ---
 # <a name="instance-selection-uninstall"></a>インスタンスの選択 (アンインストール)
-  インスタンスの選択 - [アンインストール] ページのインスタンスを指定する、ドロップ ダウン ボックスを使用して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]をアンインストールします。  
+  [インスタンスの選択-アンインストール] ページで、ドロップダウンボックスを使用して、アンインストール[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]するインスタンスを指定します。  
   
-## <a name="options"></a>および  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンス全体を指定することも、共有機能と管理ツールのみがアンインストールされるように指定することもできます。  
+## <a name="options"></a>オプション  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンス全体を指定することも、共有機能と管理ツールのみがアンインストールされるように指定することもできます。  
   
   

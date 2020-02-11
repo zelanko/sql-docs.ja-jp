@@ -11,16 +11,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 92c9ebe68f92a652e8f713ca73dedce6b54443c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66092370"
 ---
-# <a name="select-features"></a>[機能の選択]
+# <a name="select-features"></a>機能を選択する
   [機能の選択] ページを使用して、更新する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のコンポーネントおよび機能を選択します。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  左ペインの機能名をクリックして、言語、オペレーティング システム、エディション、状態の詳細を確認します。  
   
  コンポーネントまたは機能を更新するには、機能名の隣のチェック ボックスをオンにします。 コンポーネントまたは機能を更新の対象外とするには、機能名の隣のチェック ボックスをオフにします。  

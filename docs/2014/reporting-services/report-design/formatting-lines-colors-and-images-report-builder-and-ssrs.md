@@ -24,10 +24,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 681ff6b46f692804aef5c7cbbc16e5abe99dbb2d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105798"
 ---
 # <a name="formatting-lines-colors-and-images-report-builder-and-ssrs"></a>線、色、および画像の書式設定 (レポート ビルダーおよび SSRS)
@@ -58,7 +58,7 @@ ms.locfileid: "66105798"
 ## <a name="see-also"></a>参照  
  [テキストとプレースホルダーの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
  [数値と日付の書式設定 &#40;レポート ビルダーおよび SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)   
- [テキスト ボックス内のテキストの書式設定 (レポート ビルダーおよび SSRS)](format-text-in-a-text-box-report-builder-and-ssrs.md)   
+ [テキスト ボックス内のテキストの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](format-text-in-a-text-box-report-builder-and-ssrs.md)   
  [[塗りつぶし] ダイアログ ボックス &#40;レポート ビルダーおよび SSRS&#41;](../fill-dialog-box-report-builder-and-ssrs.md)  
   
   

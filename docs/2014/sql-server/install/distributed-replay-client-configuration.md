@@ -11,20 +11,21 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3eb00922b4f6e21dd4cfc8a46d8c0c27ed9a5be1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66095474"
 ---
 # <a name="distributed-replay-client-configuration"></a>分散再生クライアントの構成
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードの **[分散再生クライアントの構成]** ページを使用して、分散再生クライアント サービスに対する管理権限を付与するユーザーを指定します。  
+  
+  **インストール ウィザードの** [分散再生クライアントの構成] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ページを使用して、分散再生クライアント サービスに対する管理権限を付与するユーザーを指定します。  
   
  管理権限を持つユーザーには、分散再生クライアント サービスへの無制限のアクセス許可が与えられます。  
   
-## <a name="options"></a>および  
- **コント ローラー名**  
- これは省略可能なパラメーター、および既定値は\<*空白*>。  
+## <a name="options"></a>オプション  
+ **[コントローラー名]**  
+ これは省略可能なパラメーターであり、既定値\<は>*空白*です。  
   
  分散再生クライアント サービスと通信するクライアント コンピューターであるコントローラーの名前を入力します。 次のことを考慮してください。  
   
@@ -39,7 +40,7 @@ ms.locfileid: "66095474"
   
  既定の作業ディレクトリは、\<*drive letter*>:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\DReplayClient\WorkingDir\\ です。  
   
- **結果ディレクトリ**  
+ **[結果ディレクトリ]**  
  分散再生クライアント サービス用の結果ディレクトリを指定します。  
   
  既定の結果ディレクトリは、\<*drive letter*>:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\DReplayClient\ResultDir\\ です。  

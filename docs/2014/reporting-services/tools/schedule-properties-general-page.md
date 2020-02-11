@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 98d013126fe1db1b8101d5ae451f658546f6d1f9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099738"
 ---
 # <a name="schedule-properties-general-page"></a>[スケジュールのプロパティ]\([全般] ページ)
@@ -26,12 +26,12 @@ ms.locfileid: "66099738"
   
  スケジュールは、そのスケジュールをホストおよび処理するレポート サーバーのローカル時間に基づいて処理されます。  
   
- このページを開くには、開始[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、開いているレポート サーバーに接続する、**共有スケジュール**フォルダーは、共有スケジュールを右クリックし、選択**プロパティ**します。  
+ このページを開くには[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、を起動し、レポートサーバーに接続します。次に、[**共有スケジュール**] フォルダーを開き、共有スケジュールを右クリックして、[**プロパティ**] を選択します。  
   
 > [!NOTE]  
 >  この機能は、すべてのエディションの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で使用できるわけではなく、この機能がないエディションを実行している場合は、このページが表示されません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、「[SQL Server 2012 の各エディションがサポートする機能](https://go.microsoft.com/fwlink/?linkid=232473)」(https://go.microsoft.com/fwlink/?linkid=232473) を参照してください。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **名前**  
  共有スケジュールの名前を指定します。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "66099738"
  **[このスケジュールの終了日]**  
  このスケジュールの終了日を指定します。  
   
- **型**  
+ **Type**  
  定期的なパターンが主に時間、日、週、月のどの単位に基づくか、または一度だけ実行するかを指定します。  
   
  **[時間]\([定期的なパターン])**  
@@ -59,7 +59,7 @@ ms.locfileid: "66099738"
  **1 回。**  
  特定の日時に 1 回のみスケジュールを実行するように指定します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Management Studio のレポート サーバーの F1 ヘルプ](report-server-in-management-studio-f1-help.md)   
  [Management Studio でレポート サーバーに接続する](connect-to-a-report-server-in-management-studio.md)   
  [Create, Modify, and Delete Schedules](../subscriptions/create-modify-and-delete-schedules.md)   

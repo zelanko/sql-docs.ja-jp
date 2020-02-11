@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 40c623130b02c082b099938823ccc12950333982
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105560"
 ---
 # <a name="multiple-series-on-a-chart-report-builder-and-ssrs"></a>グラフ上の複数の系列 (レポート ビルダーおよび SSRS)
@@ -38,7 +38,8 @@ ms.locfileid: "66105560"
   
  ![グラフ領域の図](../media/chartareasdiagram.gif "グラフ領域の図")  
   
- **[グラフ領域のプロパティ]** ダイアログ ボックスを使用して、グラフ領域に含まれているすべての系列の 2D および 3D 方向を指定し、同じグラフ内に複数のグラフ領域を配置し、プロット エリアの色を設定できます。 既定の 1 つのグラフ領域のみを含んでいるグラフ上で新しいグラフ領域を定義すると、グラフ領域の使用可能な領域が水平に 2 つに分割され、新しいグラフ領域が最初のグラフ領域の下に配置されます。  
+ 
+  **[グラフ領域のプロパティ]** ダイアログ ボックスを使用して、グラフ領域に含まれているすべての系列の 2D および 3D 方向を指定し、同じグラフ内に複数のグラフ領域を配置し、プロット エリアの色を設定できます。 既定の 1 つのグラフ領域のみを含んでいるグラフ上で新しいグラフ領域を定義すると、グラフ領域の使用可能な領域が水平に 2 つに分割され、新しいグラフ領域が最初のグラフ領域の下に配置されます。  
   
  各系列は、1 つのグラフ領域にのみ接続できます。 既定では、すべての系列が既定のグラフ領域に追加されます。 面グラフ、縦棒グラフ、折れ線グラフ、散布図を使用する場合は、これらの系列を組み合わて同じグラフ領域上に表示できます。 たとえば、同じグラフ領域上に縦棒グラフと折れ線グラフの系列を表示できます。 複数の系列に同じグラフ領域を使用する利点は、エンド ユーザーによる比較が容易になるということです。  
   
@@ -55,7 +56,7 @@ ms.locfileid: "66105560"
   
 ## <a name="see-also"></a>参照  
  [グラフ &#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md)   
- [グラフ上で複数のデータ範囲を持つ系列の表示 &#40;レポート ビルダーおよび SSRS&#41;](displaying-a-series-with-multiple-data-ranges-on-a-chart.md)   
+ [グラフ上の複数のデータ範囲を持つ系列の表示 &#40;レポートビルダーと SSRS&#41;](displaying-a-series-with-multiple-data-ranges-on-a-chart.md)   
  [グラフの種類 &#40;レポート ビルダーおよび SSRS&#41;](chart-types-report-builder-and-ssrs.md)  
   
   

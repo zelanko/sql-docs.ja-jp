@@ -1,5 +1,5 @@
 ---
-title: データ バッファーの使用 |Microsoft Docs
+title: データバッファーを使用する |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,14 +15,14 @@ ms.assetid: 06b9f603-b395-497c-979b-d3ec3d6db375
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4b3128e0b8be8ec5bfaa2c4f0e7e64ce866b6295
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68079581"
 ---
 # <a name="using-data-buffers"></a>データ バッファーの使用
-データ バッファーは、3 つの情報で示されます。 その種類、アドレス、およびバイトの長さ。 関数では、これらの情報のいずれかの必要があるあり、既に理解されません、たびに、引数を使用するアプリケーションに渡すことがあります。  
+データバッファーは、それぞれの型、アドレス、バイト長という3つの情報によって記述されます。 関数がこれらの情報のいずれかを必要としていて、それをまだ認識していない場合は、アプリケーションがそれを渡す引数があります。  
   
  このセクションでは、次のトピックを扱います。  
   

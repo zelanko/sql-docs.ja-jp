@@ -1,5 +1,5 @@
 ---
-title: レポート ウィザードのヘルプ |Microsoft Docs
+title: レポートウィザードのヘルプ |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,30 +16,30 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d21fb2c577e6419668a619466dd0d2c94b4a3da2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102990"
 ---
 # <a name="report-wizard-help"></a>レポート ウィザードのヘルプ
   ここでは、レポート ウィザードの F1 ヘルプを紹介します。 レポート ウィザードは、テーブル形式のレポートおよびマトリックス形式のレポートの作成のプロセスを自動化します。 このトピックでは、次の内容について紹介します。  
   
- レポート ウィザードを開く、**プロジェクト** メニューのをクリックして**新しい項目の追加**します。  
+ レポートウィザードを開くには、[**プロジェクト**] メニューの [**新しい項目の追加**] をクリックします。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
 -   [レポート ウィザードへようこそ](../../2014/reporting-services/welcome-to-the-report-wizard.md)  
   
--   [データ ソースを選択する](../../2014/reporting-services/select-the-data-source.md)  
+-   [データ ソースを選択します](../../2014/reporting-services/select-the-data-source.md)  
   
 -   [クエリのデザイン](../../2014/reporting-services/design-the-query.md)  
   
--   [クエリ ビルダー&#40;レポート ウィザード&#41;](../../2014/reporting-services/query-builder-report-wizard.md)  
+-   [クエリビルダー &#40;レポートウィザード&#41;](../../2014/reporting-services/query-builder-report-wizard.md)  
   
--   [レポートの種類を選択する](../../2014/reporting-services/select-the-report-type.md)  
+-   [レポートの種類を選択します](../../2014/reporting-services/select-the-report-type.md)  
   
--   [テーブルのデザイン&#40;レポート ウィザード&#41;](../../2014/reporting-services/design-the-table-report-wizard.md)  
+-   [テーブル &#40;レポートウィザードのデザイン&#41;](../../2014/reporting-services/design-the-table-report-wizard.md)  
   
 -   [テーブルのレイアウトを選択](../../2014/reporting-services/choose-the-table-layout.md)  
   

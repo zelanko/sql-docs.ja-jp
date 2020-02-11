@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7602ce0ef0e75c3c2eb1ee5a5a47e3fe56b87f44
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102143"
 ---
 # <a name="configure-custom-or-forms-authentication-on-the-report-server"></a>レポート サーバーでカスタム認証またはフォーム認証を構成する
@@ -34,7 +34,7 @@ ms.locfileid: "66102143"
   
 1.  テキスト エディターで RSReportServer.config を開きます。  
   
-2.  検索 <`Authentication`>。  
+2.  <`Authentication`> を検索します。  
   
 3.  次の XML 構造をコピーします。  
   
@@ -47,21 +47,23 @@ ms.locfileid: "66102143"
     </Authentication>  
     ```  
   
-4.  既存のエントリを貼り付けます <`Authentication`>。  
+4.  <`Authentication`> の既存のエントリの上に貼り付けます。  
   
-     `Custom` は他の認証の種類と併用できないので注意してください。  
+     
+  `Custom` は他の認証の種類と併用できないので注意してください。  
   
 5.  ファイルを保存します。  
   
 6.  レポート サーバーの Web.config ファイルを開きます。 既定では、このファイルは \Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\ReportServer にあります。  
   
-7.  検索`authentication mode`設定`Forms`します。  
+7.  検索`authentication mode`して`Forms`設定します。  
   
     ```  
     <authentication mode = "Forms" />  
     ```  
   
-8.  `identity impersonate` を探して、`False` を設定します。  
+8.  
+  `identity impersonate` を探して、`False` を設定します。  
   
     ```  
     <identity impersonate = "false" />  
@@ -69,13 +71,14 @@ ms.locfileid: "66102143"
   
 9. レポート マネージャーの Web.config ファイルを開きます。 既定では、このファイルは \Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\ReportManager にあります。  
   
-10. 検索`authentication mode`設定`Forms`します。  
+10. 検索`authentication mode`して`Forms`設定します。  
   
     ```  
     <authentication mode = "Forms" />  
     ```  
   
-11. `identity impersonate` を探して、`False` を設定します。  
+11. 
+  `identity impersonate` を探して、`False` を設定します。  
   
     ```  
     <identity impersonate = "false" />  

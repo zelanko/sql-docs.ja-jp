@@ -1,5 +1,5 @@
 ---
-title: Microsoft Surface デバイスと Apple iOS デバイスでの Reporting Services レポートの表示 |Microsoft Docs
+title: Microsoft Surface デバイスと Apple iOS デバイスで Reporting Services レポートを表示する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,17 +17,18 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a3937f227d025da054a28f73fffde4a57dc365c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098656"
 ---
 # <a name="view-reporting-services-reports-on-microsoft-surface-devices-and--apple-ios-devices"></a>Microsoft Surface デバイスと Apple iOS デバイスでの Reporting Services レポートの表示
   このトピックでは、Microsoft Surface デバイス、Apple iOS 6 と Apple Safari を搭載したデバイス (iPad など) でサポートされる [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] の機能とワークフローについて説明します。  
   
 ## <a name="view-and-interact-with-reports"></a>レポートの表示および操作  
- [!INCLUDE[ssSQL11SP1long](../includes/sssql11sp1long-md.md)]以降の [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、Microsoft Surface デバイス、Apple iOS 6 と Apple Safari ブラウザーを搭載したデバイス (iPad など) でのレポートの表示と基本的な対話操作がサポートされます。 Microsoft Surface デバイスを使用してレポートをパブリッシュすることもできます。  
+ 
+  [!INCLUDE[ssSQL11SP1long](../includes/sssql11sp1long-md.md)]以降の [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] では、Microsoft Surface デバイス、Apple iOS 6 と Apple Safari ブラウザーを搭載したデバイス (iPad など) でのレポートの表示と基本的な対話操作がサポートされます。 Microsoft Surface デバイスを使用してレポートをパブリッシュすることもできます。  
   
  ![IPad デスクトップ](media/videothumbnail.jpg "IPad デスクトップ")  
 iPad でレポートを表示する方法の例をご覧ください。  
@@ -38,28 +39,29 @@ iPad でレポートを表示する方法の例をご覧ください。
   
 -   ネイティブ モードのレポート サーバーの場合は、 [!INCLUDE[ssSQL11SP1long](../includes/sssql11sp1long-md.md)] 以降のバージョンをインストールします。  
   
-     [!INCLUDE[ssSQL11SP1long](../includes/sssql11sp1long-md.md)] ダウンロードできますが、 [Microsoft ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=35575)します。  
+     [!INCLUDE[ssSQL11SP1long](../includes/sssql11sp1long-md.md)]は、 [Microsoft ダウンロードセンター](https://www.microsoft.com/download/details.aspx?id=35575)からダウンロードできます。  
   
 -   SharePoint モードのレポート サーバーの場合は、SharePoint 製品用 [!INCLUDE[ssSQL11SP1long](../includes/sssql11sp1long-md.md)] アドインの [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 以降をインストールします。  
   
- **IPad デバイスまたは Microsoft Surface デバイスに関するレポートを表示して操作するには**  
+ **iPad デバイスまたは Microsoft Surface デバイスでレポートを表示および操作するには**  
   
 1.  レポートが存在するレポート サーバーまたは SharePoint サイトに接続できることを確認します。  
   
 2.  次のいずれかの手順に従って、レポートを開きます。  
   
-    -   **電子メールから開始します。** によって作成される電子メールから、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]サブスクリプション、レポートの URL をタップします。 レポートがブラウザーで開かれます。  
+    -   **電子メールからの起動:**[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]サブスクリプションによって作成された電子メールから、レポートの URL をタップします。 レポートがブラウザーで開かれます。  
   
-    -   **レポート サーバーから開始します。** ディレクトリの参照、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]レポート サーバーとレポートを開くレポート名をタップします。  
+    -   **レポートサーバーからの起動:** レポートサーバー上[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]のディレクトリを参照し、レポート名をタップしてレポートを開きます。  
   
-    -   **SharePoint ドキュメント ライブラリからの起動します。** 含む SharePoint ドキュメント ライブラリを参照[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]レポート、およびレポート名をタップします。 レポートを表示および操作できます。  
+    -   **SharePoint ドキュメントライブラリからの起動:** レポートを含む[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint ドキュメントライブラリを参照し、レポート名をタップします。 レポートを表示および操作できます。  
   
         > [!IMPORTANT]  
         >  iPad の場合は、Safari の **[プライベート ブラウズ]** プロパティがオフになっていることを確認します。  
   
-    -   **SharePoint web パーツ:** Web パーツが SharePoint ページに追加されている場合は表示できます[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]レポートします。  
+    -   **SharePoint web パーツ:** Web パーツが SharePoint ページに追加されている場合は、レポート[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]を表示できます。  
   
-3.  Microsoft Surface デバイスでは、レポート マネージャーを使用してレポートを開くこともできます。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] レポート マネージャーでディレクトリを参照し、レポート名をタップしてレポートを開きます。  
+3.  Microsoft Surface デバイスでは、レポート マネージャーを使用してレポートを開くこともできます。 
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] レポート マネージャーでディレクトリを参照し、レポート名をタップしてレポートを開きます。  
   
     > [!IMPORTANT]  
     >  iPad では、レポート マネージャーでのレポートの表示はサポートされていません。  
@@ -88,7 +90,7 @@ iPad でレポートを表示する方法の例をご覧ください。
   
     -   レポートをエクスポートするには、 **[エクスポート]** メニューのアイコンをタップし、ファイル形式をタップします。  
   
-        -   Microsoft Surface デバイスでレポートを表示する場合は、次の形式のいずれかに、レポートをエクスポートできます。  
+        -   Microsoft Surface デバイスでレポートを表示している場合は、次のいずれかの形式にレポートをエクスポートできます。  
   
             -   レポート データが含まれている XML ファイル  
   
@@ -98,13 +100,13 @@ iPad でレポートを表示する方法の例をご覧ください。
   
             -   MHTML (Web アーカイブ)  
   
-            -   [エクスポート]  
+            -   Excel  
   
             -   TIFF  
   
             -   Word  
   
-        -   IPad でレポートを表示する場合は、TIFF または PDF ファイルとしてレポートをエクスポートできます。  
+        -   IPad でレポートを表示している場合は、TIFF または PDF ファイルとしてレポートをエクスポートできます。  
   
 ## <a name="authentication"></a>認証  
  RSWindowsNTLM 認証および RSWindowsBasic 認証は、ネイティブ モードと iPad の [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] で動作します。  
@@ -124,20 +126,21 @@ iPad でレポートを表示する方法の例をご覧ください。
 -   レポート マネージャーを開き、 **[ファイルのアップロード]** をタップして、レポート サーバー データベースにレポート定義ファイルをアップロードします。  
   
 ## <a name="additional-information"></a>追加情報  
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] およびサポートされているブラウザーの詳細については、以下を参照してください。  
+ 
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] およびサポートされているブラウザーの詳細については、以下を参照してください。  
   
--   [Reporting Services と Power View のブラウザー サポートの計画&#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)  
+-   [Reporting Services と Power View のブラウザーサポートの計画 &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)  
   
  Microsoft Business Intelligence およびモバイル デバイスの詳細については、以下を参照してください。  
   
--   [モバイル デバイスと SharePoint 2013 の概要](https://technet.microsoft.com/library/fp161351\(v=office.15\).aspx)(https://technet.microsoft.com/library/fp161351(v=office.15).aspx) します。  
+-   [モバイルデバイスと SharePoint 2013 の概要](https://technet.microsoft.com/library/fp161351\(v=office.15\).aspx)(https://technet.microsoft.com/library/fp161351(v=office.15).aspx)をご説明します。  
   
--   [SharePoint 2013 でサポートされているモバイル デバイス ブラウザー](https://technet.microsoft.com/library/fp161353\(v=office.15\).aspx) (https://technet.microsoft.com/library/fp161353(v=office.15).aspx) します。  
+-   [SharePoint 2013 でサポートされているモバイルデバイスブラウザー](https://technet.microsoft.com/library/fp161353\(v=office.15\).aspx) (https://technet.microsoft.com/library/fp161353(v=office.15).aspx))  
   
--   [Apple iPad デバイス (SharePoint Server 2010) でレポートとスコアカードの表示](https://technet.microsoft.com/library/hh697482.aspx)(https://technet.microsoft.com/library/hh697482.aspx) します。  
+-   [Apple iPad デバイスでのレポートとスコアカードの表示 (SharePoint Server 2010)](https://technet.microsoft.com/library/hh697482.aspx) (https://technet.microsoft.com/library/hh697482.aspx)を参照してください。  
   
--   [IPad (ビデオ) で Reporting Services レポートの表示](https://technet.microsoft.com/sqlserver/jj873792.aspx)(https://technet.microsoft.com/sqlserver/jj873792.aspx) します。  
+-   [IPad での Reporting Services レポートの表示 (ビデオ)](https://technet.microsoft.com/sqlserver/jj873792.aspx) (https://technet.microsoft.com/sqlserver/jj873792.aspx)を参照してください。  
   
--   [Microsoft Surface RT デバイスの (ビデオ) で Reporting Services レポートを表示します。](https://technet.microsoft.com/sqlserver/dn146017)  
+-   [Microsoft Surface RT デバイスでの Reporting Services レポートの表示 (ビデオ)](https://technet.microsoft.com/sqlserver/dn146017)  
   
   

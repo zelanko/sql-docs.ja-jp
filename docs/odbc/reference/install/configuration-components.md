@@ -13,21 +13,21 @@ ms.assetid: 0b68ff48-12e4-41aa-b9e2-b39ed5023ea7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 248a9e31b176444ad51cb3a62c7c5f12f1b7bde3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68068584"
 ---
 # <a name="configuration-components"></a>構成コンポーネント
 > [!NOTE]  
->  ODBC は Windows XP および Windows Server 2003 以降、Windows オペレーティング システムに含まれます。 Windows の以前のバージョンで ODBC を明示的にのみインストールしてください。  
+>  Windows XP および windows Server 2003 以降では、ODBC は Windows オペレーティングシステムに含まれています。 ODBC は、以前のバージョンの Windows にのみ明示的にインストールする必要があります。  
   
- データ ソースは、必要な Dll とトランスレーター セットアップ Dll のセットアップを有効にする呼び出しのドライバーのインストーラー DLL で構成されます。 インストーラー DLL は、コントロール パネルから直接呼び出されるまたは読み込まれと呼ばれる別のプログラムによって呼び出される、*管理プログラム*します。 次の図は、構成コンポーネント間の関係を示します。  
+ データソースは、インストーラーの DLL によって構成されます。この DLL は、必要に応じてドライバーのセットアップ Dll と translator セットアップ Dll を呼び出します。 インストーラー DLL は、コントロールパネルから直接呼び出されるか、または*管理プログラム*と呼ばれる別のプログラムによって読み込まれて呼び出されます。 構成コンポーネント間の関係を次の図に示します。  
   
  ![構成コンポーネント間の関係](../../../odbc/reference/install/media/pr30.gif "pr30")  
   
- これらのコンポーネントの詳細については、このセクションの最後に、次のトピックを参照してください。  
+ これらのコンポーネントの詳細については、このセクションの最後にある次のトピックを参照してください。  
   
 -   [セットアップ プログラム](../../../odbc/reference/install/setup-program.md)  
   
@@ -35,5 +35,5 @@ ms.locfileid: "68068584"
   
 -   [ドライバーのセットアップ DLL](../../../odbc/reference/install/driver-setup-dll.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [インストール コンポーネント](../../../odbc/reference/install/installation-components.md)

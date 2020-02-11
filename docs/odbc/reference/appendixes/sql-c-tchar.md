@@ -15,11 +15,11 @@ ms.assetid: 9e27c8bd-ee15-4ce9-b70a-34cf1bf16f4c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 68a03de54a8a5f63a994578d64c6bce5a1279138
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68057039"
 ---
-# <a name="sqlctchar"></a>SQL_C_TCHAR
-SQL_C_TCHAR 型識別子が、データ型を実際に識別できません。これは、Unicode への変換用のヘッダー ファイル内に存在するマクロです。 UNICODE の設定に応じて SQL_C_CHAR、SQL_C_WCHAR またはによって置き換えられる **#define**します。 ANSI および Unicode アプリケーションの両方としてコンパイルされる文字データを転送するアプリケーションに適しています。
+# <a name="sql_c_tchar"></a>SQL_C_TCHAR
+SQL_C_TCHAR 型識別子は実際にはデータ型を識別しません。これは、Unicode 変換のヘッダーファイル内に存在するマクロです。 UNICODE **#define**の設定によっては、SQL_C_CHAR または SQL_C_WCHAR に置き換えられます。 ANSI と Unicode の両方のアプリケーションとしてコンパイルされた文字データをアプリケーションが転送する場合に便利です。

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a7194147f60fa039caab1f9a712b9f6f75e2617d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104945"
 ---
 # <a name="shape-charts-report-builder-and-ssrs"></a>図形グラフ (レポート ビルダーおよび SSRS)
@@ -31,7 +31,7 @@ ms.locfileid: "66104945"
   
 ## <a name="variations"></a>バリエーション  
   
--   **ピラミッド**: ピラミッド グラフでは、相対的なデータが表示されるため、グラフはピラミッドのようになります。  
+-   **ピラミッド**。 ピラミッド グラフでは、相対的なデータが表示されるため、グラフはピラミッドのようになります。  
   
 ## <a name="data-considerations-for-shape-charts"></a>図形グラフのデータに関する注意点  
   
@@ -41,7 +41,7 @@ ms.locfileid: "66104945"
   
 -   図形グラフは、全体に占める比率を整然とした順序で表現したときに最も効果を発揮します。 ただし、一貫性を維持するために、既定では、データセット内の値の並べ替えが行われません。 じょうごグラフやピラミッド グラフでデータをできるだけ正確に表現するには、大きい方から順に値を並べ替えることを検討してください。 詳細については、「 [データのフィルター、グループ化、および並べ替え (レポート ビルダーおよび SSRS)](filter-group-and-sort-data-report-builder-and-ssrs.md)」を参照してください。  
   
--   比率を計算する場合、NULL、空、負、および 0 の各値は無効です。 このため、これらの値は図形グラフに表示されません。 このような値をグラフ上に表示する必要がある場合は、グラフの種類を図形グラフ以外のグラフに変更してください。 図形以外のグラフに空のポイントを追加する方法の詳細については、次を参照してください。[グラフに空のポイントを追加&#40;レポート ビルダーおよび SSRS&#41;](add-empty-points-to-a-chart-report-builder-and-ssrs.md)します。  
+-   比率を計算する場合、NULL、空、負、および 0 の各値は無効です。 このため、これらの値は図形グラフに表示されません。 このような値をグラフ上に表示する必要がある場合は、グラフの種類を図形グラフ以外のグラフに変更してください。 図形以外のグラフに空のポイントを追加する方法の詳細については、「[空のポイントをグラフに追加する &#40;レポートビルダーと SSRS&#41;](add-empty-points-to-a-chart-report-builder-and-ssrs.md)」を参照してください。  
   
 -   図形グラフでカスタム パレットを使用して独自の色を定義している場合は、各データ ポイントを独自の色で強調表示するのに十分な色がパレットにあることを確認します。 詳細については、「 [グラフの系列の色の書式設定 &#40;レポート ビルダーおよび SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)をクリックします。  
   
@@ -59,6 +59,6 @@ ms.locfileid: "66104945"
  [グラフ &#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [グラフの書式設定 (レポート ビルダーおよび SSRS)](formatting-a-chart-report-builder-and-ssrs.md)   
  [グラフ内の空のデータ ポイントおよび NULL データ ポイント (レポート ビルダーおよび SSRS)](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
- [円グラフ (レポート ビルダーおよび SSRS)](pie-charts-report-builder-and-ssrs.md)  
+ [円グラフ &#40;レポート ビルダーおよび SSRS&#41;](pie-charts-report-builder-and-ssrs.md)  
   
   

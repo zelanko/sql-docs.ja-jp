@@ -13,20 +13,20 @@ ms.assetid: cce0c25f-fa85-4cf5-bfee-4b7a9401f585
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9151ed5bbd02cce20ebd0c817197b8921a391c16
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68053831"
 ---
 # <a name="sqlexecute-visual-foxpro-odbc-driver"></a>SQLExecute (Visual FoxPro ODBC ドライバー)
 > [!NOTE]  
->  このトピックでには、Visual FoxPro ODBC ドライバー固有の情報が含まれています。 この関数の詳細については、該当するトピックを参照してください。 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)します。  
+>  このトピックには、Visual FoxPro ODBC ドライバー固有の情報が含まれています。 この関数の一般的な情報については、「 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)」の該当するトピックを参照してください。  
   
- サポート:[完全]  
+ サポート: 完全  
   
- ODBC API 準拠:コア レベル  
+ ODBC API の準拠: コアレベル  
   
- 準備された SQL ステートメントを実行します (既にによって準備ステートメント[SQLPrepare](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md))。 ドライバーでは、ステートメントにパラメーターが存在しない場合、パラメーター マーカーの変数の現在の値が使用されます。  
+ 準備された SQL ステートメント ( [SQLPrepare](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md)によって既に準備されているステートメント) を実行します。 ステートメントにパラメーターが存在する場合、ドライバーはパラメーターマーカー変数の現在の値を使用します。  
   
- 詳細については、次を参照してください。 [SQLExecute](../../odbc/reference/syntax/sqlexecute-function.md)で、 *ODBC プログラマ リファレンス*します。
+ 詳細については、 *ODBC プログラマーリファレンス*の「 [sqlexecute](../../odbc/reference/syntax/sqlexecute-function.md) 」を参照してください。

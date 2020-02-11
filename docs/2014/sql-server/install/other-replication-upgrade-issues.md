@@ -1,5 +1,5 @@
 ---
-title: その他のレプリケーションのアップグレードに関する問題 |Microsoft Docs
+title: レプリケーションのアップグレードに関するその他の問題 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,24 +18,26 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dd8ae8bb1080d92bb6a4ad1ba982f1dffc6d51f3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66093641"
 ---
 # <a name="other-replication-upgrade-issues"></a>レプリケーションのアップグレードに関するその他の問題
   このトピックでは、アップグレード アドバイザーによって報告されない多くのアップグレード問題について説明します。  
   
 ## <a name="versions-supported"></a>サポートされているバージョン  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、レプリケートされたデータベースを以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からアップグレードできます。 ノードのアップグレード中に、その他のノードでの操作を停止する必要はありません。 トポロジでサポートされるバージョンに関する以下の規則に従っていることを確認してください。  
+ 
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、レプリケートされたデータベースを以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からアップグレードできます。 ノードのアップグレード中に、その他のノードでの操作を停止する必要はありません。 トポロジでサポートされるバージョンに関する以下の規則に従っていることを確認してください。  
   
- 間または異なるバージョンの間でレプリケートするときに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、通常は、使用されている最も古いバージョンの機能に制限されます。  
+ またはの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]異なるバージョン間でレプリケートする場合、通常は、使用されている最も古いバージョンの機能に制限されます。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のディスク上ストレージ形式は、64 ビット環境と 32 ビット環境で同じため、レプリケーション トポロジでは、32 ビット環境で実行されているサーバー インスタンスと 64 ビット環境で実行されているサーバー インスタンスを組み合わせることができます。  
+>  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のディスク上ストレージ形式は、64 ビット環境と 32 ビット環境で同じため、レプリケーション トポロジでは、32 ビット環境で実行されているサーバー インスタンスと 64 ビット環境で実行されているサーバー インスタンスを組み合わせることができます。  
   
- どの種類のレプリケーションでも、ディストリビューターのバージョンがパブリッシャーのバージョン以上である必要があります (多くの場合、ディストリビューターはパブリッシャーと同じインスタンスです)。  
+ どの種類のレプリケーションでも、ディストリビューターのバージョンがパブリッシャーのバージョン以上である必要があります  (多くの場合、ディストリビューターはパブリッシャーと同じインスタンスです)。  
   
  トランザクション レプリケーションの場合、トランザクション パブリケーションのサブスクライバーは、2 つのパブリッシャー バージョンのうちどちらでも使用できます。  
   
@@ -49,7 +51,7 @@ ms.locfileid: "66093641"
   
 -   すべての ActiveX コントロールに、スクリプトおよび初期化に対して安全でないことを示すマークが付けられます。  
   
--   スナップショット ActiveX コントロールはサポートされなくなりました。 スナップショットを作成および管理するには、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用するか、レプリケーション ストアド プロシージャを使用してプログラムによって実行します。 詳細については、トピックを参照してください。"する方法。作成し、Apply the Initial Snapshot ([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)])"と"する方法。初期スナップショット (レプリケーション TRANSACT-SQL プログラミング) の作成"で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オンライン ブックの「します。  
+-   スナップショット ActiveX コントロールはサポートされなくなりました。 スナップショットを作成および管理するには、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用するか、レプリケーション ストアド プロシージャを使用してプログラムによって実行します。 詳細については、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] オンライン ブックの「初期スナップショットを作成および適用する方法 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])」および「初期スナップショットを作成する方法 (レプリケーション Transact-SQL プログラミング)」を参照してください。  
   
 -   ディストリビューション ActiveX コントロールおよびマージ ActiveX コントロールは非推奨とされます。 同様の機能は、レプリケーション管理オブジェクト (RMO) を使用したマネージド コード アプリケーションに提供されます。 詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「サブスクリプションの同期 (RMO プログラミング)」を参照してください。  
   

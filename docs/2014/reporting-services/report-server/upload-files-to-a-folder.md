@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5751941cb8912c527798c9aff5aaac1b46767fd8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103077"
 ---
 # <a name="upload-files-to-a-folder"></a>フォルダーへのファイルのアップロード
@@ -39,13 +39,13 @@ ms.locfileid: "66103077"
   
  視覚的には、レポート サーバー データベースにアップロードしたファイルは、以下のアイコンでフォルダー階層に表示されます。  
   
- ![レポート アイコン](../media/hlp-16doc.gif "レポート アイコン")  
+ ![レポートアイコン](../media/hlp-16doc.gif "レポート アイコン")  
 レポート アイコン  
   
- ![モデル アイコン](../media/model-icon.gif "モデル アイコン")  
+ ![モデルアイコン](../media/model-icon.gif "モデルアイコン")  
 レポート モデル アイコン  
   
- ![汎用リソース アイコン](../media/hlp-16file.gif "汎用リソース アイコン")  
+ ![汎用リソースアイコン](../media/hlp-16file.gif "汎用リソース アイコン")  
 汎用リソース アイコン  
   
  ファイルをアップロードすると、ファイルは常に、現在選択しているフォルダーに格納されます。 最初に、アイテムを含めるフォルダーに移動できます。また、ファイルをアップロードしてから最終的な場所にファイルを移動することもできます。  
@@ -59,9 +59,9 @@ ms.locfileid: "66103077"
 |フォルダーのコンテンツの表示|リソースの表示、レポートの表示|  
   
 ## <a name="see-also"></a>参照  
- [レポート マネージャー &#40;SSRS ネイティブ モード&#41;]./レポート-マネージャーの ssrs-ネイティブ-mode.md)   
+ [レポートマネージャー &#40;SSRS ネイティブモード&#41;]../report-manager-ssrs-native-mode.md)   
  [ネイティブ モードのレポート サーバーに対する権限の許可](../security/granting-permissions-on-a-native-mode-report-server.md)   
  [タスクと権限](../security/tasks-and-permissions.md)   
- [ファイルまたはレポートをアップロードする (レポート マネージャー)](../reports/upload-a-file-or-report-report-manager.md)  
+ [ファイルまたはレポートをアップロード &#40;レポートマネージャー&#41;](../reports/upload-a-file-or-report-report-manager.md)  
   
   

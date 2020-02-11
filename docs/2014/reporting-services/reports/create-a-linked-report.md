@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d0df6a3bdb6f542b02b62ccf4aa6614da290551f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102697"
 ---
 # <a name="create-a-linked-report"></a>リンク レポートを作成する
@@ -34,20 +34,22 @@ ms.locfileid: "66102697"
   
 2.  新規リンク レポートの名前を入力します。 必要に応じて、説明を入力します。  
   
-3.  レポートを別のフォルダーに保存するには、 **[場所の変更]** をクリックします。 保存先のフォルダーをクリックするか、または **[場所]** ボックスにフォルダー名を入力します。 [!INCLUDE[clickOK](../../../includes/clickok-md.md)] 別のフォルダーを指定しない場合、現在のフォルダー (リンク先のレポートが保存されているフォルダー) にリンク レポートが作成されます。  
+3.  レポートを別のフォルダーに保存するには、 **[場所の変更]** をクリックします。 保存先のフォルダーをクリックするか、または **[場所]** ボックスにフォルダー名を入力します。 
+  [!INCLUDE[clickOK](../../../includes/clickok-md.md)] 別のフォルダーを指定しない場合、現在のフォルダー (リンク先のレポートが保存されているフォルダー) にリンク レポートが作成されます。  
   
-4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)] リンク レポートが表示されます。  
+4.  
+  [!INCLUDE[clickOK](../../../includes/clickok-md.md)] リンク レポートが表示されます。  
   
      リンク レポートのアイコンは、レポート サーバーによって管理されるその他のアイテムのアイコンとは異なります。 次のアイコンでリンク レポートを示します。  
   
      ![リンク レポート アイコン](../media/hlp-16linked.gif "リンク レポート アイコン")  
   
-## <a name="see-also"></a>関連項目  
- [レポートを開閉する (レポート マネージャー)](../reports/open-and-close-a-report-report-manager.md)   
- [新しいリンク レポート ページ (レポート マネージャー)](../new-linked-report-page-report-manager.md)   
- [アイテムの場所の選択 ページ &#40;レポート マネージャー&#41;](../choose-item-location-page-report-manager.md)   
- [全般プロパティ ページ、レポート &#40;レポート マネージャー&#41;](../general-properties-page-reports-report-manager.md)   
+## <a name="see-also"></a>参照  
+ [レポート &#40;レポートマネージャーを開いて閉じる&#41;](../reports/open-and-close-a-report-report-manager.md)   
+ [[新しいリンクレポート] ページ &#40;レポートマネージャー&#41;](../new-linked-report-page-report-manager.md)   
+ [[項目の場所の選択] ページ &#40;レポートマネージャー&#41;](../choose-item-location-page-report-manager.md)   
+ [[全般] プロパティページ、レポート &#40;レポートマネージャー&#41;](../general-properties-page-reports-report-manager.md)   
  [Reporting Services の概念 &#40;SSRS&#41;](../reporting-services-concepts-ssrs.md)   
- [レポート マネージャー (SSRS ネイティブ モード)](../report-manager-ssrs-native-mode.md)  
+ [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](../report-manager-ssrs-native-mode.md)  
   
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 924b450ab138df1cad3afcfa11cb9c0d1cc87a22
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105117"
 ---
 # <a name="union-function-report-builder-and-ssrs"></a>Union 関数 (レポート ビルダーおよび SSRS)
@@ -38,12 +38,13 @@ Union(expression, scope, recursive)
  (`String`) 省略可。 集計関数の適用先となるレポート アイテムを含むデータセット、グループ、またはデータ領域の名前です。 *scope* を指定しない場合、現在のスコープが使用されます。  
   
  *再帰*  
- (**列挙型**) 省略可。 `Simple` (既定値) または `RdlRecursive` です。 集計を再帰的に実行するかどうかを指定します。  
+ (**列挙型**) 省略可。 
+  `Simple` (既定値) または `RdlRecursive` です。 集計を再帰的に実行するかどうかを指定します。  
   
 ## <a name="return"></a>戻り値  
- いずれかの空間オブジェクトを返します`SqlGeometry`または`SqlGeography`式の型に基づきます。 詳細については`SqlGeometry`と`SqlGeography`空間データ型を参照してください[空間データ型の概要](../../relational-databases/spatial/spatial-data-types-overview.md)します。  
+ 式の型に基づいて`SqlGeometry` 、 `SqlGeography`またはのいずれかの空間オブジェクトを返します。 および空間データ型の詳細については、「[空間データ型の概要](../../relational-databases/spatial/spatial-data-types-overview.md)」を参照してください。 `SqlGeography` `SqlGeometry`  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  式で指定されたデータセットは、同じデータ型である必要があります。  
   
  *scope* の値は文字列定数である必要があり、式にすることはできません。 外部の集計または他の集計を指定しない集計では、 *scope* は現在のスコープまたはコンテナー スコープを参照する必要があります。 データセットのスコープはサポートされません。 集計の集計では、入れ子になった集計に、子のスコープを指定できます。  
@@ -54,7 +55,7 @@ Union(expression, scope, recursive)
   
 -   入れ子集計の*Scope* には、データセット名は使用できません。  
   
--   *式*する必要がありますが含まれていない`First`、 `Last`、 `Previous`、または`RunningValue`関数。  
+-   *式*には、 `First`、 `Last`、 `Previous`、また`RunningValue`は関数を含めることはできません。  
   
 -   *Expression* には、 *recursive*を指定する入れ子集計を含めることができません。  
   
@@ -77,7 +78,7 @@ Union(expression, scope, recursive)
 =Union(Fields!PolygonDefinition.Value, "Group1")  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [レポートでの式の使用 (レポート ビルダーおよび SSRS)](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [式の例 (レポート ビルダーおよび SSRS)](expression-examples-report-builder-and-ssrs.md)   
  [式で使用されるデータ型 &#40;レポート ビルダーおよび SSRS&#41;](expressions-report-builder-and-ssrs.md)   

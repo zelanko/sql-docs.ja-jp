@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7ae056d72d3966a9787ac2d52f89689ae9f6a799
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106296"
 ---
 # <a name="3d-bevel-and-other-effects-in-a-chart-report-builder-and-ssrs"></a>グラフに対する 3D、傾斜、およびその他の効果 (レポート ビルダーおよび SSRS)
@@ -59,9 +59,9 @@ ms.locfileid: "66106296"
 ## <a name="highlighting-3d-effects"></a>3D 効果の強調表示  
  強調表示のスタイルは、 **Shading** プロパティを使用して 3D グラフに追加することができます。このプロパティは、グラフ領域を選択すると、プロパティ ペインの [Area3DStyle] の下に表示されます。 単純な光源のスタイルでは、グラフ領域の要素に同じ色合いが適用されます。 写実的なスタイルでは、指定された光源の角度に応じて、グラフ領域の要素の色合いが変わります。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [グラフの軸ラベルの書式設定 (レポート ビルダーおよび SSRS)](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [グラフの書式設定 (レポート ビルダーおよび SSRS)](formatting-a-chart-report-builder-and-ssrs.md)   
- [グラフへの 3D 効果の追加 (レポート ビルダーおよび SSRS)](chart-effects-add-3d-effects-report-builder.md)  
+ [グラフへの 3D 効果の追加 &#40;レポート ビルダーおよび SSRS&#41;](chart-effects-add-3d-effects-report-builder.md)  
   
   

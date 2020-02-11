@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 99456151a71e74d0e85baec19cc42d8450c00ae4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106166"
 ---
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>ドキュメント マップの作成 (レポート ビルダーおよび SSRS)
@@ -48,7 +48,7 @@ ms.locfileid: "66106166"
     > [!NOTE]  
     >  Tablix データ領域を選択するには、任意のセルをクリックして行ハンドルおよび列ハンドルを表示し、コーナー ハンドルをクリックします。  
   
-2.  プロパティ ペインで、ドキュメント マップに表示するテキストを入力、`DocumentMapLabel`プロパティ、または、ラベルに評価される式を入力します。 たとえば、「 **Sales Chart**」のように入力します。  
+2.  プロパティペインで、ドキュメントマップに表示するテキストを`DocumentMapLabel`プロパティに入力するか、結果がラベルになる式を入力します。 たとえば、「 **Sales Chart**」のように入力します。  
   
     > [!NOTE]  
     >  [プロパティ] ペインが表示されない場合は、 **[表示]** タブの **[表示/非表示]** グループで、 **[プロパティ]** を選択します。  
@@ -112,13 +112,13 @@ ms.locfileid: "66106166"
 4.  レポート マネージャーで URL を貼り付け、&lt;localizedText&gt;Enter&lt;/localizedText&gt; キーを押します。 レポートが実行され、ドキュメント マップが非表示になります。  
   
 > [!NOTE]  
->  サンプル レポートをダウンロードする方法の詳細については、「 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][レポート ビルダーおよびレポート デザイナーのサンプル レポート](https://go.microsoft.com/fwlink/?LinkId=198283)」を参照してください。  
+>  サンプルレポートのダウンロードの詳細について[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]は、「[レポートビルダーおよびレポートデザイナーサンプルレポート](https://go.microsoft.com/fwlink/?LinkId=198283)」を参照してください。  
 >   
 >  詳細については、 [Reporting Services のドキュメント](https://go.microsoft.com/fwlink/?linkid=121312) (SQL Server オンライン ブック) の「URL アクセス」を参照してください。  
   
  
   
-## <a name="see-also"></a>関連項目  
- [レポート マネージャーでレポートの表示を見つけて&#40;レポート ビルダーおよび SSRS&#41;](../report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
+## <a name="see-also"></a>参照  
+ [レポートマネージャー &#40;レポートビルダーおよび SSRS&#41;でのレポートの検索と表示](../report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
   
   

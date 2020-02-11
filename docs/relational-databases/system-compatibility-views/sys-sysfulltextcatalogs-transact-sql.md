@@ -1,5 +1,5 @@
 ---
-title: sys.sysfulltextcatalogs (TRANSACT-SQL) |Microsoft Docs
+title: sysfulltextcatalogs (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,29 +22,29 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c1e5bbae3a511249774d95e52210b04016c3370f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68053457"
 ---
 # <a name="syssysfulltextcatalogs-transact-sql"></a>sys.sysfulltextcatalogs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
 
-  フルテキスト カタログに関する情報が含まれています。  
+  フルテキストカタログに関する情報を格納します。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
-|**ftcatid**|**smallint**|フルテキスト カタログの識別子。|  
-|**name**|**sysname**|ユーザーによって指定されたフルテキスト カタログ名。|  
-|**status**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**path**|**nvarchar(260)**|ユーザーによって指定されたルート パスです。<br /><br /> NULL = パスが指定されていません。 既定 (インストール) パスが使用されています。|  
+|**ftcatid**|**smallint**|フルテキストカタログの識別子。|  
+|**name**|**sysname**|ユーザーによって指定されたフルテキストカタログ名。|  
+|**オンライン**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**道**|**nvarchar (260)**|ユーザーによって指定されたルート パスです。<br /><br /> NULL = パスが指定されていません。 既定 (インストール) パスが使用されています。|  
   
-## <a name="see-also"></a>関連項目  
- [システム ビューへのシステム テーブルのマッピング&#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
- [互換性ビュー &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
+## <a name="see-also"></a>参照  
+ [システムビューへのシステムテーブルのマッピング &#40;Transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
+ [互換性ビュー &#40;Transact-sql&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

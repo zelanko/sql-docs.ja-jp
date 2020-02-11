@@ -13,14 +13,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ce39066ca805e024c77a6bf45bcf9ce8c1302053
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097368"
 ---
-# <a name="virtualdirectoryreportserver-property-wmi-msreportserverconfigurationsetting"></a>VirtualDirectoryReportServer プロパティ (WMI MSReportServer_ConfigurationSetting)
-  レポート サーバー アプリケーションの仮想ディレクトリを返します。 読み取り専用。  
+# <a name="virtualdirectoryreportserver-property-wmi-msreportserver_configurationsetting"></a>VirtualDirectoryReportServer プロパティ (WMI MSReportServer_ConfigurationSetting)
+  レポート サーバー アプリケーションの仮想ディレクトリを返します。 読み取り専用です。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,9 +39,9 @@ public string VirtualDirectoryReportServer;
  [MSReportServer_ConfigurationSetting クラス](msreportserver-configurationsetting-class.md)  
   
 ## <a name="requirements"></a>必要条件  
- **名前空間:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **名前空間:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [MSReportServer_ConfigurationSetting メンバー](msreportserver-configurationsetting-members.md)  
   
   

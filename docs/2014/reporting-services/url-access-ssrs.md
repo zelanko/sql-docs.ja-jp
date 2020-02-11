@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0cc753f16ca9b70523fe6cb858fd167ef044087b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098731"
 ---
 # <a name="url-access-ssrs"></a>URL アクセス (SSRS)
@@ -58,14 +58,14 @@ reportpath
   
 ### <a name="syntax-description"></a>構文の説明  
  *rswebserviceurl*  
- レポート サーバーの Web サービスの URL。 ネイティブ モードでは、Reporting Services Configuration Manager に構成されているレポート サーバー インスタンスの Web サービスの URL です (「[レポート サーバー URL の構成 (SSRS 構成マネージャー)](install-windows/configure-report-server-urls-ssrs-configuration-manager.md)」を参照してください)。 以下に例を示します。  
+ レポート サーバーの Web サービスの URL。 ネイティブ モードでは、Reporting Services Configuration Manager に構成されているレポート サーバー インスタンスの Web サービスの URL です (「[レポート サーバー URL の構成 (SSRS 構成マネージャー)](install-windows/configure-report-server-urls-ssrs-configuration-manager.md)」を参照してください)。 次に例を示します。  
   
 ```  
 http://myrshost/reportserver  
 https://machine.adventure-works.com/reportserver_MYNAMEDINSTANCE  
 ```  
   
- SharePoint 統合モードでは、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] に統合された SharePoint サイトの [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]プロキシの URL です。 以下に例を示します。  
+ SharePoint 統合モードでは、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] に統合された SharePoint サイトの [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]プロキシの URL です。 次に例を示します。  
   
 ```  
 http://myspsite/subsite/_vti_bin/reportserver  
@@ -77,13 +77,13 @@ http://myspsite/subsite/_vti_bin/reportserver
  *pathinfo*  
  ネイティブ モードのレポート サーバー データベース内のアイテムの相対パス名、または SharePoint カタログ内のアイテムの完全修飾 URL。  
   
- カタログ アイテムのパス。 ネイティブ モードでは、スラッシュ (`/`) から始まるレポート サーバー データベース内のアイテムの相対パスです。 以下に例を示します。  
+ カタログ アイテムのパス。 ネイティブ モードでは、スラッシュ (`/`) から始まるレポート サーバー データベース内のアイテムの相対パスです。 次に例を示します。  
   
 ```  
 /AdventureWorks 2008R2/Employee_Sales_Summary_2008R2  
 ```  
   
- SharePoint 統合モードでは、アイテムの拡張子を含む、SharePoint ライブラリ内のアイテムの完全修飾 URL です。 以下に例を示します。  
+ SharePoint 統合モードでは、アイテムの拡張子を含む、SharePoint ライブラリ内のアイテムの完全修飾 URL です。 次に例を示します。  
   
 ```  
 http://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl  
@@ -92,8 +92,8 @@ http://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl
  `&`  
  URL アクセス パラメーターの名前と値のペアを区切るために使用します。  
   
- **プレフィックス**  
- 任意。 URL アクセス パラメーターのプレフィックス ( `rs:` や `rc:`など)。レポート サーバー内で実行している特定のプロセスにアクセスします。  
+ **prefix**  
+ 省略可能。 URL アクセス パラメーターのプレフィックス ( `rs:` や `rc:`など)。レポート サーバー内で実行している特定のプロセスにアクセスします。  
   
 > [!NOTE]  
 >  URL アクセス パラメーターにプレフィックスが含まれていない場合は、レポート サーバーによってパラメーターがレポート パラメーターとして処理されます。 レポート パラメーターではパラメーター プレフィックスが使用されず、大文字と小文字が区別されます。  
@@ -104,7 +104,7 @@ http://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl
  *value*  
  使用しているパラメーターの値に対応する URL テキスト。  
   
- **注:** 使用可能な URL アクセス パラメーターの一覧は、次を参照してください。 [URL アクセス パラメーター リファレンス](url-access-parameter-reference.md)します。 URL でレポート パラメーターを渡す例については、「 [URL 内でレポート パラメーターを渡す](pass-a-report-parameter-within-a-url.md)」を参照してください。  
+ **注:** 使用可能な URL アクセス パラメーターの一覧については、「 [URL Access Parameter Reference](url-access-parameter-reference.md)」(URL アクセス パラメーター リファレンス) を参照してください。 URL でレポート パラメーターを渡す例については、「 [URL 内でレポート パラメーターを渡す](pass-a-report-parameter-within-a-url.md)」を参照してください。  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
@@ -114,13 +114,13 @@ http://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl
 |レポート パラメーターをレポートに受け渡す|[URL 内でレポート パラメーターを渡す](pass-a-report-parameter-within-a-url.md)|  
 |日付、通貨など、ロケール固有の解釈を定義する URL アクセス文字列にレポート パラメーターのロケールを設定する|[URL でレポート パラメーターの言語を設定する](set-the-language-for-report-parameters-in-a-url.md)|  
 |レポートの表示形式をカスタマイズする表示拡張機能固有の設定を送信する|[URL でデバイス情報設定を指定する](specify-device-information-settings-in-a-url.md)|  
-|ブラウザーに表示せずに、レポートを直接ファイル形式にエクスポートする|[URL アクセスを使用してレポートをエクスポートする](export-a-report-using-url-access.md)|  
+|ブラウザーに表示せずに、レポートを直接ファイル形式にエクスポートする|[URL アクセスを使用してレポートをエクスポート](export-a-report-using-url-access.md)|  
 |レポートを開き、文字列の場所に直接移動する|[URL アクセスを使用してレポートを検索する](search-a-report-using-url-access.md)|  
 |特例のレポート履歴スナップショットを表示する|[URL アクセスを使用してレポート履歴スナップショットを表示する](render-a-report-history-snapshot-using-url-access.md)|  
   
 ## <a name="see-also"></a>参照  
  [URL 内でレポート パラメーターを渡す](pass-a-report-parameter-within-a-url.md)   
- [URL Access Parameter Reference](url-access-parameter-reference.md)   
+ [URL アクセス パラメーター リファレンス](url-access-parameter-reference.md)   
  [URL アクセスを使用した Reporting Services の統合](application-integration/integrating-reporting-services-using-url-access.md)   
  [レポートの検索、表示、管理 &#40;レポート ビルダーおよび SSRS&#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   

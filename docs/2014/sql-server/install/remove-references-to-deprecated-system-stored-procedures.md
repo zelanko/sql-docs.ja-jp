@@ -1,5 +1,5 @@
 ---
-title: 非推奨のシステム ストアド プロシージャへの参照の削除 |Microsoft Docs
+title: 非推奨のシステムストアドプロシージャへの参照を削除する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2e841956adf08f9ac14a3f1360839e9132bf9cd6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66093111"
 ---
 # <a name="remove-references-to-deprecated-system-stored-procedures"></a>非推奨ｎおシステム ストアド プロシージャの参照の削除
@@ -26,7 +26,7 @@ ms.locfileid: "66093111"
 ## <a name="component"></a>コンポーネント  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-## <a name="description"></a>説明  
+## <a name="description"></a>[説明]  
   
 ### <a name="documented-system-stored-procedures"></a>ドキュメントに記載されているシステム ストアド プロシージャ  
  ドキュメントに記載されている以下のシステム ストアド プロシージャは削除されています。  
@@ -98,11 +98,11 @@ ms.locfileid: "66093111"
 |sp_addalias|別名をユーザー アカウントとデータベース ロールの組み合わせで置き換えてください。 詳細については、SQL Server オンライン ブックの「CREATE USER (Transact-SQL)」および「CREATE ROLE (Transact-SQL)」を参照してください。 アップグレードされたデータベースで別名を削除するには、sp_dropalias を使用します。|  
 |sp_addgroupsp_changegroup<br /><br /> sp_dropgroup<br /><br /> sp_helpgroup|ロールを使用します。 詳細については、SQL Server オンライン ブックの「サーバー レベルのロール」および「データベース レベルのロール」を参照してください。|  
   
-### <a name="undocmented-system-stored-procedures"></a>Undocmented システム ストアド プロシージャ  
+### <a name="undocmented-system-stored-procedures"></a>Undocmented システムストアドプロシージャ  
  ドキュメントに記載されていないシステム ストアド プロシージャの代わりに、同じ機能を持つ CLR ストアド プロシージャを作成できます。 詳細については、SQL Server オンライン ブックの「CLR ストアド プロシージャ」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [データベース エンジンのアップグレードに関する問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 アップグレード アドバイザー&#91;新規&#93;](sql-server-2014-upgrade-advisor.md)  
+ [データベースエンジンのアップグレードに関する問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [SQL Server 2014 Upgrade Advisor &#91;新しい&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

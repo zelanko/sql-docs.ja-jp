@@ -17,13 +17,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: eed9b1a0deb7e88c85283ea3dc7cab9bf893937f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101998"
 ---
 # <a name="create-and-manage-role-assignments"></a>ロールの割り当てを作成および管理する
+  
   *ロールの割り当て* は、ユーザーまたはグループが特定のレポート サーバー アイテムにアクセスできるか、または操作を実行できるかを決定するセキュリティ ポリシーです。 ロールの割り当ては、ユーザーまたはグループのアカウント名 1 つと、1 つ以上のロールの定義で構成されます。  
   
  ロールの割り当ては、 *アイテムレベル* または *システムレベル*で有効です。  
@@ -41,7 +42,7 @@ ms.locfileid: "66101998"
   
  ロールの割り当てを作成するには、レポート サーバー コンピューターのローカル管理者グループのメンバーであることが必要です。 この役割は、別のユーザーを **コンテンツ マネージャー** ロールに割り当てることで委任できます。  
   
- 詳細については、「 [レポート サーバーへのユーザー アクセスを許可する (レポート マネージャー)](grant-user-access-to-a-report-server.md)で有効です。  
+ 詳細については、「[レポートサーバーへのユーザーアクセスを許可する &#40;レポートマネージャー&#41;](grant-user-access-to-a-report-server.md)」を参照してください。  
   
 ## <a name="creating-a-system-level-role-assignment"></a>システムレベルのロールの割り当ての作成  
  システムレベルのロールの割り当てを作成または管理するには、レポート マネージャーで [サイトの設定] ページを開きます。  
@@ -64,10 +65,10 @@ ms.locfileid: "66101998"
   
 ## <a name="see-also"></a>参照  
  [レポート サーバーへのユーザー アクセスを許可する (レポート マネージャー)](grant-user-access-to-a-report-server.md)   
- [ロールの割り当てを変更または削除する (レポート マネージャー)](role-assignments-modify-or-delete.md)   
+ [ロールの割り当てを変更または削除する &#40;レポートマネージャー&#41;](role-assignments-modify-or-delete.md)   
  [ロールの割り当て](role-assignments.md)   
  [ロールの定義](role-definitions.md)   
- [Predefined Roles](role-definitions-predefined-roles.md)   
+ [定義済みロール](role-definitions-predefined-roles.md)   
  [ネイティブ モードのレポート サーバーに対する権限の許可](granting-permissions-on-a-native-mode-report-server.md)  
   
   

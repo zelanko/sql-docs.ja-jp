@@ -20,18 +20,18 @@ ms.assetid: b96ab3b8-08d5-4fea-9ffe-e03043efbf2d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 14fb43015db9113262320f78f0bae53f8a168f95
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68044555"
 ---
 # <a name="sqlgetconfigmode-function"></a>SQLGetConfigMode 関数
-**準拠**  
- バージョンが導入されました。ODBC 3.0  
+**互換性**  
+ 導入されたバージョン: ODBC 3.0  
   
- **概要**  
- **SQLGetConfigMode** DSN の値を一覧表示した Odbc.ini エントリが、システム情報の場所を示す構成モードを取得します。  
+ **まとめ**  
+ **Sqlgetconfigmode**は、DSN 値を一覧表示する Odbc .ini エントリのシステム情報の場所を示す構成モードを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -43,7 +43,7 @@ BOOL SQLGetConfigMode(
   
 ## <a name="arguments"></a>引数  
  *pwConfigMode*  
- [出力]構成モードを格納しているバッファーへのポインター。 (「コメントです」を参照してください)値 *\*pwConfigMode*を指定できます。  
+ Output構成モードを格納しているバッファーへのポインター。 (「コメント」を参照してください)。* \*PwConfigMode*の値は次のようになります。  
   
  ODBC_USER_DSN  
   
@@ -52,22 +52,22 @@ BOOL SQLGetConfigMode(
  ODBC_BOTH_DSN  
   
 ## <a name="returns"></a>戻り値  
- 関数は、成功した場合、FALSE が失敗した場合に TRUE を返します。  
+ 関数は、成功した場合は TRUE、失敗した場合は FALSE を返します。  
   
 ## <a name="diagnostics"></a>診断  
- ときに**SQLGetConfigMode** 、関連付けられている FALSE が返されます *\*pfErrorCode*を呼び出して値を取得する**SQLInstallerError**します。 次の表、  *\*pfErrorCode*によって返される値**SQLInstallerError**とこの関数のコンテキストでそれぞれについて説明します。  
+ **Sqlgetconfigmode**から FALSE が返された場合、 **sqlインストーラエラー**を呼び出すことによって、関連* \*する pferrorcode*値を取得できます。 次の表は、 **sqlインストーラエラー**によって返される可能性がある* \*pferrorcode*値と、この関数のコンテキストにおけるそれぞれの値を示しています。  
   
-|*\*pfErrorCode*|[エラー]|説明|  
+|*\*pfErrorCode*|エラー|[説明]|  
 |---------------------|-----------|-----------------|  
-|ODBC_ERROR_OUT_OF_MEM|メモリ不足|インストーラーは、メモリ不足のため、関数を実行できませんでした。|  
+|ODBC_ERROR_OUT_OF_MEM|メモリ不足|メモリ不足のため、インストーラーで関数を実行できませんでした。|  
   
-## <a name="comments"></a>コメント  
- この関数を使用して、DSN の値を一覧表示した Odbc.ini エントリが、システム情報の場所を決定します。 場合 *\*pwConfigMode*は ODBC_USER_DSN、DSN がユーザー DSN と関数は、HKEY_CURRENT_USER 内の Odbc.ini エントリから読み取ります。 ODBC_SYSTEM_DSN 場合は、DSN はシステム DSN と関数は、HKEY_LOCAL_MACHINE 内の Odbc.ini エントリから読み取ります。 ODBC_BOTH_DSN 場合は、HKEY_CURRENT_USER 試行すると失敗した場合、HKEY_LOCAL_MACHINE が使用されます。  
+## <a name="comments"></a>説明  
+ この関数は、DSN 値を一覧表示する Odbc .ini エントリのシステム情報内の場所を決定するために使用されます。 * \*PwConfigMode*が ODBC_USER_DSN 場合、dsn はユーザー dsn で、関数は HKEY_CURRENT_USER の ODBC .ini エントリから読み取ります。 ODBC_SYSTEM_DSN の場合、DSN はシステム DSN で、関数は HKEY_LOCAL_MACHINE の Odbc .ini エントリから読み取ります。 ODBC_BOTH_DSN 場合は HKEY_CURRENT_USER が試行され、失敗した場合は HKEY_LOCAL_MACHINE が使用されます。  
   
- 既定では、 **SQLGetConfigMode** ODBC_BOTH_DSN を返します。 呼び出してユーザー DSN またはシステム DSN を作成するときに**SQLConfigDataSource**関数が ODBC_USER_DSN または ODBC_SYSTEM_DSN DSN の変更中にユーザーとシステム Dsn を区別するために、構成モードを設定します。 を返す前に**SQLConfigDataSource** ODBC_BOTH_DSN 構成モードにリセットします。  
+ 既定では、 **Sqlgetconfigmode**は ODBC_BOTH_DSN を返します。 ユーザー DSN またはシステム DSN が**Sqlconfigdatasource**への呼び出しによって作成された場合、関数は、構成モードを ODBC_USER_DSN または ODBC_SYSTEM_DSN に設定して、dsn を変更するときにユーザーとシステムの dsn を区別します。 返される前に、 **Sqlconfigdatasource**によって構成モードが ODBC_BOTH_DSN にリセットされます。  
   
 ## <a name="related-functions"></a>関連する関数  
   
-|詳細|参照先|  
+|対象|以下を参照してください。|  
 |---------------------------|---------|  
 |構成モードの設定|[SQLSetConfigMode](../../../odbc/reference/syntax/sqlsetconfigmode-function.md)|

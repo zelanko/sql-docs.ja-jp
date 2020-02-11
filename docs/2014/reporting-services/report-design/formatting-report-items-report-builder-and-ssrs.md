@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4e1f2aeda7b835c72d06372193c37baa858c603d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105787"
 ---
 # <a name="formatting-report-items-report-builder-and-ssrs"></a>レポート アイテムの書式設定 (レポート ビルダーおよび SSRS)
@@ -32,7 +32,7 @@ ms.locfileid: "66105787"
   
  書式設定するアイテムを選択し、そのアイテムの [プロパティ] ダイアログ ボックスを開くと、書式設定オプションを変更できます。 たとえば、テキスト ボックス全体のコンテンツやテキスト ボックスの選択した単語の書式を設定するには、アイテムを右クリックして、 **[テキスト ボックスのプロパティ]** を選択します。 次に、書式設定するスタイルを適用することができます。  
   
- すぐに使用するには、「[チュートリアル:テキストの書式設定 &#40;レポート ビルダー&#41;](../tutorial-format-text-report-builder.md)」をご覧ください。  
+ すぐに使用するには、「[チュートリアル: テキストの書式設定 &#40;レポート ビルダー&#41;](../tutorial-format-text-report-builder.md)」をご覧ください。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -41,19 +41,20 @@ ms.locfileid: "66105787"
  [テキストとプレースホルダーの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)  
  テキストの書式設定方法と、テキスト ボックス内の異なるテキスト ブロックの書式設定オプションのカスタマイズ方法について説明します。  
   
- [レポートへの HTML のインポート &#40;レポート ビルダーおよび SSRS&#41;](importing-html-into-a-report-report-builder-and-ssrs.md)  
+ [レポートへの HTML のインポート &#40;レポートビルダーと SSRS&#41;](importing-html-into-a-report-report-builder-and-ssrs.md)  
  レポートに HTML を挿入して使用する方法について説明します。  
   
  [数値と日付の書式設定 &#40;レポート ビルダーおよび SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]によりサポートされる標準書式指定文字列とカスタム書式指定文字列の使用方法について説明します。  
+ 
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]によりサポートされる標準書式指定文字列とカスタム書式指定文字列の使用方法について説明します。  
   
  [線、色、および画像の書式設定 &#40;レポート ビルダーおよび SSRS&#41;](images-report-builder-and-ssrs.md)  
  レポート アイテムとデータ領域内の線、グリッド線、色、および画像の書式設定方法について説明します。  
   
- [レポートまたはテキスト ボックスのロケールの設定 &#40;Reporting Services&#41;](set-the-locale-for-a-report-or-text-box-reporting-services.md)  
+ [レポートまたはテキストボックスのロケールを &#40;Reporting Services に設定&#41;](set-the-locale-for-a-report-or-text-box-reporting-services.md)  
  日付、通貨、数値など、言語や地域ごとに異なるデータの表示形式の設定を変更する方法について説明します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [グラフの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)  
   
   

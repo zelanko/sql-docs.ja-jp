@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: eb726adbb523f679fd9d59e3e51b2dc1291e6247
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106048"
 ---
 # <a name="display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs"></a>円グラフの外側へのデータ ポイント ラベルの表示 (レポート ビルダーおよび SSRS)
@@ -41,7 +41,7 @@ ms.locfileid: "66106048"
   
 5.  **[PieLabelStyle]** プロパティを **Outside**に設定します。  
   
-6.  設定、`PieLineColor`プロパティを**黒**します。 PieLineColor プロパティでは、各データ ポイント ラベルの引き出し線を定義します。  
+6.  `PieLineColor`プロパティを**Black**に設定します。 PieLineColor プロパティでは、各データ ポイント ラベルの引き出し線を定義します。  
   
 ### <a name="to-prevent-overlapping-labels-displayed-outside-a-pie-chart"></a>円グラフの外側に表示されるラベルの重なりを防ぐには  
   
@@ -56,6 +56,6 @@ ms.locfileid: "66106048"
 ## <a name="see-also"></a>参照  
  [円グラフ &#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [円グラフの小さいスライスをまとめる &#40;レポート ビルダーおよび SSRS&#41;](collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)   
- [円グラフへのパーセンテージの表示 &#40;レポート ビルダーおよび SSRS&#41;](display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)  
+ [円グラフへのパーセンテージの表示 (レポート ビルダーおよび SSRS)](display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)  
   
   

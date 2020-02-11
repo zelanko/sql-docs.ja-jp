@@ -1,5 +1,5 @@
 ---
-title: ExtendedAnsiSQL の設定 |Microsoft Docs
+title: ExtendedAnsiSQL | の設定Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,22 +13,22 @@ ms.assetid: 37b775d1-65ac-45ac-8572-454bc4e3c1a2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 330b55ef2d4fee090c453990d3fe75e6e2dacb6f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68063600"
 ---
 # <a name="setting-extendedansisql"></a>ExtendedAnsiSQL の設定
-ExtendedAnsiSQL 属性を追加することで、接続文字列で、属性を制御できます。  
+ExtendedAnsiSQL 属性を追加することで、接続文字列内の属性を制御できます。  
   
-|値|説明|  
+|値|[説明]|  
 |-----------|-----------------|  
-|ExtendedAnsiSQL = 0 (既定)|この設定は、新しい機能を有効になりません。|  
-|ExtendedAnsiSQL = 1|この設定により、新機能です。|  
+|ExtendedAnsiSQL = 0 (既定値)|この設定では、新しい機能は有効になりません。|  
+|ExtendedAnsiSQL = 1|この設定により、新しい機能が有効になります。|  
   
- 経由の DSN で属性を設定することも、**オプションの高度な** ダイアログ ボックスのコントロール パネルを使用した DSN を構成するときにします。  
+ 属性は、コントロールパネルで DSN を構成するときに、 **[詳細オプション**] ダイアログボックスで dsn で設定することもできます。  
   
- 0 にする属性を設定する; の新機能により、新機能を 1 に設定します。  
+ 属性を0に設定すると、新しい機能が無効になります。1に設定すると、新しい機能が有効になります。  
   
- SQLSetConnectAttr() を使用して、属性を設定することもできます。 属性の値は 65501 し、前の表に記載されているが、1 または 0 の SQLINTEGER 値に設定します。 前に、または接続した後、呼び出すことができますが、接続属性および接続文字列、ドライバー プロセスがキャッシュされる順序が原因で接続した後に呼び出すことをお勧めします。
+ 属性は、SQLSetConnectAttr () を使用して設定することもできます。 属性値は65501で、前の表に記載されているように、SQLINTEGER 値が1または0に設定されています。 接続の前または後に呼び出すことができますが、キャッシュされた接続属性と接続文字列をドライバーが処理する順序によって、接続後に呼び出す方が適切です。

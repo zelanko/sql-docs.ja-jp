@@ -1,5 +1,5 @@
 ---
-title: sys.fn_check_object_signatures (Transact-SQL) |Microsoft Docs
+title: fn_check_object_signatures (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,16 +21,16 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1b9054cae2d8b67a96be964ca8dd0f1effe2113a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68046310"
 ---
 # <a name="sysfn_check_object_signatures-transact-sql"></a>sys.fn_check_object_signatures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
 
-  署名可能なすべてのオブジェクトの一覧を返し、オブジェクトが、指定した証明書または非対称キーで署名されているかどうかを示します。 オブジェクトは、指定された証明書または非対称キーの署名によって署名されて場合、も、オブジェクトの署名が有効かどうかを返します。  
+  署名可能なすべてのオブジェクトの一覧を返し、オブジェクトが、指定した証明書または非対称キーで署名されているかどうかを示します。 オブジェクトが、指定した証明書または非対称キーによって署名されている場合は、オブジェクトの署名が有効かどうかも返されます。  
   
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -45,36 +45,36 @@ fn_ check_object_signatures (
 ```  
   
 ## <a name="arguments"></a>引数  
- {0} '\@*class*'}  
- 提供される thumbprint の種類を識別します。  
+ {'\@*class*'}  
+ 提供される拇印の種類を識別します。  
   
 -   'certificate'  
   
 -   'asymmetric key'  
   
- \@*class* は **sysname** です。  
+ \@*クラス*は**sysname**です。  
   
- { \@*thumbprint*}  
- キーの暗号化で使用された証明書の SHA-1 ハッシュ。または、キーの暗号化で使用された非対称キーの GUID。 \@*thumbprint* は **varbinary (20)** です。  
+ { \@ *thumbprint* }  
+ キーの暗号化で使用された証明書の SHA-1 ハッシュ。または、キーの暗号化で使用された非対称キーの GUID。 \@*拇印*は**varbinary (20)** です。  
   
 ## <a name="tables-returned"></a>返されるテーブル  
- 次の表に、列を**fn_check_object_signatures**を返します。  
+ 次の表に、 **fn_check_object_signatures**が返す列を示します。  
   
-|[列]|種類|説明|  
+|列|種類|[説明]|  
 |------------|----------|-----------------|  
-|type|**nvarchar(120)**|説明またはアセンブリの型を返します。|  
+|型|**nvarchar (120)**|型の説明またはアセンブリを返します。|  
 |entity_id|**int**|評価対象のオブジェクトのオブジェクト ID を返します。|  
-|is_signed|**int**|提供された thumbprint でオブジェクトが署名されていない場合は、0 を返します。 提供された thumbprint でオブジェクトが署名されたときに、1 を返します。|  
-|is_signature_valid|**int**|Is_signed の値が 1 の場合は、署名が無効である場合に 0 を返します。 署名が有効な場合は、1 を返します。<br /><br /> is_signed の値が 0 の場合は、常に 0 を返します。|  
+|is_signed|**int**|指定された拇印によってオブジェクトが署名されていない場合は0を返します。 指定されたサムプリントによってオブジェクトが署名されている場合は1を返します。|  
+|is_signature_valid|**int**|is_signed の値が 1 の場合、署名が有効ではないときは 0 を返します。 署名が有効な場合は1を返します。<br /><br /> is_signed の値が 0 の場合は、常に 0 を返します。|  
   
-## <a name="remarks"></a>コメント  
- 使用**fn_check_object_signatures**を悪意のあるユーザーがオブジェクトに改ざんされていないことを確認します。  
+## <a name="remarks"></a>解説  
+ **Fn_check_object_signatures**を使用して、悪意のあるユーザーがオブジェクトを改ざんしていないことを確認します。  
   
 ## <a name="permissions"></a>アクセス許可  
  証明書または非対称キーに対する VIEW DEFINITION が必要です。  
   
-## <a name="examples"></a>使用例  
- 次の例は、署名証明書のスキーマを検索、`master`データベース、および返します、 `is_signed` 1 の値と`is_signature_valid`スキーマ署名証明書によって署名されていると、有効になったこれらのオブジェクトの 1 の値署名します。  
+## <a name="examples"></a>例  
+ 次の例では、 `master`データベースのスキーマ署名証明書を検索し`is_signed` 、スキーマ署名証明書`is_signature_valid`によって署名され、有効な署名を持つオブジェクトについて、値1と値1を返します。  
   
 ```  
 USE master;  
@@ -91,7 +91,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>関連項目  
- [IS_OBJECTSIGNED &#40;Transact-SQL&#41;](../../t-sql/functions/is-objectsigned-transact-sql.md)  
+## <a name="see-also"></a>参照  
+ [IS_OBJECTSIGNED &#40;Transact-sql&#41;](../../t-sql/functions/is-objectsigned-transact-sql.md)  
   
   

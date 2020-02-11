@@ -1,5 +1,5 @@
 ---
-title: サーバー関連の動的管理ビューおよび関数 (TRANSACT-SQL) |Microsoft Docs
+title: サーバー関連の動的管理ビューおよび関数 (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -12,16 +12,16 @@ ms.assetid: d8f4e155-c2fb-4a1f-aa0d-e9790bdab925
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e9b99934a3d931810e29d821ba0124334bac2c12
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68061906"
 ---
-# <a name="server-related-dynamic-management-views-and-functions-transact-sql"></a>サーバー関連の動的管理ビューおよび関数 (TRANSACT-SQL)
+# <a name="server-related-dynamic-management-views-and-functions-transact-sql"></a>サーバー関連の動的管理ビューおよび関数 (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  このセクションには、SQL Server に関連付けられている動的管理ビューが含まれています。 フルテキスト、およびホスト サーバーにインストールされている SQL Server エージェント サービス。 これらのビューを使用して、これらのサービスのプロパティ情報を返すことができます。 これらのビューにも、構成、インストール、およびメモリ ダンプ ファイルの情報が含まれています。  
+  ここでは、ホストサーバーにインストールされている SQL Server、フルテキスト、および SQL Server エージェントサービスに関連付けられている動的管理ビューについて説明します。 これらのビューを使用すると、これらのサービスのプロパティ情報を返すことができます。 これらのビューにも、構成、インストール、およびメモリ ダンプ ファイルの情報が含まれています。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   

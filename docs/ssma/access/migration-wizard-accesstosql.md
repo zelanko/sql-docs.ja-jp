@@ -1,5 +1,5 @@
 ---
-title: 移行ウィザード (AccessToSQL) |Microsoft Docs
+title: 移行ウィザード (移動用 Sql) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,86 +19,86 @@ ms.assetid: 5bab5914-b2ae-4795-8cf5-83e42d64bef2
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 658487186924fe5547edee70425524b2b4e3be6c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68083591"
 ---
-# <a name="migration-wizard-accesstosql"></a>移行ウィザード (AccessToSQL)
-移行ウィザードを 1 つまたは複数のデータベースの移行へのアクセスを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure です。 ウィザードを使用すると、するはプロジェクトを作成、データベース プロジェクトを追加、移行、およびに接続するオブジェクトの選択[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure です。 変換、読み込み、および Access スキーマとデータを移行もされます。 アクセス テーブルをリンクする必要に応じて、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure のテーブル。  
+# <a name="migration-wizard-accesstosql"></a>移行ウィザード (移動用 Sql)
+移行ウィザードでは、または SQL Azure へ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のアクセスから、1つまたは複数のデータベースを移行できます。 ウィザードを使用して、プロジェクトを作成し、データベースをプロジェクトに追加し、移行するオブジェクトを選択して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、または SQL Azure に接続します。 また、アクセススキーマとデータの変換、読み込み、移行を行います。 必要に応じて、テーブルまたは[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Azure テーブルにアクセステーブルをリンクすることもできます。  
   
-移行ウィザードのページのほとんどには、既存の SSMA ダイアログ ボックスと同じオプションが含まれます。 そのため、ウィザードのページが、ここで説明し、リンクも個別のオプションについて詳細を提供します。 ページに固有のオプションが含まれている場合、ここで説明されます。  
+移行ウィザードのほとんどのページには、既存の SSMA ダイアログボックスと同じオプションが含まれています。 そのため、ここではウィザードのページについて説明します。また、各オプションの詳細については、リンクが用意されています。 ページに一意のオプションが含まれている場合は、ここに記載されています。  
   
-## <a name="starting-the-migration-wizard"></a>移行ウィザードの開始  
-既定では、移行ウィザードは、SSMA を起動するときに表示されます。 ウィザードを開始することもできます、**ファイル**メニューを選択して**移行ウィザード**します。  
+## <a name="starting-the-migration-wizard"></a>移行ウィザードを開始しています  
+既定では、SSMA の起動時に移行ウィザードが表示されます。 また、[**ファイル**] メニューの [**移行ウィザード**] を選択して、ウィザードを起動することもできます。  
   
-## <a name="welcome-page"></a>[ようこそ] ページ  
-[ようこそ] ページでは、移行ウィザードを紹介し、ウィザードを開始するための次のオプションを提供します。  
+## <a name="welcome-page"></a>ウェルカム ページ  
+[ようこそ] ページには、移行ウィザードが導入されており、ウィザードを起動するための次のオプションが用意されています。  
   
-**スタートアップ時に、このウィザードを起動します。**  
-既定では、SSMA を起動すると、SSMA は、移行ウィザードを開始します。 ウィザードの自動開始を防ぐためには、このチェック ボックスをオフにします。  
+**起動時にこのウィザードを起動します。**  
+既定では、ssma の起動時に移行ウィザードが開始されます。 ウィザードが自動的に開始されないようにするには、このチェックボックスをオフにします。  
   
-## <a name="create-new-project-page"></a>新しいプロジェクト ページを作成します。  
-新しいプロジェクトの作成ページには、プロジェクト ファイル名、場所、および移行プロジェクトの種類 (target の移行に使用される SQL Server のバージョン) を入力します。 詳細については、次を参照してください[新しいプロジェクト (SSMA)。](https://msdn.microsoft.com/ca294f6d-eeb5-42ca-9306-156281a3f0f3)  
+## <a name="create-new-project-page"></a>[新しいプロジェクトの作成] ページ  
+[新しいプロジェクトの作成] ページには、プロジェクトのファイル名、場所と移行プロジェクトの種類 (移行に使用するターゲット SQL Server のバージョン) を入力します。 詳細については、「[新しいプロジェクト (SSMA)](https://msdn.microsoft.com/ca294f6d-eeb5-42ca-9306-156281a3f0f3) 」を参照してください。  
   
-## <a name="add-access-databases-page"></a>Access データベースのページを追加します。  
-Access データベースの追加 ページでは、プロジェクトに 1 つ以上の Access データベースを追加します。 クリックして個々 のデータベースを追加する**データベースの追加**からデータベースを選択し、**オープン**ウィンドウ。 または、使用してデータベースを検索することができます、**検索データベース**ボタンをクリックします。 詳細については、次の各トピックを参照してください。  
+## <a name="add-access-databases-page"></a>[Access データベースの追加] ページ  
+[Access データベースの追加] ページでは、プロジェクトに1つ以上の Access データベースを追加します。 個々のデータベースを追加するには、[**データベースの追加**] をクリックし、[**開く**] ウィンドウからデータベースを選択します。 または、[**データベースの検索**] ボタンを使用してデータベースを検索することもできます。 詳細については、次のトピックを参照してください。  
   
--   [追加して、Access データベース ファイルを削除します。](adding-and-removing-access-database-files-accesstosql.md)  
+-   [Access データベースファイルの追加と削除](adding-and-removing-access-database-files-accesstosql.md)  
   
--   [データベースのウィザード (場所の選択) を検索します。](https://msdn.microsoft.com/00b2d32a-998b-47a7-b25c-589b5bd6777a)  
+-   [データベースのウィザードを検索 (場所の選択)](https://msdn.microsoft.com/00b2d32a-998b-47a7-b25c-589b5bd6777a)  
   
--   [データベースのウィザード (ファイルの選択) を検索します。](https://msdn.microsoft.com/2f574a34-4bab-40a4-89a8-ad4907ffc3fd)  
+-   [データベースのウィザードを検索 (ファイルの選択)](https://msdn.microsoft.com/2f574a34-4bab-40a4-89a8-ad4907ffc3fd)  
   
 -   [データベースのウィザードを検索 (選択の確認)](https://msdn.microsoft.com/62e20e03-50cc-4ac8-8072-524d194d2ec3)  
   
-## <a name="select-objects-to-migrate-page"></a>オブジェクトの移行 ページを選択します  
-移行のページにオブジェクトの選択、変換するオブジェクトを選択します。 すべてのオブジェクト、オブジェクト、または個々 のオブジェクトのグループを選択できます。  
+## <a name="select-objects-to-migrate-page"></a>[移行するオブジェクトの選択] ページ  
+[移行するオブジェクトの選択] ページで、変換するオブジェクトを選択します。 すべてのオブジェクト、オブジェクトのグループ、または個々のオブジェクトを選択できます。  
   
 **オブジェクトを選択するには**  
   
-1.  展開**アクセス メタベース**、順に展開**データベース**します。  
+1.  [**アクセス-メタベース**] を展開し、[**データベース**] を展開します。  
   
-2.  次の 1 つ以上の操作を行います。  
+2.  以下のいずれかの操作を行います。  
   
-    -   すべてのデータベースを変換する場合は、横にチェック ボックスを選択します**データベース**します。  
+    -   すべてのデータベースを変換するには、[**データベース**] の横にあるチェックボックスをオンにします。  
   
-    -   変換または個々 のデータベースの省略は、選択するか、データベース名の横にあるチェック ボックスをオフにします。  
+    -   個々のデータベースを変換または除外するには、データベース名の横にあるチェックボックスをオンまたはオフにします。  
   
-    -   変換またはクエリの省略は、データベース、展開しし、オンまたはオフ、**クエリ**チェック ボックスをオンします。  
+    -   クエリを変換または省略するには、データベースを展開し、[**クエリ**] チェックボックスをオンまたはオフにします。  
   
-    -   変換または個々 のテーブルの省略は、データベースを展開し、**テーブル**、選択するか、テーブルの横にあるチェック ボックスをオフにします。  
+    -   個々のテーブルを変換または省略するには、データベースを展開し、[**テーブル**] を展開して、テーブルの横にあるチェックボックスをオンまたはオフにします。  
   
-オブジェクトの多くの場合を使用する可能性があります、**高度なオブジェクトの選択**データベース オブジェクトのアクセスをフィルター処理する右側のペインでオプションです。 たとえば、選択した場合**テーブル**内の文字列を入力して、左側のウィンドウでテーブルの一覧にフィルター処理できますしする、**フィルター**ボックス。 選択したり、ウィンドウの上部にあるボタンを使用して、フィルター選択されたテーブルの移行をオフにできます。  
+多数のオブジェクトがある場合は、右側のウィンドウにある **[高度なオブジェクトの選択**] オプションを使用して、Access データベースオブジェクトをフィルター処理することをお勧めします。 たとえば、左側のペインで [**テーブル**] を選択した場合、[**フィルター** ] ボックスに文字列を入力すると、テーブルの一覧をフィルター処理できます。 次に、ペインの上部にあるボタンを使用して、フィルター選択されたテーブルを選択またはオフにします。  
   
-フィルターの詳細については、の [オプション] セクションを参照してください。[高度なオブジェクトの選択 (SSMA 一般的)](https://msdn.microsoft.com/f53b0c79-5473-410a-a0dc-d8f544f7a63c)します。  
+フィルター処理の詳細については、「[高度なオブジェクトの選択 (SSMA Common)](https://msdn.microsoft.com/f53b0c79-5473-410a-a0dc-d8f544f7a63c)」の「オプション」セクションを参照してください。  
   
-## <a name="connect-to-sql-server-page"></a>SQL Server のページへの接続します。  
-接続[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ページで、接続のプロパティを指定しに接続する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 詳細については、次を参照してください。 [SQL サーバーへの接続](connect-to-sql-server-accesstosql.md)します。
-  
-> [!IMPORTANT]  
-> 発生した接続に成功するとすぐに**リンク テーブル**ページ、テーブルのリンクのオプションがあります。 をクリックして**次**し、移行を開始します。  
-  
-## <a name="connect-to-sql-azure-page"></a>SQL Azure への接続 ページ  
-SQL Azure のページへの接続は、接続のプロパティを指定し、SQL Azure に接続します。 新しい azure データベースを作成するには、これを行うを使用して**Azure データベースの作成**のクリックで表示されるオプション**参照**ボタンをクリックします。 詳細については、次を参照してください[SQL Azure への接続。](connect-to-azure-sql-db-accesstosql.md)  
+## <a name="connect-to-sql-server-page"></a>SQL Server ページに接続する  
+[接続先[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ] ページで、接続プロパティを指定し、に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]接続します。 詳細については、「 [SQL Server への接続](connect-to-sql-server-accesstosql.md)」を参照してください。
   
 > [!IMPORTANT]  
-> 発生した接続に成功するとすぐに**リンク テーブル**ページ、テーブルのリンクのオプションがあります。 をクリックして**次**移行を開始するリンク ページ上のボタン。  
+> 接続が成功するとすぐに [テーブルの**リンク**] ページが表示され、そこにテーブルをリンクするオプションが表示されます。 [**次へ**] をクリックして、移行を開始します。  
   
-## <a name="link-tables-page"></a>リンク テーブル ページ  
-リンク テーブル ページでは、移行後に、元の Access テーブルをリンクできます。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure テーブル。 クエリ、フォーム、レポート、およびデータ アクセス ページ内のデータを使用するように、Access データベースを変更するテーブルをリンクする、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または Access データベース内のデータではなく SQL Azure データベース。  
+## <a name="connect-to-sql-azure-page"></a>SQL Azure ページに接続する  
+[SQL Azure への接続] ページで、接続プロパティを指定し、SQL Azure に接続します。 新しい azure データベースを作成するには、[**参照**のクリック] ボタンに表示される [ **Azure データベースの作成**] オプションを使用します。 詳細については、「 [Connect to SQL Azure](connect-to-azure-sql-db-accesstosql.md) 」を参照してください。  
   
-**テーブルなリンク**  
-選択、**テーブルをリンク**移行後にアクセス テーブルをリンクする チェック ボックス[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure テーブル。 クリックする必要がありますの移行を開始する**次**ボタンをクリックします。  
+> [!IMPORTANT]  
+> 接続が成功するとすぐに [テーブルの**リンク**] ページが表示され、そこにテーブルをリンクするオプションが表示されます。 [リンク] ページの [**次へ**] ボタンをクリックして、移行を開始します。  
   
-## <a name="migration-status-page"></a>移行の状態 ページ  
-移行の状態 ページにアクセス スキーマの変換の進行状況を表示する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure のスキーマに変換されたスキーマを読み込む[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure のデータを移行します。  
+## <a name="link-tables-page"></a>[テーブルのリンク] ページ  
+[テーブルのリンク] ページを使用すると、元の Access [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]テーブルを、移行されたテーブルまたは SQL Azure テーブルにリンクすることができます。 テーブルをリンクすると、access データベースが変更されます。これにより、クエリ、フォーム、レポート、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]およびデータアクセスページで、access データベースのデータではなく、または SQL Azure データベースのデータが使用されるようになります。  
   
-このページの詳細については、次を参照してください[変換、読み込み、および移行。](https://msdn.microsoft.com/4ec83e96-88a5-4b7b-8d5a-f3429d9a936b)  
+**リンクテーブル**  
+[**テーブルのリンク**] チェックボックスをオンにすると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]移行されたテーブルまたは SQL Azure テーブルにアクセステーブルをリンクできます。 移行を開始するには、[**次へ**] ボタンをクリックする必要があります。  
+  
+## <a name="migration-status-page"></a>[移行の状態] ページ  
+[移行の状態] ページには、または SQL Azure スキーマ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]へのアクセススキーマの変換、変換さ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]れたスキーマのまたは SQL Azure への読み込み、データの移行の進行状況が表示されます。  
+  
+このページの詳細については、「[変換、読み込み、移行](https://msdn.microsoft.com/4ec83e96-88a5-4b7b-8d5a-f3429d9a936b)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
-[SQL Server Migration Assistant for Access の概要&#40;AccessToSQL&#41;](../../ssma/access/getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md)  
-[SQL Server へのアクセス データベースの移行](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
-[ユーザー インターフェイスの Reference(Access)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
+[アクセスのための SQL Server Migration Assistant を使用したはじめに &#40;アクセス許可 SQL&#41;](../../ssma/access/getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md)  
+[Access データベースの SQL Server への移行](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
+[ユーザーインターフェイスリファレンス (アクセス)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

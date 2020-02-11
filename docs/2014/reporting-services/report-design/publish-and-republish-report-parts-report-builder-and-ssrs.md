@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9178caad90bff142996247b1c5befe6dd47c4933
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105413"
 ---
 # <a name="publish-and-republish-report-parts-report-builder-and-ssrs"></a>レポート パーツのパブリッシュおよび再パブリッシュ (レポート ビルダーおよび SSRS)
@@ -34,7 +34,7 @@ ms.locfileid: "66105413"
   
      それ以外の場合は、 **[パブリッシュする前にレポート パーツを確認および変更する]** をクリックします。  
   
-3.  レポートの名前と説明を編集します。名前をダブルクリックして編集し、**[説明]** フィールドをクリックして説明を追加します。  
+3.  レポート パーツの名前と説明を編集します。名前をダブルクリックして編集し、 **[説明]** フィールドをクリックして説明を追加します。  
   
     > [!NOTE]  
     >  検索時に識別しやすいように、レポート パーツの名前と説明を指定することをお勧めします。 レポート パーツの名前の最大文字数は、サーバー上のフォルダーの名前とその後に続くレポート パーツの実際の名前を含め、パス全体で 260 文字です。  
@@ -59,8 +59,8 @@ ms.locfileid: "66105413"
 ## <a name="see-also"></a>参照  
  [レポート パーツ &#40;レポート ビルダーおよび SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
  [レポート ビルダーのレポート パーツおよびデータセット](../report-data/report-parts-and-datasets-in-report-builder.md)   
- [レポート パーツのトラブルシューティング&#40;レポート ビルダーおよび SSRS&#41;](../troubleshoot-report-parts-report-builder-and-ssrs.md)   
- [更新プログラムまたは更新のチェック&#40;レポート ビルダーおよび SSRS&#41;](../check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)   
+ [レポートパーツ &#40;レポートビルダーと SSRS&#41;のトラブルシューティング](../troubleshoot-report-parts-report-builder-and-ssrs.md)   
+ [更新プログラムを確認するか、&#40;レポートビルダーおよび SSRS&#41;の更新プログラムを無効にする](../check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)   
  [レポート パーツの参照と既定のフォルダーの設定 &#40;レポート ビルダーおよび SSRS&#41;](browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)  
   
   

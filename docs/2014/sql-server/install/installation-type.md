@@ -11,16 +11,17 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b8812bba6d87e29ed8a4533bb87e645f42120015
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66094290"
 ---
 # <a name="installation-type"></a>インストールの種類
+  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードの [インストールの種類] ページを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の新しいインスタンスをインストールするか既存のインスタンスに機能を追加するかを指定します。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  選択内容を指定するオプション ボタンをクリックします。  
   
 -   [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の新規インストールを実行する]  
@@ -29,8 +30,8 @@ ms.locfileid: "66094290"
   
      既存のインスタンスに機能を追加するオプションを選択した場合、ドロップダウン リストを使用して、更新する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを選択します。  
   
- SysPrep でサポートされる機能にのみ追加できます[!INCLUDE[ssDE](../../includes/ssde-md.md)]と[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-の準備済みイメージに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 SysPrep でサポートされない他の機能については、準備済みインスタンスの完了後にのみ追加できます。  
+ SysPrep でサポートされている機能[!INCLUDE[ssDE](../../includes/ssde-md.md)]と[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-は、の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]準備済みイメージにのみ追加できます。 SysPrep でサポートされない他の機能については、準備済みインスタンスの完了後にのみ追加できます。  
   
- **注** フェールオーバー クラスター インスタンスがインストールされている場合、そのインスタンスに機能を追加することはできません。 既存のフェールオーバー クラスターに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の機能を追加するには、新規インストールを実行して、別の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスをインストールする必要があります。  
+ **メモ**フェールオーバークラスターインスタンスをインストールした後に、そのインスタンスに機能を追加することはできません。 既存のフェールオーバー クラスターに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の機能を追加するには、新規インストールを実行して、別の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスをインストールする必要があります。  
   
   

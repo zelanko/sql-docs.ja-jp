@@ -1,5 +1,5 @@
 ---
-title: ファイル ベースのドライバー診断の例 |Microsoft Docs
+title: ファイルベースのドライバー診断の例 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,16 +15,16 @@ ms.assetid: 0575fccd-4641-478d-a3cc-5a764e35bae2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 23234a490f664c4be0811152b2b77ae7c0b73761
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68069833"
 ---
 # <a name="file-based-driver-diagnostic-example"></a>ファイル ベースのドライバー診断の例
-ファイル ベースのドライバーは、ODBC ドライバー、およびデータ ソースとして機能します。 ODBC 接続では、データ ソースとして、したがってエラーと警告の両方のコンポーネントとしてを生成ができます。 書式設定し、引数を返します、ドライバー マネージャーとのインターフェイスのコンポーネントもはであるため**SQLGetDiagRec**します。  
+ファイルベースのドライバーは、ODBC ドライバーとデータソースの両方として機能します。 このため、エラーと警告は、ODBC 接続のコンポーネントとしても、データソースとしても生成されます。 これは、ドライバーマネージャーとのインターフェイスを持つコンポーネントでもあるため、 **SQLGetDiagRec**の引数を書式設定して返します。  
   
- たとえば、dbase Microsoft® driver driver は、十分なメモリを割り当てられませんでしたが返す可能性があります、次の値から**SQLGetDiagRec**:  
+ たとえば、dBASE 用の Microsoft®ドライバーが十分なメモリを割り当てられなかった場合、 **SQLGetDiagRec**から次の値が返される可能性があります。  
   
 ```  
 SQLSTATE:         "HY001"  
@@ -32,9 +32,9 @@ Native Error:      42052
 Diagnostic Msg:   "[Microsoft][ODBC dBASE Driver]Unable to allocate sufficient memory."  
 ```  
   
- このエラーに関連するデータ ソースがありません、ため、ドライバーにのみ追加プレフィックス診断メッセージ ([Microsoft]) のベンダーとドライバー ([ODBC dBASE ドライバー])。  
+ このエラーはデータソースに関連付けられていないため、ドライバーは、ベンダー ([Microsoft]) とドライバー ([ODBC dBASE ドライバー]) の診断メッセージにプレフィックスを追加しただけです。  
   
- ドライバー Employee.dbf ファイルが見つかりませんでした、次の値を返す可能性があります**SQLGetDiagRec**:  
+ ドライバーが**SQLGetDiagRec**ファイルを見つけられなかった場合は、次の値が返される可能性があります。  
   
 ```  
 SQLSTATE:         "42S02"  
@@ -42,4 +42,4 @@ Native Error:      -1305
 Diagnostic Msg:   "[Microsoft][ODBC dBASE Driver][dBASE]No such table or object"  
 ```  
   
- このエラーは、データ ソースに関連するが、ために、ドライバーをプレフィックスとして ([dBASE]) のデータ ソースのファイル形式を診断メッセージを追加しました。 ドライバーでデータ ソースと接続コンポーネントもあるために、仕入先 ([Microsoft]) およびドライバー ([ODBC dBASE ドライバー]) のプレフィックスが追加されます。
+ このエラーはデータソースに関連したものであるため、ドライバーはデータソース ([dBASE]) のファイル形式をプレフィックスとして診断メッセージに追加しました。 ドライバーは、データソースとの通信を行うコンポーネントでもあるため、ベンダー ([Microsoft]) とドライバー ([ODBC dBASE ドライバー]) のプレフィックスが追加されました。

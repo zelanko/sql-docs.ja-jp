@@ -19,14 +19,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8014f107ca2b552bf5aef316b1aefcb283a645d6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097588"
 ---
-# <a name="iswindowsserviceenabled-property-wmi-msreportserverconfigurationsetting"></a>IsWindowsServiceEnabled プロパティ (WMI MSReportServer_ConfigurationSetting)
-  レポート サーバー Windows サービスが有効かどうかを示します。 読み取り専用。  
+# <a name="iswindowsserviceenabled-property-wmi-msreportserver_configurationsetting"></a>IsWindowsServiceEnabled プロパティ (WMI MSReportServer_ConfigurationSetting)
+  レポート サーバー Windows サービスが有効かどうかを示します。 読み取り専用です。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,13 +39,14 @@ public boolean IsWindowsServiceEnabled;
 ```  
   
 ## <a name="property-values"></a>プロパティ値  
- 読み取り専用の **ブール値** です。 `true` の値は、レポート サーバー Windows サービスが有効であることを示します。  
+ 読み取り専用の **ブール値** です。 
+  `true` の値は、レポート サーバー Windows サービスが有効であることを示します。  
   
 ## <a name="example-code"></a>コード例  
  [MSReportServer_ConfigurationSetting クラス](msreportserver-configurationsetting-class.md)  
   
 ## <a name="requirements"></a>必要条件  
- **名前空間:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **名前空間:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>参照  
  [MSReportServer_ConfigurationSetting メンバー](msreportserver-configurationsetting-members.md)  

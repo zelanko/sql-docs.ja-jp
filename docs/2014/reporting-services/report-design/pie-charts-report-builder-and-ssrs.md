@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ad12b85455d65197de81eca820814cb016f28043
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105492"
 ---
 # <a name="pie-charts-report-builder-and-ssrs"></a>円グラフ (レポート ビルダーおよび SSRS)
@@ -31,9 +31,9 @@ ms.locfileid: "66105492"
   
 -   **分割円グラフ**。 すべてのスライスを中心から遠ざけるように配置した円グラフ。 すべてのスライスが分離されている分割円グラフとは別に、単一のスライスのみが切り離された分割スライス グラフを作成することもできます。  
   
--   **ドーナツ グラフ**。 中心に空白の領域を設けた円グラフ。  
+-   **ドーナツグラフ**。 中心に空白の領域を設けた円グラフ。  
   
--   **分割ドーナツ グラフ**。 すべてのスライスを中心から遠ざけるように配置したドーナツ グラフ。  
+-   **分割ドーナツグラフ**。 すべてのスライスを中心から遠ざけるように配置したドーナツ グラフ。  
   
 -   **3D 円グラフ**。 3-D スタイルが適用された円グラフ。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "66105492"
   
 -   比率を計算する場合、NULL、空、負、および 0 の各値は無効です。 このため、これらの値は円グラフに表示されません。 このような値をグラフ上に表示する必要がある場合は、グラフの種類を円グラフ以外のグラフに変更してください。  
   
--   円グラフでカスタム パレットを使用して独自の色を定義している場合は、各データ ポイントを独自の色で表示するのに十分な色がパレットにあることを確認します。 詳細については、「 [グラフの系列の色の書式設定 (レポート ビルダーおよび SSRS)](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)」(グラフ (レポート ビルダーおよび SSRS)) を参照してください。  
+-   円グラフでカスタム パレットを使用して独自の色を定義している場合は、各データ ポイントを独自の色で表示するのに十分な色がパレットにあることを確認します。 詳細については、「 [グラフの系列の色の書式設定 &#40;レポート ビルダーおよび SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)をクリックします。  
   
 -   円グラフでは、その他多くのグラフの種類と異なり、個々のデータ ポイントが凡例に表示されます。個々の系列は表示されません。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "66105492"
   
 -   グラフの幅と高さを増やし、ラベル用の領域を確保する。  
   
--   円グラフのラベルをグラフ領域の外側に表示する。 詳細については、「 [円グラフの外側へのデータ ポイント ラベルの表示 (レポート ビルダーおよび SSRS)](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)」(グラフ (レポート ビルダーおよび SSRS)) を参照してください。  
+-   円グラフのラベルをグラフ領域の外側に表示する。 詳細については、「 [円グラフの外側へのデータ ポイント ラベルの表示 (レポート ビルダーおよび SSRS)](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)」を参照してください。  
   
 -   小さな複数のスライスを 1 つのスライスにまとめる。  
   
@@ -86,12 +86,12 @@ ms.locfileid: "66105492"
 -   小さいスライスを補助円グラフにまとめる。 2 番目の円グラフはデザイナーに表示されません。 代わりに、データ ポイントの値に基づいて、2 番目の円グラフを表示する必要があるかどうかがレポートの処理中に計算されます。 必要な場合は、値が別の円グラフに追加されます。  
   
 ## <a name="see-also"></a>参照  
- [円グラフの外側へのデータ ポイント ラベルの表示 (レポート ビルダーおよび SSRS)](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
- [円グラフの小さいスライスをまとめる (レポート ビルダーおよび SSRS)](collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)   
- [円グラフへのパーセンテージの表示 &#40;レポート ビルダーおよび SSRS&#41;](display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)   
+ [レポートビルダーおよび SSRS&#41;&#40;円グラフの外側にデータポイントラベルを表示する](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
+ [円グラフの小さいスライスをまとめる &#40;レポート ビルダーおよび SSRS&#41;](collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)   
+ [レポートビルダーおよび SSRS&#41;&#40;円グラフにパーセンテージ値を表示する](display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)   
  [チュートリアル: レポートへの円グラフの追加 &#40;レポート ビルダー&#41;](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
  [グラフの凡例の書式設定 &#40;レポート ビルダーおよび SSRS&#41;](chart-legend-formatting-report-builder.md)   
  [グラフ内の空のデータ ポイントおよび NULL データ ポイント (レポート ビルダーおよび SSRS)](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
- [グラフの系列の色の書式設定 (レポート ビルダーおよび SSRS)](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)  
+ [グラフの系列の色の書式設定 &#40;レポート ビルダーおよび SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)  
   
   

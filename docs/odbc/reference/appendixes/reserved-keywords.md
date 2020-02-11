@@ -14,42 +14,42 @@ ms.assetid: 8eeede59-a828-44bf-866c-1ca9a77a2c5e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a89a24ddbbe14938824819e24fd9112597168507
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68057214"
 ---
-# <a name="reserved-keywords"></a>予約済みのキーワード
-次の文字列は、ODBC 関数呼び出し用に予約されています。 これらの単語 SQL 文法の制約はありません。ただし、主要な SQL 文法をサポートするドライバーとの互換性を確保する、アプリケーションはこれらのキーワードのいずれかを使用を避ける必要があります。 #**定義**SQL_ODBC_KEYWORDS 値には、これらのキーワードのコンマ区切りの一覧が含まれています。  
+# <a name="reserved-keywords"></a>予約済みキーワード
+次の文字列は、ODBC 関数呼び出し用に予約されています。 これらの単語は、最低限の SQL 文法を制限しません。ただし、主要な SQL 文法をサポートするドライバーとの互換性を確保するために、アプリケーションではこれらのキーワードを使用しないようにする必要があります。 #**Define**値 SQL_ODBC_KEYWORDS には、これらのキーワードのコンマ区切りリストが含まれています。  
   
 |||  
 |-|-|  
 |ABSOLUTE|IS|  
-|ACTION|ISOLATION|  
+|アクション|ISOLATION|  
 |ADA|JOIN|  
 |ADD|KEY|  
 |ALL|LANGUAGE|  
 |ALLOCATE|LAST|  
 |ALTER|LEADING|  
-|AND|[LEFT]|  
+|AND|LEFT|  
 |ANY|LEVEL|  
 |ARE|LIKE|  
 |AS|LOCAL|  
 |ASC|[LOWER]|  
 |ASSERTION|MATCH|  
-|AT|MAX|  
-|AUTHORIZATION|MIN|  
-|AVG|[MINUTE]|  
+|AT|[MAX]|  
+|AUTHORIZATION|[MIN]|  
+|AVG|MINUTE|  
 |BEGIN|MODULE|  
-|BETWEEN|[MONTH]|  
+|BETWEEN|MONTH|  
 |BIT|NAMES|  
 |BIT_LENGTH|NATIONAL|  
 |BOTH|NATURAL|  
 |BY|NCHAR|  
 |CASCADE|NEXT|  
-|CASCADED|NO|  
-|CASE|なし|  
+|CASCADED|いいえ|  
+|CASE|NONE|  
 |CAST|NOT|  
 |CATALOG|NULL|  
 |CHAR|NULLIF|  
@@ -60,17 +60,17 @@ ms.locfileid: "68057214"
 |CLOSE|ONLY|  
 |COALESCE|OPEN|  
 |COLLATE|OPTION|  
-|COLLATION|スイッチまたは|  
+|COLLATION|OR|  
 |COLUMN|ORDER|  
 |COMMIT|OUTER|  
 |CONNECT|OUTPUT|  
-|CONNECTION|重複|  
+|CONNECTION|OVERLAPS|  
 |CONSTRAINT|PAD|  
-|CONSTRAINTS|PARTIAL|  
-|CONTINUE|PASCAL 形式|  
-|CONVERT|位置|  
+|制約|PARTIAL|  
+|CONTINUE|PASCAL|  
+|CONVERT|移動|  
 |CORRESPONDING|PRECISION|  
-|COUNT|PREPARE|  
+|[COUNT]|PREPARE|  
 |CREATE|PRESERVE|  
 |CROSS|PRIMARY|  
 |CURRENT|PRIOR|  
@@ -78,41 +78,41 @@ ms.locfileid: "68057214"
 |CURRENT_TIME|PROCEDURE|  
 |CURRENT_TIMESTAMP|PUBLIC|  
 |CURRENT_USER|READ|  
-|CURSOR|real|  
-|[DATE]|REFERENCES|  
-|[DAY]|RELATIVE|  
+|CURSOR|REAL|  
+|DATE|REFERENCES|  
+|DAY|RELATIVE|  
 |DEALLOCATE|RESTRICT|  
 |DEC|REVOKE|  
-|[DECIMAL]|[RIGHT]|  
+|DECIMAL|RIGHT|  
 |DECLARE|ROLLBACK|  
 |DEFAULT|ROWS|  
 |DEFERRABLE|SCHEMA|  
-|延期|SCROLL|  
-|Del|[SECOND]|  
+|DEFERRED|SCROLL|  
+|DELETE|SECOND|  
 |DESC|SECTION|  
 |DESCRIBE|SELECT|  
 |DESCRIPTOR|SESSION|  
 |DIAGNOSTICS|SESSION_USER|  
 |DISCONNECT|SET|  
-|DISTINCT|SIZE|  
+|DISTINCT|サイズ|  
 |DOMAIN|SMALLINT|  
 |DOUBLE|SOME|  
 |DROP|SPACE|  
 |ELSE|SQL|  
 |END|SQLCA|  
 |END-EXEC|SQLCODE|  
-|ESCAPE|SQLERROR 関数|  
+|ESCAPE|SQLERROR|  
 |EXCEPT|SQLSTATE|  
 |EXCEPTION|SQLWARNING|  
 |EXEC|[SUBSTRING]|  
-|EXECUTE|SUM|  
+|EXECUTE|[SUM]|  
 |EXISTS|SYSTEM_USER|  
 |EXTERNAL|TABLE|  
 |EXTRACT|TEMPORARY|  
 |FALSE|THEN|  
 |FETCH|TIME|  
-|FIRST|timestamp|  
-|[FLOAT]|TIMEZONE_HOUR|  
+|FIRST|TIMESTAMP|  
+|FLOAT|TIMEZONE_HOUR|  
 |FOR|TIMEZONE_MINUTE|  
 |FOREIGN|TO|  
 |FORTRAN|TRAILING|  
@@ -126,10 +126,10 @@ ms.locfileid: "68057214"
 |GRANT|UNKNOWN|  
 |GROUP|UPDATE|  
 |HAVING|[UPPER]|  
-|[HOUR]|USAGE|  
-|IDENTITY|User|  
+|HOUR|USAGE|  
+|ID|User|  
 |IMMEDIATE|USING|  
-|IN|Value|  
+|IN|値|  
 |INCLUDE|VALUES|  
 |INDEX|VARCHAR|  
 |INDICATOR|VARYING|  
@@ -140,6 +140,6 @@ ms.locfileid: "68057214"
 |INSERT|WITH|  
 |INT|WORK|  
 |INTEGER|WRITE|  
-|INTERSECT|[YEAR]|  
+|INTERSECT|YEAR|  
 |INTERVAL|ZONE|  
 |INTO||

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a790f3951ce37e714346b8d280547e603cf48c23
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105452"
 ---
 # <a name="polar-charts-report-builder-and-ssrs"></a>極座標グラフ (レポート ビルダーおよび SSRS)
@@ -25,7 +25,7 @@ ms.locfileid: "66105452"
   
 ## <a name="variations"></a>バリエーション  
   
--   **レーダー チャート**: レーダー チャートでは、系列が円形の線または領域で表示されます。 極座標グラフとは異なり、レーダー チャートでは、極座標の観点ではデータが表示されません。  
+-   **レーダーチャート**。 レーダー チャートでは、系列が円形の線または領域で表示されます。 極座標グラフとは異なり、レーダー チャートでは、極座標の観点ではデータが表示されません。  
   
 ## <a name="data-considerations-for-polar-charts"></a>極座標グラフのデータに関する注意点  
   
@@ -38,7 +38,7 @@ ms.locfileid: "66105452"
 ## <a name="example"></a>例  
  次の例では、レーダー チャートの使用方法を示します。 次の表は、チャートのサンプル データを示しています。  
   
-|名前|売上|  
+|Name|売上|  
 |----------|-----------|  
 |低木|61|  
 |種|78|  
@@ -50,13 +50,13 @@ ms.locfileid: "66105452"
   
  次の図は、提示されたデータに基づくレーダー チャートの例を示しています。  
   
- ![レーダー チャート](../media/rs-radarchart.gif "レーダー チャート")  
+ ![レーダーチャート](../media/rs-radarchart.gif "レーダー チャート")  
   
 ## <a name="see-also"></a>参照  
  [グラフ &#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [グラフの書式設定 (レポート ビルダーおよび SSRS)](formatting-a-chart-report-builder-and-ssrs.md)   
  [グラフの種類 &#40;レポート ビルダーおよび SSRS&#41;](chart-types-report-builder-and-ssrs.md)   
- [折れ線グラフ &#40;レポート ビルダーおよび SSRS&#41;](line-charts-report-builder-and-ssrs.md)   
- [グラフ内の空のデータ ポイントおよび NULL データ ポイント &#40;レポート ビルダーおよび SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)  
+ [折れ線グラフ &#40;レポートビルダーと SSRS&#41;](line-charts-report-builder-and-ssrs.md)   
+ [グラフ内の空のデータ ポイントおよび NULL データ ポイント (レポート ビルダーおよび SSRS)](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)  
   
   
