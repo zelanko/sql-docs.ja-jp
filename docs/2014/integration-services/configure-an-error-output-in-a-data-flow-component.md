@@ -1,5 +1,5 @@
 ---
-title: データ フロー コンポーネントでエラー出力の構成 |Microsoft Docs
+title: データフローコンポーネントでエラー出力を構成する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fa9df7d84a793c6825ba82b22c3b0cf567f42c3b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060814"
 ---
 # <a name="configure-an-error-output-in-a-data-flow-component"></a>データ フロー コンポーネントでエラー出力を構成する
@@ -27,7 +27,8 @@ ms.locfileid: "66060814"
 ## <a name="configuring-an-error-output"></a>エラー出力の構成  
  エラー出力を構成する場合、2 つのオプションがあります。  
   
--   **[エラー出力の構成]** ダイアログ ボックスを使用します。 このダイアログ ボックスを使用すると、エラー出力をサポートするデータ フロー コンポーネントでエラー出力を構成できます。  
+-   
+  **[エラー出力の構成]** ダイアログ ボックスを使用します。 このダイアログ ボックスを使用すると、エラー出力をサポートするデータ フロー コンポーネントでエラー出力を構成できます。  
   
 -   コンポーネントのエディター ダイアログ ボックスを使用します。 いくつかのコンポーネントでは、エディター ダイアログ ボックスから直接エラー出力を構成できます。 ただし、ADO NET ソース、列インポート変換、OLE DB コマンド変換、または [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact 変換先のエディター ダイアログ ボックスからはエラー出力を構成できません。  
   
@@ -35,31 +36,38 @@ ms.locfileid: "66060814"
   
 #### <a name="to-configure-an-error-output-using-the-configure-error-output-dialog-box"></a>[エラー出力の構成] ダイアログ ボックスを使用してエラー出力を構成するには  
   
-1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で、目的のパッケージが含まれている [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
+1.  
+  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で、目的のパッケージが含まれている [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
   
 2.  ソリューション エクスプローラーで、パッケージをダブルクリックして開きます。  
   
-3.  [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーの **[データ フロー]** タブをクリックします。  
+3.  
+  [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーの **[データ フロー]** タブをクリックします。  
   
 4.  赤い矢印で表示されているエラー出力を、エラー元のコンポーネントからデータ フローの別のコンポーネントにドラッグします。  
   
-5.  **[エラー出力の構成]** ダイアログ ボックスで、コンポーネントの入力の各列について、 **[エラー]** 列および **[切り捨て]** 列のアクションを選択します。  
+5.  
+  **[エラー出力の構成]** ダイアログ ボックスで、コンポーネントの入力の各列について、 **[エラー]** 列および **[切り捨て]** 列のアクションを選択します。  
   
 6.  更新されたパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
   
 #### <a name="to-add-an-error-output-using-the-editor-dialog-box-for-the-component"></a>コンポーネントのエディター ダイアログ ボックスを使用してエラー出力を追加するには  
   
-1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で、目的のパッケージが含まれている [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
+1.  
+  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で、目的のパッケージが含まれている [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
   
 2.  ソリューション エクスプローラーで、パッケージをダブルクリックして開きます。  
   
-3.  [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーの **[データ フロー]** タブをクリックします。  
+3.  
+  [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーの **[データ フロー]** タブをクリックします。  
   
 4.  エラー出力を構成するデータ フロー コンポーネントをダブルクリックし、コンポーネントに応じて、次のいずれかの手順を実行します。  
   
-    -   **[エラー出力の構成]** をクリックします。  
+    -   
+  **[エラー出力の構成]** をクリックします。  
   
-    -   **[エラー出力]** をクリックします。  
+    -   
+  **[エラー出力]** をクリックします。  
   
 5.  各列の **[エラー]** オプションを設定します。  
   
@@ -74,26 +82,29 @@ ms.locfileid: "66060814"
   
 #### <a name="to-configure-error-output-columns"></a>エラー出力列を構成するには  
   
-1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で、目的のパッケージが含まれている [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
+1.  
+  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で、目的のパッケージが含まれている [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
   
 2.  ソリューション エクスプローラーで、パッケージをダブルクリックして開きます。  
   
-3.  [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーの **[データ フロー]** タブをクリックします。  
+3.  
+  [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーの **[データ フロー]** タブをクリックします。  
   
 4.  構成するエラー出力列が含まれているコンポーネントを右クリックし、 **[詳細エディターの表示]** をクリックします。  
   
-5.  **[入力プロパティと出力プロパティ]** タブをクリックして、 **[\<コンポーネント名> のエラー出力]** を展開してから **[出力列]** を展開します。  
+5.  
+  **[入力プロパティと出力プロパティ]** タブをクリックして、**[\<コンポーネント名> のエラー出力]** を展開してから **[出力列]** を展開します。  
   
 6.  列をクリックして、プロパティを更新します。  
   
     > [!NOTE]  
     >  列の一覧には、コンポーネントの入力列、前のエラー出力で追加された **[ErrorCode]** 列と **[ErrorColumn]** 列、このコンポーネントによって追加された **[ErrorCode]** 列と **[ErrorColumn]** 列が表示されます。  
   
-7.  **[OK]** をクリックします。  
+7.  [ **OK] をクリックします。**  
   
 8.  更新されたパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データのエラー処理](data-flow/error-handling-in-data.md)  
   
   

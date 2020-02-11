@@ -15,23 +15,23 @@ ms.assetid: d0aedaa1-ed24-4aa6-92c8-83b0fa8c86fb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 921e9bce35ce9dc2ae91afb2c4cea5badafeaf2e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68063430"
 ---
 # <a name="setting-up-the-visual-foxpro-odbc-driver"></a>Visual FoxPro ODBC ドライバーの設定
-ダウンロードして Visual FoxPro ODBC ドライバーをインストールする方法については、次を参照してください。 [Visual FoxPro ODBC ドライバー](https://go.microsoft.com/fwlink/?LinkId=121318) MSDN ダウンロードします。  
+Visual FoxPro ODBC ドライバーのダウンロードとインストールの詳細については、MSDN ダウンロードの「 [Visual FOXPRO Odbc ドライバー](https://go.microsoft.com/fwlink/?LinkId=121318) 」を参照してください。  
   
- Microsoft Visual FoxPro ODBC ドライバー セットアップ プログラムを使用するには、以下を行います。  
+ Microsoft Visual FoxPro ODBC ドライバーセットアッププログラムを使用して、次の操作を行います。  
   
 -   新しいコンポーネントを追加します。  
   
 -   インストールされているコンポーネントを削除します。  
   
--   不足しているファイルと設定の復元を再インストールします。  
+-   を再インストールして、不足しているファイルと設定を復元します。  
   
 -   以前にインストールされたすべてのコンポーネントを削除します。  
   
- システムにドライバーをインストールした後、セットアップ プログラムがインストールされているドライバー コンポーネントを認識し、ドライバーの構成を変更するための追加 ダイアログ ボックスを表示します。
+ システムにドライバーをインストールすると、セットアッププログラムはインストールされているドライバーコンポーネントを認識し、ドライバーの構成を変更するための追加のダイアログボックスを表示します。

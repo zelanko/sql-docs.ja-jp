@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: e7b2adf53bc6ebca14e2d3b4dc2cee248a4b6720
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63190301"
 ---
 # <a name="ipaddresses-property-servernetworkprotocol-class"></a>IpAddresses プロパティ (ServerNetworkProtocol クラス)
@@ -37,15 +37,15 @@ object
 ```  
   
 ## <a name="parts"></a>要素  
- *object*  
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスによって使用されるネットワーク プロトコルを表す `ServerNetworkProtocol` オブジェクト。  
+ *素材*  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)]の`ServerNetworkProtocol` [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンスによって使用されるネットワークプロトコルを表すオブジェクトです。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
- 配列の[ServerNetworkProtocolIPAdress クラス](../servernetworkprotocolipaddress-class/servernetworkprotocolipaddress-class.md)サーバー ネットワーク プロトコルによってサポートされる IP アドレスを表すオブジェクト。  
+ サーバーネットワークプロトコルによってサポートされる IP アドレスを表す[ServerNetworkProtocolIPAdress クラス](../servernetworkprotocolipaddress-class/servernetworkprotocolipaddress-class.md)オブジェクトの配列。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
   
-## <a name="see-also"></a>関連項目  
- [サーバー ネットワーク プロトコルとネットワーク ライブラリの構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+## <a name="see-also"></a>参照  
+ [サーバーのネットワーク プロトコルと Net-Library の構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

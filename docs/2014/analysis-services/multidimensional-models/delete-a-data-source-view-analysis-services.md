@@ -1,5 +1,5 @@
 ---
-title: データ ソース ビュー (Analysis Services) の削除 |Microsoft Docs
+title: データソースビューの削除 (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,14 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9750751a23e4322a4a48ec0c1c227cf2df16f1c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075434"
 ---
 # <a name="delete-a-data-source-view-analysis-services"></a>データ ソース ビューの削除 (Analysis Services)
-  OLAP プロジェクトでデータ ソース ビュー (DSV) を使用していない場合、[!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] でプロジェクトから DSV を削除できます。  
+  OLAP プロジェクトでデータ ソース ビュー (DSV) を使用していない場合、 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]でプロジェクトから DSV を削除できます。  
   
  DSV は、削除すると完全に失われます。 削除した DSV を、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のプロジェクトまたはデータベースに復元することはできません。  
   
@@ -30,10 +30,10 @@ ms.locfileid: "66075434"
   
  DSV を削除すると、依存している他の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトが無効になります。そのため、DSV を削除する前に、DSV を削除すると無効になるオブジェクトの一覧が表示されます。 使用する予定のあるオブジェクトが含まれていないか、この一覧で確認します。  
   
- ![ダイアログ ボックスのオブジェクトを削除する](../media/ssas-olapdsv-deleteobjects.gif "オブジェクトの削除 ダイアログ ボックス")  
+ ![[オブジェクトの削除] ダイアログ ボックス](../media/ssas-olapdsv-deleteobjects.gif "[オブジェクトの削除] ダイアログ ボックス")  
   
 ## <a name="see-also"></a>参照  
- [多次元モデルのデータ ソース ビュー](data-source-views-in-multidimensional-models.md)   
- [データ ソース ビューのプロパティの変更 &#40;Analysis Services&#41;](change-properties-in-a-data-source-view-analysis-services.md)  
+ [多次元モデルのデータソースビュー](data-source-views-in-multidimensional-models.md)   
+ [データソースビューのプロパティの変更 &#40;Analysis Services&#41;](change-properties-in-a-data-source-view-analysis-services.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: エラーおよびイベント リファレンス (PowerPivot for SharePoint) |Microsoft Docs
+title: エラーとイベントのリファレンス (PowerPivot for SharePoint) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 35f851770c78a5079ab5381ad66a13776d90023d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66071410"
 ---
 # <a name="errors-and-events-reference-powerpivot-for-sharepoint"></a>エラーとイベントのリファレンス (PowerPivot for SharePoint)
@@ -22,8 +22,8 @@ ms.locfileid: "66071410"
   
  このセクションに記載されているエラー メッセージの一覧を表示するには、オンライン ブックの目次ペインを使用してください。  
   
-## <a name="see-also"></a>関連項目  
- [使用状況データ収集の構成&#40;PowerPivot for SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)   
- [SharePoint ログ ファイルと診断のログ記録構成し、表示&#40;PowerPivot for SharePoint&#41;](configure-and-view-sharepoint-and-diagnostic-logging.md)  
+## <a name="see-also"></a>参照  
+ [&#40;PowerPivot for SharePoint の使用状況データ収集の構成](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)   
+ [SharePoint ログファイルと診断ログ &#40;PowerPivot for SharePoint の構成と表示&#41;](configure-and-view-sharepoint-and-diagnostic-logging.md)  
   
   

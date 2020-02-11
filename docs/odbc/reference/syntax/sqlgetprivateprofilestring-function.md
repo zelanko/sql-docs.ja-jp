@@ -20,18 +20,18 @@ ms.assetid: b72ca065-4d67-48df-baac-e18379a8320a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6d58fe69e487b4f61384f9bd146b17c6d9ada9ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68061472"
 ---
 # <a name="sqlgetprivateprofilestring-function"></a>SQLGetPrivateProfileString 関数
-**準拠**  
- バージョンが導入されました。ODBC 2.0  
+**互換性**  
+ 導入されたバージョン: ODBC 2.0  
   
- **概要**  
- **SQLGetPrivateProfileString**値やシステム情報の値に対応するデータの名前の一覧を取得します。  
+ **まとめ**  
+ **Sqlgetprivateprofilestring**システム情報の値に対応する値またはデータの名前の一覧を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -47,42 +47,42 @@ int SQLGetPrivateProfileString(
 ```  
   
 ## <a name="arguments"></a>引数  
- *大文字、小文字*  
- [入力]キー名を格納しているセクションを指定する null で終わる文字列へのポインター。 この引数が NULL の場合、関数では、ファイルのすべてのセクション名を指定されたバッファーにコピーします。  
+ *lpszSection*  
+ 代入キー名を含むセクションを指定する null で終わる文字列を指します。 この引数が NULL の場合、関数は、指定されたバッファーにファイル内のすべてのセクション名をコピーします。  
   
  *lpszEntry*  
- [入力]関連付けられている文字列を取得するが、キー名を含む null で終わる文字列へのポインター。 この引数が NULL の場合、すべてのキー名で指定されたセクションでは、*大文字、小文字*引数で指定したバッファーにコピー、 *RetBuffer*引数。  
+ 代入関連付けられた文字列を取得するキー名を格納している null で終わる文字列を指します。 この引数が NULL の場合、 *Lpszsection*引数で指定されたセクション内のすべてのキー名が、 *retbuffer*引数で指定されたバッファーにコピーされます。  
   
- *から*  
- [入力]初期化ファイルにキーが見つからない場合は、指定されたキーの既定値を指定する null で終わる文字列へのポインター。 この引数は、NULL にすることはできません。  
+ *lpszDefault*  
+ 代入キーが初期化ファイルに見つからない場合は、指定されたキーの既定値を指定する null で終わる文字列を指します。 この引数を NULL にすることはできません。  
   
  *RetBuffer*  
- [出力]取得した文字列を受け取るバッファーへのポインター。  
+ Output取得した文字列を受け取るバッファーを指します。  
   
  *cbRetBuffer*  
- [入力]指し示されるバッファーの文字のサイズを指定します、 *RetBuffer*引数。  
+ 代入*Retbuffer*引数が指すバッファーのサイズを文字数で指定します。  
   
- *場合*  
- [入力]初期化ファイルの名前を示す null で終わる文字列へのポインター。 この引数に、ファイルへの完全パスが含まれていない場合、既定のディレクトリが検索されます。  
+ *lpszFilename*  
+ 代入は、初期化ファイルに名前を指定する null で終わる文字列を指します。 この引数にファイルへの完全パスが含まれていない場合は、既定のディレクトリが検索されます。  
   
 ## <a name="returns"></a>戻り値  
- **SQLGetPrivateProfileString**読み取られた文字の数を示す整数値を返します。  
+ **Sqlgetprivateprofilestring**は、読み取られた文字数を示す整数値を返します。  
   
 ## <a name="diagnostics"></a>診断  
- 呼び出し時に**SQLGetPrivateProfileString**失敗すると、関連付けられている *\*pfErrorCode*を呼び出して値を取得する**SQLInstallerError**します。 次の表、  *\*pfErrorCode*によって返される値**SQLInstallerError**とこの関数のコンテキストでそれぞれについて説明します。  
+ **Sqlgetprivateprofilestring**の呼び出しが失敗した場合、 **sqlインストーラエラー**を呼び出すことによって、関連* \*する pferrorcode*値を取得できます。 次の表は、 **sqlインストーラエラー**によって返される可能性がある* \*pferrorcode*値と、この関数のコンテキストにおけるそれぞれの値を示しています。  
   
-|*\*pfErrorCode*|[エラー]|説明|  
+|*\*pfErrorCode*|エラー|[説明]|  
 |---------------------|-----------|-----------------|  
-|ODBC_ERROR_GENERAL_ERR|一般的なインストーラーのエラー|エラーが発生する特定のインストーラーのエラーがなかった。|  
-|ODBC_ERROR_OUT_OF_MEM|メモリ不足|インストーラーは、メモリ不足のため、関数を実行できませんでした。|  
+|ODBC_ERROR_GENERAL_ERR|一般的なインストーラーエラー|特定のインストーラーエラーがなかったためにエラーが発生しました。|  
+|ODBC_ERROR_OUT_OF_MEM|メモリ不足|メモリ不足のため、インストーラーで関数を実行できませんでした。|  
   
-## <a name="comments"></a>コメント  
- **SQLGetPrivateProfileString**に Microsoft Windows と Windows 2000 から Microsoft® Windows® ポート ドライバーとドライバーのセットアップ Dll に簡単な方法で提供されます。 呼び出す**GetPrivateProfileString** Odbc.ini ファイルからのプロファイルの文字列に置き換える必要があります取得する呼び出し**SQLGetPrivateProfileString**します。 **SQLGetPrivateProfileString**値やシステム情報の Odbc.ini サブキーの値に対応するデータの要求された名前を取得、Win32® api 関数を呼び出します。  
+## <a name="comments"></a>説明  
+ **Sqlgetprivateprofilestring**は、Microsoft® windows®から MICROSOFT windows NT®/windows 2000 にドライバーおよびドライバーのセットアップ dll を移植する簡単な方法として提供されています。 Odbc .ini ファイルからプロファイル文字列を取得する**Getprivateprofilestring**への呼び出しは、 **Sqlgetprivateprofilestring**への呼び出しで置き換える必要があります。 **Sqlgetprivateprofilestring**は、WIN32® API の関数を呼び出して、システム情報の Odbc .ini サブキーの値に対応する、要求された値またはデータの名前を取得します。  
   
- 構成モード (設定して**SQLSetConfigMode**) DSN の値を一覧表示した Odbc.ini エントリが、システム情報の場所を示します。 DSN がユーザー DSN (構成モードでは USERDSN_ONLY) の場合は、関数は、HKEY_CURRENT_USER 内の Odbc.ini エントリから読み取ります。 DSN がシステム DSN (SYSTEMDSN_ONLY) の場合は、関数は、HKEY_LOCAL_MACHINE 内の Odbc.ini エントリから読み取ります。 BOTHDSN 構成モードの場合、HKEY_CURRENT_USER 試行すると失敗した場合、HKEY_LOCAL_MACHINE が使用されます。  
+ ( **SQLSetConfigMode**によって設定された) 構成モードは、DSN 値を一覧表示する Odbc .ini エントリのシステム情報の場所を示します。 DSN がユーザー DSN (構成モードが USERDSN_ONLY) の場合、関数は HKEY_CURRENT_USER の Odbc .ini エントリから読み取ります。 DSN がシステム DSN (SYSTEMDSN_ONLY) の場合、関数は HKEY_LOCAL_MACHINE の Odbc .ini エントリから読み取ります。 構成モードが両方とも DSN の場合、HKEY_CURRENT_USER が試行され、失敗した場合は HKEY_LOCAL_MACHINE が使用されます。  
   
 ## <a name="related-functions"></a>関連する関数  
   
-|詳細|参照先|  
+|対象|以下を参照してください。|  
 |---------------------------|---------|  
-|システム情報の値を書き込む|[SQLWritePrivateProfileString](../../../odbc/reference/syntax/sqlwriteprivateprofilestring-function.md)|
+|システム情報への値の書き込み|[SQLWritePrivateProfileString](../../../odbc/reference/syntax/sqlwriteprivateprofilestring-function.md)|

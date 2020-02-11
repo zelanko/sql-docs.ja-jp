@@ -15,13 +15,13 @@ ms.assetid: 8d87ca10-f955-4284-8689-e9f4cc31e7ae
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 802040851259a8537fabcd3cc0da1afdf9b8dbe0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68057052"
 ---
-# <a name="sqlardtype"></a>SQL_ARD_TYPE
-SQL_ARD_TYPE 型識別子を使用してを ARD の SQL_DESC_CONCISE_TYPE フィールドで指定した型のバッファー内のデータがなることを示します。 SQL_ARD_TYPE が入力されて、 *TargetType*への呼び出しの引数**SQLGetData**特定のデータ型と記述子を変更することで、データを変更するアプリケーションが入力バッファーの有効ではなくフィールド。 この値のデータ型を結び付ける、  *\*TargetValuePtr*記述子フィールドをバッファーします。 (SQL_ARD_TYPE への呼び出しが入力されていない**SQLBindCol**または**SQLBindParameter**のため、バインドされたバッファーの種類の SQL_DESC_TYPE、SQL_DESC_CONCISE_TYPE フィールドに既に関連付けられている、変更できますいつでもこれらのフィールドのいずれかを変更することによって。)  
+# <a name="sql_ard_type"></a>SQL_ARD_TYPE
+SQL_ARD_TYPE 型識別子は、バッファー内のデータが、の SQL_DESC_CONCISE_TYPE フィールドで指定された型であることを示すために使用されます。 SQL_ARD_TYPE は、特定のデータ型ではなく**SQLGetData**への呼び出しの*TargetType*引数に入力され、記述子フィールドを変更することによって、アプリケーションでバッファーのデータ型を変更できます。 この値は、 * \*targetvalueptr*バッファーのデータ型と記述子フィールドを結び付けます。 (SQL_ARD_TYPE は、バインドされたバッファーの型が既に SQL_DESC_TYPE および SQL_DESC_CONCISE_TYPE フィールドに関連付けられており、これらのフィールドのいずれかを変更することによっていつでも変更できるため、 **SQLBindCol**または**SQLBindParameter**の呼び出しには入力されません。)  
   
- 既定以外の先頭の有効桁数と秒の有効桁数、interval データ型の値を指定する SQL_ARD_TYPE 型識別子を使用でき、SQL_C_NUMERIC データの有効桁数と小数点の値を入力します。 詳細については、次を参照してください。[先頭既定をオーバーライドすると Interval データ型の秒の有効桁数](../../../odbc/reference/appendixes/overriding-default-leading-and-seconds-precision-for-interval-data-types.md)と[既定の精度をオーバーライドし、数値データ型の小数点以下桁数](../../../odbc/reference/appendixes/overriding-default-precision-and-scale-for-numeric-data-types.md)、この付録で後述します。
+ SQL_ARD_TYPE 型識別子を使用すると、先頭の有効桁数と秒の有効桁数のデータ型の既定値、および SQL_C_NUMERIC データ型の有効桁数と小数点以下桁数の値を指定できます。 詳細については、この付録の後の「 [Interval データ型の既定の先頭および秒の有効桁数のオーバーライド](../../../odbc/reference/appendixes/overriding-default-leading-and-seconds-precision-for-interval-data-types.md)」と「[数値データ型の既定の有効桁数と小数点以下桁数のオーバーライド](../../../odbc/reference/appendixes/overriding-default-precision-and-scale-for-numeric-data-types.md)」を参照してください。

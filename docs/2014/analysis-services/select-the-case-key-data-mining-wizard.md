@@ -1,5 +1,5 @@
 ---
-title: 選択、ケース キー (データ マイニング ウィザード) |Microsoft Docs
+title: '[ケースキーの選択] (データマイニングウィザード)Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,27 +13,28 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9d005ef9666d9bac5355b7419cf2a9cbb9040e6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069260"
 ---
 # <a name="select-the-case-key-data-mining-wizard"></a>[ケース キーの選択] (データ マイニング ウィザード)
+  
   **[ケース キーの選択]** ページを使用すると、マイニング構造のキーとなるソース キューブ ディメンションの属性を選択できます。 この属性は、階層内にあるか、属性階層が有効になっている必要があります。  
   
 > [!NOTE]  
 >  このページは、ウィザードの **[定義方法の選択]** ページで **[既存のキューブを使用する]** を選択した場合にのみ表示されます。  
   
- **詳細情報。** [データ マイニング ウィザード&#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)、[リレーショナル マイニング構造の作成](data-mining/create-a-relational-mining-structure.md)  
+ **詳細については、「** データマイニング[ウィザード &#40;Analysis Services データマイニング&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)」、「[リレーショナルマイニング構造を作成する](data-mining/create-a-relational-mining-structure.md)」を参照してください。  
   
-## <a name="options"></a>および  
- **Attributes**  
+## <a name="options"></a>オプション  
+ **属性**  
  マイニング構造のキーとなる属性をクリックします。  
   
-## <a name="see-also"></a>関連項目  
- [データ マイニング ウィザードの F1 ヘルプ&#40;Analysis Services - データ マイニング&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
- [ソース キューブ ディメンションの選択&#40;データ マイニング ウィザード&#41;](select-the-source-cube-dimension-data-mining-wizard.md)   
- [選択のケース レベル列&#40;データ マイニング ウィザード&#41;](select-case-level-columns-data-mining-wizard.md)  
+## <a name="see-also"></a>参照  
+ [データマイニングウィザードの F1 ヘルプ &#40;Analysis Services データマイニング&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
+ [[ソースキューブディメンション &#40;データマイニングウィザード] を選択し&#41;](select-the-source-cube-dimension-data-mining-wizard.md)   
+ [データマイニングウィザード &#40;ケースレベル列の選択&#41;](select-case-level-columns-data-mining-wizard.md)  
   
   

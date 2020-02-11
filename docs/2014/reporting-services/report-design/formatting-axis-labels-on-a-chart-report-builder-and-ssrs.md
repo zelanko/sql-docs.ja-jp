@@ -28,10 +28,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4a98a3496e237de1d4eeb530dfe5e22b70149890
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105853"
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>グラフの軸ラベルの書式設定 (レポート ビルダーおよび SSRS)
@@ -58,10 +58,10 @@ ms.locfileid: "66105853"
   
  軸のスケールは、軸上に表示するデータ範囲を定義するための最小値と最大値によって決定されます。 グラフでは、結果セットの値に基づいて各軸の最小値と最大値が計算されます。 値軸では、スケールは常に値フィールドの最大値と最小値によって決まります。 カテゴリ軸では、最小値と最大値の型がカテゴリ フィールドの型に応じて決まります。 データセット内のすべてのフィールドは、カテゴリ フィールドの 3 つの型のいずれかに分類できます。 次の表では、カテゴリ フィールドの 3 つの型を説明しています。  
   
-|カテゴリ フィールドの型|説明|例|  
+|カテゴリ フィールドの型|[説明]|例|  
 |-------------------------|-----------------|-------------|  
 |数値|カテゴリは、X 軸に数値順にプロットされます。|従業員の ID 番号別の売上レポートでは、従業員の ID 番号が X 軸に表示されます。|  
-|日付/時刻|カテゴリは、X 軸に日時順にプロットされます。|月別の売上レポートでは、書式設定された日付が X 軸に表示されます。|  
+|Date/time|カテゴリは、X 軸に日時順にプロットされます。|月別の売上レポートでは、書式設定された日付が X 軸に表示されます。|  
 |文字列|カテゴリは、データ ソースで最初に出現した順序で X 軸にプロットされます。|地域別の売上レポートでは、地域名が X 軸に表示されます。|  
   
  2 本の軸を使用するすべての種類のグラフは、カテゴリの数が多すぎて収まらない場合に、一部の軸ラベルを非表示にするようにデザインされています。これにより、グラフ内の画像が見やすくなり、ラベルの重なりが回避されます。  
@@ -77,7 +77,7 @@ ms.locfileid: "66105853"
 ### <a name="example-of-how-the-chart-calculates-axis-labels"></a>グラフの軸ラベルの計算方法の例  
  次の表には、縦棒グラフにプロットされる売上データのサンプルが含まれています。 Name フィールドは [カテゴリ グループ] 領域に追加され、Quantity フィールドは [値] 領域に追加されます。  
   
-|名前|Quantity|  
+|Name|Quantity|  
 |----------|--------------|  
 |Michael Blythe|229|  
 |Jae Pak|112|  
@@ -107,9 +107,11 @@ ms.locfileid: "66105853"
   
  スカラー軸を設定するには、次の 2 つの方法があります。  
   
--   **[軸のプロパティ]** ダイアログ ボックスの **[スカラー軸]** チェック ボックスをオンにします。 これにより軸上で、データをグループ化する値が存在しない箇所に、数値または日付/時刻値が追加されます。 詳細については、「[[軸のプロパティ] ダイアログ ボックス、[軸のオプション] &#40;レポート ビルダーおよび SSRS&#41;](../axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md)」をご覧ください。  
+-   
+  **[軸のプロパティ]** ダイアログ ボックスの **[スカラー軸]** チェック ボックスをオンにします。 これにより軸上で、データをグループ化する値が存在しない箇所に、数値または日付/時刻値が追加されます。 詳細については、「[[軸のプロパティ] ダイアログ ボックス、[軸のオプション] &#40;レポート ビルダーおよび SSRS&#41;](../axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md)」をご覧ください。  
   
--   **[系列のプロパティ]** ダイアログ ボックスの **[カテゴリ フィールド]** オプションで、フィールドを選択するか、式を入力します。 グラフでは、指定したカテゴリ フィールドのすべての値に対して軸の間隔が追加されます。  
+-   
+  **[系列のプロパティ]** ダイアログ ボックスの **[カテゴリ フィールド]** オプションで、フィールドを選択するか、式を入力します。 グラフでは、指定したカテゴリ フィールドのすべての値に対して軸の間隔が追加されます。  
   
 ## <a name="adding-or-removing-side-margins-from-the-category-axis"></a>カテゴリ軸の横余白の追加または削除  
  横棒グラフ、縦棒グラフ、および散布図では、横余白が X 軸の両端に自動的に追加されます。 余白のサイズは変更できません。 その他すべての種類のグラフでは、横余白は追加されません。 詳細については、「 [グラフの余白の追加または削除 &#40;レポート ビルダーおよび SSRS&#41;](add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)をクリックします。  
@@ -117,11 +119,11 @@ ms.locfileid: "66105853"
 ## <a name="in-this-section"></a>このセクションの内容  
  [日付または通貨として軸ラベルを書式設定する &#40;レポート ビルダーおよび SSRS&#41;](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)  
   
- [グラフへのラベルの配置 &#40;レポート ビルダーおよび SSRS&#41;](position-labels-in-a-chart-report-builder-and-ssrs.md)  
+ [グラフへのラベルの配置 &#40;レポートビルダーと SSRS&#41;](position-labels-in-a-chart-report-builder-and-ssrs.md)  
   
  [軸の間隔の指定 &#40;レポート ビルダーおよび SSRS&#41;](specify-an-axis-interval-report-builder-and-ssrs.md)  
   
- [グラフの余白の追加または削除 &#40;レポート ビルダーおよび SSRS&#41;](add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)  
+ [グラフ &#40;レポートビルダーと SSRS&#41;の余白の追加または削除](add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)  
   
  [対数スケールの指定 &#40;レポート ビルダーおよび SSRS&#41;](specify-a-logarithmic-scale-report-builder-and-ssrs.md)  
   

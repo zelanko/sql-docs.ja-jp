@@ -1,5 +1,5 @@
 ---
-title: 'SQL から C へ: バイナリ |Microsoft Docs'
+title: 'SQL から C へ: Binary |Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,14 +16,14 @@ ms.assetid: 8c519072-ae4c-4d32-9d4e-775e3d3d6389
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e280afb03eeac46a58943d276137e2019340a0a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68057002"
 ---
-# <a name="sql-to-c-binary"></a>SQL から C へ: Binary
-バイナリの ODBC SQL データ型の識別子は次のとおりです。  
+# <a name="sql-to-c-binary"></a>SQL から C へ: バイナリ
+バイナリ ODBC SQL データ型の識別子は次のとおりです。  
   
  SQL_BINARY  
   
@@ -31,17 +31,17 @@ ms.locfileid: "68057002"
   
  SQL_LONGVARBINARY  
   
- 次の表は、ODBC C データ型がバイナリの SQL データを変換する可能性がありますを示します。 列とテーブルの用語の詳細については、次を参照してください。 [SQL から C データ型への変換データ](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)します。  
+ 次の表は、バイナリ SQL データの変換先となる ODBC C データ型を示しています。 テーブル内の列と用語の詳細については、「 [SQL から C データ型へのデータの変換](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)」を参照してください。  
   
 |C 型識別子|テスト|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|SQL_C_CHAR|(データのバイト長)\* 2 < *BufferLength*<br /><br /> (データのバイト長)\* 2 > = *BufferLength*|data<br /><br /> 切り捨てられたデータ|バイト単位でデータの長さ<br /><br /> バイト単位でデータの長さ|n/a<br /><br /> 01004|  
-|SQL_C_WCHAR|(データの文字長)\* 2 < *BufferLength*<br /><br /> (データの文字長)\* 2 > = *BufferLength*|data<br /><br /> 切り捨てられたデータ|データの文字の長さ<br /><br /> データの文字の長さ|n/a<br /><br /> 01004|  
-|SQL_C_BINARY|データのバイト長 < = *BufferLength*<br /><br /> データのバイト長 > *BufferLength*|データ<br /><br /> 切り捨てられたデータ|バイト単位でデータの長さ<br /><br /> バイト単位でデータの長さ|n/a<br /><br /> 01004|  
+|SQL_C_CHAR|(データのバイト長)\* 2 < *bufferlength*<br /><br /> (データのバイト長)\* 2 >= *bufferlength*|データ<br /><br /> 切り捨てられたデータ|データの長さ (バイト単位)<br /><br /> データの長さ (バイト単位)|該当なし<br /><br /> 01004|  
+|SQL_C_WCHAR|(データの文字長)\* 2 < *bufferlength*<br /><br /> (データの文字長)\* 2 >= *bufferlength*|データ<br /><br /> 切り捨てられたデータ|データの長さ (文字数)<br /><br /> データの長さ (文字数)|該当なし<br /><br /> 01004|  
+|SQL_C_BINARY|データ <のバイト長 = *Bufferlength*<br /><br /> データ > *bufferlength*のバイト長|データ<br /><br /> 切り捨てられたデータ|データの長さ (バイト単位)<br /><br /> データの長さ (バイト単位)|該当なし<br /><br /> 01004|  
   
- SQL のバイナリ データが文字データに変換されると、ソース データの各バイト (8 ビット) は 2 つの ASCII 文字として表されます。 これらの文字は、16 進数形式で番号の ASCII 文字の表現です。 たとえば、バイナリ 00000001 は「01」に変換され、バイナリで 11111111 は、"FF"に変換されます。  
+ バイナリ SQL データを文字 C データに変換する場合、ソースデータの各バイト (8 ビット) は2つの ASCII 文字として表現されます。 これらの文字は、16進数形式の数値を ASCII 文字で表現したものです。 たとえば、バイナリ00000001は "01" に変換され、バイナリ11111111は "FF" に変換されます。  
   
- 常に、ドライバーは、個々 のバイトを 16 進数のペアに変換し、null バイトの文字の文字列を終了します。 このため場合、 *BufferLength*が偶数で、変換後のデータの最後のバイトの長さより小さい、**TargetValuePtr*バッファーは使用されません。 (変換後のデータには、偶数のバイト数が必要です、[次へ]、最後のバイトが null バイト、および最後のバイトを使用することはできません。)  
+ ドライバーは、常に個々のバイトを16進数のペアに変換し、文字列を null バイトで終了します。 このため、 *Bufferlength*が偶数で、変換されたデータの長さよりも小さい場合、**targetvalueptr*バッファーの最後のバイトは使用されません。 (変換されたデータには偶数のバイト数、次の最後から2番目のバイトは null バイト、最後のバイトは使用できません)。  
   
 > [!NOTE]  
->  アプリケーション開発者は、文字の C データ型にバインド バイナリ SQL データから推奨されません。 この変換は、通常非効率的で低速です。
+>  アプリケーション開発者は、バイナリ SQL データを文字 C データ型にバインドすることは推奨されていません。 通常、この変換は効率が悪く、遅くなります。

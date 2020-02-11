@@ -20,18 +20,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9316827245adfbcf64bd798869f570dc5f0af14c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068909"
 ---
 # <a name="security-properties"></a>セキュリティのプロパティ
+  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 次の表に示すセキュリティ サーバー プロパティがサポートされています。 その他のサーバー プロパティとその設定方法の詳細については、「 [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)」を参照してください。  
   
- **適用対象:** 多次元および表形式サーバー モード  
+ **適用対象:** 多次元および表形式サーバーモード  
   
-## <a name="properties"></a>プロパティ  
+## <a name="properties"></a>Properties  
  `RequireClientAuthentication`  
  クライアント認証が必要かどうかを示すブール型プロパティです。  
   
@@ -59,7 +60,7 @@ ms.locfileid: "66068909"
  `DataProtection\ RequiredProtectionLevel`  
  すべてのクライアント要求に必要な保護レベルを定義する、符号付き 32 ビット整数のプロパティです。 このプロパティは、次の表に示すいずれかの値になります。  
   
-|値|説明|  
+|値|[説明]|  
 |-----------|-----------------|  
 |*0*|なし。クリア テキストが許可されます。|  
 |*1*|(既定値) 暗号化が必要。クリア テキストのログは記録されません。|  
@@ -69,7 +70,7 @@ ms.locfileid: "66068909"
  詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。  
   
 ## <a name="see-also"></a>参照  
- [Analysis services サーバーのプロパティを構成します。](server-properties-in-analysis-services.md)   
- [Analysis Services インスタンスのサーバー モードの決定](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
+ [Analysis Services でのサーバープロパティの構成](server-properties-in-analysis-services.md)   
+ [Analysis Services インスタンスのサーバーモードの決定](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

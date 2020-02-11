@@ -33,22 +33,22 @@ ms.assetid: f7da3e92-e407-4f0b-b3a3-f214e442b37d
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 4d9eb0f5e08a67036ede2567965e1400494455f5
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72907499"
 ---
 # <a name="registering-user-defined-types-in-sql-server"></a>SQL Server でのユーザー定義型の登録
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]でユーザー定義型 (UDT) を使用するには、それを登録する必要があります。 UDT を登録するには、UDT を使用するデータベースにアセンブリを登録し、型を作成する必要があります。 UDT は、1 つのデータベースにスコープが設定されるので、同一のアセンブリと UDT を各データベースに登録しない限り、複数のデータベースでは使用できません。 UDT アセンブリを登録し、型を作成すると、[!INCLUDE[tsql](../../includes/tsql-md.md)] やクライアント コードでその UDT を使用できます。 詳細については、「 [CLR ユーザー定義型](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)」を参照してください。  
+  で[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ユーザー定義型 (UDT) を使用するには、それを登録する必要があります。 UDT を登録するには、UDT を使用するデータベースにアセンブリを登録し、型を作成する必要があります。 UDT は、1 つのデータベースにスコープが設定されるので、同一のアセンブリと UDT を各データベースに登録しない限り、複数のデータベースでは使用できません。 UDT アセンブリを登録し、型を作成すると、[!INCLUDE[tsql](../../includes/tsql-md.md)] やクライアント コードでその UDT を使用できます。 詳細については、「 [CLR ユーザー定義型](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)」を参照してください。  
   
 ## <a name="using-visual-studio-to-deploy-udts"></a>Visual Studio を使用した UDT の配置  
  UDT を配置する最も簡単な方法は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio を使用することです。 ただし、より複雑な配置シナリオで最も優れた柔軟性を得るためには、このトピックで説明するように [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用します。  
   
  Visual Studio を使用して UDT を作成および配置するには、次の手順を実行します。  
   
-1.  **Visual Basic**または**ビジュアルC#** 言語ノードで新しい**データベース**プロジェクトを作成します。  
+1.  **Visual Basic**または**Visual C#** 言語ノードで新しい**データベース**プロジェクトを作成します。  
   
 2.  UDT を格納する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースへの参照を追加します。  
   
@@ -56,20 +56,22 @@ ms.locfileid: "72907499"
   
 4.  コードを記述して UDT を実装します。  
   
-5.  **[ビルド]** メニューの **[配置]** をクリックします。 この結果、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースにアセンブリが登録され、型が作成されます。  
+5.  [**ビルド**] メニューの [**配置**] をクリックします。 この結果、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースにアセンブリが登録され、型が作成されます。  
 
 ## <a name="using-transact-sql-to-deploy-udts"></a>Transact-SQL を使用した UDT の配置  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE ASSEMBLY 構文は、UDT を使用するデータベースにアセンブリを登録する場合に使用します。 アセンブリは、ファイル システムに外部的に格納されるのではなく、データベース システム テーブルに内部的に格納されます。 UDT が外部アセンブリに依存する場合は、それらのアセンブリもデータベースに読み込む必要があります。 CREATE TYPE ステートメントは、UDT を使用するデータベースに UDT を作成する場合に使用します。 詳細については、[CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md) と [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md)。  
+ 
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE ASSEMBLY 構文は、UDT を使用するデータベースにアセンブリを登録する場合に使用します。 アセンブリは、ファイル システムに外部的に格納されるのではなく、データベース システム テーブルに内部的に格納されます。 UDT が外部アセンブリに依存する場合は、それらのアセンブリもデータベースに読み込む必要があります。 CREATE TYPE ステートメントは、UDT を使用するデータベースに UDT を作成する場合に使用します。 詳細については、[CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md) と [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md)。  
   
 ### <a name="using-create-assembly"></a>CREATE ASSEMBLY の使用  
  CREATE ASSEMBLY 構文では、UDT を使用するデータベースにアセンブリが登録されます。 アセンブリを登録すると、そのアセンブリに依存関係がなくなります。  
   
- 指定された 1 つのデータベースに複数のバージョンの同じアセンブリを作成することはできません。 ただし、特定の 1 つのデータベースに、カルチャに基づいて、複数のバージョンの同じアセンブリを作成することはできます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに登録されているとおりに、異なる名前で、アセンブリの複数のカルチャ バージョンが区別されます。 詳細については、.NET Framework SDK の「厳密な名前付きアセンブリの作成と使用」を参照してください。  
+ 指定された 1 つのデータベースに複数のバージョンの同じアセンブリを作成することはできません。 ただし、特定の 1 つのデータベースに、カルチャに基づいて、複数のバージョンの同じアセンブリを作成することはできます。 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに登録されているとおりに、異なる名前で、アセンブリの複数のカルチャ バージョンが区別されます。 詳細については、.NET Framework SDK の「厳密な名前付きアセンブリの作成と使用」を参照してください。  
   
  SAFE 権限セットまたは EXTERNAL_ACCESS 権限セットを指定して CREATE ASSEMBLY を実行すると、アセンブリが検証可能でタイプ セーフであることを確認するためのチェックが行われます。 権限セットを指定しないと、SAFE が指定されていると想定されます。 UNSAFE 権限セットを指定したコードはチェックされません。 アセンブリの権限セットの詳細については、「[アセンブリのデザイン](../../relational-databases/clr-integration/assemblies-designing.md)」をご覧ください。  
   
 #### <a name="example"></a>例  
- 次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントは、 **AdventureWorks**データベースの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の Point アセンブリを SAFE 権限セットに登録します。 WITH PERMISSION_SET 句を省略すると、SAFE 権限セットでアセンブリが登録されます。  
+ 次[!INCLUDE[tsql](../../includes/tsql-md.md)]のステートメントは、 **AdventureWorks**データベースの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に POINT アセンブリを登録し、SAFE 権限セットを設定します。 WITH PERMISSION_SET 句を省略すると、SAFE 権限セットでアセンブリが登録されます。  
   
 ```  
 USE AdventureWorks;  
@@ -78,7 +80,7 @@ FROM '\\ShareName\Projects\Point\bin\Point.dll'
 WITH PERMISSION_SET = SAFE;  
 ```  
   
- 次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントは、FROM 句で *< assembly_bits >* 引数を使用してアセンブリを登録します。 この**varbinary**値は、ファイルをバイトのストリームとして表します。  
+ 次[!INCLUDE[tsql](../../includes/tsql-md.md)]のステートメントは、from 句で *<assembly_bits>* 引数を使用してアセンブリを登録します。 この**varbinary**値は、ファイルをバイトのストリームとして表します。  
   
 ```  
 USE AdventureWorks;  
@@ -90,12 +92,12 @@ FROM 0xfeac4 ... 21ac78
  アセンブリをデータベースに読み込むと、[!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE TYPE ステートメントを使用して型を作成できます。 型を作成すると、そのデータベースで使用できる型のリストに、作成した型が追加されます。 型にはデータベース スコープがあり、型はその型を作成したデータベースでしか使用できません。 データベース内に UDT が既に存在する場合は、CREATE TYPE ステートメントがエラーで失敗します。  
   
 > [!NOTE]  
->  CREATE TYPE 構文は、ネイティブ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 別名データ型の作成にも使用され、別名データ型を作成する手段として**sp_addtype**を置き換えることを目的としています。 CREATE TYPE 構文の省略可能な一部の引数は CLR の UDT の作成に関係しており、(基本型などの) 別名データ型の作成には適用されません。  
+>  CREATE TYPE 構文は、ネイティブ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の別名データ型を作成するためにも使用されます。別名データ型を作成する手段として**sp_addtype**を置き換えることを目的としています。 CREATE TYPE 構文の省略可能な一部の引数は CLR の UDT の作成に関係しており、(基本型などの) 別名データ型の作成には適用されません。  
   
  詳細については、[CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md)を参照してください。  
   
 #### <a name="example"></a>例  
- 次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントでは、 **Point**型を作成します。 外部名は、 *AssemblyName*の2部構成の名前付け構文を使用して指定されます。*Udtname*。  
+ 次[!INCLUDE[tsql](../../includes/tsql-md.md)]のステートメントでは、 **Point**型を作成します。 外部名は、 *AssemblyName*の2部構成の名前付け構文を使用して指定されます。*Udtname*。  
   
 ```  
 CREATE TYPE dbo.Point   
@@ -123,7 +125,7 @@ DROP ASSEMBLY Point;
 ### <a name="finding-udt-dependencies"></a>UDT 依存関係の検出  
  UDT の列定義を含むテーブルなどの依存オブジェクトがある場合、DROP TYPE ステートメントは失敗します。 また、WITH SCHEMABINDING 句を使用してデータベースに作成した関数、ストアド プロシージャ、またはトリガーがあり、これらのルーチンでユーザー定義型の変数やパラメーターが使用される場合にも失敗します。 最初にすべての依存オブジェクトを削除してから、DROP TYPE ステートメントを実行する必要があります。  
   
- 次の [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリは、 **AdventureWorks**データベースで UDT を使用するすべての列とパラメーターを検索します。  
+ 次[!INCLUDE[tsql](../../includes/tsql-md.md)]のクエリでは、 **ADVENTUREWORKS**データベースで UDT を使用するすべての列とパラメーターを検索します。  
   
 ```  
 USE Adventureworks;  
@@ -147,7 +149,7 @@ SELECT o.name AS major_name, o.type_desc AS major_type_desc
  UDT を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに作成した後は、型の基になるアセンブリを変更することはできますが、UDT は変更できません。 ほとんどの場合、[!INCLUDE[tsql](../../includes/tsql-md.md)] DROP TYPE ステートメントを使用してデータベースから UDT を削除し、基になるアセンブリに変更を加えて、ALTER ASSEMBLY ステートメントを使用してアセンブリを再読み込みする必要があります。 その後、UDT とすべての依存オブジェクトを再作成する必要があります。  
   
 ### <a name="example"></a>例  
- ALTER ASSEMBLY ステートメントは、UDT アセンブリのソース コードに変更を加え、ソース コードを再コンパイルした後に使用します。 ALTER ASSEMBLY ステートメントを使用すると、サーバーに .dll ファイルがコピーされ、新しいアセンブリに再バインドされます。 完全な構文については、「 [ &#40;ALTER ASSEMBLY&#41;transact-sql](../../t-sql/statements/alter-assembly-transact-sql.md)」を参照してください。  
+ ALTER ASSEMBLY ステートメントは、UDT アセンブリのソース コードに変更を加え、ソース コードを再コンパイルした後に使用します。 ALTER ASSEMBLY ステートメントを使用すると、サーバーに .dll ファイルがコピーされ、新しいアセンブリに再バインドされます。 完全な構文については、「 [ALTER ASSEMBLY &#40;transact-sql&#41;](../../t-sql/statements/alter-assembly-transact-sql.md)」を参照してください。  
   
  次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ALTER ASSEMBLY ステートメントでは、ディスク上の指定された場所から Point.dll アセンブリを再読み込みしています。  
   
@@ -159,7 +161,7 @@ FROM '\\Projects\Point\bin\Point.dll'
 ### <a name="using-alter-assembly-to-add-source-code"></a>ALTER ASSEMBLY を使用したソース コードの追加  
  ALTER ASSEMBLY 構文の ADD FILE 句は、CREATE ASSEMBLY 構文には存在しません。 ADD FILE 句を使用すると、アセンブリに関連付けられるソース コードやその他のファイルを追加できます。 ファイルは元の場所からコピーされ、データベース内のシステム テーブルに格納されます。 これにより、現在のバージョンの UDT を再作成またはドキュメント化する必要があれば、ソース コードや他のファイルをいつでも使用できます。  
   
- 次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ALTER ASSEMBLY ステートメントは、**Point** UDT の Point.cs クラス ソース コードを追加します。 Point.cs ファイルに含まれているテキストがコピーされ、"PointSource" という名前でデータベースに格納されます。  
+ 次[!INCLUDE[tsql](../../includes/tsql-md.md)]の ALTER ASSEMBLY ステートメントでは、 **Point** UDT の Point.cs クラスのソースコードが追加されます。 Point.cs ファイルに含まれているテキストがコピーされ、"PointSource" という名前でデータベースに格納されます。  
   
 ```  
 ALTER ASSEMBLY Point  
@@ -175,9 +177,9 @@ ADD FILE FROM '\\Projects\Point\Point.cs' AS PointSource;
  オブジェクトの名前。  
   
  **file_id**  
- 各オブジェクトを識別する番号。特定の**assembly_id**に関連付けられた最初のオブジェクトは、値1を指定します。 同じ**assembly_id**に複数のオブジェクトが関連付けられている場合は、後続の各**file_id**値が1ずつインクリメントされます。  
+ 各オブジェクトを識別する番号。特定の**assembly_id**に関連付けられた最初のオブジェクトは、値1を指定します。 同じ**assembly_id**に複数のオブジェクトが関連付けられている場合は、その後の各**file_id**値が1ずつインクリメントされます。  
   
- **content**  
+ **情報**  
  アセンブリまたはファイルの 16 進数表記。  
   
  CAST 関数または CONVERT 関数を使用すると、**コンテンツ**列の内容を読み取り可能なテキストに変換できます。 次のクエリでは、結果セットを 1 行に制限するために WHERE 句で name を使用して、Point.cs ファイルの内容を読み取り可能なテキストに変換しています。  
@@ -211,11 +213,12 @@ SELECT CAST(content AS varchar(8000))
   
 -   あるデータベース テーブルの UDT 列から UDT データを選択し、その UDT データを同一の UDT 列を使用して 2 つ目のデータベースに挿入する場合。  
   
- このような状況では、必要なすべての変換がサーバーで自動的に行われます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] CAST 関数または CONVERT 関数を使用して、明示的に変換を実行することはできません。  
+ このような状況では、必要なすべての変換がサーバーで自動的に行われます。 
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] CAST 関数または CONVERT 関数を使用して、明示的に変換を実行することはできません。  
   
- [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] が**tempdb**システムデータベースに作業テーブルを作成するときに、udt を使用するための操作を行う必要はないことに注意してください。 これには、カーソル、テーブル変数、および Udt を含み、 **tempdb**を透過的に使用するユーザー定義テーブル値関数の処理が含まれます。 ただし、UDT 列を定義する**tempdb**に一時テーブルを明示的に作成する場合は、ユーザーデータベースの場合と同じように、udt を**tempdb**に登録する必要があります。  
+ では、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] **tempdb**システムデータベースに作業テーブルを作成するときに、udt を使用するための操作を行う必要はありません。 これには、カーソル、テーブル変数、および Udt を含み、 **tempdb**を透過的に使用するユーザー定義テーブル値関数の処理が含まれます。 ただし、UDT 列を定義する**tempdb**に一時テーブルを明示的に作成する場合は、ユーザーデータベースの場合と同じように、udt を**tempdb**に登録する必要があります。  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>参照  
  [CLR ユーザー定義型](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
   
   

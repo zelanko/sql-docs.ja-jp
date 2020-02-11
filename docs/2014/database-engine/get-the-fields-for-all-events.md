@@ -1,5 +1,5 @@
 ---
-title: すべてのイベントのフィールドを取得 |Microsoft Docs
+title: すべてのイベントのフィールドを取得します。Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c0838367ad699c1278bb6ec42f28161ba76c6fd5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66064789"
 ---
 # <a name="get-the-fields-for-all-events"></a>すべてのイベントのフィールドを取得する
@@ -37,8 +37,9 @@ ms.locfileid: "66064789"
   
  バケット ターゲットを使用するイベント セッションを設定する場合は、上記の情報を使用できます。 詳細については、「 [SQL Server 拡張イベント ターゲット](../../2014/database-engine/sql-server-extended-events-targets.md)」を参照してください。  
   
-## <a name="before-you-begin"></a>作業を開始する準備  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 拡張イベント セッションを作成する前に、イベントに関連したフィールドについての情報を取得すると役立つことがあります。  
+## <a name="before-you-begin"></a>開始する前に  
+ 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 拡張イベント セッションを作成する前に、イベントに関連したフィールドについての情報を取得すると役立つことがあります。  
   
 ## <a name="to-get-the-fields-for-all-events-using-query-editor"></a>クエリ エディターを使用してすべてのイベントのフィールドを取得するには  
   
@@ -56,7 +57,7 @@ ms.locfileid: "66064789"
     ```  
   
 ## <a name="see-also"></a>参照  
- [sys.dm_xe_objects &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql)   
+ [dm_xe_objects &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql)   
  [sys.dm_xe_packages &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-packages-transact-sql)  
   
   

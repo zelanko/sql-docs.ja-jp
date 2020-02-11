@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dcc48b1e545fb58d076074f9b11960227f788321
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63206986"
 ---
 # <a name="datetime-data-type-conversions-odbc"></a>datetime データ型変換 (ODBC)
@@ -30,7 +30,7 @@ ms.locfileid: "63206986"
   
 -   date 型の文字列の形式は 'yyyy-mm-dd' です。  
   
- 文字列からの変換では、空白文字やフィールドの幅を柔軟に処理できます。 詳細については、次を参照してください。、"データ形式。文字列とリテラル」のセクション[ODBC の日付と時刻の強化に対するデータ型のサポート](data-type-support-for-odbc-date-and-time-improvements.md)します。  
+ 文字列からの変換では、空白文字やフィールドの幅を柔軟に処理できます。 詳細については、「 [ODBC の日付と時刻の機能強化のためのデータ型のサポート](data-type-support-for-odbc-date-and-time-improvements.md)」の「データ形式: 文字列とリテラル」を参照してください。  
   
  一般的な変換規則を次に示します。  
   
@@ -42,9 +42,9 @@ ms.locfileid: "63206986"
   
 -   サーバーの型にタイム ゾーンが存在しなくても、クライアントの型にタイム ゾーンがある場合、時刻は UTC に変換されてからサーバーに格納されます。  
   
--   受信側が時刻を格納できない時間が存在する場合、時刻部分は無視されます。  
+-   時刻が存在するが、受信側が時刻を格納できない場合、時刻部分は無視されます。  
   
--   日付が存在する、受信側が日付を格納できない場合、日付部分は無視されます。  
+-   日付が存在するが、受信側が日付を格納できない場合、日付部分は無視されます。  
   
 -   C データ型から SQL データ型に変換する際に秒または秒の小数部の切り捨てが発生すると、"Datetime フィールド オーバーフロー" というメッセージで SQLSTATE 22008 の診断レコードが生成されます。  
   
@@ -55,9 +55,10 @@ ms.locfileid: "63206986"
  C 型から [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の日付型または時刻型に変換する際に考慮する問題を示します。  
   
  [SQL から C への変換](datetime-data-type-conversions-from-sql-to-c.md)  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の日付型または時刻型から C 型に変換する際に考慮する問題を示します。  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の日付型または時刻型から C 型に変換する際に考慮する問題を示します。  
   
-## <a name="see-also"></a>関連項目  
- [日付と時刻の強化&#40;ODBC&#41;](date-and-time-improvements-odbc.md)  
+## <a name="see-also"></a>参照  
+ [ODBC&#41;&#40;の日付と時刻の改善](date-and-time-improvements-odbc.md)  
   
   

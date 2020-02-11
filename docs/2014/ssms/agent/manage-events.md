@@ -19,13 +19,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ed78d5ff91d09f9d8370eef31fd3a6651b301a38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63188221"
 ---
 # <a name="manage-events"></a>イベントの管理
+  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスには、特定のエラー重大度レベル以上のあらゆるイベント メッセージを転送できます。 この処理を *イベントの転送*と呼びます。 転送先サーバーは、マスター サーバーにもなる専用のサーバーです。 イベントの転送を使用して、サーバーのグループに対する警告を集中管理できます。その結果、使用頻度の高いサーバーの負荷を減少させることができます。  
   
  1 台のサーバーが別のサーバー グループのイベントを受信する場合、イベントを受信するサーバーは *警告管理サーバー*と呼ばれます。 マルチサーバー環境では、マスター サーバーを警告管理サーバーとして指定します。  
@@ -33,18 +34,18 @@ ms.locfileid: "63188221"
 ## <a name="advantages-of-using-an-alerts-management-server"></a>警告管理サーバーを使用する利点  
  警告管理サーバーのセットアップには、次の利点があります。  
   
--   **集中化**。 1 台のサーバーで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の複数のインスタンスのイベントを集中管理したり統合表示したりできます。  
+-   **一元化**。 1 台のサーバーで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の複数のインスタンスのイベントを集中管理したり統合表示したりできます。  
   
 -   **スケーラビリティ**。 多くの物理サーバーを 1 台の論理サーバーとして管理できます。 必要に応じて、この物理サーバー グループに対してサーバーを追加または削除できます。  
   
--   **効率性**。 警告とオペレーターは一度だけ定義すればよいので、構成にかかる時間を節約できます。  
+-   **効率**。 警告とオペレーターは一度だけ定義すればよいので、構成にかかる時間を節約できます。  
   
 ## <a name="disadvantages-of-using-an-alerts-management-server"></a>警告管理サーバーを使用する欠点  
  警告管理サーバーのセットアップには、次のような欠点があります。  
   
 -   **トラフィックの増加**。 警告管理サーバーにイベントを転送すると、ネットワーク トラフィックが増加することがあります。 ネットワーク トラフィックの増加を緩和するには、指定した重大度レベルを超えるイベントだけを転送するように制限します。  
   
--   **単一地点での障害**。 警告管理サーバーがオフラインになると、管理されたサーバーのグループのイベントに対して警告が発行されません。  
+-   **単一障害点**。 警告管理サーバーがオフラインになると、管理されたサーバーのグループのイベントに対して警告が発行されません。  
   
 -   **サーバーの負荷**。 転送されるイベントの警告処理により、警告管理サーバーの処理負荷が増加します。  
   
@@ -57,7 +58,8 @@ ms.locfileid: "63188221"
   
 -   多くのサーバーで同じ警告管理サーバーが共有されるように構成する場合、それに伴うネットワーク トラフィックについて慎重に検討します。 トラフィックが集中してしまった場合は、特定の警告管理サーバーを使用するサーバーの台数を減らします。  
   
-     [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 内で登録されたサーバーは、警告転送サーバーとして選択できるサーバーの一覧に含まれます。  
+     
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 内で登録されたサーバーは、警告転送サーバーとして選択できるサーバーの一覧に含まれます。  
   
 -   警告管理サーバーに警告を転送するのではなく、サーバー固有の応答を必要とする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のローカル インスタンスで警告を定義します。  
   
@@ -87,7 +89,7 @@ ms.locfileid: "63188221"
 > [!NOTE]  
 >  ジョブがイベントを発生させることもありえるので、再帰的な警告ジョブ ループを作成しないように注意してください。  
   
-## <a name="see-also"></a>関連項目  
- [sys.sysmessages &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-compatibility-views/sys-sysmessages-transact-sql)  
+## <a name="see-also"></a>参照  
+ [sys. sysmessages &#40;Transact-sql&#41;](/sql/relational-databases/system-compatibility-views/sys-sysmessages-transact-sql)  
   
   

@@ -17,10 +17,10 @@ ms.assetid: 35882067-3072-47ff-9024-ca453c0f49a7
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 715ceb531f2334f4cf9580c630d922f45faae74e
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72252060"
 ---
 # <a name="syssp_rda_get_rpo_duration-transact-sql"></a>sp_rda_get_rpo_duration (Transact-sql)
@@ -45,13 +45,13 @@ sp_rda_get_rpo_duration @durationinhours output
   現在の Stretch が有効なデータベースについて SQL Server 保持する、移行されたデータの時間数 (null 以外の整数値) を指定します。    
     
 ## <a name="permissions"></a>アクセス許可    
- Db_owner アクセス許可が必要です。    
+ Db_owner のアクセス許可が必要です。    
     
-## <a name="remarks"></a>Remarks    
- [Sp_rda_set_rpo_duration &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-set-rpo-duration-transact-sql.md)を実行して値を変更します。    
+## <a name="remarks"></a>解説    
+ [Transact-sql&#41;&#40;sp_rda_set_rpo_duration](../../relational-databases/system-stored-procedures/sys-sp-rda-set-rpo-duration-transact-sql.md)を実行して値を変更します。    
     
 ## <a name="see-also"></a>参照    
- [sp_rda_set_rpo_duration &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sys-sp-rda-set-rpo-duration-transact-sql.md)     
+ [sp_rda_set_rpo_duration &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-set-rpo-duration-transact-sql.md)     
  [Stretch 対応データベースの復元 (Stretch Database)](../../sql-server/stretch-database/restore-stretch-enabled-databases-stretch-database.md)    
  [Stretch Database](../../sql-server/stretch-database/stretch-database.md)    
     

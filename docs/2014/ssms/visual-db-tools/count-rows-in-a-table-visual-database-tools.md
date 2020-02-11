@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 04b836a53b4b9928118221053d1fbc2c3a89dfdd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63217811"
 ---
 # <a name="count-rows-in-a-table-visual-database-tools"></a>テーブルの行数のカウント (Visual Database Tools)
@@ -43,7 +43,7 @@ ms.locfileid: "63217811"
   
 2.  ダイアグラム ペインの背景を右クリックし、ショートカット メニューの **[グループ化を追加]** を選択します。 [クエリおよびビュー デザイナー](visual-database-tools.md) により、抽出条件ペインのグリッドに **[グループ化]** 列が追加されます。  
   
-3.  選択 **\* (すべての列)** テーブルまたはテーブル値オブジェクトを表す四角形。  
+3.  テーブルまたはテーブル値オブジェクトを表す四角形の** \* (すべての列)** を選択します。  
   
      クエリおよびビュー デザイナーにより、抽出条件ペインの **[グループ化]** 列に **[カウント]** という語句が自動的に入力され、集計する列に列の別名が割り当てられます。 この自動的に割り当てられた別名は、わかりやすい名前に変更することができます。 詳細については、「[列の別名の作成 (Visual Database Tools)](create-column-aliases-visual-database-tools.md)」を参照してください。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "63217811"
   
 2.  ダイアグラム ペインの背景を右クリックし、ショートカット メニューの **[グループ化を追加]** を選択します。 クエリおよびビュー デザイナーにより、抽出条件ペインのグリッドに **[グループ化]** 列が追加されます。  
   
-3.  選択 **\*(すべての列)** テーブルまたはテーブル構造オブジェクトを表す四角形。  
+3.  テーブルまたはテーブル構造オブジェクトを表す四角形の [ ** \*(すべての列)** ] を選択します。  
   
      クエリおよびビュー デザイナーにより、抽出条件ペインの **[グループ化]** 列に **[カウント]** という語句が自動的に入力され、集計する列に列の別名が割り当てられます。 クエリ出力に表示する列ヘッダーをわかりやすくするには、「[列の別名の作成 (Visual Database Tools)](create-column-aliases-visual-database-tools.md)」を参照してください。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "63217811"
 5.  クエリを実行します。  
   
 ## <a name="see-also"></a>参照  
- [クエリ結果の並べ替えとグループ化&#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
+ [クエリ結果の並べ替えとグループ化 &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
  [クエリ結果の要約 (Visual Database Tools)](summarize-query-results-visual-database-tools.md)  
   
   

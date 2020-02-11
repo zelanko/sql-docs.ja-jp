@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bb547f3aa1352006b91641727f34ba85ba41dea5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106180"
 ---
 # <a name="controlling-row-and-column-headings-report-builder-and-ssrs"></a>行見出しと列見出しの制御 (レポート ビルダーおよび SSRS)
@@ -38,9 +38,9 @@ ms.locfileid: "66106180"
 ## <a name="understanding-rows-and-columns-in-a-tablix-data-region"></a>Tablix データ領域の行と列について  
  テーブルまたはマトリックスは、基になる Tablix データ領域のテンプレートです。 Tablix データ領域は、最大 4 つの領域で構成されます。行グループ領域 (レポートの上下方向に展開される行を制御する領域)、列グループ領域 (レポートの左右方向に展開される列を制御する領域)、本体 (データが表示される領域)、およびコーナーです。 実際にヘッダーの繰り返しまたは固定を制御するときに、どこでプロパティを設定すればよいかを適切に判断するためには、Tablix データ領域には次の 2 つの表現があることを理解しておくと役に立ちます。  
   
--   **レポート定義** Tablix データ領域定義内のそれぞれの行または列は、特定の行グループまたは列グループの Tablix メンバーにあたります。 Tablix メンバーには静的なものと動的なものがあります。 静的 Tablix メンバーは、ラベルまたは小計を格納し、グループごとに 1 回繰り返されます。 動的 Tablix メンバーは、グループの値を格納し、グループの固有の値 (グループ インスタンス) につき 1 回繰り返されます。  
+-   **レポート定義内**Tablix データ領域定義内の各行または列は、特定の行グループまたは列グループの tablix メンバーです。 Tablix メンバーには静的なものと動的なものがあります。 静的 Tablix メンバーは、ラベルまたは小計を格納し、グループごとに 1 回繰り返されます。 動的 Tablix メンバーは、グループの値を格納し、グループの固有の値 (グループ インスタンス) につき 1 回繰り返されます。  
   
--   **デザイン画面** デザイン画面では、Tablix データ領域の 4 つの領域が点線で区画されます。 Tablix データ領域の各セルは、行と列で構成されます。 行と列はグループに関連付けられます (詳細グループを含む)。 特定の Tablix データ領域を選択すると、行と列のハンドルおよびハイライト バーによって、グループのメンバーシップが示されます。 行グループ領域または列グループ領域のセルは、Tablix メンバーのグループ ヘッダーを表します。 単一の行または列を、複数のグループに関連付けることもできます。  
+-   **デザイン画面**デザイン画面では、tablix データ領域が4つの領域に分割されます。 Tablix データ領域の各セルは、行と列で構成されます。 行と列はグループに関連付けられます (詳細グループを含む)。 特定の Tablix データ領域を選択すると、行と列のハンドルおよびハイライト バーによって、グループのメンバーシップが示されます。 行グループ領域または列グループ領域のセルは、Tablix メンバーのグループ ヘッダーを表します。 単一の行または列を、複数のグループに関連付けることもできます。  
   
      詳細については、「[Tablix データ領域 &#40;レポート ビルダーおよび SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)」と「[Tablix データ領域のセル、行、および列 &#40;レポート ビルダーおよび SSRS&#41;](tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)」を参照してください。  
   
@@ -51,15 +51,15 @@ ms.locfileid: "66106180"
   
  次のセクションでは、Tablix データ領域の一般的なレイアウトの例を紹介します。  
   
--   [マトリックス](#Matrix)  
+-   [Matrix](#Matrix)  
   
--   [グループを持たないテーブル](#TableNoGroups)  
+-   [グループのないテーブル](#TableNoGroups)  
   
--   [行グループおよび行グループ領域を持つテーブル](#TableRowGroupsGroupHeader)  
+-   [行グループと行グループ領域を持つテーブル](#TableRowGroupsGroupHeader)  
   
--   [行グループはあるが行グループ領域を持たないテーブル](#TableRowGroupsNoGroupHeader)  
+-   [行グループがあるが行グループ領域を持たないテーブル](#TableRowGroupsNoGroupHeader)  
   
-###  <a name="Matrix"></a> マトリックス  
+###  <a name="Matrix"></a>一覧  
  既定では、単純なマトリックスには、行グループと列グループが 1 つずつ含まれています。 次の図は、Category (カテゴリ) に基づく行グループと、Geography (地理) に基づく列グループを持つマトリックスを示しています。  
   
  ![Matrix、Category 行および Geography 列グループ](../media/rs-basicmatrixdesign.gif "Matrix、Category 行および Geography 列グループ")  
@@ -72,9 +72,9 @@ ms.locfileid: "66106180"
   
  先頭列の行見出しを繰り返し表示するか固定するには、Tablix データ領域の行ヘッダーのプロパティを設定します。 入れ子になった行グループの行ヘッダーは自動的に追加されます。  
   
- [トップに戻る](#Top)  
+ [先頭に戻る](#Top)  
   
-###  <a name="TableNoGroups"></a> 行グループを持たないテーブル  
+###  <a name="TableNoGroups"></a>行グループのないテーブル  
  既定では、グループを持たない単純なテーブルには、詳細グループが含まれます。 次の図は、カテゴリ、注文番号、および売上データを表示するテーブルを示したものです。  
   
  ![デザイン、1 つの静的行と 1 つの動的行があるテーブル](../media/rs-tableheaderstaticdesign.gif "デザイン、1 つの静的行と 1 つの動的行があるテーブル")  
@@ -93,9 +93,9 @@ ms.locfileid: "66106180"
   
  Tablix メンバーの列見出しを繰り返し表示するか固定するには、(**Static**) というラベルの付いた静的行を選択します。 選択した Tablix メンバーのプロパティがプロパティ ペインに表示されます。 この Tablix メンバーのプロパティを設定することにより、先頭行を繰り返し表示するか、常に表示した状態にするかを制御できます。  
   
- [トップに戻る](#Top)  
+ [先頭に戻る](#Top)  
   
-###  <a name="TableRowGroupsGroupHeader"></a> 行グループおよび行グループ領域を持つテーブル  
+###  <a name="TableRowGroupsGroupHeader"></a>行グループと行グループ領域を持つテーブル  
  単純なテーブルに行グループを追加した場合、デザイン画面のテーブルに行グループ領域が追加されます。 次の図は、Category に基づいた行グループを持つテーブルを示しています。  
   
  ![デザイン、1 つの行グループと詳細があるテーブル](../media/rs-tableheaderdynamicwithgroupheadercelldesign.gif "デザイン、1 つの行グループと詳細があるテーブル")  
@@ -112,11 +112,12 @@ ms.locfileid: "66106180"
   
  ![行グループ、詳細設定モードで静的メンバー](../media/rs-tableheaderdynamicwithgroupheadercelladvanced.gif "行グループ、詳細設定モードで静的メンバー")  
   
- tablix の場合、次のメンバーが一覧表示されます:**Static**、(**Static**)、Category、(**Details**)。 かっこ () 付きの Tablix メンバーは、対応するグループ ヘッダーがないことを表します。 列見出しを繰り返し表示するか固定するには、一番上の静的な Tablix メンバーを選択し、プロパティ ペインでプロパティを設定します。  
+ 
+  **Static**、(**Static**)、Category、(**Details**) という一連の Tablix メンバーが並んでいます。 かっこ () 付きの Tablix メンバーは、対応するグループ ヘッダーがないことを表します。 列見出しを繰り返し表示するか固定するには、一番上の静的な Tablix メンバーを選択し、プロパティ ペインでプロパティを設定します。  
   
- [トップに戻る](#Top)  
+ [先頭に戻る](#Top)  
   
-###  <a name="TableRowGroupsNoGroupHeader"></a> 行グループはあるが行グループ領域を持たないテーブル  
+###  <a name="TableRowGroupsNoGroupHeader"></a>行グループと行グループ領域を持たないテーブル  
  テーブルに行グループがあるにもかかわらず、行グループ領域が存在しない場合があります。 その原因として、次の 2 点が考えられます。  
   
 -   当初は、行グループと行グループ領域を持つテーブルとして作成したが、後でその行グループ領域から列を削除した (列だけを削除し、グループを削除しなかった)。 たとえば、テーブルを単純なグリッド形式に変更しようとした場合などに起こります。  
@@ -139,9 +140,9 @@ ms.locfileid: "66106180"
   
  ![行グループ、詳細設定、グループ ヘッダーなし](../media/rs-tableheaderdynamicwithnogroupheadercelladvanced.gif "行グループ、詳細設定、グループ ヘッダーなし")  
   
- [行グループ] ウィンドウには、次の Tablix メンバーが一覧表示されます:(**Static**)、(Category)、(**Static**)、および (**Details**)。 列見出しを繰り返し表示するか固定するには、一番上の (**Static**) という Tablix メンバーを選択し、プロパティ ペインでプロパティを設定します。  
+ [行グループ] ペインには、(**Static**)、(Category)、(**Static**)、および (**Details**) の各 Tablix メンバーが一覧表示されます。 列見出しを繰り返し表示するか固定するには、一番上の (**Static**) という Tablix メンバーを選択し、プロパティ ペインでプロパティを設定します。  
   
- [トップに戻る](#Top)  
+ [先頭に戻る](#Top)  
   
 ## <a name="renderer-support-for-repeating-or-freezing-headers"></a>ヘッダーの繰り返し表示と固定表示をサポートするレンダラー  
  ヘッダーの繰り返しまたは固定に対応しているかどうかは、レンダラーによって異なります。  
@@ -161,9 +162,9 @@ ms.locfileid: "66106180"
  詳しくは、「[レンダリングの動作 &#40;レポート ビルダーおよび SSRS&#41;](rendering-behaviors-report-builder-and-ssrs.md)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
- [データのフィルター、グループ化、および並べ替え &#40;レポート ビルダーおよび SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [データのフィルター、グループ化、および並べ替え (レポート ビルダーおよび SSRS)](filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [一覧 &#40;レポート ビルダーおよび SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [Reporting Services の改ページ &#40;レポート ビルダーおよび SSRS&#41;](pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [レポートのエクスポート&#40;レポート ビルダーおよび SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)  
+ [レポートのエクスポート &#40;レポートビルダーと SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)  
   
   

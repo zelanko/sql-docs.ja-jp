@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 092d6e9432f22ef43a155d2a7d3ff03299bcd131
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63162323"
 ---
 # <a name="delete-an-index"></a>インデックスの削除
@@ -32,7 +32,7 @@ ms.locfileid: "63162323"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **以下を使用してインデックスを削除するには:**  
   
@@ -82,7 +82,7 @@ ms.locfileid: "63162323"
   
 7.  **[閉じる]** をクリックします。  
   
-8.  **[ファイル]** メニューの [ **table_name**_を保存_] を選びます。  
+8.  **ファイル** メニューの **table_name**_を保存_を選びます。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
