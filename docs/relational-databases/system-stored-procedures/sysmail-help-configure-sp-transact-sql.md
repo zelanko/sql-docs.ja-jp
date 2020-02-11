@@ -18,10 +18,10 @@ ms.assetid: e598d4c8-3041-4965-b046-dce3a8e3d3e0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3d07f77c468bb14b28cd003f599bebd636d6f862
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056157"
 ---
 # <a name="sysmail_help_configure_sp-transact-sql"></a>sysmail_help_configure_sp (Transact-SQL)
@@ -39,33 +39,33 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-取得する構成設定の名前 `[ @parameter_name = ] 'parameter_name'` ます。 指定した場合、構成設定の値が **\@parameter_value**の出力パラメーターに返されます。 **\@parameter_name**が指定されていない場合、このストアドプロシージャは、インスタンス内のすべてのデータベースメール構成設定を含む結果セットを返します。  
+`[ @parameter_name = ] 'parameter_name'`取得する構成設定の名前。 指定した場合、構成設定の値が** \@parameter_value**出力パラメーターに返されます。 ** \@Parameter_name**が指定されていない場合、このストアドプロシージャは、インスタンス内のすべてのデータベースメール構成設定を含む結果セットを返します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- **\@parameter_name**が指定されていない場合、は次の列を含む結果セットを返します。  
+ ** \@Parameter_name**が指定されていない場合、は次の列を含む結果セットを返します。  
   
 ||||  
 |-|-|-|  
 |列名|データ型|[説明]|  
-|**paramname**|**nvarchar (256)**|構成パラメーターの名前。|  
-|**paramvalue**|**nvarchar (256)**|構成パラメーターの値|  
-|**description**|**nvarchar (256)**|構成パラメーターの説明|  
+|**paramname**|**nvarchar(256)**|構成パラメーターの名前。|  
+|**paramvalue**|**nvarchar(256)**|構成パラメーターの値|  
+|**記述**|**nvarchar(256)**|構成パラメーターの説明|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  ストアドプロシージャ**sysmail_help_configure_sp**には、インスタンスの現在のデータベースメール構成設定が一覧表示されます。  
   
- **\@parameter_name**が指定されていても、 **\@parameter_value**に出力パラメーターが指定されていない場合、このストアドプロシージャは出力を生成しません。  
+ Parameter_name が指定されていても、 ** \@parameter_value**の出力パラメーターが指定されていない場合、このストアドプロシージャは出力を生成しません。 ** \@**  
   
  ストアドプロシージャ**sysmail_help_configure_sp**は**msdb**データベースにあり、 **dbo**スキーマが所有しています。 現在のデータベースが**msdb**でない場合は、3部構成の名前を使用してプロシージャを呼び出す必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
  このプロシージャの実行権限は、既定では**sysadmin**固定サーバーロールのメンバーに与えています。  
   
-## <a name="examples"></a>使用例  
- 次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスのデータベースメール構成設定を一覧表示します。  
+## <a name="examples"></a>例  
+ 次の例では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスのデータベースメール構成設定を一覧表示します。  
   
 ```  
 EXECUTE msdb.dbo.sysmail_help_configure_sp ;  
@@ -88,6 +88,6 @@ ProhibitedExtensions            exe,dll,vbs,js  Extensions not allowed in outgoi
   
 ## <a name="see-also"></a>参照  
  [データベース メール](../../relational-databases/database-mail/database-mail.md)   
- [ストアドプロシージャ&#40;のデータベースメール transact-sql&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Transact-sql&#41;&#40;のストアドプロシージャのデータベースメール](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

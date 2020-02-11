@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fde81304117befec38844c28b6d0c434ab3606e8
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75242085"
 ---
 # <a name="insert-surround-with-transact-sql-snippets"></a>ブロックの挿入 Transact-SQL スニペットの挿入
@@ -31,21 +31,19 @@ ms.locfileid: "75242085"
   
 #### <a name="to-insert-a-surround-with-snippet"></a>ブロックの挿入スニペットを挿入するには  
   
-1.  
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディター ウィンドウで、ブロックに含める一連のステートメントを選択します。  
+1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディター ウィンドウで、ブロックに含める一連のステートメントを選択します。  
   
 2.  次の 3 つの方法のいずれかを使用して、ブロックの挿入スニペットの一覧を表示します。  
   
     -   Ctrl キーを押しながら K キーを押し、Ctrl キーを押しながら S キーを押す。  
   
-    -   
-  **[編集]** メニューの **[IntelliSense]** をポイントして、 **[ブロックの挿入]** をクリックする。  
+    -   **[編集]** メニューの **[IntelliSense]** をポイントして、 **[ブロックの挿入]** をクリックする。  
   
     -   選択したテキストを右クリックし、ショートカット メニューの **[ブロックの挿入]** をクリックする。  
   
 3.  マウスを使用するか、スニペットの名前を入力し、Tab キーまたは Enter キーを押して、一覧からスニペットの名前 (BEGIN、IF、または WHILE) を選択します。  
   
 ## <a name="see-also"></a>参照  
- [Transact-sql スニペットの挿入](insert-transact-sql-snippets.md)  
+ [Transact-SQL スニペットの挿入](insert-transact-sql-snippets.md)  
   
   

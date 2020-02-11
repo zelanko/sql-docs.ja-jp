@@ -16,23 +16,27 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6518a46c44a97fbb386b4479454e89a0eccb1a39
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101750"
 ---
 # <a name="role-definitions"></a>ロールの定義
+  
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、*ロール**の定義*は、ユーザーがレポート サーバー上で実行できる操作を定義する、一連の名前付きタスクです。 ロールの定義によって、レポート サーバーがセキュリティを強制的に適用する際に使用するルールが提供されます。 ユーザーがレポートのパブリッシュなどのタスクを試行すると、レポート サーバーでは、ユーザーのロールの割り当てを確認し、そのタスクがロールの定義に含まれているかどうかを判別します。 該当するタスクがロールの定義に含まれている場合、要求が送信されます。  
   
 ## <a name="using-roles-to-authorize-access-to-a-report-server"></a>ロールを使用したレポート サーバーへのアクセスの承認  
  ロールは、ロールの割り当てで使用されている場合のみ有効になります。 ロールでセキュリティを提供する方法の詳細については、「 [ロールの割り当て](role-assignments.md)」を参照してください。  
   
 ## <a name="types-of-role-definitions"></a>ロールの定義の種類  
- ロールの定義は、アイテムレベルの定義またはシステムレベルの定義です。 *アイテムレベルのロールの定義* には、レポート サーバーで格納および管理されているアイテムに関連するタスクが含まれています。 アイテムレベルのロールの定義に含めることのできるタスクには、"レポートの管理"、"フォルダーの表示"、および "個別のサブスクリプションを管理" などがあります。 *システム ロールの定義* には、サイト全体に適用するタスクが含まれています。 システム ロールに含めるタスクには、"レポート サーバーのプロパティを表示" などがあります。  
+ ロールの定義は、アイテムレベルの定義またはシステムレベルの定義です。 
+  *アイテムレベルのロールの定義* には、レポート サーバーで格納および管理されているアイテムに関連するタスクが含まれています。 アイテムレベルのロールの定義に含めることのできるタスクには、"レポートの管理"、"フォルダーの表示"、および "個別のサブスクリプションを管理" などがあります。 
+  *システム ロールの定義* には、サイト全体に適用するタスクが含まれています。 システム ロールに含めるタスクには、"レポート サーバーのプロパティを表示" などがあります。  
   
 ## <a name="predefined-roles"></a>Predefined Roles  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、ユーザーが実行するさまざまなレベルの操作に対応した定義済みロールが用意されています。 使用できる定義済みロールを次に示します。  
+ 
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、ユーザーが実行するさまざまなレベルの操作に対応した定義済みロールが用意されています。 使用できる定義済みロールを次に示します。  
   
 -   コンテンツ マネージャー、パブリッシャー、閲覧者、レポート ビルダー、および個人用レポートは、アイテムレベルのロールの定義であり、レポート サーバー コンテンツにアクセスするためのロールの割り当てを作成する際に使用できます。  
   
@@ -45,9 +49,9 @@ ms.locfileid: "66101750"
   
  ロールには、一意の名前を付ける必要があります。 ロールの定義を有効にするには、1 つ以上のタスクを含める必要があります。 詳細については、「 [タスクと権限](tasks-and-permissions.md)」を参照してください。  
   
- ロールの定義を作成するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]を使用します。 詳細については、「 [ロールを作成、削除、または変更する &#40;Management Studio&#41;](role-definitions-create-delete-or-modify.md)」を参照してください。  
+ ロールの定義を作成するに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]は、を使用します。 詳細については、「 [ロールを作成、削除、または変更する &#40;Management Studio&#41;](role-definitions-create-delete-or-modify.md)」を参照してください。  
   
- ロールの定義を作成した後、その定義を使用するには、ロールの割り当てで定義を選択します。 詳細については、「 [レポート サーバーへのユーザー アクセスを許可する &#40;レポート マネージャー&#41;](grant-user-access-to-a-report-server.md)」を参照してください。  
+ ロールの定義を作成した後、その定義を使用するには、ロールの割り当てで定義を選択します。 詳細については、「[レポートサーバーへのユーザーアクセスを許可する &#40;レポートマネージャー&#41;](grant-user-access-to-a-report-server.md)」を参照してください。  
   
 ## <a name="customize-or-delete-a-role-definition"></a>ロールの定義のカスタマイズと削除  
  定義済みロールは、変更したりカスタム ロールに置き換えたりできます。 ロールを変更するには、ロールの定義でタスクを追加または削除します。 ただし、ロールの名前を変更することはできません。 変更を行うと、そのロールの定義を含むすべてのロールの割り当てにすぐに適用されます。  
@@ -58,8 +62,8 @@ ms.locfileid: "66101750"
  [タスクと権限](tasks-and-permissions.md)   
  [ネイティブ モードのレポート サーバーに対する権限の許可](granting-permissions-on-a-native-mode-report-server.md)   
  [ロールを作成、削除、または変更する (Management Studio)](role-definitions-create-delete-or-modify.md)   
- [レポート サーバーへのユーザー アクセスを許可する &#40;レポート マネージャー&#41;](grant-user-access-to-a-report-server.md)   
- [ロールの割り当てを変更または削除する &#40;レポート マネージャー&#41;](role-assignments-modify-or-delete.md)   
+ [レポート サーバーへのユーザー アクセスを許可する (レポート マネージャー)](grant-user-access-to-a-report-server.md)   
+ [ロールの割り当てを変更または削除する &#40;レポートマネージャー&#41;](role-assignments-modify-or-delete.md)   
  [SharePoint サイト上のレポート サーバー アイテムに対する権限の設定 &#40;Reporting Services の SharePoint 統合モード&#41;](set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
   
   

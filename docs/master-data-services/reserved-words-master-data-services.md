@@ -14,16 +14,17 @@ ms.assetid: 88afd0d0-4362-4394-8357-4e65388fc0fc
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 817e15d2fe7e91f63628826f58d6a86dd4edbcb3
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73727915"
 ---
 # <a name="reserved-words-master-data-services"></a>予約語 (マスター データ サービス)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
+  
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、モデル オブジェクトまたはメンバーを作成するときに使用できない単語がいくつかあります。 これらの単語を使用すると、エラーが発生する可能性があります。  
   
 > [!NOTE]  
@@ -31,7 +32,7 @@ ms.locfileid: "73727915"
   
 -   [モデル](../master-data-services/reserved-words-master-data-services.md#models)  
   
--   [エンティティ](../master-data-services/reserved-words-master-data-services.md#entities)  
+-   [[エンティティ]](../master-data-services/reserved-words-master-data-services.md#entities)  
   
 -   [明示的階層](../master-data-services/reserved-words-master-data-services.md#exhierarchies)  
   
@@ -39,18 +40,18 @@ ms.locfileid: "73727915"
   
 -   [メンバー](../master-data-services/reserved-words-master-data-services.md#members)  
   
-##  <a name="models"></a> モデル  
+##  <a name="models"></a>モジュール  
  名前を **Name** または **Code**に設定したモデルを作成する場合は、 **[モデルと同じ名前のエンティティを作成する]** を選択しないでください。エンティティの名前に **Name** または **Code** は使用できません。  
   
-##  <a name="entities"></a> [エンティティ]  
+##  <a name="entities"></a>事業  
  エンティティ名には **Name** または **Code**を使用できません。  
   
-##  <a name="exhierarchies"></a> 明示的階層  
+##  <a name="exhierarchies"></a>明示的階層  
  明示的階層名には **Name** または **Code**を使用できません。  
   
-##  <a name="attributes"></a> 属性  
+##  <a name="attributes"></a>アトリビュート  
   
--   **ID**  
+-   **id**  
   
 -   **コード**  
   
@@ -76,10 +77,10 @@ ms.locfileid: "73727915"
   
 -   **Version_ID**  
   
-##  <a name="members"></a> メンバー  
+##  <a name="members"></a>属する  
  メンバーの場合、 **MDMMemberStatus**、 **MDMUnused**、または **ROOT** を **Code** 属性値として使用することはできません。  
   
 ## <a name="see-also"></a>参照  
- [マスター データ サービスの概要 (MDS)](../master-data-services/master-data-services-overview-mds.md)  
+ [マスターデータサービス概要 &#40;MDS&#41;](../master-data-services/master-data-services-overview-mds.md)  
   
   

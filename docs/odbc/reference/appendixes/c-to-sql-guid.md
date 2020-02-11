@@ -15,29 +15,29 @@ ms.assetid: 9168b0b6-a828-4fef-b8cd-bdf439776f23
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5863935ddf595409d48be79dc646c0994ddeb0b8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68019325"
 ---
 # <a name="c-to-sql-guid"></a>C から SQL へ: GUID
-GUID の ODBC C データ型の識別子です。  
+GUID ODBC C データ型の識別子は次のとおりです。  
   
  SQL_C_GUID  
   
- 次の表は、ODBC SQL データ型の GUID の C データを変換する可能性がありますを示します。 列とテーブルの用語の詳細については、次を参照してください。 [C から SQL データ型への変換データ](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)します。  
+ 次の表は、GUID C データの変換先となる ODBC SQL データ型を示しています。 テーブル内の列と用語の詳細については、「[データを C から SQL データ型に変換する](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)」を参照してください。  
   
 |SQL 型識別子|テスト|SQLSTATE|  
 |-------------------------|----------|--------------|  
-|SQL_CHAR|バイト長の列 > 36 を =|n/a|  
-|SQL_VARCHAR|列のバイトの長さ < 36|22001|  
-|SQL_LONGVARCHAR|データ値が有効な GUID ではありません。|22018|  
-|SQL_WCHAR|文字の長さの列 > 36 を =|n/a|  
-|SQL_WVARCHAR|列の長さ < 36 文字します。|22001|  
-|SQL_WLONGVARCHAR|データ値が有効な GUID ではありません。|22018|  
-|SQL_GUID|[A] [なし]|n/a|  
+|SQL_CHAR|列のバイト長 >= 36|該当なし|  
+|SQL_VARCHAR|列のバイト長 < 36|22001|  
+|SQL_LONGVARCHAR|データ値が有効な GUID ではありません|22018|  
+|SQL_WCHAR|列の文字の長さ >= 36|該当なし|  
+|SQL_WVARCHAR|列の文字の長さ < 36|22001|  
+|SQL_WLONGVARCHAR|データ値が有効な GUID ではありません|22018|  
+|SQL_GUID|なし [a]|該当なし|  
   
- [a] すべての 16 進数の値を GUID として有効です。  
+ [a] すべての16進値は、GUID として有効です。  
   
- ドライバーでは、GUID の C データ型からデータを変換するとき長さ/インジケーター値を無視し、データ バッファーのサイズが GUID の C データ型のサイズであると仮定します。 長さまたはインジケーターの値が渡さ、 *StrLen_or_Ind*引数**SQLPutData**とで指定したバッファー、 *StrLen_or_IndPtr* 引数**SQLBindParameter**します。 データ バッファーを指定した、 *DataPtr*引数**SQLPutData**と*ParameterValuePtr*引数**SQLBindParameter**.
+ ドライバーは、GUID C データ型からデータを変換するときの長さとインジケーターの値を無視し、データバッファーのサイズが GUID C データ型のサイズであると想定しています。 長さ/インジケーターの値は、 **Sqlputdata**の*StrLen_or_Ind*引数と、 **SQLBindParameter**の*StrLen_or_IndPtr*引数で指定されたバッファーに渡されます。 データバッファーは、 **Sqlputdata**の*DataPtr*引数と**SQLBindParameter**の*parametervalueptr*引数を使用して指定します。

@@ -1,5 +1,5 @@
 ---
-title: 使用して、HAVING 句および WHERE 句と同じではクエリ (Visual Database Tools) |Microsoft Docs
+title: 同じクエリ内で HAVING 句と WHERE 句を使用する方法 (Visual Database Tools) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f7aafcd72eff1d21dfe02c8957496398d327cf38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63204630"
 ---
 # <a name="use-having-and-where-clauses-in-the-same-query-visual-database-tools"></a>同一クエリ内で HAVING 句および WHERE 句を使用する (Visual Database Tools)
@@ -61,7 +61,8 @@ HAVING AVG(price) > 10
   
 3.  データ列が GROUP BY 句または集計関数に含まれていない場合は、 **[出力]** 列をオフにします。  
   
-4.  **[フィルター]** 列で WHERE 条件を指定します。 SQL ステートメントの HAVING 句に、指定した条件が追加されます。  
+4.  
+  **[フィルター]** 列で WHERE 条件を指定します。 SQL ステートメントの HAVING 句に、指定した条件が追加されます。  
   
     > [!NOTE]  
     >  上の手順の例では、クエリで 2 つのテーブル `titles` および `publishers`を結合しています。  
@@ -76,7 +77,8 @@ HAVING AVG(price) > 10
     HAVING publishers.state = 'CA'  
     ```  
   
-5.  **[グループ化]** 列で、グループおよび集計のオプションの一覧の **[Where 条件]** をクリックします。 SQL ステートメントの HAVING 句から条件が削除され、WHERE 句に条件が追加されます。  
+5.  
+  **[グループ化]** 列で、グループおよび集計のオプションの一覧の **[Where 条件]** をクリックします。 SQL ステートメントの HAVING 句から条件が削除され、WHERE 句に条件が追加されます。  
   
      SQL ステートメントは、WHERE 句を含むように次のように変更されます。  
   
@@ -88,8 +90,8 @@ HAVING AVG(price) > 10
     GROUP BY titles.pub_id  
     ```  
   
-## <a name="see-also"></a>関連項目  
- [クエリ結果の並べ替えとグループ化&#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
+## <a name="see-also"></a>参照  
+ [クエリ結果の並べ替えとグループ化 &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
  [クエリ結果の要約 (Visual Database Tools)](summarize-query-results-visual-database-tools.md)  
   
   

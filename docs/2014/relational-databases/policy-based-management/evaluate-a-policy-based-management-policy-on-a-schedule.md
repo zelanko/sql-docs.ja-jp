@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4355245af62817b7ab675241f5df9db77500daa3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62705150"
 ---
 # <a name="evaluate-a-policy-based-management-policy-on-a-schedule"></a>ポリシー ベースの管理ポリシーがスケジュールに従っていることの評価
@@ -26,7 +26,7 @@ ms.locfileid: "62705150"
   
 -   **作業を開始する準備:**  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **以下を使用してポリシーがスケジュールに従っていることを評価するには:**  
   
@@ -53,7 +53,7 @@ ms.locfileid: "62705150"
   
 5.  スケジュールを評価するポリシーを右クリックし、 **[プロパティ]** をクリックします。  
   
-6.  **[ポリシーを開く - <_ポリシー名_>]** ダイアログ ボックスで、 **[評価モード]** ボックスの一覧の **[スケジュールで実行]** をクリックします。  
+6.  **[ポリシーを開く - <** ポリシー名 _>]_ ダイアログ ボックスで、 **[評価モード]** ボックスの一覧の **[スケジュールで実行]** をクリックします。  
   
 7.  **[スケジュール]** で、 **[選択]** をクリックして既存のスケジュールを指定するか、 **[新規作成]** をクリックして新しいスケジュールを作成します。  
   

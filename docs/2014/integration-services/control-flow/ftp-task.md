@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fcc071c10a2daa31190727dfc9f3cbe617bdcb66
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62831540"
 ---
 # <a name="ftp-task"></a>FTP タスク
@@ -48,7 +48,7 @@ ms.locfileid: "62831540"
 ## <a name="predefined-ftp-operations"></a>定義済みの FTP 操作  
  FTP タスクには、定義済みの操作のセットが含まれています。 次の表では、これらの操作について説明します。  
   
-|操作|説明|  
+|Operation|説明|  
 |---------------|-----------------|  
 |ファイルの送信|ローカル コンピューターのファイルを FTP サーバーに送信します。|  
 |ファイルの受信|FTP サーバーのファイルをローカル コンピューターに保存します。|  
@@ -60,7 +60,7 @@ ms.locfileid: "62831540"
 |リモート ファイルの削除|FTP サーバーのファイルを削除します。|  
   
 ## <a name="custom-log-entries-available-on-the-ftp-task"></a>FTP タスクで使用できるカスタム ログ エントリ  
- 次の表は、FTP タスクのカスタム ログ エントリの一覧です。 詳しくは、「[Integration Services &#40;SSIS&#41; のログ記録](../performance/integration-services-ssis-logging.md)」と「[ログ記録用のカスタム メッセージ](../custom-messages-for-logging.md)」をご覧ください。  
+ 次の表は、FTP タスクのカスタム ログ エントリの一覧です。 詳細については、「[Integration Services (SSIS) のログ記録](../performance/integration-services-ssis-logging.md)」と「[ログ記録用のカスタム メッセージ](../custom-messages-for-logging.md)」を参照してください。  
   
 |ログ エントリ|説明|  
 |---------------|-----------------|  
@@ -75,8 +75,8 @@ ms.locfileid: "62831540"
  プログラムによってこれらのプロパティを設定する方法の詳細については、「 <xref:Microsoft.SqlServer.Dts.Tasks.FtpTask.FtpTask>」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [[FTP タスク エディター] ([全般] ページ)](../general-page-of-integration-services-designers-options.md)   
- [FTP タスク エディター ([ファイル転送] ページ)](../ftp-task-editor-file-transfer-page.md)   
+ [FTP タスクエディター &#40;[全般] ページ&#41;](../general-page-of-integration-services-designers-options.md)   
+ [FTP タスクエディター &#40;ファイル転送ページ&#41;](../ftp-task-editor-file-transfer-page.md)   
  [Integration Services タスク](integration-services-tasks.md)   
  [制御フロー](control-flow.md)  
   

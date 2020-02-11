@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9fa238a639321e9464ca3de2cc074b516f7df1e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63245994"
 ---
 # <a name="specify-job-responses"></a>ジョブ応答の指定
@@ -41,9 +41,9 @@ ms.locfileid: "63245994"
   
 |||  
 |-|-|  
-|**[説明]**|**トピック**|  
+|**説明**|**トピック**|  
 |オペレーターにジョブの状態を通知する方法について説明します。|[Notify an Operator of Job Status](notify-an-operator-of-job-status.md)|  
-|ジョブの状態を Windows アプリケーション ログに書き込む方法について説明します。|[Windows アプリケーション ログへのジョブ状態の書き込み](../../reporting-services/report-server/windows-application-log.md)|  
+|ジョブの状態を Windows アプリケーション ログに書き込む方法について説明します。|[Write the Job Status to the Windows Application Log](../../reporting-services/report-server/windows-application-log.md)|  
   
 ## <a name="see-also"></a>参照  
  [イベントの監視と応答](monitor-and-respond-to-events.md)  

@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e36b6c114e7e5f2f95c0747d6e36e4dabc118daa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62876219"
 ---
 # <a name="deferred-transactions-sql-server"></a>遅延トランザクション (SQL Server)
@@ -36,11 +36,11 @@ ms.locfileid: "62876219"
   
  次の表に、データベースで復旧を引き起こす操作および I/O に問題が発生した場合の結果を示します。  
   
-|操作|解決方法 (I/O の問題が発生する場合または必要なデータがオフラインの場合)|  
+|アクション|解決方法 (I/O の問題が発生する場合または必要なデータがオフラインの場合)|  
 |------------|-----------------------------------------------------------------------|  
 |サーバーの起動|遅延トランザクション|  
 |[復元]|遅延トランザクション|  
-|[アタッチ]|アタッチの失敗|  
+|Attach|アタッチの失敗|  
 |Autorestart|遅延トランザクション|  
 |データベースまたはデータベース スナップショットの作成|作成の失敗|  
 |データベース ミラーリングの再実行|遅延トランザクション|  
@@ -84,7 +84,7 @@ ms.locfileid: "62876219"
   
          緊急モードの詳細については、「 [データベースの状態](../databases/database-states.md)」を参照してください。  
   
-    -   次に、次の DBCC ステートメントのいずれかで DBCC REPAIR_ALLOW_DATA_LOSS オプションを使用して、データベースを修復します。[DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql)、 [DBCC CHECKALLOC](/sql/t-sql/database-console-commands/dbcc-checkalloc-transact-sql)、または[DBCC CHECKTABLE](/sql/t-sql/database-console-commands/dbcc-checktable-transact-sql)します。  
+    -   次に、 [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql)、 [DBCC CHECKALLOC](/sql/t-sql/database-console-commands/dbcc-checkalloc-transact-sql)、または [DBCC CHECKTABLE](/sql/t-sql/database-console-commands/dbcc-checktable-transact-sql)のいずれかの DBCC ステートメントで DBCC REPAIR_ALLOW_DATA_LOSS オプションを使用して、データベースを修復します。  
   
          DBCC では、不適切なページが検出されると、そのページの割り当てが解除され、関連するすべてのエラーが修復されます。 この方法を使用すると、物理的に一貫性のある状態でデータベースをオンラインに戻すことができます。 ただし、追加されたデータが失われる場合もあるため、この方法は最後の手段として使用してください。  
   

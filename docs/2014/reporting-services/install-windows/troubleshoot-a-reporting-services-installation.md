@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4a9415e7258216c975dd066995bf347deca1d623
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75253199"
 ---
 # <a name="troubleshoot-a-reporting-services-installation"></a>Reporting Services インストール時の問題解決
@@ -133,7 +133,7 @@ ms.locfileid: "75253199"
   
  **注:** 回避策のいずれかを完了したときに**SharePoint 2013 管理シェル**が開いている場合は、管理シェルをいったん閉じてから開き直します。  
   
- 詳細については、次のトピックを参照してください。  
+ 詳細については、「  
   
 -   [SharePoint 製品用の Reporting Services アドインの検索場所](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)  
   

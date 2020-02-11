@@ -14,24 +14,24 @@ ms.assetid: d40e3fd6-9057-4371-8236-95cef300603e
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 29983ce06bf5f50b4d555cee6a8997b22ccefc10
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: 0c3eec754255d38979892c6e1e2d99e03e274897
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73770181"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76909622"
 ---
 # <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>OLE DB の日付/時刻の強化に対するデータ型のサポート
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  このトピックでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の日付/時刻データ型をサポートする OLE DB ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client) 型について説明します。  
+  このトピックでは、日付/ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]時刻データ型をサポート[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]する OLE DB (Native Client) 型について説明します。  
   
 ## <a name="data-type-mapping-in-rowsets-and-parameters"></a>行セットとパラメーターでのデータ型マッピング  
  OLE DB には、新しいサーバーの種類をサポートする 2 つの新しいデータ型 (DBTYPE_DBTIME2 と DBTYPE_DBTIMESTAMPOFFSET) が用意されています。 次の表に、完全なサーバーの型マッピングを示します。  
   
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ型|OLE DB データ型|値|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ型|OLE DB データ型|Value|  
 |-----------------------------------------|----------------------|-----------|  
-|datetime|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
+|DATETIME|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
 |date|DBTYPE_DBDATE|133 (oledb.h)|  
 |time|DBTYPE_DBTIME2|145 (sqlncli)|  
@@ -40,9 +40,10 @@ ms.locfileid: "73770181"
   
 ## <a name="data-formats-strings-and-literals"></a>データ形式 : 文字列とリテラル  
   
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ型|OLE DB データ型|クライアントで変換した場合の文字列の形式|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ型|OLE DB データ型|クライアントで変換した場合の文字列の形式|  
 |-----------------------------------------|----------------------|------------------------------------------|  
-|datetime|DBTYPE_DBTIMESTAMP|'yyyy-mm-dd hh:mm:ss[.999]'<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、datetime における秒の小数部の桁数を 3 桁までサポートします。|  
+|DATETIME|DBTYPE_DBTIMESTAMP|'yyyy-mm-dd hh:mm:ss[.999]'<br /><br /> 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、datetime における秒の小数部の桁数を 3 桁までサポートします。|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|'yyyy-mm-dd hh:mm:ss'<br /><br /> このデータ型の精度は 1 分です。 秒の部分は、出力時には 0 になり、入力時にはサーバーによって丸められます。|  
 |date|DBTYPE_DBDATE|'yyyy-mm-dd'|  
 |time|DBTYPE_DBTIME2|'hh:mm:ss[.9999999]'<br /><br /> 秒の小数部には、必要に応じて最大 7 桁まで指定できます。|  
@@ -112,7 +113,8 @@ typedef struct tagDBTIMESTAMPOFFSET {
     } DBTIMESTAMPOFFSET;  
 ```  
   
- `timezone_hour` が負の場合、`timezone_minute` は負の値または0である必要があります。 `timezone_hour` が正の値の場合、`timezone minute` は正または0にする必要があります。 `timezone_hour` が 0 の場合、`timezone minute` は -59 ～ +59 の値を保持できます。  
+ が`timezone_hour`負の値`timezone_minute`の場合は、負の値または0である必要があります。 が`timezone_hour`正の値`timezone minute`の場合は、正の値または0である必要があります。 
+  `timezone_hour` が 0 の場合、`timezone minute` は -59 ～ +59 の値を保持できます。  
   
 ### <a name="ssvariant"></a>SSVARIANT  
  この構造体は、新しい構造体 DBTYPE_DBTIME2 と DBTYPE_DBTIMESTAMPOFFSET を含み、適切な型に対しては秒の小数部の桁数が追加されています。  
@@ -159,7 +161,7 @@ enum SQLVARENUM {
 };  
 ```  
   
- **Sql_variant**を使用し、 **datetime**の限定精度に依存する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client に移行するアプリケーションは、基になるスキーマが**datetime**ではなく**datetime2**を使用するように更新された場合に更新する必要があります。  
+ **Sql_variant**を使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]し、 **datetime**の制限付き精度に依存するネイティブクライアントに移行するアプリケーションは、基になるスキーマが**datetime**ではなく**datetime2**を使用するように更新された場合に更新する必要があります。  
   
  また、SSVARIANT へのアクセス マクロが拡張され、次の部分が追加されました。  
   
@@ -173,16 +175,16 @@ enum SQLVARENUM {
 ## <a name="data-type-mapping-in-itabledefinitioncreatetable"></a>ITableDefinition::CreateTable でのデータ型マッピング  
  ITableDefinition:: CreateTable で使用される DBCOLUMNDESC 構造体では、次の型マッピングが使用されます。  
   
-|OLE DB データ型 (*Wtype*)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ型|注|  
+|OLE DB データ型 (*Wtype*)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ型|メモ|  
 |----------------------------------|-----------------------------------------|-----------|  
 |DBTYPE_DBDATE|date||  
-|DBTYPE_DBTIMESTAMP|**datetime2**(p)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、秒の小数部の有効桁数を決定するために*Dbbfile desc Bscale*メンバーを検査します。|  
-|DBTYPE_DBTIME2|**time**(p)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、秒の小数部の有効桁数を決定するために*Dbbfile desc Bscale*メンバーを検査します。|  
-|DBTYPE_DBTIMESTAMPOFFSET|**datetimeoffset**(p)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、秒の小数部の有効桁数を決定するために*Dbbfile desc Bscale*メンバーを検査します。|  
+|DBTYPE_DBTIMESTAMP|**datetime2**(p)|Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB プロバイダーは、秒の小数部の有効桁数を決定するために、 *Dbbfile desc bscale*メンバーを検査します。|  
+|DBTYPE_DBTIME2|**時間**(p)|Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB プロバイダーは、秒の小数部の有効桁数を決定するために、 *Dbbfile desc bscale*メンバーを検査します。|  
+|DBTYPE_DBTIMESTAMPOFFSET|**datetimeoffset**(p)|Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB プロバイダーは、秒の小数部の有効桁数を決定するために、 *Dbbfile desc bscale*メンバーを検査します。|  
   
  アプリケーションで*Wtype*の DBTYPE_DBTIMESTAMP を指定すると、 *pwszTypeName*に型名を指定することで、 **datetime2**へのマッピングをオーバーライドできます。 **Datetime**が指定されている場合、 *bscale*は3である必要があります。 **Smalldatetime**を指定する場合、 *bscale*は0にする必要があります。 *Bscale*が*Wtype*および*pwszTypeName*と一致しない場合、DB_E_BADSCALE が返されます。  
   
 ## <a name="see-also"></a>参照  
- [日付と時刻の強化機能 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
+ [OLE DB &#40;の日付と時刻の改善&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: xp_sscanf (TRANSACT-SQL) |Microsoft Docs
+title: xp_sscanf (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: 619a9df1-7008-407e-a75a-bc6f851454a8
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: e46fe3243f39f8783743bf11e08b6368d67116eb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68091899"
 ---
-# <a name="xpsscanf-transact-sql"></a>xp_sscanf (TRANSACT-SQL)
+# <a name="xp_sscanf-transact-sql"></a>xp_sscanf (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   文字列からのデータを、それぞれのフォーマット引数によって与えられる引数の位置に読み込みます。  
@@ -39,33 +39,33 @@ xp_sscanf { string OUTPUT , format } [ ,argument [ ,...n ] ]
 ```  
   
 ## <a name="arguments"></a>引数  
- **string**  
- 引数の値を読み取る文字の文字列です。  
+ **文字列**  
+ 引数の値を読み取る文字列を指定します。  
   
  OUTPUT  
- 指定した場合は、値を代入*引数*出力パラメーター。  
+ 指定した場合、*引数*の値が出力パラメーターに格納されます。  
   
- *format*  
- 書式設定された文字の文字列を C 言語のサポート内容に似ています**sscanf**関数。 現時点では、%s フォーマット引数のみがサポートされています。  
+ *形式*  
+ は、C 言語の**sscanf**関数でサポートされているものに類似した書式設定された文字列です。 現在、% s 書式引数のみがサポートされています。  
   
- *argument*  
- **Varchar**変数に対応する値に設定*形式*引数。  
+ *引数*  
+ **Varchar**変数は、対応する*format*引数の値に設定されます。  
   
  *n*  
- 最大 50 の引数を指定できることを示すプレース ホルダー。  
+ は、最大で50個の引数を指定できることを示すプレースホルダーです。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- **xp_sscanf**次のメッセージが返されます。  
+ **xp_sscanf**は次のメッセージを返します。  
   
  `Command(s) completed successfully.`  
   
 ## <a name="permissions"></a>アクセス許可  
- ロール **public** のメンバーシップが必要です。  
+ **Public**ロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、`xp_sscanf` を使用して、ソース文字列のフォーマットにおけるそれぞれの位置に基づいて、ソース文字列から 2 つの値を抽出します。  
   
 ```  
@@ -82,9 +82,9 @@ SELECT @filename, @message;
 products10.tmp        random  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [汎用拡張ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
- [xp_sprintf &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/xp-sprintf-transact-sql.md)  
+## <a name="see-also"></a>参照  
+ [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;の一般的な拡張ストアドプロシージャ](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
+ [xp_sprintf &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/xp-sprintf-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sys.fn_listextendedproperty (TRANSACT-SQL) |Microsoft Docs
+title: fn_listextendedproperty (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -27,16 +27,16 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9a2516d24b65e509ffc04c0f9979721ad6eefa22
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68082711"
 ---
-# <a name="sysfnlistextendedproperty-transact-sql"></a>sys.fn_listextendedproperty (Transact-SQL)
+# <a name="sysfn_listextendedproperty-transact-sql"></a>sys.fn_listextendedproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  拡張データベースのオブジェクトのプロパティ値を返します。  
+  データベースオブジェクトの拡張プロパティ値を返します。  
  
  
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -58,52 +58,52 @@ fn_listextendedproperty (
   
 ## <a name="arguments"></a>引数  
  { default | '*property_name*' | NULL}  
- プロパティ名を指定します。 *property_name*は**sysname**します。 有効な入力値は、default、null の場合、またはプロパティ名です。  
+ プロパティ名を指定します。 *property_name*は**sysname**です。 有効な入力は、default、NULL、またはプロパティ名です。  
   
  { default | '*level0_object_type*' | NULL}  
- ユーザーまたはユーザー定義型です。 *level0_object_type*は**varchar (128)** 、既定値は NULL です。 有効な入力値は、アセンブリ、コントラクト、イベント通知、ファイル グループ、メッセージの種類、PARTITION FUNCTION、PARTITION SCHEME、REMOTE SERVICE BINDING、ルート、スキーマ、サービス、トリガー、型、ユーザー、および NULL です。  
+ ユーザーまたはユーザー定義型を指定します。 *level0_object_type*は**varchar (128)**,、既定値は NULL です。 有効な入力は、ASSEMBLY、CONTRACT、EVENT NOTIFICATION、FILEGROUP、MESSAGE TYPE、PARTITION FUNCTION、PARTITION SCHEME、REMOTE SERVICE BINDING、ROUTE、SCHEMA、SERVICE、TRIGGER、TYPE、USER、および NULL です。  
   
 > [!IMPORTANT]  
->  USER および TYPE はレベル 0 の種類は、の将来のバージョンで削除される予定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 新しい開発作業では、これらの機能の使用を避け、現在これらの機能を使用しているアプリケーションは修正するようにしてください。 USER の代わりに、レベル 0 の種類として SCHEMA を使用してください。 TYPE については、レベル 0 の種類として SCHEMA、レベル 1 の種類として TYPE を使用してください。  
+>  レベル0のユーザーと型は、今後のバージョンの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では削除される予定です。 新しい開発作業では、これらの機能の使用を避け、現在これらの機能を使用しているアプリケーションは修正するようにしてください。 USER の代わりに、レベル 0 の種類として SCHEMA を使用してください。 TYPE については、レベル 0 の種類として SCHEMA、レベル 1 の種類として TYPE を使用してください。  
   
  { default | '*level0_object_name*' | NULL }  
- 指定したレベル 0 のオブジェクトの種類の名前です。 *level0_object_name*は**sysname**既定値は NULL です。 有効な入力値は、default、null の場合、またはオブジェクト名です。  
+ 指定したレベル0のオブジェクトの種類の名前を指定します。 *level0_object_name*は**sysname**で、既定値は NULL です。 有効な入力は、default、NULL、またはオブジェクト名です。  
   
  { default | '*level1_object_type*' | NULL }  
- レベル 1 のオブジェクトの種類です。 *level1_object_type*は**varchar (128)** 既定値は NULL です。 有効な入力値は、集計、既定値、関数、論理ファイル名、プロシージャ、キュー、ルール、シノニム、テーブル、型、ビュー、XML スキーマ コレクション、および NULL です。  
+ レベル1のオブジェクトの種類を示します。 *level1_object_type*は**varchar (128)** で、既定値は NULL です。 有効な値は、AGGREGATE、DEFAULT、FUNCTION、LOGICAL FILE NAME、PROCEDURE、QUEUE、RULE、シノニム、TABLE、TYPE、VIEW、XML SCHEMA COLLECTION、および NULL です。  
   
 > [!NOTE]  
->  既定値は NULL に相当し、'default' のマップ オブジェクトには、既定値を入力します。  
+>  既定値は NULL にマップされ、' default ' はオブジェクト型 DEFAULT にマップされます。  
   
  {default | '*level1_object_name*' |NULL }  
- 指定したレベル 1 のオブジェクトの種類の名前です。 *level1_object_name*は**sysname**既定値は NULL です。 有効な入力値は、default、null の場合、またはオブジェクト名です。  
+ 指定したレベル1のオブジェクトの種類の名前を指定します。 *level1_object_name*は**sysname**で、既定値は NULL です。 有効な入力は、default、NULL、またはオブジェクト名です。  
   
  { default | '*level2_object_type*' |NULL }  
- レベル 2 のオブジェクトの型です。 *level2_object_type*は**varchar (128)** 既定値は NULL です。 有効な値は、既定で、既定値 (NULL に相当) と NULL は。 有効な入力*level2_object_type*は列、制約、EVENT NOTIFICATION、インデックス、パラメーター、トリガー、および NULL です。  
+ レベル 2 のオブジェクトの種類です。 *level2_object_type*は**varchar (128)** で、既定値は NULL です。 有効な入力は、DEFAULT、default (NULL にマップ)、および NULL です。 *Level2_object_type*の有効な入力値は、COLUMN、CONSTRAINT、EVENT NOTIFICATION、INDEX、PARAMETER、TRIGGER、および NULL です。  
   
  { default | '*level2_object_name*' |NULL }  
- 指定したレベル 2 のオブジェクトの種類の名前です。 *level2_object_name*は**sysname**既定値は NULL です。 有効な入力値は、default、null の場合、またはオブジェクト名です。  
+ 指定したレベル2のオブジェクトの種類の名前を指定します。 *level2_object_name*は**sysname**で、既定値は NULL です。 有効な入力は、default、NULL、またはオブジェクト名です。  
   
 ## <a name="tables-returned"></a>返されるテーブル  
  次の表は、fn_listextendedproperty が返すテーブルの形式です。  
   
-|列名|データの種類|  
+|列名|データ型|  
 |-----------------|---------------|  
 |objtype|**sysname**|  
 |objname|**sysname**|  
-|NAME|**sysname**|  
+|name|**sysname**|  
 |value|**sql_variant**|  
   
- 返されるテーブルが空の場合は、オブジェクトには、拡張プロパティはありません。 または、ユーザーには、オブジェクトの拡張プロパティを一覧表示する権限がありません。 データベース自体の拡張プロパティを返す場合、objtype および objname 列は NULL になります。  
+ 返されたテーブルが空の場合、オブジェクトに拡張プロパティがないか、ユーザーにオブジェクトの拡張プロパティを一覧表示する権限がありません。 データベース自体の拡張プロパティを返す場合、objtype および objname 列は NULL になります。  
   
-## <a name="remarks"></a>コメント  
- 場合の値は、 *property_name*が NULL または既定では、fn_listextendedproperty は指定したオブジェクトのすべてのプロパティを返します。  
+## <a name="remarks"></a>解説  
+ *Property_name*の値が NULL または default の場合、fn_listextendedproperty 指定されたオブジェクトのすべてのプロパティを返します。  
   
- オブジェクトの種類を指定して、対応するオブジェクト名の値が NULL または default、ときに、fn_listextendedproperty は指定された型のすべてのオブジェクトのすべての拡張プロパティを返します。  
+ オブジェクトの種類が指定され、対応するオブジェクト名の値が NULL または default である場合、fn_listextendedproperty は、指定された型のすべてのオブジェクトのすべての拡張プロパティを返します。  
   
- オブジェクトは、レベル 0 が最上位レベル 2 でのレベルによって区別されます、最も低い。 下位レベルであるレベル 1 または 2 のオブジェクトの種類および名前を指定する場合、親オブジェクトの種類と名前を、NULL または default 以外の値で指定する必要があります。 それ以外の場合は、空のセットを返します。  
+ オブジェクトはレベルに従って区別されます。レベル0は最上位、レベル2は最下位です。 下位レベルであるレベル 1 または 2 のオブジェクトの種類および名前を指定する場合、親オブジェクトの種類と名前を、NULL または default 以外の値で指定する必要があります。 それ以外の場合は、空のセットを返します。  
   
- **objname** latin1_general_ci_ai に固定します。 ただしで回避できますこの比較での照合順序をオーバーライドします。  
+ **objname**は Latin1_General_CI_AI として固定されています。 ただし、比較で照合順序をオーバーライドすることによって回避できます。  
   
 ```  
 SELECT o.[object_id] AS 'table_id', o.[name] 'table_name',  
@@ -118,10 +118,10 @@ WHERE o.name = 'Employee';
 ## <a name="permissions"></a>アクセス許可  
  オブジェクトの拡張プロパティを一覧表示する権限は、オブジェクトの種類によって異なります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-displaying-extended-properties-on-a-database"></a>A. データベースの拡張プロパティを表示する  
- 次の例では、データベース オブジェクト自体に対して設定するすべての拡張プロパティを表示します。  
+ 次の例では、データベースオブジェクト自体に設定されているすべての拡張プロパティを表示します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -141,8 +141,8 @@ GO
   
  `(1 row(s) affected)`  
   
-### <a name="b-displaying-extended-properties-on-all-columns-in-a-table"></a>B. テーブルのすべての列の拡張プロパティを表示します。  
- 次の例では、列の拡張プロパティを一覧表示、`ScrapReason`テーブル。 これは、スキーマに含まれている`Production`します。  
+### <a name="b-displaying-extended-properties-on-all-columns-in-a-table"></a>B. テーブル内のすべての列の拡張プロパティの表示  
+ 次の例では、 `ScrapReason`テーブル内の列の拡張プロパティを一覧表示します。 これは、スキーマ`Production`に含まれています。  
   
 ```  
 USE AdventureWorks2012;  
@@ -167,7 +167,7 @@ GO
  `(3 row(s) affected)`  
   
 ### <a name="c-displaying-extended-properties-on-all-tables-in-a-schema"></a>C. スキーマ内のすべてのテーブルの拡張プロパティを表示する  
- 次の例に含まれているすべてのテーブルの拡張プロパティを一覧表示、`Sales`スキーマ。  
+ 次の例では、 `Sales`スキーマに含まれるすべてのテーブルの拡張プロパティを一覧表示します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -177,10 +177,10 @@ FROM fn_listextendedproperty (NULL, 'schema', 'Sales', 'table', default, NULL, N
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [sp_addextendedproperty &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md)   
- [sp_dropextendedproperty &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   
- [sp_updateextendedproperty &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updateextendedproperty-transact-sql.md)   
- [sys.extended_properties &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)  
+## <a name="see-also"></a>参照  
+ [sp_addextendedproperty &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md)   
+ [sp_dropextendedproperty &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   
+ [sp_updateextendedproperty &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-updateextendedproperty-transact-sql.md)   
+ [extended_properties &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)  
   
   

@@ -16,39 +16,39 @@ ms.assetid: 4b1feb9c-a855-40fe-a906-efe688687e9f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5a2de155d9c4a61246245b2c7f9c3c73a535994a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919682"
 ---
 # <a name="commandtypeenum"></a>CommandTypeEnum
-コマンド引数を解釈する方法を指定します。  
+コマンド引数をどのように解釈するかを指定します。  
   
- ユーザーが指定したかを検証することが重要*クラスヒント*アプリケーション ユーザーに実行する ADO の危険性のあるコマンドを挿入する機会を提供しないようにする値。  
+ ユーザーが指定した*Commandstring*値を検証して、ADO にとって危険な可能性のあるコマンドを挿入する機会をアプリケーションユーザーに与えないようにすることが重要です。  
   
-|定数|Value|説明|  
+|常時|値|[説明]|  
 |--------------|-----------|-----------------|  
-|**adCmdUnspecified**|-1|コマンドの型引数を指定しません。|  
-|**adCmdText**|1|評価[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)コマンドまたはストアド プロシージャのテキストの定義として呼び出します。|  
-|**adCmdTable**|2|評価**CommandText**をテーブル名を列の変更がすべて、内部的に生成された SQL クエリで返されます。|  
-|**adCmdStoredProc**|4|評価**CommandText**としてストアド プロシージャの名前。|  
-|**adCmdUnknown**|8|既定値です。 示しますコマンドの種類、 **CommandText**プロパティが不明です。<br /><br /> ADO で解釈するいくつかの試行は、コマンドの種類が不明の場合に、 **CommandText**します。<br /><br /> -   **CommandText**コマンドまたはストアド プロシージャの呼び出しのテキストの定義として解釈されます。 これと同じ動作**adCmdText**します。<br />-   **CommandText**ストアド プロシージャの名前を指定します。 これと同じ動作**adCmdStoredProc**します。<br />-   **CommandText**はテーブルの名前として解釈されます。 内部的に生成された SQL クエリでは、すべての列が返されます。 これと同じ動作**adCmdTable**します。|  
-|**adCmdFile**|256|評価**CommandText**永続的にストアドのファイル名として[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)します。 併用**レコード セット**。[オープン](../../../ado/reference/ado-api/open-method-ado-recordset.md)または[Requery](../../../ado/reference/ado-api/requery-method.md)のみです。|  
-|**adCmdTableDirect**|512|評価**CommandText**をテーブル名を持つ列がすべて返されます。 併用**Recordset.Open**または**Requery**のみです。 使用する、[シーク](../../../ado/reference/ado-api/seek-method.md)メソッド、**レコード セット**で開く必要がある**adCmdTableDirect**します。<br /><br /> この値は組み合わせることができない、 [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md)値**adAsyncExecute**します。|  
+|**adCmdUnspecified**|-1|は、コマンドの型引数を指定していません。|  
+|**Adodb.commandtypeenum.adcmdtext**|1 で保護されたプロセスとして起動されました|[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)をコマンドまたはストアドプロシージャの呼び出しのテキスト定義として評価します。|  
+|**adCmdTable**|2|**CommandText**を、内部で生成された SQL クエリによって返される列を持つテーブル名として評価します。|  
+|**adCmdStoredProc**|4|**CommandText**をストアドプロシージャ名として評価します。|  
+|**adCmdUnknown**|8|既定。 **CommandText**プロパティ内のコマンドの型が不明であることを示します。<br /><br /> コマンドの種類が不明な場合、ADO は**CommandText**をいくつかの方法で解釈しようとします。<br /><br /> -   **CommandText**は、コマンドまたはストアドプロシージャの呼び出しのテキスト定義として解釈されます。 これは、 **Adcmdtext**と同じ動作です。<br />-   **CommandText**は、ストアドプロシージャの名前を指定します。 これは**adCmdStoredProc**と同じ動作です。<br />-   **CommandText**は、テーブルの名前として解釈されます。 すべての列は、内部で生成された SQL クエリによって返されます。 これは、 **Adcmdtable**と同じ動作です。|  
+|**adCmdFile**|256|は、永続的に格納された[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)のファイル名として**CommandText**を評価します。 レコードセットで使用され**ます。**[Open](../../../ado/reference/ado-api/open-method-ado-recordset.md)または[Requery](../../../ado/reference/ado-api/requery-method.md)のみ。|  
+|**adCmdTableDirect**|512|すべての列が返されたテーブル名として**CommandText**を評価します。 レコードセットで使用され**ます。 Open**または**Requery**のみです。 [Seek](../../../ado/reference/ado-api/seek-method.md)メソッドを使用するには、**レコードセット**を**adcmdtabledirect**で開く必要があります。<br /><br /> この値を[Executeoptionenum](../../../ado/reference/ado-api/executeoptionenum.md)値**adasyncexecute**と組み合わせることはできません。|  
   
-## <a name="adowfc-equivalent"></a>ADO と WFC と同等  
- パッケージ: **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>同等の ADO/WFC  
+ パッケージ: **com. ms. wfc. データ**  
   
-|定数|  
+|常時|  
 |--------------|  
-|AdoEnums.CommandType.UNSPECIFIED|  
-|AdoEnums.CommandType.TEXT|  
-|AdoEnums.CommandType.TABLE|  
-|AdoEnums.CommandType.STOREDPROC|  
-|AdoEnums.CommandType.UNKNOWN|  
-|AdoEnums.CommandType.FILE|  
-|AdoEnums.CommandType.TABLEDIRECT|  
+|AdoEnums|  
+|AdoEnums|  
+|AdoEnums|  
+|AdoEnums STOREDPROC|  
+|AdoEnums|  
+|AdoEnums|  
+|AdoEnums. TABLEDIRECT|  
   
 ## <a name="applies-to"></a>適用対象  
   

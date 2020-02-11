@@ -16,14 +16,14 @@ ms.assetid: 99a2b2d4-e6b1-4205-b011-72d024ea7240
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0538a3afae1e4c0bf4159d8ef6a42872f21ff6ed
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67916868"
 ---
 # <a name="stat-method"></a>Stat メソッド
-に関する情報を取得、 [Stream](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクト。  
+[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクトに関する情報を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -33,41 +33,41 @@ Long stream.Stat(StatStg, StatFlag)
 ```  
   
 ## <a name="return-value"></a>戻り値  
- A**長い**操作の状態を示す値。  
+ 操作の状態を示す**Long 型**の値。  
   
 #### <a name="parameters"></a>パラメーター  
  *StatStg*  
- ストリームに関する情報が格納される、STATSTG 構造。 実装、 **Stat** ADO Stream オブジェクトによって使用されるメソッドがすべての構造体のフィールドでいっぱいになりません。  
+ ストリームに関する情報が格納される STATSTG 構造体。 ADO ストリームオブジェクトによって使用される**Stat**メソッドの実装では、構造体のすべてのフィールドが格納されるわけではありません。  
   
  *StatFlag*  
- このメソッドが返さないこと、メンバーの一部、メモリ割り当て操作を節約できるよう、STATSTG 構造を指定します。 値は、STATFLAG 列挙から取得されます。 STATFLAG 列挙体が 2 つの値  
+ このメソッドが STATSTG 構造体の一部のメンバーを返さないことを指定します。これにより、メモリ割り当て操作が保存されます。 値は STATFLAG 列挙体から取得されます。 STATFLAG 列挙体には2つの値があります  
   
-|定数|[値]|  
+|常時|Value|  
 |--------------|-----------|  
 |STATFLAG_DEFAULT|0|  
-|STATFLAG_NONAME|1|  
+|STATFLAG_NONAME|1 で保護されたプロセスとして起動されました|  
   
-## <a name="remarks"></a>コメント  
- Stat ADO Stream オブジェクトに対して実装されるメソッドのバージョンは、STATSTG 構造体の次のフィールドに入力します。  
+## <a name="remarks"></a>解説  
+ ADO Stream オブジェクトに実装されている Stat メソッドのバージョンは、STATSTG 構造体の次のフィールドに入力します。  
   
  *pwcsName*  
- STATFLAG_NONAME StatFlag 値とがある場合、ストリームの名前を含む文字列が指定されませんでした。  
+ ストリームの名前が含まれていて、StatFlag 値 STATFLAG_NONAME が指定されていない場合は、その名前を格納している文字列。  
   
  *cbSize*  
- バイト ストリームまたはバイト配列のサイズを指定します。  
+ ストリームまたはバイト配列のサイズ (バイト単位) を指定します。  
   
  *mtime*  
  このストレージ、ストリーム、またはバイト配列の最終変更時刻を示します。  
   
  *ctime*  
- このストレージ、ストリーム、またはバイト配列の作成時間を示します。  
+ このストレージ、ストリーム、またはバイト配列の作成時刻を示します。  
   
  *atime*  
- このストレージ、ストリームまたはバイト配列の最終アクセス時刻を示します。  
+ このストレージ、ストリーム、またはバイト配列の最終アクセス時刻を示します。  
   
- STATFLAG_NONAME が StatFlag パラメーターで指定されている場合、ストリームの名前は返されません。  
+ StatFlag パラメーターに STATFLAG_NONAME が指定されている場合、ストリームの名前は返されません。  
   
- STATFLAG_NONAME が StatFlag パラメーターで指定されていないと、現在のストリームの名前はありません、この値は E_NOTIMPL になります。  
+ StatFlag パラメーターに STATFLAG_NONAME が指定されておらず、現在のストリームに使用できる名前がない場合、この値は E_NOTIMPL になります。  
   
 ## <a name="applies-to"></a>適用対象  
  [Stream オブジェクト (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

@@ -19,10 +19,10 @@ ms.assetid: 187819b6-c7f4-4a26-b74c-0a89e96695cf
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 566445a3680dc54382a7e3e66bf77dbcbddca2e8
-ms.sourcegitcommit: 4933934fad9f3c3e16406952ed964fbd362ee086
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75548289"
 ---
 # <a name="dbosyssessions-transact-sql"></a>dbo. syssessions (Transact-sql)
@@ -34,13 +34,13 @@ ms.locfileid: "75548289"
   
  このテーブルは、 **msdb**データベースに格納されます。  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
-|**session_id**|**通り**|
+|**session_id**|**int**|
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント セッションの ID。 この session_id は、セッションの SPID ではなく、このシステムテーブル内の ID 値です。|  
-|**agent_start_date**|**/**|セッションに対して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスが開始された日時。|  
+|**agent_start_date**|**DATETIME**|セッションに対して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスが開始された日時。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  このテーブルにアクセスできるのは、 **sysadmin**固定サーバーロールのメンバーであるユーザーだけです。  
   
 ## <a name="see-also"></a>参照  

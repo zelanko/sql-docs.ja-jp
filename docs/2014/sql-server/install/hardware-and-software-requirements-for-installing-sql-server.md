@@ -46,10 +46,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ce6cef69abe7c2461552229363c8334ca56555b4
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75245663"
 ---
 # <a name="hardware-and-software-requirements-for-installing-sql-server-2014"></a>SQL Server 2014 のインストールに必要なハードウェアおよびソフトウェア
@@ -73,7 +73,7 @@ ms.locfileid: "75245663"
 -   
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップを実行すると、製品に必要な以下のソフトウェア コンポーネントがインストールされます。  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client  
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]セットアップサポートファイル  
   
@@ -120,7 +120,7 @@ ms.locfileid: "75245663"
 |ハード ディスク|
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では 6 GB 以上のハード ディスク空き容量が必要です。<br /><br /> 必要となるディスク空き容量は、インストールする [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のコンポーネントに応じて異なります。 詳細については、このトピックの「 [Hard Disk Space Requirements (32-Bit and 64 Bit)](hardware-and-software-requirements-for-installing-sql-server.md#HardDiskSpace) 」を参照してください。 データ ファイルでサポートされているストレージの種類の詳細については、「 [Storage Types for Data Files](hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes)」を参照してください。|  
 |ドライブ|ディスクからインストールする場合は、DVD ドライブが必要です。|  
-|監視|
+|モニター|
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では Super-VGA (800x600) 以上の解像度のモニターが必要です。|  
 |インターネット|インターネット機能にはインターネット アクセス (有料) が必要です。|  
   
@@ -481,7 +481,7 @@ ms.locfileid: "75245663"
   
     > **注:** SMB 記憶域は、スタンドアロン[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]インストールまたはクラスター化インストールのデータファイルに対してはサポートされていません。 代わりに、直接アタッチされたストレージまたはストレージ エリア ネットワークを使用してください。  
   
-    > **大事な！！** SMB ストレージは、Windows ファイル サーバーまたはサード パーティ SMB ストレージ デバイスによってホストされます。 Windows ファイル サーバーが使用される場合、Windows ファイル サーバーのバージョンは 2008 以降である必要があります。 ストレージ オプションとして SMB ファイル共有をとして使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストールの詳細については、「 [SQL Server をストレージ オプションとして SMB ファイル共有にインストールする](../../database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option.md)のインストールおよび実行に必要な最低限のハードウェア要件とソフトウェア要件について説明します。  
+    > **重要!!** SMB ストレージは、Windows ファイル サーバーまたはサード パーティ SMB ストレージ デバイスによってホストされます。 Windows ファイル サーバーが使用される場合、Windows ファイル サーバーのバージョンは 2008 以降である必要があります。 ストレージ オプションとして SMB ファイル共有をとして使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストールの詳細については、「 [SQL Server をストレージ オプションとして SMB ファイル共有にインストールする](../../database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option.md)のインストールおよび実行に必要な最低限のハードウェア要件とソフトウェア要件について説明します。  
   
     > **警告!!!!**  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスターのインストールでは、tempdb ファイルをインストールする場合のみローカル ディスクがサポートされます。 Tempdb のデータファイルとログファイルに指定されたパスが、**すべて**のクラスターノードで有効であることを確認してください。 フェールオーバー中に、tempdb のディレクトリがフェールオーバーのターゲット ノード上で利用できない場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リソースはオンラインへの移行に失敗します。  
@@ -504,5 +504,5 @@ ms.locfileid: "75245663"
   
 ## <a name="see-also"></a>参照  
  [SQL Server インストールの計画](planning-a-sql-server-installation.md)   
- [SQL Server インストールのセキュリティに関する考慮事項](security-considerations-for-a-sql-server-installation.md)   
+ [SQL Server インストールにおけるセキュリティの考慮事項](security-considerations-for-a-sql-server-installation.md)   
  [SQL Server 2014 の製品仕様](../../getting-started/sql-server-2014-product-specifications.md)  

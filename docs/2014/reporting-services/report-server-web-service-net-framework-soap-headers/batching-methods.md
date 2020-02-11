@@ -20,10 +20,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8b7ec19101b1abcb2e0fb825923cce7a237149dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63020134"
 ---
 # <a name="batching-methods"></a>メソッドのバッチ処理
@@ -99,10 +99,10 @@ class Sample
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  <xref:ReportService2005.ReportingService2005.CancelBatch%2A>   
  <xref:ReportService2005.ReportingService2005.CreateBatch%2A>   
- [テクニカル リファレンス &#40;SSRS&#41;](../technical-reference-ssrs.md)   
+ [テクニカル リファレンス (SSRS)](../technical-reference-ssrs.md)   
  [Reporting Services SOAP ヘッダーの使用](using-reporting-services-soap-headers.md)  
   
   

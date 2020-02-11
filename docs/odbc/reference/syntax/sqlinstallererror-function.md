@@ -1,5 +1,5 @@
 ---
-title: SQLInstallerError 関数 |Microsoft Docs
+title: Sqlインストーラエラー関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,18 +20,18 @@ ms.assetid: e6474b79-4d55-458f-81ce-abfafe357f83
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ab9461d87a3df2efc98c38e4c72cee4c247fee7c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68138027"
 ---
 # <a name="sqlinstallererror-function"></a>SQLInstallerError 関数
-**準拠**  
- バージョンが導入されました。ODBC 3.0  
+**互換性**  
+ 導入されたバージョン: ODBC 3.0  
   
- **概要**  
- **SQLInstallerError** ODBC インストーラーの関数のエラーまたは状態の情報を返します。  
+ **まとめ**  
+ **Sqlインストーラエラー** ODBC インストーラー関数のエラーまたは状態の情報を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -46,37 +46,37 @@ RETCODE SQLInstallerError(
 ```  
   
 ## <a name="arguments"></a>引数  
- *i エラー*  
- [入力]エラー レコードの数。 有効な数値は 1 ~ 8 です。  
+ *iError*  
+ 代入エラーレコード番号。 有効な値は 1 ~ 8 です。  
   
  *pfErrorCode*  
- [出力]インストーラーのエラー コード。 (詳細については、「コメントです」を参照してください)  
+ Outputインストーラーのエラーコードです。 (詳細については、「コメント」を参照してください)。  
   
  *lpszErrorMsg*  
- [出力]エラー メッセージのテキスト用のストレージへのポインター。  
+ Outputエラーメッセージテキストのストレージへのポインター。  
   
  *cbErrorMsgMax*  
- [入力]最大長、*後*バッファー。 これ未満か、null 終端文字マイナス SQL_MAX_MESSAGE_LENGTH と等しい必要があります。  
+ 代入*Szerrormsg*バッファーの最大長。 この値は、null 終了文字を引いた SQL_MAX_MESSAGE_LENGTH 以下である必要があります。  
   
  *cbErrorMsgMax*  
- [入力]最大長、*後*バッファー。 これ未満か、null 終端文字マイナス SQL_MAX_MESSAGE_LENGTH と等しい必要があります。  
+ 代入*Szerrormsg*バッファーの最大長。 この値は、null 終了文字を引いた SQL_MAX_MESSAGE_LENGTH 以下である必要があります。  
   
  *pcbErrorMsg*  
- [出力]\(Null 終了文字を除く) バイトの総数へのポインターで返される使用可能な*lpszErrorMsg*です。 返される使用可能なバイト数がより大きいかに等しい場合*cbErrorMsgMax*、エラー メッセージ テキスト*lpszErrorMsg*に切り捨てられます*cbErrorMsgMax*マイナス、null 終端文字のバイト数。 *PcbErrorMsg*引数が null ポインターを指定できます。  
+ Output*Lpszerrormsg*で返すことができる合計バイト数 (null 終端文字を除く) へのポインター。 返されるバイト数が*Cberrormsgmax*以上の場合、 *lpszerrormsg*のエラーメッセージテキストは*cberrormsgmax*から null 終端文字のバイトを引いた値に切り捨てられます。 *Pcberrormsg*引数には null ポインターを指定できます。  
   
 ## <a name="returns"></a>戻り値  
- SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_NO_DATA、または SQL_ERROR します。  
+ SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_NO_DATA、または SQL_ERROR。  
   
 ## <a name="diagnostics"></a>診断  
- **SQLInstallerError**自体のエラー値は通知されません。 **SQLInstallerError** SQL_NO_DATA が返されるエラー情報を取得することができない場合 (この場合*pfErrorCode*が定義されていません)。 場合**SQLInstallerError**は通常、SQL_ERROR を返します何らかの理由でエラー値にアクセスできません**SQLInstallerError** SQL_ERROR が返されますが、エラー値は通知されません。 警告の文字列の長さがわからないかどうか (*lpszErrorMsg*) を設定することができます*lpszErrorMsg* NULL と呼び出しに**SQLInstallerError**します。 **SQLInstallerError**で警告の文字列の長さを戻り値には*cbErrorMsgMax*します。 エラー メッセージのバッファーが短すぎる場合**SQLInstallerError** SQL_SUCCESS_WITH_INFO を返します、正しい*pfErrorCode*値**SQLInstallerError**.  
+ **Sqlインストーラエラー**は、それ自体のエラー値を通知しません。 **Sqlインストーラエラー**は、エラー情報を取得できない場合に SQL_NO_DATA を返します (この場合、 *pferrorcode*は定義されていません)。 通常 SQL_ERROR を返す何らかの理由で**Sqlインストーラエラー**がエラー値にアクセスできない場合、 **sqlインストーラエラー**は SQL_ERROR を返しますが、エラー値は通知されません。 警告文字列 (*lpszerrormsg*) の長さがわからない場合は、 *LPSZERRORMSG*を NULL に設定し、 **sqlインストーラエラー**を呼び出すことができます。 **Sqlインストーラエラー**は、 *Cberrormsgmax*の警告文字列の長さを返します。 エラーメッセージのバッファーが短すぎる場合、 **Sqlインストーラエラー**は SQL_SUCCESS_WITH_INFO を返し、 **sqlインストーラエラー**の正しい*pferrorcode*値を返します。  
   
- アプリケーション エラー メッセージで切り捨てが発生したかを判断する値と比較できます、 *cbErrorMsgMax*に書き込まれるメッセージのテキストの実際の長さへの引数、 *pcbErrorMsg*引数。 切り捨てが発生した場合、適切なバッファーの長さを割り当てる必要がある*lpszErrorMsg*と**SQLInstallerError**で対応するにはもう一度呼び出す必要がある*i エラー*レコード。  
+ エラーメッセージで切り捨てが発生したかどうかを判断するために、アプリケーションでは、 *Cberrormsgmax*引数の値と*Pcberrormsg*引数に書き込まれたメッセージテキストの実際の長さを比較できます。 切り捨てが発生した場合は、 *Lpszerrormsg*に正しいバッファー長を割り当てる必要があります。また、対応する*iError*レコードを使用して**sqlインストーラエラー**を再度呼び出す必要があります。  
   
-## <a name="comments"></a>コメント  
- アプリケーションを呼び出す**SQLInstallerError**と以前の ODBC インストーラーの関数呼び出し、FALSE を返します。 ODBC インストーラーとドライバーまたはトランスレーター セットアップ関数が、関数が失敗した場合にのみ、0 個以上のエラーを投稿 (FALSE を返します)。そのため、アプリケーションが呼び出す**SQLInstallerError** ODBC インストーラー関数が失敗した後のみです。  
+## <a name="comments"></a>説明  
+ ODBC インストーラー関数の前回の呼び出しで FALSE が返された場合、アプリケーションは**Sqlインストーラエラー**を呼び出します。 ODBC インストーラーとドライバーまたはトランスレーターセットアップ関数は、関数が失敗した場合にのみ0個以上のエラーを通知します (FALSE を返します)。そのため、アプリケーションは ODBC インストーラー関数が失敗した後にのみ**Sqlinstaller エラー**を呼び出します。  
   
- ODBC インストーラーのエラー キューは、新しいインストーラー関数が呼び出されるたびにフラッシュされます。 そのため、アプリケーションは、インストーラーの最後の関数呼び出しからエラーを以外の関数を取得することはできません。  
+ ODBC インストーラーのエラーキューは、新しいインストーラー関数が呼び出されるたびにフラッシュされます。 そのため、アプリケーションは、最後のインストーラー関数呼び出し以外の関数のエラーを取得することを想定できません。  
   
- アプリケーションが呼び出す関数の呼び出しを複数のエラーを取得する**SQLInstallerError**複数回です。  
+ 関数呼び出しの複数のエラーを取得するために、アプリケーションは**Sqlインストーラエラー**を複数回呼び出します。  
   
- 追加の情報がない場合に**SQLInstallerError** 、SQL_NO_DATA が返される、 *pfErrorCode*引数が定義されて、 *pcbErrorMsg*引数が 0 の場合、*lpszErrorMsg*引数には、1 つの null 終端文字が含まれています (しない限り、 *cbErrorMsgMax*引数が 0)。
+ 追加情報がない場合、 **Sqlインストーラエラー**は SQL_NO_DATA を返し、 *pferrorcode*引数は定義されていません。 *pcberrormsg*引数は0になり、 *lpszerrormsg*引数には1つの Null 終了文字が含まれます ( *cberrormsgmax*引数が0の場合を除く)。

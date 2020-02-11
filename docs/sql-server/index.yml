@@ -9,49 +9,13 @@ metadata:
   author: MashaMSFT
   ms.author: mathoma
   ms.date: 10/14/2019
-  ms.openlocfilehash: 6d9e92db1b261899846fd0de3c28488717cc58e1
-  ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+  ms.openlocfilehash: 2a7c0d83963f82862c89c1262409fe600dcbd7d3
+  ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/04/2019
-  ms.locfileid: "73536235"
+  ms.lasthandoff: 01/31/2020
+  ms.locfileid: "76831742"
 landingContent:
-- title: SQL Server
-  linkLists:
-  - linkListType: whats-new
-    links:
-    - text: SQL Server 2019
-      url: what-s-new-in-sql-server-ver15.md
-    - text: Azure Data Studio
-      url: ../azure-data-studio/what-is.md
-    - text: Linux 上の SQL Server
-      url: ../linux/sql-server-linux-overview.md
-  - linkListType: quickstart
-    links:
-    - text: 接続およびクエリ (SSMS)
-      url: ../ssms/tutorials/connect-query-sql-server.md
-    - text: 接続およびクエリ (Azure Data Studio)
-      url: ../azure-data-studio/quickstart-sql-server.md
-  - linkListType: download
-    links:
-    - text: SQL Server
-      url: https://www.microsoft.com/en-us/sql-server/sql-server-downloads
-    - text: SQL Server Management Studio
-      url: ../ssms/download-sql-server-management-studio-ssms.md
-    - text: Azure Data Studio
-      url: ../azure-data-studio/download.md
-  - linkListType: reference
-    links:
-    - text: Transact-SQL
-      url: ../t-sql/language-reference.md
-    - text: SQL PowerShell
-      url: ../powershell/sql-server-powershell.md
-    - text: サンプル データベース
-      url: https://docs.microsoft.com/sql/samples/sql-samples-where-are
-    - text: 内部とアーキテクチャのガイド
-      url: https://aka.ms/sqlserverguides
-    - text: 以前のバージョン 2005-2014
-      url: https://docs.microsoft.com/sql/toc/previous-versions-sql-server
 - title: Azure 上の SQL
   linkLists:
   - linkListType: overview
@@ -66,37 +30,189 @@ landingContent:
       url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
     - text: Linux VM 上の SQL Server
       url: ../linux/quickstart-install-connect-clouds.md
-- title: 管理
+    - text: Azure Database Migration Service
+      url: /azure/dms/dms-overview
+- title: 移行
   linkLists:
-  - linkListType: deploy
-    links:
-    - text: SQL Server をインストールする
-      url: https://docs.microsoft.com/sql/database-engine/install-windows/installation-for-sql-server
-    - text: SQL Server をアップグレードする
-      url: ../database-engine/install-windows/upgrade-sql-server.md
   - linkListType: overview
     links:
-    - text: Security
-      url: https://docs.microsoft.com/sql/relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database
-    - text: パフォーマンスの監視とチューニング
-      url: https://docs.microsoft.com/sql/relational-databases/performance/monitor-and-tune-for-performance
-    - text: メモリ内データベース
-      url: ..//relational-databases/in-memory-database.md
-    - text: 自動調整
-      url: ../relational-databases/automatic-tuning/automatic-tuning.md
-    - text: インテリジェントなクエリ処理
-      url: https://aka.ms/IQP
-  - linkListType: concept
+    - text: 移行に関するコンテンツ
+      url: migrate/index.yml
+    - text: データ移行ガイド
+      url: https://datamigration.microsoft.com/
+    - text: データ互換性証明書
+      url: https://aka.ms/dbcompat
+    - text: Data Migration Assistant (DMA)
+      url: ../dma/dma-overview.md
+    - text: SQL Server Migration Assistant (SSMA)
+      url: ../ssma/sql-server-migration-assistant.md
+- title: SQL Server
+  linkLists:
+  - linkListType: whats-new
+    links:
+    - text: SQL Server 2019
+      url: what-s-new-in-sql-server-ver15.md
+    - text: SQL Server ビッグ データ クラスター
+      url: ../big-data-cluster/big-data-cluster-overview.md
+    - text: Azure Data Studio
+      url: ../azure-data-studio/what-is.md
+    - text: Linux 上の SQL Server
+      url: ../linux/sql-server-linux-overview.md
+  - linkListType: quickstart
+    links:
+    - text: 接続およびクエリ (SSMS)
+      url: ../ssms/tutorials/connect-query-sql-server.md
+    - text: 接続およびクエリ (Azure Data Studio)
+      url: ../azure-data-studio/quickstart-sql-server.md
+  - linkListType: download
+    links:
+    - text: SQL Server
+      url: https://www.microsoft.com/sql-server/sql-server-downloads
+    - text: SQL Server Management Studio
+      url: ../ssms/download-sql-server-management-studio-ssms.md
+    - text: Azure Data Studio
+      url: ../azure-data-studio/download.md
+  - linkListType: reference
+    links:
+    - text: Transact-SQL (T-SQL)
+      url: ../t-sql/language-reference.md
+    - text: SQL Server 2014 のドキュメント
+      url: https://docs.microsoft.com/sql/2014-toc/index?view=sql-server-2014
+    - text: 学習用 SQL リソース
+      url: ../sql-server/educational-sql-resources.yml
+    - text: サンプル データベース
+      url: https://docs.microsoft.com/sql/samples/sql-samples-where-are
+    - text: 内部とアーキテクチャのガイド
+      url: https://aka.ms/sqlserverguides
+    - text: 以前のバージョン 2005-2012
+      url: https://docs.microsoft.com/sql/toc/previous-versions-sql-server
+- title: ビジネス継続性
+  linkLists:
+  - linkListType: overview
     links:
     - text: バックアップと復元
       url: ../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md
     - text: Always On 可用性グループ
       url: ../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md
-    - text: フェールオーバー クラスター インスタンス
-      url: failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md
-    - text: SQL Server のレプリケーション
+    - text: Always On フェールオーバー クラスター インスタンス
+      url: failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md
+    - text: データベース ミラーリング
+      url: ../database-engine/database-mirroring/database-mirroring-sql-server.md
+    - text: ログ配布
+      url: ../database-engine/log-shipping/about-log-shipping-sql-server.md
+    - text: レプリケーション
       url: ../relational-databases/replication/sql-server-replication.md
-- title: Business Intelligence
+- title: Security
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: SQL 脆弱性評価
+      url: ../relational-databases/security/sql-vulnerability-assessment.md
+    - text: アクセス管理
+      url: ../relational-databases/security/authentication-access/determining-effective-database-engine-permissions.md
+    - text: Always Encrypted
+      url: ../relational-databases/security/encryption/always-encrypted-database-engine.md
+    - text: 監査
+      url: ../relational-databases/security/auditing/sql-server-audit-database-engine.md
+    - text: エンクレーブ
+      url: ../relational-databases/security/encryption/always-encrypted-enclaves.md
+    - text: 動的データ マスク
+      url: ../relational-databases/security/dynamic-data-masking.md
+    - text: Transparent Data Encryption (TDE)
+      url: ../relational-databases/security/encryption/transparent-data-encryption.md
+    - text: 行レベルのセキュリティ
+      url: ../relational-databases/security/row-level-security.md
+- title: データベースの設計
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: 照合順序
+      url: ../relational-databases/collations/collation-and-unicode-support.md
+    - text: データベース
+      url: ../relational-databases/databases/databases.md
+    - text: グラフ
+      url: ../relational-databases/graphs/sql-graph-overview.md
+    - text: インデックス
+      url: ../relational-databases/indexes/indexes.md
+    - text: ビュー
+      url: ../relational-databases/views/views.md
+    - text: ユーザー定義関数
+      url: ../relational-databases/user-defined-functions/user-defined-functions.md
+    - text: テーブル
+      url: ../relational-databases/tables/tables.md
+    - text: ストアド プロシージャ
+      url: ../relational-databases/stored-procedures/stored-procedures-database-engine.md
+- title: 管理と監視
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: トランザクション ログの管理
+      url: ../relational-databases/logs/the-transaction-log-sql-server.md
+    - text: メンテナンス プラン
+      url: ../relational-databases/maintenance-plans/maintenance-plans.md
+    - text: SQL Server エージェント
+      url: ../ssms/agent/sql-server-agent.md
+    - text: 変更を追跡する
+      url: ../relational-databases/track-changes/track-data-changes-sql-server.md
+    - text: データ圧縮
+      url: ../relational-databases/data-compression/data-compression.md
+    - text: 拡張イベント
+      url: ../relational-databases/extended-events/extended-events.md
+    - text: SQLdiag
+      url: ../tools/sqldiag-utility.md
+    - text: SQL Profiler
+      url: ../tools/sql-server-profiler/sql-server-profiler.md
+- title: チューニング
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: パフォーマンス センター
+      url: ../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md
+    - text: インテリジェントなクエリ処理
+      url: https://aka.ms/IQP
+    - text: 自動調整
+      url: ../relational-databases/automatic-tuning/automatic-tuning.md
+    - text: データベース チューニング アドバイザー
+      url: ../relational-databases/performance/database-engine-tuning-advisor.md
+    - text: インメモリ OLTP
+      url: ../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md
+  - linkListType: concept
+    links:
+    - text: カーディナリティ推定
+      url: ../relational-databases/performance/cardinality-estimation-sql-server.md
+    - text: 統計
+      url: ../relational-databases/statistics/statistics.md
+    - text: インデックス
+      url: ../relational-databases/indexes/indexes.md
+- title: クエリ データ
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Transact-SQL (T-SQL)
+      url: ../t-sql/language-reference.md
+    - text: SQL PowerShell
+      url: ../powershell/sql-server-powershell.md
+    - text: スクリプトの作成
+      url: ../ssms/scripting/database-engine-scripting.md
+    - text: 結合
+      url: ../relational-databases/performance/joins.md
+    - text: フルテキスト検索
+      url: ../relational-databases/search/full-text-search.md
+    - text: シノニム
+      url: ../relational-databases/synonyms/synonyms-database-engine.md
+- title: ビッグ データと機械学習
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: SQL Server ビッグ データ クラスター
+      url: ../big-data-cluster/big-data-cluster-overview.md
+    - text: 分析プラットフォーム システム
+      url: https://www.microsoft.com/sql/analytics-platform-system/
+    - text: SQL Server Machine Learning (R と Python)
+      url: https://docs.microsoft.com/sql/advanced-analytics/
+    - text: Polybase によるデータ仮想化
+      url: ../relational-databases/polybase/polybase-guide.md
+- title: ビジネス インテリジェンス
   linkLists:
   - linkListType: overview
     links:
@@ -108,33 +224,3 @@ landingContent:
       url: ../integration-services/sql-server-integration-services.md
     - text: Azure Data Factory
       url: https://docs.microsoft.com/azure/data-factory/
-- title: 移行
-  linkLists:
-  - linkListType: overview
-    links:
-    - text: データ移行ガイド
-      url: https://datamigration.microsoft.com/
-    - text: データ互換性証明書
-      url: https://aka.ms/dbcompat
-    - text: Azure Database Migration Service
-      url: https://docs.microsoft.com/azure/dms/dms-overview
-    - text: Data Migration Assistant (DMA)
-      url: ../dma/dma-overview.md
-    - text: Database Experimentation Assistant
-      url: ../dea/database-experimentation-assistant-overview.md
-    - text: SQL Server Migration Assistant (SSMA)
-      url: ../ssma/sql-server-migration-assistant.md
-- title: ビッグ データと機械学習
-  linkLists:
-  - linkListType: overview
-    links:
-    - text: SQL Server ビッグ データ クラスター
-      url: ../big-data-cluster/big-data-cluster-overview.md
-    - text: 分析プラットフォーム システム
-      url: https://www.microsoft.com/sql/analytics-platform-system/
-    - text: SQL Server での Machine Learning
-      url: https://docs.microsoft.com/sql/advanced-analytics/
-    - text: R Services
-      url: ../advanced-analytics/r/sql-server-r-services.md
-    - text: Polybase によるデータ仮想化
-      url: ../relational-databases/polybase/polybase-guide.md

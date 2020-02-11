@@ -17,14 +17,14 @@ ms.assetid: ab79a623-88a9-40b6-a017-a658bf19b778
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 97c7f1c143c83dd35ca5ff17e9776d79fb734ff9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917923"
 ---
 # <a name="open-method-ado-record"></a>Open メソッド (ADO Record)
-既存を開く[レコード](../../../ado/reference/ado-api/record-object-ado.md)オブジェクト、またはで表される新しい項目の作成、**レコード**ファイルやディレクトリなどです。  
+既存の[レコード](../../../ado/reference/ado-api/record-object-ado.md)オブジェクトを開くか、ファイルやディレクトリなどの**レコード**によって表される新しい項目を作成します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,49 +34,49 @@ Open Source, ActiveConnection, Mode, CreateOptions, Options, UserName, Password
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *Source*  
- 任意。 A**バリアント**これで表されるエンティティの URL を表すことがあります**レコード**オブジェクト、**コマンド**、開いている[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)またはもう 1 つ**レコード**オブジェクト、SQL SELECT ステートメントまたはテーブル名を含む文字列。  
+ *ソース*  
+ 省略可能。 この**レコード**オブジェクトによって表されるエンティティの URL、**コマンド**、開いているレコード[セット](../../../ado/reference/ado-api/recordset-object-ado.md)または別の**レコード**オブジェクト、SQL SELECT ステートメントまたはテーブル名を含む文字列を表す**バリアント**。  
   
  *ActiveConnection*  
- 任意。 A**バリアント**接続文字列またはオープンを表す[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクト。  
+ 省略可能。 接続文字列または開いている[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトを表す**バリアント**です。  
   
  *モード*  
- 任意。 A [ConnectModeEnum](../../../ado/reference/ado-api/connectmodeenum.md) 、結果として得られるアクセス モードを指定する値**レコード**オブジェクト。 既定値は**adModeUnknown**します。  
+ 省略可能。 結果の**レコード**オブジェクトのアクセスモードを指定する[connectmodeenum](../../../ado/reference/ado-api/connectmodeenum.md)値です。 既定値は**Admodeunknown**です。  
   
  *CreateOptions*  
- 任意。 A [RecordCreateOptionsEnum](../../../ado/reference/ado-api/recordcreateoptionsenum.md)かどうか、既存のファイルまたはディレクトリを開く必要があります、または新しいファイルまたはディレクトリを作成する必要がありますを指定する値。 既定値は**adFailIfNotExists**します。 かどうか、既定値に設定して、アクセス モードがから取得した、[モード](../../../ado/reference/ado-api/mode-property-ado.md)プロパティ。 このパラメーターは無視されますと、*ソース*パラメーターに URL が含まれていません。  
+ 省略可能。 既存のファイルまたはディレクトリを開くか、新しいファイルまたはディレクトリを作成する必要があるかを指定する[Recordcreateoptionsenum](../../../ado/reference/ado-api/recordcreateoptionsenum.md)値。 既定値は**Adfailifnotexists**です。 既定値に設定されている場合、アクセスモードは[mode](../../../ado/reference/ado-api/mode-property-ado.md)プロパティから取得されます。 *Source*パラメーターに URL が含まれていない場合、このパラメーターは無視されます。  
   
- *[オプション]*  
- 任意。 A [RecordOpenOptionsEnum](../../../ado/reference/ado-api/recordopenoptionsenum.md)開くのためのオプションを指定する値、**レコード**します。 既定値は**adOpenRecordUnspecified**します。 これらの値を組み合わせることができます。  
+ *オプション*  
+ 省略可能。 **レコード**を開くためのオプションを指定する[RecordOpenOptionsEnum](../../../ado/reference/ado-api/recordopenoptionsenum.md)値です。 既定値は**Adopenrecordunspecified**です。 これらの値は組み合わせることができます。  
   
- *UserName*  
- 任意。 A**文字列**、必要な場合へのアクセスを承認するユーザー ID を含む値*ソース*します。  
+ *ユーザー名*  
+ 省略可能。 必要に応じて、*ソース*へのアクセスを承認するユーザー ID を表す**文字列**値です。  
   
- *Password*  
- 任意。 A**文字列**、必要な場合を検証するパスワードを含む値*UserName*します。  
+ *パスワード*  
+ 省略可能。 必要に応じて*ユーザー名*を確認するパスワードを含む**文字列**値です。  
   
-## <a name="remarks"></a>Remarks  
- *ソース*可能性があります。  
+## <a name="remarks"></a>解説  
+ *ソース*は次のようになります。  
   
--   URL。 URL のプロトコルが http の場合は、インターネット プロバイダーは既定で呼び出されます。 URL が実行可能スクリプトを含むノードを指すかどうか (など、します。ASP ページの場合)、**レコード**ではなく、実行されたソースを格納している内容が既定で表示します。 使用して、*オプション*この動作を変更する引数。  
+-   URL。 URL のプロトコルが http の場合、インターネットプロバイダーが既定で呼び出されます。 URL が、のような実行可能スクリプトを含むノードを指している場合は。ASP ページ) 既定では、実行されたコンテンツではなく、ソースを含む**レコード**が開かれます。 この動作を変更するには、 *Options*引数を使用します。  
   
--   A**レコード**オブジェクト。 A**レコード**別のオブジェクトを開く**レコード**元を複製**レコード**オブジェクト。  
+-   **レコード**オブジェクト。 別の**レコード**から開かれた**レコード**オブジェクトは、元の**レコード**オブジェクトを複製します。  
   
--   A**コマンド**オブジェクト。 開かれている**レコード**オブジェクトが実行することによって返される単一行を表す、**コマンド**します。 結果が 1 つの行よりも多く含まれる場合は、レコードの最初の行の内容し、にエラーが追加される可能性があります、**エラー**コレクション。  
+-   **コマンド**オブジェクト。 開いている**レコード**オブジェクトは、**コマンド**の実行によって返される単一行を表します。 結果に1つ以上の行が含まれている場合は、最初の行の内容がレコードに配置され **、エラーがエラーコレクションに**追加されることがあります。  
   
--   SQL SELECT ステートメント。 開かれている**レコード**オブジェクトは、文字列の内容を実行することによって返される単一行を表します。 結果が 1 つの行よりも多く含まれる場合は、レコードの最初の行の内容し、にエラーが追加される可能性があります、**エラー**コレクション。  
+-   SQL SELECT ステートメント。 開いている**レコード**オブジェクトは、文字列の内容を実行して返される単一行を表します。 結果に1つ以上の行が含まれている場合は、最初の行の内容がレコードに配置され **、エラーがエラーコレクションに**追加されることがあります。  
   
--   テーブル名です。  
+-   テーブル名。  
   
- 場合、**レコード**オブジェクトは、URL でアクセスできませんエンティティを表します (の行など、**レコード セット**データベースから派生)、両方の値、 [ParentURL](../../../ado/reference/ado-api/parenturl-property-ado.md)。プロパティとフィールドを使用してアクセス、 **adRecordURL**定数が null です。  
+ **レコード**オブジェクトが、URL を使用してアクセスできないエンティティ (たとえば、データベースから派生した**レコードセット**の行) を表している場合、 [parenturl](../../../ado/reference/ado-api/parenturl-property-ado.md)プロパティと**adRecordURL**定数でアクセスされるフィールドの両方の値は null になります。  
   
 > [!NOTE]
->  Http スキームを使用して Url が自動的に呼び出さ、 [Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)します。 詳細については、次を参照してください。[絶対と相対 Url](../../../ado/guide/data/absolute-and-relative-urls.md)します。  
+>  Http スキームを使用する Url は、[インターネット公開のために Microsoft OLE DB プロバイダー](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)を自動的に呼び出します。 詳細については、「[絶対 url と相対 url](../../../ado/guide/data/absolute-and-relative-urls.md)」を参照してください。  
   
 ## <a name="applies-to"></a>適用対象  
  [Record オブジェクト (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Open メソッド (ADO Connection)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
  [Open メソッド (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [Open メソッド (ADO Stream)](../../../ado/reference/ado-api/open-method-ado-stream.md)   

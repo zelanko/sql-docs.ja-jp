@@ -1,5 +1,5 @@
 ---
-title: レッスン 2:SQL Server Credential | を作成します。Microsoft Docs
+title: 'レッスン 2: SQL Server の資格情報を作成する |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,21 +11,21 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: baa337d33173f292145d92b60d6192af2a716c5e
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70154336"
 ---
-# <a name="lesson-2-create-a-sql-server-credential"></a>レッスン 2:SQL Server 資格情報の作成
-  **資格情報:**[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資格情報は、SQL Server の外部にあるリソースへの接続に必要な認証情報を保存するために使用されるオブジェクトです。  ここで[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]は、バックアップと復元のプロセスで、Azure Blob ストレージサービスに対する認証に資格情報を使用します。 資格情報には、ストレージ アカウントの名前とその **アクセス キー** 値が格納されます。 作成した資格情報は、BACKUP/RESTORE ステートメントの実行時に WITH CREDENTIAL オプションで指定する必要があります。 ストレージアカウントの**アクセスキー**を表示、コピー、または再生成する方法の詳細については、「[ストレージアカウントのアクセスキー](https://msdn.microsoft.com/library/windowsazure/hh531566.aspx)」を参照してください。  
+# <a name="lesson-2-create-a-sql-server-credential"></a>レッスン 2: SQL Server 資格情報の作成
+  **資格情報:**[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]資格情報は、SQL Server の外部にあるリソースに接続するために必要な認証情報を格納するために使用されるオブジェクトです。  ここで[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]は、バックアップと復元のプロセスで、Azure Blob ストレージサービスに対する認証に資格情報を使用します。 資格情報には、ストレージ アカウントの名前とその **アクセス キー** 値が格納されます。 作成した資格情報は、BACKUP/RESTORE ステートメントの実行時に WITH CREDENTIAL オプションで指定する必要があります。 ストレージアカウントの**アクセスキー**を表示、コピー、または再生成する方法の詳細については、「[ストレージアカウントのアクセスキー](https://msdn.microsoft.com/library/windowsazure/hh531566.aspx)」を参照してください。  
   
- 資格情報の全般的な情報については、「 [資格情報](../relational-databases/security/authentication-access/credentials-database-engine.md)」を参照してください。  
+ 資格情報に関する一般情報については、「[資格](../relational-databases/security/authentication-access/credentials-database-engine.md)情報」を参照してください。  
   
- 資格情報が使用されるその他の例については、「 [SQL Server エージェント プロキシの作成](../ssms/agent/create-a-sql-server-agent-proxy.md)」参照してください。  
+ 資格情報が使用されるその他の例については、「 [Create a SQL Server エージェント Proxy](../ssms/agent/create-a-sql-server-agent-proxy.md)」を参照してください。  
   
 > [!IMPORTANT]  
->  以下で説明する SQL Server 資格情報を作成するための要件は、SQL Server バックアッププロセス ([SQL Server backup TO URL](../relational-databases/backup-restore/sql-server-backup-to-url.md)、および[SQL Server Managed backup to Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)) に固有のものです。 SQL Server では、Azure ストレージにアクセスしてバックアップの書き込みまたは読み取りを行う場合、ストレージ アカウント名とアクセス キーの情報を使用します。  Azure storage にデータベースファイルを格納するための資格情報を作成する[方法の詳細については、「レッスン 3:SQL Server 資格情報の作成](../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)  
+>  以下で説明する SQL Server 資格情報を作成するための要件は、SQL Server バックアッププロセス ([SQL Server backup TO URL](../relational-databases/backup-restore/sql-server-backup-to-url.md)、および[SQL Server Managed backup to Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)) に固有のものです。 SQL Server では、Azure ストレージにアクセスしてバックアップの書き込みまたは読み取りを行う場合、ストレージ アカウント名とアクセス キーの情報を使用します。  Azure ストレージにデータベース ファイルを格納するための資格情報の作成方法については、「 [Lesson 3: Create a SQL Server Credential](../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)」を参照してください。  
   
 ## <a name="create-a-sql-server-credential"></a>SQL Server 資格情報の作成  
  SQL Server 資格情報を作成するには、次の手順を実行します。  
@@ -34,7 +34,8 @@ ms.locfileid: "70154336"
   
 2.  オブジェクト エクスプローラーで、AdventureWorks2012 データベースがインストールされているデータベース エンジンのインスタンスに接続するか、このチュートリアルに使用する独自のデータベースを使用します。  
   
-3.  **[標準]** ツール バーの **[新しいクエリ]** をクリックします。  
+3.  
+  **[標準]** ツール バーの **[新しいクエリ]** をクリックします。  
   
 4.  次の例をコピーしてクエリ ウィンドウに貼り付け、必要に応じて変更します。  
   
@@ -45,13 +46,13 @@ ms.locfileid: "70154336"
   
     ```  
   
-     ![ストレージアカウントを sql 資格情報にマップしています](../../2014/tutorials/media/backuptocloud-storage-credential-mapping.gif "ストレージアカウントを sql 資格情報にマップしています")  
+     ![sql 資格情報へのストレージ アカウントのマッピング](../../2014/tutorials/media/backuptocloud-storage-credential-mapping.gif "sql 資格情報へのストレージ アカウントのマッピング")  
   
 5.  T-sql ステートメントを確認し、[**実行**] をクリックします。  
   
  バックアップの概念と要件に関する Azure Blob storage サービスの詳細については、「 [Azure Blob Storage サービスを使用したバックアップと復元の SQL Server](../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)」を参照してください。  
   
 ### <a name="next-lesson"></a>次のレッスン  
- [レッスン 3:Azure Blob Storage サービス](../../2014/tutorials/lesson-3-write-a-full-database-backup-to-the-windows-azure-blob-storage-service.md)にデータベースの完全バックアップを書き込みます。  
+ [レッスン 3: Azure Blob Storage サービスにデータベースの完全バックアップを書き込み](../../2014/tutorials/lesson-3-write-a-full-database-backup-to-the-windows-azure-blob-storage-service.md)ます。  
   
   

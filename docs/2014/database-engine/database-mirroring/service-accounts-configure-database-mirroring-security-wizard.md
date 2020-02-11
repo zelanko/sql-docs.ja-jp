@@ -13,33 +13,34 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 69877c6a20e37e012925185d0b807e9579066e35
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62754394"
 ---
 # <a name="service-accounts-configure-database-mirroring-security-wizard"></a>[サービス アカウント] (データベース ミラーリング セキュリティ構成ウィザード)
   Windows 認証でサーバー インスタンスが別のアカウントを使用している場合に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のサービス アカウントを指定します。 これらのサービス アカウントは、すべて (同じドメインまたは信頼関係のあるドメインの) ドメイン アカウントである必要があります。  
   
- すべてのサーバー インスタンスが同じアカウントを使用している場合、または証明書ベースの認証を使用している場合、フィールドは空のままにします。 **[完了]** をクリックするだけで、現在のウィザードのアカウントに基づいてアカウントが自動的に構成されます。  
+ すべてのサーバー インスタンスが同じアカウントを使用している場合、または証明書ベースの認証を使用している場合、フィールドは空のままにします。 
+  **[完了]** をクリックするだけで、現在のウィザードのアカウントに基づいてアカウントが自動的に構成されます。  
   
 > [!IMPORTANT]  
 >  サーバー インスタンスのデータベース ミラーリング エンドポイントで証明書を使用するように構成されている場合は、サービス アカウント フィールドをすべて空にする必要があります。  
   
- **SQL Server Management Studio を使用してデータベース ミラーリングを構成するには**  
+ **SQL Server Management Studio を使用してデータベースミラーリングを構成するには**  
   
--   [Windows 認証を使用してデータベース ミラーリング セッションを確立する &#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md)  
+-   [Windows 認証 &#40;SQL Server Management Studio を使用してデータベースミラーリングセッションを確立&#41;](establish-database-mirroring-session-windows-authentication.md)  
   
--   [データベース ミラーリング セキュリティ構成ウィザードの起動 &#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md)  
+-   [データベースミラーリングセキュリティ構成ウィザード &#40;SQL Server Management Studio を開始し&#41;](start-the-configuring-database-mirroring-security-wizard.md)  
   
-## <a name="options"></a>および  
- **プリンシパル**  
+## <a name="options"></a>オプション  
+ **第一**  
  プリンシパル サーバー インスタンスのサービス アカウントを指定します。 ドメイン名を大文字で入力します。  
   
  *DOMAINNAME*\\*username*  
   
- **ミラー**  
+ **イメージ**  
  ミラー サーバー インスタンスのサービス アカウントを指定します。 ドメイン名を大文字で入力します。  
   
  *DOMAINNAME*\\*username*  
@@ -49,10 +50,10 @@ ms.locfileid: "62754394"
   
  *DOMAINNAME*\\*username*  
   
-## <a name="see-also"></a>関連項目  
- [データベース プロパティ &#40;[ミラーリング] ページ&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
- [データベース ミラーリング モニターの起動 &#40;SQL Server Management Studio&#41;](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
- [データベース ミラーリング &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
- [ログイン アカウントのデータベース ミラーリングまたは AlwaysOn 可用性グループ セットアップ&#40;SQL Server&#41;](set-up-login-accounts-database-mirroring-always-on-availability.md)  
+## <a name="see-also"></a>参照  
+ [[データベースのプロパティ] &#40;[ミラーリング] ページ&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
+ [&#40;SQL Server Management Studio を開始データベースミラーリングモニター&#41;](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
+ [データベースミラーリング &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
+ [データベースミラーリングまたは AlwaysOn 可用性グループ &#40;SQL Server のログインアカウントを設定&#41;](set-up-login-accounts-database-mirroring-always-on-availability.md)  
   
   

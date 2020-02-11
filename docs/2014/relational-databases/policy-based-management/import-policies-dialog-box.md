@@ -13,16 +13,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4a0830e5db32fcc651b59114e1a2dad870e48d07
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62705242"
 ---
 # <a name="import-policies-dialog-box"></a>[ポリシーのインポート] ダイアログ ボックス
   このダイアログ ボックスを使用すると、XML ファイルとして保存された 1 つ以上のポリシー (およびその参照された条件) を [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] の現在のインスタンスにインポートできます。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **[インポートするファイル]**  
  XML ファイルからポリシーをインポートするには、ファイルのパスと名前を入力するか、参照ボタン ( **[...]** ) を使用します。  
   
@@ -41,6 +41,6 @@ ms.locfileid: "62705242"
 ## <a name="see-also"></a>参照  
  [ポリシー ベースの管理を使用したサーバーの管理](administer-servers-by-using-policy-based-management.md)   
  [ポリシー ベースの管理ポリシーのインポート](import-a-policy-based-management-policy.md)   
- [ポリシー ベースの管理ポリシーのエクスポート](export-a-policy-based-management-policy.md)  
+ [ポリシーベースの管理ポリシーのエクスポート](export-a-policy-based-management-policy.md)  
   
   

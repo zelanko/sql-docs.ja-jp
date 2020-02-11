@@ -1,5 +1,5 @@
 ---
-title: ネットワーク プロトコルの選択 |Microsoft Docs
+title: ネットワークプロトコルの選択 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,14 +24,16 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 9c167994c7145bce348b6959a57533e398e1d6bb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63035289"
 ---
 # <a name="choosing-a-network-protocol"></a>ネットワーク プロトコルの選択
-  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]に接続するには、ネットワーク プロトコルを有効にする必要があります。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 同時にいくつかのプロトコルで要求を処理することができます。 クライアントは、1 つのプロトコルを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がどのプロトコルでリッスンしているかをクライアント プログラムによって判別できない場合は、複数のプロトコルを順に試みるようにクライアントを構成してください。 ネットワーク プロトコルを有効化、無効化、または構成するには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを使用します。  
+  
+  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]に接続するには、ネットワーク プロトコルを有効にする必要があります。 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、複数のプロトコルに対して同時に要求を処理できます。 クライアントは、1 つのプロトコルを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続します。 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がどのプロトコルでリッスンしているかをクライアント プログラムによって判別できない場合は、複数のプロトコルを順に試みるようにクライアントを構成してください。 ネットワーク プロトコルを有効化、無効化、または構成するには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを使用します。  
   
 ## <a name="shared-memory"></a>共有メモリ  
  共有メモリは、使用できる最も単純なプロトコルであり、構成可能な設定はありません。 共有メモリ プロトコルを使用するクライアントは、同じコンピューター上で実行されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスにしか接続できないため、ほとんどのデータベース操作にとって実用的ではありません。 共有メモリ プロトコルは、他のプロトコルが正しく構成されていない可能性がある場合に、トラブルシューティングを行うために使用できます。  
@@ -40,12 +42,13 @@ ms.locfileid: "63035289"
 >  MDAC 2.8 以前を使用しているクライアントでは、共有メモリ プロトコルを使用できません。 このようなクライアントで共有メモリ プロトコルの使用を試みた場合は、自動的に名前付きパイプ プロトコルに切り替わります。  
   
 ## <a name="tcpip"></a>TCP/IP  
- TCP/IP は、インターネットで広く使われている一般的なプロトコルです。 このプロトコルは、多様なハードウェア アーキテクチャやオペレーティング システムを備えたコンピューターが相互に接続されているネットワーク上の通信を実現します。 TCP/IP には、ネットワーク トラフィックをルーティングするための標準や、高度なセキュリティ機能も含まれています。 TCP/IP は、今日の業務で最も一般的に使用されているプロトコルです。 TCP/IP を使用するためにコンピューターを構成する作業は複雑になることもありますが、ほとんどのネットワーク コンピューターには適切な構成が既に適用されています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーで表示されない TCP/IP 設定を構成するには、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows のドキュメントを参照してください。  
+ TCP/IP は、インターネットで広く使われている一般的なプロトコルです。 このプロトコルは、多様なハードウェア アーキテクチャやオペレーティング システムを備えたコンピューターが相互に接続されているネットワーク上の通信を実現します。 TCP/IP には、ネットワーク トラフィックをルーティングするための標準や、高度なセキュリティ機能も含まれています。 TCP/IP は、今日の業務で最も一般的に使用されているプロトコルです。 TCP/IP を使用するためにコンピューターを構成する作業は複雑になることもありますが、ほとんどのネットワーク コンピューターには適切な構成が既に適用されています。 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーで表示されない TCP/IP 設定を構成するには、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows のドキュメントを参照してください。  
   
 ## <a name="named-pipes"></a>名前付きパイプ  
  名前付きパイプは、ローカル エリア ネットワークのために開発されたプロトコルです。 このプロトコルでは、1 つのプロセスが、メモリの一部を使用して別のプロセスに情報を渡します。このとき、1 つ目のプロセスの出力が 2 つ目のプロセスの入力になります。 2 つ目のプロセスは、ローカル (1 つ目のプロセスと同じコンピューター上にある) またはリモート (ネットワーク コンピューター上にある) のどちらでもかまいません。  
   
-## <a name="named-pipes-vs-tcpip-sockets"></a>名前付きパイプとします。TCP/IP ソケット  
+## <a name="named-pipes-vs-tcpip-sockets"></a>名前付きパイプと TCP/IP ソケット  
  高速ローカル エリア ネットワーク (LAN) 環境の場合、TCP/IP ソケットを使用するクライアントと、名前付きパイプを使用するクライアントには、パフォーマンスの点でほとんど差はありません。 ただし、両者のパフォーマンスの違いは、ワイド エリア ネットワーク (WAN) やダイヤルアップ ネットワークなどの低速のネットワークの場合に明らかになります。 これは、プロセス間通信 (IPC) メカニズムによるピア間の通信方法が異なるためです。  
   
  名前付きパイプの場合、ネットワーク通信は通常、より対話的なものになります。 ピアは、別のピアから read コマンドによる要求があるまでデータを送信しません。 ネットワークでの読み取りでは通常、データの読み取りを開始する前に、一連の名前付きパイプ メッセージを処理する必要があります。 これらは低速のネットワークにとって大きなコストとなり、過剰なネットワーク トラフィックを引き起こすので、他のネットワーク クライアントに影響を及ぼします。  
@@ -61,6 +64,6 @@ ms.locfileid: "63035289"
 ## <a name="enabling-the-protocol"></a>プロトコルの有効化  
  プロトコルを使用するには、クライアントとサーバーの両方で有効にする必要があります。 サーバーは、有効なすべてのプロトコルで同時に要求をリッスンできます。 クライアントは、プロトコルを選択することも、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーの一覧の順でプロトコルを試すこともできます。  
   
- プロトコルを構成して [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続する方法に関する簡単なチュートリアルについては、「[チュートリアル:データベース エンジンの概要](../../relational-databases/tutorial-getting-started-with-the-database-engine.md)」を参照してください。  
+ プロトコルを構成して [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続する方法に関する簡単なチュートリアルについては、「 [チュートリアル:データベース エンジンの概要](../../relational-databases/tutorial-getting-started-with-the-database-engine.md)」を参照してください。  
   
   

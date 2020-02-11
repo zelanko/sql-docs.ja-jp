@@ -20,17 +20,17 @@ ms.assetid: 01ced74e-c575-4a25-83f5-bd7d918123f8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 21a02107359b26c0dc30aa87acbf46c1ab1a172d
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892849"
 ---
 # <a name="configdsn-function"></a>ConfigDSN 関数
 **互換性**  
- 導入されたバージョン:ODBC 1.0  
+ 導入されたバージョン: ODBC 1.0  
   
- **概要**  
+ **まとめ**  
  **Configdsn**システム情報のデータソースを追加、変更、または削除します。 ユーザーに接続情報の入力を求めることがあります。 ドライバー DLL または別のセットアップ DLL に配置できます。  
   
 ## <a name="syntax"></a>構文  
@@ -51,11 +51,11 @@ BOOL ConfigDSN(
  *fRequest*  
  代入要求の種類。 *Frequest*引数には、次のいずれかの値が含まれている必要があります。  
   
- ODBC_ADD_DSN:新しいデータソースを追加します。  
+ ODBC_ADD_DSN: 新しいデータソースを追加します。  
   
- ODBC_CONFIG_DSN:既存のデータソースを構成 (変更) します。  
+ ODBC_CONFIG_DSN: 既存のデータソースを構成 (変更) します。  
   
- ODBC_REMOVE_DSN:既存のデータソースを削除します。  
+ ODBC_REMOVE_DSN: 既存のデータソースを削除します。  
   
  *lpszDriver*  
  代入物理ドライバー名の代わりにユーザーに提示されるドライバーの説明 (通常は、関連付けられている DBMS の名前)。  
@@ -67,9 +67,9 @@ BOOL ConfigDSN(
  関数は、成功した場合は TRUE、失敗した場合は FALSE を返します。  
   
 ## <a name="diagnostics"></a>診断  
- **Configdsn**が FALSE を返す場合、関連 *\*する pferrorcode*値は、 **sqlpostインストーラエラー**の呼び出しによってインストーラーエラーバッファーにポストされ、 **sqlインストーラエラー**を呼び出すことによって取得できます。 次の表は、 **sqlインストーラエラー**によって返される可能性がある *\*pferrorcode*値と、この関数のコンテキストにおけるそれぞれの値を示しています。  
+ **Configdsn**が FALSE を返す場合、関連* \*する pferrorcode*値は、 **sqlpostインストーラエラー**の呼び出しによってインストーラーエラーバッファーにポストされ、 **sqlインストーラエラー**を呼び出すことによって取得できます。 次の表は、 **sqlインストーラエラー**によって返される可能性がある* \*pferrorcode*値と、この関数のコンテキストにおけるそれぞれの値を示しています。  
   
-|*\*pfErrorCode*|[エラー]|説明|  
+|*\*pfErrorCode*|エラー|[説明]|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_INVALID_HWND|ウィンドウハンドルが無効です|*HwndParent*引数が無効でした。|  
 |ODBC_ERROR_INVALID_KEYWORD_VALUE|無効なキーワードと値のペア|*Lpszattributes*引数に構文エラーが含まれています。|  
@@ -78,10 +78,10 @@ BOOL ConfigDSN(
 |ODBC_ERROR_REQUEST_FAILED|失敗した*要求*|*Frequest*引数によって要求された操作を実行できませんでした。|  
 |ODBC_ERROR_DRIVER_SPECIFIC|ドライバーまたはトランスレーター固有のエラー|ODBC インストーラーエラーが定義されていないドライバー固有のエラー。 **Sqlpostインストーラ error**関数の呼び出しの*szerror*引数には、ドライバー固有のエラーメッセージが含まれている必要があります。|  
   
-## <a name="comments"></a>コメント  
+## <a name="comments"></a>説明  
  **Configdsn**は、インストーラー DLL からの接続情報を、キーワードと値のペアの形式の属性のリストとして受け取ります。 各ペアは null バイトで終了し、リスト全体は null バイトで終了します。 (つまり、2つの null バイトはリストの末尾をマークします)。キーワードと値のペアの等号を囲むスペースは使用できません。 **Configdsn**では、 **SQLBrowseConnect**および**SQLDriverConnect**に対して有効なキーワードではないキーワードを受け入れることができます。 **Configdsn**では、 **SQLBrowseConnect**および**SQLDriverConnect**に有効なキーワードであるすべてのキーワードがサポートされるとは限りません。 (**Configdsn**は**DRIVER**キーワードを受け入れません)。**Configdsn**関数で使用されるキーワードは、インストーラーの自動セットアップ機能を使用してデータソースを再作成するために必要なすべてのオプションをサポートしている必要があります。 **Configdsn**値と接続文字列値を使用する場合は、同じキーワードを使用する必要があります。  
   
- **SQLBrowseConnect**と**SQLDriverConnect**の場合と同様に、キーワードとその値に **[]{}()、;? を含めることはできません。=\*! @** 文字、 **DSN**キーワードの値は空白だけで構成することはできません。 レジストリの文法により、キーワードとデータソース名に円記号 (\\) を含めることはできません。  
+ **SQLBrowseConnect**と**SQLDriverConnect**の場合と同様に、キーワードとその値に **[]{}()、;? を含めることはできません。= \*! @** 文字、 **DSN**キーワードの値は空白だけで構成することはできません。 レジストリの文法により、キーワードとデータソース名に円記号 (\\) を含めることはできません。  
   
  **Configdsn**は**sqlvaliddsn**を呼び出して、データソース名の長さを確認し、無効な文字が名前に含まれていないことを確認する必要があります。 データソース名が SQL_MAX_DSN_LENGTH より長い場合、または無効な文字が含まれている場合、 **Sqlvaliddsn**はエラーを返し、 **configdsn**はエラーを返します。 データソース名の長さも**Sqlwritedsntoini**によって確認されます。  
   
@@ -95,7 +95,7 @@ DSN=Personnel Data\0UID=Smith\0PWD=Sesame\0DATABASE=Personnel\0\0
   
  ダイアログボックスを表示するには、 *hwndParent*を null にすることはできません。  
   
-## <a name="adding-a-data-source"></a>データ ソースの追加  
+## <a name="adding-a-data-source"></a>データソースの追加  
  *Lpszattributes*で**configdsn**にデータソース名が渡されると、 **configdsn**によって名前が有効であることがチェックされます。 データソース名が既存のデータソース名と一致し、 *hwndParent*が null の場合、 **configdsn**は既存の名前を上書きします。 既存の名前と一致し、 *hwndParent*が null でない場合、 **configdsn**はユーザーに対して既存の名前を上書きするように求めます。  
   
  *Lpszattributes*にデータソースへの接続に必要な情報が含まれている場合は、 **configdsn**を使用してデータソースを追加したり、ユーザーが接続情報を変更できるダイアログボックスを表示したりすることができます。 *Lpszattributes*にデータソースに接続するための十分な情報が含まれていない場合は、 **configdsn**によって必要な情報が決定される必要があります。*hwndParent*が null でない場合は、ユーザーから情報を取得するためのダイアログボックスが表示されます。  
@@ -104,7 +104,7 @@ DSN=Personnel Data\0UID=Smith\0PWD=Sesame\0DATABASE=Personnel\0\0
   
  **Configdsn**がデータソースの完全な接続情報を取得できない場合は、FALSE を返します。  
   
- **Configdsn**がデータソースの完全な接続情報を取得できる場合、インストーラー DLL で**Sqlwritedsntoini**を呼び出して、新しいデータソースの仕様を Odbc .ini ファイル (またはレジストリ) に追加します。 **Sqlwritedsntoini**は、[ODBC データソース] セクションにデータソース名を追加し、[データソースの指定] セクションを作成して、ドライバーのキーワードを値としてドライバーの説明と共に追加します。 **Configdsn**はインストーラー DLL 内の**Sqlwriteprivateprofilestring**を呼び出して、ドライバーによって使用されるキーワードと値を追加します。  
+ **Configdsn**がデータソースの完全な接続情報を取得できる場合、インストーラー DLL で**Sqlwritedsntoini**を呼び出して、新しいデータソースの仕様を Odbc .ini ファイル (またはレジストリ) に追加します。 **Sqlwritedsntoini**は、[ODBC データソース] セクションにデータソース名を追加し、[データソースの指定] セクションを作成して **、ドライバーのキーワードを**値としてドライバーの説明と共に追加します。 **Configdsn**はインストーラー DLL 内の**Sqlwriteprivateprofilestring**を呼び出して、ドライバーによって使用されるキーワードと値を追加します。  
   
 ## <a name="modifying-a-data-source"></a>データソースの変更  
  データソースを変更するには、 *Lpszattributes*の**configdsn**にデータソース名を渡す必要があります。 **Configdsn**は、データソース名が Odbc .ini ファイル (またはレジストリ) にあることを確認します。  
@@ -116,12 +116,12 @@ DSN=Personnel Data\0UID=Smith\0PWD=Sesame\0DATABASE=Personnel\0\0
 ## <a name="deleting-a-data-source"></a>データソースの削除  
  データソースを削除するには、 *Lpszattributes*の**configdsn**にデータソース名を渡す必要があります。 **Configdsn**は、データソース名が Odbc .ini ファイル (またはレジストリ) にあることを確認します。 次に、インストーラー DLL で**Sqlremovedsnfromini**を呼び出して、データソースを削除します。  
   
-## <a name="note"></a>注
+## <a name="note"></a>注意
  このルーチンの Unicode バージョンを記述する場合は、LPCSTR ではなく LPCWSTR 引数を使用して、 **ConfigDSNW**を呼び出す必要があります。
   
 ## <a name="related-functions"></a>関連する関数  
   
-|詳細|参照先|  
+|対象|以下を参照してください。|  
 |---------------------------|---------|  
 |データソースの追加、変更、または削除|[SQLConfigDataSource](../../../odbc/reference/syntax/sqlconfigdatasource-function.md)|  
 |Odbc .ini ファイルまたはレジストリから値を取得する|[SQLGetPrivateProfileString](../../../odbc/reference/syntax/sqlgetprivateprofilestring-function.md)|  

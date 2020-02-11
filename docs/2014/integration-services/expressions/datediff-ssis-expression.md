@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b42115278e6866063639c7ce2fc596749ad2d39f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62898087"
 ---
 # <a name="datediff-ssis-expression"></a>DATEDIFF (SSIS 式)
@@ -43,7 +43,7 @@ DATEDIFF(datepart, startdate, endate)
 ## <a name="result-types"></a>戻り値の型  
  DT_I4  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  次の表に、式エバリュエーターで認識される日付要素 (datepart) と省略形を示します。  
   
 |datepart|省略形|  
@@ -54,10 +54,10 @@ DATEDIFF(datepart, startdate, endate)
 |Dayofyear|dy、y|  
 |日|dd、d|  
 |Week|wk、ww|  
-|Weekday|dw、w|  
-|Hour|Hh|  
-|Minute|mi、n|  
-|第 2 週|ss、s|  
+|平日|dw、w|  
+|時|Hh|  
+|分|mi、n|  
+|秒|ss、s|  
 |Millisecond|Ms|  
   
  引数のいずれかが NULL の場合、DATEDIFF は NULL を返します。  
@@ -81,15 +81,15 @@ DATEDIFF("dd", (DT_DBTIMESTAMP)"8/1/2003", (DT_DBTIMESTAMP)"8/8/2003")
 DATEDIFF("mm", (DT_DBTIMESTAMP)"8/1/2003",GETDATE())  
 ```  
   
- この例では、 **ModifiedDate** 列の日付と、 **YearEndDate** 変数の日付の間の週数が返されます。 場合**YearEndDate**が、`date`データ型、明示的なキャストは必要ありません。  
+ この例では、 **ModifiedDate** 列の日付と、 **YearEndDate** 変数の日付の間の週数が返されます。 **YearEndDate**に`date`データ型がある場合は、明示的なキャストは必要ありません。  
   
 ```  
 DATEDIFF("Week", ModifiedDate,@YearEndDate)  
 ```  
   
 ## <a name="see-also"></a>参照  
- [DATEADD (SSIS 式)](dateadd-ssis-expression.md)   
- [DATEPART (SSIS 式)](datepart-ssis-expression.md)   
+ [DATEADD &#40;SSIS 式&#41;](dateadd-ssis-expression.md)   
+ [DATEPART &#40;SSIS 式&#41;](datepart-ssis-expression.md)   
  [DAY &#40;SSIS 式&#41;](day-ssis-expression.md)   
  [MONTH &#40;SSIS 式&#41;](month-ssis-expression.md)   
  [YEAR &#40;SSIS 式&#41;](year-ssis-expression.md)   

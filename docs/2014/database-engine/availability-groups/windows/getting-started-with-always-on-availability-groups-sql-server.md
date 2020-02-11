@@ -14,19 +14,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2e809d84071089ce57c66bc8f9a388203923fe66
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75228763"
 ---
 # <a name="getting-started-with-alwayson-availability-groups-sql-server"></a>AlwaysOn 可用性グループの概要 (SQL Server)
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] をサポートするように [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] のインスタンスを構成する手順と可用性グループを作成、管理、および監視する手順について説明します。  
   
   
-##  <a name="BeforeYouBegin"></a>開始する前に  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="RecommendedReading"></a>推奨資料  
+###  <a name="RecommendedReading"></a> 推奨トピック  
  可用性グループを初めて作成する場合は、あらかじめ次のトピックに目を通しておくことをお勧めします。  
   
 -   [AlwaysOn 可用性グループ &#40;SQL Server の概要&#41;](overview-of-always-on-availability-groups-sql-server.md)  
@@ -37,19 +37,19 @@ ms.locfileid: "75228763"
   
 ||手順|リンク|  
 |------|----------|-----------|  
-|![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|**を[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]有効にします。** 可用性グループに参加する [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] のすべてのインスタンスで [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 機能を有効にする必要があります。<br /><br /> **前提条件:** ホストコンピューターは、Windows Server フェールオーバークラスタリング (WSFC) ノードである必要があります。<br /><br /> その他の前提条件については、「[AlwaysOn 可用性グループの前提条件、制限事項、および推奨事項 &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)」の「SQL Server インスタンスの前提条件と制限」を参照してください。|[AlwaysOn 可用性グループを有効または無効にする](enable-and-disable-always-on-availability-groups-sql-server.md)|  
-|![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|**データベースミラーリングエンドポイントを作成します (存在しない場合)。** 各サーバー インスタンスに、 [データベース ミラーリング エンドポイント](../../database-mirroring/the-database-mirroring-endpoint-sql-server.md)が存在することを確認します。 サーバー インスタンスでは、このエンドポイントを使用して、他のサーバー インスタンスから [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] の接続を受信します。|データベース ミラーリング エンドポイントが存在するかどうかを確認するには、次のカタログ ビューを使用します。 [sys.database_mirroring_endpoints](/sql/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql)<br /><br /> **Windows 認証の場合:** 以下を使用してデータベースミラーリングエンドポイントを作成するには:<br /><br /> [新しい可用性グループ ウィザード](use-the-availability-group-wizard-sql-server-management-studio.md)<br /><br /> [Transact-sql](../../database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)<br /><br /> [SQL Server PowerShell](database-mirroring-always-on-availability-groups-powershell.md)<br /><br /> **証明書認証の場合:** を使用してデータベースミラーリングエンドポイントを作成するには <br />                    [Transact-sql](../../database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)|  
+|![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|**[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]を有効にする:** 可用性グループに参加する [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] のすべてのインスタンスで [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 機能を有効にする必要があります。<br /><br /> **前提条件:** ホスト コンピューターは、Windows Server フェールオーバー クラスタリング (WSFC) ノードであることが必要です。<br /><br /> その他の前提条件については、「[AlwaysOn 可用性グループの前提条件、制限事項、および推奨事項 &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)」の「SQL Server インスタンスの前提条件と制限」を参照してください。|[AlwaysOn 可用性グループを有効または無効にする](enable-and-disable-always-on-availability-groups-sql-server.md)|  
+|![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|**データベース ミラーリング エンドポイントを作成する (存在しない場合):** 各サーバー インスタンスに、 [データベース ミラーリング エンドポイント](../../database-mirroring/the-database-mirroring-endpoint-sql-server.md)が存在することを確認します。 サーバー インスタンスでは、このエンドポイントを使用して、他のサーバー インスタンスから [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] の接続を受信します。|データベース ミラーリング エンドポイントが存在するかどうかを確認するには、次のカタログ ビューを使用します。 [sys.database_mirroring_endpoints](/sql/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql)<br /><br /> **Windows 認証の場合:** 以下を使用してデータベースミラーリングエンドポイントを作成するには:<br /><br /> [新しい可用性グループ ウィザード](use-the-availability-group-wizard-sql-server-management-studio.md)<br /><br /> [Transact-SQL](../../database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)<br /><br /> [SQL Server PowerShell](database-mirroring-always-on-availability-groups-powershell.md)<br /><br /> **証明書認証の場合:** を使用してデータベースミラーリングエンドポイントを作成するには <br />                    [Transact-SQL](../../database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)|  
   
 ##  <a name="ConfigAG"></a>新しい可用性グループの作成と構成  
   
 ||手順|リンク|  
 |------|----------|-----------|  
 |![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|**可用性グループを作成します。** 可用性グループに追加するデータベースをホストする [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスで可用性グループを作成します。<br /><br /> 可用性グループを作成する [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスで、少なくとも初期プライマリ レプリカを作成します。 1 ～ 4 個のセカンダリ レプリカを指定できます。 可用性グループとレプリカのプロパティについては、「[CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-availability-group-transact-sql)」をご覧ください。<br /><br /> 
-  [可用性グループ リスナー](../../listeners-client-connectivity-application-failover.md)を作成することを強くお勧めします。<br /><br /> **前提条件:** 特定の可用性[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]グループの可用性レプリカをホストするのインスタンスは、1つの WSFC クラスターの別々のノードに存在する必要があります。 唯一の例外は、別の WSFC クラスターに移行するときに、可用性グループは一時的に 2 つのクラスターにまたがることができるという点です。<br /><br /> その他の前提条件については、「[AlwaysOn 可用性グループの前提条件、制限事項、推奨事項 &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)」の「可用性グループの前提条件と制限」、「可用性データベースの前提条件と制限」、および「SQL Server インスタンスの前提条件と制限」を参照してください。|可用性グループを作成する場合は、次のツールを使用できます。<br /><br /> [新しい可用性グループ ウィザード](use-the-availability-group-wizard-sql-server-management-studio.md)<br /><br /> [Transact-sql](create-an-availability-group-transact-sql.md)<br /><br /> [SQL Server PowerShell](create-an-availability-group-transact-sql.md)|  
+  [可用性グループ リスナー](../../listeners-client-connectivity-application-failover.md)を作成することを強くお勧めします。<br /><br /> **前提条件:** 特定の可用性[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]グループの可用性レプリカをホストするのインスタンスは、1つの WSFC クラスターの別々のノードに存在する必要があります。 唯一の例外は、別の WSFC クラスターに移行するときに、可用性グループは一時的に 2 つのクラスターにまたがることができるという点です。<br /><br /> その他の前提条件については、「[AlwaysOn 可用性グループの前提条件、制限事項、推奨事項 &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)」の「可用性グループの前提条件と制限」、「可用性データベースの前提条件と制限」、および「SQL Server インスタンスの前提条件と制限」を参照してください。|可用性グループを作成する場合は、次のツールを使用できます。<br /><br /> [新しい可用性グループ ウィザード](use-the-availability-group-wizard-sql-server-management-studio.md)<br /><br /> [Transact-SQL](create-an-availability-group-transact-sql.md)<br /><br /> [SQL Server PowerShell](create-an-availability-group-transact-sql.md)|  
 |![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|**セカンダリレプリカを可用性グループに参加させます。** セカンダリ レプリカをホストしている [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] の各インスタンスに接続し、ローカル セカンダリ レプリカを可用性グループに参加させます。|[可用性グループにセカンダリレプリカを参加させる](join-a-secondary-replica-to-an-availability-group-sql-server.md)<br /><br /> ヒント: 新しい可用性グループ ウィザードを使用すると、この手順が自動化されます。|  
 |![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|**セカンダリデータベースを準備します。** セカンダリ レプリカをホストしている各サーバー インスタンスで、RESTORE WITH NORECOVERY を使用してプライマリ データベースのバックアップを復元します。|[セカンダリデータベースを手動で準備する](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)<br /><br /> ヒント: 新しい可用性グループ ウィザードを使用して、セカンダリ データベースを自動的に準備できます。 詳細については、「[[最初のデータの同期を選択] ページ &#40;AlwaysOn 可用性グループ ウィザード&#41;](select-initial-data-synchronization-page-always-on-availability-group-wizards.md)」の「初期データの完全同期を使用するための前提条件」を参照してください。|  
 |![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|**セカンダリデータベースを可用性グループに参加させます。** セカンダリ レプリカをホストしている各サーバー インスタンスで、各ローカル セカンダリ データベースを可用性グループに参加させます。 可用性グループに参加すると、セカンダリ データベースは対応するプライマリ データベースとのデータ同期を開始します。|[可用性グループへのセカンダリデータベースの参加](join-a-secondary-database-to-an-availability-group-sql-server.md)<br /><br /> ヒント: 各セカンダリ レプリカにそれぞれセカンダリ データベースが存在する場合は、新しい可用性グループ ウィザードでこの手順を実行できます。|  
-||**可用性グループリスナーを作成します。**  可用性グループ リスナーをまだ作成していない場合、可用性グループを作成するときにこの手順を実行する必要があります。|[可用性グループリスナー &#40;SQL Server を作成または構成&#41;](create-or-configure-an-availability-group-listener-sql-server.md)|  
+||**可用性グループリスナーを作成します。**  可用性グループ リスナーをまだ作成していない場合、可用性グループを作成するときにこの手順を実行する必要があります。|[可用性グループ リスナーの作成または構成 &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)|  
 |![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|**アプリケーション開発者にリスナーの DNS ホスト名を指定します。**  開発者は、可用性グループ リスナーに接続要求を送信するために、接続文字列でこの DNS 名を指定する必要があります。 詳細については、「 [可用性グループ リスナー、クライアント接続、およびアプリケーションのフェールオーバー &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)での 1 つ以上の可用性グループの構成と管理において重要です。|「 [可用性グループ リスナーの作成または構成 &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)|  
 |![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|**バックアップジョブをどこで構成するかを設定します。**  セカンダリ データベースでバックアップを実行する場合は、自動バックアップ設定を考慮に入れてバックアップ ジョブのスクリプトを作成する必要があります。 可用性グループの可用性レプリカをホストする各サーバー インスタンスで、可用性グループのデータベースごとにスクリプトを作成します。|「[可用性レプリカでのバックアップの構成 &#40;SQLServer&#41;](configure-backup-on-availability-replicas-sql-server.md)」の「補足情報: セカンダリ レプリカでバックアップを構成した後」|  
   
@@ -86,11 +86,11 @@ ms.locfileid: "75228763"
   **[オブジェクト エクスプローラーの詳細]** ペインには、接続先の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスでホストされている可用性グループの基本情報が表示されます。<br /><br /> ヒント: このペインを使用して、複数の可用性グループ、レプリカ、またはデータベースを選択し、選択したオブジェクトで一般的な管理タスク (可用性グループからの複数の可用性レプリカまたはデータベースの削除など) を実行します。|[オブジェクトエクスプローラーの詳細を使用して可用性グループを監視する](use-object-explorer-details-to-monitor-availability-groups.md)|  
 |[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]|[**プロパティ**] ダイアログボックスを使用すると、可用性グループ、レプリカ、またはリスナーのプロパティを表示できます。また、場合によっては、値を変更することもできます。|[可用性グループのプロパティ](view-availability-group-properties-sql-server.md)<br /><br /> [可用性レプリカのプロパティ](view-availability-replica-properties-sql-server.md)<br /><br /> [可用性グループリスナーのプロパティ](view-availability-group-listener-properties-sql-server.md)|  
 |システム モニター|
-  **SQLServer:Availability Replica** パフォーマンス オブジェクトには、可用性レプリカに関する情報を報告するパフォーマンス カウンターが含まれています。|[SQL Server、可用性レプリカ](../../../relational-databases/performance-monitor/sql-server-availability-replica.md)|  
+  **SQLServer:Availability Replica** パフォーマンス オブジェクトには、可用性レプリカに関する情報を報告するパフォーマンス カウンターが含まれています。|[SQL Server、Availability Replica](../../../relational-databases/performance-monitor/sql-server-availability-replica.md)|  
 |システム モニター|
-  **SQLServer:Database Replica** パフォーマンス オブジェクトには、特定のセカンダリ レプリカのセカンダリ データベースに関する情報を報告するパフォーマンス カウンターが含まれています。<br /><br /> SQL Server の **SQLServer:Databases** オブジェクトには、トランザクション ログの利用状況などを監視するパフォーマンス カウンターが含まれています。 可用性データベースでのトランザクション ログの利用状況の監視に関連性が高いカウンターは、 **[Log Flush Write Time (ms)]**、 **[Log Flushes/sec]**、 **[Log Pool Cache Misses/sec]**、 **[Log Pool Disk Reads/sec]**、および **[Log Pool Requests/sec]** です。|[SQL Server、データベースレプリカ](../../../relational-databases/performance-monitor/sql-server-database-replica.md)<br /><br /> [SQL Server、Databases オブジェクト](../../../relational-databases/performance-monitor/sql-server-databases-object.md)|  
+  **SQLServer:Database Replica** パフォーマンス オブジェクトには、特定のセカンダリ レプリカのセカンダリ データベースに関する情報を報告するパフォーマンス カウンターが含まれています。<br /><br /> SQL Server の **SQLServer:Databases** オブジェクトには、トランザクション ログの利用状況などを監視するパフォーマンス カウンターが含まれています。 可用性データベースでのトランザクション ログの利用状況の監視に関連性が高いカウンターは、 **[Log Flush Write Time (ms)]**、 **[Log Flushes/sec]**、 **[Log Pool Cache Misses/sec]**、 **[Log Pool Disk Reads/sec]**、および **[Log Pool Requests/sec]** です。|[SQL Server、データベース レプリカ](../../../relational-databases/performance-monitor/sql-server-database-replica.md)<br /><br /> [SQL Server、Databases オブジェクト](../../../relational-databases/performance-monitor/sql-server-databases-object.md)|  
   
-##  <a name="RelatedContent"></a>関連するコンテンツ  
+##  <a name="RelatedContent"></a> 関連コンテンツ  
   
 -   **ビデオ-alwayson の概要:**  [Microsoft SQL Server コードネーム "Denali" alwayson シリーズパート 1: 次世代の高可用性ソリューションの概要](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   

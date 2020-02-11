@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 60d5af2752a426faca3069541deeae3a6aa4f495
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75245190"
 ---
 # <a name="configure-the-transact-sql-debugger"></a>Transact-SQL デバッガーの構成
@@ -212,10 +212,10 @@ ms.locfileid: "75245190"
 * サーバーとクライアントが RPC 経由で通信をしている必要があります。 SQL Server サービスが実行されているアカウントは、クライアントに対する認証権限を持っている必要があります。  
   
 ## <a name="see-also"></a>参照  
- [Transact-sql デバッガー](transact-sql-debugger.md)   
+ [Transact-SQL デバッガー](transact-sql-debugger.md)   
  [Transact-sql デバッガーの実行](run-the-transact-sql-debugger.md)   
  [Transact-sql コードのステップ実行](step-through-transact-sql-code.md)   
- [Transact-sql デバッガー情報](transact-sql-debugger-information.md)   
- [データベースエンジンクエリエディター &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)  
+ [Transact-SQL デバッガー情報](transact-sql-debugger-information.md)   
+ [データベース エンジン クエリ エディター &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)  
   
   

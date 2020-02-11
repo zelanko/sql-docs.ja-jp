@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f1ff20051f5486fc8e9550c961f838ab5dc5c738
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63028358"
 ---
 # <a name="edit-rows-in-the-results-pane-visual-database-tools"></a>結果ペイン内の行の編集 (Visual Database Tools)
@@ -41,7 +41,7 @@ ms.locfileid: "63028358"
 4.  その行から移動すると変更が保存されます。  
   
 ## <a name="see-also"></a>参照  
- [結果ウィンドウでデータを扱う&#40;Visual Database Tools&#41;](work-with-data-in-the-results-pane-visual-database-tools.md)   
+ [[結果] ウィンドウのデータを操作するには &#40;Visual Database Tools&#41;](work-with-data-in-the-results-pane-visual-database-tools.md)   
  [結果更新の規則 (Visual Database Tools)](rules-for-updating-results-visual-database-tools.md)  
   
   

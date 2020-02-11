@@ -15,22 +15,28 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e2bfa3fdf09dea1b088fb519b9782999bd20296b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768438"
 ---
 # <a name="understanding-the-script-component-object-model"></a>スクリプト コンポーネントのオブジェクト モデルについて
-  [コーディングとスクリプト コンポーネントのデバッグ] で説明したように (../extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md、スクリプト コンポーネント プロジェクトには、3 つのプロジェクト項目。  
+  「スクリプトコンポーネントのコーディングおよびデバッグ」 (../extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md、スクリプトコンポーネントプロジェクトには、次の3つのプロジェクト項目が含まれています。  
   
-1.  `ScriptMain` アイテム。`ScriptMain` クラスを含み、ここにカスタム コードを記述します。 `ScriptMain` クラスは `UserComponent` クラスから継承されます。  
+1.  
+  `ScriptMain` アイテム。`ScriptMain` クラスを含み、ここにカスタム コードを記述します。 
+  `ScriptMain` クラスは `UserComponent` クラスから継承されます。  
   
-2.  `ComponentWrapper` アイテム。`UserComponent` クラスを含みます。これは <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> のインスタンスで、データの処理やパッケージとのやり取りで使用するメソッドとプロパティが含まれています。 `ComponentWrapper` アイテムには、`Connections` や `Variables` の各コレクション クラスも含まれています。  
+2.  
+  `ComponentWrapper` アイテム。`UserComponent` クラスを含みます。これは <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> のインスタンスで、データの処理やパッケージとのやり取りで使用するメソッドとプロパティが含まれています。 
+  `ComponentWrapper` アイテムには、`Connections` や `Variables` の各コレクション クラスも含まれています。  
   
-3.  `BufferWrapper` アイテム。各入力および各出力に対して <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> から継承されるクラス、および各列に対する型指定されたプロパティが含まれています。  
+3.  
+  `BufferWrapper` アイテム。各入力および各出力に対して <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> から継承されるクラス、および各列に対する型指定されたプロパティが含まれています。  
   
- `ScriptMain` アイテムにコードを記述する際には、このトピックで説明するオブジェクト、メソッド、およびプロパティを使用します。 ここで一覧されているすべてのメソッドを各コンポーネントが使用するわけではありませんが、使用される場合は、ここで示した順序で使用されます。  
+ 
+  `ScriptMain` アイテムにコードを記述する際には、このトピックで説明するオブジェクト、メソッド、およびプロパティを使用します。 ここで一覧されているすべてのメソッドを各コンポーネントが使用するわけではありませんが、使用される場合は、ここで示した順序で使用されます。  
   
  基本クラス <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> には、ここで説明しているメソッドのコードは実装されていません。 したがって、メソッド独自の実装に基本クラスの実装の呼び出しを追加する必要はありませんが、追加した場合でも問題は生じません。  
   
@@ -122,24 +128,29 @@ public override void PreExecute()
 -   次の入力行を取得するための `NextRow` 関数、およびデータの最後のバッファーが処理されたかどうかを確認するための `EndOfRowset` 関数。 通常、基本クラス `UserComponent` に実装された入力処理メソッドを使用する場合、この関数は必要はありません。 次のセクションでは、基本クラス `UserComponent` について詳細に説明します。  
   
 #### <a name="what-the-componentwrapper-project-item-provides"></a>プロジェクト アイテム ComponentWrapper が提供する機能  
- プロジェクト アイテム ComponentWrapper には、<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> から派生する `UserComponent` という名前のクラスがあります。 また、カスタム コードを記述する `ScriptMain` クラスは、`UserComponent` から派生します。 `UserComponent` クラスには次のメソッドが含まれています。  
+ プロジェクト アイテム ComponentWrapper には、`UserComponent` から派生する <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> という名前のクラスがあります。 また、カスタム コードを記述する `ScriptMain` クラスは、`UserComponent` から派生します。 
+  `UserComponent` クラスには次のメソッドが含まれています。  
   
--   `ProcessInput` メソッドをオーバーライドして実装したメソッド。 これは、データ フロー エンジンが実行時に `PreExecute` メソッドの次に呼び出すメソッドで、繰り返し呼び出される場合があります。 `ProcessInput` 処理を **\<inputbuffer > _ProcessInput**メソッド。 次に `ProcessInput` メソッドは入力バッファーが末尾に達しているかどうかを確認し、達している場合は、オーバーライド可能な `FinishOutputs` メソッドと private メソッド `MarkOutputsAsFinished` を呼び出します。 `MarkOutputsAsFinished` メソッドは、次に最後の出力バッファーの `SetEndOfRowset` を呼び出します。  
+-   
+  `ProcessInput` メソッドをオーバーライドして実装したメソッド。 これは、データ フロー エンジンが実行時に `PreExecute` メソッドの次に呼び出すメソッドで、繰り返し呼び出される場合があります。 `ProcessInput`inputbuffer>_ProcessInput メソッドに処理を渡します。 ** \<** 次に `ProcessInput` メソッドは入力バッファーが末尾に達しているかどうかを確認し、達している場合は、オーバーライド可能な `FinishOutputs` メソッドと private メソッド `MarkOutputsAsFinished` を呼び出します。 
+  `MarkOutputsAsFinished` メソッドは、次に最後の出力バッファーの `SetEndOfRowset` を呼び出します。  
   
 -   **\<inputbuffer>_ProcessInput** メソッドのオーバーライド可能な実装。 この既定の実装では、単に各入力行の間をループし、 **\<inputbuffer>_ProcessInputRow** を呼び出します。  
   
 -   **\<inputbuffer>_ProcessInputRow** メソッドのオーバーライド可能な実装。 既定の実装では、空のままです。 このメソッドは、カスタム データ処理コードを記述するために、通常はオーバーライドして使用します。  
   
 #### <a name="what-your-custom-code-should-do"></a>カスタム コードとして組み込むべき機能  
- `ScriptMain` クラスの入力を処理するには、次のメソッドを使用できます。  
+ 
+  `ScriptMain` クラスの入力を処理するには、次のメソッドを使用できます。  
   
 -   入力行が渡されるたびにそのデータを処理するには、 **\<inputbuffer>_ProcessInputRow** をオーバーライドします。  
   
--   入力行をループするときに追加の処理を行う必要がある場合にのみ、 **\<inputbuffer>_ProcessInput** をオーバーライドします (たとえば、すべての行が処理された後に他のアクションを実行するために `EndOfRowset` をテストする必要がある場合)。行の処理を実行するには、 **\<inputbuffer>_ProcessInputRow** を呼び出します。  
+-   入力行をループするときに追加の処理を行う必要がある場合にのみ、 **\<inputbuffer>_ProcessInput** をオーバーライドします (たとえば、すべての行が処理さ`EndOfRowset`れた後に、他のアクションを実行するためにをテストする必要があります)。** \<Inputbuffer>_ProcessInputRow**を呼び出して、行処理を実行します。  
   
 -   出力を閉じる前に、出力に対して何らかの処理を行う場合は、`FinishOutputs` をオーバーライドします。  
   
- `ProcessInput` メソッドは、これらのメソッドが適切な時点で確実に呼び出されるようにするものです。  
+ 
+  `ProcessInput` メソッドは、これらのメソッドが適切な時点で確実に呼び出されるようにするものです。  
   
 ### <a name="processing-outputs"></a>出力の処理  
  変換元または変換として構成されたスクリプト コンポーネントには、1 つ以上の出力があります。  
@@ -149,33 +160,41 @@ public override void PreExecute()
   
 -   各出力列の、名前付きで型指定された、書き込み専用のアクセサー プロパティ。  
   
--   書き込み専用 **\<列 > _IsNull**プロパティに、列の値を設定するために使用できる各選択されている出力列の`null`します。  
+-   列の値をに`null`設定するために使用できる、選択した各出力列の書き込み専用** \<の列>_IsNull**プロパティです。  
   
 -   空の新しい行を出力バッファーに追加するための `AddRow` メソッド。  
   
 -   データ フロー エンジンに対し、これ以上データのバッファーがないことを知らせるための `SetEndOfRowset` メソッド。 現在のバッファーが、データの最後のバッファーであるかどうかを確認するための `EndOfRowset` 関数もあります。 通常、基本クラス `UserComponent` に実装された出力処理メソッドを使用する場合、この関数は必要はありません。  
   
 #### <a name="what-the-componentwrapper-project-item-provides"></a>プロジェクト アイテム ComponentWrapper が提供する機能  
- プロジェクト アイテム ComponentWrapper には、<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> から派生する `UserComponent` という名前のクラスがあります。 また、カスタム コードを記述する `ScriptMain` クラスは、`UserComponent` から派生します。 `UserComponent` クラスには次のメソッドが含まれています。  
+ プロジェクト アイテム ComponentWrapper には、`UserComponent` から派生する <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> という名前のクラスがあります。 また、カスタム コードを記述する `ScriptMain` クラスは、`UserComponent` から派生します。 
+  `UserComponent` クラスには次のメソッドが含まれています。  
   
--   `PrimeOutput` メソッドをオーバーライドして実装したメソッド。 実行時、データ フロー エンジンは、このメソッドを `ProcessInput` の前に 1 回だけ呼び出します。 `PrimeOutput` は `CreateNewOutputRows` メソッドに処理を渡します。 コンポーネントが変換元の場合 (つまりコンポーネントに入力がない場合)、`PrimeOutput` はオーバーライド可能な `FinishOutputs` メソッドと private メソッド `MarkOutputsAsFinished` を呼び出します。 `MarkOutputsAsFinished` メソッドは、最後の出力バッファーの `SetEndOfRowset` を呼び出します。  
+-   
+  `PrimeOutput` メソッドをオーバーライドして実装したメソッド。 実行時、データ フロー エンジンは、このメソッドを `ProcessInput` の前に 1 回だけ呼び出します。 
+  `PrimeOutput` は `CreateNewOutputRows` メソッドに処理を渡します。 コンポーネントが変換元の場合 (つまりコンポーネントに入力がない場合)、`PrimeOutput` はオーバーライド可能な `FinishOutputs` メソッドと private メソッド `MarkOutputsAsFinished` を呼び出します。 
+  `MarkOutputsAsFinished` メソッドは、最後の出力バッファーの `SetEndOfRowset` を呼び出します。  
   
--   `CreateNewOutputRows` メソッドのオーバーライド可能な実装。 既定の実装では、空のままです。 このメソッドは、カスタム データ処理コードを記述するために、通常はオーバーライドして使用します。  
+-   
+  `CreateNewOutputRows` メソッドのオーバーライド可能な実装。 既定の実装では、空のままです。 このメソッドは、カスタム データ処理コードを記述するために、通常はオーバーライドして使用します。  
   
 #### <a name="what-your-custom-code-should-do"></a>カスタム コードとして組み込むべき機能  
- `ScriptMain` クラスの出力を処理するには、次のメソッドを使用できます。  
+ 
+  `ScriptMain` クラスの出力を処理するには、次のメソッドを使用できます。  
   
 -   入力行を処理する前に出力行を追加して設定できる場合にのみ、`CreateNewOutputRows` をオーバーライドします。 たとえば、`CreateNewOutputRows` を変換元に使用することはできますが、非同期出力型の変換では、入力データの処理中または処理後に `AddRow` を呼び出す必要があります。  
   
 -   出力を閉じる前に、出力に対して何らかの処理を行う場合は、`FinishOutputs` をオーバーライドします。  
   
- `PrimeOutput` メソッドは、これらのメソッドが適切な時点で確実に呼び出されるようにするものです。  
+ 
+  `PrimeOutput` メソッドは、これらのメソッドが適切な時点で確実に呼び出されるようにするものです。  
   
 ## <a name="postexecute-method"></a>PostExecute メソッド  
  データの行を処理した後に 1 回だけ実行する必要のある処理がある場合は、基本クラス <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.PostExecute%2A> の <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> メソッドをオーバーライドします。 たとえば、変換元でデータをデータ フローに読み込むために使用した `System.Data.SqlClient.SqlDataReader` を閉じることができます。  
   
 > [!IMPORTANT]  
->  `ReadWriteVariables` のコレクションは、`PostExecute` メソッド内でのみ使用できます。 したがって、データ行を処理するたびにパッケージ変数の値を直接増やすことはできません。 代わりに、ローカル変数の値をインクリメントし、内のローカル変数の値にパッケージ変数の値を設定、`PostExecute`メソッドは、すべてのデータの処理が完了します。  
+>  
+  `ReadWriteVariables` のコレクションは、`PostExecute` メソッド内でのみ使用できます。 したがって、データ行を処理するたびにパッケージ変数の値を直接増やすことはできません。 代わりに、ローカル変数の値をインクリメントし、すべてのデータが処理された後に、パッケージ変数の値を`PostExecute`メソッドのローカル変数の値に設定します。  
   
 ## <a name="releaseconnections-method"></a>ReleaseConnections メソッド  
  通常、変換元および変換先は外部データ ソースに接続する必要があります。 基本クラス <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ReleaseConnections%2A> の <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> メソッドをオーバーライドして、以前に <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.AcquireConnections%2A> メソッドで開いた接続を閉じ、解放します。  
@@ -201,10 +220,10 @@ public override void ReleaseConnections()
 }  
 ```  
   
-![Integration Services のアイコン (小)](../../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。**<br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
+![Integration Services アイコン (小)](../../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services に関するページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
 ## <a name="see-also"></a>参照  
- [スクリプト コンポーネント エディターでのスクリプト コンポーネントの構成](configuring-the-script-component-in-the-script-component-editor.md)   
- [コーディングとスクリプト コンポーネントのデバッグ](../extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md  
+ [スクリプトコンポーネントエディターでのスクリプトコンポーネントの構成](configuring-the-script-component-in-the-script-component-editor.md)   
+ [スクリプトコンポーネントのコーディングおよびデバッグ](../extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md  
   
   

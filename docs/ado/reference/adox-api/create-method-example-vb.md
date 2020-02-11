@@ -15,14 +15,14 @@ ms.assetid: d7ea0244-596a-404e-8f30-71cadab8d8fc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 622b2ab47793fe55d2ecf6bbe65c0b9ccf544589
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966657"
 ---
 # <a name="create-method-example-vb"></a>Create メソッドの例 (VB)
-次のコードは、新しい Microsoft Jet データベースを作成する方法を示します、[作成](../../../ado/reference/adox-api/create-method-adox.md)メソッド。  
+次のコードは、 [create](../../../ado/reference/adox-api/create-method-adox.md)メソッドを使用して新しい Microsoft Jet データベースを作成する方法を示しています。  
   
 ```  
 Attribute VB_Name = "Create"  
@@ -49,6 +49,6 @@ End Sub
 ' EndCreateDatabaseVB  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Catalog オブジェクト (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Create メソッド (ADOX)](../../../ado/reference/adox-api/create-method-adox.md)

@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 2b8d55e95991437e4d76911fd26afb5b1bc9c550
-ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68715172"
 ---
 # <a name="create-ssis-and-ssrs-workflows-with-r-on-sql-server"></a>SQL Server で R を使用して SSIS および SSRS ワークフローを作成する
@@ -206,6 +206,6 @@ R ではチャートや注意を引く視覚エフェクトを作成できます
 > [!NOTE]
 > このサンプルでは、Reporting Services 用の R グラフィックス デバイスをサポートするコードが、Reporting Services サーバー、および Visual Studio にインストールされている必要があります。 手動によるコンパイルと構成も必要です。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 この記事の SSIS と SSRS の例では、埋め込みの R または Python スクリプトを含むストアド プロシージャを実行する 2 つのケースを示します。 主要な効果は、ストアド プロシージャに対して実行要求を送信できるどんなアプリケーションやツールにも使用可能な、R または Python スクリプトを作成できるようになることです。 SSIS の追加の効果として、一連の操作に含まれる R または Python データ サイエンス機能を使用して、データの取得、クレンジング、操作など、さまざまな操作を自動化してスケジュール設定するパッケージを作成できます。 詳細とアイデアについては、「[SQL Server Machine Learning Services でストアド プロシージャを使用して R コードを運用可能にする](operationalizing-your-r-code.md)」を参照してください。
