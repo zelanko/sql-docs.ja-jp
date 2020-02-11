@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f6c2580e17c204b534ec4c8ebadec3a1e992a4d6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68196462"
 ---
 # <a name="delete-user-defined-functions"></a>ユーザー定義関数の削除
@@ -26,7 +26,7 @@ ms.locfileid: "68196462"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **ユーザー定義関数を削除するために使用するもの:**  
   
@@ -68,7 +68,7 @@ ms.locfileid: "68196462"
 5.  **[オブジェクトの削除]** ダイアログ ボックスで **[OK]** をクリックします。  
   
     > [!IMPORTANT]  
-    >  **オブジェクトの削除** ダイアログ ボックスの **依存関係の表示** をクリックして _function_name_**の依存関係** ダイアログ ボックスを開きます。 関数に依存するすべてのオブジェクトと、関数が依存するすべてのオブジェクトが表示されます。  
+    >  [**オブジェクトの削除**] ダイアログボックスの [**依存関係の表示**] をクリックして、[ _function_name_の**依存関係**] ダイアログボックスを開きます。 関数に依存するすべてのオブジェクトと、関数が依存するすべてのオブジェクトが表示されます。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   

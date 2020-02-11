@@ -16,10 +16,10 @@ ms.assetid: 577d84c1-9285-4580-b6f5-86fbc4827547
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7a8c013a5fd87058a202e6d24f4b3148947b5319
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68093198"
 ---
 # <a name="boolean-constructor-functions---false-xquery"></a>ブール値コンストラクター関数 - false (XQuery)
@@ -33,13 +33,13 @@ ms.locfileid: "68093198"
 fn:false() as xs:boolean  
 ```  
   
-## <a name="examples"></a>使用例  
- このトピックではさまざまなに格納されている XML インスタンスに対して XQuery の例について**xml**型の列には、AdventureWorks データベース。  
+## <a name="examples"></a>例  
+ このトピックでは、AdventureWorks データベースのさまざまな**xml**型の列に格納されている xml インスタンスに対して XQuery の例を示します。  
   
 ### <a name="a-using-the-false-xquery-boolean-function"></a>A. XQuery 論理関数 false() の使用  
- 実際のサンプルでは、次を参照してください。 [true 関数&#40;XQuery&#41;](../xquery/boolean-constructor-functions-true-xquery.md)します。  
+ 実際のサンプルについては、「 [True 関数 &#40;XQuery&#41;](../xquery/boolean-constructor-functions-true-xquery.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [ブール値コンス トラクター関数&#40;XQuery&#41;](https://msdn.microsoft.com/library/fa907f39-d4b7-4495-b829-c788928e0f64)  
+ [ブール型コンストラクター関数 &#40;XQuery&#41;](https://msdn.microsoft.com/library/fa907f39-d4b7-4495-b829-c788928e0f64)  
   
   

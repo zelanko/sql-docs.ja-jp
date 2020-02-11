@@ -10,199 +10,199 @@ ms.assetid: 136fdf6d-657f-447b-af41-49bbc6e0e93e
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: beb82f2fd894af71bb6f291dcc6f86a995f8dd85
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68138325"
 ---
 # <a name="project-settings-type-mapping-mysqltosql"></a>プロジェクトの設定 (型のマッピング) (MySQLToSQL)
-プロジェクトの型マッピングの設定では、SSMA プロジェクトの既定の型マッピングを設定できます。  
+型マッピングプロジェクトの設定を使用すると、SSMA プロジェクトの既定の型マッピングを設定できます。  
 
-型のマッピングは、プロジェクトの設定とプロジェクトの既定の設定 ダイアログ ボックスで利用できます。  
+型マッピングは、[プロジェクトの設定] ダイアログボックスと [既定のプロジェクトの設定] ダイアログボックスで使用できます。  
   
--   プロジェクトの設定 ダイアログ ボックスを使用すると、現在のプロジェクトの構成オプションを設定できます。 型のマッピング設定の ツール メニューにアクセスするには、プロジェクトの設定 を選択し、左側のウィンドウで型のマッピングをクリックします。  
+-   [プロジェクトの設定] ダイアログボックスを使用すると、現在のプロジェクトの構成オプションを設定できます。 型マッピングの設定にアクセスするには、[ツール] メニューの [プロジェクトの設定] をクリックし、左ペインの [型マッピング] をクリックします。  
   
--   プロジェクトの既定の設定 ダイアログ ボックスを使用すると、すべてのプロジェクトの構成オプションを設定できます。 ツール メニューの設定を型のマッピングにアクセスするには、既定のプロジェクトの設定、移行プロジェクトの種類の設定は、表示/から変更する必要を選択します**移行ターゲット バージョン**ドロップダウンをクリックしての種類左側のウィンドウでマッピングします。  
+-   [既定のプロジェクトの設定] ダイアログボックスを使用すると、すべてのプロジェクトの構成オプションを設定できます。 型マッピングの設定にアクセスするには、[ツール] メニューの [既定のプロジェクト設定] をクリックし、[移行**先のバージョン**] ドロップダウンから表示/変更が必要な設定を選択して、左側のウィンドウの [種類のマッピング] をクリックします。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
   
-##### <a name="source-type"></a>[変換元の型]  
-ターゲット データベースのデータ型にマップする必要がある MySQL のデータ型になります。  
+##### <a name="source-type"></a>ソースの種類  
+これは MySQL データ型で、ターゲットデータベースのデータ型にマップする必要があります。  
   
 ##### <a name="target-type"></a>ターゲットの種類  
-ターゲット データベースのデータは、指定の MySQL のデータ型の型します。  
+指定された MySQL データ型のターゲットデータベースデータ型。  
   
 ##### <a name="add"></a>追加  
-データ型をマッピングの一覧に追加する をクリックします。  
+[マッピング] ボックスの一覧にデータ型を追加する場合にクリックします。  
   
-##### <a name="edit"></a>編集  
-マッピングの一覧で選択したデータ型を編集する をクリックします。  
+##### <a name="edit"></a>[編集]  
+[マッピング] ボックスの一覧で選択したデータ型を編集する場合にクリックします。  
   
-##### <a name="remove"></a>削除  
-マッピングの一覧から選択したデータ型のマッピングを削除する をクリックします。  
+##### <a name="remove"></a>[削除]  
+クリックすると、選択したデータ型マッピングが [マッピング] ボックスの一覧から削除されます。  
   
 ##### <a name="reset-to-default"></a>[既定値にリセット]  
-SSMA の既定値に型マッピングのリストをリセットする をクリックします。  
+クリックすると、[型マッピング] の一覧が SSMA の既定値にリセットされます。  
   
 ## <a name="type-mappings"></a>型のマッピング  
 次の表は、ソースとターゲットのデータ型の既定のマッピングを示しています。  
   
 |||  
 |-|-|  
-|**MySQL のデータ型**|**SQL Server データ型**|  
-|BIGINT|BIGINT|  
-|bigint [*..255]|BIGINT|  
-|バイナリ|バイナリ [1]|  
-|バイナリ [0..1]|バイナリ [1]|  
-|バイナリ [2..255]|バイナリ [*]|  
+|**MySQL データ型**|**SQL Server データ型**|  
+|bigint|bigint|  
+|bigint [*..255]|bigint|  
+|binary|バイナリ [1]|  
+|binary [0 ..1]|バイナリ [1]|  
+|バイナリ [2.. 255]|バイナリ [*]|  
 |bit|バイナリ [1]|  
-|ビット [0..8]|バイナリ [1]|  
-|ビット [17..24]|バイナリ [3]|  
-|ビット [25..32]|バイナリ [4]|  
-|ビット [33..40]|バイナリ [5]|  
-|ビット [41..48]|バイナリ [6]|  
-|ビット [49..56]|バイナリ [7]|  
-|ビット [57..64]|バイナリ [8]|  
-|ビット [9..16]|バイナリ [2]|  
-|blob (blob)|varbinary(max)|  
-|blob [0..1]|varbinary [1]|  
-|blob[2..8000]|varbinary [*]|  
+|ビット [0.. 8]|バイナリ [1]|  
+|bit [17.. 24]|バイナリ [3]|  
+|bit [25.. 32]|バイナリ [4]|  
+|bit [33.. 40]|バイナリ [5]|  
+|bit [41.. 48]|バイナリ [6]|  
+|bit [49.. 56]|バイナリ [7]|  
+|bit [57.. 64]|バイナリ [8]|  
+|bit [9.. 16]|バイナリ [2]|  
+|BLOB|varbinary(max)|  
+|blob [0 ..1]|varbinary [1]|  
+|blob [2.. 8000]|varbinary [*]|  
 |blob [8001.. *]|varbinary(max)|  
-|bool|bit|  
+|ブール|bit|  
 |boolean|bit|  
 |char|nchar [1]|  
-|char バイト|バイナリ [1]|  
-|バイト [0..1] char 型します。|バイナリ [1]|  
-|バイト [2..255] char 型します。|バイナリ [*]|  
-|char [0..1]|nchar [1]|  
-|char [2..255]|nchar [*]|  
+|char byte|バイナリ [1]|  
+|char byte [0 ..1]|バイナリ [1]|  
+|char byte [2.. 255]|バイナリ [*]|  
+|char [0 ..1]|nchar [1]|  
+|char [2.. 255]|nchar [*]|  
 |character|nchar [1]|  
-|文字のさまざまな [0..1]|nvarchar [1]|  
-|文字のさまざまな [2..255]|NVARCHAR|  
-|文字 [0..1]|nchar [1]|  
-|文字 [2..255]|nchar [*]|  
-|日付|日付|  
+|文字の変化 [0 ..1]|nvarchar [1]|  
+|文字の変化 [2.. 255]|nvarchar|  
+|文字 [0 ..1]|nchar [1]|  
+|文字 [2.. 255]|nchar [*]|  
+|date|date|  
 |DATETIME|datetime2 [0]|  
-|dec|Decimal|  
-|dec [*..65]|10 進数 [*] [0]|  
-|dec [*..65] [\*..30]|10 進数 [*] [\*]|  
-|Decimal|Decimal|  
-|decimal [*..65]|10 進数 [*] [0]|  
-|decimal [*..65] [\*..30]|10 進数 [*] [\*]|  
+|dec|decimal|  
+|dec [*..65]|decimal [*] [0]|  
+|dec [*..65] [\*..?|decimal [*] [\*]|  
+|decimal|decimal|  
+|decimal [*..65]|decimal [*] [0]|  
+|decimal [*..65] [\*..?|decimal [*] [\*]|  
 |double|float [53]|  
-|倍精度|float [53]|  
-|倍精度 [*..255] [\*..30]|数値 [*] [\*]|  
-|二重 [*..255] [\*..30]|数値 [*] [\*]|  
-|修正しました|NUMERIC|  
-|固定 [*..65] [\*..30]|数値 [*] [\*]|  
-|FLOAT|float [24]|  
-|float [*..255] [\*..30]|数値 [*] [\*]|  
+|double precision|float [53]|  
+|倍精度浮動小数点型 [*..255] [\*..?|数値 [*] [\*]|  
+|double [*..255] [\*..?|数値 [*] [\*]|  
+|固定|numeric|  
+|修正済み [*..65] [\*..?|数値 [*] [\*]|  
+|float|float [24]|  
+|float [*..255] [\*..?|数値 [*] [\*]|  
 |float [*..53]|float [53]|  
-|int|int|  
-|int [*..255]|int|  
-|integer|int|  
-|整数 [*..255]|int|  
+|INT|INT|  
+|int [*..255]|INT|  
+|整数 (integer)|INT|  
+|integer [*..255]|INT|  
 |longblob|varbinary(max)|  
-|長いテキスト|nvarchar(max)|  
+|longtext|nvarchar(max)|  
 |mediumblob|varbinary(max)|  
-|mediumint|int|  
-|mediumint [*..255]|int|  
+|mediumint|INT|  
+|mediumint[*..255]|INT|  
 |mediumtext|nvarchar(max)|  
 |national char|nchar [1]|  
-|national char [0..1]|nchar [1]|  
-|national char [2..255]|nchar [*]|  
-|各国語文字|nchar [1]|  
-|各国語文字がさまざまな|nvarchar [1]|  
-|各国語文字の可変 [0..1]|nvarchar [1]|  
-|各国語文字の可変 [2..4000]|nvarchar [*]|  
-|各国語文字がさまざまな [4001.. *]|nvarchar(max)|  
-|各国語文字 [0..1]|nchar [1]|  
-|各国語文字 [2..255]|nchar [*]|  
+|national char [0 ..1]|nchar [1]|  
+|national char [2.. 255]|nchar [*]|  
+|national character|nchar [1]|  
+|各国語文字の変化|nvarchar [1]|  
+|各国語文字のさまざまな [0 ..1]|nvarchar [1]|  
+|国別文字 [2.. 4000]|nvarchar [*]|  
+|各国語文字のさまざまな [4001.. *]|nvarchar(max)|  
+|national character [0 ..1]|nchar [1]|  
+|national character [2.. 255]|nchar [*]|  
 |national varchar|nvarchar [1]|  
-|national varchar [0..1]|nvarchar [1]|  
-|national varchar [2..4000]|nvarchar [*]|  
+|national varchar [0 ..1]|nvarchar [1]|  
+|national varchar [2.. 4000]|nvarchar [*]|  
 |national varchar [4001.. *]|nvarchar(max)|  
 |nchar|nchar [1]|  
 |nchar varchar|nvarchar [1]|  
-|nchar varchar [0..1]|nvarchar [1]|  
-|nchar varchar [2..4000]|nvarchar [*]|  
+|nchar varchar [0 ..1]|nvarchar [1]|  
+|nchar varchar [2.. 4000]|nvarchar [*]|  
 |nchar varchar [4001.. *]|nvarchar(max)|  
-|nchar [0..1]|nchar [1]|  
-|nchar [2..255]|nchar [*]|  
-|NUMERIC|NUMERIC|  
+|nchar [0 ..1]|nchar [1]|  
+|nchar [2.. 255]|nchar [*]|  
+|numeric|numeric|  
 |数値 [*..65]|数値 [*] [0]|  
-|数値 [*..65] [\*..30]|数値 [*] [\*]|  
-|NVARCHAR|nvarchar [1]|  
-|nvarchar [0..1]|nvarchar [1]|  
-|nvarchar [2..4000]|nvarchar [*]|  
+|数値 [*..65] [\*..?|数値 [*] [\*]|  
+|nvarchar|nvarchar [1]|  
+|nvarchar [0 ..1]|nvarchar [1]|  
+|nvarchar [2.. 4000]|nvarchar [*]|  
 |nvarchar [4001.. *]|nvarchar(max)|  
-|REAL|float [53]|  
-|実際 [*..255] [\*..30]|数値 [*] [\*]|  
-|シリアル|BIGINT|  
-|SMALLINT|SMALLINT|  
-|smallint [*..255]|SMALLINT|  
+|real|float [53]|  
+|real [*..255] [\*..?|数値 [*] [\*]|  
+|serial|bigint|  
+|smallint|smallint|  
+|smallint [*..255]|smallint|  
 |text|nvarchar(max)|  
-|テキスト [0..1]|nvarchar [1]|  
-|text[2..4000]|nvarchar [*]|  
+|テキスト [0 ..1]|nvarchar [1]|  
+|テキスト [2.. 4000]|nvarchar [*]|  
 |テキスト [4001.. *]|nvarchar(max)|  
 |time|time|  
-|TIMESTAMP|DATETIME|  
+|timestamp|DATETIME|  
 |tinyblob|varbinary [255]|  
-|TINYINT|SMALLINT|  
-|tinyint [*..255]|SMALLINT|  
+|tinyint|smallint|  
+|tinyint [*..255]|smallint|  
 |tinytext|nvarchar [255]|  
-|符号なし bigint|BIGINT|  
-|符号なし bigint [*..255]|BIGINT|  
-|符号なしの 12 月|Decimal|  
-|符号なしの dec [*..65]|10 進数 [*] [0]|  
-|符号なしの dec [*..65] [\*..30]|10 進数 [*] [\*]|  
-|符号なし 10 進数|Decimal|  
-|符号なし 10 進数 [*..65]|10 進数 [*] [0]|  
-|符号なし 10 進数 [*..65] [\*..30]|10 進数 [*] [\*]|  
-|倍精度浮動小数点符号なし|float [53]|  
-|符号なしの倍精度|float [53]|  
-|符号なしの倍精度 [*..255] [\*..30]|数値 [*] [\*]|  
-|符号なしの倍精度浮動小数点 [*..255] [\*..30]|数値 [*] [\*]|  
-|符号なしの固定|NUMERIC|  
-|符号なしの固定 [*..65] [\*..30]|数値 [*] [\*]|  
-|符号なしの float|float [24]|  
-|符号なしの float [*..255] [\*..30]|数値 [*] [\*]|  
-|符号なしの float [*..53]|float [53]|  
-|unsigned int|BIGINT|  
-|符号なし int [*..255]|BIGINT|  
-|符号なし整数|BIGINT|  
-|符号なし整数 [*..255]|BIGINT|  
-|符号なしの mediumint|int|  
-|符号なしの mediumint [*..255]|int|  
-|unsigned numeric|NUMERIC|  
+|符号なし bigint|bigint|  
+|符号なし bigint [*..255]|bigint|  
+|unsigned dec|decimal|  
+|unsigned dec [*..65]|decimal [*] [0]|  
+|unsigned dec [*..65] [\*..?|decimal [*] [\*]|  
+|符号なし10進|decimal|  
+|符号なし10進数 [*..65]|decimal [*] [0]|  
+|符号なし10進数 [*..65] [\*..?|decimal [*] [\*]|  
+|符号なし double|float [53]|  
+|符号なし倍精度|float [53]|  
+|符号なし倍精度 [*..255] [\*..?|数値 [*] [\*]|  
+|unsigned double [*..255] [\*..?|数値 [*] [\*]|  
+|unsigned fixed|numeric|  
+|unsigned fixed [*..65] [\*..?|数値 [*] [\*]|  
+|unsigned float|float [24]|  
+|unsigned float [*..255] [\*..?|数値 [*] [\*]|  
+|unsigned float [*..53]|float [53]|  
+|unsigned int|bigint|  
+|unsigned int [*..255]|bigint|  
+|符号なし整数|bigint|  
+|符号なし整数 [*..255]|bigint|  
+|署名されていない mediumint|INT|  
+|署名されていない mediumint [*..255]|INT|  
+|符号なし数値|numeric|  
 |符号なし数値 [*..65]|数値 [*] [0]|  
-|符号なし数値 [*..65] [\*..30]|数値 [*] [\*]|  
-|実際に符号なし|float [53]|  
-|実際に署名されていない [*..255 [\*..30]|数値 [*] [\*]|  
-|符号なしの smallint|int|  
-|符号なしの smallint [*..255]|int|  
-|符号なしの tinyint|TINYINT|  
-|符号なしの tinyint [*..255]|TINYINT|  
-|varbinary [0..1]|varbinary [1]|  
-|varbinary [2..8000]|varbinary [*]|  
+|符号なし数値 [*..65] [\*..?|数値 [*] [\*]|  
+|符号なし実数|float [53]|  
+|unsigned real [*..255 [[\*..?|数値 [*] [\*]|  
+|unsigned smallint|INT|  
+|unsigned smallint [*..255]|INT|  
+|unsigned tinyint|tinyint|  
+|unsigned tinyint [*..255]|tinyint|  
+|varbinary [0 ..1]|varbinary [1]|  
+|varbinary [2.. 8000]|varbinary [*]|  
 |varbinary [8001.. *]|varbinary(max)|  
-|varchar [0..1]|nvarchar [1]|  
-|varchar [2..4000]|nvarchar [*]|  
+|varchar [0 ..1]|nvarchar [1]|  
+|varchar [2.. 4000]|nvarchar [*]|  
 |varchar [4001.. *]|nvarchar(max)|  
-|年|SMALLINT|  
-|year [2..2]|SMALLINT|  
-|year [4..4]|SMALLINT|  
+|year|smallint|  
+|年 [2.. 2]|smallint|  
+|年 [4.. 4]|smallint|  
   
 ##### <a name="add"></a>追加  
-データ型をマッピングの一覧に追加する をクリックします。  
+[マッピング] ボックスの一覧にデータ型を追加する場合にクリックします。  
   
-##### <a name="edit"></a>編集  
-データ型マッピングのリストを編集する をクリックします。  
+##### <a name="edit"></a>[編集]  
+[マッピング] ボックスの一覧でデータ型を編集する場合にクリックします。  
   
-##### <a name="remove"></a>削除  
-マッピングの一覧から選択したデータ型のマッピングを削除する をクリックします。  
+##### <a name="remove"></a>[削除]  
+クリックすると、選択したデータ型マッピングが [マッピング] ボックスの一覧から削除されます。  
   
 ##### <a name="reset-to-default"></a>[既定値にリセット]  
-すべてのデータ型マッピングを SSMA の既定値にリセットする をクリックします。  
+すべてのデータ型マッピングを SSMA の既定値にリセットする場合にクリックします。  
   

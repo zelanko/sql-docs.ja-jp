@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 3a70bceed4cdccf6a22f0cfea4e5093634f88f1f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68132693"
 ---
 # <a name="filter-mdx"></a>Filter (MDX)
 
 
-  検索条件に基づいて、指定されたセットをフィルター処理の結果セットを返します。  
+  検索条件に基づいて、指定されたセットをフィルター処理した結果のセットを返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -29,18 +29,18 @@ Filter(Set_Expression, Logical_Expression )
   
 ## <a name="arguments"></a>引数  
  *Set_Expression*  
- セットを返す有効な多次元式 (MDX) です。  
+ セットを返す有効な多次元式 (MDX) 式です。  
   
  *Logical_Expression*  
  true または false に評価される有効な多次元式 (MDX) 論理式です。  
   
-## <a name="remarks"></a>コメント  
- **フィルター**関数は、指定されたセット内の各組に対して指定された論理式を評価します。 論理式の評価が指定されたセット内の各組で構成されるセットを返します**true**します。 評価される組がない場合**true**空のセットが返されます。  
+## <a name="remarks"></a>解説  
+ **Filter**関数は、指定されたセット内の各組に対して指定された論理式を評価します。 関数は、論理式が**true**と評価される、指定されたセット内の各組で構成されるセットを返します。 **True**と評価される組がない場合は、空のセットが返されます。  
   
- **フィルター**関数の動作のような方法で、 [IIf](../mdx/iif-mdx.md)関数。 **IIf**関数は、2 つのオプションのいずれかのみを返します MDX 論理式の評価に基づき、while、**フィルター**関数を指定した検索条件を満たす組のセットを返します。 実際には、**フィルター**関数が実行される`IIf(Logical_Expression, Set_Expression.Current, NULL)`セット、および返します内の組ごとに、その結果セットします。  
+ **フィルター**関数は、 [IIf](../mdx/iif-mdx.md)関数と同様の方法で動作します。 **IIf**関数は、MDX 論理式の評価に基づいて2つのオプションのうち1つだけを返します。一方、**フィルター**関数は、指定された検索条件を満たす組のセットを返します。 実際には、**フィルター**関数は`IIf(Logical_Expression, Set_Expression.Current, NULL)`セット内の各組に対してを実行し、結果のセットを返します。  
   
-## <a name="examples"></a>使用例  
- 次の例は、Internet Sales Amount が $10000 より大きい日付だけを返すクエリの Rows 軸で、フィルター関数の使用を示しています。  
+## <a name="examples"></a>例  
+ 次の例では、クエリの Rows 軸で Filter 関数を使用して、Internet Sales Amount が $1万より大きい日付のみを返す方法を示します。  
   
  `SELECT [Measures].[Internet Sales Amount] ON 0,`  
   
@@ -56,7 +56,7 @@ Filter(Set_Expression, Logical_Expression )
   
  `[Adventure Works]`  
   
- フィルター関数は、計算されるメンバーの定義内でも使用できます。 次の例の合計を返して、`Measures.[Order Quantity]`メンバーに含まれている 2003年の最初の 9 か月にわたり、`Date`ディメンションから、 **Adventure Works**キューブ。 **PeriodsToDate**関数セット内の組を定義する、**集計**関数は動作します。 **フィルター**関数は、前の期間の Reseller Sales Amount メジャーの値が小さいものに返される組を限定します。  
+ フィルター関数は、計算されるメンバーの定義内でも使用できます。 次の例では、 `Measures.[Order Quantity]` **Adventure works**キューブから、 `Date`ディメンションに含まれている2003の最初の9か月に対して集計されたメンバーの合計を返します。 **PeriodsToDate**関数は、**集計**関数の演算対象となるセット内の組を定義します。 **フィルター**関数は、前の期間の再販業者の Sales Amount メジャーの値が小さい方に、返される組を制限します。  
   
 ```  
 WITH MEMBER Measures.[Declining Reseller Sales] AS Count  
@@ -83,7 +83,7 @@ WHERE ([Geography].[State-Province].x,
    [Measures].[Declining Reseller Sales])  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>参照  
+ [Mdx 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

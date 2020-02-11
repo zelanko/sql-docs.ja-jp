@@ -1,5 +1,5 @@
 ---
-title: インストール コンポーネント |Microsoft Docs
+title: インストールコンポーネント |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,24 +14,24 @@ ms.assetid: 9de15ca0-fe6a-4634-8709-a928d3c9cc73
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 34d1b6d143f6f40d73e2feeb0b718f3c3b3248fe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68094129"
 ---
 # <a name="installation-components"></a>インストール コンポーネント
 > [!NOTE]  
->  ODBC は Windows XP および Windows Server 2003 以降、Windows オペレーティング システムに含まれます。 Windows の以前のバージョンで ODBC を明示的にのみインストールしてください。  
+>  Windows XP および windows Server 2003 以降では、ODBC は Windows オペレーティングシステムに含まれています。 ODBC は、以前のバージョンの Windows にのみ明示的にインストールする必要があります。  
   
- ユーザーは、セットアップ プログラムを実行すると、インストール プロセスを開始します。 セットアップ プログラムの動作と組み合わせて、*インストーラー DLL*と*ドライバーのセットアップ DLL*ドライバーごとにします。 セットアップ プログラムと DLL のインストーラーの両方の引数を使用して、 **SQLInstallDriverEx**と**SQLInstallTranslatorEx**関数をコピーまたは削除の各コンポーネントのファイルを特定します。 次の図は、これらのインストール コンポーネント間の関係を示します。  
+ ユーザーがセットアッププログラムを実行すると、インストールプロセスが開始されます。 セットアッププログラムは、各ドライバーの*インストーラー dll*および*ドライバーセットアップ dll*と連携して動作します。 セットアッププログラムとインストーラー DLL の両方で、 **Sqlinstalldriverex**関数と**SQLInstallTranslatorEx**関数の引数を使用して、各コンポーネントでコピーまたは削除するファイルを決定します。 次の図は、これらのインストールコンポーネント間の関係を示しています。  
   
  ![インストール コンポーネント間の関係](../../../odbc/reference/install/media/pr29.gif "pr29")  
   
 > [!IMPORTANT]
->  ODBC で使用されていた Odbc.inf ファイル*2.x*各 ODBC に必要なファイルを記述するコンポーネントで使用されていない ODBC *3.x*します。 付属の ODBC ドライバー *3.x*コンポーネントは Odbc.inf ファイルを作成する必要はありません。 削除**SQLInstallDriver**と**SQLInstallODBC**との非推奨**SQLInstallTranslator**が Odbc.inf の不要なレンダリングします。 ドライバー情報の Odbc.inf Driver キーワード節で説明するために使用するように提供されています、 *lpszDriver*引数**SQLInstallDriverEx**します。 Translator 情報 [ODBC トランスレーター] であるを使用して、Odbc.inf のトランスレーターの仕様のセクションに含まれるようになりました、 *lpszTranslator*の引数**SQLInstallTranslatorEx**します。 これらの変更は、プラットフォーム間で移植性を向上できる ODBC インストーラーを許可します。  
+>  Odbc 2.x では、各 ODBC コンポーネントに必要なファイルを*記述するために odbc .inf*ファイルが使用されていますが、odbc *3. x*では使用されません。 ODBC 3.x コンポーネントを出荷するドライバーでは *、odbc .inf*ファイルを作成する必要はありません。 **Sqlinstalldriver**と**SQLInstallODBC**の削除、および**sqlinstalldriver**が廃止されたため、Odbc が不要になりました。 Odbc の Driver キーワードセクションに含まれていたドライバー情報が、 **Sqlinstalldriverex**の*lpszdriver*引数に指定されるようになりました。 Odbc の [ODBC Translator] セクションおよび Translator Specification セクションに含まれていた変換情報が、 **SQLInstallTranslatorEx**の*lpsztranslator*引数に指定されるようになりました。 これらの変更により、プラットフォーム間での ODBC インストーラーの移植性が向上します。  
   
- これらのコンポーネントの詳細については、このセクションの最後に、次のトピックを参照してください。  
+ これらのコンポーネントの詳細については、このセクションの最後にある次のトピックを参照してください。  
   
 -   [セットアップ プログラム](../../../odbc/reference/install/setup-program.md)  
   

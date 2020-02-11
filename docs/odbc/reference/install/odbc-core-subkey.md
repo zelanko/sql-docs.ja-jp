@@ -15,20 +15,20 @@ ms.assetid: 055b31fc-f96c-450b-a596-d4570079fbf2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 98c9380083eb5a0ad796f436af271564676b757d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68094009"
 ---
 # <a name="odbc-core-subkey"></a>ODBC Core サブキー
-ODBC Core サブキーの値では、コア コンポーネント (ドライバー マネージャー、カーソル ライブラリ、インストーラー DLL、およびなど) の使用率カウントを示します。 この値の形式は、次の表に示します。  
+ODBC Core サブキーの下の値は、コアコンポーネント (ドライバーマネージャー、カーソルライブラリ、インストーラー DLL など) の使用回数を示します。 この値の形式を次の表に示します。  
   
-|名前|データ型|data|  
+|Name|データ型|データ|  
 |----------|---------------|----------|  
 |UsageCount|REG_DWORD|*count*|  
   
- たとえば、ODBC コア コンポーネントは、次の 3 つの異なるアプリケーションと 2 つの異なるドライバーのセットアップ プログラムによってインストールされているとします。 ODBC Core サブキーの値は次のようになります。  
+ たとえば、3つの異なるアプリケーション用のセットアッププログラムによって ODBC Core コンポーネントがインストールされていて、2つの異なるドライバーがインストールされているとします。 ODBC Core サブキーの下の値は次のようになります。  
   
 ```  
 UsageCount : REG_DWORD : 0x5  

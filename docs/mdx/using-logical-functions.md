@@ -9,20 +9,20 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 723d481bc858d7d1db4a63cbb32ab5614eddbb55
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68097166"
 ---
 # <a name="using-logical-functions"></a>論理関数の使用
 
 
-  論理関数は、オブジェクトよぶ式に対して論理演算または比較を実行し、ブール値を返します。 論理関数は、essential の多次元式 (MDX) メンバーの位置を決定します。  
+  論理関数は、オブジェクトおよび式に対して論理演算または比較を実行し、ブール値を返します。 論理関数は、メンバーの位置を決定するために、多次元式 (MDX) において不可欠です。  
   
- 最もよく使用される論理関数は、 **IsEmpty**関数。 使用方法の詳細については、 **IsEmpty**関数を参照してください[空の値を操作](../mdx/working-with-empty-values.md)します。  
+ 最もよく使用される論理関数は、 **IsEmpty**関数です。 **IsEmpty**関数の使用方法の詳細については、「[空の値の操作](../mdx/working-with-empty-values.md)」を参照してください。  
   
- 次のクエリを使用する方法を示しています、 **IsLeaf**と**IsAncestor**関数。  
+ 次のクエリは、 **Isleaf**関数と**isleaf**関数の使用方法を示しています。  
   
  `WITH`  
   
@@ -40,7 +40,7 @@ ms.locfileid: "68097166"
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>関連項目  
- [関数&#40;MDX 構文&#41;](../mdx/functions-mdx-syntax.md)  
+## <a name="see-also"></a>参照  
+ [関数 &#40;MDX 構文&#41;](../mdx/functions-mdx-syntax.md)  
   
   

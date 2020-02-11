@@ -1,5 +1,5 @@
 ---
-title: sys.computed_columns (TRANSACT-SQL) |Microsoft Docs
+title: computed_columns (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,29 +21,29 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9e55274d1e6dfa34a3cfb92317bb4f205cfdd964
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68109569"
 ---
-# <a name="syscomputedcolumns-transact-sql"></a>sys.computed_columns (TRANSACT-SQL)
+# <a name="syscomputed_columns-transact-sql"></a>computed_columns (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  各列内の行が含まれています**sys.columns**は、計算列です。  
+  列が計算列である場合は、その列の行が格納され**ます。**  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
-|**\<列を継承 >**||**Sys.computed_columns**ビューは、すべての列を返します、 **sys.columns**ビュー。 以下に示す追加の列も返します。 列の説明を**sys.computed_columns**ビューが継承**sys.columns**を参照してください[sys.columns &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)します。 値、 **is_computed**列は、常に 1 に設定、 **sys.computed_columns**ビュー。|  
-|**definition**|**nvarchar(max)**|このな計算列を定義する SQL テキストです。|  
-|**uses_database_collation**|**bit**|1 = 列の定義は、正しい評価は、データベースの既定の照合順序によって異なります。それ以外の場合、0 を返します。 このような依存関係は、データベースの既定の照合順序を変更できないようにします。|  
-|**is_persisted**|**bit**|計算列を保持します。|  
+|**\<継承された列>**||**Computed_columns**ビューでは、すべての列が返されます、、**列、ビュー**です。 また、以下に示す追加の列も返されます。 **Computed_columns**ビューが**sys**から継承する列の詳細については、「 [sys &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)」を参照してください。 **Computed_columns**ビューでは、 **is_computed**列の値は常に1に設定されます。|  
+|**カスタム**|**nvarchar(max)**|この計算列を定義する SQL テキスト。|  
+|**uses_database_collation**|**bit**|1 = 列の定義は、正しい評価のために、データベースの既定の照合順序に依存します。それ以外の場合は0です。 このような依存関係によって、データベースの既定の照合順序を変更できなくなります。|  
+|**is_persisted**|**bit**|計算列は保持されます。|  
   
 ## <a name="permissions"></a>アクセス許可  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]詳細については、「[メタデータ表示の構成](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [オブジェクト カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [オブジェクトカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

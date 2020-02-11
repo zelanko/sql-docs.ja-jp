@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 7a8856b28d8eec76d2bc262c4209b007c0a7fa04
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68020637"
 ---
 # <a name="qtd-mdx"></a>Qtd (MDX)
 
 
-  以降で最初の兄弟、という制約の指定したメンバーで終わる、指定されたメンバーと同じレベルのメンバーの兄弟のセットを返します、*四半期*時間ディメンション内のレベル。  
+  指定されたメンバーと同じレベルにある兄弟メンバーのセットを返します。最初の兄弟から始まり、指定されたメンバーで終わります。これは、時間ディメンションの*Quarter*レベルによって制限されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -28,16 +28,16 @@ Qtd( [ Member_Expression ] )
 ```  
   
 ## <a name="arguments"></a>引数  
- *メンバー式*  
+ *Member_Expression*  
  メンバーを 1 つ返す有効な多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>コメント  
- 最初の階層の現在のメンバーの種類のレベルを持つ場合、メンバーしたは、式が指定されていない、既定値が*四半期*型の最初の次元の*時間*メジャー グループ内。  
+## <a name="remarks"></a>解説  
+ メンバー式が指定されていない場合、既定値は、メジャーグループ内の*Time*型の最初の次元で、*四半期*型のレベルを持つ最初の階層の現在のメンバーになります。  
   
- **Qtd**関数のショートカット関数では、 [PeriodsToDate &#40;MDX&#41; ](../mdx/periodstodate-mdx.md)関数に設定されているレベル式引数*四半期*します。 つまり、`Qtd(Member_Expression)` と `PeriodsToDate(Quarter_Level_Expression, Member_Expression)` は機能的に等価です。  
+ **Qtd**関数は、 [PeriodsToDate &#40;MDX&#41;](../mdx/periodstodate-mdx.md)関数の、レベル式の引数が*Quarter*に設定されている関数のショートカット関数です。 つまり、`Qtd(Member_Expression)` と `PeriodsToDate(Quarter_Level_Expression, Member_Expression)` は機能的に等価です。  
   
 ## <a name="example"></a>例  
- 次の例の合計を返して、`Measures.[Order Quantity]`メンバーを集計した、最初の 2 か月の 2003 年第 3 四半期に含まれている、`Date`ディメンションから、 **Adventure Works**キューブ。  
+ 次の例では、 `Measures.[Order Quantity]` **Adventure works**キューブから、 `Date`ディメンションに含まれている calendar year 2003 の第3四半期の最初の2か月を集計した、メンバーの合計を返します。  
   
 ```  
 WITH MEMBER [Date].[Calendar].[First2MonthsSecondSemester2003] AS  
@@ -53,7 +53,7 @@ WHERE
     [Measures].[Order Quantity]  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>参照  
+ [Mdx 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

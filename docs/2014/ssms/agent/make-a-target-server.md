@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 744ebc5411e626c083676440502489029e888a28
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72798185"
 ---
 # <a name="make-a-target-server"></a>ターゲット サーバーの作成
@@ -33,9 +33,9 @@ ms.locfileid: "72798185"
   
 -   **作業を開始する準備:**  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
--   **ターゲット サーバーを作成するために使用するもの:**  
+-   **対象サーバーを作成するために使用するもの:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -45,10 +45,10 @@ ms.locfileid: "72798185"
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Security"></a> Security  
+###  <a name="Security"></a> セキュリティ  
  プロキシに関連付けられているステップがある分散ジョブは、ターゲット サーバーのプロキシ アカウントのコンテキストで実行されます。 次の条件を満たしていることを確認してください。満たしていないと、プロキシに関連付けられているジョブ ステップがマスター サーバーから対象サーバーにダウンロードされません。  
   
--   マスターサーバーレジストリサブキー **\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<*instance_name*> \ SQL server Agent\AllowDownloadedJobsToMatchProxyName** (REG_DWORD) が 1 (true) に設定されています。 既定では、この値は 0 (false) に設定されます。  
+-   マスターサーバーレジストリサブキー **\ HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server\\<*instance_name*> \ SQL server Agent\AllowDownloadedJobsToMatchProxyName** (REG_DWORD) が 1 (true) に設定されています。 既定では、この値は 0 (false) に設定されます。  
   
 -   ジョブ ステップを実行するマスター サーバー プロキシ アカウントと同じ名前を持つターゲット サーバーにプロキシ アカウントが存在すること。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "72798185"
   
      このエラーを解決するには、ターゲット サーバー上にプロキシ アカウントが存在し、ジョブ ステップを実行するマスター サーバー プロキシ アカウントと同じ名前が付けられているかどうかを確認します。  
   
-####  <a name="Permissions"></a> アクセス許可  
+####  <a name="Permissions"></a> Permissions  
  このプロシージャの実行権限は、既定では `sysadmin` 固定サーバー ロールのメンバーに与えられています。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
@@ -71,19 +71,23 @@ ms.locfileid: "72798185"
   
 1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続し、そのインスタンスを展開します。  
   
-2.  **[SQL Server エージェント]** を右クリックし、 **[マルチ サーバーの管理]** をポイントして、 **[対象サーバーに設定]** をクリックします。 **ターゲット サーバー設定ウィザード**を使用して、ターゲット サーバーを設定します。  
+2.  
+  **[SQL Server エージェント]** を右クリックし、 **[マルチ サーバーの管理]** をポイントして、 **[対象サーバーに設定]** をクリックします。 
+  **ターゲット サーバー設定ウィザード**を使用して、ターゲット サーバーを設定します。  
   
-3.  **[マスター サーバーの選択]** ページで、このターゲット サーバーが受け取るジョブの送信元のマスター サーバーを選択します。  
+3.  
+  **[マスター サーバーの選択]** ページで、このターゲット サーバーが受け取るジョブの送信元のマスター サーバーを選択します。  
   
-     **[サーバーの選択]**  
+     **サーバーの選択**  
      マスター サーバーに接続します。  
   
-     **[このサーバーの説明]**  
+     **このサーバーの説明**  
      このターゲット サーバーの説明を入力します。 この説明はターゲット サーバーからマスター サーバーにアップロードされます。  
   
-4.  **[マスター サーバー ログインの資格情報]** ページで、必要に応じてターゲット サーバーに新しいログインを作成します。  
+4.  
+  **[マスター サーバー ログインの資格情報]** ページで、必要に応じてターゲット サーバーに新しいログインを作成します。  
   
-     **[必要に応じて新しいログインを作成し、MSX へのアクセス権を割り当てる]**  
+     **必要に応じて新しいログインを作成し、MSX へのアクセス権を割り当てる**  
      指定されたログインが存在しない場合に、新しいログインをターゲット サーバーに作成します。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
@@ -94,7 +98,7 @@ ms.locfileid: "72798185"
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、**[実行]** をクリックします。 この例では、現在のサーバーを AdventureWorks1 マスター サーバーに追加します。 現在のサーバーの場所は、Building 21 の Room 309 の Rack 5 です。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、現在のサーバーを AdventureWorks1 マスター サーバーに追加します。 現在のサーバーの場所は、Building 21 の Room 309 の Rack 5 です。  
   
     ```sql
     USE msdb ;  
@@ -109,5 +113,5 @@ ms.locfileid: "72798185"
   
 ##  <a name="PowerShellProcedure"></a>SQL Server 管理オブジェクト (SMO) の使用  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>参照  
  [エンタープライズ全体の管理の自動化](automated-administration-across-an-enterprise.md)  

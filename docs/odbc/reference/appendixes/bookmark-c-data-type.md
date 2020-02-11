@@ -1,5 +1,5 @@
 ---
-title: Bookmark C データ型 |Microsoft Docs
+title: ブックマーク C データ型 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,21 +17,21 @@ ms.assetid: add88e48-ada3-4c0c-a5ac-e78903d3ff41
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 86488da93470a61a54638e9c60e6e1795a9da4dc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68125752"
 ---
 # <a name="bookmark-c-data-type"></a>Bookmark C データ型
-ブックマークの C データ型では、ブックマークを取得するアプリケーション。 ブックマーク C 型は可変長; できるブックマークの値を取得する場合のみ使用されます。他のデータ型に変換する必要がありますされません。 アプリケーションの取得と設定のいずれかから結果の列 0 ブックマーク**SQLBulkOperations** SQL_ADD の操作)、(で**SQLFetch**、 **SQLFetchScroll**、または**SQLGetData**します。 詳細については、次を参照してください。[ブックマーク](../../../odbc/reference/develop-app/bookmarks-odbc.md)します。  
+ブックマーク C データ型を使用すると、アプリケーションでブックマークを取得できます。 ブックマーク C 型は、長さが可変のブックマーク値を取得するためにのみ使用されます。他のデータ型に変換することはできません。 アプリケーションは、 **Sqlbulkoperations** (操作が SQL_ADD)、 **sqlfetch**、 **Sqlbulkoperations**、または**SQLGetData**を使用して、結果セットの列0からブックマークを取得します。 詳細については、「[ブックマーク](../../../odbc/reference/develop-app/bookmarks-odbc.md)」を参照してください。  
   
- 次の表の値*CType*ブックマーク C データ型では、ブックマーク C データ型、およびこのデータの定義を実装する ODBC C データ型を SQL から入力します。H.  
+ 次の表に、bookmark C データ型の*CType*の値、ブックマーク c データ型を実装する ODBC c データ型、および SQL からのこのデータ型の定義を示します。始め.  
   
 > [!NOTE]
->  SQL_C_BOOKMARK のデータ型は非推奨とされました。 ODBC *3.x*アプリケーションは SQL_C_BOOKMARK を使用しないでください。 ODBC *3.x*ドライバーは ODBC を使って作業する場合にのみ、SQL_C_BOOKMARK をサポートする必要があります*2.x*を使用するアプリケーション。 ドライバー マネージャーが、ODBC を使って、アプリケーションが動作する際に、SQL_C_BOOKMARK に SQL_C_VARBOOKMARK をマップ*2.x*ドライバー。  
+>  SQL_C_BOOKMARK のデータ型は非推奨とされました。 ODBC *3. x*アプリケーションでは、SQL_C_BOOKMARK を使用しないでください。 ODBC *3.x ドライバーは*、それを使用する odbc *2.x アプリケーションを*操作する場合にのみ、SQL_C_BOOKMARK をサポートする必要があります。 ドライバーマネージャーは、アプリケーション*が ODBC 2.x*ドライバーで動作する場合に SQL_C_VARBOOKMARK を SQL_C_BOOKMARK にマップします。  
   
-|C 型識別子|ODBC C の typedef|C 型|  
+|C 型識別子|ODBC C typedef|C 型|  
 |-----------------------|--------------------|------------|  
-|SQL_C_BOOKMARK<br />(非推奨)|ブックマーク|符号なし long int|  
-|SQL_C_VARBOOKMARK|SQLCHAR *|unsigned char *|
+|SQL_C_BOOKMARK<br />(非推奨)|ブックマーク|unsigned long int|  
+|SQL_C_VARBOOKMARK|SQLCHAR|unsigned char *|
