@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e0290e656105ebb33a7f73fc043beed64f1c25bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62520328"
 ---
 # <a name="extract-change-data-using-the-cdc-source"></a>CDC ソースを使用した変更データ抽出
@@ -71,8 +71,8 @@ ms.locfileid: "62520328"
 15. **[OK]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [[CDC ソース エディター] ([接続マネージャー] ページ)](../cdc-source-editor-connection-manager-page.md)   
+ [CDC ソース エディター &#40;[接続マネージャー] ページ&#41;](../cdc-source-editor-connection-manager-page.md)   
  [[CDC ソース エディター] ([列] ページ)](../cdc-source-editor-columns-page.md)   
- [[CDC ソース エディター] ([エラー出力] ページ)](../cdc-source-editor-error-output-page.md)  
+ [CDC ソース エディター &#40;[エラー出力] ページ&#41;](../cdc-source-editor-error-output-page.md)  
   
   

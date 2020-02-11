@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 91c87062d00e46d931afba0599cf4b19ed316ebc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63049535"
 ---
 # <a name="sessions-event-category"></a>Sessions イベント カテゴリ
@@ -28,7 +28,7 @@ ms.locfileid: "63049535"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|説明|  
+|トピック|[説明]|  
 |-----------|-----------------|  
 |[ExistingConnection イベント クラス](existingconnection-event-class.md)|トレースが開始されたときの既存のユーザー接続のプロパティを示します。|  
   

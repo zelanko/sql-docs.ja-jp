@@ -1,5 +1,5 @@
 ---
-title: upper-case 関数 (XQuery) |Microsoft Docs
+title: upper case 関数 (XQuery) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: 5bd01ad2-7adf-48fb-bf42-41e200419d37
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 0dcbcbc0cd6c0cf479aee7a7c3fd8c5e53a53d28
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68004609"
 ---
 # <a name="functions-on-string-values---upper-case"></a>文字列値に使用する関数 - upper-case
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  この関数では、各文字に変換 *$arg*大文字にします。 Unicode コード ポイント用 Microsoft Windows バイナリ大文字/小文字の変換では、文字を大文字に変換する方法を指定します。 この標準は、Unicode 標準のコード ポイントの標準のマッピングよりも異なります。  
+  この関数は、 *$arg*内の各文字を、それと等価な大文字に変換します。 Unicode コードポイントの Microsoft Windows バイナリケース変換では、文字を大文字に変換する方法を指定します。 この標準は、Unicode 標準コードポイント標準のマッピングとは異なります。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,23 +38,23 @@ fn:upper-case($arg as xs:string?) as xs:string
   
 |||  
 |-|-|  
-|用語|定義|  
+|期間|定義|  
 |*$arg*|大文字に変換する文字列値。|  
   
-## <a name="remarks"></a>コメント  
- 場合の値 *$arg*が空、長さ 0 の文字列が返されます。  
+## <a name="remarks"></a>解説  
+ *$Arg*の値が空の場合は、長さ0の文字列が返されます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
-### <a name="a-changing-a-string-to-upper-case"></a>A. 文字列を大文字に変更します。  
- 次の例では、変更、入力文字列 ' abcDEF!@4' を大文字に変換します。  
+### <a name="a-changing-a-string-to-upper-case"></a>A. 文字列を大文字に変更する  
+ 次の例では、入力文字列 ' abcDEF! を変更します。@4' を大文字にします。  
   
 ```  
 DECLARE @x xml = N'abcDEF!@4';  
 SELECT @x.value('fn:upper-case(/text()[1])', 'nvarchar(10)');  
 ```  
   
-### <a name="b-search-for-a-specific-character-string"></a>B. 特定の文字の文字列の検索  
+### <a name="b-search-for-a-specific-character-string"></a>B. 特定の文字列を検索する  
  この例では、upper-case 関数を使用して、大文字と小文字を区別せずに検索を行う方法を示しています。  
   
 ```  
@@ -118,7 +118,7 @@ where CatalogDescription.exist('
   
  `</Prod>`  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [xml データ型に対する XQuery 関数](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

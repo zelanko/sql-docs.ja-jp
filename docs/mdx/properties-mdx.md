@@ -1,5 +1,5 @@
 ---
-title: Properties (MDX) |Microsoft Docs
+title: プロパティ (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,13 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 9a9aa2ab3fbfdbe10246e0dcf8758cfcf7732375
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68893673"
 ---
-# <a name="properties-mdx"></a>Properties (MDX)
+# <a name="properties-mdx"></a>プロパティ (MDX)
 
 
   メンバー プロパティ値を含む文字列または厳密に型指定された値を返します。  
@@ -28,14 +28,14 @@ Member_Expression.Properties(Property_Name [, TYPED])
 ```  
   
 ## <a name="arguments"></a>引数  
- *メンバー式*  
+ *Member_Expression*  
  メンバーを 1 つ返す有効な多次元式 (MDX) 式です。  
   
  *Property_Name*  
  メンバープロパティ名の有効な文字列式です。  
   
-## <a name="remarks"></a>コメント  
- **Properties**関数は、指定したメンバー プロパティの指定されたメンバーの値を返します。 メンバープロパティには、**名前**、 **ID**、**キー**、**キャプション**などの固有メンバープロパティを使用することも、ユーザー定義メンバープロパティを使用することもできます。 詳細については、「[固有&#40;メンバー&#41;プロパティ mdx](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties) 」および「[ユーザー &#40;定義&#41;メンバープロパティ (mdx](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties))」を参照してください。  
+## <a name="remarks"></a>解説  
+ **Properties**関数は、指定されたメンバープロパティの指定されたメンバーの値を返します。 メンバープロパティには、**名前**、 **ID**、**キー**、**キャプション**などの固有メンバープロパティを使用することも、ユーザー定義メンバープロパティを使用することもできます。 詳細については、「 [mdx&#41;&#40;の固有メンバープロパティ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties)」および「 [Mdx&#41;&#40;ユーザー定義メンバープロパティ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties)」を参照してください。  
   
  既定では、値は文字列に変換されます。 **型**指定された場合、戻り値は厳密に型指定されます。  
   
@@ -105,7 +105,7 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>参照  
- [メンバー プロパティの使用 &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties)   
- [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX&#41;&#40;メンバープロパティを使用する](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties)   
+ [Mdx 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

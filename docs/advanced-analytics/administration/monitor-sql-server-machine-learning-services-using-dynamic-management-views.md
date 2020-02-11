@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: ddaca1490782c8fd3a88b941fbabe6af48531726
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727753"
 ---
 # <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>動的管理ビュー (DMV) を使用して SQL Server Machine Learning Services を監視する
@@ -41,7 +41,7 @@ DMV に関する一般情報については、「[システムの動的管理ビ
 
 SQL Server で機械学習のワークロードを監視するときに、次の動的管理ビューを使用できます。 DMV に対してクエリを実行するには、インスタンスに対する `VIEW SERVER STATE` 権限が必要です。
 
-| 動的管理ビュー | 型 | [説明] |
+| 動的管理ビュー | Type | 説明 |
 |-------------------------|------|-------------|
 | [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) | 実行 | 外部スクリプトを実行しているアクティブなワーカー アカウントごとに行を返します。 |
 | [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md) | 実行 | 外部スクリプト要求の種類ごとに 1 つの行を返します。 |
@@ -79,7 +79,7 @@ WHERE name = 'external scripts enabled';
 
 このクエリは次の列を返します。
 
-| [列] | [説明] |
+| 列 | 説明 |
 |--------|-------------|
 | IsMLServicesInstalled | インスタンスに対して SQL Server Machine Learning Services がインストールされている場合は 1 を返します。 それ以外の場合は 0 を返します。 |
 | ExternalScriptsEnabled | インスタンスの外部スクリプトが有効になっている場合は 1 を返します。 それ以外の場合は 0 を返します。 |
@@ -107,11 +107,11 @@ ON s.session_id = r.session_id;
 
 このクエリは次の列を返します。
 
-| [列] | [説明] |
+| 列 | 説明 |
 |--------|-------------|
 | session_id | アクティブな各プライマリ接続に関連付けられたセッションを識別します。 |
 | blocking_session_id | 要求をブロックしているセッションの ID。 この列が NULL の場合は、要求がブロックされていないか、ブロックしているセッションのセッション情報が使用または識別できません。 |
-| ステータス | 要求の状態。 |
+| status | 要求の状態。 |
 | database_name | 各セッションの現在のデータベースの名前。 |
 | login_name | 現在セッションを実行している SQL Server ログイン名。 |
 | wait_time | 要求が現在ブロックされている場合の現時点での待機時間 (ミリ秒単位)。 NULL 値は許可されません。 |
@@ -119,9 +119,9 @@ ON s.session_id = r.session_id;
 | last_wait_type | 要求がブロックされていた場合の最後の待機の種類。 |
 | total_elapsed_time | 要求を受信してから経過した総時間 (ミリ秒単位)。 |
 | cpu_time | 要求で使用される CPU 時間 (ミリ秒単位)。 |
-| reads | 要求で実行された読み取りの数。 |
+| 読み取り | 要求で実行された読み取りの数。 |
 | logical_reads | 要求で実行された論理読み取りの数。 |
-| writes | 要求で実行された書き込みの数。 |
+| 書き込み | 要求で実行された書き込みの数。 |
 | language | サポートされているスクリプト言語を表すキーワードです。 |
 | degree_of_parallelism | 作成された並列処理の数を示す数値です。 この値は、要求された並列処理の数と異なる場合があります。 |
 | external_user_name | スクリプトが実行されたときの Windows ワーカー アカウント。 |
@@ -143,7 +143,7 @@ ORDER BY language, counter_name;
 
 このクエリは次の列を返します。
 
-| [列] | [説明] |
+| 列 | 説明 |
 |--------|-------------|
 | language | 登録されている外部スクリプト言語の名前です。 |
 | counter_name | 登録されている外部スクリプト関数の名前です。 |
@@ -165,7 +165,7 @@ WHERE object_name LIKE '%External Scripts%'
 
 **sys.dm_os_performance_counters** は、外部スクリプトの次のパフォーマンス カウンターを出力します。
 
-| カウンター | [説明] |
+| カウンター | 説明 |
 |---------|-------------|
 | Total Executions | ローカルまたはリモート呼び出しによって開始された外部プロセスの数。 |
 | Parallel Executions | スクリプトに _\@並列処理_仕様が含まれ、[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] が並列クエリ プランを生成して使用することができた回数。 |
@@ -193,7 +193,7 @@ FROM sys.dm_os_sys_info;
 
 このクエリは次の列を返します。
 
-| [列] | [説明] |
+| 列 | 説明 |
 |--------|-------------|
 | physical_memory_kb | マシンに搭載されている物理メモリの合計。 |
 | committed_kb | メモリ マネージャーでコミットされたメモリ (KB 単位)。 メモリ マネージャー内の予約済みメモリは含まれません。 |
@@ -222,12 +222,12 @@ FROM sys.dm_resource_governor_external_resource_pools AS ep;
 
 このクエリは次の列を返します。
 
-| [列] | [説明] |
+| 列 | 説明 |
 |--------|-------------|
-| NAME | 外部リソース プールまたは SQL Server の名前。 |
+| name | 外部リソース プールまたは SQL Server の名前。 |
 | max_memory_percent | SQL Server または外部リソース プールが使用できる最大メモリ。 |
 
-## <a name="resource-pools"></a>[リソース プール]
+## <a name="resource-pools"></a>リソース プール
 
 [SQL Server のリソース ガバナー](../../relational-databases/resource-governor/resource-governor.md)では、[リソース プール](../../relational-databases/resource-governor/resource-governor-resource-pool.md)は、 インスタンスの物理リソースのサブセットを表します。 受信するアプリケーション要求 (外部スクリプトの実行を含む) がリソース プール内で使用できる CPU、物理 IO、およびメモリの量に制限を指定できます。 SQL Server と外部スクリプトに使用されるリソース プールを表示します。
 
@@ -247,7 +247,7 @@ FROM sys.dm_resource_governor_external_resource_pools AS ep;
 
 このクエリは次の列を返します。
 
-| [列] | [説明] |
+| 列 | 説明 |
 |--------|-------------|
 | pool_name | リソース プールの名前。 SQL Server リソース プールの先頭には `SQL Server` が付けられ、外部リソース プールの先頭には `External Pool` が付けられます。
 | total_cpu_usage_hours | リソース ガバナー統計がリセットされてからの累積 CPU 使用率 (ミリ秒単位)。 |
@@ -276,9 +276,9 @@ WITH result sets((Package NVARCHAR(255), Version NVARCHAR(100), Depends NVARCHAR
 
 返される列は次のとおりです。
 
-| [列] | [説明] |
+| 列 | 説明 |
 |--------|-------------|
-| [パッケージ] | インストールされているパッケージの名前。 |
+| Package | インストールされているパッケージの名前。 |
 | Version | パッケージのバージョン。 |
 | 依存 | インストールされているパッケージが依存しているパッケージを一覧表示します。 |
 | ライセンス | インストールされているパッケージのライセンス。 |
@@ -302,13 +302,13 @@ WITH result sets((Package NVARCHAR(128), Version NVARCHAR(128), Location NVARCHA
 
 返される列は次のとおりです。
 
-| [列] | [説明] |
+| 列 | 説明 |
 |--------|-------------|
-| [パッケージ] | インストールされているパッケージの名前。 |
+| Package | インストールされているパッケージの名前。 |
 | Version | パッケージのバージョン。 |
 | Location | パッケージが格納されているディレクトリ。 |
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 + [Machine Learning ソリューションの管理と監視](../../advanced-analytics/r/managing-and-monitoring-r-solutions.md)
 + [機械学習の拡張イベント](../../advanced-analytics/r/extended-events-for-sql-server-r-services.md)

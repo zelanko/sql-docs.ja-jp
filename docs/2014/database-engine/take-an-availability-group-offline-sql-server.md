@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 87dff347bd0aee1211093d9e3406a24670a80e7f
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75228169"
 ---
 # <a name="take-an-availability-group-offline-sql-server"></a>可用性グループをオフラインにする (SQL Server)
@@ -29,26 +29,26 @@ ms.locfileid: "75228169"
   
 
   
-##  <a name="BeforeYouBegin"></a>開始する前に  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 > [!CAUTION]  
 >  OFFLINE オプションは、可用性グループのリソースをクラスター間で移行する場合のみ使用してください。  
   
-###  <a name="Prerequisites"></a>応募  
+###  <a name="Prerequisites"></a> 前提条件  
   
 -   OFFLINE コマンドを入力するサーバー インスタンスが、 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 以上 (Enterprise Edition 以上) を実行している必要があります。  
   
 -   可用性グループが現在オンラインになっている必要があります。  
   
-###  <a name="Recommendations"></a>推奨事項  
+###  <a name="Recommendations"></a> 推奨事項  
  可用性グループをオフラインにする前に、可用性グループ リスナーを削除します。 詳細については、「 [可用性グループ リスナーの削除 &#40;SQL Server&#41;](availability-groups/windows/remove-an-availability-group-listener-sql-server.md)への OS のアップグレードで使用することです。  
   
-###  <a name="Security"></a>保護  
+###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a>許可  
+####  <a name="Permissions"></a> Permissions  
  可用性グループの ALTER AVAILABILITY GROUP 権限、CONTROL AVAILABILITY GROUP 権限、ALTER ANY AVAILABILITY GROUP 権限、または CONTROL SERVER 権限が必要です。  
   
-##  <a name="TsqlProcedure"></a>Transact-sql の使用  
+##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
  **可用性グループをオフラインにするには**  
   
 1.  可用性グループの可用性レプリカをホストしているサーバー インスタンスに接続します。 このレプリカは、プライマリ レプリカでもセカンダリ レプリカでもかまいません。  
@@ -74,13 +74,13 @@ ALTER AVAILABILITY GROUP AccountsAG OFFLINE;
   
 -   **グループをオフラインにする前に可用性グループリスナーを削除していない場合は、次のようにします。** 可用性グループを別の WSFC クラスターに移行する場合は、リスナーの VNN と VIP を削除します。 これらは、フェールオーバー クラスター管理コンソール、 [Remove-ClusterResource](https://technet.microsoft.com/library/ee461015\(WS.10\).aspx) PowerShell コマンドレット、または [cluster.exe](https://technet.microsoft.com/library/ee461015\(WS.10\).aspx)を使用して削除できます。 cluster.exe は Windows 8 では非推奨とされることに注意してください。  
   
-##  <a name="RelatedTasks"></a>関連タスク  
+##  <a name="RelatedTasks"></a> 関連タスク  
   
--   [可用性グループリスナー &#40;SQL Server の削除&#41;](availability-groups/windows/remove-an-availability-group-listener-sql-server.md)  
+-   [可用性グループ リスナーの削除 &#40;SQL Server&#41;](availability-groups/windows/remove-an-availability-group-listener-sql-server.md)  
   
 -   [サーバーインスタンスの HADR クラスターコンテキストを変更する &#40;SQL Server&#41;](availability-groups/windows/change-the-hadr-cluster-context-of-server-instance-sql-server.md)  
   
-##  <a name="RelatedContent"></a>関連するコンテンツ  
+##  <a name="RelatedContent"></a> 関連コンテンツ  
   
 -   [SQL Server 2012 の技術記事](https://msdn.microsoft.com/library/bb418445\(SQL.10\).aspx)  
   

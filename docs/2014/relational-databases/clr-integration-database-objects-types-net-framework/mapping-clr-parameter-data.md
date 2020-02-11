@@ -27,10 +27,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 17eeefbe125722c666f9f56394028da8c66a66b3
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75232279"
 ---
 # <a name="mapping-clr-parameter-data"></a>CLR パラメーター データのマッピング
@@ -42,43 +42,43 @@ ms.locfileid: "75232279"
 |`bigint`|`SqlInt64`|**Int64、Null\<許容の int64>**|  
 |`binary`|`SqlBytes, SqlBinary`|`Byte[]`|  
 |`bit`|`SqlBoolean`|**ブール値、\<null 許容のブール値>**|  
-|`char`|None|None|  
-|`cursor`|None|None|  
+|`char`|なし|なし|  
+|`cursor`|なし|なし|  
 |`date`|`SqlDateTime`|**DateTime、Nullable\<datetime>**|  
 |`datetime`|`SqlDateTime`|**DateTime、Nullable\<datetime>**|  
-|`datetime2`|None|**DateTime、Nullable\<datetime>**|  
+|`datetime2`|なし|**DateTime、Nullable\<datetime>**|  
 |`DATETIMEOFFSET`|`None`|**DateTimeOffset、Null\<値を許容する datetimeoffset>**|  
 |`decimal`|`SqlDecimal`|**Decimal、Nullable\<decimal>**|  
 |`float`|`SqlDouble`|**Double、Null\<値を許容する double>**|  
-|`geography`|`SqlGeography`<br /><br /> `SqlGeography`は、SQL Server と共にインストールされ、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [feature pack](https://www.microsoft.com/download/details.aspx?id=53164)からダウンロードできる、SqlServer に定義されています。|None|  
-|`geometry`|`SqlGeometry`<br /><br /> `SqlGeometry`は、SQL Server と共にインストールされ、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [feature pack](https://www.microsoft.com/download/details.aspx?id=53164)からダウンロードできる、SqlServer に定義されています。|None|  
-|`hierarchyid`|`SqlHierarchyId`<br /><br /> `SqlHierarchyId`は、SQL Server と共にインストールされ、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [feature pack](https://www.microsoft.com/download/details.aspx?id=53164)からダウンロードできる、SqlServer に定義されています。|None|  
-|`image`|None|None|  
+|`geography`|`SqlGeography`<br /><br /> `SqlGeography`は、SQL Server と共にインストールされ、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [feature pack](https://www.microsoft.com/download/details.aspx?id=53164)からダウンロードできる、SqlServer に定義されています。|なし|  
+|`geometry`|`SqlGeometry`<br /><br /> `SqlGeometry`は、SQL Server と共にインストールされ、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [feature pack](https://www.microsoft.com/download/details.aspx?id=53164)からダウンロードできる、SqlServer に定義されています。|なし|  
+|`hierarchyid`|`SqlHierarchyId`<br /><br /> `SqlHierarchyId`は、SQL Server と共にインストールされ、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [feature pack](https://www.microsoft.com/download/details.aspx?id=53164)からダウンロードできる、SqlServer に定義されています。|なし|  
+|`image`|なし|なし|  
 |`int`|`SqlInt32`|**Int32、Nullable\<int32>**|  
 |`money`|`SqlMoney`|**Decimal、Nullable\<decimal>**|  
 |`nchar`|`SqlChars, SqlString`|`String, Char[]`|  
-|`ntext`|None|None|  
+|`ntext`|なし|なし|  
 |`numeric`|`SqlDecimal`|**Decimal、Nullable\<decimal>**|  
 |`nvarchar`|`SqlChars, SqlString`<br /><br /> 
   `SQLChars` はデータの転送とアクセスに適しています。また、`SQLString` は文字列操作に適しています。|`String, Char[]`|  
 |`nvarchar(1), nchar(1)`|`SqlChars, SqlString`|**Char、String、Char []、Null\<値を許容する char>**|  
 |`real`|
   `SqlSingle`(`SqlSingle` の範囲内。ただし `real` より大きい)|**単一の Null\<許容の単一>**|  
-|`rowversion`|None|`Byte[]`|  
+|`rowversion`|なし|`Byte[]`|  
 |`smallint`|`SqlInt16`|**Int16、Nullable\<int16>**|  
 |`smallmoney`|`SqlMoney`|**Decimal、Nullable\<decimal>**|  
-|`sql_variant`|None|`Object`|  
-|`table`|None|None|  
-|`text`|None|None|  
-|`time`|None|**TimeSpan、Nullable\<timespan>**|  
-|`timestamp`|None|None|  
+|`sql_variant`|なし|`Object`|  
+|`table`|なし|なし|  
+|`text`|なし|なし|  
+|`time`|なし|**TimeSpan、Nullable\<timespan>**|  
+|`timestamp`|なし|なし|  
 |`tinyint`|`SqlByte`|**バイト、Null\<値を許容するバイト>**|  
 |`uniqueidentifier`|`SqlGuid`|**Guid、Null\<許容 guid>**|  
-|`User-defined type(UDT)`|None|同じアセンブリまたは依存アセンブリ内のユーザー定義型にバインドされている同じクラス|  
-|**可変長**|`SqlBytes, SqlBinary`|`Byte[]`|  
+|`User-defined type(UDT)`|なし|同じアセンブリまたは依存アセンブリ内のユーザー定義型にバインドされている同じクラス|  
+|**varbinary**|`SqlBytes, SqlBinary`|`Byte[]`|  
 |`varbinary(1), binary(1)`|`SqlBytes, SqlBinary`|**byte、Byte []、Null\<値を許容するバイト>**|  
-|`varchar`|None|None|  
-|`xml`|`SqlXml`|None|  
+|`varchar`|なし|なし|  
+|`xml`|`SqlXml`|なし|  
   
 ## <a name="automatic-data-type-conversion-with-out-parameters"></a>out パラメーターによるデータ型の自動変換  
  CLR メソッドでは、入力パラメーターを `out` 修飾子 (Microsoft Visual C#) または `<Out()> ByRef` (Microsoft Visual Basic) でマークすることにより、呼び出し側のコードまたはプログラムに情報を返すことができます。`System.Data.SqlTypes` 名前空間での入力パラメーターが CLR データ型で、呼び出し側のプログラムがこれと同等な [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型を入力パラメーターとして指定する場合、CLR メソッドがデータ型を返すと、自動的に型の変換が行われます。  

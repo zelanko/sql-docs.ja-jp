@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 583d7617c0620d5d1ec24d60fbf10435a547616d
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401290"
 ---
 # <a name="configure-infiniband-network-adapters-for-analytics-platform-system"></a>Analytics Platform System の InfiniBand ネットワークアダプターを構成する
 非アプライアンスクライアントサーバー上の InfiniBand ネットワークアダプターを構成して、並列データウェアハウス (PDW) のコントロールノードに接続する方法について説明します。 読み込み、バックアップ、およびその他のプロセスがアクティブな InfiniBand ネットワークに自動的に接続するように、基本的な接続と高可用性については、次の手順を使用します。  
   
-## <a name="Basics"></a>記述  
+## <a name="Basics"></a>[説明]  
 次の手順では、InfiniBand 接続サーバーで正しい InfiniBand IP アドレスとサブネットマスクを見つけて設定する方法について説明します。 また、接続がアクティブな InfiniBand ネットワークに解決されるように、APS アプライアンス DNS を使用するようにサーバーを設定する方法についても説明します。  
   
 高可用性を実現するために、APS には2つの InfiniBand ネットワーク (アクティブとパッシブ) があります。 各 InfiniBand ネットワークには、制御ノードに対して異なる IP アドレスがあります。 Active InfiniBand ネットワークがダウンした場合、パッシブ InfiniBand ネットワークがアクティブなネットワークになります。 この場合、スクリプトまたはプロセスは、スクリプトのパラメーターを変更せずに、アクティブな InfiniBand ネットワークに自動的に接続します。  
@@ -46,9 +46,9 @@ InfiniBand ネットワークアダプターを構成すると、クライアン
   
 -   `dwloader -S MYPDW-SQLCTL01`  
   
-## <a name="BeforeBegin"></a>開始する前に  
+## <a name="BeforeBegin"></a>はじめに  
   
-### <a name="requirements"></a>要件  
+### <a name="requirements"></a>必要条件  
 AD01 ノードにログインするには、APS アプライアンスドメインアカウントが必要です。 たとえば、F12345 * \ アドミニストレーターのようになります。  
   
 ネットワークアダプターを構成するアクセス許可を持つクライアントサーバーの Windows アカウントが必要です。  

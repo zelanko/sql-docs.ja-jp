@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 216504cc6145a60e8b7d4996d29f46cb9d08458d
-ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73882146"
 ---
 # <a name="optimize-parameterized-row-filters"></a>パラメーター化された行フィルターの最適化
@@ -29,7 +29,7 @@ ms.locfileid: "73882146"
   
 -   **作業を開始する準備:**  
   
-     [推奨事項](#Recommendations)  
+     [Recommendations (推奨事項)](#Recommendations)  
   
 -   **パラメーター化された行フィルターを最適化するために使用するもの:**  
   
@@ -41,7 +41,7 @@ ms.locfileid: "73882146"
   
 ###  <a name="Recommendations"></a> 推奨事項  
   
--   パラメーター化されたフィルターを使用する場合、パブリケーションを作成する際に **@use_partition_groups** オプションまたは **@keep_partition_changes** オプションを指定して、マージ レプリケーションでのフィルターの処理方法を制御できます。 この 2 つのオプションを使用し、パブリケーション データベースに追加のメタデータを格納することで、アーティクルをフィルター選択し、パブリケーションの同期パフォーマンスを向上できます。 アーティクルを作成する際に **@partition_options** を設定することで、サブスクライバー間でデータを共有する方法を制御できます。 これらの要件の詳細については、「 [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md)」をご覧ください。  
+-   パラメーター化されたフィルターを使用する場合、パブリケーションを作成する際に **\@use_partition_groups** オプションまたは **\@keep_partition_changes** オプションを指定して、マージ レプリケーションでのフィルターの処理方法を制御できます。 この 2 つのオプションを使用し、パブリケーション データベースに追加のメタデータを格納することで、アーティクルをフィルター選択し、パブリケーションの同期パフォーマンスを向上できます。 アーティクルを作成する際に **\@partition_options** を設定することで、サブスクライバー間でデータを共有する方法を制御できます。 これらの要件の詳細については、「 [パラメーター化された行フィルター](../merge/parameterized-filters-parameterized-row-filters.md)」をご覧ください。  
   
      [!INCLUDE[ssEW](../../../includes/ssew-md.md)]SQL Server Compact サブスクライバーを使用して、keep_partition_changes を true に設定し、削除を正しく反映する必要があります。 false に設定すると、サブスクライバーに予想よりも多くの行が含まれる場合があります。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "73882146"
   
     -   **[このテーブルの 1 行を 1 つのサブスクリプションのみに移動する]**  
   
-     **[このテーブルの 1 行を 1 つのサブスクリプションのみに移動する]** を選択すると、マージ レプリケーションは、格納および処理するメタデータを減らすことにより、パフォーマンスを最適化できます。 ただし、データのパーティション分割によって、1 つの行が複数のサブスクライバーにレプリケートされないことを確認する必要があります。 詳細については、「 [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md)」トピックの「[パーティションのオプション] の設定」をご覧ください。  
+     **[このテーブルの 1 行を 1 つのサブスクリプションのみに移動する]** を選択すると、マージ レプリケーションは、格納および処理するメタデータを減らすことにより、パフォーマンスを最適化できます。 ただし、データのパーティション分割によって、1 つの行が複数のサブスクライバーにレプリケートされないことを確認する必要があります。 詳細については、「 [パラメーター化された行フィルター](../merge/parameterized-filters-parameterized-row-filters.md)」トピックの「[パーティションのオプション] の設定」をご覧ください。  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -93,7 +93,7 @@ ms.locfileid: "73882146"
   
     -   **[重複しない (複数のサブスクリプションで共有)]**  
   
-     これらのオプションの詳細、および **[フィルターの追加]** および **[フィルターの編集]** ダイアログ ボックスで使用できるオプションとこれらのオプションを関連付ける方法の詳細については、「 [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md)」の「[パーティションのオプション] の設定」を参照してください。  
+     これらのオプションの詳細、および **[フィルターの追加]** および **[フィルターの編集]** ダイアログ ボックスで使用できるオプションとこれらのオプションを関連付ける方法の詳細については、「 [パラメーター化された行フィルター](../merge/parameterized-filters-parameterized-row-filters.md)」の「[パーティションのオプション] の設定」を参照してください。  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -111,57 +111,58 @@ ms.locfileid: "73882146"
   
 #### <a name="to-set-optimize-synchronization"></a>[同期の最適化] を設定するには  
   
-1.  **[パブリケーションのプロパティ -** Publication>] **ダイアログ ボックスの \<[サブスクリプション オプション]** ページで、 **[同期の最適化]** オプションに対して **[True]** の値を選択します。  
+1.  
+  **[パブリケーションのプロパティ - **Publication>]** ダイアログ ボックスの \<[サブスクリプション オプション]** ページで、**[同期の最適化]** オプションに対して **[True]** の値を選択します。  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
- **\@keep_partition_changes**と **\@use_partition_groups**のフィルター選択オプションの定義については、「 [sp_addmergepublication](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)」を参照してください。  
+ ** \@Keep_partition_changes**および** \@use_partition_groups**のフィルター選択オプションの定義については、「 [sp_addmergepublication](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)」を参照してください。  
   
 #### <a name="to-specify-merge-filter-optimizations-when-creating-a-new-publication"></a>新しいパブリケーションを作成するときにマージ フィルターの最適化を指定するには  
   
-1.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addmergepublication](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)を実行します。 **\@のパブリケーション**を指定し、次のいずれかのパラメーターに `true` の値を指定します。  
+1.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addmergepublication](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)を実行します。 次のいずれかのパラメーター `true`に、 ** \@publication**との値を指定します。  
   
-    -   **\@use_partition_groups**: 事前計算済みパーティションの要件にアーティクルが準拠していれば、最高のパフォーマンス最適化が得られます。 詳細については、「[事前計算済みパーティションによるパラメーター化されたフィルターのパフォーマンス最適化](../merge/parameterized-filters-optimize-for-precomputed-partitions.md)」を参照してください。  
+    -   use_partition_groups: 事前計算済みパーティションの要件にアーティクルが準拠していれば、最高のパフォーマンス最適化。 ** \@** 詳細については、「[事前計算済みパーティションによるパラメーター化されたフィルターのパフォーマンス最適化](../merge/parameterized-filters-optimize-for-precomputed-partitions.md)」を参照してください。  
   
-    -   **\@keep_partition_changes** -事前計算済みパーティションを使用できない場合は、この最適化を使用します。  
+    -   keep_partition_changes-事前計算済みパーティションを使用できない場合は、この最適化を使用します。 ** \@**  
   
 2.  パブリケーション用のスナップショット ジョブを追加します。 詳細については、「[Publisher で文書を作成するには](create-a-publication.md)」を参照してください。  
   
 3.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)を実行します。次のパラメーターを指定します。  
   
-    -   **\@publication** -手順 1. のパブリケーションの名前。  
+    -   publication-手順 1. のパブリケーションの名前。 ** \@**  
   
-    -   **\@article** -アーティクルの名前  
+    -   article-アーティクルの名前** \@**  
   
-    -   **\@source_object** -パブリッシュされるデータベースオブジェクトです。  
+    -   source_object-パブリッシュされるデータベースオブジェクト。 ** \@**  
   
-    -   **\@subset_filterclause** -アーティクルを行方向にフィルター選択するために使用する、省略可能なパラメーター化されたフィルター句。  
+    -   subset_filterclause-アーティクルを行方向にフィルター選択するために使用する、省略可能なパラメーター化されたフィルター句。 ** \@**  
   
-    -   **\@partition_options** -フィルター選択されたアーティクルのパーティションオプション。  
+    -   partition_options-フィルター選択されたアーティクルのパーティションオプション。 ** \@**  
   
 4.  パブリケーションの各アーティクルに対し、手順 3. を実行します。  
   
-5.  (省略可) パブリッシャー側のパブリケーション データベースに対して [sp_addmergefilter](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql) を実行し、2 つのアーティクル間に結合フィルターを定義します。 詳しくは、「 [Define and Modify a Join Filter Between Merge Articles](define-and-modify-a-join-filter-between-merge-articles.md)」をご覧ください。  
+5.  (省略可) パブリッシャー側のパブリケーション データベースに対して [sp_addmergefilter](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql) を実行し、2 つのアーティクル間に結合フィルターを定義します。 詳しくは、「 [マージ アーティクル間の結合フィルターの定義および変更](define-and-modify-a-join-filter-between-merge-articles.md)」をご覧ください。  
   
 #### <a name="to-view-and-modify-merge-filter-behaviors-for-an-existing-publication"></a>既存のパブリケーションに対するマージ フィルターの動作を表示して変更するには  
   
-1.  Optionalパブリッシャー側のパブリケーションデータベースに対して、 **\@パブリケーション**を指定して[sp_helpmergepublication](/sql/relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql)を実行します。 結果セットの **keep_partition_changes** および **use_partition_groups** の値を調べます。  
+1.  Optionalパブリッシャー側のパブリケーションデータベースに対して[sp_helpmergepublication](/sql/relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql)を実行し、 ** \@パブリケーション**を指定します。 結果セットの **keep_partition_changes** および **use_partition_groups** の値を調べます。  
   
-2.  (省略可) パブリッシャー側のパブリケーション データベースに対して、 [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)を実行します。 **\@プロパティ**には**use_partition_groups**の値を指定し、 **\@値**には `true` または `false` のいずれかを指定します。  
+2.  (省略可) パブリッシャー側のパブリケーション データベースに対して、 [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)を実行します。 ** \@プロパティ**には**use_partition_groups**の値を指定し`true` 、 `false` ** \@value**にはまたはのいずれかを指定します。  
   
-3.  (省略可) パブリッシャー側のパブリケーション データベースに対して、 [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)を実行します。 **\@プロパティ**には**keep_partition_changes**の値を指定し、 **\@値**には `true` または `false` のいずれかを指定します。  
+3.  (省略可) パブリッシャー側のパブリケーション データベースに対して、 [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)を実行します。 ** \@プロパティ**には**keep_partition_changes**の値を指定し`true` 、 `false` ** \@value**にはまたはのいずれかを指定します。  
   
     > [!NOTE]  
-    >  **Keep_partition_changes**を有効にする場合は、まず**use_partition_groups**を無効にし、 **\@force_reinit_subscription**に**1**を指定する必要があります。  
+    >  **Keep_partition_changes**を有効にする場合は、まず**use_partition_groups**を無効にし、 ** \@force_reinit_subscription**に**1**を指定する必要があります。  
   
-4.  (省略可) パブリッシャー側のパブリケーション データベースに対して、 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)を実行します。 **\@プロパティ**には**partition_options**の値を、 **\@値**には適切な値を指定します。 このフィルター選択オプションの定義については、「 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) 」を参照してください。  
+4.  (省略可) パブリッシャー側のパブリケーション データベースに対して、 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)を実行します。 [ ** \@プロパティ**] に**partition_options**の値を指定し、[ ** \@値**] に適切な値を指定します。 このフィルター選択オプションの定義については、「 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) 」を参照してください。  
   
 5.  (省略可) 必要に応じてスナップショット エージェントを開始し、スナップショットを再生成してください。 新しいスナップショットの生成が必要な変更の詳細については、「[変更パブリケーションとアーティクルのプロパティ](change-publication-and-article-properties.md)」 (パブリケーションおよびアーティクルのプロパティの変更) を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [マージ アーティクル間の一連の結合フィルターを自動的に生成する &#40;SQL Server Management Studio&#41;](automatically-generate-join-filters-between-merge-articles.md)   
- [マージ アーティクルのパラメーター化された行フィルターの定義と変更](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
- [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md)  
+ [マージ アーティクルのパラメーター化された行フィルターの定義および変更](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
+ [パラメーター化された行フィルター](../merge/parameterized-filters-parameterized-row-filters.md)  
   
   

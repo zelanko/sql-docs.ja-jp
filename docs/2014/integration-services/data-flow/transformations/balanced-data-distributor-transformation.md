@@ -13,14 +13,15 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ec61ee62bf952e64e746ae132ce6ee35c89d468a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770617"
 ---
 # <a name="balanced-data-distributor-transformation"></a>Balanced Data Distributor (BDD) 変換
-  Balanced Data Distributor (BDD) 変換では最新 CPU の同時処理機能を利用します。 この手法では、複数の着信バッファーを、個別のスレッド上に存在する出力に対して一様に分配します。 BDD コンポーネントは各出力パスに対応する個別のスレッドを使用することで、マルチコアまたはマルチプロセッサのコンピューターで SSIS パッケージのパフォーマンスを向上させます。 BDD コンポーネントは、[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Feature Pack の一部です。 ダウンロードしてインストールから[ここ](https://go.microsoft.com/fwlink/p/?LinkId=391999)します。  
+  Balanced Data Distributor (BDD) 変換では最新 CPU の同時処理機能を利用します。 この手法では、複数の着信バッファーを、個別のスレッド上に存在する出力に対して一様に分配します。 BDD コンポーネントは各出力パスに対応する個別のスレッドを使用することで、マルチコアまたはマルチプロセッサのコンピューターで SSIS パッケージのパフォーマンスを向上させます。 BDD コンポーネントは、[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Feature Pack の一部です。 
+  [こちら](https://go.microsoft.com/fwlink/p/?LinkId=391999)からダウンロードしてインストールします。  
   
  次の図に、BDD 変換を使用する簡単な例を示します。 この例では、BDD 変換はフラット ファイル変換元から得られる入力データから、一度に 1 つのパイプライン バッファーを選択し、3 つの出力パスのいずれかに対してラウンド ロビン形式で送信します。 SQL Server データ ツールで、データ フロー タスクのプロパティを表示する <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipeClass.DefaultBufferSize%2A>ペインを使用して、 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipeClass.DefaultBufferMaxRows%2A>(パイプラインのバッファーの既定のサイズ) と **DefaultBufferMaxRows** (パイプライン バッファー内にある最大行数の既定値) の値を確認することができます。  
   

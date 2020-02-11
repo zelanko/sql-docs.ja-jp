@@ -15,28 +15,28 @@ ms.assetid: 49bab021-81fa-402e-b7a4-a5214f1fadc4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: df91638f91091940e00e7a6a19d0fd6cb700f85f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68094160"
 ---
 # <a name="driver-setup-dll"></a>ドライバーのセットアップ DLL
 > [!NOTE]  
->  ODBC は Windows XP および Windows Server 2003 以降、Windows オペレーティング システムに含まれます。 Windows の以前のバージョンで ODBC を明示的にのみインストールしてください。  
+>  Windows XP および windows Server 2003 以降では、ODBC は Windows オペレーティングシステムに含まれています。 ODBC は、以前のバージョンの Windows にのみ明示的にインストールする必要があります。  
   
- ドライバーのセットアップ DLL が含まれています、 **ConfigDriver**と**ConfigDSN**関数。 **ConfigDriver**レジストリにドライバー固有の情報を入力するなどの個々 のドライバーのインストール タスクを実行します。 **ConfigDSN**レジストリ内のデータ ソースのドライバー固有の情報を保持します。 これらの関数の詳細については、次を参照してください。[セットアップ DLL API リファレンス](../../../odbc/reference/syntax/setup-dll-api-reference.md)します。  
+ ドライバーセットアップ DLL には、 **configdriver**および**configdriver**関数が含まれています。 **Configdriver**は、ドライバー固有の情報をレジストリに入力するなど、ドライバー固有のインストールタスクを実行します。 **Configdsn**では、データソースに関するドライバー固有の情報がレジストリに保持されます。 これらの関数の詳細については、「 [SETUP DLL API Reference](../../../odbc/reference/syntax/setup-dll-api-reference.md)」を参照してください。  
   
- **ConfigDSN**インストーラー DLL レジストリ内のデータ ソース情報を維持するために、次の関数を呼び出します。  
+ **Configdsn**は、レジストリにデータソース情報を保持するために、インストーラー DLL 内の次の関数を呼び出します。  
   
--   **SQLWriteDSNToIni**します。 データ ソースを追加します。  
+-   **Sqlwritedsntoini**。 データ ソースを追加します。  
   
--   **SQLRemoveDSNFromIni**します。 データ ソースを削除します。  
+-   **Sqlremovedsnfromini**。 データソースを削除します。  
   
--   **SQLWritePrivateProfileString**します。 データ ソースの仕様のサブキーの下のドライバー固有の値を記述します。  
+-   **Sqlwriteprivateprofilestring**。 データソース仕様サブキーの下にドライバー固有の値を書き込みます。  
   
--   **SQLGetPrivateProfileString**します。 データ ソースの仕様のサブキーからドライバー固有の値を読み取る。  
+-   **Sqlgetprivateprofilestring**。 データソース仕様サブキーからドライバー固有の値を読み取ります。  
   
--   **SQLGetTranslator**します。 翻訳者名とオプションのユーザーを要求します。 この関数を呼び出す**ConfigTranslator**コンバーターで DLL のセットアップします。  
+-   **Sqlgettranslator**。 ユーザーに、翻訳者の名前とオプションの入力を求めます。 この関数は、translator セットアップ DLL で**Configtranslator**を呼び出します。  
   
- ドライバーのセットアップ DLL は、ドライバーの開発者によって書き込まれます。 ドライバーの一部にすることができます、または別の DLL。
+ ドライバーのセットアップ DLL は、ドライバーの開発者によって作成されます。 ドライバー DLL または別の DLL の一部にすることができます。

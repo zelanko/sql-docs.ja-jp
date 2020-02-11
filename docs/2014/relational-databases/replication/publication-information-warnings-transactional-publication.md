@@ -1,5 +1,5 @@
 ---
-title: パブリケーション情報、[警告] (トランザクション パブリケーション、SQL Server 2005 以降) |Microsoft Docs
+title: パブリケーション情報、[警告] (トランザクションパブリケーション、SQL Server 2005 以降) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e2ab1c4be29b87e1051daa702ce40905a95e34ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022009"
 ---
 # <a name="publication-information-warnings-transactional-publication-sql-server-2005-and-later"></a>パブリケーション情報、[警告] (トランザクション パブリケーション、SQL Server 2005 以降)
-  **以降を実行しているディストリビューターでは、** [警告] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] タブを使用できます。 **[警告]** タブでは、選択されているパブリケーションに対して次の操作を実行できます。  
+  
+  **以降を実行しているディストリビューターでは、** [警告] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] タブを使用できます。 
+  **[警告]** タブでは、選択されているパブリケーションに対して次の操作を実行できます。  
   
 -   レプリケーション モニターに警告を表示します。  
   
@@ -47,39 +49,41 @@ ms.locfileid: "63022009"
   
     -   悪い  
   
-    -   重大  
+    -   Critical  
   
  警告を有効にする場合は、しきい値も設定します。 たとえば、 **[待機時間がしきい値を超えた場合に警告します。]** 警告を有効にした場合は、パブリッシャー側でトランザクションをコミットしたときからサブスクライバー側でトランザクションをコミットするまでに許容する時間を選択します。  
   
  しきい値に到達した場合は、レプリケーション モニターに警告を表示でき、さらに通知を発行することができます。 通知を定義するには、 **[警告の構成]** をクリックし、 **[レプリケーションの警告の構成]** ダイアログ ボックスに情報を入力します。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **有効**  
  警告を有効にする場合に選択します。その場合は、しきい値を指定します。  
   
  **警告**  
  しきい値に関連付けられている警告の説明です。  
   
- **しきい値**  
+ **進入**  
  しきい値の値を指定します。  
   
- **[警告の構成]**  
- **[警告]** グリッドの行を選択し、 **[警告の構成]** をクリックすると、 **[レプリケーションの警告の構成]** ダイアログ ボックスが表示されます。 このダイアログ ボックスでは、選択したしきい値および警告に関連付けた通知を定義できます。  
+ **アラートの構成**  
+ 
+  **[警告]** グリッドの行を選択し、 **[警告の構成]** をクリックすると、 **[レプリケーションの警告の構成]** ダイアログ ボックスが表示されます。 このダイアログ ボックスでは、選択したしきい値および警告に関連付けた通知を定義できます。  
   
- **[変更の破棄]**  
+ **変更の破棄**  
  クリックすると、警告およびしきい値に対する変更が破棄されます。  
   
 > [!NOTE]  
->  **[変更の破棄]** をクリックしても、 **[レプリケーションの警告の構成]** ダイアログ ボックスに定義されている通知は影響を受けません。  
+>  
+  **[変更の破棄]** をクリックしても、 **[レプリケーションの警告の構成]** ダイアログ ボックスに定義されている通知は影響を受けません。  
   
  **[変更の保存]**  
  クリックすると、警告およびしきい値に対する変更が保存されます。  
   
 ## <a name="see-also"></a>参照  
  [レプリケーション モニターの開始](monitor/start-the-replication-monitor.md)   
- [レプリケーション モニターを使用して情報を表示し、タスクを実行する](monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [レプリケーションモニターを使用して情報を表示し、タスクを実行する](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [レプリケーション モニターを使用したパフォーマンスの監視](monitor/monitor-performance-with-replication-monitor.md)   
  [レプリケーションの監視](monitoring-replication.md)   
- [レプリケーション モニターのしきい値と警告の設定](monitor/set-thresholds-and-warnings-in-replication-monitor.md)  
+ [レプリケーションモニターでのしきい値と警告の設定](monitor/set-thresholds-and-warnings-in-replication-monitor.md)  
   
   

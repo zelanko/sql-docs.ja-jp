@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: e70689d1e4891fefde8fd1feb76b081bc14bfe81
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "70153633"
 ---
 # <a name="monitoring-and-troubleshoot-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]の監視とトラブルシューティング
@@ -114,7 +114,7 @@ kubectl get svc -n mssql-cluster
 
 次のサービスでは、ビッグ データ クラスターへの外部接続がサポートされています。
 
-| サービス | [説明] |
+| サービス | 説明 |
 |---|---|
 | **master-svc-external** | マスター インスタンスへのアクセスが提供されます。<br/>(**EXTERNAL-IP,31433** および **SA** ユーザー) |
 | **controller-svc-external** | クラスターを管理するツールとクライアントがサポートされます。 |
@@ -225,6 +225,6 @@ Kubernetes クラスターでダッシュボードを展開して構成する方
 kubectl proxy
 ```
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 ビッグ データ クラスターの詳細については、[[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] とは](big-data-cluster-overview.md)の概要に関するページを参照してください。

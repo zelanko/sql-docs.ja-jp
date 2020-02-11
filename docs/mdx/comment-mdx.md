@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: f0aa1455ffd9f52fd917f68d2bb0bb80e3f25a94
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68006276"
 ---
 # <a name="comment-mdx"></a>コメント (MDX)
 
 
-  コメントのテキストは、ユーザーによって提供されることを示します。  
+  ユーザーによって指定されたコメントテキストを示します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -31,13 +31,14 @@ ms.locfileid: "68006276"
  *Comment_Text*  
  コメントのテキストを含む文字列です。  
   
-## <a name="remarks"></a>コメント  
- コメント文字の間のテキストを評価しませんサーバー/* と\*/。 または、多次元式 (MDX) ステートメント内で別々 の行にコメントを挿入できます。 によって複数行のコメントを示す必要があります/\*と\*/。  
+## <a name="remarks"></a>解説  
+ サーバーでは、コメント文字 (/* と\*/) の間のテキストは評価されません。 コメントは、別の行に挿入することも、多次元式 (MDX) ステートメント内に挿入することもできます。 複数行のコメントは、/\*および\*/で示す必要があります。  
   
- コメントの長さには制限がありません。 `/* Test /*Comment*/ Text*/` のようにコメントを入れ子にすることもできます。  
+ コメントの長さには制限がありません。 
+  `/* Test /*Comment*/ Text*/` のようにコメントを入れ子にすることもできます。  
   
-## <a name="examples"></a>使用例  
- 次の例では、この演算子の使用を示します。  
+## <a name="examples"></a>例  
+ この演算子の使用例を次に示します。  
   
 ```  
 /* This member returns the gross profit margin for product types  
@@ -52,9 +53,9 @@ WHERE
     [Measures].[Gross Profit Margin]  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [&#40;コメント&#41; &#40;MDX&#41;](../mdx/comment-mdx-double-slash.md)   
- [-- &#40;コメント&#41; &#40;MDX&#41;](../mdx/comment-mdx-operator-reference.md)   
- [MDX 演算子リファレンス&#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
+ [--&#40;コメント&#41; &#40;MDX&#41;](../mdx/comment-mdx-operator-reference.md)   
+ [Mdx 演算子リファレンス &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

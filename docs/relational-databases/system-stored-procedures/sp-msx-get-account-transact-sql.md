@@ -1,5 +1,5 @@
 ---
-title: sp_msx_get_account (TRANSACT-SQL) |Microsoft Docs
+title: sp_msx_get_account (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,16 @@ ms.assetid: 7b478049-e2d0-4bac-865a-b97fd1d8dfbc
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3dab15a076200e464e82d0b01ef6a156447a537f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68108039"
 ---
-# <a name="spmsxgetaccount-transact-sql"></a>sp_msx_get_account (Transact-SQL)
+# <a name="sp_msx_get_account-transact-sql"></a>sp_msx_get_account (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  ターゲット サーバーがマスター サーバーにログインする場合に使用する資格情報を一覧表示します。  
+  対象サーバーがマスターサーバーへのログインに使用する資格情報に関する情報を一覧表示します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,20 +44,20 @@ sp_msx_get_account
 ## <a name="result-sets"></a>結果セット  
  次の結果セットを返します。  
   
-|列名|型|説明|  
+|列名|種類|[説明]|  
 |-----------------|----------|-----------------|  
-|msx_connection|**int**|マスター サーバーの接続番号。|  
-|msx_credential_id|**int**|マスター サーバー接続に使用する資格情報の ID。|  
-|msx_credential_name|**sysname**|マスター サーバー接続に使用する資格情報の名前。|  
-|msx_login_name|**nvarchar (4000)**|資格情報に関する Windows ユーザーのドメイン名とユーザー名。|  
+|msx_connection|**int**|マスターサーバーの接続番号。|  
+|msx_credential_id|**int**|このマスターサーバー接続に使用される資格情報の ID。|  
+|msx_credential_name|**sysname**|このマスターサーバー接続に使用される資格情報の名前。|  
+|msx_login_name|**nvarchar(4000)**|資格情報に関する Windows ユーザーのドメイン名とユーザー名。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  ターゲット サーバーに対して指定された資格情報がない場合、空の結果セットを返します。 資格情報を設定するには、sp_msx_set_account を使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
  sysadmin 固定サーバー ロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、このターゲット サーバーがマスター サーバーにログインする場合に使用する資格情報を一覧表示します。  
   
 ```  
@@ -77,8 +77,8 @@ GO
  `1              65538             MsxAccount           AdventureWorks2012\MsxAccount`  
   
 ## <a name="see-also"></a>参照  
- [SQL Server エージェント ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;のストアドプロシージャの SQL Server エージェント](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
- [sp_msx_set_account &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-msx-set-account-transact-sql.md)  
+ [sp_msx_set_account &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-msx-set-account-transact-sql.md)  
   
   

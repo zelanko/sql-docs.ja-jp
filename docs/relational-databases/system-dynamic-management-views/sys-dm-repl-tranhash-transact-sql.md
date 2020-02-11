@@ -1,5 +1,5 @@
 ---
-title: sys.dm_repl_tranhash (TRANSACT-SQL) |Microsoft Docs
+title: dm_repl_tranhash (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -19,34 +19,34 @@ ms.assetid: 0cc52338-e805-4ed4-9835-b19bbf72448e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0c44c5c08dc46da5a0f2f3dfd2c53ab6cb20f27d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68067874"
 ---
-# <a name="sysdmrepltranhash-transact-sql"></a>sys.dm_repl_tranhash (Transact-SQL)
+# <a name="sysdm_repl_tranhash-transact-sql"></a>sys.dm_repl_tranhash (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  トランザクション パブリケーションでレプリケートされるトランザクションに関する情報を返します。  
+  トランザクションパブリケーションでレプリケートされているトランザクションに関する情報を返します。  
   
 |column_name|data_type|description|  
 |------------------|----------------|-----------------|  
-|**buckets**|**bigint**|ハッシュ テーブル内のバケットの数。|  
-|**hashed_trans**|**bigint**|現在のバッチでレプリケートされるコミットされたトランザクションの数。|  
-|**completed_trans**|**bigint**|トランザクションの数は、これまでに完了します。|  
+|**バケット**|**bigint**|ハッシュテーブル内のバケットの数。|  
+|**hashed_trans**|**bigint**|現在のバッチでレプリケートされたコミット済みトランザクションの数。|  
+|**completed_trans**|**bigint**|これまでに処理したトランザクションの数。|  
 |**compensated_trans**|**bigint**|部分ロールバックを含むトランザクションの数。|  
-|**first_begin_lsn**|**nvarchar(64)**|現在のバッチ内のログ シーケンス番号 (LSN) が最も早い開始します。|  
-|**last_commit_lsn**|**nvarchar(64)**|現在のバッチでコミットした lsn 最後です。|  
+|**first_begin_lsn**|**nvarchar (64)**|現在のバッチの最初の開始ログシーケンス番号 (LSN)。|  
+|**last_commit_lsn**|**nvarchar (64)**|現在のバッチの最後のコミット LSN。|  
   
 ## <a name="permissions"></a>アクセス許可  
- 呼び出すパブリケーション データベースに対する VIEW DATABASE STATE 権限が必要**dm_repl_tranhash**します。  
+ **Dm_repl_tranhash**を呼び出すには、パブリケーションデータベースに対する VIEW DATABASE STATE 権限が必要です。  
   
-## <a name="remarks"></a>コメント  
- 情報は、レプリケーション アーティクル キャッシュに現在読み込まれているレプリケートされたデータベース オブジェクトに対してのみ返されます。  
+## <a name="remarks"></a>解説  
+ 情報は、レプリケーションアーティクルキャッシュに現在読み込まれているレプリケートされたデータベースオブジェクトに対してのみ返されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [レプリケーション関連の動的管理ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md)  
+ [レプリケーション関連の動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md)  
   
   

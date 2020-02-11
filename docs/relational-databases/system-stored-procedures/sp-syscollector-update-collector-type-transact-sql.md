@@ -1,5 +1,5 @@
 ---
-title: sp_syscollector_update_collector_type (TRANSACT-SQL) |Microsoft Docs
+title: sp_syscollector_update_collector_type (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,16 +19,16 @@ ms.assetid: 3c414dfd-d9ca-4320-81aa-949465b967bf
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 393b5622964ea3f240d31a2a90c555f7020c500d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68010542"
 ---
-# <a name="spsyscollectorupdatecollectortype-transact-sql"></a>sp_syscollector_update_collector_type (Transact-SQL)
+# <a name="sp_syscollector_update_collector_type-transact-sql"></a>sp_syscollector_update_collector_type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  コレクション項目のコレクター型を更新します。 指定された名前およびコレクター型の GUID では、収集とアップロード パッケージ、パラメーター スキーマ、パラメーター フォーマッタ スキーマなど、コレクター型の構成を更新します。  
+  コレクション項目のコレクター型を更新します。 コレクター型の名前と GUID を指定すると、によって、コレクションとアップロードパッケージ、パラメータースキーマ、およびパラメーターフォーマッタスキーマを含むコレクター型の構成が更新されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,24 +44,24 @@ sp_syscollector_update_collector_type [ @collector_type_uid = ] 'collector_type_
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @collector_type_uid = ] 'collector_type_uid'` コレクター型の GUID です。 *collector_type_uid*は**uniqueidentifier**、しする場合は NULL それが自動的に作成され出力として返されます。  
+`[ @collector_type_uid = ] 'collector_type_uid'`コレクター型の GUID を示します。 *collector_type_uid*は**UNIQUEIDENTIFIER**です。 NULL の場合は、自動的に作成され、出力として返されます。  
   
-`[ @name = ] 'name'` コレクター型の名前です。 *名前*は**sysname**と指定する必要があります。  
+`[ @name = ] 'name'`コレクター型の名前を指定します。 *名前*は**sysname**ので、指定する必要があります。  
   
-`[ @parameter_schema = ] 'parameter_schema'` このコレクター型の XML スキーマです。 *parameter_schema*は**xml**し、特定のコレクター型で必要になります。 必要ない場合、この引数は NULL を指定できます。  
+`[ @parameter_schema = ] 'parameter_schema'`このコレクター型の XML スキーマです。 *parameter_schema*は**xml**であり、特定のコレクター型で必要になる場合があります。 必須ではない場合、この引数は NULL にすることができます。  
   
-`[ @collection_package_id = ] collection_package_id` ローカル一意識別子が指すは、[!INCLUDE[ssIS](../../includes/ssis-md.md)]コレクション パッケージのコレクション セットによって使用されます。 *collection_package_id*は**uniqueidentifer**必要があります。 値を取得する*collection_package_id*、msdb データベースの dbo.syscollector_collector_types システム ビューに対してクエリします。  
+`[ @collection_package_id = ] collection_package_id`コレクションセットによって使用される[!INCLUDE[ssIS](../../includes/ssis-md.md)]コレクションパッケージを指すローカル一意識別子です。 *collection_package_id*は**uniqueidentifer**であり、必須です。 *Collection_package_id*の値を取得するには、msdb データベースの dbo. syscollector_collector_types システムビューに対してクエリを実行します。  
   
-`[ @upload_package_id = ] upload_package_id` ローカル一意識別子が指すは、[!INCLUDE[ssIS](../../includes/ssis-md.md)]コレクション セットによって使用されるパッケージをアップロードします。 *upload_package_id*は**uniqueidentifier**必要があります。 値を取得する*upload_package_id*、msdb データベースの dbo.syscollector_collector_types システム ビューに対してクエリします。  
+`[ @upload_package_id = ] upload_package_id`コレクションセットによって使用される[!INCLUDE[ssIS](../../includes/ssis-md.md)]アップロードパッケージを指すローカル一意識別子です。 *upload_package_id*は**uniqueidentifier**であり、必須です。 *Upload_package_id*の値を取得するには、msdb データベースの dbo. syscollector_collector_types システムビューに対してクエリを実行します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
 ## <a name="permissions"></a>アクセス許可  
- メンバーシップが必要です、 **dc_admin** (EXECUTE 権限) を持つ固定データベース ロール。  
+ **Dc_admin** (EXECUTE 権限を持つ) 固定データベースロールのメンバーシップが必要です。  
   
 ## <a name="example"></a>例  
- 次の例では、ジェネリック T-SQL Query コレクター型を更新します (この例では、ジェネリック T-SQL Query コレクター型の既定のスキーマを使用しています)。  
+ 次の例では、ジェネリック T-SQL Query コレクター型を更新します  (この例では、ジェネリック T-SQL Query コレクター型の既定のスキーマを使用しています)。  
   
 ```  
 USE msdb;  
@@ -100,8 +100,8 @@ EXEC sp_syscollector_update_collector_type
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [[データ コレクション]](../../relational-databases/data-collection/data-collection.md)  
+## <a name="see-also"></a>参照  
+ [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [データコレクション](../../relational-databases/data-collection/data-collection.md)  
   
   

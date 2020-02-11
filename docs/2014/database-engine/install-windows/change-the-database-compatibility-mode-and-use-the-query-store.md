@@ -1,5 +1,5 @@
 ---
-title: クエリ プランの移行 |Microsoft Docs
+title: クエリプランの移行 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 66f1f8f57dca3ad2edba3f4b63100b2de3ae5659
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62779114"
 ---
 # <a name="migrate-query-plans"></a>クエリ プランの移行
@@ -26,7 +26,7 @@ ms.locfileid: "62779114"
   
  アップグレードする前にプラン ガイドを作成するには、次の手順を実行します。  
   
-1.  使用して各ミッション クリティカルなクエリの現在のプランを記録、 [sp_create_plan_guide](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)ストアド プロシージャと、USE PLAN クエリ ヒントでクエリ プランを指定します。  
+1.  [Sp_create_plan_guide](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)ストアドプロシージャを使用し、USE plan クエリヒントでクエリプランを指定することにより、各ミッションクリティカルなクエリの現在のプランを記録します。  
   
 2.  プラン ガイドがクエリに適用されていることを確認します。  
   
@@ -41,16 +41,16 @@ ms.locfileid: "62779114"
 ## <a name="example"></a>例  
  次の例は、プラン ガイドを作成することにより、アップグレード前のプランを記録する方法を示しています。  
   
-### <a name="step-1-collect-the-plan"></a>手順 1:プランを収集します。  
+### <a name="step-1-collect-the-plan"></a>手順 1: プランを収集する  
  プラン ガイドに記録するクエリ プランは XML 形式にする必要があります。 XML 形式のクエリ プランは、次の方法で生成できます。  
   
--   [SET SHOWPLAN_XML](/sql/t-sql/statements/set-showplan-xml-transact-sql)  
+-   [SHOWPLAN_XML の設定](/sql/t-sql/statements/set-showplan-xml-transact-sql)  
   
 -   [SET STATISTICS XML](/sql/t-sql/statements/set-statistics-xml-transact-sql)  
   
--   Query_plan 列を照会、 [sys.dm_exec_query_plan](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql)動的管理関数。  
+-   動的管理関数[dm_exec_query_plan](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql)の query_plan 列を照会しています。  
   
--   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] [Showplan XML](../../relational-databases/event-classes/showplan-xml-event-class.md)、 [Showplan XML Statistics Profile](../../relational-databases/event-classes/showplan-xml-statistics-profile-event-class.md)、および[Showplan XML For Query Compile](../../relational-databases/event-classes/showplan-xml-for-query-compile-event-class.md)イベント クラス。  
+-   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] [Showplan xml](../../relational-databases/event-classes/showplan-xml-event-class.md)、 [showplan xml Statistics Profile](../../relational-databases/event-classes/showplan-xml-statistics-profile-event-class.md)、および[showplan xml For Query Compile](../../relational-databases/event-classes/showplan-xml-for-query-compile-event-class.md)イベントクラス。  
   
  次の例では、動的管理ビューに対してクエリを実行することにより、`SELECT City, StateProvinceID, PostalCode FROM Person.Address ORDER BY PostalCode DESC;` ステートメントのクエリ プランを収集します。  
   
@@ -65,7 +65,7 @@ SELECT query_plan
 GO  
 ```  
   
-### <a name="step-2-create-the-plan-guide-to-force-the-plan"></a>手順 2:プランを強制するプラン ガイドを作成します。  
+### <a name="step-2-create-the-plan-guide-to-force-the-plan"></a>手順 2: プラン ガイドを作成しプランを適用する  
  プラン ガイドで (前述のいずれかの方法で取得した) XML 形式のクエリ プランを使用し、sp_create_plan_guide の OPTION 句に指定した USE PLAN クエリ ヒント内に、文字列リテラルとしてそのクエリ プランをコピーして貼り付けます。  
   
  プラン ガイドを作成する前に、XML プラン自体に含まれている引用符 (') には引用符をもう 1 つ付けてエスケープします。 たとえば、`WHERE A.varchar = 'This is a string'` を含むプランの場合は、コードを `WHERE A.varchar = ''This is a string''` のように変更してエスケープする必要があります。  
@@ -88,12 +88,12 @@ EXECUTE sp_create_plan_guide
 GO  
 ```  
   
-### <a name="step-3-verify-that-the-plan-guide-is-applied-to-the-query"></a>手順 3:プラン ガイドは、クエリに適用されていることを確認します。  
+### <a name="step-3-verify-that-the-plan-guide-is-applied-to-the-query"></a>手順 3: プラン ガイドがクエリに適用されていることを確認する  
  クエリを再実行し、生成されたクエリ プランを調べます。 このプランがプラン ガイドで指定したプランに一致していることを確認してください。  
   
 ## <a name="see-also"></a>参照  
- [sp_create_plan_guide &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
- [クエリ ヒント &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-query)   
- [プラン ガイド](../../relational-databases/performance/plan-guides.md)  
+ [sp_create_plan_guide &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
+ [Transact-sql&#41;&#40;クエリヒント](/sql/t-sql/queries/hints-transact-sql-query)   
+ [プランガイド](../../relational-databases/performance/plan-guides.md)  
   
   

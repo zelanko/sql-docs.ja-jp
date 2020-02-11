@@ -22,10 +22,10 @@ ms.assetid: aea495f4-ce26-4952-b019-38f012625f3f
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 8386da85d22f50b45492ecd52588e6d06fe80590
-ms.sourcegitcommit: 0d34b654f0b3031041959e87f5b4d4f0a1af6a29
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74901956"
 ---
 # <a name="working-with-user-defined-types---defining-udt-tables-and-columns"></a>ユーザー定義の型の使用 - UDT テーブルと列の定義
@@ -48,7 +48,7 @@ CREATE TABLE dbo.Points
   
 -   **UDT 式のインデックスを作成します。** 保存される計算列のインデックスを UDT 式を使用して作成できます。 UDT のフィールド、メソッド、またはプロパティを UDT 式にできます。 この式は決定的である必要があり、この式でデータ アクセスを実行しないでください。  
   
- 詳細については、「 [CREATE INDEX &#40;transact-sql&#41;](../../t-sql/statements/create-index-transact-sql.md)」を参照してください。  
+ 詳細については、「[CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server でのユーザー定義型の使用](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md)     

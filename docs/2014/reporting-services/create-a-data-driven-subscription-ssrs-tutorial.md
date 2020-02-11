@@ -15,13 +15,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b905b7127d10be80d9c30ec7c594fbaedc7d9c00
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109689"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>データ ドリブン サブスクリプションの作成 (SSRS チュートリアル)
+  
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] が提供するデータ ドリブン サブスクリプションにより、動的なサブスクライバー データに基づいてレポートの配信をカスタマイズできます。 データ ドリブン サブスクリプションには次のような用途があります。  
   
 -   配信するたびに宛先メンバーの構成が変更される多人数受信者プールへのレポート配信。 たとえば、月刊レポートを現在の全顧客に配信する場合など。  
@@ -33,23 +34,23 @@ ms.locfileid: "66109689"
   
  このチュートリアルは、次の 3 つのレッスンで構成されています。  
   
- [レッスン 1:サンプル サブスクライバー データベースの作成](lesson-1-creating-a-sample-subscriber-database.md)  
+ [レッスン 1 : サンプル サブスクライバー データベースの作成](lesson-1-creating-a-sample-subscriber-database.md)  
  このレッスンでは、サブスクライバー情報を格納するローカル [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベースを作成する方法を学習します。  
   
- [レッスン 2:レポート データ ソースのプロパティの変更](lesson-2-modifying-the-report-data-source-properties.md)」を参照してください  
+ [レッスン 2: レポート データ ソースのプロパティの変更](lesson-2-modifying-the-report-data-source-properties.md)  
  このレッスンでは、レポート データ ソースのプロパティを変更し、レポートを自動実行できるようにする方法を学習します。 自動処理では保存された資格情報が必要です。 また、レポートのデータセットを変更して、サブスクライバーのデータが提供するパラメーターを含めます。  
   
- [レッスン 3:データ ドリブン サブスクリプションを定義します。](lesson-3-defining-a-data-driven-subscription.md)  
+ [レッスン 3: データ ドリブン サブスクリプションの定義](lesson-3-defining-a-data-driven-subscription.md)  
  このレッスンでは、データ ドリブン サブスクリプションを定義する方法を学習します。 ここでは、データ ドリブン サブスクリプション ウィザードを 1 ページずつ順に実行します。  
   
 ## <a name="requirements"></a>必要条件  
  通常、データ ドリブン サブスクリプションはレポート サーバー管理者が作成し、保守します。 データ ドリブン サブスクリプションを作成するには、クエリ作成の専門知識、サブスクライバー データを持つデータ ソースに関する知識、およびレポート サーバーへの高度なアクセス権が必要です。  
   
- チュートリアルでは、このチュートリアルで作成したレポートを使用します[基本的な表レポートの作成&#40;SSRS チュートリアル&#41;](create-a-basic-table-report-ssrs-tutorial.md)とからのデータ。 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]  
+ このチュートリアルでは、チュートリアル「[基本的なテーブルレポートの作成](create-a-basic-table-report-ssrs-tutorial.md)」で作成したレポートを使用して、SSRS チュートリアル&#41;とデータを &#40;します。[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]  
   
  このチュートリアルを使用するには、システムに以下のコンポーネントがインストールされている必要があります。  
   
--   データ ドリブン サブスクリプションをサポートするエディションの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 詳細については、次を参照してください。[エディションと SQL Server 2014 のコンポーネントの](../sql-server/editions-and-components-of-sql-server-2016.md)します。  
+-   データ ドリブン サブスクリプションをサポートするエディションの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。 詳細については、「 [SQL Server 2014 のエディションとコンポーネント](../sql-server/editions-and-components-of-sql-server-2016.md)」を参照してください。  
   
 -   レポート サーバー (ネイティブ モードで実行)。 このチュートリアルで説明するユーザー インターフェイスは、ネイティブ モードのレポート サーバーに基づいています。 サブスクリプションは SharePoint モードのレポート サーバーでサポートされていますが、ユーザー インターフェイスはこのチュートリアルで説明されているものとは異なります。  
   

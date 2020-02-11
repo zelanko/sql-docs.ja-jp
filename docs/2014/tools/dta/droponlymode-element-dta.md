@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f1d449defa98112c87a4b5789f1cff6f764252e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62659580"
 ---
 # <a name="droponlymode-element-dta"></a>DropOnlyMode 要素 (DTA)
@@ -36,11 +36,13 @@ ms.locfileid: "62659580"
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特性|説明|  
+|特徴|[説明]|  
 |--------------------|-----------------|  
 |**データ型と長さ**|[なし] :|  
 |**既定値**|[なし] :|  
-|**個数**|任意。 `TuningOptions` 要素につき 1 回だけ使用できます。 `TuningOptions` 要素内で以下の要素を指定する場合には使用できません。<br /><br /> [FeatureSet 要素 &#40;DTA&#41;](featureset-element-dta.md)<br /><br /> [Partitioning 要素 &#40;DTA&#41;](partitioning-element-dta.md)<br /><br /> [KeepExisting 要素 &#40;DTA&#41;](keepexisting-element-dta.md) が **ALL** に設定されている|  
+|**個数**|省略可能。 
+  `TuningOptions` 要素につき 1 回だけ使用できます。 
+  `TuningOptions` 要素内で以下の要素を指定する場合には使用できません。<br /><br /> [FeatureSet 要素 &#40;DTA&#41;](featureset-element-dta.md)<br /><br /> [DTA&#41;&#40;のパーティション分割要素](partitioning-element-dta.md)<br /><br /> [Keepexisting 要素 &#40;DTA&#41;](keepexisting-element-dta.md)が**ALL**に設定されています|  
   
 ## <a name="element-relationships"></a>要素の関係  
   

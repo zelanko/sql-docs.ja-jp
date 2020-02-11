@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 567ee5d4c6f57d4b4eb08cbd4ecac7aef999aa55
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62835418"
 ---
 # <a name="sql-server-connection-required-permissions-for-the-cdc-designer"></a>CDC デザイナーで使用する SQL Server 接続に必要な権限
@@ -24,7 +24,7 @@ ms.locfileid: "62835418"
   
  次の表では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への接続が必要となる各種のタスクと、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン/ユーザーに必要な権限について説明します。  
   
-|タスク|最低限の権限|  
+|タスク|最小限のアクセス許可|  
 |----------|-------------------------|  
 |関連する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを使用した CDC サービスおよびインスタンスの一覧表示|`db_datareader` ロール|  
 |CDC インスタンスの開始/停止|`db_datareader` ロールと `db_datawriter` ロール|  
@@ -36,6 +36,6 @@ ms.locfileid: "62835418"
   
 ## <a name="see-also"></a>参照  
  [CDC デザイナー コンソールへのアクセス](access-the-cdc-designer-console.md)   
- [インスタンスの作成のための SQL サーバー接続](sql-server-connection-for-instance-creation.md)  
+ [インスタンスの作成のための SQL Server 接続](sql-server-connection-for-instance-creation.md)  
   
   

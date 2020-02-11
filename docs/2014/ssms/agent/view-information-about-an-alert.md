@@ -17,22 +17,22 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c5567abc0893bd183c2468f82278a014e2005113
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211296"
 ---
 # <a name="view-information-about-an-alert"></a>View Information About an Alert
-  このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの警告に関する情報を表示する方法について説明します。  
+  このトピックでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]また[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]は[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、でエージェントの警告に関する情報を表示する方法について説明します。  
   
  **このトピックの内容**  
   
 -   **作業を開始する準備:**  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
--   **警告に関する情報を表示する方法:**  
+-   **アラートに関する情報を表示する方法:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -49,23 +49,24 @@ ms.locfileid: "68211296"
   
 #### <a name="to-view-information-about-an-alert"></a>警告に関する情報を表示するには  
   
-1.  **オブジェクト エクスプローラー** で、プラス記号をクリックして、警告に関する情報を表示するサーバーを展開します。  
+1.  
+  **オブジェクト エクスプローラー** で、プラス記号をクリックして、警告に関する情報を表示するサーバーを展開します。  
   
 2.  プラス記号をクリックして **[SQL Server エージェント]** を展開します。  
   
 3.  プラス記号をクリックして **[警告]** フォルダーを展開します。  
   
-4.  表示する情報がある警告を右クリックし、 **[プロパティ]** を選択します。  
+4.  表示する情報がある警告を右クリックし、**[プロパティ]** を選択します。  
   
-     [_alert_name_ **警告のプロパティ**] ダイアログ ボックスに表示される使用可能なオプションの詳細については、以下を参照してください。  
+     [ _Alert_name_**警告のプロパティ**] ダイアログボックスに表示される使用可能なオプションの詳細については、次を参照してください。  
   
-    -   [アラートのプロパティ-[新しい警告&#40;全般] ページ&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
+    -   [[アラートのプロパティ]-[新しいアラート &#40;全般] ページ&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
-    -   [アラートのプロパティ-[新しい警告&#40;応答] ページ&#41;](alert-properties-new-alert-response-page.md)  
+    -   [[アラートのプロパティ]-[新しい警告 &#40;応答] ページ&#41;](alert-properties-new-alert-response-page.md)  
   
-    -   [アラートのプロパティ:新しいアラート&#40;オプション ページ&#41;](alert-properties-new-alert-options-page.md)  
+    -   [[アラートのプロパティ]: [新しい警告 &#40;オプション] ページ&#41;](alert-properties-new-alert-options-page.md)  
   
-    -   [[警告のプロパティ] ([履歴] ページ)](alert-properties-history-page.md)  
+    -   [アラートのプロパティ &#40;履歴ページ&#41;](alert-properties-history-page.md)  
   
 5.  完了したら、 **[OK]** をクリックします。  
   
@@ -89,6 +90,6 @@ ms.locfileid: "68211296"
     GO  
     ```  
   
- 詳細については、次を参照してください。 [sp_help_alert &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-alert-transact-sql)します。  
+ 詳細については、「 [sp_help_alert &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-help-alert-transact-sql)」を参照してください。  
   
   

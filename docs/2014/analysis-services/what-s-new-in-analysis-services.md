@@ -1,5 +1,5 @@
 ---
-title: Analysis Services&#39;とビジネスインテリジェンスの新機能 |Microsoft Docs
+title: Analysis Services とビジネスインテリジェンスの新機能 |&#39;Microsoft Docs
 ms.custom: ''
 ms.date: 06/07/2019
 ms.prod: sql-server-2014
@@ -11,21 +11,21 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 59ce45ff7e02d63c3c5bf27ca209ec911de67dbd
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68889336"
 ---
-# <a name="what39s-new-in-sql-server-2014-analysis-services"></a>SQL Server&#39;2014 Analysis Services の新機能
-  多次元モデルに対して Power View レポートをサポートする機能を[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]追加する例外では、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]以前のリリースから変更されていません。  
+# <a name="what39s-new-in-sql-server-2014-analysis-services"></a>SQL Server 2014 Analysis Services の&#39;の新機能
+  多次元モデルに対して Power View レポートをサポートする機能を[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]追加する例外では、以前のリリースから変更されていません。  
   
  このリリースで異なる[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]他の製品およびテクノロジについては、「 [SQL Server 2014 の新機能](../sql-server/what-s-new-in-sql-server-2016.md)」を参照してください。  
   
 ## <a name="updates-to-design-tool-installation"></a>デザイン ツールのインストールに対する更新  
  以前は Business Intelligence Development Studio (BIDS) と呼ばれていた、ビジネス インテリジェンス用 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] (SSDT-BI) を使用して、Analysis Services モデル、Reporting Services レポート、および Integration Services パッケージを作成できます。 次の場所から SSDT-BI をダウンロードできます。  
   
--   [Visual Studio 2013 用の SSDT をダウンロードする](https://go.microsoft.com/fwlink/p/?LinkId=396526)  
+-   [SSDT-BI for Visual Studio 2013 のダウンロード](https://go.microsoft.com/fwlink/p/?LinkId=396526)  
   
 -   [SSDT-BI for Visual Studio 2012 のダウンロード](https://go.microsoft.com/fwlink/p/?LinkID=273673)  
   
@@ -36,7 +36,7 @@ ms.locfileid: "68889336"
   
  ![SSDT の新しいプロジェクト テンプレート](media/ssdt-biprojects.png "SSDT の新しいプロジェクト テンプレート")  
   
-## <a name="features-recently-added-power-view-for-multidimensional-models"></a>最近追加された機能:多次元モデルの Power View  
+## <a name="features-recently-added-power-view-for-multidimensional-models"></a>最近追加された機能: 多次元モデルの Power View  
  多次元モデルに対応する Power View レポートを作成する機能は、[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Service Pack 1 Cumulative Update 4 で最初に導入されました。 多次元モデルの Power View 機能は、現在では製品の一部として [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] に含まれています。  
   
  **多次元モデルの Power View レポート**  

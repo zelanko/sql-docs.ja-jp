@@ -1,5 +1,5 @@
 ---
-title: SQLGetDiagField |マイクロソフトのドキュメント
+title: SQLGetDiagField |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,28 +15,29 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8fb158b2c11f48733c5eacb3827a43a3303c4a51
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62657705"
 ---
 # <a name="sqlgetdiagfield"></a>SQLGetDiagField
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーの次の追加の診断フィールドを指定する`SQLGetDiagField`します。 これらのフィールドでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アプリケーションに関する各種エラー報告がサポートされます。また、これらのフィールドは、接続されている ODBC 接続ハンドルや ODBC ステートメント ハンドルで生成されるすべての診断レコードで使用できます。 これらのフィールドは、sqlncli.h で定義されています。  
+  Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client ODBC ドライバーでは、に次の追加の`SQLGetDiagField`診断フィールドが指定されています。 これらのフィールドでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アプリケーションに関する各種エラー報告がサポートされます。また、これらのフィールドは、接続されている ODBC 接続ハンドルや ODBC ステートメント ハンドルで生成されるすべての診断レコードで使用できます。 これらのフィールドは、sqlncli.h で定義されています。  
   
-|診断レコードのフィールド|説明|  
+|診断レコードのフィールド|[説明]|  
 |------------------------------|-----------------|  
 |SQL_DIAG_SS_LINE|ストアド プロシージャのエラーが発生した行番号を報告します。 SQL_DIAG_SS_LINE の値は、SQL_DIAG_SS_PROCNAME に値が返される場合にのみ意味があります。 この値は、16 ビットの符号なし整数で返されます。|  
-|SQL_DIAG_SS_MSGSTATE|エラー メッセージの状態。 エラー メッセージの状態については、次を参照してください。 [RAISERROR](/sql/t-sql/language-elements/raiserror-transact-sql)します。 この値は、32 ビットの符号付き整数で返されます。|  
-|SQL_DIAG_SS_PROCNAME|エラーが発生したストアド プロシージャの名前 (該当する場合)。 この値は文字列で返されます。 この文字列の長さ (文字数) は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョンによって異なります。 呼び出すことによって判断できる[SQLGetInfo](sqlgetinfo.md) SQL_MAX_PROCEDURE_NAME_LEN の値を要求します。|  
+|SQL_DIAG_SS_MSGSTATE|エラー メッセージの状態。 エラーメッセージの状態の詳細については、「 [RAISERROR](/sql/t-sql/language-elements/raiserror-transact-sql)」を参照してください。 この値は、32 ビットの符号付き整数で返されます。|  
+|SQL_DIAG_SS_PROCNAME|エラーが発生したストアド プロシージャの名前 (該当する場合)。 この値は文字列で返されます。 この文字列の長さ (文字数) は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョンによって異なります。 SQL_MAX_PROCEDURE_NAME_LEN の値を要求する[SQLGetInfo](sqlgetinfo.md)を呼び出すことによって決定できます。|  
 |SQL_DIAG_SS_SEVERITY|関連付けられたエラー メッセージの重大度レベル。 この値は、32 ビットの符号付き整数で返されます。|  
 |SQL_DIAG_SS_SRVNAME|エラーが発生したサーバーの名前。 この値は文字列で返されます。 この文字列の長さ (文字列) は、sqlncli.h の SQL_MAX_SQLSERVERNAME マクロで定義されます。|  
   
  文字データを含む [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 固有の診断フィールドの SQL_DIAG_SS_PROCNAME と SQL_DIAG_SS_SRVNAME では、NULL で終わる ANSI 文字列または Unicode 文字列としてデータをクライアントに返します。 必要に応じて、文字数を文字幅で調整する必要があります。 また、TCHAR や SQLTCHAR などの移植可能な C データ型を使用して、プログラム変数の適切な長さを保証できます。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、次の補足の動的機能コードが報告されます。この動的機能コードでは、最後に試行された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ステートメントが特定されます。 動的機能コードは、診断レコード セットのヘッダー (レコード 0) に返されるので、各実行が成功しても失敗しても参照できます。  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、次の補足の動的機能コードが報告されます。この動的機能コードでは、最後に試行された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ステートメントが特定されます。 動的機能コードは、診断レコード セットのヘッダー (レコード 0) に返されるので、各実行が成功しても失敗しても参照できます。  
   
-|動的機能コード|Source|  
+|動的機能コード|source|  
 |---------------------------|------------|  
 |SQL_DIAG_DFC_SS_ALTER_DATABASE|ALTER DATABASE ステートメント|  
 |SQL_DIAG_DFC_SS_CHECKPOINT|CHECKPOINT ステートメント|  
@@ -50,7 +51,7 @@ ms.locfileid: "62657705"
 |SQL_DIAG_DFC_SS_CURSOR_OPEN|OPEN ステートメント|  
 |SQL_DIAG_DFC_SS_CURSOR_FETCH|FETCH ステートメント|  
 |SQL_DIAG_DFC_SS_CURSOR_CLOSE|CLOSE ステートメント|  
-|SQL_DIAG_DFC_SS_DEALLOCATE_CURSOR|DEALLOCATE ステートメント|  
+|SQL_DIAG_DFC_SS_DEALLOCATE_CURSOR|割り当て解除ステートメント|  
 |SQL_DIAG_DFC_SS_DBCC|DBCC ステートメント|  
 |SQL_DIAG_DFC_SS_DENY|DENY ステートメント|  
 |SQL_DIAG_DFC_SS_DROP_DATABASE|DROP DATABASE ステートメント|  
@@ -60,7 +61,7 @@ ms.locfileid: "62657705"
 |SQL_DIAG_DFC_SS_DROP_TRIGGER|DROP TRIGGER ステートメント|  
 |SQL_DIAG_DFC_SS_DUMP_DATABASE|BACKUP DATABASE ステートメントまたは DUMP DATABASE ステートメント|  
 |SQL_DIAG_DFC_SS_DUMP_TABLE|DUMP TABLE ステートメント|  
-|SQL_DIAG_DFC_SS_DUMP_TRANSACTION|BACKUP TRANSACTION ステートメントまたは DUMP TRANSACTION ステートメント。 場合に、CHECKPOINT ステートメントに対しても返されます、 **trunc. log 間接的にします。** データベース オプションがオンでします。|  
+|SQL_DIAG_DFC_SS_DUMP_TRANSACTION|BACKUP TRANSACTION ステートメントまたは DUMP TRANSACTION ステートメント。 **Chkpt. 上の trunc**の場合、CHECKPOINT ステートメントにも返されます。 データベースオプションは on です。|  
 |SQL_DIAG_DFC_SS_GOTO|GOTO 流れ制御ステートメント|  
 |SQL_DIAG_DFC_SS_INSERT_BULK|INSERT BULK ステートメント|  
 |SQL_DIAG_DFC_SS_KILL|KILL ステートメント|  
@@ -80,7 +81,7 @@ ms.locfileid: "62657705"
 |SQL_DIAG_DFC_SS_SET_STATISTICS|SET STATISTICS IO ステートメントまたは SET STATISTICS TIME ステートメント|  
 |SQL_DIAG_DFC_SS_SET_TEXTSIZE|SET TEXTSIZE ステートメント|  
 |SQL_DIAG_DFC_SS_SETUSER|SETUSER ステートメント|  
-|SQL_DIAG_DFC_SS_SET_XCTLVL|SET TRANSACTION ISOLATION LEVEL ステートメント|  
+|SQL_DIAG_DFC_SS_SET_XCTLVL|SET TRANSACTION 分離レベルステートメント|  
 |SQL_DIAG_DFC_SS_SHUTDOWN|SHUTDOWN ステートメント|  
 |SQL_DIAG_DFC_SS_TRANS_BEGIN|BEGIN TRAN ステートメント|  
 |SQL_DIAG_DFC_SS_TRANS_COMMIT|COMMIT TRAN ステートメント|  
@@ -95,9 +96,9 @@ ms.locfileid: "62657705"
 |SQL_DIAG_DFC_SS_WRITETEXT|WRITETEXT ステートメント|  
   
 ## <a name="sqlgetdiagfield-and-table-valued-parameters"></a>SQLGetDiagField とテーブル値パラメーター  
- 2 つの診断フィールドを取得するのには、SQLGetDiagField を使用できます。SQL_DIAG_SS_TABLE_COLUMN_NUMBER および SQL_DIAG_SS_TABLE_ROW_NUMBER します。 これらのフィールドは、診断レコードに関連するエラーまたは警告の原因となった値を特定するのに役立ちます。  
+ SQLGetDiagField は、SQL_DIAG_SS_TABLE_COLUMN_NUMBER と SQL_DIAG_SS_TABLE_ROW_NUMBER の2つの診断フィールドを取得するために使用できます。 これらのフィールドは、診断レコードに関連するエラーまたは警告の原因となった値を特定するのに役立ちます。  
   
- テーブル値パラメーターの詳細については、次を参照してください。[テーブル値パラメーター &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)します。  
+ テーブル値パラメーターの詳細については、「[テーブル値パラメーター &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [SQLGetDiagField 関数](https://go.microsoft.com/fwlink/?LinkId=59352)   

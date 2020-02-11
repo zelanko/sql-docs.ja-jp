@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 6246ed25909a2e366d8bbafcd912a4fd923cc84a
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401103"
 ---
 # <a name="analytics-platform-system-high-availability"></a>Analytics Platform System の高可用性
@@ -27,7 +27,7 @@ Analytics Platform System (APS) が高可用性を実現するためにどのよ
   
 詳細については、「 [Configure InfiniBand network adapters](configure-infiniband-network-adapters.md)」を参照してください。  
   
-## <a name="storage"></a>Storage  
+## <a name="storage"></a>ストレージ  
 データを安全に保つために、APS は RAID 1 ミラーリングを使用して、すべてのユーザーデータのコピーを2つ保持します。 ディスクに障害が発生すると、ハードウェアシステムはデータを予備ディスクに再構築し、ディスク障害が発生したことを示すアラートを設定します。  
   
 データをオンラインで保持するために、APS は Windows 記憶域スペースとクラスター化共有ボリュームを使用して、直接接続された記憶域のユーザーデータディスクを管理します。 クラスター共有ボリュームに構成されているデータスケールユニットごとに1つの記憶域プールがあります。これは、マウントポイントを介してコンピューティングノードホストが使用できます。  
