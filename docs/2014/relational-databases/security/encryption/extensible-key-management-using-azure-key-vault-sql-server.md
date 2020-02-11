@@ -17,10 +17,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: 9591b483380d8bfcaea8404cccfa0279d3bcc035
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74957199"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>Azure Key Vault を使用する拡張キー管理 (SQL Server)
@@ -127,7 +127,7 @@ ms.locfileid: "74957199"
   
 ##  <a name="Step3"></a>手順 3: Key Vault に EKM プロバイダーを使用するように SQL Server を構成する  
   
-###  <a name="Permissions"></a>許可  
+###  <a name="Permissions"></a> Permissions  
  このプロセス全体を完了するには、CONTROL SERVER 権限、または **sysadmin** 固定サーバー ロールのメンバーシップが必要です。 特定のアクションで必要な権限は次のとおりです。  
   
 -   暗号化サービス プロバイダーを作成するには、CONTROL SERVER 権限、または **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
@@ -211,19 +211,19 @@ ms.locfileid: "74957199"
 > [!TIP]  
 >  エラーを受信したユーザー**は、プロバイダーから公開キーをエクスポートできません。プロバイダーエラーコード: 2053。** では、key vault での**get**、 **list**、 **wrapKey**、および**unwrapKey**のアクセス許可を確認する必要があります。  
   
- 詳細については、次のトピックを参照してください。  
+ 詳細については、「  
   
--   [sp_configure &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)  
+-   [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)  
   
--   [Transact-sql&#41;&#40;暗号化サービスプロバイダーを作成する](/sql/t-sql/statements/create-cryptographic-provider-transact-sql)  
+-   [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-cryptographic-provider-transact-sql)  
   
--   [Transact-sql&#41;&#40;の資格情報の作成](/sql/t-sql/statements/create-credential-transact-sql)  
+-   [CREATE CREDENTIAL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql)  
   
--   [CREATE 非対称キー &#40;Transact-sql&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)  
+-   [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)  
   
--   [Transact-sql&#41;&#40;ログインの作成](/sql/t-sql/statements/create-login-transact-sql)  
+-   [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql)  
   
--   [ALTER LOGIN &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-login-transact-sql)  
+-   [ALTER LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-login-transact-sql)  
   
 ## <a name="examples"></a>例  
   
@@ -287,11 +287,11 @@ ms.locfileid: "74957199"
     GO  
     ```  
   
-     詳細については、次のトピックを参照してください。  
+     詳細については、「  
   
-    -   [Transact-sql&#41;&#40;データベース暗号化キーを作成する](/sql/t-sql/statements/create-database-encryption-key-transact-sql)  
+    -   [CREATE DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-database-encryption-key-transact-sql)  
   
-    -   [ALTER DATABASE &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql)  
+    -   [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)  
   
 ###  <a name="ExampleB"></a>例 B: Key Vault からの非対称キーを使用してバックアップを暗号化する  
  
@@ -357,10 +357,10 @@ CLOSE SYMMETRIC KEY DATA_ENCRYPTION_KEY;
 ```  
   
 ## <a name="see-also"></a>参照  
- [Transact-sql&#41;&#40;暗号化サービスプロバイダーを作成する](/sql/t-sql/statements/create-cryptographic-provider-transact-sql)   
- [Transact-sql&#41;&#40;の資格情報の作成](/sql/t-sql/statements/create-credential-transact-sql)   
- [CREATE 非対称キー &#40;Transact-sql&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)   
- [CREATE SYMMETRIC KEY &#40;Transact-sql&#41;](/sql/t-sql/statements/create-symmetric-key-transact-sql)   
+ [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-cryptographic-provider-transact-sql)   
+ [CREATE CREDENTIAL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql)   
+ [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)   
+ [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-symmetric-key-transact-sql)   
  [拡張キー管理 &#40;EKM&#41;](extensible-key-management-ekm.md)   
  [EKM を使用して TDE を有効にする](enable-tde-on-sql-server-using-ekm.md)   
  [バックアップの暗号化](../../backup-restore/backup-encryption.md)   

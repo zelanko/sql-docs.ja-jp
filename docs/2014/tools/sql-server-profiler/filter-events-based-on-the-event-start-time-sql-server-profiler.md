@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0cd08ce16341022072c76fc1bf073d1a469d9273
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63192905"
 ---
 # <a name="filter-events-based-on-the-event-start-time-sql-server-profiler"></a>イベントの開始時刻に基づいたイベントのフィルター選択 (SQL Server Profiler)
@@ -42,7 +42,7 @@ ms.locfileid: "63192905"
   
 5.  **[イベントの選択]** タブで、 **[StartTime]** 列見出しをクリックします。 また、この列見出しを右クリックし、 **[列フィルターの編集]** をクリックして **[フィルターの編集]** ダイアログ ボックスを開く方法もあります。  
   
-6.  展開**より大きい**または**未満**、し、入力、`datetime`比較演算子の下に表示されるフィールドの値。  
+6.  [次の値**より大きい**] または [**より小さい**] を展開し、比較演算子の下に表示されるフィールドに値を`datetime`入力します。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server Profiler](sql-server-profiler.md)  

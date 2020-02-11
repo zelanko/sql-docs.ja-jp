@@ -1,5 +1,5 @@
 ---
-title: '外部データへのアクセス: Hadoop-PolyBase'
+title: 外部データへのアクセス:Hadoop - PolyBase
 description: Parallel Data Warehouse で PolyBase を構成して外部 Hadoop に接続する方法について説明します。
 author: mzaman1
 ms.prod: sql
@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019, seo-lt-2019
 ms.openlocfilehash: dc796ff58c5320e60011dc46dd45468177a98ed8
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75245391"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Hadoop 内の外部データにアクセスするように PolyBase を構成する
@@ -227,7 +227,7 @@ Hadoop データ ソース内のデータのクエリを実行するには、Tra
    WITH IDENTITY = '<hadoop_user_name>', Secret = '<hadoop_password>';  
    ```
 
-3. [CREATE EXTERNAL DATA source](../t-sql/statements/create-external-data-source-transact-sql.md)を使用して外部データソースを作成します。
+3. [CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md) を使用して外部データ ソースを作成します。
 
    ```sql
    -- LOCATION (Required) : Hadoop Name Node IP address and port.  
@@ -241,8 +241,7 @@ Hadoop データ ソース内のデータのクエリを実行するには、Tra
    );  
    ```
 
-4. 
-  [CREATE EXTERNAL FILE FORMAT](../t-sql/statements/create-external-file-format-transact-sql.md) を使用して外部ファイル形式を作成します。
+4. [CREATE EXTERNAL FILE FORMAT](../t-sql/statements/create-external-file-format-transact-sql.md) を使用して外部ファイル形式を作成します。
 
    ```sql
    -- FORMAT TYPE: Type of format in Hadoop (DELIMITEDTEXT,  RCFILE, ORC, PARQUET).
@@ -252,8 +251,7 @@ Hadoop データ ソース内のデータのクエリを実行するには、Tra
                USE_TYPE_DEFAULT = TRUE)  
    ```
 
-5. 
-  [CREATE EXTERNAL TABLE](../t-sql/statements/create-external-table-transact-sql.md)を使用して、Hadoop に格納されているデータをポイントする外部テーブルを作成します。 この例では、外部データには車両センサー データが含まれています。
+5. [CREATE EXTERNAL TABLE](../t-sql/statements/create-external-table-transact-sql.md)を使用して、Hadoop に格納されているデータをポイントする外部テーブルを作成します。 この例では、外部データには車両センサー データが含まれています。
 
    ```sql
    -- LOCATION: path to file or directory that contains the data (relative to HDFS root).  
@@ -342,7 +340,7 @@ SQL Server Data Tools では、外部テーブルが別のフォルダー**外�
   
 ![SSDT の PolyBase オブジェクト](media/polybase/external-tables-datasource.png)  
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 Hadoop のセキュリティ設定については、「 [hadoop セキュリティの構成](polybase-configure-hadoop-security.md)」を参照してください。<br>
 PolyBase について詳しくは、「[PolyBase とは](../relational-databases/polybase/polybase-guide.md)」をご覧ください。 

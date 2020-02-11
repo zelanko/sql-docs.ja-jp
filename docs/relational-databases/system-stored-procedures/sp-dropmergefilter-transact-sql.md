@@ -1,5 +1,5 @@
 ---
-title: sp_dropmergefilter (TRANSACT-SQL) |Microsoft Docs
+title: sp_dropmergefilter (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: 798586d7-05f3-4a5e-bea8-a34b7b52d0fd
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b952fcd8145a2cf5392308b21d593e8c377761f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933962"
 ---
-# <a name="spdropmergefilter-transact-sql"></a>sp_dropmergefilter (Transact-SQL)
+# <a name="sp_dropmergefilter-transact-sql"></a>sp_dropmergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  マージ フィルターを削除します。 **sp_dropmergefilter**削除するマージ フィルターで定義されているすべてのマージ フィルター列を削除します。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
+  マージフィルターを削除します。 **sp_dropmergefilter** 、削除するマージフィルターに定義されているすべてのマージフィルター列を削除します。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースに対して実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -39,38 +39,38 @@ sp_dropmergefilter [ @publication= ] 'publication', [ @article= ] 'article'     
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publication = ] 'publication'` パブリケーションの名前です。 *パブリケーション* は **sysname** 、既定値はありません。  
+`[ @publication = ] 'publication'`パブリケーションの名前を指定します。 *publication*は**sysname**,、既定値はありません。  
   
-`[ @article = ] 'article'` アーティクルの名前です。 *記事*は**sysname**、既定値はありません。  
+`[ @article = ] 'article'`アーティクルの名前を指定します。 *アーティクル*は**sysname**で、既定値はありません。  
   
-`[ @filtername = ] 'filtername'` 削除するフィルターの名前です。 *filtername*は**sysname**、既定値はありません。  
+`[ @filtername = ] 'filtername'`削除するフィルターの名前を指定します。 *filtername*は**sysname**,、既定値はありません。  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` 有効またはスナップショットを無効にする機能を無効にします。 *更によって*は、**ビット**、既定値は、 **0**します。  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`スナップショットを無効にする機能を有効または無効にします。 *force_invalidate_snapshot*は**ビット**であり、既定値は**0**です。  
   
- **0**スナップショットが無効であることをマージ アーティクルへの変更が発生しないことを指定します。  
+ **0**を指定すると、マージアーティクルへの変更によってスナップショットが無効になることはありません。  
   
- **1**マージ アーティクルへの変更、スナップショットを無効になる場合があります。 場合、値があるかどうかは**1**新しいスナップショットを作成する権限が与えられます。  
+ **1**は、マージアーティクルへの変更によってスナップショットが無効になる可能性があることを意味します。 この場合、値が**1**の場合は、新しいスナップショットを作成する権限が与えられます。  
   
-`[ @force_reinit_subscription = ] force_reinit_subscription` 有効または無効としてサブスクリプションを設定する機能を無効にします。 *更によって*は、**ビット**、既定値は、 **0**します。  
+`[ @force_reinit_subscription = ] force_reinit_subscription`サブスクリプションを無効としてマークする機能を有効または無効にします。 *force_reinit_subscription*は**ビット**であり、既定値は**0**です。  
   
- **0**無効になるサブスクリプションをマージ アーティクル フィルターへの変更が発生しないことを指定します。  
+ **0**を指定すると、マージアーティクルフィルターへの変更によってサブスクリプションが無効になることはありません。  
   
- **1**と、無効であるサブスクリプションのマージ アーティクルのフィルターを変更することを意味します。  
+ **1**は、マージアーティクルフィルターへの変更によってサブスクリプションが無効になることを意味します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>コメント  
- **sp_dropmergefilter**はマージ レプリケーションで使用します。  
+## <a name="remarks"></a>解説  
+ **sp_dropmergefilter**は、マージレプリケーションで使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
- メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_dropmergefilter**します。  
+ **Sp_dropmergefilter**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [パブリケーションとアーティクルのプロパティの変更](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
- [sp_addmergefilter (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   
- [sp_changemergefilter (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changemergefilter-transact-sql.md)   
- [sp_helpmergefilter &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md)   
- [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [sp_addmergefilter &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   
+ [sp_changemergefilter &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changemergefilter-transact-sql.md)   
+ [sp_helpmergefilter &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md)   
+ [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

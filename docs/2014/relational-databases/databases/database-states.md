@@ -27,10 +27,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5b6e2072e06e1ea5d61802a4c6a006737bc04762
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62871698"
 ---
 # <a name="database-states"></a>データベースの状態
@@ -39,7 +39,7 @@ ms.locfileid: "62871698"
 ## <a name="database-state-definitions"></a>データベースの状態の定義  
  次の表では、データベースの状態を定義します。  
   
-|状態|定義|  
+|State|定義|  
 |-----------|----------------|  
 |ONLINE|データベースにアクセスできます。 復旧時に行われる元に戻すフェーズが完了していなくても、プライマリ ファイル グループはオンラインです。|  
 |OFFLINE|データベースは使用できません。 ユーザーの明示的な操作によってデータベースがオフラインになり、ユーザーが新たな操作を行うまでオフラインのままになります。 たとえば、ファイルを新しいディスクに移動するために、データベースをオフラインにできます。 移動の完了後に、データベースをオンラインに戻します。|  

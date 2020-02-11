@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 197d3e1d36f8513821cec9630cade8f52681a43d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63154664"
 ---
 # <a name="sqlfreehandle"></a>SQLFreeHandle
-  手動コミット モードで呼び出して**SQLFreeHandle**ステートメントでは、開いているトランザクションがあるハンドルによりの保留中のデータベースに変更のロールバックされます。 呼び出す**SQLFreeHandle**ステートメントでハンドル常に開いているカーソルを閉じて破棄保留中の結果、ステートメント ハンドルに関連付けられたすべてのリソースを解放します。  
+  手動コミットモードでは、トランザクションが開いているステートメントハンドルで**Sqlfreehandle**を呼び出すと、データベースに対する保留中の変更がロールバックされます。 ステートメントハンドルで**Sqlfreehandle**を呼び出すと、開いているカーソルが常に閉じられ、保留中の結果は破棄され、ステートメントハンドルに関連付けられているすべてのリソースが解放されます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SQLFreeHandle 関数](https://go.microsoft.com/fwlink/?LinkId=59345)   
  [ODBC API 実装の詳細](odbc-api-implementation-details.md)  
   

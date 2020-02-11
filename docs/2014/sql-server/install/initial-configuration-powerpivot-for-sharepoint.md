@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: bc9b053b62a19cbe2c234f87010ae2a9652fb95c
-ms.sourcegitcommit: 381595e990f2294dbf324ef31071e2dd2318b8dd
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74200433"
 ---
 # <a name="initial-configuration-powerpivot-for-sharepoint"></a>初期構成 (PowerPivot for SharePoint)
@@ -77,7 +77,7 @@ ms.locfileid: "74200433"
   
 5.  [**配置先**] で、PowerPivot 機能のサポートを追加する SharePoint web アプリケーションを選択します。  
   
-6.  [**OK**] をクリックすると、  
+6.  **[OK]** をクリックします。  
   
 7.  PowerPivot データ アクセスをサポートする他の SharePoint Web アプリケーションに対して、この手順を繰り返します。  
   
@@ -141,7 +141,7 @@ ms.locfileid: "74200433"
   
 7.  チェック ボックスをオンのままにして、このサービス アプリケーション プロキシを既定のサービス接続リストに追加します。  
   
-8.  [**OK**] をクリックすると、  
+8.  **[OK]** をクリックします。  
   
 9. 作成した Excel Services アプリケーションをクリックします。  
   
@@ -153,7 +153,7 @@ ms.locfileid: "74200433"
   
 13. PowerPivot ギャラリーで個々のワークシートのプレビューイメージを許可するには、[**データ更新時に警告**する] チェックボックスをオフにします。 警告とブックの設定で、ファイルを開くときに更新する動作が指定されていると、ブックのページではなく警告の単一のプレビュー イメージが表示されることがあります。  
   
-14. [**OK**] をクリックすると、  
+14. **[OK]** をクリックします。  
   
 ##  <a name="SSS"></a>手順 5: Secure Store Service の有効化とデータ更新の構成  
  PowerPivot for SharePoint で資格情報とデータ更新用の自動実行アカウントを格納するには、Secure Store Service が必要です。 Secure Store Service が既に有効になっているかどうかを確認するには、サービス アプリケーションの一覧に表示されているかどうかを確認します。  
@@ -196,7 +196,7 @@ ms.locfileid: "74200433"
   
 4.  パス フレーズを入力し、そのパス フレーズを確認します。 パス フレーズは、Secure Store 共有サービス アプリケーションを追加するために使用されます。  
   
-5.  [**OK**] をクリックすると、  
+5.  **[OK]** をクリックします。  
   
 ##### <a name="part-3-configure-the-unattended-powerpivot-data-refresh-account"></a>作業 3: 自動 PowerPivot データ更新アカウントの構成  
  データ更新時の外部データ アクセスのために、PowerPivot データ アクセスに対する自動データ更新アカウントの作成が必要になることがよくあります。 たとえば、Kerberos が有効になっていない場合、外部データ ソースに接続するには、PowerPivot サービスで使用できる自動アカウントを作成する必要があります。  
@@ -223,8 +223,7 @@ ms.locfileid: "74200433"
   
 4.  [ **PowerPivot 統合サイトコレクション機能**] が表示されるまでページを下にスクロールします。  
   
-5.  
-  **[アクティブ化]** をクリックします。  
+5.  **[アクティブ化]** をクリックします。  
   
 6.  各サイトを開き、[**サイトの操作**] をクリックして、追加のサイトコレクションに対してを繰り返します。  
   
