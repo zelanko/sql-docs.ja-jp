@@ -1,5 +1,5 @@
 ---
-title: 作成して、プロパティ値 (MDX) を使用して |Microsoft Docs
+title: プロパティ値の作成と使用 (MDX) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1be27b268e46a874678618104c199ae294f392f9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086688"
 ---
 # <a name="creating-and-using-property-values-mdx"></a>プロパティ値の作成および使用 (MDX)
@@ -27,17 +27,17 @@ ms.locfileid: "66086688"
   
  固有プロパティとユーザー定義プロパティは、以下のレベルで使用できます。  
   
- **メンバー プロパティ**  
+ **メンバーのプロパティ**  
  メンバー プロパティは、各組内の各メンバーに関する基本的な情報を対象とします。 基本的な情報には、メンバー名、親レベル、子の数などが含まれます。  
   
  メンバー プロパティとその使用方法については、「[メンバー プロパティの使用 (MDX)](multidimensional-models/mdx/mdx-member-properties.md)」を参照してください。  
   
- **セルのプロパティ**  
+ **セル プロパティ**  
  セル プロパティには、キューブなどの多次元データ ソース内のセルの内容や書式に関する情報が含まれます。  
   
  メンバー プロパティとその使用方法については、「[セル プロパティの使用 (MDX)](multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [MDX クエリの基礎 &#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 67df7c541b0c664f200f6cf77affc0c809dbc719
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62736355"
 ---
 # <a name="copy-columns-from-one-table-to-another-database-engine"></a>テーブル間での列のコピー (データベース エンジン)
@@ -29,9 +29,9 @@ ms.locfileid: "62736355"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
--   **列をコピーする方法:**  
+-   **列を併置するために使用するもの:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -72,16 +72,18 @@ ms.locfileid: "62736355"
   
 3.  **[クエリ デザイナー]** メニューの **[クエリ タイプの変更]** をポイントし、 **[結果の挿入]** をクリックします。  
   
-4.  **[挿入先のテーブル選択]** ダイアログ ボックスで、データのコピー先のテーブルを選択し、 **[OK]** をクリックします。  
+4.  
+  **[挿入先のテーブル選択]** ダイアログ ボックスで、データのコピー先のテーブルを選択し、 **[OK]** をクリックします。  
   
      同じテーブル内で行をコピーする場合は、コピー先テーブルと同じコピー元テーブルを追加します。  
   
     > [!NOTE]  
-    >  **[クエリ デザイナー]** は、更新できるテーブルおよびビューを事前に判別できません。 そのため、 **[挿入先のテーブル選択]** ダイアログ ボックスのテーブルのボックスには、クエリを実行するデータ接続で使用できるテーブルおよびビューがすべて表示されます。行をコピーできないテーブルおよびビューも表示されます。  
+    >  **クエリデザイナー**では、更新できるテーブルおよびビューを事前に判断することはできません。 そのため、 **[挿入先のテーブル選択]** ダイアログ ボックスのテーブルのボックスには、クエリを実行するデータ接続で使用できるテーブルおよびビューがすべて表示されます。行をコピーできないテーブルおよびビューも表示されます。  
   
 5.  ダイアグラム ペインの本体を右クリックし、ショートカット メニューの **[テーブルの追加]** をクリックします。  
   
-6.  **[テーブルの追加]** ダイアログ ボックスで、データのコピー元の各テーブルを選択し、 **[追加]** をクリックし、 **[閉じる]** をクリックします。  
+6.  
+  **[テーブルの追加]** ダイアログ ボックスで、データのコピー元の各テーブルを選択し、 **[追加]** をクリックし、 **[閉じる]** をクリックします。  
   
      テーブルが省略形でダイアグラム ペインに表示されます。  
   
@@ -93,11 +95,12 @@ ms.locfileid: "62736355"
   
      検索条件を指定しなかった場合は、コピー元テーブルのすべての行がコピー先テーブルにコピーされます。  
   
-10. 集計情報をコピーする場合は、 **[グループ化]** を指定します。 詳細については、「[テーブルにあるすべての行の値の要約または集計 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/summarize-or-aggregate-values-for-all-rows-in-a-table-visual-database-tools.md)」を参照してください。  
+10. 概要情報をコピーする場合は、[**グループ化**] オプションを指定します。 詳細については、「[テーブルにあるすべての行の値の要約または集計 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/summarize-or-aggregate-values-for-all-rows-in-a-table-visual-database-tools.md)」を参照してください。  
   
-11. **[SQL の実行]** ボタンをクリックしてクエリを実行します。  
+11. 
+  **[SQL の実行]** ボタンをクリックしてクエリを実行します。  
   
-     結果の挿入クエリを実行しても、 [結果ペイン](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)に結果は表示されません。 代わりに、コピーされた行数を示すメッセージが表示されます。  
+     結果の挿入クエリを実行しても、結果[ペイン](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)に結果は報告されません。 代わりに、コピーされた行数を示すメッセージが表示されます。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   

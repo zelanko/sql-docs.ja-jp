@@ -1,5 +1,5 @@
 ---
-title: テーブル表現 (テーブル) |Microsoft Docs
+title: テーブル表現 (表形式) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c733fbf1e8a075d0d240f5cb69d888310fc6009f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62757702"
 ---
 # <a name="tables-representation-tabular"></a>テーブル表現 (テーブル)
@@ -27,7 +27,7 @@ ms.locfileid: "62757702"
   
  実際の操作手順では、他のオブジェクトを定義する前にデータ ソース ビューを作成する必要があります。 データ ソース ビュー オブジェクトには、データ ソース内のすべての該当オブジェクトのマッピングが含まれます。 リレーショナル モデルのマッピングは、.NET DataSet オブジェクトとしてデータ ソース ビューに埋め込まれ、DSV の Schema プロパティに格納されます。  
   
- 次のコード スニペットは、SQL クライアント接続文字列、表形式モデル、およびデータの名前を持つ newDataSourceViewName 変数で表現するリレーショナル モデルのすべてのテーブルにマップされる Select ステートメントのディクショナリがある前提としています。ソース ビュー (通常はリレーショナル データベースの名前)。  
+ 次のコードスニペットは、SQL クライアント接続文字列、表形式モデルで表現するリレーショナルモデル内のすべてのテーブルにマップされる Select ステートメントのディクショナリ、およびデータの名前を持つ変数 newDataSourceViewName を使用していることを前提としています。ソースビュー (通常はリレーショナルデータベースの名前)。  
   
 ```  
   
@@ -81,11 +81,11 @@ mdxScript.Commands.Add(new AMO.Command(initialCommand.ToString()));
   
 3.  ディメンション属性を作成し、RowNumber への一対多のリレーションシップでマークします。  
   
-4.  キューブ ディメンションにディメンションを追加します。  
+4.  ディメンションをキューブディメンションに追加します。  
   
 5.  テーブルも表すメジャー グループを作成します。  
   
-6.  ディメンションをメジャー グループを追加します。  
+6.  ディメンションをメジャーグループに追加します。  
   
 7.  メジャー グループに AMO の既定のメジャー オブジェクトを作成します。 AMO メジャー オブジェクトはここでしか使用しません。テーブル モデルの計算されるメジャーは、AMO MdxScripts["MdxScript"] オブジェクトで定義します。  
   

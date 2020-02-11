@@ -19,10 +19,10 @@ ms.assetid: 2085d9fc-828c-453e-82ec-b54ed8347ae5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f1a8480b7e512c697f3645006d453866963b81aa
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72289403"
 ---
 # <a name="sysdm_os_latch_stats-transact-sql"></a>dm_os_latch_stats (Transact-sql)
@@ -31,22 +31,22 @@ ms.locfileid: "72289403"
 クラス別に分類されたすべてのラッチ待機に関する情報を返します。 
   
 > [!NOTE]  
-> [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] または [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]から呼び出すには、「 **sys. dm_pdw_nodes_os_latch_stats**」という名前を使用します。  
+> またはから[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]これを[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]呼び出すには、 **dm_pdw_nodes_os_latch_stats**という名前を使用します。  
   
 |列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
-|latch_class|**nvarchar(120)**|ラッチクラスの名前。|  
+|latch_class|**nvarchar (120)**|ラッチクラスの名前。|  
 |waiting_requests_count|**bigint**|このクラスのラッチでの待機の数。 このカウンターは、ラッチ待機の開始時にインクリメントされます。|  
 |wait_time_ms|**bigint**|クラス内のラッチに対する合計待機時間 (ミリ秒単位)。<br /><br /> **注:** この列は、ラッチ待機中、およびラッチ待機の終了時に5分ごとに更新されます。|  
 |max_wait_time_ms|**bigint**|メモリ オブジェクトがラッチを待機した最大時間。 この値が著しく大きい場合、内部デッドロックを示している可能性があります。|  
 |pdw_node_id|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> このディストリビューションが配置されているノードの識別子。|  
   
 ## <a name="permissions"></a>アクセス許可  
-[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]では、`VIEW SERVER STATE` のアクセス許可が必要です。   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium レベルでは、データベースの `VIEW DATABASE STATE` アクセス許可が必要です。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard レベルと Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
+で[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]は、 `VIEW SERVER STATE`権限が必要です。   
+Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルでは、データベース`VIEW DATABASE STATE`の権限が必要です。 Standard [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
   
-## <a name="remarks"></a>Remarks  
- sys.dm_os_latch_stats を使用すると、別のラッチ クラスの待機数や待機時間を相対的に確認することにより、ラッチの競合の発生源を特定できます。 場合によっては、ラッチの競合を解決または減らすことができます。 ただし、[!INCLUDE[msCoName](../../includes/msconame-md.md)] カスタマーサポートサービスに問い合わせる必要がある場合もあります。  
+## <a name="remarks"></a>解説  
+ sys.dm_os_latch_stats を使用すると、別のラッチ クラスの待機数や待機時間を相対的に確認することにより、ラッチの競合の発生源を特定できます。 場合によっては、ラッチの競合を解決または減らすことができます。 ただし、場合によっては、カスタマーサポートサービスに問い合わせる[!INCLUDE[msCoName](../../includes/msconame-md.md)]必要があります。  
   
 次のように `DBCC SQLPERF` を使用すると、sys.dm_os_latch_stats の内容をリセットできます。  
   
@@ -58,23 +58,24 @@ GO
  これにより、すべてのカウンターが0にリセットされます。  
   
 > [!NOTE]  
->  これらの統計は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が再起動されると保存されません。 すべてのデータは、統計が最後にリセットされた後、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が開始されてから累積されます。  
+>  これらの統計は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が再起動されると保存されません。 すべてのデータは、統計が最後にリセット[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]された後、またはが開始されてから累積されます。  
   
 ## <a name="latches"></a>両側  
- ラッチは、さまざまな [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントによって使用される、ロックに似た内部軽量同期オブジェクトです。 ラッチは主に、バッファーやファイルアクセスなどの操作中にデータベースページを同期するために使用されます。 各ラッチは、1 つのアロケーション ユニットに関連付けられています。 
+ ラッチは、さまざまな[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]コンポーネントによって使用される、ロックに似た内部軽量同期オブジェクトです。 ラッチは主に、バッファーやファイルアクセスなどの操作中にデータベースページを同期するために使用されます。 各ラッチは、1 つのアロケーション ユニットに関連付けられています。 
   
  ラッチが別のスレッドによって、競合するモードで保持されており、ラッチ要求がすぐに許可されない場合は、ラッチ待機が発生します。 ロックとは異なり、ラッチは、書き込み操作であっても、操作の直後に解放されます。  
   
  ラッチは、コンポーネントと使用法に基づいてクラスにグループ化されます。 特定クラスのラッチは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス内に、任意の時点でいくつでも存在できます。  
   
 > [!NOTE]  
-> `sys.dm_os_latch_stats` は、すぐに許可されたか、待機せずに失敗したラッチ要求を追跡しません。  
+> `sys.dm_os_latch_stats`は、すぐに許可された、または待機せずに失敗したラッチ要求を追跡しません。  
   
  次の表に、さまざまなラッチクラスの簡単な説明を示します。  
   
 |ラッチクラス|[説明]|  
 |-----------------|-----------------|  
-|ALLOC_CREATE_RINGBUF|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内部で使用され、割り当てリング バッファーの作成の同期を初期化します。|  
+|ALLOC_CREATE_RINGBUF|
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内部で使用され、割り当てリング バッファーの作成の同期を初期化します。|  
 |ALLOC_CREATE_FREESPACE_CACHE|ヒープの内部空き領域キャッシュの同期を初期化するために使用されます。|  
 |ALLOC_CACHE_MANAGER|内部一貫性テストの同期に使用されます。|  
 |ALLOC_FREESPACE_CACHE|ヒープおよびバイナリラージオブジェクト (Blob) で使用可能な領域があるページのキャッシュへのアクセスを同期するために使用されます。 複数の接続がヒープまたは BLOB に同時に行を挿入しようとすると、このクラスのラッチの競合が発生する可能性があります。 このような競合を少なくするには、オブジェクトをパーティション分割します。 各パーティションには独自のラッチがあります。 パーティション分割では、複数のラッチに挿入が分散されます。|  
@@ -171,7 +172,7 @@ GO
 |SERVICE_BROKER_MIRROR_ROUTE|内部使用のみです。|  
 |TRACE_ID|内部使用のみです。|  
 |TRACE_AUDIT_ID|内部使用のみです。|  
-|trace|内部使用のみです。|  
+|TRACE|内部使用のみです。|  
 |TRACE_CONTROLLER|内部使用のみです。|  
 |TRACE_EVENT_QUEUE|内部使用のみです。|  
 |TRANSACTION_DISTRIBUTED_MARK|内部使用のみです。|  
@@ -194,6 +195,6 @@ GO
 |KTM_VIRTUAL_CLOCK|内部使用のみです。|  
   
 ## <a name="see-also"></a>参照  
-[DBCC SQLPERF &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)       
-[オペレーティングシステム関連の動的管理ビュー &#40;の SQL Server transact-sql&#41; ](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)       
+[DBCC SQLPERF &#40;Transact-sql&#41;](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)       
+[SQL Server オペレーティングシステム関連の動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)       
 [SQL Server の Latches オブジェクト](../../relational-databases/performance-monitor/sql-server-latches-object.md)      

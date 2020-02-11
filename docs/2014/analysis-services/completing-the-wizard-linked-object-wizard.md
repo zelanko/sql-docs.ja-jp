@@ -1,5 +1,5 @@
 ---
-title: ウィザードの完了 (リンク オブジェクト ウィザード) |Microsoft Docs
+title: '[ウィザードの完了] (リンクオブジェクトウィザード)Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2576d5775c2effc8d45565c52c78114ac5349f1f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66087549"
 ---
 # <a name="completing-the-wizard-linked-object-wizard"></a>[ウィザードの完了] (リンク オブジェクト ウィザード)
+  
   **[ウィザードの完了]** ページを使用すると、ウィザードの前のページの指定を確認できます。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **プレビュー**  
  リンクまたはインポート用に選択されたオブジェクトを表示します。  
   

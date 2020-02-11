@@ -14,18 +14,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a136e3b2064e42e6bae7cfb39f059dbaa41a8410
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62667337"
 ---
 # <a name="linkedservers-rowset-ole-db"></a>LINKEDSERVERS 行セット (OLE DB)
+  
   **LINKEDSERVERS** 行セットは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分散クエリに参加できる、組織のデータ ソースを列挙します。  
   
- **LINKEDSERVERS** 行セットは、次の列で構成されます。  
+ 
+  **LINKEDSERVERS** 行セットは、次の列で構成されます。  
   
-|列名|型を表すインジケーター|説明|  
+|列名|型を表すインジケーター|[説明]|  
 |-----------------|--------------------|-----------------|  
 |SVR_NAME|DBTYPE_WSTR|リンク サーバーの名前。|  
 |SVR_PRODUCT|DBTYPE_WSTR|メーカーなどの名前。リンク サーバーの名前で表されるデータ ストアの種類を識別します。|  

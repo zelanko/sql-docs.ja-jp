@@ -1,5 +1,5 @@
 ---
-title: Windows 同期マネージャー (Windows Synchronization Manager) を使用してサブスクリプションの同期 |Microsoft Docs
+title: Windows 同期マネージャーを使用したサブスクリプションの同期 (Windows 同期マネージャー) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,27 +14,30 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 04b1c5322408f66ab2a4023e3d215cc7e669eab6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62745761"
 ---
 # <a name="synchronize-a-subscription-using-windows-synchronization-manager-windows-synchronization-manager"></a>Windows 同期マネージャーを使用したサブスクリプションの同期 (Windows 同期マネージャー)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 同期マネージャーは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が同期マネージャーと同じコンピューターで実行されている場合には、サブスクリプションを Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パブリケーションに同期させるためだけに使用できます (オフライン ファイルや Web ページを同期するためにも使用できます)。 同期マネージャーを使用するには、以下の手順を実行します。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]Windows 同期マネージャーは、が同期マネージャーと同じコンピューター上[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で実行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]されている場合にのみ、Microsoft パブリケーションへのサブスクリプションを同期するために使用できます (オフラインファイルや Web ページの同期にも使用できます)。 同期マネージャーを使用するには、以下の手順を実行します。  
   
-1.  **[サブスクリプションのプロパティ - \<サブスクライバー>: \<SubscriptionDatabase>]** ダイアログ ボックスで、Windows 同期マネージャーを使用したプル サブスクリプションの同期を有効にします。 このダイアログ ボックスへのアクセスの詳細については、「[プル サブスクリプションのプロパティの表示または変更](view-and-modify-pull-subscription-properties.md)」を参照してください。  
+1.  
+  **[サブスクリプションのプロパティ - \<Subscriber>: \<SubscriptionDatabase>]** ダイアログ ボックスで、Windows 同期マネージャーを使用したプル サブスクリプションの同期を有効にします。 このダイアログ ボックスへのアクセスの詳細については、「[プル サブスクリプションのプロパティの表示または変更](view-and-modify-pull-subscription-properties.md)」を参照してください。  
   
 2.  Windows の **[スタート]** メニューから、同期マネージャーにアクセスします。  
   
  同期マネージャーでは、マージ サブスクリプションでインタラクティブ競合回避モジュールを使用できます。 一般に、同期の際に検出された競合は自動的に回避されますが、対話型の競合回避が有効になっていると、同期の際にユーザーが競合を回避することができます。 同期が Windows 同期マネージャーの外部で (スケジュールされた同期、または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] かレプリケーション モニターでの要求時同期として) 実行される場合、競合は、アーティクルに指定された競合回避モジュールに従って、ユーザーの介入なしに自動的に解決されます。  
   
 > [!NOTE]  
->  [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] および [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)]以降では、Windows 同期マネージャーの 64 ビット版は 32 ビット サブスクリプションを検出することはできません。  
+>  
+  [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] および [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)]以降では、Windows 同期マネージャーの 64 ビット版は 32 ビット サブスクリプションを検出することはできません。  
   
 ### <a name="to-enable-the-synchronization-of-pull-subscriptions-with-windows-synchronization-manager"></a>Windows 同期マネージャーを使用したプル サブスクリプションの同期を有効化するには  
   
-1.  **[サブスクリプションのプロパティ - \<サブスクライバー>:\<SubscriptionDatabase>]** ダイアログ ボックスの [全般] ページで、 **[Windows 同期マネージャーを使用]** オプションの値として **[有効化]** を選択します。  
+1.  
+  **[サブスクリプションのプロパティ - **Subscriber>: **SubscriptionDatabase>]\< ダイアログ ボックスの \<[全般]** ページで、**[Windows 同期マネージャーを使用]** オプションの値として **[有効化]** を選択します。  
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -44,19 +47,25 @@ ms.locfileid: "62745761"
   
     -   Internet Explorer で、 **[ツール]** メニューの **[同期]** をクリックします。  
   
-    -   **[スタート]** ボタンをクリックし、 **[プログラム]** または **[すべてのプログラム]** をポイントします。 **[アクセサリ]** をポイントし、 **[同期]** をクリックします。  
+    -   
+  **[スタート]** ボタンをクリックし、 **[プログラム]** または **[すべてのプログラム]** をポイントします。 **[アクセサリ]** をポイントし、 **[同期]** をクリックします。  
   
-    -   **[スタート]** メニューの **[ファイル名を指定して実行]** **実行**ダイアログ ボックスに「`mobsync.exe`で、**オープン**フィールドをクリックしてして **[ok]** 。  
+    -   
+  **[スタート]** メニューの **[ファイル名を指定して実行]** [ファイル**** 名を選択して`mobsync.exe`実行] ダイアログボックスで、[**開く**] フィールドに「」と入力し、[ **OK**] をクリックします。  
   
-2.  **[同期する項目]** ダイアログ ボックスで、同期するサブスクリプションを選択します。 サブスクリプションは、そのコンピューターにインストールされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの下に表示されます。  
+2.  
+  **[同期する項目]** ダイアログ ボックスで、同期するサブスクリプションを選択します。 サブスクリプションは、そのコンピューターにインストールされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの下に表示されます。  
   
-3.  **[同期]** をクリックします。  
+3.  
+  **[同期]** をクリックします。  
   
 ### <a name="to-reinitialize-a-pull-subscription-with-synchronization-manager"></a>同期マネージャーを使用してプル サブスクリプションを再初期化するには  
   
-1.  **[同期する項目]** ダイアログ ボックスでサブスクリプションを選択し、次に **[プロパティ]** をクリックします。  
+1.  
+  **[同期する項目]** ダイアログ ボックスでサブスクリプションを選択し、次に **[プロパティ]** をクリックします。  
   
-2.  **[SQL Server サブスクリプション プロパティ]** ダイアログ ボックスで、 **[サブスクリプションの再初期化]** をクリックします。  
+2.  
+  **[SQL Server サブスクリプション プロパティ]** ダイアログ ボックスで、 **[サブスクリプションの再初期化]** をクリックします。  
   
 3.  **[はい]** をクリックします。  
   
@@ -69,15 +78,16 @@ ms.locfileid: "62745761"
   
 ### <a name="to-set-properties-for-a-pull-subscription-in-synchronization-manager"></a>同期マネージャーでプル サブスクリプションのプロパティを設定するには  
   
-1.  **[同期する項目]** ダイアログ ボックスでサブスクリプションを選択し、次に **[プロパティ]** をクリックします。  
+1.  
+  **[同期する項目]** ダイアログ ボックスでサブスクリプションを選択し、次に **[プロパティ]** をクリックします。  
   
 2.  以下のタブのプロパティを参照および変更します。  
   
-    -   **[識別]**  
+    -   **番号**  
   
-    -   **[サブスクライバー ログイン]** 、 **[ディストリビューター ログイン]** 、および **[パブリッシャー ログイン]** (マージ レプリケーションの場合のみ)  
+    -   [**サブスクライバーログイン**]、[**ディストリビューターログイン**]、および [**パブリッシャーログイン**] (マージレプリケーションの場合のみ)  
   
-    -   **[Web サーバー情報]** (SQL Server 2005 以降を実行しているサブスクライバー上のマージ サブスクリプションの場合)  
+    -   **Web サーバー情報**(SQL Server 2005 以降を実行しているサブスクライバー上のマージサブスクリプション用)  
   
     -   **その他**  
   
@@ -87,11 +97,14 @@ ms.locfileid: "62745761"
   
 ### <a name="to-remove-a-pull-subscription-from-synchronization-manager"></a>同期マネージャーからプル サブスクリプションを削除するには  
   
-1.  **[同期する項目]** ダイアログ ボックスでサブスクリプションを選択し、次に **[プロパティ]** をクリックします。  
+1.  
+  **[同期する項目]** ダイアログ ボックスでサブスクリプションを選択し、次に **[プロパティ]** をクリックします。  
   
-2.  **[SQL Server サブスクリプション プロパティ]** ダイアログ ボックスで、 **[サブスクリプションの削除]** をクリックします。  
+2.  
+  **[SQL Server サブスクリプション プロパティ]** ダイアログ ボックスで、 **[サブスクリプションの削除]** をクリックします。  
   
-3.  **[サブスクリプションの削除]** ダイアログ ボックスで、オプションを選択します。  
+3.  
+  **[サブスクリプションの削除]** ダイアログ ボックスで、オプションを選択します。  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -103,13 +116,13 @@ ms.locfileid: "62745761"
   
 3.  必要に応じて、インタラクティブ競合回避モジュールに表示された任意の列を編集し、以下のボタンのいずれかをクリックして競合を回避します。  
   
-    -   **[推奨設定を優先]**  
+    -   **推奨事項を受け入れる**  
   
-    -   **[パブリッシャーを優先]**  
+    -   **パブリッシャーを受け入れる**  
   
-    -   **[サブスクライバーを優先]**  
+    -   **サブスクライバーを受け入れる**  
   
-    -   **[残りの競合を自動的に解決]** (それ以上入力を行わなくても、現在のすべての競合が回避されます)  
+    -   **すべてを自動的に解決**する (現在のすべての競合は、追加の入力なしで解決されます)  
   
      選択した行がパブリッシャーやサブスクライバーに適用され、以降の同期の際にトポロジ内の他のノードに反映されます。  
   

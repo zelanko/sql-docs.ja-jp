@@ -1,5 +1,5 @@
 ---
-title: サーバー グループ内の Analysis Services インスタンスの登録 |Microsoft Docs
+title: Analysis Services インスタンスをサーバーグループに登録する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 29ecf740948d9e02d258a5daa03859d3867eb463
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079646"
 ---
 # <a name="register-an-analysis-services-instance-in-a-server-group"></a>サーバー グループへの Analysis Services インスタンスの登録
   多数の Analysis Services サーバー インスタンスがある場合、サーバー管理をより容易にするために Management Studio 内にサーバー グループを作成できます。 サーバー グループの目的は、管理ワークスペース内の関連するサーバーのグループで近接性を提供することです。 たとえば、10 個の独立した Analysis Services インスタンスを管理する必要があるとします。 サーバー モード、連続稼動条件、または部門や地域によってそれらをグループ化することで、同じ特徴を持つインスタンスをより簡単に表示および接続することができます。 サーバーがどのように使用されるかを思い出すために役立つ情報を追加することもできます。  
   
- ![登録済みサーバー ペインは、メンバー サーバーと](../media/ssas-ssms-registerserver.gif "とメンバー サーバーの登録済みサーバー ウィンドウ")  
+ ![[登録済みサーバー] ペインとメンバー サーバー](../media/ssas-ssms-registerserver.gif "[登録済みサーバー] ペインとメンバー サーバー")  
   
  サーバー グループは、階層構造で作成することができます。 ローカル サーバー グループはルート ノードです。 これには、ローカル コンピューターで実行される Analysis Services のインスタンスが常に含まれます。 リモート サーバーは、ローカル グループを含む任意のグループに追加できます。  
   

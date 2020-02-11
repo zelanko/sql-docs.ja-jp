@@ -1,5 +1,5 @@
 ---
-title: ロジスティック回帰モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング) |Microsoft Docs
+title: ロジスティック回帰モデルのマイニングモデルコンテンツ (Analysis Services データマイニング) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,14 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b463035cc83fafd2b283d85a577616fa962fcd1c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083621"
 ---
 # <a name="mining-model-content-for-logistic-regression-models-analysis-services---data-mining"></a>ロジスティック回帰モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)
-  このトピックでは、Microsoft ロジスティック回帰アルゴリズムを使用するモデルに固有のマイニング モデル コンテンツについて説明します。 すべてのモデルの種類に共通の統計および構造を解釈する方法の説明、およびマイニング モデル コンテンツに関連する用語の一般的な定義については、「[マイニング モデル コンテンツ (Analysis Services - データ マイニング)](mining-model-content-analysis-services-data-mining.md)」を参照してください。  
+  このトピックでは、Microsoft ロジスティック回帰アルゴリズムを使用するモデルに固有のマイニング モデル コンテンツについて説明します。 すべてのモデルの種類に共通の統計および構造を解釈する方法の説明、およびマイニング モデル コンテンツに関連する用語の一般的な定義については、「 [マイニング モデル コンテンツ (Analysis Services - データ マイニング)](mining-model-content-analysis-services-data-mining.md)」を参照してください。  
   
 ## <a name="understanding-the-structure-of-a-logistic-regression-model"></a>ロジスティック回帰モデルの構造について  
  ロジスティック回帰モデルは、Microsoft ニューラル ネットワーク アルゴリズムで、非表示ノードを取り除くようモデルを制約するパラメーターを使用して作成されます。 そのため、ロジスティック回帰モデルの全体的な構造は、ニューラル ネットワークの全体的な構造とほぼ同じです。各モデルには、モデルとそのメタデータを表す 1 つの親ノードと、モデルで使用される入力に関する説明的な統計情報を提供する特殊なマージナル統計ノード (NODE_TYPE = 24) があります。  
@@ -51,7 +51,7 @@ ms.locfileid: "66083621"
  ATTRIBUTE_NAME  
  このノードに対応する属性の名前。  
   
-|ノード|コンテンツ|  
+|Node|コンテンツ|  
 |----------|-------------|  
 |モデル ルート|空白|  
 |マージナル統計|空白|  
@@ -62,7 +62,7 @@ ms.locfileid: "66083621"
 |出力ノード|出力属性名|  
   
  NODE_NAME  
- ノードの名前。 現在、この列には NODE_UNIQUE_NAME と同じ値が格納されていますが、将来のリリースで変更される可能性があります。  
+ ノード名。 現在、この列には NODE_UNIQUE_NAME と同じ値が格納されていますが、将来のリリースで変更される可能性があります。  
   
  NODE_UNIQUE_NAME  
  ノードの一意の名前。  
@@ -72,9 +72,9 @@ ms.locfileid: "66083621"
  NODE_TYPE  
  ロジスティック回帰モデルでは、次のノードの種類が出力されます。  
   
-|ノードの種類の ID|説明|  
+|ノードの種類の ID|[説明]|  
 |------------------|-----------------|  
-|1|モデル。|  
+|1 で保護されたプロセスとして起動されました|モデル。|  
 |17|サブネットワークのオーガナイザー ノード。|  
 |18|入力層のオーガナイザー ノード。|  
 |19|非表示層のオーガナイザー ノード。 非表示層は空です。|  
@@ -89,7 +89,7 @@ ms.locfileid: "66083621"
  CHILDREN_CARDINALITY  
  ノードの子の推定数。  
   
-|ノード|コンテンツ|  
+|Node|コンテンツ|  
 |----------|-------------|  
 |モデル ルート|子ノードの数を示します。1 つ以上のネットワーク、1 つの必須マージナル ノード、および 1 つの必須入力層が含まれます。 たとえば、値が 5 の場合はサブネットワークが 3 つあります。|  
 |マージナル統計|常に 0 です。|  
@@ -107,7 +107,7 @@ ms.locfileid: "66083621"
  NODE_DESCRIPTION  
  ノードについてのわかりやすい説明。  
   
-|ノード|コンテンツ|  
+|Node|コンテンツ|  
 |----------|-------------|  
 |モデル ルート|空白|  
 |マージナル統計|空白|  
@@ -120,7 +120,7 @@ ms.locfileid: "66083621"
  NODE_RULE  
  ノードに埋め込まれたルールの XML による記述。  
   
-|ノード|コンテンツ|  
+|Node|コンテンツ|  
 |----------|-------------|  
 |モデル ルート|空白|  
 |マージナル統計|空白|  
@@ -151,7 +151,7 @@ ms.locfileid: "66083621"
  特定の値に対するトレーニング ケースでのサポートについて情報を得るには、マージナル統計ノードを参照してください。  
   
  MSOLAP_MODEL_COLUMN  
- |ノード|コンテンツ|  
+ |Node|コンテンツ|  
 |----------|-------------|  
 |モデル ルート|空白|  
 |マージナル統計|空白|  
@@ -167,7 +167,7 @@ ms.locfileid: "66083621"
  MSOLAP_NODE_SHORT_CAPTION  
  ロジスティック回帰モデルでは常に空白です。  
   
-##  <a name="bkmk_NodeIDs"></a> ノードの名前と ID の使用  
+##  <a name="bkmk_NodeIDs"></a>ノード名と Id の使用  
  ロジスティック回帰モデルのノードの名前付けでは、モデル内のノード間のリレーションシップに関する追加情報が提供されます。 次の表に、各層のノードに割り当てられる ID の規則を示します。  
   
 |ノードの種類|ノード ID の規則|  
@@ -185,7 +185,7 @@ ms.locfileid: "66083621"
   
 ## <a name="see-also"></a>参照  
  [Microsoft ロジスティック回帰アルゴリズム](microsoft-logistic-regression-algorithm.md)   
- [ニューラル ネットワーク モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [ニューラルネットワークモデルのマイニングモデルコンテンツ &#40;Analysis Services データマイニング&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [ロジスティック回帰モデルのクエリ例](logistic-regression-model-query-examples.md)   
  [Microsoft ロジスティック回帰アルゴリズム テクニカル リファレンス](microsoft-logistic-regression-algorithm-technical-reference.md)  
   

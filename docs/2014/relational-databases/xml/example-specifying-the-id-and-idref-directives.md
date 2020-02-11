@@ -1,5 +1,5 @@
 ---
-title: '例: ID ディレクティブと IDREF ディレクティブの指定 | Microsoft Docs'
+title: '例 : ID ディレクティブと IDREF ディレクティブの指定 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f985745f450b402781685ded5c0a655e3f4e497c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62704831"
 ---
-# <a name="example-specifying-the-id-and-idref-directives"></a>例:ID ディレクティブと IDREF ディレクティブの指定
-  この例は、「 [ELEMENTXSINIL ディレクティブの指定](example-specifying-the-elementxsinil-directive.md) 」の例とほぼ同じで、 クエリで **ID** ディレクティブと **IDREF** ディレクティブを指定している点のみが異なります。 これらのディレクティブは、<`OrderHeader`> 要素と <`OrderDetail`> 要素の **SalesPersonID** 属性の型を上書きします。 これにより、ドキュメント内のリンクが形成されます。 上書きされた型を確認するには、スキーマが必要です。 そのため、このクエリでは、FOR XML 句に **XMLDATA** オプションを指定して、スキーマを取得しています。  
+# <a name="example-specifying-the-id-and-idref-directives"></a>例 : ID ディレクティブと IDREF ディレクティブの指定
+  この例は、「 [ELEMENTXSINIL ディレクティブの指定](example-specifying-the-elementxsinil-directive.md) 」の例とほぼ同じで、 クエリで **ID** ディレクティブと **IDREF** ディレクティブを指定している点のみが異なります。 これらのディレクティブは、< **> 要素と <** > 要素の `OrderHeader`SalesPersonID`OrderDetail` 属性の型を上書きします。 これにより、ドキュメント内のリンクが形成されます。 上書きされた型を確認するには、スキーマが必要です。 そのため、このクエリでは、FOR XML 句に **XMLDATA** オプションを指定して、スキーマを取得しています。  
   
 ```  
 USE AdventureWorks2012;  
@@ -70,7 +70,7 @@ ORDER BY [OrderHeader!1!SalesOrderID!id], [SalesPerson!2!SalesPersonID],
 FOR XML EXPLICIT, XMLDATA  
 ```  
   
- 次に結果の一部を示します。 スキーマでは、**ID** ディレクティブと **IDREF** ディレクティブにより、<`OrderHeader`> 要素と <`OrderDetail`> 要素の **SalesOrderID** 属性の型が上書きされています。 これらのディレクティブを削除すると、スキーマはこれらの属性の元の型を返します。  
+ 次に結果の一部を示します。 スキーマでは、**ID** ディレクティブと **IDREF** ディレクティブにより、< **> 要素と <** > 要素の `OrderHeader`SalesOrderID`OrderDetail` 属性の型が上書きされています。 これらのディレクティブを削除すると、スキーマはこれらの属性の元の型を返します。  
   
 ```  
 <Schema name="Schema1" xmlns="urn:schemas-microsoft-com:xml-data" xmlns:dt="urn:schemas-microsoft-com:datatypes">  

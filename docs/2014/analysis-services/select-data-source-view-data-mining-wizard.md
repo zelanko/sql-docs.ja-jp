@@ -1,5 +1,5 @@
 ---
-title: データ ソース ビュー (データ マイニング ウィザード) を選択します |。Microsoft Docs
+title: '[データソースビューの選択] (データマイニングウィザード)Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,33 +13,34 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5126ab2c44dbd5045af86cda54068b9ec8ed2f03
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069682"
 ---
 # <a name="select-data-source-view-data-mining-wizard"></a>[データ ソース ビューの選択] (データ マイニング ウィザード)
+  
   **[データ ソース ビューの選択]** ページを使用すると、マイニング構造のデータ ソース ビューを選択できます。  
   
 > [!NOTE]  
 >  このページは、ウィザードの **[定義方法の選択]** ページで **[既存のリレーショナル データベースまたはデータ ウェアハウスを使用する]** を選択した場合のみ表示されます。  
   
- **詳細情報。** [データ ソース ビューでは、多次元モデル](multidimensional-models/data-source-views-in-multidimensional-models.md)、[データ マイニング ウィザード&#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)、[リレーショナル マイニング構造の作成](data-mining/create-a-relational-mining-structure.md)  
+ **詳細について**は、「[多次元モデルのデータソースビュー](multidimensional-models/data-source-views-in-multidimensional-models.md)」、「データ[マイニングウィザード &#40;Analysis Services データマイニング&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)」、「[リレーショナルマイニング構造を作成する](data-mining/create-a-relational-mining-structure.md)」を参照してください。  
   
-## <a name="options"></a>および  
- **使用できるデータ ソース ビュー**  
+## <a name="options"></a>オプション  
+ **[使用できるデータ ソース ビュー]**  
  マイニング構造のデータ ソースをクリックします。  
   
- **メタデータ ビュー**  
+ **[メタデータ ビュー]**  
  選択されたデータ ソース ビューのメタデータを表示します。  
   
  **[参照]**  
  クリックすると、 **[データ ソース ビュー]** 表示ダイアログ ボックスが開きます。  
   
-## <a name="see-also"></a>関連項目  
- [データ マイニング ウィザードの F1 ヘルプ&#40;Analysis Services - データ マイニング&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
- [データ マイニング構造の作成&#40;データ マイニング ウィザード&#41;](create-the-data-mining-structure-data-mining-wizard.md)   
- [テーブル型を指定&#40;データ マイニング ウィザード&#41;](specify-table-types-data-mining-wizard.md)  
+## <a name="see-also"></a>参照  
+ [データマイニングウィザードの F1 ヘルプ &#40;Analysis Services データマイニング&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
+ [データマイニング構造 &#40;データマイニングウィザードの作成&#41;](create-the-data-mining-structure-data-mining-wizard.md)   
+ [データマイニングウィザード &#40;テーブルの種類の指定&#41;](specify-table-types-data-mining-wizard.md)  
   
   

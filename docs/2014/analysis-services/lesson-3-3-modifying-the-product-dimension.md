@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ff912ed43048e00f0ed77989a46b3b7d0b111cff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66078841"
 ---
 # <a name="modifying-the-product-dimension"></a>Product ディメンションの変更
@@ -25,13 +25,15 @@ ms.locfileid: "66078841"
   
 #### <a name="to-add-a-named-calculation"></a>名前付き計算を追加するには  
   
-1.  **Adventure Works DW 2012** データ ソース ビューを開くには、ソリューション エクスプローラーの **[データ ソース ビュー]** フォルダーで **[Adventure Works DW 2012]** をダブルクリックします。  
+1.  
+  **Adventure Works DW 2012** データ ソース ビューを開くには、ソリューション エクスプローラーの **[データ ソース ビュー]** フォルダーで **[Adventure Works DW 2012]** をダブルクリックします。  
   
 2.  ダイアグラム ペインの下部で **[Product]** テーブル ヘッダーを右クリックし、 **[新しい名前付き計算]** をクリックします。  
   
-3.  **名前付き計算の作成**ダイアログ ボックスに「`ProductLineName`で、**列名**ボックス。  
+3.  [**名前付き計算の作成**] ダイアログボックス`ProductLineName`で、[**列名**] ボックスに「」と入力します。  
   
-4.  **[式]** ボックスに、次の **CASE** ステートメントを入力するか、またはコピーして貼り付けます。  
+4.  
+  **[式]** ボックスに、次の **CASE** ステートメントを入力するか、またはコピーして貼り付けます。  
   
     ```  
     CASE ProductLine  
@@ -45,7 +47,7 @@ ms.locfileid: "66078841"
   
      この **CASE** ステートメントは、キューブ内の各製品ラインにわかりやすい名前を付けるためのものです。  
   
-5.  クリックして**OK**を作成する、`ProductLineName`名前付き計算します。 場合によっては、しばらく待つ必要があります。  
+5.  [ **OK** ] をクリック`ProductLineName`して、名前付き計算を作成します。 場合によっては、しばらく待つ必要があります。  
   
 6.  **[ファイル]** メニューの **[すべてを保存]** をクリックします。  
   
@@ -55,37 +57,41 @@ ms.locfileid: "66078841"
   
 1.  Product ディメンションのディメンション デザイナーに切り替えます。 これを行うには、ソリューション エクスプローラーの **[ディメンション]** ノードで **[Product]** ディメンションをダブルクリックします。  
   
-2.  **[ディメンション構造]** タブの **[属性]** ペインで、 **[Product Line]** をクリックします。  
+2.  
+  **[ディメンション構造]** タブの **[属性]** ペインで、 **[Product Line]** をクリックします。  
   
-3.  画面の右側にある プロパティ ウィンドウで、 **NameColumn**プロパティ ウィンドウの下部にあるフィールドし、クリックし、参照 ( **.** ) ボタンをクリックする、**名前列** ダイアログ ボックス。 (場合によっては、画面右側の **[プロパティ]** タブをクリックして、[プロパティ] ウィンドウを開く必要があります)。  
+3.  画面の右側にあるプロパティウィンドウで、ウィンドウの下部にある [ **NameColumn** ] プロパティフィールドをクリックし、参照ボタン ([.**..**]) をクリックして、[**名前列**] ダイアログボックスを開きます。 (場合によっては、画面右側の **[プロパティ]** タブをクリックして、[プロパティ] ウィンドウを開く必要があります)。  
   
-4.  選択`ProductLineName`の下部にある、**基になる列**ボックスの一覧をクリックして**OK**。  
+4.  [ `ProductLineName`基になる**列**] ボックスの一覧の下部にあるを選択し、[ **OK**] をクリックします。  
   
-     NameColumn フィールドに、テキスト " **Product.ProductLineName (WChar)** " が表示されるようになりました。 これで、 **Product Line** 属性階層のメンバーが、簡略名ではなく製品ラインの完全な名前で表示されるようになりました。  
+     NameColumn フィールドに、テキスト " **Product.ProductLineName (WChar)**" が表示されるようになりました。 これで、 **Product Line** 属性階層のメンバーが、簡略名ではなく製品ラインの完全な名前で表示されるようになりました。  
   
-5.  **[ディメンション構造]** タブの **[属性]** ペインで、 **[Product Key]** をクリックします。  
+5.  
+  **[ディメンション構造]** タブの **[属性]** ペインで、 **[Product Key]** をクリックします。  
   
-6.  プロパティ ウィンドウ、 **NameColumn**プロパティ フィールドし、参照ボタンをクリックし ( **.** ) ボタンをクリックする、**名前列** ダイアログ ボックス。  
+6.  プロパティウィンドウで、[ **NameColumn** ] プロパティフィールドをクリックし、参照ボタン ([.**..**]) をクリックして、[**名前列**] ダイアログボックスを開きます。  
   
-7.  **[基になる列]** ボックスの一覧で **[EnglishProductName]** を選択し、 **[OK]** をクリックします。  
+7.  
+  **[基になる列]** ボックスの一覧で **[EnglishProductName]** を選択し、 **[OK]** をクリックします。  
   
-     NameColumn フィールドに、テキスト " **Product.EnglishProductName (WChar)** " が表示されるようになりました。  
+     NameColumn フィールドに、テキスト " **Product.EnglishProductName (WChar)**" が表示されるようになりました。  
   
-8.  プロパティ ウィンドウで上にスクロール をクリックして、**名前**プロパティ フィールドと入力し、`Product Name`します。  
+8.  プロパティウィンドウで、上にスクロールし、[ **Name** ] プロパティフィールドをクリックし`Product Name`て「」と入力します。  
   
 ## <a name="creating-a-hierarchy"></a>階層の作成  
   
 #### <a name="to-create-a-hierarchy"></a>階層を作成するには  
   
-1.  **[属性]** ペインの **[Product Line]** 属性を **[階層]** ペインにドラッグします。  
+1.  
+  **[属性]** ペインの **[Product Line]** 属性を **[階層]** ペインにドラッグします。  
   
-2.  ドラッグ、**モデル名**属性を**属性**ペイン、 **\<新しいレベル >** セル、**階層**ウィンドウで、下、**製品ライン**レベル。  
+2.  [**属性**] ペインの [ **Model Name** ] 属性を、[**階層**] ペインの [ **Product Line** ] レベルの下の [ ** \<new level>** ] セルにドラッグします。  
   
-3.  ドラッグ、`Product Name`属性を**属性**ペイン、 **\<新しいレベル >** セル、**階層**下のウィンドウ**モデル名**レベル。 (前のセクションで、Product Key を Product Name に名前変更しました)。  
+3.  [属性`Product Name` ] ペインの**** 属性を、[**階層**] ペインの [ ** \<新しいレベル>** ] セル (**モデル名**レベルの下) にドラッグします。 (前のセクションで、Product Key を Product Name に名前変更しました)。  
   
-4.  **階層**のウィンドウ、**ディメンション構造** タブのタイトル バーを右クリックし、**階層**階層、 をクリックして**の名前を変更**、し、入力`Product Model Lines`します。  
+4.  [**ディメンション構造**] タブの [**階層**] ペインで、[ **hierarchy** ] 階層のタイトルバーを右クリックし、[**名前**の`Product Model Lines`変更] をクリックして「」と入力します。  
   
-     階層の名前が`Product Model Lines`します。  
+     階層の名前はになりまし`Product Model Lines`た。  
   
 5.  **[ファイル]** メニューの **[すべてを保存]** をクリックします。  
   
@@ -93,59 +99,63 @@ ms.locfileid: "66078841"
   
 #### <a name="to-specify-the-folder-and-member-names"></a>フォルダー名とメンバー名を指定するには  
   
-1.  **[属性]** ペインで、Ctrl キーを押しながら次の各属性をクリックして選択します。  
+1.  
+  **[属性]** ペインで、Ctrl キーを押しながら次の各属性をクリックして選択します。  
   
     -   **クラス**  
   
-    -   **色**  
+    -   **Color**  
   
-    -   **Days To Manufacture**  
+    -   **製造日**  
   
-    -   **Reorder Point**  
+    -   **順序の変更**  
   
-    -   **Safety Stock Level**  
+    -   **安全性のストックレベル**  
   
-    -   **Size**  
+    -   **[サイズ]**  
   
-    -   **Size Range**  
+    -   **サイズの範囲**  
   
-    -   **スタイル**  
+    -   **Style**  
   
-    -   **Weight**  
+    -   **線**  
   
-2.  **AttributeHierarchyDisplayFolder**プロパティ フィールドの種類プロパティ ウィンドウで`Stocking`します。  
+2.  プロパティウィンドウの [ **attributehierarchydisplayfolder]** ] プロパティフィールドに、「 `Stocking`」と入力します。  
   
      上記の属性をグループ化し、1 つの表示フォルダーに表示されるようにしました。  
   
-3.  **[属性]** ペインで、次の属性を選択します。  
+3.  
+  **[属性]** ペインで、次の属性を選択します。  
   
-    -   **Dealer Price**  
+    -   **ディーラー価格**  
   
-    -   **List Price**  
+    -   **価格の表示**  
   
-    -   **Standard Cost**  
+    -   **標準コスト**  
   
-4.  **AttributeHierarchyDisplayFolder**プロパティのセルの種類プロパティ ウィンドウに`Financial`します。  
+4.  プロパティウィンドウの [ **attributehierarchydisplayfolder]** ] プロパティセルに、「 `Financial`」と入力します。  
   
      上記の属性をグループ化し、別の表示フォルダーに表示されるようにしました。  
   
-5.  **[属性]** ペインで、次の属性を選択します。  
+5.  
+  **[属性]** ペインで、次の属性を選択します。  
   
-    -   **End Date**  
+    -   **終了日**  
   
-    -   **[開始日]**  
+    -   **開始日**  
   
-    -   **ステータス**  
+    -   **状態**  
   
-6.  **AttributeHierarchyDisplayFolder**プロパティのセルの種類プロパティ ウィンドウに`History`します。  
+6.  プロパティウィンドウの [ **attributehierarchydisplayfolder]** ] プロパティセルに、「 `History`」と入力します。  
   
      上記の属性をグループ化し、3 番目の表示フォルダーに表示されるようにしました。  
   
-7.  選択、`Product Model Lines`内の階層、**階層**ウィンドウで、変更し、 **AllMemberName**をプロパティ ウィンドウでプロパティ`All Products`します。  
+7.  [階層`Product Model Lines` ] ペインで**** 階層を選択し、プロパティウィンドウの**allmembername**プロパティをに`All Products`変更します。  
   
-8.  空いている領域をクリックして、**階層**ウィンドウで、変更し、 **AttributeAllMemberName**プロパティを [プロパティ] ウィンドウの上部にある`All Products`します。  
+8.  [**階層**] ペインの空いている領域をクリックし、プロパティウィンドウの上部にある**attributeallmembername**プロパティをに`All Products`変更します。  
   
-     空いている領域をクリックすると、Product ディメンション自体のプロパティを変更できます。 **[属性]** ペインの属性リストの上部にある **[Product]** をクリックすることもできます。  
+     空いている領域をクリックすると、Product ディメンション自体のプロパティを変更できます。 
+  **[属性]** ペインの属性リストの上部にある **[Product]** をクリックすることもできます。  
   
 9. **[ファイル]** メニューの **[すべてを保存]** をクリックします。  
   
@@ -158,7 +168,9 @@ ms.locfileid: "66078841"
   
 2.  ダイアグラムで、 **[Model Name]** 属性を右クリックし、 **[新しい属性リレーションシップ]** をクリックします。  
   
-3.  **[属性リレーションシップの作成]** ダイアログ ボックスで、 **[基になる属性]** に **[Model Name]** を指定します。 **[関連属性]** を **[Product Line]** に設定します。  
+3.  
+  **[属性リレーションシップの作成]** ダイアログ ボックスで、 **[基になる属性]** に **[Model Name]** を指定します。 
+  **[関連属性]** を **[Product Line]** に設定します。  
   
      時間が経過するとメンバー間のリレーションシップが変化する可能性があるため、 **[リレーションシップの種類]** ボックスの一覧で、リレーションシップの種類の設定は **[可変]** のままにします。 たとえば、製品モデルが最終的に別の製品ラインに移動される場合があります。  
   
@@ -170,20 +182,21 @@ ms.locfileid: "66078841"
   
 #### <a name="to-review-the-product-dimension-changes"></a>Product ディメンションの変更を確認するには  
   
-1.  **で、** [ビルド] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]メニューの **[Analysis Services Tutorial の配置]** をクリックします。  
+1.  
+  **で、** [ビルド] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]メニューの **[Analysis Services Tutorial の配置]** をクリックします。  
   
 2.  " **配置が正常に完了しました** " というメッセージが表示されたら、 **Product** ディメンションの **ディメンション デザイナー** の **[ブラウザー]** タブをクリックし、ディメンション デザイナーのツール バーにある再接続ボタンをクリックします。  
   
-3.  いることを確認`Product Model Lines`でが選択されている、**階層**一覧を展開し、展開`All Products`します。  
+3.  [階層`Product Model Lines` ] ボックスの一覧**** でが選択されて`All Products`いることを確認し、を展開します。  
   
-     注意の名前、**すべて**としてメンバーが表示されます`All Products`します。 これは、変更したため、 **AllMemberName**プロパティの階層を`All Products`以前のレッスンでは。 また、 **Product Line** レベルのメンバー名が、1 文字の簡略名から、わかりやすい名前に変わりました。  
+     **All**メンバーの名前がとして表示さ`All Products`れていることに注意してください。 これは、レッスンでは、階層の**Allmembername**プロパティを`All Products`に変更したためです。 また、 **Product Line** レベルのメンバー名が、1 文字の簡略名から、わかりやすい名前に変わりました。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
  [Date ディメンションの変更](lesson-3-4-modifying-the-date-dimension.md)  
   
-## <a name="see-also"></a>関連項目  
- [データ ソース ビューでの名前付き計算の定義 (Analysis Services)](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)   
+## <a name="see-also"></a>参照  
+ [データソースビューで名前付き計算を定義する &#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)   
  [ユーザー定義階層の作成](multidimensional-models/user-defined-hierarchies-create.md)   
- [属性階層の &#40;All&#41; レベルの構成](multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
+ [属性階層のすべての&#41; レベル &#40;を構成する](multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   
   

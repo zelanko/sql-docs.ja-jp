@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c0cef8a7e8a64935cca6b378e14c00eb0d80f6b8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721152"
 ---
 # <a name="initialize-a-transactional-subscription-without-a-snapshot"></a>スナップショットを使用しないトランザクション サブスクリプションの初期化
@@ -44,7 +44,7 @@ ms.locfileid: "62721152"
   
  バックアップを使用してサブスクリプションを初期化するには、まずパブリケーションを作成する際にオプションを有効にし、さらにサブスクリプションを作成する際にいくつかのオプションに値を指定する必要があります。 パブリケーションは、パブリケーションの新規作成ウィザードかプログラムで有効にできます。 ただし、サブスクリプション オプションで必要な値は、プログラムでしか指定できません。  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:[トランザクション パブリケーションに対してバックアップを使用した初期化を有効にする &#40;SQL Server Management Studio&#41;](enable-initialization-with-backup-for-transactional-publications.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:[トランザクションパブリケーションのバックアップによる初期化を有効にし &#40;SQL Server Management Studio&#41;](enable-initialization-with-backup-for-transactional-publications.md)  
   
 -   レプリケーション Transact-SQL プログラミング: [トランザクション サブスクリプションのバックアップからの初期化 &#40;レプリケーション Transact-SQL プログラミング&#41;](initialize-a-transactional-subscription-from-a-backup.md)  
   
@@ -67,7 +67,8 @@ ms.locfileid: "62721152"
 -   復元したデータベースでサブスクライブされた timestamp 列は、 **binary(8)** 列に変換する必要があります。そのためにまず、timestamp 列を含むテーブルの内容を新しいテーブル (ほぼ同じスキーマで、timestamp 列の代わりに **binary(8)** 列を使用したテーブル) にコピーしてください。次に、元のテーブルを削除し、新しいテーブルを元のテーブルと同じ名前に変更してください。  
   
 ## <a name="initializing-a-subscription-with-an-alternative-method"></a>代替手段を使用したサブスクリプションの初期化  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]のように、パブリケーション データベースのスキーマとデータをサブスクライバーにコピーできる方法であれば、任意の方法を使ってサブスクリプションを初期化することができます。 代替手段を使用してサブスクライバーを初期化すると、レプリケーション サポート オブジェクトはサブスクライバーにコピーされます。  
+ 
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]のように、パブリケーション データベースのスキーマとデータをサブスクライバーにコピーできる方法であれば、任意の方法を使ってサブスクリプションを初期化することができます。 代替手段を使用してサブスクライバーを初期化すると、レプリケーション サポート オブジェクトはサブスクライバーにコピーされます。  
   
  バックアップを使用して初期化する場合と違い、サブスクリプションを追加した時点でデータとスキーマが正しく同期されていることを手動またはアプリケーションで確認する必要があります。 たとえば、データとスキーマをサブスクライバーにコピーしてからサブスクリプションを追加するまでの間にパブリッシャー上で処理が実行されると、この処理による変更がサブスクライバーにレプリケートされない場合があります。  
   

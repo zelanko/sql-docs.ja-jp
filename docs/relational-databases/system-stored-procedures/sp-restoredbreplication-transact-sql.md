@@ -16,10 +16,10 @@ ms.assetid: a2c5ee32-e6d9-46e9-8031-8ff13c20acf7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 92d0b6390e630e3dea33c603bab11e8649444ab1
-ms.sourcegitcommit: 71fac5fee00e0eca57e555f44274dd7e08d47e1e
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70160716"
 ---
 # <a name="sp_restoredbreplication-transact-sql"></a>sp_restoredbreplication (Transact-SQL)
@@ -41,10 +41,10 @@ sp_restoredbreplication [ @srv_orig = ] 'original_server_name'
   
 ## <a name="arguments"></a>引数  
 `[ @srv_orig = ] 'original_server_name'`  
- バックアップが作成されたサーバーの名前を指定します。 *original_server_name*は**sysname**,、既定値はありません。  
+ バックアップが作成されたサーバーの名前を指定します。 *original_server_name*は**sysname**であり、既定値はありません。  
   
 `[ @db_orig = ] 'original_database_name'`  
- バックアップされたデータベースの名前。 *original_database_name*は**sysname**,、既定値はありません。  
+ バックアップされたデータベースの名前。 *original_database_name*は**sysname**であり、既定値はありません。  
   
 `[ @keep_replication = ] keep_replication`  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -55,13 +55,13 @@ sp_restoredbreplication [ @srv_orig = ] 'original_server_name'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  **sp_restoredbreplication**は、すべての種類のレプリケーションで使用されます。  
   
 ## <a name="permissions"></a>アクセス許可  
  **Sp_restoredbreplication**を実行できるのは、 **sysadmin**または**dbcreator**固定サーバーロールまたは**dbo**データベーススキーマのメンバーだけです。  
   
-## <a name="see-also"></a>関連項目  
- [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>参照  
+ [レプリケーションストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

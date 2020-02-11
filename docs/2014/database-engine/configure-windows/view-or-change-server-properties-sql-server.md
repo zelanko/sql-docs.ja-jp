@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5c5ff985b62e39287b696e96f10142daf90ae0a3
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72783126"
 ---
 # <a name="view-or-change-server-properties-sql-server"></a>サーバー プロパティの表示または変更 (SQL Server)
@@ -41,7 +41,7 @@ ms.locfileid: "72783126"
   
      [SQL Server 構成マネージャー](#PowerShellProcedure)  
   
--   **フォロー アップ:**  [サーバーのプロパティを変更した後](#FollowUp)  
+-   **補足情報:** [サーバーのプロパティを変更した後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
@@ -56,10 +56,10 @@ ms.locfileid: "72783126"
   
 ###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> アクセス許可  
+####  <a name="Permissions"></a> Permissions  
  詳細については、「 [サーバー レベルのロール](../../relational-databases/security/authentication-access/server-level-roles.md)」を参照してください。  
   
- パラメーターのない、または最初のパラメーターだけを持つ `sp_configure` に対する実行権限は、既定ですべてのユーザーに付与されます。 両方のパラメーターを使用して `sp_configure` を実行し、構成オプションを変更するか、または再構成ステートメントを実行するには、ALTER SETTINGS サーバーレベルのアクセス許可がユーザーに付与されている必要があります。 ALTER SETTINGS 権限は、 **sysadmin** 固定サーバー ロールと **serveradmin** 固定サーバー ロールでは暗黙のうちに付与されています。  
+ 既定では`sp_configure` 、パラメーターを指定しない、または最初のパラメーターだけを指定して、の実行権限をすべてのユーザーに付与します。 両方の`sp_configure`パラメーターを使用してを実行し、構成オプションを変更するか、または再構成ステートメントを実行するには、ALTER SETTINGS サーバーレベルのアクセス許可がユーザーに付与されている必要があります。 ALTER SETTINGS 権限は、 **sysadmin** 固定サーバー ロールと **serveradmin** 固定サーバー ロールでは暗黙のうちに付与されています。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
@@ -137,7 +137,7 @@ RECONFIGURE;
 GO  
 ```  
   
- 詳細については、「 [Server Configuration Options &#40;SQL Server&#41;](server-configuration-options-sql-server.md)サーバー構成オプションを構成する方法について説明します。  
+ 詳細については、「 [サーバー構成オプション &#40;SQL Server&#41;](server-configuration-options-sql-server.md)」を参照してください。  
   
 ##  <a name="PowerShellProcedure"></a> SQL Server 構成マネージャーの使用  
  いくつかのサーバー プロパティは、SQL Server 構成マネージャーを使用して表示または変更できます。 たとえば、SQL Server のインスタンスのバージョンおよびエディションを表示したり、エラー ログ ファイルの格納場所を変更したりできます。 これらのプロパティは、 [サーバー関連の動的管理ビューおよび関数](/sql/relational-databases/system-dynamic-management-views/server-related-dynamic-management-views-and-functions-transact-sql)をクエリして表示することもできます。  
@@ -148,16 +148,17 @@ GO
   
 2.  **SQL Server 構成マネージャー**で **[SQL Server のサービス]** をクリックします。  
   
-3.  詳細ウィンドウで **[SQL Server (\<***instancename***>)]** を右クリックし、 **[プロパティ]** をクリックします。  
+3.  詳細ウィンドウで **[SQL Server (\<***instancename***>)]** を右クリックし、**[プロパティ]** をクリックします。  
   
-4.  **[SQL Server (\<***instancename***>) のプロパティ]** ダイアログ ボックスの **[サービス]** タブまたは **[詳細設定]** タブで、サーバーのプロパティを変更し、 **[OK]** をクリックします。  
+4.  
+  **[SQL Server (\<***instancename***>) のプロパティ]** ダイアログ ボックスの **[サービス]** タブまたは **[詳細設定]** タブで、サーバーのプロパティを変更し、**[OK]** をクリックします。  
   
-##  <a name="FollowUp"></a> フォロー アップ: サーバーのプロパティを変更した後  
+##  <a name="FollowUp"></a>補足情報: サーバーのプロパティを変更した後  
  いくつかのプロパティでは、変更を有効にするためにサーバーを再起動する必要があります。  
   
 ## <a name="see-also"></a>参照  
  [サーバー構成オプション &#40;SQL Server&#41;](server-configuration-options-sql-server.md)   
- [SET Statements &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-statements-transact-sql)   
+ [SET ステートメント &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-statements-transact-sql)   
  [SERVERPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/serverproperty-transact-sql)   
  [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)   
  [RECONFIGURE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reconfigure-transact-sql)   

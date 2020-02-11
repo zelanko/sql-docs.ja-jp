@@ -1,5 +1,5 @@
 ---
-title: データ マイニング ソリューション |Microsoft Docs
+title: データマイニングソリューション |Microsoft Docs
 ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
@@ -14,27 +14,27 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d5a5126048928e66fd8351bc00226cadb2de54d7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084888"
 ---
 # <a name="data-mining-solutions"></a>データ マイニング ソリューション
   データ マイニング ソリューションとは、データ マイニング プロジェクトを少なくとも 1 つ含んだ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ソリューションです。  
   
- このセクションの各トピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]を使用した統合データ マイニング ソリューションの設計と実装の方法について説明します。 データ マイニング デザイン プロセスおよび関連ツールの概要については、「 [データ マイニングの概念](data-mining-concepts.md)」を参照してください。  
+ このセクションのトピックでは、を使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]して、統合データマイニングソリューションを設計および実装する方法について説明します。 データ マイニング デザイン プロセスおよび関連ツールの概要については、「 [データ マイニングの概念](data-mining-concepts.md)」を参照してください。  
   
  データ マイニングに利用できるその他のプロジェクト タイプの詳細については、「 [データ マイニング ソリューションの関連プロジェクト](data-mining-solutions.md)」を参照してください。  
   
- [リレーショナル データ ソースとします。多次元ソリューション](#bkmk_RelMD)  
+ [リレーショナルソリューションと多次元ソリューションの比較](#bkmk_RelMD)  
   
- [データ マイニング ソリューションの配置](#bkmk_Deploy)  
+ [データマイニングソリューションの配置](#bkmk_Deploy)  
   
  [ソリューションのチュートリアル](#bkmk_Walkthru)  
   
-##  <a name="bkmk_RelMD"></a> リレーショナル データ ソースとします。多次元ソリューションの比較  
- データ マイニング ソリューションは、多次元データのいずれかに基づく-既存のキューブは、または data warehouse では、ビュー、テーブルなどの純粋なリレーショナル データまたはテキスト ファイルでは、Excel ブック、またはその他の外部データ ソース。  
+##  <a name="bkmk_RelMD"></a>リレーショナルソリューションと多次元ソリューションの比較  
+ データマイニングソリューションは、多次元データ (既存のキューブ)、純粋なリレーショナルデータ (データウェアハウスのテーブルとビューなど)、またはテキストファイル、Excel ブック、またはその他の外部データソースに基づいて作成できます。  
   
 -   既存の多次元データベース ソリューション内でデータ マイニング オブジェクトを作成できます。  
   
@@ -44,22 +44,22 @@ ms.locfileid: "66084888"
   
      これはデータ マイニング モデルの作成に適した方法です。一般に、処理やクエリは、リレーショナル データ ソースがその対象である場合に最も高速になります。 また、サーバー間でのモデルの移動とバックアップも、EXPORT コマンドや IMPORT コマンドを使用して簡単に実行できます。  
   
-##  <a name="bkmk_Deploy"></a> データ マイニング ソリューションの配置  
+##  <a name="bkmk_Deploy"></a>データマイニングソリューションの配置  
  ソリューションの配置先となる [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスは、多次元オブジェクトとデータ マイニング オブジェクトをサポートするモードで実行されている必要があります。つまり、テーブル モデルや PowerPivot データをホストするインスタンスにデータ マイニング オブジェクトを配置することはできません。  
   
- したがって、Visual Studio でデータ マイニング ソリューションを作成するときは、**[Analysis Services 多次元およびデータ マイニング プロジェクト]** テンプレートを必ず使用してください。  
+ したがって、Visual Studio でデータ マイニング ソリューションを作成するときは、 **[Analysis Services 多次元およびデータ マイニング プロジェクト]** テンプレートを必ず使用してください。  
   
  ソリューションを配置すると、データ マイニングに使用されるオブジェクトが、指定された [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスに作成されます。作成先は、ソリューション ファイルと同じ名前のデータベースになります。  
   
  リレーショナル ソリューションと多次元ソリューションの両方を配置する方法の詳細については、「 [データ マイニング ソリューションの配置](deployment-of-data-mining-solutions.md)」を参照してください。  
   
-##  <a name="bkmk_Walkthru"></a> ソリューションのチュートリアル  
+##  <a name="bkmk_Walkthru"></a>ソリューションのチュートリアル  
  データ マイニング ウィザードを使用してデータ マイニング ソリューションを作成する方法の概要について説明します。  
   
- [リレーショナル マイニング構造の作成](create-a-relational-mining-structure.md)  
+ [Create a Relational Mining Structure](create-a-relational-mining-structure.md)  
  マイニング構造は、リレーショナル データやテキスト ファイルのほか、データ ソース ビューに組み込むことのできる各種のソースから作成できます。  
   
- [OLAP マイニング構造の作成](create-an-olap-mining-structure.md)  
+ [Create an OLAP Mining Structure](create-an-olap-mining-structure.md)  
  OLAP キューブのデータを基にマイニング構造を作成します。 OLAP データから作成したモデルは、データ マイニング ディメンションとして保存できるほか、データ セットやモデルを新しいキューブとして保存することもできます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
@@ -78,13 +78,13 @@ ms.locfileid: "66084888"
   
 |処理手順|トピック|  
 |-----------|------------|  
-|作成するモデルのテスト、トレーニング データの質の検証、データ マイニング モデルの精度を表すグラフの作成|[テストおよび検証 &#40;データ マイニング&#41;](testing-and-validation-data-mining.md)|  
+|作成するモデルのテスト、トレーニング データの質の検証、データ マイニング モデルの精度を表すグラフの作成|[データマイニング&#41;のテストと検証 &#40;](testing-and-validation-data-mining.md)|  
 |構造および関連モデルにデータを取り込むことによるモデルのトレーニング (新しいデータでのモデルの更新と拡張)|[データ マイニング オブジェクトの処理](processing-data-mining-objects.md)|  
 |マイニング モデルのカスタマイズ (トレーニング データへのフィルターの適用、異なるアルゴリズムの選択、高度なアルゴリズム パラメーターの設定)|[マイニング モデルとマイニング構造のカスタマイズ](customize-mining-models-and-structure.md)|  
-|モデルのトレーニング用データにフィルターを適用することによるマイニング モデルのカスタマイズ|[マイニング モデルを構造に追加する &#40;Analysis Services - データ マイニング&#41;](add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
+|モデルのトレーニング用データにフィルターを適用することによるマイニング モデルのカスタマイズ|[Analysis Services データマイニング &#40;構造へのマイニングモデルの追加&#41;](add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
 |データ マイニング ソリューションの更新と管理|Link TBD|  
   
 ## <a name="see-also"></a>参照  
- [データ マイニングのチュートリアル &#40;Analysis Services&#41;](../data-mining-tutorials-analysis-services.md)  
+ [データマイニングチュートリアル &#40;Analysis Services&#41;](../data-mining-tutorials-analysis-services.md)  
   
   

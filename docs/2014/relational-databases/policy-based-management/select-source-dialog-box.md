@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 49c96ead9463f49ce81133f8d29127aebb211d85
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62691801"
 ---
 # <a name="select-source-dialog-box"></a>[ソースの選択] ダイアログ ボックス
@@ -32,7 +32,7 @@ ms.locfileid: "62691801"
   
 -   オブジェクト エクスプローラーで、サーバー、データベース、またはデータベース オブジェクトを右クリックし、 **[ポリシー]** 、 **[評価]** の順にクリックします。 **[ポリシーの評価]** ダイアログ ボックスの **[ポリシーの選択]** ページで、参照ボタン ( **[...]** ) をクリックします。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **[ファイル]**  
  ポリシーを含む 1 つ以上の XML ファイルを選択します。  
   
@@ -45,13 +45,13 @@ ms.locfileid: "62691801"
  **サーバー名**  
  接続するサーバー インスタンスを選択します。 既定では、最後に接続していたサーバー インスタンスが表示されます。  
   
- **[認証]**  
+ **認証**  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続する際には、2 つの認証モードのいずれかを選択します。  
   
  **Windows 認証モード ([Windows 認証])**  
  Windows 認証モードを使用すると、ユーザーは Windows ユーザー アカウントを使用して接続できます。  
   
- **SQL Server 認証 (SQL Server Authentication)**  
+ **SQL Server 認証**  
  指定されたログイン名とパスワードを使用して、信頼関係の低い接続から接続した場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン アカウントが設定されているかどうか、指定されたパスワードが以前に記録されたパスワードと一致しているかどうかを確認することで認証を行います。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にログイン アカウントが設定されていない場合、認証は失敗し、エラー メッセージが返されます。  
   
 > [!IMPORTANT]  
@@ -63,7 +63,7 @@ ms.locfileid: "62691801"
  **Login**  
  接続に使用するログインを入力します。 このオプションは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用した接続を選択した場合にのみ使用できます。  
   
- **Password**  
+ **パスワード**  
  ログインのパスワードを入力します。 このオプションは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用した接続を選択した場合にのみ編集できます。  
   
 ## <a name="see-also"></a>参照  

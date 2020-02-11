@@ -17,21 +17,22 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0d9df271c457cb0f05f9fdfe70952b6d02224963
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72783255"
 ---
 # <a name="delete-one-or-more-jobs"></a>1 つまたは複数のジョブの削除
-  このトピックでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、または SQL Server 管理オブジェクトを使用して、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)]、 or SQL Server Management Objects.  
+  このトピックでは、で[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、、または SQL Server 管理オブジェクト[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を[!INCLUDE[tsql](../../includes/tsql-md.md)]使用して、エージェントジョブを削除する方法について説明します。  
   
  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Security"></a> Security  
- **sysadmin** 固定サーバー ロールのメンバー以外は、所有しているジョブしか削除できません。  
+###  <a name="Security"></a> セキュリティ  
+ 
+  **sysadmin** 固定サーバー ロールのメンバー以外は、所有しているジョブしか削除できません。  
   
  
   
@@ -41,19 +42,22 @@ ms.locfileid: "72783255"
   
 1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続し、そのインスタンスを展開します。  
   
-2.  **[SQL Server エージェント]** を展開し、 **[ジョブ]** を展開します。次に、削除するジョブを右クリックして、 **[削除]** をクリックします。  
+2.  
+  **[SQL Server エージェント]** を展開し、 **[ジョブ]** を展開します。次に、削除するジョブを右クリックして、 **[削除]** をクリックします。  
   
-3.  **[オブジェクトの削除]** ダイアログ ボックスで、削除するジョブが選択されていることを確認します。  
+3.  
+  **[オブジェクトの削除]** ダイアログ ボックスで、削除するジョブが選択されていることを確認します。  
   
-4.  クリックして **OK**です。  
+4.  **[OK]** をクリックします。  
   
 #### <a name="to-delete-multiple-jobs"></a>複数のジョブを削除するには  
   
 1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続し、そのインスタンスを展開します。  
   
-2.  **[SQL Server エージェント]** を展開します。  
+2.  
+  **[SQL Server エージェント]** を展開します。  
   
-3.  **[ジョブの利用状況モニター]** を右クリックし、 **[ジョブの利用状況の表示]** をクリックします。  
+3.  [ジョブの**利用状況モニター**] を右クリックし、[**ジョブの利用状況の表示**] をクリックします。  
   
 4.  ジョブの利用状況モニターで、削除する複数のジョブを選択します。次に、選択したジョブを右クリックして、 **[ジョブの削除]** をクリックします。  
   
@@ -84,4 +88,4 @@ ms.locfileid: "72783255"
 
 ### <a name="to-delete-multiple-jobs"></a>複数のジョブを削除するには
   
- Visual Basic、ビジュアルC#、PowerShell などのプログラミング言語で `JobCollection` クラスを使用します。 詳細については、「 [SQL Server 管理オブジェクト (SMO) プログラミング ガイド](https://msdn.microsoft.com/library/ms162169.aspx)」を参照してください。  
+ Visual Basic、 `JobCollection` Visual C#、PowerShell など、選択したプログラミング言語でクラスを使用します。 詳細については、「 [SQL Server 管理オブジェクト (SMO) プログラミング ガイド](https://msdn.microsoft.com/library/ms162169.aspx)」を参照してください。  

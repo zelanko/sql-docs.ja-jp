@@ -13,40 +13,41 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6266dd29c3486b6ae4163b15cffbc455eee31c5a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62705128"
 ---
 # <a name="evaluate-policies-dialog-box-policy-selection-page"></a>[ポリシーの評価] ダイアログ ボックスの [ポリシーの選択] ページ
-  このダイアログ ボックスを使用すると、ポリシー ベースの管理ポリシーを評価できます。 **[評価の結果]** ページを選択すると、ポリシーに準拠していない対象セット内の項目にポリシーを適用できます。  
+  このダイアログ ボックスを使用すると、ポリシー ベースの管理ポリシーを評価できます。 
+  **[評価の結果]** ページを選択すると、ポリシーに準拠していない対象セット内の項目にポリシーを適用できます。  
   
-## <a name="options"></a>および  
- **Source**  
- ポリシーのソースを指定します。 ソースを変更するには、参照ボタン ( **[...]** ) をクリックして、 **[ソースの選択]** ダイアログ ボックスを開きます。  
+## <a name="options"></a>オプション  
+ **ソース**  
+ ポリシーのソースを指定します。 ソースを変更するには、参照ボタン (**[...]**) をクリックして、 **[ソースの選択]** ダイアログ ボックスを開きます。  
   
- **[ファイル]**  
- ポリシー ベースの管理ポリシーを含むファイルのパスを入力するか、参照ボタン ( **[...]** ) を使用してファイルを選択します。  
+ **ファイル**  
+ ポリシー ベースの管理ポリシーを含むファイルのパスを入力するか、参照ボタン (**[...]**) を使用してファイルを選択します。  
   
- **[サーバー]**  
+ **サーバー**  
  必要なポリシーを含む [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のインスタンスに接続する場合に選択します。  
   
- **ポリシー:ポリシー**  
+ **ポリシー: ポリシー**  
  クリックすると、指定したポリシーの [ポリシー] ダイアログ ボックスが開きます。  
   
- **ポリシー:カテゴリ**  
+ **ポリシー: カテゴリ**  
  ポリシーのカテゴリ。 このボックスは読み取り専用です。  
   
- **ポリシー:ファセット**  
+ **Policies: ファセット**  
  ポリシーによって実装されるファセット。 このボックスは読み取り専用です。  
   
- **[評価]**  
+ **Evaluate**  
  ポリシーを評価モードで実行します。 これにより対象セットの準拠レポートが生成されますが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が再構成されたり、今後の準拠が適用されたりすることはありません。  
   
 ## <a name="possible-errors"></a>発生する可能性のあるエラー  
   
--   **対象が見つかりません**  
+-   **ターゲットが見つかりません**  
   
      対象セットは、次のいずれかの理由により空になっている可能性があります。  
   
@@ -61,7 +62,7 @@ ms.locfileid: "62705128"
     -   ターゲット サーバーの種類とポリシーが評価されるサーバーの種類が異なっている。 たとえば、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]で、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]用に作成されたポリシーを評価しようとすると、空の対象セットが返されます。  
   
 ## <a name="see-also"></a>参照  
- [ポリシー ベースの管理を使用したサーバーの管理](administer-servers-by-using-policy-based-management.md)   
+ [ポリシーベースの管理を使用してサーバーを管理する](administer-servers-by-using-policy-based-management.md)   
  [[ポリシーの評価] ダイアログ ボックスの [評価の結果] ページ](evaluate-policies-dialog-box-evaluation-results-page.md)  
   
   

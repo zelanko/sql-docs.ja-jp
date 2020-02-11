@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6c0a98aa13b4453244c8ed565a950660a20e5a3c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721300"
 ---
 # <a name="distributor"></a>ディストリビューター
@@ -32,14 +32,14 @@ ms.locfileid: "62721300"
   
  ディストリビューターとして指定するサーバーには、サーバー上でさまざまな機能を果たしながら、レプリケーションの処理を実行できるだけの十分なディスク容量とプロセッサ パワーが必要です。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **['\<ServerName>' を独自のディストリビューターとする (SQL Server はディストリビューション データベースとログを作成します)]**  
  このオプションを選択すると、ディストリビューターとして接続するサーバーを構成できます。  
   
  **[以下のサーバーをディストリビューターとして使用する (選択するサーバーはディストリビューターとして構成されている必要があります)]**  
  別のサーバーをディストリビューターとして構成するには、このオプションを選択し、以下のサーバーの名前をクリックします。  
   
- **[追加]**  
+ **追加**  
  ディストリビューターとして構成するサーバーが表示されていない場合は、 **[追加]** をクリックし、目的のサーバーを識別して一覧に追加します。  
   
 > [!NOTE]  

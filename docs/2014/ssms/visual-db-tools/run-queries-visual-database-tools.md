@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6a06f177f541e6bca5eb24da5e8a709673ab7d5d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62710807"
 ---
 # <a name="run-queries-visual-database-tools"></a>クエリの実行 (Visual Database Tools)
@@ -29,7 +29,7 @@ ms.locfileid: "62710807"
   
 2.  クエリ ウィンドウの中を右クリックし、ショートカット メニューの **[SQL の実行]** をクリックします。  
   
-     \- または -  
+     または  
   
      Ctrl キーを押しながら R キーを押します。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "62710807"
  更新クエリ、結果の挿入クエリ、値の挿入クエリ、削除クエリ、またはテーブルの作成クエリを作成すると、クエリによって処理された行数を示すメッセージがクエリおよびビュー デザイナーに表示されます。  
   
 ## <a name="see-also"></a>参照  
- [結果ウィンドウでデータを扱う&#40;Visual Database Tools&#41;](visual-database-tools.md)   
+ [[結果] ウィンドウのデータを操作するには &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [クエリに関する基本操作の実行 (Visual Database Tools)](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

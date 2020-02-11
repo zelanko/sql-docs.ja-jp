@@ -1,5 +1,5 @@
 ---
-title: 精度チャートの種類と設定を選択してグラフのオプション |Microsoft Docs
+title: 精度チャートの種類の選択とグラフのオプションの設定 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,14 +16,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6d9f375eb2d55c396000b7c2d7a14614153861e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085822"
 ---
 # <a name="choose-an-accuracy-chart-type-and-set-chart-options"></a>精度チャートの種類の選択とグラフのオプションの設定
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は、マイニング モデルの有効性を判断する複数の方法を提供します。 各モデルまたは構造に対して作成できる精度チャートの種類は、以下の要因によって異なります。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]には、マイニングモデルの有効性を判断するための複数の方法が用意されています。 各モデルまたは構造に対して作成できる精度チャートの種類は、以下の要因によって異なります。  
   
 -   モデルの作成に使用したアルゴリズムの種類  
   
@@ -33,7 +33,7 @@ ms.locfileid: "66085822"
   
  このトピックでは、各種の精度チャートの概要について説明します。  
   
- **注:** グラフとその定義は保存されません。 グラフが含まれているウィンドウを閉じた場合は、グラフを作成し直す必要があります。  
+ **メモ**グラフとその定義は保存されません。 グラフが含まれているウィンドウを閉じた場合は、グラフを作成し直す必要があります。  
   
 ## <a name="accuracy-chart-types"></a>精度チャートの種類  
  選択するグラフの種類によっては、さらにオプションを構成したり、グラフを参照したり、グラフをクリップボードにコピーして Excel でデータを操作したりできます。  

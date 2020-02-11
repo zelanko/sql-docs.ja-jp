@@ -1,5 +1,5 @@
 ---
-title: 名前付きセット (MDX) のセッション スコープの作成 |Microsoft Docs
+title: セッションスコープの名前付きセットの作成 (MDX) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 545bbdb171388f06c28644e0b8caa48db95e7e7f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074046"
 ---
 # <a name="creating-session-scoped-named-sets-mdx"></a>セッション スコープの名前付きセットの作成 (MDX)
-  多次元式 (MDX) セッション全体で使用できる名前付きセットを作成するには、[CREATE SET](/sql/mdx/mdx-data-definition-create-set) ステートメントを使用します。 CREATE SET ステートメントを使用して作成された名前付きセットは、MDX セッションが閉じるまで削除されません。  
+  多次元式 (MDX) セッション全体で使用できる名前付きセットを作成するには、 [CREATE SET](/sql/mdx/mdx-data-definition-create-set) ステートメントを使用します。 CREATE SET ステートメントを使用して作成された名前付きセットは、MDX セッションが閉じるまで削除されません。  
   
  このトピックで説明するように、WITH キーワードの構文は非常に単純で使いやすいものです。  
   
@@ -35,10 +35,12 @@ ms.locfileid: "66074046"
 CREATE SESSION SET [CURRENTCUBE. | <cube name>.]<Set Identifier> AS <Set Expression>  
 ```  
   
- CREATE SET の構文において、 `cube name` パラメーターには、名前付きセットのメンバーを格納するキューブの名前が入ります。 `cube name` パラメーターが指定されなかった場合は、名前付きセットのメンバーを格納するキューブとして、現在のキューブが使用されます。 さらに、 `Set_Identifier` パラメーターには名前付きセットの別名が入り、 `Set_Expression` パラメーターには名前付きセットの別名の参照先であるセット式が入ります。  
+ CREATE SET の構文において、 `cube name` パラメーターには、名前付きセットのメンバーを格納するキューブの名前が入ります。 
+  `cube name` パラメーターが指定されなかった場合は、名前付きセットのメンバーを格納するキューブとして、現在のキューブが使用されます。 さらに、 `Set_Identifier` パラメーターには名前付きセットの別名が入り、 `Set_Expression` パラメーターには名前付きセットの別名の参照先であるセット式が入ります。  
   
 ## <a name="create-set-example"></a>CREATE SET の例  
- 次の例では、Store キューブに基づいて `SetCities_2_3` 名前付きセットを作成するために CREATE SET ステートメントを使用します。 `SetCities_2_3` 名前付きセットのメンバーは、City&#xA0;2 および City&#xA0;3 にあるストアです。  
+ 次の例では、Store キューブに基づいて `SetCities_2_3` 名前付きセットを作成するために CREATE SET ステートメントを使用します。 
+  `SetCities_2_3` 名前付きセットのメンバーは、City&#xA0;2 および City&#xA0;3 にあるストアです。  
   
 ```  
 create Session set [Store].[SetCities_2_3] as  
@@ -52,7 +54,7 @@ create Session set [Store].[SetCities_2_3] as
 select SetCities_2_3 on 0 from [Store]  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [クエリ スコープの名前付きセットの作成 &#40;MDX&#41;](mdx-named-sets-creating-query-scoped-named-sets.md)  
+## <a name="see-also"></a>参照  
+ [MDX&#41;&#40;クエリスコープの名前付きセットの作成](mdx-named-sets-creating-query-scoped-named-sets.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: テスト、検証タスク、および操作方法 (データ マイニング) |Microsoft Docs
+title: テストと検証のタスクと操作方法 (データマイニング) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,13 +18,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 451efaa1bb6968c2e2f43e5fad01646e507ae8ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082868"
 ---
 # <a name="testing-and-validation-tasks-and-how-tos-data-mining"></a>テスト、検証タスク、および操作方法 (データ マイニング)
+  
   **のデータ マイニング デザイナーの** [マイニング精度チャート] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] タブを使用すると、マイニング構造内のマイニング モデルの予測精度を比較できます。  
   
  次の 4 種類のグラフを作成することができます。  
@@ -39,7 +40,7 @@ ms.locfileid: "66082868"
   
  最初の 3 つのグラフでは、 **[入力の選択]** タブを使用して、グラフの生成に使用するデータを定義します。  
   
- クロス検証グラフは、 **[クロス検証]** タブで使用できる追加の入力を使用して作成します。詳細については、「[相互検証 (Analysis Services - データ マイニング)](cross-validation-analysis-services-data-mining.md)」を参照してください。  
+ クロス検証グラフは、[**クロス検証**] タブで使用できる追加の入力を使用して作成されます。詳細については、「[相互検証 &#40;Analysis Services データマイニング&#41;](cross-validation-analysis-services-data-mining.md)」を参照してください。  
   
  マイニング精度チャートの使用方法の詳細については、「[テストおよび検証 (データ マイニング)](testing-and-validation-data-mining.md)」を参照してください。  
   

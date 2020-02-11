@@ -1,5 +1,5 @@
 ---
-title: DMX を使用したドリルスルー クエリの作成 |Microsoft Docs
+title: DMX を使用したドリルスルークエリの作成 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f28d0503497fd066de2d328e75813f7b77026b2f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085238"
 ---
 # <a name="create-drillthrough-queries-using-dmx"></a>DMX を使用したドリルスルー クエリの作成
@@ -32,7 +32,7 @@ SELECT <model column list>, StructureColumn('<structure column name') FROM <mode
   
  DMX クエリを使用してケース データを返す方法については、「[SELECT FROM &#60;model&#62;.CASES (DMX)](/sql/dmx/select-from-model-content-dmx)」と「[SELECT FROM &#60;structure&#62;.CASES](/sql/dmx/select-from-structure-cases)」を参照してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次に示す DMX クエリでは、タイム シリーズ モデルから特定の製品シリーズのケース データが返されます。 このクエリでは、`Amount` 列も返されます。この列はモデルでは使用されていませんが、マイニング構造では使用可能です。  
   
 ```  
@@ -43,8 +43,8 @@ WHERE [Model Region] = 'M200 Pacific'
   
  この例では、別名を使用して構造列の名前が変更されています。 構造列に別名を割り当てないと、'Expression' という名前で列が返されます。 これはすべての名前のない列に対する既定の動作です。  
   
-## <a name="see-also"></a>関連項目  
- [ドリルスルー クエリ (データ マイニング)](drillthrough-queries-data-mining.md)   
+## <a name="see-also"></a>参照  
+ [データマイニング &#40;のドリルスルークエリ&#41;](drillthrough-queries-data-mining.md)   
  [マイニング構造でのドリルスルー](drillthrough-on-mining-structures.md)  
   
   

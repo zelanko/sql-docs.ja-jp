@@ -1,5 +1,5 @@
 ---
-title: 名前付きセット (MDX) のクエリ スコープの作成 |Microsoft Docs
+title: クエリスコープの名前付きセットの作成 (MDX) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a611d3d20d269bb9c3fa3a1f764181b1660713b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074067"
 ---
 # <a name="creating-query-scoped-named-sets-mdx"></a>クエリ スコープの名前付きセットの作成 (MDX)
@@ -26,7 +26,7 @@ ms.locfileid: "66074067"
  このトピックで説明するように、WITH キーワードの構文は非常に柔軟なので、名前付きセットを定義するための関数も使用できます。  
   
 > [!NOTE]  
->  名前付きセットの詳細については、「[MDX での名前付きセットの作成 (MDX)](mdx-named-sets-building-named-sets.md)」を参照してください。  
+>  名前付きセットの詳細については、「[MDX での名前付きセットの作成 &#40;MDX&#41;](mdx-named-sets-building-named-sets.md)」をご覧ください。  
   
 ## <a name="with-keyword-syntax"></a>WITH キーワードの構文  
  MDX の SELECT ステートメントに WITH キーワードを追加するための構文は、以下のとおりです。  
@@ -43,7 +43,8 @@ FROM <SELECT subcube clause>
   
 ```  
   
- WITH キーワードの構文で使用する `Set_Identifier` パラメーターには、名前付きセットの別名を指定します。 `Set_Expression` パラメーターには、名前付きセットの別名が参照するセット式を指定します。  
+ WITH キーワードの構文で使用する `Set_Identifier` パラメーターには、名前付きセットの別名を指定します。 
+  `Set_Expression` パラメーターには、名前付きセットの別名が参照するセット式を指定します。  
   
 ## <a name="with-keyword-example"></a>WITH キーワードの例  
  以下に示すのは、Microsoft SQL Server 2000 Analysis Services のサンプル データベース `FoodMart 2000` に登録されている Chardonnay ワインと Chablis ワインの売上数量を調べる MDX クエリです。 このクエリは、結果セットという観点からすれば非常にシンプルですが、クエリの管理という観点から見ると長すぎて扱いが厄介です。  
@@ -93,7 +94,7 @@ FROM Sales
 ```  
   
 ## <a name="see-also"></a>参照  
- [SELECT ステートメント (MDX)](/sql/mdx/mdx-data-manipulation-select)   
- [セッション スコープの名前付きセットの作成 (MDX)](mdx-named-sets-creating-session-scoped-named-sets.md)  
+ [SELECT ステートメント &#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select)   
+ [MDX&#41;&#40;セッションスコープの名前付きセットを作成する](mdx-named-sets-creating-session-scoped-named-sets.md)  
   
   

@@ -19,16 +19,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 10a63e84fcad55b6dfaec286d0d47b686d395f5f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62693524"
 ---
 # <a name="clientnetworkprotocol-class"></a>ClientNetworkProtocol クラス
-  [ClientNetworkProtocol クラス](clientnetworkprotocol-class.md)ネットワークのインスタンスと通信できるクライアント インスタンスにインストールされているプロトコルを表します[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]をネットワーク経由でします。  
+  [Clientnetworkprotocol クラス](clientnetworkprotocol-class.md)は、ネットワーク経由でのインスタンスとの[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]通信を可能にするクライアントインスタンスにインストールされているネットワークプロトコルを表します。  
   
- [ClientNetworkProtocol クラス](clientnetworkprotocol-class.md)、次のタスクを実行することができます。  
+ [Clientnetworkprotocol クラス](clientnetworkprotocol-class.md)を使用すると、次のタスクを実行できます。  
   
 -   プロトコルのリストからクライアント ネットワーク プロトコルを選択するためのインデックス値の設定  
   

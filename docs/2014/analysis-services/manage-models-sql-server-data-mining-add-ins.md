@@ -1,5 +1,5 @@
 ---
-title: モデル (SQL Server データ マイニング アドイン) の管理 |Microsoft Docs
+title: モデルの管理 (SQL Server データマイニングアドイン) |Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -18,19 +18,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6d5f0619e7291cc08b1750c0b35f9639cb7a9872
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66078035"
 ---
 # <a name="manage-models-sql-server-data-mining-add-ins"></a>モデルの管理 (SQL Server データ マイニング アドイン)
-  ![モデルの管理 ボタン、データ マイニング リボン](media/dmc-manage.gif "モデルの管理 ボタン、データ マイニング リボン")  
+  ![[データ マイニング] リボンの [モデルの管理] ボタン](media/dmc-manage.gif "[データ マイニング] リボンの [モデルの管理] ボタン")  
   
- **モデルの管理** ダイアログ ボックスでは、既存のマイニング モデルおよびマイニング構造に格納されていると対話することができます、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]は現在接続されているサーバー。 さらに、現在のセッション中に作成された一時的な構造およびモデルを表示および管理できます。 セッション モデルおよびサーバー上に格納されているモデルをこれまでに使用している場合、ダイアログ ボックスにこれらのモデルが表示されます。  
+ [**モデルの管理**] ダイアログボックスを使用すると、現在接続している[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]サーバーに格納されている既存のマイニングモデルとマイニング構造を操作できます。 さらに、現在のセッション中に作成された一時的な構造およびモデルを表示および管理できます。 セッション モデルおよびサーバー上に格納されているモデルをこれまでに使用している場合、ダイアログ ボックスにこれらのモデルが表示されます。  
   
 ## <a name="using-the-manage-models-wizard"></a>モデルの管理ウィザードの使用  
- クリックすると**モデルの管理**、**管理マイニング構造およびモデル** ダイアログ ボックスが開いたら、既存のデータ マイニング モデルおよび構造を管理するため、次の機能へのアクセスを提供します。  
+ [モデルの**管理**] をクリックすると、[**マイニング構造とマイニングモデルの管理**] ダイアログボックスが開き、既存のデータマイニングモデルおよび構造を管理するための次の機能にアクセスできます。  
   
 -   マイニング モデルまたは構造の名前を変更する。  
   
@@ -43,15 +43,15 @@ ms.locfileid: "66078035"
 -   マイニング モデルまたは構造をエクスポートまたはインポートする。  
   
 > [!NOTE]  
->  このダイアログ ボックスを使用してクエリまたはモデルを作成することはできません。 新しいマイニング構造を作成するには、Excel、または使用のデータ マイニング クライアントに表示されるウィザードの 1 つを使用、**データ マイニング詳細クエリ エディター**します。  
+>  このダイアログ ボックスを使用してクエリまたはモデルを作成することはできません。 新しいマイニング構造を作成するには、Excel 用のデータマイニングクライアントに用意されているウィザードのいずれかを使用するか、**詳細エディターデータマイニングクエリ**を使用します。  
   
-### <a name="requirements"></a>要件  
- データ マイニング モデルを管理するには、最初に [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスへの接続を作成する必要があります。 一時ファイルに保存されているセッション モデルを操作する場合も同様です。 作成または接続を変更する方法の詳細については、次を参照してください。[ソース データへの接続&#40;Excel 用データ マイニング クライアント&#41;](connect-to-source-data-data-mining-client-for-excel.md)します。  
+### <a name="requirements"></a>必要条件  
+ データ マイニング モデルを管理するには、最初に [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスへの接続を作成する必要があります。 一時ファイルに保存されているセッション モデルを操作する場合も同様です。 接続を作成または変更する方法の詳細については、「 [Connect To Source data &#40;Excel 用データマイニングクライアント&#41;](connect-to-source-data-data-mining-client-for-excel.md)」を参照してください。  
   
- 接続先の [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスに既存のデータ マイニング構造またはデータ マイニング モデルがない場合は、ウィザードまたはこのアドインに用意されているその他のツールを使用して、データ マイニング構造またはデータ マイニング モデルを作成できます。 使用して、新しいモデルを作成することも、**データ マイニング モデルの高度なエディター**します。  
+ 接続先の [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスに既存のデータ マイニング構造またはデータ マイニング モデルがない場合は、ウィザードまたはこのアドインに用意されているその他のツールを使用して、データ マイニング構造またはデータ マイニング モデルを作成できます。 **詳細エディターのデータマイニングモデル**を使用して新しいモデルを作成することもできます。  
   
 ## <a name="see-also"></a>参照  
- [マイニング モデルを文書化&#40;データ マイニング Excel 用アドイン&#41;](documenting-mining-models-data-mining-add-ins-for-excel.md)   
- [展開して、マイニング モデルのスケーリング&#40;データ マイニング Excel 用アドイン&#41;](deploying-and-scaling-mining-models-data-mining-add-ins-for-excel.md)   
+ [Excel 用データマイニングアドイン &#40;マイニングモデルのドキュメント化&#41;](documenting-mining-models-data-mining-add-ins-for-excel.md)   
+ [Excel 用データマイニングアドイン &#40;のマイニングモデルの配置とスケーリング&#41;](deploying-and-scaling-mining-models-data-mining-add-ins-for-excel.md)   
 
   

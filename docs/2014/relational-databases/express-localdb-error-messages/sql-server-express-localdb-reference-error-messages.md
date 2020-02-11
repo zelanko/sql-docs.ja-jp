@@ -1,5 +1,5 @@
 ---
-title: SQL Server Express LocalDB エラー メッセージ リファレンス |Microsoft Docs
+title: SQL Server Express LocalDB のエラーメッセージの参照 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 98c76925063c332ef2f537d427ae62bb83bc7024
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62714909"
 ---
 # <a name="sql-server-express-localdb-error-message-reference"></a>SQL Server Express LocalDB のエラー メッセージ リファレンス
@@ -84,7 +84,7 @@ ms.locfileid: "62714909"
  指定した共有名は既に使用されています。  
   
  [LOCALDB_ERROR_SQL_SERVER_STARTUP_FAILED](localdb-error-sql-server-startup-failed.md)  
- SQL Server プロセスが開始されたが、SQL Server の起動に失敗しました。  
+ SQL Server プロセスが開始されましたが、SQL Server の起動に失敗しました。  
   
  [LOCALDB_ERROR_TOO_MANY_SHARED_INSTANCES](localdb-error-too-many-shared-instances.md)  
  共有インスタンスが多すぎます。  
@@ -105,7 +105,7 @@ ms.locfileid: "62714909"
  指定したパッチ レベルはインストールされていません。  
   
  [LOCALDB_ERROR_WAIT_TIMEOUT](localdb-error-wait-timeout.md)  
- 同期ロックを取得中にタイムアウトが発生しました。  
+ 同期ロックを取得しようとしているときにタイムアウトが発生しました。  
   
  [LOCALDB_ERROR_XEVENT_FAILED](localdb-error-xevent-failed.md)  
  LocalDB インスタンスの API 内で XEvent エンジンを開始できませんでした。  

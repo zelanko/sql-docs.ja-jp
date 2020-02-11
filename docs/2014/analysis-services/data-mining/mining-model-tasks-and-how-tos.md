@@ -1,5 +1,5 @@
 ---
-title: マイニング モデル タスクと操作方法 |Microsoft Docs
+title: マイニングモデルタスクと操作方法 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3a41d72ce6c0234e6419b55a9fe1895226d884fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083491"
 ---
 # <a name="mining-model-tasks-and-how-tos"></a>マイニング モデル タスクと操作方法
@@ -35,7 +35,7 @@ ms.locfileid: "66083491"
   
 -   [マイニング モデルでの列の分離の変更](change-the-discretization-of-a-column-in-a-mining-model.md)  
   
--   [モデリング フラグの表示または変更 (データ マイニング)](modeling-flags-data-mining.md)  
+-   [データマイニング&#41;&#40;モデリングフラグを表示または変更する](modeling-flags-data-mining.md)  
   
 -   [モデルでリグレッサーとして使用する列の指定](specify-a-column-to-use-as-regressor-in-a-model.md)  
   
@@ -55,9 +55,9 @@ ms.locfileid: "66083491"
   
 -   [データ マイニング ディメンションの作成](create-a-data-mining-dimension.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [マイニング構造のタスクと操作方法](mining-structure-tasks-and-how-tos.md)   
- [マイニング モデル (Analysis Services - データ マイニング)](mining-models-analysis-services-data-mining.md)   
+ [マイニングモデル &#40;Analysis Services-データマイニング&#41;](mining-models-analysis-services-data-mining.md)   
  [データ マイニングの概念](data-mining-concepts.md)  
   
   

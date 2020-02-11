@@ -1,5 +1,5 @@
 ---
-title: クエリとフィルター ([ブラウザー] タブ、キューブ デザイナー) (Analysis Services - 多次元データ) |Microsoft Docs
+title: クエリとフィルター (キューブデザイナーの [ブラウザー] タブ) (Analysis Services-多次元データ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d788a4957d7c6b3ea02e407f8b09fa80b957a4b5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070536"
 ---
 # <a name="query-and-filter-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>クエリとフィルター (キューブ デザイナーの [ブラウザー] タブ) (Analysis Services - 多次元データ)
@@ -27,39 +27,41 @@ ms.locfileid: "66070536"
   
  既定では、クエリの実行時、データ ソースへの接続には、 **[権限借用情報]** ページで指定された資格情報ではなく、現在のユーザーの資格情報が使用されます。 ただし、 **ツール バー** の **[ユーザーの変更]** をクリックすることによって、クエリまたはレポートのユーザー コンテキストを変更することもできます。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **Dimension**  
  サブキューブをスライスするディメンションを選択します。  
   
  **Hierarchy**  
  サブキューブをスライスする階層を選択します。  
   
- **[演算子]**  
- **[フィルター式]** の式を、選択した階層に適用する方法を定義する演算子を選択します。 次の表では、使用可能な演算子について説明しています。  
+ **演算子**  
+ 
+  **[フィルター式]** の式を、選択した階層に適用する方法を定義する演算子を選択します。 次の表では、使用可能な演算子について説明しています。  
   
-|値|説明|  
+|値|[説明]|  
 |-----------|-----------------|  
-|**等しい**|結果は **[フィルター式]** で定義された設定に制限されます。|  
-|**等しくないです。**|結果は **[フィルター式]** で定義された設定によって除外されたメンバーに制限されます。|  
-|**In**|結果は **[フィルター式]** で選択された名前付きセットに制限されます。|  
-|**ではありません。**|結果は **[フィルター式]** で選択された名前付きセットによって除外されたメンバーに制限されます。|  
-|**[値を含む]**|結果は **[フィルター式]** にある文字列をメンバー名に含むメンバーに制限されます。|  
-|**始まる**|結果は **[フィルター式]** にある文字列で始まるメンバー名を持つメンバーに制限されます。|  
-|**範囲 (包含)**|結果は **[フィルター式]** で選択された範囲に制限されます。|  
-|**範囲 (排他)**|結果は **[フィルター式]** で選択された範囲によって除外されたメンバーに制限されます。|  
+|**Equal**|結果は **[フィルター式]** で定義された設定に制限されます。|  
+|**等しくない**|結果は **[フィルター式]** で定義された設定によって除外されたメンバーに制限されます。|  
+|**から**|結果は **[フィルター式]** で選択された名前付きセットに制限されます。|  
+|**含まれない**|結果は **[フィルター式]** で選択された名前付きセットによって除外されたメンバーに制限されます。|  
+|**は**|結果は **[フィルター式]** にある文字列をメンバー名に含むメンバーに制限されます。|  
+|**で始まる**|結果は **[フィルター式]** にある文字列で始まるメンバー名を持つメンバーに制限されます。|  
+|**[範囲 (包含)]**|結果は **[フィルター式]** で選択された範囲に制限されます。|  
+|**[範囲 (排他)]**|結果は **[フィルター式]** で選択された範囲によって除外されたメンバーに制限されます。|  
 |**MDX (MDX)**|結果は **[フィルター式]** で設定された多次元式 (MDX) に制限されます。|  
   
- **[フィルター式]**  
- **[演算子]** によって評価される式を入力します。この式により、参照される結果が制限されます。  
+ **フィルター式**  
+ 
+  **[演算子]** によって評価される式を入力します。この式により、参照される結果が制限されます。  
   
 > [!NOTE]  
 >  このフィールドは、動的データの入力要素であり、選択された演算子に必要なデータの型を反映して表示内容が変わります。  
   
 ## <a name="see-also"></a>参照  
- [キューブ デザイナー &#40;Analysis Services - 多次元データ&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [ブラウザー&#40;キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](browser-cube-designer-analysis-services-multidimensional-data.md)   
- [ツールバー&#40;ブラウザー タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](toolbar-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   
- [Excel で分析&#40;ブラウザー タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](analyze-in-excel-browser-cube-designer-analysis-services-multidimensional-data.md)   
- [メタデータ&#40;ブラウザー タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](metadata-browser-tab-cube-designer-analysis-services-multidimensional-data.md)  
+ [キューブデザイナー &#40;Analysis Services-多次元データ&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [ブラウザー &#40;キューブデザイナー&#41; &#40;Analysis Services-多次元データ&#41;](browser-cube-designer-analysis-services-multidimensional-data.md)   
+ [ツールバー &#40;[ブラウザー] タブ、キューブデザイナー&#41; &#40;Analysis Services-多次元データ&#41;](toolbar-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   
+ [[Excel で分析] &#40;[ブラウザー] タブ、キューブデザイナー&#41; &#40;Analysis Services-多次元データ&#41;](analyze-in-excel-browser-cube-designer-analysis-services-multidimensional-data.md)   
+ [[メタデータ &#40;ブラウザー] タブ、キューブデザイナー&#41; &#40;Analysis Services-多次元データ&#41;](metadata-browser-tab-cube-designer-analysis-services-multidimensional-data.md)  
   
   

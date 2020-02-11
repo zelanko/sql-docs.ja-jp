@@ -1,5 +1,5 @@
 ---
-title: テーブルの検索 ダイアログ ボックス (Analysis Services - 多次元データ) |Microsoft Docs
+title: '[テーブルの検索] ダイアログボックス (Analysis Services-多次元データ) |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,35 +15,42 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2730d14bb0ffc0bab6c0f6dc8a331bae62644da0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081081"
 ---
 # <a name="find-table-dialog-box-analysis-services---multidimensional-data"></a>[テーブルの検索] ダイアログ ボックス (Analysis Services - 多次元データ)
-  **の** [テーブルの検索] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ダイアログ ボックスを使用すると、ディメンション、キューブ、またはマイニング構造に関連付けられているデータ ソース ビュー内のテーブルを検索できます。 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] でこのダイアログ ボックスを表示するには、次の手順に従います。  
   
--   **ディメンション デザイナー** の **[ディメンション構造]** ページの **[ツール バー]** ペインで **[テーブルの検索]** をクリックします。  
+  **の** [テーブルの検索] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ダイアログ ボックスを使用すると、ディメンション、キューブ、またはマイニング構造に関連付けられているデータ ソース ビュー内のテーブルを検索できます。 
+  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] でこのダイアログ ボックスを表示するには、次の手順に従います。  
   
--   **ディメンション デザイナー** の **[ディメンション構造]** ページの **[データ ソース ビュー]** ペインで何もない部分を右クリックし、 **[テーブルの検索]** を選択します。  
+-   
+  **ディメンション デザイナー** の **[ディメンション構造]** ページの **[ツール バー]** ペインで **[テーブルの検索]** をクリックします。  
   
--   **キューブ デザイナー** の **[キューブ構造]** ページの **[ツール バー]** ペインで **[テーブルの検索]** をクリックします。  
+-   
+  **ディメンション デザイナー** の **[ディメンション構造]** ページの **[データ ソース ビュー]** ペインで何もない部分を右クリックし、 **[テーブルの検索]** を選択します。  
   
--   **キューブ デザイナー** の **[キューブ構造]** ページの **[データ ソース ビュー]** ペインで何もない部分を右クリックし、 **[テーブルの検索]** を選択します。  
+-   
+  **キューブ デザイナー** の **[キューブ構造]** ページの **[ツール バー]** ペインで **[テーブルの検索]** をクリックします。  
   
--   **データ マイニング モデル デザイナー** の **[マイニング構造]** ページの **[データ ソース ビュー]** ペインで何もない部分を右クリックし、 **[テーブルの検索]** を選択します。  
+-   
+  **キューブ デザイナー** の **[キューブ構造]** ページの **[データ ソース ビュー]** ペインで何もない部分を右クリックし、 **[テーブルの検索]** を選択します。  
   
-## <a name="options"></a>および  
- **データ ソース ビューからテーブルを選択します。**  
+-   
+  **データ マイニング モデル デザイナー** の **[マイニング構造]** ページの **[データ ソース ビュー]** ペインで何もない部分を右クリックし、 **[テーブルの検索]** を選択します。  
+  
+## <a name="options"></a>オプション  
+ **[データ ソース ビューからテーブルを選択]**  
  検索するテーブルを **[データ ソース ビュー]** ペインで選択します。 このオプションのグリッドには、 **[フィルター]** で設定したフィルターに一致する、現在のダイアグラムにまだ表示されていないオブジェクトとその種類が表示されます ( **[フィルター]** が設定されていない場合、すべてのテーブルが表示されます)。  
   
- **[フィルター]**  
+ **Assert**  
  表示するオブジェクトを限定するために使用するフィルターを入力した後、ボタンをクリックすると、 **[データ ソース ビューからテーブルを選択]** に表示されるテーブルがフィルター選択されます。  
   
 ## <a name="see-also"></a>参照  
- [アセンブリのプロパティ ダイアログ ボックス&#40;Analysis Services - 多次元データ&#41;](assembly-properties-dialog-box-analysis-services-multidimensional-data.md)   
- [データ ソース ビュー&#40;ディメンション構造 タブ、ディメンション デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](datasource-view-dimension-designer-analysis-services-multidimensional-data.md)   
- [データ ソース ビュー&#40;キューブ構造 タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](data-source-view-cube-designer-analysis-services-multidimensional-data.md)  
+ [[アセンブリのプロパティ] ダイアログボックス &#40;Analysis Services-多次元データ&#41;](assembly-properties-dialog-box-analysis-services-multidimensional-data.md)   
+ [データソースビュー &#40;[ディメンション構造] タブ、ディメンションデザイナー&#41; &#40;Analysis Services-多次元データ&#41;](datasource-view-dimension-designer-analysis-services-multidimensional-data.md)   
+ [キューブデザイナーの [キューブ構造] タブの [データソースビュー &#40;&#41; &#40;Analysis Services-多次元データ&#41;](data-source-view-cube-designer-analysis-services-multidimensional-data.md)  
   
   

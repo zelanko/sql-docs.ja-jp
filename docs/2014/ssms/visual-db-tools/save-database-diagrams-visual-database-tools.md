@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c29053daaef4e24d89ee92fc4b6653616999205a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62710508"
 ---
 # <a name="save-database-diagrams-visual-database-tools"></a>データベース ダイアグラムの保存 (Visual Database Tools)
@@ -26,7 +26,7 @@ ms.locfileid: "62710508"
   
 ### <a name="to-save-the-database-diagram"></a>データベース ダイアグラムを保存するには  
   
-1.  **ファイル**] メニューの [選択**保存 < *`tablename`* >** します。  
+1.  [**ファイル**] メニューの [ **<*`tablename`* の保存**] をクリックします。  
   
 2.  このダイアグラムを初めて保存する場合は、 **[名前を付けて保存]** ダイアログ ボックスが表示されます。 ダイアグラムの名前を入力します。  
   

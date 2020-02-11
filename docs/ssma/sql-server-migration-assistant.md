@@ -10,25 +10,25 @@ ms.assetid: d0233525-a83b-4279-813e-c554042abd0e
 author: Jtoland
 ms.author: Jtoland
 ms.openlocfilehash: fa87f4ac6f5a4caf5da8d5b00200b1dd8c92d53a
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72252127"
 ---
 # <a name="sql-server-migration-assistant"></a>SQL Server Migration Assistant
 
-Microsoft SQL Server Migration Assistant (SSMA) は、データベースの移行を自動化して、Microsoft Access、DB2、MySQL、Oracle、および SAP ASE から SQL Server するために設計されたツールです。  
+Microsoft SQL Server Migration Assistant (SSMA) は、Microsoft Access、DB2、MySQL、Oracle、および SAP ASE から SQL Server へのデータベース移行を自動化するために設計されたツールです。  
   
 ## <a name="migration-sources"></a>移行元  
   
-- [アクセスの SQL Server Migration Assistant](../ssma/access/sql-server-migration-assistant-for-access-accesstosql.md)  
+- [SQL Server Migration Assistant for Access](../ssma/access/sql-server-migration-assistant-for-access-accesstosql.md)  
   
-- [DB2 の SQL Server Migration Assistant](../ssma/db2/sql-server-migration-assistant-for-db2-db2tosql.md)  
+- [SQL Server Migration Assistant for DB2](../ssma/db2/sql-server-migration-assistant-for-db2-db2tosql.md)  
   
-- [MySQL の SQL Server Migration Assistant](../ssma/mysql/sql-server-migration-assistant-for-mysql-mysqltosql.md)  
+- [SQL Server Migration Assistant for MySQL](../ssma/mysql/sql-server-migration-assistant-for-mysql-mysqltosql.md)  
   
-- [Oracle の SQL Server Migration Assistant](../ssma/oracle/sql-server-migration-assistant-for-oracle-oracletosql.md)  
+- [SQL Server Migration Assistant for Oracle](../ssma/oracle/sql-server-migration-assistant-for-oracle-oracletosql.md)  
   
 - [SAP ASE の SQL Server Migration Assistant](../ssma/sybase/sql-server-migration-assistant-for-sybase-sybasetosql.md)  
 
@@ -46,7 +46,7 @@ SSMA では、次のターゲットバージョンがサポートされていま
 - Azure SQL データベース
 - Azure SQL Data Warehouse * *
 
-\* * このターゲットは、SSMA for Oracle でのみサポートされています。
+* * このターゲットは、SSMA for Oracle でのみサポートされています。
 
 ## <a name="downloads"></a>ダウンロード
 
@@ -68,7 +68,7 @@ SSMA では、次のターゲットバージョンがサポートされていま
   
   - [SQL Server Developer センターのコミュニティ](https://go.microsoft.com/fwlink/?LinkId=42456)-ニュースグループ、フォーラム、その他の開発者 SQL Server に役立つコミュニティリソース  
   
-- **サポート**- [https://support.microsoft.com/assistedsupportproducts](https://support.microsoft.com/assistedsupportproducts)にアクセスして、' SQL Server Migration Assistant ' を検索してください。  バージョンを選択し、[要求の開始] を選択します。  サポートは SQL Server Migration Assistant ツールに含まれています。  
+- **サポート**-に[https://support.microsoft.com/assistedsupportproducts](https://support.microsoft.com/assistedsupportproducts)アクセスして、' SQL Server Migration Assistant ' を検索します。  バージョンを選択し、[要求の開始] を選択します。  サポートは SQL Server Migration Assistant ツールに含まれています。  
   
 - **プレミアサポート**-プレミア契約をお持ちの場合は、プレミア[オンラインポータル](https://premier.microsoft.com/)でプレミアサポートを受けることができます。  
   

@@ -21,16 +21,17 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 2439b19c4550d07b8d50a0bed6d72b603b1601a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62745791"
 ---
-# <a name="srvsetutype-extended-stored-procedure-api"></a>srv_setutype (拡張ストアド プロシージャ API)
+# <a name="srv_setutype-extended-stored-procedure-api"></a>srv_setutype (拡張ストアド プロシージャ API)
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]代わりに CLR Integration をご使用ください。  
+>  
+  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]代わりに CLR Integration をご使用ください。  
   
  行内の列について、ユーザー定義データ型を設定します。  
   
@@ -64,15 +65,16 @@ user_type
 ## <a name="returns"></a>戻り値  
  SUCCEED または FAIL。 列が存在しない場合は FAIL を返します。  
   
-## <a name="remarks"></a>コメント  
- 列には、実際のデータ型とユーザー定義データ型の 2 つのデータ型があります。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、ユーザー定義データ型を使用して、列の実際のユーザー定義データ型があれば格納します。さらに、NULL を許容するか、更新ができるかなどの列の記述情報も格納します。  
+## <a name="remarks"></a>解説  
+ 列には、実際のデータ型とユーザー定義データ型の 2 つのデータ型があります。 では、このユーザー定義データ型を[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用して、列の実際のユーザー定義データ型 (存在する場合) と、列の null 値の許容と更新などの列の説明情報を格納します。  
   
- **srv_setutype** 関数は、**srv_describe** で *column* が定義されいれば、最後の行を送信する前のどの時点でも呼び出すことができます。  
+ 
+  **srv_setutype** 関数は、*srv_describe* で **column** が定義されいれば、最後の行を送信する前のどの時点でも呼び出すことができます。  
   
 > [!IMPORTANT]  
->  拡張ストアド プロシージャのソース コードを十分に確認し、コンパイル済み DLL を、運用サーバーにインストールする前にテストする必要があります。 セキュリティの確認およびテストについて詳しくは、[Microsoft の Web サイト](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409 https://msdn.microsoft.com/security/)をご覧ください。  
+>  拡張ストアド プロシージャのソース コードを十分に確認し、コンパイル済み DLL を、運用サーバーにインストールする前にテストする必要があります。 セキュリティの確認およびテストについて詳しくは、[Microsoft の Web サイト](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/)をご覧ください。  
   
 ## <a name="see-also"></a>参照  
- [srv_describe &#40;拡張ストアド プロシージャ API&#41;](srv-describe-extended-stored-procedure-api.md)  
+ [srv_describe &#40;拡張ストアドプロシージャ API&#41;](srv-describe-extended-stored-procedure-api.md)  
   
   

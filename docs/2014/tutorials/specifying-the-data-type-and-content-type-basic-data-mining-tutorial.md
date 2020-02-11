@@ -1,5 +1,5 @@
 ---
-title: 指定されたデータ型およびコンテンツ タイプ (基本的なデータ マイニング チュートリアル) |Microsoft Docs
+title: データ型とコンテンツの種類の指定 (基本的なデータマイニングチュートリアル) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 583a6fda2dbb4698405a3d69f33955531b3c1c10
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62720048"
 ---
 # <a name="specifying-the-data-type-and-content-type-basic-data-mining-tutorial"></a>データ型およびコンテンツの種類の指定 (基本的なデータ マイニング チュートリアル)
@@ -22,46 +22,46 @@ ms.locfileid: "62720048"
   
 #### <a name="review-and-modify-content-type-and-data-type-for-each-column"></a>各列のコンテンツの種類とデータ型の確認および変更  
   
-1.  **指定列のコンテンツおよびデータ型**] ページで [**検出**既定データと各列のコンテンツの種類を決定するアルゴリズムを実行します。  
+1.  [**列のコンテンツおよびデータ型の指定**] ページで、[**検出**] をクリックして、各列の既定のデータ型とコンテンツの種類を決定するアルゴリズムを実行します。  
   
-2.  エントリを確認、**コンテンツの種類**と**データ型**列設定が次の表に示したものと同じであることを確認して、必要な場合に変更します。  
+2.  [**コンテンツの種類**] 列と [**データ型**] 列のエントリを確認し、必要に応じて変更して、次の表に示されている設定と同じになるようにします。  
   
-     通常は、ウィザードによって数値が検出され適切な数値データ型が割り当てられますが、数値をテキストとして処理することが必要なシナリオも数多くあります。 たとえば、 **GeographyKey**ことがあります。 この識別子の算術演算を実行するために、テキストとして処理する必要があります。  
+     通常は、ウィザードによって数値が検出され適切な数値データ型が割り当てられますが、数値をテキストとして処理することが必要なシナリオも数多くあります。 たとえば、 **Geographykey**は、この識別子に対して数学的演算を実行するのは不適切であるため、テキストとして処理する必要があります。  
   
-    |[列]|コンテンツの種類|データ型|  
+    |列|コンテンツの種類|データ型|  
     |------------|------------------|---------------|  
-    |**アドレス Line1**|**不連続**|**Text**|  
-    |**アドレス Line2**|**不連続**|**Text**|  
-    |**経過時間**|**継続的です**|**Long**|  
-    |**Bike Buyer**|**不連続**|**Long**|  
-    |**Commute Distance**|**不連続**|**Text**|  
+    |**アドレス Line1**|**Discrete**|**Text**|  
+    |**アドレス Line2**|**Discrete**|**Text**|  
+    |**変更**|**継続的**|**Long**|  
+    |**Bike Buyer**|**Discrete**|**Long**|  
+    |**Commute 距離**|**Discrete**|**Text**|  
     |**CustomerKey**|**[キー]**|**Long**|  
-    |**DateLastPurchase**|**継続的です**|**Date**|  
-    |**Email Address**|**不連続**|**Text**|  
-    |**English Education**|**不連続**|**Text**|  
-    |**English Occupation**|**不連続**|**Text**|  
-    |**FirstName**|**不連続**|**Text**|  
-    |**Gender**|**不連続**|**Text**|  
-    |**Geography Key**|**不連続**|**Text**|  
-    |**House Owner Flag**|**不連続**|**Text**|  
-    |**[Last Name]**|**不連続**|**Text**|  
-    |**Marital Status**|**不連続**|**Text**|  
-    |**Number Cars Owned**|**不連続**|**Long**|  
-    |**Number Children At Home**|**不連続**|**Long**|  
-    |**Region**|**不連続**|**Text**|  
-    |**Total Children**|**不連続**|**Long**|  
-    |**Yearly Income**|**継続的です**|**Double**|  
+    |**DateLastPurchase**|**継続的**|**予定**|  
+    |**電子メールアドレス**|**Discrete**|**Text**|  
+    |**English Education**|**Discrete**|**Text**|  
+    |**English Occupation**|**Discrete**|**Text**|  
+    |**FirstName**|**Discrete**|**Text**|  
+    |**性別**|**Discrete**|**Text**|  
+    |**Geography Key**|**Discrete**|**Text**|  
+    |**ハウス所有者フラグ**|**Discrete**|**Text**|  
+    |**姓**|**Discrete**|**Text**|  
+    |**Marital Status**|**Discrete**|**Text**|  
+    |**車両所有数**|**Discrete**|**Long**|  
+    |**子供の子供の数**|**Discrete**|**Long**|  
+    |**リージョン**|**Discrete**|**Text**|  
+    |**Total Children**|**Discrete**|**Long**|  
+    |**Yearly Income**|**継続的**|**小数**|  
   
 3.  **[次へ]** をクリックします。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
- [構造のテスト データ セットの指定&#40;基本的なデータ マイニング チュートリアル&#41;](../../2014/tutorials/specifying-a-testing-data-set-for-the-structure-basic-data-mining-tutorial.md)  
+ [構造 &#40;基本的なデータマイニングチュートリアルのテストデータセットの指定&#41;](../../2014/tutorials/specifying-a-testing-data-set-for-the-structure-basic-data-mining-tutorial.md)  
   
 ## <a name="previous-task-in-lesson"></a>このレッスンの前の作業  
- [ターゲット メーリングのマイニング モデル構造の作成&#40;基本的なデータ マイニング チュートリアル&#41;](../../2014/tutorials/creating-a-targeted-mailing-mining-model-structure-basic-data-mining-tutorial.md)  
+ [「基本的なデータマイニングチュートリアル」 &#40;「対象のメーリングマイニングモデル構造の作成&#41;](../../2014/tutorials/creating-a-targeted-mailing-mining-model-structure-basic-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>関連項目  
- [コンテンツの種類 &#40;です。 データ マイニング&#41;](../../2014/analysis-services/data-mining/content-types-data-mining.md)   
- [データ型 (データ マイニング)](../../2014/analysis-services/data-mining/data-types-data-mining.md)  
+## <a name="see-also"></a>参照  
+ [コンテンツの種類 &#40;データマイニング&#41;](../../2014/analysis-services/data-mining/content-types-data-mining.md)   
+ [データマイニング&#41;&#40;データ型](../../2014/analysis-services/data-mining/data-types-data-mining.md)  
   
   

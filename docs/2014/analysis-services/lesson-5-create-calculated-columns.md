@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 6: 計算列の作成 |Microsoft Docs'
+title: 'レッスン 6: 計算列を作成する |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,69 +11,71 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 58ba761f3e32f13ddcf81dc9875057195298c705
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66078556"
 ---
 # <a name="lesson-6-create-calculated-columns"></a>レッスン 6: 計算列の作成
-  このレッスンでは、計算列を追加して、モデル内に新しいデータを作成します。 計算列は、モデル内の既存のデータに基づいて機能します。 詳細については、「[計算列 (SSAS テーブル)](tabular-models/ssas-calculated-columns.md)」を参照してください。  
+  このレッスンでは､計算列を追加することによってモデルに新しいデータを作成します｡ 計算列は、モデル内の既存のデータに基づいて機能します。 詳細については、「[計算列 (SSAS テーブル)](tabular-models/ssas-calculated-columns.md)」を参照してください。  
   
- このレッスンでは、3 つの異なるテーブル内に、5 つの新しい計算列を作成します。 手順は実習ごとに少しずつ異なります。 これは、新しい列を作成したり、それらの名前を変更したり、それらをテーブル内のさまざまな場所へ配置するのには、いくつかの方法があることを示すためです。  
+ 3 つのテーブルに 5 つの計算列を新しく作成します｡ 手順は､作業ごとに少しずつ異なります｡ ここでの目的は､新しい列の作成や列名の変更､テーブル内のさまざまな場所に列を配置する方法はいくつかあることを紹介することにあります｡  
   
- このレッスンを完了するまでに時間を推定するには。**15 分**  
+ このレッスンの推定所要時間: **15 分**  
   
 ## <a name="prerequisites"></a>前提条件  
- このトピックはテーブル モデリング チュートリアルの一部であり、チュートリアルでの順番に従って実行する必要があります。 このレッスンでは、タスクを実行する前に、前のレッスンを完了が必要があります。[レッスン 5: リレーションシップの作成](lesson-4-create-relationships.md)です。  
+ このトピックは、表形式モデルのチュートリアルの一部であり、順番に従って実行する必要があります。 このレッスンの実習を行う前に、前のレッスン「 [レッスン 5: リレーションシップの作成](lesson-4-create-relationships.md)」を完了している必要があります。  
   
 ## <a name="create-calculated-columns"></a>計算列の作成  
   
 #### <a name="create-a-month-calendar-calculated-column-in-the-date-table"></a>Date テーブル内に Month Calendar 計算列を作成する  
   
-1.  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] で、 **[モデル]** メニューをクリックし、 **[モデル ビュー]** をポイントして、 **[データ ビュー]** をクリックします。  
+1.  
+  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]で、 **[モデル]** メニューをクリックし、 **[モデル ビュー]** をポイントして、 **[データ ビュー]** をクリックします。  
   
-     計算列は、モデル デザイナーのデータ ビューでのみ作成できます。  
+     計算列は､Date View でモデル デザイナーを使用することによってのみ作成できます｡  
   
 2.  モデル デザイナーで、 **Date** テーブル (タブ) をクリックします。  
   
-3.  右クリックし、 **Calendar Quarter**列、およびクリック**列の挿入**します。  
+3.  [ **Calendar Quarter** ] 列を右クリックし、[**列の挿入**] をクリックします。  
   
-     という名前の新しい列**CalculatedColumn1**の左側に挿入される、 **Calendar Quarter**列。  
+     **CalculatedColumn1**という名前の新しい列が、 **Calendar Quarter**列の左側に挿入されます。  
   
-4.  テーブルの上にある数式バーに、以下の数式を入力します。 オートコンプリートを利用すると、列やテーブルの完全修飾名を簡単に入力できるだけでなく、使用可能な関数の一覧も表示できます。  
+4.  テーブルの上にある数式バーに、以下の数式を入力します。 AutoComplete は列やテーブルの完全修飾名を入力するのに役立つとともに､使用可能な関数をすべて一覧表示します｡  
   
      `=RIGHT(" " & FORMAT([Month],"#0"), 2) & " - " & [Month Name]`  
   
      数式の入力が終了したら、Enter キーを押します。  
   
-     すべての行の計算列に値が入力されます。 テーブルを下にスクロールすると、この列の行が、各行のデータに基づいて、異なる値を保持できることがわかります。  
+     計算列のすべての行に値が入力されます｡ テーブルを下方向にスクロールすると､この列の各行のデータに基づいて､行にさまざまな値が設定さていることが分かります｡  
   
     > [!NOTE]  
-    >  エラーが発生した場合、数式内の列名に変更した列名を一致することを確認[レッスン 3。列名の変更](rename-columns.md)します。  
+    >  エラーが返された場合は、数式内の列名が、「 [レッスン 3: 列名の変更](rename-columns.md)」で変更した列名と一致していることを確認してください。  
   
-5.  この列の名前を変更`Month Calendar`します。  
+5.  この列の名前`Month Calendar`をに変更します。  
   
  Month Calendar 計算列は、Month の並べ替え可能な名前を提供します。  
   
 #### <a name="create-a-day-of-week-calculated-column-in-the-date-table"></a>Date テーブル内に Day of Week 計算列を作成する  
   
-1.  **Date** テーブルがアクティブな状態のままで、 **[列]** メニューをクリックし、 **[列の追加]** をクリックします。  
+1.  
+  **Date** テーブルがアクティブな状態のままで、 **[列]** メニューをクリックし、 **[列の追加]** をクリックします。  
   
      新しい列がテーブルの右端に追加されます。  
   
-2.  数式バーで、次の数式を入力します。  
+2.  数式バーに次の式を入力します｡  
   
      `=RIGHT(" " & FORMAT([Day Number Of Week],"#0"), 2) & " - " & [Day Name]`  
   
      数式の入力が終了したら、Enter キーを押します。  
   
-3.  列の名前を変更`Day of Week`します。  
+3.  列の名前を`Day of Week`に変更します。  
   
 4.  列見出しをクリックし、列を **Day Name** 列と **Day of Month** 列の間にドラッグします。  
   
     > [!TIP]  
-    >  テーブル内の列を移動することで、列が参照しやすくなります。  
+    >  テーブル内の列を移動すると､ナビゲートしやすくなります｡  
   
  Day of Week 計算列では、曜日を表す、並べ替え可能な名前が提供されます。  
   
@@ -81,31 +83,32 @@ ms.locfileid: "66078556"
   
 1.  モデル デザイナーで、 **Product** テーブルを選択します。  
   
-2.  テーブルの右端までスクロールします。 右端にある **Add Column** (斜体) という列の列見出しをクリックします。  
+2.  テーブルの右端までスクロールします。 右端の列名が **Add Column** (斜体) になっています｡この列の見出しをクリックします｡  
   
-3.  数式バーで、次の数式を入力します。  
+3.  数式バーに次の式を入力します｡  
   
      `=RELATED('Product Subcategory'[Product Subcategory Name])`  
   
      数式の入力が終了したら、Enter キーを押します。  
   
-4.  列の名前を変更`Product Subcategory Name`します。  
+4.  列の名前を`Product Subcategory Name`に変更します。  
   
- Product Subcategory Name 計算列は、Product テーブル内に、Product Subcategory テーブルの Product Subcategory Name 列のデータを含んだ階層を作成するために使用されます。 階層は、複数のテーブルにまたがって存在することはできません。 階層の作成は、この後のレッスン 7 で行います。  
+ Product Subcategory Name 計算列は、Product テーブル内に、Product Subcategory テーブルの Product Subcategory Name 列のデータを含んだ階層を作成するために使用されます。 階層が複数のテーブルにまたがることはできません｡ 階層の作成は、この後のレッスン 7 で行います。  
   
 #### <a name="create-a-product-category-name-calculated-column-in-the-product-table"></a>Product テーブル内に Product Category Name 計算列を作成する  
   
-1.  **Product** テーブルがアクティブな状態のままで、 **[列]** メニューをクリックし、 **[列の追加]** をクリックします。  
+1.  
+  **Product** テーブルがアクティブな状態のままで、 **[列]** メニューをクリックし、 **[列の追加]** をクリックします。  
   
-2.  数式バーで、次の数式を入力します。  
+2.  数式バーに次の式を入力します｡  
   
      `=RELATED('Product Category'[Product Category Name])`  
   
      数式の入力が終了したら、Enter キーを押します。  
   
-3.  列の名前を変更`Product Category Name`します。  
+3.  列の名前を`Product Category Name`に変更します。  
   
- Product Category Name 計算列は、Product テーブル内に、Product Category テーブルの Product Category Name 列のデータを含んだ階層を作成するために使用されます。 階層は、複数のテーブルにまたがって存在することはできません。  
+ Product Category Name 計算列は、Product テーブル内に、Product Category テーブルの Product Category Name 列のデータを含んだ階層を作成するために使用されます。 階層が複数のテーブルにまたがることはできません｡  
   
 #### <a name="create-a-margin-calculated-column-in-the-internet-sales-table"></a>Internet Sales テーブル内に Margin 計算列を作成する  
   
@@ -113,19 +116,19 @@ ms.locfileid: "66078556"
   
 2.  新しい列を追加します。  
   
-3.  数式バーで、次の数式を入力します。  
+3.  数式バーに次の式を入力します｡  
   
      `=[Sales Amount]-[Total Product Cost]`  
   
      数式の入力が終了したら、Enter キーを押します。  
   
-4.  列の名前を変更`Margin`します。  
+4.  列の名前を`Margin`に変更します。  
   
 5.  列を、 **Sales Amount** 列と **Tax Amt** 列の間にドラッグします。  
   
  Margin 計算列は、各 (製品) 行の利益率を分析するために使用されます。  
   
-## <a name="next-step"></a>次の手順  
- このレッスンを続行するには、次のレッスンに移動します。[レッスン 7: メジャーを作成](lesson-6-create-measures.md)です。  
+## <a name="next-step"></a>次のステップ  
+ このチュートリアルを続行するには、次のレッスン「 [レッスン 7: メジャーの作成](lesson-6-create-measures.md)」に進んでください。  
   
   

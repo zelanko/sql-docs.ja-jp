@@ -1,5 +1,5 @@
 ---
-title: 属性リレーションシップのリレーションシップの種類の定義 |Microsoft Docs
+title: 属性リレーションシップのリレーションシップの種類を定義する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,14 +17,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6d30cc8f7dd64af79617c2f4ffd06e584f3c6e85
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077076"
 ---
 # <a name="define-the-relationship-type-of-an-attribute-relationship"></a>属性リレーションシップの種類の定義
-  属性リレーションシップのリレーションシップの種類を定義するには、ディメンション デザイナーの **[属性リレーションシップ]** タブを使用します。ディメンション デザイナーには、[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] からアクセスできます。  
+  属性リレーションシップのリレーションシップの種類を定義するには、ディメンション デザイナーの **[属性リレーションシップ]** タブを使用します。ディメンション デザイナーには、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]からアクセスできます。  
   
 ### <a name="to-set-the-relationship-type-of-an-attribute-relationship"></a>属性リレーションシップのリレーションシップの種類を設定するには  
   
@@ -33,11 +33,12 @@ ms.locfileid: "66077076"
 2.  ダイアグラムまたは **[属性リレーションシップ]** ペインで、属性リレーションシップを右クリックし、 **[リレーションシップの種類]** をクリックして、 **[可変]** または **[固定]** をクリックします。  
   
     > [!NOTE]  
-    >  **[属性リレーションシップ]** ペインを表示するには、ツール バーの **[リスト ビューの表示]** をクリックします。  
+    >  
+  **[属性リレーションシップ]** ペインを表示するには、ツール バーの **[リスト ビューの表示]** をクリックします。  
   
      可変のリレーションシップでは、メンバー間のリレーションシップが時間の経過と共に変化します。 固定のリレーションシップでは、メンバー間のリレーションシップが時間の経過と共に変化しません。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [属性リレーションシップの定義](attribute-relationships-define.md)  
   
   

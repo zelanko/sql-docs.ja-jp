@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f7f6cbc6b4150f2f951befcb70c1b09108de3b51
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62670485"
 ---
 # <a name="collapse-groups-of-rows-visual-database-tools"></a>行グループの集約 (Visual Database Tools)
@@ -73,7 +73,7 @@ ms.locfileid: "62670485"
      行グループに選択条件を適用する方法については、「[グループの条件を指定する方法 (Visual Database Tools)](specify-conditions-for-groups-visual-database-tools.md)」と「[同一クエリ内で HAVING 句および WHERE 句を使用する (Visual Database Tools)](use-having-and-where-clauses-in-the-same-query-visual-database-tools.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [検索条件を指定&#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md)   
+ [Visual Database Tools &#40;検索条件を指定し&#41;](specify-search-criteria-visual-database-tools.md)   
  [クエリおよびビューのデザインの操作方法に関するトピック (Visual Database Tools)](design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
   

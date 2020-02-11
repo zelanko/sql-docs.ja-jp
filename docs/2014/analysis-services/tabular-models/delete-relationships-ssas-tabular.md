@@ -1,5 +1,5 @@
 ---
-title: リレーションシップ (SSAS テーブル) の削除 |Microsoft Docs
+title: リレーションシップの削除 (SSAS テーブル)Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: abe35e51764a7d16c49c8d15d9e2031e0cdabe05
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067327"
 ---
 # <a name="delete-relationships-ssas-tabular"></a>リレーションシップの削除 (SSAS テーブル)
-  ダイアグラム ビューのモデル デザイナーまたは [リレーションシップの管理] ダイアログ ボックスを使用して、既存のリレーションシップを削除できます。 表形式モデルでリレーションシップがどのように使用されるかについては、「 [リレーションシップ &#40;SSAS テーブル&#41;](relationships-ssas-tabular.md)」を参照してください。  
+  ダイアグラム ビューのモデル デザイナーまたは [リレーションシップの管理] ダイアログ ボックスを使用して、既存のリレーションシップを削除できます。 テーブル モデルでリレーションシップがどのように使用されるかについては、「 [リレーションシップ (SSAS テーブル)](relationships-ssas-tabular.md)」を参照してください。  
   
 ## <a name="considerations-for-deleting-relationships"></a>リレーションシップの削除に関する注意事項  
  リレーションシップを削除するかどうかを判断する際には、以下の点に注意してください。  
@@ -35,24 +35,29 @@ ms.locfileid: "66067327"
   
 #### <a name="to-delete-a-relationship-by-using-diagram-view"></a>ダイアグラム ビューを使用してリレーションシップを削除するには  
   
-1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、 **[モデル]** メニューをクリックし、 **[モデル ビュー]** をポイントして、 **[ダイアグラム ビュー]** をクリックします。  
+1.  
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、 **[モデル]** メニューをクリックし、 **[モデル ビュー]** をポイントして、 **[ダイアグラム ビュー]** をクリックします。  
   
 2.  2 つのテーブルの間のリレーションシップの線を右クリックし、 **[削除]** をクリックします。  
   
 #### <a name="to-delete-a-relationship-by-using-the-manage-relationships-dialog-box"></a>[リレーションシップの管理] ダイアログ ボックスを使用してリレーションシップを削除するには  
   
-1.  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]で、 **[テーブル]** メニューをクリックし、 **[リレーションシップの管理]** をクリックします。  
+1.  
+  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]で、 **[テーブル]** メニューをクリックし、 **[リレーションシップの管理]** をクリックします。  
   
-2.  **[リレーションシップの管理]** ダイアログ ボックスで、一覧から 1 つまたは複数のリレーションシップを選択します。  
+2.  
+  **[リレーションシップの管理]** ダイアログ ボックスで、一覧から 1 つまたは複数のリレーションシップを選択します。  
   
      複数のリレーションシップを選択するには、Ctrl キーを押しながら各リレーションシップをクリックします。  
   
-3.  **[リレーションシップの削除]** をクリックします。  
+3.  
+  **[リレーションシップの削除]** をクリックします。  
   
-4.  **[リレーションシップの管理]** ダイアログ ボックスで、 **[閉じる]** をクリックします。  
+4.  
+  **[リレーションシップの管理]** ダイアログ ボックスで、 **[閉じる]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [リレーションシップ &#40;SSAS テーブル&#41;](relationships-ssas-tabular.md)   
- [2 つのテーブル間のリレーションシップの作成 &#40;SSAS テーブル&#41;](create-a-relationship-between-two-tables-ssas-tabular.md)  
+ [SSAS 表形式のリレーションシップ &#40;&#41;](relationships-ssas-tabular.md)   
+ [SSAS 表形式&#41;&#40;2 つのテーブル間のリレーションシップを作成する](create-a-relationship-between-two-tables-ssas-tabular.md)  
   
   

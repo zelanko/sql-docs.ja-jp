@@ -15,21 +15,21 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9aa5518ee9ebcaca287b76636d6eeea8af2f4ea5
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72796424"
 ---
 # <a name="create-a-stored-procedure"></a>ストアド プロシージャの作成
   このトピックでは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] および [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の CREATE PROCEDURE ステートメントを使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャを作成する方法について説明します。  
   
 ##  <a name="Top"></a>   
--   **作業を開始する準備:**  [アクセス許可](#Permissions)  
+-   **作業を開始する準備:** [アクセス許可](#Permissions)  
   
--   **プロシージャの作成に使用するもの:**  [SQL Server Management Studio](#SSMSProcedure)、 [Transact-SQL](#TsqlProcedure)  
+-   **プロシージャを作成するには次を使用します:** [SQL Server Management Studio](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
   
-##  <a name="Permissions"></a> アクセス許可  
+##  <a name="Permissions"></a> Permissions  
  データベースの CREATE PROCEDURE 権限と、プロシージャを作成するスキーマに対する ALTER 権限が必要です。  
   
 ##  <a name="Procedures"></a> ストアド プロシージャを作成する方法  
@@ -52,11 +52,11 @@ ms.locfileid: "72796424"
   
 5.  **[テンプレート パラメーターの値の指定]** ダイアログ ボックスで、各パラメーターに次の値を入力します。  
   
-    |パラメーター|の値|  
+    |パラメーター|Value|  
     |---------------|-----------|  
     |Author|*名前*|  
     |Create Date|*今日の日付*|  
-    |Description|従業員のデータが返されます。|  
+    |説明|従業員のデータが返されます。|  
     |[Procedure_name]|HumanResources.uspGetEmployeesTest|  
     |@Param1|@LastName|  
     |@Datatype_For_Param1|`nvarchar`(50)|  
@@ -65,7 +65,7 @@ ms.locfileid: "72796424"
     |@Datatype_For_Param2|`nvarchar`(50)|  
     |[Default_Value_For_Param2]|NULL|  
   
-6.  クリックして **OK**です。  
+6.  **[OK]** をクリックします。  
   
 7.  **クエリ エディター**で、SELECT ステートメントを次のステートメントに置き換えます。  
   
@@ -126,6 +126,6 @@ ms.locfileid: "72796424"
     GO
     ```  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>参照  
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)  
   

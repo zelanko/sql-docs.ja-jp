@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6d5b5b5ee05f467c0881b38108d126da523ea2e7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62676931"
 ---
 # <a name="view-or-modify-the-properties-of-a-policy-based-management-policy"></a>ポリシー ベースの管理ポリシーのプロパティの表示または変更
@@ -27,9 +27,9 @@ ms.locfileid: "62676931"
   
 -   **作業を開始する準備:**  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
--   **表示またはを使用して、ポリシーのプロパティを変更します。**  
+-   **以下を使用してポリシーのプロパティを表示または変更するには:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -46,13 +46,14 @@ ms.locfileid: "62676931"
   
 #### <a name="to-view-the-properties-of-all-policies-on-an-object"></a>オブジェクトのすべてのポリシーのプロパティを表示するには  
   
-1.  オブジェクト エクスプローラーで、サーバー、サーバー オブジェクト、データベース、またはデータベース オブジェクトを右クリックして、 **[ポリシー]** をポイントし、 **[表示]** をクリックします。 [**ポリシーの表示 - _オブジェクト名_** ] ダイアログ ボックスで使用可能なオプションの詳細については、「[[ポリシーの表示] ダイアログ ボックス](view-policies-dialog-box.md)」を参照してください。  
+1.  オブジェクト エクスプローラーで、サーバー、サーバー オブジェクト、データベース、またはデータベース オブジェクトを右クリックして、 **[ポリシー]** をポイントし、 **[表示]** をクリックします。 [**ポリシーの表示-**_object_name_ ] ダイアログボックスで使用可能なオプションの詳細については、「[[ポリシーの表示] ダイアログボックス](view-policies-dialog-box.md)」を参照してください。  
   
 2.  完了したら、 **[閉じる]** をクリックします。  
   
 #### <a name="to-view-or-modify-a-specific-policys-properties"></a>特定のポリシーのプロパティを表示または変更するには:  
   
-1.  **オブジェクト エクスプローラー**で、表示または変更するポリシー ベースの管理ポリシーを含むサーバーをプラス記号をクリックして展開します。  
+1.  
+  **オブジェクト エクスプローラー**で、表示または変更するポリシー ベースの管理ポリシーを含むサーバーをプラス記号をクリックして展開します。  
   
 2.  プラス記号をクリックして **[管理]** フォルダーを展開します。  
   
@@ -60,7 +61,7 @@ ms.locfileid: "62676931"
   
 4.  プラス記号をクリックして **[ポリシー]** フォルダーを展開します。  
   
-5.  表示または変更するポリシーを右クリックし、 **[プロパティ]** をクリックします。 **[ポリシーを開く - _ポリシー名_]** ダイアログ ボックスで使用可能なオプションの詳細については、「[[新しいポリシーの作成] または [ポリシーを開く] ダイアログ ボックスの [全般] ページ](../../integration-services/general-page-of-integration-services-designers-options.md)」と「[[新しいポリシーの作成] または [ポリシーを開く] ダイアログ ボックスの [説明] ページ](create-new-policy-or-open-policy-dialog-box-description-page.md)」を参照してください。  
+5.  表示または変更するポリシーを右クリックし、 **[プロパティ]** をクリックします。 [**ポリシーを開く-**_policy_name_ ] ダイアログボックスで使用可能なオプションの詳細については、「[[新しいポリシーの作成] または [ポリシーを開く](../../integration-services/general-page-of-integration-services-designers-options.md)] ダイアログボックスの [全般] ページと [新しいポリシーを作成する][または [ポリシーを開く] ダイアログボックスの [説明] ページ](create-new-policy-or-open-policy-dialog-box-description-page.md)」を参照してください。  
   
 6.  完了したら、 **[OK]** をクリックします。  
   

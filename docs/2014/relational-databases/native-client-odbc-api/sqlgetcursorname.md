@@ -1,5 +1,5 @@
 ---
-title: SQLGetCursorName |Microsoft Docs
+title: Sqlgetカーソル名 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,17 +15,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 603a2b5be4ca75495f094aa838d0373a9689a523
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62657781"
 ---
 # <a name="sqlgetcursorname"></a>SQLGetCursorName
-  アプリケーションが、カーソル名を指定しない場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、カーソルの生成時にアプリケーションに 1 つが生成されます。 アプリケーションが使用できる**SQLGetCursorName**位置指定の UPDATE および DELETE ステートメントのドライバー定義カーソル名を取得します。 アプリケーションが呼び出す必要はありません**SQLSetCursorName**活用するために、データ操作ステートメントを配置します。  
+  アプリケーションでカーソル名が指定されていない[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]場合は、NATIVE Client ODBC ドライバーによって、カーソルの生成時にアプリケーション用に1つが生成されます。 アプリケーションでは、 **Sqlgetcursor name**を使用して、位置指定の UPDATE および DELETE ステートメントのドライバーで定義されたカーソル名を取得できます。 アプリケーションでは、位置指定データ操作ステートメントを利用するために**SQLSetCursorName**を呼び出す必要はありません。  
   
 ## <a name="see-also"></a>参照  
- [SQLGetCursorName 関数](https://go.microsoft.com/fwlink/?LinkId=59349)   
+ [Sqlgetカーソル名関数](https://go.microsoft.com/fwlink/?LinkId=59349)   
  [ODBC API 実装の詳細](odbc-api-implementation-details.md)  
   
   
