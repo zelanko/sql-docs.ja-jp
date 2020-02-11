@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2c77ae94a7b8c5760d14dcb3fed2af40573549d4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103760"
 ---
 # <a name="modify-a-reporting-services-configuration-file-rsreportserverconfig"></a>Modify a Reporting Services Configuration File (RSreportserver.config)
@@ -25,7 +25,7 @@ ms.locfileid: "66103760"
 > [!IMPORTANT]  
 >  構成ファイルを変更する場合は注意が必要です。 内部で使用するために予約されている設定を変更すると、インストールが無効になることがあります。 一般的に、特定の問題を解決しようとしている場合を除いて、構成設定を変更することはお勧めしません。 変更できる設定の詳細については、「 [RSReportServer Configuration File](rsreportserver-config-configuration-file.md) 」または「 [RSReportDesigner Configuration File](rsreportdesigner-configuration-file.md)」を参照してください。 構成ファイルの詳細については、 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の製品ドキュメントを参照してください。  
   
- このトピックの内容  
+ このトピックの内容:  
   
 -   [構成値の読み取りと使用](#bkmk_read_values)  
   
@@ -88,16 +88,16 @@ ms.locfileid: "66103760"
   
 5.  ファイルを保存します。  
   
-6.  トレース ログ ファイルを見て、エラーが発生していないことを確認します。 エラー状態が記録されていた場合は、設定またはその値が正しく指定されていません。 「 [RSReportServer Configuration File](rsreportserver-config-configuration-file.md) 」を参照し、エラーの原因となっている設定について有効な値を確認してください。 トレース ログの表示方法の詳細については、「[レポート サーバー サービスのトレース ログ](report-server-service-trace-log.md)」を参照してください。  
+6.  トレース ログ ファイルを見て、エラーが発生していないことを確認します。 エラー状態が記録されていた場合は、設定またはその値が正しく指定されていません。 「 [RSReportServer Configuration File](rsreportserver-config-configuration-file.md) 」を参照し、エラーの原因となっている設定について有効な値を確認してください。 トレース ログの表示方法の詳細については、「 [レポート サーバー サービスのトレース ログ](report-server-service-trace-log.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [RSReportServer 構成ファイル](rsreportserver-config-configuration-file.md)   
  [ReportingServicesService 構成ファイル](reportingservicesservice-configuration-file.md)   
  [RSReportDesigner 構成ファイル](rsreportdesigner-configuration-file.md)   
  [データ処理拡張機能の配置](../extensions/data-processing/deploying-a-data-processing-extension.md)   
  [配信拡張機能の配置](../extensions/delivery-extension/deploying-a-delivery-extension.md)   
  [表示拡張機能の配置](../extensions/rendering-extension/deploying-a-rendering-extension.md)   
- [方法:カスタム レポート アイテムを配置します。](../custom-report-items/how-to-deploy-a-custom-report-item.md)   
+ [カスタムレポートアイテムを配置する方法](../custom-report-items/how-to-deploy-a-custom-report-item.md)   
  [Reporting Services 構成ファイル](reporting-services-configuration-files.md)  
   
   

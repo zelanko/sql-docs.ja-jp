@@ -13,26 +13,26 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/13/2017
 ms.openlocfilehash: 9ae4a5009c33067dcb5db2d26ff3e287b31b8768
-ms.sourcegitcommit: b016c01c47bc08351d093a59448d895cc170f8c3
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71118125"
 ---
 # <a name="query-options-pages-f1-help"></a>[クエリ オプション] ページの F1 ヘルプ
 
 ここでは、 **の** [クエリ オプション] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]ページの F1 ヘルプについて紹介します。
 
-[Analysis Services クエリ実行オプション&#40;の [全般] ページ&#41;](analysis-services-query-execution-options-general-page.md)
+[Analysis Services クエリ実行オプション &#40;[全般] ページ&#41;](analysis-services-query-execution-options-general-page.md)
 
-[クエリ結果&#40;の Analysis Services の全般ページ&#41;](../../2014/database-engine/analysis-services-query-results-general-page.md)
+[クエリ結果 &#40;[全般] ページの Analysis Services&#41;](../../2014/database-engine/analysis-services-query-results-general-page.md)
 
-[クエリ実行オプション の&#40;[詳細] ページ&#41;](../../2014/database-engine/query-options-execution-advanced-page.md)
+[クエリオプションの実行 &#40;詳細設定ページ&#41;](../../2014/database-engine/query-options-execution-advanced-page.md)
 
-[[クエリオプション&#40;] [実行] [ANSI] ページ&#41;](../../2014/database-engine/query-options-execution-ansi-page.md)
+[ANSI ページ&#41;&#40;クエリオプションの実行](../../2014/database-engine/query-options-execution-ansi-page.md)
 
-[クエリ実行オプション の&#40;[全般] ページ&#41;](../../2014/database-engine/query-options-execution-general-page.md)
+[[クエリオプション] 実行 &#40;[全般] ページ&#41;](../../2014/database-engine/query-options-execution-general-page.md)
   
-[[クエリオプション&#40;] の [結果] グリッドページ&#41;](../../2014/database-engine/query-options-results-grid-page.md)
+[[クエリオプション] の結果 &#40;グリッドページ&#41;](../../2014/database-engine/query-options-results-grid-page.md)
 
-[[クエリオプション&#40;] の [結果] テキストページ&#41;](../../2014/database-engine/query-options-results-text-page.md)
+[クエリオプションの結果 &#40;テキストページ&#41;](../../2014/database-engine/query-options-results-text-page.md)

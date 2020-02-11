@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 84672ddf6a9b2912f3d53eef8d40727369376ba5
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71952092"
 ---
 # <a name="microsoft-sharepoint-2007-is-installed-upgrade-advisor"></a>Microsoft SharePoint 2007 がインストールされている (アップグレード アドバイザー)
@@ -22,13 +22,13 @@ ms.locfileid: "71952092"
   
 ||  
 |-|  
-|SharePoint モード[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **[!INCLUDE[applies](../../includes/applies-md.md)]** ます。|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]SharePoint モード。|  
   
 ## <a name="component"></a>コンポーネント  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
 ## <a name="description"></a>[説明]  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、SharePoint 2007 にアップグレードまたはインストールされません。 アップグレードはブロックされます。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]は、SharePoint 2007 にアップグレードまたはインストールされません。 アップグレードはブロックされます。  
   
 ## <a name="corrective-action"></a>修正措置  
  アップグレードを続行するには、SharePoint 2007 をアンインストールするか、SharePoint 2007 を SharePoint 2010 製品にアップグレードする必要があります。 SharePoint のインストールを更新した後、アップグレード アドバイザーを再実行して、他にアップグレードに関する問題がないことを確認します。  
@@ -36,6 +36,6 @@ ms.locfileid: "71952092"
  SharePoint 2007 から SharePoint 2013 に直接アップグレードすることはできません。 ただし、"ダブルホップ" データベースアタッチと呼ばれるものを、Office SharePoint Server 2007 から SharePoint Server 2010 にアップグレードした後、SharePoint server 2010 から SharePoint Server 2013 にアップグレードすることができます。  
   
 ## <a name="see-also"></a>参照  
- [アップグレードに関する&#40;問題の Reporting Services アップグレードアドバイザー&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
+ [アップグレードに関する問題を Reporting Services &#40;アップグレードアドバイザー&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
   
   

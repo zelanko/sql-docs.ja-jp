@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fcaad5c420af766d6c43bd5d57adeb6ce444257f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105260"
 ---
 # <a name="last-function-report-builder-and-ssrs"></a>Last 関数 (レポート ビルダーおよび SSRS)
@@ -40,10 +40,12 @@ Last(expression, scope)
 ## <a name="return-type"></a>戻り値の型  
  式の種類によって決まります。  
   
-## <a name="remarks"></a>コメント  
- `Last` 関数は、指定されたスコープですべての並べ替えおよびフィルター処理が適用された後、データセットの最後の値を返します。  
+## <a name="remarks"></a>解説  
+ 
+  `Last` 関数は、指定されたスコープですべての並べ替えおよびフィルター処理が適用された後、データセットの最後の値を返します。  
   
- `Last` 関数は、現在 (既定) のスコープ以外のスコープを使用してグループ化フィルター式で使用することはできません。  
+ 
+  `Last` 関数は、現在 (既定) のスコープ以外のスコープを使用してグループ化フィルター式で使用することはできません。  
   
  また、ページ ヘッダーで `Last` を使用して、ページの `ReportItems` コレクションから最後の値を返し、各ページの最初と最後のエントリを表示する辞書形式のヘッダーを作成することもできます。  
   
@@ -55,7 +57,7 @@ Last(expression, scope)
   
 -   入れ子集計の*Scope* には、データセット名は使用できません。  
   
--   *式*する必要がありますが含まれていない`First`、 `Last`、 `Previous`、または`RunningValue`関数。  
+-   *式*には、 `First`、 `Last`、 `Previous`、また`RunningValue`は関数を含めることはできません。  
   
 -   *Expression* には、 *recursive*を指定する入れ子集計を含めることができません。  
   
