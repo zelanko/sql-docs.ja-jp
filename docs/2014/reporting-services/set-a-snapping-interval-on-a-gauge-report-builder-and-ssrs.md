@@ -1,5 +1,5 @@
 ---
-title: ゲージ (レポート ビルダーおよび SSRS) へのスナップ間隔の設定 |Microsoft Docs
+title: ゲージへのスナップ間隔の設定 (レポートビルダーと SSRS) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3e2a35e4d6fefb6830774ffd7b2c3bc13a5e097c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101368"
 ---
 # <a name="set-a-snapping-interval-on-a-gauge-report-builder-and-ssrs"></a>ゲージへのスナップ間隔の設定 (レポート ビルダーおよび SSRS)
@@ -30,15 +30,15 @@ ms.locfileid: "66101368"
 2.  プロパティ ペインを開きます。  
   
     > [!NOTE]  
-    >  プロパティ ペインが表示されない場合に、クリックして、**ビュー**タブを選び、**プロパティ**チェック ボックスをオンします。  
+    >  プロパティペインが表示されない場合は、[**表示**] タブをクリックし、[**プロパティ**] チェックボックスをオンにします。  
   
-3.  **ポインター**プロパティ ([...]) ボタンをクリックします。 ポインター コレクション エディターが開きます。  
+3.  **ポインター**のプロパティで、[...] ボタンをクリックします。 ポインター コレクション エディターが開きます。  
   
-4.  設定、 **SnappingEnabled**プロパティを`True`します。  
+4.  **SnappingEnabled**プロパティをに`True`設定します。  
   
-5.  設定、 **SnappingInterval**をスナップ間隔を表す値です。 実際の値を指定の倍数に丸めた位置までポインターがスナップされます。  
+5.  **SnappingInterval**を、スナップ間隔を表す値に設定します。 実際の値を指定の倍数に丸めた位置までポインターがスナップされます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ゲージのスケールの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
  [ゲージのポインターの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
  [ゲージ (レポート ビルダーおよび SSRS)](report-design/gauges-report-builder-and-ssrs.md)  

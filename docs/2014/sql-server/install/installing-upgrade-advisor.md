@@ -1,5 +1,5 @@
 ---
-title: アップグレード アドバイザーのインストール |Microsoft Docs
+title: アップグレードアドバイザーをインストールしています |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,24 +15,25 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7f70d1cbb879f8fc91e48478fb820b71b51bfd2d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66094322"
 ---
 # <a name="installing-upgrade-advisor"></a>アップグレード アドバイザーのインストール
-  インストールする場合、SQL Server 2014 アップグレード アドバイザーは、どのようなは、分析対象によって異なります。 アップグレード アドバイザーでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のすべての [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] コンポーネントをリモートで分析できます。 インスタンスをスキャンしない場合[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]に接続できる任意のコンピューターでアップグレード アドバイザーをインストールする[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、かつを満たす、[アップグレード アドバイザーの前提条件](../../../2014/sql-server/install/upgrade-advisor-prerequisites.md)します。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のインスタンスをスキャンする場合は、アップグレード アドバイザーをレポート サーバーにインストールする必要があります。  
+  SQL Server 2014 Upgrade Advisor のインストール場所は、分析する内容によって異なります。 アップグレード アドバイザーでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のすべての [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] コンポーネントをリモートで分析できます。 の[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]インスタンスをスキャンしない場合は、に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]接続できる任意のコンピューターにアップグレードアドバイザーをインストールできます。また、アップグレードアドバイザーの[前提条件](../../../2014/sql-server/install/upgrade-advisor-prerequisites.md)を満たしている必要があります。 
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のインスタンスをスキャンする場合は、アップグレード アドバイザーをレポート サーバーにインストールする必要があります。  
   
- 実行、 **SQLUA.msi**アップグレード アドバイザーをインストールするファイル。 コマンド プロンプトからインストールすると、自動インストールを実行できます。 参照してください[コマンド プロンプトからアップグレード アドバイザーをインストールする](../../../2014/sql-server/install/installing-upgrade-advisor-from-the-command-prompt.md)構文と例についてはします。  
+ **Sqlua .msi**ファイルを実行してアップグレードアドバイザーをインストールします。 コマンド プロンプトからインストールすると、自動インストールを実行できます。 構文と例について[は、「コマンドプロンプトからのアップグレードアドバイザーのインストール](../../../2014/sql-server/install/installing-upgrade-advisor-from-the-command-prompt.md)」を参照してください。  
   
  SQLUA.msi の入手先:  
   
--   **Redist**のフォルダー、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]製品メディア。  
+-   製品メディアの redist フォルダー内。 **** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
--   一部として、 [SQL 2014 Feature Pack ダウンロード](https://www.microsoft.com/download/details.aspx?id=42295)します。  
+-   [SQL 2014 Feature Pack のダウンロード](https://www.microsoft.com/download/details.aspx?id=42295)の一部として。  
   
 ## <a name="uninstalling-upgrade-advisor"></a>アップグレード アドバイザーのアンインストール  
- 使用してアップグレード アドバイザーをアンインストールする**プログラム追加と削除**します。 コマンド プロンプトの構文でも、削除またはアンインストール操作がサポートされます。  
+ アップグレードアドバイザーをアンインストールするには、[**プログラムの追加と削除**] を使用します。 コマンド プロンプトの構文でも、削除またはアンインストール操作がサポートされます。  
   
   

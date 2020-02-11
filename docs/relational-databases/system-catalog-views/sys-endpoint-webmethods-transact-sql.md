@@ -1,5 +1,5 @@
 ---
-title: sys.endpoint_webmethods (Transact-SQL) |Microsoft Docs
+title: endpoint_webmethods (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,10 +22,10 @@ ms.assetid: 7dad0cf6-eafa-47cf-98cc-75ba8d3c7959
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 14e3534671cc36d8c2cac46f627d158056f985e5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68079253"
 ---
 # <a name="sysendpoint_webmethods-transact-sql"></a>sys.endpoint_webmethods (Transact-SQL)
@@ -33,24 +33,24 @@ ms.locfileid: "68079253"
 
   [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- SOAP 対応 HTTP エンドポイントで定義された FOR EACH SOAP メソッドの行が含まれています。 Endpoint_id と名前空間列の組み合わせは一意にです。  
+ SOAP 対応 HTTP エンドポイントで定義されている SOAP メソッドごとに1行の値を格納します。 endpoint_id 列と namespace 列の組み合わせは一意です。  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
 |endpoint_id|**int**|Web メソッドが定義されているエンドポイントの ID です。|  
-|namespace|**nvarchar(384)**|Web メソッドの Namespace です。|  
-|method_alias|**nvarchar(64)**|メソッドの別名です。<br /><br /> 注:[!INCLUDE[tsql](../../includes/tsql-md.md)]識別子は、WSDL メソッド名では無効な文字を許可します。<br /><br /> 実際の基になるエンドポイントの WSDL の説明で公開されている名前にマップするエイリアスが使用される[!INCLUDE[tsql](../../includes/tsql-md.md)]web メソッドが呼び出されたときに呼び出される実行可能オブジェクト。|  
-|object_name|**nvarchar(776)**|NAME = オプションで指定された、Web メソッドのリダイレクト先のオブジェクト名です。 名前の部分がピリオド (.) で区切られ、角かっこを使用して区切られた`[``]`します。<br /><br /> オブジェクト名は WSDL オプションで指定されている、3 つの部分から成る名前でなければなりません。|  
+|namespace|**nvarchar (384)**|Webmethod の名前空間。|  
+|method_alias|**nvarchar (64)**|メソッドのエイリアス。<br /><br /> 注: [!INCLUDE[tsql](../../includes/tsql-md.md)]識別子では、WSDL メソッド名の中で有効でない文字を使用できます。<br /><br /> エイリアスは、エンドポイントの WSDL の説明で公開されている名前を、webmethod が[!INCLUDE[tsql](../../includes/tsql-md.md)]呼び出されたときに呼び出される、基になる実際の実行可能オブジェクトにマップするために使用されます。|  
+|object_name|**nvarchar (776)**|NAME = オプションで指定された、Web メソッドのリダイレクト先のオブジェクト名です。 名前の部分はピリオド (.) で区切られ、角かっこを使用`[``]`して区切られます。<br /><br /> オブジェクト名は WSDL オプションで指定されている、3 つの部分から成る名前でなければなりません。|  
 |result_schema|**tinyint**|XSD (ある場合) を応答と共に返送するかどうかを指定するオプションです。<br /><br /> 0 = なし<br /><br /> 1 = 標準<br /><br /> 2 = 既定値|  
-|result_schema_desc|**nvarchar(60)**|XSD (ある場合) を応答と共に返送するかどうかを指定するオプションの説明です。<br /><br /> なし<br /><br /> STANDARD<br /><br /> DEFAULT|  
+|result_schema_desc|**nvarchar (60)**|XSD (ある場合) を応答と共に返送するかどうかを指定するオプションの説明です。<br /><br /> NONE<br /><br /> Standard<br /><br /> DEFAULT|  
 |result_format|**tinyint**|応答において結果をどのようにフォーマットするかを指定するオプションです。<br /><br /> 1 = ALL_RESULTS<br /><br /> 2 = ROWSETS_ONLY<br /><br /> 3 = なし|  
-|result_format_desc|**nvarchar(60)**|応答において結果をフォーマットする方法を決定するオプションの説明です。<br /><br /> ALL_RESULTS<br /><br /> ROWSETS_ONLY<br /><br /> なし|  
+|result_format_desc|**nvarchar (60)**|応答での結果の書式設定方法を決定するオプションの説明。<br /><br /> ALL_RESULTS<br /><br /> ROWSETS_ONLY<br /><br /> NONE|  
   
 ## <a name="permissions"></a>アクセス許可  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]詳細については、「[メタデータ表示の構成](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [エンドポイントのカタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)   
+ [エンドポイントのカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)   
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: レポートのプロパティ ダイアログ ボックスでは、コード |Microsoft Docs
+title: '[コード] ([レポートのプロパティ] ダイアログボックス)Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,21 +14,21 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ac600f2d8642162bb8f7a3c64b07933661715223
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104460"
 ---
 # <a name="report-properties-dialog-box-code"></a>[コード] ([レポートのプロパティ] ダイアログ ボックス)
-  選択**コード**上、**レポート プロパティ**レポート内の式で使用されるカスタム コード定義 ダイアログ ボックス。  
+  [**レポートのプロパティ**] ダイアログボックスの [**コード**] を選択すると、レポート内の式で使用するカスタムコードを定義できます。  
   
-## <a name="options"></a>および  
- **カスタム コード**  
- レポート内で使用するメソッドを入力します。 コードは、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]で記述する必要があります。  
+## <a name="options"></a>オプション  
+ **カスタムコード**  
+ レポート内で使用するメソッドを入力します。 コードはで[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]記述する必要があります。  
   
 ## <a name="see-also"></a>参照  
- [レポート デザイナーでカスタム コードやアセンブリを式から参照する (SSRS)](report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)   
+ [レポートデザイナー &#40;SSRS&#41;の式におけるカスタムコードおよびアセンブリ参照](report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)   
  [レポート変数コレクションとグループ変数コレクションの参照 (レポート ビルダーおよび SSRS)](report-design/built-in-collections-report-and-group-variables-references-report-builder.md)   
  [式の例 &#40;レポート ビルダーおよび SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)  
   

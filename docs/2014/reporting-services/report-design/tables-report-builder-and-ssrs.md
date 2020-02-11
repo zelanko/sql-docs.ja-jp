@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: af1eccd0349d0ed204d595d32fdc35c76c3b2efa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104738"
 ---
 # <a name="tables-report-builder--and-ssrs"></a>テーブル (レポート ビルダーおよび SSRS)
@@ -23,14 +23,15 @@ ms.locfileid: "66104738"
 > [!NOTE]  
 >  テーブルは、レポート パーツとしてレポートとは別にパブリッシュできます。  [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
   
- テーブルをすぐに使用するには、「[チュートリアル:基本的な表レポートの作成 &#40;レポート ビルダー&#41;](../tutorial-creating-a-basic-table-report-report-builder.md)」または「[基本的なテーブル レポートの作成 &#40;SSRS チュートリアル&#41;](../create-a-basic-table-report-ssrs-tutorial.md)」を参照してください。  
+ テーブルの使用をすぐに開始するには、「[チュートリアル: 基本的な表レポートの作成 (レポート ビルダー)](../tutorial-creating-a-basic-table-report-report-builder.md)」または「[基本的なテーブル レポートの作成 (SSRS チュートリアル)](../create-a-basic-table-report-ssrs-tutorial.md)」を参照してください。  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のサンプル レポートには、テーブルを使用したレポートが多数含まれています。 テーブルに関する知識は、レポート ビルダーまたはレポート デザイナーでサンプル レポートのレポート定義を詳しく調べるか、表示されたレポートをレポート ビルダーまたはレポート デザイナーでプレビューすることによって身に付けることができます。 サンプル レポートのダウンロードの詳細については、「 [(SSRS) Reporting Services のサンプル](https://go.microsoft.com/fwlink/?LinkID=198283)」を参照してください。  
+ 
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のサンプル レポートには、テーブルを使用したレポートが多数含まれています。 テーブルに関する知識は、レポート ビルダーまたはレポート デザイナーでサンプル レポートのレポート定義を詳しく調べるか、表示されたレポートをレポート ビルダーまたはレポート デザイナーでプレビューすることによって身に付けることができます。 サンプル レポートのダウンロードの詳細については、「 [(SSRS) Reporting Services のサンプル](https://go.microsoft.com/fwlink/?LinkID=198283)」を参照してください。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="AddingTable"></a> 詳細データを表示するテーブルの追加  
+##  <a name="AddingTable"></a>詳細データを表示するテーブルの追加  
  リボンの [挿入] タブからデザイン画面にテーブルを追加します。 テーブルを追加するには、テーブル ウィザードまたはマトリックス ウィザードを使用して、データ ソース接続とデータセットを作成し、そのテーブルを構成するか、テーブル テンプレートに基づいてテーブルを作成し、手動で構成します。  
   
 > [!NOTE]  
@@ -46,7 +47,7 @@ ms.locfileid: "66104738"
   
  ![デザイン画面上のテーブル テンプレート、選択](../media/rs-tabletemplatenewselected.gif "デザイン画面上のテーブル テンプレート、選択")  
   
- データ行の行ハンドルは、詳細シンボル (![詳細行の 3 本の平行線がある行ハンドル](../media/rs-icontablix-detailsrow.gif "詳細行の 3 本の平行線がある行ハンドル")) を示します。 これらの行にデータを表示するには、レポート データ ペインからヘッダーまたは詳細行のテーブル セルにフィールドをドラッグします。 両方の行に同時にデータが表示されます。 列を追加するには、挿入ポイントが表示されるまでフィールドをテーブルにドラッグします。 テーブルにデータセット フィールドを追加した後、日付と通貨の既定の書式を変更して、これらの値がレポートに表示される方法を制御できます。 次の図は、次のフィールドを含むテーブル データ領域を示しています:Date、Order、Product、Qty、および Line Total です。  
+ データ行の行ハンドルには、詳細シンボル (![詳細行の3本の平行線がある行ハンドル](../media/rs-icontablix-detailsrow.gif "詳細行の 3 本の平行線がある行ハンドル")) が表示されます。 これらの行にデータを表示するには、レポート データ ペインからヘッダーまたは詳細行のテーブル セルにフィールドをドラッグします。 両方の行に同時にデータが表示されます。 列を追加するには、挿入ポイントが表示されるまでフィールドをテーブルにドラッグします。 テーブルにデータセット フィールドを追加した後、日付と通貨の既定の書式を変更して、これらの値がレポートに表示される方法を制御できます。 次の図に、Date、Order、Product、Qty、および Line Total フィールドを含むテーブル データ領域を示します。  
   
  ![デザイン、列ヘッダーが太字のテーブル](../media/rs-basictabledetailsformatteddesign.gif "デザイン、列ヘッダーが太字のテーブル")  
   
@@ -54,7 +55,7 @@ ms.locfileid: "66104738"
   
  ![列ヘッダーが太字になっているテーブルのプレビュー](../../tutorials/media/rs-basictabledetailsformattedpreview.gif "列ヘッダーが太字になっているテーブルのプレビュー")  
   
- 作業を開始したテーブルは、Tablix データ領域に基づいたテンプレートです。 基になる Tablix データ領域でサポートされている機能を追加することで、テーブルのデザインを整えることができます。 詳細については、「 [レポート ページでの Tablix データ領域の表示の制御 &#40;レポート ビルダーおよび SSRS&#41;](controlling-the-tablix-data-region-display-on-a-report-page.md)」を参照してください。 また、行グループや列グループの追加、詳細グループの追加や削除を行って、テーブルを改良することもできます。 詳細については、「[Tablix データ領域の柔軟性について &#40;レポート ビルダーおよび SSRS&#41;](exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)」を参照してください。  
+ 作業を開始したテーブルは、Tablix データ領域に基づいたテンプレートです。 基になる Tablix データ領域でサポートされている機能を追加することで、テーブルのデザインを整えることができます。 詳細については、「 [レポート ページでの Tablix データ領域の表示の制御 &#40;レポート ビルダーおよび SSRS&#41;](controlling-the-tablix-data-region-display-on-a-report-page.md)」を参照してください。 また、行グループや列グループの追加、詳細グループの追加や削除を行って、テーブルを改良することもできます。 詳細については、「[Tablix データ領域の柔軟性について (レポート ビルダーおよび SSRS)](exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)」を参照してください。  
   
 ### <a name="adding-totals-for-detail-data"></a>詳細データの合計の追加  
  合計を追加するには、数値データを含むセルを選択し、数値フィールドの詳細データのラベルと合計を自動的に追加するショートカット メニューを使用します。 他のラベルおよび合計を手動で指定することもできます。 次の図に、合計を自動と手動の両方で指定した一般的な合計行を示します。  
@@ -67,7 +68,7 @@ ms.locfileid: "66104738"
   
  詳細については、「[グループまたは Tablix データ領域への合計の追加 (レポート ビルダーおよび SSRS)](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)」を参照してください。  
   
-##  <a name="AddingRowGroups"></a> テーブルへの行グループの追加  
+##  <a name="AddingRowGroups"></a>テーブルへの行グループの追加  
  レポート データ ペインからセルにフィールドをドラッグして詳細データを表示できるのと同様に、フィールドをグループ化ペインにドラッグしてグループを追加できます。 テーブルの行グループ ペインにフィールドをドラッグします。 グループを追加すると、テーブルの行グループ領域の新しい列にセルが自動的に追加され、グループ値が表示されます。 領域の詳細については、「[Tablix データ領域部分 (レポート ビルダーおよび SSRS)](tablix-data-region-areas-report-builder-and-ssrs.md)」を参照してください。  
   
  次の図に、入れ子になっている 2 つの行グループを含むテーブルの [デザイン] ビューを示します。 行グループは、Order フィールドと Date フィールドを順に行グループ ペインにドラッグし、各グループを既存のグループの親として挿入して作成されています。 この図は、日付に基づいた親グループ、注文番号に基づいた子グループ、および既定で定義されている詳細グループを示します。  
@@ -83,7 +84,7 @@ ms.locfileid: "66104738"
 ### <a name="adding-totals-to-row-groups"></a>行グループへの合計の追加  
  グループの合計を表示するには、状況依存の **[合計の追加]** コマンドを使用できます。 行グループに対して [合計の追加] コマンドを使用すると、グループに対して 1 回だけ繰り返されるようにグループの外側に行が追加されます。 入れ子になっているグループの場合、子グループの合計行は子グループの外側で、親グループの内側に配置されます。 そのような場合は、子グループの合計行の背景色を設定して詳細行と区別すると便利です。 また、別の背景色を使用してテーブルのヘッダー行とフッター行を区別することもできます。 次の図に、注文番号に基づいたグループの合計行が追加されたテーブルを示します。  
   
- ![デザイン ビュー、グループとテーブルに合計行を追加](../media/rs-basictablegroupstotalscolordesign.gif "デザイン ビュー、グループとテーブルに合計行を追加")  
+ ![[デザイン] ビュー、グループとテーブルに合計行を追加](../media/rs-basictablegroupstotalscolordesign.gif "[デザイン] ビュー、グループとテーブルに合計行を追加")  
   
  レポートを表示すると、注文の小計を表示する行が注文番号ごとに 1 回繰り返されます。 テーブル フッターには、すべての日付の合計が表示されます。 次の図では、最後の数行に、最後の 3 つの詳細行、最後の注文番号 SO71952 の小計、およびテーブルのすべての日付の合計が表示されています。  
   
@@ -91,12 +92,12 @@ ms.locfileid: "66104738"
   
  詳細については、「[グループまたは Tablix データ領域への合計の追加 (レポート ビルダーおよび SSRS)](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)」を参照してください。  
   
-##  <a name="RemovingHidingRows"></a> 詳細行の削除または非表示  
+##  <a name="RemovingHidingRows"></a>詳細行の削除または非表示  
  レポートでテーブルをプレビューした後、既存の詳細行を削除することに決めたとします。 また、詳細行を既定で非表示にして、ドリルダウン レポートのようにユーザーが詳細の表示と非表示を切り替えることができるようにする場合も考えられます。  
   
  テーブルから詳細行を削除するには、グループ化ペインを使用します。 詳細グループを選択し、ショートカット メニューを使用して、詳細データを表示するグループと行を削除します。 次の図に、日付と注文番号でグループ化されたテーブルの [デザイン] ビューを示します。詳細行は含まれていません。 このテーブルには合計行は追加されていません。  
   
- ![デザイン ビュー、2 つのグループがあり、詳細はないテーブル](../media/rs-basictablegroupsdrilldownnodetailsdesign.gif "デザイン ビュー、2 つのグループがあり、詳細はないテーブル")  
+ ![[デザイン] ビュー、2 つのグループがあり、詳細はないテーブル](../media/rs-basictablegroupsdrilldownnodetailsdesign.gif "[デザイン] ビュー、2 つのグループがあり、詳細はないテーブル")  
   
  詳細行を削除すると、値のスコープは行グループに設定されます。 これで詳細データは表示されません。  
   
@@ -115,9 +116,9 @@ ms.locfileid: "66104738"
   
  詳細については、「 [アイテムへの展開または折りたたみアクションの追加 &#40;レポート ビルダーおよび SSRS&#41;](add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- [データのフィルター、グループ化、および並べ替え &#40;レポート ビルダーおよび SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [式 (レポート ビルダーおよび SSRS)](expressions-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>参照  
+ [データのフィルター、グループ化、および並べ替え (レポート ビルダーおよび SSRS)](filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [式 &#40;レポート ビルダーおよび SSRS&#41;](expressions-report-builder-and-ssrs.md)   
  [式の例 (レポート ビルダーおよび SSRS)](expression-examples-report-builder-and-ssrs.md)   
  [一覧 &#40;レポート ビルダーおよび SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
