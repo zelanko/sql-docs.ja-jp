@@ -1,5 +1,5 @@
 ---
-title: 列の分布 (データ マイニング) |Microsoft Docs
+title: 列の分布 (データマイニング) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,16 +18,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5db71b5a94285f8ae63afeb65bec3f9807f8da27
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085711"
 ---
 # <a name="column-distributions-data-mining"></a>列の分布 (データ マイニング)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]では、マイニング構造内の列の分布を定義して、マイニング モデルの作成時にこれらの列のデータがアルゴリズムによってどのように処理されるかを指定できます。 いくつかのアルゴリズムは、列が値の一般的な分布を含むことが認識された場合、モデルを処理する前にすべての連続列の分布を定義するために使用されます。 分布が定義されない場合、アルゴリズムが持つデータを解釈するための情報が少ないため、分布が定義されたときよりも、マイニング モデルの結果が実際の予測より小さくなる場合があります。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]は、マイニングモデルの作成時にアルゴリズムがこれらの列のデータを処理する方法に影響を与えるように、マイニング構造で列の分布を定義できます。 いくつかのアルゴリズムは、列が値の一般的な分布を含むことが認識された場合、モデルを処理する前にすべての連続列の分布を定義するために使用されます。 分布が定義されない場合、アルゴリズムが持つデータを解釈するための情報が少ないため、分布が定義されたときよりも、マイニング モデルの結果が実際の予測より小さくなる場合があります。  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] で使用できるアルゴリズムでは、次の分布の種類がサポートされています。  
+ 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] で使用できるアルゴリズムでは、次の分布の種類がサポートされています。  
   
  `Normal`  
  連続列の値は、正規分布のヒストグラムを形成します。  
@@ -42,15 +43,16 @@ ms.locfileid: "66085711"
  `Uniform`  
  連続列の値はフラット曲線を形成し、すべての値が等しくなります。  
   
- ![一様分布のヒストグラム](../media/uniform-distribution.gif "一様分布のヒストグラム")  
+ ![単一ディストリビューションのヒストグラム](../media/uniform-distribution.gif "単一ディストリビューションのヒストグラム")  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] が提供するアルゴリズムの詳細については、「[データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](data-mining-algorithms-analysis-services-data-mining.md)」を参照してください。  
+ 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] が提供するアルゴリズムの詳細については、「[データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](data-mining-algorithms-analysis-services-data-mining.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- [コンテンツの種類 &#40;データ マイニング&#41;](content-types-data-mining.md)   
- [マイニング構造 &#40;Analysis Services - データ マイニング&#41;](mining-structures-analysis-services-data-mining.md)   
- [分離メソッド &#40;データ マイニング&#41;](discretization-methods-data-mining.md)   
- [分布 &#40;DMX&#41;](/sql/dmx/distributions-dmx)   
+## <a name="see-also"></a>参照  
+ [コンテンツの種類 &#40;データマイニング&#41;](content-types-data-mining.md)   
+ [マイニング構造 &#40;Analysis Services-データマイニング&#41;](mining-structures-analysis-services-data-mining.md)   
+ [分離メソッド &#40;データマイニング&#41;](discretization-methods-data-mining.md)   
+ [DMX&#41;&#40;ディストリビューション](/sql/dmx/distributions-dmx)   
  [マイニング構造列](mining-structure-columns.md)  
   
   

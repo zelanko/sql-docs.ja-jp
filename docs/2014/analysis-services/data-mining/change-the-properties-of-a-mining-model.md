@@ -1,5 +1,5 @@
 ---
-title: マイニング モデルのプロパティの変更 |Microsoft Docs
+title: マイニングモデルのプロパティの変更 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4c34cbfd2ea88d863239c068300c65531fd19f5f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085878"
 ---
 # <a name="change-the-properties-of-a-mining-model"></a>マイニング モデルのプロパティの変更
@@ -25,9 +25,9 @@ ms.locfileid: "66085878"
   
  次のモデル プロパティには、式の作成または複雑なモデル プロパティの構成に使用できる高度なエディターがあります。 プロパティには次の機能があります。  
   
--   `Filter` プロパティ:開く、[データ セットのフィルターまたはモデル フィルター ダイアログ ボックス](../data-set-filter-or-model-filter-dialog-box.md)します。  
+-   `Filter`[プロパティ]: [[データセットフィルター] または [モデルフィルター] ダイアログボックス](../data-set-filter-or-model-filter-dialog-box.md)を開きます。  
   
--   `AlgorithmParameters` プロパティ:開く、[アルゴリズム パラメーター ダイアログ ボックス&#40;マイニング モデルのビュー&#41;](../algorithm-parameters-dialog-box-mining-models-view.md)します。  
+-   `AlgorithmParameters`[プロパティ]: [[マイニングモデルビュー&#41;&#40;[アルゴリズムパラメーター] ダイアログボックス](../algorithm-parameters-dialog-box-mining-models-view.md)が表示されます。  
   
  マイニング モデルのプロパティを設定する方法については、「 [マイニング モデル列](mining-model-columns.md)」を参照してください。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "66085878"
 2.  画面の右側の **[プロパティ]** ウィンドウで、変更するプロパティに対応する値を強調表示し、新しい値を入力します。  
   
     > [!NOTE]  
-    >  列の使用法に設定されている場合`Ignore`、**プロパティ**列のウィンドウは空白です。  
+    >  列の使用法がに`Ignore`設定されている場合、列の [**プロパティ**] ウィンドウは空白になります。  
   
      新しい値は、デザイナーで別の要素を選択したときに有効になります。  
   

@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9d06a2ec19b4a84dcd0d69fb70389d68974813be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62894981"
 ---
 # <a name="gathering-a-list-for-the-foreach-loop-with-the-script-task"></a>スクリプト タスクによる ForEach ループの一覧の収集
@@ -28,11 +28,13 @@ ms.locfileid: "62894981"
 > [!NOTE]  
 >  複数のパッケージでより簡単に再利用できるタスクを作成する場合は、このスクリプト タスク サンプルのコードを基にした、カスタム タスクの作成を検討してください。 詳細については、「 [カスタム タスクの開発](../extending-packages-custom-objects/task/developing-a-custom-task.md)」を参照してください。  
   
-## <a name="description"></a>説明  
+## <a name="description"></a>[説明]  
  次の例は、`System.IO` 名前空間のメソッドを使用して、ユーザーが変数で指定した日数より新しいまたは古い Excel ブックの一覧をコンピューターで収集します。 拡張子 .xls を持つファイルを探して C ドライブのディレクトリを再帰的に検索し、各ファイルの最終更新日を調べて、一覧に属するかどうかを判定します。 該当するファイルを `ArrayList` に追加した後、その `ArrayList` を変数に保存して、後に Foreach ループ コンテナーで使用できるようにします。 この Foreach ループ コンテナーは、Foreach from Variable 列挙子を使用するように構成されています。  
   
 > [!NOTE]  
->  Foreach From Variable 列挙子で使用する変数は、`Object` 型であることが必要です。 変数に配置するオブジェクトは、`System.Collections.IEnumerable`、`System.Runtime.InteropServices.ComTypes.IEnumVARIANT`、`System.ComponentModel IListSource`、`Microsoft.SqlServer.Dts.Runtime.Wrapper.ForEachEnumeratorHost` のいずれかのインターフェイスを実装する必要があります。 `Array` または `ArrayList` が一般的に使用されます。 `ArrayList` は、`Imports` 名前空間に対する参照と `System.Collections` ステートメントを必要とします。  
+>  Foreach From Variable 列挙子で使用する変数は、`Object` 型であることが必要です。 変数に配置するオブジェクトは、`System.Collections.IEnumerable`、`System.Runtime.InteropServices.ComTypes.IEnumVARIANT`、`System.ComponentModel IListSource`、`Microsoft.SqlServer.Dts.Runtime.Wrapper.ForEachEnumeratorHost` のいずれかのインターフェイスを実装する必要があります。 
+  `Array` または `ArrayList` が一般的に使用されます。 
+  `ArrayList` は、`Imports` 名前空間に対する参照と `System.Collections` ステートメントを必要とします。  
   
  このタスクは、`FileAge` パッケージ変数に対して正および負のさまざまな値を使用することによってテストできます。 たとえば、この 5 日間に作成されたファイルを検索するには 5 を入力し、3 日前よりも前に作成されたファイルを検索するには -3 を入力します。 このタスクは、検索するフォルダーの数が多いドライブの場合、実行に 1 ～ 2 分かかることがあります。  
   
@@ -42,9 +44,10 @@ ms.locfileid: "62894981"
   
 2.  スクリプト タスクによって収集されたファイルの一覧を受け取るために、`FileList` という `Object` 型のパッケージ変数を作成します。この変数を後に Foreach from Variable 列挙子で使用します。  
   
-3.  `FileAge` 変数をスクリプト タスクの `ReadOnlyVariables` プロパティに追加し、`FileList` 変数を `ReadWriteVariables` プロパティに追加します。  
+3.  
+  `FileAge` 変数をスクリプト タスクの `ReadOnlyVariables` プロパティに追加し、`FileList` 変数を `ReadWriteVariables` プロパティに追加します。  
   
-4.  コードで、インポート、`System.Collections`と`System.IO`名前空間。  
+4.  コードで、 `System.Collections`との`System.IO`名前空間をインポートします。  
   
 ### <a name="code"></a>コード  
   
@@ -245,10 +248,10 @@ MessageBoxButtons.OK, MessageBoxIcon.Information);
     }  
 ```  
   
-![Integration Services のアイコン (小)](../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。**<br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
+![Integration Services アイコン (小)](../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services に関するページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
 ## <a name="see-also"></a>参照  
- [Foreach ループ コンテナー](../control-flow/foreach-loop-container.md)   
+ [Foreach ループコンテナー](../control-flow/foreach-loop-container.md)   
  [Foreach ループ コンテナーを構成する](../configure-a-foreach-loop-container.md)  
   
   

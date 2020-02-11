@@ -15,13 +15,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9e779a0c0da9920b2efda5f52135e85f31959d10
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62843558"
 ---
 # <a name="share-files"></a>ファイル共有
+  
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] を使用して、ソース管理プロジェクト間で項目を共有できます。 項目を共有すると、1 つの項目に対する変更は、その項目を共有するすべてのプロジェクトに反映されます。  
   
  項目を共有すると、ソース管理のユーザーにとって以下のような利点があります。  
@@ -34,13 +35,13 @@ ms.locfileid: "62843558"
   
 1.  ソリューション エクスプローラーで、共有ファイルを配置するフォルダーまたはプロジェクトを選択します。  
   
-2.  **ファイル**メニューで、**ソース管理**、 をクリックし、**共有**します。  
+2.  [**ファイル**] メニューの [**ソース管理**] をポイントし、[**共有**] をクリックします。  
   
-3.  **と共有** ダイアログ ボックスでは、共有する項目のディレクトリ一覧を参照し、項目をクリックします。  
+3.  [**共有**する] ダイアログボックスで、共有する項目のディレクトリ一覧を参照し、その項目をクリックします。  
   
-4.  クリックして**共有**します。  
+4.  [**共有**] をクリックします。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ソース管理の基礎](../../2014/database-engine/source-control-basics.md)  
   
   

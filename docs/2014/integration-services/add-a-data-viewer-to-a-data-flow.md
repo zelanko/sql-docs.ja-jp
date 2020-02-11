@@ -1,5 +1,5 @@
 ---
-title: データ フローにデータ ビューアーの追加 |Microsoft Docs
+title: データフローにデータビューアーを追加する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cbd45caac75d4fac3b5fffc305a9f359193191a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062092"
 ---
 # <a name="add-a-data-viewer-to-a-data-flow"></a>データ フローにデータ ビューアーを追加する
@@ -30,7 +30,8 @@ ms.locfileid: "66062092"
   
 ### <a name="to-add-a-data-viewer-to-a-data-flow"></a>データ フローにデータ ビューアーを追加するには  
   
-1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で、目的のパッケージが含まれている [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
+1.  
+  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で、目的のパッケージが含まれている [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
   
 2.  ソリューション エクスプローラーで、パッケージをダブルクリックして開きます。  
   
@@ -40,11 +41,14 @@ ms.locfileid: "66062092"
   
 5.  2 つのデータ フロー コンポーネント間のパスを右クリックし、 **[編集]** をクリックします。  
   
-6.  **[全般]** ページで、パスのプロパティを表示および編集できます。 たとえば、 **[PathAnnotation]** ボックスの一覧で、パスの横に表示される注釈を選択できます。  
+6.  
+  **[全般]** ページで、パスのプロパティを表示および編集できます。 たとえば、 **[PathAnnotation]** ボックスの一覧で、パスの横に表示される注釈を選択できます。  
   
-7.  **[メタデータ]** ページで、列のメタデータを表示し、メタデータをクリップボードにコピーできます。  
+7.  
+  **[メタデータ]** ページで、列のメタデータを表示し、メタデータをクリップボードにコピーできます。  
   
-8.  **[データ ビューアー]** ページで、 **[データ ビューアーを有効にする]** をクリックします。  
+8.  
+  **[データ ビューアー]** ページで、 **[データ ビューアーを有効にする]** をクリックします。  
   
 9. [表示する列] 領域で、データ ビューアーに表示する列を選択します。 既定では、表示可能なすべての列が選択され、 **[表示する列]** の一覧に表示されます。 表示しない列は、選択してから左矢印をクリックして、 **[未使用の列]** の一覧に移動させます。  
   
@@ -55,8 +59,8 @@ ms.locfileid: "66062092"
   
 ## <a name="see-also"></a>参照  
  [Integration Services の変換](data-flow/transformations/integration-services-transformations.md)   
- [Integration Services のパス](data-flow/integration-services-paths.md)   
- [[データ フロー]](data-flow/data-flow.md)   
+ [Integration Services パス](data-flow/integration-services-paths.md)   
+ [データフロー](data-flow/data-flow.md)   
  [データ フローのデバッグ](troubleshooting/debugging-data-flow.md)  
   
   

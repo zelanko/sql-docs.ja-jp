@@ -11,13 +11,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bd38514159ca668a82f98582a9c5fde1d2aa98ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62650183"
 ---
 # <a name="proxies-node-sql-server-agent-f1-help"></a>[プロキシ] ノード (SQL Server エージェントの F1 ヘルプ)
-  ここでは、 **のオブジェクト エクスプローラーの** [プロキシ] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ノードに関する F1 ヘルプについて紹介します。  
+  ここでは、のオブジェクトエクスプローラーの[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)][**プロキシ**] ノードの F1 ヘルプについて紹介します。  
   
   

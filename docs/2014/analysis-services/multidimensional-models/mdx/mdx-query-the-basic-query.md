@@ -17,14 +17,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bcd55827377b72040dd142ed1f2fd094c9bd2651
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073876"
 ---
 # <a name="the-basic-mdx-query-mdx"></a>MDX の基本的なクエリ (MDX)
-  基本的な多次元式 (MDX) クエリは、MDX の SELECT ステートメント、最もよく使用されるクエリです。 MDX の SELECT ステートメントで結果セットを指定する方法や、SELECT ステートメントの構文と、SELECT ステートメントによる簡単なクエリ作成を学習すれば、MDX を使用して多次元データに対するクエリを実行する方法を理解できます。  
+  基本的な多次元式 (MDX) クエリは SELECT ステートメントであり、MDX で最も頻繁に使用されるクエリです。 MDX の SELECT ステートメントで結果セットを指定する方法や、SELECT ステートメントの構文と、SELECT ステートメントによる簡単なクエリ作成を学習すれば、MDX を使用して多次元データに対するクエリを実行する方法を理解できます。  
   
 ## <a name="specifying-a-result-set"></a>結果セットの指定  
  MDX の SELECT ステートメントでは、キューブから返された多次元データのサブセットを格納した結果セットが指定されます。 結果セットを指定するには、MDX クエリに次の情報を含める必要があります。  
@@ -41,12 +41,12 @@ ms.locfileid: "66073876"
   
 -   SELECT 句。MDX の SELECT ステートメントのクエリ軸を指定します。 SELECT 句でクエリ軸を作成する方法の詳細については、「[クエリ軸の内容の指定(MDX)](mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md)」を参照してください。  
   
--   FROM 句。クエリ対象のキューブを指定します。 FROM 句の詳細については、[の SELECT ステートメント & #40 を参照してください。MDX と #41 です。](/sql/mdx/mdx-data-manipulation-select)  
+-   FROM 句。クエリ対象のキューブを指定します。 FROM 句の詳細については、「 [SELECT ステートメント (MDX)](/sql/mdx/mdx-data-manipulation-select)」を参照してください。  
   
 -   省略可能な WHERE 句。スライサー軸で使用するメンバーまたは組を指定して、返されるデータを限定します。 WHERE 句でスライサー軸を作成する方法の詳細については、「[スライサー軸の内容の指定 (MDX)](mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)」を参照してください。  
   
 > [!NOTE]  
->  SELECT ステートメントの各種の句の詳細については、「[SELECT ステートメント (MDX)](/sql/mdx/mdx-data-manipulation-select)」を参照してください。  
+>  SELECT ステートメントの各種の句の詳細については、「 [SELECT ステートメント (MDX)](/sql/mdx/mdx-data-manipulation-select)」を参照してください。  
   
 ## <a name="select-statement-syntax"></a>SELECT ステートメントの構文  
  SELECT 句、FROM 句、WHERE 句を使用した基本的な SELECT ステートメントの構文を以下に示します。  
@@ -60,12 +60,12 @@ FROM <SELECT subcube clause>
 [ <SELECT cell property list clause> ]  
 ```  
   
- MDX の SELECT ステートメントでは、WITH キーワードを使用する構文、軸またはスライサー軸に含める計算されたメンバーを作成するための MDX 関数を使用する構文、クエリの一部として特定のセル プロパティの値を返すための構文など、省略可能な構文をいくつかサポートしています。 MDX の SELECT ステートメントの詳細については、[の SELECT ステートメント & #40 を参照してください。MDX と #41 です。](/sql/mdx/mdx-data-manipulation-select)  
+ MDX の SELECT ステートメントでは、WITH キーワードを使用する構文、軸またはスライサー軸に含める計算されたメンバーを作成するための MDX 関数を使用する構文、クエリの一部として特定のセル プロパティの値を返すための構文など、省略可能な構文をいくつかサポートしています。 MDX の SELECT ステートメントの詳細については、「 [SELECT ステートメント (MDX)](/sql/mdx/mdx-data-manipulation-select)」を参照してください。  
   
 ### <a name="comparing-the-syntax-of-the-mdx-select-statement-to-sql"></a>MDX の SELECT ステートメントと SQL の構文の比較  
  MDX の SELECT ステートメントの構文形式は、SQL の構文とよく似ています。 ただし、次のような基本的な違いもいくつかあります。  
   
--   MDX 構文では、組またはメンバーを中かっこ ({ }) で囲んでセットと区別します。メンバー、組、およびセットの構文の詳細については、「[メンバー、組、およびセットの操作 (MDX)](working-with-members-tuples-and-sets-mdx.md)」を参照してください。  
+-   MDX 構文では、組またはメンバーを中かっこ ({および} 文字) で囲んで、セットを区別します。メンバー、組、およびセットの構文の詳細については、「 [MDX&#41;&#40;メンバー、組、およびセットの操作](working-with-members-tuples-and-sets-mdx.md)」を参照してください。  
   
 -   MDX クエリでは、SELECT ステートメントにクエリ軸を 0 個、1 個、2 個、または最大で 128 個まで指定できます。 各軸は、まったく同じ動作をします。SQL の場合は、クエリの行と列とで、動作に大きな違いがあります。  
   
@@ -109,7 +109,7 @@ WHERE ( [Sales Territory].[Southwest] )
  詳細な例については、「[クエリ軸の内容の指定 (MDX)](mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md)」および「[スライサー軸の内容の指定 (MDX)](mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [MDX の主な概念 (Analysis Services)](../key-concepts-in-mdx-analysis-services.md)   
- [SELECT ステートメント (MDX)](/sql/mdx/mdx-data-manipulation-select)  
+ [MDX &#40;Analysis Services の主な概念&#41;](../key-concepts-in-mdx-analysis-services.md)   
+ [SELECT ステートメント &#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select)  
   
   

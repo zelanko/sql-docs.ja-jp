@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8225039ece914c461af34f5344350227d6a39cdc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62761143"
 ---
 # <a name="delete-unique-constraints"></a>UNIQUE 制約の削除
@@ -30,7 +30,7 @@ ms.locfileid: "62761143"
   
 -   **作業を開始する準備:**  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **UNIQUE 制約を削除する方法:**  
   
@@ -65,7 +65,7 @@ ms.locfileid: "62761143"
   
 4.  **[削除]** をクリックします。  
   
-5.  **[ファイル]** メニューの **[の保存]** _[の保存]_ をクリックします。  
+5.  **[ファイル]** メニューの **[** <テーブル名> _を保存]_ をクリックします。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   

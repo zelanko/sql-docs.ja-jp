@@ -19,14 +19,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cb9b782aece15cf9aaf49b2bc427d34fa3d86525
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66096968"
 ---
-# <a name="windowsserviceidentityconfigured-property-wmi-msreportserverconfigurationsetting"></a>WindowsServiceIdentityConfigured プロパティ (WMI MSReportServer_ConfigurationSetting)
-  レポート サーバー Windows サービスが実行するように最後に構成された ID を返します。 読み取り専用。  
+# <a name="windowsserviceidentityconfigured-property-wmi-msreportserver_configurationsetting"></a>WindowsServiceIdentityConfigured プロパティ (WMI MSReportServer_ConfigurationSetting)
+  レポート サーバー Windows サービスが実行するように最後に構成された ID を返します。 読み取り専用です。  
   
 ## <a name="syntax"></a>構文  
   
@@ -45,9 +45,9 @@ public string WindowsServiceIdentityConfigured;
  [MSReportServer_ConfigurationSetting クラス](msreportserver-configurationsetting-class.md)  
   
 ## <a name="requirements"></a>必要条件  
- **名前空間:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **名前空間:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [MSReportServer_ConfigurationSetting メンバー](msreportserver-configurationsetting-members.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: データ マイニング クエリのタイムアウト値の変更 |Microsoft Docs
+title: データマイニングクエリのタイムアウト値を変更する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 640d07115e2a071bb5d57e87955c11670f4c38b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085889"
 ---
 # <a name="change-the-time-out-value-for-data-mining-queries"></a>データ マイニング クエリのタイムアウト値の変更
@@ -28,14 +28,17 @@ ms.locfileid: "66085889"
   
 ### <a name="configure-the-time-out-value-for-data-mining-queries"></a>データ マイニング クエリのタイムアウト値の構成  
   
-1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、 **[ツール]** メニューの **[オプション]** をクリックします。  
+1.  
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、 **[ツール]** メニューの **[オプション]** をクリックします。  
   
-2.  **[オプション]** ペインで **[ビジネス インテリジェンス デザイナー]** を展開します。  
+2.  
+  **[オプション]** ペインで **[ビジネス インテリジェンス デザイナー]** を展開します。  
   
-3.  **[クエリ タイムアウト]** ボックスをクリックし、秒数の値を入力します。  
+3.  
+  **[クエリ タイムアウト]** ボックスをクリックし、秒数の値を入力します。  
   
 ## <a name="see-also"></a>参照  
- [データ マイニングのクエリ タスクと操作方法](data-mining-query-tasks-and-how-tos.md)   
+ [データマイニングのクエリタスクと操作方法](data-mining-query-tasks-and-how-tos.md)   
  [データ マイニング クエリ](data-mining-queries.md)  
   
   

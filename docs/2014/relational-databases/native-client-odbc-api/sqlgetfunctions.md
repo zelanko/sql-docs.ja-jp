@@ -1,5 +1,5 @@
 ---
-title: SQLGetFunctions |マイクロソフトのドキュメント
+title: SQLGetFunctions |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,14 +15,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e7dbd69379bd59e75ac39fc5765514ab8e1b4151
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62657831"
 ---
 # <a name="sqlgetfunctions"></a>SQLGetFunctions
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーのインターフェイスが 3 つの定義済みの対応レベル for ODBC (ISO、Open Group、および ODBC level 2) に準拠します。 **SQLGetFunctions**すべての ODBC 関数がサポートされているレポート、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバー。  
+  Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client odbc ドライバーインターフェイスは、odbc 用に定義された3つのコンプライアンスレベル (ISO、Open Group、および odbc レベル 2) に準拠しています。 **Sqlgetfunctions**は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client odbc ドライバーですべての odbc 関数がサポートされていることを報告します。  
   
 ## <a name="see-also"></a>参照  
  [SQLGetFunctions 関数](https://go.microsoft.com/fwlink/?LinkId=59353)   

@@ -1,5 +1,5 @@
 ---
-title: マイニング構造からマイニング モデルの削除 |Microsoft Docs
+title: マイニング構造からのマイニングモデルの削除 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7d4e32a40946eb9e513ad22cd837773187843151
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084780"
 ---
 # <a name="delete-a-mining-model-from-a-mining-structure"></a>マイニング構造からのマイニング モデルの削除
@@ -27,19 +27,23 @@ ms.locfileid: "66084780"
   
 ### <a name="delete-a-mining-model-using-sql-server-data-tools"></a>SQL Server データ ツールを使用したマイニング モデルの削除  
   
-1.  **の** [マイニング モデル] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]タブをクリックします。  
+1.  
+  **の** [マイニング モデル] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]タブをクリックします。  
   
 2.  削除するモデルを右クリックして、 **[削除]** をクリックします。  
   
-     **[オブジェクトの削除]** ダイアログ ボックスが開きます。  
+     
+  **[オブジェクトの削除]** ダイアログ ボックスが開きます。  
   
 3.  **[OK]** をクリックします。  
   
 ### <a name="delete-a-mining-model-using-sql-server-management-studio"></a>SQL Server Management Studio を使用したマイニング モデルの削除  
   
-1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、モデルが含まれる [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースを開きます。  
+1.  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、モデルが含まれる [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースを開きます。  
   
-2.  **[マイニング構造]** を展開し、 **[マイニング モデル]** を展開します。  
+2.  
+  **[マイニング構造]** を展開し、 **[マイニング モデル]** を展開します。  
   
 3.  削除するモデルを右クリックして、 **[削除]** をクリックします。  
   
@@ -47,7 +51,7 @@ ms.locfileid: "66084780"
   
 ### <a name="delete-a-mining-model-using-dmx"></a>DMX を使用したマイニング モデルの削除  
   
--   [DROP MINING MODEL &#40;DMX&#41;](/sql/dmx/drop-mining-model-dmx)  
+-   [DMX&#41;&#40;のマイニングモデルの削除](/sql/dmx/drop-mining-model-dmx)  
   
 ## <a name="see-also"></a>参照  
  [マイニング モデル タスクと操作方法](mining-model-tasks-and-how-tos.md)  

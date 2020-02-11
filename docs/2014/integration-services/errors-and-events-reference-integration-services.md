@@ -16,33 +16,37 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 71efd530222ce548bb867b9e886b1891d5aedb05
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62899450"
 ---
 # <a name="errors-and-events-reference-integration-services"></a>エラーとイベントのリファレンス (Integration Services)
   ここでは、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]に関連するいくつかのエラーとイベントについて説明します。 エラー メッセージについては、原因と解決方法も示します。  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] エラーとその説明の一覧など、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のエラー メッセージの詳細については、「 [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)」を参照してください。 ただし、現在一覧にはトラブルシューティング情報は含まれていません。  
+ 
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] エラーとその説明の一覧など、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のエラー メッセージの詳細については、「 [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)」を参照してください。 ただし、現在一覧にはトラブルシューティング情報は含まれていません。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] で作業しているときに発生する可能性のあるエラー メッセージの多くは、他のコンポーネントが原因になっています。 これには、OLE DB プロバイダー、 [!INCLUDE[ssDE](../includes/ssde-md.md)] や [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] などの他のデータベース コンポーネント、またはファイル システム、SMTP サーバー、Microsoft Message Queueing などの他のサービスやコンポーネントが含まれます。 このような外部エラー メッセージの情報については、コンポーネント固有のドキュメントを参照してください。  
+>  
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] で作業しているときに発生する可能性のあるエラー メッセージの多くは、他のコンポーネントが原因になっています。 これには、OLE DB プロバイダー、 [!INCLUDE[ssDE](../includes/ssde-md.md)] や [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] などの他のデータベース コンポーネント、またはファイル システム、SMTP サーバー、Microsoft Message Queueing などの他のサービスやコンポーネントが含まれます。 このような外部エラー メッセージの情報については、コンポーネント固有のドキュメントを参照してください。  
   
 ## <a name="error-messages"></a>エラー メッセージ  
   
-|エラーのシンボル名|説明|  
+|エラーのシンボル名|[説明]|  
 |----------------------------|-----------------|  
 |DTS_E_CACHELOADEDFROMFILE|キャッシュ変換によるインメモリ キャッシュへのデータの書き込みが試行されているため、パッケージを実行できないが、 キャッシュ接続マネージャーは、既にキャッシュ ファイルをインメモリ キャッシュに読み込んでいることを示しています。|  
 |DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER|指定された接続に失敗したため、パッケージを実行できないことを示しています。|  
 |DTS_E_CANNOTCONVERTBETWEENUNICODEANDNONUNICODESTRINGCOLUMN|データ フロー コンポーネントが Unicode 文字列データを別のコンポーネントに渡そうとしているが、そのコンポーネントの対象となる列では Unicode 以外の文字列データが必要とされていることを示しています。または、その逆に Unicode 以外の文字列を、Unicode 文字列データが必要となる列へ渡そうとしていることを示しています。|  
 |DTS_E_CANNOTCONVERTBETWEENUNICODEANDNONUNICODESTRINGCOLUMNS|データ フロー コンポーネントが Unicode 文字列データを別のコンポーネントに渡そうとしているが、そのコンポーネントの対象となる列では Unicode 以外の文字列データが必要とされていることを示しています。または、その逆に Unicode 以外の文字列を、Unicode 文字列データが必要となる列へ渡そうとしていることを示しています。|  
-|DTS_E_CANTINSERTCOLUMNTYPE|[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 列のデータ型とデータベース列のデータ型との間の変換がサポートされていないので、データベース テーブルに列を追加できないことを示しています。|  
+|DTS_E_CANTINSERTCOLUMNTYPE|
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 列のデータ型とデータベース列のデータ型との間の変換がサポートされていないので、データベース テーブルに列を追加できないことを示しています。|  
 |DTS_E_CONNECTIONNOTFOUND|指定された接続マネージャーが見つからないので、パッケージを実行できないことを示しています。|  
-|DTS_E_CONNECTIONREQUIREDFORMETADATA|[!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーでは、変換元または変換先の新しいメタデータや更新されたメタデータを取得する際にデータ ソースに接続する必要があること、およびこのデザイナーがデータ ソースに接続できないことを示しています。|  
+|DTS_E_CONNECTIONREQUIREDFORMETADATA|
+  [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーでは、変換元または変換先の新しいメタデータや更新されたメタデータを取得する際にデータ ソースに接続する必要があること、およびこのデザイナーがデータ ソースに接続できないことを示しています。|  
 |DTS_E_MULTIPLECACHEWRITES|キャッシュ変換によるインメモリ キャッシュへのデータの書き込みが試行されているため、パッケージを実行できないが、 別のキャッシュ変換が、既にインメモリ キャッシュに書き込んでいることを示しています。|  
-|DTS_E_PRODUCTLEVELTOLOW|適切なバージョンの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] がインストールされていないため、パッケージを実行できないことを示しています。|  
+|DTS_E_PRODUCTLEVELTOLOW|適切なバージョンの[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]がインストールされていないため、パッケージを実行できないことを示します。|  
 |DTS_E_READNOTFILLEDCACHE|キャッシュ変換によるキャッシュへのデータの書き込みと同時に、参照変換によるインメモリ キャッシュ内からのデータの読み取りが試行されていることを示しています。|  
 |DTS_E_UNPROTECTXMLFAILED|保護された XML ノードの暗号化が解除されなかったことを示しています。|  
 |DTS_E_WRITEWHILECACHEINUSE|参照変換によるインメモリ キャッシュからのデータの読み取りと同時に、キャッシュ変換によるインメモリ キャッシュへのデータの書き込みが試行されていることを示しています。|  
@@ -51,7 +55,7 @@ ms.locfileid: "62899450"
 ## <a name="events-sqlispackage"></a>イベント (SQLISPackage)  
  詳細については、「 [Integration Services パッケージによってログに記録されるイベント](performance/events-logged-by-an-integration-services-package.md)」を参照してください。  
   
-|イベント|説明|  
+|イベント|[説明]|  
 |-----------|-----------------|  
 |SQLISPackage_12288|パッケージが開始されたことを示しています。|  
 |SQLISPackage_12289|パッケージの実行が正常に完了したことを示しています。|  
@@ -65,7 +69,7 @@ ms.locfileid: "62899450"
 ## <a name="events-sqlisservice"></a>イベント (SQLISService)  
  詳細については、「 [Integration Services サービスによってログに記録されるイベント](service/events-logged-by-the-integration-services-service.md)」を参照してください。  
   
-|イベント|説明|  
+|イベント|[説明]|  
 |-----------|-----------------|  
 |SQLISService_256|サービスを開始しようとしていることを示しています。|  
 |SQLISService_257|サービスが開始したことを示しています。|  
@@ -76,7 +80,7 @@ ms.locfileid: "62899450"
 |SQLISService_273|構成ファイルを読み取ることができなかったか、無効であることを示しています。|  
 |SQLISService_274|構成ファイルの場所を含むレジストリ エントリが存在しないか、空であることを示しています。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

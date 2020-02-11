@@ -1,5 +1,5 @@
 ---
-title: SQL Server Profiler を使用して SQL トレース コレクション セット (SQL Server Management Studio) を作成する |Microsoft Docs
+title: SQL Server プロファイラーを使用して SQL トレースコレクションセットを作成する (SQL Server Management Studio) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a9e37fd917dc2716967623648a62057e45df73dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62873340"
 ---
 # <a name="use-sql-server-profiler-to-create-a-sql-trace-collection-set-sql-server-management-studio"></a>SQL Server Profiler を使用して SQL トレース コレクション セットを作成する (SQL Server Management Studio)
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] のサーバー側のトレース機能を利用して、ジェネリック SQL トレース コレクター型を使用するコレクション セットを作成するためのトレース定義をエクスポートできます。 このプロセスは 2 つの部分で構成されます。  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] のサーバー側のトレース機能を利用して、ジェネリック SQL トレース コレクター型を使用するコレクション セットを作成するためのトレース定義をエクスポートできます。 このプロセスは 2 つの部分で構成されます。  
   
 1.  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] トレースの作成とエクスポート  
   
@@ -38,7 +38,7 @@ ms.locfileid: "62873340"
   
 2.  **[サーバーへの接続]** ダイアログ ボックスで、 **[キャンセル]** をクリックします。  
   
-3.  このシナリオでは、実行時間の値が既定でミリ秒で表示されるように設定されていることを確認します。 これを行うには、次の手順を実行します。  
+3.  このシナリオでは、実行時間の値が既定でミリ秒で表示されるように設定されていることを確認します。 そのためには、次の手順に従います。  
   
     1.  **[ツール]** メニューの **[オプション]** をクリックします。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "62873340"
   
     1.  フィルター一覧で、 **[実行時間]** をクリックします。  
   
-    2.  ブール演算子ウィンドウで、展開、**より大きいか等しい**ノードで、「`80`値、およびクリックとして **[ok]** します。  
+    2.  ブール演算子ウィンドウで、[次の**値以上] ノードを**展開し`80` 、値として「」と入力して、[ **OK]** をクリックします。  
   
 9. **[実行]** をクリックしてトレースを開始します。  
   
@@ -100,13 +100,13 @@ ms.locfileid: "62873340"
   
 4.  **[実行]** をクリックして、クエリを実行してコレクション セットを作成します。  
   
-5.  [オブジェクト エクスプローラー] で、コレクション セットが作成されたことを確認します。 これを行うには、次の手順を実行します。  
+5.  [オブジェクト エクスプローラー] で、コレクション セットが作成されたことを確認します。 そのためには、次の手順に従います。  
   
     1.  **[管理]** を右クリックし、 **[更新]** をクリックします。  
   
     2.  **[管理]** 、 **[データ コレクション]** の順に展開します。  
   
-     `SPROC_CollectionSet`と同じレベルでコレクション セットが表示されます、**システム データ コレクション セット**ノード。 既定では、このコレクション セットは無効になっています。  
+     コレクション`SPROC_CollectionSet`セットは、[**システムデータコレクションセット**ノードと同じレベルで表示されます。 既定では、このコレクション セットは無効になっています。  
   
 6.  オブジェクト エクスプローラーを使用して、コレクション モードやアップロード スケジュールなどの SPROC_CollectionSet のプロパティを編集します。 編集方法は、データ コレクターで用意されているシステム データ コレクション セットの場合と同じです。  
   

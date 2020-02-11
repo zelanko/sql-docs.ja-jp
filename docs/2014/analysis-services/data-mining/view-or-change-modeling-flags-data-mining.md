@@ -1,5 +1,5 @@
 ---
-title: モデリング フラグ (データ マイニング) 表示または変更 |Microsoft Docs
+title: モデリングフラグの表示または変更 (データマイニング) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7657e7502d3b215cd87326c51cc9416ba0707235
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082679"
 ---
 # <a name="view-or-change-modeling-flags-data-mining"></a>モデリング フラグの表示または変更 (データ マイニング)
@@ -28,7 +28,7 @@ ms.locfileid: "66082679"
   
 1.  SQL Server Design Studio で、ソリューション エクスプローラーを開き、マイニング構造をダブルクリックします。  
   
-2.  NOT NULL モデリング フラグを設定するには、 **[マイニング構造]** タブをクリックします。REGRESSOR フラグまたは MODEL_EXISTENCE_ONLY フラグを設定するには、 **[マイニング モデル]** タブをクリックします。  
+2.  NOT NULL モデリングフラグを設定するには、[**マイニング構造**] タブをクリックします。リグレッサーフラグまたは MODEL_EXISTENCE_ONLY フラグを設定するには、[**マイニングモデル**] タブをクリックします。  
   
 3.  表示または変更する列を右クリックし、 **[プロパティ]** をクリックします。  
   
@@ -41,7 +41,8 @@ ms.locfileid: "66082679"
   
 ### <a name="get-the-modeling-flags-used-in-the-model"></a>モデルで使用されているモデリング フラグの取得  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、DMX クエリ ウィンドウを開き、次のようなクエリを入力します。  
+-   
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、DMX クエリ ウィンドウを開き、次のようなクエリを入力します。  
   
     ```  
     SELECT COLUMN_NAME, CONTENT_TYPE, MODELING_FLAG  
@@ -51,7 +52,7 @@ ms.locfileid: "66082679"
     ```  
   
 ## <a name="see-also"></a>参照  
- [マイニング モデル タスクと操作方法](mining-model-tasks-and-how-tos.md)   
- [モデリング フラグ &#40;データ マイニング&#41;](modeling-flags-data-mining.md)  
+ [マイニングモデルタスクと操作方法](mining-model-tasks-and-how-tos.md)   
+ [データマイニング&#41;&#40;のモデリングフラグ](modeling-flags-data-mining.md)  
   
   

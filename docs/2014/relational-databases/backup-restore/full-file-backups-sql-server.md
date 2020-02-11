@@ -20,16 +20,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 14ead76661b6818ac2daf6a3aa250dddb348745d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62876139"
 ---
 # <a name="full-file-backups-sql-server"></a>ファイルの完全バックアップ (SQL Server)
   このトピックは、複数のファイルまたはファイル グループが含まれている [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースに適用されます。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベース内のファイルは、個別にバックアップおよび復元できます。 また、構成する各ファイルを個別に指定する代わりにファイル グループ全体を指定できます。 ファイル グループにオフラインのファイルが含まれている場合 (たとえば、ファイルが復元中である場合)、ファイル グループ全体がオフラインになり、バックアップできないことに注意してください。  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベース内のファイルは、個別にバックアップおよび復元できます。 また、構成する各ファイルを個別に指定する代わりにファイル グループ全体を指定できます。 ファイル グループにオフラインのファイルが含まれている場合 (たとえば、ファイルが復元中である場合)、ファイル グループ全体がオフラインになり、バックアップできないことに注意してください。  
   
  読み取り専用ファイル グループのファイル バックアップは、部分バックアップと組み合わせることができます。 部分バックアップには、読み取りと書き込みが可能なファイル グループすべて、および必要に応じて 1 つ以上の読み取り専用ファイル グループが含まれます。 詳細については、「[部分バックアップ &#40;SQL Server&#41;](partial-backups-sql-server.md)」を参照してください。  
   
@@ -38,17 +39,17 @@ ms.locfileid: "62876139"
 > [!NOTE]  
 >  ファイルの完全バックアップは、通常、 *ファイルの差分バックアップ*と明確に区別する場合を除き、 *ファイル バックアップ*と呼ばれます。  
   
- **このトピックの内容**  
+ **このトピックの内容:**  
   
--   [ファイル バックアップの利点](#Benefits)  
+-   [ファイルバックアップの利点](#Benefits)  
   
--   [ファイル バックアップの欠点](#Disadvantages)  
+-   [ファイルバックアップの欠点](#Disadvantages)  
   
--   [ファイル バックアップの概要](#Overview)  
+-   [ファイルバックアップの概要](#Overview)  
   
--   [関連タスク](#RelatedTasks)  
+-   [Related Tasks](#RelatedTasks)  
   
-##  <a name="Benefits"></a> ファイル バックアップの利点  
+##  <a name="Benefits"></a>ファイルバックアップの利点  
  ファイル バックアップは、データベース バックアップよりも次の点で優れています。  
   
 -   ファイル バックアップを使用すると、残りのデータベースを復元しないで損傷したファイルだけを復元できるので、復旧を高速化できます。  
@@ -57,13 +58,13 @@ ms.locfileid: "62876139"
   
 -   ファイル バックアップでは、データベースの完全バックアップよりもスケジュール設定とメディア処理を柔軟に行うことができます。非常に大規模なデータベースの場合、データベースの完全バックアップは管理しきれません。 柔軟性に優れたファイルまたはファイル グループのバックアップは、さまざまな更新特性を備えたデータを含む大規模なデータベースでも役に立ちます。  
   
-##  <a name="Disadvantages"></a> ファイル バックアップの欠点  
+##  <a name="Disadvantages"></a>ファイルバックアップの欠点  
   
 -   データベースの完全バックアップと比較した場合のファイル バックアップの大きな欠点は、管理の複雑さです。 これらのバックアップの完全なセットを保持および追跡するタスクは、データベースの完全バックアップの領域要件よりも重要な、時間のかかるタスクであることがあります。  
   
 -   破損したファイルのバックアップがない場合、メディア障害が発生したときに、データベース全体を復旧できなくなります。 したがって、ファイル バックアップの完全なセットを保持しておく必要があります。また、完全復旧モデルまたは一括ログ復旧モデルの場合は、1 つ以上のログ バックアップが、最低でも、最初のファイルの完全バックアップと最新のファイルの完全バックアップの間に対応している必要があります。  
   
-##  <a name="Overview"></a> ファイル バックアップの概要  
+##  <a name="Overview"></a>ファイルバックアップの概要  
  ファイルの完全バックアップでは、1 つ以上のファイルまたはファイル グループに含まれるすべてのデータがバックアップされます。 ファイル バックアップには、バックアップ操作の最後までロール フォワードできる十分なログ レコードが既定で含まれています。  
   
  読み取り専用ファイルまたはファイル グループのバックアップはすべての復旧モデルで同じです。 完全復旧モデルでは、ファイルの完全バックアップの完全なセットと、ファイル バックアップのすべての範囲に対応したログ バックアップを併用することで、データベースの完全バックアップに等しくなります。  
@@ -87,23 +88,23 @@ ms.locfileid: "62876139"
 >  完全復旧モデルで読み取り/書き込みファイルのバックアップを復元する際には、そのファイルとデータベースのそれ以外の部分との一貫性を確保するために、トランザクション ログをロールフォワードする必要があります。 トランザクション ログのバックアップをロールフォワードする数が多くなりすぎないようにするには、ファイルの差分バックアップの使用を検討してください。 詳細については、「 [差分バックアップ &#40;SQL Server&#41;](differential-backups-sql-server.md)」を参照してください。  
   
 ##  <a name="RelatedTasks"></a> 関連タスク  
- **ファイルまたはファイル グループのバックアップを作成するには**  
+ **ファイルまたはファイルグループのバックアップを作成するには**  
   
--   [ファイルおよびファイル グループのバックアップ &#40;SQL Server&#41;](back-up-files-and-filegroups-sql-server.md)  
+-   [ファイルとファイルグループのバックアップ &#40;SQL Server&#41;](back-up-files-and-filegroups-sql-server.md)  
   
--   <xref:Microsoft.SqlServer.Management.Smo.Backup.SqlBackup%2A> (SMO)  
+-   <xref:Microsoft.SqlServer.Management.Smo.Backup.SqlBackup%2A>SMO  
   
 > [!NOTE]  
 >  ファイル バックアップはメンテナンス プラン ウィザードでサポートされません。  
   
 ## <a name="see-also"></a>参照  
- [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
+ [Transact-sql&#41;のバックアップ &#40;](/sql/t-sql/statements/backup-transact-sql)   
  [バックアップの概要 &#40;SQL Server&#41;](backup-overview-sql-server.md)   
  [バックアップと復元: 相互運用性と共存 &#40;SQL Server&#41;](backup-and-restore-interoperability-and-coexistence-sql-server.md)   
  [差分バックアップ &#40;SQL Server&#41;](differential-backups-sql-server.md)   
- [ファイルの復元 &#40;単純復旧モデル&#41;](file-restores-simple-recovery-model.md)   
- [ファイルの復元 &#40;完全復旧モデル&#41;](file-restores-full-recovery-model.md)   
- [Online Restore &#40;SQL Server&#41;](online-restore-sql-server.md)   
+ [ファイル復元 &#40;単純復旧モデル&#41;](file-restores-simple-recovery-model.md)   
+ [完全復旧モデルのファイル復元 &#40;&#41;](file-restores-full-recovery-model.md)   
+ [オンライン復元 &#40;SQL Server&#41;](online-restore-sql-server.md)   
  [段階的な部分復元 &#40;SQL Server&#41;](piecemeal-restores-sql-server.md)  
   
   

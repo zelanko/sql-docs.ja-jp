@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: d0a425bda3d32f19aca5be09dbb8ba4b7b6ac899
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62911719"
 ---
 # <a name="startservice-method-sqlservice-class"></a>StartService メソッド (SqlService クラス)
@@ -38,16 +38,16 @@ object
 ```  
   
 ## <a name="parts"></a>要素  
- *object*  
+ *素材*  
  サービスを表す [SqlService クラス](sqlservice-class.md) オブジェクト。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  次のスタートアップ状態のうちの 1 つを指定する uint32 値。  
   
  0  
- 正常終了しました。 要求が受け入れられました。  
+ 成功。 要求が受け入れられました。  
   
- 1  
+ 1 で保護されたプロセスとして起動されました  
  サポートされていません。 要求はサポートされていません。  
   
  2  
@@ -69,7 +69,7 @@ object
  サービス要求タイムアウト。 サービスは適切な時間内に開始要求に応答しませんでした。  
   
  8  
- 不明なエラー。 サービスの開始時に不明なエラーが発生しました。  
+ 不明なエラーです。 サービスの開始時に不明なエラーが発生しました。  
   
  9  
  パスが見つかりません。 サービス実行可能ファイルへのディレクトリ パスが見つかりませんでした。  
@@ -119,9 +119,9 @@ object
  24  
  サービスは既に一時停止しています。 サービスは現在システムで一時停止されています。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
   
 ## <a name="see-also"></a>参照  
- [開始とサービスの停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [サービスの開始および停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

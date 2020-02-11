@@ -1,5 +1,5 @@
 ---
-title: '[データベース] ダイアログ ボックスへの接続 |Microsoft Docs'
+title: '[データベースへの接続] ダイアログボックス |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,25 +13,26 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 01862762cdea7ea0ef49c12a3c82ee1fd1c972cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66087082"
 ---
 # <a name="connect-to-database-dialog-box"></a>[データベースへの接続] ダイアログ ボックス
+  
   **[データベースへの接続]** ダイアログ ボックスを使用すると、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベースに接続できます。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
   
-|項目|定義|  
+|期間|定義|  
 |----------|----------------|  
-|**既存のデータベースに接続します。**|既存のデータベースに接続するには、このオプションを選択します。 既存のデータベースの一覧で、接続するデータベースをクリックします。|  
-|**新しいデータベースを作成します。**|新しいデータベースを作成するには、このオプションを選択します。|  
-|**ソリューションに追加します。**|現在のソリューションにデータベースを追加するには、このオプションを選択します。|  
-|**ソリューションを閉じる**|新しいソリューションにデータベースを追加するには、このオプションを選択します。|  
+|**[既存のデータベースに接続する]**|既存のデータベースに接続するには、このオプションを選択します。 既存のデータベースの一覧で、接続するデータベースをクリックします。|  
+|**新しいデータベースの作成**|新しいデータベースを作成するには、このオプションを選択します。|  
+|**[ソリューションに追加する]**|現在のソリューションにデータベースを追加するには、このオプションを選択します。|  
+|**[ソリューションを閉じる]**|新しいソリューションにデータベースを追加するには、このオプションを選択します。|  
   
-## <a name="see-also"></a>関連項目  
- [Analysis Services のデザイナーおよびダイアログ ボックス&#40;多次元データ&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
+## <a name="see-also"></a>参照  
+ [多次元データ &#40;Analysis Services のデザイナーとダイアログボックス&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   
   

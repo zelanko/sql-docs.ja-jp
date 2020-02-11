@@ -1,5 +1,5 @@
 ---
-title: 開始または PowerPivot を SharePoint サーバーの停止 |Microsoft Docs
+title: PowerPivot for SharePoint Server を開始または停止する |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 312afc0336405ca530f731ad4fec55a26a960e7a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66071046"
 ---
 # <a name="start-or-stop-a-powerpivot-for-sharepoint-server"></a>PowerPivot for SharePoint サーバーの開始または停止
-  PowerPivot System サービスおよび[!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]インスタンスは、SharePoint ファーム内の連携要求とデータ処理をサポートするために、同じローカル アプリケーション サーバーで同時に動作します。  
+  PowerPivot System サービスとインスタンス[!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]は、同じローカルアプリケーションサーバー上で連携して動作し、SharePoint ファームでの調整された要求とデータ処理をサポートします。  
   
  このトピックには、次のセクションが含まれます。  
   
@@ -28,19 +28,19 @@ ms.locfileid: "66071046"
   
  [PowerPivot サーバーの停止の影響](#effects)  
   
-##  <a name="dependencies"></a> サービスの依存関係  
+##  <a name="dependencies"></a>サービスの依存関係  
  PowerPivot System サービスには、同じ物理サーバーに一緒にインストールされているローカル Analysis Services サーバー インスタンスに対する依存関係があります。 PowerPivot System サービスを停止する場合は、ローカル Analysis Services サーバー インスタンスも手動で停止する必要があります。 一方のサービスのみが実行されている場合は、PowerPivot データの処理で要求割り当てエラーが発生します。  
   
  Analysis Services サーバーを単独で実行するのは、問題の診断またはトラブルシューティングを行う場合だけにしてください。 それ以外の場合は、同じサーバーでローカルに実行される PowerPivot System サービスが必要です。  
   
-##  <a name="startstop"></a> サービスの開始または停止  
+##  <a name="startstop"></a>サービスの開始または停止  
  PowerPivot System サービスまたは Analysis Services サーバー インスタンスを開始または停止するには、必ずサーバーの全体管理を使用します。 サーバーの全体管理を使用すると、同じページからサービスの開始または停止をまとめて実行できます。 また、サーバーの全体管理では、実行する必要があると思われるサービスを再起動するために、 **[1 つ以上のサービスが開始または停止されています]** というタイマー ジョブが使用されます。 SharePoint 以外のツールを使用して PowerPivot System サービスまたは Analysis Services を停止した場合は、タイマー ジョブの実行時にサービスが再起動されます。  
   
  サービスの開始および停止は、物理サービス インスタンスに適用される操作です。 ファーム内に追加の PowerPivot for SharePoint サーバーがある場合、ファーム内の他のサーバーは、PowerPivot データに対する要求の受け入れを続行します。  
   
  ファーム全体のすべての物理サービスを同時に開始または停止することはできません。 各サーバーを選択してから、特定のサービスを開始または停止する必要があります。  
   
- 特定の Web アプリケーションに対する PowerPivot System サービスを開始、一時停止、または停止することはできませんが、サービスを既定の接続リストから削除して使用できない状態にすることができます。 詳細については、次を参照してください。[サーバーの全体管理で SharePoint Web アプリケーションへの PowerPivot サービス アプリケーションの接続](connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md)します。  
+ 特定の Web アプリケーションに対する PowerPivot System サービスを開始、一時停止、または停止することはできませんが、サービスを既定の接続リストから削除して使用できない状態にすることができます。 詳細については、「[サーバーの全体管理で PowerPivot サービスアプリケーションを SharePoint Web アプリケーションに接続する](connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md)」を参照してください。  
   
 1.  サーバーの全体管理で、 **[システム設定]** の **[サーバーのサービスの管理]** をクリックします。  
   
@@ -50,10 +50,10 @@ ms.locfileid: "66071046"
   
 4.  サービスを選択し、アクションをクリックします。 サービスはペアで開始または停止することを忘れないでください。 PowerPivot System サービスを開始または停止する場合は、同じコンピューターで実行される Analysis Services サーバー インスタンスも開始または停止する必要があります。  
   
-##  <a name="effects"></a> PowerPivot サーバーの停止の影響  
+##  <a name="effects"></a>PowerPivot サーバーを停止した場合の影響  
  次の表に、SharePoint サーバーでの PowerPivot System サービスおよび Analysis Services サービスの停止の影響を示します。  
   
-|影響を受ける対象|説明|  
+|影響を受ける対象|[説明]|  
 |---------------|-----------------|  
 |既存のクエリ|Analysis Services サーバーで処理されているクエリは直ちに停止します。 ユーザーは、データまたはデータ ソース接続が見つからないことを示すエラーを受け取ります。|  
 |現在処理中の既存のデータ更新ジョブ|現在の Analysis Services サーバーで処理されているジョブは直ちに停止します。 データ更新が失敗し、データ更新の履歴にエラーが記録されます。<br /><br /> SharePoint サーバーの全体管理の [ジョブの状態の確認] ページを使用することにより、サービスを停止する前に現在のジョブの状態を表示できます。<br /><br /> 現在処理中のジョブを確認することはできますが、キュー自体を表示して、他のジョブが開始されようとしているかどうかを確認することはできません。|  

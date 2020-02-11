@@ -1,5 +1,5 @@
 ---
-title: 関連するシーケンス クラスター モデル (中級者向けデータ マイニング チュートリアル) を作成する |Microsoft Docs
+title: 関連するシーケンスクラスターモデルの作成 (中級者向けデータマイニングチュートリアル) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 71db7ba5246e151bbca8a52972a2ba835b80ddb6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62855877"
 ---
 # <a name="creating-a-related-sequence-clustering-model-intermediate-data-mining-tutorial"></a>関連するシーケンス クラスター モデルの作成 (中級者向けデータ マイニング チュートリアル)
@@ -26,48 +26,48 @@ ms.locfileid: "62855877"
   
 ### <a name="to-make-a-copy-of-the-sequence-clustering-model"></a>シーケンス クラスター モデルのコピーを作成するには  
   
-1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]、データ マイニング デザイナーでクリックして、**マイニング モデル**タブ。  
+1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]のデータマイニングデザイナーで、[**マイニングモデル**] タブをクリックします。  
   
-2.  コピー、および選択するモデルを右クリックして**マイニング モデルの新しい**します。  
+2.  コピーするモデルを右クリックし、[**新しいマイニングモデル**] をクリックします。  
   
-3.  **マイニング モデルの新しい**ダイアログ ボックスで、モデルの名前を入力し、Microsoft を選択`Sequence Clustering`します。  
+3.  [**新しいマイニングモデル**] ダイアログボックスで、モデル名を入力し、[ `Sequence Clustering`Microsoft] を選択します。  
   
-     このチュートリアルでは、名前を入力`Sequence Clustering`します。  
+     このチュートリアルでは、という`Sequence Clustering`名前を入力します。  
   
 4.  **[OK]** をクリックします。  
   
 ### <a name="to-remove-columns-from-the-mining-model"></a>マイニング モデルから列を削除するには  
   
-1.  **マイニング モデルの**] タブの [Sequence Clustering という名前の新しいモデルの列の行をクリックして、 **Income Group**属性、および選択**無視**します。  
+1.  [**マイニングモデル**] タブの [シーケンスクラスター] という名前の新しいモデルの列で、[**収入グループ**] 属性の行をクリックし、[**無視**] を選択します。  
   
-2.  属性のこの手順を繰り返します**リージョン**します。  
+2.  属性**領域**に対してこの手順を繰り返します。  
   
-3.  テーブル名の横にプラス記号をクリックします。 **v Assoc Seq Line Items**テーブルを展開すると、入れ子になったテーブルから列を表示します。  
+3.  テーブル名の横にあるプラス記号をクリックし**て、テーブル**を展開し、入れ子になったテーブルの列を表示します。  
   
      新しいモデルの列は、次の列だけになります。  
   
-     **順序 NumberKey**  
+     **注文番号キー**  
   
-     **行番号のキー**  
+     **行番号キー**  
   
-     **モデルを予測します。**  
+     **モデル予測**  
   
 ### <a name="to-process-the-new-sequence-clustering-model"></a>新しいシーケンス クラスター モデルを処理するには  
   
-1.  **マイニング モデルの** タブで、という名前の新しいモデルを右クリックして`Sequence Clustering`、選択および**プロセス モデル**します。  
+1.  [**マイニングモデル**] タブで、という名前`Sequence Clustering`の新しいモデルを右クリックし、[モデルの**処理**] を選択します。  
   
      新しいマイニング モデルは処理済みの構造に基づく簡略化されたモデルであるため、構造を再処理する必要はありません。 新しいマイニング モデルのみを処理できます。  
   
-2.  クリックして**はい**サーバーに更新されたデータ マイニング プロジェクトを配置します。  
+2.  [**はい**] をクリックして、更新されたデータマイニングプロジェクトをサーバーに配置します。  
   
-3.  **マイニング モデルの処理**ダイアログ ボックスで、をクリックして**実行**します。  
+3.  [**マイニングモデルの処理**] ダイアログボックスで、[**実行**] をクリックします。  
   
-4.  をクリックして**閉じます**を閉じる、**処理の進行状況** ダイアログ ボックスをクリック**閉じます**で再度、**マイニング モデルの処理** ダイアログ ボックス。  
+4.  [**閉じる**] をクリックして [**処理の進行状況**] ダイアログボックスを閉じ、[**マイニングモデルの処理**] ダイアログボックスでもう一度 [**閉じる**] をクリックします。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
- [シーケンス クラスター モデルで予測の作成&#40;中級者向けデータ マイニング チュートリアル&#41;](../../2014/tutorials/create-predictions-on-model-intermediate-data-mining-tutorial.md)  
+ [シーケンスクラスターモデルでの予測の作成 &#40;中級者向けデータマイニングチュートリアル&#41;](../../2014/tutorials/create-predictions-on-model-intermediate-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>関連項目  
- [処理の要件および注意事項 &#40;データ マイニング&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+## <a name="see-also"></a>参照  
+ [データマイニング&#41;&#40;処理の要件と考慮事項](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6f240973def97dea739c21381f38dc366deb8920
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62691473"
 ---
 # <a name="server-public-permissions"></a>サーバーのパブリック権限
@@ -26,7 +26,7 @@ ms.locfileid: "62691473"
  public サーバー ロールにサーバー権限を付与しないでください。  
   
 > [!IMPORTANT]  
->  セットアップの完了後、**パブリック**ロールが持つ`CONNECT`以外のすべてのエンドポイントに対する権限、 **Dedicated Admin Connection**します。 これは正常な動作です。通常は変更しないでください (アクセスの制御には、新しいログインの作成時に自動的に付与される `CONNECT SQL` 権限が使用されます)。  
+>  セットアップが完了すると、**専用管理者接続**以外のすべてのエンドポイントに対する権限が`CONNECT` **PUBLIC**ロールに付与されます。 これは正常な動作です。通常は変更しないでください (アクセスの制御には、新しいログインの作成時に自動的に付与される `CONNECT SQL` 権限が使用されます)。  
   
 ### <a name="for-more-information"></a>詳細情報  
  [SQL Server の保護](../security/securing-sql-server.md)  

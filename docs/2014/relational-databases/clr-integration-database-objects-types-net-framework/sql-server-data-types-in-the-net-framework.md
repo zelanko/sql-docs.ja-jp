@@ -1,5 +1,5 @@
 ---
-title: .NET Framework での SQL Server データ型 |Microsoft Docs
+title: .NET Framework | の SQL Server データ型Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,13 +20,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 2ca5e816d3068b0607a8ab30e949040df0187db9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62874541"
 ---
 # <a name="sql-server-data-types-in-the-net-framework"></a>.NET Framework での SQL Server データ型
+  
   `SqlTypes` ライブラリは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework の基本クラス ライブラリの一部です。 このライブラリには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのデータ型と同じセマンティクスと有効桁数を備えたデータ型が用意されています。 このトピックでは、.NET Framework プログラマにとっては新しいセマンティクスについて説明し、`System.Data.SqlTypes` ライブラリに含まれる `System.Data` 名前空間に実装されている型を紹介します。  
   
  このセクションのトピックでは、次の内容について説明します。  
@@ -37,10 +38,12 @@ ms.locfileid: "62874541"
  [照合順序と CLR 統合データ型](collation-and-clr-integration-data-types.md)  
  CLR 統合での照合順序の扱い方について説明します。  
   
- [ラージ オブジェクトを処理&#40;LOB&#41; CLR でのパラメーター](handling-large-object-lob-parameters-in-the-clr.md)  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と CLR の間で LOB 型を渡す方法について説明します。  
+ [CLR でのラージオブジェクト &#40;LOB&#41; パラメーターの処理](handling-large-object-lob-parameters-in-the-clr.md)  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と CLR の間で LOB 型を渡す方法について説明します。  
   
  [CLR パラメーター データのマッピング](mapping-clr-parameter-data.md)  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、CLR 統合、および .NET Framework の間のデータ型マッピングについて説明します。  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、CLR 統合、および .NET Framework の間のデータ型マッピングについて説明します。  
   
   

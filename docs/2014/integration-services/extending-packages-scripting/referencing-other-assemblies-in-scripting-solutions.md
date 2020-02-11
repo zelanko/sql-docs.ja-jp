@@ -25,17 +25,18 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a6f942e1afe40467e331519f276b360f87f9a6da
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62894736"
 ---
 # <a name="referencing-other-assemblies-in-scripting-solutions"></a>スクリプティング ソリューションでの他のアセンブリの参照
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] クラス ライブラリには、スクリプトの開発者が [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージにカスタム機能を実装するための強力なツール セットが用意されています。 スクリプト タスクとスクリプト コンポーネントでは、カスタム マネージド アセンブリも使用できます。  
+  クラス[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]ライブラリは、スクリプト開発者に、パッケージに[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]カスタム機能を実装するための強力なツールセットを提供します。 スクリプト タスクとスクリプト コンポーネントでは、カスタム マネージド アセンブリも使用できます。  
   
 > [!NOTE]  
->  Web サービスのオブジェクトやメソッドをパッケージで使用できるようにするには、[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) の **[Web 参照の追加]** コマンドを使用します。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] の以前のバージョンでは、Web サービスを使用するためにプロキシ クラスを生成する必要がありました。  
+>  パッケージで web サービスのオブジェクトとメソッドを使用できるようにするには、Tools for Applications (VSTA) [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]の [ **web 参照の追加**] コマンドを使用します。 
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] の以前のバージョンでは、Web サービスを使用するためにプロキシ クラスを生成する必要がありました。  
   
 ## <a name="using-a-managed-assembly"></a>マネージド アセンブリの使用  
  デザイン時に [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] によってマネージド アセンブリが検出されるようにするには、次の手順を実行する必要があります。  
@@ -43,7 +44,8 @@ ms.locfileid: "62894736"
 1.  マネージド アセンブリをコンピューター上の任意のフォルダーに格納します。  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] の以前のバージョンで追加できたのは、%windir%\Microsoft.NET\Framework\vx.x.xxxxx フォルダーか %ProgramFiles%\Microsoft SQL Server\100\SDK\Assemblies フォルダーにあるマネージド アセンブリへの参照のみでした。  
+    >  
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] の以前のバージョンで追加できたのは、%windir%\Microsoft.NET\Framework\vx.x.xxxxx フォルダーか %ProgramFiles%\Microsoft SQL Server\100\SDK\Assemblies フォルダーにあるマネージド アセンブリへの参照のみでした。  
   
 2.  マネージド アセンブリへの参照を追加します。  
   
@@ -62,29 +64,30 @@ ms.locfileid: "62894736"
   
  使用頻度の高い [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] クラスを次に示します。  
   
--   `System.Data` ADO.NET のアーキテクチャが含まれています。  
+-   `System.Data`ADO.NET アーキテクチャが含まれています。  
   
--   `System.IO` ファイル システムとストリームへのインターフェイスを提供します。  
+-   `System.IO`ファイルシステムおよびストリームへのインターフェイスを提供します。  
   
--   `System.Windows.Forms` フォームの作成を提供します。  
+-   `System.Windows.Forms`フォームの作成を提供します。  
   
--   `System.Text.RegularExpressions` 正規表現を操作するためのクラスを提供します。  
+-   `System.Text.RegularExpressions`正規表現を操作するためのクラスを提供します。  
   
--   `System.Environment` ローカル コンピューターでは、現在のユーザーおよびコンピューターとユーザー設定に関する情報を返します。  
+-   `System.Environment`ローカルコンピューター、現在のユーザー、およびコンピューターとユーザー設定に関する情報を返します。  
   
--   `System.Net` ネットワーク通信を提供します。  
+-   `System.Net`ネットワーク通信を提供します。  
   
--   `System.DirectoryServices` Active Directory を公開します。  
+-   `System.DirectoryServices`Active Directory を公開します。  
   
--   `System.Drawing` 広範な画像操作ライブラリを提供します。  
+-   `System.Drawing`には、広範なイメージ操作ライブラリが用意されています。  
   
--   `System.Threading` マルチ スレッド プログラミングを有効にします。  
+-   `System.Threading`マルチスレッドプログラミングを有効にします。  
   
- [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の詳細については、MSDN ライブラリを参照してください。  
+ 
+  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の詳細については、MSDN ライブラリを参照してください。  
   
-![Integration Services のアイコン (小)](../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。**<br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
+![Integration Services アイコン (小)](../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services に関するページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [スクリプトによるパッケージの拡張](extending-packages-with-scripting.md)  
   
   

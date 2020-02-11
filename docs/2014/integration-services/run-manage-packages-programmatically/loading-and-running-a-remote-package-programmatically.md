@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d1cc7358a7058af9feb3f0540085ab140cfd8a7b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62889636"
 ---
 # <a name="loading-and-running-a-remote-package-programmatically"></a>プログラムによるリモート パッケージの読み込みと実行
@@ -36,7 +36,8 @@ ms.locfileid: "62889636"
   
 -   [Web サービスまたはリモート コンポーネントを使用して、プログラムでリモート パッケージを実行する](#service)  
   
- このトピックでパッケージを読み込み、保存するために使用するほとんどすべてのメソッドには、`Microsoft.SqlServer.ManagedDTS` アセンブリへの参照が必要です。 例外を実行するためには、このトピックで示す ADO.NET 方法、 **sp_start_job**ストアド プロシージャへの参照のみを必要とする`System.Data`します。 `Microsoft.SqlServer.ManagedDTS` アセンブリへの参照を新しいプロジェクトに追加した後、`using` ステートメントまたは `Imports` ステートメントを使用して <xref:Microsoft.SqlServer.Dts.Runtime> 名前空間をインポートします。  
+ このトピックでパッケージを読み込み、保存するために使用するほとんどすべてのメソッドには、`Microsoft.SqlServer.ManagedDTS` アセンブリへの参照が必要です。 例外は、このトピックで説明する ADO.NET アプローチであり、 **** へ`System.Data`の参照のみを必要とする sp_start_job ストアドプロシージャを実行する場合に使用します。 
+  `Microsoft.SqlServer.ManagedDTS` アセンブリへの参照を新しいプロジェクトに追加した後、<xref:Microsoft.SqlServer.Dts.Runtime> ステートメントまたは `using` ステートメントを使用して `Imports` 名前空間をインポートします。  
   
 ###  <a name="agent"></a> SQL Server エージェントを使用した、サーバー上でのプログラムによるリモート パッケージの実行  
  次のコード例では、プログラムで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを使用して、サーバー上のリモート パッケージを実行する方法を示します。 このコード例では、**sp_start_job** システム ストアド プロシージャを呼び出し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブを開始します。 プロシージャによって開始されるジョブの名前は `RunSSISPackage` で、このジョブはリモート コンピューターに保存されています。 その後、`RunSSISPackage` ジョブにより、リモート コンピューターでパッケージが実行されます。  
@@ -158,13 +159,13 @@ namespace LaunchSSISPackageAgent_CS
  次のコード例では、Web サービスを作成およびテストする方法を示します。  
   
 #### <a name="creating-the-web-service"></a>Web サービスの作成  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージは、ファイルや SQL Server から直接読み込んだり、SSIS パッケージ ストアから読み込んだりすることができます。SSIS パッケージ ストアは、SQL Server および特別なファイル システム フォルダー内のパッケージ ストレージを管理します。 このサンプルは、`Select Case` コンストラクトまたは `switch` コンストラクトを使用してパッケージを起動するための適切な構文を選択し、入力引数を適切に連結することで、すべての使用可能なオプションをサポートしています。 LaunchPackage Web サービス メソッドは、クライアント コンピューターで [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] アセンブリへの参照が不要になるように、パッケージの実行結果を <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> 値ではなく、整数として返します。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージは、ファイルや SQL Server から直接読み込んだり、SSIS パッケージ ストアから読み込んだりすることができます。SSIS パッケージ ストアは、SQL Server および特別なファイル システム フォルダー内のパッケージ ストレージを管理します。 このサンプルは、`Select Case` コンストラクトまたは `switch` コンストラクトを使用してパッケージを起動するための適切な構文を選択し、入力引数を適切に連結することで、すべての使用可能なオプションをサポートしています。 LaunchPackage Web サービス メソッドは、クライアント コンピューターで <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> アセンブリへの参照が不要になるように、パッケージの実行結果を [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 値ではなく、整数として返します。  
   
 ###### <a name="to-create-a-web-service-to-run-packages-on-the-server-programmatically"></a>プログラムによってサーバー上でパッケージを実行するための Web サービスを作成するには  
   
 1.  Visual Studio を開き、任意のプログラミング言語で Web サービス プロジェクトを作成します。 サンプル コードでは、プロジェクトに LaunchSSISPackageService という名前を使用します。  
   
-2.  参照を追加`Microsoft.SqlServer.ManagedDTS`を追加し、`Imports`または`using`ステートメントのコード ファイルを**Microsoft.SqlServer.Dts.Runtime**名前空間。  
+2.  へ`Microsoft.SqlServer.ManagedDTS`の参照を追加し、 `Imports`ステートメント`using`またはステートメントを、Microsoft の**SqlServer**名前空間のコードファイルに追加します。  
   
 3.  LaunchPackage Web サービス メソッドのサンプル コードをクラスに貼り付けます (このサンプルはコード ウィンドウの内容全体を表しています)。  
   
@@ -331,7 +332,7 @@ public class LaunchSSISPackageServiceCS : System.Web.Services.WebService
 ```  
   
 #### <a name="testing-the-web-service"></a>Web サービスのテスト  
- 次のサンプル コンソール アプリケーションでは、Web サービスを使用してパッケージを実行します。 Web サービスの LaunchPackage メソッドは、クライアント コンピューターで [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] アセンブリへの参照が不要になるように、パッケージの実行結果を <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> 値ではなく、整数として返します。 このサンプルでは、実行結果を報告するために、<xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> 値を反映する値を持つプライベート列挙を作成します。  
+ 次のサンプル コンソール アプリケーションでは、Web サービスを使用してパッケージを実行します。 Web サービスの LaunchPackage メソッドは、クライアント コンピューターで <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> アセンブリへの参照が不要になるように、パッケージの実行結果を [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 値ではなく、整数として返します。 このサンプルでは、実行結果を報告するために、<xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> 値を反映する値を持つプライベート列挙を作成します。  
   
 ###### <a name="to-create-a-console-application-to-test-the-web-service"></a>Web サービスをテストするためのコンソール アプリケーションを作成するには  
   
@@ -420,13 +421,13 @@ namespace LaunchSSISPackageSvcTestCS
   
 ## <a name="external-resources"></a>外部リソース  
   
--   MSDN ライブラリのビデオ「[SQL Server エージェントを使用して SSIS パッケージ実行を自動化する方法 (SQL Server ビデオ)](https://technet.microsoft.com/sqlserver/ff686764.aspx)」 (technet.microsoft.com)  
+-   technet.microsoft.com のビデオ「[SQL Server エージェントを使用して SSIS パッケージ実行を自動化する方法 (SQL Server ビデオ)](https://technet.microsoft.com/sqlserver/ff686764.aspx)」  
   
-![Integration Services のアイコン (小)](../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。**<br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
+![Integration Services アイコン (小)](../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services に関するページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
 ## <a name="see-also"></a>参照  
- [ローカル実行とリモート実行の相違点について](../run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   
- [プログラムによるローカル パッケージの読み込みと実行](../run-manage-packages-programmatically/loading-and-running-a-local-package-programmatically.md)   
+ [ローカル実行とリモート実行の違いについて](../run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   
+ [プログラムによるローカルパッケージの読み込みと実行](../run-manage-packages-programmatically/loading-and-running-a-local-package-programmatically.md)   
  [ローカル パッケージの出力の読み込み](../run-manage-packages-programmatically/loading-the-output-of-a-local-package.md)  
   
   

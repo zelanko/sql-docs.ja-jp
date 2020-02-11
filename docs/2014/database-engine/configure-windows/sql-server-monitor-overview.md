@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 889e0c5a54477a1532aa9ec2760fad890a671618
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62755179"
 ---
 # <a name="sql-server-monitor-overview"></a>SQL Server モニターの概要
@@ -50,7 +50,7 @@ ms.locfileid: "62755179"
  **操作**  
  ナビゲーション ツリーで選択されたノードのコンテキスト メニューが含まれます。  
   
- **[実行]**  
+ **Go**  
  監視するコンポーネントの一覧が含まれます。  
   
 -   データベース ミラーリング  

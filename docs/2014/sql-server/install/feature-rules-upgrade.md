@@ -11,16 +11,18 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3399c6e8c73916e613197aec2ee0499098a8fa86
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66095386"
 ---
 # <a name="feature-rules-upgrade"></a>機能ルール (アップグレード)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップによって、セットアップ操作が完了する前にコンピューターの構成が検証されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップの実行中に、システムは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール先であるコンピューターをスキャンし、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の正常なセットアップ動作を妨げる可能性のある状態をチェックします。 セットアップがアップグレード ウィザードを起動する前に、各項目の状態が取得されます。 次に、必要な条件と取得した結果を比較し、ブロックの問題解決に関するガイダンスを提供します。  
   
- システム構成チェッカーは、実行された各ルールの簡単な記述と、実行ステータスを含むレポートを生成します。 システム構成チェッカーのレポートは %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\< YYYYMMDD_HHMM >\\します。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップによって、セットアップ操作が完了する前にコンピューターの構成が検証されます。 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップの実行中に、システムは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール先であるコンピューターをスキャンし、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の正常なセットアップ動作を妨げる可能性のある状態をチェックします。 セットアップがアップグレード ウィザードを起動する前に、各項目の状態が取得されます。 次に、必要な条件と取得した結果を比較し、ブロックの問題解決に関するガイダンスを提供します。  
+  
+ システム構成チェッカーは、実行された各ルールの簡単な記述と、実行ステータスを含むレポートを生成します。 システム構成チェックのレポートは、\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]% programfiles% \120\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\にあります。  
   
  セットアップ操作を実行する前に、次のトピックを確認してください。  
   
@@ -34,7 +36,7 @@ ms.locfileid: "66095386"
   
  その他の参考資料:  
   
-1.  [サポートされているバージョンとエディションのアップグレード](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)  
+1.  [サポートされるバージョンとエディションのアップグレード](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)  
   
 2.  [フェールオーバー クラスタリングをインストールする前に](../failover-clusters/install/before-installing-failover-clustering.md)  
   

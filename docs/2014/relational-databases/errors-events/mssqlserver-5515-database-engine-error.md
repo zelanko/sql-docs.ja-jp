@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9a646852b60cd1d1f59bd35da1d28769dcef3fb9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62867596"
 ---
-# <a name="mssqlserver5515"></a>MSSQLSERVER_5515
+# <a name="mssqlserver_5515"></a>MSSQLSERVER_5515
     
 ## <a name="details"></a>詳細  
   
@@ -36,6 +36,6 @@ ms.locfileid: "62867596"
  FILESTREAM ファイルに対して指定されたコンテナー ディレクトリを開けません。  
   
 ## <a name="user-action"></a>ユーザーの操作  
- エラーの原因については、特定の Windows 状態コードを参照してください。 詳細については、次を参照してください。、[イベントとエラー メッセージのサポート センター](https://support.microsoft.com/search?query=events%20and%20errors)します。  
+ エラーの原因については、特定の Windows 状態コードを参照してください。 詳細については、「[イベントとエラーメッセージのサポートセンター](https://support.microsoft.com/search?query=events%20and%20errors)」を参照してください。  
   
   

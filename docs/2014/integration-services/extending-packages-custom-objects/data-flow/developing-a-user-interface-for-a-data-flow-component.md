@@ -23,10 +23,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 273e0343fc57af419a349725482047df08619cdd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62896324"
 ---
 # <a name="developing-a-user-interface-for-a-data-flow-component"></a>データ フロー コンポーネント用ユーザー インターフェイスの開発
@@ -35,9 +35,10 @@ ms.locfileid: "62896324"
  コンポーネント用のカスタム ユーザー インターフェイスを提供しない場合でも、ユーザーは、詳細エディターを使用することで、コンポーネントおよびそのカスタム プロパティを構成することができます。 詳細エディターでユーザーがカスタム プロパティ値を適切に変更できるようにするには、必要に応じて、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.TypeConverter%2A> の <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.UITypeEditor%2A> および <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100> プロパティを使用します。 詳細については、「[データ フロー コンポーネントのデザイン時のメソッド](design-time-methods-of-a-data-flow-component.md)」の「カスタム プロパティの作成」を参照してください。  
   
 ## <a name="setting-the-uitypename-property"></a>UITypeName プロパティの設定  
- カスタム ユーザー インターフェイスを提供するには、<xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.UITypeName%2A> の <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute> プロパティに、<xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI> インターフェイスを実装したクラスの名前を登録する必要があります。 このプロパティがコンポーネントによって設定されると、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] の [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーでコンポーネントを編集する際に、カスタム ユーザー インターフェイスが読み込まれ、必要な処理が呼び出されます。  
+ カスタム ユーザー インターフェイスを提供するには、<xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.UITypeName%2A> の <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute> プロパティに、<xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI> インターフェイスを実装したクラスの名前を登録する必要があります。 コンポーネントによってこのプロパティが設定さ[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]れると、デザイナーで[!INCLUDE[ssIS](../../../includes/ssis-md.md)]コンポーネントが編集されるときに、によってカスタムユーザーインターフェイスが読み込まれ、呼び出されます。  
   
- <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.UITypeName%2A> プロパティは、型の完全修飾名を示すコンマ区切り形式の文字列です。 次の一覧は、型を識別する要素を順に示したものです。  
+ 
+  <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.UITypeName%2A> プロパティは、型の完全修飾名を示すコンマ区切り形式の文字列です。 次の一覧は、型を識別する要素を順に示したものです。  
   
 -   種類の名前。  
   
@@ -71,25 +72,33 @@ End Class
 ```  
   
 ## <a name="implementing-the-idtscomponentui-interface"></a>IDtsComponentUI インターフェイスの実装  
- <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI> インターフェイスには、コンポーネントが追加、削除、および編集されたときに [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーが呼び出すメソッドがあります。 コンポーネント開発者は、これらのメソッドを実装する際にコードを記述することにより、ユーザーがコンポーネントを対話的に操作できるようにできます。  
+ 
+  <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI> インターフェイスには、コンポーネントが追加、削除、および編集されたときに [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーが呼び出すメソッドがあります。 コンポーネント開発者は、これらのメソッドを実装する際にコードを記述することにより、ユーザーがコンポーネントを対話的に操作できるようにできます。  
   
  このクラスは通常、コンポーネント自体とは別個のアセンブリに実装します。 別個のアセンブリの使用は必須ではありませんが、これを使用することで、開発者はコンポーネントとユーザー インターフェイスを相互に独立に作成および配置することができ、コンポーネントのバイナリの占有領域を少なく抑えることができます。  
   
  カスタム ユーザー インターフェイスを実装すると、[!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーでコンポーネントを編集する場合に比べ、コンポーネントの制御に関して開発者の意図をより反映することができます。 たとえば <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.New%2A> メソッドにコードを追加し、データ フロー タスクに最初にコンポーネントが追加されたときにこのコードを呼び出して、コンポーネントの初期設定の手順を示すウィザードを表示することができます。  
   
- <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI> インターフェイスを実装するクラスを作成した後、ユーザーがコンポーネントに対して操作を行ったときに応答するコードを追加する必要があります。 <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Initialize%2A> メソッドは、コンポーネントの <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> インターフェイスを提供するもので、<xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.New%2A> メソッドや <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Edit%2A> メソッドの実行前に呼び出されます。 この参照は、プライベート メンバー変数に保存しておき、後でコンポーネントのメタデータを修正する際に使用します。  
+ 
+  <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI> インターフェイスを実装するクラスを作成した後、ユーザーがコンポーネントに対して操作を行ったときに応答するコードを追加する必要があります。 
+  <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Initialize%2A> メソッドは、コンポーネントの <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> インターフェイスを提供するもので、<xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.New%2A> メソッドや <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Edit%2A> メソッドの実行前に呼び出されます。 この参照は、プライベート メンバー変数に保存しておき、後でコンポーネントのメタデータを修正する際に使用します。  
   
 ## <a name="modifying-a-component-and-persisting-changes"></a>コンポーネントの修正と変更の保存  
- <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> インターフェイスは、パラメーターとして <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Initialize%2A> メソッドに渡されます。 この参照は、ユーザー インターフェイスを実装するコードによってメンバー変数にキャッシュされ、このユーザー インターフェイスに対するユーザー操作に応じてコンポーネントを修正するために使用されます。  
+ 
+  <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> インターフェイスは、パラメーターとして <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Initialize%2A> メソッドに渡されます。 この参照は、ユーザー インターフェイスを実装するコードによってメンバー変数にキャッシュされ、このユーザー インターフェイスに対するユーザー操作に応じてコンポーネントを修正するために使用されます。  
   
- <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> インターフェイスを介してコンポーネントを直接修正することも可能ですが、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.CManagedComponentWrapper> メソッドを使用して、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.Instantiate%2A> のインスタンスを作成することをお勧めします。 インターフェイスを使用してコンポーネントを直接編集すると、コンポーネントの検証処理が省略されるためです。 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.CManagedComponentWrapper> を介してコンポーネントのデザイン時インスタンスを使用する利点は、コンポーネントに加えられた変更が確実にコンポーネント側で制御されるという点です。  
+ 
+  <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> インターフェイスを介してコンポーネントを直接修正することも可能ですが、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.CManagedComponentWrapper> メソッドを使用して、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.Instantiate%2A> のインスタンスを作成することをお勧めします。 インターフェイスを使用してコンポーネントを直接編集すると、コンポーネントの検証処理が省略されるためです。 
+  <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.CManagedComponentWrapper> を介してコンポーネントのデザイン時インスタンスを使用する利点は、コンポーネントに加えられた変更が確実にコンポーネント側で制御されるという点です。  
   
- <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Edit%2A> メソッドの戻り値は、コンポーネントに加えられた変更が保存されたか、破棄されたかを示します。 このメソッドによって `false` が返される場合、変更はすべて破棄されます。`true` の場合、コンポーネントに対する変更が保存され、パッケージを保存する必要があることを示すマークが付けられます。  
+ 
+  <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Edit%2A> メソッドの戻り値は、コンポーネントに加えられた変更が保存されたか、破棄されたかを示します。 このメソッドによって `false` が返される場合、変更はすべて破棄されます。`true` の場合、コンポーネントに対する変更が保存され、パッケージを保存する必要があることを示すマークが付けられます。  
   
 ### <a name="using-the-services-of-the-ssis-designer"></a>SSIS デザイナーのサービスの使用  
- <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Initialize%2A> メソッドの `IServiceProvider` パラメーターにより、[!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーの、次のサービスにアクセスすることができます。  
+ 
+  `IServiceProvider` メソッドの <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Initialize%2A> パラメーターにより、[!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーの、次のサービスにアクセスすることができます。  
   
-|サービス|説明|  
+|サービス|[説明]|  
 |-------------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Design.IDtsClipboardService>|コンポーネントがコピー/貼り付け、または切り取り/貼り付け操作の一部として生成されたかどうかを判別するために使用します。|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionService>|パッケージ内の既存の接続へのアクセス、または新しい接続の作成に使用します。|  
@@ -103,7 +112,8 @@ End Class
  次のコード例では、<xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI> インターフェイスを実装したカスタム ユーザー インターフェイス クラスと、コンポーネントのエディターとして使用できる Windows フォームの統合を示します。  
   
 ### <a name="custom-user-interface-class"></a>カスタム ユーザー インターフェイス クラス  
- 次のコードは、<xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI> インターフェイスを実装するクラスを示します。 <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Edit%2A> メソッドは、コンポーネント エディターを作成し、そのフォームを表示します。 フォームの戻り値により、コンポーネントに対する変更が保持されるかどうかが決定されます。  
+ 次のコードは、<xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI> インターフェイスを実装するクラスを示します。 
+  <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Edit%2A> メソッドは、コンポーネント エディターを作成し、そのフォームを表示します。 フォームの戻り値により、コンポーネントに対する変更が保持されるかどうかが決定されます。  
   
 ```csharp  
 using System;  
@@ -281,9 +291,9 @@ Namespace Microsoft.Samples.SqlServer.Dts
 End Namespace  
 ```  
   
-![Integration Services のアイコン (小)](../../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。**<br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
+![Integration Services アイコン (小)](../../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services に関するページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [カスタム データ フロー コンポーネントの作成](creating-a-custom-data-flow-component.md)  
   
   

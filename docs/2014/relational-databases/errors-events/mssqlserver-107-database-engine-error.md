@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bea6901e999f1bb236e94e220c3cfeac53119e16
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62870558"
 ---
-# <a name="mssqlserver107"></a>MSSQLSERVER_107
+# <a name="mssqlserver_107"></a>MSSQLSERVER_107
     
 ## <a name="details"></a>詳細  
   
@@ -35,7 +35,7 @@ ms.locfileid: "62870558"
 ## <a name="explanation"></a>説明  
  クエリの選択リストに、不適切な列プレフィックスで修飾されたアスタリスク (*) が含まれています。 このエラーは、次のような状況で返される可能性があります。  
   
--   列プレフィックス とクエリで使用されているテーブル名または別名が一致しない。 たとえば、次のステートメントでは、FROM 句で定義していない別名 (`T1`) を列プレフィックスとして使用しています。  
+-   列プレフィックス '%.*ls' とクエリで使用されているテーブル名または別名が一致しない。 たとえば、次のステートメントでは、FROM 句で定義していない別名 (`T1`) を列プレフィックスとして使用しています。  
   
     ```  
     SELECT T1.* FROM dbo.ErrorLog;  
@@ -56,7 +56,7 @@ ms.locfileid: "62870558"
 SELECT T1.* FROM dbo.ErrorLog AS T1;  
 ```  
   
- または  
+ or  
   
 ```  
 SELECT ErrorLog.* FROM dbo.ErrorLog;  

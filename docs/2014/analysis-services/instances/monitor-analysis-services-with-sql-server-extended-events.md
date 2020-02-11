@@ -1,5 +1,5 @@
 ---
-title: SQL Server 拡張イベント (Xevent) を使用して、Analysis Services の監視 |Microsoft Docs
+title: SQL Server 拡張イベント (Xevent) を使用して Analysis Services を監視する |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -11,18 +11,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6d6abfca98386ef691add200d433af827ed44836
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079743"
 ---
 # <a name="use-sql-server-extended-events-xevents-to-monitor-analysis-services"></a>SQL Server 拡張イベント (XEvent) を使用した Analysis Services の監視
-  Analysis Services の使用を通じてトレース機能を提供する[拡張イベント](../../relational-databases/extended-events/extended-events.md)します。  
+  Analysis Services は、[拡張イベント](../../relational-databases/extended-events/extended-events.md)を使用してトレース機能を提供します。  
   
  拡張イベントは、高い拡張性と柔軟な構成を備えた、サーバー システムのためのイベント インフラストラクチャです。 拡張イベントは軽量なパフォーマンス監視システムであり、使用されるパフォーマンス リソースはごくわずかです。  
   
- すべてのイベントをキャプチャする Analysis Services とに定義されている、特定のコンシューマーにターゲット[拡張イベント](../../relational-databases/extended-events/extended-events.md)、Xevent を通じてします。  
+ Xevent を通じて、すべての Analysis Services イベントをキャプチャし、[拡張イベント](../../relational-databases/extended-events/extended-events.md)で定義されている特定のコンシューマーを対象にすることができます。  
   
 ## <a name="initiating-extended-events-in-analysis-services"></a>Analysis Services での拡張イベントの開始  
  拡張イベントのトレースは、以下のような XMLA のオブジェクト作成スクリプト コマンドを使用して有効にします。  
@@ -63,7 +63,8 @@ ms.locfileid: "66079743"
  このトレースの一意識別子を定義します。  
   
  *trace_name*  
- このトレースに付ける名前を指定します (通常は、人間が判読できるトレースの定義です)。 *trace_id* の値を名前として使用するのが一般的です。  
+ このトレースに付ける名前を指定します (通常は、人間が判読できるトレースの定義です)。 
+  *trace_id* の値を名前として使用するのが一般的です。  
   
  *AS_event*  
  公開する Analysis Services イベントを指定します。 イベントの名前については、「 [Analysis Services トレース イベント](https://docs.microsoft.com/bi-reference/trace-events/analysis-services-trace-events) 」を参照してください。  

@@ -16,19 +16,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 333d4d9f0ab9feb5d5b5c4d0aa48fd584cef3143
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62856514"
 ---
 # <a name="view-the-definition-of-a-stored-procedure"></a>ストアド プロシージャの定義の表示
     
 ##  <a name="Top"></a> ストアド プロシージャの定義は、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] でオブジェクト エクスプローラーのメニュー オプションを使用するか、クエリ エディターで [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して表示できます。 このトピックでは、オブジェクト エクスプローラーでプロシージャの定義を表示する方法について説明します。さらに、クエリ エディターでのシステム プロシージャ、システム関数、およびオブジェクト カタログ ビューを使用した表示方法について説明します。  
   
--   **作業を開始する準備:** [Security](#Security)  
+-   **作業を開始する準備:** [セキュリティ](#Security)  
   
--   **プロシージャの定義を表示するを使用します。** [SQL Server Management Studio](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
+-   **プロシージャの定義を表示するには、次を使用:** [SQL Server Management Studio](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
@@ -58,9 +58,9 @@ ms.locfileid: "62856514"
   
 2.  **[データベース]** を展開し、プロシージャが属するデータベースを展開し、 **[プログラミング]** を展開します。  
   
-3.  展開**ストアド プロシージャ**プロシージャを右クリックし、クリックして**ストアド プロシージャをスクリプト**、次のいずれかをクリックします。**作成する**、 **Alter**、または**削除し、作成する**。  
+3.  **[ストアド プロシージャ]** を展開し、プロシージャを右クリックしてから **[ストアド プロシージャをスクリプト化]** をクリックします。その後、次のいずれかをクリックします: **[新規作成]** 、 **[構造変更]** 、 **[削除および作成]** 。  
   
-4.  **[新しいクエリ エディター ウィンドウ]** をクリックします。 プロシージャの定義が表示されます。  
+4.  **新しいクエリ エディター ウィンドウ**を選択します。 プロシージャの定義が表示されます。  
   
 ###  <a name="TsqlProcedure"></a> Transact-SQL の使用  
  **クエリ エディターでプロシージャの定義を表示するには**  

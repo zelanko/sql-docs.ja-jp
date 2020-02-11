@@ -1,5 +1,5 @@
 ---
-title: WITH ROWS は互換モードが 90 以上で CREATE STATISTICS ステートメントではサポートされませんが |Microsoft Docs
+title: WITH ROWS は、90以降の互換性モードの CREATE STATISTICS ステートメントではサポートされていません。Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e48602f61c09a8de76e2894a4fa808b2f39f4cbe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66090969"
 ---
 # <a name="with-rows-is-not-supported-in-create-statistics-statements-in-the-compatibility-mode-of-90-or-later"></a>互換性モード 90 以上では CREATE STATISTICS ステートメントで WITH ROWS がサポートされない
@@ -26,10 +26,10 @@ ms.locfileid: "66090969"
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## <a name="corrective-action"></a>修正措置  
- サンプルを指定することで WITH ROWS を含む CREATE STATISTICS ステートメントを変更*数*行、または文書化されている構文に準拠するその他のオプションを指定することで。 詳細については、「CREATE STATISTICS (TRANSACT-SQL) で SQL Server オンライン ブック トピックを参照してください。  
+ を使用する CREATE STATISTICS ステートメントを変更するには、WITH SAMPLE *number*行を指定するか、ドキュメント化された構文に準拠する他のオプションを指定します。 詳細については、「SQL Server オンラインブックでの CREATE STATISTICS (Transact-sql)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [データベース エンジンのアップグレードに関する問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 アップグレード アドバイザー&#91;新規&#93;](sql-server-2014-upgrade-advisor.md)  
+ [データベースエンジンのアップグレードに関する問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [SQL Server 2014 Upgrade Advisor &#91;新しい&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

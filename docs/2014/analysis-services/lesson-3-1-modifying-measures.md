@@ -11,54 +11,57 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 663ef21dc9c4d0f3698ae468637fe0a8fd55a16e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66078901"
 ---
 # <a name="modifying-measures"></a>メジャーの変更
+  
   **FormatString** プロパティを使用して書式設定を定義することによって、メジャーの表示方法を調整できます。 この実習では、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial キューブの通貨メジャーと比率メジャーの書式プロパティを指定します。  
   
 ### <a name="to-modify-the-measures-of-the-cube"></a>キューブのメジャーを変更するには  
   
-1.  **Tutorial キューブのキューブ デザイナーで、** [キューブ構造] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] タブに切り替えます。次に、 **[メジャー]** ペインの **[Internet Sales]** メジャー グループを展開し、 **[Order Quantity]** を右クリックして、 **[プロパティ]** をクリックします。  
+1.  
+  **Tutorial キューブのキューブ デザイナーで、** [キューブ構造] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] タブに切り替えます。次に、 **[メジャー]** ペインの **[Internet Sales]** メジャー グループを展開し、 **[Order Quantity]** を右クリックして、 **[プロパティ]** をクリックします。  
   
 2.  [プロパティ] ウィンドウの **[自動的に隠す]** 押しピン アイコンをクリックし、[プロパティ] ウィンドウを開いたまま固定します。  
   
      [プロパティ] ウィンドウを開いたままにしておくと、キューブ内のアイテムごとにプロパティを変更する操作が容易になります。  
   
-3.  [プロパティ] ウィンドウで、 **[FormatString]** ボックスの一覧をクリックし、「 **#,#** 」と入力します。  
+3.  [プロパティ] ウィンドウで、 **[FormatString]** ボックスの一覧をクリックし、「 **#,#**」と入力します。  
   
-4.  **[キューブ構造]** タブのツール バーで、左側の **[メジャー グリッドの表示]** アイコンをクリックします。  
+4.  
+  **[キューブ構造]** タブのツール バーで、左側の **[メジャー グリッドの表示]** アイコンをクリックします。  
   
      グリッド ビューで複数のメジャーを同時に選択できます。  
   
 5.  次のメジャーを選択します。 Ctrl キーを押しながらクリックすると、複数のメジャーを選択できます。  
   
-    -   **Unit Price**  
+    -   **単価**  
   
-    -   **Extended Amount**  
+    -   **拡張金額**  
   
-    -   **Discount Amount**  
+    -   **割引額**  
   
-    -   **Product Standard Cost**  
+    -   **製品の標準コスト**  
   
-    -   **Total Product Cost**  
+    -   **製品の総コスト**  
   
-    -   **Sales Amount**  
+    -   **売上高**  
   
-    -   **Tax Amt**  
+    -   **納税の Amt**  
   
-    -   **Freight**  
+    -   **運送料**  
   
 6.  [プロパティ] ウィンドウで、 **FormatString** プロパティのセルをクリックして、 **[Currency]** を選択します。  
   
 7.  [プロパティ] ウィンドウの一番上 (タイトル バーのすぐ下) にあるドロップダウン リストで、 **[Unit Price Discount Pct]** メジャーを選択します。次に、 **FormatString** プロパティのセルをクリックして **[Percent]** を選択します。  
   
-8.  [プロパティ] ウィンドウで変更、**名前**プロパティを**Unit Price Discount Pct**メジャーを`Unit Price Discount Percentage`します。  
+8.  プロパティウィンドウで、 **Unit Price 割引率**メジャーの`Unit Price Discount Percentage` **Name**プロパティをに変更します。  
   
-9. **メジャー**ウィンドウで、をクリックして**Tax Amt**このメジャーの名前を変更および`Tax Amount`します。  
+9. [**メジャー** ] ペインで [ **Tax Amt** ] をクリックし、このメジャーの`Tax Amount`名前をに変更します。  
   
 10. [プロパティ] ウィンドウの **[自動的に隠す]** アイコンをクリックし、[プロパティ] ウィンドウを非表示にします。次に、 **[キューブ構造]** タブのツール バーで、 **[メジャー ツリーの表示]** をクリックします。  
   
@@ -68,7 +71,7 @@ ms.locfileid: "66078901"
  [Customer ディメンションの変更](lesson-3-2-modifying-the-customer-dimension.md)  
   
 ## <a name="see-also"></a>参照  
- [データベース ディメンションを定義します。](multidimensional-models/define-database-dimensions.md)   
+ [データベースディメンションの定義](multidimensional-models/define-database-dimensions.md)   
  [メジャーのプロパティの構成](multidimensional-models/configure-measure-properties.md)  
   
   

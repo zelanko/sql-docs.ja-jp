@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d3a50b7ce1db0aa390d4fee9fa4e5752c1444dfe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62864563"
 ---
 # <a name="user-configurable-event-category"></a>ユーザー構成可能イベント カテゴリ
@@ -28,7 +28,7 @@ ms.locfileid: "62864563"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|説明|  
+|トピック|[説明]|  
 |-----------|-----------------|  
 |[ユーザー構成可能イベント クラス](user-configurable-event-class.md)|他のイベント カテゴリにあるシステム提供のイベントでは監視できないユーザー定義イベントを監視するために使用します。|  
   

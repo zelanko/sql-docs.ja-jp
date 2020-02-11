@@ -1,5 +1,5 @@
 ---
-title: 手順 4:レッスン 5 のチュートリアル パッケージのテスト |Microsoft Docs
+title: '手順 4: レッスン 5 のチュートリアル パッケージのテスト | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 30f395ed065df5974adf6146a4ee12d0c7b472f0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62890944"
 ---
 # <a name="step-4-testing-the-lesson-5-tutorial-package"></a>手順 4:レッスン 5 のチュートリアル パッケージのテスト
@@ -29,17 +29,18 @@ ms.locfileid: "62890944"
   
  ![パッケージ内の制御フロー](../../2014/tutorials/media/task4lesson2control.gif "パッケージ内の制御フロー")  
   
- **データ フロー**  
+ **Data Flow**  
   
- ![パッケージ内のデータ フロー](../../2014/tutorials/media/task9lesson1data.gif "パッケージ内のデータ フロー")  
+ ![パッケージ内のデータフロー](../../2014/tutorials/media/task9lesson1data.gif "パッケージ内のデータフロー")  
   
 ### <a name="to-test-the-lesson-5-tutorial-package"></a>レッスン 5 で作成したチュートリアル パッケージをテストするには  
   
-1.  **[デバッグ]** メニューの **[デバッグの開始]** をクリックします。  
+1.  
+  **[デバッグ]** メニューの **[デバッグの開始]** をクリックします。  
   
-2.  パッケージの実行が完了したら、 **[デバッグ]** メニューの **[デバッグの停止]** をクリックします。  
+2.  パッケージの実行が完了したら、[**デバッグ**] メニューの [**デバッグの停止**] をクリックします。  
   
 ## <a name="next-lesson"></a>次のレッスン  
- [レッスン 6:プロジェクト配置モデルでパラメーターの使用](../integration-services/lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md)  
+ [レッスン 6: プロジェクト配置モデルを持つパラメーターを使用する](../integration-services/lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: データベース表現 (テーブル) |Microsoft Docs
+title: データベース表現 (表形式) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,17 +11,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 377b85c22d1c6da9f5296d6ad57a86028e022785
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62757807"
 ---
 # <a name="database-representationtabular"></a>データベース表現 (テーブル)
   テーブル モードでは、データベースは、テーブル モデル内に存在するすべてのオブジェクトを対象にするコンテナーです。  
   
 ## <a name="database-representation"></a>データベース表現  
- データベースは、テーブル モデルを構成するすべてのオブジェクトが格納される場所です。 開発者は、データベースに含まれる、接続、テーブル、ロール、およびさらに多くのようなオブジェクトを検索します。  
+ データベースは、テーブル モデルを構成するすべてのオブジェクトが格納される場所です。 開発者は、データベースに含まれている、接続、テーブル、ロールなどのオブジェクトを検索します。  
   
 ### <a name="database-in-amo"></a>AMO 内のデータベース  
  AMO を使用してテーブル モデル データベースを管理する場合、AMO 内の <xref:Microsoft.AnalysisServices.Database> オブジェクトは、テーブル モデル内のデータベース論理オブジェクトと一対一で対応します。  
@@ -32,7 +32,7 @@ ms.locfileid: "62757807"
 ### <a name="database-in-adomdnet"></a>ADOMD.Net 内のデータベース  
  ADOMD を使用してテーブル モデル データベースを参照してクエリを実行する場合は、<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> オブジェクトを使用して、特定のデータベースへの接続を取得します。  
   
- 次のコード スニペットを使用して、特定のデータベースに直接接続することができます。  
+ 次のコードスニペットを使用して、特定のデータベースに直接接続できます。  
   
 ```csharp  
 using ADOMD = Microsoft.AnalysisServices.AdomdClient;  
@@ -53,7 +53,7 @@ currentCnx.ChangeDatabase("myOtherDatabase");
 ## <a name="database-in-amo"></a>AMO 内のデータベース  
  AMO を使用してデータベース オブジェクトを管理する場合は、<xref:Microsoft.AnalysisServices.Server> オブジェクトの作業を開始します。 その後、データベース コレクション内でデータベースを検索するか、コレクションに 1 つのデータベースを追加して新しいデータベースを作成します。  
   
- オンにした後、データベースが存在しない、次のコード スニペットが、サーバーに接続し、空のデータベースを作成する手順を示しています。  
+ 次のコードスニペットは、データベースが存在しないことを確認した後、サーバーに接続して空のデータベースを作成する手順を示しています。  
   
 ```  
   
@@ -86,6 +86,6 @@ catch (Exception createDBxc)
   
 ```  
   
- AMO を使用して作成してデータベース表現を操作する方法については、実用的な理解 Tabular AMO 2012 サンプル; 内のソース コードを参照してください。具体的には、次のソース ファイルで確認します。Database.cs します。 サンプル コードは、ここで説明する論理的概念をサポートする目的でのみ提供されるものであり、運用環境では使用しないでください。  
+ AMO を使用してデータベース表現の作成と操作を行う方法を実際の使用に際して理解するには、Tabular AMO 2012 サンプルのソース コードを参照してください。特に、ソース ファイル Database.cs の内容に注意してください。 サンプル コードは、ここで説明する論理的概念をサポートする目的でのみ提供されるものであり、運用環境では使用しないでください。  
   
   

@@ -1,5 +1,5 @@
 ---
-title: SQL Server のパラメーター |Microsoft Docs
+title: SQL Server Parameters |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e528b94e51238a06a9776e58693c3093f4bfb831
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66091875"
 ---
 # <a name="sql-server-parameters"></a>SQL Server パラメーター
@@ -28,31 +28,32 @@ ms.locfileid: "66091875"
 > [!NOTE]  
 >  分析対象のトレース ファイルまたは SQL バッチ ファイルを送信する場合に限り、一部のアップグレード問題が検出される可能性があります。  
   
-## <a name="options"></a>および  
- **分析するデータベース**  
- すべてのデータベースを分析するには、選択、**すべてのデータベース**チェック ボックスをオンします。 データベースを選択して分析するには、各データベースの横にあるチェック ボックスをオンにしてスキャンの対象とします。  
+## <a name="options"></a>オプション  
+ **[分析するデータベース]**  
+ すべてのデータベースを分析するには、[**すべてのデータベース**] チェックボックスをオンにします。 データベースを選択して分析するには、各データベースの横にあるチェック ボックスをオンにしてスキャンの対象とします。  
   
- **トレース ファイルを分析します。**  
+ **[トレース ファイルの分析]**  
  ファイル システムのトレース ファイルを分析するには、このチェック ボックスをオンにします。  
   
- **トレース ファイルのパス**  
+ **[トレース ファイルのパス]**  
  1 つ以上のファイルを分析できます。 場所を参照して複数のファイルを選択したり、複数のファイル名を指定できます。 各ファイルへの完全パス名およびファイル名を使用し、パイプ文字 (|) でエントリを区切ります。  
   
- 有効にした場合**トレース ファイルを分析する**、**次**パス名とファイル名を入力するまでは無効です。  
+ [**トレースファイルの分析**] を有効にすると、パス名とファイル名を入力するまで [**次へ**] が無効になります。  
   
- **分析[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バッチ ファイル**  
+ **バッチ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ファイルの分析**  
  ファイル システムの [!INCLUDE[tsql](../../includes/tsql-md.md)] バッチ ファイルを分析するには、このチェック ボックスをオンにします。  
   
- **パス[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バッチ ファイル**  
+ **バッチファイル[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のパス**  
  1 つ以上のバッチ ファイルを分析できます。 場所を参照して複数のファイルを選択したり、複数のファイル名を入力できます。 各ファイルへの完全パス名およびファイル名を使用し、パイプ文字 (|) でエントリを区切ります。  
   
- 有効にした場合**分析 SQL バッチ ファイル**、**次**パス名とファイル名を入力するまで、ボタンは無効です。  
+ [ **SQL バッチファイルの分析**] を有効にすると、パス名とファイル名を入力するまで **[次へ**] ボタンが無効になります。  
   
- **SQL バッチ区切り記号**  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの個別のバッチに使用するテキストです。 既定値は**移動**します。  
+ **[SQL バッチ区切り記号]**  
+ 
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの個別のバッチに使用するテキストです。 既定値は **[** 実行] です。  
   
 ## <a name="see-also"></a>参照  
- [アップグレード アドバイザーの使用](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   
+ [アップグレードアドバイザーの使用](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   
  [アップグレード アドバイザーのユーザー インターフェイス リファレンス](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)  
   
   

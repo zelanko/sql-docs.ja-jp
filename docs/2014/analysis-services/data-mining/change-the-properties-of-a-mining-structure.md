@@ -1,5 +1,5 @@
 ---
-title: マイニング構造のプロパティの変更 |Microsoft Docs
+title: マイニング構造のプロパティを変更する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7c9ca227753b8ebbd80d4de0c672fc8cab5c1b56
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085860"
 ---
 # <a name="change-the-properties-of-a-mining-structure"></a>マイニング構造のプロパティの変更
@@ -34,9 +34,11 @@ ms.locfileid: "66085860"
   
 1.  データ マイニング デザイナーの **[マイニング構造]** タブで、マイニング構造またはマイニング構造内の列を右クリックし、 **[プロパティ]** を選択します。  
   
-     **[プロパティ]** ウィンドウが画面の右側に表示されます (まだ表示されていない場合)。  
+     
+  **[プロパティ]** ウィンドウが画面の右側に表示されます (まだ表示されていない場合)。  
   
-2.  **[プロパティ]** ウィンドウで、変更するプロパティに対応する値を選択し、新しい値を入力します。  
+2.  
+  **[プロパティ]** ウィンドウで、変更するプロパティに対応する値を選択し、新しい値を入力します。  
   
      新しい値は、デザイナーで別の要素を選択したときに有効になります。  
   

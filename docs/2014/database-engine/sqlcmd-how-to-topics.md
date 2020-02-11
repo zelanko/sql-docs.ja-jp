@@ -1,5 +1,5 @@
 ---
-title: sqlcmd 操作方法に関するトピック |Microsoft Docs
+title: sqlcmd の操作方法に関するトピック |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fd9f9a5b786c5e1a928655276641e841cb3f43c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089597"
 ---
 # <a name="sqlcmd-how-to-topics"></a>sqlcmd 操作方法のトピック
-  [sqlcmd ユーティリティ](../tools/sqlcmd-utility.md)を使用すると、[!INCLUDE[tsql](../includes/tsql-md.md)] ステートメント、システム プロシージャ、およびスクリプト ファイルを、コマンド プロンプト、SQLCMD モードのクエリ エディター、Windows スクリプト ファイル、または [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エージェント ジョブのオペレーティング システム (Cmd.exe) ジョブ ステップで入力できます。  
+  [sqlcmd ユーティリティ](../tools/sqlcmd-utility.md) を使用すると、 [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメント、システム プロシージャ、およびスクリプト ファイルを、コマンド プロンプト、SQLCMD モードのクエリ エディター、Windows スクリプト ファイル、または [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エージェント ジョブのオペレーティング システム (Cmd.exe) ジョブ ステップで入力できます。  
   
 ## <a name="related-tasks"></a>Related Tasks  
  次の各トピックでは、 [sqlcmd ユーティリティ](../tools/sqlcmd-utility.md)を使用する方法について説明しています。  
