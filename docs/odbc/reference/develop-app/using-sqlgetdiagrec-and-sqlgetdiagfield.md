@@ -1,5 +1,5 @@
 ---
-title: SQLGetDiagRec および SQLGetDiagField の使用 |Microsoft Docs
+title: SQLGetDiagRec と SQLGetDiagField | を使用するMicrosoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,20 +17,20 @@ ms.assetid: 4f486bb1-fad8-4064-ac9d-61f2de85b68b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 23b7539c32b6cb675f8616d9b8ec9db89be1208b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68022153"
 ---
 # <a name="using-sqlgetdiagrec-and-sqlgetdiagfield"></a>SQLGetDiagRec および SQLGetDiagField の使用
-アプリケーション呼び出し**SQLGetDiagRec**または**SQLGetDiagField**診断情報を取得します。 これらの関数は、環境、接続、ステートメント、または記述子ハンドルをそのまま使用し、最後にそのハンドルを使用した関数から診断を返します。 特定のハンドルをログに記録する診断は、そのハンドルを使用して新しい関数が呼び出されたときに破棄されます。 関数には、複数の診断レコードが返されると複数回; に、アプリケーション呼び出しがこれらの関数状態レコードの合計数が呼び出すことによって取得**SQLGetDiagField** SQL_DIAG_NUMBER オプションを使用してヘッダー レコード (レコード 0)。  
+アプリケーションは、診断情報を取得するために**SQLGetDiagRec**または**SQLGetDiagField**を呼び出します。 これらの関数は、環境、接続、ステートメント、または記述子ハンドルを受け取り、そのハンドルを最後に使用した関数から診断を返します。 特定のハンドルに記録された診断は、そのハンドルを使用して新しい関数が呼び出されると破棄されます。 関数が複数の診断レコードを返した場合、アプリケーションはこれらの関数を複数回呼び出します。ステータスレコードの合計数は、SQL_DIAG_NUMBER オプションを使用して、ヘッダーレコード (レコード 0) に対して**SQLGetDiagField**を呼び出すことによって取得されます。  
   
- アプリケーションが呼び出すことで個々 の診断フィールドを取得**SQLGetDiagField**し取得するフィールドを指定します。 特定の診断フィールドには、特定の種類のハンドルのすべての意味はありません。 診断フィールドとその意味の一覧は、次を参照してください。、 [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)関数の説明。  
+ アプリケーションでは、 **SQLGetDiagField**を呼び出して取得するフィールドを指定することによって、個々の診断フィールドを取得します。 特定の種類のハンドルでは、特定の診断フィールドに意味がありません。 診断フィールドとその意味の一覧については、 [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)関数の説明を参照してください。  
   
- アプリケーションを呼び出す、SQLSTATE、ネイティブ エラー コード、および 1 回の呼び出しで診断メッセージを取得する**SQLGetDiagRec**;**SQLGetDiagRec**ヘッダー レコードから情報を取得するのには使用できません。  
+ アプリケーションは、 **SQLGetDiagRec**を呼び出すことによって、SQLSTATE、ネイティブエラーコード、および診断メッセージを1回の呼び出しで取得します。**SQLGetDiagRec**を使用して、ヘッダーレコードから情報を取得することはできません。  
   
- たとえば、次のコードでは、SQL ステートメントのユーザーに求め、それを実行します。 呼び出すすべての診断情報が返された場合**SQLGetDiagField**状態レコードの数を取得し、 **SQLGetDiagRec**ものから、SQLSTATE、ネイティブ エラー コード、および診断メッセージを取得するにはレコードがあります。  
+ たとえば、次のコードでは、SQL ステートメントをユーザーに要求して実行します。 診断情報が返された場合は、 **SQLGetDiagField**を呼び出して状態レコードの数を取得し、 **SQLGetDiagRec**を呼び出して、SQLSTATE、ネイティブエラーコード、およびそれらのレコードからの診断メッセージを取得します。  
   
 ```  
 SQLCHAR       SqlState[6], SQLStmt[100], Msg[SQL_MAX_MESSAGE_LENGTH];  

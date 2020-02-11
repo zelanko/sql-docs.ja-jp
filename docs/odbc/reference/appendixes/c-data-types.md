@@ -16,44 +16,44 @@ ms.assetid: b681d260-3dbb-47df-a616-4910d727add7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9fe4383e397c0fd06197be2ff25e6dbb876f6c0b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68037771"
 ---
 # <a name="c-data-types"></a>C データ型
-ODBC C データ型は、アプリケーションでデータの格納に使用される C バッファーのデータ型を示します。  
+ODBC C データ型は、アプリケーションにデータを格納するために使用される C バッファーのデータ型を示します。  
   
- すべてのドライバーでは、すべての C データ型をサポートする必要があります。 これが必要なすべてのドライバーをサポートする SQL 型を変換できる、すべての C 型をサポートする必要があり、すべてのドライバーが SQL 型に少なくとも 1 つの文字をサポートします。 C のすべての型と文字 SQL 型を変換できる、ために、すべてのドライバーはすべての C 型をサポートする必要があります。  
+ すべてのドライバーは、すべての C データ型をサポートしている必要があります。 すべてのドライバーは、サポートされる SQL 型を変換できるすべての C 型をサポートする必要があり、すべてのドライバーが少なくとも1文字の SQL 型をサポートしているため、このことが必要です。 文字の SQL 型はすべての C 型に変換できるので、すべてのドライバーがすべての c 型をサポートしている必要があります。  
   
- C データ型がで指定された、 **SQLBindCol**と**SQLGetData**関数、 *TargetType*引数および、 **SQLBindParameter**関数と、 *ValueType*引数。 呼び出すことによって指定することも**SQLSetDescField** ARD または、APD のまたは呼び出すことによって、SQL_DESC_CONCISE_TYPE フィールドを設定する**SQLSetDescRec**で、*型*引数 (および*サブタイプ*引数が必要な場合)、 *DescriptorHandle*引数 ARD または APD のハンドルに設定します。  
+ C データ型は、 **SQLBindCol**関数と**SQLGetData**関数で、 *TargetType*引数と**SQLBindParameter**関数の*ValueType*引数を使用して指定されます。 また、 **SQLSetDescField**を呼び出して、SQLSetDescRec または APD の SQL_DESC_CONCISE_TYPE フィールドを設定するか、または*型*引数 (および必要に応じて*SubType*引数) を指定してを呼び出すことによって、または、 **** または APD のハンドルに設定された*記述子ハンドル*引数を指定することもできます。  
   
- 次の表は、C のデータ型の有効な型の識別子を一覧表示します。 また、テーブルには、各識別子とこのデータ型の定義に対応する ODBC C データ型が一覧表示します。  
+ 次の表に、C データ型の有効な型識別子を示します。 この表には、各識別子とこのデータ型の定義に対応する ODBC C データ型も一覧表示されています。  
   
-|C 型識別子|ODBC C の typedef|C 型|  
+|C 型識別子|ODBC C typedef|C 型|  
 |-----------------------|--------------------|------------|  
-|SQL_C_CHAR|SQLCHAR *|unsigned char *|  
-|SQL_C_WCHAR|SQLWCHAR *|wchar_t *|  
-|SQL_C_SSHORT[j]|SQLSMALLINT|short int|  
-|SQL_C_USHORT[j]|SQLUSMALLINT|符号なし short int|  
-|SQL_C_SLONG[j]|SQLINTEGER|long int|  
-|SQL_C_ULONG[j]|SQLUINTEGER|符号なし long int|  
-|SQL_C_FLOAT|SQLREAL|FLOAT|  
-|SQL_C_DOUBLE|SQLDOUBLE、SQLFLOAT|double|  
+|SQL_C_CHAR|SQLCHAR|unsigned char *|  
+|SQL_C_WCHAR|SQLWCHAR|wchar_t *|  
+|SQL_C_SSHORT [j]|SQLSMALLINT|short int|  
+|SQL_C_USHORT [j]|SQLUSマル糸|unsigned short int|  
+|SQL_C_SLONG [j]|SQLINTEGER|long int|  
+|SQL_C_ULONG [j]|SQLUINTEGER|unsigned long int|  
+|SQL_C_FLOAT|SQLREAL|float|  
+|SQL_C_DOUBLE|SQLDOUBLE、SQLDOUBLE|double|  
 |SQL_C_BIT|SQLCHAR|unsigned char|  
-|SQL_C_STINYINT[j]|SQLSCHAR|signed char|  
-|SQL_C_UTINYINT[j]|SQLCHAR|unsigned char|  
-|SQL_C_SBIGINT|SQLBIGINT|_ _int64 [h]|  
-|SQL_C_UBIGINT|SQLUBIGINT|符号なし _ _int64 [h]|  
-|SQL_C_BINARY|SQLCHAR *|unsigned char *|  
-|SQL_C_BOOKMARK[i]|ブックマーク|unsigned long int[d]|  
-|SQL_C_VARBOOKMARK|SQLCHAR *|unsigned char *|  
-|すべての C interval データ型|SQL_INTERVAL_STRUCT|参照してください、 [C Interval 構造体](../../../odbc/reference/appendixes/c-interval-structure.md)セクションで、この付録の「します。|  
+|SQL_C_STINYINT [j]|SQL・ AR|signedchar|  
+|SQL_C_UTINYINT [j]|SQLCHAR|unsigned char|  
+|SQL_C_SBIGINT|SQLBIGINT|_int64 [h]|  
+|SQL_C_UBIGINT|SQLUBIGINT|署名されていない _int64 [h]|  
+|SQL_C_BINARY|SQLCHAR|unsigned char *|  
+|SQL_C_BOOKMARK [i]|ブックマーク|unsigned long int [d]|  
+|SQL_C_VARBOOKMARK|SQLCHAR|unsigned char *|  
+|すべての C interval データ型|SQL_INTERVAL_STRUCT|この付録の後半の「 [C の間隔構造](../../../odbc/reference/appendixes/c-interval-structure.md)」を参照してください。|  
   
- **C 型識別子**SQL_C_TYPE_DATE [c]  
+ **C 型識別子**SQL_C_TYPE_DATE [C]  
   
- **ODBC C の typedef** SQL_DATE_STRUCT  
+ **ODBC C typedef**SQL_DATE_STRUCT  
   
  **C 型**  
   
@@ -65,9 +65,9 @@ struct tagDATE_STRUCT {
 } DATE_STRUCT;[a]  
 ```  
   
- **C 型識別子**SQL_C_TYPE_TIME [c]  
+ **C 型識別子**SQL_C_TYPE_TIME [C]  
   
- **ODBC C の typedef** SQL_TIME_STRUCT  
+ **ODBC C typedef**SQL_TIME_STRUCT  
   
  **C 型**  
   
@@ -79,9 +79,9 @@ struct tagTIME_STRUCT {
 } TIME_STRUCT;[a]  
 ```  
   
- **C 型識別子**SQL_C_TYPE_TIMESTAMP [c]  
+ **C 型識別子**SQL_C_TYPE_TIMESTAMP [C]  
   
- **ODBC C の typedef** SQL_TIMESTAMP_STRUCT  
+ **ODBC C typedef**SQL_TIMESTAMP_STRUCT  
   
  **C 型**  
   
@@ -99,7 +99,7 @@ struct tagTIMESTAMP_STRUCT {
   
  **C 型識別子**SQL_C_NUMERIC  
   
- **ODBC C の typedef** SQL_NUMERIC_STRUCT  
+ **ODBC C typedef**SQL_NUMERIC_STRUCT  
   
  **C 型**  
   
@@ -114,7 +114,7 @@ struct tagSQL_NUMERIC_STRUCT {
   
  **C 型識別子**SQL_C_GUID  
   
- **ODBC C の typedef** SQLGUID  
+ **ODBC C typedef**SQLGUID  
   
  **C 型**  
   
@@ -127,33 +127,33 @@ struct tagSQLGUID {
 } SQLGUID;[k]  
 ```  
   
- [a] 年、月、日、時間、分、および C の datetime データ型の 2 つ目のフィールドの値はグレゴリオ暦の制約に従う必要があります。 (を参照してください[グレゴリオ暦の制約](../../../odbc/reference/appendixes/constraints-of-the-gregorian-calendar.md)後の「します。)  
+ [a] datetime C データ型の年、月、日、時、分、および秒の各フィールドの値は、グレゴリオ暦の制約に準拠している必要があります。 (この付録の後半[の「グレゴリオ暦の制約](../../../odbc/reference/appendixes/constraints-of-the-gregorian-calendar.md)」を参照してください)。  
   
- [b] 小数フィールドの値では、2 つ目の範囲は 0 ~ 999,999,999 (1 10億より小さい) 10億の数です。 たとえば、0.5 秒の小数フィールドの値には 1 秒あたりの 1/10,000 の 500,000,000 (1 ミリ秒) は、1,000,000、分の 1 秒の (1 つのマイクロ秒) が 1,000、ありの 10億分の 1 秒 (1 ナノ秒) は 1 です。  
+ [b] 分数フィールドの値は、秒の billionths の数であり、0 ~ 999999999 の範囲 (1 は10億未満) です。 たとえば、0.5 秒の小数フィールドの値は5億で、1秒の 1/1000 (1 ミリ秒) は100万で、秒の万 (1 マイクロ秒) は1000で、10億分の場合は1秒間になります (1 ナノ秒)。  
   
- [c] で、ODBC 2。*x*C の日付、時刻、タイムスタンプ データ型は、SQL_C_DATE、SQL_C_TIME、SQL_C_TIMESTAMP します。  
+ [c] (ODBC 2)。*x*、C 日付、時刻、およびタイムスタンプデータ型は、SQL_C_DATE、SQL_C_TIME、および SQL_C_TIMESTAMP です。  
   
- [d] は、ODBC 3 *.x*アプリケーション SQL_C_VARBOOKMARK、SQL_C_BOOKMARK いないを使用する必要があります。 ときに、ODBC 3 *.x*アプリケーションは、ODBC 2 で動作します *。x*ドライバー、ODBC 3 *.x*ドライバー マネージャーが SQL_C_VARBOOKMARK を SQL_C_BOOKMARK にマップされます。  
+ [d] ODBC 3 *. x*アプリケーションでは、SQL_C_BOOKMARK ではなく SQL_C_VARBOOKMARK を使用する必要があります。 Odbc 3 *. x*アプリケーションが odbc 2 で動作する場合。*x*ドライバーは、ODBC 3 *. x*ドライバーマネージャーが SQL_C_VARBOOKMARK を SQL_C_BOOKMARK にマップします。  
   
- [e] A 数が格納されている、 *val*リトル エンディアン モード (最下位バイトをされている最も左にあるバイト) でのスケールを整数としての SQL_NUMERIC_STRUCT 構造体のフィールド。 たとえば、第 4 の小数点以下桁数で数値を 10.001 の底 10 で 100010 の整数にスケーリングします。 186AA を 16 進形式ではこのための SQL_NUMERIC_STRUCT での値となります"AA 86 01 00 00. です。00"、SQL_MAX_NUMERIC_LEN によって定義されたバイト数で **#define**します。  
+ [e] 数値は、スケールされた整数として SQL_NUMERIC_STRUCT 構造体の*val*フィールドに格納されます。これはリトルエンディアンモード (一番左のバイトが最下位バイト) です。 たとえば、小数点以下桁数が4の10.001 基数10は、整数100010にスケーリングされます。 これは186AA の16進数形式であるため、SQL_NUMERIC_STRUCT の値は "AA 86 01 00 00...00 "の場合は、SQL_MAX_NUMERIC_LEN **#define**によって定義されたバイト数を指定します。  
   
- 詳細については**SQL_NUMERIC_STRUCT**を参照してください[HOWTO:SQL_NUMERIC_STRUCT で数値データを取得する](retrieve-numeric-data-sql-numeric-struct-kb222831.md)します。  
+ **SQL_NUMERIC_STRUCT**の詳細については、「 [HOWTO: SQL_NUMERIC_STRUCT を使用した数値データの取得](retrieve-numeric-data-sql-numeric-struct-kb222831.md)」を参照してください。  
   
- [SQL_C_NUMERIC データの f] で、有効桁数と小数点フィールドでは、アプリケーションからの入力と、アプリケーション、ドライバーからの出力が使われるを入力します。 ドライバーでは、数値の値を書き込む、SQL_NUMERIC_STRUCT に、独自ドライバー固有の既定の値として使用されます、*精度*フィールド、およびそのアプリケーションの記述子 (の SQL_DESC_SCALE フィールドに、値が使用されます既定では 0) の*スケール*フィールド。 アプリケーションは、アプリケーションの記述子の SQL_DESC_PRECISION および SQL_DESC_SCALE のフィールドを設定して、有効桁数と小数点の独自の値を指定できます。  
+ [f] SQL_C_NUMERIC のデータ型の有効桁数および小数点以下桁数のフィールドは、アプリケーションからの入力、およびドライバーからアプリケーションへの出力に使用されます。 ドライバーは、SQL_NUMERIC_STRUCT に数値を書き込むときに、独自のドライバー固有の既定値を*有効桁数*フィールドの値として使用し、*スケール*フィールドのアプリケーション記述子の SQL_DESC_SCALE フィールド (既定値は 0) の値を使用します。 アプリケーションでは、アプリケーション記述子の SQL_DESC_PRECISION および SQL_DESC_SCALE フィールドを設定することによって、有効桁数と小数点以下桁数の固有の値を指定できます。  
   
- [g] で、サインイン フィールドが 1 の正数の場合、負の場合は 0。  
+ [g] 符号フィールドは正の場合は1、負の場合は0になります。  
   
- [一部のコンパイラで、h] _ _int64 を提供されない可能性があります。  
+ [h] _int64 一部のコンパイラでは提供されない可能性があります。  
   
- [ODBC 3 _SQL_C_BOOKMARK i] が非推奨とされました *.x*します。  
+ [i] _SQL_C_BOOKMARK は ODBC 3.x では非推奨*となりました。*  
   
- [j] _SQL_C_SHORT、SQL_C_LONG、および SQL_C_TINYINT に置換された ODBC の符号付きと符号なし型。SQL_C_SSHORT、SQL_C_USHORT、SQL_C_SLONG、SQL_C_ULONG と SQL_C_STINYINT および SQL_C_UTINYINT。 ODBC 3 *.x* ODBC 2 で動作するドライバー *。x*アプリケーションから呼び出されると、ドライバー マネージャーに渡すためのドライバー、SQL_C_SHORT、SQL_C_LONG、および SQL_C_TINYINT をサポートする必要があります。  
+ [j] _SQL_C_SHORT、SQL_C_LONG、および SQL_C_TINYINT は、符号付きおよび符号なしの型によって ODBC で置き換えられました。 SQL_C_SSHORT と SQL_C_USHORT、SQL_C_SLONG と SQL_C_ULONG、および SQL_C_STINYINT と SQL_C_UTINYINT です。 Odbc 2 で動作する ODBC*3.x ドライバー。**x*アプリケーションは SQL_C_SHORT、SQL_C_LONG、および SQL_C_TINYINT をサポートする必要があります。これらが呼び出されると、ドライバーマネージャーによってドライバーに渡されます。  
   
  [k] SQL_C_GUID SQL_CHAR または SQL_WCHAR にのみ変換できます。  
   
- このセクションには、次のトピックが含まれています。  
+ ここでは、次のトピックについて説明します。  
   
 -   [64 ビットの整数の構造](../../../odbc/reference/appendixes/64-bit-integer-structures.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ODBC の C データ型](../../../odbc/reference/develop-app/c-data-types-in-odbc.md)

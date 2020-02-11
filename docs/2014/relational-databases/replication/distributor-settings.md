@@ -1,5 +1,5 @@
 ---
-title: '[ディストリビューターの設定] ダイアログ ボックス |Microsoft Docs'
+title: '[ディストリビューターの設定] ダイアログボックス |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,20 +15,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d910cdb4baf1d65f67ece14c20a1f384af2a843b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721352"
 ---
-# <a name="sql-server-replication-distributor-settings-dialog-box"></a>SQL Server レプリケーション [ディストリビューターの設定] ダイアログ ボックス
+# <a name="sql-server-replication-distributor-settings-dialog-box"></a>[ディストリビューターの設定] ダイアログボックス SQL Server レプリケーション
   **[ディストリビューターの設定]** ダイアログ ボックスを使用すると、レプリケーション モニターの左ペインに追加されているディストリビューターの設定を変更できます。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **[レプリケーション モニターが起動したときに自動的に接続する]**  
  レプリケーション モニターでディストリビューターに接続して状態情報を取得する場合に選択します。  
   
- **Connection**  
+ **[接続]**  
  クリックすると、 **[サーバーへの接続]** ダイアログ ボックスが表示されます。 このダイアログ ボックスでは、レプリケーション モニターがディストリビューターに接続するときに使用する接続プロパティおよび資格情報を表示および変更できます。  
   
  **[このディストリビューターとパブリケーションのステータスを自動的に更新する]**  

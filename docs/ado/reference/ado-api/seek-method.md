@@ -17,14 +17,14 @@ ms.assetid: 129293d2-19d3-4940-bf64-483ee72fb4a1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3e2ee81ac2ede53eb4fdbcfe8d3b5987db96f1ad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917012"
 ---
 # <a name="seek-method"></a>Seek メソッド
-インデックスを検索、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)を指定した値と一致して、その行に現在の行位置を変更する行をすばやく検索します。  
+[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)のインデックスを検索して、指定した値と一致する行をすばやく検索し、現在の行の位置をその行に変更します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,26 +34,26 @@ recordset.Seek KeyValues, SeekOption
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *KeyValues*  
- 配列の**バリアント**値。 インデックスは 1 つまたは複数の列と、配列に対応する各列に対して比較する値が含まれています。  
+ *と*  
+ **バリアント**値の配列。 インデックスは1つ以上の列で構成され、配列には対応する各列と比較するための値が含まれます。  
   
  *SeekOption*  
- A [SeekEnum](../../../ado/reference/ado-api/seekenum.md)重視すると、インデックスの列と、対応する比較の種類を指定する値*KeyValues*します。  
+ インデックスの列とそれに対応する*Keyvalues*の間で行われる比較の種類を指定する[seekenum](../../../ado/reference/ado-api/seekenum.md)値。  
   
-## <a name="remarks"></a>コメント  
- 使用して、**シーク**メソッドと組み合わせて、[インデックス](../../../ado/reference/ado-api/index-property.md)プロパティを基になるプロバイダーのインデックスをサポートしている場合、**レコード セット**オブジェクト。 使用、[サポート](../../../ado/reference/ado-api/supports-method.md) **(adSeek)** 基になるプロバイダーがサポートしているかどうかを判断するメソッド**シーク**、および**Supports(adIndex)** プロバイダーはインデックスをサポートするかどうかを判断するメソッドです。 (たとえば、 [OLE DB Provider for Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md)サポート**シーク**と**インデックス**)。  
+## <a name="remarks"></a>解説  
+ 基になるプロバイダーが**レコードセット**オブジェクトのインデックスをサポートしている場合は、 [Index](../../../ado/reference/ado-api/index-property.md)プロパティと共に**Seek**メソッドを使用します。 [サポート](../../../ado/reference/ado-api/supports-method.md)**(adseek)** メソッドを使用して、基になるプロバイダーが**Seek**をサポートするかどうかを判断し、**サポート (adseek)** メソッドを使用して、プロバイダーがインデックスをサポートしているかどうかを判断します。 (たとえば、 [Microsoft Jet の OLE DB プロバイダー](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md)では、 **Seek**および**Index**がサポートされています)。  
   
- 場合**シーク**エラーは、目的の行は見つかりませんが発生して、行がの末尾に配置されている、 **Recordset**します。 設定、**インデックス**プロパティをこのメソッドを実行する前に目的のインデックス。  
+ **Seek**が目的の行を見つけられない場合、エラーは発生せず、行は**レコードセット**の末尾に配置されます。 このメソッドを実行する前に、 **index**プロパティを目的のインデックスに設定します。  
   
- このメソッドは、サーバー側のカーソルでのみサポートされます。 シークはときにサポートされていません、 **Recordset**オブジェクトの[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)プロパティの値が**adUseClient**します。  
+ このメソッドは、サーバー側のカーソルでのみサポートされています。 **レコードセット**オブジェクトの[カーソル位置](../../../ado/reference/ado-api/cursorlocation-property-ado.md)プロパティ値が**adUseClient**の場合、シークはサポートされません。  
   
- このメソッドは、必ず際に使用される、**レコード セット**でオブジェクトが開かれた、 [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)の値**adCmdTableDirect**します。  
+ このメソッドは、**レコードセット**オブジェクトが[commandtypeenum](../../../ado/reference/ado-api/commandtypeenum.md)値**adcmdtabledirect**を使用して開かれている場合にのみ使用できます。  
   
 ## <a name="applies-to"></a>適用対象  
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>関連項目  
- [Seek メソッドおよび Index プロパティの例 (VB)](../../../ado/reference/ado-api/seek-method-and-index-property-example-vb.md)   
- [Seek メソッドおよび Index プロパティの例 (vc++)](../../../ado/reference/ado-api/seek-method-and-index-property-example-vc.md)   
+## <a name="see-also"></a>参照  
+ [Seek メソッドと Index プロパティの例 (VB)](../../../ado/reference/ado-api/seek-method-and-index-property-example-vb.md)   
+ [Seek メソッドおよび Index プロパティの例 (VC + +)](../../../ado/reference/ado-api/seek-method-and-index-property-example-vc.md)   
  [Find メソッド (ADO)](../../../ado/reference/ado-api/find-method-ado.md)   
  [Index プロパティ](../../../ado/reference/ado-api/index-property.md)

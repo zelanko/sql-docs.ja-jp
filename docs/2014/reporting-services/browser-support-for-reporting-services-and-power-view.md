@@ -9,12 +9,12 @@ ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.custom: ''
 ms.date: 06/13/2017
-ms.openlocfilehash: cd3a3e268e09e882b4e38eee6a620843fcc21a23
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: f82cf64ef78280b3c9562ae28afc71d06a03b1da
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75241199"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76925785"
 ---
 # <a name="planning-for-reporting-services-and-power-view-browser-support-reporting-services-2014"></a>Reporting Services と Power View ブラウザー サポートの計画 (Reporting Services 2014)
   
@@ -54,7 +54,7 @@ ms.locfileid: "75241199"
   
 - SharePoint 2010 のブラウザーサポートの詳細については、「[ブラウザーサポートを計画する (Sharepoint Server 2010)](https://technet.microsoft.com/library/cc263526\(office.14\).aspx) 」 (https://technet.microsoft.com/library/cc263526(office.14).aspx)を参照してください。  
   
-|**Browser**|**Windows 8 および8.1**|**Windows 7**|**Windows Server 2012 および 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6-10.9**|  
+|**ブラウザー**|**Windows 8 および8.1**|**Windows 7**|**Windows Server 2012 および 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6-10.9**|  
 |-----------------|---------------------------|-------------------|-----------------------------------------|--------------------------------|-----------------------------|------------------------------|  
 |**Internet Explorer 11 (デスクトップ用)**|32 ビット、64 ビット|32 ビット、64 ビット|32 ビット、64 ビット|32 ビット、64 ビット|サポートされていません|サポートされていません|  
 |**Internet Explorer 10 (デスクトップ用)**|32 ビット、64 ビット|32 ビット、64 ビット|32 ビット、64 ビット|32 ビット、64 ビット|サポートされていません|サポートされていません|  
@@ -77,7 +77,7 @@ ms.locfileid: "75241199"
   
 -   SharePoint 2013 ブラウザーサポートの詳細については、「 [sharepoint 2013 でブラウザーサポート](https://technet.microsoft.com/library/cc263526\(office.15\).aspx)をhttps://technet.microsoft.com/library/cc263526(office.15).aspx)計画する」 (を参照してください。  
   
-|**Browser**|**Windows 8 および8.1**|**Windows 7**|**Windows Server 2012 および 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6-10.9**|  
+|**ブラウザー**|**Windows 8 および8.1**|**Windows 7**|**Windows Server 2012 および 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6-10.9**|  
 |-----------------|---------------------------|-------------------|-----------------------------------------|--------------------------------|-----------------------------|------------------------------|  
 |**Internet Explorer 11 (デスクトップ用)**|32 ビット、64 ビット|32 ビット、64 ビット|32 ビット、64 ビット|32 ビット、64 ビット|サポートされていません|サポートされていません|  
 |**Internet Explorer 10 (デスクトップ用)**|32 ビット、64 ビット|32 ビット、64 ビット|32 ビット、64 ビット|32 ビット、64 ビット|サポートされていません|サポートされていません|  
@@ -104,7 +104,7 @@ ms.locfileid: "75241199"
 
  レポート ビューアーでサポートされているブラウザーと機能の最新の一覧を次に示します。 レポート ビューアーでは、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] レポート マネージャーおよび SharePoint ライブラリからのレポートの表示がサポートされています。  
   
-|**Browser**|**Windows 8 および8.1**|**Windows 7**|**Windows Server 2012 および 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6-10.9**|**iPad の iOS 6 ～ 7**|  
+|**ブラウザー**|**Windows 8 および8.1**|**Windows 7**|**Windows Server 2012 および 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6-10.9**|**iPad の iOS 6 ～ 7**|  
 |-----------------|---------------------------|-------------------|-----------------------------------------|--------------------------------|-----------------------------|------------------------------|----------------------------|  
 |**Internet Explorer 11 (デスクトップ用)**|32 ビット、64 ビット|32 ビット、64 ビット|32 ビット、64 ビット|サポートされていません|サポートされていません|サポートされていません|サポートされていません|  
 |**Internet Explorer 10 (デスクトップ用)**|32 ビット、64 ビット|32 ビット、64 ビット|32 ビット、64 ビット|サポートされていません|サポートされていません|サポートされていません|サポートされていません|  
@@ -131,18 +131,18 @@ ms.locfileid: "75241199"
   
  URL アクセスの詳細については、次のトピックを参照してください。  
   
-- [URL アクセスパラメーターのリファレンス](url-access-parameter-reference.md)  
+- [URL アクセス パラメーター リファレンス](url-access-parameter-reference.md)  
   
 ###  <a name="bkmk_authentication"></a>認証の要件
 
  クライアント要求が正常に終了するように、ブラウザーでは、レポート サーバーで処理する必要がある特定の認証方法をサポートしています。 次の表は、Windows オペレーティング システムで実行中の各ブラウザーでサポートされる既定の認証の種類を示しています。  
   
-|**ブラウザーの種類**|**対応**|**ブラウザーの既定値**|**サーバーの既定値**|  
+|**ブラウザーの種類**|**サポート**|**ブラウザーの既定値**|**サーバーの既定値**|  
 |----------------------|------------------|-------------------------|------------------------|  
-|**Internet Explorer**|ネゴシエート、Kerberos、NTLM、基本|ネゴシエート|対応 Internet Explorer の既定の認証設定を使用します。|  
-|**Browser**|NTLM、基本|NTLM|対応 Firefox の既定の認証設定を使用します。|  
-|**Safari**|基本|基本|対応 Safari の既定の認証設定を使用します。|  
-|**クロム**|ネゴシエート、NTLM、基本|ネゴシエート|対応 Chrome の既定の認証設定を使用します。|  
+|**Internet Explorer**|ネゴシエート、Kerberos、NTLM、基本|ネゴシエート|はい。 Internet Explorer の既定の認証設定を使用します。|  
+|**Browser**|NTLM、基本|NTLM|はい。 Firefox の既定の認証設定を使用します。|  
+|**Safari**|Basic|Basic|はい。 Safari の既定の認証設定を使用します。|  
+|**クロム**|ネゴシエート、NTLM、基本|ネゴシエート|はい。 Chrome の既定の認証設定を使用します。|  
   
 ### <a name="script-requirements"></a>スクリプトの必要条件
 
@@ -150,7 +150,7 @@ ms.locfileid: "75241199"
   
  スクリプトが有効になっていない場合は、レポートを開くときに次のようなエラー メッセージが表示されます。  
   
-- **ブラウザーでスクリプトがサポートされていないか、スクリプトを実行できないように構成されています。スクリプトを使用せずにこのレポートを表示するには、ここをクリックし**ます。  
+- **ブラウザーでスクリプトがサポートされていないか、スクリプトを許可するように構成されていません。ここをクリックすると、スクリプトを使用せずにこのレポートが表示されます**。  
   
  スクリプトを使用せずにレポートを表示することを選択した場合、レポート ツール バーやドキュメント マップなどのレポート ビューアー機能を使用しない HTML でレポートが表示されます。  
   
@@ -161,7 +161,7 @@ ms.locfileid: "75241199"
 
  ReportViewer Web サーバー コントロールは、ASP.NET Web アプリケーションにレポート機能を埋め込むために使用されます。 このコントロールは Visual Studio に含まれており、このトピックで説明している他のコンポーネントとはサポートしているブラウザーおよびブラウザー バージョンが異なります。 アプリケーションの表示に使用するブラウザーの種類によって、アプリケーションに埋め込むことができる ReportViewer の機能が決まります。 レポート機能が制限されるサポート対象のブラウザーとサポートされているプラットフォームについては、このトピックの表を参照してください。  
   
- サポートされているブラウザーの描画エンジンの違いにより、一部のレポートの拡張機能の表示がブラウザー間で異なる場合があります。  たとえば、文字の回転が異なります。  
+ サポートされているブラウザーのレンダリングエンジンの違いにより、一部の詳細レポート機能がブラウザーによって異なる方法で表示される場合があります。  たとえば、文字の回転が異なります。  
   
 ### <a name="scripting-requirements"></a>スクリプトの必要条件
 
@@ -173,12 +173,12 @@ ms.locfileid: "75241199"
   
 |||||||||  
 |-|-|-|-|-|-|-|-|  
-|**Browser**|**Windows 8**および**Windows 8.1**|**Windows 7**|**Windows Server 2012**および**2012 R2**|**Windows Server 2008**および**2008 R2**|**Windows Server 2003**|**Mac OS X 10.6-10.9**|**注記**|  
+|**ブラウザー**|**Windows 8**および**Windows 8.1**|**Windows 7**|**Windows Server 2012**および**2012 R2**|**Windows Server 2008**および**2008 R2**|**Windows Server 2003**|**Mac OS X 10.6-10.9**|**注記**|  
 |**Internet Explorer 11 (デスクトップ用**|はい|はい|はい|サポートされていません|サポートされていません|サポートされていません|Internet Explorer では、ReportViewer のすべての機能をサポートしています。|  
 |**Internet Explorer 10 (デスクトップ用)**|はい|はい|はい|サポートされていません|サポートされていません|サポートされていません|Internet Explorer では、ReportViewer のすべての機能をサポートしています。|  
 |**Internet Explorer 9**|サポートされていません|はい|サポートされていません|はい|はい|はい|Internet Explorer では、ReportViewer のすべての機能をサポートしています。|  
-|**Internet Explorer 8.0**|サポートされていません|はい|サポートされていません|はい|はい <sup>1</sup>|サポートされていません|Internet Explorer では、ReportViewer のすべての機能をサポートしています。 <sup>1 で保護されたプロセスとして起動されました</sup>|  
-|**Internet Explorer 7.0**|サポートされていません|はい|サポートされていません|はい|はい <sup>1</sup>|サポートされていません|Internet Explorer では、ReportViewer のすべての機能をサポートしています。 <sup>1 で保護されたプロセスとして起動されました</sup>|  
+|**Internet Explorer 8.0**|サポートされていません|はい|サポートされていません|はい|はい <sup>1</sup>|サポートされていません|Internet Explorer では、ReportViewer のすべての機能をサポートしています。 <sup>1</sup>|  
+|**Internet Explorer 7.0**|サポートされていません|はい|サポートされていません|はい|はい <sup>1</sup>|サポートされていません|Internet Explorer では、ReportViewer のすべての機能をサポートしています。 <sup>1</sup>|  
 |**Firefox (一般公開されている最新バージョン)**|はい|はい|はい|はい|はい|サポートされていません|印刷とズームはサポートされていません。|  
 |**Safari (一般公開されている最新バージョン)**|サポートされていません|サポートされていません|サポートされていません|サポートされていません|サポートされていません|はい|印刷とズームはサポートされていません。<br /><br /> パラメーター化されたレポートで日付を選択するために使用するカレンダー コントロールは、このブラウザーでは無効になっています。 ユーザーは、使用する日付をパラメーター プロンプト領域に手動で入力する必要があります。|  
 |**Chrome (一般公開されている最新バージョン)**|はい|はい|はい|はい|はい|サポートされていません|印刷とズームはサポートされていません。|  
@@ -199,6 +199,6 @@ ms.locfileid: "75241199"
   
  ReportViewer コントロールの使用方法の詳細については、「[レポートと Reportviewer コントロールの配置](https://msdn.microsoft.com/library/ms251723.aspx)」 (https://msdn.microsoft.com/library/ms251723.aspx)を参照してください。  
   
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
  [Reporting Services ツール](tools/reporting-services-tools.md)[レポートマネージャー &#40;SSRS ネイティブモード&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md) [HTML ビューアーとレポートツールバー](html-viewer-and-the-report-toolbar.md)

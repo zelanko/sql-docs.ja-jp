@@ -18,13 +18,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 08467118608db6b222bea2a41351eac951449a16
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774566"
 ---
 # <a name="change-roles-between-primary-and-secondary-log-shipping-servers-sql-server"></a>プライマリ ログ配布サーバーとセカンダリ ログ配布サーバー間でのロールの変更 (SQL Server)
+  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログ配布構成をセカンダリ サーバーにフェールオーバーした後、プリイマリ データベースとして機能するようにセカンダリ データベースを構成できます。 その後、プライマリ データベースとセカンダリ データベースを必要に応じて切り替えることができます。  
   
 ## <a name="performing-the-initial-role-change"></a>初期ロール切り替えの実行  
@@ -34,17 +35,20 @@ ms.locfileid: "62774566"
   
 2.  元のプライマリ サーバー上のログ配布バックアップ ジョブと、元のセカンダリ サーバー上のコピーおよび復元ジョブを無効にします。  
   
-3.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、セカンダリ データベース (新しいプライマリにするデータベース) でログ配布を構成します。 詳細については、「 [ログ配布の構成 &#40;SQL Server&#41;](configure-log-shipping-sql-server.md)で導入されました。 手順は次のとおりです。  
+3.  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、セカンダリ データベース (新しいプライマリにするデータベース) でログ配布を構成します。 詳細については、「 [ログ配布の構成 &#40;SQL Server&#41;](configure-log-shipping-sql-server.md)で導入されました。 手順は次のとおりです。  
   
     1.  元のプライマリ サーバーについて作成したときと同じ共有を使用してバックアップを作成します。  
   
     2.  セカンダリ データベースを追加するときは、 **[セカンダリ データベースの設定]** ダイアログ ボックスの **[セカンダリ データベース]** ボックスに元のプライマリ データベースの名前を入力します。  
   
-    3.  **[セカンダリ データベースの設定]** ダイアログ ボックスで、 **[いいえ、セカンダリ データベースは初期化されています]** を選択します。  
+    3.  
+  **[セカンダリ データベースの設定]** ダイアログ ボックスで、 **[いいえ、セカンダリ データベースは初期化されています]** を選択します。  
   
-4.  ログ配布モニターが以前のログ配布構成で有効になっていた場合は、新しいログ配布構成を監視するようにログ配布モニターを再構成します。  *database_name* をデータベースの名前に置き換えて、次のコマンドを実行します。  
+4.  ログ配布モニターが以前のログ配布構成で有効になっていた場合は、新しいログ配布構成を監視するようにログ配布モニターを再構成します。  
+  *database_name* をデータベースの名前に置き換えて、次のコマンドを実行します。  
   
-    1.  **新しいプライマリ サーバーで、**  
+    1.  **新しいプライマリサーバーで**  
   
          次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行します。  
   
@@ -56,7 +60,7 @@ ms.locfileid: "62774566"
         GO  
         ```  
   
-    2.  **新しいセカンダリ サーバーで、**  
+    2.  **新しいセカンダリサーバーで**  
   
          次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行します。  
   
@@ -82,11 +86,11 @@ ms.locfileid: "62774566"
   
 ##  <a name="RelatedTasks"></a> 関連タスク  
   
--   [ログ配布のセカンダリへのフェールオーバー &#40;SQL Server&#41;](fail-over-to-a-log-shipping-secondary-sql-server.md)  
+-   [ログ配布のセカンダリ &#40;SQL Server にフェールオーバーする&#41;](fail-over-to-a-log-shipping-secondary-sql-server.md)  
   
 -   [役割の交代後のログインとジョブの管理 &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)  
   
-## <a name="see-also"></a>関連項目  
- [ログ配布テーブルとストアド プロシージャ](log-shipping-tables-and-stored-procedures.md)  
+## <a name="see-also"></a>参照  
+ [Log Shipping Tables and Stored Procedures](log-shipping-tables-and-stored-procedures.md)  
   
   

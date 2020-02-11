@@ -15,27 +15,27 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e7539ae9426bfe480f7dbbe25ea1c3724815295e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768788"
 ---
 # <a name="property-expressions-editor"></a>[プロパティ式エディター]
   **[プロパティ式エディター]** ダイアログ ボックスを使用すると、プロパティ値を更新するプロパティ式の作成、編集、または削除ができます。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **プロパティ**  
  オブジェクト プロパティを一覧から選択します。  
   
- **式**  
+ **[式]**  
  プロパティの値を更新するリテラルまたは式を入力します。  
   
 > [!NOTE]  
 >  ユーザー定義変数およびシステム変数の名前では、大文字と小文字が区別されます。  
   
  **式 (...)**  
- [...] をクリックすると、 **[式ビルダー]** ダイアログ ボックスが表示されます。 詳細については、「 [[式ビルダー]](expression-builder.md)」を参照してください。  
+ [...] をクリックすると、 **[式ビルダー]** ダイアログ ボックスが表示されます。 詳細については、「 [式ビルダー](expression-builder.md)」を参照してください。  
   
  **削除**  
  プロパティを選択してから、 **[削除]** をクリックします。  

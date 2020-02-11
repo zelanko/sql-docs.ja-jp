@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 114460af84d4e820ccd263fc4bf5188b65775c85
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62902479"
 ---
 # <a name="load-data-by-using-the-ole-db-destination"></a>OLE DB 変換先を使用してデータを読み込む
@@ -65,6 +65,6 @@ ms.locfileid: "62902479"
  [OLE DB 変換先](ole-db-destination.md)   
  [Integration Services の変換](transformations/integration-services-transformations.md)   
  [Integration Services のパス](integration-services-paths.md)   
- [[データ フロー タスク]](../control-flow/data-flow-task.md)  
+ [データ フロー タスク](../control-flow/data-flow-task.md)  
   
   

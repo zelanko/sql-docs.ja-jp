@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 7d18661fadb12167fd0a443758cced1188401750
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727340"
 ---
 # <a name="sql-server-configuration-for-use-with-r"></a>R で使用するための SQL Server の構成
@@ -22,7 +22,7 @@ ms.locfileid: "73727340"
 これは、2 つのケース スタディに基づいて R Services のパフォーマンスの最適化について説明するシリーズの 2 番目の記事です。  この記事では、SQL Server R Services を実行するために使用するコンピューターのハードウェアおよびネットワーク構成に関するガイダンスを提供します。 また、ソリューションで使用される SQL Server インスタンス、データベース、またはテーブルを構成する方法についても説明します。 SQL Server で NUMA を使用すると、ハードウェアとデータベースの最適化の間の区別が曖昧になるので、3 番目のセクションでは、CPU のアフィニタイズとリソース ガバナンスの詳細について説明します。
 
 > [!TIP]
-> SQL Server を初めて使用する場合は、「SQL Server のパフォーマンス チューニング ガイド」も確認することを強くお勧めします。[パフォーマンスの監視とチューニング](https://docs.microsoft.com/sql/relational-databases/performance/monitor-and-tune-for-performance)
+> SQL Server を初めて使用する場合は、「SQL Server のパフォーマンス チューニング ガイド」も確認することを強くお勧めします。[パフォーマンスの監視とチューニング](https://docs.microsoft.com/sql/relational-databases/performance/monitor-and-tune-for-performance)。
 
 ## <a name="hardware-optimization"></a>ハードウェアの最適化
 
@@ -32,7 +32,7 @@ ms.locfileid: "73727340"
 - "クォータを超過しました" というエラーが発生したため、R スクリプトが完了せずに終了します。
 - R メモリに読み込まれたデータが切り捨てられ、不完全な結果になります。
 
-### <a name="memory"></a>[メモリ]
+### <a name="memory"></a>メモリ
 
 コンピューター上で利用できるメモリの量は、高度な分析アルゴリズムのパフォーマンスに大きな影響を与える場合があります。 メモリが不足していると、SQL の計算コンテキストを使用している場合に、並列処理のレベルが低下することがあります。 また、処理可能なチャンク サイズ (読み取り操作あたりの行数) や、サポートできる同時セッション数にも影響する可能性があります。
 
@@ -86,9 +86,9 @@ IO パフォーマンスは、圧縮や単票形式のデータ ストアを使�
 
 列ストアは、テーブルへの挿入が多い場合には効率的でない可能性がありますが、データが静的な場合や、変更の頻度が低い場合には、適切な選択肢と言えます。 列ストアが適切でない場合は、行メジャー テーブルでの圧縮を有効にすることで、IO を改善できる可能性があります。
 
-詳しくは、次の各ドキュメントをご覧ください。
+詳細については、以下のドキュメントをご覧ください。
 
-+ [データの圧縮](../../relational-databases/data-compression/data-compression.md)
++ [データ圧縮](../../relational-databases/data-compression/data-compression.md)
 
 + [テーブルまたはインデックスの圧縮の有効化](../../relational-databases/data-compression/enable-compression-on-a-table-or-index.md)
 
@@ -231,6 +231,6 @@ SQL Server の利点の 1 つは、大量の行を並列で処理できること
 
 [R のパフォーマンス チューニング - SQL Server の構成](../r/sql-server-configuration-r-services.md)
 
-[R のパフォーマンス チューニング - R コードおよびデータの最適化](../r/r-and-data-optimization-r-services.md)
+[R のパフォーマンス チューニング - R コードとデータの最適化](../r/r-and-data-optimization-r-services.md)
 
 [パフォーマンス チューニング - ケース スタディの結果](../r/performance-case-study-r-services.md)

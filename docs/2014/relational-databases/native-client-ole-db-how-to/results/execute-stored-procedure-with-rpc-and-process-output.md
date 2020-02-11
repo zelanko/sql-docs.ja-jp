@@ -1,5 +1,5 @@
 ---
-title: ストアド プロシージャ (RPC 構文を使用) とプロセスのリターン コードと出力パラメーター (OLE DB) の実行 |Microsoft Docs
+title: (RPC 構文を使用した) ストアドプロシージャを実行し、リターンコードと出力パラメーターを処理する (OLE DB) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e00adccfa6e75434fe398e21faafccc22f99914e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206685"
 ---
 # <a name="execute-a-stored-procedure-using-rpc-syntax-and-process-return-codes-and-output-parameters-ole-db"></a>RPC 構文を使用したストアド プロシージャの実行と、リターン コードおよび出力パラメーターの処理 (OLE DB)
+  
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のストアド プロシージャでは、整数のリターン コードと出力パラメーターを使用できます。 リターン コードと出力パラメーターはサーバーからの最後のパケットで送信されるため、行セットが完全に解放されるまでアプリケーションでは使用できません。 コマンドが複数の結果を返す場合は、`IMultipleResults::GetResult` が DB_S_NORESULT を返すとき、または `IMultipleResults` インターフェイスが完全に解放されるとき、いずれか早いほうの時点で、出力パラメーター データを使用できるようになります。  
   
 > [!IMPORTANT]  
@@ -30,15 +31,18 @@ ms.locfileid: "68206685"
   
 1.  RPC エスケープ シーケンスを使用する SQL ステートメントを作成します。  
   
-2.  `ICommandWithParameters::SetParameterInfo` メソッドを呼び出し、パラメーターをプロバイダーに示します。 PARAMBINDINFO 構造体の配列にパラメーター情報を格納します。  
+2.  
+  `ICommandWithParameters::SetParameterInfo` メソッドを呼び出し、パラメーターをプロバイダーに示します。 PARAMBINDINFO 構造体の配列にパラメーター情報を格納します。  
   
 3.  DBBINDING 構造体の配列を使用して、各パラメーター マーカーに 1 つずつ一連のバインドを作成します。  
   
-4.  `IAccessor::CreateAccessor` メソッドを使用して、定義済みパラメーターのアクセサーを作成します。 アクセサーは、一連のバインドから `CreateAccessor` によって作成されます。  
+4.  
+  `IAccessor::CreateAccessor` メソッドを使用して、定義済みパラメーターのアクセサーを作成します。 アクセサーは、一連のバインドから `CreateAccessor` によって作成されます。  
   
 5.  DBPARAMS 構造体にデータを格納します。  
   
-6.  `Execute` コマンド (この場合はストアド プロシージャへの呼び出し) を呼び出します。  
+6.  
+  `Execute` コマンド (この場合はストアド プロシージャへの呼び出し) を呼び出します。  
   
 7.  行セットを処理し、`IRowset::Release` メソッドを使用して行セットを解放します。  
   
@@ -51,7 +55,8 @@ ms.locfileid: "68206685"
   
  1 つ目の ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) コード リストを実行して、アプリケーションで使用するストアド プロシージャを作成します。  
   
- ole32.lib と oleaut32.lib を使用して 2 つ目の (C++) コード リストをコンパイルし、実行します。 このアプリケーションは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスに接続します。 一部の Windows オペレーティング システムでは、(localhost) または (local) を実際の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスの名前に変更する必要があります。 名前付きインスタンスに接続するには、接続文字列を L"(local)" から L"(local)\\\name" に変更します。ここで、name は名前付きインスタンスです。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express は、既定で名前付きインスタンスとしてインストールされます。 INCLUDE 環境変数には、sqlncli.h を含むディレクトリが含まれています。 を確認します。  
+ ole32.lib と oleaut32.lib を使用して 2 つ目の (C++) コード リストをコンパイルし、実行します。 このアプリケーションは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスに接続します。 一部の Windows オペレーティング システムでは、(localhost) または (local) を実際の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスの名前に変更する必要があります。 名前付きインスタンスに接続するには、接続文字列を L"(local)" から L"(local)\\\name" に変更します。ここで、name は名前付きインスタンスです。 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express は、既定で名前付きインスタンスとしてインストールされます。 INCLUDE 環境変数に、sqlncli を含むディレクトリが含まれていることを確認します。  
   
  3 つ目の ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) コード リストを実行して、アプリケーションで使用したストアド プロシージャを削除します。  
   
@@ -393,7 +398,7 @@ DROP PROCEDURE myProc
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [結果を処理する方法に関するトピック &#40;OLE DB&#41;](processing-results-how-to-topics-ole-db.md)  
+## <a name="see-also"></a>参照  
+ [結果の処理方法に関するトピック &#40;OLE DB&#41;](processing-results-how-to-topics-ole-db.md)  
   
   

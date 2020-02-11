@@ -19,10 +19,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 05d7a6ca9f90439f803032087f4032765cba2f88
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73782621"
 ---
 # <a name="bcp_moretext"></a>bcp_moretext
@@ -48,19 +48,20 @@ RETCODE bcp_moretext (
  *PData*によって参照されるデータから SQL Server にコピーされるデータのバイト数を指定します。 値 SQL_NULL_DATA は、NULL を示します。  
   
  *pData*  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に送信する、サポートされている長い可変長データ チャンクへのポインターです。  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に送信する、サポートされている長い可変長データ チャンクへのポインターです。  
   
 ## <a name="returns"></a>戻り値  
  SUCCEED または FAIL。  
   
 ## <a name="remarks"></a>解説  
- この関数を[bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)および[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)と組み合わせて使用すると、長い可変長のデータ値を多数の小さなチャンクで SQL Server にコピーできます。 **bcp_moretext**は、 **text**、 **ntext**、 **image**、 **varchar (max)** 、 **nvarchar (max)** 、 **VARBINARY (max)** 、ユーザー定義型 (UDT)、および XML の SQL Server 各データ型を持つ列で使用できます。 **bcp_moretext**は、データ変換をサポートしていません。指定されたデータは、ターゲット列のデータ型と一致している必要があります。  
+ この関数を[bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)および[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)と組み合わせて使用すると、長い可変長のデータ値を多数の小さなチャンクで SQL Server にコピーできます。 **bcp_moretext**は、 **text**、 **ntext**、 **image**、 **varchar (max)**、 **nvarchar (max)**、 **VARBINARY (max)**、ユーザー定義型 (UDT)、および XML の SQL Server 各データ型を持つ列で使用できます。 **bcp_moretext**は、データ変換をサポートしていません。指定されたデータは、ターゲット列のデータ型と一致している必要があります。  
   
- **Bcp_moretext**でサポートされているデータ型に対して NULL 以外の*pData*パラメーターを使用して**bcp_bind**が呼び出された場合、 **bcp_sendrow**は長さに関係なくデータ値全体を送信します。 ただし、 **bcp_bind**がサポートされているデータ型に対して NULL の*pData*パラメーターを持っている場合、 **bcp_moretext**を使用して、データを含むバインド列があることを示す**bcp_sendrow**から正常に返された直後にデータをコピーできます。処理されました。  
+ **Bcp_moretext**でサポートされているデータ型に対して NULL 以外の*pData*パラメーターを使用して**bcp_bind**が呼び出された場合、 **bcp_sendrow**は長さに関係なくデータ値全体を送信します。 ただし、 **bcp_bind**がサポートされているデータ型に対して NULL の*pData*パラメーターを持っている場合、 **bcp_moretext**を使用して、データが存在するバインド列が処理されたことを示す**bcp_sendrow**から正常に返された直後にデータをコピーできます。  
   
  **Bcp_moretext**を使用して、サポートされているデータ型の列を1つの行で送信する場合は、その行でサポートされている他のすべてのデータ型の列を送信するためにも使用する必要があります。 列はスキップされません。 サポートされるデータ型は、SQLTEXT、SQLNTEXT、SQLIMAGE、SQLUDT、および SQLXML です。 列の型が varchar(max)、nvarchar(max)、または varbinary(max) の場合、SQLCHARACTER、SQLVARCHAR、SQNCHAR、SQLBINARY、SQLVARBINARY も、サポート対象となります。  
   
- **Bcp_bind**または[bcp_collen](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md)のいずれかを呼び出すと、SQL Server 列にコピーされるすべてのデータパーツの合計長が設定されます。 **Bcp_bind**または**bcp_collen**の呼び出しで指定されているよりも多くのバイトを SQL Server 送信しようとすると、エラーが発生します。 このエラーが発生するのは、たとえば、SQL Server**テキスト**列の使用可能なデータの長さを4500に設定するために**bcp_collen**を使用し、データバッファーを呼び出すたびに**bcp_moretext** 5 回呼び出された場合などです。長さは1000バイト長でした。  
+ **Bcp_bind**または[bcp_collen](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md)のいずれかを呼び出すと、SQL Server 列にコピーされるすべてのデータパーツの合計長が設定されます。 **Bcp_bind**または**bcp_collen**の呼び出しで指定されているよりも多くのバイトを SQL Server 送信しようとすると、エラーが発生します。 このエラーが発生するのは、たとえば、SQL Server**テキスト**列の使用可能なデータの長さを4500に設定するために**bcp_collen**を使用**bcp_moretext**し、データバッファーの長さが1000バイト長であることを各呼び出しに対して指定する場合などです。  
   
  コピーされた行に複数の長い可変長列が含まれている場合、 **bcp_moretext**は最初にそのデータを最も低い順序の列に送信し、次に、その後に最も低い2番目の列に番号が付けられます。 コピーするデータの合計長を正しく設定することが重要です。 長さの設定以外に、一括コピーによって列のすべてのデータを受け取ったことを示す方法はありません。  
   

@@ -11,10 +11,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 3845470668e4cffeda7a48ed01c144eb53f671b9
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74399420"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>スケールアウト MPP データウェアハウスである Analytics Platform System の新機能
@@ -59,7 +59,7 @@ Informatica バージョン10.2.0 および10.2.0 修正プログラム1で動�
 
 #### <a name="supported-versions"></a>サポートされているバージョン
 
-| APS バージョン | Informatica PowerCenter | ドライバー |
+| APS バージョン | Informatica PowerCenter | Driver |
 |:---|:---|:---|
 | APS 2016 | 9.6.1 | SQL Server Native Client 2.x |
 | APS 2016 以降 | 10.2.0、10.2.0 Hotfix 1 | SQL Server Native Client 2.x |
@@ -129,7 +129,7 @@ SMO を使用する代わりに、メタデータ呼び出しに catalog オブ�
 ### <a name="bug-fixes"></a>バグ修正
 APS CU 7.1 で SQL Server 2016 SP2 CU2 にアップグレードしました。 このアップグレードでは、以下に示すいくつかの問題が修正されます。
 
-| タイトル | 説明 |
+| タイトル | [説明] |
 |:---|:---|
 | **考えられる組ムーバーのデッドロック** |このアップグレードでは、分散トランザクションと組ムーバーのバックグラウンドスレッドでデッドロックが発生する可能性があることを修正しました。 CU 7.1 をインストールした後、TF634 を使用してタプルムーバーを停止すると SQL Server スタートアップパラメーターまたはグローバルトレースフラグとして削除できます。 | 
 | **特定のラグ/リードクエリが失敗する** |遅延/リード関数が入れ子になっている CCI テーブルに対する特定のクエリは、このアップグレードによって修正されました。 | 
@@ -152,7 +152,7 @@ Select @varがサポートされるようになりました。 詳細につい�
 ### <a name="feature-switch"></a>機能スイッチ
 APS AU7 には[Configuration Manager](launch-the-configuration-manager.md)の機能スイッチが導入されています。 AutoStatsEnabled と DmsProcessStopMessageTimeoutInSeconds は、管理者が変更できる構成可能なオプションになりました。
 
-### <a name="known-issues"></a>の既知の問題
+### <a name="known-issues"></a>既知の問題
 APS AU7 ソフトウェアでは、Intel BIOS の更新プログラムが提供されており、予測*実行のサイドチャネル攻撃*として説明されている問題を修正します。 攻撃は、 *Spectre と Meltdown の脆弱性*と呼ばれるものを悪用することを目的としています。 APS と共にパッケージ化されますが、BIOS の更新プログラムは、APS AU7 ソフトウェアのインストールの一部としてではなく、手動でインストールされます。
 
 Microsoft は、すべてのお客様に BIOS の更新をインストールするようにアドバイスします。 Microsoft は、さまざまな環境におけるさまざまな SQL ワークロードに対して、カーネル仮想アドレスシャドウ (KVAS)、カーネルページテーブル間接 (中 TI)、および間接分岐予測軽減 (IBP) の影響を測定しました。 この測定では、一部のワークロードで大幅な低下が見られました。 結果に基づいて、BIOS 更新を有効にした場合のパフォーマンスへの影響をテストしてから、運用環境に展開することをお勧めします。 SQL Server ガイダンスを参照し[てください。](https://support.microsoft.com/help/4073225/guidance-protect-sql-server-against-spectre-meltdown)
@@ -179,7 +179,7 @@ APS AU6 では、これらの T-sql 互換性の向上がサポートされて�
 - [sp_spaceused ()][]は、テーブルまたはデータベースで使用されているか予約されているディスク領域を表示します。
 - [幅の広いテーブル][]のサポートは SQL Server 2016 と同じです。 以前の行サイズに対する 32 K の制限は存在しません。 
 
-**データの種類**
+**データ型**
 
 - [VARCHAR (max)][]、 [NVARCHAR (max)][] 、および[VARBINARY (max)][]です。 これらの LOB データ型の最大サイズは 2 GB です。 これらのオブジェクトを読み込むには、 [Bcp ユーティリティ][]を使用します。 PolyBase と dwloader では、現在、これらのデータ型はサポートされていません。 
 - [SYSNAME][]
@@ -220,7 +220,7 @@ HPE または DELL の新しいアプライアンスには、最新の更新プ�
 - DDR4 Dimm への更新
 - DIMM スループットの向上
 
-**結合**
+**統合**
 
 - 完全修飾ドメイン名 (FQDN) のサポートにより、アプライアンスに対するドメインの信頼を設定できます。 
 - FQDN を使用するには、アップグレード中に完全なアップグレードとオプトインを行う必要があります。 

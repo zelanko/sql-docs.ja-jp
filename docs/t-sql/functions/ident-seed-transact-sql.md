@@ -20,10 +20,10 @@ ms.assetid: e4cb8eb8-affb-4810-a8a9-0110af3c247a
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 9685c68127b5370d007981a2f01e67f8d22df5da
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843690"
 ---
 # <a name="ident_seed-transact-sql"></a>IDENT_SEED (Transact-SQL)
@@ -51,7 +51,7 @@ IDENT_SEED ( 'table_or_view' )
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、ユーザーは自身が所有している、または権限を与えられている、セキュリティ保護可能なアイテムのメタデータのみを表示できます。 このセキュリティは、オブジェクトに対する権限がユーザーに与えられていない場合、メタデータを生成する組み込み関数 (IDENT_SEED など) が NULL を返す可能性があることを意味します。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-returning-the-seed-value-from-a-specified-table"></a>A. 指定したテーブルのシード値を返す  
  次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベース内の `Person.Address` テーブルのシード値を返します。  

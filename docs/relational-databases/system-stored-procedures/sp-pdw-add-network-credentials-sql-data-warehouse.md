@@ -13,18 +13,18 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 88ddae78b3c866556edbd9e3026e3cb86c747f51
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73844408"
 ---
 # <a name="sp_pdw_add_network_credentials-sql-data-warehouse"></a>sp_pdw_add_network_credentials (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  これにより [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] にネットワーク資格情報が格納され、サーバーに関連付けられます。 たとえば、このストアドプロシージャを使用して、対象サーバーでデータベースのバックアップと復元操作を実行したり、TDE に使用する証明書のバックアップを作成したりするための適切な読み取り/書き込み権限 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 付与します。  
+  これにより、に[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]ネットワーク資格情報が格納され、サーバーに関連付けられます。 たとえば、このストアドプロシージャを使用して[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 、対象サーバーでデータベースのバックアップと復元操作を実行したり、tde に使用する証明書のバックアップを作成したりするための適切な読み取り/書き込み権限を付与します。  
   
- ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![トピックリンクアイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン")Transact-sql[構文表記規則 &#40;transact-sql&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,11 +36,11 @@ sp_pdw_add_network_credentials 'target_server_name',  'user_name', ꞌpassword�
   
 ## <a name="arguments"></a>引数  
  '*target_server_name*'  
- 対象サーバーのホスト名または IP アドレスを指定します。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] は、このストアドプロシージャに渡されたユーザー名とパスワードの資格情報を使用して、このサーバーにアクセスします。  
+ 対象サーバーのホスト名または IP アドレスを指定します。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]は、このストアドプロシージャに渡されたユーザー名とパスワードの資格情報を使用して、このサーバーにアクセスします。  
   
  InfiniBand ネットワーク経由で接続するには、対象サーバーの InfiniBand IP アドレスを使用します。  
   
- *target_server_name*は nvarchar () として定義されています。  
+ *target_server_name*は nvarchar (]) として定義されています。  
   
  '*user_name*'  
  対象サーバーにアクセスする権限を持つ user_name を指定します。 対象サーバーの資格情報が既に存在する場合は、新しい資格情報に更新されます。  
@@ -60,12 +60,12 @@ sp_pdw_add_network_credentials 'target_server_name',  'user_name', ꞌpassword�
  [制御] ノードおよびすべての計算ノードで資格情報を追加できない場合、エラーが発生します。  
   
 ## <a name="general-remarks"></a>全般的な解説  
- このストアドプロシージャは、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]の NetworkService アカウントにネットワーク資格情報を追加します。 NetworkService アカウントは、コントロールノードとコンピューティングノードで SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各インスタンスを実行します。 たとえば、バックアップ操作を実行すると、制御ノードと各コンピューティングノードは NetworkService アカウントの資格情報を使用して、対象サーバーに対する読み取りと書き込みのアクセス許可を取得します。  
+ このストアドプロシージャは、の[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]NetworkService アカウントにネットワーク資格情報を追加します。 NetworkService アカウントは、制御ノードとコンピューティング[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ノードで SMP の各インスタンスを実行します。 たとえば、バックアップ操作を実行すると、制御ノードと各コンピューティングノードは NetworkService アカウントの資格情報を使用して、対象サーバーに対する読み取りと書き込みのアクセス許可を取得します。  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="a-add-credentials-for-performing-a-database-backup"></a>A. データベースバックアップを実行するための資格情報を追加する  
- 次の例では、ドメインユーザーのユーザー名とパスワードの資格情報を、10.172.63.255 という IP アドレスを持つ対象サーバーに関連付けます。 ユーザーは、対象サーバーに対する読み取り/書き込み権限を持っています。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] は、これらの資格情報を格納し、バックアップ操作と復元操作のために必要に応じて、対象サーバーとの間での読み書きに使用します。  
+ 次の例では、ドメインユーザーのユーザー名とパスワードの資格情報を、10.172.63.255 という IP アドレスを持つ対象サーバーに関連付けます。 ユーザーは、対象サーバーに対する読み取り/書き込み権限を持っています。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]は、これらの資格情報を格納し、バックアップ操作と復元操作に必要な場合に、対象サーバーとの間での読み書きに使用します。  
   
 ```  
 EXEC sp_pdw_add_network_credentials '10.172.63.255', 'seattle\david', '********';  

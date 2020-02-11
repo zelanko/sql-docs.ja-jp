@@ -1,5 +1,5 @@
 ---
-title: (MDS アドインを Excel の) データのパブリッシュ |Microsoft Docs
+title: データのパブリッシュ (Excel 用 MDS アドイン) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: dd5046c9a307f498ffb585c99cba8044c7b18b3f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479034"
 ---
 # <a name="publishing-data-mds-add-in-for-excel"></a>データのパブリッシュ (Excel 用 MDS アドイン)
-  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]で、他のユーザーとデータを共有するには、データを MDS リポジトリにパブリッシュします。 パブリッシュされたデータはすぐに、他のアドイン ユーザーがダウンロードできるようになります。  
+  
+  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]
+  [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]で、他のユーザーとデータを共有するには、データを MDS リポジトリにパブリッシュします。 パブリッシュされたデータはすぐに、他のアドイン ユーザーがダウンロードできるようになります。  
   
  データを発行すると、追加または更新したすべてのデータが MDS リポジトリに発行されます。 削除したデータは発行されません。データの削除は個別に行う必要があります。 詳細については、「 [行の削除 (Excel 用 MDS アドイン)](delete-a-row-mds-add-in-for-excel.md)」を参照してください。  
   
@@ -35,11 +37,11 @@ ms.locfileid: "65479034"
   
 -   削除に注釈を付けることはできませんが、削除は管理者が取り消すことができるトランザクションとして保存されます。  
   
--   変更した場合、**コード**値は、メンバーは記録されず、トランザクションとして、メンバーの以前のすべてのトランザクションは使用できません。  
+-   メンバーの**コード**値を変更した場合、そのメンバーはトランザクションとして記録されず、そのメンバーの以前のトランザクションはすべて使用できなくなります。  
   
 -   他のユーザーがメンバーに対して行ったトランザクションを表示することができます。 また、特定の属性に対する権限を失った場合でも、メンバーに対して行ったすべてのトランザクションを表示できます。  
   
- メンバーに対して行われたすべてのトランザクションを表示することができます。 詳細については、「[メンバーのすべての注釈またはトランザクションの表示 (Excel 用 MDS アドイン)](view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel.md)」を参照してください。  
+ メンバーに対して行われたすべてのトランザクションを表示することができます。 詳細については、「 [メンバーのすべての注釈またはトランザクションの表示 (Excel 用 MDS アドイン)](view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel.md)」を参照してください。  
   
 > [!IMPORTANT]  
 >  500 文字を超える注釈を入力すると、その注釈は自動的に切り捨てられます。  
@@ -51,12 +53,12 @@ ms.locfileid: "65479034"
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  
-|アクティブなワークシートのデータをパブリッシュして MDS リポジトリに戻します。|[Excel からデータを MDS にパブリッシュ&#40;MDS アドインの Excel&#41;](import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)|  
-|MDS リポジトリとワークシートから行を同時に削除します。|[行の削除 (Excel 用 MDS アドイン)](delete-a-row-mds-add-in-for-excel.md)|  
+|アクティブなワークシートのデータをパブリッシュして MDS リポジトリに戻します。|[Excel から MDS へのデータのパブリッシュ &#40;Excel 用 MDS アドイン&#41;](import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)|  
+|MDS リポジトリとワークシートから行を同時に削除します。|[行 &#40;Excel 用 MDS アドインの削除&#41;](delete-a-row-mds-add-in-for-excel.md)|  
   
 ## <a name="related-content"></a>関連コンテンツ  
   
--   [データの更新 (Excel 用 MDS アドイン)](refreshing-data-mds-add-in-for-excel.md)  
+-   [データ &#40;Excel 用 MDS アドイン&#41;の更新](refreshing-data-mds-add-in-for-excel.md)  
   
 -   [Microsoft Excel 用マスター データ サービス アドイン](master-data-services-add-in-for-microsoft-excel.md)  
   

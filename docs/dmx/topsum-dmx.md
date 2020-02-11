@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 373fe2f1458b30412f4ee5852baa57b930af4878
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68893042"
 ---
 # <a name="topsum-dmx"></a>TopSum (DMX)
@@ -28,15 +28,15 @@ TopSum(<table expression>, <rank expression>, <sum>)
 ```  
   
 ## <a name="applies-to"></a>適用対象  
- テーブル列参照 > などのテーブルを返す\<式、またはテーブルを返す関数。  
+ テーブル列参照> などのテーブルを返す\<式、またはテーブルを返す関数。  
   
 ## <a name="return-type"></a>戻り値の型  
- \<テーブル式の >  
+ \<テーブル式の>  
   
-## <a name="remarks"></a>コメント  
- **TopSum**関数は、各行の rank 式 > 引数の\<評価値に基づいて、順位の降順で上位の行を返します。これは、 \<ランク式 > 値の合計が少なくとも指定された値であることを示します。合計 > 引数によって\<指定された合計。 **TopSum**は、指定された合計値を維持しながら、可能な限り最小の要素数を返します。  
+## <a name="remarks"></a>解説  
+ **TopSum**関数は、各行の rank 式> 引数の\<評価値に基づいて、ランクの降順で最上位行を返します。これは、> 値の\<順位付け式の合計が、 \<sum> 引数で指定されている指定された合計以上であることを示します。 **TopSum**は、指定された合計値を維持しながら、可能な限り最小の要素数を返します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、「[基本的なデータマイニングチュートリアル](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)」を使用して作成したアソシエーションモデルに対して予測クエリを作成します。  
   
  TopPercent の動作を理解するために、入れ子になったテーブルのみを返す予測クエリを最初に実行すると便利な場合があります。  
@@ -50,11 +50,11 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
 ```  
   
 > [!NOTE]  
->  この例では、入力値として指定された値には単一引用符が含まれているため、この単一引用符の前にもう 1 つ単一引用符に追加してエスケープする必要があります。 エスケープ文字を挿入するための構文がわからない場合は、予測クエリ ビルダーを使用してクエリを作成できます。 ドロップダウン リストから値を選択すると、必要なエスケープ文字が挿入されます。 詳細については、「[データマイニングデザイナーでの単一クエリの作成](https://docs.microsoft.com/analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer)」を参照してください。  
+>  この例では、入力として指定された値に単一引用符が含まれているため、その前に別の単一引用符を付けてエスケープする必要があります。 エスケープ文字を挿入するための構文がわからない場合は、予測クエリビルダーを使用してクエリを作成できます。 ドロップダウンリストから値を選択すると、必要なエスケープ文字が挿入されます。 詳細については、「[データマイニングデザイナーでの単一クエリの作成](https://docs.microsoft.com/analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer)」を参照してください。  
   
- 例の結果を次に示します。  
+ 結果の例:  
   
-|[モデル]|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
+|モデル|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  
 |Sport-100|4334|0.291283016|0.252695851|  
 |Water Bottle|2866|0.192620472|0.175205052|  
@@ -65,7 +65,7 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
 |Cycling Cap|1473|0.098998589|0.094256014|  
 |Fender Set - Mountain|1415|0.095100477|0.090718432|  
 |Mountain Bottle Cage|1367|0.091874454|0.087780332|  
-|Road Bottle Cage|1195|0.080314537|0.077173962|  
+|道路ボトルケージ|1195|0.080314537|0.077173962|  
   
  **TopSum**関数は、このクエリの結果を受け取り、最大値が指定された行数になる行を返します。  
   
@@ -84,23 +84,23 @@ NATURAL PREDICTION JOIN
   
  **TopSum**関数の最初の引数は、テーブル列の名前です。 この例では、Predict 関数を呼び出し、INCLUDE_STATISTICS 引数を使用して、入れ子になったテーブルが返されます。  
   
- **TopSum**関数の2番目の引数は、結果の並べ替えに使用する入れ子になったテーブルの列です。 この例では、INCLUDE_STATISTICS オプションによって $SUPPORT 列、$PROBABILTY 列、および $ADJUSTED PROBABILITY 列が返されます。 この例では $PROBABILITY を使用して、合計して 50% 以上の確率になる行を返します。  
+ **TopSum**関数の2番目の引数は、結果の並べ替えに使用する入れ子になったテーブルの列です。 この例では、INCLUDE_STATISTICS オプションを使用して、列 $SUPPORT、$PROBABILTY、および $ADJUSTED 確率を返します。 この例では、$PROBABILITY を使用して、少なくとも50% の確率に合計する行を返します。  
   
- 3番目の引数、 **TopSum**関数は、ターゲットの合計を double として指定します。 合計が 50% の確率となる上位の製品の行を取得するには「5」と入力します。  
+ 3番目の引数、 **TopSum**関数は、ターゲットの合計を double として指定します。 合計で50% の確率の上位製品の行を取得するには、「.5」と入力します。  
   
- 例の結果を次に示します。  
+ 結果の例:  
   
-|[モデル]|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
+|モデル|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  
 |Sport-100|4334|0.29...|0.25...|  
 |Water Bottle|2866|0.19...|0.17...|  
 |Patch kit|2113|0.14...|0.13...|  
   
- **メモ**この例は、 **TopSum**の使用方法を示すことだけを目的としています。 データセットのサイズに応じて、このクエリの実行には長い時間がかかる場合があります。  
+ **メモ**この例は、 **TopSum**の使用方法を示すことだけを目的としています。 データセットのサイズによっては、このクエリの実行に時間がかかることがあります。  
   
 ## <a name="see-also"></a>参照  
- [DMX &#40;関数&#41;](../dmx/functions-dmx.md)   
- [一般的な予測&#40;関数 DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
- [TopPercent &#40;DMX&#41;](../dmx/toppercent-dmx.md)  
+ [DMX&#41;&#40;関数](../dmx/functions-dmx.md)   
+ [DMX&#41;&#40;一般的な予測関数](../dmx/general-prediction-functions-dmx.md)   
+ [DMX&#41;&#40;TopPercent](../dmx/toppercent-dmx.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: マイニング構造に列の追加 |Microsoft Docs
+title: マイニング構造への列の追加 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 85a713bb9da24a67ebe8fdd097535c5a9d5ac98e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086224"
 ---
 # <a name="add-columns-to-a-mining-structure"></a>マイニング構造への列の追加
@@ -33,11 +33,14 @@ ms.locfileid: "66086224"
   
 2.  マイニング構造を右クリックして **[列の追加]** を選択します。  
   
-     **[列の選択]** ダイアログ ボックスが開きます。  
+     
+  **[列の選択]** ダイアログ ボックスが開きます。  
   
-3.  **[基になるテーブル]** で、列が格納されているデータ ソース ビュー内のテーブルを選択します。  
+3.  
+  **[基になるテーブル]** で、列が格納されているデータ ソース ビュー内のテーブルを選択します。  
   
-4.  **[基になる列]** で、マイニング構造に追加する列を選択します。  
+4.  
+  **[基になる列]** で、マイニング構造に追加する列を選択します。  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

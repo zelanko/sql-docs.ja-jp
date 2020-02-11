@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 94c38e6823f0cd52e44da7782bccada780265978
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75229400"
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>多次元モデルの Power View について
@@ -39,7 +39,7 @@ ms.locfileid: "75229400"
   
 -   Power View クライアント機能には、Microsoft Silverlight 5 が必要です。 詳細については、「 [Planning for Reporting Services」および「Power View Browser Support &#40;Reporting Services 2014&#41;](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)」を参照してください。  
   
-## <a name="features"></a>Features (機能)  
+## <a name="features"></a>[機能]  
  **Power View のネイティブサポート**  
   
  このリリースでは、多次元モデルで、SharePoint モードの Power View を使用した分析とビジュアル化がサポートされています。 多次元モデルで特別な構成は必要ありません。 ただし、Microsoft Excel や Microsoft Performance Point など、その他のクライアント ツールと比較すると、Power View での多次元モデル オブジェクトの表示形式にはいくつか違いがあります。 このリリースでは、Excel 2013 の Power View を使用した多次元モデルの分析とビジュアル化はサポートされていません。  
@@ -57,14 +57,14 @@ ms.locfileid: "75229400"
 |-----------------------------|--------------------|  
 |Cube|モデル|  
 |キューブ ディメンション|テーブル|  
-|ディメンション属性 (キー、名前)|分割|  
+|ディメンション属性 (キー、名前)|列|  
 |[メジャー グループ]|テーブル|  
 |Measure|Measure|  
 |メジャー グループのないメジャー|Measures という名前のテーブル内|  
 |メジャー グループとキューブ ディメンションのリレーションシップ|リレーションシップ|  
 |パースペクティブ|パースペクティブ|  
 |KPI|KPI|  
-|ユーザー階層/親子階層|階層|  
+|ユーザー階層/親子階層|Hierarchy|  
 |表示フォルダー|表示フォルダー|  
   
 ## <a name="measures-measure-groups-and-kpis"></a>メジャー、メジャー グループ、および KPI  
@@ -217,7 +217,7 @@ ms.locfileid: "75229400"
   
  DISCOVER_CSDL_METADATA 要求には、次の制限があります。  
   
-|名前|必須|説明|  
+|Name|必須|[説明]|  
 |----------|--------------|-----------------|  
 |CATALOG_NAME|はい|カタログ\データベース名。|  
 |PERSPECTIVE_NAME|キューブに複数のパースペクティブが含まれている場合は必須。 キューブが 1 つしかない場合や既定のパースペクティブがある場合は省略可能。|多次元データベース内のキューブ名またはパースペクティブ名。|  

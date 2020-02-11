@@ -1,5 +1,5 @@
 ---
-title: core.sp_add_collector_type (TRANSACT-SQL) |Microsoft Docs
+title: sp_add_collector_type (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -21,16 +21,16 @@ ms.assetid: 1d981037-2147-464e-a456-7d8e479bce89
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3e0f91b88a9f58ed290183ae48676572204ac98b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68078211"
 ---
-# <a name="corespaddcollectortype-transact-sql"></a>core.sp_add_collector_type (TRANSACT-SQL)
+# <a name="coresp_add_collector_type-transact-sql"></a>sp_add_collector_type (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  管理データ ウェアハウス データベースの core.supported_collector_types ビューに新しいエントリを追加します。 管理データ ウェアハウス データベースのコンテキストでプロシージャを実行する必要があります。  
+  管理データ ウェアハウス データベースの core.supported_collector_types ビューに新しいエントリを追加します。 プロシージャは、管理データウェアハウスデータベースのコンテキストで実行する必要があります。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,17 +42,17 @@ core.sp_add_collector_type [ @collector_type_uid = ] 'collector_type_uid'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @collector_type_uid = ] '*collector_type_uid*'  
- コレクター型の GUID を指定します。 *collector_type_uid*は**uniqueidentifier**既定値はありません。  
+ [ @collector_type_uid = ]'*collector_type_uid*'  
+ コレクター型の GUID を指定します。 *collector_type_uid*は**uniqueidentifier**,、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
 ## <a name="permissions"></a>アクセス許可  
- メンバーシップが必要です、 **mdw_admin** (EXECUTE 権限) を持つ固定データベース ロール。  
+ **Mdw_admin** (EXECUTE 権限を持つ) 固定データベースロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例  
- 次の例では、core.supported_collector_types ビューにジェネリック T-SQL Query コレクター型を追加します。 既定では、ジェネリック T-SQL Query コレクター型は既に存在します。 そのため、既定のインストールでこのコードを実行する場合、コレクター型が既に存在するメッセージが表示されます。  
+## <a name="examples"></a>例  
+ 次の例では、core.supported_collector_types ビューにジェネリック T-SQL Query コレクター型を追加します。 既定では、ジェネリック T-sql Query コレクター型は既に存在します。 このため、既定のインストールでこのコードを実行すると、コレクター型が既に存在することを示すメッセージが表示されます。  
   
  sp_remove_collector_type ストアド プロシージャを使用してジェネリック T-SQL Query コレクター型を削除してから、管理データ ウェアハウスにデータをアップロードできる登録済みのコレクター型としてジェネリック T-SQL Query コレクター型を再度追加すると、このコードは正常に動作します。  
   
@@ -65,9 +65,9 @@ SELECT @collector_type_uid = (SELECT collector_type_uid FROM msdb.dbo.syscollect
 EXECUTE @RC = core.sp_add_collector_type @collector_type_uid;  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [データ コレクター ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
- [管理データ ウェアハウス](../../relational-databases/data-collection/management-data-warehouse.md)  
+## <a name="see-also"></a>参照  
+ [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [データコレクターストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
+ [管理データ ウェアハウス (management data warehouse)](../../relational-databases/data-collection/management-data-warehouse.md)  
   
   

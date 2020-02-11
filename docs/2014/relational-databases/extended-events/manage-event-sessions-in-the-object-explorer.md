@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d44ab9256367ceb9883b55bb9b01ad67e14ded32
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62705518"
 ---
 # <a name="manage-event-sessions-in-the-object-explorer"></a>オブジェクト エクスプローラーでのイベント セッションの管理
@@ -36,7 +36,7 @@ ms.locfileid: "62705518"
  拡張イベント セッションの作成の詳細については、「 [拡張イベント セッションの作成](../../database-engine/create-an-extended-events-session.md)」を参照してください。  
   
 ## <a name="starting-or-stopping-an-extended-events-session"></a>拡張イベント セッションの開始または停止  
- 開始または使用の拡張イベント セッションを停止することができます、**クエリ エディター**を使用して、`ALTER EVENT SESSION`ステートメント、またはを使用して、**拡張イベント**のノード**オブジェクト エクスプ ローラー**.  
+ 拡張イベントセッションを開始または停止するには、**クエリエディター**で`ALTER EVENT SESSION`ステートメントを使用するか、**オブジェクトエクスプローラー**の [**拡張イベント**] ノードを使用します。  
   
  イベント セッションを停止すると、以後そのセッションは、sys.dm_xe_sessions 動的管理ビュー (DMV) にアクティブなセッションとして表示されません。 ただし、セッションの定義は一切変更されず、セッションを再開することもできます。 セッションの定義を完全に削除するには、セッションを削除する必要があります。  
   
@@ -116,7 +116,7 @@ STATE = STOP
 ## <a name="script-an-event-session-definition-using-includetsqlincludestsql-mdmd"></a>を使用したイベント セッション定義のスクリプト化 [!INCLUDE[tsql](../../includes/tsql-md.md)]  
  新規セッション ウィザードおよび [新しいセッション] ダイアログの両方に、拡張イベント セッションを定義する [!INCLUDE[tsql](../../includes/tsql-md.md)] を生成するスクリプト オプションがあります。  
   
- セッション名を右クリックし、 [!INCLUDE[tsql](../../includes/tsql-md.md)] [セッションをスクリプト化] **をポイントし、**[CREATE] **をクリックして、既存の拡張イベント セッションの**にアクセスできます。  
+ セッション名を右クリックし、 [!INCLUDE[tsql](../../includes/tsql-md.md)] [セッションをスクリプト化] **をポイントし、** [CREATE] **をクリックして、既存の拡張イベント セッションの**にアクセスできます。  
   
 ## <a name="delete-an-extended-events-session"></a>拡張イベント セッションの削除  
  次の方法で拡張イベント セッションを削除できます。  
@@ -128,7 +128,7 @@ STATE = STOP
  イベント セッションを削除すると、すべての構成情報が削除され、以後、セッションの定義は sys.server_event_sessions カタログ ビューに表示されません。  
   
 > [!NOTE]  
->  system_health および AlwaysOn_health に含まれている[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; 削除しないでください。 system_health は既定で有効です (詳細については、「 [system_health セッションの使用](use-the-ssms-xe-profiler.md)」を参照)。 AlwaysOn_health は既定で無効にします。 パフォーマンスの問題を診断する際に役立つデータがこれらのセッションによって収集されます。  
+>  system_health と AlwaysOn_health は、に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]含まれています。削除しないでください。 system_health は既定で有効です (詳細については、「 [system_health セッションの使用](use-the-ssms-xe-profiler.md)」を参照)。 既定では、AlwaysOn_health はオフになっています。 パフォーマンスの問題を診断する際に役立つデータがこれらのセッションによって収集されます。  
   
  拡張イベント セッションを削除するには、ALTER ANY EVENT SESSION 権限が必要です。  
   

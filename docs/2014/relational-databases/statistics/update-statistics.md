@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7c9a628f912f382f3ee8a87276aa34d0e54e37ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63033660"
 ---
 # <a name="update-statistics"></a>統計の更新
@@ -29,7 +29,7 @@ ms.locfileid: "63033660"
   
 -   **作業を開始する準備:**  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **統計オブジェクトを更新するために使用するもの:**  
   
@@ -58,7 +58,7 @@ ms.locfileid: "63033660"
   
 5.  更新する統計オブジェクトを右クリックし、 **[プロパティ]** を選択します。  
   
-6.  **統計のプロパティ -** _statistics_name_ダイアログ ボックスで、**これらの列の統計を更新**チェック ボックスをオンにして **[ok]** .  
+6.  [**統計のプロパティ-**_statistics_name_ ] ダイアログボックスで、[**これらの列の統計を更新**する] チェックボックスをオンにし、[ **OK**] をクリックします。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
@@ -94,7 +94,7 @@ ms.locfileid: "63033660"
     GO  
     ```  
   
- 詳細については、「[UPDATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/update-statistics-transact-sql)」を参照してください。  
+ 詳細については、「 [UPDATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/update-statistics-transact-sql)で作成されたデータベース メンテナンス プランを実行します。  
   
 #### <a name="to-update-all-statistics-in-a-database"></a>データベースのすべての統計を更新するには  
   

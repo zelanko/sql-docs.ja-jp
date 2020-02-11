@@ -1,5 +1,5 @@
 ---
-title: sys.query_store_query (TRANSACT-SQL) |Microsoft Docs
+title: query_store_query (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/23/2019
 ms.prod: sql
@@ -22,64 +22,64 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d5b7eea64a807af96094767ef5aca00167d5946c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68067961"
 ---
-# <a name="sysquerystorequery-transact-sql"></a>sys.query_store_query (TRANSACT-SQL)
+# <a name="sysquery_store_query-transact-sql"></a>query_store_query (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
-  クエリとその関連する全体的な集計のランタイム実行統計に関する情報が含まれています。  
+  クエリと、それに関連付けられた全体的な集計されたランタイム実行統計に関する情報を格納します。  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
-|**query_id**|**bigint**|主キー。|  
-|**query_text_id**|**bigint**|外部キーです。 結合[sys.query_store_query_text &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)|  
-|**context_settings_id**|**bigint**|外部キーです。 結合[sys.query_context_settings &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)します。<br/>**注:** Azure SQL Data Warehouse は、ゼロ (0) を常に返します。|  
-|**object_id**|**bigint**|クエリの一部となっているデータベース オブジェクトの ID (ストアド プロシージャ、トリガー、CLR UDF とユーザー定義集計など。)。 データベース オブジェクト (アドホック クエリ) の一部として、クエリが実行されない場合は 0。<br/>**注:** Azure SQL Data Warehouse は、ゼロ (0) を常に返します。|  
-|**batch_sql_handle**|**varbinary(64)**|ステートメントのバッチ、クエリの ID では、一部です。 クエリが一時テーブルまたはテーブル変数を参照している場合のみ設定されます。<br/>**注:** Azure SQL Data Warehouse は常に返します*NULL*します。|  
-|**query_hash**|**binary(8)**|論理クエリ ツリーに基づいて、個別のクエリの MD5 ハッシュ。 オプティマイザー ヒントが含まれています。|  
-|**is_internal_query**|**bit**|クエリは、内部的に生成されました。<br/>**注:** Azure SQL Data Warehouse は、ゼロ (0) を常に返します。|  
-|**query_parameterization_type**|**tinyint**|パラメーター化の種類:<br /><br /> 0 - なし<br /><br /> 1-ユーザー<br /><br /> 2-シンプルです<br /><br /> 3-強制<br/>**注:** Azure SQL Data Warehouse は、ゼロ (0) を常に返します。|  
-|**query_parameterization_type_desc**|**nvarchar(60)**|パラメーターの型の説明テキストです。<br/>**注:** Azure SQL Data Warehouse は常に返します*None*します。|  
-|**initial_compile_start_time**|**datetimeoffset**|開始時刻をコンパイルします。|  
-|**last_compile_start_time**|**datetimeoffset**|開始時刻をコンパイルします。|  
-|**last_execution_time**|**datetimeoffset**|最後の実行時間とは、最後に、クエリ/プランの終了時刻です。|  
-|**last_compile_batch_sql_handle**|**varbinary(64)**|クエリが、前回使用された最後の SQL バッチのハンドル。 入力として提供する[sys.dm_exec_sql_text &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)バッチの完全なテキストを取得します。<br/>**注:** Azure SQL Data Warehouse は常に返します*NULL*します。|  
-|**last_compile_batch_offset_start**|**bigint**|情報と共に last_compile_batch_sql_handle sys.dm_exec_sql_text に提供することができます。<br/>**注:** Azure SQL Data Warehouse は、ゼロ (0) を常に返します。|
-|**last_compile_batch_offset_end**|**bigint**|情報と共に last_compile_batch_sql_handle sys.dm_exec_sql_text に提供することができます。<br/>**注:** Azure SQL Data Warehouse は、ゼロ (0) を常に返します。|  
-|**count_compiles**|**bigint**|コンパイルの統計情報。<br/>**注:** Azure SQL Data Warehouse (1) 1 つは常に返します。|  
-|**avg_compile_duration**|**float**|コンパイルの統計情報が (マイクロ秒)。|  
-|**last_compile_duration**|**bigint**|コンパイルの統計情報が (マイクロ秒)。|  
-|**avg_bind_duration**|**float**|(マイクロ秒) には、統計情報をバインドします。<br/>**注:** Azure SQL Data Warehouse は、ゼロ (0) を常に返します。|  
-|**last_bind_duration**|**bigint**|統計情報をバインドします。<br/>**注:** Azure SQL Data Warehouse は、ゼロ (0) を常に返します。|  
-|**avg_bind_cpu_time**|**float**|統計情報をバインドします。<br/>**注:** Azure SQL Data Warehouse は、ゼロ (0) を常に返します。|  
-|**last_bind_cpu_time**|**bigint**|統計情報をバインドします。<br/>**注:** Azure SQL Data Warehouse は、ゼロ (0) を常に返します。|  
-|**avg_optimize_duration**|**float**|(マイクロ秒) の最適化に関する統計。<br/>**注:** Azure SQL Data Warehouse は、ゼロ (0) を常に返します。|
-|**last_optimize_duration**|**bigint**|最適化に関する統計。<br/>**注:** Azure SQL Data Warehouse は、ゼロ (0) を常に返します。|
-|**avg_optimize_cpu_time**|**float**|(マイクロ秒) の最適化に関する統計。<br/>**注:** Azure SQL Data Warehouse は、ゼロ (0) を常に返します。|
-|**last_optimize_cpu_time**|**bigint**|最適化に関する統計。<br/>**注:** Azure SQL Data Warehouse は、ゼロ (0) を常に返します。|
-|**avg_compile_memory_kb**|**float**|メモリ統計情報をコンパイルします。<br/>**注:** Azure SQL Data Warehouse は、ゼロ (0) を常に返します。|
-|**last_compile_memory_kb**|**bigint**|メモリ統計情報をコンパイルします。<br/>**注:** Azure SQL Data Warehouse は、ゼロ (0) を常に返します。|
-|**max_compile_memory_kb**|**bigint**|メモリ統計情報をコンパイルします。<br/>**注:** Azure SQL Data Warehouse は、ゼロ (0) を常に返します。|
-|**is_clouddb_internal_query**|**bit**|常に 0 で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オンプレミスです。<br/>**注:** Azure SQL Data Warehouse は、ゼロ (0) を常に返します。|
+|**query_id**|**bigint**|主キー|  
+|**query_text_id**|**bigint**|外部キー。 [Query_store_query_text &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)への結合|  
+|**context_settings_id**|**bigint**|外部キー。 [Query_context_settings &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)に結合します。<br/>**注:** Azure SQL Data Warehouse は常にゼロ (0) を返します。|  
+|**object_id**|**bigint**|クエリが含まれるデータベースオブジェクトの ID (ストアドプロシージャ、トリガー、CLR UDF/UDAgg など)。 クエリがデータベースオブジェクト (アドホッククエリ) の一部として実行されない場合は0です。<br/>**注:** Azure SQL Data Warehouse は常にゼロ (0) を返します。|  
+|**batch_sql_handle**|**varbinary (64)**|クエリが含まれているステートメントバッチの ID。 クエリが一時テーブルまたはテーブル変数を参照する場合にのみ設定されます。<br/>**注:** Azure SQL Data Warehouse は常に*NULL*を返します。|  
+|**query_hash**|**binary (8)**|論理クエリツリーに基づく個々のクエリの MD5 ハッシュ。 オプティマイザーヒントを含めます。|  
+|**is_internal_query**|**bit**|クエリが内部的に生成されました。<br/>**注:** Azure SQL Data Warehouse は常にゼロ (0) を返します。|  
+|**query_parameterization_type**|**tinyint**|パラメーター化の種類:<br /><br /> 0 - なし<br /><br /> 1-ユーザー<br /><br /> 2-単純<br /><br /> 3-強制<br/>**注:** Azure SQL Data Warehouse は常にゼロ (0) を返します。|  
+|**query_parameterization_type_desc**|**nvarchar (60)**|パラメーター化の型の説明テキストです。<br/>**注:** Azure SQL Data Warehouse は常に*None*を返します。|  
+|**initial_compile_start_time**|**datetimeoffset**|コンパイルの開始時刻。|  
+|**last_compile_start_time**|**datetimeoffset**|コンパイルの開始時刻。|  
+|**last_execution_time**|**datetimeoffset**|[最終実行時間] は、クエリ/プランの最後の終了時刻を示します。|  
+|**last_compile_batch_sql_handle**|**varbinary (64)**|クエリが最後に使用された最後の SQL バッチのハンドル。 この値は、バッチの完全なテキストを取得するために、 [transact-sql&#41;&#40;dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)に入力として指定できます。<br/>**注:** Azure SQL Data Warehouse は常に*NULL*を返します。|  
+|**last_compile_batch_offset_start**|**bigint**|Last_compile_batch_sql_handle と共に、dm_exec_sql_text に提供できる情報。<br/>**注:** Azure SQL Data Warehouse は常にゼロ (0) を返します。|
+|**last_compile_batch_offset_end**|**bigint**|Last_compile_batch_sql_handle と共に、dm_exec_sql_text に提供できる情報。<br/>**注:** Azure SQL Data Warehouse は常にゼロ (0) を返します。|  
+|**count_compiles**|**bigint**|コンパイルの統計情報。<br/>**注:** Azure SQL Data Warehouse は常に1を返します。|  
+|**avg_compile_duration**|**float**|ミリ秒単位のコンパイル統計。|  
+|**last_compile_duration**|**bigint**|ミリ秒単位のコンパイル統計。|  
+|**avg_bind_duration**|**float**|統計情報をマイクロ秒単位でバインドします。<br/>**注:** Azure SQL Data Warehouse は常にゼロ (0) を返します。|  
+|**last_bind_duration**|**bigint**|バインディングの統計。<br/>**注:** Azure SQL Data Warehouse は常にゼロ (0) を返します。|  
+|**avg_bind_cpu_time**|**float**|バインディングの統計。<br/>**注:** Azure SQL Data Warehouse は常にゼロ (0) を返します。|  
+|**last_bind_cpu_time**|**bigint**|バインディングの統計。<br/>**注:** Azure SQL Data Warehouse は常にゼロ (0) を返します。|  
+|**avg_optimize_duration**|**float**|マイクロ秒単位の最適化統計。<br/>**注:** Azure SQL Data Warehouse は常にゼロ (0) を返します。|
+|**last_optimize_duration**|**bigint**|最適化の統計。<br/>**注:** Azure SQL Data Warehouse は常にゼロ (0) を返します。|
+|**avg_optimize_cpu_time**|**float**|マイクロ秒単位の最適化統計。<br/>**注:** Azure SQL Data Warehouse は常にゼロ (0) を返します。|
+|**last_optimize_cpu_time**|**bigint**|最適化の統計。<br/>**注:** Azure SQL Data Warehouse は常にゼロ (0) を返します。|
+|**avg_compile_memory_kb**|**float**|メモリの統計情報をコンパイルします。<br/>**注:** Azure SQL Data Warehouse は常にゼロ (0) を返します。|
+|**last_compile_memory_kb**|**bigint**|メモリの統計情報をコンパイルします。<br/>**注:** Azure SQL Data Warehouse は常にゼロ (0) を返します。|
+|**max_compile_memory_kb**|**bigint**|メモリの統計情報をコンパイルします。<br/>**注:** Azure SQL Data Warehouse は常にゼロ (0) を返します。|
+|**is_clouddb_internal_query**|**bit**|オンプレミス[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では常に0です。<br/>**注:** Azure SQL Data Warehouse は常にゼロ (0) を返します。|
   
 ## <a name="permissions"></a>アクセス許可  
- 必要があります、 **VIEW DATABASE STATE**権限。  
+ **VIEW DATABASE STATE**権限が必要です。  
   
 ## <a name="see-also"></a>参照  
- [sys.database_query_store_options &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
- [sys.query_context_settings &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
- [sys.query_store_plan &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
- [sys.query_store_query_text &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
- [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
- [sys.query_store_runtime_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)   
- [sys.query_store_runtime_stats_interval &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
+ [database_query_store_options &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
+ [query_context_settings &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
+ [query_store_plan &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
+ [query_store_query_text &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
+ [query_store_wait_stats &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
+ [query_store_runtime_stats &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)   
+ [query_store_runtime_stats_interval &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
  [クエリのストアを使用した、パフォーマンスの監視](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [クエリ ストアのストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
- [sys.fn_stmt_sql_handle_from_sql_stmt &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)  
+ [Transact-sql&#41;&#40;のストアドプロシージャのクエリストア](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
+ [fn_stmt_sql_handle_from_sql_stmt &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)  
   
   

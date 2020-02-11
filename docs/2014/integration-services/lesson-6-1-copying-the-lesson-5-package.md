@@ -1,5 +1,5 @@
 ---
-title: 手順 1:レッスン 5 のパッケージのコピー |Microsoft Docs
+title: '手順 1: レッスン 5 のパッケージのコピー | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ede34999b9ca7a18a2bb5ec997c4a93735b82be2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62890758"
 ---
-# <a name="step-1-copying-the-lesson-5-package"></a>手順 1:レッスン 5 のパッケージのコピー
+# <a name="step-1-copying-the-lesson-5-package"></a>手順 1: レッスン 5 のパッケージのコピー
   ここでは、レッスン 5 で作成した Lesson 5.dtsx パッケージのコピーを作成します。 または、チュートリアルに含まれている、レッスン 5 を完了した状態のパッケージをプロジェクトに追加した後、コピーすることもできます。 レッスン 6 の実習では、このパッケージの新しいコピーを使用します。  
   
 ### <a name="to-copy-the-lesson-5-package"></a>レッスン 5 のパッケージをコピーするには  
@@ -38,7 +38,7 @@ ms.locfileid: "62890758"
   
 7.  [プロパティ] ウィンドウで、[Name] プロパティを「Lesson 6」に変更します。  
   
-8.  ID プロパティのボックスをクリックし、ドロップダウン矢印をクリックして、順にクリックします\<Generate New ID >。  
+8.  [ID] プロパティのボックスをクリックし、ドロップダウン矢印をクリックして\<、[新しい id の生成>] をクリックします。  
   
 ### <a name="to-add-the-completed-lesson-5-package"></a>レッスン 5 を完了した状態のパッケージを追加するには  
   
@@ -48,13 +48,13 @@ ms.locfileid: "62890758"
   
 3.  [既存のパッケージのコピーを追加] ダイアログ ボックスの [パッケージの場所] で、[ファイル システム] をクリックします。  
   
-4.  参照ボタン ([...]) をクリックし、コンピューター上の Lesson 5.dtsx に移動して、 **[開く]** をクリックします。  
+4.  参照ボタン ([...]) をクリックし、コンピューター上の Lesson 5.dtsx に移動して、**[開く]** をクリックします。  
   
      このチュートリアルのレッスン パッケージをすべてダウンロードするには、次の手順を実行します。  
   
-    1.  「[Integration Services 製品サンプル](https://go.microsoft.com/fwlink/?LinkId=275027)」に移動します。  
+    1.  「 [Integration Services 製品サンプル](https://go.microsoft.com/fwlink/?LinkId=275027)」に移動します。  
   
-    2.  **[ダウンロード]** タブをクリックします。  
+    2.  [ **ダウンロード** ] タブをクリックします。  
   
     3.  SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip ファイルをクリックします。  
   
@@ -63,6 +63,6 @@ ms.locfileid: "62890758"
      レッスン 5 パッケージをコピーした後で、ソリューション内に前のレッスンで使用したパッケージが現在存在している場合は、レッスン 1 ～ 5 の各パッケージを右クリックし、[プロジェクトから除外] をクリックします。 作業完了後は、ソリューション内にの Lesson 6.dtsx のみが存在しています。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
- [手順 2:プロジェクトをプロジェクト配置モデルに変換します。](lesson-6-2-converting-the-project-to-the-project-deployment-model.md)  
+ [手順 2: プロジェクトをプロジェクト配置モデルに変換する](lesson-6-2-converting-the-project-to-the-project-deployment-model.md)  
   
   

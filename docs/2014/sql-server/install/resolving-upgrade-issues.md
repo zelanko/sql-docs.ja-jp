@@ -1,5 +1,5 @@
 ---
-title: アップグレードの問題を解決する |Microsoft Docs
+title: アップグレードに関する問題の解決 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -31,10 +31,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 85de606ecea93aba80714d4266e9897dd856879f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66092500"
 ---
 # <a name="resolving-upgrade-issues"></a>アップグレードに関する問題とその対処方法
@@ -50,12 +50,12 @@ ms.locfileid: "66092500"
   
 -   [レプリケーションのアップグレードに関する問題](../../../2014/sql-server/install/replication-upgrade-issues.md)  
   
--   [Reporting Services のアップグレードに関する問題&#40;アップグレード アドバイザー&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
+-   [アップグレードに関する問題を Reporting Services &#40;アップグレードアドバイザー&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
   
 -   [SQL Server エージェントのアップグレードに関する問題](../../../2014/sql-server/install/sql-server-agent-upgrade-issues.md)  
   
 ## <a name="issues-that-prevent-upgrading"></a>アップグレードを妨げる問題  
- 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の構成または設定が原因で、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] にアップグレードできなくなる場合があります。 セットアップでは、インストールするときにこれらの問題が検出された場合[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]セットアップがアップグレード プロセスを停止し、アップグレード アドバイザーを実行し、ブロッキングの問題を解決することを要求します。  
+ 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の構成または設定が原因で、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] にアップグレードできなくなる場合があります。 のインストール[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]時にセットアップでこれらの問題が検出された場合、セットアップによってアップグレードプロセスが停止され、アップグレードアドバイザーを実行して、ブロックの問題を修正するように要求されます。  
   
 ### [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
  以下のタスクが[!INCLUDE[ssDE](../../includes/ssde-md.md)]のアップグレード レポートに表示された場合は、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] にアップグレードする前に必要な操作を実行する必要があります。  
@@ -69,6 +69,6 @@ ms.locfileid: "66092500"
 -   [sp_rename を使用して重複するインデックス名を変更する](../../../2014/sql-server/install/use-sp-rename-to-rename-duplicate-index-name.md)  
   
 ## <a name="see-also"></a>参照  
- [SQL Server 2014 アップグレード アドバイザー&#91;新規&#93;](sql-server-2014-upgrade-advisor.md)  
+ [SQL Server 2014 Upgrade Advisor &#91;新しい&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

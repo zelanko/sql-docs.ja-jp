@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: ef6929aeb06c9472eb3ff210de016117a9636ded
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74399761"
 ---
 # <a name="uninstall-analytics-platform-system-hotfixes"></a>Analytics Platform System の修正プログラムのアンインストール 
 次の手順では、以前にインストールした Analytics Platform System 修正プログラムをアンインストールする方法について説明します。  
   
-## <a name="before-you-begin"></a>開始する前に  
+## <a name="before-you-begin"></a>はじめに  
   
 ### <a name="prerequisites"></a>前提条件  
 これらの手順を実行するには、次のものが必要です。  

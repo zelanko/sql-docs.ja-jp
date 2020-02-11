@@ -22,16 +22,16 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e5af224150508f048d91345cba595517209f824d
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73981777"
 ---
-# <a name="sysfulltext_languages-transact-sql"></a>fulltext_languages (Transact-sql)
+# <a name="sysfulltext_languages-transact-sql"></a>sys.fulltext_languages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  このカタログビューには、ワードブレーカーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に登録されている言語ごとに1行が含まれています。 各行には、言語の LCID と名前が表示されます。 言語のワードブレーカーが登録されている場合、その他の言語リソース (ステミング機能、ノイズワード (ストップワード)、および類義語辞典ファイル) は、フルテキストインデックス作成またはクエリ操作で使用できるようになります。 **名前**または**lcid**の値は、フルテキストクエリとフルテキストインデックスの [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントで指定できます。  
+  このカタログビューには、ワードブレーカーがに登録されて[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]いる言語ごとに1つの行が含まれています。 各行には、言語の LCID と名前が表示されます。 言語のワードブレーカーが登録されている場合、その他の言語リソース (ステミング機能、ノイズワード (ストップワード)、および類義語辞典ファイル) は、フルテキストインデックス作成またはクエリ操作で使用できるようになります。 **名前**または**lcid**の値は、フルテキストクエリとフルテキストインデックス[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントで指定できます。  
    
 |列|データ型|[説明]|  
 |------------|---------------|-----------------|  
@@ -41,13 +41,13 @@ ms.locfileid: "73981777"
 ## <a name="values-returned-for-default-languages"></a>既定の言語の戻り値  
  次の表に、ワード ブレーカーが既定で登録されている言語の値を示します。  
   
-|言語|LCID (LCID)|  
+|言語|LCID|  
 |--------------|----------|  
 |アラビア語|1025|  
 |ベンガル語 (インド)|1093|  
 |英語 (U.K.)|2057|  
 |ブルガリア語|1026|  
-|カタロニア語|1027|  
+|カタルニア語|1027|  
 |中国語 (中華人民共和国香港特別行政区)|3076|  
 |中国語 (中華人民共和国マカオ特別行政区)|5124|  
 |中国語 (シンガポール)|4100|  
@@ -73,7 +73,7 @@ ms.locfileid: "73981777"
 |マレー語 - マレーシア|1086|  
 |マラヤーラム語|1100|  
 |マラーティー語|1102|  
-|ニュートラル|0|  
+|中立|0|  
 |ノルウェー語 (ブークモール)|1044|  
 |**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。<br /><br /> ポーランド語|1045|  
 |ポルトガル語 (ブラジル)|1046|  
@@ -81,34 +81,34 @@ ms.locfileid: "73981777"
 |パンジャーブ語|1094|  
 |ルーマニア語|1048|  
 |ロシア語|1049|  
-|セルビア語 (キリル)|3098|  
+|セルビア語 (キリル文字)|3098|  
 |セルビア語 (ラテン)|2074|  
-|Simplified Chinese|2052|  
+|簡体中国語|2052|  
 |スロバキア語|1051|  
 |スロベニア語|1060|  
 |スペイン語|3082|  
 |スウェーデン語|1053|  
-|タミール語|1097|  
+|タミル語|1097|  
 |テルグ語|1098|  
 |タイ語|1054|  
 |繁体字中国語|1028|  
 |**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。<br /><br /> トルコ語|1055|  
 |ウクライナ語|1058|  
-|ウルドゥ語|1056|  
+|ウルドゥー語|1056|  
 |ベトナム語|1066|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  フルテキスト検索に登録されている言語の一覧を更新するには、 [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)'**update_languages**' を使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  
   
 ## <a name="see-also"></a>参照  
- [transact-sql &#40;  の&#41; sp_fulltext_load_thesaurus_file](../../relational-databases/system-stored-procedures/sp-fulltext-load-thesaurus-file-transact-sql.md)  
- [sp_fulltext_service &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)   
- [検索用のワード ブレーカーとステミング機能の構成と管理](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
- [フルテキスト検索のための類義語辞典ファイルの構成と管理](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)   
- [フルテキスト検索に使用するストップワードとストップリストの構成と管理](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
+ [sp_fulltext_load_thesaurus_file &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-load-thesaurus-file-transact-sql.md)   
+ [sp_fulltext_service &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)   
+ [検索用のワードブレーカーとステミング機能の構成と管理](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
+ [フルテキスト検索用の類義語辞典ファイルの構成と管理](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)   
+ [フルテキスト検索のためのストップワードとストップリストの構成と管理](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
  [フルテキスト検索のアップグレード](../../relational-databases/search/upgrade-full-text-search.md)  
   
   

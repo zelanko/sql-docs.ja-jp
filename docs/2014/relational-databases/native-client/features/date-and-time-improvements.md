@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 160731a6749b3741a68dcccafedd3499db465349
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75231761"
 ---
 # <a name="date-and-time-improvements"></a>日付と時刻の強化機能
@@ -53,5 +53,5 @@ ms.locfileid: "75231761"
  ODBC 標準では、既存の date 型、time 型、および timestamp 型の間の変換のしくみについて説明します。 このような変換は、[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] で導入されたすべての日付型と時刻型との間の変換を含めるように一貫して拡張されます。  
   
 ## <a name="see-also"></a>参照  
- [SQL Server Native Client 機能](sql-server-native-client-features.md)  
+ [SQL Server Native Client の機能](sql-server-native-client-features.md)  
   

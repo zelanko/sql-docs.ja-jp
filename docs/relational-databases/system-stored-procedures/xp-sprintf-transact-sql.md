@@ -1,7 +1,7 @@
 ---
-title: xp_sprintf (TRANSACT-SQL) |Microsoft Docs
+title: xp_sprintf (Transact-sql) |Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 01/09/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -17,18 +17,17 @@ helpviewer_keywords:
 ms.assetid: 1eedd65c-03cc-4eab-b76e-04684fdfec52
 author: CarlRabeler
 ms.author: carlrab
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ec2ad672135453750d5880d63a8f90f3e3d4c558
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3ba1648da108762b03155eb93e1ee11c53a75583
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67898356"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "75831763"
 ---
-# <a name="xpsprintf-transact-sql"></a>xp_sprintf (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="xp_sprintf-transact-sql"></a>xp_sprintf (Transact-sql)
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  書式化して、文字列の出力パラメーターで、一連の文字や値を格納します。 各フォーマット引数は対応する引数に置き換えられます。  
+  文字列の出力パラメーターに一連の文字および値を書式設定して格納します。 各フォーマット引数は対応する引数に置き換えられます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,35 +40,35 @@ xp_sprintf { string OUTPUT , format }
 ```  
   
 ## <a name="arguments"></a>引数  
- *string*  
- **Varchar**出力を受け取る変数。  
+ *文字列*  
+ 出力を受け取る**varchar**変数を示します。  
   
  OUTPUT  
- 指定した場合は、変数の値を出力パラメーターになります。  
+ 指定すると、変数の値が出力パラメーターに格納されます。  
   
- *format*  
- 書式文字の文字列のプレース ホルダーでは、*引数*C 言語でサポートされているような値は、 **sprintf**関数。 現時点では、%s フォーマット引数のみがサポートされています。  
+ *形式*  
+ は、C 言語の**sprintf**関数でサポートされているものと同様に、*引数*の値のプレースホルダーを含む書式指定文字列です。 現在、% s 書式引数のみがサポートされています。  
   
- *argument*  
+ *引数*  
  対応するフォーマット引数の値を表す文字列。  
   
  *n*  
- 最大 50 の引数を指定できることを示すプレース ホルダー。  
+ は、最大で50個の引数を指定できることを示すプレースホルダーです。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- **xp_sprintf**次のメッセージが返されます。  
+ **xp_sprintf**は次のメッセージを返します。  
   
  `The command(s) completed successfully.`  
   
 ## <a name="permissions"></a>アクセス許可  
- ロール **public** のメンバーシップが必要です。  
+ **Public**ロールのメンバーシップが必要です。  
   
-## <a name="see-also"></a>関連項目  
- [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [汎用拡張ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
- [xp_sscanf &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/xp-sscanf-transact-sql.md)  
+## <a name="see-also"></a>参照  
+ [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;の一般的な拡張ストアドプロシージャ](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
+ [xp_sscanf &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/xp-sscanf-transact-sql.md)  
   
   

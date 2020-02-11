@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: b0bcb5cfe1ec4111aaea7153f35bca084df62b76
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401011"
 ---
 # <a name="load-data-with-integration-services-to-parallel-data-warehouse"></a>Integration Services を使用して並列データウェアハウスにデータを読み込む
@@ -61,9 +61,9 @@ SQL Server Data Tools 内からパッケージを実行するには、パッケ�
 ### <a name="run-from-a-windows-command-prompt"></a>Windows コマンドプロンプトから実行する 
 Windows コマンドプロンプトから、 **dtexec**ユーティリティを使用してパッケージを実行するには、次のようにします。`dtexec /FILE <packagePath>`  
   
-たとえば次のようになります。`dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
+例: `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
   
-## <a name="DataTypes"></a>データの種類  
+## <a name="DataTypes"></a>データ型  
 Integration Services を使用してデータソースから SQL Server PDW データベースにデータを読み込む場合、最初にデータがソースデータから Integration Services データ型にマップされます。 これにより、複数のデータ ソースのデータをデータ型の共通のセットにマップできます。  
   
 その後、データは Integration Services から SQL Server PDW データ型にマップされます。 次の表に、SQL Server PDW データ型ごとに、SQL Server PDW データ型に変換できるデータ型 Integration Services を示します。  
@@ -126,10 +126,10 @@ Integration Services の読み込みパッケージを実行するには、次�
   
 -   ステージングデータベースが使用されていない場合は、コピー先データベースに対する権限を作成します。 これは、一時テーブルを作成するためのものです。  
   
-## <a name="GenRemarks"></a>一般的な注釈  
+## <a name="GenRemarks"></a>一般的な解説  
 Integration Services パッケージで複数の SQL Server PDW 変換先が実行されていて、いずれかの接続が終了した場合、Integration Services は SQL Server PDW のすべての送信先へのデータのプッシュを停止します。  
   
-## <a name="Limits"></a>規則や制限  
+## <a name="Limits"></a>制限事項と制約事項  
 Integration Services パッケージの場合、同じデータソースの SQL Server PDW の宛先の数は、アクティブな読み込みの最大数によって制限されます。 最大数は事前に構成されており、ユーザーは構成できません。 
 
 <!-- MISSING LINKS
@@ -151,7 +151,7 @@ Integration Services を使用してデータを読み込む場合、SQL ServerP
   
 ## <a name="Examples"></a>例  
   
-### <a name="Walkthrough"></a>ある. フラットファイルからの単純な読み込み  
+### <a name="Walkthrough"></a>A. フラットファイルからの単純な読み込み  
 次のチュートリアルでは、Integration Services を使用して SQL Server PDW アプライアンスにフラットファイルデータを読み込む簡単なデータ読み込みについて説明します。  この例では、前に説明したように、Integration Services がクライアントコンピューターに既にインストールされており、SQL Server PDW の宛先がインストールされていることを前提としています。  
   
 この例では、次の DDL `Orders`を含むテーブルに読み込みます。 `Orders`テーブルは、 `LoadExampleDB`データベースの一部です。  

@@ -1,5 +1,5 @@
 ---
-title: 大きなデータの取得 |Microsoft Docs
+title: 大きなデータを取得する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,14 +16,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e0c042b367cbd8a56d21ed57735f9334d24003d1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63195228"
 ---
 # <a name="getting-large-data"></a>大きなデータの取得
-  一般に、コンシューマーを作成するコードを分離する必要があります、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーのストレージ オブジェクトにより参照されないデータを処理する他のコードから、 **ISequentialStream**インターフェイス ポインター。  
+  一般に、コンシューマーは、 **ISequentialStream**インターフェイスポインターに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]よって参照されていないデータを処理する他のコードから、Native Client OLE DB プロバイダーストレージオブジェクトを作成するコードを分離する必要があります。  
   
  このトピックでは、次の関数で使用可能な機能について説明します。  
   
@@ -33,9 +33,9 @@ ms.locfileid: "63195228"
   
 -   ICommand::Execute  
   
- コンシューマーがへの呼び出し内のデータの単一の行のみをフェッチする必要があります (行セット プロパティ グループ) 内の DBPROP_ACCESSORDER プロパティが値 DBPROPVAL_AO_SEQUENTIAL または DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS のいずれかに設定されている場合、 **GetNextRows**メソッド BLOB データがバッファーされていないためです。 DBPROP_ACCESSORDER の値を DBPROPVAL_AO_RANDOM に設定した場合は、**GetNextRows** で複数行のデータをフェッチできます。  
+ DBPROP_ACCESSORDER プロパティ (行セットプロパティグループ) が DBPROPVAL_AO_SEQUENTIAL または DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS のいずれかの値に設定されている場合、コンシューマーは**GetNextRows**メソッドの呼び出しで1行のデータのみをフェッチする必要があります。これは、BLOB データがバッファリングされていないためです。 DBPROP_ACCESSORDER の値を DBPROPVAL_AO_RANDOM に設定した場合は、**GetNextRows** で複数行のデータをフェッチできます。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーから大規模なデータが取得されない[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]コンシューマーの要求されるまでです。 コンシューマーは、すべての短いデータを 1 つのアクセサーにバインドし、次に 1 つ以上の一時アクセサーを使用して、必要に応じて大きなデータ値を取得する必要があります。  
+ Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB プロバイダーは、コンシューマーによって要求[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]されるまで、から大きなデータを取得しません。 コンシューマーは、すべての短いデータを 1 つのアクセサーにバインドし、次に 1 つ以上の一時アクセサーを使用して、必要に応じて大きなデータ値を取得する必要があります。  
   
 ## <a name="example"></a>例  
  次の例では、大きなデータ値を 1 つの列から取得します。  
@@ -146,7 +146,7 @@ HRESULT GetUnboundData
 ```  
   
 ## <a name="see-also"></a>参照  
- [BLOB と OLE オブジェクト](blobs-and-ole-objects.md)   
- [大きな値の型の使用](../native-client/features/using-large-value-types.md)  
+ [Blob と OLE オブジェクト](blobs-and-ole-objects.md)   
+ [大きな値をとるデータ型の使用](../native-client/features/using-large-value-types.md)  
   
   

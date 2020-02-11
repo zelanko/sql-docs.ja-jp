@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: caeda52d612f4df6672f686e06834de6fef0cc67
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243275"
 ---
 # <a name="search-text-with-wildcards"></a>ワイルドカードを使用したテキスト検索
@@ -37,7 +37,7 @@ ms.locfileid: "75243275"
  
   **参照一覧**から使用できるワイルドカードを以下にまとめます。  
   
-|［式］|構文|説明|  
+|式|構文|[説明]|  
 |----------------|------------|-----------------|  
 |任意の 1 文字|?|任意の 1 文字に相当します。|  
 |任意の 1 つの数字|#|任意の 1 つの数字に相当します。 一例として、7# は 7 とその後の 1 つの数字に相当します (たとえば、71 は一致項目ですが、17 は違います)。|  

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5941b15c0aea7319d132e05b902133d3d8b986fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62823699"
 ---
 # <a name="use-custom-reports-with-object-explorer-node-properties"></a>カスタム レポートでのオブジェクト エクスプローラー ノード プロパティの使用
@@ -25,7 +25,7 @@ ms.locfileid: "62823699"
   
 ## <a name="object-explorer-node-report-parameters"></a>オブジェクト エクスプローラー ノードのレポート パラメーター  
   
-|[パラメーター名]|データ型|  
+|パラメーター名|データ型|  
 |--------------------|---------------|  
 |`ObjectName`|`String`|  
 |`ObjectTypeName`|`String`|  
@@ -37,13 +37,14 @@ ms.locfileid: "62823699"
 ## <a name="object-explorer-node-report-parameters-example"></a>オブジェクト エクスプローラー ノードのレポート パラメーターの例  
  この例を実行するには、次の手順に従います。  
   
- **オブジェクト エクスプローラーでノードのレポート パラメーターの値を表示するには**  
+ **オブジェクトエクスプローラーのノードのレポートパラメーター値を表示するには**  
   
 1.  次のサンプル コードを新規テキスト ファイルにコピーし、そのファイルに .rdl 拡張子を使った名前を付けます。  
   
 2.  カスタム レポート用にデータベース サーバーで作成しておいたフォルダーに、このレポート ファイルをコピーします。  
   
-3.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]のオブジェクト エクスプローラーでノードを右クリックし、 **[レポート]** をポイントして、[カスタム レポート] をクリックします。 **[ファイルを開く]** ダイアログ ボックスで、カスタム レポート フォルダーを見つけてレポート ファイルを選択し、 **[開く]** をクリックします。  
+3.  で[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]、オブジェクトエクスプローラー内のノードを右クリックし、[**レポート**] をポイントして、[カスタムレポート] をクリックします。 
+  **[ファイルを開く]** ダイアログ ボックスで、カスタム レポート フォルダーを見つけてレポート ファイルを選択し、 **[開く]** をクリックします。  
   
      新しいカスタム レポートは、初めてオブジェクト エクスプローラーのノードから開いたときに、最近使用した一覧に追加されます。この一覧はノードのショートカット メニューの **[カスタム レポート]** の下に表示されます。 標準レポートも、初めて開いたときに **[カスタム レポート]** の下の最近使用した一覧に表示されます。 カスタム レポート ファイルを削除した場合は、次にそのアイテムを選択したときに、最近使用した一覧からアイテムを削除するというプロンプトが表示されます。  
   
@@ -999,8 +1000,8 @@ ms.locfileid: "62823699"
  `</Report>`  
   
 ## <a name="see-also"></a>参照  
- [Management Studio におけるカスタム レポート](custom-reports-in-management-studio.md)   
- [Management Studio へのカスタム レポートを追加します。](add-a-custom-report-to-management-studio.md)   
+ [Management Studio のカスタムレポート](custom-reports-in-management-studio.md)   
+ [カスタムレポートを Management Studio に追加する](add-a-custom-report-to-management-studio.md)   
  [カスタム レポート実行時の警告の抑制を解除する方法](unsuppress-run-custom-report-warnings.md)  
   
   

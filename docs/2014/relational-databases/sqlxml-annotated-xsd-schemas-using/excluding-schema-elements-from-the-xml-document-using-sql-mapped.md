@@ -1,5 +1,5 @@
 ---
-title: '結果として得られる XML ドキュメントを使用して sql のスキーマ要素の除外: マッピング (SQLXML 4.0) |Microsoft Docs'
+title: 'Sql: マップトを使用した、結果の XML ドキュメントからのスキーマ要素の除外 (SQLXML 4.0) |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -23,28 +23,31 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 865a9af892f948e77aa593d3713766e7860349b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013858"
 ---
 # <a name="excluding-schema-elements-from-the-resulting-xml-document-using-sqlmapped-sqlxml-40"></a>sql:mapped を使用した、結果の XML ドキュメントからのスキーマ要素の除外 (SQLXML 4.0)
   既定のマッピングでは、XSD スキーマのすべての要素と属性が、データベースのテーブルまたはビューと列にマップされます。 XSD スキーマで、データベース テーブル (ビュー) または列にマップせず、XML に表示しない要素を作成する場合は、`sql:mapped` 注釈を指定できます。  
   
- `sql:mapped` 注釈は、データベースに格納されていないデータがスキーマにあり、そのスキーマを変更できない場合や、そのスキーマが他のソースからの XML の検証に使用されている場合に特に便利です。 `sql:mapped` 注釈は、マップされない要素と属性が XML ドキュメントに表示されないという点で、`sql:is-constant` と異なります。  
+ 
+  `sql:mapped` 注釈は、データベースに格納されていないデータがスキーマにあり、そのスキーマを変更できない場合や、そのスキーマが他のソースからの XML の検証に使用されている場合に特に便利です。 
+  `sql:mapped` 注釈は、マップされない要素と属性が XML ドキュメントに表示されないという点で、`sql:is-constant` と異なります。  
   
- `sql:mapped` 注釈はブール値 (0 = false、1 = true) をとります。 指定できる値は 0、1、true、false です。  
+ 
+  `sql:mapped` 注釈はブール値 (0 = false、1 = true) をとります。 指定できる値は 0、1、true、false です。  
   
-## <a name="examples"></a>使用例  
- 次の例を使用した実際のサンプルを作成するには、特定の条件を満たす必要があります。 詳細については、次を参照してください。 [SQLXML の例を実行するための要件](../sqlxml/requirements-for-running-sqlxml-examples.md)します。  
+## <a name="examples"></a>例  
+ 次の例を使用した実際のサンプルを作成するには、特定の条件を満たす必要があります。 詳細については、「 [SQLXML の例を実行するための要件](../sqlxml/requirements-for-running-sqlxml-examples.md)」を参照してください。  
   
 ### <a name="a-specifying-the-sqlmapped-annotation"></a>A. sql:mapped 注釈を指定する  
- 他のソースからの XSD スキーマがあるとします。 この XSD スキーマから成る、  **\<Person.Contact >** を持つ要素**ContactID**、 **FirstName**、 **LastName**と**HomeAddress**属性。  
+ 他のソースからの XSD スキーマがあるとします。 この XSD **** スキーマは**** **** **** ** \<** 、ContactID、FirstName、LastName、およびホームアドレスの属性を持つ Person>要素で構成されています。  
   
- この XSD スキーマを AdventureWorks データベースの Person.Contact テーブルにマッピング`sql:mapped`が指定されて、 **HomeAddress** Employees テーブルに従業員の自宅の住所が格納されていないので属性します。 この結果、マッピング スキーマに対して Xpath クエリを指定すると、属性はデータベースにマップされず、結果の XML ドキュメント内に返されません。  
+ この XSD スキーマを AdventureWorks データベースの Person. Contact テーブルにマップする場合、 `sql:mapped` employee テーブルには従業員の自宅の住所が格納されないため、[ホーム**アドレス**] 属性にはが指定されています。 この結果、マッピング スキーマに対して Xpath クエリを指定すると、属性はデータベースにマップされず、結果の XML ドキュメント内に返されません。  
   
- スキーマの残りの部分に対しては、既定のマッピングが適用されます。 **\<Person.Contact >** 要素は Person.Contact テーブルにマップされ、すべての属性は Person.Contact テーブル内の同じ名前の列にマップします。  
+ スキーマの残りの部分に対しては、既定のマッピングが適用されます。 Person. contact ** \<>** 要素は、contact テーブルにマップされ、すべての属性は、person. contact テーブル内の同じ名前の列にマップされます。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -83,9 +86,9 @@ ms.locfileid: "66013858"
   
 3.  SQLXML 4.0 テスト スクリプト (sqlxml4test.vbs) を作成し、それを使用してテンプレートを実行します。  
   
-     詳細については、次を参照してください。 [SQLXML クエリの実行に ADO を使用する](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)します。  
+     詳細については、「ADO を使用した[SQLXML クエリの実行](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)」を参照してください。  
   
- これは、結果セットです。  
+ 結果セットは次のようになります。  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -104,6 +107,6 @@ ms.locfileid: "66013858"
  マッピング スキーマで `sql:mapped` 属性に 0 を指定しているので、ContactID と FirstName、Lastname は存在しますが、HomeAddress は存在しないことに注意してください。  
   
 ## <a name="see-also"></a>参照  
- [XSD 要素および属性からテーブルと列の既定のマッピング&#40;SQLXML 4.0&#41;](default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)  
+ [テーブルおよび列への XSD 要素と属性の既定のマッピング &#40;SQLXML 4.0&#41;](default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)  
   
   

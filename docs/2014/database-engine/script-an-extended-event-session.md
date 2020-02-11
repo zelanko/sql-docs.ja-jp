@@ -1,5 +1,5 @@
 ---
-title: 拡張イベント セッションをスクリプト |Microsoft Docs
+title: 拡張イベントセッションのスクリプトを作成する |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 072a3220ba5c6997c463031733bbbe0ce2587fe1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66088907"
 ---
 # <a name="script-an-extended-event-session"></a>拡張イベント セッションのスクリプト化
@@ -22,9 +22,9 @@ ms.locfileid: "66088907"
   
 -   **新しいクエリ エディター ウィンドウ**  
   
--   **[最近使ったファイル]**  
+-   **拡張子**  
   
--   **クリップボード**  
+-   **Clipboard**  
   
 -   **エージェント ジョブ**  
   
@@ -38,9 +38,11 @@ ms.locfileid: "66088907"
   
 1.  オブジェクト エクスプローラーで **[管理]** ノードを展開し、 **[拡張イベント]** を展開します。  
   
-2.  **[セッション]** を右クリックし、 **[新しいセッション]** をクリックします。  
+2.  
+  **[セッション]** を右クリックし、 **[新しいセッション]** をクリックします。  
   
-3.  **[新しいセッション]** の UI でイベント セッションを作成した後、イベント セッション スクリプトの出力先を **[スクリプト]** ボックスの一覧から選択します。  
+3.  
+  **[新しいセッション]** の UI でイベント セッションを作成した後、イベント セッション スクリプトの出力先を **[スクリプト]** ボックスの一覧から選択します。  
   
 ### <a name="to-script-a-modified-event-session"></a>イベント セッションに変更を加えてスクリプト化するには  
   
@@ -48,7 +50,8 @@ ms.locfileid: "66088907"
   
 2.  変更するセッションを右クリックし、 **[プロパティ]** をクリックします。  
   
-3.  **[セッションのプロパティ]** ダイアログ ボックスでイベント セッションに変更を加えた後、その変更後のセッション スクリプトの出力先を **[スクリプト]** ボックスの一覧から選択します。  
+3.  
+  **[セッションのプロパティ]** ダイアログ ボックスでイベント セッションに変更を加えた後、その変更後のセッション スクリプトの出力先を **[スクリプト]** ボックスの一覧から選択します。  
   
 ## <a name="see-also"></a>参照  
  [拡張イベント](../relational-databases/extended-events/extended-events.md)  

@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 86ced6fd281da2e47ddaa31cab7fa977767b98d6
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74164955"
 ---
 # <a name="view-replicated-commands-and-other-information-in-the-distribution-database-replication-transact-sql-programming"></a>レプリケートされたコマンドなどディストリビューション データベースに格納されている情報を表示する (レプリケーション Transact-SQL プログラミング)
@@ -33,11 +33,11 @@ ms.locfileid: "74164955"
   
 ### <a name="to-view-replicated-commands-in-the-distribution-database-from-a-specific-article-or-from-a-specific-database-published-using-transactional-replication"></a>トランザクション レプリケーションを使用してパブリッシュされた特定のアーティクルまたは特定のデータベースから、ディストリビューション データベース内のレプリケートされたコマンドを表示するには  
   
-1.  (省略可) パブリッシャーのパブリケーション データベースで [sp_helparticle](/sql/relational-databases/system-stored-procedures/sp-helparticle-transact-sql)を実行します。 **\@パブリケーション**と **\@アーティクル**を指定します。 結果セットの **article id** の値を確認します。  
+1.  (省略可) パブリッシャーのパブリケーション データベースで [sp_helparticle](/sql/relational-databases/system-stored-procedures/sp-helparticle-transact-sql)を実行します。 ** \@パブリケーション**と** \@アーティクル**を指定します。 結果セットの **article id** の値を確認します。  
   
-2.  ディストリビューターのディストリビューション データベースで [sp_browsereplcmds](/sql/relational-databases/system-stored-procedures/sp-browsemergesnapshotfolder-transact-sql)を実行します。 Optional **\@article_id**については、手順 2. のアーティクル ID を指定します。 Optional **\@publisher_database_id**のパブリケーションデータベースの ID を指定します。この ID は、[データベース](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)カタログビューの**database_id**列から取得できます。  
+2.  ディストリビューターのディストリビューション データベースで [sp_browsereplcmds](/sql/relational-databases/system-stored-procedures/sp-browsemergesnapshotfolder-transact-sql)を実行します。 Optional手順 2. のアーティクル ID を** \@article_id**に指定します。 Optional** \@Publisher_database_id**のパブリケーションデータベースの ID を指定します。この ID は、[データベース](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)カタログビューの**database_id**列から取得できます。  
   
 ## <a name="see-also"></a>参照  
- [Programmatically Monitor Replication (プログラムによるレプリケーションの監視)](../monitoring-replication.md)  
+ [プログラムによるレプリケーションの監視](../monitoring-replication.md)  
   
   

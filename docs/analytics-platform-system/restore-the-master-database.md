@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 6d122881f5283da86f66494ee2f049756d151551
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400453"
 ---
 # <a name="restore-the-master-database-in-analytics-platform-system-aps"></a>Analytics Platform System (APS) での master データベースの復元
 SQL Server PDW Configuration Manager の**復元マスター**ページを使用すると、バックアップから master データベースを復元できます。  
   
-## <a name="before-you-begin"></a>開始する前に  
+## <a name="before-you-begin"></a>はじめに  
   
 > [!IMPORTANT]  
 > 復元を実行するには、ユーザーのセキュリティ情報とデータベースカタログを含む現在の master データベースを削除 SQL Server PDW 必要があります。 復元を実行する前に、現在の master データベースのバックアップを作成することをお勧めします。  
@@ -32,8 +32,7 @@ SQL Server PDW Configuration Manager の**復元マスター**ページを使用
   
 3.  復元するマスターバックアップを選択します。  
   
-4.  
-  **[適用]** をクリックします。  
+4.  **[Apply]** をクリックします。  
   
 5.  復元を実行するために、SQL Server PDW によってすべてのアプライアンスサービスがシャットダウンされ、すべてのユーザーが切断されます。 復元が完了すると、SQL Server PDW によってアプライアンスサービスが再開されます。  
   

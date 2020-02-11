@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 11acec127d354688aa81e8e50006c0b80c14347d
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73761649"
 ---
 # <a name="table-valued-parameter-rowset-creation"></a>テーブル値パラメーターの行セットの作成
@@ -30,7 +30,9 @@ ms.locfileid: "73761649"
 ## <a name="static-scenario"></a>静的なシナリオ  
  型情報がわかっている場合、コンシューマーは ITableDefinitionWithConstraints:: CreateTableWithConstraints を使用して、テーブル値パラメーターに対応するテーブル値パラメーターの行セットオブジェクトをインスタンス化します。  
   
- *Guid*フィールド (*ptableid*パラメーター) には、特別な guid (CLSID_ROWSET_TVP) が含まれています。 *pwszName* メンバーには、コンシューマーがインスタンスを作成するテーブル値パラメーターの型の名前を含めます。 *eKind* フィールドは、DBKIND_GUID_NAME に設定されます。 この名前は、ステートメントがアドホック SQL の場合に必要です。プロシージャ呼び出しの場合、名前は省略可能です。  
+ *Guid*フィールド (*ptableid*パラメーター) には、特別な guid (CLSID_ROWSET_TVP) が含まれています。 
+  *pwszName* メンバーには、コンシューマーがインスタンスを作成するテーブル値パラメーターの型の名前を含めます。 
+  *eKind* フィールドは、DBKIND_GUID_NAME に設定されます。 この名前は、ステートメントがアドホック SQL の場合に必要です。プロシージャ呼び出しの場合、名前は省略可能です。  
   
  集計の場合、コンシューマーは制御 IUnknown に*pUnkOuter*パラメーターを渡します。  
   
@@ -42,14 +44,14 @@ ms.locfileid: "73761649"
   
  各列の null、一意、計算、および更新の各状態に関する情報を取得するには、コンシューマーが IColumnsRowset:: GetColumnsRowset または IColumnsInfo:: GetColumnInfo を使用します。 これらのメソッドでは、各テーブル値パラメーターの行セットの列に関する詳細情報が取得できます。  
   
- コンシューマーは、テーブル値パラメーターの列ごとに型を指定します。 この方法は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でテーブルを作成する際に列を指定する方法と似ています。 コンシューマーは、 *ppRowset* output パラメーターを使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーからテーブル値パラメーターの行セットオブジェクトを取得します。  
+ コンシューマーは、テーブル値パラメーターの列ごとに型を指定します。 この方法は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でテーブルを作成する際に列を指定する方法と似ています。 コンシューマーは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *ppRowset* output パラメーターを使用して、Native Client OLE DB プロバイダーからテーブル値パラメーターの行セットオブジェクトを取得します。  
   
 ## <a name="dynamic-scenario"></a>動的なシナリオ  
  コンシューマーが型情報を持っていない場合は、IOpenRowset:: OpenRowset を使用してテーブル値パラメーターの行セットオブジェクトをインスタンス化する必要があります。 すべてのコンシューマーは、プロバイダーに型名を知らせる必要があります。  
   
  このシナリオでは、プロバイダーがコンシューマーに代わって、テーブル値パラメーターの行セット オブジェクトに関する型情報をサーバーから取得します。  
   
- *Ptableid*パラメーターと*pUnkOuter*パラメーターは、静的なシナリオのように設定する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、サーバーから型情報 (列情報と制約) を取得し、 *ppRowset*パラメーターを使用してテーブル値パラメーターの行セットオブジェクトを返します。 この操作にはサーバーとの通信が必要であるため、静的なシナリオと同様に実行されません。 動的なシナリオは、パラメーター化されたプロシージャ呼び出しでのみ動作します。  
+ *Ptableid*パラメーターと*pUnkOuter*パラメーターは、静的なシナリオのように設定する必要があります。 次[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に、Native Client OLE DB プロバイダーは、サーバーから型情報 (列の情報と制約) を取得し、 *ppRowset*パラメーターを使用してテーブル値パラメーターの行セットオブジェクトを返します。 この操作にはサーバーとの通信が必要になるため、静的なシナリオよりもパフォーマンスが低くなります。 動的なシナリオは、パラメーター化されたプロシージャ呼び出しでのみ動作します。  
   
 ## <a name="see-also"></a>参照  
  [テーブル値パラメーター &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   

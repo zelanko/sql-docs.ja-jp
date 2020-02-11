@@ -1,5 +1,5 @@
 ---
-title: サーバー接続ファイル (OracleToSQL) の作成 |Microsoft Docs
+title: サーバー接続ファイルの作成 (OracleToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,16 +14,16 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: d7316721cedc7a3546439fe27048126ad2805582
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68266110"
 ---
 # <a name="creating-the-server-connection-files-oracletosql"></a>サーバー接続ファイルの作成 (OracleToSQL)
-スクリプト ファイルの [サーバー] セクションで、または別のサーバー接続ファイルには、サーバーの情報を指定することができます。 サーバー接続ファイルのコマンド ライン パラメーターがで`-c <serverconnectionfile>`します。 同じサーバー id がスクリプト ファイルとサーバー接続ファイルの両方に存在する場合は、スクリプト ファイル内のサーバー定義と見なされます。  
+サーバー情報は、スクリプトファイルの [サーバー] セクションで、または別のサーバー接続ファイルで指定できます。 サーバー接続ファイルのコマンドラインパラメーターは、 `-c <serverconnectionfile>`です。 スクリプトファイルとサーバー接続ファイルの両方に同じサーバー id が存在する場合は、スクリプトファイル内のサーバー定義が考慮されます。  
   
-**例 1:**  
+**例: 1**  
   
 ```  
 <!--Sample of server connection file commands -->  
@@ -66,7 +66,7 @@ ms.locfileid: "68266110"
   
 </sql-server>  
 ```  
-**例:2**  
+**例: 2**  
   
 ```  
 <!--Sample of server connection file commands -->  
@@ -102,9 +102,9 @@ ms.locfileid: "68266110"
 </sql-server>  
 ```  
   
-## <a name="next-step"></a>次の手順  
-コンソールの運用には、次の手順は[SSMA コンソールの実行&#40;OracleToSQL&#41;](../../ssma/oracle/executing-the-ssma-console-oracletosql.md)  
+## <a name="next-step"></a>次のステップ  
+コンソールを操作する次の手順では、 [SSMA コンソール &#40;OracleToSQL を実行](../../ssma/oracle/executing-the-ssma-console-oracletosql.md)して&#41;  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
 [SSMA コンソールの実行](executing-the-ssma-console-oracletosql.md)  
   

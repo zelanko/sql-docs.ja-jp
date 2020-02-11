@@ -18,7 +18,7 @@
   items:
     - name: Azure への SQL Server マネージド バックアップの設定
       href: enable-sql-server-managed-backup-to-microsoft-azure.md
-    - name: 'Azure への SQL Server マネージド バックアップ:相互運用性と共存'
+    - name: 'Azure への SQL Server マネージド バックアップ: 相互運用性と共存'
       href: ../../database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md
     - name: Azure への SQL Server マネージド バックアップ - 保有期間とストレージの設定
       href: ../../database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md
@@ -37,7 +37,7 @@
   items:
     - name: データベースの復旧モデルの表示または変更
       href: view-or-change-the-recovery-model-of-a-database-sql-server.md
-- name: バックアップ概要
+- name: Backup の概要
   href: backup-overview-sql-server.md
 - name: 復元と復旧の概要
   href: restore-and-recovery-overview-sql-server.md
@@ -202,13 +202,13 @@
       href: deferred-transactions-sql-server.md
     - name: 機能していないファイル グループの削除 (SQL Server)
       href: remove-defunct-filegroups-sql-server.md
-    - name: '例:読み取り/書き込みファイルのオンライン復元 (完全復旧モデル)'
+    - name: '例: 読み取り/書き込みファイルのオンライン復元 (完全復旧モデル)'
       href: example-online-restore-of-a-read-write-file-full-recovery-model.md
-    - name: '例:読み取り専用ファイルのオンライン復元 (完全復旧モデル)'
+    - name: 読み取り専用ファイルのオンライン復元の例 (完全復旧モデル)
       href: example-online-restore-of-a-read-only-file-full-recovery-model.md
-    - name: '例:読み取り専用ファイルのオンライン復元 (単純復旧モデル)'
+    - name: '例 : 読み取り専用ファイルのオンライン復元 (単純復旧モデル)'
       href: example-online-restore-of-a-read-only-file-simple-recovery-model.md
-    - name: '例:プライマリ ファイル グループと他のファイル グループを 1 つオフラインで復元する (完全復旧モデル)'
+    - name: プライマリ ファイル グループと他のファイル グループを 1 つオフラインで復元する例 (完全復旧モデル)
       href: example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md
 - name: ページ復元
   href: restore-pages-sql-server.md
@@ -218,13 +218,13 @@
 - name: 段階的な部分復元
   href: piecemeal-restores-sql-server.md
   items:
-    - name: '例:データベースの部分復元 (完全復旧モデル)'
+    - name: '例 : データベースの部分復元 (完全復旧モデル)'
       href: example-piecemeal-restore-of-database-full-recovery-model.md
-    - name: '例:データベースの部分復元 (単純復旧モデル)'
+    - name: データベースの段階的な部分復元 (単純復旧モデル) の例
       href: example-piecemeal-restore-of-database-simple-recovery-model.md
-    - name: '例:一部のファイル グループのみを復元する段階的な部分復元 (完全復旧モデル)'
+    - name: 一部のファイル グループのみを復元する段階的な部分復元 (完全復旧モデル) の例
       href: example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md
-    - name: '例:一部のファイル グループのみを復元する段階的な部分復元 (単純復旧モデル)'
+    - name: 一部のファイル グループのみを復元する段階的な部分復元 (単純復旧モデル) の例
       href: example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md
 - name: データを復元しないデータベースの復旧 (Transact-SQL)
   href: recover-a-database-without-restoring-data-transact-sql.md

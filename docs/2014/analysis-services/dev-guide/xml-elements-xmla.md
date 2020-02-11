@@ -15,27 +15,27 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0c86975f273b2efa5d1384df676519ee622a1677
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62731987"
 ---
 # <a name="xml-elements-xmla"></a>XML 要素 (XMLA)
-  次のトピックでは、さまざまな XML for Analysis (XMLA) 要素のカテゴリでサポートされている[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]します。  
+  次のトピックでは、で[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]サポートされるさまざまな XML for Analysis (XMLA) 要素のカテゴリについて説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|プロパティ|説明|  
+|プロパティ|[説明]|  
 |--------------|-----------------|  
-|[ヘッダー &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-headers/xml-elements-headers)|プロトコルレベルの機能を管理するために、アプリケーションまたは [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスによって SOAP エンベロープの SOAP ヘッダーの中で送信される要素について説明します。|  
-|[メソッド&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods)|データまたはメタデータの取得、またはインスタンスに対する操作の実行のために、アプリケーションによって [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスに送信される SOAP エンベロープ内の最上位要素について説明します。|  
-|[コマンド&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/xml-elements-commands)|特定の操作を実行するために XMLA メソッド内で送信される要素について説明します。|  
-|[オブジェクト&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-objects)|アプリケーションが、XMLA メソッドへの応答として [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスから受信する、SOAP エンベロープ内の最上位の要素について説明します。|  
-|[プロパティ&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/xml-elements-properties)|XMLA ヘッダー、メソッド、オブジェクト、またはコマンドの子要素について説明します。|  
+|[XMLA&#41;&#40;ヘッダー](https://docs.microsoft.com/bi-reference/xmla/xml-elements-headers/xml-elements-headers)|プロトコルレベルの機能を管理するために、アプリケーションまたは [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスによって SOAP エンベロープの SOAP ヘッダーの中で送信される要素について説明します。|  
+|[XMLA&#41;&#40;メソッド](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods)|データまたはメタデータの取得、またはインスタンスに対する操作の実行のために、アプリケーションによって [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスに送信される SOAP エンベロープ内の最上位要素について説明します。|  
+|[XMLA&#41;&#40;コマンド](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/xml-elements-commands)|特定の操作を実行するために XMLA メソッド内で送信される要素について説明します。|  
+|[XMLA&#41;&#40;オブジェクト](https://docs.microsoft.com/bi-reference/xmla/xml-elements-objects)|アプリケーションが、XMLA メソッドへの応答として [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスから受信する、SOAP エンベロープ内の最上位の要素について説明します。|  
+|[XMLA&#41;&#40;プロパティ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/xml-elements-properties)|XMLA ヘッダー、メソッド、オブジェクト、またはコマンドの子要素について説明します。|  
   
 ## <a name="see-also"></a>参照  
- [XML データ型&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-data-types/xml-data-types-xmla)   
- [Analysis Services スクリプト言語 (ASSL) での開発](../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
+ [XMLA&#41;&#40;XML データ型](https://docs.microsoft.com/bi-reference/xmla/xml-data-types/xml-data-types-xmla)   
+ [Analysis Services スクリプト言語 &#40;ASSL&#41;を使用した開発](../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
   
   

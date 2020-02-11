@@ -17,18 +17,19 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f48a62e1dff2fbc1d226077c2271e8a8a71efb2e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62874486"
 ---
 # <a name="clr-user-defined-functions"></a>CLR ユーザー定義関数
-  ユーザー定義関数は、パラメーターを受け取り、計算やその他の操作を実行し、その結果を返すことができるルーチンです。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] からは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET や [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# などの [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework プログラミング言語でユーザー定義関数を記述できます。  
+  ユーザー定義関数は、パラメーターを受け取り、計算やその他の操作を実行し、その結果を返すことができるルーチンです。 
+  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] からは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET や [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# などの [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework プログラミング言語でユーザー定義関数を記述できます。  
   
  関数には、1 つの値を返すスカラー関数と行セットを返すテーブル値関数の 2 種類があります。  
   
- 次の表は、このセクションのトピックを一覧表示します。  
+ 次の表に、このセクションの各トピックの一覧を示します。  
   
  [CLR スカラー値関数](clr-scalar-valued-functions.md)  
  実装の要件とスカラー値関数の例について説明します。  
@@ -39,7 +40,7 @@ ms.locfileid: "62874486"
  [CLR ユーザー定義集計](clr-user-defined-aggregates.md)  
  ユーザー定義集計の実装方法と使用方法について説明します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ユーザー定義関数](../user-defined-functions/user-defined-functions.md)  
   
   

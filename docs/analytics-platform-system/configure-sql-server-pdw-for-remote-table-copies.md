@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 6c9a0a29b543eb287c7e233d6b1ea77bb2a0d45c
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401262"
 ---
 # <a name="configure-parallel-data-warehouse-for-remote-table-copies"></a>リモートテーブルコピー用に並列データウェアハウスを構成する
@@ -21,7 +21,7 @@ ms.locfileid: "74401262"
   
 このトピックでは、リモートテーブルのコピーを構成するための構成手順の1つについて説明します。 すべての構成手順の一覧については、「[リモートテーブルのコピー](remote-table-copy.md)」を参照してください。  
   
-## <a name="before-you-begin"></a>開始する前に  
+## <a name="before-you-begin"></a>はじめに  
 リモートテーブルのコピーを使用するように SQL Server PDW を構成するには、次のことを行う必要があります。  
   
 -   Analytics Platform システム管理者アカウントに、 <strong> *appliance_domain*の AD01</strong>ノードと<strong> *appliance_domain*</strong>ノードに直接ログインできるようにします。  

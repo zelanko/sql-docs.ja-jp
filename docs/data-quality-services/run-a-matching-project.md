@@ -14,10 +14,10 @@ ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 473b30d2dcc4809feece4e6a1cc59e38bb82ac2e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244122"
 ---
 # <a name="run-a-matching-project"></a>照合プロジェクトの実行
@@ -30,17 +30,17 @@ ms.locfileid: "75244122"
   
  照合を実行する準備として、1 つ以上の照合ルールを含む照合ポリシーを作成し、そのポリシーをサンプル データに対して実行する必要があります。 照合プロジェクトは照合ポリシー プロセスとは別のプロセスであり、照合プロジェクトから得られた照合のナレッジはナレッジ ベースに取り込まれません。 照合ポリシーの作成の詳細については、「 [Create a Matching Policy](../data-quality-services/create-a-matching-policy.md)」を参照してください。  
   
-##  <a name="BeforeYouBegin"></a>開始する前に  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Prerequisites"></a>応募  
+###  <a name="Prerequisites"></a> 前提条件  
   
 -   1 つ以上の照合ルールで構成された照合ポリシーを設定してナレッジ ベースを作成しておく必要があります。  
   
 -   照合するソース データが Excel ファイルに含まれている場合は、 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] コンピューターに Microsoft Excel がインストールされている必要があります。 Excel がインストールされていないと、マップ ステージで Excel ファイルを選択できません。 Microsoft Excel で作成されるファイルの拡張子は、.xlsx、.xls、または .csv です。 64 ビット バージョンの Excel を使用する場合は、Excel 2003 ファイル (.xls) のみがサポートされます。Excel 2007 または 2010 ファイル (.xlsx) はサポートされません。 64 ビット バージョンの Excel 2007 または 2010 を使用している場合は、ファイルを .xls ファイルまたは .csv ファイルとして保存するか、32 ビット バージョンの Excel をインストールしてください。  
   
-###  <a name="Security"></a>保護  
+###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a>許可  
+####  <a name="Permissions"></a> Permissions  
  照合プロジェクトを実行するには、DQS_MAIN データベースの dqs_kb_editor ロールまたは dqs_administrator ロールが必要です。  
   
 ##  <a name="StartingaMatchingProject"></a>最初の手順: 照合プロジェクトの開始  

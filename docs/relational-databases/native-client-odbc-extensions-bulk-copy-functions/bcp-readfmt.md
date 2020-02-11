@@ -19,10 +19,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6e0277959c1776dfbe9bd088c639f243ad6a2f7d
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73782520"
 ---
 # <a name="bcp_readfmt"></a>bcp_readfmt
@@ -54,7 +54,7 @@ RETCODE bcp_readfmt (
   
  フォーマットファイルを永続化するには、 [bcp_writefmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md)を呼び出します。 **Bcp_readfmt**の呼び出しでは、保存された形式を参照できます。 詳細については、「 [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)」を参照してください。  
   
- また、一括コピーユーティリティ (**bcp**) では、 **bcp_readfmt**が参照できるファイルにユーザー定義データ形式を保存することもできます。 **Bcp**ユーティリティと**bcp**データフォーマットファイルの構造の詳細については、「[データ&#40;SQL Server&#41;の一括インポートと一括エクスポート](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)」を参照してください。  
+ また、一括コピーユーティリティ (**bcp**) では、 **bcp_readfmt**が参照できるファイルにユーザー定義データ形式を保存することもできます。 **Bcp**ユーティリティと**bcp**データフォーマットファイルの構造の詳細については、「[データ &#40;SQL Server&#41;の一括インポートと一括エクスポート](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)」を参照してください。  
   
  [Bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)の*EOption*パラメーターの**bcpdelayreadfmt**値は、bcp_readfmt の動作を変更します。  
   

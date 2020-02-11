@@ -1,5 +1,5 @@
 ---
-title: sp_prepexecrpc (TRANSACT-SQL) |Microsoft Docs
+title: sp_prepexecrpc (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/02/2016
 ms.prod: sql
@@ -18,16 +18,16 @@ ms.assetid: 35d686f2-ef31-4eaa-baa9-9cef5d6c87c2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6fea210183ae67179dcc6f686e25f939cd00713b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68056333"
 ---
-# <a name="spprepexecrpc-transact-sql"></a>sp_prepexecrpc (Transact-SQL)
+# <a name="sp_prepexecrpc-transact-sql"></a>sp_prepexecrpc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  準備して、RPC 識別子を使用して指定されているパラメーター化されたストアド プロシージャの呼び出しを実行します。 sp_prepexecrpc は、ID によって呼び出される、表形式データ ストリーム (TDS) パケットで 14 の = です。  
+  RPC 識別子を使用して指定されたパラメーター化されたストアドプロシージャ呼び出しを準備して実行します。 sp_prepexecrpc は、ID = 14 によって表形式のデータストリーム (TDS) パケットで呼び出されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,16 +40,17 @@ sp_prepexecrpc handle OUTPUT, RPCCall
 ```  
   
 ## <a name="arguments"></a>引数  
- *handle*  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって生成される準備済みハンドル識別子です。 *処理*必須のパラメーターには、 **int**値を返します。  
+ *扱え*  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって生成される準備済みハンドル識別子です。 *handle*は、 **int**戻り値を持つ必須パラメーターです。  
   
  *RPCCall*  
- ODBC 標準構文を使用してストアド プロシージャ呼び出しを定義します。 *RPCCall*が必要なパラメーターです、 **ntext**文字列入力値。  
+ ODBC 標準構文を使用してストアド プロシージャ呼び出しを定義します。 *Rpccall*は、 **ntext**文字列入力値を呼び出す必須のパラメーターです。  
   
  *bound_param*  
- 追加パラメーターをオプションで使用することを示します。 *bound_param*を使用する追加パラメーターを指定する任意のデータ型の入力値を呼び出します。  
+ 追加パラメーターをオプションで使用することを示します。 *bound_param*は、使用する追加パラメーターを指定するために、任意のデータ型の入力値を呼び出します。  
   
-## <a name="see-also"></a>関連項目  
- [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>参照  
+ [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

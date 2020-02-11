@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b5b2d167ca9bb2f5a39802bacceb3dd0eb3c96d5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68195572"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>計算列を使用した使用頻度の高い XML 値の昇格
@@ -26,9 +26,9 @@ ms.locfileid: "68195572"
  昇格した列は、同一のテーブルで計算列にすることができます。また、任意のテーブルでユーザーが管理する独立した列にすることもできます。 これは、各 XML インスタンスから単一の値を昇格するときには十分です。 しかし、複数の値から構成されるプロパティの場合、個々のプロパティ用に個別のテーブルを作成する必要があります。詳細については、次のセクションを参照してください。  
   
 ## <a name="computed-column-based-on-the-xml-data-type"></a>xml データ型を基にした計算列  
- 呼び出すユーザー定義関数を使用して計算列を作成できる`xml`データ型のメソッド。 計算列の型は、XML を含めどの SQL 型でもかまいません。 この例を次に示します。  
+ データ型のメソッドを呼び出す`xml`ユーザー定義関数を使用して、計算列を作成できます。 計算列の型は、XML を含めどの SQL 型でもかまいません。 この例を次に示します。  
   
-### <a name="example-computed-column-based-on-the-xml-data-type-method"></a>例: xml データ型のメソッドを基にした計算列  
+### <a name="example-computed-column-based-on-the-xml-data-type-method"></a>例 : xml データ型のメソッドを基にした計算列  
  書籍の ISBN 番号を取得するユーザー定義関数を作成します。  
   
 ```  
@@ -50,7 +50,7 @@ ADD   ISBN AS dbo.udf_get_book_ISBN(xCol)
   
  計算列は、通常の方法でインデックスを設定できます。  
   
-### <a name="example-queries-on-a-computed-column-based-on-xml-data-type-methods"></a>例: xml データ型のメソッドを基にした計算列へのクエリ  
+### <a name="example-queries-on-a-computed-column-based-on-xml-data-type-methods"></a>例 : xml データ型のメソッドを基にした計算列へのクエリ  
  ISBN が 0-7356-1588-2 の <`book`> を取得します。  
   
 ```  
@@ -67,7 +67,7 @@ FROM   T
 WHERE  ISBN = '0-7356-1588-2'  
 ```  
   
- 返すユーザー定義関数を作成することができます、`xml`データ型とユーザー定義関数を使用して計算列。 ただし、XML 計算列には XML インデックスを作成できません。  
+ ユーザー定義関数を使用して、ユーザー定義関数`xml`を作成し、データ型と計算列を返すことができます。 ただし、XML 計算列には XML インデックスを作成できません。  
   
 ## <a name="creating-property-tables"></a>プロパティ テーブルの作成  
  XML データの中から複数の値で構成されるプロパティの一部を 1 つ以上のテーブルに昇格させ、インデックスを作成してクエリの対象をそのテーブルに振り替えることができます。 クエリ ワークロードの大半が少数のプロパティで占められているシナリオが典型的です。 次の操作を実行できます。  
@@ -78,20 +78,20 @@ WHERE  ISBN = '0-7356-1588-2'
   
 -   プロパティ テーブルを管理するためのトリガーを XML 列に作成します。 トリガー内では次のいずれかを行うことができます。  
   
-    -   使用`xml`データ型のなどメソッド、 **nodes()** と**value()** を挿入およびプロパティ テーブルの行を削除します。  
+    -   `xml` **Nodes ()** 、 **value ()** などのデータ型のメソッドを使用して、プロパティテーブルの行を挿入および削除します。  
   
     -   CLR (共通言語ランタイム) でストリーミング テーブル値関数を作成し、プロパティ テーブルの行を挿入および削除します。  
   
     -   主キーを使用してテーブルどうしを結合し、プロパティ テーブルに SQL アクセスを行うクエリ、およびベース テーブルの XML 列に XML アクセスを行うクエリを記述します。  
   
-### <a name="example-create-a-property-table"></a>例: プロパティ テーブルの作成  
+### <a name="example-create-a-property-table"></a>例 : プロパティ テーブルの作成  
  たとえば、著者の名 (ファースト ネーム) を昇格させるとします。 共著の場合もあるので、名は複数の値から構成されるプロパティです。 それぞれの名は、プロパティ テーブルの個別の行に保存されます。 逆結合のため、ベース テーブルの主キーをプロパティ テーブルで複製します。  
   
 ```  
 create table tblPropAuthor (propPK int, propAuthor varchar(max))  
 ```  
   
-### <a name="example-create-a-user-defined-function-to-generate-a-rowset-from-an-xml-instance"></a>例: XML インスタンスから行セットを生成するユーザー定義関数の作成  
+### <a name="example-create-a-user-defined-function-to-generate-a-rowset-from-an-xml-instance"></a>例 : XML インスタンスから行セットを生成するユーザー定義関数の作成  
  次のテーブル値関数 udf_XML2Table は、主キーの値と XML インスタンスを受け取ります。 <`book`> 要素のすべての著者の名を取得し、主キーと名の組み合わせから構成される行セットを返します。  
   
 ```  
@@ -107,7 +107,7 @@ begin
 end  
 ```  
   
-### <a name="example-create-triggers-to-populate-a-property-table"></a>例: プロパティ テーブルにデータを格納するトリガーの作成  
+### <a name="example-create-triggers-to-populate-a-property-table"></a>例 : プロパティ テーブルにデータを格納するトリガーの作成  
  次の挿入トリガーを使用して、プロパティ テーブルに行を挿入します。  
   
 ```  
@@ -154,8 +154,8 @@ begin
 end  
 ```  
   
-### <a name="example-find-xml-instances-whose-authors-have-the-same-first-name"></a>例: 著者の名が同一の XML インスタンスの検索  
- XML 列に対するクエリも作成できますが、 プロパティ テーブルで名 "David" を検索し、ベース テーブルとの逆結合を実行して XML インスタンスを返すこともできます。 例:  
+### <a name="example-find-xml-instances-whose-authors-have-the-same-first-name"></a>例 : 著者の名が同一の XML インスタンスの検索  
+ XML 列に対するクエリも作成できますが、 プロパティ テーブルで名 "David" を検索し、ベース テーブルとの逆結合を実行して XML インスタンスを返すこともできます。 次に例を示します。  
   
 ```  
 SELECT xCol   
@@ -163,7 +163,7 @@ FROM     T JOIN tblPropAuthor ON T.pk = tblPropAuthor.propPK
 WHERE    tblPropAuthor.propAuthor = 'David'  
 ```  
   
-### <a name="example-solution-using-the-clr-streaming-table-valued-function"></a>例: CLR ストリーミング テーブル値関数を使用したソリューション  
+### <a name="example-solution-using-the-clr-streaming-table-valued-function"></a>例 : CLR ストリーミング テーブル値関数を使用したソリューション  
  このソリューションは、次の手順で実行します。  
   
 1.  CLR クラス SqlReaderBase を定義します。このクラスは ISqlReader を実装し、XML インスタンスにパス式を適用することでストリーミング テーブル値出力を生成します。  
@@ -172,7 +172,7 @@ WHERE    tblPropAuthor.propAuthor = 'David'
   
 3.  ユーザー定義関数を使用して、プロパティ テーブルのメンテナンスに使用する挿入トリガー、更新トリガー、および削除トリガーを定義します。  
   
- まず、ストリーミング CLR 関数を作成します。 `xml`データ型が ADO.NET での SqlXml マネージ クラスとして公開され、サポート、 **CreateReader()** XmlReader を返すメソッド。  
+ まず、ストリーミング CLR 関数を作成します。 この`xml`データ型は ADO.NET でマネージクラス SqlXml として公開され、XmlReader を返す**createreader ()** メソッドをサポートしています。  
   
 > [!NOTE]  
 >  このセクションの例のコードでは、XPathDocument および XPathNavigator を使用しています。 この 2 つはすべての XML ドキュメントをメモリに読み込みます。 大きな XML ドキュメントを処理するためにこのサンプルと同様のコードを使用する場合、このコードにはスケーラビリティはありません。 代わりに、メモリの割り当てを少なく抑え、可能な限りストリーミング インターフェイスを使用してください。 パフォーマンスの詳細については、「 [CLR 統合のアーキテクチャ](../../database-engine/dev-guide/architecture-of-clr-integration.md)」を参照してください。  
@@ -253,7 +253,7 @@ as
   
  削除トリガーは CLR を使用しない場合と同じです。 更新トリガーは関数 udf_XML2Table() を CLR_udf_XML2Table() に置き換えます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [計算列での XML の使用](use-xml-in-computed-columns.md)  
   
   

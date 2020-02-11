@@ -15,17 +15,17 @@ ms.assetid: 1da157cb-8ea9-4a56-983b-1c45650217c5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c78162bcf0421fee609abe5fcacf9613e0f8020b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68138938"
 ---
 # <a name="initialization-of-descriptor-fields"></a>記述子フィールドの初期化
-アプリケーションの行記述子は、割り当て済みフィールドが表示される初期値に記載されている[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)します。 SQL_DESC_TYPE フィールドの初期値は、SQL_DEFAULT です。 これは、データベースのデータ、アプリケーションに提示するための標準的な処理を提供します。 アプリケーションは、記述子レコードのフィールドを設定して、データの処理が異なるを指定する場合があります。  
+アプリケーションの行記述子が割り当てられると、そのフィールドには[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)に示されている初期値が与えられます。 SQL_DESC_TYPE フィールドの初期値は SQL_DEFAULT です。 これにより、アプリケーションに表示するためのデータベースデータの標準的な処理が提供されます。 アプリケーションでは、記述子レコードのフィールドを設定することによって、異なるデータ処理を指定できます。  
   
- 記述子のヘッダーの SQL_DESC_ARRAY_SIZE の初期値は 1 です。 アプリケーションでは、複数行のフェッチを有効にするには、このフィールドを変更できます。  
+ 記述子ヘッダー内の SQL_DESC_ARRAY_SIZE の初期値は1です。 アプリケーションでこのフィールドを変更して、複数行のフェッチを有効にすることができます。  
   
- 既定値の概念は、ird フィールドに対して無効です。 関連付けられている準備または実行されたステートメントがある場合にのみ、アプリケーションは、ird フィールドへのアクセスを得ることができます。  
+ 既定値の概念は、IRD のフィールドでは無効です。 アプリケーションは、準備されたステートメントまたは実行されたステートメントが関連付けられている場合にのみ、IRD のフィールドにアクセスできます。  
   
- ドライバーが自動的に入力されたら、IPD 後にのみ、IPD の特定のフィールドが定義されます。 ない場合は、定義はありません。 これらのフィールドは SQL_DESC_CASE_SENSITIVE、SQL_DESC_FIXED_PREC_SCALE、SQL_DESC_TYPE_NAME、SQL_DESC_UNSIGNED、および SQL_DESC_LOCAL_TYPE_NAME です。
+ IPD の特定のフィールドは、IPD がドライバーによって自動的に設定された後にのみ定義されます。 定義されていない場合は未定義です。 これらのフィールドは、SQL_DESC_CASE_SENSITIVE、SQL_DESC_FIXED_PREC_SCALE、SQL_DESC_TYPE_NAME、SQL_DESC_UNSIGNED、および SQL_DESC_LOCAL_TYPE_NAME です。

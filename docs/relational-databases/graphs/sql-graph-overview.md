@@ -16,38 +16,38 @@ ms.author: shkale
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 3ca26af4738de25937b71e0c97c6272414a0957a
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74096085"
 ---
-# <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>SQL Server と Azure SQL Database を使用したグラフの処理
+# <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>SQL Server と Azure SQL Database でのグラフ処理
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、多対多リレーションシップをモデル化するためのグラフデータベース機能が用意されています。 グラフのリレーションシップは [!INCLUDE[tsql-md](../../includes/tsql-md.md)] に統合されており、基盤となるデータベース管理システムとして [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を使用する利点があります。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]には、多対多リレーションシップをモデル化するためのグラフデータベース機能が用意されています。 グラフのリレーションシップはに[!INCLUDE[tsql-md](../../includes/tsql-md.md)]統合されており、を[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]基盤とするデータベース管理システムとしてを使用する利点があります。
 
 
 ## <a name="what-is-a-graph-database"></a>グラフデータベースとは  
-グラフ データベースは、ノード (または頂点) とエッジ (またはリレーションシップ) のコレクションです。 ノードはエンティティ (たとえば人や組織) を表し、エッジはそれが接続する 2 つのノードのリレーションシップ (たとえば好感や友人) を表します。 ノードとエッジの両方に、プロパティが関連付けられている場合があります。 グラフデータベースを一意にするための機能を次に示します。  
--   エッジまたはリレーションシップは、グラフデータベース内の最初のクラスエンティティであり、属性またはプロパティを関連付けることができます。 
--   1つのエッジを使用すると、グラフデータベース内の複数のノードを柔軟に接続できます。
--   パターンマッチングとマルチホップのナビゲーションクエリを簡単に表現できます。
--   推移的なクロージャとポリモーフィックなクエリを簡単に表現できます。
+グラフ データベースは、ノード (または頂点) とエッジ (またはリレーションシップ) のコレクションです。 ノードはエンティティ (たとえば、個人や組織) を表し、エッジは接続されている 2 つのノード間のリレーションシップ (たとえば、お気に入りや友人) を表します。 ノードとエッジの両方に、プロパティが関連付けられている場合があります。 グラフ データベースを特徴付けるいくつかの特性を次に示します。  
+-   エッジ (リレーションシップ) は、グラフ データベース内のファースト クラスのエンティティであり、属性またはプロパティを関連付けることができます。 
+-   1 つのエッジは、グラフ データベース内の複数のノードを柔軟に接続できます。
+-   パターン マッチングとマルチホップ ナビゲーション クエリを簡単に表現できます。
+-   推移閉包およびポリモーフィック クエリを簡単に表現できます。
 
 ## <a name="when-to-use-a-graph-database"></a>グラフデータベースを使用する場合
 
-グラフデータベースは実現できません。これは、リレーショナルデータベースを使用しては実現できません。 ただし、グラフデータベースを使用すると、特定の種類のクエリを簡単に表現できるようになります。 また、特定の最適化を使用すると、特定のクエリのパフォーマンスが向上する場合があります。 どちらか一方を選択するかどうかは、次の要因に基づいて決めることができます。  
+リレーショナル データベースを使用して実現できないことのうち、グラフ データベースで実現できることは何もありません。 ただし、グラフデータベースを使用すると、特定の種類のクエリを簡単に表現できるようになります。 また、特定の最適化を使用すると、特定のクエリのパフォーマンスが向上する場合があります。 優先事項の決定は、次の要因に基づいて行うことができます。  
 -   アプリケーションに階層データがある。 HierarchyID データ型は階層の実装に使用できますが、いくつかの制限があります。 たとえば、1つのノードに複数の親を格納することはできません。
 -   アプリケーションに複雑な多対多リレーションシップがある。アプリケーションの進化に伴って、新しいリレーションシップが追加されます。
 -   相互接続されたデータとリレーションシップを分析する必要があります。
 
-## <a name="graph-features-introduced-in-includesssqlv14includessssqlv14-mdmd"></a>[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] で導入されたグラフ機能 
+## <a name="graph-features-introduced-in-includesssqlv14includessssqlv14-mdmd"></a>で導入されたグラフ機能[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 
 グラフのデータの格納とクエリを容易にするために、SQL Server にグラフ拡張機能を追加し始めます。 次の機能は、最初のリリースで導入されました。 
 
 
 ### <a name="create-graph-objects"></a>グラフオブジェクトの作成
-[!INCLUDE[tsql-md](../../includes/tsql-md.md)] 拡張機能を使用すると、ユーザーはノードテーブルまたはエッジテーブルを作成できます。 ノードとエッジの両方にプロパティを関連付けることができます。 ノードとエッジはテーブルとして格納されるため、リレーショナルテーブルでサポートされているすべての操作は、ノードまたはエッジテーブルでサポートされています。 以下に例を示します。  
+[!INCLUDE[tsql-md](../../includes/tsql-md.md)]拡張機能を使用すると、ユーザーはノードテーブルまたはエッジテーブルを作成できます。 ノードとエッジの両方にプロパティを関連付けることができます。 ノードとエッジはテーブルとして格納されるため、リレーショナルテーブルでサポートされているすべての操作は、ノードまたはエッジテーブルでサポートされています。 たとえば次のようになります。  
 
 ```   
 CREATE TABLE Person (ID INTEGER PRIMARY KEY, Name VARCHAR(100), Age INT) AS NODE;
@@ -58,7 +58,7 @@ CREATE TABLE friends (StartDate date) AS EDGE;
 ノードとエッジはテーブルとして格納されます。  
 
 ### <a name="query-language-extensions"></a>クエリ言語の拡張機能  
-新しい `MATCH` 句は、グラフを使用したパターンマッチングとマルチホップのナビゲーションをサポートするために導入されました。 `MATCH` 関数では、パターンマッチングに ASCII アートスタイル構文を使用します。 例 :  
+新しい`MATCH`句は、グラフを使用したパターンマッチングとマルチホップナビゲーションをサポートするために導入されました。 関数`MATCH`は、パターンマッチングに ASCII アートスタイル構文を使用します。 次に例を示します。  
 
 ```   
 -- Find friends of John
@@ -68,12 +68,12 @@ WHERE MATCH(Person1-(Friends)->Person2)
 AND Person1.Name = 'John';
 ```   
  
-### <a name="fully-integrated-in-includessnoversionincludesssnoversion-mdmd-engine"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エンジンに完全に統合されている 
-グラフ拡張機能は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エンジンに完全に統合されています。 同じストレージエンジン、メタデータ、クエリプロセッサなどを使用して、グラフデータを格納し、クエリを実行します。 1つのクエリで、グラフとリレーショナルデータにまたがるクエリを実行します。 グラフ機能と他の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テクノロジ (列ストア、HA、R services など) との組み合わせSQL graph データベースでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で使用できるすべてのセキュリティ機能とコンプライアンス機能もサポートされています。
+### <a name="fully-integrated-in-includessnoversionincludesssnoversion-mdmd-engine"></a>エンジンに完全[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に統合 
+グラフ拡張機能は、エンジン[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に完全に統合されています。 同じストレージエンジン、メタデータ、クエリプロセッサなどを使用して、グラフデータを格納し、クエリを実行します。 1つのクエリで、グラフとリレーショナルデータにまたがるクエリを実行します。 グラフ機能と、列[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ストア、HA、R サービスなどの他のテクノロジとの組み合わせSQL graph データベースでは、で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用できるすべてのセキュリティ機能とコンプライアンス機能もサポートされています。
  
 ### <a name="tooling-and-ecosystem"></a>ツールとエコシステム
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に用意されている既存のツールとエコシステムを活用できます。 バックアップと復元、インポート、エクスポートなどのツールは、すぐに使用できます。 SSIS、SSRS、Power BI などの他のツールやサービスは、リレーショナルテーブルを操作するのと同じように、グラフテーブルで使用できます。
+を提供する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]既存のツールとエコシステムを活用できます。 バックアップと復元、インポート、エクスポートなどのツールは、すぐに使用できます。 SSIS、SSRS、Power BI などの他のツールやサービスは、リレーショナルテーブルを操作するのと同じように、グラフテーブルで使用できます。
 
 ## <a name="edge-constraints"></a>エッジ制約
 エッジ制約は、グラフエッジテーブルで定義され、特定のエッジタイプが接続できるノードテーブルのペアです。 これにより、ユーザーはグラフスキーマをより適切に制御できるようになります。 エッジ制約を使用すると、特定のエッジが接続を許可されているノードの種類を制限できます。 
@@ -88,7 +88,7 @@ Merge DML で match を使用する方法の詳細については、 [Merge ス�
 ## <a name="shortest-path"></a>最短パス
 [SHORTEST_PATH](./sql-graph-shortest-path.md)関数は、グラフ内の2つのノード間、または特定のノードからグラフ内の他のすべてのノードまでの最短パスを検索します。 最短パスを使用して、グラフ内で推移的なクロージャまたは任意の長さのトラバーサルを見つけることもできます。 
 
- ## <a name="next-steps"></a>次の手順  
+ ## <a name="next-steps"></a>次のステップ  
 [SQL グラフデータベース-アーキテクチャ](./sql-graph-architecture.md)の読み取り
    
 

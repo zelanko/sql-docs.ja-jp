@@ -19,23 +19,23 @@ ms.assetid: de94cd2e-2d48-49fb-9ebd-a2d90c79bf62
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 5b1dc7b961dd0b85824ea180cbc4815d5488a360
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68004505"
 ---
 # <a name="logical-expressions-xquery"></a>論理式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  XQuery サポート論理**と**と**または**演算子。  
+  XQuery**では、論理**演算子**と演算子が**サポートされています。  
   
 ```  
 expression1 and expression2  
 expression1 or expression2  
 ```  
   
- テスト式では、`expression1,``expression2`の[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]空のシーケンス、1 つまたは複数のノードのシーケンスまたは単一のブール値で発生することができます。 結果に基づいて、次の方法で有効なブール値が決まります。  
+ の`expression1,``expression2` [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]テスト式では、空のシーケンス、1つまたは複数のノードのシーケンス、または単一のブール値が生成されます。 結果に基づいて、次の方法で有効なブール値が決まります。  
   
 -   テスト式の結果が空のシーケンスになった場合、式の結果は False になります。  
   
@@ -43,11 +43,11 @@ expression1 or expression2
   
 -   テスト式の結果が 1 つ以上のノードのシーケンスになった場合、式の結果は True になります。  
   
--   それ以外の場合、静的エラーが発生します。  
+-   それ以外の場合は、静的なエラーが発生します。  
   
- 論理**と**と**または**演算子は、標準の論理セマンティクスで、式の結果のブール値に適用されます。  
+ その後、論理**and**および**or**演算子は、標準の論理セマンティクスを使用して、式の結果のブール値に適用されます。  
   
- 次のクエリでは、正面からの小さな写真を製品カタログからに取得します <`Picture`> の特定の製品モデルの要素。 製品の説明ドキュメントごとに、サイズや角度など、異なる属性を持つ 1 つ以上の製品写真をカタログに格納できることに注意してください。  
+ 次のクエリでは、製品カタログから、特定の製品モデルのフロント角度`Picture`の小さい画像 (<> 要素) を取得します。 製品の説明ドキュメントごとに、サイズや角度など、異なる属性を持つ 1 つ以上の製品写真をカタログに格納できることに注意してください。  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -73,7 +73,7 @@ where ProductModelID=19
   
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [XQuery 式](../xquery/xquery-expressions.md)  
   
   

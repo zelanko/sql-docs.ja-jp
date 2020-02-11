@@ -1,5 +1,5 @@
 ---
-title: sp_getbindtoken (TRANSACT-SQL) |Microsoft Docs
+title: sp_getbindtoken (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,19 +18,20 @@ ms.assetid: 5db87d77-85fa-45a3-a23a-3ea500f9a5ac
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ac8bc2087b4c100b784aadac8458e106538f76d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68124003"
 ---
-# <a name="spgetbindtoken-transact-sql"></a>sp_getbindtoken (Transact-SQL)
+# <a name="sp_getbindtoken-transact-sql"></a>sp_getbindtoken (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   トランザクションの一意の識別子を返します。 この一意識別子は、sp_bindsession を使用してセッションをバインドするために使用する文字列です。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]代わりに、複数のアクティブな結果セット (MARS) または分散トランザクションを使用してください。 詳細については、「[複数のアクティブな結果セット &#40;MARS&#41; の使用](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md)」を参照してください。  
+>  
+  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]代わりに、複数のアクティブな結果セット (MARS) または分散トランザクションを使用してください。 詳細については、「[複数のアクティブな結果セット &#40;MARS&#41; の使用](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md)」を参照してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,8 +43,8 @@ sp_getbindtoken [@out_token =] 'return_value' OUTPUT
 ```  
   
 ## <a name="arguments"></a>引数  
- [@out_token=]'*return_value*'  
- セッションのバインドに使用するトークンです。 *return_value*は**varchar (255)** 既定値はありません。  
+ [@out_token=] '*return_value*'  
+ セッションをバインドするために使用するトークンです。 *return_value*は**varchar (255)** で、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  なし  
@@ -51,8 +52,8 @@ sp_getbindtoken [@out_token =] 'return_value' OUTPUT
 ## <a name="result-sets"></a>結果セット  
  なし  
   
-## <a name="remarks"></a>コメント  
- アクティブなトランザクション内部ストアド プロシージャが実行される場合のみ、sp_getbindtoken は有効なトークンを返します。 それ以外の場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)]はエラー メッセージを返します。 以下に例を示します。  
+## <a name="remarks"></a>解説  
+ sp_getbindtoken は、アクティブなトランザクション内でストアドプロシージャが実行された場合にのみ、有効なトークンを返します。 それ以外の[!INCLUDE[ssDE](../../includes/ssde-md.md)]場合、はエラーメッセージを返します。 次に例を示します。  
   
 ```  
 -- Declare a variable to hold the bind token.  
@@ -65,7 +66,7 @@ Cannot get a transaction token if there is no transaction active.
 Reissue the statement after a transaction has been started.  
 ```  
   
- Sp_getbindtoken を使用して、開いているトランザクション内で分散トランザクションの接続を参加させるときに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]同じトークンを返します。 以下に例を示します。  
+ 開いているトランザクション内に分散トランザクション接続を参加させるために[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sp_getbindtoken を使用すると、は同じトークンを返します。 次に例を示します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -83,7 +84,7 @@ EXECUTE sp_getbindtoken @bind_token OUTPUT;
 SELECT @bind_token AS Token;  
 ```  
   
- どちらも`SELECT`ステートメントは、同じトークンを返します。  
+ どちら`SELECT`のステートメントも同じトークンを返します。  
   
 ```  
 Token  
@@ -97,7 +98,7 @@ PKb'gN5<9aGEedk_16>8U=5---/5G=--
 (1 row(s_) affected)  
 ```  
   
- 新しいセッションを同じトランザクションにバインドする sp_bindsession でバインド トークンを使用できます。 バインド トークンは有効の各インスタンス内でローカルでのみ、[!INCLUDE[ssDE](../../includes/ssde-md.md)]複数のインスタンス間で共有することはできません。  
+ sp_bindsession でバインド トークンを使用して、新規セッションを同じトランザクションにバインドできます。 バインドトークンは、の各インスタンス内でのみローカルに[!INCLUDE[ssDE](../../includes/ssde-md.md)]有効であり、複数のインスタンス間で共有することはできません。  
   
  バインド トークンを取得して渡すには、sp_getbindtoken を実行してから sp_bindsession を実行して、同じロック領域を共有します。 バインド トークンの取得後は、sp_bindsession を正常に実行できます。  
   
@@ -107,8 +108,8 @@ PKb'gN5<9aGEedk_16>8U=5---/5G=--
 ## <a name="permissions"></a>アクセス許可  
  public ロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例  
- 次の例では、バインド トークンを取得し、バインド トークンの名前を表示します。  
+## <a name="examples"></a>例  
+ 次の例では、バインドトークンを取得し、バインドトークン名を表示します。  
   
 ```  
 DECLARE @bind_token varchar(255);  
@@ -125,9 +126,9 @@ SELECT @bind_token AS Token;
   
  `\0]---5^PJK51bP<1F<-7U-]ANZ`  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [sp_bindsession &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-bindsession-transact-sql.md)   
- [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [srv_getbindtoken&#40;拡張ストアド プロシージャ API&#41;](../../relational-databases/extended-stored-procedures-reference/srv-getbindtoken-extended-stored-procedure-api.md)  
+ [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [srv_getbindtoken &#40;拡張ストアドプロシージャ API&#41;](../../relational-databases/extended-stored-procedures-reference/srv-getbindtoken-extended-stored-procedure-api.md)  
   
   

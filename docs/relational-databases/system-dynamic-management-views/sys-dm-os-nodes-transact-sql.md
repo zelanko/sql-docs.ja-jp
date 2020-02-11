@@ -1,5 +1,5 @@
 ---
-title: sys.dm_os_nodes (TRANSACT-SQL) |Microsoft Docs
+title: dm_os_nodes (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 02/13/2018
 ms.prod: sql
@@ -21,52 +21,52 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b2b6f88e857ab7fc6300698174914126fb0881f6
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68265733"
 ---
-# <a name="sysdmosnodes-transact-sql"></a>sys.dm_os_nodes (Transact-SQL)
+# <a name="sysdm_os_nodes-transact-sql"></a>sys.dm_os_nodes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-SQLOS という内部コンポーネントは、ハードウェア プロセッサの局所性を疑似的に表現したノード構造を作成します。 使用してこれらの構造を変更できる[ソフト NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md)カスタム ノード レイアウトを作成します。  
+SQLOS という内部コンポーネントは、ハードウェア プロセッサの局所性を疑似的に表現したノード構造を作成します。 これらの構造体は[、ソフト NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md)を使用してカスタムノードレイアウトを作成することによって変更できます。  
 
 > [!NOTE]
-> 以降で[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]特定のハードウェア構成のソフト NUMA が自動的に使用します。 詳細については、次を参照してください。[自動ソフト NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md#automatic-soft-numa)します。
+> 以降[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]、では[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 、特定のハードウェア構成でソフト NUMA が自動的に使用されます。 詳細については、「[自動ソフト NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md#automatic-soft-numa)」を参照してください。
   
-次の表では、これらのノードに関する情報を示します。  
+次の表は、これらのノードに関する情報を示しています。  
   
 > [!NOTE]
-> この DMV からの呼び出しに[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]または[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]、名前を使用して、 **sys.dm_pdw_nodes_os_nodes**します。  
+> またはから[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]この DMV を[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]呼び出すには、 **dm_pdw_nodes_os_nodes**という名前を使用します。  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
 |node_id|**smallint**|ノードの ID。|  
-|node_state_desc|**nvarchar (256)**|ノード状態の説明。 相互排他的な値から先に表示され、続けて、組み合わせ可能な値が表示されます。 以下に例を示します。<br /> Online、Thread Resources Low、Lazy Preemptive<br /><br />次の 4 つの相互に排他的な node_state_desc 値があります。 以下の説明が表示されます。<br /><ul><li>ONLINE: ノードがオンライン<li>OFFLINE: ノードがオフライン<li>IDLE: ノードは、保留中の作業要求がないがアイドル状態の状態になった。<li>IDLE_READY:ノードは、保留中の作業の要求がないがアイドル状態になります。</li></ul><br />その説明を以下に示す 3 つの組み合わせ可能な node_state_desc 値があります。<br /><ul><li>DAC:このノード用に予約された、[専用管理者接続](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)します。<li>THREAD_RESOURCES_LOW:新しいスレッドを作成できませんこのノードでメモリ不足状態が原因です。<li>ホット追加されます。ノードが応答に追加されたことを示します。 ホット アド CPU イベントです。</li></ul>|  
-|memory_object_address|**varbinary(8)**|このノードに関連付けられているメモリ オブジェクトのアドレス。 一対一の関係に[sys.dm_os_memory_objects](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).memory_object_address します。|  
-|memory_clerk_address|**varbinary(8)**|このノードに関連付けられているメモリ クラークのアドレス。 一対一の関係に[sys.dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md).memory_clerk_address します。|  
-|io_completion_worker_address|**varbinary(8)**|このノードの IO 完了に割り当てられているワーカーのアドレス。 一対一の関係に[sys.dm_os_workers](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).worker_address します。|  
-|memory_node_id|**smallint**|このノードが属しているメモリ ノードの ID。 多対一の関係に[sys.dm_os_memory_nodes](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-nodes-transact-sql.md).memory_node_id します。|  
-|cpu_affinity_mask|**bigint**|このノードに関連付けられている CPU を識別するビットマップ。|  
-|online_scheduler_count|**smallint**|このノードによって管理されるオンライン スケジューラの数。|  
+|node_state_desc|**nvarchar(256)**|ノードの状態の説明。 相互排他的な値から先に表示され、続けて、組み合わせ可能な値が表示されます。 次に例を示します。<br /> Online、Thread Resources Low、Lazy Preemptive<br /><br />相互に排他的な4つの node_state_desc 値があります。 これらの説明については、以下に説明します。<br /><ul><li>オンライン: ノードはオンラインです<li>OFFLINE: ノードがオフラインです<li>IDLE: ノードには保留中の作業要求がなく、アイドル状態になりました。<li>IDLE_READY: ノードには保留中の作業要求がなく、アイドル状態に入る準備ができています。</li></ul><br />Node_state_desc 値には3つの組み合わせがあります。以下にその説明を示します。<br /><ul><li>DAC: このノードは[専用管理接続](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)用に予約されています。<li>THREAD_RESOURCES_LOW: メモリ不足の状態により、このノードに新しいスレッドを作成することはできません。<li>ホット追加: ホットアド CPU イベントへの応答としてノードが追加されたことを示します。</li></ul>|  
+|memory_object_address|**varbinary (8)**|このノードに関連付けられているメモリ オブジェクトのアドレス。 一対一の関係を持つ、memory_object_address [dm_os_memory_objects](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md)。|  
+|memory_clerk_address|**varbinary (8)**|このノードに関連付けられているメモリクラークのアドレス。 一対一の関係を持つ、memory_clerk_address [dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)。|  
+|io_completion_worker_address|**varbinary (8)**|このノードの IO 完了に割り当てられているワーカーのアドレス。 一対一の関係を持つ、worker_address [dm_os_workers](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)。|  
+|memory_node_id|**smallint**|このノードが属しているメモリノードの ID。 多対一の関係を持つ、memory_node_id [dm_os_memory_nodes](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-nodes-transact-sql.md)。|  
+|cpu_affinity_mask|**bigint**|このノードが関連付けられている Cpu を識別するビットマップ。|  
+|online_scheduler_count|**smallint**|このノードによって管理されているオンラインスケジューラの数。|  
 |idle_scheduler_count|**smallint**|アクティブなワーカーの存在しないオンライン スケジューラの数。|  
-|active_worker_count|**int**|このノードによって管理されるすべてのスケジューラ上のアクティブ ワーカーの数。|  
+|active_worker_count|**int**|このノードによって管理されているすべてのスケジューラでアクティブなワーカーの数。|  
 |avg_load_balance|**int**|このノード上のスケジューラあたりの平均タスク数。|  
 |timer_task_affinity_mask|**bigint**|タイマー タスクの割り当てが可能なスケジューラを識別するビットマップ。|  
 |permanent_task_affinity_mask|**bigint**|永続的なタスクの割り当てが可能なスケジューラを識別するビットマップ。|  
-|resource_monitor_state|**bit**|各ノードには、1 つのリソース モニターが割り当てられます。 リソース モニターの状態には、実行中とアイドル状態とがあります。 1 は実行中を、0 はアイドル状態を表します。|  
+|resource_monitor_state|**bit**|各ノードには1つのリソースモニターが割り当てられています。 リソースモニターは、実行中またはアイドル状態になっている可能性があります。 値1は実行を示し、値0はアイドル状態を示します。|  
 |online_scheduler_mask|**bigint**|このノードのプロセス関係マスクを識別します。|  
 |processor_group|**smallint**|このノードのプロセッサ グループを識別します。|  
-|cpu_count |**int** |このノードの利用可能な Cpu の数。 |
-|pdw_node_id|**int**|この配布であるノードの識別子。<br /><br /> **適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
+|cpu_count |**int** |このノードで使用可能な Cpu の数。 |
+|pdw_node_id|**int**|このディストリビューションが配置されているノードの識別子。<br /><br /> **適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
   
 ## <a name="permissions"></a>アクセス許可
 
-[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]、必要があります`VIEW SERVER STATE`権限。   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium レベルでは、必要があります、`VIEW DATABASE STATE`データベースの権限。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard および Basic 階層は、必要があります、**サーバー管理者**または**Azure Active Directory 管理者**アカウント。   
+で[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]は、 `VIEW SERVER STATE`権限が必要です。   
+Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルでは、データベース`VIEW DATABASE STATE`の権限が必要です。 Standard [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]レベルおよび Basic レベルでは、**サーバー管理**者または**Azure Active Directory 管理者**アカウントが必要です。   
 
-## <a name="see-also"></a>関連項目    
- [SQL Server オペレーティング システム関連の動的管理ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
+## <a name="see-also"></a>参照    
+ [SQL Server オペレーティングシステム関連の動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [ソフト NUMA &#40;SQL Server&#41;](../../database-engine/configure-windows/soft-numa-sql-server.md)  
   

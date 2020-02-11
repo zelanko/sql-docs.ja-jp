@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 4285cbe15659bde63655fc61141d4df7abdbba09
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401092"
 ---
 # <a name="microsoft-analytics-platform-system"></a>Microsoft Analytics Platform System
@@ -49,6 +49,6 @@ PDW では、画期的なパフォーマンスを得られるだけではなく�
 
 - ビジネス インテリジェンス ツールを使用して、包括的なエンド ツー エンド ソリューションを構築できます。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 PDW の利点の詳細については、MSDN でホワイトペーパー「[A Breakthrough Platform for Next-Generation Data Warehousing and Big Data Solutions](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/dn520808%28v=msdn.10%29)」 (次世代のデータ ウェアハウジング ソリューションとビッグ データ ソリューションのための画期的なプラットフォーム) を参照してください。

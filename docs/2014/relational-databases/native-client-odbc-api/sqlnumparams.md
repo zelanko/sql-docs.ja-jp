@@ -1,5 +1,5 @@
 ---
-title: SQLNumParams |マイクロソフトのドキュメント
+title: SQLNumParams |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e7fd9cbf18083f05457b99ed5d58e04ebd29d75f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63046709"
 ---
 # <a name="sqlnumparams"></a>SQLNumParams
-  データベース エンジンが以降の機能強化[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]期待どおりの結果のより正確な記述を取得する SQLNumParams を許可します。 これらのより正確な結果の以前のバージョンの SQLNumParams によって返される値が異なる場合があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
+  で始まるデータベースエンジンの機能強化[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]により、SQLNumParams で、予期される結果についてより正確な説明を取得できるようになりました。 これらのより正確な結果は、以前のバージョンのの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SQLNumParams によって返される値とは異なる場合があります。  
   
- 詳細については、次を参照してください。[メタデータ検出](../native-client/features/metadata-discovery.md)します。  
+ 詳細については、「[メタデータの検出](../native-client/features/metadata-discovery.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [SQLNumParams 関数](https://go.microsoft.com/fwlink/?LinkId=58404)   

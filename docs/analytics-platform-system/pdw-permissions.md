@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: d60c6f492b0735e70a2c3103e48ad08953039adc
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400870"
 ---
 # <a name="managing-permissions-in-parallel-data-warehouse"></a>並列データウェアハウスでのアクセス許可の管理
@@ -22,7 +22,7 @@ ms.locfileid: "74400870"
 ## <a name="BackupRestoreBasics"></a>データベースエンジンアクセス許可の基本  
 SQL Server PDW に対するデータベースエンジン権限は、ログインを通じてサーバーレベルで管理されます。データベースレベルでは、データベースユーザーとユーザー定義データベースロールによって管理されます。  
   
-**ログイン**  
+**Login**  
 ログインは、SQL Server PDW にログオンするための個々のユーザーアカウントです。 SQL Server PDW では、Windows 認証と SQL Server 認証を使用したログインがサポートされます。  Windows 認証ログインは、SQL Server PDW によって信頼されている任意のドメインの Windows ユーザーまたは Windows グループにすることができます。 SQL Server 認証ログインは SQL Server PDW によって定義および認証されるため、パスワードを指定して作成する必要があります。  
   
 **Sysadmin**固定サーバーロールのメンバー ( **sa**ログインなど) は、データベースユーザーにマップされていなくてもデータベースに接続できます。 これらは**dbo**ユーザーにマップされます。 また、データベースの所有者は**dbo**ユーザーとしてもマップされます。  

@@ -1,5 +1,5 @@
 ---
-title: sys.sp_cleanup_temporal_history | Microsoft Docs
+title: sys. sp_cleanup_temporal_history |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.service: sql-database
@@ -10,10 +10,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 302291ae42fa5fbb2f7dea94ccdb9f659379f5bc
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74165827"
 ---
 # <a name="syssp_cleanup_temporal_history-transact-sql"></a>sp_cleanup_temporal_history (Transact-sql)
@@ -40,11 +40,11 @@ sp_cleanup_temporal_history [@schema_name = ] schema_name, [@table_name = ] tabl
 
 現在のテンポラルテーブルが属しているスキーマの名前
 
-*row_count_var* [OUTPUT]
+*row_count_var* [出力]
 
 削除された行の数を返す出力パラメーター。 履歴テーブルにクラスター化列ストアインデックスがある場合、このパラメーターは常に0を返します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 このストアドプロシージャは、有限の保有期間が指定されているテンポラルテーブルでのみ使用できます。
 このストアドプロシージャは、履歴テーブルからすべての期限切れの行を直ちに消去する必要がある場合にのみ使用してください。 同じトランザクション内で対象となるすべての行が削除されるため、データベースログと i/o サブシステムに大きな影響を与える可能性があります。
@@ -53,7 +53,7 @@ sp_cleanup_temporal_history [@schema_name = ] schema_name, [@table_name = ] tabl
 
 ## <a name="permissions"></a>アクセス許可
 
-Db_owner アクセス許可が必要です。
+Db_owner のアクセス許可が必要です。
 
 ## <a name="example"></a>例
 
@@ -63,6 +63,6 @@ EXEC sys.sp_cleanup_temporal_history 'dbo', 'Department', @rowcnt output
 select @rowcnt
 ```
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 [テンポラルテーブルのリテンション期間ポリシー](https://docs.microsoft.com/azure/sql-database/sql-database-temporal-tables-retention-policy)

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f4f911ebf60852fd4ab11c5813fc567deb2d0c87
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75225399"
 ---
 # <a name="configure-http-access-to-analysis-services-on-internet-information-services-iis-80"></a>インターネット インフォメーション サービス (IIS) 8.0 上の Analysis Services への HTTP アクセスの構成
@@ -36,7 +36,7 @@ ms.locfileid: "75225399"
   
  MSMDPUMP 構成で先に進む際、client-to-IIS と IIS-to-SSAS の 2 つの接続を考慮する必要があることに注意してください。 この記事の手順では、IIS と SSAS の間の接続を扱います。 IIS に接続するには、クライアント アプリケーションで追加の構成が必要になる場合があります。 SSL を使用するかどうか、バインドをどのように構成するかなどの決定については、この記事では扱いません。 IIS の詳細については、「 [Web サーバー (IIS) の概要](https://technet.microsoft.com/library/hh831725.aspx) 」を参照してください。  
   
- このトピックには、次のセクションが含まれています。  
+ このトピックのセクションは次のとおりです。  
   
 -   [概要](#bkmk_overview)  
   
@@ -71,7 +71,7 @@ ms.locfileid: "75225399"
 |IIS と Analysis Services が異なるコンピューター上にある場合|このトポロジでは、Web サーバーに Analysis Services OLE DB プロバイダーをインストールする必要があります。 msmdpump.ini ファイルを編集して、リモート コンピューター上の Analysis Services インスタンスの場所を指定する必要もあります。<br /><br /> このトポロジでは、ダブルホップ認証ステップが追加されます。この認証では、資格情報がクライアントから Web サーバーに渡され、バックエンドの Analysis Services サーバーまで到達する必要があります。 Windows 資格情報と NTLM を使用している場合、NTLM では 2 番目のサーバーへのクライアント資格情報の委任が許可されないためにエラーが発生します。 最も一般的なソリューションは、SSL (Secure Sockets Layer) で基本認証を使用する方法です。ただし、この場合、MSMDPUMP 仮想ディレクトリにアクセスするときにユーザー名とパスワードの入力が必要となります。 さらにわかりやすい方法として、Kerberos を有効にし、Analysis Services 制約付き委任を構成することによって認証を内部的に処理して Analysis Services にアクセスできるようにすることもできます。 詳細については、「 [Configure Analysis Services for Kerberos constrained delegation](configure-analysis-services-for-kerberos-constrained-delegation.md) 」を参照してください。<br /><br /> Windows ファイアウォールでどのポートのブロックを解除するかを検討してください。 両方のサーバー上のポートのブロックを解除して IIS 上の Web アプリケーションと、リモート サーバー上の Analysis Services にアクセスできるようにする必要があります。|  
 |信頼されていないドメインからのクライアント接続、またはエクストラネット接続の場合|信頼されていないドメインからのクライアント接続の場合、認証はさらに制限されます。 既定では、Analysis Services は、Windows 統合認証を使用します。この認証では、ユーザーは、サーバーと同じドメインにいる必要があります。 既定の設定を使用するようにサーバーが構成されている場合に、エクストラネット ユーザーがドメインの外から IIS に接続しようとすると接続エラーが表示されます。<br /><br /> 対処方法には、エクストラネット ユーザーがドメインの資格情報を使用して VPN 経由で接続する方法があります。 ただし、IIS Web サイト上で基本認証と SSL を有効にする方法が適している場合もあります。|  
   
-##  <a name="bkmk_prereq"></a>応募  
+##  <a name="bkmk_prereq"></a> 前提条件  
  この記事の手順では、IIS が既に構成され、また Analysis Services が既にインストールされていることを想定しています。 Windows Server 2012 には、システムで有効にできるサーバーの役割として IIS 8.x が付属しています。  
   
  **IIS 8.0 の追加構成**  
@@ -160,7 +160,7 @@ ms.locfileid: "75225399"
   
      ![[アプリケーションの追加] ダイアログ ボックス](../media/ssas-httpaccess-convertedapp.png "[アプリケーションの追加] ダイアログ ボックス")  
   
-4.  [**OK**] をクリックすると、 Web サイトを更新し、OLAP フォルダーが既定の Web サイトでアプリケーションになっていることを確認します。 これで、MSMDPUMP ファイルへの仮想パスが確立されました。  
+4.  **[OK]** をクリックします。 Web サイトを更新し、OLAP フォルダーが既定の Web サイトでアプリケーションになっていることを確認します。 これで、MSMDPUMP ファイルへの仮想パスが確立されました。  
   
      ![アプリ変換後の OLAP フォルダー](../media/ssas-httpaccess-convertfolderafter.png "アプリ変換後の OLAP フォルダー")  
   

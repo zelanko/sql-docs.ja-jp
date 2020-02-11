@@ -1,5 +1,5 @@
 ---
-title: 作成して、ネイティブ コンパイル ストアド プロシージャから TempDB 内のテーブルへのアクセス |Microsoft Docs
+title: ネイティブコンパイルストアドプロシージャからの TempDB 内のテーブルの作成とアクセス |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 188f47efe73edde0ed2e534bd19787c8546e7c18
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62990376"
 ---
 # <a name="creating-and-accessing-tables-in-tempdb-from-natively-compiled-stored-procedures"></a>ネイティブ コンパイル ストアド プロシージャからの TempDB 内のテーブルの作成およびアクセス
-  ネイティブ コンパイル ストアド プロシージャからの TempDB 内のテーブルの作成およびアクセスはサポートされていません。 代わりに、テーブル型およびテーブル変数を使用します。 例 :  
+  ネイティブ コンパイル ストアド プロシージャからの TempDB 内のテーブルの作成およびアクセスはサポートされていません。 代わりに、テーブル型およびテーブル変数を使用します。 次に例を示します。  
   
 ```sql  
 CREATE TYPE dbo.OrderQuantityByProduct   

@@ -14,16 +14,16 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 932bb271d7d38a1dfec411dca4ed5b1696ab924f
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73763208"
 ---
 # <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  IBCPSession2:: bcpsetbulkmode は、列の形式を指定するための[ibcpsession &#40;:&#41; : bcpcolfmt OLE DB](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md)の代わりに使用できます。 個々の列の書式属性を設定する IBCPSession:: BCPColFmt とは異なり、IBCPSession2:: BCPSetBulkMode はすべての属性を設定します。  
+  IBCPSession2:: BCPSetBulkMode には、列の形式を指定するための[Ibcpsession:: BCPColFmt &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md)の代替手段が用意されています。 個々の列の書式属性を設定する IBCPSession:: BCPColFmt とは異なり、IBCPSession2:: BCPSetBulkMode はすべての属性を設定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,7 +39,7 @@ HRESULT BCPSetBulkMode (
 ```  
   
 ## <a name="arguments"></a>引数  
- *property*  
+ *"*  
  BYTE 型の定数です。 定数の一覧については、「解説」の表を参照してください。  
   
  *pField*  
@@ -70,9 +70,10 @@ HRESULT BCPSetBulkMode (
   
  RPC 呼び出し構文とバッチ クエリ構文 (`{rpc func};SELECT * from Tbl` など) を 1 つのコマンド テキスト内で組み合わせて使用しないでください。  これにより、ICommandPrepare::P repare からエラーが返され、メタデータを取得できなくなります。 ストアド プロシージャの実行とバッチ クエリを 1 つのコマンド テキストで組み合わせて使用する必要がある場合は、ODBC CALL 構文 (`{call func}; SELECT * from Tbl` など) を使用します。  
   
- *property* パラメーターとして使用できる定数の一覧を次の表に示します。  
+ 
+  *property* パラメーターとして使用できる定数の一覧を次の表に示します。  
   
-|プロパティ|説明|  
+|プロパティ|[説明]|  
 |--------------|-----------------|  
 |BCP_OUT_CHARACTER_MODE|文字出力モードを指定します。<br /><br /> BCP の-c オプションに対応しています。を実行し、 *Euserdatatype*プロパティを**BCP_TYPE_SQLCHARACTER**に設定して、Ibcpsession:: bcpcolfmt にします。|  
 |BCP_OUT_WIDE_CHARACTER_MODE|Unicode 出力モードを指定します。<br /><br /> BCP の-w オプションに対応しています。EXE および IBCPSession:: BCPColFmt と*Euserdatatype*プロパティが**BCP_TYPE_SQLNCHAR**に設定されています。|  

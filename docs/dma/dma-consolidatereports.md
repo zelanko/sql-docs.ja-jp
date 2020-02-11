@@ -15,17 +15,17 @@ author: HJToland3
 ms.author: rajpo
 ms.custom: seo-lt-2019
 ms.openlocfilehash: ec8ededac012ccb2b3d4b62fc40d84132a6fb882
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056648"
 ---
-# <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>企業を評価し、DMA で評価レポートを統合する
+# <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>DMA で企業を評価し評価レポートを統合する
 
 次のステップバイステップの手順では、Data Migration Assistant を使用して、オンプレミスの SQL Server または Azure Vm で実行されている SQL Server のアップグレード、または Azure SQL Database への移行について、適切なスケール評価を実行する方法について説明します。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 - DMA を開始するネットワーク上のツールコンピューターを指定します。 このコンピューターが SQL Server ターゲットに接続されていることを確認します。
 - ダウンロードしてインストールする:
@@ -58,7 +58,7 @@ Powershell モジュールを PowerShell modules ディレクトリに保存す�
    > 含まれているフォルダーと hbase-runner.psm1 ファイルの名前は同じである必要があります。
 
    > [!IMPORTANT]
-   > モジュールが正しく読み込まれるようにするには、PowerShell ファイルを WindowsPowerShell ディレクトリに保存した後でブロックを解除しなければならない場合があります。 PowerShell ファイルのブロックを解除するには、ファイルを右クリックし、 **[プロパティ]** を選択します。次に、 **[ブロック解除]** ボックスをオンにして、[ **Ok]** を選択します。
+   > モジュールが正しく読み込まれるようにするには、PowerShell ファイルを WindowsPowerShell ディレクトリに保存した後でブロックを解除しなければならない場合があります。 PowerShell ファイルのブロックを解除するには、ファイルを右クリックし、[**プロパティ**] を選択します。次に、[**ブロック解除**] ボックスをオンにして、[ **Ok]** を選択します。
 
    ![hbase-runner.psm1 ファイルのプロパティ](../dma/media//dma-consolidatereports/dma-psm1-file-properties.png)
 
@@ -171,7 +171,7 @@ LoadWarehouse スクリプトを使用して、データベース所有者を設
 ## <a name="dma-reports"></a>DMA レポート
 
 1. Power BI Desktop で、DMA レポート Power BI テンプレートを開きます。
-2. **DMAWarehouse**データベースをポイントするサーバーの詳細を入力し、 **[読み込み]** を選択します。
+2. **DMAWarehouse**データベースをポイントするサーバーの詳細を入力し、[**読み込み**] を選択します。
 
    ![DMA レポート Power BI テンプレートが読み込まれました](../dma/media//dma-consolidatereports/dma-reports-powerbi-template-loaded.png)
 
@@ -187,8 +187,8 @@ LoadWarehouse スクリプトを使用して、データベース所有者を設
 DMA レポートを操作するには、次の方法でブックマークとスライサーを使用してフィルター処理を行います。
 
 - 評価の種類 (Azure SQL DB、Azure SQL MI、オンプレミスの SQL) 
-- [インスタンス名]
-- [データベース名]
+- インスタンス名
+- データベース名
 - チーム名
 
 [ブックマークとフィルター] ブレードにアクセスするには、メインレポートページの [フィルター] ブックマークを選択します。
@@ -263,7 +263,7 @@ Power BI レポートに表示される詳細については、次のセクシ�
 
 - InstanceDatabase
 - ChangeCategory
-- Title
+- タイトル
 - ObjectType
 - ImpactedObjectName
 
@@ -271,7 +271,7 @@ Power BI レポートに表示される詳細については、次のセクシ�
 
 このレポートは、修復プランレポートを作成するためのフィルターポイントとしても機能します。
 
-修復プランレポートをドリルダウンするには、このグラフ内のデータポイントを右クリックし、 **[ドリルスルー]** をポイントして、 **[修復プラン]** を選択します。
+修復プランレポートをドリルダウンするには、このグラフ内のデータポイントを右クリックし、[**ドリルスルー**] をポイントして、[**修復プラン**] を選択します。
 
 このタスクは、[ドリルスルー] オプションを選択したポイントに基づいて、修復プランレポートを現在の階層レベルにフィルター処理します。
 
@@ -279,7 +279,7 @@ Power BI レポートに表示される詳細については、次のセクシ�
 
   ![DMA 修復プランレポート](../dma/media//dma-consolidatereports/dma-remediation-plan-report.png)
 
-また、**視覚化フィルター (視覚エフェクトフィルター** )」ブレードのフィルターを使用して、独自の修復プランレポートを作成することもできます。
+また、[**視覚化フィルター (視覚エフェクトフィルター** )」ブレードのフィルターを使用して、独自の修復プランレポートを作成することもできます。
  
   ![DMA 修復プランレポートのフィルターオプション](../dma/media//dma-consolidatereports/dma-remediation-plan-report-filter-options.png)
 

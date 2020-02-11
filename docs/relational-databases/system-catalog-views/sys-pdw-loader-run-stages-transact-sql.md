@@ -1,5 +1,5 @@
 ---
-title: sys.pdw_loader_run_stages (TRANSACT-SQL) |Microsoft Docs
+title: pdw_loader_run_stages (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -13,29 +13,29 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 5d10a3bcbf02e88e054c12060299e9462af3004d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68127450"
 ---
-# <a name="syspdwloaderrunstages-transact-sql"></a>sys.pdw_loader_run_stages (TRANSACT-SQL)
+# <a name="syspdw_loader_run_stages-transact-sql"></a>pdw_loader_run_stages (Transact-sql)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  進行中と完了したロード操作に関する情報を含む[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]します。 情報は、システムの再起動の間で永続化します。  
+  で実行中および完了した読み込み操作[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]に関する情報を格納します。 情報は、システムの再起動の間で永続化します。  
   
 |||||  
 |-|-|-|-|  
-|列名|データ型|説明|範囲|  
-|run_id|**int**|実行のローダーの一意の識別子。||  
-|ステージ|**nvarchar(30)**|実行の現在のステージです。|'CREATE_STAGING'、'DMS_LOAD'、'LOAD_INSERT'、'LOAD_CLEANUP'|  
-|request_id|**nvarchar(32)**|この段階を実行している要求の ID。||  
-|status|**nvarchar(16)**|このフェーズの状態です。||  
-|start_time|**datetime**|ステージの開始時刻。||  
-|end_time|**datetime**|時間は、ステージの終了時刻、存在する場合です。|開始されていない場合、または進行状況では NULL です。|  
-|total_elapsed_time|**int**|この段階で費やされた (またはこれまでに費やされた) の合計時間が実行されています。|Total_elapsed_time では、整数値 (ミリ秒単位で 24.8 日) の最大値を超えるをオーバーフローしました期日の実体化エラーが発生します。<br /><br /> 最大値をミリ秒単位は 24.8 日に相当します。|  
+|列名|データ型|[説明]|Range|  
+|run_id|**int**|ローダー実行の一意識別子。||  
+|準備|**nvarchar (30)**|実行の現在のステージ。|' CREATE_STAGING '、' DMS_LOAD '、' LOAD_INSERT '、' LOAD_CLEANUP '|  
+|request_id|**nvarchar (32)**|このステージを実行している要求の ID。||  
+|status|**nvarchar (16)**|このフェーズの状態。||  
+|start_time|**DATETIME**|ステージが開始された時刻。||  
+|end_time|**DATETIME**|ステージが終了した時刻 (存在する場合)。|開始されていないか処理中の場合は NULL です。|  
+|total_elapsed_time|**int**|このステージの実行にかかった合計時間 (またはこれまでに費やされた時間)。|Total_elapsed_time が整数の最大値 (ミリ秒単位で24.8 日) を超えた場合、オーバーフローによる具体化エラーが発生します。<br /><br /> ミリ秒単位の最大値は24.8 日に相当します。|  
   
 ## <a name="see-also"></a>参照  
- [SQL Data Warehouse と Parallel Data Warehouse カタログ ビュー](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+ [SQL Data Warehouse および並列データウェアハウスのカタログビュー](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

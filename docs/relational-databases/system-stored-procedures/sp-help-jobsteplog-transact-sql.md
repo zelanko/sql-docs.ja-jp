@@ -1,5 +1,5 @@
 ---
-title: sp_help_jobsteplog (TRANSACT-SQL) |Microsoft Docs
+title: sp_help_jobsteplog (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -18,16 +18,16 @@ ms.assetid: 1a0be7b1-8f31-4b4c-aadb-586c0e00ed04
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e3af6ff05b971e6b9a0dedc1ec2e14f4ba87e00c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68090044"
 ---
-# <a name="sphelpjobsteplog-transact-sql"></a>sp_help_jobsteplog (TRANSACT-SQL)
+# <a name="sp_help_jobsteplog-transact-sql"></a>sp_help_jobsteplog (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  特定のメタデータを返します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント ジョブ ステップのログ。 **sp_help_jobsteplog**実際のログは返されません。  
+  特定の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントのジョブステップログに関するメタデータを返します。 **sp_help_jobsteplog**は実際のログを返しません。  
 
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -42,39 +42,39 @@ sp_help_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @job_id = ] 'job_id'` ジョブ ステップ ログ情報を返す対象のジョブ識別番号。 *job_id*は**int**、既定値は NULL です。  
+`[ @job_id = ] 'job_id'`ジョブステップログ情報を返すジョブの識別番号を指定します。 *job_id*は**int**,、既定値は NULL です。  
   
-`[ @job_name = ] 'job_name'` ジョブの名前。 *job_name*は**sysname**、既定値 NULL。  
+`[ @job_name = ] 'job_name'`ジョブの名前。 *job_name*は**sysname**で、既定値は NULL です。  
   
 > [!NOTE]  
->  いずれか*job_id*または*job_name*指定する必要がありますが、両方を指定することはできません。  
+>  *Job_id*または*job_name*のいずれかを指定する必要がありますが、両方を指定することはできません。  
   
-`[ @step_id = ] step_id` ジョブ ステップの識別番号。 含まれていない場合、ジョブのすべての手順が含まれます。 *step_id*は**int**、既定値は NULL です。  
+`[ @step_id = ] step_id`ジョブのステップの識別番号を指定します。 含まれていない場合は、ジョブのすべての手順が含まれます。 *step_id*は**int**,、既定値は NULL です。  
   
-`[ @step_name = ] 'step_name'` ジョブのステップの名前。 *step_name*は**sysname**、既定値は NULL です。  
+`[ @step_name = ] 'step_name'`ジョブのステップの名前。 *step_name*は**sysname**,、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
-|**job_id**|**uniqueidentifier**|ジョブの一意の識別子。|  
+|**job_id**|**UNIQUEIDENTIFIER**|ジョブの一意識別子。|  
 |**job_name**|**sysname**|ジョブの名前。|  
-|**step_id**|**int**|ジョブ内のステップの識別子。 たとえば、次のステップ、ジョブの最初の手順は、その*step_id*は 1 です。|  
-|**step_name**|**sysname**|ジョブのステップの名前です。|  
-|**step_uid**|**uniqueidentifier**|(システムによって生成される) のステップの一意識別子ジョブにします。|  
-|**date_created**|**datetime**|ステップが作成された日付。|  
-|**date_modified**|**datetime**|ステップが最後に変更された日付。|  
+|**step_id**|**int**|ジョブ内のステップの識別子。 たとえば、ステップがジョブの最初のステップである場合、その*step_id*は1になります。|  
+|**step_name**|**sysname**|ジョブのステップの名前。|  
+|**step_uid**|**UNIQUEIDENTIFIER**|ジョブ内のステップ (システムによって生成される) の一意の識別子。|  
+|**date_created**|**DATETIME**|ステップが作成された日付。|  
+|**date_modified**|**DATETIME**|ステップが最後に変更された日付。|  
 |**log_size**|**float**|ジョブ ステップ ログのサイズ (MB 単位)。|  
-|**log**|**nvarchar(max)**|ジョブ ステップのログ出力します。|  
+|**出力**|**nvarchar(max)**|ジョブステップのログ出力。|  
   
-## <a name="remarks"></a>コメント  
- **sp_help_jobsteplog**では、 **msdb**データベース。  
+## <a name="remarks"></a>解説  
+ **sp_help_jobsteplog**は**msdb**データベースにあります。  
   
 ## <a name="permissions"></a>アクセス許可  
- 既定では、このストアド プロシージャを実行できるのは、 **sysadmin** 固定サーバー ロールのメンバーです。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
+ 既定では、 **sysadmin**固定サーバーロールのメンバーは、このストアドプロシージャを実行できます。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
   
 -   **SQLAgentUserRole**  
   
@@ -84,11 +84,11 @@ sp_help_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
   
  これらのロールの権限の詳細については、「 [SQL Server エージェントの固定データベース ロール](../../ssms/agent/sql-server-agent-fixed-database-roles.md)」を参照してください。  
   
- メンバーの**SQLAgentUserRole**自分が所有するジョブ ステップのジョブ ステップ ログのメタデータのみを表示できます。  
+ **SQLAgentUserRole**のメンバーは、自分が所有するジョブステップのログメタデータのみを表示できます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
-### <a name="a-returns-job-step-log-information-for-all-steps-in-a-specific-job"></a>A. 特定のジョブ内のすべてのステップに関するジョブ ステップ ログ情報を返します  
+### <a name="a-returns-job-step-log-information-for-all-steps-in-a-specific-job"></a>A. 特定のジョブのすべてのステップに関するジョブステップログ情報を返します  
  次の例では、`Weekly Sales Data Backup` という名前のジョブに関する、すべてのジョブ ステップ ログ情報を返します。  
   
 ```  
@@ -113,12 +113,12 @@ EXEC dbo.sp_help_jobsteplog
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [sp_add_jobstep &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)   
- [sp_delete_jobstep &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   
- [sp_help_jobstep &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
- [sp_delete_jobstep &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   
- [sp_delete_jobsteplog &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobsteplog-transact-sql.md)   
- [SQL Server エージェント ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>参照  
+ [sp_add_jobstep &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)   
+ [sp_delete_jobstep &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   
+ [sp_help_jobstep &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
+ [sp_delete_jobstep &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   
+ [sp_delete_jobsteplog &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobsteplog-transact-sql.md)   
+ [Transact-sql&#41;&#40;のストアドプロシージャの SQL Server エージェント](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)  
   
   

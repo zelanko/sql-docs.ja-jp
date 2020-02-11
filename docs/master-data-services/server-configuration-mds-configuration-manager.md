@@ -13,10 +13,10 @@ ms.assetid: c5a6c797-4ac9-4ab0-89c0-25ded2e3db4a
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 187c3ee9c649388b784b2a8c5c83b20af9ba3ce1
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73727896"
 ---
 # <a name="server-configuration-mds-configuration-manager"></a>サーバーの構成 (MDS 構成マネージャー)
@@ -27,9 +27,10 @@ ms.locfileid: "73727896"
   
 ## <a name="server-configuration"></a>[サーバーの構成]  
   
-|コントロール名|説明|  
+|コントロール名|[説明]|  
 |------------------|-----------------|  
-|**[インターネット インフォメーション サービス]**|ローカル コンピューターにインストールされているインターネット インフォメーション サービス (IIS) のバージョンが表示されます。 マスター データ サービス構成マネージャーを使用するには、IIS Version 1.0 以降が必要です。|  
-|**MDS の製品バージョン**|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]の製品バージョンを表示します。|  
+|**インターネット インフォメーション サービス**|ローカル コンピューターにインストールされているインターネット インフォメーション サービス (IIS) のバージョンが表示されます。 マスター データ サービス構成マネージャーを使用するには、IIS Version 1.0 以降が必要です。|  
+|**MDS 製品バージョン**|
+  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]の製品バージョンを表示します。|  
   
   

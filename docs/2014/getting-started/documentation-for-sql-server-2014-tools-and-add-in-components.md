@@ -11,10 +11,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 716b11a8c09f49deb0179f1a1b9c4a4f0a1dfe06
-ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74683575"
 ---
 # <a name="documentation-for-sql-server-2014-tools-and-add-in-components"></a>SQL Server 2014 ツールとアドイン コンポーネントのドキュメント
@@ -24,7 +24,7 @@ ms.locfileid: "74683575"
   
 |||  
 |-|-|  
-|**ユーティリティ**|**記述**|  
+|**ツール**|**説明**|  
 |[SQL Server 2014 用レポート ビルダーのヘルプ](https://go.microsoft.com/fwlink/?LinkId=299171)|レポート ビルダーは、ビジネス ユーザー用のレポート作成環境です。|  
 |[構成マネージャー](../relational-databases/sql-server-configuration-manager.md)|構成マネージャーは、SQL Server に関連付けられているサービスの管理、SQL Server が使用するネットワーク プロトコルの設定、SQL Server クライアント コンピューターからのネットワーク接続の管理を行うためのツールです。|  
 |[SQL Server 2014 セットアップ](https://go.microsoft.com/fwlink/?LinkId=299175)|セットアップに役立つ SQL Server 2014 のインストール ドキュメントです。|  
@@ -34,10 +34,10 @@ ms.locfileid: "74683575"
 |[Office 2013 用 SQL Server データ マイニング アドイン](https://go.microsoft.com/fwlink/?LinkId=299178)|Office 用データ マイニング アドインは、予測、推奨設定、または検索の分析モデルを構築するために Excel のデータを使用できるようにする軽量な一連の予測分析用ツールです。|  
 |[Change Data Capture Designer for Oracle](https://go.microsoft.com/fwlink/?LinkId=299179)|Change Data Capture Designer for Oracle は、Oracle CDC インスタンスの開発および管理に使用します。|  
 |[Change Data Capture Service for Oracle](https://go.microsoft.com/fwlink/?LinkId=299180)|Change Data Capture Service for Oracle は、Oracle トランザクション ログをスキャンして目的の Oracle テーブルに対する変更を SQL Server 変更テーブルにキャプチャする Windows サービスです。|  
-|[SAP BW 用 Microsoft コネクタ1.1](https://go.microsoft.com/fwlink/?LinkId=299181)|Microsoft Connector 1.1 for SAP BW は、SAP NetWeaver BW Version 7 システムからデータを抽出したり、このシステムにデータを読み込んだりするための 3 つのコンポーネントのセットで構成されます。|  
+|[Microsoft Connector 1.1 for SAP BW](https://go.microsoft.com/fwlink/?LinkId=299181)|Microsoft Connector 1.1 for SAP BW は、SAP NetWeaver BW Version 7 システムからデータを抽出したり、このシステムにデータを読み込んだりするための 3 つのコンポーネントのセットで構成されます。|  
 |[アップグレード アシスタントの再生キャプチャ](https://go.microsoft.com/fwlink/?LinkId=299182)|アップグレード アシスタントの再生キャプチャのワークフローは、後で再生に使用するワークロード トレースのキャプチャ プロセスを自動化します。|  
 |[Windows の Microsoft ODBC Driver 11 for SQL Server](https://go.microsoft.com/fwlink/?LinkId=299183)|Windows 用 Microsoft ODBC Driver 11 は、Microsoft Windows に標準の ODBC インターフェイスを実装するためのアプリケーション プログラミング インターフェイス (API) を提供するスタンドアロン ドライバーです。|  
-|[SharePoint の Power Pivot](https://go.microsoft.com/fwlink/?LinkId=299184)|Power Pivot for SharePoint は、SharePoint モードで実行される Analysis Services サーバーです。|  
+|[Power Pivot for SharePoint](https://go.microsoft.com/fwlink/?LinkId=299184)|Power Pivot for SharePoint は、SharePoint モードで実行される Analysis Services サーバーです。|  
   
 ## <a name="see-also"></a>参照  
  [SQL Server 2014 リソース](../2014-toc/index.yml)  

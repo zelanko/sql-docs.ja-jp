@@ -18,27 +18,27 @@ ms.assetid: 808661eb-0d7c-4e6d-8e40-9dc3bef3d77a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bc5b2e2bce410309656bad5591a3df90781cc8bc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932225"
 ---
 # <a name="mode-property-ado"></a>Mode プロパティ (ADO)
-データを変更する使用可能なアクセス許可を示します、[接続](../../../ado/reference/ado-api/connection-object-ado.md)、[レコード](../../../ado/reference/ado-api/record-object-ado.md)、または[Stream](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクト。  
+[接続](../../../ado/reference/ado-api/connection-object-ado.md)、[レコード](../../../ado/reference/ado-api/record-object-ado.md)、または[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクトのデータを変更するために使用できるアクセス許可を示します。  
   
 ## <a name="settings-and-return-values"></a>設定と戻り値  
- 設定または取得を[ConnectModeEnum](../../../ado/reference/ado-api/connectmodeenum.md)値。 既定値、**接続**は**adModeUnknown**します。 既定値、**レコード**オブジェクトが**adModeRead**します。 既定値、 **Stream** 、基になるソースに関連付けられている (URL または既定値として、ソースとして使用して開いた**Stream**の**レコード**) は**adModeRead**します。 既定値、 **Stream**基になると関連付けられていません (メモリ内でインスタンス化された) ソースが**adModeUnknown**します。  
+ [Connectmodeenum](../../../ado/reference/ado-api/connectmodeenum.md)値を設定または返します。 **接続**の既定値は**admodeunknown**です。 **レコード**オブジェクトの既定値は**adModeRead**です。 基になるソースに関連付けられている**ストリーム**の既定値 (ソースとして URL を使用して開かれるか、**レコード**の既定の**ストリーム**として開かれる) は、 **adModeRead**です。 基になるソース (メモリ内でインスタンス化) に関連付けられていない**ストリーム**の既定値は**admodeunknown**です。  
   
-## <a name="remarks"></a>コメント  
- 使用して、**モード**プロパティを設定または使用中で、プロバイダーによって現在の接続でアクセス許可を取得します。 設定することができます、**モード**プロパティ場合にのみ、**接続**オブジェクトが閉じられます。  
+## <a name="remarks"></a>解説  
+ **Mode**プロパティを使用して、現在の接続でプロバイダーによって使用されているアクセス許可を設定または取得します。 **Mode**プロパティを設定できるのは、**接続**オブジェクトが閉じている場合のみです。  
   
- **Stream**オブジェクトを開くために使用するソースから継承されているアクセス モードが指定されていない場合、 **Stream**オブジェクト。 たとえば場合、 **Stream**から開かれる、**レコード**として同じモードで開くことがその既定のオブジェクト、**レコード**。  
+ **ストリーム**オブジェクトの場合、アクセスモードが指定されていない場合は、**ストリーム**オブジェクトを開くために使用されるソースから継承されます。 たとえば、**レコード**オブジェクトから**ストリーム**が開かれている場合、既定では、**レコード**と同じモードで開かれます。  
   
- このプロパティは読み取り/書き込み、オブジェクトが開いている間、オブジェクトが閉じており、読み取り専用です。  
+ オブジェクトが開いている間は、オブジェクトが閉じられ、読み取り専用になっている間、このプロパティは読み取り/書き込み可能です。  
   
 > [!NOTE]
->  **リモート データ サービスの使用状況**クライアント側で使用すると**接続**オブジェクト、**モード**プロパティのみ設定できます**adModeUnknown**します。  
+>  **リモートデータサービスの使用状況**クライアント側の**接続**オブジェクトで使用する場合、 **Mode**プロパティは**admodeunknown**にのみ設定できます。  
   
 ## <a name="applies-to"></a>適用対象  
   
@@ -46,6 +46,6 @@ ms.locfileid: "67932225"
 |-|-|-|  
 |[Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)|[Record オブジェクト (ADO)](../../../ado/reference/ado-api/record-object-ado.md)|[Stream オブジェクト (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)|  
   
-## <a name="see-also"></a>関連項目  
- [IsolationLevel および Mode プロパティの例 (VB)](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vb.md)   
- [IsolationLevel および Mode プロパティの例 (vc++)](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vc.md)   
+## <a name="see-also"></a>参照  
+ [IsolationLevel と Mode プロパティの例 (VB)](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vb.md)   
+ [IsolationLevel と Mode プロパティの例 (VC + +)](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vc.md)   

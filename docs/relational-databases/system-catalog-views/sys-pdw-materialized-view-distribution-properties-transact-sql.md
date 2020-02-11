@@ -13,10 +13,10 @@ author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: 5dca3564e8e2ccc83f0968d42c636112880f6e56
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401682"
 ---
 # <a name="syspdw_materialized_view_distribution_properties-transact-sql-preview"></a>pdw_materialized_view_distribution_properties (Transact-sql) (プレビュー)
@@ -25,9 +25,9 @@ ms.locfileid: "74401682"
 
 配布情報の具体化されたビューを表示します。  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------| 
-|object_id|**通り**|プロパティが指定された具体化されたビューの ID。| 
+|object_id|**int**|プロパティが指定された具体化されたビューの ID。| 
 |distribution_policy |**tinyint**|2 = ハッシュ</br>4 = ROUND_ROBIN|  
 |distribution_policy_desc |**nvarchar (60)**|HASH、ROUND_ROBIN|  
  

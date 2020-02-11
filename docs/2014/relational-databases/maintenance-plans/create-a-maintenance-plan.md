@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: de7ff72e7ce135ab477e3d254eeb26193c8bbc69
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206045"
 ---
 # <a name="create-a-maintenance-plan"></a>メンテナンス プランの作成
@@ -28,9 +28,9 @@ ms.locfileid: "68206045"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
--   **メンテナンス プランを作成するために使用するもの:**  
+-   **メンテナンスプランを作成するために使用するもの:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -44,7 +44,7 @@ ms.locfileid: "68206045"
 ###  <a name="Security"></a> セキュリティ  
   
 ####  <a name="Permissions"></a> Permissions  
- メンテナンス プランを作成または管理するには、 **sysadmin** 固定サーバー ロールのメンバーである必要があります。  
+ メンテナンスプランを作成または管理するには、 **sysadmin**固定サーバーロールのメンバーである必要があります。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
@@ -54,7 +54,8 @@ ms.locfileid: "68206045"
   
 2.  プラス記号をクリックして **[管理]** フォルダーを展開します。  
   
-3.  **[メンテナンス プラン]** フォルダーを右クリックし、 **[メンテナンス プラン ウィザード]** をクリックします。  
+3.  
+  **[メンテナンス プラン]** フォルダーを右クリックし、 **[メンテナンス プラン ウィザード]** をクリックします。  
   
 4.  ウィザードの手順に従って、メンテナンス プランを作成します。 詳細については、「 [Use the Maintenance Plan Wizard](use-the-maintenance-plan-wizard.md)」をご覧ください。  
   
@@ -64,7 +65,8 @@ ms.locfileid: "68206045"
   
 2.  プラス記号をクリックして **[管理]** フォルダーを展開します。  
   
-3.  **[メンテナンス プラン]** フォルダーを右クリックし、 **[新しいメンテナンス プラン]** をクリックします。  
+3.  
+  **[メンテナンス プラン]** フォルダーを右クリックし、 **[新しいメンテナンス プラン]** をクリックします。  
   
 4.  「[メンテナンス プランの作成 &#40;メンテナンス プラン デザイン画面&#41;](create-a-maintenance-plan-maintenance-plan-design-surface.md)」の手順に従って、メンテナンス プランを作成します。  
   
@@ -135,14 +137,14 @@ ms.locfileid: "68206045"
   
     ```  
   
- 詳細については、以下をご覧ください。  
+ 詳細については、次を参照してください。  
   
--   [sp_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)  
+-   [sp_add_job &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)  
   
--   [sp_add_jobstep &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)  
+-   [sp_add_jobstep &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)  
   
--   [sp_add_schedule &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-schedule-transact-sql)  
+-   [sp_add_schedule &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-add-schedule-transact-sql)  
   
--   [sp_attach_schedule &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql)  
+-   [sp_attach_schedule &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql)  
   
   

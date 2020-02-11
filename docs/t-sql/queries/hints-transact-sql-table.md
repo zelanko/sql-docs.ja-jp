@@ -37,10 +37,10 @@ ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: d5675f7c62ce43a9e41770075cd4a97253ea051e
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981761"
 ---
 # <a name="hints-transact-sql---table"></a>ヒント (Transact-SQL) - Table
@@ -127,7 +127,7 @@ WITH **(** \<table_hint> **)** [ **[,]** ...*n* ]
 > [!IMPORTANT]  
 > WITH キーワードを省略することは非推奨とされます。[!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
-次のテーブル ヒントは、WITH キーワードの有無に関係なく使用できます。NOLOCK、READUNCOMMITTED、UPDLOCK、REPEATABLEREAD、SERIALIZABLE、READCOMMITTED、TABLOCK、TABLOCKX、PAGLOCK、ROWLOCK、NOWAIT、READPAST、XLOCK、SNAPSHOT、NOEXPAND。 これらのテーブル ヒントを WITH キーワードを使用せずに指定するときは、単独で指定してください。 例:  
+次のテーブル ヒントは、WITH キーワードの有無に関係なく使用できます。NOLOCK、READUNCOMMITTED、UPDLOCK、REPEATABLEREAD、SERIALIZABLE、READCOMMITTED、TABLOCK、TABLOCKX、PAGLOCK、ROWLOCK、NOWAIT、READPAST、XLOCK、SNAPSHOT、NOEXPAND。 これらのテーブル ヒントを WITH キーワードを使用せずに指定するときは、単独で指定してください。 次に例を示します。  
   
 ```sql  
 FROM t (TABLOCK)  
@@ -192,7 +192,7 @@ FORCESEEK [ **(** _index\_value_ **(** _index\_column\_name_ [ **,** ... _n_ ] *
   
 FORCESEEK ヒントは以下の方法で指定できます。  
   
-|構文|例|[説明]|  
+|構文|例|説明|  
 |------------|-------------|-----------------|  
 |インデックスまたは INDEX ヒントを使用しない場合|`FROM dbo.MyTable WITH (FORCESEEK)`|クエリ オプティマイザーでは、関連するインデックスを介してテーブルやビューにアクセスするためのインデックスのシーク操作のみが検討されます。|  
 |INDEX ヒントと組み合わせた場合|`FROM dbo.MyTable WITH (FORCESEEK, INDEX (MyIndex))`|クエリ オプティマイザーでは、指定されたインデックスを介してテーブルやビューにアクセスするためのインデックスのシーク操作のみが検討されます。|  
@@ -354,7 +354,7 @@ UPDLOCK を指定すると、READCOMMITTED および READCOMMITTEDLOCK 分離レ
 XLOCK  
 排他ロックを使用することと、これをトランザクション終了まで保持することを指定します。 ROWLOCK、PAGLOCK、または TABLOCK と組み合わせて指定すると、排他ロックは適切な粒度レベルに適用されます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 テーブルがクエリ プランによってアクセスされているのではない場合、テーブル ヒントは無視されます。 これは、オプティマイザーがテーブルにまったくアクセスしないことを選択した結果であるか、またはインデックス付きビューが代わりにアクセスされるためである可能性があります。 後者の場合、OPTION (EXPAND VIEWS) クエリ ヒントを使用することで、インデックス付きビューへのアクセスを防ぐことができます。  
   
 すべてのロック ヒントが、クエリ プランによってアクセスされているすべてのテーブルおよびビュー (ビューで参照されているテーブルおよびビューを含む) に反映されます。 また、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、対応するロックの一貫性チェックを実行します。  
@@ -414,7 +414,7 @@ NOEXPAND は*インデックス付きビュー*にのみ適用できます。 �
 ## <a name="permissions"></a>アクセス許可  
  KEEPIDENTITY、IGNORE_CONSTRAINTS、IGNORE_TRIGGERS の各ヒントには、テーブルに対する ALTER 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-using-the-tablock-hint-to-specify-a-locking-method"></a>A. TABLOCK ヒントを使用してロック手法を指定する  
  次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベース内の `Production.Product` テーブルに対して共有ロックを使用することと、このロックを UPDATE ステートメントの終了まで保持することを指定します。  

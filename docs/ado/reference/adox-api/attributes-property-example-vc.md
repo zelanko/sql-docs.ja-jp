@@ -1,5 +1,5 @@
 ---
-title: 属性のプロパティの例 (vc++) |Microsoft Docs
+title: Attributes プロパティの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 1057b57b-5ace-4830-9a20-562e88aeef86
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 1a234817f40809185c3c4cdb8fbcd2d10e5833db
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 794fcee913b41d98c0703244df86eb90efe3f740
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67967096"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76918819"
 ---
 # <a name="attributes-property-example-vc"></a>Attributes プロパティの例 (VC++)
-この例では、[属性](../../../ado/reference/adox-api/attributes-property-adox.md)のプロパティを[列](../../../ado/reference/adox-api/column-object-adox.md)します。 設定すると**adColNullable**ユーザーの値を設定できるように、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)[フィールド](../../../ado/reference/ado-api/field-object.md)に空の文字列。 このような状況で、ユーザーは、データがないとわかっているレコードと、データが当てはまりませんレコード間で区別できます。  
+この例では、[列](../../../ado/reference/adox-api/column-object-adox.md)の[Attributes](../../../ado/reference/adox-api/attributes-property-adox.md)プロパティを示します。 **Adcolnullable**に設定すると、ユーザーは[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)[フィールド](../../../ado/reference/ado-api/field-object.md)の値を空の文字列に設定できます。 この場合、ユーザーは、データが不明なレコードと、データが適用されないレコードを区別できます。  
   
 ```  
 // Attributes_Property_Sample.cpp  
@@ -179,7 +179,7 @@ int main() {
       printf("\n\tSource :  %s \n\tdescription : %s \n ", (LPCSTR)bstrSource, (LPCSTR)bstrDescription);  
    }  
    catch(...) {  
-      cout << "Error occured in AttributesX...." << endl;  
+      cout << "Error occurred in AttributesX...." << endl;  
    }  
   
    if (m_pRstEmployees)  
@@ -202,6 +202,6 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Attributes プロパティ (ADOX)](../../../ado/reference/adox-api/attributes-property-adox.md)   
  [Column オブジェクト (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)

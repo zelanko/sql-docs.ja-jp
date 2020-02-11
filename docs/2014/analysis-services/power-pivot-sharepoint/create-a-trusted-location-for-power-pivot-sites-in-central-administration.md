@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6c5dd66b72ff280431d29ae292af8fa1402095dc
-ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74684084"
 ---
 # <a name="create-a-trusted-location-for-powerpivot-sites-in-central-administration"></a>サーバーの全体管理での PowerPivot サイト用の信頼できる場所の作成
@@ -61,7 +61,7 @@ ms.locfileid: "74684084"
   
 10. また、[外部データ] の [更新時の警告] で、 **[更新時の警告の有効化]** のチェック ボックスをオフにします。 このチェック ボックスをオフにすると、PowerPivot ギャラリーで、定型の警告メッセージの代わりにブックのプレビュー イメージが表示されるようになります。  
   
-11. [**OK**] をクリックすると、  
+11. **[OK]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
  [PowerPivot ギャラリー](../../2014-toc/index.yml)  
