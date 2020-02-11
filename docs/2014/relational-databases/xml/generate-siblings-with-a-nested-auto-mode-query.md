@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b0db2a84b4be80fffec0f05aed11f39a3bcea7db
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63287357"
 ---
 # <a name="generate-siblings-with-a-nested-auto-mode-query"></a>入れ子になった AUTO モードのクエリを使用した兄弟の生成
@@ -66,7 +66,7 @@ FOR XML AUTO, TYPE
   
 -   `SalesOrder` 句で指定された行セット `FROM` に対してクエリを実行しています。 結果は、1 つ以上の <`SalesOrder`> 要素を含む XML になります。  
   
--   `AUTO` モードと `TYPE` ディレクティブが指定されています。 `AUTO` モードを XML にクエリ結果を変換して、`TYPE`ディレクティブは、結果として返します`xml`型。  
+-   `AUTO` モードと `TYPE` ディレクティブが指定されています。 `AUTO`モードはクエリの結果を XML に変換し`TYPE` 、ディレクティブは結果を`xml`型として返します。  
   
 -   2 つの `SELECT` ステートメントが含まれており、コンマで区切られ、入れ子構造になっています。 入れ子の最初の `SELECT` ステートメントで、販売注文情報、ヘッダー、および明細を取得し、入れ子の 2 番目の `SELECT` ステートメントで販売員情報を取得しています。  
   
@@ -140,7 +140,8 @@ FOR XML AUTO, TYPE
 </Sales.SalesOrderHeader>  
 ```  
   
- `TYPE` ディレクティブによってクエリの結果が `xml` 型で返されるので、各種の `xml` データ型メソッドを使用して結果の XML にクエリを実行できます。 詳細については、「 [xml データ型のメソッド](/sql/t-sql/xml/xml-data-type-methods)」を参照してください。 次のクエリでは、次の点に注意してください。  
+ 
+  `TYPE` ディレクティブによってクエリの結果が `xml` 型で返されるので、各種の `xml` データ型メソッドを使用して結果の XML にクエリを実行できます。 詳細については、「 [xml データ型のメソッド](/sql/t-sql/xml/xml-data-type-methods)」を参照してください。 次のクエリでは、次の点に注意してください。  
   
 -   上記のクエリが `FROM` 句に追加されています。 クエリの結果はテーブルで返されます。 追加された `XmlCol` 別名に注意してください。  
   

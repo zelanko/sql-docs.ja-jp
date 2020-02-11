@@ -1,5 +1,5 @@
 ---
-title: CLR データベース オブジェクトからの XML シリアル化 |Microsoft Docs
+title: CLR データベースオブジェクトからの XML シリアル化 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 646d15dc3091323e6e7db2af757640122fb2f0fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62779781"
 ---
 # <a name="xml-serialization-from-clr-database-objects"></a>CLR データベース オブジェクトからの XML シリアル化
@@ -29,18 +29,21 @@ ms.locfileid: "62779781"
   
 -   UDT (ユーザー定義型) を XML に変換する場合。  
   
- `XmlSerializer` クラスを呼び出して XML シリアル化を実行すると、通常、新たにシリアル化アセンブリが生成され、シリアル化の基になるアセンブリを含むプロジェクトにオーバーロードされます。 ただし、セキュリティ上の理由から、CLR ではこのオーバーロードが無効になります。 そのため、web サービスを呼び出したり、UDT から内の XML への変換を実行する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と呼ばれるツールを使用して手動でアセンブリを作成する必要があります**Sgen.exe**のために必要なを生成する .NET Framework に付属シリアル化アセンブリ。 `XmlSerializer` を呼び出す場合は、次の手順に従って、シリアル化アセンブリを手動で作成する必要があります。  
+ 
+  `XmlSerializer` クラスを呼び出して XML シリアル化を実行すると、通常、新たにシリアル化アセンブリが生成され、シリアル化の基になるアセンブリを含むプロジェクトにオーバーロードされます。 ただし、セキュリティ上の理由から、CLR ではこのオーバーロードが無効になります。 したがって、web サービスを呼び出したり、内[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の UDT から XML への変換を実行したりするには、必要なシリアル化アセンブリを生成する .NET Framework に用意されている**Sgen**というツールを使用して、アセンブリを手動で作成する必要があります。 
+  `XmlSerializer` を呼び出す場合は、次の手順に従って、シリアル化アセンブリを手動で作成する必要があります。  
   
-1.  実行、 **Sgen.exe**はソース アセンブリ用の XML シリアライザーを格納しているアセンブリを作成する .NET Framework SDK に付属するツール。  
+1.  .NET Framework SDK に付属している**Sgen**ツールを実行して、ソースアセンブリの XML シリアライザーを含むアセンブリを作成します。  
   
-2.  `CREATE ASSEMBLY` ステートメントを使用して、生成したアセンブリを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に登録します。  
+2.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ステートメントを使用して、生成したアセンブリを `CREATE ASSEMBLY` に登録します。  
   
- XML シリアル化を実行するときに表示されるエラーについては、次の Microsoft サポート記事を参照してください。[「動的に生成されたシリアル化アセンブリを読み込むことができません」](https://support.microsoft.com/kb/913668)します。  
+ XML シリアル化の実行時に発生する可能性があるエラーの詳細については、 [「動的に生成されたシリアル化アセンブリを読み込むことができません」](https://support.microsoft.com/kb/913668)という Microsoft サポートの記事を参照してください。  
   
  XMLSerializer でサポートされないデータ型については、.NET Framework のドキュメントで、.NET Framework の XML スキーマ バインディング サポートに関する情報を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [CLR データベース オブジェクトからのデータ アクセス](../../relational-databases/clr-integration/data-access/data-access-from-clr-database-objects.md)   
- [CREATE ASSEMBLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-assembly-transact-sql)  
+ [CLR データベースオブジェクトからのデータアクセス](../../relational-databases/clr-integration/data-access/data-access-from-clr-database-objects.md)   
+ [CREATE ASSEMBLY &#40;Transact-sql&#41;](/sql/t-sql/statements/create-assembly-transact-sql)  
   
   

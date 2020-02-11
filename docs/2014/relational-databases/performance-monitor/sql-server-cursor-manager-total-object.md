@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f80eb2cc31d58c231645c8fcbe9a745feb2d2382
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63250676"
 ---
 # <a name="sql-server-cursor-manager-total-object"></a>SQL Server: Cursor Manager Total オブジェクト
@@ -25,7 +25,7 @@ ms.locfileid: "63250676"
   
  次の表で、SQL Server **Cursor Manager Total** カウンターについて説明します。  
   
-|Cursor Manager Total カウンター|説明|  
+|Cursor Manager Total カウンター|[説明]|  
 |-----------------------------------|-----------------|  
 |**Async population count**|非同期に生成されているカーソルの数。|  
 |**Cursor conversion rate**|1 秒間に行われたカーソル変換の回数。|  

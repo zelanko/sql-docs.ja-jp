@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2ad4a7791f7bda19c7bec1887ca45d92943c04e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62827970"
 ---
 # <a name="create-infopackage"></a>インフォパッケージの作成
@@ -35,7 +35,7 @@ ms.locfileid: "62827970"
   
 4.  **[接続マネージャー]** ページの **[SAP BW オブジェクトの作成]** で、 **[インフォパッケージ]** を選択し、 **[作成]** をクリックします。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **インフォソース**  
  新しいインフォパッケージの基にするインフォソースの名前を入力します。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "62827970"
  **転送元システム**  
  インフォパッケージに関連付けるソース システムを選択します。  
   
- **Attributes**  
+ **属性**  
  インフォパッケージが属性データを読み込むことを示します。  
   
  **テキスト**  
@@ -57,7 +57,7 @@ ms.locfileid: "62827970"
  **保存と有効化**  
  新しいインフォパッケージを保存してアクティブ化します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Microsoft Connector 1.1 for SAP BW の F1 ヘルプ](../microsoft-connector-for-sap-bw-f1-help.md)  
   
   

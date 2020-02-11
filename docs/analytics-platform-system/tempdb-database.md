@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 3772e2b4cabac84c00854eba85f7a0c2a33d48bc
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400140"
 ---
 # <a name="tempdb-database-in-parallel-data-warehouse"></a>並列データウェアハウスの tempdb データベース
@@ -82,9 +82,9 @@ SQL Server PDW**tempdb**データベースの制限事項と制約事項。 *次
 ## <a name="permissions"></a>アクセス許可  
 すべてのユーザーが tempdb 内に一時オブジェクトを作成できます。 ユーザーは追加の権限を付与されない限り、自分で作成したオブジェクトにしかアクセスできません。 ユーザーが tempdb を使用できないように tempdb への接続権限を取り消すことはできますが、一部のルーチン処理で tempdb を使用する必要があるためお勧めしません。  
   
-## <a name="RelatedTasks"></a>関連タスク  
+## <a name="RelatedTasks"></a>Related Tasks  
   
-|タスク|説明|  
+|処理手順|[説明]|  
 |---------|---------------|  
 |**Tempdb**にテーブルを作成します。|CREATE TABLE と CREATE TABLE を SELECT ステートメントと共に使用して、ユーザーの一時テーブルを作成できます。 詳細については、「 [CREATE TABLE](../t-sql/statements/create-table-azure-sql-data-warehouse.md) 」および「 [SELECT として CREATE TABLE](../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)」を参照してください。|  
 |**Tempdb**内の既存のテーブルの一覧を表示します。|`SELECT * FROM tempdb.sys.tables;`|  

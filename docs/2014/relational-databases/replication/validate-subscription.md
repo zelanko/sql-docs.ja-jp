@@ -15,28 +15,28 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3bd29769b0ba4fd5d9a48fcef07181b7ac70f7c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63255438"
 ---
 # <a name="validate-subscription"></a>[サブスクリプションを検証する]
-  **[サブスクリプションを検証する]** ダイアログ ボックスを使用すると、サブスクリプションのマージ エージェントを次に実行するときに、マージ パブリケーションへのサブスクリプションを検証するように指定できます。 検証の結果はレプリケーション モニターに表示されます。 詳細については、「 [Validate Data at the Subscriber](validate-data-at-the-subscriber.md)」を参照してください。  
+  [**サブスクリプションの検証**] ダイアログボックスを使用すると、サブスクリプションのマージエージェントを次に実行するときに、マージパブリケーションに対するサブスクリプションを検証する必要があることを指定できます。 検証の結果はレプリケーション モニターに表示されます。 詳しくは、「 [Validate Data at the Subscriber](validate-data-at-the-subscriber.md)」をご覧ください。  
   
  また、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] でパブリケーションを右クリックし、 **[すべてのサブスクリプションの検証]** をクリックすると、マージ パブリケーションへのすべてのサブスクリプションを検証できます。  
   
-## <a name="options"></a>および  
- **[最後に検証を行った日付]**  
+## <a name="options"></a>オプション  
+ **最後に検証を実行した日付**  
  検証が成功したかどうかに関係なく、サブスクリプションの検証を含むマージ エージェント セッションを最後に実行した日付です。  
   
- **[最後に検証が正常終了した日付]**  
+ **最後に検証が正常終了した日付**  
  検証が正常終了したマージ エージェント セッションを最後に実行した日付です。  
   
- **[このサブスクリプションを検証する]**  
+ **このサブスクリプションを検証する**  
  選択すると、サブスクリプションを検証できます。  
   
- **[オプション]**  
+ **オプション**  
  クリックすると、 **[サブスクリプションの検証オプション]** ダイアログ ボックスが開き、行数の検証とバイナリ チェックサムの検証のどちらを使用するかを指定できます。  
   
 ## <a name="see-also"></a>参照  

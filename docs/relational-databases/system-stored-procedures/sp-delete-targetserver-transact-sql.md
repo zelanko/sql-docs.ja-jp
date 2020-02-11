@@ -1,5 +1,5 @@
 ---
-title: sp_delete_targetserver (TRANSACT-SQL) |Microsoft Docs
+title: sp_delete_targetserver (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -18,16 +18,16 @@ ms.assetid: cc438701-ad91-419d-9f23-ebc4c548c700
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 487d88a7580432bf947893920d307e2f0adffd18
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68111991"
 ---
-# <a name="spdeletetargetserver-transact-sql"></a>sp_delete_targetserver (Transact-SQL)
+# <a name="sp_delete_targetserver-transact-sql"></a>sp_delete_targetserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  指定されたサーバーを利用可能な対象サーバーの一覧から削除します。  
+  指定されたサーバーを使用可能な対象サーバーの一覧から削除します。  
    
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,11 +41,11 @@ sp_delete_targetserver [ @server_name = ] 'server'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @server_name = ] 'server'` 使用可能なターゲット サーバーとして削除するサーバーの名前。 *server*は**nvarchar (30)** 、既定値はありません。  
+`[ @server_name = ] 'server'`使用可能な対象サーバーとして削除するサーバーの名前を指定します。 *サーバー*は**nvarchar (30)**,、既定値はありません。  
   
-`[ @clear_downloadlist = ] clear_downloadlist` 対象サーバーに対するダウンロードの一覧を消去するかどうかを指定します。 *clear_downloadlist*型は、**ビット**、既定値は**1**します。 ときに*clear_downloadlist*は**1**サーバーを削除する前に、サーバーのダウンロード一覧が消去されます。 ときに*clear_downloadlist*は**0**ダウンロードの一覧は消去されません。  
+`[ @clear_downloadlist = ] clear_downloadlist`対象サーバーのダウンロードリストをクリアするかどうかを指定します。 *clear_downloadlist*の型は**bit**で、既定値は**1**です。 *Clear_downloadlist*が**1**の場合、サーバーを削除する前に、サーバーのダウンロード一覧がクリアされます。 *Clear_downloadlist*が**0**の場合、ダウンロードリストはクリアされません。  
   
-`[ @post_defection = ] post_defection` ターゲット サーバーを参加解除の命令を投稿するかどうかを指定します。 *post_defection*型は、**ビット**、既定値は 1 です。 ときに*post_defection*は**1**サーバーを削除する前に、ターゲット サーバーを参加解除の命令が通知されます。 ときに*post_defection*は**0**プロシージャは、ターゲット サーバーを参加解除の命令が通知されません。  
+`[ @post_defection = ] post_defection`対象サーバーに参加解除の命令を送信するかどうかを指定します。 *post_defection*の型は**bit**で、既定値は1です。 *Post_defection*が**1**の場合、サーバーを削除する前に、この手順によって対象サーバーに欠陥命令がポストされます。 *Post_defection*が**0**の場合、この手順では、対象サーバーに欠陥を通知しません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -53,14 +53,14 @@ sp_delete_targetserver [ @server_name = ] 'server'
 ## <a name="result-sets"></a>結果セット  
  なし  
   
-## <a name="remarks"></a>コメント  
- ターゲット サーバーを削除するのには、通常の方法を呼び出すことです。 **sp_msx_defect**対象サーバーでします。 使用**sp_delete_targetserver**を手動で参加解除が必要な場合にのみです。  
+## <a name="remarks"></a>解説  
+ 対象サーバーを削除する通常の方法は、対象サーバーで**sp_msx_defect**を呼び出すことです。 手動で参加解除する必要がある場合にのみ**sp_delete_targetserver**を使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
- このストアド プロシージャを実行するユーザーに付与する必要があります、 **sysadmin**固定サーバー ロール。  
+ このストアドプロシージャを実行するには、 **sysadmin**固定サーバーロールがユーザーに付与されている必要があります。  
   
-## <a name="examples"></a>使用例  
- 次の例では、サーバーを削除する`LONDON1`利用可能なジョブ サーバーからです。  
+## <a name="examples"></a>例  
+ 次の例では、 `LONDON1`使用可能なジョブサーバーからサーバーを削除します。  
   
 ```  
 USE msdb ;  
@@ -71,9 +71,9 @@ EXEC dbo.sp_delete_targetserver
 GO  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [sp_help_targetserver &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-targetserver-transact-sql.md)   
- [sp_msx_defect &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-msx-defect-transact-sql.md)   
- [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>参照  
+ [sp_help_targetserver &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-targetserver-transact-sql.md)   
+ [sp_msx_defect &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-msx-defect-transact-sql.md)   
+ [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

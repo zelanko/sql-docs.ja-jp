@@ -1,5 +1,5 @@
 ---
-title: レベル 1 インターフェイスの適合性 |Microsoft Docs
+title: レベル1のインターフェイスの準拠 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,23 +15,23 @@ ms.assetid: ee3f5c08-0583-4f3b-8354-ef71b6086a7e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 05cf381ccbb8c0747db88259acfb4ba218d3e0ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68135011"
 ---
 # <a name="level-1-interface-conformance"></a>レベル 1 インターフェイスの適合性
-レベル 1 インターフェイスの適合性レベルには、コア インターフェイスへの準拠レベルの機能に加えて、OLTP のリレーショナル DBMS で通常利用できるトランザクションなどの追加機能が含まれています。 レベル 1 インターフェイスに準拠のドライバーにより、アプリケーションは、コア インターフェイスの適合性レベルで機能に加え、次の操作します。  
+レベル1のインターフェイスの準拠レベルには、コアインターフェイスの準拠レベルの機能に加え、OLTP リレーショナル DBMS で通常使用できるトランザクションなどの追加機能が含まれています。 レベル1のインターフェイスに準拠したドライバーを使用すると、アプリケーションは、コアインターフェイスの準拠レベルの機能に加えて、次の操作を実行できます。  
   
 |||  
 |-|-|  
-|101|データベースのスキーマのテーブルし、ビュー (2 つの部分が名前付けを使用) を指定します。 (詳細については、3 つの部分の命名で 201 の機能を参照してください[レベル 2 インターフェイスの適合性](../../../odbc/reference/develop-app/level-2-interface-conformance.md))。|  
-|102|ODBC 関数、ODBC 関数を適用できますが、すべて同期または特定の接続で非同期の場合は true。 の非同期実行を呼び出します。|  
-|103|スクロール可能なカーソルを使用し、それによってによって結果セットのメソッドで順方向専用、以外の呼び出しへのアクセスを実現**SQLFetchScroll**で、 *FetchOrientation* SQL_FETCH_NEXT 以外の引数。 (、SQL_FETCH_BOOKMARK *FetchOrientation*で feature 204[レベル 2 インターフェイスの適合性](../../../odbc/reference/develop-app/level-2-interface-conformance.md))。|  
-|104|呼び出すことによって、テーブルの主キーを取得**SQLPrimaryKeys**します。|  
-|105|プロシージャ呼び出しについて、ODBC エスケープ シーケンスの実行中のストアド プロシージャを使用して、ストアド プロシージャに関するデータのディクショナリを呼び出すことによってクエリ**SQLProcedureColumns**と**SQLProcedures**します。 (プロシージャの作成し、データ ソースに格納されているプロセスは、このドキュメントの範囲外です)。|  
-|106|対話形式で呼び出すことによって、使用可能なサーバーを参照してデータ ソースに接続する**SQLBrowseConnect**します。|  
-|107|特定のデータベース操作を実行するのに SQL ステートメントの代わりに ODBC 関数を使用します。**SQLSetPos** SQL_POSITION SQL_REFRESH とします。|  
-|108|呼び出すことによって、バッチおよびストアド プロシージャは、によって生成される複数の結果セットの内容にアクセスできる**SQLMoreResults**します。|  
-|109|True の原子性と SQL_ROLLBACK を指定する機能でいくつかの ODBC 関数にまたがるトランザクションを区切る**SQLEndTran**します。|
+|101|データベースのテーブルとビューのスキーマを指定します (2 つの部分で構成される名前を使用)。 (詳細については、「[レベル2のインターフェイスの準拠](../../../odbc/reference/develop-app/level-2-interface-conformance.md)」の3部構成の名前付け機能201を参照してください)。|  
+|102|ODBC 関数の非同期実行を呼び出します (該当する ODBC 関数がすべて同期されている場合、または特定の接続で非同期の場合)。|  
+|103|スクロール可能なカーソルを使用して、前方参照専用以外のメソッドで結果セットにアクセスできるようにするには、SQL_FETCH_NEXT 以外の*Fetchorientation*引数を指定して**sqlfetchscroll**を呼び出します。 (SQL_FETCH_BOOKMARK *Fetchorientation*は、[レベル2のインターフェイス準拠](../../../odbc/reference/develop-app/level-2-interface-conformance.md)の機能204にあります)。|  
+|104|**Sqlprimarykeys**を呼び出して、テーブルの主キーを取得します。|  
+|105|ストアドプロシージャを ODBC エスケープシーケンスを通じてプロシージャ呼び出しに使用し、 **SQLProcedureColumns**および**sqlprocedures**を呼び出してストアドプロシージャに関するデータ辞書にクエリを実行します。 (データソースにプロシージャを作成して格納するプロセスは、このドキュメントの範囲外です)。|  
+|106|**SQLBrowseConnect**を呼び出して、使用可能なサーバーを対話形式で参照して、データソースに接続します。|  
+|107|SQL ステートメントの代わりに ODBC 関数を使用して、特定のデータベース操作を実行します。 **SQLSetPos**では SQL_POSITION と SQL_REFRESH です。|  
+|108|**Sqlmoreresults**を呼び出して、バッチおよびストアドプロシージャによって生成された複数の結果セットの内容にアクセスできるようにします。|  
+|109|**SQLEndTran**で、真の原子性と SQL_ROLLBACK を指定する機能を使用して、複数の ODBC 関数にまたがるトランザクションを区切ります。|

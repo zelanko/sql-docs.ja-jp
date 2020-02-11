@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c1f23dad22e1d748f39b1dd390b5874806193276
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75253188"
 ---
 # <a name="migrate-a-reporting-services-installation-sharepoint-mode"></a>Reporting Services の移行 (SharePoint モード)
@@ -74,11 +74,11 @@ ms.locfileid: "75253188"
   
 ||Objects|方法|メモ|  
 |-|-------------|------------|-----------|  
-|**1 で保護されたプロセスとして起動されました**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]暗号化キー。|**Rskeymgmt**または[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager。 「 [Reporting Services の暗号化キーのバックアップと復元](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)」を参照してください。|このツールはバックアップ操作だけでなく、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションの管理ページまたは PowerShell を使用した復元操作にも使用できます。|  
-|**3**|SharePoint コンテンツ データベース||データベースをバックアップし、デタッチします。<br /><br /> 「[アップグレード方法を決定する (SharePoint Server 2010)」 (https://technet.microsoft.com/library/cc263447.aspx)](https://technet.microsoft.com/library/cc263447.aspx)「」の「データベースのアタッチアップグレード」を参照してください。|  
+|**1**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]暗号化キー。|**Rskeymgmt**または[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager。 「 [Reporting Services の暗号化キーのバックアップと復元](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)」を参照してください。|このツールはバックアップ操作だけでなく、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションの管理ページまたは PowerShell を使用した復元操作にも使用できます。|  
+|**2**|SharePoint コンテンツ データベース||データベースをバックアップし、デタッチします。<br /><br /> 「[アップグレード方法を決定する (SharePoint Server 2010)」 (https://technet.microsoft.com/library/cc263447.aspx)](https://technet.microsoft.com/library/cc263447.aspx)「」の「データベースのアタッチアップグレード」を参照してください。|  
 |**番**|
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]カタログ データベースである SQL Server データベース。|SQL Server データベースのバックアップと復元<br /><br /> または<br /><br /> SQL Server データベースのデタッチとアタッチ。||  
-|**4/4**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]構成ファイル。|単純なファイル コピー。|ファイルをカスタマイズしていた場合に、単純に rsreportserver.config をコピーします。 ファイルの既定の場所の例:C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServices\Reporting<br /><br /> RSReportServer.config<br /><br /> Rssvrpolicy.config<br /><br /> レポート サーバーの ASP.NET アプリケーション用の Web.config<br /><br /> ASP.NET 用の Machine.config|  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]カタログ データベースである SQL Server データベース。|SQL Server データベースのバックアップと復元<br /><br /> or<br /><br /> SQL Server データベースのデタッチとアタッチ。||  
+|**4**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]構成ファイル。|単純なファイル コピー。|ファイルをカスタマイズしていた場合に、単純に rsreportserver.config をコピーします。 ファイルの既定の場所の例:C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServices\Reporting<br /><br /> RSReportServer.config<br /><br /> Rssvrpolicy.config<br /><br /> レポート サーバーの ASP.NET アプリケーション用の Web.config<br /><br /> ASP.NET 用の Machine.config|  
   
 ####  <a name="bkmk_restore_operations"></a>復元操作  
  ここでは、移行に必要な情報の種類と、復元の実行に使用するツールやプロセスについて説明します。 復元に使用するツールは、バックアップ時に使用するツールと異なる場合があります。  
@@ -87,15 +87,15 @@ ms.locfileid: "75253188"
   
 ||Objects|方法|メモ|  
 |-|-------------|------------|-----------|  
-|**1 で保護されたプロセスとして起動されました**|SharePoint コンテンツ データベースを新しいファームに復元する。|SharePoint の "データベース アタッチ アップグレード" の手法。|基本的な手順:<br /><br /> 1) データベースを新しいサーバーに復元します。<br /><br /> 2) URL を指定して、コンテンツ データベースを Web アプリケーションにアタッチします。<br /><br /> 3) Get-SPWebapplication を実行して、すべての Web アプリケーションと URL を一覧表示します。<br /><br /> 「[アップグレード方法を決定する (sharepoint server 2010)https://technet.microsoft.com/library/cc263447.aspx)](https://technet.microsoft.com/library/cc263447.aspx)」の「データベース接続アップグレード」、および「[データベースをアタッチして sharepoint server 2010 にアップグレードする」 (https://technet.microsoft.com/library/cc263299.aspx)](https://technet.microsoft.com/library/cc263299.aspx)「」を参照してください。|  
-|**3**|
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] カタログ データベースである SQL データベースを復元する (ReportServer)。|SQL データベースのバックアップと復元。<br /><br /> **または**<br /><br /> SQL Server データベースのデタッチとアタッチ。|データベースを最初に使用するときに、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] によってデータベース スキーマが必要に応じて更新され、データベース スキーマが [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 環境で正常に動作できるようになります。|  
+|**1**|SharePoint コンテンツ データベースを新しいファームに復元する。|SharePoint の "データベース アタッチ アップグレード" の手法。|基本的な手順:<br /><br /> 1) データベースを新しいサーバーに復元します。<br /><br /> 2) URL を指定して、コンテンツ データベースを Web アプリケーションにアタッチします。<br /><br /> 3) Get-SPWebapplication を実行して、すべての Web アプリケーションと URL を一覧表示します。<br /><br /> 「[アップグレード方法を決定する (sharepoint server 2010)https://technet.microsoft.com/library/cc263447.aspx)](https://technet.microsoft.com/library/cc263447.aspx)」の「データベース接続アップグレード」、および「[データベースをアタッチして sharepoint server 2010 にアップグレードする」 (https://technet.microsoft.com/library/cc263299.aspx)](https://technet.microsoft.com/library/cc263299.aspx)「」を参照してください。|  
+|**2**|
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] カタログ データベースである SQL データベースを復元する (ReportServer)。|SQL データベースのバックアップと復元。<br /><br /> **もしくは**<br /><br /> SQL Server データベースのデタッチとアタッチ。|データベースを最初に使用するときに、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] によってデータベース スキーマが必要に応じて更新され、データベース スキーマが [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 環境で正常に動作できるようになります。|  
 |**番**|新しい [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションを作成する。|SharePoint サーバーの全体管理。|新しいサービス アプリケーションを作成するときに、コピーしたレポート サーバー データベースを使用するように構成します。<br /><br /> SharePoint サーバーの全体管理の使用方法の詳細については、「sharepoint [2013 用 Reporting Services Sharepoint モードのインストール](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md)」の「手順 3: Reporting Services サービスアプリケーションを作成する」セクションを参照してください。<br /><br /> PowerShell の使用例については、「[Reporting Services の SharePoint サービスとサービス アプリケーション](../../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md)」の「PowerShell を使用して Reporting Services サービス アプリケーションを作成するには」をご覧ください。|  
-|**4/4**|
+|**4**|
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ファイルを復元する。|単純なファイル コピー。|このファイルの既定の場所の例: C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServices\Reporting|  
 |**5/5**|
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 暗号化キーを復元します。|
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションの "SystemSettings" ページを使用して、キー バックアップ ファイルを復元します。<br /><br /> **または**<br /><br /> PowerShell。|「 [Reporting Services SharePoint サービスアプリケーションの管理](../../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md)」の「キー管理」を参照してください。|  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションの "SystemSettings" ページを使用して、キー バックアップ ファイルを復元します。<br /><br /> **もしくは**<br /><br /> PowerShell。|「[Reporting Services SharePoint サービス アプリケーションの管理](../../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md)」の「キー管理」を参照してください。|  
   
 #####  <a name="bkmk_additional_configuration"></a>追加の構成  
  以前の SharePoint 環境の構成方法によっては、次の手順のどちらか、またはこの両方を実行する必要がある場合があります。  

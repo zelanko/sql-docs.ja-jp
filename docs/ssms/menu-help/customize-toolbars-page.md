@@ -1,6 +1,6 @@
 ---
-title: '[ユーザー設定] ([ツール バー] ページ) | Microsoft Docs'
-ms.custom: ''
+title: '[ユーザー設定] \([ツール バー] ページ)'
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 51ce6254-5682-43ff-8beb-4116a75c652e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 09926451f7dc8f2e9ef8a6fd355b86eb9230bfd8
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 1d6297151c5f31c88d108835f1c6c4955bfbccf8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264024"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242191"
 ---
 # <a name="customize-toolbars-page"></a>[ユーザー設定] \([ツール バー] ページ)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

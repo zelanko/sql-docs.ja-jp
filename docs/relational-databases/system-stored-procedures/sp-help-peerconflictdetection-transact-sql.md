@@ -1,5 +1,5 @@
 ---
-title: sp_help_peerconflictdetection (TRANSACT-SQL) |Microsoft Docs
+title: sp_help_peerconflictdetection (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: 59e04107-5eaa-44a1-beb6-ac4f2dbbcb28
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b08e3312f34fcc26d6effff92e09b3739508171e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68085291"
 ---
-# <a name="sphelppeerconflictdetection-transact-sql"></a>sp_help_peerconflictdetection (Transact-SQL)
+# <a name="sp_help_peerconflictdetection-transact-sql"></a>sp_help_peerconflictdetection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  ピア ツー ピア トランザクション レプリケーション トポロジに関係するパブリケーションの検出の設定の競合に関する情報を返します。  
+  ピアツーピアトランザクションレプリケーショントポロジに関係するパブリケーションの競合検出設定に関する情報を返します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -38,14 +38,14 @@ sp_help_peerconflictdetection [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @publication= ] '*publication*'  
- 情報を返すパブリケーションの名前を指定します。 *パブリケーション* は **sysname** 、既定値はありません。  
+ [ @publication= ]'*publication*'  
+ 情報を返すパブリケーションの名前を指定します。 *publication*は**sysname**,、既定値はありません。  
   
- [ @timeout= ] *timeout*  
- トポロジ内の各ノードからの応答の待機中にプロシージャがタイムアウトになるまでの時間を秒数で指定します。 トポロジでは、読み取り専用サブスクライバーがある場合、タイムアウト値を指定することが無効です。 読み取り専用のサブスクライバーはこのプロシージャからの呼び出しに応答しません。 *タイムアウト*は**int**、既定値は 60 です。  
+ [ @timeout= ]*タイムアウト*  
+ トポロジ内の各ノードからの応答の待機中にプロシージャがタイムアウトになるまでの時間を秒数で指定します。 トポロジに読み取り専用のサブスクライバーがある場合は、タイムアウト値を指定することはできません。 読み取り専用のサブスクライバーは、このプロシージャからの呼び出しに応答しません。 *タイムアウト*は**int**,、既定値は60です。  
   
 ## <a name="result-sets"></a>結果セット  
- sp_help_peerconflictdetection は 3 つの結果セットを返します。 これらの結果は、次のトピックに記載されています。  
+ sp_help_peerconflictdetection は 3 つの結果セットを返します。 これらの結果については、次のトピックで説明します。  
   
 -   [MSpeer_conflictdetectionconfigrequest](../../relational-databases/system-tables/mspeer-conflictdetectionconfigrequest-transact-sql.md)  
   
@@ -56,15 +56,15 @@ sp_help_peerconflictdetection [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  sp_help_peerconflictdetection は、ピア ツー ピア トランザクション レプリケーションで使用されます。  
   
 ## <a name="permissions"></a>アクセス許可  
- 固定サーバー ロール sysadmin または固定データベース ロール db_owner のメンバーシップが必要です。  
+ Sysadmin 固定サーバーロールまたは db_owner 固定データベースロールのメンバーシップが必要です。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ピア ツー ピア レプリケーションにおける競合検出](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)   
- [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
- [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
+ [ピアツーピアトランザクションレプリケーション](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
+ [レプリケーションストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

@@ -15,14 +15,14 @@ ms.assetid: 455a02f0-8143-4562-8648-8fb45ffd334c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a16979e7993fd1ac86679d054508b837a0a08c68
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931893"
 ---
 # <a name="openschema-method-example-vb"></a>OpenSchema メソッドの例 (VB)
-この例では、 [OpenSchema](../../../ado/reference/ado-api/openschema-method.md)内の各テーブルの種類と名前を表示するメソッド、 ***Pubs***データベース。  
+この例では、 [OpenSchema](../../../ado/reference/ado-api/openschema-method.md)メソッドを使用して、 ***Pubs***データベース内の各テーブルの名前と種類を表示します。  
   
 ```  
 'BeginOpenSchemaVB  
@@ -78,12 +78,12 @@ End Sub
 'EndOpenSchemaVB  
 ```  
   
- この例で TABLE_TYPE クエリの制約を指定する、 **OpenSchema**メソッド***条件***引数。 ビューのスキーマ情報のみがで指定された結果として、 ***Pubs***データベースが返されます。 例では、名前と各テーブルの型が表示されます。  
+ この例では、 **OpenSchema** method ***Criteria***引数に TABLE_TYPE のクエリ制約を指定します。 その結果、 ***Pubs***データベースに指定されたビューのスキーマ情報のみが返されます。 この例では、各テーブルの名前と種類を表示します。  
   
 ```  
 Attribute VB_Name = "OpenSchema"  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [OpenSchema メソッド](../../../ado/reference/ado-api/openschema-method.md)   
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
