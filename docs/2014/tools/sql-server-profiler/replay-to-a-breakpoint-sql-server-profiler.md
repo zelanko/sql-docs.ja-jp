@@ -1,5 +1,5 @@
 ---
-title: 再生をブレークポイント (SQL Server Profiler) |Microsoft Docs
+title: ブレークポイントまで再生する (SQL Server プロファイラー) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 33860d4e84e828b404236527dbe3c8c8cf6becc2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63183518"
 ---
 # <a name="replay-to-a-breakpoint-sql-server-profiler"></a>ブレークポイントまでの再生 (SQL Server Profiler)
@@ -51,7 +51,7 @@ ms.locfileid: "63183518"
   
 6.  手順 5. をトレースの最後まで繰り返します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [カーソルまでの再生 &#40;SQL Server Profiler&#41;](replay-to-a-cursor-sql-server-profiler.md)   
  [トレースの再生](replay-traces.md)   
  [SQL Server Profiler](sql-server-profiler.md)  

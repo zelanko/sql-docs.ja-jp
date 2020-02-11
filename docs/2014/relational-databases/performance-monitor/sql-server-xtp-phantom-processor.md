@@ -1,5 +1,5 @@
 ---
-title: XTP Phantom Processor |Microsoft Docs
+title: XTP ファントムプロセッサ |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,18 +11,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 14c34bb0d7520b914d8dbfc1cfc8174341722ece
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150986"
 ---
 # <a name="xtp-phantom-processor"></a>XTP Phantom Processor
   XTP Phantom Processor パフォーマンス オブジェクトには、XTP エンジンのファントム処理サブシステムに関連するカウンターが含まれています。 このコンポーネントには、SERIALIZABLE 分離レベルで実行されているトランザクション内のファントム行を検出する役割があります。  
   
- この表は、 **XTP Phantom Processor**カウンター。  
+ 次の表では、 **XTP ファントムプロセッサ**カウンターについて説明します。  
   
-|カウンター|説明|  
+|カウンター|[説明]|  
 |-------------|-----------------|  
 |**Dusty corner scan retries/sec (Phantom-issued)**|ファントム プロセッサによって発行されたダスティ コーナー スウィープ (詳細なクリーンアップ) の実行中に、書き込みの競合が原因で発生したスキャン再試行回数に関する 1 秒あたりの平均です。 これは非常に低レベルのカウンターであり、お客様による使用は想定されていません。|  
 |**Phantom expired rows removed/sec**|ファントム スキャンによって削除された、有効期限切れの行の数に関する 1 秒あたりの平均です。|  
@@ -32,6 +32,6 @@ ms.locfileid: "63150986"
 |**Phantom scans started/sec**|ファントム スキャンが開始された回数に関する 1 秒あたりの平均です。|  
   
 ## <a name="see-also"></a>参照  
- [XTP &#40;、インメモリ OLTP&#41;パフォーマンス カウンター](../../integration-services/performance/performance-counters.md)  
+ [XTP &#40;インメモリ OLTP&#41; パフォーマンスカウンター](../../integration-services/performance/performance-counters.md)  
   
   

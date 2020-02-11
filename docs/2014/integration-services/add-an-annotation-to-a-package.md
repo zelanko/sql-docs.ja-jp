@@ -1,5 +1,5 @@
 ---
-title: パッケージに注釈を追加 |Microsoft Docs
+title: パッケージに注釈を追加する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5c407efc18790b4d8ed8912e47248f4d04de9fca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062100"
 ---
 # <a name="add-an-annotation-to-a-package"></a>パッケージに注釈を追加する
@@ -26,11 +26,13 @@ ms.locfileid: "66062100"
   
 ### <a name="to-add-an-annotation-to-a-package"></a>パッケージに注釈を追加するには  
   
-1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で、注釈を追加するパッケージが含まれている [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
+1.  
+  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で、注釈を追加するパッケージが含まれている [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
   
 2.  ソリューション エクスプローラーで、パッケージをダブルクリックして開きます。  
   
-3.  [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーで、 **[制御フロー]** タブ、 **[データ フロー]** タブ、または **[イベント ハンドラー]** タブのデザイン画面上の任意の場所を右クリックし、 **[注釈の追加]** をクリックします。 タブのデザイン画面に、テキスト ブロックが表示されます。  
+3.  
+  [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーで、 **[制御フロー]** タブ、 **[データ フロー]** タブ、または **[イベント ハンドラー]** タブのデザイン画面上の任意の場所を右クリックし、 **[注釈の追加]** をクリックします。 タブのデザイン画面に、テキスト ブロックが表示されます。  
   
 4.  テキストを追加します。  
   

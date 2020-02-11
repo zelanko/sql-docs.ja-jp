@@ -1,5 +1,5 @@
 ---
-title: ツリー、一覧、ディメンション デザイナーのグリッドで属性を表示 |Microsoft Docs
+title: ディメンションデザイナーのツリー、リスト、またはグリッドでの属性の表示Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 860025d25b106964add87b77e95e1e4107af2ef9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072498"
 ---
 # <a name="view-attributes-in-a-tree-list-or-grid-in-dimension-designer"></a>ディメンション デザイナーのツリー、一覧、グリッドでの属性の表示
@@ -29,10 +29,13 @@ ms.locfileid: "66072498"
   
 1.  ディメンション デザイナーで、操作する属性が含まれているディメンションを開き、[ディメンション構造] タブをクリックします。  
   
-2.  **[属性]** ペイン内をクリックし、 **[属性]** ペインに焦点を合わせます。  
+2.  
+  **[属性]** ペイン内をクリックし、 **[属性]** ペインに焦点を合わせます。  
   
-3.  **[ディメンション]** メニューをクリックするか、 **[属性]** ペインを右クリックします。  
+3.  
+  **[ディメンション]** メニューをクリックするか、 **[属性]** ペインを右クリックします。  
   
-4.  **[属性を表示]** をポイントしてから、 **[ツリー]** 、 **[グリッド]** 、または **[一覧]** をクリックします。  
+4.  
+  **[属性を表示]** をポイントしてから、 **[ツリー]**、 **[グリッド]**、または **[一覧]** をクリックします。  
   
   

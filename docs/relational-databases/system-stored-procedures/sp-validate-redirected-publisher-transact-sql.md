@@ -16,10 +16,10 @@ ms.assetid: 2b7fdbad-17e4-4442-b0b2-9b5e8f84b91d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b01fba8260e86d135e740964022187b9914e5fc0
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72252052"
 ---
 # <a name="sp_validate_redirected_publisher-transact-sql"></a>sp_validate_redirected_publisher (Transact-sql)
@@ -40,20 +40,20 @@ ms.locfileid: "72252052"
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @original_publisher = ] 'original_publisher'`、データベースを最初にパブリッシュした [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの名前を指定します。 *original_publisher*は**sysname**であり、既定値はありません。  
+`[ @original_publisher = ] 'original_publisher'`データベースを最初にパブリッシュし[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]たのインスタンスの名前。 *original_publisher*は**sysname**であり、既定値はありません。  
   
-`[ @publisher_db = ] 'publisher_db'` パブリッシュするデータベースの名前を指定します。 *publisher_db* は **sysname** 、既定値はありません。  
+`[ @publisher_db = ] 'publisher_db'`パブリッシュされるデータベースの名前。 *publisher_db*は**sysname**であり、既定値はありません。  
   
-パブリッシャー/データベースのペアに対して**sp_redirect_publisher**が呼び出されたときに指定されたリダイレクトの対象を `[ @redirected_publisher = ] 'redirected_publisher'` します。 *redirected_publisher*は**sysname**であり、既定値はありません。  
+`[ @redirected_publisher = ] 'redirected_publisher'`パブリッシャー/データベースのペアに対して**sp_redirect_publisher**が呼び出されたときに指定されたリダイレクトの対象。 *redirected_publisher*は**sysname**であり、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- なし。  
+ [なし] :  
   
-## <a name="remarks"></a>Remarks  
- パブリッシャーとパブリッシングデータベースのエントリが存在しない場合、 **sp_validate_redirected_publisher**は *\@redirected_publisher*の出力パラメーターに null を返します。 エントリが存在する場合は、成功と失敗の両方のケースで出力パラメーターに返されます。  
+## <a name="remarks"></a>解説  
+ パブリッシャーとパブリッシングデータベースのエントリが存在しない場合、 **sp_validate_redirected_publisher**出力パラメーター * \@redirected_publisher*に null が返されます。 エントリが存在する場合は、成功と失敗の両方のケースで出力パラメーターに返されます。  
   
  検証が成功した場合、 **sp_validate_redirected_publisher**は成功を示す値を返します。  
   
@@ -63,9 +63,9 @@ ms.locfileid: "72252052"
  呼び出し元は、 **sysadmin**固定サーバーロールのメンバーであるか、ディストリビューションデータベースの**db_owner**固定データベースロールのメンバーであるか、パブリッシャーデータベースに関連付けられている定義済みパブリケーションのパブリケーションアクセスリストのメンバーである必要があります。  
   
 ## <a name="see-also"></a>参照  
- [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
- [transact-sql &#40;  の&#41; sp_get_redirected_publisher](../../relational-databases/system-stored-procedures/sp-get-redirected-publisher-transact-sql.md)  
- [transact-sql &#40;  の&#41; sp_redirect_publisher](../../relational-databases/system-stored-procedures/sp-redirect-publisher-transact-sql.md)  
- [sp_validate_replica_hosts_as_publishers &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-validate-replica-hosts-as-publishers-transact-sql.md)  
+ [レプリケーションストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
+ [sp_get_redirected_publisher &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-get-redirected-publisher-transact-sql.md)   
+ [sp_redirect_publisher &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-redirect-publisher-transact-sql.md)   
+ [sp_validate_replica_hosts_as_publishers &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-validate-replica-hosts-as-publishers-transact-sql.md)  
   
   

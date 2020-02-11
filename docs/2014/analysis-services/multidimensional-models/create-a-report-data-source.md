@@ -1,5 +1,5 @@
 ---
-title: レポート データ ソースの作成 |Microsoft Docs
+title: レポートデータソースを作成する |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 77cc99e74a1ee9d5d4be08bf7f9ce8d39288bd5b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076339"
 ---
 # <a name="create-a-report-data-source"></a>レポート データ ソースの作成
@@ -39,16 +39,19 @@ ms.locfileid: "66076339"
   
 1.  ライブラリ リボンで、 **[ドキュメント]** タブをクリックします。  
   
-2.  **［新しいドキュメント］**  >  **［レポート データ ソース］** をクリックします。  
+2.  [**新しいドキュメント** > ] [**レポートデータソース**] をクリックします。  
   
     > [!NOTE]  
-    >  メニューに **[レポート データ ソース]** アイテムが表示されない場合は、このライブラリに対してレポート データ ソースのコンテンツ タイプが有効化されていません。 詳細については、次を参照してください。[追加レポート サーバー コンテンツ タイプをライブラリに&#40;Reporting Services SharePoint 統合モードで&#41;](../../reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md)します。  
+    >  メニューに **[レポート データ ソース]** アイテムが表示されない場合は、このライブラリに対してレポート データ ソースのコンテンツ タイプが有効化されていません。 詳細については、「 [SharePoint 統合モードでのレポートサーバーコンテンツタイプのライブラリへの追加 &#40;Reporting Services」&#41;](../../reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md)を参照してください。  
   
-3.  **[データ ソースのプロパティ]** ページの **[名前]** に、接続 .rsds ファイルの名前を入力します。  
+3.  
+  **[データ ソースのプロパティ]** ページの **[名前]** に、接続 .rsds ファイルの名前を入力します。  
   
-4.  **[データ ソースの種類]** で **[Power View 用 Microsoft BI セマンティック モデル]** をクリックします。  
+4.  
+  **[データ ソースの種類]** で **[Power View 用 Microsoft BI セマンティック モデル]** をクリックします。  
   
-5.  **[接続文字列]** で、Analysis Services サーバー名、データベース名、キューブ名、およびオプションの設定を指定します。  
+5.  
+  **[接続文字列]** で、Analysis Services サーバー名、データベース名、キューブ名、およびオプションの設定を指定します。  
   
      接続文字列: `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<cubename>'`  
   
@@ -57,9 +60,10 @@ ms.locfileid: "66076339"
   
      (オプション) 特定のディメンションまたはメジャー グループのみがクライアントに表示されている場合、ユーザーに選択ビューを提供するパースペクティブをキューブに含めることができます。 パースペクティブを指定するには、次のように、キューブのプロパティにパースペクティブ名を値として入力します。 `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<perspectivename>'`  
   
-     (オプション) キューブには、モデル内でさまざまな言語に指定されたメタデータとデータの翻訳を含めることができます。 翻訳 (データとメタデータ) を表示するには、接続文字列に"Locale Identifier"プロパティを追加する必要があります。 `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<cubename>'; Locale Identifier=<identifier number>`  
+     (オプション) キューブには、モデル内でさまざまな言語に指定されたメタデータとデータの翻訳を含めることができます。 翻訳 (データとメタデータ) を表示するには、接続文字列に "Locale Identifier" プロパティを追加する必要があります。`Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<cubename>'; Locale Identifier=<identifier number>`  
   
-6.  **[資格情報]** で、外部データ ソースにアクセスする際にレポート サーバーが資格情報を取得する方法を指定します。  
+6.  
+  **[資格情報]** で、外部データ ソースにアクセスする際にレポート サーバーが資格情報を取得する方法を指定します。  
   
     -   レポートを開いたユーザーの資格情報を使用してデータにアクセスする場合は、 **[Windows 認証 (統合)]** を選択します。 SharePoint サイトまたはファームでフォーム認証を使用する場合や、信頼済みアカウントを使用してレポート サーバーに接続する場合は、このオプションを選択しないでください。 このレポートのサブスクリプションまたはデータ処理をスケジュールする場合は、このオプションを選択しないでください。 Kerberos 認証が有効なドメインに参加している場合、またはレポート サーバーと同一のコンピューターにデータ ソースがある場合に、このオプションは最適です。 Kerberos 認証が無効になっている場合、Windows 資格情報は別のコンピューター 1 台にしか渡すことができません。 つまり、外部データ ソースが別のコンピューターにあり、別の接続が必要な場合、意図したデータを取得できずにエラーが発生します。  
   
@@ -69,7 +73,8 @@ ms.locfileid: "66076339"
   
     -   接続文字列で資格情報を指定する場合や、最小特権アカウントを使用してレポートを実行する場合は、 **[資格情報は必要ありません]** をクリックします。  
   
-7.  **[接続テスト]** をクリックして検証します。  
+7.  
+  **[接続テスト]** をクリックして検証します。  
   
 8.  データ ソースをアクティブにする場合は、 **[このデータ ソースを有効にする]** を選択します。 データ ソースが構成されていてもアクティブでない場合は、ユーザーがレポートを作成しようとするとエラー メッセージが表示されます。  
   

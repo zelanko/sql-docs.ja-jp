@@ -1,5 +1,5 @@
 ---
-title: AdvancedProperties プロパティ (SqlService クラス) |Microsoft Docs
+title: Advanced Properties プロパティ (SqlService クラス) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,13 +19,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: abe9d977dfcde5523e875881b1a5b80be7b1b887
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63223230"
 ---
 # <a name="advancedproperties-property-sqlservice-class"></a>AdvancedProperties プロパティ (SqlService クラス)
+  
   `SqlService` オブジェクトの詳細プロパティを格納したオブジェクト参照の配列を取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -37,15 +38,15 @@ object
 ```  
   
 ## <a name="parts"></a>要素  
- *object*  
+ *素材*  
  サービスを表す [SqlService クラス](sqlservice-class.md) オブジェクト。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
- 配列の[SqlServiceAdvancedProperty クラス](../sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md)の高度なプロパティを格納するオブジェクト、`SqlService`オブジェクト。  
+ `SqlService`オブジェクトの詳細プロパティを含む[Sqlserviceadvanced property クラス](../sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md)オブジェクトの配列。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
   
 ## <a name="see-also"></a>参照  
- [開始とサービスの停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [サービスの開始および停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

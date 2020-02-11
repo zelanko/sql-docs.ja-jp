@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e8c5575f73ff75ef9276bab52571e8670f28e0be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63204680"
 ---
 # <a name="update-table-dialog-box-visual-database-tools"></a>[テーブルの更新] ダイアログ ボックス (Visual Database Tools)
@@ -30,7 +30,7 @@ ms.locfileid: "63204680"
 > [!NOTE]  
 >  テーブルをレプリケーションのためにパブリッシュする場合は、Transact-SQL ステートメントの [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) または SQL Server 管理オブジェクト (SMO) を使用してスキーマを変更する必要があります。 テーブル デザイナーまたはデータベース ダイアグラム デザイナーを使用してスキーマを変更するとき、テーブルはいったん削除されてから再作成されます。 パブリッシュされたオブジェクトは削除できないので、スキーマの変更は失敗します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [更新クエリの作成 (Visual Database Tools)](visual-database-tools.md)  
   
   

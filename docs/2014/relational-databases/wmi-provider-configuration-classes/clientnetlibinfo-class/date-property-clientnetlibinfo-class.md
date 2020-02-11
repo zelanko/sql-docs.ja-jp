@@ -1,5 +1,5 @@
 ---
-title: 日付のプロパティ (ClientNetLibInfo クラス) |Microsoft Docs
+title: Date プロパティ (ClientNetLibInfo クラス) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 31bb3835202d752a067fc47c8afac32b9107bd7b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63191162"
 ---
 # <a name="date-property-clientnetlibinfo-class"></a>Date プロパティ (ClientNetLibInfo クラス)
@@ -37,13 +37,13 @@ object
 ```  
   
 ## <a name="parts"></a>要素  
- *object*  
+ *素材*  
  クライアント ネットワーク ライブラリに関する情報を表す [ClientNetLibInfo クラス](clientnetlibinfo-class.md) オブジェクト。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  クライアント ネットワーク ライブラリ ファイルの日付を指定する uint32 値。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
   
 ## <a name="see-also"></a>参照  
  [クライアント プロトコルの構成](https://technet.microsoft.com/library/ms181035.aspx)  

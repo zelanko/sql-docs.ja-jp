@@ -1,5 +1,5 @@
 ---
-title: 列 (SSAS テーブル) の削除 |Microsoft Docs
+title: 列の削除 (SSAS テーブル)Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f0a95e8580aa30ce34ada1c77e198eb40d767304
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067272"
 ---
 # <a name="delete-a-column-ssas-tabular"></a>列の削除 (SSAS テーブル)
@@ -33,12 +33,14 @@ ms.locfileid: "66067272"
   
 1.  モデル デザイナーで削除対象の列が含まれるテーブルをクリックし、 **[テーブル]** メニュー、  **[テーブルのプロパティ]** の順にクリックします。  
   
-2.  **[列名の取得元]** で、 **[モデル]** を選択します (*ソースと異なる場合、モデル テーブルの列名を使用します*)。  
+2.  
+  **[列名の取得元]** で、 **[モデル]** を選択します (*ソースと異なる場合、モデル テーブルの列名を使用します*)。  
   
-3.  **[テーブルのプロパティの編集]** ダイアログ ボックスのテーブル プレビュー ウィンドウで、削除する列をオフにしてから、 **[OK]** をクリックします。  
+3.  
+  **[テーブルのプロパティの編集]** ダイアログ ボックスのテーブル プレビュー ウィンドウで、削除する列をオフにしてから、 **[OK]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [列のテーブルへの追加 (SSAS テーブル)](add-columns-to-a-table-ssas-tabular.md)   
- [パーティション (SSAS テーブル)](partitions-ssas-tabular.md)  
+ [SSAS 表形式&#41;&#40;テーブルへの列の追加](add-columns-to-a-table-ssas-tabular.md)   
+ [SSAS 表形式のパーティション &#40;&#41;](partitions-ssas-tabular.md)  
   
   

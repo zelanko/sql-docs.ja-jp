@@ -11,25 +11,25 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: db51298ccadb2dc3ef6b9060bc3d83987bb3c9ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63233144"
 ---
 # <a name="read-a-filestream-column-to-file-using-ibcpsession-ole-db"></a>IBCPSession を使用した FILESTREAM 列のファイルへの読み取り (OLE DB)
   このサンプルでは、IBCPSession インターフェイスを使用して filestream 列をファイルに読み取り、フォーマット ファイルを作成します。  
   
- Filestream 機能の詳細については、次を参照してください。 [FILESTREAM のサポート&#40;OLE DB&#41;](../../native-client/ole-db/filestream-support-ole-db.md)します。  
+ Filestream 機能の詳細については、「 [Filestream Support &#40;OLE DB&#41;](../../native-client/ole-db/filestream-support-ole-db.md)」を参照してください。  
   
 ## <a name="example"></a>例  
- INCLUDE 環境変数には、sqlncli.h を含むディレクトリが含まれています。 を確認します。  
+ INCLUDE 環境変数に、sqlncli を含むディレクトリが含まれていることを確認します。  
   
  次のいずれかのサンプルを使用して、このサンプルで読み取るテーブルを作成します。  
   
--   [ICommandText パラメーターにバインドされた ISequentialStream を使用したデータの FILESTREAM 列への送信 (OLE DB)](send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
+-   [ICommandText Parameter &#40;OLE DB にバインドされた ISequentialStream を使用して FILESTREAM 列にデータを送信&#41;](send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
   
--   [IRowsetFastUpload を使用した FILESTREAM 列へのデータの送信 (OLE DB)](send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)  
+-   [IRowsetFastUpload &#40;OLE DB を使用して FILESTREAM 列にデータを送信&#41;](send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)  
   
  1 つ目のコード リストをコピーし、ISSHelper.h という名前のファイルに貼り付けます。  
   

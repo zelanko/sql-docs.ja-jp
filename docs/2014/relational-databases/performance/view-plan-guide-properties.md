@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b49b24db5dfa3c9b522247024e0cbb8dbd1a81d2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63151261"
 ---
 # <a name="view-plan-guide-properties"></a>プラン ガイド プロパティの表示
@@ -29,7 +29,7 @@ ms.locfileid: "63151261"
   
 -   **作業を開始する準備:**  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **以下を使用してプラン ガイドのプロパティを表示するには:**  
   
@@ -80,7 +80,7 @@ ms.locfileid: "63151261"
      **[スコープの種類]**  
      [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを含むエンティティの種類が表示されます。 これは [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントとプラン ガイドを照合するコンテキストを示します。 選択できる値は、 **OBJECT**、 **SQL**、および **TEMPLATE**です。  
   
-     **Statement**  
+     **ステートメント**  
      プラン ガイドの適用対象の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントが表示されます。  
   
 4.  **[OK]** をクリックします。  

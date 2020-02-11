@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8116f8a80a1fd614974d79516be2d4cd33eb660a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63204978"
 ---
 # <a name="display-query-and-view-designer-panes-visual-database-tools"></a>クエリおよびビュー デザイナーのペインの表示 (Visual Database Tools)
@@ -31,10 +31,11 @@ ms.locfileid: "63204978"
   
 1.  ビューを開くか、新しいクエリを作成して、クエリおよびビュー デザイナーを開きます。  
   
-2.  **[クエリ デザイナー]** メニューの **[ペイン]** をポイントして、開くペインの名前をクリックします。  
+2.  
+  **[クエリ デザイナー]** メニューの **[ペイン]** をポイントして、開くペインの名前をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [クエリを作成する&#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [クエリおよびビュー デザイナーを開く (Visual Database Tools)](open-the-query-and-view-designer-visual-database-tools.md)  
+ [Visual Database Tools &#40;クエリの作成&#41;](visual-database-tools.md)   
+ [クエリおよびビューデザイナー &#40;Visual Database Tools&#41;を開きます。](open-the-query-and-view-designer-visual-database-tools.md)  
   
   

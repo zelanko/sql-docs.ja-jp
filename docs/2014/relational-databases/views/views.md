@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 21be7e81440fe6eb9573ecd100a459d70319ccea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63191263"
 ---
 # <a name="views"></a>ビュー
@@ -43,13 +43,13 @@ ms.locfileid: "63191263"
   
 |ビューのタスク|トピック|  
 |----------------|-----------|  
-|ビューを作成する方法について説明します。|[Create Views (ビューの作成)](../views/views.md)|  
-|インデックス付きビューを作成する方法について説明します。|[Create Indexed Views (インデックス付きビューの作成)](../views/create-indexed-views.md)|  
-|ビュー定義を変更する方法について説明します。|[Modify Views (ビューの変更)](../views/modify-views.md)|  
-|ビューでデータを変更する方法について説明します。|[Modify Data Through a View (ビューを使用したデータ変更)](../views/modify-data-through-a-view.md)|  
-|ビューを削除する方法について説明します。|[Delete Views (ビューの削除)](../views/delete-views.md)|  
-|ビュー定義など、ビューに関する情報を返す方法について説明します。|[Get Information About a View (ビューに関する情報の取得)](../views/get-information-about-a-view.md)|  
-|ビューの名前を変更する方法について説明します。|[Rename Views (ビューの名前の変更)](../views/rename-views.md)|  
+|ビューを作成する方法について説明します。|[ビューの作成](../views/views.md)|  
+|インデックス付きビューを作成する方法について説明します。|[インデックス付きビューの作成](../views/create-indexed-views.md)|  
+|ビュー定義を変更する方法について説明します。|[ビューの変更](../views/modify-views.md)|  
+|ビューでデータを変更する方法について説明します。|[ビューを使用したデータ変更](../views/modify-data-through-a-view.md)|  
+|ビューを削除する方法について説明します。|[ビューの削除](../views/delete-views.md)|  
+|ビュー定義など、ビューに関する情報を返す方法について説明します。|[ビューに関する情報の取得](../views/get-information-about-a-view.md)|  
+|ビューの名前を変更する方法について説明します。|[ビューの名前の変更](../views/rename-views.md)|  
   
 ## <a name="see-also"></a>参照  
  [XML 列でのビューの作成](../xml/create-views-over-xml-columns.md)   

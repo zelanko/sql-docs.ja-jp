@@ -1,5 +1,5 @@
 ---
-title: IRowsetFastLoad::Commit (OLE DB)。マイクロソフトのドキュメント
+title: 'IRowsetFastLoad:: Commit (OLE DB) |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3e6983eaccf1a934a318c69e72ebdfebf17d2ad9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63224725"
 ---
 # <a name="irowsetfastloadcommit-ole-db"></a>IRowsetFastLoad::Commit (OLE DB)
-  挿入される行のバッチの終わりをマークし、挿入された行を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のテーブルに書き込みます。 サンプルについてを参照してください[一括コピー データを使用して IRowsetFastLoad &#40;OLE DB&#41; ](irowsetfastload-ole-db.md)と[SQL サーバーを使用して IROWSETFASTLOAD および ISEQUENTIALSTREAM の BLOB データの送信&#40;OLE DB&#41;](../native-client-ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md)。  
+  挿入される行のバッチの終わりをマークし、挿入された行を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のテーブルに書き込みます。 サンプルについては、「IROWSETFASTLOAD と ISEQUENTIALSTREAM &#40;OLE DB&#41;を使用して、 [IRowsetFastLoad &#40;OLE DB&#41;](irowsetfastload-ole-db.md)を使用して[BLOB データを SQL SERVER に送信](../native-client-ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md)する」を参照してデータコピーください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,7 +38,7 @@ fDone
 ```  
   
 ## <a name="arguments"></a>引数  
- *fDone*[in]  
+ *Fdone*[入力]  
  FALSE の場合、行セットは有効なまま保持され、コンシューマーはこの行セットを使用してさらに行を挿入できます。 TRUE の場合、行セットは無効になり、コンシューマーはこれ以上行を挿入できません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -51,14 +51,15 @@ fDone
  E_UNEXPECTED  
  既に **IRowsetFastLoad::Commit** メソッドによって無効になっている一括コピー行セットに対して呼び出されました。  
   
-## <a name="remarks"></a>コメント  
- A[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ネイティブ クライアント OLE DB プロバイダーの一括コピー行セットは、遅延更新モードの行セットとして動作します。 ユーザーが行セットを使用して行データを挿入すると、挿入された行は、**IRowsetUpdate** をサポートする行セットでの保留中の挿入と同様の形式で扱われます。  
+## <a name="remarks"></a>解説  
+ Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB プロバイダーの一括コピー行セットは、遅延更新モードの行セットとして動作します。 ユーザーが行セットを使用して行データを挿入すると、挿入された行は、**IRowsetUpdate** をサポートする行セットでの保留中の挿入と同様の形式で扱われます。  
   
- コンシューマーは、**IRowsetUpdate::Update** メソッドを使用して保留中の行を SQL Server のインスタンスに送信するのと同様に、一括コピー行セットに対して **Commit** メソッドを呼び出して、挿入された行を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルに書き込む必要があります。  
+ コンシューマーは、**IRowsetUpdate::Update** メソッドを使用して保留中の行を SQL Server のインスタンスに送信するのと同様に、一括コピー行セットに対して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Commit** メソッドを呼び出して、挿入された行を ** テーブルに書き込む必要があります。  
   
  コンシューマーが **Commit** メソッドを呼び出さないで一括コピー行セットの参照を解放すると、挿入されてもそれ以前に書き込まれていない行はすべて失われます。  
   
- コンシューマーは、*fDone* 引数を FALSE に設定して **Commit** メソッドを呼び出すことにより、挿入される行をバッチ処理できます。 *fDone* を TRUE に設定すると、その行セットは無効になります。 無効な一括コピー行セットでは、**ISupportErrorInfo** インターフェイスと **IRowsetFastLoad::Release** メソッドのみがサポートされます。  
+ コンシューマーは、**fDone** 引数を FALSE に設定して *Commit* メソッドを呼び出すことにより、挿入される行をバッチ処理できます。 
+  *fDone* を TRUE に設定すると、その行セットは無効になります。 無効な一括コピー行セットでは、**ISupportErrorInfo** インターフェイスと **IRowsetFastLoad::Release** メソッドのみがサポートされます。  
   
 ## <a name="see-also"></a>参照  
  [IRowsetFastLoad &#40;OLE DB&#41;](irowsetfastload-ole-db.md)  

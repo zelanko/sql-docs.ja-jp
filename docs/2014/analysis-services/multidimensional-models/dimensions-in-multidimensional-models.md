@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 520d6f11e5a472d5337a3747cc73c1d3656171c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075175"
 ---
 # <a name="dimensions-in-multidimensional-models"></a>多次元モデル内のディメンション
@@ -35,7 +35,7 @@ ms.locfileid: "66075175"
  キューブを作成するときは、データベースに既に存在するディメンションを新しいキューブに追加することもできます。 これらのディメンションは、別のキューブやディメンション ウィザードで以前に定義されている場合があります。 データベース ディメンションは、定義した後に、ディメンション デザイナーで変更および構成できます。 またキューブ ディメンションは、キューブ デザイナーで、限られた範囲内でカスタマイズできます。  
   
 > [!NOTE]  
->  XMLA または分析管理オブジェクト (AMO) のいずれかを使用すると、ディメンション、属性、および階層をプログラムによってデザインおよび構成することもできます。 詳細については、次を参照してください。 [Analysis Services スクリプト言語&#40;ASSL&#41;参照](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)と[Analysis Management Objects を使用した開発&#40;AMO&#41;](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)します。  
+>  XMLA または分析管理オブジェクト (AMO) のいずれかを使用すると、ディメンション、属性、および階層をプログラムによってデザインおよび構成することもできます。 詳細については、「 [Analysis Services Scripting Language &#40;ASSL&#41; リファレンス](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)」と「[分析管理オブジェクト &#40;AMO&#41;を使用した開発](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)」を参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  このトピックでは、次の内容について紹介します。  

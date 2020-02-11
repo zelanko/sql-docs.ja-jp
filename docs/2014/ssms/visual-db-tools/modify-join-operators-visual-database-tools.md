@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 74470d40bace6e1443ef9eb94f9698e225ff2946
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63232845"
 ---
 # <a name="modify-join-operators-visual-database-tools"></a>結合演算子の変更 (Visual Database Tools)
@@ -33,8 +33,8 @@ ms.locfileid: "63232845"
 3.  **[結合]** ダイアログ ボックスで新しい演算子を選択します。  
   
 ## <a name="see-also"></a>参照  
- [テーブルの自動結合&#40;Visual Database Tools&#41;](join-tables-automatically-visual-database-tools.md)   
- [テーブルを手動で結合&#40;Visual Database Tools&#41;](join-tables-manually-visual-database-tools.md)   
+ [Visual Database Tools &#40;テーブルを自動的に結合&#41;](join-tables-automatically-visual-database-tools.md)   
+ [Visual Database Tools &#40;テーブルを手動で結合&#41;](join-tables-manually-visual-database-tools.md)   
  [結合を使用したクエリ (Visual Database Tools)](query-with-joins-visual-database-tools.md)  
   
   

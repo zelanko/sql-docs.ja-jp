@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 35b7c489b49a4463dc0b12f1469d1310f5d26fef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63186991"
 ---
 # <a name="distributor-and-publisher-information-script"></a>ディストリビューターおよびパブリッシャーの情報スクリプト
@@ -25,7 +25,7 @@ ms.locfileid: "63186991"
   
 -   `use AdventureWorks2012` の行を、使用するパブリケーション データベース名に変更します。  
   
--   `exec sp_helparticle @publication='<PublicationName>'` 行のコメント (`--`) を削除して、\<PublicationName> をパブリケーション名に置き換えます。  
+-   `--` 行のコメント (`exec sp_helparticle @publication='<PublicationName>'`) を削除して、\<PublicationName> をパブリケーション名に置き換えます。  
   
 ```  
 --********** Execute at the Distributor in the master database **********--  

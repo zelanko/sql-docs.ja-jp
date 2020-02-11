@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 9b8d6f35f8dedeb4539dc8299ca32f6566beb03f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63161953"
 ---
 # <a name="monitoring-performance-of-natively-compiled-stored-procedures"></a>ネイティブ コンパイル ストアド プロシージャのパフォーマンスの監視
@@ -29,16 +29,19 @@ ms.locfileid: "63161953"
 select [definition] from sys.sql_modules where object_id=object_id  
 ```  
   
- 詳細については、`sp_statement_completed`イベントを拡張するを参照してください[イベントの原因となったステートメントを取得する方法](https://blogs.msdn.com/b/extended_events/archive/2010/05/07/making-a-statement-how-to-retrieve-the-t-sql-statement-that-caused-an-event.aspx)します。  
+ 拡張イベントの`sp_statement_completed`詳細については、「[イベントの原因となったステートメントを取得する方法](https://blogs.msdn.com/b/extended_events/archive/2010/05/07/making-a-statement-how-to-retrieve-the-t-sql-statement-that-caused-an-event.aspx)」を参照してください。  
   
 ## <a name="using-data-management-views"></a>データ管理ビューの使用  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、プロシージャ レベルとクエリ レベルの両方で、ネイティブ コンパイル ストアド プロシージャに関する実行の統計の収集をサポートしています。 パフォーマンスに与える影響が原因で、実行の統計の収集は既定では有効になっていません。  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、プロシージャ レベルとクエリ レベルの両方で、ネイティブ コンパイル ストアド プロシージャに関する実行の統計の収集をサポートしています。 パフォーマンスに与える影響が原因で、実行の統計の収集は既定では有効になっていません。  
   
  ネイティブ コンパイル ストアド プロシージャに対する統計コレクションは、[sys.sp_xtp_control_proc_exec_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql) を使用して有効化または無効化することができます。  
   
- [sys.sp_xtp_control_proc_exec_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql) で統計コレクションを有効にすると、[sys.dm_exec_procedure_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql) を使用してネイティブ コンパイル ストアド プロシージャのパフォーマンスを監視することができます。  
+ 
+  [sys.sp_xtp_control_proc_exec_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql) で統計コレクションを有効にすると、[sys.dm_exec_procedure_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql) を使用してネイティブ コンパイル ストアド プロシージャのパフォーマンスを監視することができます。  
   
- [sys.sp_xtp_control_query_exec_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql) で統計コレクションを有効にすると、[sys.dm_exec_query_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql) を使用してネイティブ コンパイル ストアド プロシージャのパフォーマンスを監視することができます。  
+ 
+  [sys.sp_xtp_control_query_exec_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql) で統計コレクションを有効にすると、[sys.dm_exec_query_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql) を使用してネイティブ コンパイル ストアド プロシージャのパフォーマンスを監視することができます。  
   
  収集を開始するには、統計コレクションを有効にします。 次に、ネイティブ コンパイル ストアド プロシージャを実行します。 収集を終了するには、統計コレクションを無効にします。 次に、DMV によって返された実行の統計を分析します。  
   
@@ -96,7 +99,7 @@ order by qs.total_worker_time desc
   
 -   プロシージャを作成する前に統計を更新していません。  
   
--   欠落したインデックス  
+-   インデックスの不足  
   
  Showplan XML を取得するには、次の [!INCLUDE[tsql](../../includes/tsql-md.md)]を実行します。  
   
@@ -111,7 +114,8 @@ GO
   
  代わりに、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でプロシージャ名を選択し、 **[推定実行プランの表示]** をクリックすることもできます。  
   
- ネイティブ コンパイル ストアド プロシージャに対応する推定実行プランでは、プロシージャ内に存在するクエリに関するクエリ演算子と式が表示されます。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] では、ネイティブ コンパイル ストアド プロシージャに対して、すべての SHOWPLAN_XML をサポートしているわけではありません。 たとえば、クエリ オプティマイザー コストに関連する属性は、プロシージャに対応する SHOWPLAN_XML の一部ではありません。  
+ ネイティブ コンパイル ストアド プロシージャに対応する推定実行プランでは、プロシージャ内に存在するクエリに関するクエリ演算子と式が表示されます。 
+  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] では、ネイティブ コンパイル ストアド プロシージャに対して、すべての SHOWPLAN_XML をサポートしているわけではありません。 たとえば、クエリ オプティマイザー コストに関連する属性は、プロシージャに対応する SHOWPLAN_XML の一部ではありません。  
   
 ## <a name="see-also"></a>参照  
  [ネイティブ コンパイル ストアド プロシージャ](natively-compiled-stored-procedures.md)  

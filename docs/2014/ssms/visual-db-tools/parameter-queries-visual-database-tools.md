@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5a3ea199f6e2e86f5dc2e51199386f31b93e9377
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63194986"
 ---
 # <a name="parameter-queries-visual-database-tools"></a>パラメーター クエリ (Visual Database Tools)
@@ -65,8 +65,8 @@ WHERE au_fname = %first name% AND
  クエリおよびビュー デザイナーでこのクエリを実行すると、 [[クエリ パラメーター] ダイアログ ボックス](query-parameters-dialog-box-visual-database-tools.md) に名前付きパラメーターのリストが表示されます。  
   
 ## <a name="see-also"></a>参照  
- [パラメーターを持つクエリ&#40;Visual Database Tools&#41;](query-with-parameters-visual-database-tools.md)   
- [クエリの種類がサポートされている&#40;Visual Database Tools&#41;](supported-query-types-visual-database-tools.md)   
+ [Visual Database Tools &#40;パラメーターを使用したクエリ&#41;](query-with-parameters-visual-database-tools.md)   
+ [Visual Database Tools &#40;サポートされているクエリの種類&#41;](supported-query-types-visual-database-tools.md)   
  [クエリおよびビューのデザインの操作方法に関するトピック (Visual Database Tools)](design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
   

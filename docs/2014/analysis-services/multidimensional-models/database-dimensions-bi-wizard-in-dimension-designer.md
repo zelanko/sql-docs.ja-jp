@@ -1,5 +1,5 @@
 ---
-title: ディメンション デザイナーで、ビジネス インテリジェンス ウィザードを起動 |Microsoft Docs
+title: ディメンションデザイナーでビジネスインテリジェンスウィザードを起動します。Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f09e8b4e31d9826d0988b293e2236676125fc7d9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076046"
 ---
 # <a name="start-the-business-intelligence-wizard-in-dimension-designer"></a>ディメンション デザイナーでのビジネス インテリジェンス ウィザードの起動
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、カスタム ロールアップ演算子とカスタム メンバー式を作成し、ビジネス インテリジェンス ウィザードまたはディメンション デザイナーを使用して、書き戻し用のディメンションを構成します。 ビジネス インテリジェンス ウィザードは、ソリューション エクスプローラーまたは [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のキューブ デザイナーから起動できます。 ディメンション デザイナーには、SQL Server Management Studio および [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]からアクセスできます。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]は、ビジネスインテリジェンスウィザードまたはディメンションデザイナーを使用して、カスタムロールアップ演算子とカスタムメンバー式を作成し、書き戻し用のディメンションを構成します。 ビジネス インテリジェンス ウィザードは、ソリューション エクスプローラーまたは [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のキューブ デザイナーから起動できます。 ディメンション デザイナーには、SQL Server Management Studio および [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]からアクセスできます。  
   
 ### <a name="to-start-the-business-intelligence-wizard"></a>ビジネス インテリジェンス ウィザードを起動するには  
   

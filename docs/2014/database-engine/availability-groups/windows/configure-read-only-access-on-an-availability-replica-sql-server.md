@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d93f78c157d5551e805437f156b8972ca8616c2b
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72797739"
 ---
 # <a name="configure-read-only-access-on-an-availability-replica-sql-server"></a>可用性レプリカでの読み取り専用アクセスの構成 (SQL Server)
@@ -38,56 +38,59 @@ ms.locfileid: "72797739"
   
 ###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> アクセス許可  
+####  <a name="Permissions"></a> Permissions  
   
 |タスク|アクセス許可|  
 |----------|-----------------|  
-|可用性グループの作成時にレプリカを構成する|**sysadmin** 固定サーバー ロールのメンバーシップと、CREATE AVAILABILITY GROUP サーバー権限、ALTER ANY AVAILABILITY GROUP 権限、CONTROL SERVER 権限のいずれかが必要です。|  
+|可用性グループの作成時にレプリカを構成する|
+  **sysadmin** 固定サーバー ロールのメンバーシップと、CREATE AVAILABILITY GROUP サーバー権限、ALTER ANY AVAILABILITY GROUP 権限、CONTROL SERVER 権限のいずれかが必要です。|  
 |可用性レプリカを変更する|可用性グループの ALTER AVAILABILITY GROUP 権限、CONTROL AVAILABILITY GROUP 権限、ALTER ANY AVAILABILITY GROUP 権限、または CONTROL SERVER 権限が必要です。|  
   
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
- **可用性レプリカに対してアクセスを構成するには**  
+ **可用性レプリカに対するアクセスを構成するには**  
   
 1.  オブジェクト エクスプローラーで、プライマリ レプリカをホストするサーバー インスタンスに接続し、サーバー ツリーを展開します。  
   
-2.  **[AlwaysOn 高可用性]** ノードと **[可用性グループ]** ノードを展開します。  
+2.  
+  **[AlwaysOn 高可用性]** ノードと **[可用性グループ]** ノードを展開します。  
   
 3.  変更するレプリカが含まれる可用性グループをクリックします。  
   
 4.  可用性レプリカを右クリックし、 **[プロパティ]** をクリックします。  
   
-5.  **[可用性レプリカ プロパティ]** ダイアログ ボックスで、プライマリ ロールおよびセカンダリ ロールの接続アクセスを、次のように変更できます。  
+5.  
+  **[可用性レプリカ プロパティ]** ダイアログ ボックスで、プライマリ ロールおよびセカンダリ ロールの接続アクセスを、次のように変更できます。  
   
     -   セカンダリ ロールの場合は、 **[読み取り可能セカンダリ]** ボックスの一覧から新しい値を選択します。値は次のとおりです。  
   
          **いいえ**  
          このレプリカのセカンダリ データベースに対するユーザー接続は禁止されます。 読み取りアクセスで利用することはできません。 これが既定の設定です。  
   
-         **[読み取り目的のみ]**  
+         **読み取りを目的とした場合のみ**  
          このレプリカのセカンダリ データベースに対する接続は、読み取り専用でのみ許可されます。 セカンダリ データベースはすべて読み取りアクセスで利用できます。  
   
-         **可**  
+         **はい**  
          読み取りアクセスに限り、このレプリカのセカンダリ データベースに対するすべての接続が許可されます。 セカンダリ データベースはすべて読み取りアクセスで利用できます。  
   
     -   プライマリ ロールの場合は、 **[プライマリ ロールの接続]** ボックスの一覧から新しい値を選択します。値は次のとおりです。  
   
-         **[すべての接続を許可]**  
+         **すべての接続を許可する**  
          プライマリ レプリカのデータベースに対するすべての接続が許可されます。 これが既定の設定です。  
   
-         **[読み取り/書き込みの接続を許可]**  
+         **読み取り/書き込み接続を許可する**  
          Application Intent プロパティが **ReadWrite** に設定されている場合、または Application Intent 接続プロパティが設定されていない場合は、接続が許可されます。 Application Intent 接続プロパティが **ReadOnly** に設定されている接続は許可されません。 これにより、読み取りを目的としたワークロードが誤ってプライマリ レプリカに接続されるのを防ぐことができます。 "アプリケーションの目的" 接続プロパティの詳細については、「 [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)」を参照してください。  
   
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
- **可用性レプリカに対してアクセスを構成するには**  
+ **可用性レプリカに対するアクセスを構成するには**  
   
 > [!NOTE]  
->  この手順の例については、このセクションの後半の「[例 (Transact-SQL)](#TsqlExample)」を参照してください。  
+>  この手順の例については、このセクションの後半の「 [例 (Transact-SQL)](#TsqlExample)」を参照してください。  
   
 1.  プライマリ レプリカをホストするサーバー インスタンスに接続します。  
   
-2.  新しい可用性グループのレプリカを指定する場合は、 [CREATE AVAILABILITY GROUP](/sql/t-sql/statements/create-availability-group-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントを使用します。 既存の可用性グループのレプリカを追加または変更する場合は、 [ALTER AVAILABILITY GROUP](/sql/t-sql/statements/alter-availability-group-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントを使用します。  
+2.  新しい可用性グループのレプリカを指定する場合は、 [CREATE availability group](/sql/t-sql/statements/create-availability-group-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)]ステートメントを使用します。 既存の可用性グループのレプリカを追加または変更する場合は、 [ALTER availability group](/sql/t-sql/statements/alter-availability-group-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)]ステートメントを使用します。  
   
     -   セカンダリ ロールの接続アクセスを構成するには、ADD REPLICA 句または MODIFY REPLICA WITH 句で、SECONDARY_ROLE オプションを次のように指定します。  
   
@@ -116,7 +119,7 @@ ms.locfileid: "72797739"
      ALL  
      プライマリ レプリカのデータベースに対するすべての接続が許可されます。 これが既定の設定です。  
   
-###  <a name="TsqlExample"></a> 例 (Transact-SQL)  
+###  <a name="TsqlExample"></a>例 (Transact-sql)  
  次の例では、セカンダリ レプリカを *AG2*という名前の可用性グループに追加します。 新しい可用性レプリカをホストするため、スタンドアロン サーバー インスタンスの *COMPUTER03\HADR_INSTANCE*が指定されています。 このレプリカは、プライマリ ロールに対してのみ読み取り/書き込み接続を許可し、セカンダリ ロールに対しては読み取りを目的とした接続のみを許可するように構成されています。  
   
 ```sql
@@ -132,7 +135,7 @@ GO
 ```  
   
   
-##  <a name="PowerShellProcedure"></a> PowerShell の使用  
+##  <a name="PowerShellProcedure"></a>PowerShell の使用  
 
 ### <a name="to-configure-access-on-an-availability-replica"></a>可用性レプリカに対してアクセスを構成するには
   
@@ -143,7 +146,7 @@ GO
   
 2.  可用性グループに可用性レプリカを追加する場合は、`New-SqlAvailabilityReplica` コマンドレットを使用します。 既存の可用性レプリカを変更する場合は、`Set-SqlAvailabilityReplica` コマンドレットを使用します。 関連するパラメーターは次のとおりです。  
   
-    -   セカンダリロールの接続アクセスを構成するには、`ConnectionModeInSecondaryRole`*secondary_role_keyword*パラメーターを指定します。 *secondary_role_keyword*は次のいずれかの値になります。  
+    -   セカンダリロールの接続アクセスを構成するには、 `ConnectionModeInSecondaryRole` *secondary_role_keyword*パラメーターを指定します。 *secondary_role_keyword*は次のいずれかの値になります。  
   
          `AllowNoConnections`  
          セカンダリ レプリカのデータベースに対する直接接続は許可されず、データベースに対して読み取りアクセスを実行できません。 これが既定の設定です。  
@@ -154,7 +157,7 @@ GO
          `AllowAllConnections`  
          読み取り専用アクセスに限り、セカンダリ レプリカのデータベースに対するすべての接続が許可されます。  
   
-    -   プライマリロールの接続アクセスを構成するには、`ConnectionModeInPrimaryRole`*primary_role_keyword*を指定します。 *primary_role_keyword*は次のいずれかの値になります。  
+    -   プライマリロールの接続アクセスを構成するには`ConnectionModeInPrimaryRole`、 *primary_role_keyword*を指定します。 *primary_role_keyword*は次のいずれかの値になります。  
   
          `AllowReadWriteConnections`  
          Application Intent 接続プロパティが ReadOnly に設定されている接続は許可されません。 Application Intent プロパティが ReadWrite に設定されている場合、または Application Intent 接続プロパティが設定されていない場合は、接続が許可されます。 "アプリケーションの目的" 接続プロパティの詳細については、「 [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)」を参照してください。  
@@ -179,14 +182,14 @@ Set-SqlAvailabilityReplica -ConnectionModeInPrimaryRole "AllowAllConnections" `
 -InputObject $primaryReplica
 ```  
 
-##  <a name="FollowUp"></a> 補足情報: 可用性レプリカに対する読み取り専用アクセスの構成後  
- **読み取り可能なセカンダリ レプリカに対する読み取り専用アクセス**  
+##  <a name="FollowUp"></a>補足情報: 可用性レプリカの読み取り専用アクセスを構成した後  
+ **読み取り可能なセカンダリレプリカへの読み取り専用アクセス**  
   
--   [Bcp ユーティリティ](../../../tools/bcp-utility.md)または[sqlcmd ユーティリティ](../../../tools/sqlcmd-utility.md)を使用する場合は、`-K ReadOnly` スイッチを指定することによって、読み取り専用アクセスが有効になっている任意のセカンダリレプリカへの読み取り専用アクセスを指定できます。  
+-   [Bcp ユーティリティ](../../../tools/bcp-utility.md)または[sqlcmd ユーティリティ](../../../tools/sqlcmd-utility.md)を使用する場合は、 `-K ReadOnly`スイッチを指定することによって、読み取り専用アクセスが有効になっている任意のセカンダリレプリカへの読み取り専用アクセスを指定できます。  
   
 -   読み取り可能なセカンダリ レプリカに接続するクライアント アプリケーションを有効にするには:  
   
-    ||前提条件|リンク|  
+    ||前提条件|Link|  
     |-|------------------|----------|  
     |![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|可用性グループにリスナーがあることを確認する。|[可用性グループ リスナーの作成または構成 &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)|  
     |![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|可用性グループの読み取り専用ルーティングを構成する。|[可用性グループの読み取り専用ルーティングの構成 &#40;SQL Server&#41;](configure-read-only-routing-for-an-availability-group-sql-server.md)|  
@@ -211,28 +214,28 @@ DATABASEPROPERTYEX([db name],'Updatability') = N'READ_ONLY'
   
 ##  <a name="RelatedContent"></a> 関連コンテンツ  
   
--   [AlwaysOn: 読み取り可能なセカンダリの価値提案](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-value-proposition-of-readable-secondary.aspx)  
+-   [AlwaysOn: Value Proposition of Readable Secondary](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-value-proposition-of-readable-secondary.aspx)  
   
--   [AlwaysOn: 読み取りワークロードのためにセカンダリレプリカを有効にするオプションが2つあるのはなぜですか。](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-why-there-are-two-options-to-enable-a-secondary-replica-for-read-workload.aspx)  
+-   [AlwaysOn: Why there are two options to enable a secondary replica for read workload?](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-why-there-are-two-options-to-enable-a-secondary-replica-for-read-workload.aspx)  
   
--   [AlwaysOn: 読み取り可能なセカンダリレプリカのセットアップ](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-setting-up-readable-seconary-replica.aspx)  
+-   [AlwaysOn: Setting up Readable Seconary Replica](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-setting-up-readable-seconary-replica.aspx)  
   
--   [AlwaysOn: 読み取り可能なセカンダリを有効にしましたが、クエリはブロックされていますか?](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-i-just-enabled-readble-secondary-but-my-query-is-blocked.aspx)  
+-   [AlwaysOn: I just enabled Readable Secondary but my query is blocked?](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-i-just-enabled-readble-secondary-but-my-query-is-blocked.aspx)  
   
--   [AlwaysOn: 読み取り可能なセカンダリ、読み取り専用のデータベース、データベースのスナップショットで最新の統計情報を使用できるようにする](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-making-upto-date-statistics-available-on-readable-secondary-read-only-database-and-database-snapshot.aspx)  
+-   [AlwaysOn: Making latest statistics available on Readable Secondary, Read-Only database and Database Snapshot](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-making-upto-date-statistics-available-on-readable-secondary-read-only-database-and-database-snapshot.aspx)  
   
--   [AlwaysOn: 読み取り専用データベース、データベーススナップショット、およびセカンダリレプリカの統計に関する課題](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-challenges-with-statistics-on-readonly-database-database-snapshot-and-secondary-replica.aspx)  
+-   [AlwaysOn: Challenges with statistics on ReadOnly database, Database Snapshot and Secondary Replica](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-challenges-with-statistics-on-readonly-database-database-snapshot-and-secondary-replica.aspx)  
   
--   [AlwaysOn: セカンダリレプリカでレポートワークロードを実行するときの主要なワークロードへの影響](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-impact-on-the-primary-workload-when-you-run-reporting-workload-on-the-secondary-replica.aspx)  
+-   [AlwaysOn: Impact on the primary workload when you run reporting workload on the secondary replica](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-impact-on-the-primary-workload-when-you-run-reporting-workload-on-the-secondary-replica.aspx)  
   
--   [AlwaysOn: 読み取り可能なセカンダリでのレポートワークロードのスナップショット分離への影響](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-impact-of-mapping-reporting-workload-to-snapshot-isolation-on-readable-secondary.aspx)  
+-   [AlwaysOn: Impact of mapping reporting workload on Readable Secondary to Snapshot Isolation](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-impact-of-mapping-reporting-workload-to-snapshot-isolation-on-readable-secondary.aspx)  
   
--   [AlwaysOn: セカンダリレプリカでレポートワークロードを実行するときの再実行スレッドのブロックを最小化する](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-minimizing-blocking-of-redo-thread-when-running-reporting-workload-on-secondary-replica.aspx)  
+-   [AlwaysOn: Minimizing blocking of REDO thread when running reporting workload on Secondary Replica](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-minimizing-blocking-of-redo-thread-when-running-reporting-workload-on-secondary-replica.aspx)  
   
--   [AlwaysOn: 読み取り可能なセカンダリとデータ待機時間](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson.aspx)  
+-   [AlwaysOn: Readable Secondary and data latency](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson.aspx)  
   
   
 ## <a name="see-also"></a>参照  
- [AlwaysOn 可用性グループ&#40;SQL Server&#41;の概要](overview-of-always-on-availability-groups-sql-server.md)   
- [アクティブなセカンダリ: 読み取り可能&#40;なセカンダリレプリカ AlwaysOn 可用性グループ&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)  
+ [AlwaysOn 可用性グループ &#40;SQL Server の概要&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [アクティブなセカンダリ: 読み取り可能なセカンダリレプリカ &#40;AlwaysOn 可用性グループ&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)  
  [可用性レプリカに対するクライアント接続アクセスについて &#40;SQL Server&#41;](about-client-connection-access-to-availability-replicas-sql-server.md)  

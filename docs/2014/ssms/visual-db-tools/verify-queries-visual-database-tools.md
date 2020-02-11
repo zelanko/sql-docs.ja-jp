@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a9f959d3c4b61a6231a0d4b3806b57cfa935445e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63204582"
 ---
 # <a name="verify-queries-visual-database-tools"></a>クエリの検査 (Visual Database Tools)
@@ -38,8 +38,8 @@ ms.locfileid: "63204582"
   
 -   **SQL ペイン**を右クリックし、ショートカット メニューの **[SQL 構文の確認]** を選択します。  
   
-## <a name="see-also"></a>関連項目  
- [クエリを実行して&#40;Visual Database Tools&#41;](run-queries-visual-database-tools.md)   
+## <a name="see-also"></a>参照  
+ [Visual Database Tools &#40;クエリの実行&#41;](run-queries-visual-database-tools.md)   
  [クエリに関する基本操作の実行 (Visual Database Tools)](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

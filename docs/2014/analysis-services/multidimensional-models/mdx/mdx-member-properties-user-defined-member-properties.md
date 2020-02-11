@@ -1,5 +1,5 @@
 ---
-title: ユーザー定義メンバー プロパティ (MDX) |Microsoft Docs
+title: ユーザー定義メンバープロパティ (MDX) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ead5a45bf163ca4e7998c30ab5c83f94cca9075b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074260"
 ---
 # <a name="user-defined-member-properties-mdx"></a>ユーザー定義メンバー プロパティ (MDX)
@@ -30,14 +30,15 @@ ms.locfileid: "66074260"
 -   プログラムによってユーザー定義メンバー プロパティを追加するには、アプリケーションで Analysis Manager Objects (AMO) を使用するか、XML for Analysis (XMLA) と Analysis Services Scripting Language (ASSL) を組み合わせて使用できます。 詳細については、「 [属性リレーションシップ](../../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)」を参照してください。  
   
 ## <a name="retrieving-user-defined-member-properties"></a>ユーザー定義メンバー プロパティの取得  
- いずれかを使用してユーザー定義メンバー プロパティを取得することができます、`PROPERTIES`キーワードまたは[プロパティ](/sql/mdx/properties-mdx)関数。  
+ ユーザー定義メンバープロパティを取得するには、 `PROPERTIES`キーワードまたは[properties](/sql/mdx/properties-mdx)関数を使用します。  
   
 ### <a name="using-the-properties-keyword-to-retrieve-user-defined-member-properties"></a>PROPERTIES キーワードを使用したユーザー定義メンバー プロパティの取得  
  次に示すように、ユーザー定義メンバー プロパティを取得する構文は、固有レベル メンバー プロパティを取得する構文と同様です。  
   
  `DIMENSION PROPERTIES [Dimension.]Level.<Custom_Member_Property>`  
   
- `PROPERTIES` キーワードは、軸を指定するセット式の後に指定します。 たとえば、次の MDX クエリの `PROPERTIES` キーワードは `List Price` および `Dealer Price` ユーザー定義メンバー プロパティを取得するもので、1 月に販売された製品を示すセット式の後に指定されています。  
+ 
+  `PROPERTIES` キーワードは、軸を指定するセット式の後に指定します。 たとえば、次の MDX クエリの `PROPERTIES` キーワードは `List Price` および `Dealer Price` ユーザー定義メンバー プロパティを取得するもので、1 月に販売された製品を示すセット式の後に指定されています。  
   
 ```  
 SELECT   
@@ -67,7 +68,7 @@ FROM [Adventure Works]
  計算されるメンバーの作成方法の詳細については、「[MDX での計算されるメンバーの作成 &#40;MDX&#41;](mdx-calculated-members-building-calculated-members.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [メンバー プロパティの使用 &#40;MDX&#41;](mdx-member-properties.md)   
- [プロパティ &#40;MDX&#41;](/sql/mdx/properties-mdx)  
+ [MDX&#41;&#40;メンバープロパティを使用する](mdx-member-properties.md)   
+ [MDX&#41;&#40;プロパティ](/sql/mdx/properties-mdx)  
   
   

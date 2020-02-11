@@ -1,5 +1,5 @@
 ---
-title: トランザクション パブリケーション (SQL Server Management Studio) のデータの競合を表示 |Microsoft Docs
+title: トランザクションパブリケーションのデータの競合の表示 (SQL Server Management Studio) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e046351ca3dc7977691fc98e24453ccbf8e6af53
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63144413"
 ---
 # <a name="view-data-conflicts-for-transactional-publications-sql-server-management-studio"></a>トランザクション パブリケーションのデータの競合の表示 (SQL Server Management Studio)
@@ -30,23 +30,27 @@ ms.locfileid: "63144413"
   
 -   キュー更新サブスクリプションの場合は、すべての競合のデータを表示できます。 競合データは、競合の保有期間に指定した期間 (既定では 14 日間)、レプリケーション競合表示モジュールで表示できます。 競合の保有期間を設定するには、次のいずれかを実行します。  
   
-    -   @conflict_retention sp_addpublication [の](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)パラメーターに保有期間の値を指定します。  
+    -   
+  @conflict_retentionsp_addpublication[ の ](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) パラメーターに保有期間の値を指定します。  
   
-    -   値を指定`'conflict_retention'`の@propertyパラメーターし、保有期間の値、@valueパラメーターの[sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)します。  
+    -   パラメーターに値を`'conflict_retention'`指定し、 [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)の@valueパラメーターに保有期間の値を指定します。 @property  
   
 ### <a name="to-view-conflicts"></a>競合を表示するには  
   
-1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で適切なサーバーに接続し、そのサーバー ノードを展開します。  
+1.  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で適切なサーバーに接続し、そのサーバー ノードを展開します。  
   
     -   ピア ツー ピア レプリケーションの場合は、競合の発生したノードがこれに当たります。  
   
     -   キュー更新サブスクリプションの場合は、パブリッシャーがこれに当たります。  
   
-2.  **[レプリケーション]** フォルダーを展開し、 **[ローカル パブリケーション]** フォルダーを展開します。  
+2.  
+  **[レプリケーション]** フォルダーを展開し、 **[ローカル パブリケーション]** フォルダーを展開します。  
   
 3.  競合を表示するパブリケーションを右クリックしてから、 **[競合の表示]** をクリックします。  
   
-4.  **[競合テーブルの選択]** ダイアログ ボックスで、競合を表示するデータベース、パブリケーション、およびテーブルを選択します。  
+4.  
+  **[競合テーブルの選択]** ダイアログ ボックスで、競合を表示するデータベース、パブリケーション、およびテーブルを選択します。  
   
 5.  レプリケーション競合表示モジュールでは、以下を実行できます。  
   
@@ -56,14 +60,16 @@ ms.locfileid: "63144413"
   
     -   上のグリッドで複数の行を選択し、 **[削除]** をクリックして、競合メタデータ テーブルから行を削除する。  
   
-    -   プロパティ ボタン **[...]** をクリックし、競合に関係のある列の詳細情報を表示する。  
+    -   プロパティボタン ([.**..**]) をクリックして、競合に関係する列の詳細情報を表示します。  
   
-    -   **[この競合の詳細をログに記録する]** を選択して、競合のデータをログ ファイルに記録する。 ファイルの場所を指定するには、 **[表示]** メニューをポイントし、 **[オプション]** をクリックします。 値を入力するか、または参照ボタン (**[...]**) をクリックして適切なファイルに移動します。 **[OK]** をクリックして、 **[オプション]** ダイアログ ボックスを閉じます。  
+    -   
+  **[この競合の詳細をログに記録する]** を選択して、競合のデータをログ ファイルに記録する。 ファイルの場所を指定するには、 **[表示]** メニューをポイントし、 **[オプション]** をクリックします。 値を入力するか、または参照ボタン (**[...]**) をクリックして適切なファイルに移動します。 
+  **[OK]** をクリックして、 **[オプション]** ダイアログ ボックスを閉じます。  
   
 6.  レプリケーション競合表示モジュールを閉じます。  
   
-## <a name="see-also"></a>関連項目  
- [ピア ツー ピア トランザクション レプリケーション](transactional/peer-to-peer-transactional-replication.md)   
- [Queued Updating Conflict Detection and Resolution](transactional/updatable-subscriptions-queued-updating-conflict-resolution.md)  
+## <a name="see-also"></a>参照  
+ [ピアツーピアトランザクションレプリケーション](transactional/peer-to-peer-transactional-replication.md)   
+ [キュー更新の競合の検出と解決](transactional/updatable-subscriptions-queued-updating-conflict-resolution.md)  
   
   

@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 532cdf5466445f08d5d415799b9f4afab347e77f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63158173"
 ---
 # <a name="implementing-an-outer-join"></a>外部結合の実装
@@ -22,7 +22,7 @@ ms.locfileid: "63158173"
   
  このサンプルでは、テーブル変数を使用して結合の左側でカーソルをシミュレートし、テーブル変数を使用して単一の結果セットを構築します。これは、データ行のコピーを 1 つ作成するなど、限定された数行分のデータを処理する場合にのみ適しています。  
   
- 変数 (@outer) while を使用して、t1 から行を反復処理する使用 t1_type 型のループを使用して、カーソルをシミュレートします。 変数@result型の t1t2_join_type を使用して、結果セットを作成します。  
+ T1_type 型の@outer変数 () を使用して、t1 から行を反復処理し、while ループを使用してカーソルをシミュレートします。 次に@result 、t1t2_join_type 型の変数を使用して結果セットを作成します。  
   
  この回避策のパフォーマンスをテストして、アプリケーションで予想どおりに実行されるかどうかを確認する必要があります。  
   

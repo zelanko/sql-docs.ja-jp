@@ -15,14 +15,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f7a06d30f25f5c78236fe30f148b254ee817dfc0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63232406"
 ---
 # <a name="use-nested-for-xml-queries"></a>入れ子になった FOR XML クエリの使用
-  `xml`データ型と[FOR XML クエリで TYPE ディレクティブ](type-directive-in-for-xml-queries.md)クライアントとサーバーで処理する FOR XML クエリによって返された XML を有効にします。  
+  `xml`データ型と[for Xml クエリの type ディレクティブ](type-directive-in-for-xml-queries.md)を使用すると、for xml クエリによって返された xml を、サーバーとクライアントの両方で処理できます。  
   
 ## <a name="processing-with-xml-type-variables"></a>xml 型の変数を使用した処理  
  FOR XML クエリの結果を `xml` 型の変数に代入できます。また、XQuery を使用して結果にクエリを実行し、その結果を `xml` 型の変数に代入してからさらに処理を加えることができます。  
@@ -39,7 +39,7 @@ SELECT @x
 --<row ProductModelID="119" Name="Bike Wash" />  
 ```  
   
- いずれかの `xml` データ型メソッドを使用して、変数 `@x` に返された XML にさらに処理を加えることができます。 たとえば、 `ProductModelID` value() メソッド [を使用して、](/sql/t-sql/xml/value-method-xml-data-type)属性の値を取得できます。  
+ いずれかの `@x` データ型メソッドを使用して、変数 `xml` に返された XML にさらに処理を加えることができます。 たとえば、 `ProductModelID` value() メソッド [を使用して、](/sql/t-sql/xml/value-method-xml-data-type)属性の値を取得できます。  
   
 ```  
 DECLARE @i int;  
@@ -47,7 +47,7 @@ SET @i = (SELECT @x.value('/row[1]/@ProductModelID[1]', 'int'));
 SELECT @i;  
 ```  
   
- 次の例では、`FOR XML` 句に `TYPE` ディレクティブが指定されているので、`FOR XML` クエリの結果が `xml` 型で返されます。  
+ 次の例では、`FOR XML` 句に `xml` ディレクティブが指定されているので、`TYPE` クエリの結果が `FOR XML` 型で返されます。  
   
 ```  
 SELECT ProductModelID, Name  
@@ -83,7 +83,7 @@ SELECT  (SELECT ProductModelID, Name
 ```  
   
 ## <a name="returning-inner-for-xml-query-results-to-outer-queries-as-xml-type-instances"></a>内側の FOR XML クエリの結果を外側のクエリに xml 型インスタンスとして返す  
- 入れ子構造の `FOR XML` クエリを記述して、内側のクエリの結果を `xml` 型で外側のクエリに返すことができます。 例 :  
+ 入れ子構造の `FOR XML` クエリを記述して、内側のクエリの結果を `xml` 型で外側のクエリに返すことができます。 次に例を示します。  
   
 ```  
 SELECT Col1,   
@@ -113,7 +113,7 @@ FOR XML AUTO, TYPE;
   
  使用するモードに関係なく、入れ子構造の FOR XML クエリを使用すると、結果の XML の構造の定義を制御しやすくなります。 入れ子構造の FOR XML クエリは、EXPLICIT モードのクエリの代わりに使用できます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  ここでは、入れ子になった FOR XML クエリの例を紹介します。  
   
  [FOR XML クエリと入れ子になった FOR XML クエリの比較](../xml/for-xml-query-compared-to-nested-for-xml-query.md)  

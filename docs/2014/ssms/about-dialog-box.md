@@ -14,16 +14,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fe32ce0b356a1c184cd8aba66c9be3d27805f3a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63226219"
 ---
 # <a name="about-dialog-box"></a>[バージョン情報] ダイアログ ボックス
-  **[バージョン情報]** ダイアログ ボックスには、製品情報が記載されており、このダイアログ ボックスから製品を実行しているコンピューターに関する情報にアクセスできます。 評価版の場合、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] のエントリにはインストールの期限切れまでの日数が表示されます。 このダイアログ ボックスは、 **[ヘルプ]** メニューから利用できます。  
+  [**バージョン**情報] ダイアログボックスには、製品情報が表示され、製品が実行されているコンピューターに関する情報にアクセスすることができます。 評価版[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]の場合は、インストールが期限切れになるまでの残り日数がエントリに表示されます。 このダイアログ ボックスは、 **[ヘルプ]** メニューから利用できます。   
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **[コンポーネント名]**  
  インストールされているすべての [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の項目の名前が一覧表示されます。  
   

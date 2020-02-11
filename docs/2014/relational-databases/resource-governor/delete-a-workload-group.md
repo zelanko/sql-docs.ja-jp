@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2daf8fe7e12cec5317335a0dcce273b16d428bcc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63215807"
 ---
 # <a name="delete-a-workload-group"></a>ワークロード グループの削除
@@ -69,17 +69,20 @@ ms.locfileid: "63215807"
   
 1.  削除するワークロード グループの名前を示す `DROP WORKLOAD GROUP` ステートメントを実行します。  
   
-2.  `ALTER RESOURCE GOVERNOR RECONFIGURE` ステートメントを実行する前に、削除するワークロード グループにアクティブな要求がないことを確認します。 アクティブな要求があると `ALTER RESOURCE GOVERNOR` は失敗します。 この問題を回避するには、次のいずれかの操作を実行します。  
+2.  
+  `ALTER RESOURCE GOVERNOR RECONFIGURE` ステートメントを実行する前に、削除するワークロード グループにアクティブな要求がないことを確認します。 アクティブな要求があると `ALTER RESOURCE GOVERNOR` は失敗します。 この問題を回避するには、次のいずれかの操作を実行します。  
   
     -   ワークロード グループからのセッションがすべて接続解除されるまで待ちます。  
   
-    -   `KILL` コマンドを使用して、ワークロード グループのセッションを明示的に停止します。  
+    -   
+  `KILL` コマンドを使用して、ワークロード グループのセッションを明示的に停止します。  
   
     -   サーバーを再起動します。 ワークロード グループは再作成されません。  
   
-    -   `DROP WORKLOAD GROUP` ステートメントを実行してから、変更適用のためにセッションを明示的に停止するのは不適切であると判断した場合、DROP ステートメントの実行前と同じ名前でグループを再作成し、このグループを元のリソース プールに移動することができます。  
+    -   
+  `DROP WORKLOAD GROUP` ステートメントを実行してから、変更適用のためにセッションを明示的に停止するのは不適切であると判断した場合、DROP ステートメントの実行前と同じ名前でグループを再作成し、このグループを元のリソース プールに移動することができます。  
   
-3.  実行、`ALTER RESOURCE GOVERNOR RECONFIGURE`ステートメント。  
+3.  ステートメントを`ALTER RESOURCE GOVERNOR RECONFIGURE`実行します。  
   
 ### <a name="example-transact-sql"></a>例 (Transact-SQL)  
  次の例では、 `groupAdhoc`というワークロード グループを削除します。  

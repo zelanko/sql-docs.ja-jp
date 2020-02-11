@@ -1,5 +1,5 @@
 ---
-title: 非同期モードと発生。マイクロソフトのドキュメント
+title: 非同期モードと SQLCancel |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3a4ec4e5d7575fdf5d915c8209999e1285fa79aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63144323"
 ---
 # <a name="asynchronous-mode-and-sqlcancel"></a>非同期モードと SQLCancel
@@ -45,7 +45,7 @@ SQLSetStmtAttr(hstmt, SQL_ATTR_ASYNC_ENABLE,
   
  アプリケーションでコマンドが完了したかどうかをテストするときは、ドライバーに対して同じ関数を同じパラメーターを指定して呼び出します。 ドライバーがサーバーからまだ応答を受け取っていない場合、SQL_STILL_EXECUTING が再び返されます。 アプリケーションでは、リターン コードが SQL_STILL_EXECUTING 以外になるまで、定期的にコマンドをテストする必要があります。 アプリケーションで他のリターン コードを受け取ると、それが SQL_ERROR であっても、コマンドが完了したことがわかります。  
   
- コマンドが長時間未完了になることがあります。 呼び出すことによって実行可能アプリケーションの応答を待つことがなく、コマンドをキャンセルする場合は、**発生**同じステートメントでは、未解決のコマンドとして処理します。 これだけの時間は、**発生**使用する必要があります。 いくつかのプログラマを使用して、**発生**とそれらの処理が途中の結果を設定し、結果セットの残りの部分をキャンセルします。 [SQLMoreResults](../../native-client-odbc-api/sqlmoreresults.md)または[手段](../../native-client-odbc-api/sqlclosecursor.md)、未処理の結果セットの残りの部分にキャンセルを使用する必要があります**発生**。  
+ コマンドが長時間未完了になることがあります。 アプリケーションが応答を待たずにコマンドをキャンセルする必要がある場合は、未解決のコマンドと同じステートメントハンドルを使用して**SQLCancel**を呼び出すことによって、この操作を行うことができます。 これは、 **SQLCancel**を使用する必要がある唯一の時間です。 一部のプログラマは、結果セットを使用して一部の処理を行ったときに、結果セットの残りの部分を取り消す必要がある場合に、 **SQLCancel**を使用します。 **SQLCancel**ではなく、未処理の結果セットの残りの部分を取り消すには、 [Sqlmoreresults](../../native-client-odbc-api/sqlmoreresults.md)または[sqlcloセキュリティー](../../native-client-odbc-api/sqlclosecursor.md)を使用する必要があります。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server Native Client ODBC ドライバー アプリケーションの作成](creating-a-driver-application.md)  

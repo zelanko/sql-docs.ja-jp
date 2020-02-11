@@ -14,22 +14,23 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f594ace96fc34a77adca244e79c55551f0ddb8d4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63228973"
 ---
 # <a name="sessions"></a>セッション
-  A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダー セッションのインスタンスへの接続を 1 つを表す[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
+  Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB プロバイダーセッションは、のインスタンスへの1つの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]接続を表します。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーでは、セッションがデータ ソースのトランザクション領域を区切ることが必要です。 特定のセッション オブジェクトから作成されたすべてのコマンド オブジェクトは、そのセッション オブジェクトのローカル トランザクションまたは分散トランザクションに関係します。  
+ Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB プロバイダーでは、セッションがデータソースのトランザクション領域を区切る必要があります。 特定のセッション オブジェクトから作成されたすべてのコマンド オブジェクトは、そのセッション オブジェクトのローカル トランザクションまたは分散トランザクションに関係します。  
   
  初期化されたデータ ソースで最初に作成されるセッション オブジェクトが、初期化時に確立された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 接続を受け取ります。 そのセッション オブジェクトのインターフェイスのすべての参照が解放されると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスへの接続で、データ ソースで作成される別のセッション オブジェクトを使用できるようになります。  
   
- データ ソースで新たに作成されるセッション オブジェクトは、データ ソースでの指定に従って、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスへの独自の接続を確立します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスへの接続は、そのセッションを作成したオブジェクトに対するすべての参照がアプリケーションによって解放された時点で削除されます。  
+ データ ソースで新たに作成されるセッション オブジェクトは、データ ソースでの指定に従って、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスへの独自の接続を確立します。 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスへの接続は、そのセッションを作成したオブジェクトに対するすべての参照がアプリケーションによって解放された時点で削除されます。  
   
- 次の例では、使用する方法、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーに接続するため、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース。  
+ 次の例は、Native Client OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]プロバイダーを使用して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースに接続する方法を示しています。  
   
 ```  
 int main()  
@@ -178,7 +179,7 @@ EXIT:
 }  
 ```  
   
- 接続[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーのセッション オブジェクトのインスタンスに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]継続的に作成し、セッション オブジェクトをリリースするアプリケーションのかなりのオーバーヘッドを生成することができます。 管理することによって、オーバーヘッドを最小化できる[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダー セッション オブジェクトを効率的にします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダー アプリケーションを保つことができます、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オブジェクトの少なくとも 1 つのインターフェイスの参照を保持することによってアクティブなセッション オブジェクトの接続。  
+ Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB プロバイダセッションオブジェクトをの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスに接続すると、セッションオブジェクトを継続的に作成して解放するアプリケーションに対してかなりのオーバーヘッドが発生する可能性があります。 Native Client OLE DB プロバイダセッションオブジェクトを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]効率的に管理することで、オーバーヘッドを最小限に抑えることができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーアプリケーションは、オブジェクト[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の少なくとも1つのインターフェイスで参照を維持することによって、セッションオブジェクトの接続をアクティブな状態に保つことができます。  
   
  たとえば、コマンド作成オブジェクト参照のプールを保持することで、プール内にあるセッション オブジェクトのアクティブな接続が維持されます。 セッション オブジェクトが必要になると、プールを保持するコードは、セッションを必要とするアプリケーション メソッドに対して、有効な **IDBCreateCommand** インターフェイス ポインターを渡します。 アプリケーション メソッドでセッションが不要になると、このメソッドは、プールを保持するコードにインターフェイス ポインターを返します。ただし、コマンド作成オブジェクトへのアプリケーションの参照は解放されません。  
   
@@ -186,6 +187,6 @@ EXIT:
 >  上記の例で **IDBCreateCommand** インターフェイスを使用したのは、**ICommand** インターフェイスに **GetDBSession** メソッドが実装されているためです。このメソッドは、オブジェクトが作成されたセッションを特定できる、コマンドまたは行セットのスコープ内にある唯一のメソッドです。 したがって、コマンド オブジェクトを使用すると、追加のセッションを作成できるデータ ソース オブジェクト ポインターをアプリケーションで取得できます。  
   
 ## <a name="see-also"></a>参照  
- [データ ソース オブジェクト&#40;OLE DB&#41;](data-source-objects-ole-db.md)  
+ [データソースオブジェクト &#40;OLE DB&#41;](data-source-objects-ole-db.md)  
   
   

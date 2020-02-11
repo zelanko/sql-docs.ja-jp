@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4177d7e8ebc96e40e831a6558c7d8b5073c86bc5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63209876"
 ---
 # <a name="resource-governor-resource-pool"></a>リソース ガバナー リソース プール
@@ -104,7 +104,7 @@ ms.locfileid: "63209876"
 > [!NOTE]  
 >  既定のグループは変更できますが、既定のプールから移動することはできません。  
   
- **ユーザー定義のリソース プール**  
+ **ユーザー定義のリソースプール**  
   
  ユーザー定義のリソース プールは、環境内の特定のワークロードに対して作成するリソース プールです。 リソース ガバナーには、リソース プールを作成、変更、および削除するための DDL ステートメントが用意されています。  
   
@@ -112,15 +112,15 @@ ms.locfileid: "63209876"
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  
-|リソース プールを作成する方法について説明します。|[リソース プールの作成](create-a-resource-pool.md)|  
+|リソース プールを作成する方法について説明します。|[リソースプールを作成する](create-a-resource-pool.md)|  
 |リソース プールの設定を変更する方法について説明します。|[リソース プールの設定の変更](change-resource-pool-settings.md)|  
 |リソース プールを削除する方法について説明します。|[リソース プールの削除](delete-a-resource-pool.md)|  
   
-## <a name="see-also"></a>関連項目  
- [リソース ガバナー](resource-governor.md)   
- [リソース ガバナー ワークロード グループ](resource-governor-workload-group.md)   
- [リソース ガバナーの分類子関数](resource-governor-classifier-function.md)   
- [テンプレートを使用してリソース ガバナーを構成する](configure-resource-governor-using-a-template.md)   
- [リソース ガバナー プロパティの表示](view-resource-governor-properties.md)  
+## <a name="see-also"></a>参照  
+ [Resource Governor](resource-governor.md)   
+ [ワークロードグループの Resource Governor](resource-governor-workload-group.md)   
+ [Resource Governor 分類子関数](resource-governor-classifier-function.md)   
+ [テンプレートを使用して Resource Governor を構成する](configure-resource-governor-using-a-template.md)   
+ [View Resource Governor Properties](view-resource-governor-properties.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: データ接続では Windows 認証を使用しており、ユーザーの資格情報を借用できませんでした。 次の接続の更新に失敗しました:PowerPivot データ |Microsoft Docs
+title: 'データ接続では Windows 認証を使用しており、ユーザーの資格情報を借用できませんでした。 次の接続を更新できませんでした: PowerPivot Data |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,23 +11,23 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0b11e1510213aefa98c6bf2c0c779cebaeed85e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66071029"
 ---
-# <a name="the-data-connection-uses-windows-authentication-and-user-credentials-could-not-be-delegated-the-following-connections-failed-to-refresh-powerpivot-data"></a>データ接続では Windows 認証を使用しており、ユーザーの資格情報を借用できませんでした。 次の接続の更新に失敗しました:[PowerPivot データ]
+# <a name="the-data-connection-uses-windows-authentication-and-user-credentials-could-not-be-delegated-the-following-connections-failed-to-refresh-powerpivot-data"></a>データ接続では Windows 認証を使用しており、ユーザーの資格情報を借用できませんでした。 次の接続は更新に失敗しました: PowerPivot データ
   PowerPivot データを含む Excel ブックで、Excel Services は、SharePoint の PowerPivot サーバー インスタンスに接続できない場合にこのエラーを返します。  
   
 ## <a name="details"></a>詳細  
   
 |||  
 |-|-|  
-|対象|PowerPivot for SharePoint|  
-|製品バージョン|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
+|適用対象|PowerPivot for SharePoint|  
+|製品バージョン|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |原因|PowerPivot データ プロバイダーを使用しようとしたときに接続が失敗しました。|  
-|メッセージ テキスト|データ接続では Windows 認証を使用しており、ユーザーの資格情報を借用できませんでした。 次の接続の更新に失敗しました:[PowerPivot データ]|  
+|メッセージ テキスト|データ接続では Windows 認証を使用しており、ユーザーの資格情報を借用できませんでした。 次の接続は更新に失敗しました: PowerPivot データ|  
   
 ## <a name="explanation"></a>説明  
  このエラー メッセージには複数の原因があります。 それらの原因に共通する要因は、Excel Services が SharePoint のクレーム トークンから有効な Windows ユーザー ID を取得できないことです。 PowerPivot データを含む Excel ブックの場合、次のいずれかの条件に当てはまるときは、このエラーが発生します。  
@@ -49,9 +49,10 @@ ms.locfileid: "66071029"
   
 #### <a name="enable-claims-to-windows-token-service"></a>Windows トークン サービスに対するクレームの有効化  
   
-1.  サーバーの全体管理で、[システム設定] の **[サーバーのサービスの管理]** をクリックします。  
+1.  サーバーの全体管理で、[システム設定] の [**サーバーのサービスの管理**] をクリックします。  
   
-2.  **[Windows トークン サービスに対するクレーム]** を選択し、 **[開始]** をクリックします。  
+2.  
+  **[Windows トークン サービスに対するクレーム]** を選択し、 **[開始]** をクリックします。  
   
 3.  [サービス] コンソールでサービスが実行されていることも確認します。  
   

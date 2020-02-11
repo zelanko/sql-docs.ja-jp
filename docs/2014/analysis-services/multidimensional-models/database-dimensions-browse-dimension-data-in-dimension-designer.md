@@ -1,5 +1,5 @@
 ---
-title: ディメンション デザイナーでディメンション データの参照 |Microsoft Docs
+title: ディメンションデザイナーでのディメンションデータの参照 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,22 +14,23 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d553f0fbb7e8c4188ff8fec2ac292213547e43b3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075987"
 ---
 # <a name="browse-dimension-data-in-dimension-designer"></a>ディメンション デザイナーでのディメンション データの参照
-  ディメンションのデータを参照するには、ディメンション デザイナーの **[ブラウザー][!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ビューを使用します。ディメンション デザイナーには、** からアクセスできます。  
+  ディメンションのデータを参照するには、ディメンション デザイナーの **[ブラウザー]** ビューを使用します。ディメンション デザイナーには、[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] からアクセスできます。  
   
- ディメンションのデータを **[ブラウザー]** ビューに表示するには、ディメンションが処理済みの状態でなければなりません。 詳細については、次を参照してください。[多次元モデル オブジェクトの処理](processing-a-multidimensional-model-analysis-services.md)します。  
+ ディメンションのデータを **[ブラウザー]** ビューに表示するには、ディメンションが処理済みの状態でなければなりません。 詳細については、「[多次元モデルオブジェクトの処理](processing-a-multidimensional-model-analysis-services.md)」を参照してください。  
   
 ### <a name="to-browse-a-dimension-in-sql-server-data-tools"></a>SQL Server データ ツールでディメンションを参照するには  
   
 1.  参照するディメンションを開いて、 **[ブラウザー]** タブをクリックします。  
   
-2.  **[階層]** ボックスの一覧で、データを参照する階層を選択します。  
+2.  
+  **[階層]** ボックスの一覧で、データを参照する階層を選択します。  
   
 3.  ディメンションに翻訳が含まれている場合は、必要に応じて **[言語]** ボックスの一覧からデータの表示に使用する言語を選択します。  
   
@@ -37,7 +38,7 @@ ms.locfileid: "66075987"
     >  選択した言語のディメンションで翻訳が定義されている必要があります。  
   
 ## <a name="see-also"></a>参照  
- [ディメンションの概要 &#40;Analysis Services - 多次元データ&#41;](../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
+ [ディメンションの概要 &#40;Analysis Services-多次元データ&#41;](../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [多次元モデル内のディメンション](dimensions-in-multidimensional-models.md)  
   
   

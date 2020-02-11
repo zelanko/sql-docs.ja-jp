@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 09f68c2a8f316189b1b28e9b252950ce6761d19d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63156835"
 ---
 # <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>データ アクセス アプリケーションからのネイティブ コンパイル ストアド プロシージャの呼び出し
@@ -32,23 +32,29 @@ ms.locfileid: "63156835"
  SqlClient では、ネイティブ コンパイル ストアド プロシージャ (CommandType.SchemaOnly) から返された結果セットに関するスキーマのみの情報 (メタデータ検出) の取得はサポートされません。 代わりに、[sp_describe_first_result_set &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql) を使用します。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] より前のバージョンの [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Native Client では、ネイティブ コンパイル ストアド プロシージャから返された結果セットに関するスキーマのみの情報 (メタデータ検出) の取得はサポートされません。 代わりに、[sp_describe_first_result_set &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql) を使用します。  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] より前のバージョンの [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Native Client では、ネイティブ コンパイル ストアド プロシージャから返された結果セットに関するスキーマのみの情報 (メタデータ検出) の取得はサポートされません。 代わりに、[sp_describe_first_result_set &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql) を使用します。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client で ODBC ドライバーを使用したネイティブ コンパイル ストアド プロシージャの呼び出しに関して、次の推奨事項が適用されます。  
   
- 1 回だけストアド プロシージャを呼び出すのに最も効率的な方法は、`SQLExecDirect` と ODBC CALL 句を使用して直接 RPC を呼び出す方法です。 使用しないでください、 [!INCLUDE[tsql](../../../includes/tsql-md.md)] `EXECUTE`ステートメント。 ストアド プロシージャを複数回呼び出す場合は、準備実行が効率的です。  
+ 1 回だけストアド プロシージャを呼び出すのに最も効率的な方法は、`SQLExecDirect` と ODBC CALL 句を使用して直接 RPC を呼び出す方法です。 ステートメントは[!INCLUDE[tsql](../../../includes/tsql-md.md)] `EXECUTE`使用しないでください。 ストアド プロシージャを複数回呼び出す場合は、準備実行が効率的です。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ストアド プロシージャを複数回呼び出すのに最も効率的な方法は、準備された RPC プロシージャ呼び出しを使用する方法です。 準備された RPC 呼び出しは、次のように、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client の ODBC ドライバーを使用して実行されます。  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ストアド プロシージャを複数回呼び出すのに最も効率的な方法は、準備された RPC プロシージャ呼び出しを使用する方法です。 準備された RPC 呼び出しは、次のように、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client の ODBC ドライバーを使用して実行されます。  
   
 -   データベースへの接続を開きます。  
   
--   `SQLBindParameter` を使用してパラメーターをバインドします。  
+-   
+  `SQLBindParameter` を使用してパラメーターをバインドします。  
   
--   `SQLPrepare.` を使用してプロシージャ呼び出しを準備します。  
+-   
+  `SQLPrepare.` を使用してプロシージャ呼び出しを準備します。  
   
--   `SQLExecute` を使用してストアド プロシージャを複数回実行します。  
+-   
+  `SQLExecute` を使用してストアド プロシージャを複数回実行します。  
   
- 次のコードに、注文に行アイテムを追加するためのストアド プロシージャの準備実行を示します。 `SQLPrepare` は、1 回だけ呼び出されます。`SQLExecute` は、プロシージャの実行ごとに複数回呼び出されます。  
+ 次のコードに、注文に行アイテムを追加するためのストアド プロシージャの準備実行を示します。 
+  `SQLPrepare` は、1 回だけ呼び出されます。`SQLExecute` は、プロシージャの実行ごとに複数回呼び出されます。  
   
 ```  
 // Bind parameters  
@@ -81,7 +87,7 @@ for (unsigned int i = 0; i < order.ItemCount; i++) {
 ```  
   
 ## <a name="using-odbc-to-execute-a-natively-complied-stored-procedure"></a>ODBC を使用したネイティブ コンパイル ストアド プロシージャの実行  
- このサンプルでは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーを使用してパラメーターをバインドし、ストアド プロシージャを実行する方法について説明します。  このサンプルは、直接実行を使用して単一の注文を挿入し、準備実行を使用して注文の明細を挿入するコンソール アプリケーションにコンパイルされます。  
+ このサンプルでは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーを使用してパラメーターをバインドし、ストアド プロシージャを実行する方法について説明します。  このサンプルは、直接実行を使用して単一の注文を挿入し、準備実行を使用して注文の明細を挿入するコンソール アプリケーションにコンパイルされます。  
   
  このサンプルを実行するには:  
   

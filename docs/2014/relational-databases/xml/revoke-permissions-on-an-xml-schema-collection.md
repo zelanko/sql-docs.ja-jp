@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 864a310044d2bf6b903b69b1b53bd6cd5bd3b38d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63240725"
 ---
 # <a name="revoke-permissions-on-an-xml-schema-collection"></a>XML スキーマ コレクションに対する権限の取り消し
@@ -41,7 +41,7 @@ ms.locfileid: "63240725"
   
 -   EXECUTE 権限を取り消すと、XML コレクションによって型指定または制約された列、変数、およびパラメーターの値を挿入または更新するプリンシパルの権限が取り消されます。 これにより、そのような **xml** 型の列、変数、またはパラメーターにクエリする権限も取り消されます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例に示すシナリオでは、XML スキーマ権限のしくみを説明します。 各例では、必要なテスト データベース、リレーショナル スキーマ、およびログインを作成します。 それらのログインには、必要な XML スキーマ コレクション権限が許可されています。 最後に必要なクリーンアップを行います。  
   
 ### <a name="a-revoking-permissions-to-create-an-xml-schema-collection"></a>A. XML スキーマ コレクションを作成するための権限の取り消し  

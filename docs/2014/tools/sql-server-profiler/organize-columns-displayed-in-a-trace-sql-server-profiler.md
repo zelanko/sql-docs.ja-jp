@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e1a884f7c45accefb248029d148feb8b521e6ff4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63240536"
 ---
 # <a name="organize-columns-displayed-in-a-trace-sql-server-profiler"></a>トレースに表示される列の構成 (SQL Server Profiler)
-  トレース テーブルまたは **[トレース ファイルのプロパティ]** ダイアログ ボックスで **[列の構成]** をクリックするか、またはトレースを定義するときに、トレースのデータ列をグループ化できます。 データ列をグループ化すると、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] のトレース出力を分析しやすくなります。 詳細については、「 [SQL Server Profiler を使用したトレースの表示と分析](view-and-analyze-traces-with-sql-server-profiler.md)」を参照してください。  
+  トレース テーブルまたは **[トレース ファイルのプロパティ]** ダイアログ ボックスで **[列の構成]** をクリックするか、またはトレースを定義するときに、トレースのデータ列をグループ化できます。 データ列をグループ化すると、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] のトレース出力を分析しやすくなります。 詳細については、「 [SQL Server Profiler を使用したトレースの表示と分析](view-and-analyze-traces-with-sql-server-profiler.md)」をご覧ください。  
   
  **[列の構成]** を使用すると、トレース イベントをグループ化するか、または選択するデータ列でトレース イベントをグループ化して集計できます。  
   

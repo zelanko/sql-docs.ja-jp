@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 28203de42b3cdb4a033ce222c747df3e80da96f9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63224502"
 ---
 # <a name="combine-conditions-when-or-has-precedence-visual-database-tools"></a>OR が優先する場合の条件の結合 (Visual Database Tools)
@@ -71,7 +71,7 @@ WHERE (job_lvl = 100 OR status = 'R') AND
 >  [SQL ペイン](sql-pane-visual-database-tools.md)に上の形式で検索条件を入力した後でダイアグラム ペインまたは抽出条件ペインでクエリを変更した場合、クエリおよびビュー デザイナーで再度作成される SQL ステートメントの形式は、両方の OR 条件に AND 条件が明示的に適用される形式になります。  
   
 ## <a name="see-also"></a>参照  
- [抽出条件ペインで検索条件を結合するための規則&#40;Visual Database Tools&#41;](conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)   
+ [抽出条件ペインで検索条件を組み合わせる場合の規則 &#40;Visual Database Tools&#41;](conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)   
  [検索基準の指定 (Visual Database Tools)](specify-search-criteria-visual-database-tools.md)  
   
   

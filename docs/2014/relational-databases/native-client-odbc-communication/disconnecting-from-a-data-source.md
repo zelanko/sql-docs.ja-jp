@@ -1,5 +1,5 @@
 ---
-title: データ ソースからの切断 |マイクロソフトのドキュメント
+title: データソースからの切断 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 43ccc784d0d8759c559e705cbbb65861040f6e8a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63205675"
 ---
 # <a name="disconnecting-from-a-data-source"></a>データ ソースからの切断
-  アプリケーションは、データ ソースの使用が完了したら、それを呼び出す**SQLDisconnect**します。 **SQLDisconnect**接続に割り当てられているすべてのステートメントを解放し、データ ソースからドライバーを切断します。 アプリケーションを呼び出して、その後、 [SQLFreeHandle](../native-client-odbc-api/sqlfreehandle.md)接続ハンドルを解放します。 アプリケーションを終了する前に呼び出すも**SQLFreeHandle**環境ハンドルを解放します。  
+  アプリケーションでデータソースの使用が完了すると、 **Sqldisconnect**が呼び出されます。 **Sqldisconnect**は、接続に割り当てられているすべてのステートメントを解放し、データソースからドライバーを切断します。 切断後、アプリケーションは[Sqlfreehandle](../native-client-odbc-api/sqlfreehandle.md)を呼び出して接続ハンドルを解放できます。 終了する前に、アプリケーションは**Sqlfreehandle**を呼び出して環境ハンドルを解放します。  
   
  切断後は、割り当てられていた接続ハンドルを再利用して、別のデータ ソースに接続したり、同じデータ ソースに再接続したりできます。 切断してから後で再接続するか、接続した状態を維持するかを決める際、アプリケーションの作成者は各操作の相対コストを考慮する必要があります。 接続メディアによっては、データ ソースに接続し、接続した状態を維持するのに比較的コストがかかる場合があります。 両者を比較検討する場合は、アプリケーションで同じデータ ソースに追加操作が行われる可能性やタイミングについて想定することも必要です。 また、アプリケーションで複数の接続が必要になる場合もあります。  
   
 ## <a name="see-also"></a>参照  
- [SQL Server と通信する&#40;ODBC&#41;](communicating-with-sql-server-odbc.md)  
+ [ODBC&#41;&#40;SQL Server との通信](communicating-with-sql-server-odbc.md)  
   
   

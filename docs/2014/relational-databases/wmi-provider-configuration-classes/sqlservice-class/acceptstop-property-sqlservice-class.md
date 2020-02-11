@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 38da38f867c6266d25f3b5d4c329a3e18a0e7292
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63223335"
 ---
 # <a name="acceptstop-property-sqlservice-class"></a>AcceptStop プロパティ (SqlService クラス)
@@ -37,15 +37,15 @@ object
 ```  
   
 ## <a name="parts"></a>要素  
- *object*  
- A [SqlService クラス](sqlservice-class.md)サービスを表すオブジェクト  
+ *素材*  
+ サービスを表す[Sqlservice クラス](sqlservice-class.md)オブジェクト  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  サービスを停止できるかどうかを指定するブール値。サービスを停止できる場合は `true`、サービスを停止できない場合は `false` です。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
   
 ## <a name="see-also"></a>参照  
- [開始とサービスの停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [サービスの開始および停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   
