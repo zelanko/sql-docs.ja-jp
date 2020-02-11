@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2109346c60ca807dcc818941f9baff862a211247
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62921816"
 ---
 # <a name="recover-a-database-without-restoring-data-transact-sql"></a>データを復元しないデータベースの復旧 (Transact-SQL)
@@ -42,7 +42,7 @@ ms.locfileid: "62921816"
  RESTORE DATABASE *database_name* WITH RECOVERY  
   
 > [!NOTE]  
->  復旧のみの復元にはバックアップは必要ないので、FROM **=** \<*backup_device>* 句は使用しません。  
+>  バックアップは**=** \<必要ないため、from *backup_device>* 句は復旧のみの復元には使用されません。  
   
  **例**  
   
@@ -63,7 +63,7 @@ RESTORE DATABASE AdventureWorks2012
   
  復旧のみのファイル復元の [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) 構文は次のとおりです。  
   
- RESTORE DATABASE *database_name* { FILE **=**_logical_file_name_ | FILEGROUP **=**_logical_filegroup_name_ }[ **,**...*n* ] WITH RECOVERY  
+ RESTORE DATABASE *database_name* {FILE **=** _logical_file_name_ |ファイル**=** グループ_logical_filegroup_name_ } [ **,**...*n* ] 回復  
   
  **例**  
   
@@ -76,23 +76,23 @@ RESTORE DATABASE Sales FILEGROUP=SalesGroup2 WITH RECOVERY;
 ## <a name="examples-of-completing-a-piecemeal-restore-scenario-with-a-recovery-only-restore"></a>復旧のみの復元を使用した段階的な部分復元シナリオの完了の例  
  **単純復旧モデル**  
   
--   [例: データベースの段階的な部分復元 &#40;単純復旧モデル&#41;](example-piecemeal-restore-of-database-simple-recovery-model.md)  
+-   [例: データベース &#40;単純復旧モデルの段階的な部分復元&#41;](example-piecemeal-restore-of-database-simple-recovery-model.md)  
   
--   [例: 一部のファイル グループのみを復元する段階的な部分復元 &#40;単純復旧モデル&#41;](example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
+-   [例: 一部のファイルグループのみを &#40;単純復旧モデルの段階的な部分復元&#41;](example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
   
  **完全復旧モデル**  
   
--   [例: データベースの段階的な部分復元 &#40;完全復旧モデル&#41;](example-piecemeal-restore-of-database-full-recovery-model.md)  
+-   [例: データベース &#40;完全復旧モデルの段階的な部分復元&#41;](example-piecemeal-restore-of-database-full-recovery-model.md)  
   
--   [例: 一部のファイル グループのみを復元する段階的な部分復元 &#40;完全復旧モデル&#41;](example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md)  
+-   [例: 完全復旧モデル &#40;一部のファイルグループのみを復元する段階的な部分復元&#41;](example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md)  
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlRestore%2A>  
   
 ## <a name="see-also"></a>参照  
- [Online Restore &#40;SQL Server&#41;](online-restore-sql-server.md)   
+ [オンライン復元 &#40;SQL Server&#41;](online-restore-sql-server.md)   
  [段階的な部分復元 &#40;SQL Server&#41;](piecemeal-restores-sql-server.md)   
  [ファイル復元 &#40;単純復旧モデル&#41;](file-restores-simple-recovery-model.md)   
- [ファイルの復元 &#40;完全復旧モデル&#41;](file-restores-full-recovery-model.md)   
- [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)  
+ [完全復旧モデルのファイル復元 &#40;&#41;](file-restores-full-recovery-model.md)   
+ [Transact-sql&#41;の復元 &#40;](/sql/t-sql/statements/restore-statements-transact-sql)  
   
   

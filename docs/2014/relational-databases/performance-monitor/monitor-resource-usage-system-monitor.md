@@ -26,10 +26,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8bd4676eed22cea99808d87016231dbd2ebaf4cc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63032116"
 ---
 # <a name="monitor-resource-usage-system-monitor"></a>リソースの利用状況の監視 (システム モニター)
@@ -86,6 +86,6 @@ ms.locfileid: "63032116"
 |システム モニターのカウンターがしきい値に達したときに発生する警告を作成する方法について説明します。|[SQL Server データベース警告の作成](create-a-sql-server-database-alert.md)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスを監視するためのグラフ、警告、ログ、およびレポートを作成する方法について説明します。|[グラフ、警告、ログ、およびレポートの作成](create-charts-alerts-logs-and-reports.md)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスを実行しているコンピューターの利用状況をシステム モニターで監視する際に使用されるオブジェクトとカウンターを示します。|[SQL Server オブジェクトの使用](use-sql-server-objects.md)|  
-|システム モニターでインメモリ OLTP のアクティビティを監視する際に使用されるオブジェクトとカウンターを示します。|[XTP &#40;、インメモリ OLTP&#41;パフォーマンス カウンター](../../integration-services/performance/performance-counters.md)|  
+|システム モニターでインメモリ OLTP のアクティビティを監視する際に使用されるオブジェクトとカウンターを示します。|[XTP &#40;インメモリ OLTP&#41; パフォーマンスカウンター](../../integration-services/performance/performance-counters.md)|  
   
   

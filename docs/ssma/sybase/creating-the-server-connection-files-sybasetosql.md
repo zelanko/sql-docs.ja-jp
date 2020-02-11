@@ -1,5 +1,5 @@
 ---
-title: サーバー接続ファイル (SybaseToSQL) の作成 |Microsoft Docs
+title: サーバー接続ファイルの作成 (SybaseToSQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,16 +13,16 @@ ms.assetid: 35ef396f-9f98-429d-9fc5-4f413d08fb37
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: ece41e157ddad4f62a041d8e06dde073f681d274
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68029362"
 ---
 # <a name="creating-the-server-connection-files-sybasetosql"></a>サーバー接続ファイルの作成 (SybaseToSQL)
-スクリプト ファイルの [サーバー] セクションで、または別のサーバー接続ファイルには、サーバーの情報を指定することができます。 サーバー接続ファイルのコマンド ライン パラメーターがで`-c <serverconnectionfile>`します。 同じサーバー id がスクリプト ファイルとサーバー接続ファイルの両方に存在する場合は、スクリプト ファイル内のサーバー定義と見なされます。  
+サーバー情報は、スクリプトファイルの [サーバー] セクションで、または別のサーバー接続ファイルで指定できます。 サーバー接続ファイルのコマンドラインパラメーターは、 `-c <serverconnectionfile>`です。 スクリプトファイルとサーバー接続ファイルの両方に同じサーバー id が存在する場合は、スクリプトファイル内のサーバー定義が考慮されます。  
   
-**例:**  
+**よう**  
   
 ```  
 1.<!--Sample of server connection file commands -->  
@@ -102,11 +102,11 @@ ms.locfileid: "68029362"
 ```  
   
 ## <a name="server-connection-file-validation"></a>サーバー接続ファイルの検証  
-ユーザーがスキーマ定義ファイルに対して自分のサーバー接続ファイルを簡単に検証できます**S2SSConsoleScriptServersSchema.xsd** 'スキーマ' フォルダー内にあります。  
+ユーザーは、' スキーマ ' フォルダーで使用可能なスキーマ定義ファイル**S2SSConsoleScriptServersSchema**に対して、サーバー接続ファイルを簡単に検証できます。  
   
-## <a name="next-step"></a>次の手順  
-コンソールの運用には、次の手順は[SSMA コンソールの実行&#40;SybaseToSQL&#41;](../../ssma/sybase/executing-the-ssma-console-sybasetosql.md)  
+## <a name="next-step"></a>次のステップ  
+コンソールを操作する次の手順では、 [SSMA コンソール &#40;SybaseToSQL&#41;を実行](../../ssma/sybase/executing-the-ssma-console-sybasetosql.md)しています。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
 [SSMA コンソールの実行](executing-the-ssma-console-sybasetosql.md)  
   

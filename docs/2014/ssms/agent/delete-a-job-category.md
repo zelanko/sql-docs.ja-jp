@@ -17,14 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9bb392991afbb3707fafdb18a28cc3de53f97c78
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72783200"
 ---
 # <a name="delete-a-job-category"></a>ジョブ カテゴリの削除
-  このトピックでは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../includes/tsql-md.md)]、または SQL Server 管理オブジェクトを使用して、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブ カテゴリを削除する方法について説明します。  
+  このトピックでは、または[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Server 管理オブジェクトを使用[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]でエージェントジョブカテゴリを削除する方法について説明します。  
   
  ジョブ カテゴリを使用してジョブを管理すると、フィルター操作やグループ化を簡単に行うことができます。 たとえば、データベース バックアップに関するすべてのジョブを [データベースのメンテナンス] カテゴリとしてまとめます。  
 
@@ -33,26 +33,30 @@ ms.locfileid: "72783200"
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
  ユーザー定義のジョブ カテゴリを削除するとき、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントはそのカテゴリに割り当てられているジョブを別のジョブ カテゴリに再割り当てするように要求します。 削除できるのはユーザー定義のジョブ カテゴリのみです。  
   
-###  <a name="Security"></a> Security  
+###  <a name="Security"></a> セキュリティ  
  詳細については、「 [SQL Server エージェントのセキュリティの実装](implement-sql-server-agent-security.md)」をご覧ください。  
 
 ##  <a name="SSMS"></a> SQL Server Management Studio の使用  
   
 ### <a name="to-delete-a-job-category"></a>ジョブ カテゴリを削除するには  
   
-1.  **オブジェクト エクスプ ローラー**で、プラス記号をクリックして、ジョブ カテゴリを削除するサーバーを展開します。  
+1.  
+  **オブジェクト エクスプ ローラー**で、プラス記号をクリックして、ジョブ カテゴリを削除するサーバーを展開します。  
   
 2.  プラス記号をクリックして **[SQL Server エージェント]** を展開します。  
   
-3.  **[ジョブ]** フォルダーを右クリックし、 **[ジョブ カテゴリの管理]** をクリックします。  
+3.  
+  **[ジョブ]** フォルダーを右クリックし、 **[ジョブ カテゴリの管理]** をクリックします。  
   
-4.  **&lt;server_name&gt;** ダイアログ ボックスで、削除するジョブ カテゴリを選択します。  
+4.  [**ジョブカテゴリ**_server_name_の管理] ダイアログボックスで、削除するジョブカテゴリを選択します。  
   
-5.  **[削除]** をクリックします。  
+5.  
+  **[削除]** をクリックします。  
   
-6.  **[ジョブ カテゴリ]** ダイアログ ボックスで **[はい]** をクリックします。  
+6.  
+  **[ジョブ カテゴリ]** ダイアログ ボックスで **[はい]** をクリックします。  
   
-7.  **&lt;server_name&gt;** ダイアログ ボックスを閉じます。  
+7.  [**ジョブカテゴリ**の_server_name_の管理] ダイアログボックスを閉じます。  
   
 ##  <a name="TSQL"></a> Transact-SQL の使用  
   

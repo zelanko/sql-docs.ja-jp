@@ -19,20 +19,20 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fa6810718b62a93d8d3dfbd8d13f1618f5b2aa3c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097231"
 ---
-# <a name="msreportserverinstance-methods"></a>MSReportServer_Instance メソッド
+# <a name="msreportserver_instance-methods"></a>MSReportServer_Instance メソッド
   MSReportServer_Instance クラスは、インストールされているレポート サーバーにクライアントが接続するために必要な基本情報を提供します。  
   
 ## <a name="public-methods"></a>パブリック メソッド  
   
 |||  
 |-|-|  
-|[GetReportServerUrls メソッド (WMI MSReportServer_Instance)](msreportserver-instance-methods-getreportserverurls.md)|ユーザーがレポート サーバーおよびレポート マネージャーへのアクセスに使用できる URL の一覧を示します。|  
+|[GetReportServerUrls メソッド &#40;WMI MSReportServer_Instance&#41;](msreportserver-instance-methods-getreportserverurls.md)|ユーザーがレポート サーバーおよびレポート マネージャーへのアクセスに使用できる URL の一覧を示します。|  
   
 ## <a name="see-also"></a>参照  
  [MSReportServer_Instance メンバー](msreportserver-instance-members.md)  

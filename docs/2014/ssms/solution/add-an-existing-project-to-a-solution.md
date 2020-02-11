@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 84ee67faf36668a297cdfd801a84147ed236ce50
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62956077"
 ---
 # <a name="add-an-existing-project-to-a-solution"></a>ソリューションへの既存のプロジェクトの追加
@@ -40,7 +40,7 @@ ms.locfileid: "62956077"
 >  複数の開発者がいる環境で共有ディレクトリの既存のプロジェクトに変更を加える場合は、その前に、その変更が別の開発者の変更に悪影響を与えたり上書きしたりしないことを確認する必要があります。  
   
 ## <a name="see-also"></a>参照  
- [プロジェクト&#40;SQL Server Management Studio&#41;](projects-sql-server-management-studio.md)   
+ [プロジェクト &#40;SQL Server Management Studio&#41;](projects-sql-server-management-studio.md)   
  [ソリューション (SQL Server Management Studio)](solutions-sql-server-management-studio.md)  
   
   

@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 48c6ccac0692075db43e4a5c3a7010c541827d0a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63021794"
 ---
 # <a name="publication-type"></a>[パブリケーションの種類]
@@ -28,14 +28,14 @@ ms.locfileid: "63021794"
   
 -   マージ パブリケーション  
   
- アプリケーションに対してどの種類のレプリケーションを選択するかは、物理レプリケーション環境、レプリケートするデータの種類と量、およびデータがサブスクライバーで更新されるかどうかに依存します。 物理環境には、レプリケーションに関連するコンピューターの台数と場所、およびこれらのコンピューターがクライアント (ワークステーション、ラップトップ コンピューター、またはハンドヘルド デバイス) かサーバーかということが含まれます。 詳細については、「[Types of Replication](types-of-replication.md)」 (レプリケーションの種類) を参照してください。  
+ アプリケーションに対してどの種類のレプリケーションを選択するかは、物理レプリケーション環境、レプリケートするデータの種類と量、およびデータがサブスクライバーで更新されるかどうかに依存します。 物理環境には、レプリケーションに関連するコンピューターの台数と場所、およびこれらのコンピューターがクライアント (ワークステーション、ラップトップ コンピューター、またはハンドヘルド デバイス) かサーバーかということが含まれます。 詳細については、「[Types of Replication](types-of-replication.md)」(レプリケーションの種類) をご覧ください。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **Publication type**  
  このパブリケーションにとって適切なレプリケーションの種類を選択します。  
   
 ## <a name="see-also"></a>参照  
  [データとデータベース オブジェクトのパブリッシュ](publish/publish-data-and-database-objects.md)   
- [パブリケーションの作成](publish/create-a-publication.md)  
+ [パブリケーションを作成する](publish/create-a-publication.md)  
   
   

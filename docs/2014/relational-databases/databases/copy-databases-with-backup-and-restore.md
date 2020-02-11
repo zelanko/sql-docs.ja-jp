@@ -19,26 +19,28 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5a35156a465e521ceea60fa090142836da6a4c1a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917469"
 ---
 # <a name="copy-databases-with-backup-and-restore"></a>バックアップと復元によるデータベースのコピー
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンを使用して作成したユーザー データベースのバックアップを復元して、新しいデータベースを作成できます。 ただし、以前のバージョンの **を使用して作成された**master **、** model **、および** msdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバックアップを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]で復元することはできません。 また、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のバックアップを以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で復元することもできません。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、以前のバージョンとは異なる既定パスが使用されます。 そのため、以前のバージョンの既定の場所で作成されたデータベースのバックアップを復元するには、MOVE オプションを使用する必要があります。 新しい既定パスの詳細については、「 [SQL Server の既定のインスタンスおよび名前付きインスタンスのファイルの場所](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)」を参照してください。 データベース ファイルの移動の詳細については、このトピックの「データベース ファイルの移動」を参照してください。  
+>  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、以前のバージョンとは異なる既定パスが使用されます。 そのため、以前のバージョンの既定の場所で作成されたデータベースのバックアップを復元するには、MOVE オプションを使用する必要があります。 新しい既定のパスの詳細については、「 [SQL Server の既定のインスタンスと名前付きインスタンスのファイルの場所](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)」を参照してください。 データベース ファイルの移動の詳細については、このトピックの「データベース ファイルの移動」を参照してください。  
   
 ## <a name="general-steps-for-using-backup-and-restore-to-copy-a-database"></a>バックアップと復元を使用してデータベースをコピーする一般的な手順  
  バックアップと復元を使用して他の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスにデータベースをコピーするとき、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行するコピー元とコピー先のコンピューターのプラットフォームは問いません。  
   
  一般的な手順は次のとおりです。  
   
-1.  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のインスタンスにあるコピー元データベースをバックアップします。 この [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを実行しているコンピューターが *コピー元コンピューター*です。  
+1.  
+  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のインスタンスにあるコピー元データベースをバックアップします。 この [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを実行しているコンピューターが *コピー元コンピューター*です。  
   
-2.  データベースをコピーするコンピューター (、*セットアップ先のコンピューター*) のインスタンスに接続[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]でデータベースを復元します。 必要に応じて、コピー元データベースのバックアップに使用したのと同じバックアップ デバイスをコピー先のサーバー インスタンスにも作成します。  
+2.  データベースのコピー先となるコンピューター (*対象のコンピューター*) で、データベースの復元先のの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスに接続します。 必要に応じて、コピー元データベースのバックアップに使用したのと同じバックアップ デバイスをコピー先のサーバー インスタンスにも作成します。  
   
 3.  コピー元データベースのバックアップをコピー先コンピューターに復元します。 データベースを復元すると、すべてのデータベース ファイルが自動的に作成されます。  
   
@@ -59,10 +61,10 @@ ms.locfileid: "62917469"
   
     -   既存のファイルを上書きできない場合は、復元エラーが発生します。  
   
- エラーと、復元操作の前に、意図しない結果を回避するために使用することができます、 [backupfile](/sql/relational-databases/system-tables/backupfile-transact-sql)履歴テーブルを復元するバックアップにデータベースとログ ファイルを確認します。  
+ エラーや意図しない結果を回避するには、復元操作の前に、 [backupfile](/sql/relational-databases/system-tables/backupfile-transact-sql)履歴テーブルを使用して、復元するバックアップのデータベースとログファイルを確認します。  
   
-## <a name="moving-the-database-files"></a>データベース ファイルの移動  
- 前に示した理由によりデータベース バックアップ内のファイルをコピー先コンピューターに復元できない場合は、復元のときにファイルを新しい場所に移動する必要があります。 例 :  
+## <a name="moving-the-database-files"></a>データベースファイルの移動  
+ 前に示した理由によりデータベース バックアップ内のファイルをコピー先コンピューターに復元できない場合は、復元のときにファイルを新しい場所に移動する必要があります。 次に例を示します。  
   
 -   以前のバージョンの既定の場所に作成されたバックアップからデータベースを復元する場合。  
   
@@ -78,7 +80,7 @@ ms.locfileid: "62917469"
  データベースを復元するときに明示的に指定するデータベース名が、新しいデータベース名として自動的に使用されます。 そのデータベース名はまだ存在していないため、新しい名前のデータベースがバックアップ内のファイルを使用して作成されます。  
   
 ## <a name="when-upgrading-a-database-by-using-restore"></a>復元を使用してデータベースをアップグレードする場合  
- バックアップを以前のバージョンから復元する場合は、バックアップにある各フルテキスト カタログのパス (ドライブとディレクトリ) がコピー先コンピューターに存在するかどうかを事前に知っておくと便利です。 バックアップにある、カタログ ファイルを含めたすべてのファイルの論理名と物理名 (パスとファイル名) を一覧にするには、RESTORE FILELISTONLY FROM *<backup_device>* ステートメントを使用します。 詳細については、「[RESTORE FILELISTONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql)」を参照してください。  
+ バックアップを以前のバージョンから復元する場合は、バックアップにある各フルテキスト カタログのパス (ドライブとディレクトリ) がコピー先コンピューターに存在するかどうかを事前に知っておくと便利です。 バックアップにある、カタログ ファイルを含めたすべてのファイルの論理名と物理名 (パスとファイル名) を一覧にするには、RESTORE FILELISTONLY FROM *<backup_device>* ステートメントを使用します。 詳細については、[RESTORE FILELISTONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql) を参照してください。  
   
  コピー先のコンピューターに同一のパスが存在しない場合、2 つの方法で対処できます。  
   
@@ -94,31 +96,31 @@ ms.locfileid: "62917469"
 ## <a name="managing-metadata-when-restoring-to-another-server-instance"></a>別のサーバー インスタンスに復元するときのメタデータの管理  
  データベースを別のサーバー インスタンスに復元するときは、ユーザーおよびアプリケーションに一貫した使用環境を提供するために、復元先のサーバー インスタンスで、ログインやジョブなどのデータベースのメタデータの一部またはすべてを作成し直す必要がある場合があります。 詳細については、「 [データベースを別のサーバー インスタンスで使用できるようにするときのメタデータの管理 &#40;SQL Server&#41;](manage-metadata-when-making-a-database-available-on-another-server.md)」を参照してください。  
   
- **バックアップ セットに含まれているデータ ファイルおよびログ ファイルを表示するには**  
+ **バックアップセット内のデータファイルとログファイルを表示するには**  
   
--   [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql)  
+-   [RESTORE FILELISTONLY &#40;Transact-sql&#41;](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql)  
   
- **ファイルおよびファイル グループを新しい場所に復元するには**  
+ **ファイルとファイル グループを新しい場所に復元するには**  
   
--   [新しい場所へのファイルの復元 &#40;SQL Server&#41;](../backup-restore/restore-files-to-a-new-location-sql-server.md)  
+-   [新しい場所にファイルを復元する &#40;SQL Server&#41;](../backup-restore/restore-files-to-a-new-location-sql-server.md)  
   
--   [データベースのバックアップを復元&#40;SQL Server Management Studio&#41;](../backup-restore/restore-a-database-backup-using-ssms.md)  
+-   [データベースバックアップを復元する &#40;SQL Server Management Studio&#41;](../backup-restore/restore-a-database-backup-using-ssms.md)  
   
- **既存のファイルにファイルとファイル グループを復元するには**  
+ **ファイルとファイル グループを既存のファイルに復元するには**  
   
--   [既存のファイルにファイルとファイル グループを復元する &#40;SQL Server&#41;](../backup-restore/restore-files-and-filegroups-over-existing-files-sql-server.md)  
+-   [既存のファイルにファイルとファイルグループを復元 &#40;SQL Server&#41;](../backup-restore/restore-files-and-filegroups-over-existing-files-sql-server.md)  
   
  **新しい名前でデータベースを復元するには**  
   
--   [データベースのバックアップを復元&#40;SQL Server Management Studio&#41;](../backup-restore/restore-a-database-backup-using-ssms.md)  
+-   [データベースバックアップを復元する &#40;SQL Server Management Studio&#41;](../backup-restore/restore-a-database-backup-using-ssms.md)  
   
  **中断された復元操作を再開するには**  
   
--   [中断された復元操作の再開 &#40;Transact-SQL&#41;](../backup-restore/restart-an-interrupted-restore-operation-transact-sql.md)  
+-   [Transact-sql&#41;&#40;中断された復元操作を再開する](../backup-restore/restart-an-interrupted-restore-operation-transact-sql.md)  
   
  **データベースの所有者を変更するには**  
   
--   [sp_changedbowner &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changedbowner-transact-sql)  
+-   [sp_changedbowner &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-changedbowner-transact-sql)  
   
  **SQL Server 管理オブジェクト (SMO) を使用してデータベースをコピーするには**  
   
@@ -130,10 +132,10 @@ ms.locfileid: "62917469"
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore>  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [他のサーバーへのデータベースのコピー](copy-databases-to-other-servers.md)   
- [SQL Server の既定のインスタンスおよび名前付きインスタンスのファイルの場所](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)   
- [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql)   
- [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)  
+ [SQL Server の既定のインスタンスと名前付きインスタンスのファイルの場所](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)   
+ [RESTORE FILELISTONLY &#40;Transact-sql&#41;](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql)   
+ [Transact-sql&#41;の復元 &#40;](/sql/t-sql/statements/restore-statements-transact-sql)  
   
   

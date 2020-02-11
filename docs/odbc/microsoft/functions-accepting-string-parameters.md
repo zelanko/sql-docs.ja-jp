@@ -17,14 +17,14 @@ ms.assetid: 869b8421-f71e-4dfd-adce-691bd3012b16
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4165dd51437f143351835bc1739ffb8279bd04ff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67952480"
 ---
 # <a name="functions-accepting-string-parameters"></a>文字列パラメーターを受け入れる関数
-文字列パラメーターを受け取るすべての関数は、Unicode に変換されます。 ("W"の形式の関数がエクスポートされます。)バイト数は、該当する ODBC Api の文字の数に変換されます。 これは、次の関数に適用されます。  
+文字列パラメーターを受け取るすべての関数は、Unicode に変換されます。 (関数の "W" 形式がエクスポートされます)。バイト数は、該当する ODBC Api の文字数に変換されます。 これは、次の関数に適用されます。  
   
 -   **SQLConnect**  
   
@@ -34,7 +34,7 @@ ms.locfileid: "67952480"
   
 -   **SQLDescribeCol**  
   
--   **SQLError** (置き換え**SQLGetDiagField**)  
+-   **SQLError** ( **SQLGetDiagField**に置き換えられました)  
   
 -   **SQLExecDirect**  
   
@@ -46,9 +46,9 @@ ms.locfileid: "67952480"
   
 -   **SQLGetInfo**  
   
--   **SQLGetStmtOption** (なります**SQLGetStmtAttr**)  
+-   **SQLGetStmtOption** ( **SQLGetStmtAttr**になります)  
   
--   **SQLSetStmtOption** (なります**SQLSetStmtAttr**)  
+-   **SQLSetStmtOption** ( **SQLSetStmtAttr**になります)  
   
 -   **SQLGetConnectOption**  
   

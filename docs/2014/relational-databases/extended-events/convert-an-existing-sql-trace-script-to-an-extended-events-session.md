@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 83cf9390524d2fdc013fdddc41c610c28930e998
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63015774"
 ---
 # <a name="convert-an-existing-sql-trace-script-to-an-extended-events-session"></a>既存の SQL トレース スクリプトから拡張イベント セッションへの変換
@@ -100,7 +100,7 @@ ms.locfileid: "63015774"
 ## <a name="to-create-the-extended-events-session"></a>拡張イベント セッションを作成するには  
  クエリ エディターを使用して拡張イベント セッションを作成し、出力結果をファイル ターゲットに書き込みます。 以降の手順は、単一のクエリについて記述したものです。クエリの実際の作成方法を交えて説明しています。 クエリ全体の例については、このトピックの「使用例」のセクションを参照してください。  
   
-1.  イベント セッションを作成するためのステートメントを追加します。*session_name* の部分は、拡張イベント セッションに使用する名前に置き換えてください。  
+1.  イベントセッションを作成するためのステートメントを追加します。*ession_name*は、拡張イベントセッションで使用する名前に置き換えてください。  
   
     ```sql
     IF EXISTS(SELECT * FROM sys.server_event_sessions WHERE name='session_name')  

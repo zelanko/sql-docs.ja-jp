@@ -1,5 +1,5 @@
 ---
-title: WillMove および MoveComplete イベント (ADO) |Microsoft Docs
+title: 移動イベントと MoveComplete イベント (ADO) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -20,14 +20,14 @@ ms.assetid: 1a3d1042-4f30-4526-a0c7-853c242496db
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c91f3166b493ac1e2fada3e759cb107e34c7ca81
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67945913"
 ---
 # <a name="willmove-and-movecomplete-events-ado"></a>WillMove および MoveComplete イベント (ADO)
-**WillMove**保留中の操作の現在の位置を変更する前に、イベントが呼び出される、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)します。 **MoveComplete**内の現在位置の後にイベントが呼び出される、 **Recordset**変更します。  
+"イベントの**移動**" は、保留中の操作が[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)内の現在の位置を変更する前に呼び出されます。 **MoveComplete**イベントは、**レコードセット**内の現在の位置が変更された後に呼び出されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,31 +39,31 @@ MoveComplete adReason, pError, adStatus, pRecordset
   
 #### <a name="parameters"></a>パラメーター  
  *adReason*  
- [EventReasonEnum](../../../ado/reference/ado-api/eventreasonenum.md)このイベントの理由を指定する値。 その値を指定できます**adRsnMoveFirst**、 **adRsnMoveLast**、 **adRsnMoveNext**、 **adRsnMovePrevious**、 **adRsnMove**、または**adRsnRequery**します。  
+ このイベントの理由を指定する[Eventreason 列挙](../../../ado/reference/ado-api/eventreasonenum.md)値。 この値には、 **Adrsnmovefirst**、 **adrsnmovefirst**、 **adrsnmovefirst**、 **adRsnMovePrevious**、 **Adrsnmovefirst**、または**adrsnmovefirst**を指定できます。  
   
  *pError*  
- [エラー](../../../ado/reference/ado-api/error-object.md)オブジェクト。 場合に発生したエラーを説明の値*adStatus*は**adStatusErrorsOccurred**; それ以外の場合、パラメーターは設定されていません。  
+ [エラー](../../../ado/reference/ado-api/error-object.md)オブジェクトです。 *Adstatus*の値が**adstatuserrorて**いる場合に発生したエラーについて説明します。それ以外の場合、パラメーターは設定されません。  
   
  *adStatus*  
- [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md)状態値。  
+ [Eventstatusenum](../../../ado/reference/ado-api/eventstatusenum.md)状態の値です。  
   
- ときに**WillMove**が呼び出されると、このパラメーターを設定**adStatusOK**イベントの原因となった操作が成功した場合。 設定されている**adStatusCantDeny**場合、このイベントは、保留中の操作のキャンセルを要求できません。  
+ を呼び**出すと、** イベントの原因となった操作が成功した場合、このパラメーターは**adstatusok**に設定されます。 このイベントが保留中の操作の取り消しを要求できない場合は、 **Adstatuscantdeny**に設定されます。  
   
- ときに**MoveComplete**が呼び出されると、このパラメーターを設定**adStatusOK**イベントの原因となった操作が成功した場合または**adStatusErrorsOccurred**場合、操作に失敗しました。  
+ **MoveComplete**が呼び出されると、このパラメーターは、イベントの原因となった操作が成功した場合は**adstatusok**に、操作が失敗した場合は**Adstatuserror curred**に設定されます。  
   
- 前に**WillMove**戻り値は、このパラメーターに設定する**adStatusCancel**保留中の操作のキャンセルを要求またはこのパラメーターに設定する**adStatusUnwantedEvent**後続の通知をしないように設定します。  
+ が**戻る前に**、このパラメーターを**adstatuscancel**に設定して保留中の操作の取り消しを要求するか、このパラメーターを**adStatusUnwantedEvent**に設定して、後続の通知が行われないようにします。  
   
- 前に**MoveComplete**戻り値は、このパラメーターに設定する**adStatusUnwantedEvent**後続通知しないように設定します。  
+ **MoveComplete**が返される前に、このパラメーターを**adStatusUnwantedEvent**に設定して、後続の通知が行われないようにします。  
   
  *pRecordset*  
- A [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト。 **Recordset**のこのイベントが発生しました。  
+ [レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトです。 このイベントが発生した**レコードセット**。  
   
-## <a name="remarks"></a>コメント  
- A **WillMove**または**MoveComplete**イベントは、以下の理由により発生する可能性があります**Recordset**操作。[開いている](../../../ado/reference/ado-api/open-method-ado-recordset.md)、[移動](../../../ado/reference/ado-api/move-method-ado.md)、 [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 [MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)、および[Requery](../../../ado/reference/ado-api/requery-method.md)します。 これらのイベントは、次のプロパティのため発生します。[フィルター](../../../ado/reference/ado-api/filter-property.md)、[インデックス](../../../ado/reference/ado-api/index-property.md)、[ブックマーク](../../../ado/reference/ado-api/bookmark-property-ado.md)、 [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)、および[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)します。 これらのイベントは、子の場合にも発生**レコード セット**が**レコード セット**接続されているイベントとその親**レコード セット**が移動します。  
+## <a name="remarks"></a>解説  
+ [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md)、 [Move](../../../ado/reference/ado-api/move-method-ado.md)、 [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 [MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)、および[Requery](../../../ado/reference/ado-api/requery-method.md)の各**レコードセット**操作によって、 **MoveComplete**イベントが**発生する可能性**があります。 これらのイベントは、 [Filter](../../../ado/reference/ado-api/filter-property.md)、 [Index](../../../ado/reference/ado-api/index-property.md)、 [Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md)、 [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)、および[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)の各プロパティによって発生することがあります。 これらのイベントは、子**レコード**セットに**レコードセット**イベントが関連付けられていて、親**レコードセット**が移動された場合にも発生します。  
   
- 設定する必要があります、 *adStatus*パラメーターを**adStatusUnwantedEvent**の可能性のある各*adReason*任意のイベントのイベント通知を完全に停止するには値を含まれています、 *adReason*パラメーター。  
+ *AdReason*パラメーターを含むイベントのイベント通知を完全に停止するには、使用可能な*adReason*値ごとに*adstatus*パラメーターを**adStatusUnwantedEvent**に設定する必要があります。  
   
-## <a name="see-also"></a>関連項目  
- [ADO イベント モデルの例 (vc++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
- [ADO イベント ハンドラーの概要](../../../ado/guide/data/ado-event-handler-summary.md)   
+## <a name="see-also"></a>参照  
+ [ADO Events モデルの例 (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
+ [ADO イベントハンドラーの概要](../../../ado/guide/data/ado-event-handler-summary.md)   
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

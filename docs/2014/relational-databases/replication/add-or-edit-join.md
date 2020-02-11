@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5fb76e62e1816be53c312cc263053f854ad3b796
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62625937"
 ---
 # <a name="add-or-edit-join"></a>結合の追加と編集
@@ -32,7 +32,7 @@ ms.locfileid: "62625937"
 > [!IMPORTANT]  
 >  結合フィルターに使用できるテーブルの数に制限はありませんが、多数のテーブルをフィルターに使用すると、マージ処理中のパフォーマンスに影響する場合があります。 テーブルが 5 つ以上の結合フィルターを生成する場合は、小さなテーブル、変更されないテーブル、プライマリ参照テーブルはフィルター選択しないという別の解決策を検討してください。 サブスクライバーの間で分割する必要があるテーブル間にのみ、結合フィルターを使用してください。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  このダイアログ ボックスでは、3 つの手順で 2 つのテーブル間の結合フィルターを作成します。 結合フィルターを複数作成するには、このダイアログ ボックスの手順を複数回繰り返す必要があります。  
   
 1.  **[フィルター選択されたテーブルを確認し、結合テーブルを選択します]**  
@@ -62,10 +62,10 @@ ms.locfileid: "62625937"
   
  フィルターを追加または編集した後に、 **[OK]** をクリックして変更を保存し、ダイアログ ボックスを閉じます。 指定したフィルターは、SELECT 句のテーブルに対して解析され、実行されます。 フィルター ステートメントに構文エラーなどの問題がある場合には通知され、フィルター ステートメントを編集することができます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Create a Publication](publish/create-a-publication.md)   
  [パブリケーション プロパティの表示および変更](publish/view-and-modify-publication-properties.md)   
- [パブリッシュされたデータのフィルター選択](publish/filter-published-data.md)   
+ [パブリッシュされたデータのフィルター処理](publish/filter-published-data.md)   
  [Join Filters](merge/join-filters.md)   
  [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md)   
  [データとデータベース オブジェクトのパブリッシュ](publish/publish-data-and-database-objects.md)  

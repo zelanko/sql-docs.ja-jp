@@ -1,5 +1,5 @@
 ---
-title: トレース テンプレートの変更 |Microsoft Docs
+title: トレーステンプレートの変更 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ebe8924f46de15a3a34c0f49304c87a904919bdb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63035043"
 ---
 # <a name="modify-trace-templates"></a>トレース テンプレートの変更
@@ -28,27 +28,27 @@ ms.locfileid: "63035043"
   
  トレースを作成したときに使用した元のテンプレートを覚えていない (または保存していなかった) 場合や、後日同じトレースを実行する場合など、既存のトレース ファイルからテンプレートを派生させる必要が生じることがあります。 既存のトレースを使用する場合、プロパティを参照できますが、変更できません。 プロパティを変更するには、トレースを停止または一時停止する必要があります。 詳細については、「[トレース ファイルまたはトレース テーブルからのテンプレートの作成 &#40;SQL Server Profiler&#41;](sql-server-profiler.md)」および「[実行中のトレースからのテンプレートの作成 &#40;SQL Server Profiler&#41;](derive-a-template-from-a-running-trace-sql-server-profiler.md)」を参照してください。  
   
- **トレース テンプレートを作成するには**  
+ **トレーステンプレートを作成するには**  
   
  [トレース テンプレートの作成 &#40;SQL Server Profiler&#41;](create-a-trace-template-sql-server-profiler.md)  
   
- **トレース テンプレートからトレースを実行するには**  
+ **トレーステンプレートからトレースを実行するには**  
   
  [トレースの作成 &#40;SQL Server Profiler&#41;](create-a-trace-sql-server-profiler.md)  
   
- **トレース テンプレートを変更するには**  
+ **トレーステンプレートを変更するには**  
   
- [SQL Server Profiler の使用](../../database-engine/modify-a-trace-template-sql-server-profiler.md)  
+ [SQL Server プロファイラーの使用](../../database-engine/modify-a-trace-template-sql-server-profiler.md)  
   
- [Transact-SQL の使用](../../relational-databases/sql-trace/modify-an-existing-trace-transact-sql.md)  
+ [Transact-sql の使用](../../relational-databases/sql-trace/modify-an-existing-trace-transact-sql.md)  
   
- **トレース テンプレートまたはトレース ファイルからイベントを追加または削除するには**  
+ **トレーステンプレートまたはトレースファイルからイベントを追加または削除するには**  
   
- [SQL Server Profiler の使用](specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)  
+ [SQL Server プロファイラーの使用](specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)  
   
- [Transact-SQL の使用](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
+ [Transact-sql の使用](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   
 ## <a name="see-also"></a>参照  
- [トレースの開始](start-a-trace.md)  
+ [トレースを開始する](start-a-trace.md)  
   
   

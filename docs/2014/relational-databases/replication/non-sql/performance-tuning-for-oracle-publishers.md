@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d735fc81e38354630eb4486bbf6ca2bdae570e6d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022234"
 ---
 # <a name="performance-tuning-for-oracle-publishers"></a>Oracle パブリッシャーのパフォーマンス チューニング
@@ -24,7 +24,7 @@ ms.locfileid: "63022234"
   
  それに加えて、Oracle パブリッシャーには、パフォーマンスに関連するオプションが 2 つあります。  
   
--   適切な公開オプションを指定するには。Oracle または Oracle Gateway。  
+-   パブリッシング オプションとして、[Oracle (完全)] または [Oracle (ゲートウェイ)] のいずれか適切な方を指定します。  
   
 -   パブリッシャーの変更を適切な間隔で処理するようにトランザクション セット ジョブを構成します。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "63022234"
   
  トランザクション セット ジョブを構成するには、「[Configure the Transaction Set Job for an Oracle Publisher](../administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)」 (Oracle パブリッシャー用にトランザクション セット ジョブを構成する方法 (レプリケーション Transact-SQL プログラミング)) を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Configure an Oracle Publisher (Oracle パブリッシャーの構成)](configure-an-oracle-publisher.md)   
  [Oracle パブリッシングの概要](oracle-publishing-overview.md)  
   

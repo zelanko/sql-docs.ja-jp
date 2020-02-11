@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 2f355842999b505a97c3387ab9e51d3b651c3b7c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68138277"
 ---
 # <a name="mdx-scripting---scope"></a>MDX スクリプティング - SCOPE
@@ -67,23 +67,23 @@ Limited_Set ::=
  有効な MDX ステートメントです。  
   
  *Common_Grain_Members*  
- 同じ粒度を持つメンバーに評価される有効な MDX ステートメントです。  
+ 同じ粒度を持つメンバーに評価される有効な MDX ステートメント。  
   
  *single_tuple*  
  1 つの組です。  
   
-## <a name="remarks"></a>コメント  
- SCOPE ステートメントは、1 つまたは複数の MDX ステートメントの実行によって影響を受けるサブキューブを決定します。 MDX ステートメントが SCOPE ステートメント内で囲まれている場合を除き、MDX ステートメントの暗黙的なスコープはキューブ全体になります。  
+## <a name="remarks"></a>解説  
+ SCOPE ステートメントは、1つまたは複数の MDX ステートメントの実行によって影響を受けるサブキューブを決定します。 MDX ステートメントが SCOPE ステートメント内にある場合を除き、MDX ステートメントの暗黙的なスコープはキューブ全体です。  
   
 > [!NOTE]  
 >  SCOPE ステートメントは、非表示のメンバーも公開します。  
   
- SCOPE ステートメントに関係なく「ホール」を公開するサブキューブを作成、 **MDX Compatibility**設定します。 たとえば、次のようなステートメントがあると、`Scope( Customer.State.members )`国や地域の状態を含まないで状態を含めることができますが、どのそれ以外の場合に非表示のプレース ホルダーのメンバーを挿入します。  
+ SCOPE ステートメントは、 **MDX 互換性**の設定に関係なく、"ホール" を公開するサブキューブを作成します。 たとえば、というステートメント`Scope( Customer.State.members )`では、都道府県を含まない国または地域の州を含めることができますが、それ以外の非表示のプレースホルダーメンバーが挿入されます。  
   
- 計算されるメンバー、および SCOPE ステートメント内で作成された名前付きセットは、SCOPE ステートメントによる影響を受けません。  
+ スコープステートメント内で作成された計算されるメンバーおよび名前付きセットは、SCOPE ステートメントの影響を受けません。  
   
 ## <a name="example"></a>例  
- Adventure Works での MDX 計算スクリプトから、次の例のサンプル ソリューション、現在のスコープを 2005 会計年度と sales amount quota メジャー、会計四半期として定義および、を使用して、現在のスコープ内のセルに値を割り当てます**ParallelPeriod**関数。 例では、別の SCOPE ステートメントを使用してスコープを変更し、および別の割り当てを使用して、実行、 [This (MDX)](../mdx/this-mdx.md)関数。  
+ 次の例では、Adventure Works サンプルソリューションの MDX 計算スクリプトから、現在のスコープを会計四半期として2005、sales amount quota メジャーを定義して、 **Parallelperiod**関数を使用して現在のスコープ内のセルに値を割り当てています。 次に、別の SCOPE ステートメントを使用してスコープを変更した後、 [This (MDX)](../mdx/this-mdx.md)関数を使用して別の割り当てを実行します。  
   
 ```  
 Scope   
@@ -113,7 +113,7 @@ Scope
 End Scope ;     
 ```  
   
-## <a name="see-also"></a>関連項目  
- [MDX スクリプト ステートメント &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)  
+## <a name="see-also"></a>参照  
+ [Mdx&#41;&#40;MDX スクリプトステートメント](../mdx/mdx-scripting-statements-mdx.md)  
   
   

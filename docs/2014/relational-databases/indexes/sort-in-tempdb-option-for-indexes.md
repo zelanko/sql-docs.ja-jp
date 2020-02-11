@@ -18,13 +18,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 49a10795cbb9177837960739890baebc221c0712
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63035601"
 ---
-# <a name="sortintempdb-option-for-indexes"></a>インデックスの SORT_IN_TEMPDB オプション
+# <a name="sort_in_tempdb-option-for-indexes"></a>インデックスの SORT_IN_TEMPDB オプション
   インデックスを作成または再構築する際には、SORT_IN_TEMPDB オプションを ON に設定することにより、インデックスの構築に使用する中間の並べ替え結果の格納場所として [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] が **tempdb** を使用するように指定できます。 このオプションを使用すると、インデックスの作成に使用する一時ディスク領域は増えますが、 **tempdb** がユーザー データベースとは異なるディスク セットにある場合、インデックスの作成または再構築に必要な時間を短縮できることがあります。 **tempdb**の詳細については、「 [index create memory サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md)」を参照してください。  
   
 ## <a name="phases-of-index-building"></a>インデックス構築のフェーズ  
@@ -36,7 +36,7 @@ ms.locfileid: "63035601"
   
 -   [!INCLUDE[ssDE](../../includes/ssde-md.md)] により、インデックス リーフ行の実行結果が 1 つの並べ替えられたストリームにマージされます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] の並べ替えマージ コンポーネントにより、各並べ替え実行結果の最初のページから開始して、すべてのページ内で最下位のキーが検索され、そのリーフ行がインデックス作成コンポーネントに渡されます。 次に、最初に処理された最下位のキーの次に低いキーが処理され、この方法で順に処理が行われます。 並べ替え実行結果ページから最後のリーフ インデックス行が取り出されると、処理がその並べ替え実行結果から次のページに切り替わります。 並べ替え実行エクステントに含まれるすべてのページが処理されると、そのエクステントは解放されます。 インデックス作成コンポーネントに渡された各リーフ インデックス行は、バッファー内のリーフ インデックス ページに格納されます。 各リーフ ページは、いっぱいになったときに書き込まれます。 リーフ ページが書き込まれると、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] によりインデックスの上位レベルも構築されます。 上位レベルの各インデックス ページは、いっぱいになったときに書き込まれます。  
   
-## <a name="sortintempdb-option"></a>SORT_IN_TEMPDB オプション  
+## <a name="sort_in_tempdb-option"></a>SORT_IN_TEMPDB オプション  
  SORT_IN_TEMPDB を OFF (既定値) に設定すると、並べ替え実行結果が出力先のファイル グループに格納されます。 インデックスを作成する最初のフェーズの間、ベース テーブルのページの読み取りと並べ替え実行結果の書き込みを交互に実行することにより、ディスクの読み書きヘッドがディスクの 1 つの領域から別の領域に移動します。 ヘッドは、データ ページのスキャン時はデータ ページ領域にあります。 並べ替えバッファーがいっぱいになり、現在の並べ替え実行結果をディスクに書き込む必要があるときに空き領域に移動し、テーブル ページのスキャンを再開するときにデータ ページ領域に戻ります。 読み書きヘッドの移動は、2 番目のフェーズではさらに頻繁に行われます。 そのとき並べ替え処理では、通常、各並べ替え実行結果領域からの読み取りを繰り返し行っています。 並べ替え実行結果と新しいインデックス ページは、どちらも出力先のファイル グループに構築されます。 つまり、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] は並べ替え実行結果の読み取りを次々に行っていくのと同時に、インデックス エクステントに定期的にジャンプして、新しいインデックス ページがいっぱいになったときに書き込みを行う必要があります。  
   
  SORT_IN_TEMPDB オプションが ON に設定され、 **tempdb** が出力先のファイル グループとは別のディスク セットにある場合は、最初のフェーズの間に、 **tempdb**にある並べ替えの作業領域への書き込みとは異なるディスクでデータ ページの読み取りが行われます。 つまり、最終インデックスを構築するときの書き込みと同様に、ディスクのデータ キーの読み取りはディスクに対して通常はどちらかといえば連続的に進行し、 **tempdb** ディスクへの書き込みも通常は連続的に行われます。 他のユーザーがデータベースを使用していて個別のディスク アドレスにアクセスしている場合でも、SORT_IN_TEMPDB を指定したときの方が、指定しないときよりも一連の読み取りと書き込みが全体的に効率よく実行されます。  
@@ -81,6 +81,6 @@ ms.locfileid: "63035601"
   
  [index create memory サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md)  
   
- [インデックス DDL 操作に必要なディスク領域](disk-space-requirements-for-index-ddl-operations.md)  
+ [Disk Space Requirements for Index DDL Operations](disk-space-requirements-for-index-ddl-operations.md)  
   
   

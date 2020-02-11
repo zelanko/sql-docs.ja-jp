@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9a16d7565bb36eb7895db94da088927be7595f5d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63043947"
 ---
 # <a name="delete-a-solution"></a>ソリューションを削除する
@@ -38,9 +38,9 @@ ms.locfileid: "63043947"
 4.  **[ファイル]** メニューの **[削除]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [ソリューション エクスプ ローラー](solution-explorer.md)   
- [新しいソリューションを作成します。](create-a-new-solution.md)   
- [プロジェクトを作成します。](create-a-project.md)   
+ [ソリューション エクスプローラー](solution-explorer.md)   
+ [新しいソリューションを作成する](create-a-new-solution.md)   
+ [プロジェクトを作成する](create-a-project.md)   
  [アイテムやプロジェクトのクリアまたは削除](remove-or-delete-an-item-or-project.md)  
   
   

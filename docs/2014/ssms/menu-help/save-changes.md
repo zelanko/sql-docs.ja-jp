@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 78a7f93dc2d906f86a83f1cfd2518b39cd73c9e0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62510024"
 ---
 # <a name="save-changes"></a>[変更の保存]
@@ -33,7 +33,7 @@ ms.locfileid: "62510024"
   
  前に保存した項目への変更は、ストレージ内の保存場所に自動的に保存されます。 項目がまだ保存されていない場合は、 **[名前を付けてファイルを保存]** ダイアログ ボックスが表示され、新しい保存場所を入力するように求められます。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **[以下の項目への変更を保存しますか?]**  
  選択されている項目が保存されます。 項目の選択やクリアを実行できます。  
   

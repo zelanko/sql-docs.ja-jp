@@ -11,13 +11,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6478f29c150181b477e6fecc5c4b35f25db3e817
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63066290"
 ---
-# <a name="localdberrorsqlserverstartupfailed"></a>LOCALDB_ERROR_SQL_SERVER_STARTUP_FAILED
+# <a name="localdb_error_sql_server_startup_failed"></a>LOCALDB_ERROR_SQL_SERVER_STARTUP_FAILED
     
 ## <a name="details"></a>詳細  
   
@@ -27,7 +27,7 @@ ms.locfileid: "63066290"
 |イベント ID|266|  
 |イベント ソース|SQL Server Local Database Runtime 12.0|  
 |コンポーネント|Local Database Runtime API|  
-|メッセージ テキスト|ローカル データベース インスタンスの起動中にエラーが発生しました。SQL Server プロセスを開始できませんでした。|  
+|メッセージ テキスト|ローカル データベース インスタンスを開始する際にエラーが発生しました: SQL Server プロセスを開始できませんでした。|  
   
 ## <a name="explanation"></a>説明  
  SQL Server プロセスが開始されましたが、SQL Server の起動に失敗しました。  

@@ -16,16 +16,16 @@ ms.assetid: 5ee625c0-044a-4cda-b210-02b64e619d65
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: e47539a350a2918ef24c47e3c1eca270d4aeb72e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67985955"
 ---
 # <a name="aggregate-functions---max"></a>集計関数 - max
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  アトミック値のシーケンスを返します *$arg*、1 つの項目の値がその他のすべての値より大きい。  
+  アトミック値のシーケンス ( *$arg*) から、その値が他の値より大きい値を持つ1つの項目を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,33 +36,33 @@ fn:max($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
   
 ## <a name="arguments"></a>引数  
  *$arg*  
- 最大値が返されるアトミック値のシーケンス。  
+ 最大値の取得元となるアトミック値のシーケンス。  
   
-## <a name="remarks"></a>コメント  
- すべての種類に渡されるアトミック値の**max()** 同じ基本型のサブタイプにする必要があります。 受け付けられるベースの型をサポートする型では、 **gt**操作。 これらの型には、次の 3 つの組み込み数値基本データ型、日付/時刻の基本型、xs:string、xs:boolean、および xdt:untypedAtomic が含まれます。 Xdt:untypedAtomic 型の値は、xs:double にキャストされます。 これらの型の混在がある場合、またはその他の種類の他の値が渡された場合は、静的エラーが発生します。  
+## <a name="remarks"></a>解説  
+ **Max ()** に渡されるアトミック値のすべての型は、同じ基本型のサブタイプである必要があります。 許容される基本型は、 **gt**操作をサポートする型です。 これらの型には、3つの組み込み数値基本型、日付/時刻の基本型、xs: string、xs: boolean、および xdt: untypedAtomic が含まれます。 Xdt: untypedAtomic 型の値は、xs: double にキャストされます。 これらの型が混在している場合、または他の型の他の値が渡された場合は、静的エラーが発生します。  
   
- 結果**max()** xdt:untypedAtomic の場合は xs:double など、渡された型の基本型を受け取ります。 入力が静的に空の場合、結果が暗黙的し、静的エラーが発生します。  
+ Xdt: untypedAtomic の場合、 **max ()** の結果は、xs: double など、渡された型の基本型を受け取ります。 入力が静的に空の場合、空のが暗黙的に指定され、静的なエラーが発生します。  
   
- **Max()** 関数は、入力シーケンス内の他のよりも大きいシーケンスの 1 つの値を返します。 Xs:string 値の場合は、既定の Unicode コード ポイント照合順序が使用されています。 Xdt:untypedAtomic 値は、xs:double にキャストできない場合で、入力シーケンスの値が無視されます。 *$arg*します。 入力が動的に計算された空のシーケンスの場合は、空のシーケンスが返されます。  
+ **Max ()** 関数は、入力シーケンス内の他の値よりも大きいシーケンス内の1つの値を返します。 Xs: string 値の場合、既定の Unicode コードポイント照合順序が使用されます。 Xdt: untypedAtomic 値を xs: double にキャストできない場合、入力シーケンスの値は無視されます ( *$arg*)。 入力が動的に計算された空のシーケンスである場合は、空のシーケンスが返されます。  
   
-## <a name="examples"></a>使用例  
- このトピックではさまざまなに格納されている XML インスタンスに対して XQuery の例について**xml**内の列を入力、[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]データベース。  
+## <a name="examples"></a>例  
+ このトピックでは、 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]データベースのさまざまな**xml**型の列に格納されている xml インスタンスに対して XQuery の例を示します。  
   
-### <a name="a-using-the-max-xquery-function-to-find-work-center-locations-in-the-manufacturing-process-that-have-the-most-labor-hours"></a>A. Max() XQuery 関数を使用して、ほとんどの労働時間が製造プロセス内でのワーク センターの場所を検索するには  
- 指定したクエリ[min 関数 (XQuery)](../xquery/aggregate-functions-min.md)を使用して書き換えることができます、 **max()** 関数。  
+### <a name="a-using-the-max-xquery-function-to-find-work-center-locations-in-the-manufacturing-process-that-have-the-most-labor-hours"></a>A. Max () XQuery 関数を使用して、製造プロセス内で最も労働時間があるワークセンターの場所を検索する  
+ [Min 関数 (XQuery)](../xquery/aggregate-functions-min.md)で指定されたクエリは、 **max ()** 関数を使用するように書き直すことができます。  
   
 ## <a name="implementation-limitations"></a>実装の制限事項  
- 制限事項を次に示します。  
+ 制限事項は次のとおりです。  
   
--   **Max (** ) 関数では、すべての整数値を xs:decimal にマップします。  
+-   **Max (**) 関数では、すべての整数が xs: decimal にマップされます。  
   
--   **Max()** xs:duration 型の値に対して関数がサポートされていません。  
+-   Xs: duration 型の値に対する**max ()** 関数はサポートされていません。  
   
 -   基本データ型の境界を超えて複数の型が混在するシーケンスはサポートされません。  
   
--   照合順序を指定する構文オプションはサポートされていません。  
+-   照合順序を提供する構文オプションはサポートされていません。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [xml データ型に対する XQuery 関数](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3657e45d18ac84ad737a016150692730f736b55f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917716"
 ---
 # <a name="database-mail-messaging-objects"></a>データベース メール メッセージング オブジェクト
@@ -32,25 +32,26 @@ ms.locfileid: "62917716"
   
  これらのオブジェクトは、メール ホスト データベース内のデータベース メールのインターフェイスです。 上記で一覧したオブジェクトによって提供される機能を実装するために、他のオブジェクトがインストールされます。 ただし、このようなオブジェクトは内部使用のために予約されています。  
   
-|名前|型|説明|  
+|Name|種類|[説明]|  
 |----------|----------|-----------------|  
 |[sysmail_allitems &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sysmail-allitems-transact-sql)|`View`|データベース メールに送信されたすべてのメッセージの一覧を表示します。|  
-|[sysmail_event_log &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sysmail-event-log-transact-sql)|`View`|[Database Mail External Program](database-mail-external-program.md)の動作に関するメッセージの一覧を表示します。|  
-|[sysmail_faileditems &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sysmail-faileditems-transact-sql)|`View`|データベース メールで送信できなかったメッセージに関する情報を表示します。|  
-|[sysmail_mailattachments &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sysmail-mailattachments-transact-sql)|`View`|データベース メール メッセージの添付ファイルに関する情報を表示します。|  
-|[sysmail_sentitems &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sysmail-sentitems-transact-sql)|`View`|データベース メールを使用して送信されたメッセージに関する情報を表示します。|  
-|[sysmail_unsentitems &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sysmail-unsentitems-transact-sql)|`View`|データベース メールで現在送信が試行されているメッセージに関する情報を表示します。|  
-|[sp_send_dbmail &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql)|`Stored Procedure`|データベース メールを使用して、電子メール メッセージを送信します。|  
-|[sysmail_delete_log_sp &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sysmail-delete-log-sp-transact-sql)|`Stored Procedure`|データベース メール ログからメッセージを削除します。|  
-|[sysmail_delete_mailitems_sp &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sysmail-delete-mailitems-sp-transact-sql)|`Stored Procedure`|メール アイテムをデータベース メール キューから削除します。|  
-|[sysmail_help_status_sp &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sysmail-help-status-sp-transact-sql)|`Stored Procedure`|データベース メールが開始されているかどうかを示します。|  
-|[sysmail_start_sp (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sysmail-start-sp-transact-sql)|`Stored Procedure`|外部プログラムによって使用される Service Broker オブジェクトを開始します。 これらのオブジェクトは、既定で開始されます。|  
-|[sysmail_stop_sp (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sysmail-stop-sp-transact-sql)|`Stored Procedure`|外部プログラムによって使用される Service Broker オブジェクトを停止します。|  
+|[sysmail_event_log &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sysmail-event-log-transact-sql)|`View`|
+  [Database Mail External Program](database-mail-external-program.md)の動作に関するメッセージの一覧を表示します。|  
+|[sysmail_faileditems &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sysmail-faileditems-transact-sql)|`View`|データベース メールで送信できなかったメッセージに関する情報を表示します。|  
+|[sysmail_mailattachments &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sysmail-mailattachments-transact-sql)|`View`|データベース メール メッセージの添付ファイルに関する情報を表示します。|  
+|[sysmail_sentitems &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sysmail-sentitems-transact-sql)|`View`|データベース メールを使用して送信されたメッセージに関する情報を表示します。|  
+|[sysmail_unsentitems &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sysmail-unsentitems-transact-sql)|`View`|データベース メールで現在送信が試行されているメッセージに関する情報を表示します。|  
+|[sp_send_dbmail &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql)|`Stored Procedure`|データベース メールを使用して、電子メール メッセージを送信します。|  
+|[sysmail_delete_log_sp &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sysmail-delete-log-sp-transact-sql)|`Stored Procedure`|データベース メール ログからメッセージを削除します。|  
+|[sysmail_delete_mailitems_sp &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sysmail-delete-mailitems-sp-transact-sql)|`Stored Procedure`|メール アイテムをデータベース メール キューから削除します。|  
+|[sysmail_help_status_sp &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sysmail-help-status-sp-transact-sql)|`Stored Procedure`|データベース メールが開始されているかどうかを示します。|  
+|[sysmail_start_sp (Transact-sql)](/sql/relational-databases/system-stored-procedures/sysmail-start-sp-transact-sql)|`Stored Procedure`|外部プログラムによって使用される Service Broker オブジェクトを開始します。 これらのオブジェクトは、既定で開始されます。|  
+|[sysmail_stop_sp (Transact-sql)](/sql/relational-databases/system-stored-procedures/sysmail-stop-sp-transact-sql)|`Stored Procedure`|外部プログラムによって使用される Service Broker オブジェクトを停止します。|  
   
 
   
 ## <a name="see-also"></a>参照  
  [データベース メール](database-mail.md)   
- [SQL Server Service Broker (SQL Server Service Broker)](../../database-engine/configure-windows/sql-server-service-broker.md)  
+ [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  
   
   

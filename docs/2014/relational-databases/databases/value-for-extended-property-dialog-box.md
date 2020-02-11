@@ -16,20 +16,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7ac8dd7682ecfe8df3b317bba578bca8358b9b11
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62916504"
 ---
 # <a name="value-for-extended-property-dialog-box"></a>拡張プロパティの値ダイアログ ボックス
-  **[ *\<property name>* の値]** ダイアログ ボックスで、値を入力または表示します。 これは、複数の場所から開くことができる共通ダイアログ ボックスです。  
+  値を入力または表示するには、[ * \<プロパティ名>* **の値**] ダイアログボックスを使用します。 これは、複数の場所から開くことができる共通ダイアログ ボックスです。  
   
 ## <a name="uielement-list"></a>UI 要素の一覧  
- **[拡張プロパティ名]**  
+ **拡張プロパティ名**  
  表示または設定される拡張プロパティの名前です。  
   
- **[拡張プロパティ値]**  
+ **拡張プロパティ値**  
  拡張プロパティの値を入力または変更します。  
   
   

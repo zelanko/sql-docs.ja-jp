@@ -1,5 +1,5 @@
 ---
-title: グループ オブジェクト (ADOX) |Microsoft Docs
+title: Group オブジェクト (ADOX) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,32 +16,32 @@ ms.assetid: 55ef0ade-68ea-4da5-8aa5-4cd27d1f6d1e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b4b3de5f445ddd09bf7d069b0b93d82c6f8de978
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966215"
 ---
 # <a name="group-object-adox"></a>Group オブジェクト (ADOX)
-セキュリティで保護されたデータベース内のアクセス許可を持つグループ アカウントを表します。  
+セキュリティで保護されたデータベース内でアクセス許可を持つグループアカウントを表します。  
   
-## <a name="remarks"></a>コメント  
- [グループ](../../../ado/reference/adox-api/groups-collection-adox.md)のコレクションを[カタログ](../../../ado/reference/adox-api/catalog-object-adox.md)カタログのすべてのグループ アカウントを表します。 **グループ**のコレクションを[ユーザー](../../../ado/reference/adox-api/user-object-adox.md)ユーザーが所属するグループのみを表します。  
+## <a name="remarks"></a>解説  
+ [カタログ](../../../ado/reference/adox-api/catalog-object-adox.md)の[Groups](../../../ado/reference/adox-api/groups-collection-adox.md)コレクションは、すべてのカタログのグループアカウントを表します。 [ユーザー](../../../ado/reference/adox-api/user-object-adox.md)の**Groups**コレクションは、ユーザーが属しているグループのみを表します。  
   
- プロパティ、コレクション、およびメソッドの使用、**グループ**オブジェクトのことができます。  
+ **Group**オブジェクトのプロパティ、コレクション、およびメソッドを使用すると、次のことができます。  
   
--   グループを識別、[名前](../../../ado/reference/adox-api/name-property-adox.md)プロパティ。  
+-   "[名前](../../../ado/reference/adox-api/name-property-adox.md)" プロパティを使用してグループを識別します。  
   
--   グループが読み取りになっているかどうかを判断する書き込み、または削除のアクセス許可、 [GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md)と[SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md)メソッド。  
+-   グループに、 [getpermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md)および[SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md)メソッドを使用した読み取り、書き込み、または削除のアクセス許可があるかどうかを確認します。  
   
--   持つグループのメンバーシップを持っているユーザー アカウントにアクセス、[ユーザー](../../../ado/reference/adox-api/users-collection-adox.md)コレクション。  
+-   [ユーザー](../../../ado/reference/adox-api/users-collection-adox.md)コレクションを使用して、グループ内のメンバーシップを持つユーザーアカウントにアクセスします。  
   
--   プロバイダー固有のプロパティにアクセス、[プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)コレクション。  
+-   [プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)コレクションを使用して、プロバイダー固有のプロパティにアクセスします。  
   
- このセクションには、次のトピックが含まれています。  
+ ここでは、次のトピックについて説明します。  
   
 -   [Group オブジェクトのプロパティ、メソッド、およびイベント](../../../ado/reference/adox-api/group-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Groups コレクション (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)   
  [Users コレクション (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)

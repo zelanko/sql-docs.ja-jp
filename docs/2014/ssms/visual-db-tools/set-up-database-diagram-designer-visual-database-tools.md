@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d71ea2d6a10755ef52e0cac37ddcd2385d82d9cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63067621"
 ---
 # <a name="set-up-database-diagram-designer-visual-database-tools"></a>データベース ダイアグラム デザイナーの設定 (Visual Database Tools)
@@ -58,8 +58,8 @@ ms.locfileid: "63067621"
     9. sp_upgraddiagrams ストアド プロシージャ  
   
 ## <a name="see-also"></a>参照  
- [データベース ダイアグラムの所有権について&#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [データベース ダイアグラムの以前のエディション アップグレード&#40;Visual Database Tools&#41;](upgrade-database-diagrams-from-previous-editions-visual-database-tools.md)   
- [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-authorization-transact-sql)  
+ [Visual Database Tools &#40;データベースダイアグラムの所有権について&#41;](visual-database-tools.md)   
+ [以前のエディションのデータベースダイアグラムをアップグレードする &#40;Visual Database Tools&#41;](upgrade-database-diagrams-from-previous-editions-visual-database-tools.md)   
+ [ALTER AUTHORIZATION &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-authorization-transact-sql)  
   
   

@@ -15,46 +15,46 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 463dd08cfa9434396a1afea1e4851549f16496cc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022641"
 ---
 # <a name="data-type-mapping-for-oracle-publishers"></a>Oracle パブリッシャーのデータ型マッピング
-  Oracle のデータ型と [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のデータ型は、正確に一致するとは限りません。 Oracle のテーブルをパブリッシュするときは、可能な限り、一致するデータ型が自動的に選択されます。 単一のデータ型マッピングが明らかでない場合は、代替のデータ型マッピングが提供されます。 代替マッピングの選択方法の詳細については、以下の「代替データ型マッピングの指定」を参照してください。  
+  Oracle のデータ型[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]とデータ型は、常に正確に一致するとは限りません。 Oracle のテーブルをパブリッシュするときは、可能な限り、一致するデータ型が自動的に選択されます。 単一のデータ型マッピングが明らかでない場合は、代替のデータ型マッピングが提供されます。 代替マッピングの選択方法の詳細については、以下の「代替データ型マッピングの指定」を参照してください。  
   
  次の表に、Oracle パブリッシャーから [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ディストリビューターにデータを移動したときに、Oracle と [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の間で、データ型が既定でどのようにマッピングされるかを示します。 「代替」列は、代替マッピングが使用可能かどうかを示しています。  
   
-|Oracle データ型|SQL Server データ型|代替|  
+|Oracle データ型|SQL Server のデータ型|代替手段|  
 |----------------------|--------------------------|------------------|  
 |BFILE|VARBINARY(MAX)|はい|  
 |BLOB|VARBINARY(MAX)|はい|  
 |CHAR([1-2000])|CHAR([1-2000])|はい|  
 |CLOB|VARCHAR(MAX)|はい|  
-|[DATE]|DATETIME|はい|  
-|[FLOAT]|[FLOAT]|いいえ|  
+|DATE|DATETIME|はい|  
+|FLOAT|FLOAT|いいえ|  
 |FLOAT([1-53])|FLOAT([1-53])|いいえ|  
-|FLOAT([54-126])|[FLOAT]|いいえ|  
+|FLOAT([54-126])|FLOAT|いいえ|  
 |INT|NUMERIC(38)|はい|  
 |INTERVAL|DATETIME|はい|  
 |LONG|VARCHAR(MAX)|はい|  
-|LONG RAW|IMAGE|[はい]|  
+|LONG RAW|イメージ|はい|  
 |NCHAR([1-1000])|NCHAR([1-1000])|いいえ|  
 |NCLOB|NVARCHAR(MAX)|はい|  
-|NUMBER|[FLOAT]|はい|  
+|NUMBER|FLOAT|はい|  
 |NUMBER([1-38])|NUMERIC([1-38])|いいえ|  
 |NUMBER([0-38],[1-38])|NUMERIC([0-38],[1-38])|はい|  
 |NVARCHAR2([1-2000])|NVARCHAR([1-2000])|いいえ|  
 |RAW([1-2000])|VARBINARY([1-2000])|いいえ|  
-|real|[FLOAT]|いいえ|  
+|REAL|FLOAT|いいえ|  
 |ROWID|CHAR(18)|いいえ|  
-|timestamp|DATETIME|はい|  
+|TIMESTAMP|DATETIME|はい|  
 |TIMESTAMP(0-7)|DATETIME|はい|  
 |TIMESTAMP(8-9)|DATETIME|はい|  
 |TIMESTAMP(0-7) WITH TIME ZONE|VARCHAR(37)|はい|  
 |TIMESTAMP(8-9) WITH TIME ZONE|VARCHAR(37)|いいえ|  
-|TIMESTAMP(0-7) WITH LOCAL TIME ZONE|VARCHAR(37)|[はい]|  
+|TIMESTAMP(0-7) WITH LOCAL TIME ZONE|VARCHAR(37)|はい|  
 |TIMESTAMP(8-9) WITH LOCAL TIME ZONE|VARCHAR(37)|いいえ|  
 |UROWID|CHAR(18)|いいえ|  
 |VARCHAR2([1-4000])|VARCHAR([1-4000])|はい|  
@@ -65,7 +65,7 @@ ms.locfileid: "63022641"
 ### <a name="unsupported-data-types"></a>サポートされていないデータ型  
  次のデータ型はサポートされていません。これらの型の列はレプリケートできません。  
   
--   オブジェクト型  
+-   オブジェクトの型  
   
 -   XML 型  
   
@@ -76,12 +76,13 @@ ms.locfileid: "63022641"
 -   REF を使用する列  
   
 ### <a name="the-date-data-type"></a>DATE データ型  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の日付の範囲は 1753 A.D. から  9999 A.D. までですが、Oracle の日付の範囲は 4712 B.C. から  4712 A.D. までです。 DATE 型の列に SQL Server の日付範囲を超える値が含まれている場合は、その列の代替データ型である VARCHAR(19) を選択してください。  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の日付の範囲は 1753 A.D. から  9999 A.D. までですが、Oracle の日付の範囲は 4712 B.C. から  4712 A.D. までです。 DATE 型の列に SQL Server の日付範囲を超える値が含まれている場合は、その列の代替データ型である VARCHAR(19) を選択してください。  
   
 ### <a name="float-and-number-types"></a>FLOAT 型と NUMBER 型  
- FLOAT データ型と NUMBER データ型のマッピング時に指定される小数点以下桁数および有効桁数は、列に対して Oracle データベースのデータ型を使って指定された小数点以下桁数および有効桁数で決まります。 precision は、数値全体の桁数です。 scale は、数値の中で小数点より右側の桁数です。 たとえば、123.45 という値の場合、有効桁数は 5 で、小数点以下桁数は 2 になります。  
+ FLOAT データ型と NUMBER データ型のマッピング時に指定される小数点以下桁数および有効桁数は、列に対して Oracle データベースのデータ型を使って指定された小数点以下桁数および有効桁数で決まります。 precision は、数値全体の桁数です。 scale は、数値の中で小数点より右側の桁数です。 たとえば、123.45 という値の場合、precision は 5 で、scale は 2 になります。  
   
- Oracle では、NUMBER(4,5) のように、有効桁数よりも大きな小数点以下桁数の数値を定義できます。しかし、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、有効桁数を小数点以下桁数と同じか、それ以上にする必要があります。 小数点以下桁数がを Oracle パブリッシャーの有効桁数より大きい場合、データの切り捨てがないようには、データ型がマップされている場合に有効桁数が小数点以下桁数と等しくは設定します。NUMBER(4,5) は、NUMERIC(5,5) としてマップされます。  
+ Oracle では、NUMBER(4,5) のように、有効桁数よりも大きな小数点以下桁数の数値を定義できます。しかし、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、有効桁数を小数点以下桁数と同じか、それ以上にする必要があります。 データの切り捨てが発生しないようにするため、Oracle パブリッシャーで小数点以下桁数が有効桁数よりも大きい場合は、データ型をマップするときに、有効桁数が小数点以下桁数と同じ値に設定されます。つまり、NUMBER(4,5) は NUMERIC(5,5) としてマップされます。  
   
 > [!NOTE]  
 >  NUMBER の小数点以下桁数および有効桁数を指定しない場合、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の既定値には、最大の小数点以下桁数 (8) および有効桁数 (38) が使用されます。 データをレプリケートするときは、使用領域とパフォーマンスを向上させるために、Oracle で特定の小数点以下桁数と有効桁数を設定することをお勧めします。  
@@ -106,7 +107,7 @@ ms.locfileid: "63022641"
   
 ## <a name="see-also"></a>参照  
  [Oracle パブリッシャーの構成](configure-an-oracle-publisher.md)   
- [Oracle パブリッシャーの設計上の注意点および制限](design-considerations-and-limitations-for-oracle-publishers.md)   
+ [Oracle パブリッシャーの設計上の考慮事項と制限事項](design-considerations-and-limitations-for-oracle-publishers.md)   
  [Oracle パブリッシングの概要](oracle-publishing-overview.md)  
   
   

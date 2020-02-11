@@ -14,13 +14,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1d7c74ee9963d93d289f589115712614a745dad1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68197774"
 ---
-# <a name="event-notifications"></a>イベントの通知
+# <a name="event-notifications"></a>イベント通知
   イベント通知を使用すると、イベントについての情報を [!INCLUDE[ssSB](../../includes/sssb-md.md)] サービスに送信できます。 イベント通知は、さまざまな [!INCLUDE[tsql](../../includes/tsql-md.md)] データ定義言語 (DDL) ステートメントおよび SQL トレースのイベントに応答して実行されます。イベント通知は、これらのイベントに関する情報を [!INCLUDE[ssSB](../../includes/sssb-md.md)] サービスに送信することで実行されます。  
   
  イベント通知を使用できるのは、次のような作業を行う場合です。  
@@ -56,10 +56,10 @@ TO SERVICE '//Adventure-Works.com/ArchiveService' ,
 ### <a name="event-notifications-vs-triggers"></a>イベント通知とトリガー  
  次の表では、トリガーとイベント通知の比較対照を示します。  
   
-|トリガー|イベントの通知|  
+|トリガー|イベント通知|  
 |--------------|-------------------------|  
 |DML トリガーは DML (データ操作言語) イベントに応答します。 DDL トリガーは DDL (データ定義言語) イベントに応答します。|イベント通知は、DDL イベントと SQL トレース イベントのサブセットに応答します。|  
-|トリガーでは、Transact-SQL または CLR (共通言語ランタイム) マネージド コードを実行できます。|イベント通知ではコードは実行されません。 代わりに、送信`xml`Service Broker サービスへのメッセージ。|  
+|トリガーでは、Transact-SQL または CLR (共通言語ランタイム) マネージド コードを実行できます。|イベント通知ではコードは実行されません。 代わりに、メッセージを`xml` Service Broker サービスに送信します。|  
 |トリガーを起動させるトランザクションのスコープ内では、トリガーは同期的に処理されます。|イベント通知は非同期に処理され、イベント通知を発生させるトランザクションのスコープ内では実行されません。|  
 |トリガーのコンシューマーは、トリガーを起動させるイベントに緊密に結び付けられます。|イベント通知のコンシューマーは、イベント通知を起動させるイベントからは切り離されます。|  
 |トリガーは、ローカル サーバーで処理される必要があります。|イベント通知はリモート サーバーで処理できます。|  
@@ -67,13 +67,13 @@ TO SERVICE '//Adventure-Works.com/ArchiveService' ,
 |DML トリガー名はスキーマ スコープです。 DDL トリガー名は、データベースまたはサーバーによってスコープが設定されます。|イベント通知名は、サーバーまたはデータベースによってスコープが設定されます。 QUEUE_ACTIVATION イベントのイベント通知は、特定のキューにスコープが設定されます。|  
 |DML トリガーは、トリガーが適用されるテーブルと同じ所有者に所有されます。|キュー上のイベント通知の所有者は、イベント通知が適用されるオブジェクトとは所有者が異なる場合があります。|  
 |トリガーでは、EXECUTE AS 句がサポートされます。|イベント通知では、EXECUTE AS 句はサポートされません。|  
-|DDL トリガー イベント情報のキャプチャは、返す EVENTDATA 関数を使用して、`xml`データ型。|イベント通知を送信する`xml`イベント情報が Service Broker サービス。 情報は、EVENTDATA 関数と同じスキーマにフォーマットされます。|  
+|DDL トリガーのイベント情報は、 `xml`データ型を返す EVENTDATA 関数を使用して取得できます。|イベント通知は`xml` 、Service Broker サービスにイベント情報を送信します。 情報は、EVENTDATA 関数と同じスキーマにフォーマットされます。|  
 |**sys.triggers** カタログ ビューと **sys.server_triggers** カタログ ビューに、トリガーに関するメタデータがあります。|**sys.event_notifications** カタログ ビューと **sys.server_event_notifications** カタログ ビューに、イベント通知に関するメタデータがあります。|  
   
 ### <a name="event-notifications-vs-sql-trace"></a>イベント通知とSQL トレース (SQL Trace)  
  次の表では、サーバー イベントを監視する場合のイベント通知と SQL トレースの使用を比較します。  
   
-|SQL トレース (SQL Trace)|イベントの通知|  
+|SQL トレース (SQL Trace)|イベント通知|  
 |---------------|-------------------------|  
 |SQL トレースでは、トランザクションに関連したパフォーマンス上のオーバーヘッドは生じません。 データのパッケージ化が効率的に行われます。|XML 形式のイベント データの作成やイベント通知の送信に関連して、パフォーマンス上のオーバーヘッドが生じます。|  
 |SQL トレースは、どのトレース イベント クラスでも監視できます。|イベント通知では、トレース イベント クラスのサブセット、およびすべての DDL (データ定義言語) イベントを監視できます。|  
@@ -95,7 +95,7 @@ TO SERVICE '//Adventure-Works.com/ArchiveService' ,
 |リモート サーバー上の Service Broker にメッセージを送信するイベント通知に対し、 [!INCLUDE[ssSB](../../includes/sssb-md.md)] ダイアログ セキュリティを構成する方法について説明します。|[イベント通知のダイアログ セキュリティの構成](configure-dialog-security-for-event-notifications.md)|  
 |イベント通知に関する情報を取得する方法について説明します。|[イベント通知に関する情報の取得](get-information-about-event-notifications.md)|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [DDL トリガー](../triggers/ddl-triggers.md)   
  [DML トリガー](../triggers/dml-triggers.md)   
  [SQL トレース (SQL Trace)](../sql-trace/sql-trace.md)  

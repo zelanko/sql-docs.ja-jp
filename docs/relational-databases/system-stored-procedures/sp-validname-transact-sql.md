@@ -1,5 +1,5 @@
 ---
-title: sp_validname (TRANSACT-SQL) |Microsoft Docs
+title: sp_validname (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,16 +19,16 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c559c8a6af6add669e1cc4630b7bcfc9fc0aacc2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67936734"
 ---
-# <a name="spvalidname-transact-sql"></a>sp_validname (TRANSACT-SQL)
+# <a name="sp_validname-transact-sql"></a>sp_validname (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  有効な [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別子名かどうかをチェックします。 非バイナリおよび 0 以外の場合、すべてのデータを使用して格納できる Unicode データを含む、 **nchar**、 **nvarchar**、または**ntext 型**の有効な文字として、データ型を許可します。識別子の名前です。  
+  有効な [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別子名かどうかをチェックします。 **Nchar**、 **nvarchar**、または**ntext**データ型を使用して格納できる Unicode データを含むすべてのバイナリ以外および0以外のデータは、識別子名の有効な文字として受け入れられます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,22 +41,22 @@ sp_validname [@name =] 'name'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @name = ] 'name'` 名前を指定します、[識別子](../../relational-databases/databases/database-identifiers.md)の有効性をチェックします。 *名前*は**sysname**、既定値はありません。 *名前*NULL にすることはできません、空の文字列にすることはできませんし、バイナリおよび 0 の文字を含めることはできません。  
+`[ @name = ] 'name'`有効性を確認する[識別子](../../relational-databases/databases/database-identifiers.md)の名前を指定します。 *名前*は**sysname**,、既定値はありません。 *名前*を NULL にすることはできません。空の文字列にすることはできません。また、バイナリ0の文字を含めることもできません。  
   
-`[ @raise_error = ] raise_error` エラーが発生するかどうかを指定します。 *raise_error*は**ビット**、既定値は 1 です。 つまり、エラーが表示されます。 0 の場合、エラー メッセージは表示されません。  
+`[ @raise_error = ] raise_error`エラーを発生させるかどうかを指定します。 *raise_error*は**ビット**,、既定値は1です。 つまり、エラーが表示されます。 0 の場合、エラー メッセージは表示されません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
 ## <a name="permissions"></a>アクセス許可  
- ロール **public** のメンバーシップが必要です。  
+ **Public**ロールのメンバーシップが必要です。  
   
 ## <a name="see-also"></a>参照  
- [データベース エンジン ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [NCHAR &#40;Transact-SQL&#41;](../../t-sql/functions/nchar-transact-sql.md)   
- [nchar および nvarchar &#40;Transact SQL&#41;](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)   
- [ntext 型、テキスト、およびイメージ&#40;Transact SQL&#41;](../../t-sql/data-types/ntext-text-and-image-transact-sql.md)   
- [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+ [Transact-sql&#41;&#40;のストアドプロシージャのデータベースエンジン](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [データ型 &#40;Transact-sql&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
+ [NCHAR &#40;Transact-sql&#41;](../../t-sql/functions/nchar-transact-sql.md)   
+ [nchar および nvarchar &#40;Transact-sql&#41;](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)   
+ [ntext、text、image &#40;Transact-sql&#41;](../../t-sql/data-types/ntext-text-and-image-transact-sql.md)   
+ [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

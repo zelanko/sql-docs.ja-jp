@@ -1,5 +1,5 @@
 ---
-title: sp_refresh_parameter_encryption (TRANSACT-SQL) |Microsoft Docs
+title: sp_refresh_parameter_encryption (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/11/2017
 ms.prod: sql
@@ -20,16 +20,16 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a5f699f21b1f28537da2e2f0033fe6b17908186a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68002464"
 ---
-# <a name="sprefreshparameterencryption-transact-sql"></a>sp_refresh_parameter_encryption (TRANSACT-SQL)
+# <a name="sp_refresh_parameter_encryption-transact-sql"></a>sp_refresh_parameter_encryption (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-指定された非スキーマ バインド ストアド プロシージャ、ユーザー定義関数、ビュー、DML トリガー、データベース レベルの DDL トリガー、または現在のデータベース内のサーバー レベル DDL トリガーのパラメーターを常に暗号化メタデータを更新します。 
+現在のデータベースのスキーマバインドされていないストアドプロシージャ、ユーザー定義関数、ビュー、DML トリガー、データベースレベルの DDL トリガー、またはサーバーレベルの DDL トリガーのパラメーターの Always Encrypted メタデータを更新します。 
 
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,45 +46,45 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 
 ## <a name="arguments"></a>引数
 
-`[ @name = ] 'module_name'` ストアド プロシージャ、ユーザー定義関数、ビュー、DML トリガー、データベース レベルの DDL トリガー、またはサーバー レベル DDL トリガーの名前です。 *モジュール名*共通言語ランタイム (CLR) ストアド プロシージャまたは CLR 関数にすることはできません。 *モジュール名*スキーマ バインドをすることはできません。 *モジュール名*は`nvarchar`、既定値はありません。 *モジュール名*、マルチパート識別子を指定できますが、現在のデータベース内のオブジェクトに参照できるのみです。
+`[ @name = ] 'module_name'`ストアドプロシージャ、ユーザー定義関数、ビュー、DML トリガー、データベースレベルの DDL トリガー、またはサーバーレベルの DDL トリガーの名前を指定します。 *module_name*を共通言語ランタイム (clr) ストアドプロシージャまたは clr 関数にすることはできません。 *module_name*をスキーマバインドにすることはできません。 ** の module_name `nvarchar`はで、既定値はありません。 *module_name*にはマルチパート識別子を指定できますが、参照できるのは現在のデータベース内のオブジェクトだけです。
 
-`[ @namespace = ] ' < class > '` 指定したモジュールのクラスです。 ときに*module_name* 、DDL トリガーは、`<class>`が必要です。 `<class>` は `nvarchar(20)` です。 有効な入力は`DATABASE_DDL_TRIGGER`と`SERVER_DDL_TRIGGER`します。    
+`[ @namespace = ] ' < class > '`は、指定されたモジュールのクラスです。 *Module_name*が DDL トリガーである場合`<class>`は、が必要です。 `<class>`が`nvarchar(20)`です。 有効な入力`DATABASE_DDL_TRIGGER`値`SERVER_DDL_TRIGGER`は、とです。    
 
 ## <a name="return-code-values"></a>リターン コードの値  
 
-0 (成功) または 0 以外の値の数 (失敗)
+0 (成功) または0以外の数値 (失敗)
 
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
-モジュールのパラメーターの暗号化メタデータはことができる場合、期限切れになります。   
-* 暗号化プロパティ テーブルの列のモジュールの参照が更新されています。 たとえば、列が削除されましたし、同じ名前が、異なる暗号化の種類や暗号化キー、暗号化アルゴリズムを持つ新しい列が追加されました。  
-* モジュールは、古いパラメーター暗号化メタデータを持つ別のモジュールを参照します。  
+次の場合、モジュールのパラメーターの暗号化メタデータが古くなる可能性があります。   
+* モジュールが参照しているテーブル内の列の暗号化プロパティが更新されました。 たとえば、列が削除され、同じ名前の新しい列が存在しますが、別の暗号化の種類、暗号化キー、または暗号化アルゴリズムが追加されています。  
+* モジュールは、古いパラメーター暗号化メタデータを使用して別のモジュールを参照しています。  
 
-テーブルの暗号化プロパティが変更されると、`sp_refresh_parameter_encryption`テーブルを直接または間接的に参照するすべてのモジュールを実行する必要があります。 呼び出し元に移動する前にユーザーが内部のモジュールの最初の更新を必要とせず、任意の順序でこれらのモジュールでこのストアド プロシージャを呼び出すことができます。
+テーブルの暗号化プロパティが変更された`sp_refresh_parameter_encryption`場合、は、直接または間接的にテーブルを参照しているモジュールに対して実行する必要があります。 このストアドプロシージャは、これらのモジュールで任意の順序で呼び出すことができます。ユーザーは、最初に内部モジュールを更新してから呼び出し元に移動する必要がありません。
 
-`sp_refresh_parameter_encryption` 拡張プロパティをアクセス許可には影響しませんまたは`SET`オブジェクトに関連付けられているオプション。 
+`sp_refresh_parameter_encryption`は、オブジェクトに関連付けられている`SET`権限、拡張プロパティ、またはオプションには影響しません。 
 
-サーバー レベルの DDL トリガーを更新するには、任意のデータベースのコンテキストからこのストアド プロシージャを実行します。
+サーバーレベルの DDL トリガーを更新するには、任意のデータベースのコンテキストからこのストアドプロシージャを実行します。
 
 > [!NOTE]
->  実行すると、オブジェクトに関連付けられている署名は削除`sp_refresh_parameter_encryption`します。
+>  オブジェクトに関連付けられている署名は、の実行`sp_refresh_parameter_encryption`時に削除されます。
 
 ## <a name="permissions"></a>アクセス許可
 
-必要があります`ALTER`モジュールに対する権限と`REFERENCES`任意の CLR ユーザー定義型と、オブジェクトによって参照されている XML スキーマ コレクションに対する権限。   
+モジュール`ALTER`に対する権限と`REFERENCES` 、オブジェクトによって参照される CLR ユーザー定義型および XML スキーマコレクションに対する権限が必要です。   
 
-指定されたモジュールは、データベース レベルの DDL トリガーが、必要があります`ALTER ANY DATABASE DDL TRIGGER`現在のデータベースでのアクセスを許可します。    
+指定されたモジュールがデータベースレベルの DDL トリガーである`ALTER ANY DATABASE DDL TRIGGER`場合は、現在のデータベースの権限が必要です。    
 
-指定されたモジュールは、サーバー レベルの DDL トリガーが、必要があります`CONTROL SERVER`権限。
+指定されたモジュールがサーバーレベルの DDL トリガーである`CONTROL SERVER`場合は、権限が必要です。
 
-モジュールで定義されている、`EXECUTE AS`句、`IMPERSONATE`指定したプリンシパルに権限が必要です。 一般に、オブジェクトの更新は変わりませんその`EXECUTE AS`モジュールが定義していない限り、プリンシパル`EXECUTE AS USER`とモジュールが、時に、別のユーザーに解決が作成されたので、プリンシパルのユーザー名。
+`EXECUTE AS`句を使用して定義されて`IMPERSONATE`いるモジュールの場合、指定されたプリンシパルに対する権限が必要です。 一般に、オブジェクトを更新しても`EXECUTE AS`プリンシパルは変更されません。 `EXECUTE AS USER`ただし、モジュールがで定義されていて、プリンシパルのユーザー名が、モジュールが作成されたときとは別のユーザーに解決されるようになった場合を除きます。
  
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
-次の例では、テーブルとテーブルを参照するプロシージャを作成、Always Encrypted を構成および後、テーブルを変更および実行を示しています、`sp_refresh_parameter_encryption`プロシージャ。  
+次の例では、テーブルと、テーブルを参照するプロシージャを作成し、Always Encrypted を構成して、テーブル`sp_refresh_parameter_encryption`を変更してプロシージャを実行する方法を示します。  
 
-まず、最初のテーブルとテーブルを参照するストアド プロシージャを作成します。
+まず、最初のテーブルと、テーブルを参照するストアドプロシージャを作成します。
 ```sql
 CREATE TABLE [Patients]([PatientID] [int] IDENTITY(1,1) NOT NULL,
     [SSN] [char](11), 
@@ -113,7 +113,7 @@ END;
 GO
 ```
 
-Always Encrypted キーを設定します。
+次に、Always Encrypted キーを設定します。
 ```sql
 CREATE COLUMN MASTER KEY [CMK1]
 WITH
@@ -135,7 +135,7 @@ GO
 ```
 
 
-最後に置換する SSN 列実行と、暗号化された列、 `sp_refresh_parameter_encryption` Always Encrypted のコンポーネントを更新するプロシージャ。
+最後に、SSN 列を暗号化された列に置き換え、 `sp_refresh_parameter_encryption`プロシージャを実行して Always Encrypted コンポーネントを更新します。
 ```sql
 ALTER TABLE [Patients] DROP COLUMN [SSN];
 GO
@@ -153,7 +153,7 @@ EXEC sp_refresh_parameter_encryption [find_patient];
 GO
 ```
 
-## <a name="see-also"></a>関連項目 
+## <a name="see-also"></a>参照 
 
 [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
 [Always Encrypted ウィザード](../../relational-databases/security/encryption/always-encrypted-wizard.md)   

@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4424504ddbfd0dfa1b16169186988141bb7b4c41
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62999553"
 ---
 # <a name="open-and-configure-object-explorer"></a>オブジェクト エクスプローラーを開き、構成する
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の **[表示]** メニューを使用してオブジェクト エクスプローラーを開きます。 **[ツール]** メニューの **[オプション]** を使用して、オブジェクト エクスプローラーのオプションを構成します。  
+  **の**[表示][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] メニューを使用してオブジェクト エクスプローラーを開きます。 **[ツール]** メニューの **[オプション]** を使用して、オブジェクト エクスプローラーのオプションを構成します。  
   
 ## <a name="viewing-object-explorer"></a>オブジェクト エクスプローラーの表示  
  オブジェクト エクスプローラーは、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 内に既定で表示されます。 オブジェクト エクスプローラーが表示されない場合は、 **[表示]** メニューの **[オブジェクト エクスプローラー]** をクリックしてください。  
@@ -27,10 +27,10 @@ ms.locfileid: "62999553"
  オブジェクト エクスプローラーの設定を構成するには、 **[ツール]** メニューの **[オプション]** をクリックし、 **[SQL Server オブジェクト エクスプローラー]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [オブジェクト エクスプ ローラー](object-explorer.md)   
- [オブジェクト エクスプ ローラーからインスタンスに接続します。](connect-to-an-instance-from-object-explorer.md)   
- [オブジェクト エクスプ ローラーを使用してオブジェクトを管理します。](manage-objects-by-using-object-explorer.md)   
- [オブジェクト エクスプ ローラーの詳細 ペイン](object-explorer-details-pane.md)   
+ [オブジェクト エクスプローラー](object-explorer.md)   
+ [オブジェクトエクスプローラーからインスタンスに接続する](connect-to-an-instance-from-object-explorer.md)   
+ [オブジェクトエクスプローラーを使用したオブジェクトの管理](manage-objects-by-using-object-explorer.md)   
+ [オブジェクトエクスプローラーの詳細ペイン](object-explorer-details-pane.md)   
  [Management Studio におけるカスタム レポート](custom-reports-in-management-studio.md)  
   
   

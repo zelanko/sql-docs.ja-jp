@@ -16,16 +16,16 @@ ms.assetid: a9f7131f-23e1-4d4d-a36c-180447543926
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: a359251dbb2bd2a2685e5d9fb91d5c1603950c25
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67986306"
 ---
 # <a name="aggregate-functions---count"></a>集計関数 - count
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  指定されたシーケンス内に含まれる項目の数を返します *$arg*します。  
+  *$Arg*によって指定されたシーケンスに含まれる項目の数を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,14 +38,14 @@ fn:count($arg as item()*) as xs:integer
  *$arg*  
  カウントするアイテム。  
   
-## <a name="remarks"></a>コメント  
- 0 を返します *$arg*は空のシーケンスです。  
+## <a name="remarks"></a>解説  
+ *$Arg*が空のシーケンスの場合は0を返します。  
   
-## <a name="examples"></a>使用例  
- このトピックではさまざまなに格納されている XML インスタンスに対して XQuery の例について**xml**型の列には、AdventureWorks データベース。  
+## <a name="examples"></a>例  
+ このトピックでは、AdventureWorks データベースのさまざまな**xml**型の列に格納されている xml インスタンスに対して XQuery の例を示します。  
   
-### <a name="a-using-the-count-xquery-function-to-count-the-number-of-work-center-locations-in-the-manufacturing-of-a-product-model"></a>A. Count() XQuery 関数を使用して製品モデルの製造作業センターの場所の数をカウントするには  
- 次のクエリは、製品モデルの製造プロセス内でのワーク センターの場所の数をカウント (ProductModelID = 7)。  
+### <a name="a-using-the-count-xquery-function-to-count-the-number-of-work-center-locations-in-the-manufacturing-of-a-product-model"></a>A. Count () XQuery 関数を使用して、製品モデルの製造におけるワークセンターの場所の数をカウントする  
+ 次のクエリは、製品モデルの製造プロセスにおけるワークセンターの場所の数をカウントします (ProductModelID = 7)。  
   
 ```  
 SELECT Production.ProductModel.ProductModelID,   
@@ -62,11 +62,11 @@ WHERE Production.ProductModel.ProductModelID=7
   
  上のクエリに関して、次の点に注意してください。  
   
--   **名前空間**キーワード[XQuery プロローグ](../xquery/modules-and-prologs-xquery-prolog.md)名前空間プレフィックスを定義します。 プレフィックスは、XQuery の本文では使用されます。  
+-   [XQuery プロローグ](../xquery/modules-and-prologs-xquery-prolog.md)の**namespace**キーワードは、名前空間プレフィックスを定義します。 次に、このプレフィックスが XQuery 本体で使用されます。  
   
--   クエリに XML を構築、<`NoOfWorkStations`> 要素。  
+-   このクエリでは、<`NoOfWorkStations`> 要素を含む XML が構築されます。  
   
--   **Count()** 関数、XQuery の本文のカウント数 <`Location`> 要素。  
+-   XQuery 本文の**count ()** 関数は、<`Location`> 要素の数をカウントします。  
   
  結果を次に示します。  
   
@@ -98,7 +98,7 @@ WHERE Production.ProductModel.ProductModelID= 7
                   ProductModelName="HL Touring Frame">6</NoOfWorkStations>  
 ```  
   
- XML 以外にも、次のクエリで示すように xml 以外の型で値を返すことができます。 クエリを使用して、 [value() メソッド (xml データ型)](../t-sql/xml/value-method-xml-data-type.md)作業センターの場所の数を取得します。  
+ XML 以外にも、次のクエリで示すように xml 以外の型で値を返すことができます。 このクエリでは、 [value () メソッド (xml データ型)](../t-sql/xml/value-method-xml-data-type.md)を使用して、ワークセンターの場所の数を取得します。  
   
 ```  
 SELECT  ProductModelID,   
@@ -117,7 +117,7 @@ ProductModelID    Name            WorkCtrCount
 7              HL Touring Frame        6     
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [xml データ型に対する XQuery 関数](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

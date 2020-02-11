@@ -15,22 +15,22 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f035f9173477a3954a949f9ed27bc6f4f66be741
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211402"
 ---
 # <a name="edit-an-alert"></a>Edit an Alert
-  このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの警告を編集する方法について説明します。  
+  このトピックでは、または[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用し[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]て、でエージェントの警告を編集する方法について説明します。  
   
  **このトピックの内容**  
   
 -   **作業を開始する準備:**  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
--   **警告定義を編集する方法:**  
+-   **警告を編集する方法:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -47,7 +47,8 @@ ms.locfileid: "68211402"
   
 #### <a name="to-edit-an-alert"></a>警告を編集するには  
   
-1.  **オブジェクト エクスプローラー** で、編集する警告を含むサーバーをプラス記号をクリックして展開します。  
+1.  
+  **オブジェクト エクスプローラー** で、編集する警告を含むサーバーをプラス記号をクリックして展開します。  
   
 2.  プラス記号をクリックして **[SQL Server エージェント]** を展開します。  
   
@@ -55,7 +56,8 @@ ms.locfileid: "68211402"
   
 4.  編集する警告を右クリックし、 **[プロパティ]** をクリックします。  
   
-5.  **[全般]** 、 **[応答]** 、および **[オプション]** の各ページで、警告のプロパティを更新します。  
+5.  
+  **[全般]**、 **[応答]**、および **[オプション]** の各ページで、警告のプロパティを更新します。  
   
 6.  完了したら、 **[OK]** をクリックします。  
   
@@ -80,6 +82,6 @@ ms.locfileid: "68211402"
     GO  
     ```  
   
- 詳細については、次を参照してください。 [sp_update_alert &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-alert-transact-sql)します。  
+ 詳細については、「 [sp_update_alert &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-update-alert-transact-sql)」を参照してください。  
   
   

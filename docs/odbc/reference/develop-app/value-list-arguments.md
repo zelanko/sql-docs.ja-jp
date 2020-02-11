@@ -1,5 +1,5 @@
 ---
-title: リストの引数の値 |Microsoft Docs
+title: 値リストの引数 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ ms.assetid: 863837be-603b-4c7a-8b96-b71014037ee5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 646d2724489140080a673f31e22429cc7ca39d4e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68022098"
 ---
 # <a name="value-list-arguments"></a>値リストの引数
-リスト引数の値は、照合に使用する値のコンマ区切りの一覧で構成されます。 ODBC カタログ関数の 1 つの値リストの引数がある: *TableType*引数**SQLTables**します。 設定*TableType* null ポインターには、場合と同じ値の一覧のすべての可能なメンバーを列挙する、SQL_ALL_TABLE_TYPES に設定されています。 この引数は、SQL_ATTR_METADATA_ID ステートメント属性の影響を受けません。 詳細については、次を参照してください。、 [SQLTables](../../../odbc/reference/syntax/sqltables-function.md)関数の説明。
+値リストの引数は、照合に使用するコンマ区切り値のリストで構成されます。 ODBC カタログ関数には、値リストの引数が1つだけあります。 **Sqltables**の*TableType*引数です。 *TableType*を null ポインターに設定することは SQL_ALL_TABLE_TYPES に設定されている場合と同じです。これにより、値リストのすべての可能なメンバーが列挙されます。 この引数は、SQL_ATTR_METADATA_ID statement 属性の影響を受けません。 詳細については、 [Sqltables](../../../odbc/reference/syntax/sqltables-function.md)関数の説明を参照してください。

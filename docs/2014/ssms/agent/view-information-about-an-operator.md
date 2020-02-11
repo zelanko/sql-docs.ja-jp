@@ -18,20 +18,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9d1cab01b6fc496de90975966bfcf29b70e041fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68188742"
 ---
 # <a name="view-information-about-an-operator"></a>View Information About an Operator
-  このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント オペレーターに関する情報の表示方法について説明します。  
+  このトピックでは、で[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]または[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、エージェントオペレーターに関する情報を表示する方法について説明します。  
   
  **このトピックの内容**  
   
 -   **作業を開始する準備:**  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **オペレーターに関する情報を表示する方法:**  
   
@@ -44,7 +44,7 @@ ms.locfileid: "68188742"
 ###  <a name="Security"></a> セキュリティ  
   
 ####  <a name="Permissions"></a> Permissions  
- 既定では、このストアド プロシージャを実行できるのは、 **sysadmin** 固定サーバー ロールのメンバーです。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
+ 既定では、 **sysadmin**固定サーバーロールのメンバーは、このストアドプロシージャを実行できます。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
   
 -   **SQLAgentUserRole**  
   
@@ -58,21 +58,22 @@ ms.locfileid: "68188742"
   
 #### <a name="to-view-information-about-an-operator"></a>オペレーターに関する情報を表示するには  
   
-1.  **オブジェクト エクスプローラー**で、表示するオペレーターを含むサーバーをプラス記号をクリックして展開します。  
+1.  
+  **オブジェクト エクスプローラー**で、表示するオペレーターを含むサーバーをプラス記号をクリックして展開します。  
   
 2.  プラス記号をクリックして **[SQL Server エージェント]** を展開します。  
   
 3.  プラス記号をクリックして **[オペレーター]** フォルダーを展開します。  
   
-4.  表示するオペレーターを右クリックし、 **[プロパティ]** をクリックします。  
+4.  表示するオペレーターを右クリックし、**[プロパティ]** をクリックします。  
   
-     _operator_name_**のプロパティ** ダイアログ ボックスに表示される使用可能なオプションの詳細については、以下を参照してください。  
+     [ _Operator_name_の**プロパティ**] ダイアログボックスに表示される使用可能なオプションの詳細については、次を参照してください。  
   
-    -   [オペレーターのプロパティと演算子の新しい&#40;[全般] ページ&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
+    -   [[オペレーターのプロパティ] と [新しいオペレーター] &#40;[全般] ページ&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
-    -   [オペレーターのプロパティ:New 演算子&#40;[通知] ページ&#41;](operator-properties-new-operator-notifications-page.md)  
+    -   [オペレーターのプロパティ: 新しいオペレーター &#40;通知ページ&#41;](operator-properties-new-operator-notifications-page.md)  
   
-    -   [[オペレーターのプロパティ] ([履歴] ページ)](operator-properties-history-page.md)  
+    -   [オペレーターのプロパティ &#40;履歴ページ&#41;](operator-properties-history-page.md)  
   
 5.  完了したら、 **[OK]** をクリックします。  
   
@@ -97,6 +98,6 @@ ms.locfileid: "68188742"
     GO  
     ```  
   
- 詳細については、次を参照してください。 [sp_help_operator &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-operator-transact-sql)します。  
+ 詳細については、「 [sp_help_operator &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-help-operator-transact-sql)」を参照してください。  
   
   

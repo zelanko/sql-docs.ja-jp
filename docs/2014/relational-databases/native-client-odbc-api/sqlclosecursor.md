@@ -1,5 +1,5 @@
 ---
-title: SQLCloseCursor |マイクロソフトのドキュメント
+title: 'Sqlclo: |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,14 +15,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: da7d6541f7bf31920519cc7462bdfd24a5f6dc0d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63067691"
 ---
 # <a name="sqlclosecursor"></a>SQLCloseCursor
-  **SQLCloseCursor**置き換えます[SQLFreeStmt](sqlfreestmt.md)で、*オプション*SQL_CLOSE の値。 受信時に**SQLCloseCursor**、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは保留中の結果セットの行を破棄します。 によって変更されない (が存在する場合、ステートメントの列とパラメーターのバインドは残されます注**SQLCloseCursor**します。  
+  **SqlcloSQLFreeStmt**は、 [](sqlfreestmt.md) *オプション*の値を SQL_CLOSE に置き換えます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC ドライバーでは、 **sqlcloの**受信時に保留中の結果セットの行が破棄されます。 ステートメントの列とパラメーターのバインド (存在する場合) は、 **Sqlcloに**よって変更されないことに注意してください。  
   
 ## <a name="see-also"></a>参照  
  [SQLCloseCursor](https://go.microsoft.com/fwlink/?LinkId=59331)   

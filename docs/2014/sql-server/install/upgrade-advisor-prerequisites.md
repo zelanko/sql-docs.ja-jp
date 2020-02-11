@@ -20,10 +20,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5875ad2268e14d6bbe276ea437c5ee201867105e
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73632779"
 ---
 # <a name="upgrade-advisor-prerequisites"></a>アップグレード アドバイザーの前提条件
@@ -32,15 +32,18 @@ ms.locfileid: "73632779"
 ## <a name="prerequisites"></a>前提条件  
  アップグレード アドバイザーのインストールと実行の前提条件は、次のとおりです。  
   
--   [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] SP1、[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP2 以降、Windows 7、または [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] R2。  
+-   
+  [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] SP1、[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP2 以降、Windows 7、または [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] R2。  
   
 -   Windows インストーラー 4.5。 [Windows インストーラー Web サイト](https://www.microsoft.com/download/details.aspx?id=8483)から Windows インストーラーをインストールできます。  
   
--   [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] (.NET Framework 4 以降)。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] は、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 製品メディア、 [SDK、再頒布可能パッケージ、Service Pack ダウンロード Web サイト](https://go.microsoft.com/fwlink/?LinkId=48882)で入手できます。  
+-   
+  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] (.NET Framework 4 以降)。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]は、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]製品メディア、SDK、[再頒布可能パッケージ、Service Pack ダウンロード Web サイト](https://go.microsoft.com/fwlink/?LinkId=48882)で入手できます。  
   
-    -   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] メディアから .NET Framework 4 をインストールするには、ディスク ドライブのルートに移動します。 次に、redist フォルダー、DotNetFrameworks フォルダーの順にダブルクリックし、dotNetFx40_Full_x86_x64.exe (32 ビットおよび 64 ビット オペレーティング システム用) を実行します。  
+    -   
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] メディアから .NET Framework 4 をインストールするには、ディスク ドライブのルートに移動します。 次に、redist フォルダー、DotNetFrameworks フォルダーの順にダブルクリックし、dotNetFx40_Full_x86_x64.exe (32 ビットおよび 64 ビット オペレーティング システム用) を実行します。  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[tsql](../../includes/tsql-md.md)] ScriptDom は [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Upgrade Advisor をインストールするための前提条件であり、アップグレードアドバイザーのセットアップではインストールされません。 セットアップを行うには、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Feature Pack から [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[tsql](../../includes/tsql-md.md)] ScriptDom をダウンロードしてインストールする必要があります。  
+-   Scriptdom [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]はアップグレードアドバイザーをインストールするための前提条件であり、アップグレードアドバイザーのセットアップではインストールされません。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] セットアップで[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)]は、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Feature Pack から scriptdom をダウンロードしてインストールする必要があります。  
   
 ## <a name="see-also"></a>参照  
  [アップグレード アドバイザーをインストールする方法](../../../2014/sql-server/install/how-to-install-upgrade-advisor.md)  

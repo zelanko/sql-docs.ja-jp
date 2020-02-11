@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1e98485d0a1887b2ac24da20d8b8a672c0060591
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68196651"
 ---
 # <a name="use-sparse-columns"></a>スパース列の使用
@@ -65,14 +65,15 @@ ms.locfileid: "68196651"
 |`ntext`||  
   
 ## <a name="estimated-space-savings-by-data-type"></a>領域を節約するためのデータ型別推定値  
- スパース列は、同一データが SPARSE とマークされていない場合に比べて、NULL 以外の値により多くのストレージ領域を必要とします。 次の表は、各データ型の使用領域を示したものです。 **NULL の比率** 列は、正味 40% の領域を節約するために必要な NULL データの割合を示します。  
+ スパース列は、同一データが SPARSE とマークされていない場合に比べて、NULL 以外の値により多くのストレージ領域を必要とします。 次の表は、各データ型の使用領域を示したものです。 
+  **NULL の比率** 列は、正味 40% の領域を節約するために必要な NULL データの割合を示します。  
   
  **固定長データ型**  
   
-|データの種類|非スパース バイト数|スパース バイト数|NULL の比率|  
+|データ型|非スパース バイト数|スパース バイト数|NULL の比率|  
 |---------------|---------------------|------------------|---------------------|  
 |`bit`|0.125|5|98%|  
-|`tinyint`|1|5|86%|  
+|`tinyint`|1 で保護されたプロセスとして起動されました|5|86%|  
 |`smallint`|2|6|76%|  
 |`int`|4|8|64%|  
 |`bigint`|8|12|52%|  
@@ -85,9 +86,9 @@ ms.locfileid: "68196651"
 |`uniqueidentifier`|16|20|43%|  
 |`date`|3|7|69%|  
   
- **Precision-Dependent-Length データ型**  
+ **有効桁数に依存する長さのデータ型**  
   
-|データの種類|非スパース バイト数|スパース バイト数|NULL の比率|  
+|データ型|非スパース バイト数|スパース バイト数|NULL の比率|  
 |---------------|---------------------|------------------|---------------------|  
 |`datetime2(0)`|6|10|57%|  
 |`datetime2(7)`|8|12|52%|  
@@ -99,18 +100,18 @@ ms.locfileid: "68196651"
 |`decimal/numeric(38,s)`|17|21|42%|  
 |`vardecimal(p,s)`|控えめな推定値として `decimal` 型を使用してください。|||  
   
- **Data-Dependent-Length データ型**  
+ **データに依存する長さのデータ型**  
   
-|データの種類|非スパース バイト数|スパース バイト数|NULL の比率|  
+|データ型|非スパース バイト数|スパース バイト数|NULL の比率|  
 |---------------|---------------------|------------------|---------------------|  
 |`sql_variant`|基になるデータ型で異なります。|||  
-|`varchar` または `char`|2*|4*|60%|  
-|`nvarchar` または `nchar`|2*|4*+|60%|  
-|`varbinary` または `binary`|2*|4*|60%|  
+|`varchar`もしくは`char`|2*|4*|60%|  
+|`nvarchar`もしくは`nchar`|2*|4*+|60%|  
+|`varbinary`もしくは`binary`|2*|4*|60%|  
 |`xml`|2*|4*|60%|  
 |`hierarchyid`|2*|4*|60%|  
   
- \* 長さは、型に含まれているデータの平均に 2 バイトまたは 4 バイトを加えた長さに等しくなります。  
+ * 長さは、型に含まれているデータの平均に 2 バイトまたは 4 バイトを加えた長さに等しくなります。  
   
 ## <a name="in-memory-overhead-required-for-updates-to-sparse-columns"></a>スパース列の更新に必要なインメモリ オーバーヘッド  
  スパース列を含むテーブルをデザインする場合は、行を更新するときにテーブル内の NULL 以外のスパース列ごとに追加の 2 バイトが必要になることに注意してください。 この追加のメモリ要件により、(このメモリ オーバーヘッドを含む) 合計行サイズが 8019 を超え、列を行外に出すことができないと、更新がエラー 576 で予期せずに失敗する可能性があります。  
@@ -176,7 +177,7 @@ ms.locfileid: "68196651"
   
 -   テーブルをコピーするとき、列のスパース プロパティは保持されません。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、ドキュメント テーブルに `DocID` 列と `Title`列のセットが共通で含まれています。 製造グループは、すべての製造ドキュメントに `ProductionSpecification` 列と `ProductionLocation` 列を必要とします。 マーケティング グループは、マーケティング ドキュメントに `MarketingSurveyGroup` 列を必要とします。 この例のコードでは、スパース列を使用するテーブルを作成し、そのテーブルに 2 つの行を挿入し、そのテーブルからデータを選択します。  
   
 > [!NOTE]  
@@ -231,10 +232,10 @@ WHERE ProductionSpecification IS NOT NULL ;
   
  `1      Tire Spec 1  AXZZ217                  27`  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [列セットの使用](../tables/use-column-sets.md)   
- [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql)   
- [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)   
+ [CREATE TABLE &#40;Transact-sql&#41;](/sql/t-sql/statements/create-table-transact-sql)   
+ [ALTER TABLE &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-table-transact-sql)   
  [sys.columns &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-columns-transact-sql)  
   
   

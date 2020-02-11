@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1ef3c378b963168e3c4724033e390803812c5a27
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63064902"
 ---
 # <a name="solutions-sql-server-management-studio"></a>ソリューション (SQL Server Management Studio)
@@ -52,9 +52,9 @@ ms.locfileid: "63064902"
 |ソリューション内のプロジェクト間で項目を移動する方法について説明します。|[ソリューションのアイテムの移動](move-items-in-a-solution.md)|  
 |ソリューションまたはソリューション内の項目の名前を変更する方法について説明します。|[ソリューションとプロジェクト アイテムの名前変更](rename-solutions-and-project-items.md)|  
   
-## <a name="see-also"></a>関連項目  
- [ソリューション エクスプ ローラー](solution-explorer.md)   
- [プロジェクト&#40;SQL Server Management Studio&#41;](projects-sql-server-management-studio.md)   
+## <a name="see-also"></a>参照  
+ [ソリューション エクスプローラー](solution-explorer.md)   
+ [プロジェクト &#40;SQL Server Management Studio&#41;](projects-sql-server-management-studio.md)   
  [ソリューション エクスプローラーのソース管理](../../database-engine/solution-explorer-source-control.md)  
   
   

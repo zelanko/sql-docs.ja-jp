@@ -1,5 +1,5 @@
 ---
-title: 集合関数の使用 |Microsoft Docs
+title: Set Functions | を使用するMicrosoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 52e0c140acb944a774f5ab167bb81c662e3e32d7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68038054"
 ---
 # <a name="using-set-functions"></a>集合関数の使用
@@ -20,9 +20,9 @@ ms.locfileid: "68038054"
 
   集合関数は、ディメンション、階層、レベルからセットを取得します。あるいは、それらのオブジェクト内でのメンバーの絶対位置および相対位置をトラバースすることにより、さまざまな方法でセットを構築します。  
   
- メンバー関数や組関数と同様、集合関数は、Analysis Services の多次元構造を操作するために不可欠です。 集合関数は、多次元式 (MDX) クエリから結果を取得するセット式の MDX クエリ軸を定義するために不可欠なもします。  
+ メンバー関数や組関数などのセット関数は、Analysis Services で見つかった多次元構造をネゴシエートするために不可欠です。 セット式は MDX クエリの軸を定義するため、多次元式 (MDX) クエリから結果を取得するには、set 関数も不可欠です。  
   
- 最も一般的な集合関数の 1 つは、[Member&#40;セット&#41; &#40;MDX&#41; ](../mdx/members-set-mdx.md)関数で、すべてのディメンション、階層、またはレベルからメンバーを含むセットを取得します。 クエリ内でのこの関数の使用例を次に示します。  
+ 最も一般的なセット関数の1つは、ディメンション、階層、またはレベルのすべてのメンバーを含むセットを取得する[MDX&#41;関数&#41; &#40;設定 &#40;メンバー](../mdx/members-set-mdx.md)です。 クエリ内でのこの関数の使用例を次に示します。  
   
  `SELECT`  
   
@@ -42,7 +42,7 @@ ms.locfileid: "68038054"
   
  `FROM [Adventure Works]`  
   
- 一般的に使用されるもう 1 つの関数は、 [Crossjoin &#40;MDX&#41; ](../mdx/crossjoin-mdx.md)関数。 この関数は、パラメーターとして渡されるセットのデカルト積を表す組のセットを返します。 実際には、この関数には、クエリで"クロス集計された"軸または '入れ子になった' を作成することが有効にします。  
+ もう1つの一般的に使用される関数は、 [Crossjoin &#40;MDX&#41;](../mdx/crossjoin-mdx.md)関数です。 この関数は、パラメーターとして渡されるセットのデカルト積を表す組のセットを返します。 実際には、この関数を使用すると、クエリに ' nested ' または ' crosstabbed ' の軸を作成できます。  
   
  `SELECT`  
   
@@ -70,29 +70,29 @@ ms.locfileid: "68038054"
   
  `FROM [Adventure Works]`  
   
- [Descendants&#40;MDX&#41; ](../mdx/descendants-mdx.md)関数は似ています、**Child**機能しますより強力です。 階層の 1 つまたは複数のレベルで任意のメンバーの子孫を返します。  
+ [MDX&#41;関数の子孫 &#40;](../mdx/descendants-mdx.md)は、 **Children**関数と似ていますが、より強力です。 階層内の1つ以上のレベルにあるメンバーの子孫を返します。  
   
  SELECT  
   
- [Measures] です。[Internet Sales Amount]  
+ [Measures]。[Internet Sales Amount]  
   
  ON Columns,  
   
  //Returns a set containing all of the Dates beneath Calendar Year  
   
- Date ディメンションの Calendar 階層に 2004  
+ 2004 Date ディメンションの Calendar 階層内の  
   
- 子孫 (  
+ 派生  
   
- [Date] です。[カレンダー] です。[Calendar Year] です & [2004]。  
+ [Date]。[カレンダー]。[Calendar Year] & [2004]  
   
  , [Date].[Calendar].[Date])  
   
  ON Rows  
   
- [Adventure Works] から  
+ FROM [Adventure Works]  
   
- [Order&#40;MDX&#41; ](../mdx/order-mdx.md)関数では、昇順または降順の特定の数値式に従って順序でセットの内容を注文することができます。 次のクエリでは、行の前のクエリと同じメンバーを返しますが、Internet Sales Amount メジャーに整列ようになりました。  
+ [Order &#40;MDX&#41;](../mdx/order-mdx.md)関数を使用すると、特定の数値式に従って、セットの内容を昇順または降順で並べ替えることができます。 次のクエリでは、前のクエリと同じ行のメンバーが返されますが、現在は Internet Sales Amount メジャーによって並べ替えられています。  
   
  `SELECT`  
   
@@ -120,9 +120,9 @@ ms.locfileid: "68038054"
   
  `FROM [Adventure Works]`  
   
- このクエリも 1 つからセットを返す方法を示しています、集合関数 Descendants は、別の集合関数 Order にパラメーターとして渡すことができます。  
+ また、このクエリは、1つの set 関数 (子孫) から返されたセットを別の set 関数にパラメーターとして渡す方法も示しています。  
   
- 特定の条件に従ってセットをフィルター選択非常に便利です、クエリを記述する場合は、この目的で使用することができます、[Filter ー &#40;MDX&#41; ](../mdx/filter-mdx.md)関数は、次の例で示すようにします。  
+ 特定の条件に従ってセットをフィルター処理することは、クエリを記述するときに非常に便利です。このためには、次の例に示すように、 [Filter &#40;MDX&#41;](../mdx/filter-mdx.md)関数を使用できます。  
   
  `SELECT`  
   
@@ -150,7 +150,7 @@ ms.locfileid: "68038054"
   
  `FROM [Adventure Works]`  
   
- また、他の方法でセットにフィルターを適用できるようにする、さらに高度な関数もあります。 たとえば、次のクエリの表示、 [TopCount &#40;MDX&#41; ](../mdx/topcount-mdx.md)関数がセット内の最初の n 個の項目を返します。  
+ また、他の方法でセットにフィルターを適用できるようにする、さらに高度な関数もあります。 たとえば、次のクエリは、 [TopCount &#40;MDX&#41;](../mdx/topcount-mdx.md)関数が set 内の上位 n 個の項目を返すことを示しています。  
   
  `SELECT`  
   
@@ -176,7 +176,7 @@ ms.locfileid: "68038054"
   
  `FROM [Adventure Works]`  
   
- 最後に、多数のなどの関数を使用して論理セットの操作を実行することは[Intersect &#40;MDX&#41;](../mdx/intersect-mdx.md)、[Union&#40;MDX&#41; ](../mdx/union-mdx.md)と[Except&#40;MDX&#41; ](../mdx/except-mdx-function.md)関数。 次のクエリでは、後者の 2 つの関数の例を示します。  
+ 最後に、複数の論理セット操作を実行することもできます。たとえば、 [Intersect &#40;mdx&#41;](../mdx/intersect-mdx.md)、 [Union &#40;mdx&#41;](../mdx/union-mdx.md)などの関数を使用し、 [mdx &#40;](../mdx/except-mdx-function.md)関数を除きます。 次のクエリは、後者の2つの関数の例を示しています。  
   
  `SELECT`  
   
@@ -214,8 +214,8 @@ ms.locfileid: "68038054"
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>関連項目  
- [Functions&#40;MDX 構文&#41;](../mdx/functions-mdx-syntax.md)   
+## <a name="see-also"></a>参照  
+ [関数 &#40;MDX 構文&#41;](../mdx/functions-mdx-syntax.md)   
  [メンバー関数の使用](../mdx/using-member-functions.md)   
  [組関数の使用](../mdx/using-tuple-functions.md)  
   
