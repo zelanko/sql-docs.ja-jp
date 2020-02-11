@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a09c2a57b76974758626a1847d5f0df3f8b7f55c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63250600"
 ---
 # <a name="sql-server-execstatistics-object"></a>SQL Server の ExecStatistics オブジェクト
@@ -25,7 +25,7 @@ ms.locfileid: "63250600"
   
  次の表では、SQL Server の **Exec Statistics** カウンターについて説明します。  
   
-|SQL Server Exec Statistics のカウンター|説明|  
+|SQL Server Exec Statistics のカウンター|[説明]|  
 |-----------------------------------------|-----------------|  
 |**Distributed Query**|分散クエリの実行に関連する統計データ。|  
 |**DTC calls**|DTC 呼び出しの実行に関連する統計データ。|  
@@ -34,7 +34,7 @@ ms.locfileid: "63250600"
   
  オブジェクトの各カウンターには、次のインスタンスが含まれています。  
   
-|アイテム|説明|  
+|アイテム|[説明]|  
 |----------|-----------------|  
 |**Average execution time (ms)**|選択した種類の実行の平均実行時間。|  
 |**Cumulative execution time (ms) per second**|選択した種類の実行の 1 秒あたりの累積実行時間。|  

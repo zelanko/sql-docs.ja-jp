@@ -13,10 +13,10 @@ author: CarlRabeler
 ms.author: carlrab
 ms.custom: seo-dt-2019
 ms.openlocfilehash: f5aeb8a5eda8e4e49e478cbc53cd0ad90e3cc890
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74095478"
 ---
 # <a name="sql-server-express-localdb-header-and-version-information"></a>SQL Server Express LocalDB ヘッダーとバージョン情報
@@ -26,7 +26,7 @@ ms.locfileid: "74095478"
 ## <a name="localdb-versioning"></a>LocalDB のバージョン管理  
  LocalDB インストールでは、主要な SQL Server バージョンごとの単一のバイナリ セットを使用します。 これらの LocalDB バージョンは維持され、個別にパッチが適用されます。 つまり、ユーザーはどの LocalDB ベースライン リリース (主要な SQL Server バージョン) を使用するのかを指定する必要があるということです。 バージョンは **、.NET Framework バージョン**クラスで定義されている標準バージョン形式で指定されます。  
   
- *major.minor[.build[.revision]]*  
+ *major. minor [. build [. revision]]*  
   
  バージョン文字列の最初の2つの数値 (*major*および*minor*) は必須です。 バージョン文字列の最後の2つの数値 (*build*と*revision*) は省略可能で、ユーザーがそのままにした場合の既定値は0です。これは、ユーザーが LocalDB バージョン番号として "12.2" だけを指定した場合、ユーザーが "12.2.0.0" を指定したかのように処理されることを意味します。  
   
@@ -45,7 +45,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL13E.LOCALDB\ MSS
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server Local DB\Installed Versions]  
 ```  
   
- このキーの下に、キーのリストがあります。このコンピューターにインストールされている LocalDB のバージョンごとに 1 つのキーがあります。 これらの各キーには、LocalDB バージョン番号を *\<メジャーバージョン >* の形式で名前が付けられています。*マイナーバージョンの > を\<* します (たとえば、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] のキーの名前は 13.0)。 各バージョン キーの下に、`InstanceAPIPath` の名前と値のペアが 1 つあります。このペアは、そのバージョンでインストールされた SQLUserInstance.dll ファイルの絶対パスを定義します。 次の例は、LocalDB バージョン11.0 および13.0 がインストールされているコンピューターのレジストリエントリを示しています。  
+ このキーの下に、キーのリストがあります。このコンピューターにインストールされている LocalDB のバージョンごとに 1 つのキーがあります。 これらの各キーには、 * \<メジャーバージョン>* の形式で LocalDB バージョン番号が付けられています。マイナーバージョン>(たとえば、の[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]キーは13.0 という名前です)。 * \<* 各バージョン キーの下に、`InstanceAPIPath` の名前と値のペアが 1 つあります。このペアは、そのバージョンでインストールされた SQLUserInstance.dll ファイルの絶対パスを定義します。 次の例は、LocalDB バージョン11.0 および13.0 がインストールされているコンピューターのレジストリエントリを示しています。  
   
 ```  
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server Local DB\Installed Versions\13.0]  
@@ -54,7 +54,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL13E.LOCALDB\ MSS
 "InstanceAPIPath"="C:\\Program Files\\Microsoft SQL Server\\130\\LocalDB\\Binn\\SqlUserInstance.dll"]  
 ```  
   
- クライアントプロバイダーは、インストールされているすべてのバージョンの最新バージョンを検索し、関連付けられた `InstanceAPIPath` 値から**Sqluserinstance.dll** DLL ファイルを読み込む必要があります。  
+ クライアントプロバイダーは、インストールされているすべてのバージョンの最新バージョン**** を検索し、関連付け`InstanceAPIPath`られている値から sqluserinstance.dll DLL ファイルを読み込みます。  
   
 ### <a name="wow64-mode-on-64-bit-windows"></a>64 ビット版 Windows 上の WOW64 モード  
  LocalDB の 64 ビット インストールには、追加のレジストリ キー セットがあるため、Windows-32-on-Windows-64 (WOW64) モードで実行される 32 ビット版アプリケーションで LocalDB を使用することができます。 具体的には、64 ビット版 Windows では、LocalDB MSI が次のレジストリ キーを作成します。  
@@ -67,7 +67,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL13E.LOCALDB\ MSS
   
 ```  
   
- `Installed Versions` キーを読み取っている64ビットのプログラムでは、エラー64ビットバージョンの**Sqluserinstance.dll** DLL を指す値が表示されます。一方、32ビットプログラム (WOW64 モードでは、64ビットの Windows で実行されている) は、`Wow6432Node` hive の下にある `Installed Versions` キーに自動的にリダイレクトされます。 このキーには、 **Sqluserinstance.dll** DLL の32ビットバージョンをポイントする値が含まれています。  
+ 64ビットの`Installed Versions`プログラムキーを読み取ると、64ビットバージョンの**sqluserinstance.dll** DLL を指す値が表示されます。一方、32ビットプログラム (WOW64 モードでは、64ビットの Windows で実行され`Installed Versions`ている) は`Wow6432Node` 、hive の下にあるキーに自動的にリダイレクトされます。 このキーには、 **Sqluserinstance.dll** DLL の32ビットバージョンをポイントする値が含まれています。  
   
 ## <a name="using-localdb_define_proxy_functions"></a>LOCALDB_DEFINE_PROXY_FUNCTIONS の使用  
  LocalDB インスタンス API は、 **Sqluserinstance.dll** DLL の検出と読み込みを自動化する LOCALDB_DEFINE_PROXY_FUNCTIONS という名前の定数を定義します。  

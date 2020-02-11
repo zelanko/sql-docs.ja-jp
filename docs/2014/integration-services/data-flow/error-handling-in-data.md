@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8b5a98877e04a077bf1bb1c0c527500f3102b862
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62827149"
 ---
 # <a name="error-handling-in-data"></a>データのエラー処理
@@ -46,7 +46,8 @@ ms.locfileid: "62827149"
   
  ![エラー出力のあるデータ フロー](../media/mw-dts-11.gif "エラー出力のあるデータ フロー")  
   
- データ列の他に、エラー出力には **ErrorCode** 列と **ErrorColumn** 列が含まれています。 **ErrorCode** 列はエラーを識別し、 **ErrorColumn** 列にはエラー列の系列 ID が含まれます。 これらの列のメタデータを表示するには、エラー出力をデータ フロー内の次のコンポーネントに連結するパスをクリックします。 状況によっては、 **ErrorColumn** 列の値が 0 に設定されていることがあります。 これは、エラー状態が 1 列ではなく行全体に影響していることを示します。 たとえば、参照変換で参照に失敗した場合などです。  
+ データ列の他に、エラー出力には **ErrorCode** 列と **ErrorColumn** 列が含まれています。 
+  **ErrorCode** 列はエラーを識別し、 **ErrorColumn** 列にはエラー列の系列 ID が含まれます。 これらの列のメタデータを表示するには、エラー出力をデータ フロー内の次のコンポーネントに連結するパスをクリックします。 状況によっては、 **ErrorColumn** 列の値が 0 に設定されていることがあります。 これは、エラー状態が 1 列ではなく行全体に影響していることを示します。 たとえば、参照変換で参照に失敗した場合などです。  
   
  詳細については、「 [データ フロー](data-flow.md) 」と「 [Integration Services のパス](integration-services-paths.md)」を参照してください。  
   
@@ -59,7 +60,7 @@ ms.locfileid: "62827149"
   
  変換元、変換、および変換先によるエラーと切り捨ての処理方法を構成できます。 次の表では、このオプションについて説明します。  
   
-|オプション|説明|  
+|オプション|[説明]|  
 |------------|-----------------|  
 |エラー コンポーネント|エラーまたは切り捨てが発生すると、データ フロー タスクは失敗します。 [失敗] は、エラーおよび切り捨ての既定のオプションです。|  
 |エラーを無視する|エラーまたは切り捨ては無視され、データ行は変換または変換元の出力に送られます。|  
@@ -68,17 +69,17 @@ ms.locfileid: "62827149"
 ## <a name="adding-the-error-description"></a>エラーの説明の追加  
  既定では、エラー出力により数値エラー コードが提供され、通常、エラー出力にはエラーが発生した列の ID が含まれています。 スクリプト コンポーネントを使用して追加列にエラーの説明を含めることができます。この操作は、1 行のスクリプトを使用して、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetErrorDescription%2A> インターフェイスの <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> メソッドを呼び出して行います。  
   
- このスクリプト コンポーネントは、エラーをキャプチャするデータ フロー コンポーネントよりデータ フローの下流にある任意のエラー セグメントに追加できますが、エラー行を出力先に書き込む直前の位置に配置するのが普通です。 これによりスクリプトは、書き込まれたエラー行についてのみ、説明を参照することができます。 たとえば、データ フロー内のエラー セグメントでエラーの一部が修正され、出力先にエラー行が書き込まれないこともあり得るからです。 詳細については、次を参照してください。[スクリプト コンポーネントによるエラー出力の強化](../extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md)します。  
+ このスクリプト コンポーネントは、エラーをキャプチャするデータ フロー コンポーネントよりデータ フローの下流にある任意のエラー セグメントに追加できますが、エラー行を出力先に書き込む直前の位置に配置するのが普通です。 これによりスクリプトは、書き込まれたエラー行についてのみ、説明を参照することができます。 たとえば、データ フロー内のエラー セグメントでエラーの一部が修正され、出力先にエラー行が書き込まれないこともあり得るからです。 詳細については、「[スクリプトコンポーネントによるエラー出力の拡張](../extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md)」を参照してください。  
   
 ### <a name="to-configure-an-error-output"></a>エラー出力を構成するには  
   
 -   [データ フロー コンポーネントでエラー出力を構成する](../configure-an-error-output-in-a-data-flow-component.md)  
   
 ## <a name="see-also"></a>参照  
- [データ フロー](data-flow.md)   
+ [データフロー](data-flow.md)   
  [変換を使用してデータを変換する](transformations/transform-data-with-transformations.md)   
  [パスを使用してコンポーネントを連結する](../connect-components-with-paths.md)   
- [[データ フロー タスク]](../control-flow/data-flow-task.md)   
- [データ フロー](data-flow.md)  
+ [データフロータスク](../control-flow/data-flow-task.md)   
+ [Data Flow](data-flow.md)  
   
   

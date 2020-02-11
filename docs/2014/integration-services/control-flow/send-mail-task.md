@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3308899190aa63ebb9be93c4c9af15d5e0f94600
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62830396"
 ---
 # <a name="send-mail-task"></a>メール送信タスク
@@ -56,7 +56,7 @@ ms.locfileid: "62830396"
  タスクは、SMTP 接続マネージャーを使用してメール サーバーに接続します。 詳しくは、「 [SMTP 接続マネージャー](../connection-manager/smtp-connection-manager.md)」をご覧ください。  
   
 ## <a name="custom-logging-messages-available-on-the-send-mail-task"></a>メール送信タスクで使用できるカスタム ログ メッセージ  
- 次の表は、メール送信タスクのカスタム ログ エントリの一覧です。 詳しくは、「[Integration Services &#40;SSIS&#41; のログ記録](../performance/integration-services-ssis-logging.md)」と「[ログ記録用のカスタム メッセージ](../custom-messages-for-logging.md)」をご覧ください。  
+ 次の表は、メール送信タスクのカスタム ログ エントリの一覧です。 詳細については、「[Integration Services (SSIS) のログ記録](../performance/integration-services-ssis-logging.md)」と「[ログ記録用のカスタム メッセージ](../custom-messages-for-logging.md)」を参照してください。  
   
 |ログ エントリ|説明|  
 |---------------|-----------------|  
@@ -67,11 +67,12 @@ ms.locfileid: "62830396"
 ## <a name="configuring-the-send-mail-task"></a>メール送信タスクの構成  
  プロパティを設定するには [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
- [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
+ 
+  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [[メール送信タスク エディター] &#40;[全般] ページ&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [[メール送信タスクエディター] &#40;[全般] ページ&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [[メール送信タスク エディター] &#40;[メール] ページ&#41;](../send-mail-task-editor-mail-page.md)  
+-   [メール送信タスクエディター &#40;メールページ&#41;](../send-mail-task-editor-mail-page.md)  
   
 -   [[式] ページ](../expressions/expressions-page.md)  
   
@@ -86,7 +87,7 @@ ms.locfileid: "62830396"
   
 -   shareourideas.com の技術記事「 [配信通知付きで電子メールを送信する方法 (C#)](https://go.microsoft.com/fwlink/?LinkId=237625)」  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Integration Services タスク](integration-services-tasks.md)   
  [制御フロー](control-flow.md)  
   

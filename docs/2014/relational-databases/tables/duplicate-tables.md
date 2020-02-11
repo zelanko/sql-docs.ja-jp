@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 951e96cd13ba7cbb6f14039d3745a44ff6167fa0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62760754"
 ---
 # <a name="duplicate-tables"></a>テーブルの複製
@@ -32,7 +32,7 @@ ms.locfileid: "62760754"
   
 -   **作業を開始する準備:**  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **テーブルを複製するための方法:**  
   
@@ -63,7 +63,7 @@ ms.locfileid: "62760754"
   
 6.  **[編集]** メニューの **[貼り付け]** をクリックします。  
   
-7.  **[ファイル]** メニューの **[<_テーブル名_> を保存]** をクリックします。  
+7.  **[ファイル]** メニューの **[<** テーブル名 _> を保存]_ をクリックします。  
   
 8.  **[名前の選択]** ダイアログ ボックスで、新しいテーブルの名前を入力し、 **[OK]** をクリックします。  
   
