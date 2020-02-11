@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 5bbcfe52e62757ea00427eb9fd6ed979eb8d32e7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68097389"
 ---
 # <a name="topsum-mdx"></a>TopSum (MDX)
 
 
-  セットを並べ替え、累積合計が指定された値以上に最上位の要素を返します。  
+  セットを並べ替え、累積合計が少なくとも指定した値である最上位要素を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -29,22 +29,22 @@ TopSum(Set_Expression, Value, Numeric_Expression)
   
 ## <a name="arguments"></a>引数  
  *Set_Expression*  
- セットを返す有効な多次元式 (MDX) です。  
+ セットを返す有効な多次元式 (MDX) 式です。  
   
- *[値]*  
+ *Value*  
  各組の比較対象となる値を指定する有効な数値式です。  
   
  *Numeric_Expression*  
  有効な数値式です。通常は、メジャーを返す多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>コメント  
- **TopSum**関数セットを降順に並べ替え、指定されたセットに対して評価される指定メジャーの合計を計算します。 関数は、指定された数値式の合計が指定した値では、少なくとも最も高い値を持つ要素を返します。 この関数は、累積合計が指定値以上になるセットの最小サブセットを返します。 要素は大きい方から順に返されます。  
+## <a name="remarks"></a>解説  
+ **TopSum**関数は、指定されたセットに対して評価される指定メジャーの合計を計算し、セットを降順に並べ替えます。 関数は、指定された数値式の合計が指定された値以上になる最大値を持つ要素を返します。 この関数は、累積合計が指定値以上になるセットの最小サブセットを返します。 要素は大きい方から順に返されます。  
   
 > [!IMPORTANT]  
->  ように、 [BottomSum](../mdx/bottomsum-mdx.md)関数の場合、 **TopSum**関数は常に、階層を解除します。  
+>  [BottomSum](../mdx/bottomsum-mdx.md)関数と同様に、 **TopSum**関数は常に階層を解除します。  
   
 ## <a name="example"></a>例  
- 次の例は、Bike カテゴリについて、Reseller Sales Amount メジャーを使用した累積合計が 6,000,000 (以降での合計では、少なくとも Geography ディメンションの Geography 階層にある City レベルのメンバーの最小セットを返します売り上げ高の最大数が設定されたメンバー)。  
+ 次の例では、自転車カテゴリについて、再販業者の Sales Amount メジャーを使用した累積合計が、少なくとも600万の合計である geography ディメンションの Geography 階層における City レベルの最小のメンバーのセットを返します (このセットのうち、最も多くの売り上げを持つメンバー)。  
   
 ```  
 SELECT [Measures].[Reseller Sales Amount] ON 0,  
@@ -57,7 +57,7 @@ FROM [Adventure Works]
 WHERE([Product].[Product Categories].Bikes)  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>参照  
+ [Mdx 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
