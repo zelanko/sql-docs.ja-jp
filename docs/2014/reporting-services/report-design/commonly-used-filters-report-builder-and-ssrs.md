@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f807060994c2225dc1e6605344bbb3bd5d2709e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106242"
 ---
 # <a name="commonly-used-filters-report-builder-and-ssrs"></a>一般的に使用されるフィルター (レポート ビルダーおよび SSRS)
@@ -31,7 +31,7 @@ ms.locfileid: "66106242"
 ## <a name="filter-examples"></a>フィルターの例  
  次の表は、さまざまなデータ型と演算子を使用するフィルター式の例を示します。 比較のスコープは、フィルターが定義されたレポート アイテムによって決まります。 たとえば、データセットに定義されたフィルターの場合、 **[上位 10%]** はデータセットの値の上位 10% になります。グループに定義されたフィルターの場合、 **[上位 10%]** はグループの値の上位 10% になります。  
   
-|単純式|データ型|演算子|値|説明|  
+|単純式|データ型|演算子|値|[説明]|  
 |-----------------------|---------------|--------------|-----------|-----------------|  
 |`[SUM(Quantity)]`|`Integer`|`>`|`7`|7 より大きいデータ値が含まれます。|  
 |`[SUM(Quantity)]`|`Integer`|`TOP N`|`10`|上位 10 データ値が含まれます。|  
@@ -46,14 +46,14 @@ ms.locfileid: "66106242"
 ## <a name="examples-with-report-parameters"></a>レポート パラメーターの例  
  次の表は、単一値か複数値のパラメーター参照を含むフィルター式の例を示します。  
   
-|パラメーターの型|(フィルター) 式|演算子|値|データ型|  
+|パラメーターのタイプ|(フィルター) 式|演算子|Value|データ型|  
 |--------------------|---------------------------|--------------|-----------|---------------|  
-|単一値|`[EmployeeID]`|=|`[@EmployeeID]`|Integer|  
-|MultiValue|`[EmployeeID]`|IN|`[@EmployeeID]`|Integer|  
+|単一値|`[EmployeeID]`|=|`[@EmployeeID]`|整数|  
+|MultiValue|`[EmployeeID]`|IN|`[@EmployeeID]`|整数|  
   
-## <a name="see-also"></a>関連項目  
- [レポート パラメーター &#40;レポート ビルダーおよびレポート デザイナー&#41;](report-parameters-report-builder-and-report-designer.md)   
- [データセット フィルター、データ領域フィルター、およびグループ フィルターの追加 &#40;レポート ビルダーおよび SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)   
+## <a name="see-also"></a>参照  
+ [レポート パラメーター (レポート ビルダーおよびレポート デザイナー)](report-parameters-report-builder-and-report-designer.md)   
+ [データセット フィルター、データ領域フィルター、およびグループ フィルターの追加 (レポート ビルダーおよび SSRS)](add-dataset-filters-data-region-filters-and-group-filters.md)   
  [レポートでの式の使用 (レポート ビルダーおよび SSRS)](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [式の例 (レポート ビルダーおよび SSRS)](expression-examples-report-builder-and-ssrs.md)   
  [式で使用されるデータ型 &#40;レポート ビルダーおよび SSRS&#41;](expressions-report-builder-and-ssrs.md)  

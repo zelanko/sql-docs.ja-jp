@@ -22,10 +22,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: d42f93735723c81baf837736bfabcda2b1707aae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63011839"
 ---
 # <a name="credentials-database-engine"></a>資格情報 (データベース エンジン)
@@ -35,10 +35,10 @@ ms.locfileid: "63011839"
   
  システム資格情報は、自動的に作成され、特定のエンドポイントに関連付けられます。 システム資格情報の名前は 2 つのシャープ記号 (##) で始まります。  
   
- 資格情報の詳細については、次を参照してください。、 [sys.credentials](/sql/relational-databases/system-catalog-views/sys-credentials-transact-sql)カタログ ビューです。  
+ 資格情報の詳細については、「[資格](/sql/relational-databases/system-catalog-views/sys-credentials-transact-sql)情報カタログビュー」を参照してください。  
   
 ## <a name="related-content"></a>関連コンテンツ  
- [資格情報を作成](../authentication-access/create-a-credential.md) [CREATE CREDENTIAL &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql)  
+ [Transact-sql&#41;&#40;](/sql/t-sql/statements/create-credential-transact-sql)資格[情報の作成の](../authentication-access/create-a-credential.md)資格情報の作成  
   
  [SQL Server の保護](../securing-sql-server.md)  
   

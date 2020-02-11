@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 696a114c74ecb6d4b8f4cfe6b2d16b33869e1602
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65478901"
 ---
 # <a name="data-quality-matching-in-the-mds-add-in-for-excel"></a>Excel 用 MDS アドインでのデータ品質照合
@@ -25,9 +25,9 @@ ms.locfileid: "65478901"
 ## <a name="workflow-for-data-quality-matching"></a>データ品質照合のワークフロー  
  MDS [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]で DQS を使用する場合、次のワークフローを使用します。  
   
-1.  MDS によって管理されるデータの一覧を取得して、MDS によって管理されていないデータの一覧と結合します。 詳細については、「[データの結合 (Excel 用 MDS アドイン)](combine-data-mds-add-in-for-excel.md)」を参照してください。  
+1.  MDS によって管理されるデータの一覧を取得して、MDS によって管理されていないデータの一覧と結合します。 詳細については、「 [データの結合 (Excel 用 MDS アドイン)](combine-data-mds-add-in-for-excel.md)」を参照してください。  
   
-2.  DQS ナレッジを使用して、結合した一覧のデータを比較します。 詳細については、「[類似データの照合 (Excel 用 MDS アドイン)](match-similar-data-mds-add-in-for-excel.md)」を参照してください。  
+2.  DQS ナレッジを使用して、結合した一覧のデータを比較します。 詳細については、「 [類似データの照合 (Excel 用 MDS アドイン)](match-similar-data-mds-add-in-for-excel.md)」を参照してください。  
   
 3.  DQS で見つかった類似性について詳細を確認するには、詳細列を表示します。  
   
@@ -48,12 +48,12 @@ ms.locfileid: "65478901"
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  
-|外部データを MDS によって管理されるデータと結合して、比較できるようにします。|[データの結合 (Excel 用 MDS アドイン)](combine-data-mds-add-in-for-excel.md)|  
-|DQS ナレッジを使用して、データの類似性を見つけます。|[類似データの照合 (Excel 用 MDS アドイン)](match-similar-data-mds-add-in-for-excel.md)|  
+|外部データを MDS によって管理されるデータと結合して、比較できるようにします。|[データ &#40;Excel 用 MDS アドインの結合&#41;](combine-data-mds-add-in-for-excel.md)|  
+|DQS ナレッジを使用して、データの類似性を見つけます。|[類似データ &#40;Excel 用 MDS アドインに一致&#41;](match-similar-data-mds-add-in-for-excel.md)|  
   
 ## <a name="related-content"></a>関連コンテンツ  
   
--   [データのパブリッシュ&#40;MDS アドインの Excel&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)  
+-   [データ &#40;Excel 用 MDS アドインの公開&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
 -   [データ照合](../../data-quality-services/data-matching.md)  
   

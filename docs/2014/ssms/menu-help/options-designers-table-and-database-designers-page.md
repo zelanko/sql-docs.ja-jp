@@ -1,5 +1,5 @@
 ---
-title: オプション (デザイナーのテーブルおよびデータベース デザイナー ページ) |Microsoft Docs
+title: '[オプション] ([デザイナー]/[テーブルおよびデータベースデザイナー] ページ) |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e0157b94227a36db7f1f961ab0b0a69518a8163b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63283656"
 ---
-# <a name="options-designers-table-and-database-designers-page"></a>オプション (デザイナーのテーブルおよびデータベース デザイナー ページ)
+# <a name="options-designers-table-and-database-designers-page"></a>[オプション] ([デザイナー]/[テーブルおよびデータベースデザイナー] ページ)
   このページを使用すると、デザイナーの既定の動作を設定できます。 この設定にアクセスするには、 **[ツール]** メニューの **[オプション]** をクリックし、 **[デザイナー]** フォルダーを展開して、 **[テーブル デザイナー]** をクリックします。  
   
 ## <a name="uielement-list"></a>UI 要素の一覧  

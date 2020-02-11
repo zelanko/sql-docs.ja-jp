@@ -11,19 +11,19 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 04f8eaf855d33faf0d2eab8fde718c92f9a24906
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75232323"
 ---
 # <a name="sql-server-backup-to-url"></a>SQL Server Backup to URL
   このトピックでは、Azure Blob ストレージサービスをバックアップ先として使用するために必要な概念、要件、およびコンポーネントについて説明します。 バックアップと復元の機能は、ディスクまたはテープを使用する場合とよく似ていますが、いくつか相違点もあります。 相違点、重要な例外、コード例についても、このトピックで説明しています。  
   
 ## <a name="requirements-components-and-concepts"></a>要件、コンポーネント、および概念  
- **このセクションの内容**  
+ **このセクションの手順:**  
   
--   [保護](#security)  
+-   [セキュリティ](#security)  
   
 -   [主要なコンポーネントと概念の概要](#intorkeyconcepts)  
   
@@ -31,7 +31,7 @@ ms.locfileid: "75232323"
   
 -   [SQL Server のコンポーネント](#sqlserver)  
   
--   [事項](#limitations)  
+-   [制限事項](#limitations)  
   
 -   [Backup/Restore ステートメントのサポート](#Support)  
   
@@ -41,7 +41,7 @@ ms.locfileid: "75232323"
   
 -   [SQL Server Management Studio を使用した Azure storage からの復元](sql-server-backup-to-url.md#RestoreSSMS)  
   
-###  <a name="security"></a>保護  
+###  <a name="security"></a> セキュリティ  
  次に、Azure Blob ストレージサービスとの間でバックアップまたは復元を行う際のセキュリティに関する考慮事項と要件を示します。  
   
 -   Azure Blob ストレージサービスのコンテナーを作成するときは、アクセス権を**private**に設定することをお勧めします。 アクセス権を private に設定すると、Azure アカウントの認証に必要な情報を指定できるユーザーまたはアカウントだけがアクセスできるようになります。  
@@ -127,7 +127,7 @@ ms.locfileid: "75232323"
   
 |||||  
 |-|-|-|-|  
-|BACKUP/RESTORE ステートメント|サポートされています|例外|備考|  
+|BACKUP/RESTORE ステートメント|サポートされています|例外|説明|  
 |BACKUP|&#x2713;|BLOCKSIZE および MAXTRANSFERSIZE はサポートされていません。|WITH CREDENTIAL を指定する必要があります|  
 |RESTORE|&#x2713;||WITH CREDENTIAL を指定する必要があります|  
 |RESTORE FILELISTONLY|&#x2713;||WITH CREDENTIAL を指定する必要があります|  
@@ -144,9 +144,9 @@ ms.locfileid: "75232323"
   
 |||||  
 |-|-|-|-|  
-|引数|サポートされています|Exception|備考|  
+|引数|サポートされています|Exception|説明|  
 |DATABASE|&#x2713;|||  
-|ログ|&#x2713;|||  
+|LOG|&#x2713;|||  
 ||  
 |TO (URL)|&#x2713;|ディスクまたはテープの場合とは異なり、URL では論理名の指定と作成はサポートされていません。|この引数は、バックアップ ファイルの URL パスの指定に使用されます。|  
 |MIRROR TO|&#x2713;|||  
@@ -180,9 +180,9 @@ ms.locfileid: "75232323"
   
 |||||  
 |-|-|-|-|  
-|引数|サポートされています|例外|備考|  
+|引数|サポートされています|例外|説明|  
 |DATABASE|&#x2713;|||  
-|ログ|&#x2713;|||  
+|LOG|&#x2713;|||  
 |FROM (URL)|&#x2713;||FROM URL 引数は、バックアップ ファイルの URL パスの指定に使用されます。|  
 |**WITH オプション:**||||  
 |CREDENTIAL|&#x2713;||WITH CREDENTIAL は、RESTORE FROM URL オプションを使用して Azure Blob Storage サービスから復元する場合にのみサポートされます。|  
@@ -190,7 +190,7 @@ ms.locfileid: "75232323"
 |RECOVERY &#124; NORECOVERY &#124; STANDBY|&#x2713;|||  
 |LOADHISTORY|&#x2713;|||  
 |MOVE|&#x2713;|||  
-|REPLACE|&#x2713;|||  
+|[REPLACE]|&#x2713;|||  
 |RESTART|&#x2713;|||  
 |RESTRICTED_USER|&#x2713;|||  
 |FILE|&#x2713;|||  
@@ -245,7 +245,7 @@ ms.locfileid: "75232323"
   
  [[データベースのバックアップ &#40;バックアップオプション] ページ&#41;](back-up-database-backup-options-page.md)  
   
- [資格情報の作成-Azure Storage の認証](create-credential-authenticate-to-azure-storage.md)  
+ [資格情報の作成- Azure ストレージに対する認証](create-credential-authenticate-to-azure-storage.md)  
   
 ##  <a name="MaintenanceWiz"></a>メンテナンスプランウィザードを使用した URL へのバックアップの SQL Server  
  前に説明したバックアップタスクと同様に、SQL Server Management Studio のメンテナンスプランウィザードが拡張され、ターゲットオプションの1つとして**URL**が含められるようになりました。また、SQL 資格情報などの Azure storage へのバックアップに必要なその他のサポートオブジェクトも追加されました。 詳細については、「 **Using Maintenance Plan Wizard** 」の「 [バックアップ タスクを定義する](../maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure)」を参照してください。  

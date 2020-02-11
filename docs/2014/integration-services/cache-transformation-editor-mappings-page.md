@@ -1,5 +1,5 @@
 ---
-title: キャッシュ変換エディター (マッピング ページ) |Microsoft Docs
+title: '[キャッシュ変換エディター] ([マッピング] ページ)Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e236fc3fd55d156dbe9dbf7aebe840541e1bee1a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061177"
 ---
 # <a name="cache-transformation-editor-mappings-page"></a>[キャッシュ変換エディター] ([マッピング] ページ)
+  
   **[キャッシュ変換エディター]** の **[マッピング]** ページを使用して、キャッシュ変換の入力列をキャッシュ変換マネージャーの変換先列にマップします。  
   
 > [!NOTE]  
@@ -29,7 +30,7 @@ ms.locfileid: "66061177"
   
  キャッシュ接続マネージャーの詳細については、「 [Cache Connection Manager](connection-manager/cache-connection-manager.md)」を参照してください。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **使用できる入力列**  
  使用できる入力列の一覧を表示します。 ドラッグ アンド ドロップ操作により、使用できる入力列を変換先列にマップします。  
   
@@ -41,7 +42,8 @@ ms.locfileid: "66061177"
  キーボードを使用して、 **[使用できる変換先列]** テーブルの列を強調表示し、メニュー キーを押して、 **[一致する名前でアイテムをマップする]** を選択することで、入力列を変換先列にマップすることもできます。  
   
  **入力列**  
- このトピックの前の手順で選択した入力列を表示します。 **[使用できる入力列]** ボックスの一覧を使用して、マッピングを変更できます。  
+ このトピックの前の手順で選択した入力列を表示します。 
+  **[使用できる入力列]** ボックスの一覧を使用して、マッピングを変更できます。  
   
  **変換先列**  
  利用可能な各変換先列を表示します。  

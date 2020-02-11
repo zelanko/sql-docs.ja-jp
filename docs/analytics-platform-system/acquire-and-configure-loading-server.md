@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: ef49bb86c8e16600f2ff1bf2d1c7a92ecc5af964
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401487"
 ---
 # <a name="acquire-and-configure-a-loading-server-for-parallel-data-warehouse"></a>並列データウェアハウスの読み込みサーバーを取得して構成する
@@ -86,7 +86,7 @@ Dwloader をインストールするには、クライアントツールから d
 --> 
   
 ## <a name="Step5"></a>手順 5: 読み込みを開始する  
-これで、データの読み込みを開始する準備ができました。 詳細については、次のドキュメントを参照してください。  
+これで、データの読み込みを開始する準備ができました。 詳細については、次を参照してください。  
   
 1.  [dwloader コマンドライン読み込みツール](dwloader.md)  
   

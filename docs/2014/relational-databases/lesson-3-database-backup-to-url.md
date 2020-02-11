@@ -1,5 +1,5 @@
 ---
-title: レッスン 4:Azure Storage | でデータベースを作成します。Microsoft Docs
+title: 'レッスン 4: Azure Storage | でデータベースを作成するMicrosoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ee331966984a12d309e71a7040edac6343e296c6
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70175630"
 ---
-# <a name="lesson-4-create-a-database-in-azure-storage"></a>レッスン 4:Azure Storage でのデータベースの作成
+# <a name="lesson-4-create-a-database-in-azure-storage"></a>レッスン 4: Azure Storage にデータベースを作成する
   このレッスンでは、Azure 機能の SQL Server データファイルを使用してデータベースを作成する方法について説明します。 このレッスンの前に、レッスン 1、2、および 3 を完了する必要があることに注意してください。 レッスン3は非常に重要な手順です。レッスン4の前に、Azure ストレージコンテナーとそれに関連付けられているポリシー名と SAS キーに関する情報を SQL Server 資格情報ストアに格納する必要があるためです。  
   
  データ ファイルまたはログ ファイルによって使用されるストレージ コンテナーごとに、名前がコンテナーのパスに一致する SQL Server 資格情報を作成する必要があります。 次に、で新しいデータベースを作成でき Azure Storage  
@@ -38,7 +38,7 @@ ms.locfileid: "70175630"
   
 2.  オブジェクト エクスプローラーで、インストールしたデータベース エンジンのインスタンスに接続します。  
   
-3.  標準ツールバーで、[新しいクエリ] をクリックします。  
+3.  [標準] ツール バーの [新しいクエリ]をクリックします。  
   
 4.  次の例をコピーしてクエリ ウィンドウに貼り付け、必要に応じて変更します。 FILENAME フィールドがストレージ コンテナーにあるデータベース ファイルの URI パスを指し、先頭は https にする必要があることに注意してください。  
   
@@ -73,11 +73,11 @@ ms.locfileid: "70175630"
   
 6.  同様に、ストレージ アカウントに新しく作成したデータベースを表示するには、SQL Server Management Studio (SSMS) 経由でストレージ アカウントに接続します。 SQL Server Management Studio を使用して Azure storage に接続する方法については、次の手順に従います。  
   
-    1.  まず、ストレージ アカウント情報を取得します。 管理ポータルにログインします。 次に、 **[ストレージ]** をクリックし、ストレージアカウントを選択します。 ストレージアカウントを選択したら、ページの下部にある **[アクセスキーの管理]** をクリックします。 次のようなダイアログ ウィンドウが開きます。  
+    1.  まず、ストレージ アカウント情報を取得します。 管理ポータルにログインします。 次に、[**ストレージ**] をクリックし、ストレージアカウントを選択します。 ストレージアカウントを選択したら、ページの下部にある [**アクセスキーの管理**] をクリックします。 次のようなダイアログ ウィンドウが開きます。  
   
          ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-4-6-1.gif "SQL 14 CTP2")  
   
-    2.  **ストレージアカウント名**と**プライマリアクセスキー**の値を、SSMS の **[Azure Storage への接続]** ダイアログウィンドウにコピーします。 次に、 **[接続]** をクリックします。 これで、次のスクリーン ショットに示すように、ストレージ アカウント コンテナーについての情報が SSMS に表示されます。  
+    2.  **ストレージアカウント名**と**プライマリアクセスキー**の値を、SSMS の [ **Azure Storage への接続**] ダイアログウィンドウにコピーします。 そのうえで **[接続]** をクリックします。 これで、次のスクリーン ショットに示すように、ストレージ アカウント コンテナーについての情報が SSMS に表示されます。  
   
          ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-4-6-2.gif "SQL 14 CTP2")  
   
@@ -111,6 +111,6 @@ ms.locfileid: "70175630"
   
  **次のレッスン:**  
   
- [レッスン 5.&#40;オプション&#41; tde を使用してデータベースを暗号化する](../relational-databases/lesson-4-restore-database-to-virtual-machine-from-url.md)  
+ [レッスン 5.&#40;オプション&#41; TDE を使用してデータベースを暗号化する](../relational-databases/lesson-4-restore-database-to-virtual-machine-from-url.md)  
   
   

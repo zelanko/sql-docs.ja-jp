@@ -2,7 +2,7 @@
 title: コマンドプロンプトで Database Experimentation Assistant を実行する
 description: コマンドプロンプトで Database Experimentation Assistant を実行する
 ms.custom: seo-lt-2019
-ms.date: 11/22/2019
+ms.date: 01/24/2020
 ms.prod: sql
 ms.prod_service: dea
 ms.suite: sql
@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: jtoland
 ms.reviewer: mathoma
-ms.openlocfilehash: f5a0f7441dd17aec2587c772a678a3681fd3b423
-ms.sourcegitcommit: 9e026cfd9f2300f106af929d88a9b43301f5edc2
+ms.openlocfilehash: 8055ae8b66c2f2b59f18b0ee40dcac8753c0eb7c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74317720"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76831757"
 ---
 # <a name="run-database-experimentation-assistant-at-a-command-prompt"></a>コマンドプロンプトで Database Experimentation Assistant を実行する
 
@@ -29,7 +29,7 @@ ms.locfileid: "74317720"
 
 `Deacmd.exe -o startcapturetrace -s <SQLServerInstance> -e <encryptconnection> -u <trustservercertificate> -d <database name> -p <trace file path> -f <trace file name> -t <Max duration>`
 
-**よう**
+**例**
 
 `Deacmd.exe -o startcapturetrace -s localhost -e -d adventureworks -p c:\test -f sql2008capture -t 60`
 
@@ -42,7 +42,7 @@ ms.locfileid: "74317720"
 
 3. StartReplayCaptureTrace を使用して SQL Server を実行しているターゲットコンピューターでトレースキャプチャを開始します。
 
-    」を参照します。  SQL Server Management Studio (SSMS) で、<Dea_InstallPath\>\Scripts\StartReplayCaptureTrace.sql. を開きます。
+    a.  SQL Server Management Studio (SSMS) で、<Dea_InstallPath\>\Scripts\StartReplayCaptureTrace.sql. を開きます。
 
     b.  を`Set @durationInMins=0`実行して、指定した時間が経過するとトレースキャプチャが自動的に停止しないようにします。
 
@@ -56,7 +56,7 @@ ms.locfileid: "74317720"
 
     `DReplay replay -m "dreplaycontroller" -d "<Folder Path on Dreplay Controller>\IrfFolder" -o -s "SQL2016Target" -w "dreplaychild1,dreplaychild2,dreplaycild3,dreplaychild4"`
 
-    」を参照します。  ステータスを監視するには、コマンドプロンプトでを`DReplay status -f 1`実行します。
+    a.  ステータスを監視するには、コマンドプロンプトでを`DReplay status -f 1`実行します。
 
     b.  再生を停止するには (たとえば、パス% が予想より低い場合)、コマンドプロンプトでを実行`DReplay cancel`します。
 
@@ -71,7 +71,7 @@ ms.locfileid: "74317720"
 
 `Deacmd.exe -o analysis -a <Target1 trace filepath> -b <Target2 trace filepath> -r reportname -s <SQLserverInstance> -e <encryptconnection> -u <trustservercertificate>`
 
-**よう**
+**例**
 
 `Deacmd.exe -o analysis -a C:\Trace\SQL2008Source\Trace.trc -b C:\ Trace\SQL2014Trace\Trace.trc -r upgrade20082014 -s localhost -e`
 
