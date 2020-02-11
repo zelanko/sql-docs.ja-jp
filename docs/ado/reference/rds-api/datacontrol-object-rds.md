@@ -17,17 +17,17 @@ ms.assetid: d85ea4fc-451c-436e-97b8-58f92b149dd0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a571e93a070c3ce07fbaf40a86b762c749042ec1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67964401"
 ---
 # <a name="datacontrol-object-rds"></a>DataControl オブジェクト (RDS)
-データのクエリをバインド[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)を 1 つまたは複数のコントロール (たとえば、テキスト ボックス、取引先グリッド コントロール、またはコンボ ボックス) を表示する、**レコード セット**Web ページ上のデータ。  
+データクエリ[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)を1つ以上のコントロール (たとえば、テキストボックス、グリッドコントロール、またはコンボボックス) にバインドして、Web ページに**レコードセット**データを表示します。  
   
 > [!IMPORTANT]
->  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)します。  
+>  Windows 8 と windows Server 2012 以降では、RDS サーバーコンポーネントが Windows オペレーティングシステムに含まれなくなりました (詳細については、「Windows 8 および[Windows server 2012 の互換性に関するクックブック](https://www.microsoft.com/download/details.aspx?id=27416)」を参照してください)。 RDS クライアントコンポーネントは、今後のバージョンの Windows では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションは、 [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)に移行する必要があります。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,38 +40,38 @@ ms.locfileid: "67964401"
 </OBJECT>  
 ```  
   
-## <a name="remarks"></a>コメント  
- クラス ID を**rds.DataControl**オブジェクトが BD96C556 65A3-11 D 00C04FC29E33 983A 0。  
+## <a name="remarks"></a>解説  
+ RDS のクラス ID **。DataControl**オブジェクトは BD96C556-65A3-11D0-983A-00C04FC29E33 です。  
   
 > [!NOTE]
->  エラーが発生する場合、 [rds.DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md)または**rds.DataControl**オブジェクトから読み込み、正しいクラス ID を使用しているかどうかを確認できません クラスは、これらのオブジェクトの Id は、バージョン 1.0 および 1.1 から変更されました。 また、あるを使用する場合でも null 許容列を設定する必要があります、 **RDS DataControl**オブジェクト。  
+>  RDS というエラーが表示される場合[。領域スペース](../../../ado/reference/rds-api/dataspace-object-rds.md)または**RDS。DataControl**オブジェクトが読み込まれません。正しいクラス ID を使用していることを確認してください。 これらのオブジェクトのクラス Id は、バージョン1.0 および1.1 から変更されています。 また、 **RDS DataControl**オブジェクトを使用する場合は、null 値を許容する列も設定する必要があることに注意してください。  
   
- 基本的なシナリオでのみ設定する必要があります、 **SQL**、 **Connect**、および**Server**のプロパティ、 **rds.DataControl**オブジェクトで、既定のビジネス オブジェクトの呼び出しに自動的には、 [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)します。  
+ 基本的なシナリオでは、RDS の**SQL**、 **Connect**、および**Server**プロパティのみを設定する必要があり**ます。DataControl**オブジェクトは、既定のビジネスオブジェクト[RDSServer DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)を自動的に呼び出します。  
   
- すべてのプロパティ、 **rds.DataControl**カスタム ビジネス オブジェクトがそれらの機能を置き換えるためには、省略可能です。  
+ RDS のすべてのプロパティ **。** カスタムビジネスオブジェクトはその機能を置き換えることができるため、DataControl は省略可能です。  
   
 > [!NOTE]
->  複数の結果を照会する場合、最初のみ[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)が返されます。 複数の結果セットが必要な場合のそれぞれを独自に割り当てる**DataControl**します。 複数の結果に対するクエリの例は、次になります。 `"Select * from Authors, Select * from Topics"`  
+>  複数の結果を照会する場合は、最初の[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)だけが返されます。 複数の結果セットが必要な場合は、それぞれを独自の**DataControl**に割り当てます。 複数の結果を得るためのクエリの例を次に示します。`"Select * from Authors, Select * from Topics"`  
   
- 追加する"DFMode = 20 です"を接続文字列を使用する場合、 **rds.DataControl**データを更新するときに、オブジェクトが、サーバーのパフォーマンスを向上させることができます。 この設定で、 **RDSServer.DataFactory**サーバー上のオブジェクトが少ないリソースを消費するモードを使用します。 ただし、次の機能では、この構成では使用できません。  
+ RDS を使用する場合は、接続文字列に "DFMode = 20;" を追加し**ます。DataControl**オブジェクトを使用すると、データを更新するときにサーバーのパフォーマンスを向上させることができます。 この設定では、サーバー上の**DataFactory**オブジェクトは、より少ないリソースを消費するモードを使用します。 ただし、次の機能はこの構成では使用できません。  
   
--   パラメーター化クエリを使用します。  
+-   パラメーター化クエリを使用する。  
   
--   呼び出しの前に、パラメーターまたは列の情報の取得、 **Execute**メソッド。  
+-   **Execute**メソッドを呼び出す前に、パラメーターまたは列の情報を取得します。  
   
--   設定**更新プログラムを Transact**に**True**します。  
+-   **Transact update**を**True**に設定します。  
   
--   行の状態を取得します。  
+-   行の状態を取得しています。  
   
--   呼び出す、[再同期](../../../ado/reference/ado-api/resync-method.md)メソッド。  
+-   再[同期](../../../ado/reference/ado-api/resync-method.md)メソッドを呼び出しています。  
   
--   (明示的または自動) の更新を使用して、 [Update Resync](../../../ado/reference/ado-api/update-resync-property-dynamic-ado.md)プロパティ。  
+-   更新の再[同期](../../../ado/reference/ado-api/update-resync-property-dynamic-ado.md)プロパティを使用して (明示的または自動で) 更新します。  
   
--   設定**コマンド**または[Recordset](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md)プロパティ。  
+-   **コマンド**または[レコードセット](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md)のプロパティを設定します。  
   
--   使用して**adCmdTableDirect**します。  
+-   **Adcmdtabledirect**を使用します。  
   
- **Rds.DataControl**オブジェクトは、既定で非同期モードで実行されます。 アプリケーションの同期の実行が必要な場合は、設定、 [ExecuteOptions](../../../ado/reference/rds-api/executeoptions-property-rds.md)パラメーターと等しい**adcExecSync**と[FetchOptions](../../../ado/reference/rds-api/fetchoptions-property-rds.md) パラメーター**adcFetchUpFront**次の例のようにします。  
+ **RDS。DataControl**オブジェクトは、既定では非同期モードで実行されます。 アプリケーションの同期実行が必要な場合は、次の例に示すように、 [Executeoptions](../../../ado/reference/rds-api/executeoptions-property-rds.md)パラメーターを**Adcexecsync**に、 [Fetchoptions](../../../ado/reference/rds-api/fetchoptions-property-rds.md)パラメーターを**adcexecsync**と同じに設定します。  
   
 ```  
 <OBJECT CLASSID="clsid:BD96C556-65A3-11D0-983A-00C04FC29E33"   
@@ -83,32 +83,32 @@ ms.locfileid: "67964401"
 </OBJECT>  
 ```  
   
- 1 つを使用して、 **rds.DataControl** 1 つまたは複数のビジュアル コントロールに 1 つのクエリの結果をリンクするオブジェクト。 たとえば、名前、住所、出生、年齢、および優先順位の顧客のステータスなどのクエリ要求している顧客データをコードがあるとします。 1 つを使用する**rds.DataControl** ; 3 つの別のテキスト ボックスに、顧客の名前、年齢、およびリージョンを表示するオブジェクトチェック ボックスでの優先順位の顧客のステータスグリッド コントロール内のすべてのデータ。  
+ 1つ**の RDS を使用します。** 1 つのクエリの結果を1つ以上のビジュアルコントロールにリンクする DataControl オブジェクトです。 たとえば、顧客データ (名前、居住地、誕生日、年齢、優先度など) を要求するクエリをコーディングするとします。 単一の RDS を使用でき**ます。DataControl**オブジェクトを利用して、顧客の名前、年齢、地域を3つのテキストボックスに表示します。顧客の優先度をチェックボックスで確認します。グリッドコントロールのすべてのデータ。  
   
- 使用して異なる**rds.DataControl**異なるビジュアル コントロールに複数のクエリの結果をリンクするオブジェクト。 たとえば、1 つのクエリ、顧客に関する情報を取得して、顧客が購入した商品に関する情報を取得する 2 番目のクエリを使用するとします。 3 つのテキスト ボックスとチェック ボックスを 1 つのグリッド コントロールで 2 番目のクエリ結果の最初のクエリの結果を表示するには。 既定のビジネス オブジェクトを使用する場合 (**RDSServer.DataFactory**)、次を行う必要があります。  
+ 別**の RDS を使用します。DataControl**オブジェクトは、複数のクエリの結果を別のビジュアルコントロールにリンクします。 たとえば、1つのクエリを使用して顧客に関する情報を取得し、2つ目のクエリを使用して、顧客が購入した商品に関する情報を取得するとします。 最初のクエリの結果を3つのテキストボックスと1つのチェックボックスに表示し、2番目のクエリの結果をグリッドコントロールに表示します。 既定のビジネスオブジェクト (**RDSServer. DataFactory**) を使用する場合は、次の操作を行う必要があります。  
   
--   2 つ追加**rds.DataControl** Web ページへのオブジェクト。  
+-   2つ**の RDS を追加します。DataControl**オブジェクトを Web ページに作成します。  
   
--   2 つの書き込み、クエリごとに 1 つ**SQL** 、2 つのプロパティ**rds.DataControl**オブジェクト。 1 つ**rds.DataControl**オブジェクトは、顧客情報を要求する SQL クエリが格納されます。 2 つ目は、顧客が購入した商品の一覧を要求するクエリが含まれます。  
+-   2つの RDS の各**SQL**プロパティに1つずつ、2つのクエリを記述**します。DataControl**オブジェクト。 1つ**の RDS。DataControl**オブジェクトには、顧客情報を要求する SQL クエリが含まれます。2つ目には、顧客が購入した商品の一覧を要求するクエリが含まれます。  
   
--   各バインドされたコントロールのオブジェクト タグで、各ビジュアル コントロールに表示するデータの値を設定する DATAFLD 値を指定します。  
+-   各バインドコントロールのオブジェクトタグで、DATAFLD 値を指定して、各ビジュアルコントロールに表示するデータの値を設定します。  
   
- 数の数の制限はありません**rds.DataControl**オブジェクトを 1 つの Web ページで、オブジェクト タグを使用して埋め込むことができます。  
+ RDS の数に制限はありません **。** 1 つの Web ページでオブジェクトタグを使用して埋め込むことができる DataControl オブジェクト。  
   
- 定義するときに、 **rds.DataControl** Web ページ上のオブジェクト、0 以外の値を使用して、**高さ**と**幅**1 (を余分なスペースを含めることを避けるため) などの値。  
+ RDS を定義する場合 **。** Web ページの DataControl オブジェクトでは、1などの0以外の**高さ**と**幅**の値を使用します (余分なスペースが含まれないようにするため)。  
   
- Internet Explorer 4.0; の一部として含まれているリモート データ サービスのクライアント コンポーネントそのため、必要はありませんでコードベースのパラメーターを含む、 **rds.DataControl**オブジェクト タグ。  
+ リモートデータサービスクライアントコンポーネントは、既に Internet Explorer 4.0 の一部として含まれています。したがって、コードベースパラメーターを RDS に含める必要はありません **。DataControl** object タグ。  
   
- Internet Explorer 4.0 以降、アパートメント モデルのコントロールとしてマークされている場合にのみ、HTML コントロールおよび ActiveX® コントロールを使用してデータにバインドすることができます。  
+ Internet Explorer 4.0 以降では、アパートメントモデルコントロールとしてマークされている場合にのみ、HTML コントロールと ActiveX®コントロールを使用してデータにバインドできます。  
   
 > [!NOTE]
->  **Microsoft Visual Basic ユーザー** 、 **rds.DataControl**のスクリプトが安全と Web ベースのアプリケーションでのみ使用されます。 Visual Basic のクライアント アプリケーションには、その必要はありません。  
+>  **Microsoft Visual Basic ユーザー****RDS。DataControl**はスクリプトに安全であり、Web ベースのアプリケーションでのみ使用されます。 Visual Basic クライアントアプリケーションには必要ありません。  
   
- このセクションには、次のトピックが含まれています。  
+ ここでは、次のトピックについて説明します。  
   
 -   [DataControl オブジェクト (RDS) のプロパティ、メソッド、およびイベント](../../../ado/reference/rds-api/datacontrol-object-rds-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [DataControl オブジェクトの例 (VBScript)](../../../ado/reference/rds-api/datacontrol-object-example-vbscript.md)
 
 

@@ -11,20 +11,21 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e42099ede229ef7d0b10cf8d88b4ac92c60d3370
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62901433"
 ---
 # <a name="odbc-flow-components"></a>ODBC フロー コンポーネント
   このトピックでは、SQL Server 2016 Integration Services (SSIS) を使用して ODBC データ フローを作成するために必要な概念について説明します。 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]  
   
- [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 用の Connector for Open Database Connectivity (ODBC) by Attunity を使用すると、SSIS 開発者は、ODBC でサポートされているデータベースからのデータの読み込みおよびアンロードを実行するパッケージを簡単に作成できます。  
+ 
+  [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 用の Connector for Open Database Connectivity (ODBC) by Attunity を使用すると、SSIS 開発者は、ODBC でサポートされているデータベースからのデータの読み込みおよびアンロードを実行するパッケージを簡単に作成できます。  
   
  ODBC コネクタは、 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]のコンテキストで、ODBC でサポートされているデータベースへのデータの読み込みやデータのアンロードを実行するときに、最適なパフォーマンスを得ることができるように設計されています。  
   
-## <a name="benefits"></a>利点  
+## <a name="benefits"></a>メリット  
  [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] の ODBC 入力元および ODBC 入力先を使用することで、ODBC でサポートされるデータベースへのデータ読み込みまたはデータのアンロードを処理するプロジェクトで、SSIS に関する競争力がもたらされます。  
   
  ODBC 入力元と ODBC 入力先を共に使用することで、ODBC 対応データベースとの高パフォーマンスのデータ統合が可能になります。 どちらのコンポーネントも、行方向のパラメーター配列バインド モードをサポートする機能豊富な ODBC プロバイダーでこのバインド機能を使用するように構成することや、機能が少ない ODBC プロバイダーで単一行のパラメーター バインド機能を使用するように構成することができます。  
@@ -32,7 +33,7 @@ ms.locfileid: "62901433"
 ## <a name="getting-started-with-the-odbc-source-and-destination"></a>ODBC 入力元および入力先の概要  
  [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]を使用するパッケージをセットアップする前に、以下のコンポーネントを使用できることを確認する必要があります。  
   
--   [ODBC 入力元](odbc-source.md)  
+-   [ODBC 変換元](odbc-source.md)  
   
 -   [ODBC 変換先](odbc-destination.md)  
   
@@ -100,7 +101,7 @@ ms.locfileid: "62901433"
   
 ODBC 3.8 仕様で規定されている 拡張 C 型はサポートされません。次の表に、各 ODBC SQL 型に対応する SSIS データ型を示します。 SSIS 開発者は既定のマッピングをオーバーライドして、入出力列で使用する SSIS データ型を個別に指定できます。このときに必要となるデータ変換によって、パフォーマンスが影響を受けることはありません。  
   
-|ODBC SQL 型|SSIS データ型|コメント|  
+|ODBC SQL 型|SSIS データ型|説明|  
 |-----------------|------------------|------------|  
 |SQL_BIT|DT_BOOL||  
 |SQL_TINYINT|DT_I1<br /><br />DT_UI1|ODBC ドライバーで SQL データ型の UNSIGNED_ATTRIBUTE が SQL_TRUE に設定されている場合、その SQL データ型は SSIS の符号なしのデータ型 (DT_UI1、DT_UI2、DT_UI4、DT_UI8) にマッピングされます。|  
@@ -110,13 +111,14 @@ ODBC 3.8 仕様で規定されている 拡張 C 型はサポートされませ�
 |SQL_DOUBLE|DT_R8|  
 |SQL_FLOAT|DT_R8|  
 |SQL_REAL|DT_R4|  
-|SQL_NUMERIC (p,s)|DT_NUMERIC (p,s)<br /><br />DT_R8<br /><br />DT_CY|P が 38 以上 S が 0 以上で、P. に等しいまたはそれよりも小さい場合、数値データ型は DT_NUMERIC にマッピングされます。次の少なくとも 1 つが true の場合、数値データ型は DT_R8 にマッピングします。<br /><br />有効桁数が 38 より大きい<br /><br />小数点以下桁数が 0 より小さい<br /><br />小数点以下桁数が 38 より大きい<br /><br />小数点以下桁数が有効桁数より大きい<br /><br /><br /><br />Money データ型として宣言されている場合、DT_CY に数値データ型をマップすることに注意してください。|  
-|SQL_DECIMAL (p,s)|DT_NUMERIC (p,s)<br /><br />DT_R8<br /><br />DT_CY|P が 38 以上 S が 0 以上で、P. に等しいまたはそれよりも小さい場合に、decimal データ型は DT_NUMERIC にマッピングします。次の少なくとも 1 つが true の場合、decimal データ型は DT_R8 にマッピングします。<br /><br />有効桁数が 38 より大きい<br /><br />小数点以下桁数が 0 より小さい<br /><br />小数点以下桁数が 38 より大きい<br /><br />小数点以下桁数が有効桁数より大きい<br /><br />Money データ型として宣言されている場合、DT_CY に 10 進データ型をマップすることに注意してください。|  
+|SQL_NUMERIC (p,s)|DT_NUMERIC (p,s)<br /><br />DT_R8<br /><br />DT_CY|P が38以上で、S が0以上かつ S が P 以下の場合、数値データ型は DT_NUMERIC にマップされますが、です。数値データ型は、次のいずれかの条件に該当する場合に DT_R8 にマップされます。<br /><br />有効桁数が 38 より大きい<br /><br />小数点以下桁数が 0 より小さい<br /><br />小数点以下桁数が 38 より大きい<br /><br />小数点以下桁数が有効桁数より大きい<br /><br /><br /><br />数値データ型は、money データ型として宣言されている場合、DT_CY にマップされることに注意してください。|  
+|SQL_DECIMAL (p,s)|DT_NUMERIC (p,s)<br /><br />DT_R8<br /><br />DT_CY|P が38以上で、S が0以上で、S が P 以下の場合、decimal データ型は DT_NUMERIC にマップされています。Decimal データ型は、次のいずれかの条件に該当する場合に DT_R8 にマップされます。<br /><br />有効桁数が 38 より大きい<br /><br />小数点以下桁数が 0 より小さい<br /><br />小数点以下桁数が 38 より大きい<br /><br />小数点以下桁数が有効桁数より大きい<br /><br />Decimal データ型は、money データ型として宣言されている場合、DT_CY にマップされることに注意してください。|  
 |SQL_DATE<br /><br />SQL_TYPE_DATE|DT_DBDATE|  
 |SQL_TIME<br /><br />SQL_TYPE_TIME|DT_DBTIME|  
 |SQL_TIMESTAMP<br /><br />SQL_TYPE_TIMESTAMP|DT_DBTIMESTAMP<br /><br />DT_DBTIMESTAMP2|小数点以下桁数が 3 より大きい場合、SQL_TIMESTAMP データ型は DT_DBTIMESTAMP2 にマッピングされます。 それ以外の場合は、DT_DBTIMESTAMP にマッピングされます。|  
 |SQL_CHAR<br /><br />SQLVARCHAR|DT_STR<br /><br />DT_WSTR<br /><br />DT_TEXT<br /><br />DT_NTEXT|列の長さが 8000 以下で、 **ExposeStringsAsUnicode** プロパティが false の場合に DT_STR が使用されます。<br /><br />列の長さが 8000 以下で、 **ExposeStringsAsUnicode** プロパティが true の場合に DT_WSTR が使用されます。<br /><br />列の長さが 8000 より長く、 **ExposeStringsAsUnicode** プロパティが false の場合に DT_TEXT が使用されます。<br /><br />列の長さが 8000 より長く、 **ExposeStringsAsUnicode** プロパティが true の場合に DT_NTEXT が使用されます。|  
-|SQL_LONGVARCHAR|DT_TEXT<br /><br />DT_NTEXT|**ExposeStringsAsUnicode** プロパティが true の場合に DT_NTEXT が使用されます。|  
+|SQL_LONGVARCHAR|DT_TEXT<br /><br />DT_NTEXT|
+  **ExposeStringsAsUnicode** プロパティが true の場合に DT_NTEXT が使用されます。|  
 |SQL_WCHAR<br /><br />SQL_WVARCHAR|DT_WSTR<br /><br />DT_NTEXT|列の長さが 4000 以下の場合に DT_NTEXT が使用されます。<br /><br />列の長さが 4000 より長い場合に DT_NTEXT が使用されます。|  
 |SQL_WLONGVARCHAR|DT_NTEXT|  
 |SQL_BINARY|DT_BYTE<br /><br />DT_IMAGE|列の長さが 8000 以下の場合に DT_BYTES が使用されます。<br /><br />列の長さが 8000 より長い場合に DT_IMAGE が使用されます。|  
@@ -127,7 +129,7 @@ ODBC 3.8 仕様で規定されている 拡張 C 型はサポートされませ�
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
--   [ODBC 変換元](odbc-source.md)  
+-   [ODBC 入力元](odbc-source.md)  
   
 -   [ODBC 入力先](odbc-destination.md)  
   

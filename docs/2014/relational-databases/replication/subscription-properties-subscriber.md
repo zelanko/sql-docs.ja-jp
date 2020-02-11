@@ -1,5 +1,5 @@
 ---
-title: SQL Server レプリケーション サブスクリプションのプロパティ - サブスクライバー |Microsoft Docs
+title: SQL Server レプリケーションサブスクリプションのプロパティ-Subscriber |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,14 +16,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: af9cb7612837021b156fb8f467899f0e23ef1555
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63250271"
 ---
-# <a name="sql-server-replication-subscription-properties"></a>SQL Server レプリケーション サブスクリプションのプロパティ 
-このセクションの情報を提供する、**サブスクリプションのプロパティ** ダイアログ ボックス。 
+# <a name="sql-server-replication-subscription-properties"></a>サブスクリプションのプロパティの SQL Server レプリケーション 
+このセクションでは、[**サブスクリプションのプロパティ**] ダイアログボックスについて説明します。 
 
 ## <a name="publisher-properties"></a>パブリッシャーのプロパティ 
   パブリッシャーの **[サブスクリプションのプロパティ]** ダイアログ ボックスを使用すると、プッシュ サブスクリプションのプロパティを表示したり設定したりできます。 プル サブスクリプションのいくつかのプロパティを表示することもできますが、サブスクリプションの **[サブスクリプションのプロパティ]** ダイアログ ボックスではさらに多くのプロパティが表示され、プロパティを変更することができます。  
@@ -38,7 +38,7 @@ ms.locfileid: "63250271"
 
   
 ### <a name="options-for-all-subscriptions"></a>すべてのサブスクリプションに対するオプション  
- **Security**  
+ **セキュリティ**  
  **[エージェント プロセス アカウント]** 行をクリックしてプロパティ ボタン ( **[...]** ) をクリックし、ディストリビューション エージェントまたはマージ エージェントがディストリビューターで実行されるアカウントを変更します。 ディストリビューション エージェントまたはマージ エージェントがサブスクライバーへの接続を作成するアカウントを変更するには、 **[サブスクライバー接続]** をクリックしてプロパティ ボタン ( **[...]** ) をクリックします。  
   
  各エージェントに必要な権限の詳細については、「 [Replication Agent Security Model](security/replication-agent-security-model.md)」を参照してください。  
@@ -84,10 +84,10 @@ ms.locfileid: "63250271"
  **[スナップショットの場所]**  
  初期化または再初期化の際にアクセスするスナップショット ファイルの場所を決定します。 場所は次の値のいずれかです。  
   
--   **[既定の場所]** : ディストリビューターの構成時に定義される既定の場所です。 詳細については、次を参照してください。 [、既定のスナップショットの場所を指定](snapshot-options.md#snapshot-folder-locations)します。    
+-   **[既定の場所]** : ディストリビューターの構成時に定義される既定の場所です。 詳細については、「[既定のスナップショットの場所を指定する](snapshot-options.md#snapshot-folder-locations)」を参照してください。    
 -   **[代替フォルダー]** : **[パブリケーションのプロパティ]** ダイアログ ボックスで指定することができる代替の場所です。 詳細については、「 [Alternate Snapshot Folder Locations](alternate-snapshot-folder-locations.md)」を参照してください。    
 -   **[動的スナップショット フォルダー]** : パラメーター化された行フィルターを使用するマージ パブリケーションのスナップショットの場所です。 詳しくは、「 [Snapshots for Merge Publications with Parameterized Filters](snapshots-for-merge-publications-with-parameterized-filters.md)」をご覧ください。  
--   **[FTP フォルダー]** : FTP (ファイル転送プロトコル) サーバーにアクセスできるフォルダーです。 詳細については、「[FTP によるスナップショットの転送](transfer-snapshots-through-ftp.md)」を参照してください。  
+-   **[FTP フォルダー]** : FTP (ファイル転送プロトコル) サーバーにアクセスできるフォルダーです。 詳細については、「[Transfer Snapshots Through FTP](transfer-snapshots-through-ftp.md)」(FTP によるスナップショットの転送) をご覧ください。  
   
  **[スナップショット フォルダー]**  
  **[スナップショットの場所]** オプションに対して **[既定の場所]** 以外の値を選択した場合、そのスナップショット フォルダーへのパスを指定する必要があります。  
@@ -95,7 +95,7 @@ ms.locfileid: "63250271"
  **[Windows 同期マネージャーを使用]**  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 同期マネージャーを使用して、サブスクリプションを同期化できるかどうかを決定します。  
   
- **Security**  
+ **セキュリティ**  
  **[エージェント プロセス アカウント]** 行をクリックしてプロパティ ボタン ( **[...]** ) をクリックし、ディストリビューション エージェントまたはマージ エージェントがサブスクライバーで実行されるアカウントを変更します。 接続に関するセキュリティ オプションは、サブスクリプションの種類によって異なります。  
   
 -   トランザクション パブリケーションへのサブスクリプションの場合、ディストリビューション エージェントがディストリビューターへの接続を作成するアカウントを変更するには、 **[ディストリビューター接続]** をクリックしてプロパティ ボタン ( **[...]** ) をクリックします。    

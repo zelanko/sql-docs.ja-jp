@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f88c78aa67d65eb84bfaa282fe46a122dd2a382a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63306027"
 ---
 # <a name="modify-queries-visual-database-tools"></a>クエリの変更 (Visual Database Tools)
@@ -34,8 +34,8 @@ ms.locfileid: "63306027"
  クエリ デザイナーが開き、変更が可能になります。  
   
 ## <a name="see-also"></a>参照  
- [クエリを実行して&#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [結果ウィンドウでデータを扱う&#40;Visual Database Tools&#41;](results-pane-visual-database-tools.md)   
+ [Visual Database Tools &#40;クエリの実行&#41;](visual-database-tools.md)   
+ [[結果] ウィンドウのデータを操作するには &#40;Visual Database Tools&#41;](results-pane-visual-database-tools.md)   
  [クエリに関する基本操作の実行 (Visual Database Tools)](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

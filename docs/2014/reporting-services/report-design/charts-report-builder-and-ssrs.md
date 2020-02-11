@@ -21,14 +21,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6fb26ce238953f9bf4a3472385de6dd1bf5c167d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106249"
 ---
 # <a name="charts-report-builder-and-ssrs"></a>グラフ (レポート ビルダーおよび SSRS)
-  データをビジュアル形式でまとめるには、グラフ データ領域を使用します。 グラフを使用すると、大量の集計情報がひとめでわかります。 グラフを作成する前に、データを慎重に準備および理解することが重要です。これにより、グラフをすばやく効率的にデザインできます。 詳細については、「[レポートへのグラフの追加 &#40;レポート ビルダーおよび SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)」を参照してください。 グラフをすぐに使用を開始するには、バー、列、スパーク ライン、および円グラフのチュートリアルを参照してください[チュートリアル&#40;レポート ビルダー&#41; ](../report-builder-tutorials.md)または横棒グラフおよび円グラフのチュートリアル[Reporting Services のチュートリアル&#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)します。  
+  データをビジュアル形式でまとめるには、グラフ データ領域を使用します。 グラフを使用すると、大量の集計情報がひとめでわかります。 グラフを作成する前に、データを慎重に準備および理解することが重要です。これにより、グラフをすばやく効率的にデザインできます。 詳細については、「[レポートへのグラフの追加 &#40;レポート ビルダーおよび SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)」を参照してください。 グラフの使用をすぐに開始するには、「チュートリアル」の横棒グラフ、縦棒グラフ、スパークライングラフ、および円グラフのチュートリアル[&#40;レポートビルダー&#41;](../report-builder-tutorials.md) 、または[Reporting Services のチュートリアル「SSRS &#40;](../reporting-services-tutorials-ssrs.md)」の横棒グラフおよび円グラフのチュートリアルを参照してください。  
   
  次の図は、グラフで使用されるさまざまな要素を示しています。  
   
@@ -49,10 +49,10 @@ ms.locfileid: "66106249"
   
   
   
-##  <a name="SimilarMatrix"></a> マトリックスとの類似点  
+##  <a name="SimilarMatrix"></a>マトリックスとの類似点  
  グラフがどのように動作するかについての考え方の 1 つは、グラフをマトリックスと比較することです。  
   
- ![ツールボックスから追加された新しいマトリックス、選択](../media/rs-matrixtemplatenewselected.gif "ツールボックスから追加された新しいマトリックス、選択")  
+ ![ツールボックスから追加された新しいマトリックス、選択済み](../media/rs-matrixtemplatenewselected.gif "ツールボックスから追加された新しいマトリックス、選択済み")  
   
  概念的には、グラフとマトリックスの組織は次のように同じです。  
   
@@ -126,7 +126,7 @@ ms.locfileid: "66106249"
  [グラフの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)  
  全体の見た目を向上させる書式設定を使用し、グラフの主要なデータ ポイントを強調表示します。  
   
- [グラフ内の空のデータ ポイントおよび NULL データ ポイント &#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md)  
+ [グラフ内の空のデータ ポイントおよび NULL データ ポイント (レポート ビルダーおよび SSRS)](charts-report-builder-and-ssrs.md)  
  空の値または NULL 値を持つフィールドに基づくグラフを操作する際の考慮事項について説明します。  
   
  [グラフ上で複数のデータ範囲を持つ系列の表示 &#40;レポート ビルダーおよび SSRS&#41;](displaying-a-series-with-multiple-data-ranges-on-a-chart.md)  
@@ -147,7 +147,7 @@ ms.locfileid: "66106249"
  [グラフのトラブルシューティング &#40;レポート ビルダーおよび SSRS&#41;](troubleshoot-charts-report-builder-and-ssrs.md)  
  グラフを操作する際に役立つヒントについて説明します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [画像、テキスト ボックス、四角形、および罫線 &#40;レポート ビルダーおよび SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)   
  [対話的な並べ替え、ドキュメント マップ、およびリンク &#40;レポート ビルダーおよび SSRS&#41;](interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
  [入れ子になったデータ領域 (レポート ビルダーおよび SSRS)](nested-data-regions-report-builder-and-ssrs.md)   

@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3dcd239c782f53ec11970e94f89e5acfac982785
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75228814"
 ---
 # <a name="configuration-of-a-server-instance-for-always-on-availability-groups-sql-server"></a>Always On 可用性グループのためのサーバー インスタンスの構成 (SQL Server)
@@ -46,7 +46,7 @@ ms.locfileid: "75228814"
   
 2.  サーバー インスタンスに、データベース ミラーリング エンドポイントが存在することを確認します。  
   
-##  <a name="RelatedTasks"></a>関連タスク  
+##  <a name="RelatedTasks"></a> 関連タスク  
  **AlwaysOn 可用性グループを有効にするには**  
   
 -   [AlwaysOn 可用性グループ &#40;SQL Server を有効または無効にする&#41;](enable-and-disable-always-on-availability-groups-sql-server.md)  
@@ -63,7 +63,7 @@ ms.locfileid: "75228814"
   
 -   [データベースミラーリングエンドポイントで、Transact-sql&#41;&#40;の送信接続に証明書を使用できるようにする](../../database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)  
   
-##  <a name="RelatedContent"></a>関連するコンテンツ  
+##  <a name="RelatedContent"></a> 関連コンテンツ  
   
 -   **Blog**  
   

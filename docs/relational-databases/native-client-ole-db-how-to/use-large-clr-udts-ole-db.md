@@ -12,16 +12,16 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b228a27169a506c1a1b292ee670bd08e4633201f
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73766350"
 ---
 # <a name="use-large-clr-udts-ole-db"></a>大きな CLR UDT の使用 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  このサンプルでは、大きなユーザー定義型を持つ行を結果セットからフェッチする方法を示します。 詳細については、「 [ &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/large-clr-user-defined-types-ole-db.md)」を参照してください。 このサンプルは、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降で動作します。  
+  このサンプルでは、大きなユーザー定義型を持つ行を結果セットからフェッチする方法を示します。 詳細については、「 [&#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/large-clr-user-defined-types-ole-db.md)」を参照してください。 このサンプルは、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降で動作します。  
   
 ## <a name="example"></a>例  
  このサンプルには 2 つのプロジェクトが含まれています。 1 つは、C# ソース コードからアセンブリ (DLL) を作成するプロジェクトです。 このアセンブリには、CLR 型が格納されます。 テーブルがデータベースに追加されます。 テーブルの列の型はアセンブリで定義されます。このサンプルでは、既定で master データベースを使用します。 もう 1 つのプロジェクトは、テーブルからデータを読み取るネイティブの C++ アプリケーションです。  
@@ -30,7 +30,8 @@ ms.locfileid: "73766350"
   
  2 つ目の ([!INCLUDE[tsql](../../includes/tsql-md.md)]) コード リストを実行して、アセンブリを master データベースに追加します。  
   
- ole32.lib と oleaut32.lib を使用して 3 つ目の (C++) コード リストをコンパイルし、実行します。 このアプリケーションは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 一部の Windows オペレーティング システムでは、(localhost) または (local) を実際の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前に変更する必要があります。 名前付きインスタンスに接続するには、接続文字列を L"(local)" から L"(local)\\\name" に変更します。ここで、name は名前付きインスタンスです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、既定で名前付きインスタンスとしてインストールされます。 INCLUDE 環境変数に、sqlncli を含むディレクトリが含まれていることを確認します。  
+ ole32.lib と oleaut32.lib を使用して 3 つ目の (C++) コード リストをコンパイルし、実行します。 このアプリケーションは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 一部の Windows オペレーティング システムでは、(localhost) または (local) を実際の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前に変更する必要があります。 名前付きインスタンスに接続するには、接続文字列を L"(local)" から L"(local)\\\name" に変更します。ここで、name は名前付きインスタンスです。 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、既定で名前付きインスタンスとしてインストールされます。 INCLUDE 環境変数に、sqlncli を含むディレクトリが含まれていることを確認します。  
   
  4 つ目の ([!INCLUDE[tsql](../../includes/tsql-md.md)]) コード リストを実行して、アセンブリを master データベースから削除します。  
   

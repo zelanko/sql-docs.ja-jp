@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6b31cb3bc05f9785154b89033cde2e158f204b3c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62753059"
 ---
 # <a name="sql-server-agent-properties-log-on-tab"></a>[SQL Server Agent のプロパティ] ダイアログ ボックス ([ログオン] タブ)
@@ -23,7 +23,7 @@ ms.locfileid: "62753059"
 > [!NOTE]  
 >  クラスター化されたインスタンス上のサービスで使用するアカウント名を変更する場合、新しいアカウントは、そのサービスのセットアップ時に指定したドメイン グループに属している必要があります。または、そのグループにメンバーを追加する権限が与えられている必要があります。 グループのメンバーシップを変更する権限がない場合は、ドメイン管理者に問い合わせてください。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **[ローカル システム アカウント]**  
  ローカル システム アカウントを指定します。このアカウントはパスワードを必要としません。 ただし、ローカル システム アカウントに与えられている特権によっては、そのサービスと他のサーバーとの対話が制限されることもあります。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "62753059"
  **アカウント名**  
  ローカル ユーザー アカウント名またはドメイン ユーザー アカウント名を指定します。  
   
- **Password**  
+ **パスワード**  
  アカウントのパスワードを入力します。  
   
  **[パスワードの確認入力]**  
@@ -42,7 +42,7 @@ ms.locfileid: "62753059"
  **[開始]**  
  サービスを開始します。  
   
- **[停止]**  
+ **Stop**  
  サービスを停止します。  
   
  **[一時停止]**  

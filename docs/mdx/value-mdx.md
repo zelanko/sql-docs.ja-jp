@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: f373f626d778c4d77ec5843dca5bb11da728451d
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68887443"
 ---
 # <a name="value-mdx"></a>Value (MDX)
@@ -28,13 +28,13 @@ Member_Expression[.Value]
 ```  
   
 ## <a name="arguments"></a>引数  
- *メンバー式*  
+ *Member_Expression*  
  メンバーを 1 つ返す有効な多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>コメント  
- **Value**関数は、指定されたメンバーの値を文字列として返します。 **Value**引数は省略可能です。これは、メンバーの値がメンバーの既定のプロパティであり、他の値が指定されていない場合にメンバーに対して返される値であるためです。 メンバーのプロパティの詳細については、「[固有&#40;メンバー&#41;プロパティ mdx](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties) 」および「[ユーザー &#40;定義&#41;メンバープロパティ (mdx](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties))」を参照してください。  
+## <a name="remarks"></a>解説  
+ **Value**関数は、指定されたメンバーの値を文字列として返します。 **Value**引数は省略可能です。これは、メンバーの値がメンバーの既定のプロパティであり、他の値が指定されていない場合にメンバーに対して返される値であるためです。 メンバーのプロパティの詳細については、「 [mdx&#41;&#40;の固有メンバープロパティ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties)」および「 [Mdx&#41;&#40;ユーザー定義メンバープロパティ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties)」を参照してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、明示的にメンバーの名前を返すだけでなく、メンバーの値も返します。  
   
 ```  
@@ -52,11 +52,11 @@ SELECT {[Date].[Calendar].[July 1, 2001]} ON 0
 from [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [MemberValue &#40;MDX&#41;](../mdx/membervalue-mdx.md)   
- [Properties &#40;MDX&#41;](../mdx/properties-mdx.md)   
- [Name&#40;MDX&#41;](../mdx/name-mdx.md)   
+ [MDX&#41;&#40;プロパティ](../mdx/properties-mdx.md)   
+ [MDX&#41;&#40;名前](../mdx/name-mdx.md)   
  [UniqueName &#40;MDX&#41;](../mdx/uniquename-mdx.md)   
- [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Mdx 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

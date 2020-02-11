@@ -1,5 +1,5 @@
 ---
-title: dbo.syssubsystems (Transact-SQL) |Microsoft Docs
+title: dbo. syssubsystems システム (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,35 +20,35 @@ ms.assetid: 114b3d55-1ad6-4777-b868-8ef0c86ba596
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3f06182f06e92ff581dd02c072b63fc10962921a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68069085"
 ---
-# <a name="dbosyssubsystems-transact-sql"></a>dbo.syssubsystems (Transact-SQL)
+# <a name="dbosyssubsystems-transact-sql"></a>dbo. syssubsystems システム (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  使用可能なすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのプロキシ サブシステムに関する情報を格納します。 **Syssubsystems**でテーブルが格納されている、 **msdb**データベース。  
+  使用可能なすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのプロキシ サブシステムに関する情報を格納します。 **Syssubsystems システム**テーブルは、 **msdb**データベースに格納されます。  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
 |**subsystem_id**|**int**|サブシステムの ID。|  
-|**subsystem**|**nvarchar(40)**|サブシステムの名前。|  
-|**description_id**|**int**|メッセージ内の行の ID、 **sys.messages**カタログ サブシステムの説明を含むビュー。|  
-|**subsystem_dll**|**nvarchar (255)**|サブシステム DLL の場所です。|  
-|**agent_exe**|**nvarchar (255)**|サブシステムを使用する実行可能ファイルの完全パスです。|  
-|**start_entry_point**|**nvarchar(30)**|サブシステムが初期化されるときに呼び出される関数。|  
-|**event_entry_point**|**nvarchar(30)**|サブシステム ステップが実行されるときに呼び出される関数。|  
-|**stop_entry_point**|**nvarchar(30)**|サブシステムが実行を終了するときに呼び出される関数。|  
+|**サブ**|**nvarchar (40)**|サブシステムの名前。|  
+|**description_id**|**int**|サブシステムの説明を含む、 **sys. messages**カタログビュー内の行のメッセージ ID。|  
+|**subsystem_dll**|**nvarchar(255)**|サブシステム DLL の場所。|  
+|**agent_exe**|**nvarchar(255)**|サブシステムを使用する実行可能ファイルへの完全パスです。|  
+|**start_entry_point**|**nvarchar (30)**|サブシステムが初期化されるときに呼び出される関数。|  
+|**event_entry_point**|**nvarchar (30)**|サブシステムステップが実行されるときに呼び出される関数です。|  
+|**stop_entry_point**|**nvarchar (30)**|サブシステムが実行を終了するときに呼び出される関数。|  
 |**max_worker_threads**|**int**|サブシステムの同時ステップの最大数。|  
   
-## <a name="remarks"></a>コメント  
- メンバーのみ、 **sysadmin**固定サーバー ロールがこのテーブルにアクセスできます。  
+## <a name="remarks"></a>解説  
+ このテーブルにアクセスできるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
-## <a name="see-also"></a>関連項目  
- [dbo.sysproxysubsystem &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysproxysubsystem-transact-sql.md)   
- [dbo.sysproxies &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md)   
- [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)  
+## <a name="see-also"></a>参照  
+ [dbo. sysproxysubsystem &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-sysproxysubsystem-transact-sql.md)   
+ [dbo .SQL プロキシ &#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md)   
+ [Transact-sql&#41;&#40;のメッセージ](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)  
   
   

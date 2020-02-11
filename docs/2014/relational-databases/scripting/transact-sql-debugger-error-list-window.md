@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d1eb74eca33bc92152ea08fad2303b9a8b4ba48e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243087"
 ---
 # <a name="error-list-window-management-studio"></a>[エラー一覧] ウィンドウ (Management Studio)
@@ -87,16 +87,16 @@ ms.locfileid: "75243087"
  **既定の順序**  
  エントリの作成順を示す整数を表示します。  
   
- **記述**  
+ **説明**  
  エラー エントリのテキストを表示します。 説明文が長い場合には、追加の行に折り返されます。  
   
  **拡張子**  
  エラーを生成したスクリプト ファイルの名前を表示します。  
   
- **直線**  
+ **Line**  
  エラーを含むコード行を示す整数を表示します。  
   
- **項目**  
+ **列**  
  コード行におけるエラーの位置を示す整数を表示します。  
   
  **作品**  

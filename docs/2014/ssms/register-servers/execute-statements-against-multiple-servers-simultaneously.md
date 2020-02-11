@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 manager: jroth
 ms.openlocfilehash: 55b77ddf4284dc4f06e8036d0ae1b0c86b3544f7
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244638"
 ---
 # <a name="execute-statements-against-multiple-servers-simultaneously-sql-server-management-studio"></a>複数のサーバーに対してステートメントを同時に実行する (SQL Server Management Studio)
@@ -31,20 +31,20 @@ ms.locfileid: "75244638"
   
 -   **作業を開始する準備:**  
   
-     [保護](#Security)  
+     [セキュリティ](#Security)  
   
 -   **複数のサーバーに対してステートメントを実行するために使用するもの:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a>開始する前に  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Security"></a>保護  
+###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a>許可  
+####  <a name="Permissions"></a> Permissions  
  中央管理サーバーによって保持される接続は、ユーザーのコンテキスト内で Windows 認証を使用して実行されるため、登録済みサーバーでの有効な権限が変わることがあります。 たとえば、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] A のインスタンスでは sysadmin 固定サーバー ロールのメンバーであるユーザーでも、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] B のインスタンスでは権限が限られていることがあります。  
   
-##  <a name="SSMSProcedure"></a>SQL Server Management Studio の使用  
+##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-execute-statements-against-multiple-configuration-targets-simultaneously"></a>複数の構成対象に対してステートメントを同時に実行するには  
   
@@ -66,16 +66,13 @@ ms.locfileid: "75244638"
   
 #### <a name="to-change-the-multiserver-results-options"></a>マルチサーバーの結果オプションを変更するには  
   
-1.  
-  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]で、 **[ツール]** メニューの **[オプション]** をクリックします。  
+1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]で、 **[ツール]** メニューの **[オプション]** をクリックします。  
   
-2.  
-  **[クエリ結果]**、 **[SQL Server]** の順に展開し、 **[マルチサーバーの結果]** をクリックします。  
+2.  **[クエリ結果]** 、 **[SQL Server]** の順に展開し、 **[マルチサーバーの結果]** をクリックします。  
   
-3.  
-  **[マルチサーバーの結果]** ページで、使用するオプション設定を指定し、 **[OK]** をクリックします。  
+3.  **[マルチサーバーの結果]** ページで、使用するオプション設定を指定し、 **[OK]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [中央管理サーバーを使用して複数のサーバーを管理する](../../relational-databases/administer-multiple-servers-using-central-management-servers.md)  
+ [中央管理サーバーを使用した複数のサーバーの管理](../../relational-databases/administer-multiple-servers-using-central-management-servers.md)  
   
   

@@ -13,13 +13,14 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: ccb2689b24914a0a953c1b9f7325cd5aa9c75d0d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014120"
 ---
 # <a name="multipolygon"></a>MultiPolygon
+  
   `MultiPolygon` インスタンスは、0 個以上の `Polygon` インスタンスのコレクションです。  
   
 ## <a name="polygon-instances"></a>Polygon インスタンス  
@@ -29,7 +30,7 @@ ms.locfileid: "66014120"
   
  この図は次のことを示しています。  
   
--   図 1 は、2 つの `Polygon` 要素を持つ `MultiPolygon` インスタンスです。 境界は、2 つの外部リングと 3 つの内部リングによって定義されています。  
+-   図 1 は、2 つの `MultiPolygon` 要素を持つ `Polygon` インスタンスです。 境界は、2 つの外部リングと 3 つの内部リングによって定義されています。  
   
 -   図 2 は、2 つの `MultiPolygon` 要素を持つ `Polygon` インスタンスです。 境界は、2 つの外部リングと 3 つの内部リングによって定義されています。 2 つの `Polygon` 要素は接点で交差しています。  
   
@@ -38,9 +39,10 @@ ms.locfileid: "66014120"
   
 -   空の `MultiPolygon` インスタンスである。  
   
--   `MultiPolygon` インスタンスを構成するすべてのインスタンスが、許容される `Polygon` インスタンスである。 詳細については、受け入れられる`Polygon`インスタンスを参照してください[多角形](../spatial/polygon.md)します。  
+-   
+  `MultiPolygon` インスタンスを構成するすべてのインスタンスが、許容される `Polygon` インスタンスである。 許容`Polygon`されるインスタンスの詳細については、「 [Polygon](../spatial/polygon.md)」を参照してください。  
   
- 次の例に示す許容される`MultiPolygon`インスタンス。  
+ 次の例は、 `MultiPolygon`許容されるインスタンスを示しています。  
   
 ```  
 DECLARE @g1 geometry = 'MULTIPOLYGON EMPTY';  
@@ -57,11 +59,13 @@ DECLARE @g geometry = 'MULTIPOLYGON(((1 1, 1 -1, -1 -1, -1 1, 1 1)),((1 1, 3 1, 
  MultiPolygon の 2 番目のインスタンスは LineString インスタンスであり、許容される Polygon インスタンスではありません。  
   
 ### <a name="valid-instances"></a>有効なインスタンス  
- `MultiPolygon` インスタンスは、空の `MultiPolygon` インスタンスであるか、次の条件を満たす場合に有効です。  
+ 
+  `MultiPolygon` インスタンスは、空の `MultiPolygon` インスタンスであるか、次の条件を満たす場合に有効です。  
   
-1.  すべてのインスタンスを構成する、`MultiPolygon`インスタンスが、有効な`Polygon`インスタンス。 有効な`Polygon`インスタンスを参照してください[多角形](../spatial/polygon.md)します。  
+1.  `MultiPolygon`インスタンスを構成するすべてのインスタンスが有効`Polygon`なインスタンスです。 有効な`Polygon`インスタンスについては、「 [Polygon](../spatial/polygon.md)」を参照してください。  
   
-2.  `Polygon` インスタンスを構成する `MultiPolygon` インスタンスが重なっていない。  
+2.  
+  `Polygon` インスタンスを構成する `MultiPolygon` インスタンスが重なっていない。  
   
  次の例に、2 つの有効な `MultiPolygon` インスタンスと 1 つの無効な `MultiPolygon` インスタンスを示します。  
   
@@ -72,9 +76,11 @@ DECLARE @g3 geometry = 'MULTIPOLYGON(((2 2, 2 -2, -2 -2, -2 2, 2 2)),((1 1, 3 1,
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();  
 ```  
   
- `@g2` は、2 つの `Polygon` インスタンスが 1 つの接点のみで接しているため有効です。 `@g3` は、2 つの `Polygon` インスタンスの内部が互いに重なっているため無効です。  
+ 
+  `@g2` は、2 つの `Polygon` インスタンスが 1 つの接点のみで接しているため有効です。 
+  `@g3` は、2 つの `Polygon` インスタンスの内部が互いに重なっているため無効です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、 `geometry``MultiPolygon` インスタンスを作成し、2 つ目の構成要素の Well-Known Text (WKT) を返します。  
   
 ```  
@@ -91,7 +97,7 @@ SET @g = geometry::Parse('MULTIPOLYGON EMPTY');
 ```  
   
 ## <a name="see-also"></a>参照  
- [Polygon](../spatial/polygon.md)   
+ [ポリゴン](../spatial/polygon.md)   
  [STArea &#40;geometry データ型&#41;](/sql/t-sql/spatial-geometry/starea-geometry-data-type)   
  [STCentroid &#40;geometry データ型&#41;](/sql/t-sql/spatial-geometry/stcentroid-geometry-data-type)   
  [STPointOnSurface &#40;geometry データ型&#41;](/sql/t-sql/spatial-geometry/stpointonsurface-geometry-data-type)   

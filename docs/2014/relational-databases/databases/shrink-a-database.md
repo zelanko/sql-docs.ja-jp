@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 21f58cd6991b760edeefb81c37e02c617f8e09cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917009"
 ---
 # <a name="shrink-a-database"></a>データベースの圧縮
@@ -59,31 +59,32 @@ ms.locfileid: "62917009"
 ###  <a name="Security"></a> セキュリティ  
   
 ####  <a name="Permissions"></a> Permissions  
- **sysadmin** 固定サーバー ロールまたは **db_owner** 固定データベース ロールのメンバーシップが必要です。  
+ **Sysadmin**固定サーバーロールまたは**db_owner**固定データベースロールのメンバーシップが必要です。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-shrink-a-database"></a>データベースを圧縮するには  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続し、そのインスタンスを展開します。  
+1.  **オブジェクトエクスプローラー**で、の[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]インスタンスに接続し、そのインスタンスを展開します。  
   
-2.  **[データベース]** を展開し、圧縮するデータベースを右クリックします。  
+2.  [**データベース**] を展開し、圧縮するデータベースを右クリックします。  
   
-3.  **[タスク]** 、 **[圧縮]** の順にポイントし、 **[データベース]** をクリックします。  
+3.  
+  **[タスク]**、 **[圧縮]** の順にポイントし、 **[データベース]** をクリックします。  
   
      **[データベース]**  
      選択しているデータベースの名前が表示されます。  
   
-     **[現在割り当てられている領域]**  
+     **現在割り当てられている領域**  
      選択されているデータベースの使用済み領域と未使用領域の合計を表示します。  
   
-     **[使用可能な空き領域]**  
+     **使用可能な空き領域**  
      選択されているデータベースのログ ファイルおよびデータ ファイル内の空き領域の合計を表示します。  
   
-     **[未使用領域の解放前にファイルを再構成する]**  
+     **未使用領域を解放する前にファイルを再構成する**  
      このオプションをオンにすることは、目的のパーセント オプションを指定して DBCC SHRINKDATABASE を実行することと同じです。 このオプションをオフにすると、TRUNCATEONLY オプションを使用して DBCC SHRINKDATABASE を実行するのと同じ効果があります。 既定では、ダイアログが開いたときに、このオプションはオフに設定されます。 このオプションをオンにした場合、ユーザーは目的のパーセント オプションを指定する必要があります。  
   
-     **[圧縮後のファイルの最大空き領域]**  
+     **圧縮後のファイルの最大空き領域**  
      データベースを圧縮した後に、データベース ファイル内に残す空き領域の最大パーセンテージを入力します。 0 ～ 99 の値を指定できます。  
   
 4.  **[OK]** をクリックします。  
@@ -103,12 +104,12 @@ ms.locfileid: "62917009"
 ##  <a name="FollowUp"></a>補足情報: データベースを圧縮した後  
  ファイルを圧縮するために移動されたデータは、ファイル内のあらゆる使用可能な場所に分散される場合があります。 これにより、インデックスの断片化が発生し、広範なインデックスを検索するクエリのパフォーマンスが低下する場合があります。 断片化を解消するには、圧縮後にファイルのインデックスを再構築することを検討してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ファイルの圧縮](shrink-a-file.md)   
- [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)   
- [sys.database_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)   
- [DBCC &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-transact-sql)   
- [DBCC SHRINKFILE &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-shrinkfile-transact-sql)   
+ [データベース &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)   
+ [database_files &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)   
+ [DBCC &#40;Transact-sql&#41;](/sql/t-sql/database-console-commands/dbcc-transact-sql)   
+ [DBCC SHRINKFILE &#40;Transact-sql&#41;](/sql/t-sql/database-console-commands/dbcc-shrinkfile-transact-sql)   
  [データベース ファイルとファイル グループ](database-files-and-filegroups.md)  
   
   

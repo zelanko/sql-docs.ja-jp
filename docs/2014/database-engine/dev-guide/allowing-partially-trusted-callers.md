@@ -1,5 +1,5 @@
 ---
-title: 許可を部分的に信頼される呼び出し元 |Microsoft Docs
+title: 部分的に信頼された呼び出し元を許可する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,16 +16,17 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bed854ba13bec4206f3ee869795af91c4da4f525
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62754200"
 ---
 # <a name="allowing-partially-trusted-callers"></a>部分的に信頼される呼び出し元の許容
   コード ライブラリの共有は、共通言語ランタイム (CLR) 統合に関する共通のシナリオです。この場合、ユーザー定義型、ストアド プロシージャ、ユーザー定義関数、ユーザー定義集計、トリガー、またはユーティリティ クラスを含んだアセンブリは、しばしば別のアセンブリまたはアプリケーションによってアクセスされます。 複数のアプリケーションで共有されるコード ライブラリは、厳密な名前で署名する必要があります。  
   
- `System.Security.AllowPartiallyTrustedCallers` 属性で明示的にマークされていない共有マネージド コード アセンブリにアクセスできるのは、ランタイム コード アクセス セキュリティ システムによって完全に信頼されるアプリケーションだけです。 部分的に信頼されるアセンブリ ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で `SAFE` または `EXTERNAL_ACCESS` 権限セットを使用して登録されているアセンブリ) が、この属性なしに、厳密な名前で署名されたアセンブリへのアクセスを試行すると、`System.Security.SecurityException` がスローされます。 表示されるエラー メッセージは、次のような。  
+ 
+  `System.Security.AllowPartiallyTrustedCallers` 属性で明示的にマークされていない共有マネージド コード アセンブリにアクセスできるのは、ランタイム コード アクセス セキュリティ システムによって完全に信頼されるアプリケーションだけです。 部分的に信頼されるアセンブリ ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で `SAFE` または `EXTERNAL_ACCESS` 権限セットを使用して登録されているアセンブリ) が、この属性なしに、厳密な名前で署名されたアセンブリへのアクセスを試行すると、`System.Security.SecurityException` がスローされます。 次のようなエラーメッセージが表示されます。  
   
 ```  
 Msg 6522, Level 16, State 1, Procedure usp_RSTest, Line 0  
@@ -39,13 +40,13 @@ IPermission permThatFailed) at
 Microsoft.Samples.SqlServer.TestResultSet.Test()  
 ```  
   
- グローバル アセンブリ キャッシュに追加されるアセンブリを除き、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に登録されるすべてのアセンブリは、`AllowPartiallyTrustedCallers` 属性でマークすることをお勧めします。それにより、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって読み込まれるアセンブリが相互にアクセスできるようになります。 グローバル アセンブリ キャッシュに追加されるアセンブリは、部分的に信頼される呼び出し元から予期しないコンテキストで使用できるようになるため、`AllowPartiallyTrustedCallers` 属性を追加する前に、安全性について十分に確認する必要があります。 アセンブリは、完全に信頼されないようにする ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に `UNSAFE` 権限セットを使用して登録する) 必要があります。  
+ グローバル アセンブリ キャッシュに追加されるアセンブリを除き、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に登録されるすべてのアセンブリは、`AllowPartiallyTrustedCallers` 属性でマークすることをお勧めします。それにより、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって読み込まれるアセンブリが相互にアクセスできるようになります。 グローバル アセンブリ キャッシュに追加されるアセンブリは、部分的に信頼される呼び出し元から予期しないコンテキストで使用できるようになるため、`AllowPartiallyTrustedCallers` 属性を追加する前に、安全性について十分に確認する必要があります。 アセンブリは、完全に信頼されないようにする (`UNSAFE` に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 権限セットを使用して登録する) 必要があります。  
   
  詳細については、.NET Framework Software Development Kit の「部分信頼コードからのライブラリの使用」を参照してください。  
   
 ## <a name="example"></a>例  
   
-### <a name="description"></a>説明  
+### <a name="description"></a>[説明]  
  多数のサーバー側 CLR 統合アプリケーションにとって役立つユーティリティ クラスがあるとします。 たとえば、クエリを呼び出した結果を表すクラスです。 このコンポーネントを共有できるようにするには、このユーティリティ クラスを別個のアセンブリに配置します。 それにより、このアセンブリは、CLR 統合オブジェクトを含んだ他のさまざまなアセンブリから参照されます。 このユーティリティ クラスは、さまざまなサーバー アプリケーションで使用されるため、十分に確認し、セキュリティ上のすべての問題を解決しておきます。 次に、そのユーティリティ クラスを含んだアセンブリに、`AllowPartiallyTrustedCallers` 属性を適用します。それにより、`SAFE` または `EXTERNAL_ACCESS` 権限セットでマークされたアセンブリに含まれた CLR 統合オブジェクトは、別のアセンブリに配置されている場合でも、このユーティリティ クラスおよびメソッドを使用することができます。  
   
  新しい接続を開いたりすべての結果をメモリに読み取ったりせずに、クエリの結果を確認しながらコマンドを実行することができると便利な場合があります。 ADO.NET 2.0 の複数のアクティブな結果セット (MARS) 機能は、その実行を支援するテクノロジです。 現在、MARS は、サーバー側プログラミングに使用されるインプロセス プロバイダーには実装されていません。 この制限に対処するために、サーバー側カーソルを使用することができます。 このサンプルでは、サーバー側プログラミングで MARS がサポートされないことに対処するための、サーバー側カーソルの使用方法を示します。  
@@ -60,7 +61,7 @@ Microsoft.Samples.SqlServer.TestResultSet.Test()
   
  また、このサンプルでは、AllowPartiallyTrustedCallers 属性を使用して、ResultSet アセンブリが他のアセンブリから安全に呼び出されるライブラリであることを指定する方法を示します。 この方法はやや複雑ですが、UNSAFE 権限を使用して呼び出し側のアセンブリを登録する方法よりはるかに安全性に優れています。 呼び出し側のアセンブリを safe として登録することで、そのアセンブリがサーバー外部のリソースに与える影響が制限されるため、サーバーの整合性が維持されます。  
   
- このサンプルのビルド手順では、ソース コード ファイルが c:\samples というディレクトリにあると仮定しています。  別のディレクトリを使用する場合は、[!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトを修正する必要があります。 [!INCLUDE[tsql](../../includes/tsql-md.md)]スクリプトでは、AdventureWorks データベースも必要です。 AdventureWorks サンプル データベースをダウンロードすることができます、 [Microsoft SQL Server のサンプルとコミュニティのプロジェクト](https://go.microsoft.com/fwlink/?LinkID=85384)ホーム ページ。  
+ このサンプルのビルド手順では、ソース コード ファイルが c:\samples というディレクトリにあると仮定しています。  別のディレクトリを使用する場合は、[!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトを修正する必要があります。 スクリプト[!INCLUDE[tsql](../../includes/tsql-md.md)]では、AdventureWorks データベースも必要です。 AdventureWorks サンプルデータベースは、 [Microsoft SQL Server のサンプルとコミュニティのプロジェクト](https://go.microsoft.com/fwlink/?LinkID=85384)のホームページからダウンロードできます。  
   
  サンプルをビルドして実行するには、1 つ目のコード リストを ResultSet.cs という名前のファイルに貼り付け、csc /target:library ResultSet.cs を指定してコンパイルします。  
   

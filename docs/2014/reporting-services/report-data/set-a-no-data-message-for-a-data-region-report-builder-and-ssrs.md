@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f2660582b03a121a81976d6bbc12afc1213877c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107084"
 ---
 # <a name="set-a-no-data-message-for-a-data-region-report-builder-and-ssrs"></a>データ領域にデータがないことを示すメッセージの設定 (レポート ビルダーおよび SSRS)
@@ -27,7 +27,7 @@ ms.locfileid: "66107084"
   
 1.  [デザイン] ビューで、デザイン画面のテーブル、マトリックス、一覧データ領域、またはサブレポートをクリックして選択します。 選択したアイテムのプロパティがプロパティ ペインに表示されます。  
   
-2.  プロパティ ペインで、メッセージとして表示するテキストを入力`NoRowsMessage`プロパティ フィールド。  
+2.  プロパティペインで、プロパティフィールドに`NoRowsMessage`メッセージとして表示するテキストを入力します。  
   
      または、ドロップダウン リストから **[式]** をクリックして **[式]** ダイアログ ボックスを開き、式を作成します。  
   
@@ -35,9 +35,9 @@ ms.locfileid: "66107084"
   
 1.  [デザイン] ビューで、デザイン画面のグラフをクリックして選択します。 選択したアイテムのプロパティがプロパティ ペインに表示されます。  
   
-2.  プロパティ ペインでのノードを展開`NoDataMessage`します。  
+2.  プロパティペインで、の`NoDataMessage`ノードを展開します。  
   
-3.  **キャプション**、内のメッセージとして表示するテキストを入力`NoDataMessage`プロパティ フィールド。  
+3.  [**キャプション**] に、プロパティフィールドに`NoDataMessage`メッセージとして表示するテキストを入力します。  
   
      または、ドロップダウン リストから **[式]** をクリックして **[式]** ダイアログ ボックスを開き、式を作成します。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66107084"
   
 1.  [デザイン] ビューで、デザイン画面のサブレポートをクリックして選択します。 選択したアイテムのプロパティがプロパティ ペインに表示されます。  
   
-2.  プロパティ ペインで、メッセージとして表示するテキストを入力`NoRowsMessage`プロパティ フィールド。  
+2.  プロパティペインで、プロパティフィールドに`NoRowsMessage`メッセージとして表示するテキストを入力します。  
   
      または、ドロップダウン リストから **[式]** をクリックして **[式]** ダイアログ ボックスを開き、式を作成します。  
   
@@ -53,12 +53,12 @@ ms.locfileid: "66107084"
   
 1.  [デザイン] ビューで、マップのカラー スケールをクリックして選択します。 選択したアイテムのプロパティがプロパティ ペインに表示されます。  
   
-2.  プロパティ ウィンドウで `NoDataText`データ値を持たない色のラベルとして表示するテキストを入力します。  
+2.  プロパティペインの [] に`NoDataText`、データ値のない色のラベルとして表示するテキストを入力します。  
   
      または、ドロップダウン リストから **[式]** をクリックして **[式]** ダイアログ ボックスを開き、式を作成します。  
   
 ## <a name="see-also"></a>参照  
- [サブレポート (レポート ビルダーおよび SSRS)](../report-design/subreports-report-builder-and-ssrs.md)   
+ [サブレポート &#40;レポート ビルダーおよび SSRS&#41;](../report-design/subreports-report-builder-and-ssrs.md)   
  [テーブル、マトリックス、および一覧 &#40;レポート ビルダーおよび SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
  [グラフ &#40;レポート ビルダーおよび SSRS&#41;](../report-design/charts-report-builder-and-ssrs.md)   
  [マップ &#40;レポート ビルダーおよび SSRS&#41;](../report-design/maps-report-builder-and-ssrs.md)   

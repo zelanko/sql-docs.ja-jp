@@ -1,5 +1,5 @@
 ---
-title: マップ レポートのサポートの計画 |Microsoft Docs
+title: マップレポートのサポートを計画する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,19 +11,19 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: df796e2dd4e132164f00716a9cb12f7b498d8984
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108078"
 ---
 # <a name="plan-for-map-report-support"></a>マップ レポートのサポートを計画する
-  [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 空間データ ソースを使用するマップ レポートをサポートしています。 空間データは、SQL Server データベース、ESRI シェープファイル、または Reporting Services かレポート ビルダーを使用してインストールされたマップ ギャラリーから取得できます。 また、マップには Bing のマップ タイルの背景も表示できます。 レポート作成者には、動的と実行時に取得した、または静的と、レポート定義に埋め込まれたとして空間データまたは Bing のマップ タイルを示すレポートを作成できます。  
+  [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]では、空間データソースを使用するマップレポートがサポートされています。 空間データは、SQL Server データベース、ESRI シェープファイル、または Reporting Services かレポート ビルダーを使用してインストールされたマップ ギャラリーから取得できます。 また、マップには Bing のマップ タイルの背景も表示できます。 レポートの作成者は、空間データまたは Bing のマップ タイルが動的であり実行時に取得されるか、静的でありレポート定義に埋め込まれるかを指定してレポートを作成できます。  
   
 ## <a name="support-for-bing-maps"></a>Bing Maps のサポート  
  マップには、Bing のマップ タイルを表示する背景レイヤーを含めることができます。 マップ タイル レイヤーを含むパブリッシュ済みレポートを表示するには、Bing Maps Web サービスからタイルを取得するようにレポート サーバーを構成する必要があります。 詳しくは、「 [RSReportServer Configuration File](report-server/rsreportserver-config-configuration-file.md)」をご覧ください。  
   
- 各レポートについて、レポート作成者は、タイル サーバーからタイルを取得する際に SSL (Secure Sockets Layer) 接続を使用するかどうかを指定できます。 タイル レイヤーのプロパティ ウィンドウで、UseSecureConnection ブール型プロパティを設定する必要がありますに`true`します。  
+ 各レポートについて、レポート作成者は、タイル サーバーからタイルを取得する際に SSL (Secure Sockets Layer) 接続を使用するかどうかを指定できます。 この操作を行うには、タイルレイヤーの [プロパティ] ペインで、ブール型プロパティの UseSecureConnection `true`をに設定する必要があります。  
   
 > [!NOTE]  
 >  レポート内での Bing のマップ タイルの使用については、「 [追加使用条件](https://go.microsoft.com/fwlink/?LinkId=151371) 」および「 [プライバシーに関する声明](https://go.microsoft.com/fwlink/?LinkId=151372)」を参照してください。  
@@ -41,15 +41,15 @@ ms.locfileid: "66108078"
   
  マップを含むレポート定義のサイズを削減するには、次の選択肢を 1 つ以上実行します。  
   
--   レポート デザイナーから[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]、ESRI シェープファイルをレポート サーバー プロジェクトには空間データ ソースを追加します。 プロジェクトの配置時に、レポートに加えて ESRI シェープファイルがレポート サーバーにパブリッシュされます。 マップ ウィザードを実行する際に、レポート サーバー プロジェクトの空間データ ソースを指定すると、既定でマップ要素はレポート定義に埋め込まれません。  
+-   の[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]レポートデザイナーから、ESRI シェープファイルの空間データソースをレポートサーバープロジェクトに追加します。 プロジェクトの配置時に、レポートに加えて ESRI シェープファイルがレポート サーバーにパブリッシュされます。 マップ ウィザードを実行する際に、レポート サーバー プロジェクトの空間データ ソースを指定すると、既定でマップ要素はレポート定義に埋め込まれません。  
   
--   レポート ビルダーでは、ESRI シェープファイルをレポート サーバーからのシェープファイルを選択して、空間データ ソースを追加します。 マップ ウィザードを実行する際に、レポート サーバーの空間データ ソースを参照して指定すると、既定でマップ要素はレポート定義に埋め込まれません。  
+-   レポートビルダーから、レポートサーバーからシェープファイルを選択して、ESRI シェープファイルの空間データソースを追加します。 マップ ウィザードを実行する際に、レポート サーバーの空間データ ソースを参照して指定すると、既定でマップ要素はレポート定義に埋め込まれません。  
   
 -   マップ データを埋め込みマップ データにする必要がある場合、ビューポートの中心位置とズーム レベルを調整して、レポートに必要なマップ データのみが含まれるようにする。  
   
- 詳細については、[マップ&#40;レポート ビルダーおよび SSRS&#41;](report-design/maps-report-builder-and-ssrs.md)します。  
+ 詳細については、 [&#40;レポートビルダーと SSRS&#41;をマップ](report-design/maps-report-builder-and-ssrs.md)します。  
   
 ## <a name="see-also"></a>参照  
- [レポートのトラブルシューティング: マップ レポート &#40;レポート ビルダーおよび SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [レポートのトラブルシューティング: マップレポート &#40;レポートビルダーと SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

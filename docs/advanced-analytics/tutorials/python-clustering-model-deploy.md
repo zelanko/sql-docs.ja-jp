@@ -12,10 +12,10 @@ ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: df0fd7cb27977679a6ca879d7ae01045ed3fa8c8
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727139"
 ---
 # <a name="tutorial-deploy-a-model-in-python-to-categorize-customers-with-sql-server-machine-learning-services"></a>チュートリアル:モデルを Python に配置し、SQL Server Machine Learning Services で顧客を分類する
@@ -35,13 +35,13 @@ ms.locfileid: "73727139"
 > * SQL Server でのクラスタリング
 > * クラスタリング情報の使用
 
-[第 1 部](python-clustering-model.md)では、前提条件をインストールしてサンプル データベースを復元しました。
+[パート 1 ](python-clustering-model.md)では、前提条件をインストールしてサンプル データベースを復元しました。
 
-[第 2 部](python-clustering-model-prepare-data.md)では、SQL データベースからデータを準備してクラスタリングを実行する方法を学びました。
+[パート 2 ](python-clustering-model-prepare-data.md)では、SQL データベースからデータを準備してクラスタリングを実行する方法を学びました。
 
 [第 3 部](python-clustering-model-build.md)では、Python で K-Means クラスタリング モデルを作成し、トレーニングする方法を学びました。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 * このチュートリアルシリーズの第 4 部は、[**第 1 部**](python-clustering-model.md)の前提条件を満たし、[**第 2 部**](python-clustering-model-prepare-data.md)および[**第 3 部**](python-clustering-model-build.md)の手順を完了していることを前提としています。
 
@@ -177,17 +177,17 @@ SELECT customer.[c_email_address], customer.c_customer_sk
 
 このチュートリアルの終了後は、SQL Server から tpcxbb_1gb データベースを削除してかまいません。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
-本チュートリアル シリーズの第 4 部では、以下の手順を完了しました。
+本チュートリアル シリーズのパート 4 では、以下の手順を完了しました。
 
 * モデルを生成するストアド プロシージャの作成
 * SQL Server でのクラスタリング
 * クラスタリング情報の使用
 
-SQL Server Machine Learning Services における Pythonの使用について、詳しくは以下の記事を参照してください。
+SQL Server Machine Learning Services における Python の使用について、詳しくは以下の記事を参照してください。
 
-* [クイックスタート: SQL Server Machine Learning Services で簡単な Python スクリプトを作成して実行する](quickstart-python-create-script.md)
+* [クイック スタート: SQL Server Machine Learning Services を使用した単純な Python スクリプトの作成と実行](quickstart-python-create-script.md)
 * [SQL Server Machine Learning Services 用の、その他の Python チュートリアル](sql-server-python-tutorials.md)
 * [sqlmlutils を使用した Python パッケージのインストール](../package-management/install-additional-python-packages-on-sql-server.md)
 

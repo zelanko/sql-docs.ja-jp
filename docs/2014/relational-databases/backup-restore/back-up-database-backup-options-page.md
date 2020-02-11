@@ -14,13 +14,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c8030a0005f0f5b949a3eecd12d73f3a3aa709c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62876865"
 ---
-# <a name="back-up-database-backup-options-page"></a>[データベースのバックアップ] \([バックアップ オプション] ページ)
+# <a name="back-up-database-backup-options-page"></a>[データベースのバックアップ] ([バックアップ オプション] ページ)
   **[データベースのバックアップ]** ダイアログ ボックスの **[バックアップ オプション]** ページを使用すると、データベースのバックアップのオプションを表示または変更できます。  
   
  **SQL Server Management Studio を使用してバックアップを作成するには**  
@@ -35,7 +35,7 @@ ms.locfileid: "62876865"
 > [!NOTE]  
 >  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用してバックアップ タスクを指定する場合、 [!INCLUDE[tsql](../../includes/tsql-md.md)][[スクリプト]](/sql/t-sql/statements/backup-transact-sql) ボタンをクリックしてスクリプトの保存先を選択することにより、対応する **BACKUP** スクリプトを生成できます。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
   
 ### <a name="backup-set"></a>バックアップ セット  
  **[バックアップ セット]** パネルのオプションでは、バックアップ操作で作成されるバックアップ セットに関する情報を指定できます。  
@@ -45,7 +45,7 @@ ms.locfileid: "62876865"
   
  バックアップ セットの詳細については、「[メディア セット、メディア ファミリ、およびバックアップ セット &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md)」を参照してください。  
   
- **[説明]**  
+ **説明**  
  バックアップ セットの説明を入力します。  
   
  **[バックアップ セットの有効期限]**  
@@ -53,7 +53,7 @@ ms.locfileid: "62876865"
   
 |||  
 |-|-|  
-|**After**|このバックアップ セットが失効して上書きできるようになるまでの経過日数を指定します。 0 ～ 99,999 日の値を指定できます。0 日を指定すると、バックアップ セットの有効期限は無期限になります。<br /><br /> バックアップの有効期限の既定値は、 **[バックアップ メディアの既定の保有期間 (日)]** オプションの値のセットです。 このオプションを表示するには、オブジェクト エクスプローラーでサーバー名を右クリックし、 **[プロパティ]** を選択した後、 **[サーバーのプロパティ]** ダイアログ ボックスの **[データベースの設定]** ページをクリックします。|  
+|**変更後**|このバックアップ セットが失効して上書きできるようになるまでの経過日数を指定します。 0 ～ 99,999 日の値を指定できます。0 日を指定すると、バックアップ セットの有効期限は無期限になります。<br /><br /> バックアップの有効期限の既定値は、 **[バックアップ メディアの既定の保有期間 (日)]** オプションの値のセットです。 このオプションを表示するには、オブジェクト エクスプローラーでサーバー名を右クリックし、 **[プロパティ]** を選択した後、 **[サーバーのプロパティ]** ダイアログ ボックスの **[データベースの設定]** ページをクリックします。|  
 |**基準**|バックアップ セットが失効して上書きできるようになる特定の日を指定します。|  
   
 ### <a name="compression"></a>圧縮  
@@ -86,7 +86,7 @@ ms.locfileid: "62876865"
 >   
 >  拡張キー管理 (EKM) に存在するキーのみがサポートされます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [トランザクション ログのバックアップ &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)   
  [ファイルおよびファイル グループのバックアップ &#40;SQL Server&#41;](back-up-files-and-filegroups-sql-server.md)   

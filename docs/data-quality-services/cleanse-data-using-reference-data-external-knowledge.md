@@ -12,10 +12,10 @@ ms.assetid: 158009e9-8069-4741-8085-c14a5518d3fc
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: fc0135ed4e4956d6bd98fc0b467a5b6d0a25a013
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75557907"
 ---
 # <a name="cleanse-data-using-external-knowledge-reference-data---data-quality-services-dqs"></a>(外部の) ナレッジ参照データを使用してデータをクレンジングする-Data Quality Services (DQS)
@@ -46,14 +46,14 @@ ms.locfileid: "75557907"
   
 -   追加データがソースに追加され、クレンジングされたデータと一緒に情報をエクスポートできるようになります。  
   
-## <a name="before-you-begin"></a>開始する前に  
+## <a name="before-you-begin"></a>はじめに  
   
-###  <a name="Prerequisites"></a>応募  
+###  <a name="Prerequisites"></a> 前提条件  
  DQS のナレッジ ベース内の必要なドメインを適切な参照データ サービスにマップしておく必要があります。 また、クレンジングするデータの種類に関するナレッジがナレッジ ベースに含まれている必要があります。 たとえば、米国の住所が格納されたソース データをクレンジングする場合は、米国の住所に関する高品質データを提供する参照データ サービス プロバイダーにドメインをマップする必要があります。 詳細については、「 [参照データへのドメインまたは複合ドメインのアタッチ](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md)」を参照してください。  
   
-###  <a name="Security"></a>保護  
+###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a>許可  
+####  <a name="Permissions"></a> Permissions  
  データ クレンジングを実行するには、DQS_MAIN データベースの dqs_kb_editor ロールまたは dqs_kb_operator ロールが必要です。  
   
 ##  <a name="Cleanse"></a>参照データのナレッジを使用してデータをクレンジングする  
@@ -62,8 +62,7 @@ ms.locfileid: "75557907"
 1.  データ品質プロジェクトを作成し、 **[クレンジング]** アクティビティを選択します。 「 [Create a Data Quality Project](../data-quality-services/create-a-data-quality-project.md)」を参照してください。  
   
 2.  
-  **[マップ]** ページで、 **Address Line**、 **City**、 **State**、および **Zip**の 4 つのドメインをソース データの適切な列にマップします。 
-  **[次へ]** をクリックします。  
+  **[マップ]** ページで、 **Address Line**、 **City**、 **State**、および **Zip**の 4 つのドメインをソース データの適切な列にマップします。 **[次へ]** をクリックします。  
   
     > [!NOTE]  
     >  

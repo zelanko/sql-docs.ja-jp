@@ -20,29 +20,30 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 352c71c70f67e9b93017511dcfe33bebe076ad17
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73773040"
 ---
 # <a name="supporting-distributed-transactions"></a>分散トランザクションのサポート
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーのコンシューマーは、 **ITransactionJoin:: JoinTransaction**メソッドを使用して、Microsoft 分散トランザクションコーディネーター (MS DTC) によって調整された分散トランザクションに参加できます。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーのコンシューマーは、 **ITransactionJoin:: jointransaction**メソッドを使用して、Microsoft 分散トランザクションコーディネーター (MS DTC) によって調整された分散トランザクションに参加できます。  
   
- MS DTC が公開する COM オブジェクトを使用すると、クライアントは、さまざまなデータ ストアに対する複数の接続にまたがってコーディネートされるトランザクションを起動したり、このトランザクションに参加することができます。 トランザクションを開始するために、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーコンシューマーは MS DTC **ITransactionDispenser**インターフェイスを使用します。 **ITransactionDispenser** の **BeginTransaction** メンバーは、分散トランザクション オブジェクト上の参照を返します。 この参照は、 **Jointransaction**を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーに渡されます。  
+ MS DTC が公開する COM オブジェクトを使用すると、クライアントは、さまざまなデータ ストアに対する複数の接続にまたがってコーディネートされるトランザクションを起動したり、このトランザクションに参加することができます。 トランザクションを開始するために[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、Native Client OLE DB プロバイダーコンシューマーは MS DTC **ITransactionDispenser**インターフェイスを使用します。 
+  **ITransactionDispenser** の **BeginTransaction** メンバーは、分散トランザクション オブジェクト上の参照を返します。 この参照は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **jointransaction**を使用して Native Client OLE DB プロバイダーに渡されます。  
   
  MS DTC は、分散トランザクションでの非同期のコミットとアボートをサポートします。 非同期トランザクションの状態を通知する場合、コンシューマーは、**ITransactionOutcomeEvents** インターフェイスを実装し、そのインターフェイスを MS DTC トランザクション オブジェクトに接続します。  
   
- 分散トランザクションの場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、次のように**ITransactionJoin:: JoinTransaction**パラメーターを実装します。  
+ 分散トランザクションの場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、次のように**ITransactionJoin:: jointransaction**パラメーターを実装します。  
   
-|パラメーター|説明|  
+|パラメーター|[説明]|  
 |---------------|-----------------|  
 |*punkTransactionCoord*|MS DTC トランザクション オブジェクトへのポインター。|  
 |*IsoLevel*|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーによって無視されます。 MS DTC によりコーディネートされるトランザクションの分離レベルは、コンシューマーが MS DTC からトランザクション オブジェクトを取得するときに決まります。|  
-|*IsoFlags*|0 を指定する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、コンシューマーによって他の値が指定されている場合に XACT_E_NOISORETAIN を返します。|  
-|*POtherOptions*|NULL でない場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、インターフェイスから options オブジェクトを要求します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、options オブジェクトの*Ultimeout*メンバーが0でない場合に XACT_E_NOTIMEOUT を返します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、 *Szdescription*メンバーの値を無視します。|  
+|*IsoFlags*|0 を指定する必要があります。 他[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の値がコンシューマーによって指定されている場合、Native Client OLE DB プロバイダーは XACT_E_NOISORETAIN を返します。|  
+|*Poruncommand オプション*|NULL 以外の場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、インターフェイスから options オブジェクトを要求します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、オプションオブジェクトの*ultimeout*メンバーが0でない場合に XACT_E_NOTIMEOUT を返します。 Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB プロバイダーは、 *szdescription*メンバーの値を無視します。|  
   
  次の例では、MS DTC を使用してトランザクションをコーディネートします。  
   
@@ -142,6 +143,6 @@ if (FAILED(pITransactionJoin->JoinTransaction(
 ```  
   
 ## <a name="see-also"></a>参照  
- [の](../../relational-databases/native-client-ole-db-transactions/transactions.md)  
+ [トランザクション](../../relational-databases/native-client-ole-db-transactions/transactions.md)  
   
   

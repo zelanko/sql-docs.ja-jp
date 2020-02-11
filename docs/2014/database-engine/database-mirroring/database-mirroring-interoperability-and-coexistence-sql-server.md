@@ -14,22 +14,22 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2f38e7bac91c4d65e9c6209d693a598466096069
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62807308"
 ---
 # <a name="database-mirroring-interoperability-and-coexistence-sql-server"></a>データベース ミラーリング: 相互運用性と共存 (SQL Server)
   データベース ミラーリングは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の次の機能またはコンポーネントと共に使用できます。  
   
--   [AlwaysOn フェールオーバー クラスター インスタンス (SQL Server フェールオーバー クラスタ リング)](database-mirroring-and-sql-server-failover-cluster-instances.md)  
+-   [AlwaysOn フェールオーバー クラスター インスタンス (SQL Server フェールオーバー クラスタリング)](database-mirroring-and-sql-server-failover-cluster-instances.md)  
   
--   [変更データ キャプチャと変更の追跡](../../relational-databases/track-changes/change-data-capture-and-other-sql-server-features.md)  
+-   [変更データキャプチャ (および変更の追跡)](../../relational-databases/track-changes/change-data-capture-and-other-sql-server-features.md)  
   
 -   [データベース スナップショット](../../relational-databases/databases/database-snapshots-sql-server.md)  
   
--   [フルテキスト カタログ](database-mirroring-and-full-text-catalogs-sql-server.md)  
+-   [フルテキストカタログ](database-mirroring-and-full-text-catalogs-sql-server.md)  
   
 -   [ログ配布](database-mirroring-and-log-shipping-sql-server.md)  
   
@@ -43,7 +43,7 @@ ms.locfileid: "62807308"
   
 -   [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]  
   
-## <a name="see-also"></a>関連項目  
- [データベース ミラーリング &#40;SQL Server&#41;](database-mirroring-sql-server.md)  
+## <a name="see-also"></a>参照  
+ [データベースミラーリング &#40;SQL Server&#41;](database-mirroring-sql-server.md)  
   
   

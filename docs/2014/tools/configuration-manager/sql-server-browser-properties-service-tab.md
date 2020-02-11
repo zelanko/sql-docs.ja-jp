@@ -11,19 +11,22 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6421b0a7d6703e2a5d126aa83b227166492558a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211158"
 ---
 # <a name="sql-server-browser-properties-service-tab"></a>[SQL Server Browser のプロパティ] ダイアログ ボックス ([サービス] タブ)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser プログラムはサーバー上のサービスとして実行されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各種リソースに関する着信要求を受信し、このコンピューター上にインストールされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに関する情報を提供します。  
   
- **[SQL Server Browser のプロパティ]** ダイアログ ボックスの **[サービス]** タブでは、以下のオプションを表示できます。 **[開始モード]** 以外のプロパティはすべて読み取り専用です。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser プログラムはサーバー上のサービスとして実行されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ブラウザーは、リソースの[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]受信要求をリッスンし、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]コンピューターにインストールされているインスタンスに関する情報を提供します。  
   
-## <a name="options"></a>および  
- **バイナリ パス**  
+ 
+  **[SQL Server Browser のプロパティ]** ダイアログ ボックスの **[サービス]** タブでは、以下のオプションを表示できます。 
+  **[開始モード]** 以外のプロパティはすべて読み取り専用です。  
+  
+## <a name="options"></a>オプション  
+ **バイナリパス**  
  このサービスが使用するプログラム ファイルの場所が表示されます。  
   
  **エラー制御**  
@@ -32,8 +35,9 @@ ms.locfileid: "68211158"
  **終了コード**  
  エラーが発生した場合は、エラー番号がこのボックスに表示されます。 その番号を手掛かりにして障害のトラブルシューティングを行ってください。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポート技術情報でその番号を検索することも、技術サポート スタッフにその番号を連絡することも可能です。  
   
- **Host Name**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser サービスを実行しているコンピューターまたはクラスターの名前が表示されます。  
+ **ホスト名**  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser サービスを実行しているコンピューターまたはクラスターの名前が表示されます。  
   
  **名前**  
  サービスの表示名が表示されます。  
@@ -41,22 +45,24 @@ ms.locfileid: "68211158"
  **プロセス ID**  
  Windows プロセス ID が表示されます。  
   
- **[サービスの種類]**  
- 呼び出し側プロセスに提供されるサービスの種類が表示されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、いくつかのサービスがインストールされます。  
+ **サービスの種類**  
+ 呼び出し側プロセスに提供されるサービスの種類が表示されます。 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、いくつかのサービスがインストールされます。  
   
  **開始モード**  
  このサービスを以下のいずれかのモードに設定します。  
   
--   手動：このサービスは、コンピューターの起動時に自動的に開始されません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーまたは他のツールを使用してこのサービスを開始する必要があります。  
+-   手動: このサービスは、コンピューターの起動時に自動的に開始しません。 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーまたは他のツールを使用してこのサービスを開始する必要があります。  
   
--   自動：このサービスは、このコンピューターの起動時に起動しようとします。  
+-   \[自動]: このサービスは、コンピューターの起動時に開始を試みます。  
   
--   無効になっています。このサービスを開始できません。  
+-   \[無効]: このサービスは開始できません。  
   
  **State**  
- このサービスが実行中か、停止しているか、無効になっているかが表示されます。 " **...** " の場合は、状態の変更が保留になっています。  
+ このサービスが実行中か、停止しているか、無効になっているかが表示されます。 "**...**" の場合は、状態の変更が保留になっています。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [SQL Server Browser サービス](../../../2014/tools/configuration-manager/sql-server-browser-service.md)  
   
   

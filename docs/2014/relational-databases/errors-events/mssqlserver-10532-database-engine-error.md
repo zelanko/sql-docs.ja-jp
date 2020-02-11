@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cda3117df524ba90f322bbb99d6db98ee989ab71
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62870631"
 ---
-# <a name="mssqlserver10532"></a>MSSQLSERVER_10532
+# <a name="mssqlserver_10532"></a>MSSQLSERVER_10532
     
 ## <a name="details"></a>詳細  
   
@@ -30,17 +30,20 @@ ms.locfileid: "62870631"
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|PG_NO_ELIGIBLE_STMT|  
-|メッセージ テキスト|プラン ガイドを作成することはできません ' % です。\*ls' で指定されたバッチまたはモジュール`@plan_handle`はプラン ガイドに適したステートメントが含まれていません。 `@plan_handle` に別の値を指定します。|  
+|メッセージ テキスト|プラン ガイド '%.\*ls' を作成できません。`@plan_handle` で指定されたバッチまたはモジュールに、プラン ガイドに適したステートメントが含まれていません。 
+  `@plan_handle` に別の値を指定します。|  
   
 ## <a name="explanation"></a>説明  
- `@plan_handle` で指定されたバッチまたはモジュールに、プラン ガイドに適したステートメントが含まれていません。  
+ 
+  `@plan_handle` で指定されたバッチまたはモジュールに、プラン ガイドに適したステートメントが含まれていません。  
   
 ## <a name="user-action"></a>ユーザーの操作  
- `@plan_handle` に別の値を指定します。  
+ 
+  `@plan_handle` に別の値を指定します。  
   
 ## <a name="see-also"></a>参照  
- [プラン ガイド](../performance/plan-guides.md)   
- [sp_create_plan_guide &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
+ [プランガイド](../performance/plan-guides.md)   
+ [sp_create_plan_guide &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
  [sp_create_plan_guide_from_handle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql)  
   
   

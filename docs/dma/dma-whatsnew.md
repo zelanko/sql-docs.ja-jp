@@ -14,10 +14,10 @@ ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
 ms.openlocfilehash: 83009008745a696919aa5ae5795d60ddfe9ba80b
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73632886"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>Data Migration Assistant の新機能
@@ -31,7 +31,7 @@ Data Migration Assistant の v1.0 リリースでは、次の機能がサポー�
 - 評価とアップグレードのターゲットとして、Windows の場合は2019、Linux の場合は SQL Server 2019 SQL Server。
 - 以前のバージョンの Data Migration Assistant で作成された評価の保存と読み込みのサポートを含む、評価の保存と読み込み。
 - SSISDB およびパッケージストアでホストされている SSIS パッケージでホストされている SQL Server Integration Services (SSIS) プロジェクトを評価します。 データベース Migration Assistant は、ソースパッケージで使用されているサポートされていない、部分的にサポートされている機能や非推奨の機能、互換性に関する問題を検出し、これらの問題に対処するための推奨事項を提供
-- 外部アプリケーションからの SQL クエリ (ソースコード内のC# sql クエリなど) の評価。 ユーザーは、データアクセス移行ツールキットを使用して、ソースコードでC#使用される SQL クエリの完全な JSON レポートを生成し、そのレポートを Data Migration Assistant にアップロードできます。
+- 外部アプリケーションからの SQL クエリ (C# ソースコード内の SQL クエリなど) の評価。 ユーザーは、データアクセス移行ツールキットを使用して、C# ソースコードで使用される SQL クエリの完全な JSON レポートを生成し、そのレポートを Data Migration Assistant にアップロードできます。
 
 さらに、このリリースの Data Migration Assistant には追加の機能強化とバグ修正が含まれており、このツールは .Net 4.7.2 に更新されました。
 
@@ -180,7 +180,7 @@ Data Migration Assistant の v1.0 リリースは最初のリリースであり�
   - 非推奨の機能
 - アップグレード後にデータベースが恩恵を受けることのできるターゲット SQL Server プラットフォームの新機能の検出。 すべての結果は、機能に関する推奨事項として説明されており、次の領域に分類されています。
   - パフォーマンス
-  - セキュリティ
+  - Security
   - ストレージ
 - 評価を実行する最新のユーザーエクスペリエンス。
 

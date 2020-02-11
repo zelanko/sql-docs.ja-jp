@@ -18,14 +18,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 5ee2879bc0ef94d8abee20032c83a74d00696ef2
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72797842"
 ---
 # <a name="availability-group-listeners-client-connectivity-and-application-failover-sql-server"></a>可用性グループ リスナー、クライアント接続、およびアプリケーションのフェールオーバー (SQL Server)
-  このトピックでは、[!INCLUDE[ssHADR](../includes/sshadr-md.md)] クライアント接続とアプリケーションのフェールオーバー機能に関する考慮事項について説明します。  
+  このトピックでは、 [!INCLUDE[ssHADR](../includes/sshadr-md.md)] クライアント接続とアプリケーションのフェールオーバー機能に関する考慮事項について説明します。  
   
 > [!NOTE]  
 >  通常のリスナー構成では、 [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントまたは PowerShell コマンドレットを使用して最初の可用性グループ リスナーを簡単に作成できます。 詳細については、このトピックの「 [関連タスク](#RelatedTasks)」を参照してください。  
@@ -39,7 +39,7 @@ ms.locfileid: "72797842"
   
  1 つ以上の[読み取り可能なセカンダリ レプリカ](availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)に対して読み取り専用のルーティングが構成されている場合、プライマリ レプリカに対する読み取りを目的としたクライアント接続は読み取り可能なセカンダリ レプリカにリダイレクトされます。 さらに、SQL Server の 1 つのインスタンスでプライマリ レプリカがオフラインになり、SQL Server の他のインスタンスで新しいプライマリ レプリカがオンラインになると、可用性グループ リスナーによって、クライアントは新しいプライマリ レプリカに接続できます。  
   
- 可用性グループ リスナーに関する必須情報については、「[可用性グループ リスナーの作成または構成 &#40;SQL Server&#41;](availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)」を参照してください。  
+ 可用性グループ リスナーに関する必須情報については、「 [可用性グループ リスナーの作成または構成 &#40;SQL Server&#41;](availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)」を参照してください。  
   
  
   
@@ -84,7 +84,7 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
  可用性グループ リスナーのサーバー名を使用する代わりに、プライマリ レプリカまたはセカンダリ レプリカの SQL Server 名のインスタンスを直接参照することもできます。ただし、その場合、新しい接続が現在のプライマリ レプリカに自動的にダイレクトされるという利点がなくなります。  また、読み取り専用ルーティングの利点もなくなります。  
   
 ##  <a name="ConnectToSecondary"></a> リスナーを使用した読み取り専用セカンダリ レプリカ (読み取り専用ルーティング) への接続  
- *読み取り専用ルーティング*は、可用性グループ リスナーへの着信接続を、読み取り専用ワークロードを許可するように構成されたセカンダリ レプリカへルーティングする、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の機能です。 次の条件が満たされる場合、可用性グループ リスナー名を参照する着信接続を、読み取り専用レプリカに自動的にルーティングできます。  
+ *読み取り専用ルーティング[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]は、可用性グループ リスナーへの着信接続を、読み取り専用ワークロードを許可するように構成されたセカンダリ レプリカへルーティングする、* の機能です。 次の条件が満たされる場合、可用性グループ リスナー名を参照する着信接続を、読み取り専用レプリカに自動的にルーティングできます。  
   
 -   少なくとも 1 つのセカンダリ レプリカが読み取り専用アクセスに設定され、各読み取り専用セカンダリ レプリカとプライマリ レプリカが読み取り専用ルーティングをサポートするように構成されている。 詳細については、このセクションの後の「 [読み取り専用ルーティングの可用性レプリカを構成するには](#ConfigureARsForROR)」を参照してください。  
   
@@ -118,7 +118,7 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
 Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;ApplicationIntent=ReadOnly  
 ```  
   
- この接続文字列の例では、クライアントはポート 1433 で `AGListener` という名前の可用性グループ リスナーへの接続を試みます (可用性グループ リスナーが 1433 でリッスンしている場合、このポートの指定を省略できます)。  接続文字列には、`ApplicationIntent` プロパティが `ReadOnly`に設定されています。これにより、読み取りを目的とした*接続文字列*が作成されます。  この設定がない場合、サーバーは接続の読み取り専用へのルーティングを試行しません。  
+ この接続文字列の例では、クライアントはポート 1433 で `AGListener` という名前の可用性グループ リスナーへの接続を試みます (可用性グループ リスナーが 1433 でリッスンしている場合、このポートの指定を省略できます)。  接続文字列には、 `ApplicationIntent`プロパティがに`ReadOnly`設定されています。これにより、読み取りを目的とした*接続文字列*が作成されます。  この設定がない場合、サーバーは接続の読み取り専用へのルーティングを試行しません。  
   
  可用性グループのプライマリ データベースは、読み取り専用の受信ルーティング要求を処理し、プライマリ レプリカに参加していて読み取り専用ルーティング用に構成されているオンラインの読み取り専用レプリカを特定します。  クライアントは、プライマリ レプリカ サーバーから接続情報を受け取り、特定された読み取り専用レプリカに接続します。  
   
@@ -144,7 +144,7 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
   
  データベース ミラーリングの接続文字列を使用する際、クライアントは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client または .NET Framework Data Provider for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を使用できます。 クライアントが指定する接続文字列には、最低限、1 つのサーバー インスタンスの名前 ( *イニシャル パートナー名*) が指定されている必要があります。接続先の可用性レプリカを初期状態でホストするサーバー インスタンスは、この名前によって識別されます。 接続文字列には、必要に応じて、別のサーバー インスタンスの名前を指定することもできます。これを *フェールオーバー パートナー名*といい、初期状態でセカンダリ レプリカをホストするサーバー インスタンスは、フェールオーバー パートナー名として識別されます。  
   
- データベース ミラーリングの接続文字列の詳細については、「[データベース ミラーリング セッションへのクライアントの接続 &#40;SQL Server&#41;](database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)」を参照してください。  
+ データベース ミラーリングの接続文字列の詳細については、「 [データベース ミラーリング セッションへのクライアントの接続 &#40;SQL Server&#41;](database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)」を参照してください。  
   
 ##  <a name="CCBehaviorOnFailover"></a> フェールオーバー時のクライアント接続動作  
  可用性グループのフェールオーバーが発生すると、可用性グループへの既存の永続的な接続は終了します。このため、クライアントが、同じプライマリ データベースまたは読み取り専用セカンダリ データベースとの連携を保つには、新しい接続を確立する必要があります。  フェールオーバーがサーバー側で発生している間は、可用性グループへの接続が失敗することがあります。この場合、プライマリが完全にオンラインになるまで、クライアント アプリケーションは接続を再試行します。  
@@ -157,7 +157,8 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
 > [!NOTE]  
 >  可用性グループ リスナーおよび SQL Server フェールオーバー クラスター インスタンス名への単一サブネット接続およびマルチサブネット接続の両方に対して、この設定を推奨します。  このオプションを有効にすると、単一サブネットのシナリオでも、さらに最適化されます。  
   
- `MultiSubnetFailover` 接続オプションは TCP ネットワーク プロトコルのみで機能します。また、可用性グループ リスナーに接続する場合、および [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] に接続している仮想ネットワーク名を使用する場合にのみサポートされます。  
+ 
+  `MultiSubnetFailover` 接続オプションは TCP ネットワーク プロトコルのみで機能します。また、可用性グループ リスナーに接続する場合、および [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] に接続している仮想ネットワーク名を使用する場合にのみサポートされます。  
   
  マルチサブネット フェールオーバーを有効にする ADO.NET プロバイダー (System.Data.SqlClient) の接続文字列の例を次に示します。  
   
@@ -165,7 +166,9 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
 Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI; MultiSubnetFailover=True  
 ```  
   
- `MultiSubnetFailover` 接続オプションは、可用性グループが単一のサブネットのみにある場合でも、`True` に設定することをお勧めします。  これにより、今後、クライアント接続文字列を変更することなく、複数のサブネットをサポートするように新しいクライアントをあらかじめ構成することができ、単一サブネットのフェールオーバーのパフォーマンスも最適化できます。  `MultiSubnetFailover` 接続オプションは必須ではありませんが、サブネットのフェールオーバーが速くなるという利点があります。  これは、クライアント ドライバーが、可用性グループに関連付けられている各 IP アドレスの TCP ソケットを同時に開こうとするためです。  クライアント ドライバーは、最初の IP が正常に応答するのを待ち、応答した場合は、その IP を接続に使用します。  
+ 
+  `MultiSubnetFailover` 接続オプションは、可用性グループが単一のサブネットのみにある場合でも、`True` に設定することをお勧めします。  これにより、今後、クライアント接続文字列を変更することなく、複数のサブネットをサポートするように新しいクライアントをあらかじめ構成することができ、単一サブネットのフェールオーバーのパフォーマンスも最適化できます。  
+  `MultiSubnetFailover` 接続オプションは必須ではありませんが、サブネットのフェールオーバーが速くなるという利点があります。  これは、クライアント ドライバーが、可用性グループに関連付けられている各 IP アドレスの TCP ソケットを同時に開こうとするためです。  クライアント ドライバーは、最初の IP が正常に応答するのを待ち、応答した場合は、その IP を接続に使用します。  
   
 ##  <a name="SSLcertificates"></a> 可用性グループ リスナーと SSL 証明書  
  可用性グループ リスナーへの接続時に、参加している SQL Server のインスタンスがセッションの暗号化と共に SSL 証明書を使用していることがあります。この場合、強制的に暗号化するために、接続クライアント ドライバーが SSL 証明書のサブジェクト代替名をサポートする必要があります。  SQL Server ドライバーでの証明書のサブジェクト代替名のサポートは、ADO.NET (SqlClient)、Microsoft JDBC、および SQL Native Client (SNAC) に対して計画されています。  
@@ -188,11 +191,11 @@ SAN = ServerFQDN,AG1_listener.Adventure-Works.com, AG2_listener.Adventure-Works.
 setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2  
 ```  
   
- SQL Server の SPN の手動登録の詳細については、「 [Register a Service Principal Name for Kerberos Connections](configure-windows/register-a-service-principal-name-for-kerberos-connections.md)」を参照してください。  
+ SQL Server の SPN の手動登録の詳細については、「 [Kerberos 接続用のサービス プリンシパル名の登録](configure-windows/register-a-service-principal-name-for-kerberos-connections.md)」を参照してください。  
   
 ##  <a name="RelatedTasks"></a> 関連タスク  
   
--   [AlwaysOn クライアント接続&#40;の SQL Server&#41;](availability-groups/windows/always-on-client-connectivity-sql-server.md)
+-   [AlwaysOn クライアント接続 &#40;SQL Server&#41;](availability-groups/windows/always-on-client-connectivity-sql-server.md)
   
 -   [可用性グループ リスナーの作成または構成 &#40;SQL Server&#41;](availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)  
   
@@ -206,15 +209,15 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2
   
 ##  <a name="RelatedContent"></a> 関連コンテンツ  
   
--   [高可用性とディザスターリカバリーのための AlwaysOn ソリューションガイドの Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [高可用性と災害復旧のための Microsoft SQL Server AlwaysOn ソリューション ガイド](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
--   [可用性グループ リスナーの概要](https://blogs.msdn.com/b/sqlalwayson/archive/2012/01/16/introduction-to-the-availability-group-listener.aspx) (SQL Server AlwaysOn チームのブログ)  
+-   [可用性グループリスナーの概要](https://blogs.msdn.com/b/sqlalwayson/archive/2012/01/16/introduction-to-the-availability-group-listener.aspx)(SQL Server AlwaysOn チームのブログ)  
   
--   [SQL Server AlwaysOn チームのブログ: AlwaysOn チームの公式 SQL Server のブログ](https://blogs.msdn.com/b/sqlalwayson/)  
+-   [SQL Server AlwaysOn チーム ブログ:SQL Server AlwaysOn チームのオフィシャル ブログ](https://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>参照  
- [AlwaysOn 可用性グループ&#40;SQL Server&#41;の概要](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [AlwaysOn クライアント接続&#40;の SQL Server&#41;](availability-groups/windows/always-on-client-connectivity-sql-server.md)  
+ [AlwaysOn 可用性グループ &#40;SQL Server の概要&#41;](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+ [AlwaysOn クライアント接続 &#40;SQL Server&#41;](availability-groups/windows/always-on-client-connectivity-sql-server.md)  
  [可用性レプリカに対するクライアント接続アクセスについて &#40;SQL Server&#41;](availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
- [アクティブなセカンダリ: 読み取り可能&#40;な&#41;セカンダリレプリカ AlwaysOn 可用性グループ](availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
+ [アクティブなセカンダリ: 読み取り可能なセカンダリレプリカ &#40;AlwaysOn 可用性グループ&#41;](availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
  [データベース ミラーリング セッションへのクライアントの接続 &#40;SQL Server&#41;](database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)

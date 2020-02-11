@@ -1,5 +1,5 @@
 ---
-title: その他のデータベース エンジンのアップグレード問題 |Microsoft Docs
+title: データベースエンジンアップグレードに関するその他の問題 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f247f9addde6baa949f3260d7a9d9f86ce0c5bff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66093699"
 ---
 # <a name="other-database-engine-upgrade-issues"></a>データベース エンジンのアップグレードに関するその他の問題
@@ -54,16 +54,16 @@ ms.locfileid: "66093699"
 ## <a name="new-data-types"></a>新しいデータ型  
  次の型がシステム型として予約されます。 アップグレードする前、またはアップグレードした後に、競合する既存のユーザー定義型の名前を変更してください。  
   
--   Geography  
+-   [地理的な場所]  
   
--   Geometry  
+-   ジオメトリ  
   
 -   Datetime2  
   
 -   HierarchyID  
   
 ## <a name="target-table-of-the-output-into-clause-cannot-have-any-defined-triggers"></a>定義済みのトリガーを使用できなくなった OUTPUT INTO 句の対象テーブル  
- OUTPUT INTO テーブルに有効なトリガーがある場合は、ターゲット テーブルはサポートされていません。  
+ テーブルに有効なトリガーがある場合、ターゲットテーブルに出力することはできません。  
   
 ## <a name="compile-time-error-for-udfs-when-the-target-of-an-output-into-clause-is-a-table"></a>OUTPUT INTO 句の対象がテーブルである場合に発生する UDF のコンパイル時エラー  
  ユーザー定義関数 (UDF) は、データベースの状態を変更するアクションの実行には使用できません。 たとえば、テーブル変数以外のオブジェクトに対して、UDF で DDL (CREATE、ALTER、DROP) または DML (INSERT、UPDATE、DELETE) アクションを実行することはできません。  
@@ -72,9 +72,9 @@ ms.locfileid: "66093699"
  MERGE は完全に予約されたキーワードになりました。 アプリケーションでは、MERGE という名前のオブジェクト (テーブルや列など) を使用できなくなりました。  
   
 ## <a name="rename-cdc-schema"></a>CDC スキーマの名前の変更  
- CDC というスキーマ名が存在します。 このスキーマ名が使用されている場合にすることはできません**Change Data Capture**データベースが有効になっています。  
+ CDC というスキーマ名が存在します。 このスキーマ名は、**変更データキャプチャ**がデータベースに対して有効になっている場合は使用できません。  
   
- 有効にする前に、CDC スキーマを削除する必要があります**Change Data Capture**データベース。 この手順は、アップグレードの前でも後でも実行できます。 スキーマを削除するには、次の手順を実行します。  
+ データベースの**変更データキャプチャ**を有効にする前に、CDC スキーマを削除する必要があります。 この手順は、アップグレードの前でも後でも実行できます。 スキーマを削除するには、次の手順を実行します。  
   
 1.  ALTER SCHEMA を使用して、CDC スキーマから新しいスキーマ名にオブジェクトを転送します。  
   

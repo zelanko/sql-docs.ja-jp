@@ -1,5 +1,5 @@
 ---
-title: GetRows メソッドの例 (vc++) |Microsoft Docs
+title: GetRows メソッドの例 (VC + +) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 08e5c5bf-f7de-4bf9-97a9-f214c128ad8c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c1f49de41c0735f53323c1f9ba75c6f2257439b0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932489"
 ---
 # <a name="getrows-method-example-vc"></a>GetRows メソッドの例 (VC++)
-この例では、 [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)から指定された行数を取得するメソッドを[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)と結果のデータの配列を設定します。 **GetRows**メソッドが返す行の必要な数よりも少ない: 場合[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)に達している場合、または**GetRows**がレコードを取得しようとしています。別のユーザーによって削除されます。 関数を返します**False** 2 番目のケースが発生した場合にのみです。 GetRowsOK 関数は、この手順を実行する必要があります。  
+この例では、 [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)メソッドを使用して、[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)から指定された数の行を取得し、結果のデータを配列に格納します。 **Getrows**メソッドは、必要な行数未満の値を返します。2つの場合は、 [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)に達した場合、または、 **getrows**が別のユーザーによって削除されたレコードを取得しようとした場合のいずれかです。 関数は、2番目のケースが発生した場合にのみ**False**を返します。 このプロシージャを実行するには、GetRowsOK 関数が必要です。  
   
 ## <a name="example"></a>例  
   
@@ -235,7 +235,7 @@ void PrintComError(_com_error &e) {
 0  
 ```  
   
-## <a name="sample-output"></a>出力例  
+## <a name="sample-output"></a>サンプル出力  
   
 ```  
 2 record(s) found.  
@@ -243,7 +243,7 @@ Paolo Accorti, 8/27/1992
 Pedro Afonso, 12/24/1990  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [BOF、EOF プロパティ (ADO)](../../../ado/reference/ado-api/bof-eof-properties-ado.md)   
  [GetRows メソッド (ADO)](../../../ado/reference/ado-api/getrows-method-ado.md)   
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

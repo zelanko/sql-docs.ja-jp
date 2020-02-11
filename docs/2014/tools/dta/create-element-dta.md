@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7ec9ad9569326e4a9b3e890af4b5f909e36e5c5b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63149489"
 ---
 # <a name="create-element-dta"></a>Create 要素 (DTA)
@@ -37,7 +37,7 @@ ms.locfileid: "63149489"
   
 ## <a name="element-characteristics"></a>要素の特性  
   
-|特性|説明|  
+|特徴|[説明]|  
 |--------------------|-----------------|  
 |**データ型と長さ**|[なし] :|  
 |**既定値**|[なし] :|  
@@ -48,10 +48,10 @@ ms.locfileid: "63149489"
 |リレーションシップ|要素|  
 |------------------|--------------|  
 |**親要素**|[Recommendation 要素 &#40;DTA&#41;](recommendation-element-dta.md)|  
-|**子要素**|[Index 要素 &#40;DTA&#41;](index-element-dta.md)<br /><br /> `Statistics` 要素 (を参照してください[データベース エンジン チューニング アドバイザー XML スキーマ](https://schemas.microsoft.com/sqlserver/)について)<br /><br /> `Heap` 要素 (を参照してください[データベース エンジン チューニング アドバイザー XML スキーマ](https://schemas.microsoft.com/sqlserver/)について)|  
+|**子要素**|[Index 要素 &#40;DTA&#41;](index-element-dta.md)<br /><br /> `Statistics`要素 (詳細については[データベースエンジンチューニングアドバイザー XML スキーマ](https://schemas.microsoft.com/sqlserver/)を参照してください)<br /><br /> `Heap`要素 (詳細については[データベースエンジンチューニングアドバイザー XML スキーマ](https://schemas.microsoft.com/sqlserver/)を参照してください)|  
   
-## <a name="remarks"></a>コメント  
- この要素は、データベース エンジン チューニング アドバイザー XML スキーマの **CreateTypecomplexType** の名前です。 ユーザー指定の構成でインデックス、統計、ヒープ構造を作成するために使用します。 この `Create` 要素を、ビューを作成するための `CreateViewType` やパーティション分割を作成するための `CreatePType` という他の種類の要素と混同しないでください。 参照してください、[データベース エンジン チューニング アドバイザー XML スキーマ](https://schemas.microsoft.com/sqlserver/)これら他について`Create`要素の型。  
+## <a name="remarks"></a>解説  
+ この要素は、データベース エンジン チューニング アドバイザー XML スキーマの **CreateTypecomplexType** の名前です。 ユーザー指定の構成でインデックス、統計、ヒープ構造を作成するために使用します。 この `Create` 要素を、ビューを作成するための `CreateViewType` やパーティション分割を作成するための `CreatePType` という他の種類の要素と混同しないでください。 これらの他の`Create`要素の種類の詳細については、[データベースエンジンチューニングアドバイザー XML スキーマ](https://schemas.microsoft.com/sqlserver/)を参照してください。  
   
 ## <a name="example"></a>例  
  この要素の使用例については、「[ユーザー指定の構成を指定した XML 入力ファイルのサンプル &#40;DTA&#41;](xml-input-file-sample-with-user-specified-configuration-dta.md)」を参照してください。  

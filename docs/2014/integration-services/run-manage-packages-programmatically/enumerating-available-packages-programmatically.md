@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f3826607072ad62af90c680572a42f5ffb3ab12a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62889793"
 ---
 # <a name="enumerating-available-packages-programmatically"></a>プログラムによる使用可能なパッケージの列挙
@@ -27,24 +27,24 @@ ms.locfileid: "62889793"
 ##  <a name="exists"></a> パッケージまたはフォルダーが存在するかどうかの判断  
  保存済みのパッケージの読み込みと実行を行う前に、プログラムによってそのパッケージが存在するかどうかを判断するには、次のいずれかのメソッドを呼び出します。  
   
-|ストレージの場所|呼び出すメソッド|  
+|保存先|呼び出すメソッド|  
 |----------------------|--------------------|  
 |[SSIS パッケージ ストア]|<xref:Microsoft.SqlServer.Dts.Runtime.Application.ExistsOnDtsServer%2A>|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|<xref:Microsoft.SqlServer.Dts.Runtime.Application.ExistsOnSqlServer%2A>|  
   
  フォルダーに保存されているパッケージを一覧表示する前に、プログラムによりそのフォルダーが存在するかどうかを判断するには、次のいずれかのメソッドを呼び出します。  
   
-|ストレージの場所|呼び出すメソッド|  
+|保存先|呼び出すメソッド|  
 |----------------------|--------------------|  
 |[SSIS パッケージ ストア]|<xref:Microsoft.SqlServer.Dts.Runtime.Application.FolderExistsOnDtsServer%2A>|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|<xref:Microsoft.SqlServer.Dts.Runtime.Application.FolderExistsOnSqlServer%2A>|  
   
- [トップに戻る](#top)  
+ [先頭に戻る](#top)  
   
 ##  <a name="listing"></a> 使用可能なパッケージの列挙  
  プログラムにより保存済みパッケージの一覧を取得するには、次のいずれかのメソッドを呼び出します。  
   
-|ストレージの場所|呼び出すメソッド|  
+|保存先|呼び出すメソッド|  
 |----------------------|--------------------|  
 |[SSIS パッケージ ストア]|<xref:Microsoft.SqlServer.Dts.Runtime.Application.GetDtsServerPackageInfos%2A>|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|<xref:Microsoft.SqlServer.Dts.Runtime.Application.GetPackageInfos%2A>|  
@@ -155,7 +155,7 @@ namespace EnumeratePackagesSSIS_CS
 }  
 ```  
   
- [トップに戻る](#top)  
+ [先頭に戻る](#top)  
   
 ###  <a name="listing_sql"></a> 例 (SQL Server)  
  <xref:Microsoft.SqlServer.Dts.Runtime.Application.GetPackageInfos%2A> メソッドを使用して、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のインスタンスに保存されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パッケージを一覧表示します。  
@@ -236,11 +236,11 @@ namespace EnumeratePackagesSql_CS
 }  
 ```  
   
- [トップに戻る](#top)  
+ [先頭に戻る](#top)  
   
-![Integration Services のアイコン (小)](../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。**<br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
+![Integration Services アイコン (小)](../media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services に関するページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
 ## <a name="see-also"></a>参照  
- [パッケージの管理 &#40;SSIS サービス&#41;](../service/package-management-ssis-service.md)  
+ [SSIS サービス&#41;の Package Management &#40;](../service/package-management-ssis-service.md)  
   
   

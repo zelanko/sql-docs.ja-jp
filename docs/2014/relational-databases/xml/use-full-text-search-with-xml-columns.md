@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 897002d437dcee8a6c64750f964c957c18a077f3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63193254"
 ---
 # <a name="use-full-text-search-with-xml-columns"></a>XML 列でのフルテキスト検索の使用
@@ -33,7 +33,7 @@ ms.locfileid: "63193254"
   
 2.  次に、XML 列の XML インデックスを使用する XML 値にクエリを実行します。  
   
-## <a name="example-combining-full-text-search-with-xml-querying"></a>例: フルテキスト検索と XML クエリの組み合わせ  
+## <a name="example-combining-full-text-search-with-xml-querying"></a>例 : フルテキスト検索と XML クエリの組み合わせ  
  XML 列でフルテキスト インデックスを作成した後、XML 値が書名に語 "custom" を含んでいることを次のクエリで確認します。  
   
 ```  
@@ -49,7 +49,7 @@ AND    xCol.exist('/book/title/text()[contains(.,"custom")]') =1
   
  さらに、フルテキスト検索ではステマーが使用されますが、XQuery の **contains()** はリテラルの照合です。 両者の違いを次の例で示します。  
   
-## <a name="example-full-text-search-on-xml-values-using-stemming"></a>例: ステミングを使用した XML 値のフルテキスト検索  
+## <a name="example-full-text-search-on-xml-values-using-stemming"></a>例 : ステミングを使用した XML 値のフルテキスト検索  
  上記の例で行った XQuery **contains()** による確認は、通常は省略できません。 次のクエリについて考えてみます。  
   
 ```  
@@ -62,7 +62,7 @@ WHERE  CONTAINS(xCol,'run')
   
  フルテキスト インデックスが作成されたリレーショナル列に AXSD を使用して XML を分解した場合、XML ビューに XPath クエリを実行しても基になるテーブルのフルテキスト検索は行われません。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [XML インデックス &#40;SQL Server&#41;](xml-indexes-sql-server.md)  
   
   

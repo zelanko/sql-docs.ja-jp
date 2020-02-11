@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 641815e90080f7fce0499a3682e641892d6140bf
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73773378"
 ---
 # <a name="metadata---parameter-and-rowset"></a>メタデータ - パラメーターと行セット
@@ -27,23 +27,24 @@ ms.locfileid: "73773378"
   
 -   DBBINDING 構造体  
   
--   **ICommandWithParameters::GetParameterInfo**  
+-   **ICommandWithParameters:: GetParameterInfo**  
   
--   **ICommandWithParameters::SetParameterInfo**  
+-   **ICommandWithParameters:: SetParameterInfo**  
   
--   **IColumnsRowset::GetColumnsRowset**  
+-   **IColumnsRowset:: GetColumnsRowset**  
   
--   **IColumnsInfo::GetColumnInfo**  
+-   **IColumnsInfo:: GetColumnInfo**  
   
 ## <a name="icommandwithparametersgetparameterinfo"></a>ICommandWithParameters::GetParameterInfo  
- *prgParamInfo* を使用して DBPARAMINFO 構造体に次の情報が返されます。  
+ 
+  *prgParamInfo* を使用して DBPARAMINFO 構造体に次の情報が返されます。  
   
-|パラメーターの型|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
+|パラメーターのタイプ|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|-------------------|------------------|--------------|-----------------------------------------------------|  
-|date|DBTYPE_DBDATE|6|10|0|Clear|  
+|date|DBTYPE_DBDATE|6|10|0|クリア|  
 |time|DBTYPE_DBTIME2|10|8、10..16|0..7|オン|  
-|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Clear|  
-|datetime|DBTYPE_DBTIMESTAMP|16|23|3|Clear|  
+|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|クリア|  
+|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|クリア|  
 |datetime2|DBTYPE_DBTIMESTAMP|16|19、21.. 27|0..7|オン|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26、28.. 34|0..7|オン|  
   
@@ -61,13 +62,15 @@ ms.locfileid: "73773378"
 ||DBTYPE_DBTIME|10|無視|  
 |time|DBTYPE_DBTIME2|10|0..7|  
 |smalldatetime||16|無視|  
-|datetime||16|無視|  
+|DATETIME||16|無視|  
 |datetime2 または DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|16|0..7|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|0..7|  
   
  *Bprecision*パラメーターは無視されます。  
   
- データをサーバーに送信する場合、"DBPARAMFLAGS_SS_ISVARIABLESCALE" は無視されます。 アプリケーションでは、プロバイダー固有の型名 "**datetime**" および "**smalldatetime**" を使用して、従来の表形式のデータ ストリーム (TDS) の型を強制的に使用することができます。 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (以降の) サーバーに接続されている場合、"**datetime2**" 形式が使用され、型名が "**datetime2**" または "DBTYPE_DBTIMESTAMP" の場合は、必要に応じて、暗黙的なサーバー変換が発生します。 プロバイダー固有の型名 "**datetime**" または "**smalldatetime**" が使用されている場合、 *bscale*は無視されます。 それ以外の場合は、appications、 *Bscale*が正しく設定されていることを確認する必要があります。 "DBTYPE_DBTIMESTAMP" を使用する [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] から、MDAC および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client からアップグレードされたアプリケーションは、 *Bscale*を正しく設定しないと失敗します。 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] より前のサーバー インスタンスに接続されている場合は、"DBTYPE_DBTIMESTAMP" で 0 または 3 以外に設定された *bScale* の値はエラーになり、E_FAIL が返されます。  
+ データをサーバーに送信する場合、"DBPARAMFLAGS_SS_ISVARIABLESCALE" は無視されます。 アプリケーションでは、プロバイダー固有の型名 "**datetime**" および "**smalldatetime**" を使用して、従来の表形式のデータ ストリーム (TDS) の型を強制的に使用することができます。 
+  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (以降の) サーバーに接続されている場合、"**datetime2**" 形式が使用され、型名が "**datetime2**" または "DBTYPE_DBTIMESTAMP" の場合は、必要に応じて、暗黙的なサーバー変換が発生します。 プロバイダー固有の型名 "**datetime**" または "**smalldatetime**" が使用されている場合、 *bscale*は無視されます。 それ以外の場合は、appications、 *Bscale*が正しく設定されていることを確認する必要があります。 "DBTYPE_DBTIMESTAMP" を使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]するから[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] MDAC および Native Client からアップグレードされたアプリケーションは、 *bscale*を正しく設定しないと失敗します。 
+  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] より前のサーバー インスタンスに接続されている場合は、"DBTYPE_DBTIMESTAMP" で 0 または 3 以外に設定された *bScale* の値はエラーになり、E_FAIL が返されます。  
   
  ICommandWithParameters:: SetParameterInfo が呼び出されない場合、プロバイダーは IAccessor:: CreateAccessor に指定されているバインドの種類からサーバーの種類を次のように基します。  
   
@@ -85,10 +88,10 @@ ms.locfileid: "73773378"
   
 |列の型|DBCOLUMN_TYPE|DBCOLUM_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE、DBCOLUMN_DATETIMEPRECISION|DBCOLUMN_FLAGS、DBCOLUMNFLAGS_SS_ISVARIABLESCALE|  
 |-----------------|--------------------|-------------------------|-------------------------|--------------------------------------------------|---------------------------------------------------------|  
-|date|DBTYPE_DBDATE|6|10|0|Clear|  
+|date|DBTYPE_DBDATE|6|10|0|クリア|  
 |time|DBTYPE_DBTIME2|10|8、10..16|0..7|オン|  
-|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Clear|  
-|datetime|DBTYPE_DBTIMESTAMP|16|23|3|Clear|  
+|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|クリア|  
+|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|クリア|  
 |datetime2|DBTYPE_DBTIMESTAMP|16|19、21..27|0..7|オン|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26、28..34|0..7|オン|  
   
@@ -117,16 +120,17 @@ ms.locfileid: "73773378"
 ## <a name="icolumnsinfogetcolumninfo"></a>IColumnsInfo::GetColumnInfo  
  DBCOLUMNINFO 構造体から次の情報が返されます。  
   
-|パラメーターの型|*wType*|*ulColumnSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
+|パラメーターのタイプ|*wType*|*ulColumnSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|--------------------|------------------|--------------|-----------------------------------------------------|  
-|date|DBTYPE_DBDATE|6|10|0|Clear|  
+|date|DBTYPE_DBDATE|6|10|0|クリア|  
 |time(1..7)|DBTYPE_DBTIME2|10|8、10..16|0..7|オン|  
-|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Clear|  
-|datetime|DBTYPE_DBTIMESTAMP|16|23|3|Clear|  
+|smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|クリア|  
+|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|クリア|  
 |datetime2|DBTYPE_DBTIMESTAMP|16|19、21..27|0..7|オン|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26、28..34|0..7|オン|  
   
- *dwFlags* では、DBCOLUMNFLAGS_ISFIXEDLENGTH は日付/時刻型に対して常に true になり、次のフラグは常に false になります。  
+ 
+  *dwFlags* では、DBCOLUMNFLAGS_ISFIXEDLENGTH は日付/時刻型に対して常に true になり、次のフラグは常に false になります。  
   
 -   DBCOLUMNFLAGS_CACHEDEFERRED  
   
@@ -142,9 +146,10 @@ ms.locfileid: "73773378"
   
  その他のフラグ (DBCOLUMNFLAGS_ISNULLABLE、DBCOLUMNFLAGS_MAYBENULL、DBCOLUMNFLAGS_WRITE、および DBCOLUMNFLAGS_WRITEUNKNOWN) は、設定することができます。  
   
- *dwFlags* に用意されている新しいフラグ DBCOLUMNFLAGS_SS_ISVARIABLESCALE を使用すると、アプリケーションは、*wType* が DBTYPE_DBTIMESTAMP である列のサーバーの種類を判断できます。 サーバーの種類を識別するには、*bScale* も使用する必要があります。  
+ 
+  *dwFlags* に用意されている新しいフラグ DBCOLUMNFLAGS_SS_ISVARIABLESCALE を使用すると、アプリケーションは、*wType* が DBTYPE_DBTIMESTAMP である列のサーバーの種類を判断できます。 サーバーの種類を識別するには、 *Bscale*も使用する必要があります。  
   
 ## <a name="see-also"></a>参照  
- [メタ&#40;データ OLE DB&#41;](https://msdn.microsoft.com/library/605e3be5-aeea-4573-9847-b866ed3c8bff)  
+ [メタデータ &#40;OLE DB&#41;](https://msdn.microsoft.com/library/605e3be5-aeea-4573-9847-b866ed3c8bff)  
   
   

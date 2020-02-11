@@ -14,29 +14,29 @@ ms.assetid: c2ba486e-5e01-4e67-adb1-68511f5f0206
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e17ca12e0c8745dcad30a3e5ce2c9689b041e7d2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67967483"
 ---
 # <a name="sqldriverconnect-paradox-driver"></a>SQLDriverConnect (Paradox ドライバー)
 > [!NOTE]  
->  このトピックでは、Paradox ドライバー固有の情報を提供します。 この関数の詳細については、該当するトピックを参照してください。 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)します。  
+>  このトピックでは、Paradox ドライバー固有の情報について説明します。 この関数の一般的な情報については、「 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)」の該当するトピックを参照してください。  
   
- **SQLDriverConnect**データ ソース (DSN) を作成することがなく、ドライバーに接続することができます。  
+ **SQLDriverConnect**を使用すると、データソース (DSN) を作成せずにドライバーに接続できます。  
   
- すべてのドライバーの接続文字列では、次のキーワードがサポートされています。**DSN**、 **DBQ**、および**FIL**します。  
+ すべてのドライバーの接続文字列では、 **DSN**、 **dbq**、および**FIL**の各キーワードがサポートされています。  
   
- **PWD**キーワードもサポートされます。 PWD キーワードの特殊文字含める必要がありますいない (SQL_SPECIAL_CHARACTERS でを参照してください。 **SQLGetInfo**に返される値)。  
+ **PWD**キーワードもサポートされています。 PWD キーワードには、特殊文字を含めることはできません (「 **SQLGetInfo**が返す値の SQL_SPECIAL_CHARACTERS」を参照してください)。  
   
- パスワードで保護されたファイルを開いた後にユーザーが、他のユーザーは同じファイルを開くには使用できません。  
+ パスワードで保護されたファイルをユーザーが開いた後、他のユーザーは同じファイルを開くことができません。  
   
- 次の表は、各ドライバーでは、接続に必要な最小のキーワードを示しています。 と併用キーワード/値ペアの例を示します**SQLDriverConnect**します。 DRIVERID 値の一覧については、次を参照してください。 [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md)します。  
+ 次の表は、各ドライバーに接続するために必要な最低限のキーワードと、 **SQLDriverConnect**で使用されるキーワードと値のペアの例を示しています。 DRIVERID 値の完全な一覧については、「 [Sqlconfigdatasource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md)」を参照してください。  
   
 > [!NOTE]  
->  Paradox ドライバー、DBQ または DefaultDir が指定されていない場合、ドライバーは、現在のディレクトリに接続します。  
+>  Paradox ドライバーに DBQ または DefaultDir が指定されていない場合、ドライバーは現在のディレクトリに接続します。  
   
-|Driver|必要なキーワード|例|  
+|Driver|キーワードが必要です|例|  
 |------------|-----------------------|-------------|  
-|Paradox|ドライバー、DriverID|ドライバー {0} Microsoft Paradox ドライバー (*.db)} を = です。DBQ = c:\temp; DriverID = 26|
+|Paradox|ドライバー、DriverID|Driver = {Microsoft Paradox Driver (* db)};DBQ = c:\temp; DriverID = 26|

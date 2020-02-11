@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 46b1155878aae6cc7f667965cfae065ed1a9cacc
-ms.sourcegitcommit: 03884a046aded85c7de67ca82a5b5edbf710be92
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74564742"
 ---
 # <a name="sysdm_pdw_resource_waits-transact-sql"></a>dm_pdw_resource_waits (Transact-sql)
@@ -24,19 +24,19 @@ ms.locfileid: "74564742"
 
   の[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]すべてのリソースの種類の待機情報を表示します。  
   
-|列名|データ型|説明|Range|  
+|列名|データ型|[説明]|Range|  
 |-----------------|---------------|-----------------|-----------|  
 |wait_id|**bigint**|待機リスト内の要求の位置。|0から始まる序数。 これは、すべての待機エントリで一意ではありません。|  
 |session_id|**nvarchar (32)**|待機状態が発生したセッションの ID。|『 [Transact-sql&#41;&#40;dm_pdw_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md)の session_id を参照してください。|  
 |型|**nvarchar(255)**|このエントリが表す待機の種類。|指定できる値<br /><br /> 接続<br /><br /> ローカルクエリの同時実行<br /><br /> 分散クエリの同時実行<br /><br /> DMS の同時実行<br /><br /> バックアップの同時実行|  
-|object_type|**nvarchar(255)**|待機の影響を受けるオブジェクトの種類。|指定できる値<br /><br /> **素材**<br /><br /> **データベース**<br /><br /> **SYSTEM**<br /><br /> **スキーマ**<br /><br /> **適用**|  
+|object_type|**nvarchar(255)**|待機の影響を受けるオブジェクトの種類。|指定できる値<br /><br /> **素材**<br /><br /> **DATABASE**<br /><br /> **SYSTEM**<br /><br /> **SCHEMA**<br /><br /> **適用**|  
 |object_name|**nvarchar (386)**|待機の影響を受けた、指定したオブジェクトの名前または GUID。|テーブルとビューは、3つの部分で構成される名前で表示されます。<br /><br /> インデックスと統計情報は、4つの部分で構成される名前で表示されます。<br /><br /> 名前、プリンシパル、およびデータベースは、文字列名です。|  
 |request_id|**nvarchar (32)**|待機状態が発生した要求の ID。|要求の QID 識別子。<br /><br /> 読み込み要求の GUID 識別子。|  
-|request_time|**/**|ロックまたはリソースが要求された時刻。||  
-|acquire_time|**/**|ロックまたはリソースが取得された時刻。||  
+|request_time|**DATETIME**|ロックまたはリソースが要求された時刻。||  
+|acquire_time|**DATETIME**|ロックまたはリソースが取得された時刻。||  
 |state|**nvarchar(50)**|待機状態の状態。|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
-|priority|**通り**|待機中の項目の優先順位。|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
-|concurrency_slots_used|**通り**|内部|下記の「[リソース待機を監視](#monitor-resource-waits)する」を参照してください。|  
+|priority|**int**|待機中の項目の優先順位。|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
+|concurrency_slots_used|**int**|内部|下記の「[リソース待機を監視](#monitor-resource-waits)する」を参照してください。|  
 |resource_class|**nvarchar (20)**|内部 |下記の「[リソース待機を監視](#monitor-resource-waits)する」を参照してください。|  
   
 ## <a name="monitor-resource-waits"></a>リソース待機の監視 

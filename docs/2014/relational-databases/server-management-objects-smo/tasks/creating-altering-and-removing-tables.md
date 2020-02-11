@@ -15,17 +15,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9a0d70b1748ddc597aa7a2676e5e2f938c235442
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72782392"
 ---
 # <a name="creating-altering-and-removing-tables"></a>テーブルの作成、変更、および削除
+  
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) では、テーブルは <xref:Microsoft.SqlServer.Management.Smo.Table> オブジェクトによって表されます。 SMO オブジェクト階層では、<xref:Microsoft.SqlServer.Management.Smo.Table> オブジェクトは <xref:Microsoft.SqlServer.Management.Smo.Database> オブジェクトの下位にあります。  
   
 ## <a name="example"></a>例  
- 提供されているコード例を使用するには、プログラミング環境、テンプレート、およびアプリケーションを作成するプログラミング言語を選択する必要があります。 詳細については、「 [Visual studio .net での VISUAL BASIC SMO プロジェクトの作成](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)」または「visual [studio .Net での Visual C&#35; SMO プロジェクトの作成](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)」を参照してください。  
+ 提供されているコード例を使用するには、プログラミング環境、テンプレート、およびアプリケーションを作成するプログラミング言語を選択する必要があります。 詳細については、「 [Visual studio .net で VISUAL BASIC SMO プロジェクトを作成する](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)」または「visual [Studio .Net で VISUAL C&#35; Smo プロジェクトを作成](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)する」を参照してください。  
   
 ## <a name="creating-altering-and-removing-a-table-in-visual-basic"></a>Visual Basic でのテーブルの作成、変更、および削除  
  このコード例では、型や目的の異なるさまざまな列があるテーブルを作成します。 また、ID フィールドの作成方法、主キーの作成方法、およびテーブル プロパティの変更方法の例を示します。  
@@ -133,5 +134,5 @@ $tb.Alter()
 $tb.Drop()  
 ```  
   
-## <a name="see-also"></a>「  
+## <a name="see-also"></a>参照  
  <xref:Microsoft.SqlServer.Management.Smo.Table>

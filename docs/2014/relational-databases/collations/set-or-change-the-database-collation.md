@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 38c29f8d70b3cc72baf81e2ae23082fe270ba573
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62874027"
 ---
 # <a name="set-or-change-the-database-collation"></a>データベースの照合順序の設定または変更
@@ -29,11 +29,11 @@ ms.locfileid: "62874027"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [推奨事項](#Recommendations)  
+     [Recommendations (推奨事項)](#Recommendations)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
--   **データベースの照合順序を設定または変更する方法:**  
+-   **データベースの照合順序を設定または変更するために使用するもの:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -57,15 +57,18 @@ ms.locfileid: "62874027"
   
     -   ストアド プロージャおよびユーザー定義関数で使用されている `char` 型、`varchar` 型、`text` 型、`nchar` 型、`nvarchar` 型、または `ntext` 型の既存のパラメーターおよびスカラー値の戻り値はすべて、新しい照合順序に変更されます。  
   
-    -   `char` 型、`varchar` 型、`text` 型、`nchar` 型、`nvarchar` 型、または `ntext` 型のシステム データ型およびこれらを基にしたユーザー定義データ型はすべて、新しい既定の照合順序に変更されます。  
+    -   
+  `char` 型、`varchar` 型、`text` 型、`nchar` 型、`nvarchar` 型、または `ntext` 型のシステム データ型およびこれらを基にしたユーザー定義データ型はすべて、新しい既定の照合順序に変更されます。  
   
--   ユーザー データベースに作成する新しいオブジェクトの照合順序は、 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) ステートメントの COLLATE 句を使用して変更できます。 このステートメントを実行しても、既存のユーザー定義テーブルの列の照合順序は変わりません。 [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql)の COLLATE 句で変更することができます。  
+-   ユーザー データベースに作成する新しいオブジェクトの照合順序は、 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) ステートメントの COLLATE 句を使用して変更できます。 このステートメントを実行しても、既存のユーザー定義テーブルの列の照合順序は変わりません。 
+  [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql)の COLLATE 句で変更することができます。  
   
 ###  <a name="Security"></a> セキュリティ  
   
 ####  <a name="Permissions"></a> Permissions  
  CREATE DATABASE  
- **master** データベースの CREATE DATABASE 権限か、CREATE ANY DATABASE 権限または ALTER ANY DATABASE 権限が必要です。  
+ 
+  **master** データベースの CREATE DATABASE 権限か、CREATE ANY DATABASE 権限または ALTER ANY DATABASE 権限が必要です。  
   
  ALTER DATABASE  
  データベースに対する ALTER 権限が必要です。  
@@ -74,11 +77,13 @@ ms.locfileid: "62874027"
   
 #### <a name="to-set-or-change-the-database-collation"></a>データベースの照合順序を設定または変更するには  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続して、そのインスタンスを展開します。次に、 **[データベース]** を展開します。  
+1.  
+  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続して、そのインスタンスを展開します。次に、 **[データベース]** を展開します。  
   
 2.  新しいデータベースを作成する場合は、 **[データベース]** を右クリックし、 **[新しいデータベース]** をクリックします。 既定の照合順序を使用しない場合は、 **[オプション]** ページをクリックし、 **[照合順序]** ボックスの一覧から照合順序を選択します。  
   
-     データベースが既に存在する場合は、使用するデータベースを右クリックし、 **[プロパティ]** をクリックします。 **[オプション]** ページをクリックし、 **[照合順序]** ボックスの一覧から照合順序を選択します。  
+     データベースが既に存在する場合は、使用するデータベースを右クリックし、 **[プロパティ]** をクリックします。 
+  **[オプション]** ページをクリックし、 **[照合順序]** ボックスの一覧から照合順序を選択します。  
   
 3.  終了したら **[OK]** をクリックします。  
   
@@ -116,7 +121,8 @@ GO
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例は、 [ALTER DATABASE](/sql/t-sql/statements/collations) ステートメントで [COLLATE](/sql/t-sql/statements/alter-database-transact-sql) 句を使用して照合順序名を変更する方法を示しています。 `SELECT` ステートメントを実行して変更を確認します。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例は、 [ALTER DATABASE](/sql/t-sql/statements/collations) ステートメントで [COLLATE](/sql/t-sql/statements/alter-database-transact-sql) 句を使用して照合順序名を変更する方法を示しています。 
+  `SELECT` ステートメントを実行して変更を確認します。  
   
 ```sql  
 USE master;  
@@ -133,17 +139,17 @@ GO
   
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [照合順序と Unicode のサポート](collation-and-unicode-support.md)   
- [sys.fn_helpcollations &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-helpcollations-transact-sql)   
- [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)   
- [SQL Server 照合順序名 &#40;Transact-SQL&#41;](/sql/t-sql/statements/sql-server-collation-name-transact-sql)   
- [Windows 照合順序名 &#40;Transact-SQL&#41;](/sql/t-sql/statements/windows-collation-name-transact-sql)   
- [COLLATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/collations)   
- [照合順序の優先順位 &#40;Transact-SQL&#41;](/sql/t-sql/statements/collation-precedence-transact-sql)   
- [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql)   
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
- [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)   
+ [fn_helpcollations &#40;Transact-sql&#41;](/sql/relational-databases/system-functions/sys-fn-helpcollations-transact-sql)   
+ [データベース &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)   
+ [SQL Server の照合順序名 &#40;Transact-sql&#41;](/sql/t-sql/statements/sql-server-collation-name-transact-sql)   
+ [Windows 照合順序名 &#40;Transact-sql&#41;](/sql/t-sql/statements/windows-collation-name-transact-sql)   
+ [COLLATE &#40;Transact-sql&#41;](/sql/t-sql/statements/collations)   
+ [照合順序の優先順位 &#40;Transact-sql&#41;](/sql/t-sql/statements/collation-precedence-transact-sql)   
+ [CREATE TABLE &#40;Transact-sql&#41;](/sql/t-sql/statements/create-table-transact-sql)   
+ [CREATE DATABASE &#40;SQL Server Transact-sql&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
+ [ALTER TABLE &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-table-transact-sql)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)  
   
   

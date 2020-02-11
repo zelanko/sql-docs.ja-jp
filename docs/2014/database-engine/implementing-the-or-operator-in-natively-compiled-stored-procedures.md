@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 02b55465cc4aed912e6e955883ca8fdbfa4be870
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75228209"
 ---
 # <a name="implementing-the-or-operator-in-natively-compiled-stored-procedures"></a>ネイティブ コンパイル ストアド プロシージャでの OR 演算子の実装
@@ -246,5 +246,5 @@ GO
  WHERE 句や JOIN 条件に複数の OR 演算子が含まれている場合は、動作をシミュレートするために実行する必要があるクエリの数は、指数関数的に増加する可能性があります。 その結果、メモリ最適化テーブル変数の使用が原因で、クエリのパフォーマンスが低下し、メモリの使用量が増加する可能性があります。  
   
 ## <a name="see-also"></a>参照  
- [ネイティブコンパイルストアドプロシージャの移行に関する問題](../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)  
+ [ネイティブ コンパイル ストアド プロシージャの移行に関する問題](../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)  
   

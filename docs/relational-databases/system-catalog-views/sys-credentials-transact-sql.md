@@ -1,5 +1,5 @@
 ---
-title: sys.credentials (TRANSACT-SQL) |Microsoft Docs
+title: sys. credentials (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 02/27/2017
 ms.prod: sql
@@ -21,38 +21,38 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: da427117b2282c9014ff0171e1a7c29f7490940e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68078754"
 ---
-# <a name="syscredentials-transact-sql"></a>sys.credentials (Transact-SQL)
+# <a name="syscredentials-transact-sql"></a>sys. 資格情報 (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-  サーバー レベルの資格情報ごとに 1 つの行を返します。  
+  サーバーレベルの資格情報ごとに1つの行を返します。  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
-|credential_id|**int**|資格情報の ID。 サーバーで一意です。|  
-|NAME|**sysname**|資格情報の名前。 サーバーで一意です。|  
-|credential_identity|**nvarchar (4000)**|使用する識別情報の名前。 通常は Windows ユーザーです。 一意である必要はありません。|  
-|create_date|**datetime**|資格情報が作成された日時。|  
-|modify_date|**datetime**|資格情報が最後に変更された日時。|  
-|target_type|**nvarchar(100)**|資格情報の種類。 従来の資格情報の場合は NULL を返し、暗号化サービス プロバイダーにマップされた資格情報の場合は CRYPTOGRAPHIC PROVIDER を返します。 外部キー管理プロバイダーの詳細については、次を参照してください。[拡張キー管理&#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)します。|  
-|target_id|**int**|資格情報がマップされているオブジェクトの ID。 従来の資格情報の場合は 0 を返し、暗号化サービス プロバイダーにマップされた資格情報の場合は 0 以外を返します。 外部キー管理プロバイダーの詳細については、次を参照してください。[拡張キー管理&#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)します。|  
+|credential_id|**int**|資格情報の ID。 はサーバー内で一意です。|  
+|name|**sysname**|資格情報の名前。 はサーバー内で一意です。|  
+|credential_identity|**nvarchar(4000)**|使用する識別情報の名前。 通常、これは Windows ユーザーです。 一意である必要はありません。|  
+|create_date|**DATETIME**|資格情報が作成された日時。|  
+|modify_date|**DATETIME**|資格情報が最後に変更された時刻。|  
+|target_type|**nvarchar (100)**|資格情報の種類。 暗号化サービスプロバイダーにマップされている資格情報の暗号化サービスプロバイダー (従来の資格情報) の場合は NULL を返します。 外部キー管理プロバイダーの詳細については、「[拡張キー管理 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)」を参照してください。|  
+|target_id|**int**|資格情報がマップされているオブジェクトの ID。 暗号化サービスプロバイダーにマップされている資格情報の場合は、従来の資格情報の場合は0、それ以外の場合は0を返します。 外部キー管理プロバイダーの詳細については、「[拡張キー管理 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)」を参照してください。|  
 
-## <a name="remarks"></a>コメント  
-データベース レベルの資格情報を参照してください。 [sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md)します。
+## <a name="remarks"></a>解説  
+データベースレベルの資格情報については、「 [database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md)」を参照してください。
   
 ## <a name="permissions"></a>アクセス許可  
- `VIEW ANY DEFINITION`権限または`ALTER ANY CREDENTIAL`権限。 さらに、プリンシパル必要があります拒否されていない`VIEW ANY DEFINITION`権限。  
+ アクセス許可`VIEW ANY DEFINITION`または`ALTER ANY CREDENTIAL`アクセス許可のいずれかが必要です。 また、プリンシパルに対して権限を拒否`VIEW ANY DEFINITION`することはできません。  
   
 ## <a name="see-also"></a>参照  
- [sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md)   
- [資格情報 &#40;データベース エンジン&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
- [セキュリティ カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
- [プリンシパル &#40;データベース エンジン&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
+ [database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md)   
+ [資格情報 &#40;データベースエンジン&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
+ [セキュリティカタログビュー &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
+ [プリンシパル &#40;データベースエンジン&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)  
   
   

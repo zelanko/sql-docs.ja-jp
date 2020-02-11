@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9c266cf82a6f790d20cec3b3ec94f3c5e42b74b5
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75241992"
 ---
 # <a name="objects-supported-by-the-generate-scripts-wizard"></a>スクリプト生成ウィザードでサポートされるオブジェクト
@@ -26,9 +26,9 @@ ms.locfileid: "75241992"
 ||||||  
 |-|-|-|-|-|  
 |アプリケーション ロール|データベース ロール|スキーマ|ユーザー定義集計|ビュー<sup>1</sup>|  
-|［アセンブリ］|DEFAULT 制約|ストアドプロシージャ<sup>1</sup>|ユーザー定義データ型|XML スキーマ コレクション|  
+|アセンブリ|DEFAULT 制約|ストアドプロシージャ<sup>1</sup>|ユーザー定義データ型|XML スキーマ コレクション|  
 |CHECK 制約|フルテキスト カタログ|シノニム|ユーザー定義関数||  
-|CLR (共通言語ランタイム) ストアドプロシージャ<sup>1</sup>|Index|テーブル|ユーザー定義テーブル||  
+|CLR (共通言語ランタイム) ストアドプロシージャ<sup>1</sup>|インデックス|テーブル|ユーザー定義テーブル||  
 |CLR ユーザー定義関数|ルール|ユーザー<sup>2</sup>|ユーザー定義型||  
   
  <sup>1</sup>暗号化なしでパブリッシュされます。  

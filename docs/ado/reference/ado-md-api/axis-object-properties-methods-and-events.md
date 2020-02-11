@@ -14,10 +14,10 @@ ms.assetid: 89ec13b9-6324-4a95-92a7-3230d46bd02f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e4fcd8137344f3902df25e27b011c36872f26790
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67930507"
 ---
 # <a name="axis-object-properties-methods-and-events"></a>Axis オブジェクトのプロパティ、メソッド、およびイベント
@@ -26,15 +26,15 @@ ms.locfileid: "67930507"
   
  [Name プロパティ](../../../ado/reference/ado-md-api/name-property-ado-md.md)  
   
- [Positions コレクション](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)  
+ [位置のコレクション](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)  
   
  [プロパティのコレクション](../../../ado/reference/ado-api/properties-collection-ado.md)  
   
 ## <a name="methods"></a>メソッド  
  [なし] :  
   
-## <a name="events"></a>イベント  
+## <a name="events"></a>events  
  [なし] :  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Axis オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)

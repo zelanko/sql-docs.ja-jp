@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ce2b4a14d78c4e855c4af1d8b5fdd972b1d28c27
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62898334"
 ---
 # <a name="data-truncation-ssis"></a>データの切り捨て (SSIS)
@@ -34,6 +34,6 @@ ms.locfileid: "62898334"
  式エバリュエーターは切り捨てが発生する可能性のある明示的なキャストを識別し、式が解析されるときに警告を発生します。 たとえば、30 文字の文字列が 20 文字の文字列にキャストされる場合、式エバリュエーターで警告が発生します。  
   
 > [!NOTE]  
->  切り捨ては実行時にはチェックされません。データは警告なしで切り捨てられます。 ただし、ほとんどのデータ アダプターおよび変換では、エラー行の処理を実行できるエラー出力がサポートされています。 データの切り詰め処理の詳細については、次を参照してください。[データのエラー処理](../data-flow/error-handling-in-data.md)します。  
+>  切り捨ては実行時にはチェックされません。データは警告なしで切り捨てられます。 ただし、ほとんどのデータ アダプターおよび変換では、エラー行の処理を実行できるエラー出力がサポートされています。 データの切り捨て処理の詳細については、「[データのエラー処理](../data-flow/error-handling-in-data.md)」を参照してください。  
   
   

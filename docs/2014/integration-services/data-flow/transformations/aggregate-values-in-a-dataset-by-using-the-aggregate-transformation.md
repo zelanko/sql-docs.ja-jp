@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 10b14aa8a1f68b32c00ecb321c1af36fb15b868e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900945"
 ---
 # <a name="aggregate-values-in-a-dataset-by-using-the-aggregate-transformation"></a>集計変換を使用してデータセットの値を集計する
@@ -54,7 +54,7 @@ ms.locfileid: "62900945"
     > [!NOTE]  
     >  個別の値を正確な数または概数で指定することにより、変換作業に適したメモリ量が事前に割り当てられるので、パフォーマンスを最適化できます。  
   
-12. 必要に応じ、 **[詳細設定]** をクリックして集計変換出力の名前を更新します。 集計が含まれる場合、`Group By`操作内のキー値をグループ化のカウントの概数を選択することができます、**キー スケール**列内のキー値をグループ化の正確な数を指定または、**キー**列です。  
+12. 必要に応じ、 **[詳細設定]** をクリックして集計変換出力の名前を更新します。 集計に`Group By`操作が含まれている場合は、[キー**スケール**] 列でグループ化キー値の概数を選択するか、[**キー** ] 列でグループ化キー値の正確な数を指定できます。  
   
     > [!NOTE]  
     >  個別の値を正確な数または概数で指定することにより、変換作業に適したメモリ量が事前に割り当てられるので、パフォーマンスを最適化できます。  
@@ -72,6 +72,6 @@ ms.locfileid: "62900945"
  [集計変換](aggregate-transformation.md)   
  [Integration Services の変換](integration-services-transformations.md)   
  [Integration Services のパス](../integration-services-paths.md)   
- [[データ フロー タスク]](../../control-flow/data-flow-task.md)  
+ [データ フロー タスク](../../control-flow/data-flow-task.md)  
   
   

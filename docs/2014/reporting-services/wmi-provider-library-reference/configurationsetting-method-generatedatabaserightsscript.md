@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 575eab878e0ef9b4357c09a0a3deedf143c237b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098480"
 ---
-# <a name="generatedatabaserightsscript-method-wmi-msreportserverconfigurationsetting"></a>GenerateDatabaseRightsScript メソッド (WMI MSReportServer_ConfigurationSetting)
+# <a name="generatedatabaserightsscript-method-wmi-msreportserver_configurationsetting"></a>GenerateDatabaseRightsScript メソッド (WMI MSReportServer_ConfigurationSetting)
   レポート サーバー データベースおよびレポート サーバーの実行に必要なその他のデータベースに対してユーザー権限を付与する際に使用できる、SQL スクリプトを生成します。 呼び出し元は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース サーバーに接続して、スクリプトを実行する必要があります。  
   
 ## <a name="syntax"></a>構文  
@@ -43,7 +43,7 @@ out Int32 HRESULT);
 ```  
   
 ## <a name="parameters"></a>パラメーター  
- *UserName*  
+ *ユーザー名*  
  スクリプトで権限を与えるユーザーのユーザー名または Windows セキュリティ識別子 (SID)。  
   
  *DatabaseName*  
@@ -55,42 +55,52 @@ out Int32 HRESULT);
  *IsWindowsUser*  
  指定されたユーザー名が Windows ユーザーか [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーザーかを示すブール値。  
   
- *[スクリプト]*  
+ *小*  
  [out] 生成された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] スクリプトを含む文字列。  
   
  *HRESULT*  
  [out] 呼び出しの成功または失敗を示す値。  
   
 ## <a name="return-value"></a>戻り値  
- メソッド呼び出しの成功または失敗を示す *HRESULT* を返します。 値 0 は、メソッド呼び出しが成功したことを示します。 0 以外の値は、エラーが発生したことを示します。  
+ メソッド呼び出しの成功または失敗を示す*HRESULT*を返します。 値 0 は、メソッド呼び出しが成功したことを示します。 0 以外の値は、エラーが発生したことを示します。  
   
-## <a name="remarks"></a>コメント  
- *DatabaseName* が空の場合、 *IsRemote* は無視され、レポート サーバーの構成ファイルの値がデータベース名に使用されます。  
+## <a name="remarks"></a>解説  
+ 
+  *DatabaseName* が空の場合、 *IsRemote* は無視され、レポート サーバーの構成ファイルの値がデータベース名に使用されます。  
   
- 場合*IsWindowsUser*に設定されている`true`、 *UserName*形式にする必要があります\<ドメイン >\\< ユーザー名\>します。  
+ *Iswindowsuser*がに`true`設定されている場合、*ユーザー名*はドメイン\\><\>username の形式\<である必要があります。  
   
- ときに*IsWindowsUser*に設定されている`true`、生成されるスクリプトのユーザーへのログイン権限を付与する、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、許可が既定のデータベースとして、レポート サーバー データベースを設定、 **RSExec** 、レポート サーバー データベース、レポート サーバー一時データベース、master データベースおよび MSDB システム データベースの役割。  
+ *Iswindowsuser*がに`true`設定されている場合、生成されたスクリプトは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のユーザーにログイン権限を与え、レポートサーバーデータベースを既定のデータベースとして設定し、レポートサーバーデータベース、レポートサーバー一時データベース、master データベース、および MSDB システムデータベースに対して**RSExec**ロールを付与します。  
   
- ときに*IsWindowsUser*に設定されている`true`メソッドは入力として標準 Windows Sid を受け取ります。 標準 Windows SID またはサービス アカウント名が指定されると、ユーザー名文字列に変換されます。 データベースがローカルである場合、アカウントはアカウントのローカライズされた正しい表現に変換されます。 データベースがリモートである場合、アカウントはコンピューターのアカウントとして表されます。  
+ *Iswindowsuser*がに`true`設定されている場合、メソッドは標準の Windows sid を入力として受け入れます。 標準 Windows SID またはサービス アカウント名が指定されると、ユーザー名文字列に変換されます。 データベースがローカルである場合、アカウントはアカウントのローカライズされた正しい表現に変換されます。 データベースがリモートである場合、アカウントはコンピューターのアカウントとして表されます。  
   
  次の表は、変換されるアカウントとそのリモート表現を示しています。  
   
-|変換されるアカウントまたは SID|共通名|リモート名|  
+|変換されるアカウントまたは SID|一般的な名前|リモート名|  
 |---------------------------------------|-----------------|-----------------|  
-|(S-1-5-18)|[ローカル システム]|\<Domain>\\<ComputerName\>$|  
-|.\LocalSystem|[ローカル システム]|\<Domain>\\<ComputerName\>$|  
-|ComputerName\LocalSystem|[ローカル システム]|\<Domain>\\<ComputerName\>$|  
-|LocalSystem|[ローカル システム]|\<Domain>\\<ComputerName\>$|  
-|(S-1-5-20)|Network Service|\<Domain>\\<ComputerName\>$|  
-|NT AUTHORITY\NetworkService|Network Service|\<Domain>\\<ComputerName\>$|  
+|(S-1-5-18)|[ローカル システム]|
+  \<Domain>\\<ComputerName\>$|  
+|.\LocalSystem|[ローカル システム]|
+  \<Domain>\\<ComputerName\>$|  
+|ComputerName\LocalSystem|[ローカル システム]|
+  \<Domain>\\<ComputerName\>$|  
+|LocalSystem|[ローカル システム]|
+  \<Domain>\\<ComputerName\>$|  
+|(S-1-5-20)|Network Service|
+  \<Domain>\\<ComputerName\>$|  
+|NT AUTHORITY\NetworkService|Network Service|
+  \<Domain>\\<ComputerName\>$|  
 |(S-1-5-19)|Local Service|エラー - 下記参照。|  
 |NT AUTHORITY\LocalService|Local Service|エラー - 下記参照。|  
   
- [!INCLUDE[win2kfamily](../../includes/win2kfamily-md.md)]では、組み込みアカウントを使用し、レポート サーバー データベースがリモートである場合、エラーが返されます。  
+ 
+  [!INCLUDE[win2kfamily](../../includes/win2kfamily-md.md)]では、組み込みアカウントを使用し、レポート サーバー データベースがリモートである場合、エラーが返されます。  
   
- `LocalService` 組み込みアカウントを指定し、レポート サーバー データベースがリモートである場合、エラーが返されます。  
+ 
+  `LocalService` 組み込みアカウントを指定し、レポート サーバー データベースがリモートである場合、エラーが返されます。  
   
- *IsWindowsUser* が true であり、 *UserName* に指定した値を変換する必要がある場合、WMI プロバイダーはレポート サーバー データベースが同じコンピューターにあるかリモート コンピューターにあるかを確認します。 インストールがローカルであるかどうかを確認するため、WMI プロバイダーは以下の値一覧に対して DatabaseServerName プロパティを評価します。 一致が見つかった場合、データベースはローカルです。 見つからなかった場合、リモートです。 比較では大文字小文字を区別しません。  
+ 
+  *IsWindowsUser* が true であり、 *UserName* に指定した値を変換する必要がある場合、WMI プロバイダーはレポート サーバー データベースが同じコンピューターにあるかリモート コンピューターにあるかを確認します。 インストールがローカルであるかどうかを確認するため、WMI プロバイダーは以下の値一覧に対して DatabaseServerName プロパティを評価します。 一致が見つかった場合、データベースはローカルです。 見つからなかった場合、リモートです。 比較では大文字と小文字は区別されません。  
   
 |DatabaseServerName の値|例|  
 |---------------------------------|-------------|  
@@ -99,21 +109,22 @@ out Int32 HRESULT);
 |"LOCAL"||  
 |localhost||  
 |\<Machinename>|testlab14|  
-|\<MachineFQDN>|example.redmond.microsoft.com|  
+|
+  \<MachineFQDN>|example.redmond.microsoft.com|  
 |\<IPAddress>|180.012.345,678|  
   
- ときに*IsWindowsUser*に設定されている`true`、WMI プロバイダーは、アカウントの SID を取得する LookupAccountName の呼び出しし、に配置する名前を取得する LookupAccountSID を呼び出して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]スクリプト。 このようにすると、使用するアカウント名は必ず [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 検証に合格します。  
+ *Iswindowsuser*がに`true`設定されている場合、WMI プロバイダーは LookupAccountName を呼び出してアカウントの SID を取得し、lookupaccountsid 関数を呼び出して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]スクリプトに含める名前を取得します。 このようにすると、使用するアカウント名は必ず [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 検証に合格します。  
   
- ときに*IsWindowsUser*に設定されている`false`、付与のスクリプトを生成、 **RSExec**レポート サーバー データベース、レポート サーバー一時データベースおよび MSDB データベース ロール。  
+ *Iswindowsuser*がに`false`設定されている場合、生成されたスクリプトによって、レポートサーバーデータベース、レポートサーバー一時データベース、および MSDB データベースの**RSExec**ロールが付与されます。  
   
- ときに*IsWindowsUser*に設定されている`false`、SQL Server のユーザーに既に存在する必要があります、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]スクリプトを正常に実行します。  
+ *Iswindowsuser*がに`false`設定されている場合、スクリプトを正常に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]実行するには、SQL Server ユーザーがに既に存在している必要があります。  
   
  レポート サーバーにレポート サーバー データベースが指定されていない場合、GrantRightsToDatabaseUser を呼び出すとエラーが返されます。  
   
  生成されたスクリプトは、 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005、および [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]をサポートします。  
   
 ## <a name="requirements"></a>必要条件  
- **名前空間:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **名前空間:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>参照  
  [MSReportServer_ConfigurationSetting メンバー](msreportserver-configurationsetting-members.md)  

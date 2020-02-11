@@ -14,10 +14,10 @@ ms.author: jrasnick
 manager: jrj
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: bea8e0d51b2918d7280f4afdb8b9d02f6b757827
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401672"
 ---
 # <a name="syspdw_nodes_column_store_segments-transact-sql"></a>pdw_nodes_column_store_segments (Transact-sql)
@@ -26,25 +26,25 @@ ms.locfileid: "74401672"
 
 列ストアインデックスの列ごとに1行の値を格納します。
 
-| 列名                 | データ型  | 説明                                                  |
+| 列名                 | データ型  | [説明]                                                  |
 | :-------------------------- | :--------- | :----------------------------------------------------------- |
 | **partition_id**            | **bigint** | パーティション ID を示します。 データベース内で一意です。     |
 | **hobt_id**                 | **bigint** | この列ストアインデックスを持つテーブルのヒープまたは B ツリーインデックス (hobt) の ID。 |
-| **column_id**               | **通り**    | 列ストア列の ID。                                |
-| **segment_id**              | **通り**    | 列セグメントの ID。 旧バージョンとの互換性を維持するために、列名は行グループ ID でも segment_id 呼び出されます。 セグメントを一意に識別するには、<hobt_id、partition_id、column_id>、<segment_id> を使用します。 |
-| **バージョン**                 | **通り**    | 列セグメント形式のバージョン。                        |
-| **encoding_type**           | **通り**    | そのセグメントに使用されるエンコードの種類:<br /><br /> 1 = VALUE_BASED-辞書のない文字列/バイナリ (内部のバリエーションがある場合は4に似ています)<br /><br /> 2 = VALUE_HASH_BASED-ディクショナリに共通の値を持つ非文字列/バイナリ列<br /><br /> 3 = ディクショナリに共通の値を持つ STRING_HASH_BASED 文字列/バイナリ列<br /><br /> 4 = STORE_BY_VALUE_BASED-辞書のない文字列/バイナリ<br /><br /> 5 = ディクショナリのない STRING_STORE_BY_VALUE_BASED 文字列/バイナリ<br /><br /> すべてのエンコーディングは、可能であれば、ビットパックと実行時間のエンコーディングを利用します。 |
-| **row_count**               | **通り**    | 行グループ内の行の数。                             |
-| **has_nulls**               | **通り**    | 列セグメントに null 値が含まれている場合は1。                     |
+| **column_id**               | **int**    | 列ストア列の ID。                                |
+| **segment_id**              | **int**    | 列セグメントの ID。 旧バージョンとの互換性を維持するために、列名は行グループ ID でも segment_id 呼び出されます。 セグメントを一意に識別するには、<hobt_id、partition_id、column_id>、<segment_id> を使用します。 |
+| **バージョン**                 | **int**    | 列セグメント形式のバージョン。                        |
+| **encoding_type**           | **int**    | そのセグメントに使用されるエンコードの種類:<br /><br /> 1 = VALUE_BASED-辞書のない文字列/バイナリ (内部のバリエーションがある場合は4に似ています)<br /><br /> 2 = VALUE_HASH_BASED-ディクショナリに共通の値を持つ非文字列/バイナリ列<br /><br /> 3 = ディクショナリに共通の値を持つ STRING_HASH_BASED 文字列/バイナリ列<br /><br /> 4 = STORE_BY_VALUE_BASED-辞書のない文字列/バイナリ<br /><br /> 5 = ディクショナリのない STRING_STORE_BY_VALUE_BASED 文字列/バイナリ<br /><br /> すべてのエンコーディングは、可能であれば、ビットパックと実行時間のエンコーディングを利用します。 |
+| **row_count**               | **int**    | 行グループ内の行の数。                             |
+| **has_nulls**               | **int**    | 列セグメントに null 値が含まれている場合は1。                     |
 | **base_id**                 | **bigint** | エンコードの種類1が使用されている場合は、ベース値 ID。  エンコードの種類1が使用されていない場合、base_id は1に設定されます。 |
-| **桁違い**               | **点**  | エンコードの種類1が使用されている場合の大きさ。  エンコードの種類1が使用されていない場合、マグニチュードは1に設定されます。 |
-| **primary__dictionary_id**  | **通り**    | プライマリ辞書の ID。 0以外の値は、現在のセグメント (つまり、行グループ) のこの列のローカル辞書を指します。 値-1 は、このセグメントにローカルディクショナリがないことを示します。 |
-| **secondary_dictionary_id** | **通り**    | セカンダリ辞書の ID。 0以外の値は、現在のセグメント (つまり、行グループ) のこの列のローカル辞書を指します。 値-1 は、このセグメントにローカルディクショナリがないことを示します。 |
+| **桁違い**               | **float**  | エンコードの種類1が使用されている場合の大きさ。  エンコードの種類1が使用されていない場合、マグニチュードは1に設定されます。 |
+| **primary__dictionary_id**  | **int**    | プライマリ辞書の ID。 0以外の値は、現在のセグメント (つまり、行グループ) のこの列のローカル辞書を指します。 値-1 は、このセグメントにローカルディクショナリがないことを示します。 |
+| **secondary_dictionary_id** | **int**    | セカンダリ辞書の ID。 0以外の値は、現在のセグメント (つまり、行グループ) のこの列のローカル辞書を指します。 値-1 は、このセグメントにローカルディクショナリがないことを示します。 |
 | **min_data_id**             | **bigint** | 列セグメントの最小データ ID。                       |
 | **max_data_id**             | **bigint** | 列セグメントの最大データ ID。                       |
 | **null_value**              | **bigint** | NULL を表すために使用される値。                               |
 | **on_disk_size**            | **bigint** | セグメントのサイズ (バイト単位)。                                    |
-| **pdw_node_id**             | **通り**    | [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]ノードの一意識別子。 |
+| **pdw_node_id**             | **int**    | [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]ノードの一意識別子。 |
 | &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]

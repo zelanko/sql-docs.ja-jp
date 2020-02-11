@@ -1,5 +1,5 @@
 ---
-title: デシジョン ツリー モデルのクエリ例 |Microsoft Docs
+title: デシジョンツリーモデルのクエリ例 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 009e8d203d9262ee14702b99ad7d0e31d8a16dbb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084756"
 ---
 # <a name="decision-trees-model-query-examples"></a>デシジョン ツリー モデルのクエリ例
@@ -28,24 +28,24 @@ ms.locfileid: "66084756"
   
  **コンテンツ クエリ**  
   
- [データ マイニング スキーマ行セットからモデル パラメーターを取得する](#bkmk_Query1)  
+ [データマイニングスキーマ行セットからモデルパラメーターを取得する](#bkmk_Query1)  
   
- [DMX を使用してモデルのツリーについての詳細を取得する](#bkmk_Query2)  
+ [DMX を使用したモデルのツリーに関する詳細の取得](#bkmk_Query2)  
   
  [モデルからサブツリーを取得する](#bkmk_Query3)  
   
  **予測クエリ**  
   
- [確率付きの予測を取得する](#bkmk_Query4)  
+ [確率を含む予測を返す](#bkmk_Query4)  
   
- [デシジョン ツリー モデルからアソシエーションを予測する](#bkmk_Query5)  
+ [デシジョンツリーモデルからアソシエーションを予測する](#bkmk_Query5)  
   
- [デシジョン ツリー モデルから回帰式を取得する](#bkmk_Query6)  
+ [デシジョンツリーモデルから回帰式を取得する](#bkmk_Query6)  
   
-##  <a name="bkmk_top2"></a> デシジョン ツリー モデルに関する情報の入手  
+##  <a name="bkmk_top2"></a>デシジョンツリーモデルに関する情報の検索  
  デシジョン ツリー モデルのコンテンツに対して意味のあるクエリを作成するには、モデル コンテンツの構造や、各種類のノードに格納されている情報の種類を把握しておく必要があります。 詳細については、「 [デシジョン ツリー モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)」を参照してください。  
   
-###  <a name="bkmk_Query1"></a> サンプル クエリ 1:データ マイニング スキーマ行セットからモデル パラメーターを取得する  
+###  <a name="bkmk_Query1"></a>サンプルクエリ 1: データマイニングスキーマ行セットからモデルパラメーターを取得する  
  データ マイニング スキーマ行セットに対してクエリを実行すると、モデルに関するメタデータを取得できます (作成された日時、最後に処理された日時、基になるマイニング構造の名前、予測可能な属性として使用されている列の名前など)。 モデルが最初に作成されたときに使用されたパラメーターを取得することもできます。  
   
 ```  
@@ -60,13 +60,14 @@ WHERE MODEL_NAME = 'TM_Decision Tree'
   
  COMPLEXITY_PENALTY=0.5, MAXIMUM_INPUT_ATTRIBUTES=255,MAXIMUM_OUTPUT_ATTRIBUTES=255,MINIMUM_SUPPORT=10,SCORE_METHOD=4,SPLIT_METHOD=3,FORCE_REGRESSOR=  
   
-###  <a name="bkmk_Query2"></a> サンプル クエリ 2:DMX を使用してモデル コンテンツに関する詳細を取得します。  
+###  <a name="bkmk_Query2"></a>サンプルクエリ 2: DMX を使用してモデルコンテンツに関する詳細を取得する  
  次のクエリは、「 [基本的なデータ マイニング チュートリアル](../../tutorials/basic-data-mining-tutorial.md)」でモデルを構築したときに作成したデシジョン ツリーに関する基本的な情報を返します。 各ツリー構造は、それ自体のノードに格納されます。 このモデルに含まれている予測可能な属性は 1 つなので、ツリー ノードは 1 つしかありません。 しかし、デシジョン ツリー アルゴリズムを使用してアソシエーション モデルを作成した場合は、各製品に 1 つずつ、何百ものツリーがあることもあります。  
   
  このクエリでは、種類が 2 のノード (特定の予測可能な属性を表すツリーの最上位のノード) がすべて返されます。  
   
 > [!NOTE]  
->  `CHILDREN_CARDINALITY` という列は、MDX の同名の予約済みキーワードと区別するために角かっこで囲む必要があります。  
+>  
+  `CHILDREN_CARDINALITY` という列は、MDX の同名の予約済みキーワードと区別するために角かっこで囲む必要があります。  
   
 ```  
 SELECT MODEL_NAME, NODE_NAME, NODE_CAPTION,   
@@ -75,7 +76,7 @@ FROM TM_DecisionTrees.CONTENT
 WHERE NODE_TYPE = 2  
 ```  
   
- 例の結果を次に示します。  
+ 結果の例:  
   
 |MODEL_NAME|NODE_NAME|NODE_CAPTION|NODE_SUPPORT|CHILDREN_CARDINALITY|  
 |-----------------|----------------|-------------------|-------------------|---------------------------|  
@@ -96,20 +97,20 @@ FROM TM_DecisionTree.CONTENT
 WHERE [PARENT_UNIQUE_NAME] = '000000001'  
 ```  
   
- 例の結果を次に示します。  
+ 結果の例:  
   
-|NODE_NAME|NODE_CAPTION|T.ATTRIBUTE_NAME|T.ATTRIBUTE_VALUE|SUPPORT|  
+|NODE_NAME|NODE_CAPTION|T.ATTRIBUTE_NAME|T.ATTRIBUTE_VALUE|サポート|  
 |----------------|-------------------|-----------------------|------------------------|-------------|  
 |00000000100|Number Cars Owned = 0|Bike Buyer|Missing|0|  
 |00000000100|Number Cars Owned = 0|Bike Buyer|0|1067|  
-|00000000100|Number Cars Owned = 0|Bike Buyer|1|1875|  
+|00000000100|Number Cars Owned = 0|Bike Buyer|1 で保護されたプロセスとして起動されました|1875|  
 |00000000101|Number Cars Owned = 3|Bike Buyer|Missing|0|  
 |00000000101|Number Cars Owned = 3|Bike Buyer|0|678|  
-|00000000101|Number Cars Owned = 3|Bike Buyer|1|473|  
+|00000000101|Number Cars Owned = 3|Bike Buyer|1 で保護されたプロセスとして起動されました|473|  
   
- これらの結果からことがわかります顧客の自転車の購入者 (`[Bike Buyer]` = 1)、1067 人の顧客が車および 473 顧客は車を 3 を必要があります。  
+ これらの結果から、自転車を購入した顧客 (`[Bike Buyer]` = 1)、1067のお客様が車を0台、473のお客様が3車を持っていることがわかります。  
   
-###  <a name="bkmk_Query3"></a> サンプル クエリ 3:モデルからサブツリーを取得する  
+###  <a name="bkmk_Query3"></a>サンプルクエリ 3: モデルからサブツリーを取得する  
  実際に自転車を購入した顧客についてさらに調査する場合は、 次の例のようにクエリで [IsDescendant &#40;DMX&#41;](/sql/dmx/isdescendant-dmx) 関数を使用すると、任意のサブツリーについて追加の詳細を表示することができます。 次のクエリは、42 歳以上の顧客を含むツリーのリーフ ノード (NODE_TYPE = 4) を取得して、自転車を購入した顧客の数を返します。 このクエリでは、入れ子になったテーブルの行が Bike Buyer = 1 の行のみに制限されています。  
   
 ```  
@@ -122,7 +123,7 @@ WHERE ISDESCENDANT('0000000010001')
 AND NODE_TYPE = 4  
 ```  
   
- 例の結果を次に示します。  
+ 結果の例:  
   
 |NODE_NAME|NODE_CAPTION|t.SUPPORT|  
 |----------------|-------------------|---------------|  
@@ -139,7 +140,7 @@ AND NODE_TYPE = 4
   
 -   入力と出力が直線関係にあるデシジョン ツリーの部分の回帰式を取得する  
   
-###  <a name="bkmk_Query4"></a> サンプル クエリ 4:確率付きの予測を取得する  
+###  <a name="bkmk_Query4"></a>サンプルクエリ 4: 確率付きの予測を取得する  
  次のサンプル クエリでは、「 [基本的なデータ マイニング チュートリアル](../../tutorials/basic-data-mining-tutorial.md)」で作成したデシジョン ツリー モデルを使用します。 クエリは [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] DW のテーブル dbo.ProspectiveBuyers にあるサンプル データの新しいセットを渡して、新しいデータ セット内のどの顧客が自転車を購入するかを予測します。  
   
  このクエリでは、予測関数 [PredictHistogram &#40;DMX&#41;](/sql/dmx/predicthistogram-dmx)を使用しています。この関数は、モデルで検出された確率に関する有用な情報を含む入れ子になったテーブルを返します。 クエリの最後の WHERE 句は結果をフィルター処理して、自転車を購入する確率が 0% より大きいと予測された顧客のみを返します。  
@@ -181,18 +182,18 @@ AND PredictProbability([Bike Buyer]) >'.05'
   
  既定では、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、入れ子になったテーブルを列ラベル **[Expression]** を使用して返します。 このラベルを変更するには、返される列に別名を付けます。 その別名 (この例の場合は **Results**) は、列見出しと、入れ子になったテーブルの値の両方に使用されます。 結果を表示するには、入れ子になったテーブルを展開する必要があります。  
   
- 例の結果、Bike Buyer = 1。  
+ 自転車購入者 = 1 の場合の結果の例:  
   
 |Bike Buyer|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|$VARIANCE|$STDEV|  
 |----------------|--------------|------------------|--------------------------|---------------|------------|  
-|1|2540|0.634849242045644|0.013562168281562|0|0|  
+|1 で保護されたプロセスとして起動されました|2540|0.634849242045644|0.013562168281562|0|0|  
 |0|1460|0.364984174579377|0.00661336932550915|0|0|  
 ||0|0.000166583374979177|0.000166583374979177|0|0|  
   
  使用しているプロバイダーが、ここに示されているような階層的な行セットをサポートしていない場合は、クエリで FLATTENED キーワードを使用すると、繰り返される列値の代わりに NULL を含むテーブルとして結果を返すことができます。 詳細については、「[入れ子になったテーブル &#40;Analysis Services - データ マイニング&#41;](nested-tables-analysis-services-data-mining.md)」または「[DMX 選択ステートメントについて](/sql/dmx/understanding-the-dmx-select-statement)」を参照してください。  
   
-###  <a name="bkmk_Query5"></a> サンプル クエリ 5:デシジョン ツリー モデルからアソシエーションを予測する  
- 次のサンプル クエリは、Association マイニング構造に基づいています。 このサンプルに従って作業するために、このマイニング構造に新しいモデルを追加し、アルゴリズムとして Microsoft デシジョン ツリーを選択できます。 アソシエーション マイニング構造を作成する方法の詳細については、次を参照してください。[レッスン 3。マーケット バスケット シナリオの作成&#40;中級者向けデータ マイニング チュートリアル&#41;](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)します。  
+###  <a name="bkmk_Query5"></a>サンプルクエリ 5: デシジョンツリーモデルからアソシエーションを予測する  
+ 次のサンプル クエリは、Association マイニング構造に基づいています。 このサンプルに従って作業するために、このマイニング構造に新しいモデルを追加し、アルゴリズムとして Microsoft デシジョン ツリーを選択できます。 アソシエーション マイニング モデルの作成方法の詳細については、「[レッスン 3 : マーケット バスケット シナリオの作成 &#40;中級者向けデータ マイニング チュートリアル&#41;](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)」を参照してください。  
   
  次のサンプル クエリは単一クエリです。このクエリは、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] でフィールドを選択し、それらのフィールドの値をドロップダウン リストから選択するだけで簡単に作成できます。  
   
@@ -206,7 +207,7 @@ NATURAL PREDICTION JOIN
   
  期待される結果:  
   
-|[モデル]|  
+|モデル|  
 |-----------|  
 |Mountain-200|  
 |Mountain Tire Tube|  
@@ -225,13 +226,13 @@ NATURAL PREDICTION JOIN
   
  期待される結果:  
   
-|[モデル]|  
+|モデル|  
 |-----------|  
 |Long-Sleeve Logo Jersey|  
 |Mountain-400-W|  
 |Classic Vest|  
   
-###  <a name="bkmk_Query6"></a> サンプル クエリ 6:デシジョン ツリー モデルから回帰式を取得する  
+###  <a name="bkmk_Query6"></a>サンプルクエリ 6: デシジョンツリーモデルから回帰式を取得する  
  連続属性の回帰を含むデシジョン ツリー モデルを作成すると、回帰式を使用して予測を行ったり、回帰式に関する情報を抽出したりすることができます。 回帰モデルに対するクエリの詳細については、「 [線形回帰モデルのクエリ例](linear-regression-model-query-examples.md)」を参照してください。  
   
  デシジョン ツリー モデルに回帰ノードと、不連続属性や範囲で分割されるノードが混在している場合は、回帰ノードのみを返すクエリを作成できます。 NODE_DISTRIBUTION テーブルには、回帰式の詳細が含まれています。 この例では、見やすくするために列をフラット化して、NODE_DISTRIBUTION テーブルに別名を付けています。 しかし、このモデルでは、Income を他の連続属性に関連付けるためのリグレッサーは検出されませんでした。 このような場合、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は、その属性の平均値とモデル内の全分散を返します。  
@@ -242,11 +243,11 @@ FROM DT_Predict. CONTENT
 WHERE NODE_TYPE = 25  
 ```  
   
- 例の結果を次に示します。  
+ 結果の例:  
   
 |T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VARIANCE|t.VALUETYPE|  
 |-----------------------|------------------------|---------------|-------------------|----------------|-----------------|  
-|Yearly Income|Missing|0|0.000457142857142857|0|1|  
+|Yearly Income|Missing|0|0.000457142857142857|0|1 で保護されたプロセスとして起動されました|  
 |Yearly Income|57220.8876687257|17484|0.999542857142857|1041275619.52776|3|  
 ||57220.8876687257|0|0|1041216662.54387|11|  
   
@@ -257,24 +258,24 @@ WHERE NODE_TYPE = 25
   
 |||  
 |-|-|  
-|予測関数|使用方法|  
-|[IsDescendant &#40;DMX&#41;](/sql/dmx/isdescendant-dmx)|あるノードがモデル内の別のノードの子であるかどうかを示します。|  
-|[IsInNode &#40;DMX&#41;](/sql/dmx/isinnode-dmx)|指定されたノードが現在のケースを含んでいるかどうかを示します。|  
-|[PredictAdjustedProbability &#40;DMX&#41;](/sql/dmx/predictadjustedprobability-dmx)|重み付け確率を返します。|  
-|[PredictAssociation &#40;DMX&#41;](/sql/dmx/predictassociation-dmx)|結合データセットのメンバーシップを予測します。|  
+|予測関数|使用法|  
+|[DMX&#41;&#40;IsDescendant](/sql/dmx/isdescendant-dmx)|あるノードがモデル内の別のノードの子であるかどうかを示します。|  
+|[DMX&#41;&#40;IsInNode](/sql/dmx/isinnode-dmx)|指定されたノードが現在のケースを含んでいるかどうかを示します。|  
+|[DMX&#41;&#40;PredictAdjustedProbability](/sql/dmx/predictadjustedprobability-dmx)|重み付け確率を返します。|  
+|[DMX&#41;&#40;PredictAssociation](/sql/dmx/predictassociation-dmx)|結合データセットのメンバーシップを予測します。|  
 |[PredictHistogram &#40;DMX&#41;](/sql/dmx/predicthistogram-dmx)|現在の予測値に関連する値のテーブルを返します。|  
-|[PredictNodeId &#40;DMX&#41;](/sql/dmx/predictnodeid-dmx)|各ケースの Node_ID を返します。|  
-|[PredictProbability &#40;DMX&#41;](/sql/dmx/predictprobability-dmx)|予測値の確率を返します。|  
-|[PredictStdev &#40;DMX&#41;](/sql/dmx/predictstdev-dmx)|指定された列に対して、予測された標準偏差を返します。|  
-|[PredictSupport &#40;DMX&#41;](/sql/dmx/predictsupport-dmx)|指定された状態に対するサポート値を返します。|  
-|[PredictVariance &#40;DMX&#41;](/sql/dmx/predictvariance-dmx)|指定された列の分散を返します。|  
+|[&#40;DMX&#41;の PredictNodeId](/sql/dmx/predictnodeid-dmx)|各ケースの Node_ID を返します。|  
+|[&#40;DMX&#41;の PredictProbability](/sql/dmx/predictprobability-dmx)|予測値の確率を返します。|  
+|[&#40;DMX&#41;の PredictStdev](/sql/dmx/predictstdev-dmx)|指定された列に対して、予測された標準偏差を返します。|  
+|[&#40;DMX&#41;の PredictSupport](/sql/dmx/predictsupport-dmx)|指定された状態に対するサポート値を返します。|  
+|[&#40;DMX&#41;の PredictVariance](/sql/dmx/predictvariance-dmx)|指定された列の分散を返します。|  
   
- すべての [!INCLUDE[msCoName](../../includes/msconame-md.md)] アルゴリズムに共通の関数の一覧については、「[一般的な予測関数 (DMX)](/sql/dmx/general-prediction-functions-dmx)」を参照してください。 特定の関数の構文については、「[データ マイニング拡張機能 &#40;DMX&#41; 関数リファレンス](/sql/dmx/data-mining-extensions-dmx-function-reference)」を参照してください。  
+ すべての [!INCLUDE[msCoName](../../includes/msconame-md.md)] アルゴリズムに共通の関数の一覧については、「[一般的な予測関数 (DMX)](/sql/dmx/general-prediction-functions-dmx)」を参照してください。 特定の関数の構文については、「[データ マイニング拡張機能 (DMX) 関数リファレンス](/sql/dmx/data-mining-extensions-dmx-function-reference)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング クエリ](data-mining-queries.md)   
- [Microsoft デシジョン ツリー アルゴリズム](microsoft-decision-trees-algorithm.md)   
- [Microsoft デシジョン ツリー アルゴリズム テクニカル リファレンス](microsoft-decision-trees-algorithm-technical-reference.md)   
- [デシジョン ツリー モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
+ [データマイニングクエリ](data-mining-queries.md)   
+ [Microsoft デシジョンツリーアルゴリズム](microsoft-decision-trees-algorithm.md)   
+ [Microsoft デシジョンツリーアルゴリズムテクニカルリファレンス](microsoft-decision-trees-algorithm-technical-reference.md)   
+ [デシジョンツリーモデルのマイニングモデルコンテンツ &#40;Analysis Services データマイニング&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
   
   

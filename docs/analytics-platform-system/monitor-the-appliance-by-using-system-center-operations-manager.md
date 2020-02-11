@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 0b244d85e601e46fe778298e723c0a7d01e669bb
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400971"
 ---
 # <a name="monitor-with-system-center-operations-manager---analytics-platform-system"></a>System Center Operations Manager 分析プラットフォームシステムを使用した監視
 Analytics Platform System (APS) アプライアンスを監視するには、System Center Operations Manager (SCOM) を使用します。
   
-## <a name="before-you-begin"></a>開始する前に  
+## <a name="before-you-begin"></a>はじめに  
   
 ### <a name="prerequisites"></a>前提条件  
   
@@ -41,10 +41,10 @@ Analytics Platform System (APS) アプライアンスを監視するには、Sys
 ## <a name="to-monitor-sql-server-pdw-with-scom"></a>SCOM で SQL Server PDW を監視するには  
 SCOM 管理パックを構成したら、SCOM の [監視] ウィンドウをクリックし、 **SQL Server アプライアンス**にドリルダウンして、 **Microsoft SQL Server Parallel Data Warehouse**します。 Microsoft SQL Server Parallel Data Warehouse の下には、アラート、アプライアンス、アプライアンスダイアグラム、ノードの4つの選択肢があります。  
   
-### <a name="alerts"></a>アラート  
+### <a name="alerts"></a>警告  
 アラートでは、管理対象の現在のアラートを確認できます。  
   
-![コンテンツ](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM.png "SCOM_SCOM")  
+![警告](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM.png "SCOM_SCOM")  
   
 ### <a name="appliances"></a>アプライアンス  
 アプライアンスは、現在環境内で検出および監視されている SQL Server PDW アプライアンスを見つけます。 アプライアンスがここに表示されず、そのための ODBC 接続を作成している場合は、PDWWatcher アカウントで問題が発生している可能性があります。 "監視されていません" と表示されている場合は、PDWMonitor アカウントで問題が発生している可能性があります。 SCOM はリアルタイムで変更されることはないため、定期的に監視する新しいアプライアンスを確認し、監視のために定期的にクエリをアプライアンスに送信します。  

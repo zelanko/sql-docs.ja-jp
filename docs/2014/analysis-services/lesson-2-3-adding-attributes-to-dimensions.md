@@ -1,5 +1,5 @@
 ---
-title: ディメンションの属性の追加 |Microsoft Docs
+title: ディメンションへの属性の追加 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7a30424ce322ed356870465422c4f82fb8d7d88d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079031"
 ---
 # <a name="adding-attributes-to-dimensions"></a>ディメンションへの属性の追加
@@ -28,9 +28,11 @@ ms.locfileid: "66079031"
   
 1.  Customer ディメンションのディメンション デザイナーを開きます。 これを行うには、ソリューション エクスプローラーの **[ディメンション]** ノードで **[Customer]** ディメンションをダブルクリックします。  
   
-2.  **[属性]** ペインに、キューブ ウィザードによって作成された Customer Key 属性および Geography Key 属性が表示されます。  
+2.  
+  **[属性]** ペインに、キューブ ウィザードによって作成された Customer Key 属性および Geography Key 属性が表示されます。  
   
-3.  **[ディメンション構造]** タブのツール バーで、 **[データ ソース ビュー]** ペイン内のテーブルを表示するための [ズーム] アイコンが 100% に設定されていることを確認します。  
+3.  
+  **[ディメンション構造]** タブのツール バーで、 **[データ ソース ビュー]** ペイン内のテーブルを表示するための [ズーム] アイコンが 100% に設定されていることを確認します。  
   
 4.  次の列を、 **[データ ソース ビュー]** ペインの **Customer** テーブルから **[属性]** ペインにドラッグします。  
   
@@ -38,7 +40,7 @@ ms.locfileid: "66079031"
   
     -   **MaritalStatus**  
   
-    -   **Gender**  
+    -   **性別**  
   
     -   **EmailAddress**  
   
@@ -66,11 +68,11 @@ ms.locfileid: "66079031"
   
     -   **City**  
   
-    -   **StateProvinceName**  
+    -   **[Stateprovincename]**  
   
     -   **EnglishCountryRegionName**  
   
-    -   **PostalCode**  
+    -   **住所**  
   
 6.  [ファイル] メニューの **[すべてを保存]** をクリックします。  
   
@@ -80,15 +82,17 @@ ms.locfileid: "66079031"
   
 1.  Product ディメンションのディメンション デザイナーを開きます。 ソリューション エクスプローラーで、 **Product** ディメンションをダブルクリックします。  
   
-2.  **[属性]** ペインに、キューブ ウィザードによって作成された Product Key 属性が表示されます。  
+2.  
+  **[属性]** ペインに、キューブ ウィザードによって作成された Product Key 属性が表示されます。  
   
-3.  **[ディメンション構造]** タブのツール バーで、 **[データ ソース ビュー]** ペイン内のテーブルを表示するための [ズーム] アイコンが 100% に設定されていることを確認します。  
+3.  
+  **[ディメンション構造]** タブのツール バーで、 **[データ ソース ビュー]** ペイン内のテーブルを表示するための [ズーム] アイコンが 100% に設定されていることを確認します。  
   
 4.  次の列を、 **[データ ソース ビュー]** ペインの **Product** テーブルから **[属性]** ペインにドラッグします。  
   
     -   **StandardCost**  
   
-    -   **色**  
+    -   **Color**  
   
     -   **SafetyStockLevel**  
   
@@ -96,11 +100,11 @@ ms.locfileid: "66079031"
   
     -   **ListPrice**  
   
-    -   **Size**  
+    -   **[サイズ]**  
   
     -   **SizeRange**  
   
-    -   **Weight**  
+    -   **線**  
   
     -   **DaysToManufacture**  
   
@@ -108,17 +112,17 @@ ms.locfileid: "66079031"
   
     -   **DealerPrice**  
   
-    -   **Class**  
+    -   **クラス**  
   
-    -   **スタイル**  
+    -   **Style**  
   
     -   **ModelName**  
   
-    -   **StartDate**  
+    -   **日**  
   
-    -   **EndDate**  
+    -   **終了**  
   
-    -   **ステータス**  
+    -   **状態**  
   
 5.  [ファイル] メニューの **[すべてを保存]** をクリックします。  
   

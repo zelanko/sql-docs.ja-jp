@@ -1,5 +1,5 @@
 ---
-title: 実行パッケージ ダイアログ ボックス |Microsoft Docs
+title: '[パッケージの実行] ダイアログボックス |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,20 +14,22 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b4b920b17e960059e1212be7dd15c176c0b25a47
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059184"
 ---
 # <a name="execute-package-dialog-box"></a>Execute Package Dialog Box
-  **[パッケージの実行]** ダイアログ ボックスでは、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サーバーに格納されているパッケージを実行できます。  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージには、値が環境変数に格納されているパラメーターが含まれている場合があります。 こうしたパッケージを実行するには、環境変数の値の提供に使用する環境を事前に指定する必要があります。 プロジェクトには複数の環境を含めることができますが、実行時に環境変数の値をバインドするのに使用できる環境は 1 つだけです。 パッケージで環境変数が使用されない場合、環境は不要です。  
+  **[パッケージの実行]** ダイアログ ボックスでは、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サーバーに格納されているパッケージを実行できます。  
   
- 目的に合ったトピックをクリックしてください  
+ 
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージには、値が環境変数に格納されているパラメーターが含まれている場合があります。 こうしたパッケージを実行するには、環境変数の値の提供に使用する環境を事前に指定する必要があります。 プロジェクトには複数の環境を含めることができますが、実行時に環境変数の値をバインドするのに使用できる環境は 1 つだけです。 パッケージで環境変数が使用されない場合、環境は不要です。  
   
--   [[パッケージの実行] ダイアログ ボックスを開く](#open_dialog)  
+ どの操作を行いますか。  
+  
+-   [[パッケージの実行] ダイアログボックスを開く](#open_dialog)  
   
 -   [[全般] ページのオプションの設定](#general)  
   
@@ -37,35 +39,39 @@ ms.locfileid: "66059184"
   
 -   [[詳細設定] タブのオプションの設定](#advanced)  
   
--   [[パッケージの実行] ダイアログ ボックスのオプションのスクリプト作成](#script)  
+-   [[パッケージの実行] ダイアログボックスのオプションのスクリプト作成](#script)  
   
-##  <a name="open_dialog"></a> [パッケージの実行] ダイアログ ボックスを開く  
+##  <a name="open_dialog"></a>[パッケージの実行] ダイアログボックスを開く  
   
-1.  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]から [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サーバーに接続します。  
+1.  
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]から [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サーバーに接続します。  
   
      SSISDB データベースをホストする [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] のインスタンスに接続されます。  
   
 2.  オブジェクト エクスプローラーで、ツリーを展開して、 **[Integration Services カタログ]** ノードを表示します。  
   
-3.  **[SSISDB]** ノードを展開します。  
+3.  
+  **[SSISDB]** ノードを展開します。  
   
 4.  実行するパッケージを含むフォルダーを展開します。  
   
-5.  パッケージを右クリックし、 **[実行]** をクリックします。  
+5.  パッケージを右クリックし、**[実行]** をクリックします。  
   
-##  <a name="general"></a> [全般] ページのオプションの設定  
- **[環境]** を選択して、実行するパッケージに適用される環境を指定します。  
+##  <a name="general"></a>[全般] ページのオプションの設定  
+ 
+  **[環境]** を選択して、実行するパッケージに適用される環境を指定します。  
   
-##  <a name="parameters"></a> [パラメーター] タブのオプションの設定  
- **[パラメーター]** タブを使用して、パッケージの実行時に使用するパラメーターの値を変更します。  
+##  <a name="parameters"></a>[パラメーター] タブのオプションの設定  
+ 
+  **[パラメーター]** タブを使用して、パッケージの実行時に使用するパラメーターの値を変更します。  
   
-##  <a name="connection"></a> [接続マネージャー] タブのオプションの設定  
+##  <a name="connection"></a>[接続マネージャー] タブのオプションの設定  
  [接続マネージャー] タブを使用して、パッケージの接続マネージャーのプロパティを設定します。  
   
-##  <a name="advanced"></a> [詳細設定] タブのオプションの設定  
+##  <a name="advanced"></a>[詳細設定] タブのオプションの設定  
  [詳細設定] タブを使用して、プロパティとその他のパッケージの設定を管理します。  
   
- **[追加]** 、 **[編集]** 、 **[削除]**  
+ **追加**、**編集**、**削除**  
  クリックしてプロパティを追加、編集、または削除します。  
   
  **ログ記録レベル**  
@@ -74,10 +80,11 @@ ms.locfileid: "66059184"
  **エラー時にダンプする**  
  パッケージの実行中にエラーが発生した場合にダンプ ファイルを作成するかどうかを指定します。 詳細については、「 [パッケージ実行用のダンプ ファイルを生成する](troubleshooting/generating-dump-files-for-package-execution.md)」を参照してください。  
   
- **32 ビット ランタイム**  
+ **32ビットランタイム**  
  パッケージが 32 ビット システムで実行されるように指定します。  
   
-##  <a name="script"></a> [パッケージの実行] ダイアログ ボックスのオプションのスクリプト作成  
- **[パッケージの実行]** ダイアログ ボックスが表示されているときに、ツール バーの **[スクリプト]** を使用すると、 [!INCLUDE[tsql](../includes/tsql-md.md)] コードを生成することもできます。 生成されたスクリプトからは、 **[パッケージの実行]** ダイアログ ボックスで選択したのと同じオプションを指定したストアド プロシージャ [catalog.start_execution (SSISDB データベース)](/sql/integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database) が呼び出されます。 このスクリプトは、[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] の新しいスクリプト ウィンドウに表示されます。  
+##  <a name="script"></a>[パッケージの実行] ダイアログボックスのオプションのスクリプト作成  
+ 
+  **[パッケージの実行]** ダイアログ ボックスが表示されているときに、ツール バーの **[スクリプト]** を使用すると、 [!INCLUDE[tsql](../includes/tsql-md.md)] コードを生成することもできます。 生成されたスクリプトからは、[[パッケージの実行]](/sql/integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database) ダイアログ ボックスで選択したのと同じオプションを指定したストアド プロシージャ **catalog.start_execution (SSISDB データベース)** が呼び出されます。 このスクリプトは、 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]の新しいスクリプト ウィンドウに表示されます。  
   
   

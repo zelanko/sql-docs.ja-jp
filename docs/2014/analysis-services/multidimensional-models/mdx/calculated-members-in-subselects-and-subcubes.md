@@ -1,5 +1,5 @@
 ---
-title: 計算されるメンバーはサブセレクトとサブキューブで |Microsoft Docs
+title: サブセレクトとサブキューブで計算されるメンバー |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,25 +11,25 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 57a7a9597be4b7a662fddd9550fdf341be44f922
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074793"
 ---
 # <a name="calculated-members-in-subselects-and-subcubes"></a>サブセレクトとサブキューブで計算されるメンバー
   以前のリリースでは、計算されるメンバーは、サブセレクトまたはサブキューブで許可されませんでした。 しかし、SQL Server 2008 以降では、接続プロパティによって許可され有効になりました。 さらに、サブセレクトおよびサブキューブにおける計算されるメンバーの新しい動作が、SQL Server 2008 R2 で導入されました。  
   
 ## <a name="calculated-members-in-subselects-and-subcubes"></a>サブセレクトとサブキューブで計算されるメンバー  
- `SubQueries`で接続文字列プロパティ<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>または`DBPROPMSMDSUBQUERIES`プロパティ[サポートされる XMLA プロパティ&#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)動作または許容値計算されるメンバーの定義または計算サブセレクトまたはサブキューブで設定します。 このドキュメントのコンテキストでは、特に明記しない限り、サブセレクトはサブセレクトとサブキューブを示します。  
+ XMLA `SubQueries`&#41;では、 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>の接続`DBPROPMSMDSUBQUERIES`文字列プロパティまたは[サポートされる xmla プロパティ &#40;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)のプロパティで、計算されるメンバーまたはサブキューブの計算されるメンバーまたは計算されるセットの動作または許容値を定義します。 このドキュメントのコンテキストでは、特に明記しない限り、サブセレクトはサブセレクトとサブキューブを示します。  
   
  SubQueries プロパティでは次の値を指定できます。  
   
 |||  
 |-|-|  
-|値|Description|  
+|値|[説明]|  
 |0|計算されるメンバーは、サブセレクトまたはサブキューブで許可されません。<br /><br /> 計算されるメンバーが参照されている場合にサブセレクトまたはサブキューブを評価すると、エラーが発生します。|  
-|1|計算されるメンバーはサブセレクトまたはサブキューブで許可されますが、返されるサブ空間に先祖メンバーは含まれません。|  
+|1 で保護されたプロセスとして起動されました|計算されるメンバーはサブセレクトまたはサブキューブで許可されますが、返されるサブ空間に先祖メンバーは含まれません。|  
 |2|計算されるメンバーはサブセレクトまたはサブキューブで許可され、返されるサブ空間に先祖メンバーが含まれます。 また、混合粒度は、計算されるメンバーの選択で許可されます。|  
   
  SubQueries プロパティに値 1 または 2 を使用すると、計算されるメンバーをサブセレクトから返されるサブ空間のフィルター処理に使用できます。  
@@ -82,7 +82,7 @@ Where [Measures].[Reseller Sales Amount]
 ||All Periods|CY 2001|CY 2002|CY 2003|CY 2004|  
 |All Geographies|(null)|(null)|(null)|(null)|(null)|  
 |米国|(null)|(null)|(null)|(null)|(null)|  
-|Washington|(null)|(null)|(null)|(null)|(null)|  
+|ワシントン|(null)|(null)|(null)|(null)|(null)|  
 |Seattle Metro Agg|$2,383,545.69|$291,248.93|$763,557.02|$915,832.36|$412,907.37|  
   
  前述のように、SubQueries=2 の場合は、返されるサブ空間に [Seattle Metro] の先祖が存在しますが、集計に使用する標準メンバーが存在しないため、これらのメンバーに対する値はありません。 したがって、この例では、計算されるメンバーのすべての先祖メンバーに対して NULL 値が返されます。  
@@ -108,22 +108,22 @@ Where [Measures].[Reseller Sales Amount]
 ||All Periods|CY 2001|CY 2002|CY 2003|CY 2004|  
 |All Geographies|$235,171.62|$419.46|$4,996.25|$131,788.82|$97,967.09|  
 |米国|$235,171.62|$419.46|$4,996.25|$131,788.82|$97,967.09|  
-|Oregon|$30,968.25|$419.46|$4,996.25|$17,442.97|$8,109.56|  
+|オレゴン|$30,968.25|$419.46|$4,996.25|$17,442.97|$8,109.56|  
 |Portland|$30,968.25|$419.46|$4,996.25|$17,442.97|$8,109.56|  
 |97205|$30,968.25|$419.46|$4,996.25|$17,442.97|$8,109.56|  
-|Washington|$204,203.37|(null)|(null)|$114,345.85|$89,857.52|  
+|ワシントン|$204,203.37|(null)|(null)|$114,345.85|$89,857.52|  
 |Spokane|$204,203.37|(null)|(null)|$114,345.85|$89,857.52|  
 |99202|$204,203.37|(null)|(null)|$114,345.85|$89,857.52|  
 |Seattle Metro Agg|$2,383,545.69|$291,248.93|$763,557.02|$915,832.36|$412,907.37|  
   
  上記の結果では、[All Geographies]、[United States]、[Oregon]、および [Washington] の集計値は、&[Portland]&[OR] および &[Spokane]&[WA] の子孫の集計から取得されます。 計算されるメンバーから取得されるものはありません。  
   
-### <a name="remarks"></a>コメント  
+### <a name="remarks"></a>解説  
  サブセレクトまたはサブキューブ式で許可されるのは、グローバルまたはセッションで計算されるメンバーのみです。 MDX 式にクエリで計算されるメンバーが含まれている場合に、サブセレクトまたはサブキューブ式を評価すると、エラーが発生します。  
   
 ## <a name="see-also"></a>参照  
  <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>   
  [クエリのサブセレクト](subselects-in-queries.md)   
- [サポートされる XMLA プロパティ (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)  
+ [XMLA のサポートされている XMLA プロパティ &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)  
   
   

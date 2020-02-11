@@ -11,34 +11,40 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f8db507966f9b3323e415ca7f2abfe4a12601c1c
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72798019"
 ---
 # <a name="create-the-ssis-catalog"></a>SSIS カタログの作成
-  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]でパッケージをデザインしてテストしたら、パッケージを含むプロジェクトを [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サーバーに配置できます。 プロジェクトを [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サーバーに配置するには、まずサーバーに `SSISDB` カタログを含める必要があります。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] のインストール プログラムでは、カタログは自動的に作成されません。次の手順を使用して、カタログを手動で作成する必要があります。  
+  
+  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] でパッケージをデザインしてテストしたら、パッケージを含むプロジェクトを [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サーバーに配置できます。 プロジェクトを [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サーバーに配置するには、まずサーバーに `SSISDB` カタログを含める必要があります。 
+  [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] のインストール プログラムでは、カタログは自動的に作成されません。次の手順を使用して、カタログを手動で作成する必要があります。  
   
  SSISDB カタログは [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]で作成できます。 Windows PowerShell を使用して、カタログをプログラムから作成することもできます。  
   
 ### <a name="to-create-the-ssisdb-catalog-in-sql-server-management-studio"></a>SQL Server Management Studio で SSISDB カタログを作成するには  
   
-1.  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] を開きます。  
+1.  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]を開きます。  
   
-2.  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベース エンジンに接続します。  
+2.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベース エンジンに接続します。  
   
 3.  オブジェクト エクスプローラーで、サーバー ノードを展開します。次に、 **[Integration Services カタログ]** ノードを右クリックし、 **[カタログの作成]** をクリックします。  
   
-4.  **[CLR 統合を有効にする]** をクリックします。  
+4.  
+  **[CLR 統合を有効にする]** をクリックします。  
   
      カタログは CLR ストアド プロシージャを使用します。  
   
-5.  **サーバー インスタンスを再起動するたびに** catalog.startup [ストアド プロシージャが実行されるようにするには、](/sql/integration-services/system-stored-procedures/catalog-startup) [SQL Server のスタートアップ時に Integration Services ストアド プロシージャを自動実行できるようにする] [!INCLUDE[ssIS](../includes/ssis-md.md)] をクリックします。  
+5.  
+  **サーバー インスタンスを再起動するたびに** catalog.startup [ストアド プロシージャが実行されるようにするには、](/sql/integration-services/system-stored-procedures/catalog-startup) [SQL Server のスタートアップ時に Integration Services ストアド プロシージャを自動実行できるようにする] [!INCLUDE[ssIS](../includes/ssis-md.md)] をクリックします。  
   
-     このストアド プロシージャは、SSISDB カタログに対する操作の状態のメンテナンスを実行します。 [!INCLUDE[ssIS](../includes/ssis-md.md)] サーバー インスタンスがダウンした場合に、実行されていたパッケージの状態を修正します。  
+     このストアド プロシージャは、SSISDB カタログに対する操作の状態のメンテナンスを実行します。 
+  [!INCLUDE[ssIS](../includes/ssis-md.md)] サーバー インスタンスがダウンした場合に、実行されていたパッケージの状態を修正します。  
   
-6.  パスワードを入力し、 **[OK]** をクリックします。  
+6.  パスワードを入力し、[ **Ok]** をクリックします。  
   
      カタログ データを暗号化するために使用されるデータベース マスター キーがパスワードで保護されます。 パスワードは安全な場所に保管してください。 データベース マスター キーをバックアップすることもお勧めします。 詳細については、「 [データベース マスター キーのバックアップ](../relational-databases/security/encryption/back-up-a-database-master-key.md)」を参照してください。  
   

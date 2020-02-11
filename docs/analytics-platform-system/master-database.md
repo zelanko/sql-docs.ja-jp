@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: cafef8a5b702b6df4475d34e9395bb12bc9461fb
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400984"
 ---
 # <a name="master-database---parallel-data-warehouse"></a>Master データベース-並列データウェアハウス
@@ -42,7 +42,7 @@ SQL Server PDW master データベースには、アプライアンスレベル�
   
 ## <a name="related-tasks"></a>Related Tasks  
   
-|タスク|説明|  
+|タスク|[説明]|  
 |--------|---------------|  
 |Master の完全バックアップを作成します。|例:<br /><br />`BACKUP DATABASE master TO backup_directory;`<br /><br />詳細については、「 [BACKUP DATABASE](../t-sql/statements/backup-database-parallel-data-warehouse.md)」を参照してください。|  
 |master データベースの復元|Master データベースを復元するには、Configuration Manager ツールの [ [Master データベースの復元](restore-the-master-database.md)] ページを使用します。|  

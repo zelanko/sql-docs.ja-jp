@@ -11,10 +11,10 @@ ms.assetid: b36af13b-9fcc-4168-bb92-214d600b1c93
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 2696a911edeefecc1dc34efeb77351acbaafc0d8
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75257743"
 ---
 # <a name="using-the-dqs-default-knowledge-base"></a>DQS の既定のナレッジ ベースの使用
@@ -52,6 +52,6 @@ ms.locfileid: "75257743"
 -   「 [Integration Services の DQS クレンジング コンポーネント](https://go.microsoft.com/fwlink/?LinkId=238830) 」および「 [Excel 用マスター データ サービス アドイン](../master-data-services/microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md)」で、それを使用します。  
   
 ## <a name="see-also"></a>参照  
- [DQS のナレッジベースとドメイン](../data-quality-services/dqs-knowledge-bases-and-domains.md)  
+ [DQS のナレッジ ベースとドメイン](../data-quality-services/dqs-knowledge-bases-and-domains.md)  
   
   

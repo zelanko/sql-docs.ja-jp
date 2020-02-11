@@ -1,5 +1,5 @@
 ---
-title: アプリケーションを宣言する&#39;s ODBC バージョン |Microsoft Docs
+title: Application&#39;s ODBC バージョン | を宣言していますMicrosoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,18 +18,18 @@ ms.assetid: 083a1ef5-580a-4979-9cf3-50f4549a080a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ea97e3cd7a8fee3b3397524bf2c48c428d6a0be0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68076841"
 ---
-# <a name="declaring-the-application39s-odbc-version"></a>アプリケーションを宣言する&#39;s ODBC のバージョン
-アプリケーションが接続によって割り当てられる前に、SQL_ATTR_ODBC_VERSION 環境属性を設定があります。 この属性は、アプリケーションが ODBC に従うことを示す*2.x*または ODBC *3.x*仕様、次のものを使用する場合。  
+# <a name="declaring-the-application39s-odbc-version"></a>Application&#39;s ODBC バージョンを宣言しています
+アプリケーションで接続を割り当てる前に、SQL_ATTR_ODBC_VERSION 環境属性を設定する必要があります。 この属性は、次の項目を使用する場合に、アプリケーション*が odbc* *2.X または*odbc 3.x の仕様に従っていることを示します。  
   
--   **SQLSTATEs**します。 多くの SQLSTATE 値は、ODBC では異なる*2.x*および ODBC *3.x*します。  
+-   **Sqlstates**。 ODBC *2.x と odbc* *3. x*では、多くの SQLSTATE 値が異なります。  
   
--   **日付、時刻、および Timestamp 型識別子**します。 次の表は、ODBC の日付、時刻、タイムスタンプ データ型識別子を示します*2.x*および ODBC *3.x*します。  
+-   **日付、時刻、およびタイムスタンプの型識別子**。 次の表は、ODBC *2.x および odbc* *3. x*の日付、時刻、およびタイムスタンプデータの型識別子を示しています。  
   
     |ODBC *2.x*|ODBC *3.x*|  
     |----------------|----------------|  
@@ -42,9 +42,9 @@ ms.locfileid: "68076841"
     |SQL_C_TIME|SQL_C_TYPE_TIME|  
     |SQL_C_TIMESTAMP|SQL_C_TYPE_TIMESTAMP|  
   
--   _CatalogName_  **SQLTables 引数**します。 ODBC で*2.x*でワイルドカード文字 (「%」および「_」)、 *CatalogName*引数が文字どおり扱われます。 ODBC で*3.x*、ワイルドカード文字として扱われます。 したがって、ODBC に続くアプリケーション*2.x*仕様ワイルドカード文字し、エスケープしないにそれらをリテラルとして使用する場合に使用これらにできません。 アプリケーションの ODBC に続く*3.x*仕様はまたはワイルドカード文字として使用して、エスケープする、およびリテラルとして使用します。 詳細については、次を参照してください。[カタログ関数の引数](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md)します。  
+-   __**Sqltables の CatalogName 引数**。   *ODBC 2.x では、* *CatalogName*引数のワイルドカード文字 ("%" と "_") は文字どおりに扱われます。 ODBC 3.x では、ワイルドカード文字として扱わ*れます。* したがって *、ODBC 2.x*仕様に従うアプリケーションでは、これらをワイルドカード文字として使用することはできません。また、リテラルとして使用する場合はエスケープされません。 ODBC 3.x 仕様に従うアプリケーションでは、これらをワイルドカード文字として使用したり、エスケープしてリテラルとして使用したりでき*ます。* 詳細については、「[カタログ関数の引数](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md)」を参照してください。  
   
- ODBC *3.x*ドライバー マネージャーと ODBC *3.x*ドライバーは、アプリケーションの書き込み先となる、ODBC 仕様のバージョンを確認し、適宜応答します。 たとえば、アプリケーションに依存して、ODBC *2.x*仕様と呼び出し**SQLExecute**呼び出す前に**SQLPrepare**、ODBC *3.x*ドライバー マネージャーは、SQLSTATE S1010 を返します (関数のシーケンス エラーです)。 アプリケーションが ODBC に従う場合*3.x*仕様、ドライバー マネージャーは、SQLSTATE HY010 を返します (関数のシーケンス エラーです)。 詳細については、次を参照してください。[旧バージョンとの互換性と標準準拠](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)します。  
+ ODBC 3.x*ドライバーマネージャーおよび odbc* *3.x ドライバーは*、アプリケーションが記述されている odbc 仕様のバージョンを確認し、それに応じて応答します。 たとえば、アプリケーションが ODBC *2.x 仕様に*従っていて、 **SQLPrepare**を呼び出す前に**sqlexecute**を呼び出すと、Odbc *3.X ドライバーマネージャー*は SQLSTATE S1010 (関数シーケンスエラー) を返します。 アプリケーションが ODBC *3. x*仕様に準拠している場合、ドライバーマネージャーは SQLSTATE HY010 (関数シーケンスエラー) を返します。 詳細については、「[旧バージョンとの互換性と標準の準拠](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)」を参照してください。  
   
 > [!IMPORTANT]  
->  次の ODBC アプリケーション*3.x*仕様で条件付きのコードを使用して ODBC に新しい機能を使用しないようにする必要があります*3.x* ODBC を使用する場合*2.x*ドライバー。 ODBC *2.x*ドライバーは ODBC に新しい機能をサポートしていません*3.x*アプリケーションが ODBC に従っていることを宣言していって*3.x*仕様。 さらに、ODBC *3.x*ドライバーは ODBC に新しい機能をサポートするためを停止していない*3.x*アプリケーションが ODBC に従っていることを宣言していって*2.x*指定。
+>  *Odbc 2.x の仕様に*準拠しているアプリケーションでは *、odbc 2.x ドライバーを*使用して*いるときに*odbc 3.x に新しく追加された機能を使用しないようにするために、条件付きコードを使用する必要があります。 Odbc *2.x ドライバーは* *、odbc 3.x 仕様に*従っていることをアプリケーションが宣言するため *、odbc 3.x*の新機能をサポートしていません。 さらに、 *odbc 3.x ドライバーは* *、odbc 2.x の仕様に*従っていることをアプリケーションが宣言するため、odbc 3.x の新機能のサポートを停止しません *。*

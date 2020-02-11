@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6e589ccad75cea729913b10b6232f61693446595
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62705746"
 ---
 # <a name="sql-server-extended-events-sessions"></a>SQL Server 拡張イベント セッション
@@ -35,7 +35,7 @@ ms.locfileid: "62705746"
   
  前の図を見ると、イベント セッションに対して異なる DDL コマンドが発行されたときに、セッション状態が変化していることがわかります。 このような状態の変化について次の表で説明します。  
   
-|図ラベル|DDL ステートメント|説明|  
+|図ラベル|DDL ステートメント|[説明]|  
 |------------------------|-------------------|-----------------|  
 |作成|CREATE EVENT SESSION|CREATE EVENT SESSION によって提供されたメタデータを含むセッション オブジェクトがホスト プロセスによって作成されます。 ホスト プロセスは、セッション定義を検証し、ユーザーの権限レベルを検証した後、メタデータを master データベースに格納します。 このときセッションはまだアクティブではありません。|  
 |Alter|ALTER EVENT SESSION, STATE=START|ホスト プロセスによってセッションが開始されます。 ホスト プロセスは、格納されているメタデータを読み取って、セッション定義を検証し、ユーザーの権限レベルを検証して、セッションを作成します。 イベントやターゲットなどのセッション オブジェクトが読み込まれ、イベント処理がアクティブになります。|  
@@ -50,7 +50,7 @@ ms.locfileid: "62705746"
   
  次の図は、セッションの内容、およびパッケージとセッションの関係を示しています。  
   
- ![セッションでのオブジェクトの共存と共有。](../../database-engine/media/xesessions.gif "セッションでのオブジェクトの共存と共有。")  
+ ![セッション内でのオブジェクトの共存と共有です。](../../database-engine/media/xesessions.gif "セッション内でのオブジェクトの共存と共有です。")  
   
  次の点に注目してください。  
   

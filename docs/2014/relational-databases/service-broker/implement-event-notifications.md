@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8c5b17b45b50634806c60e5064efc6ebd9d03f8b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68197748"
 ---
 # <a name="implement-event-notifications"></a>イベント通知の実装
@@ -86,7 +86,7 @@ TO SERVICE 'NotifyService', '8140a771-3c4b-4479-8ac0-81008ab17984' ;
 >   
 >  `CREATE TABLE t1 (col1 int)`  
 >   
->  この場合、イベント通知には、2 回が発生します。CREATE_SCHEMA イベントの発生時、Onne 時間し、もう一度、CREATE_TABLE イベントの発生時です。 CREATE_SCHEMA イベントと、対応するすべての CREATE SCHEMA 定義の <schema_element> テキストの両方でイベント通知が作成されないようにするか、または不要なイベント データのキャプチャを防止するためのロジックをアプリケーションに組み込むことをお勧めします。  
+>  この場合イベント通知は、CREATE_SCHEMA イベントの発生時に 1 回、CREATE_TABLE イベントの発生時にもう 1 回、合計 2 回発生します。 CREATE_SCHEMA イベントと、対応するすべての CREATE SCHEMA 定義の <schema_element> テキストの両方でイベント通知が作成されないようにするか、または不要なイベント データのキャプチャを防止するためのロジックをアプリケーションに組み込むことをお勧めします。  
   
  **イベント通知を作成するには**  
   

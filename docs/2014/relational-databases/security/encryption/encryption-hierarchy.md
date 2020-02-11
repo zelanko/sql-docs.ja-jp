@@ -17,14 +17,14 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: 0c34eafe153c5361df1945b55094737fa529f617
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74957216"
 ---
-# <a name="encryption-hierarchy"></a>Encryption Hierarchy
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]階層化された暗号化とキー管理のインフラストラクチャでデータを暗号化します。 各層では、証明書、非対称キー、および対称キーの組み合わせを使用して、その層の下位にある層を暗号化します。 拡張キー管理 (EKM) モジュールで、非対称キーと対称キーを [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の外部に格納できます。  
+# <a name="encryption-hierarchy"></a>暗号化階層
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、暗号化とキーの階層的な管理インフラストラクチャを使用してデータを暗号化します。 各層では、証明書、非対称キー、および対称キーの組み合わせを使用して、その層の下位にある層を暗号化します。 拡張キー管理 (EKM) モジュールで、非対称キーと対称キーを [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の外部に格納できます。  
   
  次の図は、暗号化階層のそれぞれの層がその下位にある層を暗号化することを示しており、最も一般的な暗号化構成を示しています。 階層の先頭へのアクセスは、通常、パスワードで保護されます。  
   
@@ -55,10 +55,9 @@ ms.locfileid: "74957216"
 -   EKM 内の対称キーと非対称キーによって、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]に格納されている対称キーと非対称キーへのアクセスを保護できます。 EKM に結ばれた点線は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]に格納されている対称キーと非対称キーの代わりに EKM 内のキーを使用できることを示しています。  
   
 ## <a name="encryption-mechanisms"></a>暗号化メカニズム  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] には、次の暗号化メカニズムが用意されています。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] には、次の暗号化メカニズムが用意されています。  
   
--   [!INCLUDE[tsql](../../../includes/tsql-md.md)]関数  
+-   [!INCLUDE[tsql](../../../includes/tsql-md.md)] 関数  
   
 -   非対称キー  
   
@@ -66,7 +65,7 @@ ms.locfileid: "74957216"
   
 -   証明書  
   
--   Transparent Data Encryption  
+-   透過的なデータ暗号化  
   
 ### <a name="transact-sql-functions"></a>Transact-SQL 関数  
  個々のアイテムは、 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 関数を使用して挿入または更新するときに暗号化できます。 詳細については、「[ENCRYPTBYPASSPHRASE &#40;Transact-SQL&#41;](/sql/t-sql/functions/encryptbypassphrase-transact-sql)」および「[DECRYPTBYPASSPHRASE &#40;Transact-SQL&#41;](/sql/t-sql/functions/decryptbypassphrase-transact-sql)」を参照してください。  
@@ -94,8 +93,7 @@ ms.locfileid: "74957216"
   
  発行者は、証明書の有効期限が切れる前に、証明書を取り消すことができます。 証明書を取り消すと、証明書で評価されている公開キーと ID のバインドが取り消されます。 各発行者は、特定の証明書の有効性をチェックするときにプログラムで使用できる、証明書の廃止リストを保持しています。  
   
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] によって作成された自己署名付きの証明書は、X.509 標準に従っており、X.509 v1 フィールドをサポートしています。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] によって作成された自己署名付きの証明書は、X.509 標準に従っており、X.509 v1 フィールドをサポートしています。  
   
 ### <a name="asymmetric-keys"></a>非対称キー  
  非対称キーは、秘密キーとそれに対応する公開キーで構成されています。 各キーは、他方のキーで暗号化されたデータを暗号化解除できます。 非対称の暗号化と暗号化解除は、比較的リソースを集中して消費しますが、対称の暗号化よりも高レベルのセキュリティを提供します。 非対称キーは、データベース内のストレージに対する対称キーの暗号化に使用できます。  
@@ -103,16 +101,16 @@ ms.locfileid: "74957216"
 ### <a name="symmetric-keys"></a>対称キー  
  対称キーは、暗号化と暗号化解除の両方で使用される 1 つのキーです。 対称キーを使用した暗号化および暗号化解除は、高速であり、データベース内の機密データでの定型的な使用に適しています。  
   
-### <a name="transparent-data-encryption"></a>Transparent Data Encryption  
- 透過的なデータ暗号化 (TDE) は、対称キーを使用した暗号化の特殊なケースです。 TDE では、データベース暗号化キーという対称キーを使用してデータベース全体を暗号化します。 データベース暗号化キーは、データベース マスター キーまたは EKM モジュールに格納された非対称キーによって保護される、他のキーまたは証明書によって保護されます。 詳細については、「[透過的なデータ暗号化 &#40;TDE&#41;](transparent-data-encryption.md)」をご覧ください。  
+### <a name="transparent-data-encryption"></a>透過的なデータ暗号化  
+ 透過的なデータ暗号化 (TDE) は、対称キーを使用した暗号化の特殊なケースです。 TDE では、データベース暗号化キーという対称キーを使用してデータベース全体を暗号化します。 データベース暗号化キーは、データベース マスター キーまたは EKM モジュールに格納された非対称キーによって保護される、他のキーまたは証明書によって保護されます。 詳細については、「[透過的なデータ暗号化 &#40;TDE&#41;](transparent-data-encryption.md)」を参照してください。  
   
 ## <a name="related-content"></a>関連コンテンツ  
- [SQL Server のセキュリティ保護](../securing-sql-server.md)  
+ [SQL Server の保護](../securing-sql-server.md)  
   
- [セキュリティ関数 &#40;Transact-sql&#41;](/sql/t-sql/functions/security-functions-transact-sql)  
+ [セキュリティ関数 &#40;Transact-SQL&#41;](/sql/t-sql/functions/security-functions-transact-sql)  
   
 ## <a name="see-also"></a>参照  
- [権限の階層 &#40;データベースエンジン&#41;](../permissions-hierarchy-database-engine.md)   
- [[セキュリティ保護可能なリソース]](../securables.md)  
+ [権限の階層 &#40;データベース エンジン&#41;](../permissions-hierarchy-database-engine.md)   
+ [セキュリティ保護可能](../securables.md)  
   
   

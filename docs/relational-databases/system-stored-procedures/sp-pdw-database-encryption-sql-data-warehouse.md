@@ -1,5 +1,5 @@
 ---
-title: sp_pdw_database_encryption (SQL データ ウェアハウス) |Microsoft Docs
+title: sp_pdw_database_encryption (SQL Data Warehouse) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.service: sql-data-warehouse
@@ -12,16 +12,16 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 47d7aca62ddbf2637b54d77171a08817b842555c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68008911"
 ---
-# <a name="sppdwdatabaseencryption-sql-data-warehouse"></a>sp_pdw_database_encryption (SQL データ ウェアハウス)
+# <a name="sp_pdw_database_encryption-sql-data-warehouse"></a>sp_pdw_database_encryption (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  使用**sp_pdw_database_encryption**での透過的なデータ暗号化を有効にする、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]アプライアンスです。 ときに**sp_pdw_database_encryption** 1 に使用する設定、 **ALTER DATABASE** TDE を使用してデータベースを暗号化するステートメント。  
+  **Sp_pdw_database_encryption**を使用して、 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]アプライアンスに対して透過的なデータ暗号化を有効にします。 **Sp_pdw_database_encryption**を1に設定した場合は、 **ALTER database**ステートメントを使用して、tde を使用してデータベースを暗号化します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -32,31 +32,31 @@ sp_pdw_database_encryption [ [ @enabled = ] enabled ] ;
 ```  
   
 #### <a name="parameters"></a>パラメーター  
-`[ @enabled = ] enabled` 透過的なデータ暗号化が有効になっているかどうかを判断します。 *有効になっている*は**int**値は次のいずれかを指定できます。  
+`[ @enabled = ] enabled`透過的なデータ暗号化が有効かどうかを判断します。 *有効な*は**int**で、次のいずれかの値を指定できます。  
   
 -   0 = 無効  
   
 -   1 = 有効  
   
- 実行**sp_pdw_database_encryption**パラメーターでは、TDE の現在の状態を返すスカラーの結果セットとしてアプライアンス上なく。無効の場合、0 または 1 を有効になります。  
+ パラメーターを指定せずに**sp_pdw_database_encryption**を実行すると、アプライアンス上の tde の現在の状態がスカラー結果セットとして返されます (無効の場合は0、有効の場合は 1)。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>コメント  
- 使用して、TDE が有効にすると**sp_pdw_database_encryption**、tempdb データベースの削除、再作成および暗号化します。 そのためは、TDE を有効にアプライアンスで tempdb を使用して他のアクティブなセッション中にことはできません。 有効化またはアプライアンスで TDE を無効にすると、ほとんどの場合、アプライアンスの状態を変更する操作アプライアンスの有効期間に 1 回実行する予定がアプライアンスにトラフィックがないときに実行する必要があります。  
+## <a name="remarks"></a>解説  
+ **Sp_pdw_database_encryption**を使用して tde を有効にすると、tempdb データベースが削除、再作成、および暗号化されます。 そのため、別のアクティブなセッションが tempdb を使用しているときに、アプライアンスで TDE を有効にすることはできません。 アプライアンスで TDE を有効または無効にする操作は、アプライアンスの状態を変更するアクションです。ほとんどの場合、アプライアンスの有効期間内に1回実行することが想定されており、アプライアンスにトラフィックがないときに実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
- メンバーシップが必要です、 **sysadmin**固定データベース ロール、または**CONTROL SERVER**権限。  
+ **Sysadmin**固定データベースロールまたは**CONTROL SERVER**権限のメンバーシップが必要です。  
   
 ## <a name="example"></a>例  
- 次の例では、アプライアンス上 TDE を有効。 にします。  
+ 次の例では、アプライアンスで TDE を有効にします。  
   
 ```sql  
 EXEC sys.sp_pdw_database_encryption 1;  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [sp_pdw_database_encryption_regenerate_system_keys &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-regenerate-system-keys-sql-data-warehouse.md)   
  [sp_pdw_log_user_data_masking &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-log-user-data-masking-sql-data-warehouse.md)  
   

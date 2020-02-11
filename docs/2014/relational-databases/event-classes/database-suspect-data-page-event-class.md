@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 78e6a175ce7757a9e9808a5a993bec6a44a3db2a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62662994"
 ---
 # <a name="database-suspect-data-page-event-class"></a>Database Suspect Data Page イベント クラス
@@ -34,7 +34,7 @@ ms.locfileid: "62662994"
   
 ## <a name="database-suspect-data-page-event-class-data-columns"></a>Database Suspect Data Page イベント クラスのデータ列  
   
-|データ列名|データ型|説明|列 ID|フィルターの適用|  
+|データ列名|データ型|[説明]|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**DatabaseID**|**int**|問題があると思われるページのイベントが発生したデータベースの ID。 これは **suspect_pages** テーブルの **database_id** 列と同じです。|3|はい|  
 |**EventClass**|**int**|イベントの種類は 213 です。|27|いいえ|  
@@ -42,7 +42,7 @@ ms.locfileid: "62662994"
 |**SPID**|**int**|問題があると思われるページが発生した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] タスクの ID。|12|はい|  
 |**StartTime**|**datetime**|イベントが発生した時刻。|14|はい|  
 |**Exchange Spill**|**int**|問題があると思われるページを格納しているデータベース ファイルの ID。 これは **suspect_pages** テーブルの **file_id** 列と同じです。|22|はい|  
-|**ObjectID2**|**int**|ファイル内の問題があると思われるページの ID。 これは **suspect_pages** テーブルの **page_id** 列と同じです。|56|[はい]|  
+|**ObjectID2**|**int**|ファイル内の問題があると思われるページの ID。 これは **suspect_pages** テーブルの **page_id** 列と同じです。|56|はい|  
 |**Error**|**int**|発生したエラーの種類。 この値は、 **suspect_pages** テーブルのページの **event_type** 値と同じです。|31|はい|  
   
 ## <a name="see-also"></a>参照  

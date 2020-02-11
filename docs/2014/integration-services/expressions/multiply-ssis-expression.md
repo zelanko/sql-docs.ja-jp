@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6ec24cd980cbfc71c5b9ba834f01bd17eb422400
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768869"
 ---
 # <a name="-multiply-ssis-expression"></a>* (乗算) (SSIS 式)
@@ -38,7 +38,7 @@ numeric_expression1 * numeric_expression2
 ## <a name="result-types"></a>戻り値の型  
  2 つの引数のデータ型によって決まります。 詳しくは、「 [式における Integration Services データ型](integration-services-data-types-in-expressions.md)」をご覧ください。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  オペランドのいずれかが NULL の場合、結果は NULL になります。  
   
 ## <a name="expression-examples"></a>式の例  
@@ -54,7 +54,7 @@ numeric_expression1 * numeric_expression2
 ListPrice * .10  
 ```  
   
- この例では、 **ListPrice** 列から式の結果を減算します。 変数 **Discount%** は、名前に % 文字が含まれているため、角かっこで囲む必要があります。 詳細については、「[識別子 &#40;SSIS&#41;](identifiers-ssis.md)」を参照してください。  
+ この例では、 **ListPrice** 列から式の結果を減算します。 変数 **Discount%** は、名前に % 文字が含まれているため、角かっこで囲む必要があります。 詳しくは、「[識別子 &#40;SSIS&#41;](identifiers-ssis.md)」をご覧ください。  
   
 ```  
 ListPrice - (ListPrice * @[Discount%])  

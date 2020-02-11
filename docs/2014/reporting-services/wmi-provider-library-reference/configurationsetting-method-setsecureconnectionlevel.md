@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ede290f794ab61dac62c39bc47b80516385474fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097954"
 ---
-# <a name="setsecureconnectionlevel-method-wmi-msreportserverconfigurationsetting"></a>SetSecureConnectionLevel メソッド (WMI MSReportServer_ConfigurationSetting)
+# <a name="setsecureconnectionlevel-method-wmi-msreportserver_configurationsetting"></a>SetSecureConnectionLevel メソッド (WMI MSReportServer_ConfigurationSetting)
   レポート サーバーのセキュリティで保護された接続レベルを設定します。  
   
 ## <a name="syntax"></a>構文  
@@ -41,26 +41,27 @@ public void SetSecureConnectionLevel(Int32 Level,
 ```  
   
 ## <a name="parameters"></a>パラメーター  
- *レベル*  
+ *Level*  
  セキュリティで保護された接続レベルを表す整数値。  
   
  *HRESULT*  
  [out] 呼び出しの成功または失敗を示す値。  
   
 ## <a name="return-value"></a>戻り値  
- メソッド呼び出しの成功または失敗を示す *HRESULT* を返します。 値 0 は、メソッド呼び出しが成功したことを示します。 0 以外の値は、エラーが発生したことを示します。  
+ メソッド呼び出しの成功または失敗を示す*HRESULT*を返します。 値 0 は、メソッド呼び出しが成功したことを示します。 0 以外の値は、エラーが発生したことを示します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  このメソッドを呼び出すと、レポート サーバーの SecureConnectionLevel プロパティ値が指定した値に設定されます。 値 0 は、SSL がオフであることを示します。 1 以上の値は、SSL がオンであることを示します。  
   
--   レポート サーバーの構成ファイルの SecureConnectionLevel 要素が変更された値が設定されている場合、`URLRoot`場合は、"https://"を使用する構成ファイル内の要素が設定されて、指定した*レベル*がより大きいまたは場合に、1、または"http://"と等しく、指定した*レベル*は 0 です。  
+-   値を設定すると、レポートサーバー構成ファイルの SecureConnectionLevel 要素が変更され、指定し`URLRoot`た*レベル*が1以上の場合は "https://" を、指定した*レベル*が0の場合は "http://" を使用するように構成ファイル内の要素が設定されます。  
   
- [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]で、SecureConnectionLevel がオン/オフのスイッチとして使用されます。既定値は 0 です。 SetSecureConnectionLevel メソッド API に渡された値が 1 以上である場合、SSL はオンであると見なされ、それに従って rsreportserver.config ファイルで構成プロパティ SecureConnectionLevel が設定されます。 値 2 と 3 は、旧バージョンとの互換性のために許可されています。  
+ 
+  [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]で、SecureConnectionLevel がオン/オフのスイッチとして使用されます。既定値は 0 です。 SetSecureConnectionLevel メソッド API に渡された値が 1 以上である場合、SSL はオンであると見なされ、それに従って rsreportserver.config ファイルで構成プロパティ SecureConnectionLevel が設定されます。 値 2 と 3 は、旧バージョンとの互換性のために許可されています。  
   
 ## <a name="requirements"></a>必要条件  
- **名前空間:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **名前空間:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [MSReportServer_ConfigurationSetting メンバー](msreportserver-configurationsetting-members.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Execute、Requery、および Clear のメソッドの例 (VBScript) |Microsoft Docs
+title: Execute、Requery、および Clear メソッドの例 (VBScript) |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,18 +17,18 @@ ms.assetid: 3a7bbf07-2fca-4892-95f4-eec93f2d5e91
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 27a177b6a3d23f20790490e1f16fac2be4ec958f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918812"
 ---
-# <a name="execute-requery-and-clear-methods-example-vbscript"></a>Execute、Requery、および Clear のメソッドの例 (VBScript)
-この例では、 **Execute**メソッドの両方から実行する場合、[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトと[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクト。 またを使用して、 [Requery](../../../ado/reference/ado-api/requery-method.md)の現在のデータを取得するメソッドを[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)と[オフ](../../../ado/reference/ado-api/clear-method-ado.md)メソッドの内容を消去する、[エラー](../../../ado/reference/ado-api/errors-collection-ado.md)コレクション。 ExecuteCommand と PrintOutput プロシージャは、この手順を実行する必要があります。  
+# <a name="execute-requery-and-clear-methods-example-vbscript"></a>Execute、Requery、および Clear メソッドの例 (VBScript)
+この例では、[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトと[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトの両方から実行する場合の**Execute**メソッドを示します。 また、 [Requery](../../../ado/reference/ado-api/requery-method.md)メソッドを使用して[レコードセット](../../../ado/reference/ado-api/recordset-object-ado.md)内の現在のデータを取得し、 [clear](../../../ado/reference/ado-api/clear-method-ado.md)メソッドを使用して[Errors](../../../ado/reference/ado-api/errors-collection-ado.md)コレクションの内容をクリアします。 この手順を実行するには、ExecuteCommand および PrintOutput プロシージャが必要です。  
   
- 次の例を Active Server Page (ASP) で使用します。 この完全に機能の例を表示するには、AdvWorks.mdb (SDK のサンプルと共にインストールされた) にある C:\Program files \microsoft Platform SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb をソースまたは編集するコード例では、パスのデータかが必要このファイルの実際の場所を反映します。 これは、Microsoft Access データベース ファイルです。  
+ Active Server ページ (ASP) で次の例を使用します。 この完全に機能する例を表示するには、C:\Program た advworks-srv01 Platform SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb にあるデータソース (SDK サンプルと共にインストールされます) を用意するか、コード例のパスを編集します。このファイルの実際の場所を反映します。 これは、Microsoft Access データベースファイルです。  
   
- 使用して、**検索**Adovbs.inc ファイルを見つけて、使用するディレクトリに配置します。 切り取り、メモ帳または別のテキスト エディターに次のコードを貼り付けるし、として保存**ExecuteVBS.asp**します。 結果は、任意のクライアント ブラウザーで表示できます。  
+ [**検索**] を使用して Adovbs ファイルを検索し、使用する予定のディレクトリに配置します。 次のコードを切り取ってメモ帳などのテキストエディターに貼り付け、 **ExecuteVBS**として保存します。 結果は任意のクライアントブラウザーで表示できます。  
   
 ```  
 <!-- BeginExecuteVBS -->  
@@ -177,13 +177,13 @@ BODY {
 <!-- EndExecuteVBS -->  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Clear メソッド (ADO)](../../../ado/reference/ado-api/clear-method-ado.md)   
- [コマンド オブジェクト (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [接続オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
+ [Command オブジェクト (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
+ [Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Error オブジェクト](../../../ado/reference/ado-api/error-object.md)   
- [エラーのコレクション (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
- [Execute メソッド (ADO Command)](../../../ado/reference/ado-api/execute-method-ado-command.md)   
+ [Errors コレクション (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
+ [Execute メソッド (ADO コマンド)](../../../ado/reference/ado-api/execute-method-ado-command.md)   
  [Execute メソッド (ADO Connection)](../../../ado/reference/ado-api/execute-method-ado-connection.md)   
- [RecordSet オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
+ [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Requery メソッド](../../../ado/reference/ado-api/requery-method.md)

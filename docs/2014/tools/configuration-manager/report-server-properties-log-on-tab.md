@@ -11,16 +11,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f56d5ea637adc2ce8fc5490c44408bdd1de7f3f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62999526"
 ---
 # <a name="report-server-properties-log-on-tab"></a>[SQL Server Reporting Services のプロパティ] ダイアログ ボックス ([ログオン] タブ)
   **[SQL Server Reporting Services のプロパティ]** ダイアログ ボックスの **[ログオン]** タブでは、レポート サーバー サービスが使用するアカウントの指定や、そのサービスの開始、停止を行います。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **[ローカル システム アカウント]**  
  ローカル システム アカウントを指定します。このアカウントはパスワードを必要としません。 ただし、ローカル システム アカウントに与えられている特権によっては、そのサービスと他のサーバーとの対話が制限されることもあります。  
   
@@ -30,7 +30,7 @@ ms.locfileid: "62999526"
  **アカウント名**  
  ローカル ユーザー アカウント名またはドメイン ユーザー アカウント名を指定します。  
   
- **Password**  
+ **パスワード**  
  アカウントのパスワードを入力します。  
   
  **[パスワードの確認入力]**  
@@ -39,7 +39,7 @@ ms.locfileid: "62999526"
  **[開始]**  
  サービスを開始します。  
   
- **[停止]**  
+ **Stop**  
  サービスを停止します。  
   
  **[一時停止]**  

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: f68a66e778d44059a83ca6eca3cee35b4dffca9c
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892766"
 ---
 # <a name="functions-dmx"></a>関数 (DMX)
@@ -33,7 +33,7 @@ ms.locfileid: "68892766"
   
  ほとんどの DMX 関数は、予測のサポートなど、スカラー値を返します。しかし、いくつかは表形式の結果を返します。 たとえば、PredictHistogram 関数は、指定された予測可能列の各状態のサポートと確率を含むテーブルを返します。 結果は、新しい表形式の列として表示されます。  
   
- **詳細情報:** [一般的な予測&#40;関数&#41;dmx](../dmx/general-prediction-functions-dmx.md)、[データマイニング&#40;拡張&#41;機能 dmx 関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)  
+ **詳細については、「** [dmx&#41;&#40;の一般的な予測関数](../dmx/general-prediction-functions-dmx.md)」、「 [dmx&#41; 関数リファレンス」 &#40;「データマイニング拡張](../dmx/data-mining-extensions-dmx-function-reference.md)機能」を参照してください。  
   
 ## <a name="visual-basic-for-applications-vba-and-excel-functions"></a>Visual Basic for Applications (VBA) と Excel 関数  
  DMX 関数に加えて、DMX ステートメントからさまざまな VBA および Excel 関数を呼び出すこともできます。 たとえば、lCase 関数を使用すると、TM_Decision_Tree モデルコンテンツの Attribute_Name 列の表示方法を変更できます。 これを次のコードサンプルに示します。  
@@ -48,16 +48,16 @@ FROM [TM_Decision_Tree].CONTENT
 ## <a name="stored-procedures"></a>ストアド プロシージャ  
  共通言語ランタイム プログラミング言語を使用して、DMX の機能を拡張するストアド プロシージャを作成できます。 たとえば、回帰ツリーマイニングモデルは、回帰式を記述する A、B などの係数を返しますが、モデルは + Bx = y などの式自体を返しません。 ただし、データ マイニング モデル オブジェクトを使用して、コンテンツ スキーマを操作し、出力として回帰式を返すストアド プロシージャは記述できます。 したがって、DMX ステートメントは、クエリ結果の一部として回帰式の一覧を返すことができます。  
   
- **詳細情報:** [多次元モデルのアセンブリの管理](https://docs.microsoft.com/analysis-services/multidimensional-models/multidimensional-model-assemblies-management)  
+ **詳細については、「** [多次元モデルアセンブリ管理](https://docs.microsoft.com/analysis-services/multidimensional-models/multidimensional-model-assemblies-management)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- [データ マイニング拡張機能 &#40;DMX&#41; リファレンス](../dmx/data-mining-extensions-dmx-reference.md)   
- [データマイニング拡張&#40;機能&#41; DMX 関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [データマイニング拡張&#40;機能&#41; DMX オペレーターリファレンス](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [データマイニング拡張&#40;機能&#41; DMX ステートメントリファレンス](../dmx/data-mining-extensions-dmx-statements.md)   
- [データマイニング拡張&#40;機能&#41; DMX 構文表記規則](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
- [データマイニング拡張&#40;機能&#41; DMX 構文要素](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
- [一般的な予測&#40;関数 DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
+## <a name="see-also"></a>参照  
+ [DMX&#41; リファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-reference.md)   
+ [DMX&#41; 関数リファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [DMX&#41; オペレーターリファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [DMX&#41; ステートメントリファレンス &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-statements.md)   
+ [DMX&#41; 構文表記規則を &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
+ [DMX&#41; の構文要素を &#40;データマイニング拡張機能](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
+ [DMX&#41;&#40;一般的な予測関数](../dmx/general-prediction-functions-dmx.md)   
  [構造と DMX 予測クエリの使用](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [DMX 選択ステートメントについて](../dmx/understanding-the-dmx-select-statement.md)  
   

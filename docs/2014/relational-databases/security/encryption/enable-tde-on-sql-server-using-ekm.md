@@ -16,17 +16,16 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: 8b3f046017aa54f5db96878f8bfb6c435409d839
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74957236"
 ---
 # <a name="enable-tde-using-ekm"></a>EKM を使用して TDE を有効にする
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]の拡張キー管理 (EKM) モジュールに格納されている非対称キーを使用してデータベース暗号化キーを保護する透過的なデータ暗号化 (TDE) を可能にする方法について説明します。  
   
- TDE は、データベース暗号化キーと呼ばれる対称キーを使用してデータベース全体のストレージを暗号化します。 データベース暗号化キーは、master データベースのデータベース マスター キーによって保護される証明書を使用して保護することもできます。 データベース マスター キーを使用してデータベース暗号化キーを保護する方法の詳細については、「[透過的なデータ暗号化 &#40;TDE&#41;](transparent-data-encryption.md)」を参照してください。 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] が Azure 仮想マシンで実行されているときに TDE を構成する方法については、「[Azure Key Vault を使用する拡張キー管理 &#40;SQL Server&#41;](extensible-key-management-using-azure-key-vault-sql-server.md)」を参照してください。  
+ TDE は、データベース暗号化キーと呼ばれる対称キーを使用してデータベース全体のストレージを暗号化します。 データベース暗号化キーは、master データベースのデータベース マスター キーによって保護される証明書を使用して保護することもできます。 データベース マスター キーを使用してデータベース暗号化キーを保護する方法の詳細については、「[透過的なデータ暗号化 &#40;TDE&#41;](transparent-data-encryption.md)」を参照してください。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] が Azure 仮想マシンで実行されているときに TDE を構成する方法については、「[Azure Key Vault を使用する拡張キー管理 &#40;SQL Server&#41;](extensible-key-management-using-azure-key-vault-sql-server.md)」を参照してください。  
   
  **このトピックの内容**  
   
@@ -34,13 +33,13 @@ ms.locfileid: "74957236"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [保護](#Security)  
+     [セキュリティ](#Security)  
   
 -   [Transact-SQL を使用して、EKM による TDE を可能にするには](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a>開始する前に  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a>制限事項と制約事項  
+###  <a name="Restrictions"></a> 制限事項と制約事項  
   
 -   データベース暗号化キーの作成およびデータベースの暗号化は、高い特権を持つユーザー (システム管理者など) が行う必要があります。 このユーザーは、EKM モジュールが認証できるユーザーである必要があります。  
   
@@ -51,9 +50,9 @@ ms.locfileid: "74957236"
   
 -   EKM プロバイダーによって要求されるオプションとパラメーターは、次のコード例に含まれるものとは異なっている場合があります。 詳細については、EKM プロバイダーを参照してください。  
   
-###  <a name="Security"></a>保護  
+###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a>許可  
+####  <a name="Permissions"></a> Permissions  
  このトピックでは、次の権限を使用します。  
   
 -   構成オプションを変更して RECONFIGURE ステートメントを実行するには、ALTER SETTINGS サーバーレベル権限が与えられている必要があります。 ALTER SETTINGS 権限は、 **sysadmin** 固定サーバー ロールと **serveradmin** 固定サーバー ロールでは暗黙のうちに付与されています。  
@@ -66,7 +65,7 @@ ms.locfileid: "74957236"
   
 -   データベースを暗号化するには、データベースに対する CONTROL 権限が必要です。  
   
-##  <a name="TsqlProcedure"></a>Transact-sql の使用  
+##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-enable-tde-using-ekm"></a>EKM を使用して TDE を有効にするには  
   
@@ -75,14 +74,11 @@ ms.locfileid: "74957236"
 2.  EKM プロバイダーの要件に従ってコンピューターに証明書をインストールします。  
   
     > [!NOTE]  
-    >  
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] には、EKM プロバイダーは用意されていません。 EKM プロバイダーごとに、インストール、構成、およびユーザー承認の手順が異なります。  この手順を完了するには、EKM プロバイダーのドキュメントを参照してください。  
+    >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] には、EKM プロバイダーは用意されていません。 EKM プロバイダーごとに、インストール、構成、およびユーザー承認の手順が異なります。  この手順を完了するには、EKM プロバイダーのドキュメントを参照してください。  
   
-3.  
-  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]のインスタンスに接続します。  
+3.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]のインスタンスに接続します。  
   
-4.  
-  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
+4.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
 5.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
   
@@ -152,25 +148,25 @@ ms.locfileid: "74957236"
     GO  
     ```  
   
- 詳細については、次のトピックを参照してください。  
+ 詳細については、「  
   
--   [sp_configure &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)  
+-   [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)  
   
--   [Transact-sql&#41;&#40;暗号化サービスプロバイダーを作成する](/sql/t-sql/statements/create-cryptographic-provider-transact-sql)  
+-   [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-cryptographic-provider-transact-sql)  
   
--   [Transact-sql&#41;&#40;の資格情報の作成](/sql/t-sql/statements/create-credential-transact-sql)  
+-   [CREATE CREDENTIAL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql)  
   
--   [CREATE 非対称キー &#40;Transact-sql&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)  
+-   [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)  
   
--   [Transact-sql&#41;&#40;ログインの作成](/sql/t-sql/statements/create-login-transact-sql)  
+-   [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql)  
   
--   [Transact-sql&#41;&#40;データベース暗号化キーを作成する](/sql/t-sql/statements/create-database-encryption-key-transact-sql)  
+-   [CREATE DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-database-encryption-key-transact-sql)  
   
--   [ALTER LOGIN &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-login-transact-sql)  
+-   [ALTER LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-login-transact-sql)  
   
--   [ALTER DATABASE &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql)  
+-   [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)  
   
--   [Azure Key Vault &#40;SQL Server を使用した拡張キー管理&#41;](extensible-key-management-using-azure-key-vault-sql-server.md)  
+-   [Azure Key Vault を使用する拡張キー管理 &#40;SQL Server&#41;](extensible-key-management-using-azure-key-vault-sql-server.md)  
   
 -   [Azure SQL Database での Transparent Data Encryption](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md)  
   

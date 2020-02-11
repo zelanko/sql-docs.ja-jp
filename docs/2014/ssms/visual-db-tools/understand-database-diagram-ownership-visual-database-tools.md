@@ -17,14 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6056a5136d8aceab338a18b32ecfac35a1af0364
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63204699"
 ---
 # <a name="understand-database-diagram-ownership-visual-database-tools"></a>データベース ダイアグラムの所有権について (Visual Database Tools)
-  データベース ダイアグラム デザイナーを使用するには、db_owner ロール ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのロール) のメンバーが、ダイアグラムへのアクセスを制御するようにあらかじめ設定しておく必要があります。 各ダイアグラムの所有者は 1 人だけで、ダイアグラムを作成したユーザーが所有者になります。 ダイアグラムの設定の詳細についてを参照してください。[データベース ダイアグラム デザイナーの設定&#40;Visual Database Tools&#41;](visual-database-tools.md)します。  
+  データベース ダイアグラム デザイナーを使用するには、db_owner ロール ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのロール) のメンバーが、ダイアグラムへのアクセスを制御するようにあらかじめ設定しておく必要があります。 各ダイアグラムの所有者は 1 人だけで、ダイアグラムを作成したユーザーが所有者になります。 ダイアグラムの設定の詳細については、「[データベースダイアグラムデザイナー &#40;Visual Database Tools&#41;のセットアップ](visual-database-tools.md)」を参照してください。  
   
  ダイアグラムの所有権については、次の点に注意してください。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "63204699"
 -   ダイアグラムの所有者がデータベースから削除されても、db_owner ロールのメンバーが開こうとするまでダイアグラムはデータベース内に残ります。 ダイアグラムを開く時点で、db_owner メンバーはダイアグラムの所有権を継承するかどうかを選択できます。  
   
 ## <a name="see-also"></a>参照  
- [データベース ダイアグラムを扱う&#40;Visual Database Tools&#41;](work-with-database-diagrams-visual-database-tools.md)   
+ [データベースダイアグラムの使用 &#40;Visual Database Tools&#41;](work-with-database-diagrams-visual-database-tools.md)   
  [データベース ダイアグラム デザイナーの設定 (Visual Database Tools)](visual-database-tools.md)  
   
   

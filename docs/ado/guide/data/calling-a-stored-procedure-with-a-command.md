@@ -1,5 +1,5 @@
 ---
-title: コマンドを使用してストアド プロシージャを呼び出す |Microsoft Docs
+title: Command | を使用したストアドプロシージャの呼び出しMicrosoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 685f7652-2271-4ede-b552-2eeb8c756b4c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 32f1013ef0aa9c8f02e19ec98234418480bc5f22
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925862"
 ---
 # <a name="calling-a-stored-procedure-with-a-command"></a>Command を使用してストアド プロシージャを呼び出す
-ストアド プロシージャを呼び出すコマンドを使用することができます。 このトピックの最後のコード サンプルは、次のように定義されている、CustOrdersOrders と呼ばれる、Northwind サンプル データベース内のストアド プロシージャを参照します。  
+コマンドを使用してストアドプロシージャを呼び出すことができます。 このトピックの最後にあるコードサンプルでは、次のように定義された、Northwind のサンプルデータベースのストアドプロシージャを参照しています。 CustOrdersOrders 例を次に示します。  
   
 ```  
 CREATE PROCEDURE CustOrdersOrders @CustomerID nchar(5) AS  
@@ -32,15 +32,15 @@ WHERE CustomerID = @CustomerID
 ORDER BY OrderID  
 ```  
   
- ストアド プロシージャの詳細を定義して呼び出す方法については、SQL Server のドキュメントを参照してください。  
+ ストアドプロシージャを定義して呼び出す方法の詳細については、SQL Server のドキュメントを参照してください。  
   
- このストアド プロシージャで使用されるコマンドのような[コマンド オブジェクト パラメーター](../../../ado/guide/data/command-object-parameters.md)します。 これにより、顧客の ID パラメーターを受け取りし、その顧客の注文に関する情報を返します。 次のコード サンプルは、ソースとしてこのストアド プロシージャを使用して ado **Recordset**します。  
+ このストアドプロシージャは、[コマンドオブジェクトパラメーター](../../../ado/guide/data/command-object-parameters.md)で使用されるコマンドに似ています。 顧客 ID パラメーターを受け取り、その顧客の注文に関する情報を返します。 次のコードサンプルでは、このストアドプロシージャを ADO**レコードセット**のソースとして使用します。  
   
- ストアド プロシージャを使用すると、ADO のもう 1 つの機能にアクセスできます。**パラメーター**コレクション**更新**メソッド。 このメソッドを使用すると、ADO に自動的に実行時に、コマンドによって必要なパラメーターのすべての情報を入力できます。 パフォーマンスの低下がある、この方法で ADO は、パラメーターに関する情報については、データ ソースを照会する必要がありますので。  
+ ストアドプロシージャを使用すると、ADO の別の機能である**Parameters**コレクション**更新**メソッドにアクセスできます。 このメソッドを使用すると、実行時にコマンドに必要なパラメーターに関するすべての情報が ADO によって自動的に入力されます。 ADO では、パラメーターに関する情報をデータソースに照会する必要があるため、この手法を使用するとパフォーマンスが低下します。  
   
- その他の重要な相違点は、次のコード サンプルと、コードの間存在[コマンド オブジェクト パラメーター](../../../ado/guide/data/command-object-parameters.md)パラメーターを手動で入力した場所、します。 まず、このコードは設定されません、**準備**プロパティを**True**のため SQL Server ストアド プロシージャは、定義では、プリコンパイル済み。 2 つ目は、 **CommandType**のプロパティ、**コマンド**にオブジェクトが変更された**adCmdStoredProc** ADO コマンドがストアド プロシージャをしたことを通知するために 2 番目の例です。  
+ その他の重要な違いは、次のコードサンプルと[Command オブジェクトパラメーター](../../../ado/guide/data/command-object-parameters.md)のコードの間にあり、これらのパラメーターは手動で入力されています。 まず、このコードでは、**準備**されたプロパティが SQL Server ストアドプロシージャであり、定義によってプリコンパイルされているため、このプロパティは**True**に設定されません。 次に、コマンドオブジェクトの**CommandType**プロパティを2番目の例で**adCmdStoredProc**に変更し **、コマンドが**ストアドプロシージャであったことを ADO に通知します。  
   
- 最後に、2 番目の例では、パラメーターする必要がありますを参照してインデックスを使用して、値を設定するときにデザイン時に、パラメーターの名前がわからないためです。 新しい設定することができます、パラメーターの名前がわかっている場合[NamedParameters](../../../ado/reference/ado-api/namedparameters-property-ado.md)のプロパティ、**コマンド**を True にオブジェクトし、プロパティの名前を参照してください。 最初のパラメーターの位置が、ストアド プロシージャで説明されている理由なのでしょう (@CustomerID) は 0 ではなく 1 (`objCmd(1) = "ALFKI"`)。 これは、パラメーター 0 には、SQL Server ストアド プロシージャからの戻り値が含まれています。  
+ 最後に、2番目の例では、値を設定するときにパラメーターをインデックスで参照する必要があります。これは、デザイン時にパラメーターの名前がわからない場合があるためです。 パラメーターの名前がわかっている場合は、 **Command**オブジェクトの新しい[Namedparameters](../../../ado/reference/ado-api/namedparameters-property-ado.md)プロパティを True に設定し、プロパティの名前を参照することができます。 ストアドプロシージャに記述されている最初のパラメーターの位置 (@CustomerID) が 0 (`objCmd(1) = "ALFKI"`) ではなく1であることがわかります。 これは、パラメーター0に SQL Server ストアドプロシージャからの戻り値が含まれているためです。  
   
 ```  
 'BeginAutoParamCmd  
@@ -132,5 +132,5 @@ End Function
 'EndNewConnection  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [サポート技術情報記事 117500](https://go.microsoft.com/fwlink/?LinkId=117500)
+## <a name="see-also"></a>参照  
+ [サポート技術情報の記事117500](https://go.microsoft.com/fwlink/?LinkId=117500)

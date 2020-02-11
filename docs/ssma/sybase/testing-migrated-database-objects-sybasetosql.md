@@ -1,5 +1,5 @@
 ---
-title: 移行されたデータベース オブジェクト (SybaseToSQL) のテスト |Microsoft Docs
+title: 移行されたデータベースオブジェクトのテスト (SybaseToSQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,56 +10,56 @@ ms.assetid: 4937f6b4-86bd-4070-88df-3d216306c33a
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 6fb469dfcaaec33a03681bfb64f411851df0400e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68020913"
 ---
 # <a name="testing-migrated-database-objects-sybasetosql"></a>移行されたデータベース オブジェクトのテスト (SybaseToSQL)
-Microsoft SQL Server Migration Assistant for Sybase のテスト担当者 (SSMA テスター) が自動的にテスト データベース オブジェクトの変換と SSMA によって行われたデータの移行。 SSMA のすべての移行手順が完了したら後、は、SSMA Tester を使用して、変換されたオブジェクトが同じように動作し、すべてのデータが適切に転送されることを確認します。  
+Sybase Tester の Microsoft SQL Server Migration Assistant (SSMA Tester) は、データベースオブジェクトの変換と SSMA によって行われたデータの移行を自動的にテストします。 SSMA の移行手順がすべて完了したら、SSMA Tester を使用して、変換されたオブジェクトが同じように動作することと、すべてのデータが適切に転送されたことを確認します。  
   
 > [!NOTE]  
-> Azure への接続の場合は、テスト担当者のコンポーネントが無効です。  
+> Azure 接続の場合、Tester コンポーネントは無効になっています。  
   
-SSMA テスターでは、次のオブジェクトの種類をテストできます。  
+SSMA Tester を使用して、次のオブジェクトの種類をテストできます。  
   
 -   テーブル  
   
 -   ストアド プロシージャ  
   
--   表示モード。  
+-   ビュー。  
   
--   スタンドアロンのステートメント。  
+-   スタンドアロンステートメント。  
   
-SSMA のテスト担当者は、Sybase との対応する SQL Server でのテストを選択したオブジェクトを実行します。 その後、次の条件に従って結果を比較します。  
+SSMA Tester は、Sybase のテスト用に選択されたオブジェクトと、SQL Server で対応するオブジェクトを実行します。 その後、次の条件に従って結果を比較します。  
   
--   同じテーブルのデータで、その変更ですか。  
+-   テーブルデータの変更は同じですか。  
   
 -   プロシージャと関数の出力パラメーターの値は同じですか。  
   
--   同じ結果を返す関数の操作を行いますか。  
+-   Do 関数は同じ結果を返しますか。  
   
--   結果セットと同じですか?  
+-   結果セットが同一かどうか。  
   
 > [!NOTE]  
-> 注意してください。 実稼働システムでの SSMA Tester を使用しないでください。 テストの実行中に、送信元スキーマとデータは変更されます。 その一方で、元の状態の完全な復元はテストされるコードの種類によっては可能でない可能性があります。  
+> 気! 実稼働システムでは SSMA Tester を使用しないでください。 テスト担当者の実行中に、送信元スキーマとデータが変更されます。 一方、テスト対象のコードの種類によっては、元の状態を完全に復元できない場合があります。  
   
-## <a name="prerequisites"></a>必須コンポーネント  
-SSMA Tester を使用する場合は、SSMA Sybase 拡張機能パックをインストール、**テスター データベースのインストール**オプションがオンにします。  
+## <a name="prerequisites"></a>前提条件  
+SSMA Tester を使用する場合は、[**テスト担当者データベースをインストール**する] オプションをオンにして Ssma Sybase Extension Pack をインストールします。  
   
-さらに、次を確認します。  
+さらに、次のことを確認します。  
   
--   Sybase OLE DB プロバイダーは、コンピューターにインストールされている[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を実行します。  
+-   を[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]実行しているコンピューターに Sybase OLE DB プロバイダーがインストールされている。  
   
--   共通言語ランタイム (CLR) 統合が有効になって、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース エンジン。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースエンジンで共通言語ランタイム (CLR) 統合が有効になっています。  
   
-SSMA のテスト担当者の現在のバージョン、同じソースまたはターゲット サーバー上、複数のユーザーによって並列実行がサポートしないことに注意してください。  
+SSMA Tester の現在のバージョンでは、同じソースサーバーまたは対象サーバー上の異なるユーザーによる並列実行はサポートされていないことに注意してください。  
   
 ## <a name="getting-started"></a>作業の開始  
-[テスト_ケースの作成&#40;SybaseToSQL&#41;](../../ssma/sybase/creating-test-cases-sybasetosql.md)  
+[SybaseToSQL&#41;&#40;テストケースの作成](../../ssma/sybase/creating-test-cases-sybasetosql.md)  
   
-## <a name="see-also"></a>関連項目  
-[SQL Server での SSMA コンポーネントのインストール&#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-components-on-sql-server-sybasetosql.md)  
-[プロジェクトの設定&#40;変換&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-conversion-sybasetosql.md)  
+## <a name="see-also"></a>参照  
+[SSMA コンポーネントの SQL Server &#40;SybaseToSQL&#41;のインストール](../../ssma/sybase/installing-ssma-components-on-sql-server-sybasetosql.md)  
+[プロジェクト設定 &#40;変換&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-conversion-sybasetosql.md)  
   

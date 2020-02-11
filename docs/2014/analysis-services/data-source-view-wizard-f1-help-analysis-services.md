@@ -1,5 +1,5 @@
 ---
-title: データ ソースの表示ウィザードの F1 ヘルプ (Analysis Services) |Microsoft Docs
+title: データソースビューウィザードの F1 ヘルプ (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,18 +13,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 01074111cd4944f9b74137dd371e00343e37f15b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082506"
 ---
 # <a name="data-source-view-wizard-f1-help-analysis-services"></a>データ ソース ビュー ウィザードの F1 ヘルプ (Analysis Services)
   データ ソース ビュー ウィザードを使用して、 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で次のビジネス インテリジェンス プロジェクトに使用するデータ ソース ビューを作成します。  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] プロジェクト  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]プロジェクト  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクト  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]プロジェクト  
   
 -   レポート モデル プロジェクト  
   
@@ -42,15 +42,15 @@ ms.locfileid: "66082506"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
--   [データ ソースの選択&#40;データ ソース ビュー ウィザード&#41; &#40;Analysis Services&#41;](select-a-data-source-data-source-view-wizard-analysis-services.md)  
+-   [データソースビューウィザードの [データソースの選択] &#40;&#41; &#40;Analysis Services&#41;](select-a-data-source-data-source-view-wizard-analysis-services.md)  
   
--   [名前の一致&#40;データ ソース ビュー ウィザード&#41; &#40;Analysis Services&#41;](name-matching-data-source-view-wizard-analysis-services.md)  
+-   [名前の一致 &#40;データソースビューウィザード&#41; &#40;Analysis Services&#41;](name-matching-data-source-view-wizard-analysis-services.md)  
   
--   [テーブルとビュー選択&#40;データ ソース ビュー ウィザード&#41; &#40;Analysis Services&#41;](select-tables-and-views-data-source-view-wizard-analysis-services.md)  
+-   [データソースビューウィザードの [テーブルとビューの選択] &#40;&#41; &#40;Analysis Services&#41;](select-tables-and-views-data-source-view-wizard-analysis-services.md)  
   
--   [ウィザードの完了&#40;データ ソース ビュー ウィザード&#41; &#40;Analysis Services&#41;](completing-the-wizard-data-source-view-wizard-analysis-services.md)  
+-   [データソースビューウィザードの [ウィザードの完了] &#40;&#41; &#40;Analysis Services&#41;](completing-the-wizard-data-source-view-wizard-analysis-services.md)  
   
 ## <a name="see-also"></a>参照  
- [Analysis Services のウィザード&#40;多次元データ&#41;](analysis-services-wizards-multidimensional-data.md)  
+ [Analysis Services のウィザード &#40;多次元データ&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

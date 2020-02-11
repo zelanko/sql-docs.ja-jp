@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f29ddee8456149ca16dd886935138b0cc915f42d
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75229293"
 ---
 # <a name="create-and-customize-powerpivot-gallery"></a>PowerPivot ギャラリーの作成およびカスタマイズ
@@ -34,7 +34,7 @@ ms.locfileid: "75229293"
   
 -   [シアタービューまたはギャラリービューへの切り替え](#switch)  
   
-##  <a name="prereq"></a>応募  
+##  <a name="prereq"></a> 前提条件  
   
 -   Silverlight が必要です。 Silverlight は、Microsoft Update でダウンロードし、インストールできます。 Silverlight がインストールされていない状態でブラウザーを使用して [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリー ライブラリを表示する場合は、Silverlight をインストールするためのページ上のリンクをクリックします。 Silverlight をインストールしたら、ブラウザーを閉じてもう一度開く必要があります。  
   
@@ -149,7 +149,7 @@ ms.locfileid: "75229293"
   
  プレビューした各ページのサムネイル スケッチを表示する各種レイアウトの説明を次の表に示します。  
   
-|表示|説明|  
+|表示|[説明]|  
 |----------|-----------------|  
 |ギャラリー ビュー (既定)|ギャラリーは、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリーの既定のビューです。 プレビューは左側に表示されます。 その横に、各ワークシートの小さいサムネイルが左から右の順に表示されます。|  
 |[すべてのドキュメント]|これはドキュメント ライブラリの標準のレイアウトです。 個々のドキュメントを管理する場合、またはライブラリ コンテンツを一覧形式で表示する場合にこのビューを選択できます。<br /><br /> プロパティを編集したり、個々のドキュメントを削除または移動するには、このビューを使用します。<br /><br /> バージョン管理を有効にしている場合は、このビューを使用して、ライブラリでドキュメントをチェックインまたはチェックアウトする必要があります。|  

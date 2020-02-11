@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d4d780294ca82b8d8b577a62446f4d8bd8bb4b93
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62811223"
 ---
 # <a name="configure-the-user-connections-server-configuration-option"></a>user connections サーバー構成オプションの構成
@@ -32,9 +32,9 @@ ms.locfileid: "62811223"
   
 -   **作業を開始する準備:**  
   
-     [推奨事項](#Recommendations)  
+     [Recommendations (推奨事項)](#Recommendations)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **以下を使用して user connections オプションを構成するには:**  
   
@@ -42,7 +42,7 @@ ms.locfileid: "62811223"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **補足情報:**[user connections オプションを構成した後](#FollowUp)  
+-   **補足情報:** [user connections オプションを構成した後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   

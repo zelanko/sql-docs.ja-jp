@@ -1,5 +1,5 @@
 ---
-title: 移行 (AccessToSQL) を Access データベースを準備する |Microsoft Docs
+title: Access データベースの移行の準備 (アクセス可能な Sql) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 08/15/2017
@@ -22,59 +22,59 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: 58988d31687cacdce2954d8e4098d509a9dcbb2b
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68260218"
 ---
-# <a name="preparing-access-databases-for-migration-accesstosql"></a>移行 (AccessToSQL) を Access データベースを準備します。
-Access データベースを移行する前に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、移行し、これらのデータベースが移行の準備ができていることを確認するデータベースを決定する必要があります。  
+# <a name="preparing-access-databases-for-migration-accesstosql"></a>移行のための Access データベースの準備 (アクセス可能な Sql)
+Access データベースをに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]移行する前に、移行するデータベースを決定し、それらのデータベースの移行準備ができていることを確認する必要があります。  
   
-## <a name="determining-when-to-migrate-to-sql-server"></a>SQL Server に移行する場合を判断します。  
-アクセスするため、データベース エンジンとして使用される、Jet データベース エンジンとは、データ管理のための柔軟で使いやすいソリューションです。 ただし、データベースのサイズが大きくなる複数のミッション クリティカルとして多くのユーザーを検索パフォーマンスの向上、セキュリティ、または可用性が必要です。 堅牢なデータ プラットフォームを必要とするアプリケーションでは、それらのアプリケーションの基になるデータベースの移動を検討してください[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 移行するタイミングを決定する方法の詳細については、次を参照してください。、[移行情報ページ](https://go.microsoft.com/fwlink/?LinkId=68571)上、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Web サイト。  
+## <a name="determining-when-to-migrate-to-sql-server"></a>SQL Server に移行する場合の判断  
+Access のデータベースエンジンとして使用される Jet データベースエンジンは、データ管理のための柔軟で使いやすいソリューションです。 ただし、データベースが大きくなり、ミッションクリティカルになるにつれて、多くのユーザーは、パフォーマンス、セキュリティ、または可用性の向上を必要としていることがわかります。 より堅牢なデータプラットフォームを必要とするアプリケーションでは、これらのアプリケーションの基に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]なるデータベースをに移動することを検討してください。 移行のタイミングを決定する方法の詳細については、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Web サイトの「[移行情報」ページ](https://go.microsoft.com/fwlink/?LinkId=68571)を参照してください。  
   
-データベースを移行した後、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]リンク テーブルを使用して、アクセスを使用を継続できますしたりするようにアプリケーションを手動で移行することができます[!INCLUDE[msCoName](../../includes/msconame_md.md)]と直接やり取りするコードを .NET Framework に基づく[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
+データベースをに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]移行した後も、リンクテーブルを使用して引き続きアクセスできます。また、と[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]直接やり取りする .NET Framework ベースのコードにアプリケーションを手動で移行することもできます。  
   
-## <a name="determining-which-databases-to-migrate"></a>移行対象のデータベースを決定します。  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) のアクセスは、の Access データベースを検索できます。 そのデータベースに関するメタデータをエクスポートできます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 エクスポートのメタデータを照会する方法の詳細については、次を参照してください。 [Access インベントリのエクスポート](exporting-an-access-inventory-accesstosql.md)します。  
+## <a name="determining-which-databases-to-migrate"></a>移行するデータベースの決定  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Access の Migration Assistant (SSMA) は、Access データベースを見つけることができます。 その後、これらのデータベースに関するメタ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データをにエクスポートできます。 メタデータをエクスポートおよび照会する方法の詳細については、「[アクセスインベントリのエクスポート](exporting-an-access-inventory-accesstosql.md)」を参照してください。  
 
    > [!NOTE]
-   > 、でサポートされていないすべてのアクセス機能と設定、または、簡単に変換できる[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 データベースの移行を開始する前に、次を参照してください。[互換性のないアクセス機能](incompatible-access-features-accesstosql.md)します。
+   > すべてのアクセス機能と設定がでサポートされているわけではあり[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ません。また、に簡単に変換することもできます。 データベースの移行を開始する前に、「互換性のない[アクセス機能](incompatible-access-features-accesstosql.md)」を参照してください。
   
 ## <a name="preparing-for-migration"></a>移行の準備  
-移行を Access データベースを準備できるように、次のガイドラインを使用して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
+への移行のために Access データベースを準備するには[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、次のガイドラインに従います。  
   
-### <a name="upgrading-older-access-databases"></a>以前の Access データベースをアップグレードします。  
-アクセス用の SSMA は、Access 97 以降のバージョンをサポートします。 以前のバージョンの Access データベースがある場合は、開くし、Access 97 以降のバージョンでデータベースを保存します。  
+### <a name="upgrading-older-access-databases"></a>古い Access データベースのアップグレード  
+SSMA for Access は、97以降のバージョンへのアクセスをサポートしています。 以前のバージョンの Access のデータベースを使用している場合は、Access 97 以降のバージョンでデータベースを開いて保存します。  
   
 ### <a name="removing-workgroup-protection"></a>ワークグループの保護の削除  
-SSMA は、ワークグループの保護を使用するデータベースを移行できません。 ワークグループの保護を Access データベースから削除するには、次の手順を実行します。  
+SSMA では、ワークグループ保護を使用するデータベースを移行することはできません。 Access データベースからワークグループ保護を削除するには、次の手順を実行します。  
   
-1.  Access データベース ファイルを別の場所にコピーします。  
+1.  Access データベースファイルを別の場所にコピーします。  
   
-2.  データベースのコピーを開きます。  
+2.  コピーしたデータベースを開きます。  
   
-3.  **ツール**メニューで、**セキュリティ**、し、**ユーザーとグループ権限**します。  
+3.  [**ツール**] メニューの [**セキュリティ**] をポイントし、[**ユーザーとグループのアクセス許可**] を選択します。  
   
-4.  選択、**ユーザー**オプションを選択し、**管理者**ユーザー、ことを確認、 **Administer**アクセス許可が選択されています。  
+4.  [Users] \ (**ユーザー** \) オプションを選択し、**管理者**ユーザーを選択して、[**管理**] アクセス許可が選択されていることを確認します。  
   
-5.  選択、**グループ**オプションを選択し、**ユーザー**グループ化、およびことを確認します、**管理**アクセス許可を選択します。  
+5.  [**グループ**] オプションを選択し、[ **Users** ] グループを選択して、[**管理**] アクセス許可が選択されていることを確認します。  
   
-6.  をクリックして**OK**、し、**ファイル** メニューのをクリックして**終了**します。  
+6.  [ **OK**] をクリックし、[**ファイル**] メニューの [**終了**] をクリックします。  
   
-SSMA を使用して、データベースのコピーを移行することができますようになりました。 スキーマの読み込み後[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、手動でのデータベースを保護することができます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
+これで、SSMA を使用して、コピーしたデータベースを移行できるようになりました。 スキーマをに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]読み込んだ後、でデータベースを手動でセキュリティで[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]保護することができます。  
   
 ### <a name="backing-up-databases"></a>データベースのバックアップ  
-データベースのアクセスを移行する前に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、移行する場合は両方、Access データベースをバックアップする必要がありますだけでなく[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は移行先のデータベース オブジェクトとデータにアクセスします。  
+Access データベースをに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]移行する前に、移行する access データベースと、アクセスオブジェクトとデータを移行するデータベースの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]両方をバックアップする必要があります。  
   
-Access データベースをバックアップする、**ツール**メニューで、**データベース ユーティリティ**、し、**データベースのバックアップ**します。  
+Access データベースをバックアップするには、[**ツール**] メニューの [**データベースユーティリティ**] をポイントし、[**データベースのバックアップ**] を選択します。  
   
-バックアップを作成する方法については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースを参照してください"でデータベースを復元するバックアップと[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]"で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オンライン ブックの「します。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースをバックアップする方法の詳細については、オンラインブックの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 「データベース[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のバックアップと復元」を参照してください。  
   
-### <a name="documenting-databases"></a>データベースを文書化  
-データベース オブジェクト、ファイル サイズ、および Access データベースのアクセス許可の一覧など、プロパティを文書化することも可能性があります。 Access では、このドキュメントを生成する、**ツール**メニューで、**分析**、 をクリックし、 **Documented**します。  
+### <a name="documenting-databases"></a>データベースのドキュメント化  
+また、Access データベースのデータベースオブジェクト、ファイルサイズ、アクセス許可の一覧などのプロパティを文書化することもできます。 Access でこのドキュメントを生成するには、[**ツール**] メニューの [**分析**] をポイントし、[**文書化**] をクリックします。  
   
-## <a name="see-also"></a>関連項目  
-[SQL Server へのアクセス データベースの移行](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
-[SQL Server への Access アプリケーションのリンク](linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md)
+## <a name="see-also"></a>参照  
+[Access データベースの SQL Server への移行](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
+[Access アプリケーションの SQL Server へのリンク](linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md)

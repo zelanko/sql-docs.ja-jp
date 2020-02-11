@@ -33,10 +33,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f70e66a02637b65e96cccc6001c9702d5253d5cd
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75257374"
 ---
 # <a name="xml-bulk-load-examples-sqlxml-40"></a>XML 一括読み込みの例 (SQLXML 4.0)
@@ -457,7 +457,7 @@ OrderDetail (OrderID, ProductID)
   
  この場合、XML 一括読み込みでは、テーブル間の主キー/外部キーのリレーションシップが識別されます。 一括読み込みでは、主キーのあるテーブルにレコードが挿入された後、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] で生成された ID 値が、外部キー列のあるテーブルに格納されます。 次の XML 一括読み込みの例では、次の順序でテーブルにデータが挿入されます。  
   
-1.  製品  
+1.  Product  
   
 2.  Ord  
   

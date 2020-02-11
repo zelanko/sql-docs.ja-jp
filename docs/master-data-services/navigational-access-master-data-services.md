@@ -14,10 +14,10 @@ ms.assetid: 3403b7b0-44e2-48c3-a1b7-9c4612b874b8
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: c167d33c29a78100e5a0f1bfcd987dc50368cdc4
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728996"
 ---
 # <a name="navigational-access-master-data-services"></a>ナビゲーション アクセス (マスター データ サービス)
@@ -32,7 +32,7 @@ ms.locfileid: "73728996"
   
  ![mds_conc_inheritance_model](../master-data-services/media/mds-conc-inheritance-model.gif "mds_conc_inheritance_model")  
   
- **エンティティ**  
+ **[エンティティ]**  
   
  エンティティ、リーフ メンバー、またはその統合メンバーに権限を割り当てた場合、ナビゲーション アクセスにより、すべてのメンバーの名前およびコードの読み取りまたは更新を実行できます。 また、モデル名を読み取ることもできます。  
   
@@ -45,6 +45,6 @@ ms.locfileid: "73728996"
  コレクションに権限を割り当てた場合、名前、コード、説明、および所有者 ID の読み取りまたは更新を実行できます。 また、モデル名を読み取ることもできます。  
   
 ## <a name="see-also"></a>参照  
- [権限の決定方法 (マスター データ サービス)](../master-data-services/how-permissions-are-determined-master-data-services.md)  
+ [アクセス許可の決定方法 &#40;マスターデータサービス&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: スカラー関数の使用 |Microsoft Docs
+title: スカラー式を使用する |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: b87fad1b9c568f4ebd5f65ef3705001b12d26693
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68038041"
 ---
 # <a name="using-scalar-expressions"></a>スカラー関数の使用
@@ -20,9 +20,9 @@ ms.locfileid: "68038041"
 
   多次元式 (MDX) では、スカラー関数は MDX 構文の要素であり、評価されるときに評価のコンテキスト内で 1 つの値を返します。  
   
- スカラー式には、MDX での文字列、数値、および日付式が含まれます。  
+ スカラー式には、MDX の文字列、数値、および日付の式が含まれます。  
   
- 通常、スカラー式は計算されるメンバーは、スカラー値を返す必要が計算されるメンバーの定義で使用されます。 次のクエリでは、さまざまな種類のスカラー式を使用するメジャー ディメンションの計算されるメンバーの例を示します。  
+ 通常、スカラー式は計算されるメンバーの定義で使用されます。これは、計算されるメンバーがスカラー値を返す必要があるためです。 次のクエリは、さまざまな種類のスカラー式を使用するメジャーディメンションの計算されるメンバーの例を示しています。  
   
  `WITH`  
   
@@ -50,7 +50,7 @@ ms.locfileid: "68038041"
   
  `FROM [Adventure Works]`  
   
- メジャー、計算された、またはそれを返すことができる唯一のデータ型は OLE Variant 型です。 したがって、場合によっては、メジャー値を特定の型にキャストして、予測される動作を受け入れることも必要になります。 次のクエリでは、この例を示します。  
+ メジャー (計算される、またはそれ以外の場合) が返すことができるデータ型は、OLE バリアント型だけです。 したがって、場合によっては、メジャー値を特定の型にキャストして、予測される動作を受け入れることも必要になります。 次のクエリは、この例を示しています。  
   
 ```  
 WITH  
@@ -68,7 +68,7 @@ ON COLUMNS
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [式&#40;MDX&#41;](../mdx/expressions-mdx.md)  
+## <a name="see-also"></a>参照  
+ [MDX &#40;式&#41;](../mdx/expressions-mdx.md)  
   
   

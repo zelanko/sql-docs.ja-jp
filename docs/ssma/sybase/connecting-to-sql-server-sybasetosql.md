@@ -1,5 +1,5 @@
 ---
-title: SQL Server (SybaseToSQL) への接続 |Microsoft Docs
+title: SQL Server への接続 (SybaseToSQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,118 +12,119 @@ ms.assetid: dd368a1a-45b0-40e9-b4d3-5cdb48c26606
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 4f40fd6fa88b001eaa222789d6be35b83f9bf90a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67948544"
 ---
 # <a name="connecting-to-sql-server-sybasetosql"></a>SQL Server への接続 (SybaseToSQL)
-Sybase Adaptive Server Enterprise (ASE) のデータベースを移行する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のターゲット インスタンスのいずれかに接続する必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 SSMA がのインスタンスのすべてのデータベースに関するメタデータを取得して接続すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]でデータベースのメタデータを表示し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メタデータ エクスプ ローラー。 SSMA のインスタンスに関する情報を格納する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に接続しているが、パスワードは保存されません。  
+Sybase Adaptive Server Enterprise (ASE) データベースをに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]移行するには、の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ターゲットインスタンスのいずれかに接続する必要があります。 接続すると、SSMA はインスタンス内のすべてのデータベースに関するメタ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データを取得し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メタデータエクスプローラーにデータベースのメタデータを表示します。 SSMA は、接続されて[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]いるのインスタンスに関する情報を格納しますが、パスワードは保存しません。  
   
-接続を[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]プロジェクトを終了するまでアクティブに保ちます。 プロジェクトを開くときにに再接続する必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]する場合は、サーバーにアクティブに接続します。 データベース オブジェクトが読み込まれるまでオフラインで作業できる[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]しデータを移行します。  
+への接続[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、プロジェクトを閉じるまでアクティブなままになります。 プロジェクトを再度開いたときに、サーバーへ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のアクティブな接続が必要な場合は、に再接続する必要があります。 データベースオブジェクトをに読み込んでデータを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]移行するまで、オフラインで作業することができます。  
   
-インスタンスに関するメタデータ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が自動的に同期されていません。 代わりに、内のメタデータを更新する場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メタデータ エクスプ ローラーである必要があります手動で更新する、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 」の説明に従って、メタデータ、"Synchronizing[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メタデータ"このトピックで後述します。  
+の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスに関するメタデータは、自動的には同期されません。 代わりに、メタデータエクスプローラーで[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メタデータを更新する場合は、このトピックで後述[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]する「メタデータの同期[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 」セクションの説明に従って、メタデータを手動で更新する必要があります。  
   
-## <a name="required-sql-server-permissions"></a>必要な SQL Server のアクセス許可  
-接続に使用されるアカウント[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]そのアカウントで実行されるアクションに応じて、さまざまなアクセス許可が必要です。  
+## <a name="required-sql-server-permissions"></a>必要な SQL Server アクセス許可  
+へ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の接続に使用するアカウントには、そのアカウントによって実行されるアクションに応じて、異なるアクセス許可が必要です。  
   
--   ASE のオブジェクトに変換する[!INCLUDE[tsql](../../includes/tsql-md.md)]からメタデータを更新する構文、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、か、アカウントをスクリプトに変換された構文を保存するのインスタンスにログインする権限を持って必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
+-   ASE オブジェクトを構文に[!INCLUDE[tsql](../../includes/tsql-md.md)]変換したり、から[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メタデータを更新したり、変換された構文をスクリプトに保存したりするには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]アカウントにのインスタンスにログインする権限が必要です。  
   
--   データベース オブジェクトに読み込むために[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、アクセス許可の最小要件は、メンバーシップ、 **db_owner**ターゲット データベースのデータベース ロール。  
+-   データベースオブジェクトをに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]読み込むには、権限の最小要件は、ターゲットデータベースの**db_owner**データベースロールのメンバーシップです。  
   
--   データを移行する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、アカウントのメンバーである必要があります、 **sysadmin**サーバーの役割。 これは実行に必要、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント データの移行のパッケージ。  
+-   に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データを移行するには、アカウントが**sysadmin**サーバーロールのメンバーである必要があります。 これは、エージェントの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ移行パッケージを実行するために必要です。  
   
--   SSMA によって生成されるコードを実行するアカウントが必要**Execute**のすべてのユーザー定義関数のアクセス許可、 **ssma_syb**のスキーマ、 **sysdb**データベース。 これらの関数は、ASE システムの機能と同等の機能を提供し、変換されたオブジェクトが使用されます。  
+-   SSMA によって生成されたコードを実行するには、アカウントに、 **sysdb**データベースの**ssma_syb**スキーマ内のすべてのユーザー定義関数に対する**Execute**権限が必要です。 これらの関数は、ASE システム関数と同等の機能を提供し、変換されたオブジェクトによって使用されます。  
   
-場合に接続するために使用するアカウント[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]すべての移行を実行するタスク、アカウントのメンバーである必要がありますが、 **sysadmin**サーバーの役割。  
+へ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の接続に使用するアカウントがすべての移行タスクを実行する場合、アカウントは**sysadmin**サーバーロールのメンバーである必要があります。  
   
-## <a name="establishing-a-sql-server-connection"></a>SQL Server の接続を確立します。  
-ASE データベース オブジェクトを変換する前に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]構文のインスタンスへの接続を確立する必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ASE データベースやデータベースを移行します。  
+## <a name="establishing-a-sql-server-connection"></a>SQL Server 接続の確立  
+ASE データベースオブジェクトを構文に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]変換する前に、ase データベースを移行するインスタンスへ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の接続を確立する必要があります。  
   
-接続のプロパティを定義するときに、オブジェクトとデータを移行するデータベースを指定します。 接続した後、ASE スキーマ レベルでは、このマッピングをカスタマイズできます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 詳細については、次を参照してください。 [SQL Server スキーマへの Sybase ASE スキーマのマッピング&#40;SybaseToSQL&#41;](../../ssma/sybase/mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql.md)します。  
+接続プロパティを定義するときに、オブジェクトとデータを移行するデータベースも指定します。 このマッピングは、に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]接続した後、ASE スキーマレベルでカスタマイズできます。 詳細については、「 [SQL Server スキーマ &#40;SybaseToSQL&#41;に SYBASE ASE スキーマをマップする](../../ssma/sybase/mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql.md)」を参照してください。  
   
 > [!IMPORTANT]  
-> 接続する前に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、ことを確認のインスタンス[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が実行されていると、接続を受け入れることができます。  
+> に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]接続する前に、の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスが実行されていて、接続を受け入れることができることを確認してください。  
   
 **SQL Server に接続するには**  
   
-1.  **ファイル**メニューの  **SQL サーバーへの接続**します。  
+1.  [**ファイル**] メニューの [ **SQL Server に接続**] を選択します。  
   
-    以前に接続されている場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、コマンドの名前になります**SQL Server に再接続**します。  
+    以前にに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]接続していた場合、コマンド名は**SQL Server に再接続**されます。  
   
-2.  接続ダイアログ ボックスで入力するかのインスタンスの名前を選択[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
+2.  [接続] ダイアログボックスで、の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスの名前を入力または選択します。  
   
-    -   ローカル コンピューターの既定のインスタンスに接続する場合は、入力**localhost**またはドット ( **.** )。  
+    -   ローカルコンピューター上の既定のインスタンスに接続している場合は、 **localhost**またはドット (**.**) を入力できます。  
   
-    -   別のコンピューターで既定のインスタンスに接続する場合は、コンピューターの名前を入力します。  
+    -   別のコンピューター上の既定のインスタンスに接続している場合は、コンピューターの名前を入力します。  
   
-    -   別のコンピューター上の名前付きインスタンスに接続する場合は、コンピューター名の後に、円記号とし、\myinstance など、インスタンス名を入力します。  
+    -   別のコンピューター上の名前付きインスタンスに接続している場合は、コンピューター名の後に円記号を入力し、インスタンス名を入力します (例、myの myinstance)。  
   
-3.  場合、インスタンスの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]既定以外のポートで接続を受け入れる、使用されるポート番号を入力するように構成[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]内の接続、**サーバー ポート**ボックス。 既定のインスタンスの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]既定のポート番号は 1433 です。 名前付きインスタンスは、SSMA は、ポート番号の取得を試みます、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser サービス。  
+3.  の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスが既定以外のポートで接続を受け入れるように構成されている場合は、[ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **サーバーポート**] ボックスに接続に使用するポート番号を入力します。 の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]既定のインスタンスの場合、既定のポート番号は1433です。 名前付きインスタンスの場合、SSMA は[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser サービスからポート番号の取得を試みます。  
   
-4.  **データベース**ボックスに、ターゲット データベースの名前を入力します。  
+4.  [**データベース**] ボックスに、ターゲットデータベースの名前を入力します。  
   
-    このオプションに再接続する場合は使用できません[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
+    このオプションは、に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]再接続するときには使用できません。  
   
-5.  **認証**ボックスで、接続に使用する認証の種類を選択します。 現在の Windows アカウントを使用する**Windows 認証**します。 使用する、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインで、 **SQL Server 認証**とログイン名とパスワードを入力します。  
+5.  [**認証**] ボックスで、接続に使用する認証の種類を選択します。 現在の Windows アカウントを使用するには、[ **Windows 認証**] を選択します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインを使用するには、[ **SQL Server 認証**] を選択し、ログイン名とパスワードを指定します。  
   
-6.  セキュリティで保護された接続は、2 つのコントロールを追加、**暗号化接続**と**TrustServerCertificate**チェック ボックス。 場合にのみ**暗号化接続**がオンになって、 **TrustServerCertificate**チェック ボックスを表示します。 ときに**暗号化接続**がチェックされます (true) と**TrustServerCertificate**チェック ボックスがオフ (false)、これは SQL Server の SSL 証明書を検証します。 サーバー証明書の検証は、SSL ハンドシェイクの一部であり、接続先のサーバーが適切なサーバーであることを保証します。 これを確実にクライアント側およびサーバー側で、証明書をインストールする必要があります。  
+6.  セキュリティで保護された接続では、[**暗号化接続**] チェックボックスと [ **trustservercertificate** ] チェックボックスの2つのコントロールが追加されます。 [**暗号化接続**] をオンにした場合にのみ、[ **trustservercertificate** ] チェックボックスが表示されます。 [**暗号化接続**] がオンになっている場合 (true)、 **trustservercertificate**がオフになっている場合 (false)、SQL Server の SSL 証明書が検証されます。 サーバー証明書の検証は、SSL ハンドシェイクの一部であり、接続先のサーバーが適切なサーバーであることを保証します。 これを実現するには、証明書をクライアント側とサーバー側の両方にインストールする必要があります。  
   
-7.  **[接続]** をクリックします。  
+7.  
+  **[接続]** をクリックします。  
   
-**高いバージョンの互換性について**  
+**より高いバージョンの互換性**  
   
--   接続できる[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2008 と[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012 と[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014 と[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2016 の場合、移行プロジェクトの作成は[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005。  
+-   作成された移行プロジェクトが[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] "2005 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] " の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 と2012、2014、および2016に接続できます。  
   
--   接続できる[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012 と[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014 と[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2016 の場合、移行プロジェクトの作成は[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2008 つまり下位バージョンに接続することはできませんが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005.  
+-   作成された移行プロジェクトが[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]あるに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]もかかわらず、より低いバージョン (たとえば、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005) に接続できない場合は、2012および2014および2016に接続できます。  
   
--   のみに接続できる[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012 と[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014 と[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2016 が作成されたプロジェクトが SQL Server 2012 の場合。  
+-   作成されたプロジェクトが 2012 SQL Server [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]場合は[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、2012 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と2014、および2016にのみ接続できます。  
   
--   SQL Azure の高いバージョンの互換性が正しくありません。  
+-   より新しいバージョンの互換性は、SQL Azure では無効です。  
   
 ||||||||
 |-|-|-|-|-|-|-|
-|**プロジェクトの種類とターゲット サーバーのバージョン**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005<br /> (バージョン。9.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008<br /> (バージョン。10.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 <br />(Version:11.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 <br />(Version:12.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 <br />(Version:13.x)|SQL Azure|
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005|はい|[はい]|[はい]|[はい]|はい||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008||はい|[はい]|[はい]|はい||
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012|||はい|[はい]|はい||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014||||はい|はい|| 
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016|||||はい||  
+|**プロジェクトの種類 Vs ターゲットサーバーのバージョン**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005<br /> (バージョン: 1.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2008<br /> (バージョン:10 .x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012 <br />(バージョン: 2.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014 <br />(バージョン: 2.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2016 <br />(バージョン:13. x)|SQL Azure|
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005|はい|はい|はい|はい|はい||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2008||はい|はい|はい|はい||
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012|||はい|はい|はい||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014||||はい|はい|| 
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2016|||||はい||  
 |SQL Azure||||||はい|  
   
 > [!IMPORTANT]
-> データベース オブジェクトの変換が実施しているのバージョンに従っていませんが、プロジェクトの種類に従って、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に接続しています。 場合に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005年プロジェクトでは、変換は実行に従って[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005 の新しいバージョンに接続している場合でも[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 または[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012 または[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014 または[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2016)  
+> データベースオブジェクトの変換は、プロジェクトの種類に従って実行されますが、接続して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]いるのバージョンによっては実行されません。 2005プロジェクトの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]場合は、より上位[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バージョン ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012、または[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 または[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016) に接続している場合でも、変換は2005に従って実行されます。  
   
-## <a name="reconnecting-to-sql-server"></a>SQL Server に再接続  
-接続を[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]プロジェクトを終了するまでアクティブに保ちます。 プロジェクトを開くときにに再接続する必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]する場合は、サーバーにアクティブに接続します。 負荷のデータベース オブジェクトに、メタデータを更新するまでオフラインで作業できる[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データを移行します。  
+## <a name="reconnecting-to-sql-server"></a>SQL Server に再接続しています  
+への接続[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、プロジェクトを閉じるまでアクティブなままになります。 プロジェクトを再度開いたときに、サーバーへ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のアクティブな接続が必要な場合は、に再接続する必要があります。 オフラインで作業するには、メタデータを更新し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースオブジェクトをに読み込んで、データを移行します。  
   
-再接続プロシージャ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]接続を確立するための手順と同じです。  
+に再接続する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]手順は、接続を確立する手順と同じです。  
   
-## <a name="synchronizing-sql-server-metadata"></a>SQL サーバーのメタデータの同期  
-に関するメタデータ、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースが自動的に更新されません。 内のメタデータ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に最初に接続するときに、メタデータ エクスプ ローラーは、メタデータのスナップショット[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、または最後の時刻を手動で更新されたメタデータ。 すべてのデータベースまたは任意の 1 つのデータベースまたはデータベース オブジェクトのメタデータを手動で更新することができます。  
+## <a name="synchronizing-sql-server-metadata"></a>SQL Server メタデータの同期  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースに関するメタデータは自動的に更新されません。 メタデータエクスプローラー [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のメタデータは、最初に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]接続したとき、または前回手動でメタデータを更新したときのメタデータのスナップショットです。 すべてのデータベース、または任意の1つのデータベースまたはデータベースオブジェクトのメタデータを手動で更新できます。  
   
 **メタデータを同期するには**  
   
-1.  接続されていることを確認[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
+1.  に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]接続されていることを確認します。  
   
-2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メタデータ エクスプ ローラーで、データベースの横にあるチェック ボックスを選択するかデータベースのスキーマを更新します。  
+2.  メタ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データエクスプローラーで、更新するデータベースまたはデータベーススキーマの横にあるチェックボックスをオンにします。  
   
-    たとえば、すべてのデータベースのメタデータを更新するボックスをオンに、横に**データベース**します。  
+    たとえば、すべてのデータベースのメタデータを更新するには、[**データベース**] の横にあるチェックボックスをオンにします。  
   
-3.  データベースまたは個々 のデータベースまたはデータベースのスキーマを右クリックし、**データベースと同期する**します。  
+3.  [データベース] または個々のデータベースまたはデータベーススキーマを右クリックし、[**データベースとの同期**] を選択します。  
   
-## <a name="next-step"></a>次の手順  
-移行の次の手順は、プロジェクトのニーズによって異なります。  
+## <a name="next-step"></a>次のステップ  
+移行の次のステップは、プロジェクトのニーズによって異なります。  
   
--   ASE のデータベースとスキーマ間のマッピングをカスタマイズするかどうかと[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースとスキーマを参照してください。 [SQL Server スキーマへの Sybase ASE スキーマのマッピング&#40;SybaseToSQL&#41;](../../ssma/sybase/mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql.md)します。  
+-   ASE データベース、スキーマ、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース、およびスキーマ間のマッピングをカスタマイズする場合は、「 [SQL Server スキーマ &#40;SybaseToSQL&#41;への Sybase ASE スキーマのマッピング](../../ssma/sybase/mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql.md)」を参照してください。  
   
--   プロジェクトの構成オプションをカスタマイズする場合を参照してください。[プロジェクト オプションの設定&#40;SybaseToSQL&#41;](../../ssma/sybase/setting-project-options-sybasetosql.md)します。  
+-   プロジェクトの構成オプションをカスタマイズする場合は、「 [SybaseToSQL&#41;&#40;プロジェクトオプションを設定](../../ssma/sybase/setting-project-options-sybasetosql.md)する」を参照してください。  
   
--   カスタム ソースとターゲットのデータ型のマッピングを参照してください[マッピング Sybase ASE と SQL Server データ型&#40;SybaseToSQL&#41;](../../ssma/sybase/mapping-sybase-ase-and-sql-server-data-types-sybasetosql.md)します。  
+-   ソースとターゲットのデータ型のマッピングをカスタマイズする場合は、「 [SYBASE ASE と SQL Server のデータ型 &#40;SybaseToSQL&#41;にマップ](../../ssma/sybase/mapping-sybase-ase-and-sql-server-data-types-sybasetosql.md)する」を参照してください。  
   
--   Sybase ASE データベース オブジェクトの定義を変換できる場合、これらのいずれかを実行する必要はありません、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オブジェクト定義します。 詳細については、次を参照してください。 [Sybase ASE データベース オブジェクトの変換&#40;SybaseToSQL&#41;](../../ssma/sybase/converting-sybase-ase-database-objects-sybasetosql.md)します。  
+-   これらのいずれかを実行する必要がない場合は、Sybase ASE データベースオブジェクトの定義をオブジェクト[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]定義に変換できます。 詳細については、「 [SYBASE ASE データベースオブジェクトの &#40;SybaseToSQL&#41;の変換](../../ssma/sybase/converting-sybase-ase-database-objects-sybasetosql.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
-[SQL Server - Azure SQL DB への Sybase ASE データベース移行&#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+[Sybase ASE データベースの SQL Server への移行-Azure SQL DB &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

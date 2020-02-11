@@ -1,5 +1,5 @@
 ---
-title: AddCalculatedMembers (MDX) |Microsoft Docs
+title: Add演算メンバー (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 982484b729b59a7106b6195e361110c1d4012653
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68017183"
 ---
 # <a name="addcalculatedmembers-mdx"></a>AddCalculatedMembers (MDX)
 
 
-  指定されたセットに計算されるメンバーを追加することによって生成されるセットを返します。  
+  計算されるメンバーを指定されたセットに追加することによって生成されるセットを返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -29,16 +29,16 @@ AddCalculatedMembers(Set_Expression)
   
 ## <a name="arguments"></a>引数  
  *Set_Expression*  
- セットを返す有効な多次元式 (MDX) です。  
+ セットを返す有効な多次元式 (MDX) 式です。  
   
-## <a name="remarks"></a>コメント  
- 既定では、MDX は、セット関数を解決するときに計算されるメンバーを除外します。 **AddCalculatedMembers**関数がで指定されたセット式を調べ*Set_Expression、* そのセットのスコープ内に含まれるメンバーの兄弟である計算されるメンバーが含まれています式。  
+## <a name="remarks"></a>解説  
+ 既定では、MDX は、セット関数を解決するときに、計算されるメンバーを除外します。 **Add演算メンバー**関数は、 *Set_Expression*で指定されたセット式を調べ、そのセット式のスコープ内に含まれるメンバーの兄弟である計算されるメンバーを含みます。  
   
 > [!NOTE]  
 >  この関数で使用できるのは、1 次元のセット式だけです。  
   
-## <a name="examples"></a>使用例  
- 次の例では、この関数の使用を示します。  
+## <a name="examples"></a>例  
+ この関数の使用例を次に示します。  
   
 ```  
 -- This query returns the calculated members for the cube  
@@ -50,7 +50,7 @@ SELECT
 FROM [Adventure Works]   
 ```  
   
- 次の例を返します、`Measures.[Unit Price]`内のすべての計算されるメンバーだけでなく、メンバー、**メジャー**ディメンションから、 **Adventure Works**キューブ。  
+ 次の例では`Measures.[Unit Price]` 、 **Adventure works**キューブから、 **Measures**ディメンション内のすべての計算されるメンバーに加えて、メンバーが返されます。  
   
 ```  
 SELECT  
@@ -59,7 +59,7 @@ FROM
    [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>参照  
+ [Mdx 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

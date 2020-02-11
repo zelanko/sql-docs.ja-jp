@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: eafa0dc2be5ee9ceffd86185399168589fdd8b1f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721222"
 ---
 # <a name="filter-table-rows"></a>[テーブル行のフィルター選択]
@@ -44,12 +44,12 @@ ms.locfileid: "62721222"
   
  フィルターには、レプリケーションで行の識別に使用される `rowguidcol` を含めることはできません。 既定では、これはマージ レプリケーションのセットアップ時に追加される列であり、 **rowguid**という名前が付けられます。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **[フィルター選択されたテーブル]**  
  このペインには、パブリケーションのテーブル アーティクルに追加したフィルターが表示されます。 行フィルターが設定されているテーブルは、ペイン内で最上位レベルのノードとして表示されます。 マージ パブリケーションの場合、結合フィルターを介してフィルター選択が拡張されているテーブルは、子ノードとして表示されます。  
   
- **[追加]**  
- **[追加]** をクリックすると、テーブル アーティクルをフィルター選択するためのダイアログ ボックスが表示されます。 スナップショット パブリケーションまたはトランザクション パブリケーションに対して **[追加]** をクリックすると、ダイアログ ボックスが即座に表示されます。 マージ パブリケーションのために **[追加]** をクリックすると、次の 3 つの選択肢が表示されます。 **[フィルターの追加]** 、 **[選択したフィルターを拡張するために結合を追加する]** 、 **[フィルターを自動的に生成]** 。  
+ **追加**  
+ **[追加]** をクリックすると、テーブル アーティクルをフィルター選択するためのダイアログ ボックスが表示されます。 スナップショット パブリケーションまたはトランザクション パブリケーションに対して **[追加]** をクリックすると、ダイアログ ボックスが即座に表示されます。 マージ パブリケーションに対して **[追加]** をクリックすると、 **[フィルターの追加]** 、 **[選択したフィルターを拡張するために結合を追加する]** 、 **[フィルターを自動的に生成]** の 3 つのオプションが表示されます。  
   
 -   **[フィルターの追加]** をクリックすると、 **[フィルターの追加]** ダイアログ ボックスが表示されます。 このダイアログ ボックスでは、行フィルターをテーブル アーティクルに適用できます。 たとえば、 **[フィルターの追加]** ダイアログ ボックスを使用して、顧客データ テーブルをサブスクライバーにレプリケートするときにフランスの顧客に関するデータだけを格納するように指定できます。  
   
@@ -79,10 +79,10 @@ ms.locfileid: "62721222"
  **Assert**  
  フィルター ペインで選択されたフィルターの [!INCLUDE[tsql](../../includes/tsql-md.md)] 定義を含みます。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [Create a Publication](publish/create-a-publication.md)   
  [パブリケーション プロパティの表示および変更](publish/view-and-modify-publication-properties.md)   
- [パブリッシュされたデータのフィルター選択](publish/filter-published-data.md)   
+ [パブリッシュされたデータのフィルター処理](publish/filter-published-data.md)   
  [Join Filters](merge/join-filters.md)   
  [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md)   
  [データとデータベース オブジェクトのパブリッシュ](publish/publish-data-and-database-objects.md)  

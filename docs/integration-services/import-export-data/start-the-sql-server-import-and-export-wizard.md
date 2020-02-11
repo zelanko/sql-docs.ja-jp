@@ -16,10 +16,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 11/18/2019
 ms.openlocfilehash: e77f176e9c49d095a5f12aa1d653fa7be41ca25e
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74165631"
 ---
 # <a name="start-the-sql-server-import-and-export-wizard"></a>SQL Server インポートおよびエクスポート ウィザードを起動する
@@ -78,7 +78,7 @@ ms.locfileid: "74165631"
 
 ### <a name="start-the-sql-server-import-and-export-wizard-from-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) から SQL Server インポートおよびエクスポート ウィザードを起動する
 
-1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] データベース エンジンのインスタンスに接続します。
+1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。
 
 2. **[データベース]** を展開します。
 

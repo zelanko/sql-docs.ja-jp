@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dc317474384c59d396d5a0f1d5ee4f71883509d4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63061197"
 ---
 # <a name="trace-file-close-event-class"></a>Trace File Close イベント クラス
@@ -26,11 +26,11 @@ ms.locfileid: "63061197"
   
 ## <a name="trace-file-close-event-class-data-columns"></a>Trace File Close イベント クラスのデータ列  
   
-|データ列名|データ型|説明|列 ID|フィルターの適用|  
+|データ列名|データ型|[説明]|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**EventClass**|**int**|イベントの種類 = 150。|27|いいえ|  
 |**EventSequence**|**int**|このトレースで起動されたこのイベントの固有のタイムスタンプ。 この数字は、イベントが起動されるたびに単調に増加します。|51|いいえ|  
-|**FileName**|**nvarchar**|閉じられているトレース ファイルの論理名。|36|[はい]|  
+|**FileName**|**nvarchar**|閉じられているトレース ファイルの論理名。|36|はい|  
 |**IsSystem**|**int**|イベントがシステム プロセスとユーザー プロセスのどちらで発生したか。 1 = システム、NULL = ユーザーです。 このイベント クラスでは、この値は常に 1 です。|60|はい|  
 |**LoginName**|**nvarchar**|ユーザーのログイン名 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セキュリティ ログインまたは DOMAIN\username という形式の [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ログイン資格情報)。 このイベント クラスでは、この値は常に "sa" です。|11|はい|  
 |**Exchange Spill**|**int**|システムによって割り当てられたトレースの ID です。|22|はい|  

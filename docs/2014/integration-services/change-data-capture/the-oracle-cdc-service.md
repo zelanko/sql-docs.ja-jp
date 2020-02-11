@@ -11,16 +11,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f3f3967b31331471d1ad0a886cc9eda853a25931
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771078"
 ---
 # <a name="the-oracle-cdc-service"></a>Oracle CDC Service
   Oracle CDC Service は、プログラム xdbcdcsvc.exe を実行する Windows サービスです。 それぞれ異なる Windows サービス名を持つ複数の Windows サービスを、同じコンピューターで実行するように構成できます。 1 つのコンピューターで複数の Oracle CDC Windows サービスを作成する場合としては、サービス間の分離を強化したい場合や、各サービスでそれぞれ異なる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを使用する必要がある場合などが一般的です。  
   
- Oracle CDC Service は、Oracle CDC Service 構成コンソールを使用して作成されるか、xdbcdcsvc.exe プログラムに組み込まれているコマンド ライン インターフェイスを使用して定義されます。 どちらの場合も、作成された各 Oracle CDC Service は、1 つに関連付け[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンス (クラスター化またはでミラー化された可能性がありますいる**AlwaysOn**セットアップ) と接続情報 (接続文字列とアクセス資格情報) はサービスの構成の一部です。  
+ Oracle CDC Service は、Oracle CDC Service 構成コンソールを使用して作成されるか、xdbcdcsvc.exe プログラムに組み込まれているコマンド ライン インターフェイスを使用して定義されます。 どちらの場合も、作成される各 Oracle CDC Service は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 1 つのインスタンス ( **AlwaysOn**セットアップでクラスター化またはミラー化される場合があります) に関連付けられ、接続情報 (接続文字列とアクセス資格情報) はサービス構成に含まれます。  
   
  Oracle CDC Service が開始されると、関連付けられている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスへの接続が試行され、処理する必要がある Oracle CDC インスタンスの一覧が取得されて、環境の最初の検証が実行されます。 サービス開始時のエラーと、開始/停止の情報は、常に Windows アプリケーション イベント ログに書き込まれます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への接続が確立されると、すべてのエラーと情報メッセージが、 **インスタンスの MSXDBCDC データベースの** dbo.xdbcdc_trace [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルに書き込まれます。 サービス開始時の検証では、たとえば、同じ名前の Oracle CDC Service が現在実行されていないかどうかが確認されます。 同じ名前のサービスが別のコンピューターから現在接続している場合は、Oracle CDC Service が wait ループに入り、そのサービスが切断されるのを待ってから処理が開始されます。  
   
@@ -92,7 +92,7 @@ CREATE ASYMMETRIC KEY xdbcdc_asym_key
   
 -   [Oracle CDC Service を使用する](the-oracle-cdc-service.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ローカルの CDC Service を管理する方法](how-to-manage-a-local-cdc-service.md)   
  [Oracle CDC Service の管理](manage-an-oracle-cdc-service.md)  
   

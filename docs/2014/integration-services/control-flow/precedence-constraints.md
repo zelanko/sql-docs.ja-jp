@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: da27e10af2a5483583976a13e54bf9087c20e9b2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62831708"
 ---
 # <a name="precedence-constraints"></a>優先順位制約
@@ -29,13 +29,14 @@ ms.locfileid: "62831708"
   
  優先順位制約は、優先実行可能オブジェクトと制約付きの実行可能オブジェクトを連結します。 優先実行可能オブジェクトは制約付きの実行可能オブジェクトの前に実行され、優先実行可能オブジェクトの実行結果により、制約付きの実行可能オブジェクトを実行するかどうかが決まる場合があります。 次の図は、優先順位制約によってリンクされた 2 つの実行可能ファイルを示しています。  
   
- ![優先順位制約によってリンクされた実行可能ファイル](../media/ssis-pcsimple.gif "優先順位制約によってリンクされた実行可能ファイル")  
+ ![優先順位制約によって接続された実行可能ファイル](../media/ssis-pcsimple.gif "優先順位制約によって接続された実行可能ファイル")  
   
- 直線的な制御フロー、つまり分岐のない制御フローでは、優先順位制約のみがタスクの実行順序を制御します。 制御フローに分岐がある場合には、[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] ランタイム エンジンが、分岐の直後に続くタスクとコンテナーの実行順序を決定します。 ランタイム エンジンは、制御フロー内で連結されていないワークフローの実行順序も決定します。  
+ 直線的な制御フロー、つまり分岐のない制御フローでは、優先順位制約のみがタスクの実行順序を制御します。 制御フローに分岐がある場合には、 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] ランタイム エンジンが、分岐の直後に続くタスクとコンテナーの実行順序を決定します。 ランタイム エンジンは、制御フロー内で連結されていないワークフローの実行順序も決定します。  
   
- [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のアーキテクチャではコンテナーを入れ子にできるので、1 つのタスクのみをカプセル化するタスク ホスト コンテナーを除き、すべてのコンテナーに他のコンテナーと独自の制御フローを含めることができます。 For ループ コンテナー、Foreach ループ コンテナー、およびシーケンス コンテナーには、タスクとその他のコンテナーを複数含めることができます。さらに、そのコンテナーにも複数のタスクとコンテナーを含めることができます。 たとえば、スクリプト タスクとシーケンス コンテナーを持つパッケージに、そのスクリプト タスクとシーケンス コンテナーをリンクする優先順位制約を含めます。 シーケンス コンテナーには 3 つのスクリプト タスクが含まれ、その優先順位制約は 3 つのスクリプト タスクをリンクして制御フローを作成します。 次の図は、2 レベルの入れ子構造のパッケージの優先順位制約を示しています。  
+ 
+  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のアーキテクチャではコンテナーを入れ子にできるので、1 つのタスクのみをカプセル化するタスク ホスト コンテナーを除き、すべてのコンテナーに他のコンテナーと独自の制御フローを含めることができます。 For ループ コンテナー、Foreach ループ コンテナー、およびシーケンス コンテナーには、タスクとその他のコンテナーを複数含めることができます。さらに、そのコンテナーにも複数のタスクとコンテナーを含めることができます。 たとえば、スクリプト タスクとシーケンス コンテナーを持つパッケージに、そのスクリプト タスクとシーケンス コンテナーをリンクする優先順位制約を含めます。 シーケンス コンテナーには 3 つのスクリプト タスクが含まれ、その優先順位制約は 3 つのスクリプト タスクをリンクして制御フローを作成します。 次の図は、2 レベルの入れ子構造のパッケージの優先順位制約を示しています。  
   
- ![パッケージの優先順位制約](../media/mw-dts-12.gif "パッケージの優先順位制約")  
+ ![パッケージ内の優先順位制約](../media/mw-dts-12.gif "パッケージ内の優先順位制約")  
   
  パッケージは、 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] コンテナー階層の最上層にあるため、複数のパッケージを優先順位制約によってリンクすることはできません。ただし、パッケージ実行タスクをパッケージに追加して、別のパッケージを間接的に制御フローにリンクできます。  
   
@@ -50,7 +51,8 @@ ms.locfileid: "62831708"
 -   優先順位制約を単独で評価するか、制約付き実行可能ファイルに適用する別の制約と共に評価するかを指定します。  
   
 ## <a name="evaluation-operations"></a>評価操作  
- [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] には、次の評価操作が用意されています。  
+ 
+  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] には、次の評価操作が用意されています。  
   
 -   優先順位付き実行可能ファイルの実行結果のみを使用して、制約付き実行可能ファイルを実行するかどうかを決定する制約。 優先順位付き実行可能ファイルの実行結果には、完了、成功、または失敗を設定できます。 これは既定の操作です。  
   
@@ -60,7 +62,9 @@ ms.locfileid: "62831708"
   
 -   優先順位付き実行可能ファイルの実行結果か、式を評価した戻り結果を使用する、式または制約。  
   
- [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーでは、優先順位制約の種類を色で識別します。 成功制約は緑、失敗制約は赤、完了制約は青で表示されます。 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーで制約の種類を示すテキスト ラベルを表示するには、[!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーのユーザー補助機能を構成する必要があります。  
+ 
+  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーでは、優先順位制約の種類を色で識別します。 成功制約は緑、失敗制約は赤、完了制約は青で表示されます。 
+  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーで制約の種類を示すテキスト ラベルを表示するには、 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーのユーザー補助機能を構成する必要があります。  
   
  式は、有効な [!INCLUDE[ssIS](../../../includes/ssis-md.md)] の式である必要があります。この式には、関数、演算子、システム関数およびカスタム関数を含めることができます。 詳細については、「[Integration Services &#40;SSIS&#41; の式](../expressions/integration-services-ssis-expressions.md)」および「[Integration Services &#40;SSIS&#41; の変数](../integration-services-ssis-variables.md)」を参照してください。  
   
@@ -79,12 +83,14 @@ ms.locfileid: "62831708"
 ## <a name="configuration-of-the-precedence-constraint"></a>優先順位制約の構成  
  プロパティを設定するには [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
- [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーで設定できるプロパティについては、「 [優先順位制約エディター](../precedence-constraint-editor.md)」を参照してください。  
+ 
+  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーで設定できるプロパティについては、「 [優先順位制約エディター](../precedence-constraint-editor.md)」を参照してください。  
   
  これらのプロパティのプログラムでの設定については、「 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint>」を参照してください。  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーでこれらのプロパティを設定する方法の詳細については、次のトピックのいずれかを参照してください。  
+ 
+  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーでこれらのプロパティを設定する方法の詳細については、次のトピックのいずれかを参照してください。  
   
 -   [優先順位制約のプロパティを設定する](../set-the-properties-of-a-precedence-constraint.md)  
   
@@ -98,7 +104,7 @@ ms.locfileid: "62831708"
  social.technet.microsoft.com の技術記事「 [SSIS 式の例](https://go.microsoft.com/fwlink/?LinkId=220761)」  
   
 ## <a name="see-also"></a>参照  
- [優先順位制約に式を追加します。](../add-expressions-to-precedence-constraints.md)   
+ [優先順位制約に式を追加する](../add-expressions-to-precedence-constraints.md)   
  [複数の優先順位制約](../multiple-precedence-constraints.md)  
   
   

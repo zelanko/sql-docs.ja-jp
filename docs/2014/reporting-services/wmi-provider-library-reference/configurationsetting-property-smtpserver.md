@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b706834c80fa0ff126d35beffbfdc84ef92cefe6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097500"
 ---
-# <a name="smtpserver-property-wmi-msreportserverconfigurationsetting"></a>SMTPServer プロパティ (WMI MSReportServer_ConfigurationSetting)
+# <a name="smtpserver-property-wmi-msreportserver_configurationsetting"></a>SMTPServer プロパティ (WMI MSReportServer_ConfigurationSetting)
   レポート サーバー構成ファイルから SMTP サーバー プロパティを取得します。 読み取り専用です。  
   
 ## <a name="syntax"></a>構文  
@@ -45,9 +45,9 @@ public string SMTPServer;
  [MSReportServer_ConfigurationSetting クラス](msreportserver-configurationsetting-class.md)  
   
 ## <a name="requirements"></a>必要条件  
- **名前空間:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **名前空間:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [MSReportServer_ConfigurationSetting メンバー](msreportserver-configurationsetting-members.md)  
   
   

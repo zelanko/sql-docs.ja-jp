@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 96f5a873e8d172254e1ea18abbd0c570b27a35ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62918449"
 ---
 # <a name="start-or-stop-a-collection-set"></a>コレクション セットの開始または停止
@@ -31,9 +31,9 @@ ms.locfileid: "62918449"
   
      [前提条件](#Prerequisites)  
   
-     [推奨事項](#Recommendations)  
+     [Recommendations (推奨事項)](#Recommendations)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **コレクション セットを開始または停止する方法:**  
   
@@ -66,7 +66,7 @@ ms.locfileid: "62918449"
   
 #### <a name="to-start-a-collection-set"></a>コレクション セットを開始するには  
   
-1.  オブジェクト エクスプローラーで、 **[管理]** ノード、 **[データ コレクション]**、 **[システム データ コレクション セット]** の順に展開します。  
+1.  オブジェクト エクスプローラーで、 **[管理]** ノード、 **[データ コレクション]** 、 **[システム データ コレクション セット]** の順に展開します。  
   
 2.  開始するコレクション セットを右クリックして **[データ コレクション セットの開始]** をクリックします。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "62918449"
   
 #### <a name="to-stop-a-collection-set"></a>コレクション セットを停止するには  
   
-1.  オブジェクト エクスプローラーで、 **[管理]** ノード、 **[データ コレクション]**、 **[システム データ コレクション セット]** の順に展開します。  
+1.  オブジェクト エクスプローラーで、 **[管理]** ノード、 **[データ コレクション]** 、 **[システム データ コレクション セット]** の順に展開します。  
   
 2.  停止するコレクション セットを右クリックして **[データ コレクション セットの停止]** をクリックします。  
   
