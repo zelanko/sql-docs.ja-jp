@@ -1,1 +1,1 @@
- SQL データ ウェアハウス 
+Azure Synapse Analytics (旧称 SQL Data Warehouse)  
