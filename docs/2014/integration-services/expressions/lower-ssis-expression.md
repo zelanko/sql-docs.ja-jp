@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e3f445260e7b5c4c1ed641fdf6b9f5cb509db709
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62769058"
 ---
 # <a name="lower-ssis-expression"></a>LOWER (SSIS 式)
@@ -39,7 +39,7 @@ LOWER(character_expression)
 ## <a name="result-types"></a>戻り値の型  
  DT_WSTR  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  LOWER は DT_WSTR データ型でのみ機能します。 *character_expression* 引数が DT_STR データ型の文字列リテラルまたはデータ列である場合は、LOWER による演算の実行前に、暗黙的に DT_WSTR データ型にキャストされます。 その他のデータ型は、明示的に DT_WSTR データ型にキャストされる必要があります。 詳しくは、「[Integration Services のデータ型](../data-flow/integration-services-data-types.md)」および「[Cast &#40;SSIS 式&#41;](cast-ssis-expression.md)」をご覧ください。  
   
  引数が NULL の場合、LOWER は NULL を返します。  
@@ -51,19 +51,19 @@ LOWER(character_expression)
 LOWER("New York")  
 ```  
   
- この例では、 **Color** 入力列の最初の文字を除くすべての文字を小文字に変換します。 Color が YELLOW の場合、返される結果は "Yellow" です。 詳細については、「[SUBSTRING (SSIS 式)](substring-ssis-expression.md)」を参照してください。  
+ この例では、 **Color** 入力列の最初の文字を除くすべての文字を小文字に変換します。 Color が YELLOW の場合、返される結果は "Yellow" です。 詳細については、「[SUBSTRING &#40;SSIS 式&#41;](substring-ssis-expression.md)」を参照してください。  
   
 ```  
 LOWER(SUBSTRING(Color, 2, 15))  
 ```  
   
- この例では、**CityName** 変数の値を小文字に変換します。  
+ この例では、 **CityName** 変数の値を小文字に変換します。  
   
 ```  
 LOWER(@CityName)  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [UPPER (SSIS 式)](upper-ssis-expression.md)   
  [関数 (SSIS 式)](functions-ssis-expression.md)  
   
