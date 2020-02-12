@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2365ec137329675e2cd88e7f5bf7e1781aa3308f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63280492"
 ---
 # <a name="arguments-for-external-tools"></a>外部ツールの引数
@@ -25,7 +25,7 @@ ms.locfileid: "63280492"
   
  外部ツールの引数は、次の表のとおりです。  
   
-|名前|引数|説明|  
+|Name|引数|[説明]|  
 |----------|--------------|-----------------|  
 |**項目のパス**|$(ItemPath)|現在のソースの完全なファイル名 (ドライブ + パス + ファイル名として定義されます)。ソース以外のウィンドウがアクティブな場合は空白です。|  
 |**項目のディレクトリ**|$(ItemDir)|現在のソースのディレクトリ (ドライブ + パスとして定義されます)。ソース以外のウィンドウがアクティブな場合は空白です。|  
@@ -43,10 +43,10 @@ ms.locfileid: "63280492"
 |**ソリューション ディレクトリ**|$(SolutionDir)|現在のソリューションのディレクトリ (ドライブ + パスとして定義されます)。|  
 |**ソリューション ファイル名**|$(SolutionFileName)|現在のソリューションのファイル名 (ドライブ + パス + ファイル名として定義されます)。|  
   
- <sup>1</sup>ステータス バーで示すように、テキスト エディターでカーソルの位置に基づくが、現在の行、カレント列、または現在のテキスト。  
+ <sup>1</sup>現在の行、現在の列、または現在のテキストは、ステータスバーに表示されるテキストエディター内のカーソルの位置に基づいています。  
   
 ## <a name="see-also"></a>参照  
- [外部ツール ダイアログ ボックス](external-tools-dialog-box.md)   
+ [[外部ツール] ダイアログボックス](external-tools-dialog-box.md)   
  [一般的なユーザー インターフェイス要素](general-user-interface-elements.md)  
   
   
