@@ -1,5 +1,5 @@
 ---
-title: SQLConfigDataSource |マイクロソフトのドキュメント
+title: SQLConfigDataSource |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 155d70856ae46a83f07ecd9c5c6848ee74f813dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63067710"
 ---
 # <a name="sqlconfigdatasource"></a>SQLConfigDataSource
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、さまざまなサポートしている[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-特定のキーワード/値ペアのデータ ソース構成属性文字列。  
+  Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client ODBC ドライバーでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データソース構成属性文字列のさまざまな固有のキーワードと値のペアがサポートされています。  
   
- 使用できるキーワードの一覧については、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーを参照してください[使用した Connection String Keywords with SQL Server Native Client を使用して](../native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)します。  
+ Native Client ODBC ドライバーで使用できるキーワードの一覧については、「 [SQL Server Native Client での接続文字列キーワードの使用](../native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)」を参照してください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 ## <a name="see-also"></a>参照  
  [SQLConfigDataSource 関数](https://go.microsoft.com/fwlink/?LinkId=59337)   

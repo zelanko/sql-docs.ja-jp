@@ -1,7 +1,7 @@
 ---
 title: sys. databases (Transact-sql) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/18/2019
+ms.date: 02/11/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -20,12 +20,12 @@ ms.assetid: 46c288c1-3410-4d68-a027-3bbf33239289
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a307cf2fb9747e822cc48ca4b0723aed437d4af7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 5b9b5147621fb459e419a29e0a31f9ad9381eb77
+ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74165946"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "77147399"
 ---
 # <a name="sysdatabases-transact-sql"></a>sys.databases (Transact-SQL)
 
@@ -119,7 +119,8 @@ ms.locfileid: "74165946"
 |**is_temporal_retention_enabled**|**bit**|テンポラル保持ポリシーのクリーンアップタスクが有効かどうかを示します。<br /> **適用対象**:[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**catalog_collation_type**|**int**|カタログの照合順序の設定:<br />0 = DATABASE_DEFAULT<br />2 = SQL_Latin_1_General_CP1_CI_AS<br /> **適用対象**:[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**catalog_collation_type_desc**|**nvarchar (60)**|カタログの照合順序の設定:<br />COLLATE<br />SQL_Latin_1_General_CP1_CI_AS<br /> **適用対象**:[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
-|**is_result_set_caching_on**|**int**|1 = is_result_set_caching_on は on です。</br>0 = is_result_set_caching_on はオフです。</br>**適用対象**: Azure SQL Data Warehouse Gen2。 この機能はすべてのリージョンにロールアウトされていますが、ご使用のインスタンスにデプロイされているバージョンと、利用可能な機能に関する最新の[AZURE SQL DW リリースノート](/azure/sql-data-warehouse/release-notes-10-0-10106-0)を確認してください。|
+|**is_result_set_caching_on**|**bit**|1 = is_result_set_caching_on は on です。</br>0 = is_result_set_caching_on はオフです。</br>**適用対象**: Azure SQL Data Warehouse Gen2。 この機能はすべてのリージョンにロールアウトされていますが、ご使用のインスタンスにデプロイされているバージョンと、利用可能な機能に関する最新の[AZURE SQL DW リリースノート](/azure/sql-data-warehouse/release-notes-10-0-10106-0)を確認してください。|
+|**is_memory_optimized_enabled**|**bit**|[ハイブリッドバッファープール](../../database-engine/configure-windows/hybrid-buffer-pool.md)などの特定のインメモリ機能がデータベースに対して有効かどうかを示します。 [インメモリ OLTP](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)の可用性または構成の状態は反映されません。 <br />**適用対象**: SQL Server 2019 (15 .x)|
   
 ## <a name="permissions"></a>アクセス許可
 
