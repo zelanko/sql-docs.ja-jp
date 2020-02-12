@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0afebe3d8e974ac4920a6f75bf544a13027b360e
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68811003"
 ---
 # <a name="mssql_eng014114"></a>MSSQL_ENG014114
@@ -40,7 +40,7 @@ ms.locfileid: "68811003"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスのいずれかを IP アドレスまたは完全修飾ドメイン名 (FQDN) で登録している場合、レプリケーションはサポートされません。 レプリケーションの構成時に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内に IP アドレスまたは FQDN で登録された [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] インスタンスがあった場合、このエラーが発生する可能性があります。  
   
 ## <a name="user-action"></a>ユーザーの操作  
- エラー メッセージで特定のインスタンスが指定されている場合、サーバーをディストリビューターとして構成してください。 詳細については、「[ディストリビューションの構成](configure-distribution.md)」を参照してください。  
+ エラー メッセージで特定のインスタンスが指定されている場合、サーバーをディストリビューターとして構成してください。 詳しくは、「 [Configure Distribution](configure-distribution.md)」を参照してください。  
   
  エラー メッセージで特定のインスタンスが指定されていない (つまり 'NULL' である) 場合、ディストリビューター インスタンスが正しく登録されていることを確認してください。 コンピューターのネットワーク名と SQL Server インスタンスの名前が異なる場合は、次のいずれかを実行してください。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "68811003"
   
      10.193.17.129 inst1  
   
--   ディストリビューションを無効化し、インスタンスを登録して、ディストリビューションを再設定してください。 クラスター化されて@SERVERNAMEいないインスタンスに対して @ の値が正しくない場合は、次の手順を実行します。  
+-   ディストリビューションを無効化し、インスタンスを登録して、ディストリビューションを再設定してください。 @@SERVERNAME の値が、クラスター化されていないインスタンスに対して適切でない場合は、次の手順を実行してください。  
   
     ```  
     sp_dropserver '<old_name>', 'droplogins'  
@@ -63,7 +63,7 @@ ms.locfileid: "68811003"
   
      @@SERVERNAME の値がクラスター化されたインスタンスに対して適切でない場合は、クラスター アドミニストレーターを使用して名前を変更する必要があります。 詳細については、「[Always On フェールオーバー クラスター インスタンス (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [エラーとイベントのリファレンス &#40;レプリケーション&#41;](errors-and-events-reference-replication.md)  
   
   
