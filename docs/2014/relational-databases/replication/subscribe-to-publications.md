@@ -25,10 +25,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3aa122e19d890b0b994e4403dcc59b3131571d7c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62629693"
 ---
 # <a name="subscribe-to-publications"></a>パブリケーションのサブスクライブ
@@ -64,7 +64,7 @@ ms.locfileid: "62629693"
   
  **プッシュ サブスクリプションを作成するには**  
   
- [Create a Push Subscription](create-a-push-subscription.md)  
+ [プッシュ サブスクリプションを作成する](create-a-push-subscription.md)  
   
  **プッシュ サブスクリプションのプロパティを表示または変更するには**  
   
@@ -72,14 +72,14 @@ ms.locfileid: "62629693"
   
  **プッシュ サブスクリプションを削除するには**  
   
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:[プッシュ サブスクリプションの削除](delete-a-push-subscription.md)  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [プッシュ サブスクリプションの削除](delete-a-push-subscription.md)  
   
 > [!NOTE]  
 >  サブスクリプションを削除しても、パブリッシュされたオブジェクトはサブスクライバーから削除されません。  
   
  **プル サブスクリプションを作成するには**  
   
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:[Create a Pull Subscription](create-a-pull-subscription.md)  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [プル サブスクリプションの作成](create-a-pull-subscription.md)  
   
  **プル サブスクリプションのプロパティを表示または変更するには**  
   

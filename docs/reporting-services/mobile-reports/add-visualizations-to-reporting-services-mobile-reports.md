@@ -9,10 +9,10 @@ ms.assetid: 3b220b74-9ecd-4084-93fb-545208d5d7a2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 42df96705e680643a9dacca3393e8c9c262c66c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63316580"
 ---
 # <a name="add-visualizations-to-reporting-services-mobile-reports"></a>Reporting Services モバイル レポートへの視覚エフェクトの追加
@@ -147,7 +147,7 @@ ms.locfileid: "63316580"
      
          中央値によって、ボックスの色が決まります。 中央値と比べてよい測定値であるほど、緑色に近くなります。 悪い測定値であるほど、赤色に近くなります。
      
-     * [省略可能] 閲覧者がグリッド内のタイルを選択したときにポップアップを表示するには、 **[ポップアップ ラベル]** で 1 つまたは複数のフィールドを選択します。 ツリーマップのポップアップには、テキスト フィールドと数値フィールドの両方を表示できます。  
+     * 省略可能] 閲覧者がグリッド内のタイルを選択したときにポップアップを表示するには、 **[ポップアップ ラベル]** で 1 つまたは複数のフィールドを選択します。 ツリーマップのポップアップには、テキスト フィールドと数値フィールドの両方を表示できます。  
 
 既定では、ツリーマップは階層構造をとり、タイルをまずカテゴリ別にグループ化し、次にサイズと色別にグループ化します。
 * さらに、 **[データ]** タブの **[グループ化]** でテーブルとフィールドを選択します。

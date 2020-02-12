@@ -1,5 +1,5 @@
 ---
-title: sys.sp_xtp_control_query_exec_stats (TRANSACT-SQL) |Microsoft Docs
+title: sp_xtp_control_query_exec_stats (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 10/13/2015
 ms.prod: sql
@@ -18,20 +18,20 @@ ms.assetid: 4838125d-ad1e-479e-b7d2-42655e8f4f02
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cd8ee38dc4ac1a8fd3a729d94744d3fd98f78875
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68017849"
 ---
-# <a name="sysspxtpcontrolqueryexecstats-transact-sql"></a>sys.sp_xtp_control_query_exec_stats (Transact-SQL)
+# <a name="syssp_xtp_control_query_exec_stats-transact-sql"></a>sys.sp_xtp_control_query_exec_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   インスタンスに関するすべてのネイティブ コンパイル ストアド プロシージャ、または特定のネイティブ コンパイル ストアド プロシージャのクエリごとの統計コレクションを有効にします。  
   
- 統計コレクションを有効にすると、パフォーマンスが低下します。 のみ、1 つまたはいくつかのネイティブ コンパイル ストアド プロシージャのトラブルシューティングを行う必要がある場合に、これらのいくつかネイティブ コンパイル ストアド プロシージャの統計コレクションを有効にすることができます。  
+ 統計コレクションを有効にすると、パフォーマンスが低下します。 1つまたはいくつかのネイティブコンパイルストアドプロシージャのトラブルシューティングのみを行う必要がある場合は、ごく一部のネイティブコンパイルストアドプロシージャに対してのみ統計コレクションを有効にすることができます。  
   
- すべてのネイティブ コンパイル ストアド プロシージャのプロシージャ レベルで統計コレクションを有効にするのを参照してください。 [sys.sp_xtp_control_proc_exec_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md)します。  
+ すべてのネイティブコンパイルストアドプロシージャのプロシージャレベルで統計コレクションを有効にするには、「 [sys. sp_xtp_control_proc_exec_stats &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md)」を参照してください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -43,27 +43,27 @@ sp_xtp_control_query_exec_stats [ [ @new_collection_value = ] collection_value ]
 ```  
   
 ## <a name="arguments"></a>引数  
- @new_collection_value = *value*  
- プロシージャ レベルの統計コレクションがオン (1) かどうかを決定します。 または off (0)。  
+ @new_collection_value=*値*  
+ プロシージャレベルの統計コレクションが on (1) か off (0) かを指定します。  
   
- @new_collection_value 0 に設定されている[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を開始します。  
+ @new_collection_valueは、の起動時に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 0 に設定されます。  
   
- @database_id = = *database_id*、 @xtp_object_id = *procedure_id*  
- ネイティブ コンパイル ストアド プロシージャのデータベース ID とオブジェクト ID。 インスタンスの統計コレクションが有効になっている場合 ([sys.sp_xtp_control_proc_exec_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md))、ネイティブ コンパイル ストアド プロシージャの統計情報が収集されます。 インスタンスで統計コレクションを無効にすることも、個々 のネイティブ コンパイル ストアド プロシージャの統計情報の収集をオフは有効になりません。  
+ @database_id= = *database_id*、 @xtp_object_id = *procedure_id*  
+ ネイティブ コンパイル ストアド プロシージャのデータベース ID とオブジェクト ID。 インスタンスに対して統計コレクションが有効になっている場合 ([sp_xtp_control_proc_exec_stats &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md))、ネイティブコンパイルストアドプロシージャの統計情報が収集されます。 インスタンスの統計情報の収集をオフにしても、個々のネイティブコンパイルストアドプロシージャの統計コレクションは無効になりません。  
   
- 使用[sys.databases &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)、 [sys.procedures &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-procedures-transact-sql.md)、 [DB_ID &#40;TRANSACT-SQL&#41;](../../t-sql/functions/db-id-transact-sql.md)、または[OBJECT_ID &#40;TRANSACT-SQL&#41; ](../../t-sql/functions/object-id-transact-sql.md)データベースとストアド プロシージャの Id を取得します。  
+ Transact-sql [&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)、 [sys. プロシージャ](../../relational-databases/system-catalog-views/sys-procedures-transact-sql.md)を使用して transact-sql&#41;を &#40;DB_ID &#40;[transact-sql&#41;](../../t-sql/functions/db-id-transact-sql.md)を使用するか、transact-sql [OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md)を &#40;して、データベースとストアドプロシージャの id を取得 &#40;ます。  
   
- @old_collection_value = *value*  
+ @old_collection_value=*値*  
  現在の状態を返します。  
   
-## <a name="return-code"></a>リターン コード  
- 成功した場合は 0。 エラーの 0 以外の値。  
+## <a name="return-code"></a>リターンコード  
+ 成功した場合は 0。 エラーの場合は0以外の。  
   
 ## <a name="permissions"></a>アクセス許可  
  固定 sysadmin ロールのメンバーシップが必要です。  
   
-## <a name="code-sample"></a>コード サンプル  
- 次のコード サンプルでは、すべてのネイティブ コンパイル ストアド プロシージャのインスタンスのしてから、特定のネイティブ コンパイル ストアド プロシージャの統計コレクションを有効にする方法を示します。  
+## <a name="code-sample"></a>サンプル コード  
+ 次のコードサンプルは、インスタンスのすべてのネイティブコンパイルストアドプロシージャの統計コレクションと、特定のネイティブコンパイルストアドプロシージャの統計コレクションを有効にする方法を示しています。  
   
 ```sql   
 DECLARE @c bit  
@@ -82,8 +82,8 @@ EXEC sp_xtp_control_query_exec_stats @database_id = 5,
 SELECT @c AS 'collection status';  
 ```  
   
-## <a name="see-also"></a>関連項目  
- [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>参照  
+ [システムストアドプロシージャ &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [インメモリ OLTP &#40;インメモリ最適化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

@@ -15,37 +15,39 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6799bc899a7e65082d83398f79996bea8d9dd2d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061785"
 ---
 # <a name="add-variable"></a>[変数の追加]
+  
   **[変数の追加]** ダイアログ ボックスを使用すると、新しい変数のプロパティを指定できます。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **コンテナー**  
  一覧からコンテナーを選択します。 コンテナーにより、変数の有効範囲が定義されます。 パッケージまたはパッケージ内の実行可能ファイルがコンテナーになります。  
   
  **名前**  
  変数名を入力します。  
   
- **Namespace**  
+ **名前空間**  
  変数の名前空間を指定します。 既定で、ユーザー定義の変数は **User** 名前空間に置かれます。  
   
- **[値の型]**  
+ **値の型**  
  データ型を選択します。  
   
- **[値]**  
- 値を入力します。 **[値の型]** オプションで指定したデータ型に適合する値を入力する必要があります。  
+ **Value**  
+ 値を入力します。 
+  **[値の型]** オプションで指定したデータ型に適合する値を入力する必要があります。  
   
- **読み取り専用です。**  
+ **読み取り専用**  
  変数を読み取り専用にします。  
   
-## <a name="see-also"></a>関連項目  
- [Integration Services &#40;SSIS&#41; の変数](integration-services-ssis-variables.md)   
- [Integration Services のデータ型](data-flow/integration-services-data-types.md)   
+## <a name="see-also"></a>参照  
+ [SSIS&#41; 変数の Integration Services &#40;](integration-services-ssis-variables.md)   
+ [データ型の Integration Services](data-flow/integration-services-data-types.md)   
  [パッケージで変数を使用する](../../2014/integration-services/use-variables-in-packages.md)  
   
   
