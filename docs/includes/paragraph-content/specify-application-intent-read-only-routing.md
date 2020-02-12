@@ -1,6 +1,6 @@
 ---
-title: ファイルを含める
-description: ファイルを含める
+title: インクルード ファイル
+description: インクルード ファイル
 services: sql-database
 author: MightyPen
 ms.service: sql-database
@@ -9,42 +9,42 @@ ms.date: 04/05/2018
 ms.author: genemi
 ms.custom: include file
 ms.openlocfilehash: 0e7d549c2f3b02349007815019cc47647f172f73
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68213532"
 ---
 ## <a name="specifying-application-intent"></a>アプリケーション インテントの指定
 
-キーワード**ApplicationIntent**接続文字列で指定できます。 割り当て可能な値は**ReadWrite**または**ReadOnly**します。 既定値は**ReadWrite**します。
+接続文字列には、キーワード **ApplicationIntent** を指定することができます。 割り当て可能な値は、**ReadWrite** または **ReadOnly** です。 既定値は **ReadWrite** です。
 
-ときに**ApplicationIntent = ReadOnly**クライアントが接続するときに、読み取りワークロードを要求します。 サーバーは接続時と中に、インテントを適用する**使用**ステートメントをデータベースします。
+**ApplicationIntent=ReadOnly** が指定されている場合、クライアントによって接続時に読み取りワークロードが要求されます。 サーバーでは、接続時と **USE** データベース ステートメントの実行時にこのインテントが適用されます。
 
 **ApplicationIntent** キーワードは、従来の読み取り専用データベースに対しては無効です。  
 
 
-#### <a name="targets-of-readonly"></a>読み取り専用のターゲット
+#### <a name="targets-of-readonly"></a>ReadOnly のターゲット
 
-接続が選択したときに**ReadOnly**接続がデータベースに存在する可能性のある特別な構成の次のいずれかに割り当てられています。
+接続で **ReadOnly** が選択された場合、その接続は、データベースに存在する可能性のある次の特別な構成のいずれかに割り当てられます。
 
 - [Always On](~/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)
-    - 対象の AlwaysOn データベースのワークロードの読み取りを許可または禁止できます。 使用してこの選択を制御、 **ALLOW_CONNECTIONS**の句、 **PRIMARY_ROLE**と**前に示した SECONDARY_ROLE** TRANSACT-SQL ステートメント。
+    - 対象の AlwaysOn データベースのワークロードの読み取りを許可または禁止できます。 この選択は、**PRIMARY_ROLE** および **SECONDARY_ROLE** Transact-SQL ステートメントの **ALLOW_CONNECTIONS** 句を使用することで制御できます。
 
 - [geo レプリケーション](https://docs.microsoft.com/azure/sql-database/sql-database-geo-replication-overview)
 
 - [読み取りスケールアウト](https://docs.microsoft.com/azure/sql-database/sql-database-read-scale-out)
 
-使用可能なこれらの特別なターゲットの場合は、通常のデータベースから読み取られます。
+これらの特別なターゲットがいずれも使用できない場合は、通常のデータベースから読み取られます。
 
 &nbsp;
 
-**ApplicationIntent**キーワードを使用*読み取り専用ルーティング*します。
+**ApplicationIntent** キーワードを使用すると、"*読み取り専用ルーティング*" を有効にできます。
 
 
 ## <a name="read-only-routing"></a>読み取り専用ルーティング
 
-読み取り専用ルーティングは、データベースの読み取り専用レプリカの可用性を実現する機能です。 読み取り専用ルーティングを有効にするのには、次のすべて適用されます。
+読み取り専用ルーティングは、データベースの読み取り専用レプリカの可用性を実現する機能です。 読み取り専用ルーティングを有効にするには、次のすべてを適用します。
 
 - AlwaysOn 可用性グループ リスナーに接続する必要があります。
 
@@ -52,7 +52,7 @@ ms.locfileid: "68213532"
 
 - データベース管理者が可用性グループを構成し、読み取り専用のルーティングを有効にする必要があります。
 
-複数の接続は、同じ読み取り専用レプリカに接続を満たさない可能性があります、読み取り専用ルーティングを使用します。 データベース同期の変更やサーバーのルーティング構成の変更によって、クライアントが別の読み取り専用レプリカに接続される場合があります。 すべての読み取り専用の要求が同じ読み取り専用レプリカに接続することを確認できます。 によってこの類似性を確認します。*いない*可用性グループ リスナーを渡すこと、**サーバー**接続文字列キーワードです。 代わりに、読み取り専用インスタンスの名前を指定します。
+複数の接続でそれぞれに読み取り専用ルーティングが使用されている場合、すべてが同じ読み取り専用レプリカに接続されるとは限りません。 データベース同期の変更やサーバーのルーティング構成の変更によって、クライアントが別の読み取り専用レプリカに接続される場合があります。 すべての読み取り専用要求が、同じ読み取り専用レプリカに接続されるようにすることができます。 この同一性を保証するには、**Server** 接続文字列キーワードに可用性グループ リスナーを "*渡さない*" ようにします。 代わりに、読み取り専用インスタンスの名前を指定します。
 
-読み取り専用ルーティングは、プライマリに接続するよりも長くかかる場合があります。 待機時間が長くなるのは、読み取り専用ルーティングがまずプライマリに接続し、次に使用できる読み取り可能なセカンダリを検索するためです。 これらの複数の staps のためには、少なくとも 30 秒間に、ログイン タイムアウトを増やす必要があります。
+読み取り専用ルーティングには、プライマリへの接続よりも時間がかかることがあります。 待機時間が長くなるのは、読み取り専用ルーティングがまずプライマリに接続し、次に使用できる読み取り可能なセカンダリを検索するためです。 このような複数のステップがあるため、ログイン タイムアウトを少なくとも 30 秒に増やす必要があります。
 
