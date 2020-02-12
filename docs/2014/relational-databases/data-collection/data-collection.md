@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cd38517c80eb5a1eca697bbc1705880132f4ea62
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62919043"
 ---
-# <a name="data-collection"></a>データ コレクション
+# <a name="data-collection"></a>データ収集
   データ コレクターは、さまざまなデータのセットを収集する [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のコンポーネントです。 データ コレクションは、継続的に実行されるかユーザー定義のスケジュールに基づいて実行されます。 データ コレクターは、収集したデータを管理データ ウェアハウスというリレーショナル データベースに格納します。  
   
 ## <a name="benefits-of-data-collector"></a>データ コレクターの利点  
@@ -29,40 +29,46 @@ ms.locfileid: "62919043"
   
  データ コレクターは、データ収集の動的なチューニングをサポートし、その API を通じて拡張できます。 詳細については、「 [データ コレクターのプログラミング](../../database-engine/dev-guide/data-collector-programming.md)」を参照してください。  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]のデータ収集およびデータ管理の全体的な戦略にデータ コレクターがどのように組み込まれているかを次の図に示します。  
+ 
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]のデータ収集およびデータ管理の全体的な戦略にデータ コレクターがどのように組み込まれているかを次の図に示します。  
   
  ![データ管理におけるデータ コレクターの役割](../../database-engine/media/datacollectorroleindatastrategy.gif "データ管理におけるデータ コレクターの役割")  
   
 ## <a name="data-collector-concepts"></a>データ コレクターの概念  
  データ コレクターは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントと [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]に統合されており、この 2 つを広範囲にわたって使用します。 したがって、データ コレクターを使用する前に、この 2 つの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントのそれぞれに関連するいくつかの概念を理解しておく必要があります。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントは、コレクション ジョブのスケジュールおよび実行のために使用されます。 次の概念を理解しておく必要があります。  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントは、コレクション ジョブのスケジュールおよび実行のために使用されます。 次の概念を理解しておく必要があります。  
   
--   [ジョブ]  
+-   ジョブ  
   
--   [ジョブ ステップ]  
+-   ジョブ ステップ  
   
 -   ジョブ スケジュール  
   
--   [サブシステム]  
+-   Subsystem  
   
 -   プロキシ アカウント  
   
  詳細については、「[管理タスクの自動化 &#40;SQL Server エージェント&#41;](../../ssms/agent/sql-server-agent.md)」を参照してください。  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) は、個々のデータ プロバイダーからデータを収集するパッケージを実行するために使用されます。 以下の [!INCLUDE[ssIS](../../includes/ssis-md.md)] ツールと概念を理解しておく必要があります。  
+ 
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) は、個々のデータ プロバイダーからデータを収集するパッケージを実行するために使用されます。 以下の [!INCLUDE[ssIS](../../includes/ssis-md.md)] ツールと概念を理解しておく必要があります。  
   
--   [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ  
+-   [!INCLUDE[ssIS](../../includes/ssis-md.md)]パック  
   
--   [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ構成  
+-   
+  [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ構成  
   
  詳細については、「[Integration Services &#40;SSIS&#41; Packages](../../integration-services/integration-services-ssis-packages.md)」を参照してください。  
   
 ## <a name="data-collector-terminology"></a>データ コレクターの用語  
  ターゲット (target)  
- データ コレクションをサポートする [!INCLUDE[ssDE](../../includes/ssde-md.md)] のエディションにおける [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス。 サポートされているエディションの詳細については、の管理の容易性」セクションを参照してください。[機能は、SQL Server 2014 の各エディションでサポートされている](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  
+ データ コレクションをサポートする [!INCLUDE[ssDE](../../includes/ssde-md.md)] のエディションにおける [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス。 サポートされるエディションの詳細については、 [SQL Server 2014 の各エディションがサポートする機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)」の「管理容易性」セクションを参照してください。  
   
- *対象ルート* では、対象となる階層内のサブツリーを定義します。 *対象セット* は、対象ルートで定義されたサブツリーにフィルターを適用した結果の対象のグループです。 対象ルートはデータベース ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンス) またはコンピューター インスタンスです。  
+ 
+  *対象ルート* では、対象となる階層内のサブツリーを定義します。 
+  *対象セット* は、対象ルートで定義されたサブツリーにフィルターを適用した結果の対象のグループです。 対象ルートはデータベース ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンス) またはコンピューター インスタンスです。  
   
  対象になる種類 (target type)  
  一定の特性と動作を持つ、対象の種類。 たとえば、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの対象は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースの対象とは異なる特性を持ちます。  
@@ -87,7 +93,7 @@ ms.locfileid: "62919043"
   
  データ コレクター コンポーネント間の依存関係およびリレーションシップを次の図に示します。  
   
- ![データ コレクターの機能の依存関係](../../database-engine/media/dc-functional-dependencies.gif "データ コレクターの機能の依存関係")  
+ ![データ コレクターの機能依存](../../database-engine/media/dc-functional-dependencies.gif "データ コレクターの機能依存")  
   
  図に示すように、データ プロバイダーはデータ コレクターの外部にあり、定義することによって対象との暗黙的なリレーションシップを持ちます。 データ プロバイダーは特定の対象 (たとえばリレーショナル エンジンなどの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス) に固有で、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のシステム ビュー、パフォーマンス モニター カウンター、WMI プロバイダーなど、データ コレクターが使用できるデータを提供します。  
   
@@ -111,8 +117,8 @@ ms.locfileid: "62919043"
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  
-|有効化またはコレクションを変更するデータの収集を無効にする設定の構成、または管理データ ウェアハウスのデータの表示など、データのコレクションのさまざまな側面を管理する方法について説明します。|[データ コレクションの管理](manage-data-collection.md)|  
+|データ コレクションの有効化または無効化、コレクション セットの構成の変更、管理データ ウェアハウスのデータの表示など、データ コレクションのさまざまな側面を管理する方法について説明します。|[データ コレクションの管理](manage-data-collection.md)|  
 |レポートを使用して、システム容量の監視やシステム パフォーマンスのトラブルシューティングに役立つ情報を取得する方法について説明します。|[システム データ コレクション セット レポート](system-data-collection-set-reports.md)|  
-|管理データ ウェアハウスを使用して、データ コレクションの対象であるサーバーからデータを収集する方法について説明します。|[管理データ ウェアハウス](management-data-warehouse.md)|  
+|管理データ ウェアハウスを使用して、データ コレクションの対象であるサーバーからデータを収集する方法について説明します。|[管理データ ウェアハウス (management data warehouse)](management-data-warehouse.md)|  
   
   
