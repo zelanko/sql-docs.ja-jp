@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 27d3ff9ef1c6296a6bec2040f9caefd477568bfa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900148"
 ---
 # <a name="percentage-sampling-transformation"></a>比率サンプリング変換
@@ -48,9 +48,12 @@ ms.locfileid: "62900148"
   
  プロパティを設定するには [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
- **[比率サンプリング変換エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、「 [比率サンプリング変換エディター](../../percentage-sampling-transformation-editor.md)」を参照してください。  
+ 
+  **[比率サンプリング変換エディター]** ダイアログ ボックスで設定できるプロパティの詳細については、「 [比率サンプリング変換エディター](../../percentage-sampling-transformation-editor.md)」を参照してください。  
   
- **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
+ 
+  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 
+  **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
 -   [共通プロパティ](../../common-properties.md)  
   
