@@ -18,10 +18,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a755ba9aa8915734768c56c096ea917a6e0c5564
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68021221"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>フルテキスト インデックスのパフォーマンスの向上
@@ -132,8 +132,8 @@ ms.locfileid: "68021221"
   
 |プラットフォーム|fdhost.exe のメモリ要件の推定 (MB 単位) - *F*^1|max server memory の計算式 - *M*^2|  
 |--------------|-----------------------------------------------------------|-----------------------------------------------------|  
-|x86|*F* = *クロール範囲の数* \* 50|*M* =minimum(*T*, 2000) - F - 500|  
-|x64|*F* = *クロール範囲の数* \* 10 \* 8|*M* = *T* - *F* - 500|  
+|x86|*F* = "*クロール範囲の数*" \* 50|*M* =minimum(*T*, 2000) - F - 500|  
+|x64|*F* = "*クロール範囲の数*" \* 10 \* 8|*M* = *T* - *F* - 500|  
 
 **式に関する注意事項**
 1.  複数の完全作成を実行中の場合は、それぞれの fdhost.exe のメモリ要件を、*F1*、*F2* などのように個別に計算してください。 その後、*M* as _T_ **-** sigma **(** _F_i **)** で計算します。  
@@ -152,7 +152,7 @@ ms.locfileid: "68021221"
   
  #### <a name="example-setting-max-server-memory"></a>例:max server memory の設定  
   
- この例では、 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) ステートメントおよび [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用して、前の例で計算した **M** の値 *を* max server memory `7052`として設定します:  
+ この例では、[sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) ステートメントおよび [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用して、前の例で計算した *M* の値 `7052` を **max server memory** として設定します。  
   
 ```  
 USE master;  
@@ -178,7 +178,7 @@ GO
   
      次の表で、主な待機の種類について説明します。  
   
-    |待機の種類|[説明]|解決方法|  
+    |待機の種類|説明|解決方法|  
     |---------------|-----------------|-------------------------|  
     |PAGEIO_LATCH_SH (_EX または _UP)|IO がボトルネックとなっている可能性があります。この場合は通常、平均のディスク キューも長くなります。|別のディスクの別のファイル グループにフルテキスト インデックスを移動すると、IO のボトルネックを軽減できる場合があります。|  
     |PAGELATCH_EX (または _UP)|複数のスレッドが同じデータベース ファイルへの書き込みを試行し、多数の競合が発生している可能性があります。|フルテキスト インデックスが格納されているファイル グループにファイルを追加すると、このような競合を軽減できる場合があります。|  
