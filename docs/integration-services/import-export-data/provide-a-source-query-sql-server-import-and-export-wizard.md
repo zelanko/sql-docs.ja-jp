@@ -12,10 +12,10 @@ ms.assetid: c8cbd07e-b9c3-422f-94b8-d6fc8cf31cf5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 095852eb02ba78c261b19a0a96fb639075ee5eab
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71285126"
 ---
 # <a name="provide-a-source-query-sql-server-import-and-export-wizard"></a>[基になるクエリの指定]\(SQL Server インポートおよびエクスポート ウィザード)
@@ -32,7 +32,7 @@ ms.locfileid: "71285126"
 -   `SELECT *` は、すべての列のコピーを意味します。
 -   `WHERE` 句がない場合は、すべての行のコピーを意味します。
   
- ![インポートおよびエクスポート ウィザードの [基になるクエリの指定] ページ](../../integration-services/import-export-data/media/source-query.png "インポートおよびエクスポート ウィザードの [基になるクエリの指定] ページ")  
+ ![インポートおよびエクスポート ウィザードの [基になるクエリ] ページ](../../integration-services/import-export-data/media/source-query.png "インポートおよびエクスポート ウィザードの [基になるクエリ] ページ")  
 
 ## <a name="provide-the-query-and-check-its-syntax"></a>クエリを指定して構文を確認する
 **SQL ステートメント**  

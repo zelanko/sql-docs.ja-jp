@@ -21,10 +21,10 @@ ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: ef4bf385e2ce0ecd140ad402c43d0039669c56e8
-ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72006066"
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION (Transact-SQL)
@@ -290,9 +290,9 @@ HYBRID_BUFFER_POOL = ON | OFF <br>
 - HADR クラスター コンテキスト オプションに対する `CONTROL SERVER` 権限。  
 - バッファー プール拡張オプションに対する `ALTER SERVER STATE` 権限。  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]のリソース DLL は、ローカル システム アカウントで実行されます。 そのため、ローカル システム アカウントには、診断ログ オプションで指定されたパスに対する読み取りアクセス権と書き込みアクセス権が必要です。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)]のリソース DLL は、ローカル システム アカウントで実行されます。 そのため、ローカル システム アカウントには、診断ログ オプションで指定されたパスに対する読み取りアクセス権と書き込みアクセス権が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 |カテゴリ|主な構文要素|  
 |--------------|------------------------------|  

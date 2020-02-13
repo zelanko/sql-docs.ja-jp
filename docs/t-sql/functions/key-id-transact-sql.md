@@ -21,13 +21,13 @@ ms.assetid: d7309542-dbbe-41dc-b42e-5d9a1c8b4838
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 3ccf2da9a32cb932dc206d702d6303ffa85e0664
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68109337"
 ---
-# <a name="keyid-transact-sql"></a>KEY_ID (Transact-SQL)
+# <a name="key_id-transact-sql"></a>KEY_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   現在のデータベース内の非対称キーの ID を返します。  
@@ -48,13 +48,13 @@ Key_ID ( 'Key_Name' )
 ## <a name="return-types"></a>戻り値の型  
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  一時キーの名前は、番号記号 (#) で始める必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
  一時キーは、そのキーが作成されたセッションでのみ使用できます。したがって、アクセスに必要な権限はありません。 一時キーでないキーにアクセスするには、呼び出し側がそのキーに対して権限を持っている必要があり、またキーに対する VIEW 権限が拒否されていないことが必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-returning-the-id-of-a-symmetric-key"></a>A. 対称キーの ID を返す  
  次の例では、`ABerglundKey1` というキーの ID を返します。  

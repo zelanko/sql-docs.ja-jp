@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b1289cc3-f5be-40bb-8801-0e3eed40336e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c3ebe7da68b057e9f84d2b83572a337ede278401
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 232ecd6278070d928db7485e93e8498adfc70a9b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75258567"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76941137"
 ---
 # <a name="upgrading-log-shipping-to-sql-server-2016-transact-sql"></a>SQL Server 2016 へのログ配布のアップグレード (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "75258567"
  監視サーバーのアップグレード中もログ配布構成は引き続き機能しますが、その状態は監視テーブルに記録されません。 また、監視サーバーをアップグレードしている間は、構成されている警告がトリガーされません。 アップグレードの完了後、[sp_refresh_log_shipping_monitor](../../relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md) システム ストアド プロシージャを実行して監視テーブルの情報を更新できます。   監視サーバーの詳細については、「[ログ配布について &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)」を参照してください。  
   
 ##  <a name="UpgradeSecondaries"></a> セカンダリ サーバー インスタンスのアップグレード  
- このアップグレード プロセスでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセカンダリ サーバー インスタンスを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] にアップグレードしてからプライマリ サーバー インスタンスをアップグレードします。 常にセカンダリの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを最初にアップグレードしてください。 アップグレードされたセカンダリ サーバーでは引き続き [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のプライマリ サーバー インスタンスからログ バックアップの復元が行われるため、アップグレード プロセスの間もログ配布は継続されます。 セカンダリ サーバー インスタンスより先にプライマリ サーバー インスタンスをアップグレードすると、ログ配布が失敗します。これは、新しいバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で作成されたバックアップを古いバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で復元することはできないためです。 セカンダリ インスタンスは同時でも順番にでもアップグレードできますが、ログ配布のエラーを避けるため、プライマリ インスタンスのアップグレード前にすべてのセカンダリ インスタンスをアップグレードする必要があります。  
+ このアップグレード プロセスでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセカンダリ サーバー インスタンスを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] にアップグレードしてからプライマリ サーバー インスタンスをアップグレードします。 常にセカンダリの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを最初にアップグレードしてください。 アップグレードされたセカンダリ サーバーでは引き続き [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のプライマリ サーバー インスタンスからログ バックアップの復元が行われるため、アップグレード プロセスの間もログ配布は継続されます。 セカンダリ サーバー インスタンスより先にプライマリ サーバー インスタンスをアップグレードすると、ログ配布が失敗します。これは、新しいバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で作成されたバックアップを古いバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で復元することはできないためです。 セカンダリ インスタンスは同時にアップグレードすることも、順番にアップグレードすることもできますが、ログ配布のエラーを避けるため、プライマリ インスタンスのアップグレード前にすべてのセカンダリ インスタンスをアップグレードする必要があります。  
   
  セカンダリ サーバー インスタンスをアップグレードしている間はログ配布のコピーと復元のジョブは実行されません。 つまり、復元されていないトランザクション ログのバックアップがプライマリに蓄積されるため、その復元されていないバックアップを保持するための十分な領域が必要です。 蓄積される量は、プライマリ サーバー インスタンスでスケジュールされているバックアップの頻度と、セカンダリ インスタンスをアップグレードする順序によって異なります。 また、独立した監視サーバーが構成されている場合は、構成されている間隔を経過しても復元が行われないことを知らせる警告が生成されることがあります。  
   

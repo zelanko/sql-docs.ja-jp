@@ -30,10 +30,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 046ce79c989fdfb24c6615968e6bad951aeb7280
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68024903"
 ---
 # <a name="create-partitioned-tables-and-indexes"></a>パーティション テーブルとパーティション インデックスの作成
@@ -90,7 +90,7 @@ ms.locfileid: "68024903"
   
 1.  オブジェクト エクスプローラーで、パーティション テーブルを作成するデータベースを右クリックし、 **[プロパティ]** を選択します。  
   
-2.  **[データベースのプロパティ -** *database_name]* ダイアログ ボックスの **[ページの選択]** で、 **[ファイル グループ]** を選択します。  
+2.  [**データベースのプロパティ -** *database_name*] ダイアログ ボックスの **[ページの選択]** で、 **[ファイル グループ]** を選択します。  
   
 3.  **[行]** で、 **[追加]** をクリックします。 新しい行に、ファイル グループ名を入力します。  
   
@@ -107,7 +107,7 @@ ms.locfileid: "68024903"
   
 8.  行の追加を繰り返して、各ファイル グループに少なくとも 1 つのファイルを作成します。  
   
-9. **[テーブル]** フォルダーを展開し、通常と同じようにテーブルを作成します。 詳しくは、「[テーブルの作成 &#40;データベース エンジン&#41;](../../relational-databases/tables/create-tables-database-engine.md)」をご覧ください。 または、次の手順で既存のテーブルを指定することもできます。  
+9. **[テーブル]** フォルダーを展開し、通常と同じようにテーブルを作成します。 詳しくは、「[テーブルの作成 &#40;データベース エンジン&#41;](../../relational-databases/tables/create-tables-database-engine.md)」を参照してください。 または、次の手順で既存のテーブルを指定することもできます。  
   
 #### <a name="to-create-a-partitioned-table"></a>パーティション テーブルを作成するには  
   
@@ -235,13 +235,13 @@ ms.locfileid: "68024903"
      **操作**  
      各アクションの種類と名前を指定します。  
   
-     **ステータス**  
+     **状態**  
      全体としてウィザードのアクションが **[成功]** または **[失敗]** のいずれの値を返したかを示します。  
   
      **メッセージ**  
      プロセスから返されたすべてのエラー メッセージまたは警告メッセージを提供します。  
   
-     **レポート**  
+     **Report**  
      パーティションの作成ウィザードの結果を含むレポートを作成します。 **[レポートの表示]** 、 **[レポートをファイルに保存]** 、 **[レポートをクリップボードにコピー]** 、 **[レポートを電子メールとして送信]** の各オプションがあります。  
   
      **[レポートの表示]**  
@@ -384,7 +384,7 @@ ms.locfileid: "68024903"
   
 #### <a name="to-determine-the-partition-column-for-a-partitioned-table"></a>パーティション テーブルのパーティション列を調べるには  
   
-1.  次のクエリでは、テーブルのパーティション分割列の名前を返します。 `PartitionTable`を使用して、パーティション テーブルまたはパーティション インデックスを作成できます。  
+1.  次のクエリでは、テーブルのパーティション分割列の名前を返します。 `PartitionTable`  
   
     ```  
     SELECT   
@@ -409,7 +409,7 @@ ms.locfileid: "68024903"
     GO  
     ```  
   
- 詳細については、以下をご覧ください。  
+ 詳細については、次を参照してください。  
   
 -   [ALTER DATABASE の File および Filegroup オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)  
   

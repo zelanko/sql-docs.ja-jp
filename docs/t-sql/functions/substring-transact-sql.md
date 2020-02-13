@@ -25,10 +25,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 19c261227f81debb3afec4e9d4b68f6ca7e8d607
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68117679"
 ---
 # <a name="substring-transact-sql"></a>SUBSTRING (Transact-SQL)
@@ -63,7 +63,7 @@ SUBSTRING ( expression ,start , length )
 |**nchar**/**nvarchar**/**ntext**|**nvarchar**|  
 |**binary**/**varbinary**/**image**|**varbinary**|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  値は、 *開始* と *長さ* の文字数で指定する必要があります **ntext**、**char**、または **varchar** データ型とのバイト **text**、**image**、**binary**、または **varbinary** データ型。  
   
  *式* する必要があります **varchar (max)** または **varbinary (max)** ときに、 *開始* または *長さ* 2,147, 483,647 を超える値が含まれています。  
@@ -71,7 +71,7 @@ SUBSTRING ( expression ,start , length )
 ## <a name="supplementary-characters-surrogate-pairs"></a>補助文字 (サロゲート ペア)  
  補助文字 (SC) の照合順序を使用する場合、*start* と *length* では、*expression* の各サロゲート ペアが 1 文字としてカウントされます。 詳細については、「 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-using-substring-with-a-character-string"></a>A. SUBSTRING に文字列を使用する  
  次の例では、文字列の一部分のみを返す方法を示しています。 `sys.databases` テーブルから、このクエリは最初の列でシステム データベース名、2 番目の列でデータベースの最初の文字、最後の列で 3 番目と 4 番目の文字を返します。  
@@ -85,7 +85,7 @@ WHERE database_id < 5;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
 
-|NAME |Initial |ThirdAndFourthCharacters|
+|name |Initial |ThirdAndFourthCharacters|
 |---|--|--|
 |master  |m  |st |
 |tempdb  |t  |mp |
@@ -177,7 +177,7 @@ FROM pub_info pr INNER JOIN npub_info npr
 ORDER BY pr.pub_id ASC;  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-using-substring-with-a-character-string"></a>C. SUBSTRING に文字列を使用する  
  次の例では、文字列の一部分のみを返す方法を示しています。 このクエリでは、`dbo.DimEmployee` テーブルから、最初の列に姓を、2 番目の列には名のイニシャルのみを返します。  

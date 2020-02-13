@@ -21,10 +21,10 @@ ms.assetid: cf891206-c49f-40eb-858e-eefd2b638a33
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: bf23672374db7d8348154e95ca6228723934aa5a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68064732"
 ---
 # <a name="col_length-transact-sql"></a>COL_LENGTH (Transact-SQL)
@@ -55,10 +55,10 @@ COL_LENGTH ( 'table' , 'column' )
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、そのユーザーが所有している、または権限を与えられている、セキュリティ保護可能なアイテムのメタデータのみを表示できます。 つまり、オブジェクトに対する適切な権限がユーザーに与えられていない場合、メタデータを生成する組み込み関数 (COL_LENGTH など) が NULL を返す可能性があります。 詳細については、「[メタデータ表示の構成](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 **max** 指定子 (**varchar (max)** ) で宣言された **varchar** 列の場合、COL_LENGTH では値 -1 が返されます。
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 この例では、`varchar(40)` 型と `nvarchar(40)` 型の列の値を返します。
   
 ```sql

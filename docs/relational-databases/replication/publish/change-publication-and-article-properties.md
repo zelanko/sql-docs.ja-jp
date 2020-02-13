@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: f7df51ef-c088-4efc-b247-f91fb2c6ff32
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 4c4338893ea7cd38743967df8b3523def58df9fd
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: fe3d184b1a64dded731c0746a8264b4dc5809dd7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710966"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286646"
 ---
 # <a name="change-publication-and-article-properties"></a>パブリケーションおよびアーティクルのプロパティの変更
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "71710966"
   
 ## <a name="publication-properties-for-snapshot-and-transactional-replication"></a>スナップショット レプリケーションおよびトランザクション レプリケーションのパブリケーションのプロパティ  
   
-|[説明]|ストアド プロシージャ|Properties|必要条件|  
+|説明|ストアド プロシージャ|Properties|必要条件|  
 |-----------------|----------------------|----------------|------------------|  
 |スナップショットの形式を変更します。|**sp_changepublication**|**sync_method**|新しいスナップショット。|  
 |スナップショットの場所を変更します。|**sp_changepublication**|**alt_snapshot_folder**<br /><br /> **snapshot_in_defaultfolder**|新しいスナップショット。|  
@@ -44,17 +44,17 @@ ms.locfileid: "71710966"
   
 ## <a name="article-properties-for-snapshot-and-transactional-replication"></a>スナップショット レプリケーションおよびトランザクション レプリケーションのアーティクルのプロパティ  
   
-|[説明]|ストアド プロシージャ|Properties|必要条件|  
+|説明|ストアド プロシージャ|Properties|必要条件|  
 |-----------------|----------------------|----------------|------------------|  
 |アーティクルを削除します。|**sp_droparticle**|すべてのパラメーター。|アーティクルは、サブスクリプションを作成する前に削除できます。 ストアド プロシージャを使用して、アーティクルに対するサブスクリプションを削除できます。 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]を使用して、サブスクリプション全体を削除、再作成、および同期する必要があります。 詳細については、「[Add Articles to and Drop Articles from Existing Publications](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)」 (既存のパブリケーションでのアーティクルの追加および削除) を参照してください。|  
 |列フィルターを変更します。|**sp_articlecolumn**|`@column`<br /><br /> `@operation`|新しいスナップショット。<br /><br /> サブスクリプションを再初期化します。|  
 |行フィルターを追加します。|**sp_articlefilter**|すべてのパラメーター。|新しいスナップショット。<br /><br /> サブスクリプションを再初期化します。|  
 |行フィルターを削除します。|**sp_articlefilter**|`@article`|新しいスナップショット。<br /><br /> サブスクリプションを再初期化します。|  
 |行フィルターを変更します。|**sp_articlefilter**|`@filter_clause`|新しいスナップショット。<br /><br /> サブスクリプションを再初期化します。|  
-|行フィルターを変更します。|**sp_changearticle**|**フィルター (filter)**|新しいスナップショット。<br /><br /> サブスクリプションを再初期化します。|  
+|行フィルターを変更します。|**sp_changearticle**|**filter**|新しいスナップショット。<br /><br /> サブスクリプションを再初期化します。|  
 |スキーマ オプションを変更します。|**sp_changearticle**|**schema_option**|新しいスナップショット。|  
 |スナップショットを適用する前に、サブスクライバーでテーブルをどのように処理するかを変更します。|**sp_changearticle**|**pre_creation_cmd**|新しいスナップショット。|  
-|アーティクルの状態を変更します。|**sp_changearticle**|**ステータス**|新しいスナップショット。|  
+|アーティクルの状態を変更します。|**sp_changearticle**|**status**|新しいスナップショット。|  
 |INSERT、UPDATE、または DELETE コマンドを変更します。|**sp_changearticle**|**ins_cmd**<br /><br /> **upd_cmd**<br /><br /> **del_cmd**|新しいスナップショット。<br /><br /> サブスクリプションを再初期化します。|  
 |対象となるテーブルの名前を変更します。|**sp_changearticle**|**dest_table**|新しいスナップショット。<br /><br /> サブスクリプションを再初期化します。|  
 |対象となるテーブルの所有者 (スキーマ) を変更します。|**sp_changearticle**|**destination_owner**|新しいスナップショット。<br /><br /> サブスクリプションを再初期化します。|  
@@ -62,7 +62,7 @@ ms.locfileid: "71710966"
   
 ## <a name="publication-properties-for-merge-replication"></a>マージ レプリケーションのパブリケーションのプロパティ  
   
-|[説明]|ストアド プロシージャ|Properties|必要条件|  
+|説明|ストアド プロシージャ|Properties|必要条件|  
 |-----------------|----------------------|----------------|------------------|  
 |スナップショットの形式を変更します。|**sp_changemergepublication**|**sync_mode**|新しいスナップショット。|  
 |スナップショットの場所を変更します。|**sp_changemergepublication**|**alt_snapshot_folder**<br /><br /> **snapshot_in_defaultfolder**|新しいスナップショット。|  
@@ -72,7 +72,7 @@ ms.locfileid: "71710966"
 |プリスナップショット スクリプトまたはポストスナップショット スクリプトを変更します。|**sp_changemergepublication**|**pre_snapshot_script**<br /><br /> **post_snapshot_script**|新しいスナップショット (スクリプトの内容を変更した場合にも必要です)。<br /><br /> 新しいスクリプトをサブスクライバーに適用するには、再初期化が必要です。|  
 |結合フィルターまたは論理レコードを追加します。|**sp_addmergefilter**|すべてのパラメーター。|新しいスナップショット。<br /><br /> サブスクリプションを再初期化します。|  
 |結合フィルターまたは論理レコードを削除します。|**sp_dropmergefilter**|すべてのパラメーター。|新しいスナップショット。<br /><br /> サブスクリプションを再初期化します。|  
-|結合フィルターまたは論理レコードを変更します。|**sp_changemergefilter**|`@property`<br /><br /> `@value`|新しいスナップショット。<br /><br /> サブスクリプションを再初期化します。|  
+|結合フィルターまたは論理レコードを変更します。|**sp_changemergefilter**|`@property`<br /><br /> `@value`|新しいスナップショット<br /><br /> サブスクリプションを再初期化します。|  
 |パラメーター化されたフィルターの使用を無効にします (パラメーター化されたフィルターを有効にする場合は、特別な操作は不要です)。|**sp_changemergepublication**|**false** の値を **false**に設定。|新しいスナップショット。<br /><br /> サブスクリプションを再初期化します。|  
 |事前計算済みパーティションの使用を有効または無効にします。|**sp_changemergepublication**|**use_partition_groups**|新しいスナップショット。|  
 |[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] のパーティションの最適化を有効または無効にします。|**sp_changemergepublication**|**keep_partition_changes**|サブスクリプションを再初期化します。|  
@@ -81,7 +81,7 @@ ms.locfileid: "71710966"
   
 ## <a name="article-properties-for-merge-replication"></a>マージ レプリケーションのアーティクルのプロパティ  
   
-|[説明]|ストアド プロシージャ|Properties|必要条件|  
+|説明|ストアド プロシージャ|Properties|必要条件|  
 |-----------------|----------------------|----------------|------------------|  
 |アーティクルがパブリケーション内に最新のパラメーター化されたフィルターを持つ場合に、そのアーティクルを削除します。|**sp_dropmergearticle**|すべてのパラメーター。|新しいスナップショット。<br /><br /> サブスクリプションを再初期化します。|  
 |アーティクルが結合フィルターまたは論理レコード内で親である場合に、そのアーティクルを削除します (この操作の副作用として、結合が削除されます)。|**sp_dropmergearticle**|すべてのパラメーター。|新しいスナップショット。<br /><br /> サブスクリプションを再初期化します。|  

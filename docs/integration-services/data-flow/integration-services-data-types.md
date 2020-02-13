@@ -19,10 +19,10 @@ ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 45ada0520d90c1c6e63adad4f9e62bf1ea31e270
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292413"
 ---
 # <a name="integration-services-data-types"></a>Integration Services のデータ型
@@ -32,11 +32,11 @@ ms.locfileid: "71292413"
 
   データがパッケージ内のデータ フローに入ると、データを抽出する変換元は、そのデータを [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のデータ型に変換します。 数値データは数値データ型、文字列データは文字列データ型、および日付データは日付データ型に割り当てられます。 GUID やバイナリ ラージ オブジェクト (BLOB) などの他のデータも、同様に適切な [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のデータ型に割り当てられます。 データのデータ型が [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のデータ型に変換できない場合は、エラーが発生します。  
   
- 一部のデータ フロー コンポーネントでは、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] データ型と [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]のマネージド データ型の間でデータ型を変換します。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] データ型とマネージド データ型とのマッピングの詳細については、「[データ フロー内のデータ型の処理](../../integration-services/extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md)」を参照してください。  
+ 一部のデータ フロー コンポーネントでは、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] データ型と [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] のマネージド データ型の間でデータ型が変換されます。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] データ型とマネージド データ型とのマッピングの詳細については、「[データ フロー内のデータ型の処理](../../integration-services/extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md)」を参照してください。  
   
  次の表に、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のデータ型を一覧で示します。 表内の一部のデータ型には、これらのデータ型に適用される有効桁数と小数点以下桁数の情報が含まれています。 有効桁数と小数点以下桁数の詳細については、「[有効桁数、小数点以下桁数、および長さ &#40;Transact-SQL&#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)」を参照してください。  
   
-|データ型|[説明]|  
+|データ型|説明|  
 |---------------|-----------------|  
 |DT_BOOL|ブール値です。|  
 |DT_BYTES|バイナリ データ値です。 長さは可変で、最大長は 8,000 バイトです。|  
@@ -64,7 +64,7 @@ ms.locfileid: "71292413"
 |DT_UI4|4 バイトの符号なし整数です。|  
 |DT_UI8|8 バイトの符号なし整数です。|  
 |DT_WSTR|NULL で終わる Unicode 文字の文字列で、最大長は 4,000 文字です。 列の値に追加の NULL ターミネータが含まれている場合、その文字列は最初に NULL が出現した箇所で切り捨てられます。|  
-|DT_IMAGE|最大サイズが 2^31-1 (2,147,483,647) バイトのバイナリ値です。 のマネージ データ型の間でデータ型を変換します。|  
+|DT_IMAGE|最大サイズが 2^31-1 (2,147,483,647) バイトのバイナリ値です。 。|  
 |DT_NTEXT|最大長が 2^30 - 1 (1,073,741,823) 文字の Unicode 文字列です。|  
 |DT_TEXT|最大長が 2^31-1 (2,147,483,647) 文字の [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]/MBCS 文字列です。|  
   
@@ -113,7 +113,7 @@ ms.locfileid: "71292413"
   
 |DT_FILETIME の変換|結果|  
 |-----------------------------|------------|  
-|DT_FILETIME|変更なし。|  
+|DT_FILETIME|変更はありません。|  
 |DT_DATE|データ型を変換します。|  
 |DT_DBDATE|時刻値を削除します。|  
 |DT_DBTIME|日付値を削除します。<br /><br /> 秒の小数点以下桁数が、DT_DBTIME データ型に含めることのできる小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。 詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
@@ -127,7 +127,7 @@ ms.locfileid: "71292413"
 |DT_DATE の変換|結果|  
 |-------------------------|------------|  
 |DT_FILETIME|データ型を変換します。|  
-|DT_DATE|変更なし。|  
+|DT_DATE|変更はありません。|  
 |DT_DBDATE|DT_DATA データ型で表される時刻値を削除します。|  
 |DT_DBTIME|DT_DATE データ型で表される日付値を削除します。|  
 |DT_DBTIME2|DT_DATE データ型で表される日付値を削除します。|  
@@ -141,7 +141,7 @@ ms.locfileid: "71292413"
 |---------------------------|------------|  
 |DT_FILETIME|DT_FILETIME データ型の時刻フィールドをゼロに設定します。|  
 |DT_DATE|DT_DATE データ型の時刻フィールドをゼロに設定します。|  
-|DT_DBDATE|変更なし。|  
+|DT_DBDATE|変更はありません。|  
 |DT_DBTIME|DT_DBTIME データ型の時刻フィールドをゼロに設定します。|  
 |DT_DBTIME2|DT_DBTIME2 データ型の時刻フィールドをゼロに設定します。|  
 |DT_DBTIMESTAMP|DT_DBTIMESTAMP データ型の時刻フィールドをゼロに設定します。|  
@@ -155,7 +155,7 @@ ms.locfileid: "71292413"
 |DT_FILETIME|DT_FILETIME データ型の日付フィールドを現在の日付に設定します。|  
 |DT_DATE|DT_DATE データ型の日付フィールドを現在の日付に設定します。|  
 |DT_DBDATE|DT_DBDATE データ型の日付フィールドを現在の日付に設定します。|  
-|DT_DBTIME|変更なし。|  
+|DT_DBTIME|変更はありません。|  
 |DT_DBTIME2|データ型を変換します。|  
 |DT_DBTIMESTAMP|DT_DBTIMESTAMP データ型の日付フィールドを現在の日付に設定します。|  
 |DT_DBTIMESTAMP2|DT_DBTIMESTAMP2 データ型の日付フィールドを現在の日付に設定します。|  
@@ -183,7 +183,7 @@ ms.locfileid: "71292413"
 |DT_DBDATE|DT_DBTIMESTAMP データ型で表される時刻値を削除します。|  
 |DT_DBTIME|DT_DBTIMESTAMP データ型で表される日付値を削除します。<br /><br /> 秒の小数点以下桁数が、DT_DBTIME データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。 詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
 |DT_DBTIME2|DT_DBTIMESTAMP データ型で表される日付値を削除します。<br /><br /> 秒の小数点以下桁数が、DT_DBTIME2 データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。 詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
-|DT_DBTIMESTAMP|変更なし。|  
+|DT_DBTIMESTAMP|変更はありません。|  
 |DT_DBTIMESTAMP2|秒の小数点以下桁数が、DT_DBTIMESTAMP2 データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。 詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
 |DT_DBTIMESTAMPOFFSET|DT_DBTIMESTAMPOFFSET データ型のタイム ゾーン フィールドをゼロに設定します。<br /><br /> 秒の小数点以下桁数が、DT_DBTIMESTAMPOFFSET データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。 詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
   
@@ -229,23 +229,23 @@ ms.locfileid: "71292413"
 |DT_CY|smallmoney、money|smallmoney、money|Currency||||  
 |DT_DATE|||||||  
 |DT_DBDATE|[date &#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md)|[date &#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md)||date|date|date|  
-|DT_DBTIME||||TIMESTAMP|time|time|  
+|DT_DBTIME||||timestamp|time|time|  
 |DT_DBTIME2|[time &#40;Transact-SQL&#41;](../../t-sql/data-types/time-transact-sql.md)(p)|[time &#40;Transact-SQL&#41;](../../t-sql/data-types/time-transact-sql.md) (p)|||||  
 |DT_DBTIMESTAMP|[datetime &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime-transact-sql.md)、[smalldatetime &#40;Transact-SQL&#41;](../../t-sql/data-types/smalldatetime-transact-sql.md)|[datetime &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime-transact-sql.md)、[smalldatetime &#40;Transact-SQL&#41;](../../t-sql/data-types/smalldatetime-transact-sql.md)|DateTime|TIMESTAMP、DATE、INTERVAL|TIME、TIMESTAMP、DATE|TIME、TIMESTAMP、DATE|  
-|DT_DBTIMESTAMP2|[datetime2 &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime2-transact-sql.md)|[datetime2 &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime2-transact-sql.md)||TIMESTAMP|TIMESTAMP|TIMESTAMP|  
+|DT_DBTIMESTAMP2|[datetime2 &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime2-transact-sql.md)|[datetime2 &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime2-transact-sql.md)||timestamp|timestamp|timestamp|  
 |DT_DBTIMESTAMPOFFSET|[datetimeoffset &#40;Transact-SQL&#41;](../../t-sql/data-types/datetimeoffset-transact-sql.md)(p)|[datetimeoffset &#40;Transact-SQL&#41;](../../t-sql/data-types/datetimeoffset-transact-sql.md) (p)||timestampoffset|timestamp、<br /><br /> varchar|timestamp、<br /><br /> varchar|  
 |DT_DECIMAL|||||||  
 |DT_FILETIME|||||||  
 |DT_GUID|UNIQUEIDENTIFIER|UNIQUEIDENTIFIER|GUID||||  
 |DT_I1|||||||  
-|DT_I2|SMALLINT|SMALLINT|Short||smallint|SMALLINT|  
+|DT_I2|smallint|smallint|Short||SMALLINT|SMALLINT|  
 |DT_I4|INT|INT|Long||INTEGER|INTEGER|  
-|DT_I8|BIGINT|BIGINT|||bigint|bigint|  
+|DT_I8|bigint|bigint|||bigint|bigint|  
 |DT_NUMERIC|decimal、numeric|decimal、numeric|Decimal|NUMBER、INT|decimal、numeric|decimal、numeric|  
-|DT_R4|REAL|REAL|Single||real|real|  
-|DT_R8|FLOAT|FLOAT|Double|FLOAT、REAL|FLOAT、DOUBLE|FLOAT、DOUBLE|  
-|DT_STR|char、varchar||varchar||char、varchar|char、varchar|  
-|DT_UI1|TINYINT|TINYINT|Byte||||  
+|DT_R4|real|real|Single||real|real|  
+|DT_R8|float|float|Double|FLOAT、REAL|FLOAT、DOUBLE|FLOAT、DOUBLE|  
+|DT_STR|char、varchar||VarChar||char、varchar|char、varchar|  
+|DT_UI1|tinyint|tinyint|Byte||||  
 |DT_UI2|||||||  
 |DT_UI4|||||||  
 |DT_UI8|||||||  

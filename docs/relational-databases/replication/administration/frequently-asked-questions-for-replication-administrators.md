@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 99be52de235c676137981021b9e926aba7320f43
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: f05b8d942a87f749fc5e1c1235d8410558603507
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75322034"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76910165"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>レプリケーションの管理者に関してよく寄せられる質問
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -113,7 +113,10 @@ ms.locfileid: "75322034"
   
 ### <a name="does-replication-work-over-low-bandwidth-connections-does-it-use-compression"></a>低帯域接続経由でもレプリケーションは機能しますか。 圧縮は行われますか。  
  はい。低帯域接続経由でもレプリケーションは機能します。 TCP/IP 経由の接続では、プロトコルによって提供される圧縮を利用しますが、それ以外の圧縮は行われません。 HTTPS 経由の Web 同期接続の場合は、プロトコルで提供される圧縮に加え、変更をレプリケートするために使用する XML ファイルの圧縮も使用されます。  
-  
+
+### <a name="can-i-configure-replication-if-i-connect-to-the-server-by-using-the-ip-address"></a>IP アドレスを使用してサーバーに接続する場合、レプリケーションを構成できますか。 
+いいえ。レプリケーションは、実際のサーバー名を使用する場合にのみ機能します。 SQL Server Management Studio (SSMS) 18.0 (およびそれ以降のバージョン) では、実際のサーバー名とポート番号を使用してレプリケーションを構成できます。 
+
 ## <a name="logins-and-object-ownership"></a>ログインとオブジェクトの所有権  
   
 ### <a name="are-logins-and-passwords-replicated"></a>ログインとパスワードはレプリケートされますか。  

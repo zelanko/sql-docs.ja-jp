@@ -14,17 +14,17 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: aa6cc0eb253c0f21a1b66870f9dac2607f65e2e3
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68769297"
 ---
 # <a name="types-of-replication"></a>レプリケーションの種類
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、以下の種類のレプリケーションを分散アプリケーションで利用できます。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、以下の種類のレプリケーションを分散型アプリケーションで利用できます。  
 
-| **型** | **[説明]** |
+| **Type** | **説明** |
 |:-------- | :-------------- |
 | [トランザクション レプリケーション](transactional/transactional-replication.md)| パブリッシャーの変更は、発生すると (ほぼリアルタイムで) サブスクライバーに配信されます。 データの変更は、パブリッシャーで発生したときと同じ順序で、同じトランザクションの境界内でサブスクライバーに適用されます。 | 
 | [マージ レプリケーション](merge/merge-replication.md) | データはパブリッシャーとサブスクライバーの両方で変更される可能性があり、トリガーを使用して追跡されます。 サブスクライバーは、ネットワークに接続されたときにパブリッシャーと同期して、前回の同期以降にパブリッシャーとサブスクライバーの間で変更されたすべての行を交換します。 | 

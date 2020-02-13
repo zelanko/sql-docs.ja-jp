@@ -26,10 +26,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 115aba36783857d5a0915822cb6f8ff810562f16
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68100075"
 ---
 # <a name="truncate-table-transact-sql"></a>TRUNCATE TABLE (Transact-SQL)
@@ -88,7 +88,7 @@ TRUNCATE TABLE { database_name.schema_name.table_name | schema_name.table_name |
   
  パーティション テーブルの切り捨てを行うには、テーブルとインデックスが連携している (同じパーティション関数でパーティション分割されている) 必要があります。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  DELETE ステートメントと比較して、TRUNCATE TABLE には次の利点があります。  
   
 -   トランザクション ログが使用する領域が削減されます。  
@@ -132,7 +132,7 @@ TRUNCATE TABLE { database_name.schema_name.table_name | schema_name.table_name |
 ## <a name="permissions"></a>アクセス許可  
  最小限の権限として *table_name* に対する ALTER 権限が必要です。です。 TRUNCATE TABLE 権限は、特に指定のない限り、テーブル所有者、固定サーバー ロール sysadmin、および固定データベース ロール db_owner および db_ddladmin のメンバーに与えられ、譲渡できません。 ただし、TRUNCATE TABLE ステートメントをストアド プロシージャなどのモジュール内に組み込み、EXECUTE AS 句を使用してそのモジュールに適切な権限を与えることはできます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-truncate-a-table"></a>A. テーブルを切り捨てる  
  次の例では、`JobCandidate` テーブルからすべてのデータを削除しています。 `SELECT` ステートメントを `TRUNCATE TABLE` ステートメントの前後に挿入して結果を比較しています。  

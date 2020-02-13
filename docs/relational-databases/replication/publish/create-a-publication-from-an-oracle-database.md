@@ -14,10 +14,10 @@ ms.assetid: b3812746-14b0-4b22-809e-b4a95e1c8083
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 8b43b3b2f67554a59388ccd6a50485e4c71d9e1a
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908597"
 ---
 # <a name="create-a-publication-from-an-oracle-database"></a>Oracle データベースからのパブリケーションの作成
@@ -40,7 +40,7 @@ ms.locfileid: "72908597"
   
 ###  <a name="Prerequisites"></a> 前提条件  
   
--   パブリケーションを作成する前に、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ディストリビューターに Oracle ソフトウェアをインストールし、Oracle データベースを構成する必要があります。 詳細については、「[Configure an Oracle Publisher (Oracle パブリッシャーの構成)](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)」を参照してください。  
+-   パブリケーションを作成する前に、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ディストリビューターに Oracle ソフトウェアをインストールし、Oracle データベースを構成する必要があります。 詳細については、「[Oracle パブリッシャーの構成](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)」をご覧ください。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
  パブリケーションの新規作成ウィザードを使用して、Oracle データベースからスナップショット パブリケーションまたはトランザクション パブリケーションを作成します。  
@@ -98,20 +98,20 @@ ms.locfileid: "72908597"
   
 8.  サブスクリプション データベースですべてのオブジェクトを作成し、必要なデータをすべて追加している場合に限り、 **[スナップショット エージェント]** ページで **[スナップショットをすぐに作成する]** をオフにします。  
   
-9. **[エージェント セキュリティ]** ページで、スナップショット エージェントの資格情報 (すべてのパブリケーション用) およびログ リーダー エージェントの資格情報 (トランザクション パブリケーション用) を指定します。 エージェントが実行され、指定した [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Windows アカウントのコンテキストを使用して [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ディストリビューターへの接続が確立されます。 レプリケーション管理ユーザー スキーマとして指定したアカウントのコンテキストを使用して、エージェントから Oracle データベースへの接続が確立されます。 詳細については、「[Configure an Oracle Publisher](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)」(Oracle パブリッシャーの構成) をご覧ください。  
+9. **[エージェント セキュリティ]** ページで、スナップショット エージェントの資格情報 (すべてのパブリケーション用) およびログ リーダー エージェントの資格情報 (トランザクション パブリケーション用) を指定します。 エージェントが実行され、指定した [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Windows アカウントのコンテキストを使用して [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ディストリビューターへの接続が確立されます。 レプリケーション管理ユーザー スキーマとして指定したアカウントのコンテキストを使用して、エージェントから Oracle データベースへの接続が確立されます。 詳細については、「[Oracle パブリッシャーの構成](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)」をご覧ください。  
   
      各エージェントで必要な権限の詳細については、「 [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md) 」および「 [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)」を参照してください。  
   
-10. **[ウィザードのアクション]** ページで、必要に応じてパブリケーションのスクリプトを作成できます。 詳細については、「 [Scripting Replication](../../../relational-databases/replication/scripting-replication.md)」をご参照ください。  
+10. **[ウィザードのアクション]** ページで、必要に応じてパブリケーションのスクリプトを作成できます。 詳細については、「[レプリケーションのスクリプト作成](../../../relational-databases/replication/scripting-replication.md)」を参照してください。  
   
 11. **[ウィザードの完了]** ページで、パブリケーションの名前を指定します。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
- Oracle データベースをパブリッシャーとして構成した後で、システム ストアド プロシージャを使用して、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] パブリッシャーから行う場合と同じ方法でトランザクション パブリケーションまたはスナップショット パブリケーションを作成できます。  
+ Oracle データベースをパブリッシャーとして構成した後で、システム ストアド プロシージャを使用して、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] パブリッシャーから行う場合と同じ方法でトランザクション パブリケーションまたはスナップショット パブリケーションを作成できます。  
   
 #### <a name="to-create-an-oracle-publication"></a>Oracle パブリケーションを作成するには  
   
-1.  Oracle データベースをパブリッシャーとして構成します。 詳細については、「[Configure an Oracle Publisher](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)」(Oracle パブリッシャーの構成) をご覧ください。  
+1.  Oracle データベースをパブリッシャーとして構成します。 詳細については、「[Oracle パブリッシャーの構成](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)」をご覧ください。  
   
 2.  リモート ディストリビューターが存在しない場合は、リモート ディストリビューターを構成します。 詳細については、「 [Configure Publishing and Distribution](../../../relational-databases/replication/configure-publishing-and-distribution.md)」をご参照ください。  
   
@@ -138,15 +138,15 @@ ms.locfileid: "72908597"
         > [!NOTE]  
         >  **\@job_login** パラメーターは、手順 3 で指定したログインと一致する必要があります。 パブリッシャーのセキュリティ情報を指定しないでください。 ログ リーダー エージェントは、手順 3. で指定されたセキュリティ情報を使用してパブリッシャーに接続します。  
   
-5.  ディストリビューター側のディストリビューション データベースに対して、パブリケーションを作成する [sp_addpublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) を実行します。 詳細については、「 [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)」をご覧ください。  
+5.  ディストリビューター側のディストリビューション データベースに対して、パブリケーションを作成する [sp_addpublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) を実行します。 詳しくは、「 [パブリケーションを作成](../../../relational-databases/replication/publish/create-a-publication.md)」をご覧ください。  
   
 6.  ディストリビューター側のディストリビューション データベースに対して、パブリケーションを作成する [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) を実行します。 手順 4 で使用したパブリケーション名を **\@publication** に指定し、スナップショット エージェントを実行するときに使用される Windows 資格情報を **\@job_name** と **\@password** に指定します。 パブリッシャーへの接続時に Oracle 標準認証を使用するには、 **\@publisher_security_mode** に **0** を指定し、 **\@publisher_login** と **\@publisher_password** に Oracle ログイン情報を指定する必要があります。 これにより、パブリケーション用のスナップショット エージェント ジョブが作成されます。  
   
 ## <a name="see-also"></a>参照  
- [Configure an Oracle Publisher (Oracle パブリッシャーの構成)](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
+ [Oracle パブリッシャーの構成](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
  [データとデータベース オブジェクトのパブリッシュ](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [Oracle パブリッシャー用のトランザクション セット ジョブの構成 &#40;レプリケーション Transact-SQL プログラミング&#41;](../../../relational-databases/replication/administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
  [Oracle パブリッシングの概要](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)   
- [Script to Grant Oracle Permissions](../../../relational-databases/replication/non-sql/script-to-grant-oracle-permissions.md)  
+ [Oracle の権限を許可するためのスクリプト](../../../relational-databases/replication/non-sql/script-to-grant-oracle-permissions.md)  
   
   

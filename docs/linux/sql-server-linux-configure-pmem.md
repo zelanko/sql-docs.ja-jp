@@ -1,89 +1,95 @@
 ---
-title: SQL Server on Linux 用に永続メモリ (PMEM) を構成する
+title: 永続的なメモリ (PMEM) の構成
 description: この記事では、Linux で PMEM を構成する手順について説明します。
 ms.custom: seo-lt-2019
 author: briancarrig
 ms.author: brcarrig
-ms.reviewer: vanto
-ms.date: 11/04/2019
+ms.date: 10/31/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0b5f86dac62c371a9e4dda607cbd9ec7533a187a
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.openlocfilehash: 5d98b728a1966861532a30a4b5dd92824d25f1d5
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75558615"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76831961"
 ---
-# <a name="how-to-configure-persistent-memory-pmem-for-sql-server-on-linux"></a>SQL Server on Linux 用に永続メモリ (PMEM) を構成する方法
+# <a name="configure-persistent-memory-pmem-for-sql-server-on-linux"></a>SQL Server on Linux 用に永続メモリ (PMEM) を構成する
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-この記事では、SQL Server on Linux 用に永続メモリ (PMEM) を構成する方法について説明します。 Linux での PMEM のサポートは SQL Server 2019 で導入されました。
+この記事では、[!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] on Linux 用に永続メモリ (PMEM) を構成する方法について説明します。
 
 ## <a name="overview"></a>概要
 
-SQL Server 2016 では、非揮発性 DIMM のサポートと、[NVDIMM でのログ末尾のキャッシング]( https://blogs.msdn.microsoft.com/bobsql/2016/11/08/how-it-works-it-just-runs-faster-non-volatile-memory-sql-server-tail-of-log-caching-on-nvdimm/)と呼ばれる最適化が導入されました。 このような最適化によって、ログ バッファーを強化して永続ストレージにするために必要な操作数を削減することができました。 これは、DAX モードでの永続メモリ デバイスに対する Windows Server の直接アクセスを活用しています。
+[!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] には、永続メモリを使用するインメモリ機能が多数あります。 このドキュメントでは、SQL Server on Linux 用に永続メモリを構成するために必要な手順について説明します。
 
-SQL Server 2019 では、Linux に対する永続メモリ (PMEM) デバイスのサポートが拡張されています。これにより、PMEM に配置されるデータ ファイルとトランザクション ログ ファイルの完全なエンライトメントが提供されます。 エンライトメントは、効率的なユーザー スペースの `memcpy()` 操作を使用してストレージ デバイスにアクセスする方法を意味します。 SQL Server は、ファイル システムとストレージ スタックを経由せずに、Linux での DAX サポートを利用してデータをデバイスに直接配置します。これにより待機時間が短縮されます。
+> [!NOTE]
+> 用語_エンライトメント_は、永続メモリ対応ファイル システムの操作の概念を伝えるために導入されました。 ユーザー スペース アプリケーションからファイル システムへの直接アクセスは、メモリ マッピング (`mmap()`) を使用することで容易になります。 ファイルのメモリ マッピングを作成すると、アプリケーションは、I/O スタックを完全にバイパスするロード命令またはストア命令を発行できます。 これは、ホスト拡張アプリケーション (SQLPAL と Windows OS または Linux OS がやり取りできるようにするブラック ボックス コード) の観点からは、「エンライトメントされた」ファイル システムと見なされます。
 
-## <a name="enable-enlightenment-of-database-files"></a>データベース ファイルのエンライトメントを有効にする
-SQL Server on Linux でデータベースファイルのエンライトメントを有効にするには、次の手順に従います。
+## <a name="create-namespaces-for-pmem-devices"></a>PMEM デバイスの名前空間を作成する
 
-1. デバイスを構成します。
+### <a name="configure-the-devices"></a>デバイスを構成する
 
-  Linux では `ndctl` ユーティリティを使用します。
+Linux では `ndctl` ユーティリティを使用します。
 
-  - `ndctl` をインストールして、PMEM デバイスを構成します。 詳しくは[こちら](https://docs.pmem.io/getting-started-guide/installing-ndctl)をご覧ください。
-  - [ndctl] を使用して名前空間を作成します。
+- `ndctl` をインストールして、PMEM デバイスを構成します。 詳しくは[こちら](https://docs.pmem.io/getting-started-guide/installing-ndctl)をご覧ください。
+- `ndctl` を使用して名前空間を作成します。 名前空間は、PMEM NVDIMM 間でインターリーブされ、デバイス上のメモリ領域へのさまざまな種類のユーザースペース アクセスを提供できます。 `fsdax` は、SQL Server の既定のモードであり、望ましいモードです。
 
-  ```bash 
-  ndctl create-namespace -f -e namespace0.0 --mode=fsdax* --map=mem
-  ```
-
-  >[!NOTE]
-  >バージョンが 59 よりも前の `ndctl` を使用している場合は `--mode=memory`を使用します。
-
-  `ndctl` を使用して名前空間を確認します。 サンプル出力を次に示します。
-
-```bash
-ndctl list
-[
-  {
-    "dev":"namespace0.0",
-    "mode":"memory",
-    "size":1099511627776,
-    "blockdev":"pmem0",
-    "numa_node":0
-  }
-]
+```bash 
+ndctl create-namespace -f -e namespace0.0 --mode=fsdax* --map=dev
 ```
 
-  - PMEM デバイスの作成とマウント
+`fsdax` モードを選択しており、システム メモリを使用してページごとのメタデータを格納していることに注意してください。 `--map=dev`を使用することをお勧めします。 これは、メタデータを名前空間に直接格納します。 現時点では、`--map=mem` を使用してメタデータをメモリに格納するのは試験的であると見なされます。
 
-    例: XFS
+`ndctl` を使用して名前空間を確認します。 
+  
+サンプル出力を次に示します。
 
-    ```bash
-    mkfs.xfs -f /dev/pmem0
-    mount -o dax,noatime /dev/pmem0 /mnt/dax
-    xfs_io -c "extsize 2m" /mnt/dax
-    ```
+```bash
+# ndctl list -N
+{
+  "dev":"namespace0.0",
+  "mode":"fsdax",
+  "map":"dev",
+  "size":4294967296,
+  "sector_size":512,
+  "blockdev":"pmem0",
+  "numa_node":0
+}
+```
 
-    例: EXT4
+### <a name="create-and-mount-pmem-device"></a>PMEM デバイスの作成とマウント
 
-    ```bash
-    mkfs.ext4 -b 4096 -E stride=512 -F /dev/pmem0
-    mount -o dax,noatime /dev/pmem0 /mnt/dax
-    ```
+例: XFS
 
-  デバイスを ndctl を使用して構成し、フォーマットとマウントを行ったら、データベース ファイルを配置できます。 また、新しいデータベースを作成することもできます。 
+```bash
+mkfs.xfs -f /dev/pmem0
+mount -o dax,noatime /dev/pmem0 /mnt/dax
+xfs_io -c "extsize 2m" /mnt/dax
+```
 
-1. PMEM デバイスは O_DIRECT セーフであるため、トレース フラグ 3979 を有効にして強制フラッシュ メカニズムを無効にします。 このトレース フラグはスタートアップ トレース フラグであるため、mssql-conf ユーティリティを使用して有効にする必要があります。 これはサーバー全体の構成変更であることに注意してください。データ整合性を確保するために強制フラッシュ メカニズムが必要となる O_DIRECT 非準拠デバイスがある場合は、このトレース フラグを使用しないでください。 詳しくは、 https://support.microsoft.com/help/4131496/enable-forced-flush-mechanism-in-sql-server-2017-on-linux をご覧ください。
+例: EXT4
 
-1. SQL Server を再起動してください。
+```bash
+mkfs.ext4 -b 4096 -E stride=512 -F /dev/pmem0
+mount -o dax,noatime /dev/pmem0 /mnt/dax
+```
+
+## <a name="technical-considerations"></a>技術的な考慮事項
+
+- 前述のとおり、XFS または EXT4 のいずれかに 2MB のブロック割り当て
+- ブロック割り当てと `mmap` の不整合により、4KB へのサイレント フォールバックが発生
+- ファイル サイズを 2MB の倍数 (剰余 2MB) である必要がある
+- Transparent Huge Pages (THP) を無効にしない (ほとんどのディストリビューションでは既定で有効化)
+
+デバイスを `ndctl` を使用して構成し、作成とマウントを行ったら、そこにデータベース ファイルを配置するか、新しいデータベースを作成できます。
+
+PMEM デバイスは、O_DIRECT (ダイレクト I/O) セーフであるため、トレース フラグ 3979 を有効にして強制フラッシュ メカニズムを無効にすることを検討してください。 詳細については、[FUA のサポート](https://support.microsoft.com/help/4131496/enable-forced-flush-mechanism-in-sql-server-2017-on-linux) に関するページをご覧ください。 強制ユニット アクセスの内部については、[FUA の内部](https://blogs.msdn.microsoft.com/bobsql/2018/12/18/sql-server-on-linux-forced-unit-access-fua-internals/)に関するページをご覧ください。
 
 ## <a name="next-steps"></a>次のステップ
 
 SQL Server on Linux について詳しくは、「[SQL Server on Linux](sql-server-linux-overview.md)」をご覧ください。
+SQL Server on Linux のパフォーマンスに関するベスト プラクティスについては、[パフォーマンスのベスト プラクティス](sql-server-linux-performance-best-practices.md)に関するページをご覧ください。

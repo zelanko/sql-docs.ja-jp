@@ -17,12 +17,12 @@ ms.assetid: 9e583a18-5f4a-4054-bfe1-4b2a76630db6
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: b0590a46fe9e5037f5bec1895aa6602bcd8c568a
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: cc42584c6b3f07961e83e53b8b5165243060256f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907664"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76910245"
 ---
 # <a name="compare-execution-plans"></a>実行プランの比較
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -102,6 +102,6 @@ ms.locfileid: "72907664"
 
     ![クエリ ストアでプランを 2 つ選択する](../../relational-databases/performance/media/plancomparison-querystore.png "クエリ ストアでプランを 2 つ選択する")   
 
-3.  **[Compare the plans for the selected query in a seperate window]\(選択したクエリのプランを別のウィンドウで比較する\)** ボタンを使用し、プラン比較を開始します。 「*実行プランを比較するには*」の手順 4 から 6 が該当します。 
+3.  **[選択したクエリのプランを、別々のウィンドウで比較します。]** ボタンを使用してプラン比較を開始します。 「*実行プランを比較するには*」の手順 4 から 6 が該当します。 
 
     ![クエリ ストアでプラン表示を比較する](../../relational-databases/performance/media/plancomparison-querystoreoption.png "クエリ ストアでプラン表示を比較する") 

@@ -13,15 +13,15 @@ ms.assetid: d8401ecc-7d47-49df-aae5-22a148eeb23f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: c71cc0537f79330742282e7a0389187c8424d1f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115527"
 ---
 # <a name="toolbox-component-f1-help"></a>ツールボックス コンポーネントの F1 ヘルプ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  **[ツールボックス]** には、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] プロジェクトで使用するさまざまなアイテムが表示されます。 **[ツールボックス]** は、 **[表示]** メニューから開くことができます。このウィンドウは自由にドッキングできます。 ドッキングするときに、 **[ツールボックス]** を固定して開くように設定したり、使用していないときは **[自動的に隠す]** を適用したりできます。  
+  **[ツールボックス]** には、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] プロジェクトで使用するさまざまなアイテムが表示されます。 **[ツールボックス]** は、 **[表示]** メニューから開くことができます。このウィンドウは自由にドッキングできます。 ドッキングするときに、 **[ツールボックス]** を固定して開くように設定したり、使用していないときは **[自動的に隠す]** を適用したりできます。  
   
  コード エディターまたは**内のデザイン ビュー画面に、** [ツールボックス] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のアイテムをドラッグしてドロップするか、コピーして貼り付けることができます。  
   

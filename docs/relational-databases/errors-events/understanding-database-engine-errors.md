@@ -17,32 +17,32 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 91ef40f0c1b5250cde244130b146479cf14fa9fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67903752"
 ---
 # <a name="understanding-database-engine-errors"></a>データベース エンジン エラーについて
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  次の表で、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] によって発生したエラーの属性について説明します。  
+  次の表で、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] によって発生したエラーの属性について説明します。  
   
-|属性|[説明]|  
+|Attribute|説明|  
 |---------------|-----------------|  
 |エラー番号|エラー メッセージには、それぞれ一意なエラー番号が付いています。|  
 |エラー メッセージ文字列|エラー メッセージには、エラーの原因についての診断情報が含まれています。 多くのエラー メッセージには、エラーが発生したオブジェクト名などの情報を挿入するための置換変数が用意されています。|  
-|Severity|重大度レベルは、エラーの重大度を示します。 1、2 など重大度レベルが低いエラーは情報メッセージ、または低レベル警告です。 重大度レベルが高いエラーは、できるだけ早く対処することが推奨される問題であることを示します。 重大度レベルの詳細については、「 [データベース エンジン エラーの重大度](../../relational-databases/errors-events/database-engine-error-severities.md)」を参照してください。|  
-|状態|エラー メッセージが [!INCLUDE[ssDE](../../includes/ssde-md.md)]のコード内の複数の場所で生成される場合があります。 たとえば、複数の異なる条件に対して 1105 エラーが生成されることがあります。 エラーを生成する特定の条件はそれぞれ一意の状態コードを割り当てます。<br /><br /> [!INCLUDE[msCoName](../../includes/msconame-md.md)] のサポート技術情報など既知の問題に関する情報が含まれたデータベースを参照する場合は、状態番号を使用して、記録された問題と検出されたエラーが同じかどうかを判断することができます。 たとえば、サポート技術情報の記事が状態 2 の 1105 エラーについて説明しており、受け取った 1105 エラー メッセージが状態 3 の場合、このエラーは記事で報告されているエラーとは原因が異なる可能性が高いと考えられます。<br /><br /> [!INCLUDE[msCoName](../../includes/msconame-md.md)] のサポート エンジニアがこのエラーの状態コードを使用して、エラー コードが生成されたソース コード内の場所を探すこともできます。 この情報が、問題に対する他の診断方法のヒントになる場合もあります。|  
+|重大度|重大度レベルは、エラーの重大度を示します。 1、2 など重大度レベルが低いエラーは情報メッセージ、または低レベル警告です。 重大度レベルが高いエラーは、できるだけ早く対処することが推奨される問題であることを示します。 重大度レベルの詳細については、「 [データベース エンジン エラーの重大度](../../relational-databases/errors-events/database-engine-error-severities.md)」を参照してください。|  
+|State|エラー メッセージが [!INCLUDE[ssDE](../../includes/ssde-md.md)]のコード内の複数の場所で生成される場合があります。 たとえば、複数の異なる条件に対して 1105 エラーが生成されることがあります。 エラーを生成する特定の条件はそれぞれ一意の状態コードを割り当てます。<br /><br /> [!INCLUDE[msCoName](../../includes/msconame-md.md)] のサポート技術情報など既知の問題に関する情報が含まれたデータベースを参照する場合は、状態番号を使用して、記録された問題と検出されたエラーが同じかどうかを判断することができます。 たとえば、サポート技術情報の記事が状態 2 の 1105 エラーについて説明しており、受け取った 1105 エラー メッセージが状態 3 の場合、このエラーは記事で報告されているエラーとは原因が異なる可能性が高いと考えられます。<br /><br /> [!INCLUDE[msCoName](../../includes/msconame-md.md)] のサポート エンジニアがこのエラーの状態コードを使用して、エラー コードが生成されたソース コード内の場所を探すこともできます。 この情報が、問題に対する他の診断方法のヒントになる場合もあります。|  
 |プロシージャ名|エラーが発生したストアド プロシージャまたはトリガーの名前です。|  
 |行番号|バッチ、ストアド プロシージャ、トリガー、または関数内のどのステートメントでエラーが発生したかを示します。|  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンス内のすべてのシステム エラー メッセージおよびユーザー定義のエラー メッセージは、 **sys.messages** カタログ ビューに含まれています。 RAISERROR ステートメントを使用すると、アプリケーションにユーザー定義エラーを返すことができます。  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] **SQLClient** 名前空間、ActiveX Data Objects (ADO)、OLE DB、Open Database Connectivity (ODBC) などのデータベース API はすべて、基本的なエラー属性を報告します。 この情報には、エラー番号およびメッセージ文字列が含まれています。 ただし、すべての API で他のすべてのエラー属性が報告されるわけではありません。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] **SQLClient** 名前空間、ActiveX Data Objects (ADO)、OLE DB、Open Database Connectivity (ODBC) などのすべてのデータベース API で、基本的なエラー属性が報告されます。 この情報には、エラー番号およびメッセージ文字列が含まれています。 ただし、すべての API で他のすべてのエラー属性が報告されるわけではありません。  
   
  TRY...CATCH 構造の TRY ブロックの適用範囲内で発生したエラーの詳細は、関連付けられた CATCH ブロックの適用範囲内で ERROR_LINE、ERROR_MESSAGE、ERROR_NUMBER、ERROR_PROCEDURE、ERROR_SEVERITY、ERROR_STATE などの関数を使用して [!INCLUDE[tsql](../../includes/tsql-md.md)] コードで取得することができます。 詳細については、「 [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)」を参照してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、 `sys.messages` カタログ ビューにクエリを実行し、英語テキスト ( [!INCLUDE[ssDE](../../includes/ssde-md.md)] ) が含まれた`1033`内のシステム エラー メッセージおよびユーザー定義のエラー メッセージがすべて記載された一覧を返します。  
   
 ```  

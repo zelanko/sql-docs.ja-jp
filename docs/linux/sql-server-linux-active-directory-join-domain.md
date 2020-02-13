@@ -9,12 +9,12 @@ ms.date: 04/01/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 9bc52bc1708d4ca6e06e5cc78399e12615860d27
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 5999a50e793cb29ea67075d0fa36454cdb58a67d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75224513"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76761876"
 ---
 # <a name="join-sql-server-on-a-linux-host-to-an-active-directory-domain"></a>Linux ホスト上の SQL Server を Active Directory ドメインに参加させる
 
@@ -27,7 +27,7 @@ ms.locfileid: "75224513"
 Active Directory 認証を構成する前に、ネットワーク上に Active Directory ドメイン コントローラー (Windows) をセットアップする必要があります。 その後、SQL Server on Linux ホストを Active Directory ドメインに参加させます。
 
 > [!IMPORTANT]
-> この記事で説明するサンプル手順は、ガイダンスのみを目的としています。 環境全体の構成方法によって、お使いの環境での実際の手順は若干異なる場合があります。 環境のシステム管理者とドメイン管理者を、特定の構成、カスタマイズ、および必要なトラブルシューティングに参加させます。
+> この記事で説明されている手順の例はガイダンスのみを目的としており、Ubuntu 16.04、Red Hat Enterprise Linux (RHEL) 7.x、および SUSE Enterprise Linux (SLES) 12 オペレーティング システムを参照しています。 お使いの環境での実際の手順は、環境全体の構成方法やオペレーティング システムのバージョンによって多少異なる場合があります。 たとえば、ネットワークの管理と構成には、Ubuntu 18.04 では netplan が使用されますが、Red Hat Enterprise Linux (RHEL) 8.x では nmcli のツールが特に使用されます。 具体的なツール、構成、カスタマイズ、および必要なトラブルシューティングについては、お使いの環境のシステム管理者とドメイン管理者と連携することをお勧めします。
 
 ## <a name="check-the-connection-to-a-domain-controller"></a>ドメイン コントローラーへの接続を確認する
 
@@ -43,7 +43,7 @@ ping contoso.com
 
 これらの名前のチェックのいずれかが失敗した場合は、ドメイン検索リストを更新します。 以下のセクションでは、Ubuntu、Red Hat Enterprise Linux (RHEL)、および SUSE Linux Enterprise Server (SLES) について説明します。
 
-### <a name="ubuntu"></a>Ubuntu
+### <a name="ubuntu-1604"></a>Ubuntu 16.04
 
 1. **/etc/network/interfaces** ファイルを編集して、Active Directory ドメインがドメイン検索リストに含まれるようにします。
 
@@ -71,7 +71,7 @@ ping contoso.com
    nameserver **<AD domain controller IP address>**
    ```
 
-### <a name="rhel"></a>RHEL
+### <a name="rhel-7x"></a>RHEL 7.x
 
 1. **/etc/sysconfig/network-scripts/ifcfg-eth0** ファイルを編集して、Active Directory ドメインがドメイン検索リストに含まれるようにします。 または、必要に応じて別のインターフェイス構成ファイルを編集します。
 
@@ -100,7 +100,7 @@ ping contoso.com
    **<IP address>** DC1.CONTOSO.COM CONTOSO.COM CONTOSO
    ```
 
-### <a name="sles"></a>SLES
+### <a name="sles-12"></a>SLES 12
 
 1. **/etc/sysconfig/network/config** ファイルを編集して、Active Directory ドメイン コントローラーの IP アドレスが DNS クエリに対して使用され、Active Directory ドメインがドメイン検索リストに含まれるようにします。
 
@@ -178,7 +178,7 @@ SQL Server ホストを Active Directory ドメイン に参加させるには�
 
    SQL Server では、ユーザー アカウントとグループをセキュリティ識別子 (SID) にマップするために、SSSD と NSS が使われます。 AD ログインを正常に作成するには、SSSD が SQL Server 用に構成されて実行されている必要があります。 通常、これは **realmd** によってドメインへの参加の一環として自動的に行われますが、場合によってはこれを別途行う必要があります。
 
-   詳しくは、[SSSD を手動で構成する](https://access.redhat.com/articles/3023951)方法および [NSS を SSSD で動作するように構成する](https://access.redhat.com/documentation/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options)方法を参照してください。
+   詳しくは、[SSSD を手動で構成する](https://access.redhat.com/articles/3023951)方法および [NSS を SSSD で動作するように構成する](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options)方法を参照してください。
 
 1. ドメインからユーザーに関する情報を収集できるようになったこと、およびそのユーザーとして Kerberos チケットを取得できることを確認します。 次の例では、これのために **id**、[kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html)、および [klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html) コマンドが使われています。
 

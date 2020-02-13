@@ -19,10 +19,10 @@ ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 973e5e1449205d5e72abfa03068db3c8c3e98f87
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296161"
 ---
 # <a name="integration-services-ssis-variables"></a>Integration Services (SSIS) の変数
@@ -30,7 +30,7 @@ ms.locfileid: "71296161"
 [!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  変数には、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージと、パッケージに含まれるコンテナー、タスク、およびイベント ハンドラーで、実行時に使用できる値が格納されます。 スクリプト タスクおよびスクリプト コンポーネント内のスクリプトも、変数を使用できます。 タスクとコンテナーにワークフロー内での順位を付ける優先順位制約では、制約の定義に式を含める場合に変数を使用できます。  
+  変数には、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージとそのコンテナー、タスク、およびイベント ハンドラーが実行時に使用できる値が格納されます。 スクリプト タスクおよびスクリプト コンポーネント内のスクリプトも、変数を使用できます。 タスクとコンテナーにワークフロー内での順位を付ける優先順位制約では、制約の定義に式を含める場合に変数を使用できます。  
   
  変数は、次の目的で [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージ内で使用できます。  
   
@@ -95,11 +95,11 @@ ms.locfileid: "71296161"
  **式**    
  変数に割り当てられる式を指定します。  
   
- **名前**    
+ **[名前]**     
  変数名を指定します。  
   
- **名前空間**  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] では、 **User** および **System**という 2 つの名前空間が用意されています。 既定では、カスタム変数は **User** 名前空間に属し、システム変数は **System** 名前空間に属します。 ユーザー定義変数用に追加の名前空間を作成し、 **User** 名前空間の名前を変更することはできますが、 **System** 名前空間の名前を変更したり、変数を **System** 名前空間に追加したり、システム変数を別の名前空間に割り当てたりすることはできません。  
+ **Namespace**  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、**User** および **System** という 2 つの名前空間が用意されています。 既定では、カスタム変数は **User** 名前空間に属し、システム変数は **System** 名前空間に属します。 ユーザー定義変数用に追加の名前空間を作成し、 **User** 名前空間の名前を変更することはできますが、 **System** 名前空間の名前を変更したり、変数を **System** 名前空間に追加したり、システム変数を別の名前空間に割り当てたりすることはできません。  
   
 **RaiseChangedEvent**  
  このプロパティを **True**に設定すると、変数の値が変更された場合に **OnVariableValueChanged** イベントが発生します。  
@@ -158,17 +158,17 @@ ms.locfileid: "71296161"
   
  **データ フロー式** 変数を使用して、派生列変換と条件分割変換で列に値を設定するための式や、データ行を各種の変換出力に送るための式に値を提供します。 たとえば、式 `@varSalutation + LastName`は、 `VarSalutation` 変数の値と `LastName` 列を連結します。 式 `Income < @HighIncome` は、`Income` 列の値が `HighIncome` 変数の値よりも小さいデータ行を出力に送信します。 詳細については、「[派生列変換](../integration-services/data-flow/transformations/derived-column-transformation.md)」、「[条件分割変換](../integration-services/data-flow/transformations/conditional-split-transformation.md)」、および「[Integration Services (SSIS) の式](../integration-services/expressions/integration-services-ssis-expressions.md)」を参照してください。  
   
- **優先順位制約の式** 優先順位制約で制約付き実行可能ファイルを実行するかどうかを決定するために使用する値を提供します。 これらの式は、実行結果 (成功、失敗、完了) と組み合わせて使用することも、実行結果の代わりに使用することもできます。 たとえば、式 `@varMax > @varMin`が **true**に評価される場合、実行可能ファイルは実行されます。 詳細については、「[優先順位制約に式を追加する](https://msdn.microsoft.com/library/5574d89a-a68e-4b84-80ea-da93305e5ca1)」を参照してください。  
+ **優先順位制約の式** 優先順位制約で制約付き実行可能ファイルを実行するかどうかを決定するために使用する値を提供します。 これらの式は、実行結果 (成功、失敗、完了) と組み合わせて使用することも、実行結果の代わりに使用することもできます。 たとえば、式 `@varMax > @varMin`が **true**に評価される場合、実行可能ファイルは実行されます。 詳細については、「 [優先順位制約に式を追加する](https://msdn.microsoft.com/library/5574d89a-a68e-4b84-80ea-da93305e5ca1)」を参照してください。  
   
  **パラメーターおよびリターン コード** 入力パラメーターに値を提供したり、出力パラメーターおよびリターン コードの値を格納したりします。 そのためには、変数をパラメーターおよび戻り値にマップします。 たとえば、変数 `varProductId` を 23 に設定して SQL ステートメント `SELECT * from Production.Product WHERE ProductID = ?`を実行すると、 `ProductID` が 23 である製品が取得されます。 詳細については、「 [SQL 実行タスク](../integration-services/control-flow/execute-sql-task.md) 」と「 [SQL 実行タスクのパラメーターとリターン コード](https://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663)」を参照してください。  
   
- **For ループ式** For ループの初期化式、評価式、および代入式で使用する値を提供します。 たとえば、変数 `varCount` が 2、変数 `varMaxCount` が 10、初期化式が `@varCount`、評価式が  `@varCount < @varMaxCount`、代入式が `@varCount =@varCount +1`の場合、ループは 8 回繰り返されます。 詳細については、「 [For ループ コンテナー](../integration-services/control-flow/for-loop-container.md)」を参照してください。  
+ **For ループ式** For ループの初期化式、評価式、および代入式で使用する値を提供します。 たとえば、変数 `varCount` が 2、変数 `varMaxCount` が 10、初期化式が `@varCount`、評価式が  `@varCount < @varMaxCount`、代入式が `@varCount =@varCount +1`の場合、ループは 8 回繰り返されます。 詳細については、「 [For ループ コンテナー](../integration-services/control-flow/for-loop-container.md)に評価されるまでそのワークフローを繰り返します。  
   
  **親パッケージ変数の構成** 親パッケージから子パッケージに値を渡します。 子パッケージは、親パッケージ変数の構成を使用することにより、親パッケージの変数にアクセスできます。 たとえば、子パッケージが親パッケージと同じ日付を使用する必要がある場合、子パッケージは親パッケージの GETDATE 関数によって設定される変数を指定する親パッケージ変数の構成を定義できます。 詳細については、「 [パッケージ実行タスク](../integration-services/control-flow/execute-package-task.md) 」と「 [パッケージ構成](../integration-services/packages/package-configurations.md)」を参照してください。  
   
  **スクリプト タスクおよびスクリプト コンポーネント** 読み取り専用変数および読み取り/書き込み変数の一覧をスクリプト タスクまたはスクリプト コンポーネントに提供し、スクリプト内の読み取り/書き込み変数を更新して、更新された値をスクリプトの内外で使用します。 たとえば、コード `numberOfCars = CType(Dts.Variables("NumberOfCars").Value, Integer)`では、スクリプト変数 `numberOfCars` が変数 `NumberOfCars`の値によって更新されます。 詳細については、「 [スクリプト タスクでの変数の使用](../integration-services/extending-packages-scripting/task/using-variables-in-the-script-task.md)」を参照してください。  
 
-## <a name="add-a-variable"></a>変数の追加  
+## <a name="add-a-variable"></a>変数を追加する  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で、操作する [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージを開きます。  
   
@@ -182,13 +182,13 @@ ms.locfileid: "71296161"
   
     -   スコープをタスクまたはコンテナーに設定するには、 **[制御フロー]** タブまたは **[イベント ハンドラー]** タブのデザイン画面で、タスクまたはコンテナーをクリックします。  
   
-4.  **SSIS** メニューの **[変数]** をクリックします。 必要に応じて、View.Variables コマンドを **[オプション]** ダイアログ ボックスの **[キーボード]** ページで選択したキーの組み合わせにマップすることによって、 **[変数]** ウィンドウを表示することもできます。  
+4.  **[SSIS]** メニューの **[変数]** をクリックします。 必要に応じて、View.Variables コマンドを **[オプション]** ダイアログ ボックスの **[キーボード]** ページで選択したキーの組み合わせにマップすることによって、 **[変数]** ウィンドウを表示することもできます。  
   
 5.  **[変数]** ウィンドウで、 **[変数の追加]** アイコンをクリックします。 新しい変数が一覧に追加されます。  
   
 6.  必要に応じて、 **[グリッドのオプション]** アイコンをクリックし、 **[可変グリッドのオプション]** ダイアログ ボックスに表示する追加の列を選択して、 **[OK]** をクリックします。  
   
-7.  必要に応じて、変数のプロパティを設定します。 詳細については、「 [ユーザー定義変数のプロパティを設定する](https://msdn.microsoft.com/library/f98ddbec-f668-4dba-a768-44ac3ae0536f)」を参照してください。  
+7.  必要に応じて、変数のプロパティを設定します。 詳細については、「 [ユーザー定義変数のプロパティを設定する](https://msdn.microsoft.com/library/f98ddbec-f668-4dba-a768-44ac3ae0536f)によって定義された変数です。  
   
 8.  更新したパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
 
@@ -199,13 +199,13 @@ ms.locfileid: "71296161"
  **コンテナー**  
  一覧からコンテナーを選択します。 コンテナーにより、変数の有効範囲が定義されます。 パッケージまたはパッケージ内の実行可能ファイルがコンテナーになります。  
   
- **[名前]**  
+ **Name**  
  変数名を入力します。  
   
  **Namespace**  
  変数の名前空間を指定します。 既定で、ユーザー定義の変数は **User** 名前空間に置かれます。  
   
- **[値の型]**  
+ **値の型**  
  データ型を選択します。  
   
  **Value**  
@@ -220,7 +220,7 @@ ms.locfileid: "71296161"
   
 2.  ソリューション エクスプローラーで、パッケージを右クリックして開きます。  
   
-3.  **SSIS** メニューの **[変数]** をクリックします。 必要に応じて、View.Variables コマンドを **[オプション]** ダイアログ ボックスの **[キーボード]** ページで選択したキーの組み合わせにマップすることによって、 **[変数]** ウィンドウを表示することもできます。  
+3.  **[SSIS]** メニューの **[変数]** をクリックします。 必要に応じて、View.Variables コマンドを **[オプション]** ダイアログ ボックスの **[キーボード]** ページで選択したキーの組み合わせにマップすることによって、 **[変数]** ウィンドウを表示することもできます。  
   
 4.  削除する変数を選択し、 **[変数の削除]** をクリックします。  
   
@@ -236,7 +236,7 @@ ms.locfileid: "71296161"
   
 2.  ソリューション エクスプローラーで、パッケージを右クリックして開きます。  
   
-3.  **SSIS** メニューの **[変数]** をクリックします。 必要に応じて、View.Variables コマンドを **[オプション]** ダイアログ ボックスの **[キーボード]** ページで選択したキーの組み合わせにマップすることによって、 **[変数]** ウィンドウを表示することもできます。  
+3.  **[SSIS]** メニューの **[変数]** をクリックします。 必要に応じて、View.Variables コマンドを **[オプション]** ダイアログ ボックスの **[キーボード]** ページで選択したキーの組み合わせにマップすることによって、 **[変数]** ウィンドウを表示することもできます。  
   
 4.  変数を選択して、 **[変数の移動]** をクリックします。  
   
@@ -286,7 +286,7 @@ ms.locfileid: "71296161"
   
 2.  ソリューション エクスプローラーで、パッケージを右クリックして開きます。  
   
-3.  **SSIS** メニューの **[変数]** をクリックします。  
+3.  **[SSIS]** メニューの **[変数]** をクリックします。  
   
      必要に応じて、View.Variables コマンドを **[オプション]** ダイアログ ボックスの **[キーボード]** ページで選択したキーの組み合わせにマップすることによって、 **[変数]** ウィンドウを表示することもできます。  
   

@@ -18,10 +18,10 @@ ms.assetid: d6d5bb1f-4cb1-4605-9cd6-f60b858382c4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9a36d403867699a02adfec0d04c9db4efa803514
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71281889"
 ---
 # <a name="ssis-how-to-create-an-etl-package"></a>SSIS ETL パッケージを作成する方法
@@ -39,14 +39,14 @@ ms.locfileid: "71281889"
 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) は、データ ウェアハウスの ETL (抽出、変換、読み込み) パッケージなど、パフォーマンスの高いデータ統合ソリューションを構築するためのプラットフォームです。 SSIS には、パッケージをビルドしてデバッグするためのグラフィカルなツールやウィザード、ワークフロー機能 (FTP 操作など) や SQL ステートメントを実行したり電子メール メッセージを送信したりするためのタスク、データの抽出や読み込みに使用するデータの抽出元と抽出先、データをクリーニング、集計、マージ、コピーするための変換、パッケージの実行と保存を管理するための管理データベース (`SSISDB`)、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] オブジェクト モデルをプログラミングするための API (アプリケーション プログラミング インターフェイス) が用意されています。  
 
 ## <a name="what-you-learn"></a>学習する内容  
-[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の新しいツール、コントロール、機能などに慣れる最良の方法は、実際に使ってみることです。 このチュートリアルでは、[!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーを使用して、ループ、構成、エラー フロー ロジック、およびログの記録を含む簡単な ETL パッケージを作成します。  
+[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の新しいツール、コントロール、機能などに慣れる最良の方法は、実際に使ってみることです。 このチュートリアルでは、[!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーを使用して、ループ、構成、エラー フロー ロジック、およびログの記録を含む簡単な ETL パッケージを作成します。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>前提条件  
 このチュートリアルは、データベースの基本的な操作を理解している一方で、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]の新機能にはほとんど触れたことがないユーザーを対象にしています。  
 
 このチュートリアルを実行するには、次のコンポーネントがインストールされている必要があります。  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] と [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]の両方で使用できます。 SQL Server と SSIS のインストールについては、「[Integration Services のインストール](install-windows/install-integration-services.md)」をご覧ください。
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] および [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]。 SQL Server と SSIS のインストールについては、「[Integration Services のインストール](install-windows/install-integration-services.md)」をご覧ください。
 
 -   **AdventureWorksDW2012** サンプル データベース。 **AdventureWorksDW2012** データベースをダウンロードするには、[AdventureWorks サンプル データベース](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)から `AdventureWorksDW2012.bak` をダウンロードし、バックアップを復元します。  
 

@@ -10,12 +10,12 @@ ms.assetid: ae357f9b-e3e2-4cdf-af02-012acda2e466
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a063a2a00ba67640b6a36a43abda2ea9eb45025d
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: b409d9b7c0c832ed5c4ff95a21cdc305f61d16b0
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909209"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76909742"
 ---
 # <a name="compoundcurve"></a>CompoundCurve
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -92,7 +92,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();
   
 `@g1` 2 番目のインスタンスが有効な LineString インスタンスではないため、無効です。 `@g2`**LineString** インスタンスが有効ではないため、無効です。 `@g3`**CircularString** インスタンスが有効ではないため、無効です。 有効な **CircularString** インスタンスと **LineString** インスタンスの詳細については、「 [CircularString](../../relational-databases/spatial/circularstring.md) 」および「 [LineString](../../relational-databases/spatial/linestring.md)」を参照してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-instantiating-a-geometry-instance-with-an-empty-compooundcurve"></a>A. 空の CompooundCurve を使用して geometry インスタンスをインスタンス化する  
  次の例は、空の `CompoundCurve` インスタンスを作成する方法を示しています。  
@@ -193,5 +193,5 @@ Circle Two の境界は約 4? で、これは境界の実際の値です。 た�
  [LineString](../../relational-databases/spatial/linestring.md)   
  [CircularString](../../relational-databases/spatial/circularstring.md)   
  [空間データ型の概要](../../relational-databases/spatial/spatial-data-types-overview.md)   
- [ポイント](../../relational-databases/spatial/point.md)  
+ [Point](../../relational-databases/spatial/point.md)  
   

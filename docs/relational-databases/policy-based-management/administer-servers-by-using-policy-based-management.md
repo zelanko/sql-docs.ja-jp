@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: ef2a7b3b-614b-405d-a04a-2464a019df40
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 6e0abb97eddddc65103bfaad7c2e1996423a4919
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.openlocfilehash: 67a62cc33877644f9feb6384c5d454b2cf30695b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75558682"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76831803"
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>ポリシー ベースの管理を使用したサーバーの管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -104,25 +104,19 @@ ms.locfileid: "75558682"
   
 ## <a name="links-to-specific-tasks"></a>特定のタスクへのリンク 
 
- - [ポリシー ベースの管理のストレージ](policy-based-management-storage.md)|  
- - [ポリシー管理者にポリシー エラーを通知する警告の構成](../../relational-databases/policy-based-management/configure-alerts-to-notify-policy-administrators-of-policy-failures.md)  
- - [新しいポリシーベースの管理条件の作成](../../relational-databases/policy-based-management/create-a-new-policy-based-management-condition.md) 
+ - [ポリシー ベースの管理のストレージ](policy-based-management-storage.md)
+ - [ポリシー管理者にポリシー エラーを通知する警告の構成](../../relational-databases/policy-based-management/configure-alerts-to-notify-policy-administrators-of-policy-failures.md)
+ - [新しいポリシーベースの管理条件の作成](../../relational-databases/policy-based-management/create-a-new-policy-based-management-condition.md)
  - [ポリシーベースの管理条件の削除](../../relational-databases/policy-based-management/delete-a-policy-based-management-condition.md)
- - [ポリシー ベースの管理条件のプロパティの表示または変更](../../relational-databases/policy-based-management/view-or-modify-the-properties-of-a-policy-based-management-condition.md)|  
+ - [ポリシーベースの管理条件のプロパティの表示または変更](../../relational-databases/policy-based-management/view-or-modify-the-properties-of-a-policy-based-management-condition.md)
  - [ポリシーベースの管理ポリシーのエクスポート](../../relational-databases/policy-based-management/export-a-policy-based-management-policy.md)
- - [ポリシー ベースの管理ポリシーのインポート](../../relational-databases/policy-based-management/import-a-policy-based-management-policy.md)|  
+ - [ポリシーベースの管理ポリシーのインポート](../../relational-databases/policy-based-management/import-a-policy-based-management-policy.md)
  - [オブジェクトからのポリシーベースの管理ポリシーの評価](../../relational-databases/policy-based-management/evaluate-a-policy-based-management-policy-from-an-object.md)
- - [ポリシー ベースの管理ファセットの操作](../../relational-databases/policy-based-management/working-with-policy-based-management-facets.md)|  
+ - [ポリシー ベースの管理ファセットの操作](../../relational-databases/policy-based-management/working-with-policy-based-management-facets.md)
  - [ポリシー ベースの管理を使用したベスト プラクティスの監視と実行](../../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)
-
 
 ## <a name="see-also"></a>参照  
  
  - [チュートリアル:"既定でオフ" ポリシーの作成と適用](lesson-1-create-and-apply-an-off-by-default-policy.md)
  - [チュートリアル:名前付け基準ポリシーの作成と適用](lesson-2-create-and-apply-a-naming-standards-policy.md)
  - [ポリシーベースの管理ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
- 
-
- 
-  
-  

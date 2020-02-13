@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 11ed5aa2ddcd675d201fc86abf595055828d7621
-ms.sourcegitcommit: 3511da65d7ebc788e04500bbef3a3b4a4aeeb027
+ms.openlocfilehash: 88b8e54867aba5439af9ed87e4a42b2083a479b3
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75681773"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76281870"
 ---
 # <a name="sql-server-integration-services-ssis-devops-tools-preview"></a>SQL Server Integration Services (SSIS) DevOps ツール (プレビュー)
 
@@ -132,6 +132,19 @@ SSIS Deploy タスクでは現在、次のシナリオがサポートされて�
 - MSDB または SSIS パッケージ ストアにパッケージをデプロイする。
 
 ## <a name="release-notes"></a>リリース ノート
+
+### <a name="version-013-preview"></a>バージョン 0.1.3 プレビュー
+
+リリース日:2020 年 1 月 19 日
+
+- 元のファイル名が変更された場合に、ispac を展開できない問題を修正しました。
+
+### <a name="version-012-preview"></a>バージョン 0.1.2 Preview
+
+リリース日:2020 年 1 月 13 日
+
+- 宛先の種類が SSISDB である場合、SSIS Deploy タスク ログにより詳細な例外情報が追加されていましす。
+- SSIS Deploy タスクのプロパティ Destination パスのヘルプ テキスト内の宛先パスの例が修正されています。
 
 ### <a name="version-011-preview"></a>バージョン 0.1.1 プレビュー
 

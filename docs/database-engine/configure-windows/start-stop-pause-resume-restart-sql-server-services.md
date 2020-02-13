@@ -41,10 +41,10 @@ ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 281d392bcb6c9bd6e46dbb6b41a85d080bb811f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68038834"
 ---
 # <a name="start-stop-pause-resume-restart-sql-server-services"></a>SQL Server サービスの開始、停止、一時停止、再開、再起動
@@ -187,7 +187,7 @@ ms.locfileid: "68038834"
 3.  アクションを実行するかどうかを確認するメッセージが表示されたら、 **[はい]** をクリックします。  
   
 ##  <a name="CommandPrompt"></a> コマンド プロンプト ウィンドウからの net コマンドの使用  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] net [!INCLUDE[msCoName](../../includes/msconame-md.md)] コマンドを使用して、 **、** サービスを開始、停止、または一時停止できます。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows の **net** コマンドを使用して、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスを開始、停止、または一時停止できます。  
   
 ###  <a name="dbDefault"></a> 既定のインスタンスを開始するには [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
@@ -195,7 +195,7 @@ ms.locfileid: "68038834"
   
      **net start "SQL Server (MSSQLSERVER)"**  
   
-     \- または -  
+     または  
   
      **net start MSSQLSERVER**  
   
@@ -205,7 +205,7 @@ ms.locfileid: "68038834"
   
      **net start "SQL Server (** *instancename* **)"**  
   
-     \- または -  
+     または  
   
      **net start MSSQL$** *instancename*  
   
@@ -215,7 +215,7 @@ ms.locfileid: "68038834"
   
      **net start "SQL Server (MSSQLSERVER)" /f /m**  
   
-     \- または -  
+     または  
   
      **net start MSSQLSERVER /f /m**  
   
@@ -228,7 +228,7 @@ ms.locfileid: "68038834"
   
      **net start "SQL Server Agent (MSSQLSERVER)"**  
   
-     \- または -  
+     または  
   
      **net start SQLSERVERAGENT**  
   
@@ -238,7 +238,7 @@ ms.locfileid: "68038834"
   
      **net start "SQL Server Agent(** *instancename* **)"**  
   
-     \- または -  
+     または  
   
      **net start SQLAgent$** *instancename*  
   
@@ -250,7 +250,7 @@ ms.locfileid: "68038834"
   
      **net start "SQL Server Browser"**  
   
-     \- または -  
+     または  
   
      **net start SQLBrowser**  
   

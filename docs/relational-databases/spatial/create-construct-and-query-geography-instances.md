@@ -15,10 +15,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b942e32e78a0a66e2d650ad36202bdf0effebc05
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68048753"
 ---
 # <a name="create-construct-and-query-geography-instances"></a>geography インスタンスの作成、構築、およびクエリ
@@ -51,7 +51,7 @@ ms.locfileid: "68048753"
  **geography** データ型には、Open Geospatial Consortium (OGC) WKT 表現から geography を生成する組み込みのメソッドが数多く用意されています。 WKT 標準は geography データをテキスト形式で交換できるテキスト文字列です。  
   
  **WKT 入力から任意の型の geography インスタンスを構築するには**  
- [STGeomFromText &#40;geography データ型&#41;](../../t-sql/spatial-geography/stgeomfromtext-geography-data-type.md)  
+ [STGeomFromText #40;geography データ型&#41;](../../t-sql/spatial-geography/stgeomfromtext-geography-data-type.md)  
   
  [Parse &#40;geography データ型&#41;](../../t-sql/spatial-geography/parse-geography-data-type.md)  
   
@@ -174,13 +174,13 @@ ms.locfileid: "68048753"
  [STArea &#40;geography データ型&#41;](../../t-sql/spatial-geography/starea-geography-data-type.md)  
   
 ###  <a name="empty"></a> 空  
- _空_の **geography** インスタンスには点はありません。 空の **LineString、CircularString**、**CompoundCurve**、および **MultiLineString** インスタンスの長さは 0 です。 空の **Polygon、CurvePolygon** 、および **MultiPolygon** インスタンスの面積は 0 です。  
+ _空_の **geography** インスタンスには点はありません。 空の **LineString、CircularString**、 **CompoundCurve**、および **MultiLineString** インスタンスの長さは 0 です。 空の **Polygon、CurvePolygon** 、および **MultiPolygon** インスタンスの面積は 0 です。  
   
  **インスタンスが空かどうかを調べるには**  
  [STIsEmpty &#40;geography データ型&#41;](../../t-sql/spatial-geography/stisempty-geography-data-type.md)  
   
 ###  <a name="closure"></a> 閉鎖性  
- _閉じている_ **geography** インスタンスは、始点と終点が同じである図形です。 **Polygon** インスタンスは閉じていると見なされます。 **Point** インスタンスは閉じていないと見なされます。  
+ _閉じている_**geography** インスタンスは、始点と終点が同じである図形です。 **Polygon** インスタンスは閉じていると見なされます。 **Point** インスタンスは閉じていないと見なされます。  
   
  リングは、単純な閉じている **LineString** インスタンスです。  
   

@@ -25,10 +25,10 @@ ms.assetid: 57b42a74-94e1-4326-85f1-701b9de53c7d
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: a31be66b07c6d5c463f5220e6359942cd507849b
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981741"
 ---
 # <a name="suser_sid-transact-sql"></a>SUSER_SID (Transact-SQL)
@@ -59,7 +59,7 @@ SUSER_SID ( [ 'login' ] [ , Param2 ] )
 ## <a name="return-types"></a>戻り値の型  
  **varbinary(85)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  SUSER_SID は、ALTER TABLE または CREATE TABLE の中で、DEFAULT 制約として使用できます。 SUSER_SID は、選択リストの中、WHERE 句の中、また、式を使える所ならどこにでも使用できます。 SUSER_SID の後には、パラメーターを指定しない場合も含め、常にかっこが必要です。  
   
  SUSER_SID を引数なしで呼び出すと、現在のセキュリティ コンテキストの SID が返されます。 EXECUTE AS を使用してコンテキストを切り替えたバッチ内で SUSER_SID を引数なしで呼び出すと、権限を借用したコンテキストの SID が返されます。 権限を借用したコンテキストから SUSER_SID(ORIGINAL_LOGIN()) を呼び出すと、元のコンテキストの SID が返されます。  
@@ -68,7 +68,7 @@ SUSER_SID ( [ 'login' ] [ , Param2 ] )
   
  `Windows NT user or group '%s' not found. Check the name again.`  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-using-suser_sid"></a>A. SUSER_SID を使用する  
  次の例では、現在のセキュリティ コンテキストのセキュリティ ID 番号 (SID) を返します。  
@@ -78,7 +78,7 @@ SELECT SUSER_SID();
 ```  
   
 ### <a name="b-using-suser_sid-with-a-specific-login"></a>B. SUSER_SID を特定のログインと共に使用する  
- 次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] における `sa` というログインのセキュリティ ID 番号を返します。  
+ 次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `sa` ログインのセキュリティ ID 番号を返します。  
   
 **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降
   

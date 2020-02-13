@@ -25,10 +25,10 @@ ms.assetid: 81625a56-b160-4424-91c5-1ce8b259a8e6
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: fc38de8bffc09461dc69a24acf15ce143276422b
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843628"
 ---
 # <a name="permissions-transact-sql"></a>PERMISSIONS (Transact-SQL)
@@ -57,7 +57,7 @@ PERMISSIONS ( [ objectid [ , 'column' ] ] )
 ## <a name="return-types"></a>戻り値の型  
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  PERMISSIONS は、現在のユーザーがステートメントを実行するのに必要な権限を所有しているか、または別のユーザーに対して権限を許可 (GRANT) できるかを調べるときに使用できます。  
   
  返される権限情報は 32 ビットのビットマップです。  
@@ -80,7 +80,7 @@ PERMISSIONS ( [ objectid [ , 'column' ] ] )
 |32|0x20|CREATE DEFAULT|  
 |64|0x40|BACKUP DATABASE|  
 |128|0x80|BACKUP LOG|  
-|256|0x100|予約済み。|  
+|256|0x100|予約済み|  
   
  次の表は、*objectid* だけを指定したときに返される、オブジェクト権限に使用されるビットです。  
   
@@ -110,7 +110,7 @@ PERMISSIONS ( [ objectid [ , 'column' ] ] )
   
  現在のデータベース内のユーザーに与えられている権限の一覧を返すには、sp_helprotect システム ストアド プロシージャを使用することもできます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-using-the-permissions-function-with-statement-permissions"></a>A. PERMISSIONS 関数をステートメント権限に対して使用する  
  次の例では、現在のユーザーが `CREATE TABLE` ステートメントを実行できるかどうかを判定します。  

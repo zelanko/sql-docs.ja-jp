@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9547eaae31787dc01946b8dfd2d2d43781b5a8af
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: db98f5aa3cdec76b59e51f743200b24725231f95
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75258131"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76831631"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -92,6 +92,7 @@ ALTER DATABASE SCOPED CONFIGURATION
     | VERBOSE_TRUNCATION_WARNINGS = { ON | OFF }
     | LAST_QUERY_PLAN_STATS = { ON | OFF }
     | PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES = <time>
+    | ISOLATE_SECURITY_POLICY_CARDINALITY  = { ON | OFF }
 }
 ```
 
@@ -367,6 +368,12 @@ PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES
 
 このオプションの現在の値は、[sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) に表示されます。
 
+ISOLATE_SECURITY_POLICY_CARDINALITY **=** { ON | **OFF**}
+
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開始値 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+
+[行レベル セキュリティ](../../relational-databases/security/row-level-security.md) (RLS) 述語がユーザー クエリ全体の実行プランのカーディナリティに影響するかどうかを制御できます。 ISOLATE_SECURITY_POLICY_CARDINALITY が ON の場合、RLS 述語は、実行プランのカーディナリティに影響しません。 たとえば、100 万行を含むテーブルがあり、RLS 述語で、クエリを発行する特定のユーザーに対して結果を 10 行に制限する場合について考えてみましょう。 このデータベース スコープ構成が OFF に設定されている場合、この述語の推定カーディナリティは 10 になります。 このデータベース スコープ構成が ON の場合、クエリ最適化により 100 万行と推定されます。 ほとんどのワークロードでは、既定値を使用することをお勧めします。
+
 ## <a name="Permissions"></a> Permissions
 
 データベースに対する `ALTER ANY DATABASE SCOPE CONFIGURATION` が必要です。 この権限は、データベース上で CONTROL 権限を持つユーザーが付与できます。
@@ -424,7 +431,7 @@ PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES
 
 このオプションは、`WITH (RESUMABLE = <syntax>)` 対応の DDL ステートメントにのみ適用されます。 XML インデックスは影響を受けません。
 
-## <a name="metadata"></a>メタデータ
+## <a name="metadata"></a>Metadata
 
 [sys.database_scoped_configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) システム ビューには、データベース内のスコープ構成に関する情報が表示されます。 データベース スコープ構成オプションはサーバー全体の初期設定にオーバーライドするため、sys.database_scoped_configurations にのみ表示されます。 [sys.configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) システム ビューは、サーバー全体の設定にのみ表示されます。
 

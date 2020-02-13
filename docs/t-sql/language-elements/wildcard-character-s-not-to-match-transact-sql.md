@@ -22,29 +22,57 @@ helpviewer_keywords:
 ms.assetid: b970038f-f4e7-4a5d-96f6-51e3248c6aef
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a55abc5a9554ec68df33310f4f041e9605961c7e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: e7291bc39092d4f65fd69f8c4050bb52a512ef04
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75245275"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76831734"
 ---
 # <a name="-wildcard---characters-not-to-match-transact-sql"></a>\[^\] (ワイルドカード - 一致しない文字列) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  角かっこで指定した範囲または集合に該当しない、任意の 1 文字を判別します。  
+  角かっこで囲んで指定された範囲またはセット `[^]` に含まれない任意の 1 文字と一致します。 これらのワイルドカード文字は、`LIKE` や `PATINDEX` などのパターン検索を含む文字列比較で使用できます。 
   
 ## <a name="examples"></a>例  
- 次の例では [^] 演算子を使用して、`Contact` テーブルを対象に、名前の先頭が `Al` で始まり 3 文字目が `a` ではないすべての人を検索します。  
+### <a name="a-simple-example"></a>A:簡単な例   
+ 次の例では [^] 演算子を使用して、`Contact` テーブル内で、名前が `Al` で始まり、かつ 3 文字目が文字 `a` ではない上位 5 人を検索します。  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
-SELECT FirstName, LastName  
+SELECT TOP 5 FirstName, LastName  
 FROM Person.Person  
-WHERE FirstName LIKE 'Al[^a]%'  
-ORDER BY FirstName;  
+WHERE FirstName LIKE 'Al[^a]%';  
 ```  
+[!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]  
+
+```
+FirstName     LastName
+---------     --------
+Alex          Adams
+Alexandra     Adams
+Allison       Adams
+Alisha        Alan
+Alexandra     Alexander
+```
+### <a name="b-searching-for-ranges-of-characters"></a>B:文字の範囲の検索
+
+ワイルドカード セットには、1 文字または文字の範囲に加えて、文字と範囲の組み合わせも含めることができます。 次の例では、[^] 演算子を使用して、文字または数字で始まらない文字列を検索します。
+
+```sql
+SELECT [object_id], OBJECT_NAME(object_id) AS [object_name], name, column_id 
+FROM sys.columns 
+WHERE name LIKE '[^0-9A-z]%';
+```
+
+[!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]  
+
+```
+object_id     object_name   name    column_id
+---------     -----------   ----    ---------
+1591676718    JunkTable     _xyz    1
+```
   
 ## <a name="see-also"></a>参照  
  [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   

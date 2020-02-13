@@ -12,10 +12,10 @@ ms.assetid: eadc54a6-f936-4ffc-91d7-fbfd2bdcab93
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a16e270acae2a2685bcaf53045883eaa078ab03d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71285931"
 ---
 # <a name="column-mappings-sql-server-import-and-export-wizard"></a>[列マッピング]\(SQL Server インポートおよびエクスポート ウィザード)
@@ -40,7 +40,7 @@ ms.locfileid: "71285931"
  **ソース**  
  選択した変換元のテーブル、ビュー、またはクエリ。  
   
- **変換先**  
+ **宛先**  
  選択した変換先のテーブルまたはビュー。  
 
 ## <a name="optionally-create-a-new-destination-table"></a>必要に応じて、新しい変換先テーブルを作成する
@@ -91,7 +91,7 @@ autonumber 列または ID 列があるデータをエクスポートする場�
 -    **ソース**  
      各ソース列を表示します。  
   
--   **変換先**  
+-   **宛先**  
     マップされる変換先列を確認するか、別の列を選択します。
     
     ソース テーブルからすべての列をコピーする必要はありません。 コピーしない列については、 **[変換先]** を選択すると、列のサブセットのみをコピーできます。 列をマップする前に、マップされないすべての列を無視する必要があります。  
@@ -108,7 +108,7 @@ autonumber 列または ID 列があるデータをエクスポートする場�
 -    **[精度]**  
     桁数を参照して、変換先列での数値データの有効桁数を指定します (該当する場合)。  
   
- -   **[スケール]**  
+ -   **スケール**  
     小数点以下の桁数を参照して、変換先列での数値データの小数点以下の精度を指定します (該当する場合)。  
   
 ## <a name="whats-next"></a>次の操作  

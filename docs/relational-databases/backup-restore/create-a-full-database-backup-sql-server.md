@@ -16,10 +16,10 @@ ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: fe0c9a950221317cb4a9088bae7629fc0c894165
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71710320"
 ---
 # <a name="create-a-full-database-backup"></a>データベースの完全バックアップの作成
@@ -60,7 +60,7 @@ Azure Blob Storage サービスへの SQL Server のバックアップについ�
 > [!NOTE]
 > [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用してバックアップ タスクを指定する場合、 **[スクリプト]** ボタンをクリックしてスクリプトの保存先を選択することにより、対応する [!INCLUDE[tsql](../../includes/tsql-md.md)] [BACKUP](../../t-sql/statements/backup-transact-sql.md) スクリプトを生成できます。
 
-1. **オブジェクト エクスプローラー**で適切な [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続した後、サーバー ツリーを展開します。
+1. **オブジェクト エクスプローラー**で適切な [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のインスタンスに接続した後、サーバー ツリーを展開します。
 
 1. **[データベース]** を展開し、ユーザー データベースを選択するか、または **[システム データベース]** を展開してシステム データベースを選択します。
 
@@ -97,7 +97,7 @@ Azure Blob Storage サービスへの SQL Server のバックアップについ�
 
 - URL にバックアップする場合は、 **[メディア オプション]** ページで、 **[メディアに上書きします]** が無効にされます。
 
-### <a name="examples"></a>使用例
+### <a name="examples"></a>例
 
 次の例では、次の Transact-SQL コードを使用してテスト データベースを作成します。
 
@@ -136,7 +136,7 @@ GO
 
 この例では、`SQLTestDB` データベースを既定のバックアップ場所にあるディスクにバックアップします。
 
-1. **オブジェクト エクスプローラー**で適切な [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続した後、サーバー ツリーを展開します。
+1. **オブジェクト エクスプローラー**で適切な [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のインスタンスに接続した後、サーバー ツリーを展開します。
 
 1. **[データベース]** を展開して `SQLTestDB`を右クリックし、 **[タスク]** をポイントしてから **[バックアップ]** をクリックします。
 
@@ -150,7 +150,7 @@ GO
 
 この例では、ご自分で選択した場所にあるディスクに `SQLTestDB` データベースがバックアップされます。
 
-1. **オブジェクト エクスプローラー**で適切な [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続した後、サーバー ツリーを展開します。
+1. **オブジェクト エクスプローラー**で適切な [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のインスタンスに接続した後、サーバー ツリーを展開します。
 
 1. **[データベース]** を展開して `SQLTestDB`を右クリックし、 **[タスク]** をポイントしてから **[バックアップ]** をクリックします。
 
@@ -172,7 +172,7 @@ GO
 
 この例では、`SQLTestDB` データベースを暗号化して既定のバックアップ場所にバックアップします。
 
-1. **オブジェクト エクスプローラー**で適切な [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続した後、サーバー ツリーを展開します。
+1. **オブジェクト エクスプローラー**で適切な [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のインスタンスに接続した後、サーバー ツリーを展開します。
 
 1. **[データベース]** 、 **[システム データベース]** の順に展開し、`master` を右クリックして **[新しいクエリ]** をクリックします。これにより、ご利用の `SQLTestDB` データベースに接続した状態でクエリ ウィンドウが開きます。
 
@@ -210,7 +210,7 @@ GO
 
 ストレージ アカウントに Azure BLOB コンテナーがない場合は、続行する前に作成してください。 詳細については、「[汎用ストレージアカウントの作成](https://docs.microsoft.com/azure/storage/common/storage-quickstart-create-account?tabs=azure-portal)」と「[コンテナーを作成する](https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container)」を参照してください。
 
-1. **オブジェクト エクスプローラー**で適切な [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続した後、サーバー ツリーを展開します。
+1. **オブジェクト エクスプローラー**で適切な [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のインスタンスに接続した後、サーバー ツリーを展開します。
 
 1. **[データベース]** を展開して `SQLTestDB`を右クリックし、 **[タスク]** をポイントしてから **[バックアップ]** をクリックします。
 
@@ -251,7 +251,7 @@ GO
 
  BACKUP DATABASE *database* TO *backup_device* [ **,** ...*n* ] [ WITH *with_options* [ **,** ...*o* ] ] ;
 
-|オプション|[説明]|
+|オプション|説明|
 |------------|-----------------|
 |*database*|バックアップするデータベースです。|
 |*backup_device* [ **,** ...*n* ]|バックアップ操作に使用する 1 ～ 64 個のバックアップ デバイスの一覧を指定します。 物理バックアップ デバイスを指定したり、対応する論理バックアップ デバイス (既に定義されている場合) を指定したりできます。 物理バックアップ デバイスを指定するには、DISK オプションまたは TAPE オプションを使用します。<br /><br /> { DISK &#124; TAPE } **=** _physical\_backup\_device\_name_<br /><br /> 詳細については、「 [バックアップ デバイス &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)」を参照してください。|
@@ -373,7 +373,7 @@ GO
 > [!IMPORTANT]
 > SQL Server Management Studio 内から PowerShell ウィンドウを開いて SQL Server のインストールに接続する場合、PowerShell とご利用の SQL Server インスタンスとの接続の確立には SSMS 内のご利用の資格情報が自動的に使用されるので、この例の資格情報の部分は省略できます。
 
-### <a name="examples"></a>使用例
+### <a name="examples"></a>例
 
 #### <a name="a-full-backup-local"></a>A. 完全バックアップ (ローカル)
 
@@ -406,9 +406,9 @@ Backup-SqlDatabase -ServerInstance $server -Database $database -BackupFile $back
 
 - [データベースのバックアップ (SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)
 - [データベースの差分バックアップの作成 &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-differential-database-backup-sql-server.md)
-- [SSMS を使用したデータベース バックアップの復元](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)
+- [SSMS を使用してデータベース バックアップを復元する](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)
 - [単純復旧モデルでのデータベース バックアップの復元 &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md)
-- [完全復旧モデルで障害発生時点までデータベースを復元する方法 &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore-database-to-point-of-failure-full-recovery.md)
+- [完全復旧モデルで障害発生時点までデータベースを復元する &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore-database-to-point-of-failure-full-recovery.md)
 - [データベースを新しい場所に復元する &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-database-to-a-new-location-sql-server.md)
 - [メンテナンス プラン ウィザードの使用](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)
 

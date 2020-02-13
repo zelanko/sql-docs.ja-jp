@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d79007dccddef604315c57beca1e1274d23c6f0f
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095689"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>トランザクションのロックおよび行のバージョン管理ガイド
@@ -39,7 +39,7 @@ ms.locfileid: "74095689"
  **一貫性**  
  トランザクションの完了時に、すべてのデータが一貫した状態になければなりません。 リレーショナル データベースの場合、すべてのデータの整合性を維持するため、トランザクションの変更に対してすべてのルールが適用される必要があります。 B ツリー インデックスや二重リンク リストなどのすべての内部データ構造は、トランザクションの終了時に正しくなければなりません。  
   
- **分離性**  
+ **分離**  
  同時実行トランザクションによって行われる変更は、他の同時実行トランザクションによって行われる変更と相互に独立している必要があります。 トランザクションは、他の同時実行トランザクションが変更する前の状態のデータを認識するか、2 番目のトランザクションが完了した後のデータを認識するかのどちらかであり、中間の状態は認識しません。 これをシリアル化可能性と呼んでいます。最初のデータを再度読み込み、一連のトランザクションを実行しても、元のトランザクションを実行したときと同じ状態で終了できるからです。  
   
  **持続性**  
@@ -278,19 +278,19 @@ GO
 ##### <a name="includessdenoversionincludesssdenoversion-mdmd-isolation-levels"></a>[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 分離レベル  
  ISO 標準では、次に示す分離レベルが定義されています。それらのすべてが [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]でサポートされます。  
   
-|[分離レベル]|定義|  
+|Isolation Level|定義|  
 |---------------------|----------------|  
 |READ UNCOMMITTED|物理的に破損したデータを読み取らないことのみが保証されるようにトランザクションを分離する、最も低い分離レベル。 このレベルではダーティ リードが許可されるため、トランザクションで行われたコミットされていない変更を、他のトランザクションで読み取ることが可能です。|  
 |READ COMMITTED|トランザクションは、別のトランザクションが以前に読み取った (変更されていない) データを読み取ることができるので、最初のトランザクションが完了するまで待機する必要がありません。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]は、(選択されたデータに対して取得された) 書き込みロックをトランザクションの終わりまで保持しますが、読み取りロックは SELECT 操作の実行が終わると解放します。 これは[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]の既定のレベルです。|  
 |REPEATABLE READ|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]は、選択されたデータに対して取得された読み取り/書き込みロックをトランザクションの終わりまで保持します。 ただし、範囲ロックが管理されないため、ファントム読み取りが発生する可能性はあります。|  
-|Serializable|各トランザクションが完全に分離される、最も高い分離レベル。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]は、選択されたデータに対して取得された読み取り/書き込みロックを保持し、トランザクションの終わりに開放します。 範囲指定付きの WHERE 句を SELECT 操作に使用する場合には、特にファントム読み取りを回避するために範囲ロックが取得されます。<br /><br /> **注:** SERIALIZABLE 分離レベルが要求された場合、レプリケートされたテーブルの DDL 操作やトランザクションが失敗することがあります。 レプリケーションのクエリで使用されるヒントは、SERIALIZABLE 分離レベルと互換性がない可能性があるためです。|  
+|シリアル化可能|各トランザクションが完全に分離される、最も高い分離レベル。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]は、選択されたデータに対して取得された読み取り/書き込みロックを保持し、トランザクションの終わりに開放します。 範囲指定付きの WHERE 句を SELECT 操作に使用する場合には、特にファントム読み取りを回避するために範囲ロックが取得されます。<br /><br /> **注:** SERIALIZABLE 分離レベルが要求された場合、レプリケートされたテーブルの DDL 操作やトランザクションが失敗することがあります。 レプリケーションのクエリで使用されるヒントは、SERIALIZABLE 分離レベルと互換性がない可能性があるためです。|  
   
  また、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、行のバージョン管理を使用する 2 つの追加トランザクション分離レベルがサポートされます。 1 つは、READ COMMITTED 分離の実装であり、1 つはトランザクション分離レベルである "スナップショット" です。  
   
 |行のバージョン管理分離レベル|定義|  
 |------------------------------------|----------------|  
 |READ COMMITTED SNAPSHOT|READ_COMMITTED_SNAPSHOT データベース オプションが ON に設定されている場合、READ COMMITTED 分離では、行のバージョン管理を使用して読み取りの一貫性をステートメント レベルで維持します。 読み取り操作にはテーブル レベルの SCH-S ロックだけが必要であり、ページ ロックや行ロックは不要です。 つまり[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]では行のバージョン管理が使用され、各ステートメントでは、トランザクション全体で一貫性のあるデータのスナップショットが使用されます。このスナップショットは、ステートメント開始時点に存在したデータのスナップショットです。 ただし、ロックは、他のトランザクションがデータを更新するのを防ぐために使用されることはありません。 ユーザー定義関数から返されるデータは、そのユーザー定義関数を含んでいるステートメントの開始後にコミットされたものである可能性があります。<br /><br /> `READ_COMMITTED_SNAPSHOT` データベース オプションが OFF (既定) に設定されている場合は、READ_COMMITTED 分離に共有ロックが使用されます。これにより、現在のトランザクションでの読み取り操作中に他のトランザクションによって行が変更されるのを防ぐことができます。 また、ステートメントが他のトランザクションで変更された行を読み取ろうとしても、そのトランザクションが完了するまでステートメントはブロックされます。 どちらの実装も READ COMMITTED 分離の ISO 定義に準拠しています。|  
-|スナップショット|スナップショット分離レベルでは、行のバージョン管理を使用して読み取りの一貫性をトランザクション レベルで維持します。 読み取り操作では、ページ ロックも行ロックも獲得しません。テーブル レベルの SCH-S ロックだけを獲得します。 別のトランザクションによって変更された行を読み取るときは、トランザクションの開始時に存在していた行のバージョンを取得します。 データベースに対してスナップショット分離を使用できるのは、`ALLOW_SNAPSHOT_ISOLATION` データベース オプションが ON に設定されている場合のみです。 既定では、ユーザー データベースのこのオプションは OFF に設定されています。<br /><br /> **注意:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、メタデータのバージョン管理はサポートされません。 そのため、スナップショット分離下で実行されている明示的なトランザクションでは、実行できる DDL 操作に制限があります。 スナップショット分離下では、BEGIN TRANSACTION ステートメントの後に、ALTER TABLE、CREATE INDEX、CREATE XML INDEX、ALTER INDEX、DROP INDEX、DBCC REINDEX、ALTER PARTITION FUNCTION、ALTER PARTITION SCHEME などの DDL ステートメントを実行することはできません。共通言語ランタイム (CLR) の DDL ステートメントも同様です。 暗黙的なトランザクション内でスナップショット分離を使用している場合は、これらのステートメントが許可されます。 暗黙的なトランザクションとは、原則的に、DDL ステートメントでもスナップショット分離のセマンティックを適用することのできる単一のステートメントをいいます。 この原則に反した場合、エラー 3961 が発生し、`Snapshot isolation transaction failed in database '%.*ls' because the object accessed by the statement has been modified by a DDL statement in another concurrent transaction since the start of this transaction. It is not allowed because the metadata is not versioned. A concurrent update to metadata could lead to inconsistency if mixed with snapshot isolation.`。|  
+|スナップショット|スナップショット分離レベルでは、行のバージョン管理を使用して読み取りの一貫性をトランザクション レベルで維持します。 読み取り操作では、ページ ロックも行ロックも獲得しません。テーブル レベルの SCH-S ロックだけを獲得します。 別のトランザクションによって変更された行を読み取るときは、トランザクションの開始時に存在していた行のバージョンを取得します。 データベースに対してスナップショット分離を使用できるのは、`ALLOW_SNAPSHOT_ISOLATION` データベース オプションが ON に設定されている場合のみです。 既定では、ユーザー データベースのこのオプションは OFF に設定されています。<br /><br /> **注意:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、メタデータのバージョン管理はサポートされません。 そのため、スナップショット分離下で実行されている明示的なトランザクションでは、実行できる DDL 操作に制限があります。 スナップショット分離下では、BEGIN TRANSACTION ステートメントの後に、ALTER TABLE、CREATE INDEX、CREATE XML INDEX、ALTER INDEX、DROP INDEX、DBCC REINDEX、ALTER PARTITION FUNCTION、ALTER PARTITION SCHEME などの DDL ステートメントを実行することはできません。共通言語ランタイム (CLR) の DDL ステートメントも同様です。 暗黙のトランザクション内でスナップショット分離を使用しているときには、これらのステートメントは許可されます。 暗黙的なトランザクションとは、原則的に、DDL ステートメントでもスナップショット分離のセマンティックを適用することのできる単一のステートメントをいいます。 この原則に反した場合、エラー 3961 が発生し、`Snapshot isolation transaction failed in database '%.*ls' because the object accessed by the statement has been modified by a DDL statement in another concurrent transaction since the start of this transaction. It is not allowed because the metadata is not versioned. A concurrent update to metadata could lead to inconsistency if mixed with snapshot isolation.`。|  
   
  次の表に、各分離レベルで許容されているコンカレンシーの副作用を示します。  
   
@@ -324,7 +324,7 @@ GO
   
  スナップショット トランザクションでは、アプリケーションは、Attribute を SQL_COPT_SS_TXN_ISOLATION に設定し、ValuePtr を SQL_TXN_SS_SNAPSHOT に設定して、`SQLSetConnectAttr` を呼び出します。 スナップショット トランザクションは、SQL_COPT_SS_TXN_ISOLATION または SQL_ATTR_TXN_ISOLATION のいずれかを使用して取得できます。  
   
-##  <a name="Lock_Engine"></a> [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]のロック  
+##  <a name="Lock_Engine"></a>[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]のロック  
  [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]では、"ロック" というメカニズムを使用して、複数のユーザーによる同じデータへの同時アクセスが同期されます。  
   
  トランザクションでは、データの読み取りや変更など、データの現在の状態に対する依存関係を取得する前に、そのトランザクションを、別のトランザクションで同じデータが変更される影響から保護する必要があります。 トランザクションでは、データのロックを要求することにより、この問題に対処しています。 ロックには、共有ロックや排他ロックなど複数のモードがあります。 ロック モードは、データに対するトランザクションの依存関係の度合いを定義します。 別のトランザクションに既に許可されているロックのモードと競合するロックを、トランザクションに許可することはできません。 トランザクションで、あるデータに対して既に許可されたロックと競合するロックのモードが要求された場合、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]のインスタンスにより、既に許可されたロックが解放されるまで、要求を行ったトランザクションは保留されます。  
@@ -340,7 +340,7 @@ GO
   
  次の表に、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]がロックできるリソースを示します。  
   
-|リソース|[説明]|  
+|リソース|説明|  
 |--------------|-----------------|  
 |RID|ヒープ内の 1 行をロックするのに使用される行識別子 (ROWID)。|  
 |KEY|シリアル化可能なトランザクションのキー範囲の保護に使用されるインデックス内の行ロック。|  
@@ -362,12 +362,12 @@ GO
   
  次の表に、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]のリソース ロック モードを示します。  
   
-|ロック モード|[説明]|  
+|ロック モード|説明|  
 |---------------|-----------------|  
 |共有 (S)|`SELECT` ステートメントなど、データの変更や更新を伴わない読み取り操作で使用します。|  
 |更新 (U)|更新可能なリソースに使用します。 複数のセッションがリソースを読み取り、ロックして、後で更新する可能性がある場合に発生する一般的な形式のデッドロックを防ぎます。|  
 |排他 (X)|`INSERT`、`UPDATE`、`DELETE` などのデータ変更操作に使用します。 複数の更新操作により 1 つのリソースを同時に更新しないようにするためのロック モードです。|  
-|インテント|ロック階層を設定するのに使用します。 インテント ロックの種類にはインテント共有 (IS)、インテント排他 (IX)、およびインテント排他付き共有 (SIX) があります。|  
+|Intent|ロック階層を設定するのに使用します。 インテント ロックの種類にはインテント共有 (IS)、インテント排他 (IX)、およびインテント排他付き共有 (SIX) があります。|  
 |スキーマ|テーブルのスキーマに依存する操作を行うときに使用します。 スキーマ ロックの種類には、スキーマ修正 (Sch-M) およびスキーマ安定度 (Sch-S) があります。|  
 |一括更新 (BU)|データを一括でテーブルにコピーするときに `TABLOCK` ヒントを指定して使用します。|  
 |キー範囲|トランザクション分離レベルが SERIALIZABLE のとき、クエリにより読み取られる行の範囲を保護します。 シリアル化可能トランザクションのクエリを再度実行した場合に対象となるような行を、他のトランザクションは挿入できなくなります。|  
@@ -397,7 +397,7 @@ GO
   
 <a name="lock_intent_table"></a> インテント ロックにはインテント共有 (IS)、インテント排他 (IX)、およびインテント排他付き共有 (SIX) があります。  
   
-|ロック モード|[説明]|  
+|ロック モード|説明|  
 |---------------|-----------------|  
 |インテント共有 (IS)|下位の階層に位置するリソースの (すべてではなく) 一部に対し、要求されているかかけられている共有ロックを保護します。|  
 |インテント排他 (IX)|下位の階層に位置するリソースの (すべてではなく) 一部に対し、要求されているかかけられている排他ロックを保護します。 IX は IS のスーパーセットです。また、下位のリソースに対する共有ロックの要求を保護します。|  
@@ -461,12 +461,12 @@ GO
 -   行はインデックス エントリを保護するロック モードを表します。  
 -   モードは使用する組み合わされたロック モードを表します。 キー範囲ロック モードは 2 つの部分から成ります。 最初の部分はインデックス範囲 (Range*T*) をロックするのに使用するロックの種類を表し、その次の部分は特定のキー (*K*) をロックするのに使用するロックの種類を表します。 Range*T*-*K* のように、2 つの部分はハイフン (-) で連結されます。  
   
-    |範囲|行|モード|[説明]|  
+    |Range|行|モード|説明|  
     |-----------|---------|----------|-----------------|  
     |RangeS|S|RangeS-S|共有範囲。共有リソース ロック、シリアル化可能範囲スキャン。|  
     |RangeS|U|RangeS-U|共有範囲。更新リソース ロック。シリアル化可能更新スキャン。|  
     |RangeI|[Null]|RangeI-N|挿入範囲。NULL リソース ロック。新しいキーをインデックスに挿入する前に範囲をテストするのに使用します。|  
-    |RangeX|×|RangeX-X|排他範囲。排他リソース ロック。範囲内のキーを更新するのに使用します。|  
+    |RangeX|X|RangeX-X|排他範囲。排他リソース ロック。範囲内のキーを更新するのに使用します。|  
   
 > [!NOTE]  
 > 内部 NULL ロック モードは、他のすべてのロック モードと互換性があります。  
@@ -491,7 +491,7 @@ GO
 |------------|------------|---------------------|  
 |S|RangeI-N|RangeI-S|  
 |U|RangeI-N|RangeI-U|  
-|×|RangeI-N|RangeI-X|  
+|X|RangeI-N|RangeI-X|  
 |RangeI-N|RangeS-S|RangeX-S|  
 |RangeI-N|RangeS-U|RangeX-U|  
   
@@ -510,7 +510,7 @@ GO
 -   トランザクション分離レベルを SERIALIZABLE に設定する。  
 -   クエリ プロセッサではインデックスを使用して範囲フィルター述語を実装する必要があります。 たとえば、SELECT ステートメントで WHERE 句を使用すると、述語ColumnX BETWEEN N **'** AAA **'** AND N **'** CZZ **'** を使用して範囲条件を設定できます。 **ColumnX** がインデックス キーに含まれている場合、キー範囲ロックだけを取得できます。  
   
-#### <a name="examples"></a>使用例  
+#### <a name="examples"></a>例  
  次のテーブルとインデックスは、この後のキー範囲ロックの例の基準として使用されます。  
   
  ![btree](../relational-databases/media/btree4.png)  
@@ -540,7 +540,7 @@ WHERE name = 'Bill';
   
  名前 `Ben` は隣接するインデックス エントリである `Bing` と `Bill` の間に挿入されるため、この名前範囲に対応するインデックス エントリにキー範囲ロックが設定されます。 RangeS-S モードのキー範囲ロックは、インデックス エントリ `Bing` に設定されます。 これにより、`Bill` などの値がインデックス エントリの `Ben` と `Bing` の間に挿入されるのを防ぎます。  
   
-##### <a name="delete-operation"></a>削除操作  
+##### <a name="delete-operation"></a>削除操作。  
  トランザクション内で値を削除する場合、削除処理を実行するトランザクションの間、値が存在する範囲をロックする必要はありません。 シリアル化可能性を維持するには、削除するキー値をトランザクションの終了時までロックするだけで十分です。 たとえば、次の DELETE ステートメントについて考えてみます。  
   
 ```sql  
@@ -577,7 +577,7 @@ INSERT mytable VALUES ('Dan');
  [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] 以降のバージョンでは、`LOCK_ESCALATION` オプションの導入に伴い、ロックのエスカレーションの動作が変更されています。 詳しくは、[ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md) の `LOCK_ESCALATION` オプションを参照してください。  
   
 ### <a name="deadlocks"></a> デッドロック  
- デッドロックは、複数のタスクが永続的に相互ブロックすることで発生します。つまり、一方のタスクがロックを試みているリソースに他方のタスクがロックを獲得していて、これが相互に行われるとデッドロックが発生します。 例:  
+ デッドロックは、複数のタスクが永続的に相互ブロックすることで発生します。つまり、一方のタスクがロックを試みているリソースに他方のタスクがロックを獲得していて、これが相互に行われるとデッドロックが発生します。 次に例を示します。  
   
 -   トランザクション A が行 1 の共有ロックを取得します。  
 -   トランザクション B が行 2 の共有ロックを取得します。  
@@ -594,7 +594,7 @@ INSERT mytable VALUES ('Dan');
   
  デッドロックの状態は、リレーショナル データベース管理システムだけでなく、複数のスレッドを使用していれば、どのようなシステムでも発生する可能性があります。また、データベース オブジェクトのロック以外でも発生する可能性があります。 たとえば、マルチスレッド オペレーティング システムの 1 つのスレッドが、メモリのブロックなど、1 つ以上のリソースを取得するとします。 取得しようとしているリソースが別のスレッドに所有されている場合、最初のスレッドはリソースを所有しているスレッドがそのリソースを解放するまで待機することになります。 このとき、待機しているスレッドのことを「そのリソースについて、所有側のスレッドに対する依存関係がある」といいます。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]のインスタンスでは、メモリやスレッドなど、データベース以外のリソースを取得するときにデッドロックが発生する可能性があります。  
   
- ![デッドロック (deadlock)](../relational-databases/media/deadlock.png)  
+ ![deadlock](../relational-databases/media/deadlock.png)  
   
  この例では、トランザクション T1 は **Part** テーブルのロック リソースに関して、トランザクション T2 に依存関係があります。 同様に、**Supplier** テーブルのロック リソースに関しては、トランザクション T2 がトランザクション T1 に対する依存関係を持っています。 これらの依存関係は相互に働くため、トランザクション T1 と T2 の間でデッドロックが発生します。  
   
@@ -767,9 +767,9 @@ END
   
 |プロパティ|トレース フラグ 1204 およびトレース フラグ 1222|トレース フラグ 1204 のみ|トレース フラグ 1222 のみ|  
 |--------------|-----------------------------------------|--------------------------|--------------------------|  
-|[出力形式]|出力は [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のエラー ログにキャプチャされます。|デッドロックに関係するノードだけが表示されます。 各ノードには専用のセクションがあり、最後のセクションではデッドロック対象が示されます。|XML スキーマ定義 (XSD) スキーマには準拠していない、XML に似た形式で情報を返します。 この形式には、3 つの主要なセクションがあります。 最初のセクションでは、デッドロック対象が宣言されます。 2 番目のセクションでは、デッドロックに関係する各プロセスが示されます。 3 番目のセクションでは、トレース フラグ 1204 のノードと同義のリソースが示されます。|  
+|出力形式|出力は [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のエラー ログにキャプチャされます。|デッドロックに関係するノードだけが表示されます。 各ノードには専用のセクションがあり、最後のセクションではデッドロック対象が示されます。|XML スキーマ定義 (XSD) スキーマには準拠していない、XML に似た形式で情報を返します。 この形式には、3 つの主要なセクションがあります。 最初のセクションでは、デッドロック対象が宣言されます。 2 番目のセクションでは、デッドロックに関係する各プロセスが示されます。 3 番目のセクションでは、トレース フラグ 1204 のノードと同義のリソースが示されます。|  
 |識別属性|**SPID:<x\> ECID:<x\>。** 並列処理を行う場合に、システム プロセス ID のスレッドを識別します。 エントリ `SPID:<x> ECID:0` (<x\> は SPID 値に置き換えられます) は、メイン スレッドを表します。 エントリ `SPID:<x> ECID:<y>` (<x\> は SPID 値に置き換えられ、<y\> は 0 よりも大きくなります) は、同じ SPID のサブスレッドを表します。<br /><br /> **BatchID** (トレース フラグ 1222 の **sbid**)。 コードの実行でロックを要求または保持しているバッチを識別します。 複数のアクティブな結果セット (MARS) が無効になっている場合、BatchID の値は 0 になります。 MARS が有効になっている場合、アクティブなバッチの値は 1 から *n* になります。 セッションにアクティブなバッチが存在しない場合、BatchID は 0 になります。<br /><br /> **モード**。 スレッドによって要求、許可、または待機される特定のリソースに対して、ロックの種類を指定します。 モードには、IS (インテント共有)、S (共有)、U (更新)、IX (インテント排他)、SIX (インテント排他付き共有)、および X (排他) があります。<br /><br /> **Line #** (トレース フラグ 1222 の**行**)。 デッドロックが発生したときに実行されていた、現在のステートメントのバッチの行番号が表示されます。<br /><br /> **Input Buf** (トレース フラグ 1222 の **inputbuf**)。 現在のバッチに含まれるステートメントをすべて表示します。|**Node**。 デッドロック チェーンに含まれるエントリ番号を表します。<br /><br /> **Lists**。 次の一覧にロックの所有者が含まれる場合があります。<br /><br /> **Grant List**。 リソースの現在の所有者を列挙します。<br /><br /> **Convert List**。 ロックを高いレベルに変換しようとしている現在の所有者を列挙します。<br /><br /> **Wait List**。 リソースに対する現在の新しいロック要求を列挙します。<br /><br /> **Statement Type**。 権限を持つスレッドにおける DML ステートメントの種類 (SELECT、INSERT、UPDATE、または DELETE) を示します。<br /><br /> **Victim Resource Owner**。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] がデッドロック サイクルを解除する対象として選択する、参加スレッドを指定します。 選択したスレッドと既存のすべてのサブスレッドを終了します。<br /><br /> **Next Branch**。 デッドロック サイクルに関係する、同じ SPID からの 2 つ以上のサブスレッドを表します。|**deadlock victim**。 デッドロックの対象として選択されたタスクの物理メモリ アドレス (「[sys.dm_os_tasks &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)」を参照) を表します。 デッドロックが未解決の場合は、0 になることがあります。 ロールバックを実行中のタスクは、デッドロックの対象として選択できません。<br /><br /> **executionstack**。 デッドロックの発生時に実行されている [!INCLUDE[tsql](../includes/tsql-md.md)] コードを表します。<br /><br /> **priority**。 デッドロックの優先度を表します。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]では、コンカレンシーを向上させるために、短期間でデッドロックの優先度が変更されることがあります。<br /><br /> **logused**。 タスクで使用されているログ領域です。<br /><br /> **owner id**。要求を制御するトランザクションの ID です。<br /><br /> **status**。 タスクの状態です。 次のいずれかの値です。<br /><br /> >> **pending**。 ワーカー スレッドを待機しています。<br /><br /> >> **runnable**。 実行できる状態ですが、クォンタムを待機しています。<br /><br /> >> **running**。 スケジューラで現在実行中です。<br /><br /> >> **suspended**。 実行は中断されます。<br /><br /> >> **done**。 タスクが完了しました。<br /><br /> >> **spinloop**。 スピンロックが解放されるのを待機しています。<br /><br /> **waitresource**。 タスクで必要なリソースです。<br /><br /> **waittime**。 リソースを待機する時間 (ミリ秒単位) です。<br /><br /> **schedulerid**。 このタスクに関連付けられたスケジューラです。 「[sys.dm_os_schedulers &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md)」をご覧ください。<br /><br /> **hostname**。 ワークステーションの名前です。<br /><br /> **isolationlevel**。 現在のトランザクション分離レベルです。<br /><br /> **Xactid**。 要求を制御するトランザクションの ID です。<br /><br /> **currentdb**。 データベースの ID です。<br /><br /> **lastbatchstarted**。 クライアント プロセスで最後にバッチ実行が開始した時刻です。<br /><br /> **lastbatchcompleted**。 クライアント プロセスで最後にバッチ実行が完了した時刻です。<br /><br /> **clientoption1 and clientoption2**。 このクライアント接続にオプションを設定します。 これは、通常 SET NOCOUNT や SET XACTABORT などの SET ステートメントで制御されているオプションに関する情報を含むビットマスクです。<br /><br /> **associatedObjectId**。 HoBT (ヒープまたは B-Tree) の ID を表します。|  
-|リソース属性|**RID**。 ロックが保持または要求されているテーブル内の単一行を識別します。 RID は、RID: *db_id:file_id:page_no:row_no* として表されます。 たとえば、`RID: 6:1:20789:0` のようになります。<br /><br /> **OBJECT**。 ロックが保持または要求されているテーブルを識別します。 OBJECT は、OBJECT: *db_id:object_id* として表されます。 たとえば、`TAB: 6:2009058193` のようにします。<br /><br /> **KEY**。 ロックが保持または要求されているインデックス内のキー範囲を識別します。 KEY は、KEY: *db_id:hobt_id* (*インデックス キー ハッシュ値*) として表されます。 たとえば、`KEY: 6:72057594057457664 (350007a4d329)` のようにします。<br /><br /> **PAG**。 ロックが保持または要求されているページ リソースを識別します。 PAG は、PAG: *db_id:file_id:page_no* として表されます。 たとえば、`PAG: 6:1:20789` のようにします。<br /><br /> **EXT**。 エクステント構造を識別します。 EXT は、EXT: *db_id:file_id:extent_no* として表されます。 たとえば、`EXT: 6:1:9` のようにします。<br /><br /> **DB**。 データベース ロックを識別します。 **DB は次のいずれかで表されます。**<br /><br /> DB: *db_id*<br /><br /> DB: *db_id*[BULK-OP-DB]。データベースのバックアップに使用されたデータベース ロックを識別します。<br /><br /> DB: *db_id*[BULK-OP-LOG]。特定のデータベースのバックアップ ログに使用されたロックを識別します。<br /><br /> **APP**。 アプリケーション リソースに使用されたロックを識別します。 APP は、APP: *lock_resource* として表されます。 たとえば、`APP: Formf370f478` のようにします。<br /><br /> **METADATA**。 デッドロックに関係するメタデータ リソースを表します。 METADATA には多数のサブリソースがあるため、返される値はデッドロックされたサブリソースに依存します。 たとえば、METADATA.USER_TYPE は `user_type_id =` <*integer_value*> を返します。 METADATA のリソースおよびサブリソースについて詳しくは、「[sys.dm_tran_locks &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)」をご覧ください。<br /><br /> **HOBT**。 デッドロックに関係するヒープまたは B-Tree を表します。|このトレース フラグに限定されるリソース属性はありません。|このトレース フラグに限定されるリソース属性はありません。|  
+|リソース属性|**RID**。 ロックが保持または要求されているテーブル内の単一行を識別します。 RID は、RID: *db_id:file_id:page_no:row_no* として表されます。 たとえば、「 `RID: 6:1:20789:0` 」のように入力します。<br /><br /> **OBJECT**。 ロックが保持または要求されているテーブルを識別します。 OBJECT は、OBJECT: *db_id:object_id* として表されます。 たとえば、「 `TAB: 6:2009058193` 」のように入力します。<br /><br /> **KEY**。 ロックが保持または要求されているインデックス内のキー範囲を識別します。 KEY は、KEY: *db_id:hobt_id* (*インデックス キー ハッシュ値*) として表されます。 たとえば、「 `KEY: 6:72057594057457664 (350007a4d329)` 」のように入力します。<br /><br /> **PAG**。 ロックが保持または要求されているページ リソースを識別します。 PAG は、PAG: *db_id:file_id:page_no* として表されます。 たとえば、「 `PAG: 6:1:20789` 」のように入力します。<br /><br /> **EXT**。 エクステント構造を識別します。 EXT は、EXT: *db_id:file_id:extent_no* として表されます。 たとえば、「 `EXT: 6:1:9` 」のように入力します。<br /><br /> **DB**。 データベース ロックを識別します。 **DB は次のいずれかで表されます。**<br /><br /> DB: *db_id*<br /><br /> DB: *db_id*[BULK-OP-DB]。データベースのバックアップに使用されたデータベース ロックを識別します。<br /><br /> DB: *db_id*[BULK-OP-LOG]。特定のデータベースのバックアップ ログに使用されたロックを識別します。<br /><br /> **APP**。 アプリケーション リソースに使用されたロックを識別します。 APP は、APP: *lock_resource* として表されます。 たとえば、「 `APP: Formf370f478` 」のように入力します。<br /><br /> **METADATA**。 デッドロックに関係するメタデータ リソースを表します。 METADATA には多数のサブリソースがあるため、返される値はデッドロックされたサブリソースに依存します。 たとえば、METADATA.USER_TYPE は `user_type_id =` <*integer_value*> を返します。 METADATA のリソースおよびサブリソースについて詳しくは、「[sys.dm_tran_locks &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)」をご覧ください。<br /><br /> **HOBT**。 デッドロックに関係するヒープまたは B-Tree を表します。|このトレース フラグに限定されるリソース属性はありません。|このトレース フラグに限定されるリソース属性はありません。|  
   
 ###### <a name="trace-flag-1204-example"></a>トレース フラグ 1204 の例  
  次の例は、トレース フラグ 1204 がオンになっている場合の出力を示しています。 この場合、ノード 1 のテーブルはインデックスのないヒープ、ノード 2 のテーブルは非クラスター化インデックスのあるヒープになります。 ノード 2 のインデックス キーは、デッドロックの発生時に更新されます。  
@@ -1055,7 +1055,7 @@ BEGIN TRANSACTION
         WITH (TABLOCKX, HOLDLOCK);  
 ```   
   
-##  <a name="Row_versioning"></a> [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]での行のバージョン管理に基づく分離レベル  
+##  <a name="Row_versioning"></a>[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]での行のバージョン管理に基づく分離レベル  
  [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 以降の[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]では、既存の READ COMMITTED トランザクション分離レベルで、行のバージョン管理によるステートメント レベルのスナップショットを使用できます。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]では、同じく行のバージョン管理によりトランザクション レベルのスナップショットを提供する SNAPSHOT トランザクション分離レベルも使用できます。  
   
  行のバージョン管理とは、行が変更または削除されると書き込み時コピーのメカニズムを起動する、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の一般的なフレームワークです。 このフレームワークでは、トランザクション内の一貫性に関する以前の状態を必要とするようなトランザクションの実行中に、行の古いバージョンをそのトランザクションで使用できることが求められます。 行のバージョン管理は、次の目的で使用されます。  
@@ -1246,9 +1246,9 @@ BEGIN TRANSACTION
   
  **Version Store Size (KB)** 。 すべてのバージョン ストアのサイズを KB 単位で監視します。 この情報は、tempdb データベースに必要なバージョン ストア用の領域のサイズを判定する際に役立ちます。 このカウンターを長期間監視すると、tempdb に必要な領域を追加する際に役立つ推定値が得られます。  
   
- `Version Generation rate (KB/s)`。 すべてのバージョン ストアについてバージョンの生成率 (KB/秒) を監視します。  
+ `Version Generation rate (KB/s)` すべてのバージョン ストアについてバージョンの生成率 (KB/秒) を監視します。  
   
- `Version Cleanup rate (KB/s)`。 すべてのバージョン ストアについてバージョンのクリーンアップ率 (KB/秒) を監視します。  
+ `Version Cleanup rate (KB/s)` すべてのバージョン ストアについてバージョンのクリーンアップ率 (KB/秒) を監視します。  
   
 > [!NOTE]  
 > Version Generation rate (KB/s) と Version Cleanup rate (KB/s) から得た情報を、tempdb に必要な領域の予測に利用できます。  
@@ -1265,11 +1265,11 @@ BEGIN TRANSACTION
   
  **Transactions**。 アクティブなトランザクションの総数を監視します。 システム トランザクションは含まれません。  
   
- `Snapshot Transactions`。 アクティブなスナップショット トランザクションの総数を監視します。  
+ `Snapshot Transactions` アクティブなスナップショット トランザクションの総数を監視します。  
   
- `Update Snapshot Transactions`。 更新操作を実行するアクティブなスナップショット トランザクションの総数を監視します。  
+ `Update Snapshot Transactions` 更新操作を実行するアクティブなスナップショット トランザクションの総数を監視します。  
   
- `NonSnapshot Version Transactions`。 バージョン レコードを生成する、スナップショット以外のアクティブなトランザクションの総数を監視します。  
+ `NonSnapshot Version Transactions` バージョン レコードを生成する、スナップショット以外のアクティブなトランザクションの総数を監視します。  
   
 > [!NOTE]  
 > Update Snapshot Transactions と NonSnapshot Version Transactions の合計は、バージョンの生成に関係するトランザクションの総数を表します。 Snapshot Transactions と Update Snapshot Transactions の差分は、読み取り専用のトランザクション数を表します。  
@@ -1586,7 +1586,7 @@ ALTER DATABASE AdventureWorks2016
 ## <a name="customizing-locking-and-row-versioning"></a>ロックおよび行のバージョン管理のカスタマイズ  
   
 ### <a name="customizing-the-lock-time-out"></a>ロック タイムアウトのカスタマイズ  
- 別のトランザクションが競合するロックをリソースで既に所有しているために [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]で同じリソースへのロックをトランザクションに許可できない場合、そのトランザクションはブロックされ、既存のロックが解放されるまで待機状態になります。 既定では、強制タイムアウト時間は設定されないので、ロック前にリソースがロックされているかどうかを調べる方法はデータにアクセスする以外にありません。そして、データにアクセスすると無期限にブロックされる可能性があります。  
+ 別のトランザクションが競合するロックをリソースで既に所有しているために [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] で同じリソースへのロックをトランザクションに許可できない場合、そのトランザクションはブロックされ、既存のロックが解放されるまで待機状態になります。 既定では、強制タイムアウト時間は設定されないので、ロック前にリソースがロックされているかどうかを調べる方法はデータにアクセスする以外にありません。そして、データにアクセスすると無期限にブロックされる可能性があります。  
   
 > [!NOTE]  
 > [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、**sys.dm_os_waiting_tasks** 動的管理ビューを使用して、特定のプロセスがブロックされているかどうか、またどのプロセスがブロックしているかを判断できます。 以前のバージョンの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、**sp_who** システム ストアド プロシージャを使用していました。  
@@ -1603,7 +1603,7 @@ GO
 ```  
   
 ### <a name="customizing-transaction-isolation-level"></a>トランザクション分離レベルのカスタマイズ  
- READ COMMITTED は、[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]の既定の分離レベルです。 アプリケーションを異なる分離レベルで動作させる必要がある場合、次の方法を使用して分離レベルを設定できます。  
+ READ COMMITTED は、[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] の既定の分離レベルです。 アプリケーションを異なる分離レベルで動作させる必要がある場合、次の方法を使用して分離レベルを設定できます。  
   
 -   [SET TRANSACTION ISOLATION LEVEL](../t-sql/statements/set-transaction-isolation-level-transact-sql.md) ステートメントを実行します。  
 -   System.Data.SqlClient マネージド名前空間を使用している ADO.NET アプリケーションでは、SqlConnection.BeginTransaction メソッドを使用して *IsolationLevel* オプションを指定できます。  

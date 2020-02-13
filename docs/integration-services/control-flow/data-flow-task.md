@@ -19,10 +19,10 @@ ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6683cec953daf6146371d62e8db2e4add2bd42df
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298346"
 ---
 # <a name="data-flow-task"></a>[データ フロー タスク]
@@ -50,7 +50,7 @@ ms.locfileid: "71298346"
 ## <a name="log-entries"></a>ログ エントリ  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、すべてのタスクで利用可能な一連のログ イベントを提供しています。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、多くのタスクにカスタム ログ エントリも提供しています。 詳細については、「[Integration Services (SSIS) のログ記録](../../integration-services/performance/integration-services-ssis-logging.md)」をご覧ください。 データ フロー タスクには、次のカスタム ログ エントリが含まれています。  
   
-|ログ エントリ|[説明]|  
+|ログ エントリ|説明|  
 |---------------|-----------------|  
 |**BufferSizeTuning**|データ フロー タスクでバッファーのサイズが変更されたことを示します。 このログ エントリはサイズ変更の理由を説明し、一時的な新しいバッファー サイズを表示します。|  
 |**OnPipelinePostEndOfRowset**|**ProcessInput** メソッドの最終呼び出しで設定される、行セットの終了シグナルがコンポーネントに通知されたことを示します。 エントリは、データ フロー内で入力を処理するコンポーネントごとに書き込まれます。 このエントリには、コンポーネント名が含まれます。|  
@@ -92,7 +92,7 @@ ms.locfileid: "71298346"
   
  たとえば、次の表に含まれるメッセージ "行がデータ フロー コンポーネントに入力として指定されました。 :  : 1185 : OLE DB ソースの出力 : 1180 : 並べ替え : 1181 : 並べ替えの入力 : 76" は、列へと解析されています。 このメッセージは、OLE DB ソースから並べ替え変換に行が送信されるときに **OnPipelineRowsSent** イベントによって書き込まれました。  
   
-|[列]|[説明]|[値]|  
+|列|説明|Value|  
 |------------|-----------------|-----------|  
 |**PathID**|OLE DB ソースと並べ替え変換の間のパスの **ID** プロパティの値です。|1185|  
 |**PathName**|パスの **Name** プロパティの値です。|OLE DB ソースの出力|  

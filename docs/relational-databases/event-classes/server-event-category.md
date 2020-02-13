@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c7aaa763c5764c87335532ced73cbc3c64f6e28a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67911183"
 ---
 # <a name="server-event-category"></a>Server イベント カテゴリ
@@ -27,7 +27,7 @@ ms.locfileid: "67911183"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |-----------|-----------------|  
 |[Mount Tape イベント クラス](../../relational-databases/event-classes/mount-tape-event-class.md)|テープ マウント要求を受け取ったことを示します。|  
 |[Server Memory Change イベント クラス](../../relational-databases/event-classes/server-memory-change-event-class.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のメモリ使用量が変更されたことを示します。|  

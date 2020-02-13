@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 11dc9169ec88928c893d875b7051bfbf551c95fd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68034524"
 ---
 # <a name="service-broker"></a>Service Broker
@@ -58,7 +58,7 @@ CREATE SERVICE ExpensesService
     ON QUEUE dbo.ExpenseQueue; 
 ```
 
-### <a name="sending-messages"></a>メッセージの送信
+### <a name="sending-messages"></a>メッセージを送信する
   
   メッセージは、[SEND](../../t-sql/statements/send-transact-sql.md) Transact-SQL ステートメントを使用してサービス間のメッセージ交換で送信されます。 メッセージ交換は、`BEGIN DIALOG` Transact-SQL ステートメントを使用してサービス間で確立される通信チャネルです。 
   
@@ -106,7 +106,7 @@ FROM ExpenseQueue;
 
 - インスタンス間の Service Broker はサポートされていません 
  - `sys.routes` - 前提条件: sys.routes からアドレスを選択してください。 すべてのルートでアドレスをローカルにする必要があります。 [sys.routes](../../relational-databases/system-catalog-views/sys-routes-transact-sql.md) をご覧ください。
- - `CREATE ROUTE` - `CREATE ROUTE` を `LOCAL` 以外の `ADDRESS` と共に使用することはできません。 [CREATE ROUTE](https://docs.microsoft.com/sql/t-sql/statements/create-route-transact-sql) をご覧ください。
+ - `CREATE ROUTE` - `LOCAL` 以外の `ADDRESS` で `CREATE ROUTE` を使用することはできません。 [CREATE ROUTE](https://docs.microsoft.com/sql/t-sql/statements/create-route-transact-sql) をご覧ください。
  - `ALTER ROUTE` では、`LOCAL` 以外の `ADDRESS` と共に `ALTER ROUTE` を使用することはできません。 [ALTER ROUTE](../../t-sql/statements/alter-route-transact-sql.md) をご覧ください。  
   
 ### <a name="messages-can-be-sent-to-multiple-target-services-multicast"></a>メッセージを複数の対象サービスに送信可能 (マルチキャスト)  

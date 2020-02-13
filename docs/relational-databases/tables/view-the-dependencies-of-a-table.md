@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4575c9cbc20faf6afa03201645b736a13325e66b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68140302"
 ---
 # <a name="view-the-dependencies-of-a-table"></a>テーブルの依存関係の表示
@@ -55,7 +55,7 @@ ms.locfileid: "68140302"
   
 2.  テーブルを右クリックし、 **[依存関係の表示]** をクリックします。  
   
-3.  **[オブジェクトの依存関係 _\<object name\>_ ]** ダイアログ ボックスで、 **[ _\<object name\>_ に依存するオブジェクト]** または **[** _\<object name\>_ **が依存するオブジェクト]** を選択します。  
+3.  [**オブジェクトの依存関係** _\<オブジェクト名\>_ ] ダイアログ ボックスで、[ _\<オブジェクト名\>_ **に依存するオブジェクト**] または [ _\<オブジェクト名\>_ **が依存する** **オブジェクト**] を選択します。  
   
 4.  **[依存関係]** グリッドでオブジェクトをクリックします。 オブジェクトの種類 ("トリガー" や "ストアド プロシージャ" など) が、 **[種類]** ボックスに表示されます。  
   

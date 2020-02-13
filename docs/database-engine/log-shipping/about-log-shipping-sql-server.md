@@ -26,10 +26,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: a50c5344f8742a8483d952b8cab3b03d8d666b31
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68057909"
 ---
 # <a name="about-log-shipping-sql-server"></a>ログ配布について (SQL Server)
@@ -40,7 +40,7 @@ ms.locfileid: "68057909"
   
  **このトピックの内容**  
   
--   [利点](#Benefits)  
+-   [メリット](#Benefits)  
   
 -   [用語と定義](#TermsAndDefinitions)  
   
@@ -62,7 +62,7 @@ ms.locfileid: "68057909"
  プライマリ データベース  
  実稼働サーバーである [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス。  
   
- プライマリ サーバー  
+ プライマリ データベース  
  別のサーバーにバックアップするプライマリ サーバーのデータベース。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用したログ配布構成の管理は、すべてプライマリ データベースから実行されます。  
   
  セカンダリ データベース  
@@ -126,7 +126,7 @@ ms.locfileid: "68057909"
   
  プライマリ サーバー インスタンスおよびセカンダリ サーバー インスタンスは、それぞれの履歴および状態を監視サーバー インスタンスに送信します。  
   
- ![バックアップ ジョブ、コピー ジョブ、復元ジョブを示す構成](../../database-engine/log-shipping/media/ls-typical-configuration.gif "バックアップ ジョブ、コピー ジョブ、復元ジョブを示す構成")  
+ ![ジョブのバックアップ、コピー、復元を示す構成](../../database-engine/log-shipping/media/ls-typical-configuration.gif "ジョブのバックアップ、コピー、復元を示す構成")  
   
 ##  <a name="Interoperability"></a> 相互運用性  
  ログ配布は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の次の機能またはコンポーネントと共に使用できます。  
@@ -163,6 +163,6 @@ ms.locfileid: "68057909"
 -   [役割の交代後のログインとジョブの管理 &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)  
   
 ## <a name="see-also"></a>参照  
- [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
+ [Always On 可用性グループの概要 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   

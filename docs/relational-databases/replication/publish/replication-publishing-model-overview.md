@@ -22,17 +22,17 @@ helpviewer_keywords:
 ms.assetid: b9567832-e6a8-45b2-a3ed-ea12aa002f4b
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 95d2a3538cb775efb346d59e7db75c238e35c5d6
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: d0983db7dee94269981933f115594bdbb9c6a115
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769802"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287567"
 ---
 # <a name="replication-publishing-model-overview"></a>レプリケーションのパブリッシング モデルの概要
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  レプリケーションでは、パブリッシャー (出版社)、ディストリビューター (流通業者)、サブスクライバー (購読者)、パブリケーション (出版物)、アーティクル (記事)、サブスクリプション (定期購読物) など、レプリケーション トポロジ内のコンポーネントを出版業界にたとえて表しています。 雑誌を例にとって考えると、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のレプリケーションを理解しやすくなります。  
+  レプリケーションでは、パブリッシャー (出版社)、ディストリビューター (流通業者)、サブスクライバー (購読者)、パブリケーション (出版物)、アーティクル (記事)、サブスクリプション (定期購読物) など、レプリケーション トポロジ内のコンポーネントを出版業界にたとえて表しています。 雑誌を例にとって考えると、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のレプリケーションを理解しやすくなります。  
   
 -   雑誌のパブリッシャー (出版社) は、1 つ以上のパブリケーション (出版物) を発行します。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "68769802"
   
  ![レプリケーション コンポーネントとデータ フロー](../../../relational-databases/replication/publish/media/replintro1.gif "レプリケーション コンポーネントとデータ フロー")  
   
-## <a name="publisher"></a>パブリッシャー  
+## <a name="publisher"></a>Publisher  
  パブリッシャーは、レプリケーションを介して他の場所でデータを使用できるようにするデータベース インスタンスです。 パブリッシャーは、1 つ以上のパブリケーションを持つことができ、各パブリケーションに、論理的に関連するレプリケート対象のオブジェクトとデータのセットが定義されています。  
   
 ## <a name="distributor"></a>ディストリビューター  
@@ -68,7 +68,7 @@ ms.locfileid: "68769802"
   
 ## <a name="see-also"></a>参照  
  [レプリケーション エージェントの概要](../../../relational-databases/replication/agents/replication-agents-overview.md)   
- [レプリケーションの種類](../../../relational-databases/replication/types-of-replication.md)   
+ [Types of Replication](../../../relational-databases/replication/types-of-replication.md)   
  [AlwaysOn 可用性グループ用のレプリケーションの構成 (SQL Server)](../../../database-engine/availability-groups/windows/configure-replication-for-always-on-availability-groups-sql-server.md)   
  [AlwaysOn パブリケーション データベースのメンテナンス (SQL Server)](../../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)  
   

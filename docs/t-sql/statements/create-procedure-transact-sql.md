@@ -46,12 +46,12 @@ ms.assetid: afe3d86d-c9ab-44e4-b74d-4e3dbd9cc58c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d24ab7a119162c9ad0f084efa8f47961b270a11e
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: 9ae139dda1837a6d8698809f984060f0b341b758
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73982757"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76909822"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -199,7 +199,7 @@ OR ALTER
 VARYING  
  出力パラメーターとしてサポートされている結果セットを指定します。 このパラメーターはプロシージャによって動的に作成され、その内容は変化します。 **cursor** パラメーターにのみ適用されます。 このオプションは、CLR プロシージャでは無効です。  
   
-*default*  
+*既定値*  
  パラメーターの既定値です。 パラメーターの既定値が定義されている場合は、パラメーターに値を指定せずにプロシージャを実行できます。 既定値は定数にする必要がありますが、NULL にすることもできます。 定数値はワイルドカードの形式で指定できるため、パラメーターをプロシージャに渡すときに LIKE キーワードを使用することができます。   
   
  既定値は、CLR プロシージャの場合のみ、**sys.parameters.default** 列に記録されます。 この列は、[!INCLUDE[tsql](../../includes/tsql-md.md)] プロシージャ パラメーターでは NULL になります。  
@@ -294,7 +294,7 @@ LANGUAGE = [N] 'language'
 TRANSACTION ISOLATION LEVEL  
  **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
- ネイティブ コンパイル ストアド プロシージャでは必要です。 ストアド プロシージャのトランザクション分離レベルを指定します。 次のオプションがあります。  
+ ネイティブ コンパイル ストアド プロシージャでは必要です。 ストアド プロシージャのトランザクション分離レベルを指定します。 次のようなオプションがあります。  
   
  これらのオプションについて詳しくは、「[SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)」をご覧ください。  
   
@@ -308,7 +308,7 @@ SERIALIZABLE
 -   現在のトランザクションのいずれかのステートメントが読み取ったキー範囲に該当するキー値を持つ新しい行を、他のトランザクションが挿入した場合、現在のトランザクションは失敗します。  
   
 SNAPSHOT  
- トランザクションの各ステートメントで、トランザクション全体で一貫性のあるデータを読み取るように指定します。このデータは、トランザクション開始時点に存在したデータです。  
+ トランザクションの任意のステートメントによって読み取られたデータが、トランザクションの開始時に存在していたデータとトランザクション上の整合性を持つように指定します。  
   
 DATEFIRST = *number*  
  **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
@@ -343,7 +343,7 @@ SELECT DB_NAME() AS ThisDB;
 ```   
 `EXEC What_DB_is_this;` というステートメントを使ってストアド プロシージャを呼び出します。   
 
-もう少し複雑な例として、プロシージャの柔軟性を高めるために入力パラメーターを提供します。 例:  
+もう少し複雑な例として、プロシージャの柔軟性を高めるために入力パラメーターを提供します。 次に例を示します。  
 ```sql   
 CREATE PROC What_DB_is_that @ID int   
 AS    
@@ -437,10 +437,10 @@ GO
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロシージャの対応するパラメーターのデータ型と互換性のあるパラメーター型を使用する。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] データ型に一致する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型については、「[CLR パラメーター データのマッピング](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)」をご覧ください。  
   
-## <a name="metadata"></a>メタデータ  
+## <a name="metadata"></a>Metadata  
  次の表に、ストアド プロシージャに関する情報を返すために使用できるカタログ ビューおよび動的管理ビューを示します。  
   
-|表示|[説明]|  
+|表示|説明|  
 |----------|-----------------|  
 |[sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)|[!INCLUDE[tsql](../../includes/tsql-md.md)] プロシージャの定義を返します。 ENCRYPTION オプションで作成されるプロシージャのテキストは、**sys.sql_modules** カタログ ビューを使って表示できません。|  
 |[sys.assembly_modules](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)|CLR プロシージャに関する情報を返します。|  
@@ -451,7 +451,7 @@ GO
   
 |パフォーマンス モニター オブジェクト名|パフォーマンス モニター カウンター名|  
 |-------------------------------------|--------------------------------------|  
-|SQLServer:Plan Cache オブジェクト|Cache Hit Ratio|  
+|SQLServer:Plan Cache オブジェクト|キャッシュ ヒット率|  
 ||Cache Pages|  
 ||Cache Object Counts*|  
   
@@ -466,7 +466,7 @@ GO
   
 ##  <a name="mot"></a> CREATE PROCEDURE とメモリ最適化テーブル  
  メモリ最適化テーブルには、従来のストアド プロシージャとネイティブ コンパイル ストアド プロシージャの両方からアクセスできます。 ほとんどの場合、ネイティブ プロシージャの方が効率的です。
-詳しくは、「[ネイティブ コンパイル ストアド プロシージャ](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)」をご覧ください。  
+詳細については、次を参照してください。 [ネイティブ コンパイル ストアド プロシージャ](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)です。  
   
  次のサンプルでは、メモリ最適化テーブル `dbo.Departments` にアクセスするネイティブ コンパイル ストアド プロシージャを作成する方法を示します。  
   
@@ -957,7 +957,7 @@ AS
 GO  
 ```  
   
-#### <a name="n-creating-custom-permission-sets"></a>N. カスタム権限セットを作成する  
+#### <a name="n-creating-custom-permission-sets"></a>北 カスタム権限セットを作成する  
  次の例では、EXECUTE AS を使用して、データベース操作に対するカスタム権限を作成します。 TRUNCATE TABLE など、許可できる権限のない操作もあります。 TRUNCATE TABLE ステートメントをストアド プロシージャ内に組み込み、テーブルを変更する権限が許可されているユーザーとしてそのプロシージャを実行するように指定すると、テーブルの切り捨てを行うための権限を、そのプロシージャの EXECUTE 権限が許可されたユーザーに拡張できます。  
   
 ```sql  
@@ -966,7 +966,7 @@ WITH EXECUTE AS SELF
 AS TRUNCATE TABLE MyDB..MyTable;  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="o-create-a-stored-procedure-that-runs-a-select-statement"></a>O. SELECT ステートメントを実行するストアド プロシージャを作成します。  
  この例では、プロシージャを作成して実行するための基本構文を示します。 バッチを実行する場合は、CREATE PROCEDURE を最初のステートメントにする必要があります。 たとえば、[!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] で次のストアド プロシージャを作成するには、最初にデータベース コンテキストを設定した後、CREATE PROCEDURE ステートメントを実行します。  

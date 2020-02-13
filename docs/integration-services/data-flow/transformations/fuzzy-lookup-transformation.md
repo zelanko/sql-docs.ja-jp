@@ -34,10 +34,10 @@ ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 723c8f8b34ceb9e96ae6da196a64f766b18857ef
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71291493"
 ---
 # <a name="fuzzy-lookup-transformation"></a>あいまい参照変換
@@ -58,7 +58,7 @@ ms.locfileid: "71291493"
   
  この変換は 1 つの入力と 1 つの出力をとります。  
   
- あいまい一致に使用できるのは、**DT_WSTR** データ型および **DT_STR** データ型の入力列のみです。 完全一致では、 **DT_TEXT** **DT_NTEXT** **DT_IMAGE** を除くすべての DTS データ型を使用できます。 詳細については、「 [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md)」を参照してください。 入力と参照テーブルの結合に使用される列のデータ型には、互換性が必要です。 たとえば、DTS の **DT_WSTR** データ型の列と、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **nvarchar** データ型の列の結合は有効ですが、 **DT_WSTR** データ型の列と、 **int** データ型の列の結合は無効です。  
+ あいまい一致に使用できるのは、**DT_WSTR** データ型および **DT_STR** データ型の入力列のみです。 完全一致では、 **DT_TEXT** **DT_NTEXT** **DT_IMAGE** を除くすべての DTS データ型を使用できます。 詳細については、「 [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md)」を参照してください。 入力と参照テーブルの結合に使用される列のデータ型には、互換性が必要です。 たとえば、DTS の **DT_WSTR** データ型の列と、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **nvarchar** データ型の列の結合は有効ですが、**DT_WSTR** データ型の列と、**int** データ型の列の結合は無効です。  
   
  この変換は、使用する最大メモリ量、行比較アルゴリズム、および変換で使用するインデックス テーブルと参照テーブルのキャッシュを指定することにより、カスタマイズできます。  
   
@@ -96,7 +96,7 @@ ms.locfileid: "71291493"
   
  次の表に、一致インデックスのオプションを示します。  
   
-|オプション|[説明]|  
+|オプション|説明|  
 |------------|-----------------|  
 |**GenerateAndMaintainNewIndex**|新しいインデックスを作成して保存し、維持します。 変換は、参照テーブルとインデックス テーブルの同期を保つためのトリガーを参照テーブルに組み込みます。|  
 |**GenerateAndPersistNewIndex**|新しいインデックスを作成し保存しますが、維持はしません。|  
@@ -133,7 +133,7 @@ ms.locfileid: "71291493"
   
  **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [共通プロパティ](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [変換のカスタム プロパティ](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -189,7 +189,7 @@ ms.locfileid: "71291493"
  **使用できる入力列**  
  入力列をドラッグして、使用できる参照列に接続します。 これらの列は、サポートされているデータ型と一致する必要があります。 マッピングする行を選択して右クリックし、 [[リレーションシップの作成]](../../../integration-services/data-flow/transformations/create-relationships.md) ダイアログ ボックスでマッピングを編集します。  
   
- **[名前]**  
+ **Name**  
  使用可能な入力列の名前が表示されます。  
   
  **[パススルー]**  
@@ -219,7 +219,7 @@ ms.locfileid: "71291493"
   
 ## <a name="see-also"></a>参照  
  [参照変換](../../../integration-services/data-flow/transformations/lookup-transformation.md)   
- [あいまいグループ化変換](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)   
+ [Fuzzy Grouping Transformation](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)   
  [Integration Services の変換](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   

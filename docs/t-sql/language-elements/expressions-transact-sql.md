@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0563510242e38e817c7fb01e4185241062feedf3
-ms.sourcegitcommit: 5a61854ddcd2c61bb6da30ccad68f0ad90da0c96
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70978596"
 ---
 # <a name="expressions-transact-sql"></a>式 (Transact-SQL)
@@ -81,7 +81,7 @@ ms.locfileid: "70978596"
   
 ## <a name="arguments"></a>引数  
   
-|項目|定義|  
+|期間|定義|  
 |----------|----------------|  
 |*constant*|1 つの特定のデータ値を表す記号です。 詳細については、「[定数 &#40;Transact-SQL&#41;](../../t-sql/data-types/constants-transact-sql.md)」を参照してください。|  
 |*scalar_function*|特定のサービスを提供し、単一の値を返す [!INCLUDE[tsql](../../includes/tsql-md.md)] 構文の単位です。 *scalar_function* には、組み込みの SUM 関数、GETDATE 関数、または CAST 関数、スカラー ユーザー定義関数などのスカラー関数を指定できます。|  
@@ -89,11 +89,11 @@ ms.locfileid: "70978596"
 |*column*|列の名前です。 式では列の名前だけが許可されます。|  
 |*variable*|変数名、またはパラメーターです。 詳細については、「[DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)」を参照してください。|  
 |**(** _expression_  **)**|このトピックで定義されている有効な式を指定します。 かっこはグループ化の演算子です。かっこ内の式のすべての演算子は最初に評価され、その後で結果の式が別の式と結合されます。|  
-|**(** _scalar_subquery_ **)**|1 つの値を返すサブクエリを指定します。 例:<br /><br /> `SELECT MAX(UnitPrice)`<br /><br /> `FROM Products`|  
+|**(** _scalar_subquery_ **)**|1 つの値を返すサブクエリを指定します。 次に例を示します。<br /><br /> `SELECT MAX(UnitPrice)`<br /><br /> `FROM Products`|  
 |{ *unary_operator* }|単項演算子を適用できるのは、数値型に属するいずれかのデータ型に評価される式だけです。 1 つの数値オペランドだけを含む演算子を指定します。<br /><br /> + は正の値を示します。<br /><br /> - は負の値を示します。<br /><br /> ~ は 1 の補数演算子を示します。|  
 |{ *binary_operator* }|2 つの式を結合して 1 つの結果を生成する方法を定義する演算子を指定します。 *binary_operator* には、算術演算子、代入演算子 (=)、ビットごとの演算子、比較演算子、論理演算子、文字列の連結演算子 (+)、または単項演算子を指定できます。 演算子の詳細については、「[演算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)」を参照してください。|  
 |*ranking_windowed_function*|任意の [!INCLUDE[tsql](../../includes/tsql-md.md)] 順位付け関数です。 詳細については、「[順位付け関数 &#40;Transact-SQL&#41;](../../t-sql/functions/ranking-functions-transact-sql.md)」を参照してください。|  
-|*aggregate_windowed_function*|OVER 句を含む任意の [!INCLUDE[tsql](../../includes/tsql-md.md)] 集計関数です。 詳細については、[OVER 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)を参照してください。|  
+|*aggregate_windowed_function*|OVER 句を含む任意の [!INCLUDE[tsql](../../includes/tsql-md.md)] 集計関数です。 詳細については、を参照してください。 [OVER 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).|  
   
 ## <a name="expression-results"></a>式の結果  
  1 つの定数、変数、スカラー関数、または列名で構成される単純式の場合、式のデータ型、照合順序、有効桁数、小数点以下桁数、および値は、参照される要素のデータ型、照合順序、有効桁数、小数点以下桁数、および値になります。  
@@ -104,7 +104,7 @@ ms.locfileid: "70978596"
   
  複数の記号と演算子で構成される複合式は、単一の値をとる結果に評価されます。 結果の式のデータ型、照合順序、有効桁数、および値は、構成要素の式を一度に 2 つずつ結合して取得される最終結果によって決まります。 式の結合順序は、式の中の演算子の優先順位で定義されます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  2 つの式を演算子で結合できるのは、その演算子で両方のデータ型がサポートされており、次に示す条件の少なくとも 1 つが TRUE の場合です。  
   
 -   式のデータ型が等しい。  

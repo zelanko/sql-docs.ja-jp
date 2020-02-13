@@ -17,10 +17,10 @@ ms.assetid: efecd0d4-1489-4eba-a8fe-275d647058b8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c0b29d0e74d25739b72e712080d2f379ae3be437
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296724"
 ---
 # <a name="system-variables"></a>システム変数
@@ -35,7 +35,7 @@ ms.locfileid: "71296724"
 ## <a name="system-variables-for-packages"></a>パッケージ用システム変数  
  次の表では、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] がパッケージ用に提供するシステム変数について説明します。  
   
-|システム変数|データ型|[説明]|  
+|システム変数|データ型|説明|  
 |---------------------|---------------|-----------------|  
 |**CancelEvent**|Int32|タスクがシグナルを送信して実行を停止する必要があることを示す、Windows イベント オブジェクトへのハンドルです。|  
 |**ContainerStartTime**|DateTime|コンテナーの開始時刻です。|  
@@ -63,16 +63,16 @@ ms.locfileid: "71296724"
 ## <a name="system-variables-for-containers"></a>コンテナー用システム変数  
  次の表では、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] が、For ループ コンテナー、Foreach ループ コンテナー、およびシーケンス コンテナー用に提供するシステム変数について説明します。  
   
-|システム変数|データ型|[説明]|コンテナー|  
+|システム変数|データ型|説明|コンテナー|  
 |---------------------|---------------|-----------------|---------------|  
 |**LocaleId**|Int32|コンテナーが使用するロケールです。|For ループ コンテナー<br /><br /> Foreach ループ コンテナー<br /><br /> シーケンス コンテナー|  
   
 ## <a name="system-variables-for-tasks"></a>タスク用システム変数  
  次の表では、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] がタスク用に提供するシステム変数について説明します。  
   
-|システム変数|データ型|[説明]|  
+|システム変数|データ型|説明|  
 |---------------------|---------------|-----------------|  
-|**CreationName**|String|タスクの名前です。|  
+|**CreationName**|String|タスクの名前。|  
 |**LocaleId**|Int32|タスクが使用するロケールです。|  
 |**TaskID**|String|タスク インスタンスの一意識別子です。|  
 |**TaskName**|String|タスク インスタンスの名前です。|  
@@ -81,7 +81,7 @@ ms.locfileid: "71296724"
 ## <a name="system-variables-for-event-handlers"></a>イベント ハンドラー用システム変数  
  次の表では、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] がイベント ハンドラー用に提供するシステム変数について説明します。 すべての変数がすべてのイベント ハンドラーで使用できるわけではありません。  
   
-|システム変数|データ型|[説明]|イベント ハンドラー|  
+|システム変数|データ型|説明|イベント ハンドラー|  
 |---------------------|---------------|-----------------|-------------------|  
 |**キャンセル**|Boolean|エラー、警告、またはクエリのキャンセルが発生したときに、イベント ハンドラーが実行を停止するかどうかを示します。|OnError イベント ハンドラー<br /><br /> OnWarning イベント ハンドラー<br /><br /> OnQueryCancel イベント ハンドラー|  
 |**ErrorCode**|Int32|エラー識別子です。|OnError イベント ハンドラー<br /><br /> OnInformation イベント ハンドラー<br /><br /> OnWarning イベント ハンドラー|  

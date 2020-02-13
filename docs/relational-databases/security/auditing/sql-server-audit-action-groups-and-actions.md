@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: b7422911-7524-4bcd-9ab9-e460d5897b3d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 2efe63ae57e80e06d616938c0dcdf77dbe055ac6
-ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
+ms.openlocfilehash: 77f07412551fd94737a3200a103c16904771d962
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929704"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76315592"
 ---
 # <a name="sql-server-audit-action-groups-and-actions"></a>SQL Server 監査のアクション グループとアクション
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,11 +68,11 @@ ms.locfileid: "70929704"
  監査はすべて、最初の作成時には無効になります。  
   
 ## <a name="server-level-audit-action-groups"></a>サーバー レベルの監査アクション グループ  
- サーバー レベルの監査アクション グループは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セキュリティ監査イベント クラスに似ています。 詳しくは、「 [SQL Server Event Class Reference](../../../relational-databases/event-classes/sql-server-event-class-reference.md)」をご覧ください。  
+ サーバー レベルの監査アクション グループは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セキュリティ監査イベント クラスに似ています。 詳しくは、「 [SQL Server イベント クラスの参照](../../../relational-databases/event-classes/sql-server-event-class-reference.md)」をご覧ください。  
   
  サーバー レベルの監査アクション グループと、同等の SQL Server イベント クラス (存在する場合) を次の表に示します。  
   
-|アクション グループ名|[説明]|  
+|アクション グループ名|説明|  
 |-----------------------|-----------------|  
 |APPLICATION_ROLE_CHANGE_PASSWORD_GROUP|このイベントは、アプリケーション ロールのパスワードが変更されるたびに発生します。 [Audit App Role Change Password Event Class](../../../relational-databases/event-classes/audit-app-role-change-password-event-class.md)と同じです。|  
 |AUDIT_CHANGE_GROUP|このイベントは、任意の監査が作成、変更、または削除されるたびに発生します。 このイベントは、任意の監査の仕様が作成、変更、または削除されるたびに発生します。 監査に対する変更はすべてその監査内で監査されます。 [Audit Change Audit Event Class](../../../relational-databases/event-classes/audit-change-audit-event-class.md)と同じです。|  
@@ -93,6 +93,7 @@ ms.locfileid: "70929704"
 |DATABASE_ROLE_MEMBER_CHANGE_GROUP|このイベントは、データベース ロールにログインが追加または削除されるたびに発生します。 このイベント クラスは、sp_addrolemember、sp_changegroup、および sp_droprolemember の各ストアド プロシージャに対して発生します。 このイベントは、任意のデータベースの任意のデータベース ロール メンバーの変更に対して発生します。 [Audit Add Member to DB Role イベント クラス](../../../relational-databases/event-classes/audit-add-member-to-db-role-event-class.md)と同じです。|  
 |DBCC_GROUP|このイベントは、プリンシパルが任意の DBCC コマンドを実行するたびに発生します。 [Audit DBCC Event Class](../../../relational-databases/event-classes/audit-dbcc-event-class.md)と同じです。|  
 |FAILED_DATABASE_AUTHENTICATION_GROUP|プリンシパルが包含データベースにログオンしようとして失敗したことを示します。 このクラスのイベントは、新しい接続によって生じることも、接続プールから再利用された接続によって生じることもあります。 [Audit Login Failed Event Class](../../../relational-databases/event-classes/audit-login-failed-event-class.md)と同じです。|    
+|FAILED_LOGIN_GROUP|プリンシパルが [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] へのログインを試みて失敗したことを示します。 このクラスのイベントは、新しい接続によって生じることも、接続プールから再利用された接続によって生じることもあります。 [Audit Login Failed Event Class](../../../relational-databases/event-classes/audit-login-failed-event-class.md)と同じです。 この監査は、Azure SQL Database には適用されません。| 
 |FULLTEXT_GROUP|フルテキスト イベントが発生したことを示します。 [Audit Fulltext Event Class](../../../relational-databases/event-classes/audit-fulltext-event-class.md)と同じです。|  
 |LOGIN_CHANGE_PASSWORD_GROUP|このイベントは、ALTER LOGIN ステートメントまたは sp_password ストアド プロシージャを使用してログインのパスワードが変更されるたびに発生します。 [Audit Login Change Password Event Class](../../../relational-databases/event-classes/audit-login-change-password-event-class.md)と同じです。|  
 |LOGOUT_GROUP|プリンシパルが [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]からログアウトしたことを示します。 このクラスのイベントは、新しい接続によって生じることも、接続プールから再利用された接続によって生じることもあります。 [Audit Logout Event Class](../../../relational-databases/event-classes/audit-logout-event-class.md)と同じです。|  
@@ -114,7 +115,7 @@ ms.locfileid: "70929704"
 |TRACE_CHANGE_GROUP|このイベントは、ALTER TRACE 権限をチェックするすべてのステートメントで発生します。 [Audit Server Alter Trace Event Class](../../../relational-databases/event-classes/audit-server-alter-trace-event-class.md)と同じです。|  
 |TRANSACTION_GROUP|このイベントは、BEGIN TRANSACTION、ROLLBACK TRANSACTION、COMMIT TRANSACTION の操作で発生し、これらのステートメントの明示的な呼び出しと暗黙のトランザクション操作の両方で発生します。 このイベントは、トランザクションのロールバックによって起こる、個別のステートメントの UNDO 操作によっても発生します。|  
 |USER_CHANGE_PASSWORD_GROUP|このイベントは、包含データベースのユーザーのパスワードが USER ALTER ステートメントを使用して変更されるたびに発生します。|  
-|USER_DEFINED_AUDIT_GROUP|このグループは、[sp_audit_write &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md) の使用によって発生するイベントを監視します。 通常、トリガーまたはストアド プロシージャには、重要なイベントを監査できるようにするために、**sp_audit_write** への呼び出しが含まれています。|  
+|USER_DEFINED_AUDIT_GROUP|このグループは、[sp_audit_write &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md) の使用によって発生するイベントを監視します。 通常、トリガーまたはストアド プロシージャには、重要なイベントを監査できるようにするために、 **sp_audit_write** への呼び出しが含まれています。|  
   
 ### <a name="considerations"></a>考慮事項  
  サーバー レベルのアクション グループは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンス全体のアクションを対象とします。 たとえば、該当するアクション グループをサーバー監査の仕様に追加すると、任意のデータベースの任意のスキーマ オブジェクトのアクセス確認が記録されます。 データベース監査の仕様では、そのデータベースのスキーマ オブジェクト アクセスのみが記録されます。  
@@ -125,11 +126,11 @@ ms.locfileid: "70929704"
  > トランザクション レベルの監査を有効にするとオーバーヘッドが発生するため、[!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] SP2 CU3 および [!INCLUDE[ssSQL17](../../../includes/sssql17-md.md)] CU4 以降では、[情報セキュリティ国際評価基準 (Common Criteria) への準拠] を有効にしていない場合、トランザクション レベルの監査は既定で無効になります。  [情報セキュリティ国際評価基準 (Common Criteria) への準拠] が無効になっている場合でも、TRANSACTION_GROUP から監査の仕様にアクションを追加することはできますが、トランザクション アクションが実際に収集されることはありません。  [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] SP2 CU3 および [!INCLUDE[ssSQL17](../../../includes/sssql17-md.md)] CU4 以降で、TRANSACTION_GROUP からの監査アクションを構成する場合は、[情報セキュリティ国際評価基準 (Common Criteria) への準拠] を有効にすることによって、トランザクション レベルの監査インフラストラクチャを有効にしてください。  なお、[!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] SP1 CU2 以降では、トレース フラグ 3427 でトランザクション レベルの監査を無効にすることもできます。
   
 ## <a name="database-level-audit-action-groups"></a>データベース レベルの監査アクション グループ  
- データベース レベルの監査アクション グループは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セキュリティ監査イベント クラスに似ています。 イベント クラスの詳細については、「 [SQL Server Event Class Reference](../../../relational-databases/event-classes/sql-server-event-class-reference.md)」を参照してください。  
+ データベース レベルの監査アクション グループは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セキュリティ監査イベント クラスに似ています。 イベント クラスの詳細については、「 [SQL Server イベント クラスの参照](../../../relational-databases/event-classes/sql-server-event-class-reference.md)」を参照してください。  
   
  データベース レベルの監査アクション グループと、同等の SQL Server イベント クラス (存在する場合) を次の表に示します。  
   
-|アクション グループ名|[説明]|  
+|アクション グループ名|説明|  
 |-----------------------|-----------------|  
 |APPLICATION_ROLE_CHANGE_PASSWORD_GROUP|このイベントは、アプリケーション ロールのパスワードが変更されるたびに発生します。 [Audit App Role Change Password Event Class](../../../relational-databases/event-classes/audit-app-role-change-password-event-class.md)と同じです。|  
 |AUDIT_CHANGE_GROUP|このイベントは、任意の監査が作成、変更、または削除されるたびに発生します。 このイベントは、任意の監査の仕様が作成、変更、または削除されるたびに発生します。 監査に対する変更はすべてその監査内で監査されます。 [Audit Change Audit Event Class](../../../relational-databases/event-classes/audit-change-audit-event-class.md)と同じです。|  
@@ -159,7 +160,7 @@ ms.locfileid: "70929704"
 ## <a name="database-level-audit-actions"></a>データベース レベルの監査アクション  
  データベース レベルのアクションを使用すると、データベース、スキーマ、およびスキーマ オブジェクト (テーブル、ビュー、ストアド プロシージャ、関数、拡張ストアド プロシージャ、キュー、シノニムなど) で特定のアクションを直接監査することができます。 型、XML スキーマ コレクション、データベース、およびスキーマは監査されません。 スキーマ オブジェクトの監査をスキーマおよびデータベースに構成できます。これは、指定したスキーマまたはデータベースに含まれるすべてのスキーマ オブジェクトのイベントが監査されることを意味します。 データベース レベルの監査アクションを次の表に示します。  
   
-|操作|[説明]|  
+|アクション|説明|  
 |------------|-----------------|  
 |SELECT|このイベントは、SELECT が実行されるたびに発生します。|  
 |UPDATE|このイベントは、UPDATE が実行されるたびに発生します。|  
@@ -179,14 +180,14 @@ ms.locfileid: "70929704"
 ## <a name="audit-level-audit-action-groups"></a>監査レベルの監査アクション グループ  
  監査プロセス内のアクションを監査することもできます。 この監査は、サーバー スコープで行うことも、データベース スコープで行うこともできます。 データベース スコープでは、データベース監査の仕様についてのみ監査が行われます。 監査レベルの監査アクション グループを次の表に示します。  
   
-|アクション グループ名|[説明]|  
+|アクション グループ名|説明|  
 |-----------------------|-----------------|  
 |AUDIT_CHANGE_GROUP|このイベントは、次のいずれかのコマンドが実行されるたびに発生します。<br /><br /> CREATE SERVER AUDIT<br /><br /> ALTER SERVER AUDIT<br /><br /> DROP SERVER AUDIT<br /><br /> CREATE SERVER AUDIT SPECIFICATION<br /><br /> ALTER SERVER AUDIT SPECIFICATION<br /><br /> DROP SERVER AUDIT SPECIFICATION<br /><br /> CREATE DATABASE AUDIT SPECIFICATION<br /><br /> ALTER DATABASE AUDIT SPECIFICATION<br /><br /> DROP DATABASE AUDIT SPECIFICATION|  
   
 ## <a name="related-content"></a>関連コンテンツ  
- [サーバー監査およびサーバー監査の仕様を作成する方法](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)  
+ [サーバー監査およびサーバー監査の仕様を作成する](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)  
   
- [サーバー監査の仕様およびデータベース監査の仕様を作成する方法](../../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md)  
+ [サーバー監査およびデータベース監査の仕様を作成する](../../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md)  
   
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../../t-sql/statements/create-server-audit-transact-sql.md)  
   

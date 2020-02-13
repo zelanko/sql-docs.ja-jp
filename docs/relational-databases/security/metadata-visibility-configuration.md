@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: eba613c3736024de71a67e7cdb749960e91e89ff
-ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68661215"
 ---
 # <a name="metadata-visibility-configuration"></a>メタデータ表示の構成
@@ -79,7 +79,7 @@ END;
 GO  
 ```  
   
- 呼び出し元でのメタデータの表示を可能にするには、呼び出し元にオブジェクト レベル、データベース レベル、サーバー レベルのいずれかの適切なスコープで VIEW DEFINITION 権限を許可できます。 したがって、上記の例では、呼び出し元に `myTable` に対する VIEW DEFINITION 権限が許可されていると、ストアド プロシージャから行が返されます。 詳細については、「[GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)」と「[GRANT &#40;データベースの権限の許可&#41; &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md)」を参照してください。  
+ 呼び出し元でのメタデータの表示を可能にするには、呼び出し元にオブジェクト レベル、データベース レベル、サーバー レベルのいずれかの適切なスコープで VIEW DEFINITION 権限を許可できます。 したがって、上記の例では、呼び出し元に `myTable`に対する VIEW DEFINITION 権限が許可されていると、ストアド プロシージャから行が返されます。 詳細については、「[GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)」と「[GRANT &#40;データベースの権限の許可&#41; &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md)」を参照してください。  
   
  また、ストアド プロシージャを所有者の資格情報で実行するように変更することもできます。 プロシージャの所有者とテーブルの所有者が同じ場合は、所有権の継承が適用されます。したがって、プロシージャの所有者のセキュリティ コンテキストにより、 `myTable`のメタデータにアクセスできます。 このシナリオで次のコードを実行すると、メタデータの行が呼び出し元に返されます。  
   

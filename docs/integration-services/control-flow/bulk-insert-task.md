@@ -19,10 +19,10 @@ ms.assetid: c5166156-6b4c-4369-81ed-27c4ce7040ae
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 00c117a2282216f5f326cbf524f3326af5cc93e1
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294327"
 ---
 # <a name="bulk-insert-task"></a>一括挿入タスク
@@ -71,7 +71,7 @@ ms.locfileid: "71294327"
 ## <a name="custom-log-entries-available-on-the-bulk-insert-task"></a>一括挿入タスクで使用できるカスタム ログ エントリ  
  次の表は、一括挿入タスクのカスタム ログ エントリの一覧です。 詳細については、「[Integration Services (SSIS) のログ記録](../../integration-services/performance/integration-services-ssis-logging.md)」をご覧ください。  
   
-|ログ エントリ|[説明]|  
+|ログ エントリ|説明|  
 |---------------|-----------------|  
 |**BulkInsertTaskBegin**|一括挿入が開始されたことを示します。|  
 |**BulkInsertTaskEnd**|一括挿入が終了したことを示します。|  
@@ -112,7 +112,7 @@ ms.locfileid: "71294327"
   
 ## <a name="related-content"></a>関連コンテンツ  
   
--   support.microsoft.com の技術記事「 [UAC 対応システムで "データを挿入するための SSIS 一括挿入を準備できません" というエラーが発生することがある](https://go.microsoft.com/fwlink/?LinkId=233693)」  
+-   support.microsoft.com の技術記事: [UAC 対応システムで "データを挿入するための SSIS 一括挿入を準備できません" というエラーが発生することがある](https://go.microsoft.com/fwlink/?LinkId=233693)  
   
 -   msdn.microsoft.com の技術記事: [Integration Services のパフォーマンス チューニング技法](https://go.microsoft.com/fwlink/?LinkId=233700)  
   
@@ -132,10 +132,10 @@ ms.locfileid: "71294327"
  **[DestinationTable]**  
  挿入先のテーブルまたはビューの名前を入力するか、テーブルまたはビューを一覧から選択します。  
   
- **Format**  
+ **形式**  
  一括挿入のフォーマットの挿入元を選択します。 このプロパティのオプションを次の表に示します。  
   
-|ReplTest1|[説明]|  
+|Value|説明|  
 |-----------|-----------------|  
 |**[ファイルを使用]**|フォーマット指定が格納されているファイルを選択します。 このオプションを選択すると、動的オプションの **[FormatFile]** が表示されます。|  
 |**[指定]**|フォーマットを指定します。 このオプションを選択すると、動的オプションの **[RowDelimiter]** および **[ColumnDelimiter]** が表示されます。|  
@@ -162,24 +162,24 @@ ms.locfileid: "71294327"
  **[RowDelimiter]**  
  ソース ファイルの行区切り記号を指定します。 既定値は **{CR}{LF}** です。  
   
- **[ColumnDelimiter]**  
+ **[列区切り記号]**  
  ソース ファイルの列区切り記号を指定します。 既定値は **[タブ]** です。  
   
 ## <a name="bulk-insert-task-editor-general-page"></a>[一括挿入タスク エディター] ([全般] ページ)
   **[一括挿入タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用して、一括挿入タスクの名前と説明を指定します。  
   
 ### <a name="options"></a>オプション  
- **[名前]**  
+ **Name**  
  一括挿入タスクに一意の名前を指定します。 この名前は、タスク アイコンのラベルとして使用されます。  
   
 > [!NOTE]  
 >  タスク名はパッケージ内で一意である必要があります。  
   
- **[説明]**  
+ **説明**  
  一括挿入タスクの説明を入力します。  
  
 ## <a name="bulk-insert-task-editor-options-page"></a>[一括挿入タスク エディター] ([オプション] ページ)
-  **[一括挿入タスク エディター]** ダイアログ ボックスの **[オプション]** ページを使用すると、一括挿入操作のプロパティを設定できます。 一括挿入タスクにより、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のテーブルまたはビューに大量のデータがコピーされます。  
+  **[一括挿入タスク エディター]** ダイアログ ボックスの **[オプション]** ページを使用すると、一括挿入操作のプロパティを設定できます。 一括挿入タスクにより、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のテーブルまたはビューに大量のデータがコピーされます。  
   
  一括挿入タスクについては、「[一括挿入タスク](../../integration-services/control-flow/bulk-insert-task.md)」および「[「BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)」を参照してください。  
   
@@ -199,17 +199,17 @@ ms.locfileid: "71294327"
  **[FirstRow]**  
  コピーを開始する最初の行を指定します。  
   
- **[一括挿入タスク エディター]**  
- |項目|定義|  
+ **[オプション]**  
+ |期間|定義|  
 |----------|----------------|  
 |**CHECK 制約**|テーブルおよび列に対する制約をチェックします。|  
 |**[NULL を保持する]**|空の列に任意の既定値を挿入する代わりに、一括挿入操作中に NULL 値を保持します。|  
-|**[ID 挿入を許可する]**|ID 列に既存の値を挿入します。|  
+|**ID 挿入を許可する**|ID 列に既存の値を挿入します。|  
 |**[テーブル ロック]**|一括挿入中にテーブルをロックします。|  
 |**[トリガーを起動する]**|テーブル上のすべての挿入トリガー、更新トリガー、および削除トリガーを起動します。|  
   
  **SortedData**  
- 一括挿入ステートメントに ORDER BY 句を指定します。 指定する列名は、挿入先テーブル内の有効な列でなければなりません。 既定値は **false**です。 これは、データが ORDER BY 句によって並べ替えられないことを意味します。  
+ 一括挿入ステートメントに ORDER BY 句を指定します。 指定する列名は、挿入先テーブル内の有効な列でなければなりません。 既定値は **false** です。 これは、データが ORDER BY 句によって並べ替えられないことを意味します。  
   
  **[MaxErrors]**  
  一括挿入操作が取り消されるまでに発生が許可される最大エラー数を指定します。 0 の値は、許可されるエラー数が無制限であることを示します。  

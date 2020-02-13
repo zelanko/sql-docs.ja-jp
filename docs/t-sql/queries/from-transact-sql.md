@@ -35,10 +35,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: bcf4dc79c1b241d4a9f48a3d211c13871e32b711
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981970"
 ---
 # <a name="from-clause-plus-join-apply-pivot-transact-sql"></a>FROM 句と JOIN、APPLY、PIVOT (Transact-SQL)
@@ -229,7 +229,7 @@ FROM { <table_source> [ ,...n ] }
  *derived_table*  
  データベースから行を取得するサブクエリです。 *derived_table* は 1 つ上のレベルのクエリへの入力として使用されます。  
   
- *derived* *_table* では、[!INCLUDE[tsql](../../includes/tsql-md.md)] テーブル値コンストラクター機能を使用して、複数の行を指定できます。 たとえば、`SELECT * FROM (VALUES (1, 2), (3, 4), (5, 6), (7, 8), (9, 10) ) AS MyTable(a, b);` のようになります。 詳細については、「[テーブル値コンストラクター &#40;Transact-SQL&#41;](../../t-sql/queries/table-value-constructor-transact-sql.md)」を参照してください。  
+ *derived* *_table* では、[!INCLUDE[tsql](../../includes/tsql-md.md)] テーブル値コンストラクター機能を使用して、複数の行を指定できます。 たとえば、「 `SELECT * FROM (VALUES (1, 2), (3, 4), (5, 6), (7, 8), (9, 10) ) AS MyTable(a, b);` 」のように入力します。 詳細については、「[テーブル値コンストラクター &#40;Transact-SQL&#41;](../../t-sql/queries/table-value-constructor-transact-sql.md)」を参照してください。  
   
  *column_alias*  
  派生テーブルの結果セット内の列名に対する別名です。このパラメーターは省略可能です。 選択リストの各列の別名を 1 つずつ含みます。列の別名リスト全体をかっこで囲みます。  
@@ -279,7 +279,7 @@ FROM { <table_source> [ ,...n ] }
 ### <a name="joined-table"></a>結合テーブル 
 結合テーブルは、2 つ以上のテーブルの積である結果セットです。 複数の結合については、かっこを使って結合の順序を変更できます。  
   
-### <a name="join-type"></a>[結合の種類]
+### <a name="join-type"></a>結合の種類
 結合操作の種類を指定します。  
   
  INNER  
@@ -409,7 +409,7 @@ ON (p.ProductID = v.ProductID);
  ALL  
  現在のテーブルと、履歴テーブルの両方からのすべての行から値を持つテーブルを返します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  FROM 句は、結合テーブルと派生テーブルに対して SQL-92-SQL 構文がサポートされています。 SQL-92 構文には、INNER、LEFT OUTER、RIGHT OUTER、FULL OUTER、および CROSS 結合演算子が用意されています。  
   
  FROM 句内での UNION と JOIN は、ビュー内で、および派生テーブルやサブクエリ内でサポートされています。  
@@ -456,7 +456,7 @@ APPLY 演算子は、FROM 句のテーブル ソースを作成するために�
 ## <a name="permissions"></a>アクセス許可  
  DELETE、SELECT、または UPDATE ステートメントに対する権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-using-a-simple-from-clause"></a>A. 単純な FROM 句を使用する  
  次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] サンプル データベース内の `TerritoryID` テーブルから `Name` および `SalesTerritory` 列を取得します。  
@@ -593,7 +593,7 @@ FROM Sales.Customer TABLESAMPLE SYSTEM (10 PERCENT) ;
 ### <a name="k-using-apply"></a>K. APPLY の使用  
 次の例では、次のテーブルとテーブル値関数がデータベース内に存在することを前提としています。  
 
-|[オブジェクト名]|[列名]|      
+|オブジェクト名|[列名]|      
 |---|---|   
 |Departments|DeptID、DivisionID、DeptName、DeptMgrID|      
 |EmpMgr|MgrID、EmpID|     
@@ -697,9 +697,9 @@ FOR SYSTEM_TIME FROM @AsOfFrom TO @AsOfTo
 WHERE ManagerID = 5;
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="n-using-the-inner-join-syntax"></a>N. INNER JOIN 構文を使用する  
+### <a name="n-using-the-inner-join-syntax"></a>北 INNER JOIN 構文を使用する  
  次の例では、`FactInternetSales` テーブルと `DimProduct` テーブルから、結合キー `ProductKey` が両方のテーブルで一致する、`SalesOrderNumber`、`ProductKey`、`EnglishProductName` の列を返します。 `SalesOrderNumber` 列と`EnglishProductName` 列はそれぞれ、どちらか一方のテーブルにしか存在しないため、示されているように、これらの列を持つテーブルの別名を指定する必要はありません。これらの別名は読みやすくするために含まれています。 別名の前の **AS** という単語は必須ではありませんが、読みやすくするためと ANSI 標準に準拠するため、推奨されています。  
   
 ```sql

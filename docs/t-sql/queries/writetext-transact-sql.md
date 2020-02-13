@@ -24,10 +24,10 @@ ms.assetid: 80c252fd-a8b8-4a2e-888a-059081ed4109
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: c10e7259062316454e4e0ecf430f6fdb87c53caf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67948102"
 ---
 # <a name="writetext-transact-sql"></a>WRITETEXT (Transact-SQL)
@@ -68,7 +68,7 @@ WRITETEXT [BULK]
  *data*  
  格納する実際の **text**、**ntext**、または **image** データです。 *data* には、リテラルまたはパラメーターを指定することができます。 WRITETEXT を使用して対話的に挿入可能なテキスト長の最大値は、**text**、**ntext**、および **image** データで約 120 KB です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  WRITETEXT を使用して **text**、**ntext**、および **image** データを置き換え、UPDATETEXT を使用して **text**、**ntext**、および **image** データを変更します。 UPDATETEXT は、**text**、**ntext**、または **image** 列の全体ではなく一部のみを変更するため柔軟性があります。  
   
  最高のパフォーマンスが得られるよう、8,040 バイトの倍数の単位で **text**、**ntext**、および **image** データを挿入または更新することをお勧めします。  
@@ -89,7 +89,7 @@ WRITETEXT [BULK]
 ## <a name="permissions"></a>アクセス許可  
  指定したテーブルの UPDATE 権限が必要です。 UPDATE 権限が転送されるときに、この権限は譲渡できます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、テキスト ポインターをローカル変数 `@ptrval` に置き、`WRITETEXT` が指す行に `@ptrval` で新しいテキスト文字列を入れます。  
   
 > [!NOTE]  

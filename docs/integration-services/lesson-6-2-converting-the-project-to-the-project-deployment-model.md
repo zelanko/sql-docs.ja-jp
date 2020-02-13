@@ -11,10 +11,10 @@ ms.assetid: 80964293-f1f5-4da7-b1fb-00ab8c30c1c5
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 0563ceff3185f856692292884fe63e79c16e4216
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295881"
 ---
 # <a name="lesson-6-2-convert-the-project-to-the-project-deployment-model"></a>レッスン 6-2:プロジェクトをプロジェクト配置モデルに変換する
@@ -27,7 +27,7 @@ ms.locfileid: "71295881"
   
 1.  **[プロジェクト]** メニューの **[プロジェクト配置モデルに変換]** を選択します。  
   
-2.  **[Integration Services プロジェクトの変換ウィザードの概要]** **ページで**、手順を確認して **[次へ]** を選択します。  
+2.  **[Integration Services プロジェクトの変換ウィザードの概要]** **概要**ページで、手順を確認して **[次へ]** を選択します。  
   
 3.  **[パッケージの選択]** ページの **[パッケージ]** の一覧で、 **[Lesson 6.dtsx]** を除くすべてのチェック ボックスをオフにし、 **[次へ]** を選択します。  
   

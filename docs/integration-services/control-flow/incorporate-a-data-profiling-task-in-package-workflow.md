@@ -13,10 +13,10 @@ ms.assetid: 39a51586-6977-4c45-b80b-0157a54ad510
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9acb58bf89d23e58ac23f96141f2a5b4dd551019
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294119"
 ---
 # <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>パッケージ ワークフローでデータ プロファイル タスクを使用する
@@ -49,7 +49,7 @@ ms.locfileid: "71294119"
   
  データ プロファイル タスクをパッケージのワークフローに組み込む場合は、このタスクの次の 2 つの機能に注意してください。  
   
--   **タスクの出力**。 データ プロファイル タスクは、DataProfile.xsd スキーマに従って、その出力をファイルまたはパッケージ変数に XML 形式で書き込みます。 そのため、パッケージの条件ワークフローでプロファイルの結果を使用する場合は、XML 出力に対してクエリを実行する必要があります。 Xpath クエリ言語を使用すると、この XML 出力に対して簡単にクエリを実行できます。 この XML 出力の構造を調べるために、サンプルの出力ファイル、またはスキーマ自体を開くことができます。 出力ファイルまたはスキーマを開くには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]やその他の XML エディター、またはメモ帳などのテキスト エディターを使用できます。  
+-   **タスクの出力**。 データ プロファイル タスクは、DataProfile.xsd スキーマに従って、その出力をファイルまたはパッケージ変数に XML 形式で書き込みます。 そのため、パッケージの条件ワークフローでプロファイルの結果を使用する場合は、XML 出力に対してクエリを実行する必要があります。 Xpath クエリ言語を使用すると、この XML 出力に対して簡単にクエリを実行できます。 この XML 出力の構造を調べるために、サンプルの出力ファイル、またはスキーマ自体を開くことができます。 出力ファイルまたはスキーマを開くには、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] やその他の XML エディター、またはメモ帳などのテキスト エディターを使用できます。  
   
     > [!NOTE]  
     >  Data Profile Viewer に表示されるプロファイルの結果には、出力で直接見つからない、計算された値もあります。 たとえば、列の NULL 比プロファイルの出力には、行の総数と、NULL 値を含む行の総数が含まれます。 列の NULL 比を取得するには、この 2 つの値に対してクエリを実行してから、NULL 値を含む行の比率を計算します。  
@@ -333,6 +333,6 @@ ms.locfileid: "71294119"
   
 ## <a name="see-also"></a>参照  
  [データ プロファイル タスクのセットアップ](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)   
- [Data Profile Viewer (Data Profile Viewer)](../../integration-services/control-flow/data-profile-viewer.md)  
+ [Data Profile Viewer](../../integration-services/control-flow/data-profile-viewer.md)  
   
   

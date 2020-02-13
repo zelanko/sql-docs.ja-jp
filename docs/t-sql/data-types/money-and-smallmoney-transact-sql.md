@@ -25,10 +25,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7ad26acc2f1e23b61e9692dcf2720d7ee6dd8639
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68077812"
 ---
 # <a name="money-and-smallmoney-transact-sql"></a>money と smallmoney (Transact-SQL)
@@ -36,9 +36,9 @@ ms.locfileid: "68077812"
 
 金額値または通貨値を表すデータ型。
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
-|データ型|範囲|ストレージ|  
+|データ型|Range|ストレージ|  
 |---|---|---|
 |**money**|-922,337,203,685,477.5808 ～ 922,337,203,685,477.5807 (Informatica では -922,337,203,685,477.58<br />～ 922,337,203,685,477.58。  Informatica では、小数点以下 4 桁ではなく、小数点以下 2 桁 のみをサポートします。)|8 バイト|  
 |**smallmoney**|- 214,748.3648 ～ 214,748.3647|4 バイト|  
@@ -49,7 +49,7 @@ ms.locfileid: "68077812"
   
 これらのデータ型では、次の通貨記号のいずれかを使用できます。
   
-![通貨記号と 16 進値の表](../../t-sql/data-types/media/money01.gif "通貨記号と 16 進値の表")
+![通貨記号と 16 進数値のテーブル](../../t-sql/data-types/media/money01.gif "通貨記号と 16 進数値のテーブル")
   
 通貨データまたは金額データは、単一引用符 (') で囲む必要はありません。 通貨記号が前に付いた金額値を指定することはできますが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はその記号に関連付けられた通貨情報を格納せず、数値のみを格納することに注意してください。
   

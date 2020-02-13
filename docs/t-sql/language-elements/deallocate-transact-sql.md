@@ -22,10 +22,10 @@ ms.assetid: c75cf73d-0268-4c57-973d-b8a84ff801fa
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 92153155be5761e804c6d62cece4d392b40a1412
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67894898"
 ---
 # <a name="deallocate-transact-sql"></a>DEALLOCATE (Transact-SQL)
@@ -48,7 +48,7 @@ DEALLOCATE { { [ GLOBAL ] cursor_name } | @cursor_variable_name }
  @*cursor_variable_name*  
  **cursor** 変数の名前を指定します。 @*cursor_variable_name* は **cursor** 型である必要があります。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 カーソルを操作するステートメントでは、カーソル名またはカーソル変数を使用してカーソルを参照します。 `DEALLOCATE` を実行すると、カーソルと、カーソル名またはカーソル変数との間の関係が削除されます。 名前または変数がカーソルを参照する最後のものである場合は、カーソルの割り当てが解除され、カーソルが使用しているリソースが解放されます。 フェッチの孤立を防ぐために使用するスクロール ロックは、`DEALLOCATE` で解放されます。 カーソルを介して行われる位置指定更新を含め、更新を保護するために使用するトランザクション ロックは、トランザクションの終了時まで保持されます。  
   
 `DECLARE CURSOR` ステートメントでは、カーソルを割り当て、カーソル名と関連付けます。  
@@ -99,7 +99,7 @@ GO
 ## <a name="permissions"></a>アクセス許可  
  `DEALLOCATE` のアクセス許可は、既定ですべての有効なユーザーに与えられます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、最後の名前まで、またはカーソルを参照している変数の割り当てが解除されるまで、カーソルが保持されます。  
   
 ```sql  

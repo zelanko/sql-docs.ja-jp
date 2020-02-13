@@ -18,10 +18,10 @@ ms.assetid: a86900e2-450e-479f-b207-e1b02361d395
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a6cd2bbabd1cae5fd23dd0522c9664d39b66084f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298526"
 ---
 # <a name="msmq-connection-manager"></a>MSMQ 接続マネージャー
@@ -44,7 +44,7 @@ ms.locfileid: "71298526"
 |[キューの種類]|パスのサンプル|  
 |----------------|-----------------|  
 |パブリック|\<コンピューター名>\\<キュー名\>|  
-|Private|\<コンピューター名>\Private$\\<キュー名\>|  
+|プライベート|\<コンピューター名>\Private$\\<キュー名\>|  
   
  ピリオド (.) を使用してローカル コンピューターを表すことができます。  
   
@@ -64,10 +64,10 @@ ms.locfileid: "71298526"
 >  MSMQ 接続マネージャーでは、ローカルのパブリック キューと専用キュー、およびリモートのパブリック キューがサポートされています。 リモートの専用キューはサポートされていません。 スクリプト タスクを使用する回避策については、「 [スクリプト タスクによるリモート プライベート メッセージ キューへの送信](../../integration-services/extending-packages-scripting-task-examples/sending-to-a-remote-private-message-queue-with-the-script-task.md)」を参照してください。  
   
 ### <a name="options"></a>オプション  
- **[名前]**  
+ **Name**  
  ワークフローにおける MSMQ 接続マネージャーの一意な名前を指定します。 指定された名前は、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーに表示されます。  
   
- **[説明]**  
+ **説明**  
  接続マネージャーの説明を記述します。 パッケージを自己文書化して目的を明確にし、保守が容易になるように、接続マネージャーの目的について記述することをお勧めします。  
   
  **[パス]**  
@@ -76,7 +76,7 @@ ms.locfileid: "71298526"
 |[キューの種類]|パスのサンプル|  
 |----------------|-----------------|  
 |パブリック|\<コンピューター名>\\<キュー名\>|  
-|Private|\<コンピューター名>\Private$\\<キュー名\>|  
+|プライベート|\<コンピューター名>\Private$\\<キュー名\>|  
   
  "." を使用してローカル コンピューターを表すことができます。  
   

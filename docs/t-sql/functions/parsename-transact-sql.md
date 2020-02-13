@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9b36e31e163999a6af70b498fef9d65c2ce0ae55
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843617"
 ---
 # <a name="parsename-transact-sql"></a>PARSENAME (Transact-SQL)
@@ -63,7 +63,7 @@ PARSENAME ( 'object_name' , object_piece )
 ## <a name="return-types"></a>戻り値の型  
  **sysname**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  次のいずれかの条件に該当する場合、PARSENAME は NULL を返します。  
   
 -   いずれか *object_name* または *object_piece* は NULL です。  
@@ -72,7 +72,7 @@ PARSENAME ( 'object_name' , object_piece )
   
  要求したオブジェクトの部分の長さが 0 で、有効な [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別子ではない。 長さ 0 のオブジェクト名は完全修飾名を無効とします。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では使用 `PARSENAME` 情報を返す、 `Person` テーブルに、 `AdventureWorks2012` データベース。  
   
 ```  

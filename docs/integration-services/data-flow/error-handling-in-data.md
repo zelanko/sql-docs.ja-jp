@@ -23,10 +23,10 @@ ms.assetid: c61667b4-25cb-4d45-a52f-a733e32863f4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 994018ab8b574bc313072f7a353ff999d645e0d9
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71292761"
 ---
 # <a name="error-handling-in-data"></a>データのエラー処理
@@ -79,7 +79,7 @@ ms.locfileid: "71292761"
   
  **関連トピック:** [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)  
   
- **[説明]**  
+ **説明**  
  操作の説明を表示します。  
   
  **[選択したセルに設定する値]**  
@@ -98,7 +98,7 @@ ms.locfileid: "71292761"
 ## <a name="select-an-error-handling-option"></a>エラー処理オプションの選択  
  変換元、変換、および変換先によるエラーと切り捨ての処理方法を構成できます。 次の表では、このオプションについて説明します。  
   
-|オプション|[説明]|  
+|オプション|説明|  
 |------------|-----------------|  
 |エラー コンポーネント|エラーまたは切り捨てが発生すると、データ フロー タスクは失敗します。 [失敗] は、エラーおよび切り捨ての既定のオプションです。|  
 |エラーを無視する|エラーまたは切り捨ては無視され、データ行は変換または変換元の出力に送られます。|  
@@ -152,7 +152,7 @@ ms.locfileid: "71292761"
  [データ フロー](../../integration-services/data-flow/data-flow.md)   
  [変換を使用してデータを変換する](../../integration-services/data-flow/transformations/transform-data-with-transformations.md)   
  [パスを使用してコンポーネントを連結する](https://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8)   
- [[データ フロー タスク]](../../integration-services/control-flow/data-flow-task.md)   
+ [データ フロー タスク](../../integration-services/control-flow/data-flow-task.md)   
  [データ フロー](../../integration-services/data-flow/data-flow.md)  
   
   

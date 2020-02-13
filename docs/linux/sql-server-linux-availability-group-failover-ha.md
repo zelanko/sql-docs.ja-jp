@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
 ms.openlocfilehash: e887c718c76563a7fcd8388c46a3e9e684faf6d5
-ms.sourcegitcommit: 0c6c1555543daff23da9c395865dafd5bb996948
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70304850"
 ---
 # <a name="always-on-availability-group-failover-on-linux"></a>Linux での Always On 可用性グループのフェールオーバー
@@ -117,13 +117,13 @@ ms.locfileid: "70304850"
 
 1. AG リソースがクラスターによって管理されなくなっていることを確認します。 
 
-      - ターゲット クラスター ノードで、リソースをアンマネージド モードに設定します。 このコマンドでは、リソースの監視と管理を停止するように、リソース エージェントに通知されます。 例: 
+      - ターゲット クラスター ノードで、リソースをアンマネージド モードに設定します。 このコマンドでは、リソースの監視と管理を停止するように、リソース エージェントに通知されます。 次に例を示します。 
       
       ```bash
       sudo pcs resource unmanage <resourceName>
       ```
 
-      - リソース モードをアンマネージド モードに設定しようとして失敗する場合は、リソースを削除します。 例:
+      - リソース モードをアンマネージド モードに設定しようとして失敗する場合は、リソースを削除します。 次に例を示します。
 
       ```bash
       sudo pcs resource delete <resourceName>
@@ -166,7 +166,7 @@ ms.locfileid: "70304850"
 
 自動フェールオーバーには、少なくとも 1 つの同期レプリカが必要です。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 [SQL Server 可用性グループ クラスター リソースに対して Red Hat Enterprise Linux クラスターを構成する](sql-server-linux-availability-group-cluster-rhel.md)
 

@@ -20,10 +20,10 @@ ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 261f22847c8b397d57ff5f732ea4d97091895daa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67939202"
 ---
 # <a name="enhance-merge-replication-performance"></a>マージ レプリケーション パフォーマンスの向上
@@ -34,7 +34,7 @@ ms.locfileid: "67939202"
   
 -   行フィルターおよび結合フィルター内で使用される列にインデックスを作成する。  
   
-     パブリッシュされたアーティクルに行フィルターを使用する際には、フィルターの WHERE 句で使用する各列にインデックスを作成します。 インデックスがない場合、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、行をパーティション内に含めるかどうかを決定するためにテーブル内の各行を読み取る必要があります。 インデックスがあると、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、含める行をすばやく見つけられます。 レプリケーションがインデックスのみを基にフィルターの WHERE 句を完全に解決できる場合、最高の処理速度になります。  
+     パブリッシュされたアーティクルに行フィルターを使用する際には、フィルターの WHERE 句で使用する各列にインデックスを作成します。 インデックスがない場合、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、行をパーティション内に含めるかどうかを決定するためにテーブル内の各行を読み取る必要があります。 インデックスがあると、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、含める行をすばやく見つけられます。 レプリケーションがインデックスのみを基にフィルターの WHERE 句を完全に解決できる場合、最高の処理速度になります。  
   
      また、結合フィルターで使用するすべての列に対してもインデックスを作成することが重要です。 マージ エージェントは、実行時にベース テーブルを検索して、パーティションに含める親テーブルの行と関連テーブルの行を判断します。 結合された列のインデックスを作成すれば、マージ エージェントを実行するたびに [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] がテーブルの各行を読み取る必要はなくなります。  
   
@@ -103,7 +103,7 @@ ms.locfileid: "67939202"
   
 -   サブスクリプションが高速接続を介して同期され、パブリッシャーおよびサブスクライバーから変更が送信される場合は、マージ エージェントに対して **-ParallelUploadDownload** パラメーターを使用する。  
   
-     [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] で、新しいマージ エージェント パラメーターである **–ParallelUploadDownload**が導入されました。 このパラメーターを設定することによって、マージ エージェントはパブリッシャーにアップロードされた複数の変更およびサブスクライバーにダウンロードされた複数の変更を並列処理できるようになります。 これは、帯域幅が広いネットワークを使用している大容量環境において役立ちます。 エージェント パラメーターは、エージェント プロファイルおよびコマンド ラインで指定できます。 詳細については、以下をご覧ください。  
+     [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] で、新しいマージ エージェント パラメーターである **–ParallelUploadDownload**が導入されました。 このパラメーターを設定することによって、マージ エージェントはパブリッシャーにアップロードされた複数の変更およびサブスクライバーにダウンロードされた複数の変更を並列処理できるようになります。 これは、帯域幅が広いネットワークを使用している大容量環境において役立ちます。 エージェント パラメーターは、エージェント プロファイルおよびコマンド ラインで指定できます。 詳細については、次を参照してください。  
   
     -   [レプリケーション エージェント プロファイルの操作](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
   
@@ -115,7 +115,7 @@ ms.locfileid: "67939202"
   
 -   LOB 列を含む行など、大量のデータを含むデータ行を同期すると、Web 同期から追加メモリの割り当てが要求され、パフォーマンスが低下する場合があります。 この動作は、マージ エージェントから生成された XML メッセージに、大量のデータを含むデータ行が過剰に含まれている場合に発生します。 マージ エージェントが Web 同期中に使用するリソースが多すぎる場合は、次のいずれかの方法を使用して、1 つのメッセージで送信される行の数を減らします。  
   
-    -   マージ エージェントで低速リンク エージェント プロファイルを使用する。 詳しくは、「 [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md)」をご覧ください。  
+    -   マージ エージェントで低速リンク エージェント プロファイルを使用する。 詳しくは、「 [レプリケーション エージェント プロファイル](../../../relational-databases/replication/agents/replication-agent-profiles.md)」をご覧ください。  
   
     -   マージ エージェントの **-DownloadGenerationsPerBatch** パラメーターと **-UploadGenerationsPerBatch** パラメーターの値を 10 未満に減らす。 これらのパラメーターの既定値は 50 です。  
   

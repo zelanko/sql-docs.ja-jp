@@ -23,10 +23,10 @@ ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a40336899e804ee634cf586078ec7c219f31c486
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297877"
 ---
 # <a name="script-component"></a>スクリプト コンポーネント
@@ -65,7 +65,7 @@ ms.locfileid: "71297877"
  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーでは、スクリプト コンポーネントにメタデータ デザイン モードとコード デザイン モードの 2 つのモードがあります。 メタデータ デザイン モードでは、スクリプト コンポーネントの入力と出力を追加および変更できますが、コードは記述できません。 すべての入力と出力を構成した後に、コード デザイン モードに切り替え、スクリプトを記述します。 スクリプト コンポーネントは、入力と出力のメタデータから、基本コードを自動的に生成します。 スクリプト コンポーネントで基本コードを生成した後にメタデータを変更すると、更新された基本コードと互換性がない可能性があるため、記述したコードをコンパイルできないことがあります。  
   
 ## <a name="writing-the-script-that-the-component-uses"></a>コンポーネントが使用するスクリプトの記述  
- スクリプト コンポーネントでは、スクリプトを記述する環境として [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) を使用します。 **スクリプト変換エディター**から VSTA にアクセスします。 詳細については、「 [スクリプト変換エディター ([スクリプト] ページ)](../../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md)」を参照してください。  
+ スクリプト コンポーネントでは、スクリプトを記述する環境として [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) が使用されます。 **スクリプト変換エディター**から VSTA にアクセスします。 詳細については、「 [スクリプト変換エディター ([スクリプト] ページ)](../../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md)」を参照してください。  
   
  スクリプト コンポーネントでは、コンポーネントのメタデータを表す、ScriptMain という名前の自動生成クラスが含まれる VSTA プロジェクトが用意されています。 たとえば、スクリプト コンポーネントを 3 つの出力を持つ変換として使用する場合、ScriptMain には各出力のメソッドが含まれます。 ScriptMain は、スクリプトに対するエントリ ポイントです。  
   
@@ -117,7 +117,7 @@ ms.locfileid: "71297877"
   
  スクリプト コンポーネントの詳細については、「[スクリプト コンポーネント エディターでのスクリプト コンポーネントの構成](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)」を参照してください。 スクリプト コンポーネントのプログラミングの詳細については、「 [スクリプト コンポーネントによるデータ フローの拡張](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)」を参照してください。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>オプション  
  **[変換元]** 、 **[変換先]** 、または **[変換]** のどれを選択するかに応じて、スクリプト変換の構成とスクリプト変換エディターのページが変わります。  
   
 ## <a name="script-transformation-editor-connection-managers-page"></a>[スクリプト変換エディター] ([接続マネージャー] ページ)
@@ -125,23 +125,23 @@ ms.locfileid: "71297877"
   
  スクリプト コンポーネントの詳細については、「[スクリプト コンポーネント エディターでのスクリプト コンポーネントの構成](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)」を参照してください。 スクリプト コンポーネントのプログラミングの詳細については、「 [スクリプト コンポーネントによるデータ フローの拡張](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)」を参照してください。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>オプション  
  **Connection managers**  
  スクリプトで使用できる接続の一覧を表示します。  
   
- **名前**  
+ **Name**  
  接続を表す一意な名前を入力します。  
   
  **接続マネージャー**  
  使用できる接続マネージャーの一覧から選択するか、[ **\<新しい接続>** ] を選択して **[SSIS 接続マネージャーの追加]** ダイアログ ボックスを開きます。  
   
- **[説明]**  
+ **説明**  
  接続の説明を入力します。  
   
- **[追加]**  
+ **追加**  
  **[接続マネージャー]** の一覧に、他の接続を追加します。  
   
- **[削除]**  
+ **Remove**  
  **[接続マネージャー]** の一覧から、選択した接続を削除します。  
   
 ## <a name="script-transformation-editor-input-columns-page"></a>[スクリプト変換エディター] ([入力列] ページ)
@@ -152,7 +152,7 @@ ms.locfileid: "71297877"
   
  スクリプト コンポーネントの詳細については、「[スクリプト コンポーネント エディターでのスクリプト コンポーネントの構成](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)」を参照してください。 スクリプト コンポーネントのプログラミングの詳細については、「 [スクリプト コンポーネントによるデータ フローの拡張](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)」を参照してください。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>オプション  
  **[入力名]**  
  使用できる入力の一覧から選択します。  
   
@@ -176,7 +176,7 @@ ms.locfileid: "71297877"
   
  スクリプト コンポーネントの詳細については、「[スクリプト コンポーネント エディターでのスクリプト コンポーネントの構成](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)」を参照してください。 スクリプト コンポーネントのプログラミングの詳細については、「 [スクリプト コンポーネントによるデータ フローの拡張](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)」を参照してください。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>オプション  
  **Inputs and outputs**  
  左側で入力または出力を選択すると、右側の表にプロパティが表示されます。 編集に使用できるプロパティは、選択内容によって異なります。 表示されるプロパティの多くは読み取り専用です。 各プロパティの詳細については、次のトピックを参照してください。  
   
@@ -201,15 +201,15 @@ ms.locfileid: "71297877"
   
  スクリプト コンポーネントの詳細については、「[スクリプト コンポーネント エディターでのスクリプト コンポーネントの構成](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)」を参照してください。 スクリプト コンポーネントのプログラミングの詳細については、「 [スクリプト コンポーネントによるデータ フローの拡張](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)」を参照してください。  
   
-### <a name="options"></a>および  
- **[プロパティ]**  
+### <a name="options"></a>オプション  
+ **Properties**  
  スクリプト変換のプロパティを表示および変更します。 表示されるプロパティの多くは読み取り専用です。 以下のプロパティを変更できます。  
   
-|ReplTest1|Description|  
+|Value|説明|  
 |-----------|-----------------|  
-|**[説明]**|スクリプト変換の目的を記述します。|  
+|**説明**|スクリプト変換の目的を記述します。|  
 |**LocaleID**|ロケールを指定して、順序付けおよび日時の変換に関する地域固有の情報を提供します。|  
-|**名前**|わかりやすいコンポーネント名を入力します。|  
+|**Name**|わかりやすいコンポーネント名を入力します。|  
 |**[ValidateExternalMetadata]**|スクリプト変換において、デザイン時に外部データ ソースに対して列のメタデータを検証するかどうかを示します。 値 **false** を設定した場合、検証は実行時まで延期されます。|  
 |**[ReadOnlyVariables]**|スクリプト変換が読み取り専用でアクセスする変数の、コンマ区切りの一覧を入力します。<br /><br /> 注:変数名の大文字と小文字は区別されます。|  
 |**[ReadWriteVariables]**|スクリプト変換が読み取り/書き込み用にアクセスする変数の、コンマ区切りの一覧を入力します。<br /><br /> 注:変数名の大文字と小文字は区別されます。|  

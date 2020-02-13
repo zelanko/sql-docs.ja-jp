@@ -12,10 +12,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e518d4021e4c78d4716f80c7f63f9a18bc1908be
-ms.sourcegitcommit: 3be14342afd792ff201166e6daccc529c767f02b
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/18/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68307630"
 ---
 # <a name="columnstore-indexes---data-loading-guidance"></a>列ストア インデックス - データ読み込みガイダンス
@@ -31,7 +31,7 @@ ms.locfileid: "68307630"
 
 一括読み込みを実行するには、[bcp ユーティリティ](../../tools/bcp-utility.md)、[Integration Services](../../integration-services/sql-server-integration-services.md) を使用したり、ステージング テーブルから行を選択したりすることができます。
 
-![クラスター化列ストア インデックスへの読み込み](../../relational-databases/indexes/media/sql-server-pdw-columnstore-loadprocess.gif "Loading into a clustered columnstore index")  
+![クラスター化列ストア インデックスへの読み込み](../../relational-databases/indexes/media/sql-server-pdw-columnstore-loadprocess.gif "クラスター化列ストア インデックスへの読み込み")  
   
 上記の図に示すように、一括読み込みでは、
   
@@ -74,7 +74,7 @@ SELECT object_id, index_id, partition_number, row_group_id, delta_store_hobt_id,
 FROM sys.dm_db_column_store_row_group_physical_stats  
 ```  
   
- ![一括読み込みの行グループとデルタストア](../../relational-databases/indexes/media/sql-server-pdw-columnstore-batchload.gif "Rowgroup and deltastore for a batch load")  
+ ![バッチ読み込みの行グループとデルタストア](../../relational-databases/indexes/media/sql-server-pdw-columnstore-batchload.gif "バッチ読み込みの行グループとデルタストア")  
   
 ## <a name="use-a-staging-table-to-improve-performance"></a>ステージング テーブルを使用してパフォーマンスを向上させる
 さらに変換を実行する前で、ステージングにのみデータを読み込んでいる場合は、ヒープ テーブルにデータを読み込むほうが、クラスター化列ストア テーブルにデータを読み込むよりも高速になります。 さらに、[一時テーブル][Temporary] へのデータの読み込みも、永続記憶域にテーブルを読み込むよりも高速になります。  
@@ -125,6 +125,6 @@ ALTER INDEX <index-name> on <table-name> REORGANIZE with (COMPRESS_ALL_ROW_GROUP
 ## <a name="how-loading-into-a-partitioned-table-works"></a>パーティション テーブルへの読み込みのしくみ  
  パーティション分割されたデータの場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はまずパーティションに各行を割り当て、次にパーティション内のデータの columnstore 処理を実行します。 各パーティションには、独自の行グループと少なくとも 1 つのデルタ行グループがあります。  
   
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 2015 年 3 月 11 日に記述されたブログが _techcommunity_ でホストされています。[Data Loading performance considerations with Clustered Columnstore indexes (クラスター化列ストア インデックスでのデータ読み込みのパフォーマンスに関する考慮事項)](https://techcommunity.microsoft.com/t5/DataCAT/Data-Loading-performance-considerations-with-Clustered/ba-p/305223)

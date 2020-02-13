@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7f31e3894448e5d6a044af75c7e86b704b993aa6
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71682016"
 ---
 # <a name="float-and-real-transact-sql"></a>float 型と real 型 (Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "71682016"
 ## <a name="syntax"></a>構文  
 **float** [ **(** _n_ **)** ]。*n* は、科学的表記法で **float** 数の仮数部を格納するために使用されるビット数であるため、精度と格納サイズを指示します。 *n* を指定する場合、**1** から **53** までの値にする必要があります。 *n* の既定値は **53** です。
   
-|*n* 値|有効桁数|ストレージ サイズ|  
+|*n* 値|Precision|ストレージ サイズ|  
 |---|---|---|
 |**1 ～ 24**|7 桁|4 バイト|  
 |**25-53**|15 桁|8 バイト|  
@@ -48,11 +48,11 @@ ms.locfileid: "71682016"
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、*n* は次の 2 つの値のいずれかの値として扱われます。 **1**<=n<=**24** の場合、*n* は **24** として処理されます。 **25**<=n<=**53** の場合、*n* は **53** として処理されます。  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **float** **[(n)]** データ型は、*n* (**1** ～ **53**) のすべての値で ISO 標準に準拠しています。 **double precision** のシノニムは **float (53)** です。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **float** **[(n)]** データ型は、*n* (**1** から **53**) のすべての値で ISO 標準に準拠しています。 **double precision** のシノニムは **float (53)** です。
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
-|データ型|範囲|ストレージ|  
+|データ型|Range|ストレージ|  
 |---|---|---|
 |**float**|- 1.79E+308 から -2.23E-308、0、および 2.23E-308 から 1.79E+308|*n* の値により異なります|  
 |**real**|- 3.40E + 38 から -1.18E - 38、0、および 1.18E - 38 から 3.40E + 38|4 バイト|  

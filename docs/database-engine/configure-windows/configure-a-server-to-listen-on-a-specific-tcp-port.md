@@ -18,10 +18,10 @@ ms.assetid: 2276a5ed-ae3f-4855-96d8-f5bf01890640
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 48736a721cad475c6956e1715a3912481bc83c40
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68012917"
 ---
 # <a name="configure-a-server-to-listen-on-a-specific-tcp-port"></a>特定の TCP ポートで受信待ちするようにサーバーを構成する
@@ -53,15 +53,15 @@ ms.locfileid: "68012917"
   
 3.  **[TCP 動的ポート]** ダイアログ ボックスには、 **が動的ポートで受信待ちすることを示す**0 [!INCLUDE[ssDE](../../includes/ssde-md.md)] が表示されています。この 0 を削除します。  
   
-     ![TCP_ports](../../database-engine/configure-windows/media/tcp-ports.png "TCP_ports")  
+     ![TCP ポート](../../database-engine/configure-windows/media/tcp-ports.png "TCP ポート")  
   
-4.  **IP**_n_ **のプロパティ** エリア ボックスの **TCP ポート** ボックスに、この IP アドレスで受信待ちしたいポート番号を入力し、**OK** をクリックします。 複数のポートを指定する場合は、コンマで区切ります。
+4.  [**IP**_n_ **のプロパティ**] ボックスの **[TCP ポート]** ボックスに、この IP アドレスが受信待ちするポート番号を入力し、 **[OK]** をクリックします。 複数のポートを指定する場合は、コンマで区切ります。
 
     > [!NOTE] 
     > **[プロトコル]** タブの **[すべて受信待ち]** 設定が [はい] に設定されている場合、 **[IPAll]** セクションの **[TCP ポート]** と **[TCP 動的ポート]** の値のみが使用され、個々の **[IP**_n]_ セクションは完全に無視されます。 **[すべて受信待ち]** の設定が [いいえ] に設定されている場合、 **[IPAll]** セクションの **[TCP ポート]** と **[TCP 動的ポート]** の設定は無視され、個々の **[IP**_n]_ セクションの **[TCP ポート]** 、 **[TCP 動的ポート]** 、および **[有効]** の設定が代わりに使用されます。
     > 各 **[IP**_n]_ セクションには、既定値が [いいえ] の **[有効]** 設定があります。[いいえ] では、ポートが定義されている場合でも、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でこの IP アドレスは無視されます。  
   
-5.  コンソール ペインで、 **[SQL Server のサービス]** をクリックします。  
+5.  コンソール ペインで、 **[再起動]** をクリックします。  
   
 6.  詳細ペインで **[SQL Server (** \<インスタンス名> **)]** を右クリックします。次に、 **[再起動]** をクリックして [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を停止し、再起動します。  
   

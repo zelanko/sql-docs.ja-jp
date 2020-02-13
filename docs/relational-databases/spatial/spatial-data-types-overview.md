@@ -16,10 +16,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2abe169f1666a1ce44b96130a52ef8edbc5a788e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68048519"
 ---
 # <a name="spatial-data-types-overview"></a>空間データ型の概要
@@ -44,14 +44,14 @@ geometry 型および geography 型のサブタイプには、単純型とコレ
 -   [LineString](../../relational-databases/spatial/linestring.md)  
 -   [CircularString](../../relational-databases/spatial/circularstring.md)  
 -   [CompoundCurve](../../relational-databases/spatial/compoundcurve.md)  
--   [多角形](../../relational-databases/spatial/polygon.md)  
+-   [Polygon](../../relational-databases/spatial/polygon.md)  
 -   [CurvePolygon](../../relational-databases/spatial/curvepolygon.md)  
 
 コレクション型は、次のとおりです。  
 -   [MultiPoint](../../relational-databases/spatial/multipoint.md)  
 -   [MultiLineString](../../relational-databases/spatial/multilinestring.md)  
 -   [MultiPolygon](../../relational-databases/spatial/multipolygon.md)  
--   [geography](../../relational-databases/spatial/geometrycollection.md)  
+-   [GeometryCollection](../../relational-databases/spatial/geometrycollection.md)  
 
 ##  <a name="differences"></a> geometry データ型と geography データ型の違い  
 2 つの空間データ型の動作はよく似ていますが、データの格納および操作の方法にいくつかの重要な違いがあります。  
@@ -80,7 +80,7 @@ geometry 型の円弧セグメントは、XY デカルト座標平面上に定�
 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]の **FullGlobe** は、球全体を覆う特殊な多角形です。 **FullGlobe** には領域がありますが、境界や頂点はありません。  
 
 ### <a name="outer-and-inner-rings-not-important-in-geography-data-type"></a>`geography` データ型では外部リングと内部リングは重要ではない  
-OGC Simple Features for SQL Specification では外部リングと内部リングが取り上げられていますが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** データ型ではこの区別はほとんど意味を持ちません。ポリゴンのリングはすべて外部リングと見なすことができます。  
+OGC Simple Features for SQL Specification では外部リングと内部リングが取り上げられていますが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** データ型ではこの区別はほとんど意味を持ちません。ポリゴンのリングはすべて外部リングと見なすことができます。  
 
 OGC の仕様の詳細については、以下を参照してください。  
 -   [OGC の仕様、簡易機能アクセス Part 1 - 共通アーキテクチャ](https://go.microsoft.com/fwlink/?LinkId=93627)  
@@ -114,7 +114,7 @@ IF @g1.STIsValid() = 1 AND @g2.STIsValid() = 1
 
 **CircularString** インスタンスでは、三角形を定義するために 7 つの点が必要ですが、 **LineString** インスタンスでは、三角形を定義するために必要な点は 4 つだけです。 その理由は、 **CircularString** インスタンスは直線セグメントではなく円弧セグメントを格納するためです。 したがって、 **CircularString** インスタンスに格納される三角形の辺は ABC、CDE、および EFA であるのに対し、 **LineString** インスタンスに格納される三角形の辺は AC、CE、および EA です。  
 
-次の例を参照してください。  
+次の例を確認してください。  
 
 ```sql
 SET @g1 = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 4 0)', 0);

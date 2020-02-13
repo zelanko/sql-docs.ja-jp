@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: HaoQian-MS
 ms.author: haoqian
 ms.openlocfilehash: d3b6ea9f53a54b7f02042b85781bc8fe24028a69
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67896133"
 ---
 # <a name="walkthrough-set-up-integration-services-ssis-scale-out"></a>チュートリアル:Integration Services (SSIS) Scale Out を設定する
@@ -165,7 +165,7 @@ Scale Out Master コンピューターの Windows ファイアウォールで、
 
 ## <a name="EnableMaster"></a> Scale Out Master を有効にする
 
-[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio_md](../../includes/ssmanstudio-md.md)] で SSISDB カタログを作成するときに、 **[カタログの作成]** ダイアログ ボックスで **[SSIS スケール アウト マスターとしてこのサーバーを有効にする]** をクリックします。
+[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio_md](../../includes/ssmanstudio-md.md)] で SSISDB カタログを作成するときに、 **[カタログの作成]** ダイアログ ボックスで **[SSIS スケール アウト マスターとしてこのサーバーを有効にする]** を選択します。
 
 カタログの作成後は、[[Scale Out Manager]](integration-services-ssis-scale-out-manager.md) を使用して Scale Out Master を有効にすることができます。
 
@@ -196,5 +196,5 @@ EXEC [catalog].[enable_worker_agent] '6583054A-E915-4C2A-80E4-C765E79EF61D'
 GO 
 ```
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 -   [Integration Services (SSIS) Scale Out でパッケージを実行する](run-packages-in-integration-services-ssis-scale-out.md)

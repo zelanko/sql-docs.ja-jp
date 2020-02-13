@@ -21,10 +21,10 @@ ms.assetid: 2672b8cb-f747-46f3-9358-9b49b3583b8e
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d0e511e34b782c444bcdf6c778bb89dfebd4fab4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68099035"
 ---
 # <a name="text-and-image-functions---textptr-transact-sql"></a>テキスト関数とイメージ関数 - TEXTPTR (Transact-SQL)
@@ -51,7 +51,7 @@ TEXTPTR ( column )
 ## <a name="return-types"></a>戻り値の型  
  **varbinary**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  行内テキストがあるテーブルの場合、TEXTPTR では、処理するテキストのハンドルが返されます。 テキストの値が NULL である場合も、有効なテキスト ポインターを取得できます。  
   
  ビューの列に対して TEXTPTR 関数を使用することはできません。 それはテーブルの列に対してのみ使用できます。 ビューの列に対して TEXTPTR 関数を使用するには、[ALTER DATABASE 互換性レベル](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)を使用して互換性レベルを 80 に設定する必要があります。 テーブルに行内テキストがなく、**text**、**ntext**、または **image** 列が UPDATETEXT ステートメントで初期化されていない場合、TEXTPTR は NULL ポインターを返します。  
@@ -60,14 +60,14 @@ TEXTPTR ( column )
   
  これらの関数とステートメントは、**text**、**ntext**、**image** データを操作する場合にも役立ちます。  
   
-|関数またはステートメント|[説明]|  
+|関数またはステートメント|説明|  
 |---------------------------|-----------------|  
 |PATINDEX<b>('</b> _%pattern%_ **' ,** _expression_ **)**|**text** または **ntext** 列で指定された文字列の文字位置を返します。|  
 |DATALENGTH<b>(</b>_expression_ **)**|**text**、**ntext**、**image** 列のデータの長さを返します。|  
 |[SET TEXTSIZE]|SELECT ステートメントで返される **text**、**ntext**、または **image** データの制限値をバイト単位で返します。|  
 |SUBSTRING<b>(</b>_text_column_, _start_, _length_ **)**|指定された *start* オフセットと *length* で指定される **varchar** 文字列を返します。 長さは 8 KB 未満で指定してください。|  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 > [!NOTE]  
 >  次の例を実行するには、**pubs** データベースをインストールする必要があります。  

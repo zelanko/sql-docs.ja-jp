@@ -13,15 +13,15 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 480d2d238a82039fd04c1c960e74b0c9da57449e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67911102"
 ---
 # <a name="showplan-all-for-query-compile-event-class"></a>Showplan All for Query Compile イベント クラス
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Showplan All for Query Compile イベント クラスは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で SQL ステートメントがコンパイルされるときに発生します。 Showplan 操作を識別するには、このイベント クラスを含めます。 含まれる情報は、Showplan XML For Query Compile イベント クラスで使用できる情報のサブセットです。  
+  Showplan All for Query Compile イベント クラスは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で SQL ステートメントがコンパイルされるときに発生します。 Showplan 操作を識別するには、このイベント クラスを含めます。 含まれる情報は、Showplan XML For Query Compile イベント クラスで使用できる情報のサブセットです。  
   
  Showplan All for Query Compile イベント クラスにより、コンパイル時の完全なデータが表示されるので、Showplan All for Query Compile を含むトレースでは、パフォーマンスのオーバーヘッドが大幅に増加することがあります。 このパフォーマンスの低下を最小限に抑えるには、このイベント クラスの使用を、短期間だけ特定の問題を監視するトレースに制限します。  
   
@@ -29,7 +29,7 @@ ms.locfileid: "67911102"
   
 ## <a name="showplan-all-for-query-compile-event-class-data-columns"></a>Showplan All for Query Compile イベント クラスのデータ列  
   
-|データ列名|データ型|[説明]|列 ID|フィルターの適用|  
+|データ列名|データ型|説明|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスへの接続を作成したクライアント アプリケーションの名前。 この列には、プログラムの表示名ではなく、アプリケーションによって渡された値が格納されます。|10|はい|  
 |BinaryData|**image**|クエリのコストの推定値。|2|いいえ|  

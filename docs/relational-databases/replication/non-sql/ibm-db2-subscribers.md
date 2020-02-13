@@ -17,10 +17,10 @@ ms.assetid: a1a27b1e-45dd-4d7d-b6c0-2b608ed175f6
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a7d61b0e88dd2017218c74635b89f8207691c22a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68133267"
 ---
 # <a name="ibm-db2-subscribers"></a>IBM DB2 サブスクライバー
@@ -89,7 +89,7 @@ ms.locfileid: "68133267"
   
 -   テーブル内の 1 つ以上の主キー列がデータ型 DECIMAL(32-38, 0-38) または NUMERIC(32-38, 0-38) である場合は、トランザクション レプリケーションを使用して DB2 サブスクライバーにテーブルをパブリッシュしないでください。 トランザクション レプリケーションは、主キーを使用して行を識別します。この結果、これらのデータ型はサブスクライバーでは VARCHAR(41) にマップされるため、エラーになります。 これらのデータ型を使用する主キーを持つテーブルは、スナップショット レプリケーションを使用してパブリッシュできます。  
   
--   サブスクライバーでテーブルを事前作成する場合は、レプリケーションによって作成するのではなく、replication support only オプションを使用します。 詳細については、「[Initialize a Transactional Subscription Without a Snapshot](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)」(スナップショットを使用しないトランザクション サブスクリプションの初期化) を参照してください。  
+-   サブスクライバーでテーブルを事前作成する場合は、レプリケーションによって作成するのではなく、replication support only オプションを使用します。 詳細については、「 [スナップショットを使用しないトランザクション サブスクリプションの初期化](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)を使用して、サブスクリプションを手動で初期化する方法について説明します。  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、DB2 よりも長いテーブル名と列名を使用できます。  
   
@@ -100,7 +100,7 @@ ms.locfileid: "68133267"
 ## <a name="mapping-data-types-from-sql-server-to-ibm-db2"></a>SQL Server から IBM DB2 へのデータ型マッピング  
  次の表は、IBM DB2 を実行しているサブスクライバーへのデータのレプリケーションで使用される、データ型のマッピングを示しています。  
   
-|SQL Server データ型|IBM DB2 データ型|  
+|SQL Server のデータ型|IBM DB2 データ型|  
 |--------------------------|-----------------------|  
 |**bigint**|DECIMAL(19,0)|  
 |**binary(1-254)**|CHAR(1-254) FOR BIT DATA|  
@@ -108,7 +108,7 @@ ms.locfileid: "68133267"
 |**bit**|SMALLINT|  
 |**char(1-254)**|CHAR(1-254)|  
 |**char(255-8000)**|VARCHAR(255-8000)|  
-|**date**|[DATE]|  
+|**date**|DATE|  
 |**datetime**|timestamp|  
 |**datetime2(0-7)**|VARCHAR(27)|  
 |**datetimeoffset(0-7)**|VARCHAR(34)|  
@@ -116,9 +116,9 @@ ms.locfileid: "68133267"
 |**decimal(32-38, 0-38)**|VARCHAR(41)|  
 |**float(53)**|DOUBLE|  
 |**float**|FLOAT|  
-|**geography**|IMAGE|  
-|**geometry**|IMAGE|  
-|**hierarchyid**|IMAGE|  
+|**geography**|イメージ|  
+|**geometry**|イメージ|  
+|**hierarchyid**|イメージ|  
 |**image**|VARCHAR(0) FOR BIT DATA*|  
 |**into**|INT|  
 |**money**|DECIMAL(19,4)|  
@@ -132,7 +132,7 @@ ms.locfileid: "68133267"
 |**smalldatetime**|timestamp|  
 |**smallint**|SMALLINT|  
 |**smallmoney**|DECIMAL(10,4)|  
-|**sql_variant**|なし|  
+|**sql_variant**|該当なし|  
 |**sysname**|VARCHAR(128)|  
 |**text**|VARCHAR(0)*|  
 |**time(0-7)**|VARCHAR(16)|  
@@ -150,11 +150,11 @@ ms.locfileid: "68133267"
 ### <a name="data-type-mapping-considerations"></a>データ型マッピングに関する注意点  
  DB2 サブスクライバーにレプリケートするときは、次に示すデータ型のマッピングに関する問題点について考慮してください。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の **char**、**varchar**、**binary**、および **varbinary** がそれぞれ DB2 の CHAR、VARCHAR、CHAR FOR BIT DATA、および VARCHAR FOR BIT DATA にマップされると、DB2 データ型の長さはレプリケーションによって [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データ型と同じ長さに設定されます。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の **char**、**varchar**、**binary**、**varbinary** がそれぞれ DB2 の CHAR、VARCHAR、CHAR FOR BIT DATA、VARCHAR FOR BIT DATA にマップされると、DB2 データ型の長さはレプリケーションによって [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の型と同じ長さに設定されます。  
   
      これによって、DB2 ページ サイズ制約が行の最大サイズに対応するために十分な大きさである限り、生成されるテーブルはサブスクライバーで正常に作成できます。 DB2 データベースにアクセスするために使用されるログインに、DB2 にレプリケートされているテーブルに対して十分なサイズを持つテーブル スペースにアクセスするための権限があることを確認します。  
   
--   DB2 は、32 KB の VARCHAR 列をサポートできます。このため、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の LOB 列の一部は問題なく DB2 VARCHAR 列にマップできる可能性があります。 ただし、レプリケーションが DB2 に対して使用する OLE DB プロバイダーでは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の LOB を DB2 の LOB にマップする処理はサポートしていません。 このため、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **text**ボタンをクリックし、 **varchar(max)** ボタンをクリックし、 **ntext**、および **nvarchar(max)** 列は、生成される作成スクリプトでは VARCHAR(0) にマップされます。 長さの値が 0 の場合は、サブスクライバーにスクリプトを適用する前に、適切な値に変更する必要があります。 データ型の長さが変更されない場合、DB2 サブスクライバーでテーブルの作成を試みると、DB2 でエラー 604 が発生します (エラー 604 は、データ型の有効桁数または長さの属性が有効でないことを示します)。  
+-   DB2 は、32 KB の VARCHAR 列をサポートできます。このため、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の LOB 列の一部は問題なく DB2 VARCHAR 列にマップできる可能性があります。 ただし、レプリケーションが DB2 に対して使用する OLE DB プロバイダーでは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の LOB を DB2 の LOB にマップする処理はサポートしていません。 このため、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の **text**、**varchar(max)** 、**ntext**、**nvarchar(max)** 列は、生成される作成スクリプトでは VARCHAR(0) にマップされます。 長さの値が 0 の場合は、サブスクライバーにスクリプトを適用する前に、適切な値に変更する必要があります。 データ型の長さが変更されない場合、DB2 サブスクライバーでテーブルの作成を試みると、DB2 でエラー 604 が発生します (エラー 604 は、データ型の有効桁数または長さの属性が有効でないことを示します)。  
   
      レプリケートするソース テーブルの情報に基づいて、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の LOB を可変長の DB2 項目にマップすることが適切であるかどうかを判断し、カスタム作成スクリプトで適切な最大長を指定してください。 カスタム作成スクリプトの指定の詳細については、このトピックの「IBM DB2 サブスクライバーの構成」の手順 5. を参照してください。  
   
@@ -163,9 +163,9 @@ ms.locfileid: "68133267"
   
      LOB 列が適切にマップされていない場合は、アーティクルに列フィルターを使用して、列がレプリケートされないようにすることを検討してください。 詳細については、「[パブリッシュされたデータのフィルター選択](../../../relational-databases/replication/publish/filter-published-data.md)」を参照してください。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の **nchar** と **nvarchar** を DB2 の CHAR と VARCHAR にレプリケートする場合、レプリケーションでは [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のデータ型に対するものと同じ長さ指定子が DB2 のデータ型に対して使用されます。 ただし、データ型の長さが、生成された DB2 テーブルには小さくなりすぎる可能性があります。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の **nchar** と **nvarchar** を DB2 の CHAR と VARCHAR にレプリケートする場合、レプリケーションでは [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の型に対するものと同じ長さ指定子が DB2 の型に対して使用されます。 ただし、データ型の長さが、生成された DB2 テーブルには小さくなりすぎる可能性があります。  
   
-     DB2 の環境によっては、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **char** データ項目は、1 バイト文字に限定されないことがあります。CHAR または VARCHAR 項目の長さに関しては、この点を考慮する必要があります。 また、必要に応じて、 *シフト イン* 文字と *シフト アウト* 文字についても考慮する必要があります。 **nchar** 列と **nvarchar** 列を持つテーブルをレプリケートする場合は、カスタム作成スクリプトで、データ型の最大長として、より大きな値を指定することが必要になる場合があります。 カスタム作成スクリプトの指定の詳細については、このトピックの「IBM DB2 サブスクライバーの構成」の手順 5. を参照してください。  
+     DB2 の環境によっては、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の **char** データ項目は、1 バイト文字に限定されないことがあります。CHAR または VARCHAR 項目の長さに関しては、この点を考慮する必要があります。 また、必要に応じて、 *シフト イン* 文字と *シフト アウト* 文字についても考慮する必要があります。 **nchar** 列と **nvarchar** 列を持つテーブルをレプリケートする場合は、カスタム作成スクリプトで、データ型の最大長として、より大きな値を指定することが必要になる場合があります。 カスタム作成スクリプトの指定の詳細については、このトピックの「IBM DB2 サブスクライバーの構成」の手順 5. を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [Non-SQL Server Subscribers](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)   

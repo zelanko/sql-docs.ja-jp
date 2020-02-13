@@ -14,12 +14,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 520637f8bcbe8ae1fcd4fee0ebf3fa33fe3b3650
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: edd716b36e8dc7339ab9661a2213afae5ac35379
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710490"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76909632"
 ---
 # <a name="monitor-and-troubleshoot-polybase"></a>PolyBase の監視とトラブルシューティング
 
@@ -33,7 +33,7 @@ PolyBase の操作を管理するには、次に示すカタログ ビューを�
 
 |||  
 |-|-|  
-|表示|[説明]|  
+|表示|説明|  
 |[sys.external_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-tables-transact-sql.md)|外部テーブルを識別します。|  
 |[sys.external_data_sources &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)|外部のデータ ソースを識別します。|  
 |[sys.external_file_formats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md)|外部のファイル形式を識別します。|  
@@ -142,7 +142,7 @@ PolyBase のクエリを監視およびトラブルシューティングする�
 
 3. **[Remote Query 操作]** を右クリックし、 **[プロパティ]** を選択します。
 
-4. Remote Query の値をコピーし、テキスト エディターに貼り付け、XML リモート クエリ プランを表示します。 例を次に示します。
+4. Remote Query の値をコピーし、テキスト エディターに貼り付け、XML リモート クエリ プランを表示します。 次に例を示します。
 
    ```xml  
 
@@ -217,7 +217,7 @@ PolyBase スケール アウト グループの一部として一連のコンピ
 
 PolyBase は現在、Zookeeper や Knox などの Name Node HA サービスとやり取りしません。 ただし、この機能を提供するための実績のある回避策を使用できます。
 
-回避策:DNS 名を使用して、アクティブな Name Node への接続を再ルーティングします。 これを行うためには、外部データ ソースが DNS 名を使用して Name Node と通信していることを確認する必要があります。 Name Node のフェールオーバーが発生したときには、外部データ ソースの定義で使用される DNS 名に関連付けられている IP アドレスを変更する必要があります。 これには、すべての新しい接続を適切な Name Node に再ルーティングします。 フェールオーバーが発生したときに、既存の接続は失敗します。 このプロセスを自動化するために、"ハートビート" が、アクティブな Name Node の ping を実行できます。 ハートビートが失敗する場合、フェールオーバーが発生し、セカンダリ IP アドレスに自動的に切り替えると想定できます。
+回避策:DNS 名を使用して、アクティブな Name Node への接続を再ルーティングします。 これを行うためには、外部データ ソースが DNS 名を使用して Name Node と通信していることを確認する必要があります。 Name Node のフェールオーバーが発生したときには、外部データ ソースの定義で使用される DNS 名に関連付けられている IP アドレスを変更する必要があります。 これには、すべての新しい接続を適切な Name Node に再ルーティングします。 フェールオーバーが発生したときに、既存の接続は失敗します。 このプロセスを自動化するために、"ハートビート" が、アクティブな Name Node の ping を実行できます。 ハートビートが失敗した場合、フェールオーバーが発生し、セカンダリ IP アドレスに自動的に切り替えられると想定されます。
 
 ## <a name="error-messages-and-possible-solutions"></a>エラー メッセージと考えられる解決策
 

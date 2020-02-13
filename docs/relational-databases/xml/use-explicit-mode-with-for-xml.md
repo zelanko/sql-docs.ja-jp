@@ -15,10 +15,10 @@ ms.assetid: 8b26e8ce-5465-4e7a-b237-98d0f4578ab1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 63a80b7bebafdaf05c93a95b9ce5efd0dc89c316
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68001790"
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>FOR XML での EXPLICIT モードの使用
@@ -52,28 +52,28 @@ ms.locfileid: "68001790"
   
 -   このユニバーサル テーブルから XML を生成する際、このテーブルのデータは列方向に (列グループに) パーティション分割されます。 このグループ化は、 **Tag** 列の値と列名によって決まります。 XML の生成時には、各行ごとに 1 つの列グループが選択され、1 つの要素が構築されます。 この処理は、この例では次のように行われます。  
   
-    -   1 行目の **Tag** 列の値は 1 なので、同じタグ番号を列名に含んでいる **Customer!1!cid**  列と **Customer!1!name** 列でグループが形成されます。 これらの列が行の処理に使用され、生成される要素の形式は <`Customer id=... name=...`> のようになります。 列名の形式については、このトピックの後半で説明します。  
+    -   1 行目の **Tag** 列の値は 1 なので、同じタグ番号を列名に含んでいる **Customer!1!cid** 列と **Customer!1!name**列でグループが形成されます。 これらの列が行の処理に使用され、生成される要素の形式は <`Customer id=... name=...`> のようになります。 列名の形式については、このトピックの後半で説明します。  
   
     -   **Tag** 列の値が 2 の行については、**Order!2!id** 列と **Order!2!date** 列でグループが形成され、<`Order id=... date=... /`> という形式の要素が生成されます。  
   
-    -   **Tag** 列の値が 3 の行については、**OrderDetail!3!id!id** 列と **OrderDetail!3!pid!idref** 列でグループが形成されます。 これらの列からは、<`OrderDetail id=... pid=...`> という形式の要素が生成されます。  
+    -   **Tag** 列の値が 3 の行については、 **OrderDetail!3!id!id** 列と **OrderDetail!3!pid!idref** 列でグループが形成されます。 これらの列からは、<`OrderDetail id=... pid=...`> という形式の要素が生成されます。  
   
 -   XML 階層の生成時、行は順番に処理されます。 XML 階層は、次のように決定されます。  
   
-    -   1 行目では、**Tag** 列に値 1 が指定され、**Parent** 列には NULL が指定されています。 したがって、対応する <`Customer`> 要素は、XML の最上位要素として追加されます。  
+    -   1 行目では、 **Tag** 列に値 1 が指定され、 **Parent** 列には NULL が指定されています。 したがって、対応する <`Customer`> 要素は、XML の最上位要素として追加されます。  
   
         ```  
         <Customer cid="C1" name="Janine">  
         ```  
   
-    -   2 行目では、**Tag** 列に値 2、**Parent** 列に値 1 が指定されています。 したがって、<`Customer`> 要素の子要素として、<`Order`> 要素が追加されます。  
+    -   2 行目では、 **Tag** 列に値 2、 **Parent** 列に値 1 が指定されています。 したがって、<`Customer`> 要素の子要素として、<`Order`> 要素が追加されます。  
   
         ```  
         <Customer cid="C1" name="Janine">  
            <Order id="O1" date="1/20/1996">  
         ```  
   
-    -   次の 2 行では、**Tag** 列に値 3、**Parent** 列に値 2 が指定されています。 したがって、<`Order`> 要素の子要素として、2 つの <`OrderDetail`> 要素が追加されます。  
+    -   次の 2 行では、 **Tag** 列に値 3、 **Parent** 列に値 2 が指定されています。 したがって、<`Order`> 要素の子要素として、2 つの <`OrderDetail`> 要素が追加されます。  
   
         ```  
         <Customer cid="C1" name="Janine">  
@@ -82,7 +82,7 @@ ms.locfileid: "68001790"
               <OrderDetail id="OD2" pid="P2"/>  
         ```  
   
-    -   最後の行では、**Tag** 列に値 2 が指定され、**Parent** 列には値 1 が指定されています。 したがって、<`Customer`> 親要素には、別の <`Order`> 子要素が追加されます。  
+    -   最後の行では、 **Tag** 列に値 2 が指定され、 **Parent** 列には値 1 が指定されています。 したがって、<`Customer`> 親要素には、別の <`Order`> 子要素が追加されます。  
   
         ```  
         <Customer cid="C1" name="Janine">  
@@ -94,7 +94,7 @@ ms.locfileid: "68001790"
         </Customer>  
         ```  
   
- つまり、EXPLICIT モードでは、**Tag** メタデータ列と **Parent** メタデータ列の値、各列名に提供されている情報、および列の正しい順序に基づいて、必要な XML を生成できるということになります。  
+ つまり、EXPLICIT モードでは、 **Tag** メタデータ列と **Parent** メタデータ列の値、各列名に提供されている情報、および列の正しい順序に基づいて、必要な XML を生成できるということになります。  
   
 ### <a name="universal-table-row-ordering"></a>ユニバーサル テーブルの行の順序  
  XML の生成時、ユニバーサル テーブルの行は順番に処理されます。 そのため、親と関連付けられている適切な子インスタンスを取得するには、各親ノードの直後がその親の子ノードになるという順序で、行セットの行が並んでいる必要があります。  

@@ -12,10 +12,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: e32c215050b8ee7ec74bee51f7330dbb793814cd
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73729868"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (Azure SQL Data Warehouse)
@@ -112,7 +112,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
  式の照合順序を指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でサポートされている Windows 照合順序のいずれかを指定する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でサポートされている Windows 照合順序の一覧については、「[Windows 照合順序名 (Transact-SQL)](windows-collation-name-transact-sql.md)」を参照してください。  
   
  `NULL` | `NOT NULL`  
- 列で `NULL` 値を許可するかどうかを指定します。 既定値は `NULL` です。  
+ 列で `NULL` 値を許可するかどうかを指定します。 既定では、 `NULL`です。  
   
  [ `CONSTRAINT` *constraint_name* ] `DEFAULT` *constant_expression*  
  列の既定値を指定します。  
@@ -187,7 +187,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
  `datetime2` [ ( *n* ) ]  
 `datetime` と同じ。ただし、秒の小数部の値を指定することができます。 *n* の既定値は `7` です。  
   
-|*n* 値|有効桁数|Scale|  
+|*n* 値|Precision|スケール|  
 |--:|--:|-:|  
 |`0`|19|0|  
 |`1`|21|1|  
@@ -213,14 +213,14 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
  `float` [ ( *n* ) ]  
  浮動小数点数値データで使用するための概数値のデータ型です。 浮動小数点データは概数であるため、データ型の範囲に含まれるすべての値を正確に表せるわけではありません。 *n* では、`float` の仮数を指数表記で格納するために使用するビット数を指定します。 *n* によって、有効桁数と記憶域のサイズが決まります。 *n* を指定する場合、`1` から `53` までの値にする必要があります。 *n* の既定値は `53` です。  
   
-| *n* 値 | 有効桁数 | ストレージ サイズ |  
+| *n* 値 | Precision | ストレージ サイズ |  
 | --------: | --------: | -----------: |  
 | 1 から 24   | 7 桁  | 4 バイト      |  
 | 25 から 53  | 15 桁 | 8 バイト      |  
   
  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] では、*n* は次の 2 つの値のいずれかの値として扱われます。 `1`<= *n* <= `24` の場合、*n* は `24` として処理されます。 `25` <= *n* <= `53` の場合、*n* は `53` として処理されます。  
   
- [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] `float` データ型は、*n* が `1` ～ `53` の値をとるすべてのケースにおいて ISO 標準に準拠しています。 倍精度のシノニムは `float(53)` です。  
+ [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] `float` データ型は、*n* が `1` から `53` の値をとるすべてのケースにおいて ISO 標準に準拠しています。 倍精度のシノニムは `float(53)` です。  
   
  `real` [ ( *n* ) ]  
  実数の定義は、浮動小数点数と同じです。 `real` の ISO シノニムは、`float(24)` です。  
@@ -234,7 +234,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
  *scale*  
  小数点の右側にとることのできる 10 進数の最大桁数。 *Scale* は、`0` ～ *precision* とする必要があります。 *scale* を指定できるのは、*precision* が指定されている場合のみです。 既定の scale は`0` です。したがって、`0` <= *scale* <= *precision* となります。 ストレージの最大サイズは有効桁数によって異なります。  
   
-| 有効桁数 | ストレージのバイト数  |  
+| Precision | ストレージのバイト数  |  
 | ---------: |-------------: |  
 |  1-9       |             5 |  
 | 10 から 19      |             9 |  
@@ -317,10 +317,10 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 
 行ストア テーブルを列ストア テーブルに変更するには、テーブル上の既存のインデックスをすべて削除してから、クラスター化列ストア インデックスを作成します。 例については、「[CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)」を参照してください。
 
-詳細については、次の記事を参照してください。
+詳細と例については、次の記事をご覧ください。
 - [列ストア インデックスのバージョン管理機能の概要](https://msdn.microsoft.com/library/dn934994/)
 - [SQL Data Warehouse でのテーブルのインデックス作成](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-index/)
-- [列ストア インデックス ガイド](~/relational-databases/indexes/columnstore-indexes-overview.md) 
+- [列ストア インデックスの説明](~/relational-databases/indexes/columnstore-indexes-overview.md) 
 
 <a name="LimitationsRestrictions"></a>  
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項  

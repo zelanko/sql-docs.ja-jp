@@ -24,12 +24,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 9d6abc08f6ba46792d92887ca22f1a37b48e05cc
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: ee3854c45678cb29989849a6ee8b28e821b6d830
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73981003"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287839"
 ---
 # <a name="execute-as-transact-sql"></a>EXECUTE AS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -96,7 +96,7 @@ ms.locfileid: "73981003"
  > [!NOTE]  
 >  SQL Data Warehouse では、このオプションは使用できません。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  実行コンテキストでの変更は、次のいずれかが行われるまで有効です。  
   
 -   別の EXECUTE AS ステートメントの実行  
@@ -129,9 +129,9 @@ ms.locfileid: "73981003"
 ## <a name="using-with-no-revert"></a>WITH NO REVERT の使用  
  EXECUTE AS ステートメントにオプションの WITH NO REVERT 句が含まれている場合、REVERT を使用、または別の EXECUTE AS ステートメントを実行して、セッションの実行コンテキストを元に戻すことはできません。 ステートメントで設定されたコンテキストはセッションが削除されるまで有効です。  
   
- WITH NO REVERT COOKIE = @*varbinary_variable* 句を指定した場合、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]はクッキー値を @*varbinary_variable* に渡します。 そのステートメントで設定された実行コンテキストを以前のコンテキストに戻すことができるのは、REVERT WITH COOKIE = @*varbinary_variable* ステートメントの呼び出し時に、同じ *@varbinary_variable* 値が含まれている場合だけです。  
+ WITH NO REVERT COOKIE = @*varbinary_variable* 句を指定した場合、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]はクッキー値を @*varbinary_variable* に渡します。 そのステートメントで設定された実行コンテキストを以前のコンテキストに戻すことができるのは、REVERT WITH COOKIE = @*varbinary_variable* ステートメントの呼び出し時に、同じ *\@varbinary_variable* 値が含まれている場合だけです。  
   
- このオプションは、接続プールが使用されている環境で役立ちます。 接続プールには、アプリケーション サーバーのアプリケーションで再利用できるよう、データベース接続のグループが保持されています。 *@varbinary_variable* に渡される値を認識できるのは EXECUTE AS ステートメントの呼び出し元のみであるため、呼び出し元が確立した実行コンテキストは、他のアカウントによって変更されることはありません。  
+ このオプションは、接続プールが使用されている環境で役立ちます。 接続プールには、アプリケーション サーバーのアプリケーションで再利用できるよう、データベース接続のグループが保持されています。 *\@varbinary_variable* に渡される値を認識できるのは EXECUTE AS ステートメントの呼び出し元のみであるため、呼び出し元が確立した実行コンテキストは、他のアカウントによって変更されることはありません。  
   
 ## <a name="determining-the-original-login"></a>元のログインの特定  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続したログインの名前に戻すには、[ORIGINAL_LOGIN](../../t-sql/functions/original-login-transact-sql.md) 関数を使用します。 この関数を使用すると、明示的または暗黙的にコンテキストが何度も切り替えられるセッションにおける、元のログインの ID を取得できます。  
@@ -139,7 +139,7 @@ ms.locfileid: "73981003"
 ## <a name="permissions"></a>アクセス許可  
  ログインで **EXECUTE AS** を指定するには、呼び出し元に、指定のログイン名に対する **IMPERSONATE** 権限が与えられている必要があり、また **IMPERSONATE ANY LOGIN** 権限が拒否されていないことも条件となります。 データベース ユーザーに **EXECUTE AS** を指定するには、呼び出し元に、指定のユーザー名に対する **IMPERSONATE** 権限が与えられている必要があります。 **EXECUTE AS CALLER** を指定した場合、**IMPERSONATE** 権限は必要ありません。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ###  <a name="_exampleA"></a> A. EXECUTE AS と REVERT を使用してコンテキストを切り替える  
  次の例では、複数のプリンシパルを使用してコンテキスト実行スタックを作成した後、 `REVERT` ステートメントを使用して実行コンテキストを以前のコンテキストに戻します。 `REVERT` ステートメントは、実行コンテキストが最初の呼び出し元に設定されるまで、スタックの上層に向かって複数回実行されます。  

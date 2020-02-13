@@ -21,10 +21,10 @@ ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 78aa101ac0f7c86bc2563f7cf0151e7f976a5b80
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296187"
 ---
 # <a name="integration-services-ssis-packages"></a>Integration Services (SSIS) パッケージ
@@ -83,12 +83,12 @@ ms.locfileid: "71296187"
  デジタル署名を使用してパッケージに署名したり、パスワードまたはユーザー キーを使用してパッケージを暗号化できます。 デジタル署名により、パッケージのソースが認証されます。 ただし、パッケージの読み込み時にデジタル署名を確認するように [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] を構成する必要もあります。 詳細については、「 [デジタル署名を使用してパッケージのソースを特定する](../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md) 」および「 [パッケージ内の機微なデータへのアクセス制御](../integration-services/security/access-control-for-sensitive-data-in-packages.md)」を参照してください。  
   
 ### <a name="supporting-transactions"></a>トランザクションのサポート  
- パッケージ上のトランザクションの属性を設定すると、パッケージ内のタスク、コンテナー、および接続をトランザクションに結合できます。 トランザクションの属性により、パッケージとその要素が全体として成功または失敗するようにできます。 また、パッケージで他のパッケージを実行したり、トランザクション内に他のパッケージを含めることができるため、複数のパッケージを作業の 1 単位として実行できます。 詳細については、「 [Integration Services のトランザクション](../integration-services/integration-services-transactions.md)」を参照してください。  
+ パッケージ上のトランザクションの属性を設定すると、パッケージ内のタスク、コンテナー、および接続をトランザクションに結合できます。 トランザクションの属性により、パッケージとその要素が全体として成功または失敗するようにできます。 また、パッケージで他のパッケージを実行したり、トランザクション内に他のパッケージを含めることができるため、複数のパッケージを作業の 1 単位として実行できます。 詳細については、「 [Integration Services のトランザクション](../integration-services/integration-services-transactions.md)」をご覧ください。  
   
 ## <a name="custom-log-entries-available-on-the-package"></a>パッケージで使用できるカスタム ログ エントリ  
  次の表は、パッケージのカスタム ログ エントリの一覧です。 詳細については、「[Integration Services (SSIS) のログ記録](../integration-services/performance/integration-services-ssis-logging.md)」をご覧ください。  
   
-|ログ エントリ|[説明]|  
+|ログ エントリ|説明|  
 |---------------|-----------------|  
 |**PackageStart**|パッケージの実行が開始されたことを示します。<br /><br /> 注:このログ エントリは自動的にログに書き込まれます。 除外することはできません。|  
 |**PackageEnd**|パッケージが完了したことを示します。<br /><br /> 注:このログ エントリは自動的にログに書き込まれます。 除外することはできません。|  

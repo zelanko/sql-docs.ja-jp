@@ -1,10 +1,10 @@
 ---
 title: リンク サーバーを作成する
-ms.date: 11/20/2015
+ms.date: 01/24/2020
 ms.prod: sql
 ms.technology: ''
 ms.prod_service: database-engine
-ms.reviewer: ''
+ms.reviewer: carlrab
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.linkedserver.properties.general.f1
@@ -17,12 +17,12 @@ ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 15d7b07b409d8a281b0ea47222ce608a712cfa3f
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.openlocfilehash: ddcead69006fdee32598590192e777984ea3fcd7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74095886"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76761896"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>リンク サーバーの作成 (SQL Server データベース エンジン)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -72,10 +72,10 @@ ms.locfileid: "74095886"
      **[プロバイダー文字列]**  
      データ ソースに対応する OLE DB プロバイダーの一意なプログラム識別子 (PROGID) を入力します。 有効なプロバイダー文字列の例については、「 [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)からデータにアクセスする方法について説明します。  
   
-     **場所**  
+     **地域**  
      OLE DB プロバイダーで解釈されるデータベースの場所を入力します。  
   
-     **Catalog**  
+     **カタログ**  
      OLE DB プロバイダーへの接続を作成するときに使用するカタログの名前を入力します。  
   
      リンク サーバーに接続できるかどうかをテストするには、オブジェクト エクスプローラーでリンク サーバーを右クリックし、 **[接続テスト]** をクリックします。  
@@ -97,14 +97,17 @@ ms.locfileid: "74095886"
   
      **[リモート ユーザー]**  
      リモート ユーザーを使用して、 **[ローカル ログイン]** で定義されないユーザーをマップします。 **リモート ユーザー** は、リモート サーバーの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証ログインである必要があります。  
-  
+
+    > [!WARNING]
+    > Azure SQL Database のマネージド インスタンス デプロイで "リモート ユーザー" を使用できるのは、SQL Server ユーザーのみです。  
+
      **[リモート パスワード]**  
      リモート ユーザーのパスワードを指定します。  
   
-     **[追加]**  
+     **追加**  
      新しいローカル ログインを追加します。  
   
-     **[削除]**  
+     **Remove**  
      既存のローカル ログインを削除します。  
   
      **[接続を許可しない]**  
@@ -126,7 +129,7 @@ ms.locfileid: "74095886"
   
      このオプションは、リンク サーバーに対応するデータ ソースがローカル サーバーと同じ文字セットと並べ替え順を持っていることが確認できている場合のみ設定します。  
   
-     **[データ アクセス]**  
+     **データ アクセス**  
      分散クエリ アクセスに対してリンク サーバーを有効または無効にします。  
   
      **RPC**  
@@ -162,7 +165,7 @@ ms.locfileid: "74095886"
      **[分散トランザクションのプロモーションを有効化]**  
      このオプションを使用して、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分散トランザクション コーディネーター (MS DTC) トランザクションにより、サーバー間のプロシージャのアクションを保護します。 このオプションが TRUE の場合、リモート ストアド プロシージャを呼び出すと分散トランザクションが開始され、トランザクションは MS DTC に参加します。 詳細については、「 [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)からデータにアクセスする方法について説明します。  
   
-6.  クリックして **OK**です。  
+6.  **[OK]** をクリックします。  
   
 ##### <a name="to-view-the-provider-options"></a>プロバイダー オプションを表示するには  
   

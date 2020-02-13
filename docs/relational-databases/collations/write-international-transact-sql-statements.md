@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4cbc237ad0df16dbb854fb5bd062d7d37375294f
-ms.sourcegitcommit: 3bd813ab2c56b415a952e5fbd5cfd96b361c72a2
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/11/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70913548"
 ---
 # <a name="write-international-transact-sql-statements"></a>国際化に対応した Transact-SQL ステートメントの記述
@@ -30,7 +30,7 @@ ms.locfileid: "70913548"
   以下のガイドラインに従うと、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用するデータベースやデータベース アプリケーションをある言語から別の言語に移行することが容易になり、複数の言語をサポートできます。  
 
 -   [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、次のいずれかを使用します。
-    -   <bpt id="p1">**</bpt>char<ept id="p1">**</ept>、<bpt id="p2">**</bpt>varchar<ept id="p2">**</ept>、<bpt id="p3">**</bpt>varchar(max)<ept id="p3">**</ept> の各データ型では <bpt id="p4">[</bpt>UTF-8<ept id="p4">](../../relational-databases/collations/collation-and-unicode-support.md#utf8)</ept> 対応の照合順序が使用され、データは UTF-8 を使用してエンコードされます。
+    -   **char**、**varchar**、**varchar(max)** の各データ型では [UTF-8](../../relational-databases/collations/collation-and-unicode-support.md#utf8) 対応の照合順序が使用され、データは UTF-8 を使用してエンコードされます。
     -   **nchar**、**nvarchar**、**nvarchar(max)** の各データ型では[補助文字 (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) 対応の照合順序が使用され、データは UTF-16 を使用してエンコードされます。 SC 以外の照合順序を使用すると、データは UCS-2 を使用してエンコードされます。      
 
     これによりコード ページ変換の問題を回避できます。 他の考慮事項については、「[UTF-8 と UTF-16 でのストレージの相違点](../../relational-databases/collations/collation-and-unicode-support.md#storage_differences)」をご覧ください。  
@@ -46,11 +46,11 @@ ms.locfileid: "70913548"
   
     -   ADO、OLE DB、および ODBC アプリケーションでは、以下に示す ODBC タイムスタンプ、日付、時刻のエスケープ句を使用する必要があります。  
   
-         **{ ts'** _yyyy_ **-** _mm_ **-** _dd_ _hh_ **:** _mm_ **:** _ss_ [ **.** _fff_] **'}** 、例: **{ ts'1998-09-24 10:02:20'}**  
+         **{ ts'** _yyyy_ **-** _mm_ **-** _dd_ _hh_ **:** _mm_ **:** _ss_ [ **.** _fff_] **'}** (例: **{ ts'1998-09-24 10:02:20'}** )  
   
-         **{ d'** _yyyy_ **-** _mm_ **-** _dd_ **'}** 、例: **{ d'1998-09-24'}**
+         **{ d'** _yyyy_ **-** _mm_ **-** _dd_ **'}** (例: **{ d'1998-09-24'}** )
   
-         **{ t'** _hh_ **:** _mm_ **:** _ss_ **'}** 、例: **{ t'10:02:20'}**  
+         **{ t'** _hh_ **:** _mm_ **:** _ss_ **'}** (例: **{ t'10:02:20'}** )  
   
     -   他の API、または [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプト、ストアド プロシージャ、およびトリガーを使用するアプリケーションでは、区切られていない数字列を使用してください。 たとえば、 *yyyymmdd* には 19980924 を使用します。  
   

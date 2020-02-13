@@ -1,7 +1,7 @@
 ---
 title: メモリ最適化テーブルのストレージの構成 | Microsoft Docs
 ms.custom: ''
-ms.date: 10/25/2017
+ms.date: 1/15/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: 6e005de0-3a77-4b91-b497-14cc0f9f6605
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: af9f37bb0cc3508d1a421c75de4297b3f015f6a7
-ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
+ms.openlocfilehash: d1d0848a1399c533162799fd9a4404955bb542dd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69634566"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76125008"
 ---
 # <a name="configuring-storage-for-memory-optimized-tables"></a>メモリ最適化テーブルのストレージの構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   記憶域の容量と 1 秒間の入出力操作 (IOPS) を構成する必要があります。  
   
-## <a name="storage-capacity"></a>記憶域の容量  
+## <a name="storage-capacity"></a>ストレージの容量  
 
 [メモリ最適化テーブルのメモリ必要量の推定](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md) の情報を使用して、データベースの持続性のあるメモリ最適化テーブルのメモリ内サイズを推定します。 インデックスはメモリ最適化テーブルに対して永続化されないため、インデックスのサイズは含めません。 
  
@@ -34,7 +34,7 @@ ms.locfileid: "69634566"
   
 -   ディスク ベース テーブルをメモリ最適化テーブルに移行するときは、トランザクション ログ アクティビティの増加をサポートできる記憶メディアにトランザクション ログがあることを確認してください。 たとえば、記憶メディアが 100 MB/秒のトランザクション ログの処理をサポートし、その結果としてメモリ最適化テーブルが 5 倍優れたパフォーマンスをもたらす場合、トランザクション ログ アクティビティがパフォーマンスのボトルネックになることを防ぐために、トランザクション ログの記憶メディアでも、5 倍のパフォーマンス向上をサポートできる必要があります。  
   
--   メモリ最適化テーブルは、1 つまたは複数のコンテナーに分散されたチェックポイント ファイルに保存されます。 各コンテナーは、通常、独自のストレージ デバイスにマップする必要があり、増加する記憶域容量と IOPS の向上の両方のために使用されます。 ストレージ メディアのシーケンシャル IOPS が、持続的トランザクション ログ スループットの最大 3 倍をサポートできることを確認する必要があります。 チェックポイント ファイルへの書き込みは、データ ファイルで 256 KB、デルタ ファイルで 4 KB です。
+-   メモリ最適化テーブルは、1 つまたは複数のコンテナーに分散されたチェックポイント ファイルに保存されます。 各コンテナーは、通常、独自のストレージ デバイスにマップする必要があり、増加する記憶域容量と IOPS の向上の両方のために使用されます。 ストレージ メディアのシーケンシャル IOPS が、持続的トランザクション ログ スループットの最大 3 倍をサポートできることを確認する必要があります。 チェックポイント ファイルへの書き込みは、データ ファイルの場合は 256 KB、差分ファイルの場合は 4 KB です。
   
      - たとえば、メモリ最適化テーブルがトランザクション ログで持続的に 500 MB/秒のアクティビティを生成する場合、メモリ最適化テーブルのストレージは 1.5 GB/秒の IOPS をサポートする必要があります。 持続的なトランザクション ログのスループットの 3 倍をサポートする必要性は、次の観察点に由来します。すなわち、データとデルタ ファイルのペアは、まず初期データと共に書き込まれ、それからマージ操作の一環として読み取り/再書き込みされる必要があるという点です。  
   
@@ -43,7 +43,9 @@ ms.locfileid: "69634566"
 -   スペースが許す場合は、通常、チェックポイント ファイルはすべてのコンテナーに均等に分散されます。 SQL server 2014 では、均一な分散を実現するには奇数個のコンテナーが必要です。2016 以降では、コンテナーが奇数または偶数のどちらでも、均一に分散されます。
   
 ## <a name="encryption"></a>暗号化  
- [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] では、メモリ最適化テーブルのストレージの暗号化は、データベースで TDE を有効化する際に行われます。 詳細については、「[透過的なデータ暗号化 &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)」を参照してください。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] では、データベースで TDE が有効になっている場合でも、チェックポイント ファイルは暗号化されません。
+ [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降のバージョンでは、データベース上で Transparent Data Encryption (TDE) を有効にする際に、メモリ最適化テーブルのストレージは保存時に暗号化されます。 詳細については、「[透過的なデータ暗号化](../../relational-databases/security/encryption/transparent-data-encryption.md)」を参照してください。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] では、データベースで TDE が有効になっている場合でも、チェックポイント ファイルは暗号化されません。
+
+ [持続性のない](../../relational-databases/in-memory-oltp/defining-durability-for-memory-optimized-objects.md) (SCHEMA_ONLY) メモリ最適化テーブルのデータは、常にディスクに書き込まれません。 そのため、TDE は、このようなテーブルには適用されません。
   
 ## <a name="see-also"></a>参照  
  [メモリ最適化オブジェクト用ストレージの作成と管理](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  

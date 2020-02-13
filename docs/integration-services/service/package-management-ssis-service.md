@@ -28,10 +28,10 @@ ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 33ce0a748381e425371b6f36c1ceeaaba4b62501
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296876"
 ---
 # <a name="package-management-ssis-service"></a>パッケージの管理 (SSIS サービス)
@@ -110,7 +110,7 @@ ms.locfileid: "71296876"
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージは、次の場所からインポートしたり、次の場所にエクスポートしたりできます。  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンス、ファイル システム、または [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ ストアに格納されているパッケージをインポートできます。 インポートしたパッケージは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、または [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ ストア内のフォルダーに保存されます。  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス、ファイル システム、または [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ ストアに格納されているパッケージをインポートできます。 インポートしたパッケージは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、または [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ ストア内のフォルダーに保存されます。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンス、ファイル システム、または [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ ストアに格納されているパッケージを異なるストレージ形式および場所にエクスポートできます。  
   
@@ -124,7 +124,7 @@ ms.locfileid: "71296876"
   
 ### <a name="to-import-a-package-by-using-sql-server-management-studio"></a>SQL Server Management Studio を使用してパッケージをインポートするには  
   
-1.  **[スタート]** ボタンをクリックし、 **[Microsoft** ][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をポイントして、 **[SQL Server Management Studio]** をクリックします。  
+1.  **[スタート]** ボタンをクリックし、 **[Microsoft** ] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をポイントして、 **[SQL Server Management Studio]** をクリックします。  
   
 2.  **[サーバーへの接続]** ダイアログ ボックスで、次のオプションを設定します。  
   
@@ -160,7 +160,7 @@ ms.locfileid: "71296876"
   
 ### <a name="to-export-a-package-by-using-sql-server-management-studio"></a>SQL Server Management Studio を使用してパッケージをエクスポートするには  
   
-1.  **[スタート]** ボタンをクリックし、 **[Microsoft** ][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をポイントして、 **[SQL Server Management Studio]** をクリックします。  
+1.  **[スタート]** ボタンをクリックし、 **[Microsoft** ] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をポイントして、 **[SQL Server Management Studio]** をクリックします。  
   
 2.  **[サーバーへの接続]** ダイアログ ボックスで、次のオプションを設定します。  
   
@@ -197,18 +197,18 @@ ms.locfileid: "71296876"
   
 ### <a name="options"></a>オプション  
  **[パッケージの場所]**  
- パッケージをインポートする格納場所の種類を選択します。 使用できるオプションは以下のとおりです。  
+ パッケージをインポートする格納場所の種類を選択します。 次のオプションを使用できます。  
   
  **SQL Server**  
   
- **[ファイル システム]**  
+ **ファイル システム**  
   
  **[SSIS パッケージ ストア]**  
   
  **[サーバー]**  
  サーバー名を入力するか、サーバーを一覧から選択します。  
   
- **[認証]**  
+ **認証**  
  Windows 認証または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を選択します。 このオプションは、格納場所が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の場合のみ使用できます。  
   
 > [!IMPORTANT]  
@@ -217,7 +217,7 @@ ms.locfileid: "71296876"
  **認証の種類**  
  認証の種類を選択します。  
   
- **User name**  
+ **ユーザー名**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用する場合は、ユーザー名を指定します。  
   
  **パスワード**  
@@ -237,18 +237,18 @@ ms.locfileid: "71296876"
   
 ### <a name="options"></a>オプション  
  **[パッケージの場所]**  
- パッケージをエクスポートする格納場所の種類を選択します。 使用できるオプションは以下のとおりです。  
+ パッケージをエクスポートする格納場所の種類を選択します。 次のオプションを使用できます。  
   
  **SQL Server**  
   
- **[ファイル システム]**  
+ **ファイル システム**  
   
  **[SSIS パッケージ ストア]**  
   
  **[サーバー]**  
  サーバー名を入力するか、サーバーを一覧から選択します。  
   
- **[認証]**  
+ **認証**  
  Windows 認証または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を選択します。 このオプションは、格納場所が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の場合のみ使用できます。  
   
 > [!IMPORTANT]  
@@ -257,7 +257,7 @@ ms.locfileid: "71296876"
  **認証の種類**  
  認証の種類を選択します。  
   
- **User name**  
+ **ユーザー名**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用する場合は、ユーザー名を指定します。  
   
  **パスワード**  

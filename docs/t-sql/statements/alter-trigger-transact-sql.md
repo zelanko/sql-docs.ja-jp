@@ -22,10 +22,10 @@ ms.assetid: 2a99c7c1-ac2f-4637-aa7c-3d1bf514e500
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 5e8523831fd181c17bd8fcff1698d85f46c824e2
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73983316"
 ---
 # <a name="alter-trigger-transact-sql"></a>ALTER TRIGGER (Transact-SQL)
@@ -216,7 +216,7 @@ AS { sql_statement
   
  トリガーにバインドするアセンブリのメソッドを指定します。 このメソッドは引数を受け取らず、void を返す必要があります。 *class_name* は有効な [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別子であり、アセンブリ内にアセンブリで可視のクラスとして存在している必要があります。 入れ子にされたクラスは使用できません。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  ALTER TRIGGER の詳細については、「[CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)」の「解説」を参照してください。  
   
 > [!NOTE]  
@@ -244,7 +244,7 @@ AS { sql_statement
   
  サーバー スコープ (ON ALL SERVER) で定義されている DDL トリガー、またはログオン トリガーを変更するには、サーバーに対する CONTROL SERVER 権限が必要です。 データベース スコープ (ON DATABASE) で定義されている DDL トリガーを変更するには、現在のデータベースでの ALTER ANY DATABASE DDL TRIGGER 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、ユーザーが `SalesPersonQuotaHistory` テーブルにデータを追加したり、データを変更したりしようとすると、クライアントに対してユーザー定義のメッセージを出力する、AdventureWorks 2012 データベースの DML トリガーを作成します。 次に `ALTER TRIGGER` を使用してトリガーを変更し、トリガーを `INSERT` 操作だけに適用します。 このトリガーは、テーブルの更新や行の挿入を行うユーザーに対して、 `Compensation` 部門にも変更を知らせる必要があることを連絡できるので有用です。  
   
 ```  

@@ -19,10 +19,10 @@ ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3cba502e5f89c39df67b74909f3185ad45c659e2
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298354"
 ---
 # <a name="data-mining-query-task"></a>データ マイニング クエリ タスク
@@ -49,10 +49,10 @@ ms.locfileid: "71298354"
   
  クエリ結果は、テーブルに保存されます。 データ マイニング クエリ タスクで指定された名前のテーブルが既に存在している場合、タスクで同じ名前の末尾に番号を追加して新しいテーブルを作成することも、テーブルの内容を上書きすることもできます。  
   
- 結果に入れ子が含まれる場合は、フラット化された後に保存されます。 結果をフラット化すると、入れ子の結果セットはテーブルに変更されます。 たとえば、 **Customer** 列に **Product** 列が入れ子になっている、入れ子の結果をフラット化すると、 **Customer** 列に行が追加され、顧客ごとの製品が含まれるテーブルが作成されます。 たとえば、3 つの異なる製品を購入した顧客は、3 行のテーブルになります。つまり、顧客は各行で繰り返され、行ごとに異なる製品が含まれます。 FLATTENED キーワードを省略すると、テーブルには、**Customer** 列と各顧客につき 1 行のみが含まれます。 詳細については、「[SELECT &#40;DMX&#41;](../../dmx/select-dmx.md)」を参照してください。  
+ 結果に入れ子が含まれる場合は、フラット化された後に保存されます。 結果をフラット化すると、入れ子の結果セットはテーブルに変更されます。 たとえば、 **Customer** 列に **Product** 列が入れ子になっている、入れ子の結果をフラット化すると、 **Customer** 列に行が追加され、顧客ごとの製品が含まれるテーブルが作成されます。 たとえば、3 つの異なる製品を購入した顧客は、3 行のテーブルになります。つまり、顧客は各行で繰り返され、行ごとに異なる製品が含まれます。 FLATTENED キーワードを省略すると、テーブルには、 **Customer** 列と各顧客につき 1 行のみが含まれます。 詳細については、「[SELECT &#40;DMX&#41;](../../dmx/select-dmx.md)」を参照してください。  
   
 ## <a name="configuration-of-the-data-mining-query-task"></a>データ マイニング クエリ タスクの構成  
- データ マイニング クエリ タスクには 2 つの接続が必要です。 1 つ目の接続は [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 接続マネージャーで、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンス、またはマイニング構造とマイニング モデルを含む [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトのいずれかに接続します。 2 つ目の接続は OLE DB 接続マネージャーで、タスクが書き込むテーブルを含む [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに接続します。 詳細については、「 [Analysis Services 接続マネージャー](../../integration-services/connection-manager/analysis-services-connection-manager.md) 」および「 [OLE DB 接続マネージャー](../../integration-services/connection-manager/ole-db-connection-manager.md)」を参照してください。  
+ データ マイニング クエリ タスクには 2 つの接続が必要です。 1 つ目の接続は [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 接続マネージャーで、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンス、またはマイニング構造とマイニング モデルを含む [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトのいずれかに接続します。 2 つ目の接続は OLE DB 接続マネージャーで、タスクが書き込むテーブルを含む [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに接続します。 詳細については、「 [Analysis Services 接続マネージャー](../../integration-services/connection-manager/analysis-services-connection-manager.md) 」および「 [OLE DB 接続マネージャー](../../integration-services/connection-manager/ole-db-connection-manager.md)」を参照してください。  
   
  プロパティを設定するには [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
   
@@ -74,13 +74,13 @@ ms.locfileid: "71298354"
  パッケージでのデータ マイニングの実装の詳細については、「 [データ マイニング クエリ タスク](../../integration-services/control-flow/data-mining-query-task.md) 」および「 [データ マイニング ソリューション](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions)」を参照してください。  
   
 ### <a name="general-options"></a>[全般] のオプション  
- **[名前]**  
+ **Name**  
  データ マイニング クエリ タスクに固有の名前を指定します。 この名前は、タスク アイコンのラベルとして使用されます。  
   
 > [!NOTE]  
 >  タスク名はパッケージ内で一意である必要があります。  
   
- **[説明]**  
+ **説明**  
  データ マイニング クエリ タスクの説明を入力します。  
   
 ### <a name="mining-model-tab-options"></a>[マイニング モデル] タブのオプション  
@@ -106,13 +106,13 @@ ms.locfileid: "71298354"
  パッケージでのデータ マイニングの実装の詳細については、「 [データ マイニング クエリ タスク](../../integration-services/control-flow/data-mining-query-task.md) 」および「 [データ マイニング ソリューション](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions)」を参照してください。  
   
 ### <a name="general-options"></a>[全般] のオプション  
- **[名前]**  
+ **Name**  
  データ マイニング クエリ タスクに固有の名前を指定します。 この名前は、タスク アイコンのラベルとして使用されます。  
   
 > [!NOTE]  
 >  タスク名はパッケージ内で一意である必要があります。  
   
- **[説明]**  
+ **説明**  
  データ マイニング クエリ タスクの説明を入力します。  
   
 ### <a name="build-query-tab-options"></a>[クエリの作成] タブのオプション  
@@ -127,16 +127,16 @@ ms.locfileid: "71298354"
  **関連トピック:** [データ マイニング クエリ](../../integration-services/control-flow/data-mining-query.md)  
   
 ### <a name="parameter-mapping-tab-options"></a>[パラメーター マッピング] タブのオプション  
- **[パラメーター名]**  
+ **パラメーター名**  
  オプションで、パラメーター名を更新します。 **[変数名]** 一覧から変数を選択して、パラメーターを変数にマップします。  
   
  **[変数名]**  
  パラメーターにマップする変数を一覧から選択します。  
   
- **[追加]**  
+ **追加**  
  一覧にパラメーターを追加します。  
   
- **[削除]**  
+ **Remove**  
  パラメーターを選択してから、 **[削除]** をクリックします。  
   
 ### <a name="result-set-tab-options"></a>[結果セット] タブのオプション  
@@ -151,10 +151,10 @@ ms.locfileid: "71298354"
  **結果の種類**  
  1 行だけを返すか、完全な結果セットを返すかを示します。  
   
- **[追加]**  
+ **追加**  
  一覧に結果セットを追加します。  
   
- **[削除]**  
+ **Remove**  
  結果を選択してから、 **[削除]** をクリックします。  
 ## <a name="data-mining-query-task-editor-output-tab"></a>[データ マイニング クエリ タスク エディター] ([出力] タブ)
   **[データ マイニング クエリ タスク エディター]** ダイアログ ボックスの **[出力]** タブを使用すると、予測クエリの出力先を指定できます。  
@@ -162,13 +162,13 @@ ms.locfileid: "71298354"
  パッケージでのデータ マイニングの実装の詳細については、「 [データ マイニング クエリ タスク](../../integration-services/control-flow/data-mining-query-task.md) 」および「 [データ マイニング ソリューション](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions)」を参照してください。  
   
 ### <a name="general-options"></a>[全般] のオプション  
- **[名前]**  
+ **Name**  
  データ マイニング クエリ タスクに固有の名前を指定します。 この名前は、タスク アイコンのラベルとして使用されます。  
   
 > [!NOTE]  
 >  タスク名はパッケージ内で一意である必要があります。  
   
- **[説明]**  
+ **説明**  
  データ マイニング クエリ タスクの説明を入力します。  
   
 ### <a name="output-tab-options"></a>[出力] タブのオプション  

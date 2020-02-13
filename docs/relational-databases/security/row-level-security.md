@@ -18,23 +18,23 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 886afc267d38ec92a478fc40bcbde53e428950f0
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68809951"
 ---
 # <a name="row-level-security"></a>行レベルのセキュリティ
 
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  ![行レベルのセキュリティの図](../../relational-databases/security/media/row-level-security-graphic.png "行レベルのセキュリティの図")  
+  ![行レベル セキュリティの図](../../relational-databases/security/media/row-level-security-graphic.png "行レベル セキュリティの図")  
   
 行レベルのセキュリティでは、グループ メンバーシップや実行コンテキストを使用して、データベース テーブル内の行へのアクセスを制御することができます。
   
 Row-Level Security (RLS) は、アプリケーションでセキュリティの設計やコーディングを簡略化します。 RLS は、データ行アクセスに対して制限を実装するのに役立ちます。 たとえば、作業者が自分の部署に関連するデータ行にしかアクセスしないようにすることができます。 別の例として、顧客のデータ アクセスをその顧客の会社に関連するデータだけに制限することがあります。  
   
-アクセスの制限のロジックは、別のアプリケーション層のデータから離れてではなく、データベース層にあります。 任意の層からデータへのアクセスが試行されるたびに、データベース システムにはアクセス制限が適用されます。 これにより、セキュリティ システムの表層領域を減少することで、セキュリティ システムはより信頼性の高い堅牢なものになります。  
+アクセスの制限のロジックは、別のアプリケーション層のデータから離れてではなく、データベース層にあります。 任意の層からデータへのアクセスが試行されるたびに、データベース システムにはアクセス制限が適用されます。 これによりセキュリティ システムの外部からのアクセスが減り、そのシステムの信頼性と堅牢性が向上します。  
   
 [CREATE SECURITY POLICY](../../t-sql/statements/create-security-policy-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用して RLS を実装すると、[インライン テーブル値関数](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)として述語が作成されます。  
 
@@ -85,7 +85,7 @@ RLS では、2 種類のセキュリティ述語をサポートしています�
   
 - UPDATE のブロック述語は、BEFORE と AFTER の個別の操作に分けられています。 そのため、たとえば、ユーザーが行を更新して現在の値よりも大きい値を含めることを禁止することはできません。 このようなロジックが必要な場合は、[DELETED および INSERTED](../triggers/use-the-inserted-and-deleted-tables.md) 中間テーブルでトリガーを使用して、古い値と新しい値を一緒に参照する必要があります。  
   
-- 述語関数で使用されている列が変更されていない場合、オプティマイザーでは AFTER UPDATE ブロック述語がチェックされません。 例:Alice は、給与を 100,000 より大きく変更することはできません。 Alice は、述語内で参照される列が変更されていない場合に限り、給与が既に 100,000 を超えている従業員のアドレスを変更できます。  
+- 述語関数で使用されている列が変更されていない場合、オプティマイザーでは AFTER UPDATE ブロック述語がチェックされません。 次に例を示します。Alice は、給与を 100,000 より大きく変更することはできません。 Alice は、述語内で参照される列が変更されていない場合に限り、給与が既に 100,000 を超えている従業員のアドレスを変更できます。  
   
 - BULK INSERT などの Bulk API は変更されていません。 つまり、AFTER INSERT ブロック述語は、通常の挿入操作と同様に一括挿入操作に適用されます。  
   
@@ -101,7 +101,7 @@ RLS では、2 種類のセキュリティ述語をサポートしています�
   
  RLS フィルター述語は機能的には **WHERE** 句の追加と同等です。 述語はビジネス プラクティスの規定と同じくらいに洗練されたものであり、句は `WHERE TenantId = 42`と同じくらいに簡単です。  
   
- より形式的に表現すると、RLS はアクセス制御に基づく述語を採用しています。 柔軟で、集中管理された、述語ベースの評価を備えています。 述語は、管理者が適切に決定したメタデータや他の条件に基づくことができます。 述語は、ユーザーがその属性に基づいて適切にデータにアクセスできるかどうかを決定する条件として使用されます。 ラベルに基づくアクセス制御は、述語に基づくアクセス制御を使用して実装できます。  
+ より形式的に表現すると、RLS はアクセス制御に基づく述語を採用しています。 柔軟で、集中管理された、述語ベースの評価を備えています。 述語は、管理者が適切に決定したメタデータや他の条件に基づくことができます。 述語は、ユーザーがその属性に基づいて適切にデータにアクセスできるかどうかを決定する条件として使用されます。 述語ベースのアクセス制御を使用することで、ラベルベースのアクセス制御を実装できます。  
   
 ## <a name="Permissions"></a> Permissions
 
@@ -133,7 +133,7 @@ RLS では、2 種類のセキュリティ述語をサポートしています�
   
  セッション固有の [SET オプション](../../t-sql/statements/set-statements-transact-sql.md)に依存する述語ロジックは避けます。実用的なアプリケーションで使用されることはほとんどありませんが、ロジックが特定のセッション固有の **SET** オプションに依存する述語関数では、ユーザーが任意のクエリを実行できる場合に情報が漏洩する可能性があります。 たとえば、文字列を **datetime** に暗黙的に変換する述語関数は、現在のセッションの **SET DATEFORMAT** オプションに基づいてさまざまな行をフィルター処理する可能性があります。 一般に、述語関数は次のルールに従う必要があります。  
   
-- 述語関数では、文字列を **date**、**smalldatetime**、**datetime**、**datetime2**、または **datetimeoffset** に暗黙的に変換しないようにする必要があります。逆の場合も同様です。これらの変換は、[SET DATEFORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/set-dateformat-transact-sql.md) オプションと [SET LANGUAGE &#40;Transact-SQL&#41;](../../t-sql/statements/set-language-transact-sql.md) オプションの影響を受けるためです。 代わりに、**CONVERT** 関数を使用し、スタイル パラメーターを明示的に指定します。  
+- 述語関数では、文字列を **date**、**smalldatetime**、**datetime**、**datetime2**、または **datetimeoffset** に暗黙的に変換しないようにする必要があります。逆の場合も同様です。これらの変換は、[SET DATEFORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/set-dateformat-transact-sql.md) オプションと [SET LANGUAGE &#40;Transact-SQL&#41;](../../t-sql/statements/set-language-transact-sql.md) オプションの影響を受けるためです。 代わりに、 **CONVERT** 関数を使用し、スタイル パラメーターを明示的に指定します。  
   
 - 述語関数は、週の最初の日の値に依存しないようにする必要があります。この値は [SET DATEFIRST &#40;Transact-SQL&#41;](../../t-sql/statements/set-datefirst-transact-sql.md) オプションの影響を受けるためです。  
   
@@ -149,7 +149,7 @@ RLS では、2 種類のセキュリティ述語をサポートしています�
   
 ### <a name="carefully-crafted-queries"></a>慎重に作成されたクエリ
 
-慎重に作成されたクエリを通じて、情報漏洩が発生する可能性があります。 たとえば、 `SELECT 1/(SALARY-100000) FROM PAYROLL WHERE NAME='John Doe'` というクエリで、悪意のあるユーザーに John doe さんの給与が 100,000 ドルであることが知らされました。 悪意のあるユーザーが他のユーザーの給与を直接照会するような事態を防ぐため、セキュリティ述語がある場合でも、ゼロ除算の例外がクエリ結果として返されることで、悪意のあるユーザーによって知られてしまいます。  
+慎重に作成されたクエリを通じて、情報漏えいが発生する可能性があります。 たとえば、 `SELECT 1/(SALARY-100000) FROM PAYROLL WHERE NAME='John Doe'` というクエリで、悪意のあるユーザーに John doe さんの給与が 100,000 ドルであることが知らされました。 悪意のあるユーザーが他のユーザーの給与を直接照会するような事態を防ぐため、セキュリティ述語がある場合でも、ゼロ除算の例外がクエリ結果として返されることで、悪意のあるユーザーによって知られてしまいます。  
 
 ## <a name="Limitations"></a> 機能間の互換性
 

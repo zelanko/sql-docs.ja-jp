@@ -18,10 +18,10 @@ ms.assetid: 27a032ef-1cf6-4959-8e67-03d28c4b3465
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 32cc95fa56d909602ab66d3ddad403bf4ceacebc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68065817"
 ---
 # <a name="alter-database-transact-sql-database-mirroring"></a>ALTER DATABASE (Transact-SQL) データベース ミラーリング
@@ -85,7 +85,7 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
 > [!NOTE]
 > 1 つの SET PARTNER 句で指定できる \<partner_option> は 1 つだけです。
 
-**'** _partner_server_ **'** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのサーバー ネットワーク アドレスが、新しいデータベース ミラーリング セッションでフェールオーバー パートナーとして動作することを指定します。 各セッションには 2 つのパートナーが必要です。一方はプリンシパル サーバーとして起動し、他方はミラー サーバーとして起動します。 これらのパートナーは、別々のコンピューター上に配置することをお勧めします。
+**'** _partner_server_ **'** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのサーバー ネットワーク アドレスが、新しいデータベース ミラーリング セッションでフェールオーバー パートナーとして動作することを指定します。 各セッションには 2 つのパートナーが必要です。一方はプリンシパル サーバーとして起動し、他方はミラー サーバーとして起動します。 これらのパートナーは、別々のコンピューター上に配置することをお勧めします。
 
 このオプションは、各パートナーでのセッションごとに 1 回指定します。 データベース ミラーリング セッションを開始するには、2 つの ALTER DATABASE <*データベース*> SET PARTNER **='** <_パートナー サーバー_> **'** ステートメントが必要です。 これらのステートメントの順序は非常に重要です。 最初に、ミラー サーバーに接続し、プリンシパル サーバー インスタンスを <*パートナー サーバー*> (SET PARTNER **='** <_プリンシパル サーバー_> **'** ) として指定します。 次に、プリンシパル サーバーに接続し、ミラー サーバー インスタンスを <*パートナー サーバー*> (SET PARTNER **='** <_ミラー サーバー_> **'** ) として指定します。これにより、これら 2 つのパートナー間で、データベース ミラーリング セッションが開始されます。 詳細については、[データベース ミラーリングの設定](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)に関するページを参照してください。
 
@@ -179,15 +179,15 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
 > [!NOTE]
 > 1 つの SET WITNESS 句で指定できる \<witness_option> は 1 つだけです。
 
- **'** _witness_server_ **'** : [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスが、データベース ミラーリング セッションのミラーリング管理サーバーとして動作することを指定します。 SET WITNESS ステートメントは、プリンシパル サーバー上でのみ指定できます。
+ **'** _witness_server_ **'** [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスが、データベース ミラーリング セッションのミラーリング管理サーバーとして動作することを指定します。 SET WITNESS ステートメントは、プリンシパル サーバー上でのみ指定できます。
 
 SET WITNESS **='** <_ミラーリング監視サーバー_> **'** ステートメントでは、<*ミラーリング監視サーバー*> の構文は、<*パートナー サーバー*> の構文と同じです。
 
 OFF: データベース ミラーリング セッションから、ミラーリング監視を削除します。 ミラーリング監視を OFF に設定すると、自動フェールオーバーが無効化されます。 データベースが FULL SAFETY に設定され、ミラーリング監視が OFF に設定されている場合、ミラー サーバーに障害が発生すると、プリンシパル サーバーはデータベースを使用不可にします。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 ### <a name="a-creating-a-database-mirroring-session-with-a-witness"></a>A. ミラーリング監視を使用したデータベース ミラーリング セッションを作成する
 

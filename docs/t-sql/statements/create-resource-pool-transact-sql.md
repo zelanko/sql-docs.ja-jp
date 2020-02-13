@@ -20,10 +20,10 @@ ms.assetid: 82712505-c6f9-4a65-a469-f029b5a2d6cd
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 2830c7ae4166ee0b71b1ddfb9de953c57be2452d
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982686"
 ---
 # <a name="create-resource-pool-transact-sql"></a>CREATE RESOURCE POOL (Transact-SQL)
@@ -66,7 +66,7 @@ CREATE RESOURCE POOL pool_name
 リソース プールのユーザー定義名を指定します。 *pool_name* には英数字を最大 128 文字まで使用できます。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス内で一意である必要があり、[識別子](../../relational-databases/databases/database-identifiers.md)のルールに従っている必要があります。  
   
 MIN_CPU_PERCENT =*value*  
-CPU の競合がある場合に、リソース プールのすべての要求に保証される平均 CPU 帯域幅を指定します。 *value* は整数で、既定の設定は 0 です。 *value* の許容範囲は 0 から 100 までです。  
+CPU の競合がある場合に、リソース プールのすべての要求に保証される平均 CPU 帯域幅を指定します。 *value* は整数で、既定の設定は 0 です。 *value* の許容範囲は 0 から 100 です。  
   
 MAX_CPU_PERCENT =*value*  
 CPU の競合がある場合に、リソース プールのすべての要求に割り当てられる最大平均 CPU 帯域幅を指定します。 *value* は整数で、既定の設定は 100 です。 *value* の許容範囲は 1 ～ 100 です。  
@@ -81,7 +81,7 @@ AFFINITY {SCHEDULER = AUTO | ( \<scheduler_range_spec> ) | NUMANODE = (\<NUMA_no
   
 リソース プールを特定のスケジューラにアタッチします。 既定値は AUTO です。  
   
-AFFINITY SCHEDULER = **(** \<scheduler_range_spec> **)** は、指定した ID によって識別される [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] スケジュールにリソース プールをマップします。 これらの ID は、[sys.dm_os_schedulers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md) の scheduler_id 列の値にマップされます。 
+AFFINITY SCHEDULER = **(** \<scheduler_range_spec> **)** を使用すると、指定した ID によって識別される [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] スケジュールにリソース プールがマップされます。 これらの ID は、[sys.dm_os_schedulers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md) の scheduler_id 列の値にマップされます。 
   
 AFFINITY NUMANODE = **(** \<NUMA_node_range_spec> **)** を使用すると、リソース プールは、指定した NUMA ノードまたはノードの範囲に対応する物理 CPU にマップされた [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のスケジューラに関連付けられます。 次の [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリを使用して、物理 NUMA 構成と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] スケジューラ ID のマッピングを検出できます。 
   
@@ -111,7 +111,7 @@ MAX_IOPS_PER_VOLUME =*value*
   
 プールの `MAX_IOPS_PER_VOLUME` を 0 に設定した場合、プールは管理されなくなり、他のプールで MIN_IOPS_PER_VOLUME が設定されていても、システムですべての IOPS を行うことがあります。 この場合、IO についてこのプールが管理されるようにするには、このプールの `MAX_IOPS_PER_VOLUME` の値をより大きな数値 (たとえば、最大値 2^31-1) に設定することをお勧めします。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 `MIN_IOPS_PER_VOLUME` と `MAX_IOPS_PER_VOLUME` は、1 秒あたりに行われる読み取りまたは書き込みの最小数と最大数を指定します。 これらの読み取りと書き込みでは任意のサイズを処理できます。これらの値は、最小または最大のスループットを示すものではありません。  
   
 `MAX_CPU_PERCENT` と `MAX_MEMORY_PERCENT` の値は、それぞれ `MIN_CPU_PERCENT` と `MIN_MEMORY_PERCENT` の値以上である必要があります。  
@@ -123,7 +123,7 @@ MAX_IOPS_PER_VOLUME =*value*
 ## <a name="permissions"></a>アクセス許可  
 `CONTROL SERVER` 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 ### <a name="1-shows-how-to-create-a-resource-pool"></a>1.リソース プールを作成する方法について説明します
 
 次の例では、"bigPool" というリソース プールを作成します。 このプールは、Resource Governor の既定の設定を使用します。  

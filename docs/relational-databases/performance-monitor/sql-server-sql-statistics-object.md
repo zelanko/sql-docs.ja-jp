@@ -14,10 +14,10 @@ ms.assetid: da7dbb4b-f632-45a0-b1ab-c35cc2695c86
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 7841fef89ae4eb0600dcc62c1561bff769500a47
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67995654"
 ---
 # <a name="sql-server-sql-statistics-object"></a>SQL Server: SQL Statistics オブジェクト
@@ -34,7 +34,7 @@ ms.locfileid: "67995654"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SQL Statistics** カウンターを次に示します。  
   
-|SQL Server SQL Statistics カウンター|[説明]|  
+|SQL Server SQL Statistics カウンター|説明|  
 |----------------------------------------|-----------------|  
 |**Auto-Param Attempts/sec**|1 秒あたりの自動パラメーター化が実行された数。 総数は、失敗した試行、安全な試行、および安全ではない試行の合計でなければなりません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスにより、いくつかのリテラルをパラメーターに置き換えることによって [!INCLUDE[tsql](../../includes/tsql-md.md)] 要求のパラメーター化が試行されると、自動パラメーター化が発生します。複数の類似した要求で、結果としてキャッシュされた実行プランの再使用を可能にするためです。 自動パラメーター化は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の新しいバージョンでは簡易パラメーター化とも呼ばれています。 このカウンターには、強制パラメーター化は含まれません。|  
 |**Batch Requests/sec**|1 秒あたりに受信した [!INCLUDE[tsql](../../includes/tsql-md.md)] コマンドのバッチの数。 この統計値はすべての制約の影響を受けます。制約とは、I/O、ユーザー数、キャッシュ サイズ、要求の複雑さなどです。 バッチ要求の数が多いことは、スループットが優れていることを意味します。|  

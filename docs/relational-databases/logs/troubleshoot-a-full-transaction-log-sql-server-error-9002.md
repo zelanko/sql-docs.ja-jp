@@ -19,17 +19,17 @@ ms.assetid: 0f23aa84-475d-40df-bed3-c923f8c1b520
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ad8b68338987256f1c7fa01f1f0d56242cef6a7f
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056075"
 ---
 # <a name="troubleshoot-a-full-transaction-log-sql-server-error-9002"></a>満杯になったトランザクション ログのトラブルシューティング (SQL Server エラー 9002)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   このトピックでは、トランザクション ログが満杯になった場合の対処法について説明し、今後トランザクション ログが満杯になるのを防ぐ方法を示します。 
   
-  トランザクション ログが満杯になると、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] から **9002 エラー**が発行されます。 データベースがオンラインまたは復旧中の場合、ログが満杯になることがあります。 データベースがオンラインの時にログが満杯になると、データベースはオンラインのままですが、読み取り専用になり、更新できません。 復旧中にログが満杯になった場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] によりデータベースが RESOURCE PENDING としてマークされます。 いずれの場合も、ログ領域を使用可能にするためのユーザー操作が必要です。  
+  トランザクション ログが満杯になると、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] から **9002 エラー**が発行されます。 データベースがオンラインまたは復旧中の場合、ログが満杯になることがあります。 データベースがオンラインのときにログ ファイルがいっぱいになった場合、データベースはオンラインのままです。ただし、更新はできず、読み取りだけが可能です。 復旧中にログが満杯になった場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] によりデータベースが RESOURCE PENDING としてマークされます。 いずれの場合も、ログ領域を使用可能にするためのユーザー操作が必要です。  
   
 ## <a name="responding-to-a-full-transaction-log"></a>トランザクション ログが満杯になった場合の対処法  
  トランザクション ログが満杯になった状況によっては、適切な対処法が異なる場合があります。 
@@ -102,7 +102,7 @@ ms.locfileid: "74056075"
 ### <a name="discovering-long-running-transactions"></a>実行時間の長いトランザクションの検出
 実行時間の非常に長いトランザクションがあると、トランザクション ログがいっぱいになる可能性があります。 実行時間の長いトランザクションを検索するには、以下のいずれかの方法を使用します。
  - **[sys.dm_tran_database_transactions](../system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)。**
-この動的管理ビューは、データベース レベルでのトランザクションに関する情報を返します。 実行時間の長いトランザクションで特に関係のある列としては、最初のログ レコードの時間 [(database_transaction_begin_time)](../system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)、トランザクションの現在の状態 [(database_transaction_state)](../system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)、トランザクション ログ内の開始レコードの [ログ シーケンス番号 (LSN)](../backup-restore/recover-to-a-log-sequence-number-sql-server.md) [(database_transaction_begin_lsn)](../system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)があります。
+この動的管理ビューは、データベース レベルでのトランザクションに関する情報を返します。 実行時間の長いトランザクションで特に関係のある列としては、最初のログ レコードの時間 [(database_transaction_begin_time)](../system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)、トランザクションの現在の状態 [(database_transaction_state)](../system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)、トランザクション ログ内の開始レコードの [ログ シーケンス番号 (LSN)](../backup-restore/recover-to-a-log-sequence-number-sql-server.md)[(database_transaction_begin_lsn)](../system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)があります。
 
  - **[DBCC OPENTRAN](../../t-sql/database-console-commands/dbcc-opentran-transact-sql.md)。**
 このステートメントを使用すると、トランザクション所有者のユーザー ID を特定できます。これにより、トランザクションの実行元を特定して、より規則正しくトランザクションを終了する (トランザクションをロールバックするのではなくコミットする) ことができます。

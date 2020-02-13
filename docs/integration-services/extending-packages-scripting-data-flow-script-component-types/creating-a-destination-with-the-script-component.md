@@ -17,10 +17,10 @@ ms.assetid: 214e22e8-7e7d-4876-b690-c138e5721b81
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 946fc77d3bde2814176ebefce4102742a0288a91
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296488"
 ---
 # <a name="creating-a-destination-with-the-script-component"></a>スクリプト コンポーネントによる変換先の作成
@@ -101,7 +101,7 @@ ms.locfileid: "71296488"
   
 4.  必要に応じて外部データ ソースとの接続を切断し、その他の必要なクリーンアップ作業を実行するには、**PostExecute** メソッドをオーバーライドします。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、変換先コンポーネントを作成するために **ScriptMain** クラスで必要なコードを示します。  
   
 > [!NOTE]

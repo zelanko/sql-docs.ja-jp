@@ -11,10 +11,10 @@ ms.assetid: 5683a45d-9e73-4cd5-83ca-fae8b26b488c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4a3626878ba4be6d56bb56b545f3d0cdc24a407a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71283200"
 ---
 # <a name="lesson-4-3-add-error-flow-redirection"></a>レッスン 4-3: エラー フロー リダイレクションを追加する
@@ -98,8 +98,8 @@ ms.locfileid: "71283200"
   
 13. **[OK]** を選択して、 **[スクリプト変換エディター]** ダイアログ ボックスを閉じます。  
   
-## <a name="go-to-next-task"></a>次の実習に進む
-[手順 4: フラット ファイル変換先を追加する](../integration-services/lesson-4-4-adding-a-flat-file-destination.md)  
+## <a name="go-to-next-task"></a>次のタスクに進む
+[手順 4:フラット ファイル変換先を追加する](../integration-services/lesson-4-4-adding-a-flat-file-destination.md)  
   
   
   

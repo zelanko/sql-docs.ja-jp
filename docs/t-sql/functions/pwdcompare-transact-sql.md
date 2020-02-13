@@ -20,10 +20,10 @@ ms.assetid: 5f84ff9e-c1ec-46aa-8501-50f854ebcc3a
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 4d0feb6b3254ddff640a41de8e0b833739225761
-ms.sourcegitcommit: af6f66cc3603b785a7d2d73d7338961a5c76c793
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73168767"
 ---
 # <a name="pwdcompare-transact-sql"></a>PWDCOMPARE (Transact-SQL)
@@ -60,7 +60,7 @@ PWDCOMPARE ( 'clear_text_password'
   
  場合 1 を返しますのハッシュ、 *clear_text_password* と一致する、 *password_hash* パラメーター、および、そうでない場合は 0 です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  PWDCOMPARE 関数は、パスワード ハッシュの強度に対する脅威にはなりません。このテストは、最初のパラメーターとして渡されるパスワードを使用してログインしようとした場合に実行されるテストと同じテストです。  
   
  **PWDCOMPARE** 包含データベース ユーザーのパスワードを使用することはできません。 包含データベースに相当するものがありません。  
@@ -70,7 +70,7 @@ PWDCOMPARE ( 'clear_text_password'
   
  sys.sql_logins の password_hash 列を調べるには CONTROL SERVER 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-identifying-logins-that-have-no-passwords"></a>A. パスワードがないログインを特定する  
  次の例では、パスワードがない [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを特定します。  

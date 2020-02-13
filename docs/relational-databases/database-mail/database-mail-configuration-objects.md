@@ -33,10 +33,10 @@ ms.assetid: 03f6e4c0-04ff-490a-bd91-637806215bd1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5082c3ab595cc11ff9ab3f5dbc869c11105ce70a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68134431"
 ---
 # <a name="database-mail-configuration-objects"></a>データベース メール構成オブジェクト
@@ -61,7 +61,7 @@ ms.locfileid: "68134431"
   
 -   Windows 認証:SMTP サーバーの認証に [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] の Windows サービス アカウントの資格情報を使用します。  
   
--   基本認証:SMTP サーバーの認証用に指定されたユーザー名とパスワードを使用します。  
+-   基本認証: SMTP サーバーの認証用に指定されたユーザー名とパスワードを使用します。  
   
 -   匿名認証:SMTP サーバーでは認証が必要ありません。  SMTP サーバーの認証には資格情報をまったく使用しません。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "68134431"
   
 -   電子メール サーバーの名前。  
   
--   電子メール サーバーの種類。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の場合は、常に SMTP (簡易メール転送プロトコル) です。  
+-   電子メール サーバーの種類。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の場合は、常に SMTP (簡易メール転送プロトコル) です。  
   
 -   電子メール サーバーのポート番号。  
   
@@ -128,14 +128,14 @@ ms.locfileid: "68134431"
   
 ### <a name="database-mail-settings"></a>データベース メール設定  
   
-|[オブジェクト名]|[説明]|  
+|Name|説明|  
 |----------|-----------------|  
 |[sysmail_configure_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql.md)|データベース メールの構成設定を変更します。|  
 |[sysmail_help_configure_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-help-configure-sp-transact-sql.md)|データベース メールの構成設定を表示します。|  
   
 ### <a name="accounts-and-profiles"></a>アカウントおよびプロファイル  
   
-|[オブジェクト名]|[説明]|  
+|Name|説明|  
 |----------|-----------------|  
 |[sysmail_add_profileaccount_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md)|データベース メール プロファイルにメール アカウントを追加します。|  
 |[sysmail_delete_account_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-delete-account-sp-transact-sql.md)|データベース メール アカウントを削除します。|  
@@ -150,16 +150,16 @@ ms.locfileid: "68134431"
   
 ### <a name="security"></a>Security  
   
-|[オブジェクト名]|[説明]|  
+|Name|説明|  
 |----------|-----------------|  
 |[sysmail_add_principalprofile_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-add-principalprofile-sp-transact-sql.md)|データベース プリンシパルがデータベース メール プロファイルを使用するための権限を許可します。|  
 |[sysmail_delete_principalprofile_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-delete-principalprofile-sp-transact-sql.md)|データベース ユーザーがパブリックまたはプライベートのデータベース メール プロファイルを使用するための権限を削除します。|  
 |[sysmail_help_principalprofile_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-help-principalprofile-sp-transact-sql.md)|特定のデータベース ユーザーのデータベース メール プロファイル情報を一覧表示します。|  
 |[sysmail_update_principalprofile_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-update-principalprofile-sp-transact-sql.md)|特定のデータベース ユーザーの権限情報を更新します。|  
   
-### <a name="system-state"></a>システムの状態  
+### <a name="system-state"></a>システム状態  
   
-|[オブジェクト名]|[説明]|  
+|Name|説明|  
 |----------|-----------------|  
 |[sysmail_start_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-start-sp-transact-sql.md)|データベース メール外部プログラムおよび関連付けられている SQL Service Broker のキューを開始します。|  
 |[sysmail_stop_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-stop-sp-transact-sql.md)|データベース メール外部プログラムおよび関連付けられている SQL Service Broker のキューを停止します。|  

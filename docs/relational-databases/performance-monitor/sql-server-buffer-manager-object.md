@@ -14,10 +14,10 @@ ms.assetid: 9775ebde-111d-476c-9188-b77805f90e98
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: f79d41e3fd247ca596a6257415d29f7ebcbe87b6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67986935"
 ---
 # <a name="sql-server-buffer-manager-object"></a>SQL Server: Buffer Manager オブジェクト
@@ -39,13 +39,13 @@ ms.locfileid: "67986935"
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がディスクからデータをどの程度の頻度で読み取る必要があるか。 メモリ アクセスなどの他の操作に比べて、物理 I/O には多くの時間がかかります。 物理 I/O をできる限り少なくすると、クエリのパフォーマンスが向上します。  
   
 ## <a name="buffer-manager-performance-objects"></a>Buffer Manager パフォーマンス オブジェクト  
- 次の表で、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Buffer Manager** パフォーマンス オブジェクトについて説明します。  
+ 次の表では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Buffer Manager** パフォーマンス オブジェクトについて説明します。  
   
-|SQL Server Buffer Manager カウンター|[説明]|  
+|SQL Server Buffer Manager カウンター|説明|  
 |----------------------------------------|-----------------|  
 |**1 秒あたりのバックグラウンド ライター ページ**|復旧間隔の設定を適用するためにフラッシュされたページ数。| 
 |**Buffer cache hit ratio**|バッファー キャッシュ内に存在し、ディスクから読み取る必要がないページの比率を示します。 この比率は、最近の数千のページ アクセスでのキャッシュ ヒットの総数を、キャッシュ参照の総数で割って算出します。 長い時間が経過すると、この比率はほとんど変化しなくなります。 キャッシュから読み取る方が、ディスクから読み取るよりもコストが低いので、この比率が高くなるようにします。 一般に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が使用できるメモリの量を増やすか、バッファー プール拡張機能を使用することで、バッファー キャッシュ ヒット率を増加させることができます。|  
-|**バッファー キャッシュ ヒット率ベース**|内部使用のみです。|
+|**バッファー キャッシュ ヒット率ベース**|内部使用専用です。|
 |**Checkpoint pages/sec**|チェックポイントにより、またはすべてのダーティ ページをフラッシュする必要があるその他の操作により、ディスクにフラッシュされた 1 秒あたりのページ数を示します。|  
 |**Database pages**|データベースの内容が含まれたこのノード上のバッファー プール内のページの数を示します。|  
 |**Extension allocated pages**|バッファー プール拡張ファイル内の非フリー キャッシュ ページの総数。|  

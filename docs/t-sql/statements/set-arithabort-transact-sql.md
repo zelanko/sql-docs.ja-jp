@@ -27,12 +27,12 @@ ms.assetid: f938a666-fdd1-4233-b97f-719f27b1a0e6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: da408c690622f5ba1ef45fa2466ed396d0022599
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e7ec15aed162c096bc13062ed1ec98b02c0c9ca4
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68064615"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76516253"
 ---
 # <a name="set-arithabort-transact-sql"></a>SET ARITHABORT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -55,7 +55,7 @@ SET ARITHABORT { ON | OFF }
 SET ARITHABORT ON
 ```
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 ログオン セッションでは、ARITHABORT を常に ON に設定します。 ARITHABORT を OFF に設定すると、クエリ最適化に悪影響を与え、パフォーマンスに関する問題が発生する可能性があります。  
   
 > [!WARNING]  
@@ -70,7 +70,7 @@ SET ARITHABORT と SET ANSI WARNINGS が OFF の場合に、これらのいず�
 > [!NOTE]  
 >  SET ARITHABORT と SET ARITHIGNORE の両方とも ON でない場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では NULL が返され、クエリの実行後に警告メッセージが表示されます。  
   
-ANSI_WARNINGS を ON に設定すると、データベース互換性レベルが 90 以上に設定されている場合、暗黙的に ARITHABORT が ON に設定されます。 データベース互換性レベルが 80 以下に設定されている場合は、ARITHABORT オプションを明示的に ON に設定する必要があります。  
+ANSI_WARNINGS の値が ON で、データベース互換性レベルが 90 以上に設定されている場合、ARITHABORT は値の設定に関係なく暗黙的に ON になります。 データベース互換性レベルが 80 以下に設定されている場合は、ARITHABORT オプションを明示的に ON に設定する必要があります。  
   
 式の評価では、SET ARITHABORT が OFF の場合に、INSERT、UPDATE、または DELETE ステートメントで算術演算エラー、オーバーフロー エラー、0 除算エラー、またはドメイン エラーが検出されると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では NULL 値が挿入または更新されます。 出力先の列で NULL 値が許容されない場合は、挿入または更新処理は失敗し、エラーが表示されます。  
   
@@ -94,7 +94,7 @@ SELECT @ARITHABORT AS ARITHABORT;
 ## <a name="permissions"></a>アクセス許可  
 ロール **public** のメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 次の例では、`SET ARITHABORT` を ON に設定した場合の 0 除算のエラーおよびオーバーフロー エラーをそれぞれ示しています。  
   
 ```  

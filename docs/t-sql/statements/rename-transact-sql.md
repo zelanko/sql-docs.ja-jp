@@ -10,10 +10,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 624131beece632cffd13bde3d6ad378f67b3a340
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68141268"
 ---
 # <a name="rename-transact-sql"></a>RENAME (Transact-SQL)
@@ -55,7 +55,7 @@ RENAME OBJECT [::] [ [*database_name* . [ *schema_name* ] . ] | [ *schema_name* 
 ユーザー定義テーブルの名前を変更します。 1、2、または 3 部構成の名前で名前を変更するテーブルを指定します。 新しいテーブル *new_table_name* を 1 部構成の名前として指定します。
 
 RENAME DATABASE [::] [ *database_name* TO *new_database_name*
-**APPLIES TO:** [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+**適用対象:** [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 ユーザー定義のデータベースの名前を *database_name* から *new_database_name* に変更します。 これらの [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] で予約されたいずれかのデータベース名に名前を変更することはできません。
 
@@ -95,7 +95,7 @@ RENAME DATABASE [::] [ *database_name* TO *new_database_name*
 
 テーブルの名前を変更するときは、DATABASE オブジェクトの共有ロック、SCHEMA オブジェクトの共有ロック、およびテーブルに対する排他ロックを取得します。
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 ### <a name="a-rename-a-database"></a>A. データベースの名前変更
 

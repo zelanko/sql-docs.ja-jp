@@ -13,13 +13,13 @@ ms.assetid: 5377c59f-2e25-4852-a306-c87ae3dca9fd
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1fcb84fe69c617cacc183910e3446400a172ea6d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67903118"
 ---
-# <a name="configure-topology-peer-to-peer-replication"></a>[トポロジの構成] \(ピア ツー ピア レプリケーション)
+# <a name="configure-topology-peer-to-peer-replication"></a>[トポロジの構成] (ピア ツー ピア レプリケーション)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   **[トポロジの構成]** ページを使用すると、新しいノードの追加、ノードの削除、既存のノード間の新しい接続の追加など、一般的な構成タスクを実行できます。 このウィザードの **[パブリケーション]** ページで選択したノードがデザイン画面に表示されます。 構成オプションを指定するには、ノード、接続、またはデザイン画面を右クリックします。  
   
@@ -29,11 +29,11 @@ ms.locfileid: "67903118"
 ## <a name="options"></a>オプション  
  **[トポロジの構成]** ページには、要素を右クリックすると表示されるインターフェイス要素およびオプションがあります。 次の表では、各インターフェイス要素を説明します。  
   
-|インターフェイス要素|[説明]|  
+|インターフェイス要素|説明|  
 |-----------------------|-----------------|  
 |デザイン画面|その他のインターフェイス要素を表示します。 要素を追加するには、デザイン画面を右クリックします。|  
-|![トポロジ内の最初のノード](../../relational-databases/replication/media/p2pwizard-firstnode.gif "トポロジ内の最初のノード")|トポロジの元のノード。 元のノードのパブリケーション データベースのコピーを使用して、新しいノードが初期化されます。|  
-|![完全な情報があるノード](../../relational-databases/replication/media/p2pwizard-complete.gif "完全な情報があるノード")|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降のバージョンのインスタンスを実行しており、レプリケーションに含まれている情報が完全なノード。 構成オプションを指定するには、ノードを右クリックします。|  
+|![トポロジの最初のノード](../../relational-databases/replication/media/p2pwizard-firstnode.gif "トポロジの最初のノード")|トポロジの元のノード。 元のノードのパブリケーション データベースのコピーを使用して、新しいノードが初期化されます。|  
+|![情報が完全なノード](../../relational-databases/replication/media/p2pwizard-complete.gif "情報が完全なノード")|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降のバージョンのインスタンスを実行しており、レプリケーションに含まれている情報が完全なノード。 構成オプションを指定するには、ノードを右クリックします。|  
 |![情報が不完全なノード](../../relational-databases/replication/media/p2pwizard-incomplete.gif "情報が不完全なノード")|レプリケーションに含まれている情報が不完全なノード。 構成オプションを指定するには、ノードを右クリックします。<br /><br /> レプリケーションに含まれている情報は、次のいずれかの理由で不完全になっています。<br /><br /> \- ウィザードで必要なメタデータが一部格納されない [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]のインスタンスがノードで実行されている。<br /><br /> \- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の最新バージョンがノードで実行されているが、レプリケーションがノードからサブスクリプション情報を取得できない。 このような場合は、次の方法で対処してください。<br /><br /> ノードのデータベースがオンラインであること、およびノードに接続するディストリビューション エージェントと同じ資格情報を使用してデータベースに接続できることを確認します。<br /><br /> ノードに接続するログ リーダー エージェントおよびすべてのディストリビューション エージェントが実行されていることを確認します。<br /><br /> すべてのトポロジ情報を収集できるように更新のタイムアウトが十分高く設定されていることを確認します。 タイムアウトを設定するには、デザイン画面を右クリックして **[更新のタイムアウトの設定]** をクリックします。|  
 |矢印の付いた灰色の線|2 つのノード間の接続。 接続を追加するには、接続するノードのいずれかを右クリックします。 接続を削除するには、接続を右クリックします。<br /><br /> 線に付いている矢印が単一の場合、レプリケーションに含まれているいずれかのノードの情報が不完全です。|  
   

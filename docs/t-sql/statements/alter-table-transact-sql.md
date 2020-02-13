@@ -60,10 +60,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 37cbb3621a1c9567a778fe58c4771e4336308647
-ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74127503"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
@@ -475,7 +475,7 @@ ALTER COLUMN
 **xml** 型にのみ適用されます。XML スキーマを関連付ける場合に使用します。 **xml** 列をスキーマ コレクションに入力するには、最初に [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md) を使ってデータベース内にスキーマ コレクションを作成する必要があります。
 
 COLLATE \< *collation_name* >  
-変更する列の新しい照合順序を指定します。 指定しない場合、データベースの既定の照合順序が列に割り当てられます。 照合順序の名前には、Windows 照合順序名または SQL 照合順序名のどちらかを指定できます。 一覧と詳細については、「[Windows 照合順序名 ](../../t-sql/statements/windows-collation-name-transact-sql.md)」および「[SQL Server 照合順序名](../../t-sql/statements/sql-server-collation-name-transact-sql.md)」をご覧ください。
+変更する列の新しい照合順序を指定します。 指定しない場合、データベースの既定の照合順序が列に割り当てられます。 照合順序名には、Windows 照合順序名または SQL 照合順序名を指定できます。 一覧と詳細については、「[Windows 照合順序名 ](../../t-sql/statements/windows-collation-name-transact-sql.md)」および「[SQL Server 照合順序名](../../t-sql/statements/sql-server-collation-name-transact-sql.md)」をご覧ください。
 
 COLLATE 句で照合順序を変更できるのは、**char**、**varchar**、**nchar**、**nvarchar** データ型の列のみです。 ユーザー定義の別名データ型の列の照合順序を変更するには、個別の ALTER TABLE ステートメントを使って列を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム データ型に変更します。 次に、その照合順序を変更し、列を別名データ型に戻します。
 
@@ -642,7 +642,7 @@ MAXDOP = *max_degree_of_parallelism*
 
 操作中は、**max degree of parallelism** 構成オプションをオーバーライドします。 詳細については、「 [max degree of parallelism サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)」を参照してください。
 
-MAXDOP オプションを使用して、並列プランの実行に使用されるプロセッサ数を制限します。 プロセッサ数は最大で 64 です。
+MAXDOP オプションを使用して、並列プランの実行に使用されるプロセッサ数を制限します。 最大数は 64 プロセッサです。
 
 *max_degree_of_parallelism* には次のいずれかの値を指定できます。
 
@@ -800,7 +800,7 @@ REBUILD 操作で特定の圧縮設定を指定しないと、パーティショ
 DATA_COMPRESSION  
 **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。
 
-指定したテーブル、パーティション番号、またはパーティション範囲に、データ圧縮オプションを指定します。 次のオプションがあります。
+指定したテーブル、パーティション番号、またはパーティション範囲に、データ圧縮オプションを指定します。 次のようなオプションがあります。
 
 NONE: テーブルまたは指定したパーティションが圧縮されません。 このオプションは列ストア テーブルには適用されません。
 
@@ -867,31 +867,31 @@ Windows と互換性のある FileTable ディレクトリ名を指定します�
 
 **前提条件**。 テーブルに対して Stretch を有効にする前に、サーバーおよびデータベースで Stretch を有効にする必要があります。 詳細については、「 [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)」を参照してください。
 
-**権限**: データベースまたはテーブルの Stretch を有効にするには、db_owner アクセス許可が必要です。 テーブルの拡張を有効にすると、テーブルに対する ALTER 権限も必要になります。
+**権限**: データベースまたはテーブルの Stretch を有効にするには、db_owner アクセス許可が必要です。 テーブルの Stretch を有効にする場合、テーブルに対する ALTER 権限も必要です。
 
 **テーブルに対して Stretch Database を無効にする**
 
 テーブルの Stretch を無効にすると、既に Azure に移行されているリモート データには 2 つの選択肢があります。 詳細については、「[Stretch Database を無効にして、リモート データを戻す](../../sql-server/stretch-database/disable-stretch-database-and-bring-back-remote-data.md)」を参照してください。
 
-- テーブルに対する Stretch を無効にして、テーブルのリモート データを Azure から SQL Server にコピーして戻すには、次のコマンドを実行します。 このコマンドは取り消すことができません。
+- テーブルの Stretch を無効にして Azure から SQL Server にテーブルのリモート データをコピーするには、次のコマンドを実行します。 このコマンドは取り消すことができません。
 
     ```sql
     ALTER TABLE <table_name>
        SET ( REMOTE_DATA_ARCHIVE ( MIGRATION_STATE = INBOUND ) ) ;
     ```
 
-この操作によりデータ転送コストが発生し、取り消すことはできません。 詳細については、[データ転送の価格の詳細](https://azure.microsoft.com/pricing/details/data-transfers/)に関するページをご覧ください。
+この操作にはデータ転送コストが発生し、キャンセルできません。 詳細については、[データ転送の価格の詳細](https://azure.microsoft.com/pricing/details/data-transfers/)に関するページをご覧ください。
 
 すべてのリモート データが Azure から SQL Server にコピーして戻されると、テーブルに対する Stretch は無効になります。
 
-- テーブルに対する Stretch を無効にして、リモート データを破棄するには、次のコマンドを実行します。
+- テーブルの Stretch を無効にしてリモート データを破棄するには、次のコマンドを実行します。
 
     ```sql
     ALTER TABLE <table_name>
        SET ( REMOTE_DATA_ARCHIVE = OFF_WITHOUT_DATA_RECOVERY ( MIGRATION_STATE = PAUSED ) ) ;
     ```
 
-テーブルに対する Stretch Database を無効にすると、データの移行が停止し、クエリの結果にリモート テーブルからの結果が含まれなくなります。
+テーブルの Stretch Database を無効にすると、データ移行が停止し、クエリ結果にリモート テーブルからの結果が含まれなくなります。
 
 Stretch を無効にしても、リモート テーブルは削除されません。 リモート テーブルを削除する場合は、Azure portal を使用して削除します。
 
@@ -913,7 +913,7 @@ MIGRATION_STATE = { OUTBOUND | INBOUND | PAUSED }
 - SQL Server から Azure にデータを移行するには `OUTBOUND` を指定します。
 - Azure から SQL Server にテーブルのリモート データをコピーして戻し、テーブルに対する Stretch を無効にするには、`INBOUND` を指定します。 詳細については、「[Stretch Database を無効にして、リモート データを戻す](../../sql-server/stretch-database/disable-stretch-database-and-bring-back-remote-data.md)」を参照してください。
 
-    この操作によりデータ転送コストが発生し、取り消すことはできません。
+    この操作にはデータ転送コストが発生し、キャンセルできません。
 
 - データの移行を一時停止または延期するには `PAUSED` を指定します。 詳しくは、「[データ移行の一時停止と再開 - Stretch Database](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md)」をご覧ください。
 
@@ -946,7 +946,7 @@ IF EXISTS
 
 既に存在する場合にのみ、列または制約を条件付きで削除します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 新しいデータ行を追加するには、[INSERT](../../t-sql/statements/insert-transact-sql.md) を使用します。 データの行を削除するには、[DELETE](../../t-sql/statements/delete-transact-sql.md) または [TRUNCATE TABLE](../../t-sql/statements/truncate-table-transact-sql.md) を使用します。 既存の行の値を変更するには、[UPDATE](../../t-sql/queries/update-transact-sql.md) を使用します。
 
@@ -1012,7 +1012,7 @@ ONLINE **=** ON には次の制限があります。
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パブリッシャーでパブリッシュされたテーブルに ALTER TABLE を実行すると、既定では、すべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サブスクライバーにその変更が反映されます。 この機能にはいくつか制限事項があります。 これは無効にできます。 詳細については、「[パブリケーション データベースでのスキーマの変更](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)」を参照してください。
 
-## <a name="data-compression"></a>Data Compression
+## <a name="data-compression"></a>データ圧縮
 
 システム テーブルで圧縮を有効にすることはできません。 テーブルがヒープの場合、ONLINE モードでは、再構築操作がシングル スレッドになります。 マルチスレッドのヒープの再構築操作では、OFFLINE モードを使用してください。 データ圧縮の詳細については、「[データ圧縮](../../relational-databases/data-compression/data-compression.md)」を参照してください。
 
@@ -1779,7 +1779,7 @@ DROP PERIOD FOR SYSTEM_TIME;
 DROP TABLE DepartmentHistory;
 ```
 
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 次の例 A から C では、[!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] データベースの `FactResellerSales` テーブルを使用しています。
 
@@ -1937,7 +1937,7 @@ WITH
 
 この例では、`Orders` テーブルに次のパーティションがあります。 各パーティションにはデータがあります。
 
-|パーティション|データがある|境界の範囲|
+|Partition|データがある|境界の範囲|
 |---------------|---------------|--------------------|
 |1|はい|OrderDate < '2004-01-01'|
 |2|はい|'2004-01-01' <= OrderDate < '2005-01-01'|

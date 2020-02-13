@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 31abd605-b273-419d-86df-d0ecf539a507
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: f18f33d58de48358ffe88adee0bb2a3605c3c50b
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 1052379affba718d49879c85e395b0117671075a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769994"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286572"
 ---
 # <a name="publication-properties-subscription-options"></a>[パブリケーションのプロパティ]、[サブスクリプション オプション]
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "68769994"
   
 ### <a name="creation-and-synchronization"></a>[作成と同期]  
  **[匿名サブスクリプションを許可]**  
- 匿名プル サブスクリプションを許可するかどうかを決定します。 匿名サブスクリプションは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEWEd2005](../../includes/ssewed2005-md.md)], [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssMobileEd2005](../../includes/ssmobileed2005-md.md)]、および [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for Windows CE でサポートされています。 このオプションをスナップショット パブリケーションおよびトランザクション パブリケーションに使用するには、 **[スナップショットが常に利用可能]** を **[True]** に設定する必要があります。  
+ 匿名プル サブスクリプションを許可するかどうかを決定します。 匿名サブスクリプションは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEWEd2005](../../includes/ssewed2005-md.md)]、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssMobileEd2005](../../includes/ssmobileed2005-md.md)]、および [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for Windows CE でサポートされています。 このオプションをスナップショット パブリケーションおよびトランザクション パブリケーションに使用するには、 **[スナップショットが常に利用可能]** を **[True]** に設定する必要があります。  
   
  **[アタッチ可能なサブスクリプション データベース]**  
  サブスクリプション データベースのコピーをアタッチすることによって、サブスクリプションを作成できるかどうかを決定します (スナップショット パブリケーションおよびトランザクション パブリケーションに対して **[スナップショットが常に利用可能]** を **[True]** に設定することが必要)。  
@@ -46,10 +46,10 @@ ms.locfileid: "68769994"
 >  アタッチ可能なサブスクリプションは、将来のリリースでは使用できません。 この機能は非推奨とされます。  
   
  **[プル サブスクリプションを許可]**  
- サブスクライバーでこのパブリケーションのプル サブスクリプションを作成できるようにするかどうかを決定します。 詳細については、「[パブリケーションのサブスクライブ](../../relational-databases/replication/subscribe-to-publications.md)」を参照してください。  
+ サブスクライバーでこのパブリケーションのプル サブスクリプションを作成できるようにするかどうかを決定します。 詳細については、「[パブリケーションのサブスクライブ](../../relational-databases/replication/subscribe-to-publications.md)」をご覧ください。  
   
 ### <a name="schema-replication"></a>[スキーマ レプリケーション]  
- **[スキーマ変更のレプリケート]**  
+ **スキーマ変更のレプリケート**  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンのみです。 パブリッシュされたオブジェクトに対して、テーブルへの列の追加や列のデータ型の変更などのスキーマ変更をレプリケートするかどうかを決定します。 詳細については、「[パブリケーション データベースでのスキーマの変更](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)」を参照してください。  
   
 ## <a name="options-for-snapshot-and-transactional-publications"></a>スナップショット パブリケーションとトランザクション パブリケーションのオプション  
@@ -76,10 +76,10 @@ ms.locfileid: "68769994"
   
 ### <a name="peer-to-peer-replication"></a>[ピア ツー ピア レプリケーション]  
  **[True]**  
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンにのみ適用されます。 パブリケーションでピア ツー ピア レプリケーションをサポートするかどうかを決定します。 このオプションを **[True]** にすると、他のパブリケーション プロパティでピア ツー ピア レプリケーションをサポートするように設定されます。 サブスクリプションが存在する場合、このオプションは読み取り専用です。 **[即時更新サブスクリプションを許可]** 、 **[キュー更新サブスクリプションを許可]** 、または **[SQL Server 以外のサブスクライバーを許可]** が **[True]** に設定されている場合、このオプションは **[True]** に設定できません。 詳細については、「 [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)」を参照してください。  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンにのみ適用されます。 パブリケーションでピア ツー ピア レプリケーションをサポートするかどうかを決定します。 このオプションを **[True]** にすると、他のパブリケーション プロパティでピア ツー ピア レプリケーションをサポートするように設定されます。 サブスクリプションが存在する場合、このオプションは読み取り専用です。 **[即時更新サブスクリプションを許可]** 、 **[キュー更新サブスクリプションを許可]** 、または **[SQL Server 以外のサブスクライバーを許可]** が **[True]** に設定されている場合、このオプションは **[True]** に設定できません。 詳細については、「[ピア ツー ピア トランザクション レプリケーション](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)」を参照してください。  
   
  **[ピア ツー ピア競合検出を許可]**  
- [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降のバージョンにのみ適用されます。 このパブリケーションで競合検出を有効にするかどうかを指定します。 競合検出を使用するには、すべてのノードが [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降のバージョンを実行しており、すべてのノードで検出が有効になっている必要があります。 競合検出を使用するには、 **[ピア実行者 ID]** の値も指定する必要があります。詳細については、「 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)」を参照してください。  
+ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降のバージョンにのみ適用されます。 このパブリケーションで競合検出を有効にするかどうかを指定します。 競合検出を使用するには、すべてのノードが [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降のバージョンを実行しており、すべてのノードで検出が有効になっている必要があります。 競合検出を使用するには、 **[ピア実行者 ID]** の値も指定する必要があります。詳細については、「 [ピア ツー ピア レプリケーションにおける競合検出](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)」を参照してください。  
   
  **[ピア実行者 ID]**  
  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降のバージョンにのみ適用されます。 ピア ツー ピア トポロジ内のノードの ID を指定します。 **[ピア ツー ピア競合検出を許可]** が **[True]** に設定されている場合、この ID は競合検出で使用されます。 トポロジで使用されていないゼロ以外の正の ID を指定してください。 既に使用されている ID を確認するには、 [Mspeer_originatorid_history](../../relational-databases/system-tables/mspeer-originatorid-history-transact-sql.md) システム テーブルに対してクエリを実行します。  
@@ -106,12 +106,12 @@ ms.locfileid: "68769994"
  **[競合を一元的にレポート]**  
  パブリッシャーのみで、またはパブリッシャーとサブスクライバーの両方で、競合するデータ変更をレポートするかどうかを決定します このオプションは読み取り専用であり、パブリケーションの新規作成ウィザードで作成されたパブリケーションに対して既定で **[True]** に設定され、パブリケーション作成後は変更できません。 値 **[True]** は、競合がパブリッシャーでのみレポートされることを示します。 競合は、レポートされた場所でのみ参照できます。 詳細については、「 [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)」の「競合の表示」を参照してください。  
   
-### <a name="filtering"></a>フィルター  
+### <a name="filtering"></a>Filtering  
  **[パラメーター化されたフィルターの許可]**  
- パラメーター化されたフィルターを、パブリケーションで使用するかどうかに基づいて設定します。 このオプションは常に読み取り専用です。 詳細については、「 [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)」を参照してください。  
+ パラメーター化されたフィルターを、パブリケーションで使用するかどうかに基づいて設定します。 このオプションは常に読み取り専用です。 詳しくは、「 [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)」をご覧ください。  
   
  **[サブスクライバーの検証]**  
- サブスクライバーで、正しいデータのパーティションが保持されているかどうかを検証する場合に使用する関数を決定します。 複数の値がある場合はコンマで区切ります。 詳細については、「[マージ サブスクライバーのパーティション情報の検証](../../relational-databases/replication/validate-partition-information-for-a-merge-subscriber.md)」を参照してください。  
+ サブスクライバーで、正しいデータのパーティションが保持されているかどうかを検証する場合に使用する関数を決定します。 複数の値がある場合はコンマで区切ります。 詳細については、「[Validate Partition Information for a Merge Subscriber](../../relational-databases/replication/validate-partition-information-for-a-merge-subscriber.md)」 (マージ サブスクライバーのパーティション情報の検証) を参照してください。  
   
  **[パーティションの事前計算]**  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンのみです。 どのデータがどのパーティションに属しているかを事前に計算することによって、同期を最適化するかどうかを決定します。 この設定は、パブリケーションが事前計算済みパーティションの基準を満たしている場合、既定で **[True]** になっています。 詳細については、「[事前計算済みパーティションによるパラメーター化されたフィルターのパフォーマンス最適化](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)」を参照してください。  

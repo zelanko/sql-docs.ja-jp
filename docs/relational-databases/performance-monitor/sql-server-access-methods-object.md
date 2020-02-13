@@ -14,10 +14,10 @@ ms.assetid: 27558585-e780-48bb-a042-30d664662ebc
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: ab394b7eed0a284b8ed74e5333b01f27283469ca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67987363"
 ---
 # <a name="sql-server-access-methods-object"></a>SQL Server の Access Methods オブジェクト
@@ -42,9 +42,9 @@ ms.locfileid: "67987363"
   
 -   [sys.dm_db_session_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)  
   
- 次の表では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の **Access Methods** カウンターについて説明します。  
+ 次の表では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Access Methods** カウンターについて説明します。  
   
-|SQL Server の Access Methods カウンター|[説明]|  
+|SQL Server の Access Methods カウンター|説明|  
 |----------------------------------------|-----------------|  
 |**AU cleanup batches/sec**|遅延および削除済みアロケーション ユニットをクリーンアップするバックグラウンド タスクによって正常に完了した 1 秒あたりのバッチの数。|  
 |**AU cleanups/sec**|遅延および削除済みアロケーション ユニットをクリーンアップするバックグラウンド タスクによって正常に削除された 1 秒あたりのアロケーション ユニットの数。 各アロケーション ユニットの削除には複数のバッチが必要です。|  
@@ -88,7 +88,7 @@ ms.locfileid: "67987363"
 |**Used tree page cookie**|ツリー ページの親ページで変更が行われなかったため、インデックス検索時にツリー ページ クッキーが正常に使用された回数。 クッキーはインデックス検索を高速化するために使用されます。|  
 |**Workfiles Created/sec**|1 秒あたりに作成された作業ファイルの数。 たとえば、作業ファイルを使用して、ハッシュ結合やハッシュ集計の一時結果を保存できます。|  
 |**Worktables Created/sec**|1 秒あたりに作成された作業テーブルの数。 たとえば、作業テーブルを使用して、クエリ スプール、LOB 変数、XML 変数、およびカーソルの一時的な結果を保存できます。|  
-|**Worktables From Cache Base**|内部使用のみです。|  
+|**Worktables From Cache Base**|内部使用専用です。|  
 |**Worktables From Cache Ratio**|作成された作業テーブルのうち、作業テーブルの最初の 2 ページが割り当てられなかったが、作業テーブル キャッシュから直ちに使用できるようになった作業テーブルの割合。 作業テーブルを削除した場合、2 つのページが割り当てられたままになり、作業テーブル キャッシュに返されます。 これによりパフォーマンスが向上します。|  
   
 ## <a name="see-also"></a>参照  

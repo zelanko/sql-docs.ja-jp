@@ -18,10 +18,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1c6be1e3a8b05daf16ec845a307679620d2b1d00
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68048707"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>空間インデックスの作成、変更、および削除
@@ -56,7 +56,7 @@ ms.locfileid: "68048707"
   
 7.  インデックスを作成する空間列を指定するには、 **[追加]** をクリックします。  
   
-8.  **[ *\<テーブル名>* から列を選択]** ダイアログ ボックスで、**geometry** 型または **geography** 型の列を選択します (対応するチェック ボックスをオンにします)。 その他の空間列は編集できなくなります。 別の空間列を選択するには、先に現在選択されている列の選択を解除する必要があります。 完了したら、 **[OK]** をクリックします。  
+8.  [ *\<テーブル名>* **から列を選択**] ダイアログ ボックスで、対応するチェック ボックスをオンにすることで、**geometry** 型または **geography** 型の列を選択します。 その他の空間列は編集できなくなります。 別の空間列を選択するには、先に現在選択されている列の選択を解除する必要があります。 完了したら、 **[OK]** をクリックします。  
   
 9. **[インデックス キー列]** グリッドで、選択した列を確認します。  
   

@@ -5,17 +5,17 @@ ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.date: 01/10/2020
+ms.date: 01/23/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
-ms.openlocfilehash: bf888d42215f3a4ee7c44b782b82c55f85afa041
-ms.sourcegitcommit: 21e6a0c1c6152e625712a5904fce29effb08a2f9
+ms.openlocfilehash: be817f1fffd734dcf86f3b35d3215decbc9eb28d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75884031"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76706291"
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>SQL Server 可用性グループ用の RHEL クラスターを構成する
 
@@ -50,7 +50,7 @@ ms.locfileid: "75884031"
    
    >Linux クラスターでは、フェンスを使用して、クラスターが既知の状態に戻されます。 フェンスを構成する方法は、ディストリビューションと環境によって異なります。 現時点では、一部のクラウド環境ではフェンスを利用できません。 詳細については、[RHEL 高可用性クラスターのサポート ポリシー (仮想化プラットフォーム)](https://access.redhat.com/articles/29440) に関するページをご覧ください。
 
-5. [可用性グループをクラスターのリソースとして追加します](sql-server-linux-availability-group-cluster-rhel.md#create-availability-group-resource)。  
+4. [可用性グループをクラスターのリソースとして追加します](sql-server-linux-availability-group-cluster-rhel.md#create-availability-group-resource)。  
 
 ## <a name="configure-high-availability-for-rhel"></a>RHEL の高可用性を構成する
 
@@ -84,8 +84,16 @@ RHEL の高可用性を構成するには、高可用性サブスクリプショ
 
 1. リポジトリを有効にします。
 
+   **RHEL 7**
+
    ```bash
    sudo subscription-manager repos --enable=rhel-ha-for-rhel-7-server-rpms
+   ```
+
+   **RHEL 8**
+
+   ```bash
+   sudo subscription-manager repos --enable=rhel-8-for-x86_64-highavailability-rpms
    ```
 
 詳細については、「[Pacemaker - The Open Source, High Availability Cluster](https://clusterlabs.org/pacemaker/)」を参照してください。 
@@ -161,12 +169,19 @@ Pacemaker クラスターのプロパティの詳細については、「[Pacema
 
 可用性グループ リソースを作成するには、`pcs resource create` コマンドを使用し、リソースのプロパティを設定します。 次のコマンドは、`ag1` という名前の可用性グループの `ocf:mssql:ag` マスター/スレーブ タイプのリソースを作成します。
 
+**RHEL 7**
+
 ```bash
 sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=60s master notify=true
 ```
 
-> [!NOTE]
-> **RHEL 8** が使用できるようになると共に、create 構文が変更されました。 **RHEL 8** を使用している場合は、用語 `master` が `promotable` に変更されています。 上記のコマンドの代わりに、次の create コマンドを使用します: `sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=60s promotable notify=true`
+**RHEL 8**
+
+**RHEL 8** が使用できるようになると共に、create 構文が変更されました。 **RHEL 8** を使用している場合は、用語 `master` が `promotable` に変更されています。 上記のコマンドの代わりに、次の create コマンドを使用します。 
+
+```bash
+sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=60s promotable notify=true
+```
 
 [!INCLUDE [required-synchronized-secondaries-default](../includes/ss-linux-cluster-required-synchronized-secondaries-default.md)]
 

@@ -11,12 +11,12 @@ ms.assetid: e644766d-1d1c-43d7-83ff-8ccfe4f3af9f
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 42b42356331d91683811472b420e656560a77d79
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4a86f94a141b1f15e2bfb7e9ff3c4428f5b33707
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086257"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76909772"
 ---
 # <a name="statistics-for-memory-optimized-tables"></a>メモリ最適化テーブルの統計
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "68086257"
 
 3. 更新した統計を活用するように、ネイティブ コンパイル ストアド プロシージャを手動で再コンパイルします。
 
-*統計の 1 回限りのスクリプト:* 下位互換性レベルで作成されたメモリ最適化テーブルに対して、次の Transact-SQL スクリプトを 1 回実行してすべてのメモリ最適化テーブルの統計を更新し、それ以降、統計の自動更新を有効にすることができます (データベースに対して AUTO_UPDATE_STATISTICS が有効になっている必要があります)。
+*統計の 1 回限りのスクリプト:* 下位互換性レベルで作成されたメモリ最適化テーブルに対して、次の Transact-SQL スクリプトを 1 回実行してすべてのメモリ最適化テーブルの統計を更新し、それ以降、統計の自動更新を有効にすることができます (データベースに対して AUTO_UPDATE_STATISTICS が有効になっていることが前提です)。
 
 ```
 -- Assuming AUTO_UPDATE_STATISTICS is already ON for your database:

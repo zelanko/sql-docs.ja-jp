@@ -30,10 +30,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d88b0c8e36b69bbc2a341917ec96e12ed8bfdc17
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981728"
 ---
 # <a name="select---into-clause-transact-sql"></a>SELECT - INTO 句 (Transact-SQL)
@@ -82,7 +82,7 @@ SELECT...INTO は、既定のファイル グループに新しいテーブル�
   
 これらの条件が 1 つでも満たされている場合は、列に IDENTITY プロパティは継承されず、代わりに NOT NULL として作成されます。 新しいテーブルに ID 列が必要であるものの使用できる列がない場合や、ソースの ID 列とは異なるシード値や増分値が必要な場合は、選択リストで IDENTITY 関数を使用してその列を定義します。 以下の「例」の「IDENTITY 関数を使用して ID 列を作成する」を参照してください。  
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 `SELECT...INTO` ステートメントによる操作は 2 つの部分からなります。新しいテーブルが作成され、それから行が挿入されます。  つまり、挿入できない場合、すべてロールバックされますが、新しい (空の) テーブルは残ります。  操作が全体として成功または失敗した場合、[明示的なトランザクション](../language-elements/begin-transaction-transact-sql.md)を使用します。
   
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項  
@@ -104,7 +104,7 @@ SELECT...INTO は、既定のファイル グループに新しいテーブル�
 ## <a name="permissions"></a>アクセス許可  
  対象となるデータベースの CREATE TABLE 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-creating-a-table-by-specifying-columns-from-multiple-sources"></a>A. 複数のソースの列を指定してテーブルを作成する  
  次の例では、各種の従業員関連テーブルと住所関連テーブルから 7 つの列を選択して、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースにテーブル `dbo.EmployeeAddresses` を作成します。  
@@ -214,7 +214,7 @@ GO
 ### <a name="e-import-from-an-external-table-created-with-polybase"></a>E. PolyBase で作成された外部テーブルをインポートする  
  Hadoop または Azure ストレージからデータを永続的なストレージの SQL Server にインポートします。 `SELECT INTO` を使用して、SQL Server の永続記憶装置に、外部テーブルで参照されるデータをインポートします。 リレーショナル テーブルにその場を作成し、2 番目の手順で、テーブルの上に列ストア インデックスを作成します。  
   
- **適用対象:** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]」を参照してください。  
+ **適用対象**: [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
 ```sql
 -- Import data for car drivers into SQL Server to do more in-depth analysis.  

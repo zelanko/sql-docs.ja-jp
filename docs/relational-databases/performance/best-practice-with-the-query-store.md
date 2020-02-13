@@ -13,12 +13,12 @@ ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 author: pmasl
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d35637b9452500caac680439bd1ef09442d9ef11
-ms.sourcegitcommit: af6f66cc3603b785a7d2d73d7338961a5c76c793
+ms.openlocfilehash: f5861ece9a27e0d38274e9cac97ae046a9f6bdde
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73142777"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76910105"
 ---
 # <a name="best-practices-with-query-store"></a>クエリ ストアを使用する際のベスト プラクティス
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -73,7 +73,7 @@ SET QUERY_STORE (MAX_STORAGE_SIZE_MB = 1024);
  **データのフラッシュ間隔 (分)** :収集された実行時統計情報をディスクに保存する間隔を定義します。 グラフィカル ユーザー インターフェイス (GUI) では分単位で表されますが、[!INCLUDE[tsql](../../includes/tsql-md.md)] では秒単位で表されます。 既定値は 900 秒です。これは、グラフィカル ユーザー インターフェイスでは 15 分です。 ワークロードで生成される異なるクエリとプランの数が多くない場合、またはデータベースをシャットダウンする前にデータを長時間保持できる場合は、大きい値を使用することを検討してください。
  
 > [!NOTE]
-> トレース フラグ 7745 を使用すると、フェールオーバーまたはシャットダウン コマンドが発生した場合に、クエリ ストアのデータはディスクに書き込まれません。 詳しくは、「[ミッション クリティカルなサーバーにトレース フラグを使用して、障害からの回復を向上させる](#Recovery)」セクションをご覧ください。
+> トレース フラグ 7745 を使用すると、フェールオーバーまたはシャットダウン コマンドが発生した場合に、クエリ ストアのデータはディスクに書き込まれません。 詳細については、「[ミッション クリティカルなサーバーでトレース フラグを使用する](#Recovery)」セクションを参照してください。
 
 **[データ フラッシュ間隔]** に別の値を設定するには、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用します。  
   
@@ -109,9 +109,12 @@ SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);
   
 -   **[すべて]** : すべてのクエリをキャプチャします。 これは [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] および [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] の既定のオプションです。
 -   **Auto**:頻度の低いクエリと、コンパイルと実行時間の短いクエリは無視されます。 実行回数、コンパイル、実行時間のしきい値は内部的に決定されます。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降では、これは既定のオプションです。
--   **[なし]** :クエリ ストアで新しいクエリのキャプチャが停止されます。  
+-   **なし**: クエリ ストアで新しいクエリのキャプチャが停止されます。  
 -   **Custom**:追加の制御と機能を使用して、データ収集ポリシーを微調整できます。 新しいカスタム設定では、内部キャプチャ ポリシーの時間のしきい値内で何が行われるかが定義されます。 これは、構成可能な条件が評価される時刻の境界であり、いずれかが true の場合、クエリがクエリ ストアによるキャプチャの対象となります。
-  
+
+> [!IMPORTANT]
+> クエリ ストア キャプチャ モードが **All**、**Auto**、または **Custom** に設定されている場合、カーソル、ストアド プロシージャ内のクエリ、ネイティブ コンパイル済みのクエリは常にキャプチャされます。 ネイティブ コンパイル済みのクエリをキャプチャするには、[sys.sp_xtp_control_query_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md) を使用して、クエリごとの統計情報の収集を有効にします。 
+
  次のスクリプトでは、QUERY_CAPTURE_MODE を AUTO に設定します。
   
 ```sql  
@@ -119,7 +122,7 @@ ALTER DATABASE [QueryStoreDB]
 SET QUERY_STORE (QUERY_CAPTURE_MODE = AUTO);  
 ```  
 
-### <a name="examples"></a>使用例
+### <a name="examples"></a>例
 次の例では、QUERY_CAPTURE_MODE を AUTO に設定し、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] のその他の推奨オプションを設定します。
   
 ```sql  
@@ -324,7 +327,7 @@ FROM sys.database_query_store_options;
   
 |Query Store Capture Mode (クエリ ストアのキャプチャ モード)|シナリオ|  
 |------------------------|--------------|  
-|**すべて**|すべてのクエリの図形とその実行頻度やその他の統計情報の観点から、ワークロードを詳しく分析します。<br /><br /> ワークロードの新しいクエリを特定します。<br /><br /> ユーザーまたは自動パラメーター化の機会を識別するためにアドホック クエリが使用されているかどうかを検出します。<br /><br />注:これは、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] と [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] の既定のキャプチャ モードです。|
+|**すべて**|すべてのクエリの図形とその実行頻度やその他の統計情報の観点から、ワークロードを詳しく分析します。<br /><br /> ワークロード中の新しいクエリを特定します｡<br /><br /> アドホック クエリを使用してユーザーまたは自動化によるパラメーター化が特定されているかどうかを検出します。<br /><br />注:これは、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] と [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] の既定のキャプチャ モードです。|
 |**Auto**|関連するクエリと実用的なクエリに焦点を絞ります。 たとえば、定期的に実行されるクエリや、大量のリソースを消費するクエリなどがあります。<br /><br />注:[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降では、これが既定のキャプチャ モードです。|  
 |**なし**|実行時に監視する必要があるクエリ セットを既にキャプチャしており、他のクエリによって生じる可能性のある、集中を妨げるものを取り除きたいと考えています。<br /><br /> None は、テストおよびベンチマーク環境に適しています。<br /><br /> このモードは、アプリケーションのワークロードを監視するよう構成したクエリ ストアの構成を販売するソフトウェア ベンダーにも適しています。<br /><br /> 重要な新しいクエリを追跡して最適化する機会を見逃す可能性があるため、None を使用する際は注意してください。 シナリオで必要な特別な場合を除き、このモードは使用しないでください。|  
 |**Custom**|[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] では、`ALTER DATABASE SET QUERY_STORE` コマンドの下に Custom キャプチャ モードが導入されています。 有効にすると、新しいクエリ ストア キャプチャ ポリシーの設定で追加のクエリ ストア構成を使用して、特定のサーバーでのデータ収集を微調整することができます。<br /><br />新しいカスタム設定では、内部キャプチャ ポリシーの時間のしきい値内で何が行われるかが定義されます。 これは、構成可能な条件が評価される時刻の境界であり、いずれかが true の場合、クエリがクエリ ストアによるキャプチャの対象となります。 詳細については、「[ALTER DATABASE の SET オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)」を参照してください。|  

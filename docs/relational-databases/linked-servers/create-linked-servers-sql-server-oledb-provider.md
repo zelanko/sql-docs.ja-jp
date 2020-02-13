@@ -11,10 +11,10 @@ ms.author: pelopes
 manager: rothj
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 933a37dd4ef627796b7688510bd235c80db417be
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095991"
 ---
 # <a name="microsoft-sql-server-distributed-queries-ole-db-connectivity"></a>Microsoft SQL Server 分散クエリ: OLE DB 接続
@@ -110,9 +110,9 @@ SQL 以外のコマンド プロバイダーの 2 つの例として、Microsoft
 
 キーセット カーソルは、*OpenQuery* 関数を含む分散クエリに対してはサポートされていません。
 
-#### <a name="updatable-keyset-cursor-requirements"></a>更新可能なキーセット カーソルの要件
+#### <a name="updatable-keyset-cursor-requirements"></a>更新可能なキーセット カーソルの必要条件
 
-リモート テーブルは、分散クエリで定義されたキーセット カーソルを使用して更新または削除できます (たとえば、`UPDATE` \| DELETE `<remote-table>` `WHERE` CURRENT OF `<cursor-name>`)。 次に、更新可能なカーソルが分散クエリに対して許可される条件を示します。
+リモート テーブルは、分散クエリで定義されたキーセット カーソルを使用して更新または削除できます (たとえば、`UPDATE` \| DELETE `<remote-table>` `WHERE` CURRENT OF `<cursor-name>`)。 次に、更新可能なカーソルが分散クエリに許可される条件を示します。
 
 - 更新可能なカーソルは、プロバイダーがリモート テーブルに対する更新と削除の条件も満たしている場合に許可されます。 詳細については、この記事で後述する「\"UPDATE ステートメントと DELETE ステートメント\"」を参照してください。
 
@@ -190,7 +190,7 @@ SQL Server では 2 つのリモート データ オブジェクト名前付け�
 
    SQL Server によって、分散クエリ評価で使用されるいくつかのプロバイダー プロパティが収集されます。これらのプロパティは、`IDBProperties::GetProperties` を呼び出すことによって取得されます。 これらのプロパティはすべてオプションです。ただし、関連するすべてのプロパティをサポートすることで、SQL Server がプロバイダーの機能を最大限に活用できるようになります。 たとえば、SQL Server からプロバイダーにクエリを送信できるかどうかを判別するには、`DBPROP_SQLSUPPORT` が必要です。 このプロパティがサポートされていない場合、SQL Server ではリモート プロバイダーが (SQL コマンド プロバイダーであったとしても) SQL コマンド プロバイダーとして使用されません。 次の表の「既定値」列は、プロパティがプロバイダーでサポートされていない場合に、SQL Server によって想定される値を示しています。
 
-プロパティ| 既定値| 新しく使用する機能 |
+プロパティ| 既定値| 用途 |
 |:----|:----|:----|
 |`DBPROP_DBMSNAME`|なし|エラー メッセージに使用されます。|
 |`DBPROP_DBMSVER` |なし|エラー メッセージに使用されます。|
@@ -308,7 +308,7 @@ OLE DB プロバイダーでは、OLE DB で定義されたデータ型 (OLE DB 
 
 SQL Server と OLE DB のデータ型マッピング テーブル。
 
-| OLE DB 型 | `DBCOLUMNFLAG` | SQL Server データ型 |
+| OLE DB 型 | `DBCOLUMNFLAG` | SQL Server のデータ型 |
 |-----|-----|-----|
 |`DBTYPE_I1`*| |`numeric(3, 0)`|
 |`DBTYPE_I2`| |`smallint`|
@@ -323,25 +323,25 @@ SQL Server と OLE DB のデータ型マッピング テーブル。
 |`DBTYPE_NUMERIC`| |`numeric`|
 |`DBTYPE_DECIMAL`| |`decimal`|
 |`DBTYPE_CY`| |`money`|
-|`DBTYPE_BSTR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true`<br>内の複数の<br> 最大長 > 4000 文字|ntext|
-|`DBTYPE_BSTR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true`|NCHAR|
-|`DBTYPE_BSTR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=false`|NVARCHAR|
+|`DBTYPE_BSTR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true`<br>or<br> 最大長 > 4000 文字|ntext|
+|`DBTYPE_BSTR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true`|nchar|
+|`DBTYPE_BSTR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=false`|nvarchar|
 |`DBTYPE_IDISPATCH`| |エラー|
 |`DBTYPE_ERROR`| |エラー|
 |`DBTYPE_BOOL`| |`bit`|
-|`DBTYPE_VARIANT`*| |NVARCHAR|
+|`DBTYPE_VARIANT`*| |nvarchar|
 |`DBTYPE_IUNKNOWN`| |エラー|
 |`DBTYPE_GUID`| |`uniqueidentifier`|
-|`DBTYPE_BYTES`|`DBCOLUMNFLAGS_ISLONG=true` <br>内の複数の<br> 最大長 > 8000|`image`|
-|`DBTYPE_BYTES`|`DBCOLUMNFLAGS_ISROWVER=true`、`DBCOLUMNFLAGS_ISFIXEDLENGTH=true`、列サイズ = 8 <br>内の複数の<br> 最大長は報告されない。 | `timestamp` |
+|`DBTYPE_BYTES`|`DBCOLUMNFLAGS_ISLONG=true` <br>or<br> 最大長 > 8000|`image`|
+|`DBTYPE_BYTES`|`DBCOLUMNFLAGS_ISROWVER=true`、`DBCOLUMNFLAGS_ISFIXEDLENGTH=true`、列サイズ = 8 <br>or<br> 最大長は報告されない。 | `timestamp` |
 |`DBTYPE_BYTES`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true` | `binary` |
 |`DBTYPE_BYTES`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true` | `varbinary`|
 |`DBTYPE_STR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true` | `char`|
 |`DBTYPE_STR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true` | `varchar` |
-|`DBTYPE_STR`| `DBCOLUMNFLAGS_ISLONG=true` <br>内の複数の<br> 最大長 > 8000 文字 <br>内の複数の<br>   最大長は報告されない。 | `text`|
+|`DBTYPE_STR`| `DBCOLUMNFLAGS_ISLONG=true` <br>or<br> 最大長 > 8000 文字 <br>or<br>   最大長は報告されない。 | `text`|
 |`DBTYPE_WSTR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true` |`nchar`|
 |`DBTYPE_WSTR` | `DBCOLUMNFLAGS_ISFIXEDLENGTH=false`|`nvarchar`|
-|`DBTYPE_WSTR`| `DBCOLUMNFLAGS_ISLONG=true` <br>内の複数の<br> 最大長 > 4000 文字 <br>内の複数の<br>   最大長は報告されない。 | `ntext`|
+|`DBTYPE_WSTR`| `DBCOLUMNFLAGS_ISLONG=true` <br>or<br> 最大長 > 4000 文字 <br>or<br>   最大長は報告されない。 | `ntext`|
 |`DBTYPE_UDT`| |エラー|
 |`DBTYPE_DATE`* | | `datetime` |
 |`DBTYPE_DBDATE` | | `datetime` (明示的な変換が必要)|
@@ -616,7 +616,7 @@ Microsoft SQL Server によって、異種データ ソースにあるデータ�
 
 オプションのインターフェイスの場合、「シナリオ」列には、指定したインターフェイスを使用する 6 つのシナリオのうち 1 つ以上が示されています。 たとえば、ベース テーブル行セットの `IRowsetChange` インターフェイスはオプションのインターフェイスです。このインターフェイスは、`UPDATE`、DELETE、`INSERT` の各ステートメントのシナリオで使用されます。 このインターフェイスがサポートされていない場合、UPDATE、DELETE、`INSERT` の各ステートメントをそのプロバイダーに対してサポートすることはできません。 オプションであるその他のインターフェイスの一部には、「シナリオ」列に \"パフォーマンス\" とマークされています。これは、そのインターフェイスを使用すると全般的なパフォーマンスが高くなることを示しています。 たとえば、`IDBSchemaRowset` インターフェイスがサポートされていない場合、SQL Server では行セットを 2 回開く必要があります (メタデータのために 1 回、クエリ実行のために 1 回)。 `IDBSchemaRowset` をサポートすることにより、SQL Server のパフォーマンスが向上します。
 
-|Object|インターフェイス|Required|コメント|シナリオ|
+|Object|インターフェイス|Required|説明|シナリオ|
 |:-----|:-----|:-----|:-----|:-----|
 |データ ソース オブジェクト|`IDBInitialize`|はい|データおよびセキュリティ コンテキストの初期化とセットアップを行います。| |
 | |`IDBCreateSession`|はい|DB セッション オブジェクトを作成します。| |
@@ -640,7 +640,7 @@ Microsoft SQL Server によって、異種データ ソースにあるデータ�
 | |`IColumnsInfo`|はい|行セット内の列に関する情報を取得します。|インデックス アクセス、パフォーマンス。|
 | |`IRowsetInfo`|はい|行セット プロパティに関する情報を取得します。|インデックス アクセス、パフォーマンス。|
 | |`IRowsetIndex`|はい|インデックスについての行セットにのみ必要で、インデックス機能 (範囲の設定、シーク) に使用されます。|インデックス アクセス、パフォーマンス。|
-|コマンド|`ICommand`|はい| |リモート クエリ、パススルー クエリ。|
+|command|`ICommand`|はい| |リモート クエリ、パススルー クエリ。|
 | |`ICommandText`|はい|クエリ テキストの定義に使用します。|リモート クエリ、パススルー クエリ。|
 | |`IColumnsInfo`|はい|クエリ結果の列のメタデータを取得するために使用します。|リモート クエリ、パススルー クエリ。|
 | |`ICommandProperties`|はい|コマンドが返す行セットに対して必要なプロパティを指定するために使用します。|リモート クエリ、パススルー クエリ。|
@@ -680,7 +680,7 @@ SQL Server では、SQL-92 エントリ レベルまたは ODBC コアのどち�
 
    - AS キーワードを使用しないテーブルの別名。
 
-1. `WHERE` 句では、`NOT` `EXISTS`、`ANY`、`ALL`でサブクエリを使用します。
+1. `WHERE` 句では、`NOT` `EXISTS`、`ANY`、`ALL` でサブクエリを使用します。
 
 1. 式:
 

@@ -14,12 +14,12 @@ ms.topic: conceptual
 ms.date: 11/06/2019
 ms.author: jaszymas
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 40584dda23d36af385b9cae5457377838694be6e
-ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.openlocfilehash: 8ec410ba98be0c1893f376daf596a0746983b87d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75558468"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76909902"
 ---
 # <a name="common-errors-for-transparent-data-encryption-with-customer-managed-keys-in-azure-key-vault"></a>Azure Key Vault のカスタマー マネージド キーを使った透過的なデータ暗号化に関する一般的なエラー
 
@@ -33,7 +33,7 @@ Azure Key Vault のカスタマー マネージド キーを使用するよう�
 
 アクセスできないデータベースがもう必要ない場合は、すぐに削除してコストを抑えることができます。 Azure Key Vault キーへのアクセスが復元され、データベースがオンラインに戻るまで、データベースに対する他のすべての操作は許可されません。 カスタマー マネージド キーで暗号化されたデータベースにアクセスできない間は、サーバーで TDE のオプションをカスタマー マネージド キーからサービス マネージド キーに変更することもできません。 これは、TDE 保護機能へのアクセス許可が取り消されているときに、データを不正アクセスから保護するために必要です。 
 
-データベースにアクセスできない期間が 8 時間を超えると、自動修復は行われなくなります。 この期間の後に必要な Azure Key Vault のキー アクセスが復元された場合は、手動でアクセスを再検証して、データベースをオンラインに戻す必要があります。 この状況でデータベースをオンラインに戻す場合は、データベースのサイズによってはかなり時間がかかることがあり、現在はサポート チケットが必要になります。 データベースがオンラインに戻ると、Geo-DR が構成されていた場合の geo リンク、PITR 履歴、タグなどの以前に構成した設定は失われます。 そのため、基になっている Key Vault のキー アクセスの問題にできる限り早く気付き、対処できるように、[アクション グループ](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups)を使用して通知システムを実装することをお勧めします。 
+データベースにアクセスできない期間が 8 時間を超えると、自動修復は行われなくなります。 この期間の後に必要な Azure Key Vault のキー アクセスが復元された場合は、キーへのアクセスを手動で再検証して、データベースをオンラインに戻す必要があります。 この状況でデータベースをオンラインに戻す場合は、データベースのサイズによってはかなり時間がかかることがあります。 データベースがオンラインに戻ると、[フェールオーバー グループ](https://docs.microsoft.com/azure/sql-database/sql-database-auto-failover-group)、PITR 履歴、タグなどの以前に構成した設定は**失われます**。 そのため、基になっている Key Vault のキー アクセスの問題にできる限り早く気付き、対処できるように、[アクション グループ](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups)を使用して通知システムを実装することをお勧めします。 
 
 ## <a name="common-errors-causing-databases-to-become-inaccessible"></a>データベースにアクセスできなくなる原因となる一般的なエラー
 

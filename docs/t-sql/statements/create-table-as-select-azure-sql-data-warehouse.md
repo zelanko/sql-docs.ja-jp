@@ -12,10 +12,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 22f296db7717e81068ac52d6c3df547a0ba0d085
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73660790"
 ---
 # <a name="create-table-as-select-azure-sql-data-warehouse"></a>CREATE TABLE AS SELECT (Azure SQL Data Warehouse)
@@ -166,7 +166,7 @@ CTAS を使用してテーブルを作成するときに、パフォーマンス
 
 <a name="ctas-copy-table-bk"></a>
 
-### <a name="a-use-ctas-to-copy-a-table"></a>A. CTAS を使用してテーブルをコピーする 
+### <a name="a-use-ctas-to-copy-a-table"></a>A. CTAS を使用したテーブルのコピー 
 適用対象:Azure SQL Data Warehouse と Parallel Data Warehouse
 
 `CTAS` の最も一般的な使用方法の 1 つとして、DDL を変更できるようにテーブルのコピーを作成することが考えられます。 たとえば、最初に `ROUND_ROBIN` としてテーブルを作成し、それを列で分散されるテーブルに変更する必要がある場合、`CTAS` を使用して分散列を変更します。 また、`CTAS` を使用して、パーティション、インデックス、列の型を変更することができます。
@@ -679,7 +679,7 @@ RENAME OBJECT dbo.[DimProduct_upsert]  TO [DimProduct];
 
 <a name="ctas-data-type-and-nullability-bk"></a>
 
-### <a name="m-explicitly-state-data-type-and-nullability-of-output"></a>M. 出力のデータ型と NULL 値の許容を明示的に指定する  
+### <a name="m-explicitly-state-data-type-and-nullability-of-output"></a>M. 明示的にデータ型および出力の null 値の許容を示す  
 適用対象:Azure SQL Data Warehouse と Parallel Data Warehouse  
 
 SQL Server コードを SQL Data Warehouse に移行したときに、次のようなコーディング パターンが発生する場合があります。
@@ -833,7 +833,7 @@ OPTION (LABEL = 'CTAS : Partition IN table : Create');
 
 したがって、型の一貫性と、CTAS で NULL 値の許容プロパティを維持することが適切なエンジニアリングのベスト プラクティスであることがわかります。 計算の整合性を維持するのに役立ち、また、確実にパーティションを切り替えることができます。
 
-### <a name="n-create-an-ordered-clustered-columnstore-index-with-maxdop-1"></a>N. MAXDOP 1 で順序指定クラスター化列ストア インデックスを作成する  
+### <a name="n-create-an-ordered-clustered-columnstore-index-with-maxdop-1"></a>北 MAXDOP 1 で順序指定クラスター化列ストア インデックスを作成する  
 ```sql
 CREATE TABLE Table1 WITH (DISTRIBUTION = HASH(c1), CLUSTERED COLUMNSTORE INDEX ORDER(c1) )
 AS SELECT * FROM ExampleTable

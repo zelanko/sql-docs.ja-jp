@@ -13,10 +13,10 @@ ms.assetid: cfed22c8-c666-40ca-9e73-24d93e85ba92
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f145b536072314594af473488bc0b933c443230e
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294690"
 ---
 # <a name="manage-a-cdc-instance"></a>CDC インスタンスの管理
@@ -37,7 +37,7 @@ ms.locfileid: "71294690"
  **[開始]**  
  選択した CDC インスタンスについて変更のキャプチャを開始するには、 **[開始]** をクリックします。  
   
- **[停止]**  
+ **Stop**  
  選択した CDC インスタンスについて変更のキャプチャを停止するには、 **[停止]** をクリックします。 CDC インスタンスを停止すると、その時点までにキャプチャされた変更は失われず、CDC インスタンスが再開されたときに伝達されます。  
   
  **リセット**  
@@ -56,7 +56,7 @@ ms.locfileid: "71294690"
 > [!NOTE]  
 >  補足ログ スクリプトを実行すると、[スクリプトを実行するための Oracle 資格情報] ダイアログ ボックスが表示されます。このダイアログ ボックスで、有効な Oracle ユーザー名とパスワードを指定します。 適切な Oracle 資格情報を指定する方法については、「 [Oracle Credentials for Running Script](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md)」を参照してください。  
   
- **[CDC インスタンス配置スクリプト]**  
+ **CDC インスタンス配置スクリプト**  
  このリンクをクリックすると、CDC インスタンス配置スクリプトを表示する [CDC インスタンス配置スクリプト] ダイアログ ボックスが表示されます。 このダイアログ ボックスの詳細については、「 [CDC Instance Deployment Script](../../integration-services/change-data-capture/cdc-instance-deployment-script.md)」を参照してください。  
   
  **Properties**  
@@ -66,17 +66,17 @@ ms.locfileid: "71294690"
   
  CDC インスタンスの情報を表示するときは、次に示すビューアーのタブを使用できます。 これらのタブに表示される情報は読み取り専用です。  
   
- **ステータス**  
+ **状態**  
  このタブには、CDC インスタンスの現在の状態に関する情報と統計が表示されます。 このタブには、次の情報が含まれています。  
   
 -   **状態**: CDC インスタンスの現在の状態を示すアイコンです。 これらの状態を次に示します。  
   
     |||  
     |-|-|  
-    |![エラー](../../integration-services/change-data-capture/media/error.gif "エラー")|**エラー**: 再試行できないエラーが発生したため、Oracle CDC インスタンスは実行されていません。 次の副状態が利用できます。<br /><br /> **間違った構成**: 手動の介入を必要とする構成エラーが発生しました。<br /><br /> **パスワードが必要**: Oracle CDC インスタンスのパスワードが設定されていないか、パスワードが無効です。<br /><br /> **予期しないエラー**: その他すべての回復できないエラーです。|  
+    |![Error](../../integration-services/change-data-capture/media/error.gif "エラー")|**エラー**。 再試行できないエラーが発生したため、Oracle CDC インスタンスは実行されていません。 次の副状態が利用できます。<br /><br /> **間違った構成**:手動の介入を必要とする構成エラーが発生しました。<br /><br /> **パスワードが必要**: Oracle CDC インスタンスのパスワードが設定されていないか、パスワードが無効です。<br /><br /> **予期しないエラー**: その他すべての回復できないエラーです。|  
     |![OK](../../integration-services/change-data-capture/media/okay.gif "OK")|**[実行中]** : CDC インスタンスが実行されていて、変更レコードが処理されています。 次の副状態が利用できます。<br /><br /> **アイドル状態**: すべての変更レコードが処理され、ターゲット変更テーブルに格納されました。 アクティブなトランザクションはこれ以上ありません。<br /><br /> **処理**: 変更テーブルにまだ書き込まれていない、処理中の変更レコードがあります。|  
-    |![[停止]](../../integration-services/change-data-capture/media/stop.gif "[停止]")|**[停止]** : CDC インスタンスが実行されていません。 停止状態は、CDC インスタンスが正常に停止したことを示します。|  
-    |![一時停止](../../integration-services/change-data-capture/media/paused.gif "一時停止")|**一時停止**: CDC インスタンスが実行されていますが、再試行できないエラーにより処理が中断されています。 次の副状態が利用できます。<br /><br /> **接続解除**: ソース Oracle データベースへの接続を確立できません。 接続が回復すると処理が再開されます。<br /><br /> **ストレージ**: 記憶領域がいっぱいです。 追加の記憶領域に空きができると処理が再開されます。<br /><br /> **ロガー**: ロガーは Oracle に接続されていますが、必要なトランザクション ログが利用できないなどの一時的な問題が発生しており、Oracle トランザクション ログを読み取ることができません。|  
+    |![Stop](../../integration-services/change-data-capture/media/stop.gif "Stop")|**[停止]** : CDC インスタンスが実行されていません。 停止状態は、CDC インスタンスが正常に停止したことを示します。|  
+    |![一時停止](../../integration-services/change-data-capture/media/paused.gif "一時停止")|**一時停止**: CDC インスタンスが実行されていますが、再試行できないエラーにより処理が中断されています。 次の副状態が利用できます。<br /><br /> **切断**: ソース Oracle データベースへの接続を確立できません。 接続が回復すると処理が再開されます。<br /><br /> **ストレージ**: 記憶領域がいっぱいです。 追加の記憶領域に空きができると処理が再開されます。<br /><br /> **ロガー**: ロガーは Oracle に接続されていますが、必要なトランザクション ログが利用できないなどの一時的な問題が発生しており、Oracle トランザクション ログを読み取ることができません。|  
   
 -   **[詳細な状態]** : 現在の副状態です。  
   
@@ -116,7 +116,7 @@ ms.locfileid: "71294690"
   
  これらのプロパティとその編集方法については、「 [Edit Tables](../../integration-services/change-data-capture/edit-tables.md)」を参照してください。  
   
- **詳細設定**  
+ **詳細**  
  CDC インスタンスの詳細プロパティとプロパティ値を表示します。 このタブは読み取り専用です。 これらのプロパティを編集するには、左側のペインでインスタンスを右クリックし、 **[プロパティ]** を選択するか、右側のペインで **[プロパティ]** をクリックして [\<インスタンス> のプロパティ] ダイアログ ボックスを開きます。  
   
  これらのプロパティとその編集方法については、「 [Edit the Advanced Properties](../../integration-services/change-data-capture/edit-the-advanced-properties.md)」を参照してください。  
@@ -125,6 +125,6 @@ ms.locfileid: "71294690"
  [SQL Server 変更データベース インスタンスを作成する方法](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
  [CDC インスタンスのプロパティを表示する方法](../../integration-services/change-data-capture/how-to-view-the-cdc-instance-properties.md)   
  [CDC インスタンスのプロパティを編集する方法](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
- [新しいインスタンス ウィザードの使用](../../integration-services/change-data-capture/use-the-new-instance-wizard.md)  
+ [新しいインスタンス ウィザードを使用する](../../integration-services/change-data-capture/use-the-new-instance-wizard.md)  
   
   

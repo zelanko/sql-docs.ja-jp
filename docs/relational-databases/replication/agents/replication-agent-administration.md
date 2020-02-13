@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: f27186b8-b1b2-4da0-8b2b-91f632c2ab7e
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 93527accb44bd192e1468ea4176702173bf74114
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 43b3c6759f4ea213acf8bed789d67ff4952b4ae8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768221"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288159"
 ---
 # <a name="replication-agent-administration"></a>レプリケーション エージェントの管理
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -39,9 +39,9 @@ ms.locfileid: "68768221"
   
  レプリケーション エージェントのファイルは、 [!INCLUDE[ssInstallPathVar](../../../includes/ssinstallpathvar-md.md)]\COM に保存されています。 次の表は、レプリケーション実行可能ファイル名およびファイル名を示しています。 パラメーター参照を表示するにはエージェントのリンクをクリックしてください。  
   
-|エージェント実行可能ファイル|[ファイル名]|  
+|エージェント実行可能ファイル|ファイル名|  
 |----------------------|---------------|  
-|[レプリケーション スナップショット エージェント](../../../relational-databases/replication/agents/replication-snapshot-agent.md)|snapshot.exe|  
+|[Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)|snapshot.exe|  
 |[Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)|distrib.exe|  
 |[レプリケーション ログ リーダー エージェント](../../../relational-databases/replication/agents/replication-log-reader-agent.md)|logread.exe|  
 |[レプリケーション キュー リーダー エージェント](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)|qrdrsvc.exe|  
@@ -87,7 +87,7 @@ ms.locfileid: "68768221"
 ## <a name="replication-maintenance-jobs"></a>レプリケーション メンテナンス ジョブ  
  レプリケーションでは、次のジョブを使用して定期的なメンテナンスおよび要求時メンテナンスを実行します。  
   
-|クリーンアップ ジョブ|[説明]|既定のスケジュール|  
+|クリーンアップ ジョブ|説明|既定のスケジュール|  
 |------------------|-----------------|----------------------|  
 |エージェント履歴のクリーンアップ: Distribution|ディストリビューション データベースからレプリケーション エージェントの履歴を削除します。|10 分おきに実行されます。|  
 |ディストリビューションのクリーンアップ: Distribution|ディストリビューション データベースからレプリケートされたトランザクションを削除します。 |10 分おきに実行されます。|  

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ce30a095-2975-4387-9377-94a461ac78ee
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 09d68b763d967b6bcea4853f40bfc2ee2694421b
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.openlocfilehash: 7d7582eca4c3934a43e3faa7c94fc84f5609d86e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75320449"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76910025"
 ---
 # <a name="tutorial-prepare-sql-server-for-replication-publisher-distributor-subscriber"></a>チュートリアル:レプリケーション用の SQL Server の準備 (パブリッシャー、ディストリビューター、サブスクライバー)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -181,8 +181,9 @@ ms.locfileid: "75320449"
    ![ショートカット メニューの [ディストリビューションの構成] コマンド](media/tutorial-preparing-the-server-for-replication/configuredistribution.png)
   
    > [!NOTE]  
-   > 実際のサーバー名ではなく **localhost** を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が **localhost** に接続できないことを示す警告が表示されます。 警告ダイアログで **[OK]** を選択します。 **[サーバーへの接続]** ダイアログ ボックスで、 **[サーバー名]** を **localhost** から使用しているサーバーの名前に変更します。 次に、 **[接続]\(Connect\)** を選択します。  
-  
+   > - 実際のサーバー名ではなく **localhost** を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続した場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が **localhost または IP アドレス**に接続できないことを示す警告が表示されます。 警告ダイアログで **[OK]** を選択します。 **[サーバーへの接続]** ダイアログ ボックスで、 **[サーバー名]** を **localhost または IP アドレス**から使用しているサーバーの名前に変更します。 次に、 **[接続]\(Connect\)** を選択します。  
+   > - 現時点で SQL Server Management Studio (SSMS) 18.0 (およびそれ以降) には既知の問題があります。IP アドレスを使用してディストリビューターに接続するときに警告メッセージは表示 "_されません_" が、これはまだ無効です。 ディストリビューターに接続するときは、実際のサーバー名を使用する必要があります。 
+   
    ディストリビューション構成ウィザードが起動します。  
   
 3. **[ディストリビューター]** ページで、[< *'サーバー名'* >  **を独自のディストリビューターとする (SQL Server はディストリビューション データベースとログを作成します)]** を選択します。 **[次へ]** を選択します。  

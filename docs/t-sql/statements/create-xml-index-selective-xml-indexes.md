@@ -13,10 +13,10 @@ ms.assetid: 1f510151-41d5-45c2-9cd0-b1ca0246fffe
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3f5e9e831677a2779c908a0ec4b3afa5b27f7fff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68058494"
 ---
 # <a name="create-xml-index-selective-xml-indexes"></a>CREATE XML INDEX (選択的 XML インデックス)
@@ -87,7 +87,7 @@ xmlnamespace_uri AS xmlnamespace_prefix
   
  WITH \<index_options> インデックス オプションについては、[CREATE XML INDEX](../../t-sql/statements/create-xml-index-selective-xml-indexes.md) に関するページを参照してください。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  ベース テーブルの各 XML 列に複数の選択的セカンダリ XML インデックスを作成できます。  
   
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項  
@@ -98,7 +98,7 @@ xmlnamespace_uri AS xmlnamespace_prefix
 ### <a name="permissions"></a>アクセス許可  
  テーブルまたはビューに対する ALTER 権限が必要です。 実行するには、 **sysadmin** 固定サーバー ロール、または **db_ddladmin** 固定データベース ロールおよび **db_owner** 固定データベース ロールのメンバーである必要があります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、パス `pathabc`に選択的セカンダリ XML インデックスを作成します。 インデックスを作成するパスは、[CREATE SELECTIVE XML INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-selective-xml-index-transact-sql.md) で割り当てられた名前です。  
   
 ```  

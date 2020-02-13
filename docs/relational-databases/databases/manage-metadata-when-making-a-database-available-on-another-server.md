@@ -34,12 +34,12 @@ helpviewer_keywords:
 ms.assetid: 5d98cf2a-9fc2-4610-be72-b422b8682681
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: fad28919360caf2a37f410d1c3f3e122fd3dd803
-ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
+ms.openlocfilehash: 282e75c071ce220c5b7301b5c4b27fff2cf4b053
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74119457"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76929110"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>データベースを別のサーバーで使用できるようにするときのメタデータの管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,16 +57,16 @@ ms.locfileid: "74119457"
   
  アプリケーションによっては、シングル ユーザー データベースのスコープの外部にある情報、エンティティ、オブジェクトに依存することがあります。 通常、アプリケーションには、 **master** データベースと **msdb** データベースに対する依存関係があります。また、ユーザー データベースにも依存関係があります。 ユーザー データベースの外部に格納される (ユーザー データベースを正しく機能させるために必要な) すべてのデータは、対象のサーバー インスタンスで使用できるようにする必要があります。 たとえば、アプリケーションのログインが、 **master** データベースにメタデータとして格納されているため、それらを移行先サーバーで再作成する必要があります。 アプリケーションまたはデータベースのメンテナンス プランが、メタデータが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースに格納される** エージェント ジョブに依存する場合、対象のサーバー インスタンスでこれらのジョブを再作成する必要があります。 同様に、サーバーレベルのトリガーのメタデータは **master**に格納されます。  
   
- アプリケーションのデータベースを別のサーバー インスタンスに移動するときは、移行先サーバー インスタンス上の **master** および **msdb** に、依存しているエンティティとオブジェクトのすべてのメタデータを再作成する必要があります。 たとえば、データベース アプリケーションでサーバーレベルのトリガーを使用している場合、そのデータベースを新しいシステムでアタッチまたは復元するだけでは不十分です。 このデータベースは、 **master** データベース内にこれらのトリガーのメタデータを手動で再作成しない限り、正常に動作しません。  
+ アプリケーションのデータベースを別のサーバー インスタンスに移動するときは、移行先サーバー インスタンス上の**マスター**および **msdb** に、依存しているエンティティとオブジェクトのすべてのメタデータを再作成する必要があります。 たとえば、データベース アプリケーションでサーバーレベルのトリガーを使用している場合、そのデータベースを新しいシステムでアタッチまたは復元するだけでは不十分です。 このデータベースは、 **master** データベース内にこれらのトリガーのメタデータを手動で再作成しない限り、正常に動作しません。  
   
 ##  <a name="information_entities_and_objects"></a> ユーザー データベースの外部に格納される情報、エンティティ、およびオブジェクト  
  ここからは、別のサーバー インスタンスで使用できるようにしたデータベースに影響を及ぼすことが考えられる問題の概要を説明します。 次の一覧に示す情報、エンティティ、またはオブジェクトのうち、1 種類以上の項目を再作成する必要が生じる場合があります。 概要を参照するには、該当する項目のリンクをクリックしてください。  
   
--   [サーバー構成の設定](#server_configuration_settings)  
+-   [サーバーの構成設定](#server_configuration_settings)  
   
--   [[資格情報]](#credentials)  
+-   [資格情報](#credentials)  
   
--   [複数データベースにまたがるクエリ](#cross_database_queries)  
+-   [複数データベース間のクエリ](#cross_database_queries)  
   
 -   [データベースの所有権](#database_ownership)  
   
@@ -113,26 +113,26 @@ ms.locfileid: "74119457"
 ##  <a name="cross_database_queries"></a> Cross-Database Queries  
  DB_CHAINING データベース オプションと TRUSTWORTHY データベース オプションは、既定では OFF になっています。 これらのオプションのいずれかが元のデータベースで ON に設定されていると、対象のサーバー インスタンスのデータベースで、これらの設定を有効にする必要がある場合があります。 詳細については、「[ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)」を参照してください。  
   
- アタッチおよびデタッチ操作により、複数データベースにまたがる組み合わせ所有権が無効になります。 チェーンを有効にする方法については、「[cross db ownership chaining サーバー構成オプション](../../database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option.md)」を参照してください。  
+ アタッチおよびデタッチ操作により、複数データベースにまたがる組み合わせ所有権が無効になります。 チェーンを有効にする方法については、「 [cross db ownership chaining サーバー構成オプション](../../database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option.md)」を参照してください。  
   
  詳細については、「[TRUSTWORTHY プロパティを使用するようにミラー データベースを設定する方法 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)」も参照してください  
   
   
-##  <a name="database_ownership"></a> データベースの所有権  
+##  <a name="database_ownership"></a> Database Ownership  
  データベースを別のコンピューターに復元すると、復元操作を開始した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン ユーザーまたは Windows ユーザーが自動的に新しいデータベースの所有者になります。 復元されたデータベースのシステム管理者または新しいデータベース所有者は、そのデータベースの所有権を変更できます。  
   
 ##  <a name="distributed_queries_and_linked_servers"></a> 分散クエリおよびリンク サーバー  
- 分散クエリおよびリンク サーバーは OLE DB アプリケーションでサポートされます。 分散クエリは、同一コンピューター上または異なるコンピューター上の複数の異種データ ソースのデータにアクセスします。 リンク サーバーを構成すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はリモート サーバー上の OLE DB データ ソースに対してコマンドを実行できます。 詳しくは、「[リンク サーバー &#40;データベース エンジン&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)」を参照してください。  
+ 分散クエリおよびリンク サーバーは OLE DB アプリケーションでサポートされます。 分散クエリは、同一コンピューター上または異なるコンピューター上の複数の異種データ ソースのデータにアクセスします。 リンク サーバーを構成すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はリモート サーバー上の OLE DB データ ソースに対してコマンドを実行できます。 詳しくは、「[リンク サーバー &#40;データベース エンジン&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)」を参照してください。  
   
   
-##  <a name="encrypted_data"></a> 暗号化データ  
+##  <a name="encrypted_data"></a> Encrypted Data  
  別のサーバー インスタンスで使用できるようにするデータベースに暗号化データが含まれていて、データベース マスター キーが、元のサーバーのサービス マスター キーによって保護されている場合、そのサービス マスター キーを再度暗号化することが必要になる場合があります。 *データベース マスター キー* は対称キーで、証明書の秘密キーや暗号化されたデータベース内の非対称キーを保護するときに使用します。 データベース マスター キーを作成するときには、トリプル DES アルゴリズムとユーザー指定のパスワードを使用してデータベース マスター キーを暗号化します。  
   
  サーバー インスタンスでデータベース マスター キーの暗号化を自動的に解除できるようにするには、サービス マスター キーを使用してデータベース マスター キーのコピーを暗号化します。 この暗号化されたコピーをデータベースと **master**データベースの両方に格納します。 通常、 **master** に格納されたコピーは、マスター キーが変更されるたびに暗黙的に更新されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] により、インスタンスのサービス マスター キーを使用して、データベース マスター キーの暗号化解除が最初に試行されます。 暗号化解除が失敗した場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では資格情報ストア内で、マスター キーが必要なデータベースと同じファミリ GUID のマスター キー資格情報が検索されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、次に、一致した資格情報を順に使用してデータベースのマスター キーの暗号化解除が試行されます。これは暗号化解除が成功するか、資格情報がなくなった時点で終了します。 サービス マスター キーによって暗号化されていないマスター キーは、OPEN MASTER KEY ステートメントとパスワードを使用して開かれている必要があります。  
   
  暗号化されたデータベースがコピー、復元、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の新しいインスタンスにアタッチされた場合、サービス マスター キーによって暗号化されたデータベース マスター キーのコピーは、対象のサーバー インスタンスの **master** データベースに格納されません。 対象のサーバー インスタンスで、データベースのマスター キーを開く必要があります。 マスター キーを開くには、次のステートメントを実行します:OPEN MASTER KEY DECRYPTION BY PASSWORD **='** _password_ **'** 。 その後、次のステートメントを実行して、データベース マスター キーの自動暗号化解除を有効にすることをお勧めします:ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY。 この ALTER MASTER KEY ステートメントにより、サービス マスター キーを使用して暗号化されたデータベース マスター キーのコピーが対象のサーバー インスタンスに提供されます。 詳細については、「[OPEN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-master-key-transact-sql.md)」と「[ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md)」を参照してください。  
   
- ミラー データベースのデータベース マスター キーの自動暗号化解除を有効にする方法については、「[暗号化されたミラー データベースの設定](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)」を参照してください。  
+ ミラー データベースのデータベース マスター キーの自動暗号化解除を有効にする方法については、「 [暗号化されたミラー データベースの設定](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)」を参照してください。  
   
  詳細については、次のトピックも参照してください。  
   
@@ -189,10 +189,10 @@ ms.locfileid: "74119457"
  詳細については、「[GRANT (オブジェクトの権限の許可) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)」、「[DENY (オブジェクトの権限の拒否) &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)」、および「[REVOKE (オブジェクトの権限の取り消し) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)」を参照してください。  
   
   
-##  <a name="ifts_service_properties"></a> Full-Text Engine for SQL Server プロパティ  
+##  <a name="ifts_service_properties"></a> Full-Text Engine for SQL Server Properties  
  Full-Text Engine のプロパティは、 [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)によって設定されます。 対象のサーバー インスタンスで、これらのプロパティに必要な設定が行われていることを確認してください。 これらのプロパティの詳細については、「[FULLTEXTSERVICEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextserviceproperty-transact-sql.md)」を参照してください。  
   
- さらに、[ワード ブレーカーとステマー](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)のコンポーネント、または[フルテキスト検索フィルター](../../relational-databases/search/configure-and-manage-filters-for-search.md) コンポーネントのバージョンが、元のサーバー インスタンスと対象のサーバー インスタンスで異なると、フルテキスト インデックスおよびクエリの動作が異なる場合があります。 また、 [類義語辞典](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md) はインスタンス固有のファイルに格納されています。 それらのファイルのコピーを対象のサーバー インスタンスの該当する場所にコピーするか、新しいインスタンス上でこれらのファイルを再作成する必要があります。  
+ さらに、 [ワード ブレーカーとステマー](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md) のコンポーネント、または [フルテキスト検索フィルター](../../relational-databases/search/configure-and-manage-filters-for-search.md) コンポーネントのバージョンが、元のサーバー インスタンスと対象のサーバー インスタンスで異なると、フルテキスト インデックスおよびクエリの動作が異なる場合があります。 また、 [類義語辞典](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md) はインスタンス固有のファイルに格納されています。 それらのファイルのコピーを対象のサーバー インスタンスの該当する場所にコピーするか、新しいインスタンス上でこれらのファイルを再作成する必要があります。  
   
 > **注:** フルテキスト カタログ ファイルを含む [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] データベースを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] サーバー インスタンスにアタッチする場合、カタログ ファイルは [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]と同様に他のデータベース ファイルと一緒に以前の場所からアタッチされます。 詳細については、「 [フルテキスト検索のアップグレード](../../relational-databases/search/upgrade-full-text-search.md)」を参照してください。  
   
@@ -231,7 +231,7 @@ ms.locfileid: "74119457"
   
 -   [役割の交代後のログインとジョブの管理 &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md) (データベース ミラーリングの場合)  
   
--   [Windows サービス アカウントと権限の構成](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスをインストールする場合)  
+-   [Windows サービス アカウントと権限の構成](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスをインストールする場合)  
   
 -   [SQL Server エージェントの構成](../../ssms/agent/configure-sql-server-agent.md) ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスをインストールする場合)  
   
@@ -273,15 +273,15 @@ ms.locfileid: "74119457"
 ### <a name="grant-revoke-and-deny-permissions-on-system-objects"></a>システム オブジェクトに対する GRANT 権限、REVOKE 権限、または DENY 権限  
  ストアド プロシージャ、拡張ストアド プロシージャ、関数、ビューなどのシステム オブジェクトに対する権限は、 **master** データベースに格納されるので、対象のサーバー インスタンスで構成する必要があります。  
   
- 元のデータベースのコピーに含まれている一部またはすべてのオブジェクトに対するスクリプトは、SQL Server スクリプト生成ウィザードを使用して、 **[スクリプト オプションの選択]** ページで **[オブジェクトレベル権限のスクリプトを作成]** オプションを **[True]** に設定することで作成できます。  
+ 元のデータベースのコピーに含まれている一部またはすべてのオブジェクトに対するスクリプトは、スクリプト生成ウィザードを使用して、 **[スクリプト オプションの選択]** ページで **[オブジェクトレベル権限のスクリプトを作成]** オプションを **[True]** に設定することで作成できます。  
   
    > [!IMPORTANT]
    > ログインのスクリプトを作成する場合、パスワードはスクリプトに含まれません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用するログインがある場合、対象のサーバー インスタンスでスクリプトを変更する必要があります。  
   
- システム オブジェクトは、 [sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md) カタログ ビューで確認できます。 システム オブジェクトの権限は、**master** データベースの [sys.database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) カタログ ビューで確認できます。 これらのカタログ ビューに対するクエリの実行およびシステム オブジェクト権限の付与に関する詳細については、「[GRANT (システム オブジェクトの権限の許可) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-system-object-permissions-transact-sql.md)」を参照してください。 詳細については、「[REVOKE (サーバーの権限の取り消し) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-system-object-permissions-transact-sql.md)」および「[DENY (サーバーの権限の拒否) &#40;Transact-SQL&#41;](../../t-sql/statements/deny-system-object-permissions-transact-sql.md)」を参照してください。  
+ システム オブジェクトは、 [sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md) カタログ ビューで確認できます。 システム オブジェクトの権限は、 [master](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) データベースの **sys.database_permissions** カタログ ビューで確認できます。 これらのカタログ ビューに対するクエリの実行およびシステム オブジェクト権限の付与に関する詳細については、「[GRANT (システム オブジェクトの権限の許可) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-system-object-permissions-transact-sql.md)」を参照してください。 詳細については、「[REVOKE (サーバーの権限の取り消し) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-system-object-permissions-transact-sql.md)」および「[DENY (サーバーの権限の拒否) &#40;Transact-SQL&#41;](../../t-sql/statements/deny-system-object-permissions-transact-sql.md)」を参照してください。  
   
 ### <a name="grant-revoke-and-deny-permissions-on-a-server-instance"></a>サーバー インスタンスに対する GRANT 権限、REVOKE 権限、および DENY 権限  
- サーバー スコープの権限は **master** データベースに格納されるので、対象のサーバー インスタンスで構成する必要があります。 サーバー インスタンスのサーバー権限の詳細については [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) カタログ ビュー、サーバー プリンシパルの詳細については [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) カタログ ビュー、サーバー ロールのメンバーシップの詳細については [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md) カタログ ビューに対してクエリを実行してください。  
+ サーバー スコープの権限は **master** データベースに格納されるので、対象のサーバー インスタンスで構成する必要があります。 サーバー インスタンスのサーバー権限の詳細については [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) カタログ ビュー、サーバー プリンシパルの詳細については [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)カタログ ビュー、サーバー ロールのメンバーシップの詳細については [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md) カタログ ビューに対してクエリを実行してください。  
   
  詳細については、「[GRANT (サーバーの権限の許可) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-server-permissions-transact-sql.md)」、「[REVOKE (サーバーの権限の取り消し) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-server-permissions-transact-sql.md)」、および「[DENY (サーバーの権限の拒否) &#40;Transact-SQL&#41;](../../t-sql/statements/deny-server-permissions-transact-sql.md)」を参照してください。  
   
@@ -318,7 +318,7 @@ TRUSTWORTHY データベース プロパティを使用して、SQL Server イ�
  詳細については、「[レプリケートされたデータベースのバックアップと復元](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)」、「[データベース ミラーリングとレプリケーション &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)」、および「[ログ配布とレプリケーション &#40;SQL Server&#41;](../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md)」を参照してください。  
   
   
-##  <a name="sb_applications"></a> Service Broker アプリケーション  
+##  <a name="sb_applications"></a> Service Broker Applications  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] アプリケーションに関連する多くの要素は、データベースに伴って使用できます。 ただし、アプリケーションの一部の要素は、新しい場所で再作成または再構成する必要があります。  既定で、かつ、安全上の理由から、データベースが別のサーバーからアタッチされているとき、*is_broker_enabled* と *is_honoor_broker_priority_on* のオプションが OFF に設定されます。 これらのオプションを ON に設定する方法については「[ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)」を参照してください。  
   
   

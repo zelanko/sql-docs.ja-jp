@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: abec4388ccc56d2d643794cc354167359efa15f5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e31a24a949968e3d17b50c32b42e92cdd0997483
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127304"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76516553"
 ---
 # <a name="rebuild-system-databases"></a>システム データベースの再構築
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "68127304"
     SELECT * FROM sys.configurations;  
     ```  
   
-2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および現在の照合順序のインスタンスに適用されているすべてのサービス パックと修正プログラムを記録します。 システム データベースの再構築後にこれらの更新を再適用する必要があります。  
+2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスと現在の照合順序に適用されているすべての修正プログラムを記録します。 システム データベースの再構築後にこれらの修正プログラムを再適用する必要があります。  
   
     ```  
     SELECT  
@@ -100,14 +100,14 @@ ms.locfileid: "68127304"
   
      **Setup /QUIET /ACTION=REBUILDDATABASE /INSTANCENAME=InstanceName /SQLSYSADMINACCOUNTS=accounts [ /SAPWD= StrongPassword ] [ /SQLCOLLATION=CollationName]**  
   
-    |[パラメーター名]|[説明]|  
+    |パラメーター名|説明|  
     |--------------------|-----------------|  
     |/QUIET または /Q|セットアップがユーザー インターフェイスなしで実行されるように指定します。|  
     |/ACTION=REBUILDDATABASE|セットアップでシステム データベースを再作成することを指定します。|  
     |/INSTANCENAME=*InstanceName*|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスの名前を指定します。 既定のインスタンスには「MSSQLSERVER」と入力します。|  
     |/SQLSYSADMINACCOUNTS=*accounts*|**sysadmin** 固定サーバー ロールに追加する Windows グループまたは個々のアカウントを指定します。 複数のアカウントを指定する場合、各アカウントを空白で区切ります。 たとえば、「 **BUILTIN\Administrators MyDomain\MyUser**」と入力します。 アカウント名に空白を含むアカウントを指定する場合は、アカウントを二重引用符で囲みます。 たとえば、「 **NT AUTHORITY\SYSTEM**」と入力します。|  
     |[ /SAPWD=*StrongPassword* ]|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sa** アカウントのパスワードを指定します。 このパラメーターは、インスタンスが混合モード認証 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および Windows 認証) を使用する場合に必要になります。<br /><br /> **&#42;&#42; セキュリティ メモ &#42;&#42;** **sa** アカウントは、よく知られた [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アカウントで、悪意のあるユーザーの攻撃対象となることが少なくありません。 **sa** ログインには、複雑なパスワードを使用することが非常に重要です。<br /><br /> Windows 認証モードにはこのパラメーターを指定しないでください。|  
-    |[ /SQLCOLLATION=*CollationName* ]|新しいサーバー レベルの照合順序を指定します。 このパラメーターはオプションです。 これを指定しない場合は、サーバーの現在の照合順序が使用されます。<br /><br /> **\*\* 重要 \*\*** サーバー レベルの照合順序を変更しても、既存のユーザー データベースの照合順序は変更されません。 新しく作成されたすべてのユーザー データベースには、既定で新しい照合順序が使用されます。<br /><br /> 詳細については、「 [サーバーの照合順序の設定または変更](../../relational-databases/collations/set-or-change-the-server-collation.md)」を参照してください。|  
+    |[ /SQLCOLLATION=*CollationName* ]|新しいサーバー レベルの照合順序を指定します。 このパラメーターは省略可能です。 これを指定しない場合は、サーバーの現在の照合順序が使用されます。<br /><br /> **\*\* 重要 \*\*** サーバー レベルの照合順序を変更しても、既存のユーザー データベースの照合順序は変更されません。 新しく作成されたすべてのユーザー データベースには、既定で新しい照合順序が使用されます。<br /><br /> 詳細については、「 [サーバーの照合順序の設定または変更](../../relational-databases/collations/set-or-change-the-server-collation.md)」を参照してください。|  
     |[ /SQLTEMPDBFILECOUNT=NumberOfFiles ]|tempdb データ ファイルの数を設定します。 この値は 8 またはコアの数の、どちらか大きい方まで増やすことができます。<br /><br /> 既定値:8 またはコアの数のうち、小さい方の値。|  
     |[ /SQLTEMPDBFILESIZE=FileSizeInMB ]|各 tempdb データ ファイルの初期サイズを MB 単位で指定します。 最大 1024 MB まで指定できます。<br /><br /> 既定値:8|  
     |[ /SQLTEMPDBFILEGROWTH=FileSizeInMB ]|各 tempdb データ ファイルのファイル拡張増分値を MB 単位で指定します。 0 は、自動拡張がオフで、領域を追加できないことを示します。 最大 1024 MB まで指定できます。<br /><br /> 既定値:64|  
@@ -140,7 +140,7 @@ ms.locfileid: "68127304"
 -   サーバー全体の構成値が記録した以前の値と一致することを確認します。  
   
 ##  <a name="Resource"></a> resource データベースの再構築  
- 次の手順では、resource システム データベースを再構築します。 resource システム データベースを再構築する場合は、サービス パックと修正プログラムがすべて失われるため、再適用する必要があります。  
+ 次の手順では、resource システム データベースを再構築します。 resource システム データベースを再構築する場合は、すべての修正プログラムが失われるため、再適用する必要があります。  
   
 #### <a name="to-rebuild-the-resource-system-database"></a>resource システム データベースを再構築するには  
   
@@ -166,7 +166,7 @@ ms.locfileid: "68127304"
   
 2.  というコマンドを使用して、コマンド ラインから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を開始します。 `NET START MSSQLSERVER /T3608`  
   
-     詳細については、「 [データベース エンジン、SQL Server エージェント、SQL Server Browser サービスの開始、停止、一時停止、再開、および再起動](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)」を参照してください。  
+     詳細については、「 [データベース エンジン、SQL Server エージェント、SQL Server Browser サービスの開始、停止、一時停止、再開、および再起動](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md) 」を参照してください。  
   
 3.  別のコマンド ライン ウィンドウで、**msdb** データベースをデタッチします。これには、`SQLCMD -E -S<servername> -dmaster -Q"EXEC sp_detach_db msdb"` というコマンドを実行します ( *\<servername>* は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに置き換えます)。  
   
@@ -180,7 +180,7 @@ ms.locfileid: "68127304"
   
 7.  Windows のメモ帳を使用して **instmsdb.out** ファイルを開き、エラーの出力を確認します。  
   
-8.  インスタンスにインストールされていたサービス パックまたは修正プログラムがあれば、再適用します。  
+8.  インスタンスにインストールされているすべての修正プログラムを再適用します。  
   
 9. ジョブや警告など、 **msdb** データベースに格納されていたユーザー コンテンツを再作成します。  
   

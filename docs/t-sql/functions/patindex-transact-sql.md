@@ -22,12 +22,12 @@ ms.assetid: c0dfb17f-2230-4e36-98da-a9b630bab656
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f718d61c351e11c0e5d159e683390cf311f49e48
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 51b18437976a9ecb192a69602ecbdc97054b9b47
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67914364"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76831836"
 ---
 # <a name="patindex-transact-sql"></a>PATINDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,7 +44,10 @@ PATINDEX ( '%pattern%' , expression )
   
 ## <a name="arguments"></a>引数  
  *pattern*  
- 検索するシーケンスを含む文字式です。 ワイルドカード文字も指定できますが、(先頭の文字または最後の文字を検索する場合を除き) *pattern* を % 文字で囲む必要があります。 *pattern* は文字列データ型に分類される式です。 *pattern* の上限は 8,000 文字です。  
+ 検索するシーケンスを含む文字式です。 ワイルドカード文字も指定できますが、(先頭の文字または最後の文字を検索する場合を除き) *pattern* を % 文字で囲む必要があります。 *pattern* は文字列データ型に分類される式です。 *pattern* の上限は 8,000 文字です。
+
+ > [!NOTE]
+ > 従来の正規表現は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でネイティブにサポートされていませんが、さまざまなワイルドカード表現を使用すると、同様の複雑なパターン マッチングを実現することができます。 ワイルドカード構文の詳細については、ドキュメント「[文字列演算子](../../t-sql/language-elements/string-operators-transact-sql.md)」を参照してください。
   
  *式 (expression)*  
  [式](../../t-sql/language-elements/expressions-transact-sql.md)です。通常は、指定したパターンで検索する列です。 *式*は文字列データ型に分類されます。  
@@ -52,7 +55,7 @@ PATINDEX ( '%pattern%' , expression )
 ## <a name="return-types"></a>戻り値の型  
 *expression* が **varchar(max)** または **nvarchar(max)** データ型の場合は **bigint**。それ以外の場合は **int**。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 *pattern* または*式*が NULL の場合、PATINDEX は NULL を返します。  
  
 PATINDEX の開始位置は 1 です。
@@ -64,24 +67,28 @@ SC の照合順序を使用する場合、戻り値では、*expression* パラ�
   
 0x0000 (**char(0)** ) の Windows 照合順序で未定義の文字は、PATINDEX に含めることができません。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-simple-patindex-example"></a>A. 簡単な PATINDEX の例  
  次の例では、文字 `ter` の開始位置の短い文字列 (`interesting data`) を確認します。  
   
 ```sql  
-SELECT PATINDEX('%ter%', 'interesting data');  
+SELECT position = PATINDEX('%ter%', 'interesting data');  
 ```  
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
-`3`  
+
+```
+position
+--------
+3
+```
   
 ### <a name="b-using-a-pattern-with-patindex"></a>B. PATINDEX でパターンを使用する  
 次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの `ensure` テーブルにある `DocumentSummary` 列の特定の行で、パターン `Document` が始まる位置を検出します。  
   
 ```sql  
-SELECT PATINDEX('%ensure%',DocumentSummary)  
+SELECT position = PATINDEX('%ensure%',DocumentSummary)  
 FROM Production.Document  
 WHERE DocumentNode = 0x7B40;  
 GO   
@@ -90,9 +97,9 @@ GO
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```
------------  
+position
+--------  
 64  
-(1 row(s) affected)
 ```  
   
 検索する行を `WHERE` 句で限定しない場合は、クエリによりテーブル内のすべての行が返されます。パターンが見つかった行は 0 以外の値に、パターンが見つからなかったすべての行は 0 になります。  
@@ -101,21 +108,36 @@ GO
  次の例では、ワイルドカードの % と _ を使用して、指定した文字列で任意の 1 文字と `'en'` が続くパターン `'ure'` が始まる位置を探します (インデックスは 1 から開始)。  
   
 ```sql  
-SELECT PATINDEX('%en_ure%', 'please ensure the door is locked');  
+SELECT position = PATINDEX('%en_ure%', 'Please ensure the door is locked!');  
 ```  
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```
------------  
+position
+--------  
 8  
 ```  
   
 `PATINDEX` は `LIKE` と同様の機能を持つので、任意のワイルドカードを使用できます。 パターンを % で囲む必要はありません。 `PATINDEX('a%', 'abc')` は 1 を返し、`PATINDEX('%a', 'cba')` は 3 を返します。  
   
  `LIKE` とは異なり、`PATINDEX` は `CHARINDEX` と同様に位置を返します。  
-  
-### <a name="d-using-collate-with-patindex"></a>D. PATINDEX で COLLATE を使用する  
+
+### <a name="d-using-complex-wildcard-expressions-with-patindex"></a>D. PATINDEX で複雑なワイルドカード式を使用する 
+次の例では、`[^]` [文字列演算子](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)を使用して、数字、文字、またはスペース以外の文字の位置を検索します。
+
+```sql
+SELECT position = PATINDEX('%[^ 0-9A-z]%', 'Please ensure the door is locked!'); 
+```
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+
+```
+position
+--------
+33
+```
+
+### <a name="e-using-collate-with-patindex"></a>E. PATINDEX で COLLATE を使用する  
  次の例では、`COLLATE` 関数を使って、検索する式の照合順序を明示的に指定します。  
   
 ```sql  
@@ -124,13 +146,20 @@ GO
 SELECT PATINDEX ( '%ein%', 'Das ist ein Test'  COLLATE Latin1_General_BIN) ;  
 GO  
 ```  
-  
-### <a name="e-using-a-variable-to-specify-the-pattern"></a>E. 変数を使用してパターンを指定する  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+
+```
+position
+--------
+9
+```
+
+### <a name="f-using-a-variable-to-specify-the-pattern"></a>F. 変数を使用してパターンを指定する  
 次の例では、変数を使用して *pattern* パラメーターに値を渡します。 この例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースを使用します。  
   
 ```sql  
 DECLARE @MyValue varchar(10) = 'safety';   
-SELECT PATINDEX('%' + @MyValue + '%', DocumentSummary)   
+SELECT position = PATINDEX('%' + @MyValue + '%', DocumentSummary)   
 FROM Production.Document  
 WHERE DocumentNode = 0x7B40;  
 ```  
@@ -138,7 +167,8 @@ WHERE DocumentNode = 0x7B40;
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```
-------------  
+position
+--------  
 22
 ```  
   

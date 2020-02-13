@@ -16,10 +16,10 @@ ms.assetid: 3c78bb26-ddce-4831-a5f8-09d4f4fd53cc
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 90855baaa61e242488a7fb6a91a52e34d77e5f48
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71284410"
 ---
 # <a name="integration-services-transactions"></a>Integration Services のトランザクション
@@ -100,7 +100,7 @@ ms.locfileid: "71284410"
 9. **[プロパティ]** ウィンドウで、TransactionOption プロパティを **[Supported (サポートあり)]** に設定します。  
   
     > [!NOTE]  
-    >  トランザクションに接続を登録するには、トランザクションで接続を使用するタスクを登録します。 詳細については、「[Integration Services &#40;SSIS&#41; の接続](../integration-services/connection-manager/integration-services-ssis-connections.md)」を参照してください。  
+    >  トランザクションに接続を登録するには、トランザクションで接続を使用するタスクを登録します。 詳細については、「[Integration Services (SSIS) の接続](../integration-services/connection-manager/integration-services-ssis-connections.md)」を参照してください。  
   
 10. トランザクションを開始する各タスクおよびコンテナーに対して、手順 6. ～ 9. を繰り返します。  
 
@@ -144,7 +144,7 @@ ms.locfileid: "71284410"
   
 -   パッケージ E、およびパッケージ実行タスク C、パッケージ実行タスク E の**TransactionOption** は **NotSupported** に設定されています。  
   
- ![トランザクションの継承のフロー](../integration-services/media/mw-dts-executepack.gif "トランザクションの継承のフロー")  
+ ![トランザクションの継承フロー](../integration-services/media/mw-dts-executepack.gif "トランザクションの継承フロー")  
   
  パッケージ B、D、および F のみが親パッケージのトランザクションを継承できます。  
   

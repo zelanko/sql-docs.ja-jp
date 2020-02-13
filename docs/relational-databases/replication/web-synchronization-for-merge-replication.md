@@ -18,10 +18,10 @@ ms.assetid: 84785aba-b2c1-4821-9e9d-a363c73dcb37
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: db49332ec2710586e9cae23c3e41ee4aff42b486
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68136966"
 ---
 # <a name="web-synchronization-for-merge-replication"></a>マージ レプリケーションの Web 同期
@@ -30,7 +30,7 @@ ms.locfileid: "68136966"
   
 -   モバイル ユーザーからのデータをインターネット上で同期します。  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース間で、企業のファイアウォールを経由してデータを同期します。  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース間で、企業のファイアウォールを介してデータを同期します。  
   
  たとえば、移動中の営業担当者は Web 同期を使用することができます。 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]の営業担当者は、担当地域内の多数の店舗や納入業者を回ります。 長い移動の際にはホテルに滞在するため、一日の終わりに販売データをアップロードしたり、製品の更新をダウンロードするための便利な方法が必要になります。  
   
@@ -83,6 +83,6 @@ ms.locfileid: "68136966"
   
 ## <a name="see-also"></a>参照  
  [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md)   
- [Topologies for Web Synchronization](../../relational-databases/replication/topologies-for-web-synchronization.md)  
+ [Web 同期トポロジ](../../relational-databases/replication/topologies-for-web-synchronization.md)  
   
   

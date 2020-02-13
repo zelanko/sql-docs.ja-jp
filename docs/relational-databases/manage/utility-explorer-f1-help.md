@@ -20,10 +20,10 @@ ms.assetid: 8697e4a4-4f59-4cda-af71-7de86005bd4a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 1dd8c492c2353793ad195cea9606a89c502dc5f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68024477"
 ---
 # <a name="utility-explorer-f1-help"></a>ユーティリティ エクスプローラーの F1 ヘルプ
@@ -177,7 +177,7 @@ ms.locfileid: "68024477"
   
 -   復旧モデル: (単純、完全、または一括ログ)  
   
--   最終報告日時: この列には、UCP のローカル日時が datetime データ型を使用して表示されます。 詳細については、「 [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) 」を参照してください。 ユーティリティ オブジェクト モデルを使用する場合は、SSMS で datetimeoffset データ型が使用されることに注意してください。 詳細については、「 [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) 」を参照してください。  
+-   [最終報告日時] この列には、UCP のローカル日時が datetime データ型を使用して表示されます。 詳細については、「 [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) 」を参照してください。 ユーティリティ オブジェクト モデルを使用する場合は、SSMS で datetimeoffset データ型が使用されることに注意してください。 詳細については、「 [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) 」を参照してください。  
   
  [CPU 使用率] タブ  
  [CPU 使用率] タブには、データ層アプリケーションとコンピューターの CPU 使用率を示す履歴データのグラフが並んで表示されます。  
@@ -254,7 +254,7 @@ ms.locfileid: "68024477"
   
 -   復旧モデル: (単純、完全、または一括ログ)  
   
--   最終報告日時: この列には、UCP のローカル日時が datetime データ型を使用して表示されます。 詳細については、「 [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) 」を参照してください。 ユーティリティ オブジェクト モデルを使用する場合は、SSMS で datetimeoffset データ型が使用されることに注意してください。 詳細については、「 [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) 」を参照してください。
+-   [最終報告日時] この列には、UCP のローカル日時が datetime データ型を使用して表示されます。 詳細については、「 [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) 」を参照してください。 ユーティリティ オブジェクト モデルを使用する場合は、SSMS で datetimeoffset データ型が使用されることに注意してください。 詳細については、「 [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) 」を参照してください。
 
 ## <a name="managed-instance-details-sql-server-utility"></a>マネージド インスタンスの詳細 (SQL Server ユーティリティ)
  ユーティリティ エクスプローラーの [マネージド インスタンス] ビューでは、個々の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスの使用率に関するデータ、CPU 使用率の履歴、ファイル レベルでの記憶域使用率の詳細を参照できます。ポリシーしきい値の表示と更新も可能です。 ポリシーのしきい値は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス レベルでコンピューター、データベース ファイル、およびログ ファイルを対象に制御するか、記憶域ボリュームのレベルで制御することができます。 特定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]マネージド インスタンスのプロパティ詳細を参照することもできます。  
@@ -480,7 +480,7 @@ ms.locfileid: "68024477"
  
 **[データ ウェアハウス]** タブ - ユーティリティ管理データ ウェアハウスの構成の詳細が表示されます。  
   
- [データ保有期間]  
+ データ保有期間  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のマネージド インスタンス用に収集された使用率情報のデータ保有期間を指定します。 既定の期間は 1 年です。 最小値は 1 か月です。 指定可能な最長期間は 2 年です。  
   
  [ユーティリティ データ ウェアハウスの構成情報]  
@@ -490,7 +490,7 @@ ms.locfileid: "68024477"
   
 -   コレクション セットのアップロードの頻度: 15 分ごと。  
   
- UMDW ディレクトリは構成可能です: \<システム ドライブ>:\Program Files\Microsoft SQL Server\MSSQL10_50.<UCP_Name>\MSSQL\Data\\ (通常、\<システム ドライブ> は C:\ ドライブです)。 ログ ファイル UMDW_\<GUID>_LOG は同じディレクトリにあります。  
+ UMDW ディレクトリは構成可能です:\<システム ドライブ>:\Program Files\Microsoft SQL Server\MSSQL10_50.<UCP_Name>\MSSQL\Data\\ (通常、\<システム ドライブ> は C:\ ドライブです)。 ログ ファイル UMDW_\<GUID>_LOG は同じディレクトリにあります。  
   
 > **注:** UMDW (sysutility_mdw) ファイルの場所を変更するには、デタッチとアタッチを使用する方法と ALTER DATABASE を使用する方法があります。 ALTER DATABASE の使用をお勧めします。 詳細については、「[ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)」を参照してください。  
   

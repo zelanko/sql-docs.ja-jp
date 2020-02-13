@@ -19,10 +19,10 @@ author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
 ms.openlocfilehash: 48cd04467283683cf1dc54f300b2c4ff21fb8248
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68632141"
 ---
 # <a name="openjson-transact-sql"></a>OPENJSON (Transact-SQL)
@@ -42,7 +42,7 @@ ms.locfileid: "68632141"
 >
 > 新しい Azure SQL データベースであっても、互換性レベル 120 が既定値の場合があります。  
   
- ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン")[Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン")[Transact-SQL 構文の表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
@@ -56,13 +56,13 @@ OPENJSON( jsonExpression [ , path ] )  [ <with_clause> ]
 
 ### <a name="openjson"></a>openjson
 
-![OPENJSON TVF の構文](../../relational-databases/json/media/openjson-syntax.png "OPENJSON 構文")  
+![OPENJSON TVF の構文](../../relational-databases/json/media/openjson-syntax.png "OPENJSON の構文")  
 
 既定では、**OPENJSON** テーブル値関数は、*jsonExpression* で見つかった各 {key:value} ペアのキー名、値、および型を含む 3 つの列を返します。 別の方法として、*with_clause* を指定することで、**OPENJSON** が返す結果セットのスキーマを明示的に指定できます。
   
 ### <a name="with_clause"></a>with_clause
   
-![OPENJSON TVF 内の WITH 句の構文](../../relational-databases/json/media/openjson-shema-syntax.png "OPENJSON WITH 構文")
+![OPENJSON TVF 内の WITH 句の構文](../../relational-databases/json/media/openjson-shema-syntax.png "OPENJSON WITH の構文")
 
 *with_clause* には、**OPENJSON** が返す列とそれらの型の一覧が含まれます。 既定では、**OPENJSON** は、*with_clause* に指定された列名を持つ *jsonExpression* 内のキーと照合されます ( (この場合のキーの一致は、大文字と小文字の区別があるという意味を含みます)。 列名がキー名と一致しない場合は、省略可能な *column_path* を指定できます。これは *jsonExpression* 内のキーを参照する [JSON パス式](../../relational-databases/json/json-path-expressions-sql-server.md) です。 
 
@@ -91,7 +91,7 @@ SELECT * FROM OpenJson(@json);
 
 **結果:**
 
-| キー (key)                                | value                 | 型 |
+| key                                | value                 | 型 |
 | :--                                | :----                 | :--- |
 | String_value                       | John                  | 1 |
 | DoublePrecisionFloatingPoint_value | 45                    | 2 |
@@ -128,7 +128,7 @@ FROM OPENJSON(@json,'$.path.to."sub-object"')
   
  **結果**  
   
-|Key|[値]|  
+|Key|Value|  
 |---------|-----------|  
 |0|en-GB|  
 |1|en-UK|  
@@ -214,7 +214,7 @@ WITH (
   
 **結果**
   
-|数値|date|Customer|Quantity|Order|  
+|Number|Date|Customer|Quantity|Order|  
 |------------|----------|--------------|--------------|-----------|  
 |SO43659|2011-05-により、|AW29825|1|{"Number":"SO43659","Date":"2011-05-31T00:00:00"}|  
 |として SO43661|2011-06-01T00:00:00|AW73565|3|{"Number":"SO43661","Date":"2011-06-01T00:00:00"}|  
@@ -225,13 +225,13 @@ OPENJSON 関数によって返される列は、WITH オプションによって
 1. OPENJSON を既定のスキーマで呼び出した場合 (つまり、WITH 句に明示的にスキーマを指定しない場合)、関数は、次の列を持つテーブルを返します。  
     1.  **[キー]** 指定したプロパティの名前か、指定した配列内の要素のインデックスを含む nvarchar (4000) 値。 キー列は BIN2 照合順序を持っています。  
     2.  **値**。 プロパティの値を含む、nvarchar (max) 値です。 [値] 列では、その照合順序を継承 *jsonExpression* から。
-    3.  **型**。 値の型を含む int 値。 **型**の列には、既定のスキーマを OPENJSON を使用する場合にのみが返されます。 型の列では、次の values. のことがあります。  
+    3.  **[種類]** 。 値の型を含む int 値。 **型**の列には、既定のスキーマを OPENJSON を使用する場合にのみが返されます。 型の列では、次の values. のことがあります。  
   
         |型の列の値|JSON データ型|  
         |------------------------------|--------------------|  
         |0|null|  
         |1|string|  
-        |2|int|  
+        |2|INT|  
         |3|true/false|  
         |4|array|  
         |5|object|  
@@ -243,7 +243,7 @@ OPENJSON 関数によって返される列は、WITH オプションによって
 > [!NOTE]  
 > **Key**、**Value**、および **Type** 列が返されるのは、既定のスキーマで OPENJSON を使った場合のみです。明示的なスキーマでは使用できません。
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 
 **OPENJSON** の 2 番目の引数または *with_clause* で使用される *json_path* は、**lax** または **strict** キーワードで始めることができます。
 
@@ -266,7 +266,7 @@ OPENJSON 関数によって返される列は、WITH オプションによって
 }
 ```  
 
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="example-1---convert-a-json-array-to-a-temporary-table"></a>例 2 - JSON 配列を一時テーブルに変換します。
 

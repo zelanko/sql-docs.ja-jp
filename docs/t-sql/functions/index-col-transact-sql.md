@@ -22,13 +22,13 @@ ms.assetid: 4db1fb3b-e46f-43fb-b269-a5b6e8b39ed0
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a308225e96c740680b2df243f35cac216f53e3e9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68024303"
 ---
-# <a name="indexcol-transact-sql"></a>INDEX_COL (Transact-SQL)
+# <a name="index_col-transact-sql"></a>INDEX_COL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   インデックス付きの列名を返します。 XML インデックスに対して NULL を返します。  
@@ -67,9 +67,9 @@ INDEX_COL ( '[ database_name . [ schema_name ] .| schema_name ]
   
  ユーザーが所有しているか、または権限を与えられている、セキュリティ保護可能なリソースのメタデータのみを表示できます。 つまり、オブジェクトに対する権限がユーザーに与えられていない場合、メタデータを生成する組み込み関数 (INDEX_COL など) が NULL を返す可能性があります。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
-### <a name="a-using-indexcol-to-return-an-index-column-name"></a>A. INDEX_COL を使用してインデックス列名を返す  
+### <a name="a-using-index_col-to-return-an-index-column-name"></a>A. INDEX_COL を使用してインデックス列名を返す  
  この例では、インデックス `PK_SalesOrderDetail_SalesOrderID_LineNumber` の 2 つのキー列の列名を返します。  
   
 ```  
@@ -84,7 +84,7 @@ SELECT
 GO  
 ```  
   
- 以下に結果セットを示します。  
+ 結果セットは次のようになります。  
   
 ```  
 Index Column 1      Index Column 2  

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 2cd846e7-5bf3-4144-8772-703c4f439a2a
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: af2e1ff51864215d3f5709463ab8d49e6737747e
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 8359c9844cf9ebbc91da556f212429c96909d857
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768756"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76285744"
 ---
 # <a name="replication-programming-concepts"></a>レプリケーションのプログラミング概念
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -106,7 +106,7 @@ ms.locfileid: "68768756"
 ## <a name="choose-the-appropriate-replication-programming-interface"></a>適切なレプリケーション プログラミング インターフェイスの選択  
  計画の最後の手順は、選択した開発環境で目的のレプリケーション機能を実装するためのレプリケーション プログラミング インターフェイスを適切に選択することです。 次の表に、使用できるレプリケーション プログラミング インターフェイスを示します。  
   
-|インターフェイス|環境|使用法|  
+|インターフェイス|環境|用途|  
 |---------------|-----------------|----------|  
 |[レプリケーション管理オブジェクトの概念](../../../relational-databases/replication/concepts/replication-management-objects-concepts.md)|マネージド コード|管理、監視、同期|  
 |<xref:Microsoft.SqlServer.Replication>|マネージド コード|同期|  
@@ -123,7 +123,7 @@ ms.locfileid: "68768756"
   
 2.  販売アプリケーションに必要な一般的なデータ アクセスに加えて、このアプリケーションでは販売担当者が必要なときにボタンをクリックしてプル サブスクリプションを同期できるようにする必要があります。 さらに、販売担当者がこのアプリケーションをインストールして実行するため、クライアント側でサブスクリプションを構成し、初期スナップショットを適用できる必要があります。 場合によっては、このアプリケーションは Windows で提供されているインフラストラクチャを利用してワイヤレス接続を探し、接続が検出された場合はサブスクリプションを自動的に同期します。  
   
-3.  パブリッシャーに接続するときには、Windows 認証と仮想プライベート ネットワークの使用を含む、レプリケーションのセキュリティ ガイドラインすべてに従います。 Web 同期を実行する場合は、SSL (Secure Sockets Layer) 接続を使用します。 詳細については、「[Web 同期の構成](../../../relational-databases/replication/configure-web-synchronization.md)」を参照してください。  
+3.  パブリッシャーに接続するときには、Windows 認証と仮想プライベート ネットワークの使用を含む、レプリケーションのセキュリティ ガイドラインすべてに従います。 Web 同期を実行する場合は、SSL (Secure Sockets Layer) 接続を使用します。 詳しくは、「 [Configure Web Synchronization](../../../relational-databases/replication/configure-web-synchronization.md)」をご覧ください。  
   
 4.  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] の機能を利用するには、マネージド コード言語を使用してアプリケーションを開発します。  
   

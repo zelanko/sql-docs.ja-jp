@@ -14,10 +14,10 @@ ms.assetid: fd3f9f0f-7c38-4cfd-a0c5-ee93dd52d9a5
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 9011394dccf472499c1c8a8bd1023b7c23009883
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67987210"
 ---
 # <a name="sql-serverbuffer-node"></a>SQL Server: Buffer Node
@@ -25,9 +25,9 @@ ms.locfileid: "67987210"
   **Buffer Node** オブジェクトは、 **Buffer Manager** オブジェクトで提供されるカウンターを補完するカウンターを提供します。 このオブジェクトを使用すると、各 NUMA (non-uniform memory access) ノードに対する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバッファー プール ページの配分を監視することができます。 使用中の NUMA ノードごとに **Buffer Node** オブジェクトのインスタンスがあります。 非 NUMA アーキテクチャでは、 **Buffer Node** オブジェクトのインスタンスが 1 つあります。  
   
 ## <a name="buffer-node-performance-objects"></a>Buffer Node パフォーマンス オブジェクト  
- 次の表で、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Buffer Node** パフォーマンス オブジェクトについて説明します。  
+ 次の表では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Buffer Node** パフォーマンス オブジェクトについて説明します。  
   
-|SQL Server の Buffer Node カウンター|[説明]|  
+|SQL Server の Buffer Node カウンター|説明|  
 |-------------------------------------|-----------------|  
 |**Database pages**|データベースの内容が含まれたこのノード上のバッファー プール内のページ数を示します。|  
 |**Page life expectancy**|ページが参照されないままこのノードのバッファー プールに存在する最小秒数を示します。|  

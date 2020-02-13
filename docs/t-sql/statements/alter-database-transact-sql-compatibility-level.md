@@ -24,12 +24,12 @@ ms.assetid: ca5fd220-d5ea-4182-8950-55d4101a86f6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0d65bcb7db0bc0628d1c7b40d21e9b2089ad285c
-ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
+ms.openlocfilehash: 7ed32cf93d5bbf13580fc15d649ad403b98524cf
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74127691"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76909652"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE (Transact-SQL) 互換性レベル
 
@@ -48,7 +48,7 @@ SET COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 | 90 }
 
 ## <a name="arguments"></a>引数
 
-*database_name* 変更するデータベースの名前です。
+*database_name*: 変更するデータベースの名前です。
 
 COMPATIBILITY_LEVEL { 150 | 140 | 130 | 120 | 110 | 100 | 90 | 80 } データベースの互換性の対象となる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョンです。 次の互換性レベルの値を構成することができます (上で示したすべての互換性レベルをすべてのバージョンがサポートしているわけではありません)。
 
@@ -71,8 +71,7 @@ COMPATIBILITY_LEVEL { 150 | 140 | 130 | 120 | 110 | 100 | 90 | 80 } データベ
 > [!IMPORTANT]
 > SQL Server と Azure SQL Database のデータベース エンジンのバージョン番号は類似のものではありません。別個の製品に与えられる内部製造番号になっています。 Azure SQL Database のデータベース エンジンは SQL Server データベース エンジンと同じコードに基づいています。 最も重要なことですが、Azure SQL Database のデータベース エンジンには常に最新の SQL データベース エンジン ビットが与えられます。 Azure SQL Database のバージョン 12 は SQL Server のバージョン 15 より新しくなります。
 
-## <a name="remarks"></a>Remarks
-
+## <a name="remarks"></a>解説
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのインストールで、既定の互換性レベルは [!INCLUDE[ssDE](../../includes/ssde-md.md)] のバージョンと関連付けられています。 新しいデータベースはこのレベルに設定されますが、**model** データベースの互換性レベルがこれより低い場合は例外です。 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からデータベースを接続または復元した場合、そのデータベースの互換性レベルが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の該当するインスタンスに対して許可される最低レベル以上であれば、既存の互換性レベルが維持されます。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] で許可されるレベルより低い互換性レベルのデータベースを移動すると、許可される最も下の互換性レベルにデータベースが自動的に設定されます。 これはシステム データベースとユーザー データベースの両方に適用されます。
 
 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] では、データベースを装着したか復元したとき、また、インプレース アップグレード後、以下の動作が予想されます。
@@ -152,7 +151,9 @@ SELECT name, compatibility_level FROM sys.databases;
 ## <a name="differences-between-compatibility-levels"></a>互換性レベルの相違点
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのインストールで、既定の互換性レベルは、[この表](#supported-dbcompats)で示されるように、[!INCLUDE[ssDE](../../includes/ssde-md.md)] のバージョンと関連しています。 新しい開発作業では、常に最新のデータベース互換レベルでアプリケーションを認定するように計画します。
 
-しかし、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にアタッチまたは復元されたデータベースは、(許可されている最小互換性レベル以上の場合) 既存の互換性レベルを保持しているため、データベース互換レベルによって旧バージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] との下位互換性も提供されます。 これについては、この記事の「[旧バージョンとの互換性を保持するための互換性レベルの使用](#backwardCompat)」で説明しました。
+新しい [!INCLUDE[tsql](../../includes/tsql-md.md)] 構文は、データベース互換レベルによって制限されません。ただし、ユーザー [!INCLUDE[tsql](../../includes/tsql-md.md)] コードとの競合を作成して既存のアプリケーションを中断できる場合を除きます。 この記事の以降のセクションでは、特定の互換性レベル間の相違について説明しますが、これらの例外についても言及します。
+
+以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にアタッチされている、またはそこから復元されたデータベースは、(最小許容互換性レベル以上の場合) 既存の互換性レベルを保持しているため、データベース互換レベルによって、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の以前のバージョンとの下位互換性も提供されます。 これについては、この記事の「[旧バージョンとの互換性を保持するための互換性レベルの使用](#backwardCompat)」で説明しました。
 
 データベース互換レベル 130 以降では、クエリ プランに影響を与える新しい修正プログラムと機能が、既定の互換性レベルとも呼ばれる、使用可能な最新の互換性レベルにのみ追加されています。 これは、新しいクエリ最適化動作によって導入される可能性のあるクエリ プランの変更によるパフォーマンスの低下から発生する、アップグレード中のリスクを最小限に抑えるために行われました。 
 
@@ -175,9 +176,9 @@ SELECT name, compatibility_level FROM sys.databases;
     
     |データベース エンジン (DE) のバージョン|データベース互換レベル|TF 4199|すべての以前のデータベース互換レベルからの QO の変更|DE バージョンの RTM 後の QO の変更|
     |----------|----------|---|------------|--------|
-    |13 ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])|100 から 120<br /><br /><br />130|Off<br />基準<br /><br />Off<br />基準|**Disabled**<br />有効<br /><br />**有効**<br />有効|Disabled<br />有効<br /><br />Disabled<br />有効|
-    |14 ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)])|100 から 120<br /><br /><br />130<br /><br /><br />140|Off<br />基準<br /><br />Off<br />基準<br /><br />Off<br />基準|**Disabled**<br />有効<br /><br />**有効**<br />有効<br /><br />**有効**<br />有効|Disabled<br />有効<br /><br />Disabled<br />有効<br /><br />Disabled<br />有効|
-    |15 ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) と 12 ([!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)])|100 から 120<br /><br /><br />130 から 140<br /><br /><br />150|Off<br />基準<br /><br />Off<br />基準<br /><br />Off<br />基準|**Disabled**<br />有効<br /><br />**有効**<br />有効<br /><br />**有効**<br />有効|Disabled<br />有効<br /><br />Disabled<br />有効<br /><br />Disabled<br />有効|
+    |13 ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])|100 から 120<br /><br /><br />130|Off<br />On<br /><br />Off<br />On|**Disabled**<br />Enabled<br /><br />**有効**<br />Enabled|無効<br />Enabled<br /><br />無効<br />Enabled|
+    |14 ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)])|100 から 120<br /><br /><br />130<br /><br /><br />140|Off<br />On<br /><br />Off<br />On<br /><br />Off<br />On|**Disabled**<br />Enabled<br /><br />**有効**<br />Enabled<br /><br />**有効**<br />Enabled|無効<br />Enabled<br /><br />無効<br />Enabled<br /><br />無効<br />Enabled|
+    |15 ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) と 12 ([!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)])|100 から 120<br /><br /><br />130 から 140<br /><br /><br />150|Off<br />On<br /><br />Off<br />On<br /><br />Off<br />On|**Disabled**<br />Enabled<br /><br />**有効**<br />Enabled<br /><br />**有効**<br />Enabled|無効<br />Enabled<br /><br />無効<br />Enabled<br /><br />無効<br />Enabled|
     
     > [!IMPORTANT]
     > 間違った結果やアクセス違反エラーに対処するクエリ オプティマイザーの修正プログラムは、トレース フラグ 4199 では保護されません。 これらの修正プログラムは、オプションとは見なされません。
@@ -192,11 +193,11 @@ SELECT name, compatibility_level FROM sys.databases;
     
     |データベース エンジンのバージョン|データベース互換レベル|新しいバージョン CE の変更|
     |----------|--------|-------------|
-    |13 ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])|130 未満<br />130|Disabled<br />有効|
-    |14 ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)])<sup>1</sup>|140 未満<br />140|Disabled<br />有効|
-    |15 ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])<sup>1</sup>|150 未満<br />150|Disabled<br />有効|
+    |13 ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])|130 未満<br />130|無効<br />Enabled|
+    |14 ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)])<sup>1</sup>|140 未満<br />140|無効<br />Enabled|
+    |15 ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])<sup>1</sup>|150 未満<br />150|無効<br />Enabled|
     
-    <sup>1</sup> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] にも適用されます。
+    <sup>1</sup>[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] にも適用されます。
     
 > [!IMPORTANT]
 > 特定の互換性レベル間のその他の相違点については、この記事の次のセクションで入手できます。
@@ -256,7 +257,7 @@ SQL Server 2017 より前の SQL Server の初期のバージョンのトレー�
 
 |互換性レベル設定 110 以下|互換性レベル設定 120|
 |--------------------------------------------------|-----------------------------------------|
-|以前のクエリ オプティマイザーが使用されます。|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] では、クエリ プランを作成し最適化するコンポーネントに大幅な改良が加えられました。 この新しいクエリ オプティマイザー機能は、データベース互換レベル 120 を使用している場合にのみ利用できます。 これらの改良点を利用するには、データベース互換レベル 120 を使用して新しいデータベース アプリケーションを開発する必要があります。 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] から移行されたアプリケーションについては、良好なパフォーマンスが維持されているか、またはパフォーマンスが向上していることを確認するために慎重にテストを実行する必要があります。 パフォーマンスが低下する場合は、データベース互換レベルを 110 以前に設定して、古いクエリ オプティマイザーの方法を使用することができます。<br /><br /> データベース互換レベル 120 では、最新のデータ ウェアハウスと OLTP ワークロード向けにチューニングされた新しいカーディナリティ推定機能を使用します。 パフォーマンスの問題のため、データベース互換レベルを 110 に設定する前に、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] の[データベース エンジンの新機能](../../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md)に関するトピックの*クエリ プラン* セクションに掲載されている推奨事項を参照してください。|
+|以前のクエリ オプティマイザーが使用されます。|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] では、クエリ プランを作成し最適化するコンポーネントに大幅な改良が加えられました。 この新しいクエリ オプティマイザー機能は、データベース互換レベル 120 を使用している場合にのみ利用できます。 これらの改良点を利用するには、データベース互換レベル 120 を使用して新しいデータベース アプリケーションを開発する必要があります。 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] から移行されたアプリケーションについては、良好なパフォーマンスが維持されているか、またはパフォーマンスが向上していることを確認するために慎重にテストを実行する必要があります。 パフォーマンスが低下する場合は、データベース互換レベルを 110 以前に設定して、古いクエリ オプティマイザーの方法を使用することができます。<br /><br /> データベース互換レベル 120 では、最新のデータ ウェアハウスと OLTP ワークロード向けにチューニングされた新しいカーディナリティ推定機能を使用します。 パフォーマンスの問題のため、データベース互換レベルを 110 に設定する前に、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] の[データベース エンジンの新機能](../../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md)に関するトピックの*クエリ プラン*のセクションで説明されている推奨事項を参照してください。|
 |互換性レベルが 120 未満の場合、**日付**値を文字列値に変換すると、言語設定は無視されます。 この動作は **date** 型に固有の動作であることに注意してください。 以下の「例」の B を参照してください。|**日付**値を文字列値に変換するときに、言語設定は無視されません。|
 |`EXCEPT` 句の右側にある再帰参照によって、無限ループが作成されます。 この動作については、以下の「例」の C を参照してください。|`EXCEPT` 句の再帰参照によって、ANSI SQL 標準に準拠したエラーが生成されます。|
 |再帰共通テーブル式 (CTE) では重複する列名を使用できます。|再帰 CTE では、重複する列名を使用できません。|
@@ -288,24 +289,24 @@ SQL Server 2017 より前の SQL Server の初期のバージョンのトレー�
 |複数ステートメントのテーブル値関数が作成されるとき、QUOTED_IDENTIFER 設定はセッション レベルの設定に関係なく常に ON に設定されます。|複数ステートメントのテーブル値関数が作成されるとき、QUOTED IDENTIFIER のセッション設定が受け入れられます。|Medium|
 |パーティション関数を作成または変更するとき、関数の **datetime** リテラルおよび **smalldatetime** リテラルは、言語設定が US_English であることを前提に評価されます。|パーティション関数の **datetime** リテラルおよび **smalldatetime** リテラルを評価する際、現在の言語設定が使用されます。|Medium|
 |`INSERT` および `SELECT INTO` ステートメントで `FOR BROWSE` 句は許可されます (ただし無視されます)。|`INSERT` および `SELECT INTO` ステートメントで `FOR BROWSE` 句は許可されません。|Medium|
-|`OUTPUT` 句でフルテキスト述語を使用できます。|`OUTPUT` 句でフルテキスト述語を使用できません。|Low|
-|`CREATE FULLTEXT STOPLIST`、`ALTER FULLTEXT STOPLIST`、および`DROP FULLTEXT STOPLIST` はサポートされていません。 システム ストップリストは、自動的に新しいフルテキスト インデックスに関連付けられます。|`CREATE FULLTEXT STOPLIST`、`ALTER FULLTEXT STOPLIST`、および`DROP FULLTEXT STOPLIST` はサポートされています。|Low|
-|`MERGE` は予約されたキーワードとして適用されません。|MERGE は完全に予約されたキーワードです。 `MERGE` ステートメントは、100 と 90 の両方の互換性レベルでサポートされます。|Low|
-|INSERT ステートメントの \<dml_table_source> 引数を使用すると、構文エラーが発生します。|入れ子になった INSERT、UPDATE、DELETE、または MERGE ステートメント内の OUTPUT 句の結果をキャプチャして、対象のテーブルまたはビューに挿入することができます。 そのためには、INSERT ステートメントの \<dml_table_source> 引数を使用します。|Low|
-|`NOINDEX` が指定されていない場合、`DBCC CHECKDB` または `DBCC CHECKTABLE` は、1 つのテーブルまたはインデックス付きビューとそのすべての非クラスター化インデックスおよび XML インデックスについて、物理的な一貫性と論理的な一貫性の両方をチェックします。 空間インデックスはサポートされません。|`NOINDEX` が指定されていない場合、`DBCC CHECKDB` または `DBCC CHECKTABLE` は、1 つのテーブルとそのすべての非クラスター化インデックスについて、物理的な一貫性と論理的な一貫性の両方をチェックします。 ただし、XML インデックス、空間インデックス、およびインデックス付きビューでは、既定で物理的な一貫性のみがチェックされます。<br /><br /> `WITH EXTENDED_LOGICAL_CHECKS` が指定されている場合、インデックス付きビュー、XML インデックス、および空間インデックス (存在する場合) に対して論理チェックが実行されます。 既定では、論理的な一貫性のチェック前に物理的な一貫性がチェックされます。 `NOINDEX` も指定されている場合は、論理チェックのみが実行されます。|Low|
-|データ操作言語 (DML) ステートメントで OUTPUT 句を使用した場合、ステートメントの実行時に実行時エラーが発生すると、トランザクション全体が終了し、ロールバックされます。|データ操作言語 (DML) ステートメントで `OUTPUT` 句を使用した場合、ステートメントの実行時に実行時エラーが発生したときの動作は、`SET XACT_ABORT` 設定によって異なります。 `SET XACT_ABORT` が OFF の場合は、`OUTPUT` 句を使用している DML ステートメントでステートメント中断エラーが発生すると、ステートメントは終了しますが、バッチの実行は続行され、トランザクションはロールバックされません。 `SET XACT_ABORT` が ON の場合は、OUTPUT 句を使用している DML ステートメントで実行時エラーが発生すると、バッチが終了し、トランザクションはロールバックされます。|Low|
-|CUBE および ROLLUP は予約されたキーワードとして適用されません。|`CUBE` および `ROLLUP` は、GROUP BY 句内では予約されたキーワードです。|Low|
-|XML の **anyType** 型の要素には厳密な検証が適用されます。|**anyType** 型の要素には緩やかな検証が適用されます。 詳細については、「[ワイルドカード コンポーネントと内容検証](../../relational-databases/xml/wildcard-components-and-content-validation.md)」を参照してください。|Low|
-|特殊な属性 **xsi:nil** および **xsi:type** は、データ操作言語ステートメントでクエリまたは変更できません。<br /><br /> つまり、`/e/@xsi:nil` は失敗し、`/e/@*` では **xsi:nil** 属性と **xsi:type** 属性が無視されます。 ただし、`/e` の場合でも、`SELECT xmlCol` では `xsi:nil = "false"` との一貫性のために **xsi:nil** 属性と **xsi:type** 属性が返されます。|特殊な属性 **xsi:nil** および **xsi:type** は、標準属性として格納されるので、クエリも変更も可能です。<br /><br /> たとえば、クエリ `SELECT x.query('a/b/@*')` を実行すると、**xsi:nil** および **xsi:type** を含むすべての属性が返されます。 クエリでこれらの型を除外するには、`@*` を `@*[namespace-uri(.) != "`*insert xsi namespace uri*`"` に置き換え、`(local-name(.) = "type"` や `local-name(.) ="nil".` を避けてください。|Low|
-|XML 定数文字列値を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] datetime 型に変換するユーザー定義関数は、"決定的" とマークされます。|XML 定数文字列値を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] datetime 型に変換するユーザー定義関数は、"非決定的" とマークされます。|Low|
-|XML の union 型と list 型は、完全にはサポートされていません。|union 型と list 型は、完全にサポートされています (次の機能を含む)。<br /><br /> リストの和集合<br /><br /> 和集合の和集合<br /><br /> アトミック型のリスト<br /><br /> 和集合のリスト|Low|
-|xQuery メソッドに必要な SET オプションは、メソッドがビューまたはインライン テーブル値関数に含まれる場合に検証されません。|xQuery メソッドに必要な SET オプションは、メソッドがビューまたはインライン テーブル値関数に含まれる場合に検証されます。 メソッドの SET オプションが正しく設定されていない場合は、エラーが発生します。|Low|
-|行末文字 (復帰と改行) を含む XML 属性値は、XML 標準に従って正規化されません。 つまり、1 つの改行文字ではなく両方の文字が返されます。|行末文字 (復帰と改行) を含む XML 属性値は、XML 標準に従って正規化されます。 つまり、外部解析エンティティ (ドキュメント エンティティを含む) のすべての改行が、入力時に正規化されます。このとき、2 文字のシーケンス #xD #xA と、後ろに #xA がない #xD の両方について、1 つの #xA 文字に変換されます。<br /><br /> 行末文字を含む文字列値を転送するための属性を使用しているアプリケーションは、このような文字が送信されても受け取りません。 正規化処理を回避するには、XML 数字エンティティを使用してすべての行末文字をエンコードしてください。|Low|
-|列プロパティ `ROWGUIDCOL` および `IDENTITY` は、制約として不適切に指定される可能性があります。 たとえば、ステートメント `CREATE TABLE T (C1 int CONSTRAINT MyConstraint IDENTITY)` は実行されますが、制約名は保持されず、ユーザーはその制約にアクセスできません。|列プロパティ `ROWGUIDCOL` および `IDENTITY` は、制約として指定できません。 エラー 156 が返されます。|Low|
-|`UPDATE T1 SET @v = column_name = <expression>` などの双方向の代入を使用して列を更新すると、予期しない結果が生じる可能性があります。これは、ステートメントの実行時に、`WHERE` 句や `ON` 句などの他の句でステートメントの開始値ではなく変数の有効期限の値を使用できるためです。 これにより、述語の意味が行ごとに予期せず変化することがあります。<br /><br /> この動作は、互換性レベルが 90 に設定されている場合にのみ適用されます。|双方向の代入を使用して列を更新すると、予想どおりの結果が生じます。これは、ステートメントの実行時に、列のステートメントの開始値のみが利用されるためです。|Low|
-|以下の「例」の E を参照してください。|以下の「例」の F を参照してください。|Low|
-|ODBC 関数 {fn CONVERT()} では、言語の既定の日付形式が使用されます。 言語によっては、既定の形式が YDM の場合があります。この場合、CONVERT() を `{fn CURDATE()}` などの YMD 形式が想定されている他の関数と組み合わせて使用すると、変換エラーが発生する可能性があります。|ODBC 関数 `{fn CONVERT()}` では、ODBC データ型 SQL_TIMESTAMP、SQL_DATE、SQL_TIME、SQLDATE、SQL_TYPE_TIME、および SQL_TYPE_TIMESTAMP への変換時にスタイル 121 (言語に依存しない YMD 形式) が使用されます。|Low|
-|DATEPART などの datetime 組み込み関数では、文字列入力値が有効な datetime リテラルである必要はありません。 たとえば、`SELECT DATEPART (year, '2007/05-30')` は正常にコンパイルされます。|`DATEPART` などの datetime 組み込み関数では、文字列入力値が有効な datetime リテラルである必要があります。 無効な datetime リテラルを使用すると、エラー 241 が返されます。|Low|
+|`OUTPUT` 句でフルテキスト述語を使用できます。|`OUTPUT` 句でフルテキスト述語を使用できません。|低|
+|`CREATE FULLTEXT STOPLIST`、`ALTER FULLTEXT STOPLIST`、`DROP FULLTEXT STOPLIST` はサポートされていません。 システム ストップリストは、自動的に新しいフルテキスト インデックスに関連付けられます。|`CREATE FULLTEXT STOPLIST`、`ALTER FULLTEXT STOPLIST`、および`DROP FULLTEXT STOPLIST` はサポートされています。|低|
+|`MERGE` は予約されたキーワードとして適用されません。|MERGE は完全に予約されたキーワードです。 `MERGE` ステートメントは、100 と 90 の両方の互換性レベルでサポートされます。|低|
+|INSERT ステートメントの \<dml_table_source> 引数を使用すると、構文エラーが発生します。|入れ子になった INSERT、UPDATE、DELETE、または MERGE ステートメント内の OUTPUT 句の結果をキャプチャして、対象のテーブルまたはビューに挿入することができます。 そのためには、INSERT ステートメントの \<dml_table_source> 引数を使用します。|低|
+|`NOINDEX` が指定されていない場合、`DBCC CHECKDB` または `DBCC CHECKTABLE` は、1 つのテーブルまたはインデックス付きビューとそのすべての非クラスター化インデックスおよび XML インデックスについて、物理的な一貫性と論理的な一貫性の両方をチェックします。 空間インデックスはサポートされません。|`NOINDEX` が指定されていない場合、`DBCC CHECKDB` または `DBCC CHECKTABLE` は、1 つのテーブルとそのすべての非クラスター化インデックスについて、物理的な一貫性と論理的な一貫性の両方をチェックします。 ただし、XML インデックス、空間インデックス、およびインデックス付きビューでは、既定で物理的な一貫性のみがチェックされます。<br /><br /> `WITH EXTENDED_LOGICAL_CHECKS` が指定されている場合、インデックス付きビュー、XML インデックス、および空間インデックス (存在する場合) に対して論理チェックが実行されます。 既定では、論理的な一貫性のチェック前に物理的な一貫性がチェックされます。 `NOINDEX` も指定されている場合は、論理チェックのみが実行されます。|低|
+|データ操作言語 (DML) ステートメントで OUTPUT 句を使用した場合、ステートメントの実行時に実行時エラーが発生すると、トランザクション全体が終了し、ロールバックされます。|データ操作言語 (DML) ステートメントで `OUTPUT` 句を使用した場合、ステートメントの実行時に実行時エラーが発生したときの動作は、`SET XACT_ABORT` 設定によって異なります。 `SET XACT_ABORT` が OFF の場合は、`OUTPUT` 句を使用している DML ステートメントでステートメント中断エラーが発生すると、ステートメントは終了しますが、バッチの実行は続行され、トランザクションはロールバックされません。 `SET XACT_ABORT` が ON の場合は、OUTPUT 句を使用している DML ステートメントで実行時エラーが発生すると、バッチが終了し、トランザクションはロールバックされます。|低|
+|CUBE および ROLLUP は予約されたキーワードとして適用されません。|`CUBE` および `ROLLUP` は、GROUP BY 句内では予約されたキーワードです。|低|
+|XML の **anyType** 型の要素には厳密な検証が適用されます。|**anyType** 型の要素には緩やかな検証が適用されます。 詳細については、「[ワイルドカード コンポーネントと内容検証](../../relational-databases/xml/wildcard-components-and-content-validation.md)」を参照してください。|低|
+|特殊な属性 **xsi:nil** および **xsi:type** は、データ操作言語ステートメントでクエリまたは変更できません。<br /><br /> つまり、`/e/@xsi:nil` は失敗し、`/e/@*` では **xsi:nil** 属性と **xsi:type** 属性が無視されます。 ただし、`/e` の場合でも、`SELECT xmlCol` では `xsi:nil = "false"` との一貫性のために **xsi:nil** 属性と **xsi:type** 属性が返されます。|特殊な属性 **xsi:nil** および **xsi:type** は、標準属性として格納されるので、クエリも変更も可能です。<br /><br /> たとえば、クエリ `SELECT x.query('a/b/@*')` を実行すると、**xsi:nil** および **xsi:type** を含むすべての属性が返されます。 クエリでこれらの型を除外するには、`@*` を `@*[namespace-uri(.) != "`*insert xsi namespace uri*`"` に置き換え、`(local-name(.) = "type"` や `local-name(.) ="nil".` を避けてください。|低|
+|XML 定数文字列値を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] datetime 型に変換するユーザー定義関数は、"決定的" とマークされます。|XML 定数文字列値を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] datetime 型に変換するユーザー定義関数は、"非決定的" とマークされます。|低|
+|XML の union 型と list 型は、完全にはサポートされていません。|union 型と list 型は、完全にサポートされています (次の機能を含む)。<br /><br /> リストの和集合<br /><br /> 和集合の和集合<br /><br /> アトミック型のリスト<br /><br /> 和集合のリスト|低|
+|xQuery メソッドに必要な SET オプションは、メソッドがビューまたはインライン テーブル値関数に含まれる場合に検証されません。|xQuery メソッドに必要な SET オプションは、メソッドがビューまたはインライン テーブル値関数に含まれる場合に検証されます。 メソッドの SET オプションが正しく設定されていない場合は、エラーが発生します。|低|
+|行末文字 (復帰と改行) を含む XML 属性値は、XML 標準に従って正規化されません。 つまり、1 つの改行文字ではなく両方の文字が返されます。|行末文字 (復帰と改行) を含む XML 属性値は、XML 標準に従って正規化されます。 つまり、外部解析エンティティ (ドキュメント エンティティを含む) のすべての改行が、入力時に正規化されます。このとき、2 文字のシーケンス #xD #xA と、後ろに #xA がない #xD の両方について、1 つの #xA 文字に変換されます。<br /><br /> 行末文字を含む文字列値を転送するための属性を使用しているアプリケーションは、このような文字が送信されても受け取りません。 正規化処理を回避するには、XML 数字エンティティを使用してすべての行末文字をエンコードしてください。|低|
+|列プロパティ `ROWGUIDCOL` および `IDENTITY` は、制約として不適切に指定される可能性があります。 たとえば、ステートメント `CREATE TABLE T (C1 int CONSTRAINT MyConstraint IDENTITY)` は実行されますが、制約名は保持されず、ユーザーはその制約にアクセスできません。|列プロパティ `ROWGUIDCOL` および `IDENTITY` は、制約として指定できません。 エラー 156 が返されます。|低|
+|`UPDATE T1 SET @v = column_name = <expression>` などの双方向の代入を使用して列を更新すると、予期しない結果が生じる可能性があります。これは、ステートメントの実行時に、`WHERE` 句や `ON` 句などの他の句でステートメントの開始値ではなく変数の有効期限の値を使用できるためです。 これにより、述語の意味が行ごとに予期せず変化することがあります。<br /><br /> この動作は、互換性レベルが 90 に設定されている場合にのみ適用されます。|双方向の代入を使用して列を更新すると、予想どおりの結果が生じます。これは、ステートメントの実行時に、列のステートメントの開始値のみが利用されるためです。|低|
+|以下の「例」の E を参照してください。|以下の「例」の F を参照してください。|低|
+|ODBC 関数 {fn CONVERT()} では、言語の既定の日付形式が使用されます。 言語によっては、既定の形式が YDM の場合があります。この場合、CONVERT() を `{fn CURDATE()}` などの YMD 形式が想定されている他の関数と組み合わせて使用すると、変換エラーが発生する可能性があります。|ODBC 関数 `{fn CONVERT()}` では、ODBC データ型 SQL_TIMESTAMP、SQL_DATE、SQL_TIME、SQLDATE、SQL_TYPE_TIME、および SQL_TYPE_TIMESTAMP への変換時にスタイル 121 (言語に依存しない YMD 形式) が使用されます。|低|
+|DATEPART などの datetime 組み込み関数では、文字列入力値が有効な datetime リテラルである必要はありません。 たとえば、`SELECT DATEPART (year, '2007/05-30')` は正常にコンパイルされます。|`DATEPART` などの datetime 組み込み関数では、文字列入力値が有効な datetime リテラルである必要があります。 無効な datetime リテラルを使用すると、エラー 241 が返されます。|低|
 
 ## <a name="reserved-keywords"></a>予約済みキーワード
 
@@ -315,9 +316,9 @@ SQL Server 2017 より前の SQL Server の初期のバージョンのトレー�
 |----------------------------------|-----------------------|
 |130|未定。|
 |120|[なし] :|
-|110|`WITHIN GROUP`, `TRY_CONVERT`, `SEMANTICKEYPHRASETABLE`, `SEMANTICSIMILARITYDETAILSTABLE`, `SEMANTICSIMILARITYTABLE`|
-|100|`CUBE`、 `MERGE`、 `ROLLUP`|
-|90|`EXTERNAL`, `PIVOT`, `UNPIVOT`, `REVERT`, `TABLESAMPLE`|
+|110|`WITHIN GROUP`、`TRY_CONVERT`、`SEMANTICKEYPHRASETABLE`、`SEMANTICSIMILARITYDETAILSTABLE`、`SEMANTICSIMILARITYTABLE`|
+|100|`CUBE`、`MERGE`、`ROLLUP`|
+|90|`EXTERNAL`、`PIVOT`、`UNPIVOT`、`REVERT`、`TABLESAMPLE`|
 
 各互換性レベルの予約済みキーワードには、そのレベル以下で導入されるキーワードもすべて含まれています。 したがって、たとえばレベル 110 のアプリケーションの場合、上の表に一覧表示されているすべてのキーワードが予約されています。 それより下位の互換性レベルでは、レベル 100 のキーワードは有効なオブジェクト名ですが、そのキーワードに対応するレベル 110 の言語機能は使用できません。
 
@@ -331,7 +332,7 @@ SQL Server 2017 より前の SQL Server の初期のバージョンのトレー�
 
 データベースに対する `ALTER` 権限が必要です。
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 ### <a name="a-changing-the-compatibility-level"></a>A. 互換性レベルを変更する
 

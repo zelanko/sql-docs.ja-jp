@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 8c42e523-7020-471d-8977-a0bd044b9471
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: f0aa79ac22011a480ae60fe3002e0ac5bf896525
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 829c8e5e6f4207e721c4fa57b7cb012146e2762d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768236"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76288267"
 ---
 # <a name="use-alerts-for-replication-agent-events"></a>レプリケーション エージェント イベントに対する警告の使用
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "68768236"
   
  **定義済みのレプリケーションの警告を構成するには**  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [定義済みのレプリケーションの警告の構成 &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/administration/configure-predefined-replication-alerts-sql-server-management-studio.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]:[定義済みのレプリケーションの警告の構成 &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/administration/configure-predefined-replication-alerts-sql-server-management-studio.md)  
   
 ## <a name="viewing-the-application-log-directly"></a>アプリケーション ログの直接表示  
  Windows アプリケーション ログを表示するには、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows イベント ビューアーを使用します。 アプリケーション ログには [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のエラー メッセージだけでなく、コンピューターのその他多くの利用状況に関するメッセージが含まれます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エラー ログとは異なり、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を起動するたびに新しいアプリケーション ログが作成されることはありません (各 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セッションでは、既存のアプリケーション ログに新しいイベントを書き込みます)。ただし、ログに記録されたイベントを保有する期間を指定できます。 Windows アプリケーション ログを表示するときに、特定のイベントのログをフィルター選択できます。 詳細については、Windows のマニュアルを参照してください。  
@@ -91,6 +91,6 @@ deallocate hc
 ## <a name="see-also"></a>参照  
  [レプリケーション エージェントの管理](../../../relational-databases/replication/agents/replication-agent-administration.md)   
  [Best Practices for Replication Administration](../../../relational-databases/replication/administration/best-practices-for-replication-administration.md)   
- [監視 &#40;レプリケーション&#41;](../../../relational-databases/replication/monitor/monitoring-replication.md)  
+ [監視 (レプリケーション)](../../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

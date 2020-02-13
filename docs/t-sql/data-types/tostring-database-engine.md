@@ -18,10 +18,10 @@ ms.assetid: 5fc11ca5-c26d-4518-9512-67aa0270f110
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: da6d7934951b683976a1a55f116def120bc515a0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68000435"
 ---
 # <a name="tostring-database-engine"></a>ToString (データベース エンジン)
@@ -49,7 +49,7 @@ string ToString  ( )
   
 **CLR の戻り値の型: String**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 階層内での論理的な位置を返します。 たとえば、`/2/1/` は、ファイル システムの次の階層構造における 4 行目 ([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) を表します。
   
 ```sql
@@ -61,7 +61,7 @@ string ToString  ( )
 /3/      C:\Windows  
 ```  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-transact-sql-example-in-a-table"></a>A. テーブルでの Transact-SQL の例  
 次の例では、`OrgNode` 列が、**hierarchyid** データ型の読み取り可能な文字列形式で返されます。

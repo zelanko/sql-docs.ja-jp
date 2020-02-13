@@ -15,10 +15,10 @@ ms.assetid: 10ac57f1-b4bd-4528-bb66-3e47ccf663e7
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: dbc306b3ec8d23c4ddc7aec6477c407f21e345a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68025483"
 ---
 # <a name="server-properties---general-page"></a>[サーバーのプロパティ] - [全般] ページ
@@ -28,7 +28,7 @@ ms.locfileid: "68025483"
 ## <a name="property-grid"></a>[プロパティ] グリッド  
  サーバー名、サーバーのオペレーティング システム、プロセッサ数など、選択したサーバーのプロパティを表示します。  
   
- **[名前]**  
+ **Name**  
  サーバー インスタンスの名前を表示します。  
   
  **Product**  
@@ -40,10 +40,10 @@ ms.locfileid: "68025483"
  **プラットフォーム**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を実行しているオペレーティング システムとハードウェアを表示します。  
   
- **バージョン**  
+ **Version**  
  現在実行中の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エディションのバージョン番号を表示します。  
   
- **言語**  
+ **Language**  
  実行中の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスでサポートされる言語を表示します。  
   
  **[メモリ]**  

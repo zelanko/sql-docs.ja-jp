@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: 733e63f6dd01c09fd007a7176721533f7a1c57d3
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70846508"
 ---
 # <a name="reinitialize-a-subscription"></a>サブスクリプションの再初期化
@@ -111,7 +111,7 @@ ms.locfileid: "70846508"
   
 1.  パブリッシャーで、[sp_reinitsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-reinitsubscription-transact-sql.md) を実行します。 **\@publication**、 **\@subscriber**、および **\@destination_db** を指定します。 これにより、ディストリビューション エージェントの次回実行時に再初期化するようにサブスクリプションにマークが付けられます。  
   
-2.  (省略可) ディストリビューターでディストリビューション エージェントを起動し、サブスクリプションを同期します。 詳細については、「 [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md)」をご覧ください。  
+2.  (省略可) ディストリビューターでディストリビューション エージェントを起動し、サブスクリプションを同期します。 詳細については、「 [プッシュ サブスクリプションの同期](../../relational-databases/replication/synchronize-a-push-subscription.md)」をご覧ください。  
   
 #### <a name="to-reinitialize-a-pull-subscription-to-a-merge-publication"></a>マージ パブリケーションに対するプル サブスクリプションを再初期化するには  
   
@@ -129,7 +129,7 @@ ms.locfileid: "70846508"
     > [!IMPORTANT]  
     >  パラメーター化フィルターを追加、削除、変更する場合は、再初期化の際、サブスクライバーで保留中の変更をパブリッシャーにアップロードできません。 保留中の変更をアップロードしたい場合は、フィルターを変更する前にすべてのサブスクリプションを同期してください。  
   
-2.  (省略可) ディストリビューターでマージ エージェントを起動し、サブスクリプションを同期します。 詳細については、「 [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md)」をご覧ください。  
+2.  (省略可) ディストリビューターでマージ エージェントを起動し、サブスクリプションを同期します。 詳細については、「 [プッシュ サブスクリプションの同期](../../relational-databases/replication/synchronize-a-push-subscription.md)」をご覧ください。  
   
 #### <a name="to-set-the-reinitialization-policy-when-creating-a-new-merge-publication"></a>新しいマージ パブリケーションを作成するときに再初期化ポリシーを設定するには  
   
@@ -142,7 +142,7 @@ ms.locfileid: "70846508"
     > [!IMPORTANT]  
     >  パラメーター化フィルターを追加、削除、変更する場合は、再初期化の際、サブスクライバーで保留中の変更をパブリッシャーにアップロードできません。 保留中の変更をアップロードしたい場合は、フィルターを変更する前にすべてのサブスクリプションを同期してください。  
   
-     詳しくは、「 [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)」をご覧ください。  
+     詳しくは、「 [パブリケーションを作成](../../relational-databases/replication/publish/create-a-publication.md)」をご覧ください。  
   
 #### <a name="to-change-the-reinitialization-policy-for-an-existing-merge-publication"></a>既存のマージ パブリケーションの再初期化ポリシーを変更するには  
   
@@ -188,7 +188,7 @@ ms.locfileid: "70846508"
   
 4.  <xref:Microsoft.SqlServer.Replication.TransSubscription.Reinitialize%2A> メソッドを呼び出します。 このメソッドにより、サブスクリプションを再初期化するようにマークされます。  
   
-5.  プッシュ サブスクリプションを同期します。 詳しくは、「 [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md)」をご覧ください。  
+5.  プッシュ サブスクリプションを同期します。 詳細については、「 [プッシュ サブスクリプションの同期](../../relational-databases/replication/synchronize-a-push-subscription.md)」をご覧ください。  
   
 #### <a name="to-reinitialize-a-pull-subscription-to-a-merge-publication"></a>マージ パブリケーションに対するプル サブスクリプションを再初期化するには  
   
@@ -206,7 +206,7 @@ ms.locfileid: "70846508"
     > [!NOTE]  
     >  サブスクリプションの有効期限が切れると、変更をアップロードできません。 詳しくは、「 [Set the Expiration Period for Subscriptions](../../relational-databases/replication/publish/set-the-expiration-period-for-subscriptions.md)」をご覧ください。  
   
-5.  プル サブスクリプションを同期します。 詳しくは、「 [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md)」をご覧ください。  
+5.  プル サブスクリプションを同期します。 詳細については、「 [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md)」をご覧ください。  
   
 #### <a name="to-reinitialize-a-push-subscription-to-a-merge-publication"></a>マージ パブリケーションに対するプッシュ サブスクリプションを再初期化するには  
   
@@ -224,7 +224,7 @@ ms.locfileid: "70846508"
     > [!NOTE]  
     >  サブスクリプションの有効期限が切れると、変更をアップロードできません。 詳しくは、「 [Set the Expiration Period for Subscriptions](../../relational-databases/replication/publish/set-the-expiration-period-for-subscriptions.md)」をご覧ください。  
   
-5.  プッシュ サブスクリプションを同期します。 詳しくは、「 [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md)」をご覧ください。  
+5.  プッシュ サブスクリプションを同期します。 詳細については、「 [プッシュ サブスクリプションの同期](../../relational-databases/replication/synchronize-a-push-subscription.md)」をご覧ください。  
   
 ###  <a name="PShellExample"></a> 例 (RMO)  
  次の例では、トランザクション パブリケーションに対するプル サブスクリプションを再初期化します。  
@@ -242,6 +242,6 @@ ms.locfileid: "70846508"
 ## <a name="see-also"></a>参照  
  [サブスクリプションの再初期化](../../relational-databases/replication/reinitialize-subscriptions.md)   
  [Replication Management Objects Concepts](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
- [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)  
+ [レプリケーション セキュリティの推奨事項](../../relational-databases/replication/security/replication-security-best-practices.md)  
   
   

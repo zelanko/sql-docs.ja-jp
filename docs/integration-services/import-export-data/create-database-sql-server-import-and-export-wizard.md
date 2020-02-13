@@ -12,10 +12,10 @@ ms.assetid: 56a8a79f-086c-4bdc-8888-0045bb4b0cbf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4900f90f4044b32aea673106ad0a7a2a14a8f5cb
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296286"
 ---
 # <a name="create-database-sql-server-import-and-export-wizard"></a>[データベースの作成] (SQL Server インポートおよびエクスポート ウィザード)
@@ -36,7 +36,7 @@ ms.locfileid: "71296286"
 ![インポートおよびエクスポート ウィザードの [データベースの作成] ページ](../../integration-services/import-export-data/media/create-database.png "インポートおよびエクスポート ウィザードの [データベースの作成] ページ")  
 
 ## <a name="provide-a-name-for-the-new-database"></a>新しいデータベースの名前を入力する  
-**[名前]**  
+**Name**  
  対象になる SQL Server データベースの名前を指定します。
  
 ### <a name="naming-requirements"></a>名前付けに関する要件
@@ -87,7 +87,7 @@ ms.locfileid: "71296286"
  **サイズで拡張する**  
  ログ ファイルの拡張を許可するサイズを MB 単位で指定します。  
 
-### <a name="more-info"></a>詳細
+### <a name="more-info"></a>詳細情報
 このページに表示されるファイル サイズ オプションの詳細については、「[CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)」をご覧ください。 
 
 ## <a name="whats-next"></a>次の操作  

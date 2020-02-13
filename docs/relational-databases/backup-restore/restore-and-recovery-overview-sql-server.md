@@ -22,10 +22,10 @@ ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 9b034e43f918a0f6c198c29cf2f6618ba38638f8
-ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72916074"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>復元と復旧の概要 (SQL Server)
@@ -96,7 +96,7 @@ ms.locfileid: "72916074"
 
 -   **元に戻すフェーズ**では、ATT 内にある未完了のトランザクションがロールバックされ、データベースの整合性が確保されます。 ロールバック後、データベースはオンラインになり、そのデータベースにそれ以上のトランザクション ログ バックアップを適用できなくなります。
 
-各データベース復旧ステージの進行状況に関する情報は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の[エラーログ](../../tools/configuration-manager/viewing-the-sql-server-error-log.md)に記録されます。 データベース復旧の進行状況は、拡張イベントを使って追跡することもできます。 詳細については、ブログ記事「[データベース復旧の進行状況のための新しい拡張イベント](https://blogs.msdn.microsoft.com/sql_server_team/new-extended-events-for-database-recovery-progress/)」をご覧ください。
+各データベース復旧ステージの進行状況に関する情報は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の[エラー ログ](../../tools/configuration-manager/viewing-the-sql-server-error-log.md)に記録されます。 データベース復旧の進行状況は、拡張イベントを使って追跡することもできます。 詳細については、ブログ記事「[データベース復旧の進行状況のための新しい拡張イベント](https://blogs.msdn.microsoft.com/sql_server_team/new-extended-events-for-database-recovery-progress/)」をご覧ください。
 
 > [!NOTE]
 > 段階的な部分復元のシナリオでは、読み取り専用ファイル グループがファイルのバックアップの作成前から読み取り専用だった場合は、ログ バックアップをファイル グループに適用する必要はないので、ファイルの復元の際にスキップされます。 
@@ -111,7 +111,7 @@ ms.locfileid: "72916074"
 |復元操作|完全復旧モデル|一括ログ復旧モデル|単純復旧モデル|  
 |-----------------------|-------------------------|---------------------------------|---------------------------|  
 |データの復旧|完全な復旧 (ログが使用可能な場合)。|一部データ損失の可能性。|最新の完全バックアップまたは差分バックアップ以降のデータが損失。|  
-|特定の時点での復元|ログ バックアップに含まれる任意の時点。|ログ バックアップに一括ログ記録された変更が含まれている場合は不可。|サポートされていません。|  
+|ポイントインタイム リストア|ログ バックアップに含まれる任意の時点。|ログ バックアップに一括ログ記録された変更が含まれている場合は不可。|サポートされていません。|  
 |File restore **\***|完全にサポートされます。|場合によりサポートされます。 **\*\***|読み取り専用セカンダリ ファイルの場合のみ使用可能です。|  
 |Page restore **\***|完全にサポートされます。|場合によりサポートされます。 **\*\***|[なし] :|  
 |段階的な (ファイル グループ レベルの) 部分復元 **\***|完全にサポートされます。|場合によりサポートされます。 **\*\***|読み取り専用セカンダリ ファイルの場合のみ使用可能です。|  

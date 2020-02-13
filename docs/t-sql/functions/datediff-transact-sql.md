@@ -32,10 +32,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7d6ab92ef6c9f10aea46d375633ae539122299e8
-ms.sourcegitcommit: 0d89bcaebdf87db3bd26db2ca263be9c671b0220
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68731130"
 ---
 # <a name="datediff-transact-sql"></a>DATEDIFF (Transact-SQL)
@@ -61,7 +61,7 @@ DATEDIFF ( datepart , startdate , enddate )
 
 _datepart_ 値を変数に指定することはできません。また、`'month'` のように引用符で囲まれた文字列として指定することもできません。
 
-次の表に、すべての有効な _datepart_ 値の一覧を示します。 **DATEDIFF** は、 _ の完全名、または一覧にある完全名の省略形のいずれかを受け取ります。
+次の表に、すべての有効な _datepart_ 値の一覧を示します。 **DATEDIFF** は、_datepart_ の完全名、または一覧にある完全名の省略形のいずれかを受け取ります。
 
 |*datepart* 名|*datepart* 省略形|  
 |-----------|------------|
@@ -70,7 +70,7 @@ _datepart_ 値を変数に指定することはできません。また、`'mont
 |**month**|**mm, m**|  
 |**dayofyear**|**dy、y**|  
 |**day**|**dd, d**|  
-|**week**|**wk, ww**|  
+|**week**|**wk、ww**|  
 |**hour**|**hh**|  
 |**minute**|**mi、n**|  
 |**second**|**ss, s**|  
@@ -104,7 +104,7 @@ _datepart_ 値を変数に指定することはできません。また、`'mont
 
 *datepart* により設定された境界に表示された、*startdate* と *enddate* の間の **int** 差。
   
-たとえば、`SELECT DATEDIFF(day, '2036-03-01', '2036-02-28');` からは -2 が返されます。2036 はうるう年である必要があることを示します。 この場合、 _ '2036-03-01' から開始し、-2 日をカウントすると、'2036-02-28' の _enddate_ に達することを意味します。
+たとえば、`SELECT DATEDIFF(day, '2036-03-01', '2036-02-28');` からは -2 が返されます。2036 はうるう年である必要があることを示します。 この場合、_startdate_ '2036-03-01' から開始し、-2 日をカウントすると、'2036-02-28' の _enddate_ に達することを意味します。
   
 **int** の範囲 (-2,147,483,648 から +2,147,483,647) を超える戻り値の場合、`DATEDIFF` はエラーを返します。  **millisecond** の場合、*startdate* と *enddate* の差の最大値は 24 日 20 時間 31 分 23.647 秒です。 **second** の場合は、差の最大値は 68 年 19 日 3 時間 14 分 7 秒です。
   
@@ -138,7 +138,7 @@ SELECT DATEDIFF(microsecond, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00
 
 *startdate* と *enddate* の年の値は異なるが、カレンダー週の値が同じである場合、`DATEDIFF` では、*datepart* **week** に対して 0 を返します。
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 `DATEDIFF` は、`SELECT <list>`、`WHERE`、`HAVING`、`GROUP BY`、`ORDER BY` 句で使用します。
   
 `DATEDIFF` は、文字列リテラルを **datetime2** 型として暗黙的にキャストします。 つまり、`DATEDIFF` では、日付が文字列として渡される場合、YDM 形式がサポートされません。 文字列を明示的にキャストする必要があります、 **datetime** または **smalldatetime** YDM 形式を使用する型。
@@ -147,7 +147,7 @@ SELECT DATEDIFF(microsecond, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00
 
 *enddate* と *startdate* の差として **int** の範囲を超える値が返された場合、`DATEDIFF` は **minute** 以上の精度でオーバーフローする可能性があります。
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 次の例では、*startdate* パラメーターと *enddate* パラメーターの引数として、各種の式を使用しています。
   
 ### <a name="a-specifying-columns-for-startdate-and-enddate"></a>A. startdate と enddate に列を指定する  
@@ -322,7 +322,7 @@ SELECT @result
 118 years, 11 months, 11 days, 7 hours, 8 minutes and 1.123 seconds
 ```
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 次の例では、*startdate* パラメーターと *enddate* パラメーターの引数として、各種の式を使用しています。
   
 ### <a name="j-specifying-columns-for-startdate-and-enddate"></a>J. startdate と enddate に列を指定する  
@@ -375,7 +375,7 @@ SELECT FirstName, LastName,
 FROM dbo.DimEmployee;  
 ```  
   
-### <a name="n-specifying-an-aggregate-window-function-for-startdate"></a>N. startdate に集計関数を指定する  
+### <a name="n-specifying-an-aggregate-window-function-for-startdate"></a>北 startdate に集計関数を指定する  
 この例では、*startdate* の引数として集計関数を使用しています。
   
 ```sql

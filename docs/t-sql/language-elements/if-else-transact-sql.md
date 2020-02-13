@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 266d03b1eb5b96f4f4e78ed1a7985e5071a12d20
-ms.sourcegitcommit: af5e1f74a8c1171afe759a4a8ff2fccb5295270a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71823610"
 ---
 # <a name="ifelse-transact-sql"></a>IF...ELSE (Transact-SQL)
@@ -53,7 +53,7 @@ IF Boolean_expression
   
  ステートメント ブロックを定義するには、流れ制御キーワードの BEGIN と END を使用してください。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  IF...ELSE 構造は、バッチ、ストアド プロシージャ、およびアドホック クエリ内で使うことができます。 この構造がストアド プロシージャで使用される場合、あるパラメーターの存在を調べるためによく使用されます。  
   
  IF テストは、他の IF の後、または ELSE の後で入れ子にすることができます。 入れ子のレベルの制限は、使用可能なメモリによって異なります。  
@@ -69,7 +69,7 @@ ELSE
   
  例については、「[ELSE &#40;IF...ELSE&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/else-if-else-transact-sql.md)」を参照してください。  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  次の例では、`IF...ELSE` を使用し、`DimProduct` テーブルの項目の重み付けを基にして、2 つの応答のどちらをユーザーに表示するかを決定します。  
   
 ```sql

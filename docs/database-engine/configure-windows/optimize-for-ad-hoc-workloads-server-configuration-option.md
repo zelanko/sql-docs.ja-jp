@@ -13,10 +13,10 @@ ms.assetid: 0972e028-3a8e-454b-a186-e814a1d431f2
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: c66a4d3826493d10974ab4ce8363e3adde1bd0fa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67998417"
 ---
 # <a name="optimize-for-ad-hoc-workloads-server-configuration-option"></a>optimize for ad hoc workloads サーバー構成オプション
@@ -33,7 +33,7 @@ ms.locfileid: "67998417"
 > [!WARNING]  
 >  トレース フラグ 8032 を使用した場合、キャッシュが大きいために他のメモリ コンシューマー (バッファー プールなど) で利用できるメモリが少なくなると、パフォーマンスが低下することがあります。  
 
-## <a name="recommendations"></a>推奨事項
+## <a name="recommendations"></a>Recommendations
 プラン キャッシュに 1 回のみ使われるプランを多数格納することは避けてください。 この問題の一般的な原因は、クエリ パラメーターのデータ型が一貫して定義されていないことです。 これは文字列の長さに特に適用されますが、最大長、有効桁数、小数点以下桁数が含まれるすべてのデータ型に適用できます。 たとえば、@Greeting という名前のパラメーターが 1 回の呼び出しで nvarchar(10) として渡され、次の呼び出しで nvarchar(20) として渡される場合、パラメーター サイズごとに別のプランが作成されます。 クエリに複数のパラメーターが含まれ、これらが呼び出し時に一貫して定義されていないと、クエリごとに大量のクエリ プランが存在している場合があります。 プランは使用されているクエリ パラメーターのデータ型と長さの組み合わせごとに存在する可能性があります。
 
 多数の 1 回のみ使われるプランにより、OLTP サーバーの [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のメモリの多くの部分が占有されていて、これらのプランがアドホック プランである場合は、このサーバー オプションを使って、これらのオブジェクトのメモリ使用量を削減します。

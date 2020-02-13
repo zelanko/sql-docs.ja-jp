@@ -17,10 +17,10 @@ ms.assetid: aa1bee1a-ab06-44d8-9944-4bff03d73016
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6fa19857dc7c0651beeaedfdef8b843fcfc58c62
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296417"
 ---
 # <a name="creating-a-synchronous-transformation-with-the-script-component"></a>スクリプト コンポーネントによる同期変換の作成
@@ -136,7 +136,7 @@ else
   
  この例では、ユーザーが設定した出力の名前に基づき、スクリプト コンポーネントが **DirectRowTo\<OutputBufferX>** メソッドを生成します。 同様のコードを使用して、シミュレートされたエラー出力にエラー行を送信することもできます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  この例では、同期変換コンポーネントを作成するために、**ScriptMain** クラスで必要なカスタム コードを示します。  
   
 > [!NOTE]  

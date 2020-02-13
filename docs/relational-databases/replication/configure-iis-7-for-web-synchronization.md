@@ -14,10 +14,10 @@ ms.assetid: c201fe2c-0a76-44e5-a233-05e14cd224a6
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: b77faf60734e6aad7248c59d37033b26bb6b92e4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67903213"
 ---
 # <a name="configure-iis-7-for-web-synchronization"></a>Web 同期用の IIS 7 の構成
@@ -170,7 +170,7 @@ Web 同期は、バージョン 5.0 以降の IIS でサポートされます。
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レプリケーション リスナーの実行に使用するアカウントを最小の権限で構成するには、次の手順を完了する必要があります。 以下の手順は、IIS 7.0 を実行する [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Server 2008 に適用されます。  
   
- 次の手順の他に、PAL (パブリケーション アクセス リスト) に必要なログインが登録されていることを確認してください。 PAL の詳細については、「[Secure the Publisher](../../relational-databases/replication/security/secure-the-publisher.md)」(パブリッシャーのセキュリティ保護) をご覧ください。  
+ 次の手順の他に、PAL (パブリケーション アクセス リスト) に必要なログインが登録されていることを確認してください。 PAL の詳細については、「[Secure the Publisher (パブリッシャーのセキュリティ保護)](../../relational-databases/replication/security/secure-the-publisher.md)」を参照してください。  
   
  **重要** ここで作成するアカウントは、同期の際にパブリッシャーとディストリビューターに接続するアカウントです。 したがって、ディストリビューション サーバーとパブリケーション サーバーに SQL ログイン アカウントとして追加する必要があります。  
   
@@ -282,7 +282,7 @@ Web 同期は、バージョン 5.0 以降の IIS でサポートされます。
   
     4.  プロキシ サーバーを使用している場合は、 **[LAN にプロキシ サーバーを使用する]** と **[ローカル アドレスにはプロキシ サーバーを使用しない]** チェック ボックスをオンにして、 **[OK]** をクリックします。  
   
-2.  サブスクライバー側の Internet Explorer から診断モードでサーバーに接続します。診断モードで接続するには、replisapi.dll のアドレスの後に「 `?diag` 」を追加します。 例: `https://server.domain.com/directory/replisapi.dll?diag`」を参照してください。  
+2.  サブスクライバー側の Internet Explorer から診断モードでサーバーに接続します。診断モードで接続するには、replisapi.dll のアドレスの後に「 `?diag` 」を追加します。 (例: `https://server.domain.com/directory/replisapi.dll?diag`)。  
   
     > [!NOTE]  
     >  上の例の **server.domain.com** は、IIS マネージャーの **[サーバー証明書]** セクションに表示される **[発行先]** の正確な名前に置き換える必要があります。  
@@ -321,6 +321,6 @@ Web 同期は、バージョン 5.0 以降の IIS でサポートされます。
   
 ## <a name="see-also"></a>参照  
  [マージ レプリケーションの Web 同期](../../relational-databases/replication/web-synchronization-for-merge-replication.md)   
- [Configure Web Synchronization (Web 同期の構成)](../../relational-databases/replication/configure-web-synchronization.md)  
+ [[Web 同期の構成]](../../relational-databases/replication/configure-web-synchronization.md)  
   
   

@@ -21,10 +21,10 @@ ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b98f52d7c8e23530c13da6ad44d90090998ac09e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68212742"
 ---
 # <a name="certificate-management-sql-server-configuration-manager"></a>証明書の管理 (SQL Server 構成マネージャー)
@@ -45,7 +45,7 @@ SSL/TLS 証明書は、SQL Server へのアクセスをセキュリティで保�
   
 1. SQL Server 構成マネージャーのコンソール ペインで、 **[SQL Server ネットワークの構成]** を展開します。  
   
-2. **[** *&lt;インスタンス名&gt;* のプロトコル]を右クリックし、 **[プロパティ]** を選択します。  
+2. [ *&lt;インスタンス名&gt;* **のプロトコル**] を右クリックし、 **[プロパティ]** を選択します。  
   
 3. **[証明書]** タブを選択し、 **[インポート]** を選択します。  
   
@@ -58,7 +58,7 @@ SSL/TLS 証明書は、SQL Server へのアクセスをセキュリティで保�
   
 1. SQL Server 構成マネージャーのコンソール ペインで、 **[SQL Server ネットワークの構成]** を展開します。
   
-2. **[** *&lt;インスタンス名&gt;* のプロトコル]を右クリックし、 **[プロパティ]** を選択します。 
+2. [ *&lt;インスタンス名&gt;* **のプロトコル**] を右クリックし、 **[プロパティ]** を選択します。 
 
 3. **[証明書]** タブを選択し、 **[インポート]** を選択します。
 
@@ -81,7 +81,7 @@ SSL/TLS 証明書は、SQL Server へのアクセスをセキュリティで保�
   
 1. SQL Server 構成マネージャーのコンソール ペインで、 **[SQL Server ネットワークの構成]** を展開します。
   
-2. **[** *&lt;インスタンス名&gt;* のプロトコル]を右クリックし、 **[プロパティ]** を選択します。  
+2. [ *&lt;インスタンス名&gt;* **のプロトコル**] を右クリックし、 **[プロパティ]** を選択します。  
   
 3. **[証明書]** タブを選択し、 **[インポート]** を選択します。  
   

@@ -24,10 +24,10 @@ ms.assetid: e2478d26-dea4-428d-98c5-aad2d2a30da8
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: dc76237530ba47a513aba164260061ec6b20e7c3
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68892409"
 ---
 # <a name="manage-partition-wizard-f1-help"></a>パーティションの管理ウィザードの F1 ヘルプ
@@ -44,7 +44,7 @@ ms.locfileid: "68892409"
   
  ここでは、 **パーティションの管理ウィザード**を使用してパーティションを管理、変更、および実装する場合に必要な情報を提供します。  
   
-##  <a name="Top"></a> このセクションの内容  
+##  <a name="Top"></a> トピックの内容  
  以下のセクションでは、 **パーティションの管理ウィザード**の各ページのヘルプについて紹介します。  
   
  [パーティションの管理ウィザード ([パーティション操作の選択] ページ)](#SelectPartitionAction)  
@@ -165,7 +165,7 @@ ms.locfileid: "68892409"
  **Run immediately**  
  ウィザードで **[次へ]** または **[完了]** をクリックしたときにパーティションの変更が完了するようにします。  
   
-### <a name="schedule"></a>[スケジュール]  
+### <a name="schedule"></a>スケジュール  
  スケジュールした日時にテーブル パーティションを変更する場合に選択します。  
   
  **[スケジュールの変更]**  
@@ -179,7 +179,7 @@ ms.locfileid: "68892409"
 ### <a name="options"></a>オプション  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブに必要なスケジュールの種類を選択します。  
   
- **[名前]**  
+ **Name**  
  スケジュールの新しい名前を入力します。  
   
  **[スケジュール済みのジョブ]**  
@@ -251,7 +251,7 @@ ms.locfileid: "68892409"
  **Date**  
  ジョブを実行する日付を選択します。  
   
- **[時刻]**  
+ **Time**  
  ジョブを実行する時刻を選択します。  
   
  ![[トップに戻る] リンクで使用される矢印アイコン](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [このセクションの内容](#Top)  
@@ -275,17 +275,17 @@ ms.locfileid: "68892409"
  **操作**  
  各アクションの種類と名前を指定します。  
   
- **ステータス**  
+ **状態**  
  全体としてウィザードのアクションが **[成功]** または **[失敗]** のいずれの値を返したかを示します。  
   
  **メッセージ**  
  プロセスから返されたすべてのエラー メッセージまたは警告メッセージを提供します。  
   
- **[停止]**  
+ **Stop**  
  ウィザードのアクションを停止します。  
   
- **レポート**  
- **パーティションの管理ウィザード**の結果を含むレポートを作成します。 使用可能なオプションは次のとおりです。  
+ **Report**  
+ **パーティションの管理ウィザード**の結果を含むレポートを作成します。 オプションは次のとおりです。  
   
 -   **[レポートの表示]**  
   

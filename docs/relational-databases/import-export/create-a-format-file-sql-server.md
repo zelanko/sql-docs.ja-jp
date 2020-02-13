@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fb0199e5ec3bc083d7a6e2087ec86c04c233436b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68035819"
 ---
 # <a name="create-a-format-file-sql-server"></a>フォーマット ファイルの作成 (SQL Server)
@@ -36,14 +36,14 @@ ms.locfileid: "68035819"
 ## <a name="creating-a-non-xml-format-file"></a>XML 以外のフォーマット ファイルの作成  
  **bcp** コマンドを使用してフォーマット ファイルを作成するには、 **format** 引数を指定し、データ ファイルのパスの代わりに **nul** を使用します。 **format** オプションには、次に示す **-f** オプションが必要です。  
   
- **bcp** _table_or_view_ **format** nul **-f**_format_file_name_  
+ **bcp** _table_or_view_ **format** nul **-f** _format_file_name_  
   
 > [!NOTE]  
 > XML 以外のフォーマット ファイルであることを区別するには、MyTable.fmt のように、ファイル名拡張子として .fmt を使用することをお勧めします。  
   
  XML 以外のフォーマット ファイルの構造およびフィールドについては、「 [XML 以外のフォーマット ファイル &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md)でサポートされる従来のフォーマットです。  
   
-### <a name="examples"></a>使用例  
+### <a name="examples"></a>例  
  ここでは、 **bcp** コマンドを使用して XML 以外のフォーマット ファイルを作成する方法を示す次の例について説明します。  
   
 -   A. ネイティブ データ用の XML 以外のフォーマット ファイルの作成  
@@ -63,7 +63,7 @@ ms.locfileid: "68035819"
   
  **bcp** コマンドには、次の修飾子が含まれます。  
   
-|修飾子|[説明]|  
+|修飾子|説明|  
 |----------------|-----------------|  
 |**formatnul-f** _format_file_|XML 以外のフォーマット ファイルを指定します。|  
 |**-n**|ネイティブ データ型を指定します。|  
@@ -93,7 +93,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -n -f Department-
   
  **bcp** コマンドには、次の修飾子が含まれます。  
   
-|修飾子|[説明]|  
+|修飾子|説明|  
 |----------------|-----------------|  
 |**formatnul-f** _format_file_|XML 以外のフォーマット ファイルを指定します。|  
 |**-c**|文字データを指定します。|  
@@ -175,7 +175,7 @@ bcp コマンドを使用して (つまり `bcp format` を使用して) フォ�
   
  XML フォーマット ファイルの構造およびフィールドについては、「 [XML フォーマット ファイル &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md)でサポートされる従来のフォーマットです。  
   
-### <a name="examples"></a>使用例  
+### <a name="examples"></a>例  
  ここでは、 **bcp** コマンドを使用して XML フォーマット ファイルを作成する方法を示す次の例について説明します。  
   
 -   A. 文字データ用の XML フォーマット ファイルの作成  
@@ -191,7 +191,7 @@ bcp コマンドを使用して (つまり `bcp format` を使用して) フォ�
   
  **bcp** コマンドには、次の修飾子が含まれます。  
   
-|修飾子|[説明]|  
+|修飾子|説明|  
 |----------------|-----------------|  
 |**formatnul-f** _format_file_ **-x**|XML フォーマット ファイルを指定します。|  
 |**-c**|文字データを指定します。|  
@@ -231,7 +231,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-
   
  **bcp** コマンドには、次の修飾子が含まれます。  
   
-|修飾子|[説明]|  
+|修飾子|説明|  
 |----------------|-----------------|  
 |**formatnul-f** _format_file_ **-x**|XML フォーマット ファイルを指定します。|  
 |**-n**|ネイティブ データ型を指定します。|  
@@ -266,7 +266,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -x -f Department-n.x
  このフォーマット ファイルの構文については、「[XML フォーマット ファイル &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md)」を参照してください。 ネイティブ データの使用方法については、「[ネイティブ形式を使用したデータのインポートまたはエクスポート &#40;SQL Server&#41;](../../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md)」を参照してください。  
   
 ## <a name="mapping-data-fields-to-table-columns"></a>データ フィールドからテーブル列へのマッピング  
- **bcp**によって作成されたフォーマット ファイルには、すべてのテーブル列が順番に記述されます。 テーブル行を再配置または削除する場合は、フォーマット ファイルを変更できます。 その結果、フィールドとテーブル列とが直接マップされないデータ ファイル用に、フォーマット ファイルをカスタマイズできます。 詳細については、次の各トピックを参照してください。  
+ **bcp**によって作成されたフォーマット ファイルには、すべてのテーブル列が順番に記述されます。 テーブル行を再配置または削除する場合は、フォーマット ファイルを変更できます。 その結果、フィールドとテーブル列とが直接マップされないデータ ファイル用に、フォーマット ファイルをカスタマイズできます。 詳細については、次のトピックを参照してください。  
   
 -   [フォーマット ファイルを使用したテーブル列のスキップ &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)  
   

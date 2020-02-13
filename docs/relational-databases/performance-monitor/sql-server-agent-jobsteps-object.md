@@ -14,10 +14,10 @@ ms.assetid: 44f9983c-1753-4fe0-8475-973aa2460b3a
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 753c7c08164de1583dd8de1aa1720fcad6a98dff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68093627"
 ---
 # <a name="sql-server-agent-jobsteps-object"></a>SQL Server エージェントの JobSteps オブジェクト
@@ -26,7 +26,7 @@ ms.locfileid: "68093627"
   
  次の表は、 **SQLAgent:JobSteps** カウンターの一覧です。  
   
-|[オブジェクト名]|[説明]|  
+|Name|説明|  
 |----------|-----------------|  
 |**Active steps**|このカウンターは、現在実行中のジョブ ステップの数を報告します。|  
 |**Queued steps**|このカウンターは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントで実行する準備が整っているジョブ ステップで、まだ実行が開始されていないジョブ ステップの数を報告します。|  
@@ -34,7 +34,7 @@ ms.locfileid: "68093627"
   
  オブジェクトの各カウンターには、次のインスタンスが含まれています。  
   
-|インスタンス|[説明]|  
+|インスタンス|説明|  
 |--------------|-----------------|  
 |**_Total**|すべてのジョブ ステップの情報です。|  
 |**ActiveScripting**|**ActiveScripting** サブシステムを使用するジョブ ステップの情報です。|  
@@ -44,7 +44,7 @@ ms.locfileid: "68093627"
 |**Distribution**|**Distribution** サブシステムを使用するジョブ ステップの情報です。|  
 |**Dts**|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サブシステムを使用するジョブ ステップの情報です。|  
 |**LogReader**|**LogReader** サブシステムを使用するジョブ ステップの情報です。|  
-|**Merge**|**Merge** サブシステムを使用するジョブ ステップの情報です。|  
+|**[マージ]**|**Merge** サブシステムを使用するジョブ ステップの情報です。|  
 |**PowerShell**|**PowerShell** サブシステムを使用するジョブ ステップの情報です。|  
 |**QueueReader**|**QueueReader** サブシステムを使用するジョブ ステップの情報です。|  
 |**スナップショット**|**Snapshot** サブシステムを使用するジョブ ステップの情報です。|  

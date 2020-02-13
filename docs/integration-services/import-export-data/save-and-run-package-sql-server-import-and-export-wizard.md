@@ -12,10 +12,10 @@ ms.assetid: b582c462-3d7a-4a4c-a2a2-2c79fedab75a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b1275f5cbb718f34ba1386d6d6313dd662901900
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71284939"
 ---
 # <a name="save-and-run-package-sql-server-import-and-export-wizard"></a>[パッケージの保存および実行]\(SQL Server インポートおよびエクスポート ウィザード)
@@ -30,7 +30,7 @@ ms.locfileid: "71284939"
 ## <a name="screen-shot-of-the-save-and-run-package-page"></a>[パッケージの保存および実行] ページのスクリーン ショット  
 次のスクリーン ショットは、ウィザードの **[パッケージの保存および実行]** ページを示しています。 
    
-![インポートおよびエクスポート ウィザードの [パッケージ] ページの保存と実行](../../integration-services/import-export-data/media/save-and-run.png "インポートおよびエクスポート ウィザードの [パッケージ] ページの保存と実行") 
+![インポートおよびエクスポート ウィザードの [パッケージの保存および実行] ページ](../../integration-services/import-export-data/media/save-and-run.png "インポートおよびエクスポート ウィザードの [パッケージの保存および実行] ページ") 
   
 ## <a name="run-and-save-the-package"></a>パッケージの実行および保存 
  次に進むには、次の 2 つのオプションから少なくとも 1 つを選択する必要があります。  

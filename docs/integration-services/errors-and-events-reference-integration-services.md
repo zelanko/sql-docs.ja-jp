@@ -16,10 +16,10 @@ ms.assetid: cf4f0f14-8087-42d7-9b67-e4929228abd6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 64e805e5dd9b334afe252e2c1d43685e9c92b95f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71290617"
 ---
 # <a name="errors-and-events-reference-integration-services"></a>エラーとイベントのリファレンス (Integration Services)
@@ -36,7 +36,7 @@ ms.locfileid: "71290617"
   
 ## <a name="error-messages"></a>エラー メッセージ  
   
-|エラーのシンボル名|[説明]|  
+|エラーのシンボル名|説明|  
 |----------------------------|-----------------|  
 |DTS_E_CACHELOADEDFROMFILE|キャッシュ変換によるインメモリ キャッシュへのデータの書き込みが試行されているため、パッケージを実行できないが、 キャッシュ接続マネージャーは、既にキャッシュ ファイルをインメモリ キャッシュに読み込んでいることを示しています。|  
 |DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER|指定された接続に失敗したため、パッケージを実行できないことを示しています。|  
@@ -55,7 +55,7 @@ ms.locfileid: "71290617"
 ## <a name="events-sqlispackage"></a>イベント (SQLISPackage)  
  詳細については、「 [Integration Services パッケージによってログに記録されるイベント](../integration-services/performance/events-logged-by-an-integration-services-package.md)」を参照してください。  
   
-|イベント|[説明]|  
+|Event|説明|  
 |-----------|-----------------|  
 |SQLISPackage_12288|パッケージが開始されたことを示しています。|  
 |SQLISPackage_12289|パッケージの実行が正常に完了したことを示しています。|  
@@ -69,7 +69,7 @@ ms.locfileid: "71290617"
 ## <a name="events-sqlisservice"></a>イベント (SQLISService)  
  詳細については、「 [Integration Services サービスによってログに記録されるイベント](../integration-services/service/events-logged-by-the-integration-services-service.md)」を参照してください。  
   
-|イベント|[説明]|  
+|Event|説明|  
 |-----------|-----------------|  
 |SQLISService_256|サービスを開始しようとしていることを示しています。|  
 |SQLISService_257|サービスが開始したことを示しています。|  
@@ -81,6 +81,6 @@ ms.locfileid: "71290617"
 |SQLISService_274|構成ファイルの場所を含むレジストリ エントリが存在しないか、空であることを示しています。|  
   
 ## <a name="see-also"></a>参照  
- [Integration Services のエラーおよびメッセージのリファレンス](../integration-services/integration-services-error-and-message-reference.md)  
+ [Integration Services のエラーとメッセージのリファレンス](../integration-services/integration-services-error-and-message-reference.md)  
   
   

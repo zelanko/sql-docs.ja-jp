@@ -25,10 +25,10 @@ ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 0a49bef9dc75beea0e098908362f198b60a8b92c
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71680835"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "71680835"
 
 ソース テーブルとの結合結果から、挿入、更新、または削除操作を対象テーブルに対して実行します。 たとえば、他のテーブルとの違いに基づいて、あるテーブル内の行を挿入、更新、または削除することにより、2 つのテーブルを同期します。  
   
-**パフォーマンスのヒント:** 説明した MERGE ステートメントの条件付きの動作は、一致する特性が 2 つのテーブルで複雑に組み合わされている場合に最適です。 たとえば、存在しない場合は行を挿入し、一致しない場合は行を更新します。 別のテーブルの行に基づいて 1 つのテーブルを更新するだけで、基本的な INSERT、UPDATE、および DELETE ステートメントのパフォーマンスとスケーラビリティが向上します。 例:  
+**パフォーマンスのヒント:** 説明した MERGE ステートメントの条件付きの動作は、一致する特性が 2 つのテーブルで複雑に組み合わされている場合に最適です。 たとえば、存在しない場合は行を挿入し、一致しない場合は行を更新します。 別のテーブルの行に基づいて 1 つのテーブルを更新するだけで、基本的な INSERT、UPDATE、および DELETE ステートメントのパフォーマンスとスケーラビリティが向上します。 次に例を示します。  
   
 ```sql
 INSERT tbl_A (col, col2)  
@@ -285,7 +285,7 @@ DEFAULT VALUES
 \<graph search pattern>  
 グラフの一致パターンを指定します。 この句の引数の詳細については、「[MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md)」を参照してください
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 3 つの MATCHED 句のうち、少なくとも 1 つは指定する必要があります。これらの句は、任意の順序で指定できます。 1 つの MATCHED 句で 1 つの変数を複数回更新することはできません。  
   
@@ -395,7 +395,7 @@ MERGE ステートメントを使用すると、`OPENROWSET(BULK…)` 句をテ�
 - [sys.dm_exec_plan_attributes](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md) 動的管理ビューの merge_action_type 属性を使用すると、MERGE ステートメントの結果として使用するトリガーの実行プランの種類が返されます。
 - SQL トレースを使用すると、MERGE ステートメントのトラブルシューティング データが、その他のデータ操作言語 (DML) ステートメントの場合と同じ方法で収集されます。 詳細については、「 [SQL Trace](../../relational-databases/sql-trace/sql-trace.md)」を参照してください。
 
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 
 ### <a name="a-using-merge-to-do-insert-and-update-operations-on-a-table-in-a-single-statement"></a>A. MERGE を使用して、単一のステートメントでテーブルに INSERT 操作と UPDATE 操作を実行する
 

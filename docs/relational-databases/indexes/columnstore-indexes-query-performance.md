@@ -12,10 +12,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: bc6409f7a8f5fc15568e583aa50552667f2dd874
-ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71816717"
 ---
 # <a name="columnstore-indexes---query-performance"></a>列ストア インデックス - クエリ パフォーマンス
@@ -91,7 +91,7 @@ ms.locfileid: "71816717"
     
  すべてのクエリ実行演算子をバッチ モードで実行できるわけではありません。 たとえば、Insert、Delete、Update などの DML 操作は、一度に 1 行ずつ実行されます。 バッチ モードの演算子は、Scan、Join、Aggregate、Sort など、クエリのパフォーマンスを向上させる演算子を対象としています。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] で列ストア インデックスが導入されてから、バッチ モードで実行できる演算子を拡充する継続的な取り組みが行われています。 次の表は、バッチ モードで実行される演算子と、対応する製品のバージョンを示します。    
     
-|バッチ モードで実行される演算子|用途|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] および [!INCLUDE[ssSDS](../../includes/sssds-md.md)]<sup>1</sup>|コメント|    
+|バッチ モードで実行される演算子|用途|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] および [!INCLUDE[ssSDS](../../includes/sssds-md.md)]<sup>1</sup>|説明|    
 |---------------------------|------------------------|---------------------|---------------------|---------------------------------------|--------------|    
 |DML 操作 (Insert、Delete、Update、Merge)||いいえ|いいえ|いいえ|DML 操作は並列ではないため、バッチ モードでは実行できません。 直列モードのバッチ処理を有効にして、DML のバッチ モードでの処理を許可したとしても、パフォーマンスの向上はほとんど認められません。|    
 |列ストア インデックス スキャン|SCAN|NA|はい|はい|列ストア インデックスの場合は、SCAN ノードに述語をプッシュできます。|    
@@ -99,18 +99,18 @@ ms.locfileid: "71816717"
 |Index Seek||NA|NA|いいえ|行モードの非クラスター化 B ツリー インデックスを通じてシーク操作を実行します。|    
 |Compute Scalar|スカラー値に評価される式。|はい|はい|はい|データ型にいくつか制限事項があり、 すべてのバッチ モード演算子が該当します。|    
 |連結 (concatenation)|UNION および UNION ALL|いいえ|はい|はい||    
-|フィルター (filter)|述語の適用|はい|はい|はい||    
+|filter|述語の適用|はい|はい|はい||    
 |Hash Match|ハッシュ ベースの集計関数、外部ハッシュ結合、右ハッシュ結合、左ハッシュ結合、右内部結合、左内部結合|はい|はい|はい|集計の制限: 文字列には最小値/最大値はありません。 使用可能な集計関数は SUM/COUNT/AVG/MIN/MAX です。<br />結合の制限: 非整数型では不一致の型が結合されません。|    
 |Merge Join||いいえ|いいえ|いいえ||    
 |マルチ スレッド クエリ||はい|はい|はい||    
 |入れ子になったループ||いいえ|いいえ|いいえ||    
 |MAXDOP 1 で実行されるシングル スレッド クエリ||いいえ|いいえ|はい||    
 |直列クエリ プランを持つシングル スレッド クエリ||いいえ|いいえ|はい||    
-|Sort|列ストア インデックスを持つ SCAN 上の ORDER BY 句|いいえ|いいえ|はい||    
+|sort|列ストア インデックスを持つ SCAN 上の ORDER BY 句|いいえ|いいえ|はい||    
 |Top Sort||いいえ|いいえ|はい||    
 |Window Aggregates||NA|NA|はい|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] の新しいオペレーター。|    
     
-<sup>1</sup> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] Premium 層、Standard 層 - S3 以上、およびすべての仮想コア層と [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] に適用されます。    
+<sup>1</sup>[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] Premium 層、Standard 層 - S3 以上、およびすべての仮想コア層と [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] に適用されます。    
     
 ### <a name="aggregate-pushdown"></a>集計プッシュ ダウン    
  SCAN ノードから条件を満たす行をフェッチしてバッチ モードで値を集計する、集計計算の通常の実行パスです。 パフォーマンスは良好ですが、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] では、次の条件を満たしていれば、集計操作を SCAN ノードにプッシュして、集計計算のパフォーマンスを大幅に (バッチ モードでの実行に加えてさらに) 向上できます。 
@@ -121,13 +121,13 @@ ms.locfileid: "71816717"
 -  集計列は、文字列型の列ではありません。
 -  集計列は、仮想列ではありません。 
 -  入力と出力のデータ型は、次のいずれかで、64 ビットに収まる必要があります。
-    -  `tinyint`, `int`, `bigint`, `smallint`, `bit`
+    -  `tinyint`、`int`、`bigint`、`smallint`、`bit`
     -  有効桁数が 18 以上の `smallmoney`、`money`、`decimal`、`numeric`
-    -  `smalldate`, `date`, `datetime`, `datetime2`, `time`
+    -  `smalldate`、`date`、`datetime`、`datetime2`、`time`
     
  集計プッシュ ダウンは、キャッシュに対応した実行時に圧縮/エンコード データを効率的に集計し、SIMD を活用することでさらに高速になります。    
     
- ![aggregate pushdown](../../relational-databases/indexes/media/aggregate-pushdown.jpg "aggregate pushdown")    
+ ![集計プッシュダウン](../../relational-databases/indexes/media/aggregate-pushdown.jpg "集計プッシュ ダウン")    
     
 たとえば、以下の両方のクエリで集計プッシュ ダウンが可能です。    
     

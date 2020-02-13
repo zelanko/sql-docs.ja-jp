@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 473f9c37560ee4a63a296d2023a63ccc67aae779
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68091465"
 ---
 # <a name="use-unicode-native-format-to-import-or-export-data-sql-server"></a>Unicode ネイティブ形式を使用したデータのインポートまたはエクスポート (SQL Server)
@@ -41,11 +41,11 @@ Unicode ネイティブ形式のデータは、[bcp](../../tools/bcp-utility.md)
   
 Unicode ネイティブ形式は、次のコマンド オプションでサポートされています。  
   
-|コマンド|オプション|[説明]|  
+|command|オプション|説明|  
 |-------------|------------|-----------------|  
 |bcp|**-N**|**bcp** ユーティリティで Unicode ネイティブ形式が使用されるようにします。Unicode ネイティブ形式では、すべての非文字データに対してネイティブ (データベース) データ型が使用され、すべての文字 (**char**、 **nchar**、 **varchar**、 **nvarchar**、 **text**、 **ntext**) データに対して Unicode 文字データ形式が使用されます。|  
 |BULK INSERT|DATAFILETYPE **='widenative'**|データの一括インポート時に Unicode ネイティブ形式を使用します。|  
-|OPENROWSET|なし|フォーマット ファイルを使用する必要があります|
+|OPENROWSET|該当なし|フォーマット ファイルを使用する必要があります|
     
 > [!NOTE]
 >  また、フォーマット ファイルでフィールドごとに形式を指定することもできます。 詳細については、「 [データのインポートまたはエクスポート用のフォーマット ファイル &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)」を参照してください。
@@ -185,7 +185,7 @@ SELECT * FROM TestDatabase.dbo.myWidenative;
 -   [Unicode 文字形式を使用したデータのインポートまたはエクスポート &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)  
   
 ## <a name="see-also"></a>参照  
- [bcp Utility](../../tools/bcp-utility.md)   
+ [bcp ユーティリティ](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  

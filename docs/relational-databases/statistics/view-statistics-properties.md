@@ -16,10 +16,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 45c297ea29dbab974f72f4ecf69deb5c65f57bbb
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908013"
 ---
 # <a name="view-statistics-properties"></a>統計のプロパティの表示
@@ -59,9 +59,9 @@ ms.locfileid: "72908013"
   
 5.  プロパティを表示する統計オブジェクトを右クリックし、 **[プロパティ]** を選択します。  
   
-6.  [ **統計のプロパティ -** _statistics_name_ ] ダイアログ ボックスの **[ページの選択]** ウィンドウで **[詳細]** を選びます。  
+6.  **[統計のプロパティ - _statistics_name_]** ダイアログ ボックスの **[ページの選択]** ウィンドウで **[詳細]** を選択します。  
   
-     **統計のプロパティ -** **statistics_name** _statistics_name_ ページで次のプロパティが表示されます。  
+     **[統計のプロパティ - _statistics_name_]** ダイアログ ボックスの **[詳細]** ページで次のプロパティが表示されます。  
   
      **テーブル名**  
      統計の対象となるテーブルの名前が表示されます。  
@@ -74,10 +74,10 @@ ms.locfileid: "72908013"
   
      以下に、統計ヘッダーを指定した場合に結果セットに返される列を示します。  
   
-     **[名前]**  
+     **Name**  
      統計オブジェクトの名前。  
   
-     **[更新]**  
+     **更新**  
      統計情報が最後に更新された日付と時刻。  
   
      **行数**  

@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 078f0e34-7153-45c4-8725-778b5bef88da
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: e293625ab72ba1b94b32a1e6c1ada853b88509f4
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 591cb0ff055a4a3556ac4b6200d052ffc58a6963
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770603"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286919"
 ---
 # <a name="overview-of-the-replication-monitor-interface"></a>レプリケーション モニターのインターフェイスの概要
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -223,7 +223,7 @@ ms.locfileid: "68770603"
 ## <a name="viewing-information-and-performing-tasks-related-to-agent-profiles"></a>情報の表示とエージェント プロファイル関連のタスクの実行  
  レプリケーション モニターには、エージェント プロファイルを管理するためのさまざまなダイアログ ボックスが用意されています。 エージェント プロファイルとは、エージェントのパラメーターのセットであり、これらのパラメーターによってエージェントの動作が決定されます。 詳しくは、「 [レプリケーション エージェント プロファイル](../../../relational-databases/replication/agents/replication-agent-profiles.md)」をご覧ください。 これらのダイアログ ボックスには以下のものがあります。  
   
--   **[エージェント プロファイル]**  
+-   **エージェント プロファイル**  
   
      このダイアログ ボックスでは、プロファイルのプロパティの変更、プロファイルの作成と削除、既定のプロファイルの指定、および特定の種類のエージェント (スナップショット エージェントなど) のすべてが使用するプロファイルの指定を行うことができます。  
   

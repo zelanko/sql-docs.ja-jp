@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bb6463efe0b4b4f5d7b009eae6f9a4a612cf5e7e
-ms.sourcegitcommit: 722f2ec5a1af334f5bcab8341bc744d16a115273
+ms.openlocfilehash: e5b890ff4a9d58f531f3a72e41e8280faf2511a3
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74866079"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76909752"
 ---
 # <a name="query-processing-architecture-guide"></a>クエリ処理アーキテクチャ ガイド
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -637,16 +637,16 @@ WHERE ProductSubcategoryID = 4;
 
 * `SELECT` ステートメントの <select_list>。 これには、サブクエリの `SELECT` リストや `INSERT` ステートメント内の `SELECT` も含まれます。
 * `SELECT` ステートメント内のサブクエリの `IF` ステートメント。
-* クエリの `TOP`句、 `TABLESAMPLE`句、 `HAVING`句、 `GROUP BY`句、 `ORDER BY`句、 `OUTPUT...INTO`句、 `FOR XM`L 句。
+* クエリの `TOP` 句、`TABLESAMPLE` 句、`HAVING` 句、`GROUP BY` 句、`ORDER BY` 句、`OUTPUT...INTO` 句、`FOR XML` 句。
 * `OPENROWSET`、 `OPENQUERY`、 `OPENDATASOURCE`、 `OPENXML`、または任意の `FULLTEXT` 演算子に渡す引数。直接渡すか、サブ式として渡すかは問いません。
 * `LIKE` 句の pattern 引数と escape_character 引数。
 * `CONVERT` 句の style 引数。
 * `IDENTITY` 句内の整数の定数。
 * ODBC 拡張機能の構文で指定した定数。
-* 演算子 +、-、\*、/、および % の引数であり、定数のたたみ込みが可能な式。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は、強制パラメーター化を行うことができるかどうかを決定する際に、次のいずれかの条件が満たされていれば式で定数のたたみ込みが可能であると見なします。  
+* 演算子 `+`、`-`、`*`、`/`、`%` の引数であり、定数の畳み込みが可能な式。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は、強制パラメーター化を行うことができるかどうかを決定する際に、次のいずれかの条件が満たされていれば式で定数のたたみ込みが可能であると見なします。  
   * 式に列、変数、およびサブクエリが使用されていない。  
   * 式に `CASE` 句が含まれている。  
-* クエリ ヒントの句に渡す引数。 `number_of_rows` クエリ ヒントの `FAST` 引数、 `number_of_processors` クエリ ヒントの `MAXDOP` 引数、および `MAXRECURSION` クエリ ヒントの number 引数がこれに該当します。
+* クエリ ヒントの句に渡す引数。 `FAST` クエリ ヒントの *number_of_rows* 引数、`MAXDOP` クエリ ヒントの *number_of_processors* 引数、`MAXRECURSION` クエリ ヒントの *number* 引数がこれに該当します。
 
 パラメーター化は個々の [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメント レベルで行われます。 つまり、バッチ内では個々のステートメントがパラメーター化されます。 コンパイルの後、パラメーター化クエリは、最初に送信されたバッチのコンテキストで実行されます。 クエリの実行プランがキャッシュに残っている場合、sys.syscacheobjects 動的管理ビューの sql 列を参照することでクエリがパラメーター化されているかどうかを判断できます。 クエリがパラメーター化されている場合、この列には送信されたバッチのテキストの前に "\@1 tinyint" のように、パラメーターの名前とデータ型が付加されます。
 

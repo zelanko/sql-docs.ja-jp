@@ -12,10 +12,10 @@ ms.assetid: f60e1a19-2ea6-403c-89ab-3e60ac533ea0
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3d3019419538c05efc28ceabc5324d373500f65c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71285131"
 ---
 # <a name="select-source-tables-and-views-sql-server-import-and-export-wizard"></a>[コピー元のテーブルおよびビューを選択]\(SQL Server インポートおよびエクスポート ウィザード)
@@ -48,7 +48,7 @@ ms.locfileid: "71285131"
 
 クエリを指定した場合は、一覧には `[Query]` という名前の項目が 1 つだけ含まれます。 
 
-**変換先**  
+**宛先**  
  変換元の各テーブルまたはクエリの一覧で変換先テーブルを選択するか、ウィザードで作成する新しいテーブルの名前を入力します。 既存の変換先テーブルを選択する場合、そのテーブルの列とデータ型は変換元テーブルと互換性がある必要があります。  
 
 > [!NOTE]
@@ -89,7 +89,7 @@ Excel にデータをエクスポートする場合、変換先として、次�
 > 変換元または変換先として Excel を使用する場合、 **[列マッピング]** ページで **[マッピングの編集]** をクリックし、データ型マッピングを確認することをお勧めします。 
 
 ## <a name="whats-next"></a>次の操作  
- 変換先テーブルにコピーおよびマップする既存のテーブルおよびビューを選択した後に表示されるのは、 **[パッケージの保存および実行]** ページです。 このページでは、コピー操作をすぐに実行するかどうかを指定します。 構成によっては、ウィザードによって作成された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを保存して、それをカスタマイズし、後から再利用することができます。 詳細については、 [パッケージの保存および実行](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md)に関するページを参照してください。
+ 変換先テーブルにコピーおよびマップする既存のテーブルおよびビューを選択した後に表示されるのは、 **[パッケージの保存および実行]** ページです。 このページでは、コピー操作をすぐに実行するかどうかを指定します。 構成によっては、ウィザードによって作成された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを保存して、それをカスタマイズし、後から再利用することができます。 詳細については、 [パッケージの保存および実行](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md)に関するページを参照してください。
  
  ## <a name="see-also"></a>参照
 [簡単な例によるインポートおよびエクスポート ウィザードの概要](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)  

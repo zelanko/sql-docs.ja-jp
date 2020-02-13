@@ -23,10 +23,10 @@ ms.assetid: 2c785b3b-4a0c-4df7-b5cd-23756dc87842
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 15da54550dd314a50d4c3235a77394292d23f1d9
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296946"
 ---
 # <a name="integration-services-service-ssis-service"></a>Integration Services サービス (SSIS サービス)
@@ -68,10 +68,10 @@ ms.locfileid: "71296946"
 
 ## <a name="manage-the-service"></a>サービスの管理
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]コンポーネントのインストール時に、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスもインストールされます。 既定では、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスが起動され、スタートアップの種類が自動に設定されます。 ただし、サービスを使用して [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の格納されたパッケージおよび実行中のパッケージを管理するには、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] をインストールする必要があります。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]コンポーネントのインストール時に、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスもインストールされます。 既定では、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスが起動され、スタートアップの種類が自動に設定されます。 ただし、サービスを使用して [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の格納されたパッケージおよび実行中のパッケージを管理するには、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] をインストールする必要があります。  
   
 > [!NOTE]
-> レガシー Integration Services サービスに直接接続するには、Integration Services サービスが実行されている SQL Server のバージョンと合わせたバージョンの SQL Server Management Studio (SSMS) を使用する必要があります。 たとえば、SQL Server 2016 のインスタンスで実行されているレガシ Integration Services サービスに接続するには、SQL Server 2016 用にリリースされたバージョンの SSMS を使用する必要があります。 [SQL Server Management Studio (SSMS) をダウンロードします](../../ssms/download-sql-server-management-studio-ssms.md)。
+> レガシ Integration Services サービスに直接接続するには、Integration Services サービスが実行されている SQL Server のバージョンと合わせたバージョンの SQL Server Management Studio (SSMS) を使用する必要があります。 たとえば、SQL Server 2016 のインスタンスで実行されているレガシ Integration Services サービスに接続するには、SQL Server 2016 用にリリースされたバージョンの SSMS を使用する必要があります。 [SQL Server Management Studio (SSMS) をダウンロードしてください](../../ssms/download-sql-server-management-studio-ssms.md)。
 >
 >   SSMS の **[サーバーへの接続]** ダイアログ ボックスで、旧バージョンの [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスが実行されているサーバーの名前を入力することはできません。 ただし、リモート サーバーに格納されるパッケージを管理するために、そのリモート サーバー上の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスのインスタンスに接続する必要はありません。 代わりに、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスの構成ファイルを編集し、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] でリモート サーバーに格納されているパッケージが表示されるようにします。   
   
@@ -79,7 +79,7 @@ ms.locfileid: "71296946"
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスは、次の Microsoft 管理コンソール (MMC) スナップインのいずれかを使用して管理できます: SQL Server 構成マネージャーまたはサービス。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でパッケージを管理するには、事前にサービスを起動しておく必要があります。  
   
- 既定では、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスは、[!INCLUDE[ssDE](../../includes/ssde-md.md)] と同時にインストールされる[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]のインスタンスの msdb データベース内にあるパッケージを管理するように構成されます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスが同時にインストールされない場合、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスは、[!INCLUDE[ssDE](../../includes/ssde-md.md)]のローカルの既定インスタンスの msdb データベース内にあるパッケージを管理するように構成されます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]の名前付きインスタンスまたはリモート インスタンス、あるいは [!INCLUDE[ssDE](../../includes/ssde-md.md)]の複数のインスタンスに格納されているパッケージを管理するには、サービスの構成ファイルを変更する必要があります。
+ 既定では、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] と同時にインストールされる [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]のインスタンスの msdb データベース内にあるパッケージを管理するように構成されます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスが同時にインストールされない場合、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のローカルの既定インスタンスの msdb データベース内にあるパッケージを管理するように構成されます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]の名前付きインスタンスまたはリモート インスタンス、あるいは [!INCLUDE[ssDE](../../includes/ssde-md.md)]の複数のインスタンスに格納されているパッケージを管理するには、サービスの構成ファイルを変更する必要があります。
   
  既定では、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスが停止すると、パッケージの実行も停止するように設定されています。 ただし、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスはパッケージが停止するまで待機しないため、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスの停止後に実行を続けるパッケージもあります。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "71296946"
   
 ## <a name="set-the-properties-of-the-service"></a>サービスのプロパティの設定
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でパッケージを管理および監視します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]を初めてインストールするときに、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスが起動され、スタートアップの種類が自動に設定されます。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でパッケージを管理および監視します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]を初めてインストールするときに、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスが起動され、スタートアップの種類が自動に設定されます。  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスをインストールしたら、SQL Server 構成マネージャーまたはサービス MMC スナップインを使用してサービスのプロパティを設定できます。  
   
@@ -126,7 +126,7 @@ ms.locfileid: "71296946"
   
 4.  **[SQL Server Integration Services のプロパティ]** ダイアログ ボックスでは、次の操作を行うことができます。  
   
-    -   **[全般]** タブをクリックします。サービスを有効にするには、[スタートアップの種類] で [手動] または [自動] を選択します。 サービスを無効にするには、 **[スタートアップの種類]** ボックスで [無効] を選択します。 [無効] を選択しても、実行中のサービスは停止されません。  
+    -   **[General]** タブをクリックします。サービスを有効にするには、[スタートアップの種類] で [手動] または [自動] を選択します。 サービスを無効にするには、 **[スタートアップの種類]** ボックスで [無効] を選択します。 [無効] を選択しても、実行中のサービスは停止されません。  
   
          サービスが既に有効になっている場合は、 **[停止]** をクリックしてサービスを停止したり、 **[開始]** をクリックしてサービスを開始したりできます。  
   
@@ -227,13 +227,13 @@ to the user NT SERVICE\SQLSERVERAGENT SID (S-1-5-80-344959196-2060754871-2302487
 </DtsServiceConfiguration>  
 ```  
   
-### <a name="modify-the-configuration-file"></a>構成ファイルの変更  
+### <a name="modify-the-configuration-file"></a>構成ファイルを変更します  
  構成ファイルを変更することによって、サービスが停止した場合にパッケージを継続して実行できるようにしたり、オブジェクト エクスプローラー内に別のルート フォルダーを表示したり、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスが管理するファイル システム内に別のフォルダーまたは追加のフォルダーを指定することができます。 たとえば、 **SqlServerFolder**型の別のルート フォルダーを作成して、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]の追加インスタンスの msdb データベースでパッケージを管理できます。  
   
 > [!NOTE]  
 >  一部の文字は、フォルダー名には無効です。 フォルダー名として有効な文字は、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] クラスの **System.IO.Path** および **GetInvalidFilenameChars** フィールドによって決まります。 **GetInvalidFilenameChars** フィールドでは、 **Path** クラスのメンバーに渡されるパス文字列引数に指定できない、プラットフォーム固有の文字配列が指定されます。 無効な文字のセットは、ファイル システムによって異なる場合があります。 通常、無効な文字は、引用符 (")、小なり (<) 文字、およびパイプ (|) 文字です。  
   
- ただし、[!INCLUDE[ssDE](../../includes/ssde-md.md)]の名前付きインスタンスまたはリモート インスタンスに格納されているパッケージを管理するには、構成ファイルを変更する必要があります。 構成ファイルを更新しないと、 **で** オブジェクト エクスプローラー [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して名前付きインスタンスまたはリモート インスタンス上の msdb データベースに格納されているパッケージを表示することはできません。 **オブジェクト エクスプローラー** を使用してこのようなパッケージを表示しようとすると、次のエラー メッセージが返されます。  
+ ただし、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]の名前付きインスタンスまたはリモート インスタンスに格納されているパッケージを管理するには、構成ファイルを変更する必要があります。 構成ファイルを更新しないと、 **で** オブジェクト エクスプローラー [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して名前付きインスタンスまたはリモート インスタンス上の msdb データベースに格納されているパッケージを表示することはできません。 **オブジェクト エクスプローラー** を使用してこのようなパッケージを表示しようとすると、次のエラー メッセージが返されます。  
   
  `Failed to retrieve data for this request. (Microsoft.SqlServer.SmoEnum)`  
   
@@ -314,7 +314,7 @@ to the user NT SERVICE\SQLSERVERAGENT SID (S-1-5-80-344959196-2060754871-2302487
   
 3.  **[サーバーの種類]** ボックスの一覧で **[Integration Services]** を選択します。  
   
-4.  **[サーバー名]** ボックスに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーの名前を入力します。  
+4.  **[サーバー名]** テキスト ボックスに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーの名前を入力します。  
   
     > [!NOTE]  
     >  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスは、そのインスタンスに固有のものではありません。 このサービスに接続するには、Integration Services サービスが実行されているコンピューターの名前を使用します。  
@@ -359,7 +359,7 @@ to the user NT SERVICE\SQLSERVERAGENT SID (S-1-5-80-344959196-2060754871-2302487
   
 2.  **[分散 COM の構成のプロパティ]** ダイアログ ボックスの **[アプリケーション]** ページで、[SQL Server Integration Services 11.0] をクリックして **[プロパティ]** をクリックします。  
   
-3.  **[セキュリティ]** ページをクリックします。  
+3.  **[セキュリティ]** ページを選択します。  
   
 4.  2 つのダイアログ ボックスを使用して、 **[アクセスの許可]** と **[起動の許可]** を構成します。 リモートとローカルのアクセスは区別できません。アクセスの許可にはローカルとリモートのアクセス権が含まれており、起動の権限にはローカルとリモートの起動権限が含まれています。  
   
@@ -371,7 +371,7 @@ to the user NT SERVICE\SQLSERVERAGENT SID (S-1-5-80-344959196-2060754871-2302487
  クライアント コンピューターのローカル Windows アカウントで作業している場合、リモート コンピューターの [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスに接続できるのは、同じ名前、同じパスワード、および十分な権限が設定されたローカル アカウントがリモート コンピューター上に存在する場合だけです。  
   
 ### <a name="by-default-the-ssis-service-does-not-support-delegation"></a>既定では SSIS サービスは委任をサポートしない  
-既定では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスは資格情報を委任できません。資格情報の委任はダブル ホップとも呼ばれます。 たとえば、ユーザーがクライアント コンピューターで作業しており、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] が別のコンピューターで実行されているとします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はさらに別のコンピューターで実行されています。 まず、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] がクライアント コンピューターから [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスが実行されている 2 番目のコンピューターに資格情報を渡します。 ただし、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスは 2 番目のコンピューターから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が実行されている 3 番目のコンピューターに資格情報を委任できません。
+既定では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスでは資格情報の委任 (ダブル ホップと呼ばれることもあります) はサポートされていません。 たとえば、ユーザーがクライアント コンピューターで作業しており、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] が別のコンピューターで実行されているとします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はさらに別のコンピューターで実行されています。 まず、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] がクライアント コンピューターから [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスが実行されている 2 番目のコンピューターに資格情報を渡します。 ただし、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスは 2 番目のコンピューターから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が実行されている 3 番目のコンピューターに資格情報を委任できません。
 
 資格情報の委任は、 **[任意のサービスへの委任でこのユーザーを信頼する (Kerberos のみ)]** の権限を SQL Server のサービス アカウントで有効にできます。これにより、子プロセスとして Integration Services サービス (ISServerExec.exe) が起動します。 この権限を付与する前に、組織のセキュリティ要件を満たしているかどうかを検討してください。
 

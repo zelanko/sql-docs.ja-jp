@@ -34,13 +34,13 @@ author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 327b084471155c9e7d8451fc8dceec8e4c00496f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68116478"
 ---
-# <a name="dbcc-showstatistics-transact-sql"></a>DBCC SHOW_STATISTICS (Transact-SQL)
+# <a name="dbcc-show_statistics-transact-sql"></a>DBCC SHOW_STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 DBCC SHOW_STATISTICS では、テーブルまたはインデックス付きビューについての、現在のクエリの最適化に関する統計を表示します。 クエリ オプティマイザーでは、統計を使用してクエリ結果のカーディナリティや行数を推定することで、高品質のクエリ プランを作成できます。 たとえば、クエリ オプティマイザーでは、カーディナリティの推定に基づいて、クエリ プランで Index Scan 操作ではなく Index Seek 操作が使用される場合があります。この場合、リソースを大量に消費する Index Scan 操作を使用しないようにすることでパフォーマンスが向上します。
@@ -49,7 +49,7 @@ DBCC SHOW_STATISTICS では、テーブルまたはインデックス付きビ�
   
 DBCC SHOW_STATISTICS では、統計オブジェクトに格納されたデータに基づくヘッダー、ヒストグラム、および密度ベクトルを表示します。 この構文では、テーブルまたはインデックス付きビューを指定するときに、対象のインデックス名、統計名、または列名も指定することができます。 このトピックでは、統計の表示方法と表示される結果の意味について説明します。
   
-詳細については、「 [Statistics](../../relational-databases/statistics/statistics.md)」を参照してください。
+詳細については、[統計](../../relational-databases/statistics/statistics.md)に関する記事を参照してください。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -79,7 +79,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
  *table_name*  
  表示する統計情報を含むテーブルの名前。 テーブルに外部テーブルを指定することはできません。  
   
- *移行先*  
+ *target*  
  統計情報を表示するインデックス、統計、または列の名前。 *target* は、角かっこ、一重引用符、二重引用符で囲まれるか、または引用符を使用しません。 *target* がテーブルまたはインデックス付きビューの既存のインデックスまたは統計の名前である場合は、その target に関する統計情報が返されます。 *target* が既存の列の名前であり、自動的に作成された統計がその列にある場合は、その自動作成された統計に関する情報が返されます。 target 列に自動的に作成された統計が存在しない場合は、エラー メッセージ 2767 が返されます。  
  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] および[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] では、*target* を列名にすることはできません。  
   
@@ -94,14 +94,14 @@ DBCC SHOW_STATISTICS ( table_name , target )
 ## <a name="result-sets"></a>結果セット  
 次の表は、STAT_HEADER を指定した場合に結果セットに返される列を示しています。
   
-|列名|[説明]|  
+|列名|説明|  
 |-----------------|-----------------|  
-|[オブジェクト名]|統計オブジェクトの名前。|  
+|Name|統計オブジェクトの名前。|  
 |[更新]|統計情報が最後に更新された日付と時刻。 [STATS_DATE](../../t-sql/functions/stats-date-transact-sql.md) 関数でこの情報を取得することもできます。 詳細については、このページの「[解説](#Remarks)」セクションを参照してください。|  
 |[行]|統計情報が最後に更新された時点のテーブルまたはインデックス付きビューの行の総数。 統計がフィルター選択されている場合、またはフィルター選択されたインデックスに対応している場合は、行数がテーブルの行数よりも少なくなることがあります。 詳細については、「[統計情報](../../relational-databases/statistics/statistics.md)」を参照してください。|  
 |[サンプリングされた行数]|統計の計算時にサンプリングされた行の合計数。 Rows Sampled < Rows の場合、表示されるヒストグラムおよび密度の結果は、サンプリングされた行に基づいて推定されます。|  
 |手順|ヒストグラムの区間の数。 各区間の範囲には、上限の列値までの列値の範囲が含まれます。 ヒストグラムの区間は、統計の最初のキー列に基づいて定義されます。 区間の最大数は 200 です。|  
-|[密度]|ヒストグラムの境界値を除く、統計オブジェクトの最初のキー列のすべての値について、"1 / *distinct values* " として計算されます。 この Density の値はクエリ オプティマイザーでは使用されません。[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] より前のバージョンとの互換性を維持するために表示されます。|  
+|密度|ヒストグラムの境界値を除く、統計オブジェクトの最初のキー列のすべての値について、"1 / *distinct values* " として計算されます。 この Density の値はクエリ オプティマイザーでは使用されません。[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] より前のバージョンとの互換性を維持するために表示されます。|  
 |[キーの平均の長さ]|統計オブジェクトのすべてのキー列の、値ごとの平均バイト数。|  
 |String Index|Yes の場合は、統計オブジェクトに文字列の統計概要が含まれています。これにより、LIKE 演算子を使用するクエリ述語 (`WHERE ProductName LIKE '%Bike'` など) に対するカーディナリティの推定が向上します。 文字列の統計概要は、ヒストグラムとは別に格納されます。この統計は、統計オブジェクトの最初のキー列について、その型が **char**、**varchar**、**nchar**、**nvarchar**、**varchar(max)** 、**nvarchar(max)** 、**text**、**ntext** である場合に作成されます。|  
 |[フィルター式]|統計オブジェクトに含まれるテーブル行のサブセットの述語。 NULL = フィルター選択されていない統計情報です。 フィルター選択された述語の詳細については、「[フィルター選択されたインデックスの作成](../../relational-databases/indexes/create-filtered-indexes.md)」を参照してください。 フィルター選択された統計情報の詳細については、「[統計情報](../../relational-databases/statistics/statistics.md)」を参照してください。|  
@@ -110,7 +110,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
   
 次の表は、DENSITY_VECTOR を指定した場合に結果セットに返される列を示しています。
   
-|列名|[説明]|  
+|列名|説明|  
 |-----------------|-----------------|  
 |[すべての密度]|密度は "1 / *distinct values*" です。 結果には、統計オブジェクトの列の各プレフィックスに対する密度が、密度ごとに 1 行表示されます。 個別の値は、行および列プレフィックスごとの列値の個別のリストです。 たとえば、統計オブジェクトにキー列 (A, B, C) が含まれる場合、結果では列プレフィックス (A)、(A, B)、(A, B, C) ごとに個別の値リストの密度が報告されます。 プレフィックス (A、B、C) を使用すると、これらの各リストは次の個別の値リストになります。(3, 5, 6)、(4, 4, 6)、(4, 5, 6)、(4, 5, 7)。 プレフィックス (A、B) を使用すると、同じ列値に次の個別の値リストが含まれます。(3, 5)、(4, 4) および (4, 5)|  
 |[平均の長さ]|列プレフィックスの列値のリストを格納する平均の長さ (バイト単位)。 たとえば、リスト (3, 5, 6) の値ごとに 4 バイト必要な場合は、長さは 12 バイトになります。|  
@@ -118,7 +118,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
   
 次の表は、HISTOGRAM オプションを指定した場合に結果セットに返される列を示しています。
   
-|列名|[説明]|  
+|列名|説明|  
 |---|---|
 |[RANGE_HI_KEY]|ヒストグラム区間の上限の列値。 この列値はキー値とも呼ばれます。|  
 |RANGE_ROWS|ヒストグラム区間内 (上限は除く) に列値がある行の予測数。|  
@@ -179,7 +179,7 @@ DBCC SHOW_STATISTICS では、コントロールのノード レベルでのシ�
   
 DBCC SHOW_STATISTICS は、外部テーブルではサポートされません。
   
-## <a name="examples-includessnoversionincludesssnoversion-mdmd-and-includesssdsincludessssds-mdmd"></a>例: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
+## <a name="examples-includessnoversionincludesssnoversion-mdmd-and-includesssdsincludessssds-mdmd"></a>例: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
 ### <a name="a-returning-all-statistics-information"></a>A. すべての統計情報を返す  
 次の例は、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベース内の `AK_Address_rowguid` テーブルの `Person.Address` インデックスに関するすべての統計情報を表示します。
   
@@ -196,7 +196,7 @@ DBCC SHOW_STATISTICS ("dbo.DimCustomer",Customer_LastName) WITH HISTOGRAM;
 GO  
 ```  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 ### <a name="c-display-the-contents-of-one-statistics-object"></a>C. 1 つの統計オブジェクトの内容を表示します。  
  次の例では、DimCustomer テーブル Customer_LastName 統計の内容を表示します。  
   

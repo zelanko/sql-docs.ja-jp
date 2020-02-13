@@ -11,10 +11,10 @@ ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 9eb3f9c071194941d76878a016fbcefa4f5fbe5c
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908818"
 ---
 # <a name="sql-server-backup-to-url"></a>SQL Server Backup to URL
@@ -120,7 +120,7 @@ Blob Storage に大規模なデータベースをバックアップするとき�
   
 ###  <a name="Support"></a> BACKUP/RESTORE ステートメントのサポート  
   
-|BACKUP/RESTORE ステートメント|Supported|例外|コメント|
+|BACKUP/RESTORE ステートメント|サポートされています|例外|説明|
 |-|-|-|-|
 |BACKUP|Y|BLOCKSIZE および MAXTRANSFERSIZE は、ブロック BLOB ではサポートされています。 ページ BLOB ではサポートされていません。 | ブロック BLOB への BACKUP には、SQL Server 資格情報に保存された Shared Access Signature が必要です。 ページ BLOB への BACKUP には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資格情報に保存されたストレージ アカウント キーが必要であり、WITH CREDENTIAL 引数を指定する必要があります。|  
 |RESTORE|Y||[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資格情報を定義する必要があります。また、シークレットとしてストレージ アカウント キーを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資格情報を定義する場合は、WITH CREDENTIAL 引数を指定する必要があります。|  
@@ -136,7 +136,7 @@ Blob Storage に大規模なデータベースをバックアップするとき�
   
 ### <a name="support-for-backup-arguments"></a>BACKUP の引数のサポート  
 
-|引数|Supported|例外|コメント|  
+|引数|サポートされています|例外|説明|  
 |-|-|-|-|  
 |DATABASE|Y|||  
 |LOG|Y|||  
@@ -150,7 +150,7 @@ Blob Storage に大規模なデータベースをバックアップするとき�
 |DIFFERENTIAL|Y|||  
 |COPY_ONLY|Y|||  
 |COMPRESSION&#124;NO_COMPRESSION|Y|ファイル スナップショット バックアップではサポートされていません。||  
-|DESCRIPTION|Y|||  
+|Description|Y|||  
 |NAME|Y|||  
 |EXPIREDATE &#124; RETAINDAYS|-|||  
 |NOINIT &#124; INIT|-||BLOB に追加することはできません。 バックアップを上書きするには、 **WITH FORMAT** 引数を使用します。 ただし、ファイル スナップショット バックアップを使用する場合 ( **WITH FILE_SNAPSHOT** 引数を使用)、元のバックアップで作成されたファイル スナップショットが孤立したまま残されるのを避けるために、 **WITH FORMAT** 引数は使用できません。|  
@@ -163,7 +163,7 @@ Blob Storage に大規模なデータベースをバックアップするとき�
 |MAXTRANSFERSIZE|Y|ページ BLOB ではサポートされていません。 ブロック BLOB ではサポートされています。| 既定値は 1048576 です。 指定できる値は、65536 バイト刻みで最大 4 MB までです。</br> ブロック BLOB で許可される 50,000 ブロックの使用を最適化するため、MAXTRANSFERSIZE=4194304 にすることをお勧めします。 |  
 |NO_CHECKSUM &#124; CHECKSUM|Y|||  
 |STOP_ON_ERROR &#124; CONTINUE_AFTER_ERROR|Y|||  
-|STATS|Y|||  
+|[統計]|Y|||  
 |REWIND &#124; NOREWIND|-|||  
 |UNLOAD &#124; NOUNLOAD|-|||  
 |NORECOVERY &#124; STANDBY|Y|||  
@@ -173,7 +173,7 @@ Blob Storage に大規模なデータベースをバックアップするとき�
   
 ### <a name="support-for-restore-arguments"></a>RESTORE の引数のサポート  
   
-|引数|Supported|例外|コメント|  
+|引数|サポートされています|例外|説明|  
 |-|-|-|-|  
 |DATABASE|Y|||  
 |LOG|Y|||  
@@ -197,7 +197,7 @@ Blob Storage に大規模なデータベースをバックアップするとき�
 |CHECKSUM &#124; NO_CHECKSUM|Y|||  
 |STOP_ON_ERROR &#124; CONTINUE_AFTER_ERROR|Y|||  
 |FILESTREAM|Y|スナップショット バックアップではサポートされていません。||  
-|STATS|Y|||  
+|[統計]|Y|||  
 |REWIND &#124; NOREWIND|-|||  
 |UNLOAD &#124; NOUNLOAD|-|||  
 |KEEP_REPLICATION|Y|||  
@@ -220,7 +220,7 @@ SQL Server 資格情報を使用して SQL Server Management Studio のバック
 2.  **[データベース]** を展開して目的のデータベースを右クリックし、 **[タスク]** をポイントして、 **[バックアップ...]** をクリックします。
   
 3.  **[全般]** ページの **[バックアップ先]** セクションで、 **[バックアップ先]** ドロップダウン リストの **[URL]** オプションが使用できるようになります。  **[URL]** オプションを使用して、Windows Azure Storage へのバックアップを作成します。 **[追加]** をクリックすると、 **[バックアップ先の選択]** ダイアログ ボックスが開きます。
-    1.  **Azure Storage コンテナー:** バックアップ ファイルを格納する Windows Azure Storage コンテナーの名前。  ドロップダウン リストから既存のコンテナーを選択するか、コンテナーを手動で入力します。 
+    1.  **[Azure Storage コンテナー]:** バックアップ ファイルを格納する Windows Azure Storage コンテナーの名前。  ドロップダウン リストから既存のコンテナーを選択するか、コンテナーを手動で入力します。 
   
     2.  **共有アクセス ポリシー:** 手動で入力されたコンテナーの Shared Access Signature を入力します。  このフィールドは、既存のコンテナーを選択した場合には使用できません。 
   
@@ -239,7 +239,7 @@ SQL Server 資格情報を使用して SQL Server Management Studio のバック
   
  [データベースのバックアップ &#40;バックアップ オプション ページ&#41;](../../relational-databases/backup-restore/back-up-database-backup-options-page.md)  
   
- [資格情報の作成- Azure ストレージに対する認証](../../relational-databases/backup-restore/create-credential-authenticate-to-azure-storage.md)  
+ [資格情報の作成 - Azure ストレージに対する認証](../../relational-databases/backup-restore/create-credential-authenticate-to-azure-storage.md)  
   
 ##  <a name="MaintenanceWiz"></a> メンテナンス プラン ウィザードを使用した SQL Server Backup to URL  
  前述のバックアップ タスクと同様に、SQL Server Management Studio のメンテナンス プラン ウィザードでも、バックアップ先として **URL** も選択できるようになりました。また、SQL 資格情報など、Azure Storage へのバックアップに必要な他のサポート オブジェクトも追加されました。 詳細については、「 **メンテナンス プラン ウィザードの使用** 」の「 [バックアップ タスクを定義する](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure)」を参照してください。  
@@ -282,10 +282,10 @@ SQL Server 資格情報を使用して SQL Server Management Studio のバック
 -   [STOPAT を使って特定の時点の状態に復元する](#PITR)  
   
 > [!NOTE]  
->  Microsoft Azure BLOB ストレージ サービスでの SQL Server 2016 の使用方法に関するチュートリアルについては、「[チュートリアル:Azure Blob Storage サービスと SQL Server 2016 データベースの使用](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)」をご覧ください。  
+>  Microsoft Azure BLOB ストレージ サービスでの SQL Server 2016 の使用方法に関するチュートリアルについては、「[チュートリアル:Azure Blob Storage サービスと SQL Server 2016 データベースの使用](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
   
 ###  <a name="SAS"></a> Shared Access Signature の作成  
- 次の例では、新しく作成されたコンテナーで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資格情報の作成に使用できる Shared Access Signature を作成します。 次のスクリプトは、保存されたアクセス ポリシーに関連付けられた Shared Access Signature を作成します。 詳細については、「[Shared Access Signature、第 1 部:SAS モデルについて](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)」をご覧ください。 スクリプトはまた、SQL Server に対する資格情報を作成するのに必要な T-SQL コマンドも書き込みます。 
+ 次の例では、新しく作成されたコンテナーで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資格情報の作成に使用できる Shared Access Signature を作成します。 次のスクリプトは、保存されたアクセス ポリシーに関連付けられた Shared Access Signature を作成します。 詳細については、「[Shared Access Signature、第 1 部:SAS モデル](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)に関するページを参照してください。 スクリプトはまた、SQL Server に対する資格情報を作成するのに必要な T-SQL コマンドも書き込みます。 
 
 > [!NOTE] 
 > この例では、Microsoft Azure Powershell が必要です。 Azure PowerShell のインストールと使用方法については、「 [Azure PowerShell のインストールおよび構成方法](https://azure.microsoft.com/documentation/articles/powershell-install-configure/)」をご覧ください。  

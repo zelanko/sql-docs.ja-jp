@@ -20,10 +20,10 @@ ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d766d6a36dbe8f91f2c2fd42433093b298935b48
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71290840"
 ---
 # <a name="xml-source"></a>XML ソース
@@ -72,7 +72,7 @@ ms.locfileid: "71290840"
 ## <a name="configuration-of-the-xml-source"></a>XML ソースの構成  
  XML ソースでは、3 つの異なるデータ アクセス モードがサポートされています。 XML データ ファイルのファイルの場所、ファイルの場所を含む変数、または XML データを含む変数を指定できます。  
   
- XML ソースには、パッケージの読み込み時にプロパティ式で更新できる、**XMLData** カスタム プロパティと **XMLSchemaDefinition** カスタム プロパティがあります。 詳細については、「[Integration Services (SSIS) の式](../../integration-services/expressions/integration-services-ssis-expressions.md)」、「[パッケージでプロパティ式を使用する](../../integration-services/expressions/use-property-expressions-in-packages.md)」、および「[XML 入力元のカスタム プロパティ](../../integration-services/data-flow/xml-source-custom-properties.md)」を参照してください。  
+ XML ソースには、パッケージの読み込み時にプロパティ式で更新できる、 **XMLData** カスタム プロパティと **XMLSchemaDefinition** カスタム プロパティがあります。 詳細については、「[Integration Services (SSIS) の式](../../integration-services/expressions/integration-services-ssis-expressions.md)」、「[パッケージでプロパティ式を使用する](../../integration-services/expressions/use-property-expressions-in-packages.md)」、および「[XML 入力元のカスタム プロパティ](../../integration-services/data-flow/xml-source-custom-properties.md)」を参照してください。  
   
  XML ソースでは、複数の標準出力と複数のエラー出力がサポートされています。  
   
@@ -97,7 +97,7 @@ ms.locfileid: "71290840"
  **[データ アクセス モード]**  
  ソースからデータを選択する方法を指定します。  
   
-|[値]|[説明]|  
+|Value|説明|  
 |-----------|-----------------|  
 |[XML ファイルの場所]|XML ファイルからデータを取得します。|  
 |[変数からの XML ファイル]|XML ファイルの名前を変数で指定します。<br /><br /> **関連情報**: [パッケージで変数を使用する](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
@@ -158,12 +158,12 @@ ms.locfileid: "71290840"
  **Error**  
  エラーが発生した場合に、障害を無視するか、行をリダイレクトするか、コンポーネントを失敗させるかを指定します。  
   
- **関連項目:** [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)  
+ **関連トピック:** [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)  
   
  **切り捨て**  
  切り捨てが発生したときの処理方法 (エラーを無視する、行をリダイレクトする、またはコンポーネントを失敗させる) を指定します。  
   
- **[説明]**  
+ **説明**  
  エラーの説明を表示します。  
   
  **[選択したセルに設定する値]**  

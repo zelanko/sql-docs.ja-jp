@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 7dcf58da00887f396568367982da97b9c75e32ad
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73531559"
 ---
 # <a name="upgrade-database-engine"></a>データベース エンジンのアップグレード
@@ -33,7 +33,7 @@ ms.locfileid: "73531559"
   
 3.  [データベース エンジンのアップグレードの完了](../../database-engine/install-windows/complete-the-database-engine-upgrade.md)。 データベース エンジンを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] にアップグレードし、データベースがオンラインになった後、新しいバックアップの作成、データベース機能のアップグレードによる新しい機能の有効化、フルテキスト カタログの再設定など、追加の手順を実行する必要があります。 この記事では、これらの手順について説明します。  
   
-4.  [データベース互換性レベル](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-database-engine-upgrades)をアップグレードします (**適用先:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)])。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] の新しいバージョンでデータベースがオンラインになった後に行う手順の 1 つに、データベース互換性レベルを変更し、データベース機能モードをアップグレードして新しい機能を有効にするという作業があります。 これは手動で行うか、クエリ調整アシスタントで行うことができます。 
+4.  [データベース互換性レベル](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-database-engine-upgrades)をアップグレードします (**適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)])。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] の新しいバージョンでデータベースがオンラインになった後に行う手順の 1 つに、データベース互換性レベルを変更し、データベース機能モードをアップグレードして新しい機能を有効にするという作業があります。 これは手動で行うか、クエリ調整アシスタントで行うことができます。 
 
     - [データベース互換性モードの変更とクエリ ストアの使用](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)。 データベース互換性レベルを手動で変更した後、クエリ ストアを使用してパフォーマンスを監視し、回帰の可能性を特定します。 この記事では、推奨プロセスについて説明し、推奨ワークフローを示します。  
 

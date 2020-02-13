@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 8a914947-72dc-4119-b631-b39c8070c71b
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 55eb271c7eb5dff661b37cfb18b029e57bbeb0ba
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 38e0164de9dda9f86183a89a29b58753b2a7f118
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769879"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287642"
 ---
 # <a name="filter-published-data"></a>パブリッシュされたデータのフィルター選択
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -58,12 +58,12 @@ ms.locfileid: "68769879"
   
 -   結合フィルター。マージ レプリケーションでのみ使用できます。  
   
-     結合フィルターを使用して、1 つのパブリッシュされたテーブルから別のパブリッシュされたテーブルに行フィルターを拡張できます。 詳細については、「 [Join Filters](../../../relational-databases/replication/merge/join-filters.md)」を参照してください。  
+     結合フィルターを使用して、1 つのパブリッシュされたテーブルから別のパブリッシュされたテーブルに行フィルターを拡張できます。 詳しくは、「 [Join Filters](../../../relational-databases/replication/merge/join-filters.md)」をご覧ください。  
   
 ## <a name="static-row-filters"></a>静的行フィルター  
  次の図は、行 2、3、および 6 のみがパブリケーションに含まれるようにフィルター選択される、パブリッシュされたテーブルを示します。  
   
- ![行のフィルター選択](../../../relational-databases/replication/publish/media/repl-16.gif "行のフィルター選択")  
+ ![行のフィルタリング](../../../relational-databases/replication/publish/media/repl-16.gif "行のフィルター選択")  
   
  静的行フィルターは、WHERE 句を使用してパブリッシュするのに適したデータを選択します。WHERE 句の最後の部分を指定してください。 Adventure Works サンプル データベースの **Product テーブル** を考えます。ここには、列 **ProductLine**が含まれます。 マウンテン バイクに関連した製品についてのデータがある行のみをパブリッシュするには、 `ProductLine = 'M'`を指定します。  
   
@@ -74,14 +74,14 @@ ms.locfileid: "68769879"
     > [!NOTE]  
     >  トランザクション パブリケーションの行フィルターは、オーバーヘッドを大幅に増やす原因となる場合があります。パブリッシュされたテーブルのログ行ごとにアーティクルのフィルター句を評価して、ログ行をレプリケートする必要があるかどうかを判断するからです。 各レプリケーション ノードが全データの読み込みをサポートできる場合、および、データセット全体がそれほど大きくない場合には、トランザクション パブリケーションの行フィルターは避けてください。  
   
--   マージ レプリケーションでは、静的行フィルターで複数のパブリケーションを作成するのではなく、パラメーター化された行フィルターを使用します。 詳細については、「 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)」を参照してください。  
+-   マージ レプリケーションでは、静的行フィルターで複数のパブリケーションを作成するのではなく、パラメーター化された行フィルターを使用します。 詳しくは、「 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)」をご覧ください。  
   
  静的行フィルターを定義または変更するには、「 [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)」を参照してください。  
   
 ## <a name="column-filters"></a>列フィルター  
  次の図は、列 C をフィルター選択により除外するパブリケーションを示します。  
   
- ![列のフィルター処理](../../../relational-databases/replication/publish/media/repl-17.gif "列のフィルター処理")  
+ ![列のフィルター選択](../../../relational-databases/replication/publish/media/repl-17.gif "列のフィルター選択")  
   
  以下に示すように、行フィルターと列フィルターを組み合わせることも可能です。  
   

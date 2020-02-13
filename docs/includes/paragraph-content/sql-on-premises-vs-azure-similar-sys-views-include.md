@@ -1,11 +1,3 @@
----
-ms.openlocfilehash: 6fd7bb2b8be38becc87c4dc8cb353594459a8dd6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68220159"
----
 
 <!--
 ### Code examples for Azure cloud differ slightly from on-premises
@@ -15,8 +7,8 @@ ms.locfileid: "68220159"
 
 オンプレミスの SQL Server 向けに作成された一部の Transact-SQL コード例は、クラウドの Azure SQL Database サービスで実行する場合は少し変更する必要があります。 このようなコード例の 1 つのカテゴリには、2 つのデータベース システム間で名前のプレフィックスがわずかに異なるシステム ビューが含まれています。
 
-- **server\_** &nbsp; - &nbsp; _オンプレミスのプレフィックス_
-- **database\_** &nbsp; - &nbsp; _クラウド内の Azure SQL DB サービスのプレフィックス_
+- **server\_** &nbsp; - &nbsp; _オンプレミスの場合のプレフィックス_
+- **database\_** &nbsp; - &nbsp; _クラウド内の Azure SQL DB サービスの場合のプレフィックス_
 
 説明のために、次の表に、システム ビューの 2 つのサブセットの比較リストを示します。 簡潔にするために、サブセットは、文字列 `_event` も含むビュー名に限定されています。 2 つの異なるデータベース システムに由来するため、サブセットの名前のプレフィックスは異なります。
 

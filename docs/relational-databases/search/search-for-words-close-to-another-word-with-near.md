@@ -21,15 +21,15 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0e94bdcf4770190d3d84986b511996213fac17f9
-ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68702830"
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>NEAR による他の単語の近くにある単語の検索
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 述語または [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 関数で*近接語句* (**NEAR**) を使用すると、互いに似た単語や語句を検索できます。 
+  [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 述語または [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 関数で "*近接語句*" (**NEAR**) を使用すると、互いに似た単語や語句を検索できます。 
   
 ##  <a name="Custom_NEAR"></a> NEAR の概要  
 **NEAR** には次の機能があります。  
@@ -71,7 +71,7 @@ ms.locfileid: "68702830"
 
 構文の詳細については、「[CONTAINS &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md)」を参照してください。  
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 ### <a name="example-1"></a>例 1
  たとえば、次のように "Smith" から 2 つの語の範囲内にある "John" を検索できます。  
   
@@ -109,7 +109,7 @@ GO
  "`Cats` `enjoy` `hunting mice``, but usually avoid` `dogs``.`"  
   
 ## <a name="combine-near-with-other-terms"></a>NEAR と他の語句を組み合わせる  
- NEAR と他のいくつかの語句を組み合わせることができます。 AND (&)、OR (|)、または AND NOT (&!) を使用して、カスタム近接語句と他のカスタム近接語句、単純語句、またはプレフィックス語句を組み合わせることができます。 例:  
+ NEAR と他のいくつかの語句を組み合わせることができます。 AND (&)、OR (|)、または AND NOT (&!) を使用して、カスタム近接語句と他のカスタム近接語句、単純語句、またはプレフィックス語句を組み合わせることができます。 次に例を示します。  
   
 -   CONTAINS('NEAR((*term1*, *term2*),5) AND *term3*')  
   
@@ -121,7 +121,7 @@ GO
   
 -   CONTAINS('NEAR((*term1*, *term2*),5) OR NEAR((*term3*, *term4*),2, TRUE)')  
   
- 例を次に示します。  
+ たとえば、次のように入力します。  
   
 ```  
 CONTAINS(column_name, 'NEAR((term1, term2), 5, TRUE) AND term3')  

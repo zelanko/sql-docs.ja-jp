@@ -15,10 +15,10 @@ ms.assetid: 9e4563dd-4799-4b32-a78a-048ea44a44c1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2d9a354b23a751a657ca10acc7e6cc19c6b586b4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68137417"
 ---
 # <a name="database-mail"></a>データベース メール
@@ -65,7 +65,7 @@ ms.locfileid: "68137417"
   
 -   データベース メールは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エンジン サービス アカウントで実行されます。 フォルダー内のファイルを電子メールに添付するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エンジンのアカウントに、対象ファイルのあるフォルダーへのアクセス権限が必要です。  
   
-### <a name="supportability"></a>サポート性  
+### <a name="supportability"></a>サポート  
   
 -   統合された構成: データベース メールでは、電子メール アカウントの情報が [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]に保存されます。 外部クライアント アプリケーションでメール プロファイルを管理する必要はありません。 データベース メール構成ウィザードでは、データベース メールを構成するための便利なインターフェイスが提供されています。 また、 [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、データベース メール構成を作成および維持することもできます。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "68137417"
 ##  <a name="VisualElement"></a>データベース メールのアーキテクチャ  
  データベース メールは、Service Broker テクノロジを使用するキュー アーキテクチャを基に設計されています。 ユーザーが **sp_send_dbmail**を実行すると、アイテムがメール キューに挿入され、電子メール メッセージを格納したレコードが作成されます。 メール キューに新しいエントリが挿入されると、データベース メールの外部プロセス (DatabaseMail.exe) が起動します。 外部プロセスは、電子メール情報を読み取り、電子メール メッセージを適切な電子メール サーバーに送信します。 また、送信操作の結果の状態キューにアイテムを挿入します。 状態キューに新しいエントリが挿入されると、電子メール メッセージの状態を更新する内部ストアド プロシージャが起動します。 データベース メールは、システム テーブルに送信済み (または未送信) の電子メール メッセージを格納するだけでなく、電子メールの添付ファイルも記録します。 データベース メール ビューには、トラブルシューティングのためにメッセージの状態が表示されます。また、ストアド プロシージャにより、データベース メール キューの管理が可能になります。  
   
- ![msdb から SMTP メール サーバーにメッセージを送信](../../relational-databases/database-mail/media/databasemail.gif "msdb から SMTP メール サーバーにメッセージを送信")  
+ ![msdb から SMTP メール サーバーへのメッセージ送信](../../relational-databases/database-mail/media/databasemail.gif "msdb から SMTP メール サーバーへのメッセージ送信")  
   
   
 ##  <a name="ComponentsAndConcepts"></a>データベース メールのコンポーネントの概要  

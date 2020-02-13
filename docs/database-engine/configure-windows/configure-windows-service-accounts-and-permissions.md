@@ -1,7 +1,7 @@
 ---
 title: Windows サービス アカウントとアクセス許可の構成 | Microsoft Docs
 ms.custom: ''
-ms.date: 05/28/2019
+ms.date: 01/28/2020
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -50,12 +50,12 @@ helpviewer_keywords:
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ed0565a9cf5a5eecaff143f9a4583a763910d3d8
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.openlocfilehash: f8097f477368a9aa4cd8846b8da77e8bff73324e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73660278"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76929145"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Windows サービス アカウントと権限の構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "73660278"
 |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|C:\Windows\SysWOW64\SQLServerManager10.msc|  
   
 
-##  <a name="Service_Details"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でインストールされるサービス  
+##  <a name="Service_Details"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でインストールされるサービス  
  インストールするコンポーネントに応じて、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップによって次のサービスがインストールされます。  
   
 -   **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース サービス** - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リレーショナル [!INCLUDE[ssDE](../../includes/ssde-md.md)]のサービスです。 実行可能ファイルのパスは \<MSSQLPATH>\MSSQL\Binn\sqlservr.exe です。  
@@ -168,14 +168,14 @@ ms.locfileid: "73660278"
   
 管理されたサービス アカウント、グループ管理サービス アカウント、および仮想アカウントは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] などの重要なアプリケーションをアプリケーション独自のアカウントとは別に提供するために設計され、管理者はこれらのアカウントのサービス プリンシパル名 (SPN) や資格情報を手動で管理する必要はありません。 これらにより、サービス アカウントのユーザー、パスワード、SPN の長期的な管理は非常に簡単になります。  
   
--   <a name="MSA"></a>**Managed Service Accounts**  
+-   <a name="MSA"></a>**管理されたサービス アカウント**  
   
      管理されたサービス アカウント (MSA) は、ドメイン コント ローラーによって作成および管理されるドメイン アカウントの一種です。 管理されたサービス アカウントは、サービスの実行に使用する 1 つのメンバー コンピューターに割り当てられます。 パスワードは、ドメイン コント ローラーによって自動的に管理されます。 MSA を使用して、コンピューターにログインすることはできませんが、コンピューターは、MSA を使用して Windows サービスを開始することができます。 MSA では、servicePrincipalName の読み取りおよび書き込み権限が付与されている場合、Active Directory 内でサービス プリンシパル名 (SPN) を登録することができます。 MSA には、 **DOMAIN\ACCOUNTNAME$** など、 **$** サフィックスを伴う名前が付けられます。 MSA を指定する場合は、パスワードを空白のままにします。 MSA は、1 つのコンピューターに割り当てられているため、Windows クラスターの異なるノード上では使用できません。  
   
     > [!NOTE]  
     >  MSA は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップが MSA を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスで使用する前に、ドメイン管理者が Active Directory に作成する必要があります。  
   
--  <a name="GMSA"></a>**グループ管理サービス アカウント**  
+-  <a name="GMSA"></a> **グループ管理サービス アカウント**  
   
      グループ管理サービス アカウントは、複数サーバーのための MSA です。 Windows は、サーバーのグループで実行されているサービスのサービス アカウントを管理します。 Active Directory は、サービスを再起動することなくグループ管理サービス アカウントのパスワードを自動的に更新します。 グループ管理サービス アカウントのプリンシパルを使用するように SQL Server のサービスを構成できます。 SQL Server 2014 より、SQL Server はスタンドアロン インスタンスのグループ管理サービス アカウントを、SQL Server 2016 以降ではフェールオーバー クラスター インスタンスと可用性グループのグループ管理サービス アカウントをサポートします。  
   
@@ -236,13 +236,13 @@ ms.locfileid: "73660278"
   
  \* 自動インストールの詳細およびサンプル構文については、「[コマンド プロンプトからの SQL Server 2016 のインストール](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)」をご覧ください。  
   
- \*\* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスは、[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] および [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] with Advanced Services のインスタンスで無効になっています。
+ \*\*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスは、[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] および [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] with Advanced Services のインスタンスで無効になっています。
 
  \*\*\* スイッチだけによる Launchpad のアカウントの設定は、現在はサポートされていません。 アカウントおよび他のサービス設定を変更するには、SQL Server 構成マネージャーを使ってください。
 
 ###  <a name="Firewall"></a> ファイアウォール ポート
 
-ほとんどの場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] は、最初にインストールされると、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] と同じコンピューターにインストールされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]などのツールによって接続できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップでは、Windows ファイアウォールでポートが開かれません。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] が TCP ポートでリッスンするように構成され、Windows ファイアウォールで接続用に適切なポートが開かれるまでは、他のコンピューターから接続できない場合があります。 詳細については、「 [Analysis Services のアクセスを許可するための Windows ファイアウォールの構成](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)」を参照してください。  
+ほとんどの場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] は、最初にインストールされると、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] と同じコンピューターにインストールされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]などのツールによって接続できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップでは、Windows ファイアウォールでポートが開かれません。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] が TCP ポートでリッスンするように構成され、Windows ファイアウォールで接続用に適切なポートが開かれるまでは、他のコンピューターから接続できない場合があります。 詳細については、[SQL Server アクセスを許可するための Windows ファイアウォールの構成](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)に関する記事を参照してください。  
   
 ##  <a name="Serv_Perm"></a> サービスの権限
 
@@ -303,7 +303,7 @@ ms.locfileid: "73660278"
 |**R サービス/Machine Learning Services:** **SQLRUserGroup** (SQL 2016 および 2017)  |既定では、 **[ローカル ログオンを許可する]** アクセス許可がありません |   
 |**Machine Learning Services** '**すべてのアプリケーション パッケージ' [AppContainer]** (SQL 2019)  |SQL Server 'Binn'、R_Services、および PYTHON_Services ディレクトリに対する**読み取り権限と実行権限** |   
 
- \* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスは、[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] のインスタンスで無効になっています。  
+ \*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスは、[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] のインスタンスで無効になっています。  
   
 ###  <a name="Reviewing_ACLs"></a> SQL Server のサービスごとの SID またはローカル Windows グループに付与されるファイル システム権限  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス アカウントは、リソースへのアクセス権を持っている必要があります。 アクセス制御リストは、サービスごとの SID またはローカル Windows グループに対して設定されます。  
@@ -344,12 +344,12 @@ ms.locfileid: "73660278"
 ||Instid\OLAP\Backup|読み取り、書き込み|  
 ||Instid\OLAP\Temp|読み取り、書き込み|  
 ||130\shared\Errordumps|読み取り、書き込み|  
-|SQLServerReportServerUser|Instid\Reporting Services\Log Files|読み取り、書き込み、削除|  
+|ReportServer|Instid\Reporting Services\Log Files|読み取り、書き込み、削除|  
 ||Instid\Reporting Services\ReportServer|読み取り、実行|  
-||Instid\Reportingservices\Reportserver\global.asax|フル コントロール|  
-||Instid\Reportingservices\Reportserver\Reportserver.config|Read|  
-||Instid\Reporting Services\reportManager|読み取り、実行|  
-||Instid\Reporting Services\RSTempfiles|読み取り、書き込み、実行、削除|  
+||Instid\Reporting Services\ReportServer\global.asax|フル コントロール|  
+||Instid\Reporting Services\ReportServer\rsreportserver.config|Read|  
+||Instid\Reporting Services\RSTempfiles|読み取り、書き込み、実行、削除| 
+||Instid\Reporting Services\RSWebApp|読み取り、実行|   
 ||130\shared|読み取り、実行|  
 ||130\shared\Errordumps|読み取り、書き込み|  
 |MSDTSServer100|130\dts\binn\MsDtsSrvr.ini.xml|Read|  
@@ -360,12 +360,10 @@ ms.locfileid: "73660278"
 ||130\shared|読み取り、実行|  
 ||130\shared\Errordumps|読み取り、書き込み|  
 |SQLWriter|N/A (ローカル システムとして実行)||  
-|ユーザー|Instid\MSSQL\binn|読み取り、実行|  
+|User|Instid\MSSQL\binn|読み取り、実行|  
 ||Instid\Reporting Services\ReportServer|読み取り、実行、フォルダー内容の一覧表示|  
-||Instid\Reportingservices\Reportserver\global.asax|Read|  
-||Instid\Reporting Services\reportManager|読み取り、実行|  
-||Instid\Reporting Services\ReportManager\pages|Read|  
-||Instid\Reporting Services\ReportManager\Styles|Read|  
+||Instid\Reporting Services\ReportServer\global.asax|Read|  
+||Instid\Reporting Services\RSWebApp|読み取り、実行、フォルダー内容の一覧表示|    
 ||130\dts|読み取り、実行|  
 ||130\tools|読み取り、実行|  
 ||100\tools|読み取り、実行|  
@@ -391,7 +389,7 @@ ms.locfileid: "73660278"
 ||ExtensiblilityData|フル コントロール|
 ||Log\ExtensibiltityLog|フル コントロール|
   
- \* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスは、[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] および [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] with Advanced Services のインスタンスで無効になっています。  
+ \*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスは、[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] および [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] with Advanced Services のインスタンスで無効になっています。  
   
  データベース ファイルをユーザー定義の場所に格納する場合は、サービスごとの SID にその場所へのアクセス権を付与する必要があります。 サービスごとの SID にファイル システム権限を付与する方法の詳細については、「 [データベース エンジン アクセスのファイル システム権限の構成](../../database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access.md)」をご覧ください。  
   
@@ -399,26 +397,23 @@ ms.locfileid: "73660278"
 
 ビルトイン アカウントや他の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス アカウントに、いくつかのアクセス制御権限を付与する必要がある場合があります。 次の表は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップによって追加設定される ACL を示しています。  
   
-|要求元コンポーネント|アカウント|リソース|アクセス許可|  
+|要求元コンポーネント|Account|リソース|アクセス許可|  
 |--------------------------|-------------|--------------|-----------------|  
 |MSSQLServer|パフォーマンス ログ ユーザー|Instid\MSSQL\binn|フォルダー内容の一覧表示|  
-||パフォーマンス監視ユーザー|Instid\MSSQL\binn|フォルダー内容の一覧表示|  
+||パフォーマンス モニター ユーザー|Instid\MSSQL\binn|フォルダー内容の一覧表示|  
 ||パフォーマンス ログ ユーザー、パフォーマンス監視ユーザー|\WINNT\system32\sqlctr130.dll|読み取り、実行|  
 ||管理者のみ|\\\\.\root\Microsoft\SqlServer\ServerEvents\\<sql_instance_name>\*|フル コントロール|  
 ||管理者、システム|\tools\binn\schemas\sqlserver\2004\07\showplan|フル コントロール|  
 ||ユーザー|\tools\binn\schemas\sqlserver\2004\07\showplan|読み取り、実行|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|\<レポート サーバー Web サービス アカウント>|*\<install>* \Reporting Services\LogFiles|DELETE<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
-||レポート マネージャー アプリケーション プールの ID、 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] アカウント、Everyone|*\<install>* \Reporting Services\ReportManager、 *\<install>* \Reporting Services\ReportManager\Pages\\\*\*、 *\<install>* \Reporting Services\ReportManager\Styles\\\*.\*、 *\<install>* \Reporting Services\ReportManager\webctrl_client\1_0\\*.\*|Read|  
-||レポート マネージャー アプリケーション プールの ID|*\<install>* \Reporting Services\ReportManager\Pages\\*.\*|Read|  
-||\<レポート サーバー Web サービス アカウント>|*\<install>* \Reporting Services\ReportServer|Read|  
-||\<レポート サーバー Web サービス アカウント>|*\<install>* \Reporting Services\ReportServer\global.asax|[完全]|  
-||Everyone (Everyone)|*\<install>* \Reporting Services\ReportServer\global.asax|READ_CONTROL<br /><br /> FILE_READ_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_READ_ATTRIBUTES|  
-||ネットワーク サービス|*\<install>* \Reporting Services\ReportServer\ReportService.asmx|[完全]|  
-||Everyone (Everyone)|*\<install>* \Reporting Services\ReportServer\ReportService.asmx|READ_CONTROL<br /><br /> SYNCHRONIZE FILE_GENERIC_READ<br /><br /> FILE_GENERIC_EXECUTE<br /><br /> FILE_READ_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_EXECUTE<br /><br /> FILE_READ_ATTRIBUTES|  
-||ReportServer Windows サービス アカウント|*\<install>* \Reporting Services\ReportServer\RSReportServer.config|DELETE<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
-||Everyone (Everyone)|レポート サーバー キー (Instid ハイブ)|値のクエリ<br /><br /> サブキーの列挙<br /><br /> 通知<br /><br /> 読み取り制御|  
-||ターミナル サービス ユーザー|レポート サーバー キー (Instid ハイブ)|値のクエリ<br /><br /> 値の設定<br /><br /> サブキーの作成<br /><br /> サブキーの列挙<br /><br /> 通知<br /><br /> DELETE<br /><br /> 読み取り制御|  
-||パワー ユーザー|レポート サーバー キー (Instid ハイブ)|値のクエリ<br /><br /> 値の設定<br /><br /> サブキーの作成<br /><br /> サブキーの列挙<br /><br /> 通知<br /><br /> DELETE<br /><br /> 読み取り制御|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|レポート サーバー Windows サービス アカウント|*\<install>* \Reporting Services\LogFiles|DELETE<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
+||レポート サーバー Windows サービス アカウント|*\<install>* \Reporting Services\ReportServer|Read|  
+||レポート サーバー Windows サービス アカウント|*\<install>* \Reporting Services\ReportServer\global.asax|[完全]|  
+||レポート サーバー Windows サービス アカウント|*\<install>* \Reporting Services\RSWebApp|読み取り、実行|  
+||Everyone|*\<install>* \Reporting Services\ReportServer\global.asax|READ_CONTROL<br /><br /> FILE_READ_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_READ_ATTRIBUTES|  
+||ReportServer Windows サービス アカウント|*\<install>* \Reporting Services\ReportServer\rsreportserver.config|DELETE<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
+||Everyone|レポート サーバー キー (Instid ハイブ)|値のクエリ<br /><br /> サブキーの列挙<br /><br /> 通知<br /><br /> 読み取り制御|  
+||ターミナル サービス ユーザー|レポート サーバー キー (Instid ハイブ)|値のクエリ<br /><br /> 値の設定<br /><br /> サブキーの作成<br /><br /> サブキーの列挙<br /><br /> 通知<br /><br /> 削除<br /><br /> 読み取り制御|  
+||パワー ユーザー|レポート サーバー キー (Instid ハイブ)|値のクエリ<br /><br /> 値の設定<br /><br /> サブキーの作成<br /><br /> サブキーの列挙<br /><br /> 通知<br /><br /> 削除<br /><br /> 読み取り制御|  
   
  \* これは WMI プロバイダーの名前空間です。  
   
@@ -593,7 +588,7 @@ Windows Management Instrumentation (WMI) は、 [!INCLUDE[ssDE](../../includes/s
 > [!NOTE]  
 >  アプリケーションを構成してドメイン アカウントを使用する場合は、アプリケーションの特権を分離することができますが、パスワードを手動で管理するか、これらのパスワードを管理するためのカスタム ソリューションを作成する必要があります。 多くのサーバー アプリケーションがこの方法を使用してセキュリティを強化していますが、この方法では管理対象が多くなり、より複雑になります。 このような配置では、サービス管理者は、Kerberos 認証で必要なサービス パスワードやサービス プリンシパル名 (SPN) の管理などのメンテナンス タスクに相当な時間を費やすことになります。 さらに、これらのメンテナンス タスクによってサービスが中断されることがあります。  
   
- <a name="Local_User"></a> **Local User Accounts**  
+ <a name="Local_User"></a> **ローカル ユーザー アカウント**  
   
  コンピューターがドメインに属していない場合は、Windows 管理者権限のないローカル ユーザー アカウントを使用することをお勧めします。  
   
@@ -639,13 +634,13 @@ Windows Management Instrumentation (WMI) は、 [!INCLUDE[ssDE](../../includes/s
 ###  <a name="Localized_service_names"></a> ローカライズされたサービス名  
  次の表は、Windows のローカライズ版で表示されるサービス名を示しています。  
   
-|[言語]|ローカル サービスの名前|ネットワーク サービスの名前|ローカル システムの名前|admin グループの名前|  
+|Language|ローカル サービスの名前|ネットワーク サービスの名前|ローカル システムの名前|admin グループの名前|  
 |--------------|----------------------------|------------------------------|---------------------------|--------------------------|  
-|英語<br /><br /> 簡体中国語<br /><br /> Traditional Chinese<br /><br /> Korean<br /><br /> Japanese|NT AUTHORITY\LOCAL SERVICE|NT AUTHORITY\NETWORK SERVICE|NT AUTHORITY\SYSTEM|BUILTIN\Administrators (BUILTIN\Administrators)|  
+|English<br /><br /> 簡体中国語<br /><br /> Traditional Chinese<br /><br /> Korean<br /><br /> Japanese|NT AUTHORITY\LOCAL SERVICE|NT AUTHORITY\NETWORK SERVICE|NT AUTHORITY\SYSTEM|BUILTIN\Administrators (BUILTIN\Administrators)|  
 |German|NT-AUTORIT&#xC4;T\LOKALER DIENST|NT-AUTORIT&#xC4;T\NETZWERKDIENST|NT-AUTORIT&#xC4;T\SYSTEM|VORDEFINIERT\Administratoren|  
 |French|AUTORITE NT\SERVICE LOCAL|AUTORITE NT\SERVICE RÉSEAU|AUTORITE NT\SYSTEM|BUILTIN\Administrators (BUILTIN\Administrators)|  
 |Italian|NT AUTHORITY\SERVIZIO LOCALE|NT AUTHORITY\SERVIZIO DI RETE|NT AUTHORITY\SYSTEM|BUILTIN\Administrators (BUILTIN\Administrators)|  
-|スペイン語|NT AUTHORITY\SERVICIO LOC|NT AUTHORITY\SERVICIO DE RED|NT AUTHORITY\SYSTEM|BUILTIN\Administradores|  
+|Spanish|NT AUTHORITY\SERVICIO LOC|NT AUTHORITY\SERVICIO DE RED|NT AUTHORITY\SYSTEM|BUILTIN\Administradores|  
 |Russian|NT AUTHORITY\LOCAL SERVICE|NT AUTHORITY\NETWORK SERVICE|NT AUTHORITY\СИСТЕМА|BUILTIN\Администраторы|  
   
 ## <a name="related-content"></a>関連コンテンツ  

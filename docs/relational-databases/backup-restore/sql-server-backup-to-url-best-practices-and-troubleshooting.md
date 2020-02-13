@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 149c351796af7741c4bd3ef512fe27ebcbdcf35a
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 5f744f0bb5d1ced6424fc8882a0a215042fbfc69
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75245440"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920342"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>SQL Server Backup to URL に関するベスト プラクティスとトラブルシューティング
 
@@ -42,7 +42,7 @@ ms.locfileid: "75245440"
   
 -   バックアップ中に `WITH COMPRESSION` オプションを使用すると、ストレージ コストとストレージのトランザクション コストを最小限に抑えることができます。 また、バックアップ プロセスが完了するまでにかかる時間を短縮することもできます。  
 
-- 「[SQL Server Backup to URL](./sql-server-backup-to-url.md)」で推奨されているように、`MAXTRANSFERSIZE` と `BLOCKSIZE` の引数を設定します。
+- 「[SQL Server Backup to URL](./sql-server-backup-to-url.md)」で推奨されているように、`MAXTRANSFERSIZE` 引数と `BLOCKSIZE` 引数を設定します。
   
 ## <a name="handling-large-files"></a>大きなファイルの処理  
   

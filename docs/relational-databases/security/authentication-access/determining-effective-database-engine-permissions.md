@@ -15,10 +15,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 40f30fd646e166cc9b8db433934d22a378c907cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67995628"
 ---
 # <a name="determining-effective-database-engine-permissions"></a>データベース エンジンの有効なアクセス許可の決定
@@ -33,7 +33,7 @@ SQL Server データベース エンジンでは、さまざまなオブジェ�
 >  * 古いシステムと新しいシステムには類似点があります。 たとえば、`sysadmin` 固定サーバー ロールのメンバーシップには、`CONTROL SERVER` と同様のアクセス許可が与えられます。 ただし、システムは同じではありません。 たとえば、あるログインに `CONTROL SERVER` アクセス許可のみが与えられ、ストアド プロシージャが `sysadmin` 固定サーバー ロールのメンバーシップを確認する場合、アクセス許可確認は失敗します。 この逆も当てはまります。 
 
 
-## <a name="summary"></a>[概要]   
+## <a name="summary"></a>まとめ   
 * サーバー レベルのアクセス許可は、固定サーバー ロールかユーザー定義サーバー ロールのメンバーシップから与えられます。 全員が `public` 固定サーバー ロールに属し、そこで割り当てられたアクセス許可を受け取ります。   
 * サーバー レベルのアクセス許可は、ログインに与えられるアクセス許可かユーザー定義サーバー ロールから与えられます。   
 * データベース レベルのアクセス許可は、固定データベース ロールのメンバーシップか各ロールベースのユーザー定義データベース ロールから与えられます。 全員が `public` 固定データベース ロールに属し、そこで割り当てられたアクセス許可を受け取ります。   
@@ -145,7 +145,7 @@ SELECT pr.type_desc, pr.name, pe.state_desc,
    ON oj.schema_id = s.schema_id
  WHERE class_desc = 'OBJECT_OR_COLUMN';
 ```
-`HAS_PERMS_BY_NAME` 関数を使用すると、特定のユーザー (この場合、`TestUser`) にアクセス許可が与えられているかどうかが判断されます。 例:   
+`HAS_PERMS_BY_NAME` 関数を使用すると、特定のユーザー (この場合、`TestUser`) にアクセス許可が与えられているかどうかが判断されます。 次に例を示します。   
 ```sql
 EXECUTE AS USER = 'TestUser';
 SELECT HAS_PERMS_BY_NAME ('dbo.T1', 'OBJECT', 'SELECT');

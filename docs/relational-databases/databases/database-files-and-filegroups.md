@@ -32,12 +32,12 @@ helpviewer_keywords:
 ms.assetid: 9ca11918-480d-4838-9198-cec221ef6ad0
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 6ccf21bcc3e0657123aa4f0fdcfe9b2d3cb0861a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 782536e79336c0224638707538e8a12a31f5af84
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68037595"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76315602"
 ---
 # <a name="database-files-and-filegroups"></a>データベース ファイルとファイル グループ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "68037595"
 ## <a name="database-files"></a>データベース ファイル  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースには、次の表で示すように 3 種類のファイルがあります。  
   
-|ファイル|[説明]|  
+|ファイル|説明|  
 |----------|-----------------|  
 |プライマリ|プライマリ データ ファイルにはデータベースの起動情報が含まれており、データベース内の他のファイルを指し示します。 ユーザー データおよびオブジェクトは、このファイルまたはセカンダリ データ ファイルに格納できます。 各データベースには 1 つのプライマリ データ ファイルがあります。 プライマリ データ ファイルに推奨されるファイル名拡張子は .mdf です。|  
 |セカンダリ|セカンダリ データ ファイルは省略可能です。また、ユーザー定義であり、ユーザー データが格納されます。 セカンダリ ファイルを使用すると、各ファイルを異なるディスク ドライブに配置することにより、複数のディスクにデータを分散できます。 また、データベースが 1 つの Windows ファイルの最大サイズを超えた場合には、セカンダリ データ ファイルを使用してデータベースを拡張できます。<br /><br /> セカンダリ データ ファイルに推奨されるファイル名拡張子は .ndf です。|  
@@ -67,7 +67,7 @@ ms.locfileid: "68037595"
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータとログ ファイルは、FAT または NTFS のいずれかのファイル システムに配置できます。 Windows システムの場合、NTFS のセキュリティの方が強力なので、NTFS ファイル システムを使用することをお勧めします。 
 
 > [!WARNING]
-> 読み書き可能なデータ ファイル グループとログ ファイルは、圧縮された NTFS ファイル システムに配置できません。 圧縮された NTFS ファイル システムに配置できるのは、読み取り専用データベースと読み取り専用セカンダリ ファイル グループだけです。
+> 読み取りまたは書き込みデータ ファイル グループとログ ファイルは、NTFS 圧縮ファイル システムではサポートされていません。 圧縮された NTFS ファイル システムに配置できるのは、読み取り専用データベースと読み取り専用セカンダリ ファイル グループだけです。
 > 領域を節約するために、ファイル システムの圧縮ではなく、[データの圧縮](../../relational-databases/data-compression/data-compression.md)を強くお勧めします。
 
 1 台のコンピューターで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の複数のインスタンスを実行すると、インスタンスごとに異なる既定のディレクトリが与えられ、そのインスタンスで作成したデータベースのファイルがその既定のディレクトリで保持されます。 詳細については、「 [SQL Server の既定のインスタンスおよび名前付きインスタンスのファイルの場所](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)」を参照してください。
@@ -101,7 +101,7 @@ ms.locfileid: "68037595"
   
  すべてのデータ ファイルは、次の表に一覧表示されているファイル グループに格納されます。  
   
-|[ファイル グループ]|[説明]|  
+|[ファイル グループ]|説明|  
 |---------------|-----------------|  
 |プライマリ|プライマリ ファイルが含まれているファイル グループ。 すべてのシステム テーブルがプライマリ ファイル グループに割り当てられます。|  
 |メモリ最適化データ|メモリ最適化ファイル グループは filestream ファイル グループに基づきます。|  

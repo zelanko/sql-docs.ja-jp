@@ -11,12 +11,12 @@ ms.assetid: 21fd153b-116d-47fc-a926-f1528299a391
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7644e38995d7afb7493ed3bfec20f2049beb9055
-ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
+ms.openlocfilehash: 1ef9084e8264caf6b14289d6d2674afca012cd15
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70009451"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76761931"
 ---
 # <a name="columnstore-indexes---data-warehouse"></a>列ストア インデックス - データ ウェアハウス
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,7 +64,7 @@ CREATE UNIQUE INDEX taccount_nc1 ON t_account (AccountKey);
 ```  
   
 ### <a name="example-use-a-nonclustered-index-to-enforce-a-primary-key-constraint-on-a-columnstore-table"></a>例:非クラスター化インデックスを使用して列ストア テーブルに主キー制約を適用する  
- 仕様により、列ストア テーブルに主キー制約を設定することはできません。 ただし、列ストア テーブルで非クラスター化インデックスを使用して、主キー制約を適用できるようになりました。 主キーは非 NULL 列での UNIQUE 制約に相当し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は UNIQUE 制約を非クラスター化インデックスとして実装します。 これらの事実を組み合わせて、次の例では、非 NULL 列 accountkey に UNIQUE 制約を定義しています。 その結果、非クラスター化インデックスにより、非 NULL 列の UNIQUE 制約として主キー制約が適用されます。  
+ 仕様により、クラスター化された主キー制約を列ストア テーブルに適用することはできません。 ただし、列ストア テーブルで非クラスター化インデックスを使用して、主キー制約を適用できるようになりました。 主キーは非 NULL 列での UNIQUE 制約に相当し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は UNIQUE 制約を非クラスター化インデックスとして実装します。 これらの事実を組み合わせて、次の例では、非 NULL 列 accountkey に UNIQUE 制約を定義しています。 その結果、非クラスター化インデックスにより、非 NULL 列の UNIQUE 制約として主キー制約が適用されます。  
   
  次に、テーブルはクラスター化列ストア インデックスに変換されます。 変換中は、非クラスター化インデックスが保持されます。 その結果、クラスター化列ストア インデックスに、主キー制約を適用する非クラスター化インデックスが含まれます。 列ストア テーブルでの更新または挿入は非クラスター化インデックスにも影響するため、UNIQUE 制約と非 NULL に違反する操作を行うと、操作全体の失敗につながります。  
   

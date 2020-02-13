@@ -32,10 +32,10 @@ ms.assetid: 6405e7ec-0b5b-4afd-9792-1bfa5a2491f6
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 0a320b01433ad95f4bd695a3f700b7e7bb9ba653
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67902832"
 ---
 # <a name="create-endpoint-transact-sql"></a>CREATE ENDPOINT (Transact-SQL)
@@ -256,7 +256,7 @@ FOR DATABASE_MIRRORING (
 > [!NOTE]  
 >  DATABASE_MIRRORING には既定のポートはありません。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  ENDPOINT DDL ステートメントは、ユーザー トランザクション内では実行できません。 変更対象となるエンドポイントが、アクティブなスナップショット分離レベル トランザクションで使用されている場合でも、ENDPOINT DDL ステートメントは失敗しません。  
   
  ENDPOINT に対する要求は、次のユーザーが実行できます。  

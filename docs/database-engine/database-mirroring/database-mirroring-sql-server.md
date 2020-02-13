@@ -24,17 +24,17 @@ ms.assetid: a7f95ddc-5154-4ed5-8117-c9fcf2221f13
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 3f8ebb1119e84caa80c0faa03c5c1405992723b2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006345"
 ---
 # <a name="database-mirroring-sql-server"></a>データベース ミラーリング (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]代わりに [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] を使います。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 代わりに [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] を使用します。  
   
  *データベース ミラーリング* は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースの可用性を高めるためのソリューションです。 ミラーリングはデータベースごとに実装され、完全復旧モデルを使用するデータベースでのみ機能します。  
   
@@ -103,7 +103,7 @@ ms.locfileid: "68006345"
  送信キュー (send queue)  
  プリンシパル サーバーのログ ディスクに蓄積されている未送信のトランザクション ログ レコード。  
   
- セッション  
+ session  
  プリンシパル サーバー、ミラー サーバー、およびミラーリング監視サーバー (存在する場合) 間でデータベース ミラーリング時に発生するリレーションシップ。  
   
  ミラーリング セッションが開始または再開された後で、プリンシパル サーバーに蓄積されたプリンシパル データベースのログ レコードがミラー サーバーに送信される処理のこと。この処理では、遅延を解消するために、送信されたログ レコードをできるだけ短時間でディスクに書き込みます。  
@@ -157,7 +157,7 @@ ms.locfileid: "68006345"
   
  次の図に、ミラーリング監視サーバーを含めた構成を示します。  
   
- ![ミラーリング監視サーバーを含むミラーリング セッション](../../database-engine/database-mirroring/media/dbm-3-way-session-intro-ov.gif "ミラーリング監視サーバーを含むミラーリング セッション")  
+ ![ミラーリング監視を含むミラーリング セッション](../../database-engine/database-mirroring/media/dbm-3-way-session-intro-ov.gif "ミラーリング監視を含むミラーリング セッション")  
   
  詳細については、このトピックの「 [役割の交代](#RoleSwitching)」を参照してください。  
   
@@ -188,7 +188,7 @@ ms.locfileid: "68006345"
   
      ミラーリング監視サーバーの役割は、特定のパートナー サーバーが稼働しているかどうかを確認することです。 ミラー サーバーがプリンシパル サーバーへの接続を失っても、ミラーリング監視サーバーがそのままプリンシパル サーバーに接続している場合、ミラー サーバーはフェールオーバーを開始しません。 詳細については、「 [データベース ミラーリング監視サーバー](../../database-engine/database-mirroring/database-mirroring-witness.md)」を参照してください。  
   
--   *Manual failover*  
+-   *手動フェールオーバー*  
   
      これには高い安全性モードが必要です。 パートナーは互いに接続されている必要があり、データベースは既に同期されている必要があります。  
   
@@ -213,7 +213,7 @@ ms.locfileid: "68006345"
   
  次の図に、2 つのミラーリング セッションに共にパートナーとして参加している 2 つのサーバー インスタンスを示します。 一方のセッションは **Db_1**というデータベース用で、もう一方のセッションは **Db_2**というデータベース用です。  
   
- ![2 つの同時実行セッション内の 2 つのサーバー インスタンス](../../database-engine/database-mirroring/media/dbm-concurrent-sessions.gif "2 つの同時実行セッション内の 2 つのサーバー インスタンス")  
+ ![2 つの同時実行セッションにおける 2 つのサーバー インスタンス](../../database-engine/database-mirroring/media/dbm-concurrent-sessions.gif "2 つの同時実行セッションにおける 2 つのサーバー インスタンス")  
   
  それぞれのデータベースは互いに独立しています。 たとえば、1 つのサーバー インスタンスが最初は 2 つのデータベースのミラー サーバーである場合があります。 2 つのデータベースのいずれかでフェールオーバーが発生すると、そのサーバー インスタンスはもう一方のデータベースのミラー サーバーのまま、フェールオーバーしたデータベースのプリンシパル サーバーになります。  
   
@@ -305,19 +305,19 @@ ms.locfileid: "68006345"
   
 -   [Windows 認証を使用してデータベースのミラーリング監視を追加する &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)  
   
--   [ミラー データベースを設定して TRUSTWORTHY プロパティを使用する &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)  
+-   [TRUSTWORTHY プロパティを使用するようにミラー データベースを設定する方法 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)  
   
  **Transact-SQL または SQL Server Management Studio の使用**  
   
 -   [ミラー化されたインスタンスのアップグレード](../../database-engine/database-mirroring/upgrading-mirrored-instances.md)  
   
--   [ミラーリングのためのミラー データベースの準備 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)  
+-   [ミラーリングのためのミラー データベースの準備 &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)  
   
   
 ### <a name="administrative-tasks"></a>管理タスク  
  **Transact-SQL**  
   
--   [データベース ミラーリング セッションでのトランザクションの安全性を変更する &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)  
+-   [データベース ミラーリング セッションでのトランザクションの安全性の変更 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)  
   
 -   [データベース ミラーリング セッションを手動でフェールオーバーする方法 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/manually-fail-over-a-database-mirroring-session-transact-sql.md)  
   
@@ -348,7 +348,7 @@ ms.locfileid: "68006345"
  [データベース ミラーリング構成のトラブルシューティング &#40;SQL Server&#41;](../../database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)   
  [データベース ミラーリング: 相互運用性と共存 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-interoperability-and-coexistence-sql-server.md)   
  [データベース ミラーリングの前提条件、制限事項、推奨事項](../../database-engine/database-mirroring/prerequisites-restrictions-and-recommendations-for-database-mirroring.md)   
- [Always On 可用性グループの概要 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+ [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [ログ配布について &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)  
   
   

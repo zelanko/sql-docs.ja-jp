@@ -20,10 +20,10 @@ ms.assetid: 4d933d19-8d21-4aa1-8153-d230cb3a3f99
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b447bec3817dbaa173c544dcb31200a702b8661d
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68890065"
 ---
 # <a name="full-database-backups-sql-server"></a>データベースの完全バックアップ (SQL Server)
@@ -49,7 +49,7 @@ ms.locfileid: "68890065"
 ##  <a name="DbBuRMs"></a> 単純復旧モデルでのデータベース バックアップ  
  単純復旧モデルでは、データベースをバックアップした後に障害が発生すると、その間の作業内容が失われる可能性があります。 作業損失の可能性は、次のバックアップまで、データを更新するたびに増加します。次の完全バックアップで作業損失の可能性はゼロに戻り、そこから再び増加していきます。 作業損失の可能性は、バックアップ間の時間が増加します。 次の図に、データベースの完全バックアップのみを使用するバックアップ方法における作業損失の可能性を示します。  
   
- ![データベース バックアップ間でのデータ損失の危険性](../../relational-databases/backup-restore/media/bnr-rmsimple-1-fulldb-backups.gif "データベース バックアップ間でのデータ損失の危険性")  
+ ![データベース バックアップ間での作業損失の可能性](../../relational-databases/backup-restore/media/bnr-rmsimple-1-fulldb-backups.gif "データベース バックアップ間での作業損失の可能性")  
   
 ### <a name="example--includetsqlincludestsql-mdmd"></a>例 ([!INCLUDE[tsql](../../includes/tsql-md.md)])  
  次の例では、WITH FORMAT を使用してデータベースの完全バックアップを作成することにより、既存のバックアップを上書きして新しいメディア セットを作成します。  

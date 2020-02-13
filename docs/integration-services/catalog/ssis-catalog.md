@@ -15,10 +15,10 @@ ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 1e240a53d86d66fdf81b53cae1ba55d41820befd
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294963"
 ---
 # <a name="ssis-catalog"></a>SSIS カタログ
@@ -53,7 +53,7 @@ ms.locfileid: "71294963"
 >   
 >  クラスター フェールオーバーの一環として [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リソースがフェールオーバーした場合、実行中のパッケージは再開されません。 チェックポイントを使用してパッケージを再開できます。 詳細については、「 [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md)」を参照してください。  
   
-## <a name="features-and-capabilities"></a>機能および能力  
+## <a name="features-and-capabilities"></a>特徴と機能  
   
 -   [カタログ オブジェクト識別子](../../integration-services/catalog/ssis-catalog.md#CatalogObjectIdentifiers)  
   
@@ -74,9 +74,9 @@ ms.locfileid: "71294963"
 ##  <a name="CatalogObjectIdentifiers"></a> カタログ オブジェクト識別子  
  カタログに新しいオブジェクトを作成するときは、オブジェクトに名前を割り当てる必要があります。 オブジェクト名が識別子となります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、識別子に使用できる文字のルールが定義されています。 次のオブジェクトの名前は、識別子のルールに従っている必要があります。  
   
--   フォルダー  
+-   Folder  
   
--   プロジェクト  
+-   Project  
   
 -   環境  
   
@@ -135,7 +135,7 @@ ms.locfileid: "71294963"
  **保有期間 (日)**  
  操作データの最大保有期間を日数で定義します。 この期間を経過したデータは削除されます。  
   
- 最小値は 1 日です。 最大値は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の **int** データ型の最大値によってのみ制限されます。 このデータ型に関する詳細については、「[int、bigint、smallint、および tinyint (Transact-SQL)](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)」を参照してください。  
+ 最小値は 1 日です。 最大値は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **int** データの最大値によってのみ制限されます。 このデータ型に関する詳細については、「[int、bigint、smallint、および tinyint (Transact-SQL)](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)」を参照してください。  
   
  **古いバージョンを定期的に削除する**  
  このプロパティが **True**に設定されている場合は、プロジェクト バージョンのクリーンアップのジョブ ステップが実行されます。  
@@ -166,7 +166,7 @@ ms.locfileid: "71294963"
   
  **[暗号化アルゴリズム]** プロパティの設定を変更するには、 **SSISDB** データベースをシングル ユーザー モードに設定し、catalog.configure_catalog ストアド プロシージャを呼び出します。 *property_name* 引数の ENCRYPTION_ALGORITHM を使用します。 プロパティの値の詳細については、「[catalog.catalog_properties (SSISDB データベース)](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md)」を参照してください。 ストアド プロシージャの詳細については、「[catalog.configure_catalog (SSISDB データベース)](../../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md)」を参照してください。  
   
- シングル ユーザー モードの詳細については、「[データベースをシングル ユーザー モードに設定する](../../relational-databases/databases/set-a-database-to-single-user-mode.md)」を参照してください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の暗号化と暗号化アルゴリズムの詳細については、「 [SQL Server の暗号化](../../relational-databases/security/encryption/sql-server-encryption.md)」のトピックを参照してください。  
+ シングル ユーザー モードの詳細については、「 [データベースをシングル ユーザー モードに設定する](../../relational-databases/databases/set-a-database-to-single-user-mode.md)」を参照してください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の暗号化と暗号化アルゴリズムの詳細については、「 [SQL Server の暗号化](../../relational-databases/security/encryption/sql-server-encryption.md)」のトピックを参照してください。  
   
  暗号化にはデータベース マスター キーが使用されます。 このキーは、カタログの作成時に作成されます。  
   
@@ -385,7 +385,7 @@ ms.locfileid: "71294963"
 #### <a name="options"></a>オプション  
  次の表では、ダイアログ ボックスに示される特定のプロパティと、`catalog.catalog_properties` ビュー内の対応するプロパティについて説明します。  
   
-|プロパティ名 ([カタログのプロパティ] ダイアログ ボックス)|プロパティ名 (catalog.catalog_properties ビュー)|[説明]|  
+|プロパティ名 ([カタログのプロパティ] ダイアログ ボックス)|プロパティ名 (catalog.catalog_properties ビュー)|説明|  
 |-----------------------------------------------------|------------------------------------------------------|-----------------|  
 |暗号化アルゴリズムの名前|ENCRYPTION_ALGORITHM|カタログ内の機密性の高いパラメーター値を暗号化するために使用される暗号化の種類を指定します。 使用できる値を次に示します。<br /><br /> DES<br /><br /> TRIPLE_DES<br /><br /> TRIPLE_DES_3KEY<br /><br /> DESPX<br /><br /> AES_128<br /><br /> AES_192<br /><br /> AES_256 (既定値)|  
 |プロジェクトごとのバージョンの最大数|MAX_PROJECT_VERSIONS|カタログに格納されるプロジェクトのバージョンの数を指定します。 最大数を超えるプロジェクトの古いバージョンは、プロジェクト バージョンのクリーンアップ ジョブを実行したときに削除されます。|  
@@ -415,11 +415,11 @@ ms.locfileid: "71294963"
   
     ```  
   
-3.  **の** [データベースのバックアップ] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ダイアログ ボックスを使用して SSISDB データベースをバックアップします。 詳細については、[データベースをバックアップする方法 (SQL Server Management Studio)](https://go.microsoft.com/fwlink/?LinkId=231812) に関する記事をご覧ください。  
+3.  **の** [データベースのバックアップ] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ダイアログ ボックスを使用して SSISDB データベースをバックアップします。 詳細については、「[データベースをバックアップする方法 (SQL Server Management Studio)](https://go.microsoft.com/fwlink/?LinkId=231812) に関する記事をご覧ください。  
   
 4.  次の手順を実行して、##MS_SSISServerCleanupJobLogin## の CREATE LOGIN スクリプトを生成します。 詳細については、「[CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)」を参照してください。  
   
-    1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のオブジェクト エクスプローラーで、 **[セキュリティ]** ノードを展開し、 **[ログイン]** ノードを展開します。  
+    1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のオブジェクト エクスプローラーで、 **[セキュリティ]** ノードを展開し、 **[ログイン]** ノードを展開します。  
   
     2.  **[##MS_SSISServerCleanupJobLogin##]** を右クリックし、 **[ログインをスクリプト化]**  >  **[CREATE]**  >  **[新しいクエリ エディター ウィンドウ]** の順にクリックします。  
   
@@ -466,7 +466,7 @@ ms.locfileid: "71294963"
   
     ```  
   
-3.  **の** [データベースの復元] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ダイアログ ボックスを使用して、バックアップから SSISDB データベースを復元します。 詳細については、次の各トピックを参照してください。  
+3.  **の** [データベースの復元] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ダイアログ ボックスを使用して、バックアップから SSISDB データベースを復元します。 詳細については、次のトピックを参照してください。  
   
     -   [[データベースの復元] &#40;[全般] ページ&#41;](../../relational-databases/backup-restore/restore-database-general-page.md)  
   
@@ -482,7 +482,7 @@ ms.locfileid: "71294963"
     EXEC sp_procoption N'sp_ssis_startup','startup','on'  
     ```  
   
-6.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の **[ログインのプロパティ]** ダイアログ ボックスを使用して、SSISDB ユーザーの ##MS_SSISServerCleanupJobUser## (SSISDB database) を ##MS_SSISServerCleanupJobLogin## にマップします。  
+6.  **の** [ログインのプロパティ] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ダイアログ ボックスを使用して、SSISDB ユーザーの ##MS_SSISServerCleanupJobUser## (SSISDB database) を ##MS_SSISServerCleanupJobLogin## にマップします。  
   
 7.  次のいずれかの方法を使用して、マスター キーを復元します。 暗号化の詳細については、「 [暗号化階層](../../relational-databases/security/encryption/encryption-hierarchy.md)」を参照してください。  
   
@@ -592,7 +592,7 @@ ms.locfileid: "71294963"
   
 -   [ステップ 1:Integration Services カタログを作成する](#Step1)  
   
--   [ステップ 2:SSISDB を Always On 可用性グループに追加する](#Step2)  
+-   [手順 2:SSISDB を Always On 可用性グループに追加する](#Step2)  
   
 -   [ステップ 3:Always On の SSIS サポートを有効にする](#Step3)  
   
@@ -620,7 +620,7 @@ SSISDB データベースを Always On 可用性グループに追加する手�
   
 **新しい可用性グループ** ウィザードの **[データベースの選択]** ページで SSIS カタログを作成するときに指定したパスワードを入力します。
 
-![[データベースの選択]](../../integration-services/service/media/ssis-newavailabilitygroup.png "[データベースの選択]")  
+![新しい可用性グループ](../../integration-services/service/media/ssis-newavailabilitygroup.png "[データベースの選択]")  
   
 ####  <a name="Step3"></a> ステップ 3:Always On の SSIS サポートを有効にする  
  Integration Service カタログを作成した後に、 **[Integration Service カタログ]** ノードを右クリックし、 **[Always On サポートを有効にする]** をクリックします。 次の **[AlwaysOn のサポートを有効にする]** ダイアログ ボックスが表示されます。 このメニュー項目が無効な場合、すべての前提条件がインストールされていることを確認してから、 **[更新]** をクリックします。  

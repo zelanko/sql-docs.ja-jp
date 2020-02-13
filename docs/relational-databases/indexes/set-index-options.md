@@ -26,10 +26,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: cf9b8222453cea1bdaecad25256819aa7bcb1366
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67909555"
 ---
 # <a name="set-index-options"></a>インデックス オプションの設定
@@ -76,7 +76,7 @@ ms.locfileid: "67909555"
 5. 変更するインデックスを選択します。 対応するプロパティがメイン グリッドに表示されます。
 6. 該当するプロパティの設定を変更してインデックスをカスタマイズします。
 7. **[閉じる]** をクリックします。
-8. **[ファイル]** メニューの [ **table_name**_を保存_] を選びます。
+8. **ファイル** メニューの **table_name**_を保存_を選びます。
 
 ### <a name="to-modify-the-properties-of-an-index-in-object-explorer"></a>インデックスのプロパティをオブジェクト エクスプローラーで変更するには
 
@@ -87,7 +87,7 @@ ms.locfileid: "67909555"
 5. プロパティを変更するインデックスを右クリックし、 **[プロパティ]** を選択します。
 6. **[ページの選択]** の **[オプション]** を選択します。
 7. 該当するプロパティの設定を変更してインデックスをカスタマイズします。
-8. インデックス列の位置を追加、削除、または変更するには、 **インデックスのプロパティ -**  **全般** _全般_ ページをクリックします。 詳細については、「 [Index Properties F1 Help](../../relational-databases/indexes/index-properties-f1-help.md)」をご覧ください。
+8. インデックス列の位置を追加、削除、または変更するには、[**インデックスのプロパティ -** _index_name_] ダイアログ ボックスから **[全般]** ページを選択します。 詳細については、「 [Index Properties F1 Help](../../relational-databases/indexes/index-properties-f1-help.md)」をご覧ください。
 
 ## <a name="TsqlProcedure"></a> Transact-SQL の使用
 

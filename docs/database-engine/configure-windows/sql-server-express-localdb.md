@@ -17,10 +17,10 @@ ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 66d7ac0e15ebfee2c79a90f8c5041ba899dbff93
-ms.sourcegitcommit: b7618a2a7c14478e4785b83c4fb2509a3e23ee68
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73926038"
 ---
 # <a name="sql-server-express-localdb"></a>SQL Server Express LocalDB
@@ -31,7 +31,7 @@ Microsoft SQL Server Express LocalDB は、開発者を対象とした [SQL Serv
 
 LocalDB のインストールでは、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] の開始に最低限必要なファイルがコピーされます。 LocalDB のインストール後に、特殊な接続文字列を使用して接続を開始できます。 接続時に、必要な [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インフラストラクチャが自動的に作成および開始されるため、複雑な構成タスクを行わなくてもアプリケーションでデータベースを使用できます。 開発者ツールによって、開発者は [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] を使用して [!INCLUDE[tsql](../../includes/tsql-md.md)] コードを記述してテストすることができ、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の完全なサーバー インスタンスを管理する必要はありません。 
 
-## <a name="try-it-out"></a>お試しください 
+## <a name="try-it-out"></a>実際に使ってみてください。 
 
 - SQL Server Express LocalDB をダウンロードしてインストールするには、 **[SQL Server ダウンロード](https://www.microsoft.com/sql-server/sql-server-editions-express)** に移動します。 LocalDB は、インストール中に選択する機能で、メディアをダウンロードするときに使用できます。 メディアをダウンロードする場合は、 **[Express Advanced]** または [LocalDB] パッケージを選択します。 **Visual Studio インストーラー**で、 **.NET デスクトップ開発** ワークロードの一部として、または個別のコンポーネントとして、SQL Server Express LocalDB をインストールできます。
 
@@ -50,9 +50,9 @@ LocalDB のインストールでは、[!INCLUDE[ssDEnoversion](../../includes/ss
 
 ## <a name="description"></a>説明
 
-LocalDB セットアップ プログラムでは、`SqlLocalDB.msi` プログラムを使用して、コンピューターに必要なファイルがインストールされます。 LocalDB はインストールされると [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] のインスタンスとなり、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースを作成して開くことができます。 データベースのシステム データベース ファイルは、通常は非表示になっているローカル AppData パスに格納されます。 たとえば、`C:\Users\<user>\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\LocalDBApp1\` のようになります。 ユーザー データベース ファイルは、ユーザーが指定する場所 (通常は `C:\Users\<user>\Documents\` フォルダー内の任意の場所) に格納されます。
+LocalDB セットアップ プログラムでは、`SqlLocalDB.msi` プログラムを使用して、コンピューターに必要なファイルがインストールされます。 LocalDB はインストールされると [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] のインスタンスとなり、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースを作成して開くことができます。 データベースのシステム データベース ファイルは、通常は非表示になっているローカル AppData パスに格納されます。 たとえば、「 `C:\Users\<user>\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\LocalDBApp1\` 」のように入力します。 ユーザー データベース ファイルは、ユーザーが指定する場所 (通常は `C:\Users\<user>\Documents\` フォルダー内の任意の場所) に格納されます。
 
-LocalDB をアプリケーション内に組み込む手順の詳細については、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] の「[ローカル データの概要](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/ms233817(v=vs.110))」、および「[Create a database and add tables in Visual Studio (Visual Studio でのデータベースの作成およびテーブルの追加)](/visualstudio/data-tools/create-a-sql-database-by-using-a-designer)」を参照してください。
+LocalDB をアプリケーション内に組み込む手順の詳細については、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] の「[ローカル データの概要](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/ms233817(v=vs.110))」と「[Visual Studio でデータベースを作成し、テーブルを追加する](/visualstudio/data-tools/create-a-sql-database-by-using-a-designer)」を参照してください。
 
 LocalDB API の詳細については、「[SQL Server Express LocalDB リファレンス](../../relational-databases/sql-server-express-localdb-reference.md)」を参照してください。
 
@@ -112,12 +112,12 @@ REM Gather information about the instance of LocalDB
 
 |||
 |-|-|
-|名前|`LocalDBApp1`|
-|バージョン|\<現在のバージョン>|
+|Name|`LocalDBApp1`|
+|Version|\<現在のバージョン>|
 |共有名|""|
 |所有者|"\<Windows ユーザー>"|
 |自動作成|いいえ|
-|状態|実行|
+|State|実行中|
 |前回の開始時刻|\<日付と時刻>|
 |インスタンス パイプ名|np:\\\\.\pipe\LOCALDB#F365A78E\tsql\query|
 

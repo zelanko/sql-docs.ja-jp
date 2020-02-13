@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3b32662b-566f-454d-b7ca-e247002a9a0b
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 86bdd12d5dabd7ad74662cd47b2004594328a6c0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 12af8c813fd61b4f4c9040d72e19173ef810e80f
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048139"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76909792"
 ---
 # <a name="with-xmlnamespaces"></a>WITH XMLNAMESPACES
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ DEFAULT <xml_namespace_uri>
  *xml_namespace_prefix*  
  *xml_namespace_uri* で指定した名前空間 URI 値にマップされ、関連付けられるプレフィックスを指定します。 *xml_namespace_prefix* は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別子にする必要があります。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  共通テーブル式を含むステートメントで WITH XMLNAMESPACES 句を使用する場合は、ステートメント内で WITH XMLNAMESPACES 句を共通テーブル式より前に置く必要があります。  
   
  次は、WITH XMLNAMESPACES 句を使用するときに適用される一般的な構文規則です。  
@@ -98,7 +98,7 @@ DEFAULT <xml_namespace_uri>
   
 -   XMLNAMESPACES キーワードは WITH 句のコンテキストでは予約されています。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  例については、「 [WITH XMLNAMESPACES を使用したクエリへの名前空間の追加](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  

@@ -20,10 +20,10 @@ ms.assetid: 3241a44a-6958-415b-b8b7-2a1207c36ab3
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 478641bed0931fc78db3c7df166b860374034f90
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73983260"
 ---
 # <a name="is_srvrolemember-transact-sql"></a>IS_SRVROLEMEMBER (Transact-SQL)
@@ -48,7 +48,7 @@ IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )
   
 |||  
 |-|-|  
-|sysadmin|serveradmin|  
+|[sysadmin]|serveradmin|  
 |dbcreator|setupadmin|  
 |bulkadmin|securityadmin|  
 |diskadmin|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。<br /><br /> public|  
@@ -60,13 +60,13 @@ IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )
 ## <a name="return-types"></a>戻り値の型  
  **int**  
   
-|戻り値|[説明]|  
+|戻り値|説明|  
 |------------------|-----------------|  
 |0|*login* は *role* のメンバーではありません。<br /><br /> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、このステートメントは常に 0 を返します。|  
 |1|*login* は *role* のメンバーです。|  
 |NULL|*role* または *login* が有効でないか、ロールのメンバーシップを表示する権限がありません。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  現在のユーザーがサーバー ロールの権限を必要とするアクションを実行できるかどうかを判断するには IS_SRVROLEMEMBER を使用します。  
   
  Contoso\Mary5 などの Windows ログインを *login* に指定した場合、**IS_SRVROLEMEMBER** は、そのログインに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への直接アクセスが許可または拒否されている場合を除き、**NULL** を返します。  
@@ -91,7 +91,7 @@ IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )
 ## <a name="permissions"></a>アクセス許可  
  サーバー ロールに対する VIEW DEFINITION 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、現在のユーザーの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインが固定サーバー ロール `sysadmin` のメンバーであるかどうかを示しています。  
   
 ```  

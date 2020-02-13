@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL DATA SOURCE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/08/2019
+ms.date: 01/22/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -19,16 +19,16 @@ helpviewer_keywords:
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ec1bd01ae5f92efbbbe08ebee3da3484ce387e29
-ms.sourcegitcommit: 3511da65d7ebc788e04500bbef3a3b4a4aeeb027
+ms.openlocfilehash: a927964a3f3cf8fe5119011a430393330402a7aa
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75681783"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76516643"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
-SQL Server、SQL Database、SQL Data Warehouse、または Analytics Platform System (Parallel Data Warehouse つまり PDW) を使用してクエリを実行するための外部データ ソースを作成します。
+SQL Server、SQL Database、Azure Synapse Analytics、または Analytics Platform System (Parallel Data Warehouse つまり PDW) を使用してクエリを実行するための外部データ ソースを作成します。
 
 この記事では、選択した SQL 製品について、構文、引数、注釈、アクセス許可、例を紹介します。
 
@@ -42,7 +42,7 @@ SQL Server、SQL Database、SQL Data Warehouse、または Analytics Platform Sy
 
 |                               |                                                              |                                                              |                                                              |      |
 | ----------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- |
-| **_\* SQL Server \*_** &nbsp; | [SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current) | [SQL Data<br />Warehouse](create-external-data-source-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7) |      |
+| **_\* SQL Server \*_** &nbsp; | [SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current) | [Azure Synapse<br />Analytics](create-external-data-source-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7) |      |
 |                               |                                                              |                                                              |                                                              |      |
 
 &nbsp;
@@ -59,7 +59,7 @@ PolyBase クエリ用の外部データ ソースを作成します。 外部デ
 ## <a name="syntax"></a>構文
 
 ```sql
-CREATE EXTERNAL DATA SOURCE <data_source_name>  
+CREATE EXTERNAL DATA SOURCE <data_source_name>
 WITH
 (    LOCATION                  = '<prefix>://<path>[:<port>]'
 [,   CONNECTION_OPTIONS        = '<name_value_pairs>']
@@ -105,7 +105,7 @@ WITH
 
 - SQL エンジンでは、オブジェクトの作成時に、外部データ ソースの存在が検証されません。 検証するには、外部データ ソースを使用して外部テーブルを作成します。
 - 一貫性のあるクエリ セマンティクスを確保するため、Hadoop をクエリする際は、すべてのテーブルに同じ外部データ ソースを使用します。
-- `sqlserver` 場所プレフィックスを使用して、SQL Server 2019 を SQL Server、SQL Database、または SQL Data Warehouse に接続できます。
+- `sqlserver` 場所プレフィックスを使用すれば、SQL Server 2019 を SQL Server、SQL Database、または Azure Synapse Analytics に接続できます。
 - `Driver={<Name of Driver>}` 経由で接続する際に `ODBC` を指定します。
 - `wasb` は Azure BLOB ストレージの既定のプロトコルです。 `wasbs` は省略可能ですが、セキュリティで保護された SSL 接続を使用してデータが送信されるため、推奨されます。
 - Hadoop `Namenode` のフェールオーバー時に、PolyBase クエリを確実に成功させるため、Hadoop クラスターの `Namenode` に仮想 IP アドレスを使用することを検討してください。 使用しない場合は、[ALTER EXTERNAL DATA SOURCE][alter_eds] コマンドを実行して新しい場所を示します。
@@ -158,7 +158,7 @@ WITH
 
 Hortonworks または Cloudera に接続する場合は、このオプションの値を構成します。
 
-`RESOURCE_MANAGER_LOCATION` が定義されている場合、クエリ オプティマイザーでは、パフォーマンスを向上させるためにコストに基づいて決定が下されます。 MapReduce ジョブを使用して、Hadoop に計算をプッシュ ダウンできます。 `RESOURCE_MANAGER_LOCATION` を指定すると、Hadoop と SQL の間で転送されるデータ量が大幅に減少し、それによってクエリのパフォーマンスが向上する可能性があります。  
+`RESOURCE_MANAGER_LOCATION` が定義されている場合、クエリ オプティマイザーでは、パフォーマンスを向上させるためにコストに基づいて決定が下されます。 MapReduce ジョブを使用して、Hadoop に計算をプッシュ ダウンできます。 `RESOURCE_MANAGER_LOCATION` を指定すると、Hadoop と SQL の間で転送されるデータ量が大幅に減少し、それによってクエリのパフォーマンスが向上する可能性があります。
 
 Resource Manager を指定しない場合、Hadoop への計算のプッシュが、PolyBase クエリに対して無効になります。
 
@@ -187,7 +187,7 @@ SQL Server 内のデータベースに対する CONTROL アクセス許可が必
 
 ## <a name="locking"></a>ロック
 
-EXTERNAL DATA SOURCE オブジェクトを共有ロックします。  
+EXTERNAL DATA SOURCE オブジェクトを共有ロックします。
 
 ## <a name="security"></a>Security
 
@@ -201,13 +201,16 @@ SQL Server ビッグ データ クラスターでストレージまたはデー�
 
 ## <a name="examples-sql-server-2016"></a>例 :SQL Server (2016 以降)
 
+> [!IMPORTANT]
+> Polybase をインストールして有効にする方法の詳細については、「[Windows への PolyBase のインストール](../../relational-databases/polybase/polybase-installation.md)」を参照してください。
+
 ### <a name="a-create-external-data-source-in-sql-2019-to-reference-oracle"></a>A. SQL 2019 で Oracle を参照する外部データ ソースを作成する
 
 Oracle を参照する外部データ ソースを作成するには、データベース スコープ資格情報があることを確認します。 オプションで、このデータ ソースに対して計算のプッシュ ダウンを有効または無効にすることもできます。
 
 ```sql
 -- Create a database master key if one does not already exist, using your own password. This key is used to encrypt the credential secret in next step.
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = '!MyC0mpl3xP@ssw0rd!
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = '!MyC0mpl3xP@ssw0rd!'
 ;
 
 -- Create a database scoped credential with Azure storage account key as the secret.
@@ -233,7 +236,7 @@ MongoDB などの他のデータ ソースの追加の例については、「[M
 
 Hortonworks または Cloudera Hadoop クラスターを参照する外部データ ソースを作成するには、Hadoop `Namenode` のマシン名または IP アドレスとポートを指定します。 <!-- Provide the Nameservice ID as the `LOCATION` for highly available configurations. -->
 
-```sql  
+```sql
 CREATE EXTERNAL DATA SOURCE MyHadoopCluster
 WITH
 (    LOCATION = 'hdfs://10.10.10.10:8050'
@@ -246,7 +249,7 @@ WITH
 
 `RESOURCE_MANAGER_LOCATION` オプションを指定して、PolyBase クエリの Hadoop への計算のプッシュダウンを有効にします。 有効にすると、PolyBase によって、クエリの計算を Hadoop にプッシュするかどうかがコストに基づいて決定されます。
 
-```sql  
+```sql
 CREATE EXTERNAL DATA SOURCE MyHadoopCluster
 WITH
 (    LOCATION                  = 'hdfs://10.10.10.10:8020'
@@ -260,7 +263,7 @@ WITH
 
 Hadoop クラスターが Kerberos でセキュリティ保護されていることを確認するには、Hadoop core-site.xml で hadoop.security.authentication プロパティの値を確認します。 Kerberos でセキュリティ保護された Hadoop クラスターを参照するには、ご自分の Kerberos ユーザー名とパスワードを含むデータベース スコープの資格情報を指定する必要があります。 データベース マスター キーは、データベース スコープの資格情報シークレットの暗号化に使用されます。
 
-```sql  
+```sql
 -- Create a database master key if one does not already exist, using your own password. This key is used to encrypt the credential secret in next step.
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo'
 ;
@@ -317,18 +320,19 @@ SQL Server の名前付きインスタンスを参照する外部データソー
 
 ```sql
 CREATE EXTERNAL DATA SOURCE SQLServerInstance2
-WITH ( 
+WITH (
   LOCATION = 'sqlserver://WINSQL2019',
   CONNECTION_OPTIONS = 'Server=%s\SQL2019',
   CREDENTIAL = SQLServerCredentials
 );
 
 ```
+
 または、ポートを使用して SQL Server インスタンスに接続できます。
 
 ```sql
 CREATE EXTERNAL DATA SOURCE SQLServerInstance2
-WITH ( 
+WITH (
   LOCATION = 'sqlserver://WINSQL2019:58137',
   CREDENTIAL = SQLServerCredentials
 );
@@ -403,7 +407,7 @@ WITH
 
 |                                                              |                                 |                                                              |                                                              |      |
 | ------------------------------------------------------------ | ------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- |
-| [SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017) | **_\* SQL Database \*_** &nbsp; | [SQL Data<br />Warehouse](create-external-data-source-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7) |      |
+| [SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017) | **_\* SQL Database \*_** &nbsp; | [Azure Synapse<br />Analytics](create-external-data-source-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7) |      |
 |                                                              |                                 |                                                              |                                                              |      |
 
 &nbsp;
@@ -413,13 +417,13 @@ WITH
 エラスティック クエリ用の外部データ ソースを作成します。 外部データ ソースを使用して接続を確立し、次の主なユース ケースをサポートします。
 
 - `BULK INSERT` または `OPENROWSET` を使用した一括読み込み操作
-- [エラスティック クエリ][remote_eq]で SQL Database を使用してリモートの SQL Database または SQL Data Warehouse インスタンスをクエリする
+- [エラスティック クエリ][remote_eq]で SQL Database を使用してリモートの SQL Database または Azure Synapse インスタンスをクエリする
 - [エラスティック クエリ][sharded_eq]を使用してシャード化された Azure SQL Database をクエリする
 
 ## <a name="syntax"></a>構文
 
 ```sql
-CREATE EXTERNAL DATA SOURCE <data_source_name>  
+CREATE EXTERNAL DATA SOURCE <data_source_name>
 WITH
 (    LOCATION                  = '<prefix>://<path>[:<port>]'
 [,   CREDENTIAL                = <credential_name> ]
@@ -434,7 +438,7 @@ WITH
 
 ### <a name="data_source_name"></a>data_source_name
 
-データ ソースのユーザー定義の名前を指定します。 この名前は、SQL Database (SQL DB) のデータベース内で一意になる必要があります。
+データ ソースのユーザー定義の名前を指定します。 この名前は、SQL Database のデータベース内で一意になる必要があります。
 
 ### <a name="location--prefixpathport"></a>LOCATION = *`'<prefix>://<path[:port]>'`*
 
@@ -476,7 +480,7 @@ WITH
 
 構成されている外部データ ソースの種類を指定します。 このパラメーターは常に必要ではありません。
 
-- SQL Database からのエラスティック クエリを使用したクロスデータベース クエリには、RDBMS を使用します。  
+- SQL Database からのエラスティック クエリを使用したクロスデータベース クエリには、RDBMS を使用します。
 - シャード化された SQL Database への接続時に外部データ ソースを作成する場合は、SHARD_MAP_MANAGER を使用します。
 - [BULK INSERT][bulk_insert] または [OPENROWSET][openrowset] を使用して、一括操作を実行する場合は、BLOB_STORAGE を使用します。
 
@@ -506,7 +510,7 @@ SQL Database 内のデータベースに対する CONTROL アクセス許可が�
 
 ## <a name="locking"></a>ロック
 
-EXTERNAL DATA SOURCE オブジェクトを共有ロックします。  
+EXTERNAL DATA SOURCE オブジェクトを共有ロックします。
 
 ## <a name="examples"></a>例 :
 
@@ -545,7 +549,7 @@ RDBMS を参照する外部データ ソースを作成するには、SQL Databa
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>'
 ;
 
-CREATE DATABASE SCOPED CREDENTIAL SQL_Credential  
+CREATE DATABASE SCOPED CREDENTIAL SQL_Credential
 WITH
      IDENTITY  = '<username>'
 ,    SECRET    = '<password>'
@@ -630,22 +634,22 @@ WITH
 
 |                                                              |                                                              |                                            |                                                              |      |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------ | ------------------------------------------------------------ | ---- |
-| [SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017) | [SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current) | **_\* SQL Data<br />Warehouse \*_** &nbsp; | [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7) |      |
+| [SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017) | [SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current) | **_\* Azure Synapse<br />Analytics \*_** &nbsp; | [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7) |      |
 |                                                              |                                                              |                                            |                                                              |      |
 
 &nbsp;
 
-## <a name="overview-azure-sql-data-warehouse"></a>概要:Azure SQL Data Warehouse
+## <a name="overview-azure-synapse-analytics"></a>概要:Azure Synapse Analytics
 
 PolyBase 用の外部データ ソースを作成します。 外部データ ソースを使用して接続を確立し、次の主なユース ケースをサポートします。[PolyBase][intro_pb] を使用したデータ仮想化とデータ読み込み
 
 > [!IMPORTANT]  
-> SQL Database と[エラスティック クエリ][remote_eq]を使用して SQL Data Warehouse インスタンスにクエリを実行するために外部データ ソースを作成するには、「[SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current)」を参照してください。
+> Azure SQL Database と[エラスティック クエリ][remote_eq]を使用して SQL Analytics リソースに対してクエリを実行するために外部データ ソースを作成するには、「[SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current)」を参照してください。
 
 ## <a name="syntax"></a>構文
 
 ```sql
-CREATE EXTERNAL DATA SOURCE <data_source_name>  
+CREATE EXTERNAL DATA SOURCE <data_source_name>
 WITH
 (    LOCATION                  = '<prefix>://<path>[:<port>]'
 [,   CREDENTIAL                = <credential_name> ]
@@ -658,7 +662,7 @@ WITH
 
 ### <a name="data_source_name"></a>data_source_name
 
-データ ソースのユーザー定義の名前を指定します。 この名前は、SQL Data Warehouse (SQL DW) のデータベース内で一意になる必要があります。
+データ ソースのユーザー定義の名前を指定します。 この名前は、Azure Synapse の SQL データベース内で一意になる必要があります。
 
 ### <a name="location--prefixpathport"></a>LOCATION = *`'<prefix>://<path[:port]>'`*
 
@@ -677,8 +681,8 @@ WITH
 
 場所を設定する場合の追加の注意事項とガイダンス:
 
-- 既定のオプションでは、[Azure Data Lake Storage Gen 2 のプロビジョニング時に`enable secure SSL connections`] を使用します。 この設定を有効にした場合は、セキュリティで保護された SSL 接続を選択したときに `abfss` を使用する必要があります。 注意 `abfss` は、セキュリティで保護されていない SSL 接続にも使用できます。 
-- SQL Data Warehouse エンジンでは、オブジェクトの作成時に、外部データ ソースの存在が検証されません。 検証するには、外部データ ソースを使用して外部テーブルを作成します。
+- 既定のオプションでは、[Azure Data Lake Storage Gen 2 のプロビジョニング時に`enable secure SSL connections`] を使用します。 この設定を有効にした場合は、セキュリティで保護された SSL 接続を選択したときに `abfss` を使用する必要があります。 注意 `abfss` は、セキュリティで保護されていない SSL 接続にも使用できます。
+- Azure Synapse では、オブジェクトの作成時に、外部データ ソースの存在が検証されません。 。 検証するには、外部データ ソースを使用して外部テーブルを作成します。
 - 一貫性のあるクエリ セマンティクスを確保するため、Hadoop をクエリする際は、すべてのテーブルに同じ外部データ ソースを使用します。
 - `wasb` は Azure BLOB ストレージの既定のプロトコルです。 `wasbs` は省略可能ですが、セキュリティで保護された SSL 接続を使用してデータが送信されるため、推奨されます。
 
@@ -706,11 +710,11 @@ WITH
 
 ## <a name="permissions"></a>アクセス許可
 
-SQL Data Warehouse 内のデータベースに対する CONTROL アクセス許可が必要です。
+データベースに対する CONTROL 権限が必要です。
 
 ## <a name="locking"></a>ロック
 
-EXTERNAL DATA SOURCE オブジェクトを共有ロックします。  
+EXTERNAL DATA SOURCE オブジェクトを共有ロックします。
 
 ## <a name="security"></a>Security
 
@@ -843,8 +847,8 @@ CREATE EXTERNAL DATA SOURCE ext_datasource_with_abfss WITH (TYPE = hadoop, LOCAT
 - [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc]
 - [CREATE EXTERNAL FILE FORMAT (Transact-SQL)][create_eff]
 - [CREATE EXTERNAL TABLE (Transact-SQL)][create_etb]
-- [CREATE EXTERNAL TABLE AS SELECT (Azure SQL Data Warehouse)][create_etb_as_sel]
-- [CREATE TABLE AS SELECT (Azure SQL Data Warehouse)][create_tbl_as_sel]
+- [CREATE EXTERNAL TABLE AS SELECT (Azure Synapse Analytics)][create_etb_as_sel]
+- [CREATE TABLE AS SELECT (Azure Synapse Analytics)][create_tbl_as_sel]
 - [sys.external_data_sources (Transact-SQL)][cat_eds]
 - [Shared Access Signatures (SAS) の使用][sas_token]
 
@@ -885,7 +889,7 @@ CREATE EXTERNAL DATA SOURCE ext_datasource_with_abfss WITH (TYPE = hadoop, LOCAT
 
 |                                                              |                                                              |                                                              |                                                         |      |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------- | ---- |
-| [SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017) | [SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current) | [SQL Data<br />Warehouse](create-external-data-source-transact-sql.md?view=azure-sqldw-latest) | **_\* Analytics<br />Platform System (PDW) \*_** &nbsp; |      |
+| [SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017) | [SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current) | [Azure Synapse<br />Analytics](create-external-data-source-transact-sql.md?view=azure-sqldw-latest) | **_\* Analytics<br />Platform System (PDW) \*_** &nbsp; |      |
 |                                                              |                                                              |                                                              |                                                         |      |
 
 &nbsp;
@@ -897,7 +901,7 @@ PolyBase クエリ用の外部データ ソースを作成します。 外部デ
 ## <a name="syntax"></a>構文
 
 ```sql
-CREATE EXTERNAL DATA SOURCE <data_source_name>  
+CREATE EXTERNAL DATA SOURCE <data_source_name>
 WITH
 (    LOCATION                  = '<prefix>://<path>[:<port>]'
 [,   CREDENTIAL                = <credential_name> ]
@@ -960,7 +964,7 @@ WITH
 
 Hortonworks または Cloudera に接続する場合は、このオプションの値を構成します。
 
-`RESOURCE_MANAGER_LOCATION` が定義されている場合、クエリ オプティマイザーでは、パフォーマンスを向上させるためにコストに基づいて決定が下されます。 MapReduce ジョブを使用して、Hadoop に計算をプッシュ ダウンできます。 `RESOURCE_MANAGER_LOCATION` を指定すると、Hadoop と SQL の間で転送されるデータ量が大幅に減少し、それによってクエリのパフォーマンスが向上する可能性があります。  
+`RESOURCE_MANAGER_LOCATION` が定義されている場合、クエリ オプティマイザーでは、パフォーマンスを向上させるためにコストに基づいて決定が下されます。 MapReduce ジョブを使用して、Hadoop に計算をプッシュ ダウンできます。 `RESOURCE_MANAGER_LOCATION` を指定すると、Hadoop と SQL の間で転送されるデータ量が大幅に減少し、それによってクエリのパフォーマンスが向上する可能性があります。
 
 Resource Manager を指定しない場合、Hadoop への計算のプッシュが、PolyBase クエリに対して無効になります。
 
@@ -978,7 +982,7 @@ Resource Manager を指定しない場合、Hadoop への計算のプッシュ�
 
 サポートされている Hadoop バージョンの完全な一覧については、「[PolyBase 接続構成 (Transact-SQL)][connectivity_pb]」を参照してください。
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > RESOURCE_MANAGER_LOCATION 値は、外部データ ソースを作成するときに検証されません。 正しくない値を入力すると、指定された値で解決できないため、プッシュ ダウンが試行されるたびに実行時にクエリ エラーが発生する可能性があります。
 
 「[プッシュダウンが有効になっている Hadoop を参照する外部データ ソースを作成する](#b-create-external-data-source-to-reference-hadoop-with-push-down-enabled)」では、具体的な例と追加のガイダンスを提供しています。
@@ -992,7 +996,7 @@ Analytics Platform System (Parallel Data Warehouse つまり PDW) のデータ�
 
 ## <a name="locking"></a>ロック
 
-EXTERNAL DATA SOURCE オブジェクトを共有ロックします。  
+EXTERNAL DATA SOURCE オブジェクトを共有ロックします。
 
 ## <a name="security"></a>Security
 
@@ -1008,7 +1012,7 @@ PolyBase では、ほとんどの外部データ ソースにプロキシ ベー
 
 Hortonworks または Cloudera Hadoop クラスターを参照する外部データ ソースを作成するには、Hadoop `Namenode` のマシン名または IP アドレスとポートを指定します。 <!-- Provide the Nameservice ID as the `LOCATION` for highly available configurations. -->
 
-```sql  
+```sql
 CREATE EXTERNAL DATA SOURCE MyHadoopCluster
 WITH
 (    LOCATION = 'hdfs://10.10.10.10:8050'
@@ -1021,7 +1025,7 @@ WITH
 
 `RESOURCE_MANAGER_LOCATION` オプションを指定して、PolyBase クエリの Hadoop への計算のプッシュダウンを有効にします。 有効にすると、PolyBase によって、クエリの計算を Hadoop にプッシュするかどうかがコストに基づいて決定されます。
 
-```sql  
+```sql
 CREATE EXTERNAL DATA SOURCE MyHadoopCluster
 WITH
 (    LOCATION                  = 'hdfs://10.10.10.10:8020'
@@ -1035,7 +1039,7 @@ WITH
 
 Hadoop クラスターが Kerberos でセキュリティ保護されていることを確認するには、Hadoop core-site.xml で hadoop.security.authentication プロパティの値を確認します。 Kerberos でセキュリティ保護された Hadoop クラスターを参照するには、ご自分の Kerberos ユーザー名とパスワードを含むデータベース スコープの資格情報を指定する必要があります。 データベース マスター キーは、データベース スコープの資格情報シークレットの暗号化に使用されます。
 
-```sql  
+```sql
 -- Create a database master key if one does not already exist, using your own password. This key is used to encrypt the credential secret in next step.
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo'
 ;

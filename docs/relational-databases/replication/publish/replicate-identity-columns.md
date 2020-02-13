@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: eb2f23a8-7ec2-48af-9361-0e3cb87ebaf7
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: a0e861a1619921081a81fa52f72ba6fc88e98668
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: a7feb252e98be7cc820b074bcb3c3b2c6ff4ff5d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908347"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287591"
 ---
 # <a name="replicate-identity-columns"></a>ID 列のレプリケート
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  IDENTITY プロパティを列に割り当てると、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、その ID 列を含むテーブルに挿入された新しい行に対して連続する番号が自動的に生成されます。 詳細については、「[IDENTITY &#40;プロパティ&#41; &#40;Transact-SQL&#41;](../../../t-sql/statements/create-table-transact-sql-identity-property.md)」を参照してください。 ID 列は主キーの一部に含まれる場合があるため、ID 列の値が重複しないようにすることが重要です。 複数のノードで更新されるレプリケーション トポロジで ID 列を使用するには、レプリケーション トポロジ内の各ノードで異なる範囲の ID 値を使用して、重複が生じないようにする必要があります。  
+  IDENTITY プロパティを列に割り当てると、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、その ID 列を含むテーブルに挿入された新しい行に対して連続する番号が自動的に生成されます。 詳細については、「[IDENTITY &#40;プロパティ&#41; &#40;Transact-SQL&#41;](../../../t-sql/statements/create-table-transact-sql-identity-property.md)」を参照してください。 ID 列は主キーの一部に含まれる場合があるため、ID 列の値が重複しないようにすることが重要です。 複数のノードで更新されるレプリケーション トポロジで ID 列を使用するには、レプリケーション トポロジ内の各ノードで異なる範囲の ID 値を使用して、重複が生じないようにする必要があります。  
   
  たとえば、パブリッシャーに 1 ～ 100 の範囲を、サブスクライバー A に 101 ～ 200 の範囲を、サブスクライバー B に 201 ～ 300 の範囲を、それぞれ割り当てることができます。 パブリッシャーに行が挿入され、ID 値がたとえば 65 の場合、この値が各サブスクライバーにレプリケートされます。 レプリケーションによって各サブスクライバーにデータが挿入されると、サブスクライバー テーブル内の ID 列の値は増えずに、リテラル値 65 が挿入されます。 ID 列の値が増えるのは、ユーザーによる挿入のみで、レプリケーション エージェントの挿入では増えません。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "72908347"
 > [!WARNING]  
 >  大規模な一括挿入処理中、レプリケーション トリガーが起動されるのは、挿入の行ごとではなく 1 度だけです。 その結果、大規模な挿入処理中に ID 範囲が使い果たされると、 **INSERT INTO** ステートメントなど、挿入ステートメントが失敗する場合があります。  
   
-|データ型|範囲|  
+|データ型|Range|  
 |---------------|-----------|  
 |**tinyint**|自動管理ではサポートされません。|  
 |**smallint**|-2^15 (-32,768) ～ 2^15-1 (32,767)|  

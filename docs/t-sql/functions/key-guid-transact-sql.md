@@ -20,13 +20,13 @@ ms.assetid: 9246c7b2-7098-42c4-a222-cbf30267c46a
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 16230302a44ef9c56d3b2ab9ff17de6288ead371
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68109365"
 ---
-# <a name="keyguid-transact-sql"></a>KEY_GUID (Transact-SQL)
+# <a name="key_guid-transact-sql"></a>KEY_GUID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   データベース内の対称キーの GUID を返します。  
@@ -47,7 +47,7 @@ Key_GUID( 'Key_Name' )
 ## <a name="return-types"></a>戻り値の型  
  **uniqueidentifier**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  キーの作成時に ID 値が指定された場合、その GUID はその ID 値の MD5 ハッシュです。 ID 値が指定されなかった場合は、サーバーによって GUID が生成されています。  
   
  一時キーの場合、キー名の先頭は番号記号 (#) でなければなりません。  
@@ -55,7 +55,7 @@ Key_GUID( 'Key_Name' )
 ## <a name="permissions"></a>アクセス許可  
  一時キーは、そのキーが作成されたセッションでのみ使用できます。したがって、アクセスに必要な権限はありません。 一時キーでないキーにアクセスするには、呼び出し側がそのキーに対して権限を持っている必要があり、またキーに対する VIEW 権限が拒否されていないことが条件となります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、`ABerglundKey1` という対称キーの GUID を返します。  
   
 ```  

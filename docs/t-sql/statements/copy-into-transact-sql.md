@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 4cdfba4070e8788687c453435b4a6d525aeb44fe
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.openlocfilehash: 4e42c60e945512c09b88b19b18b6f24ce45b46dc
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75321836"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76536648"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY (Transact-SQL) (プレビュー)
 
@@ -390,7 +390,7 @@ COPY コマンドを使用すると、機能が一般公開される時点まで
 COPY コマンドによって自動的にファイルが分割されるため、Parquet ファイルと ORC ファイルを分割する必要はありません。 最適なパフォーマンスを得るには、Azure ストレージ アカウントの Parquet ファイルと ORC ファイルが 256MB 以上である必要があります。 
 
 ### <a name="when-will-the-copy-command-be-generally-available"></a>COPY コマンドはいつ一般公開されますか?
-COPY コマンドは、通常、次の暦年 (2020 年) の初めに一般公開されます。 
+COPY コマンドは、この暦年 (2020) の終わりまでに一般提供されます。 
 
 ### <a name="are-there-any-known-issues-with-the-copy-command"></a>COPY コマンドに既知の問題はありますか?
 

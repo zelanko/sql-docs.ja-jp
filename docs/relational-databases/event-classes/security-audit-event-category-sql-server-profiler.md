@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f07afead7d74b358c0220dc7ed22dbf31ebbf11a
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056048"
 ---
 # <a name="security-audit-event-category-sql-server-profiler"></a>Security Audit イベント カテゴリ (SQL Server Profiler)
@@ -27,7 +27,7 @@ ms.locfileid: "74056048"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |-----------|-----------------|  
 |[Audit Add DB User イベント クラス](../../relational-databases/event-classes/audit-add-db-user-event-class.md)|データベース ユーザーとしてデータベースにログインが追加または削除されたことを示します。|  
 |[Audit Add Login to Server Role イベント クラス](../../relational-databases/event-classes/audit-add-login-to-server-role-event-class.md)|固定サーバー ロールにログインが追加または削除されたことを示します。|  
@@ -49,7 +49,7 @@ ms.locfileid: "74056048"
 |[Audit Database Operation イベント クラス](../../relational-databases/event-classes/audit-database-operation-event-class.md)|チェックポイント処理やクエリ通知のサブスクライブなど、さまざまな操作が行われたことを示します。|  
 |[Audit Database Principal Impersonation イベント クラス](../../relational-databases/event-classes/audit-database-principal-impersonation-event-class.md)|データベース スコープ内で権限の借用が行われたことを示します。|  
 |[Audit Database Principal Management イベント クラス](../../relational-databases/event-classes/audit-database-principal-management-event-class.md)|データベースのプリンシパルが作成、変更、または削除されたことを示します。|  
-|[Audit Database Scope GDR イベント クラス](../../relational-databases/event-classes/audit-database-scope-gdr-event-class.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のユーザーがステートメント権限に関して GRANT、REVOKE、DENY のいずれかを実行したことを示します。|  
+|[Audit Database Scope GDR イベント クラス](../../relational-databases/event-classes/audit-database-scope-gdr-event-class.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のユーザーがステートメント権限に関して GRANT、REVOKE、DENY のいずれかを実行したことを示します。|  
 |[Audit DBCC イベント クラス](../../relational-databases/event-classes/audit-dbcc-event-class.md)|DBCC コマンドが発行されたことを示します。|  
 |[Audit Fulltext イベント クラス](../../relational-databases/event-classes/audit-fulltext-event-class.md)|フルテキスト イベントが発生したことを示します。|  
 |[Audit Login Change Password イベント クラス](../../relational-databases/event-classes/audit-login-change-password-event-class.md)|ユーザーが自身の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン パスワードを変更したことを示します。|  

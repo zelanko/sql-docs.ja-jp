@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 8aa3f690b79167df6de5b27f6dd78276c61e0b26
-ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71342061"
 ---
 # <a name="opendatasource-transact-sql"></a>OPENDATASOURCE (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "71342061"
 
   リンク サーバー名を使用せずに、4 つの要素で構成されるオブジェクト名の一部としてアドホック接続情報を提供します。  
 
- ![リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "[リンク] アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
@@ -66,7 +66,7 @@ OPENDATASOURCE ( 'provider_name', 'init_string' )
 |Catalog|DBPROP_INIT_CATALOG|データ ソースに接続するときの初期カタログまたは既定のカタログの名前。|  
 |Integrated Security|DBPROP_AUTH_INTEGRATED|Windows 認証を指定する SSPI|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 `OPENROWSET` では、列の照合順序セットに関係なく、常にインスタンスの照合順序が継承されます。
 
 `OPENDATASOURCE` は、OLE DB データ ソースからリモート データにアクセスするときに使用できます。ただし、この場合は、指定したプロバイダーに対して DisallowAdhocAccess レジストリ オプションが明示的に 0 に設定されており、Ad Hoc Distributed Queries 詳細構成オプションが有効になっている必要があります。 これらのオプションが設定されていない場合は、既定でアドホック アクセスは許可されません。  
@@ -85,7 +85,7 @@ OPENDATASOURCE ( 'provider_name', 'init_string' )
 ## <a name="permissions"></a>アクセス許可  
  すべてのユーザーが OPENDATASOURCE を実行できます。 リモート サーバーへの接続に使用される権限は、接続文字列によって決まります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 
 ### <a name="a-using-opendatasource-with-select-and-the-sql-server-ole-db-driver"></a>A. OPENDATASOURCE を SELECT および SQL Server OLE DB Driver と共に使用する  
  次の例では、[Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) を使用して、リモート サーバー `Seattle1` の [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースの `HumanResources.Department` テーブルにアクセスします。 `SELECT` ステートメントは、返す行セットの定義に使用します。 プロバイダーの文字列には、`Server` と `Trusted_Connection` キーワードが含まれます。 これらのキーワードは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB Driver によって認識されます。  

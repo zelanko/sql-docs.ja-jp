@@ -12,10 +12,10 @@ ms.assetid: 7bf8ac6a-5599-43ab-bf5c-e072c11b85a0
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 63cc8413175555e37a29caf288a72815824c3778
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296260"
 ---
 # <a name="save-ssis-package-sql-server-import-and-export-wizard"></a>[SSIS パッケージの保存]\(SQL Server インポートおよびエクスポート ウィザード)
@@ -35,10 +35,10 @@ ms.locfileid: "71296260"
 ![パッケージの保存 - 共通オプション](../../integration-services/import-export-data/media/save-package-common-options.png)
 
 ## <a name="provide-a-name-and-description-for-the-package"></a>パッケージの名前と説明を指定します。  
- **[名前]**  
+ **Name**  
  パッケージの一意な名前を指定します。  
   
- **[説明]**  
+ **説明**  
  パッケージの説明を指定します。 パッケージを見るだけでその内容がわかり、保守が容易になるように、パッケージの目的について記述することをお勧めします。  
   
  **移行先**  
@@ -58,13 +58,13 @@ ms.locfileid: "71296260"
  **サーバー名**  
  保存先のサーバー名を入力または選択します。  
    
- **Windows 認証を使用する**  
+ **[Windows 認証を使用する]**  
 Windows 統合認証を使用してサーバーに接続します。 これは、推奨される認証方法です。  
   
- **SQL Server 認証を使用する**  
+ **[SQL Server 認証を使用する]**  
 SQL Server 認証を使用してサーバーに接続します。  
   
- **User name**  
+ **ユーザー名**  
 SQL Server 認証を指定した場合は、ユーザー名を入力します。  
   
  **パスワード**  

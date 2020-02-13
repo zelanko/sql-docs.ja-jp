@@ -17,10 +17,10 @@ ms.assetid: 8c143682-9c81-4150-83d6-1d9678151d37
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 76ce8959e9b9cedb9a1e8a096913a3d6257cfd2d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298015"
 ---
 # <a name="audit-transformation"></a>監査変換
@@ -33,7 +33,7 @@ ms.locfileid: "71298015"
 ## <a name="system-variables"></a>システム変数  
  次の表では、監査変換で使用できるシステム変数について説明します。  
   
-|システム変数|インデックス|[説明]|  
+|システム変数|インデックス|説明|  
 |---------------------|-----------|-----------------|  
 |**ExecutionInstanceGUID**|0|パッケージの実行インスタンスを識別する GUID です。|  
 |**PackageID**|1|パッケージの一意識別子です。|  
@@ -54,7 +54,7 @@ ms.locfileid: "71298015"
   
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [共通プロパティ](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [変換のカスタム プロパティ](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -70,7 +70,7 @@ ms.locfileid: "71298015"
  **[監査の種類]**  
  監査情報を得るために使用できるシステム変数を選択します。  
   
-|[値]|[説明]|  
+|Value|説明|  
 |-----------|-----------------|  
 |**[実行インスタンスの GUID]**|パッケージの実行インスタンスを個別に識別する GUID を挿入します。|  
 |**[パッケージ ID]**|パッケージを個別に識別する GUID を挿入します。|  
@@ -78,8 +78,8 @@ ms.locfileid: "71298015"
 |**[バージョン ID]**|パッケージのバージョンを個別に識別する GUID を挿入します。|  
 |**[実行開始時刻]**|パッケージの実行が開始される時刻を挿入します。|  
 |**コンピューター名**|パッケージを起動したコンピューターの名前を挿入します。|  
-|**User name**|パッケージを起動したユーザーのログイン名を挿入します。|  
-|**[タスク名]**|監査変換が関連付けられているデータ フロー タスクの名前を挿入します。|  
+|**ユーザー名**|パッケージを起動したユーザーのログイン名を挿入します。|  
+|**タスク名**|監査変換が関連付けられているデータ フロー タスクの名前を挿入します。|  
 |**[タスク ID]**|監査変換が関連付けられているデータ フロー タスクを個別に識別する GUID を挿入します。|  
   
   

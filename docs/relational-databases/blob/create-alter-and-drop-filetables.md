@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 7ed2d476be0ba9a22b42e5c7e60789a4059ea73c
-ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
+ms.openlocfilehash: 5483c2b6d344d72eb161b303abf1bf7e56825987
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816735"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76922890"
 ---
 # <a name="create-alter-and-drop-filetables"></a>FileTable の作成、変更、および削除
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "71816735"
   
 -   自動的に作成される 3 つの主キーと一意の制約で使用する名前。  
   
-###  <a name="HowToCreate"></a>方法:FileTable を作成する  
+###  <a name="HowToCreate"></a> 方法:FileTable を作成する  
  **Transact-SQL を使用して FileTable を作成する**  
  FileTable を作成するには、**AS FileTable** オプションを指定して [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) ステートメントを呼び出します。 FileTable には固定スキーマがあるため、列の一覧を指定する必要はありません。 新しい FileTable には次の設定を指定できます。  
   
@@ -161,7 +161,7 @@ GO
   
 |||  
 |-|-|  
-|**列**|**インデックスの種類**|  
+|**[列]**|**[インデックスの種類]**|  
 |[path_locator] ASC|主キー、非クラスター化|  
 |[parent_path_locator] ASC、<br /><br /> [name] ASC|一意、非クラスター化|  
 |[stream_id] ASC|一意、非クラスター化|  

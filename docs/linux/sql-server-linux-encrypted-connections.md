@@ -11,10 +11,10 @@ ms.technology: linux
 helpviewer_keywords:
 - Linux, encrypted connections
 ms.openlocfilehash: 975a312988a7df4bdb4fb2858d7b0fcbe95cea33
-ms.sourcegitcommit: 6413b7495313830ad1ae5aefe0c09e8e7a284b07
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71016857"
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>SQL Server on Linux への接続の暗号化
@@ -70,7 +70,7 @@ ms.locfileid: "71016857"
         - **macOS**: 
            - 証明書を ```/usr/local/etc/openssl/certs``` にコピーします。
            - 次のコマンドを実行して、ハッシュ値を取得します。```/usr/local/Cellar/openssl/1.0.2l/openssl x509 -hash -in mssql.pem -noout```
-           - 証明書の名前を値に変更します。 例: ```mv mssql.pem dc2dd900.0```」を参照してください。 ```/usr/local/etc/openssl/certs``` に dc2dd900.0 が含まれていることを確認します。
+           - 証明書の名前を値に変更します。 (例: ```mv mssql.pem dc2dd900.0```)。 ```/usr/local/etc/openssl/certs``` に dc2dd900.0 が含まれていることを確認します。
     
 -   **接続文字列の例** 
 
@@ -133,5 +133,5 @@ ms.locfileid: "71016857"
 |--- |--- |
 |この証明書チェーンは、信頼されていない機関によって発行されました。  |このエラーは、TLS ハンドシェイク中に SQL Server によって提示された証明書の署名をクライアントで検証できない場合に発生します。 クライアントで [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 証明書が直接信頼されているか、SQL Server 証明書に署名した CA が信頼されていることを確認します。 |
 |対象のプリンシパル名が間違っています。  |SQL Server の証明書の [共通名] フィールドと、クライアントの接続文字列に指定されているサーバー名が一致していることを確認します。 |  
-|既存の接続はリモート ホストに強制的に切断されました。 |このエラーは、SQL Server によって要求されている TLS プロトコルのバージョンがクライアントでサポートされていない場合に発生する可能性があります。 たとえば、TLS 1.2 を要求するように [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] が構成されている場合は、クライアントでも TLS 1.2 プロトコルがサポートされていることを確認します。 |
+|リモート ホストによって、既存の接続は強制的に切断されました。 |このエラーは、SQL Server によって要求されている TLS プロトコルのバージョンがクライアントでサポートされていない場合に発生する可能性があります。 たとえば、TLS 1.2 を要求するように [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] が構成されている場合は、クライアントでも TLS 1.2 プロトコルがサポートされていることを確認します。 |
 | | |   

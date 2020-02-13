@@ -16,16 +16,16 @@ ms.assetid: 4bfe5734-3003-4165-afd4-b1131ea26e2b
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a39f9cf72f08e80face176412851778f1afec174
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982459"
 ---
 # <a name="restore-statements---arguments-transact-sql"></a>RESTORE ステートメントの引数 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-このトピックでは、RESTORE {DATABASE|LOG} ステートメントと、関連する補助ステートメントRESTORE FILELISTONLY、RESTORE HEADERONLY、RESTORE LABELONLY、RESTORE REWINDONLY、および RESTORE VERIFYONLY の「構文」に記載されている引数について説明します。 ほとんどの引数は、これら 6 つのステートメントでのみ使用できます。 各引数のサポート状況については、引数の説明で示します。  
+このトピックでは、RESTORE {DATABASE|LOG} ステートメントと、関連する補助ステートメントRESTORE FILELISTONLY、RESTORE HEADERONLY、RESTORE LABELONLY、RESTORE REWINDONLY、RESTORE VERIFYONLY。 ほとんどの引数は、これら 6 つのステートメントでのみ使用できます。 各引数のサポート状況については、引数の説明で示します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -541,7 +541,7 @@ KEEP_REPLICATION は、ログ配布と共に動作するようにレプリケー
   
 -   [RESTORE LABELONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  追加説明については、次のトピックを参照してください。  
   
 -   [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
@@ -565,7 +565,7 @@ KEEP_REPLICATION は、ログ配布と共に動作するようにレプリケー
   
  次の表で説明するように、このオプションの動作はステートメントによって異なります。  
   
-|ステートメントから削除してください。|バックアップ セットの FILE オプションの動作|  
+|ステートメント|バックアップ セットの FILE オプションの動作|  
 |---------------|-----------------------------------------|  
 |RESTORE|既定のバックアップ セット ファイル番号は 1 です。 1 つの RESTORE ステートメントでは、1 つのバックアップ セットの FILE オプションのみが許可されます。 ここではバックアップ セットを順序どおり指定することが重要です。|  
 |RESTORE FILELISTONLY|既定のバックアップ セット ファイル番号は 1 です。|  
@@ -594,7 +594,7 @@ KEEP_REPLICATION は、ログ配布と共に動作するようにレプリケー
 |MOVE|√|-|-|-|-|√|  
 |PASSWORD|√|√|√|-|-|√|  
 |{ REWIND &#124; NOREWIND }|√|REWIND のみ|REWIND のみ|REWIND のみ|-|√|  
-|STATS|√|-|-|-|-|√|  
+|[統計]|√|-|-|-|-|√|  
 |{ UNLOAD &#124; NOUNLOAD }|√|√|√|√|√|√|  
   
  <sup>1</sup> FILE **=** _backup\_set\_file\_number_。{FILE | FILEGROUP} とは異なります。  
@@ -614,7 +614,7 @@ KEEP_REPLICATION は、ログ配布と共に動作するようにレプリケー
   
 -   [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  例については、次のトピックを参照してください。  
   
 -   [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  

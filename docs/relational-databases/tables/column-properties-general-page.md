@@ -14,13 +14,13 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 732c1c759eec875af0bd65b763b21d912ffe2de7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68085760"
 ---
-# <a name="column-properties-general-page"></a>[列のプロパティ] \([全般] ページ)
+# <a name="column-properties-general-page"></a>[列のプロパティ] ([全般] ページ)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   このページを使用すると、選択されている列のプロパティを表示できます。  
@@ -28,7 +28,7 @@ ms.locfileid: "68085760"
  このページの情報は読み取り専用です。 列を変更するには、 **[列のプロパティ]** ダイアログ ボックスを閉じて、オブジェクト エクスプローラーでそのテーブルを展開して [列] を展開します。次に、列を右クリックして、 **[デザイン]** をクリックします。  
   
 ## <a name="options"></a>オプション  
- **[名前]**  
+ **Name**  
  列の名前です。  
   
  **[データ型]**  
@@ -40,7 +40,7 @@ ms.locfileid: "68085760"
  **主キー**  
  列が主キーであるかどうかを示します。 指定できる値は、 **[True]** および **[False]** です。  
   
- **Null を許容**  
+ **[NULL を許容]**  
  列が NULL 値を許容するかどうかを示します。 指定できる値は、 **[True]** および **[False]** です。  
   
  **[計算値]**  
@@ -56,7 +56,7 @@ ms.locfileid: "68085760"
  ID 列の最初の行の値を示します。  
   
  **[IDENTITY インクリメント]**  
- **[ID の増分値]** プロパティは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で挿入される行の ID 値が生成されるときに、既存の行の最大 ID 値に追加される値を指定します。  
+ **[ID の増分値]** プロパティは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で挿入される行の ID 値が生成されるときに、既存の行の最大 ID 値に追加される値を指定します。  
   
  **[既定のバインド]**  
  列にバインドされた [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定値です。 既定値がバインドされていない場合、このオプションは空白になります。  
@@ -73,7 +73,7 @@ ms.locfileid: "68085760"
  **[データ型]**  
  列によって許容される文字またはバイトの最大数を示します。  
   
- **[照合順序]**  
+ **Collation**  
  列の現在の照合順序を表示します。 空白の場合、照合順序プロパティはオブジェクトから継承されます。  
   
  **[数値有効桁数]**  

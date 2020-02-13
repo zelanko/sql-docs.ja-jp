@@ -22,10 +22,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f3c261b2cc8a29af74adba6e32c646a11e940070
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982078"
 ---
 # <a name="alter-table-column_definition-transact-sql"></a>ALTER TABLE column_definition (Transact-SQL)
@@ -89,13 +89,13 @@ column_name <data_type>
   
  *type_name* は次のいずれかです。  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム データ型。  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム データ型。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム データ型に基づく別名データ型。 このデータ型をテーブル定義で使用するには、先に CREATE TYPE を使って作成しておく必要があります。  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] ユーザー定義型とそれが属するスキーマ。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] ユーザー定義型をテーブル定義で使用するには、先に CREATE TYPE を使って作成しておく必要があります。  
   
- *type_schema_name* を指定しない場合、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]は次の順序で *type_name* を参照します。  
+ *type_schema_name* を指定しない場合、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] では次の順序で *type_name* が参照されます。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のシステム データ型  
   
@@ -234,14 +234,14 @@ ADD MASKED WITH ( FUNCTION = ' *mask_function* ')
   
  関数のパラメーターについては、「[動的なデータ マスキング](../../relational-databases/security/dynamic-data-masking.md)」を参照してください。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  追加される列が **uniqueidentifier** データ型の場合は、NEWID() 関数を使用する既定値を定義することで、テーブル内にある既存の各行の新しい列に一意の識別子値を設定できます。  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]では、列定義において DEFAULT、IDENTITY、ROWGUIDCOL または列制約を指定する場合に順序は適用されません。  
   
  列の追加によりデータ行のサイズが 8,060 バイトを超える場合、ALTER TABLE ステートメントは失敗します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  例については、「[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  

@@ -24,16 +24,16 @@ ms.assetid: a44d702b-b3fb-4950-8c8f-1adcf3f514ba
 author: pmasl
 ms.author: umajay
 ms.openlocfilehash: d0b6f9dac0cb065a9509040b5693b09b1fa9d5e5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68039099"
 ---
 # <a name="dbcc-inputbuffer-transact-sql"></a>DBCC INPUTBUFFER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-クライアントから [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに最後に送信されたステートメントを表示します。
+クライアントから [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに最後に送信されたステートメントを表示します。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -66,7 +66,7 @@ NO_INFOMSGS
 ## <a name="result-sets"></a>結果セット  
 DBCC INPUTBUFFER では、次の列を含む結果セットが返されます。
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**EventType**|**nvarchar(30)**|イベントの種類。 **RPC Event** または **Language Event** になります。 前回のイベントが検出されなかった場合、出力は **No Event** になります。|  
 |**パラメーター**|**smallint**|0 = テキスト<br /><br /> 1- *n* = パラメーター|  
@@ -99,7 +99,7 @@ SELECT @@spid;
   
 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] の Premium 階層および Business Critical 階層では、データベースで VIEW DATABASE STATE アクセス許可が必要です。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Standard、Basic、および General Purpose 階層の場合、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 管理者アカウントが必要です。
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 次の例では、前の接続で長いトランザクションが実行されている間に、2 番目の接続で `DBCC INPUTBUFFER` を実行します。
   
 ```sql

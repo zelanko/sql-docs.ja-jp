@@ -41,10 +41,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: cd6b2c3cea9876091532a5da3cf15bdda1da2d8d
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73530929"
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE ステートメント (Transact-SQL)
@@ -63,7 +63,7 @@ BACKUP コマンドで作成した SQL Database のバックアップを復元�
 
 ||||
 |-|-|-|
-|**\* _SQL Server \*_** &nbsp;|[SQL Database<br />マネージド インスタンス](restore-statements-transact-sql.md?view=azuresqldb-mi-current)|[Analytics Platform<br />System (PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016)
+|**_\* SQL Server \*_** &nbsp;|[SQL Database<br />マネージド インスタンス](restore-statements-transact-sql.md?view=azuresqldb-mi-current)|[Analytics Platform<br />System (PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016)
 ||||
 
 &nbsp;
@@ -378,7 +378,7 @@ RESTORE ステートメントでは、フルテキスト データに対し、�
 
 [!INCLUDE [big-data-clusters-master-instance-ha-endpoint-requirement](../../includes/big-data-clusters-master-instance-ha-endpoint-requirement.md)]
 
-## <a name="metadata"></a>メタデータ
+## <a name="metadata"></a>Metadata
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、各サーバー インスタンスのバックアップおよび復元動作を追跡する、バックアップおよび復元の履歴テーブルが含まれています。 復元を実行すると、バックアップ履歴テーブルも変更されます。 これらのテーブルについては、[バックアップの履歴とヘッダーの情報](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)に関するページを参照してください。
 
@@ -542,7 +542,7 @@ GO
 
 ### <a name="restoring_to_pit_using_STOPAT"></a> F. STOPAT を使って特定の時点の状態に復元する
 
-次の例では、データベースを `12:00 AM` `April 15, 2020` の状態に復元し、複数のログ バックアップが関連する復元操作を行います。 バックアップ デバイス `AdventureWorksBackups`において、復元するデータベース全体のバックアップはデバイス上の 3 番目のバックアップ セット (`FILE = 3`)、最初のログ バックアップは 4 番目のバックアップ セット (`FILE = 4`)、2 番目のログ バックアップは 5 番目のバックアップ セット (`FILE = 5`) です。
+次の例では、データベースを `12:00 AM``April 15, 2020` の状態に復元し、複数のログ バックアップが関連する復元操作を行います。 バックアップ デバイス `AdventureWorksBackups`において、復元するデータベース全体のバックアップはデバイス上の 3 番目のバックアップ セット (`FILE = 3`)、最初のログ バックアップは 4 番目のバックアップ セット (`FILE = 4`)、2 番目のログ バックアップは 5 番目のバックアップ セット (`FILE = 5`) です。
 
 ```sql
 RESTORE DATABASE AdventureWorks2012
@@ -978,7 +978,7 @@ RESTORE DATABASE を実行すると、次の条件下でエラーが発生しま
 ## <a name="locking"></a>ロック
 DATABASE オブジェクトに対して排他的ロックを実行します。
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 ### <a name="a-simple-restore-examples"></a>A. RESTORE の単純な例
 

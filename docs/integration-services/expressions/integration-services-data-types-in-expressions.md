@@ -14,10 +14,10 @@ ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2e2c8c8f77fd0643c503f5b817b050ff64529751
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297547"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>式における Integration Services データ型
@@ -67,7 +67,7 @@ ms.locfileid: "71297547"
 ## <a name="implicit-data-conversion"></a>暗黙的なデータ変換  
  データ型の暗黙的な変換は、式エバリュエーターがあるデータ型を別のデータ型に自動的に変換するときに行われます。 たとえば、 **smallint** 型を **int**型と比較する場合、比較を実行する前に、 **smallint** 型から **int** 型に暗黙的に変換されます。  
   
- 引数やオペランドに互換性のないデータ型がある場合は、式エバリュエーターは暗黙的なデータ変換を実行できません。 また、式エバリュエーターは、どのような値もブール値に暗黙的に変換することはできません。 代わりに、キャスト演算子を使用して引数とオペランドを明示的に変換する必要があります。 詳細については、「[Cast &#40;SSIS 式&#41;](../../integration-services/expressions/cast-ssis-expression.md)」を参照してください。  
+ 引数やオペランドに互換性のないデータ型がある場合は、式エバリュエーターは暗黙的なデータ変換を実行できません。 また、式エバリュエーターは、どのような値もブール値に暗黙的に変換することはできません。 代わりに、キャスト演算子を使用して引数とオペランドを明示的に変換する必要があります。 詳細については、「[Cast &#40;SSIS 式&#41;](../../integration-services/expressions/cast-ssis-expression.md)」をご覧ください。  
   
  次の図は、BINARY 演算での暗黙的な変換の結果のデータ型を示しています。 この表の列と行の交差部分は、左 (変換元) と右 (変換先) の型のオペランドによるバイナリ演算の結果のデータ型です。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "71297547"
 >   
 >  エラーや予期しない結果が発生しないように、 **True** および **False**については、特定の数値を参照するようなコードは記述しないでください。 可能な限り、ブール型の変数には、仕様で定められている論理値以外の値を使用しないようにしてください。  
   
- 詳細については、次の各トピックを参照してください。  
+ 詳細については、次のトピックを参照してください。  
   
 -   [== &#40;等しい&#41; &#40;SSIS 式&#41;](../../integration-services/expressions/equal-ssis-expression.md)  
   

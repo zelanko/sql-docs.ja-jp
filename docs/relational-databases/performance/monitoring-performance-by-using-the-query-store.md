@@ -15,10 +15,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f652fc8771162c81a7d86f0984eece90892e3cd3
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909310"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>クエリのストアを使用した、パフォーマンスの監視
@@ -47,7 +47,7 @@ ms.locfileid: "72909310"
 
 #### <a name="use-transact-sql-statements"></a>Transact-SQL ステートメントを使用する  
   
-**ALTER DATABASE** ステートメントを使用してクエリのストアを有効にします。 例:  
+**ALTER DATABASE** ステートメントを使用してクエリのストアを有効にします。 次に例を示します。  
   
 ```sql  
 ALTER DATABASE AdventureWorks2012 
@@ -111,7 +111,7 @@ INNER JOIN sys.query_store_query_text AS Txt
 ##  <a name="Regressed"></a> 機能低下したクエリ機能を使用する  
 クエリのストアを有効にしてから、[オブジェクト エクスプローラー] ペインのデータベースの部分を更新して、 **[クエリ ストア]** セクションを追加します。  
   
-![SQL Server 2016 の SSMS オブジェクト エクスプローラーでのクエリ ストア ツリー](../../relational-databases/performance/media/objectexplorerquerystore.PNG "SQL Server 2016 の SSMS オブジェクト エクスプローラーでのクエリ ストア ツリー")   ![SQL Server 2017 の SSMS オブジェクト エクスプローラーでのクエリ ストア ツリー](../../relational-databases/performance/media/objectexplorerquerystore_sql17.PNG "SQL Server 2017 の SSMS オブジェクト エクスプローラーでのクエリ ストア ツリー") 
+![SQL Server 2016 の SSMS オブジェクト エクスプローラーでのクエリ ストア ツリー](../../relational-databases/performance/media/objectexplorerquerystore.PNG "SQL Server 2016 の SSMS オブジェクト エクスプローラーでのクエリ ストア ツリー") ![SQL Server 2017 の SSMS オブジェクト エクスプローラーでのクエリ ストア ツリー](../../relational-databases/performance/media/objectexplorerquerystore_sql17.PNG "SQL Server 2017 の SSMS オブジェクト エクスプローラーでのクエリ ストア ツリー") 
   
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で **[機能低下したクエリ]** を選択し、 **[機能低下したクエリ]** ペインを開きます。 [機能低下したクエリ] ペインにクエリと、クエリのストア内のプランが表示されます。 上部のドロップダウン ボックスを使用し、さまざまな条件に基づいてクエリをフィルター処理します:**実行時間 (ミリ秒)** (既定)、CPU 時間 (ミリ秒)、論理読み取り (KB)、論理書き込み (KB)、物理読み取り (KB)、CLR 時間 (ミリ秒)、DOP、メモリ消費量 (KB)、行数、使用済みログ メモリ (KB)、使用済み一時 DB メモリ (KB)、待機時間 (ミリ秒)。  
 プランを選択して、グラフィカルなクエリ プランを表示します。 ボタンを使用して、ソース クエリの表示、クエリ プランの強制と強制解除、グリッド形式とグラフ形式の切り替え、選択したプランの比較 (複数選択時)、表示の更新を行うことができます。  
@@ -141,10 +141,10 @@ INNER JOIN sys.query_store_query_text AS Txt
 
 |||| 
 |-|-|-|  
-|以前のエクスペリエンス|新しいエクスペリエンス|操作|
-|データベースごとの高い RESOURCE_SEMAPHORE 待機|特定のクエリに対するクエリ ストアでの高いメモリ待機|クエリ ストアでメモリ消費量の多いクエリを探します。 これらのクエリは、影響を受けるクエリの進行をさらに遅らせる可能性があります。 これらのクエリまたは影響を受けるクエリに、MAX_GRANT_PERCENT クエリ ヒントを使うことを検討します。|
-|データベースごとの高い LCK_M_X 待機|特定のクエリに対するクエリ ストアでの高いロック待機|影響を受けるクエリのクエリ テキストを確認し、ターゲット エンティティを明らかにします。 クエリ ストアで同じエンティティを変更している他のクエリを探します。これらは、頻繁に実行されていたり、実行時間が長くなったりします。 これらのクエリを特定した後、コンカレンシーが向上するようにアプリケーション ロジックを変更するか、制限の低い分離レベルを使うことを検討します。|
-|データベースごとの高い PAGEIOLATCH_SH 待機|特定のクエリに対するクエリ ストアでの高いバッファー IO 待機|クエリ ストアで、物理読み取り数が多いクエリを検索します。 それらが IO 待機の長いクエリと一致する場合は、スキャンではなくシークを行うように基になるエンティティにインデックスを導入して、クエリの IO オーバーヘッドを最小限に抑えることを検討します。|
+|以前のエクスペリエンス|新しいエクスペリエンス|アクション|
+|データベースごとの高い RESOURCE_SEMAPHORE 待機|特定のクエリに対するクエリ ストアでの高いメモリ待機|クエリ ストア内で、メモリを最も消費しているクエリを探します。 おそらくこれらのクエリによって、影響を受けているクエリの進行がさらに遅れています。 これらのクエリまたは影響を受けるクエリに、MAX_GRANT_PERCENT クエリ ヒントを使うことを検討します。|
+|データベースごとの高い LCK_M_X 待機|特定のクエリに対するクエリ ストアでの高いロック待機|影響を受けているクエリのクエリ テキストを確認し、ターゲット エンティティを識別します。 クエリ ストアで同じエンティティを変更している他のクエリを探します。これらは、頻繁に実行されていたり、実行時間が長くなったりします。 これらのクエリを特定した後で、コンカレンシーを向上させるためにアプリケーション ロジックを変更するか、より制限の低い分離レベルを使用します。|
+|データベースごとの高い PAGEIOLATCH_SH 待機|特定のクエリに対するクエリ ストアでの高いバッファー IO 待機|クエリ ストア内で物理読み取り回数が多いクエリを検索します。 それらが IO 待機の長いクエリと一致する場合は、スキャンではなくシークを行うように基になるエンティティにインデックスを導入して、クエリの IO オーバーヘッドを最小限に抑えることを検討します。|
 |データベースごとの高い SOS_SCHEDULER_YIELD 待機|特定のクエリに対するクエリ ストアでの高い CPU 待機|クエリ ストアで CPU 消費量の多いクエリを探します。 それらの中で、高い CPU 傾向が影響を受けるクエリの高い CPU 待機と関連性のあるクエリを特定します。 それらのクエリの最適化に注目します。プラン回帰または欠落インデックスが存在する可能性があります。|
 
 ##  <a name="Options"></a> 構成オプション 
@@ -154,7 +154,7 @@ INNER JOIN sys.query_store_query_text AS Txt
 **READ_WRITE** (既定値) または READ_ONLY。  
   
 *CLEANUP_POLICY (STALE_QUERY_THRESHOLD_DAYS)*  
-`STALE_QUERY_THRESHOLD_DAYS` 引数を構成して、クエリのストア内にデータを保持する日数を指定します。 既定値は、30 です。 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic エディションの場合、既定の日数は **7** 日です。
+`STALE_QUERY_THRESHOLD_DAYS` 引数を構成して、クエリのストア内にデータを保持する日数を指定します。 既定値は 30 です。 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic エディションの場合、既定の日数は **7** 日です。
   
 *DATA_FLUSH_INTERVAL_SECONDS*  
 クエリ ストアに書き込まれるデータがディスクに永続化される頻度を決定します。 パフォーマンスを最適化するため、クエリ ストアで収集したデータは非同期的にディスクに書き込まれます。 この非同期転送が発生する頻度は `DATA_FLUSH_INTERVAL_SECONDS` で構成されています。 既定値は **900** (15 分) です。  
@@ -335,7 +335,7 @@ DEALLOCATE adhoc_queries_cursor;
   
  不要になったデータを消去する別のロジックを利用した独自のプロシージャを定義できます。  
   
- 上記の例では、 **sp_query_store_remove_query** 拡張ストアド プロシージャを使用して不要なデータを削除しています。 次のプロシージャを使用することもできます。  
+ 上記の例では、 **sp_query_store_remove_query** 拡張ストアド プロシージャを使用して不要なデータを削除しています。 以下を使用することもできます。  
   
 -   **sp_query_store_reset_exec_stats**。指定されたプランの実行時統計をクリアします。  
 -   **sp_query_store_remove_plan**。1 つのプランを削除します。  

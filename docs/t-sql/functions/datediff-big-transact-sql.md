@@ -21,13 +21,13 @@ ms.assetid: 19ac1693-3cfa-400d-bf83-20a9cb46599a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 3724c25854bd98a98b077fb59897ba4da250aee1
-ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68329290"
 ---
-# <a name="datediffbig-transact-sql"></a>DATEDIFF_BIG (Transact-SQL)
+# <a name="datediff_big-transact-sql"></a>DATEDIFF_BIG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 この関数は、*startdate* と *enddate* で指定された 2 つの日付間の差を、指定された *datepart* 境界の数で (符号付き多倍長整数値として) 返します。
@@ -58,7 +58,7 @@ DATEDIFF_BIG ( datepart , startdate , enddate )
 |**month**|**mm, m**|  
 |**dayofyear**|**dy、y**|  
 |**day**|**dd, d**|  
-|**week**|**wk, ww**|  
+|**week**|**wk、ww**|  
 |**hour**|**hh**|  
 |**minute**|**mi、n**|  
 |**second**|**ss, s**|  
@@ -118,7 +118,7 @@ SELECT DATEDIFF_BIG(second,      '2005-12-31 23:59:59.9999999', '2006-01-01 00:0
 SELECT DATEDIFF_BIG(millisecond, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
 ```
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 `DATEDIFF_BIG` は、`SELECT <list>`、`WHERE`、`HAVING`、`GROUP BY`、`ORDER BY` 句で使用します。
   
 `DATEDIFF_BIG` は、文字列リテラルを **datetime2** 型として暗黙的にキャストします。 つまり、`DATEDIFF_BIG` では、日付が文字列として渡される場合、YDM 形式がサポートされません。 文字列を明示的にキャストする必要があります、 **datetime** または **smalldatetime** YDM 形式を使用する型。
@@ -127,7 +127,7 @@ SELECT DATEDIFF_BIG(millisecond, '2005-12-31 23:59:59.9999999', '2006-01-01 00:0
 
 *enddate* と *startdate* の差として **bigint** の範囲を超える値が返された場合、`DATEDIFF_BIG` は **nanosecond** の精度でオーバーフローする可能性があります。
   
-## <a name="examples"></a>使用例 
+## <a name="examples"></a>例 
   
 ### <a name="specifying-columns-for-startdate-and-enddate"></a>startdate と enddate に列を指定する  
 この例では、*startdate* パラメーターと *enddate* パラメーターの引数として、各種の式を使用しています。 テーブルの 2 つの列に日付を格納し、両者の差を日単位で計算しています。

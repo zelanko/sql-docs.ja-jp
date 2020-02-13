@@ -30,10 +30,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: efc249be2368973bcd1f3a4692ed280c1a131ec6
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68344600"
 ---
 # <a name="principals-database-engine"></a>プリンシパル (データベース エンジン)
@@ -57,7 +57,7 @@ ms.locfileid: "68344600"
 - アプリケーション ロール
   
 ## <a name="sa-login"></a>sa ログイン  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `sa` ログインは、サーバー レベルのプリンシパルです。 このログインは、インスタンスのインストール時に既定で作成されます。 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]より、sa の既定のデータベースは master です。 これは、以前のバージョンの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の動作から変更されています。 `sa` ログインは `sysadmin` 固定サーバーレベル ロールに属します。 `sa` ログインにはサーバーのすべてのアクセス許可が与えられ、制限できません。 `sa` ログインは削除できませんが、無効にすれば誰も利用できません。
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `sa` ログインは、サーバーレベル プリンシパルです。 このログインは、インスタンスのインストール時に既定で作成されます。 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]より、sa の既定のデータベースは master です。 これは、以前のバージョンの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の動作から変更されています。 `sa` ログインは `sysadmin` 固定サーバーレベル ロールに属します。 `sa` ログインにはサーバーのすべてのアクセス許可が与えられ、制限できません。 `sa` ログインは削除できませんが、無効にすれば誰も利用できません。
 
 ## <a name="dbo-user-and-dbo-schema"></a>dbo ユーザーと dbo スキーマ
 
@@ -67,7 +67,7 @@ ms.locfileid: "68344600"
 ## <a name="public-server-role-and-database-role"></a>public のサーバー ロールとデータベース ロール  
 すべてのログインは `public` 固定サーバー ロールに属します。すべてのデータベース ユーザーは `public` データベース ロールに属します。 セキュリティ保護可能なリソースに対する特定の権限が与えられていないか権限が拒否されたログインまたはユーザーは、public がそのリソースに対して許可されている権限を継承します。 `public` 固定サーバー ロールと `public` 固定データベース ロールは削除できません。 ただし、`public` ロールからアクセス許可を取り消すことができます。 既定で `public` ロールにはさまざまなアクセス許可が割り当てられています。 そのようなアクセス許可のほとんどはデータベースの日常的操作、つまり、誰にでも許可されなければならない類いの操作に必要となります。 public ログインまたはユーザーからアクセス許可を取り消す際は注意してください。すべてのログインまたはユーザーに影響を与えます。 一般的に、public に対するアクセス許可は拒否しないでください。deny ステートメントは、個々に行う grant ステートメントをオーバーライドします。 
   
-## <a name="informationschema-and-sys-users-and-schemas"></a>INFORMATION_SCHEMA と sys のユーザーとスキーマ 
+## <a name="information_schema-and-sys-users-and-schemas"></a>INFORMATION_SCHEMA と sys のユーザーとスキーマ 
  各データベースには、カタログ ビューにユーザーとして表示される 2 つのエンティティ `INFORMATION_SCHEMA` および `sys` が含まれています。 データベース エンジンによる内部利用でこれらのエンティティが必要になります。 変更したり、削除したりすることはできません。  
   
 ## <a name="certificate-based-sql-server-logins"></a>証明書ベースの SQL Server ログイン  
@@ -94,7 +94,7 @@ ms.locfileid: "68344600"
   
 -   [ログイン、ユーザー、およびスキーマの管理方法に関するトピック](../../../relational-databases/security/authentication-access/managing-logins-users-and-schemas-how-to-topics.md)  
   
--   [サーバー レベルのロール](../../../relational-databases/security/authentication-access/server-level-roles.md)  
+-   [サーバーレベルのロール](../../../relational-databases/security/authentication-access/server-level-roles.md)  
   
 -   [データベース レベルのロール](../../../relational-databases/security/authentication-access/database-level-roles.md)  
   

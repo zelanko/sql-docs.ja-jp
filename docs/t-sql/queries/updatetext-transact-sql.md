@@ -21,10 +21,10 @@ ms.assetid: d73c28ee-3972-4afd-af8d-ebbbd9e50793
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: b858cc4930cdfe9792e08c991c3ebdf8f319d0f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67948222"
 ---
 # <a name="updatetext-transact-sql"></a>UPDATETEXT (Transact-SQL)
@@ -83,10 +83,10 @@ UPDATETEXT [BULK] { table_name.dest_column_name dest_text_ptr }
 > [!NOTE]  
 >  *scr_text_ptr* 値は *dest_text_ptr* 値と同じにすることはできません。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  新しく挿入するデータには、1 つの *inserted_data* 定数、テーブル名、列名、またはテキスト ポインターを使用できます。  
   
-|アクションの更新|UPDATETEXT パラメーター|  
+|更新アクション|UPDATETEXT パラメーター|  
 |-------------------|---------------------------|  
 |既存のデータの置換|NULL 以外の *insert_offset* 値、0 以外の *delete_length* 値、および挿入する新しいデータを指定します。|  
 |既存のデータの削除|NULL 以外の *insert_offset* 値、0 以外の *delete_length* を指定します。 挿入する新しいデータは指定しないでください。|  
@@ -101,7 +101,7 @@ UPDATETEXT [BULK] { table_name.dest_column_name dest_text_ptr }
 ## <a name="permissions"></a>アクセス許可  
  指定したテーブルの UPDATE 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、テキスト ポインターをローカル変数 `@ptrval` に代入した後、`UPDATETEXT` を使用してスペル ミスを更新します。  
   
 > [!NOTE]  

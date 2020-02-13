@@ -24,10 +24,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 70e3fbfe0ed0d255cbe6f27c410af96061ab7432
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982068"
 ---
 # <a name="alter-procedure-transact-sql"></a>ALTER PROCEDURE (Transact-SQL)
@@ -102,7 +102,7 @@ AS { [ BEGIN ] sql_statement [ ; ] [ ,...n ] [ END ] }
  VARYING  
  出力パラメーターとしてサポートされている結果セットを指定します。 このパラメーターはストアド プロシージャによって動的に作成され、その内容は変化します。 カーソル パラメーターにのみ適用されます。 このオプションは、CLR プロシージャでは無効です。  
   
- *default*  
+ *既定値*  
  パラメーターの既定値です。  
   
  OUT | OUTPUT  
@@ -166,7 +166,7 @@ AS { [ BEGIN ] sql_statement [ ; ] [ ,...n ] [ END ] }
 ### <a name="permissions"></a>アクセス許可  
  プロシージャの **ALTER** 権限、または **db_ddladmin** 固定データベース ロールのメンバーシップが必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、`uspVendorAllInfo` ストアド プロシージャを作成します。 このプロシージャは、[!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] を提供するすべてのベンダーの名前と、そのベンダーの提供製品、信用格付け、およびベンダーが現時点で製品を提供できるかどうかを返します。 このプロシージャを作成した後、別の結果セットを返すように変更されます。  
   
 ```  

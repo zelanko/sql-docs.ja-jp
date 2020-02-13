@@ -16,10 +16,10 @@ author: pmasl
 ms.author: pelopes
 manager: amitban
 ms.openlocfilehash: 5c94d2d60bf851742aca68d5b7bc25ea4d8afd9c
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72289322"
 ---
 # <a name="analyze-an-actual-execution-plan"></a>実際の実行プランの分析
@@ -44,7 +44,7 @@ ms.locfileid: "72289322"
 
 2.  実行プランの何もない領域を右クリックし、 **[実際の実行プランの分析]** をクリックします。 
 
-    ![[実際の実行プランの分析] の右クリック](../../relational-databases/performance/media/plananalysismenuoption.png "[実際の実行プランの分析] の右クリック")   
+    ![[実際の実行プランの分析] を右クリックする](../../relational-databases/performance/media/plananalysismenuoption.png "[実際の実行プランの分析] を右クリックする")   
 
 3.  下部に **[プラン表示の分析]** が表示されます。 **[複数ステートメント]** タブは、ステートメントが複数含まれるプランを分析するときに便利です。適切なステートメントを分析できます。
 

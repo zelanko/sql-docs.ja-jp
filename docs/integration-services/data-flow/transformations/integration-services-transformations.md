@@ -22,10 +22,10 @@ ms.assetid: c70c4f6e-82dd-4948-b923-fd5193f67f7e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 26b22a82491d3f4c586c3fb259bf50c6d7216367
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297908"
 ---
 # <a name="integration-services-transformations"></a>Integration Services の変換
@@ -38,7 +38,7 @@ ms.locfileid: "71297908"
 ## <a name="business-intelligence-transformations"></a>ビジネス インテリジェンス変換  
  次の変換は、データのクリーンアップ、テキストのマイニング、データ マイニング予測クエリの実行などのビジネス インテリジェンス操作を実行します。  
   
-|変換|[説明]|  
+|変換|説明|  
 |--------------------|-----------------|  
 |[緩やかに変化するディメンション変換](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)|緩やかに変化するディメンションの更新を構成する変換です。|  
 |[あいまいグループ化変換](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)|列データの値を標準化する変換です。|  
@@ -51,7 +51,7 @@ ms.locfileid: "71297908"
 ## <a name="row-transformations"></a>行の変換  
  次の変換は、列の値を更新して新しい列を作成します。 この変換は、変換入力の各行に適用されます。  
   
-|変換|[説明]|  
+|変換|説明|  
 |--------------------|-----------------|  
 |[文字マップ変換](../../../integration-services/data-flow/transformations/character-map-transformation.md)|文字列関数を文字データに適用する変換です。|  
 |[列コピー変換](../../../integration-services/data-flow/transformations/copy-column-transformation.md)|入力列のコピーを変換出力に追加する変換です。|  
@@ -65,7 +65,7 @@ ms.locfileid: "71297908"
 ## <a name="rowset-transformations"></a>行セットの変換  
  次の変換は、新しい行セットを作成します。 行セットには、集計された値や並べ替えた値、サンプル行セット、またはピボットされた行セットとピボットされていない行セットを含めることができます。  
   
-|変換|[説明]|  
+|変換|説明|  
 |--------------------|-----------------|  
 |[集計変換](../../../integration-services/data-flow/transformations/aggregate-transformation.md)|AVERAGE、SUM、COUNT などの集計を実行する変換です。|  
 |[並べ替え変換](../../../integration-services/data-flow/transformations/sort-transformation.md)|データを並べ替える変換です。|  
@@ -77,7 +77,7 @@ ms.locfileid: "71297908"
 ## <a name="split-and-join-transformations"></a>分割および結合変換  
  次の変換は、別の出力への行の配信、変換入力のコピーの作成、1 つの出力への複数入力の結合、および参照操作の実行を行います。  
   
-|変換|[説明]|  
+|変換|説明|  
 |--------------------|-----------------|  
 |[条件分割変換](../../../integration-services/data-flow/transformations/conditional-split-transformation.md)|データ行を別の出力にルーティングする変換です。|  
 |[マルチキャスト変換](../../../integration-services/data-flow/transformations/multicast-transformation.md)|データセットを複数の出力に配信する変換です。|  
@@ -91,7 +91,7 @@ ms.locfileid: "71297908"
 ## <a name="auditing-transformations"></a>監査変換  
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] には、監査情報の追加や行のカウントを行う、次のような変換が含まれています。  
   
-|変換|[説明]|  
+|変換|説明|  
 |--------------------|-----------------|  
 |[監査変換](../../../integration-services/data-flow/transformations/audit-transformation.md)|環境に関する情報を、パッケージ内のデータ フローで利用可能にする変換です。|  
 |[行数変換](../../../integration-services/data-flow/transformations/row-count-transformation.md)|変換の処理を行うときに行をカウントし、最終的なカウントを変数に格納する変換です。|  

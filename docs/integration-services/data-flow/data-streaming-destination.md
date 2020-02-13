@@ -13,10 +13,10 @@ ms.assetid: 640e6a19-49ae-4ee8-ac07-008370158f0e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 06f2d0cef2cafa90476b4e3f5b6e68efe208c21b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293107"
 ---
 # <a name="data-streaming-destination"></a>Data Streaming Destination
@@ -24,7 +24,7 @@ ms.locfileid: "71293107"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  **Data Streaming Destination** は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) Destination コンポーネントであり、 **OLE DB Provider for SSIS** で SSIS パッケージの出力を表形式の結果セットとして利用することを可能にします。 OLE DB Provider for SSIS を利用するリンク サーバーを作成し、そのリンク サーバーで SQL クエリを実行し、SSIS パッケージが返したデータを表示できます。  
+  **Data Streaming Destination** は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) Destination コンポーネントであり、**OLE DB Provider for SSIS** で SSIS パッケージの出力を表形式の結果セットとして利用することを可能にします。 OLE DB Provider for SSIS を利用するリンク サーバーを作成し、そのリンク サーバーで SQL クエリを実行し、SSIS パッケージが返したデータを表示できます。  
   
  下の例のクエリは、SSIS カタログの Power BI フォルダーに SSISPackagePublishing プロジェクトの Package.dtsx パッケージからの出力を返します。 このクエリは [Default Linked Server for Integration Services] という名前のリンク サーバーを利用し、このリンク サーバーは新しい OLE DB Provider for SSIS を利用します。 クエリには、SSIS カタログのフォルダー名、プロジェクト名、パッケージ名が含まれています。 OLE DB Provider for SSIS はクエリに指定されたパッケージを実行し、表形式の結果セットを返します。  
   
@@ -60,9 +60,9 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
 ## <a name="component-properties-tab"></a>[コンポーネントのプロパティ] タブ  
  このタブには、次の編集可能なフィールドがあります。  
   
-|フィールド|[説明]|  
+|フィールド|説明|  
 |-----------|-----------------|  
-|[オブジェクト名]|パッケージ内の Data Streaming Destination コンポーネントの名前です。|  
+|Name|パッケージ内の Data Streaming Destination コンポーネントの名前です。|  
 |[ValidateExternalMetadata]|デザイン時に外部データ ソースを使用してコンポーネントを検証するかどうかを示します。 false に設定した場合、外部データ ソースに対する検証は実行時まで遅延されます。|  
 |IDColumnName|データ フィード公開ウィザードによって生成されたビューには、この追加の ID 列があります。 ID 列は、データが他のアプリケーションによって OData フィードとして使用された場合に、データ フローからの出力データの EntityKey として機能します。<br /><br /> この列の既定の名前は _ID です。 この ID 列には別の名前を指定できます。|  
   

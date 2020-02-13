@@ -27,10 +27,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ed302e9361e46b8403cea168201fc6cadaa17986
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68026196"
 ---
 # <a name="dateadd-transact-sql"></a>DATEADD (Transact-SQL)
@@ -134,7 +134,7 @@ SELECT DATEADD(year,-2147483647, '20060731');
 -   **millisecond** の *datepart* と -30001 から +29998 の *number* 値の場合、`DATEADD` によって変更が行われることはありません。  
 -   **second** の *datepart* と、-30001 未満、+29998 超の *number* 値の場合、`DATEADD` は 1 分から始まる加算を実行します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 次の句で `DATEADD` を使用します。
 
 + GROUP BY
@@ -182,7 +182,7 @@ SELECT '150 nanoseconds', DATEADD(nanosecond,150,@datetime2);
 ## <a name="time-zone-offset"></a>タイム ゾーン オフセット
 `DATEADD` は、タイム ゾーン オフセットの加算を許可しません。
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 
 ### <a name="a-incrementing-datepart-by-an-interval-of-1"></a>A. datepart を 1 単位増やす  
 次の各ステートメントは、*datepart* を 1 単位増やします。

@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b738bd06abe616adc846727dd5721b7204e340c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67999437"
 ---
 # <a name="primary-and-foreign-key-constraints"></a>主キー制約と外部キー制約
@@ -128,7 +128,7 @@ ms.locfileid: "67999437"
 |主キーを変更する方法について説明します。|[主キーの変更](../../relational-databases/tables/modify-primary-keys.md)|  
 |外部キー リレーションシップを作成する方法について説明します。|[外部キーのリレーションシップの作成](../../relational-databases/tables/create-foreign-key-relationships.md)|  
 |外部キー リレーションシップを変更する方法について説明します。|[外部キー リレーションシップの変更](../../relational-databases/tables/modify-foreign-key-relationships.md)|  
-|外部キー リレーションシップを削除する方法について説明します。|[外部キーのリレーションシップの削除](../../relational-databases/tables/delete-foreign-key-relationships.md)|  
+|外部キー リレーションシップを削除する方法について説明します。|[外部キー リレーションシップの削除](../../relational-databases/tables/delete-foreign-key-relationships.md)|  
 |外部キーのプロパティを表示する方法について説明します。|[外部キーのプロパティの表示](../../relational-databases/tables/view-foreign-key-properties.md)|  
 |レプリケーションに対して外部キー制約を無効にする方法を説明します。|[レプリケーションに対して外部キー制約を無効にする方法](../../relational-databases/tables/disable-foreign-key-constraints-for-replication.md)|  
 |INSERT または UPDATE ステートメント時に外部キー制約を無効にする方法について説明します。|[INSERT ステートメントまたは UPDATE ステートメントに対して外部キー制約を無効にする方法](../../relational-databases/tables/disable-foreign-key-constraints-with-insert-and-update-statements.md)|  

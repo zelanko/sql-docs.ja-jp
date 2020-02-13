@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 22bb9713faab2b1d3195092130a95997ca69641f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68010810"
 ---
 # <a name="permissions-hierarchy-database-engine"></a>権限の階層 (データベース エンジン)
@@ -36,7 +36,7 @@ ms.locfileid: "68010810"
   
  権限システムは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]、 [!INCLUDE[ssDW](../../includes/ssdw-md.md)]、 [!INCLUDE[ssAPS](../../includes/ssaps-md.md)]のすべてのバージョンで同様に機能しますが、一部のバージョンでは使用できない機能もあります。 たとえば、サーバー レベルの権限は、Azure 製品では構成できません。  
   
- ![データベース エンジンの権限階層の図](../../relational-databases/security/media/wj-security-layers.gif "データベース エンジンの権限階層の図")  
+ ![データベース エンジンの権限の階層の図](../../relational-databases/security/media/wj-security-layers.gif "データベース エンジンの権限の階層の図")  
   
 ## <a name="chart-of-sql-server-permissions"></a>SQL Server 権限の一覧表  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] のすべてのアクセス許可を示した pdf 形式のポスター サイズの一覧表については、[https://aka.ms/sql-permissions-poster](https://aka.ms/sql-permissions-poster) を参照してください。  

@@ -1,7 +1,7 @@
 ---
 title: ハイブリッド バッファー プール | Microsoft Docs
 ms.custom: ''
-ms.date: 05/22/2019
+ms.date: 10/31/2019
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -10,28 +10,34 @@ ms.topic: conceptual
 ms.assetid: ''
 author: briancarrig
 ms.author: brcarrig
-ms.openlocfilehash: d03c66219330df3cca892bd005d1e9a456959c83
-ms.sourcegitcommit: af5e1f74a8c1171afe759a4a8ff2fccb5295270a
+manager: amitban
+ms.openlocfilehash: c7919232bcd2c84ea58ac2e8b9d23b48cc58ee60
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71823572"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76831697"
 ---
 # <a name="hybrid-buffer-pool"></a>ハイブリッド バッファー プール
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-ハイブリッド バッファー プールにより、データベース エンジンから永続メモリ (PMEM) デバイスに格納されているデータベース ファイル内のデータ ページに直接アクセスできるようになります。 この機能は [!INCLUDE[sqlv15](../../includes/sssqlv15-md.md)] で導入されています。
+ハイブリッド バッファー プールを使用すると、バッファー プール オブジェクトで、揮発性 DRAM にキャッシュされたデータのコピーではなく、永続メモリ (PMEM) 上にあるデータベース ファイル内のデータ ページを参照できます。 この機能は [!INCLUDE[sqlv15](../../includes/sssqlv15-md.md)] で導入されています。
 
-PMEM のない従来のシステムでは、SQL Server によってデータ ページがバッファー プールにキャッシュされます。 ハイブリッド バッファー プールを使用すると、SQL Server では、バッファー プールの DRAM ベースの部分にページのコピーを実行することをスキップし、代わりに PMEM デバイスにあるデータベース ファイル上で直接ページにアクセスします。 ハイブリッド バッファー プール用の PMEM デバイス上のデータ ファイルへの読み取りアクセスは、PMEM デバイス上のデータ ページへのポインターに従って直接実行されます。  
+![ハイブリッド バッファー プール](./media/hybrid-buffer-pool.png)
 
-PMEM デバイスで直接アクセスできるのは、クリーン ページのみです。 ページがダーティとマークされている場合、ページは DRAM バッファー プールにコピーされてから、最終的に PMEM デバイスに書き戻されて再びクリーンとしてマークされます。 これは通常のチェックポイント操作中に発生します。 ファイルを PMEM デバイスから DRAM にコピーするメカニズムはダイレクト メモリ マッピング I/O (MMIO) であり、SQL Server 内のデータ ファイルの*エンライトメント*とも呼ばれます。
+永続メモリ (PMEM) デバイスはバイトアドレス指定可能で、直接アクセス (DAX) の永続メモリ対応ファイル システム (XFS、EXT4、NTFS など) を使用する場合、OS の通常のファイル システム API を使用してファイル システム上のファイルにアクセスできます。 または、デバイス上のファイルのメモリ マップに対するロード操作およびストア操作と呼ばれる操作を実行できます。 これにより、SQL Server などの PMEM 対応アプリケーションは、従来の記憶域スタックを経由せずにデバイス上のファイルにアクセスできます。
 
+ハイブリッド バッファー プールは、この機能を使用して、マップ済みファイルに対するロード操作およびストア操作を実行し、PMEM デバイスをバッファー プールのキャッシュとして利用するだけでなく、データベース ファイルの格納にも利用します。 これにより、論理的な読み込みと物理的な読み込みの両方が基本的には同じ操作であるという特殊な状況が生じます。 永続メモリ デバイスは、通常の揮発性 DRAM と同様、メモリ バスを介してアクセスできます。
 
-ハイブリッド バッファー プール機能は、Windows と Linux の両方で使用できます。 PMEM デバイスは、DAX (DirectAccess) をサポートするファイル システムでフォーマットする必要があります。 XFS、EXT4、NTFS のすべてのファイル システムで、DAX がサポートされています。 SQL Server では、データ ファイルが適切にフォーマットされた PMEM デバイス上に存在するかどうかが自動的に検出され、ユーザーの領域内でのメモリ マッピングが実行されます。 このマッピングは、新しいデータベースがアタッチ、復元、作成されるか、ハイブリッド バッファー プール機能がデータベースに対して有効化されると、起動時に行われます。
+クリーンなデータ ページのみがハイブリッド バッファー プールのデバイス上にキャッシュされます。 ページがダーティとしてマークされている場合、そのページは DRAM バッファー プールにコピーされてから、最終的に PMEM デバイスに書き戻されて再びクリーンとしてマークされます。 これは、通常のチェックポイント操作中に、標準のブロック デバイスに対して実行される場合と同様の方法で発生します。
 
-Windows Server の PMEM に対するサポートの詳細については、[Windows Server での永続メモリの配置](/windows-server/storage/storage-spaces/deploy-pmem/)に関するページを参照してください。
+ハイブリッド バッファー プール機能は、Windows と Linux の両方で使用できます。 PMEM デバイスは、DAX (DirectAccess) をサポートするファイル システムでフォーマットする必要があります。 DAX は、XFS、EXT4、NTFS のすべてのファイル システムでサポートされます。 SQL Server は、適切にフォーマットされた PMEM デバイス上にデータ ファイルが存在するかどうかを自動的に検出し、新しいデータベースがアタッチ、復元、または作成されると、起動時にデータベース ファイルのメモリ マッピングを実行します。
 
-PMEM デバイス用に Linux 上で SQL Server を構成する方法については、[永続メモリの配置](../../linux/sql-server-linux-configure-pmem.md)に関するページを参照してください。
+詳細については、次を参照してください。
+
+* [永続メモリの理解と配置 (Windows)](/windows-server/storage/storage-spaces/deploy-pmem/)
+* [SQL Server on Linux 用に永続メモリ (PMEM) を構成する](../../linux/sql-server-linux-configure-pmem.md)
+
 
 ## <a name="enable-hybrid-buffer-pool"></a>ハイブリッド バッファー プールを有効にする
 
@@ -43,7 +49,7 @@ PMEM デバイス用に Linux 上で SQL Server を構成する方法につい�
 ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED HYBRID_BUFFER_POOL = ON;
 ```
 
-既定では、ハイブリッド バッファー プールはインスタンスのスコープで無効に設定されます。 設定の変更を有効にするためには、SQL Server インスタンスを再起動する必要があることに注意してください。 サーバー上の合計 PMEM 容量を考慮するために十分なハッシュ ページの割り当てを容易にするためには、再起動が必要です。
+既定では、ハイブリッド バッファー プールはインスタンスのスコープで無効にされます。 設定の変更を有効にするためには、SQL Server インスタンスを再起動する必要があることに注意してください。 サーバー上の合計 PMEM 容量を考慮するために十分なハッシュ ページの割り当てを容易にするためには、再起動が必要です。
 
 次の例では、特定のデータベース用にハイブリッド バッファー プールを有効にします。
 
@@ -51,17 +57,17 @@ ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED HYBRID_BUFFER_POOL = ON;
 ALTER DATABASE <databaseName> SET MEMORY_OPTIMIZED = ON;
 ```
 
-既定では、ハイブリッド バッファー プールはデータベースのスコープで有効に設定されます。
+既定では、ハイブリッド バッファー プールはデータベースのスコープで有効にされます。
 
 ## <a name="disable-hybrid-buffer-pool"></a>ハイブリッド バッファー プールを無効にする
 
-次の例では、SQL Server のインスタンス用にハイブリッド バッファー プールを無効にします。
+次の例では、ハイブリッド バッファー プールをインスタンス レベルで無効にします。
 
 ```sql
 ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED HYBRID_BUFFER_POOL = OFF;
 ```
 
-既定では、ハイブリッド バッファー プールはインスタンスのスコープで無効に設定されます。 設定の変更を有効にするためには、SQL Server インスタンスを再起動する必要があることに注意してください。 サーバー上の PMEM 容量は考慮する必要がないため、ハッシュページの超過割り当てを防ぐためには再起動が必要です。
+既定では、ハイブリッド バッファー プールはインスタンス レベルで無効にされます。 この変更を有効にするには、インスタンスを再起動する必要があります。 これにより、サーバー上の PMEM の容量を考慮する必要があるため、バッファー プールに十分なハッシュ ページが割り当てられます。
 
 次の例では、特定のデータベース用にハイブリッド バッファー プールを無効にします。
 
@@ -69,11 +75,11 @@ ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED HYBRID_BUFFER_POOL = OFF;
 ALTER DATABASE <databaseName> SET MEMORY_OPTIMIZED = OFF;
 ```
 
-既定では、ハイブリッド バッファー プールはデータベースのスコープで有効に設定されます。
+既定では、ハイブリッド バッファー プールはデータベースのスコープで有効にされます。
 
 ## <a name="view-hybrid-buffer-pool-configuration"></a>ハイブリッド バッファー プールの構成を表示する
 
-次の例では、SQL Server のインスタンス用のハイブリッド バッファー プールのシステム構成について、現在の状態が返されます。
+次の例では、インスタンスの現在のハイブリッド バッファー プール構成の状態を戻します。
 
 ```sql
 SELECT * FROM
@@ -95,10 +101,12 @@ SELECT name, is_memory_optimized_enabled FROM sys.databases;
 
 Windows 上でご利用の PMEM デバイスをフォーマットする場合、NTFS に利用できる最大のアロケーション ユニット サイズ (Windows Server 2019 では 2 MB) を使用して、デバイスが DAX (Direct Access) 用に確実にフォーマットされているようにします。
 
-最適なパフォーマンスを得るには、Windows 上で [[メモリ内のページのロック]](./enable-the-lock-pages-in-memory-option-windows.md) を有効にします。
+大規模なページ メモリ割り当てモデルを使用します。これは、[トレース フラグ 834](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) で有効にすることができます。 トレース フラグ 834 は、スタートアップ トレース フラグです。
+
+大規模なページ メモリ割り当てモデルを使用するには、Windows 上の [メモリ内のロックされたページ](./enable-the-lock-pages-in-memory-option-windows.md) を使用する必要があります。
 
 ファイル サイズは 2 MB の倍数である必要があります (剰余 2 MB はゼロと等しい)。
 
-ハイブリッド バッファー プールのサーバー スコープ設定が無効に設定されている場合、ハイブリッド バッファー プールはどのユーザー データベースでも使用されません。
+ハイブリッド バッファー プールのサーバー スコープ設定が無効に設定されている場合、この機能はどのユーザー データベースでも使用されません。
 
-ハイブリッド バッファーのサーバー スコープ設定が有効になっている場合、個々のユーザー データベースに対してハイブリッド バッファー プールの使用を無効にすることができます。そのためには、それらのユーザー データベースに対してデータベース スコープ レベルでのハイブリッド バッファー プールを無効にする手順に従います。
+ハイブリッド バッファー プールのサーバー スコープ設定が有効に設定されている場合、データベース スコープ設定を使用して、個々のユーザー データベースに対してこの機能を無効にすることができます。

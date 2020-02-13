@@ -14,10 +14,10 @@ ms.assetid: 633de3ef-533c-4f0c-9c7b-c105129d8e94
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: cddb71a35ac762ed602dd93e9e50f463da3e41f9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67947922"
 ---
 # <a name="sql-server-user-settable-object"></a>SQL Server: User Settable オブジェクト
@@ -29,20 +29,20 @@ ms.locfileid: "67947922"
 > [!NOTE]  
 >  ユーザー カウンターのストアド プロシージャは、システム モニターから自動的にポーリングされることはありません。 カウンター値を更新するには、ユーザー アプリケーションから明示的にストアド プロシージャを実行する必要があります。 カウンター値を自動的に更新するには、トリガーを使用します。 たとえば、テーブルの行数を監視するカウンターを作成するには、テーブルに対する INSERT と DELETE のトリガーを作成し、 `SELECT COUNT(*) FROM table`というステートメントが実行されるようにします。 テーブルに対する INSERT 操作か DELETE 操作が発生するとトリガーが起動され、システム モニター カウンターが自動的に更新されます。  
   
- 次の表では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の **User Settable** オブジェクトについて説明します。  
+ 次の表では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の **User Settable** オブジェクトについて説明します。  
   
-|SQL Server User Settable カウンター|[説明]|  
+|SQL Server User Settable カウンター|説明|  
 |---------------------------------------|-----------------|  
 |**クエリ**|**User Settable** オブジェクトには、Query カウンターが含まれています。 ユーザーは、クエリ オブジェクト内の **ユーザー カウンター** を構成します。|  
   
  次の表では、 **Query** カウンターの **インスタンス** について説明します。  
   
-|Query カウンターのインスタンス|[説明]|  
+|Query カウンターのインスタンス|説明|  
 |-----------------------------|-----------------|  
 |**ユーザー カウンター 1**|**sp_user_counter1**を使用して定義します。|  
 |**ユーザー カウンター 2**|**sp_user_counter2**を使用して定義します。|  
 |**ユーザー カウンター 3**|**sp_user_counter3**を使用して定義します。|  
-|[...]||  
+|...||  
 |**ユーザー カウンター 10**|**sp_user_counter10**を使用して定義します。|  
   
  ユーザー カウンターのストアド プロシージャを使用するには、カウンターの新しい値を示す 1 つの整数パラメーターを指定して、独自のアプリケーションからそのストアド プロシージャを実行します。 たとえば、 **ユーザー カウンター 1** の値を 10 に設定するには、次の Transact-SQL ステートメントを実行します。  

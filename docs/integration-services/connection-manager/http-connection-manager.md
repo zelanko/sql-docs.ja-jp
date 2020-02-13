@@ -20,10 +20,10 @@ ms.assetid: 26b2b3e1-d02c-46ca-8d31-7aef2bbc3c53
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 106b0d08ec24143ba497fb5b631fcbd5003a4872
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294407"
 ---
 # <a name="http-connection-manager"></a>HTTP 接続マネージャー
@@ -31,7 +31,7 @@ ms.locfileid: "71294407"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  HTTP 接続により、パッケージが HTTP を使用してファイルを送受信することで、Web サーバーにアクセスできるようになります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] に含まれる Web サービス タスクには、この接続マネージャーを使用します。  
+  HTTP 接続により、パッケージが HTTP を使用してファイルを送受信することで、Web サーバーにアクセスできるようになります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] に含まれる Web サービス タスクでは、この接続マネージャーが使用されます。  
   
  HTTP 接続マネージャーをパッケージに追加するときは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] によって、実行時に HTTP 接続を解決する接続マネージャーを作成し、接続マネージャーのプロパティを設定して、接続マネージャーをパッケージの **Connections** コレクションに追加します。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "71294407"
  **[資格情報を使用する]**  
  HTTP 接続マネージャーで、認証のためにユーザーのセキュリティ資格情報を使用するかどうかを指定します。  
   
- **User name**  
+ **ユーザー名**  
  HTTP 接続マネージャーで資格情報を使用する場合は、ユーザー名、パスワード、およびドメインを指定する必要があります。  
   
  **パスワード**  
@@ -84,7 +84,7 @@ ms.locfileid: "71294407"
  **[クライアント証明書を使用する]**  
  HTTP 接続マネージャーで、認証のためにクライアント証明書を使用するかどうかを指定します。  
   
- **Certificate**  
+ **[MSSQLSERVER のプロトコルのプロパティ]**  
  **[証明書の選択]** ダイアログ ボックスを使用して、一覧から証明書を選択します。 テキスト ボックスに、この証明書に関連付けられている名前が表示されます。  
   
  **[タイムアウト (秒)]**  
@@ -114,7 +114,7 @@ ms.locfileid: "71294407"
  **[資格情報を使用する]**  
  HTTP 接続マネージャーで、プロキシ サーバーに対してセキュリティ資格情報を使用するかどうかを指定します。  
   
- **User name**  
+ **ユーザー名**  
  HTTP 接続マネージャーで資格情報を使用する場合は、ユーザー名、パスワード、およびドメインを指定する必要があります。  
   
  **パスワード**  
@@ -126,10 +126,10 @@ ms.locfileid: "71294407"
  **[プロキシ バイパス一覧]**  
  プロキシ サーバーを使用しないアドレスの一覧です。  
   
- **[追加]**  
+ **追加**  
  プロキシ サーバーを使用しないアドレスを入力します。  
   
- **[削除]**  
+ **Remove**  
  アドレスを選択した後、 **[削除]** をクリックするとアドレスが削除されます。  
   
 ## <a name="see-also"></a>参照  

@@ -24,10 +24,10 @@ ms.assetid: 060126fc-ed0f-478f-830a-08e418d410dc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6282a242807532095d13fed4b853731937bdd176
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67995358"
 ---
 # <a name="openxml-sql-server"></a>OPENXML (SQLServer)
@@ -45,7 +45,7 @@ ms.locfileid: "67995358"
   
  次の図は、この処理を示しています。  
   
- ![OPENXML での XML の解析](../../relational-databases/xml/media/xmlsp.gif "OPENXML での XML の解析")  
+ ![OPENXML で XML を解析する](../../relational-databases/xml/media/xmlsp.gif "OPENXML で XML を解析する")  
   
  OPENXML を理解するには、XPath クエリと XML を詳しく理解している必要があります。 SQL Server での XPath のサポートの詳細については、「 [SQLXML 4.0 での XPath クエリの使用](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/using-xpath-queries-in-sqlxml-4-0.md)」を参照してください。  
   
@@ -138,13 +138,13 @@ EXEC sp_xml_removedocument @docHandle;
   
  次の表で、エッジ テーブルの構造について説明します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**id**|**bigint**|ドキュメント ノードの一意の ID。<br /><br /> ルート要素の ID 値は 0 です。 負の ID 値は予約済みです。|  
 |**parentid**|**bigint**|ノードの親の識別子。 この ID で識別される親が親要素だとは限りません。 識別された親が親要素であるかどうかは、この ID で識別されるノードを親とするノードの NodeType によって決まります。 たとえば、ノードがテキスト ノードの場合、その親は属性ノードである可能性があります。<br /><br /> ノードが XML ドキュメントの最上位にある場合、その **ParentID** は NULL になります。|  
 |**node type**|**int**|XML DOM (オブジェクト モデル) でノードの種類に付けられている番号に応じた、ノードの種類を識別するための整数です。<br /><br /> この列に示される、ノードの種類を示す値を次に示します。<br /><br /> **1** = 要素ノード<br /><br /> **2** = 属性ノード<br /><br /> **3** = テキスト ノード<br /><br /> **4** = CDATA セクション ノード<br /><br /> **5** = エンティティ参照ノード<br /><br /> **6** = エンティティ ノード<br /><br /> **7** = 処理命令ノード<br /><br /> **8** = コメント ノード<br /><br /> **9** = ドキュメント ノード<br /><br /> **10** = ドキュメント型ノード<br /><br /> **11** = ドキュメント フラグメント ノード<br /><br /> **12** = 注釈ノード<br /><br /> 詳細については、Microsoft XML (MSXML) SDK の「nodeType Property」を参照してください。|  
 |**localname**|**nvarchar(max)**|要素または属性のローカル名。 DOM オブジェクトに名前がない場合は NULL になります。|  
-|**プレフィックス**|**nvarchar(max)**|ノード名の名前空間のプレフィックス。|  
+|**prefix**|**nvarchar(max)**|ノード名の名前空間のプレフィックス。|  
 |**namespaceuri**|**nvarchar(max)**|ノードの名前空間 URI。 値が NULL の場合、名前空間はありません。|  
 |**datatype**|**nvarchar(max)**|要素行または属性行の実際のデータ型です。それ以外は NULL になります。 データ型は、インライン DTD またはインライン スキーマから推定されます。|  
 |**prev**|**bigint**|前の兄弟要素の XML ID。 前に直接の兄弟がない場合は NULL になります。|  

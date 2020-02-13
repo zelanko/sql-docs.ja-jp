@@ -1,7 +1,7 @@
 ---
 title: CREATE WORKLOAD CLASSIFIER (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2019
+ms.date: 01/27/2020
 ms.prod: sql
 ms.prod_service: sql-data-warehouse
 ms.reviewer: jrasnick
@@ -20,12 +20,12 @@ ms.assetid: ''
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: adf8b1e04e7dcd75bcad0c4b184ae60f2b59d248
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.openlocfilehash: 54c9145e40d9ad326faf0c897281fedb9a9fe9dc
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74056495"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76831611"
 ---
 # <a name="create-workload-classifier-transact-sql"></a>CREATE WORKLOAD CLASSIFIER (Transact-SQL)
 
@@ -129,14 +129,17 @@ CREATE WORKLOAD CLASSIFIER wcELTLoads WITH
 
 重要度が指定されていない場合は、ワークロード グループの重要度の設定が使用されます。  既定のワークロード グループの重要度は NORMAL です。  重要度は要求がスケジュールされる順番に影響します。それによって、リソースおよびロックへの最初のアクセスが指定されます。
 
-## <a name="classification-parameter-precedence"></a>分類パラメーターの優先順位
+## <a name="classification-parameter-weighting"></a>分類パラメーターの重み付け
 
-要求は、複数の分類子と照合できます。  分類子パラメーターには優先順位があります。  優先順位の高い一致した分類子が、ワークロード グループと重要度の割り当てに、最初に使用されます。  優先順位は次のとおりです。
-1. User
-2. ROLE
-3. WLM_LABEL
-4. WLM_SESSION
-5. START_TIME/END_TIME
+要求は、複数の分類子と照合できます。  分類子パラメーターには重み付けがあります。  ワークロード グループと重要度の割り当てには、重み付けが高く、一致する分類子が使用されます。  重み付けは次のようになります。
+
+|分類子パラメーター |Weight   |
+|---------------------|---------|
+|User                 |64       |
+|ROLE                 |32       |
+|WLM_LABEL            |16       |
+|WLM_CONTEXT          |8        |
+|START_TIME/END_TIME  |4        |
 
 次の分類子構成について考えてみます。
 
@@ -151,19 +154,19 @@ CREATE WORKLOAD CLASSIFIER classiferB WITH
 ( WORKLOAD_GROUP = 'wgUserQueries'  
  ,MEMBERNAME     = 'userloginA'
  ,IMPORTANCE     = LOW
- ,START_TIME     = '18:00')
+ ,START_TIME     = '18:00'
  ,END_TIME       = '07:00' )
 ```
 
-ユーザー `userloginA` は両方の分類子で構成されています。  userloginA が UTC の午後 6 時から午前 7 時までの間に `salesreport` と等しいラベルを持つクエリを実行すると、要求は wgDashboards ワークロード グループに分類され、重要度が HIGH になります。  時間外のレポートの重要度が LOW の wgUserQueries に要求が分類されることが予想されますが、WLM_LABEL の優先順位は START_TIME/END_TIME よりも高くなります。  この場合、START_TIME/END_TIME を classiferA に追加できます。
+ユーザー `userloginA` は両方の分類子で構成されています。  userloginA が UTC の午後 6 時から午前 7 時までの間に `salesreport` と等しいラベルを持つクエリを実行すると、要求は wgDashboards ワークロード グループに分類され、重要度が HIGH になります。  時間外報告の重要度が LOW である wgUserQueries に要求が分類されることが予想されますが、WLM_LABEL の重み付けは START_TIME/END_TIME よりも高くなります。  classiferA の重み付けは 80 (ユーザーの 64 + WLM_LABEL の 16) です。  classifierB の重み付けは 68 (ユーザーの 64 + START_TIME/END_TIME の 4) です。  この場合、WLM_LABEL を classiferB に追加できます。
 
- 詳細については、[ワークロードの分類](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification#classification-precedence)に関するページを参照してください。
+ 詳細については、[ワークロードの重み付け](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification#classification-weighting)に関するページをご覧ください。
 
 ## <a name="permissions"></a>アクセス許可
 
  CONTROL DATABASE アクセス許可が必須です。  
   
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
  次の例は、`wgcELTRole` という名前のワークロード分類子を作成する方法を示します。 この例では、ワークロード グループ staticrc20 およびユーザー `ELTRole` が使用され、重要度が `above_normal` に設定されています。
 

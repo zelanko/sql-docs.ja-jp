@@ -1,7 +1,7 @@
 ---
 title: コピーのみのバックアップ | Microsoft Docs
 ms.custom: ''
-ms.date: 09/08/2018
+ms.date: 01/30/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -15,17 +15,17 @@ ms.assetid: f82d6918-a5a7-4af8-868e-4247f5b00c52
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 621d3d701e1e815bac4d5028c3d78b00240bc293
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 1d95c1982d5809288b64f34cd1f6328b4ee00e4c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908983"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76941040"
 ---
 # <a name="copy-only-backups"></a>コピーのみのバックアップ
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-*コピーのみのバックアップ*は、従来の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップのシーケンスから独立した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップです。 通常、バックアップを行うとデータベースが変更され、その後のバックアップの復元方法に影響します。 ただし、データベース全体のバックアップや復元の手順に影響を与えない、特殊な目的にバックアップを行うと役に立つ場合があります。 このため、コピーのみのバックアップが導入されました。  
+*コピーのみのバックアップ*は、従来の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップのシーケンスから独立した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップです。 通常、バックアップを行うとデータベースが変更され、その後のバックアップの復元方法に影響します。 ただし、データベース全体のバックアップや復元の手順に影響を与えない、特殊な目的にバックアップを行うと役に立つ場合があります。 このため、コピーのみのバックアップが導入されました。
   
  コピーのみのバックアップには、次の種類があります。  
   
@@ -42,12 +42,15 @@ ms.locfileid: "72908983"
      コピーのみのバックアップの後、トランザクション ログは切り捨てられません。  
   
  コピーのみのバックアップは、 **backupset** テーブルの [is_copy_only](../../relational-databases/system-tables/backupset-transact-sql.md) 列に記録されます。  
+ 
+ > [!IMPORTANT]  
+> Azure SQL マネージド インスタンスでは、[サービスによって管理された Transparent Data Encryption (TDE)](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-azure-sql?tabs=azure-portal#service-managed-transparent-data-encryption) を使用して暗号化されたデータベースに対して、コピーのみのバックアップを作成することはできません。 サービスによって管理された TDE ではデータの暗号化に内部キーが使用され、そのキーをエクスポートすることはできません。そのため、他の場所でバックアップを復元することはできません。 暗号化されたデータベースのコピーのみのバックアップを作成できるようにするには、[ユーザーが管理する TDE](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql) を代わりに使用することを検討してください。ただし、後で復元するために暗号化キーを確実に使用できるようにしておいてください。
   
 ## <a name="to-create-a-copy-only-backup"></a>コピーのみのバックアップを作成するには  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)]、または PowerShell を使用してコピーのみのバックアップを作成できます。  
 
-### <a name="examples"></a>使用例  
-###  <a name="SSMSProcedure"></a> A. SQL Server Management Studio の使用  
+### <a name="examples"></a>例  
+###  <a name="SSMSProcedure"></a> A. SQL Server Management Studio を使用する  
 次の例では、 `Sales` データベースのコピーのみのバックアップを既定のバックアップ場所にあるディスクにバックアップします。
 
 1. **オブジェクト エクスプローラー**で、SQL Server データベース エンジンのインスタンスに接続し、そのインスタンスを展開します。

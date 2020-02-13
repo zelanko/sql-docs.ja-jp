@@ -23,10 +23,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a5ca209108c9f462368ef6fe5bbc38d9557b3599
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67948214"
 ---
 # <a name="where-transact-sql"></a>WHERE (Transact-SQL)
@@ -45,7 +45,7 @@ ms.locfileid: "67948214"
 ## <a name="arguments"></a>引数  
 \< *search_condition* > 返される行が満たす条件を定義します。 検索条件に含まれる述語の数に制限はありません。 検索条件および述語の詳細については、「[検索条件 &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md)」を参照してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  以下の例は、`WHERE` 句でいくつかの一般的な検索条件を使用する方法を示しています。  
   
 ### <a name="a-finding-a-row-by-using-a-simple-equality"></a>A. 単純な等式を使用して行を検索する  

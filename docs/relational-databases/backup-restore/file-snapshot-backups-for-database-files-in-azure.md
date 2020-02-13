@@ -11,10 +11,10 @@ ms.assetid: 17a81fcd-8dbd-458d-a9c7-2b5209062f45
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: aed634232901aa116fddf361d3c3347d1e462eb2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68086282"
 ---
 # <a name="file-snapshot-backups-for-database-files-in-azure"></a>Azure でのデータベース ファイルのスナップショット バックアップ
@@ -148,7 +148,7 @@ GO
 ```  
   
 ## <a name="viewing-database-backup-file-snapshots"></a>データベース バックアップ ファイル スナップショットを表示する  
- 各データベース ファイルのベース BLOB のファイル スナップショットを表示するには、 **sys.fn_db_backup_file_snapshots** システム関数を使用します。 このシステム関数を使用すると、Azure Blob ストレージ サービスを使用して格納されたデータベースの、各ベース BLOB のバックアップ ファイル スナップショットをすべて表示できます。 この関数の主な用途は、 **sys.sp_delete_backup** システム ストアド プロシージャ以外のメカニズムを使用してファイル スナップショット バックアップ セットのバックアップ ファイルを削除した際に、削除されずに残ったデータベースのバックアップ ファイル スナップショットを識別することです。 バックアップ ファイル スナップショットがそのまま残っているバックアップ セットの一部であるかそうではないかを判別するには、**RESTORE FILELISTONLY** システム ストアド プロシージャを使用して各バックアップ ファイルに属するファイル スナップショットを一覧表示します。 詳細については、「[sys.fn_db_backup_file_snapshots &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md)」および「[RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)」を参照してください。  
+ 各データベース ファイルのベース BLOB のファイル スナップショットを表示するには、 **sys.fn_db_backup_file_snapshots** システム関数を使用します。 このシステム関数を使用すると、Azure Blob ストレージ サービスを使用して格納されたデータベースの、各ベース BLOB のバックアップ ファイル スナップショットをすべて表示できます。 この関数の主な用途は、 **sys.sp_delete_backup** システム ストアド プロシージャ以外のメカニズムを使用してファイル スナップショット バックアップ セットのバックアップ ファイルを削除した際に、削除されずに残ったデータベースのバックアップ ファイル スナップショットを識別することです。 バックアップ ファイル スナップショットがそのまま残っているバックアップ セットの一部であるかそうではないかを判別するには、 **RESTORE FILELISTONLY**  システム ストアド プロシージャを使用して各バックアップ ファイルに属するファイル スナップショットを一覧表示します。 詳細については、「[sys.fn_db_backup_file_snapshots &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md)」および「[RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)」を参照してください。  
   
  次の例は、指定したデータベースのすべてのバックアップ ファイル スナップショットの一覧を返します。  
   
@@ -163,7 +163,7 @@ GO
 ```  
   
 ## <a name="deleting-an-individual-database-backup-file-snapshot"></a>個々のデータベース バックアップ ファイル スナップショットを削除する  
- データベースのベース BLOB の個々のバックアップ ファイル スナップショットを削除するには、 **sys.sp_delete_backup_file_snapshot** システム ストアド プロシージャを使用します。 このシステム ストアド プロシージャの主な用途は、**sys.sp_delete_backup** システム ストアド プロシージャ以外のメソッドを使用してバックアップ ファイルを削除した後に残った、孤立したファイル スナップショット ファイルを削除することです。 詳細については、「[sp_delete_backup_file_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md)」を参照してください。  
+ データベースのベース BLOB の個々のバックアップ ファイル スナップショットを削除するには、 **sys.sp_delete_backup_file_snapshot** システム ストアド プロシージャを使用します。 このシステム ストアド プロシージャの主な用途は、 **sys.sp_delete_backup** システム ストアド プロシージャ以外のメソッドを使用してバックアップ ファイルを削除した後に残った、孤立したファイル スナップショット ファイルを削除することです。 詳細については、「[sp_delete_backup_file_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md)」を参照してください。  
   
 > [!WARNING]  
 >  ファイル スナップショット バックアップ セットの一部である個々のファイル スナップショットを削除すると、バックアップ セットが無効になります。  
@@ -176,6 +176,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [チュートリアル: Azure Blob Storage サービスと SQL Server 2016 データベースの使用](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
+ [チュートリアル:Azure Blob Storage サービスと SQL Server 2016 データベースの使用](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
   
   
