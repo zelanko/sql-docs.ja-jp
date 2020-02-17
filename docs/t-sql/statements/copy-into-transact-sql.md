@@ -131,7 +131,7 @@ WITH
 AAD またはパブリック ストレージ アカウントを使用して認証する場合は、CREDENTIAL を指定する必要はありません。 
 
 - Shared Access Signatures (SAS) を使用した認証 *IDENTITY:* "Shared Access Signature" の値が含まれている定数 
-  *SECRET: * [*Shared Access Signature*](/azure/storage/common/storage-sas-overview) "*を使用すると、ストレージ アカウント内のリソースへの委任アクセスが可能になります。* "
+  *SECRET:* [*Shared Access Signature*](/azure/storage/common/storage-sas-overview) "*を使用すると、ストレージ アカウント内のリソースへの委任アクセスが可能になります。* "
   最低限必要な権限: READ および LIST
 
 - [*サービス プリンシパル*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)を使用した認証
