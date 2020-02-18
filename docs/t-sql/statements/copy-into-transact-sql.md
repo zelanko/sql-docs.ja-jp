@@ -136,8 +136,8 @@ AAD またはパブリック ストレージ アカウントを使用して認�
 
 - [*サービス プリンシパル*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)を使用した認証
 
-  *IDENTITY: <ClientID>@<OAuth_2.0_Token_EndPoint> *
-  *SECRET:* AAD アプリケーション サービス プリンシパルキー。最低限必要な RBAC ロール: ストレージ BLOB データ共同作成者、ストレージ BLOB データ所有者、またはストレージ BLOB データ閲覧者
+  *IDENTITY: <ClientID>@<OAuth_2.0_Token_EndPoint>* 
+   *SECRET:* AAD アプリケーション サービス プリンシパルキー。最低限必要な RBAC ロール: ストレージ BLOB データ共同作成者、ストレージ BLOB データ所有者、またはストレージ BLOB データ閲覧者
 
   > [!NOTE]  
   > OAuth 2.0 トークン エンドポイント **V1** を使用してください
