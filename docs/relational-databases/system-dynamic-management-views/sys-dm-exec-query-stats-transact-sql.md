@@ -20,12 +20,12 @@ ms.assetid: eb7b58b8-3508-4114-97c2-d877bcb12964
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a4fba10bd080c4b97cd38a7330611bed51f3d225
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 23fd1a0c896436dad27ab771e2ed04c775938091
+ms.sourcegitcommit: 1feba5a0513e892357cfff52043731493e247781
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73982650"
+ms.lasthandoff: 02/18/2020
+ms.locfileid: "77429016"
 ---
 # <a name="sysdm_exec_query_stats-transact-sql"></a>sys.dm_exec_query_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "73982650"
 |-----------------|---------------|-----------------|  
 |**sql_handle**|**varbinary (64)**  |クエリが含まれているバッチまたはストアドプロシージャを一意に識別するトークンです。<br /><br /> **sql_handle**を**statement_start_offset**と**statement_end_offset**と共に使用すると、 **dm_exec_sql_text**動的管理関数を呼び出すことによって、クエリの sql テキストを取得できます。|  
 |**statement_start_offset**|**int**|バッチまたは保存されるオブジェクトのテキスト内での、行が示すクエリの開始位置 (バイト単位)。0 で始まります。|  
-|**statement_end_offset**|**int**|バッチまたは保存されるオブジェクトのテキスト内での、行が示すクエリの終了位置 (バイト単位)。0 で始まります。 以前[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]のバージョンでは、値-1 はバッチの終了を示します。 末尾のコメントは含まれなくなりました。|  
+|**statement_end_offset**|**int**|バッチまたは保存されるオブジェクトのテキスト内での、行が示すクエリの終了位置 (バイト単位)。0 で始まります。 以前[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]のバージョンでは、値-1 はバッチの終了を示します。 末尾のコメントは削除されました。|  
 |**plan_generation_num**|**bigint**|再コンパイル後、プランのインスタンスを区別するために使用できるシーケンス番号。|  
 |**plan_handle**|**varbinary (64)**|は、実行され、そのプランがプランキャッシュに存在するか、現在実行中のバッチのクエリ実行プランを一意に識別するトークンです。 この値を [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md) 動的管理関数に渡して、クエリ プランを取得できます。<br /><br /> ネイティブ コンパイル ストアド プロシージャがメモリ最適化テーブルに対してクエリを実行するときは、常に 0x000 になります。|  
 |**creation_time**|**DATETIME**|プランがコンパイルされた時刻。|  

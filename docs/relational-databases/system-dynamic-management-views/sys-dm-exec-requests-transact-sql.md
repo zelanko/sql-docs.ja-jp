@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 10/01/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: sstein
 ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
@@ -19,13 +18,14 @@ helpviewer_keywords:
 ms.assetid: 4161dc57-f3e7-4492-8972-8cfb77b29643
 author: pmasl
 ms.author: pelopes
+ms.reviewer: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 20257eb1a91b35dd45e1b4fc79f84533c64b2561
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 16939894f9e43e4538a8d56e76632af891d9714a
+ms.sourcegitcommit: 1feba5a0513e892357cfff52043731493e247781
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74307996"
+ms.lasthandoff: 02/18/2020
+ms.locfileid: "77429023"
 ---
 # <a name="sysdm_exec_requests-transact-sql"></a>dm_exec_requests (Transact-sql)
 
@@ -40,9 +40,9 @@ ms.locfileid: "74307996"
 |start_time|**DATETIME**|要求が到着したときのタイムスタンプ。 NULL 値は許可されません。|  
 |status|**nvarchar (30)**|要求の状態。 これは次のいずれかです。<br /><br /> バックグラウンド<br />実行中<br />実行可能<br />休止中<br />Suspended<br /><br /> NULL 値は許可されません。|  
 |command|**nvarchar (32)**|現在処理中のコマンドの種類。 一般的なコマンドの種類には次のものがあります。<br /><br /> SELECT<br />INSERT<br />UPDATE<br />DELETE<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> 要求のテキストを取得するには、対応する sql_handle と共に、要求に対して sys.dm_exec_sql_text を使用します。 内部システムプロセスは、実行するタスクの種類に基づいて、コマンドを設定します。 タスクには次のものが含まれます。<br /><br /> LOCK MONITOR<br />CHECKPOINTLAZY<br />WRITER<br /><br /> NULL 値は許可されません。|  
-|sql_handle|**varbinary (64)**|クエリが含まれているバッチまたはストアドプロシージャを一意に識別するトークンです。 NULL 値が許可されます。|  
-|statement_start_offset|**int**|現在実行中のバッチまたはストアド プロシージャに含まれる、現在実行中のステートメントが開始されるまでの文字数。 sql_handle、statement_end_offset、sys.dm_exec_sql_text 動的管理関数と共に使用して、要求に対して現在実行中のステートメントを取得できます。 NULL 値が許可されます。|  
-|statement_end_offset|**int**|現在実行中のバッチまたはストアドプロシージャ内で現在実行中のステートメントが終了するまでの文字数。 sql_handle、statement_end_offset、sys.dm_exec_sql_text 動的管理関数と共に使用して、要求に対して現在実行中のステートメントを取得できます。 NULL 値が許可されます。|  
+|sql_handle|**varbinary (64)**|クエリが含まれているバッチまたはストアドプロシージャを一意に識別するトークンです。 NULL 値が許可されます。| 
+|statement_start_offset|**int**|現在実行中のバッチまたは保存されたオブジェクトに対して現在実行中のステートメントの開始位置を、0で始まるバイト単位で示します。 、、および`sql_handle` `statement_end_offset` `sys.dm_exec_sql_text`動的管理関数と共に使用して、要求に対して現在実行中のステートメントを取得できます。 NULL 値が許可されます。|  
+|statement_end_offset|**int**|現在実行中のバッチまたは保存されたオブジェクトに対して現在実行中のステートメントの終了位置を、0から始まるバイト単位で示します。 、、および`sql_handle` `statement_start_offset` `sys.dm_exec_sql_text`動的管理関数と共に使用して、要求に対して現在実行中のステートメントを取得できます。 NULL 値が許可されます。|  
 |plan_handle|**varbinary (64)**|現在実行中のバッチのクエリ実行プランを一意に識別するトークンです。 NULL 値が許可されます。|  
 |database_id|**smallint**|要求の実行対象データベースの ID。 NULL 値は許可されません。|  
 |user_id|**int**|要求を送信したユーザーの ID。 NULL 値は許可されません。|  

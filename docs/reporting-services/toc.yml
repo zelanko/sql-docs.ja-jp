@@ -38,13 +38,13 @@
         - name: 基本的なテーブル レポートの作成 (SSRS チュートリアル)
           href: ../reporting-services/create-a-basic-table-report-ssrs-tutorial.md
           items:
-            - name: 'レッスン 1 : レポート サーバー プロジェクトの作成'
+            - name: 'レッスン 1:レポート サーバー プロジェクトの作成'
               href: ../reporting-services/lesson-1-creating-a-report-server-project-reporting-services.md
-            - name: 'レッスン 2 : 接続情報の指定'
+            - name: 'レッスン 2: 接続情報の指定'
               href: ../reporting-services/lesson-2-specifying-connection-information-reporting-services.md
-            - name: 'レッスン 3 : テーブル レポートのデータセットの定義'
+            - name: 'レッスン 3:テーブル レポートのデータセットの定義'
               href: ../reporting-services/lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md
-            - name: 'レッスン 4 : レポートへのテーブルの追加'
+            - name: 'レッスン 4:レポートへのテーブルの追加'
               href: ../reporting-services/lesson-4-adding-a-table-to-the-report-reporting-services.md
             - name: 'レッスン 5: レポートの書式設定'
               href: ../reporting-services/lesson-5-formatting-a-report-reporting-services.md
@@ -53,22 +53,22 @@
         - name: データ ドリブン サブスクリプションの作成 (SSRS チュートリアル)
           href: ../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md
           items:
-            - name: 'レッスン 1 : サンプル サブスクライバー データベースの作成'
+            - name: 'レッスン 1:サンプル サブスクライバー データベースの作成'
               href: ../reporting-services/lesson-1-creating-a-sample-subscriber-database.md
             - name: 'レッスン 2: レポート データ ソースのプロパティの変更'
               href: ../reporting-services/lesson-2-modifying-the-report-data-source-properties.md
-            - name: 'レッスン 3: データ ドリブン サブスクリプションの定義'
+            - name: 'レッスン 3:データ ドリブン サブスクリプションの定義'
               href: ../reporting-services/lesson-3-defining-a-data-driven-subscription.md
         - name: ReportViewer を使用してパラメーターを含む詳細 (RDLC) レポートを作成する (SSRS チュートリアル)
           href: ../reporting-services/create-drillthrough-rdlc-report-with-parameters-reportviewer.md
           items:
-            - name: 'レッスン 1: 新しい Web サイトを作成する'
+            - name: 'レッスン 1:新しい Web サイトを作成する'
               href: ../reporting-services/lesson-1-create-a-new-web-site.md
             - name: 'レッスン 2: 親レポートのデータ接続とデータ テーブルを定義する'
               href: ../reporting-services/lesson-2-define-a-data-connection-and-data-table-for-parent-report.md
-            - name: 'レッスン 3: レポート ウィザードを使用して親レポートを設計する'
+            - name: 'レッスン 3:レポート ウィザードを使用して親レポートを設計する'
               href: ../reporting-services/lesson-3-design-the-parent-report-using-the-report-wizard.md
-            - name: 'レッスン 4: 子レポートのデータ接続とデータ テーブルを定義する'
+            - name: 'レッスン 4:子レポートのデータ接続とデータ テーブルを定義する'
               href: ../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md
             - name: 'レッスン 5: レポート ウィザードを使用して子レポートを設計する'
               href: ../reporting-services/lesson-5-design-the-child-report-using-the-report-wizard.md
@@ -83,37 +83,37 @@
     - name: レポート ビルダー チュートリアル
       href: ../reporting-services/report-builder-tutorials.md
       items:
-        - name: 'チュートリアル: オフラインでのクイック グラフ レポートの作成'
+        - name: 'チュートリアル:オフラインでのクイック グラフ レポートの作成'
           href: ../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md
         - name: チュートリアルの前提条件
           href: ../reporting-services/prerequisites-for-tutorials-report-builder.md
         - name: 別の方法でデータ接続を取得する (レポート ビルダー)
           href: ../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md
-        - name: 'チュートリアル: 基本的な表レポートの作成'
+        - name: 'チュートリアル:基本的なテーブル レポートの作成'
           href: ../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md
-        - name: 'チュートリアル: マトリックス レポートの作成'
+        - name: 'チュートリアル:マトリックス形式のレポートの作成'
           href: ../reporting-services/tutorial-creating-a-matrix-report-report-builder.md
-        - name: 'チュートリアル: 自由形式のレポートの作成'
+        - name: 'チュートリアル:自由形式のレポートの作成'
           href: ../reporting-services/tutorial-creating-a-free-form-report-report-builder.md
-        - name: 'チュートリアル: テキストの書式設定 (レポート ビルダー)'
+        - name: 'チュートリアル:テキストを書式設定する (レポート ビルダー)'
           href: ../reporting-services/tutorial-format-text-report-builder.md
-        - name: 'チュートリアル: レポートへの縦棒グラフの追加 (レポート ビルダー)'
+        - name: 'チュートリアル:レポートへの縦棒グラフの追加 (レポート ビルダー)'
           href: ../reporting-services/tutorial-add-a-column-chart-to-your-report-report-builder.md
-        - name: 'チュートリアル: レポートへの円グラフの追加 (レポート ビルダー)'
+        - name: 'チュートリアル:レポートへの円グラフの追加 (レポート ビルダー)'
           href: ../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md
-        - name: 'チュートリアル: レポートへの横棒グラフの追加 (レポート ビルダー)'
+        - name: 'チュートリアル:レポートへの横棒グラフの追加 (レポート ビルダー)'
           href: ../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md
-        - name: 'チュートリアル: レポートへのスパークラインの追加 (レポート ビルダー)'
+        - name: 'チュートリアル:レポートへのスパークラインの追加 (レポート ビルダー)'
           href: ../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md
-        - name: 'チュートリアル: レポートへの KPI の追加'
+        - name: 'チュートリアル:レポートへの KPI の追加'
           href: ../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md
-        - name: 'チュートリアル: マップ レポート'
+        - name: 'チュートリアル:マップ レポート'
           href: ../reporting-services/tutorial-map-report-report-builder.md
-        - name: 'チュートリアル: レポートへのパラメーターの追加 (レポート ビルダー)'
+        - name: 'チュートリアル:レポートへのパラメーターの追加 (レポート ビルダー)'
           href: ../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md
-        - name: 'チュートリアル: 詳細レポートとメイン レポートの作成'
+        - name: 'チュートリアル:詳細レポートとメイン レポートの作成'
           href: ../reporting-services/tutorial-creating-drillthrough-and-main-reports-report-builder.md
-        - name: 'チュートリアル: 式の概要'
+        - name: 'チュートリアル:式の概要'
           href: ../reporting-services/tutorial-introducing-expressions.md
 - name: 計画
   items:
@@ -145,53 +145,53 @@
           href: ../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md
         - name: SQL Server フェールオーバー クラスターでのレポート サーバー データベースのホスト
           href: ../reporting-services/install-windows/host-a-report-server-database-in-a-sql-server-failover-cluster.md
-        - name: Reporting Services 構成マネージャー (ネイティブ モード)
-          href: ../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md
+    - name: Reporting Services 構成マネージャー (ネイティブ モード)
+      href: ../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md
+      items:
+        - name: レポート サーバー サービス アカウントの構成 (SSRS 構成マネージャー)
+          href: ../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md
+        - name: レポート サーバー URL の構成 (SSRS 構成マネージャー)
+          href: ../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md
           items:
-            - name: レポート サーバー サービス アカウントの構成 (SSRS 構成マネージャー)
-              href: ../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md
-            - name: レポート サーバー URL の構成 (SSRS 構成マネージャー)
-              href: ../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md
-              items:
-                - name: URL の予約と登録について (SSRS 構成マネージャー)
-                  href: ../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md
-                - name: URL の構成 (SSRS 構成マネージャー)
-                  href: ../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md
-                - name: URL 予約の構文 (SSRS 構成マネージャー)
-                  href: ../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md
-                - name: 構成ファイル内の URL (SSRS 構成マネージャー)
-                  href: ../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md
-                - name: レポート サーバーの複数インスタンス配置における URL 予約 (SSRS 構成マネージャー)
-                  href: ../reporting-services/install-windows/url-reservations-for-multi-instance-report-server-deployments.md
-            - name: データベースの作成
-              href: ../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md
-            - name: ネイティブ モード データベースの作成
-              href: ../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md
-            - name: レポート サーバー データベース接続の構成
-              href: ../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md
-            - name: 電子メールの設定 - Reporting Services のネイティブ モード (構成マネージャー)
-              href: ../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md
-            - name: 自動実行アカウントの構成 (SSRS 構成マネージャー)
-              href: ../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md
-            - name: SSRS 暗号化キー - 暗号化キーの管理
-              href: ../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md
-              items:
-                - name: SSRS の暗号化キー - レポート サーバーの初期化
-                  href: ../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md
-                - name: SSRS の暗号化キー - 暗号化されたレポート サーバー データの保存
-                  href: ../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md
-                - name: SSRS の暗号化キー - バックアップと復元
-                  href: ../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md
-                - name: SSRS の暗号化キー - 削除と再作成
-                  href: ../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md
-                - name: SSRS の暗号化キー - スケールアウト配置の追加と削除
-                  href: ../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md
-            - name: サブスクリプション設定とファイル共有アカウント (構成マネージャー)
-              href: ../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md
-            - name: ネイティブ モード レポート サーバーのスケールアウト配置の構成 (SSRS 構成マネージャー)
-              href: ../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md
-            - name: Power BI 統合
-              href: ../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md
+            - name: URL の予約と登録について (SSRS 構成マネージャー)
+              href: ../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md
+            - name: URL の構成 (SSRS 構成マネージャー)
+              href: ../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md
+            - name: URL 予約の構文 (SSRS 構成マネージャー)
+              href: ../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md
+            - name: 構成ファイル内の URL (SSRS 構成マネージャー)
+              href: ../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md
+            - name: レポート サーバーの複数インスタンス配置における URL 予約 (SSRS 構成マネージャー)
+              href: ../reporting-services/install-windows/url-reservations-for-multi-instance-report-server-deployments.md
+        - name: データベースの作成
+          href: ../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md
+        - name: ネイティブ モード データベースの作成
+          href: ../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md
+        - name: レポート サーバー データベース接続の構成
+          href: ../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md
+        - name: 電子メールの設定 - Reporting Services のネイティブ モード (構成マネージャー)
+          href: ../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md
+        - name: 自動実行アカウントの構成 (SSRS 構成マネージャー)
+          href: ../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md
+        - name: SSRS 暗号化キー - 暗号化キーの管理
+          href: ../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md
+          items:
+            - name: SSRS の暗号化キー - レポート サーバーの初期化
+              href: ../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md
+            - name: SSRS の暗号化キー - 暗号化されたレポート サーバー データの保存
+              href: ../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md
+            - name: SSRS の暗号化キー - バックアップと復元
+              href: ../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md
+            - name: SSRS の暗号化キー - 削除と再作成
+              href: ../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md
+            - name: SSRS の暗号化キー - スケールアウト配置の追加と削除
+              href: ../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md
+        - name: サブスクリプション設定とファイル共有アカウント (構成マネージャー)
+          href: ../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md
+        - name: ネイティブ モード レポート サーバーのスケールアウト配置の構成 (SSRS 構成マネージャー)
+          href: ../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md
+        - name: Power BI 統合
+          href: ../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md
     - name: SharePoint モードで Reporting Services 2016 をインストールする
       href: ../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md
       items:
@@ -411,25 +411,25 @@
           href: ../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md
         - name: 処理オプションの設定
           href: ../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md
-    - name: SharePoint サイトのレポート ビューアー Web パーツ
-      href: ../reporting-services/report-server-sharepoint/report-viewer-web-part-sharepoint-site.md
-      items:
-        - name: レポート ビューアー Web パーツのデプロイ
-          href: ../reporting-services/report-server-sharepoint/deploy-report-viewer-web-part.md
-        - name: レポート ビューアー Web パーツの Web ページへの追加
-          href: ../reporting-services/report-server-sharepoint/add-report-viewer-web-part-to-page.md
-        - name: フィルター Web パーツまたはドキュメント Web パーツの接続
-          href: ../reporting-services/report-server-sharepoint/connect-filter-or-documents-web-part-sharepoint-integrated-mode.md
-        - name: レポート ビューアー Web パーツのカスタマイズ
-          href: ../reporting-services/report-server-sharepoint/customize-the-report-viewer-web-part.md
-        - name: レポート ビューアー Web パーツに関する SharePoint サイト設定
-          href: ../reporting-services/report-server-sharepoint/report-viewer-web-part-sharepoint-site-settings.md
     - name: 高可用性
       href: ../reporting-services/report-server-sharepoint/high-availability-reporting-services.md
     - name: RDL サンドボックスの有効化と無効化
       href: ../reporting-services/report-server-sharepoint/enable-and-disable-rdl-sandboxing.md
     - name: サブジェクト代替名を使用するように Reporting Services を構成する
       href: ../reporting-services/report-server-sharepoint/configure-reporting-services-to-use-a-subject-alternative-name.md
+- name: SharePoint サイトのレポート ビューアー Web パーツ
+  href: ../reporting-services/report-server-sharepoint/report-viewer-web-part-sharepoint-site.md
+  items:
+    - name: レポート ビューアー Web パーツのデプロイ
+      href: ../reporting-services/report-server-sharepoint/deploy-report-viewer-web-part.md
+    - name: レポート ビューアー Web パーツの Web ページへの追加
+      href: ../reporting-services/report-server-sharepoint/add-report-viewer-web-part-to-page.md
+    - name: フィルター Web パーツまたはドキュメント Web パーツの接続
+      href: ../reporting-services/report-server-sharepoint/connect-filter-or-documents-web-part-sharepoint-integrated-mode.md
+    - name: レポート ビューアー Web パーツのカスタマイズ
+      href: ../reporting-services/report-server-sharepoint/customize-the-report-viewer-web-part.md
+    - name: レポート ビューアー Web パーツに関する SharePoint サイト設定
+      href: ../reporting-services/report-server-sharepoint/report-viewer-web-part-sharepoint-site-settings.md
 - name: Power BI にピン留めする
   href: ../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md
 - name: Reporting Services のレポート ビルダー (SSRS)
@@ -704,7 +704,7 @@
           href: ../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md
         - name: カスタムの場所のマップへの追加
           href: ../reporting-services/report-design/add-custom-locations-to-a-map-report-builder-and-ssrs.md
-        - name: 'レポートのトラブルシューティング: マップ レポート'
+        - name: 'レポートのトラブルシューティング:マップ レポート'
           href: ../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md
     - name: 画像、テキスト ボックス、四角形、および罫線
       href: ../reporting-services/report-design/images-text-boxes-rectangles-and-lines-report-builder-and-ssrs.md
@@ -1904,7 +1904,7 @@
       href: ../reporting-services/custom-report-items/custom-report-item-implementation-requirements.md
     - name: カスタム レポート アイテム
       href: ../reporting-services/custom-report-items/custom-report-items.md
-    - name: カスタム レポート アイテムを配置する方法
+    - name: '方法:カスタム レポート アイテムを配置する'
       href: ../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md
     - name: 式を使用したカスタム アセンブリへのアクセス
       href: ../reporting-services/custom-assemblies/accessing-custom-assemblies-through-expressions.md
@@ -1912,7 +1912,7 @@
       href: ../reporting-services/custom-assemblies/asserting-permissions-in-custom-assemblies.md
     - name: カスタム アセンブリの配置
       href: ../reporting-services/custom-assemblies/deploying-a-custom-assembly.md
-    - name: カスタム アセンブリをデバッグする方法
+    - name: '方法:カスタム アセンブリをデバッグする'
       href: ../reporting-services/custom-assemblies/how-to-debug-custom-assemblies.md
     - name: カスタム アセンブリ オブジェクトの初期化
       href: ../reporting-services/custom-assemblies/initializing-custom-assembly-objects.md

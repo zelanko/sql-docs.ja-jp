@@ -1,7 +1,7 @@
 ---
 title: sys. indexes (Transact-sql) |Microsoft Docs
 ms.custom: ''
-ms.date: 06/26/2019
+ms.date: 02/12/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -20,12 +20,12 @@ ms.assetid: 066bd9ac-6554-4297-88fe-d740de1f94a8
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3d4d307ea18127586ac46b0f6afb973ef62cf6ba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 3208f538a1c1e111913c0808a8213743fed41bcc
+ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74761481"
+ms.lasthandoff: 02/13/2020
+ms.locfileid: "77179293"
 ---
 # <a name="sysindexes-transact-sql"></a>sys.indexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "74761481"
 |**allow_row_locks**|**bit**|1 = インデックスは行ロックを許可します。<br /><br /> 0 = インデックスは行ロックを許可しません。<br /><br /> クラスター化列ストア インデックスの場合、常に 0 です。|  
 |**allow_page_locks**|**bit**|1 = インデックスはページロックを許可します。<br /><br /> 0 = インデックスはページロックを許可しません。<br /><br /> クラスター化列ストア インデックスの場合、常に 0 です。|  
 |**has_filter**|**bit**|1 = インデックスにはフィルターがあり、フィルター定義を満たす行のみが含まれます。<br /><br /> 0 = インデックスにフィルターがありません。|  
-|**filter_definition**|**nvarchar(max)**|フィルター選択されたインデックスに含まれる行のサブセットの式。<br /><br /> ヒープまたはフィルター選択されたインデックス以外のインデックスの場合は、NULL です。|  
+|**filter_definition**|**nvarchar(max)**|フィルター選択されたインデックスに含まれる行のサブセットの式。<br /><br /> ヒープ、フィルター選択されていないインデックス、またはテーブルに対する十分な権限がない場合は NULL です。|  
 |**auto_created**|**bit**|1 = インデックスは自動チューニングによって作成されました。<br /><br />0 = インデックスはユーザーによって作成されました。
 |**optimize_for_sequential_key**|**bit**|1 = インデックスの最後のページ挿入最適化が有効になっています。<br><br>0 = 既定値。 インデックスの最後のページ挿入最適化が無効になっています。|
 

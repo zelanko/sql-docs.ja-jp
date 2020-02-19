@@ -7,7 +7,6 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: reference
 dev_langs:
-- TSQL
 - VB
 - CSharp
 helpviewer_keywords:
@@ -21,12 +20,12 @@ ms.assetid: bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9f509b2a2544c67c9113bc700b7d98bfd4a24024
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e7e79307e2c913841ae1e017e6a5c180dfd55b6b
+ms.sourcegitcommit: 9b8b71cab6e340f2cb171397f66796d7a76c497e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62753821"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77213967"
 ---
 # <a name="clr-stored-procedures"></a>CLR ストアド プロシージャ
   ストアド プロシージャはスカラー式では使用できないルーチンです。 ストアド プロシージャはスカラー関数とは異なり、表形式の結果やメッセージをクライアントに返す操作、DDL (データ定義言語) ステートメントや DML (データ操作言語) ステートメントを呼び出す操作、出力パラメーターを返す操作が行えます。 CLR 統合の利点とマネージコードと[!INCLUDE[tsql](../../includes/tsql-md.md)]の使い分けの詳細については、「 [Clr 統合の概要](../../relational-databases/clr-integration/clr-integration-overview.md)」を参照してください。  
@@ -54,9 +53,9 @@ ms.locfileid: "62753821"
  
   [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャと同様に、OUTPUT パラメーターを使用して [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] ストアド プロシージャから情報を返すことができます。 
   [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャの作成に使用する [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] DML 構文は、[!INCLUDE[tsql](../../includes/tsql-md.md)] で記述されたストアド プロシージャの作成に使用する構文と同じです。 
-  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] クラスの実装コードの対応するパラメーターは、引数として参照渡しのパラメーターを使用する必要があります。 Visual Basic は出力パラメーターを Visual C# と同様にはサポートしていません。 次に示すように、パラメーターを参照渡し\<で指定し、出力パラメーターを表す Out () > 属性を適用する必要があります。  
+  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] クラスの実装コードの対応するパラメーターは、引数として参照渡しのパラメーターを使用する必要があります。 Visual Basic では、C# と同じように出力パラメーターがサポートされないことに注意してください。 次に示すように、パラメーターを参照渡し\<で指定し、出力パラメーターを表す Out () > 属性を適用する必要があります。  
   
-```  
+```vb
 Imports System.Runtime.InteropServices  
 ...  
 Public Shared Sub PriceSum ( <Out()> ByRef value As SqlInt32)  
@@ -64,9 +63,7 @@ Public Shared Sub PriceSum ( <Out()> ByRef value As SqlInt32)
   
  OUTPUT パラメーターを使用して情報を返すストアド プロシージャを次に示します。  
   
- C#  
-  
-```  
+```csharp  
 using System;  
 using System.Data.SqlTypes;  
 using System.Data.SqlClient;  
@@ -96,9 +93,7 @@ public class StoredProcedures
 }  
 ```  
   
- Visual Basic  
-  
-```  
+```vb  
 Imports System  
 Imports System.Data  
 Imports System.Data.Sql  
@@ -134,7 +129,7 @@ End Class
   
  上記の CLR ストアドプロシージャを含むアセンブリがサーバー上に構築され、作成されたら[!INCLUDE[tsql](../../includes/tsql-md.md)] 、次のように使用してデータベースでプロシージャを作成し、 *sum*を OUTPUT パラメーターとして指定します。  
   
-```  
+```sql
 CREATE PROCEDURE PriceSum (@sum int OUTPUT)  
 AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum  
 -- if StoredProcedures class was inside a namespace, called MyNS,  
@@ -158,9 +153,7 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
 ###### <a name="returning-tabular-results"></a>表形式の結果を返す  
  クエリの結果を直接クライアントに送信するには、`Execute` オブジェクトの `SqlPipe` メソッドのいずれかのオーバーロードを使用します。 マネージド メモリにコピーされることなくデータがネットワーク バッファーに転送されるので、これはクライアントに結果を返す最も効率的な方法です。 次に例を示します。  
   
- [C#]  
-  
-```  
+```csharp  
 using System;  
 using System.Data;  
 using System.Data.SqlTypes;  
@@ -185,9 +178,7 @@ public class StoredProcedures
 }  
 ```  
   
- [Visual Basic]  
-  
-```  
+```vb  
 Imports System  
 Imports System.Data  
 Imports System.Data.Sql  
@@ -238,10 +229,8 @@ public class StoredProcedures
    }  
 }  
 ```  
-  
- [Visual Basic]  
-  
-```  
+ 
+```vb  
 Imports System  
 Imports System.Data  
 Imports System.Data.Sql  
@@ -295,9 +284,7 @@ public class StoredProcedures
 }  
 ```  
   
- [Visual Basic]  
-  
-```  
+```vb  
 Imports System  
 Imports System.Data  
 Imports System.Data.Sql  
@@ -347,9 +334,7 @@ public class StoredProcedures
 }  
 ```  
   
- [Visual Basic]  
-  
-```  
+```vb  
 Imports System  
 Imports System.Data  
 Imports System.Data.Sql  
@@ -380,7 +365,7 @@ End Class
   
  これらの例は、説明のみの目的でここに記載しています。 計算を集中的に行うアプリケーションには、実際には単純な [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントよりも CLR 関数の方が適しています。 上の例とほぼ同等の [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャを次に示します。  
   
-```  
+```sql
 CREATE PROCEDURE HelloWorld() AS  
 BEGIN  
 PRINT('Hello world!')  
@@ -393,13 +378,13 @@ END;
   
  上の Visual C# コードをファイル MyFirstUdp.cs に保存した場合、次のようにコンパイルします。  
   
-```  
+```console
 csc /t:library /out:MyFirstUdp.dll MyFirstUdp.cs   
 ```  
   
  上の Visual Basic コードをファイル MyFirstUdp.vb に保存した場合、次のようにコンパイルします。  
   
-```  
+```console
 vbc /t:library /out:MyFirstUdp.dll MyFirstUdp.vb   
 ```  
   
@@ -409,7 +394,7 @@ vbc /t:library /out:MyFirstUdp.dll MyFirstUdp.vb
   
  生成されるアセンブリは登録でき、次の DDL を使用してエントリ ポイントを呼び出すことができます。  
   
-```  
+```sql
 CREATE ASSEMBLY MyFirstUdp FROM 'C:\Programming\MyFirstUdp.dll';  
 CREATE PROCEDURE HelloWorld  
 AS EXTERNAL NAME MyFirstUdp.StoredProcedures.HelloWorld;  
