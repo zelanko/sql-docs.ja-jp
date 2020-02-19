@@ -130,6 +130,8 @@
           items:
             - name: SQL Server マスター インスタンス
               href: big-data-cluster/configure-sql-server-master-instance.md
+            - name: Apache Spark と Apache Hadoop を構成する
+              href: big-data-cluster/configure-spark-hdfs.md
         - name: データの仮想化
           items:
             - name: リレーショナル データ
@@ -461,6 +463,8 @@
                   href: relational-databases/backup-restore/transaction-log-backups-sql-server.md
                 - name: システム データベース
                   href: relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md
+                - name: VSS と SQL ライター
+                  href: relational-databases/backup-restore/sql-server-vss-writer-backup-guide.md
             - name: 構成
               items:
                 - name: 圧縮
@@ -907,11 +911,11 @@
               items:
                 - name: 可用性グループのパフォーマンスを監視する
                   href: database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups.md
-                - name: 'トラブルシューティング: 可用性グループ接続の超過 RPO'
+                - name: 'トラブルシューティング:可用性グループ接続の超過 RPO'
                   href: database-engine/availability-groups/windows/troubleshoot-availability-group-exceeded-rpo.md
-                - name: 'トラブルシューティング: 可用性グループ接続の超過 RTO'
+                - name: 'トラブルシューティング:可用性グループ接続の超過 RTO'
                   href: database-engine/availability-groups/windows/troubleshoot-availability-group-exceeded-rto.md
-                - name: 'トラブルシューティング: プライマリ上の変更がセカンダリ レプリカに反映されない'
+                - name: 'トラブルシューティング:プライマリ上の変更がセカンダリ レプリカに反映されない'
                   href: database-engine/availability-groups/windows/troubleshoot-primary-changes-not-reflected-on-secondary.md
                 - name: トラブルシューティングに役立つツール
                   href: database-engine/availability-groups/windows/useful-tools-for-troubleshooting.md
@@ -1037,9 +1041,9 @@
                     - name: セッションの確立
                       href: database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md
                       items:
-                        - name: '例: Windows 認証を使用した構成 (T-SQL)'
+                        - name: '例:Windows 認証を使用した構成 (T-SQL)'
                           href: database-engine/database-mirroring/example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md
-                        - name: '例: 証明書を使用した構成 (T-SQL)'
+                        - name: '例:証明書を使用した構成 (T-SQL)'
                           href: database-engine/database-mirroring/example-setting-up-database-mirroring-using-certificates-transact-sql.md
                     - name: アップグレード
                       href: database-engine/database-mirroring/upgrading-mirrored-instances.md
@@ -1113,7 +1117,7 @@
                   href: database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md
                 - name: 役割の交代
                   href: database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md
-                - name: 'クォーラム : データベースの可用性にミラーリング監視サーバーが与える影響'
+                - name: 'クォーラム:データベースの可用性にミラーリング監視サーバーが与える影響'
                   href: database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md
                 - name: 障害の考えられる原因
                   href: database-engine/database-mirroring/possible-failures-during-database-mirroring.md
@@ -1981,19 +1985,19 @@
             - name: RAW モード
               href: relational-databases/xml/use-raw-mode-with-for-xml.md
               items:
-                - name: '例 : XML での製品モデル情報の取得'
+                - name: '例:XML での製品モデル情報の取得'
                   href: relational-databases/xml/example-retrieving-product-model-information-as-xml.md
-                - name: '例 : ELEMENTS ディレクティブで XSINIL を指定する'
+                - name: '例: ELEMENTS ディレクティブで XSINIL を指定する'
                   href: relational-databases/xml/example-specifying-xsinil-with-the-elements-directive.md
-                - name: '例: XMLDATA オプションと XMLSCHEMA オプションを使用した結果としてのスキーマの要求'
+                - name: '例:XMLDATA オプションと XMLSCHEMA オプションを使用した結果としてのスキーマの要求'
                   href: relational-databases/xml/example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md
-                - name: '例 : バイナリ データの取得'
+                - name: '例:バイナリ データの取得'
                   href: relational-databases/xml/example-retrieving-binary-data.md
-                - name: '例: <row> 要素の名前を変更する'
+                - name: '例:<row> 要素の名前を変更する'
                   href: relational-databases/xml/example-renaming-the-row-element.md
-                - name: '例 : FOR XML で生成される XML のルート要素の指定'
+                - name: '例:FOR XML で生成される XML のルート要素の指定'
                   href: relational-databases/xml/example-specifying-a-root-element-for-the-xml-generated-by-for-xml.md
-                - name: '例 : XML 型の列のクエリ'
+                - name: '例: XML 型の列のクエリ'
                   href: relational-databases/xml/example-querying-xmltype-columns.md
             - name: AUTO モード
               href: relational-databases/xml/use-auto-mode-with-for-xml.md
@@ -2002,30 +2006,30 @@
                   href: relational-databases/xml/use-the-binary-base64-option.md
                 - name: 返される XML を構造化する際の AUTO モード ヒューリスティック
                   href: relational-databases/xml/auto-mode-heuristics-in-shaping-returned-xml.md
-                - name: '例 : AUTO モードの使用'
+                - name: '例 :AUTO モードの使用'
                   href: relational-databases/xml/examples-using-auto-mode.md
             - name: EXPLICIT モード
               href: relational-databases/xml/use-explicit-mode-with-for-xml.md
               items:
-                - name: '例 : 従業員情報の取得'
+                - name: '例:従業員情報の取得'
                   href: relational-databases/xml/example-retrieving-employee-information.md
-                - name: '例 : ELEMENT ディレクティブの指定'
+                - name: '例:ELEMENT ディレクティブの指定'
                   href: relational-databases/xml/example-specifying-the-element-directive.md
-                - name: '例 : ELEMENTXSINIL ディレクティブの指定'
+                - name: '例:ELEMENTXSINIL ディレクティブの指定'
                   href: relational-databases/xml/example-specifying-the-elementxsinil-directive.md
-                - name: '例: EXPLICIT モードを使用した兄弟の構築'
+                - name: '例:EXPLICIT モードを使用した兄弟の構築'
                   href: relational-databases/xml/example-constructing-siblings-with-explicit-mode.md
-                - name: '例 : ID ディレクティブと IDREF ディレクティブの指定'
+                - name: '例:ID ディレクティブと IDREF ディレクティブの指定'
                   href: relational-databases/xml/example-specifying-the-id-and-idref-directives.md
-                - name: '例 : ID ディレクティブと IDREFS ディレクティブの指定'
+                - name: '例:ID ディレクティブと IDREFS ディレクティブの指定'
                   href: relational-databases/xml/example-specifying-the-id-and-idrefs-directives.md
-                - name: '例 : HIDE ディレクティブの指定'
+                - name: '例: HIDE ディレクティブの指定'
                   href: relational-databases/xml/example-specifying-the-hide-directive.md
-                - name: '例 : ELEMENT ディレクティブとエンティティのエンコードを指定する'
+                - name: '例:ELEMENT ディレクティブとエンティティのエンコードの指定'
                   href: relational-databases/xml/example-specifying-the-element-directive-and-entity-encoding.md
-                - name: '例 : CDATA ディレクティブの指定'
+                - name: '例:CDATA ディレクティブの指定'
                   href: relational-databases/xml/example-specifying-the-cdata-directive.md
-                - name: '例: XMLTEXT ディレクティブの指定'
+                - name: '例:XMLTEXT ディレクティブの指定'
                   href: relational-databases/xml/example-specifying-the-xmltext-directive.md
             - name: PATH モード
               href: relational-databases/xml/use-path-mode-with-for-xml.md
@@ -2044,7 +2048,7 @@
                   href: relational-databases/xml/columns-that-contain-a-null-value-by-default.md
                 - name: PATH モードでの名前空間のサポート
                   href: relational-databases/xml/namespace-support-in-path-mode.md
-                - name: '例 : PATH モードの使用'
+                - name: '例 :PATH モードの使用'
                   href: relational-databases/xml/examples-using-path-mode.md
             - name: '[入れ子になったクエリ]'
               href: relational-databases/xml/use-nested-for-xml-queries.md
@@ -2075,7 +2079,7 @@
         - name: OPENXML
           href: relational-databases/xml/openxml-sql-server.md
           items:
-            - name: '例: OPENXML の使用'
+            - name: '例 :OPENXML の使用'
               href: relational-databases/xml/examples-using-openxml.md
             - name: メタプロパティの指定
               href: relational-databases/xml/specify-metaproperties-in-openxml.md
@@ -2729,9 +2733,9 @@
               href: relational-databases/native-client-ole-db-rowsets/updating-data-in-rowsets-resynchronizing-rows.md
             - name: 行セット内のデータの更新
               href: relational-databases/native-client-ole-db-rowsets/updating-data-in-rowsets.md
-            - name: カーソルでのデータの更新
+            - name: カーソルのデータの更新
               href: relational-databases/native-client-ole-db-rowsets/updating-data-in-sql-server-cursors.md
-            - name: 'IRow::GetColumns の使用'
+            - name: 'IRow:: GetColumns の使用'
               href: relational-databases/native-client-ole-db-rowsets/using-irow-getcolumns.md
         - name: BLOB と OLE オブジェクト
           href: relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md
@@ -2986,7 +2990,7 @@
                   href: relational-databases/native-client-odbc-how-to/configuring-the-sql-server-odbc-driver-delete-a-data-source.md
                 - name: Kerberos 相互認証の取得
                   href: relational-databases/native-client-odbc-how-to/get-mutual-kerberos-authentication.md
-                - name: Geography 列に行を挿入する方法
+                - name: '方法:geography 列への行の挿入'
                   href: relational-databases/native-client-odbc-how-to/how-to-insert-rows-into-geography-column-odbc.md
                 - name: text 列と image 列の管理 - 実行時データ列の使用
                   href: relational-databases/native-client-odbc-how-to/managing-text-and-image-columns-use-data-at-execution-columns.md
@@ -3308,7 +3312,7 @@
         - name: text 列と image 列
           href: relational-databases/native-client-odbc-text-image-columns/managing-text-and-image-columns.md
           items:
-            - name: バインドされた text、image 型の列とバインドされない text、image 型の列
+            - name: バインドされたバインドされない text 列と image 列
               href: relational-databases/native-client-odbc-text-image-columns/bound-vs-unbound-text-and-image-columns.md
             - name: 実行時データと text 列、ntext 列、または image 列
               href: relational-databases/native-client-odbc-text-image-columns/data-at-execution-and-text-ntext-or-image-columns.md
@@ -3529,7 +3533,7 @@
           items:
             - name: クライアント側とサーバー側
               href: relational-databases/sqlxml/formatting/client-side-and-server-side-formatting-sqlxml-4-0.md
-            - name: クライアント側とサーバー側の比較
+            - name: クライアント側とサーバー側
               href: relational-databases/sqlxml/formatting/client-side-vs-server-side-xml-formatting-sqlxml-4-0.md
             - name: クライアント側
               href: relational-databases/sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md
@@ -4117,9 +4121,9 @@
         - name: サーバー イベントの概念
           href: relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md
           items:
-            - name: 'サンプル: WMI プロバイダーを使用した SQL Server エージェント警告の作成'
+            - name: 'サンプル:WMI プロバイダーを使用した SQL Server エージェント警告の作成'
               href: relational-databases/wmi-provider-server-events/sample-creating-a-sql-server-agent-alert-with-the-wmi-provider.md
-            - name: 'サンプル: .NET Framework での WMI イベント プロバイダーの使用'
+            - name: 'サンプル:.NET Framework での WMI イベント プロバイダーの使用'
               href: relational-databases/wmi-provider-server-events/sample-using-the-wmi-event-provider-with-the-net-framework.md
             - name: サーバー イベントについて
               href: relational-databases/wmi-provider-server-events/understanding-the-wmi-provider-for-server-events.md
@@ -4708,7 +4712,7 @@
               items:
                 - name: ドメインの作成
                   href: data-quality-services/create-a-domain.md
-                - name: 'ドメイン管理: ドメイン リスト'
+                - name: 'ドメイン管理:ドメイン リスト'
                   href: data-quality-services/domain-management-domain-list.md
                 - name: ドメインのプロパティの設定
                   href: data-quality-services/set-domain-properties.md
@@ -6103,10 +6107,10 @@
                   href: relational-databases/policy-based-management/use-database-mail-instead-of-sql-mail.md
                 - name: max worker threads 設定の検証
                   href: relational-databases/policy-based-management/verify-max-worker-threads-setting.md
-            - name: 'チュートリアル : ポリシー ベースの管理を使用したサーバーの管理'
+            - name: 'チュートリアル:ポリシー ベースの管理を使用したサーバーの管理'
               href: relational-databases/policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md
               items:
-                - name: 'レッスン 1: "既定でオフ" ポリシーの作成と適用'
+                - name: 'レッスン 1:"既定でオフ" ポリシーの作成と適用'
                   href: relational-databases/policy-based-management/lesson-1-create-and-apply-an-off-by-default-policy.md
                 - name: 'レッスン 2: 名前付け基準ポリシーの作成と適用'
                   href: relational-databases/policy-based-management/lesson-2-create-and-apply-a-naming-standards-policy.md
@@ -6275,7 +6279,7 @@
           items:
             - name: クイックスタート
               items:
-                - name: 'クイックスタート: SQL Server の拡張イベント'
+                - name: 'クイック スタート:SQL Server の拡張イベント'
                   href: relational-databases/extended-events/quick-start-extended-events-in-sql-server.md
             - name: チュートリアル
               items:
@@ -7067,7 +7071,7 @@
               items:
                 - name: MDS リポジトリへの接続
                   href: master-data-services/microsoft-excel-add-in/connect-to-an-mds-repository-mds-add-in-for-excel.md
-            - name: '概要: Excel へのデータのエクスポート (Excel 用 MDS アドイン)'
+            - name: '概要:Excel へのデータのエクスポート (Excel 用 MDS アドイン)'
               href: master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md
               items:
                 - name: エクスポート前のデータのフィルター処理
@@ -7083,7 +7087,7 @@
                   href: master-data-services/microsoft-excel-add-in/email-a-shortcut-query-file-mds-add-in-for-excel.md
                 - name: データの更新
                   href: master-data-services/microsoft-excel-add-in/refreshing-data-mds-add-in-for-excel.md
-            - name: '概要: Excel からのデータのインポート(Excel 用 MDS アドイン)'
+            - name: '概要:Excel からのデータのインポート (Excel 用 MDS アドイン)'
               href: master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md
               items:
                 - name: Excel からマスター データ サービスにデータをインポートする
@@ -7121,7 +7125,7 @@
               href: master-data-services/edit-model-master-data-services.md
             - name: 削除
               href: master-data-services/delete-a-model-master-data-services.md
-        - name: '[エンティティ]'
+        - name: エンティティ
           href: master-data-services/entities-master-data-services.md
           items:
             - name: エンティティの依存関係エクスプローラー
@@ -7189,7 +7193,7 @@
                   href: master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md
                 - name: 属性値の変更に基づいてアクションを開始する
                   href: master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md
-        - name: '概要: テーブルからのデータのインポート'
+        - name: '概要:テーブルからのデータのインポート'
           href: master-data-services/overview-importing-data-from-tables-master-data-services.md
           items:
             - name: テーブルからのデータのインポート
@@ -7329,7 +7333,7 @@
               href: master-data-services/create-a-collection-master-data-services.md
             - name: コレクションにメンバーを追加する
               href: master-data-services/add-members-to-a-collection-master-data-services.md
-        - name: '概要: データのエクスポート'
+        - name: '概要:Exporting Data'
           href: master-data-services/overview-exporting-data-master-data-services.md
           items:
             - name: サブスクリプション ビューを作成してデータをエクスポートする
@@ -7525,17 +7529,17 @@
                       href: relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md
                 - name: Always Encrypted キーの交換
                   items:
-                    - name: SSMS を使用した Always Encrypted キーの交換
+                    - name: SQL Server Management Studio (SSMS)
                       href: relational-databases/security/encryption/rotate-always-encrypted-keys-using-ssms.md
-                    - name: PowerShell を使用して Always Encrypted キーをローテーションする
+                    - name: PowerShell
                       href: relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md
                 - name: Always Encrypted を使用した列の構成
                   items:
-                    - name: Always Encrypted ウィザードを使用した列暗号化の構成
+                    - name: ウィザード
                       href: relational-databases/security/encryption/always-encrypted-wizard.md
-                    - name: PowerShell での Always Encrypted を使用した列暗号化の構成
+                    - name: PowerShell
                       href: relational-databases/security/encryption/configure-column-encryption-using-powershell.md
-                    - name: DAC パッケージでの Always Encrypted を使用した列暗号化の構成
+                    - name: DAC パッケージ
                       href: relational-databases/security/encryption/configure-always-encrypted-using-dacpac.md
                 - name: Always Encrypted を使用した列のクエリ
                   items:
@@ -7543,13 +7547,13 @@
                       href: relational-databases/security/encryption/always-encrypted-query-columns-ssms.md
                 - name: Always Encrypted で保護された機密データの移行
                   items:
-                    - name: Always Encrypted を使用したデータベースのエクスポートとインポート
+                    - name: エクスポートとインポート
                       href: relational-databases/security/encryption/always-encrypted-migrate-using-bacpac.md
-                    - name: Always Encrypted を使用したデータベースのバックアップと復元
+                    - name: バックアップと復元
                       href: relational-databases/security/encryption/always-encrypted-migrate-using-backup-restore.md
                     - name: インポートおよびエクスポート ウィザードを使用したデータの移行
                       href: relational-databases/security/encryption/always-encrypted-migrate-using-import-export-wizard.md
-                    - name: Always Encrypted を使用した暗号化データの列への一括読み込み
+                    - name: 暗号化データの列への一括読み込み
                       href: relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md
                 - name: Always Encrypted を使用したアプリケーションの開発
                   items:
@@ -7963,11 +7967,11 @@
             - name: チュートリアル
               href: tools/dta/tutorial-database-engine-tuning-advisor.md
               items:
-                - name: 'レッスン 1: データベース エンジン チューニング アドバイザーでの基本操作'
+                - name: 'レッスン 1:データベース エンジン チューニング アドバイザーでの基本操作'
                   href: tools/dta/lesson-1-basic-navigation-in-database-engine-tuning-advisor.md
-                - name: 'レッスン 2 : データベース エンジン チューニング アドバイザーの使用'
+                - name: 'レッスン 2: データベース エンジン チューニング アドバイザーの使用'
                   href: tools/dta/lesson-2-using-database-engine-tuning-advisor.md
-                - name: 'レッスン 3 : dta コマンド プロンプト ユーティリティの使用'
+                - name: 'レッスン 3:DTA コマンド プロンプト ユーティリティの使用'
                   href: tools/dta/lesson-3-using-the-dta-command-prompt-utility.md
     - name: Distributed Replay
       href: tools/distributed-replay/sql-server-distributed-replay.md
@@ -8200,29 +8204,29 @@
               href: ssdt/check-for-updates-dialog-box.md
             - name: データベース プロジェクトの設定
               href: ssdt/database-project-settings.md
-            - name: SQL Server データベース プロジェクトのオブジェクトを参照する方法
+            - name: '方法:SQL Server データベース プロジェクトのオブジェクトを参照する'
               href: ssdt/how-to-browse-objects-in-a-sql-server-database-project.md
             - name: '[データ ツール操作] ウィンドウ'
               href: ssdt/data-tools-operations-window.md
             - name: T-SQL エディターのオプション
               href: ssdt/transact-sql-editor-options.md
-            - name: 新しいデータベース プロジェクトを作成する方法
+            - name: '方法:新しいデータベース プロジェクトを作成する'
               href: ssdt/how-to-create-a-new-database-project.md
-            - name: スキーマ比較を使用して各種のデータベース定義を比較する方法
+            - name: '方法:スキーマ比較を使用して各種のデータベース定義を比較する'
               href: ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md
-            - name: ローカル データベースでビルドおよび配置を行う方法
+            - name: '方法:ローカル データベースでビルドおよび配置を行う'
               href: ssdt/how-to-build-and-deploy-to-a-local-database.md
-            - name: プロジェクトで Microsoft SQL Server 2012 のオブジェクトを使用する方法
+            - name: '方法:プロジェクトで Microsoft SQL Server 2012 のオブジェクトを使用する'
               href: ssdt/how-to-use-microsoft-sql-server-2012-objects-in-your-project.md
-            - name: CLR データベース オブジェクトを使用する方法
+            - name: '方法:CLR データベース オブジェクトを使用する'
               href: ssdt/how-to-work-with-clr-database-objects.md
-            - name: プロジェクトのスナップショットを作成する方法
+            - name: '方法:プロジェクトのスナップショットを作成する'
               href: ssdt/how-to-create-a-snapshot-of-a-project.md
-            - name: ターゲット プラットフォームを変更し、データベース プロジェクトをパブリッシュする方法
+            - name: '方法:ターゲット プラットフォームを変更し、データベース プロジェクトをパブリッシュする'
               href: ssdt/how-to-change-target-platform-and-publish-a-database-project.md
-            - name: Visual Studio 2010 のデータベース プロジェクトを SQL Server のデータベース プロジェクトに変換して、ターゲットを別のプラットフォームに変更する方法
+            - name: '方法:Visual Studio 2010 のデータベース プロジェクトを SQL Server のデータベース プロジェクトに変換して、ターゲットを別のプラットフォームに変更する'
               href: ssdt/how-to-convert-visual-studio-2010-database-projects-to-ssql-server-projects.md
-            - name: 配置前スクリプトまたは配置後スクリプトを指定する方法
+            - name: '方法:配置前スクリプトまたは配置後スクリプトを指定する'
               href: ssdt/how-to-specify-predeployment-or-postdeployment-scripts.md
             - name: コマンド ライン ツールを使用したプロジェクト指向のデータベース開発
               href: ssdt/project-oriented-database-development-using-command-line-tools.md
@@ -8232,58 +8236,58 @@
             - name: 接続されているデータベース開発
               href: ssdt/connected-database-development.md
               items:
-                - name: データベースに接続し、既存のオブジェクトを参照する方法
+                - name: '方法:データベースに接続し、既存のオブジェクトを参照する'
                   href: ssdt/how-to-connect-to-a-database-and-browse-existing-objects.md
-                - name: テーブル デザイナーを使用してデータベース オブジェクトを作成する方法
+                - name: '方法:テーブル デザイナーを使用してデータベース オブジェクトを作成する'
                   href: ssdt/how-to-create-database-objects-using-table-designer.md
-                - name: 接続されているデータベースを Power Buffer で更新する方法
+                - name: '方法:接続されているデータベースを Power Buffer で更新する'
                   href: ssdt/how-to-update-a-connected-database-with-power-buffer.md
                 - name: '[フィルターと並べ替え] ダイアログ ボックス'
                   href: ssdt/filter-and-sort-dialog-box.md
-                - name: クエリを使用して新しいデータベース オブジェクトを作成する方法
+                - name: '方法:クエリを使用して新しいデータベース オブジェクトを作成する'
                   href: ssdt/how-to-create-new-database-objects-using-queries.md
-                - name: クエリを使用して既存のテーブルを編集する方法
+                - name: '方法:クエリを使用して既存のテーブルを編集する'
                   href: ssdt/how-to-edit-an-existing-table-using-queries.md
-                - name: テーブル内のデータを表示および編集する方法
+                - name: '方法:テーブル内のデータを表示および編集する'
                   href: ssdt/how-to-view-and-edit-data-in-a-table.md
-                - name: オブジェクトを削除し、依存関係を解決する方法
+                - name: '方法:オブジェクトを削除し、依存関係を解決する'
                   href: ssdt/how-to-delete-objects-and-resolve-dependencies.md
-                - name: 既存のデータベースを複製する方法
+                - name: '方法:既存のデータベースを複製する'
                   href: ssdt/how-to-clone-an-existing-database.md
                 - name: .dacpac ファイルの抽出、パブリッシュ、および登録
                   href: ssdt/extract-publish-and-register-dacpac-files.md
             - name: 1 つ以上のテーブルのデータを参照データベースのデータと比較して同期する
               href: ssdt/compare-and-synchronize-data-in-tables-with-data-in-reference-database.md
               items:
-                - name: 2 つのデータベースのデータを比較および同期する方法
+                - name: '方法:2 つのデータベースのデータを比較および同期する'
                   href: ssdt/how-to-compare-and-synchronize-the-data-of-two-databases.md
-                - name: データの差異を表示する方法
+                - name: '方法:データの差異を表示する'
                   href: ssdt/how-to-view-data-differences.md
                 - name: T-SQL エディターを使用したスクリプトの編集と実行
                   href: ssdt/use-transact-sql-editor-to-edit-and-execute-scripts.md
-                - name: スニペットをアウトライン表示し、T-SQL スクリプトに追加する方法
+                - name: '方法:スニペットをアウトライン表示し、T-SQL スクリプトに追加する'
                   href: ssdt/how-to-outline-and-add-snippets-to-transact-sql-script.md
-                - name: スクリプト間を移動する方法
+                - name: '方法:スクリプト間を移動する'
                   href: ssdt/how-to-navigate-between-scripts.md
-                - name: 名前の変更とリファクタリングを使用して、データベース オブジェクトを変更する方法
+                - name: '方法:名前の変更とリファクタリングを使用して、データベース オブジェクトを変更する'
                   href: ssdt/how-to-use-rename-and-refactoring-to-make-changes-to-your-database-objects.md
-                - name: 部分クエリを実行する方法
+                - name: '方法:部分クエリを実行する'
                   href: ssdt/how-to-execute-a-partial-query.md
-                - name: ストアド プロシージャをデバッグする方法
+                - name: '方法:ストアド プロシージャをデバッグする'
                   href: ssdt/how-to-debug-stored-procedures.md
                 - name: スクリプトのパフォーマンス分析
                   href: ssdt/analyze-script-performance.md
             - name: テーブルとリレーションシップの管理およびエラーの修正
               href: ssdt/manage-tables-relationships-and-fix-errors.md
               items:
-                - name: テーブル デザイナーを使用してテーブルおよびリレーションシップを管理する方法
+                - name: '方法:テーブル デザイナーを使用してテーブルおよびリレーションシップを管理する'
                   href: ssdt/how-to-use-the-table-designer-to-manage-tables-and-relationships.md
-                - name: エラーを修正する方法
+                - name: '方法:エラーを修正する'
                   href: ssdt/how-to-fix-errors.md
             - name: SQL Server の単体テストを使用したデータベース コードの検証
               href: ssdt/verifying-database-code-by-using-sql-server-unit-tests.md
               items:
-                - name: 'チュートリアル: SQL Server の単体テストの作成と実行'
+                - name: 'チュートリアル:SQL Server の単体テストの作成と実行'
                   href: ssdt/walkthrough-creating-and-running-a-sql-server-unit-test.md
                 - name: SQL Server の単体テストの作成と定義
                   href: ssdt/creating-and-defining-sql-server-unit-tests.md
@@ -8296,19 +8300,19 @@
                       href: ssdt/using-test-conditions-in-sql-server-unit-tests.md
                     - name: SQL Server の単体テストでの T-SQL アサーションの使用
                       href: ssdt/using-transact-sql-assertions-in-sql-server-unit-tests.md
-                    - name: SQL Server の単体テストのテスト プロジェクトを作成する方法
+                    - name: '方法:SQL Server の単体テストのテスト プロジェクトを作成する'
                       href: ssdt/how-to-create-a-test-project-for-sql-server-database-unit-testing.md
-                    - name: 空の SQL Server の単体テストを作成する方法
+                    - name: '方法:空の SQL Server の単体テストを作成する'
                       href: ssdt/how-to-create-an-empty-sql-server-unit-test.md
-                    - name: 関数、トリガー、およびストアド プロシージャに対する SQL Server の単体テストを作成する方法
+                    - name: '方法:関数、トリガー、およびストアド プロシージャに対する SQL Server の単体テストを作成する'
                       href: ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md
-                    - name: SQL Server の単体テストにテスト条件を追加する方法
+                    - name: '方法:SQL Server の単体テストにテスト条件を追加する'
                       href: ssdt/how-to-add-test-conditions-to-sql-server-unit-tests.md
-                    - name: SQL Server の単体テストを開いて編集する方法
+                    - name: '方法:SQL Server の単体テストを開いて編集する'
                       href: ssdt/how-to-open-a-sql-server-unit-test-to-edit.md
-                    - name: 単一のトランザクションのスコープ内で実行する SQL Server の単体テストを作成する方法
+                    - name: '方法:単一のトランザクションのスコープ内で実行する SQL Server の単体テストを作成する'
                       href: ssdt/how-to-write-sql-server-unit-test-that-runs-in-single-transaction-scope.md
-                    - name: SQL Server の単体テストの実行を構成する方法
+                    - name: '方法:SQL Server の単体テストの実行を構成する'
                       href: ssdt/how-to-configure-sql-server-unit-test-execution.md
                     - name: 接続文字列とアクセス許可の概要
                       href: ssdt/overview-of-connection-strings-and-permissions.md
@@ -8317,11 +8321,11 @@
                 - name: SQL Server の単体テストの実行
                   href: ssdt/running-sql-server-unit-tests.md
                   items:
-                    - name: データベース オブジェクトをデバッグする方法
+                    - name: '方法:データベース オブジェクトをデバッグする'
                       href: ssdt/how-to-debug-database-objects.md
-                    - name: Team Foundation ビルドから SQL Server の単体テストを実行する方法
+                    - name: '方法:Team Foundation ビルドから SQL Server の単体テストを実行する'
                       href: ssdt/how-to-run-sql-server-unit-tests-from-team-foundation-build.md
-                    - name: SQL Server 単体テストを実行する方法
+                    - name: '方法:SQL Server の単体テストを実行する'
                       href: ssdt/how-to-run-sql-server-unit-tests.md
                     - name: SQL Server の単体テストの結果の解釈
                       href: ssdt/interpreting-sql-server-unit-test-results.md
@@ -8330,11 +8334,11 @@
                 - name: SQL Server の単体テストのカスタム テスト条件
                   href: ssdt/custom-test-conditions-for-sql-server-unit-tests.md
                   items:
-                    - name: SQL Server 単体テスト デザイナーのテスト条件を作成する方法
+                    - name: '方法:SQL Server 単体テスト デザイナーのテスト条件を作成する'
                       href: ssdt/how-to-create-test-conditions-for-the-sql-server-unit-test-designer.md
-                    - name: 'チュートリアル: カスタム テスト条件を使用してストアド プロシージャの結果を検証する'
+                    - name: 'チュートリアル:カスタム テスト条件を使用してストアド プロシージャの結果を検証する'
                       href: ssdt/walkthrough-use-custom-test-condition-to-verify-stored-procedure-results.md
-                    - name: Visual Studio 2010 のカスタム テスト条件を、以前のリリースから SQL Server Data Tools にアップグレードする方法
+                    - name: '方法:Visual Studio 2010 のカスタム テスト条件を、以前のリリースから SQL Server Data Tools にアップグレードする'
                       href: ssdt/how-to-upgrade-visual-studio-2010-custom-test-condition-to-ssdt.md
                 - name: SQL Server のデータベース単体テストに関する問題のトラブルシューティング
                   href: ssdt/troubleshooting-sql-server-database-unit-testing-issues.md
@@ -8344,18 +8348,18 @@
                 - name: ビルド コントリビューターと配置コントリビューターを使用してデータベースのビルドと配置をカスタマイズする
                   href: ssdt/use-deployment-contributors-to-customize-database-build-and-deployment.md
                   items:
-                    - name: 'チュートリアル :モデルの統計を生成するためのデータベース プロジェクトのビルドの拡張'
+                    - name: 'チュートリアル:モデルの統計を生成するためのデータベース プロジェクトのビルドの拡張'
                       href: ssdt/walkthrough-extend-database-project-build-to-generate-model-statistics.md
-                    - name: 'チュートリアル: 配置計画を分析するためのデータベース プロジェクトの配置の拡張'
+                    - name: 'チュートリアル:配置計画を分析するためにデータベース プロジェクトの配置を拡張する'
                       href: ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md
-                    - name: 'チュートリアル: 配置計画を変更するためのデータベース プロジェクトの配置の拡張'
+                    - name: 'チュートリアル:配置計画を変更するためにデータベース プロジェクトの配置を拡張する'
                       href: ssdt/walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan.md
                 - name: データベース コード分析ルールの機能拡張の概要
                   href: ssdt/overview-of-extensibility-for-database-code-analysis-rules.md
                   items:
                     - name: 'チュートリアル: SQL Server のカスタムの静的コード分析ルール アセンブリを作成する'
                       href: ssdt/walkthrough-author-custom-static-code-analysis-rule-assembly.md
-                - name: 機能拡張をインストールして管理する方法
+                - name: '方法:機能拡張のインストールと管理'
                   href: ssdt/how-to-install-and-manage-feature-extensions.md
             - name: SQL Server Data Tools に必要な権限
               href: ssdt/required-permissions-for-sql-server-data-tools.md
@@ -9730,7 +9734,7 @@
         - name: 作業の開始
           href: relational-databases/tutorial-getting-started-with-the-database-engine.md
           items:
-            - name: 'レッスン 1: データベース エンジンへの接続'
+            - name: 'レッスン 1:データベース エンジンへの接続'
               href: relational-databases/lesson-1-connecting-to-the-database-engine.md
             - name: 'レッスン 2: 別のコンピューターからの接続'
               href: relational-databases/lesson-2-connecting-from-another-computer.md
@@ -9743,11 +9747,11 @@
     - name: T-SQL ステートメントの作成
       href: t-sql/tutorial-writing-transact-sql-statements.md
       items:
-        - name: 'レッスン 1: データベース オブジェクトの作成とクエリ'
+        - name: 'レッスン 1:データベース オブジェクトの作成とクエリ'
           href: t-sql/lesson-1-creating-database-objects.md
         - name: 'レッスン 2: データベース オブジェクトに対するアクセス許可の構成'
           href: t-sql/lesson-2-configuring-permissions-on-database-objects.md
-        - name: 'レッスン 3: データベース オブジェクトの削除'
+        - name: 'レッスン 3:データベース オブジェクトの削除'
           href: t-sql/lesson-3-deleting-database-objects.md
 - name: Linux 上の SQL Server
   href: linux/sql-server-linux-overview.md
@@ -10076,7 +10080,7 @@
       items:
         - name: サンプルの概要
           href: samples/sql-samples-where-are.md
-        - name: すべての Github サンプル >>
+        - name: すべての GitHub サンプル >>
           href: 'https://github.com/Microsoft/sql-server-samples/tree/master/samples'
         - name: AdventureWorks
           items:
@@ -14644,7 +14648,7 @@
               href: t-sql/data-types/getancestor-database-engine.md
             - name: GetDescendant
               href: t-sql/data-types/getdescendant-database-engine.md
-            - name: GetLevel)
+            - name: GetLevel
               href: t-sql/data-types/getlevel-database-engine.md
             - name: GetRoot
               href: t-sql/data-types/getroot-database-engine.md
@@ -16039,7 +16043,7 @@
                       href: t-sql/language-elements/or-transact-sql.md
                     - name: SOME | ANY
                       href: t-sql/language-elements/some-any-transact-sql.md
-                - name: ':: (スコープ解決)'
+                - name: '::(スコープ解決)'
                   href: t-sql/language-elements/scope-resolution-operator-transact-sql.md
                 - name: String
                   href: t-sql/language-elements/string-operators-transact-sql.md
@@ -16754,7 +16758,7 @@
                   href: t-sql/statements/open-master-key-transact-sql.md
                 - name: OPEN SYMMETRIC KEY
                   href: t-sql/statements/open-symmetric-key-transact-sql.md
-                - name: 'アクセス許可: GRANT、DENY、REVOKE (Azure SQL Data Warehouse、並列データ ウェアハウス)'
+                - name: '権限:GRANT、DENY、REVOKE (Azure SQL Data Warehouse、並列データ ウェアハウス)'
                   href: t-sql/statements/permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse.md
                 - name: REVERT
                   href: t-sql/statements/revert-transact-sql.md

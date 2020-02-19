@@ -15,13 +15,13 @@
     - name: SqlClient ドライバーの使用を開始する
       href: ../connect/ado-net/get-started-sqlclient-driver.md
       items:
-        - name: 'ステップ 1: ADO.NET 開発用に開発環境を構成する'
+        - name: '手順 1:ADO.NET 開発用に開発環境を構成する'
           href: ../connect/ado-net/step-1-configure-development-environment-ado-net-development.md
-        - name: 'ステップ 2: ADO.NET 開発用の SQL データベースを作成する'
+        - name: '手順 2:ADO.NET 開発用の SQL データベースを作成する'
           href: ../connect/ado-net/step-2-create-sql-database-ado-net-development.md
-        - name: 'ステップ 3: ADO.NET を使用した SQL への接続を概念実証する'
+        - name: '手順 3:ADO.NET を使用した SQL への接続を概念実証する'
           href: ../connect/ado-net/step-3-connect-sql-ado-net.md
-        - name: 'ステップ 4: ADO.NET で SQL に弾性的に接続する'
+        - name: '手順 4:ADO.NET で SQL に弾性的に接続する'
           href: ../connect/ado-net/step-4-connect-resiliently-sql-ado-net.md
     - name: SqlClient ドライバーの概要
       href: ../connect/ado-net/overview-sqlclient-driver.md
@@ -2484,11 +2484,11 @@
     - name: JDBC ドライバーの概要
       href: ../connect/jdbc/getting-started-with-the-jdbc-driver.md
       items:
-        - name: 'ステップ 1: Java 開発用に開発環境を構成する'
+        - name: '手順 1: Java 開発用に開発環境を構成する'
           href: ../connect/jdbc/step-1-configure-development-environment-for-java-development.md
-        - name: 'ステップ 2: Java 開発用に SQL データベースを作成する'
+        - name: '手順 2: Java 開発用に SQL データベースを作成する'
           href: ../connect/jdbc/step-2-create-a-sql-database-for-java-development.md
-        - name: 'ステップ 3: Java を使用した SQL への接続を概念実証する'
+        - name: '手順 3: Java を使用した SQL への接続を概念実証する'
           href: ../connect/jdbc/step-3-proof-of-concept-connecting-to-sql-using-java.md
     - name: JDBC ドライバーの概要
       href: ../connect/jdbc/overview-of-the-jdbc-driver.md
@@ -2630,6 +2630,9 @@
           href: ../connect/jdbc/handling-metadata-with-the-jdbc-driver.md
         - name: JDBC ドライバーで Always Encrypted を使用する
           href: ../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md
+          items:
+            - name: セキュア エンクレーブを使用する Always Encrypted
+              href: ../connect/jdbc/always-encrypted-with-secure-enclaves.md
         - name: ガイド記事
           items:
             - name: SQL でのステートメントの使用
@@ -2755,11 +2758,11 @@
   items:
     - name: Node.js Driver for SQL Server
       href: ../connect/node-js/node-js-driver-for-sql-server.md
-    - name: 'ステップ 1: Node.js 開発用に開発環境を構成する'
+    - name: '手順 1:Node.js 開発用に開発環境を構成する'
       href: ../connect/node-js/step-1-configure-development-environment-for-node-js-development.md
-    - name: 'ステップ 2: Node.js 開発用の SQL データベースを作成する'
+    - name: '手順 2:Node.js 開発用の SQL データベースを作成する'
       href: ../connect/node-js/step-2-create-a-sql-database-for-node-js-development.md
-    - name: 'ステップ 3: Node.js を使用した SQL への接続を概念実証する'
+    - name: '手順 3:Node.js を使用した SQL への接続を概念実証する'
       href: ../connect/node-js/step-3-proof-of-concept-connecting-to-sql-using-node-js.md
 - name: ODBC
   items:
@@ -3036,19 +3039,19 @@
                     - name: 基本的な ODBC アプリケーションのステップ
                       href: ../odbc/reference/develop-app/basic-odbc-application-steps.md
                       items:
-                        - name: 'ステップ 1: データ ソースへの接続'
+                        - name: '手順 1:データ ソースに接続する'
                           href: ../odbc/reference/develop-app/step-1-connect-to-the-data-source.md
-                        - name: 'ステップ 2: アプリケーションの初期化'
+                        - name: '手順 2:アプリケーションを初期化する'
                           href: ../odbc/reference/develop-app/step-2-initialize-the-application.md
-                        - name: 'ステップ 3: SQL ステートメントのビルドと実行'
+                        - name: '手順 3:SQL ステートメントのビルドと実行'
                           href: ../odbc/reference/develop-app/step-3-build-and-execute-an-sql-statement.md
-                        - name: 'ステップ 4a: 結果のフェッチ'
+                        - name: '手順 4a: 結果をフェッチする'
                           href: ../odbc/reference/develop-app/step-4a-fetch-the-results.md
-                        - name: 'ステップ 4b: 行数のフェッチ'
+                        - name: '手順 4b: 行数をフェッチする'
                           href: ../odbc/reference/develop-app/step-4b-fetch-the-row-count.md
-                        - name: 'ステップ 5: トランザクションのコミット'
+                        - name: '手順 5:トランザクションをコミットする'
                           href: ../odbc/reference/develop-app/step-5-commit-the-transaction.md
-                        - name: 'ステップ 6: データ ソースからの切断'
+                        - name: '手順 6:データ ソースから切断する'
                           href: ../odbc/reference/develop-app/step-6-disconnect-from-the-data-source.md
                     - name: データ ソースまたはドライバーへの接続
                       href: ../odbc/reference/develop-app/connecting-to-a-data-source-or-driver.md
@@ -3986,7 +3989,7 @@
                 - name: ODBC の付録
                   href: ../odbc/reference/appendixes/odbc-appendixes.md
                   items:
-                    - name: '付録 A : ODBC エラー コード'
+                    - name: '付録 A: ODBC エラー コード'
                       href: ../odbc/reference/appendixes/appendix-a-odbc-error-codes.md
                     - name: '付録 B: ODBC の状態遷移テーブル'
                       href: ../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md
@@ -3999,7 +4002,7 @@
                           href: ../odbc/reference/appendixes/statement-transitions.md
                         - name: 記述子の遷移
                           href: ../odbc/reference/appendixes/descriptor-transitions.md
-                    - name: '付録 C: SQL の文法'
+                    - name: '付録 C: SQL 文法'
                       href: ../odbc/reference/appendixes/appendix-c-sql-grammar.md
                       items:
                         - name: SQL の最小限の文法
@@ -4110,13 +4113,13 @@
                         - name: SQL から C データ型へのデータ変換
                           href: ../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md
                           items:
-                            - name: 'SQL から C へ: バイナリ'
+                            - name: 'SQL から C へ: Binary'
                               href: ../odbc/reference/appendixes/sql-to-c-binary.md
-                            - name: 'SQL から C へ: ビット'
+                            - name: 'SQL から C へ: bit'
                               href: ../odbc/reference/appendixes/sql-to-c-bit.md
                             - name: 'SQL から C へ: 文字'
                               href: ../odbc/reference/appendixes/sql-to-c-character.md
-                            - name: 'SQL から C へ: 日付'
+                            - name: 'SQL から C へ: Date'
                               href: ../odbc/reference/appendixes/sql-to-c-date.md
                             - name: 'SQL から C へ: 日付と時刻の間隔'
                               href: ../odbc/reference/appendixes/sql-to-c-day-time-intervals.md
@@ -4124,9 +4127,9 @@
                               href: ../odbc/reference/appendixes/sql-to-c-guid.md
                             - name: 'SQL から C へ: 数値'
                               href: ../odbc/reference/appendixes/sql-to-c-numeric.md
-                            - name: 'SQL から C へ: タイムスタンプ'
+                            - name: 'SQL から C へ: Timestamp'
                               href: ../odbc/reference/appendixes/sql-to-c-timestamp.md
-                            - name: 'SQL から C へ: 時刻'
+                            - name: 'SQL から C へ: Time'
                               href: ../odbc/reference/appendixes/sql-to-c-time.md
                             - name: 'SQL から C へ: 年月の間隔'
                               href: ../odbc/reference/appendixes/sql-to-c-year-month-intervals.md
@@ -4135,13 +4138,13 @@
                         - name: C から SQL データ型へのデータ変換
                           href: ../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md
                           items:
-                            - name: 'C から SQL へ: バイナリ'
+                            - name: 'C から SQL へ: Binary'
                               href: ../odbc/reference/appendixes/c-to-sql-binary.md
-                            - name: 'C から SQL へ: ビット'
+                            - name: 'C から SQL へ: bit'
                               href: ../odbc/reference/appendixes/c-to-sql-bit.md
                             - name: 'C から SQL へ: 文字'
                               href: ../odbc/reference/appendixes/c-to-sql-character.md
-                            - name: 'C から SQL へ: 日付'
+                            - name: 'C から SQL へ: Date'
                               href: ../odbc/reference/appendixes/c-to-sql-date.md
                             - name: 'C から SQL へ: 日付と時刻の間隔'
                               href: ../odbc/reference/appendixes/c-to-sql-day-time-intervals.md
@@ -4149,9 +4152,9 @@
                               href: ../odbc/reference/appendixes/c-to-sql-guid.md
                             - name: 'C から SQL へ: 数値'
                               href: ../odbc/reference/appendixes/c-to-sql-numeric.md
-                            - name: 'C から SQL へ: タイムスタンプ'
+                            - name: 'C から SQL へ: Timestamp'
                               href: ../odbc/reference/appendixes/c-to-sql-timestamp.md
-                            - name: 'C から SQL へ: 時刻'
+                            - name: 'C から SQL へ: Time'
                               href: ../odbc/reference/appendixes/c-to-sql-time.md
                             - name: 'C から SQL へ: 年月の間隔'
                               href: ../odbc/reference/appendixes/c-to-sql-year-month-intervals.md
@@ -5450,13 +5453,13 @@
     - name: 作業の開始
       href: ../connect/php/getting-started-with-the-php-sql-driver.md
       items:
-        - name: 'ステップ 1: PHP 開発用に開発環境を構成する'
+        - name: '手順 1:PHP 開発用に開発環境を構成する'
           href: ../connect/php/step-1-configure-development-environment-for-php-development.md
-        - name: 'ステップ 2: PHP 開発用の SQL データベースを作成する'
+        - name: '手順 2:PHP 開発用の SQL データベースを作成する'
           href: ../connect/php/step-2-create-a-sql-database-for-php-development.md
-        - name: 'ステップ 3: PHP を使用した SQL Server への接続を概念実証する'
+        - name: '手順 3:PHP を使用した SQL Server への接続を概念実証する'
           href: ../connect/php/step-3-proof-of-concept-connecting-to-sql-using-php.md
-        - name: 'ステップ 4: PHP で SQL Server に弾性的に接続する'
+        - name: '手順 4:PHP で SQL Server に弾性的に接続する'
           href: ../connect/php/step-4-connect-resiliently-to-sql-with-php.md
     - name: 概要
       href: ../connect/php/overview-of-the-php-sql-driver.md
@@ -5485,17 +5488,17 @@
         - name: サーバーへの接続
           href: ../connect/php/connecting-to-the-server.md
           items:
-            - name: '方法: Windows 認証を使用して接続する'
+            - name: '方法:Windows 認証を使用した接続'
               href: ../connect/php/how-to-connect-using-windows-authentication.md
-            - name: '方法: SQL Server 認証を使用して接続する'
+            - name: '方法:SQL Server 認証を使用して接続する'
               href: ../connect/php/how-to-connect-using-sql-server-authentication.md
-            - name: '方法: Azure Active Directory 認証を使用して接続する'
+            - name: '方法:Azure Active Directory 認証を使用して接続する'
               href: ../connect/php/azure-active-directory.md
-            - name: '方法: 指定されたポートで接続する'
+            - name: '方法:指定されたポートで接続する'
               href: ../connect/php/how-to-connect-on-a-specified-port.md
             - name: 接続のプール
               href: ../connect/php/connection-pooling-microsoft-drivers-for-php-for-sql-server.md
-            - name: '方法: 複数のアクティブな結果セット (MARS) を無効にする'
+            - name: '方法:複数のアクティブな結果セット (MARS) を無効にする'
               href: ../connect/php/how-to-disable-multiple-active-resultsets-mars.md
             - name: 接続オプション
               href: ../connect/php/connection-options.md
@@ -5519,18 +5522,18 @@
               items:
                 - name: SQLSRV ドライバーを使用したストリームでのデータ型のサポート
                   href: ../connect/php/data-types-with-stream-support-using-the-sqlsrv-driver.md
-                - name: '方法: SQLSRV ドライバーを使用したストリームとしての文字データの取得'
+                - name: '方法:SQLSRV ドライバーを使用して文字データをストリームとして取得する'
                   href: ../connect/php/how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver.md
-                - name: '方法: SQLSRV ドライバーを使用してバイナリ データをストリームとして取得する'
+                - name: '方法:SQLSRV ドライバーを使用してバイナリ データをストリームとして取得する'
                   href: ../connect/php/how-to-retrieve-binary-data-as-a-stream-using-the-sqlsrv-driver.md
             - name: 方向パラメーターを使用する
               href: ../connect/php/using-directional-parameters.md
               items:
-                - name: '方法: SQLSRV ドライバーを使用してパラメーターの方向を指定する'
+                - name: '方法:SQLSRV ドライバーを使用してパラメーターの方向を指定する'
                   href: ../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md
-                - name: '方法: SQLSRV ドライバーを使用して出力パラメーターを取得する'
+                - name: '方法:SQLSRV ドライバーを使用して出力パラメーターを取得する'
                   href: ../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md
-                - name: '方法: SQLSRV ドライバーを使用して入力/出力パラメーターを取得する'
+                - name: '方法:SQLSRV ドライバーを使用して入力/出力パラメーターを取得する'
                   href: ../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md
             - name: カーソルの種類を指定し、行を選択する
               href: ../connect/php/specifying-a-cursor-type-and-selecting-rows.md
@@ -5539,9 +5542,9 @@
                   href: ../connect/php/cursor-types-sqlsrv-driver.md
                 - name: カーソルの種類 (PDO_SQLSRV ドライバー)
                   href: ../connect/php/cursor-types-pdo-sqlsrv-driver.md
-            - name: '方法: SQLSRV ドライバーを使用して日付/時刻型を文字列として取得する'
+            - name: '方法:SQLSRV ドライバーを使用して日付/時刻型を文字列として取得する'
               href: ../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md
-            - name: '方法: PDO_SQLSRV ドライバーを使用して日付/時刻型を PHP Datetime オブジェクトとして取得する'
+            - name: '方法:PDO_SQLSRV ドライバーを使用して日付/時刻型を PHP DateTime オブジェクトとして取得する'
               href: ../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md
             - name: 10 進数文字列と金額の書式設定 (SQLSRV ドライバー)
               href: ../connect/php/formatting-decimals-sqlsrv-driver.md
@@ -5550,11 +5553,11 @@
         - name: データの更新
           href: ../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md
           items:
-            - name: '方法: パラメーター化クエリを実行する'
+            - name: '方法:パラメーター化クエリを実行する'
               href: ../connect/php/how-to-perform-parameterized-queries.md
-            - name: '方法: ストリームとしてデータを送信する'
+            - name: '方法:ストリームとしてデータを送信する'
               href: ../connect/php/how-to-send-data-as-a-stream.md
-            - name: '方法: トランザクションを実行する'
+            - name: '方法:トランザクションを実行する'
               href: ../connect/php/how-to-perform-transactions.md
         - name: データ型の変換
           href: ../connect/php/converting-data-types.md
@@ -5563,25 +5566,29 @@
               href: ../connect/php/default-sql-server-data-types.md
             - name: 既定の PHP データ型
               href: ../connect/php/default-php-data-types.md
-            - name: '方法: SQLSRV ドライバーを使用する場合に SQL Server データ型を指定する'
+            - name: '方法:SQLSRV ドライバーを使用する場合に SQL Server データ型を指定する'
               href: ../connect/php/how-to-specify-sql-server-data-types-when-using-the-sqlsrv-driver.md
-            - name: '方法: PHP データ型を指定する'
+            - name: '方法:PHP データ型を指定する'
               href: ../connect/php/how-to-specify-php-data-types.md
-            - name: '方法: 組み込みの UTF-8 サポートを使用した UTF-8 データの送信と取得'
+            - name: '方法:組み込みの UTF-8 サポートを使用した UTF-8 データの送信と取得'
               href: ../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md
-            - name: '方法: Linux および macOS での ASCII データの送信と取得'
+            - name: '方法:Linux および macOS での ASCII データの送信と取得'
               href: ../connect/php/how-to-send-and-retrieve-ascii-data-in-linux-mac.md
         - name: エラーおよび警告の処理
           href: ../connect/php/handling-errors-and-warnings.md
           items:
-            - name: '方法: SQLSRV ドライバーを使用してエラーおよび警告処理を構成する'
+            - name: '方法:SQLSRV ドライバーを使用してエラーおよび警告処理を構成する'
               href: ../connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md
-            - name: '方法: SQLSRV ドライバーを使用してエラーと警告を処理する'
+            - name: '方法:SQLSRV ドライバーを使用してエラーと警告を処理する'
               href: ../connect/php/how-to-handle-errors-and-warnings-using-the-sqlsrv-driver.md
         - name: アクティビティのログ記録
           href: ../connect/php/logging-activity.md
         - name: SQL Server 用 PHP ドライバーと共に Always Encrypted を使用する
           href: ../connect/php/using-always-encrypted-php-drivers.md
+        - name: セキュリティで保護されたエンクレーブが設定された Always Encrypted を SQL Server 用 PHP ドライバー
+          href: ../connect/php/always-encrypted-secure-enclaves.md
+        - name: システム ロケール以外の設定
+          href: ../connect/php/non-system-locale-settings.md
         - name: 定数 (Microsoft Drivers for PHP for SQL Server)
           href: ../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md
         - name: SQLSRV ドライバー API リファレンス
@@ -5730,30 +5737,30 @@
     - name: Python SQL ドライバー - pyodbc
       href: ../connect/python/pyodbc/python-sql-driver-pyodbc.md
       items:
-        - name: '手順 1: pyodbc Python 開発用に開発環境を構成する'
+        - name: '手順 1:pyodbc Python 開発用に開発環境を構成する'
           href: ../connect/python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development.md
-        - name: 'ステップ 2: pyodbc Python 開発用の SQL データベースを作成する'
+        - name: '手順 2:pyodbc Python 開発用の SQL データベースを作成する'
           href: ../connect/python/pyodbc/step-2-create-a-sql-database-for-pyodbc-python-development.md
-        - name: 'ステップ 3: pyodbc を使用した SQL への接続を概念実証する'
+        - name: '手順 3:pyodbc を使用した SQL への接続を概念実証する'
           href: ../connect/python/pyodbc/step-3-proof-of-concept-connecting-to-sql-using-pyodbc.md
     - name: Python SQL ドライバー - pymssql
       href: ../connect/python/pymssql/python-sql-driver-pymssql.md
       items:
-        - name: 'ステップ 1: pymssql Python 開発用に開発環境を構成する'
+        - name: '手順 1:pymssql Python 開発用に開発環境を構成する'
           href: ../connect/python/pymssql/step-1-configure-development-environment-for-pymssql-python-development.md
-        - name: 'ステップ 2: pymssql Python 開発用の SQL データベースを作成する'
+        - name: '手順 2:pymssql Python 開発用の SQL データベースを作成する'
           href: ../connect/python/pymssql/step-2-create-a-sql-database-for-pymssql-python-development.md
-        - name: 'ステップ 3: pymssql を使用した SQL への接続を概念実証する'
+        - name: '手順 3:pymssql を使用した SQL への接続を概念実証する'
           href: ../connect/python/pymssql/step-3-proof-of-concept-connecting-to-sql-using-pymssql.md
 - name: Ruby
   items:
     - name: Ruby Driver for SQL Server
       href: ../connect/ruby/ruby-driver-for-sql-server.md
-    - name: 'ステップ 1: Ruby 開発用に開発環境を構成する'
+    - name: '手順 1:Ruby 開発用に開発環境を構成する'
       href: ../connect/ruby/step-1-configure-development-environment-for-ruby-development.md
-    - name: 'ステップ 2: Ruby 開発用の SQL データベースを作成する'
+    - name: '手順 2:Ruby 開発用の SQL データベースを作成する'
       href: ../connect/ruby/step-2-create-a-sql-database-for-ruby-development.md
-    - name: 'ステップ 3: Ruby を使用した SQL への接続を概念実証する'
+    - name: '手順 3:Ruby を使用した SQL への接続を概念実証する'
       href: ../connect/ruby/step-3-proof-of-concept-connecting-to-sql-using-ruby.md
 - name: ADO (ADO)
   items:
@@ -5873,7 +5880,7 @@
           href: ../ado/guide/data/determining-what-is-supported.md
         - name: Delete メソッドを使用してレコードを削除する
           href: ../ado/guide/data/deleting-records-using-the-delete-method.md
-        - name: '他の方法: SQL ステートメントを使用する'
+        - name: '代替: SQL ステートメントの使用'
           href: ../ado/guide/data/alternatives-using-sql-statements.md
     - name: データの更新と保持
       href: ../ado/guide/data/updating-and-persisting-data.md
@@ -5973,11 +5980,11 @@
           items:
             - name: 'ADO イベントのインスタンス化: Visual Basic'
               href: ../ado/guide/data/ado-event-instantiation-visual-basic.md
-            - name: 'ADO イベントのインスタンス化: Visual C++'
+            - name: "ADO イベントのインスタンス化: Visual\_C++"
               href: ../ado/guide/data/ado-event-instantiation-visual-c.md
             - name: 'ADO イベントのインスタンス化: Visual J++'
               href: ../ado/guide/data/ado-event-instantiation-visual-j.md
-            - name: 'ADO イベントのインスタンス化: VBScript'
+            - name: 'ADO イベントのインスタンス化: [VBScript]'
               href: ../ado/guide/data/ado-event-instantiation-vbscript.md
             - name: 'ADO イベントのインスタンス化: JScript'
               href: ../ado/guide/data/ado-event-instantiation-jscript.md
@@ -6077,13 +6084,13 @@
             - name: インターネットへの発行のシナリオ
               href: ../ado/guide/data/internet-publishing-scenario.md
               items:
-                - name: '手順 1: Visual Basic プロジェクトを設定する'
+                - name: '手順 1:Visual Basic プロジェクトを設定する'
                   href: ../ado/guide/data/step-1-set-up-the-visual-basic-project.md
-                - name: '手順 2: Main リスト ボックスを初期化する'
+                - name: '手順 2:Main リスト ボックスを初期化する'
                   href: ../ado/guide/data/step-2-initialize-the-main-list-box.md
-                - name: '手順 3: Fields リスト ボックスに値を設定する'
+                - name: '手順 3:Fields リスト ボックスに値を設定する'
                   href: ../ado/guide/data/step-3-populate-the-fields-list-box.md
-                - name: '手順 4: Details テキスト ボックスに値を設定する'
+                - name: '手順 4:Details テキスト ボックスに値を設定する'
                   href: ../ado/guide/data/step-4-populate-the-details-text-box.md
             - name: 絶対 URL と相対 URL
               href: ../ado/guide/data/absolute-and-relative-urls.md
@@ -6140,17 +6147,17 @@
     - name: RDS チュートリアル
       href: ../ado/guide/remote-data-service/rds-tutorial.md
       items:
-        - name: '手順 1: サーバー プログラムを指定する (RDS チュートリアル)'
+        - name: '手順 1:サーバー プログラムを指定する (RDS チュートリアル)'
           href: ../ado/guide/remote-data-service/step-1-specify-a-server-program-rds-tutorial.md
-        - name: '手順 2: サーバー プログラムを呼び出す (RDS チュートリアル)'
+        - name: '手順 2:サーバー プログラムを呼び出す (RDS チュートリアル)'
           href: ../ado/guide/remote-data-service/step-2-invoke-the-server-program-rds-tutorial.md
-        - name: '手順 3: サーバーがレコード セットを取得する (RDS チュートリアル)'
+        - name: '手順 3:サーバーがレコード セットを取得する (RDS チュートリアル)'
           href: ../ado/guide/remote-data-service/step-3-server-obtains-a-recordset-rds-tutorial.md
-        - name: '手順 4: サーバーがレコード セットを返す (RDS チュートリアル)'
+        - name: '手順 4:サーバーがレコード セットを返す (RDS チュートリアル)'
           href: ../ado/guide/remote-data-service/step-4-server-returns-the-recordset-rds-tutorial.md
-        - name: '手順 5: DataControl が使用可能になる (RDS チュートリアル)'
+        - name: '手順 5:DataControl が使用可能になる (RDS チュートリアル)'
           href: ../ado/guide/remote-data-service/step-5-datacontrol-is-made-usable-rds-tutorial.md
-        - name: '手順 6: 変更がサーバーに送信される (RDS チュートリアル)'
+        - name: '手順 6:変更がサーバーに送信される (RDS チュートリアル)'
           href: ../ado/guide/remote-data-service/step-6-changes-are-sent-to-the-server-rds-tutorial.md
         - name: RDS のチュートリアル (VBScript)
           href: ../ado/guide/remote-data-service/rds-tutorial-vbscript.md
@@ -6284,7 +6291,7 @@
               href: ../ado/guide/appendixes/visual-c-extensions-header.md
             - name: Visual C++ Extensions を使用する
               href: ../ado/guide/appendixes/using-visual-c-extensions.md
-    - name: '付録 D: ADO の使用例'
+    - name: '付録 D: ADO のサンプル'
       href: ../ado/guide/appendixes/appendix-d-ado-samples.md
     - name: Visual C++ アプリケーションで ADO ライブラリを参照する
       href: ../ado/guide/referencing-the-ado-libraries-in-a-visual-c-application.md
@@ -7554,7 +7561,7 @@
               href: ../ado/reference/adox-api/indexnulls-property-example-vb.md
             - name: Keys Append メソッド、Key Type、RelatedColumn、RelatedTable、UpdateRule プロパティの例 (VB)
               href: ../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md
-            - name: 'ADOX のコード例: NumericScale プロパティと Precision プロパティの例 (VB)'
+            - name: 'ADOX のコード例: NumericScale および Precision プロパティの例 (VB)'
               href: ../ado/reference/adox-api/adox-code-example-numericscale-and-precision-properties-example-vb.md
             - name: Parameters コレクションおよび Command プロパティの例 (VB)
               href: ../ado/reference/adox-api/parameters-collection-command-property-example-vb.md
@@ -7623,7 +7630,7 @@
               href: ../ado/reference/adox-api/parentcatalog-property-example-vc.md
             - name: PrimaryKey および Unique プロパティの例 (VC++)
               href: ../ado/reference/adox-api/primarykey-and-unique-properties-example-vc.md
-    - name: '非推奨: RDS API リファレンス'
+    - name: '非推奨:RDS の API リファレンス'
       href: ../ado/reference/rds-api/rds-api-reference.md
     - name: RDS オブジェクト
       href: ../ado/reference/rds-api/rds-objects.md
