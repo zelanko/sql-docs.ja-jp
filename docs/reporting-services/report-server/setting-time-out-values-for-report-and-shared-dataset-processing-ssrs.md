@@ -1,6 +1,7 @@
 ---
 title: レポートおよび共有データセット処理のタイムアウト値の設定 (SSRS) | Microsoft Docs
-ms.date: 05/30/2019
+description: Reporting Services では、タイムアウト値を指定して、システム リソースの使用方法に制限を設定できます。
+ms.date: 01/16/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 0f9dc61d-d03c-4bbf-8090-7a53844350f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f4d98747a2f00de41dd5661b76a05a9f22d341df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 1bc1f2f27fa46f8262d3c0ca99549d23f2381ff0
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66506436"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76259412"
 ---
 # <a name="setting-time-out-values-for-report-and-shared-dataset-processing-ssrs"></a>レポートおよび共有データセット処理のタイムアウト値の設定 (SSRS)
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、タイムアウト値を指定して、システム リソースの使用に制限を設定できます。 レポート サーバーでは、2 つのタイムアウト値がサポートされます。  
+[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、タイムアウト値を指定して、システム リソースの使用に制限を設定できます。 レポート サーバーは、次の 2 つのタイムアウト値をサポートします。  
   
 - 埋め込みデータセットのクエリ タイムアウト値は、レポート サーバーがデータベースからの応答を待機する秒数です。 この値はレポートの中で定義されます。  
   
@@ -33,7 +34,10 @@ ms.locfileid: "66506436"
   
 ## <a name="setting-a-query-time-out-for-an-embedded-dataset-in-a-report"></a>レポートの埋め込みデータセットに対するクエリ タイムアウトの設定  
  クエリ タイムアウト値は、レポートの作成中、埋め込みデータセットを定義するときに指定します。 タイムアウト値は、レポート定義の **Timeout** 要素の中にレポートと一緒に格納されます。 既定では、この値は 30 秒に設定されます。 詳細については、「 [レポート埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)と呼ばれます。  
-  
+ 
+ > [!NOTE]  
+ > **Power BI のページ分割されたレポート**では、既定値は **600 秒**に設定されています。
+ 
  パブリッシュ済みレポートのプロパティを変更する権限を持っているユーザーは、レポート定義ファイルを編集することでこの値を再設定できます。  
   
  また、データ ドリブン サブスクリプションのクエリ タイムアウト値を指定することもできます。 クエリのタイムアウト値は、[データ ドリブン サブスクリプション] ページで指定します。 ここで指定した値によって、サブスクライバーのデータ ソースからデータを取得する際に、クエリ処理が完了するまでのレポート サーバーが待機する時間が決定されます。  
