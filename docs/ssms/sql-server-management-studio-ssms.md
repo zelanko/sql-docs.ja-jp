@@ -14,14 +14,14 @@ helpviewer_keywords:
 - SQL Server Management Studio for Integration Services
 - SQL Server Management Studio for Reporting Services
 - SQL Server Management Studio for Analysis Services
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 09/11/2019
-ms.openlocfilehash: a185d7506b23931787699b52fedddfddf21c1cb8
-ms.sourcegitcommit: 059da40428ee9766b6f9b16b66c689b788c41df1
+ms.openlocfilehash: 613e3eddce55fbc52cd011f5070def12d31d83b9
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71038856"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76037174"
 ---
 # <a name="what-is-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) とは何か?
 
@@ -37,7 +37,7 @@ ms.locfileid: "71038856"
 
 ## <a name="sql-server-management-studio-components"></a>SQL Server Management Studio のコンポーネント  
   
-|[説明]|コンポーネント|  
+|説明|コンポーネント|  
 |---------------|---------|  
 |**オブジェクト エクスプローラー** を使用して、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の 1 つ以上のインスタンスに存在するすべてのオブジェクトを表示および管理します。|[[オブジェクト エクスプローラー]](../ssms/object/object-explorer.md)|  
 |**テンプレート エクスプローラー**を使用し、クエリとスクリプトの開発を迅速化する定型句ファイルを作成し、管理する方法。|[テンプレート エクスプローラー](../ssms/template/template-explorer.md)|  
@@ -92,9 +92,13 @@ SQL Server Management Studio では、Reporting Services の機能の有効化�
 - 元の[モダン ライフサイクル ポリシーに関するお知らせ](https://support.microsoft.com/help/447912/announcing-microsoft-modern-lifecycle-policy)を参照してください。 詳細については、「[モダン ライフサイクル ポリシーに関する FAQ](https://support.microsoft.com/help/30882/modern-lifecycle-policy-faq)」を参照してください。
 - 診断データの収集と機能の使用方法について詳しくは、「[SQL Server のプライバシーの補足情報](https://docs.microsoft.com/sql/sql-server/sql-server-privacy)」を参照してください。
 
+## <a name="cross-platform-tool"></a>クロスプラットフォーム ツール
+
+[!INCLUDE[ssms-azure-data-studio-mention](../includes/ssms-azure-data-studio-mention.md)]
+
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 - [英語以外の言語バージョンの SSMS をインストールする](install-other-languages.md)
 - [SQL Server インスタンスに接続してクエリを実行する](tutorials/connect-query-sql-server.md)

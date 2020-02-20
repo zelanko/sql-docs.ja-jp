@@ -1,22 +1,22 @@
 ---
-title: SQL Server Management Studio (SSMS) を使用して SQL Server インスタンスに接続し、クエリを行う
+title: SQL Server インスタンスに接続してクエリを実行する
 description: SQL Server Management Studio を使用し、基本的な T-SQL クエリを実行して SQL Server インスタンスに接続するためのチュートリアルです。
 keywords: SQL Server, SSMS, SQL Server Management Studio
-author: MashaMSFT
-ms.author: mathoma
-ms.reviewer: sstein
+author: markingmyname
+ms.author: maghan
+ms.reviewer: sstein; maghan
 ms.topic: quickstart
 ms.prod_service: sql-tools
 ms.prod: sql
 ms.technology: ssms
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 03/13/2018
-ms.openlocfilehash: eaf544085bfe6040bdf9f54300eb733ee4fd92f0
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: c1d13b939dc0846c88e9bd05a1384d259c3f911c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71708330"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76162651"
 ---
 # <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio-ssms"></a>チュートリアル:SQL Server Management Studio (SSMS) を使用して SQL Server インスタンスに接続し、クエリを行う
 
@@ -31,11 +31,11 @@ ms.locfileid: "71708330"
 > * クエリ ウィンドウのテーブルを使用して接続のプロパティを確認する
 > * クエリ ウィンドウが接続するサーバーを変更する
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 このチュートリアルを実行するには、SQL Server Management Studio と SQL Server インスタンスへのアクセスが必要です。 
 
-* [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) をインストールする。
+* [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) をインストールします。
 
 SQL Server インスタンスへのアクセス権を持っていない場合は、次のリンクからプラットフォームを選択します。 SQL 認証を選択する場合は、SQL Server のログイン資格情報を使用します。
 
@@ -44,7 +44,7 @@ SQL Server インスタンスへのアクセス権を持っていない場合は
 
 ## <a name="connect-to-a-sql-server-instance"></a>SQL Server インスタンスに接続する
 
-1. [SQL Server Management Studio] を起動します。 SSMS を初めて実行すると、 **[サーバーへの接続]** ウィンドウが開きます。 開かない場合は、 **[オブジェクト エクスプローラー]**  >  **[接続]**  >  **[データベース エンジン]** の順に選択して、手動で開くことができます。
+1. SQL Server Management Studio を起動します。 SSMS を初めて実行すると、 **[サーバーへの接続]** ウィンドウが開きます。 開かない場合は、 **[オブジェクト エクスプローラー]**  >  **[接続]**  >  **[データベース エンジン]** の順に選択して、手動で開くことができます。
 
     ![オブジェクト エクスプローラーの接続リンク](media/connect-query-sql-server/connectobjexp.png)
 
@@ -72,7 +72,7 @@ SQL Server 接続の成功を確認するには、**オブジェクト エクス
   >[!NOTE]
   > このチュートリアルでは、以前、"*Windows 認証*" を使用してオンプレミス SQL Server に接続しましたが、この方法は SQL Azure DB ではサポートされていません。 そのため、この画像では、SQL 認証を使用して SQL Azure DB に接続しています。 詳細については、[SQL オンプレミス認証](../../relational-databases/security/choose-an-authentication-mode.md)に関するページと [SQL Azure 認証](https://docs.microsoft.com/azure/sql-database/sql-database-security-overview#access-management)に関するページを参照してください。 
 
-## <a name="create-a-database"></a>データベースの作成
+## <a name="create-a-database"></a>データベースを作成する
 
 次の手順で、TutorialDB という名前のデータベースを作成します。
 
@@ -195,11 +195,16 @@ SQL Server 接続の成功を確認するには、**オブジェクト エクス
     > [!NOTE]
     > この操作では、クエリ ウィンドウが接続しているサーバーのみが変更され、オブジェクト エクスプローラーで使用されるサーバーは変更されません。
 
-## <a name="next-steps"></a>次の手順
+## <a name="azure-data-studio"></a>Azure Data Studio
 
-SSMS に慣れ親しむには、実践的な経験を積むのが最も効果的です。 以下の記事は、SSMS 内で使用できるさまざまな機能を使用するのに役立ちます。  以下の記事では、SSMS のコンポーネントを管理する方法と、頻繁に使用する機能にアクセスする方法が説明されています。
+Azure Data Studio を使用して、[SQL Server](../../azure-data-studio/quickstart-sql-server.md)、[Azure SQL Database](../../azure-data-studio/quickstart-sql-database.md)、および [Azure SQL Data Warehouse](../../azure-data-studio/quickstart-sql-dw.md) に接続してクエリを実行することもできます。
+
+## <a name="next-steps"></a>次のステップ
+
+SSMS に慣れ親しむには、実践的な経験を積むのが最も効果的です。 以下の記事は、SSMS 内で使用できるさまざまな機能を使用するのに役立ちます。 以下の記事では、SSMS のコンポーネントを管理する方法と、頻繁に使用する機能にアクセスする方法が説明されています。
 
 * [スクリプトの作成](scripting-ssms.md)
 * [SSMS でテンプレートを使用する](../template/templates-ssms.md)
 * [SSMS を構成する](ssms-configuration.md)
 * [SSMS を使用するための追加のヒントとテクニック](ssms-tricks.md)
+* [Azure Data Studio](../../azure-data-studio/download.md)

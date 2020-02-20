@@ -1,21 +1,22 @@
 ---
-title: SQL Server Management Studio (SSMS) のリリース ノート | Microsoft Docs
+title: (SSMS) のリリース ノート
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: markingmyname
 ms.author: maghan
-ms.custom: ''
+ms.manager: jroth
+ms.reviewer: dnethi
+ms.custom: seo-lt-2019
 ms.date: 11/04/2019
-ms.openlocfilehash: cdcc955050ebab5702d22fef60628876bd367757
-ms.sourcegitcommit: db715cad313055c8b42d547be686de8755342d65
+ms.openlocfilehash: 6ff730a55a52319082d4af9021d698bf696ec0be
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73801152"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76037115"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) のリリース ノート
 
@@ -45,7 +46,7 @@ GeneMi. 2019/04/02.
 
 ダウンロード:[SSMS 18.4 のダウンロード](download-sql-server-management-studio-ssms.md)  
 ビルド番号:15.0.18206.0  
-リリース日:2019 年 11 月 4 日
+リリース日: 2019 年 11 月 4 日
 
 SSMS 18.4 は SSMS の最新の一般提供 (GA) リリースです。 SSMS の以前のバージョンが必要な場合は、[以前のリリースの SSMS](release-notes-ssms.md#previous-ssms-releases) を参照してください。
 
@@ -58,6 +59,7 @@ SSMS 18.4 は SSMS の最新の一般提供 (GA) リリースです。 SSMS の�
 | データ分類 | データ分類に対してカスタム情報保護ポリシーのサポートが追加されました。 |
 | クエリ ストア | ダイアログのプロパティに "*クエリごとに最大プラン*" の値が追加されました。 |
 | クエリ ストア | 新しいカスタム キャプチャ ポリシーのサポートが追加されました。 |
+| クエリ ストア | **[クエリ ストア]** の **[データベースのプロパティ]** オプションに **[Wait Statistics Capture Mode]\(待機統計取り込みモード\)** を追加しました。 |
 | SMO/スクリプト作成 | SQL DW で具体化されたビューのスクリプトをサポートします。 |
 | SMO/スクリプト作成 | *SQL On Demand* のサポートが追加されました。 |
 | SMO/スクリプト作成 | [SQL Assessment API](../sql-assessment-api/sql-assessment-api-overview.md) - 50 個の評価規則が追加されました (GitHub の詳細を参照)。 |
@@ -71,7 +73,7 @@ SSMS 18.4 は SSMS の最新の一般提供 (GA) リリースです。 SSMS の�
 
 ## <a name="bug-fixes-in-184"></a>18.4 でのバグの修正
 
-| 新しい項目 | 詳細 |
+| New Item | 詳細 |
 |----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Analysis Services | 多次元データベース用 DAX スクリプト エディターで IntelliSense にテーブルが表示されない問題を修正しました。 |
 | Analysis Services | DAX パーサーを使用して、エンジン文字列に変換します。 これは、国際的な区切り記号、小数点、および空白文字を対象としています。 |
@@ -93,7 +95,7 @@ SSMS 18.4 は SSMS の最新の一般提供 (GA) リリースです。 SSMS の�
 
 * マシン A 上で実行されている SSMS から作成されたデータベース ダイアグラムは、マシン B からは変更できません (SSMS がクラッシュします)。 詳細については、「[UserVoice](https://feedback.azure.com/forums/908035/suggestions/37992649)」を参照してください。
 
-* 複数のクエリ ウィンドウを切り替えると再描画の問題が発生します。 詳細については、UserVoice を参照してください。 この問題を回避するには、 *[ツール] > [オプション]* でハードウェア アクセラレータを無効にします。
+* 複数のクエリ ウィンドウを切り替えると再描画の問題が発生します。 詳細については、「[UserVoice](https://feedback.azure.com/forums/908035/suggestions/37474042)」を参照してください。 この問題を回避するには、 *[ツール] > [オプション]* でハードウェア アクセラレータを無効にします。
 
 他の既知の問題と製品チームへのフィードバックの提供については、「[UserVoice](https://feedback.azure.com/forums/908035-sql-server)」を参照してください。
 
@@ -101,11 +103,11 @@ SSMS 18.4 は SSMS の最新の一般提供 (GA) リリースです。 SSMS の�
 
 以前のバージョンの SSMS をダウンロードするには、次のセクションのタイトル リンクをクリックします。
 
-## <a name="downloadssdtmediadownloadpng-ssms-1831httpsgomicrosoftcomfwlinklinkid2105412"></a>![ダウンロード](../ssdt/media/download.png) [SSMS 18.3.1](https://go.microsoft.com/fwlink/?linkid=2105412)
+## <a name="download-ssms-1831"></a>![ダウンロード](../ssdt/media/download.png) [SSMS 18.3.1](https://go.microsoft.com/fwlink/?linkid=2105412)
 
 リリース番号:18.3.1  
 ビルド番号:15.0.18183.0  
-リリース日:2019 年 10 月 2 日
+リリース日: 2019 年 10 月 2 日
 
 SSMS 18.3.1 は SSMS の最新の一般提供 (GA) リリースです。 SSMS の以前のバージョンが必要な場合は、[以前のリリースの SSMS](release-notes-ssms.md#previous-ssms-releases) を参照してください。
 
@@ -127,7 +129,7 @@ SSMS 18.3.1 は SSMS の最新の一般提供 (GA) リリースです。 SSMS �
 
 ## <a name="bug-fixes-in-1831"></a>18.3.1 でのバグの修正
 
-| 新しい項目 | 詳細 |
+| New Item | 詳細 |
 |----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Analysis Services | MDX クエリ エディターの拡大縮小の問題を修正します。|
 | Analysis Services | ユーザーが新しいセッションを作成できない原因である XEvent UI の問題を修正しました。 |
@@ -155,17 +157,17 @@ SSMS 18.3.1 は SSMS の最新の一般提供 (GA) リリースです。 SSMS �
 
 他の既知の問題と製品チームへのフィードバックの提供については、「[UserVoice](https://feedback.azure.com/forums/908035-sql-server)」を参照してください。
 
-## <a name="downloadssdtmediadownloadpng-ssms-182httpsgomicrosoftcomfwlinklinkid2099720"></a>![](../ssdt/media/download.png) [SSMS 18.2](https://go.microsoft.com/fwlink/?linkid=2099720) のダウンロード
+## <a name="download-ssms-182"></a>![ダウンロード](../ssdt/media/download.png) [SSMS 18.2](https://go.microsoft.com/fwlink/?linkid=2099720)
 
 リリース番号:18.2  
 ビルド番号:15.0.18142.0  
-リリース日:2019 年 7 月 25 日
+リリース日: 2019 年 7 月 25 日
 
 18.2 は、18.1 に次の新しい項目とバグ修正を加えた更新プログラムです。
 
 ## <a name="whats-new-in-182"></a>18.2 の新機能
 
-|  新しい項目  |  詳細  |
+|  New Item  |  詳細  |
 |-------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Integration Services (SSIS) | Azure の SSIS パッケージ スケジューラに対するパフォーマンスの最適化。 |
 | Intellisense/エディター | データ分類に対するサポートを追加しました。 |
@@ -179,12 +181,12 @@ SSMS 18.3.1 は SSMS の最新の一般提供 (GA) リリースです。 SSMS �
 
 ## <a name="bug-fixes-in-182"></a>18.2 でのバグの修正
 
-|  新しい項目  |  詳細  |
+|  New Item  |  詳細  |
 |-----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ユーザー補助 | F3 キーを押して並べ替えられるように XEvent UI (グリッド) を更新しました。 |
-| Always On | 可用性グループ (AG) を削除しようとすると、SSMS からエラーがスローされる問題を修正しました |
-| Always On | 読み取りスケール AG (クラスターの種類 = NONE) を使用しているときにレプリカを Synchronous と構成すると、SSMS で不適切なフェールオーバー ウィザードが表示されていた問題を修正しました。 SSMS では、Force_Failover_Allow_Data_Loss オプションのウィザードが表示されるようになりました。これは、クラスターの種類 NONE Availability に対して許可されている唯一のオプションです。 |
-| Always On | ウィザードで、許可される同期数が 3 に制限されていた問題を修正しました |
+| アクセシビリティ | F3 キーを押して並べ替えられるように XEvent UI (グリッド) を更新しました。 |
+| 常時接続 | 可用性グループ (AG) を削除しようとすると、SSMS からエラーがスローされる問題を修正しました |
+| 常時接続 | 読み取りスケール AG (クラスターの種類 = NONE) を使用しているときにレプリカを Synchronous と構成すると、SSMS で不適切なフェールオーバー ウィザードが表示されていた問題を修正しました。 SSMS では、Force_Failover_Allow_Data_Loss オプションのウィザードが表示されるようになりました。これは、クラスターの種類 NONE Availability に対して許可されている唯一のオプションです。 |
+| 常時接続 | ウィザードで、許可される同期数が 3 に制限されていた問題を修正しました |
 | データ分類 | CompatLevel が 150 未満のデータベース上でデータ分類レポートを表示しようとすると、SSMS から "*インデックス (ゼロベース) は 0 以上でなければなりません*" のエラーがスローされる問題を修正しました。 |
 | SSMS 全般 | ユーザーがマウス ホイールを使って結果ウィンドウを水平方向にスクロールできなかった問題を修正しました。 詳細については、「[UserVoice](https://feedback.azure.com/forums/908035/suggestions/34145641)」を参照してください。 |
 | SSMS 全般 | 無害な待機の種類 SQLTRACE_WAIT_ENTRIES を無視するように "*利用状況モニター*" を更新しました |
@@ -200,7 +202,7 @@ SSMS 18.3.1 は SSMS の最新の一般提供 (GA) リリースです。 SSMS �
 | オブジェクト エクスプローラー | Windows でサポートされなくなった照合順序を使用するように設定されているデータベースに対して、オブジェクト エクスプローラーで *Tables* ノードを展開しようとするとエラーがトリガーされる (また、ユーザーは自分のテーブルを展開できない) という長い間未解決だった問題を修正しました。 そのような照合順序の例は、Korean_Wansung_Unicode_CI_AS です。 |
 | [サーバーの登録](register-servers/register-servers.md) | [登録済みサーバー] で *[Active Directory - 統合]* または *[Azure Active Directory - Universal with MFA]* のいずれかが使用されている場合に、複数のサーバーに対して ([登録済みサーバー] の *[グループ]* ) クエリを発行しようとしても、SSMS 接続の失敗のために機能しない問題を修正しました。 |
 | [サーバーの登録](register-servers/register-servers.md) | 登録済みサーバーで *[Active Directory - パスワード]* または *[SQL Auth]\(SQL 認証\)* のいずれかが使用され、ユーザーがパスワードを記憶しないことを選択している場合に、複数のサーバーに対して ([登録済みサーバー] の *[グループ]* で) クエリを発行しようとしても、SSMS がクラッシュする問題を修正しました。 |
-| [レポート] | データ ファイルのエクステント数が膨大な場合にレポートが失敗する "*ディスク使用量*" レポートの問題を修正しました。 |
+| Reports | データ ファイルのエクステント数が膨大な場合にレポートが失敗する "*ディスク使用量*" レポートの問題を修正しました。 |
 | レプリケーション ツール | レプリケーション モニターが AG のパブリッシャー DB および AG のディストリビューターで機能しない問題を修正しました (これは以前に SSMS 17.x で修正済み) |
 | SQL エージェント | ジョブ ステップの追加、挿入、編集、または削除時に、アクティブな行ではなく最初の行でフォーカスがリセットされる問題を修正しました。 詳細については、「[UserVoice](https://feedback.azure.com/forums/908035/suggestions/38070892)」を参照してください。 |
 | SMO/スクリプト作成 | *CREATE OR ALTER* で拡張プロパティを持つオブジェクトがスクリプト化されない問題を修正しました。 詳細については、「[UserVoice](https://feedback.azure.com/forums/908035-sql-server/suggestions/37236748)」を参照してください。 |
@@ -225,11 +227,11 @@ SSMS 18.3.1 は SSMS の最新の一般提供 (GA) リリースです。 SSMS �
 
 - 実際のログイン用の既定の言語設定にかかわらず、[ログインのプロパティ] ダイアログにアラビア語が SQL ログインの既定の言語として表示される場合があります。 このログインの実際の既定の言語を表示するには、T-SQL を使用して **master.sys.server_principles** からログインの **default_language_name** を選択します。
 
-## <a name="downloadssdtmediadownloadpng-ssms-181httpsgomicrosoftcomfwlinklinkid2094583"></a>[SSMS 18.1](https://go.microsoft.com/fwlink/?linkid=2094583) ![のダウンロード](../ssdt/media/download.png)
+## <a name="download-ssms-181"></a>![ダウンロード](../ssdt/media/download.png) [SSMS 18.1](https://go.microsoft.com/fwlink/?linkid=2094583)
 
 - リリース番号:18.1  
 - ビルド番号:15.0.18131.0  
-- リリース日:2019 年 6 月 11 日  
+- リリース日: 2019 年 6 月 11 日  
 
 [簡体中国語](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x804) | [繁体中国語](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x40a)
 
@@ -245,10 +247,10 @@ SSMS 18.3.1 は SSMS の最新の一般提供 (GA) リリースです。 SSMS �
 
 ## <a name="bug-fixes-in-181"></a>18.1 でのバグの修正
 
-| 新しい項目 | 詳細 |
+| New Item | 詳細 |
 |---------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ユーザー補助 | エージェント ジョブ UI のユーザー補助が改善されました。 |
-| ユーザー補助 | [Stretch Monitor]\(ストレッチ モニター\) ページに *[自動更新]* ボタンのアクセス可能な名前が追加され、どのボタンがオンの状態であるかだけでなく、そのボタンを押すことによる影響がユーザーにわかるインテリジェントなアクセス可能な名前も追加され、ユーザー補助が改善されました。 |
+| アクセシビリティ | エージェント ジョブ UI のユーザー補助が改善されました。 |
+| アクセシビリティ | [Stretch Monitor]\(ストレッチ モニター\) ページに *[自動更新]* ボタンのアクセス可能な名前が追加され、どのボタンがオンの状態であるかだけでなく、そのボタンを押すことによる影響がユーザーにわかるインテリジェントなアクセス可能な名前も追加され、ユーザー補助が改善されました。 |
 | ADS 統合| ADS 登録サーバーの使用にあたり発生する恐れのある SSMS のクラッシュを修正しました。|
 | データベース デザイナー | Latin1_General_100_BIN2_UTF8 照合順序に対するサポートが追加されました (SQL Server 2019 CTP3.0 で使用できます)。 |
 | データ分類 | 履歴テーブルの列への機密ラベルの追加はサポートされていないため、これが阻止されます。 |
@@ -271,8 +273,8 @@ SSMS 18.3.1 は SSMS の最新の一般提供 (GA) リリースです。 SSMS �
 | オブジェクト エクスプローラー | Linux 上で SQL に接続したときに *[PowerShell の起動]* を有効にするための制限を解除しました。 |
 | オブジェクト エクスプローラー | Polybase/スケールアウト グループ ノード (計算ノードに接続されている場合) を展開しようとしたときに SSMS がクラッシュする原因となっていた問題を修正しました。 |
 | オブジェクト エクスプローラー | 指定のインデックスを無効にした後であっても、 *[無効]* メニュー項目が依然として有効な状態である問題を修正しました。 詳細については、「[UserVoice](https://feedback.azure.com/forums/908035/suggestions/37735375)」を参照してください。 |
-| [レポート] | レポートで GrantedQueryMemory を KB 単位で表示するように修正しました (SQL パフォーマンス ダッシュボード レポート)。 詳細については、「[UserVoice](https://feedback.azure.com/forums/908035/suggestions/37167289)」を参照してください。 |
-| [レポート] | Always-On シナリオでのログ ブロックのトレースが改善されました。 |
+| Reports | レポートで GrantedQueryMemory を KB 単位で表示するように修正しました (SQL パフォーマンス ダッシュボード レポート)。 詳細については、「[UserVoice](https://feedback.azure.com/forums/908035/suggestions/37167289)」を参照してください。 |
+| Reports | Always-On シナリオでのログ ブロックのトレースが改善されました。 |
 | プラン表示 | 新しいプラン表示要素 *SpillOccurred* をプラン表示スキーマに追加しました。 |
 | プラン表示 | リモートの読み取り (*ActualPageServerReads*、*ActualPageServerReadAheads*、*ActualLobPageServerReads*、*ActualLobPageServerReadAheads*) をプラン表示スキーマに追加しました。 |
 | SMO/スクリプト作成 | グラフではないテーブルのスクリプト作成中のエッジ制約のクエリを回避します。 |
@@ -295,11 +297,11 @@ SSMS 18.3.1 は SSMS の最新の一般提供 (GA) リリースです。 SSMS �
 
 - マシン A 上で実行されている SSMS から作成されたデータベース ダイアグラムは、マシン B からは変更できません (SSMS がクラッシュします)。 詳細については、「[UserVoice](https://feedback.azure.com/forums/908035/suggestions/37992649)」を参照してください。
 
-## <a name="downloadssdtmediadownloadpng-ssms-180httpsgomicrosoftcomfwlinklinkid2088649"></a>![ダウンロード](../ssdt/media/download.png) [SSMS 18.0](https://go.microsoft.com/fwlink/?linkid=2088649)
+## <a name="download-ssms-180"></a>![ダウンロード](../ssdt/media/download.png) [SSMS 18.0](https://go.microsoft.com/fwlink/?linkid=2088649)
 
 - リリース番号:18.0  
 - ビルド番号:15.0.18118.0  
-- リリース日:2019 年 4 月 24 日
+- リリース日: 2019 年 4 月 24 日
 
 [簡体中国語](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x804)| [繁体中国語](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x404)| [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x409)| [フランス語](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x40c)| [ドイツ語](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x407)| [イタリア語](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x410)| [日本語](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x411)| [韓国語](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x412)| [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x416)| [ロシア語](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x419)| [スペイン語](https://go.microsoft.com/fwlink/?linkid=2088649&clcid=0x40a)
 
@@ -327,7 +329,7 @@ SSMS 18.3.1 は SSMS の最新の一般提供 (GA) リリースです。 SSMS �
 |SSMS は PATH 環境変数に追加されなくなりました|SSMS.EXE (および一般的なツール) のパスは、パスに追加されなくなりました。 ユーザーは手動で追加するか、最新の Windows コンピューターの場合は [スタート] メニューを使用することができます。|
 |SSMS 拡張機能を開発するためのパッケージ ID が不要になりました| これまで、SSMS では既知のパッケージのみが選択されて読み込まれていたので、開発者は自分のパッケージを登録する必要がありました。 この点は変更されました。|
 |SSMS 全般|SSMS の Filegroups に関する AUTOGROW_ALL_FILES 構成オプションを公開しています。|
-|SSMS 全般|SSMS GUI から、危険な 'lightweight pooling' と 'priority boost' オプションを削除しました。 詳細については、「[Priority boost details – and why it’s not recommended](https://blogs.msdn.microsoft.com/arvindsh/2010/01/26/priority-boost-details-and-why-its-not-recommended/)」 (priority boost の詳細 - 推奨されない理由) を参照してください。
+|SSMS 全般|SSMS GUI から、危険な 'lightweight pooling' と 'priority boost' オプションを削除しました。 詳細については、「[Priority boost details – and why it’s not recommended](https://deep.data.blog/2010/01/26/priority-boost-details-and-why-its-not-recommended/)」 (priority boost の詳細 - 推奨されない理由) を参照してください。
 |SSMS 全般|ファイルを作成するための新しいメニューとキー バインド:**CTRL+ALT+N**。 **CTRL + N** でも引き続き新しいクエリを作成できます。|
 |SSMS 全般|**[新しいファイアウォール規則]** ダイアログで、自動的に生成される規則名ではなく、ユーザーが規則名を指定できるようになりました。|
 |SSMS 全般|特に v140+ T-SQL に合わせてエディターの IntelliSense が改善されました。|
@@ -344,7 +346,7 @@ SSMS 18.3.1 は SSMS の最新の一般提供 (GA) リリースです。 SSMS �
 |Azure SQL サポート| SLO/Edition/MaxSize データベース プロパティにカスタム名を使用できるようになり、今後の Azure SQL データベースのエディションのサポートが簡単になりました。|
 |Azure SQL サポート| 最近追加された仮想コア SKU (General Purpose および Business Critical) のサポートの追加:Gen4_24 およびすべての Gen5|
 |Azure SQL マネージド インスタンス|SMO と SSMS で、Azure SQL マネージド インスタンスに接続した場合の新しいログインの種類として、新しい "AAD ログイン" が追加されました。|
-|Always On|SSMS の Always on ダッシュボードで RTO (推定復旧時間) と RPO (推定データ損失) を再ハッシュします。 [https://docs.microsoft.com/sql/database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups](../database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups.md) の更新されたドキュメントを参照してください。|
+|常時接続|SSMS の Always on ダッシュボードで RTO (推定復旧時間) と RPO (推定データ損失) を再ハッシュします。 [https://docs.microsoft.com/sql/database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups](../database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups.md) の更新されたドキュメントを参照してください。|
 |Always Encrypted| [サーバーに接続] ダイアログの新しい [Always Encrypted] タブにある [Always Encrypted を有効にする] チェックボックスで、データベース接続での Always Encrypted の有効化/無効化を簡単に切り替えられるようになりました。|
 |セキュア エンクレーブを使用する Always Encrypted| SQL Server 2019 では、セキュリティで保護されたエンクレーブが設定された Always Encrypted をサポートするためにいくつかの機能強化が加えられました。[サーバーに接続] ダイアログ (新しい [Always Encrypted] タブ) にエンクレーブの構成証明の URL を指定するテキスト フィールド。  [新しい列マスター キー] ダイアログに、新しい列マスターキーでエンクレーブ計算を許可するかどうかを制御する新しいチェックボックスが追加されました。  他の Always Encrypted キー管理ダイアログに、エンクレーブ計算を許可する列マスター キーの情報が表示されるようになりました。|
 |監査ファイル|認証方法をストレージ アカウント キー ベースから Azure AD ベースの認証に変更しました。|
@@ -564,11 +566,11 @@ SSMS 18.3.1 は SSMS の最新の一般提供 (GA) リリースです。 SSMS �
 
 - 複数のクエリ ウィンドウを切り替えると再描画の問題が発生します。 詳細については、「[UserVoice](https://feedback.azure.com/forums/908035/suggestions/37474042)」を参照してください。 この問題を回避するには、[ツール] > [オプション] でハードウェア アクセラレータを無効にします。
 
-## <a name="downloadssdtmediadownloadpng-ssms-1791httpsgomicrosoftcomfwlinklinkid2043154clcid0x409"></a>[SSMS 17.9.1](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409) ![のダウンロード](../ssdt/media/download.png)
+## <a name="download-ssms-1791"></a>![ダウンロード](../ssdt/media/download.png) [SSMS 17.9.1](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409)
 
 - リリース番号:17.9.1<br>
 - ビルド番号:14.0.17289.0<br>
-- リリース日:2018 年 11 月 21 日
+- リリース日: 2018 年 11 月 21 日
 
 17.9.1 は 17.9 に対する小規模な更新であり、次のバグが修正されています。
 
@@ -581,7 +583,7 @@ SSMS 18.3.1 は SSMS の最新の一般提供 (GA) リリースです。 SSMS �
 
 [簡体中国語](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x804)| [繁体中国語](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x404)| [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409)| [フランス語](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40c)| [ドイツ語](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x407)| [イタリア語](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x410)| [日本語](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x411)| [韓国語](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x412)| [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x416)| [ロシア語](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x419)| [スペイン語](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x40a)
 
-## <a name="downloadssdtmediadownloadpng-ssms-1653httpsgomicrosoftcomfwlinklinkid840946"></a>![ダウンロード](../ssdt/media/download.png) [SSMS 16.5.3](https://go.microsoft.com/fwlink/?LinkID=840946)
+## <a name="download-ssms-1653"></a>![ダウンロード](../ssdt/media/download.png) [SSMS 16.5.3](https://go.microsoft.com/fwlink/?LinkID=840946)
 一般公開 | ビルド番号:13.0.16106.4
 
 [簡体中国語](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x804)| [繁体中国語](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x404)| [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x409)| [フランス語](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x40c)| [ドイツ語](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x407)| [イタリア語](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x410)| [日本語](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x411)| [韓国語](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x412)| [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x416)| [ロシア語](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x419)| [スペイン語](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x40a)
@@ -606,12 +608,11 @@ SSMS 18.3.1 は SSMS の最新の一般提供 (GA) リリースです。 SSMS �
 
 * SQL デザイナーのスクロール バーの問題が修正されました ( [Connect ID 3114856](https://connect.microsoft.com/SQLServer/feedback/details/3114856/bug-in-scrollbar-on-sql-desginer-in-ssms-2016) を参照)。
 
-* テーブルのコンテキスト メニューがすぐにハングする。 
+* テーブルのコンテキスト メニューがすぐにハングする。
 
 * SSMS で利用状況モニターの例外がスローされ、クラッシュする場合がある ( [Connect ID 697527](https://connect.microsoft.com/SQLServer/feedback/details/697527/) を参照)。
 
 * ".NET ランタイムの内部エラーにより、処理が中止されました。IP 71AF8579 (71AE0000)、終了コード 80131506" という内容のエラーで SSMS 2016 がクラッシュする。
-
 
 ## <a name="uninstall-and-reinstall-ssms-17x"></a>SSMS 17.x をアンインストールおよび再インストールする
 

@@ -1,8 +1,10 @@
 ---
-title: URL の予約と登録について (SSRS 構成マネージャー) | Microsoft Docs
-ms.date: 06/20/2019
+title: URL の予約と登録 (Configuration Manager) | Microsoft Docs
+description: Reporting Services アプリケーションの URL は、HTTP.SYS の URL 予約として定義されます。
+ms.date: 01/16/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
+ms.custom: seo-lt-2019, seo-mmd-2019
 ms.topic: conceptual
 helpviewer_keywords:
 - URL reservations
@@ -11,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c2c460c3-e749-4efd-aa02-0f8a98ddbc76
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: dba8913c5aa5fa0aa8d93dd1c4dd639f85ac3081
-ms.sourcegitcommit: 3f2936e727cf8e63f38e5f77b33442993ee99890
-ms.translationtype: MTE75
+ms.openlocfilehash: 64c458b703d740fa50ff7bcdd6fce20752e6746a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67314038"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76259335"
 ---
 # <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>URL の予約と登録について (SSRS 構成マネージャー)
   Reporting Services アプリケーションの URL は、HTTP.SYS の URL 予約として定義されます。 URL 予約は、Web アプリケーションへの URL エンドポイントの構文を定義します。 レポート サーバー上でアプリケーションを構成する際には、レポート サーバー Web サービスと Web ポータルの両方に対して URL 予約を定義します。 セットアップまたは [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールで URL を構成すると、自動的に URL 予約が作成されます。  
@@ -55,7 +57,7 @@ ms.locfileid: "67314038"
   
  次の例は、URL 予約の概念と、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アプリケーション用に使用される URL アドレスと URL 予約の関連付けを示しています。 URL 予約の構文が、アプリケーションへのアクセスに使用する URL とは異なる点に注目してください。  
   
-|HTTP.SYS の URL 予約|[URL]|説明|  
+|HTTP.SYS の URL 予約|URL|説明|  
 |---------------------------------|---------|-----------------|  
 |`https://+:80/reportserver`|`https://<computername>/reportserver`<br /><br /> `https://<IPAddress>/reportserver`<br /><br /> `https://localhost/reportserver`|この URL 予約では、ポート 80 でワイルドカード (+) を指定しています。 これにより、ポート 80 のレポート サーバー コンピューターに解決されるホストが指定されているすべての受信要求がレポート サーバー キューに送られます。 この URL 予約を使用すると、任意の数の URL を使用してレポート サーバーにアクセスできます。<br /><br /> ほとんどのオペレーティング システムでは、これが [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーの既定の URL 予約です。|  
 |`https://123.45.67.0:80/reportserver`|`https://123.45.67.0/reportserver`|この URL 予約では IP アドレスを指定しています。これは、ワイルドカードの URL 予約よりはるかに制限の厳しい URL 予約です。 レポート サーバーへの接続に使用できるのは、この IP アドレスを含む URL だけです。 この URL 予約を指定すると、`https://<computername>/reportserver` または `https://localhost/reportserver` でのレポート サーバーへの要求は失敗します。|  
@@ -80,10 +82,10 @@ ms.locfileid: "67314038"
   
 -   [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)]  
   
-|インスタンスの種類|アプリケーション|既定の URL|HTTP.SYS の実際の URL 予約|  
+|インスタンスの種類|Application|既定の URL|HTTP.SYS の実際の URL 予約|  
 |-------------------|-----------------|-----------------|----------------------------------------|  
-|[既定のインスタンス]|レポート サーバー Web サービス|`https://\<servername>/reportserver`|`https://<servername>:80/reportserver`|  
-|[既定のインスタンス]|Web ポータル|`https://<servername>/reportserver`|`https://<servername>:80/reportserver`|  
+|既定のインスタンス|レポート サーバー Web サービス|`https://<servername>/reportserver`|`https://<servername>:80/reportserver`|  
+|既定のインスタンス|Web ポータル|`https://<servername>/reports`|`https://<servername>:80/reports`|  
 |[名前付きインスタンス]|レポート サーバー Web サービス|`https://<servername>/reportserver_<instancename>`|`https://<servername>:80/reportserver_<instancename>`|  
 |[名前付きインスタンス]|Web ポータル|`https://<servername>/reports_<instancename>`|`https://<servername>:80/reports_<instancename>`|  
 |SQL Server Express|レポート サーバー Web サービス|`https://<servername>/reportserver_SQLExpress`|`https://<servername>:80/reportserver_SQLExpress`|  

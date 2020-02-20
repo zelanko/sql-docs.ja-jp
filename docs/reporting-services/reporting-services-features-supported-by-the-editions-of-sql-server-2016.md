@@ -1,39 +1,39 @@
 ---
-title: SQL Server の各エディションでサポートされる SQL Server Reporting Services の機能
+title: さまざまなエディションでサポートされている機能 - SQL Server Reporting Services | Microsoft Docs
+description: このトピックでは、SQL Server のさまざまなエディションでサポートされる SQL Server Reporting Services (SSRS) 機能の詳細について説明します。 180 日の試用期間中、SQL Server Evaluation Edition をご利用いただけます。
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 06/20/2019
-ms.openlocfilehash: 3e61381c2298a197be698ed82c247023ad708789
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.date: 12/16/2019
+ms.openlocfilehash: 96fe1480deed7dad420687b5b3b08a3ea8da2ffd
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893281"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76516603"
 ---
-# <a name="sql-server-reporting-services-features-supported-by-its-editions"></a>SQL Server の各エディションでサポートされる SQL Server Reporting Services の機能
+# <a name="sql-server-reporting-services-features-supported-by-editions"></a>SQL Server の各エディションでサポートされる SQL Server Reporting Services の機能
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
 このトピックでは、SQL Server のさまざまなエディションでサポートされる SQL Server Reporting Services (SSRS) 機能の詳細について説明します。 180 日の試用期間中、SQL Server Evaluation Edition をご利用いただけます。  
+
+## <a name="related-links"></a>関連リンク
   
- 最新の SQL Server リリース ノートについては、「[SQL Server 2017 リリース ノート](../sql-server/sql-server-2017-release-notes.md)」を参照してください。 新機能に関する最新情報については、「[SQL Server Reporting Services (SSRS) の新機能](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)」をご覧ください。
+ - [SQL Server Reporting Services (SSRS) のリリース ノート](release-notes-reporting-services.md)。 
+ - [SQL Server Reporting Services (SSRS) の新機能](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)。
+ - [SQL Server の各エディションでサポートされている機能](~/sql-server/editions-and-components-of-sql-server-version-15.md)
 
- ## <a name="try-sql-server-2017"></a>SQL Server 2017 をお試す
-
-> [![SQL Server 2017 をダウンロードする](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png)](https://go.microsoft.com/fwlink/?LinkID=829477) **[Evaluation Center から SQL Server 2017 をダウンロードする](https://go.microsoft.com/fwlink/?LinkID=829477)**    
->
-> ![Azure Virtual Machine のアイコン](https://docs.microsoft.com/analysis-services/analysis-services/media/azure-virtual-machine-small.png) **[SQL Server 2017 がインストール済みの Virtual Machine をすぐにご利用いただけます](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)**    
+##  <a name="SSRS"></a> SQL Server Reporting Services (SQL Server Reporting Services)  
 
 Evaluation Edition および Developer Edition でサポートされている機能については、次の表の SQL Server Enterprise Edition の列を参照してください。
 
-##  <a name="SSRS"></a> SQL Server Reporting Services (SQL Server Reporting Services)  
-  
 |機能名|Enterprise|Standard|Web|Express with Advanced Services|Developer|  
-|------------------|---------|------------------------------------|------------------------|-------------|---------------|  
+|------|---------|---------------|-----------|-------|---------|  
+| Power BI レポートと Excel ブック | はい (ソフトウェア アシュアランスあり) | | | | はい |
 |モバイル レポートと分析|はい||||はい|  
 |サポートされているカタログ データベースの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エディション|Standard 以上|Standard 以上|Web|Express|Standard 以上|  
 |サポートされているデータ ソースの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エディション|すべての   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エディション|すべての [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エディション|Web|Express|すべての [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エディション|  
@@ -81,13 +81,14 @@ Evaluation Edition および Developer Edition でサポートされている機
 |Standard|Enterprise Edition または Standard Edition (ローカルまたはリモート)|  
 |Web|Web Edition (ローカルのみ)|  
 |Express with Advanced Services|Express with Advanced Services (ローカルのみ)|  
-|Evaluation|Evaluation|  
+|評価|評価|  
   
 ##  <a name="BIC"></a> Business Intelligence クライアント  
 次のソフトウェア クライアント アプリケーションは、Microsoft ダウンロード センターで入手できます。 これらは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンス上で実行されるビジネス インテリジェンス ドキュメントの作成に役立ちます。 作成したドキュメントをサーバー環境でホストする場合は、そのドキュメントの種類をサポートする [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のエディションを使用してください。 これらのクライアント アプリケーションで作成したドキュメントをホストするのに必要なサーバー機能を備えた [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エディションを次の表に示します。  
   
 |ツール名|Enterprise|Standard|Web|Express with Advanced Services|Developer|  
-|---------------|----------------|--------------|------------------------|-------------|---------------|  
+|---------------|----------------|--------------|------------------------|-------------|---------------| 
+| Power BI Report Server、 **.pbix** 用に最適化された Power BI Desktop | はい (ソフトウェア アシュアランスあり) | | | | はい |
 |[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)]、 **.rdl**、 **.rds**|はい|はい|はい|はい|はい|  
 |[!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)]、 **.rsmobile**|はい||||はい|  
 |モバイル デバイス (iOS、Windows 10、Android) 用 Power BI アプリ、 **.rsmobile**|はい||||はい|  
@@ -97,7 +98,7 @@ Evaluation Edition および Developer Edition でサポートされている機
 > * [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)] モバイル レポートの作成の単一ポイントです。 SSRS サーバーに接続してデータ ソースにアクセスし、レポートを作成します。 次に、それらを SSRS サーバーにパブリッシュすることで、組織内の他のユーザーがサーバーまたはモバイル デバイスでアクセスできるようにします。 ローカル データ ソースの場合は、[!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)] スタンド アロンを使用することもできます。  
 > * オンプレミスの [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]、クラウドの [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]、またはその両方のいずれをレポート配信ソリューションとして使用しても、モバイル デバイスでダッシュボードおよびモバイル レポートにアクセスするために必要なのは、1 つのモバイル アプリのみです。 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] アプリは Windows、iOS、または Android アプリ ストアからダウンロードできます。  
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 * [SQL Server 2017 の各エディションでサポートされている機能](~/sql-server/editions-and-components-of-sql-server-2017.md)を確認する。 
 

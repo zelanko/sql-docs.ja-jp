@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fba128636ce726396b499200b060592a63db5f65
-ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
-ms.translationtype: MTE75
+ms.openlocfilehash: 18b60a7359392a973a9486c9d4c8266e6997c9df
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72542180"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76516523"
 ---
 # <a name="url-access-parameter-reference"></a>URL Access Parameter Reference
   次のパラメーターを URL の一部として使用すると、 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]レポートのルック アンド フィールを構成できます。 ここでは、最も一般的なパラメーターについて説明します。 パラメーターは大文字と小文字が区別されます。レポート サーバーに出力する場合は *rs:* 、HTML ビューアーに出力する場合は *rc:* をパラメーターの先頭に追加します。 デバイスや表示拡張機能に固有のパラメーターを指定することもできます。 デバイスに固有のパラメーターの詳細については、「 [URL でデバイス情報設定を指定する](../reporting-services/specify-device-information-settings-in-a-url.md)」を参照してください。  
@@ -43,7 +43,7 @@ ms.locfileid: "72542180"
     > [!IMPORTANT]  
     >  *rc:Toolbar*=**false** は、SharePoint サイト上でホストされているレポートを対象とするために (ドメイン名ではなく) IP アドレスを使用する URL アクセス文字列に対しては機能しません。  
   
--   *Parameters* : ツール バーのパラメーター領域の表示と非表示を切り替えます。 このパラメーターを **true**に設定すると、ツール バーのパラメーター領域が表示されます。 このパラメーターを **false**に設定すると、パラメーター領域は表示されません。ユーザーが表示することもできません。 このパラメーターの値を **Collapsed**に設定すると、パラメーター領域は表示されませんが、エンド ユーザーが表示と非表示を切り替えることができます。 このパラメーターの既定値は **true**です。  
+-   *Parameters*:ツール バーのパラメーター領域の表示と非表示を切り替えます。 このパラメーターを **true**に設定すると、ツール バーのパラメーター領域が表示されます。 このパラメーターを **false**に設定すると、パラメーター領域は表示されません。ユーザーが表示することもできません。 このパラメーターの値を **Collapsed**に設定すると、パラメーター領域は表示されませんが、エンド ユーザーが表示と非表示を切り替えることができます。 このパラメーターの既定値は **true**です。  
   
      **Native** モードの例:  
   
@@ -57,7 +57,7 @@ ms.locfileid: "72542180"
     https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Parameters=Collapsed  
     ```  
   
--   *Zoom* : レポート ズーム値を整数のパーセンテージまたは文字列定数として設定します。 標準的な文字列値には **Page Width** と **Whole Page**などがあります。 Internet Explorer 5.0 よりも前のバージョンの Internet Explorer および[!INCLUDE[msCoName](../includes/msconame-md.md)] 以外のすべてのブラウザーでは、このパラメーターが無視されます。 このパラメーターの既定値は **100**です。  
+-   *Zoom*:レポート ズーム値を整数のパーセンテージまたは文字列定数として設定します。 標準的な文字列値には **Page Width** と **Whole Page**などがあります。 Internet Explorer 5.0 よりも前のバージョンの Internet Explorer および[!INCLUDE[msCoName](../includes/msconame-md.md)] 以外のすべてのブラウザーでは、このパラメーターが無視されます。 このパラメーターの既定値は **100**です。  
   
      **Native** モードの例。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "72542180"
     https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Zoom=Page Width  
     ```  
   
--   *Section* : 表示するレポートのページを設定します。 レポートのページ数よりも大きい値を設定すると、最後のページが表示されます。 **0** よりも小さい値を設定すると、レポートの 1 ページが表示されます。 このパラメーターの既定値は **1**です。  
+-   *Section*:表示するレポートのページを設定します。 レポートのページ数よりも大きい値を設定すると、最後のページが表示されます。 **0** よりも小さい値を設定すると、レポートの 1 ページが表示されます。 このパラメーターの既定値は **1**です。  
   
      **Native** モードで、レポートの 2 ページ目を表示する例:  
   
@@ -85,7 +85,7 @@ ms.locfileid: "72542180"
     https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Section=2  
     ```  
   
--   *FindString*: レポート内で特定のテキスト セットを検索します。  
+-   *FindString*:レポート内で特定のテキスト セットを検索します。  
   
      **Native** モードの例。  
   
@@ -99,7 +99,7 @@ ms.locfileid: "72542180"
     https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:FindString=Mountain-400  
     ```  
   
--   *StartFind* : 検索する最後のセクションを指定します。 このパラメーターの既定値は、レポートの最終ページです。  
+-   *StartFind*:検索する最後のセクションを指定します。 このパラメーターの既定値は、レポートの最終ページです。  
   
      Product Catalog サンプル レポートの 1 ～ 5 ページを検索し、最初に出現する "Mountain-400" という文字列を探す、 **ネイティブ** モードの例。  
   
@@ -107,23 +107,23 @@ ms.locfileid: "72542180"
     https://server/Reportserver?/SampleReports/Product Catalog&rs:Command=Render&rc:StartFind=1&rc:EndFind=5&rc:FindString=Mountain-400  
     ```  
   
--   *EndFind* : 検索に使用する最終ページの番号を設定します。 たとえば、 **5** の値は、検索する最後のページがレポートの 5 ページであることを示します。 既定値は現在のページ番号です。 このパラメーターは、 *StartFind* パラメーターと一緒に使用します。 上の例を参照してください。  
+-   *EndFind*:検索に使用する最終ページの番号を設定します。 たとえば、 **5** の値は、検索する最後のページがレポートの 5 ページであることを示します。 既定値は現在のページ番号です。 このパラメーターは、 *StartFind* パラメーターと一緒に使用します。 上の例を参照してください。  
   
--   *FallbackPage* : 検索またはドキュメント マップの選択が失敗した場合に表示するページ番号を設定します。 既定値は現在のページ番号です。  
+-   *FallbackPage*:検索またはドキュメント マップの選択が失敗した場合に表示するページ番号を設定します。 既定値は現在のページ番号です。  
   
--   *GetImage* : HTML ビューアー ユーザー インターフェイス用の特定のアイコンを取得します。  
+-   *GetImage*:HTML ビューアー ユーザー インターフェイス用の特定のアイコンを取得します。  
   
--   *Icon* : 特定の表示拡張機能のアイコンを取得します。  
+-   *Icon*:特定の表示拡張機能のアイコンを取得します。  
   
--   *Stylesheet*: HTML ビューアーに適用するスタイル シートを指定します。  
+-   *Stylesheet*:HTML ビューアーに適用するスタイル シートを指定します。  
   
--   デバイス情報設定: `rc:tag=value`の形式でデバイス情報設定を指定します。 *tag* は、現在使用されている表示拡張機能に固有のデバイス情報設定の名前です ( *Format* パラメーターの説明を参照してください)。 たとえば、IMAGE 表示拡張機能の *OutputFormat* デバイス情報設定を使用すると、URL アクセス文字列に `...&rs:Format=IMAGE&rc:OutputFormat=JPEG`パラメーターを指定することで、レポートを JPEG 画像で表示できます。 拡張機能に固有のすべてのデバイス情報設定の詳細については、「[表示拡張機能のデバイス情報設定 (Reporting Services)](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md)」を参照してください。  
+-   デバイス情報設定:`rc:tag=value` の形式でデバイス情報設定を指定します。この *tag* は、現在使用されている表示拡張機能に固有のデバイス情報設定の名前です (*Format* パラメーターの説明を参照してください)。 たとえば、IMAGE 表示拡張機能の *OutputFormat* デバイス情報設定を使用すると、URL アクセス文字列に `...&rs:Format=IMAGE&rc:OutputFormat=JPEG`パラメーターを指定することで、レポートを JPEG 画像で表示できます。 拡張機能に固有のすべてのデバイス情報設定の詳細については、「[表示拡張機能のデバイス情報設定 (Reporting Services)](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md)」を参照してください。  
   
 ##  <a name="bkmk_reportserver"></a> レポート サーバー コマンド (rs:)  
  レポート サーバー コマンドには接頭辞として *rs:* が付き、レポート サーバーを対象として使用されます。  
   
 -   *コマンド*:  
-                  アイテムの種類に応じて、カタログ アイテムに対して操作を実行します。 既定値は、URL アクセス文字列で参照されるカタログ アイテムの種類で決まります。 有効な値は、  
+                  アイテムの種類に応じて、カタログ アイテムに対して操作を実行します。 既定値は、URL アクセス文字列で参照されるカタログ アイテムの種類で決まります。 有効な値は次のとおりです。  
   
     -   **ListChildren** および **GetChildren** : フォルダーの内容が表示されます。 フォルダー アイテムは、汎用アイテム ナビゲーション ページに表示されます。  
   
@@ -200,7 +200,7 @@ ms.locfileid: "72542180"
 -   *Format* :  
                   レポートをレンダリングし、表示する形式を指定します。 一般的な値:  
   
-    -   **[HTML5]**  
+    -   **HTML5**  
   
     -   **PPTX**  
   
@@ -212,9 +212,13 @@ ms.locfileid: "72542180"
   
     -   **IMAGE**  
   
-    -   **EXCEL**  
+    -   **EXCEL** (.xls 用)
+    
+    -   **EXCELOPENXML** (.xlsx 用)
   
-    -   **WORD**  
+    -   **WORD** (.doc 用)
+    
+    -   **WORDOPENXML** (.docx 用)
   
     -   **CSV**  
   
@@ -247,7 +251,7 @@ ms.locfileid: "72542180"
     https://myrshost/Reportserver?/SampleReports/Product+Line+Sales&rs:Command=Render&StartDate=4/10/2008&EndDate=11/10/2008&rs:ParameterLanguage=de-DE  
     ```  
   
--   *Snapshot* : レポート履歴スナップショットに基づいたレポートを表示します。 詳細については、「 [URL アクセスを使用してレポート履歴スナップショットを表示する](../reporting-services/render-a-report-history-snapshot-using-url-access.md)」を参照してください。  
+-   *Snapshot*:レポート履歴スナップショットに基づいたレポートを表示します。 詳細については、「 [URL アクセスを使用してレポート履歴スナップショットを表示する](../reporting-services/render-a-report-history-snapshot-using-url-access.md)」を参照してください。  
   
      **ネイティブ** モードで、日付が 2003-04-07 でタイムスタンプが 13:40:02 のレポート履歴スナップショットを取得する例:  
   
@@ -256,10 +260,10 @@ ms.locfileid: "72542180"
     ```  
   
 -   *PersistStreams*:  
-                  1 つの永続化ストリームでレポートを表示します。 このパラメーターは、表示レポートをチャンク単位で送信するために画像レンダラーによって使用されます。 URL アクセス文字列でこのパラメーターを使用した後、同じ URL アクセス文字列を、 *GetNextStream* パラメーターではなく *PersistStreams* パラメーターと共に使用すると、永続化ストリームの次のチャンクを取得できます。 この URL コマンドは、最終的に永続化ストリームの末尾に到達した時点で 0 バイト ストリームを返します。 既定値は **false**です。  
+                  1 つの永続化ストリームでレポートを表示します。 このパラメーターは、表示レポートをチャンク単位で送信するために画像レンダラーによって使用されます。 URL アクセス文字列でこのパラメーターを使用した後、同じ URL アクセス文字列を、 *GetNextStream* パラメーターではなく *PersistStreams* パラメーターと共に使用すると、永続化ストリームの次のチャンクを取得できます。 この URL コマンドは、最終的に永続化ストリームの末尾に到達した時点で 0 バイト ストリームを返します。 既定値は **false** です。  
   
 -   *GetNextStream*:  
-                  *PersistStreams* パラメーターを使用してアクセスした永続化ストリームの次のデータ チャンクを取得します。 詳細については、 *PersistStreams*の説明を参照してください。 既定値は **false**です。  
+                  *PersistStreams* パラメーターを使用してアクセスした永続化ストリームの次のデータ チャンクを取得します。 詳細については、 *PersistStreams*の説明を参照してください。 既定値は **false** です。  
   
 -   *SessionID*:  
                   クライアント アプリケーションとレポート サーバー間で確立されたアクティブ レポート セッションを指定します。 このパラメーターの値は、セッション ID に設定されます。  
@@ -267,10 +271,10 @@ ms.locfileid: "72542180"
      セッション ID をクッキーまたは URL の一部として指定できます。 セッション クッキーを使用しないようにレポート サーバーを構成している場合、指定したセッション ID なしの最初の要求はセッション ID 付きでリダイレクトされます。 レポート サーバーのセッションの詳細については、「 [Identifying Execution State](../reporting-services/report-server-web-service-net-framework-soap-headers/identifying-execution-state.md)」を参照してください。  
   
 -   *ClearSession*:  
-                  値が **true** の場合は、レポート セッションからレポートを削除するようにレポート サーバーに指示します。 認証されているユーザーに関連付けられたすべてのレポート インスタンスがレポート セッションから削除されます (レポート インスタンスは、別のレポート パラメーターの値を指定して、レポートを複数回実行するように定義されます)。既定値は **false**です。  
+                  値が **true** の場合は、レポート セッションからレポートを削除するようにレポート サーバーに指示します。 認証されているユーザーに関連付けられたすべてのレポート インスタンスがレポート セッションから削除されます (レポート インスタンスは、別のレポート パラメーターの値を指定して、レポートを複数回実行するように定義されます)。既定値は **false** です。  
   
 -   *ResetSession*:  
-                  値が **true** の場合は、レポート セッションのすべてのレポート スナップショットとの関連付けを削除することによって、レポート セッションをリセットするようレポート サーバーに指示します。 既定値は **false**です。  
+                  値が **true** の場合は、レポート セッションのすべてのレポート スナップショットとの関連付けを削除することによって、レポート セッションをリセットするようレポート サーバーに指示します。 既定値は **false** です。  
   
 -   *ShowHideToggle*:  
                   レポートのセクションの表示と非表示を切り替えます。 切り替えるセクションを表す正の整数を指定します。  
@@ -278,7 +282,7 @@ ms.locfileid: "72542180"
 ##  <a name="bkmk_webpart"></a> レポート ビューアー Web パーツのコマンド (rv:)  
  次の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] レポート パラメーター名は予約されており、SharePoint と統合されているレポート ビューアー Web パーツをターゲットとするために使用されます。 これらのパラメーター名の先頭には *rv:* が付いています。 レポート ビューアー Web パーツでは、 *rs:ParameterLanguage* パラメーターも受け取ります。  
   
--   *Toolbar*: レポート ビューアー Web パーツのツール バーの表示を制御します。 既定値は **Full**です。 値は次のとおりです。  
+-   *Toolbar*:レポート ビューアー Web パーツのツール バーの表示を制御します。 既定値は **Full**です。 可能な値は次のとおりです。  
   
     -   **Full**: ツール バーを完全に表示します。  
   
@@ -292,7 +296,7 @@ ms.locfileid: "72542180"
     https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:Toolbar=Navigation  
     ```  
   
--   *HeaderArea*: レポート ビューアー Web パーツのヘッダーの表示を制御します。 既定値は **Full**です。 値は次のとおりです。  
+-   *HeaderArea*:レポート ビューアー Web パーツのヘッダーの表示を制御します。 既定値は **Full**です。 可能な値は次のとおりです。  
   
     -   **Full**: ヘッダーを完全に表示します。  
   
@@ -306,11 +310,11 @@ ms.locfileid: "72542180"
     https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:HeaderArea=BreadCrumbsOnly  
     ```  
   
--   *DocMapAreaWidth*: レポート ビューアー Web パーツのパラメーター領域の表示幅をピクセル単位で制御します。 既定値は、レポート ビューアー Web パーツの既定値と同じです。 値には、負以外の整数値を指定する必要があります。  
+-   *DocMapAreaWidth*:レポート ビューアー Web パーツのパラメーター領域の表示幅をピクセル単位で制御します。 既定値は、レポート ビューアー Web パーツの既定値と同じです。 値には、負以外の整数値を指定する必要があります。  
   
--   *AsyncRender*: レポートが非同期に表示されるかどうかを制御します。 既定値は **true**で、レポートが非同期に表示されることを示します。 この値には、 **true** または **false**のブール値を指定する必要があります。  
+-   *AsyncRender*:レポートが非同期に表示されるかどうかを制御します。 既定値は **true**で、レポートが非同期に表示されることを示します。 この値には、 **true** または **false**のブール値を指定する必要があります。  
   
--   *ParamMode*: レポート ビューアー Web パーツのパラメーター プロンプト領域を全体表示で表示する方法を制御します。 既定値は **Full**です。 有効な値は、  
+-   *ParamMode*:レポート ビューアー Web パーツのパラメーター プロンプト領域を全体表示で表示する方法を制御します。 既定値は **Full**です。 有効な値は次のとおりです。  
   
     -   **Full**: パラメーター プロンプト領域を表示します。  
   
@@ -324,7 +328,7 @@ ms.locfileid: "72542180"
     https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:ParamMode=Collapsed  
     ```  
   
--   *DocMapMode*: レポート ビューアー Web パーツのドキュメント マップ領域を全体表示で表示する方法を制御します。 既定値は **Full**です。 有効な値は、  
+-   *DocMapMode*:レポート ビューアー Web パーツのドキュメント マップ領域を全体表示で表示する方法を制御します。 既定値は **Full**です。 有効な値は次のとおりです。  
   
     -   **Full**: ドキュメント マップ領域を表示します。  
   
@@ -332,7 +336,7 @@ ms.locfileid: "72542180"
   
     -   **Hidden**: ドキュメント マップ領域を非表示にします。  
   
--   *DockToolBar*: レポート ビューアー Web パーツのツール バーを上部にドッキングするか、下部にドッキングするかを制御します。 有効値は **Top** および **Bottom**です。 既定値は **Top**です。  
+-   *DockToolBar*:レポート ビューアー Web パーツのツール バーを上部にドッキングするか、下部にドッキングするかを制御します。 有効値は **Top** および **Bottom**です。 既定値は **Top**です。  
   
      **SharePoint** モードで、下部にツール バーをドッキングする例。  
   
@@ -340,7 +344,7 @@ ms.locfileid: "72542180"
     https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:DockToolBar=Bottom  
     ```  
   
--   *ToolBarItemsDisplayMode*: 表示するツール バー項目を制御します。 これはビットごとの列挙値です。 ツール バー項目を含めるには、項目の値を合計値に加算します。 たとえば、[アクション] メニューが表示されない場合は、rv:ToolBarItemsDisplayMode=63 (または 0x3F) を使用します。これは 1+2+4+8+16+32 を表します。[アクション] メニュー項目のみを表示する場合は、rv:ToolBarItemsDisplayMode=960 (または 0x3C0) を使用します。 既定値は **-1**です。すべてのツール バー項目を表示します。 有効な値は、  
+-   *ToolBarItemsDisplayMode*:表示するツール バー項目を制御します。 これはビットごとの列挙値です。 ツール バー項目を含めるには、項目の値を合計値に加算します。 たとえば、[アクション] メニューが表示されない場合は、rv:ToolBarItemsDisplayMode=63 (または 0x3F) を使用します。これは 1+2+4+8+16+32 を表します。[アクション] メニュー項目のみを表示する場合は、rv:ToolBarItemsDisplayMode=960 (または 0x3C0) を使用します。 既定値は **-1**です。すべてのツール バー項目を表示します。 有効な値は次のとおりです。  
   
     -   1 (0x1): **[戻る]** ボタン  
   
