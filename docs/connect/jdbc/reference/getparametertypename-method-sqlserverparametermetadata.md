@@ -1,5 +1,5 @@
 ---
-title: getParameterTypeName メソッド (SQLServerParameterMetaData) |Microsoft Docs
+title: getParameterTypeName メソッド (SQLServerParameterMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: ebe7ff0f-3cc0-408e-9503-4ca754c9c37f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a7aa69ba016f7b50179becd73c7474c7dec91686
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980904"
 ---
 # <a name="getparametertypename-method-sqlserverparametermetadata"></a>getParameterTypeName メソッド (SQLServerParameterMetaData)
@@ -45,8 +45,8 @@ public java.lang.String getParameterTypeName(int param)
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この getParameterTypeName メソッドは、java. .sql. ParameterMetaData インターフェイスの getParameterTypeName メソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この getParameterTypeName メソッドは、java.sql.ParameterMetaData インターフェイスの getParameterTypeName メソッドで指定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerParameterMetaData のメソッド](../../../connect/jdbc/reference/sqlserverparametermetadata-methods.md)   

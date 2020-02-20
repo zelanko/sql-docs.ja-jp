@@ -16,10 +16,10 @@ ms.assetid: 770668d9-2e52-4ff0-be2f-ebf78fd41644
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f2f77ce20c948623322b328c52d3f40db812551d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978760"
 ---
 # <a name="gettimestamp-method-javalangstring-javautilcalendar"></a>getTimestamp (java.lang.String, java.util.Calendar) メソッド
@@ -40,17 +40,17 @@ public java.sql.Timestamp getTimestamp(java.lang.String name,
   
  パラメーターの名前を含む**文字列**です。  
   
- *カレンダー*  
+ *cal*  
   
  Calendar オブジェクト。  
   
 ## <a name="return-value"></a>戻り値  
- タイムスタンプオブジェクト。  
+ Timestamp オブジェクト。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この getTimestamp メソッドは、java.sql.CallableStatement インターフェイスの getTimestamp メソッドで規定されています。  
   
  このメソッドでは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の **datetime** 列と **smalldatetime** 列からのみ値が返されます。  

@@ -1,5 +1,5 @@
 ---
-title: getUnicodeStream (int) メソッドMicrosoft Docs
+title: getUnicodeStream メソッド (int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 0de79b65-a25e-4028-9cc2-7ac02340115b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a3ee382716201c5e24b9ff7b23ae4f923ae18b77
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978434"
 ---
 # <a name="getunicodestream-method-int"></a>getUnicodeStream (int) メソッド
@@ -48,7 +48,7 @@ public java.io.InputStream getUnicodeStream(int columnIndex)
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この getUnicodeString メソッドは、java.sql.ResultSet インターフェイスの getUnicodeString メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  

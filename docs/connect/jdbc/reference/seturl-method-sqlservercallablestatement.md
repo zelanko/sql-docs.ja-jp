@@ -16,10 +16,10 @@ ms.assetid: 3d83675e-74ca-49d9-8461-6326773c5c8c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d14c319da416990acd4dddc47843e7709895499b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67972153"
 ---
 # <a name="seturl-method-sqlservercallablestatement"></a>setURL メソッド (SQLServerCallableStatement)
@@ -47,7 +47,7 @@ public void setURL(java.lang.String sCol,
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この setURL メソッドは、java.sql.CallableStatement インターフェイスの setURL メソッドで指定されています。  
   
 ## <a name="see-also"></a>参照  

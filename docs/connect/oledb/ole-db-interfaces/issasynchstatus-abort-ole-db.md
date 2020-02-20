@@ -1,5 +1,5 @@
 ---
-title: 'ISSAsynchStatus:: Abort (OLE DB) |Microsoft Docs'
+title: ISSAsynchStatus::Abort (OLE DB) | Microsoft Docs
 description: ISSAsynchStatus::Abort (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 4cb57bfac5af957bd9f2f539b025f32b5f481d66
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015428"
 ---
 # <a name="issasynchstatusabort-ole-db"></a>ISSAsynchStatus::Abort (OLE DB)
@@ -61,7 +61,7 @@ HRESULT Abort(
  プロバイダー固有のエラーが発生しました。  
   
  E_INVALIDARG  
- *Hchapter*パラメーターが DB_NULL_HCHAPTER ではないか、 *EOPERATION*が DBASYNCH_OPEN ではありません。  
+ *hChapter* パラメーターが DB_NULL_HCHAPTER ではない、または *eOperation* が DBASYNCH_OPEN ではありません。  
   
  E_UNEXPECTED  
  **IDBInitialize::Initialize** が呼び出されていないか、完了していないデータ ソース オブジェクトに対して **ISSAsynchStatus::Abort** が呼び出されました。  
@@ -72,7 +72,7 @@ HRESULT Abort(
   
  初期化フェーズで非同期に取り消された行セットに対して **ISSAsynchStatus::Abort** が呼び出された場合も、この値が返されます。 行セットはゾンビ状態になります。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  行セットまたはデータ ソース オブジェクトの初期化を中止すると、その行セットまたはデータ ソース オブジェクトはゾンビ状態になり、**IUnknown** メソッド以外のすべてのメソッドから E_UNEXPECTED が返されます。 この状態になると、コンシューマーはその行セットまたはデータ ソース オブジェクトの解放しか実行できません。  
   
  *eOperation* に DBASYNCHOP_OPEN 以外の値を渡して **ISSAsynchStatus::Abort** を呼び出すと、S_OK が返されます。 これは、操作が完了したか取り消されたことを示すわけではありません。  

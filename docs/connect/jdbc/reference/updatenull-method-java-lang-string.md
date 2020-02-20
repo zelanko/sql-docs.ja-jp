@@ -16,10 +16,10 @@ ms.assetid: fb3e5cde-30e1-4c95-adf0-d5b6c1f0da95
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 98ae88f84e31f6120767520046d442f998024732
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67998505"
 ---
 # <a name="updatenull-method-javalangstring"></a>updateNull (java.lang.String) メソッド
@@ -42,11 +42,11 @@ public void updateNull(java.lang.String columnName)
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この updateNull メソッドは、java.sql.ResultSet インターフェイスの updateNull メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
- [updateNull メソッド&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatenull-method-sqlserverresultset.md)   
+ [updateNull メソッド &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatenull-method-sqlserverresultset.md)   
  [SQLServerResultSet のメンバー](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet クラス](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

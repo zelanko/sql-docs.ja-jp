@@ -16,10 +16,10 @@ ms.assetid: 4f0df8fe-3cd6-46e4-ae3c-dc23c35676b2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1767519cc2f36bac4a70da84efeb8da9e2a1ec3c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980754"
 ---
 # <a name="getprocedurecolumns-method-sqlserverdatabasemetadata"></a>getProcedureColumns メソッド (SQLServerDatabaseMetaData)
@@ -60,12 +60,12 @@ public java.sql.ResultSet getProcedureColumns(java.lang.String sCatalog,
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この Sqlserverdatabasemetadata.getprocedurecolumns メソッドは、Sqlserverdatabasemetadata.getprocedurecolumns メソッドによって、java メタデータインターフェイスで指定されます。  
+## <a name="remarks"></a>解説  
+ この getProcedureColumns メソッドは、java.sql.DatabaseMetaData インターフェイスの getProcedureColumns メソッドで指定されています。  
   
  getProcedureColumns メソッドによって返される結果セットには、次の情報が含まれます。  
   
-|[オブジェクト名]|型|[説明]|  
+|Name|Type|説明|  
 |----------|----------|-----------------|  
 |PROCEDURE_CAT|**String**|指定したストアド プロシージャが存在するデータベースの名前です。|  
 |PROCEDURE_SCHEM|**String**|ストアド プロシージャのスキーマです。|  
@@ -74,7 +74,7 @@ public java.sql.ResultSet getProcedureColumns(java.lang.String sCatalog,
 |COLUMN_TYPE|**short**|列の型。 次のいずれかの値を指定できます。<br /><br /> procedureColumnUnknown (0)<br /><br /> procedureColumnIn (1)<br /><br /> procedureColumnInOut (2)<br /><br /> procedureColumnOut (4)<br /><br /> procedureColumnReturn (5)<br /><br /> procedureColumnResult (3)|  
 |DATA_TYPE|**smallint**|java.sql.Types の SQL データ型です。|  
 |TYPE_NAME|**String**|データ型の名前です。|  
-|PRECISION|**int**|有効桁数の合計。|  
+|PRECISION|**int**|有効桁数の合計です。|  
 |LENGTH|**int**|データの長さです (バイト)。|  
 |SCALE|**short**|小数点以下の桁数です。|  
 |RADIX|**short**|数値型の基数です。|  

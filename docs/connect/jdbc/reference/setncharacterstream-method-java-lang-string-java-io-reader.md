@@ -1,5 +1,5 @@
 ---
-title: Setn文字ストリームメソッドから Reader オブジェクト-文字列 |Microsoft Docs
+title: Reader オブジェクトへの setNCharacterStream メソッド - string | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: fd19fbb8-a878-4d98-a584-e4969d649844
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 34eb40d6c36f5c1586ac690de5e9fc354c8fd1f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67973871"
 ---
 # <a name="setncharacterstream-method-javalangstring-javaioreader"></a>setNCharacterStream (java.lang.String, java.io.Reader) メソッド
@@ -37,15 +37,15 @@ public final void setNCharacterStream(java.lang.String parameterName,
   
  *value*  
   
- リーダーオブジェクト。  
+ Reader オブジェクト。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この Setn; Stream メソッドは、java. sql. CallableStatement インターフェイスの setNCharacterStream メソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この setNCharacterStream メソッドは、java.sql.CallableStatement インターフェイスの setNCharacterStream メソッドによって指定されます。  
   
- このメソッドは、 **NCHAR**、 **NVARCHAR**、 **NTEXT**、および**XML**データ型に対して使用する必要があります。  
+ このメソッドは、**NCHAR**、**NVARCHAR**、**NTEXT**、**XML** の各データ型に対して使用する必要があります。  
   
 ## <a name="see-also"></a>参照  
  [setNCharacterStream メソッド &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/setncharacterstream-method-sqlservercallablestatement.md)   

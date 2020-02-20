@@ -16,10 +16,10 @@ ms.assetid: 7bd39d61-7461-443e-a580-753d55ef6903
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2cd126601c0861786ba568d9f1bc4814235b61e1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67982457"
 ---
 # <a name="getlong-method-javalangstring-sqlserverresultset"></a>getLong (java.lang.String) メソッド (SQLServerResultSet)
@@ -45,13 +45,13 @@ public long getLong(java.lang.String columnName)
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この getLong メソッドは、java.sql.ResultSet インターフェイスの getLong メソッドで規定されています。  
   
  このメソッドは、bigint、int、smallint、tinyint、bit などの整数値を安全に返すことができる [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データ型でのみサポートされています。 このメソッドを他のデータ型で使用すると、例外がスローされます。  
   
 ## <a name="see-also"></a>参照  
- [getLong メソッド&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getlong-method-sqlserverresultset.md)   
+ [getLong メソッド &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getlong-method-sqlserverresultset.md)   
  [SQLServerResultSet のメンバー](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet クラス](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

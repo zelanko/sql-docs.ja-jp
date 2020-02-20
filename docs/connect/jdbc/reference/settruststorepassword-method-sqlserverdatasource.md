@@ -1,5 +1,5 @@
 ---
-title: setTrustStorePassword メソッド (SQLServerDataSource) |Microsoft Docs
+title: setTrustStorePassword メソッド (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: fa87cbde-71cc-4f21-bc07-f8ba2b6a0a3f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e43a659b26a8f6d8b391c389271a9edd00d0d93c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67972181"
 ---
 # <a name="settruststorepassword-method-sqlserverdatasource"></a>setTrustStorePassword メソッド (SQLServerDataSource)
@@ -39,7 +39,7 @@ public void setTrustStorePassword(java.lang.String trustStorePassword)
   
  trustStore データの整合性を確認するために使用するパスワードを含む **String** です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  trustStorePassword プロパティは trustStore プロパティと共に指定でき、その値を trustStore ファイルの整合性を確認するために使用します。  
   
  trustStore プロパティは設定されているが trustStorePassword プロパティは設定されていない場合、trustStore の整合性は確認されません。  

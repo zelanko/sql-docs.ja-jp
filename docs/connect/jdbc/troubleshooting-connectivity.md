@@ -1,5 +1,5 @@
 ---
-title: 接続のトラブルシューティング |Microsoft Docs
+title: 接続性のトラブルシューティング | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,13 +11,13 @@ ms.assetid: bfba0b49-2e1f-411d-a625-d25fad9ea12d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d6a64589b44de50328aa3384a51e29e0c2cc9a6e
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027619"
 ---
-# <a name="troubleshooting-connectivity"></a>接続のトラブルシューティング
+# <a name="troubleshooting-connectivity"></a>接続性のトラブルシューティング
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースと通信を行うため、TCP/IP がインストールされて動作している必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを使用すると、インストールされているネットワーク ライブラリのプロトコルを確認できます。  
@@ -28,7 +28,7 @@ ms.locfileid: "69027619"
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はインストールされていますが、TCP/IP が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用のネットワーク プロトコルとして、[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ネットワーク ユーティリティ、または [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを使用して、インストールされていません。  
   
-    -   TCP/IP は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロトコルとしてインストールされていますが、JDBC 接続 URL で指定されたポートでリッスンしていません。 既定のポートは 1433 ですが、製品のインストール時に任意のポートで待機するように [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を構成することができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がポート 1433 でリッスンしていることを確認します。 または、ポートが変更されている場合は、JDBC 接続 URL で指定するポートを、変更されたポートと一致させます。 JDBC 接続 Url の詳細については、「[接続 url の構築](../../connect/jdbc/building-the-connection-url.md)」を参照してください。  
+    -   TCP/IP は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロトコルとしてインストールされていますが、JDBC 接続 URL で指定されたポートでリッスンしていません。 既定のポートは 1433 ですが、製品のインストール時に任意のポートで待機するように [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を構成することができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がポート 1433 でリッスンしていることを確認します。 または、ポートが変更されている場合は、JDBC 接続 URL で指定するポートを、変更されたポートと一致させます。 JDBC 接続 URL の詳細については、「[接続 URL の構築](../../connect/jdbc/building-the-connection-url.md)」を参照してください。  
   
     -   JDBC 接続 URL で指定されたコンピューターのアドレスが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がインストールおよび起動されたサーバーを参照していません。  
   

@@ -1,5 +1,5 @@
 ---
-title: setNClob メソッド (int, java. io. Reader, long) |Microsoft Docs
+title: setNClob メソッド (int, java.io.Reader, long) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 11071f8f-0e9b-45f0-b600-aaef7e2815d8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dae9fbeb16a5b9c9c881e4250206b7f83344ef78
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67973800"
 ---
 # <a name="setnclob-method-int-javaioreader-long"></a>setNClob (int, java.io.Reader, long) メソッド
@@ -47,7 +47,7 @@ public final void setNClob(int parameterIndex,
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この setNClob メソッドは、java.sql.PreparedStatement インターフェイスの setNClob メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  

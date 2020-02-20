@@ -1,5 +1,5 @@
 ---
-title: getMaxUserNameLength メソッド (SQLServerDatabaseMetaData) |Microsoft Docs
+title: getMaxUserNameLength メソッド (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 09ec7d40-4c4a-4d89-ba11-78e5327b5759
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 272fd1bbcacabda3bf2b3ecfe236e6c14354f9cf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67981893"
 ---
 # <a name="getmaxusernamelength-method-sqlserverdatabasemetadata"></a>getMaxUserNameLength メソッド (SQLServerDatabaseMetaData)
@@ -40,8 +40,8 @@ public int getMaxUserNameLength()
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この getMaxUserNameLength メソッドは、getMaxUserNameLength メソッドによって、java メタデータインターフェイスで指定されます。  
+## <a name="remarks"></a>解説  
+ この getMaxUserNameLength メソッドは、java.sql.DatabaseMetaData インターフェイスの getMaxUserNameLength メソッドで指定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

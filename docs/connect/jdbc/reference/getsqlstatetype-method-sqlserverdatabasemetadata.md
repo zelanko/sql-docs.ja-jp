@@ -16,10 +16,10 @@ ms.assetid: ee4d6751-68a3-4d04-831c-e6d704c59e63
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 76faa3bcaccac4f75d95dc49276c669a5631b5a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979731"
 ---
 # <a name="getsqlstatetype-method-sqlserverdatabasemetadata"></a>getSQLStateType メソッド (SQLServerDatabaseMetaData)
@@ -37,15 +37,15 @@ public int getSQLStateType()
 ## <a name="return-value"></a>戻り値  
  SQLSTATE の種類を示す **int** です。次のいずれかの値になります。  
   
--   Java Runtime Environment バージョン5.0 の場合: **xopenStates**接続プロパティが**true**に設定されている場合、このメソッドは Databasemetadata. sqlstatexopen を返します。 それ以外の場合は、sqlStateSQL99 です。  
+-   Java Runtime Environment バージョン 5.0 の場合: **xopenStates** 接続プロパティが **true** に設定されている場合、このメソッドは DatabaseMetaData.sqlStateXOpen を返します。 それ以外の場合は、DatabaseMetaData.sqlStateSQL99 になります。  
   
--   Java Runtime Environment バージョン6.0 の場合: **xopenStates**接続プロパティが**true**に設定されている場合、このメソッドは Databasemetadata. sqlstatexopen を返します。 それ以外の場合、DatabaseMetaData。 sqlStateSQL。  
+-   Java Runtime Environment バージョン 6.0 の場合: **xopenStates** 接続プロパティが **true** に設定されている場合、このメソッドは DatabaseMetaData.sqlStateXOpen を返します。 それ以外の場合は、DatabaseMetaData.sqlStateSQL になります。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この getSQLStateType メソッドは、java メタデータインターフェイスの getSQLStateType メソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この getSQLStateType メソッドは、java.sql.DatabaseMetaData インターフェイスの getSQLStateType メソッドで指定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

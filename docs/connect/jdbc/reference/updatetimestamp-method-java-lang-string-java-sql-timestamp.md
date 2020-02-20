@@ -16,10 +16,10 @@ ms.assetid: 6d468357-bf73-484c-9a30-3671e399cf26
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 59d23bf2536806135b2ec5068c2478e30b4353a1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67998147"
 ---
 # <a name="updatetimestamp-method-javalangstring-javasqltimestamp"></a>updateTimestamp (java.lang.String, java.sql.Timestamp) メソッド
@@ -47,8 +47,8 @@ public void updateTimestamp(java.lang.String columnName,
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この updateTimestamp メソッドは、java. ResultSet インターフェイスの updateTimestamp メソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この updateTimestamp メソッドは、java.sql.ResultSet インターフェイスの updateTimestamp メソッドで指定されています。  
   
 ## <a name="see-also"></a>参照  
  [updateTimestamp メソッド (SQLServerResultSet)](../../../connect/jdbc/reference/updatetimestamp-method-sqlserverresultset.md)   

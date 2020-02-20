@@ -1,5 +1,5 @@
 ---
-title: ISQLServerDataSource Interface |Microsoft Docs
+title: ISQLServerDataSource インターフェイス | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: ba1d3242-19ca-4321-83fe-867a4f69f1d4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 61cd0ce3e23cec94cc1d8fe0dcf0dfd1505437b3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977422"
 ---
 # <a name="isqlserverdatasource-interface"></a>ISQLServerDataSource インターフェイス
@@ -33,12 +33,12 @@ ms.locfileid: "67977422"
 public interface ISQLServerDataSource  
 ```  
   
-## <a name="remarks"></a>Remarks  
- このインターフェイスは、 [SQLServerDataSource クラス](../../../connect/jdbc/reference/sqlserverdatasource-class.md)によって実装されます。  
+## <a name="remarks"></a>解説  
+ このインターフェイスは、[SQLServerDataSource クラス](../../../connect/jdbc/reference/sqlserverdatasource-class.md)によって実装されています。  
   
  このインターフェイスでは、次の [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 固有のメソッドが公開されます。  
   
-|方法|詳細については、「|  
+|Method|詳細については、「|  
 |------------|-------------------------------|  
 |public String getApplicationName()|[getApplicationName](../../../connect/jdbc/reference/getapplicationname-method-sqlserverdatasource.md)|  
 |public String getDatabaseName()|[getDatabaseName](../../../connect/jdbc/reference/getdatabasename-method-sqlserverdatasource.md)|  

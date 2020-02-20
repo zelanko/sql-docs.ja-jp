@@ -16,10 +16,10 @@ ms.assetid: c86792bb-096e-4c58-8b9e-74491ccf83a6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 13d8d89a950f57b29c235d823424357dfa8f7bb8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67982749"
 ---
 # <a name="getint-method-int"></a>getInt (int) メソッド
@@ -35,17 +35,17 @@ public int getInt(int index)
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *index*  
+ *インデックス*  
   
  パラメーターのインデックスを示す **int** です。  
   
 ## <a name="return-value"></a>戻り値  
- **Int**値。  
+ **int** 値。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この getInt メソッドは、java.sql.CallableStatement インターフェイスの getInt メソッドで規定されています。  
   
  このメソッドは、int、smallint、tinyint、bit などの整数値を安全に返すことができる [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のデータ型でのみサポートされます。 このメソッドを他のデータ型で使用すると、例外がスローされます。  

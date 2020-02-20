@@ -1,5 +1,5 @@
 ---
-title: setLastUpdateCount メソッド (SQLServerDataSource) |Microsoft Docs
+title: setLastUpdateCount メソッド (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 5487631a-1107-4169-84ca-b77fd09bea66
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fd9776dd60e82067b0d048e2f385b2bc685b79ea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974120"
 ---
 # <a name="setlastupdatecount-method-sqlserverdatasource"></a>setLastUpdateCount メソッド (SQLServerDataSource)
@@ -39,7 +39,7 @@ public void setLastUpdateCount(boolean lastUpdateCount)
   
  lastUpdateCount が有効な場合は **true** です。 それ以外の場合は、 **false**です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  lastUpdateCount プロパティが **true** に設定されている場合、[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] は、サーバーに渡された SQL ステートメントから最終的な更新数のみを返します。 lastUpdateCount プロパティが **false** に設定されている場合、ドライバーは、発生した可能性があるすべてのトリガーが返した更新数を含む、すべての更新数を返します。 lastUpdateCount プロパティが設定されていない場合、[getLastUpdateCount](../../../connect/jdbc/reference/getlastupdatecount-method-sqlserverdatasource.md) メソッドは既定値の **true** を返します。  
   
 ## <a name="see-also"></a>参照  

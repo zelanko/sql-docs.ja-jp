@@ -16,10 +16,10 @@ ms.assetid: 6e1779df-3b2a-41d1-8dca-99692cc9da14
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fff312217f9191e6752f8eb753096ff7499a0496
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975436"
 ---
 # <a name="setasciistream-method-sqlserverclob"></a>setAsciiStream メソッド (SQLServerClob)
@@ -35,7 +35,7 @@ public java.io.OutputStream setAsciiStream(long pos)
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *po*  
+ *pos*  
   
  CLOB オブジェクトへの書き込みを開始する位置です。  
   
@@ -45,8 +45,8 @@ public java.io.OutputStream setAsciiStream(long pos)
 ## <a name="exceptions"></a>例外  
  java.sql.SQLException  
   
-## <a name="remarks"></a>Remarks  
- この setAsciiStream メソッドは、setAsciiStream インターフェイスのメソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この setAsciiStream メソッドは、java.sql.Clob インターフェイスの setAsciiStream メソッドによって指定されます。  
   
  CLOB の文字データは指定された開始位置から出力ストリームによって上書きされ、CLOB の初期データの長さをオーバーランすることができます。 開始位置に CLOB の長さ + 1 の値を指定すると、ASCII 文字が追加されます。 開始位置に CLOB の長さ + 2 以上 (または 0 以下) の値を指定すると、位置エラーがスローされます。  
   

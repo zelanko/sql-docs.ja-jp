@@ -1,5 +1,5 @@
 ---
-title: setLoginTimeout メソッド (SQLServerDataSource) |Microsoft Docs
+title: setLoginTimeout メソッド (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: b63d1cf4-dc1b-4e35-9a56-50436642eaaf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a64bc643e8d5a9d820b2bcd9cd307f033a869d7c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974088"
 ---
 # <a name="setlogintimeout-method-sqlserverdatasource"></a>setLoginTimeout メソッド (SQLServerDataSource)
@@ -39,8 +39,8 @@ public void setLoginTimeout(int loginTimeout)
   
  待機する秒数を表す **int** 値です。 0 は、タイムアウトが既定のシステム タイムアウトであることを示します。既定のシステム タイムアウトは、既定では 15 秒に指定されています。  
   
-## <a name="remarks"></a>Remarks  
- この setLoginTimeout メソッドは、javax.mail インターフェイスの setLoginTimeout メソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この setLoginTimeout メソッドは、javax.sql.DataSource インターフェイスの setLoginTimeout メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDataSource のメンバー](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

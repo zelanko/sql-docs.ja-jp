@@ -1,5 +1,5 @@
 ---
-title: 0 (整数) メソッド (java. Timestamp, int) |Microsoft Docs
+title: valueOf (java.sql.Timestamp, int) メソッド | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 114f55af-62ab-4c60-8724-0affbbbbbcdc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c13438851fdc543a3567abdc001af5b5b9e726fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68001552"
 ---
 # <a name="valueof-method-javasqltimestamp-int"></a>valueOf (java.sql.Timestamp, int) メソッド
@@ -39,7 +39,7 @@ public static DateTimeOffset valueOf(java.sql.Timestamp timestamp, int minutesOf
  分単位のオフセットです。  
   
 ## <a name="return-value"></a>戻り値  
- GMT から指定されたオフセット (分単位) で、java. Timestamp オブジェクトによって指定された特定の時点を表す DateTimeOffset オブジェクトを返します。  
+ GMT からの特定のオフセット (分) において java.sql.Timestamp オブジェクトで指定された特定の時点を表す DateTimeOffset オブジェクトを返します。  
   
 ## <a name="see-also"></a>参照  
  [DateTimeOffset クラス](../../../connect/jdbc/reference/datetimeoffset-class.md)   

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: a80b90f30ce2b304bd7bbb0229f172407589d3c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571551"
 ---
 # <a name="data-alert-manager-for-alerting-administrators"></a>警告管理者用のデータ警告マネージャー
@@ -44,17 +44,17 @@ SQL Server Reporting Services のデータ警告マネージャーを使用し�
 ##  <a name="ViewingAlerts"></a> データ警告情報の表示  
  SharePoint に Reporting Services をインストールし、構成すると、SharePoint の [サイト設定] ページに **[Reporting Services]** のオプションが追加されます。 警告管理者は、Reporting Services 内の **[データ警告の管理]** オプションをクリックして、データ警告マネージャーを開きます。 次の図は、[サイトの設定] ページのどこからデータ警告マネージャーを開くかを示しています。  
   
- ![[サイトの設定] ページの Reporting Services セクション](../reporting-services/media/rs-sitesettings.gif "[サイトの設定] ページの Reporting Services セクション")  
+ ![[サイトの設定] ページの [Reporting Services] セクション](../reporting-services/media/rs-sitesettings.gif "[サイトの設定] ページの [Reporting Services] セクション")  
   
  データ警告マネージャーには、警告名、レポート名、警告の所有者の名前、警告メッセージが送られた数、警告が最後に実行された時刻、警告の定義が最後に変更された時刻、および警告メッセージの状態を一覧にしたテーブルが組み込まれています。 警告の生成や送信ができない場合は、エラーに関する情報が状態列に含まれているので、これを利用して警告のトラブルシューティングを行います。 詳細については、「 [データ警告マネージャーで SharePoint サイトのすべてのデータ警告を管理する](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)」を参照してください。  
   
  次の表は、データ警告マネージャー内のテーブルから取得されたサンプル データを示しています。 エラーが発生した場合は、エラー メッセージとログ内のエントリの識別子 (GUID) がテーブル内の **[状態]** フィールドに含められます。  
   
-|警告名|[レポート名]|[作成者]|送信済みの警告|[最終実行]|更新日時|状態|  
+|アラート名|レポート名|作成者|送信済みの警告|[最終実行]|更新日時|Status|  
 |----------------|-----------------|----------------|-----------------|--------------|-------------------|------------|  
 |SalesQTR|SalesByTerritoryAndQTR|Lauren Johnson|4|6/12/2011|6/1/2011|前回の警告が成功し、警告が送信されました。|  
 |UnitsSold|ProductsSalesByQTR|Michael Blythe|2|7/1/2011|6/28/2011|前回の警告は成功しましたが、データが変更されなかったため、警告は送信されませんでした。|  
-|InventoryCount|StockStatusByQTR|Lauren Johnson|7|7/10/2011|7/2/2011|\<エラー メッセージ> ログ ファイルにはエラーの詳細が含まれています。 識別子: \<GUID> のログ エントリを参照してください。|  
+|InventoryCount|StockStatusByQTR|Lauren Johnson|7|7/10/2011|7/2/2011|\<エラー メッセージ> ログ ファイルにはエラーの詳細が含まれています。 識別子:\<GUID> のログ エントリを参照してください。|  
 |TopPromotion|PromotionTracking|Cristian Petculescu|0||5/23/2011|警告が作成されました。|  
   
  詳細については、「 [データ警告マネージャーで SharePoint サイトのすべてのデータ警告を管理する](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)」を参照してください。  

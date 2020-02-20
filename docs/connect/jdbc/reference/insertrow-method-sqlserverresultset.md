@@ -16,10 +16,10 @@ ms.assetid: 363d1008-1396-4fc0-8e27-c9ba2499e7f1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0f2e6148572d6ec6c7e9b52a704d79e8a9124ccf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977884"
 ---
 # <a name="insertrow-method-sqlserverresultset"></a>insertRow メソッド (SQLServerResultSet)
@@ -37,8 +37,8 @@ public void insertRow()
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この insertRow メソッドは、insertRow インターフェイスのメソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この insertRow メソッドは、java.sql.ResultSet インターフェイスの insertRow メソッドで指定されています。  
   
  このメソッドを呼び出すときに、カーソルが挿入行にある必要があります。 このメソッドが呼び出された後も、カーソルは挿入行に残り、結果セットは挿入モードのままになります。  
   

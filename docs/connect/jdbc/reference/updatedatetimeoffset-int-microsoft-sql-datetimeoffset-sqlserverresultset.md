@@ -1,5 +1,5 @@
 ---
-title: updateDateTimeOffset (int) (SQLServerResultSet) |Microsoft Docs
+title: updateDateTimeOffset(int) (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 21ec0054-c808-4e88-9c8d-c71b696ce658
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: caad3533d06ad7c00a4fb2cd8000bdd12c51acdc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67999121"
 ---
 # <a name="updatedatetimeoffsetint-microsoftsqldatetimeoffset-sqlserverresultset"></a>updateDateTimeOffset(int, microsoft.sql.DateTimeOffset) (SQLServerResultSet)
@@ -32,19 +32,19 @@ public void updateDateTimeOffset(int index, microsoft.sql.DateTimeOffset x)
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *index*  
+ *インデックス*  
   
  列の 0 から始まる序数です。  
   
  *x*  
   
- [DateTimeOffset クラス](../../../connect/jdbc/reference/datetimeoffset-class.md)オブジェクト。  
+ [DateTimeOffset クラス](../../../connect/jdbc/reference/datetimeoffset-class.md) オブジェクト。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- [Datetimeoffset クラス](../../../connect/jdbc/reference/datetimeoffset-class.md)の値は、SQLServerResultSet を使用して取得できます[。](../../../connect/jdbc/reference/getdatetimeoffset-sqlserverresultset.md)  
+## <a name="remarks"></a>解説  
+ [DateTimeOffset クラス](../../../connect/jdbc/reference/datetimeoffset-class.md)値は [SQLServerResultSet.getDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-sqlserverresultset.md) を使用して取得できます。  
   
 ## <a name="see-also"></a>参照  
  [updateDateTimeOffset &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatedatetimeoffset-sqlserverresultset.md)   

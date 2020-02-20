@@ -1,5 +1,5 @@
 ---
-title: setFailoverPartner メソッド (SQLServerDataSource) |Microsoft Docs
+title: setFailoverPartner メソッド (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 5310b7c2-9d10-474f-ad3a-218fe5da694b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1d152001d1b0eb4ad47936d04ba6c74b8ae7f6e3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974281"
 ---
 # <a name="setfailoverpartner-method-sqlserverdatasource"></a>setFailoverPartner メソッド (SQLServerDataSource)
@@ -39,7 +39,7 @@ public void setFailoverPartner(java.lang.String serverName)
   
  フェールオーバー サーバー名を含む **String** です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  このメソッドで設定された値は、プリンシパル サーバーへの初期接続に失敗した場合に使用されます。初期接続が行われた後は、この値は無視されます。 [setDatabaseName](../../../connect/jdbc/reference/setdatabasename-method-sqlserverdatasource.md) メソッドは、このメソッドと共に使用する必要があります。そうしなければ例外がスローされます。  
   
  フェールオーバー サーバーの名前を設定する場合、ドライバーではフェールオーバー サーバーのポート番号を指定することはできません。 ただし、[setFailoverPartner](../../../connect/jdbc/reference/setfailoverpartner-method-sqlserverdatasource.md) メソッドで [setServerName](../../../connect/jdbc/reference/setservername-method-sqlserverdatasource.md) メソッドおよび [setInstanceName](../../../connect/jdbc/reference/setinstancename-method-sqlserverdatasource.md) メソッドを呼び出すことはできます。  

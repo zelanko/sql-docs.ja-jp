@@ -1,5 +1,5 @@
 ---
-title: getHoldability メソッド (SQLServerConnection) |Microsoft Docs
+title: getHoldability メソッド (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: b1644791-c36a-4837-86c4-9299537ee1c2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6f7dfc9609443febe545bd3b6ac7a6cdf75e1756
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67982930"
 ---
 # <a name="getholdability-method-sqlserverconnection"></a>getHoldability メソッド (SQLServerConnection)
@@ -44,8 +44,8 @@ public int getHoldability()
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この getHoldability メソッドは、getHoldability インターフェイスのメソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この getHoldability メソッドは、java.sql.Connection インターフェイスの getHoldability メソッドで指定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerConnection のメンバー](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

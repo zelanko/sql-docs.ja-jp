@@ -1,5 +1,5 @@
 ---
-title: エラーと警告の処理 |Microsoft Docs
+title: エラーおよび警告の処理 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 0afea5d5-8797-4a85-b1b4-8cde1f3888a3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2765df415cd4e45469f48c30dc2c0937361ce3aa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015070"
 ---
 # <a name="handling-errors-and-warnings"></a>エラーおよび警告の処理
@@ -26,7 +26,7 @@ PDO_SQLSRV ドライバーを使用している場合、エラーとエラー処
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |---------|---------------|  
 |[方法: SQLSRV ドライバーを使用してエラーおよび警告処理を構成する](../../connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md)|エラーと警告の処理に関する構成設定の変更方法について説明します。|  
 |[方法: SQLSRV ドライバーを使用してエラーと警告を処理する](../../connect/php/how-to-handle-errors-and-warnings-using-the-sqlsrv-driver.md)|エラーと警告を別に処理する方法について説明します。|  

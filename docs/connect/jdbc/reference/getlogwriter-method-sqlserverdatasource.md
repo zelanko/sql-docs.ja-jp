@@ -1,5 +1,5 @@
 ---
-title: getLogWriter メソッド (SQLServerDataSource) |Microsoft Docs
+title: getLogWriter メソッド (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: cde41743-1a5d-4930-91b3-4e5fccc1bc36
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 484e643a34c8ff2015c98c59c0198e53519714be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67982543"
 ---
 # <a name="getlogwriter-method-sqlserverdatasource"></a>getLogWriter メソッド (SQLServerDataSource)
@@ -35,10 +35,10 @@ public java.io.PrintWriter getLogWriter()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- PrintWriter オブジェクトです。  
+ PrintWriter オブジェクト。  
   
-## <a name="remarks"></a>Remarks  
- この getLogWriter メソッドは、javax.mail インターフェイスの getLogWriter メソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この getLogWriter メソッドは、javax.sql.DataSource インターフェイスの getLogWriter メソッドで指定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDataSource のメンバー](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

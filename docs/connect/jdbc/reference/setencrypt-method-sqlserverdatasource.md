@@ -1,5 +1,5 @@
 ---
-title: setEncrypt メソッド (SQLServerDataSource) |Microsoft Docs
+title: setEncrypt メソッド (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 0c85a9c1-f27c-457e-8461-403cc03e2d17
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 248213fed555ffc029162c44bdcccb656c311703
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974291"
 ---
 # <a name="setencrypt-method-sqlserverdatasource"></a>setEncrypt メソッド (SQLServerDataSource)
@@ -39,8 +39,8 @@ public void setEncypt(boolean encrypt)
   
  クライアントと [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の間で SSL (Secure Sockets Layer) 暗号化が有効である場合は、**true** です。 それ以外の場合は、 **false**です。  
   
-## <a name="remarks"></a>Remarks  
- encrypt プロパティが **true** に設定されている場合、サーバーに証明書がインストールされていれば、[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] によって、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] で SSL 暗号化が確実に使用されるようになります。暗号化の対象となるのは、サーバーとクライアントの間で送信されるすべてのデータです。 既定値は **false**です。  
+## <a name="remarks"></a>解説  
+ encrypt プロパティが **true** に設定されている場合、サーバーに証明書がインストールされていれば、[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] によって、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] で SSL 暗号化が確実に使用されるようになります。暗号化の対象となるのは、サーバーとクライアントの間で送信されるすべてのデータです。 既定値は **false** です。  
   
  JDBC ドライバーは、SSL ハンドシェイクの確立を試みる際に、使用中の Java 仮想マシン (JVM) を検出します。  
   

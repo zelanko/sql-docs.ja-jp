@@ -1,5 +1,5 @@
 ---
-title: ラップ解除メソッド (SQLServerConnectionPoolDataSource) |Microsoft Docs
+title: unwrap メソッド (SQLServerConnectionPoolDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: f5c9b734-2096-4ae4-a284-6b4d1b4a00d4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ab408e917a1e6c22cdbe320eb19f5c9995c6e216
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67985619"
 ---
 # <a name="unwrap-method-sqlserverconnectionpooldatasource"></a>unwrap メソッド (SQLServerConnectionPoolDataSource)
@@ -40,7 +40,7 @@ public <T> T unwrap(Class<T> iface)
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverconnectionpooldatasource.md) メソッドは、JDBC 4.0 仕様で導入された java.sql.Wrapper インターフェイスで定義されています。  
   
  アプリケーションは [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] に固有の JDBC API 拡張機能にアクセスする必要がある場合があります。 unwrap メソッドは、クラスがベンダー拡張を公開する場合、このオブジェクトが拡張するパブリック クラスへのアンラッピングをサポートします。  

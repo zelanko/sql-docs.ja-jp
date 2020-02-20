@@ -16,10 +16,10 @@ ms.assetid: 8cd810b1-9858-4e51-9535-239d864cd288
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 04f09bcd843946763fe3bb2b69cbdcd9560e7c91
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975038"
 ---
 # <a name="setboolean-method-sqlservercallablestatement"></a>setBoolean メソッド (SQLServerCallableStatement)
@@ -42,12 +42,12 @@ public void setBoolean(java.lang.String sCol,
   
  *b*  
   
- ブール値 ( **true**または**false** **)** 。  
+ **boolean** 値。**true** または **false**。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この setBoolean メソッドは、java.sql.CallableStatement インターフェイスの setBoolean メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  

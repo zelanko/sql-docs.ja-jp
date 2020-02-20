@@ -1,5 +1,5 @@
 ---
-title: 高度なデータ型を使用する |Microsoft Docs
+title: 高度なデータ型の使用 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: b39461d3-48d6-4048-8300-1a886c00756d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a50bc3e4fae8fe45004374d3dd019a0f65fe544f
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027009"
 ---
 # <a name="using-advanced-data-types"></a>高度なデータ型の使用
@@ -23,7 +23,7 @@ ms.locfileid: "69027009"
 
 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] は、JDBC の高度なデータ型を使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型を Java プログラミング言語によって認識できる形式に変換します。  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 次の表は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、JDBC、および Java プログラミング言語の高度なデータ型間で行われる既定のマッピングを示しています。  
   
@@ -35,10 +35,10 @@ ms.locfileid: "69027009"
 |xml|LONGVARCHAR<br /><br /> SQLXML|String (既定)、InputStream、Clob、byte[]、Blob、SQLXML|  
 |Udt<sup>1</sup>|VARBINARY|String (既定)、byte[]、InputStream|  
 |sqlvariant|SQLVARIANT|Object|  
-|geometry<br /><br /> geography|VARBINARY|byte[]|  
+|geometry<br /><br /> 地理|VARBINARY|byte[]|  
 
 
-<sup>1</sup> [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] では、バイナリ データとしての CLR UDT の送受信をサポートしていますが、CLR メタデータの操作はサポートしていません。  
+<sup>1</sup>[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] では、バイナリ データとしての CLR UDT の送受信をサポートしていますが、CLR メタデータの操作はサポートしていません。  
   
 以下のセクションでは、JDBC ドライバーと高度なデータ型の使用方法の例を示します。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "69027009"
 JDBC ドライバーは、java.sql.Blob、java.sql.Clob、および java.sql.NClob インターフェイスのすべてのメソッドを実装しています。  
   
 > [!NOTE]  
-> CLOB 値は、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (以降) の大きな値のデータ型で使用できます。 具体的には、CLOB 型は**varchar (max)** データ型と**nvarchar (max)** データ型で使用でき、BLOB 型は**varbinary (max)** および**image**データ型と共に使用できます。また、NCLOB types は**ntext**および**nvarchar (max) と共に使用できます。)** .  
+> CLOB 値は、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (以降) の大きな値のデータ型で使用できます。 具体的には、CLOB 型は **varchar(max)** および **nvarchar(max)** データ型で、BLOB 型は **varbinary(max)** および **image** データ型で、NCLOB 型は **ntext** および **nvarchar(max)** で使用できます。  
 
 ## <a name="large-value-data-types"></a>大きな値のデータ型
 
@@ -66,7 +66,7 @@ Reader reader = rs.getCharacterStream(2);
 ```
 
 > [!NOTE]
-> この方法は、 **text**、 **ntext**、および**nvarchar (max)** データ型にも使用できます。  
+> これと同じ方法を、**text**、**ntext**、および **nvarchar(max)** データ型にも使用できます。  
 
 **varbinary(max)** データ型など、バイナリの大きな値のデータ型をデータベースから取得する場合は、いくつかの方法があります。 最も効率的に行うには、次のようにバイナリ ストリームとしてデータを読み取ります。  
 
@@ -101,7 +101,7 @@ pstmt.executeUpdate();
 ```
 
 > [!NOTE]  
-> この方法は、 **text**、 **ntext**、および**nvarchar (max)** 列に格納されている値にも使用できます。  
+> この方法は、**text** 列、**ntext** 列、および **nvarchar(max)** 列に格納される値に対しても使用できます。  
 
 サーバーにイメージ ライブラリがあり、バイナリ イメージ ファイル全体を **varbinary(max)** 列にアップロードする必要がある場合、JDBC ドライバーで最も効率的にこれを行うには、次に示すようにストリームを直接使用します。  
 
@@ -148,7 +148,7 @@ try (Statement stmt = con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, Resul
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、XML ドキュメントとフラグメントを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに格納できる **xml** データ型を提供します。 **xml** データ型は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] での組み込みデータ型の 1 つであり、**int** や **varchar** などの他の組み込みデータ型といくつかの点で似ています。 他の組み込み型と同様に、**xml** データ型は、テーブルの作成時に列型として使用したり、変数の型やパラメーターの型、関数の戻り値の型として使用したり、[!INCLUDE[tsql](../../includes/tsql-md.md)] CAST や CONVERT 関数内で使用したりすることができます。  
   
-JDBC ドライバーでは、**xml** データ型は、文字列、byte 配列、ストリーム、CLOB、BLOB、または SQLXML オブジェクトとしてマップできます。 文字列が既定値です。 JDBC Driver Version 2.0 以降では、SQLXML インターフェイスを導入した JDBC 4.0 API がサポートされます。 SQLXML インターフェイスには、XML データを操作するための各種のメソッドが定義されています。 **SQLXML**データ型は、 **xml**データ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型にマップされます。 **SQLXML** Java データ型を使用して、リレーショナル データベースから XML データを読み取ったり、リレーショナル データベースに XML データを書き込んだりする方法については、「[XML データのサポート](../../connect/jdbc/supporting-xml-data.md)」を参照してください。  
+JDBC ドライバーでは、**xml** データ型は、文字列、byte 配列、ストリーム、CLOB、BLOB、または SQLXML オブジェクトとしてマップできます。 文字列が既定値です。 JDBC Driver Version 2.0 以降では、SQLXML インターフェイスを導入した JDBC 4.0 API がサポートされます。 SQLXML インターフェイスには、XML データを操作するための各種のメソッドが定義されています。 **SQLXML** データ型は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**xml** データ型にマップされます。 **SQLXML** Java データ型を使用して、リレーショナル データベースから XML データを読み取ったり、リレーショナル データベースに XML データを書き込んだりする方法については、「[XML データのサポート](../../connect/jdbc/supporting-xml-data.md)」を参照してください。  
   
 JDBC ドライバーにおける **xml** データ型の実装では、以下の操作がサポートされます。  
   
@@ -172,11 +172,11 @@ JDBC ドライバーにおける **xml** データ型の実装では、以下の
   
 ## <a name="sql_variant-data-type"></a>Sql_variant データ型
 
-Sql_variant データ型の詳細については、「 [sql_variant データ型の使用](../../connect/jdbc/using-sql-variant-datatype.md)」を参照してください。  
+sql_variant データ型の詳細については、「[Sql_variant データ型の使用](../../connect/jdbc/using-sql-variant-datatype.md)」を参照してください。  
 
 ## <a name="spatial-data-types"></a>空間データ型
 
-空間データ型の詳細については、「空間データ型の[使用](../../connect/jdbc/use-spatial-datatypes.md)」を参照してください。  
+空間データ型の詳細については、「[空間データ型の使用](../../connect/jdbc/use-spatial-datatypes.md)」を参照してください。  
 
 ## <a name="see-also"></a>参照
 

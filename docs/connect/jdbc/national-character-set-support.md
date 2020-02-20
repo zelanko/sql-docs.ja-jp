@@ -1,5 +1,5 @@
 ---
-title: 各国語文字セットのサポート |Microsoft Docs
+title: 各国語文字セットのサポート | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,16 +11,16 @@ ms.assetid: 4fceacfd-df4f-40cd-b7a2-5e5e58a5979f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ae20e40723822da0004b82dd7c89961fa0448e10
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027871"
 ---
 # <a name="national-character-set-support"></a>各国語文字セットのサポート
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  JDBC ドライバーは JDBC 4.0 API をサポートし、新しく各国語文字セットの変換 API メソッドが追加されています。 このサポートには、 **NCHAR**、 **NVARCHAR**、 **LONGNVARCHAR**、および**NCLOB** JDBC 型の新しい setter、getter、および updater メソッドが含まれています。  
+  JDBC ドライバーは JDBC 4.0 API をサポートし、新しく各国語文字セットの変換 API メソッドが追加されています。 このサポートには、**NCHAR**、**NVARCHAR**、**LONGNVARCHAR**、**NCLOB** JDBC 型の新しい setter メソッド、getter メソッド、updater メソッドが含まれています。  
   
  以下は、各国語文字セットの変換をサポートする新しい getter、setter、および updater メソッドの一覧です。  
   

@@ -1,5 +1,5 @@
 ---
-title: SQLServerCallableStatement Members |Microsoft Docs
+title: SQLServerCallableStatement のメンバー | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,10 +12,10 @@ ms.assetid: 5ebdc186-e50f-4d14-bbf4-95af5051e4a4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 69a12437e3b1e611cf9e48d60c9fd77cd02f63bc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67971867"
 ---
 # <a name="sqlservercallablestatement-members"></a>SQLServerCallableStatement のメンバー
@@ -37,7 +37,7 @@ ms.locfileid: "67971867"
   
 ## <a name="methods"></a>メソッド  
   
-|[オブジェクト名]|[説明]|  
+|Name|説明|  
 |----------|-----------------|  
 |[addBatch](../../../connect/jdbc/reference/addbatch-method-sqlserverpreparedstatement.md)|([SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) から継承されます) この CallableStatement オブジェクトのコマンド バッチにパラメーターのセットを追加します。|  
 |[cancel](../../../connect/jdbc/reference/cancel-method-sqlserverstatement.md)|([SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) から継承されます) CallableStatement オブジェクトによって現在実行されている SQL ステートメントを取り消します。|  
@@ -50,14 +50,14 @@ ms.locfileid: "67971867"
 |[executeQuery](../../../connect/jdbc/reference/executequery-method-sqlserverpreparedstatement.md)|([SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) から継承されます) CallableStatement オブジェクトの SQL クエリを実行し、クエリによって生成される [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトを返します。|  
 |[executeUpdate](../../../connect/jdbc/reference/executeupdate-method-sqlserverpreparedstatement.md)|([SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) から継承されます) CallableStatement オブジェクトの SQL ステートメントを実行します。SQL ステートメントは、SQL INSERT、UPDATE、MERGE、または DELETE ステートメントであるか、DDL ステートメントなどのような何も返さない SQL ステートメントであることが必要です。|  
 |[getConnection](../../../connect/jdbc/reference/getconnection-method-sqlserverstatement.md)|([SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) から継承されます) CallableStatement オブジェクトを生成した [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) オブジェクトを取得します。|  
-|[getDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-method-sqlservercallablestatement.md)|指定された列の値を[DateTimeOffset クラス](../../../connect/jdbc/reference/datetimeoffset-class.md)オブジェクトとして取得します。|  
+|[getDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-method-sqlservercallablestatement.md)|指定された列の値が [DateTimeOffset クラス](../../../connect/jdbc/reference/datetimeoffset-class.md) オブジェクトとして取得されます。|  
 |[getFetchDirection](../../../connect/jdbc/reference/getfetchdirection-method-sqlserverstatement.md)|([SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) から継承されます) 行をフェッチする方向をデータベース テーブルから取得します。この方向は、CallableStatement オブジェクトから生成される結果セットの既定の方向となります。|  
 |[getFetchSize](../../../connect/jdbc/reference/getfetchsize-method-sqlserverstatement.md)|([SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) から継承されます) 結果セットの行数を取得します。この行数は、CallableStatement オブジェクトから生成される結果セット オブジェクトの既定のフェッチ サイズとなります。|  
 |[getGeneratedKeys](../../../connect/jdbc/reference/getgeneratedkeys-method-sqlserverstatement.md)|([SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) から継承されます) CallableStatement オブジェクトを実行した結果作成される自動生成キーを取得します。|  
 |[getMaxFieldSize](../../../connect/jdbc/reference/getmaxfieldsize-method-sqlserverstatement.md)|([SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) から継承されます) CallableStatement オブジェクトによって生成される [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの文字およびバイナリの列値に対して返される最大バイト数を取得します。|  
 |[getMaxRows](../../../connect/jdbc/reference/getmaxrows-method-sqlserverstatement.md)|([SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) から継承されます) CallableStatement オブジェクトによって生成される [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトが含むことのできる最大行数を取得します。|  
 |[getMetaData](../../../connect/jdbc/reference/getmetadata-method-sqlserverpreparedstatement.md)|([SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) から継承されます) [SQLServerResultSetMetaData クラス](../../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md)のオブジェクトを取得します。このオブジェクトには、CallableStatement オブジェクトの実行時に返される [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの列に関する情報が含まれます。|  
-|[getMoreResults](../../../connect/jdbc/reference/getmoreresults-method-sqlserverstatement.md)|([SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) から継承されます) この CallableStatement オブジェクトの次の結果に移動します。|  
+|[getMoreResults](../../../connect/jdbc/reference/getmoreresults-method-sqlserverstatement.md)|([SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) から継承されます) CallableStatement オブジェクトの次の結果に移動します。|  
 |[getParameterMetaData](../../../connect/jdbc/reference/getparametermetadata-method-sqlserverpreparedstatement.md)|([SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) から継承されます) CallableStatement オブジェクトのパラメーターの数、型、およびプロパティを取得します。|  
 |[getArray](../../../connect/jdbc/reference/getarray-method-sqlservercallablestatement.md)|指定されたパラメーターの値を Array オブジェクトとして取得します。|  
 |[getAsciiStream](../../../connect/jdbc/reference/getasciistream-method-sqlservercallablestatement.md)|指定されたパラメーターの値を **ASCII** 文字のストリームとして取得します。|  
@@ -70,14 +70,14 @@ ms.locfileid: "67971867"
 |[getCharacterStream](../../../connect/jdbc/reference/getcharacterstream-method-sqlservercallablestatement.md)|指定されたパラメーターの値を java.io.Reader オブジェクトとして取得します。|  
 |[getClob](../../../connect/jdbc/reference/getclob-method-sqlservercallablestatement.md)|指定された JDBC Blob パラメーターの値を Java プログラミング言語の Clob オブジェクトとして取得します。|  
 |[getDate](../../../connect/jdbc/reference/getdate-method-sqlservercallablestatement.md)|指定されたパラメーターの値を Java プログラミング言語の java.sql.Date オブジェクトとして取得します。|  
-|[getDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-method-sqlservercallablestatement.md)|指定された列の値を[DateTimeOffset クラス](../../../connect/jdbc/reference/datetimeoffset-class.md)オブジェクトとして取得します。|  
+|[getDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-method-sqlservercallablestatement.md)|指定された列の値が [DateTimeOffset クラス](../../../connect/jdbc/reference/datetimeoffset-class.md) オブジェクトとして取得されます。|  
 |[getDouble](../../../connect/jdbc/reference/getdouble-method-sqlservercallablestatement.md)|指定されたパラメーターの値を Java プログラミング言語の **double** として取得します。|  
 |[getFloat](../../../connect/jdbc/reference/getfloat-method-sqlservercallablestatement.md)|指定されたパラメーターの値を Java プログラミング言語の **float** として取得します。|  
 |[getInt](../../../connect/jdbc/reference/getint-method-sqlservercallablestatement.md)|指定されたパラメーターの値を Java プログラミング言語の **int** として取得します。|  
 |[getLong](../../../connect/jdbc/reference/getlong-method-sqlservercallablestatement.md)|指定されたパラメーターの値を Java プログラミング言語の **long** として取得します。|  
 |[getNCharacterStream](../../../connect/jdbc/reference/getncharacterstream-method-sqlservercallablestatement.md)|指定されたパラメーターの値を Reader オブジェクトとして取得します。|  
 |[getNClob](../../../connect/jdbc/reference/getnclob-method-sqlservercallablestatement.md)|指定された JDBC **NCLOB** パラメーターの値を Java プログラミング言語の **NClob** オブジェクトとして取得します。|  
-|[getNString](../../../connect/jdbc/reference/getnstring-method-sqlservercallablestatement.md)|指定された**NCHAR**、 **NVARCHAR** 、または**LONGNVARCHAR**パラメーターの値を Java プログラミング言語の文字列として取得します。|  
+|[getNString](../../../connect/jdbc/reference/getnstring-method-sqlservercallablestatement.md)|指定された **NCHAR**、**NVARCHAR** または **LONGNVARCHAR** パラメーターの値が、Java プログラミング言語の文字列として取得されます。|  
 |[getObject](../../../connect/jdbc/reference/getobject-method-sqlservercallablestatement.md)|指定されたパラメーターの値を Java プログラミング言語のオブジェクトとして取得します。|  
 |[getQueryTimeout](../../../connect/jdbc/reference/getquerytimeout-method-sqlserverstatement.md)|([SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) から継承されます) [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] が CallableStatement オブジェクトの実行を待つ秒数を取得します。|  
 |[getRef](../../../connect/jdbc/reference/getref-method-sqlservercallablestatement.md)|指定されたパラメーターの値を Java プログラミング言語の Ref オブジェクトとして取得します。|  
@@ -110,7 +110,7 @@ ms.locfileid: "67971867"
 |[setClob](../../../connect/jdbc/reference/setclob-method-sqlservercallablestatement.md)|([SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) から継承されます) 指定されたパラメーターを、指定されたオブジェクトに設定します。|  
 |[setCursorName](../../../connect/jdbc/reference/setcursorname-method-sqlserverstatement.md)|([SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) から継承されます) SQL カーソル名を、渡された文字列に設定します。この文字列は、後に続く実行 (execute) メソッドによって使用されます。|  
 |[setDate](../../../connect/jdbc/reference/setdate-method-sqlservercallablestatement.md)|指定されたパラメーターを、渡された日付の値に設定します。|  
-|[setDateTimeOffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlservercallablestatement.md)|指定された列の値を[DateTimeOffset クラス](../../../connect/jdbc/reference/datetimeoffset-class.md)の値に設定します。|  
+|[setDateTimeOffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlservercallablestatement.md)|指定された列の値が [DateTimeOffset クラス](../../../connect/jdbc/reference/datetimeoffset-class.md)値に設定されます。|  
 |[setDouble](../../../connect/jdbc/reference/setdouble-method-sqlservercallablestatement.md)|指定されたパラメーターを、渡された **double** 値に設定します。|  
 |[setEscapeProcessing](../../../connect/jdbc/reference/setescapeprocessing-method-sqlserverstatement.md)|([SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) から継承されます) エスケープの処理モードを設定します。|  
 |[setFetchDirection](../../../connect/jdbc/reference/setfetchdirection-method-sqlserverstatement.md)|([SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) から継承されます) 結果セットの行を処理する方向についてのヒントを JDBC ドライバーに示します。|  
@@ -125,7 +125,7 @@ ms.locfileid: "67971867"
 |[setNString](../../../connect/jdbc/reference/setnstring-method-sqlservercallablestatement.md)|指定されたパラメーターを、指定された String オブジェクトに設定します。|  
 |[setNull](../../../connect/jdbc/reference/setnull-method-sqlservercallablestatement.md)|渡されたパラメーターの型で、指定されたパラメーターを null 値に設定します。|  
 |[setObject](../../../connect/jdbc/reference/setobject-method-sqlservercallablestatement.md)|渡されたオブジェクトを使用して、指定されたパラメーターの値が設定されます。|  
-|[setPoolable](../../../connect/jdbc/reference/setpoolable-method-sqlserverstatement.md)|([SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) から継承されます) ステートメントをプールすること、またはプールしないことを要求します。 既定では、SQLServerCallableStatement オブジェクトは作成時にプールされます。|  
+|[setPoolable](../../../connect/jdbc/reference/setpoolable-method-sqlserverstatement.md)|([SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) から継承されます) ステートメントをプールすること、またはプールしないことを要求します。 既定では、SQLServerCallableStatement オブジェクトは作成時にプールできます。|  
 |[setQueryTimeout](../../../connect/jdbc/reference/setquerytimeout-method-sqlserverstatement.md)|([SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) から継承されます) CallableStatement オブジェクトの実行をドライバーが待つ秒数を、指定された秒数に設定します。|  
 |[setRef](../../../connect/jdbc/reference/setref-method-sqlserverpreparedstatement.md)|([SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) から継承されます) 指定されたパラメーターを、指定された Ref オブジェクトに設定します。|  
 |[setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md)|([SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) から継承されます) [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) オブジェクトの応答バッファリング モードを **String full** または **adaptive** に設定します。これらのモードの文字列では、大文字と小文字のどちらも使用できます。|  

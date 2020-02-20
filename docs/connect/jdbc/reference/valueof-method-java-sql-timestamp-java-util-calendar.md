@@ -11,10 +11,10 @@ ms.assetid: 7320c383-0b06-446d-963b-7005e50324a2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 11d8f8e346fdb0f07770feec815e5aa5fe88355f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68001587"
 ---
 # <a name="valueof-method-javasqltimestamp-javautilcalendar"></a>valueOf (java.sql.Timestamp, java.util.Calendar) メソッド
@@ -36,13 +36,13 @@ public static DateTimeOffset valueOf(java.sql.Timestamp timestamp, java.util.Cal
   
  *カレンダー*  
   
- オフセットの値。  *Calendar*の日付と時刻のコンポーネントは、*タイムスタンプ*の値に従って設定されます。  
+ オフセットの値。  *calendar* の日付と時刻の要素は、*timestamp* 値に従って設定されます。  
   
 ## <a name="return-value"></a>戻り値  
- 指定された java. util. Calendar オブジェクトのタイムゾーンにある、java. Timestamp オブジェクトによって指定された特定の時点を表す DateTimeOffset オブジェクトを返します。  
+ 特定の java.util.Calendar オブジェクトのタイム ゾーンで java.sql.Timestamp オブジェクトで指定された特定の時点を表す DateTimeOffset オブジェクトを返します。  
   
-## <a name="remarks"></a>Remarks  
- また、このメソッドは、java. Timestamp オブジェクトによって指定された特定の時点のオブジェクトを設定します。  
+## <a name="remarks"></a>解説  
+ また、このメソッドは、java.util.Calendar オブジェクトを java.sql.Timestamp オブジェクトで指定された特定の時点に設定します。  
   
 ## <a name="see-also"></a>参照  
  [DateTimeOffset クラス](../../../connect/jdbc/reference/datetimeoffset-class.md)   

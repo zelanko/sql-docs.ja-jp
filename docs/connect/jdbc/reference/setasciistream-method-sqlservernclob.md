@@ -11,10 +11,10 @@ ms.assetid: 617ece92-0fb1-4f95-b32d-29b5b56eb3fb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 043a94108bdb7c8938f06e8bf1d4bf58651fbf21
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975369"
 ---
 # <a name="setasciistream-method-sqlservernclob"></a>setAsciiStream メソッド (SQLServerNClob)
@@ -30,7 +30,7 @@ public java.io.OutputStream setAsciiStream(long pos)
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *po*  
+ *pos*  
   
  **NCLOB** オブジェクトへの書き込みを開始する位置です。最初の位置は 1 です。  
   
@@ -40,8 +40,8 @@ public java.io.OutputStream setAsciiStream(long pos)
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この setAsciiStream メソッドは、NClob インターフェイスの setAsciiStream メソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この setAsciiStream メソッドは、java.sql.NClob インターフェイスの setAsciiStream メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerNClob のメソッド](../../../connect/jdbc/reference/sqlservernclob-methods.md)   

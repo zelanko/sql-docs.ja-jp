@@ -16,10 +16,10 @@ ms.assetid: 04d36a25-7f95-4675-9690-4462671b3d67
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7b51cbe470169459469959448208b3aa53b18cce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67976256"
 ---
 # <a name="preparecall-method-javalangstring-int-int"></a>prepareCall (java.lang.String, int, int) メソッド
@@ -55,8 +55,8 @@ public java.sql.CallableStatement prepareCall(java.lang.String sql,
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この prepareCall メソッドは、prepareCall インターフェイスのメソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この prepareCall メソッドは、java.sql.Connection インターフェイスの prepareCall メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [prepareCall メソッド &#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md)   

@@ -1,5 +1,5 @@
 ---
-title: ISQLServerCallableStatement Interface |Microsoft Docs
+title: ISQLServerCallableStatement インターフェイス | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 030a1631-cfcd-41e0-beb5-47f93c01e8e0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e30758f99b3b3aa1b40319fda91760b253d17a9a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977495"
 ---
 # <a name="isqlservercallablestatement-interface"></a>ISQLServerCallableStatement インターフェイス
@@ -33,12 +33,12 @@ ms.locfileid: "67977495"
 public interface ISQLServerCallableStatement  
 ```  
   
-## <a name="remarks"></a>Remarks  
- このインターフェイスは、 [SQLServerCallableStatement クラス](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)によって実装されます。  
+## <a name="remarks"></a>解説  
+ このインターフェイスは、[SQLServerCallableStatement クラス](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)によって実装されています。  
   
  このインターフェイスでは、次の [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 固有のメソッドが公開されます。  
   
-|方法|詳細については、「|  
+|Method|詳細については、「|  
 |------------|-------------------------------|  
 |microsoft.sql.DateTimeOffset getDateTimeOffset(int)|[getDateTimeOffset(int)](../../../connect/jdbc/reference/getdatetimeoffset-method-int.md)|  
 |microsoft.sql.DateTimeOffset getDateTimeOffset(String)|[getDateTimeOffset(String)](../../../connect/jdbc/reference/getdatetimeoffset-method-string.md)|  

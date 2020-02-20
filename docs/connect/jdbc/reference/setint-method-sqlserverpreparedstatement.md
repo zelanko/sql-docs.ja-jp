@@ -16,10 +16,10 @@ ms.assetid: 5e46b129-9fe1-469f-b2e8-7ce7fb832996
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b4f78d918b597d9e336feb58d512c0156eadd4e9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974162"
 ---
 # <a name="setint-method-sqlserverpreparedstatement"></a>setInt メソッド (SQLServerPreparedStatement)
@@ -42,12 +42,12 @@ public final void setInt(int n,
   
  *value*  
   
- **Int**値。  
+ **int** 値。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この setInt メソッドは、java.sql.PreparedStatement インターフェイスの setInt メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  

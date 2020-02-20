@@ -16,10 +16,10 @@ ms.assetid: 745410f7-e59b-4423-9728-c903adedc399
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 02aa3fcb7feed842a2da7b13c5609ea516ef40b0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67982169"
 ---
 # <a name="getmaxconnections-method-sqlserverdatabasemetadata"></a>getMaxConnections メソッド (SQLServerDatabaseMetaData)
@@ -40,8 +40,8 @@ public int getMaxConnections()
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この getMaxConnections メソッドは、getMaxConnections メソッドによって、java メタデータインターフェイスで指定されます。  
+## <a name="remarks"></a>解説  
+ この getMaxConnections メソッドは、java.sql.DatabaseMetaData インターフェイスの getMaxConnections メソッドで指定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

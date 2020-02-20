@@ -1,5 +1,5 @@
 ---
-title: registerOutParameter メソッドを type |Microsoft Docs
+title: registerOutParameter メソッド to type | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 5d00242c-4d9c-42cc-86bb-b76f5ef876b8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cdd197be6327b84a6c299239f1198fe005dff0f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975901"
 ---
 # <a name="registeroutparameter-method-javalangstring-int"></a>registerOutParameter (java.lang.String, int) メソッド
@@ -42,13 +42,13 @@ public void registerOutParameter(java.lang.String s,
   
  *n*  
   
- Java. .sql. の型で定義されている JDBC 型コード。  
+ java.sql.Types で定義されている JDBC 型コード。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この registerOutParameter メソッドは、java. sql. CallableStatement インターフェイスの registerOutParameter メソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この registerOutParameter メソッドは、java.sql.CallableStatement インターフェイスの registerOutParameter メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [registerOutParameter メソッド &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md)   

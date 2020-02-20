@@ -1,5 +1,5 @@
 ---
-title: getLockTimeout メソッド (SQLServerDataSource) |Microsoft Docs
+title: getLockTimeout メソッド (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 676094e9-ec18-4524-9b21-1f9c5b16dd52
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f9c94e0c69bd528f1c579f41319a4db18b7d4d3c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67982562"
 ---
 # <a name="getlocktimeout-method-sqlserverdatasource"></a>getLockTimeout メソッド (SQLServerDataSource)
@@ -37,7 +37,7 @@ public int getLockTimeout()
 ## <a name="return-value"></a>戻り値  
  データベースが待機する時間 (ミリ秒) を含む **int** 値です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  ロック タイムアウトは、データベースがロック タイムアウトを通知するまでに待機する時間 (ミリ秒) です。既定値の -1 は、無制限に待機することを意味します。 値を指定した場合、接続上のすべてのステートメントに対する既定値になります。  
   
 > [!NOTE]  

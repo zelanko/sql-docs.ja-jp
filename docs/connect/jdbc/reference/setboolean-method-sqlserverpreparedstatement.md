@@ -16,10 +16,10 @@ ms.assetid: 63397a19-03a2-44bb-b661-7d62c95b6e4e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 62c639c73b629559c36300886781146f3cd14057
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975022"
 ---
 # <a name="setboolean-method-sqlserverpreparedstatement"></a>setBoolean メソッド (SQLServerPreparedStatement)
@@ -42,12 +42,12 @@ public final void setBoolean(int n,
   
  *x*  
   
- ブール値 ( **true**または**false** **)** 。  
+ **boolean** 値。**true** または **false**。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この setboolean メソッドは、java.sql.PreparedStatement インターフェイスの setboolean メソッドで指定されています。  
   
 ## <a name="see-also"></a>参照  

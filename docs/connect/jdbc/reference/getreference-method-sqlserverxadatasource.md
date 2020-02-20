@@ -1,5 +1,5 @@
 ---
-title: getReference メソッド (SQLServerXADataSource) |Microsoft Docs
+title: getReference メソッド (SQLServerXADataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: c9e7b904-2e98-459f-9173-382919d741e2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 189b35b98c6b604563d056f286b9640ee47637a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980457"
 ---
 # <a name="getreference-method-sqlserverxadatasource"></a>getReference メソッド (SQLServerXADataSource)
@@ -35,10 +35,10 @@ public javax.naming.Reference getReference()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- 参照オブジェクト。  
+ Reference オブジェクト。  
   
-## <a name="remarks"></a>Remarks  
- この getReference メソッドは、参照可能インターフェイスの getReference メソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この getReference メソッドは、javax.naming.Referenceable インターフェイスの getReference メソッドで指定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerXADataSource のメソッド](../../../connect/jdbc/reference/sqlserverxadatasource-methods.md)   

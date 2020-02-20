@@ -11,10 +11,10 @@ ms.assetid: 36571f7c-b335-4249-8f83-51dcb6923aec
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3e26b8c0eb4595403e3370a2e56aabfce63f0c80
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67981513"
 ---
 # <a name="getnclob-method-javalangstring-sqlserverresultset"></a>getNClob (java.lang.String) メソッド (SQLServerResultSet)
@@ -35,15 +35,15 @@ public java.sql.NClob getNClob(java.lang.String columnLabel)
  列ラベルを含む**文字列**です。  
   
 ## <a name="return-value"></a>戻り値  
- NClob オブジェクトです。  
+ NClob オブジェクト。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この getNClob メソッドは、java.sql.ResultSet インターフェイスの getNClob メソッドで規定されています。  
   
- このメソッドは、 **nvarchar (max)** 、 **ntext**、および**xml**列でのみサポートされています。 このメソッドを他のデータ型で使用すると、例外がスローされます。  
+ このメソッドは、**nvarchar(max)** 、**ntext**、および **xml** 列でのみサポートされています。 このメソッドを他のデータ型で使用すると、例外がスローされます。  
   
 ## <a name="see-also"></a>参照  
  [getNClob メソッド &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getnclob-method-sqlserverresultset.md)   

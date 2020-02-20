@@ -1,5 +1,5 @@
 ---
-title: SQLServerXAResource クラス |Microsoft Docs
+title: SQLServerXAResource クラス | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: df957b79-536f-4db7-b6ac-3d59343559fc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 282201b7ff3f5b2ebfe4d8a1224d4d1b39285c53
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67970083"
 ---
 # <a name="sqlserverxaresource-class"></a>SQLServerXAResource クラス
@@ -35,7 +35,7 @@ ms.locfileid: "67970083"
 public class SQLServerXAResource  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  XA トランザクションは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分散トランザクション マネージャー (DTC) を使用して [!INCLUDE[msCoName](../../../includes/msconame_md.md)] に実装されます。 SQLServerXAResource クラスは、DTC とのインターフェイスになる sqljdbc_xa.dll という名前の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 拡張 DLL を呼び出します。 SQLServerXAResource が受信する XA 呼び出し (XA_START、XA_END、XA_PREPARE など) は、対応する DTC 関数の呼び出しにマップされます。  
   
 ## <a name="see-also"></a>参照  

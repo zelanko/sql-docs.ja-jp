@@ -1,5 +1,5 @@
 ---
-title: データソースのプロパティを設定する |Microsoft Docs
+title: データ ソースのプロパティの設定 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: f3363d05-07fc-4bf8-ae5e-2a7a968808ad
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0b3093b87557917655fcbfd6cf7c2ec37151ca44
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027735"
 ---
 # <a name="setting-the-data-source-properties"></a>データ ソースのプロパティの設定
@@ -25,7 +25,7 @@ ms.locfileid: "69027735"
 
 アプリケーション サーバーやサーブレット/JSP エンジンなどの Java EE 製品では、通常、データベース アクセス用にデータ ソースを構成できます。 構成で "プロパティ=値" ペアとしてプロパティを入力できる場合は、「[接続プロパティの設定](../../connect/jdbc/setting-the-connection-properties.md)」に記載されているすべてのプロパティを指定できます。
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ ソースの詳細については、「[SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) クラス」を参照してください。 SQLServerDataSource クラスを使用して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースに接続する方法の例については、「[データソースのサンプル](../../connect/jdbc/data-source-sample.md)」を参照してください。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ ソースの詳細については、「[SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) クラス」を参照してください。 SQLServerDataSource クラスを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースへの接続を確立する方法の例については、「[データ ソースのサンプル](../../connect/jdbc/data-source-sample.md)」を参照してください。
 
 ## <a name="see-also"></a>参照
 

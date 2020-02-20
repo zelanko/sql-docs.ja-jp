@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_next_result |Microsoft Docs
+title: sqlsrv_next_result | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,13 +19,13 @@ ms.assetid: 41270d16-0003-417c-b837-ea51439654cd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 59414abbc5c098382ec83d308d135af92f9dbb35
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68014997"
 ---
-# <a name="sqlsrvnextresult"></a>sqlsrv_next_result
+# <a name="sqlsrv_next_result"></a>sqlsrv_next_result
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 指定したステートメントの次の結果 (結果セット、行数、または出力パラメーター) をアクティブにします。  
@@ -177,7 +177,7 @@ sqlsrv_close( $conn );
 ?>  
 ```  
   
-出力パラメーターがあるストアド プロシージャを実行する場合は、出力パラメーターの値にアクセスする前にその他のすべての結果を消費することをお勧めします。 詳細については、「 [方法: SQLSRV ドライバーを使用してパラメーターの方向を指定する](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)」を参照してください。  
+出力パラメーターがあるストアド プロシージャを実行する場合は、出力パラメーターの値にアクセスする前にその他のすべての結果を消費することをお勧めします。 詳細については、「[方法: SQLSRV ドライバーを使用してパラメーターの方向を指定する](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)」を参照してください。  
   
 ## <a name="example"></a>例  
 次の例では、指定した製品 ID の製品レビュー情報を取得し、製品のレビューを挿入し、次いで指定した製品 ID の製品レビュー情報を再取得するバッチ クエリを実行します。 新しく挿入した製品のレビューは、バッチ クエリの最終的な結果セットに含められます。 この例では [sqlsrv_next_result](../../connect/php/sqlsrv-next-result.md) を使用し、バッチ クエリの 1 つの結果から、次に移動します。  

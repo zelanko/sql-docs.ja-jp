@@ -1,5 +1,5 @@
 ---
-title: getDate メソッド (java. util. Calendar) column |Microsoft Docs
+title: getDate (java.util.Calendar) メソッドの列 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 3fa2a72a-7499-44ec-8f76-a8e646e0190c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 36c1a84fe690760d6eeda6b43fb59a5d0268696c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67983996"
 ---
 # <a name="getdate-method-javalangstring-javautilcalendar-sqlserverresultset"></a>getDate (java.lang.String, java.util.Calendar) メソッド (SQLServerResultSet)
@@ -40,17 +40,17 @@ public java.sql.Date getDate(java.lang.String colName,
   
  列名を含む**文字列**です。  
   
- *カレンダー*  
+ *cal*  
   
  Calendar オブジェクト。  
   
 ## <a name="return-value"></a>戻り値  
- Date オブジェクトです。  
+ Date オブジェクト。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この getDate メソッドは、java.sql.ResultSet インターフェイスの getDate メソッドで規定されています。  
   
  このメソッドは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] datetime または smalldatetime データ型の有効な日付部分が返されます。時刻部分は、指定されたカレンダーのタイムゾーンにおける Java のベースラインの時刻である 00:00 (午前 0 時) に設定されます。  

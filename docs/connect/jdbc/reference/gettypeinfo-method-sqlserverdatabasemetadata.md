@@ -16,10 +16,10 @@ ms.assetid: 23208f01-c1bf-4235-b29c-9051d3df59a3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cb9b1b632d5a17b7c8f497e30a4f033932f09b33
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978517"
 ---
 # <a name="gettypeinfo-method-sqlserverdatabasemetadata"></a>getTypeInfo メソッド (SQLServerDatabaseMetaData)
@@ -40,16 +40,16 @@ public java.sql.ResultSet getTypeInfo()
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この getTypeInfo メソッドは、java.sql.DatabaseMetaData インターフェイスの getTypeInfo メソッドで規定されています。  
   
  getTypeInfo メソッドによって返される結果セットには、次の情報が含まれます。  
   
-|[オブジェクト名]|型|[説明]|  
+|Name|Type|説明|  
 |----------|----------|-----------------|  
 |TYPE_NAME|**String**|データ型の名前です。|  
 |DATA_TYPE|**short**|java.sql.Types の SQL データ型です。|  
-|PRECISION|**int**|有効桁数の合計。|  
+|PRECISION|**int**|有効桁数の合計です。|  
 |LITERAL_PREFIX|**String**|定数の先頭に記述する文字または文字列です。|  
 |LITERAL_SUFFIX|**String**|定数の末尾に記述する文字または文字列です。|  
 |CREATE_PARAMS|**String**|データ型の作成パラメーターの記述です。|  

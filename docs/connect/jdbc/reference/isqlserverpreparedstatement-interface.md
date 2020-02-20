@@ -1,5 +1,5 @@
 ---
-title: ISQLServerPreparedStatement Interface |Microsoft Docs
+title: ISQLServerPreparedStatement インターフェイス | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: cf87892e-5c34-4ac6-8258-c2a81e117b26
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 05fda4ea42c1819f3cbb4f16fcc7f02da2a06b8e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977437"
 ---
 # <a name="isqlserverpreparedstatement-interface"></a>ISQLServerPreparedStatement インターフェイス
@@ -33,12 +33,12 @@ ms.locfileid: "67977437"
 public interface ISQLServerPreparedStatement  
 ```  
   
-## <a name="remarks"></a>Remarks  
- このインターフェイスは、 [SQLServerPreparedStatement クラス](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)によって実装されます。  
+## <a name="remarks"></a>解説  
+ このインターフェイスは、[SQLServerPreparedStatement クラス](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)によって実装されています。  
   
  このインターフェイスでは、次の [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 固有のメソッドが公開されます。  
   
-|方法|詳細については、「|  
+|Method|詳細については、「|  
 |------------|-------------------------------|  
 |public void setDateTimeOffset(int, microsoft.sql.DateTimeOffset)|[setDateTimeOffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlserverpreparedstatement.md)|  
   

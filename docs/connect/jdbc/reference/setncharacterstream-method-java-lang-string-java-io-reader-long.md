@@ -1,5 +1,5 @@
 ---
-title: Setn文字ストリームメソッドから Reader オブジェクト-long |Microsoft Docs
+title: Reader オブジェクトへの setNCharacterStream メソッド - long | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: af9a1ba8-7980-43fa-88e5-14f6cc5e897c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 73bd7fe7d3da0745f66e0a6d883d7024a318c95f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67973887"
 ---
 # <a name="setncharacterstream-method-javalangstring-javaioreader-long"></a>setNCharacterStream (java.lang.String, java.io.Reader, long) メソッド
@@ -38,7 +38,7 @@ public final void setNCharacterStream(java.lang.String parameterName,
   
  *value*  
   
- リーダーオブジェクト。  
+ Reader オブジェクト。  
   
  *length*  
   
@@ -47,10 +47,10 @@ public final void setNCharacterStream(java.lang.String parameterName,
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この Setn; Stream メソッドは、java. sql. CallableStatement インターフェイスの setNCharacterStream メソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この setNCharacterStream メソッドは、java.sql.CallableStatement インターフェイスの setNCharacterStream メソッドによって指定されます。  
   
- このメソッドは、 **NCHAR**、 **NVARCHAR**、 **NTEXT**、および**XML**データ型に対して使用する必要があります。  
+ このメソッドは、**NCHAR**、**NVARCHAR**、**NTEXT**、**XML** の各データ型に対して使用する必要があります。  
   
  ストリームの長さが、*length* パラメーターで指定された長さと異なる場合は、行の更新または挿入時に JDBC ドライバーが例外をスローします。  
   

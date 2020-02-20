@@ -1,5 +1,5 @@
 ---
-title: ラップ解除メソッド (SQLServerDataSource) |Microsoft Docs
+title: unwrap メソッド (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: eb8abe29-f3ec-4752-a590-1d5dc3e48f08
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f8cb254ba464b0e051c00c7ac6d410c5e6da1e36
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67997289"
 ---
 # <a name="unwrap-method-sqlserverdatasource"></a>unwrap メソッド (SQLServerDataSource)
@@ -40,7 +40,7 @@ public <T> T unwrap(Class<T> iface)
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverdatasource.md) メソッドは、JDBC 4.0 仕様で導入された java.sql.Wrapper インターフェイスで定義されています。  
   
  アプリケーションは [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] に固有の JDBC API 拡張機能にアクセスする必要がある場合があります。 unwrap メソッドは、クラスがベンダー拡張を公開する場合、このオブジェクトが拡張するパブリック クラスへのアンラッピングをサポートします。  

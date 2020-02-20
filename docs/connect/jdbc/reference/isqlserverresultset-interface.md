@@ -1,5 +1,5 @@
 ---
-title: ISQLServerResultSet Interface |Microsoft Docs
+title: ISQLServerResultSet インターフェイス | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 002496f7-8ec0-4267-b4e6-ba095e2ef306
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: edbf5a7feb65d39cb5158c42a218f077a3332236
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977410"
 ---
 # <a name="isqlserverresultset-interface"></a>ISQLServerResultSet インターフェイス
@@ -33,12 +33,12 @@ ms.locfileid: "67977410"
 public interface ISQLServerResultSet  
 ```  
   
-## <a name="remarks"></a>Remarks  
- このインターフェイスは、 [SQLServerResultSet クラス](../../../connect/jdbc/reference/sqlserverresultset-class.md)によって実装されます。  
+## <a name="remarks"></a>解説  
+ このインターフェイスは、[SQLServerResultSet クラス](../../../connect/jdbc/reference/sqlserverresultset-class.md)によって実装されています。  
   
- このインターフェイスは、 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]固有のメソッドを公開します。  
+ このインターフェイスでは、次の [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 固有のメソッドが公開されます。  
   
-|方法|詳細については、「|  
+|Method|詳細については、「|  
 |------------|-------------------------------|  
 |public microsoft.sql.DateTimeOffset getDateTimeOffset(int)|[getDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-int-sqlserverresultset.md)|  
 |public microsoft.sql.DateTimeOffset getDateTimeOffset(String)|[getDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-java-lang-string-sqlserverresultset.md)|  

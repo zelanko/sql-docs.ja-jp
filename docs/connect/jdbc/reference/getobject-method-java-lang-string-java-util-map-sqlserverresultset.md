@@ -16,10 +16,10 @@ ms.assetid: 8104406b-417d-4ff5-9aca-183ee0f76762
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1e806db63799d57ae935f2288c11b70ff35d20a7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67981212"
 ---
 # <a name="getobject-method-javalangstring-javautilmap-sqlserverresultset"></a>getObject (java.lang.String, java.util.Map) メソッド (SQLServerResultSet)
@@ -45,7 +45,7 @@ public java.lang.Object getObject(java.lang.String colName,
   
  *map*  
   
- マップオブジェクト。  
+ Map オブジェクト。  
   
 ## <a name="return-value"></a>戻り値  
  **Object** 値。  
@@ -53,7 +53,7 @@ public java.lang.Object getObject(java.lang.String colName,
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この getObject メソッドは、java.sql.ResultSet インターフェイスの getObject メソッドで規定されています。  
   
  このメソッドは、指定された列の値を Java オブジェクトとして返します。 この Java オブジェクトの型は、JDBC 仕様に指定されている組み込み型のマッピングに基づく、列の SQL 型に対応する既定の Java オブジェクト型です。 値が SQL NULL の場合、ドライバーは Java の null を返します。  

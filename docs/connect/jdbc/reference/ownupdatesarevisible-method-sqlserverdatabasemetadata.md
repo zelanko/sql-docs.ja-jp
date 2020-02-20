@@ -1,5 +1,5 @@
 ---
-title: ownUpdatesAreVisible メソッド (SQLServerDatabaseMetaData) |Microsoft Docs
+title: ownUpdatesAreVisible メソッド (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: eacbb1a8-ac9a-4f44-832e-ae0af476522e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2b2754366a8272785ddfc9e11053d3b805ce6938
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67976524"
 ---
 # <a name="ownupdatesarevisible-method-sqlserverdatabasemetadata"></a>ownUpdatesAreVisible メソッド (SQLServerDatabaseMetaData)
@@ -63,8 +63,8 @@ public boolean othersUpdatesAreVisible(int type)
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この ownUpdatesAreVisible メソッドは、ownUpdatesAreVisible メソッドによって、java メタデータインターフェイスで指定されます。  
+## <a name="remarks"></a>解説  
+ この ownUpdatesAreVisible メソッドは、java.sql.DatabaseMetaData インターフェイスの ownUpdatesAreVisible メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

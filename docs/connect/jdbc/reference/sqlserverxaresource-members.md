@@ -1,5 +1,5 @@
 ---
-title: SQLServerXAResource Members |Microsoft Docs
+title: SQLServerXAResource のメンバー | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: a069bf2c-1b70-4817-b084-a508445de799
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b420dd7c4bc714e26c8078112c5af54ae5aa7b0c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67970068"
 ---
 # <a name="sqlserverxaresource-members"></a>SQLServerXAResource のメンバー
@@ -27,7 +27,7 @@ ms.locfileid: "67970068"
   
 ## <a name="fields"></a>フィールド  
   
-|[オブジェクト名]|[説明]|  
+|Name|説明|  
 |----------|-----------------|  
 |[SSTRANSTIGHTLYCPLD](../../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md)|XA ブランチ トランザクション ID (XID) は異なるが、グローバル トランザクション ID (GTRID) が同じである、密に結合された XA トランザクションを許可するために使用します。|  
   
@@ -39,7 +39,7 @@ ms.locfileid: "67970068"
   
 ## <a name="methods"></a>メソッド  
   
-|[オブジェクト名]|[説明]|  
+|Name|説明|  
 |----------|-----------------|  
 |[commit](../../../connect/jdbc/reference/commit-method-sqlserverxaresource.md)|渡された Xid オブジェクトによって指定されたグローバル トランザクションをコミットします。|  
 |[end](../../../connect/jdbc/reference/end-method-sqlserverxaresource.md)|トランザクション ブランチのために実行していた処理を終了します。|  
@@ -47,7 +47,7 @@ ms.locfileid: "67970068"
 |[getTransactionTimeout](../../../connect/jdbc/reference/gettransactiontimeout-method-sqlserverxaresource.md)|[SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md) オブジェクトに設定された現在のトランザクション タイムアウト値を取得します。|  
 |[isSameRM](../../../connect/jdbc/reference/issamerm-method-sqlserverxaresource.md)|対象オブジェクトが表すリソース マネージャー インスタンスと、渡された XAResource オブジェクトが表すリソース マネージャー インスタンスとが同一であるかどうかを示します。|  
 |[prepare](../../../connect/jdbc/reference/prepare-method-sqlserverxaresource.md)|渡された Xid オブジェクトによって指定されたトランザクションのコミットに対する準備を行うように、リソース マネージャーに要求します。|  
-|[復元 (recover)](../../../connect/jdbc/reference/recover-method-sqlserverxaresource.md)|準備されたトランザクション ブランチの一覧を、リソース マネージャーから取得します。|  
+|[recover](../../../connect/jdbc/reference/recover-method-sqlserverxaresource.md)|準備されたトランザクション ブランチの一覧を、リソース マネージャーから取得します。|  
 |[rollback](../../../connect/jdbc/reference/rollback-method-sqlserverxaresource.md)|トランザクション ブランチのために実行した処理をロールバックするように、リソース マネージャーに要求します。|  
 |[setTransactionTimeout](../../../connect/jdbc/reference/settransactiontimeout-method-sqlserverxaresource.md)|[SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md) オブジェクトの現在のトランザクション タイムアウト値を設定します。|  
 |[start](../../../connect/jdbc/reference/start-method-sqlserverxaresource.md)|Xid オブジェクトで指定されたトランザクション ブランチのために処理を開始します。|  

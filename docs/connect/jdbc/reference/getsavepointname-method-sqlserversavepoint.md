@@ -1,5 +1,5 @@
 ---
-title: getSavepointName メソッド (SQLServerSavepoint) |Microsoft Docs
+title: getSavepointName メソッド (SQLServerSavepoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 6affbe5c-e836-4195-a3ba-1892cbf81907
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8fe7df1dcba7762cded47fb5483e017ed6851054
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980217"
 ---
 # <a name="getsavepointname-method-sqlserversavepoint"></a>getSavepointName メソッド (SQLServerSavepoint)
@@ -40,8 +40,8 @@ public java.lang.String getSavepointName()
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この getSavepointName メソッドは、java. .sql. Savepoint インターフェイスの getSavepointName メソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この getSavepointName は、java.sql.Savepoint インターフェイスの getSavepointName メソッドで指定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerSavepoint のメソッド](../../../connect/jdbc/reference/sqlserversavepoint-methods.md)   

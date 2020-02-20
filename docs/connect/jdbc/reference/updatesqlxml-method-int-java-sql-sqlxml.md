@@ -1,5 +1,5 @@
 ---
-title: アップデートの Qlxml メソッド (int, java .sql. SQLXML) |Microsoft Docs
+title: updateSQLXML (int, java.sql.SQLXML) メソッド | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: b5170751-fbe1-433b-96f5-4f237ba55f60
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ee90c33b2b546a3eaf48d52b7577200b7c23306b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67998280"
 ---
 # <a name="updatesqlxml-method-int-javasqlsqlxml"></a>updateSQLXML (int, java.sql.SQLXML) メソッド
@@ -42,8 +42,8 @@ public void updateSQLXML(int columnIndex,
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- このアップデートの Qlxml メソッドは、java. ResultSet インターフェイスのアップデートの Qlxml メソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この updateSQLXML メソッドは、java.sql.ResultSet インターフェイスの updateSQLXML メソッドで指定されています。  
   
 ## <a name="see-also"></a>参照  
  [updateSQLXML メソッド &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatesqlxml-method-sqlserverresultset.md)   

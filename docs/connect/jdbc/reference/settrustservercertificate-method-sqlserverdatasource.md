@@ -1,5 +1,5 @@
 ---
-title: setTrustServerCertificate メソッド (SQLServerDataSource) |Microsoft Docs
+title: setTrustServerCertificate メソッド (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 6c37b518-147e-4cd9-9eff-b48a3f5888c6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bd4059c3562d679e4f5f8bfdd133ca69a62c1fd2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67972211"
 ---
 # <a name="settrustservercertificate-method-sqlserverdatasource"></a>setTrustServerCertificate メソッド (SQLServerDataSource)
@@ -39,8 +39,8 @@ public void setTrustServerCertificate(boolean trustServerCertificate)
   
  通信レイヤーが SSL で暗号化されているときに、サーバーの SSL (Secure Sockets Layer) 証明書が自動的に信頼されるようにする場合は、**true** です。 それ以外の場合は、 **false**です。  
   
-## <a name="remarks"></a>Remarks  
- trustServerCertificate プロパティが **true** に設定されている場合、通信レイヤーが SSL で暗号化されているときに、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の SSL 証明書が自動的に信頼されます。 つまり、[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] によって [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の SSL 証明書は検証されません。 既定値は **false**です。  
+## <a name="remarks"></a>解説  
+ trustServerCertificate プロパティが **true** に設定されている場合、通信レイヤーが SSL で暗号化されているときに、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の SSL 証明書が自動的に信頼されます。 つまり、[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] によって [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の SSL 証明書は検証されません。 既定値は **false** です。  
   
  trustServerCertificate プロパティが **false** に設定されている場合は、[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] によってサーバーの SSL 証明書が検証されます。  
   

@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_fetch |Microsoft Docs
+title: sqlsrv_fetch | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: a5a640a1-6e7d-452e-8b66-850a4dc2ce89
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 32b095c37f6a0b039e0836da4508ed8cbfe5fd3b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015017"
 ---
-# <a name="sqlsrvfetch"></a>sqlsrv_fetch
+# <a name="sqlsrv_fetch"></a>sqlsrv_fetch
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 結果セットの次の行を読み取り可能にします。 [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) を使用して、行のフィールドを読み取ります。  
@@ -37,12 +37,12 @@ sqlsrv_fetch( resource $stmt[, row[, ]offset])
 ```  
   
 #### <a name="parameters"></a>パラメーター  
-*$stmt*: 実行されたステートメントに対応するステートメント リソースです。  
+*$stmt*: 実行されたステートメントに対応するステートメント リソース。  
   
 > [!NOTE]  
 > 結果を取得するには、ステートメントを実行する必要があります。 ステートメントを実行する方法の詳細については、「 [sqlsrv_query](../../connect/php/sqlsrv-query.md) 」と「 [sqlsrv_execute](../../connect/php/sqlsrv-execute.md)」を参照してください。  
   
-*row* [省略可能]: 次の値のいずれかで、スクロール可能なカーソルを使用して結果セットにアクセスする行を指定します。  
+*row* [省略可能]: 次の値のいずれかであり、スクロール可能なカーソルを使用する結果セットでアクセスする行を指定します。  
   
 -   SQLSRV_SCROLL_NEXT  
   
@@ -58,7 +58,7 @@ sqlsrv_fetch( resource $stmt[, row[, ]offset])
   
 これらの値の詳細については、「 [カーソルの種類を指定し、行を選択する](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)」を参照してください。  
   
-*offset* [省略可能]: SQLSRV_SCROLL_ABSOLUTE と SQLSRV_SCROLL_RELATIVE と共に使用し、取得する行を指定します。 結果セットの最初のレコードは 0 です。  
+*offset* [省略可能]: SQLSRV_SCROLL_ABSOLUTE および SQLSRV_SCROLL_RELATIVE と共に使用して、取得する行を指定します。 結果セットの最初のレコードは 0 です。  
   
 ## <a name="return-value"></a>戻り値  
 結果セットの次の行が正常に取得された場合は、 **true** が返されます。 結果セットに他に結果がない場合は、 **null** が返されます。 エラーが発生した場合は、 **false** が返されます。  

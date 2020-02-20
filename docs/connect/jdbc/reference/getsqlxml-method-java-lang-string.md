@@ -11,10 +11,10 @@ ms.assetid: f56b192a-3255-4215-b552-8e494fbca083
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 125584fd3ad858a4242f6d85e755b3ec04e50ab1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979644"
 ---
 # <a name="getsqlxml-method-javalangstring"></a>getSQLXML (java.lang.String) メソッド
@@ -35,12 +35,12 @@ public final java.sql.SQLXML getSQLXML(java.lang.String parameterName)
  パラメーターの名前を示す **String** です。  
   
 ## <a name="return-value"></a>戻り値  
- ASQLXMLobject。  
+ ASQLXML オブジェクト。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この getSQLXML メソッドは、java.sql.CallableStatement インターフェイスの getSQLXML メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  

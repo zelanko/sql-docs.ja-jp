@@ -1,5 +1,5 @@
 ---
-title: ownInsertsAreVisible メソッド (SQLServerDatabaseMetaData) |Microsoft Docs
+title: ownInsertsAreVisible メソッド (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 9fe76aa3-a539-4335-822f-69cc35a9e7e0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a78b6d90c58f7d04f5a3d9f6c8225cf592153d2d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67976531"
 ---
 # <a name="owninsertsarevisible-method-sqlserverdatabasemetadata"></a>ownInsertsAreVisible メソッド (SQLServerDatabaseMetaData)
@@ -63,8 +63,8 @@ public boolean ownInsertsAreVisible(int type)
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この ownInsertsAreVisible メソッドは、ownInsertsAreVisible メソッドによって、java メタデータインターフェイスで指定されます。  
+## <a name="remarks"></a>解説  
+ この ownInsertsAreVisible メソッドは、java.sql.DatabaseMetaData インターフェイスの ownInsertsAreVisible メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

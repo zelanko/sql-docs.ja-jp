@@ -1,5 +1,5 @@
 ---
-title: SQLServerPreparedStatement クラス |Microsoft Docs
+title: SQLServerPreparedStatement クラス | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: a8481c06-fbba-432b-8c69-4f4619c20ad4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 96d2e01d4ca8d38b79906ee31cc5b50df0d8cb25
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67970760"
 ---
 # <a name="sqlserverpreparedstatement-class"></a>SQLServerPreparedStatement クラス
@@ -24,7 +24,7 @@ ms.locfileid: "67970760"
   
  **パッケージ:** com.microsoft.sqlserver.jdbc  
   
- **継承:** SQLServerStatement  
+ **拡張:** SQLServerStatement  
   
  **実装:** [ISQLServerPreparedStatement](../../../connect/jdbc/reference/isqlserverpreparedstatement-interface.md)  
   
@@ -35,12 +35,12 @@ ms.locfileid: "67970760"
 public class SQLServerPreparedStatement  
 ```  
   
-## <a name="remarks"></a>Remarks  
- SQLServerPreparedStatement は、任意の Java ネイティブ型および多数の Java オブジェクト型としてパラメーターを指定できるメソッドを提供します。 SQLServerPreparedStatement は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **sp_prepare** ストアド プロシージャを使用してステートメントを準備し、それ以降のそのステートメントの実行は、返されたステートメント ハンドルを再利用し、通常はユーザーが提供するさまざまなパラメーターを使用して行われます。  
+## <a name="remarks"></a>解説  
+ SQLServerPreparedStatement は、任意の Java ネイティブ型および多数の Java オブジェクト型としてパラメーターを指定できるメソッドを提供します。 SQLServerPreparedStatement では、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **sp_prepare** ストアド プロシージャを使用してステートメントが準備され、それ以降のそのステートメントの実行は、返されたステートメント ハンドルを再利用し、通常はユーザーが提供するさまざまなパラメーターを使用して行われます。  
   
  SQLServerPreparedStatement ではバッチ処理がサポートされており、準備されたステートメントのセットが単一のデータベースのラウンド トリップで実行され、実行時パフォーマンスが向上します。  
   
- このクラスは、SQLServerPreparedStatement クラス、ISQLServerPreparedStatement インターフェイス、PreparedStatement インターフェイス、およびラップ解除用に SQLServerStatement によってサポートされるクラスとインターフェイスへのラップをサポートしています。 詳細については、「[ラッパーとインターフェイス](../../../connect/jdbc/wrappers-and-interfaces.md)」を参照してください。  
+ このクラスでは、SQLServerPreparedStatement クラス、ISQLServerPreparedStatement インターフェイス、java.sql.PreparedStatement インターフェイス、および SQLServerStatement によってラップ解除がサポートされているクラスとインターフェイスへのラップ解除がサポートされます。 詳細については、「[ラッパーとインターフェイス](../../../connect/jdbc/wrappers-and-interfaces.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerPreparedStatement のメンバー](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   

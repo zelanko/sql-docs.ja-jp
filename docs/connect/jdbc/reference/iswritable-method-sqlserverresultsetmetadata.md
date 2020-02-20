@@ -16,10 +16,10 @@ ms.assetid: 50846aa8-e4e5-4fc3-a638-0e5fa8b597be
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8d5a22e4fa9a3bd27da1862b0157324e3fbe9098
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977012"
 ---
 # <a name="iswritable-method-sqlserverresultsetmetadata"></a>isWritable メソッド (SQLServerResultSetMetaData)
@@ -45,8 +45,8 @@ public boolean isWritable(int column)
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この isWritable 可能メソッドは、java. ResultSetMetaData インターフェイスの isWritable 可能メソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この isWritable メソッドは、java.sql.ResultSetMetaData インターフェイスの isWritable メソッドで指定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerResultSetMetaData メソッド](../../../connect/jdbc/reference/sqlserverresultsetmetadata-methods.md)   

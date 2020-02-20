@@ -11,10 +11,10 @@ ms.assetid: 8bcf9eda-b36c-480c-8bf2-91c392d5a0ee
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0596c93f17b2a5179e51055152cc2e126ade1e1f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979652"
 ---
 # <a name="getsqlxml-method-sqlservercallablestatement"></a>getSQLXML メソッド (SQLServerCallableStatement)
@@ -24,9 +24,9 @@ ms.locfileid: "67979652"
   
 ## <a name="overload-list"></a>オーバーロードの一覧  
   
-|[オブジェクト名]|[説明]|  
+|Name|説明|  
 |----------|-----------------|  
-|[getSQLXML メソッド&#40;int&#41;](../../../connect/jdbc/reference/getsqlxml-method-int.md)|パラメーターに渡されたインデックスを使用して、指定されたパラメーターの値を SQLXML オブジェクトとして取得します。|  
+|[getSQLXML メソッド &#40;int&#41;](../../../connect/jdbc/reference/getsqlxml-method-int.md)|パラメーターに渡されたインデックスを使用して、指定されたパラメーターの値を SQLXML オブジェクトとして取得します。|  
 |[getSQLXML メソッド &#40;java.lang.String&#41;](../../../connect/jdbc/reference/getsqlxml-method-java-lang-string.md)|渡されたパラメーター名を使用して、指定されたパラメーターの値を SQLXML オブジェクトとして取得します。|  
   
 ## <a name="see-also"></a>参照  

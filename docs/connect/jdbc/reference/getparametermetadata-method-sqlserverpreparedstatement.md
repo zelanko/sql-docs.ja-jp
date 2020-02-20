@@ -16,10 +16,10 @@ ms.assetid: c2876dec-ce29-4b61-9d74-ec3173b8cba5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a24871c504be10e766bbbec59a8f03f98cb5e00c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980982"
 ---
 # <a name="getparametermetadata-method-sqlserverpreparedstatement"></a>getParameterMetaData メソッド (SQLServerPreparedStatement)
@@ -40,8 +40,8 @@ public final java.sql.ParameterMetaData getParameterMetaData()
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この getParameterMetaData メソッドは、PreparedStatement インターフェイスの getParameterMetaData メソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この getParameterMetaData メソッドは、java.sql.PreparedStatement インターフェイスの getParameterMetaData メソッドで指定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerPreparedStatement のメンバー](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   

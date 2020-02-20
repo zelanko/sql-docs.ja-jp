@@ -16,10 +16,10 @@ ms.assetid: 66eb4e10-c375-4b31-ac46-3ba1d9dbf6a0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e1f13c3fedc3cfaa0645eec5a769ed482b339563
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67976002"
 ---
 # <a name="previous-method-sqlserverresultset"></a>previous メソッド (SQLServerResultSet)
@@ -35,13 +35,13 @@ public boolean previous()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- 新しい現在の行が有効な場合は**true**を指定します。 処理する行がなくなった場合は**false** 。  
+ 新しい現在の行が有効な場合は **true**。 処理する行がなくなった場合は **false**。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この前のメソッドは、前の手順で指定した、java. ResultSet インターフェイスのメソッドです。  
+## <a name="remarks"></a>解説  
+ この previous メソッドは、java.sql.ResultSet インターフェイスの previous メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerResultSet のメンバー](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

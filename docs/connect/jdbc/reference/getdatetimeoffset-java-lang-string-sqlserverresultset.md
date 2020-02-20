@@ -11,10 +11,10 @@ ms.assetid: e585927c-0dee-43fd-b71e-c9f1701790bd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a929b5869e58f4f1207b14474302fdb247251850
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67983858"
 ---
 # <a name="getdatetimeoffsetjavalangstring-sqlserverresultset"></a>getDateTimeOffset(java.lang.string) (SQLServerResultSet)
@@ -37,13 +37,13 @@ public microsoft.sql.DateTimeOffset getDateTimeOffset(String columnName)
  列の名前です。  
   
 ## <a name="return-value"></a>戻り値  
- [DateTimeOffset クラス](../../../connect/jdbc/reference/datetimeoffset-class.md)オブジェクト。  
+ [DateTimeOffset クラス](../../../connect/jdbc/reference/datetimeoffset-class.md) オブジェクト。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- SQLServerResultSet を使用して、 [DateTimeOffset クラス](../../../connect/jdbc/reference/datetimeoffset-class.md)の値を更新できます[。](../../../connect/jdbc/reference/updatedatetimeoffset-sqlserverresultset.md)  
+## <a name="remarks"></a>解説  
+ [DateTimeOffset クラス](../../../connect/jdbc/reference/datetimeoffset-class.md)値は [SQLServerResultSet.updateDateTimeOffset](../../../connect/jdbc/reference/updatedatetimeoffset-sqlserverresultset.md) を使用して取得できます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerResultSet のメンバー](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

@@ -16,10 +16,10 @@ ms.assetid: b50a920c-3839-40f0-9411-c60bbc2a9f34
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 32a541ae426a450c23af98cf47fba3f3fff85f1b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975254"
 ---
 # <a name="setbigdecimal-method-sqlservercallablestatement"></a>setBigDecimal メソッド (SQLServerCallableStatement)
@@ -47,8 +47,8 @@ public void setBigDecimal(java.lang.String sCol,
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この setBigDecimal メソッドは、java. sql. CallableStatement インターフェイスの setBigDecimal メソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この setBigDecimal メソッドは、java.sql.CallableStatement インターフェイスの setBigDecimal メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerCallableStatement のメンバー](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   

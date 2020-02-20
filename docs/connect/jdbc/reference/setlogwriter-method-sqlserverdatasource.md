@@ -1,5 +1,5 @@
 ---
-title: setLogWriter メソッド (SQLServerDataSource) |Microsoft Docs
+title: setLogWriter メソッド (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 7a77d8ef-2211-4bf8-af35-020fc896c073
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1adddf442f9d2b6ff84f955cf4e448a31e6741da
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974083"
 ---
 # <a name="setlogwriter-method-sqlserverdatasource"></a>setLogWriter メソッド (SQLServerDataSource)
@@ -37,10 +37,10 @@ public void setLogWriter(java.io.PrintWriter out)
 #### <a name="parameters"></a>パラメーター  
  *out*  
   
- PrintWriter オブジェクトです。  
+ PrintWriter オブジェクト。  
   
-## <a name="remarks"></a>Remarks  
- この setLogWriter メソッドは、javax.mail インターフェイスの setLogWriter メソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この setLogWriter メソッドは、javax.sql.DataSource インターフェイスの setLogWriter メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDataSource のメンバー](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

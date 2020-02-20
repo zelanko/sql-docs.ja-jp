@@ -1,5 +1,5 @@
 ---
-title: updateBytes (int, byte) メソッドMicrosoft Docs
+title: updateBytes (int, byte) メソッド | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 625f48ba-53d0-45a6-8fcb-643f1e0cbe8a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 60de0b0fd051ed67a2f2804443e419d454c2cb5c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67996907"
 ---
 # <a name="updatebytes-method-int-byte"></a>updateBytes (int, byte) メソッド
@@ -36,18 +36,18 @@ public void updateBytes(int index,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *index*  
+ *インデックス*  
   
  列インデックスを示す **int** です。  
   
  *x*  
   
- **バイト**値の配列。  
+ **byte** 値の配列。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この updateBytes メソッドは、java.sql.ResultSet インターフェイスの updateBytes メソッドで規定されています。  
   
  以前のバージョンの [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] では、SQLServerResultSet.updateBytes を使用してバイト配列と [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データ型の **date**、**time**、**datetime2**、または **datetimeoffset** との間の変換を実行できました。 新しいバージョンでは、これらのデータ型に対してこのメソッドを使用すると、変換がサポートされていないことを示す例外が発生します。  

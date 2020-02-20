@@ -11,10 +11,10 @@ ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 04a179492b151e664dfe31f4fe4e51c5440fcef5
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027788"
 ---
 # <a name="release-notes-for-the-microsoft-jdbc-driver"></a>Microsoft JDBC Driver のリリース ノート
@@ -24,35 +24,35 @@ ms.locfileid: "69027788"
 この記事では、_Microsoft JDBC Driver for SQL Server_ のリリースを示します。 リリース バージョンごとに、変更された点とそれに関する説明が示されています。
 ## <a name="741"></a>7.4.1
 
-### <a name="compliance"></a>準拠
+### <a name="compliance"></a>コンプライアンス
 
-2019年8月2日
+2019 年 8 月 2 日
 
 | コンプライアンスの変更 | 詳細 |
 | :---------------- | :------ |
-| JDBC Driver 7.4 用の最新の更新のダウンロード。 | &bull; &nbsp; [Microsoft ダウンロード センター](https://go.microsoft.com/fwlink/?linkid=2099962)<br/>&bull; &nbsp; [7.4.1 (GitHub)](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.4.1)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
+| JDBC Driver 7.4 用の最新の更新のダウンロード。 | &bull; &nbsp; [Microsoft ダウンロード センター](https://go.microsoft.com/fwlink/?linkid=2099962)<br/>&bull; &nbsp; [GitHub, 7.4.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.4.1)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
 | JDBC API 仕様 4.2 への完全準拠。 | 7\.4 パッケージ内の jar は Java のバージョンの互換性に従って名前付けされています。<br/><br/>たとえば、7.4 パッケージの mssql-jdbc-7.4.1.jre11.jar ファイルは、Java 11 で使用する必要があります。 |
-| Java Development Kit (JDK) バージョン12.0、11.0、および1.8 と互換性があります。 | Microsoft JDBC Driver 7.4 for SQL Server は、JDK 11.0 と 1.8 に加え、Java Development Kit (JDK) バージョン 12.0 と互換性を持つようになりました。 |
+| Java Development Kit (JDK) バージョン 12.0、11.0 および 1.8 と互換性があります。 | Microsoft JDBC Driver 7.4 for SQL Server は、JDK 11.0 と 1.8 に加え、Java Development Kit (JDK) バージョン 12.0 と互換性を持つようになりました。 |
 | &nbsp; | &nbsp; |
 
 ### <a name="support-for-jdk-12"></a>JDK 12 のサポート
 
 Microsoft JDBC Driver 7.4 for SQL Server は、JDK 11.0 と 1.8 に加え、Java Development Kit (JDK) バージョン 12.0 と互換性を持つようになりました。
 
-### <a name="introduces-ntlm-authentication"></a>NTLM 認証について説明します。
+### <a name="introduces-ntlm-authentication"></a>NTLM 認証の導入
 
 | NTLM の変更 | 詳細 |
 | :--------- | :------ |
-| NTLM 認証モードをサポートします。 | この認証モードでは、windows クライアントと Windows 以外のクライアントの両方が Windows ドメインユーザーを使用して SQL Server に対して認証を行うことができます。 |
-| この認証モードを使用するための詳細とサンプル アプリケーション。 | 「 [NTLM 認証を使用](../../connect/jdbc/using-ntlm-authentication-to-connect-to-sql-server.md)した接続」を参照してください。 |
+| NTLM 認証モードのサポート。 | この認証モードでは、Windows クライアントと Windows 以外のクライアントの両方が Windows ドメイン ユーザーを使用して SQL Server に対して自身の認証を行うことができます。 |
+| この認証モードを使用するための詳細とサンプル アプリケーション。 | [NTLM 認証を使用した接続](../../connect/jdbc/using-ntlm-authentication-to-connect-to-sql-server.md)に関するページを参照してください。 |
 | &nbsp; | &nbsp; |
 
-### <a name="introduces-querying-parametermetadata-via-_usefmtonly_"></a>_UseFmtOnly_を使用した parametermetadata のクエリについて説明します。
+### <a name="introduces-querying-parametermetadata-via-_usefmtonly_"></a>_useFmtOnly_ を使用した ParameterMetaData のクエリの導入
 
 | useFmtOnly の変更 | 詳細 |
 | :---------- | :------ |
-| **useFmtOnly**接続プロパティが追加されました。 | この機能により、ユーザーは必要に応じて`SET FMTONLY ON` 、レガシ API を使用して parametermetadata を照会できます。 これは、が期待どおり`sp_describe_undeclared_parameters`に動作しないシナリオに役立ちます。 |
-| 詳細と制限事項についてはこちらを参照してください。 | 「[useFMTOnly の使用](../../connect/jdbc/using-usefmtonly.md)」をご覧ください |
+| **useFmtOnly** 接続プロパティの追加。 | この機能を使用すると、ユーザーは `SET FMTONLY ON` レガシ API を使用して必要に応じて ParameterMetaData にクエリを実行できます。 これは、`sp_describe_undeclared_parameters` が想定どおりに実行されないシナリオに役立ちます。 |
+| 詳細と制限。 | 「[useFMTOnly の使用](../../connect/jdbc/using-usefmtonly.md)」をご覧ください |
 | &nbsp; | &nbsp; |
 
 ### <a name="updated-_microsoft-azure-key-vault-sdk-for-java_-version-121"></a>_Microsoft Azure Key Vault SDK for Java_ を更新 (バージョン 1.2.1)
@@ -69,18 +69,18 @@ Microsoft JDBC Driver 7.4 for SQL Server は、JDK 11.0 と 1.8 に加え、Java
 | 既知の問題 | 詳細 |
 | :----------- | :------ |
 | NTLM 認証を使用するとき。 | 現在、拡張保護と暗号化された接続を同時に有効化することはできません。 |
-| useFmtOnly を使用するとき。 | SQL の解析ロジックの欠陥に起因する、いくつかの機能のイシューがあります。 詳細と回避策の提案については、「 [Using useFmtOnly](../../connect/jdbc/using-usefmtonly.md) 」を参照してください。 |
+| useFmtOnly を使用するとき。 | SQL の解析ロジックの欠陥に起因する、いくつかの機能のイシューがあります。 詳細と回避策の提案については、[useFmtOnly の使用](../../connect/jdbc/using-usefmtonly.md)に関するページを参照してください。 |
 | &nbsp; | &nbsp; |
 
 ## <a name="722"></a>7.2.2
 
-### <a name="compliance"></a>準拠
+### <a name="compliance"></a>コンプライアンス
 
 2019 年 4 月 16 日
 
 | コンプライアンスの変更 | 詳細 |
 | :---------------- | :------ |
-| JDBC Driver 7.2 用の最新の更新のダウンロード。 | &bull; &nbsp; [Microsoft ダウンロード センター](https://go.microsoft.com/fwlink/?linkid=2063159)<br/>&bull; &nbsp; [7.2.2 (GitHub)](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.2)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
+| JDBC Driver 7.2 用の最新の更新のダウンロード。 | &bull; &nbsp; [Microsoft ダウンロード センター](https://go.microsoft.com/fwlink/?linkid=2063159)<br/>&bull; &nbsp; [GitHub, 7.2.2](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.2)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
 | JDBC API 仕様 4.2 への完全準拠。 | 7\.2 パッケージ内の jar は Java のバージョンの互換性に従って名前付けされています。<br/><br/>たとえば、7.2 パッケージの mssql-jdbc-7.2.2.jre11.jar ファイルは、Java 11 で使用する必要があります。 |
 | Java Development Kit (JDK) バージョン 11.0 および JDK 1.8 と互換性があります。 | Microsoft JDBC Driver 7.2 for SQL Server は、JDK 1.8 に加え、Java Development Kit (JDK) バージョン 11.0 と互換性を持つようになりました。 |
 | &nbsp; | &nbsp; |
@@ -195,7 +195,7 @@ public SQLServerColumnEncryptionAzureKeyVaultProvider(
             SQLServerKeyVaultAuthenticationCallback authenticationCallback) throws SQLServerException;
 ```
 
-### <a name="updated-microsoft-azure-active-directory-authentication-library-adal4j-for-java-version-160"></a>"Microsoft Azure Active Directory Authentication Library (ADAL4J) for Java" バージョン: 1.6.0 に更新
+### <a name="updated-microsoft-azure-active-directory-authentication-library-adal4j-for-java-version-160"></a>"Microsoft Azure Active Directory 認証ライブラリ (ADAL4J) for Java" の更新、バージョン:1.6.0
 
 Microsoft JDBC Driver 7.0 for SQL Server では、"Java 用 Microsoft Azure Active Directory 認証ライブラリ (ADAL4J)" に関する Maven の依存関係が 1.6.0 に更新されています。 依存関係の詳細については、「[Microsoft JDBC Driver for SQL Server の機能の依存関係](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)」をご覧ください。
 
@@ -213,7 +213,7 @@ Microsoft JDBC Driver 6.4 for SQL Server は、JDBC 仕様 4.1 および 4.2 に
 
 ### <a name="added-connection-property-sslprotocol"></a>接続プロパティ sslProtocol を追加
 
-新しい接続プロパティを使用して、TLS プロトコルのキーワードを指定できます。 指定できる値は、"TLS"、"TLSv1"、"TLSv1.1"、および "TLSv1.2" です。 詳細については、「[SSLProtocol](https://github.com/Microsoft/mssql-jdbc/wiki/SSLProtocol)」を参照してください。
+新しい接続プロパティを使用して、TLS プロトコルのキーワードを指定できます。 次のいずれかの値になります。"TLS"、"TLSv1"、"TLSv 1.1"、および "TLSv 1.2"。 詳細については、「[SSLProtocol](https://github.com/Microsoft/mssql-jdbc/wiki/SSLProtocol)」を参照してください。
 
 ### <a name="deprecated-connection-property-fipsprovider"></a>非推奨の接続プロパティ fipsProvider
 
@@ -251,7 +251,7 @@ JDBC Driver では、パフォーマンスを向上させるための準備さ�
 
 JDBC ドライバーでは、サポート対象のすべてのオペレーティング システム (Windows、Linux、Mac) 上で Kerberos を使った Azure Active Directory (Azure AD) 統合認証がサポートされるようになりました。 別の方法として、Windows オペレーティング システムでは sqljdbc_auth.dll を使用して認証できます。
 
-### <a name="updated-microsoft-azure-active-directory-authentication-library-adal4j-for-java-version-140"></a>"Microsoft Azure Active Directory Authentication Library (ADAL4J) for Java" バージョン: 1.4.0 に更新
+### <a name="updated-microsoft-azure-active-directory-authentication-library-adal4j-for-java-version-140"></a>"Microsoft Azure Active Directory 認証ライブラリ (ADAL4J) for Java" の更新、バージョン:1.4.0
 
 SQL Server 用 Microsoft JDBC Driver 7.0 では、"Microsoft Azure Active Directory 認証ライブラリ (ADAL4J) for Java" に関する Maven の依存関係が 1.4.0 に更新されています。 依存関係の詳細については、「[Microsoft JDBC Driver for SQL Server の機能の依存関係](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)」をご覧ください。
 
@@ -297,7 +297,7 @@ Microsoft JDBC Driver 6.1 for SQL Server は、JDBC 仕様 4.1 および 4.2 に
 
 Microsoft JDBC Driver 6.0 for SQL Server は、JDBC 仕様 4.1 および 4.2 に完全に準拠しています。 6\.0 パッケージ内の Jar は、JDBC API のバージョンの準拠に従って名前付けされています。 たとえば、6.0 パッケージの sqljdbc42.jar ファイルは、JDBC API 4.2 準拠です。 同様に、sqljdbc41.jar ファイルは、JDBC API 4.1 準拠です。
 
-適切な sqljdbc42.jar または sqljdbc41.jar ファイルがあることを確認するには、次のコード行を実行します。 出力が "Driver version: 6.0.7507.100" であれば、JDBC Driver 6.0 パッケージがあります。
+適切な sqljdbc42.jar または sqljdbc41.jar ファイルがあることを確認するには、次のコード行を実行します。 出力が "Driver version:6.0.7507.100" であれば、JDBC Driver 6.0 パッケージがあります。
 
 ```java
 Connection conn = DriverManager.getConnection("jdbc:sqlserver://<server>;user=<user>;password=<password>;");
@@ -312,7 +312,7 @@ System.out.println("Driver version: " + conn.getMetaData().getDriverVersion());
 
 ドライバーでは、サーバー名に関する国際化ドメイン名 (IDN) がサポートされます。 詳細については、記事「[International features of the JDBC Driver (JDBC Driver の国際化機能)](../../connect/jdbc/international-features-of-the-jdbc-driver.md)」の「Using International Domain Names (国際化ドメイン名の使用)」を参照してください。
 
-### <a name="parameterized-queries"></a>パラメーター化クエリ
+### <a name="parameterized-queries"></a>パラメーター化されたクエリ
 
 ドライバーで、サブクエリや結合など、複雑なクエリのために準備されたステートメントを使ったパラメーター メタデータの取得がサポートされました。 この機能強化を使用できるのは、SQL Server 2012 以降のバージョンを使用している場合のみであることに注意してください。
 
@@ -334,7 +334,7 @@ TVP は、複数行のデータをクライアント アプリケーションか
 
 Microsoft JDBC Driver 4.2 for SQL Server は、JDBC 仕様 4.1 および 4.2 に完全に準拠しています。 4\.2 パッケージ内の Jar は、JDBC API のバージョンの準拠に従って名前付けされています。 たとえば、4.2 パッケージの sqljdbc42.jar ファイルは、JDBC API 4.2 準拠です。 同様に、sqljdbc41.jar ファイルは、JDBC API 4.1 準拠です。
 
-適切な sqljdbc42.jar または sqljdbc41.jar ファイルがあることを確認するには、次のコード行を実行します。 出力が "Driver version: 4.2.6420.100" であれば、JDBC Driver 4.2 パッケージがあります。
+適切な sqljdbc42.jar または sqljdbc41.jar ファイルがあることを確認するには、次のコード行を実行します。 出力が "Driver version:4.2.6420.100" であれば、JDBC Driver 4.2 パッケージがあります。
 
 ```java
 Connection conn = DriverManager.getConnection("jdbc:sqlserver://<server>;user=<user>;password=<password>;");

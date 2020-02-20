@@ -1,5 +1,5 @@
 ---
-title: updateNString メソッド (int, java lang.ini) |Microsoft Docs
+title: updateNString (int, java.lang.String) メソッド | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 1bb909f1-4a96-4be1-adea-36c8d9703112
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 90aa44eda2af60ffdc73a65e01b3ae12b949d79f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67998796"
 ---
 # <a name="updatenstring-method-int-javalangstring"></a>updateNString (int, java.lang.String) メソッド
@@ -37,15 +37,15 @@ public void updateNString(int columnIndex,
   
  *nString*  
   
- **文字列**オブジェクト。  
+ **String** オブジェクト。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この updateNString メソッドは、java.sql.ResultSet インターフェイスの updateNString メソッドで規定されています。  
   
- このメソッドは、選択した**nchar**、 **nvarchar (max)** 、 **ntext**、および**xml**列に Java**文字列**を渡します。 このメソッドを他のデータ型の列で使用すると、例外がスローされます。  
+ このメソッドは、Java **String** を、選択した **nchar** 列、**nvarchar(max)** 列、**ntext** 列、および **xml** 列に渡します。 このメソッドを他のデータ型の列で使用すると、例外がスローされます。  
   
 ## <a name="see-also"></a>参照  
  [updateNString メソッド &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatenstring-method-sqlserverresultset.md)   

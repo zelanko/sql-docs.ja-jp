@@ -1,5 +1,5 @@
 ---
-title: isNullable メソッド (SQLServerParameterMetaData) |Microsoft Docs
+title: isNullable メソッド (SQLServerParameterMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: d7e07cff-6fc4-4c9c-8e8f-838c77734bc5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f340a182da1cd232aab70e61c268ba6ec58633db
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977531"
 ---
 # <a name="isnullable-method-sqlserverparametermetadata"></a>isNullable メソッド (SQLServerParameterMetaData)
@@ -51,8 +51,8 @@ public int isNullable(int param)
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この isNullable メソッドは、java. .sql. ParameterMetaData インターフェイスの isNullable メソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この isNullable メソッドは、java.sql.ParameterMetaData インターフェイスの isNullable メソッドで指定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerParameterMetaData のメソッド](../../../connect/jdbc/reference/sqlserverparametermetadata-methods.md)   

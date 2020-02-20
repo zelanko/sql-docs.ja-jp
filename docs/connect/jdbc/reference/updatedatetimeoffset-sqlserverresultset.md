@@ -1,5 +1,5 @@
 ---
-title: updateDateTimeOffset (SQLServerResultSet) |Microsoft Docs
+title: updateDateTimeOffset (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 40d7fced-cce1-4534-b794-71bc735e53e0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ad3e197fb7e2e26a7652cf6a5aa9e6c3d0366cc1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67999068"
 ---
 # <a name="updatedatetimeoffset-sqlserverresultset"></a>updateDateTimeOffset (SQLServerResultSet)
@@ -22,11 +22,11 @@ ms.locfileid: "67999068"
 
   このメソッドは [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0 で追加されました。  
   
- 指定された列の値を[DateTimeOffset クラス](../../../connect/jdbc/reference/datetimeoffset-class.md)の値に更新します。  
+ 指定された列の値が [DateTimeOffset クラス](../../../connect/jdbc/reference/datetimeoffset-class.md)値に更新されます。  
   
 ## <a name="overload-list"></a>オーバーロードの一覧  
   
-|[オブジェクト名]|[説明]|  
+|Name|説明|  
 |----------|-----------------|  
 |[updateDateTimeOffset(int, microsoft.sql.DateTimeOffset)](../../../connect/jdbc/reference/updatedatetimeoffset-int-microsoft-sql-datetimeoffset-sqlserverresultset.md)|0 から始まる列の序数を使用して、指定された列の値を [DateTimeOffset クラス](../../../connect/jdbc/reference/datetimeoffset-class.md)値に更新します。|  
 |[updateDateTimeOffset(string, microsoft.sql.DateTimeOffset)](../../../connect/jdbc/reference/updatedatetimeoffset-string-microsoft-sql-datetimeoffset-sqlserverresultset.md)|列名を使用して、指定された列の値が [DateTimeOffset クラス](../../../connect/jdbc/reference/datetimeoffset-class.md)値に更新します。|  

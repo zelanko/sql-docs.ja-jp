@@ -1,5 +1,5 @@
 ---
-title: 行セット |Microsoft Docs
+title: 行セット | Microsoft Docs
 description: OLE DB Driver for SQL Server の行セット
 ms.custom: ''
 ms.date: 06/14/2018
@@ -17,10 +17,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 23d07cd93ada1d1eeae36b4e4ed104906feef88d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015371"
 ---
 # <a name="rowsets"></a>行セット
@@ -30,7 +30,7 @@ ms.locfileid: "68015371"
 
   行セットとは、データの列を含む行の集まりです。 行セットは、すべての OLE DB データ プロバイダーが表形式で結果セット データを公開できるようにするための重要な機能を持つオブジェクトです。  
   
- コンシューマーでは **IDBCreateSession::CreateSession** メソッドを使用してセッションを作成した後、そのセッションで **IOpenRowset** インターフェイスまたは **IDBCreateCommand** インターフェイスのいずれかを使用して行セットを作成できます。 SQL Server 用の OLE DB ドライバーは、これらのインターフェイスの両方をサポートしています。 ここでは、これら両方のメソッドについて説明します。  
+ コンシューマーでは **IDBCreateSession::CreateSession** メソッドを使用してセッションを作成した後、そのセッションで **IOpenRowset** インターフェイスまたは **IDBCreateCommand** インターフェイスのいずれかを使用して行セットを作成できます。 OLE DB Driver for SQL Server では、これらのインターフェイスの両方がサポートされます。 ここでは、これら両方のメソッドについて説明します。  
   
 -   **IOpenRowset::OpenRowset** メソッドを呼び出して行セットを作成します。  
   

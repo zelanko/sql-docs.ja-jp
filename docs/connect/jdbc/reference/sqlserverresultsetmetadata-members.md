@@ -1,5 +1,5 @@
 ---
-title: SQLServerResultSetMetaData Members |Microsoft Docs
+title: SQLServerResultSetMetaData のメンバー | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 37587981-2979-49a3-a6ab-df4bfb9b8748
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5998d16986c23b351fe565bbad0d84d2619aaa2f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67970520"
 ---
 # <a name="sqlserverresultsetmetadata-members"></a>SQLServerResultSetMetaData のメンバー
@@ -30,13 +30,13 @@ ms.locfileid: "67970520"
   
 ## <a name="inherited-fields"></a>継承されたフィールド  
   
-|[オブジェクト名]|[説明]|  
+|Name|説明|  
 |----------|-----------------|  
 |java.sql.ResultSetMetaData|columnNoNulls、columnNullable、columnNullableUnknown|  
   
 ## <a name="methods"></a>メソッド  
   
-|[オブジェクト名]|[説明]|  
+|Name|説明|  
 |----------|-----------------|  
 |[getCatalogName](../../../connect/jdbc/reference/getcatalogname-method-sqlserverresultsetmetadata.md)|指定した列が含まれるテーブルのカタログ名を取得します。|  
 |[getColumnClassName](../../../connect/jdbc/reference/getcolumnclassname-method-sqlserverresultsetmetadata.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) クラスの [getObject](../../../connect/jdbc/reference/getobject-method-sqlserverresultset.md) メソッドを呼び出して列から値を取得する場合、インスタンスが生成される Java クラスの完全修飾名を返します。|  

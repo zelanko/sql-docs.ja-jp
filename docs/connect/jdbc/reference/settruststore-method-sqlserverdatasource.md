@@ -1,5 +1,5 @@
 ---
-title: setTrustStore メソッド (SQLServerDataSource) |Microsoft Docs
+title: setTrustStore メソッド (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: bab5485d-4547-426c-adbe-44e2b5702d1d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: be54aea70e712d2209c04196d3e450bca488578b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67972194"
 ---
 # <a name="settruststore-method-sqlserverdatasource"></a>setTrustStore メソッド (SQLServerDataSource)
@@ -39,7 +39,7 @@ public void setTrustStore(java.lang.String trustStore)
   
  証明書の trustStore ファイルへのパス (ファイル名を含む) を表す **String** です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  trustStore プロパティが指定されていないか null に設定されている場合、[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] は、信頼マネージャー ファクトリの検索ルールに従って、使用する証明書ストアを決定します。 既定の SunX509 TrustManagerFactory では、次の場所で、この順序に従ってトラスト マテリアルの検索が行われます。  
   
 -   1. Java 仮想マシン (JVM) システム プロパティの "javax.net.ssl.trustStore" で指定されたファイル  

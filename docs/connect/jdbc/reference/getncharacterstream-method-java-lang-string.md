@@ -1,5 +1,5 @@
 ---
-title: Getn; Stream メソッド (java. lang. String) |Microsoft Docs
+title: getNCharacterStream メソッド (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 45d2695b-0727-419d-8921-a51d6feef0aa
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cc5e5e72c4b1aedcc9e10ef74ff2946f2fb2d588
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67981618"
 ---
 # <a name="getncharacterstream-method-javalangstring"></a>getNCharacterStream (java.lang.String) メソッド
@@ -35,15 +35,15 @@ public final java.io.Reader getNCharacterStream(java.lang.String columnLabel)
  列ラベルを含む**文字列**です。  
   
 ## <a name="return-value"></a>戻り値  
- AReaderobject。  
+ Reader オブジェクト。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- **NCHAR**、 **NVARCHAR** 、および**LONGNVARCHAR**パラメーターにアクセスするときは、このメソッドを使用する必要があります。  
+## <a name="remarks"></a>解説  
+ このメソッドは、**NCHAR**、**NVARCHAR**、**LONGNVARCHAR** パラメーターにアクセスするときに使用する必要があります。  
   
- この Getn; Stream メソッドは、java. sql. CallableStatement インターフェイスの getNCharacterStream メソッドによって指定されます。  
+ この getNCharacterStream メソッドは、java.sql.CallableStatement インターフェイスの getNCharacterStream メソッドで指定されています。  
   
 ## <a name="see-also"></a>参照  
  [getNCharacterStream メソッド &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getncharacterstream-method-sqlservercallablestatement.md)   

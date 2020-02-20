@@ -1,5 +1,5 @@
 ---
-title: getHostNameInCertificate メソッド (SQLServerDataSource) |Microsoft Docs
+title: getHostNameInCertificate メソッド (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 45ea04e2-9ea5-4171-9136-d09f8a95e128
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 67978d2597a5167d3930c85ee453dc6d985f021e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67982903"
 ---
 # <a name="gethostnameincertificate-method-sqlserverdatasource"></a>getHostNameInCertificate メソッド (SQLServerDataSource)
@@ -37,7 +37,7 @@ public java.lang.String getHostNameInCertificate()
 ## <a name="return-value"></a>戻り値  
  ホスト名を含む **String** です。値が設定されていない場合は null です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  ホスト名を使用して、通信レイヤーが SSL で暗号化されているときに、SQL Server の SSL 証明書の値を検証します。  
   
  ホスト名が設定されていない場合、[getHostNameInCertificate](../../../connect/jdbc/reference/gethostnameincertificate-method-sqlserverdatasource.md) メソッドは null を返します。  

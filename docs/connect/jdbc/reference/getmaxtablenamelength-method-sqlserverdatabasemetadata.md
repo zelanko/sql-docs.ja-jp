@@ -1,5 +1,5 @@
 ---
-title: getMaxTableNameLength メソッド (SQLServerDatabaseMetaData) |Microsoft Docs
+title: getMaxTableNameLength メソッド (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 5c51218f-c6e8-49f4-ad09-292e849ca43a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: aebb22867f2efb3b31d235f1df9ae73c85bab5e8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67981962"
 ---
 # <a name="getmaxtablenamelength-method-sqlserverdatabasemetadata"></a>getMaxTableNameLength メソッド (SQLServerDatabaseMetaData)
@@ -40,8 +40,8 @@ public int getMaxTableNameLength()
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この getMaxTableNameLength メソッドは、getMaxTableNameLength メソッドによって、java メタデータインターフェイスで指定されます。  
+## <a name="remarks"></a>解説  
+ この getMaxTableNameLength メソッドは、java.sql.DatabaseMetaData インターフェイスの getMaxTableNameLength メソッドで指定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

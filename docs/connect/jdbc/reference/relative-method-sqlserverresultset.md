@@ -16,10 +16,10 @@ ms.assetid: 2bcdbb69-95fd-4ae8-8488-1a75a91fe2e0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5b2e644feff3cd2787cc6bd80bce54562ad20794
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975783"
 ---
 # <a name="relative-method-sqlserverresultset"></a>relative メソッド (SQLServerResultSet)
@@ -45,8 +45,8 @@ public boolean relative(int nRows)
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この相対メソッドは、java. ResultSet インターフェイスの相対メソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この relative メソッドは、java.sql.ResultSet インターフェイスの relative メソッドによって指定されます。  
   
  結果セット内の先頭行または最終行を越えて移動しようとすると、先頭行の前または最終行の後にカーソルが配置されます。 `relative(0)` の呼び出しは有効ですが、カーソルの位置は変更されません。  
   

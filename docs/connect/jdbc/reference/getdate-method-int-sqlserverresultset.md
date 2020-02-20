@@ -16,10 +16,10 @@ ms.assetid: e6b6cfe2-b7c4-4d41-8e09-c68b5086a503
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 12da04a9aa4c3f818960c8683d66e0ca1f1fc31c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67984046"
 ---
 # <a name="getdate-method-int-sqlserverresultset"></a>getDate (int) メソッド (SQLServerResultSet)
@@ -40,12 +40,12 @@ public java.sql.Date getDate(int columnIndex)
  列インデックスを示す **int** です。  
   
 ## <a name="return-value"></a>戻り値  
- Date オブジェクトです。  
+ Date オブジェクト。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この getDate メソッドは、java.sql.ResultSet インターフェイスの getDate メソッドで規定されています。  
   
  このメソッドは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の datetime または smalldatetime データ型の有効な日付部分が返されます。時刻部分は Java のベースラインの時刻である 00:00 (午前 0 時) に設定されます。  

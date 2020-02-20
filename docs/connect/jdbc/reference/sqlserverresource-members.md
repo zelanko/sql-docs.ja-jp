@@ -1,5 +1,5 @@
 ---
-title: SQLServerResource Members |Microsoft Docs
+title: SQLServerResource のメンバー | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 34b4b2e7-ec00-42aa-82ec-9cb01b538998
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d673cf36e3b9ed4d3012e49c620aed8c8e34eb94
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67970635"
 ---
 # <a name="sqlserverresource-members"></a>SQLServerResource のメンバー
@@ -24,7 +24,7 @@ ms.locfileid: "67970635"
   
 ## <a name="constructors"></a>コンストラクター  
   
-|[オブジェクト名]|[説明]|  
+|Name|説明|  
 |----------|-----------------|  
 |[SQLServerResource ()](../../../connect/jdbc/reference/sqlserverresource-constructor.md)|[SQLServerResource](../../../connect/jdbc/reference/sqlserverresource-class.md) クラスの新しいインスタンスを初期化します。 このコンストラクターは内部でのみ使用されます。|  
   
@@ -33,13 +33,13 @@ ms.locfileid: "67970635"
   
 ## <a name="inherited-fields"></a>継承されたフィールド  
   
-|[オブジェクト名]|[説明]|  
+|Name|説明|  
 |----------|-----------------|  
-|java.util.ResourceBundle|親 (parent)|  
+|java.util.ResourceBundle|parent|  
   
 ## <a name="methods"></a>メソッド  
   
-|[オブジェクト名]|[説明]|  
+|Name|説明|  
 |----------|-----------------|  
 |[getContents](../../../connect/jdbc/reference/getcontents-method-sqlserverresource.md)|エラー文字列の情報を取得します。 このメソッドは内部でのみ使用されます。|  
   

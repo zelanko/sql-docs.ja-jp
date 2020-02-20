@@ -1,5 +1,5 @@
 ---
-title: データ型の操作 (JDBC) |Microsoft Docs
+title: データ型の処理 (JDBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: b39f44d0-3710-4bc6-880c-35bd8c10a734
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ee1e64794480346b1742b441437db95b8ae41456
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028295"
 ---
 # <a name="working-with-data-types-jdbc"></a>データ型の処理 (JDBC)
@@ -32,11 +32,11 @@ SQL Server のデータ型を処理するために、JDBC ドライバーには�
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-| トピック                                                                         | [説明]                                                                                                                                                                                                                                                  |
+| トピック                                                                         | 説明                                                                                                                                                                                                                                                  |
 | ----------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | [基本データ型のサンプル](../../../connect/jdbc/code-samples/basic-data-types-sample.md)   | 結果セットの getter メソッドを使用して基本的な [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データ型の値を取得する方法と、結果セットの update メソッドを使用してそれらの値を更新する方法を示しています。                                             |
 | [SQLXML データ型のサンプル](../../../connect/jdbc/code-samples/sqlxml-data-type-sample.md)   | XML データのリレーショナル データベースへの格納、データベースからの XML データの取得、および、XML データの解析を、**SQLXML** Java データ型を使用して行う方法を示しています。                                                                                   |
-| [空間データ型のサンプル](../../../connect/jdbc/code-samples/spatial-data-types-sample.md) | 空間データ型を SQL Server に格納する方法と、これらの型を SQL Server から取得する方法について説明します。 また、新しく定義されたクラスの**Geometry**と**Geography**をドライバーから使用して、これらのデータ型の Java 参照を管理する方法についても説明します。 |
+| [空間データ型のサンプル](../../../connect/jdbc/code-samples/spatial-data-types-sample.md) | 空間データ型を SQL Server に格納する方法と、これらの型を SQL Server から取得する方法について説明します。 また、これらのデータ型の Java 参照を管理するために、ドライバーの新しく定義されたクラスである **Geometry** と**Geography** を使用する方法についても説明します。 |
   
 ## <a name="see-also"></a>参照
 

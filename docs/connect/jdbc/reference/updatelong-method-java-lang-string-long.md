@@ -1,5 +1,5 @@
 ---
-title: updateLong メソッド (java. System.string, long) |Microsoft Docs
+title: updateLong (java.lang.String, long) メソッド | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: f6003706-35de-42b1-8f23-899a388adb5b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 932035288f74c582620108db697cb898c59159bc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67999167"
 ---
 # <a name="updatelong-method-javalangstring-long"></a>updateLong (java.lang.String, long) メソッド
@@ -47,11 +47,11 @@ public void updateLong(java.lang.String columnName,
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この updateLong メソッドは、java.sql.ResultSet インターフェイスの updateLong メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
- [updateLong メソッド&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatelong-method-sqlserverresultset.md)   
+ [updateLong メソッド &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatelong-method-sqlserverresultset.md)   
  [SQLServerResultSet のメンバー](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet クラス](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

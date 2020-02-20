@@ -1,5 +1,5 @@
 ---
-title: setLockTimeout メソッド (SQLServerDataSource) |Microsoft Docs
+title: setLockTimeout メソッド (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 10dca5aa-1851-4326-9ae9-7a8430d12d11
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 95dc93b8695f9bfe464545ab5f1aa6096a4476be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974111"
 ---
 # <a name="setlocktimeout-method-sqlserverdatasource"></a>setLockTimeout メソッド (SQLServerDataSource)
@@ -39,7 +39,7 @@ public void setLockTimeout(int lockTimeout)
   
  待機する時間 (ミリ秒) を含む **int** 値です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  ロック タイムアウトは、データベースがロック タイムアウトを通知するまでに待機する時間 (ミリ秒) です。既定値の -1 は、無制限に待機することを意味します。 値を指定した場合、接続上のすべてのステートメントに対する既定値になります。  
   
 > [!NOTE]  

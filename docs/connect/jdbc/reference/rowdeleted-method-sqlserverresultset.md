@@ -16,10 +16,10 @@ ms.assetid: 9c6db315-e614-4604-b020-41af6a214cc1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 37221f0f9c7cf87576f0014b855ed28740e4818e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975717"
 ---
 # <a name="rowdeleted-method-sqlserverresultset"></a>rowDeleted メソッド (SQLServerResultSet)
@@ -40,8 +40,8 @@ public boolean rowDeleted()
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この rowDeleted メソッドは、java. ResultSet インターフェイスの rowDeleted メソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この rowDeleted メソッドは、java.sql.ResultSet インターフェイスの rowDeleted メソッドによって指定されます。  
   
  削除された行は、結果セット内に可視の穴を残すことがあります。 このメソッドは、結果セット内の穴を検出するために使用できます。 返される値は、この [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトが削除を検出できるかどうかによって異なります。  
   

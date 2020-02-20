@@ -1,5 +1,5 @@
 ---
-title: getSchemas メソッド () |Microsoft Docs
+title: getSchemas () メソッド | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: adba0ee6-ff6d-4215-b646-62c735be3fe9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e0a5f453e6300258cacffa6606259f85cdd25977
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67980082"
 ---
 # <a name="getschemas-method-"></a>getSchemas () メソッド
@@ -40,12 +40,12 @@ public java.sql.ResultSet getSchemas()
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この getSchemas メソッドは、java.sql.DatabaseMetaData インターフェイスの getSchemas メソッドで規定されています。  
   
- GetSchemas メソッドによって返される結果セットには、次の情報が含まれています。  
+ getSchemas メソッドによって返される結果セットには、次の情報が含まれます。  
   
-|[オブジェクト名]|型|[説明]|  
+|Name|Type|説明|  
 |----------|----------|-----------------|  
 |TABLE_SCHEM|**String**|スキーマの名前です。|  
 |TABLE_CATALOG|**String**|スキーマのカタログ名です。|  

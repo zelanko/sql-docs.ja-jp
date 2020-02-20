@@ -1,5 +1,5 @@
 ---
-title: getUpdateCount メソッド (SQLServerStatement) |Microsoft Docs
+title: getUpdateCount メソッド (SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: e9570228-4500-44b6-b2f1-84ac050b5112
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e319f5f924fc82b3b7dfac31d5d64d8ea15ee3ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978390"
 ---
 # <a name="getupdatecount-method-sqlserverstatement"></a>getUpdateCount メソッド (SQLServerStatement)
@@ -40,8 +40,8 @@ public final int getUpdateCount()
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この getUpdateCount メソッドは、java. .sql. ステートメントインターフェイスの getUpdateCount メソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この getUpdateCount メソッドは、java.sql.Statement インターフェイスの getUpdateCount メソッドで指定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerStatement のメンバー](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

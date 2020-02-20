@@ -11,10 +11,10 @@ ms.assetid: 4dddf885-0482-4776-8e9a-69f6c6270931
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b08a6574f16159e5eebb9a95af7483b2ce7b0c84
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67996755"
 ---
 # <a name="updatecharacterstream-method-int-javaioreader"></a>updateCharacterStream (int, java.io.Reader) メソッド
@@ -37,17 +37,17 @@ public void updateCharacterStream(int columnIndex,
   
  *x*  
   
- リーダーオブジェクト。  
+ Reader オブジェクト。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この updateCharacterStream メソッドは、java.sql.ResultSet インターフェイスの updateCharacterStream メソッドで規定されています。  
   
  このメソッドは、Unicode 文字を Reader オブジェクトから選択したテキストおよびバイナリ列に渡します。 これには、すべてのテキスト列と **binary**、**varbinary**、**varbinary(max)** 、**image**、**xml** の各列が含まれますが、**udt** 列は含まれません。  
   
- **Image**、 **text**、および**ntext** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]データ型に対してこのメソッドを使用すると、パフォーマンスが低下する可能性があります。  
+ このメソッドを **image**、**text**、**ntext**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のデータ型に対して使用すると、パフォーマンスに影響を及ぼす可能性があります。  
   
 ## <a name="see-also"></a>参照  
  [updateCharacterStream メソッド &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatecharacterstream-method-sqlserverresultset.md)   

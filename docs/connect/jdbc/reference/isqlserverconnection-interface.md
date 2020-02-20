@@ -1,5 +1,5 @@
 ---
-title: ISQLServerConnection Interface |Microsoft Docs
+title: ISQLServerConnection インターフェイス | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 031c01e2-2c65-4fe4-9700-fdbcc7a39f30
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2fbe3b6c1721720720b06bdcf4122a289589e639
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977454"
 ---
 # <a name="isqlserverconnection-interface"></a>ISQLServerConnection インターフェイス
@@ -33,8 +33,8 @@ ms.locfileid: "67977454"
 public interface ISQLServerConnection  
 ```  
   
-## <a name="remarks"></a>Remarks  
- このインターフェイスは、 [SQLServerConnection クラス](../../../connect/jdbc/reference/sqlserverconnection-class.md)によって実装されます。  
+## <a name="remarks"></a>解説  
+ このインターフェイスは、[SQLServerConnection クラス](../../../connect/jdbc/reference/sqlserverconnection-class.md)によって実装されています。  
   
  このインターフェイスでは、次の [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 固有のフィールドが公開されます。  
   

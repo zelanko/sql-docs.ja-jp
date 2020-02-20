@@ -1,5 +1,5 @@
 ---
-title: setAsciiStream メソッドの入力ストリームバイト長) |Microsoft Docs
+title: 入力ストリーム バイトへの setAsciiStream メソッド (long) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 6bc486cd-e432-4057-8789-9957ba23dd30
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1c4e5244ba0798fdd02f30faafa3459aa801e8dd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975469"
 ---
 # <a name="setasciistream-method-javalangstring-javaioinputstream-long"></a>setAsciiStream (java.lang.String, java.io.InputStream, long) メソッド
@@ -47,8 +47,8 @@ public final void setAsciiStream(java.lang.String parameterName,
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この setAsciiStream メソッドは、PreparedStatement インターフェイスの setAsciiStream メソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この setAsciiStream メソッドは、java.sql.PreparedStatement インターフェイスの setAsciiStream メソッドによって指定されます。  
   
  ストリームの長さが、*length* パラメーターで指定された長さと異なる場合は、行の更新または挿入時に JDBC ドライバーが例外をスローします。  
   

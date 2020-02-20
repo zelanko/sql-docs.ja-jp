@@ -16,10 +16,10 @@ ms.assetid: 69afb3a9-ed56-4191-88b8-bc46c03b817b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a88b6645445b9b9a4c644444ad3996377436112f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68001593"
 ---
 # <a name="useslocalfiles-method-sqlserverdatabasemetadata"></a>usesLocalFiles メソッド (SQLServerDatabaseMetaData)
@@ -40,8 +40,8 @@ public boolean usesLocalFiles()
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この場合、このメソッドは、java メタデータインターフェイスのすべてのメソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この usesLocalFiles メソッドは、java.sql.DatabaseMetaData インターフェイスの usesLocalFiles メソッドで指定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

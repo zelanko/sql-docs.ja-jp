@@ -11,10 +11,10 @@ ms.assetid: 1db3a975-c108-45d1-8c0d-14a094f391bd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8a1b69d4f4e1845b4ec86297c06298c1302becea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67985375"
 ---
 # <a name="updatebinarystream-method-int-javaioinputstream"></a>updateBinaryStream (int, java.io.InputStream) メソッド
@@ -42,10 +42,10 @@ public void updateBinaryStream(int columnIndex,
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この updateBinaryStream メソッドは、java.sql.ResultSet インターフェイスの updateBinaryStream メソッドで規定されています。  
   
- **Image**、 **text**、および**ntext** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]データ型に対してこのメソッドを使用すると、パフォーマンスに影響を与える可能性があります。  
+ このメソッドを **image**、**text**、**ntext**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のデータ型に対して使用すると、パフォーマンスに影響を及ぼす可能性があります。  
   
  このメソッドは、InputStream オブジェクトからのバイトを、binary、varbinary、varbinary(max)、image、xml、udt など、選択した [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] バイナリ列に渡します。 このメソッドでは、文字型の列の更新はサポートされていません。 InputStream で文字型の列を更新するには、[updateAsciiStream](../../../connect/jdbc/reference/updateasciistream-method-sqlserverresultset.md) メソッドを使用します。  
   

@@ -16,10 +16,10 @@ ms.assetid: 29303550-294e-4d43-b892-312b42e21271
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9eb0f1bf73f719550ce0a00b3b7f96fab9c2af38
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975662"
 ---
 # <a name="rowupdated-method-sqlserverresultset"></a>rowUpdated メソッド (SQLServerResultSet)
@@ -40,8 +40,8 @@ public boolean rowUpdated()
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この rowUpdated メソッドは、rowUpdated インターフェイスのメソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この rowUpdated メソッドは、java.sql.ResultSet インターフェイスの rowUpdated メソッドによって指定されます。  
   
  返される値は、結果セットが更新を検出できるかどうかによって異なります。  
   

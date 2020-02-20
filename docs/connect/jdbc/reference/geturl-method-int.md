@@ -16,10 +16,10 @@ ms.assetid: 75d03ced-3614-4997-9abd-24642b1d1aae
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b7b91071c97c46d7516907459539303ddbd45822
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67978331"
 ---
 # <a name="geturl-method-int"></a>getURL (int) メソッド
@@ -45,7 +45,7 @@ public java.net.URL getURL(int n)
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この getURL メソッドは、java.sql.CallableStatement インターフェイスの getURL メソッドで指定されています。  
   
 ## <a name="see-also"></a>参照  

@@ -1,5 +1,5 @@
 ---
-title: setBytes メソッド (long、byte、int、int) |Microsoft Docs
+title: setBytes メソッド (long, byte, int, int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 7def226c-b211-459e-8c1a-08592d75d4a4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ee4ab641ede4d4ec614a306f9c0e08c9f16aa5ee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974946"
 ---
 # <a name="setbytes-method-long-byte-int-int"></a>setBytes (long, byte, int, int) メソッド
@@ -38,7 +38,7 @@ public int setBytes(long pos,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *po*  
+ *pos*  
   
  データの書き込みを開始する BLOB 内の位置 (1 から開始) です。  
   
@@ -60,13 +60,13 @@ public int setBytes(long pos,
 ## <a name="exceptions"></a>例外  
  java.sql.SQLException  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この setBytes メソッドは、java.sql.Blob インターフェイスの setBytes メソッドで指定されています。  
   
  データは指定された開始位置から上書きされ、BLOB の初期データの長さをオーバーランすることができます。 開始位置に BLOB の長さ + 1 の値を指定すると、バイトが追加されます。 開始位置に BLOB の長さ + 2 以上 (または 0 以下) の値を渡すと、位置のエラーがスローされます。 長さ 0 の **byte** 配列を渡すと、0 が返されます。これはバイトが書き込まれなかったためです。  
   
 ## <a name="see-also"></a>参照  
- [setBytes メソッド&#40;SQLServerBlob&#41;](../../../connect/jdbc/reference/setbytes-method-sqlserverblob.md)   
+ [setBytes メソッド &#40;SQLServerBlob&#41;](../../../connect/jdbc/reference/setbytes-method-sqlserverblob.md)   
  [SQLServerBlob のメソッド](../../../connect/jdbc/reference/sqlserverblob-methods.md)   
  [SQLServerBlob のメンバー](../../../connect/jdbc/reference/sqlserverblob-members.md)   
  [SQLServerBlob クラス](../../../connect/jdbc/reference/sqlserverblob-class.md)  

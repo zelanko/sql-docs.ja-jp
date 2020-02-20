@@ -1,5 +1,5 @@
 ---
-title: isClosed メソッド (SQLServerStatement) |Microsoft Docs
+title: isClosed メソッド (SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: e79b5b53-16b0-42a3-be4e-542a77a21e12
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fe4d41448fdd65d3cb4a56f873432e747f564ef6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977707"
 ---
 # <a name="isclosed-method-sqlserverstatement"></a>isClosed メソッド (SQLServerStatement)
@@ -35,8 +35,8 @@ public boolean isClosed()
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この isClosed メソッドは、java. .sql. ステートメントインターフェイスの isClosed メソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この isClosed メソッドは、java.sql.Statement インターフェイスの isClosed メソッドで指定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerStatement のメンバー](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

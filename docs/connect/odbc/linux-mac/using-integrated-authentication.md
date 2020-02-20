@@ -13,10 +13,10 @@ ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 034df879dc79f920219a43e2faaaf0e3ac4fc17b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68008702"
 ---
 # <a name="using-integrated-authentication"></a>統合認証を使用する
@@ -24,9 +24,9 @@ ms.locfileid: "68008702"
 
 Linux および macOS での [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、Kerberos 統合認証を使用する接続をサポートしています。 MIT Kerberos キー配布センター (KDC) をサポートしており、Generic Security Services Application Program Interface (GSSAPI) および Kerberos v5 ライブラリと連動します。
   
-## <a name="using-integrated-authentication-to-connect-to-includessnoversionincludesssnoversion-mdmd-from-an-odbc-application"></a>統合認証を使用して ODBC アプリケーションから [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に接続する  
+## <a name="using-integrated-authentication-to-connect-to-ssnoversion-from-an-odbc-application"></a>統合認証を使用して ODBC アプリケーションから [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に接続する  
 
-**SQLDriverConnect** または **SQLConnect** の接続文字列で **Trusted_Connection=yes** 指定して、Kerberos 統合認証を有効にすることができます。 例:  
+**SQLDriverConnect** または **SQLConnect** の接続文字列で **Trusted_Connection=yes** 指定して、Kerberos 統合認証を有効にすることができます。 次に例を示します。  
 
 ```
 Driver='ODBC Driver 13 for SQL Server';Server=your_server;Trusted_Connection=yes  
@@ -72,7 +72,7 @@ DSN と接続するときに、`odbc.ini` の DSN エントリに **Trusted_Conn
 
 ## <a name="using-active-directory-to-manage-user-identities"></a>Active Directory を使用して、ユーザー ID を管理する
 
-アプリケーション システム管理者は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のログイン資格情報の個別セットを管理する必要はありません。 統合認証のキー配布センター (KDC) として Active Directory を構成することができます。 詳細については、「[Microsoft Kerberos](/windows/desktop/SecAuthN/microsoft-kerberos)」を参照してください。
+アプリケーション システム管理者は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のログイン資格情報の個別セットを管理する必要はありません。 統合認証のキー配布センター (KDC) として Active Directory を構成することができます。 詳細については、「[Microsoft Kerberos](/windows/desktop/SecAuthN/microsoft-kerberos)」を参照してください。
 
 ## <a name="using-linked-server-and-distributed-queries"></a>リンク サーバーと分散クエリを使用する
 
@@ -94,11 +94,11 @@ DSN と接続するときに、`odbc.ini` の DSN エントリに **Trusted_Conn
   
 `-T` を `-U` または `-P` オプションとともに使用すると、エラーになります。
   
-## <a name="supported-syntax-for-an-spn-registered-by-includessnoversionincludesssnoversion-mdmd"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] によって登録された SPN でサポートされる構文
+## <a name="supported-syntax-for-an-spn-registered-by-ssnoversion"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] によって登録された SPN でサポートされる構文
 
 接続文字列または接続属性で SPN に使用される構文は次のとおりです。  
 
-|構文|[説明]|  
+|構文|説明|  
 |----------|---------------|  
 |MSSQLSvc/*fqdn*:*port*|TCP が使用される場合にプロバイダーが生成する既定の SPN。 *port* は、TCP ポート番号です。 *fqdn* は完全修飾ドメイン名です。|  
   

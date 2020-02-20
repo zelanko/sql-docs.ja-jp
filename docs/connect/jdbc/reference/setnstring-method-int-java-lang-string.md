@@ -11,10 +11,10 @@ ms.assetid: b7da6d44-f5b1-44f8-95f5-40179968b1b0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 835cbbfe7e4d117957eaa811c40c98d9481066ac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67973647"
 ---
 # <a name="setnstring-method-int-javalangstring"></a>setNString (int, java.lang.String) メソッド
@@ -42,8 +42,8 @@ public final void setNString(int parameterIndex,
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- このメソッドは、 **NCHAR**、 **NVARCHAR**、 **NTEXT**、および**XML**データ型に対して使用する必要があります。  
+## <a name="remarks"></a>解説  
+ このメソッドは、**NCHAR**、**NVARCHAR**、**NTEXT**、**XML** の各データ型に対して使用する必要があります。  
   
  この setNString メソッドは、java.sql.PreparedStatement インターフェイスの setNString メソッドで規定されています。  
   

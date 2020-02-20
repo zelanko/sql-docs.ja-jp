@@ -14,16 +14,16 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 18827d05bc5567b4566eaa006d88c249874132cf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67971071"
 ---
 # <a name="sqlserverexception-constructor-javalangstring-javalangstring-int-javalangthrowable"></a>SQLServerException コンストラクター (java.lang.String, java.lang.String, int, java.lang.Throwable)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  **文字列**オブジェクト、**文字列**オブジェクト、 **int**、および**java.lang.throwable**オブジェクトが指定された場合に、 [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)クラスの新しいインスタンスを初期化します。
+  **string** オブジェクト、**string** オブジェクト、**int**、および **throwable** オブジェクトが渡されたときに、[SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) クラスの新しいインスタンスが初期化されます。
 
 ## <a name="syntax"></a>構文  
   
@@ -38,19 +38,19 @@ public SQLServerException(java.lang.String errText,
 #### <a name="parameters"></a>パラメーター  
  *errText*  
   
- エラーテキストを表す文字列です。
+ エラー テキストを含む文字列。
   
  *errState*  
   
- エラーの状態を格納している文字列。
+ エラーの状態を含む文字列。
  
  *errNum*  
   
- 例外のエラーコードを格納している int。
+ 例外のエラー コードを含む整数。
  
  *cause*  
   
- 例外の原因を格納している java.lang.throwable オブジェクト。
+ 例外の原因を含む throwable オブジェクト。
   
 ## <a name="see-also"></a>参照  
  [SQLServerException のコンストラクター](../../../connect/jdbc/reference/sqlserverexception-constructors.md)   

@@ -1,5 +1,5 @@
 ---
-title: locatorsUpdateCopy メソッド (SQLServerDatabaseMetaData) |Microsoft Docs
+title: locatorsUpdateCopy メソッド (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: f6ec8c1d-7ff8-4bc5-8bd3-0199a9294a6e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5e9e800c326f18b5247d1257431bb2243ad00c57
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67976844"
 ---
 # <a name="locatorsupdatecopy-method-sqlserverdatabasemetadata"></a>locatorsUpdateCopy メソッド (SQLServerDatabaseMetaData)
@@ -35,13 +35,13 @@ public boolean locatorsUpdateCopy()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- 更新がコピーに対して行われた場合は**true** 。 更新が直接行われる場合は**false** 。  
+ 更新がコピーに対して行われた場合は **true** です。 更新が直接行われた場合は **false** です。  
   
 ## <a name="exceptions"></a>例外  
  java.sql.SQLException  
   
-## <a name="remarks"></a>Remarks  
- この locatorsUpdateCopy メソッドは、locatorsUpdateCopy メソッドによって、java メタデータインターフェイスで指定されます。  
+## <a name="remarks"></a>解説  
+ この locatorsUpdateCopy メソッドは、java.sql.DatabaseMetaData インターフェイスの locatorsUpdateCopy メソッドで指定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

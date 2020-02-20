@@ -1,5 +1,5 @@
 ---
-title: '? Localfilepertable メソッド (SQLServerDatabaseMetaData) |Microsoft Docs'
+title: usesLocalFilePerTable メソッド (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 1fafb076-2bb7-4845-9c02-788479f00ca2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: de5afaab5a6d5d0cce1f895330a3409e4f96709a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67998098"
 ---
 # <a name="useslocalfilepertable-method-sqlserverdatabasemetadata"></a>usesLocalFilePerTable メソッド (SQLServerDatabaseMetaData)
@@ -40,8 +40,8 @@ public boolean usesLocalFilePerTable()
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この手段 Localfilepertable メソッドは、java メタデータインターフェイスの、のように指定します。  
+## <a name="remarks"></a>解説  
+ この usesLocalFilePerTable メソッドは、java.sql.DatabaseMetaData インターフェイスの usesLocalFilePerTable メソッドで指定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

@@ -11,10 +11,10 @@ ms.assetid: a9448b80-b7a3-49cf-8bb4-322c73676005
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3eb2778f11aa83498bdfc47ece599aa07c403fe0
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027265"
 ---
 # <a name="understanding-java-ee-support"></a>Java EE のサポートについて
@@ -39,7 +39,7 @@ JDBC Driver 7.2 では、ドライバーは **mssql-jdbc-7.2.2.jre8.jar** また
 
 JDBC Driver 7.4 では、ドライバーは **mssql-jdbc-7.4.1.jre8.jar**、**mssql-jdbc-7.4.1.jre11.jar**、または **mssql-jdbc-7.4.1.jre12.jar** に含まれています。
   
-クラス名は、JDBC DriverManager クラスを使用してドライバーを読み込むたびに、任意のドライバー構成でドライバーのクラス名を指定するたびに使用されます。 たとえば、Java EE アプリケーション サーバー内でデータ ソースを構成するには、ドライバーのクラス名を入力する必要が生じる場合があります。  
+JDBC DriverManager クラスを使用してドライバーを読み込む場合、および任意のドライバー構成でドライバーのクラス名を指定する場合は常に、このクラス名が使用されます。 たとえば、Java EE アプリケーション サーバー内でデータ ソースを構成するには、ドライバーのクラス名を入力する必要が生じる場合があります。  
   
 ## <a name="data-sources"></a>データ ソース
 

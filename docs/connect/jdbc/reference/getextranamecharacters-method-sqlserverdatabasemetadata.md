@@ -1,5 +1,5 @@
 ---
-title: getExtraNameCharacters メソッド (SQLServerDatabaseMetaData) |Microsoft Docs
+title: getExtraNameCharacters メソッド (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: a22becfe-0f07-4a15-8d11-06d4054b2369
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6a4aada79019aad4ae01729de8e018edd728b473
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67983320"
 ---
 # <a name="getextranamecharacters-method-sqlserverdatabasemetadata"></a>getExtraNameCharacters メソッド (SQLServerDatabaseMetaData)
@@ -40,8 +40,8 @@ public java.lang.String getExtraNameCharacters()
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この getExtraNameCharacters メソッドは、getExtraNameCharacters メソッドによって、java メタデータインターフェイスで指定されます。  
+## <a name="remarks"></a>解説  
+ この getExtraNameCharacters メソッドは、java.sql.DatabaseMetaData インターフェイスの getExtraNameCharacters メソッドで指定されています。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースで [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] を使用している場合、このメソッドは $、#、および \@ の特殊文字を返します。  
   

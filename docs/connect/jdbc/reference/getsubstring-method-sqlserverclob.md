@@ -1,5 +1,5 @@
 ---
-title: getSubString メソッド (SQLServerClob) |Microsoft Docs
+title: getSubString メソッド (SQLServerClob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: bf915590-a883-4403-befa-5b5bb42f34d8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 73b82c550c78d409accd423b485fc7b9825dbc8c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979333"
 ---
 # <a name="getsubstring-method-sqlserverclob"></a>getSubString メソッド (SQLServerClob)
@@ -36,7 +36,7 @@ public java.lang.String getSubString(long pos,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *po*  
+ *pos*  
   
  抽出する部分文字列の先頭の文字です。 先頭の文字の位置は 1 です。  
   
@@ -50,8 +50,8 @@ public java.lang.String getSubString(long pos,
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この getSubString メソッドは、java. Clob インターフェイスの getSubString メソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この getSubString メソッドは、java.sql.Clob インターフェイスの getSubString メソッドで指定されています。  
   
  null または長さが 0 の CLOB から 0 文字を取得しようとすると、空の文字列が返されます。 長さが 0 の CLOB で、位置 1 以外の場所で任意の長さの文字を取得しようとすると、位置の例外がスローされます。  
   

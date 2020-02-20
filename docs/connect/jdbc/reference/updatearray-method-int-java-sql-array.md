@@ -1,5 +1,5 @@
 ---
-title: updateArray (int, java .sql. Array) メソッド |Microsoft Docs
+title: updateArray (int, java.sql.Array) メソッド | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 464f7e3f-3e8a-4b2d-aebd-1c040583d52c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cf9dc7a5e2bf04e33f9fb1ea96a0c62f41378f3b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67985587"
 ---
 # <a name="updatearray-method-int-javasqlarray"></a>updateArray (int, java.sql.Array) メソッド
@@ -47,7 +47,7 @@ public void updateArray(int columnIndex,
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この updateArray メソッドは、java.sql.ResultSet インターフェイスの updateArray メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  

@@ -1,5 +1,5 @@
 ---
-title: Othersupを表示するメソッド (SQLServerDatabaseMetaData) |Microsoft Docs
+title: othersUpdatesAreVisible メソッド (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 3615c01f-ae0b-42a7-92b5-e8770d841c45
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 56380d1b81f5b5e4968217ce0bf4bbe5207eca01
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67976572"
 ---
 # <a name="othersupdatesarevisible-method-sqlserverdatabasemetadata"></a>othersUpdatesAreVisible メソッド (SQLServerDatabaseMetaData)
@@ -63,8 +63,8 @@ public boolean othersUpdatesAreVisible(int type)
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- このメソッドは、java メタデータインターフェイスの他のメソッドによって指定されています。  
+## <a name="remarks"></a>解説  
+ この othersUpdatesAreVisible メソッドは、java.sql.DatabaseMetaData インターフェイスの othersUpdatesAreVisible メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

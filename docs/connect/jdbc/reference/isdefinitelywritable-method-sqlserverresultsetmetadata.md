@@ -16,10 +16,10 @@ ms.assetid: 7650e89a-dc8e-43ca-8eb2-f962f1a4b4ae
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 49ca65fc7fd2c7768db81460e331d960bad1c5ea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67977638"
 ---
 # <a name="isdefinitelywritable-method-sqlserverresultsetmetadata"></a>isDefinitelyWritable メソッド (SQLServerResultSetMetaData)
@@ -45,8 +45,8 @@ public boolean isDefinitelyWritable(int column)
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この Isていぎ Itely書き込み可能メソッドは、java. ResultSetMetaData インターフェイスの Isていぎ Itely書き込み可能メソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この isDefinitelyWritable メソッドは、java.sql.ResultSetMetaData インターフェイスの isDefinitelyWritable メソッドで指定されています。  
   
 > [!NOTE]  
 >  [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] を [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースと共に使用している場合、このメソッドでは常に false が返されます。  

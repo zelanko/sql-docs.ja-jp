@@ -1,5 +1,5 @@
 ---
-title: setHostNameInCertificate メソッド (SQLServerDataSource) |Microsoft Docs
+title: setHostNameInCertificate メソッド (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 2bcf4f2e-a103-4374-abc4-ffad4ce8e3c0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: deeab57c573311db36eabdbad60c3cb2fbda9a47
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67974217"
 ---
 # <a name="sethostnameincertificate-method-sqlserverdatasource"></a>setHostNameInCertificate メソッド (SQLServerDataSource)
@@ -39,7 +39,7 @@ public void setHostNameInCertificate(java.lang.String hostNameInCertificate)
   
  ホスト名を含む**文字列**です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  hostNameInCertificate 値を使用して、通信レイヤーが SSL で暗号化されているときに [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の SSL 証明書を検証します。 既定値は、null です。  
   
  hostNameInCertificate プロパティが null に設定されているか、またはそれが指定されていない場合、[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] では、serverName プロパティ値を使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の SSL 証明書に対して検証が行われます。 hostNameInCertificate プロパティが任意の文字列または空の文字列 "" に設定されている場合、ドライバーはその値を使用してサーバーの SSL 証明書を検証します。  

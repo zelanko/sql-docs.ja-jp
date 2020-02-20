@@ -1,5 +1,5 @@
 ---
-title: rollback メソッド (SQLServerXAResource) |Microsoft Docs
+title: rollback メソッド (SQLServerXAResource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 93d9d7e6-54b6-4d86-8f8c-386c6057e85e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4245dc4314d955aefc3538a38dcd2192403fed9a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67975726"
 ---
 # <a name="rollback-method-sqlserverxaresource"></a>rollback メソッド (SQLServerXAResource)
@@ -35,14 +35,14 @@ public void rollback(javax.transaction.xa.Xid xid)
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *type*  
+ *xid*  
   
  Xid オブジェクト。  
   
 ## <a name="exceptions"></a>例外  
  javax.transaction.xa.XAException  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この rollback メソッドは、javax.transaction.xa.XAResource インターフェイスの rollback メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  

@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 950fa902d2772d131f5ecd626653ad58c97c0fb1
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69027892"
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server-support-matrix"></a>Microsoft SQL Server 用 JDBC Driver のサポート表
@@ -32,7 +32,7 @@ ms.locfileid: "69027892"
   
 |ドライバー名|ドライバー パッケージのバージョン|適用できる JAR|メインストリーム サポートの終了|
 |-|-|-|-|  
-|Microsoft JDBC Driver 7.4 for SQL Server|7.4|mssql-jdbc-7.4.1. jre12<br> mssql-jdbc-7.4.1. jre11<br> mssql-jdbc-7.4.1. jre8|2024年8月2日|
+|Microsoft JDBC Driver 7.4 for SQL Server|7.4|mssql-jdbc-7.4.1.jre12.jar<br> mssql-jdbc-7.4.1.jre11.jar<br> mssql-jdbc-7.4.1.jre8.jar|2024 年 8 月 2 日|
 |Microsoft JDBC Driver 7.2 for SQL Server|7.2|mssql-jdbc-7.2.2.jre11.jar<br> mssql-jdbc-7.2.2.jre8.jar|2024 年 4 月 16 日|
 |Microsoft JDBC Driver 7.0 for SQL Server|7.0|mssql-jdbc-7.0.0.jre10.jar<br> mssql-jdbc-7.0.0.jre8.jar|2023 年 7 月 31 日|  
 |Microsoft SQL Server 用 JDBC Driver 6.4|6.4|mssql-jdbc-6.4.0.jre9.jar<br> mssql-jdbc-6.4.0.jre8.jar<br> mssql-jdbc-6.4.0.jre7.jar|2023 年 2 月 27 日|    
@@ -55,24 +55,24 @@ ms.locfileid: "69027892"
   
 ## <a name="sql-version-compatibility"></a>SQL バージョンの互換性  
   
-|ドライバーのバージョン|SQL Server 2008|SQL Server 2008R2|SQL Server 2012|Azure SQL データベース|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2014|SQL Server 2016|SQL Server 2017|SQL Server 2019|  
+|ドライバーのバージョン|SQL Server 2008|SQL Server 2008 R2|SQL Server 2012|Azure SQL データベース|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2014|SQL Server 2016|SQL Server 2017|SQL Server 2019|  
 |-|-|-|-|-|-|-|-|-|-|-|
-|7.4|×|×|Y|Y|Y|Y|Y|Y|Y|
-|7.2|×|Y|Y|Y|Y|Y|Y|Y|×| 
-|7.0|×|Y|Y|Y|Y|Y|Y|Y|×| 
-|6.4|×|Y|Y|Y|Y|Y|Y|Y|×| 
-|6.2|Y|Y|Y|Y|Y|Y|Y|Y|×|
-|6.1|Y|Y|Y|Y|Y|Y|Y|×|×|
-|6.0|Y|Y|Y|Y|Y|Y|Y|×|×|
-|4.2|Y|Y|Y|Y|Y|Y|Y|×|×|
-|4.1|Y|Y|Y|Y|Y|Y|Y|×|×|
-|4.0|Y|Y|Y|Y|Y|Y|Y|×|×|
-|3.0|Y|Y|Y<sup>1</sup>|Y<sup>2</sup>|×|Y<sup>5</sup>|×|×|×|
-|2.0|Y<sup>3</sup>|Y<sup>3</sup>|×|×|×|×|×|×|×|
-|1.2|Y<sup>3</sup>|×|×|×|×|×|×|×|×|
-|1.1|×|×|×|×|×|×|×|×|×|  
-|1.0|×|×|×|×|×|×|×|×|×|  
-|2000|×|×|×|×|×|×|×|×|×|  
+|7.4|N|N|Y|Y|Y|Y|Y|Y|Y|
+|7.2|N|Y|Y|Y|Y|Y|Y|Y|N| 
+|7.0|N|Y|Y|Y|Y|Y|Y|Y|N| 
+|6.4|N|Y|Y|Y|Y|Y|Y|Y|N| 
+|6.2|Y|Y|Y|Y|Y|Y|Y|Y|N|
+|6.1|Y|Y|Y|Y|Y|Y|Y|N|N|
+|6.0|Y|Y|Y|Y|Y|Y|Y|N|N|
+|4.2|Y|Y|Y|Y|Y|Y|Y|N|N|
+|4.1|Y|Y|Y|Y|Y|Y|Y|N|N|
+|4.0|Y|Y|Y|Y|Y|Y|Y|N|N|
+|3.0|Y|Y|Y<sup>1</sup>|Y<sup>2</sup>|N|Y<sup>5</sup>|N|N|N|
+|2.0|Y<sup>3</sup>|Y<sup>3</sup>|N|N|N|N|N|N|N|
+|1.2|Y<sup>3</sup>|N|N|N|N|N|N|N|N|
+|1.1|N|N|N|N|N|N|N|N|N|  
+|1.0|N|N|N|N|N|N|N|N|N|  
+|2000|N|N|N|N|N|N|N|N|N|  
   
  <sup>1</sup>Microsoft SQL Server JDBC Driver バージョン 3.0 では、下位クライアントの SQL Server 2012 に接続できます。  
   

@@ -1,5 +1,5 @@
 ---
-title: 大きなデータサンプルを更新しています |Microsoft Docs
+title: 大きなデータを更新するサンプル | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 76ecc05f-a77d-40a2-bab9-91a7fcf17347
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1bd284f6fb8021164aa3edf6aa31761b7483406e
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69028264"
 ---
 # <a name="updating-large-data-sample"></a>大きなデータを更新するサンプル
@@ -31,7 +31,7 @@ ms.locfileid: "69028264"
 
 ## <a name="requirements"></a>必要条件
 
-このサンプル アプリケーションを実行するには、[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] サンプル データベースへのアクセス権が必要です。 また、クラスパスの設定で sqljdbc4.jar ファイルを追加します。 クラスパスに sqljdbc4.jar のエントリがない場合、サンプル アプリケーションで "Class not found" という一般的な例外がスローされます。 クラスパスの設定方法の詳細については、「 [JDBC ドライバーの使用](../../../connect/jdbc/using-the-jdbc-driver.md)」を参照してください。
+このサンプル アプリケーションを実行するには、[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] サンプル データベースへのアクセス権が必要です。 また、クラスパスの設定で sqljdbc4.jar ファイルを追加します。 クラスパスに sqljdbc4.jar のエントリがない場合、サンプル アプリケーションで "Class not found" という一般的な例外がスローされます。 クラスパスを設定する方法の詳細については、「[JDBC ドライバーの使用](../../../connect/jdbc/using-the-jdbc-driver.md)」を参照してください。
 
 > [!NOTE]  
 > [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] には、sqljdbc.jar、sqljdbc4.jar、sqljdbc41.jar、または sqljdbc42.jar のクラス ライブラリ ファイルが用意されており、必要な Java ランタイム環境 (JRE) 設定によって自由に使い分けることができます。 このサンプルは、JDBC 4.0 API で導入された [isWrapperFor](../../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md) メソッドと [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md) メソッドを使用して、ドライバー固有の応答バッファリング メソッドにアクセスします。 このサンプルをコンパイルして実行するには、JDBC 4.0 をサポートする sqljdbc4.jar クラス ライブラリが必要となります。 選択する JAR ファイルの詳細については、「[JDBC Driver のシステム要件](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)」を参照してください。

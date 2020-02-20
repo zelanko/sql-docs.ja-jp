@@ -16,10 +16,10 @@ ms.assetid: 16ff77f9-7928-415c-abf6-97ed59e3e396
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b5137c4df92860822e715d70a1355b490026af40
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67973563"
 ---
 # <a name="setnull-method-javalangstring-int-javalangstring"></a>setNull (java.lang.String, int, java.lang.String) メソッド
@@ -39,7 +39,7 @@ public void setNull(java.lang.String sCol,
 #### <a name="parameters"></a>パラメーター  
  *sCol*  
   
- パラメーター名を aining を含む**文字列**。  
+ パラメーターの名前を含む**文字列**です。  
   
  *nType*  
   
@@ -52,7 +52,7 @@ public void setNull(java.lang.String sCol,
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  setNull メソッドは、java.sql.CallableStatement インターフェイスの setNull メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  

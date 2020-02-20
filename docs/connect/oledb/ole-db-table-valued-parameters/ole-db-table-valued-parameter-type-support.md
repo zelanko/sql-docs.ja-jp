@@ -13,10 +13,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: abff9abb82ad0ff54d9b1126541b98babbd6bd76
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015306"
 ---
 # <a name="ole-db-table-valued-parameter-type-support"></a>OLE DB テーブル値パラメーターの型のサポート
@@ -27,7 +27,7 @@ ms.locfileid: "68015306"
   この記事では、テーブル値パラメーターに対する OLE DB 型のサポートについて説明します。  
   
 ## <a name="table-valued-parameter-rowset-object"></a>テーブル値パラメーターの行セット オブジェクト  
- テーブル値パラメーターの特殊な行セット オブジェクトを作成できます。 テーブル値パラメーターの行セットオブジェクトを作成するには、ITableDefinitionWithConstraints:: CreateTableWithConstraints または IOpenRowset:: OpenRowset を使用します。 そのためには、*pTableID* パラメーターの *eKind* メンバーに DBKIND_GUID_NAME を設定し、CLSID_ROWSET_INMEMORY を *guid* メンバーとして指定します。 IOpenRowset:: OpenRowset を使用する場合は、テーブル値パラメーターのサーバーの型名を*Ptableid*の*pwszName*メンバーに指定する必要があります。 テーブル値パラメーターの行セットオブジェクトは、SQL Server オブジェクトの通常の OLE DB ドライバーのように動作します。  
+ テーブル値パラメーターの特殊な行セット オブジェクトを作成できます。 テーブル値パラメーターの行セット オブジェクトを作成するには、ITableDefinitionWithConstraints::CreateTableWithConstraints または IOpenRowset::OpenRowset を使用します。 そのためには、*pTableID* パラメーターの *eKind* メンバーに DBKIND_GUID_NAME を設定し、CLSID_ROWSET_INMEMORY を *guid* メンバーとして指定します。 テーブル値パラメーターのサーバーの型名は、IOpenRowset::OpenRowset の使用時に *pTableID* の *pwszName* メンバーに指定する必要があります。 テーブル値パラメーターの行セット オブジェクトは、標準の OLE DB Driver for SQL Server オブジェクトと同様に動作します。  
   
 ```  
 const GUID CLSID_ROWSET_TVP =   
@@ -46,7 +46,7 @@ CoType RowsetTVP
 };  
 ```  
   
-## <a name="dbtypetable"></a>DBTYPE_TABLE  
+## <a name="dbtype_table"></a>DBTYPE_TABLE  
  新しい型 DBTYPE_TABLE はテーブル型を表します。 この型は、DBTYPE を必要とするさまざまな OLE DB インターフェイスのテーブル値パラメーターを示します。  
   
 ```  
@@ -58,10 +58,10 @@ CoType RowsetTVP
  DBTYPE_TABLE とその他の型との間の変換はサポートされません。 IConvertType::CanConvert は、DBTYPE_TABLE から DBTYPE_TABLE への変換以外の要求に対するサポートされない変換について、S_FALSE を返します。 これは、Command オブジェクトの DBCONVERTFLAGS_PARAMETER を想定します。  
   
 ## <a name="methods"></a>メソッド  
- テーブル値パラメーターをサポートする OLE DB メソッドの詳細については、「[テーブル値パラメーターの&#40;型&#41;のサポートメソッドの OLE DB](../../oledb/ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-methods.md)」を参照してください。  
+ テーブル値パラメーターをサポートする OLE DB メソッドの詳細については、「[OLE DB テーブル値パラメーターの型のサポート (メソッド)](../../oledb/ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-methods.md)」を参照してください。  
   
 ## <a name="properties"></a>Properties  
- テーブル値パラメーターをサポートする OLE DB プロパティの詳細については、「[テーブル値パラメーターの&#40;型&#41;サポートプロパティの OLE DB](../../oledb/ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-properties.md)」を参照してください。  
+ テーブル値パラメーターをサポートする OLE DB プロパティの詳細については、「[OLE DB テーブル値パラメーターの型のサポート (プロパティ)](../../oledb/ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-properties.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [テーブル値パラメーター &#40;OLE DB&#41;](../../oledb/ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   

@@ -16,10 +16,10 @@ ms.assetid: 1e15de27-a490-45cd-a3a6-a49721f15a97
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ad5239c609e58750e7fd494d482ee11c62ab9cc8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67985448"
 ---
 # <a name="updatebigdecimal-method-int-javamathbigdecimal"></a>updateBigDecimal (int, java.math.BigDecimal) メソッド
@@ -36,7 +36,7 @@ public void updateBigDecimal(int index,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *index*  
+ *インデックス*  
   
  列インデックスを示す **int** です。  
   
@@ -47,8 +47,8 @@ public void updateBigDecimal(int index,
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この updateBigDecimal メソッドは、java. ResultSet インターフェイスの updateBigDecimal メソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この updateBigDecimal メソッドは、java.sql.ResultSet インターフェイスの updateBigDecimal メソッドで指定されています。  
   
 ## <a name="see-also"></a>参照  
  [updateBigDecimal メソッド &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatebigdecimal-method-sqlserverresultset.md)   

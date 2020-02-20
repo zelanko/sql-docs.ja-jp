@@ -16,10 +16,10 @@ ms.assetid: d21e0c1d-9d6e-468f-8b11-cc7209b2c2e5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 82f4c082145fc9d043047390d0b07380f37c798b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67979141"
 ---
 # <a name="gettime-method-int-javautilcalendar-sqlserverresultset"></a>getTime (int, java.util.Calendar) メソッド (SQLServerResultSet)
@@ -40,17 +40,17 @@ public java.sql.Time getTime(int columnIndex,
   
  列インデックスを示す **int** です。  
   
- *カレンダー*  
+ *cal*  
   
  Calendar オブジェクト。  
   
 ## <a name="return-value"></a>戻り値  
- 時刻オブジェクト。  
+ Time オブジェクト。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この getTime メソッドは、java.sql.ResultSet インターフェイスの getTime メソッドで規定されています。  
   
  このメソッドは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の datetime または smalldatetime データ型の有効な時刻部分が返されます。日付部分は、指定されたカレンダーのタイムゾーンにおける Java のベースラインの日付である 1970/01/01 に設定されます。  

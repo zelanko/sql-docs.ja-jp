@@ -16,10 +16,10 @@ ms.assetid: 8a677cc6-8e33-4e57-8678-0849345aa8d0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8dd512236aa3070ce299756d4e4294c79ac2e94a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67982791"
 ---
 # <a name="getindexinfo-method-sqlserverdatabasemetadata"></a>getIndexInfo メソッド (SQLServerDatabaseMetaData)
@@ -53,11 +53,11 @@ public java.sql.ResultSet getIndexInfo(java.lang.String cat,
   
  *unique*  
   
- 一意の値のインデックスのみが返される場合は**true** 。 すべてのインデックスが返される場合は**false** 。  
+ 一意の値のインデックスのみが返される場合は **true** です。 インデックスがすべて返される場合は **false** です。  
   
  *approximate*  
   
- 結果に概数または古い値が反映されている場合は**true** 。 結果が正確である場合は**false** 。  
+ 結果に概数または期限切れの値が反映されている場合は **true** です。 結果が正確である場合は **false** です。  
   
 ## <a name="return-value"></a>戻り値  
  [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトです。  
@@ -65,26 +65,26 @@ public java.sql.ResultSet getIndexInfo(java.lang.String cat,
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この getIndexInfo メソッドは、java.sql.DatabaseMetaData インターフェイスの getIndexInfo メソッドで規定されています。  
   
  getIndexInfo メソッドによって返される結果セットには、次の情報が含まれます。  
   
-|[オブジェクト名]|型|[説明]|  
+|Name|Type|説明|  
 |----------|----------|-----------------|  
 |TABLE_CAT|**String**|指定したテーブルが含まれているデータベースの名前です。|  
 |TABLE_SCHEM|**String**|テーブルのスキーマです。|  
-|TABLE_NAME|**String**|テーブルの名前です。|  
+|TABLE_NAME|**String**|テーブルの名前。|  
 |NON_UNIQUE|**boolean**|インデックス値が重複可能であるかどうかを示します。|  
 |INDEX_QUALIFIER|**String**|インデックス所有者の名前です。 TYPE が tableIndexStatistic の場合は null になります。|  
 |INDEX_NAME|**String**|インデックスの名前です。|  
 |TYPE|**short**|インデックスの型です。 次のいずれかの値を指定できます。<br /><br /> tableIndexStatistic (0)<br /><br /> tableIndexClustered (1)<br /><br /> tableIndexHashed (2)<br /><br /> tableIndexOther (3)|  
 |ORDINAL_POSITION|**short**|インデックス内での列の位置を示す序数です。 インデックスの最初の列は 1 です。|  
 |COLUMN_NAME|**String**|列の名前です。|  
-|ASC_OR_DESC|**String**|インデックスの照合で使用される順序です。 次のいずれかの値を指定できます。<br /><br /> A (昇順)<br /><br /> D (降順)<br /><br /> NULL (適用なし)<br /><br /> **注:**  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] からは常に "A" が返されます。|  
+|ASC_OR_DESC|**String**|インデックスの照合で使用される順序です。 次のいずれかの値を指定できます。<br /><br /> A (昇順)<br /><br /> D (降順)<br /><br /> NULL (適用なし)<br /><br /> **注:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] からは常に "A" が返されます。|  
 |CARDINALITY|**int**|テーブル内の行数またはインデックス内の一意の値の個数です。|  
 |PAGES|**int**|インデックスまたはテーブルの格納に使用するページ数です。|  
-|FILTER_CONDITION|**String**|フィルター条件です。<br /><br /> **注:**  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] からは常に "null" が返されます。|  
+|FILTER_CONDITION|**String**|フィルター条件です。<br /><br /> **注:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] からは常に null 値が返されます。|  
   
 > [!NOTE]  
 >  getIndexInfo メソッドによって返されるデータの詳細については、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] オンライン ブックの「sp_indexes (Transact-SQL)」を参照してください。  

@@ -1,5 +1,5 @@
 ---
-title: getMoreResults メソッド (SQLServerStatement) |Microsoft Docs
+title: getMoreResults メソッド (SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 6b18510a-4d6d-4eeb-a9d0-32e920eb0048
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b7d8c1c63823cd558122746fdc2dbca84d3f64a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67981741"
 ---
 # <a name="getmoreresults-method-sqlserverstatement"></a>getMoreResults メソッド (SQLServerStatement)
@@ -29,7 +29,7 @@ ms.locfileid: "67981741"
   
 ## <a name="overload-list"></a>オーバーロードの一覧  
   
-|[オブジェクト名]|[説明]|  
+|Name|説明|  
 |----------|-----------------|  
 |[getMoreResults ()](../../../connect/jdbc/reference/getmoreresults-method.md)|[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) オブジェクトの次の結果に移動します。|  
 |[getMoreResults (int)](../../../connect/jdbc/reference/getmoreresults-method-int.md)|[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) オブジェクトの次の結果に移動し、渡されたモードで指定された指示に従って、現在開いているすべての結果セット オブジェクトを処理します。|  
