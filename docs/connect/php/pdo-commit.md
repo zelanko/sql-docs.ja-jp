@@ -1,5 +1,5 @@
 ---
-title: 'PDO:: commit |Microsoft Docs'
+title: PDO::commit | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: a0db4a00-9700-4f49-ab16-6522dd1101d3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 41a87a6444ce61af5b2b8a00aa61306dd90d0d8c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993288"
 ---
 # <a name="pdocommit"></a>PDO::commit
@@ -32,7 +32,7 @@ bool PDO::commit();
 ## <a name="return-value"></a>戻り値  
 メソッドの呼び出しに成功した場合は true、それ以外の場合は false。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 PDO::commit は PDO::ATTR_AUTOCOMMIT の値によって影響を受けず、PDO::ATTR_AUTOCOMMIT の値に影響を与えません。  
   
 PDO::commit の使用例については、「 [PDO::beginTransaction](../../connect/php/pdo-begintransaction.md) 」を参照してください。  

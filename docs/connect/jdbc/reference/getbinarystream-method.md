@@ -1,5 +1,5 @@
 ---
-title: getBinaryStream メソッド () |Microsoft Docs
+title: getBinaryStream メソッド () | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 0c8f7741-daba-4c04-adc0-8d76345a899a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 486958cb6df51accc3446d1545b734efe9a6fc66
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953620"
 ---
 # <a name="getbinarystream-method-"></a>getBinaryStream () メソッド
@@ -40,7 +40,7 @@ public java.io.InputStream getBinaryStream()
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この getBinaryStream メソッドは、java.sql.Blob インターフェイスの getBinaryStream メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  

@@ -1,5 +1,5 @@
 ---
-title: プログラムによるパスワードの変更 |Microsoft Docs
+title: プログラムによるパスワードの変更 | Microsoft Docs
 description: OLE DB Driver for SQL Server を使用したプログラムによるパスワードの変更
 ms.custom: ''
 ms.date: 06/12/2018
@@ -21,10 +21,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: a6c9e52dc46818d3d188f2fa742e2bccad769cf8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67989131"
 ---
 # <a name="changing-passwords-programmatically"></a>プログラムによるパスワードの変更
@@ -32,7 +32,7 @@ ms.locfileid: "67989131"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] より前のリリースでは、ユーザーのパスワードの有効期限が切れたとき、そのパスワードをリセットできるのは管理者だけでした。 以降では、OLE DB driver for SQL Server は、OLE DB ドライバーを通じてプログラムによってパスワードの有効期限を処理したり、 **SQL Server ログイン** ダイアログボックスに変更を加えたりすることをサポートしています。 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]  
+  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] より前のリリースでは、ユーザーのパスワードの有効期限が切れたとき、そのパスワードをリセットできるのは管理者だけでした。 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以降、OLE DB Driver for SQL Server では、OLE DB Driver のプログラムから、または **[SQL Server ログイン]** ダイアログ ボックスでの変更によってパスワードの期限切れを処理することができます。  
   
 > [!NOTE]  
 >  可能であれば、実行時にユーザーの資格情報を入力し、それらの資格情報を永続的な形式で保存しないように求めるメッセージが表示されます。 資格情報を保持する必要がある場合は、[Win32 Crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) を使用して暗号化してください。 パスワードの使用に関する詳細については、「[強力なパスワード](../../../relational-databases/security/strong-passwords.md)」を参照してください。  
@@ -43,17 +43,17 @@ ms.locfileid: "67989131"
 |SQL Server エラー コード|エラー メッセージ|  
 |---------------------------|-------------------|  
 |15113|ユーザー '%.*ls' はログインできませんでした。理由: パスワードの検証に失敗しました。 アカウントはロックアウトされています。|  
-|18463|ユーザー '%.*ls' はログインできませんでした。 理由: パスワードを変更できませんでした。 この時点ではパスワードを使用できません。|  
-|18464|ユーザー '%.*ls' はログインできませんでした。 理由: パスワードを変更できませんでした。 このパスワードは短すぎるので、Windows ポリシーの要件を満たしません。|  
-|18465|ユーザー '%.*ls' はログインできませんでした。 理由: パスワードを変更できませんでした。 パスワードは長すぎるため、ポリシー要件を満たしません。|  
-|18466|ユーザー '%.*ls' はログインできませんでした。 理由: パスワードを変更できませんでした。 このパスワードはあまり複雑ではないので、Windows のポリシー要件を満たしません。|  
-|18467|ユーザー '%.*ls' はログインできませんでした。 理由: パスワードを変更できませんでした。 パスワードがパスワード フィルター DLL の要件を満たしていません。|  
-|18468|ユーザー '%.*ls' はログインできませんでした。 理由: パスワードを変更できませんでした。 パスワードの検証で予期しないエラーが発生しました。|  
-|18487|ユーザー '%.*ls' はログインできませんでした。 理由: このアカウントのパスワードの有効期限が切れています。|  
-|18488|ユーザー '%.*ls' はログインできませんでした。 理由: このアカウントのパスワードを変更する必要があります。|  
+|18463|ユーザー '%.*ls' はログインできませんでした。 理由:パスワードの変更が失敗しました。 この時点ではパスワードを使用できません。|  
+|18464|ユーザー '%.*ls' はログインできませんでした。 理由:パスワードの変更が失敗しました。 このパスワードは短すぎるので、Windows ポリシーの要件を満たしません。|  
+|18465|ユーザー '%.*ls' はログインできませんでした。 理由:パスワードの変更が失敗しました。 パスワードは長すぎるため、ポリシー要件を満たしません。|  
+|18466|ユーザー '%.*ls' はログインできませんでした。 理由:パスワードの変更が失敗しました。 このパスワードはあまり複雑ではないので、Windows のポリシー要件を満たしません。|  
+|18467|ユーザー '%.*ls' はログインできませんでした。 理由:パスワードの変更が失敗しました。 パスワードがパスワード フィルター DLL の要件を満たしていません。|  
+|18468|ユーザー '%.*ls' はログインできませんでした。 理由:パスワードの変更が失敗しました。 パスワードの検証で予期しないエラーが発生しました。|  
+|18487|ユーザー '%.*ls' はログインできませんでした。 理由:このアカウントのパスワードの有効期限が切れています。|  
+|18488|ユーザー '%.*ls' はログインできませんでした。 理由:このアカウントのパスワードを変更する必要があります。|  
   
 ## <a name="ole-db-driver-for-sql-server"></a>OLE DB Driver for SQL Server  
- SQL Server の OLE DB ドライバーは、ユーザーインターフェイスとプログラムを使用してパスワードの有効期限をサポートします。  
+ OLE DB Driver for SQL Server では、パスワードの期限切れの処理がユーザー インターフェイスおよびプログラムからサポートされます。  
   
 ### <a name="ole-db-user-interface-password-expiration"></a>OLE DB ユーザー インターフェイスによるパスワード期限切れの処理  
  OLE DB Driver for SQL Server では、 **[SQL Server ログイン]** ダイアログ ボックスに行われた変更によって、パスワードの期限切れの処理がサポートされます。 DBPROP_INIT_PROMPT の値を DBPROMPT_NOPROMPT に設定すると、パスワードの有効期限が切れている場合に、最初の接続試行が失敗します。  
@@ -89,7 +89,7 @@ ms.locfileid: "67989131"
   
  パスワード変更の試行が予期せず失敗すると、サーバーからエラー コード 18468 が返されます。 接続試行からは標準の OLE DB エラーが返されます。  
   
- DBPROPSET_SQLSERVERDBINIT プロパティセットの詳細については、「[初期化プロパティと承認プロパティ](../../oledb/ole-db-data-source-objects/initialization-and-authorization-properties.md)」を参照してください。  
+ DBPROPSET_SQLSERVERDBINIT プロパティ セットの詳細については、「[初期化プロパティと承認プロパティ](../../oledb/ole-db-data-source-objects/initialization-and-authorization-properties.md)」を参照してください。  
 
   
 ## <a name="see-also"></a>参照  

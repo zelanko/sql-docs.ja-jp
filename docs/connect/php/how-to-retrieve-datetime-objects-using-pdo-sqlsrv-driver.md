@@ -1,5 +1,5 @@
 ---
-title: '方法: PDO_SQLSRV ドライバーを使用して日付/時刻型を PHP DateTime オブジェクトとして取得する | Microsoft Docs'
+title: 方法:PDO_SQLSRV ドライバーを使用して日付/時刻型を PHP DateTime オブジェクトとして取得する | Microsoft Docs
 ms.custom: ''
 ms.date: 02/11/2019
 ms.prod: sql
@@ -12,26 +12,26 @@ author: yitam
 ms.author: v-yitam
 manager: v-mabarw
 ms.openlocfilehash: 165e91cee3b0b4592f9b746f8b35b46bc73bce50
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68264573"
 ---
-# <a name="how-to-retrieve-date-and-time-types-as-php-datetime-objects-using-the-pdosqlsrv-driver"></a>方法: PDO_SQLSRV ドライバーを使用して日付/時刻型を PHP DateTime オブジェクトとして取得する
+# <a name="how-to-retrieve-date-and-time-types-as-php-datetime-objects-using-the-pdo_sqlsrv-driver"></a>方法:PDO_SQLSRV ドライバーを使用して日付/時刻型を PHP DateTime オブジェクトとして取得する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-バージョン5.6.0 で追加されたこの機能は、 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]の PDO_SQLSRV ドライバーを使用している場合にのみ有効です。
+バージョン 5.6.0 で追加されたこの機能は、[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] の PDO_SQLSRV ドライバーの利用時にのみ有効です。
 
-### <a name="to-retrieve-date-and-time-types-as-datetime-objects"></a>日付/時刻型を DateTime オブジェクトとして取得するには
+### <a name="to-retrieve-date-and-time-types-as-datetime-objects"></a>DateTime オブジェクトとして日付と時刻の型を取得するには
 
-PDO_SQLSRV を使用する場合、日付と時刻の型 (**smalldatetime**、 **datetime**、 **date**、 **time**、 **datetime2**、および**datetimeoffset**) は、既定で文字列として返されます。 PDO:: ATTR_STRINGIFY_FETCHES と PDO:: SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 属性のいずれにも影響はありません。 日付と時刻の型を[PHP DateTime](http://php.net/manual/en/class.datetime.php)オブジェクトとして取得するには、接続また`PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE`はステートメントの属性を**true** (既定では**false** ) に設定します。
+PDO_SQLSRV の利用時、日付と時刻の型 (**smalldatetime**、**datetime**、**date**、**time**、**datetime2**、**datetimeoffset**) は既定で文字列として返されます。 PDO::ATTR_STRINGIFY_FETCHES 属性と PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 属性のどちらにも効力がありません。 [PHP DateTime](http://php.net/manual/en/class.datetime.php) オブジェクトとして日付と時刻の型を取得するには、接続またはステートメント属性 `PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE` を **true** に設定します (既定では **false**)。
 
 > [!NOTE]
-> この接続属性またはステートメント属性は、DateTime オブジェクトを出力パラメーターとして指定できないため、日付と時刻の型の通常のフェッチにのみ適用されます。
+> DateTime オブジェクトは出力パラメーターとして指定できないため、この接続またはステートメント属性は、日付/時刻型の通常のフェッチにのみ適用されます。
 
-## <a name="example---use-the-connection-attribute"></a>例-接続属性を使用する
-次の例では、わかりやすくするためにエラーチェックを省略しています。 これは、接続属性を設定する方法を示しています。
+## <a name="example---use-the-connection-attribute"></a>例 - 接続属性の使用
+次の例では、わかりやすくするため、エラー チェックを省略しています。 この例からは、接続属性の設定方法がわかります。
 
 ```php
 <?php
@@ -58,8 +58,8 @@ unset($conn);
 ?>
 ```
 
-## <a name="example---use-the-statement-attribute"></a>例-ステートメント属性を使用する
-次の例では、ステートメントの属性を設定する方法を示します。
+## <a name="example---use-the-statement-attribute"></a>例 - ステートメント属性の使用
+この例からは、ステートメント属性の設定方法がわかります。
 
 ```php
 <?php
@@ -80,8 +80,8 @@ unset($conn);
 ?>
 ```
 
-## <a name="example---use-the-statement-option"></a>例-ステートメントオプションを使用する
-または、ステートメントの属性をオプションとして設定することもできます。
+## <a name="example---use-the-statement-option"></a>例 - ステートメント オプションの使用
+代わりに、ステートメント属性をオプションとして設定できます。
 
 ```php
 <?php
@@ -103,8 +103,8 @@ unset($conn);
 ?>
 ```
 
-## <a name="example---retrieve-datetime-types-as-strings"></a>例-datetime 型を文字列として取得する
-次の例では、逆のを実現する方法を示しています (これは、既定では false であるため、実際には必要ありません)。
+## <a name="example---retrieve-datetime-types-as-strings"></a>例 - 文字列として datetime 型を取得する
+次の例からは、逆に変換する方法がわかります (既定では false であるため、これは実際には不要です)。
 
 ```php
 <?php

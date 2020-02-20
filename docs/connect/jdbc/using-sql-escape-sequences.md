@@ -1,5 +1,5 @@
 ---
-title: SQL エスケープシーケンスの使用 |Microsoft Docs
+title: SQL エスケープ シーケンスの使用 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 00f9e25a-088e-4ac6-aa75-43eacace8f03
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: da2ae6b5353448d5281910d94aeef05ee0999c6a
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69025893"
 ---
 # <a name="using-sql-escape-sequences"></a>SQL エスケープ シーケンスの使用
@@ -61,7 +61,7 @@ JDBC ドライバーは、次の構文で SQL ステートメント内の関数�
 {fn functionName}  
 ```
 
-`functionName` は、JDBC ドライバーでサポートされている関数です。 例: 
+`functionName` は、JDBC ドライバーでサポートされている関数です。 次に例を示します。 
 
 ```sql
 SELECT {fn UCASE(Name)} FROM Employee  
@@ -86,13 +86,13 @@ SELECT {fn UCASE(Name)} FROM Employee
 
 ここで `literal-type` は、次のいずれかです。  
   
-| リテラルの種類 | [説明] | 値の形式               |
+| リテラルの種類 | 説明 | 値の形式               |
 | ------------ | ----------- | -------------------------- |
-| d            | date        | yyyy-mm-dd                 |
+| d            | Date        | yyyy-mm-dd                 |
 | t            | Time        | hh:mm:ss [1]               |
 | ts           | TimeStamp   | yyyy-mm-dd hh:mm:ss[.f...] |
   
-例:  
+次に例を示します。  
 
 ```sql
 UPDATE Orders SET OpenDate={d '2005-01-31'}
@@ -111,7 +111,7 @@ JDBC ドライバーでは、ストアド プロシージャ呼び出しにつ�
 
 `procedure-name` にはストアド プロシージャの名前を指定し、`parameter` にはストアド プロシージャのパラメーターを指定します。  
   
-ストアドプロシージャでのエスケープシーケンス`call`の使用の詳細については、「[ストアドプロシージャでのステートメントの使用](../../connect/jdbc/using-statements-with-stored-procedures.md)」を参照してください。  
+ストアド プロシージャでの `call` エスケープ シーケンスの使用の詳細については、「[ストアド プロシージャでのステートメントの使用](../../connect/jdbc/using-statements-with-stored-procedures.md)」を参照してください。  
 
 ## <a name="outer-joins"></a>外部結合
 
@@ -130,7 +130,7 @@ table-reference {LEFT | RIGHT | FULL} OUTER JOIN
 
 `table-reference` はテーブル名で、`search-condition` はテーブルで使用する結合条件です。  
   
-例:  
+次に例を示します。  
 
 ```sql
 SELECT Customers.CustID, Customers.Name, Orders.OrderID, Orders.Status

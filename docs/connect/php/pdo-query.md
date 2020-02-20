@@ -1,5 +1,5 @@
 ---
-title: 'PDO:: query |Microsoft Docs'
+title: PDO::query | Microsoft Docs
 ms.custom: ''
 ms.date: 08/01/2018
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: f6f5e6d4-8ca9-4f06-89ed-de65ad3952a2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fb7131e96277ea05b43f30923dcc64c5be602696
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67936208"
 ---
 # <a name="pdoquery"></a>PDO::query
@@ -40,18 +40,18 @@ PDOStatement PDO::query ($statement[, $fetch_style);
 ## <a name="exceptions"></a>例外  
 PDOException。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 PDO::query を使用して実行されたクエリは、PDO::SQLSRV_ATTR_DIRECT_QUERY の設定に応じて、準備したステートメントを実行するか、直接実行されます。 詳細については、「 [Direct Statement Execution and Prepared Statement Execution in the PDO_SQLSRV Driver](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md)」 (PDO_SQLSRV ドライバーでの直接ステートメント実行と準備されたステートメントの実行) を参照してください。  
   
 また、PDO::SQLSRV_ATTR_QUERY_TIMEOUT は、PDO::exec の動作にも影響があります。詳細については、「[PDO::setAttribute](../../connect/php/pdo-setattribute.md)」を参照してください。  
   
 $*fetch_style* には、次のオプションを指定できます。  
   
-|style|[説明]|  
+|Style|説明|  
 |---------|---------------|  
 |PDO::FETCH_COLUMN, *num*|指定された列内のデータを照会します。 テーブルの最初の列は 0 です。|  
 |PDO::FETCH_CLASS, '*classname*', array( *arglist* )|クラスのインスタンスを作成し、列名をクラスのプロパティに割り当てます。 クラス コンストラクターに 1 つ以上のパラメーターを指定できる場合、 *arglist*を渡すこともできます。|  
-|PDO:: FETCH_CLASS, '*classname*'|既存のクラスのプロパティに列名を割り当てます。|  
+|PDO::FETCH_CLASS, '*classname*'|既存のクラスのプロパティに列名を割り当てます。|  
   
 PDOStatement::closeCursor を呼び出して、PDOStatement オブジェクトに関連付けられたデータベース リソースを解放してから、もう一度 PDO::query を呼び出します。  
   

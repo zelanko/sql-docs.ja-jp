@@ -1,5 +1,5 @@
 ---
-title: supportsMixedCaseQuotedIdentifiers メソッド |Microsoft Docs
+title: supportsMixedCaseQuotedIdentifiers メソッド | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 76c68fc2-5af6-4b8d-baee-245716fdc5cc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 48f3861991aa56ed79f753acedd4dbd9f27b5744
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67969283"
 ---
 # <a name="supportsmixedcasequotedidentifiers-method-sqlserverdatabasemetadata"></a>supportsMixedCaseQuotedIdentifiers メソッド (SQLServerDatabaseMetaData)
@@ -40,8 +40,8 @@ public boolean supportsMixedCaseQuotedIdentifiers()
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この supportsMixedCaseQuotedIdentifiers メソッドは、supportsMixedCaseQuotedIdentifiers メソッドによって、java メタデータインターフェイスで指定されます。  
+## <a name="remarks"></a>解説  
+ この supportsMixedCaseQuotedIdentifiers メソッドは、java.sql.DatabaseMetaData インターフェイスの supportsMixedCaseQuotedIdentifiers メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

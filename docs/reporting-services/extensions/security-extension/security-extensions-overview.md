@@ -11,10 +11,10 @@ ms.assetid: 24ccd795-6506-457c-93ac-6a9dd6bb9a46
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c066c893833e1c8588be2460959ed298d6cf1b4e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63225870"
 ---
 # <a name="security-extensions-overview---reporting-services-ssrs"></a>セキュリティ拡張機能の概要 - Reporting Services (SSRS)
@@ -22,7 +22,7 @@ ms.locfileid: "63225870"
   
  セキュリティ拡張機能はオープンで拡張可能な API に基づいているので、認証と承認の新しい拡張機能を [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] に作成できます。 以下は、フォームベースの認証と承認を使用する一般的なセキュリティ拡張機能の実装例です。  
   
- ![Reporting Services のセキュリティ拡張機能プロセス](../../../reporting-services/extensions/security-extension/media/rosettasecurityextensionflow.gif "Reporting Services のセキュリティ拡張機能プロセス")  
+ ![Reporting Services のセキュリティ拡張フロー](../../../reporting-services/extensions/security-extension/media/rosettasecurityextensionflow.gif "Reporting Services のセキュリティ拡張フロー")  
   
  図に示すように、認証と承認は次のように行われます。  
   

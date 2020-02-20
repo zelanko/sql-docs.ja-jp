@@ -1,5 +1,5 @@
 ---
-title: 分散トランザクションのサポート |Microsoft Docs
+title: 分散トランザクションのサポート | Microsoft Docs
 description: OLE DB Driver for SQL Server での分散トランザクション
 ms.custom: ''
 ms.date: 06/14/2018
@@ -19,10 +19,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 22527cdfa08907dfdf120ef32c918ecb9eaf86bb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993983"
 ---
 # <a name="supporting-distributed-transactions"></a>分散トランザクションのサポート
@@ -32,18 +32,18 @@ ms.locfileid: "67993983"
 
   OLE DB Driver for SQL Server のコンシューマーは、**ITransactionJoin::JoinTransaction** メソッドを使用して、Microsoft 分散トランザクション コーディネーター (MS DTC) によりコーディネートされる分散トランザクションに参加できます。  
   
- MS DTC が公開する COM オブジェクトを使用すると、クライアントは、さまざまなデータ ストアに対する複数の接続にまたがってコーディネートされるトランザクションを起動したり、このトランザクションに参加することができます。 トランザクションを開始するために、SQL Server コンシューマーの OLE DB ドライバーは MS DTC **ITransactionDispenser**インターフェイスを使用します。 **ITransactionDispenser** の **BeginTransaction** メンバーは、分散トランザクション オブジェクト上の参照を返します。 この参照は、 **Jointransaction**を使用して SQL Server 用の OLE DB ドライバーに渡されます。  
+ MS DTC が公開する COM オブジェクトを使用すると、クライアントは、さまざまなデータ ストアに対する複数の接続にまたがってコーディネートされるトランザクションを起動したり、このトランザクションに参加することができます。 OLE DB Driver for SQL Server のコンシューマーは、MS DTC **ITransactionDispenser** インターフェイスを使用してトランザクションを起動します。 **ITransactionDispenser** の **BeginTransaction** メンバーは、分散トランザクション オブジェクト上の参照を返します。 この参照は、**JoinTransaction** を使用して、OLE DB Driver for SQL Server に渡されます。  
   
  MS DTC は、分散トランザクションでの非同期のコミットとアボートをサポートします。 非同期トランザクションの状態を通知する場合、コンシューマーは、**ITransactionOutcomeEvents** インターフェイスを実装し、そのインターフェイスを MS DTC トランザクション オブジェクトに接続します。  
   
  分散トランザクションの場合、OLE DB Driver for SQL Server では、**ITransactionJoin::JoinTransaction** のパラメーターを次のように実装します。  
   
-|パラメーター|[説明]|  
+|パラメーター|説明|  
 |---------------|-----------------|  
 |*punkTransactionCoord*|MS DTC トランザクション オブジェクトへのポインター。|  
-|*IsoLevel*|SQL Server の OLE DB ドライバーによって無視されます。 MS DTC によりコーディネートされるトランザクションの分離レベルは、コンシューマーが MS DTC からトランザクション オブジェクトを取得するときに決まります。|  
-|*IsoFlags*|0 を指定する必要があります。 コンシューマーによって他の値が指定されている場合、SQL Server の OLE DB ドライバーは XACT_E_NOISORETAIN を返します。|  
-|*POtherOptions*|NULL 以外の場合、SQL Server の OLE DB ドライバーは、インターフェイスからオプションオブジェクトを要求します。 Options オブジェクトの*Ultimeout*メンバーが0でない場合、SQL Server の OLE DB ドライバーは XACT_E_NOTIMEOUT を返します。 SQL Server の OLE DB ドライバーは、 *Szdescription*メンバーの値を無視します。|  
+|*IsoLevel*|OLE DB Driver for SQL Server では無視されます。 MS DTC によりコーディネートされるトランザクションの分離レベルは、コンシューマーが MS DTC からトランザクション オブジェクトを取得するときに決まります。|  
+|*IsoFlags*|0 を指定する必要があります。 コンシューマーが他の値を指定すると、OLE DB Driver for SQL Server から XACT_E_NOISORETAIN が返されます。|  
+|*POtherOptions*|NULL 以外の場合、OLE DB Driver for SQL Server では、インターフェイスからのオプション オブジェクトが要求されます。 このオプション オブジェクトの *ulTimeout* メンバーが 0 以外の場合、OLE DB Driver for SQL Server からは XACT_E_NOTIMEOUT が返されます。 OLE DB Driver for SQL Server では、*szDescription* メンバーの値は無視されます。|  
   
  次の例では、MS DTC を使用してトランザクションをコーディネートします。  
   

@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: ef70b3430cc1028b7486bf663280cfcf740d9290
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62651951"
 ---
 # <a name="provision-subscriptions-and-alerts-for-ssrs-service-applications"></a>SSRS サービス アプリケーションを使用するためのサブスクリプションと警告の準備
@@ -28,9 +28,9 @@ ms.locfileid: "62651951"
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2016 &#124; SharePoint 2013|  
   
- ![サービス アプリケーション データベースへの SQL エージェント アクセス許可](../../reporting-services/install-windows/media/rs-provisionsqlagent.gif "サービス アプリケーション データベースへの SQL エージェント アクセス許可")  
+ ![サービス アプリケーション データベースに対する SQL エージェント権限](../../reporting-services/install-windows/media/rs-provisionsqlagent.gif "サービス アプリケーション データベースに対する SQL エージェント権限")  
   
-||[説明]|  
+||説明|  
 |------|-----------------|  
 |**1**|Reporting Services サービス アプリケーション データベースをホストしている SQL Server データベース エンジンのインスタンス。|  
 |**2**|SQL データベース エンジンのインスタンスに対応する SQL Server エージェントのインスタンス。|  

@@ -1,5 +1,5 @@
 ---
-title: 実行関数の比較 |Microsoft Docs
+title: 実行関数の比較 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -13,10 +13,10 @@ ms.assetid: 130fc0fd-87dd-46b2-918f-de9dc572c769
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f2b4d6c85c399589aae4eedbaade4bbdc4f70609
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993741"
 ---
 # <a name="comparing-execution-functions"></a>実行関数の比較
@@ -27,7 +27,7 @@ ms.locfileid: "67993741"
 ## <a name="sqlsrv-execution-functions"></a>SQLSRV 実行関数  
 SQLSRV ドライバーを使用している場合、 [sqlsrv_query](../../connect/php/sqlsrv-query.md) を使用して、1 つのクエリを実行し、 [sqlsrv_execute](../../connect/php/sqlsrv-prepare.md) で [sqlsrv_prepare](../../connect/php/sqlsrv-execute.md) を使用して、準備されたステートメントを実行のたびに異なるパラメーター値で複数回実行します。  
 
-## <a name="pdosqlsrv-execution-functions"></a>PDO_SQLSRV 実行関数 
+## <a name="pdo_sqlsrv-execution-functions"></a>PDO_SQLSRV 実行関数 
 PDO_SQLSRV ドライバーを使用している場合は、次のいずれかでクエリを実行できます。  
   
 -   [PDO::exec](../../connect/php/pdo-exec.md)  

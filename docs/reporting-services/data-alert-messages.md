@@ -10,10 +10,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: a9fc49d1d84fc714fca13519abad4fd92c21f08a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571554"
 ---
 # <a name="data-alert-messages"></a>データ警告メッセージ
@@ -22,7 +22,7 @@ ms.locfileid: "65571554"
 
 [!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
 
-SQL Server Reporting Services データ警告は、2 種類のデータ警告メッセージ (データ警告結果を含むメッセージと、エラー説明を含むメッセージ) を電子メールで配信します。 結果を含むメッセージは、すべての受信者に共通して関係し、かつ業務意思決定にとって重要なレポート データの変更について情報を提供します。 何かの理由でエラーが発生し、結果情報が取得できない場合は、代わりにエラー メッセージが送信されます。
+SQL Server Reporting Services のデータ警告では、電子メールでデータ警告の結果を含むメッセージとエラーの説明を含むメッセージの 2 種類のデータ警告を送信します。 結果を含むメッセージは、すべての受信者に共通して関係し、かつ業務意思決定にとって重要なレポート データの変更について情報を提供します。 何かの理由でエラーが発生し、結果情報が取得できない場合は、代わりにエラー メッセージが送信されます。
 
 データ警告定義の所有者は、データ警告マネージャーで、データ警告インスタンスに関する情報を参照することもできます。 詳細については、「 [SharePoint ユーザー用のデータ警告マネージャー](../reporting-services/data-alert-manager-for-sharepoint-users.md)」を参照してください。  
 
@@ -34,7 +34,7 @@ SQL Server Reporting Services データ警告は、2 種類のデータ警告メ
   
  **結果メッセージ**  
   
- ![結果を含むデータ警告電子メール メッセージ](../reporting-services/media/rs-alertmessageresults.gif "結果を含むデータ警告電子メール メッセージ")  
+ ![結果を含むデータ警告の電子メール メッセージ](../reporting-services/media/rs-alertmessageresults.gif "結果を含むデータ警告の電子メール メッセージ")  
   
  **エラー メッセージ**  
   

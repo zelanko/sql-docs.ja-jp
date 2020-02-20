@@ -1,5 +1,5 @@
 ---
-title: PDOStatement クラス |Microsoft Docs
+title: PDOStatement Class | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: ef2db0b3-b10e-4898-8bfc-d5e4baca18ef
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 160d28aae240179173949ccd67639746225b7c15
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67936084"
 ---
 # <a name="pdostatement-class"></a>PDOStatement クラス
@@ -28,7 +28,7 @@ PDOStatement クラスは、ステートメントとステートメントの結�
 PDOStatement {}  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 PDOStatement クラスには、次のメソッドが含まれています。  
   
 -   [PDOStatement::bindColumn](../../connect/php/pdostatement-bindcolumn.md)  

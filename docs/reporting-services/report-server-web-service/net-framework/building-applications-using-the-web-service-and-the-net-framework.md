@@ -19,14 +19,14 @@ ms.assetid: 92a9678c-bc4f-4d7a-ba44-85989bfe27ca
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: f22f1b32318f5f6440b4506adcbb4926224908e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63284648"
 ---
 # <a name="building-applications-using-the-web-service-and-the-net-framework"></a>Web サービスと .NET Framework を使用したアプリケーションの構築
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] により、メソッド、プリミティブ型、およびユーザー定義の複合型などの、Web サービスと連動する、おなじみのプログラミング構成要素を使用できます。 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] により、W3C (World Wide Web Consortium) の標準に準拠した任意の Web サービスを呼び出すことができる、Web サービス クライアントを作成するためのインフラストラクチャとツールが提供されます。  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] では、Web サービスと連動する、メソッド、プリミティブ型、およびユーザー定義の複合型などのおなじみのプログラミング構成要素を使用できます。 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] により、W3C (World Wide Web Consortium) の標準に準拠した任意の Web サービスを呼び出すことができる、Web サービス クライアントを作成するためのインフラストラクチャとツールが提供されます。  
   
  レポート サーバー Web サービス クライアントとは、Simple Object Access Protocol (SOAP) メッセージを使用して、レポート サーバーと通信をする任意のコンポーネントまたはアプリケーションのことです。  
   
@@ -46,11 +46,11 @@ ms.locfileid: "63284648"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|トピック|[説明]|  
+|トピック|説明|  
 |-----------|-----------------|  
-|[Web サービス プロキシの作成](../../../reporting-services/report-server-web-service/net-framework/creating-the-web-service-proxy.md)|[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] を使用してプロジェクトにプロキシ クラスを追加する方法を説明します。|  
+|[Web サービス プロキシの作成](../../../reporting-services/report-server-web-service/net-framework/creating-the-web-service-proxy.md)|[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] を使用してご自分のプロジェクトにプロキシ クラスを追加する方法を説明します。|  
 |[Web サービス認証](../../../reporting-services/report-server-web-service/net-framework/web-service-authentication.md)|レポート サーバー Web サービスに対する呼び出しの認証方法について説明します。|  
-|[Web サービス メソッドの呼び出し](../../../reporting-services/report-server-web-service/net-framework/calling-web-service-methods.md)|[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] を使用して、Web サービス メソッドを呼び出すための SOAP API の使用法を説明します。|  
+|[Web サービス メソッドの呼び出し](../../../reporting-services/report-server-web-service/net-framework/calling-web-service-methods.md)|[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] を使用して、Web サービス メソッドを呼び出す SOAP API の使用法を説明します。|  
 |[Web サービスの Url プロパティを設定](../../../reporting-services/report-server-web-service/net-framework/setting-the-url-property-of-the-web-service.md)|Web 参照の作成後に新しいサーバーの URL を Web サービス プロキシに知らせるためのプログラミング方法について説明します。|  
 |[Web サービス メソッドの引数の指定](../../../reporting-services/report-server-web-service/net-framework/supplying-web-service-method-arguments.md)|Web サービス メソッドを呼び出す方法およびメソッドの引数の指定方法を説明します。|  
 |[省略可能な Web サービス オブジェクトの値を省略](../../../reporting-services/report-server-web-service/net-framework/omitting-values-for-optional-web-service-objects.md)|省略可能な Web サービス オブジェクトの値の省略方法を説明します。|  

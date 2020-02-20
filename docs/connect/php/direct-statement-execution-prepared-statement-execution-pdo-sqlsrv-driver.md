@@ -1,5 +1,5 @@
 ---
-title: Direct ステートメント-準備されたステートメントの実行 PDO_SQLSRV Driver |Microsoft Docs
+title: 直接ステートメント - 準備されたステートメントの実行 PDO_SQLSRV ドライバー | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -11,32 +11,32 @@ ms.assetid: 05544ca6-1e07-486c-bf03-e8c2c25b3024
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fa9e544fb7b79009d86a5742946a722d5adc18f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993621"
 ---
-# <a name="direct-statement-execution-and-prepared-statement-execution-in-the-pdosqlsrv-driver"></a>Direct Statement Execution and Prepared Statement Execution in the PDO_SQLSRV Driver (PDO_SQLSRV ドライバーでの直接ステートメント実行と準備されたステートメントの実行)
+# <a name="direct-statement-execution-and-prepared-statement-execution-in-the-pdo_sqlsrv-driver"></a>Direct Statement Execution and Prepared Statement Execution in the PDO_SQLSRV Driver (PDO_SQLSRV ドライバーでの直接ステートメント実行と準備されたステートメントの実行)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-このトピックでは、PDO::SQLSRV_ATTR_DIRECT_QUERY 属性を使用して、準備されたステートメントの実行である既定ではなく、直接のステートメントの実行を指定する方法について説明します。 パラメーターバインドを使用してステートメントを複数回実行した場合、準備されたステートメントを使用すると、パフォーマンスが向上する可能性があります。  
+このトピックでは、PDO::SQLSRV_ATTR_DIRECT_QUERY 属性を使用して、準備されたステートメントの実行である既定ではなく、直接のステートメントの実行を指定する方法について説明します。 パラメーターのバインドを使用してステートメントが複数回実行される場合、準備されたステートメントを使用すると、パフォーマンスが向上する可能性があります。  
   
-## <a name="remarks"></a>Remarks  
-ドライバーによるステートメントの[!INCLUDE[tsql](../../includes/tsql-md.md)]準備を行わずにステートメントをサーバーに直接送信する場合は、pdo:: SQLSRV_ATTR_DIRECT_QUERY 属性を pdo:: [setAttribute](../../connect/php/pdo-setattribute.md) (または、 [pdo:: __ コンストラクトに渡されるドライバーオプションとして設定できます。](../../connect/php/pdo-construct.md))、または[PDO::p repare](../../connect/php/pdo-prepare.md)を呼び出す場合。 既定では、PDO:: SQLSRV_ATTR_DIRECT_QUERY の値は False です (準備されたステートメントの実行を使用します)。  
+## <a name="remarks"></a>解説  
+ドライバーによるステートメントの準備を行わずに [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントをサーバーに直接送信する場合は、PDO::SQLSRV_ATTR_DIRECT_QUERY 属性を [PDO::setAttribute](../../connect/php/pdo-setattribute.md) を使って (または [PDO::__construct](../../connect/php/pdo-construct.md) に渡されるドライバー オプションとして)、または [PDO::prepare](../../connect/php/pdo-prepare.md) を呼び出すときに設定できます。 既定では、PDO::SQLSRV_ATTR_DIRECT_QUERY の値は False です (準備されたステートメントの実行を使用します)。  
   
-[PDO:: query](../../connect/php/pdo-query.md)を使用する場合は、直接実行することもできます。 [Pdo:: query](../../connect/php/pdo-query.md)を呼び出す前に、pdo:: [setAttribute](../../connect/php/pdo-setattribute.md)を呼び出し、pdo:: SQLSRV_ATTR_DIRECT_QUERY を True に設定します。  Pdo:: [query](../../connect/php/pdo-query.md)の各呼び出しは、pdo:: SQLSRV_ATTR_DIRECT_QUERY に対して異なる設定を使用して実行できます。  
+[PDO::query](../../connect/php/pdo-query.md) を使用する場合は、直接実行が必要になることがあります。 [PDO::query](../../connect/php/pdo-query.md) を呼び出す前に、[PDO::setAttribute](../../connect/php/pdo-setattribute.md) を呼び出し、PDO::SQLSRV_ATTR_DIRECT_QUERY を True に設定します。  [PDO::query](../../connect/php/pdo-query.md) への各呼び出しは、PDO::SQLSRV_ATTR_DIRECT_QUERY の異なる設定で実行できます。  
   
-[PDO::p repare](../../connect/php/pdo-prepare.md)と[PDOStatement:: execute](../../connect/php/pdostatement-execute.md)を使用して、バインドされたパラメーターを使用してクエリを複数回実行する場合、準備されたステートメントを実行すると、繰り返しクエリの実行が最適化されます。  この状況では、ドライバーオプションの配列パラメーターで pdo:: SQLSRV_ATTR_DIRECT_QUERY を False に設定して[pdo::p repare](../../connect/php/pdo-prepare.md)を呼び出します。 必要に応じて、PDO:: SQLSRV_ATTR_DIRECT_QUERY を False に設定して、準備されたステートメントを実行できます。  
+[PDO::prepare](../../connect/php/pdo-prepare.md) と [PDOStatement::execute](../../connect/php/pdostatement-execute.md) を使用し、バインドされたパラメーターを使用してクエリを複数回実行すると、準備されたステートメントの実行によって、繰り返しクエリの実行が最適化されます。  この場合は、ドライバー オプション配列パラメーターで PDO::SQLSRV_ATTR_DIRECT_QUERY を False に設定して [PDO::p repare](../../connect/php/pdo-prepare.md) を呼び出します。 必要に応じて、PDO::SQLSRV_ATTR_DIRECT_QUERY を False に設定して準備されたステートメントを実行できます。  
   
-[Pdo::p repare](../../connect/php/pdo-prepare.md)を呼び出した後、準備されたクエリの実行時に pdo:: SQLSRV_ATTR_DIRECT_QUERY の値を変更することはできません。  
+[PDO::p repare](../../connect/php/pdo-prepare.md) を呼び出した後、準備されたクエリの実行時に PDO::SQLSRV_ATTR_DIRECT_QUERY の値を変更することはできません。  
   
-クエリで、前のクエリで設定されたコンテキストが必要な場合は、PDO:: SQLSRV_ATTR_DIRECT_QUERY を True に設定してクエリを実行します。 たとえば、クエリで一時テーブルを使用する場合は、PDO:: SQLSRV_ATTR_DIRECT_QUERY を True に設定する必要があります。  
+あるクエリに、前のクエリで設定されたコンテキストが必要な場合は、PDO::SQLSRV_ATTR_DIRECT_QUERY を True に設定してクエリを実行します。 たとえば、クエリで一時テーブルを使用する場合、PDO::SQLSRV_ATTR_DIRECT_QUERY を True に設定する必要があります。  
   
-次の例では、前のステートメントのコンテキストが必要な場合に、PDO:: SQLSRV_ATTR_DIRECT_QUERY を True に設定する必要があることを示しています。 このサンプルは、クエリが直接実行されたときに、プログラム内の後続のステートメントでのみ使用できる一時テーブルを使用します。  
+前のステートメントのコンテキストが必要な場合、PDO::SQLSRV_ATTR_DIRECT_QUERY を True に設定する必要があることを示す例を次に示します。 このサンプルは、クエリが直接実行されたときに、プログラム内の後続のステートメントでのみ使用できる一時テーブルを使用します。  
   
 > [!NOTE]
-> クエリでストアドプロシージャを呼び出し、このストアドプロシージャで一時テーブルを使用する場合は、代わりに[PDO:: exec](../../connect/php/pdo-exec.md)を使用します。
+> ストアド プロシージャを呼び出すためのクエリであり、このストアド プロシージャで一時テーブルが使用される場合は、代わりに [PDO::exec](../../connect/php/pdo-exec.md) を使用します。
 
 ```  
 <?php  

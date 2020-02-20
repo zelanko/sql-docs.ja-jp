@@ -9,14 +9,14 @@ ms.assetid: 78d5e3b8-9320-4e4b-a025-e2de3cf7afa7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 684f8dd2b74597b96018449492abe3786e0acba0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581787"
 ---
 # <a name="built-in-collections-in-expressions-report-builder"></a>式で使用される組み込みコレクション (レポート ビルダー)
-  レポート内の式には、ReportItems、Parameters、Fields、DataSets、DataSources、Variables などの組み込みコレクションへの参照とレポート名などのグローバル情報の組み込みフィールドへの参照を含めることができます。 **[式]** ダイアログ ボックスにすべてのコレクションが表示されるとは限りません。 DataSets コレクションと DataSources コレクションを使用できるのは、レポート サーバー上でパブリッシュされたレポートの実行時のみです。 ReportItems コレクションは、ページまたはページ ヘッダーのテキスト ボックスなど、レポート領域内のテキスト ボックスのコレクションです。  
+  レポートの式には、次の組み込みコレクションへの参照を含めることができます:ReportItems、Parameters、Fields、DataSets、DataSources、Variables。また、レポート名などのグローバル情報の組み込みフィールドを含めることができます。 **[式]** ダイアログ ボックスにすべてのコレクションが表示されるとは限りません。 DataSets コレクションと DataSources コレクションを使用できるのは、レポート サーバー上でパブリッシュされたレポートの実行時のみです。 ReportItems コレクションは、ページまたはページ ヘッダーのテキスト ボックスなど、レポート領域内のテキスト ボックスのコレクションです。  
   
  詳細については、「[式 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)」を参照してください。  
   
@@ -26,10 +26,10 @@ ms.locfileid: "65581787"
 ##  <a name="Collections"></a> 組み込みコレクションについて  
  次の表は、式を記述するときに使用できる組み込みコレクションの一覧です。 各行に、プログラム上のコレクション名 (大文字と小文字は区別されます)、[式] ダイアログ ボックスを使用してコレクションへの参照を対話的に追加できるかどうか、使用例、および説明 (コレクションの値がいつ初期化され使用できるようになるかなど) を示します。  
   
-|組み込みコレクション|[式] ダイアログ ボックスのカテゴリ|例|[説明]|  
+|組み込みコレクション|[式] ダイアログ ボックスのカテゴリ|例|説明|  
 |--------------------------|-------------------------------------------|-------------|-----------------|  
 |**Globals**|組み込みフィールド|`=Globals.ReportName`<br /><br /> `- or -`<br /><br /> `=Globals.PageNumber`|レポート名またはページ番号など、レポートで役立つグローバル変数を表します。 常に使用可能です。<br /><br /> 詳細については、「[組み込み Globals および Users 参照 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)」をご覧ください。|  
-|**ユーザー**|組み込みフィールド|`=User.UserID`<br /><br /> - または -<br /><br /> `=User.Language`|言語設定やユーザー ID など、レポートを実行しているユーザーに関するデータのコレクションを表します。 常に使用可能です。<br /><br /> 詳細については、「[組み込み Globals および Users 参照 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)」をご覧ください。|  
+|**User**|組み込みフィールド|`=User.UserID`<br /><br /> - または -<br /><br /> `=User.Language`|言語設定やユーザー ID など、レポートを実行しているユーザーに関するデータのコレクションを表します。 常に使用可能です。<br /><br /> 詳細については、「[組み込み Globals および Users 参照 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)」をご覧ください。|  
 |**パラメーター**|パラメーター|`=Parameters("ReportMonth").Value`<br /><br /> - または -<br /><br /> `=Parameters!ReportYear.Value`|レポート パラメーターのコレクションを表します。各パラメーターには単一値または複数値を指定できます。 初期化処理が完了するまで使用できません。 詳細については、「[Parameters コレクションの参照 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)」を参照してください。|  
 |**Fields(** *\<Dataset>* **)**|フィールド|`=Fields!Sales.Value`|レポートで使用可能なデータセットのフィールドのコレクションを表します。 データをデータ ソースからデータセットに取得した後で使用可能です。 詳細については、「[データセット フィールド コレクションの参照 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/built-in-collections-dataset-fields-collection-references-report-builder.md)」を参照してください。|  
 |**DataSets**|表示されません|`=DataSets("TopEmployees").CommandText`|レポート定義の本文から参照されるデータセットのコレクションを表します。 ページ ヘッダーまたはページ フッターでのみ使用されるデータ ソースは含まれません。 ローカル プレビューでは使用できません。 詳細については、「[DataSources コレクションと DataSets コレクションの参照 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/built-in-collections-datasources-and-datasets-references-report-builder.md)」を参照してください。|  

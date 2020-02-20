@@ -9,10 +9,10 @@ ms.assetid: 4791a157-b028-4698-905d-f1dd0887aa0d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 23a1561104273203a01c99a08e86ed301e55bbf3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65578774"
 ---
 # <a name="drillthrough-drilldown-subreports-and-nested-data-regions"></a>ドリルスルー、ドリルダウン、サブレポート、および入れ子になったデータ領域
@@ -36,7 +36,7 @@ ms.locfileid: "65578774"
 ##  <a name="SummaryCharacteristics"></a> 特性の概要  
  次の表は、各方法のさまざまな特性についてまとめたものです。 詳細については、このトピックの後半で説明します。 ドリルダウンによる表示と非表示はどのレポート アイテムにも適用できるので、この表の比較にはドリルダウンは含まれていません。  
   
-|特性 (trait)|サブレポート|詳細|入れ子|  
+|特性 (trait)|サブレポート|ドリルスルー|入れ子|  
 |-----------|---------------|------------------|------------|  
 |使用するデータセットがメイン レポートと同じかどうか|同じまたは別|同じまたは別|同じ|  
 |データの取得方法|メイン レポートと同時にデータを取得|詳細レポートごとにデータを取得|メイン レポートと同時にすべてのデータを取得|  
@@ -94,6 +94,6 @@ ms.locfileid: "65578774"
  レポート定義ファイルの外部にあるアイテムを参照する方法について説明します。  
   
 ## <a name="see-also"></a>参照  
- [レポート パラメーター (レポート ビルダーおよびレポート デザイナー)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
+ [レポート パラメーター &#40;レポート ビルダーおよびレポート デザイナー&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   
   

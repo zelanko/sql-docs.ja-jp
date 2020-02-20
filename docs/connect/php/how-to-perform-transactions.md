@@ -1,5 +1,5 @@
 ---
-title: '方法: トランザクションを実行する |Microsoft Docs'
+title: 方法:トランザクションを実行する | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,13 +13,13 @@ ms.assetid: f4643b85-f929-4919-8951-23394bc5bfa7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 26ca7fbe56a17e1bf2a7c69b9e8c2dcd63073f87
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67936437"
 ---
-# <a name="how-to-perform-transactions"></a>方法: トランザクションを実行する
+# <a name="how-to-perform-transactions"></a>方法:トランザクションを実行する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] の SQLSRV ドライバーには、トランザクションを実行する 3 つの関数があります。  
@@ -42,7 +42,7 @@ PDO_SQLSRV ドライバーには、トランザクションを実行する 3 つ
   
 このトピックの後半では、SQLSRV ドライバーを使用してトランザクションを実行する方法を説明し、例を示します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 トランザクションを実行する手順の概要は次のとおりです。  
   
 1.  **sqlsrv_begin_transaction** を使用してトランザクションを開始します。  
@@ -61,7 +61,7 @@ PDO_SQLSRV ドライバーには、トランザクションを実行する 3 つ
   
 ## <a name="example"></a>例  
   
-### <a name="description"></a>[説明]  
+### <a name="description"></a>説明  
 次の例では、トランザクションの一部としていくつかのクエリを実行します。 すべてのクエリが成功すると、トランザクションはコミットされます。 いずれかのクエリが失敗すると、トランザクションはロールバックされます。  
   
 この例では、 *Sales.SalesOrderDetail* テーブルから販売注文を削除し、販売注文の各製品について *Product.ProductInventory* テーブルの製品インベントリ レベルを調整します。 データベースに注文および製品の入手の状態を正確に反映するには、これらのクエリすべてが成功する必要があるため、トランザクションに含まれています。  
@@ -149,8 +149,8 @@ function perform_trans_ops($conn, $orderId)
 ?>  
 ```  
   
-### <a name="comments"></a>コメント  
-トランザクションの動作を重視するため、いくつかの推奨されるエラー処理は前の例には含まれていません。 実稼働アプリケーションでは、 **sqlsrv**関数の呼び出しにエラーがないかどうかを確認し、それに応じて処理することをお勧めします。
+### <a name="comments"></a>説明  
+トランザクションの動作を重視するため、いくつかの推奨されるエラー処理は前の例には含まれていません。 実稼働アプリケーションでは、**sqlsrv** 関数のすべての呼び出しについてエラーを確認し、それに応じて処理することをお勧めします。
   
 ## <a name="see-also"></a>参照  
 [データの更新 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)

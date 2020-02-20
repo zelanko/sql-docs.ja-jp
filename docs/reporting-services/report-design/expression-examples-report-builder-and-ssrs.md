@@ -24,21 +24,21 @@ ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c3becfd5ede4ddd1ca7bfd7d12a6c88db225ced3
-ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68661340"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>式の例 (レポート ビルダーおよび SSRS)
-[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートでは、内容と外観を制御するために式をよく使用します。 式は [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]で記述し、組み込み関数、カスタム コード、レポート変数とグループ変数、およびユーザー定義変数を使用することができます。 式は等号 (=) で始まります。 式エディターと使用できる参照の種類の詳細については、「[レポートでの式の使用 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)」および「[式の追加 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md)」を参照してください。  
+[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートでは、内容と外観を制御するために式をよく使用します。 式は [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] で記述し、組み込み関数、カスタム コード、レポート変数とグループ変数、およびユーザー定義変数を使用することができます。 式は等号 (=) で始まります。 式エディターと使用できる参照の種類の詳細については、「[レポートでの式の使用 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)」および「[式の追加 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md)」を参照してください。  
   
 > [!IMPORTANT]  
->  RDL サンドボックスが有効になっている場合は、レポートのパブリッシュ時に式のテキストで使用できる型およびメンバーが特定の型およびメンバーに制限されます。 詳細については、「 [RDL サンドボックスの有効化と無効化](../../reporting-services/report-server-sharepoint/enable-and-disable-rdl-sandboxing.md)」を参照してください。  
+>  RDL サンドボックスが有効になっている場合は、レポートのパブリッシュ時に式のテキストで使用できる型およびメンバーが特定の型およびメンバーに制限されます。 詳細については、 [「RDL サンドボックスの有効化と無効化」](../../reporting-services/report-server-sharepoint/enable-and-disable-rdl-sandboxing.md)を参照してください。  
   
 このトピックでは、レポート内で一般的なタスクに使用できる式の例を示します。  
   
--   [Visual Basic の関数](#VisualBasicFunctions) [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] の日付関数、文字列関数、変換関数、および条件関数の例。  
+-   [Visual Basic の関数](#VisualBasicFunctions)[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] の日付関数、文字列関数、変換関数、および条件関数の例。  
   
 -   [レポートの関数](#ReportFunctions) 集計および組み込みのレポート関数の例。  
   
@@ -62,11 +62,11 @@ ms.locfileid: "68661340"
   
 単純型と複合型の式、式を使用できる場所、式に使用できる参照の種類など、レポート式の詳細については、「 [式 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)」を参照してください。 式が集計の計算のために評価されるコンテキストの詳細については、「[合計、集計、および組み込みコレクションの式のスコープ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)」を参照してください。  
   
-多数の関数および演算子がこのトピックでも式の例に使用されていますが、これらを使用して式を作成する方法をレポート作成のコンテキストで学習するには、「 [チュートリアル: 式の概要](../../reporting-services/tutorial-introducing-expressions.md)」を参照してください。  
+多数の関数および演算子がこのトピックでも式の例に使用されていますが、これらを使用して式を作成する方法をレポート作成のコンテキストで学習するには、「[チュートリアル:式の概要](../../reporting-services/tutorial-introducing-expressions.md)」を参照してください。  
 
   
 ## <a name="functions"></a>関数  
- レポート内の多くの式には、関数が含まれています。 これらの関数を使用して、データの書式を設定し、ロジックを適用し、レポートのメタデータにアクセスできます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] ランタイム ライブラリの関数や、<xref:System.Convert> 名前空間および <xref:System.Math> 名前空間の関数を使用する式を記述できます。 また、他のアセンブリまたはカスタム コードの関数への参照も追加できます。 また、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]などの <xref:System.Text.RegularExpressions>」を参照してください。  
+ レポート内の多くの式には、関数が含まれています。 これらの関数を使用して、データの書式を設定し、ロジックを適用し、レポートのメタデータにアクセスできます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] ランタイム ライブラリの関数や、<xref:System.Convert> 名前空間および <xref:System.Math> 名前空間の関数を使用する式を記述できます。 また、他のアセンブリまたはカスタム コードの関数への参照も追加できます。 また、<xref:System.Text.RegularExpressions> などの [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] のクラスを使用することもできます。  
   
 ##  <a name="VisualBasicFunctions"></a> Visual Basic の関数  
  [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] の関数を使用して、テキスト ボックスに表示されるデータや、レポートのパラメーター、プロパティ、または他の領域に使用されるデータを操作できます。 ここでは、このような関数のうち、いくつかの例を紹介します。 各関数の詳細については、MSDN の「 [Visual Basic ランタイム ライブラリのメンバー](https://go.microsoft.com/fwlink/?LinkId=198941) 」を参照してください。  
@@ -120,7 +120,7 @@ ms.locfileid: "68661340"
     =DateAdd(DateInterval.Month, 6, Parameters!StartDate.Value)  
     ```  
   
--   **Year** 関数は、特定の日付の年を表示します。 この関数を使用して、日付をグループ化したり、一連の日付のラベルとして年を表示したりできます。 次の式では、指定した販売注文日グループの年が返されます。 また、 **Month** 関数および他の関数を使用して、日付を操作することもできます。 詳細については、 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] のドキュメントを参照してください。  
+-   **Year** 関数は、特定の日付の年を表示します。 この関数を使用して、日付をグループ化したり、一連の日付のラベルとして年を表示したりできます。 次の式では、指定した販売注文日グループの年が返されます。 また、 **Month** 関数および他の関数を使用して、日付を操作することもできます。 詳細については、[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] のドキュメントを参照してください。  
   
     ```  
     =Year(Fields!OrderDate.Value)  
@@ -208,13 +208,13 @@ ms.locfileid: "68661340"
   
      日付または数値のみを格納するテキスト ボックスに書式を適用する場合は、テキスト ボックス内で **Format** 関数を使用するのではなく、テキスト ボックスの Format プロパティを使用する必要があります。  
   
--   **Right**、 **Len**、 **InStr** の各関数は、サブストリングを返す場合に役立ちます。たとえば、 *DOMAIN*\\*username* の文字列からユーザー名だけを返します。 次の式では、\\User *というパラメーターで取得できる文字列のうち、円記号 (* ) より右側の部分のみが返されます。  
+-   **Right**、 **Len**、 **InStr** の各関数は、サブストリングを返す場合に役立ちます。たとえば、 *DOMAIN*\\*username* の文字列からユーザー名だけを返します。 次の式では、\\User *というパラメーターで取得できる文字列のうち、円記号 (*) より右側の部分のみが返されます。  
   
     ```  
     =Right(Parameters!User.Value, Len(Parameters!User.Value) - InStr(Parameters!User.Value, "\"))  
     ```  
   
-     次の式では、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.String> System.String [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] クラスのメンバーを使用しています。返される値は、上記の式と同じです。  
+     次の式では、[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] の関数の代わりに [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の <xref:System.String> クラスのメンバーを使用しています。返される値は、上の式と同じです。  
   
     ```  
     =Parameters!User.Value.Substring(Parameters!User.Value.IndexOf("\")+1, Parameters!User.Value.Length-Parameters!User.Value.IndexOf("\")-1)  
@@ -233,7 +233,7 @@ ms.locfileid: "68661340"
   
     ```  
   
--   また、 **の** System.Text.RegularExpressions [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Text.RegularExpressions> 関数は、電話番号の書式を設定するなど、既存の文字列の書式を変更する場合に役立ちます。 次の式では、フィールドに含まれる、" **nnn** nnn*nnnn*- *" 形式の 10 桁の電話番号を、* -*Replace*関数を使用して "(*nnn*) *nnn*-*nnnn*" 形式に変更しています。  
+-   [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の <xref:System.Text.RegularExpressions> に含まれる **Regex** 関数は、電話番号の書式を設定するなど、既存の文字列の書式を変更する場合に役立ちます。 次の式では、フィールドに含まれる、" **nnn** nnn*nnnn*-*" 形式の 10 桁の電話番号を、*-*Replace*関数を使用して "(*nnn*) *nnn*-*nnnn*" 形式に変更しています。  
   
     ```  
     =System.Text.RegularExpressions.Regex.Replace(Fields!Phone.Value, "(\d{3})[ -.]*(\d{3})[ -.]*(\d{4})", "($1) $2-$3")  
@@ -242,7 +242,7 @@ ms.locfileid: "68661340"
     > [!NOTE]  
     >  Fields!Phone.Value に余分なスペースがないことと、データ型が <xref:System.String>」を参照してください。  
   
-### <a name="lookup"></a>Lookup  
+### <a name="lookup"></a>参照  
   
 -   キー フィールドを指定することで、 **Lookup** 関数を使用し、1 対 1 のリレーションシップ (キーと値のペアなど) の値をデータセットから取得することができます。 次の式では、入力された製品識別子に一致する製品名をデータセット ("Product") から取得し、表示します。  
   

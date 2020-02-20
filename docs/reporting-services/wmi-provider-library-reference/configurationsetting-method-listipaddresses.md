@@ -11,10 +11,10 @@ ms.assetid: 7e7cf182-fba0-4604-a474-098461e23e9d
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 1207c4c9688826b599548477a35ca123b9d39c28
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579932"
 ---
 # <a name="configurationsetting-method---listipaddresses"></a>ConfigurationSetting メソッド - ListIPAddresses
@@ -44,7 +44,7 @@ public void ListIPAddresses (out string[] IPAddress,
  *IsDhcpEnabled[]*  
  [out] IP アドレスが DHCP 対応かどうか。  
   
- *Length*  
+ *[データ型]*  
  [out] メソッドによって返される配列の長さ。  
   
  *HRESULT*  
@@ -53,7 +53,7 @@ public void ListIPAddresses (out string[] IPAddress,
 ## <a name="return-value"></a>戻り値  
  メソッド呼び出しの成功または失敗を示す *HRESULT* を返します。 値が 0 の場合はメソッド呼び出しが正常に完了したことを示します。エラー コードの場合は呼び出しが失敗したことを示します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  *IPVersion* の文字列は、"V4" または "V6" です。  
   
  *IsDhcpEnabled* が **True**の場合、 *IPAddress* は動的です。 これは、SSL バインドには使用しないでください。  

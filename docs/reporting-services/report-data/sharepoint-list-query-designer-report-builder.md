@@ -11,10 +11,10 @@ ms.assetid: b8a3122c-8008-4950-b515-937636d7967f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: bd0c32d753abf6b907e35daa91851acdd286f417
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66500046"
 ---
 # <a name="sharepoint-list-query-designer-report-builder"></a>SharePoint リストのクエリ デザイナー (レポート ビルダー)
@@ -51,7 +51,7 @@ ms.locfileid: "66500046"
  [適用されたフィルター](#AppliedFilters)  
  データベース ビューのテーブルまたはビューのフィールドおよびフィルター条件の一覧を表示します。  
   
- [クエリ結果](#QueryResults)  
+ [クエリの結果](#QueryResults)  
  自動的に生成されたクエリの結果セットのサンプル データを表示します。  
   
 ###  <a name="DatabaseView"></a> SharePoint リスト ペイン  
@@ -67,11 +67,11 @@ ms.locfileid: "66500046"
   
  次の列が表示されます。  
   
--   **[フィールド名]** 条件を適用するフィールドの名前を表示します。  
+-   **フィールド名** : 条件を適用するフィールドの名前を表示します。  
   
 -   **[演算子]** フィルター式で使用する演算を表示します。  
   
--   **[値]** フィルター式で使用する値を表示します。  
+-   **値** : フィルター式で使用する値を表示します。  
   
 -   **パラメーター** : クエリ パラメーターをクエリに追加するオプションを表示します。 [データセットのプロパティ] を使用すると、クエリ パラメーターとレポート パラメーターの関係を表示できます。  
   
@@ -85,7 +85,7 @@ ms.locfileid: "66500046"
 ### <a name="graphical-query-designer-toolbar"></a>グラフィカル クエリ デザイナーのツール バー  
  リレーショナル クエリ デザイナーのツール バーにある次のボタンを使用すると、クエリを指定したりその結果を表示したりすることができます。  
   
-|ボタン|[説明]|  
+|ボタン|説明|  
 |------------|-----------------|  
 |**[テキストとして編集]**|テキスト ベースのクエリ デザイナーに切り替えて、自動的に生成されたクエリの表示や変更を行います。|  
 |**[インポート]**|ファイルまたはレポートから既存のクエリをインポートします。 サポートされているファイルの種類は .sql と .rdl です。|  

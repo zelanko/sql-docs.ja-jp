@@ -9,10 +9,10 @@ ms.assetid: a8d24287-8557-4b03-bea7-ca087f449b62
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c822f0b6a3a17ccba2afbaf8bf0a9e4a4e2f7b12
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579820"
 ---
 # <a name="expression-scope-for-totals-aggregates-and-built-in-collections"></a>合計、集計、および組み込みコレクションの式のスコープ
@@ -96,11 +96,11 @@ ms.locfileid: "65579820"
   
  DataSet1 というデータセットと Tablix1 というテーブルがあるとします。 次の表は、セルのラベル、既定のスコープ、および例を示しています。 プレースホルダー テキストの値は式の構文に示されます。  
   
-|セル|既定のスコープ|プレースホルダーのラベル|テキストまたはプレースホルダーの値|  
+|Cell (セル)|既定のスコープ|プレースホルダーのラベル|テキストまたはプレースホルダーの値|  
 |----------|-------------------|------------------------|--------------------------------|  
 |C01|Tablix1|[Sum(Qty)]|集計とスコープ<br /><br /> `=Sum(Fields!Qty.Value)`|  
 |C02|外部列グループ "Year"|[Year]<br /><br /> ([YearQty])|`=Fields!Year.Value`<br /><br /> `=Sum(Fields!Qty.Value)`|  
-|C03|Tablix1|[Sum(Qty)]|Totals<br /><br /> `=Sum(Fields!Qty.Value)`|  
+|C03|Tablix1|[Sum(Qty)]|合計<br /><br /> `=Sum(Fields!Qty.Value)`|  
 |C04|ピア列グループ "Territory"|([Total])|Territory<br /><br /> `=Sum(Fields!Qty.Value)`|  
 |C05|内部グループ "Qtr"|[Qtr]<br /><br /> ([QtrQty])|Q<br /><br /> `=Fields!Qtr.Value`<br /><br /> `=Sum(Fields!Qty.Value)`|  
 |C06|ピア列グループ "Territory"|[Territory]<br /><br /> ([Tty])<br /><br /> [Pct]|`=Fields!Territory.Value`<br /><br /> `=Sum(Fields!Qty.Value)`<br /><br /> `=FormatPercent(Sum(Fields!Qty.Value,"Territory")/Sum(Fields!Qty.Value,"Tablix1"),0) & " of " & Sum(Fields!Qty.Value,"Tablix1")`|  
@@ -158,7 +158,7 @@ ms.locfileid: "65579820"
   
   
 ## <a name="see-also"></a>参照  
- [式の例 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+ [式の例 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [グループ式の例 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)   
  [複数の再帰型階層グループの作成 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   
  [テーブル、マトリックス、および一覧 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   

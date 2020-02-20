@@ -1,5 +1,5 @@
 ---
-title: スキーマ行セットでの分散クエリのサポート |Microsoft Docs
+title: スキーマ行セットでの分散クエリのサポート | Microsoft Docs
 description: スキーマ行セットでの分散クエリのサポート
 ms.custom: ''
 ms.date: 06/12/2018
@@ -18,10 +18,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 139186d64d2b7df6aca883a253e1f9fe3f062214
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993886"
 ---
 # <a name="schema-rowsets---distributed-query-support"></a>スキーマ行セット - 分散クエリのサポート
@@ -51,6 +51,6 @@ ms.locfileid: "67993886"
   
 ## <a name="see-also"></a>参照  
  [スキーマ行セットのサポート &#40;OLE DB&#41;](../../oledb/ole-db/schema-rowset-support-ole-db.md)   
- [LINKEDSERVERS 行&#40;セット OLE DB&#41;](../../oledb/ole-db/schema-rowsets-linkedservers-rowset.md)  
+ [LINKEDSERVERS 行セット &#40;OLE DB&#41;](../../oledb/ole-db/schema-rowsets-linkedservers-rowset.md)  
   
   

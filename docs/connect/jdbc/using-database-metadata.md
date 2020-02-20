@@ -1,5 +1,5 @@
 ---
-title: データベースメタデータの使用 |Microsoft Docs
+title: データベース メタデータの使用 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 8b048371-e912-4ed1-afd7-436978f48888
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fce2bf9d72136b303ee3bc974f3aede313233a82
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69026421"
 ---
 # <a name="using-database-metadata"></a>データベースのメタデータの使用
@@ -25,7 +25,7 @@ ms.locfileid: "69026421"
 
 SQLServerDatabaseMetaData オブジェクトを作成するには、[SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) クラスの [getMetaData](../../connect/jdbc/reference/getmetadata-method-sqlserverconnection.md) メソッドを使用して接続先のデータベースに関する情報を取得します。
 
-次の例では、 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]サンプルデータベースに対して開いている接続を関数に渡し、SQLServerConnection クラスの getmetadata メソッドを使用して SQLServerDatabaseMetadata オブジェクトを返します。その後、SQLServerDatabaseMetaData オブジェクトは、ドライバー、ドライバーのバージョン、データベース名、およびデータベースのバージョンに関する情報を表示するために使用されます。
+次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] サンプル データベースに対して開いている接続を関数に渡し、SQLServerConnection クラスの getMetaData メソッドによって SQLServerDatabaseMetadata オブジェクトを取得し、SQLServerDatabaseMetaData オブジェクトのさまざまなメソッドを使用してドライバーの情報、ドライバーのバージョン、データベース名、およびデータベースのバージョンを出力します。
 
 [!code[JDBC#UsingDBMetaData1](../../connect/jdbc/codesnippet/Java/using-database-metadata_1.java)]
 

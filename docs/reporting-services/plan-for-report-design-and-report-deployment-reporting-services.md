@@ -9,10 +9,10 @@ ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: bca1457eb9be7b686ccfe86a1f7e7bdcab15cc14
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581244"
 ---
 # <a name="plan-for-report-design-and-report-deployment--reporting-services"></a>レポート デザインとレポート配置の計画 | Reporting Services
@@ -39,26 +39,26 @@ ms.locfileid: "65581244"
   
 -   [レポート定義言語の仕様](https://go.microsoft.com/fwlink/?linkid=116865)  
   
--   [レポート定義言語 (SSRS)](../reporting-services/reports/report-definition-language-ssrs.md)  
+-   [レポート定義言語 &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
   
  ReportViewer コントロールの詳細については、「[ReportViewer コントロール (Visual Studio)](https://msdn.microsoft.com/library/ms251671.aspx)」を参照してください。  
   
 ##  <a name="bkmk_report_server_rdl_schema_support"></a> レポート サーバーと RDL スキーマのサポート  
  レポート定義ファイルは、次の方法で [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] レポート サーバーに配置できます。  
   
--   **レポート デザイナー:** [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)]のレポート デザイナーからレポートを配置する。  
+-   **レポート デザイナー:** [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] のレポート デザイナーからレポートを展開します。  
   
--   **レポート ビルダー:** レポート ビルダーからレポート サーバーにレポートを保存する。  
+-   **レポート ビルダー:** レポート ビルダーからレポート サーバーにレポートを保存します。  
   
--   **Web ポータル:** [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]からネイティブ モード レポート サーバーにレポートをアップロードします。  
+-   **Web ポータル:** [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] からネイティブ モード レポート サーバーにレポートをアップロードします。  
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
--   **SharePoint:** SharePoint モード レポート サーバーで構成された SharePoint サイトにレポートをアップロードする。  
+-   **SharePoint:** SharePoint モード レポート サーバーで構成された SharePoint サイトにレポートをアップロードします。  
 
 ::: moniker-end
   
--   **プログラムから:** プログラムから SOAP API インターフェイスを使用してレポート サーバーにレポートをパブリッシュする。 詳しくは、「 [Report Server Web Service](../reporting-services/report-server-web-service/report-server-web-service.md)」をご覧ください。  
+-   **プログラムを使用する:** プログラムから SOAP API インターフェイスを使用してレポート サーバーにレポートを発行します。 詳細については、「 [Report Server Web Service](../reporting-services/report-server-web-service/report-server-web-service.md)」を参照してください。  
   
  次の表は、サポートされる RDL スキーマのバージョンをレポート サーバーのバージョン別に示したものです。  
   
@@ -109,7 +109,7 @@ SharePoint モードの配置で、ドキュメント ライブラリを参照�
 |[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2015 <br/><br/>または<br/><br/>[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2013<br /><br /> または<br /><br /> [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2012<br /><br /> または<br /><br /> [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)]|2008 RDL|  
 |[!INCLUDE[vsprvslong](../includes/vsprvslong-md.md)]<br /><br /> または<br /><br /> [!INCLUDE[vsOrcas](../includes/vsorcas-md.md)]|2005 RDL|  
   
- 詳細については、以下を参照してください。  
+ 詳細については、「  
   
 -   [RDLC ファイルから RDL ファイルへの変換](https://msdn.microsoft.com/library/ms252109.aspx)  
   
@@ -120,6 +120,6 @@ SharePoint モードの配置で、ドキュメント ライブラリを参照�
 ## <a name="see-also"></a>参照  
  [レポート、レポート パーツ、およびレポート定義 (レポート ビルダーおよび SSRS)](../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
  [Reporting Services ツール](../reporting-services/tools/reporting-services-tools.md)   
- [レポート定義言語 (SSRS)](../reporting-services/reports/report-definition-language-ssrs.md)  
+ [レポート定義言語 &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
   
   

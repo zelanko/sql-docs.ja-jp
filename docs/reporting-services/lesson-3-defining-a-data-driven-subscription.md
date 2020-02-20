@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 3 : データ ドリブン サブスクリプションの定義 | Microsoft Docs'
+title: レッスン 3:データ ドリブン サブスクリプションの定義 | Microsoft Docs
 ms.date: 06/06/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,18 +9,18 @@ ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: fafd591e4b29f9b8beb1639ff64f4e2d43b65c2d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66826857"
 ---
-# <a name="lesson-3-defining-a-data-driven-subscription"></a>レッスン 3: データ ドリブン サブスクリプションの定義
+# <a name="lesson-3-defining-a-data-driven-subscription"></a>レッスン 3:データ ドリブン サブスクリプションの定義
 この [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] チュートリアル レッスンでは、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Web ポータルのデータ ドリブン サブスクリプション ページを使って、サブスクリプション データ ソースへの接続、サブスクリプション データを取得するクエリの作成、レポートと配信オプションへの結果セットのマッピングを行います。  
   
 > [!NOTE]  
 > 開始する前に、 **[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エージェント** サービスが実行されていることを確認します。 実行されていない場合は、サブスクリプションを保存できません。  検証する方法の 1 つは、[SQL Server 構成マネージャー](../relational-databases/sql-server-configuration-manager.md)を起動することです。
-このレッスンを行うには、レッスン 1 とレッスン 2 を完了していることと、レポート データ ソースに、保存された資格情報が使用されていることが必要です。  詳細については、「 [レッスン 2: レポート データ ソースのプロパティの変更](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md)」を参照してください。  
+このレッスンを行うには、レッスン 1 とレッスン 2 を完了していることと、レポート データ ソースに、保存された資格情報が使用されていることが必要です。  詳細については、「[レッスン 2: レポート データ ソースのプロパティの変更](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md)」を参照してください  
   
 ## <a name="bkmk_startwizard"></a>データ ドリブン サブスクリプション ウィザードの開始  
   
@@ -33,18 +33,18 @@ ms.locfileid: "66826857"
 ## <a name="define-a-description"></a>説明の定義  
 1.  説明に「 **Sales Order delivery** 」と入力します。
 
-## <a name="type"></a>説明に「
+## <a name="type"></a>Type
 1.  **[データ ドリブン サブスクリプション]** をクリックします。  
 
-## <a name="schedule"></a>[スケジュール]
+## <a name="schedule"></a>スケジュール
 1. スケジュール セクションで、 **[レポート固有のスケジュール]** をクリックします。
 2. **[スケジュールの編集]** をクリックします。
 3. **[スケジュールの詳細]** で、 **[一度だけ]** をクリックします。  
 4. 開始時刻として、現在の時刻から数分後を指定します。  
-5. 指定、**開始と終了日**します。
+5. **[開始日および終了日]** を指定します。
 6. **[適用]** を選択します。
 
-## <a name="destination"></a>[Destination]  
+## <a name="destination"></a>宛先  
 1.  [転送先] セクションで、配信方法に対して **[Windows ファイル共有]** を選択します。  
 
 ## <a name="dataset"></a>データセット
@@ -86,24 +86,24 @@ ms.locfileid: "66826857"
 **レンダリング フォーマット** | データセットから値を取得 | Format
 **[書き込みモード]**| 値を入力| 自動増分    
 **ファイル拡張子** |値を入力 |True
-**[ユーザー名]** | 値を入力 | ドメイン ユーザー アカウントを入力します。 \<ドメイン>\\\<アカウント> の形式で入力します。 ユーザー アカウントには、構成したパスに対する権限が必要です。 
+**ユーザー名** | 値を入力 | ドメイン ユーザー アカウントを入力します。 \<ドメイン>\\\<アカウント> の形式で入力します。 ユーザー アカウントには、構成したパスに対する権限が必要です。 
 **パスワード** | 値を入力 | パスワードを入力
-**ファイル共有アカウントを使用します。** | 値を入力 | False
+**ファイル共有アカウントを使用する** | 値を入力 | False
 
 ## <a name="report-parameters"></a>レポート パラメーター
  1. **[OrderNumber]** フィールドには、 **[データセットから値を取得]** を選択します。 [値] で、 **[Order]** をクリックします。 
  2. **[サブスクリプションの作成]** を選択します。
    
-## <a name="next-steps"></a>次の手順  
+## <a name="next-steps"></a>次のステップ  
 サブスクリプションを実行すると、 *Subscribers* データ ソースの注文ごとに 1 つずつ、4 つのレポート ファイルが、指定したファイル共有に配信されます。 各配信では、データ (注文固有のデータ)、表示形式、ファイル形式がそれぞれ異なっています。 各レポートを共有フォルダーから開き、定義したサブスクリプション オプションに基づいて各バージョンがカスタマイズされているかどうかを確認できます。  
   
-![サブスクリプションによって作成されるファイルの一覧](../reporting-services/media/ssrs-tutorial-datadriven-subscription-filelist.gif "サブスクリプションによって作成されるファイルの一覧")  
+![サブスクリプションによって作成されたファイルの一覧](../reporting-services/media/ssrs-tutorial-datadriven-subscription-filelist.gif "サブスクリプションによって作成されたファイルの一覧")  
   
 Web ポータルのサブスクリプション ページには、サブスクリプションの **[最終実行]** 日付と **[状態]** が表示されます。 
 > [!NOTE]
 > サブスクリプションを実行した後、ページを更新して更新後の情報を表示します。  
     
-![Web ポータルでのサブスクリプションの結果](../reporting-services/media/ssrs-tutorial-datadriven-subscription-status-reportmanager.png "web ポータルでのサブスクリプションの結果")  
+![Web ポータルのサブスクリプションの結果](../reporting-services/media/ssrs-tutorial-datadriven-subscription-status-reportmanager.png "Web ポータルのサブスクリプションの結果")  
   
 これで、「データ ドリブン サブスクリプションの定義」のチュートリアルは終了します。   
   

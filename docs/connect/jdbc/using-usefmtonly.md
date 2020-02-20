@@ -1,5 +1,5 @@
 ---
-title: UseFmtOnly | を使用した ParameterMetaData の取得Microsoft Docs
+title: UseFmtOnly を使用した ParameterMetaData の取得 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -15,26 +15,26 @@ author: rene-ye
 ms.author: v-reye
 manager: kenvh
 ms.openlocfilehash: 6877a6421622ab52a92b89502c68f47c4c315d93
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69025503"
 ---
 # <a name="retrieving-parametermetadata-via-usefmtonly"></a>UseFmtOnly を使用した ParameterMetaData の取得
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Microsoft JDBC Driver for SQL Server には、サーバー **useFmtOnly**からパラメーターメタデータをクエリするための別の方法が含まれています。 この機能は、ドライバーのバージョン7.4 で初めて導入されたものであり、の既知の`sp_describe_undeclared_parameters`問題に対する回避策として必要です。
+  Microsoft JDBC Driver for SQL Server には、サーバーからパラメーターのメタデータをクエリする別の方法として、**useFmtOnly** があります。 この機能は、ドライバーのバージョン 7.4 で初めて導入されたものであり、`sp_describe_undeclared_parameters` の既知の問題に対する回避策として必要です。
   
-  ドライバーは、主にストアドプロシージャ`sp_describe_undeclared_parameters`を使用してパラメーターメタデータを照会します。これは、ほとんどの状況でパラメーターメタデータを取得する場合に推奨される方法であるためです。 ただし、現在、ストアドプロシージャの実行は次のユースケースでは失敗します。
+  ドライバーは、主にストアド プロシージャ `sp_describe_undeclared_parameters` を使用してパラメーターのメタデータのクエリを実行します。これは、ほとんどの状況でパラメーター メタデータの取得に推奨される方法です。 ただし、現在、ストアド プロシージャの実行は次のユース ケースでは失敗します。
   
--   Always Encrypted の列に対して
+-   Always Encrypted 列に対して
   
 -   一時テーブルとテーブル変数に対して
   
 -   ビューに対して 
   
-  これらのユースケースに関して提案されているソリューションは、ユーザーの SQL クエリでパラメーターとテーブルターゲット`SELECT`を解析`FMTONLY`し、有効になっているクエリを実行することです。 次のスニペットを使用すると、機能を視覚化できます。
+  これらのユース ケースに対する提案ソリューションは、ユーザーの SQL クエリでパラメーターとテーブル ターゲットを解析し、`FMTONLY` が有効になっている `SELECT` クエリを実行することです。 次のスニペットを使用すると、機能を視覚化できます。
   
 ```sql
 --create a normal table 'Foo' and a temporary table 'Bar'
@@ -53,9 +53,9 @@ SET FMTONLY OFF;
 ```
  
 ## <a name="turning-the-feature-onoff"></a>機能のオン/オフの切り替え 
- 機能**useFmtOnly**は既定ではオフになっています。 ユーザーは、を指定`useFmtOnly=true`することで、接続文字列を使用してこの機能を有効にすることができます。 例: `jdbc:sqlserver://<server>:<port>;databaseName=<databaseName>;user=<user>;password=<password>;useFmtOnly=true;`」を参照してください。
+ **useFmtOnly** 機能は既定ではオフになっています。 ユーザーは、`useFmtOnly=true` を指定すると、接続文字列を使用してこの機能を有効にできます  (例: `jdbc:sqlserver://<server>:<port>;databaseName=<databaseName>;user=<user>;password=<password>;useFmtOnly=true;`)。
  
- または、を通じて`SQLServerDataSource`機能を使用することもできます。
+ または、`SQLServerDataSource` から機能を使用することができます。
  ```java
 SQLServerDataSource ds = new SQLServerDataSource();
 ds.setServerName(<server>);
@@ -69,12 +69,12 @@ try (Connection c = ds.getConnection()) {
 }
  ```
  
- この機能は、ステートメントレベルでも使用できます。 ユーザーは、を使用して`PreparedStatement.setUseFmtOnly(boolean)`機能のオン/オフを切り替えることができます。
+ この機能は、ステートメント レベルでも使用できます。 ユーザーは、`PreparedStatement.setUseFmtOnly(boolean)` を使用して機能のオン/オフを切り替えることができます。
 > [!NOTE]  
->  ドライバーは、"接続レベル" プロパティに対してステートメントレベルプロパティの優先順位を設定します。
+>  ドライバーでは、ステートメント レベル プロパティが "接続レベル" プロパティより優先されます。
 
 ## <a name="using-the-feature"></a>機能の使用
-  有効にすると、ドライバーは、パラメーターの`sp_describe_undeclared_parameters`メタデータを照会するときではなく、新しい機能の使用を内部で開始します。 エンドユーザーがこれ以上操作を行う必要はありません。
+  有効にすると、ドライバーでは、パラメーターのメタデータのクエリを実行するときに、`sp_describe_undeclared_parameters` ではなく、新しい機能の使用を内部的に開始します。 エンド ユーザーがこれ以上操作を行う必要はありません。
 ```java
 final String sql = "INSERT INTO #Bar VALUES (?)";
 try (Connection c = DriverManager.getConnection(URL, USERNAME, PASSWORD)) {
@@ -90,12 +90,12 @@ try (Connection c = DriverManager.getConnection(URL, USERNAME, PASSWORD)) {
 }
 ```
 > [!NOTE]  
->  この機能は、 `SELECT/INSERT/UPDATE/DELETE`クエリのみをサポートしています。 クエリは、サポートされている4つのキーワード、またはサポートされているいずれかのクエリの後にある[共通テーブル式](https://docs.microsoft.com/sql/t-sql/queries/with-common-table-expression-transact-sql?view=sql-server-2017)のいずれかで開始する必要があります。 共通テーブル式内のパラメーターはサポートされていません。
+>  この機能では、`SELECT/INSERT/UPDATE/DELETE` クエリのみサポートされます。 クエリは、サポートされている 4 つのキーワードのいずれか、または[共通テーブル式](https://docs.microsoft.com/sql/t-sql/queries/with-common-table-expression-transact-sql?view=sql-server-2017)で始まり、サポートされているいずれかのクエリがその後ろに続く必要があります。 共通テーブル式内のパラメーターはサポートされていません。
 
 ## <a name="known-issues"></a>既知の問題
-  現在、機能には、SQL の解析ロジックの欠陥が原因である問題がいくつかあります。 これらの問題は、今後の機能の更新で解決される場合があります。また、以下の説明は、回避策の提案と共に記載されています。
+  現在、機能には、SQL の解析ロジックの欠陥が原因である問題がいくつかあります。 これらの問題は、機能の今後の更新プログラムで解決される可能性があります。回避策と合わせて以下に説明します。
   
-A. ' Forward 宣言 ' エイリアスを使用しています
+A. '前方宣言' のエイリアスを使用している
 ```sql
 CREATE TABLE Foo(c1 int)
 
@@ -107,7 +107,7 @@ DELETE fooAlias FROM Foo AS fooAlias WHERE c1 > ?;
 DELETE Foo FROM Foo fooAlias WHERE c1 > ?;
 ```
 
-B. テーブルに共有列名がある場合、列名があいまいです
+B. テーブルに共有列名がある場合、列名があいまいである
 ```sql
 CREATE TABLE Foo(c1 int, c2 int, c3 int)
 CREATE TABLE Bar(c1 int, c2 int, c3 int)
@@ -118,7 +118,7 @@ SELECT c1,c2 FROM Foo WHERE c3 IN (SELECT c3 FROM Bar WHERE c1 > ? and c2 < ? an
 SELECT c1,c2 FROM Foo WHERE c3 IN (SELECT c3 FROM Bar b WHERE b.c1 = ? and b.c2 = ? and b.c3 = ?);
 ```
 
-C. パラメーターを使用してサブクエリから選択する
+C. パラメーターを設定したサブクエリからの SELECT
 ```sql
 
 CREATE TABLE Foo(c1 int)

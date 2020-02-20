@@ -1,5 +1,5 @@
 ---
-title: バインドと変換 (OLE DB) |Microsoft Docs
+title: バインドと変換 (OLE DB) | Microsoft Docs
 description: バインドと変換 (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,10 +15,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: dc86193f40474fc373c1b0e7dd48e579e8548821
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68015837"
 ---
 # <a name="conversions-ole-db"></a>変換 (OLE DB)
@@ -26,11 +26,11 @@ ms.locfileid: "68015837"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  ここでは、 **datetime**値と**datetimeoffset**値の間で変換を行う方法について説明します。 ここで説明する変換は、OLE DB によって既に提供されているか、OLE DB の一貫性がある拡張機能です。  
+  このセクションでは、**datetime** 値と **datetimeoffset** 値の間で変換を行う方法について説明します。 ここで説明する変換は、OLE DB によって既に提供されているか、OLE DB の一貫性がある拡張機能です。  
   
- OLE DB における日付と時刻のリテラルと文字列の形式は、通常 ISO に従うため、クライアントのロケールに依存しません。 これには、標準が OLE オートメーションである DBTYPE_DATE という例外があります。 ただし、OLE DB Driver for SQL Server では、クライアントとの間でデータが転送されるときに型が変換されるだけなので、アプリケーションでは、SQL Server の OLE DB ドライバーを強制的に DBTYPE_DATE 形式と文字列形式の間で変換することはできません。 それ以外の場合、文字列では次の形式を使用します (角かっこに囲まれたテキストは省略可能な要素を示します)。  
+ OLE DB における日付と時刻のリテラルと文字列の形式は、通常 ISO に従うため、クライアントのロケールに依存しません。 これには、標準が OLE オートメーションである DBTYPE_DATE という例外があります。 ただし、OLE DB Driver for SQL Server では、クライアントとの間でデータがやりとりされる際に型の変換しか実行されないため、アプリケーションでは、OLE DB Driver for SQL Server に DBTYPE_DATE と文字列形式の変換を強制することができません。 それ以外の場合、文字列では次の形式を使用します (角かっこに囲まれたテキストは省略可能な要素を示します)。  
   
--   **Datetime**および**datetimeoffset**文字列の形式は次のとおりです。  
+-   **datetime** および **datetimeoffset** 文字列の形式は次のとおりです。  
   
      *yyyy*-*mm*-*dd*[ *hh*:*mm*:*ss*[.*9999999*][ ± *hh*:*mm*]]  
   
@@ -38,14 +38,14 @@ ms.locfileid: "68015837"
   
      *hh*:*mm*:*ss*[.*9999999*]  
   
--   **日付**文字列の形式は次のとおりです。  
+-   **date** 文字列の形式は次のとおりです。  
   
      *yyyy*-*mm*-*dd*  
   
 > [!NOTE]  
->  以前のバージョンの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client および SQLOLEDB では、標準の変換が失敗した場合に備えて OLE 変換が実装されていました。 SQL Server の OLE DB ドライバーは、Native Client と[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]同じ動作に従います。 その結果、OLE DB Driver for SQL Server によって実行される変換の中には、OLE DB の仕様とは異なるものがあります。  
+>  以前のバージョンの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client および SQLOLEDB では、標準の変換が失敗した場合に備えて OLE 変換が実装されていました。 OLE DB Driver for SQL Server は動作が [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client と同じです。 このため、OLE DB Driver for SQL Server によって実行された変換には、OLE DB 仕様と異なるものがあります。  
   
- 文字列からの変換では、空白文字やフィールドの幅を柔軟に処理できます。 詳細については、「データ型のサポート」の「データ形式: 文字列とリテラル」を参照してください。 [OLE DB の日付と時刻の機能強化に関するセクションを](../../oledb/ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)参照してください。  
+ 文字列からの変換では、空白文字やフィールドの幅を柔軟に処理できます。 詳細については、「[OLE DB の日付/時刻の強化に対するデータ型のサポート](../../oledb/ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)」の「データ フォーマット: 文字列とリテラル」セクションをご覧ください。  
   
  一般的な変換規則を次に示します。  
   

@@ -1,6 +1,6 @@
 ---
-title: コマンドの準備 |Microsoft Docs
-description: OLE DB Driver for SQL Server を使用したコマンドの準備
+title: コマンドの準備 | Microsoft Docs
+description: OLE DB Driver for SQL Server を使用してコマンドを準備する
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: d4242f987820b384ab5bfed1bd74066a54fc09ce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68016050"
 ---
 # <a name="preparing-commands"></a>コマンドの準備
@@ -56,6 +56,6 @@ ms.locfileid: "68016050"
  コマンド オブジェクトは、最大で 1 つだけ一時ストアド プロシージャを **tempdb** に保持します。 既存の一時ストアド プロシージャは、特定のコマンド オブジェクトに関する現在のコマンド テキストを表します。  
   
 ## <a name="see-also"></a>参照  
- [[コマンド]](../../oledb/ole-db-commands/commands.md)  
+ [コマンド](../../oledb/ole-db-commands/commands.md)  
   
   

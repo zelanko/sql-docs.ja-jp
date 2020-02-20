@@ -1,5 +1,5 @@
 ---
-title: supportsANSI92FullSQL メソッド (SQLServerDatabaseMetaData) |Microsoft Docs
+title: supportsANSI92FullSQL メソッド (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 8877dc8c-26cd-4374-8ae8-ff7d20621130
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fcad4dae62be2e2185848acc2ea5aa3562e60ce1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67969836"
 ---
 # <a name="supportsansi92fullsql-method-sqlserverdatabasemetadata"></a>supportsANSI92FullSQL メソッド (SQLServerDatabaseMetaData)
@@ -35,13 +35,13 @@ public boolean supportsANSI92FullSQL()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- サポートされている場合は**true** 。 それ以外の場合は、 **false**です。  
+ サポートされている場合は、**true** です。 それ以外の場合は、 **false**です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この supportsANSI92FullSQL メソッドは、supportsANSI92FullSQL メソッドによって、java メタデータインターフェイスで指定されます。  
+## <a name="remarks"></a>解説  
+ この supportsANSI92FullSQL メソッドは、java.sql.DatabaseMetaData インターフェイスの supportsANSI92FullSQL メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

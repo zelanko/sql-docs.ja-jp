@@ -1,5 +1,5 @@
 ---
-title: Get; Stream (long, long) メソッドMicrosoft Docs
+title: getCharacterStream メソッド (long, long) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: d70f502f-f60f-436a-83e6-797a0ed71bf3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a47b7ea56873b0b502ba39a91e4d1ba30044e993
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953253"
 ---
 # <a name="getcharacterstream-method-long-long"></a>getCharacterStream (long, long) メソッド
@@ -31,7 +31,7 @@ public java.io.Reader getCharacterStream(long pos,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *po*  
+ *pos*  
   
  取得する部分的な値の最初の文字へのオフセットを示す **long** です。  
   
@@ -45,7 +45,7 @@ public java.io.Reader getCharacterStream(long pos,
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この getCharacterStream メソッドは、java.sql.Clob インターフェイスの getCharacterStream メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  

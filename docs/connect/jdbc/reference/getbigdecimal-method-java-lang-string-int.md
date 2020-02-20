@@ -16,10 +16,10 @@ ms.assetid: 6967ba55-9c9a-4f6f-a4d2-8ee9c9a82c14
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fd2d46569386637b5082288b83268a80dac013e5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953892"
 ---
 # <a name="getbigdecimal-method-javalangstring-int"></a>getBigDecimal (java.lang.String, int) メソッド
@@ -48,13 +48,13 @@ public java.math.BigDecimal getBigDecimal(java.lang.String sCol,
  小数点以下の桁数を示す **int** です。  
   
 ## <a name="return-value"></a>戻り値  
- BigDecimal オブジェクト。  
+ BigDecimal オブジェクトです。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この getBigDecimal メソッドは、java. sql. CallableStatement インターフェイスの getBigDecimal メソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この getBigDecimal メソッドは、java.sql.CallableStatement インターフェイスの getBigDecimal メソッドで指定されています。  
   
 ## <a name="see-also"></a>参照  
  [getBigDecimal メソッド &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getbigdecimal-method-sqlservercallablestatement.md)   

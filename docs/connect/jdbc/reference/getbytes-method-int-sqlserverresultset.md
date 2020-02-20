@@ -16,10 +16,10 @@ ms.assetid: 1385d7d4-9288-4cbd-8606-4b919e9b07b2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d328a2b1f092686403ba4cbcddf1ad22d733ea06
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68213736"
 ---
 # <a name="getbytes-method-int-sqlserverresultset"></a>getBytes (int) メソッド (SQLServerResultSet)
@@ -40,12 +40,12 @@ public byte[] getBytes(int columnIndex)
  列インデックスを示す **int** です。  
   
 ## <a name="return-value"></a>戻り値  
- **バイト**値の配列。  
+ **byte** 値の配列です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この getBytes メソッドは、java.sql.ResultSet インターフェイスの getBytes メソッドで規定されています。  
   
  このメソッドでは、サーバーからバイトの生データを読み取ることにより、すべての列を取得できます。 byte 配列が、サーバーに格納されている形式のまま、サーバーから直接返されます。  

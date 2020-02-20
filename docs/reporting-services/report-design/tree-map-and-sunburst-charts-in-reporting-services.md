@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/26/2019
 ms.openlocfilehash: fd9ac9ccd0906ee34a66b7144fdd964d05e5f050
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68259364"
 ---
 # <a name="treemap-and-sunburst-charts-in-reporting-services"></a>Reporting Services のツリー マップとサンバースト グラフ 
@@ -33,7 +33,7 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ツリ�
 > [!NOTE]
 > レポートにグラフを追加する前に、データ ソースとデータセットを作成します。  サンプル データとサンプル クエリについては、「[AdventureWorks データのサンプル](#bkmk_sample_data)」を参照してください。  
   
-1. デザイン サーフェイスを右クリックし **[挿入]**  >  **[グラフ]** を選択します。 **ツリーマップ** アイコンを選択します。
+1. デザイン サーフェイスを右クリックし **[挿入]** > **[グラフ]** を選択します。 **ツリーマップ** アイコンを選択します。
 
     ![ssrs_treemap_icon](../../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon")  
 
@@ -41,17 +41,17 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ツリ�
   
 3. サンプル データから、次のフィールドを追加します。  
   
-    * **値:** LineTotal
+    * **値**:LineTotal
     * **カテゴリ グループ** (次の順序を使用):
         1. CategoryName
         2. SubcategoryName
-    * **系列グループ:** TerritoryName  
+    * **系列グループ**:TerritoryName  
 
     ![ssrs_treemap_example_properties](../../reporting-services/report-design/media/ssrs-treemap-example-properties.png "ssrs_treemap_example_properties")
   
 4. ツリーマップの全般的な形式に合わせてページ サイズを最適化するには、凡例を下部に配置します。  
   
-5. サブカテゴリと行の合計を表示するツールヒントを追加するには、 **[LineTotal]** を右クリックし、 **[系列のプロパティ]** を選択します。  
+5. サブカテゴリと行の合計を表示するツールヒントを追加するには、**[LineTotal]** を右クリックし、**[系列のプロパティ]** を選択します。  
   
      ![ssrs_visualization_seriesproperties](../../reporting-services/report-design/media/ssrs-visualization-seriesproperties.png "ssrs_visualization_seriesproperties")  
   
@@ -78,7 +78,7 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ツリ�
 > [!NOTE]
 > レポートにグラフを追加する前に、データ ソースとデータセットを作成します。 サンプル データとサンプル クエリについては、「[AdventureWorks データのサンプル](#bkmk_sample_data)」を参照してください。  
   
-1. デザイン サーフェイスを右クリックし **[挿入]**  >  **[グラフ]** を選択します。 **[サンバースト]** アイコンを選択します。
+1. デザイン サーフェイスを右クリックし **[挿入]** > **[グラフ]** を選択します。 **[サンバースト]** アイコンを選択します。
 
      ![ssrs_sunburst_icon](../../reporting-services/media/ssrs-sunburst-icon.png "ssrs_sunburst_icon")  
   
@@ -86,12 +86,12 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ツリ�
   
 3. サンプル データから、次のフィールドを追加します。  
 
-    * **値:** LineTotal
+    * **値**:LineTotal
     * **カテゴリ グループ** (次の順序を使用):
         1. CategoryName
         2. SubcategoryName
         3. SalesReasonName
-    * **系列グループ:** TerritoryName  
+    * **系列グループ**:TerritoryName  
 
     ![ssrs_treemap_example_properties](../../reporting-services/report-design/media/ssrs-treemap-example-properties.png "ssrs_treemap_example_properties")
   
@@ -99,7 +99,7 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ツリ�
   
 5. 既定のグラフ タイトルを **区域別の売上と販売理由** に変更します。  
   
-6. サンバーストにラベルとしてカテゴリ グループの値を追加するには、ラベルのプロパティ **[Visible]** を true に設定し、 **[UseValueAsLabel]** を false に設定します。<br /><br /> 表示されるラベル値は、フォントのサイズ、グラフ領域全体のサイズ、および特定の四角形のサイズに影響されます。  より多くのラベルを表示するには、**LineTotal** の **[ラベル フォント]** プロパティを既定の **8pt** から **10pt** に変更します。
+6. サンバーストにラベルとしてカテゴリ グループの値を追加するには、ラベルのプロパティ **[Visible]** を true に設定し、**[UseValueAsLabel]** を false に設定します。<br /><br /> 表示されるラベル値は、フォントのサイズ、グラフ領域全体のサイズ、および特定の四角形のサイズに影響されます。  より多くのラベルを表示するには、**LineTotal** の **[ラベル フォント]** プロパティを既定の **8pt** から **10pt** に変更します。
 
     ![ssrs_sunburst_linetotalproperties](../../reporting-services/report-design/media/ssrs-sunburst-linetotalproperties.png "ssrs_sunburst_linetotalproperties")
   
@@ -115,29 +115,29 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ツリ�
   
 1. **データを取得します**。  
   
-     このセクションのクエリは、「[Adventure Works 2016 Full Database Backup](https://github.com/Microsoft/sql-server-samples/releases)」 (Adventure Works 2016: データベースの完全なバックアップ) からダウンロードできる AdventureWorks データベースに基づいています。  
+     このセクションのクエリは、AdventureWorks データベースに基づいています。このデータベースは GitHub の「[AdventureWorks 2016 full database backup (AdventureWorks 2016 の完全なデータベース バックアップ)](https://github.com/Microsoft/sql-server-samples/releases)」からダウンロードできます。  
 
 2. **データ ソースを作成します**。  
   
-    1. **[レポート データ]** で、 **[データ ソース]** を右クリックし、 **[データ ソースの追加]** を選択します。  
+    1. **[レポート データ]** で、**[データ ソース]** を右クリックし、**[データ ソースの追加]** を選択します。  
   
     2. **[レポートに埋め込まれた接続を使用する]** を選択します。  
   
     3. [接続の種類] で **[Microsoft SQL Server]** を選択します。  
   
-    4. サーバーとデータベースに接続文字列を入力します。 例:  
+    4. サーバーとデータベースに接続文字列を入力します。 次に例を示します。  
   
         ```
         Data Source=[server name];Initial Catalog=AdventureWorks2016  
         ```  
   
-    5. 接続を確認するには、 **[テスト接続]** ボタンを選択し、 **[OK]** をクリックします。  
+    5. 接続を確認するには、**[テスト接続]** ボタンを選択し、**[OK]** をクリックします。  
   
      データ ソースの作成の詳細については、「[データ接続を追加および確認する &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)」を参照してください。  
   
 3. **データセットを作成します**。  
   
-    1. **[レポート データ]** で、 **[データセット]** を右クリックし、 **[データセットの追加]** を選択します。  
+    1. **[レポート データ]** で、**[データセット]** を右クリックし、**[データセットの追加]** を選択します。  
   
     2. **[レポートに埋め込まれたデータセットを使用します]** を選択します。  
   
@@ -178,6 +178,6 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ツリ�
 
 * [系列へのツールヒントの表示 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md)
 
-* [チュートリアル: Power BI でのツリー マップ](https://support.powerbi.com/knowledgebase/articles/556200-tutorial-treemaps-in-power-bi)
+* [チュートリアル:Power BI でのツリー マップ](https://support.powerbi.com/knowledgebase/articles/556200-tutorial-treemaps-in-power-bi)
 
-* [ツリー マップ: Microsoft Research Data Visualization Apps for Office](https://research.microsoft.com/projects/msrdatavis/treemap.aspx)
+* [ツリーマップ:Microsoft Research Data Visualization Apps for Office](https://research.microsoft.com/projects/msrdatavis/treemap.aspx)

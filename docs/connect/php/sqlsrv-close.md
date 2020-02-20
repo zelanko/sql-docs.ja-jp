@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_close |Microsoft Docs
+title: sqlsrv_close | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,13 +17,13 @@ ms.assetid: 6ac6209c-a134-4f8f-b88b-8eefaa1cbc7f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6b4610cfd971c7de8f729902bc09237b47e19dad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67935811"
 ---
-# <a name="sqlsrvclose"></a>sqlsrv_close
+# <a name="sqlsrv_close"></a>sqlsrv_close
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 指定された接続を閉じ、関連付けられているリソースを解放します。  
@@ -36,7 +36,7 @@ sqlsrv_close( resource $conn )
 ```  
   
 #### <a name="parameters"></a>パラメーター  
-*$conn*: 閉じる接続。  
+*$conn*:閉じる接続。  
   
 ## <a name="return-value"></a>戻り値  
 関数が無効なパラメーターを使用して呼び出されている場合を除き、ブール値は **true** です。 関数が無効なパラメーターで呼び出された場合、 **false** を返します。  

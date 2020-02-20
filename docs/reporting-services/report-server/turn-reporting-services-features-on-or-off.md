@@ -12,10 +12,10 @@ ms.assetid: b69db02a-43a7-4fdc-ad9b-438d817a7f83
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 67945db1fd131b27b37a7e34853987c38fad8d84
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67140382"
 ---
 # <a name="turn-reporting-services-features-on-or-off"></a>Reporting Services 機能の有効化と無効化
@@ -96,7 +96,7 @@ ms.locfileid: "67140382"
   
 ##  <a name="WebPortal"></a> Web ポータル
   
-SQL Server 2016 Reporting Services 累積更新プログラム 2、時点では、web ポータル常が有効になります。
+SQL Server 2016 Reporting Services 累積的更新プログラム 2 より、Web ポータルは常に有効になります。
   
 ##  <a name="WinIntSec"></a> Windows 統合セキュリティ  
   

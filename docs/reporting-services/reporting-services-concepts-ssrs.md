@@ -9,14 +9,14 @@ ms.assetid: 934b199c-9918-4e6b-83f4-5862b94fc904
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 126819d9adb85fa4cf17af0c6308d56696136988
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570844"
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Reporting Services の概念 (SSRS)
-  このトピックでは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] の概念を簡単に説明します。  
+  このトピックでは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] の概念を簡単に説明します。  
   
  **[!INCLUDE[applies](../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ネイティブ モード | [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint モード   
   
@@ -24,7 +24,7 @@ ms.locfileid: "65570844"
  レポート サーバーは、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のインスタンスがインストールされているコンピューターです。 レポート サーバーには、改ページ調整されたレポートおよびモバイル レポート、レポート関連のアイテムやリソース、スケジュール、サブスクリプションなどのアイテムが内部的に保存されます。 レポート サーバーは、スタンドアロンの単一サーバーまたはスケールアウト ファームとして構成したり、SharePoint Server と統合したりすることができます。 レポート サーバーのアイテムは、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Web サービス、WMI プロバイダー、URL アクセス、またはプログラムからスクリプトを使用して操作します。 レポート サーバーを操作する方法は、配置トポロジと構成によって異なります。  
   
 ### <a name="native-mode-report-servers"></a>ネイティブ モードのレポート サーバー
- ネイティブ モードで構成されたレポート サーバーは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] がインストールされ、スタンドアロン サーバーとして構成されているコンピューターです。 レポート サーバー、レポート、およびレポート関連アイテムは、ブラウザーで [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] または URL アクセス コマンドを使用する、SQL Server Management Studio を使用する、またはプログラムからスクリプトを使用して操作します。 詳細については、「 [Reporting Services レポート サーバー (ネイティブ モード)](../reporting-services/report-server/reporting-services-report-server-native-mode.md)」を参照してください。  
+ ネイティブ モードで構成されたレポート サーバーは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] がインストールされ、スタンドアロン サーバーとして構成されているコンピューターです。 レポート サーバー、レポート、およびレポート関連アイテムは、ブラウザーで [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] または URL アクセス コマンドを使用する、SQL Server Management Studio を使用する、またはプログラムからスクリプトを使用して操作します。 詳細については、「 [Reporting Services レポート サーバー (ネイティブ モード)](../reporting-services/report-server/reporting-services-report-server-native-mode.md)」を参照してください。  
   
 ### <a name="sharepoint-mode-report-servers"></a>SharePoint モードのレポート サーバー  
  SharePoint と統合されたレポート サーバーは、2 種類の構成が可能です。 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]の場合、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] は SharePoint Server と共に SharePoint 共有サービスとしてインストールされます。 以前のリリースのレポート サーバーは、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint アドインをインストールすることで SharePoint Server と統合されます。 どちらの場合も、レポート サーバー、レポート、およびレポート関連アイテムは、SharePoint サイトでアプリケーション ページを使用して操作します。 レポートに関連するコンテンツの種類を保存するには、SharePoint ドキュメント ライブラリや独自に作成するその他のライブラリを使用します。 詳細については、「[Reporting Services レポート サーバー &#40;SharePoint モード&#41;](../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md)」を参照してください。  
@@ -32,7 +32,7 @@ ms.locfileid: "65570844"
 ### <a name="report-server-items"></a>レポート サーバー アイテム 
  レポート サーバー アイテムには、改ページ調整されたレポートおよびモバイル レポート、KPI、共有データ ソース、共有データセット、レポート サーバーにパブリッシュ、アップロード、または保存できるレポートなどがあります。 アイテムは、ネイティブのレポート サーバーではレポート サーバーの階層フォルダー構造に、SharePoint サイトでは SharePoint コンテンツ ライブラリに整理します。 詳細については、「[レポート サーバー コンテンツの管理 &#40;SSRS ネイティブ モード&#41;](../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)」を参照してください。  
   
-### <a name="folders"></a>フォルダー
+### <a name="folders"></a>Folders
  ネイティブのレポート サーバーでは、フォルダーによって、レポート サーバーに格納されたすべてのアクセス可能なアイテムの階層ナビゲーション構造とパスが提供されます。 レポート サーバー アイテムへのアクセスを制御するには、フォルダー階層、およびサイトとフォルダーの権限を使用します。これは、" *アイテムレベルのセキュリティ*" と呼ばれます。 既定では、特定のフォルダーに定義するロールの割り当ては、そのフォルダー階層内の子フォルダーに継承されます。 フォルダーに特定のロールを割り当てる場合は、この継承ルールは適用されません。 フォルダー構造は、 **"ホーム"** という名前のルート ノードと、省略可能な **個人用レポート** 機能をサポートする予約済みフォルダーで構成されます。 ブラウザーでは、ルート ノードはレポート サーバーの仮想ディレクトリの名前です (例: `https://myreportserver/reports`)。 詳細については、「 [Folders](../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md#bkmk_Folders)」を参照してください。  
   
  SharePoint サイトでは、ドキュメント ライブラリとコンテンツ ライブラリ内の SharePoint フォルダーを使用してアイテムを整理します。  
@@ -46,15 +46,15 @@ ms.locfileid: "65570844"
  ネイティブのレポート サーバーで、特定の時間またはピーク タイム以外の時間にデータを取得してレポートとデータセット クエリを配信するように、改ページ調整されたレポート、共有データセット、およびサブスクリプションのスケジュールを設定できます。 スケジュールは、一度だけ実行することも、時間、日、週、月間隔で継続して実行することもできます。 詳細については、「 [Schedules](../reporting-services/subscriptions/schedules.md)」を参照してください。  
   
 ### <a name="subscriptions-and-delivery"></a>サブスクリプションと配信  
- サブスクリプションとは、特定の時刻やイベントの発生時に、指定したアプリケーション ファイル形式でレポートを受け取ることができるようにする予約された配信要求です。 サブスクリプションは、要求時にレポートを実行する以外のレポート実行方法を提供します。 要求時にレポートを実行するには、レポートを表示したいときに、毎回レポートを選択する必要があります。 一方、サブスクリプションを使用すると、レポートの配信をスケジュールして自動実行することができます。 電子メールの受信ボックスまたはファイル共有にレポートを配信できます。 詳細については「[サブスクリプションと配信 &#40;Reporting Services&#41](../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)」を参照してください。  
+ サブスクリプションとは、特定の時刻やイベントの発生時に、指定したアプリケーション ファイル形式でレポートを受け取ることができるようにする予約された配信要求です。 サブスクリプションは、要求時にレポートを実行する以外のレポート実行方法を提供します。 要求時にレポートを実行するには、レポートを表示したいときに、毎回レポートを選択する必要があります。 一方、サブスクリプションを使用すると、レポートの配信をスケジュールして自動実行することができます。 電子メールの受信ボックスまたはファイル共有にレポートを配信できます。 詳細については「[サブスクリプションと配信 &#40;Reporting Services&#41;](../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)」を参照してください。  
   
 ### <a name="extensions"></a>拡張機能
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] には、レポート ソリューションのカスタマイズに使用できる拡張可能なアーキテクチャが用意されています。 レポート サーバーは、カスタム認証拡張機能、データ処理拡張機能、レポート処理拡張機能、表示拡張機能、配信拡張機能、およびユーザーが RSReportServer.config 構成ファイルで構成できる拡張機能をサポートします。 たとえば、レポート ビューアーで使用できるエクスポート形式を制限できます。 配信拡張機能とレポート処理拡張機能は省略可能ですが、レポートの配信またはカスタム コントロールをサポートする場合は必須です。 詳細については、「[Reporting Services の拡張機能 &#40;SSRS&#41;](../reporting-services/extensions-ssrs.md)」を参照してください。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] には、レポート ソリューションのカスタマイズに使用できる拡張可能なアーキテクチャがあります。 レポート サーバーは、カスタム認証拡張機能、データ処理拡張機能、レポート処理拡張機能、表示拡張機能、配信拡張機能、およびユーザーが RSReportServer.config 構成ファイルで構成できる拡張機能をサポートします。 たとえば、レポート ビューアーで使用できるエクスポート形式を制限できます。 配信拡張機能とレポート処理拡張機能は省略可能ですが、レポートの配信またはカスタム コントロールをサポートする場合は必須です。 詳細については、「[Reporting Services の拡張機能 &#40;SSRS&#41;](../reporting-services/extensions-ssrs.md)」を参照してください。  
   
 ### <a name="report-access"></a>レポートへのアクセス 
  要求時アクセスでは、ユーザーがレポート表示ツールからレポートを選択できます。 レポート サーバーの構成によって異なりますが、 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]、 [!INCLUDE[msCoName](../includes/msconame-md.md)] SharePoint 2.0 Web パーツ、SharePoint ライブラリ ( [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] が SharePoint 統合モードでインストールされている場合)、埋め込みの ReportViewer コントロール、URL アクセスを使用するブラウザーの使用が可能です。 レポートへのオンデマンド アクセスの詳細については、「[レポートの検索、表示、管理 &#40;レポート ビルダーおよび SSRS&#41;](../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)」を参照してください。  
   
- サブスクリプションは、要求時にレポートを実行する以外のレポート実行方法を提供します。 詳細については「[サブスクリプションと配信 &#40;Reporting Services&#41](../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)」を参照してください。  
+ サブスクリプションは、要求時にレポートを実行する以外のレポート実行方法を提供します。 詳細については「[サブスクリプションと配信 &#40;Reporting Services&#41;](../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)」を参照してください。  
   
  レポート サーバーの操作に使用するツールの一覧については、「 [Reporting Services ツール](../reporting-services/tools/reporting-services-tools.md)」を参照してください。  
   
@@ -84,7 +84,7 @@ SQL Server Mobile Report Publisher では、Reporting Services モバイル レ�
   
 -   **接続文字列:** 接続文字列は、データ ソースに接続するために必要な接続プロパティの文字列バージョンです。 接続プロパティはデータ接続の種類に応じて異なります。  
   
--   **共有データ ソース。** レポート サーバーまたは SharePoint サイトにあり、複数のレポートで使用することができるデータ ソースです。  
+-   **共有データ ソース:** レポート サーバーまたは SharePoint サイトにあり、複数のレポートで使用することができるデータ ソースです。  
   
      共有データ ソースは、よく使用するデータ ソースがある場合に役立ちます。 可能な限り共有データ ソースを使用することをお勧めします。 レポートやレポートへのアクセスが管理しやすくなり、レポートやレポートからアクセスするデータ ソースの安全性を高めることができます。 共有データ ソースが必要な場合は、システム管理者に依頼して作成してもらってください。  
   
@@ -96,7 +96,7 @@ SQL Server Mobile Report Publisher では、Reporting Services モバイル レ�
   
      埋め込みデータ ソースは、レポート定義に保存されるデータ接続です。 埋め込まれたデータ ソースの接続情報は、その情報が埋め込まれたレポートでのみ使用できます。  
   
--   **資格情報。** 資格情報は、外部データにアクセスするために指定する必要がある認証情報です。  
+-   **資格情報:** 資格情報は、外部データにアクセスするために指定する必要がある認証情報です。  
   
      資格情報は、埋め込みデータ ソースの作成、クエリの実行、またはレポート処理時のデータ取得のために使用されます。 データ ソースの所有者が、データへのアクセスに使用する必要がある資格情報の種類を決定します。 資格情報は、データ接続とは別に、レポート作成環境内のレポート サーバー、SharePoint サイト、またはローカル コンピューターで管理されます。 データ ソースの種類に応じて、資格情報を保存して各ユーザーに入力を求めないようにすることも、入力を求めるように設定することもできます。 必要とされる資格情報は、データ ソースへの接続に、自分のコンピューターを使用しているかレポート サーバーを使用しているかに応じて異なる場合があります。 詳細については、「 [レポート ビルダーでの資格情報の指定](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)」を参照してください。  
   
@@ -186,7 +186,7 @@ SQL Server Mobile Report Publisher では、Reporting Services モバイル レ�
 ##  <a name="bkmk_StagesofReports"></a> Reporting Services の改ページ調整されたレポートの段階  
  レポート定義は、作成、パブリッシュまたは保存、コンパイル、処理、キャッシュ、レンダリング、表示、エクスポート、および履歴として保存できます。 レポートの実行時に、レポート サーバーはレポート処理、データ処理、およびレンダリングの 3 つの工程でレポートを処理します。 レポート定義に基づいてデータ処理およびレポート処理が実行され、結果は内部の中間形式になります。 中間形式のレポートは、後から特定の表示形式でレンダリングされます。 次の図は、レポート処理の各段階と要素を示しています。  
   
- ![レポート処理の図](../reporting-services/media/report-execution.gif "レポート処理の図")  
+ ![report processing diagram](../reporting-services/media/report-execution.gif "レポートの処理の図")  
 レポート処理図  
   
 ### <a name="report-definition"></a>レポート定義  
@@ -210,7 +210,7 @@ SQL Server Mobile Report Publisher では、Reporting Services モバイル レ�
   
 ## <a name="see-also"></a>参照  
  [Reporting Services の機能とタスク &#40;SSRS&#41;](../reporting-services/reporting-services-features-and-tasks-ssrs.md)   
- [テクニカル リファレンス &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)   
+ [テクニカル リファレンス (SSRS)](../reporting-services/technical-reference-ssrs.md)   
  [Reporting Services &#40;SSRS&#41;](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  
   
   

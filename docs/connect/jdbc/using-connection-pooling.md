@@ -1,5 +1,5 @@
 ---
-title: 接続プールを使用する |Microsoft Docs
+title: 接続プールの使用 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 699d4e8a-34bf-4c60-b0d5-4a10dad6084a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 69aa4d7f29d8c7963f9b300f868bc8265cde2fd0
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69026371"
 ---
 # <a name="using-connection-pooling"></a>接続プールの使用
@@ -26,11 +26,11 @@ ms.locfileid: "69026371"
 > [!NOTE]  
 > JDBC ドライバーは Java EE 接続プールをサポートしますが、独自のプール実装は提供しません。 このドライバーでは、接続の管理をサードパーティの Java アプリケーション サーバーに依存しています。  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 接続プールを実装するためのクラスは次のとおりです。  
   
-| クラス                                                           | 実装                                                    | [説明]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| クラス                                                           | 実装                                                    | 説明                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | --------------------------------------------------------------- | ------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | com.microsoft.sqlserver.jdbc. SQLServerXADataSource             | javax.sql.ConnectionPoolDataSource および javax.sql.XADataSource | Java EE サーバーはすべての JDBC 3.0 プールおよび XA インターフェイスを実装するので、常に [SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md) クラスを使用することをお勧めします。                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | com.microsoft.sqlserver.jdbc. SQLServerConnectionPoolDataSource | javax.sql.ConnectionPoolDataSource                            | このクラスは、Java EE アプリケーション サーバーが物理接続による接続プールを作成するための接続ファクトリです。 Java EE ベンダーの構成で、javax.sql.ConnectionPoolDataSource を実装するクラスが必要な場合は、クラス名に [SQLServerConnectionPoolDataSource](../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md) を指定します。 通常、代わりに [SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md) クラスを使用することをお勧めします。このクラスはプールと XA インターフェイスの両方を実装し、多くの Java EE サーバー構成で検証されているためです。 |

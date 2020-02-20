@@ -16,10 +16,10 @@ ms.assetid: 3fe74b50-9ccd-4973-a93a-6da2c20a4154
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e023030d01459ef0f7be9b9c61e5f6b8ba1e4d14
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953594"
 ---
 # <a name="getblob-method-javalangstring"></a>getBlob (java.lang.String) メソッド
@@ -45,7 +45,7 @@ public java.sql.Blob getBlob(java.lang.String sCol)
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この getBlob メソッドは、java.sql.CallableStatement インターフェイスの getBlob メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  

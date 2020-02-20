@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル: 書式文字列 (レポート ビルダー) | Microsoft Docs'
+title: チュートリアル:書式文字列 (レポート ビルダー) | Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,13 +9,13 @@ ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 090729625991e3a1aaa6fb1ada3012a15ff20dce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63043046"
 ---
-# <a name="tutorial-format-text-report-builder"></a>チュートリアル: テキストの書式設定 (レポート ビルダー)
+# <a name="tutorial-format-text-report-builder"></a>チュートリアル:テキストを書式設定する (レポート ビルダー)
 
 このチュートリアルでは、 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] のページ分割されたレポートで、さまざまなテキストの書式設定方法を実習します。 さまざまな書式を実験できます。 
 
@@ -25,7 +25,7 @@ ms.locfileid: "63043046"
   
 途中の手順で一度わざと正しくない方法を試し、それがなぜ問題なのかを確認します。 その後、必要な効果が得られるように問題を修正します。  
     
-このチュートリアルの推定所要時間 : 20 分  
+このチュートリアルの推定所要時間:20 分  
   
 ## <a name="requirements"></a>必要条件  
 要件の詳細については、[「チュートリアルの前提条件 (レポート ビルダー)」](../reporting-services/prerequisites-for-tutorials-report-builder.md) を参照してください。  
@@ -50,7 +50,7 @@ ms.locfileid: "63043046"
 
     **[レポート データ]** ペインが表示されていない場合は、 **[表示]** タブの **[レポート データ]** をオンにします。
   
-2.  **[名前]** ボックスに「 **TextDataSource**」と入力します。  
+2.  **[名前]** ボックスに、「**TextDataSource**」と入力します。  
   
 3.  **[レポートに埋め込まれた接続を使用する]** をクリックします。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "63043046"
   
 2.  データ ソースが **TextDataSource**であることを確認します。  
   
-3.  **[名前]** ボックスに「 **TextDataset**」と入力します。  
+3.  **[名前]** ボックスに、「**TextDataset**」と入力します。  
   
 4.  クエリの種類に **[テキスト]** が選択されていることを確認してから、 **[クエリ デザイナー]** をクリックします。  
   
@@ -222,7 +222,7 @@ ms.locfileid: "63043046"
   
 6.  テキストが、他と同じに見えることに注目してください。 リンク テキストのように表示する必要があります。  
   
-7.  [ `[LinkText]`] を選択します。  
+7.  [`[LinkText]`] を選択します。  
   
 8.  **[ホーム]** タブの **[フォント]** で、 **[下線]** を選択し、 **[色]** を **[青]** に変更します。  
   
@@ -316,7 +316,7 @@ ms.locfileid: "63043046"
   
 7.  **[OK]** をクリックします。  
   
-8.  [実行] ( **!** ) をクリックして、レポートをプレビューします。  
+8.  [実行]\( **!** ) をクリックして、レポートをプレビューします。  
   
 テキスト ボックス内のテキストが、見出し、段落、箇条書きとして表示されます。  
   
@@ -353,9 +353,9 @@ ms.locfileid: "63043046"
   
 4.  **[保存]** をクリックします。  
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>次の手順
 
-レポート ビルダーでは、さまざまな方法でテキストの書式を設定できます。 詳細な例については、「[チュートリアル: 自由形式のレポートの作成](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md)」を参照してください。  
+レポート ビルダーでは、さまざまな方法でテキストの書式を設定できます。 [チュートリアル:自由形式のレポートの作成](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md)」にはその他の例が紹介されています。  
 
 [レポート ビルダー チュートリアル](../reporting-services/report-builder-tutorials.md) 
 [レポート アイテムの書式設定](../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  

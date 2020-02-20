@@ -16,10 +16,10 @@ ms.assetid: f55af4b6-ae5c-41c9-8aa3-8313773f5443
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 60194ee2eaae5d209df2579b4351c58e4c3c3fd0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67955729"
 ---
 # <a name="clearwarnings-method-sqlserverresultset"></a>clearWarnings メソッド (SQLServerResultSet)
@@ -40,8 +40,8 @@ public void clearWarnings()
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この clearWarnings メソッドは、java. ResultSet インターフェイスの clearWarnings メソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この clearWarnings メソッドは、java.sql.ResultSet インターフェイスの clearWarnings メソッドで指定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerResultSet のメンバー](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

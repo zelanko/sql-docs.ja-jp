@@ -1,5 +1,5 @@
 ---
-title: NTLM 認証を使用して SQL Server | に接続するMicrosoft Docs
+title: NTLM 認証を使用して SQL Server に接続する | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -13,32 +13,32 @@ author: lilgreenbird
 ms.author: v-susanh
 manager: kenvh
 ms.openlocfilehash: 2fab4794544ada07e0bf5e690da35b72ad6b7421
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69026102"
 ---
 # <a name="using-ntlm-authentication-to-connect-to-sql-server"></a>NTLM 認証を使用して SQL Server に接続する
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-を[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]使用すると、アプリケーションは**authenticationscheme**接続プロパティを使用して、NTLM v2 認証を使用してデータベースに接続することを示すことができます。 
+[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] では、アプリケーションで **authenticationScheme** 接続プロパティを使用して、NTLM v2 認証を使用してデータベースに接続することを示すことができます。 
 
-NTLM 認証にも、次のプロパティが使用されます。
+NTLM 認証には、次のプロパティも使用されます。
 
-- **domain = domainName**optional
-- **user = ユーザー名**
+- **domain = domainName** (省略可能)
+- **user = userName**
 - **password = password**
-- **統合 Atedsecurity = true**
+- **integratedSecurity = true**
 
-**ドメイン**以外のプロパティは必須です。 **NTLM** authenticationscheme プロパティが使用されているときに、ドライバーが不足している場合は、エラーがスローされます。 
+**domain** 以外のプロパティは必須です。**NTLM** authenticationScheme プロパティが使用されている場合、どれかが不足していると、ドライバーによってエラーがスローされます。 
 
-接続プロパティの詳細については、「[接続プロパティの設定](../../connect/jdbc/setting-the-connection-properties.md)」を参照してください。 Microsoft NTLM 認証プロトコルの詳細については、「 [MICROSOFT ntlm](https://docs.microsoft.com/windows/desktop/SecAuthN/microsoft-ntlm)」を参照してください。
+接続プロパティの詳細については、「[接続プロパティの設定](../../connect/jdbc/setting-the-connection-properties.md)」を参照してください。 Microsoft NTLM 認証プロトコルの詳細については、[Microsoft NTLM](https://docs.microsoft.com/windows/desktop/SecAuthN/microsoft-ntlm) に関するページを参照してください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-NTLM 認証の動作を制御する SQL server 設定の説明については、「[ネットワークセキュリティ: LAN Manager の認証レベル](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-security-lan-manager-authentication-level)」を参照してください。 
+NTLM 認証の動作を制御する、SQL Server 設定の詳細については、[ネットワーク セキュリティ:LAN Manager 認証レベル](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/network-security-lan-manager-authentication-level)に関するページを参照してください。 
 
 ## <a name="logging"></a>ログ記録
 
@@ -46,7 +46,7 @@ NTLM 認証をサポートするために、新しいロガー com.microsoft.sql
 
 ## <a name="datasource"></a>DataSource
 
-データソースを使用して接続を作成する場合は、 **Setauthenticationscheme**、 **setdomain**、および (必要に応じて) **setauthenticationscheme**を使用して、NTLM のプロパティをプログラムで設定できます。
+データソースを使用して接続を作成する場合、NTLM プロパティは、**setAuthenticationScheme**、**setDomain**、および (必要に応じて) **setServerSpn** を使用してプログラムで設定できます。
 
 ```java
 SQLServerDataSource ds = new SQLServerDataSource();
@@ -72,9 +72,9 @@ try (Connection c = ds.getConnection(); Statement s = c.createStatement();
 
 サービス プリンシパル名 (SPN) は、クライアントがサービスのインスタンスを一意に識別するための名前です。
 
-**serverSpn** 接続プロパティを使用して SPN を指定できますが、ドライバーで自動的に作成することもできます (既定)。 このプロパティの形式は "MSSQLSvc/fqdn:port\@REALM" です。ここで、fqdn は完全修飾ドメイン名、port はポート番号、REALM は大文字で表記された SQL Server の領域です。 既定の領域はサーバーの領域と同じであるため、このプロパティの領域部分は省略可能です。
+**serverSpn** 接続プロパティを使用して SPN を指定できますが、ドライバーで自動的に作成することもできます (既定)。 このプロパティの形式は、"MSSQLSvc/fqdn:port\@REALM" です。fqdn は完全修飾ドメイン名、port はポート番号、REALM は SQL Server の領域を大文字で示します。 既定の領域がサーバーの領域と同じであるため、このプロパティの領域部分は省略可能です。
 
-たとえば、SPN は次のようになります。 "MSSQLSvc/some: 1433" のようになります。
+たとえば、SPN は次のようになります。"MSSQLSvc/some-server.zzz.corp.contoso.com:1433"
 
 サービス プリンシパル名 (SPN) の詳細については、以下を参照してください。
 
@@ -83,13 +83,13 @@ try (Connection c = ds.getConnection(); Statement s = c.createStatement();
 > [!NOTE]  
 > serverSpn 接続属性は、Microsoft JDBC Driver 4.2 以降でのみサポートされています。
 
-> JDBC driver の6.2 リリースの前に、 **Serverspn**を明示的に設定する必要があります。 6\.2 リリースの場合、ドライバーは既定で **Serverspn** を構築でき ますが、 **serverspn**を明示的に使用することもできます。
+> 6\.2 リリースより前の JDBC driver では、**serverSpn** を明示的に設定する必要があります。 6\.2 リリースの場合、ドライバーは既定で **Serverspn** を構築でき ますが、 **serverspn**を明示的に使用することもできます。
 
 ## <a name="security-risks"></a>セキュリティ リスク
 
-NTLM プロトコルは、さまざまな脆弱性を持つ古い認証プロトコルであり、セキュリティ上のリスクがあります。 これは比較的弱い暗号方式に基づいており、さまざまな攻撃に対して脆弱です。 これは Kerberos に置き換えられ、より安全であり、推奨されます。 NTLM 認証は、セキュリティで保護された信頼できる環境でのみ使用するか、Kerberos を使用できないようにする必要があります。
+NTLM プロトコルは、さまざまな脆弱性を持つ古い認証プロトコルであり、セキュリティ上のリスクがあります。 比較的弱い暗号方式に基づいており、さまざまな攻撃に対して脆弱です。 Kerberos に置き換えられます。これは、より安全で推奨されます。 NTLM 認証は、セキュリティで保護された信頼できる環境、または Kerberos を使用できない場合にのみ使用してください。
 
-は[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] NTLM v2 のみをサポートしており、元の v1 プロトコルよりもセキュリティが強化されています。 また、セキュリティ強化のために SSL 暗号化を使用することもお勧めします。 
+[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] では、NTLM v2 のみサポートされています。これは、元の v1 プロトコルよりもセキュリティが強化されています。 拡張保護を有効にするか、SSL 暗号化を使用して、セキュリティを強化することもお勧めします。 
 
 拡張保護を有効にする方法の詳細については、以下を参照してください。
 

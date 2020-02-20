@@ -16,10 +16,10 @@ ms.assetid: f173fa5d-e114-4a37-a5c4-2baad9ff3af1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d34f5748a5a85d67754ea9a001ba1819935e53a6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67952837"
 ---
 # <a name="getcolumns-method-sqlserverdatabasemetadata"></a>getColumns メソッド (SQLServerDatabaseMetaData)
@@ -60,12 +60,12 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この getColumns メソッドは、java.sql.DatabaseMetaData インターフェイスの getColumns メソッドで規定されています。  
   
  getColumns メソッドによって返される結果セットには、次の情報が含まれます。  
   
-|[オブジェクト名]|型|[説明]|  
+|Name|Type|説明|  
 |----------|----------|-----------------|  
 |TABLE_CAT|**String**|カタログ名。|  
 |TABLE_SCHEM|**String**|テーブル スキーマ名です。|  
@@ -78,7 +78,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 |DECIMAL_DIGITS|**smallint**|列の小数点以下の桁数です。|  
 |NUM_PREC_RADIX|**smallint**|列の基数です。|  
 |NULLABLE|**smallint**|列が null を許容するかどうかを示します。 次のいずれかの値を指定できます。<br /><br /> columnNoNulls (0)<br /><br /> columnNullable (1)|  
-|REMARKS|**String**|列に関連付けられているコメントです。<br /><br /> **注:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、この列に対して常に null が返されます。|  
+|REMARKS|**String**|列に関連付けられているコメントです。<br /><br /> **注:**  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、この列に対して常に null 値を返します。|  
 |COLUMN_DEF|**String**|列の既定値です。|  
 |SQL_DATA_TYPE|**smallint**|記述子の TYPE フィールドでの SQL データ型の値です。 datetime データ型と SQL-92 interval データ型以外は、DATA_TYPE 列と同じです。 この列は常に値が返されます。|  
 |SQL_DATETIME_SUB|**smallint**|datetime および SQL-92 interval データ型のサブタイプ コードです。 他のデータ型の場合、この列は NULL を返します。|  
@@ -95,7 +95,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 |SS_XML_SCHEMACOLLECTION_CATALOG_NAME|**String**|XML スキーマ コレクション名が定義されているカタログの名前です。 カタログ名が見つからない場合は、この変数に空文字列が含まれます。 <sup>1</sup>|  
 |SS_XML_SCHEMACOLLECTION_SCHEMA_NAME|**String**|XML スキーマ コレクション名が定義されているスキーマの名前です。 スキーマ名が見つからない場合は、空文字列です。 <sup>1</sup>|  
 |SS_XML_SCHEMACOLLECTION_NAME|**String**|XML スキーマ コレクションの名前です。 名前が見つからない場合は、空文字列です。 <sup>1</sup>|  
-|SS_DATA_TYPE|**tinyint**|拡張ストアド プロシージャによって使用される [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データ型です。<br /><br /> **注** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] によって返されるデータ型の詳細については、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] オンライン ブックの「データ型 (Transact-SQL)」を参照してください。|  
+|SS_DATA_TYPE|**tinyint**|拡張ストアド プロシージャによって使用される [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データ型です。<br /><br /> **注**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] によって返されるデータ型の詳細については、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] オンライン ブックの「データ型 (Transact-SQL)」を参照してください。|  
   
  (1) [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] に接続している場合、この列はありません。  
   
@@ -109,7 +109,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データ型|JDBC Driver 2.0 (または、[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] に接続されている場合) での戻り値の型と関連付けられている数値定数|[!INCLUDE[ssKatmai](../../../includes/sskatmai_md.md)] 以降に接続されている場合の JDBC Driver 3.0 での戻り値の型と関連付けられている数値定数|  
 |-------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|  
 |8 KB を超えるユーザー定義型|LONGVARBINARY (-4)|VARBINARY (-3)|  
-|geography|LONGVARBINARY (-4)|VARBINARY (-3)|  
+|地理|LONGVARBINARY (-4)|VARBINARY (-3)|  
 |geometry|LONGVARBINARY (-4)|VARBINARY (-3)|  
 |varbinary(max)|LONGVARBINARY (-4)|VARBINARY (-3)|  
 |nvarchar(max)|LONGVARCHAR (-1) または LONGNVARCHAR (JDBC 4) (-16)|VARCHAR (12) または NVARCHAR (JDBC 4) (-9)|  
@@ -162,7 +162,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 |xml|-10|-152|  
 |8 KB 以下のユーザー定義型|-3|-151|  
 |8 KB を超えるユーザー定義型|JDBC Driver 2.0 では使用できません。|-151|  
-|geography|-4|-151|  
+|地理|-4|-151|  
 |geometry|-4|-151|  
 |hierarchyid|-4|-151|  
 |time|-9|92|  

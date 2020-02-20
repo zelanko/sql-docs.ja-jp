@@ -16,10 +16,10 @@ ms.assetid: b8d18d3d-9db0-43e7-8286-7b46cc3a37ed
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 26fa81278afd686d25192fdd49bbc3f2119a5762
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571565"
 ---
 # <a name="what-is-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) とは
@@ -30,7 +30,7 @@ Power BI Report Server が見つからない場合は、 「[Power BI Report Ser
 
 SQL Server Reporting Services (SSRS) では、モバイルおよびページ分割されたレポートの作成、配置、管理を行う一連のオンプレミス ツールおよびサービスを提供しています。
 
-![SQL Server Reporting Services 一式](../reporting-services/media/ss-reporting-services-all-together.png "SQL Server Reporting Services 一式")
+![SQL Server Reporting Services 全体](../reporting-services/media/ss-reporting-services-all-together.png "SQL Server Reporting Services 全体")
 
 ## <a name="create-deploy-and-manage-mobile-and-paginated-reports"></a>モバイル レポートやページ分割されたレポートを作成、配置、管理する
 
@@ -83,7 +83,7 @@ Reporting Services は "従来の" ページ分割されたレポートと関連
 
 ネイティブ モードの Reporting Services のエンド ユーザーにとっての入り口は、最新のブラウザーで表示できる最新の Web ポータルです。 新しいポータルからは、Reporting Services のモバイル レポート、ページ分割されたレポート、KPI のすべてにアクセスできます。 KPI を使うと、レポートを開かなくても、主要なビジネス指標をブラウザーで簡単に見ることができます。
 
-新しい Web サイトは、レポート マネージャーを完全に書き直したものです。 それは、単一ページで標準ベースの HTML5 アプリであり、その最新ブラウザーは、Microsoft Edge、Internet Explorer 10 と 11、Chrome、Firefox、Safari、およびすべての主要なブラウザー用に最適化されています。
+新しい Web サイトは、レポート マネージャーを完全に書き直したものです。 単一ページで標準ベースの HTML5 アプリであり、すべての主要な最新ブラウザーが最適化されています。具体的には、Microsoft Edge、Internet Explorer 10 と 11、Chrome、Firefox、Safari などのすべての主要ブラウザーです。
 
 Web ポータルのコンテンツは、種類別に整理されます。つまり、
 
@@ -110,13 +110,13 @@ SharePoint 統合モードで Reporting Services にレポートをパブリッ�
 
 ::: moniker-end
 
-## <a name="includessrsnoversionincludesssrsnoversion-mdmd-programming-features"></a>[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のプログラミング機能
+## <a name="ssrsnoversion-programming-features"></a>[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のプログラミング機能
 
 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のプログラミング機能を活用し、レポート作成機能を拡張およびカスタマイズできます。 SSRS API を使用してカスタム アプリケーションのデータ処理とレポート処理を統合または拡張します。
 
 詳しくは、「 [開発者ガイド (Reporting Services)](../reporting-services/reporting-services-developer-documentation.md)」をご覧ください。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 * [Reporting Services のインストール](../reporting-services/install-windows/install-reporting-services.md)
 * [SQL Server Data Tools (SSDT) のダウンロード](https://go.microsoft.com/fwlink/?LinkID=616714)

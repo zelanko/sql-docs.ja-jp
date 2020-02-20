@@ -12,10 +12,10 @@ ms.assetid: 152a1051-8aa5-4c01-bc85-f8be8971b0cd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 6b2be1e020354f47aa21dc83f17ff6169bcf2d72
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "66174995"
 ---
 # <a name="preload-the-cache"></a>キャッシュを事前に読み込む  
@@ -23,7 +23,7 @@ ms.locfileid: "66174995"
   
  レポートのキャッシュを事前に読み込むには 2 つの方法があります。  
   
-1.  レポートのキャッシュ更新計画を作成します。 これは推奨される方法です。  
+1.  レポートのキャッシュ更新計画を作成します。 可能であればこの方法の使用をお勧めします。  
   
 2.  データ ドリブン サブスクリプションを使用して、パラメーター化されたレポートのインスタンスをキャッシュに事前に読み込みます。 これは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] より前のバージョンの [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]でキャッシュを事前に読み込む唯一の方法でした。 詳細については、「 [レポートのキャッシュ (SSRS)](../../reporting-services/report-server/caching-reports-ssrs.md)でキャッシュを事前に読み込む唯一の方法でした。  
   
@@ -48,8 +48,8 @@ ms.locfileid: "66174995"
 5. データセットのキャッシュを有効にするには、 **[このデータセットのコピーをキャッシュして、利用可能なときにはそれを使用する]** ラジオ ボタンを選択します。 そうすると、その下に **[キャッシュの有効期限]** セクションが表示されます。 次のラジオ ボタンのいずれかを選択します。
 
     - **[Cache expires after x minutes]\(x 分後にキャッシュの有効期限が切れる\)** (x に望む分数を入力します)。
-    - **[スケジュールに従ってキャッシュの有効期限が切れる]** 。  Reporting Services には、レポートの配信に関する処理、コンテンツの整合性、パフォーマンスを制御するのに役立つ、共有スケジュールとレポート固有スケジュールが用意されています。 詳細については、「[Create, Modify, and Delete Schedules (スケジュールを作成、変更、および削除する)](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md "スケジュールを作成、変更、および削除する")」をご覧ください。 このキャッシュの有効期限に関しては、スケジュールの作成方法についていくつかのオプションがあります。スケジューリングに関する次の 2 つの選択肢のどちらかを選択してください。  
-      - **[共有スケジュール]** ラジオ ボタン。その後 **[共有スケジュールを選択してください]** ドロップダウン テキスト ボックスからスケジュールを選択してください。 詳細については、「[スケジュール](../../reporting-services/subscriptions/schedules.md "スケジュール")」をご覧ください。  
+    - **[スケジュールに従ってキャッシュの有効期限が切れる]** 。  Reporting Services には、レポートの配信に関する処理、コンテンツの整合性、パフォーマンスを制御するのに役立つ、共有スケジュールとレポート固有スケジュールが用意されています。 詳細については、「 [Create, Modify, and Delete Schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md "Create, Modify, and Delete Schedules")」をご覧ください。 このキャッシュの有効期限に関しては、スケジュールの作成方法についていくつかのオプションがあります。スケジューリングに関する次の 2 つの選択肢のどちらかを選択してください。  
+      - **[共有スケジュール]** ラジオ ボタン。その後 **[共有スケジュールを選択してください]** ドロップダウン テキスト ボックスからスケジュールを選択してください。 詳細については、「 [Schedules](../../reporting-services/subscriptions/schedules.md "スケジュール")」を参照してください。  
       - **[レポート固有のスケジュール]** ラジオ ボタン。"*スケジュールの詳細*" ページを表示する必要がある場合は、その後 **[スケジュールの編集]** リンクを選択します。  
 
          ![Web ポータルのデータセット用キャッシュ有効期限のスケジュールの詳細ページ](../../reporting-services/report-server/media/preload-the-cache/web-portal-dataset-cache-schedule-details.png "データセット用キャッシュのスケジュールの詳細ページ")
@@ -58,7 +58,7 @@ ms.locfileid: "66174995"
          - スケジュールの種類:
            - **[時間]** - 次の間隔でスケジュールを実行する: 時間と分と、開始時刻を指定します。
            - **[日]** - 次の 3 つの選択肢のいずれかを選択します。  
-              - **[曜日を指定]** : (日、月、火、水、木、金、土)。
+              - **曜日を指定**:(日曜日、月曜日、火曜日、水曜日、木曜日、金曜日、土曜日)
               - **[すべての平日]**
               - **[次の日間隔で繰り返す]** - 数値を指定します。  
            - **[週]** - 次の 2 つの項目の両方を指定します。
@@ -118,7 +118,7 @@ ms.locfileid: "66174995"
    data source=<servername>;initial catalog=Subscribers  
    ```
   
-10. **[クエリ]** セクションで、必要なサブスクライバー データを取得するクエリを指定します。  例:  
+10. **[クエリ]** セクションで、必要なサブスクライバー データを取得するクエリを指定します。  次に例を示します。  
   
     ```T-SQL  
     Select * from RptSubscribers  
@@ -132,7 +132,7 @@ ms.locfileid: "66174995"
 
 13. **[サブスクリプションの作成]** を選択します。  
   
-14. 新しいデータ ドリブン サブスクリプションと共に **[サブスクリプション]** ページが表示されます。 このページでは、準備が整ったときにサブスクリプションを有効にすることができます。それには、その左側にあるチェック ボックスを選択し、 **[有効にする]** ボタンを選択します。 ![サブスクリプション ページの [有効にする] ボタン](../../reporting-services/report-server/media/preload-the-cache/subscriptions-page-enable-button.png "サブスクリプション ページ上の [有効にする] ボタン")
+14. 新しいデータ ドリブン サブスクリプションと共に **[サブスクリプション]** ページが表示されます。 このページでは、準備が整ったときにサブスクリプションを有効にすることができます。それには、その左側にあるチェック ボックスを選択し、 **[有効にする]** ボタンを選択します。 ![[サブスクリプション] ページの [有効化] ボタン](../../reporting-services/report-server/media/preload-the-cache/subscriptions-page-enable-button.png "[サブスクリプション] ページの [有効化] ボタン")
 
 15. サブスクリプションをいつ処理するかを指定します。 **[レポート サーバーでのレポート データの更新時]** は選択しないでください。 この設定はスナップショットにのみ使用します。 既存のスケジュールを使用する場合は、 **[共有スケジュールで実行]** を選択してください。  
   

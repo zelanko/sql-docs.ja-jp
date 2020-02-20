@@ -1,5 +1,5 @@
 ---
-title: 使用して Sql_variant データ型 |Microsoft Docs
+title: sql_variant データ型の使用 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,26 +11,26 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cdede5d41d5ad7fc22cfed3f1efa9f95612032ca
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69025843"
 ---
 # <a name="using-sql_variant-data-type"></a>Sql_variant データ型の使用
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-バージョン6.3.0 の場合、JDBC driver は sql_variant データ型をサポートします。 Sql_variant は、このページで後ほど説明するいくつかの制限付きで、テーブル値パラメーターや BulkCopy などの機能を使用する場合にもサポートされます。 すべてのデータ型を sql_variant データ型に格納することはできません。 Sql_variant でサポートされているデータ型の一覧については、SQL Server の[ドキュメント](https://docs.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql)を確認してください。
+バージョン 6.3.0 より、JDBC ドライバーでは、sql_variant データ型がサポートされています。 sql_variant は、テーブル値パラメーターや BulkCopy などの機能を使用する場合にもサポートされていますが、このページで後述するようにいくつかの制限があります。 すべてのデータ型を sql_variant データ型に格納することはできません。 sql_variant でサポートされているデータ型の一覧については、SQL Server の[ドキュメント](https://docs.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql)をご覧ください。
 
 ##  <a name="populating-and-retrieving-a-table"></a>テーブルの設定と取得:
-次のように sql_variant 列を含むテーブルがあると仮定します。
+次のように、sql_variant 列を持つテーブルがあると仮定します。
 
 ```sql
 CREATE TABLE sampleTable (col1 sql_variant)  
 ```
 
-ステートメントを使用して値を挿入するサンプルスクリプトを次に示します。
+ステートメントを使用して値を挿入するサンプル スクリプト:
 
 ```java
 try (Statement stmt = connection.createStatement()){
@@ -38,7 +38,7 @@ try (Statement stmt = connection.createStatement()){
 }
 ```
 
-準備されたステートメントを使用した値の挿入:
+準備されたステートメントを使用して値を挿入する:
 
 ```java
 try (PreparedStatement preparedStatement = con.prepareStatement("insert into sampleTable values (?)")) {
@@ -47,7 +47,7 @@ try (PreparedStatement preparedStatement = con.prepareStatement("insert into sam
 }
 ```      
 
-渡されるデータの基になる型がわかっている場合は、それぞれの setter を使用できます。 たとえば、 `preparedStatement.setInt()`は整数値を挿入するときに使用できます。
+渡されるデータの基になる型がわかっている場合は、それぞれのセッターを使用できます。 たとえば、整数値を挿入するときは、`preparedStatement.setInt()` を使用できます。
 
 ```java
 try (PreparedStatement preparedStatement = con.prepareStatement("insert into table values (?)")) {
@@ -56,7 +56,7 @@ try (PreparedStatement preparedStatement = con.prepareStatement("insert into tab
 }
 ```
 
-テーブルから値を読み取るために、それぞれの getter を使用できます。 たとえば、 `getInt()`または`getString()`メソッドは、サーバーからの値がわかっている場合に使用できます。    
+テーブルから値を読み取るために、それぞれのゲッターを使用できます。 たとえば、`getInt()` メソッドまたは `getString()` メソッドは、サーバーからの値がわかっている場合に使用できます。    
 
 ```java
 try (SQLServerResultSet resultSet = (SQLServerResultSet) stmt.executeQuery("select * from sampleTable ")) {
@@ -65,14 +65,14 @@ try (SQLServerResultSet resultSet = (SQLServerResultSet) stmt.executeQuery("sele
 }
 ```
 
-## <a name="using-stored-procedures-with-sql_variant"></a>Sql_variant でストアドプロシージャを使用する:   
-次のようなストアドプロシージャがあるとします。     
+## <a name="using-stored-procedures-with-sql_variant"></a>sql_variant でストアド プロシージャを使用する:   
+次のようなストアド プロシージャがあるとします。     
 
 ```java
 String sql = "CREATE PROCEDURE " + inputProc + " @p0 sql_variant OUTPUT AS SELECT TOP 1 @p0=col1 FROM sampleTable ";
 ``` 
     
-出力パラメーターを登録する必要があります:
+出力パラメーターを登録する必要があります。
 
 ```java
 try (CallableStatement callableStatement = con.prepareCall(" {call " + inputProc + " (?) }")) {
@@ -81,14 +81,14 @@ try (CallableStatement callableStatement = con.prepareCall(" {call " + inputProc
 }
 ```
 
-## <a name="limitations-of-sql_variant"></a>Sql_variant の制限事項は次のとおりです。
-- Tvp を使用して、sql_variant に格納`datetime`されている`date`値をテーブル`getDateTime()` `getSmallDateTime()` / `smalldatetime` /に設定し、を呼び出す/場合 / `getDate()`ResultSet は動作せず、次の例外をスローします。
+## <a name="limitations-of-sql_variant"></a>sql_variant の制限事項:
+- TVP を使用して、sql_variant に格納されている `datetime`/`smalldatetime`/`date` 値をテーブルに入力する場合、ResultSet で `getDateTime()`/`getSmallDateTime()`/`getDate()` を呼び出すと動作せず、次の例外がスローされます。
     
     `Java.lang.String cannot be cast to java.sql.Timestamp`
    
-    回避策: `getString()`代わり`getObject()`にまたはを使用します。 
+    回避策: 代わりに `getString()` または `getObject()` を使用します。 
     
-- TVP を使用してテーブルにデータを入力し、sql_variant で null 値を送信することはサポートされていません。例外がスローされます。
+- TVP を使用してテーブルにデータを入力し、sql_variant で null 値を送信することはサポートされていないため、例外がスローされます。
     
     `Inserting null value with column type sql_variant in TVP is not supported.`
 

@@ -1,5 +1,5 @@
 ---
-title: アダプティブバッファリングの使用 |Microsoft Docs
+title: アダプティブ バッファリングの使用 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 92d4e3be-c3e9-4732-9a60-b57f4d0f7cb7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 28b2750d96e1fbe5b5a1cfc3021a22415128b7df
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "69026797"
 ---
 # <a name="using-adaptive-buffering"></a>アダプティブ バッファリングの使用
@@ -27,9 +27,9 @@ ms.locfileid: "69026797"
 
 アプリケーションで非常に大きな結果を処理できるようにするために、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] はアダプティブ バッファリングを提供しています。 ドライバーでアダプティブ バッファリングを使用すると、ステートメントの実行結果を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] から取得する処理が、すべて一度にではなく、アプリケーションの必要に応じて行われます。 また、アプリケーションからアクセスできなくなった結果は、ドライバーによって直ちに破棄されます。 アダプティブ バッファリングは次のような場合に効果的です。
 
-- **クエリが非常に大きな結果セットを生成する:** アプリケーションでは、メモリに格納できる行よりも多くの行を生成する SELECT ステートメントを実行できます。 以前のリリースでは、OutOfMemoryError を避けるために、サーバー カーソルを使用する必要がありました。 アダプティブ バッファリングは、サーバー カーソルを使用することなく、任意の大きな結果セットを順方向専用かつ読み取り専用で渡せるようにします。
+- **クエリによって非常に大きな結果セットが生成される:** アプリケーションでは、メモリに格納できる行よりも多くの行を生成する SELECT ステートメントが実行される可能性があります。 以前のリリースでは、OutOfMemoryError を避けるために、サーバー カーソルを使用する必要がありました。 アダプティブ バッファリングは、サーバー カーソルを使用することなく、任意の大きな結果セットを順方向専用かつ読み取り専用で渡せるようにします。
 
-- **クエリが非常に大きな** [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) **列または** [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) **OUT パラメーター値を生成する:** アプリケーションでは、アプリケーション メモリに完全に含めるには大きすぎる単一の値 (列または OUT パラメーター) を取得できます。 アダプティブバッファリングを使用すると、クライアントアプリケーションは、getAsciiStream、getBinaryStream、または Get Stream メソッドを使用して、このような値をストリームとして取得できます。 アプリケーションは、ストリームから読み取るときと同じようにして、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] から値を取得します。
+- **クエリによって、非常に大きな** [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) **列または** [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) **OUT パラメーター値が生成される:** アプリケーションでは、アプリケーション メモリに完全に含めるには大きすぎる単一の値 (列または OUT パラメーター) が取得される可能性があります。 アダプティブ バッファリングを使用すると、クライアント アプリケーションで getAsciiStream メソッド、getBinaryStream メソッド、または getCharacterStream メソッドを使用して、そのような値をストリームとして取得できます。 アプリケーションは、ストリームから読み取るときと同じようにして、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] から値を取得します。
 
 > [!NOTE]  
 > アダプティブ バッファリングでは、必要な量のデータだけが、JDBC ドライバーによってバッファリングされます。 ドライバーにバッファーのサイズを制御したり制限したりするためのパブリック メソッドは備わっていません。
@@ -40,15 +40,15 @@ JDBC Driver 2.0 以降では、ドライバーの既定の動作は "**adaptive*
 
 アプリケーションがステートメントの実行でアダプティブ バッファリングを使用するように要求できる方法は 3 つあります。
 
-- アプリケーションでは、接続プロパティ**Responsebuffering**を "adaptive" に設定できます。 接続プロパティの設定の詳細については、「[接続プロパティの設定](../../connect/jdbc/setting-the-connection-properties.md)」を参照してください。
+- アプリケーションで、接続プロパティ **responseBuffering** を "adaptive" に設定できます。 接続プロパティの設定の詳細については、「[接続プロパティの設定](../../connect/jdbc/setting-the-connection-properties.md)」を参照してください。
 
 - アプリケーションで、[SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) オブジェクトの [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverdatasource.md) メソッドを使用して、その [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) オブジェクトを通じて作成されたすべての接続の応答バッファリング モードを設定できます。
 
 - アプリケーションで、[SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) クラスの [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) メソッドを使用して、特定のステートメント オブジェクトの応答バッファリング モードを設定できます。
 
-JDBC Driver Version 1.2 を使用している場合、[setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) メソッドを使用するには、Statement オブジェクトを [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) クラスにキャストする必要があります。 [大規模なデータの読み取りサンプル](../../connect/jdbc/reading-large-data-sample.md)と[ストアドプロシージャを使用した大きなデータの読み取り](../../connect/jdbc/reading-large-data-with-stored-procedures-sample.md)のサンプルのコード例では、この古い使用方法を示しています。
+JDBC Driver Version 1.2 を使用している場合、[setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) メソッドを使用するには、Statement オブジェクトを [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) クラスにキャストする必要があります。 「[大きなデータを読み取るサンプル](../../connect/jdbc/reading-large-data-sample.md)」および「[ストアド プロシージャで大きなデータを読み取るサンプル](../../connect/jdbc/reading-large-data-with-stored-procedures-sample.md)」のコード例は、この古い使用方法を示しています。
 
-ただし、JDBC ドライバー Version 2.0 では、実装されているクラス階層を意識することなく、[isWrapperFor](../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md) メソッドおよび [unwrap](../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md) メソッドを使用して、ベンダー固有の機能にアクセスできます。 コード例については、「[大規模なデータの更新](../../connect/jdbc/updating-large-data-sample.md)」のサンプルトピックを参照してください。
+ただし、JDBC ドライバー Version 2.0 では、実装されているクラス階層を意識することなく、[isWrapperFor](../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md) メソッドおよび [unwrap](../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md) メソッドを使用して、ベンダー固有の機能にアクセスできます。 コード例については、「[大きなデータを更新するサンプル](../../connect/jdbc/updating-large-data-sample.md)」を参照してください。
 
 ## <a name="retrieving-large-data-with-adaptive-buffering"></a>アダプティブ バッファリングによる大きなデータの取得
 
@@ -61,7 +61,7 @@ get\<Type>Stream メソッドを使用して大きな値を 1 回読み取り、
 アプリケーションでアダプティブ バッファリングを使用する場合、get\<Type>Stream メソッドによって取得される値は、1 回だけ取得できます。 同じオブジェクトの get\<Type>Stream メソッドを呼び出した後に、同じ列またはパラメーターで任意の get\<Type>Stream メソッドを呼び出すと、"このデータはアクセスされており、この列またはパラメーターに対しては使用できません" という意味のメッセージで例外がスローされます。
 
 > [!NOTE]
-> 結果セットの処理中に、ResultSet. close () を呼び出すと、残りのすべてのパケットを読み取り、破棄するために、Microsoft JDBC Driver for SQL Server が必要になります。 クエリから大きなデータセットが返された場合、特にネットワーク接続の速度が遅い場合、この処理にはかなりの時間がかかることがあります。
+> ResultSet の処理中に ResultSet.close() を呼び出すと、残りのすべてのパケットを読み取って破棄するために Microsoft JDBC Driver for SQL Server が必要になります。 クエリから大きなデータ セットが返された場合、特にネットワーク接続の速度が遅い場合、この処理にはかなりの時間がかかることがあります。
 
 ## <a name="guidelines-for-using-adaptive-buffering"></a>アダプティブ バッファリングの使用に関するガイドライン
 
@@ -69,7 +69,7 @@ get\<Type>Stream メソッドを使用して大きな値を 1 回読み取り、
 
 - アプリケーションが非常に大きな結果セットを処理できるようにするために、接続文字列プロパティ **selectMethod=cursor** を使用しないようにします。 アダプティブ バッファリング機能を使用すると、アプリケーションがサーバー カーソルを使用することなく、非常に大きな順方向専用の読み取り専用結果セットを処理することが可能になります。 **selectMethod=cursor** を設定する場合、その接続で生成された順方向専用、読み取り専用のすべての結果セットに影響が及ぶ点に注意してください。 つまり、わずかな行数の短い結果セットを定期的に処理するようなアプリケーションでは、結果セットごとにサーバー カーソルを作成し、読み取って、閉じる操作を繰り返すことになって、クライアント側とサーバー側の両方でリソース消費が (**selectMethod** を **cursor** に設定しなかった場合と比較して) 増えることになります。
 
-- サイズの大きいテキストまたはバイナリ値をストリームとして読み取るには、getBlob または getClob メソッドの代わりに、getAsciiStream、getBinaryStream、または Get Stream メソッドを使用します。 Version 1.2 リリース以降の [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) クラスには、この目的のための新しい get\<Type>Stream メソッドがあります。
+- サイズの大きいテキストまたはバイナリ値をストリームとして読み取るには、getBlob メソッドまたは getClob メソッドの代わりに、getAsciiStream メソッド、getBinaryStream メソッド、または getCharacterStream メソッドを使用します。 Version 1.2 リリース以降の [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) クラスには、この目的のための新しい get\<Type>Stream メソッドがあります。
 
 - 大きな値を含む可能性がある列は、SELECT ステートメント内で列リストの最後に配置し、[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) の get\<Type>Stream メソッドを使用して、選択された順序で列にアクセスします。
 
@@ -77,9 +77,9 @@ get\<Type>Stream メソッドを使用して大きな値を 1 回読み取り、
 
 - 同じ接続で複数のステートメントを同時に実行しないでください。 前のステートメントの結果を処理する前に別のステートメントを実行すると、処理されない結果がアプリケーションのメモリにバッファリングされることがあります。
 
-- 次のように、 **responsebuffering = adaptive**の代わりに**selectMethod = cursor**を使用すると便利な場合があります。
+- 次のように、**responseBuffering=adaptive** の代わりに **selectMethod=cursor** を使用すると有用な場合があります。
 
-  - ユーザー入力後に各行を読み取るなど、順方向専用の読み取り専用の結果セットを処理するアプリケーションでは、 **responsebuffering = adaptive**ではなく、 **selectMethod = cursor**を使用して、リソース[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の使用量を減らすことができます。.
+  - ユーザー入力の後で 1 つずつ行を読み取るなど、順方向専用、読み取り専用の結果セットを少しずつ処理するようなアプリケーションでは、**responseBuffering=adaptive** の代わりに **selectMethod=cursor** を使用すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によるリソース使用量が少なくて済みます。
 
   - 同じ接続で順方向専用、読み取り専用の複数の結果セットを同時に処理するようなアプリケーションでは、**responseBuffering=adaptive** の代わりに **selectMethod=cursor** を使用することで、ドライバーがこれらの結果セットを処理する際に必要となるメモリ量を減らすことができます。
 

@@ -15,10 +15,10 @@ ms.assetid: 79027e11-f4ba-4bfd-bd8c-d334e3da02a1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b54290c582dab62b7e0f5b8a1cb7ca4dd2eb642c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65573309"
 ---
 # <a name="upload-a-file-or-report-in-the-report-server"></a>レポート サーバーでファイルまたはレポートをアップロードする
@@ -34,7 +34,7 @@ ms.locfileid: "65573309"
   
 4.  アップロードするファイルを参照します。 レポート定義ファイル、画像、ドキュメント、またはレポート サーバーで利用できるようにする任意のファイルをアップロードできます。  
   
-5.  新しいアイテムの名前を入力します。 アイテム名ではスペースを使用できます。以下の予約文字は使用できません。\; \? \: \@ \& \= \+ \, \$ \/ \* \< \> \| です。  
+5.  新しいアイテムの名前を入力します。 アイテム名ではスペースを使用できますが、次の予約文字は使用できません。\; \? \: \@ \& \= \+ \, \$ \/ \* \< \> \|。  
   
 6.  既存のアイテムを新しいアイテムに置き換える場合は、 **[アイテムが存在する場合は上書きする]** をクリックします。  
   

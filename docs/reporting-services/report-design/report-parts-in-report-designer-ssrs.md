@@ -11,10 +11,10 @@ ms.assetid: 0c34311d-05d6-4bd2-b452-545fa95f8e7f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e97b6d8c05fa5e5b1487f04a5ff87849f703c90d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65576782"
 ---
 # <a name="report-parts-in-report-designer-ssrs"></a>レポート デザイナーでのレポート パーツ (SSRS)
@@ -63,7 +63,7 @@ ms.locfileid: "65576782"
   
 -   マトリックス  
   
--   一覧  
+-   リスト  
   
  テーブル、マトリックス、グラフなどのデータを表示するレポート パーツをパブリッシュする場合、レポート パーツのベースに共有データセットを使用することができます。共有データセットを使用しない場合、レポート パーツをパブリッシュする際、レポート パーツが依存するデータセットは埋め込みデータセットとして保存されます。 埋め込みデータセットのベースに、埋め込みデータ ソースを使用することはできますが、埋め込みデータ ソースには資格情報が保存されていません。 したがって、レポート パーツが、埋め込みデータ ソースを使用する埋め込みデータセットに依存する場合、このレポート パーツを再利用するユーザーは、埋め込みデータ ソースの資格情報を指定する必要があります。 これを避けるには、埋め込みデータセットおよび共有データセットのベースとして、資格情報が保存された共有データ ソースを使用します。 詳細については、「 [レポート ビルダーのレポート パーツおよびデータセット](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)」を参照してください。  
   
@@ -88,7 +88,7 @@ ms.locfileid: "65576782"
   
  既にパブリッシュ済みのレポートを、新しいレポートとしてパブリッシュすることを選択することもできます。 [レポート パーツのパブリッシュ] ダイアログ ボックスで、[新しいレポート パーツとしてパブリッシュ] をクリックします。 この新しいレポート パーツには新しい一意の ID が付いており、古いレポート パーツとのリレーションシップはありません。  
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 [レポート パーツの管理](../../reporting-services/report-design/managing-report-parts.md)  
 

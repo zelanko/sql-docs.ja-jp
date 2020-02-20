@@ -15,10 +15,10 @@ ms.assetid: c5275a9f-c95b-46d7-bc62-633879a8a291
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 574fcc9c8e180b75d5d3def6d97798708c40996c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67140260"
 ---
 # <a name="process-large-reports"></a>サイズの大きなレポートの処理
@@ -36,7 +36,7 @@ ms.locfileid: "67140260"
 ## <a name="configuration-recommendations"></a>構成に関する推奨事項  
  レポートの実行、レポートの表示、およびレポートのアクセスに関する推奨事項としては、次の事項が挙げられます。  
   
--   ページ割り当てをサポートするようにレポートをデザインします。 レポート サーバーはレポートを一度に 1 ページずつ送信します。 レポートにページ割り当てがある場合は、ブラウザーにストリーム送信されるデータ量を制御できます。 詳細については、次を参照してください。[キャッシュ (SSRS) の事前読み込み](../../reporting-services/report-server/preload-the-cache-report-manager.md)します。  
+-   ページ割り当てをサポートするようにレポートをデザインします。 レポート サーバーはレポートを一度に 1 ページずつ送信します。 レポートにページ割り当てがある場合は、ブラウザーにストリーム送信されるデータ量を制御できます。 詳細については、「[キャッシュの事前読み込み (SSRS)](../../reporting-services/report-server/preload-the-cache-report-manager.md)」を参照してください。  
   
 -   レポートは、要求時に実行されることを防ぐため、スケジュールされたレポート スナップショットとして実行するように構成します。 レポートの実行にタイムアウト値は設定しないでください。 レポートは、オフピーク時間中に実行してください。  
   

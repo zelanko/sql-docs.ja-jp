@@ -1,5 +1,5 @@
 ---
-title: getBoolean (int) メソッド |Microsoft Docs
+title: getBoolean メソッド (int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 4d9db847-df22-40ab-8a5c-ec9158c576ca
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a1f83c94559eeedba5ab01e2ffa1835215d40af9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953662"
 ---
 # <a name="getboolean-method-int"></a>getBoolean (int) メソッド
@@ -35,7 +35,7 @@ public boolean getBoolean(int index)
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *index*  
+ *インデックス*  
   
  パラメーターのインデックスを示す **int** です。  
   
@@ -45,7 +45,7 @@ public boolean getBoolean(int index)
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この getBoolean メソッドは、java.sql.CallableStatement インターフェイスの getBoolean メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  

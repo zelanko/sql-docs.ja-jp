@@ -8,10 +8,10 @@ author: maggiesMSFT
 ms.author: maggies
 ms.date: 06/06/2019
 ms.openlocfilehash: 724fac17abf7f5da45101a6ff22d3185a7ade93b
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68255174"
 ---
 # <a name="configure-report-builder-access"></a>レポート ビルダーへのアクセスの構成
@@ -25,19 +25,19 @@ ms.locfileid: "68255174"
 
 - ユーザーの資格情報をレポート サーバーに渡せるか、アプリケーション ファイルで匿名アクセスを構成するかを指定する認証設定。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 レポート ビルダーは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、「[SQL Server 2017 の各エディションとサポートされている機能](../../sql-server/editions-and-components-of-sql-server-2017.md)」をご覧ください。  
 
-クライアントコンピューターには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SSRS 2016 と2017用に4.6 または4.6.1 がインストールされている必要があります。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] は、 [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] アプリケーションを実行するためのインフラストラクチャを提供します。  
+クライアント コンピューターには、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 または 4.6.1 をインストールしておく必要があります。SSRS 2016 の場合は 4.6、2017 の場合は 4.6.1 になります。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] は、 [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] アプリケーションを実行するためのインフラストラクチャを提供します。  
 
-Internet Explorer 11 [!INCLUDE[msCoName](../../includes/msconame-md.md)]以降、または他の最新のブラウザーを使用する必要があります。  
+[!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer 11 以降か他の最新式のブラウザーを使用する必要があります。  
 
 レポート ビルダーは、常に完全信頼モードで実行されます。部分信頼モードで実行されるように構成することはできません。 以前のリリースでは、レポート ビルダーを部分信頼モードで実行できましたが、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降のバージョンではこのオプションはサポートされていません。  
 
 ## <a name="enabling-and-disabling-report-builder"></a>レポート ビルダーの有効化と無効化  
 
-レポート ビルダーは既定で有効になっています。 レポート サーバー管理者は、レポート サーバーのシステム プロパティ **ShowDownloadMenu** を **false** に設定することで、レポート ビルダー機能を無効にすることができます。 このプロパティを設定すると、そのレポートサーバーのレポートビルダー、Mobile Report Publisher、および Power BI Mobile のダウンロードが無効になります。  
+レポート ビルダーは既定で有効になっています。 レポート サーバー管理者は、レポート サーバーのシステム プロパティ **ShowDownloadMenu** を **false** に設定することで、レポート ビルダー機能を無効にすることができます。 このプロパティを設定すると、そのレポート サーバーでレポート ビルダー、Mobile Report Publisher、Power BI Mobile のダウンロードが無効になります。  
 
  レポート サーバーのシステム プロパティを設定するには、Management Studio またはスクリプトを使用します。   
 
@@ -85,7 +85,7 @@ Internet Explorer 11 [!INCLUDE[msCoName](../../includes/msconame-md.md)]以降�
 
 11. **[コンテンツ マネージャー]** を右クリックし、 **[プロパティ]** をクリックします。  
 
-12. **[モデルの表示]** 、 **[モデルの管理]** 、および **[レポートの使用]** を選択し、 **[OK]** をクリックします。  
+12. **[モデルの表示]**、 **[モデルの管理]**、および **[レポートの使用]** を選択し、 **[OK]** をクリックします。  
 
 13. **[パブリッシャー]** を右クリックし、 **[プロパティ]** をクリックします。  
 
@@ -101,7 +101,7 @@ Internet Explorer 11 [!INCLUDE[msCoName](../../includes/msconame-md.md)]以降�
 
     4. [説明] に、Web ポータルのユーザーがロールの目的を把握できるようにするためのロールの説明を入力します。  
 
-    5. **[レポートの使用]** 、 **[レポートの表示]** 、 **[モデルの表示]** 、 **[リソースの表示]** 、 **[フォルダーの表示]** 、 **[個別のサブスクリプションを管理]** の各タスクを追加します。  
+    5. 次のタスクを追加します。**[レポートの使用]**、**[レポートの表示]**、**[モデルの表示]**、**[リソースの表示]**、**[フォルダーの表示]**、**[個別のサブスクリプションを管理]**。  
 
     6. **[OK]** をクリックして、ロールを保存します。  
 
@@ -109,8 +109,8 @@ Internet Explorer 11 [!INCLUDE[msCoName](../../includes/msconame-md.md)]以降�
 
 1. Web ポータルを起動します。  
 
-2. Web ポータルのホームページの右上にある歯車アイコンをクリックし、ドロップダウンメニューから **[サイトの設定]** を選択します。  
-![web ポータルの歯車アイコンとメニュー](../../reporting-services/report-builder/media/configure-report-builder-access/ssrswebportal-site-settings-gear-icon-and-menu.png)
+2. Web ポータル ホーム ページの右上にある歯車アイコンをクリックし、ドロップダウン メニューから **[サイトの設定]** を選択します。  
+![Web ポータルの歯車アイコンとメニュー](../../reporting-services/report-builder/media/configure-report-builder-access/ssrswebportal-site-settings-gear-icon-and-menu.png)
 
 3. **[セキュリティ]** をクリックします。  
 

@@ -11,15 +11,15 @@ ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c1f327b42dd3cdc18be769ef4b4b6fac571578e0
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68889839"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>SQL Server データ ツールの Reporting Services (SSDT)
 
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] は、ビジネス インテリジェンス ソリューションを作成するための [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 環境です。 SSDT は、レポート デザイナー作成環境を標準装備しています。この環境では、 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のページ分割されたレポート定義、共有データ ソース、共有データセット、およびレポート パーツを開けるほか、変更、プレビュー、保存、配置ができます。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] は、SQL Server には含まれていません。 [SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714)をダウンロードします。 
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] は、ビジネス インテリジェンス ソリューションを作成する [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 環境です。 SSDT は、レポート デザイナー作成環境を標準装備しています。この環境では、 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のページ分割されたレポート定義、共有データ ソース、共有データセット、およびレポート パーツを開けるほか、変更、プレビュー、保存、配置ができます。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] は、SQL Server には含まれていません。 [SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714)をダウンロードします。 
   
  このトピックでは、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] に使用される [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]のソリューション、プロジェクト、プロジェクト テンプレート、および構成と、レポート デザイナーで使用できるビュー、メニュー、ツール バー、およびショートカットについて説明します。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "68889839"
   
   
 ##  <a name="bkmk_ReportDesignerWindowsandPanes"></a> レポート デザイナーのウィンドウとペイン  
- レポート デザイナーでは、レポート データとレポート レイアウトを定義するための **[デザイン]** ビューと、描画されたレポートのビューを表示するための **[プレビュー]** ビューがサポートされています。 それぞれのビューでは、表示レポートをデザインまたは表示できるように複数のウィンドウを表示できます。  
+ レポート デザイナーは 2 つのビューをサポートしています。レポート データとレポート レイアウトを定義するための **[デザイン]** ビューと、描画されたレポートのビューを表示するための **[プレビュー]** ビューです。 それぞれのビューでは、表示レポートをデザインまたは表示できるように複数のウィンドウを表示できます。  
   
 ###  <a name="bkmk_ReportDataPane"></a> レポート データ ペイン  
  [レポート データ] ペインには、組み込みフィールド、データ ソース、データセット、フィールド コレクション、レポート パラメーター、および画像が表示されます。  
@@ -105,7 +105,7 @@ ms.locfileid: "68889839"
 ###  <a name="bkmk_SolutionExplorer"></a> ソリューション エクスプローラー  
  ソリューション エクスプローラーは、標準的な [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] コンポーネントであり、プロジェクト内のすべてのアイテムが表示されます。 レポート サーバー プロジェクトの場合、これには共有データ ソース、共有データセット、レポート、およびリソースを整理するためのフォルダーが含まれます。 ソリューション ファイルを開くと、フォルダーのアイテムが自動的にアルファベット順に並べ替えられます。 [プロパティ] ペインにアイテムのプロパティを表示するには、アイテムを選択します。  
   
-###  <a name="bkmk_Output"></a> 出力  
+###  <a name="bkmk_Output"></a> Output  
  [出力] ウィンドウには、レポートをプレビューした場合の処理エラーと、レポートまたは共有データ ソースを配置した場合の発行エラーが表示されます。  
   
  [出力] ウィンドウと [ドキュメント アウトライン] ウィンドウを使用すると、式のエラーをデバッグできます。  
@@ -175,7 +175,7 @@ ms.locfileid: "68889839"
   
 -   **[レポートのプロパティ]** **[レポートのプロパティ]** ダイアログ ボックスを開きます。 このダイアログ ボックスでは、一般的なレポートのプロパティ (作成者の名前やグリッドの間隔など) を割り当てたり、レポート レイアウトのプロパティ (列数やページ サイズなど) を指定したりできます。 また、カスタム コード、アセンブリやクラスへの参照、データ出力要素の名前、データ変換の名前、およびデータ スキーマの名前も含めることができます。  
   
--   **[表示]** レポート デザイナーの [デザイン] タブと [プレビュー] タブを切り替えます。  
+-   **[表示]** レポート デザイナーのタブ[デザイン] と [プレビュー] を切り替えます。  
   
 -   **[ページ ヘッダー]** レポートのページ ヘッダーを追加または削除します。 ページ ヘッダーを削除すると、ページ ヘッダー内のすべてのアイテムが削除されます。  
   
@@ -246,7 +246,7 @@ ms.locfileid: "68889839"
   
   
 ##  <a name="bkmk_CommandLineSupportForssdt"></a> SQL Server データ ツールのコマンド ライン サポート  
- [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] および基になる devenv.exe アプリケーションに基づいています。 これらのオプションを使用するには、次の 2 つの項目に対して有効な値を設定しておく必要があります。  
+ [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] および基になる devenv.exe アプリケーションに基づいています。 これらのオプションを使用するには、次の 2 つの項目に対して有効な値を設定しておく必要があります。  
   
 -   OverwriteDataSources、TargetDataSourceFolder、TargetReportFolder、および TargetServerURL のプロジェクト プロパティ。  
   
@@ -279,7 +279,7 @@ ms.locfileid: "68889839"
   
 -   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]でのウィンドウおよびモードの制御:  
   
-    |[説明]|キーの組み合わせ|  
+    |説明|キーの組み合わせ|  
     |-----------------|---------------------|  
     |選択したプロジェクトをビルドする|Ctrl + Shift + B|  
     |[プロパティ] ウィンドウを表示する|F4|  
@@ -289,7 +289,7 @@ ms.locfileid: "68889839"
   
 -   レポート デザイン画面でのアイテムの制御:  
   
-    |[説明]|キーの組み合わせ|  
+    |説明|キーの組み合わせ|  
     |-----------------|---------------------|  
     |あるレポート アイテムから次のレポート アイテムにフォーカスを移動する|Tab|  
     |選択したレポート アイテムを移動する|方向キー|  
@@ -303,7 +303,7 @@ ms.locfileid: "68889839"
     |テキスト ボックスで、現在のカーソル位置から表現の末尾までのテキストを選択する|Ctrl</localizedText> + <localizedText>Shift</localizedText> + <localizedText>End|  
     |選択したレポート アイテムのコンテキスト メニューを開く|Shift + F10 + 新しいキーボードのプロパティ キー|
   
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 [SQL Server Data Tools のダウンロード](https://go.microsoft.com/fwlink/?LinkID=616714)
 [ソリューション エクスプローラー](../../ssms/solution/solution-explorer.md)   

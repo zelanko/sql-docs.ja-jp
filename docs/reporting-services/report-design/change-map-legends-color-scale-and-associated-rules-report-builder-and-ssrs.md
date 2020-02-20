@@ -32,10 +32,10 @@ ms.assetid: a1d691b2-c5ae-420f-af60-b7c54a7385a4
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2d8df41eb7c0a0463648898c08091dd8f8c01f29
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581741"
 ---
 # <a name="change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs"></a>マップの凡例、カラー スケール、および関連付けられているルールの変更 (レポート ビルダーおよび SSRS)
@@ -201,7 +201,7 @@ ms.locfileid: "65581741"
   
     -   **[最適]** 。 釣り合いのとれた部分範囲を形成するように分布が自動的に調整されます。  
   
-    -   **[カスタム]** 。 範囲の数を独自に指定して、値の分布を制御します。  
+    -   **カスタム**: 範囲の数を独自に指定して、値の分布を制御します。  
   
      分布のオプションの詳細については、「[ルールおよび分析データを使用した多角形、線、およびポイントの表示の変更 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)」を参照してください。  
   
@@ -221,7 +221,7 @@ ms.locfileid: "65581741"
   
 2.  必要なデータが存在するレイヤーを右クリックし、 _[\<map element type>_ **のルール]** をクリックします。  
   
-3.  **[** *rule type* を使用してデータを表示する]\< が選択されていることを確認します。  
+3.  **[\<*rule type*> を使用してデータを表示する]** が選択されていることを確認します。  
   
 4.  **[データ フィールド]** で、レイヤー上に視覚化しようとしている分析データが選択されていることを確認します。  
   

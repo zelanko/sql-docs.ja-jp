@@ -16,10 +16,10 @@ ms.assetid: ba98a27b-722d-4904-ac65-0f082fde1fe6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a9bdf91105e9e7db82f51b5ba9885506e2edd8cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953538"
 ---
 # <a name="getboolean-method-javalangstring-sqlserverresultset"></a>getBoolean (java.lang.String) メソッド (SQLServerResultSet)
@@ -45,10 +45,10 @@ public boolean getBoolean(java.lang.String columnName)
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この getBoolean メソッドは、java.sql.ResultSet インターフェイスの getBoolean メソッドで規定されています。  
   
- このメソッドは、数値データ型および文字データ型のみでサポートされます。 値 "1"、1、および "**true**" を**true**に、値 "0"、0、および "**false**" を**false**に変換します。 他の値については、動作が定義されていません。  
+ このメソッドは、数値データ型および文字データ型のみでサポートされます。 これにより、値 "1"、1、"**true**" が **true** に、値 "0"、0、"**false**" が **false** に変換されます。 他の値については、動作が定義されていません。  
   
 ## <a name="see-also"></a>参照  
  [getBoolean メソッド &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getboolean-method-sqlserverresultset.md)   

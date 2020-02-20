@@ -12,10 +12,10 @@ ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d660cc7b3c15706951981540f592589ba92e9df2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62513665"
 ---
 # <a name="install-reporting-services-2016-native-mode-report-server"></a>Reporting Services 2016 ネイティブ モード レポート サーバーをインストールする
@@ -38,7 +38,7 @@ ms.locfileid: "62513665"
   
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] コマンド ライン ユーティリティ (rsconfig.exe、rskeymgmt.exe、rs.exe)  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] および [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] を個別にダウンロードできるようになりました。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] および [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] は個別にダウンロードできるようになりました。  
   
  ネイティブ モードのレポート サーバーのインストールの場合は、セットアップで以下が構成されます。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "62513665"
   
 -   「[SQL Server のインストールに必要なハードウェアおよびソフトウェア](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)」を確認してください。  
   
--   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] を、同じインスタンスに一緒にインストールする必要があります。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] インスタンスは、セットアップで作成されて構成されるレポート サーバー データベースをホストします。  
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] は、同じインスタンスに一緒にインストールする必要があります。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] インスタンスは、セットアップで作成されて構成されるレポート サーバー データベースをホストします。  
   
 -   セットアップの実行に使用するユーザー アカウントは、ローカルの Administrators グループのメンバーである必要があります。また、レポート サーバー データベースをホストする [!INCLUDE[ssDE](../../includes/ssde-md.md)] インスタンス上のデータベースにアクセスする権限と、そのデータベースを作成する権限が必要です。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "62513665"
 ##  <a name="bkmk_defaultURLreservations"></a> 既定の URL 予約  
  URL 予約は、プレフィックス、ホスト名、ポート、および仮想ディレクトリで構成されます。  
   
-|要素|[説明]|  
+|要素|説明|  
 |----------|-----------------|  
 |Prefix|既定のプレフィックスは HTTP です。 以前に SSL (Secure Sockets Layer) 証明書をインストールした場合は、HTTPS プレフィックスを使用する URL 予約がセットアップで作成されます。|  
 |ホスト名|既定のホスト名は、強いワイルドカード (+) です。 これにより、コンピューターに対して解決されるあらゆるホスト名 (`https://<computername>/reportserver`、`https://localhost/reportserver`、`https://<IPAddress>/reportserver`) の指定のポートで、レポート サーバーが HTTP 要求を受け付けるように指定されます。|  
@@ -116,7 +116,7 @@ ms.locfileid: "62513665"
   
 2.  **[セットアップ ロール]** ページで、 **[SQL Server 機能のインストール]** を選択します。  
   
-     ![セットアップ ロールの SQL Server 機能のインストール](../../reporting-services/install-windows/media/rs-setuprole.png "セットアップ ロールの SQL Server 機能のインストール")  
+     ![[セットアップ ロール] の [SQL Server 機能のインストール]](../../reporting-services/install-windows/media/rs-setuprole.png "[セットアップ ロール] の [SQL Server 機能のインストール]")  
   
 3.  **[機能の選択]** ページで、次のオプションを選択します。  
   
@@ -124,7 +124,7 @@ ms.locfileid: "62513665"
   
     -   (2) **[Reporting Services - ネイティブ]** 。  
   
-     ![機能の選択での SSRS ネイティブ モードの選択](../../reporting-services/install-windows/media/rs-setupfeatureselection-native-withcircles.png "機能の選択での SSRS ネイティブ モードの選択")  
+     ![機能の選択での SSRS ネイティブ モード選択](../../reporting-services/install-windows/media/rs-setupfeatureselection-native-withcircles.png "機能の選択での SSRS ネイティブ モード選択")  
   
 4.  渡された **[機能ルール]** を確認します。  
   
@@ -134,7 +134,7 @@ ms.locfileid: "62513665"
   
     -   `https://[ServerName]/Reports_THESQLINSTANCE`  
   
-6.  **サーバーの構成**: [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のサブスクリプション機能を使用する場合は、 **[サーバーの構成]** ページで、SQL Server エージェントのスタートアップの種類を **[自動]** に設定します。   既定値は手動です。  
+6.  **サーバーの構成**:[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のサブスクリプション機能を使用する場合は、 **[サーバーの構成]** ページで、SQL Server エージェントのスタートアップの種類を **[自動]** に設定します。   既定値は手動です。  
   
 7.  **[データベース エンジンの構成]** ページで SQL Server 管理者を追加します。  
   
@@ -155,11 +155,11 @@ ms.locfileid: "62513665"
   
     -   **管理者特権** を使用してブラウザーを開き、 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]に接続します。たとえば、「 `https://localhost/Reports`」と入力します。  
   
-    -   管理者特権を使用してブラウザーを開き、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバー ページにアクセスします。 例:  `https://localhost/ReportServer`  
+    -   管理者特権を使用してブラウザーを開き、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバー ページにアクセスします。 たとえば、`https://localhost/ReportServer` のように入力します。  
   
  詳細については、次の 2 つのトピックのネイティブ モードに関する説明を参照してください。  
   
- [Verify a Reporting Services Installation](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)  
+ [Reporting Services のインストール状態の検証](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)  
   
  [Reporting Services インストール時の問題解決](../../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md)   
   

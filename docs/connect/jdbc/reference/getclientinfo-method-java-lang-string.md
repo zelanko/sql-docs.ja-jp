@@ -1,5 +1,5 @@
 ---
-title: getClientInfo メソッド (java. lang. String) |Microsoft Docs
+title: getClientInfo メソッド (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: e8e632c4-d6cc-4c5e-b6ad-873579343b19
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7d3005e2b5ae8628ab31ceeb6314159afd796e83
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953134"
 ---
 # <a name="getclientinfo-method-javalangstring"></a>getClientInfo (java.lang.String) メソッド
@@ -40,8 +40,8 @@ public java.lang.String getClientInfo (java.lang.String name)
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この getClientInfo メソッドは、java. .sql. 接続インターフェイスの getClientInfo メソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この getClientInfo メソッドは、java.sql.Connection インターフェイスの getClientInfo メソッドによって指定されます。  
   
  [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] では、クライアント情報のプロパティはサポートされていません。 そのため、このメソッドでは **null** が返されます。  
   

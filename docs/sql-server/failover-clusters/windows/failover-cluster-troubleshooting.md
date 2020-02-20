@@ -14,10 +14,10 @@ ms.assetid: 84012320-5a7b-45b0-8feb-325bf0e21324
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e1cf8ea99cac00670bd96437e0a5484d2888cbe9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68044792"
 ---
 # <a name="failover-cluster-troubleshooting"></a>フェールオーバー クラスターのトラブルシューティング
@@ -48,7 +48,7 @@ ms.locfileid: "68044792"
   
 4.  結果の解釈に役立つヘルプ トピックを表示するには、 **[クラスター検証テストの詳細]** をクリックします。  
   
- ウィザードを閉じた後にクラスター検証のヘルプ トピックを表示するには、フェールオーバー クラスター スナップインで **[ヘルプ]** 、 **[ヘルプ トピック]** 、 **[コンテンツ]** タブの順にクリックし、フェールオーバー クラスター ヘルプのコンテンツを展開して、 **[フェールオーバー クラスター構成の検証]** をクリックします。  検証ウィザードが完了すると、 **[概要レポート]** に結果が表示されます。 すべてのテスト結果が緑色のチェック マーク、または場合によっては黄色の三角形 (警告) になる必要があります。 問題の領域 (赤色の X 印または黄色の疑問符) がないかどうかを調べるには、テスト結果を要約したレポートで個々のテストをクリックして、詳細を確認します。 赤色の X 印の問題は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の問題のトラブルシューティングより前に解決する必要があります。  
+ ウィザードを閉じた後にクラスター検証のヘルプ トピックを表示するには、フェールオーバー クラスター スナップインで **[ヘルプ]**、 **[ヘルプ トピック]**、 **[コンテンツ]** タブの順にクリックし、フェールオーバー クラスター ヘルプのコンテンツを展開して、 **[フェールオーバー クラスター構成の検証]** をクリックします。  検証ウィザードが完了すると、 **[概要レポート]** に結果が表示されます。 すべてのテスト結果が緑色のチェック マーク、または場合によっては黄色の三角形 (警告) になる必要があります。 問題の領域 (赤色の X 印または黄色の疑問符) がないかどうかを調べるには、テスト結果を要約したレポートで個々のテストをクリックして、詳細を確認します。 赤色の X 印の問題は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の問題のトラブルシューティングより前に解決する必要があります。  
   
  **更新プログラムをインストールする**  
   
@@ -67,7 +67,7 @@ ms.locfileid: "68044792"
   
 -   2 ノード クラスターのいずれかのノードでハードウェア障害が発生しています。 このハードウェア障害は、SCSI カードまたはオペレーティング システムの障害によって発生する可能性があります。  
   
-     この障害から復旧するには、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップ プログラムを使用して、障害が発生したノードをフェールオーバー クラスターから削除し、コンピューターをオフラインにしてハードウェアの障害を処置し、コンピューターを再び起動します。その後、修復されたノードをフェールオーバー クラスター インスタンスに追加します。  
+     この障害から復旧するには、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップ プログラムを使用して、障害が発生したノードをフェールオーバー クラスターから削除し、コンピューターをオフラインにしてハードウェアの障害を処置し、コンピューターを再び起動します。その後、修復されたノードをフェールオーバー クラスター インスタンスに追加します。  
   
      詳細については、「[新しい SQL Server フェールオーバー クラスターの作成 &#40;セットアップ&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)」および「[フェールオーバー クラスター インスタンス障害からの復旧](../../../sql-server/failover-clusters/windows/recover-from-failover-cluster-instance-failure.md)」を参照してください。  
   
@@ -83,18 +83,18 @@ ms.locfileid: "68044792"
  次に、一般的な使用上の問題とその解決策を示します。  
   
 ### <a name="problem-incorrect-use-of-command-prompt-syntax-to-install-sql-server"></a>問題: SQL Server をインストールするコマンド プロンプト構文の使用方法が正しくない  
- **問題点 1:** コマンド プロンプトで **/qn** スイッチを使用すると、 **/qn** スイッチによりすべてのセットアップのダイアログ ボックスとエラー メッセージが表示されなくなるため、セットアップの問題を診断することが難しくなります。 **/qn** スイッチを指定すると、エラー メッセージを含むすべてのセットアップ メッセージがセットアップ ログ ファイルに書き込まれます。 ログ ファイルの詳細については、「 [SQL Server セットアップ ログ ファイルの表示と読み取り](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)」を参照してください。  
+ **問題点 1:** コマンド プロンプトで **/qn** スイッチを使用すると、**/qn** スイッチによりすべてのセットアップのダイアログ ボックスとエラー メッセージが表示されなくなるため、セットアップの問題を診断することが難しくなります。 **/qn** スイッチを指定すると、エラー メッセージを含むすべてのセットアップ メッセージがセットアップ ログ ファイルに書き込まれます。 ログ ファイルの詳細については、「 [SQL Server セットアップ ログ ファイルの表示と読み取り](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)」を参照してください。  
   
  **解決策 1**: **/qn** スイッチの代わりに **/qb** スイッチを使用します。 **/qb** スイッチを使用すると、各ステップでは、エラー メッセージなどの基本的な UI が表示されます。  
   
 ### <a name="problem-sql-server-cannot-log-on-to-the-network-after-it-migrates-to-another-node"></a>問題: SQL Server を別のノードに移行した後、ネットワークにログオンできない  
- **現象 1** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービス アカウントがドメイン コントローラーと通信できません。  
+ **現象 1:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービス アカウントがドメイン コントローラーと通信できません。  
   
  **解決策 1**: アダプターの障害や DNS の問題など、ネットワークに関する問題の兆候をイベント ログで確認します。 ドメイン コントローラーに対して ping を実行できることを確認します。  
   
- **現象 2** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービス アカウントのパスワードがすべてのクラスター ノードで同一でないか、障害が発生したノードから移行した [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスがノードで再起動されません。  
+ **現象 2:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービス アカウントのパスワードがすべてのクラスター ノードで同一でないか、障害が発生したノードから移行した [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスがノードで再起動されません。  
   
- **解決策 2:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 構成マネージャーを使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービス アカウントのパスワードを変更します。 この操作を行わず、1 つのノードで [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービス アカウントのパスワードを変更した場合、他のすべてのノードでもパスワードを変更する必要があります。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 構成マネージャーを使用すると、この操作が自動的に行われます。  
+ **解決策 2:**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 構成マネージャーを使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービス アカウントのパスワードを変更します。 この操作を行わず、1 つのノードで [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービス アカウントのパスワードを変更した場合、他のすべてのノードでもパスワードを変更する必要があります。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 構成マネージャーを使用すると、この操作が自動的に行われます。  
   
 ### <a name="problem-sql-server-cannot-access-the-cluster-disks"></a>問題: SQL Server がクラスター ディスクにアクセスできない  
  **問題点 1:** すべてのノードのファームウェアまたはドライバーが更新されていません。  
@@ -106,12 +106,12 @@ ms.locfileid: "68044792"
  **解決策 2:** クラスター ディスクのディスク ドライブ文字は、両方のサーバーで同じである必要があります。 同じでない場合は、オペレーティング システムおよび MSCS ( [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Cluster Service) の初期のインストール状態を確認してください。  
   
 ### <a name="problem-failure-of-a-sql-server-service-causes-failover"></a>問題: SQL Server サービスの障害によりフェールオーバーが発生する  
- **解決方法:** 特定のサービスの障害による [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] グループのフェールオーバーを回避するには、Windows のクラスター アドミニストレーターを使用してサービスを次のように構成します。  
+ **解決策:** 特定のサービスの障害による [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] グループのフェールオーバーを回避するには、Windows のクラスター アドミニストレーターを使用してサービスを次のように構成します。  
   
 -   **[フルテキストのプロパティ]** ダイアログ ボックスの **[詳細設定]** タブで、 **[グループに適用する]** チェック ボックスをオフにします。 ただし、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] によりフェールオーバーが発生した場合は、フルテキスト検索サービスが再起動します。  
   
 ### <a name="problem-sql-server-does-not-start-automatically"></a>問題: SQL Server が自動的に起動しない  
- **解決方法:** フェールオーバー クラスターを自動的に起動するには、MSCS でクラスター アドミニストレーターを使用します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスは手動で開始するように設定されています。クラスター アドミニストレーターは MSCS で [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスを開始するように構成されています。 詳細については、「 [サービスの管理](https://msdn.microsoft.com/library/ms178096\(v=sql.105\).aspx)」を参照してください。  
+ **解決策:** フェールオーバー クラスターを自動的に起動するには、MSCS でクラスター アドミニストレーターを使用します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスは手動で開始するように設定されています。クラスター アドミニストレーターは MSCS で [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスを開始するように構成されています。 詳細については、「 [サービスの管理](https://msdn.microsoft.com/library/ms178096\(v=sql.105\).aspx)」を参照してください。  
   
 ### <a name="problem-the-network-name-is-offline-and-you-cannot-connect-to-sql-server-using-tcpip"></a>問題: ネットワーク名がオフラインで、SQL Server に TCP/IP で接続できない  
  **問題点 1:** DNS 必須に設定されているクラスター リソースで DNS が失敗します。  
@@ -122,7 +122,7 @@ ms.locfileid: "68044792"
   
  **解決策 2:** NBTSTAT を使用して重複する名前を検索し、問題を修正します。  
   
- **現象 3** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の接続に名前付きパイプが使用されていません。  
+ **現象 3:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の接続に名前付きパイプが使用されていません。  
   
  **解決策 3:** 名前付きパイプで接続するには、SQL Server 構成マネージャーを使用して別名を作成し、適切なコンピューターに接続します。 たとえば、2 つのノード (**Node A** および **Node B**) から成るクラスター、および既定のインスタンスを使用するフェールオーバー クラスター インスタンス (**Virtsql**) がある場合、次の手順に従って、オフラインのネットワーク名リソースがあるサーバーに接続できます。  
   
@@ -139,14 +139,14 @@ ms.locfileid: "68044792"
 6.  別名 SQLTEST1 をサーバー名として使用して、このインスタンスに接続します。  
   
 ### <a name="problem-sql-server-setup-fails-on-a-cluster-with-error-11001"></a>問題: クラスターでエラー 11001 が発生して SQL Server セットアップが失敗する  
- **問題点:** [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.X\Cluster] に孤立したレジストリ キーがあります。  
+ **問題:**[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.X\Cluster] に孤立したレジストリ キーがあります。  
   
- **解決方法:** MSSQL.X レジストリ ハイブが使用中でないことを確認し、クラスター キーを削除します。  
+ **解決策:** MSSQL.X レジストリ ハイブが使用中でないことを確認し、クラスター キーを削除します。  
   
 ### <a name="problem-cluster-setup-error-the-installer-has-insufficient-privileges-to-access-this-directory-drivemicrosoft-sql-server-the-installation-cannot-continue-log-on-as-an-administrator-or-contact-your-system-administrator"></a>問題: クラスターのセットアップ エラー: "インストーラーにはディレクトリ \<drive>\Microsoft SQL Server にアクセスするための十分な特権がありません。 インストールを続行できません。 管理者としてログオンするか、またはシステム管理者に問い合わせてください。" が発生する  
- **問題点:** このエラーは SCSI 共有ドライブのパーティションが適切に分割されていないために発生します。  
+ **問題:** このエラーは SCSI 共有ドライブのパーティションが適切に分割されていないために発生します。  
   
- **解決方法:** 次の手順に従って、共有ディスクに単一のパーティションを再作成します。  
+ **解決策:** 次の手順に従って、共有ディスクに単一のパーティションを再作成します。  
   
 1.  クラスターからディスク リソースを削除します。  
   
@@ -161,9 +161,9 @@ ms.locfileid: "68044792"
 6.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップを実行します。  
   
 ### <a name="problem-applications-fail-to-enlist-sql-server-resources-in-a-distributed-transaction"></a>問題: アプリケーションで SQL Server リソースを分散トランザクションに参加させることができない  
- **問題点:** MS DTC ([!INCLUDE[msCoName](../../../includes/msconame-md.md)] 分散トランザクション コーディネーター) が Windows で完全に構成されていないために、アプリケーションから [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] リソースを分散トランザクションに参加させることができない場合があります。 この問題は、分散トランザクションを使用するリンク サーバー、分散クエリ、およびリモート ストアド プロシージャに影響することがあります。 MS DTC を構成する方法の詳細については、「 [Before Installing Failover Clustering](../../../sql-server/failover-clusters/install/before-installing-failover-clustering.md)」を参照してください。  
+ **問題:** MS DTC ([!INCLUDE[msCoName](../../../includes/msconame-md.md)] 分散トランザクション コーディネーター) が Windows で完全に構成されていないために、アプリケーションから [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] リソースを分散トランザクションに参加させることができない場合があります。 この問題は、分散トランザクションを使用するリンク サーバー、分散クエリ、およびリモート ストアド プロシージャに影響することがあります。 MS DTC を構成する方法の詳細については、「 [Before Installing Failover Clustering](../../../sql-server/failover-clusters/install/before-installing-failover-clustering.md)」を参照してください。  
   
- **解決方法:** このような問題を回避するには、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] をインストールして MS DTC を構成したサーバーで、MS DTC サービスを完全に有効にする必要があります。  
+ **解決策:** このような問題を回避するには、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] をインストールして MS DTC を構成したサーバーで、MS DTC サービスを完全に有効にする必要があります。  
   
  MS DTC を完全に有効にするには、次の手順を実行します。  
   

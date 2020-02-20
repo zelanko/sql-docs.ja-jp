@@ -9,10 +9,10 @@ ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 241d74d615f9aac2cbe48d084fd2d8e91ea9abbf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580104"
 ---
 # <a name="managing-report-parts"></a>レポート パーツの管理
@@ -22,7 +22,7 @@ ms.locfileid: "65580104"
  レポート パーツを管理するには、ネイティブ モードのレポート サーバーの場合は [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web ポータルを使用し、SharePoint 統合モードのレポート サーバーの場合はアプリケーション ページを使用します。  
   
 ### <a name="server-side-interaction-and-search"></a>サーバー側における操作と検索  
- レポート パーツは、ネイティブ モードまたは SharePoint 統合モードのレポート サーバーにパブリッシュできます。 ユーザーは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レポート ビルダーなどのレポート作成アプリケーションでレポート パーツ ギャラリー機能を使用して、レポート パーツを検索し、それらを各自のレポートに追加できます。 ユーザーがレポート パーツを検索する場合は、レポート サーバーがインストールされたモードにかかわらず、レポート サーバー カタログでパーツが検索されます。  
+ レポート パーツは、ネイティブ モードまたは SharePoint 統合モードのレポート サーバーにパブリッシュできます。 ユーザーは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レポート ビルダーなどのレポート作成アプリケーションでレポート パーツ ギャラリー機能を使用して、レポート パーツを検索し、それらを各自のレポートに追加できます。 ユーザーがレポート パーツを検索する場合は、レポート サーバーがインストールされたモードにかかわらず、レポート サーバー カタログでパーツが検索されます。  
   
  レポート ビルダーなどのレポート作成アプリケーションから SharePoint 統合モードのレポート サーバーにレポート パーツがパブリッシュされると、レポート サーバー カタログも更新されて、ギャラリーから検索するときに新しいレポート パーツまたは更新されたレポート パーツが正確に反映されるようになります。  
   
@@ -47,10 +47,10 @@ ms.locfileid: "65580104"
   
  (*) は、このリリースでの新規フィールドを示しています。  
   
-|プロパティ|[説明]|レポート パーツ<br /><br /> ギャラリーの検索条件|  
+|プロパティ|説明|レポート パーツ<br /><br /> ギャラリーの検索条件|  
 |--------------|-----------------|---------------------------------------------|  
-|[オブジェクト名]|ユーザーがレポート パーツ ギャラリーで検索できる条件の 1 つです。|はい|  
-|[説明]|ユーザーがレポート パーツをギャラリー内で見つけやすくするため、レポート パーツに名前を付けて整理することができます。 たとえば、販売関連のデータやプレゼンテーションに関するすべてのレポート パーツに対して、"Sales>>" で始まる説明を検索することができます。|はい|  
+|Name|ユーザーがレポート パーツ ギャラリーで検索できる条件の 1 つです。|はい|  
+|説明|ユーザーがレポート パーツをギャラリー内で見つけやすくするため、レポート パーツに名前を付けて整理することができます。 たとえば、販売関連のデータやプレゼンテーションに関するすべてのレポート パーツに対して、"Sales>>" で始まる説明を検索することができます。|はい|  
 |CreatedBy|レポート パーツをレポート サーバー データベースに追加したユーザーの ID です。 正確な形式は、認証の方法によって異なります。 たとえば、一部の認証方法では、CreatedBy フィールドおよび ModifiedBy フィールドに完全なドメインとユーザー名が表示されます。|はい|  
 |CreationDate|レポート パーツが最初に作成された日付です。<br /><br /> ユーザーがレポート パーツ ギャラリーで検索できる条件の 1 つです。|はい|  
 |ModifiedBy|ModifiedBy はレポート パーツを最後に変更したユーザーの ID です。|はい|  
@@ -63,15 +63,15 @@ ms.locfileid: "65580104"
   
 ### <a name="server-in-native-mode"></a>ネイティブ モードのサーバー  
   
-|アクション|ロール|  
+|Actions|ロール|  
 |-------------|-----------|  
 |アイテム プロパティの追加、削除、編集、セキュリティの管理、およびレポート パーツのダウンロード|コンテンツ マネージャー<br /><br /> 個人用レポート|  
-|レポート パーツの追加、削除、およびダウンロード|パブリッシャー|  
-|検索および再利用|ブラウザー<br /><br /> レポート ビルダー|  
+|レポート パーツの追加、削除、およびダウンロード|Publisher|  
+|検索および再利用|Browser<br /><br /> レポート ビルダー|  
   
 ### <a name="server-in-sharepoint-integrated-mode"></a>SharePoint 統合モードのサーバー  
   
-|アクション|ロール|  
+|Actions|Role|  
 |-------------|----------|  
 |アイテム プロパティの追加、削除、編集、セキュリティの管理、およびレポート パーツのダウンロード|フル コントロール|  
 |アイテム プロパティの追加、削除、編集、およびレポート パーツのダウンロード|デザイン<br /><br /> 投稿|  
@@ -90,6 +90,6 @@ ms.locfileid: "65580104"
  [レポート ビルダーのレポート パーツおよびデータセット](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
  [レポート サーバー コンテンツの管理 &#40;SSRS ネイティブ モード&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
  [レポート パーツのトラブルシューティング (レポート ビルダーおよび SSRS)](https://msdn.microsoft.com/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
- [レポート デザイナーでのレポート パーツ (SSRS)](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)  
+ [レポート デザイナーでのレポート パーツ &#40;SSRS&#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)  
   
   

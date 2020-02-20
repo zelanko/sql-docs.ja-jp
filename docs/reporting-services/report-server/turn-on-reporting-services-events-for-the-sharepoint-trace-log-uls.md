@@ -9,10 +9,10 @@ ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 07f8cd00781717511bbcaba6e76553cc17d0c5bf
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68893238"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Turn on Reporting Services events for the SharePoint trace log (ULS)
@@ -38,7 +38,7 @@ ms.locfileid: "68893238"
 ##  <a name="bkmk_general"></a> ULS ログの一般的な推奨事項  
  次の表は、イベントのカテゴリの一覧です。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 環境を監視する場合の推奨されるレベルも記載されています。 イベントをログに記録した場合、各エントリには、イベントが記録された時刻、プロセス名、およびスレッド ID が記録されます。  
   
-|カテゴリ|Level|[説明]|  
+|カテゴリ|Level|説明|  
 |--------------|-----------|-----------------|  
 |データベース|"詳細"|データベース アクセスに関連するイベントが記録されます。|  
 |全般|"詳細"|次の項目へのアクセスを伴うイベントが記録されます。<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の Web ページ<br /><br /> レポート ビューアーの HTTP ハンドラー<br /><br /> レポート アクセス (.rdl ファイル)<br /><br /> データ ソース (.rsds ファイル)<br /><br /> SharePoint サイト上の URL (.smdl ファイル)|  
@@ -124,7 +124,7 @@ Get-SPDiagnosticConfig
 |レポート サーバー プロバイダー||  
 |レポート サーバー レンダリング||  
 |レポート サーバー レポート プレビュー||  
-|レポート サーバー リソース ユーティリティ|サンプルのエントリ:<br /><br /> MediumReporting Services starting SKU: Evaluation<br /><br /> MediumEvaluation コピー: 180 日間残っています|  
+|レポート サーバー リソース ユーティリティ|サンプルのエントリ:<br /><br /> MediumReporting Services starting SKU:評価<br /><br /> MediumEvaluation copy コピー:180 日間残っています|  
 |レポート サーバー実行中ジョブ||  
 |レポート サーバー実行中要求||  
 |レポート サーバー スケジュール||  

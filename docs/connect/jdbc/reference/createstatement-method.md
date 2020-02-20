@@ -1,5 +1,5 @@
 ---
-title: createStatement メソッド () |Microsoft Docs
+title: createStatement メソッド () | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 480f21b6-50cc-4b1e-a0b0-8774ecfe94f1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 54a69c6a7ae62d96b6d2df08c671a5f8d92ced3f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67955222"
 ---
 # <a name="createstatement-method-"></a>createStatement () メソッド
@@ -35,13 +35,13 @@ public java.sql.Statement createStatement()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- ステートメントオブジェクト。  
+ Statement オブジェクトです。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この createStatement メソッドは、createStatement メソッドによって、java. .sql. 接続インターフェイスで指定されます。  
+## <a name="remarks"></a>解説  
+ この createStatement メソッドは、java.sql.Connection インターフェイスの createStatement メソッドで指定されています。  
   
 ## <a name="see-also"></a>参照  
  [createStatement メソッド &#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/createstatement-method-sqlserverconnection.md)   

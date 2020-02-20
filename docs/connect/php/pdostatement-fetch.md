@@ -1,5 +1,5 @@
 ---
-title: 'PDOStatement:: fetch |Microsoft Docs'
+title: PDOStatement::fetch | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 4368e362-5bda-4da1-8462-33714683c39f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a69b1093240112a804504f8d0e636ffbdfe8439e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993060"
 ---
 # <a name="pdostatementfetch"></a>PDOStatement::fetch
@@ -39,10 +39,10 @@ $*cursor_offset*: $*cursor_orientation* が PDO::FETCH_ORI_ABS または PDO::FE
 ## <a name="return-value"></a>戻り値  
 行を返す複合値または false です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 フェッチが呼び出されると、カーソルは自動的に前進します。 次の表は、可能な $*fetch_style* 値の一覧です。  
   
-|$*fetch_style*|[説明]|  
+|$*fetch_style*|説明|  
 |-------------------|---------------|  
 |PDO::FETCH_ASSOC|列名でインデックス付けされた配列を指定します。|  
 |PDO::FETCH_BOTH|列名でインデックス付けされた 0 から始まる配列を指定します。 これは既定値です。|  
@@ -57,7 +57,7 @@ $*cursor_offset*: $*cursor_orientation* が PDO::FETCH_ORI_ABS または PDO::FE
   
 カーソルがスクロール可能な場合 (PDO::ATTR_CURSOR = PDO::CURSOR_SCROLL)、フェッチは結果セットの境界内にカーソルを移動します。 次の表は、可能な $*cursor_orientation* 値の一覧です。  
   
-|$*cursor_orientation*|[説明]|  
+|$*cursor_orientation*|説明|  
 |--------------------------|---------------|  
 |PDO::FETCH_ORI_NEXT|次の行を取得します。 これは既定値です。|  
 |PDO::FETCH_ORI_PRIOR|前の行を取得します。|  

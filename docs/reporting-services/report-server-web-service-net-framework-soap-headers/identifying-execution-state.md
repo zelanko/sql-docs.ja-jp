@@ -14,10 +14,10 @@ ms.assetid: d8143a4b-08a1-4c38-9d00-8e50818ee380
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8b9e33f7c4d1b3ed953882175cd430df2b1e6ce1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "62991581"
 ---
 # <a name="identifying-execution-state"></a>実行状態の識別
@@ -37,7 +37,7 @@ ms.locfileid: "62991581"
   
  次のダイアグラムは、レポートに対する処理と表示のパスを示しています。  
   
- ![レポート処理/表示パス](../../reporting-services/report-server-web-service-net-framework-soap-headers/media/rs-render-process-diagram.gif "レポート処理/表示パス")  
+ ![レポートの処理および表示 パス](../../reporting-services/report-server-web-service-net-framework-soap-headers/media/rs-render-process-diagram.gif "レポートの処理および表示パス")  
   
  上記のような関数をサポートするために、現在の SOAP Render メソッドを複数のメソッドに分割して、初期化フェーズ、処理フェーズ、および表示フェーズの実行を網羅しました。  
   

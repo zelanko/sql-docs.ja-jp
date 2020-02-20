@@ -9,10 +9,10 @@ ms.assetid: 5933c4f0-c713-4ecb-b521-ff46c9c63fff
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: adfde8e92d249c40749dba76f42c6d1d5ba20d71
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65581536"
 ---
 # <a name="create-a-stepped-report-report-builder-and-ssrs"></a>階段状レポートの作成 (レポート ビルダーおよび SSRS)
@@ -70,7 +70,7 @@ ms.locfileid: "65581536"
         |-|-|  
         |**in**|インチ (1 インチ = 2.54 cm)|  
         |**cm**|センチメートル|  
-        |**mm**|ミリメートル|  
+        |**mm**|mm|  
         |**pt**|ポイント (1 ポイント = 1/72 インチ)|  
         |**pc**|パイカ (1 パイカ = 12 ポイント)|  
   

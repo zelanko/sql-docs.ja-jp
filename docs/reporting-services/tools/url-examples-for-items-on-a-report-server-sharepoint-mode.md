@@ -9,10 +9,10 @@ ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: af9333214aa10f8c21d8b7eb31b92c261ff155e9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65574017"
 ---
 # <a name="url-examples-for-items-on-a-report-server---sharepoint-mode"></a>レポート サーバー上のアイテムの URL の例 - SharePoint モード
@@ -29,12 +29,12 @@ ms.locfileid: "65574017"
   
  レポート サーバー コンテンツへのアクセスおよびセキュリティ保護には、次に示す Web 階層の要素を使用します。 リストやページなどのオブジェクトは、レポート サーバーのコンテンツへのアクセスに使用されないため、この表では説明しません。  
   
-|Object|[説明]|  
+|Object|説明|  
 |------------|-----------------|  
 |SharePoint Web アプリケーション|SharePoint Web アプリケーションは、スタンドアロン サーバーとしてインストールするか、一連の仮想サーバーを含むファームの下にインストールできます。 Web アプリケーションには `http:*//servername*` などの URL を指定します。複数のサイトを指定することもできます。|  
-|Site|サイトは、Web アプリケーションの親サイトまたはサブサイトになります。|  
+|サイト|サイトは、Web アプリケーションの親サイトまたはサブサイトになります。|  
 |SharePoint ライブラリ|ライブラリには、ドキュメントやフォルダーが格納されます。 レポート、レポート モデル、共有データ ソース、および外部画像を保存できるサイト オブジェクトは、ライブラリまたはライブラリ内のフォルダーのみです。|  
-|アイテム|URL 内で参照できるレポート サーバーのアイテムとしては、レポートまたはサブレポートのレポート定義、レポート モデル、共有データ ソース、外部画像などがあります。|  
+|Item|URL 内で参照できるレポート サーバーのアイテムとしては、レポートまたはサブレポートのレポート定義、レポート モデル、共有データ ソース、外部画像などがあります。|  
   
 ## <a name="url-syntax-and-rules"></a>URL の構文と規則  
  ライブラリ内の各レポート サーバー アイテムを識別するには、完全修飾 URL を使用します。完全修飾 URL は、プロトコルを表すプレフィックス、サーバー名、サイト、ライブラリ、ファイル名、ファイルの種類を示すファイル名拡張子で構成されます。  
@@ -56,7 +56,7 @@ ms.locfileid: "65574017"
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 または [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] では、ライブラリはサーバー名の後に示されます。たとえば、`https://*servername/*Shared Documents` のようになります。  
   
- [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 または [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]では、ライブラリはサイトおよびサブサイトの後に示されます。 たとえば、`https://*servername/site/*Documents` のようになります。  
+ [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 または [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]では、ライブラリはサイトおよびサブサイトの後に示されます。 たとえば、「 `https://*servername/site/*Documents` 」のように入力します。  
   
  新しい SharePoint ライブラリまたは使用したことがないサイトのパス情報を見つけるには、ブラウザーを開き、レポートのパブリッシュ先として使用する SharePoint ライブラリを探します。 ライブラリが空である場合は、任意のファイルをアップロードします。 ファイルを右クリックして **[プロパティ]** をクリックし、 **[プロパティ]** ウィンドウを開きます。 ファイルのアドレスには、パブリッシュ操作に必要な URL 値が含まれています。  
   
@@ -92,7 +92,7 @@ ms.locfileid: "65574017"
 ## <a name="examples-of-urls"></a>URL の例  
  アイテムを SharePoint ライブラリにパブリッシュする場合は、完全修飾 URL をターゲット ライブラリに指定する必要があります。 完全修飾 SharePoint URL は、SharePoint Web アプリケーション、サイト、ライブラリ、フォルダー、ファイル、およびファイル名拡張子で構成されます。フォルダーは省略可能です。 使用可能な構文の例をいくつか次に示します。  
   
-|移行先|URL の例|  
+|移行先|Example URL (URL の例)|  
 |------------|-----------------|  
 |SharePoint サーバー|`https://TestServer`|  
 |SharePoint サーバー サイトまたはサブサイト|`https://TestServer/toplevelsite/subsite`|  

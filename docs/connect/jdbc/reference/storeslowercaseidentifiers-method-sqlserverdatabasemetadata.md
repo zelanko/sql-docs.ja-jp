@@ -1,5 +1,5 @@
 ---
-title: storesLowerCaseIdentifiers メソッド (SQLServerDatabaseMetaData) |Microsoft Docs
+title: storesLowerCaseIdentifiers メソッド (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: b7dd60f5-c4f3-4b14-9a33-d95327395083
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b0c4a376970658df1bdce94e45694edae18149c9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67969995"
 ---
 # <a name="storeslowercaseidentifiers-method-sqlserverdatabasemetadata"></a>storesLowerCaseIdentifiers メソッド (SQLServerDatabaseMetaData)
@@ -40,8 +40,8 @@ public boolean storesLowerCaseIdentifiers()
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この storesLowerCaseIdentifiers メソッドは、storesLowerCaseIdentifiers メソッドによって、java メタデータインターフェイスで指定されます。  
+## <a name="remarks"></a>解説  
+ この storesLowerCaseIdentifiers メソッドは、java.sql.DatabaseMetaData インターフェイスの storesLowerCaseIdentifiers メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

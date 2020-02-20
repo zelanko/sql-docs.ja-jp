@@ -16,10 +16,10 @@ ms.assetid: c054bb84-1292-4b70-b574-2ae189cd4e68
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2b103bae2e7de26997545d0158ec2e3c440a0c59
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68213685"
 ---
 # <a name="setdouble-method-sqlservercallablestatement"></a>setDouble メソッド (SQLServerCallableStatement)
@@ -42,12 +42,12 @@ public void setDouble(java.lang.String sCol,
   
  *d*  
   
- **Double**値。  
+ **double** 値です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  この setDouble メソッドは、java.sql.CallableStatement インターフェイスの setDouble メソッドで指定されています。  
   
 ## <a name="see-also"></a>参照  

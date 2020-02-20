@@ -17,13 +17,13 @@ ms.assetid: 0c2e8587-1dda-4e7b-8ef8-646fcda051fc
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 92b678e0b9cc07cacfc6501b75b3e9d5c2889e12
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65572255"
 ---
-# <a name="msreportserverinstance-class"></a>MSReportServer_Instance クラス
+# <a name="msreportserver_instance-class"></a>MSReportServer_Instance クラス
   MSReportServer_Instance クラスは、インストールされているレポート サーバーにクライアントが接続するために必要な基本情報を提供します。  
   
  この種類の全メンバーの一覧については、「 [MSReportServer_Instance のメンバー](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-members.md)」を参照してください。  

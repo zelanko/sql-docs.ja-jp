@@ -15,10 +15,10 @@ ms.assetid: d9c7c0b3-fce4-4a65-b679-408273e6a925
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 41d02ba0cd1dc9067bd6425895e53d9a949fd0d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65573266"
 ---
 # <a name="analysis-services-mdx-query-designer-user-interface"></a>Analysis Services の MDX クエリ デザイナーのユーザー インターフェイス
@@ -41,7 +41,7 @@ ms.locfileid: "65573266"
   
  このモードのペインの一覧を次の表に示します。  
   
-|ペイン|機能|  
+|ペイン|Function|  
 |----------|--------------|  
 |キューブの選択ボタン ( **[...]** )|現在選択されているキューブを表示します。|  
 |メタデータ ペイン|選択されたキューブで定義されているメジャー、主要業績評価指標 (KPI)、およびディメンションの階層リストを表示します。|  
@@ -49,7 +49,7 @@ ms.locfileid: "65573266"
 |フィルター ペイン|ディメンションおよび関連する階層を選択することにより、ソースのデータをフィルター処理し、レポートに返されるデータを制限できます。|  
 |データ ペイン|メタデータ ペインや計算されるメンバー ペインからアイテムをドラッグすると、結果セットの列見出しが表示されます。 **[自動実行]** ボタンが選択されている場合、結果セットは自動的に更新されます。 。|  
   
- データ ペインには、メタデータ ペインからディメンション、メジャー、KPI をドラッグしたり、計算されるメンバー ペインから計算されるメンバーをドラッグしたりできます。 フィルター ペインでは、ディメンションや関連する階層を選択し、フィルター式を設定することによって、クエリに利用可能なデータを制限できます。 **[自動実行]** (![クエリの自動実行](../../reporting-services/report-data/media/rsqdicon-autoexecute.gif "クエリの自動実行")) 切り替えボタンがオンになっている場合、データ ペインにメタデータ オブジェクトをドロップするたびに、クエリが自動的に実行されます。 クエリを手動で実行するには、ツール バーの **[実行]** (![クエリの実行](../../reporting-services/report-data/media/rsqdicon-run.gif "クエリの実行")) ボタンを使用します。  
+ データ ペインには、メタデータ ペインからディメンション、メジャー、KPI をドラッグしたり、計算されるメンバー ペインから計算されるメンバーをドラッグしたりできます。 フィルター ペインでは、ディメンションや関連する階層を選択し、フィルター式を設定することによって、クエリに利用可能なデータを制限できます。 **自動実行** (![クエリの自動実行](../../reporting-services/report-data/media/rsqdicon-autoexecute.gif "クエリの自動実行")) 切り替えボタンがオンになっている場合、データ ペインにメタデータ オブジェクトをドロップするたびに、クエリが自動的に実行されます。 クエリを手動で実行するには、ツール バーの**実行** (![クエリの実行](../../reporting-services/report-data/media/rsqdicon-run.gif "クエリの実行")) ボタンを使用します。  
   
  このモードで MDX クエリを作成すると、次のような追加のプロパティがクエリに自動的に追加されます。  
   
@@ -62,22 +62,22 @@ ms.locfileid: "65573266"
 ### <a name="graphical-mdx-query-designer-toolbar-in-design-mode"></a>グラフィカル MDX クエリ デザイナーのツール バー (デザイン モード)  
  クエリ デザイナーのツール バーにある各種のボタンを使用すると、グラフィカル インターフェイスを使用して MDX クエリをデザインできます。 これらのボタンとその機能を次の表に示します。  
   
-|ボタン|[説明]|  
+|ボタン|説明|  
 |------------|-----------------|  
 |**[テキストとして編集]**|このデータ ソースの種類では使用できません。|  
 |**[インポート]**|ファイル システムのレポート定義 (.rdl) ファイルから既存のクエリをインポートします。 詳細については、「 [レポート埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)と呼ばれます。|  
-|![MDX クエリ ビューに変更](../../reporting-services/report-data/media/rsqdicon-commandtypemdx.gif "MDX クエリのビューへの変更")|コマンドの種類を MDX に切り替えます。|  
+|![MDX クエリ ビューへの変更](../../reporting-services/report-data/media/rsqdicon-commandtypemdx.gif "MDX クエリ ビューへの変更")|コマンドの種類を MDX に切り替えます。|  
 |![DMX クエリ言語ビューへの変更](../../reporting-services/report-data/media/rsqdicon-commandtypedmx.gif "DMX クエリ言語ビューへの変更")|コマンドの種類を DMX に切り替えます。|  
 |![結果データの更新](../../reporting-services/report-data/media/rsqdicon-refresh.gif "結果データの更新")|データ ソースからメタデータを更新します。|  
-|![Add calculated member](../../reporting-services/report-data/media/rsqdicon-addcalculatedmember.gif "Add calculated member")|**[計算されるメンバー ビルダー]** ダイアログ ボックスを表示します。|  
-|![空のセルの表示の切り替え](../../reporting-services/report-data/media/rsqdicon-showemptycells.gif "空のセルの表示の切り替え")|データ ペインに空のセルを表示するかどうかを切り替えます。 これは、MDX で NON EMPTY 句を使用することに相当します。|  
+|![計算されるメンバーの追加](../../reporting-services/report-data/media/rsqdicon-addcalculatedmember.gif "[計算されるメンバーの追加]")|**[計算されるメンバー ビルダー]** ダイアログ ボックスを表示します。|  
+|![空のセルの表示/非表示の切り替え](../../reporting-services/report-data/media/rsqdicon-showemptycells.gif "空のセルの表示/非表示の切り替え")|データ ペインに空のセルを表示するかどうかを切り替えます。 これは、MDX で NON EMPTY 句を使用することに相当します。|  
 |![クエリの自動実行](../../reporting-services/report-data/media/rsqdicon-autoexecute.gif "クエリの自動実行")|クエリを自動的に実行し、変更が生じるたびに結果を表示します。 結果はデータ ペインに表示されます。|  
-|![集計ボタンの表示](../../reporting-services/report-data/media/rsqdicon-showaggregations.gif "集計ボタンの表示")|集計をデータ ペインに表示します。|  
-|![[削除]](../../reporting-services/report-data/media/rsqdicon-delete.gif "[削除]")|データ ペインで選択した列をクエリから削除します。|  
+|![[集計の表示] ボタン](../../reporting-services/report-data/media/rsqdicon-showaggregations.gif "[集計の表示] ボタン")|集計をデータ ペインに表示します。|  
+|![削除](../../reporting-services/report-data/media/rsqdicon-delete.gif "削除")|データ ペインで選択した列をクエリから削除します。|  
 |![[クエリ パラメーター] ダイアログ ボックスのアイコン](../../reporting-services/report-data/media/iconqueryparameter.gif "[クエリ パラメーター] ダイアログ ボックスのアイコン")|**[クエリ パラメーター]** ダイアログ ボックスを表示します。 クエリ パラメーターの値を指定する場合、同じ名前のレポート パラメーターが自動的に作成されます。 クエリ パラメーターの値は、このレポート パラメーターを参照する式に設定されます。|  
 |![[クエリの準備] ボタン](../../reporting-services/report-data/media/rsqdicon-preparequery.gif "[クエリの準備] ボタン")|クエリを準備します。|  
-|![クエリを実行する](../../reporting-services/report-data/media/rsqdicon-run.gif "クエリを実行する")|クエリを実行し、結果をデータ ペインに表示します。|  
-|![クエリを取り消す](../../reporting-services/report-data/media/rsqdicon-cancel.gif "クエリを取り消す")|クエリを取り消します。|  
+|![クエリの実行](../../reporting-services/report-data/media/rsqdicon-run.gif "クエリの実行")|クエリを実行し、結果をデータ ペインに表示します。|  
+|![クエリの取り消し](../../reporting-services/report-data/media/rsqdicon-cancel.gif "クエリの取り消し")|クエリを取り消します。|  
 |![デザイン モードに切り替える](../../reporting-services/media/rsqdicon-designmode.gif "デザイン モードに切り替える")|デザイン モードとクエリ モードを切り替えます。|  
   
 ## <a name="graphical-mdx-query-designer-in-query-mode"></a>グラフィカル MDX クエリ デザイナー (クエリ モード)  
@@ -89,7 +89,7 @@ ms.locfileid: "65573266"
   
  このモードのペインの一覧を次の表に示します。  
   
-|ペイン|機能|  
+|ペイン|Function|  
 |----------|--------------|  
 |キューブの選択ボタン ( **[...]** )|現在選択されているキューブを表示します。|  
 |メタデータ/関数/テンプレート ペイン|選択されたキューブで定義されているメジャー、KPI、およびディメンションの階層リストを表示します。|  
@@ -107,13 +107,13 @@ ms.locfileid: "65573266"
   
 -   **[テキストとして編集]**  
   
--   **[計算されるメンバーの追加]** (![Add calculated member](../../reporting-services/report-data/media/rsqdicon-addcalculatedmember.gif "Add calculated member"))  
+-   **計算されるメンバーの追加** (![計算されるメンバーの追加](../../reporting-services/report-data/media/rsqdicon-addcalculatedmember.gif "[計算されるメンバーの追加]"))  
   
--   **空のセルを表示する** (![空のセルの表示の切り替え](../../reporting-services/report-data/media/rsqdicon-showemptycells.gif "空のセルの表示の切り替え"))  
+-   **空のセルの表示** (![空のセルの表示/非表示の切り替え](../../reporting-services/report-data/media/rsqdicon-showemptycells.gif "空のセルの表示/非表示の切り替え"))  
   
 -   **自動実行** (![クエリの自動実行](../../reporting-services/report-data/media/rsqdicon-autoexecute.gif "クエリの自動実行"))  
   
--   **集計の表示** (![集計ボタンの表示](../../reporting-services/report-data/media/rsqdicon-showaggregations.gif "集計ボタンの表示"))  
+-   **集計の表示** (![[集計の表示] ボタン](../../reporting-services/report-data/media/rsqdicon-showaggregations.gif "[集計の表示] ボタン"))  
   
 ## <a name="see-also"></a>参照  
  [Analysis Services の MDX クエリ デザイナーでのパラメーターの定義 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/define-parameters-in-the-mdx-query-designer-for-analysis-services.md)   

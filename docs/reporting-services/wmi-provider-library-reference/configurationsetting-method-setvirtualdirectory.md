@@ -11,10 +11,10 @@ ms.assetid: 1a25cb1d-38d5-401a-970b-87b642a780e4
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3e00728af89cf85beb53ef667e91f4011b3fd9e0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65573555"
 ---
 # <a name="configurationsetting-method---setvirtualdirectory"></a>ConfigurationSetting メソッド - SetVirtualDirectory
@@ -34,7 +34,7 @@ public void SetVirtualDirectory(string Application, string VirtualDirectory,
 ```  
   
 ## <a name="parameters"></a>パラメーター  
- *アプリケーション*  
+ *Application*  
  仮想ディレクトリを設定するアプリケーションの名前。  
   
  *VirtualDirectory*  
@@ -43,7 +43,7 @@ public void SetVirtualDirectory(string Application, string VirtualDirectory,
  *lcid*  
  仮想ディレクトリのロケール ID。  
   
- *[エラー]*  
+ *Error*  
  [out] 発生したエラーの説明。  
   
  *HRESULT*  
@@ -52,7 +52,7 @@ public void SetVirtualDirectory(string Application, string VirtualDirectory,
 ## <a name="return-value"></a>戻り値  
  メソッド呼び出しの成功または失敗を示す *HRESULT* を返します。 値が 0 の場合はメソッド呼び出しが正常に完了したことを示します。エラー コードの場合は呼び出しが失敗したことを示します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  アプリケーションは、すべての URL 予約に対して仮想ディレクトリの名前を 1 つだけ持つことができます。  
   
  VirtualDirectory に指定する値は、仮想ディレクトリの名前付け規則に準拠している必要があります。 VirtualDirectory には空の文字列または空白を指定できません。  

@@ -1,5 +1,5 @@
 ---
-title: ストアドプロシージャの実行 (OLE DB) |Microsoft Docs
+title: ストアド プロシージャの実行 (OLE DB) | Microsoft Docs
 description: ストアド プロシージャの実行 (OLE DB)
 ms.custom: ''
 ms.date: 06/12/2018
@@ -15,10 +15,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 4297feae08376871c68ffab2aa9b977e034c6364
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993797"
 ---
 # <a name="stored-procedures---running"></a>ストアド プロシージャ - 実行
@@ -38,7 +38,7 @@ ms.locfileid: "67993797"
   
 -   機能の追加。  
   
- OLE DB Driver for SQL Server では、ストアドプロシージャが[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]データを返すために使用する3つのメカニズムがサポートされています。  
+ OLE DB Driver for SQL Server は、データを返すために [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ストアド プロシージャで使用される 3 つのメカニズムをサポートしています。  
   
 -   プロシージャ内のすべての SELECT ステートメントで結果セットを生成する。  
   

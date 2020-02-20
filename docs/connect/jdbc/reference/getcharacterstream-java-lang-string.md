@@ -1,5 +1,5 @@
 ---
-title: Get文字ストリーム (java lang.ini) |Microsoft Docs
+title: getCharacterStream (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 5281e1b8-19b8-4fe5-83be-929d1987e25d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e52ff3e9bc9da36d3874382341a1f46eb722ad3c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67953544"
 ---
 # <a name="getcharacterstream-javalangstring"></a>getCharacterStream (java.lang.String)
@@ -40,7 +40,7 @@ public final java.io.Reader getCharacterStream(java.lang.String paramName)
  パラメーターの名前を示す **String** です。  
   
 ## <a name="return-value"></a>戻り値  
- リーダーオブジェクト。  
+ Reader オブジェクトです。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

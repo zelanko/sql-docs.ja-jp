@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 0c0e6085ec4e922619c4f2595c63751e82c5a50a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571491"
 ---
 # <a name="data-alert-manager-for-sharepoint-users"></a>SharePoint ユーザー用のデータ警告マネージャー
@@ -27,7 +27,7 @@ ms.locfileid: "65571491"
 
 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のデータ警告マネージャーを使用して、SharePoint インフォメーション ワーカーはデータ警告を管理することができます。 具体的には、自分が作成した警告に関する情報を表示したり、警告を削除することができるほか、警告の定義を開いて編集したり、警告をオンデマンドで実行することができます。 1 つのレポートに対する警告のみを表示するか、すべてのレポートに対する警告を表示するかを選択することもできます。 次の図に、SharePoint インフォメーション ワーカーがデータ警告マネージャー内で使用できる機能を示します。
 
-![SharePoint ユーザー向けの警告マネージャー機能](../reporting-services/media/rs-alertmanageriw.gif "SharePoint ユーザー向けの警告マネージャー機能")  
+![SharePoint ユーザー用の警告マネージャー機能](../reporting-services/media/rs-alertmanageriw.gif "SharePoint ユーザー用の警告マネージャー機能")  
 
 > [!NOTE]
 > SharePoint と Reporting Services の統合は、SQL Server 2016 以降では使用できません。
@@ -50,7 +50,7 @@ SharePoint サイトのデータ警告機能を有効にすると、MyDataAlerts
   
  次の表は、データ警告マネージャー内のテーブルから取得されたサンプル データを示しています。 エラーが発生した場合は、エラー メッセージとログ内のエントリの識別子 (GUID) がテーブル内の **[状態]** フィールドに含められます。  
   
-|警告名|[レポート名]|[作成者]|送信済みの警告|[最終実行]|更新日時|状態|  
+|アラート名|レポート名|作成者|送信済みの警告|[最終実行]|更新日時|Status|  
 |----------------|-----------------|----------------|-----------------|--------------|-------------------|------------|  
 |SalesQTR|SalesByTerritoryAndQTR|Lauren Johnson|4|6/12/2011|6/1/2011|前回の警告が成功し、警告が送信されました。|  
 |UnitsSold|ProductsSalesByQTR|Lauren Johnson|2|7/1/2011|6/28/2011|前回の警告は成功しましたが、データが変更されなかったため、警告は送信されませんでした。|  

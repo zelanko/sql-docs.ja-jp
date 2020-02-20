@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: f259c5a8a9b32d723c62d73f2b0563093851ef5c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65571593"
 ---
 # <a name="data-alert-designer"></a>データ警告デザイナー
@@ -50,14 +50,14 @@ ms.locfileid: "65571593"
 > [!NOTE]  
 >  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] データ警告機能は、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] が SharePoint モードでインストールされている場合にのみ使用できるため、警告を作成する対象のレポートは、SharePoint ドキュメント ライブラリに保存、配置、またはアップロードする必要があります。  
 >   
->  データ警告は、Windows 統合認証を使用するレポートや、資格情報の入力が求められるレポート上では作成できません。 レポートでは保存されている資格情報を使用する必要があります。 詳細については、「 [レポート データ ソースに関する資格情報と接続情報を指定する](../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)」を参照してください。  
+>  データ警告は、Windows 統合認証を使用するレポートや、資格情報の入力が求められるレポート上では作成できません。 レポートでは保存されている資格情報を使用する必要があります。 詳細については、「 [レポート データ ソースに関する資格情報と接続情報を指定する](../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)」をご覧ください。  
   
  データ警告デザイナーを開くには、レポート ツール バーの **[アクション]** メニューの **[新しいデータの警告]** オプションをクリックします。 **[新しいデータの警告]** オプションが表示されない場合は、レポートが保存された資格情報を使用するように構成されていません。 資格情報の種類は、SharePoint ライブラリからレポート データ ソースを更新することで更新できます。  
   
 ##  <a name="AlertDesigner"></a> データ警告デザイナーのユーザー インターフェイス  
  データ警告デザイナーは、いくつかの領域に分割されています。 レポート データ フィードを選択する領域や、ルールを条件に追加して単純な条件または複雑な条件を作成する領域などがあります。 次の図は、データ警告デザイナー内の領域を示しています。  
   
- ![警告デザイナー ユーザー インターフェイス内の領域](../reporting-services/media/rs-alertdesigner.gif "警告デザイナー ユーザー インターフェイス内の領域")  
+ ![警告デザイナー ユーザー インターフェイスの領域](../reporting-services/media/rs-alertdesigner.gif "警告デザイナー ユーザー インターフェイスの領域")  
   
   
 ### <a name="alert-data"></a>警告データ  
@@ -73,7 +73,7 @@ ms.locfileid: "65571593"
   
  レポートの中には数百万行のデータがあるものもあります。 テーブルに表示されるのは、フィード内の最初の 100 行のデータのみです。  
   
-### <a name="alert-name"></a>警告名  
+### <a name="alert-name"></a>アラート名  
  既定では、警告の定義の名前はレポートと同じです。 この警告名は、わかりやすい名前に変更できます。 これにより、どの警告に更新や削除を行うかを決定するなど、警告の管理が容易になります。  
   
  レポートには、複数の警告を作成できます。 同じ名前で複数の警告を定義できますが、警告名は一意にすることをお勧めします。 そうすることで、警告の定義を区別および管理することがより簡単になります。 データ警告マネージャーでは、作成したすべての警告の一覧を表示できます。 詳細については、「 [警告管理者用のデータ警告マネージャー](../reporting-services/data-alert-manager-for-alerting-administrators.md) 」および「 [データ警告マネージャーでのデータ警告の管理](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md)」を参照してください。  

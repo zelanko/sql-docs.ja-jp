@@ -8,10 +8,10 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: cc2f32dd81e8dd505b6eaa79359ce10c757ea744
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65577769"
 ---
 # <a name="enable-and-disable-rdl-sandboxing-for-reporting-services-in-sharepoint-integrated-mode"></a>SharePoint 統合モードで Reporting Services の RDL サンドボックスの有効化と無効化
@@ -65,18 +65,18 @@ RDL (レポート定義言語) サンドボックス機能を使用すると、�
 
  次の表では、構成設定に関する情報を示します。 構成ファイルに出現する順に、設定を示します。  
   
-|設定|[説明]|  
+|設定|説明|  
 |-------------|-----------------|  
-|**MaxExpressionLength**|RDL 式で許可される文字数の最大値です。<br /><br /> 既定値は 1000 です。|  
-|**MaxResourceSize**|外部リソースに許可されるサイズの最大値 (単位: KB) です。<br /><br /> 既定値: 100|  
-|**MaxStringResultLength**|RDL 式の戻り値で許可される文字数の最大値です。<br /><br /> 既定値は 1000 です。|  
-|**MaxArrayResultLength**|RDL 式の配列戻り値で許可されるアイテム数の最大値です。<br /><br /> 既定値: 100|  
+|**MaxExpressionLength**|RDL 式で許可される文字数の最大値です。<br /><br /> 既定値は1000|  
+|**MaxResourceSize**|外部リソースに許可されるサイズの最大値 (単位: KB) です。<br /><br /> 既定値は100|  
+|**MaxStringResultLength**|RDL 式の戻り値で許可される文字数の最大値です。<br /><br /> 既定値は1000|  
+|**MaxArrayResultLength**|RDL 式の配列戻り値で許可されるアイテム数の最大値です。<br /><br /> 既定値は100|  
 |**型**|RDL 式内で許可されるメンバーの一覧です。|  
-|**Allow**|RDL 式で許可される型または型のセットです。|  
+|**許可**|RDL 式で許可される型または型のセットです。|  
 |**Namespace**|**Allow** の属性の 1 つであり、Value に適用される 1 つ以上の型を含む名前空間です。 このプロパティでは、大文字と小文字が区別されません。|  
 |**AllowNew**|**Allow** のブール属性であり、RDL 式内または RDL の **\<Class>** 要素内でその型の新しいインスタンスを作成できるかどうかを制御します。<br /><br /> **RDLSandboxing** が有効であるときは、**AllowNew**の設定に関係なく、RDL 式に新しい配列を作成できません。|  
 |**Value**|**Allow** に対する値であり、RDL 式で許可される型の名前を示します。 値が **\*** の場合は、名前空間内のすべての型が許可されることを意味します。 このプロパティでは、大文字と小文字が区別されません。|  
-|**メンバー**|**\<Types>** 要素に含まれる型の一覧に対する、RDL 式で許可されないメンバー名の一覧です。|  
+|**[メンバー]**|**\<Types>** 要素に含まれる型の一覧に対する、RDL 式で許可されないメンバー名の一覧です。|  
 |**Deny**|RDL 式で許可されないメンバーの名前です。 このプロパティでは、大文字と小文字が区別されません。<br /><br /> メンバーに対して **Deny** が指定されている場合、この名前を持つすべての型のメンバーがすべて許可されません。|  
   
 ## <a name="working-with-expressions-when-rdl-sandboxing-is-enabled"></a>RDL サンドボックスが有効なときの式の操作
@@ -104,7 +104,7 @@ RDL (レポート定義言語) サンドボックス機能を使用すると、�
   
 -   型の静的メンバー  
   
--   [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] **New** メソッド  
+-   [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] **New** メソッド。  
   
 -   レポート定義の **\<Classes>** 要素。  
   

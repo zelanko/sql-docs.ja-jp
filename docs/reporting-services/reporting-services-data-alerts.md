@@ -10,10 +10,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: bd26e2ddcacd91269a51e663b80acd4edf95c196
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580070"
 ---
 # <a name="reporting-services-data-alerts"></a>Reporting Services のデータ警告
@@ -58,7 +58,7 @@ SQL Server Reporting Services の "データ警告" は、関心のある、ま�
   
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] をネイティブ モードまたは SharePoint モードでインストールするか、またはスタンドアロン バージョンのレポート ビルダーを使用している場合、レポート サーバー、自分のコンピューター、または SharePoint ライブラリに対してレポートを保存できます。 レポートに対してデータ警告を作成するには、レポートを保存するか、SharePoint ライブラリにアップロードする必要があります。 ネイティブ モードのレポート サーバーにもコンピューターにも保存されていないレポートに対して警告を作成することはできません。 また、カスタム アプリケーションに埋め込む形で警告を作成することもできません。  
   
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のレポートでは、さまざまな種類の資格情報がサポートされます。 レポートのデータ ソースに保存済みの資格情報が使用されている場合、または、資格情報が使用されていない場合、レポートに対してデータ警告を作成することができます。 資格情報として統合セキュリティを使用するレポートや、資格情報の入力が求められるレポートに対して警告を作成することはできません。 レポートは、警告の定義の処理の一環として実行されます。資格情報がないと、この処理は失敗します。 詳細については、以下を参照してください。  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のレポートでは、さまざまな種類の資格情報がサポートされます。 レポートのデータ ソースに保存済みの資格情報が使用されている場合、または、資格情報が使用されていない場合、レポートに対してデータ警告を作成することができます。 資格情報として統合セキュリティを使用するレポートや、資格情報の入力が求められるレポートに対して警告を作成することはできません。 レポートは、警告の定義の処理の一環として実行されます。資格情報がないと、この処理は失敗します。 詳細については、「  
   
 -   [レポート データ ソースに関する資格情報と接続情報を指定する](../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
@@ -116,9 +116,9 @@ SQL Server Reporting Services の "データ警告" は、関心のある、ま�
 ##  <a name="InstallAlerting"></a> データ警告のインストール  
  データ警告機能は、SharePoint モードで [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] がインストールされている場合にのみ使用できます。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] を SharePoint モードでインストールすると、データ警告定義および警告メタデータを格納する警告データベースと、警告を管理するための 2 つの SharePoint ページとがセットアップによって自動的に作成され、SharePoint サイトにデータ警告デザイナーが追加されます。 警告機能に関して、インストール中に設定する特別な手順やオプションはありません。  
   
- SharePoint モードの [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のインストール ( [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] で新たに導入された [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 共有サービスや、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 機能を使用する前に作成および構成する必要のある [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サービス アプリケーションを含む) に関する詳細については、MSDN ライブラリの「 [SharePoint 2010 用 Reporting Services の SharePoint モードのインストール](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c) 」を参照してください。  
+ SharePoint モードでの [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のインストール ([!INCLUDE[ssSQL11](../includes/sssql11-md.md)] で新たに導入された [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 共有サービスや、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 機能を使用する前に作成および構成する必要のある [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サービス アプリケーションを含む) について詳しくは、「[SharePoint 2010 用 Reporting Services の SharePoint モードのインストール](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c)」をご覧ください。  
   
- このトピックの冒頭の図に示したように、データ警告には SQL Server エージェント ジョブが使用されます。 このジョブを作成するには、SQL Server エージェントが実行されている必要があります。 SQL Server エージェントは、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]をインストールした際に、自動的に開始されるよう構成されている可能性があります。 そのように構成されていない場合は、SQL Server エージェントを手動で開始できます。 詳細については、「 [SQL Server エージェントの構成](../ssms/agent/configure-sql-server-agent.md) 」および「 [データベース エンジン、SQL Server エージェント、SQL Server Browser サービスの開始、停止、一時停止、再開、および再起動](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)」を参照してください。  
+ このトピックの冒頭の図に示したように、データ警告には SQL Server エージェント ジョブが使用されます。 このジョブを作成するには、SQL Server エージェントが実行されている必要があります。 SQL Server エージェントは、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]をインストールした際に、自動的に開始されるよう構成されている可能性があります。 そのように構成されていない場合は、SQL Server エージェントを手動で開始できます。 詳細については、「[SQL Server エージェントの構成](../ssms/agent/configure-sql-server-agent.md)」および「[データベース エンジン、SQL Server エージェント、SQL Server Browser サービスの開始、停止、一時停止、再開、および再起動](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)」を参照してください。  
   
  SharePoint サーバーの全体管理の **[サブスクリプションと警告の準備]** ページでは、SQL Server エージェントが実行されているかどうかを確認し、SQL Server エージェントへのアクセス権を付与するために実行するカスタムの [!INCLUDE[tsql](../includes/tsql-md.md)] スクリプトを作成およびダウンロードできます。 また、PowerShell を使用して [!INCLUDE[tsql](../includes/tsql-md.md)] スクリプトを生成することもできます。 詳細については、「[SSRS サービス アプリケーションを使用するためのサブスクリプションと警告の準備](../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)」を参照してください。  
   
@@ -131,7 +131,7 @@ SQL Server Reporting Services の "データ警告" は、関心のある、ま�
   
  次の表は、データ警告の構成要素とその既定値、説明、および場所を一覧にしたものです。  
   
-|設定|既定値|[説明]|場所|  
+|設定|Default value|説明|Location|  
 |-------------|-------------------|-----------------|--------------|  
 |AlertingCleanupCycleMinutes|20|クリーンアップ サイクルの開始間隔 (分) です。|レポート サーバー構成ファイル|  
 |AlertingExecutionLogCleanupMinutes|10080|実行ログのエントリを保持する時間 (分) です。|レポート サーバー構成ファイル|  
@@ -145,7 +145,7 @@ SQL Server Reporting Services の "データ警告" は、関心のある、ま�
 ### <a name="event-handlers-and-retry"></a>イベント ハンドラーと再試行  
  イベント ハンドラーには次のものがあります。  
   
-|イベント ハンドラー|[説明]|  
+|イベント ハンドラー|説明|  
 |-------------------|-----------------|  
 |FireAlert|データ警告マネージャーで **[実行]**  をクリックして、警告定義の処理を直ちに開始します。|  
 |FireSchedule|SQL Server エージェントにより、警告定義のジョブ スケジュールが起動されます。|  
@@ -160,14 +160,14 @@ SQL Server Reporting Services の "データ警告" は、関心のある、ま�
 |エラー カテゴリ|<|\<|イベントの種類||>|>|>|  
 |--------------------|--------|--------|----------------|-|--------|--------|--------|  
 ||**FireAlert**|**FireSchedule**|**CreateSchedule**|**UpdateSchedule**|**DeleteSchedule**|**GenerateAlert**|**DeliverAlert**|  
-|メモリ不足|×|×|×|×|×|×|×|  
-|スレッドの中止|×|×|×|×|×|×|×|  
-|SQL エージェントが未実行|×||×|×|×|||  
-|一時的。 ほとんどの場合は接続の問題、タイムアウト、およびロックが原因。|×|×|×|×|×|×|×|  
-|IOException|||||||×|  
-|WebException|||||||×|  
-|SocketException|||||||×|  
-|SMTPException **(\*)**|||||||×|  
+|メモリ不足|X|X|X|X|X|X|X|  
+|スレッドの中止|X|X|X|X|X|X|X|  
+|SQL エージェントが未実行|X||X|X|X|||  
+|一時的。 ほとんどの場合は接続の問題、タイムアウト、およびロックが原因。|X|X|X|X|X|X|X|  
+|IOException|||||||X|  
+|WebException|||||||X|  
+|SocketException|||||||X|  
+|SMTPException **(\*)**|||||||X|  
   
  **(\*)** 再試行をトリガーする SMTP エラーは次のとおりです。  
   
@@ -207,7 +207,7 @@ SQL Server Reporting Services の "データ警告" は、関心のある、ま�
   
 |ユーザーの種類|SharePoint 権限|タスクの説明|  
 |---------------|---------------------------|----------------------|  
-|インフォメーション ワーカー|アイテムの表示<br /><br /> 警告の作成|レポートなどのアイテムを表示し、レポートに対してデータ警告を作成できます。 警告を編集および削除できます。|  
+|インフォメーション ワーカー|アイテムの表示<br /><br /> アラートを作成する|レポートなどのアイテムを表示し、レポートに対してデータ警告を作成できます。 警告を編集および削除できます。|  
 |警告管理者|警告の管理|SharePoint サイトに保存されたすべてのデータ警告を一覧表示し、通知を削除できます。|  
   
 ##  <a name="DiagnosticsLogging"></a> 診断とログ  
@@ -305,7 +305,7 @@ SQL Server Reporting Services の "データ警告" は、関心のある、ま�
   
 -   [SharePoint ライブラリへのレポートの保存 &#40;レポート ビルダー&#41;](../reporting-services/report-builder/save-a-report-to-a-sharepoint-library-report-builder.md)  
   
--   [データ警告デザイナーでのデータ警告の作成](../reporting-services/create-a-data-alert-in-data-alert-designer.md)  
+-   [警告デザイナーでのデータ警告の作成](../reporting-services/create-a-data-alert-in-data-alert-designer.md)  
   
 -   [警告デザイナーでのデータ警告の編集](../reporting-services/edit-a-data-alert-in-alert-designer.md)  
   

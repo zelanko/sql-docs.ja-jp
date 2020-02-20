@@ -16,10 +16,10 @@ ms.assetid: 7c29994a-0b53-420b-8a9b-82a9eef08587
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 24aed500f5b345e2ba3762bdd7a888fc5f8f31ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67954565"
 ---
 # <a name="findcolumn-method-sqlserverresultset"></a>findColumn メソッド (SQLServerResultSet)
@@ -45,8 +45,8 @@ public int findColumn(java.lang.String columnName)
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この findColumn メソッドは、java. ResultSet インターフェイスの findColumn メソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この findColumn メソッドは、java.sql.ResultSet インターフェイスの findColumn メソッドで指定されています。  
   
  同じ名前の列が複数存在する場合、findColumn メソッドは、大文字と小文字を区別して最初に一致した列を返します。 大文字と小文字を区別して一致する列が存在しない場合は、大文字と小文字の区別に関係なく最初に一致した列を返します。  
   

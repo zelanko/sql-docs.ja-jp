@@ -9,10 +9,10 @@ ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9973ce2f9c5eac344307258e1c212979146c1695
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580774"
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Exporting to Microsoft Excel (Report Builder and SSRS)
@@ -51,7 +51,7 @@ ms.locfileid: "65580774"
 ### <a name="sizes-of-excel-2003-xls-files"></a>Excel 2003 (.xls) ファイルのサイズ  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2003 表示拡張機能の使用は推奨されません。 詳細については、「 [SQL Server 2016 における SQL Server Reporting Services の非推奨の機能](../../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)」を参照してください。  
+>  [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2003 表示拡張機能は非推奨とされます。 詳細については、「 [SQL Server 2016 における SQL Server Reporting Services の非推奨の機能](../../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)」を参照してください。  
   
  レポートを最初にエクスポートして Excel 2003 に保存するときは、Excel で *.xls ブック ファイルに自動的に適用されるファイル最適化のメリットを得ることはできません。 ファイル サイズが大きくなると、電子メール サブスクリプションと添付ファイルに関する問題が生じる可能性があります。 エクスポートしたレポートの \*.xls ファイルのサイズを小さくするには、その \*.xls ファイルを開いてからブックを再保存します。 ブックを再保存することで、通常はファイル サイズが 40 ～ 50 パーセント縮小します。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "65580774"
     > [!NOTE]  
     >  この問題を回避するには、レポートのテキスト ボックスの幅を大きくしてください。  
   
-### <a name="images"></a>画像  
+### <a name="images"></a>イメージ  
  画像には、次の制限事項が適用されます。  
   
 -   レポート アイテムの背景画像は無視されます。Excel では、セルごとの背景イメージはサポートされていません。  
@@ -109,15 +109,15 @@ ms.locfileid: "65580774"
 ### <a name="report-row-groups-and-column-groups"></a>レポートの行グループと列グループ  
  レポートに行グループまたは列グループが含まれている場合、レポートを Excel にエクスポートするときに空のセルが挿入されます。 たとえば、あるレポートで通勤距離別に行をグループ化するとします。 通勤距離にはそれぞれ複数の顧客を含めることができます。 次の図に、このレポートを示します。  
   
- ![Reporting Services Web ポータルでのレポート](../../reporting-services/report-builder/media/ssrb-excelexportssrs.png "Reporting Services Web ポータルでのレポート")  
+ ![Reporting Services Web ポータルのレポート](../../reporting-services/report-builder/media/ssrb-excelexportssrs.png "Reporting Services Web ポータルのレポート")  
   
  このレポートを Excel にエクスポートした場合、通勤距離の列の 1 つのセルにしか通勤距離が表示されません。 値は、レポート内でのテキストの配置 (上、中央、または下) に応じて、最初、中央、または最後のセルに表示されます。 その他のセルは空になります。 顧客名を含む名前列のセルは空になりません。 次の図に、Excel にエクスポートされた後のレポートを示します。 赤色のセル罫線は、強調のために追加されたもので、 灰色のボックスは空のセルです (赤色の線も灰色のボックスもエクスポートされたレポートには含まれません)。  
   
- ![Excel にエクスポートされたレポート、線あり](../../reporting-services/report-builder/media/ssrb-exportedexcellines.png "Excel にエクスポートされたレポート、線あり")  
+ ![Excel にエクスポートされたレポート、行あり](../../reporting-services/report-builder/media/ssrb-exportedexcellines.png "Excel にエクスポートされたレポート、行あり")  
   
  このため、行グループまたは列グループが含まれているレポートを Excel にエクスポートしてピボット テーブルで表示する場合は、レポートの変更が必要です。 ワークシートをすべてのセルに値が設定されたフラット テーブルにするには、データが欠落しているセルにグループ値を追加する必要があります。 次の図に、更新したワークシートを示します。  
   
- ![Excel にエクスポートされたレポート、フラット化あり](../../reporting-services/report-builder/media/ssrb-excelexportnomatrix.png "Excel にエクスポートされたレポート、フラット化あり")  
+ ![Excel にエクスポートされたレポート、フラット化](../../reporting-services/report-builder/media/ssrb-excelexportnomatrix.png "Excel にエクスポートされたレポート、フラット化")  
   
  したがって、レポート データを詳しく分析するために Excel にエクスポートするという特定の目的でレポートを作成した場合は、レポートの行や列をグループ化しないことを検討してください。  
   
@@ -204,11 +204,11 @@ ms.locfileid: "65580774"
 ##  <a name="DocumentProperties"></a> ドキュメント プロパティ  
  Excel レンダラーでは、次のメタデータが Excel ファイルに書き込まれます。  
   
-|レポート要素のプロパティ|Description|  
+|レポート要素のプロパティ|説明|  
 |-------------------------------|-----------------|  
-|Created|レポート実行の日付と時刻 (ISO 形式の日付/時刻値)。|  
+|作成済み|レポート実行の日付と時刻 (ISO 形式の日付/時刻値)。|  
 |Author|Report.Author|  
-|Description|Report.Description|  
+|説明|Report.Description|  
 |LastSaved|レポート実行の日付と時刻 (ISO 形式の日付/時刻値)。|  
   
 ##  <a name="PageHeadersFooters"></a> ページ ヘッダーとページ フッター  

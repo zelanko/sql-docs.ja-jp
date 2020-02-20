@@ -15,22 +15,22 @@ ms.assetid: 753c2542-0e97-4d8f-a5dd-4b07a5cd10ab
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d3246b38461c1445f3335f42944480732ab583a0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570895"
 ---
 # <a name="authentication-with-the-report-server"></a>レポート サーバーでの認証
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) には、レポート サーバーに対してユーザーおよびクライアント アプリケーションを認証するための構成可能なオプションがいくつか用意されています。 既定では、レポート サーバーは Windows 統合認証を使用し、クライアントとネットワーク リソースが同じドメインまたは信頼されているドメインに属している場合は、信頼関係があると見なされます。 ネットワーク トポロジおよび組織のニーズに応じて、Windows 統合認証に使用される認証プロトコルをカスタマイズしたり、基本認証を使用したり、自分で提供したカスタムのフォームベースの認証拡張機能を使用したりすることができます。 認証の種類ごとに、個別にオンとオフを切り替えることができます。 レポート サーバーで複数の種類の要求を受け入れる場合は、複数の種類の認証を有効にすることができます。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) には、レポート サーバーに対してユーザーおよびクライアント アプリケーションを認証する構成可能なオプションがいくつか用意されています。 既定では、レポート サーバーは Windows 統合認証を使用し、クライアントとネットワーク リソースが同じドメインまたは信頼されているドメインに属している場合は、信頼関係があると見なされます。 ネットワーク トポロジおよび組織のニーズに応じて、Windows 統合認証に使用される認証プロトコルをカスタマイズしたり、基本認証を使用したり、自分で提供したカスタムのフォームベースの認証拡張機能を使用したりすることができます。 認証の種類ごとに、個別にオンとオフを切り替えることができます。 レポート サーバーで複数の種類の要求を受け入れる場合は、複数の種類の認証を有効にすることができます。
   
  レポート サーバーのコンテンツまたは操作へのアクセスを要求するすべてのユーザーとアプリケーションは、事前に認証を受けないとアクセスを許可されません。  
   
 ## <a name="authentication-types"></a>認証の種類  
  レポート サーバーのコンテンツまたは操作へのアクセスを要求するすべてのユーザーとアプリケーションは、レポート サーバーで構成されている認証の種類を使用して事前に認証を受けないとアクセスを許可されません。 次の表では、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]でサポートされている認証の種類について説明します。  
   
-|認証の種類の名前|HTTP 認証レイヤーの値|既定で使用|[説明]|  
+|認証の種類の名前|HTTP 認証レイヤーの値|既定で使用|説明|  
 |-----------------------------|-------------------------------------|---------------------|-----------------|  
 |RSWindowsNegotiate|ネゴシエート|はい|Windows 統合認証に対して Kerberos が最初に試行されますが、レポート サーバーへのクライアント要求に対して Active Directory でチケットを付与できない場合は NTLM に戻ります。 ネゴシエートは、チケットが使用できない場合にのみ NTLM に戻ります。 チケットがないのではなく、最初の試行でエラーになった場合は、レポート サーバーで 2 回目の試行は行われません。|  
 |RSWindowsNTLM|NTLM|はい|Windows 統合認証に NTLM を使用します。<br /><br /> 資格情報は、他の要求で委任または権限借用されません。 後続の要求は、新しい要求/応答シーケンスに従います。 ネットワークのセキュリティ設定によっては、ユーザーは資格情報または認証要求を透過的に処理するように要求される場合があります。|  
@@ -43,7 +43,7 @@ ms.locfileid: "65570895"
   
 |認証方法|説明|  
 |---------------------------|-----------------|  
-|匿名|レポート サーバーでは、配置にカスタム認証拡張機能が含まれている場合以外は、匿名ユーザーからの認証されていない要求は受け入れません。<br /><br /> 基本認証用に構成されたレポート サーバーでレポート ビルダーへのアクセスを有効にした場合、レポート ビルダーは認証されていない要求を受け入れます。<br /><br /> それ以外の場合、匿名の要求は [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]に到達する前に拒否され、HTTP ステータス 401 アクセス拒否エラーが発生します。 401 アクセス拒否を受信したクライアントは、有効な認証の種類を使用して要求を作成し直す必要があります。|  
+|Anonymous|レポート サーバーでは、配置にカスタム認証拡張機能が含まれている場合以外は、匿名ユーザーからの認証されていない要求は受け入れません。<br /><br /> 基本認証用に構成されたレポート サーバーでレポート ビルダーへのアクセスを有効にした場合、レポート ビルダーは認証されていない要求を受け入れます。<br /><br /> それ以外の場合、匿名の要求は [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]に到達する前に拒否され、HTTP ステータス 401 アクセス拒否エラーが発生します。 401 アクセス拒否を受信したクライアントは、有効な認証の種類を使用して要求を作成し直す必要があります。|  
 |シングル サインオン テクノロジ (SSO)|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]には、シングル サインオン テクノロジに対するネイティブ サポートはありません。 シングル サインオン テクノロジを使用する場合は、カスタム認証拡張機能を作成する必要があります。<br /><br /> レポート サーバー ホスティング環境では、ISAPI フィルターはサポートされません。 使用している SSO テクノロジが ISAPI フィルターとして実装されている場合、RSASecueID または RADIUS プロトコルの ISA Server 組み込みサポートの使用を検討してください。 それ以外の場合は、RS 用に ISA Server ISAPI または HTTPModule を作成できますが、直接 ISA Server を使用することをお勧めします。|  
 |Passport|SQL Server Reporting Services ではサポートされていません。|  
 |ダイジェスト|SQL Server Reporting Services ではサポートされていません。|  
@@ -75,7 +75,7 @@ ms.locfileid: "65570895"
 |フォーム認証、またはカスタム認証の種類を構成します。|[レポート サーバーでカスタム認証またはフォーム認証を構成する](../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)|  
 |[!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] がカスタム認証のシナリオを処理できるようにします。|[カスタム認証クッキーを送信するように Web ポータルを構成する](configure-the-web-portal-to-pass-custom-authentication-cookies.md)|  
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 [ネイティブ モードのレポート サーバーに対する権限の許可](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
 [RsReportServer.config 構成ファイル](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   

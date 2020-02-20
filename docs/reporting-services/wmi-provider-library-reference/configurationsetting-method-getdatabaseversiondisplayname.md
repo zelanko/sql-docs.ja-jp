@@ -11,10 +11,10 @@ ms.assetid: e1286424-7043-4f12-a7ad-1cf69e81baa4
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4d29ed7bc6e627f7ed670feca9b98b0b4fac3eb9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65570957"
 ---
 # <a name="configurationsetting-method---getdatabaseversiondisplayname"></a>ConfigurationSetting メソッド - GetDatabaseVersionDisplayName
@@ -31,7 +31,7 @@ public void GetDatabaseVersionDisplayName(string Version, string DisplayName, ou
 ```  
   
 ## <a name="parameters"></a>パラメーター  
- *バージョン*  
+ *Version*  
  レポート サーバー データベースのバージョン文字列を含む文字列。  
   
  *DisplayName*  
@@ -40,10 +40,10 @@ public void GetDatabaseVersionDisplayName(string Version, string DisplayName, ou
  *HRESULT*  
  [out] 呼び出しの成功または失敗を示す値。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  次の表に、データベース バージョンと表示文字列のマッピングを示します。  
   
-|**リリース**|**バージョン**|**表示名**|  
+|**リリース**|**Version**|**表示名**|  
 |-----------------|-----------------|----------------------|  
 |RS 2005 SP2|@DBVersion = 'C.0.8.54'|SQL Server 2005 SP2|  
 |RS 2005 SP1|@DBVersion = 'C.0.8.43'|SQL Server 2005 SP1|  

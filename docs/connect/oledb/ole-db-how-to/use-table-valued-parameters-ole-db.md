@@ -1,5 +1,5 @@
 ---
-title: テーブル値パラメーターを使用する (OLE DB) |Microsoft Docs
+title: テーブル値パラメーターの使用 (OLE DB) | Microsoft Docs
 description: テーブル値パラメーターの使用 (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -11,10 +11,10 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 7ec89b3fdafaba7fe81849ab2ae5b2baf926ef83
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67994595"
 ---
 # <a name="use-table-valued-parameters-ole-db"></a>テーブル値パラメーターの使用 (OLE DB)
@@ -22,7 +22,7 @@ ms.locfileid: "67994595"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  このサンプルは、[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 以降で動作します。 このサンプルの内容は次のとおりです。  
+  このサンプルは、[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 以降で動作します。 このサンプルでは、次の処理を実行します。  
   
 -   IOpenRowset::OpenRowset による動的探索を使用して、テーブル値パラメーターを作成します。  
   

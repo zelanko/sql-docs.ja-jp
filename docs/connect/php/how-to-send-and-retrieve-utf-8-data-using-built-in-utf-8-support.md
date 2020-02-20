@@ -1,5 +1,5 @@
 ---
-title: '方法: 組み込みの UTF-8 サポートを使用した UTF-8 データの送信と取得 | Microsoft Docs'
+title: 方法:組み込みの UTF-8 サポートを使用した UTF-8 データの送信と取得 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/23/2018
 ms.prod: sql
@@ -15,13 +15,13 @@ ms.assetid: 366c57cf-352f-4202-8074-6ddce44880d1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 74d64aa0a5a93587997bc66d064d0c5c47ffb132
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993384"
 ---
-# <a name="how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support"></a>方法: 組み込みの UTF-8 サポートを使用した UTF-8 データの送信と取得
+# <a name="how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support"></a>方法:組み込みの UTF-8 サポートを使用した UTF-8 データの送信と取得
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 PDO_SQLSRV ドライバーを使用している場合、PDO::SQLSRV_ATTR_ENCODING 属性を使用してエンコードを指定できます。 詳細については、「 [定数 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)」を参照してください。  

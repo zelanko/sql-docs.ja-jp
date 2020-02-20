@@ -1,5 +1,5 @@
 ---
-title: C++ODBC アプリケーションが SQL database へのアクセス
+title: SQL データベースにアクセスする C++ ODBC アプリ
 ms.custom: ''
 ms.date: 07/08/2019
 ms.prod: sql
@@ -10,19 +10,19 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 541757a8a6919577cfe54c7dd6efa461ae0f1449
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67690556"
 ---
-# <a name="c-odbc-example-application-accesses-a-sql-database"></a>C++SQL データベースにアクセスする ODBC アプリケーションの例
+# <a name="c-odbc-example-application-accesses-a-sql-database"></a>C++ODBC サンプル アプリケーションが SQL データベースにアクセスする
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-これは、C++サンプル アプリケーションは、ODBC Api に接続し、SQL データベースへのアクセスを使用する方法を示します。
+次の C++ のサンプル アプリケーションでは、ODBC API を使用して SQL データベースに接続し、アクセスする方法を示します。
 
-2013 年 10 月と年 2019年 7 月、このサンプルのC++ODBC アプリケーションが 47,300 回をダウンロードします。 年 2019年 7 月でこのアプリケーションのソースは、この web ページに Microsoft のコード ギャラリーから移動されました。
+2013 年 10 月から 2019 年 7 月までの間に、このサンプルの C++ ODBC アプリケーションは 47,300 回ダウンロードされました。 このアプリケーションのソースは、2019 年 7 月に Microsoft のコード ギャラリーからこの Web ページに移動されました。
 
 <!-- 
 docs/connect/odbc/ , cpp-code-example-app-connect-access-sql-db.md

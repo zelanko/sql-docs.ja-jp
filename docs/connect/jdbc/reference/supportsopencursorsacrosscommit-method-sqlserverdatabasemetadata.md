@@ -1,5 +1,5 @@
 ---
-title: Supportsopenカーソル Sacrosscommit メソッド |Microsoft Docs
+title: supportsOpenCursorsAcrossCommit メソッド | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: b7eed108-64cc-4be6-b297-8af6c1e3dc72
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 264f61c744be0ffc614ca3f45e5268715c680ed8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67969102"
 ---
 # <a name="supportsopencursorsacrosscommit-method-sqlserverdatabasemetadata"></a>supportsOpenCursorsAcrossCommit メソッド (SQLServerDatabaseMetaData)
@@ -35,13 +35,13 @@ public boolean supportsOpenCursorsAcrossCommit()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- サポートされている場合は**true** 。 それ以外の場合は、 **false**です。  
+ サポートされている場合は、**true** です。 それ以外の場合は、 **false**です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
- この Supportsopenカーソル Sacrosscommit メソッドは、java メタデータインターフェイスの Supportsopenカーソル Sacrosscommit メソッドによって指定されます。  
+## <a name="remarks"></a>解説  
+ この supportsOpenCursorsAcrossCommit メソッドは、java.sql.DatabaseMetaData インターフェイスの supportsOpenCursorsAcrossCommit メソッドで指定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

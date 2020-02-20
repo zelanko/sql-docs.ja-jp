@@ -1,5 +1,5 @@
 ---
-title: close メソッド (SQLServerConnection) |Microsoft Docs
+title: close メソッド (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: f0f26585-bdf7-4737-b434-8c7e115c8e94
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 87bce635f81db5c2b5e98768524d79082a940e2e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67955673"
 ---
 # <a name="close-method-sqlserverconnection"></a>close メソッド (SQLServerConnection)
@@ -37,7 +37,7 @@ public void close()
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  close メソッドは、java.sql.Connection インターフェイスの close メソッドで規定されています。  
   
  トランザクションの実行中に close メソッドを呼び出すと、トランザクションはロールバックされます。  

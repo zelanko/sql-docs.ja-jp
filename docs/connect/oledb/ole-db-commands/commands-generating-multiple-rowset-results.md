@@ -1,5 +1,5 @@
 ---
-title: 複数行セットの結果を生成するコマンド |Microsoft Docs
+title: 複数行セットの結果を生成するコマンド | Microsoft Docs
 description: 複数行セットの結果を生成するコマンド
 ms.custom: ''
 ms.date: 06/14/2018
@@ -18,10 +18,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 5374e1ccd1024993369091b431a025676bccf1f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "68016059"
 ---
 # <a name="commands-generating-multiple-rowset-results"></a>複数行セットの結果を生成するコマンド
@@ -29,14 +29,14 @@ ms.locfileid: "68016059"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  SQL Server の OLE DB ドライバーは、ステートメントから[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]複数の行セットを返すことができます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のステートメントは、次の条件が満たされた場合に複数行セットの結果を返します。  
+  OLE DB Driver for SQL Server では、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のステートメントから複数の行セットを返すことができます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のステートメントは、次の条件が満たされた場合に複数行セットの結果を返します。  
   
 -   バッチにまとめられた SQL ステートメントが 1 つのコマンドとして実行される場合。  
   
 -   ストアド プロシージャが SQL ステートメントのバッチを実装している場合。  
   
 ## <a name="batches"></a>バッチ  
- SQL Server の OLE DB ドライバーでは、SQL ステートメントのバッチ区切り記号としてセミコロン文字が認識されます。  
+ OLE DB Driver for SQL Server では、セミコロンを SQL ステートメントのバッチ区切り記号として認識します。  
   
 ```  
 WCHAR*       wSQLString = L"SELECT * FROM Categories; "  
@@ -53,6 +53,6 @@ WCHAR*       wSQLString = L"SELECT * FROM Categories; "
 -   [IMultipleResults を使用した複数の結果セットの処理](../../oledb/ole-db-commands/using-imultipleresults-to-process-multiple-result-sets.md)  
   
 ## <a name="see-also"></a>参照  
- [[コマンド]](../../oledb/ole-db-commands/commands.md)  
+ [コマンド](../../oledb/ole-db-commands/commands.md)  
   
   

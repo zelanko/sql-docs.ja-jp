@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル: レポートへの横棒グラフの追加 (レポート ビルダー) | Microsoft Docs'
+title: チュートリアル:レポートへの横棒グラフの追加 (レポート ビルダー) | Microsoft Docs
 ms.date: 06/15/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,14 +9,14 @@ ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8e6855a7a6a47021a635e12b2c53515ed20aa6f4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "63041185"
 ---
-# <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>チュートリアル: レポートへの横棒グラフの追加 (レポート ビルダー)
-このチュートリアルでは、ウィザードを使用して、 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] で [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] のページ分割されたレポートに横棒グラフを作成します。 次にフィルターを追加してグラフを強化します。 
+# <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>チュートリアル:レポートへの横棒グラフの追加 (レポート ビルダー)
+このチュートリアルでは、ウィザードを使用して、[!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] で [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] のページ分割されたレポートに横棒グラフを作成します。 次にフィルターを追加してグラフを強化します。 
 
 横棒グラフでは、カテゴリ データが水平方向に表示されます。 これは、次のようなことに役立ちます。  
   
@@ -30,9 +30,9 @@ ms.locfileid: "63041185"
   
  
 > [!NOTE]  
-> このチュートリアルでは、ウィザードに関する複数の手順を 1 つにまとめて示します。 レポート サーバーの参照、データセットの作成、データ ソースの選択に関する詳細な手順については、このシリーズの最初のチュートリアル (「[チュートリアル: 基本的な表レポートの作成 (レポート ビルダー)](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)」) を参照してください。  
+> このチュートリアルでは、ウィザードに関する複数の手順を 1 つにまとめて示します。 レポート サーバーの参照、データセットの作成、およびデータ ソースの選択に関する詳細な手順については、このシリーズの最初のチュートリアルである「[チュートリアル:基本的な表レポートの作成 &#40;レポート ビルダー&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)」を参照してください。  
   
-このチュートリアルの推定所要時間: 15 分  
+このチュートリアルの推定所要時間:15 分。  
   
 ## <a name="requirements"></a>必要条件  
 要件に関する詳細については、「[チュートリアルの前提条件 (レポート ビルダー)](../reporting-services/prerequisites-for-tutorials-report-builder.md)」を参照してください。  
@@ -47,7 +47,7 @@ ms.locfileid: "63041185"
   
      **[作業の開始]** ダイアログ ボックスが表示されます。  
   
-     ![レポート ビルダーの作業の開始](../reporting-services/media/rb-getstarted.png "レポート ビルダーの作業の開始")  
+     ![レポート ビルダーの概要](../reporting-services/media/rb-getstarted.png "レポート ビルダーの概要")  
   
      **[作業の開始]** ダイアログ ボックスが表示されない場合は、 **[ファイル]**  > **[新規作成]** をクリックします。 **[新しいレポートまたはデータセット]** ダイアログ ボックスは、 **[作業の開始]** ダイアログ ボックスとほぼ同じ内容です。 
       
@@ -93,7 +93,7 @@ ms.locfileid: "63041185"
   
 2.  **[横棒]** をクリックし、 **[次へ]** をクリックします。  
   
-    **[グラフのフィールドの配置]** ページでは、 **使用できるフィールド** ペインに、FirstName、LastName、SalesYear2015、および SalesYear2014 の 4 つのフィールドがあります。  
+    **[グラフのフィールドの配置]** ページでは、 **[使用できるフィールド]** ペインに 4 つのフィールドFirstName、LastName、SalesYear2015、SalesYear2014 があります。  
   
 3.  LastName をカテゴリ ペインにドラッグします。  
   
@@ -199,7 +199,7 @@ ms.locfileid: "63041185"
   
 1.  レポート デザイン ビューに切り替えます。  
   
-2.  グラフ上部の **[グラフのタイトル]** というテキストを選択し、「 **Sales for 2014 and 2015**」と入力します。  
+2.  グラフ上部の **[グラフのタイトル]** というテキストを選択し、「**Sales for 2014 and 2015**」と入力します。  
   
 3.  [プロパティ] ペインで、タイトルを選択した状態で **[色]** を **[黒]** に、 **[フォント サイズ]** を **[12 ポイント]** に変更します。 
   
@@ -293,7 +293,7 @@ ms.locfileid: "63041185"
   
 4.  **[保存]** をクリックします。   
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>次の手順  
 これで、「レポートへの横棒グラフの追加」チュートリアルを終了します。 グラフの詳細については、「 [グラフ](../reporting-services/report-design/charts-report-builder-and-ssrs.md) 」と「 [横棒グラフ](../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  

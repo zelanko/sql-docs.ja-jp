@@ -12,10 +12,10 @@ ms.assetid: ef84ce9d-9156-48e9-8073-7e0535476932
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5723122c76b02900f6906c03efb807e58ebcc6d9
-ms.sourcegitcommit: 3f2936e727cf8e63f38e5f77b33442993ee99890
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67313974"
 ---
 # <a name="configure-a-report-server-reporting-services-native-mode"></a>レポート サーバーの構成 (Reporting Services ネイティブ モード)
@@ -27,9 +27,9 @@ ms.locfileid: "67313974"
   
 -   アプリケーション データ、レポート、およびその他のアイテムを格納するレポート サーバー データベース  
   
- ネイティブ モードの既定の構成または SharePoint 統合モードの既定の構成のいずれかのインストール オプションを選択した場合は、セットアップによって最小の設定が構成されます。 レポート サーバーをファイルのみのモードでインストールした場合 (インストール ウィザードで **[サーバーを構成せずにインストールする]** オプションを選択した場合) は、サービス アカウントのみ構成されます。 Web サービス URL とレポート サーバー データベースは、セットアップの完了後に構成する必要があります。  
+ インストール オプションとしてネイティブ モードの既定の構成か SharePoint 統合モードの既定の構成を選択した場合、セットアップにより最小設定が構成されます。 レポート サーバーをファイルのみのモードでインストールした場合 (インストール ウィザードで **[サーバーを構成せずにインストールする]** オプションを選択した場合) は、サービス アカウントのみ構成されます。 Web サービス URL とレポート サーバー データベースは、セットアップの完了後に構成する必要があります。  
   
-レポート サーバーへのユーザー アクセスを付与して、レポート サーバー コンテンツの管理できるように、web ポータルを構成することをお勧めします。 SharePoint 統合モードでレポート サーバーを配置した場合、SharePoint サーバーの Web フロントエンドを使用してアクセス権を付与します。  
+レポート サーバーへのアクセスをユーザーに付与し、レポート サーバーのコンテンツを管理できるように Web ポータルを構成することをお勧めします。 SharePoint 統合モードでレポート サーバーを配置した場合、SharePoint サーバーの Web フロントエンドを使用してアクセス権を付与します。  
   
  レポート サーバーの電子メールや自動実行アカウントなどの追加の機能は、必要に応じて構成できます。 詳細については、「 [Reporting Services ネイティブ モードのレポート サーバーの管理](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)」を参照してください。  
   
@@ -47,8 +47,8 @@ ms.locfileid: "67313974"
   
 5.  「次の手順」の指示に従って配置を完了します。  
   
-## <a name="next-steps"></a>Next Steps  
- 配置を完了するには、Web ポータルまたは SharePoint 統合を構成する必要があります。 詳細については、次を参照してください。 [web ポータルを構成する](../../reporting-services/report-server/configure-web-portal.md)します。  
+## <a name="next-steps"></a>次の手順  
+ 配置を完了するには、Web ポータルまたは SharePoint 統合を構成する必要があります。 詳細については、「[Web ポータルの構成](../../reporting-services/report-server/configure-web-portal.md)」をご覧ください。  
   
  Windows ファイアウォールが有効になっている場合、レポート サーバーで使用するように構成されているポートは閉じられる可能性が高くなります。 ポートが閉じられている場合は、たとえばリモート クライアント コンピューターから Web ポータルを開こうとすると、空のページが返されます。 ファイアウォールの構成の詳細については、「 [レポート サーバー アクセスに対するファイアウォールの構成](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)」を参照してください。  
   

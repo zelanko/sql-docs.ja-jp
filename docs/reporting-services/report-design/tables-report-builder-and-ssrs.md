@@ -9,10 +9,10 @@ ms.assetid: 0a95c339-c5aa-49ad-b1c8-72824b7a9c82
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 319f221116d49cab52b0c01a273db565a9049669
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65574739"
 ---
 # <a name="tables-report-builder--and-ssrs"></a>テーブル (レポート ビルダーおよび SSRS)
@@ -20,7 +20,7 @@ ms.locfileid: "65574739"
    
  データは、1 つのフィールドまたは複数のフィールドでグループ化することも、独自の式を記述してグループ化することもできます。 入れ子になったグループまたは独立した隣接するグループを作成できます。 グループ化されたデータの集計値を表示するには、合計をグループに追加します。 行と列を書式設定して、強調するデータを強調表示します。 最初は詳細データまたはグループ化されたデータを非表示にして、ユーザーが表示するデータを対話的に選択できるドリルダウンの切り替えを含めることもできます。  
   
- テーブルの使用をすぐに開始するには、「[チュートリアル: 基本的な表レポートの作成 (レポート ビルダー)](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)」または「[基本的なテーブル レポートの作成 (SSRS チュートリアル)](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)」を参照してください。  
+ テーブルをすぐに使用するには、「[チュートリアル:基本的な表レポートの作成 &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)」または「[基本的なテーブル レポートの作成 &#40;SSRS チュートリアル&#41;](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)」を参照してください。  
   
 > [!NOTE]  
 >  テーブルは、レポート パーツとしてレポートとは別にパブリッシュできます。 [レポート パーツ](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)の詳細を参照してください。  
@@ -42,7 +42,7 @@ ms.locfileid: "65574739"
   
  ![デザイン画面上のテーブル テンプレート、選択](../../reporting-services/report-design/media/rs-tabletemplatenewselected.gif "デザイン画面上のテーブル テンプレート、選択")  
   
- データ行の行ハンドルは、詳細シンボル (![詳細行の 3 本の平行線がある行ハンドル](../../reporting-services/report-design/media/rs-icontablix-detailsrow.gif "詳細行の 3 本の平行線がある行ハンドル")) を示します。 これらの行にデータを表示するには、レポート データ ペインからヘッダーまたは詳細行のテーブル セルにフィールドをドラッグします。 両方の行に同時にデータが表示されます。 列を追加するには、挿入ポイントが表示されるまでフィールドをテーブルにドラッグします。 テーブルにデータセット フィールドを追加した後、日付と通貨の既定の書式を変更して、これらの値がレポートに表示される方法を制御できます。 次の図に、Date、Order、Product、Qty、および Line Total フィールドを含むテーブル データ領域を示します。  
+ データ行の行ハンドルは、詳細シンボル (![詳細行の 3 本の平行線がある行ハンドル](../../reporting-services/report-design/media/rs-icontablix-detailsrow.gif "詳細行の 3 本の平行線がある行ハンドル")) を示します。 これらの行にデータを表示するには、レポート データ ペインからヘッダーまたは詳細行のテーブル セルにフィールドをドラッグします。 両方の行に同時にデータが表示されます。 列を追加するには、挿入ポイントが表示されるまでフィールドをテーブルにドラッグします。 テーブルにデータセット フィールドを追加した後、日付と通貨の既定の書式を変更して、これらの値がレポートに表示される方法を制御できます。 次の図は、次のフィールドを含むテーブル データ領域を示しています:Date、Order、Product、Qty、および Line Total です。  
   
  ![デザイン、列ヘッダーが太字のテーブル](../../reporting-services/report-design/media/rs-basictabledetailsformatteddesign.gif "デザイン、列ヘッダーが太字のテーブル")  
   
@@ -79,7 +79,7 @@ ms.locfileid: "65574739"
 ### <a name="adding-totals-to-row-groups"></a>行グループへの合計の追加  
  グループの合計を表示するには、状況依存の **[合計の追加]** コマンドを使用できます。 行グループに対して [合計の追加] コマンドを使用すると、グループに対して 1 回だけ繰り返されるようにグループの外側に行が追加されます。 入れ子になっているグループの場合、子グループの合計行は子グループの外側で、親グループの内側に配置されます。 そのような場合は、子グループの合計行の背景色を設定して詳細行と区別すると便利です。 また、別の背景色を使用してテーブルのヘッダー行とフッター行を区別することもできます。 次の図に、注文番号に基づいたグループの合計行が追加されたテーブルを示します。  
   
- ![デザイン ビュー、グループとテーブルに合計行を追加](../../reporting-services/report-design/media/rs-basictablegroupstotalscolordesign.gif "デザイン ビュー、グループとテーブルに合計行を追加")  
+ ![[デザイン] ビュー、グループとテーブルに合計行を追加](../../reporting-services/report-design/media/rs-basictablegroupstotalscolordesign.gif "[デザイン] ビュー、グループとテーブルに合計行を追加")  
   
  レポートを表示すると、注文の小計を表示する行が注文番号ごとに 1 回繰り返されます。 テーブル フッターには、すべての日付の合計が表示されます。 次の図では、最後の数行に、最後の 3 つの詳細行、最後の注文番号 SO71952 の小計、およびテーブルのすべての日付の合計が表示されています。  
   
@@ -92,7 +92,7 @@ ms.locfileid: "65574739"
   
  テーブルから詳細行を削除するには、グループ化ペインを使用します。 詳細グループを選択し、ショートカット メニューを使用して、詳細データを表示するグループと行を削除します。 次の図に、日付と注文番号でグループ化されたテーブルの [デザイン] ビューを示します。詳細行は含まれていません。 このテーブルには合計行は追加されていません。  
   
- ![デザイン ビュー、2 つのグループがあり、詳細はないテーブル](../../reporting-services/report-design/media/rs-basictablegroupsdrilldownnodetailsdesign.gif "デザイン ビュー、2 つのグループがあり、詳細はないテーブル")  
+ ![[デザイン] ビュー、2 つのグループがあり、詳細はないテーブル](../../reporting-services/report-design/media/rs-basictablegroupsdrilldownnodetailsdesign.gif "[デザイン] ビュー、2 つのグループがあり、詳細はないテーブル")  
   
  詳細行を削除すると、値のスコープは行グループに設定されます。 これで詳細データは表示されません。  
   
@@ -113,7 +113,7 @@ ms.locfileid: "65574739"
   
 ## <a name="see-also"></a>参照  
  [データのフィルター、グループ化、および並べ替え (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [式 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
+ [式 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [式の例 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [テーブル、マトリックス、および一覧 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   

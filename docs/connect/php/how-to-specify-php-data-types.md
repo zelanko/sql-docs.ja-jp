@@ -1,5 +1,5 @@
 ---
-title: '方法: PHP データ型を指定する |Microsoft Docs'
+title: 方法:PHP データ型を指定する | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,13 +14,13 @@ ms.assetid: fee6e6b8-aad9-496b-84a2-18d2950470a4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ae00c01e962da05015a5132608915fc9d70258f4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67936395"
 ---
-# <a name="how-to-specify-php-data-types"></a>方法: PHP データ型を指定する
+# <a name="how-to-specify-php-data-types"></a>方法:PHP データ型を指定する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 PDO_SQLSRV ドライバーを使用する場合、PDOStatement::bindColumn と PDOStatement::bindParam を使用してサーバーからデータを取得するときに PHP データ型を指定できます。 詳細については、「 [PDOStatement::bindColumn](../../connect/php/pdostatement-bindcolumn.md) 」および「 [PDOStatement::bindParam](../../connect/php/pdostatement-bindparam.md) 」を参照してください。  

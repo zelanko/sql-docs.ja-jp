@@ -1,5 +1,5 @@
 ---
-title: '方法: SQLSRV ドライバーを使用して I/O パラメーターを取得する | Microsoft Docs'
+title: 方法:SQLSRV ドライバーを使用して I/O パラメーターを取得する | Microsoft Docs
 ms.custom: ''
 ms.date: 04/12/2018
 ms.prod: sql
@@ -12,13 +12,13 @@ ms.assetid: 9a7c5f60-67f9-4968-a3a8-c256ee481da2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 27290272b72b27d3bb051da4e7d9a8df202461c5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67993459"
 ---
-# <a name="how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver"></a>方法: SQLSRV ドライバーを使用して入力/出力パラメーターを取得する
+# <a name="how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver"></a>方法:SQLSRV ドライバーを使用して入力/出力パラメーターを取得する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 このトピックでは、SQLSRV ドライバーを使用して 1 つのパラメーターが入力/出力パラメーターとして定義されているストアド プロシージャを呼び出す方法、およびその結果を取得する方法について説明します。 出力パラメーターまたは入出力パラメーターを取得する場合、返されるパラメーター値にアクセスできるようになる前に、ストアド プロシージャによって返されるすべての結果を使用する必要があります。  
@@ -30,7 +30,7 @@ ms.locfileid: "67993459"
 次の例では、指定された従業員の使用可能な休暇時間から使用済みの休暇時間数を減算するストアド プロシージャを呼び出します。 使用済みの休暇時間数を表す変数 *$vacationHrs*は、入力パラメーターとしてストアド プロシージャに渡されます。 ストアド プロシージャは、使用可能な休暇時間を更新した後、同じパラメーターを使用して残りの休暇時間数を返します。  
   
 > [!NOTE]  
-> *$vacationHrs* を 4 に初期化すると、返される PHPTYPE が整数に設定されます。 データ型の整合性を確保するため、ストアド プロシージャを呼び出す前に入力/出力パラメーターを初期化するか、目的の PHPTYPE を指定する必要があります。 PHPTYPE の指定については、「 [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md)」を参照してください。  
+> *$vacationHrs* を 4 に初期化すると、返される PHPTYPE が整数に設定されます。 データ型の整合性を確保するため、ストアド プロシージャを呼び出す前に入力/出力パラメーターを初期化するか、目的の PHPTYPE を指定する必要があります。 PHPTYPE の指定については、「[方法: PHP データ型を指定する](../../connect/php/how-to-specify-php-data-types.md)」を参照してください。  
   
 ストアド プロシージャは 2 つの結果を返すため、ストアド プロシージャが実行された後に [sqlsrv_next_result](../../connect/php/sqlsrv-next-result.md) を呼び出して出力パラメーターの値を使用できるようにする必要があります。 **sqlsrv_next_result** の呼び出しの後、 *$vacationHrs* にはストアド プロシージャによって返される出力パラメーターの値が含まれます。  
   
@@ -122,10 +122,10 @@ sqlsrv_close( $conn);
 ```  
 
 > [!NOTE]
-> 入力/出力パラメーターを bigint 型にバインドするときに、値が[整数](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)の範囲外になる可能性がある場合は、SQL フィールド型を SQLSRV_SQLTYPE_BIGINT として指定する必要があります。 それ以外の場合は、"範囲外の値" の例外が発生する可能性があります。
+> 入力または出力パラメーターを bigint 型にバインドすると、値が [integer](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md) の範囲外になる可能性がある場合、その SQL フィールド型を SQLSRV_SQLTYPE_BIGINT として指定する必要があります。 そうしないと、"範囲外の値" の例外が発生する可能性があります。
 
 ## <a name="example-2"></a>例 2
-このコードサンプルでは、大きな bigint 値を入力/出力パラメーターとしてバインドする方法を示します。  
+このコード サンプルでは、大きな bigint 値を入力または出力パラメーターとしてバインドする方法を示しています。  
 
 ```
 <?php
