@@ -14,18 +14,18 @@ ms.assetid: 0ba2093e-9393-4eb6-af06-9da10988cfaf
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b385e04cf2efa103dba4a66d4e794a7984814fb4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "67140268"
 ---
 # <a name="create-modify-and-delete-data-driven-subscriptions"></a>データ ドリブン サブスクリプションを作成、変更、および削除する
   データ ドリブン サブスクリプションは、サブスクリプションの処理に使用するデータ値を実行時に取得するためのクエリ ベースのサブスクリプションです。 データ ドリブン サブスクリプションが開始されると、クエリが実行され、受信者、レポート配信オプション、表示形式、およびパラメーター設定に関する最新情報が取得されます。 このクエリ結果がサブスクリプション定義に組み込まれ、既存のデータを使用する動的サブスクリプションが作成されます。この動的サブスクリプションは、従業員データベース、顧客データベースなど、サブスクライバーのデータ ソースとして利用可能なすべてのデータベースのデータを使用します。  
   
- を新しいデータ ドリブン サブスクリプションを作成または既存のサブスクリプションを変更するには使用、**管理** > **サブスクリプション**web ポータルのページ。 **サブスクリプション**ページを作成または変更するサブスクリプションの各手順をについて説明します。 サブスクリプションを作成した後それにアクセスするには、 **[個人用サブスクリプション]** ページか、レポートの [サブスクリプション] の一覧を使用します。 データ ドリブン サブスクリプションを作成する方法については、「[データ ドリブン サブスクリプションの作成 (SSRS チュートリアル)](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)」を参照してください。  
+ 新しいデータ ドリブン サブスクリプションを作成するか、既存のサブスクリプションを変更するには、Web ポータルで **[管理]** の **[サブスクリプション]** ページを使用します。 **[サブスクリプション]** ページでは、サブスクリプションの作成または変更の各手順を進めていきます。 サブスクリプションを作成した後それにアクセスするには、 **[個人用サブスクリプション]** ページか、レポートの [サブスクリプション] の一覧を使用します。 データ ドリブン サブスクリプションを作成する方法については、「[データ ドリブン サブスクリプションの作成 (SSRS チュートリアル)](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)」を参照してください。  
   
- この記事の内容は次のとおりです。  
+ この記事の内容:  
   
 -   [データ ドリブン サブスクリプションの管理および削除](#bkmk_manage_and_delete)  
   
@@ -36,9 +36,9 @@ ms.locfileid: "67140268"
 -   [サブスクリプションの実行](#bkmk_run_subscription)  
   
 ##  <a name="bkmk_manage_and_delete"></a> データ ドリブン サブスクリプションの管理および削除  
- 進行中のデータ ドリブン サブスクリプションを停止または web ポータルから削除されることはできません。 そのため、共有スケジュールを使用してデータ ドリブン サブスクリプションを開始すると便利です。 一時的にサブスクリプションを処理しないようにする場合は、サブスクリプションを開始するスケジュールを一時停止できます。 詳細については、「 [ネイティブ モード レポート サーバーのサブスクリプションの作成と管理](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)」を参照してください。  
+ 実行中のデータ ドリブン サブスクリプションは、Web ポータルで停止できず、削除できません。 そのため、共有スケジュールを使用してデータ ドリブン サブスクリプションを開始すると便利です。 一時的にサブスクリプションを処理しないようにする場合は、サブスクリプションを開始するスケジュールを一時停止できます。 詳細については、「 [ネイティブ モード レポート サーバーのサブスクリプションの作成と管理](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)」を参照してください。  
   
- データ ドリブン サブスクリプションを削除するには、レポートの横にあるチェック ボックスをオン、**サブスクリプション**] ページの [選び**削除**します。  
+ データ ドリブン サブスクリプションを削除するには、 **[サブスクリプション]** ページでレポートの横にあるチェックボックスをオンにし、 **[削除]** を選択します。  
   
  データ ドリブン サブスクリプションを取り消す方法については、「 [実行中の処理を管理する](../../reporting-services/subscriptions/manage-a-running-process.md)」を参照してください。  
   
@@ -47,11 +47,11 @@ ms.locfileid: "67140268"
   
 ### <a name="to-create-a-data-driven-subscription-native-mode"></a>データ ドリブン サブスクリプションを作成するには (ネイティブ モード)  
   
-1. Web ポータルでレポートを含んでいるフォルダーに移動し、レポートを右クリックしておよび選択**管理**ドロップダウン メニューから。  
+1. Web ポータルで、レポートが格納されているフォルダーに移動し、レポートを右クリックし、ドロップダウン メニューから **[管理]** を選択します。  
   
 2. **[サブスクリプション]** タブをクリックします。  
   
-3. 選択 **+ 新しいサブスクリプション**上、**サブスクリプション**ページ。  
+3. **[サブスクリプション]** ページで **[+ 新しいサブスクリプション]** を選択します。  
   
 ### <a name="to-create-a-data-driven-subscription-sharepoint-mode"></a>データ ドリブン サブスクリプションを作成するには (SharePoint モード)  
   
@@ -61,11 +61,11 @@ ms.locfileid: "67140268"
   
 ### <a name="to-modify-an-existing-data-driven-subscription-native-mode"></a>既存のデータ ドリブン サブスクリプションを変更するには (ネイティブ モード)  
   
-1. Web ポータルでレポートを含んでいるフォルダーに移動し、レポートを右クリックしておよび選択**管理**ドロップダウン メニューから。  
+1. Web ポータルで、レポートが格納されているフォルダーに移動し、レポートを右クリックし、ドロップダウン メニューから **[管理]** を選択します。  
   
 2. **[サブスクリプション]** タブをクリックします。  
   
-3. 変更、および選択するサブスクリプションの横にあるチェック ボックスをオン**編集**します。 データ ドリブン サブスクリプションでは、値「データドリブン」、**型**列。  
+3. 変更するサブスクリプションの横にあるチェックボックスをオンにし、 **[編集]** を選択します。 データ ドリブン サブスクリプションの **[型]** 列には値 "Data-driven" が入ります。  
   
 ### <a name="to-modify-an-existing-data-driven-subscription-sharepoint-mode"></a>既存のデータ ドリブン サブスクリプションを変更するには (SharePoint モード)  
   
@@ -103,5 +103,5 @@ ms.locfileid: "67140268"
  [サブスクリプションと配信 &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [レポート サーバーの Web ポータル (SSRS ネイティブ モード)](../../reporting-services/web-portal-ssrs-native-mode.md)   
  [ネイティブ モード レポート サーバーのサブスクリプションの作成と管理](create-and-manage-subscriptions-for-native-mode-report-servers.md)   
- [サブスクリプションの操作 (web ポータル)](../../reporting-services/working-with-subscriptions-web-portal.md) [使用マイ サブスクリプション (ネイティブ モード レポート サーバー)](../../reporting-services/subscriptions/use-my-subscriptions-native-mode-report-server.md)  
+ [サブスクリプションの使用 (Web ポータル)](../../reporting-services/working-with-subscriptions-web-portal.md) [個人用サブスクリプションの使用 (ネイティブ モード レポート サーバー)](../../reporting-services/subscriptions/use-my-subscriptions-native-mode-report-server.md)  
  
