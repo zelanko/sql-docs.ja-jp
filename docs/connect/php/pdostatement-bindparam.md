@@ -1,5 +1,5 @@
 ---
-title: 'PDOStatement:: bindParam |Microsoft Docs'
+title: PDOStatement::bindParam | Microsoft Docs
 ms.custom: ''
 ms.date: 05/22/2018
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 65212058-2632-47a4-ba7d-2206883abf09
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: cd3332f9dc12d1cf7df22c097ab9370606985a68
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 77b0899d6bc0a73db5e0cfa7794209ab74ed25ef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67936155"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76918652"
 ---
 # <a name="pdostatementbindparam"></a>PDOStatement::bindParam
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -30,20 +30,20 @@ bool PDOStatement::bindParam($parameter, &$variable[, $data_type[, $length[, $dr
 ```  
   
 #### <a name="parameters"></a>パラメーター  
-$*parameter*: (混合) パラメーター識別子。 名前付きプレースホルダーを使用するステートメントの場合、パラメーター名 (:name) を使用します。 疑問符構文を使用する準備されたステートメントの場合、これはパラメーターの 1 から始まるインデックスになります。  
+$*parameter*:(混合) パラメーター識別子。 名前付きプレースホルダーを使用するステートメントの場合、パラメーター名 (:name) を使用します。 疑問符構文を使用する準備されたステートメントの場合、これはパラメーターの 1 から始まるインデックスになります。  
   
-&$*variable*: SQL ステートメント パラメーターにバインドする PHP 変数の (混合の) 名前。  
+&$*variable*:SQL ステートメント パラメーターにバインドする PHP 変数の (混合の) 名前。  
   
-$*data_type*: 省略可能な (整数の) PDO::PARAM_* 定数。 既定値は PDO::PARAM_STR です。  
+$*data_type*:省略可能な (整数の) PDO::PARAM_* 定数。 既定値は PDO::PARAM_STR です。  
   
-$*length*: データ型の省略可能な (整数の) 長さ。 $*data_type* で PDO::PARAM_INT または PDO::PARAM_BOOL を使用している場合は、既定のサイズを示すように PDO::SQLSRV_PARAM_OUT_DEFAULT_SIZE を指定できます。  
+$*length*:データ型の省略可能な (整数の) 長さ。 $*data_type* で PDO::PARAM_INT または PDO::PARAM_BOOL を使用している場合は、既定のサイズを示すように PDO::SQLSRV_PARAM_OUT_DEFAULT_SIZE を指定できます。  
   
-$*driver_options*: オプションの (mixed) ドライバー固有のオプション。 たとえば、PDO::SQLSRV_ENCODING_UTF8 と指定すると、UTF-8 でエンコードされた文字列として列を変数にバインドできます。  
+$*driver_options*:省略可能な (混合の) ドライバー固有のオプション。 たとえば、PDO::SQLSRV_ENCODING_UTF8 と指定すると、UTF-8 でエンコードされた文字列として列を変数にバインドできます。  
   
 ## <a name="return-value"></a>戻り値  
 成功した場合は TRUE、それ以外の場合は FALSE です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 varbinary、binary、または varbinary(max) の各型のサーバー列に null データをバインドする場合は、$*driver_options* を使用してバイナリ エンコード (PDO::SQLSRV_ENCODING_BINARY) を指定する必要があります。 エンコード定数の詳細については、「[定数](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md) 」を参照してください。  
   
 PDO のサポートは [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]のバージョン 2.0 で追加されました。  
@@ -99,7 +99,7 @@ echo $input1;
 ```  
   
 > [!NOTE]
-> 出力パラメーターを bigint 型にバインドするときに、値が[整数](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)の範囲外になる可能性がある場合は、pdo::P ARAM_INT with pdo:: SQLSRV_PARAM_OUT_DEFAULT_SIZE を使用すると、"値が範囲を超えています" という例外が発生する可能性があります。 そのため、代わりに既定の PDO::P ARAM_STR を使用して、結果の文字列のサイズを最大で21インチに指定します。 任意の bigint 値の最大桁数 (負の符号を含む) です。 
+> 出力パラメーターを bigint 型にバインドする際に、値が[整数](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)の範囲外になる可能性がある場合、PDO::SQLSRV_PARAM_OUT_DEFAULT_SIZE と共に PDO::PARAM_INT を使用すると、"値が範囲外です" という例外が発生することがあります。 そのため、代わりに既定の PDO::P ARAM_STR を使用して、結果の文字列のサイズを指定します。最大は 21 です。 任意の bigint 値の最大桁数 (負の符号を含む) です。 
 
 ## <a name="example"></a>例  
 このコード サンプルは、入力/出力パラメーターを使用する方法を示しています。  
@@ -133,7 +133,7 @@ $server = "(local)";
 $conn = new PDO("sqlsrv:server=$server ; Database = $database", "", "");  
 
 // Assume TestTable exists with a decimal field 
-$input = 9223372036854.80000;
+$input = "9223372036854.80000";
 $stmt = $conn->prepare("INSERT INTO TestTable (DecimalCol) VALUES (?)");
 // by default it is PDO::PARAM_STR, rounding of a large input value may
 // occur if PDO::PARAM_INT is specified

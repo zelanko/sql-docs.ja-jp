@@ -1,6 +1,7 @@
 ---
-title: フェールオーバー クラスター インスタンスのフェールオーバー ポリシー | Microsoft Docs
-ms.custom: ''
+title: フェールオーバー クラスター インスタンスのフェールオーバー ポリシー
+description: SQL Server フェール オーバー クラスターインスタンスに使用できるさまざまなフェールオーバー ポリシーの説明。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 39ceaac5-42fa-4b5d-bfb6-54403d7f0dc9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8e2fae9bbc5f0f601f4d455204df6c9d18383458
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 153de78e01099cf1079c6fe0ad34c15c6d7afc44
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68044751"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258163"
 ---
 # <a name="failover-policy-for-failover-cluster-instances"></a>Failover Policy for Failover Cluster Instances
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +77,7 @@ ms.locfileid: "68044751"
   
 4.  io_subsystem  
   
-5.  イベント  
+5.  events  
   
  system、resource、および query process コンポーネントはエラー検出に使用されます。 io_subsytem および events コンポーネントは、診断目的でのみ使用されます。  
   
@@ -92,7 +93,7 @@ ms.locfileid: "68044751"
   
  「[sp_server_diagnostics &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md)」を確認してください。このシステム ストアド プロシージャは、エラー条件レベルで重要な役割を果たします。  
   
-|Level|条件|[説明]|  
+|Level|条件|説明|  
 |-----------|---------------|-----------------|  
 |0|自動フェールオーバーまたは再起動なし|どのようなエラー状態でも、フェールオーバーまたは再起動が自動的に行われないことを示します。 このレベルは、システム メンテナンスの目的でのみ使用されます。|  
 |1|サーバーの停止によるフェールオーバーまたは再起動|次の状態が発生した場合に、サーバーの再起動またはフェールオーバーが行われることを示します。<br /><br /> SQL Server サービスが停止した。|  

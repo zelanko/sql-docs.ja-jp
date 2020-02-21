@@ -1,10 +1,9 @@
 ---
-title: テーブルの作成と更新 (SSMS) | Microsoft Docs
-ms.custom: ''
+title: テーブルの作成と更新
+ms.custom: seo-lt-2019
 ms.date: 08/25/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,19 +16,21 @@ helpviewer_keywords:
 ms.assetid: c49e0155-5dcb-481f-9538-e1bde77105e2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8c10e17fd9da739eecc07536b40be3964705abef
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 42da7ce86560e77cc7757f8077b0c0aca8775d93
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263769"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254677"
 ---
 # <a name="create-and-update-database-tables"></a>データベース テーブルの作成と更新
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 テーブル デザイナーはビジュアル ツールであり、[データベース テーブル](../../relational-databases/tables/tables.md)の設計および視覚化を行うことができます。 SQL Server Management Studio (SSMS) テーブル デザイナーを使用して、テーブル、列、キー、インデックス、リレーションシップ、および制約を作成、編集、または削除します。  
 
   
-## <a name="create-a-table"></a>テーブルの作成  
+## <a name="create-a-table"></a>テーブルを作成する  
   
 1. データベースで **[テーブル]** ノードを右クリックし、 **[新規作成]**  >  **[テーブル]** を選択します。  
   
@@ -60,7 +61,7 @@ ms.locfileid: "68263769"
 [列のプロパティ](column-properties-visual-database-tools.md)  
 [テーブルへの列の追加](../../relational-databases/tables/add-columns-to-a-table-database-engine.md)  
 [主キーと外部キー](../../relational-databases/tables/primary-and-foreign-key-constraints.md)  
-[[インデックス]](../../relational-databases/indexes/indexes.md)  
+[インデックス](../../relational-databases/indexes/indexes.md)  
 [データ型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)  
 [SQL Server Management Studio (SSMS) のダウンロード](../download-sql-server-management-studio-ssms.md)  
 [Visual Studio でデータベースを作成し、テーブルを追加する](/visualstudio/data-tools/create-a-sql-database-by-using-a-designer)

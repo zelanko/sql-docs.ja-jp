@@ -1,27 +1,27 @@
 ---
 title: FILESTREAM データ
-description: FILESTREAM 属性を使用して SQL Server 2008 に格納されている大きな値のデータを操作する方法について説明します。
+description: FILESTREAM 属性によって SQL Server 2008 に格納されている大きな値のデータを操作する方法について説明します。
 ms.date: 08/15/2019
 ms.assetid: bd8b845c-0f09-4295-b466-97ef106eefa8
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: 83e793fac40a8e41850f2a45e138dd125130c13e
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 602dfe9c96c1e8713b90c607806dd09ed16a37b6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452210"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247759"
 ---
 # <a name="filestream-data"></a>FILESTREAM データ
 
 ![Download-DownArrow-Circled](../../../ssdt/media/download.png)[ADO.NET をダウンロードする](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-FILESTREAM ストレージ属性は、varbinary (max) 列に格納されているバイナリ (BLOB) データ用です。 FILESTREAM の前に、バイナリデータを格納するには特別な処理が必要でした。 テキストドキュメント、画像、ビデオなどの非構造化データは、多くの場合、データベースの外部に格納されるため、管理が困難になります。
+FILESTREAM ストレージ属性は、varbinary(max) 列に格納されているバイナリ (BLOB) データ用です。 FILESTREAM 以前は、バイナリデータの格納に特別な処理が必要でした。 テキスト ドキュメント、画像、ビデオなどの非構造化データは、多くの場合にデータベースの外部に格納されるため、管理が困難になります。
 
 > [!NOTE]
 > SqlClient を使用して FILESTREAM データを操作するには、.NET Framework 3.5 SP1 (またはそれ以降) または .NET Core をインストールする必要があります。
@@ -30,11 +30,11 @@ varbinary(max) 列に FILESTREAM 属性を指定すると、SQL Server では、
 
 ## <a name="sqlclient-support-for-filestream"></a>SqlClient による FILESTREAM のサポート
 
-Microsoft SqlClient Data Provider for SQL Server <xref:Microsoft.Data.SqlClient> は、<xref:System.Data.SqlTypes> 名前空間に定義された <xref:Microsoft.Data.SqlTypes.SqlFileStream> クラスを使用して、FILESTREAM データからの読み取りと FILESTREAM データへの書き込みをサポートします。 `SqlFileStream` は、データのストリームの読み取りと書き込みのためのメソッドを提供する <xref:System.IO.Stream> クラスから継承されます。 ストリームからの読み取りでは、ストリームからデータをバイト配列などのデータ構造に転送します。 書き込みは、データ構造からストリームにデータを転送します。
+Microsoft SqlClient Data Provider for SQL Server <xref:Microsoft.Data.SqlClient> は、<xref:System.Data.SqlTypes> 名前空間に定義された <xref:Microsoft.Data.SqlTypes.SqlFileStream> クラスを使用して、FILESTREAM データからの読み取りと FILESTREAM データへの書き込みをサポートします。 `SqlFileStream` は <xref:System.IO.Stream> クラスから継承されます。このクラスには、データのストリームの読み取りと書き込みのためのメソッドがあります。 ストリームからの読み取りでは、データをストリームからバイト配列などのデータ構造に転送します。 書き込みでは、データをデータ構造からストリームに転送します。
 
-### <a name="creating-the-sql-server-table"></a>SQL Server テーブルを作成する
+### <a name="creating-the-sql-server-table"></a>SQL Server テーブルの作成
 
-次の Transact-SQL ステートメントによって、従業員の名前の付いたテーブルが作成され、データ行が挿入されます。 FILESTREAM ストレージを有効にしたら、次のコード例と組み合わせてこのテーブルを使用できます。 SQL Server オンライン ブックの関連トピックへのリンクは、このトピックの終わりにあります。
+次の Transact-SQL ステートメントによって、従業員の名前の付いたテーブルが作成され、データ行が挿入されます。 FILESTREAM ストレージを有効にしたら、このテーブルを以下のコード例と組み合わせて使用できます。 SQL Server オンライン ブックの関連トピックへのリンクは、このトピックの終わりにあります。
 
 ```sql
 CREATE TABLE employees
@@ -50,13 +50,13 @@ Values(1, 0x00, default)
 GO
 ```
 
-### <a name="example-reading-overwriting-and-inserting-filestream-data"></a>例: FILESTREAM データの読み取り、上書き、および挿入
+### <a name="example-reading-overwriting-and-inserting-filestream-data"></a>例:FILESTREAM データの読み取り、上書き、および挿入
 
-次のサンプルは、FILESTREAM からデータを読み取る方法を示しています。 このコードは、ファイルへの論理パスを取得し、`FileAccess` を `Read` に、`FileOptions` を `SequentialScan` に設定します。 次に、コードは SqlFileStream からバッファーにバイトを読み取ります。 次に、バイトがコンソールウィンドウに書き込まれます。
+次のサンプルは、FILESTREAM からデータを読み取る方法を示しています。 このコードでは、ファイルへの論理パスを取得し、`FileAccess` を `Read` に、`FileOptions` を `SequentialScan` に設定します。 次に、コードが SqlFileStream からバッファーにバイトを読み取ります。 次に、バイトがコンソール ウィンドウに書き込まれます。
 
-また、このサンプルでは、既存のすべてのデータが上書きされる FILESTREAM にデータを書き込む方法も示します。 このコードは、ファイルへの論理パスを取得し、`SqlFileStream` を作成し、`FileAccess` を `Write` に、`FileOptions` を `SequentialScan` に設定します。 1バイトが `SqlFileStream` に書き込まれ、ファイル内のすべてのデータが置き換えられます。
+さらに、このサンプルでは、既存のすべてのデータが上書きされる FILESTREAM にデータを書き込む方法も示しています。 このコードでは、ファイルへの論理パスを取得し、`SqlFileStream` を作成して、`FileAccess` を `Write` に、`FileOptions` を `SequentialScan` に設定します。 1 バイトが `SqlFileStream` に書き込まれ、ファイル内のすべてのデータが置き換えられます。
 
-このサンプルはまた、Seek メソッドを使用してデータをファイルの末尾に追加することによって、データを FILESTREAM に書き込む方法を示しています。 このコードは、ファイルへの論理パスを取得し、`SqlFileStream` を作成し、`FileAccess` を `ReadWrite` に、`FileOptions` を `SequentialScan` に設定します。 このコードでは、Seek メソッドを使用してファイルの末尾をシークし、既存のファイルに1バイトを追加します。
+このサンプルはまた、Seek メソッドを使用してデータをファイルの末尾に追加することによって、データを FILESTREAM に書き込む方法を示しています。 このコードでは、ファイルへの論理パスを取得し、`SqlFileStream` を作成して、`FileAccess` を `ReadWrite` に、`FileOptions` を `SequentialScan` に設定します。 このコードは、Seek メソッドを使用してファイルの末尾までシークし、既存のファイルに 1 バイトを追加します。
 
 ```csharp
 using System;
@@ -183,16 +183,16 @@ namespace FileStreamTest
 
 別のサンプルについては、「[ファイル ストリーム列にバイナリ データをフェッチおよび格納する方法](https://www.codeproject.com/Articles/32216/How-to-store-and-fetch-binary-data-into-a-file-str)」を参照してください。
 
-## <a name="resources-in-sql-server-books-online"></a>SQL Server オンラインブックのリソース
+## <a name="resources-in-sql-server-books-online"></a>SQL Server オンライン ブックのリソース
 
 FILESTREAM の詳細なドキュメントは、SQL Server オンライン ブックの次のセクションにあります。
 
-|トピック|[説明]|
+|トピック|説明|
 |-----------|-----------------|
-|[FILESTREAM (SQL Server)](../../../relational-databases/blob/filestream-sql-server.md)|FILESTREAM ストレージを使用する場合と、SQL Server データベースエンジンと NTFS ファイルシステムを統合する方法について説明します。|
+|[FILESTREAM (SQL Server)](../../../relational-databases/blob/filestream-sql-server.md)|FILESTREAM ストレージを使用するタイミングと、SQL Server データベース エンジンと NTFS ファイル システムを統合する方法について説明します。|
 |[FILESTREAM データ用のクライアント アプリケーションの作成](../../../relational-databases/blob/create-client-applications-for-filestream-data.md)|FILESTREAM データを操作するための Windows API 関数について説明します。|
-|[FILESTREAM と SQL Server のその他の機能](../../../relational-databases/blob/filestream-compatibility-with-other-sql-server-features.md)|FILESTREAM データを SQL Server の他の機能で使用する際の考慮事項、ガイドライン、および制限事項について説明します。|
+|[FILESTREAM と SQL Server のその他の機能](../../../relational-databases/blob/filestream-compatibility-with-other-sql-server-features.md)|FILESTREAM データを SQL Server の他の機能で使用する場合の考慮事項、ガイドライン、および制限事項について説明します。|
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 - [SQL Server のデータ型と ADO.NET](sql-server-data-types.md)
 - [SQL Server のバイナリ データと大きな値のデータ](sql-server-binary-large-value-data.md)

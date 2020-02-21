@@ -13,18 +13,18 @@ ms.assetid: c64077a2-bec8-4c87-9def-3dbfb1ea1fb6
 author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 741aec40bf972ae6caedfc0301e7a3dcd080d593
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.openlocfilehash: 7db6dbdbe45102c2a1bc2533d156e55060869b58
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73632918"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76909852"
 ---
 # <a name="sql-server-2016-release-notes"></a>SQL Server 2016 リリース ノート
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
   ここでは、SQL Server 2016 リリースでの制限事項と問題について説明します。Service Pack についても説明します。 新機能については、「 [SQL Server 2016 の新機能](https://docs.microsoft.com/sql/sql-server/what-s-new-in-sql-server-2016)」をご覧ください。
 
-- [![Evaluation Center からダウンロードする](../includes/media/download2.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)** から SQL Server 2016 をダウンロードする
+- [![Evaluation Center からダウンロードする](../includes/media/download2.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)** から SQL Server 2016 をダウンロードする
 - [![Azure Virtual Machine のアイコン](../includes/media/azure-vm.png)](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2016sp1-ws2016) Azure アカウントをすでにお持ちですか?  **[こちら](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2016sp1-ws2016)** にアクセスして、SQL Server 2016 SP1 がインストール済みの仮想マシンをすぐにご利用いただけます。
 - [![SSMS をダウンロードする](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) 最新版の SQL Server Management Studio を入手するには、「 **[SQL Server Management Studio (SSMS) のダウンロード](../ssms/download-sql-server-management-studio-ssms.md)** 」をご覧ください。
 
@@ -39,7 +39,7 @@ SQL Server 2016 SP2 のインストールでは、インストール後に再起
 
 SQL Server 2016 SP2 にはパフォーマンスとスケールに関連する改善が含まれています。
 
-|機能|[説明]|詳細情報|
+|機能|説明|詳細情報|
 |---|---|---|
 |ディストリビューション DB のクリーンアップ プロシージャの向上 |   サイズ超過のディストリビューション データベース テーブルにより、ブロックとデッドロックの状況が発生していました。 クリーンアップ プロシージャの向上は、これらのブロックまたはデッドロックのシナリオの一部を排除することを目的としています。 |   [KB4040276](https://support.microsoft.com/help/4040276/fix-indirect-checkpoints-on-the-tempdb-database-cause-non-yielding)  |
 |変更の追跡のクリーンアップ    |   変更の追跡のクリーンアップ パフォーマンスと、変更の追跡のサイド テーブルの効率性が向上しました。    |   [KB4052129](https://support.microsoft.com//help/4052129/update-for-manual-change-tracking-cleanup-procedure-in-sql-server-2016) |
@@ -54,7 +54,7 @@ SQL Server 2016 SP2 にはパフォーマンスとスケールに関連する改
 
 SQL Server 2016 SP2 にはサポートと診断に関連する改善が含まれています。
 
-|機能|[説明]|詳細情報|
+|機能|説明|詳細情報|
 |---|---|---|
 |可用性グループ内のデータベースでの完全な DTC サポート    |   可用性グループの一部であるデータベースでの複数データベース間トランザクションは現在 SQL Server 2016 でサポートされていません。 SQL Server 2016 SP2 では、可用性グループ データベースでの分散トランザクションの完全なサポートを導入しています。   |       |
 |TempDB の暗号化の状態を正確に反映するための sys.database の is_encrypted 列の更新 |   すべてのユーザー データベースの暗号化をオフにし、SQL Server を再起動した後でも、TempDB の sys.databases の is_encrypted 列の値は 1 です。 この状況では TempDB が暗号化されないため、この値が 0 になることが予想されます。 SQL Server 2016 SP2 以降では、sys.databases.is_encrypted で TempDB の暗号化の状態が正確に反映されます。  |       |
@@ -95,7 +95,7 @@ SQL Server 2016 SP2 にはサポートと診断に関連する改善が含まれ
 - 変更データ キャプチャ (Express では使用できません)
 - 列ストア
 - 圧縮
-- 動的なデータ マスキング
+- 動的データ マスク
 - 詳細な監査
 - インメモリ OLTP (Local DB では使用できません)
 - 複数の filestream コンテナー (Local DB では使用できません)
@@ -105,7 +105,7 @@ SQL Server 2016 SP2 にはサポートと診断に関連する改善が含まれ
 
 次の表は、SQL Server 2016 SP1 で提供される主要な機能強化をまとめたものです。
 
-|機能|[説明]|詳細情報|
+|機能|説明|詳細情報|
 |---|---|---|
 |TF 715 での自動 TABLOCK によるヒープへの一括挿入| トレース フラグ 715 は、非クラスター化インデックスのないヒープへの一括読み込み操作用に、テーブル ロックを有効にします。|[SAP ワークロードを SQL Server に 2.5 倍の速さで移行する](https://blogs.msdn.microsoft.com/sql_server_team/migrating-sap-workloads-to-sql-server-just-got-2-5x-faster/)|
 |CREATE または ALTER|ストアド プロシージャ、トリガー、ユーザー定義関数、ビューなどのオブジェクトを展開します。|[SQL Server データベース エンジンのブログ](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/11/17/create-or-alter-another-great-language-enhancement-in-sql-server-2016-sp1/)|
@@ -141,10 +141,10 @@ SQL Server 2016 SP1 のインストールでは、インストール後に再起
 -   [クエリ ストア (GA)](#bkmk_ga_query_store)
 -   [製品ドキュメント (GA)](#bkmk_ga_docs)
 
-### ![repl_icon_warn](../database-engine/availability-groups/windows/media/repl-icon-warn.gif) <a name="bkmk_ga_instalpatch"></a> Install Patch Requirement (GA)
+### ![repl_icon_warn](../database-engine/availability-groups/windows/media/repl-icon-warn.gif) <a name="bkmk_ga_instalpatch"></a> 修正プログラムのインストールの要件 (GA)
 **問題およびユーザーへの影響:** SQL Server 2016 の前提条件としてインストールされる Microsoft VC++ 2013 ランタイム バイナリに影響を与える問題が見つかりました。 更新プログラムを利用してこの問題を修正できます。 VC ランタイム バイナリに対するこの更新プログラムをインストールしないと、特定のシナリオにおいて、SQL Server 2016 で安定性の問題が発生する可能性があります。 SQL Server 2016 をインストールする前に、 [KB 3164398](https://support.microsoft.com/kb/3164398)で説明されている修正プログラムがコンピューターに必要かどうかを確認してください。 修正プログラムは、[SQL Server 2016 RTM の累積的な更新プログラム パッケージ 1 (CU1)](https://www.microsoft.com/download/details.aspx?id=53338) にも含まれています。
 
-**解決方法:** 次のいずれかのソリューションを使用します。
+**解決策:** 次のいずれかのソリューションを使用します。
 
 - [KB 3138367 - 2013 の Visual C++ および Visual C++ の再頒布可能パッケージ用の更新プログラム](https://support.microsoft.com/kb/3138367)をインストールします。 KB は推奨される解決方法です。 このインストールは、SQL Server 2016 のインストールの前でも後でも実行できます。
 
@@ -173,13 +173,13 @@ SQL Server 2016 SP1 のインストールでは、インストール後に再起
 
 **問題およびユーザーへの影響:** データベースまたはテーブルで Stretch Database を有効にしようとすると、エラーが発生して失敗します。 この問題は、オブジェクトの名前に、小文字から大文字に変換されるときに別の文字として扱われる文字が含まれている場合に発生します。 この問題が発生する文字の例には、"ƒ" 文字 (ALT+159 を入力すると作成される) があります。
 
-**回避策:** データベースかテーブルに対して Stretch Database を有効にするには、オブジェクトの名前を変更して問題の文字を削除するオプションしかありません。
+**対処法:** データベースかテーブルに対して Stretch Database を有効にするには、オブジェクトの名前を変更して問題の文字を削除するオプションしかありません。
 
 #### <a name="problem-with-an-index-that-uses-the-include-keyword"></a>INCLUDE キーワードを使用するインデックスの問題
 
 **問題およびユーザーへの影響:** テーブルに対して Stretch Database を有効にしようとする場合に、INCLUDE キーワードを使用して追加の列を組み込んでいるインデックスがそのテーブルにあると、エラーが発生して失敗します。
 
-**回避策:** INCLUDE キーワードを使用しているインデックスを削除し、そのテーブルに対して Stretch Database を有効にしてから、インデックスを再作成します。 その場合には、組織のメンテナンスのプラクティスやポリシーに従っているか確認して、影響を受けるテーブルのユーザーに対する反響をなくすか最小限に抑えるようにしてください。
+**対処法:** INCLUDE キーワードを使用しているインデックスを削除し、そのテーブルに対して Stretch Database を有効にしてから、インデックスを再作成します。 その場合には、組織のメンテナンスのプラクティスやポリシーに従っているか確認して、影響を受けるテーブルのユーザーに対する反響をなくすか最小限に抑えるようにしてください。
 
 ### <a name="bkmk_ga_query_store"></a>Query Store
 
@@ -188,7 +188,7 @@ SQL Server 2016 SP1 のインストールでは、インストール後に再起
  **問題およびユーザーへの影響:** Enterprise や Developer 以外のエディションでデータの自動クリーンアップが失敗します。
 その結果、データを手動で消去しないと、クエリ ストアに使用される領域は構成済みの制限に達するまで時間の経過と共に増えます。 この問題を回避しないと、エラー ログ用に割り当てられたディスク領域もいっぱいになります。クリーンアップを実行しようとするたびにダンプ ファイルが生成されるからです。 クリーンアップをアクティブ化する期間はワークロードの頻度に応じて異なりますが、15 分以内です。
 
- **回避策:** Enterprise や Developer 以外のエディションでクエリ ストアを使用する計画の場合は、クリーンアップのポリシーを明示的にオフにする必要があります。 この作業は、SQL Server Management Studio ([データベースのプロパティ] ページ) から行うか、Transact SQL スクリプトを使用して行うことができます。
+ **対処法:** Enterprise や Developer 以外のエディションでクエリ ストアを使用する計画の場合は、クリーンアップのポリシーを明示的にオフにする必要があります。 この作業は、SQL Server Management Studio ([データベースのプロパティ] ページ) から行うか、Transact SQL スクリプトを使用して行うことができます。
 
 ```ALTER DATABASE <database name> SET QUERY_STORE (OPERATION_MODE = READ_WRITE, CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 0), SIZE_BASED_CLEANUP_MODE = OFF)```
 
@@ -208,7 +208,7 @@ SQL Server 2016 SP1 のインストールでは、インストール後に再起
 ###  <a name="bkmk_ga_docs"></a> 製品ドキュメント (GA)
  **問題およびユーザーへの影響:** SQL Server 2016 のドキュメントのダウンロード可能なバージョンはまだありません。 ヘルプ ライブラリ マネージャーを使って **オンラインからコンテンツをインストール**しようとすると、SQL Server 2012 および SQL Sever 2014 のドキュメントは表示されますが、SQL Server 2016 のドキュメントのオプションはありません。
 
- **回避策:** 次のいずれかの回避策を使用してください。
+ **対処法:** 次のいずれかの回避策を使用してください。
 
  ![SQL Server のヘルプ設定の管理](../sql-server/media/docs-sql2016-managehelpsettings.png "SQL Server のヘルプ設定の管理")
 

@@ -1,6 +1,6 @@
 ---
-title: '[オブジェクトの依存関係] | Microsoft Docs'
-ms.custom: ''
+title: '[オブジェクトの依存関係]'
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: c63d1160-3f3d-45df-99be-6fe081125fb5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 78be395cccceff6c01152b38ddf9aa7008a273c8
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 82aa0e5ae67d3dbbf4e2a897ba5e49976cfc09a6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264092"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257159"
 ---
 # <a name="object-dependencies"></a>[オブジェクトの依存関係]
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,19 +28,19 @@ ms.locfileid: "68264092"
 このダイアログ ボックスを使用すると、選択されているオブジェクトを変更または削除する前に依存関係について理解できます。  
   
 ## <a name="uielement-list"></a>UI 要素の一覧  
-**[\<_選択したオブジェクト_> に依存するオブジェクト]**  
+**[ _\<選択したオブジェクト_> に依存するオブジェクト]**  
 このボタンをクリックすると、依存関係が監視され、選択されているオブジェクトに依存するオブジェクトの一覧が表示されます。  
   
-**[** **\<_選択したオブジェクト_> が依存するオブジェクト]**  
+**[** _\<選択したオブジェクト>_ **が依存するオブジェクト]**  
 このボタンをクリックすると、依存関係が監視され、選択されているオブジェクトが依存するオブジェクトの一覧が表示されます。  
   
 **依存関係**  
-[ *<selected object>* **に依存するオブジェクト]** をクリックした場合は、選択されているオブジェクトに依存するオブジェクトの階層ビューが表示されます。 [ *<selected object>* **が依存する** **オブジェクト**] をクリックすると、選択されているオブジェクトが依存するオブジェクトの階層ビューが表示されます。  
+**[ *<selected object>* に依存するオブジェクト]** をクリックした場合は、選択されているオブジェクトに依存するオブジェクトの階層ビューが表示されます。 **[** *<selected object>* **が依存するオブジェクト]** をクリックすると、選択されているオブジェクトが依存するオブジェクトの階層ビューが表示されます。  
   
-**名前**  
+**Name**  
 上記の **[依存関係]** ツリー ビューで選択されたオブジェクトの名前が表示されます。  
   
-**型**  
+**Type**  
 上記の **[依存関係]** ツリー ビューで選択されたオブジェクトの種類が表示されます。  
   
 **[最終同期時刻]**  
@@ -53,7 +53,7 @@ ms.locfileid: "68264092"
 > [!NOTE]  
 > このオプションは、 **[全般]** ページのみで使用できます。  
   
-2 つのオブジェクト間の依存関係の種類が表示されます。 次のいずれかになります。  
+2 つのオブジェクト間の依存関係の種類が表示されます。 以下のいずれかを指定できます。  
   
 -   スキーマ バインド依存関係  
   

@@ -1,6 +1,6 @@
 ---
-title: 分析サーバーのプロパティ ([サービス] タブ) | Microsoft Docs
-ms.custom: ''
+title: '[SQL Server Analysis Services のプロパティ] ダイアログ ボックス ([サービス] タブ)'
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,22 +11,22 @@ ms.assetid: 8dbe4bc5-6aa9-48ee-857e-0b4ea764b9cb
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: cb509ac18a22c755a6c349932aa2eab0c4077e98
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: b5520bb39a8e8e856030781b7739a55fd88fccaf
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68010354"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306552"
 ---
 # <a name="analysis-server-properties-service-tab"></a>[SQL Server Analysis Services のプロパティ] ダイアログ ボックス ([サービス] タブ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-  このサービスは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]です。 [!INCLUDE[ssAS](../../includes/ssas-md.md)] を正しく機能させるには、このサービスを実行する必要があります。 グレー表示になっているプロパティ値をこのアプリケーションで変更することはできません。  
+  このサービスは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] です。 [!INCLUDE[ssAS](../../includes/ssas-md.md)] を正しく機能させるには、このサービスを実行する必要があります。 グレー表示になっているプロパティ値をこのアプリケーションで変更することはできません。  
   
 ## <a name="options"></a>オプション  
- **バイナリ パス**  
+ **[バイナリ パス]**  
  このサービスが使用するプログラム ファイルの場所が表示されます。  
   
- **エラー制御**  
+ **[エラー制御]**  
  1 は `SERVICE_ERROR_NORMAL`を示します。 コンピューターの起動時にこのサービスが開始しなかった場合は、スタートアップ プログラムによってログにエラーが記録され、ポップアップ メッセージ ボックスが表示されますが、スタートアップ操作は継続します。 この値は変更できません。  
   
  **終了コード**  
@@ -35,7 +35,7 @@ ms.locfileid: "68010354"
  **Host Name**  
  [!INCLUDE[ssAS](../../includes/ssas-md.md)]を実行しているコンピューターまたはクラスターの名前が表示されます。  
   
- **[名前]**  
+ **Name**  
  サービスの表示名が表示されます。  
   
  **プロセス ID**  
@@ -47,13 +47,13 @@ ms.locfileid: "68010354"
  **[開始モード]**  
  このサービスを以下のいずれかのモードに設定します。  
   
--   手動: このサービスは、コンピューターの起動時に自動的に開始しません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーまたは他のツールを使用してこのサービスを開始する必要があります。  
+-   手動: このサービスは、コンピューターの起動時に自動的に開始されません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーまたは他のツールを使用してこのサービスを開始する必要があります。  
   
--   \[自動]: このサービスは、コンピューターの起動時に開始を試みます。  
+-   自動：このサービスは、コンピューターの起動時に開始を試みます。  
   
--   \[無効]: このサービスは開始できません。  
+-   無効:このサービスを開始できません。  
   
- **状態**  
+ **State**  
  このサービスが実行中か、停止しているか、無効になっているかが表示されます。  
   
   

@@ -1,6 +1,6 @@
 ---
 title: コールバックを使用する Windows アプリケーション
-description: 非同期コマンドを安全に実行し、フォームとその内容との対話を別のスレッドから正しく処理する方法を示す例を示します。
+description: 非同期コマンドを安全に実行して、別のスレッドからのフォームやそのコンテンツを正しく処理する方法の例を示します。
 ms.date: 08/15/2019
 dev_langs:
 - csharp
@@ -9,30 +9,30 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: 5c2d46e3f2b26a8106e75f2bb116907e2f27a7b9
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 83dca011087150eef5d8fdc948bb65cc6808830e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72451902"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253379"
 ---
 # <a name="windows-applications-using-callbacks"></a>コールバックを使用する Windows アプリケーション
 
 ![Download-DownArrow-Circled](../../../ssdt/media/download.png)[ADO.NET をダウンロードする](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-ほとんどの非同期処理のシナリオでは、データベース操作を開始し、データベース操作の完了を待たずに、他のプロセスの実行を続行します。 ただし、多くのシナリオでは、データベース操作が終了した後に何らかの処理を行う必要があります。 たとえば、Windows アプリケーションでは、ユーザーインターフェイススレッドの応答性を維持しながら、長時間実行される操作をバックグラウンドスレッドに委任することができます。 ただし、データベース操作が完了したら、結果を使用してフォームにデータを入力する必要があります。 この種類のシナリオは、コールバックを使用して実装することをお勧めします。  
+ほとんどの非同期処理シナリオでは、データベース操作を開始した後、そのデータベース操作の完了を待つことなく他のプロセスの実行に進む必要があります。 ただし、多くのシナリオでは、データベース操作が完了した後で何かを実行する必要があります。 たとえば、Windows アプリケーションでは、実行時間の長い操作をバックグラウンド スレッドに委任している間、ユーザー インターフェイス スレッドの応答性を維持することができます。 ただし、データベース操作が完了したら、その結果を使用してフォームにデータを入力する必要があります。 この種類のシナリオは、コールバックを使用した実装が最も適しています。  
   
-コールバックは、<xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>、<xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteReader%2A>、または <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A> メソッドで <xref:System.AsyncCallback> デリゲートを指定することによって定義します。 操作が完了すると、デリゲートが呼び出されます。 デリゲートを <xref:Microsoft.Data.SqlClient.SqlCommand> 自体に渡すことで、<xref:Microsoft.Data.SqlClient.SqlCommand> オブジェクトに簡単にアクセスし、グローバル変数を使用しなくても適切な `End` メソッドを呼び出すことができます。  
+コールバックは、<xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>、<xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteReader%2A>、または <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A> メソッドで <xref:System.AsyncCallback> 委任を指定して定義します。 この委任は、操作が完了したときに呼び出されます。 この委任に <xref:Microsoft.Data.SqlClient.SqlCommand> 自体への参照を渡すと、グローバル変数を使用しなくても、容易に <xref:Microsoft.Data.SqlClient.SqlCommand> オブジェクトにアクセスして適切な `End` メソッドを呼び出すことができます。  
   
 ## <a name="example"></a>例  
-次の Windows アプリケーションは、<xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A> メソッドの使用方法を示しています。これは、数秒の遅延を含む Transact-sql ステートメントを実行する (長時間実行されるコマンドをエミュレートする) ことを示しています。  
+次の Windows アプリケーションは、<xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A> メソッドを使用して、数秒の遅延を含む Transact-SQL ステートメントを実行する方法 (実行時間の長いコマンドのエミュレーション) を示しています。  
   
-この例は、別のスレッドからフォームと対話するメソッドを呼び出すなど、いくつかの重要な手法を示しています。 さらに、この例では、ユーザーがコマンドを複数回同時に実行するのをブロックする方法と、コールバックプロシージャが呼び出される前にフォームが閉じないようにする方法について説明します。  
+この例は、別のスレッドからフォームを操作するメソッドの呼び出しなど、いくつかの重要な手法を示しています。 さらに、この例には、ユーザーがコマンドを複数回同時に実行しないようにブロックするための方法や、コールバック プロシージャが呼び出される前にフォームを閉じないようにするための方法が示されています。  
   
-この例を設定するには、新しい Windows アプリケーションを作成します。 <xref:System.Windows.Forms.Button> コントロールと2つの <xref:System.Windows.Forms.Label> コントロールをフォームに配置します (各コントロールの既定の名前をそのまま使用します)。 次のコードをフォームのクラスに追加し、環境に合わせて必要に応じて接続文字列を変更します。  
+この例を設定するには、新しい Windows アプリケーションを作成します。 フォーム上に 1 つの <xref:System.Windows.Forms.Button> コントロールと 2 つの <xref:System.Windows.Forms.Label> コントロールを配置します (各コントロールの既定の名前をそのまま使用します)。 フォームのクラスに次のコードを追加し、実際の環境で必要に応じて接続文字列を変更します。  
   
 ```csharp  
 // Add these to the top of the class, if they're not already there:  
@@ -218,5 +218,5 @@ private void Form1_Load(object sender, System.EventArgs e)
 }  
 ```  
   
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 - [非同期操作](asynchronous-operations.md)

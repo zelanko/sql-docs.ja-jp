@@ -1,6 +1,6 @@
 ---
 title: 単一の一括コピー操作
-description: SqlBulkCopy クラスを使用して SQL Server のインスタンスにデータの単一の一括コピーを実行する方法と、Transact-sql ステートメントと SqlCommand クラスを使用して一括コピー操作を実行する方法について説明します。
+description: SqlBulkCopy クラスを使用して、SQL Server のインスタンスへのデータの単一の一括コピーを実行する方法、および Transact-SQL ステートメントと SqlCommand クラスを使用して一括コピー操作を実行する方法について説明します。
 ms.date: 08/15/2019
 dev_langs:
 - csharp
@@ -9,15 +9,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: 792ebcb5a4365301c31362a748d786c17ddee42a
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 85d24b6695dfe9f592bfefabb13c2042cf3450c3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452098"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251168"
 ---
 # <a name="single-bulk-copy-operations"></a>単一の一括コピー操作
 
@@ -30,13 +30,13 @@ SQL Server の一括コピー操作を実行する最も簡単な方法は、デ
 >   
 >  詳細については、「[トランザクションと一括コピー操作](transaction-bulk-copy-operations.md)」を参照してください。  
   
-一括コピー操作を実行するための一般的な手順は次のとおりです。  
+一括コピー操作を実行する一般的な手順は次のとおりです。  
   
-1. コピー元のサーバーに接続し、コピーするデータを取得します。 <xref:System.Data.IDataReader> または <xref:System.Data.DataTable> オブジェクトからデータを取得できる場合は、他のソースからデータを取得することもできます。  
+1. コピー元のサーバーに接続し、コピーするデータを取得します。 <xref:System.Data.IDataReader> オブジェクトまたは <xref:System.Data.DataTable> オブジェクトからデータを取得できる場合は、他のソースから取得する場合もあります。  
   
 2. コピー先のサーバーに接続します (**SqlBulkCopy** を使用して接続を確立しない場合)。  
   
-3. 必要なプロパティを設定して、<xref:Microsoft.Data.SqlClient.SqlBulkCopy> オブジェクトを作成します。  
+3. <xref:Microsoft.Data.SqlClient.SqlBulkCopy> オブジェクトを作成し、必要なプロパティを設定します。  
   
 4. バルク挿入操作の対象となるテーブルが示されるように **DestinationTableName** プロパティを設定します。  
   
@@ -44,20 +44,20 @@ SQL Server の一括コピー操作を実行する最も簡単な方法は、デ
   
 6. オプションとして、プロパティを更新したり、必要に応じて **WriteToServer** をもう一度呼び出したりします。  
   
-7. <xref:Microsoft.Data.SqlClient.SqlBulkCopy.Close%2A> を呼び出すか、`Using` ステートメント内で一括コピー操作をラップします。  
+7. <xref:Microsoft.Data.SqlClient.SqlBulkCopy.Close%2A> を呼び出すか、一括コピー操作を `Using` ステートメント内にラップします。  
   
 > [!CAUTION]
 >  コピー元とコピー先の列のデータ型を一致させることをお勧めします。 データ型が一致していない場合、**SqlBulkCopy** は、<xref:Microsoft.Data.SqlClient.SqlParameter.Value%2A> によって採用されている規則を使用して、コピー元の値をコピー先のデータ型にそれぞれ変換しようとします。 この変換はパフォーマンスに影響を及ぼすだけでなく、予期しないエラーが発生する場合もあります。 たとえば、`Double` データ型はたいていの場合 `Decimal` データ型に変換できますが、変換できない場合もあります。  
   
 ## <a name="example"></a>例  
-次のコンソールアプリケーションは、<xref:Microsoft.Data.SqlClient.SqlBulkCopy> クラスを使用してデータを読み込む方法を示しています。 この例では、<xref:Microsoft.Data.SqlClient.SqlDataReader> を使用し、SQL Server の **AdventureWorks** データベースに格納された **Production.Product** テーブルのデータを、同じデータベース内の同等のテーブルにコピーします。  
+次のコンソール アプリケーションは、<xref:Microsoft.Data.SqlClient.SqlBulkCopy> クラスを使用してデータを読み込む方法を示しています。 この例では、<xref:Microsoft.Data.SqlClient.SqlDataReader> を使用し、SQL Server の **AdventureWorks** データベースに格納された **Production.Product** テーブルのデータを、同じデータベース内の同等のテーブルにコピーします。  
   
 > [!IMPORTANT]
 >  このサンプルは、「[一括コピーのセットアップ例](bulk-copy-example-setup.md)」で説明しているように作業テーブルを作成して取得してからでないと動作しません。 このコードでは、**SqlBulkCopy** だけを使用した構文について説明します。 コピー元およびコピー先のテーブルが同一の SQL Server インスタンス内に存在する場合、Transact-SQL `INSERT … SELECT` ステートメントを使用すれば簡単かつ高速にデータをコピーすることができます。  
   
 [!code-csharp[DataWorks SqlBulkCopy_WriteToServer#1](~/../sqlclient/doc/samples/SqlBulkCopy_WriteToServer.cs#1)]
   
-## <a name="performing-a-bulk-copy-operation-using-transact-sql-and-the-command-class"></a>Transact-sql と command クラスを使用した一括コピー操作の実行  
+## <a name="performing-a-bulk-copy-operation-using-transact-sql-and-the-command-class"></a>transact-SQL とコマンド クラスを使用した一括コピー操作の実行  
 次の例では、BULK INSERT ステートメントを実行する <xref:Microsoft.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A> メソッドの使用方法を説明します。  
   
 > [!NOTE]
@@ -76,5 +76,5 @@ command.ExecuteNonQuery();
 }  
 ```  
   
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 - [SQL Server での一括コピー操作](bulk-copy-operations-sql-server.md)

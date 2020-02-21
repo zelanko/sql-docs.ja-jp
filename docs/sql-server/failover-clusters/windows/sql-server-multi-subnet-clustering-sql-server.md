@@ -1,6 +1,7 @@
 ---
-title: SQL Server マルチサブネット クラスタリング (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: SQL Server マルチサブネット クラスタリング
+description: マルチサブネット環境で SQL Server フェールオーバー クラスター インスタンスを構成する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 09/01/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cd909612-99cc-4962-a8fb-e9a5b918e221
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 16f89fcc50ec7db910d88d8ec807cb28c66cde89
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e257ead5f858e80095c077643b283645917271be
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68044735"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258151"
 ---
 # <a name="sql-server-multi-subnet-clustering-sql-server"></a>SQL Server マルチサブネット クラスタリング (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "68044735"
 ##  <a name="VisualElement"></a> SQL Server マルチサブネット フェールオーバー クラスター (2 ノード、2 サブネット)  
  次の図は、2 ノード、2 サブネットの [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]のフェールオーバー クラスター インスタンス (FCI) を表します。  
   
- ![マルチ サブネット アーキテクチャと MultiSubnetFailover](../../../sql-server/failover-clusters/windows/media/multi-subnet-architecture-withmultisubnetfailoverparam.png "マルチ サブネット アーキテクチャと MultiSubnetFailover")  
+ ![マルチサブネット アーキテクチャと MultiSubnetFailover](../../../sql-server/failover-clusters/windows/media/multi-subnet-architecture-withmultisubnetfailoverparam.png "マルチサブネット アーキテクチャと MultiSubnetFailover")  
   
   
 ##  <a name="Configurations"></a> マルチサブネット フェールオーバー クラスター インスタンス構成  
@@ -47,10 +48,10 @@ ms.locfileid: "68044735"
     > **注:** クラスター ノードが同じサブネットのセットに含まれているため、この構成はマルチサブネット フェールオーバー クラスター構成と見なされません。  
   
 ##  <a name="ComponentsAndConcepts"></a> IP アドレス リソースに関する考慮事項  
- マルチサブネット フェールオーバー クラスターの構成では、フェールオーバー クラスター内のすべてのノードが IP アドレスを所有するわけではありません。また、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の起動時に一部のノードがオンラインにならない場合があります。 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]以降では、IP アドレス リソースの依存関係を **OR**に設定することができます。 そのため、バインドできる有効な IP アドレスが少なくとも 1 つ存在していれば、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] をオンラインにすることができます。  
+ マルチサブネット フェールオーバー クラスターの構成では、フェールオーバー クラスター内のすべてのノードが IP アドレスを所有するわけではありません。また、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の起動時に一部のノードがオンラインにならない場合があります。 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]以降では、IP アドレス リソースの依存関係を **OR**に設定することができます。 そのため、バインドできる有効な IP アドレスが少なくとも 1 つ存在していれば、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] をオンラインにすることができます。  
   
   > [!NOTE] 
-  > - [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] より前のバージョンの [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] では、フェイル オーバー用の単一の IP アドレスをサイト全体に公開するために、マルチサイト クラスター構成で拡張 V-LAN テクノロジを使用していました。 異なるサブネットにわたるノードをクラスター化するための [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の新しい機能を使用することで、拡張 V-LAN テクノロジを実装することなく、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターを複数のサイトを対象として構成できるようになりました。  
+  > - [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] より前のバージョンの [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]では、フェイル オーバー用の単一の IP アドレスをサイト全体に公開するために、マルチサイト クラスター構成で拡張 V-LAN テクノロジを使用していました。 異なるサブネットにわたるノードをクラスター化するための [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の新しい機能を使用することで、拡張 V-LAN テクノロジを実装することなく、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターを複数のサイトを対象として構成できるようになりました。  
 
   
 ### <a name="ip-address-resource-or-dependency-considerations"></a>IP アドレス リソースの OR 依存関係に関する考慮事項  

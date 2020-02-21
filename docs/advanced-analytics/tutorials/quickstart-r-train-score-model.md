@@ -1,32 +1,31 @@
 ---
-title: 'クイック スタート: R でモデルをトレーニングする'
-titleSuffix: SQL Server Machine Learning Services
-description: SQL Server Machine Learning Services を使用して R で簡単な予測モデルを作成してから、新しいデータを使用して結果を予測します。
+title: クイック スタート:R でモデルをトレーニングする
+description: このクイックスタートでは、T を使用して予測モデルを作成してトレーニングし、SQL Server インスタンスのテーブルにモデルを保存します。次に、そのモデルを使用して、SQL Server Machine Learning Services を使って新しいデータから値を予測します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/04/2019
+ms.date: 01/27/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bd91191a84aac8c245bdcbbe0afd2bf3241aa6b3
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: b6be97041912027cf284ff34c2c826a37edabe93
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73726521"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831721"
 ---
-# <a name="quickstart-create-and-score-a-predictive-model-in-r-with-sql-server-machine-learning-services"></a>クイック スタート: SQL Server Machine Learning Services を使用して R で予測モデルを作成してスコア付けする
+# <a name="quickstart-create-and-score-a-predictive-model-in-r-with-sql-server-machine-learning-services"></a>クイック スタート:SQL Server Machine Learning Services を使用して R で予測モデルを作成してスコア付けする
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-このクイックスタートでは、R を使用して予測モデルを作成してトレーニングし、SQL Server インスタンスのテーブルにモデルを保存します。次に、そのモデルを使用して、[SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md)を使って新しいデータから値を予測します。
+このクイックスタートでは、T を使用して予測モデルを作成してトレーニングし、SQL Server インスタンスのテーブルにモデルを保存します。次に、そのモデルを使用して、[SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md) を使って新しいデータから値を予測します。
 
 SQL で実行されている 2 つのストアド プロシージャを作成して実行します。 最初のプロシージャでは、R に含まれる **mtcars** データセットを使用して、車両にマニュアル トランスミッションが搭載されている確率を予測する単純な汎用線形モデル (GLM) を生成します。 2 番目のプロシージャはスコアリング用で、最初のプロシージャで生成されたモデルを呼び出して、新しいデータに基づいて一連の予測を出力します。 SQL ストアド プロシージャに R コードを配置することで、操作は SQL に格納され、再利用可能になり、他のストアド プロシージャやクライアント アプリケーションから呼び出すことができます。
 
 > [!TIP]
-> 線形モデルの最新の情報に更新する必要がある場合は、rxLinMod を使用したモデルの調整プロセスについて説明しているこのチュートリアルをご覧ください。[線形モデルを調整する](/machine-learning-server/r/how-to-revoscaler-linear-model)
+> 線形モデルの最新の情報に更新する必要がある場合は、rxLinMod を使用したモデルの調整プロセスについて説明しているこのチュートリアルをご覧ください。「[Fitting Linear Models (線形モデルの当てはめ)](/machine-learning-server/r/how-to-revoscaler-linear-model)」
 
 このクイックスタートを完了すると、次のことを学習できます。
 
@@ -35,9 +34,9 @@ SQL で実行されている 2 つのストアド プロシージャを作成し
 > - ストアド プロシージャの入力を介してコードに入力を渡す方法
 > - ストアド プロシージャを使用してモデルを運用化する方法
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
-- このクイック スタートでは、R 言語がインストールされている [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) を使用して SQL Server のインスタンスにアクセスする必要があります。
+- このクイックスタートでは、R 言語がインストールされた [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) をもつ SQL Server のインスタンスへのアクセスが必要となります。
 
   あなたの SQL Server インスタンスは、Azure 仮想マシンまたはオンプレミスに配置できます。 外部スクリプト機能が既定で無効になっていることに注意してください。そのため、開始する前に、[外部スクリプトを有効にし](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature)、**SQL Server Launchpad サービス**が実行されていることを確認する必要があります。
 
@@ -80,7 +79,7 @@ SQL で実行されている 2 つのストアド プロシージャを作成し
    ```
 
    > [!TIP]
-   > 小規模と大規模の多くのデータセットが R ランタイムに付属しています。 R と共にインストールされるデータセットの一覧を取得するには、R コマンド プロンプトから「`library(help="datasets")`」と入力します。
+   > R ランタイムには、大小多くのデータセットが付属しています。 R と共にインストールされるデータセットの一覧を取得するには、R コマンド プロンプトから「`library(help="datasets")`」と入力します。
 
 ### <a name="create-and-train-the-model"></a>モデルの作成とトレーニング
 
@@ -107,7 +106,7 @@ GO
 ```
 
 - `glm` への最初の引数は *formula* パラメーターで、これは、`am` を `hp + wt` に依存するものとして定義します。
-- 入力データは、SQL クエリによって設定される変数 `MTCarsData` に格納されます。 入力データに特定の名前を割り当てない場合、既定の変数名は "_InputDataSet_" になります。
+- 入力データは `MTCarsData` 変数に格納されます。この変数は、SQL クエリによって入力されます。 入力データに具体的な名前を割り当てなかった場合、既定の変数名は _InputDataSet_ になります。
 
 ### <a name="store-the-model-in-the-sql-database"></a>SQL データベースにモデルを格納する
 
@@ -132,7 +131,7 @@ GO
    ```
 
    > [!TIP]
-   > このコードを 2 回目に実行する場合、次のエラーが発生します。"Violation of PRIMARY KEY constraint...Cannot insert duplicate key in object dbo.stopping_distance_models" (PRIMARY KEY 制約違反...オブジェクト dbo.stopping_distance_models に重複するキーを挿入することはできません)。 このエラーを避ける 1 つのオプションは、新しいモデルごとに名前を更新することです。 たとえば、わかりやすい名前に変更し、モデルの種類や作成日などを含めることができます。
+   > このコードを 2 回目に実行する場合、次のエラーが発生します。"Violation of PRIMARY KEY constraint...Cannot insert duplicate key in object dbo.stopping_distance_models" (PRIMARY KEY 制約違反...オブジェクト dbo.stopping_distance_models に重複するキーを挿入することはできません)。 このエラーを回避する方法の 1 つに、新しいモデルごとに名前を更新する方法があります。 たとえば、よりわかりやすい名前に変更したり、モデルの種類や作成日などを含めたりすることができます。
 
      ```sql
      UPDATE GLM_models
@@ -202,11 +201,11 @@ WITH RESULT SETS ((new_hp INT, new_wt DECIMAL(10,3), predicted_am DECIMAL(10,3))
 
 上記のスクリプトは、次の手順を実行します。
 
-- SELECT ステートメントを使用して、テーブルから 1 つのモデルを取得し、それを入力パラメーターとして渡します。
+- SELECT ステートメントを使用してテーブルから単一のモデルを取得し、それを入力パラメーターとして渡します。
 
-- テーブルからモデルを取得したら、モデルに対して `unserialize` 関数を呼び出します。
+- テーブルからモデルを取得した後、そのモデルに対して `unserialize` 関数を呼び出します。
 
-- 適切な引数を使用して `predict` 関数をモデルに適用し、新しい入力データを提供します。
+- `predict` 関数と適切な引数をモデルに適用し、新しい入力データを提供します。
 
 > [!NOTE]
 > この例では、テスト フェーズ中に `str` 関数を追加して、R から返されるデータのスキーマを確認します。このステートメントは後で削除できます。
@@ -219,8 +218,8 @@ WITH RESULT SETS ((new_hp INT, new_wt DECIMAL(10,3), predicted_am DECIMAL(10,3))
 
 また、[PREDICT (Transact-SQL)](../../t-sql/queries/predict-transact-sql.md) ステートメントを使用して、格納されているモデルに基づいて予測値またはスコアを生成することも可能です。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 SQL Server Machine Learning Services の詳細については、次を参照してください。
 
-- [SQL Server Machine Learning Services とは (Python と R)](../what-is-sql-server-machine-learning.md)
+- [SQL Server Machine Learning Services (Python と R) とは](../what-is-sql-server-machine-learning.md)

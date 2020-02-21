@@ -1,6 +1,6 @@
 ---
 title: RxSqlServerData オブジェクトを作成する
-description: このチュートリアルは、SQL Server で R 言語を使用してデータ オブジェクトを作成する方法について詳しく説明しています。
+description: RevoScaleR チュートリアル 2:SQL Server 上で R 言語を使用してデータ オブジェクトを作成する方法。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/26/2018
@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: fb6c88c5ce53a072d8cd9611d80cbe621c0fa485
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 7869fc3fc67cb24542223c2300cd7b6ebcf1eb41
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727261"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76922570"
 ---
 # <a name="create-sql-server-data-objects-using-rxsqlserverdata-sql-server-and-revoscaler-tutorial"></a>RxSqlServerData を使用した SQL Server のデータ オブジェクトを作成する (SQL Server および RevoScaleR チュートリアル)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-このレッスンは、SQL Server で [RevoScaleR 関数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)を使用する方法についての [RevoScaleR チュートリアル](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)の一部です。
+これは、SQL Server で [RevoScaleR 関数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)を使用する方法についての [RevoScaleR チュートリアル シリーズ](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)のチュートリアル 2 です。
 
-レッスン 2 は、データベースの作成の続きで、テーブルの追加とデータの読み込みについてです。 [レッスン 1](deepdive-work-with-sql-server-data-using-r.md) で、DBA がデータベースを作成しログインした場合、RStudio などの R IDE または **Rgui** などの組み込みツールを使用してテーブルを追加できます。
+このチュートリアルは、データベースの作成の続きであり、テーブルの追加とデータの読み込みについて説明します。 [チュートリアル 2 ](deepdive-work-with-sql-server-data-using-r.md)で、DBA がデータベースを作成してログインした場合、RStudio などの R IDE または **Rgui** などの組み込みツールを使用してテーブルを追加できます。
 
 R から、SQL Server に接続し、**RevoScaleR** 関数を使用して次のタスクを実行します。
 
@@ -145,7 +145,7 @@ R から、SQL Server に接続し、**RevoScaleR** 関数を使用して次の�
     
     接続文字列に問題がなければ、しばらくすると、次のような結果が表示されます。
   
-    *合計書き込み行数:10000、合計時間:0.466* *読み取られる行:10000、処理された行数の合計:10000、合計チャンク時間:0.577 秒*
+    *合計書き込み行数:10000、合計時間:0.466* *読み取られた行:10000、処理された行数の合計:10000、合計チャンク時間:0.577 秒*
   
 5. テーブルの一覧を更新します。 各変数に適切なデータ型が格納されていること、また各変数が正常にインポートされたことを確認するには、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] でテーブルを右クリックして、 **[上位 1000 行の選択]** を選択してもかまいません。
 
@@ -192,7 +192,7 @@ R から、SQL Server に接続し、**RevoScaleR** 関数を使用して次の�
 
 必要に応じて、**rxDataStep** への引数で R 関数を使用して、データの変換を指定できます。 これらの操作の例については、このチュートリアルで後述します。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [SQL Server データに対するクエリおよび変更](../../advanced-analytics/tutorials/deepdive-query-and-modify-the-sql-server-data.md)

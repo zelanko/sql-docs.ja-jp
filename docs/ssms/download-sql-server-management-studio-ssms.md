@@ -1,8 +1,7 @@
 ---
-title: SQL Server Management Studio (SSMS) のダウンロード | Microsoft Docs
+title: SQL Server Management Studio (SSMS) のダウンロード
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: sstein, maghan
 ms.technology: ssms
 ms.topic: conceptual
 keywords:
@@ -21,14 +20,15 @@ keywords:
 ms.assetid: adafeeef-4255-4924-8042-02f503d599ca
 author: dnethi
 ms.author: dinethi
-ms.custom: ''
+ms.reviewer: sstein, maghan
+ms.custom: seo-lt-2019
 ms.date: 11/04/2019
-ms.openlocfilehash: 38c594e235bf68c18ec493fd8ec43f585ea0378c
-ms.sourcegitcommit: 0c40843c13f67ba7d975f4fedb9d20d70747f66d
+ms.openlocfilehash: 3532c1d7cfe148c4fe4f1d5331e711a994916818
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74097863"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76761796"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) のダウンロード
 
@@ -44,17 +44,17 @@ SSMS は無料です。
 
 **[![ダウンロード](media/download-icon.png) SQL Server Management Studio (SSMS) のダウンロード](https://aka.ms/ssmsfullsetup)**
 
-SSMS 18.4 は SSMS の GA (一般提供) 最新版です。 以前の GA バージョンの SSMS 18 がインストールされている場合、SSMS 18.4 をインストールすると、18.4 にアップグレードされます。 以前の "*プレビュー*" 版の SSMS 18.x がインストールされている場合は、それをアンインストールしてから SSMS 18.4 をインストールしてください。
+SSMS 18.4 は SSMS の GA (一般提供) 最新版です。 以前の GA バージョンの SSMS 18 がインストールされている場合、SSMS 18.4 をインストールすると、18.4 にアップグレードされます。
 
 ### <a name="version-information"></a>バージョン情報
 
 - リリース番号:18.4  
 - ビルド番号:15.0.18206.0  
-- リリース日:2019 年 11 月 4 日  
+- リリース日: 2019 年 11 月 4 日  
 
 コメントや提案がある場合、または問題を報告する場合、SSMS チームに連絡する最適な方法は [UserVoice](https://aka.ms/sqlfeedback) です。
 
-SSMS 18.x のインストールでは、17.x 以前のバージョンの SSMS がアップグレードまたは置き換えられることはありません。 SSMS 18.x は以前のバージョンとは別にサイド バイ サイドでインストールされるので、両方のバージョンを使用できます。
+SSMS 18.x のインストールでは、17.x 以前のバージョンの SSMS がアップグレードまたは置き換えられることはありません。 SSMS 18.x は以前のバージョンとは別にサイド バイ サイドでインストールされるので、両方のバージョンを使用できます。 ただし、"***プレビュー***" 版の SSMS 18.x がインストールされている場合は、それを**アンインストール**してから SSMS 18.4 をインストールしてください。
 
 コンピューターに SSMS のサイド バイ サイドのインストールが含まれている場合は、特定のニーズに応じて適切なバージョンを起動してください。 最新バージョンには、**Microsoft SQL Server Management Studio 18** というラベルが付いています。
 
@@ -112,7 +112,7 @@ SSMS の今回のリリースでは、最新の Service Pack を使用した次�
 <sup>*</sup> バージョン 1607 (10.0.14393) 以降が必要
 
 > [!NOTE]
-> SSMS は Windows 上でのみ実行されます。 Windows 以外のプラットフォーム上で実行されるツールが必要な場合は、Azure Data Studio をご覧ください。 Azure Data Studio は、macOS、Linux、さらに Windows 上で実行される新しいクロスプラットフォーム ツールです。 詳しくは、[Azure Data Studio](../azure-data-studio/what-is.md) に関する記事をご覧ください。
+> SSMS は Windows (AMD または Intel) 上でのみ動作します。 Windows 以外のプラットフォーム上で実行されるツールが必要な場合は、Azure Data Studio をご覧ください。 Azure Data Studio は、macOS、Linux、さらに Windows 上で実行される新しいクロスプラットフォーム ツールです。 詳しくは、[Azure Data Studio](../azure-data-studio/what-is.md) に関する記事をご覧ください。
 
 ## <a name="release-notes-ssms-184"></a>リリース ノート (SSMS 18.4)
 
@@ -128,9 +128,11 @@ SSMS の今回のリリースでは、最新の Service Pack を使用した次�
 
 ## <a name="see-also"></a>参照
 
-- [チュートリアル: SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)
+- [チュートリアル:SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)
 - [SQL Server Management Studio のドキュメント](sql-server-management-studio-ssms.md)
-- [追加の更新プログラムとサービス パック](https://technet.microsoft.com/sqlserver/ff803383.aspx)
+- [最新の更新プログラム](../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)
+- [Azure Data Studio](../azure-data-studio/what-is.md)
 - [SQL Server Data Tools (SSDT) のダウンロード](../ssdt/download-sql-server-data-tools-ssdt.md)
+- [Azure データ アーキテクチャ ガイド](https://docs.microsoft.com/azure/architecture/data-guide/)
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

@@ -7,16 +7,16 @@ ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: b8459ed8-625e-4d8b-891c-e7e78c9977cc
-ms.reviewer: v-jizho2, v-chojas, genemi
+ms.reviewer: v-chojas
 author: v-makouz
-ms.author: v-makouz
+ms.author: v-chojas
 manager: kenvh
-ms.openlocfilehash: 98e7aec7883bc12d04ce24aba7b9a93244f707f6
-ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
-ms.translationtype: MTE75
+ms.openlocfilehash: c53832e40b055792d98b9bffea368d156d535545
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72041157"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76910934"
 ---
 # <a name="release-notes-for-odbc-to-sql-server-on-windows"></a>Windows 上の SQL Server に対する ODBC のリリース ノート
 
@@ -44,14 +44,22 @@ Thank you.
 GeneMi (and CraigG).  2019/03/30.
 -->
 
+## <a name="175-january-2020"></a>17.5、2020 年 1 月
+
+| 追加された機能 | 詳細 |
+| :------------ | :------ |
+| サーバーへのラウンドトリップなしで SPID を取得する SQL_COPT_SS_SPID 接続属性 | [DSN および接続文字列の属性とキーワード](../dsn-connection-string-attribute.md)に関する記事を参照してください。 |
+| バグが修正されました。 | 「[Bug fixes (バグの修正)](../bug-fixes.md)」をご覧ください。 |
+| &nbsp; | &nbsp; |
+
 ## <a name="1742-october-2019"></a>17.4.2、2019 年 10 月
 
 | 追加された機能 | 詳細 |
 | :------------ | :------ |
-| 追加の Azure Key Vault エンドポイントのサポート | [ODBC ドライバーでの Always Encrypted の使用](../using-always-encrypted-with-the-odbc-driver.md)に関するページをご覧ください。 |
+| その他の Azure Key Vault エンドポイントのサポート | [ODBC ドライバーでの Always Encrypted の使用](../using-always-encrypted-with-the-odbc-driver.md)に関するページをご覧ください。 |
 | データ分類バージョンの設定のサポート | 「[データ分類](../data-classification.md#bkmk-version)」を参照してください。 |
-| Azure への認証に使用する Azure Active Drirectory Authentication Library (adal) がドライバーによってインストールされるようになりました | |
-| バグの修正。 | 「[Bug fixes (バグの修正)](../bug-fixes.md)」をご覧ください。 |
+| Azure Active Directory 認証ライブラリ (adal.dll) をインストーラーに含める | 基本ドライバーのインストールに含まれるようになりました。これにより、SQL Server 用の Microsoft Active Directory 認証ライブラリの既存のインストールがアップグレードされ、Windows のインストール済みアプリケーションの一覧からこれが削除されます。 |
+| バグが修正されました。 | 「[Bug fixes (バグの修正)](../bug-fixes.md)」をご覧ください。 |
 | &nbsp; | &nbsp; |
 
 ## <a name="174-july-2019"></a>17.4、2019 年 7 月
@@ -60,7 +68,7 @@ GeneMi (and CraigG).  2019/03/30.
 | :------------ | :------ |
 | セキュリティで保護されたエンクレーブが設定された Always Encrypted。 | [ODBC ドライバーでの Always Encrypted の使用](../using-always-encrypted-with-the-odbc-driver.md)に関するページをご覧ください。 |
 | 構成可能な TCP キープアライブ設定。 | 「[SQL Server への接続](../linux-mac/connection-string-keywords-and-data-source-names-dsns.md)」をご覧ください。 |
-| バグの修正。 | 「[Bug fixes (バグの修正)](../bug-fixes.md)」をご覧ください。 |
+| バグが修正されました。 | 「[Bug fixes (バグの修正)](../bug-fixes.md)」をご覧ください。 |
 | &nbsp; | &nbsp; |
 
 ## <a name="173-february-2019"></a>17.3、2019 年 2 月
@@ -70,16 +78,16 @@ GeneMi (and CraigG).  2019/03/30.
 | Azure Active Directory マネージド サービス ID (システムおよびユーザー割り当て) 認証モード。 | 「[ODBC ドライバーでの Azure Active Directory の使用](../using-azure-active-directory.md)」を参照してください。 |
 | Always Encrypted 列に対して入力パラメーターをストリーム配信する機能。 | 「[Limitations of the ODBC driver when using Always Encrypted (Always Encrypted を使用するときの ODBC ドライバーの制限事項)](../using-always-encrypted-with-the-odbc-driver.md#limitations-of-the-odbc-driver-when-using-always-encrypted)」をご覧ください。 |
 | XA 分散トランザクション。 | 「[Using XA Transactions (XA トランザクションの使用)](../use-xa-with-dtc.md)」をご覧ください。 |
-| バグの修正。 | 「[Bug fixes (バグの修正)](../bug-fixes.md)」をご覧ください。 |
+| バグが修正されました。 | 「[Bug fixes (バグの修正)](../bug-fixes.md)」をご覧ください。 |
 | &nbsp; | &nbsp; |
 
 ## <a name="172-july-2018"></a>17.2、2018 年 7 月
 
 | 追加された機能 | 詳細 |
 | :------------ | :------ |
-| Azure SQL Database と SQL Server のデータ分類。 | 「[データ分類](../data-classification.md)」をご覧ください。 |
+| Azure SQL Database と SQL Server のデータ分類。 | 「[データ分類](../data-classification.md)」を参照してください。 |
 | UTF-8 サーバー エンコードのサポート。 | &nbsp; |
-| バグの修正。 | 「[Bug fixes (バグの修正)](../bug-fixes.md)」をご覧ください。 |
+| バグが修正されました。 | 「[Bug fixes (バグの修正)](../bug-fixes.md)」をご覧ください。 |
 | &nbsp; | &nbsp; |
 
 ## <a name="171-march-2018"></a>17.1、2018 年 3 月
@@ -88,7 +96,7 @@ GeneMi (and CraigG).  2019/03/30.
 | :------------ | :------ |
 | `SQL_COPT_SS_CEKCACHETTL` および `SQL_COPT_SS_TRUSTEDCMKPATHS` 接続属性のサポート。 | &bull; &nbsp; `SQL_COPT_SS_CEKCACHETTL`<br/>列暗号化キーのローカル キャッシュが存在する時間を制御したり、それをフラッシュしたりできます。<br/><br/>&bull; &nbsp; `SQL_COPT_SS_TRUSTEDCMKPATHS`<br/>アプリケーションで、AE 操作が指定したリストの列マスター キーのみを使用するように制限できます。<br/><br/> 詳しくは、「[SQL Server 用 ODBC ドライバーと共に Always Encrypted を使用する](../using-always-encrypted-with-the-odbc-driver.md)」をご覧ください。 |
 | Azure Active Directory 対話型認証のサポート | &nbsp; |
-| バグの修正。 | 「[Bug fixes (バグの修正)](../bug-fixes.md)」をご覧ください。 |
+| バグが修正されました。 | 「[Bug fixes (バグの修正)](../bug-fixes.md)」をご覧ください。 |
 | &nbsp; | &nbsp; |
 
 ## <a name="17-february-2018"></a>17、2018 年 2 月

@@ -1,20 +1,21 @@
 ---
-title: SQL Server ビッグ データ クラスター上で Spark & Hive Tools for VS Code を使用して Spark ジョブを実行する
-titleSuffix: SQL Server big data clusters
+title: ジョブの実行:Spark & Hive Tools for VS Code
+titleSuffix: SQL Server Big Data Clusters
 description: SQL Server ビッグ データ クラスター上で Spark & Hive Tools for Visual Studio Code を使用して Spark ジョブを送信します。
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b09a5febe9bc67f04d70c4d5b7850ef26ebac750
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 732db8e12b2923dfdd74727c5e9e0a5a56483fc4
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653730"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255916"
 ---
 # <a name="submit-spark-jobs-on-sql-server-big-data-cluster-in-visual-studio-code"></a>SQL Server ビッグ データ クラスター上の Visual Studio Code で Spark ジョブを送信する
 
@@ -23,7 +24,7 @@ Spark & Hive Tools for Visual Studio Code を使用して Apache Spark 用の Py
 Spark & Hive Tools は、Windows、Linux、macOS など、Visual Studio Code でサポートされているプラットフォームにインストールできます。 以下では、さまざまなプラットフォームの前提条件について説明します。
 
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 この記事の手順を完了するには、次の項目が必要です。
 
@@ -146,7 +147,7 @@ Visual Studio Code からクラスターにスクリプトを送信するには�
 
    ![PySpark Interactive の Python Interactive ウィンドウ](./media/spark-hive-tools-vscode/pyspark-interactive-python-interactive-window.png) 
 
-6. 「 **%%Info**」と入力し、**Shift + Enter** キーを押してジョブ情報を表示します。 (オプション)
+6. 「 **%%Info**」と入力し、**Shift + Enter** キーを押してジョブ情報を表示します。 (省略可能)
 
    ![ジョブ情報の表示](./media/spark-hive-tools-vscode/pyspark-interactive-view-job-information.png)
 
@@ -173,7 +174,7 @@ Visual Studio Code からクラスターにスクリプトを送信するには�
 
 ## <a name="apache-livy-configuration"></a>Apache Livy の構成
 
-[Apache Livy](https://livy.incubator.apache.org/) の構成はサポートされており、ワーク スペース フォルダーの **.VSCode\settings.json** で設定できます。 現時点では、Livy の構成では Python スクリプトのみがサポートされています。 詳細については、[Livy の README](https://github.com/cloudera/livy/blob/master/README.rst ) を参照してください。
+[Apache Livy](https://livy.incubator.apache.org/) の構成はサポートされており、ワーク スペース フォルダーの **.VSCode\settings.json** で設定できます。 現在、Livy の構成では Python スクリプトのみがサポートされています。 詳細については、[Livy の README](https://github.com/cloudera/livy/blob/master/README.rst ) を参照してください。
 
 ### <a id="triggerlivyconf"></a>**Livy の構成をトリガーする方法**
 
@@ -200,7 +201,7 @@ Visual Studio Code からクラスターにスクリプトを送信するには�
 
 **要求本文**
 
-| NAME | description | 型 |
+| name | description | 型 |
 | :- | :- | :- |
 | file | 実行するアプリケーションを含むファイル | パス (必須) |
 | proxyUser | ジョブの実行時に権限を借用するユーザー | string |
@@ -216,20 +217,20 @@ Visual Studio Code からクラスターにスクリプトを送信するには�
 | numExecutors | このセッションで起動する実行プログラムの数 | INT |
 | archives | このセッションで使用するアーカイブ | 文字列の一覧 |
 | queue | 送信先の YARN キューの名前 | string |
-| NAME | このセッションの名前 | string |
+| name | このセッションの名前 | string |
 | conf | Spark の構成プロパティ | キーのマップ = val |
 
 #### <a name="response-body"></a>応答本文
 
 作成されるバッチ オブジェクト。
 
-| NAME | description | 型 |
+| name | description | 型 |
 | :- | :- | :- |
 | id | セッション ID | INT |
 | appId | このセッションのアプリケーション ID | String |
 | appInfo | アプリケーションの詳細情報 | キーのマップ = val |
 | log | ログの行 | 文字列の一覧 |
-| state | バッチの状態 | string |
+| 状態 | バッチの状態 | string |
 
 >[!NOTE]
 >割り当てられた Livy の構成は、スクリプトの送信時に出力ウィンドウに表示されます。
@@ -254,5 +255,5 @@ Spark & Hive for Visual Studio Code は次の機能をサポートしていま�
 
 3. **[OUTPUT]\(出力\)** ビューを確認します。  
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 SQL Server ビッグ データ クラスターと関連するシナリオの詳細については、「[[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview?view=sqlallproducts-allversions)」を参照してください。

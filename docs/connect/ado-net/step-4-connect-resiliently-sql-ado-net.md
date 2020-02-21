@@ -1,73 +1,73 @@
 ---
-title: '手順 4: ADO.NET | を使用して弾性的を SQL に接続するMicrosoft Docs'
-description: SQL に接続する方法について説明します。
+title: 手順 4:ADO.NET を使用して SQL に弾性的に接続する | Microsoft Docs
+description: SQL に弾性的に接続する方法について説明します。
 ms.custom: ''
 ms.date: 08/15/2019
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: rothja
+ms.reviewer: v-kaywon
 ms.technology: connectivity
 ms.topic: conceptual
 dev_langs:
 - CSharp
 ms.assetid: 9b608b0b-6b38-42da-bb83-79df8c170cd7
-author: v-kaywon
-ms.author: v-kaywon
-ms.openlocfilehash: 62ec2eb775ef5fba76b402d1871afe6c87bcc606
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6c323880153939b4f7229e5f04cf4b9a9ed16b99
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72451803"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253321"
 ---
-# <a name="step-4-connect-resiliently-to-sql-with-adonet"></a>ステップ 4: ADO.NET で SQL に弾性的に接続する
+# <a name="step-4-connect-resiliently-to-sql-with-adonet"></a>手順 4:ADO.NET で SQL に弾性的に接続する
 
 ![Download-DownArrow-Circled](../../ssdt/media/download.png)[ADO.NET をダウンロードする](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
 - 前の記事:&nbsp;&nbsp;&nbsp;[手順 3: ADO.NET を使用した SQL への接続を概念実証する](step-3-connect-sql-ado-net.md)  
 
   
-このトピックでは、カスタムの再試行ロジックを示す C# コード サンプルを提供します。 再試行ロジックは信頼性を提供します。 再試行ロジックは、一時的なエラーまたは一時的な*障害*を適切に処理するように設計されています。これは、プログラムが数秒待ってから再試行した場合に解消される傾向があります。  
+このトピックでは、カスタムの再試行ロジックを示す C# コード サンプルを提供します。 再試行ロジックによって信頼性が高まります。 この再試行ロジックは、プログラムが数秒間待機して再試行すると解消する傾向がある一時的なエラーや*一時的な障害*を適切に処理することを目的としています。  
   
-一時的なエラーの原因は次のとおりです。  
+一時的な障害の原因には、次のものがあります。  
   
-- インターネットをサポートするネットワークの簡単な障害。  
-- クラウドシステムでは、クエリが送信された時点でそのリソースを負荷分散することがあります。  
+- インターネットをサポートするネットワークの短時間の障害。  
+- クエリが送信された時点で、クラウド システムがリソースの負荷分散を行っている可能性があります。  
   
   
-ローカル Microsoft SQL Server に接続するための ADO.NET クラスでは、Azure SQL Database に接続することもできます。 ただし、ADO.NET クラスでは、実稼働環境で必要なすべての堅牢性と信頼性を提供することはできません。 クライアントプログラムで一時的な障害が発生し、そのエラーが発生した場合は、自動的に復旧して正常に回復し続ける必要があります。  
+ローカル Microsoft SQL Server に接続するための ADO.NET クラスでは、Azure SQL Database に接続することもできます。 ただし、ADO.NET クラス自体で、運用環境での使用に必要な堅牢性と信頼性がすべて提供されるわけではありません。 クライアント プログラムで一時的な障害が発生しても、そこから通知なしに正常に回復し、処理を続行できる場合があります。  
   
-## <a name="step-1-identify-transient-errors"></a>手順 1: 一時的なエラーを特定する  
+## <a name="step-1-identify-transient-errors"></a>手順 1:一時的なエラーを識別する  
   
-プログラムでは、一時的なエラーと永続的なエラーを区別する必要があります。 一時的なエラーは、一時的なネットワークの問題など、短時間に発生する可能性があるエラー状態です。  永続的なエラーの例としては、プログラムでターゲットデータベース名のスペルミスが発生した場合 (この場合、"そのようなデータベースが見つかりませんでした" というエラーが発生し、短時間で消去することはできません) が考えられます。  
+プログラムでは、一時的なエラーと永続的なエラーを区別する必要があります。 一時的なエラーとは、一時的なネットワークの問題など、短期間で解消する可能性のあるエラー状態です。  永続的なエラーの例として、プログラムにターゲット データベース名のスペルミスが含まれており (この場合は、"そのようなデータベースは見つかりません" というエラーがいつまでも表示されます)、短期間で解消される見込みがない場合が考えられます。  
   
-一時的な障害として分類されたエラー番号の一覧は、「 [SQL Database クライアントアプリケーションのエラーメッセージ](https://docs.microsoft.com/azure/sql-database/sql-database-develop-error-messages/)」で確認できます。  
+一時的な障害として分類されるエラー番号の一覧は、[SQL Database クライアント アプリケーションのエラー メッセージ](https://docs.microsoft.com/azure/sql-database/sql-database-develop-error-messages/)に関するページに記載されています。  
   
-## <a name="step-2-create-and-run-sample-application"></a>手順 2: サンプルアプリケーションを作成して実行する  
+## <a name="step-2-create-and-run-sample-application"></a>手順 2:サンプル アプリケーションを作成して実行する  
   
-このサンプルでは .NET Framework 4.5.1 以降がインストールされていることを前提としています。  このC#コードサンプルは、Program.cs という名前の1つのファイルで構成されています。 そのコードは、次のセクションで説明します。  
+このサンプルは、.NET Framework 4.5.1 以降がインストールされていることを前提としています。  C# のコード サンプルは、Program.cs という名前の 1 つのファイルで構成されます。 次のセクションでコードについて説明します。  
   
-### <a name="step-2a-capture-and-compile-the-code-sample"></a>手順 2. a: コードサンプルをキャプチャしてコンパイルする  
+### <a name="step-2a-capture-and-compile-the-code-sample"></a>手順 2.a: サンプル コードをキャプチャしてコンパイルする  
   
-このサンプルをコンパイルするには、次の手順を実行します。  
+次の手順で、サンプルをコンパイルができます。  
   
 1. [無料の Visual Studio Community edition](https://www.visualstudio.com/products/visual-studio-community-vs)、C# コンソール アプリケーション テンプレートから新しいプロジェクトを作成します。  
-    - ファイル > 新しい > プロジェクト > インストールされているC# > テンプレート > Visual > Windows > クラシックデスクトップ > コンソールアプリケーション  
-    - プロジェクトに**retryado2.exe**という名前を指定します。  
-2. [ソリューションエクスプローラー] ウィンドウを開きます。  
+    - [ファイル]、[新規作成]、[プロジェクト]、[インストール済み]、[テンプレート]、[Visual C#]、[Windows]、[従来のデスクトップ]、[コンソール アプリケーション] の順にクリックします。  
+    - プロジェクトに、「 **RetryAdo2**」という名前を付けます。  
+2. [ソリューション エクスプローラー] ペインを開きます。  
     - プロジェクトの名前を確認します。  
-    - Program.cs ファイルの名前を参照してください。  
+    - Program.cs ファイルの名前を確認します。  
 3. Program.cs ファイルを開きます。  
-4. Program.cs ファイルの内容を、次のコードブロックのコードに完全に置き換えます。  
-5. [ビルド > ビルド] メニューをクリックします。  
+4. Program.cs ファイルの内容全体を次のコード ブロックのコードに置き換えます。  
+5. メニューで [ビルド]、[ソリューションのビルド] の順にクリックします。  
   
-### <a name="step-2b-copy-and-paste-sample-code"></a>手順 2. b: サンプルコードをコピーして貼り付ける  
+### <a name="step-2b-copy-and-paste-sample-code"></a>手順 2.b: サンプル コードをコピーして貼り付ける  
   
-このコードを**Program.cs**ファイルに貼り付けます。  
+このコードを、 **Program.cs** ファイルに貼り付けます。  
   
-次に、サーバー名、パスワードなどの文字列を編集する必要があります。 これらの文字列は、 **GetSqlConnectionStringBuilder**という名前のメソッドで見つけることができます。  
+次にサーバー名、パスワードなどの文字列を編集する必要があります。 これらの文字列は、 **GetSqlConnectionStringBuilder**という名前のメソッドにあります。  
   
-注: サーバー名の接続文字列は、 **tcp:** の4文字のプレフィックスが含まれているため、Azure SQL Database に合わせて構成されています。 ただし、サーバー文字列を調整して Microsoft SQL Server に接続することもできます。  
+注:このサーバー名の接続文字列には **tcp:** の 4 文字のプレフィックスが含まれているため、Azure SQL Database 向けになっています。 ただし、このサーバー文字列は、Microsoft SQL Server に接続するように調整することができます。  
   
   
 ```csharp
@@ -244,13 +244,13 @@ SELECT TOP 3
 }  
 ```  
   
-###  <a name="step-2c-run-the-program"></a>手順 2. c: プログラムを実行する  
+###  <a name="step-2c-run-the-program"></a>手順 2.c: プログラムの実行  
   
   
-**Retryado2.exe**実行可能ファイルは、パラメーターを入力しません。 .Exe を実行するには、次のようにします。  
+**RetryAdo2.exe** 実行可能ファイルにはパラメーターを入力しません。 .exe ファイルを実行するには、次のようにします。  
   
-1. Retryado2.exe バイナリをコンパイルしたコンソールウィンドウを開きます。  
-2. 入力パラメーターを使用せずに Retryado2.exe を実行します。  
+1. RetryAdo2.exe バイナリをコンパイルした場所にコンソール ウィンドウを開きます。  
+2. 入力パラメーターなしで RetryAdo2.exe を実行します。  
   
   
   
@@ -262,19 +262,19 @@ filetable_updates_2105058535    2105058535
   
   
   
-## <a name="step-3-ways-to-test-your-retry-logic"></a>手順 3: 再試行ロジックをテストする方法  
+## <a name="step-3-ways-to-test-your-retry-logic"></a>手順 3:再試行ロジックをテストする方法  
   
-一時エラーをシミュレートして再試行ロジックをテストするには、さまざまな方法があります。  
+一時的なエラーをシミュレートして再試行ロジックをテストするには、いくつかの方法があります。  
   
   
-###  <a name="step-3a-throw-a-test-exception"></a>手順 3. a: テスト例外をスローする  
+###  <a name="step-3a-throw-a-test-exception"></a>手順 3.a: テスト例外をスローする  
   
-このコードサンプルには次のものが含まれます。  
+コード サンプルには、以下のものが含まれています。  
   
-- **TestSqlException**という小さい2番目のクラス。 **Number**という名前のプロパティがあります。  
-- `//throw new TestSqlException(4060);`。コメントを解除できます。  
+- **Number** という名前のプロパティを含む、**TestSqlException** という名前の小さな 2 番目のクラス。  
+- `//throw new TestSqlException(4060);` のコメントを解除できます。  
   
-Throw ステートメントのコメントを解除して再コンパイルすると、次の**retryado2.exe**の実行時に次のような内容が出力されます。  
+throw ステートメントのコメントを解除して再コンパイルすると、**RetryAdo2.exe** の次回の実行によって次のような行が出力されます。  
   
 ```  
 [C:\VS15\RetryAdo2\RetryAdo2\bin\Debug\]  
@@ -292,31 +292,31 @@ ERROR: Unable to access the database!
 >>  
 ```  
   
-###  <a name="step-3b-retest-with-a-persistent-error"></a>手順 3. b: 永続的なエラーで再テストする  
+###  <a name="step-3b-retest-with-a-persistent-error"></a>手順 3.b: 永続的なエラーで再テストする  
   
-コードが永続的なエラーを正しく処理することを証明するには、前のテストを再実行します。ただし、4060のような実際の一時的なエラーの数は使用しないようにします。 代わりに、数字7654321を使用します。 プログラムはこれを永続的なエラーとして扱い、再試行をすべてバイパスする必要があります。  
+コードが永続的なエラーを適切に処理できることを確かめるには、前のテストを再実行します。ただし、4060 などの実際の一時的なエラーの番号は使用しないでください。 代わりに、意味のない番号 7654321 を使用します。 プログラムはこれを永続的なエラーとして扱い、再試行をすべてバイパスするはずです。  
   
-###  <a name="step-3c-disconnect-from-the-network"></a>手順 3. c: ネットワークから切断する  
+###  <a name="step-3c-disconnect-from-the-network"></a>手順 3.c: ネットワークから切断する  
   
-1. クライアントコンピューターをネットワークから切断します。  
-    - デスクトップの場合は、ネットワークケーブルを取り外します。  
-    - ラップトップの場合は、キーの関数の組み合わせを押して、ネットワークアダプターをオフにします。  
-2. Retryado2.exe を起動し、コンソールが最初の一時的なエラー (11001 など) を表示するのを待ちます。  
-3. ネットワークに再接続し、Retryado2.exe は実行を継続します。  
-4. 次回の再試行で、コンソールの成功を確認します。  
+1. クライアント コンピューターをネットワークから切断します。  
+    - デスクトップの場合、ネットワーク ケーブルを外します。  
+    - ラップトップの場合、ファンクション キーの組み合わせを押してネットワーク アダプターをオフにします。  
+2. RetryAdo2.exe を起動し、最初の一時的なエラーがコンソールに表示されるのを待ちます (おそらく 11001)。  
+3. RetryAdo2.exe が実行している間に、ネットワークに再接続します。  
+4. 続いて行われる再試行が成功したことをコンソールで確認します。  
   
   
-###  <a name="step-2d-temporarily-misspell-the-server-name"></a>手順 2. d: サーバー名を一時的にスペルミスにする  
+###  <a name="step-2d-temporarily-misspell-the-server-name"></a>手順 2.d: 一時的にスペルミスのあるサーバー名を使用する  
   
-1. 一時的に40615を別のエラー番号として一時的に追加し**てから、** 再コンパイルします。  
-2. `new QC.SqlConnectionStringBuilder()` 行にブレークポイントを設定します。  
-3. 次のように、*エディットコンティニュ*機能を使用して、サーバー名を意図的に間違えます。  
-    - プログラムを実行して、ブレークポイントに戻ります。  
-    - エラー40615が発生します。  
+1. 一時的に 40615 を別のエラー番号として **TransientErrorNumbers**に追加し、再コンパイルします。  
+2. `new QC.SqlConnectionStringBuilder()`の行にブレークポイントを設定します。  
+3. *[エディット コンティニュ]* 機能を使用して、数行下で意図的にサーバー名のスペルを間違えます。  
+    - プログラムを実行し、ブレークポイントに戻ります。  
+    - 40615 エラーが発生します。  
 4. スペルミスを修正します。  
-5. プログラムを正常に実行して完了させます。  
-6. 40615を削除し、再コンパイルします。  
+5. プログラムを実行すると正常に終了します。  
+6. 40615 を削除し、再コンパイルします。  
   
-## <a name="next-steps"></a>次の手順  
+## <a name="next-steps"></a>次のステップ  
   
-その他のベスト practicies と設計ガイドラインについては、「 [SQL Database への接続: リンク、ベストプラクティス、設計ガイドライン](https://azure.microsoft.com/documentation/articles/sql-database-connect-central-recommendations/)」を参照してください。  
+他のベスト プラクティスおよびデザイン ガイドラインを調べるには、[SQL Database への接続: リンク、ベスト プラクティスおよびデザイン ガイドライン](https://azure.microsoft.com/documentation/articles/sql-database-connect-central-recommendations/)に関するページを参照してください。  

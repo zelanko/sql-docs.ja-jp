@@ -1,10 +1,9 @@
 ---
-title: 抽出条件ペインで検索条件を組み合わせる場合の規則 | Microsoft Docs
-ms.custom: ''
+title: 抽出条件ペインで検索条件を組み合わせる場合の規則
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,12 +18,14 @@ helpviewer_keywords:
 ms.assetid: d4859be5-ff5b-48b2-a101-ad40c6dbcc68
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5575530a70eecfc030e457d20596ebc76040cd01
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 889b0497959e7ac7b624d7659fba2648166f0a63
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68260422"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75254440"
 ---
 # <a name="conventions-for-combining-search-conditions-in-the-criteria-pane-visual-database-tools"></a>抽出条件ペインで検索条件を組み合わせる場合の規則 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -139,7 +140,7 @@ WHERE (hire_date < '01/01/95' ) AND
   
 クエリおよびビュー デザイナーは、この WHERE 句を次のように抽出条件ペインに表示します。  
   
-![抽出条件ペインで OR 句が優先される](../../ssms/visual-db-tools/media/vs_criteriapane1.gif "抽出条件ペインで OR 句が優先される")  
+![[条件] ペインの OR 句の優先順位](../../ssms/visual-db-tools/media/vs_criteriapane1.gif "[条件] ペインの OR 句の優先順位")  
   
 ただし、結合されている OR 句が AND 句よりも優先される場合は、各 OR 句に対して AND 句が繰り返されます。 その結果、AND 句が各 OR 句に分配されます。 たとえば、SQL ペインで次のような WHERE 句を作成したとします。  
   
@@ -151,7 +152,7 @@ WHERE (hire_date < '01/01/95' ) AND
   
 クエリおよびビュー デザイナーは、この WHERE 句を次のように抽出条件ペインに表示します。  
   
-![抽出条件ペインの複数の AND 句と OR 句](../../ssms/visual-db-tools/media/vs_criteriapane2.gif "抽出条件ペインの複数の AND 句と OR 句")  
+![[条件] ペインの複数の AND 句と OR 句](../../ssms/visual-db-tools/media/vs_criteriapane2.gif "[条件] ペインの複数の AND 句と OR 句")  
   
 結合された OR 句にデータ列が 1 つしか含まれない場合、クエリおよびビュー デザイナーはその OR 句全体をグリッドの 1 つのセルに配置することができるため、AND 句を繰り返さずに済みます。 たとえば、SQL ペインで次のような WHERE 句を作成したとします。  
   
@@ -162,7 +163,7 @@ WHERE (hire_date < '01/01/95' ) AND
   
 クエリおよびビュー デザイナーは、この WHERE 句を次のように抽出条件ペインに表示します。  
   
-![抽出条件ペインで定義された、結合された OR 句](../../ssms/visual-db-tools/media/vs_criteriapane3.gif "抽出条件ペインで定義された、結合された OR 句")  
+![[条件] ペインで定義されているリンク付き OR 句](../../ssms/visual-db-tools/media/vs_criteriapane3.gif "[条件] ペインで定義されているリンク付き OR 句")  
   
 抽出条件ペインで値の 1 つを変更するなど、クエリに変更を加えると、クエリおよびビュー デザイナーによって SQL ペインの SQL ステートメントが再作成されます。 再作成された SQL ステートメントは、元のステートメントよりも抽出条件ペインの表示内容の方に近くなります。 たとえば、抽出条件ペインに分配された AND 句が含まれる場合、SQL ペインで再作成されるステートメントには明示的に分配された AND 句が含まれます。 詳細については、このトピックの前の方にある「複数の OR 句に対する AND の解釈」を参照してください。  
   

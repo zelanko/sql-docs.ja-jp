@@ -1,6 +1,6 @@
 ---
 title: 追加の SqlClient ドライバー情報の検索
-description: ドライバーに関する有用な情報が含まれているページ。
+description: ドライバーに関する有用な情報を含むページ。
 ms.date: 09/30/2019
 dev_langs:
 - csharp
@@ -10,29 +10,29 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: fce101e64123e3fbc1100610aeea03cee16b0e75
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 08ff52be06f976171623b4af91da3ebc1d26d53b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452393"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251035"
 ---
 # <a name="finding-additional-sqlclient-driver-information"></a>追加の SqlClient ドライバー情報の検索
 
 ![Download-DownArrow-Circled](../../ssdt/media/download.png)[ADO.NET をダウンロードする](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-一般的な SQL Server の開発のための Microsoft SqlClient Data Provider の詳細については、次のオンラインリソースを参照してください。
+Microsoft SqlClient Data Provider for SQL Server の一般的な開発の詳細については、次のオンライン リソースを参照してください。
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
-|リソース|[説明]|  
+|リソース|説明|  
 |--------------|-----------------|  
 |[.Net CoreFX GitHub リポジトリ](https://github.com/dotnet/corefx)|このリポジトリには、.NET Core のライブラリ実装が含まれています。|
-|[SQL Server GitHub リポジトリ用の Microsoft SqlClient Data Provider](https://github.com/dotnet/SqlClient)|このリポジトリには、SqlClient ドライバーのソースコードが含まれています。|  
-|[.NET API ブラウザー](https://docs.microsoft.com/dotnet/api/)|このサイトには、ドライバーの .NET API 情報が含まれています。|  
+|[Microsoft SqlClient Data Provider for SQL Server GitHub リポジトリ](https://github.com/dotnet/SqlClient)|このリポジトリには、SqlClient ドライバーのソース コードが含まれています。|  
+|[.NET API ブラウザー](https://docs.microsoft.com/dotnet/api/)|このサイトには、ドライバーに関する .NET API の情報が含まれています。|  
   
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
  [SqlClient ドライバーの概要](overview-sqlclient-driver.md)  

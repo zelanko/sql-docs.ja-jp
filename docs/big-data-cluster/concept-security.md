@@ -1,7 +1,7 @@
 ---
 title: セキュリティの概念
 titleSuffix: SQL Server big data clusters
-description: この記事では、SQL Server ビッグ データ クラスターのセキュリティの概念について説明します。 これには、クラスター エンドポイントとクラスター認証の説明が含まれます。
+description: この記事では、SQL Server ビッグ データ クラスターのセキュリティの概念について説明します。 このコンテンツには、クラスター エンドポイントとクラスター認証の説明が含まれます。
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
@@ -9,24 +9,29 @@ ms.date: 10/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 35eb5e0a3236d8f016ed5ca99b769d628a4d81ed
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 0219022ee2f4d813261aa6181416521e88e5d0f6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532379"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253121"
 ---
-# <a name="security-concepts-for-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]のセキュリティの概念
+# <a name="security-concepts-for-big-data-clusters-2019"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]のセキュリティの概念
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 この記事では、ビッグ データ クラスターのセキュリティに関する重要な概念について説明します
 
-[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]では、明確で一貫性のある承認と認証が提供されます。 ビッグ データ クラスターは、既存のドメインに対して Active Directory 統合をセットアップする完全に自動化された展開を通じて、Active Directory と統合できます。 Active Directory 統合を使用してビッグ データ クラスターを構成すると、既存の ID とユーザー グループを活用して、すべてのエンドポイントにわたる統合アクセスを実現できます。 また、SQL Server 内で外部テーブルを作成した後は、外部テーブルへのアクセスを Active Directory ユーザーとグループに許可することで、データ ソースへのアクセスを制御できます。これにより、データ アクセス ポリシーが 1 か所に一元化されます。
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]では、明確で一貫性のある承認と認証が提供されます。 ビッグ データ クラスターは、既存のドメインに対して Active Directory (AD) 統合をセットアップする完全に自動化されたデプロイを通じて、AD と統合できます。 AD 統合を使用してビッグ データ クラスターを構成すると、既存の ID とユーザー グループを活用して、すべてのエンドポイントにわたる統合アクセスを実現できます。 また、SQL Server 内で外部テーブルを作成した後は、外部テーブルへのアクセスを AD ユーザーとグループに許可することで、データ ソースへのアクセスを制御できます。これにより、データ アクセス ポリシーが 1 か所に一元化されます。
+
+この 14 分のビデオでは、ビッグ データ クラスター セキュリティの概要を把握できます。
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Overview-Big-Data-Cluster-Security/player?WT.mc_id=dataexposed-c9-niner]
+
 
 ## <a name="authentication"></a>認証
 
-外部クラスター エンドポイントでは、Active Directory 認証がサポートされます。 これは、AD ID を使用してビッグ データ クラスターを認証できることを意味します。
+外部クラスター エンドポイントでは、AD 認証がサポートされます。 AD ID を使用してビッグ データ クラスターを認証します。
 
 ### <a name="cluster-endpoints"></a>クラスター エンドポイント
 
@@ -34,7 +39,7 @@ ms.locfileid: "73532379"
 
 * マスター インスタンス - SSMS や Azure Data Studio など、データベース ツールとアプリケーションを使用してクラスター内の SQL Server マスター インスタンスにアクセスするための TDS エンドポイント。 azdata から HDFS または SQL Server コマンドを使用する場合、操作に応じて、ツールは他のエンドポイントに接続します。
 
-* HDFS ファイル、Spark (Knox) にアクセスするためのゲートウェイ - これは HTTPS ベースのエンドポイントです。 このエンドポイントは、webHDFS や Spark などのサービスにアクセスするために使用されます。
+* HDFS ファイル、Spark (Knox) にアクセスするためのゲートウェイ - webHDFS や Spark などのサービスにアクセスするための HTTPS エンドポイントです。
 
 * クラスター管理サービス (コントローラー) エンドポイント - クラスターを管理するための REST API を公開しているビッグ データ クラスター管理サービスです。 Azdata ツールは、このエンドポイントに接続する必要があります。
 
@@ -48,7 +53,7 @@ ms.locfileid: "73532379"
 
 ## <a name="authorization"></a>承認
 
-クラスター全体を通じて、さまざまなコンポーネント間の統合セキュリティにより、Spark や SQL Server からクエリを発行するときに元のユーザーの ID を HDFS に渡すことができます。 前述のように、さまざまな外部クラスター エンドポイントで AD 認証がサポートされています。
+クラスター全体で、さまざまなコンポーネント間の統合セキュリティにより、Spark や SQL Server からクエリを発行するときに元のユーザーの ID を HDFS に渡すことができます。 前述のように、さまざまな外部クラスター エンドポイントで AD 認証がサポートされています。
 
 クラスターには、データ アクセスを管理するための 2 レベルの承認チェックがあります。 ビッグ データのコンテキストでの承認は、オブジェクトに対する従来の SQL Server アクセス許可を使用して SQL Server 内で、また、ユーザー ID を特定のアクセス許可に関連付ける制御リスト (ACL) を使用して HDFS 内で行われます。
 
@@ -64,15 +69,14 @@ ms.locfileid: "73532379"
 
 ## <a name="basic-administrator-login"></a>基本管理者ログイン
 
-クラスターを Active Directory モードで展開するか、基本管理者ログインのみを使用して展開するかを選択できます。 基本管理者ログインのみを使用することは、運用環境でサポートされているセキュリティ モードではなく、主に製品の評価を目的としています。
+クラスターを AD モードで展開するか、基本管理者ログインのみを使用して展開するかを選択できます。 基本管理者ログインのみを使用することは、運用環境でサポートされているセキュリティ モードではなく、製品の評価を目的としています。
 
-Active Directory モードを選択した場合でも、クラスター管理者に対して基本ログインが作成されます。 これにより、AD 接続が停止した場合の "バックドア" が提供されます。
+Active Directory モードを選択した場合でも、クラスター管理者に対して基本ログインが作成されます。 この機能により、AD 接続が停止した場合の代替アクセスが提供されます。
 
-展開時に、この基本ログインにはクラスター内での管理者権限が付与されます。 これは、ユーザーが SQL Server マスター インスタンス内のシステム管理者となり、クラスター コントローラー内の管理者となることを意味します。
-Hadoop コンポーネントでは混合モード認証がサポートされません。つまり、基本管理者ログインを使用してゲートウェイ (knox) に対する認証を行うことはできません。
+展開時に、この基本ログインにはクラスター内での管理者権限が付与されます。 ログイン ユーザーは SQL Server マスター インスタンス内のシステム管理者となり、クラスター コントローラー内の管理者になります。
+Hadoop コンポーネントでは混合モード認証がサポートされません。つまり、基本管理者ログインを使用してゲートウェイ (Knox) に対する認証を行うことはできません。
 
-
-これらは、展開時に定義する必要があるログイン資格情報です。
+デプロイ時に定義する必要があるログイン資格情報には、以下が含まれます。
 
 クラスター管理者のユーザー名:
  + `AZDATA_USERNAME=<username>`
@@ -83,7 +87,7 @@ Hadoop コンポーネントでは混合モード認証がサポートされま�
 > [!NOTE]
 > 非 AD モードでは、HDFS/Spark にアクセスするためにゲートウェイ (Knox) に対して認証を行うために、ユーザー名 "root" を上記のパスワードと組み合わせて使用する必要があることに注意してください。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] の詳細については、次のリソースを参照してください。
 

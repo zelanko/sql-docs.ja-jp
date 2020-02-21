@@ -1,29 +1,29 @@
 ---
 title: Machine Learning Server のインストール (スタンドアロン)
-description: RevoScaleR、revoscalepy、MicrosoftML、およびその他のパッケージを使用した R および Python 開発用に、インスタンス対応でないスタンドアロンの機械学習サーバーをセットアップします。
+description: Python および R 用のスタンドアロンの機械学習サーバーを設定します。SQL Server のセットアップによってインストールされたスタンドアロン サーバーは、Microsoft Machine Learning Server の非 SQL ブランド バージョンと機能的に同等です。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 11/04/2019
+ms.date: 01/03/2020
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 02df024801dad815b640f4ef4222a0c8face485b
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 319ae61fbdca64bc6f27143bdd4a42aec635d129
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727641"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76891729"
 ---
 # <a name="install-machine-learning-server-standalone-or-r-server-standalone-using-sql-server-setup"></a>SQL Server セットアップを使用して Machine Learning Server (スタンドアロン) または R Server (スタンドアロン) をインストールする
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
-SQL Server セットアップには、SQL Server の外部で実行される、インスタンス対応でないスタンドアロンの機械学習サーバーをインストールするための**共有機能**オプションが含まれています。 これは **Machine Learning Server (スタンドアロン)** と呼ばれ、R と Python が含まれています。 
+SQL Server セットアップには、SQL Server の外部で実行されるスタンドアロンの機械学習サーバーをインストールするための**共有機能**オプションが含まれています。 これは **Machine Learning Server (スタンドアロン)** と呼ばれ、Python と R が含まれています。 
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-SQL Server セットアップには、SQL Server の外部で実行される、インスタンス対応でないスタンドアロンの機械学習サーバーをインストールするための**共有機能**オプションが含まれています。 SQL Server 2016 では、この機能は **R Server (スタンドアロン)** と呼ばれます。  
+SQL Server セットアップには、SQL Server の外部で実行されるスタンドアロンの機械学習サーバーをインストールするための**共有機能**オプションが含まれています。 SQL Server 2016 では、この機能は **R Server (スタンドアロン)** と呼ばれます。  
 ::: moniker-end
 
 SQL Server セットアップによってインストールされるスタンドアロン サーバーは、[Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server) の非 SQL ブランド バージョンと機能的に同等であり、次のような同じユース ケースとシナリオがサポートされています。
@@ -196,11 +196,7 @@ R と Python の開発では、同じコンピューター上に複数のバー�
 
 3. Web サービスの配置用の Web ノードとコンピューティング ノードとして実行するために運用可能化を有効にした場合は、**AppSettings.json** ファイルを念のためにバックアップします。 SQL Server 2017 CU13 以降を適用すると、このファイルが改訂されるため、元のバージョンを保持するためにバックアップ コピーが必要になる場合があります。
 
-4. インターネットに接続されているデバイスで、使用しているバージョンの SQL Server 用の累積更新プログラムのリンクをクリックします。
-
-  + SQL Server 2019 更新プログラム *(利用可能な更新プログラムはまだありません)*
-  + [SQL Server 2017 更新プログラム](https://sqlserverupdates.com/sql-server-2017-updates/)
-  + [SQL Server 2016 更新プログラム](https://sqlserverupdates.com/sql-server-2016-updates/)
+4. 「[Microsoft SQL Server の最新の更新プログラム](https://docs.microsoft.com/sql/database-engine/install-windows/latest-updates-for-microsoft-sql-server)」から、お使いのバージョンに適した最新の累積的な更新プログラムをインターネットに接続されたマシンにダウンロードします。
 
 5. 最新の累積的な更新プログラムをダウンロードします。 それは実行可能ファイルです。
 
@@ -214,7 +210,7 @@ R と Python の開発では、同じコンピューター上に複数のバー�
 
    + .exe ファイルをダブルクリックしてセットアップを実行します。 インターネットに接続されていないサーバーに累積的な更新プログラムをインストールする場合は、R と Python の .cab ファイルの場所を選択するように求められます。
 
-8. インストール後、Web ノードとコンピューティング ノードを使用した運用可能化を有効にしたサーバーで **AppSettings.json** を編集し、"MMLNativePath" のすぐ下に "MMLResourcePath" エントリを追加します。 例:
+8. インストール後、Web ノードとコンピューティング ノードを使用した展開を有効にしたサーバーで **AppSettings.json** を編集し、"MMLNativePath" のすぐ下に "MMLResourcePath" エントリを追加します。 次に例を示します。
 
     ```json
     "ScorerParameters": {
@@ -229,18 +225,18 @@ R と Python の開発では、同じコンピューター上に複数のバー�
 
 開発 IDE は、セットアップの段階でインストールされません。 開発環境の構成の詳細については、[R ツールのセットアップ](../r/set-up-a-data-science-client.md)に関するページと [Python ツールのセットアップ](../python/setup-python-client-tools-sql.md)に関するページを参照してください。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
-R 開発者はいくつかの簡単な例を試して、SQL Server での R の動作方法の基本を確認できます。 次の手順については、以下のリンクをご覧ください。
+R 開発者はいくつかの簡単な例を試して、SQL Server での R の動作方法の基本を確認できます。 次の手順については、以下のリンクを参照してください。
 
-+ [チュートリアル: T-SQL での R の実行](../tutorials/quickstart-r-create-script.md)
-+ [チュートリアル: R 開発者向けのデータベース内分析](../tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [チュートリアル:T-SQL での R の実行](../tutorials/quickstart-r-create-script.md)
++ [チュートリアル:R 開発者向けのデータベース内分析](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 Python 開発者は、次のチュートリアルに従って、SQL Server で Python を使用する方法を学習できます。
 
-+ [チュートリアル: T-SQL での Python の実行](../tutorials/run-python-using-t-sql.md)
-+ [チュートリアル: Python 開発者向けのデータベース内分析](../tutorials/sqldev-in-database-python-for-sql-developers.md)
++ [チュートリアル:T-SQL での Python の実行](../tutorials/run-python-using-t-sql.md)
++ [チュートリアル:Python 開発者向けのデータベース内分析](../tutorials/sqldev-in-database-python-for-sql-developers.md)
 ::: moniker-end
 
 実際のシナリオに基づいた機械学習の例については、[機械学習のチュートリアル](../tutorials/machine-learning-services-tutorials.md)を参照してください。

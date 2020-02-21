@@ -1,7 +1,7 @@
 ---
-title: SQL Server の既存のインスタンスのアンインストール (セットアップ) | Microsoft Docs
-ms.custom: ''
-ms.date: 09/11/2019
+title: 既存の instanceInstance のアンインストール
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3c64b29d-61d7-4b86-961c-0de62261c6a1
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 16c406052b563accdc2cd98fd629909cce38e0ce
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.openlocfilehash: 980982f6ae55d72ef6a54fdc07c0c707c4752b8f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71251066"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258947"
 ---
 # <a name="uninstall-an-existing-instance-of-sql-server-setup"></a>SQL Server の既存のインスタンスのアンインストール (セットアップ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -55,19 +55,19 @@ ms.locfileid: "71251066"
     > ReportServer データベースは、SQL Server Reporting Services に含まれています。   
 
  
-1.  **サービス** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **をすべて停止します。** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントをアンインストールする前に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスをすべて停止することをお勧めします。 アクティブな接続が存在すると、アンインストールに失敗する場合があるためです。  
+1.  **すべての** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **サービスを停止します。** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントをアンインストールする前に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスをすべて停止することをお勧めします。 アクティブな接続が存在すると、アンインストールに失敗する場合があるためです。  
   
 1.  **適切な権限を持つアカウントの使用。** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス アカウントを使用するか、同等の権限を持つアカウントを使用して、サーバーにログオンします。 たとえば、ローカルの Administrators グループのメンバーであるアカウントを使用してサーバーにログオンできます。  
   
 ## <a name="uninstall"></a>アンインストール 
 
-# <a name="windows-10--2016-tabwindows10"></a>[Windows 10 / 2016 以降](#tab/Windows10)
+# <a name="windows-10--2016-"></a>[Windows 10 / 2016 以降](#tab/Windows10)
 
 Windows 10、Windows Server 2016、Windows Server 2019 以降から SQL Server をアンインストールするには、次の手順に従います。 
 
 1. 削除プロセスを開始するには、[スタート] メニューから **[設定]** に移動し、 **[アプリ]** を選択します。 
 1. 検索ボックスで「`sql`」を検索します。 
-1. **[Microsoft SQL Server (バージョン) (ビット)]** を選択します。 たとえば、`Microsoft SQL Server 2017 (64-bit)` のようになります。
+1. **[Microsoft SQL Server (バージョン) (ビット)]** を選択します。 たとえば、「 `Microsoft SQL Server 2017 (64-bit)` 」のように入力します。
 1. **[アンインストール]** を選択します。
  
     ![SQL Server のアンインストール](media/uninstall-an-existing-instance-of-sql-server-setup/uninstall-sql-server-windows-10.png)
@@ -84,12 +84,12 @@ Windows 10、Windows Server 2016、Windows Server 2019 以降から SQL Server �
  
 1. **[アプリと機能]** ウィンドウを更新して、SQL Server インスタンスが正常に削除されたことを確認し、まだ存在している SQL Server コンポーネントを確認します。 このウィンドウからこれらのコンポーネントも削除します。その場合は選択します。 
 
-# <a name="windows-2008---2012-r2tabwindows2012"></a>[Windows 2008 から 2012 R2](#tab/windows2012)
+# <a name="windows-2008---2012-r2"></a>[Windows 2008 から 2012 R2](#tab/windows2012)
 
 Windows Server 2008、Windows Server 2012、Windows 2012 R2 から SQL Server をアンインストールするには、次の手順に従います。 
 
 1. 削除プロセスを開始するには、**コントロール パネル**に移動し、 **[プログラムと機能]** を選択します。
-1. **[Microsoft SQL Server (バージョン) (ビット)]** を右クリックし、 **[アンインストール]** を選択します。 たとえば、`Microsoft SQL Server 2012 (64-bit)` のようになります。  
+1. **[Microsoft SQL Server (バージョン) (ビット)]** を右クリックし、 **[アンインストール]** を選択します。 たとえば、「 `Microsoft SQL Server 2012 (64-bit)` 」のように入力します。  
   
     ![SQL Server のアンインストール](media/uninstall-an-existing-instance-of-sql-server-setup/uninstall-sql-server-windows-2012.png)
 

@@ -1,20 +1,21 @@
 ---
-title: レポート サーバー データベースを作成する、SSRS Configuration Manager | Microsoft Docs
+title: レポート サーバー データベースを作成する、Configuration Manager | Microsoft Docs
+description: SQL Server Reporting Services のネイティブ モードでは、レポート サーバーのメタデータとオブジェクトを格納するため、2 つの SQL Server リレーショナル データベースが使用されます。 データベースの 1 つは主要な記憶域として使用され、もう 1 つは一時データの格納に使用されます。
 author: maggiesMSFT
 ms.author: maggies
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
-ms.date: 08/28/2019
-ms.openlocfilehash: d8bbc1436b3615259248598a9fa19346d4f2a43f
-ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
-ms.translationtype: MTE75
+ms.date: 12/16/2019
+ms.openlocfilehash: a0ff8c253af6165602b626da9aedbba09bb819f8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70123017"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253313"
 ---
-# <a name="create-a-report-server-database"></a>レポート サーバー データベースを作成する 
+# <a name="create-a-report-server-database-ssrs-configuration-manager"></a>レポート サーバー データベースの作成、SSRS Configuration Manager  
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
@@ -97,7 +98,7 @@ SharePoint モードの 3 つのデータベースの名前の例を次に示し
 
  レポート サーバー データベースを作成するときは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのエディションでデータベースをホストできるわけではないことに注意してください。 詳しくは、「[SQL Server の各エディションでサポートされる SQL Server Reporting Services の機能](../reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)」の「[レポート サーバー データベースのエディションの要件](../reporting-services-features-supported-by-the-editions-of-sql-server-2016.md#edition-requirements-for-the-report-server-database)」をご覧ください。  
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 [Reporting Services Configuration Manager](https://msdn.microsoft.com/63519ef4-e68a-42fb-9cf7-31228ea4e434) について読みます。  
 

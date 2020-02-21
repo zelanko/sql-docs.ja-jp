@@ -13,12 +13,12 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: MightyPen
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 2c71bdf4628b74bd21346f37534339d8d83497b2
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
-ms.translationtype: MTE75
+ms.openlocfilehash: 79c2276174f0e8f3474350c6c91fb4d3ede0401d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68984594"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76911214"
 ---
 # <a name="installing-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Linux および macOS に Microsoft ODBC Driver for SQL Server をインストールする
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -29,6 +29,29 @@ ms.locfileid: "68984594"
 
 > [!IMPORTANT]
 > 短期間利用可能だった v17 `msodbcsql` パッケージをインストールしている場合は、`msodbcsql17` パッケージのインストール前に削除する必要があります。 これにより、競合が回避されます。 `msodbcsql17` パッケージは `msodbcsql` v13 パッケージと並行してインストールできます。
+
+### <a name="alpine-linux"></a>Alpine Linux
+```
+#Download the desired package(s)
+curl https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.5.1.1-1_amd64.apk
+curl https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/mssql-tools_17.5.1.1-1_amd64.apk
+
+
+#(Optional) Verify signature, if 'gpg' is missing install it using 'apk add gnupg':
+curl https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.5.1.1-1_amd64.sig
+curl https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/mssql-tools_17.5.1.1-1_amd64.sig
+
+curl https://packages.microsoft.com/keys/microsoft.asc  | gpg --import -
+gpg --verify msodbcsql_17.5.1.1-1_amd64.sig msodbcsql_17.5.1.1-1_amd64.apk
+
+
+#Install the package(s)
+sudo apk add --allow-untrusted msodbcsql_17.5.1.1-1_amd64.apk
+sudo apk add --allow-untrusted mssql-tools_17.5.1.1-1_amd64.apk
+
+```
+> [!NOTE]
+> - Alpine のサポートには、ドライバー バージョン 17.5 以降が必要です。
 
 ### <a name="debian"></a>Debian
 ```
@@ -57,9 +80,15 @@ echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
 source ~/.bashrc
 # optional: for unixODBC development headers
 sudo apt-get install unixodbc-dev
+# optional: kerberos library for debian-slim distributions
+sudo apt-get install libgssapi-krb5-2
 ```
 
-### <a name="redhat-enterprise-server"></a>RedHat Enterprise Server
+> [!NOTE]
+> - `echo msodbcsql17 msodbcsql/ACCEPT_EULA boolean true | sudo debconf-set-selections` のように、環境変数 'ACCEPT_EULA' の設定を、debconf 変数 'msodbcsql/ACCEPT_EULA' の設定と置き換えることができます。
+
+
+### <a name="redhat-enterprise-server-and-oracle-linux"></a>RedHat Enterprise Server と Oracle Linux
 ```
 sudo su
 
@@ -72,7 +101,7 @@ curl https://packages.microsoft.com/config/rhel/6/prod.repo > /etc/yum.repos.d/m
 #RedHat Enterprise Server 7
 curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/mssql-release.repo
 
-#RedHat Enterprise Server 8
+#RedHat Enterprise Server 8 and Oracle Linux 8
 curl https://packages.microsoft.com/config/rhel/8/prod.repo > /etc/yum.repos.d/mssql-release.repo
 
 exit
@@ -126,20 +155,14 @@ curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
 #Download appropriate package for the OS version
 #Choose only ONE of the following, corresponding to your OS version
 
-#Ubuntu 14.04
-curl https://packages.microsoft.com/config/ubuntu/14.04/prod.list > /etc/apt/sources.list.d/mssql-release.list
-
 #Ubuntu 16.04
 curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list > /etc/apt/sources.list.d/mssql-release.list
 
 #Ubuntu 18.04
 curl https://packages.microsoft.com/config/ubuntu/18.04/prod.list > /etc/apt/sources.list.d/mssql-release.list
 
-#Ubuntu 18.10
-curl https://packages.microsoft.com/config/ubuntu/18.10/prod.list > /etc/apt/sources.list.d/mssql-release.list
-
-#Ubuntu 19.04
-curl https://packages.microsoft.com/config/ubuntu/19.04/prod.list > /etc/apt/sources.list.d/mssql-release.list
+#Ubuntu 19.10
+curl https://packages.microsoft.com/config/ubuntu/19.10/prod.list > /etc/apt/sources.list.d/mssql-release.list
 
 exit
 sudo apt-get update
@@ -154,7 +177,10 @@ sudo apt-get install unixodbc-dev
 ```
 > [!NOTE]
 > - Ubuntu 18.04 のサポートには、ドライバー バージョン 17.2 以降が必要です。
-> - Ubuntu 18.10 のサポートには、ドライバー バージョン 17.3 以降が必要です。   
+> - Ubuntu 18.10 のサポートには、ドライバー バージョン 17.3 以降が必要です。
+
+> [!NOTE]
+> - `echo msodbcsql17 msodbcsql/ACCEPT_EULA boolean true | sudo debconf-set-selections` のように、環境変数 'ACCEPT_EULA' の設定を、debconf 変数 'msodbcsql/ACCEPT_EULA' の設定と置き換えることができます。
 
 ### <a name="macos"></a>MacOS
 
@@ -385,12 +411,12 @@ ln -sfn /opt/mssql-tools/bin/bcp-13.0.1.0 /usr/bin/bcp
 - Red Hat: ```glibc, e2fsprogs, krb5-libs, openssl, unixODBC```
 - SuSE: ```glibc, libuuid1, krb5, openssl, unixODBC```
 
-これらの各パッケージにはそれぞれ独自の依存関係があり、システムに存在する場合と存在しない場合があります。 この問題の一般的な解決策については、ディストリビューションのパッケージ マネージャーの [Redhat](https://wiki.centos.org/HowTos/CreateLocalRepos)、[Ubuntu](https://unix.stackexchange.com/questions/87130/how-to-quickly-create-a-local-apt-repository-for-random-packages-using-a-debian)、および [SUSE](https://en.opensuse.org/Portal:Zypper) に関するドキュメントを参照してください。
+これらの各パッケージにはそれぞれ独自の依存関係があり、システムに存在する場合と存在しない場合があります。 この問題の一般的な解決策については、ディストリビューションのパッケージ マネージャーの[Redhat](https://wiki.centos.org/HowTos/CreateLocalRepos)、[Ubuntu](https://unix.stackexchange.com/questions/87130/how-to-quickly-create-a-local-apt-repository-for-random-packages-using-a-debian)、および [SUSE](https://en.opensuse.org/Portal:Zypper) に関するドキュメントを参照してください。
 
 また、すべての従属パッケージを手動でダウンロードし、インストール コンピューターにまとめて配置してから、各パッケージを順に手動でインストールし、[!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 パッケージを終了する方法も一般的です。
 
 #### <a name="redhat-linux-enterprise-server-7"></a>Redhat Linux Enterprise Server 7
-  - https://packages.microsoft.com/rhel/7/prod/ から最新の `msodbcsql` `.rpm` をダウンロードする
+  - 最新の `msodbcsql` `.rpm` を https://packages.microsoft.com/rhel/7/prod/ からダウンロードします。
   - 依存関係とドライバーをインストールする
   
 ```
@@ -399,7 +425,7 @@ sudo rpm -i  msodbcsql-13.1.X.X-X.x86_64.rpm #install the Driver
 ```
 
 #### <a name="ubuntu-1604"></a>Ubuntu 16.04
-- https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql/ から最新の `msodbcsql` `.deb` をダウンロードする 
+- 最新の `msodbcsql` `.deb` を https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql/ からダウンロードします。 
 - 依存関係とドライバーをインストールする 
 
 ```
@@ -408,7 +434,7 @@ sudo dpkg -i msodbcsql_13.1.X.X-X_amd64.deb #install the Driver
 ```
 
 #### <a name="suse-linux-enterprise-server-12"></a>SUSE Linux Enterprise Server 12
-- https://packages.microsoft.com/sles/12/prod/ から最新の `msodbcsql` `.rpm` をダウンロードする
+- 最新の `msodbcsql` `.rpm` を https://packages.microsoft.com/sles/12/prod/ からダウンロードします。
 - 依存関係とドライバーをインストールする
 
 ```
@@ -521,22 +547,22 @@ Linux と MacOS 上の ODBC ドライバーは、次のコンポーネントで�
 
 ### <a name="linux"></a>Linux
 
-|コンポーネント|[説明]|  
+|コンポーネント|説明|  
 |---------------|-----------------|  
 |libmsodbcsql-17.X.so.X.X または libmsodbcsql-13.X.so.X.X|ドライバーのすべての機能を含む共有オブジェクト (`so`) ダイナミック ライブラリ ファイル。 このファイルは、Driver 17 では `/opt/microsoft/msodbcsql17/lib64/`、Driver 13 では `/opt/microsoft/msodbcsql/lib64/` にインストールされます。|  
 |`msodbcsqlr17.rll` または `msodbcsqlr13.rll`|ドライバー ライブラリに付随するリソース ファイル。 このファイルは `[driver .so directory]../share/resources/en_US/` にインストールされます| 
-|msodbcsql.h|ドライバーを使用するために必要な新しい定義がすべて含まれているヘッダー ファイル。<br /><br /> **注:**  msodbcsql.h と odbcss.h を同じプログラムで参照することはできません。<br /><br /> msodbcsql.h は、Driver 17 では `/opt/microsoft/msodbcsql17/include/`、Driver 13 では `/opt/microsoft/msodbcsql/include/` にインストールされます。 |
+|msodbcsql.h|ドライバーを使用するために必要な新しい定義がすべて含まれているヘッダー ファイル。<br /><br /> **注:** msodbcsql.h と odbcss.h を同じプログラムで参照することはできません。<br /><br /> msodbcsql.h は、Driver 17 では `/opt/microsoft/msodbcsql17/include/`、Driver 13 では `/opt/microsoft/msodbcsql/include/` にインストールされます。 |
 |LICENSE.txt|使用許諾契約書の条項を含むテキスト ファイル。 このファイルは、Driver 17 では `/usr/share/doc/msodbcsql17/`、Driver 13 では `/usr/share/doc/msodbcsql/` に配置されます。|
 |RELEASE_NOTES|リリース ノートを含むテキスト ファイル。 このファイルは、Driver 17 では `/usr/share/doc/msodbcsql17/`、Driver 13 では `/usr/share/doc/msodbcsql/` に配置されます。|
 
 
 ### <a name="macos"></a>MacOS
 
-|コンポーネント|[説明]|  
+|コンポーネント|説明|  
 |---------------|-----------------|  
 |libmsodbcsql.17.dylib または libmsodbcsql.13.dylib|ドライバーのすべての機能を含むダイナミック ライブラリ (`dylib`) ファイル。 このファイルは `/usr/local/lib/` にインストールされます。|  
 |`msodbcsqlr17.rll` または `msodbcsqlr13.rll`|ドライバー ライブラリに付随するリソース ファイル。 このファイルは、Driver 17 では `[driver .dylib directory]../share/msodbcsql17/resources/en_US/`、Driver 13 では `[driver .dylib directory]../share/msodbcsql/resources/en_US/` にインストールされます。 | 
-|msodbcsql.h|ドライバーを使用するために必要な新しい定義がすべて含まれているヘッダー ファイル。<br /><br /> **注:**  msodbcsql.h と odbcss.h を同じプログラムで参照することはできません。<br /><br /> msodbcsql.h は、Driver 17 では `/usr/local/include/msodbcsql17/`、Driver 13 では `/usr/local/include/msodbcsql/` にインストールされます。 |
+|msodbcsql.h|ドライバーを使用するために必要な新しい定義がすべて含まれているヘッダー ファイル。<br /><br /> **注:** msodbcsql.h と odbcss.h を同じプログラムで参照することはできません。<br /><br /> msodbcsql.h は、Driver 17 では `/usr/local/include/msodbcsql17/`、Driver 13 では `/usr/local/include/msodbcsql/` にインストールされます。 |
 |LICENSE.txt|使用許諾契約書の条項を含むテキスト ファイル。 このファイルは、Driver 17 では `/usr/local/share/doc/msodbcsql17/`、Driver 13 では `/usr/local/share/doc/msodbcsql/` に配置されます。 |
 |RELEASE_NOTES|リリース ノートを含むテキスト ファイル。 このファイルは、Driver 17 では `/usr/local/share/doc/msodbcsql17/`、Driver 13 では `/usr/local/share/doc/msodbcsql/` に配置されます。 |
 

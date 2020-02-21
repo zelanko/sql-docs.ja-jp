@@ -8,14 +8,14 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3aa251e7d31f21cf51f4f528b1f0ccd35c0afb2c
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.openlocfilehash: 0cddfe78555d5e5f57e57346aff1ead52f05cebf
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73844563"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831551"
 ---
-# <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] の新機能
+# <a name="whats-new-in-sql-server-2019"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] の新機能
 
 [!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
@@ -29,15 +29,20 @@ ms.locfileid: "73844563"
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] では、[!INCLUDE[sql-server](../includes/ssnoversion-md.md)] 用の [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] が導入されています。 また、SQL Server データベース エンジン、SQL Server Analysis Services、SQL Server Machine Learning Services、SQL Server on Linux、SQL Server マスター データ サービスに対する追加機能と機能強化も提供されています。
 
+次のビデオでは、SQL Server 2019 の概要について 13 分で説明しています。
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-SQL-Server-2019/player?WT.mc_id=dataexposed-c9-niner]
+
+
 以下のセクションでは、これらの機能の概要について説明します。
 
-## <a name="data-virtualization-and-includebig-data-clusters-2019includesssbigdataclusters-ver15md"></a>データの仮想化と [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]
+## <a name="data-virtualization-and-big-data-clusters-2019"></a>データの仮想化と [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]
 
 現代の企業はしばしば、データという財産を大量に管理しています。その財産はさまざまなデータ セットからなりますが、サイロ化されたデータ ソースでホストされるデータ セットは会社全体で増加の一途をたどります。 SQL Server 2019 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] を利用すると、機械学習機能や AI 機能など、大量のデータ セットを処理できる環境を実現し、あらゆるデータから分析情報をほぼリアルタイムで取得できます。
 
 | 新機能または更新 | 詳細 |
 |:---|:---|
-| スケーラブルなビッグ データ ソリューション | Kubernetes で実行している SQL Server、Spark、HDFS コンテナーの[スケーラブルなクラスターを配置します](../big-data-cluster/deploy-get-started.md)。 <br/><br/> Transact-SQL または Spark からビッグ データの読み取り、書き込み、処理を行います。<br/><br/> 大量のビッグ データを使用して、価値の高いリレーショナル データを簡単に組み合わせて分析します。<br/><br/>外部データ ソースを照会します。<br/><br/>SQL Server によって管理される HDFS にビッグ データを格納します。<br/><br/>クラスターを介して複数の外部データ ソースからデータを照会します。<br/><br/> AI、機械学習、その他の分析タスクにデータを使用します。<br/><br/> [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] に[アプリケーションをデプロイして実行します](../big-data-cluster/concept-application-deployment.md)。 <br/><br/> SQL Server マスター インスタンスは、Always On 可用性グループ テクノロジを利用した、あらゆるデータベースを対象とする高可用性とディザスター リカバリーを備えています。<br/>|
+| スケーラブルなビッグ データ ソリューション | Kubernetes で実行している SQL Server、Spark、HDFS コンテナーの[スケーラブルなクラスターを配置します](../big-data-cluster/deploy-get-started.md)。 <br/><br/> Transact-SQL または Spark からビッグ データの読み取り、書き込み、処理を行います。<br/><br/> 大量のビッグ データを使用して、価値の高いリレーショナル データを簡単に組み合わせて分析します。<br/><br/>外部データ ソースを照会します。<br/><br/>SQL Server によって管理される HDFS にビッグ データを格納します。<br/><br/>クラスターを介して複数の外部データ ソースからデータを照会します。<br/><br/> AI、機械学習、その他の分析タスクにデータを使用します。<br/><br/> [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] に[アプリケーションを展開して実行](../big-data-cluster/concept-application-deployment.md)します。 <br/><br/> SQL Server マスター インスタンスは、Always On 可用性グループ テクノロジを利用した、あらゆるデータベースを対象とする高可用性とディザスター リカバリーを備えています。<br/>|
 |PolyBase によるデータ仮想化 | 外部の SQL Server、Oracle、Teradata、MongoDB、ODBC データ ソースと外部のテーブルのデータのクエリを実行します。現在、[UTF-8 エンコード対応](../relational-databases/collations/collation-and-unicode-support.md)になりました。 詳細については、「[PolyBase とは](../relational-databases/polybase/polybase-guide.md)」を参照してください。|
 | &nbsp; | &nbsp; |
 
@@ -70,7 +75,7 @@ ms.locfileid: "73844563"
 | &nbsp; | &nbsp; |
 
 ### <a name="intelligent-performance"></a>インテリジェントなパフォーマンス
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] は以前のリリースのインテリジェント データベースのイノベーションに基づいて構築されており、[さらに高速な実行](https://blogs.msdn.microsoft.com/bobsql/tag/it-just-runs-faster/)が保証されています。 こうした機能強化により、既知のリソースのボトルネックを克服できます。また、すべてのワークロードにわたって予測可能なパフォーマンスを実現するようにデータベース サーバーを構成するオプションが用意されています。
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] は以前のリリースのインテリジェント データベースのイノベーションに基づいて構築されており、[さらに高速な実行](https://docs.microsoft.com/archive/blogs/bobsql/)が保証されています。 こうした機能強化により、既知のリソースのボトルネックを克服できます。また、すべてのワークロードにわたって予測可能なパフォーマンスを実現するようにデータベース サーバーを構成するオプションが用意されています。
 
 |新機能または更新 | 詳細 |
 |:---|:---|
@@ -79,7 +84,7 @@ ms.locfileid: "73844563"
 |リソース管理| `CREATE WORKLOAD GROUP` と `ALTER WORKLOAD GROUP` の `REQUEST_MAX_MEMORY_GRANT_PERCENT` オプションの構成可能値が整数から float データ型に変更されており、メモリ上限をさらに細かく制御できます。 「[ALTER WORKLOAD GROUP](../t-sql/statements/alter-workload-group-transact-sql.md)」と「[CREATE WORKLOAD GROUP](../t-sql/statements/create-workload-group-transact-sql.md)」を参照してください。|
 |ワークロードの再コンパイルの削減| 不要な再コンパイルを減らすことにより、複数のスコープで一時テーブルを使用する場合のパフォーマンスが向上します。 [ワークロードの再コンパイルの削減](../relational-databases/tables/tables.md#ctp23)に関するページを参照してください。 |
 |間接チェックポイントのスケーラビリティ |[間接チェックポイントのスケーラビリティの向上](../relational-databases/logs/database-checkpoints-sql-server.md#ctp23)に関するページを参照してください。|
-|PFS の同時更新|[Page Free Space (PFS) ページ](https://techcommunity.microsoft.com/t5/SQL-Server/Under-the-covers-GAM-SGAM-and-PFS-pages/ba-p/383125)はデータベース ファイル内の特別なページであり、オブジェクト用の領域を割り当てるときに空き領域を探すために SQL Server によって使用されます。 PFS ページでのページ ラッチの競合は、一般に [TempDB](https://support.microsoft.com/en-us/help/2154845/recommendations-to-reduce-allocation-contention-in-sql-server-tempdb-d) に関連していますが、多数の同時オブジェクト割り当てスレッドがあるときは、ユーザー データベースでも発生する可能性があります。 この機能強化により、PFS の更新でのコンカレンシー管理方法が変更され、排他的ラッチではなく共有ラッチで更新できるようになります。 この動作は、[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 以降のすべてのデータベース (TempDB など) で、既定でオンになります。|
+|PFS の同時更新|[Page Free Space (PFS) ページ](https://techcommunity.microsoft.com/t5/SQL-Server/Under-the-covers-GAM-SGAM-and-PFS-pages/ba-p/383125)はデータベース ファイル内の特別なページであり、オブジェクト用の領域を割り当てるときに空き領域を探すために SQL Server によって使用されます。 PFS ページでのページ ラッチの競合は、一般に [TempDB](https://support.microsoft.com/help/2154845/recommendations-to-reduce-allocation-contention-in-sql-server-tempdb-d) に関連していますが、多数の同時オブジェクト割り当てスレッドがあるときは、ユーザー データベースでも発生する可能性があります。 この機能強化により、PFS の更新でのコンカレンシー管理方法が変更され、排他的ラッチではなく共有ラッチで更新できるようになります。 この動作は、[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 以降のすべてのデータベース (TempDB など) で、既定でオンになります。|
 |Scheduler worker の移行 |worker の移行ではアイドル状態のスケジューラを利用し、同じ NUMA ノード上の別のスケジューラの実行可能キューから worker を移行し、移行された worker のタスクをすぐに再開できます。 この機能強化により、実行時間が長いタスクが偶然同じスケジューラに割り当てられる状況で、よりバランスのとれた CPU 使用率を実現できるようになります。 詳細については、「[SQL Server 2019 のインテリジェント パフォーマンス - worker の移行](https://techcommunity.microsoft.com/t5/SQL-Server/SQL-Server-2019-Intelligent-Performance-Worker-Migration/ba-p/939610)」を参照してください。 |
 | &nbsp; | &nbsp; |
 
@@ -131,7 +136,7 @@ ms.locfileid: "73844563"
 |外部言語を登録する|新しいデータ定義言語 (DDL) である `CREATE EXTERNAL LANGUAGE` では、Java などの外部言語が SQL Server に登録されます。 [CREATE EXTERNAL LANGUAGE](../t-sql/statements/create-external-language-transact-sql.md) に関するページを参照してください。 |
 | &nbsp; | &nbsp; |
 
-### <a name="spatial"></a>空間インデックス
+### <a name="spatial"></a>Spatial
 
 |新機能または更新 | 詳細 |
 |:---|:---|
@@ -152,8 +157,9 @@ ms.locfileid: "73844563"
 |新機能または更新 | 詳細 |
 |:---|:---|
 |セキュア エンクレーブを使用する Always Encrypted|Always Encrypted、インプレース暗号化、さまざまな計算法を基盤に拡張し、サーバー側のセキュア エンクレーブ内でプレーンテキスト データの計算を可能にします。 インプレース暗号化では、データをデータベースの外に移動することが回避されるため、暗号操作 (列の暗号化、列のローテーション、暗号化鍵など) の性能と信頼度が上がります。<br><br> さまざまな計算法 (パターン一致や比較演算) がサポートされることで、機密データの保護が求められ、同時に Transact-SQL クエリで豊富な機能性が求められる幅広いシナリオや用途に Always Encrypted が対応できます。 「[セキュリティで保護されたエンクレーブが設定された Always Encrypted](../relational-databases/security/encryption/always-encrypted-enclaves.md)」をご覧ください。|
-|SQL Server 構成マネージャーでの証明書管理|[証明書の管理 (SQL Server 構成マネージャー)](../database-engine/configure-windows/manage-certificates.md) に関するページを参照してください。|
-|データの検出と分類|データの検出と分類には、データベース内の機密データを分類、ラベル付け、および保護するために、SQL Server にネイティブに組み込まれている高度な機能が用意されています。 最も機密性の高いデータ (ビジネス、財務、医療、PII など) の分類は、組織の情報保護の達成において極めて重要な役割を果たすことができます。 次のような場合にインフラストラクチャとして使用できます。<ul><li>データのプライバシー基準と規制のコンプライアンス要件を満たせるようにする。</li><li>監視 (監査) や、機密データへの異常アクセスに対するアラートなど、さまざまなセキュリティ シナリオ。</li><li>管理者がデータベースをセキュリティで保護する適切な手順を実行できるように、企業内で機密データが存在する場所を識別しやすくする。</li></ul>[監査](../relational-databases/security/auditing/sql-server-audit-database-engine.md)も、新しいフィールド `data_sensitivity_information` が監査ログに追加されて強化されました。このフィールドには、クエリによって返された実際のデータの機密度の分類 (ラベル) が記録されます。 詳細と例については、「[ADD SENSITIVITY CLASSIFICATION](../t-sql/statements/add-sensitivity-classification-transact-sql.md)」をご覧ください。|
+|SQL Server 構成マネージャーでの証明書管理|SQL Server 構成マネージャーを使用して、証明書の表示や展開などの証明書管理タスクを実行できるようになりました。 [証明書の管理 (SQL Server 構成マネージャー)](../database-engine/configure-windows/manage-certificates.md) に関するページを参照してください。|
+|データの検出と分類|データの検出と分類には、ユーザー テーブル内の列の分類とラベル付けを行う機能があります。 機密性の高いデータ (ビジネス、財務、医療、PII など) の分類は、組織の情報保護の達成において極めて重要な役割を果たすことができます。 次のような場合にインフラストラクチャとして使用できます。<ul><li>データのプライバシー基準および規制のコンプライアンス要件を満たす支援</li><li>さまざまなセキュリティ シナリオ (機密データに対する異常なアクセスの監視 (監査) とアラートなど)</li><li>管理者がデータベースをセキュリティで保護する適切な手順を実行できるように、企業内で機密データが存在する場所を識別しやすくする。</li></ul>|
+|SQL Server Audit|[監査](../relational-databases/security/auditing/sql-server-audit-database-engine.md)も、新しいフィールド `data_sensitivity_information` が監査ログ レコードに追加されて強化されました。これには、クエリによって返された実際のデータの機密度の分類 (ラベル) が含まれます。 詳細および例については、「[`ADD SENSITIVITY CLASSIFICATION`](../t-sql/statements/add-sensitivity-classification-transact-sql.md)」を参照してください。|
 | &nbsp; | &nbsp; |
 
 ## <a name="high-availability"></a>高可用性
@@ -200,7 +206,7 @@ ms.locfileid: "73844563"
 | 変更データ キャプチャ (CDC) のサポート | [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] では、変更データ キャプチャ (CDC) が Linux でサポートされるようになりました。 |
 | &nbsp; | &nbsp; |
 
-### <a name="containers"></a>[SSIS ログの構成]
+### <a name="containers"></a>Containers
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] を使い始める最も簡単な方法は、コンテナーを使用することです。 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] は、以前のバージョンで導入されたイノベーションに基づいており、より安全な方法で、より多くの機能を備えた [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] コンテナーを新しいプラットフォームに展開できます。
 
 |新機能または更新 | 詳細 |
@@ -217,6 +223,7 @@ ms.locfileid: "73844563"
 |:---|:---| 
 |新しいメモリ セットアップ オプション | インストール中に "*最小サーバー メモリ (MB)* " および "*最大サーバー メモリ (MB)* " のサーバー構成を設定します。 「[[データベース エンジンの構成] - [メモリ] ページ](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#memory)」および「[コマンド プロンプトからの SQL Server のインストール](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install)」の `USESQLRECOMMENDEDMEMORYLIMITS`、`SQLMINMEMORY`、`SQLMAXMEMORY` パラメーターを参照してください。 提案される値は、「[サーバー メモリ構成オプション](../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually)」のメモリ構成ガイドラインに沿っています。| 
 |新しい並列処理セットアップ オプション | インストールの間に "*並列処理の最大限度*" サーバー構成オプションを設定します。 「[[データベース エンジンの構成] - [MAXDOP] ページ](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#maxdop)」および「[コマンド プロンプトからの SQL Server のインストール](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install)」の `SQLMAXDOP` パラメーターを参照してください。 既定値は、「[max degree of parallelism サーバー構成オプションの構成](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)」の並列処理の最大限度ガイドラインに沿っています。| 
+|サーバーおよび CAL ライセンス プロダクト キーに関するセットアップ警告|Enterprise Server または Enterprise CAL ライセンス プロダクト キーが入力されていて、マシンに 20 個を超える物理コアがある場合、またはハイパースレッディングが有効になっている場合に 40 個の論理コアがある場合は、セットアップ中に警告が表示されます。 ユーザーは、引き続き制限を確認してセットアップを続行するか、オペレーティング システムの最大プロセッサ数をサポートするライセンス キーを入力することができます。|
 | &nbsp; | &nbsp; |
 
 ## <a id="ml"></a> SQL Server Machine Learning Services
@@ -250,7 +257,7 @@ ms.locfileid: "73844563"
 |柔軟なファイル タスク |ローカルファイルシステム、Azure Blob Storage、および Azure Data Lake Storage Gen2 でファイル操作を実行します。 「[柔軟なファイル タスク](../integration-services/control-flow/flexible-file-task.md)」を参照してください。|
 |柔軟なファイルの変換元と変換先 |Azure Blob Storage、および Azure Data Lake Storage Gen2 のデータの読み取りと書き込みを行います。 「[柔軟なファイルの変換元](../integration-services/data-flow/flexible-file-source.md)」と「[柔軟なファイルの変換先](../integration-services/data-flow/flexible-file-destination.md)」を参照してください。 |
 
-## <a name="sql-server-includemaster-data-servicesincludesssmdsshort-mdmd"></a>SQL Server [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)]
+## <a name="sql-server-master-data-services"></a>SQL Server [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)]
 
 | 新機能または更新 | 詳細 |
 |:---|:---|
@@ -258,7 +265,7 @@ ms.locfileid: "73844563"
 |新しい HTML コントロール| HTML コントロールでは、以前の Silverlight コンポーネントがすべて置き換えられます。 Silverlight の依存関係が削除されました。|
 | &nbsp; | &nbsp; |
 
-## <a name="sql-server-reporting-services"></a>SQL Server Reporting Services (SQL Server Reporting Services)
+## <a name="sql-server-reporting-services"></a>SQL Server Reporting Services
 
 このリリースの SQL Server Reporting Services では、Azure SQL Database Managed Instance、Power BI Premium データセット、強化されたアクセシビリティ、Azure Active Directory アプリケーション プロキシ、Transparent Data Encryption がサポートされています。 また、Microsoft レポート ビルダーの更新プログラムも提供されます。 詳細については、[SQL Server Reporting Services の新機能](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)に関する記事を参照してください。
 
@@ -267,7 +274,7 @@ ms.locfileid: "73844563"
 - [`SqlServer` PowerShell モジュール](https://www.powershellgallery.com/packages/Sqlserver)
 - [SQL Server PowerShell ドキュメント](../powershell/sql-server-powershell.md)
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 - [SQL Server ワークショップ](https://aka.ms/sqlworkshops)
 - [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] リリース ノート](sql-server-version-15-release-notes.md)

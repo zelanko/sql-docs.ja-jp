@@ -8,12 +8,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
-ms.openlocfilehash: 66bc987b71bb8b139eec5b69e78532aa54f1294d
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: e16304765e5f4a51feed4d3d59e790505baa740d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531945"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252024"
 ---
 # <a name="run-python-and-r-scripts-with-machine-learning-services-on-sql-server-big-data-clusters"></a>SQL Server ビッグ データ クラスターで Machine Learning Services を使用して Python および R のスクリプトを実行する
 
@@ -26,7 +26,7 @@ ms.locfileid: "73531945"
 
 ## <a name="enable-machine-learning-services"></a>Machine Learning Services を有効にする
 
-Machine Learning Services は、既定でビッグ データ クラスターにインストールされ、個別にインストールする必要があります。
+Machine Learning Services は、既定ではビッグ データ クラスターにインストールされるため、個別のインストールは必要ありません。
 
 Machine Learning Services を有効にするには、マスター インスタンスで次のステートメントを実行します。
 
@@ -80,9 +80,9 @@ GO
 
 ビッグ データ クラスターのマスター インスタンスで、Python および R のスクリプトを実行する準備ができました。 初めてスクリプトを実行する場合は、以下のクイックスタートをご覧ください。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
-+ [クイックスタート: SQL Server Machine Learning Services で簡単な Python スクリプトを作成して実行する](../advanced-analytics/tutorials/quickstart-python-create-script.md)
-+ [クイックスタート: SQL Server Machine Learning Services を使用して Python で予測モデルを作成してスコア付けする](../advanced-analytics/tutorials/quickstart-python-train-score-model.md)
-+ [クイックスタート: SQL Server Machine Learning Services で簡単な R スクリプトを作成して実行する](../advanced-analytics/tutorials/quickstart-r-create-script.md)
-+ [クイックスタート: SQL Server Machine Learning Services を使用して R で予測モデルを作成してスコア付けする](../advanced-analytics/tutorials/quickstart-r-train-score-model.md)
++ [クイック スタート: SQL Server Machine Learning Services を使用した単純な Python スクリプトの作成と実行](../advanced-analytics/tutorials/quickstart-python-create-script.md)
++ [クイック スタート: SQL Server Machine Learning Services を使用して Python で予測モデルを作成してスコア付けする](../advanced-analytics/tutorials/quickstart-python-train-score-model.md)
++ [クイック スタート: SQL Server Machine Learning Services で簡単な R スクリプトを作成して実行する](../advanced-analytics/tutorials/quickstart-r-create-script.md)
++ [クイック スタート: SQL Server Machine Learning Services を使用して R で予測モデルを作成してスコア付けする](../advanced-analytics/tutorials/quickstart-r-train-score-model.md)

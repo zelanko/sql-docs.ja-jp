@@ -1,11 +1,7 @@
 ---
-title: Transact-SQL エディターのオプション | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Transact-SQL エディターのオプション
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - VS.TOOLSOPTIONSPAGES.SQL_SERVER_TOOLS.TRANSACT-SQL_EDITOR.QUERY_RESULTS.RESULTS_TO_GRID
@@ -27,14 +23,19 @@ f1_keywords:
 ms.assetid: fa9a250f-7feb-433e-91bd-a09779d74c8b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e5de3a6bef68955611290cce77b95989b7ff72c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 0b91be419419d7dab1904068b1600def88106023
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110632"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75256320"
 ---
 # <a name="transact-sql-editor-options"></a>Transact-SQL エディターのオプション
+
 このトピックでは、Transact-SQL エディターのいくつかのオプションについて説明します。 これらのオプションを設定するには、 **[ツール] > [オプション]** を選択して、 **[オプション]** ダイアログ ボックスに移動します。  
   
 [クエリの実行](#QueryExecution)  
@@ -43,7 +44,7 @@ ms.locfileid: "68110632"
   
 ## <a name="QueryExecution"></a>クエリの実行  
   
-|プロパティ|[説明]|  
+|プロパティ|説明|  
 |------------|---------------|  
 |**SET ROWCOUNT**|既定値の 0 は、SQL Server がすべての結果を受け取るまで待機することを意味します。 SQL Server が指定された行数を取得した後にクエリを停止するように設定するには、0 より大きい値を指定します。 このオプションをオフにして、すべての行が返されるようにするには、SET ROWCOUNT 0 を指定してください。|  
 |**SET TEXTSIZE**|既定値の 2,147,483,647 バイトは、SQL Server が text、ntext、nvarchar(max)、および varchar(max) の各データ フィールドの上限まで、完全なデータ フィールドを提供することを示します。 XML データ型は影響を受けません。 大きな値の場合に結果を制限するには、これより小さなサイズを指定します。 指定されたサイズよりも大きい列は切り捨てられます。|  
@@ -71,7 +72,7 @@ ms.locfileid: "68110632"
   
 ## <a name="QueryResults"></a>クエリの結果  
   
-|プロパティ|[説明]|  
+|プロパティ|説明|  
 |------------|---------------|  
 |**結果セットにクエリを含める**|クエリのテキストを結果セットの一部として返します。|  
 |**結果のコピーまたは保存時に列のヘッダーを含める**|結果をクリップボードにコピーしたりファイルに保存したりするときに、列のヘッダー (タイトル) を含めます。 保存またはコピーされる結果データに列の見出しを含めずに、データだけ保存またはコピーするには、このチェック ボックスをオフにします。|  

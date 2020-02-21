@@ -1,6 +1,6 @@
 ---
-title: SQL Server Management Studio のユーザー サポート | Microsoft Docs
-ms.custom: ''
+title: SQL Server Management Studio のユーザー サポート
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3c33a474-e507-4712-86fe-ae40e8370319
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 46393ffe47252be2d445647d1b3ebed45f72f946
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 01d2738b6a095646d1585857fdee7760079672c3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263392"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252209"
 ---
 # <a name="user-assistance-in-sql-server-management-studio"></a>SQL Server Management Studio のユーザー サポート
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "68263392"
 [ヘルプに関するヘルプ] ([!INCLUDE[msCoName](../includes/msconame_md.md)] Document Explorer のヘルプ) は、ヘルプ ビューアーに関するドキュメントへのリンクを提供しますが、トピックは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オンライン ブックとは別のコレクションに入っています。 ヘルプ ビューアーの詳細については、 **オンライン ブックの [ヘルプ] メニューから** [ヘルプに関するヘルプ] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] を選択してください。  
   
 ## <a name="msdn-online-and-sql-server-communities"></a>MSDN オンラインと SQL Server コミュニティ  
-[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] のヘルプには、Web 上の MSDN オンラインと [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]コミュニティから情報を得るための方法も用意されています。 可能な代替手段としては以下の方法があります。  
+[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] のヘルプには、Web 上の MSDN オンラインと [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]コミュニティから情報を得るための方法も用意されています。 次のようにすることができます。  
   
 -   [操作方法] ページから [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] コミュニティにアクセスする。  
   
@@ -56,9 +56,9 @@ ms.locfileid: "68263392"
   
 #### <a name="to-access-sql-server-focused-communities-from-the-how-do-i-page"></a>[操作方法] ページから SQL Server コミュニティにアクセスするには  
   
-1.  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] の **[ヘルプ]** メニューの **[カテゴリから検索]** をクリックします。  
+1.  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]の **[ヘルプ]** メニューの **[カテゴリから検索]** をクリックします。  
   
-2.  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の **[操作方法]** ページが表示されます。 コミュニティ リンク サイドバーで、アクセスするコミュニティ サイトの名前をクリックします。  
+2.  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **[カテゴリから検索]** ページが表示されます。 コミュニティ リンク サイドバーで、アクセスするコミュニティ サイトの名前をクリックします。  
   
     > [!NOTE]  
     > [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] を実行しているコンピューターは、Web に直接接続している必要があります。  

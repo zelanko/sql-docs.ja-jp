@@ -1,10 +1,9 @@
 ---
-title: オペレーターへの警告の割り当て | Microsoft Docs
-ms.custom: ''
+title: オペレーターへの警告の割り当て
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,13 +16,15 @@ helpviewer_keywords:
 ms.assetid: aa818155-6fa2-4565-a09f-5c7e31c89754
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 140a42da5d5bde2786b3e24116cccc5f646c7c9d
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: 30e89871b53c7972f0c21378e9e5a49ba12d4d63
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69553357"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252676"
 ---
 # <a name="assign-alerts-to-an-operator"></a>オペレーターへの警告の割り当て
 
@@ -61,7 +62,7 @@ ms.locfileid: "69553357"
   
 4.  警告を割り当てるオペレーターを右クリックし、 **[プロパティ]** を選択して、 **[通知]** ページを選択します。  
   
-5.  _[operator\_name_ **のプロパティ]** ダイアログ ボックスで、 **[ページの選択]** の **[通知]** を選択します。  
+5.  _[operator\_name_**のプロパティ]** ダイアログ ボックスで、 **[ページの選択]** の **[通知]** を選択します。  
   
 6.  **[このユーザーに送信された通知の表示方法]** で、 **[警告]** を選択してこのオペレーターに送信する警告の一覧を表示するか、または **[ジョブ]** を選択してこのオペレーターに通知を送信するジョブの一覧を表示します。 次のチェック ボックスの中から 1 つまたは複数を選択し、必要に応じて通知ごとに通知方法を定義します: **[電子メール]** 、 **[ポケットベル]** 、または **[Net Send]** 。  
   

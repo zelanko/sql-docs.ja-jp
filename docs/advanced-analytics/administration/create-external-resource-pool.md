@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 49027d7b9ab230f80bb8154a746eb503846534f2
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: fc1803724f0dafccc1fe41d8e17060810a85e001
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727775"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252826"
 ---
 # <a name="create-a-resource-pool-for-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services のリソース プールを作成する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -41,7 +41,7 @@ SQL Server Machine Learning Services で、Python および R のワークロー
 
     **サンプルの結果**
 
-    |pool_id|NAME|min_cpu_percent|max_cpu_percent|min_memory_percent|max_memory_percent|cap_cpu_percent|min_iops_per_volume|max_iops_per_volume|
+    |pool_id|name|min_cpu_percent|max_cpu_percent|min_memory_percent|max_memory_percent|cap_cpu_percent|min_iops_per_volume|max_iops_per_volume|
     |-|-|-|-|-|-|-|-|-|
     |2|既定値 (default)|0|100|0|100|100|0|0|
 
@@ -53,7 +53,7 @@ SQL Server Machine Learning Services で、Python および R のワークロー
 
     **サンプルの結果**
 
-    |external_pool_id|NAME|max_cpu_percent|max_memory_percent|max_processes|version|
+    |external_pool_id|name|max_cpu_percent|max_memory_percent|max_processes|version|
     |-|-|-|-|-|-|
     |2|既定値 (default)|100|20|0|2|
  
@@ -123,7 +123,7 @@ SQL Server Machine Learning Services で、Python および R のワークロー
   
 2.  各リソース プール用の分類子関数には、そのリソース プールに割り当てる必要があるステートメントまたは受信要求の種類を定義します。
   
-     たとえば、次の関数は、要求を送信したアプリケーションが 'Microsoft R Host' または 'RStudio' の場合は、ユーザー定義の外部リソース プールに割り当てられたスキーマの名前を返します。それ以外の場合は既定のリソース プールを返します。
+     たとえば、次の関数は、要求を送信したアプリケーションが 'Microsoft R Host'、'RStudio'、または 'Mashup' の場合は、ユーザー定義の外部リソース プールに割り当てられたスキーマの名前を返します。それ以外の場合は既定のリソース プールを返します。
   
     ```sql
     USE master
@@ -133,7 +133,7 @@ SQL Server Machine Learning Services で、Python および R のワークロー
     WITH schemabinding
     AS
     BEGIN
-        IF program_name() in ('Microsoft R Host', 'RStudio') RETURN 'ds_wg';
+        IF program_name() in ('Microsoft R Host', 'RStudio', 'Mashup') RETURN 'ds_wg';
         RETURN 'default'
         END;
     GO
@@ -143,7 +143,7 @@ SQL Server Machine Learning Services で、Python および R のワークロー
   
     ```sql
     ALTER RESOURCE GOVERNOR WITH  (classifier_function = dbo.is_ds_apps);
-    ALTER RESOURCE GOVERNOR WITH reconfigure;
+    ALTER RESOURCE GOVERNOR RECONFIGURE;
     GO
     ```
 
@@ -163,9 +163,9 @@ SQL Server Machine Learning Services で、Python および R のワークロー
 
     **サンプルの結果**
 
-    |group_id|NAME|importance|request_max_memory_grant_percent|request_max_cpu_time_sec|request_memory_grant_timeout_sec|max_dop|group_max_requests pool_id|pool_idd|external_pool_id|
+    |group_id|name|importance|request_max_memory_grant_percent|request_max_cpu_time_sec|request_memory_grant_timeout_sec|max_dop|group_max_requests pool_id|pool_idd|external_pool_id|
     |-|-|-|-|-|-|-|-|-|-|
-    |1|internal|Medium|25|0|0|0|0|1|2|
+    |1|内部|Medium|25|0|0|0|0|1|2|
     |2|既定値 (default)|Medium|25|0|0|0|0|2|2|
     |256|ds_wg|Medium|25|0|0|0|0|2|256|
   
@@ -177,7 +177,7 @@ SQL Server Machine Learning Services で、Python および R のワークロー
 
     **サンプルの結果**
     
-    |external_pool_id|NAME|max_cpu_percent|max_memory_percent|max_processes|version|
+    |external_pool_id|name|max_cpu_percent|max_memory_percent|max_processes|version|
     |-|-|-|-|-|-|
     |2|既定値 (default)|100|20|0|2|
     |256|ds_ep|100|40|0|1|
@@ -192,7 +192,7 @@ SQL Server Machine Learning Services で、Python および R のワークロー
   
      ここでは、プールは、AUTO のアフィニティで作成されたため、情報は表示されません。 詳細については、「 [sys.dm_resource_governor_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pool-affinity-transact-sql.md)」を参照してください。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 サーバー リソースの管理の詳細については、以下を参照してください。
 

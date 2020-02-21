@@ -1,29 +1,28 @@
 ---
-title: 'クイック スタート: Python のデータ型'
-titleSuffix: SQL Server Machine Learning Services
-description: このクイックスタートでは、Python および SQL Server Machine Learning Services を備えた SQL Server で、データ型とデータ オブジェクトを取り扱う方法について説明します。
+title: クイック スタート:Python のデータ構造
+description: このクイックスタートでは、Python と SQL Server Machine Learning Services でデータ構造とデータ オブジェクトを使用する方法について説明します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/04/2019
+ms.date: 01/27/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 1bac339105acdb7318b29426cd0bb4afdc2481e7
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 0f04e021664a92241c8c029d296a298b10c142d2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727016"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831901"
 ---
-# <a name="quickstart-handle-data-types-and-objects-using-python-in-sql-server-machine-learning-services"></a>クイック スタート: SQL Server Machine Learning Services での Python を使用したデータ型とオブジェクトの処理
+# <a name="quickstart-data-structures-and-objects-using-python-in-sql-server-machine-learning-services"></a>クイック スタート:SQL Server Machine Learning Services で Python を使用するデータ構造とオブジェクト
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-このクイックスタートでは、SQL Server Machine Learning Services で Python を使用するときのデータ構造の使用方法を示します。
+このクイックスタートでは、SQL Server Machine Learning Services で Python を使用する場合のデータ構造の使用方法について説明します。
 
-SQL Server は Python **pandas** パッケージに依存しており、それは表形式データの操作に最適です。 ただし、Python から SQL Server にスカラーを渡して、「ただ動作する」ことを期待することはできません。 このクイックスタートでは、いくつかの基本的なデータ型の定義を確認して、Python と SQL Server 間で表形式のデータを渡すときに出会う可能性のある、他の問題に備えます。
+SQL Server は Python **pandas** パッケージに依存しており、それは表形式データの操作に最適です。 ただし、Python から SQL Server にスカラーを渡して、「ただ動作する」ことを期待することはできません。 このクイックスタートでは、いくつかの基本的なデータ構造の定義を確認し、Python と SQL Server の間で表形式のデータを渡すときに発生する可能性がある他の問題に備えます。
 
 前もって理解しておくべき概念は次のとおりです。
 
@@ -36,11 +35,11 @@ data.frame に表形式構造が必要な場合、計算の単一の結果をデ
 > [!NOTE]
 > 日付を返す場合、SQL の Python では DATETIME が使用され、日付の範囲は 1753-01-01 (-53690) ~ 9999-12-31 (2958463) に制限されています。 
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
-- このクイックスタートでは、Python 言語がインストールされた [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) をもつ SQL Server のインスタンスへのアクセスが必要となります。
+- このクイックスタートでは、Python 言語がインストールされた [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) を持つ SQL Server のインスタンスへのアクセスが必要となります。
 
-- また、Python スクリプトを含む SQL クエリを実行するためのツールも必要です。 これらのスクリプトは、SQL Server インスタンスに接続して T-SQL クエリまたはストアド プロシージャを実行可能な、任意のデータベース管理ツールまたはクエリ ツールを使用して実行できます。 このクイックスタートでは、[SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms) を使用します。
+- また、Python スクリプトを含む SQL クエリを実行するためのツールも必要です。 これらのスクリプトは、SQL Server インスタンスに接続し、T-SQL クエリまたはストアド プロシージャを実行できる限り、任意のデータベース管理ツールまたはクエリ ツールを使用して実行できます。 このクイック スタートでは、[SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms) を使用します。
 
 ## <a name="scalar-value-as-a-series"></a>シリーズとしてのスカラー値
 
@@ -205,7 +204,7 @@ data.frame に表形式構造が必要な場合、計算の単一の結果をデ
 
    数値インデックスを使用してこのシリーズから値を取得しようとすると、エラーが発生します。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 SQL Server で高度な Python 関数を記述する方法については、次のクイックスタートを参照してください。
 

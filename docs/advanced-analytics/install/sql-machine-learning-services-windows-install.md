@@ -1,42 +1,42 @@
 ---
 title: Windows へのインストール
-description: この記事では、Windows に SQL Server Machine Learning Services をインストールする方法について説明します。 Machine Learning Services を使用して、データベース内で Python または R スクリプトを実行できます。
+description: Windows に SQL Server Machine Learning Services をインストールする方法について説明します。 Machine Learning Services を使用して、データベース内で Python または R スクリプトを実行できます。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 11/04/2019
+ms.date: 01/23/2020
 ms.topic: conceptual
-author: dphansen
-ms.author: davidph
+author: cawrites
+ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 8d51c147cfe5895356f8af270f62443643caa8f1
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 26fe15ff88a52b6673d5e7de7dcad3a047fca6ba
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727644"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76891730"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-windows"></a>Windows に SQL Server Machine Learning Services (Python と R) をインストールする
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-この記事では、Windows に SQL Server Machine Learning Services をインストールする方法について説明します。 Machine Learning Services を使用して、データベース内で Python または R スクリプトを実行できます。
+Windows に SQL Server Machine Learning Services をインストールする方法について説明します。 Machine Learning Services を使用して、データベース内で Python または R スクリプトを実行できます。
 
 ## <a name="bkmk_prereqs"> </a> インストール前のチェックリスト
 
-+ データベース エンジンのインスタンスが必要です。 R または Python の機能だけをインストールすることはできませんが、既存のインスタンスにそれらを段階的に追加することはできます。
++ データベース エンジンのインスタンスが必要です。 Python または R の機能だけをインストールすることはできませんが、既存のインスタンスにそれらを段階的に追加することはできます。
 
-+ ビジネス継続性のために、Machine Learning Services では [Always On 可用性グループ](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server)がサポートされています。 各ノードに Machine Learning Services をインストールし、パッケージを構成する必要があります。
++ ビジネス継続性のために、Machine Learning Services では [Always On 可用性グループ](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server)がサポートされています。 各ノードに Machine Learning Services をインストールし、パッケージを構成します。
 
-+ Machine Learning Services のインストールは、SQL Server 2017 のフェールオーバー クラスターでは*サポートされていません*。 ただし、SQL Server 2019 では*サポートされています*。 
++ Machine Learning Services のインストールは、SQL Server 2017 のフェールオーバー クラスターでは*サポートされていません*。 SQL Server 2019 ではサポートされています。
  
 + Machine Learning Services をドメイン コントローラーにインストールしないでください。 セットアップの Machine Learning Services の部分が失敗します。
 
-+ **共有機能** > **Machine Learning Server (スタンドアロン)** を、データベース内インスタンスを実行しているのと同じコンピューターにインストールしないでください。 スタンドアロン サーバーが同じリソースの奪い合いをするため、両方のインストールのパフォーマンスが低下することになります。
++ **共有機能** > **Machine Learning Server (スタンドアロン)** を、データベース内インスタンスを実行しているのと同じコンピューターにインストールしないでください。 スタンドアロン サーバーが同じリソースを求めて競合し、両方のインストールのパフォーマンスが低下します。
 
-+ R および Python の他のバージョンとのサイドバイサイド インストールはサポートされていますが、推奨されません。 これがサポートされているのは、SQL Server インスタンスでは、オープンソースの R および Anaconda ディストリビューションの独自のコピーが使用されるからです。 しかし、SQL Server の外部の SQL Server コンピューターで R および Python を使用するコードを実行すると、さまざまな問題が発生する可能性があるため、お勧めしません。
++ 他のバージョンの Python および R とのサイドバイサイド インストールはサポートされていますが、お勧めしません。 これがサポートされているのは、SQL Server インスタンスでは、オープンソースの R および Anaconda ディストリビューションの独自のコピーが使用されるからです。 SQL Server 外の SQL Server コンピューター上で Python および R を使用するコードを実行すると、さまざまな問題が発生する可能性があるため、お勧めしません。
     
-  + SQL Server で実行しているときとは異なるライブラリと実行可能ファイルを使用すると、異なる結果になります。
+  + 別のライブラリと実行可能ファイルを使用すると、SQL Server で実行されているものとは異なる結果が作成されます。
   + 外部ライブラリで実行されている R および Python スクリプトは、SQL Server で管理できないため、リソースの競合が発生します。
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
@@ -50,9 +50,17 @@ ms.locfileid: "73727644"
 
 [!INCLUDE[GetInstallationMedia](../../includes/getssmedia.md)]
 
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+Python および R と Machine Learning Services との統合をサポートする SQL Server エディションの詳細については、「[SQL Server 2017 のエディションとサポートされる機能](https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-2017)」を参照してください。
+::: moniker-end
+
+::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+Python および R と Machine Learning Services との統合をサポートする SQL Server エディションの詳細については、「[SQL Server 2019 (15.x) のエディションとサポートされる機能](https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-version-15)」を参照してください。
+::: moniker-end
+
 ## <a name="run-setup"></a>セットアップの実行
 
-ローカル インストールの場合は、セットアップを管理者として実行する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をリモート共有からインストールする場合は、そのリモート共有に対する読み取り権限と実行権限を持つドメイン アカウントを使用する必要があります。
+ローカルでのインストールの場合、管理者としてセットアップを実行する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をリモート共有からインストールする場合は、そのリモート共有に対する読み取り権限と実行権限を持つドメイン アカウントを使用する必要があります。
 
 1. SQL Server のセットアップ ウィザードを開始します。
   
@@ -84,11 +92,11 @@ ms.locfileid: "73727644"
 
    - **データベース エンジン サービス**
      
-     SQL Server で R、Python、および Java を使用するには、データベース エンジンのインスタンスをインストールする必要があります。 既定のインスタンスまたは名前付きインスタンスを使用できます。
+     SQL Server で R または Python を使用するには、データベース エンジンのインスタンスをインストールする必要があります。 既定のインスタンスまたは名前付きインスタンスを使用できます。
 
    - **Machine Learning Services (データベース内)**
      
-     このオプションを選択すると、R、Python、および Java スクリプトの実行をサポートするデータベース サービスがインストールされます。
+     このオプションを選択すると、R および Python スクリプトの実行をサポートするデータベース サービスがインストールされます。
 
    ::: moniker-end
 
@@ -101,9 +109,7 @@ ms.locfileid: "73727644"
      Microsoft Python パッケージ、Python 3.5 実行可能ファイルを追加したり、Anaconda ディストリビューションからライブラリを選択したりするには、このオプションをオンにします。
      
    ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
-   - **Java**
-     
-     SQL に付属する Open JRE をインストールしたり、別のバージョンの JDK または JRE の場所を指定したりするには、このオプションをオンにします。
+   Java のインストールと使用の詳細については、「[SQL Server の言語拡張を Windows にインストールする](../../language-extensions/install/install-sql-server-language-extensions-on-windows.md)」を参照してください。
    ::: moniker-end
    
    ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
@@ -111,7 +117,7 @@ ms.locfileid: "73727644"
    ::: moniker-end
    
    ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
-   ![R、Python の機能オプション](media/2019setup-features-page-mls-rpy.png "R、Python、Java のセットアップ オプション")
+   ![R および Python の機能オプション](media/2019setup-features-page-mls-rpy.png "R および Python のセットアップ オプション")
    ::: moniker-end
    
    > [!NOTE]
@@ -120,7 +126,12 @@ ms.locfileid: "73727644"
 
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 
-4. **[Microsoft R Open のインストールに同意する]** ページで、 **[同意する]** 、 **[次へ]** の順に選択します。 このライセンス契約は、Microsoft R Open を対象としており、これには、オープンソース R 基本パッケージとツール、Microsoft 開発チームから提供された R パッケージおよび接続プロバイダーのディストリビューションが含まれています。
+4. **[Microsoft R Open のインストールに同意する]** ページで、 **[同意する]** 、 **[次へ]** の順に選択します。 
+
+使用許諾契約書の対象:
++ Microsoft R Open
++ オープンソース R の基本パッケージとツール
++ Microsoft 開発チームの R パッケージと接続プロバイダーが強化されました。
 
 1. **[Python のインストールに同意する]** ページで、 **[同意する]** 、 **[次へ]** の順に選択します。 Python のオープンソース ライセンス契約では、Anaconda および関連するツールに加えて、Microsoft 開発チームからのいくつかの新しい Python ライブラリも対象となっています。
 
@@ -143,22 +154,17 @@ ms.locfileid: "73727644"
 
 1. **[Microsoft R Open のインストールに同意する]** ページで、 **[同意する]** 、 **[次へ]** の順に選択します。 このライセンス契約は、Microsoft R Open を対象としており、これには、オープンソース R 基本パッケージとツール、Microsoft 開発チームから提供された R パッケージおよび接続プロバイダーのディストリビューションが含まれています。
 
-1. **[Python のインストールに同意する]** ページで、 **[同意する]** 、 **[次へ]** の順に選択します。 Python のオープンソース ライセンス契約では、Anaconda および関連するツールに加えて、Microsoft 開発チームからのいくつかの新しい Python ライブラリも対象となっています。
+2. **[Python のインストールに同意する]** ページで、 **[同意する]** 、 **[次へ]** の順に選択します。 Python のオープンソース ライセンス契約では、Anaconda および関連するツールに加えて、Microsoft 開発チームからのいくつかの新しい Python ライブラリも対象となっています。
 
-1. **[Java のインストール場所]** ページでは、SQL に付属しているオープン JRE のバージョンをインストールすることも、JDK または JRE の独自のインストール場所を指定することもできます。 **[次へ]** を選択します。
-
-   > [!NOTE]
-   >  ご使用のコンピューターがインターネットにアクセスできない場合は、この時点でセットアップを一時停止して、個別にインストーラーをダウンロードできます。 詳細については、[インターネットへのアクセスなしで機械学習コンポーネントをインストールする](../install/sql-ml-component-install-without-internet-access.md)に関するページを参照してください。
-
-1. **[インストールの準備完了]** ページで、以下が選択されていることを確認した後、 **[インストール]** を選択します。
+3. **[インストールの準備完了]** ページで、以下が選択されていることを確認した後、 **[インストール]** を選択します。
   
    + データベース エンジン サービス
    + Machine Learning Services (データベース内)
-   + R、Python、Java
+   + R と Python
 
    構成ファイルが格納されている `..\Setup Bootstrap\Log` パスの下にあるフォルダーの場所をメモしておきます。 セットアップが完了したら、インストールされたコンポーネントを概要ファイルで確認できます。
 
-1. セットアップが完了し、コンピューターの再起動を求めるメッセージが表示されたら、再起動してください。 セットアップが完了した時点で、インストール ウィザードによるメッセージを確認することが重要です。 詳細については、「 [SQL Server セットアップ ログ ファイルの表示と読み取り](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files)」を参照してください。
+4. セットアップが完了し、コンピューターの再起動を求めるメッセージが表示されたら、再起動してください。 セットアップが完了した時点で、インストール ウィザードによるメッセージを確認することが重要です。 詳細については、「 [SQL Server セットアップ ログ ファイルの表示と読み取り](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files)」を参照してください。
 
 ::: moniker-end
 
@@ -192,7 +198,7 @@ R 機能の統合のみの場合、**MKL_CBWR** 環境変数を設定して、In
     sp_configure
     ```
 
-    プロパティ `external scripts enabled` の値は、この時点では **0** であることが必要です。 これは、機能が既定で無効になっているためです。 この機能は、R または Python スクリプトを実行する前に、管理者が明示的に有効にする必要があります。
+    プロパティ `external scripts enabled` の値は、この時点では **0** であることが必要です。 この機能は既定でオフになっています。 この機能は、R または Python スクリプトを実行する前に、管理者が明示的に有効にする必要があります。
     
 3.  外部スクリプト機能を有効にするには、次のステートメントを実行します。
     
@@ -223,14 +229,13 @@ R 機能の統合のみの場合、**MKL_CBWR** 環境変数を設定して、In
    EXECUTE sp_configure  'external scripts enabled'
    ```
 
-   この時点で、**run_value** が 1 に設定されている必要があります。
+   **run_value** は 1 に設定されます。
     
 2. **[サービス]** パネルまたは SQL Server 構成マネージャーを開き、**SQL Server Launchpad サービス**が実行されていることを確認します。 R または Python がインストールされているすべてのデータベース エンジンのインスタンスに対して 1 つのサービスがある必要があります。 サービスの詳細については、[機能拡張フレームワーク](../concepts/extensibility-framework.md)に関するページを参照してください。 
    
-3. Launchpad が実行されている場合は、外部スクリプト ランタイムが SQL Server と通信できることを確認するため、単純な R スクリプトと Python スクリプトを実行できる必要があります。
+3. スタート パッドが実行されている場合は、単純な Python および R スクリプトを実行して、外部スクリプト ランタイムから SQL Server と通信できることを確認できます。
 
    [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で新しい **[クエリ]** ウィンドウを開き、次のようなスクリプトを実行します。
-   
    + R の場合
    
      ```sql
@@ -264,8 +269,8 @@ R 機能の統合のみの場合、**MKL_CBWR** 環境変数を設定して、In
    | 1|
 
 > [!NOTE]
-> 設計上、Python スクリプトで使用される列または見出しは返されません。 出力に列名を追加するには、戻り値のデータ セットに対してスキーマを指定する必要があります。 これを行うには、ストアド プロシージャの WITH RESULTS パラメーターを使用して、列に名前を付け、SQL データ型を指定します。
-> 
+> Python スクリプトで使用される列または見出しは、自動的には返されません。 出力に列名を追加するには、戻り値のデータ セットに対してスキーマを指定する必要があります。 これを行うには、ストアド プロシージャの WITH RESULTS パラメーターを使用して、列に名前を付け、SQL データ型を指定します。
+>
 > たとえば、次の行を追加して、任意の列名を生成できます。`WITH RESULT SETS ((Col1 AS int))`
 
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
@@ -277,13 +282,13 @@ R 機能の統合のみの場合、**MKL_CBWR** 環境変数を設定して、In
 
 最新の累積的な更新プログラムをデータベース エンジンと機械学習コンポーネントの両方に適用することをお勧めします。
 
-インターネットに接続されているデバイスでは、通常、累積的な更新プログラムは Windows Update によって適用されますが、管理された更新には、次の手順を使用することもできます。 データベース エンジンに更新プログラムを適用すると、同じインスタンスにインストールしたすべての R または Python 機能の累積更新プログラムがセットアップによってプルされます。 
+インターネットに接続されているデバイスでは、通常、累積的な更新プログラムは Windows Update によって適用されますが、管理された更新には、次の手順を使用することもできます。 データベース エンジンに更新プログラムを適用すると、同じインスタンスにインストールしたすべての Python または R 機能の累積更新プログラムがセットアップによってプルされます。 
 
-接続されていないサーバーでは、追加の手順が必要です。 詳細については、[インターネット アクセスなしでコンピューターにインストールする > 累積的な更新プログラムを適用する](sql-ml-component-install-without-internet-access.md#apply-cu)を参照してください。
+切断されたサーバーには追加の手順が必要です。 詳細については、[インターネット アクセスなしでコンピューターにインストールする > 累積的な更新プログラムを適用する](sql-ml-component-install-without-internet-access.md#apply-cu)を参照してください。
 
-1. 既にインストールされているベースライン インスタンスを使用して開始します。SQL Server 2017 の初回リリース
+1. 既にインストールされているベースライン インスタンスを使用して開始します: SQL Server 2017 の初回リリース
 
-2. 累積的な更新プログラムの一覧に移動します。[SQL Server 2017 の更新プログラム](https://sqlserverupdates.com/sql-server-2017-updates/)
+2. 累積的な更新プログラムの一覧に移動します: [Microsoft SQL Server の最新の更新プログラム](https://docs.microsoft.com/sql/database-engine/install-windows/latest-updates-for-microsoft-sql-server)
 
 3. 最新の累積的な更新プログラムを選択します。 実行可能ファイルがダウンロードされ、自動的に抽出されます。
 
@@ -295,7 +300,7 @@ R 機能の統合のみの場合、**MKL_CBWR** 環境変数を設定して、In
 
 ::: moniker-end
 
-## <a name="additional-configuration"></a>その他の構成
+## <a name="additional-configuration"></a>追加構成
 
 外部スクリプトの検証手順が成功した場合は、SQL Server Management Studio、Visual Studio Code、または T-SQL ステートメントをサーバーに送信できる他の任意のクライアントから、R または Python コマンドを実行できます。
 
@@ -306,11 +311,11 @@ R 機能の統合のみの場合、**MKL_CBWR** 環境変数を設定して、In
 * [SQL Server Machine Learning Services のファイアウォール構成](../../advanced-analytics/security/firewall-configuration.md)
 * [追加のネットワーク プロトコルの有効化](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)
 * [リモート接続の有効化](../../database-engine/configure-windows/configure-the-remote-access-server-configuration-option.md)
-* [SQLRUserGroup のログインの作成](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md)
+* [SQLRUserGroup のログインを作成する](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md)
 * ディスク領域を消費するタスクを外部スクリプトで実行しないようにするための[ディスク クォータの管理](https://docs.microsoft.com/windows/desktop/fileio/managing-disk-quotas)
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
-Windows の SQL Server 2019 では、分離メカニズムが変更されています。 これは **SQLRUserGroup**、ファイアウォール規則、ファイルのアクセス許可、および暗黙の認証に影響します。 詳細については、[Machine Learning Services の分離の変更](sql-server-machine-learning-services-2019.md)に関するページを参照してください。
+Windows の SQL Server 2019 では、分離メカニズムが変更されています。 このメカニズムは、**SQLRUserGroup**、ファイアウォール規則、ファイルのアクセス許可、および暗黙の認証に影響します。 詳細については、[Machine Learning Services の分離の変更](sql-server-machine-learning-services-2019.md)に関するページを参照してください。
 ::: moniker-end
 
 <a name="bkmk_configureAccounts"></a> 
@@ -325,7 +330,7 @@ Windows の SQL Server 2019 では、分離メカニズムが変更されてい�
 
 ## <a name="suggested-optimizations"></a>推奨される最適化
 
-これですべてが機能するようになったので、機械学習をサポートするようにサーバーを最適化したり、事前トレーニング済みのモデルをインストールしたりすることもできます。
+これですべてが機能するようになったので、機械学習をサポートするようにサーバーを最適化したり、事前トレーニング済みの機械学習モデルをインストールしたりすることもできます。
 
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 ### <a name="add-more-worker-accounts"></a>ワーカー アカウントを追加する
@@ -335,7 +340,7 @@ Windows の SQL Server 2019 では、分離メカニズムが変更されてい�
 
 ### <a name="optimize-the-server-for-script-execution"></a>スクリプトの実行用にサーバーを最適化する
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセットアップの既定の設定では、データベース エンジンによってサポートされているさまざまなサービスのバランスを最適化することを目的としています。サービスには、抽出 (Extract)、変換 (Transform)、および読み込み (Load) の ETL プロセス、レポート、監査、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データを使うアプリケーションなどが含まれます。 そのため、既定の設定では、場合によっては機械学習用のリソースが制限または調整されることがあります (特に、メモリを大量に使用する操作の場合)。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセットアップの既定の設定は、データベース エンジンによってサポートされているさまざまなサービスに対してサーバーのバランスを最適化することを目的としています。サービスには、抽出、変換、および読み込み (ETL) プロセス、レポート、監査、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データを使うアプリケーションなどが含まれます。 既定の設定では、特にメモリを集中的に使用する操作では、機械学習のリソースが制限または調整されることがあります。
 
 確実に機械学習ジョブの優先順位が適切に設定され、リソースが提供されるようにするには、SQL Server Resource Governor を使って外部リソース プールを構成することをお勧めします。 また、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース エンジンに割り当てられるメモリの量を変更したり、[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] サービスで実行するアカウントの数を増やしたりすることもできます。
 
@@ -355,16 +360,16 @@ SQL Server で使用するパッケージは、インスタンスによって使
 
 追加のパッケージをインストールして管理するには、ユーザー グループを設定してデータベース レベルでパッケージを共有するか、ユーザーが独自のパッケージをインストールできるようにデータベース ロールを構成します。 詳細については、[Python パッケージのインストール](../package-management/install-additional-python-packages-on-sql-server.md)と[新しい R パッケージのインストール](../package-management/install-additional-r-packages-on-sql-server.md)に関するページを参照してください。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
-R 開発者はいくつかの簡単な例を試して、SQL Server での R の動作方法の基本を確認できます。 次の手順については、以下のリンクをご覧ください。
+R 開発者はいくつかの簡単な例を試して、SQL Server での R の動作方法の基本を確認できます。 次の手順については、以下のリンクを参照してください。
 
-+ [チュートリアル: T-SQL での R の実行](../tutorials/quickstart-r-create-script.md)
-+ [チュートリアル: R 開発者向けのデータベース内分析](../tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [チュートリアル:T-SQL での R の実行](../tutorials/quickstart-r-create-script.md)
++ [チュートリアル:R 開発者向けのデータベース内分析](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 
 Python 開発者は、次のチュートリアルに従って、SQL Server で Python を使用する方法を学習できます。
 
-+ [チュートリアル: T-SQL での Python の実行](../tutorials/run-python-using-t-sql.md)
-+ [チュートリアル: Python 開発者向けのデータベース内分析](../tutorials/sqldev-in-database-python-for-sql-developers.md)
++ [チュートリアル:T-SQL での Python の実行](../tutorials/run-python-using-t-sql.md)
++ [チュートリアル:Python 開発者向けのデータベース内分析](../tutorials/sqldev-in-database-python-for-sql-developers.md)
 
 実際のシナリオに基づいた機械学習の例については、[機械学習のチュートリアル](../tutorials/machine-learning-services-tutorials.md)を参照してください。

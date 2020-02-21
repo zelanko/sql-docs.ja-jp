@@ -1,31 +1,30 @@
 ---
-title: 'クイック スタート: Python スクリプトを作成する'
-titleSuffix: SQL Server Machine Learning Services
-description: SQL Server Machine Learning Services を使用して SQL Server インスタンスでの単純な Python スクリプトを作成して実行します。
+title: クイック スタート:Python スクリプトを実行する
+description: SQL Server Machine Learning Services を使用して、一連の単純な Python スクリプトを実行します。 ストアド プロシージャ sp_execute_external_script を使用して、SQL Server インスタンスでスクリプトを実行する方法について説明します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/04/2019
+ms.date: 01/27/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8409eaf8129d7c8eb2eecd5a1157a17444341734
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 8c1347d58f0b8a4014a51a220b6ecded5a343082
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727024"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831915"
 ---
-# <a name="quickstart-create-and-run-simple-python-scripts-with-sql-server-machine-learning-services"></a>クイック スタート: SQL Server Machine Learning Services を使用して単純な Python スクリプトを作成して実行する
+# <a name="quickstart-run-simple-python-scripts-with-sql-server-machine-learning-services"></a>クイック スタート:SQL Server Machine Learning Services を使用して単純な Python スクリプトを実行する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-このクイックスタートでは、[SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md) を使用して、一連の単純な Python スクリプトを作成して実行します。 ストアド プロシージャ [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) で適切な形式の Python スクリプトをラップし、SQL Server インスタンスでスクリプトを実行する方法について説明します。
+このクイックスタートでは、[SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md) を使用して、一連の単純な Python スクリプトを実行します。 ストアド プロシージャ [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) を使用して、SQL Server インスタンスでスクリプトを実行する方法について説明します。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
-- このクイック スタートでは、Python 言語がインストールされている [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) を使用して SQL Server のインスタンスにアクセスする必要があります。
+- このクイックスタートでは、Python 言語がインストールされた [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) を持つ SQL Server のインスタンスへのアクセスが必要となります。
 
 - また、Python スクリプトを含む SQL クエリを実行するためのツールも必要です。 これらのスクリプトは、SQL Server インスタンスに接続し、T-SQL クエリまたはストアド プロシージャを実行できる限り、任意のデータベース管理ツールまたはクエリ ツールを使用して実行できます。 このクイック スタートでは、[SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms) を使用します。
 
@@ -74,7 +73,7 @@ print(c, d)
 
 ## <a name="run-a-hello-world-script"></a>Hello World スクリプトを実行する
 
-一般的なスクリプトの例では、文字列 "Hello World" を出力するだけです。 次のコマンドを実行します。
+一般的なスクリプトの例では、文字列 "Hello World" が出力されるだけです。 次のコマンドを実行します。
 
 ```sql
 EXECUTE sp_execute_external_script @language = N'Python'
@@ -84,14 +83,14 @@ WITH RESULT SETS(([Hello World] INT));
 GO
 ```
 
-`sp_execute_external_script` ストアド プロシージャへの入力は次のとおりです。
+`sp_execute_external_script`ストアド プロシージャへの入力は次のとおりです。
 
 | | |
 |-|-|
 | @language | 呼び出す言語拡張機能 (この例では Python) を定義します |
 | @script | Python ランタイムに渡されるコマンドを定義します<br>Python 全体は、Unicode テキストとして、この引数で囲まれている必要があります。 **nvarchar** 型の変数にテキストを追加して、その変数を呼び出すこともできます |
 | @input_data_1 | クエリによって返されるデータは、Python ランタイムに渡され、そこからデータがデータ フレームとして SQL Server に返されます |
-|WITH RESULT SETS | 句では、SQL Server に対して返されるデータ テーブルのスキーマを定義します。この場合は、列名として "Hello World" を追加し、データ型に **int** を追加します |
+|結果セットを含む | 句では、SQL Server に対して返されるデータ テーブルのスキーマを定義します。この場合は、列名として "Hello World" を追加し、データ型に **int** を追加します |
 
 このコマンドは、次のテキストを出力します。
 
@@ -159,11 +158,11 @@ GO
     Python では大文字と小文字が区別されることに注意してください。 Python スクリプトで使用される入力変数と出力変数は (**SQL_out**、**SQL_in**)、大文字と小文字を区別して、`@input_data_1_name` と `@output_data_1_name`で定義されている名前と一致する必要があります。
 
    > [!TIP]
-   > パラメーターとして渡すことができるのは、1 つの入力データセットのみです。また、1 つのデータセットのみを返すことができます。 ただし、Python コード内から他のデータセットを呼び出し、データセットに加えて他の型の出力を返すことができます。 また、OUTPUT キーワードを任意のパラメーターに追加して、その結果を受け取ることもできます。
+   > パラメーターとして渡すことができる入力データセットは 1 つだけです。また、返すことのできるデータセットも 1 つだけです。 ただし、Python コード内から他のデータセットを呼び出し、データセットに加えて他の型の出力を返すことができます。 任意のパラメーターに OUTPUT キーワードを追加することもでき、その場合は、パラメーターに結果が返されます。
 
 1. 入力データを含まない Python スクリプトを使用して値を生成することもできます (`@input_data_1` は空白に設定されます)。
 
-   次のスクリプトは、"hello" と "world" というテキストを出力します。
+   次のスクリプトは、 "hello" と "world" というテキストを出力します。
 
    ```sql
    EXECUTE sp_execute_external_script @language = N'Python'
@@ -225,43 +224,30 @@ Microsoft では、SQL Server インスタンスに SQL Server Machine Learning 
 ```SQL
 EXECUTE sp_execute_external_script @language = N'Python'
     , @script = N'
-import pip
-for i in pip.get_installed_distributions():
-    print(i)
+import pkg_resources
+import pandas
+dists = [str(d) for d in pkg_resources.working_set]
+OutputDataSet = pandas.DataFrame(dists)
 '
+WITH RESULT SETS(([Package] NVARCHAR(max)))
 GO
 ```
 
-出力は Python の `pip.get_installed_distributions()` からのものであり、`STDOUT` メッセージとして返されます。
+この一覧は Python の `pkg_resources.working_set` からのものであり、データ フレームとして SQL に返されます。
 
 **結果**
 
-```text
-STDOUT message(s) from external script:
-xlwt 1.2.0
-XlsxWriter 0.9.6
-xlrd 1.0.0
-win-unicode-console 0.5
-widgetsnbextension 2.0.0
-wheel 0.29.0
-Werkzeug 0.12.1
-wcwidth 0.1.7
-unicodecsv 0.14.1
-traitlets 4.3.2
-tornado 4.4.2
-toolz 0.8.2
-. . .
-```
+:::image type="content" source="media/python-package-list.png" alt-text="インストールされている Python パッケージの一覧":::
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 SQL Server Machine Learning Services で Python を使用する場合のデータ構造の使用方法については、次のクイックスタートを参照してください。
 
 > [!div class="nextstepaction"]
-> [SQL Server Machine Learning Services での Python を使用したデータ型とオブジェクトの処理](quickstart-python-data-structures.md)
+> [クイック スタート: SQL Server Machine Learning Services で Python を使用するデータ構造とオブジェクト](quickstart-python-data-structures.md)
 
 SQL Server Machine Learning Services での Python の使用に関する詳細については、次の記事を参照してください。
 
-- [SQL Server Machine Learning Services を使用した高度な Python 関数を作成する](quickstart-python-functions.md)
+- [SQL Server Machine Learning Services を使用した高度な Python 関数の作成](quickstart-python-functions.md)
 - [SQL Server Machine Learning Services を使用して Python で予測モデルを作成してスコア付けする](quickstart-python-train-score-model.md)
-- [SQL Server Machine Learning Services とは (Python と R)](../what-is-sql-server-machine-learning.md)
+- [SQL Server Machine Learning Services (Python と R) とは](../what-is-sql-server-machine-learning.md)

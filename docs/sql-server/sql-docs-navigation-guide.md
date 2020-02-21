@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: e0a18b05395cffaa4154e8f4a7d74ed04750e430
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 5492b4ff50baa805989df3521b01856eb028328e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72904311"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831626"
 ---
 # <a name="sql-server-docs-navigation-guide"></a>SQL Server ドキュメント ナビゲーション ガイド 
 
@@ -37,7 +37,7 @@ PDF を作成する場合は、すべての目次の下部にある **[Download 
 
 ![[Download PDF]\(PDF をダウンロード\)](media/sql-server-docs-navigation-guide/download-pdf.png)
 
-## <a name="toc-navigation-hints"></a>目次のナビゲーションのヒント
+## <a name="toc-symbols"></a>TOC の記号 
 
 エントリの最後に `>` がある目次 (TOC) のエントリは、別の目次を含む技術ドキュメントにリンクされていることを示します。 
 
@@ -51,7 +51,7 @@ PDF を作成する場合は、すべての目次の下部にある **[Download 
 
 ![SQL の目次に戻る](media/sql-server-docs-navigation-guide/navigate-back-to-sql-toc.png)
 
-## <a name="toc-search-tip"></a>目次の検索のヒント
+## <a name="toc-search"></a>TOC の検索 
 docs.microsoft.com では、上部にあるフィルター検索ボックスを使用して、目次内のコンテンツを検索できます。 
 
 ![フィルター ボックスを使用する](media/sql-server-docs-navigation-guide/sql-docs-toc-filter.gif)
@@ -70,7 +70,6 @@ SQL Server 技術ドキュメントには、SQL Server のいくつかのサポ�
 階層リンクは、ヘッダーの下と目次の上にあり、現在の記事が目次内のどこにあるかを示します。  これによって読んでいるコンテンツの種類にコンテキストを設定できるだけでなく、目次ツリーの上に戻ることもできます。
 
 ![SQL ドキュメントの階層リンク](media/sql-server-docs-navigation-guide/sql-docs-bread-crumbs.gif)
-
 
 ## <a name="article-section-navigation"></a>記事セクションのナビゲーション
 
@@ -91,8 +90,8 @@ SQL Server 技術ドキュメントには、SQL Server のいくつかのサポ�
 
 ![SQL ドキュメントの編集](media/sql-server-docs-navigation-guide/edit-sql-docs.gif)
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 - [SQL Server の技術ドキュメント](index.yml)を使い始めます。
 - SQL Server に関するフィードバックの送信方法または支援を受ける方法の詳細については、[支援を受ける方法](sql-server-get-help.md)のページを参照してください。 
-- すべてのクイックスタートとチュートリアルにすばやくアクセスするには、[SQL Server 教育センター](../lp/sql-server/sql-education-center.md)をアクセスしてください。
+- すべてのクイックスタートとチュートリアルにすばやくアクセスするには、「[学習用 SQL リソース](../sql-server/educational-sql-resources.yml)」を参照してください。

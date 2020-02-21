@@ -1,50 +1,49 @@
 ---
-title: 'クイック スタート: R データ型'
-titleSuffix: SQL Server Machine Learning Services
-description: このクイックスタートでは、R および SQL Server Machine Learning Services を備えた SQL Server で、データ型とデータ オブジェクトを取り扱う方法について説明します。
+title: クイック スタート:R データ構造体、データ型、およびオブジェクト
+description: このクイックスタートでは、SQL Server Machine Learning Services で R を使用するときに、データ構造体、データ型、およびオブジェクトを使用する方法について説明します。 R と SQL Server 間のデータの移動と、発生する可能性のある一般的な問題について説明します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/04/2019
+ms.date: 01/27/2019
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4dab7cca8edcc01052ced81ec33a1f411da7ba9a
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: a3f978865d2fdd643650a7c7308adb65d2c79fa7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73726978"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76916411"
 ---
-# <a name="quickstart-handle-data-types-and-objects-using-r-in-sql-server-machine-learning-services"></a>クイック スタート: SQL Server Machine Learning Services での R を使用したデータ型とオブジェクトの処理
+# <a name="quickstart-data-structures-data-types-and-objects-using-r-in-sql-server-machine-learning-services"></a>クイック スタート:SQL Server Machine Learning Services での R を使用したデータ構造体、データ型、およびオブジェクト
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-このクイックスタートでは、R と SQL Server 間でデータを移動するときに発生する、一般的な問題について説明します。 この演習を通じて得られる経験により、独自のスクリプトでデータを操作するときに必要な背景知識を得ることができます。
+このクイックスタートでは、SQL Server Machine Learning Services で R を使用するときに、データ構造体とデータ型を使用する方法について説明します。 R と SQL Server 間のデータの移動と、発生する可能性のある一般的な問題について説明します。
 
 前もって知っておくべき一般的な問題は、次のとおりです。
 
-- データ型が一致しない場合がある
-- 暗黙的な変換が行われる可能性がある
-- キャスト操作と変換操作が必要な場合がある
-- R と SQL が異なるデータ オブジェクトを使用する
+- データ型が一致しないときがある
+- 暗黙的な変換が発生することがある
+- cast および convert 操作が必要な場合がある
+- R と SQL で異なるデータ オブジェクトが使用される
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 - このクイックスタートでは、R 言語がインストールされた [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) をもつ SQL Server のインスタンスへのアクセスが必要となります。
 
-  SQL Server インスタンスは、Azure 仮想マシンまたはオンプレミスに配置できます。 外部スクリプト機能が既定で無効になっていることに注意してください。そのため、開始する前に[外部スクリプトを有効にし](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature)、**SQL Server Launchpad サービス**が実行されていることを確認する必要があります。
+  あなたの SQL Server インスタンスは、Azure 仮想マシンまたはオンプレミスに配置できます。 外部スクリプト機能が既定で無効になっていることに注意してください。そのため、開始する前に、[外部スクリプトを有効にし](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature)、**SQL Server Launchpad サービス**が実行されていることを確認する必要があります。
 
-- また、R スクリプトを含む SQL クエリを実行するためのツールも必要です。 これらのスクリプトは、SQL Server インスタンスに接続して T-SQL クエリまたはストアド プロシージャを実行可能な、任意のデータベース管理ツールまたはクエリ ツールを使用して実行できます。 このクイックスタートでは、[SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms) を使用します。
+- また、R スクリプトを含む SQL クエリを実行するためのツールも必要です。 これらのスクリプトは、SQL Server インスタンスに接続し、T-SQL クエリまたはストアド プロシージャを実行できる限り、任意のデータベース管理ツールまたはクエリ ツールを使用して実行できます。 このクイック スタートでは、[SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms) を使用します。
 
 ## <a name="always-return-a-data-frame"></a>常にデータ フレームを返す
 
-スクリプトが R から SQL Server に結果を返す場合は、データを **data.frame** として返す必要があります。 スクリプトで生成する他の型のオブジェクト (リスト、因子、ベクトル、バイナリ データ) をストアド プロシージャの結果の一部として出力する場合は、そのオブジェクトをデータ フレームに変換する必要があります。 他のオブジェクトをデータ フレームに変更する処理をサポートする R 関数は複数あります。 バイナリ モデルをシリアル化して、データ フレームに返すこともできます。この処理については、このクイックスタートで後述します。
+スクリプトが R から SQL Server に結果を返す場合は、データを **data.frame** として返す必要があります。 リスト、ファクター、ベクター、バイナリ データなど、スクリプトで生成するその他の種類のオブジェクトは、ストアド プロシージャ結果の一部として出力する場合はデータ フレームに変換する必要があります。 幸い、その他のオブジェクトのデータ フレームへの変更をサポートする複数の R 関数が存在します。 バイナリ モデルをシリアル化して、データ フレームに返すこともできます。この処理については、このクイックスタートで後述します。
 
 最初に、R の基本的なオブジェクト (ベクトル、行列、リスト) を使用して、データ フレームへの変換によって SQL Server に渡す出力がどのように変わるかを見てみましょう。
 
-R で記述された 2 つの "Hello World" スクリプトを比較します。スクリプトはほぼ同じに見えますが、最初のものは 3 つの値をもつ 1 つの列を返し、2 番目のものはそれぞれ 1 つの値を持つ 3 つの列を返します。
+次の 2 つの R で書かれた "Hello World" スクリプトを比較します。これらのスクリプトはほぼ同じものに見えますが、1 つ目は 3 つの値が含まれる 1 つの列を返し、2 つ目は 1 つの値が含まれる列を 3 つ返します。
 
 **例 1**
 
@@ -67,9 +66,9 @@ EXECUTE sp_execute_external_script
 
 ## <a name="identify-schema-and-data-types"></a>スキーマとデータ型の識別
 
-結果が異なる理由は何でしょうか。
+なぜ結果がこれほど異なるのでしょうか。
 
-通常、その答えは、R の `str()` コマンドを使用するとわかります。 R スクリプトのいずれかの場所に関数 `str(object_name)` を追加し、指定された R オブジェクトのデータ スキーマを情報メッセージとして返します。 メッセージを確認するには、Visual Studio Code の **[メッセージ]** ウィンドウまたは SSMS の **[メッセージ]** タブを参照してください。
+答えは通常、R の `str()` コマンドを使用すればわかります。 指定の R オブジェクトのデータ スキーマが情報メッセージとして返されるよう、R スクリプトの任意の場所に関数 `str(object_name)` を追加します。 メッセージを確認するには、Visual Studio Code の **[メッセージ]** ウィンドウまたは SSMS の **[メッセージ]** タブを参照してください。
 
 例 1 と例 2 の結果が異なる理由を理解するには、次に示すように、各ステートメントの _@script_ 変数定義の末尾に `str(OutputDataSet)` という行を挿入します。
 
@@ -85,7 +84,7 @@ EXECUTE sp_execute_external_script
 ;
 ```
 
-**str 関数が追加された例 2**
+**str 関数を追加した例 2**
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -95,7 +94,7 @@ EXECUTE sp_execute_external_script
   @input_data_1 = N'  ';
 ```
 
-これで、 **[メッセージ]** のテキストを確認すると、出力が異なる理由がわかります。
+次に、 **[メッセージ]** 内のテキストを確認して、なぜ出力が異なるのかを調べます。
 
 **結果 - 例 1**
 
@@ -115,16 +114,16 @@ $ X...      : Factor w/ 1 level " ": 1
 $ c..world..: Factor w/ 1 level "world": 1
 ```
 
-R 構文のわずかな変更が結果のスキーマに大きな影響をもたらしていることがわかります。 ここではその理由については説明しませんが、R データ型の違いについては、「[Hadley Wickham 氏による "Advanced R"](http://adv-r.had.co.nz)」の「*データ構造*」のセクションで詳しく説明されています。
+ご覧のように、R 構文をわずかに変更するだけで結果のスキーマに大きな影響がありました。 ここではその理由については説明しませんが、R データ型の違いについては、「[Hadley Wickham 氏による "Advanced R"](http://adv-r.had.co.nz)」の「*データ構造*」のセクションで詳しく説明されています。
 
-ここでは、R オブジェクトをデータ フレームに変換する際に予想される結果を確認する必要があることに留意してください。
+現時点では、R オブジェクトをデータ フレームに強制変換するときは予想される結果を確認する必要がある、という点のみ注意してください。
 
 > [!TIP]
 > また、`is.matrix`、`is.vector` などの R の ID 関数を使用して、内部データ構造に関する情報を返すこともできます。
 
 ## <a name="implicit-conversion-of-data-objects"></a>データ オブジェクトの暗黙的な変換
 
-R の各データ オブジェクトには、2 つのデータ オブジェクトの次元数が同じ場合や、いずれかのデータ オブジェクトに異種データ型が格納されている場合に他のデータ オブジェクトと結合する際の値の処理方法に関する固有のルールがあります。
+各 R オブジェクトには、他のデータ オブジェクトと結合されたときに、その 2 つのデータ オブジェクトのディメンションの数が同じ場合、またはいずれかのデータ オブジェクトに異種データ型が含まれている場合、値がどのように扱われるのかについて独自のルールがあります。
 
 まず、テスト データの小さなテーブルを作成します。
 
@@ -155,7 +154,7 @@ EXECUTE sp_execute_external_script
     WITH RESULT SETS (([Col1] int, [Col2] int, [Col3] int, Col4 int));
 ```
 
-この場合、3 つの値で構成される列が 1 列の行列に変換されます。 R では行列は特殊なケースの配列であるため、2 つの引数が一致するように、配列 `y` が暗黙的に 1 列の行列に変換されます。
+これにより、3 つの値の列が 1 列の行列に変換されます。 行列は単に R における配列の特殊なケースであるため、配列 `y` は暗黙的に、2 つの引数を一致させるために 1 列の行列に強制変換されます。
 
 **結果**
 
@@ -165,7 +164,7 @@ EXECUTE sp_execute_external_script
 |120|130|140|150|
 |1200|1300|1400|1500|
 
-ただし、配列 `y` のサイズを変更するとどうなるかに注意してください。
+ただし、配列 `y` のサイズを変更した場合に起こることについて注意してください。
 
 ```sql
 execute sp_execute_external_script
@@ -178,7 +177,7 @@ execute sp_execute_external_script
    WITH RESULT SETS (([Col1] int ));
 ```
 
-これで、R は結果として 1 つの値を返します。
+この場合、結果として単一の値が R から返されます。
 
 **結果**
 
@@ -186,7 +185,7 @@ execute sp_execute_external_script
 |---|
 |1542|
 
-なぜでしょうか。 この場合、2 つの引数を同じ長さのベクトルとして処理できるため、R は行列として内部結合を返します。  これは、線形代数のルールに従った想定どおりの動作です。ただし、ダウンストリーム アプリケーションで出力スキーマが変更されないと想定されている場合に問題が発生する可能性があります。
+なぜですか? この場合、2 つの引数を同じ長さのベクターとして扱うことができるため、内積が 1 つの行列として R から返されます。  これは、線形代数のルールに従った想定どおりの動作です。ただし、ダウンストリーム アプリケーションで出力スキーマが変更されないと想定されている場合に問題が発生する可能性があります。
 
 > [!TIP]
 > 
@@ -194,11 +193,11 @@ execute sp_execute_external_script
 >
 > また、これらの例では一時テーブルを使用しないことをお勧めします。 一部の R クライアントは、バッチ間の接続を終了するときに、一時テーブルを削除します。
 
-## <a name="merge-or-multiply-columns-of-different-length"></a>異なる長さの列の結合または乗算
+## <a name="merge-or-multiply-columns-of-different-length"></a>異なる長さの列のマージまたは乗算
 
-R は、異なるサイズのベクトルを使用するため、およびそれらの列のような構造をデータ フレームに結合するために、優れた柔軟性を提供します。 ベクトルのリストはテーブルのような外見ですが、データベース テーブルを管理するすべてのルールに従うわけではありません。
+R は、異なるサイズのベクトルを使用するため、およびそれらの列のような構造をデータ フレームに結合するために、優れた柔軟性を提供します。 ベクターのリストはテーブルのように見えますが、データベース テーブルに適用されるどのルールにも従いません。
 
-たとえば、次のスクリプトでは、長さが 6 の数値配列を定義し、R 変数 `df1` に格納します。 数値配列は、3 つの値を含む RTestData テーブルの整数と組み合わされ、新しいデータ フレーム `df2` が作成されます。
+たとえば、次のスクリプトでは、長さが 6 の数値の配列を定義し、R 変数 `df1` に格納します。 数値配列は、3 つの値を含む RTestData テーブルの整数と組み合わされ、新しいデータ フレーム `df2` が作成されます。
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -211,7 +210,7 @@ EXECUTE sp_execute_external_script
     WITH RESULT SETS (( [Col2] int not null, [Col3] int not null ));
 ```
 
-データ フレームに入力するために、R は RTestData から取得した要素を必要な数だけ繰り返し、配列 `df1` 内の要素の数と一致させます。
+データ フレームを埋めるために、R は RTestData から取得した要素を、配列 `df1` 内の要素数と一致するために必要な数だけ繰り返します。
 
 **結果**
 
@@ -231,11 +230,11 @@ EXECUTE sp_execute_external_script
 R と SQL Server は同じデータ型を使用しないため、データを取得して R ランタイムに渡すためのクエリを SQL Server で実行する際は、通常何らかの暗黙的な変換を行います。 R から SQL Server にデータを返す場合は、別の変換を行います。
 
 - SQL Server は、Launchpad サービスで管理される R プロセスにクエリのデータをプッシュし、効率を向上させるために内部表現に変換します。
-- R ランタイムはデータを data.frame 変数に読み込み、データに対する操作を実行します。
+- R ランタイムでデータが data.frame 変数に読み込まれ、データに対して独自の操作が実行されます。
 - データベース エンジンは、セキュリティで保護された内部接続を使用する SQL Server にデータを返し、SQL Server のデータ型の観点からデータを提供します。
-- データを取得するには、SQL クエリを発行して表形式データ セットを処理できるクライアントまたはネットワーク ライブラリを使用して SQL Server に接続します。 このクライアント アプリケーションは、他の方法でデータに影響を及ぼす可能性があります。
+- データを取得するには、SQL クエリを発行して表形式データ セットを処理できるクライアントまたはネットワーク ライブラリを使用して SQL Server に接続します。 このクライアント アプリケーションは、他の方法でデータに影響する可能性があります。
 
-これがどのように動作するかを確認するには、[AdventureWorksDW](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) データ ウェアハウスで、次のようなクエリを実行します。 このビューは、予測の作成に使用する売上データを返します。
+この動作を確認するには、このようなクエリを [AdventureWorksDW](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) データ ウェアハウス上で実行します。 このビューは、予測の作成に使用する売上データを返します。
 
 ```sql
 USE AdventureWorksDW
@@ -251,7 +250,7 @@ SELECT ReportingDate
 
 > [!NOTE]
 >
-> 任意のバージョンの AdventureWorks を使用することができますし、独自のデータベースを使用する別のクエリを作成することもできます。 ポイントとなるのは、テキスト、日時、および数値を含むデータを処理してみることです。
+> 任意のバージョンの AdventureWorks を使用することも、ご使用のデータベースを使用して別のクエリを作成することもできます。 ポイントとなるのは、テキスト、日時、および数値を含むデータを処理してみることです。
 
 それでは、ストアド プロシージャへの入力として、このクエリを貼り付けてみてください。
 
@@ -270,9 +269,9 @@ EXECUTE sp_execute_external_script
 WITH RESULT SETS undefined;
 ```
 
-エラーが発生した場合は、クエリ テキストの一部を編集しなければならない可能性があります。 たとえば、WHERE 句に predicate という文字列を含める場合、単一引用符で囲む必要があります。
+エラーが発生した場合、クエリ テキストの編集が必要になることがあります。 たとえば、WHERE 句内の文字列熟語は、2 つの一重引用符のセットで囲む必要があります。
 
-クエリを動作させたら、`str` 関数の結果を確認し、R で入力データがどのように処理されるかを把握します。
+クエリが動作したら、R で入力データがどのように扱われているかについて、`str` 関数の結果で確認します。
 
 **結果**
 
@@ -283,23 +282,23 @@ STDOUT message(s) from external script: $ ProductSeries: Factor w/ 1 levels "M20
 STDOUT message(s) from external script: $ Amount       : num  3400 16925 20350 16950 16950
 ```
 
-- 日時列は R データ型 **POSIXct** を使用して処理されました。
-- テキスト列 "ProductSeries" は**因子** (カテゴリ変数) として識別されました。 文字列値は、既定では因子として処理されます。 R に渡した文字列は、内部で使用するために整数に変換され、出力時に再度文字列にマップされます。
+- 日時列は、R データ型 **POSIXct** を使用して処理されています。
+- テキスト列 "ProductSeries" は、**factor**、つまりカテゴリ変数として識別されています。 文字列値は、既定ではファクターとして処理されます。 文字列を R に渡すと、内部使用のために整数に変換され、出力では文字列にマップし直されます。
 
 ### <a name="summary"></a>まとめ
 
-これらの短い例からも、SQL クエリを入力として渡すときに、データ変換の影響を確認する必要があることを確認できます。 一部の SQL Server データ型は R でサポートされていないため、エラーを回避するために次の方法を検討してください。
+このような短い例であっても、SQL クエリを入力として渡す場合はデータ変換の影響を確認する必要があることがわかります。 一部の SQL Server データ型は R でサポートされていないため、エラーを回避するために次の方法を検討してください。
 
-- データを事前にテストし、R コードに渡されたときに問題となる可能性があるスキーマの列または値を確認します。
-- `SELECT *` を使用するのではなく、入力データ ソースに列を個別に指定し、各列の処理方法を把握します。
-- 予期しない動作を回避するために、入力データを準備する際に、必要に応じて明示的なキャストを実行します。
-- エラーが発生してモデリングの役に立たないデータの列 (GUID や Rowguid など) を渡さないようにします。
+- データを事前にテストし、R コードに渡したときに問題となる可能性がある、スキーマ内の列または値を確認します。
+- 入力データ ソース内の列を指定する場合、`SELECT *` を使用するよりは、個別に指定して、各列がどのように処理されるかを理解します。
+- 予想外の問題を回避するために、入力データを準備するときに、必要に応じて明示的なキャストを実行します。
+- エラー発生の原因となりモデリングの役に立たない (GUID や rowguid などの) データの列を渡すことを回避します。
 
 サポート対象およびサポート対象外のデータ型について詳しくは、「[R ライブラリとデータ型](../r/r-libraries-and-data-types.md)」に関するページを参照してください。
 
 文字列から数値因子への実行時の変換がパフォーマンスに及ぼす影響について詳しくは、「[SQL Server R Services のパフォーマンス チューニング](../r/sql-server-r-services-performance-tuning.md)」を参照してください。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 SQL Server で高度な R 関数を作成する方法については、次のクイックスタートを参照してください。
 

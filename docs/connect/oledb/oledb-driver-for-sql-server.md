@@ -18,12 +18,12 @@ helpviewer_keywords:
 - native data access [OLE DB Driver for SQL Server]
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: adc18554ebb4494112f424f3e6a3dd02c13b121c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 849c3dbc0a0f94387f2e2f25ba17d64c910653cb
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67993792"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76918808"
 ---
 # <a name="microsoft-ole-db-driver-for-sql-server"></a>Microsoft OLE DB Driver for SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +44,7 @@ OLE DB Driver for SQL Server とは、[!INCLUDE[ssVersion2005](../../includes/ss
   
  OLE DB Driver for SQL Server は、OLE DB を使用して簡単に SQL Server へのネイティブ データ アクセスを実現できるように設計されています。 Microsoft Windows プラットフォームの一部になっている既存の Windows DAC コンポーネントを変更することなく新しいデータ アクセス機能を導入および展開できます。  
   
- OLE DB Driver for SQL Server では Windows DAC のコンポーネントを使用しますが、明確に特定バージョンの Windows DAC に依存しているわけではありません。 OLE DB Driver for SQL Server は、OLE DB Driver for SQL Server でサポートされるオペレーティング システムにインストールされているバージョンの Windows DAC と共に使用できます。  
+ OLE DB Driver for SQL Server では、Windows DAC にあるコンポーネントが使用されますが、明確に特定バージョンの Windows DAC に依存しているわけではありません。 OLE DB Driver for SQL Server は、OLE DB Driver for SQL Server でサポートされるオペレーティング システムにインストールされているバージョンの Windows DAC と共に使用できます。  
 
  ## <a name="different-generations-of-ole-db-drivers"></a>OLE DB Driver のさまざまな世代
 

@@ -1,6 +1,6 @@
 ---
 title: パラメーターとしての XML 値の指定
-description: XML データをパラメーターとしてコマンドに渡す方法について説明します。
+description: XML データをパラメーターとしてコマンドに渡す方法を示します。
 ms.date: 08/15/2019
 dev_langs:
 - csharp
@@ -9,15 +9,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: 5ef73529119245397932a3a2414ce65f381b55bd
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 7f9893d7ac9dd83ae5212684678fc240a8d77097
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452113"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75251143"
 ---
 # <a name="specifying-xml-values-as-parameters"></a>パラメーターとしての XML 値の指定
 
@@ -29,11 +29,11 @@ ms.locfileid: "72452113"
 次のコンソール アプリケーションでは、**AdventureWorks** データベースに新しいテーブルを作成します。 新しいテーブルには、**SalesID** という名前の列と、**SalesInfo** という名前の XML 列があります。  
   
 > [!NOTE]
->  **AdventureWorks** サンプル データベースは、既定では SQL Server のインストール時にはインストールされません。 SQL Server セットアップを実行してインストールできます。  
+>  **AdventureWorks** サンプル データベースは、既定では SQL Server のインストール時にはインストールされません。 インストールするには、SQL Server Setup を実行します。  
   
-この例では、<xref:Microsoft.Data.SqlClient.SqlCommand> オブジェクトを準備して、新しいテーブルに行を挿入します。 保存されたファイルは、**SalesInfo** 列に必要な XML データを提供します。  
+この例では、新しいテーブルに行を挿入するための <xref:Microsoft.Data.SqlClient.SqlCommand> オブジェクトを準備します。 保存されたファイルは、**SalesInfo** 列に必要な XML データを提供します。  
   
-例を実行するために必要なファイルを作成するには、プロジェクトと同じフォルダーに新しいテキストファイルを作成します。 ファイルに MyTestStoreData という名前を指定します。 メモ帳でファイルを開き、次のテキストをコピーして貼り付けます。  
+この例の実行に必要なファイルを作成するには、プロジェクトと同じフォルダーに新しいテキスト ファイルを作成します。 このファイルの名前を MyTestStoreData.xml にします。 メモ帳でファイルを開き、次のテキストをコピーして貼り付けます。  
   
 ```xml  
 <StoreSurvey xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey">  
@@ -111,6 +111,6 @@ class Class1
 }  
 ```  
   
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 - <xref:System.Data.SqlTypes.SqlXml>
 - [SQL Server における XML データ](xml-data-sql-server.md)

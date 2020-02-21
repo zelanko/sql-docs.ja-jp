@@ -1,29 +1,28 @@
 ---
-title: 'クイック スタート: Python 関数を記述する'
-titleSuffix: SQL Server Machine Learning Services
-description: このクイック スタートでは、SQL Server Machine Learning Services を使用した高度な統計計算用の Python 関数を作成する方法について説明します。
+title: クイック スタート:Python 関数
+description: このクイックスタートでは、SQL Server Machine Learning Services で Python の数学関数とユーティリティ関数を使用する方法について説明します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/04/2019
+ms.date: 01/27/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 08f43c6406d0ca2c95cc21a207cae63af6e86902
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: d939e04c4a82575cf8210f2c11e734b9912c0fe5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727011"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831403"
 ---
-# <a name="quickstart-write-advanced-python-functions-with-sql-server-machine-learning-services"></a>クイック スタート: SQL Server Machine Learning Services を使用した高度な Python 関数の作成
+# <a name="quickstart-python-functions-with-sql-server-machine-learning-services"></a>クイック スタート:SQL Server Machine Learning Services での Python 関数
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-このクイック スタートでは、SQL Server Machine Learning Services を使用して SQL ストアド プロシージャに Python の数学関数とユーティリティ関数を埋め込む方法について説明します。 T-SQL で実装するのが複雑な高度な統計関数は、Python を使用すると 1 行のコードだけで実行できます。
+このクイックスタートでは、SQL Server Machine Learning Services で Python の数学関数とユーティリティ関数を使用する方法について説明します。 多くの場合、統計関数は T-SQL での実装が複雑ですが、Python では、わずか数行のコードで行うことができます。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 - このクイックスタートでは、Python 言語がインストールされた [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) を持つ SQL Server のインスタンスへのアクセスが必要となります。
 
@@ -54,7 +53,7 @@ OutputDataSet = pandas.DataFrame(numpy.random.normal(size=100, loc=50, scale=3))
 WITH RESULT SETS(([Density] FLOAT NOT NULL));
 ```
 
-別の乱数のセットをもっと簡単に生成するにはどうすればよいでしょうか。
+さまざまな乱数のセットを簡単に生成するにはどうすればよいでしょうか。
 
 これは、SQL Server と組み合わせると簡単です。 ユーザーから引数を取得し、これらの引数を変数として Python スクリプトに渡すストアド プロシージャを定義します。
 
@@ -79,7 +78,7 @@ OutputDataSet = pandas.DataFrame(numpy.random.normal(size=mynumbers, loc=mymean,
 WITH RESULT SETS(([Density] FLOAT NOT NULL));
 ```
 
-- 最初の行では、ストアド プロシージャが実行されるときに必要な各 SQL 入力パラメーターを定義します。
+- 最初の行は、ストアド プロシージャを実行するときに必要になる SQL 入力パラメーターそれぞれを定義します。
 
 - `@params` で始まる行は、Python コードで使用されるすべての変数と、対応する SQL データ型を定義します。
 
@@ -111,13 +110,13 @@ elapsed_time = time.time() - start_time
     , @input_data_1 = N' ;';
 ```
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 SQL Server で Python を使用して機械学習モデルを作成するには、次のクイック スタートに従ってください。
 
 > [!div class="nextstepaction"]
-> [クイックスタート: SQL Server Machine Learning Services を使用して Python で予測モデルを作成してスコア付けする](quickstart-python-train-score-model.md)
+> [クイック スタート: SQL Server Machine Learning Services を使用して Python で予測モデルを作成してスコア付けする](quickstart-python-train-score-model.md)
 
 SQL Server Machine Learning Services の詳細については、次を参照してください。
 
-- [SQL Server Machine Learning Services とは (Python と R)](../what-is-sql-server-machine-learning.md)
+- [SQL Server Machine Learning Services (Python と R) とは](../what-is-sql-server-machine-learning.md)

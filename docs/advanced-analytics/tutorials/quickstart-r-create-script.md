@@ -1,31 +1,30 @@
 ---
-title: 'クイック スタート: R スクリプトの作成'
-titleSuffix: SQL Server Machine Learning Services
-description: SQL Server Machine Learning Services を使用して、SQL Server インスタンスで単純な R スクリプトを作成して実行します。
+title: クイック スタート:R スクリプトの実行
+description: SQL Server Machine Learning Services を使用して、一連の単純な R スクリプトを実行します。 ストアド プロシージャ sp_execute_external_script を使用して、SQL Server インスタンスでスクリプトを実行する方法について説明します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/04/2019
+ms.date: 01/27/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5a8e2779e930671faa9fa3ab94a7384ab1bdca83
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 495bb56cf76391c8baa1734665d5064b586d4be8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73726989"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831780"
 ---
-# <a name="quickstart-create-and-run-simple-r-scripts-with-sql-server-machine-learning-services"></a>クイック スタート: SQL Server Machine Learning Services で簡単な R スクリプトを作成して実行する
+# <a name="quickstart-run-simple-r-scripts-with-sql-server-machine-learning-services"></a>クイック スタート:SQL Server Machine Learning Services で単純な R スクリプトを実行する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-このクイックスタートでは、[SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md) を使用して、一連の単純な R スクリプトを作成して実行します。 ストアド プロシージャ [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) で適切な形式の R スクリプトをラップし、SQL Server インスタンスでスクリプトを実行する方法について説明します。
+このクイックスタートでは、[SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md) を使用して、一連の単純な R スクリプトを実行します。 ストアド プロシージャ [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) を使用して、SQL Server インスタンスでスクリプトを実行する方法について説明します。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
-- このクイック スタートでは、R 言語がインストールされている [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) を使用して SQL Server のインスタンスにアクセスする必要があります。
+- このクイックスタートでは、R 言語がインストールされた [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) をもつ SQL Server のインスタンスへのアクセスが必要となります。
 
   あなたの SQL Server インスタンスは、Azure 仮想マシンまたはオンプレミスに配置できます。 外部スクリプト機能が既定で無効になっていることに注意してください。そのため、開始する前に、[外部スクリプトを有効にし](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature)、**SQL Server Launchpad サービス**が実行されていることを確認する必要があります。
 
@@ -33,7 +32,7 @@ ms.locfileid: "73726989"
 
 ## <a name="run-a-simple-script"></a>単純なスクリプトを実行する
 
-R スクリプトを実行するには、これを引数としてシステム ストアド プロシージャ [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) に渡します。
+R スクリプトを実行するには、それをシステム ストアド プロシージャ [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) に引数として渡します。
 このシステムのストアド プロシージャは、SQL Server のコンテキストで、R ランタイムを起動します。このランタイムは、R にデータを渡し、R ユーザー セッションを安全に管理し、結果をクライアントに返します。
 
 次の手順では、このサンプル R スクリプトを SQL Server インスタンスで実行します。
@@ -63,7 +62,7 @@ print(c(c, d))
     '
     ```
 
-1. 正しい結果が計算され、R `print`関数によって**メッセージ** ウィンドウに結果が返されます。
+1. 適切な結果が計算され、R の `print` 関数から **[メッセージ]** ウィンドウに結果が返されます。
 
    次のように表示されます。
 
@@ -91,7 +90,7 @@ GO
 | | |
 |-|-|
 | @language | 呼び出す言語拡張機能 (この例では R) を定義します |
-| @script | R ランタイムに渡されるコマンドを定義します Unicode テキストとして、この引数で R スクリプト全体を囲む必要があります。 **nvarchar** 型の変数にテキストを追加して、その変数を呼び出すこともできます |
+| @script | R ランタイムに渡されるコマンドを定義します この引数には R スクリプト全体を Unicode テキストとして含める必要があります。 **nvarchar** 型の変数にテキストを追加して、その変数を呼び出すこともできます |
 | @input_data_1 | クエリによって返されるデータは R ランタイムに渡され、そこからデータがデータ フレームとして SQL Server に返されます。 |
 |結果セットを含む | 句では、SQL Server に対して返されるデータ テーブルのスキーマを定義し、列名として "Hello World" を追加し、データ型に **int** を追加します |
 
@@ -161,7 +160,7 @@ GO
     R では大文字と小文字が区別されることに注意してください。 R スクリプトで使用される入力変数と出力変数は (**SQL_out**、**SQL_in**)、大文字と小文字を区別して、`@input_data_1_name` と `@output_data_1_name` で定義されている名前と一致する必要があります。
 
    > [!TIP]
-   > パラメーターとして渡すことができるのは、1 つの入力データセットのみです。また、1 つのデータセットのみを返すことができます。 ただし、R コード内から他のデータセットを呼び出し、データセットに加えて他の型の出力を返すことができます。 また、OUTPUT キーワードを任意のパラメーターに追加して、その結果を受け取ることもできます。
+   > パラメーターとして渡すことができる入力データセットは 1 つだけです。また、返すことのできるデータセットも 1 つだけです。 ただし、R コード内から他のデータセットを呼び出し、そのデータセットに加えて、他の種類の出力を返すことができます。 任意のパラメーターに OUTPUT キーワードを追加することもでき、その場合は、パラメーターに結果が返されます。
 
 1. 入力データを含まない R スクリプトを使用して値を生成することもできます (`@input_data_1` は空白に設定されます)。
 
@@ -239,7 +238,7 @@ WITH result sets((
 
 ![R のインストール済みパッケージ](./media/rsql-installed-packages.png) 
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 SQL Server Machine Learning Services で R を使用する場合のデータ構造の使用方法については、次のクイックスタートを参照してください。
 

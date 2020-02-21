@@ -1,6 +1,6 @@
 ---
-title: クエリ エディターによる SQLCMD スクリプトの編集 | Microsoft Docs
-ms.custom: ''
+title: クエリ エディターによる SQLCMD スクリプトの編集
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -17,12 +17,12 @@ ms.assetid: f77b866d-c330-47c9-9e74-0b8d8dff4b31
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7931e678db7e93dfea385b5ca905dd6968ec78eb
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 637de4e8168b97e27da707f3f189d3608786d973
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263477"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253910"
 ---
 # <a name="edit-sqlcmd-scripts-with-query-editor"></a>クエリ エディターによる SQLCMD スクリプトの編集
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "68263477"
   
 3.  **[SQL エディター]** ツール バーの **[使用できるデータベース]** の一覧で、[ [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]] データベースを選択します。  
   
-4.  クエリ エディター ウィンドウに、次の 2 つの [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントと `!!DIR` **sqlcmd** ステートメントを入力します。  
+4.  クエリ エディター ウィンドウに、次の 2 つの [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントと `!!DIR`**sqlcmd** ステートメントを入力します。  
   
     ```  
     SELECT DISTINCT Type FROM Sales.SpecialOffer;  
@@ -91,7 +91,7 @@ ms.locfileid: "68263477"
  SQLCMD スクリプト操作を既定でオンにするには、 **[ツール]** メニューの **[オプション]** をクリックし、 **[クエリ実行]** 、 **[SQL Server]** の順に展開します。次に、 **[全般]** ページをクリックし、 **[既定で、新しいクエリを SQLCMD モードで開始する]** チェック ボックスをオンにします。  
   
 ## <a name="writing-and-editing-sqlcmd-scripts"></a>SQLCMD スクリプトの作成と編集  
- スクリプト モードを有効にしたら、SQLCMD コマンドと [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを作成できます。 この場合に当てはまる規則を以下に示します。  
+ スクリプト モードを有効にしたら、SQLCMD コマンドと [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを作成できます。 次の規則が適用されます。  
   
 -   SQLCMD コマンドは行の最初のステートメントでなければなりません。  
   

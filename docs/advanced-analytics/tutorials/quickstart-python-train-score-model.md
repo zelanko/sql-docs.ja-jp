@@ -1,27 +1,26 @@
 ---
-title: 'クイック スタート: Python でモデルをトレーニングする'
-titleSuffix: SQL Server Machine Learning Services
-description: SQL Server Machine Learning Services を使用して Python で簡単な予測モデルを作成してから、新しいデータを使用して結果を予測します。
+title: クイック スタート:Python でモデルをトレーニングする
+description: このクイックスタートでは、Python を使用して予測モデルを作成してトレーニングします。 モデルを SQL Server インスタンスのテーブルに保存し、そのモデルを使用し、SQL Server Machine Learning Services を使用して新しいデータから値を予測します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/14/2019
+ms.date: 01/27/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: fcf43d57488578020eed09080668156fb926d1b0
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: c8fd7d734bee00a22af02b014e950f6694b534a1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73726997"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831763"
 ---
-# <a name="quickstart-create-and-score-a-predictive-model-in-python-with-sql-server-machine-learning-services"></a>クイック スタート: SQL Server Machine Learning Services を使用して Python で予測モデルを作成してスコア付けする
+# <a name="quickstart-create-and-score-a-predictive-model-in-python-with-sql-server-machine-learning-services"></a>クイック スタート:SQL Server Machine Learning Services を使用して Python で予測モデルを作成してスコア付けする
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-このクイックスタートでは、Python を使用して予測モデルを作成してトレーニングし、SQL Server インスタンスのテーブルにモデルを保存します。次に、そのモデルを使用して、[SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md) を使って新しいデータから値を予測します。
+このクイックスタートでは、Python を使用して予測モデルを作成してトレーニングします。 モデルを SQL Server インスタンスのテーブルに保存し、そのモデルを使用し、[SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md) を使用して新しいデータから値を予測します。
 
 SQL で実行されている 2 つのストアド プロシージャを作成して実行します。 最初の例では、クラシックなアヤメの花のデータセットを使用して、花の特性に基づいてアヤメの種を推測する Naïve Bayes モデルを生成します。 2 番目のプロシージャはスコアリング用で、最初のプロシージャで生成されたモデルを呼び出して、新しいデータに基づいて一連の予測を出力します。 SQL ストアド プロシージャに Python コードを配置することで、操作は SQL に格納され、再利用可能になり、他のストアド プロシージャやクライアント アプリケーションから呼び出すことができます。
 
@@ -32,9 +31,9 @@ SQL で実行されている 2 つのストアド プロシージャを作成し
 > - ストアド プロシージャの入力を介してコードに入力を渡す方法
 > - ストアド プロシージャを使用してモデルを運用化する方法
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
-- このクイックスタートでは、Python 言語がインストールされた [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) をもつ SQL Server のインスタンスへのアクセスが必要となります。
+- このクイックスタートでは、Python 言語がインストールされた [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) を持つ SQL Server のインスタンスへのアクセスが必要となります。
 
 - また、Python スクリプトを含む SQL クエリを実行するためのツールも必要です。 これらのスクリプトは、SQL Server インスタンスに接続し、T-SQL クエリまたはストアド プロシージャを実行できる限り、任意のデータベース管理ツールまたはクエリ ツールを使用して実行できます。 このクイック スタートでは、[SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms) を使用します。
 
@@ -183,8 +182,8 @@ SQL Server で再利用するために格納されているモデルは、バイ
 
 最終的な利点は、パラメーターを使用してプロセスを変更できることです。 この演習では、モデルを作成した Python コード (この例では "Naive Bayes" という名前) が、スコアリング プロセスでモデルを呼び出す 2 番目のストアド プロシージャに入力として渡されました。 この演習では 1 つのモデルのみを使用しますが、スコアリング タスクでモデルをパラメーター化することによってスクリプトの有用性が向上することはお分かりいただけるかと思います。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 SQL Server Machine Learning Services の詳細については、次を参照してください。
 
-- [SQL Server Machine Learning Services とは (Python と R)](../what-is-sql-server-machine-learning.md)
+- [SQL Server Machine Learning Services (Python と R) とは](../what-is-sql-server-machine-learning.md)

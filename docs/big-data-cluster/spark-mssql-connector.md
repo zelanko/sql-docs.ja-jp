@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 105fa47ecaa560eace9d798a39950639ecbcb5c0
-ms.sourcegitcommit: 043c0be0ceab09434c394bf0d72aea5b7ae88cb5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "76831186"
 ---
 # <a name="how-to-read-and-write-to-sql-server-from-spark-using-the-mssql-spark-connector"></a>MSSQL Spark コネクタを使用して Spark から SQL Server に対する読み取りと書き込みを行う方法
@@ -68,9 +68,9 @@ SQL Server 2019 では、Spark から SQL への書き込みに SQL Server 一�
 
 1. Azure Data Studio を起動して、[ビッグ データ クラスターに接続します](connect-to-big-data-cluster.md)。
 
-1. 自分のビッグ データ クラスターの HDFS フォルダーを右クリックして、**[新しいディレクトリ]** を選択します。 ディレクトリに **spark_data** という名前を付けます。
+1. 自分のビッグ データ クラスターの HDFS フォルダーを右クリックして、 **[新しいディレクトリ]** を選択します。 ディレクトリに **spark_data** という名前を付けます。
 
-1. **spark_data** ディレクトリを右クリックして、**[ファイルのアップロード]** を選択します。 **AdultCensusIncome.csv** ファイルをアップロードします。
+1. **spark_data** ディレクトリを右クリックして、 **[ファイルのアップロード]** を選択します。 **AdultCensusIncome.csv** ファイルをアップロードします。
 
    ![AdultCensusIncome CSV ファイル](./media/spark-mssql-connector/spark_data.png)
 

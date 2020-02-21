@@ -1,6 +1,6 @@
 ---
 title: null 値の処理
-description: SQL Server と .NET で GUID と uniqueidentifier の値を操作する方法について説明します。
+description: SQL Server と .NET で GUID と uniqueidentifier 値を操作する方法について説明します。
 ms.date: 08/15/2019
 dev_langs:
 - csharp
@@ -9,27 +9,27 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: 6ae2bc8d816dd2bc32572447483dacd76dd967f0
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 861ed4395e6cf8f5e8df3a5cc41a0f6da597e5ad
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452188"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247751"
 ---
 # <a name="handling-null-values"></a>null 値の処理
 
 ![Download-DownArrow-Circled](../../../ssdt/media/download.png)[ADO.NET をダウンロードする](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-列の値が不明または見つからない場合は、リレーショナルデータベース内の null 値が使用されます。 Null は、空の文字列 (文字データ型または datetime データ型の場合) でも、ゼロ値 (数値データ型の場合) でもありません。 ANSI SQL-92 仕様では、すべての null が一貫して処理されるように、すべてのデータ型で null を同じにする必要があることが示されています。 <xref:System.Data.SqlTypes> 名前空間は、<xref:System.Data.SqlTypes.INullable> インターフェイスを実装することによって null セマンティクスを提供します。 <xref:System.Data.SqlTypes> の各データ型には、独自の `IsNull` プロパティと、そのデータ型のインスタンスに割り当てることができる `Null` 値があります。  
+列の値が不明、または欠落している場合は、リレーショナル データベース内の null 値が使用されます。 null は、空の文字列 (文字型または 日時データ型の場合) でも、0 値 (数値データ型の場合) でもありません。 ANSI SQL-92 の規格では、すべての null が一貫して処理されるように、すべてのデータ型で同じである必要があると規定されています。 <xref:System.Data.SqlTypes> 名前空間では、<xref:System.Data.SqlTypes.INullable> インターフェイスを実装することによって null セマンティクスが提供されます。 <xref:System.Data.SqlTypes> の各データ型には、そのデータ型のインスタンスに割り当てることができる独自の `IsNull` プロパティと `Null` 値があります。  
   
 > [!NOTE]
->  .NET Framework バージョン2.0 および .NET Core バージョン1.0 では、null 許容型のサポートが導入されました。これにより、プログラマは、基になる型のすべての値を表すように値型を拡張できます。 これらの CLR null 許容型は、<xref:System.Nullable> 構造体のインスタンスを表します。 この機能は、値型をボックス化およびボックス化解除して、オブジェクト型との互換性を強化する場合に特に便利です。 ANSI SQL null は `null` 参照 (または Visual Basic で `Nothing`) と同じようには動作しないため、CLR null 許容型はデータベースの null の格納を目的としていません。 データベース ANSI SQL null 値を操作する場合は、<xref:System.Nullable> ではなく <xref:System.Data.SqlTypes> null を使用します。 でC#の CLR null 許容型の使用の詳細については、「 C# null 許容[型](https://docs.microsoft.com/dotnet/csharp/programming-guide/nullable-types/)」を参照してください。また、「 [null 許容型の使用](https://docs.microsoft.com/dotnet/csharp/programming-guide/nullable-types/using-nullable-types/)」を参照してください。  
+>  .NET Framework バージョン 2.0 と .NET Core バージョン 1.0 では、null 許容型のサポートが導入され、プログラマが値の型を拡張し、基になる型のすべての値を表すことができるようになりました。 これらの CLR null 許容型は、<xref:System.Nullable> 構造体のインスタンスを表します。 この機能は、値の型がボックス化およびボックス化解除されている場合に特に有効であり、オブジェクトの型との互換性が強化されます。 ANSI SQL null は `null` 参照 (または Visual Basic の `Nothing`) と同じようには動作しないため、CLR null 許容型はデータベース null の格納を目的としたものではありません。 データベースの ANSI SQL null 値を操作するには、<xref:System.Nullable> ではなく <xref:System.Data.SqlTypes> null を使用します。 C# での CLR null 許容型の操作の詳細については [null 許容型](https://docs.microsoft.com/dotnet/csharp/programming-guide/nullable-types/)に関するページを、C# については [null 許容型の使用](https://docs.microsoft.com/dotnet/csharp/programming-guide/nullable-types/using-nullable-types/)に関するページを参照してください。  
   
-## <a name="nulls-and-three-valued-logic"></a>Null と3つの値のロジック  
-列定義で null 値を許可すると、アプリケーションに3つの値のロジックが導入されます。 比較は、次の3つの条件のいずれかに評価される場合があります。  
+## <a name="nulls-and-three-valued-logic"></a>null および 3 値ロジック  
+列定義で null 値を許可すると、アプリケーションに 3 値ロジックが導入されます。 比較では、次の 3 つの状態のいずれかに評価されます。  
   
 - True  
   
@@ -37,29 +37,29 @@ ms.locfileid: "72452188"
   
 - Unknown  
   
-Null は不明と見なされるため、相互に比較した2つの null 値は等しいと見なされません。 算術演算子を使用する式では、オペランドのいずれかが null の場合、結果も null になります。  
+null は不明と見なされるため、2 つの null 値を互いに比較しても、値が等しいとは見なされません。 算術演算子を使用した式では、オペランドのいずれかが null である場合は結果も null になります。  
   
-## <a name="nulls-and-sqlboolean"></a>Null および SqlBoolean  
-任意の <xref:System.Data.SqlTypes> を比較すると、<xref:System.Data.SqlTypes.SqlBoolean> が返されます。 各 `SqlType` の `IsNull` 関数は <xref:System.Data.SqlTypes.SqlBoolean> を返し、null 値をチェックするために使用できます。 次の実際の表は、null 値が存在する場合の AND、OR、および NOT 演算子の動作を示しています。 (T = true、F = false、U = unknown、または null)。  
+## <a name="nulls-and-sqlboolean"></a>null と SqlBoolean  
+任意の <xref:System.Data.SqlTypes> 間の比較により、<xref:System.Data.SqlTypes.SqlBoolean> が返されます。 各 `SqlType` に対する `IsNull` 関数では <xref:System.Data.SqlTypes.SqlBoolean> が返され、null 値の確認に使用できます。 次の真理値表は、null 値がある場合に AND、OR、NOT 演算子がどのように機能するかを示しています。 (T=true、F=false、U=不明または null。)  
   
-![真理値表](../media/truthtable-bpuedev11.gif "|::ref1::|")  
+![真理値表](../media/truthtable-bpuedev11.gif "TruthTable_bpuedev11")  
   
 ### <a name="understanding-the-ansi_nulls-option"></a>ANSI_NULLS オプションについて  
-<xref:System.Data.SqlTypes> は、SQL Server で ANSI_NULLS オプションが on に設定されている場合と同じセマンティクスを提供します。 すべての算術演算子 (+、-、*、/、%)、ビット演算子 (~、&、&#124;)、およびほとんどの関数では、プロパティ `IsNull` を除き、オペランドまたは引数が NULL であった場合に NULL を返します。  
+<xref:System.Data.SqlTypes> は、SQL Server で ANSI_NULLS オプションが有効に設定されている場合と同じセマンティクスを提供します。 すべての算術演算子 (+、-、*、/、%)、ビット演算子 (~、&、&#124)、およびほとんどの関数では、プロパティ `IsNull` を除き、オペランドまたは引数が NULL であった場合に NULL を返します。  
   
-ANSI SQL-92 標準では、WHERE 句で *columnName* = NULL とすることは認められていません。 SQL Server では、ANSI_NULLS オプションは、データベースの既定の null 値許容と null 値に対する比較の評価を制御します。 ANSI_NULLS が有効になっている場合 (既定)、null 値をテストするときに IS NULL 演算子を式で使用する必要があります。 たとえば、ANSI_NULLS を ON にした場合、次の比較では、必ず UNKNOWN が返されます。  
+ANSI SQL-92 標準では、WHERE 句で *columnName* = NULL とすることは認められていません。 SQL Server では、ANSI_NULLS オプションによって、データベース内の既定の null 値の許容と null 値に対する比較の評価の両方が制御されます。 ANSI_NULLS が有効になっている (既定) 場合、null 値をテストする式で IS NULL 演算子を使用する必要があります。 たとえば、ANSI_NULLS を ON にした場合、次の比較では、必ず UNKNOWN が返されます。  
   
 ```console
 colname > NULL  
 ```  
   
-Null 値を含む変数との比較でも不明な結果が返されます。  
+また、null 値を含む変数との比較でも不明となります。  
   
 ```console
 colname > @MyVariable  
 ```  
   
-IS NULL 述語または IS NOT NULL 述語は、NULL 値があるかどうかを調べるのに使用します。 ただし、これを使用すると WHERE 句は複雑になります。 たとえば、AdventureWorks Customer テーブルの TerritoryID 列では、null 値を使用できます。 SELECT ステートメントで特定の値の他に NULL 値の有無も調べるには、IS NULL 述語を使用する必要があります。  
+IS NULL 述語または IS NOT NULL 述語は、NULL 値があるかどうかを調べるのに使用します。 ただし、これを使用すると WHERE 句は複雑になります。 たとえば、AdventureWorks Customer テーブル内の TerritoryID 列では null 値が許可されています。 SELECT ステートメントで特定の値の他に NULL 値の有無も調べるには、IS NULL 述語を使用する必要があります。  
   
 ```sql
 SELECT CustomerID, AccountNumber, TerritoryID  
@@ -68,54 +68,54 @@ WHERE TerritoryID IN (1, 2, 3)
    OR TerritoryID IS NULL  
 ```  
   
-SQL Server で ANSI_NULLS を off に設定した場合は、等値演算子を使用して null と比較する式を作成できます。 ただし、別の接続がその接続に対して null オプションを設定するのを防ぐことはできません。 Null 値をテストするために IS NULL を使用すると、接続の ANSI_NULLS 設定に関係なく、常に動作します。  
+SQL Server で ANSI_NULLS を無効にすると、等値演算子を使用して null と比較する式を作成できます。 ただし、別の接続ではこの接続の null オプションの設定を回避することはできません。 IS NULL を使用した null 値のテストは、接続の ANSI_NULLS の設定に関係なく常に機能します。  
   
-`DataSet` では、ANSI_NULLS の設定はサポートされていません。 <xref:System.Data.SqlTypes> で null 値を処理する場合、常に ANSI SQL-92 標準に従います。  
+`DataSet` では、ANSI_NULLS のオフ設定はサポートされていません。<xref:System.Data.SqlTypes> における null 値の処理については、常に ANSI SQL-92 標準に準拠しています。  
   
-## <a name="assigning-null-values"></a>Null 値の割り当て  
-Null 値は特殊な値であり、ストレージと割り当てのセマンティクスは、型システムとストレージシステムによって異なります。 `Dataset` は、さまざまな種類およびストレージシステムで使用できるように設計されています。  
+## <a name="assigning-null-values"></a>null 値の割り当て  
+null 値は特殊であるため、その格納や割り当てのセマンティクスはシステムおよびストレージ システムの種類によって異なります。 `Dataset` は、異なる種類のストレージ システムで使用されるように設計されています。  
   
-このセクションでは、さまざまな型システムで <xref:System.Data.DataRow> 内の <xref:System.Data.DataColumn> に null 値を割り当てるための null セマンティクスについて説明します。  
+このセクションでは、異なる種類のシステムにある <xref:System.Data.DataRow> の <xref:System.Data.DataColumn> に null 値を割り当てるための null セマンティクスについて説明します。  
   
 `DBNull.Value`  
-この割り当ては、任意の型の `DataColumn` に対して有効です。 型に `INullable` が実装されている場合、`DBNull.Value` は適切に型指定された適切な Null 値に強制変換されます。  
+この割り当ては、任意の型の `DataColumn` で有効です。 その型が `INullable` を実装している場合、`DBNull.Value` は、厳密に型指定された適切な null 値に強制的に変換されます。  
   
 `SqlType.Null`  
-すべての <xref:System.Data.SqlTypes> データ型は `INullable` を実装します。 厳密に型指定された null 値を、暗黙的なキャスト演算子を使用して列のデータ型に変換できる場合は、割り当てが行われます。 それ以外の場合は、無効なキャスト例外がスローされます。  
+すべての <xref:System.Data.SqlTypes> データ型で `INullable` を実装します。 暗黙的なキャスト演算子を使用して、厳密に型指定された null 値を列のデータ型に変換できる場合は、割り当てが行われます。 そうでない場合は、無効なキャスト例外がスローされます。  
   
 `null`  
-' Null ' が指定された `DataColumn` データ型に対して有効な値である場合、`INullable` の型 (`SqlType.Null`) に関連付けられている適切な `DbNull.Value` または `Null` に強制されます。  
+'null' が特定の `DataColumn` データ型で有効な値である場合は、`INullable` 型 (`SqlType.Null`) に関連付けられた適切な `DbNull.Value` または `Null` に強制的に変換されます。  
   
 `derivedUdt.Null`  
-UDT 列の場合、null は常に、`DataColumn` に関連付けられた型に基づいて格納されます。 `INullable` を実装していない `DataColumn` に関連付けられた UDT が、そのサブクラスで実行される場合を考えてみます。 この場合、派生クラスに関連付けられた厳密に型指定された null 値が割り当てられると、null ストレージは常に DataColumn のデータ型と一致するため、型指定されていない `DbNull.Value` として格納されます。  
+UDT 列の場合、null 値は常に `DataColumn` に関連付けられた型に基づいて格納されます。 `DataColumn` に関連付けられた UDT が `INullable` を実装しておらず、そのサブクラスで実装している場合を考えてみます。 この場合、派生クラスに関連付けられた厳密に型指定された null 値が割り当てられていれば、null ストレージが常に DataColumn のデータ型と一致するため、型指定されていない `DbNull.Value` として格納されます。  
   
 > [!NOTE]
->  `Nullable<T>` または <xref:System.Nullable> 構造は、現在、`DataSet` ではサポートされていません。  
+>  `Nullable<T>` または <xref:System.Nullable> 構造体は現在、`DataSet` ではサポートされていません。  
   
 ### <a name="multiple-column-row-assignment"></a>複数列 (行) の割り当て  
-行にマップされる <xref:System.Data.DataRow.ItemArray%2A> を受け入れる `DataTable.Add`、`DataTable.LoadDataRow`、またはその他の Api では、' null ' を DataColumn の既定値にマップします。 配列内のオブジェクトに `DbNull.Value` または厳密に型指定された対応するオブジェクトが含まれている場合は、前述の規則と同じ規則が適用されます。  
+`DataTable.Add`、`DataTable.LoadDataRow`、または行にマップされる <xref:System.Data.DataRow.ItemArray%2A> を受け入れる他の API では、DataColumn の既定値に 'null' を マップします。 配列内のオブジェクトに `DbNull.Value` またはその厳密に型指定された同等の値が含まれている場合は、上記と同じ規則が適用されます。  
   
-また、`DataRow.["columnName"]` の null 割り当てのインスタンスには、次の規則が適用されます。  
+さらに、`DataRow.["columnName"]` null 値割り当てのインスタンスには次の規則が適用されます。  
   
 - 既定の *default* 値は `DbNull.Value` です。ただし、それが厳密に型指定された適切な NULL 値となる、厳密に型指定された NULL 列は例外です。  
   
-- XML ファイルへのシリアル化中に Null 値が書き出されることはありません ("xsi: nil" のように)。  
+- XML ファイルへのシリアル化中に null 値が ("xsi:nil" として) 書き出されることはありません。  
   
-- Null 以外のすべての値 (既定値を含む) は、XML へのシリアル化中に常に書き込まれます。 これは、null 値 (xsi: nil) が明示的で、既定値が暗黙的である (XML に存在しない場合、検証パーサーが関連 XSD スキーマから取得できる) XSD/XML セマンティクスとは異なります。 `DataTable` の場合、これとは逆になります。 null 値は暗黙的で、既定値は explicit です。  
+- 既定値を含む null 以外の値はすべて、XML へのシリアル化中に常に書き出されます。 これは、null 値 (xsi:nil) が明示的であり、既定値が暗黙的である XSD/XML セマンティクスとは異なります (XML にない場合、検証パーサーが関連付けられた XSD スキーマから取得します)。 `DataTable` ではこの逆になり、null 値が暗黙的であり、既定値が明示的です。  
   
-- XML 入力から読み取られた行の欠損列値にはすべて NULL が割り当てられます。 <xref:System.Data.DataTable.NewRow%2A> または同様の方法を使用して作成された行には、DataColumn の既定値が割り当てられます。  
+- XML 入力から読み取られた各行で欠落している列値にはすべて、NULL が割り当てられます。 <xref:System.Data.DataTable.NewRow%2A> または同様のメソッドを使用して作成された行には、DataColumn の既定値が割り当てられます。  
   
-- <xref:System.Data.DataRow.IsNull%2A> メソッドは、`DbNull.Value` と `INullable.Null` の両方に対して `true` を返します。  
+- <xref:System.Data.DataRow.IsNull%2A> メソッドは、`DbNull.Value` と `INullable.Null` のどちらに対しても `true` を返します。  
   
-## <a name="assigning-null-values"></a>Null 値の割り当て  
-すべての <xref:System.Data.SqlTypes> インスタンスの既定値は null です。  
+## <a name="assigning-null-values"></a>null 値の割り当て  
+任意の <xref:System.Data.SqlTypes> インスタンスの既定値は null です。  
   
-<xref:System.Data.SqlTypes>の null は型固有であり、1つの値 (`DbNull` など) で表すことはできません。 `IsNull` プロパティを使用して、null かどうかを確認します。  
+<xref:System.Data.SqlTypes> の null 値は型固有であり、`DbNull` などの 1 つの値で表すことはできません。 null 値を確認するには、`IsNull` プロパティを使用します。  
   
-次のコード例に示すように、Null 値を <xref:System.Data.DataColumn> に割り当てることができます。 Null 値は、例外をトリガーすることなく `SqlTypes` 変数に直接割り当てることができます。  
+null 値は次のコード例に示すように、<xref:System.Data.DataColumn> に割り当てることができます。 null 値は例外をトリガーすることなく、`SqlTypes` 変数に直接割り当てることができます。  
   
 ### <a name="example"></a>例  
-次のコード例では、<xref:System.Data.SqlTypes.SqlInt32> と <xref:System.Data.SqlTypes.SqlString> として定義された2つの列を持つ <xref:System.Data.DataTable> を作成します。 このコードでは、既知の値の行を1つ追加し、null 値の行を1行追加した後、<xref:System.Data.DataTable> を反復処理して変数に値を割り当て、コンソールウィンドウに出力を表示します。  
+次のコード例では、<xref:System.Data.SqlTypes.SqlInt32> と <xref:System.Data.SqlTypes.SqlString> として定義された 2 つの列を含む <xref:System.Data.DataTable> を作成します。 このコードでは、既知の値の 1 行と null 値の 1 行を追加し、<xref:System.Data.DataTable> を反復処理します。これによって変数に値を割り当て、コンソール ウィンドウに出力を表示します。  
   
 [!code-csharp[DataWorks SqlInt32_IsNull#1](~/../sqlclient/doc/samples/SqlInt32_IsNull.cs#1)]
   
@@ -126,10 +126,10 @@ isColumnNull=False, ID=123, Description=Side Mirror
 isColumnNull=True, ID=Null, Description=Null  
 ```  
   
-## <a name="comparing-null-values-with-sqltypes-and-clr-types"></a>SqlTypes と CLR 型との null 値の比較  
-Null 値を比較する場合は、CLR 型の場合と比較して、`Equals` メソッドが <xref:System.Data.SqlTypes> で null 値を評価する方法の違いを理解しておくことが重要です。 すべての <xref:System.Data.SqlTypes> `Equals` メソッドは、null 値の評価にデータベースセマンティクスを使用します。いずれかまたは両方の値が null の場合、比較によって null が生成されます。 一方、2つの <xref:System.Data.SqlTypes> で CLR `Equals` メソッドを使用すると、両方が null の場合に true が生成されます。 これは、CLR `String.Equals` メソッドなどのインスタンスメソッドを使用する場合と、静的/共有メソッドを使用する場合の違い (`SqlString.Equals`) を反映しています。  
+## <a name="comparing-null-values-with-sqltypes-and-clr-types"></a>SqlTypes と CLR 型での null 値の比較  
+null 値を比較する場合は、`Equals` メソッドが <xref:System.Data.SqlTypes> の null 値を評価する方法と、CLR 型を操作する方法の違いを理解することが重要です。 <xref:System.Data.SqlTypes>`Equals` メソッドはすべて、null 値の評価にデータベース セマンティクスを使用します。値の一方または両方が null である場合は、その比較によって null が得られます。 これに対して、2 つの <xref:System.Data.SqlTypes> に対して CLR `Equals` メソッドを使用すると、両方が null である場合に true が得られます。 これは、CLR `String.Equals` メソッドなどのインスタンス メソッドの使用と、静的/共有メソッド `SqlString.Equals` の使用の違いを反映しています。  
   
-次の例では、各に null 値のペアが渡され、次に空の文字列のペアが渡された場合の、`SqlString.Equals` メソッドと `String.Equals` メソッドの結果の違いを示します。  
+次の例は、`SqlString.Equals` メソッドと `String.Equals` メソッドにそれぞれ null 値のペアを渡し、次に空の文字列のペアを渡した場合の各メソッドの結果の違いを示しています。  
   
 [!code-csharp[DataWorks SqlString_Equals#1](~/../sqlclient/doc/samples/SqlString_Equals.cs#1)]
   
@@ -149,5 +149,5 @@ String.Equals instance method:
   Two empty strings=True   
 ```  
   
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 - [SQL Server のデータ型と ADO.NET](sql-server-data-types.md)

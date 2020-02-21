@@ -1,10 +1,7 @@
 ---
-title: '[テーブルの追加] ダイアログ ボックス (クエリ デザイナーおよびビュー デザイナー) (Visual DB tools) | Microsoft Docs'
-ms.custom: ''
-ms.date: 01/19/2017
+title: '[テーブルの追加] ダイアログ ボックス (クエリおよびビュー デザイナー)'
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -13,14 +10,19 @@ f1_keywords:
 ms.assetid: fce7adcc-4cf5-4a52-9203-11c13d1ecf08
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 89058296254f4aae6d8e27a214416cb76c1f03f6
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
+ms.openlocfilehash: 167b1e86c28a56c9d3159a4e01fe337ba428e1b7
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263738"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253398"
 ---
 # <a name="add-table-dialog-box-query-and-view-designers-visual-database-tools"></a>[テーブルの追加] ダイアログ ボックス (クエリ デザイナーおよびビュー デザイナー) (Visual Database Tools)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 このダイアログ ボックスを使用すると、クエリまたはビューに、テーブル、ビュー、ユーザー定義関数、またはシノニムを追加できます。  
   
@@ -43,7 +45,7 @@ ms.locfileid: "68263738"
 **[更新]**  
 一覧を更新します。最後の一覧取得以降にデータベースに対して行われた変更が掲載されます。  
   
-**[追加]**  
+**追加**  
 選択した項目を追加します。  
   
 ## <a name="see-also"></a>参照  

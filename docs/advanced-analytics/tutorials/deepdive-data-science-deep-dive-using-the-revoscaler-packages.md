@@ -1,6 +1,6 @@
 ---
 title: RevoScaleR の詳細なチュートリアル
-description: このチュートリアルでは、SQL Server Machine Learning R 統合を使用して RevoScaleR 関数を呼び出す方法について説明します。
+description: このチュートリアル シリーズでは、SQL Server Machine Learning R 統合を使用して RevoScaleR 関数を呼び出す方法について説明します。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,21 +9,21 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 853f2e33ff4f801c3668a9f79bcec247dc13963e
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: fc1f427659155b5379a681787a633b6037b4bd87
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727216"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76918834"
 ---
 # <a name="tutorial-use-revoscaler-r-functions-with-sql-server-data"></a>チュートリアル:SQL Server データでの RevoScaleR R 関数の使用
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
+このマルチパート チュートリアル シリーズでは、データ サイエンスに関連するタスク用のさまざまな **RevoScaleR** 関数について紹介します。 プロセスでは、リモートのコンピューティング コンテキストを作成する方法、ローカルとリモートのコンピューティング コンテキスト間でデータを移動する方法、およびリモート SQL サーバー上で R コードを実行する方法について説明します。 また、ローカルとリモート サーバー上の両方でデータを分析してプロットする方法と、モデルを作成して配置する方法についても説明します。
+
 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) は、データ サイエンスと機械学習のワークロードの分散および並列処理を提供する Microsoft R パッケージです。 SQL Server での R 開発の場合、**RevoScaleR** は最も重要な組み込みパッケージの 1 つで、データ ソース オブジェクトを作成するための機能、コンピューティング コンテキストの設定、パッケージの管理、および最も重要なこととして、インポートから視覚化および分析まで、データをエンドツーエンドで操作する機能を備えています。 SQL Server の Machine Learning アルゴリズムは、**RevoScaleR** データ ソースに依存しています。 **RevoScaleR** の重要性を考えると、その関数を呼び出すタイミングと方法を把握することは、重要なスキルと言えます。 
 
-このマルチパート チュートリアルでは、データ サイエンスに関連するタスク用のさまざまな **RevoScaleR** 関数について紹介します。 このプロセスでは、リモートのコンピューティング コンテキストを作成する方法、ローカルとリモートのコンピューティング コンテキストの間でデータを移動する方法、およびリモート SQL Server で R コードを実行する方法について説明します。 また、ローカルとリモート サーバーの両方でデータを分析してプロットする方法と、モデルを作成して配置する方法についても説明します。
-
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 + R 機能付きの [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)、または [SQL Server R Services (データベース内)](../install/sql-r-services-windows-install.md)
   
@@ -49,7 +49,7 @@ ms.locfileid: "73727216"
 
 R 開発者は、R コードの作成およびデバッグに、通常 IDE を使用します。 推奨事項をいくつか以下に示します。
 
-- **R Tools for Visual Studio** (RTVS) は、Microsoft R に対して Intellisense、デバッグ、およびサポートを提供する無料プラグインです。それを使用して、Microsoft R Server と SQL Server Machine Learning Services の両方で使用できます。 ダウンロードするには、「 [R Tools for Visual Studio](https://www.visualstudio.com/vs/rtvs/)」を参照してください。
+- **R Tools for Visual Studio** (RTVS) は、Microsoft R に対して Intellisense、デバッグ、およびサポートを提供する無料プラグインです。それを使用して、Microsoft R Server と SQL Server Machine Learning Services の両方で使用できます。 ダウンロードするには、「 [R Tools for Visual Studio](https://marketplace.visualstudio.com/items?itemName=MikhailArkhipov007.RTVS2019)」を参照してください。
 
 - **RStudio** は R 開発用の最も一般的な環境の 1 つです。 詳細については、[https://www.rstudio.com/products/RStudio/](https://www.rstudio.com/products/RStudio/) を参照してください。
 
@@ -68,7 +68,7 @@ R 開発者は、R コードの作成およびデバッグに、通常 IDE を�
 + [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースへの ODBC 接続を開くことで、スコアリング用の新しいデータを取得します。 スコアリングはローカル ワークステーションで実行されます。
 + カスタム R 関数を作成し、それをサーバー コンピューティング コンテキストで実行してシミュレーションを実行します。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 > [!div class="nextstepaction"]
-> [レッスン 1:データベースとアクセス許可を作成する](deepdive-work-with-sql-server-data-using-r.md)
+> [チュートリアル 1:データベースとアクセス許可を作成する](deepdive-work-with-sql-server-data-using-r.md)

@@ -1,6 +1,6 @@
 ---
 title: クエリ通知の有効化
-description: クエリ通知の使用方法について説明します。これには、クエリ通知の有効化と使用に関する要件も含まれます。
+description: クエリ通知を使用する方法、およびそれを有効にし、使用するための要件について説明します。
 ms.date: 08/15/2019
 dev_langs:
 - csharp
@@ -9,15 +9,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: 94b472a1fe040aa3a684d9f7b523ba09c82a651e
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 36be882534d7c70bc20e3ffb4f6907f007491e9d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452236"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247780"
 ---
 # <a name="enabling-query-notifications"></a>クエリ通知の有効化
 
@@ -25,18 +25,18 @@ ms.locfileid: "72452236"
 
 クエリ通知を使用するアプリケーションには、一般的な一連の要件があります。 SQL クエリ通知をサポートするには、データ ソースが正しく設定され、ユーザーがクライアント側およびサーバー側の正しい権限を所有している必要があります。  
   
-クエリ通知を使用するには、次のことを行う必要があります。  
+クエリ通知を使用するには、次のことが必要です。  
   
 - データベースのクエリ通知を有効にします。  
   
-- データベースへの接続に使用するユーザー ID に必要な権限があることを確認します。  
+- データベースへの接続に使用するユーザー ID に必要なアクセス許可があることを確認します。  
   
-- <xref:Microsoft.Data.SqlClient.SqlCommand> オブジェクトを使用して、通知オブジェクト (<xref:Microsoft.Data.SqlClient.SqlDependency> または <xref:Microsoft.Data.Sql.SqlNotificationRequest> のいずれか) を持つ有効な SELECT ステートメントを実行します。  
+- <xref:Microsoft.Data.SqlClient.SqlCommand> オブジェクトを使用して、通知オブジェクト (<xref:Microsoft.Data.SqlClient.SqlDependency> または <xref:Microsoft.Data.Sql.SqlNotificationRequest> のいずれか) が関連付けられている有効な SELECT ステートメントを実行します。  
   
-- 監視対象のデータが変更された場合に通知を処理するコードを提供します。  
+- 監視対象のデータが変更された場合に通知を処理するコードを指定します。  
   
 ## <a name="query-notifications-requirements"></a>クエリ通知の要件  
-クエリ通知は、特定の要件の一覧を満たす SELECT ステートメントでのみサポートされます。 次の表に、SQL Server オンラインブックの Service Broker およびクエリ通知に関するドキュメントへのリンクを示します。  
+クエリ通知は、特定の要件の一覧を満たす SELECT ステートメントでのみサポートされます。 次の表に、SQL Server オンライン ブックの Service Broker とクエリ通知のドキュメントへのリンクを示します。  
   
 **SQL Server のドキュメント**  
   
@@ -58,12 +58,12 @@ ms.locfileid: "72452236"
   
 - [開発者ガイド (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522908(v=sql.105))  
   
-## <a name="enabling-query-notifications-to-run-sample-code"></a>クエリ通知を有効にしてサンプルコードを実行する  
+## <a name="enabling-query-notifications-to-run-sample-code"></a>サンプル コードを実行するためのクエリ通知の有効化  
 **AdventureWorks** データベースで Service Broker を有効にするには、SQL Server Management Studio を通じて、次の Transact-SQL ステートメントを実行します。  
   
 `ALTER DATABASE AdventureWorks SET ENABLE_BROKER;`  
   
-クエリ通知サンプルを正しく実行するには、データベースサーバーで次の Transact-sql ステートメントを実行する必要があります。  
+クエリ通知のサンプルを正しく実行するには、次の Transact-SQL ステートメントをデータベース サーバー上で実行する必要があります。  
   
 ```sql
 CREATE QUEUE ContactChangeMessages;  
@@ -74,24 +74,24 @@ CREATE SERVICE ContactChangeNotifications
 ```  
   
 ## <a name="query-notifications-permissions"></a>クエリ通知のアクセス許可  
-通知を要求するコマンドを実行するユーザーは、サーバーに対するサブスクライブクエリ通知データベース権限を持っている必要があります。  
+通知を要求するコマンドを実行するユーザーには、サーバー上で SUBSCRIBE QUERY NOTIFICATIONS データベース権限が必要です。  
   
-部分信頼の状況で実行されるクライアント側のコードには、<xref:Microsoft.Data.SqlClient.SqlClientPermission> が必要です。  
+部分的に信頼される状況で実行されるクライアント側のコードには <xref:Microsoft.Data.SqlClient.SqlClientPermission> が必要です。  
   
-次のコードでは、<xref:Microsoft.Data.SqlClient.SqlClientPermission> オブジェクトを作成し、<xref:System.Security.Permissions.PermissionState> を <xref:System.Security.Permissions.PermissionState.Unrestricted> に設定しています。 呼び出し履歴の上位にあるすべての呼び出し元にアクセス許可が付与されていない場合、<xref:System.Security.CodeAccessPermission.Demand%2A> は実行時に <xref:System.Security.SecurityException> を強制します。  
+次のコードは <xref:Microsoft.Data.SqlClient.SqlClientPermission> オブジェクトを作成し、<xref:System.Security.Permissions.PermissionState> を <xref:System.Security.Permissions.PermissionState.Unrestricted> に設定します。 <xref:System.Security.CodeAccessPermission.Demand%2A> は、呼び出し履歴の上位にある呼び出し元にアクセス許可が付与されていないものがある場合、実行時に <xref:System.Security.SecurityException> を強制します。  
   
 [!code-csharp[DataWorks SqlClientPermission_Demand#1](~/../sqlclient/doc/samples/SqlClientPermission_Demand.cs#1)]
   
 ## <a name="choosing-a-notification-object"></a>通知オブジェクトの選択  
-クエリ通知 API には、通知を処理するための2つのオブジェクトが用意されています。 <xref:Microsoft.Data.SqlClient.SqlDependency> と <xref:Microsoft.Data.Sql.SqlNotificationRequest> です。
+クエリ通知 API には、通知を処理するための 2 つのオブジェクト <xref:Microsoft.Data.SqlClient.SqlDependency> と <xref:Microsoft.Data.Sql.SqlNotificationRequest> があります。
   
 ### <a name="using-sqldependency"></a>SqlDependency の使用  
 <xref:Microsoft.Data.SqlClient.SqlDependency> を使用するには、使用している SQL Server データベースに対して Service Broker を有効にし、通知を受け取るためのアクセス許可をユーザーに与える必要があります。 通知キューなどの Service Broker オブジェクトは事前に定義されています。  
   
-さらに、<xref:Microsoft.Data.SqlClient.SqlDependency> は、キューにポストされるときに、通知を処理するためにワーカースレッドを自動的に起動します。また、Service Broker メッセージを解析して、情報をイベント引数データとして公開します。 <xref:Microsoft.Data.SqlClient.SqlDependency> は、データベースに対する依存関係を確立するために、`Start` メソッドを呼び出すことによって初期化する必要があります。 これは、必要なデータベース接続ごとに、アプリケーションの初期化中に1回だけ呼び出す必要がある静的メソッドです。 `Stop` メソッドは、実行された依存関係接続ごとに、アプリケーションの終了時に呼び出す必要があります。  
+さらに、<xref:Microsoft.Data.SqlClient.SqlDependency> によってワーカー スレッドが自動的に起動し、キューにポストされた通知が処理されます。また、Service Broker メッセージも解析され、情報がイベント引数データとして公開されます。 <xref:Microsoft.Data.SqlClient.SqlDependency> は、`Start` メソッドを呼び出し、データベースに対する依存関係を確立して初期化する必要があります。 これは、必要となる各データベース接続に対するアプリケーションの初期化中に、1 回だけ呼び出す必要のある静的メソッドです。 `Stop` メソッドは、作成された依存関係の接続ごとにアプリケーションの終了時に呼び出す必要があります。  
   
 ### <a name="using-sqlnotificationrequest"></a>SqlNotificationRequest の使用  
-これに対し、<xref:Microsoft.Data.Sql.SqlNotificationRequest> では、リッスンしているインフラストラクチャ全体を自分で実装する必要があります。 さらに、キュー、サービス、キューでサポートされているメッセージの種類など、サポートされているすべての Service Broker オブジェクトが定義されている必要があります。 この手動によるアプローチは、アプリケーションが特別な通知メッセージや通知動作を必要とする場合や、アプリケーションが大規模な Service Broker アプリケーションの一部である場合に便利です。  
+これに対して、<xref:Microsoft.Data.Sql.SqlNotificationRequest> では、リッスンしているインフラストラクチャ全体を自分で実装する必要があります。 さらに、キュー、サービス、およびキューでサポートされているメッセージの種類など、サポート対象となるすべての Service Broker オブジェクトを定義する必要があります。 この手動のアプローチは、使用しているアプリケーションに特殊な通知メッセージまたは通知動作が必要な場合や、アプリケーションがより大きな Service Broker アプリケーションの一部である場合に役立ちます。  
   
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 - [SQL Server でのクエリ通知](query-notifications-sql-server.md)

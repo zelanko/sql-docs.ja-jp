@@ -9,14 +9,14 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 818ffbb7a8957fbcec67e6686b12a731397b6501
-ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
+ms.openlocfilehash: 94e2fe49e52ed224a35183f9629bf8eeab112d17
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74127375"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831605"
 ---
-# <a name="how-to-deploy-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-on-kubernetes"></a>Kubernetes 上に [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]を展開する方法
+# <a name="how-to-deploy-big-data-clusters-2019-on-kubernetes"></a>Kubernetes 上に [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]を展開する方法
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -33,7 +33,7 @@ SQL Server 2019 ビッグ データ クラスターを展開する前に、ま�
 - `azdata`
 - `kubectl`
 - Azure Data Studio
-- Azure Data Studio 用の SQL Server 2019 の拡張機能
+- Azure Data Studio 用の[データ仮想化の拡張機能](../azure-data-studio/data-virtualization-extension.md)
 
 ## <a id="prereqs"></a> Kubernetes の前提条件
 
@@ -48,7 +48,7 @@ SQL Server 2019 ビッグ データ クラスターを展開する前に、ま�
 
 次の3つの方法のいずれかを選んで、Kubernetes を展開できます。
 
-| Kubernetes の展開先: | [説明] | リンク |
+| Kubernetes の展開先: | 説明 | Link |
 |---|---|---|
 | **Azure Kubernetes Services (AKS)** | Azure にあるマネージド Kubernetes コンテナー サービス。 | [手順](deploy-on-aks.md) |
 | **単一または複数のマシン (`kubeadm`)** | `kubeadm` を使用して物理または仮想マシン上に展開された Kubernetes クラスター | [手順](deploy-with-kubeadm.md) |
@@ -169,13 +169,13 @@ azdata bdc create --accept-eula=yes
 
 次の環境変数は、展開構成ファイルに保存されないセキュリティ設定に使用されます。 資格情報以外の Docker 設定は、構成ファイル内で設定できることに注意してください。
 
-| 環境変数 | 要件 |[説明] |
+| 環境変数 | 要件 |説明 |
 |---|---|---|
 | `AZDATA_USERNAME` | Required |SQL Server ビッグ データ クラスター管理者のユーザー名。 同じ名前の sysadmin ログインが SQL Server マスター インスタンス内に作成されます。 セキュリティのベスト プラクティスとして、`sa` アカウントは無効になっています。 |
 | `AZDATA_PASSWORD` | Required |上記で作成したユーザー アカウントのパスワード。 `root` ユーザーには、Knox ゲートウェイと HDFS をセキュリティで保護するために使用されたのと同じパスワードが使用されます。 |
 | `ACCEPT_EULA`| `azdata` を初めて使用する場合は必須| "yes" に設定します。 環境変数として設定された場合、SQL Server と `azdata` の両方に EULA が適用されます。 環境変数として設定されない場合、`azdata` コマンドの初めての使用時に `--accept-eula=yes` を含めることができます。|
-| `DOCKER_USERNAME` | 省略可 | コンテナー イメージがプライベート リポジトリに格納されている場合に、それらにアクセスするためのユーザー名。 ビッグ データ クラスターの展開にプライベート Docker リポジトリを使用する方法の詳細については、[オフライン展開](deploy-offline.md)に関するトピックを参照してください。|
-| `DOCKER_PASSWORD` | 省略可 |上記のプライベート リポジトリにアクセスするためのパスワード。 |
+| `DOCKER_USERNAME` | 省略可能 | コンテナー イメージがプライベート リポジトリに格納されている場合に、それらにアクセスするためのユーザー名。 ビッグ データ クラスターの展開にプライベート Docker リポジトリを使用する方法の詳細については、[オフライン展開](deploy-offline.md)に関するトピックを参照してください。|
+| `DOCKER_PASSWORD` | 省略可能 |上記のプライベート リポジトリにアクセスするためのパスワード。 |
 
 これらの環境変数は、`azdata bdc create` を呼び出す前に設定される必要があります。 設定されていない変数がある場合は、入力を求められます。
 
@@ -193,7 +193,8 @@ SET AZDATA_PASSWORD=<password>
 ```
 
 > [!NOTE]
-> Knox ゲートウェイには、上記のパスワードを持つ `root` ユーザーを使用する必要があります。 `root` は、この基本認証 (ユーザー名/パスワード) のセットアップでサポートされている唯一のユーザーです。 SQL Server マスターの場合、上記のパスワードと共に使用するためにプロビジョニングされたユーザー名は `sa` です。
+> Knox ゲートウェイには、上記のパスワードを持つ `root` ユーザーを使用する必要があります。 `root` は、この基本認証 (ユーザー名とパスワード) でサポートされている唯一のユーザーです。
+> 基本認証を使用して SQL Server に接続するには、AZDATA_USERNAME および AZDATA_PASSWORD の[環境変数](#env)と同じ値を使用します。 
 
 
 環境変数を設定したら、`azdata bdc create` を実行して展開をトリガーする必要があります。 この例では、上記で作成したクラスター構成プロファイルを使用します。
@@ -426,7 +427,7 @@ Sql: ready                                                                      
 
 ビッグ データ クラスターに接続する方法の詳細については、「[Azure Data Studio を利用して SQL Server ビッグ データ クラスターに接続する](connect-to-big-data-cluster.md)」を参照してください。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 ビッグ データ クラスターの展開に関する詳細については、次の資料を参照してください。
 

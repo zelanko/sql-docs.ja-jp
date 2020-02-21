@@ -1,8 +1,7 @@
 ---
-title: 警告に関する情報を表示する方法 | Microsoft Docs
+title: View Information About an Alert
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,15 +13,17 @@ helpviewer_keywords:
 ms.assetid: a0e3a8c4-e3c2-42a5-b2f8-aa06061d3fa6
 author: markingmyname
 ms.author: maghan
-ms.custom: ''
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ade59742c282acbf3afb54b0aaf08722c34f6dea
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: 52c53a90befe99862cbac6b5b76810be0a79924a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69552318"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75257816"
 ---
 # <a name="view-information-about-an-alert"></a>View Information About an Alert
 
@@ -52,7 +53,7 @@ ms.locfileid: "69552318"
   
 4.  表示する情報がある警告を右クリックし、 **[プロパティ]** を選択します。  
   
-    _[alert\_name_ **警告のプロパティ]** ダイアログ ボックスに表示される使用可能なオプションの詳細については、以下を参照してください。  
+    _[alert\_name_**警告のプロパティ]** ダイアログ ボックスに表示される使用可能なオプションの詳細については、以下を参照してください。  
   
     -   [[アラートのプロパティ] - [新しい警告] ([全般]ページ)](../../ssms/agent/alert-properties-new-alert-general-page.md)  
   

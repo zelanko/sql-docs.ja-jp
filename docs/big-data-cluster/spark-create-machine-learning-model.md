@@ -1,22 +1,23 @@
 ---
-title: MLeap での Spark の機械学習モデルの作成とエクスポート
-titleSuffix: SQL Server big data clusters
+title: Spark ML モデルの作成、エクスポート:MLeap
+titleSuffix: SQL Server Big Data Clusters
 description: PySpark を使用して、SQL Server ビッグ データ クラスターで Spark を使用して機械学習モデルをトレーニングし、作成します。 MLeap でエクスポートし、SQL Server で Java でモデルをスコア付けします。
 author: RogPodge
 ms.author: roliu
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: bc9191ad90b05e9f48facab0cc4003bbf5adce11
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.openlocfilehash: 717093278790c90486b424678d332f73e056e86e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73844231"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75255911"
 ---
-# <a name="create-export-and-score-spark-machine-learning-models-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] で Spark の機械学習モデルを作成、エクスポート、およびスコア付けする
+# <a name="create-export-and-score-spark-machine-learning-models-on-big-data-clusters-2019"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] で Spark の機械学習モデルを作成、エクスポート、およびスコア付けする
 
 次のサンプルでは、[Spark の ML](https://spark.apache.org/docs/latest/ml-guide.html) でモデルを作成し、そのモデルを [MLeap](http://mleap-docs.combust.ml/) にエクスポートし、SQL Server で [Java 言語拡張機能](../language-extensions/language-extensions-overview.md) を使用してそのモデルをスコア付けする方法を示します。 これは、SQL Server 2019 ビッグ データ クラスターのコンテキストで行われます。
 
@@ -24,7 +25,7 @@ ms.locfileid: "73844231"
 
 ![Spark を使用してスコアのエクスポートをトレーニングする](./media/spark-create-machine-learning-model/train-score-export-with-spark.png)
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 このサンプルのすべてのファイルは、[https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/spark/sparkml](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/spark/sparkml) にあります。
 
@@ -66,6 +67,6 @@ Spark の ML パイプライン モデルが共通のシリアル化 [MLeap バ�
 
 サンプルをビルドした後、Transact-SQL を使用して Java アプリケーションを呼び出し、データベース テーブルを使用してモデルをスコア付けすることができます。 これは、[mleap_sql_test/mleap_sql_tests.py](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparkml/mleap_sql_test/mleap_sql_tests.py) ソース ファイルで確認できます。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 ビッグ データ クラスターの詳細については、[Kubernetes に [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] を展開する方法](deployment-guidance.md)に関するページを参照してください

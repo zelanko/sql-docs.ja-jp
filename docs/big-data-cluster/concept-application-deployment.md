@@ -1,24 +1,26 @@
 ---
 title: アプリケーション展開とは
-titleSuffix: Big Data Clusters for SQL Server 2019
+titleSuffix: SQL Server Big Data Clusters
 description: この記事では、SQL Server 2019 ビッグ データ クラスターへのアプリケーションの展開について説明します。
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: da497f8d7c435a807ba530ae619ff91a6f2dff71
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 4b647ab4d03d110ce303388a8b62461f28033b6c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653004"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831575"
 ---
-# <a name="what-is-application-deployment-on-a-sql-server-2019-big-data-cluster"></a>SQL Server 2019 ビッグ データ クラスターのアプリケーション展開とは
+# <a name="what-is-application-deployment-on-a-big-data-cluster"></a>ビッグ データ クラスターへのアプリケーション展開とは
 
-アプリケーション展開は、アプリケーションを作成、管理、および実行するためのインターフェイスを提供することにより、ビッグ データ クラスターでアプリケーションの展開を可能にします。 ビッグ データ クラスターに展開されたアプリケーションは、クラスターの計算機能を利用し、クラスターで使用可能なデータにアクセスできます。 これにより、データが存在するアプリケーションを管理しながら、アプリケーションのスケーラビリティとパフォーマンスが向上します。
+アプリケーション展開は、アプリケーションを作成、管理、および実行するためのインターフェイスを提供することにより、ビッグ データ クラスターでアプリケーションの展開を可能にします。 ビッグ データ クラスターに展開されたアプリケーションは、クラスターの計算機能を利用し、クラスターで使用可能なデータにアクセスできます。 これにより、データが存在するアプリケーションを管理しながら、アプリケーションのスケーラビリティとパフォーマンスが向上します。 SQL Server ビッグ データ クラスターでサポートされるアプリケーション ランタイムは、R、Python、SSIS、MLeap です。
+
 以降のセクションでは、アプリケーション展開のアーキテクチャと機能について説明します。
 
 ## <a name="application-deployment-architecture"></a>アプリケーション展開アーキテクチャ
@@ -59,7 +61,7 @@ ReplicaSet が作成され、ポッドが開始されると、`spec.yaml` ファ
 
 RESTful Web サービスを使用してアプリケーションを実行することもできます。 詳細については、[ビッグ データ クラスターでのアプリケーションの使用](big-data-cluster-consume-apps.md)に関するページを参照してください。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]でアプリケーションを作成して実行する方法の詳細については、次を参照してください。
 

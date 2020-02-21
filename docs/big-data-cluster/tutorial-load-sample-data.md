@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 405df2c66917dc5e5b350aaaa0769bede6ccf6c9
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 52285164928e1a4811abc17e931a1af1921c6d07
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653288"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831409"
 ---
 # <a name="tutorial-load-sample-data-into-a-sql-server-big-data-cluster"></a>チュートリアル:SQL Server ビッグ データ クラスターにサンプル データを読み込む
 
@@ -25,7 +25,7 @@ ms.locfileid: "69653288"
 > [!TIP]
 > [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]の追加のサンプルは、[sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster) GitHub リポジトリにあります。 それらは、パス **sql-server-samples/samples/features/sql-big-data-cluster/** に置かれています。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 - [展開済みのビッグ データ クラスター](deployment-guidance.md)
 - [ビッグ データ ツール](deploy-big-data-tools.md)
@@ -36,7 +36,7 @@ ms.locfileid: "69653288"
  
 ## <a id="sampledata"></a> サンプル データを読み込む
 
-次の手順では、ブートストラップ スクリプトを使用して SQL Server データベースのバックアップをダウンロードし、ご利用のビッグ データ クラスターにそのデータを読み込みます。 使いやすいように、これらの手順は 「[Windows](#windows)」セクションと「[Linux](#linux)」セクションに分けられています。
+次の手順では、ブートストラップ スクリプトを使用して SQL Server データベースのバックアップをダウンロードし、ご利用のビッグ データ クラスターにそのデータを読み込みます。 使いやすいように、これらの手順は 「[Windows](#windows)」セクションと「[Linux](#linux)」セクションに分けられています。 認証メカニズムとして基本的なユーザー名とパスワードを使用する場合は、スクリプトを実行する前に AZDATA_USERNAME と AZDATA_PASSWORD の環境変数を設定します。 それ以外の場合、スクリプトでは SQL Server マスター インスタンスと Knox ゲートウェイへの接続に統合認証が使用されます。 また、統合認証を使用するには、エンドポイントに対して DNS 名を指定する必要があります。
 
 ## <a id="windows"></a> Windows
 
@@ -61,21 +61,19 @@ ms.locfileid: "69653288"
 
 1. ブートストラップ スクリプトでは、ご利用のビッグ データ クラスターに関する次の位置指定パラメーターが必要です。
 
-   | パラメーター | [説明] |
+   | パラメーター | 説明 |
    |---|---|
    | <CLUSTER_NAMESPACE> | ビッグ データ クラスターに付ける名前。 |
-   | <SQL_MASTER_IP> | マスター インスタンスの IP アドレス。 |
-   | <SQL_MASTER_SA_PASSWORD> | マスター インスタンスの SA パスワード。 |
-   | <KNOX_IP> | HDFS/Spark ゲートウェイの IP アドレス。 |
-   | <KNOX_PASSWORD> | HDFS/Spark ゲートウェイのパスワード。 |
-
+   | <SQL_MASTER_ENDPOINT> | マスター インスタンスの DNS 名または IP アドレス。 |
+   | <KNOX_ENDPOINT> | HDFS および Spark ゲートウェイの DNS 名または IP アドレス。 |
+   
    > [!TIP]
    > [kubectl](cluster-troubleshooting-commands.md) を使用して、SQL Server マスター インスタンスと Knox の IP アドレスを検索します。 `kubectl get svc -n <your-big-data-cluster-name>` を実行して、マスター インスタンスの EXTERNAL-IP アドレス (**master-svc-external**) と Knox (**gateway-svc-external**) を確認します。 クラスターの既定の名前は **mssql-cluster** です。
 
 1. ブートストラップ スクリプトを実行します。
 
    ```cmd
-   .\bootstrap-sample-db.cmd <CLUSTER_NAMESPACE> <SQL_MASTER_IP> <SQL_MASTER_SA_PASSWORD> <KNOX_IP> <KNOX_PASSWORD>
+   .\bootstrap-sample-db.cmd <CLUSTER_NAMESPACE> <SQL_MASTER_ENDPOINT> <KNOX_ENDPOINT>
    ```
 
 ## <a id="linux"></a> Linux
@@ -97,13 +95,11 @@ ms.locfileid: "69653288"
 
 1. ブートストラップ スクリプトでは、ご利用のビッグ データ クラスターに関する次の位置指定パラメーターが必要です。
 
-   | パラメーター | [説明] |
+   | パラメーター | 説明 |
    |---|---|
    | <CLUSTER_NAMESPACE> | ビッグ データ クラスターに付ける名前。 |
-   | <SQL_MASTER_IP> | マスター インスタンスの IP アドレス。 |
-   | <SQL_MASTER_SA_PASSWORD> | マスター インスタンスの SA パスワード。 |
-   | <KNOX_IP> | HDFS/Spark ゲートウェイの IP アドレス。 |
-   | <KNOX_PASSWORD> | HDFS/Spark ゲートウェイのパスワード。 |
+   | <SQL_MASTER_ENDPOINT> | マスター インスタンスの DNS 名または IP アドレス。 |
+   | <KNOX_ENDPOINT> | HDFS および Spark ゲートウェイの DNS 名または IP アドレス。 |
 
    > [!TIP]
    > [kubectl](cluster-troubleshooting-commands.md) を使用して、SQL Server マスター インスタンスと Knox の IP アドレスを検索します。 `kubectl get svc -n <your-big-data-cluster-name>` を実行して、マスター インスタンスの EXTERNAL-IP アドレス (**master-svc-external**) と Knox (**gateway-svc-external**) を確認します。 クラスターの既定の名前は **mssql-cluster** です。
@@ -111,23 +107,23 @@ ms.locfileid: "69653288"
 1. ブートストラップ スクリプトを実行します。
 
    ```bash
-   sudo env "PATH=$PATH" ./bootstrap-sample-db.sh <CLUSTER_NAMESPACE> <SQL_MASTER_IP> <SQL_MASTER_SA_PASSWORD> <KNOX_IP> <KNOX_PASSWORD>
+   ./bootstrap-sample-db.sh <CLUSTER_NAMESPACE> <SQL_MASTER_ENDPOINT> <KNOX_ENDPOINT>
    ```
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 ブートストラップ スクリプトが実行されると、ご利用のビッグ データ クラスターにはサンプル データベースと HDFS データが取り込まれます。 次のチュートリアルでは、サンプル データを使用してビッグ データ クラスターの機能を実演します。
 
 データの仮想化:
 
-- [チュートリアル: SQL Server ビッグ データ クラスター内の HDFS にクエリを実行する](tutorial-query-hdfs-storage-pool.md)
-- [チュートリアル: SQL Server ビッグ データ クラスターから Oracle にクエリを実行する](tutorial-query-oracle.md)
+- [チュートリアル:SQL Server ビッグ データ クラスター内の HDFS にクエリを実行する](tutorial-query-hdfs-storage-pool.md)
+- [チュートリアル:SQL Server ビッグ データ クラスターから Oracle にクエリを実行する](tutorial-query-oracle.md)
 
 データ インジェスト:
 
-- [チュートリアル: Transact-SQL を使用して SQL Server のデータ プールにデータを取り込む](tutorial-data-pool-ingest-sql.md)
-- [チュートリアル: Spark ジョブを使用して SQL Server のデータ プールにデータを取り込む](tutorial-data-pool-ingest-spark.md)
+- [チュートリアル:Transact-SQL を使用して SQL Server のデータ プールにデータを取り込む](tutorial-data-pool-ingest-sql.md)
+- [チュートリアル:Spark ジョブを使用して SQL Server のデータ プールにデータを取り込む](tutorial-data-pool-ingest-spark.md)
 
 Notebooks:
 
-- [チュートリアル: SQL Server 2019 ビッグ データ クラスターでサンプルのノートブックを実行する](tutorial-notebook-spark.md)
+- [チュートリアル:SQL Server 2019 ビッグ データ クラスターでサンプルのノートブックを実行する](tutorial-notebook-spark.md)

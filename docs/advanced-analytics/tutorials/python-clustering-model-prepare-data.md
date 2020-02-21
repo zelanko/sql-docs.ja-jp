@@ -1,42 +1,42 @@
 ---
 title: Python のチュートリアル:クラスター データを準備する
-description: この 4 部構成のチュートリアル シリーズの第 2 部では、SQL Server データベースからデータを準備し、SQL Server Machine Learning Services を使用して Python でクラスタリングを実行します。
+description: この 4 部構成のチュートリアル シリーズの第 2 部では、SQL データを準備し、SQL Server Machine Learning Services を使用して Python でクラスタリングを実行します。
 ms.prod: sql
 ms.technology: machine-learning
 ms.devlang: python
-ms.date: 08/30/2019
+ms.date: 12/17/2019
 ms.topic: tutorial
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 11c24d5403e6540da52ec3557c64e1dc8fa57c78
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 8ee19ddfa59f8f1a4a32c0adf08b8f36eef9aa1f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727085"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75305544"
 ---
 # <a name="tutorial-prepare-data-to-categorize-customers-in-python-with-sql-server-machine-learning-services"></a>チュートリアル:SQL Server Machine Learning Services を使用して Python で顧客を分類するためのデータを準備する
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-この 4 部構成のチュートリアル シリーズの第 2 部では、Python を使用して SQL データベースからデータを復元して準備します。 このシリーズの後半では、本データを使用して、SQL Server Machine Learning Services とともに Python でクラスタリング モデルをトレーニングし、デプロイします。
+この 4 部構成のチュートリアル シリーズの第 2 部では、Python を使用して SQL データベースからデータを復元して準備します。 このシリーズの後半では、このデータを使用して、SQL Server Machine Learning Services を使用する Python でクラスタリング モデルをトレーニングし展開します。
 
-この記事では以下の方法について学習します。
+この記事では、次の方法について学習します。
 
 > [!div class="checklist"]
 > * Python を使用して異なるディメンションに沿って顧客を分離する
 > * SQL データベースから Python データ フレームにデータを読み込む
 
-[第 1 部](python-clustering-model.md)では、前提条件をインストールしてサンプル データベースを復元しました。
+[パート 1 ](python-clustering-model.md)では、前提条件をインストールしてサンプル データベースを復元しました。
 
 [第 3 部](python-clustering-model-build.md)では、Python で K-Means クラスタリング モデルを作成し、トレーニングする方法を学びました。
 
-[第 4 部](python-clustering-model-deploy.md)では、新しいデータに基づいて Python でクラスタリングを実行できるストアド プロシージャを SQL データベースに作成する方法について説明します。
+[パート 4 ](python-clustering-model-deploy.md)では、新しいデータに基づいて Python でクラスタリングを実行できるストアド プロシージャを SQL データベースに作成する方法について説明します。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 * このチュートリアルの第 2 部は、[**第 1 部**](python-clustering-model.md)の前提条件を完了していることを前提としています。
 
@@ -55,10 +55,10 @@ Azure Data Studio で新しいノートブックを開き、次のスクリプ�
 
 ```python
 # Load packages.
+import pyodbc
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-import revoscalepy as revoscale
 from scipy.spatial import distance as sci_distance
 from sklearn import cluster as sk_cluster
 
@@ -69,7 +69,7 @@ from sklearn import cluster as sk_cluster
 ################################################################################################
 
 # Connection string to connect to SQL Server named instance.
-conn_str = 'Driver=SQL Server;Server=localhost;Database=tpcxbb_1gb;Trusted_Connection=True;'
+conn_str = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server}; SERVER=localhost; DATABASE=tpcxbb_1gb; Trusted_Connection=yes')
 
 input_query = '''SELECT
 ss_customer_sk AS customer,
@@ -115,14 +115,10 @@ column_info = {
 
 ## <a name="load-the-data-into-a-data-frame"></a>データをデータ フレームに読み込む
 
-クエリの結果は、revoscalepy **RxSqlServerData** 関数を使用して Python に返されます。 プロセスの一部として、前のスクリプトで定義した列情報を使用します。
+クエリの結果は、Pandas **read_sql** 関数を使用して Python に返されます。 プロセスの一部として、前のスクリプトで定義した列情報を使用します。
 
 ```python
-data_source = revoscale.RxSqlServerData(sql_query=input_query, column_Info=column_info,
-                                        connection_string=conn_str)
-revoscale.RxInSqlServer(connection_string=conn_str, num_tasks=1, auto_cleanup=False)
-# import data source and convert to pandas dataframe.
-customer_data = pd.DataFrame(revoscale.rx_import(data_source))
+customer_data = pandas.read_sql(input_query, conn_str)
 ```
 
 次に、データ フレームの先頭を表示して、正しく表示されているかどうかを確認します。
@@ -145,7 +141,7 @@ Data frame:     customer  orderRatio  itemsRatio  monetaryRatio  frequency
 
 このチュートリアルを続行しない場合は、SQL Server から tpcxbb_1gb データベースを削除してください。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 このチュートリアル シリーズの第 2 部では、次の手順を完了しました。
 
@@ -155,4 +151,4 @@ Data frame:     customer  orderRatio  itemsRatio  monetaryRatio  frequency
 顧客データを使用する機械学習モデルをトレーニングするには、このチュートリアル シリーズの第 3 部に従ってください。
 
 > [!div class="nextstepaction"]
-> [チュートリアル: SQL Server Machine Learning Services を使用して Python で予測モデルを作成する](python-clustering-model-build.md)
+> [チュートリアル:SQL Server Machine Learning Services を使用して Python で予測モデルを作成する](python-clustering-model-build.md)

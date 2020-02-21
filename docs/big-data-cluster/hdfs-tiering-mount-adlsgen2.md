@@ -9,18 +9,18 @@ ms.date: 11/05/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ddf088bc8f7ba3d53bb989145e778deb3472e2a7
-ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
+ms.openlocfilehash: 2afc9fce446d277422c564330c5cc7db254f2d00
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73632780"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252004"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>ビッグ データ クラスターに HDFS 階層制御のための ADLS Gen2 をマウントする方法
 
-次のセクションでは、Azure Data Lake Storage Gen2 データソースを使用して HDFS 階層制御を構成する方法の例を示します。
+以降のセクションでは、Azure Data Lake Storage Gen2 データソースを使用して HDFS 階層制御を構成する方法の例を示します。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 - [展開済みのビッグ データ クラスター](deployment-guidance.md)
 - [ビッグ データ ツール](deploy-big-data-tools.md)
@@ -84,7 +84,7 @@ OAuth 資格情報を使用してマウントするには、次の手順に従�
 Azure portal で ADLS アカウント用に取得できるアクセス キーを使用してマウントすることもできます。
 
  > [!TIP]
-   > ストレージ アカウントのアクセス キー (`<storage-account-access-key>`) を検索する方法の詳細については、「[アカウント キーと接続文字列を表示する](/azure/storage/common/storage-account-manage#view-account-keys-and-connection-string)」を参照してください。
+   > ストレージ アカウントのアクセス キー (`<storage-account-access-key>`) を検索する方法の詳細については、「[アカウント キーと接続文字列を表示する](/azure/storage/common/storage-account-keys-manage#view-access-keys-and-connection-string)」を参照してください。
 
 ### <a name="set-environment-variable-for-access-key-credentials"></a>アクセス キー資格情報の環境変数を設定する
 
@@ -157,6 +157,6 @@ azdata bdc hdfs mount refresh --mount-path <mount-path-in-hdfs>
 azdata bdc hdfs mount delete --mount-path <mount-path-in-hdfs>
 ```
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
-[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]の詳細については、「[[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]の概要](big-data-cluster-overview.md)」を参照してください。
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]の詳細については、「[[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]とは](big-data-cluster-overview.md)」を参照してください。

@@ -1,20 +1,21 @@
 ---
-title: Azure Data Studio ノートブックを使用して SQL Server ビッグ データ クラスターを管理する
-titleSuffix: Manage SQL Server Big Data Clusters with Azure Data Studio notebooks
+title: 管理:Azure Data Studio ノートブック
+titleSuffix: SQL Server Big Data Clusters
 description: Azure Data Studio のノートブックを使用して、ビッグ データ クラスターの管理とトラブルシューティングを行います。
 author: yualan
 ms.author: alanyu
 ms.reviewer: mikeray
-ms.date: 09/09/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 860524daa5e6ab2db17fdf95cf5aa785aeb4fdf7
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.openlocfilehash: d2a051e297b48ed8d813fce0e0e8ffa748a84d16
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73844287"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75252020"
 ---
 # <a name="manage-sql-server-big-data-clusters-with-azure-data-studio-notebooks"></a>Azure Data Studio ノートブックを使用して SQL Server ビッグ データ クラスターを管理する
 
@@ -28,7 +29,7 @@ ms.locfileid: "73844287"
 
 ノートブックに加え、ユーザーは Jupyter Book と呼ばれるノートブックのコレクションを表示できます。 Jupyter Book には、ノートブックのコレクション内を移動できる目次が用意されています。これにより、必要なノートブックを見つけたり、SQL Server のトラブルシューティングを行ったり、クラスターの状態を表示したりすることができます。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 ノートブックを開くには、次のコンポーネントが必要です。
 
@@ -69,5 +70,5 @@ SQL Server ビッグ データ クラスターに関連するトラブルシュ�
 1. ノートブックは最適化されているので、 **[セルの実行]** を選択する必要があるだけです。 この操作により、ノートブックが完了するまで、ノートブック内の各セルが個別に実行されます。
 1. エラーが検出された場合、Jupyter Book は、エラーを修正するために実行できるノートブックを提案します。 推奨される手順に従って、もう一度ノートブックを実行します。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 Azure Data Studio のノードブックの詳細については、「[SQL Server でノートブックを使用する方法](notebooks-guidance.md)」を参照してください。

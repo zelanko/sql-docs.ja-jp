@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1b2a838f8ad386b8a236304401308d5be0f63ff1
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.openlocfilehash: b2f96f79b81b79d2abfaadc40c37b864d20a93dc
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73706348"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76831391"
 ---
 # <a name="use-a-python-script-to-deploy-a-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Python スクリプトを使用して SQL Server ビッグ データ クラスターを Azure Kubernetes Service (AKS) に展開する
 
@@ -27,7 +27,7 @@ ms.locfileid: "73706348"
 
 ここで使用される既定のビッグ データ クラスターの展開は、1 つの SQL マスター インスタンス、1 つのコンピューティング プール インスタンス、2 つのデータ プール インスタンス、2 つの記憶域プール インスタンスで構成されています。 データは、AKS の既定の記憶域クラスを使用する Kubernetes 永続ボリュームを使用して永続化されます。 このチュートリアルで使用する既定の構成は、開発/テスト環境に適しています。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 - Azure サブスクリプション。
 - [ビッグ データ ツール](deploy-big-data-tools.md):
@@ -57,7 +57,7 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
 
 ## <a name="run-the-deployment-script"></a>展開スクリプトを実行する
 
-展開スクリプトを実行するには、次の手順を実行します。 このスクリプトによって、Azure に AKS サービスを作成され、AKS に SQL Server 2019 ビッグ データ クラスターが展開されます。 他の[環境変数](deployment-guidance.md#configfile)を使用してスクリプトを変更して、カスタムの展開を作成することもできます。
+Windows PowerShell または Linux bash プロンプトで展開スクリプトを実行するには、次の手順を実行します。 このスクリプトによって、Azure に AKS サービスを作成され、AKS に SQL Server 2019 ビッグ データ クラスターが展開されます。 他の[環境変数](deployment-guidance.md#configfile)を使用してスクリプトを変更して、カスタムの展開を作成することもできます。
 
 1. 次のコマンドを使用してこのスクリプトを実行します。
 
@@ -70,10 +70,10 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
 
 1. プロンプトが表示されたら、次の情報を入力します。
 
-   | [値] | [説明] |
+   | Value | 説明 |
    |---|---|
    | **[Azure subscription ID]\(Azure サブスクリプション ID\)** | AKS に使用する Azure サブスクリプション ID。 別のコマンド ラインから `az account list` を実行して、すべてのサブスクリプションとその ID を一覧表示できます。 |
-   | **[Azure resource group]\(Azure リソース グループ\)** | AKS クラスター用に作成する Azure リソース グループの名前。 |
+   | **Azure リソース グループ** | AKS クラスター用に作成する Azure リソース グループの名前。 |
    | **[Azure region]\(Azure リージョン\)** | 新しい AKS クラスター用の Azure リージョン (既定値は **westus**)。 |
    | **[Machine size]\(マシン サイズ\)** | AKS クラスター内のノードに使用する[マシン サイズ](https://docs.microsoft.com/azure/virtual-machines/windows/sizes) (既定値は **Standard_L8s**)。 |
    | **[Worker nodes]\(ワーカー ノード\)** | AKS クラスター内のワーカー ノードの数 (既定値は **1**)。 |
@@ -88,8 +88,6 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
    > SQL Server の `sa` アカウントは、ビッグ データ クラスターの展開の間に無効になります。 SQL Server のマスター インスタンスに、 **[ユーザー名]** 入力で指定したものと同じ名前と **[パスワード]** 入力に対応するパスワードで、新しい sysadmin ログインがプロビジョニングされます。 コントローラー管理者ユーザーのプロビジョニングにも、同じ**ユーザー名**と**パスワード**の値が使用されます。 ゲートウェイ (Knox) に対してサポートされているユーザーのみが**ルート**であり、パスワードは上記と同じです。
 
 1. スクリプトを開始するには、指定したパラメーターを使用して AKS クラスターを作成します。 この手順には数分かかります。
-
-   <img src="./media/quickstart-big-data-cluster-deploy/script-parameters.png" width="800px" alt="Script parameters and AKS cluster creation"/>
 
 ## <a name="monitor-the-status"></a>状態を監視する
 
@@ -173,11 +171,11 @@ Azure で [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nov
 az group delete -n <resource group name>
 ```
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 展開スクリプトで Azure Kubernetes サービスを構成し、SQL Server 2019 ビッグ データ クラスターも展開しました。 また、手動インストールを使用して、今後の展開をカスタマイズすることもできます。 ビッグ データ クラスターの展開方法と展開をカスタマイズする方法の詳細については、「[Kubernetes に [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]を展開する方法](deployment-guidance.md)」を参照してください。
 
 SQL Server ビッグ データ クラスターが展開されたので、サンプル データを読み込んでチュートリアルを調べることができます。
 
 > [!div class="nextstepaction"]
-> [チュートリアル: SQL Server 2019 ビッグ データ クラスターにサンプル データを読み込む](tutorial-load-sample-data.md)
+> [チュートリアル:SQL Server 2019 ビッグ データ クラスターにサンプル データを読み込む](tutorial-load-sample-data.md)

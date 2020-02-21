@@ -1,0 +1,214 @@
+### YamlMime:Landing
+title: 学習用 SQL リソース
+summary: チュートリアル、クイックスタート、およびその他の学習用リソースは、SQL Server と Azure SQL Database の操作を説明することを目的としています。
+metadata:
+  title: 学習用 SQL リソース
+  description: SQL Server と Azure SQL Database の使用方法を学習するためのチュートリアルとクイックスタートのコレクションです。
+  ms.prod: sql
+  ms.topic: landing-page
+  author: MashaMSFT
+  ms.author: mathoma
+  ms.date: 01/07/2020
+  ms.openlocfilehash: 6ff11b20d71d7af251c1d28d57bd86aef278c330
+  ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+  ms.translationtype: HT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 01/31/2020
+  ms.locfileid: "76832213"
+landingContent:
+- title: SQL Server
+  linkLists:
+  - linkListType: learn
+    links:
+    - text: SQL Server をアップグレードする
+      url: https://docs.microsoft.com/learn/modules/introduction-upgrading-sql-server/
+    - text: クエリ調整アシスタントを使用する
+      url: https://docs.microsoft.com/learn/modules/use-sql-server-query-tuning-assistant/
+    - text: SQL Server ワークショップ
+      url: https://aka.ms/sqlworkshops
+  - linkListType: quickstart
+    links:
+    - text: Azure Data Studio を使用した接続とクエリ
+      url: ../azure-data-studio/quickstart-sql-server.md
+    - text: SSMS を使用した接続とクエリ
+      url: ../ssms/tutorials/connect-query-sql-server.md
+    - text: Transact-SQL (T-SQL) の記述
+      url: ../t-sql/tutorial-writing-transact-sql-statements.md
+    - text: 拡張イベント
+      url: ../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md
+    - text: オンプレミスのバックアップと復元
+      url: ../relational-databases/backup-restore/quickstart-backup-restore-database.md
+    - text: Azure Blob Storage へのバックアップと復元
+      url: ../relational-databases/backup-restore/quickstart-backup-restore-database.md
+  - linkListType: tutorial
+    links:
+    - text: 可用性グループ
+      url: ../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md
+    - text: トランザクション レプリケーション
+      url: ../relational-databases/replication/tutorial-replicating-data-between-continuously-connected-servers.md
+    - text: マージ レプリケーション
+      url: ../relational-databases/replication/tutorial-replicating-data-with-mobile-clients.md
+    - text: インメモリ テーブルを作成する
+      url: ../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md
+    - text: 証明書を使用してストアド プロシージャに署名する
+      url: ../relational-databases/tutorial-signing-stored-procedures-with-a-certificate.md
+    - text: Azure Blob ストレージ サービス
+      url: ../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md
+    - text: データベース チューニング アドバイザー
+      url: ../tools/dta/tutorial-database-engine-tuning-advisor.md
+  - linkListType: architecture
+    links:
+    - text: インデックスのアーキテクチャと設計
+      url: ../relational-databases/sql-server-index-design-guide.md
+    - text: ページおよびエクステントのアーキテクチャ
+      url: ../relational-databases/pages-and-extents-architecture-guide.md
+    - text: 移行後の検証と最適化
+      url: ../relational-databases/post-migration-validation-and-optimization-guide.md
+    - text: クエリ処理のアーキテクチャ
+      url: ../relational-databases/query-processing-architecture-guide.md
+    - text: スレッドおよびタスクのアーキテクチャ
+      url: ../relational-databases/thread-and-task-architecture-guide.md
+    - text: トランザクション ログ アーキテクチャ
+      url: ../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md
+    - text: トランザクションのロックと行のバージョン管理
+      url: ../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md
+    - text: メモリ管理アーキテクチャ
+      url: ../relational-databases/memory-management-architecture-guide.md
+- title: Azure VM (IaaS) 上の SQL Server
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: ポータルを使用して VM を作成する
+      url: /azure/virtual-machines/windows/sql/quickstart-sql-vm-create-portal
+    - text: PowerShell を使用して VM を作成する
+      url: /azure/virtual-machines/windows/sql/quickstart-sql-vm-create-powershell
+  - linkListType: how-to-guide
+    links:
+    - text: リソース プロバイダーに登録する
+      url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-register-with-resource-provider
+    - text: Az CLI を使用して可用性グループを構成する
+      url: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-availability-group-cli
+    - text: Premium ファイル共有を使用して FCI を作成する
+      url: /azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-create-failover-cluster-premium-file-share
+    - text: バックアップと復元に Azure Storage を使用する
+      url: /azure/virtual-machines/windows/sql/virtual-machines-windows-use-storage-sql-server-backup-restore
+- title: Azure SQL Database 単一データベース
+  linkLists:
+  - linkListType: learn
+    links:
+    - text: データ ストレージ アプローチを選択する
+      url: https://docs.microsoft.com/learn/modules/choose-storage-approach-in-azure/
+    - text: セキュリティで保護された SQL Database
+      url: https://docs.microsoft.com/learn/modules/secure-your-azure-sql-database/
+    - text: 地理的に分散されたアプリ
+      url: https://docs.microsoft.com/learn/modules/design-a-geographically-distributed-application/
+    - text: SQL Database のクエリを実行する ASP.NET アプリ
+      url: https://docs.microsoft.com/learn/modules/develop-app-that-queries-azure-sql/
+  - linkListType: quickstart
+    links:
+    - text: ポータルまたはコードを使用して DB を作成する
+      url: /azure/sql-database/sql-database-single-database-get-started
+    - text: テンプレートを使用して DB を作成する
+      url: /azure/sql-database/sql-database-single-database-get-started-template
+    - text: サーバーレベルの IP ファイアウォール規則を構成する
+      url: /azure/sql-database/sql-database-server-level-firewall-rule
+  - linkListType: tutorial
+    links:
+    - text: Azure Database Migration Service を使用して移行する
+      url: /azure/dms/tutorial-sql-server-to-azure-sql?toc=/azure/sql-database/toc.json
+    - text: 1 つの DB をフェールオーバー グループに追加する
+      url: /azure/sql-database/sql-database-single-database-failover-group-tutorial
+    - text: エラスティック プールをフェールオーバー グループに追加する
+      url: /azure/sql-database/sql-database-elastic-pool-failover-group-tutorial
+    - text: アクティブ geo レプリケーションの構成
+      url: /azure/sql-database/sql-database-active-geo-replication-portal
+    - text: セキュリティを構成する
+      url: /azure/sql-database/sql-database-security-tutorial
+- title: その他のリソース
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Microsoft Learn
+      url: /azure/sql-database/sql-database-single-database
+    - text: LinkedIn Learning
+      url: /azure/sql-database/sql-database-managed-instance
+    - text: Microsoft Virtual Academy
+      url: /azure/sql-database/sql-database-single-database
+    - text: Pluralsight
+      url: /azure/sql-database/sql-database-managed-instance
+    - text: Channel 9
+      url: /azure/sql-database/sql-database-managed-instance
+- title: Linux 上の SQL Server
+  linkLists:
+  - linkListType: learn
+    links:
+    - text: はじめに
+      url: https://docs.microsoft.com/learn/modules/introduction-sql-server-linux/
+    - text: 配置
+      url: https://docs.microsoft.com/learn/modules/deploy-sql-server-linux/
+    - text: 自動調整
+      url: https://docs.microsoft.com/learn/modules/automatically-tune-sql-server-linux/
+    - text: Containers
+      url: https://docs.microsoft.com/learn/modules/run-sql-server-2017-linux-containers/
+  - linkListType: quickstart
+    links:
+    - text: Red Hat
+      url: ../linux/quickstart-install-connect-red-hat.md
+    - text: SUSE
+      url: ../linux/quickstart-install-connect-suse.md
+    - text: Ubuntu
+      url: ../linux/quickstart-install-connect-ubuntu.md
+    - text: Docker
+      url: ../linux/quickstart-install-connect-docker.md
+    - text: Azure 上
+      url: /azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine
+  - linkListType: tutorial
+    links:
+    - text: Windows からの移行
+      url: ../linux/sql-server-linux-migrate-restore-database.md
+    - text: Docker への移行
+      url: ../linux/tutorial-restore-backup-in-sql-server-container.md
+    - text: ジョブの作成
+      url: ../linux/sql-server-linux-run-sql-server-agent-job.md
+    - text: Azure Active Directory 認証を設定する
+      url: ../linux/sql-server-linux-active-directory-authentication.md
+    - text: FCI を構成する
+      url: ../linux/sql-server-linux-shared-disk-cluster-configure.md
+    - text: ペースメーカー クラスターの配置
+      url: ../linux/sql-server-linux-deploy-pacemaker-cluster.md
+    - text: 可用性グループの作成と構成
+      url: ../linux/sql-server-linux-create-availability-group.md
+    - text: Kubernetes への配置
+      url: ../linux/tutorial-sql-server-containers-kubernetes.md
+    - text: レプリケーションの設定
+      url: ../linux/sql-server-linux-replication-tutorial-tsql.md
+- title: Azure SQL Database マネージド インスタンス
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: ポータルを使用してインスタンスを作成する
+      url: /azure/sql-database/sql-database-managed-instance-get-started
+    - text: PowerShell を使用してインスタンスを作成する
+      url: /azure/sql-database/scripts/sql-database-create-configure-managed-instance-powershell
+    - text: インスタンス プールを作成する
+      url: /azure/sql-database/sql-database-instance-pools-how-to
+    - text: パブリック エンドポイントの構成
+      url: /azure/sql-database/sql-database-managed-instance-public-endpoint-configure
+    - text: クライアント VM を接続する
+      url: /azure/sql-database/sql-database-managed-instance-configure-vm
+    - text: ポイントからサイト間の接続を構成する
+      url: /azure/sql-database/sql-database-managed-instance-configure-p2s
+    - text: データベース バックアップの復元
+      url: /azure/sql-database/sql-database-managed-instance-get-started-restore
+  - linkListType: tutorial
+    links:
+    - text: Azure Database Migration Service を使用して移行する
+      url: /azure/dms/tutorial-sql-server-to-managed-instance?toc=/azure/sql-database/toc.json
+    - text: トランザクション レプリケーションの構成
+      url: /azure/sql-database/sql-database-managed-instance-configure-replication-tutorial
+    - text: フェールオーバー グループへの追加
+      url: /azure/sql-database/sql-database-managed-instance-failover-group-tutorial?tabs=azure-portal
+    - text: オンプレミスのユーザーとグループの移行
+      url: /azure/sql-database/tutorial-managed-instance-azure-active-directory-migration
+    - text: セキュリティを構成する
+      url: /azure/sql-database/sql-database-managed-instance-aad-security-tutorial

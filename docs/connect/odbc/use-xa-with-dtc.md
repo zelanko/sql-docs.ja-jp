@@ -12,12 +12,12 @@ helpviewer_keywords:
 author: karinazhou
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: c2dbe0f90af6d3c51c55698ebd74c4972ea1d4db
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.openlocfilehash: 03399ea4653df03c873739b24a167d88564c3927
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68252150"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76911116"
 ---
 # <a name="using-xa-transactions"></a>XA トランザクションの使用
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -25,13 +25,13 @@ ms.locfileid: "68252150"
 
 ## <a name="overview"></a>概要
 
-バージョン17.3 以降で Microsoft ODBC Driver for SQL Server は、Windows、Linux、および Mac で分散トランザクションコーディネーター (DTC) を使用した XA トランザクションがサポートされます。 ドライバー側で XA を実装すると、クライアントアプリケーションはトランザクションマネージャー (TM) にシリアル操作 (開始、コミット、トランザクションブランチのロールバックなど) を送信できるようになります。 その後、TM は、これらの操作に従って Resource Manager (RM) と通信します。 XA 仕様および DTC 用 Microsoft 実装 (MS DTC) の詳細については、「[動作方法: SQL SERVER dtc (MSDTC および XA トランザクション)](https://blogs.msdn.microsoft.com/bobsql/2018/01/28/how-it-works-sql-server-dtc-msdtc-and-xa-transactions/)」を参照してください。
+バージョン 17.3 以降の Microsoft ODBC Driver for SQL Server では、Windows、Linux、および Mac 上で分散トランザクション コーディネーター (DTC) を使用した XA トランザクションがサポートされます。 ドライバー側で XA が実装されると、クライアント アプリケーションから、トランザクション マネージャー (TM) に対してシリアル操作 (トランザクション ブランチの開始、コミット、ロールバックなど) を送信できます。 そして、TM はこれらの操作に従って Resource Manager (RM) と通信します。 XA 仕様と DTC の Microsoft 実装 (MS DTC) の詳細については、「[動作のしくみ:SQL Server DTC (MSDTC および XA トランザクション)](https://blogs.msdn.microsoft.com/bobsql/2018/01/28/how-it-works-sql-server-dtc-msdtc-and-xa-transactions/)」を参照してください。
 
 
 
 ## <a name="the-xacallparam-structure"></a>XACALLPARAM 構造体
 
-構造`XACALLPARAM`体は、XA トランザクションマネージャーの要求に必要な情報を定義します。 次のように定義されています。
+`XACALLPARAM` 構造体では、XA トランザクション マネージャーの要求に必要な情報を定義します。 次のように定義します。
 
 ```
 typedef struct XACallParam {    
@@ -46,27 +46,27 @@ typedef struct XACallParam {
 ```
 
 *sizeParam*  
-`XACALLPARAM`構造体のサイズ。 これにより、次`XACALLPARAM`のデータのサイズは除外されます。
+`XACALLPARAM` 構造体のサイズ。 これにより、`XACALLPARAM` に続くデータのサイズは除外されます。
 
 *operation*  
-TM に渡される XA 操作。 使用できる操作は、 [xadefs .h](../../connect/odbc/use-xa-with-dtc.md#xadefsh)で定義されています。
+TM に渡される XA 操作。 使用できる操作は [xadefs.h](../../connect/odbc/use-xa-with-dtc.md#xadefsh) で定義されています。
 
-*type*  
-トランザクションブランチ識別子。
+*xid*  
+トランザクション ブランチ識別子。
 
 *flags*  
-TM 要求に関連付けられているフラグ。 使用できる値は、 [xadefs .h](../../connect/odbc/use-xa-with-dtc.md#xadefsh)で定義されています。
+TM 要求に関連付けられているフラグ。 使用できる値は [xadefs.h](../../connect/odbc/use-xa-with-dtc.md#xadefsh) で定義されています。
 
-*ステータス*  
-TM から状態を返します。 返される可能性のある状態については、 [xadefs](../../connect/odbc/use-xa-with-dtc.md#xadefsh)ヘッダーを参照してください。
+*status*  
+TM から状態を返します。 返される可能性のある状態については、[xadefs.h](../../connect/odbc/use-xa-with-dtc.md#xadefsh) ヘッダーを参照してください。
 
 *sizeData*  
-次`XACALLPARAM`のデータバッファーのサイズ。 
+`XACALLPARAM` に続くデータ バッファーのサイズ。 
 
 *sizeReturned*  
 返されるデータのサイズ。
 
-TM 要求を作成するには、属性_SQL_COPT_SS_ENLIST_IN_XA_と`XACALLPARAM`オブジェクトへのポインターを使用して、 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)関数を呼び出す必要があります。  
+TM 要求を行うには、[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) 関数を、属性 _SQL_COPT_SS_ENLIST_IN_XA_ および `XACALLPARAM` オブジェクトへのポインターを使用して呼び出す必要があります。  
 
 ```
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, param, SQL_IS_POINTER);  // XACALLPARAM *param
@@ -75,7 +75,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, param, SQL_IS_POINTER);  // XA
 
 ## <a name="code-sample"></a>コード サンプル 
 
-次の例では、XA トランザクションの TM と通信し、クライアントアプリケーションからさまざまな操作を実行する方法を示します。 Microsoft SQL Server に対してテストを実行する場合、XA トランザクションを有効にするために MS DTC が適切に構成されている必要があります。 XA 定義は、 [xadefs](../../connect/odbc/use-xa-with-dtc.md#xadefsh)ヘッダーファイルにあります。 
+次の例は、XA トランザクションのために TM と通信し、クライアント アプリケーションからさまざまな操作を実行する方法を示しています。 Microsoft SQL Server に対してテストを実行する場合、MS DTC を適切に構成して XA トランザクションを有効にする必要があります。 XA 定義は [xadefs.h](../../connect/odbc/use-xa-with-dtc.md#xadefsh) ヘッダー ファイル内にあります。 
 
 ```
 
@@ -368,7 +368,7 @@ bool TestRecover(HDBC hdbc, const char* connectionString)
             rc = testRunner->Commit(*pXid, false, xaStatus);
             if (SQL_SUCCEEDED(xaStatus))
             {
-                std::cout << "TestRecover::Successfully commited recovered transaction " << tr << " formatId=" << pXid->formatID << std::endl;
+                std::cout << "TestRecover::Successfully committed recovered transaction " << tr << " formatId=" << pXid->formatID << std::endl;
             }
             else
             {
@@ -434,7 +434,7 @@ int main(int argc, char** argv)
 
 ```
 
-クラス`XATestRunner`は、サーバーと通信するときに使用可能な XA 呼び出しを実装します。
+`XATestRunner` クラスに、サーバーとの通信時に使用できる XA 呼び出しが実装されています。
 
 ```
 
@@ -601,7 +601,7 @@ void XaTestRunner::XidShortToXid(const XID_SHORT& xids, XID& xid)
 
 ## <a name="appendix"></a>付録
 
-### <a name="xadefsh"></a>xadefs h
+### <a name="xadefsh"></a>xadefs.h
 
 ```
 // xadefs.h : XA specific definitions.

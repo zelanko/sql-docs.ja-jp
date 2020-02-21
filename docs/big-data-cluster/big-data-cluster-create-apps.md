@@ -1,22 +1,23 @@
 ---
-title: azdata を使用してアプリケーションを展開する
-titleSuffix: SQL Server big data clusters
+title: azdata を使用してアプリケーションをデプロイする
+titleSuffix: SQL Server Big Data Clusters
 description: '[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]に Python または R スクリプトをアプリケーションとして展開します。'
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
-ms.date: 11/04/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1253863bcd2e1da804480a3e1d0e628024b0798b
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.openlocfilehash: 33b5bf6061e9168fd150adcb4a7ccf29302bce63
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73706694"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253154"
 ---
-# <a name="how-to-deploy-an-app-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] にアプリを展開する方法
+# <a name="how-to-deploy-an-app-on-big-data-clusters-2019"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] にアプリを展開する方法
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -36,16 +37,16 @@ ms.locfileid: "73706694"
 - MLeap Serving
 - SQL Server Integration Services (SSIS)
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 - [SQL Server 2019 ビッグ データ クラスター](deployment-guidance.md)
 - [azdata コマンドライン ユーティリティ](deploy-install-azdata.md)
 
-## <a name="capabilities"></a>Capabilities
+## <a name="capabilities"></a>機能
 
 SQL Server 2019 では、アプリケーションの作成、削除、説明、初期化、一覧の実行、更新を行うことができます。 次の表では、**azdata** で使用できるアプリケーションの展開コマンドについて説明します。
 
-|コマンド |[説明] |
+|command |説明 |
 |:---|:---|
 |`azdata login` | SQL Server ビッグ データ クラスターにサインインします |
 |`azdata app create` | アプリケーションを作成します。 |
@@ -291,8 +292,8 @@ describe コマンドでは、クラスター内のエンドポイントを含�
 azdata app delete --name add-app --version v1
 ```
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
-[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]に展開されているアプリを独自のアプリケーションに統合する方法の詳細については、「[ビッグ データ クラスター上でアプリケーションを使用する](big-data-cluster-consume-apps.md)」を参照してください。 その他のサンプルにはついては、[アプリの展開サンプル](https://aka.ms/sql-app-deploy)に関するページを参照してください。
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]に展開されているアプリを独自のアプリケーションに統合する方法の詳細については、[ビッグ データ クラスター上でのアプリケーションの使用](big-data-cluster-consume-apps.md)に関するページを参照してください。 その他のサンプルにはついては、[アプリの展開サンプル](https://aka.ms/sql-app-deploy)に関するページを参照してください。
 
 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]の詳細については、「[[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]とは](big-data-cluster-overview.md)」を参照してください。

@@ -7,20 +7,20 @@ ms.custom: ''
 ms.topic: conceptual
 f1_keywords: ''
 helpviewer_keywords: ''
-author: aliceku
-ms.author: aliceku
-ms.openlocfilehash: c92eead00b10c4a26a93234c3bbfeebf254f6aff
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: 946e99884b4c261393c29cd06747823c3aa7e3a1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028843"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76761807"
 ---
 # <a name="sql-server-privacy-supplement"></a>SQL Server のプライバシーの補足情報
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-この記事では、機能使用状況および診断データを匿名で収集して Microsoft に送信する、インターネット対応機能の概要を説明します。 SQL Server では、標準的なコンピューター情報、および使用とパフォーマンスに関するデータが収集される場合があります。これらの情報は Microsoft に送信され、製品の品質、セキュリティ、および信頼性を向上させる目的で分析されます。 この記事は、[Microsoft のプライバシーに関する声明](https://go.microsoft.com/fwlink/?LinkId=521839)全体の内容を補うものです。 この記事のデータ分類は、SQL Server オンプレミス製品のバージョンにのみ適用されます。 次のアイテムには適用されません。
+この記事では、機能使用状況および診断データを匿名で収集して Microsoft に送信する、インターネット対応機能の概要を説明します。 SQL Server では、標準的なコンピューター情報、および使用とパフォーマンスに関するデータが収集される場合があります。これらの情報は Microsoft に送信され、製品の品質、セキュリティ、および信頼性を向上させる目的で分析されます。 Microsoft Azure サービスの仮想マシンに SQL Server をインストールすると、環境情報が Microsoft に送信され、Microsoft が Azure サブスクリプション内のリソース プロバイダーに SQL Server 仮想マシン リソースを登録できるようになります。詳細については、[こちら](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-register-with-resource-provider)を参照してください。 SQL Server 仮想マシン リソースの登録の一環として、SQL Server IaaS Agent 拡張機能が仮想マシンにインストールされる場合があります。詳細については、[こちら](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-agent-extension)を参照してください。 この記事は、[Microsoft のプライバシーに関する声明](https://go.microsoft.com/fwlink/?LinkId=521839)全体の内容を補うものです。 この記事のデータ分類は、SQL Server オンプレミス製品のバージョンにのみ適用されます。 次のアイテムには適用されません。
 
 - Azure SQL データベース
 - [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-telemetry-ssms?view=sql-server-2017)
@@ -136,7 +136,7 @@ Microsoft は SQL Server を使用するその他のプログラムで設定さ�
 
 ### <a name="permitted-usage-scenarios"></a>許可される使用シナリオ
 
-|シナリオ  |アクセスの制限  |リテンション期間の要件|
+|シナリオ  |アクセス制限  |リテンション期間の要件|
 |---------|---------|---------|
 |機能の改善および/または現在の機能のバグの修正のために Microsoft で使用される可能性があります。|サードパーティによるアクセスなしの Microsoft の内部使用に制限されます。 |最短 90 日から最長 3 年 |
 |顧客への提案の際に使用される可能性があります。  たとえば、"製品の使用状況に基づいて、パフォーマンスの向上のため、機能 *X* の使用を検討してください" というように提案されます。 |Microsoft は、ダッシュボードなどを通じて、元の顧客にデータを公開できます。 |顧客データのセキュリティ ログ:最短 3 年から最長 6 年 |

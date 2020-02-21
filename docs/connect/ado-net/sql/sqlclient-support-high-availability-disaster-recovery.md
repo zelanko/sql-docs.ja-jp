@@ -1,27 +1,27 @@
 ---
 title: 高可用性、ディザスター リカバリーのための SqlClient のサポート
-description: 高可用性、ディザスターリカバリー (AlwaysOn) 可用性グループの SqlClient サポートについて説明します。
+description: 高可用性、ディザスター リカバリー (AlwaysOn) 可用性グループのための SqlClient のサポートについて説明します。
 ms.date: 08/15/2019
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: c60ade4c949574b589bf1e1e660564775b394527
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: b84790960455d60411cae14ae180be0d8891e4a2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72451997"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75258549"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>高可用性、ディザスター リカバリーのための SqlClient のサポート
 
 ![Download-DownArrow-Circled](../../../ssdt/media/download.png)[ADO.NET をダウンロードする](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-このトピックでは、高可用性、ディザスターリカバリー、AlwaysOn 可用性グループの SQL Server サポートのための Microsoft SqlClient Data Provider について説明します。  AlwaysOn 可用性グループの機能は SQL Server 2012 に追加されています。 AlwaysOn 可用性グループの詳細については、SQL Server オンライン ブックを参照してください。  
+このトピックでは、高可用性、ディザスター リカバリー AlwaysOn 可用性グループのための Microsoft SqlClient Data Provider for SQL Server のサポートについて説明します。  AlwaysOn 可用性グループの機能は SQL Server 2012 に追加されています。 AlwaysOn 可用性グループの詳細については、SQL Server オンライン ブックを参照してください。  
   
 現在は、接続プロパティで、(高可用性、障害回復) 可用性グループ (AG) の高可用性グループ リスナーまたは SQL Server 2012 フェールオーバー クラスター インスタンスを指定できます。 SqlClient アプリケーションを AlwaysOn データベースに接続しているときにフェールオーバーが発生した場合、元の接続は切断され、アプリケーションではフェールオーバー後に処理を続行するために新しい接続を開く必要があります。  
   
@@ -30,13 +30,13 @@ ms.locfileid: "72451997"
 > [!NOTE]
 >  接続タイムアウト値を大きくし、接続再試行ロジックを実装することにより、アプリケーションが可用性グループに接続する確立が高まります。 また、フェールオーバーにより接続が失敗する可能性があるため、接続再試行ロジックを実装して、再接続されるまで、失敗した接続の再接続を試行する必要があります。  
   
-次の接続プロパティは、SQL Server 用の Microsoft SqlClient Data Provider でサポートされています。  
+Microsoft SqlClient Data Provider for SQL Server では、次の接続プロパティがサポートされています。  
   
 - `ApplicationIntent`  
   
 - `MultiSubnetFailover`  
   
-次のようにして、これらの接続文字列キーワードをプログラムで変更できます。  
+これらの接続文字列キーワードは、次を使用してプログラムで変更できます。  
   
 - <xref:Microsoft.Data.SqlClient.SqlConnectionStringBuilder.ApplicationIntent%2A>  
   
@@ -59,11 +59,11 @@ SqlClient の接続文字列キーワードの詳細については、「<xref:M
   
 - 64 個を超える数の IP アドレスが構成された SQL Server インスタンスに接続すると、接続エラーが発生します。  
   
-- `MultiSubnetFailover` 接続プロパティを使用するアプリケーションの動作は、認証の種類 (SQL Server 認証、Kerberos 認証、または Windows 認証) の影響を受けません。  
+- `MultiSubnetFailover` 接続プロパティを使用するアプリケーションの動作は、認証の種類 (SQL Server 認証、Kerberos 認証、または Windows 認証) によって影響を受けません。  
   
 - フェールオーバー時間に合わせて、アプリケーションの接続再試行回数を減らすには、`Connect Timeout` の値を大きくします。  
   
-- 分散トランザクションはサポートされていません。  
+- 分散トランザクションはサポートされません。  
   
  読み取り専用のルーティングが無効である場合、次の状況ではセカンダリ レプリカの場所には接続できません。  
   
@@ -71,12 +71,12 @@ SqlClient の接続文字列キーワードの詳細については、「<xref:M
   
 - アプリケーションに `ApplicationIntent=ReadWrite` (以降に解説します) が使用されているが、セカンダリ レプリカの場所が読み取り専用アクセスとして構成されている。  
   
-<xref:Microsoft.Data.SqlClient.SqlDependency> は、読み取り専用のセカンダリレプリカではサポートされていません。  
+<xref:Microsoft.Data.SqlClient.SqlDependency> は、読み取り専用セカンダリ レプリカではサポートされていません。  
   
 プライマリ レプリカが読み取り専用ワークロードを拒否するように構成されているとき、接続文字列に `ApplicationIntent=ReadOnly` が含まれていると、接続は失敗します。  
   
 ## <a name="upgrading-to-use-multi-subnet-clusters-from-database-mirroring"></a>データベース ミラーリングからマルチサブネット クラスターの使用へのアップグレード  
-接続文字列に `MultiSubnetFailover` と `Failover Partner` の接続キーワードが存在する場合、または `MultiSubnetFailover=True` と TCP 以外のプロトコルが使用されている場合は、接続エラー (<xref:System.ArgumentException>) が発生します。 また、`MultiSubnetFailover` が使用されているとき、SQL Server から、データベース ミラーリング ペアに属していることを示すフェールオーバー パートナー応答が返された場合にも、エラー (<xref:Microsoft.Data.SqlClient.SqlException>) が発生します。  
+接続文字列に `MultiSubnetFailover` および `Failover Partner` 接続キーワードが存在する場合や、`MultiSubnetFailover=True` でかつ TCP 以外のプロトコルが使用されている場合は、接続エラー (<xref:System.ArgumentException>) が発生します。 また、`MultiSubnetFailover` が使用されているとき、SQL Server から、データベース ミラーリング ペアに属していることを示すフェールオーバー パートナー応答が返された場合にも、エラー (<xref:Microsoft.Data.SqlClient.SqlException>) が発生します。  
   
 データベース ミラーリングを現在使用している SqlClient アプリケーションをマルチサブネットのシナリオにアップグレードする場合、`Failover Partner` 接続プロパティを削除して `MultiSubnetFailover` に置き換え、それを `True` に設定し、接続文字列内のサーバー名を可用性グループ リスナーの名前に置き換えます。 接続文字列に `Failover Partner` と `MultiSubnetFailover=True` が使用されている場合、ドライバーはエラーを生成します。 ただし、接続文字列で `Failover Partner` および `MultiSubnetFailover=False` (または `ApplicationIntent=ReadWrite`) が使用されている場合、アプリケーションではデータベース ミラーリングが使用されます。  
   
@@ -87,7 +87,7 @@ AG のプライマリ データベースでデータベース ミラーリング
   
 `ApplicationIntent` キーワードは、従来型の読み取り専用データベースに対しては動作しません。  
   
-対象の AlwaysOn データベースのワークロードの読み取りを許可または禁止することができます (これは、`PRIMARY_ROLE` と `SECONDARY_ROLE`Transact SQL ステートメントの `ALLOW_CONNECTIONS` 句を使用して行います)。  
+対象の AlwaysOn データベースのワークロードの読み取りを許可または禁止することができます (これは、`PRIMARY_ROLE` および `SECONDARY_ROLE` Transact-SQL ステートメントの `ALLOW_CONNECTIONS` 句を使用して実行されます。)  
   
 `ApplicationIntent` キーワードを使用して、読み取り専用のルーティングを有効にします。  
   
@@ -104,5 +104,5 @@ AG のプライマリ データベースでデータベース ミラーリング
   
 読み取り専用ルーティングでは、最初にプライマリに接続した後で読み取り可能の最適なセカンダリを探すため、プライマリに接続する場合よりも時間がかかる場合があります。 このため、ログイン タイムアウトを大きくする必要があります。  
   
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 - [SQL Server の機能と ADO.NET](sql-server-features-adonet.md)
