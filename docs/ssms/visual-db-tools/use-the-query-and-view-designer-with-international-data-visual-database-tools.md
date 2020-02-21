@@ -1,10 +1,9 @@
 ---
-title: クエリおよびビュー デザイナーで各種言語データを使用する方法 | Microsoft Docs
-ms.custom: ''
+title: クエリおよびビュー デザイナーで各種言語データを使用する
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,12 +21,14 @@ helpviewer_keywords:
 ms.assetid: 4b51c56f-f902-4e72-b919-e36127369b63
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ff5eafd8a0a150b40c2383523e269691f0a83b08
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 8b2bd268bd46240b5954851946c7546a7f2dbb34
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267409"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246027"
 ---
 # <a name="use-the-query-and-view-designer-with-international-data-visual-database-tools"></a>クエリおよびビュー デザイナーで各種言語データを使用する方法 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -51,12 +52,12 @@ ms.locfileid: "68267409"
   
 抽出条件ペインに入力した地域固有の形式のデータは、クエリおよびビュー デザイナーによって、SQL ペインでは自動的に ANSI 形式に変換されます。 たとえば、[ロケール (国または地域)] に [ドイツ語 (ドイツ)] が設定されている場合は、抽出条件ペインでは「31.12.96」のような形式で日付を入力できます。 しかし SQL ペインでは、このデータは `{ ts '1996-12-31 00:00:00' }.` のように ANSI 形式の日付で表示されます。SQL ペインに直接データを入力する場合は、ANSI 形式で入力する必要があります。  
   
-## <a name="sort-order"></a>[並べ替え順序]  
+## <a name="sort-order"></a>並べ替え順序  
 クエリにおけるデータの並べ替え順序は、データベースによって決まります。 Windows の [地域のオプション] ダイアログ ボックスで設定したオプションは、クエリの並べ替え順序には影響を与えません。 ただし、特定のクエリで、特定の順序で行を返すように要求することはできます。  
   
 ## <a name="using-double-byte-characters"></a>2 バイト文字の使用  
 リテラルとして、またはテーブル名、ビュー名、エイリアスなどのデータベース オブジェクト名として、DBCS (2 バイト文字セット) 文字を入力できます。 DBCS 文字は、パラメーター名およびパラメーター マーカー文字にも使用できます。 ただし、関数名や SQL キーワードなどの SQL 言語要素に DBCS 文字を使用することはできません。  
   
-## <a name="see-also"></a>参照  
-[クエリおよびビューのデザインの操作方法に関するトピック (Visual Database Tools)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
-  
+## <a name="see-also"></a>参照
+
+[クエリおよびビューのデザインの操作方法に関するトピック](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)

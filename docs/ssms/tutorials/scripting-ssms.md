@@ -1,5 +1,5 @@
 ---
-title: チュートリアル:SQL Server Management Studio でオブジェクトのスクリプトを作成する
+title: SSMS スクリプト オブジェクト
 description: SSMS でのオブジェクトのスクリプトの作成に関するチュートリアル
 keywords: SQL Server, SSMS, SQL Server Management Studio, スクリプト, スクリプト作成
 author: MashaMSFT
@@ -19,12 +19,12 @@ helpviewer_keywords:
 - solutions [SQL Server Management Studio], tutorials
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
-ms.openlocfilehash: 36d3b90a9ac1e49af564323c86421216216522a9
-ms.sourcegitcommit: d65cef35cdf992297496095d3ad76e3c18c9794a
+ms.openlocfilehash: f1709114c064e6d46ab69ba7a15143bab24ea280
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72988414"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247298"
 ---
 # <a name="script-objects-in-sql-server-management-studio"></a>SQL Server Management Studio でオブジェクトのスクリプトを作成する
 
@@ -39,11 +39,11 @@ ms.locfileid: "72988414"
 
 **オブジェクト エクスプローラー**内のオブジェクトをスクリプトするには、そのオブジェクトを右クリックし、 **[Script Object As]\(オブジェクトをスクリプト化\)** オプションを選択します。 このチュートリアルでは、そのプロセスについて説明します。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 このチュートリアルを実行するには、SQL Server Management Studio、SQL Server を実行しているサーバーへのアクセス、および AdventureWorks データベースが必要です。
 
-* [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) をインストールする。
+* [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) をインストールします。
 * [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads) をインストールする。
 * [AdventureWorks2016 サンプル データベース](https://github.com/Microsoft/sql-server-samples/releases)をダウンロードする。
 
@@ -135,9 +135,9 @@ SSMS の GUI を使用してタスクを完了するたびに、タスクに対�
 
 5. **[次へ]** を選択し、 **[スクリプト作成オプションの設定]** ページを開きます。 ここでは、スクリプトの保存場所とその他の詳細オプションを構成できます。 
 
-    A. **[新しいクエリ ウィンドウに保存]** を選択します。
+    a. **[新しいクエリ ウィンドウに保存]** を選択します。
 
-    B. **[詳細設定]** を選択し、次のオプションを設定します。
+    b. **[詳細設定]** を選択し、次のオプションを設定します。
 
       * **[統計のスクリプトを作成]** を *[統計のスクリプトを作成]* に設定します。
       * **[スクリプトを作成するデータの種類]** を *[スキーマのみ]* に設定します。
@@ -222,7 +222,7 @@ SSMS の GUI を使用してタスクを完了するたびに、タスクに対�
     >[!NOTE]
     > セッションを右クリックして **[開始]** を選択すると、セッションを開始できます。 ただし、これは既に実行されている **system_health** セッションのコピーなので、この手順はスキップすることができます。 拡張したイベント セッションのコピーを削除するには、右クリックして **[削除]** を選択します。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 SSMS に慣れ親しむには、実践的な経験を積むのが最も効果的です。 以下の "*チュートリアル*" と "*操作方法*" に関する記事は、SSMS 内で使用できるさまざまな機能を使用するのに役立ちます。 以下の記事では、SSMS のコンポーネントを管理する方法と、頻繁に使用する機能にアクセスする方法が説明されています。
 

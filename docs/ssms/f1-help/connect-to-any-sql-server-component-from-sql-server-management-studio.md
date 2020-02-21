@@ -1,6 +1,6 @@
 ---
-title: SSMS から SQL Server コンポーネントへの接続 | Microsoft Docs
-ms.custom: ''
+title: SQL Server コンポーネントに接続する | Microsoft Docs
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5eeb41bd-b25b-4d3b-a005-a7d9e4b5978e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5ff8f8f4b71b108597f367c7ca041f2a3feba962
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: ebc0f4a5ca2be46e607ccd8d18399b7fe0ef6814
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265127"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243928"
 ---
 # <a name="connect-to-any-sql-server-component-from-sql-server-management-studio"></a>SQL Server Management Studio から SQL Server コンポーネントへの接続
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,11 +28,11 @@ ms.locfileid: "68265127"
   
 -   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]のインスタンス。  
   
--   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]の各コンポーネントを管理する機能があります。  
+-   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]  
   
--   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]の各コンポーネントを管理する機能があります。  
+-   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  
   
--   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]の各コンポーネントを管理する機能があります。  
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] では、データ ソースへの接続を確立していなくてもクエリの編集は行えますが、他のほとんどのタスクの場合には接続が必要です。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] では **[サーバーへの接続]** ダイアログ ボックスを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントへの接続プロパティを設定できます。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] の起動時には **[サーバーへの接続]** ダイアログ ボックスが表示され、サーバーへの接続を求められます。 **[サーバーへの接続]** ダイアログ ボックスには最後に使用したときの接続設定が保持されます。  
   
@@ -50,5 +50,5 @@ ms.locfileid: "68265127"
   
 ## <a name="see-also"></a>参照  
 [SQL Server Management Studio の使用 [SQL Server]](../../ssms/use-sql-server-management-studio.md)  
-[オブジェクト エクスプローラー](../../ssms/object/object-explorer.md)  
+[[オブジェクト エクスプローラー]](../../ssms/object/object-explorer.md)  
   

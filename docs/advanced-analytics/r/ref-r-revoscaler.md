@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 7b24d5499e618a09c4d80e8614b08219e6c6f788
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73706763"
 ---
 # <a name="revoscaler-r-library-in-sql-server"></a>RevoScaleR (SQL Server の R ライブラリ)
@@ -36,7 +36,7 @@ RevoScaleR は、分散データ サイエンスのプラットフォームと�
 **RevoScaleR** ライブラリは R 3.4.3 に基づいており、次のいずれかの Microsoft 製品またはダウンロードをインストールした場合にのみ利用できます。
 
 + [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)
-+ [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)
++ [SQL Server Machine Learning サービス](../install/sql-machine-learning-services-windows-install.md)
 + [Microsoft Machine Learning Server 9.2.0 以降](https://docs.microsoft.com/machine-learning-server/)
 + [Microsoft R Client](set-up-a-data-science-client.md)
 
@@ -53,7 +53,7 @@ RevoScaleR は、分散データ サイエンスのプラットフォームと�
 
 SQL Server と R では、場合によっては異なるデータ型が使用されます。 SQL のデータ型と R のデータ型の対応表が必要であれば、[R と SQL のデータ型マッピング](r-libraries-and-data-types.md) ページを参照してください。
 
-| 機能| [説明]|
+| Function| 説明|
 | ------- | ---------- |
 | [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) |  SQL Server 計算コンテキスト オブジェクトを作成し、リモート インスタンスに計算をプッシュします。 一部の **RevoScaleR** 関数では、計算コンテキストが引数として受け取られます。 |
 |[rxGetComputeContext / rxSetComputeContext](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext) | アクティブな計算コンテキストを取得または設定します。 |
@@ -68,7 +68,7 @@ SQL Server と R では、場合によっては異なるデータ型が使用さ
 
 インスタンスとデータベースに対する必要なアクセス許可がある場合は、DDL ステートメントを R から実行できます。 次の関数では、ODBC 呼び出しを使用し、DDL ステートメントを実行したり、データベース スキーマを取得したりします。
 
-| 機能| [説明]|
+| Function| 説明|
 | ------- | ---------- |
 | [rxSqlServerTableExists と rxSqlServerDropTable](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdroptable) | [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] テーブルを削除するか、データベース テーブルまたはオブジェクトの存在を確認します。 |
 | [rxExecuteSQLDDL](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxexecutesqlddl) | データベース オブジェクトを定義または操作するデータ定義言語 (DDL) コマンドを実行します。 この関数ではデータを返すことができず、オブジェクト スキーマまたはメタデータを取得または変更する目的でのみ使用されます。|
@@ -77,7 +77,7 @@ SQL Server と R では、場合によっては異なるデータ型が使用さ
 
 データ ソース オブジェクトを作成したら、そのオブジェクトを使用し、それにデータを読み込んだり、データを変換したり、指定の宛先に新しいデータを書き込んだりできます。 ソースのデータのサイズによりますが、データ ソースの一部としてバッチ サイズを定義し、データをチャンク単位で動かすことができます。
 
-| 機能 | [説明] |
+| Function | 説明 |
 |----------|-------------|
 | [rxOpen-methods](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxopen-methods) | データ ソースを利用できるかどうかを確認します。データ ソースを開いたり、閉じたりします。ソースからデータを読み取ります。ターゲットにデータを書き込みます。データ ソースを閉じます。|
 | [rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport) | データ ソースからファイル ストレージまたはデータ フレームにデータを移動します。|
@@ -87,7 +87,7 @@ SQL Server と R では、場合によっては異なるデータ型が使用さ
 
 ## <a name="3-graphing-functions"></a>3 - グラフ作成関数
 
-| 関数名 | [説明] |
+| 関数名 | 説明 |
 |---------------|-------------|
 |[rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram)  |データからヒストグラムを作成します。 | 
 |[rxLinePlot](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlineplot) |データから折れ線グラフを作成します。 | 
@@ -98,7 +98,7 @@ SQL Server と R では、場合によっては異なるデータ型が使用さ
 
 ## <a name="4-descriptive-statistics"></a>4 - 説明的統計
 
-| 関数名 | [説明] |
+| 関数名 | 説明 |
 |---------------|-------------|
 |[rxQuantile](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxquantile) <sup>*</sup> |並べ替えなしで、.xdf ファイルとデータ フレームのおおよその変位値を計算します。 | 
 |[rxSummary](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsummary) <sup>*</sup> |グループごとの計算を含む、データの基本概要統計。 .xdf ファイルにグループ別の計算を書き込むことはできません。 | 
@@ -119,7 +119,7 @@ SQL Server と R では、場合によっては異なるデータ型が使用さ
 
 ## <a name="5-prediction-functions"></a>5 - 予測関数
 
-| 関数名 | [説明] |
+| 関数名 | 説明 |
 |---------------|-------------|
 |[rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod) <sup>*</sup> |線形モデルをデータに適合させます。 | 
 |[rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit) <sup>*</sup> |ロジスティック回帰モデルをデータに適合させます。 | 

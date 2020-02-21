@@ -1,6 +1,6 @@
 ---
 title: チュートリアルの NYC タクシーのデモ データ
-description: ニューヨーク市のタクシーのサンプル データをダウンロードし、データベースを作成するための手順です。 データは SQL Server Python および R 言語のチュートリアルで使用され、SQL Server ストアド プロシージャおよび T-SQL 関数にスクリプトを埋め込む方法を示します。
+description: ニューヨーク市のタクシーのサンプル データを含むデータベースを作成します。 このデータセットは、SQL Server Machine Learning Services 用の R および Python チュートリアルで使用されます。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/31/2018
@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8413456563a85f9c126dd9981e3e6df548cd30c4
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: e55076a539cb2a932c2f1e0c432daf774899518f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727158"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74908921"
 ---
 # <a name="nyc-taxi-demo-data-for-sql-server-python-and-r-tutorials"></a>SQL Server Python および R チュートリアル用の NYC タクシー のデモ データ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "73727158"
 
 5. **[デバイスから]** をクリックし、[ファイルの選択] ページを開いてバックアップ ファイルを選択します。 **[追加]** をクリックして、NYCTaxi_Sample.bak を選択します。
 
-6. **[復元]** チェックボックスをオンにし、[OK] をクリックしてデータベースを復元します。
+6. **[復元]** チェックボックスをオンにし、 **[OK]** をクリックしてデータベースを復元します。
 
 ## <a name="review-database-objects"></a>データベース オブジェクトの確認
    
@@ -56,7 +56,7 @@ ms.locfileid: "73727158"
 
 次の表は、NYC タクシー デモ データベースで作成されたオブジェクトをまとめたものです。
 
-|**オブジェクト名です。**|**オブジェクトの種類**|**[説明]**|
+|**オブジェクト名です。**|**オブジェクトの種類**|**説明**|
 |----------|------------------------|---------------|
 |**NYCTaxi_Sample** | [データベース] | データベースと 2 つのテーブルを作成します。<br /><br />dbo. nyctaxi_sample テーブル:メインの NYC タクシー データセットを格納します。 ストレージとクエリのパフォーマンスを向上させるために、クラスター化列ストア インデックスをテーブルに追加します。 NYC タクシー データセットの 1% のサンプルが、このテーブルに挿入されます。<br /><br />dbo.nyc_taxi_models テーブル:トレーニング済みの Advanced Analytics モデルを保持するために使用します。|
 |**fnCalculateDistance** |スカラー値関数 (scalar-valued function) | 乗車と降車の場所間の直線距離を計算します。 この関数は、[データ機能の作成](sqldev-create-data-features-using-t-sql.md)、[モデルのトレーニングと保存](sqldev-train-and-save-a-model-using-t-sql.md)、[R モデルの運用](sqldev-operationalize-the-model.md)に使用されます。|
@@ -65,7 +65,7 @@ ms.locfileid: "73727158"
 
 ストアド プロシージャは、さまざまなチュートリアルに記載されている R および Python スクリプトを使用して作成されます。 次のテーブルは、さまざまなレッスンでスクリプトを実行するときに、必要に応じて NYC タクシー デモ データベースに追加できるストアド プロシージャをまとめたものです。
 
-|**ストアド プロシージャ**|**言語**|**[説明]**|
+|**ストアド プロシージャ**|**Language**|**説明**|
 |-------------------------|------------|---------------|
 |**RxPlotHistogram** |R | 変数のヒストグラムをプロットする RevoScaleR rxHistogram 関数を呼び出し、バイナリ オブジェクトとしてプロットを返します。 このストアド プロシージャは、[データの調査と視覚化](sqldev-explore-and-visualize-the-data.md)のために使用されます。|
 |**RPlotRHist** |R| Hist 関数を使用してグラフィックを作成し、出力をローカル PDF ファイルとして保存します。 このストアド プロシージャは、[データの調査と視覚化](sqldev-explore-and-visualize-the-data.md)のために使用されます。|
@@ -99,9 +99,9 @@ ms.locfileid: "73727158"
     ````
 結果は、次のスクリーンショットに示すようになります。
 
-  ![テーブルの概要情報](media/nyctaxidatatablesummary.png "クエリ結果")
+  ![テーブルの概要情報](media/nyctaxidatatablesummary.png "Query results")
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 NYC タクシー サンプル データをハンズオン学習で使用できるようになりました。
 

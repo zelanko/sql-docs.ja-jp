@@ -1,10 +1,7 @@
 ---
-title: プロキシ エディター - [プリンシパルの追加] | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
+title: プロキシ エディター - [プリンシパルの追加]
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -12,15 +9,20 @@ f1_keywords:
 ms.assetid: 9d33749f-9653-4691-9a0f-06ed7dd6166f
 author: markingmyname
 ms.author: maghan
+ms.manager: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 17f528cb340e42d6445e6ef0d54fc33901061fe6
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 17811051ed091d3c091a9e6c354afdb38759ebb4
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263102"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247372"
 ---
 # <a name="proxy-editor---add-principal"></a>プロキシ エディター - [プリンシパルの追加]
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
@@ -29,13 +31,13 @@ ms.locfileid: "68263102"
 このページを使用すると、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント プロキシ アカウントにサーバー プリンシパル アクセス権を付与できます。  
   
 ## <a name="options"></a>オプション  
-**[プリンシパルの種類]**  
+**プリンシパルの種類**  
 表示するプリンシパルの種類を入力します。  
   
 **[利用可能なプリンシパル]**  
 選択対象のプリンシパルの種類を一覧表示します。  
   
-**[名前]**  
+**Name**  
 アクセス権を与える対象プリンシパルの名前を選択するか、 **[名前]** を選択して一覧内のすべてのプリンシパルにアクセス権を与えます。  
   
 ## <a name="see-also"></a>参照  

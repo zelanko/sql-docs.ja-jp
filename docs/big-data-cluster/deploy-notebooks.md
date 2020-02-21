@@ -1,22 +1,23 @@
 ---
-title: Azure Data Studio ノートブックを使用して SQL Server ビッグ データ クラスターを展開する
-titleSuffix: Deploy SQL Server big data cluster cluster with Azure Data Studio notebooks
+title: '展開: Azure Data Studio ノートブック'
+titleSuffix: SQL Server Big Data Clusters
 description: Azure Data Studio からノートブックを使用して、ビッグ データ クラスターを展開します。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: dfdf7dfd2ca5521bd80c4fdbf81e7b5c45d58b8d
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: e11a4ac0bcbb66d6b3216d8c2f7a4a3b15cedfb8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594242"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246867"
 ---
-# <a name="deploy-sql-server-big-data-cluster-with-azure-data-studio-notebooks"></a>Azure Data Studio ノートブックを使用して SQL Server ビッグ データ クラスターを展開する
+# <a name="deploy-sql-server-big-data-cluster-with-azure-data-studio-notebook"></a>Azure Data Studio ノートブックを使用して SQL Server ビッグ データ クラスターを展開する
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -26,7 +27,7 @@ ms.locfileid: "73594242"
 
 ノートブックを使用して、[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] に対してビッグ データ クラスターを展開できます。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 ノートブックも起動するには、次の前提条件が要件です。
 
@@ -42,17 +43,17 @@ ms.locfileid: "73594242"
 
 1. Azure Data Studio を起動します。
 
-2. **[接続]** タブで、省略記号 **[...]** を選択し、**[Deploy SQL Server...]\(SQL Server の展開...\)** を選択します。
+2. **[接続]** タブで、省略記号 **[...]** を選択し、 **[Deploy SQL Server...]\(SQL Server の展開...\)** を選択します。
 
    ![SQL Server を展開する](media/deploy-notebooks/deploy-notebooks.png)
 
-3. 展開のオプションで、**[SQL Server Big Data Cluster]\(SQL Server ビッグ データ クラスター\)** を選択します。
+3. 展開のオプションで、 **[SQL Server Big Data Cluster]\(SQL Server ビッグ データ クラスター\)** を選択します。
 
-4. **[オプション]** 下にある **[展開ターゲット]** から、**[New Azure Kubernetes Cluster]\(新しい Azure Kubernetes クラスター\)** または **[Existing Azure Kubernetes Service cluster]\(既存の Azure Kubernetes Service クラスター\)** のどちらかを選択します。
+4. **[オプション]** 下にある **[展開ターゲット]** から、 **[New Azure Kubernetes Cluster]\(新しい Azure Kubernetes クラスター\)** または **[Existing Azure Kubernetes Service cluster]\(既存の Azure Kubernetes Service クラスター\)** のどちらかを選択します。
 
 5. プライバシーとライセンス条項に同意する
 
-6. このダイアログでは、選択した種類の SQL 展開に必要なツールがホストに存在するかどうかも確認されます。 ツールの確認が成功するまで、**[選択]** ボタンは有効になりません。
+6. このダイアログでは、選択した種類の SQL 展開に必要なツールがホストに存在するかどうかも確認されます。 ツールの確認が成功するまで、 **[選択]** ボタンは有効になりません。
 
 7. **[選択]** ボタンを選択します。 この操作により、展開エクスペリエンスが起動されます。
 
@@ -93,7 +94,7 @@ ms.locfileid: "73594242"
 
 ### <a name="service-settings"></a>サービスの設定
 
-この画面には、**スケール**、**エンドポイント**、**ストレージ**、その他の**詳細なストレージ設定**など、さまざまな設定の入力があります。 適切な値を入力し、**[次へ]** を選択してください。
+この画面には、**スケール**、**エンドポイント**、**ストレージ**、その他の**詳細なストレージ設定**など、さまざまな設定の入力があります。 適切な値を入力し、 **[次へ]** を選択してください。
 
 #### <a name="scale-settings"></a>スケールの設定
 
@@ -111,11 +112,11 @@ Spark インスタンスは HDFS に含めることができます。 それは�
 
    ![エンドポイントの設定](media/deploy-notebooks/endpoint-settings.png)
 
-#### <a name="storage-settings"></a>ストレージ設定
+#### <a name="storage-settings"></a>ストレージの設定
 
 ストレージの設定には、データとログのストレージ クラスおよび要求サイズが含まれます。 設定は、ストレージ、データ、および SQL Server のマスター プール全体に適用できます。
 
-   ![ストレージ設定](media/deploy-notebooks/storage-settings.png)
+   ![ストレージの設定](media/deploy-notebooks/storage-settings.png)
 
 #### <a name="advanced-storage-settings"></a>詳細なストレージ設定
 
@@ -129,10 +130,10 @@ Spark インスタンスは HDFS に含めることができます。 それは�
 
 ### <a name="summary"></a>まとめ
 
-この画面には、SQL Server 2019 ビッグ データ クラスターを展開するために指定したすべての入力がまとめられています。 **[Save config files]\(構成ファイルの保存\)** ボタンを使用して、構成ファイルをダウンロードできます。 展開の構成全体をノートブックにスクリプト化するには、**[Script to Notebook]\(ノートブックにスクリプト化\)** を選択します。 ノートブックを開き、**[Run Cells]\(セルの実行\)** を選択して、選択したターゲットへの SQL Server 2019 BDC の展開を始めます。
+この画面には、SQL Server 2019 ビッグ データ クラスターを展開するために指定したすべての入力がまとめられています。 **[Save config files]\(構成ファイルの保存\)** ボタンを使用して、構成ファイルをダウンロードできます。 展開の構成全体をノートブックにスクリプト化するには、 **[Script to Notebook]\(ノートブックにスクリプト化\)** を選択します。 ノートブックを開き、 **[Run Cells]\(セルの実行\)** を選択して、選択したターゲットへの SQL Server 2019 BDC の展開を始めます。
 
    ![まとめ](media/deploy-notebooks/deploy-sql-server-big-data-cluster-on-a-new-AKS-cluster.png)
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 展開の詳細については、[SQL Server ビッグ データ クラスターの展開ガイダンス](deployment-guidance.md)に関するページを参照してください。

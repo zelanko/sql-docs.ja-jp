@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1e58c1c2-5ecf-4ce6-9d04-0a8acfba17be
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1045f9a0c271ee4c3befe434a3eef50f0edee6df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 9f5ed3f000f13d965d9f45c853d831e18d5dd4e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65573208"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190865"
 ---
 # <a name="create-modify-and-delete-shared-data-sources-ssrs"></a>共有データ ソースを作成、変更、および削除する (SSRS)
   共有データ ソースは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーで実行される複数のレポート、モデル、およびデータ ドリブン サブスクリプションから参照できる一連のデータ ソース接続プロパティの集まりです。  共有データ ソースを使用することで、時間の経過に伴って変更されることの多いデータ ソースのプロパティを容易に管理できます。 ユーザーのアカウントまたはパスワードが変更された場合や、データベースを別のサーバーに移動した場合は、接続情報を 1 か所で更新できます。  
@@ -30,12 +30,12 @@ ms.locfileid: "65573208"
   
  共有データ ソースは、次の要素で構成されます。  
   
-|要素|[説明]|  
+|要素|説明|  
 |----------|-----------------|  
-|[オブジェクト名]|レポート サーバーのフォルダー階層内にあるアイテムを識別する名前。|  
-|[説明]|Web ポータルでフォルダーの内容を参照したときに、アイテムと共に表示される説明です。|  
+|Name|レポート サーバーのフォルダー階層内にあるアイテムを識別する名前。|  
+|説明|Web ポータルでフォルダーの内容を参照したときに、アイテムと共に表示される説明です。|  
 |接続の種類|データ ソースで使用するデータ処理拡張機能です。 レポート サーバーに配置されているデータ処理拡張機能のみ使用できます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] に含まれているデータ処理拡張機能については、「[Reporting Services でサポートされるデータ ソース &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)」を参照してください。|  
-|[接続文字列]|データベースの接続文字列です。 よく使われるデータ ソースの接続文字列の詳細と例を確認するには、「 [データ接続、データ ソース、および接続文字列 (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)」を参照してください。|  
+|接続文字列|データベースの接続文字列です。 よく使われるデータ ソースの接続文字列の詳細と例を確認するには、「[データ接続文字列を作成する - レポート ビルダーおよび SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)」を参照してください。|  
 |資格情報の種類|接続に必要な資格情報をどのように取得するか、および、接続の確立後もそれらを使用するかどうかを指定します。 詳細については、「 [レポート データ ソースに関する資格情報と接続情報を指定する](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)」をご覧ください。|  
   
  共有データ ソースには、データの取得に使用するクエリ情報が含まれません。 クエリは、常にレポート定義内に保持されます。  
@@ -103,7 +103,7 @@ ms.locfileid: "65573208"
     > [!NOTE]  
     >  [接続テスト] ボタンは、XML データ ソースの種類ではサポートされません。  
   
-10. **[OK]** をクリックします。  
+10. **[OK]**  
   
  **Web ポータルで共有データ ソースを変更するには**  
   
@@ -161,13 +161,13 @@ ms.locfileid: "65573208"
 2.  **[新しいドキュメント]** メニューの **[レポート データ ソース]** をクリックします。  
   
     > [!NOTE]  
-    >  メニューに **[レポート データ ソース]** アイテムが表示されない場合は、レポート データ ソースのコンテンツ タイプが有効化されていません。 詳細については、「 [SharePoint ライブラリへの Reporting Services のコンテンツの種類の追加](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)」を参照してください。  
+    >  メニューに **[レポート データ ソース]** アイテムが表示されない場合は、レポート データ ソースのコンテンツ タイプが有効化されていません。 詳細については、「 [SharePoint ライブラリへの Reporting Services のコンテンツの種類の追加](../../reporting-services/report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)」をご覧ください。  
   
 3.  **[名前]** に、.rsds ファイルに付けるわかりやすい名前を入力します。  
   
 4.  **[データ ソースの種類]** で、一覧からデータ ソースの種類を選択します。 詳細については、「[Reporting Services でサポートされるデータ ソース &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)」をご覧ください。  
   
-5.  **[接続文字列]** で、外部データ ソースへの接続を確立するために必要な設定として、データ ソースへのポインターなどを指定します。 使用するデータ ソースの種類によって、接続文字列の構文が異なります。 詳細と例については、「 [データ接続、データ ソース、および接続文字列 (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)」を参照してください。  
+5.  **[接続文字列]** で、外部データ ソースへの接続を確立するために必要な設定として、データ ソースへのポインターなどを指定します。 使用するデータ ソースの種類によって、接続文字列の構文が異なります。 詳細および例については、「[データ接続文字列を作成する - レポート ビルダーおよび SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)」を参照してください。  
   
 6.  **[資格情報]** で、外部データ ソースにアクセスする際にレポート サーバーが資格情報を取得する方法を指定します。 資格情報は、自動レポート処理用に保存、要求、統合、または構成できます。  
   
@@ -214,7 +214,7 @@ ms.locfileid: "65573208"
      レポート モデルの依存アイテムの一覧には、レポート ビルダーで作成したレポートが表示されます。 共有データ ソースの依存アイテムの一覧には、レポートとレポート モデルの両方が表示される場合があります。  
   
 ## <a name="see-also"></a>参照  
- [データ接続、データ ソース、および接続文字列 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
+ [データ接続文字列を作成する - レポート ビルダーおよび SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [レポート データ ソースを管理する](../../reporting-services/report-data/manage-report-data-sources.md)   
  [ページ分割されたレポートのデータ ソースのプロパティを構成する](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
   

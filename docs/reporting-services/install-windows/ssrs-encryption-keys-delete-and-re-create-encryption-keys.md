@@ -1,11 +1,13 @@
 ---
-title: 暗号化キーの削除と再作成 (SSRS 構成マネージャー) | Microsoft Docs
-ms.date: 05/31/2016
+title: 暗号化キーの削除と再作成 (構成マネージャー) | Microsoft Docs
+description: 暗号化キーの削除および再作成は、日常の暗号化キー メンテナンスには該当しない作業です。
+ms.date: 12/04/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
+ms.custom: seo-lt-2019, seo-mmd-2019
 ms.topic: conceptual
 helpviewer_keywords:
-- re-creating encryption keys
+- recreating encryption keys
 - encryption keys [Reporting Services]
 - deleting encryption keys
 - symmetric keys [Reporting Services]
@@ -14,28 +16,28 @@ helpviewer_keywords:
 ms.assetid: 201afe5f-acc9-4a37-b5ec-121dc7df2a61
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5bf83ea3eb7ed7f4ef28872b964449d2924aab48
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.openlocfilehash: 13f0237a987a87087f04da88f4a21173611c4437
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73593533"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74866305"
 ---
-# <a name="ssrs-encryption-keys---delete-and-re-create-encryption-keys"></a>SSRS の暗号化キー - 暗号化キーの削除と再作成
+# <a name="delete-and-recreate-encryption-keys-ssrs-configuration-manager"></a>暗号化キーの削除と再作成 (SSRS 構成マネージャー)
   暗号化キーの削除および再作成は、日常の暗号化キー メンテナンスには該当しない作業です。 レポート サーバーに対する特定の脅威への対処、またはレポート サーバー データベースにアクセスできなくなったときの最後の手段としてこの作業を行ってください。  
   
--   既存の対称キーに障害が発生したと考えられる場合は対称キーを再作成します。 セキュリティを重視する場合は、定期的にキーを再作成することもできます。  
+-   既存の対称キーが侵害されたと思われる場合は、対称キーを再作成します。 セキュリティのベスト プラクティスとして、定期的にキーを再作成することもできます。  
   
 -   対称キーを復元できない場合は、既存の暗号化キーと使用できない暗号化コンテンツを削除します。  
   
-## <a name="re-creating-encryption-keys"></a>暗号化キーの再作成  
- 対称キーが不正なユーザーに知られた場合、またはレポート サーバーが攻撃を受けたために予防策として対称キーの再設定が必要な場合、対称キーを再作成することができます。 対称キーを再作成すると、暗号化されたすべての値が新しい値で再暗号化されます。 スケールアウト配置で複数のレポート サーバーを実行している場合、対称キーのすべてのコピーが新しい値に更新されます。 レポート サーバーは利用可能な公開キーを使用して、配置を構成する各サーバーの対称キーを更新します。  
+## <a name="recreating-encryption-keys"></a>暗号化キーの再作成  
+ 対称キーが未承認のユーザーに知られている場合、またはレポート サーバーが攻撃を受けたために予防策として対称キーのリセットが必要な場合は、対称キーを再作成することができます。 対称キーを再作成すると、暗号化されたすべての値が新しい値を使用して再暗号化されます。 スケールアウト配置で複数のレポート サーバーを実行している場合、対称キーのすべてのコピーが新しい値に更新されます。 レポート サーバーは利用可能な公開キーを使用して、配置を構成する各サーバーの対称キーを更新します。  
   
  対称キーを再作成できるのは、レポート サーバーが動作中の場合のみです。 暗号化キーの再作成およびコンテンツの再暗号化を実行すると、サーバーの処理が中断されます。 再暗号化の実行中はサーバーをオフラインにする必要があります。 再暗号化中にレポート サーバーに対して要求を送信することはできません。  
   
  対称キーおよび暗号化データを再設定するには、Reporting Services 構成ツールまたは **rskeymgmt** ユーティリティを使用できます。 対称キーの作成方法の詳細については、「[レポート サーバーの初期化 (SSRS 構成マネージャー)](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)」を参照してください。  
   
-### <a name="how-to-re-create-encryption-keys-reporting-services-configuration-tool"></a>暗号化キーの再作成方法 (Reporting Services 構成ツール)  
+### <a name="how-to-recreate-encryption-keys-reporting-services-configuration-tool"></a>暗号化キーの再作成方法 (Reporting Services 構成ツール)  
   
 1.  rsreportserver.confi ファイルで **IsWebServiceEnabled** プロパティを変更することにより、レポート サーバー Web サービスおよび HTTP アクセスを無効にします。 この手順を実行すると、レポート サーバーへの認証要求の送信が一時的に停止されますが、レポート サーバーが完全にシャットダウンされることはありません。 キーを再作成できるように最小限のサービスが必要です。  
   
@@ -55,7 +57,7 @@ ms.locfileid: "73593533"
   
 5.  rsreportserver.confi ファイルで **IsWebServiceEnabled** プロパティを変更することにより、Web サービスおよび HTTP アクセスを再び有効にします。 スケールアウト配置の場合は、すべてのインスタンスについてこの作業を行います。  
   
-### <a name="how-to-re-create-encryption-keys-rskeymgmt"></a>暗号化キーの再作成方法 (rskeymgmt)  
+### <a name="how-to-recreate-encryption-keys-rskeymgmt"></a>暗号化キーの再作成方法 (rskeymgmt)  
   
 1.  レポート サーバー Web サービスおよび HTTP アクセスを無効にします。 上記の手順に従って Web サービスの操作を停止します。  
   

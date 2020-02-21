@@ -1,23 +1,24 @@
 ---
-title: 接続文字列とアクセス許可の概要 | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: 接続文字列とアクセス許可
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: ceff114e-a738-46ad-9785-b6647a2247f9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6ae4fe656cbd299d46960ec9b711de4c51d30a51
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 37e1b0c050da78722422d9bf20e4eae310565ec1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68064791"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243758"
 ---
 # <a name="overview-of-connection-strings-and-permissions"></a>接続文字列とアクセス許可の概要
+
 SQL Server 単体テストを実行するには、1 つまたは 2 つの特定の接続文字列を使用してデータベース サーバーに接続する必要があります。 各接続文字列は、テストの一部として特定のスクリプトでタスクまたはタスク セットを実行するために必要な特定のアクセス許可を保持するアカウントを表します。 これらの文字列は、 **[SQL Server テスト構成]** ダイアログ ボックスで指定するか、テスト プロジェクトの app.config ファイルを手動で編集することにより指定できます。  
   
 ## <a name="connection-strings"></a>接続文字列  
@@ -26,7 +27,7 @@ SQL Server 単体テストを実行するには、1 つまたは 2 つの特定�
 > [!NOTE]  
 > 実行コンテキストと特権コンテキストが異なるのは、SQL Server 認証を使用する場合のみです。 Windows 認証を使用する場合、同じ資格情報が両方の接続文字列に使用されます。  
   
--   実行コンテキスト (必須): テスト スクリプトを実行するためのユーザー アカウントです。 この接続文字列には、ユーザーが保持するのと同じ資格情報が必要です。 これによって適切なアクセス許可がデータベースに適用されていることが確認できるため、これは重要です。 詳細については、「[ソフト NUMA を使用するようにSQL Server の単体テストの実行を構成する方法](../ssdt/how-to-configure-sql-server-unit-test-execution.md)」を参照してください。  
+-   実行コンテキスト (必須): テスト スクリプトを実行するためのユーザー アカウントです。 この接続文字列には、ユーザーが保持するのと同じ資格情報が必要です。 これによって適切なアクセス許可がデータベースに適用されていることが確認できるため、これは重要です。 詳細については、「[SQL Server の単体テストの実行を構成する方法](../ssdt/how-to-configure-sql-server-unit-test-execution.md)」を参照してください。  
   
     テスト プロジェクトの app.config ファイルでは、このアカウントは `ExecutionContext` 要素です。  
   

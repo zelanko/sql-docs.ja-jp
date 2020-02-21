@@ -1,23 +1,24 @@
 ---
-title: 'チュートリアル: モデルの統計を生成するためのデータベース プロジェクトのビルドの拡張 | Microsoft Docs'
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: モデルの統計を生成するためのデータベース プロジェクトのビルドを拡張する
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: d44935ce-63bf-46df-976a-5a54866c8119
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5e1844ae19de96b13b36fad59f5032fe68caaf19
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: fbbedff0adbe0302465344d437f9646bf68d997f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68069010"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242689"
 ---
 # <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>チュートリアル:モデルの統計を生成するためのデータベース プロジェクトのビルドの拡張
+
 ビルド コントリビューターを作成して、データベース プロジェクトのビルド時にカスタム アクションを実行できます。 このチュートリアルでは、データベース プロジェクトのビルド時に SQL データベース モデルから統計を出力する ModelStatistics という名前のビルド コントリビューターを作成します。 このビルド コントリビューターはビルド時にパラメーターを受け取るため、追加のステップが必要となります。  
   
 このチュートリアルでは、次の主なタスクを行います。  
@@ -28,7 +29,7 @@ ms.locfileid: "68069010"
   
 -   [ビルド コントリビューターをテストする](#TestBuildContributor)  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>前提条件  
 このチュートリアルを実行するには、次のコンポーネントが必要です。  
   
 -   C# または VB の開発をサポートする、SQL Server Data Tools (SSDT) を含む Visual Studio のバージョンがインストールされていること。  
@@ -53,7 +54,7 @@ ms.locfileid: "68069010"
   
 このチュートリアルのコントリビューターの例で使用されているコマンドは次のとおりです。  
   
-|**クラス**|**メソッド/プロパティ**|**[説明]**|  
+|**クラス**|**メソッド/プロパティ**|**説明**|  
 |-------------|------------------------|-------------------|  
 |[TSqlModel](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx)|GetObjects()|モデルに対してクエリを実行してオブジェクトを取得します。これは、モデル API に対するメイン エントリ ポイントです。 Table や View などの最上位レベルの型のみに対してクエリを実行できます。Columns などの型は、モデルの走査によってのみ検出できます。 ModelTypeClass フィルターが指定されていない場合は、最上位レベルのすべての型が返されます。|  
 |[TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|GetReferencedRelationshipInstances()|現在の TSqlObject によって参照される要素に対するリレーションシップを検出します。 たとえば、テーブルの場合、テーブルの列などのオブジェクトが返されます。 この場合、ModelRelationshipClass フィルターを使用すると、クエリの実行対象となる正確なリレーションシップを指定できます (たとえば、"Table.Columns" フィルターを使用した場合は列のみが返されます)。<br /><br />GetReferencingRelationshipInstances、GetChildren、GetParent など、類似するメソッドが多数あります。 詳細については、API のドキュメントを参照してください。|  
@@ -74,7 +75,7 @@ ms.locfileid: "68069010"
   
 -   クラス ライブラリ プロジェクトを作成し、必要な参照を追加する。  
   
--   [BuildContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx)から継承する ModelStatistics という名前のクラスを定義する。  
+-   [BuildContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx) から継承する ModelStatistics という名前のクラスを定義する。  
   
 -   OnExecute メソッドをオーバーライドする。  
   
@@ -587,7 +588,7 @@ Relationships
   
     報告された結果は、XML ファイルにも保存されます。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>次の手順  
 出力 XML ファイルの処理を実行するには、追加のツールを作成できます。 これは、ビルド コントリビューターの一例にすぎません。 たとえば、ビルドの一部としてデータ辞書ファイルを出力するビルド コントリビューターを作成できます。  
   
 ## <a name="see-also"></a>参照  

@@ -9,20 +9,20 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2bbb4c05a6760709fcb873cd8c39f301c37aeb2b
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.openlocfilehash: 02c3e6e217ea2918ab36829d6f0cceb4a6269e81
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73706359"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190386"
 ---
-# <a name="get-started-with-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]の使用を開始する
+# <a name="get-started-with-big-data-clusters-2019"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]の使用を開始する
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 この記事では、[[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md)を展開する方法の概要を示します。
 
-その他の展開シナリオについては、以下を参照してください。
+その他の展開シナリオは次のとおりです。
 
 - [Windows](../database-engine/install-windows/install-sql-server.md)
 - [Linux](../linux/sql-server-linux-setup.md)
@@ -33,11 +33,16 @@ ms.locfileid: "73706359"
 > [!TIP]
 > Kubernetes とビッグ データ クラスターが展開された環境を迅速に取得して、その機能を向上させるには、[スクリプト セクション](#scripts)に示されているサンプル スクリプトの 1 つを使用します。 展開後、クラスターを管理するには、次のセクションの[クライアント ツール](#tools)を使用します。
 
+ビッグ データ クラスターの展開方法の概要については、この 9 分間のビデオをご覧ください。
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Big-Data-Clusters-deployment-overview/player?WT.mc_id=dataexposed-c9-niner]
+
+
 ## <a id="tools"></a> クライアント ツール
 
 ビッグ データ クラスターには、特定のクライアント ツール セットが必要です。 Kubernetes にビッグ データ クラスターを展開する前に、次のツールをインストールする必要があります。
 
-| ツール | [説明] |
+| ツール | 説明 |
 |---|---|
 | **azdata** | ビッグ データ クラスターを展開して管理します。 |
 | **kubectl** | 基になる Kubernetes クラスターを作成して管理します。 |
@@ -80,6 +85,6 @@ Azure Data Studio ノートブックを実行して、ビッグ データ クラ
 
 - 「[Azure Data Studio ノートブックを使用して SQL Server ビッグ データ クラスターを展開する](deploy-notebooks.md)」。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 ビッグ データ クラスターを正常に展開した後は、[クラスターに接続](connect-to-big-data-cluster.md)して、複数のチュートリアルに使用する[サンプル データを読み込む](tutorial-load-sample-data.md)ことを検討してください。

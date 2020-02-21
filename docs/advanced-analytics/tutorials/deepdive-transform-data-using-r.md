@@ -1,6 +1,6 @@
 ---
 title: RevoScaleR を使用してデータを変換する
-description: このチュートリアルは、SQL Server で R 言語を使用してデータを変換する方法について詳しく説明しています。
+description: RevoScaleR チュートリアル 9:SQL Server で R 言語を使用してデータを変換する方法。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 773607c7800ed1d507aa721ca7cf86a03857ab8b
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 3e8c28548ba4fa5f5ad661e3b7b0872ad166b812
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727163"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947193"
 ---
 # <a name="transform-data-using-r-sql-server-and-revoscaler-tutorial"></a>R を使用してデータを変換する (SQL Server と RevoScaleR のチュートリアル)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-このレッスンは、SQL Server で [RevoScaleR 関数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)を使用する方法についての [RevoScaleR チュートリアル](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)の一部です。
+これは、SQL Server で [RevoScaleR 関数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)を使用する方法についての [RevoScaleR チュートリアル シリーズ](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)のチュートリアル 9 です。
 
-このレッスンでは、分析のさまざまな段階におけるデータの変換に関して **RevoScaleR** 関数について説明します。
+このチュートリアルでは、分析のさまざまな段階におけるデータの変換に関して **RevoScaleR** 関数について説明します。
 
 > [!div class="checklist"]
 > * **rxDataStep** を使用してデータ サブセットを作成し変換する
@@ -102,7 +102,7 @@ Var 9: ccFraudProb, Type: numeric
 
 ファクト変数が文字データとしてテーブル `ccScoreOutput2` に書き込まれていることに注意してください。 以降の解析で因子として使用するには、 *colInfo* パラメーターを使用してレベルを指定します。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [rxImport を使用してメモリにデータを読み込む](../../advanced-analytics/tutorials/deepdive-load-data-into-memory-using-rximport.md)

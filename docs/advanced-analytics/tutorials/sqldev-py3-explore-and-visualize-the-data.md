@@ -8,18 +8,18 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ba5f48b7788b6ebec63149175568777e6659017f
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 2aef2ed82803af2a6ca1966cde5f5bf6675ca016
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73725066"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74901845"
 ---
 # <a name="explore-and-visualize-the-data"></a>データの探索および視覚化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-この記事は、[SQL 開発者向けのデータベース内の Python 分析](sqldev-in-database-python-for-sql-developers.md)チュートリアルの一部です。 
+この記事は、[SQL 開発者向けのデータベース内 Python analytics](sqldev-in-database-python-for-sql-developers.md) チュートリアルの一部です。 
 
 この手順では、サンプル データを探索し、いくつかのプロットを生成します。 後で、Python でグラフィックス オブジェクトをシリアル化し、それらのオブジェクトを逆シリアル化してプロットする方法を学習します。
 
@@ -197,7 +197,7 @@ _hack_license_ 列には、タクシー運転手のライセンス番号が含�
   
     ![チップ額と料金の比較](media/sqldev-python-sample-plot.png "チップ額と料金の比較") 
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 [T-SQL を使用してデータ機能を作成する](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 

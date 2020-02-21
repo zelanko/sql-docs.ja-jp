@@ -1,28 +1,29 @@
 ---
-title: SQL Server ビッグ データ クラスター上の Azure Toolkit for IntelliJ で Spark ジョブを実行する
-titleSuffix: SQL Server big data clusters
+title: 'Spark ジョブを実行する: Azure Toolkit for IntelliJ'
+titleSuffix: SQL Server Big Data Clusters
 description: SQL Server ビッグ データ クラスター上の Azure Toolkit for IntelliJ で Spark ジョブを送信します。
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
-ms.date: 08/21/2019
 ms.topic: conceptual
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 59946731dc1e76716b6202dd6f8aa93d777986b3
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 70cdc7e9738abdde2dfaf479320b11a94469f661
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653716"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244080"
 ---
-# <a name="submit-spark-jobs-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-in-intellij"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]上の IntelliJ で Spark ジョブを送信する
+# <a name="submit-spark-jobs-on-big-data-clusters-2019-in-intellij"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]上の IntelliJ で Spark ジョブを送信する
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]の主なシナリオの 1 つは、Spark ジョブを送信する機能です。 Spark ジョブの送信機能では、[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]への参照を含むローカル Jar ファイルまたは Py ファイルを送信できます。 また、HDFS ファイル システムに既に配置されている Jar ファイルまたは Py ファイルを実行することもできます。 
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 - SQL Server ビッグ データ クラスター。
 - Oracle Java Development Kit。 [Oracle Web サイト](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)からインストールできます。
@@ -51,9 +52,9 @@ ms.locfileid: "69653716"
 
 1. IntelliJ IDEA を開始し、プロジェクトを作成します。 **[New Project]\(新しいプロジェクト\)** ダイアログ ボックスで、次の手順を実行します。 
 
-   A. **[Azure Spark/HDInsight]**  >  **[Project with Samples (Scala)]\(サンプル付きのプロジェクト (Scala)\)** を選択します。
+   a. **[Azure Spark/HDInsight]**  >  **[Project with Samples (Scala)]\(サンプル付きのプロジェクト (Scala)\)** を選択します。
 
-   B. **[Build tool]\(ビルド ツール\)** 一覧で、必要に応じて次のいずれかを選択します。
+   b. **[Build tool]\(ビルド ツール\)** 一覧で、必要に応じて次のいずれかを選択します。
 
       * **Maven** (Scala プロジェクト作成ウィザードのサポートの場合)
       * **SBT** (依存関係を管理し、Scala プロジェクトのために構築する場合)
@@ -74,9 +75,9 @@ ms.locfileid: "69653716"
 
     ![Spark SDK の選択](./media/spark-submit-job-intellij-tool-plugin/hdi-new-project.png)
 
-   A. プロジェクトの名前と場所を入力します。
+   a. プロジェクトの名前と場所を入力します。
 
-   B. **[Project SDK]\(プロジェクト SDK\)** ドロップダウン リストで、Spark 2.x クラスターの場合は **[Java 1.8]** を選択し、Spark 1.x クラスターの場合は **[Java 1.7]** を選択します。
+   b. **[Project SDK]\(プロジェクト SDK\)** ドロップダウン リストで、Spark 2.x クラスターの場合は **[Java 1.8]** を選択し、Spark 1.x クラスターの場合は **[Java 1.7]** を選択します。
 
    c. **[Spark version]\(Spark のバージョン\)** ドロップダウン リストで、Scala プロジェクトの作成ウィザードで、Spark SDK と Scala SDK の適切なバージョンが統合されます。 Spark クラスターのバージョンが 2.0 より前の場合は、 **[Spark 1.x]** を選択します。 それ以外の場合は、 **[Spark2.x]** を選択します。 この例では、 **[Spark 2.0.2 (Scala 2.11.8)]** を使用します。
 
@@ -84,9 +85,9 @@ ms.locfileid: "69653716"
 
 7. Spark プロジェクトによって自動的に成果物が作成されます。 成果物を表示するには、次の手順を実行します。
 
-   A. **[File]\(ファイル\)** メニューの **[Project Structure]\(プロジェクト構造\)** をクリックします。
+   a. **[File]\(ファイル\)** メニューの **[Project Structure]\(プロジェクト構造\)** をクリックします。
 
-   B. **[Project Structure]\(プロジェクト構造\)** ダイアログ ボックスで、 **[Artifacts]\(成果物\)** を選択して、作成された既定の成果物を表示します。 プラス記号 ( **+** ) を選択して、独自の成果物を作成することもできます。
+   b. **[Project Structure]\(プロジェクト構造\)** ダイアログ ボックスで、 **[Artifacts]\(成果物\)** を選択して、作成された既定の成果物を表示します。 プラス記号 ( **+** ) を選択して、独自の成果物を作成することもできます。
 
       ![ダイアログ ボックスの成果物情報](./media/spark-submit-job-intellij-tool-plugin/default-artifact.png)
       
@@ -139,7 +140,7 @@ WINUTILS.EXE の前提条件を満たしていることを確認します。
 
 4. 次の値を指定し、 **[OK]** を選択します。
 
-    |プロパティ |[値] |
+    |プロパティ |Value |
     |----|----|
     |ジョブのメイン クラス|既定値は、選択したファイルのメイン クラスです。 クラスを変更するには、省略記号 ( **...** ) をクリックし、別のクラスを選択します。|
     |環境変数|HADOOP_HOME の値が正しいことを確認します。|
@@ -173,7 +174,7 @@ Spark Livy Interactive Session Console(Scala) は、IntelliJ 2018.2 および 20
 
 4. 次の値を指定し、 **[OK]** を選択します。
 
-    |プロパティ |[値] |
+    |プロパティ |Value |
     |----|----|
     |Spark クラスター (Linux のみ)|アプリケーションを実行する SQL Server ビッグ データ クラスターを選択します。|
     |メイン クラス名|既定値は、選択したファイルのメイン クラスです。 クラスを変更するには、省略記号 ( **...** ) をクリックし、別のクラスを選択します。|
@@ -194,5 +195,5 @@ Local Console または Livy Interactive Session Console(Scala) に何らかの�
 
    ![選択内容を Spark コンソールに送信する](./media/spark-submit-job-intellij-tool-plugin/send-selection-to-console.png)
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 SQL Server ビッグ データ クラスターと関連するシナリオの詳細については、[[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]の概要](big-data-cluster-overview.md)に関するページを参照してください。

@@ -1,6 +1,6 @@
 ---
 title: コンソール アプリケーションでのポーリング
-description: ポーリングを使用して、コンソールアプリケーションからの非同期コマンドの実行が完了するまで待機する例を示します。 この手法は、クラスライブラリまたはユーザーインターフェイスを持たない他のアプリケーションでも有効です。
+description: ポーリングを使用して、コンソール アプリケーションから非同期コマンドの実行の完了を待つ方法を示す例を提供します。 この技法はまた、クラス ライブラリや、ユーザー インターフェイスのないその他のアプリケーションでも有効です。
 ms.date: 08/15/2019
 dev_langs:
 - csharp
@@ -9,26 +9,26 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: e8dc5597743a277b53f36d0bfb1487a12cbd80d9
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: bf89d2d111452970955953132edd76e602590668
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452104"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247677"
 ---
 # <a name="polling-in-console-applications"></a>コンソール アプリケーションでのポーリング
 
 ![Download-DownArrow-Circled](../../../ssdt/media/download.png)[ADO.NET をダウンロードする](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-ADO.NET の非同期操作を使用すると、別のスレッドで他のタスクを実行している間に、1つのスレッドで時間のかかるデータベース操作を開始できます。 ただし、ほとんどのシナリオでは、データベース操作が完了するまでアプリケーションが続行されないようにする必要があります。 このような場合は、非同期操作をポーリングして、操作が完了したかどうかを判断すると便利です。  
+ADO.NET の非同期操作を使用すると、あるスレッドの時間のかかるデータベース操作を、別のスレッドで他のタスクを実行している間に開始できます。 ただし、ほとんどの場合、データベース操作が完了するまでの間に、アプリケーションの処理を続行してはいけないポイントに最終的に到達します。 このような場合は、非同期操作をポーリングして操作が完了したかどうかを判断すると便利です。  
   
-<xref:System.IAsyncResult.IsCompleted%2A> プロパティを使用して、操作が完了したかどうかを確認できます。  
+<xref:System.IAsyncResult.IsCompleted%2A> プロパティを使用すると、操作が完了したかどうかを確認できます。  
   
 ## <a name="example"></a>例  
-次のコンソール アプリケーションは、操作を非同期に実行して、**AdventureWorks** サンプル データベース内のデータを更新します。 実行時間の長いプロセスをエミュレートするために、この例では、コマンドテキストに WAITFOR ステートメントを挿入します。 通常は、コマンドの実行速度が遅くなることはありませんが、この場合、非同期動作のデモンストレーションが容易になります。  
+次のコンソール アプリケーションは、操作を非同期に実行して、**AdventureWorks** サンプル データベース内のデータを更新します。 この例では、実行時間の長いプロセスをエミュレートする目的で、コマンド テキストに WAITFOR ステートメントを挿入します。 通常、コマンドの実行を遅くしようとすることはありませんが、この場合は、この処理によって、非同期動作のデモが行いやすくなります。  
   
 ```csharp  
 using System;  
@@ -124,5 +124,5 @@ class Class1
 }  
 ```  
   
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 - [非同期操作](asynchronous-operations.md)

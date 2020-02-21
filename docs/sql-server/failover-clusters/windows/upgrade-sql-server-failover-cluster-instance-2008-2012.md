@@ -1,6 +1,7 @@
 ---
-title: Windows Server 2008/2008 R2/2012 クラスターで実行されている SQL Server インスタンスのアップグレード | Microsoft Docs
-ms.date: 01/25/2018
+title: 'SQL Server インスタンスのアップグレード: Windows Server 2012 以降のクラスター'
+description: Windows Server 2008、Windows Server 2008 R2、および Windows Server 2012 で実行されている SQL Server フェールオーバー クラスター インスタンスをアップグレードする方法について説明します。
+ms.custom: seo-lt-2019
 ms.prod: sql
 ms.technology: high-availability
 ms.topic: conceptual
@@ -10,18 +11,18 @@ helpviewer_keywords:
 - failover clustering [SQL Server], upgrading
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c8825d0d4c8ff0ac6d83b152b8606be6d9fd0cc5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6b9d0c843e9a116a6d89198db22053224c2f1d19
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67904960"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75242852"
 ---
 # <a name="upgrade-sql-server-instances-running-on-windows-server-20082008-r22012-clusters"></a>Windows Server 2008/2008 R2/2012 クラスターで実行されている SQL Server インスタンスのアップグレード
 
 [!INCLUDE[nextref-longhorn-md](../../../includes/nextref-longhorn-md.md)]、[!INCLUDE[winserver2008r2-md](../../../includes/winserver2008r2-md.md)]、[!INCLUDE[win8srv-md](../../../includes/win8srv-md.md)] の場合、クラスターで許可される [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のバージョンが制限され、Windows Server フェールオーバー クラスターでオペレーティング システムのインプレース アップグレードを実行できません。 クラスターを [!INCLUDE[winblue-server-2-md](../../../includes/winblue-server-2-md.md)] 以上にアップグレードすれば、最新の状態に保つことができます。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 -   移行方法のいずれかを実行する前に、Windows Server 2016/2012 R2 で並列 Windows Server フェールオーバー クラスターを準備する必要があります。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンス (FCI) を構成するすべてのノードを、並列 FCI がインストールされている Windows クラスターに結合する必要があります。 移行前に、Windows Server フェールオーバー クラスターにスタンドアロン コンピューターを結合することは**できません**。 移行前に、ユーザー データベースを新しい環境で同期する必要があります。
 -   対象のすべてのインスタンスは、元の環境の並列インスタンスと同じバージョンの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を同じインスタンス名と ID で実行し、同じ機能と共にインストールされる必要があります。 インストール パスとディレクトリ構造は、対象のコンピューターで同じである必要があります。 これには FCI 仮想ネットワーク名は含まれません。移行前は、この名前は異なっている必要があります。 元のインスタンスで有効になっているすべての機能 (Always On、FILESTREAM など) は、対象のインスタンスでも有効にする必要があります。
@@ -282,7 +283,7 @@ SQL FCI インスタンスのみを使用する [!INCLUDE[ssNoVersion](../../../
 
     リモート サービス バインドを使用するすべてのユーザーが適切に移行すると、移行後にリモート サービス バインドは意図したとおりに機能します。
 
-### <a name="includessnoversionincludesssnoversion-mdmd-agent"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント
+### <a name="ssnoversion-agent"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント
 
 -   **ジョブ**
 
@@ -316,7 +317,7 @@ SQL FCI インスタンスのみを使用する [!INCLUDE[ssNoVersion](../../../
 
     フラット ファイル、Excel ファイル、XML ソースなどには、SSIS パッケージで指定されたのと同じ場所からアクセスできる必要があります。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 - [データベース エンジンのアップグレードの完了](../../../database-engine/install-windows/complete-the-database-engine-upgrade.md)
 - [データベース互換性モードの変更とクエリ ストアの使用](../../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)
 - [SQL Server 2016 の新機能を利用する](https://msdn.microsoft.com/library/d8879659-8efa-4442-bcbb-91272647ae16)

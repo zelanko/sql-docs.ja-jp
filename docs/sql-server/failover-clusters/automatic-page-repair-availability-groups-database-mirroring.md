@@ -1,6 +1,7 @@
 ---
-title: 'ページの自動修復 (可用性グループ: データベース ミラーリング) | Microsoft Docs'
-ms.custom: ''
+title: 可用性グループとデータベース ミラーリングのページの自動修復
+description: 'データベースが Always On 可用性グループまたはデータベース ミラーリング リレーションシップに参加している場合、特定の種類のページ破損が自動修復されます。 このトピックでは、エラーの種類とその解決策について説明します。 '
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cf2e3650-5fac-4f34-b50e-d17765578a8e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9e445d15401b747be6bd690e4ae6884a831e66de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7c8d58b7bdc836f44871560c0d1e9908d1f72f23
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68035274"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74822644"
 ---
 # <a name="automatic-page-repair-availability-groups-database-mirroring"></a>ページの自動修復 (可用性グループ: データベース ミラーリング)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +47,7 @@ ms.locfileid: "68035274"
 ##  <a name="ErrorTypes"></a> ページの自動修復が試行されるエラーの種類  
  次の表に示すいずれかのエラーが原因でデータ ファイル操作が失敗した場合のみ、そのページにデータベース ミラーリングの自動修復が適用されます。  
   
-|エラー番号|[説明]|ページの自動修復の原因となるインスタンス|  
+|エラー番号|説明|ページの自動修復の原因となるインスタンス|  
 |------------------|-----------------|---------------------------------------------------------|  
 |823|オペレーティング システムがデータの巡回冗長検査 (CRC) を実行し、それに失敗した場合のみ処理が行われます。|ERROR_CRC。 このエラーのオペレーティング システムの値は 23 です。|  
 |824|論理エラー。|破損した書き込みや不適切なページ チェックサムなどの論理データ エラー。|  

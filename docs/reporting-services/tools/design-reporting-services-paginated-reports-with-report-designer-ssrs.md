@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 27da48f6d124baed5202d5cb75e8086b97fc684e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: a7195055e95abe07770633ec672d746c5927054d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65577868"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190439"
 ---
 # <a name="design-reporting-services-paginated-reports-with-report-designer-ssrs"></a>レポート デザイナーを使用して Reporting Services の改ページ調整されたレポートをデザインする (SSRS)
 
@@ -44,7 +44,7 @@ ms.locfileid: "65577868"
   
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] はクライアント ツールです。 レポート ソリューションをローカル コンピューターでテストし、サーバー ソリューションをテストするためにテスト環境に配置した後、運用環境に配置できます。 配置後、データ ソース処理拡張機能とデータ ソース資格情報がレポート サーバー環境用に構成されていることを確認します。 構成マネージャーを使用すると、さまざまな配置のプロパティを管理できます。 詳細については、「[SQL Server データ ツールの Reporting Services (SSDT)](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md)」を参照してください。  
   
- 詳細については、「 [データ接続、データ ソース、および接続文字列 (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)」を参照してください。  
+ 詳細については、「[データ接続文字列を作成する - レポート ビルダーおよび SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)」を参照してください。  
    
 ##  <a name="bkmk_SharedDatasets"></a> 共有データセット  
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] を使用して、レポート ソリューションの共有データセットを定義および配置します。 共有データセットは、 **OverwriteDatasets** プロパティおよび **TargetDatasetFolder** プロパティを使用して、プロジェクト内の他のアイテムとは別に配置できます。 詳細については、「[配置プロパティを設定する (Reporting Services)](../../reporting-services/tools/set-deployment-properties-reporting-services.md)」を参照してください。  
@@ -90,7 +90,7 @@ ms.locfileid: "65577868"
  **TargetReportPartFolder** プロパティおよびその他のプロパティを使用して、プロジェクト内の他のアイテムとは別にレポート パーツを配置できます。 詳細については、「[配置プロパティを設定する (Reporting Services)](../../reporting-services/tools/set-deployment-properties-reporting-services.md)」を参照してください。  
   
 ##  <a name="bkmk_Resources"></a> リソース  
- レポートに関連していて、レポート サーバーによって処理されないファイルを、プロジェクトに追加できます。 たとえば、写真の画像や空間データの ESRI シェープファイルを追加できます。 詳しくは、「 [Resources](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md#bkmk_Resources)」をご覧ください。  
+ レポートに関連していて、レポート サーバーによって処理されないファイルを、プロジェクトに追加できます。 たとえば、写真の画像や空間データの ESRI シェープファイルを追加できます。 詳しくは、[リソース](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md#bkmk_Resources)に関する記事をご覧ください。  
  
 ##  <a name="bkmk_ReportLayout"></a> ページ分割されたレポートのレイアウト  
  レポート レイアウトを作成するには、レポート アイテムとデータ領域をツールボックスからデザイン画面にドラッグして位置を調整します。 レポートにデータを追加するには、データセット フィールドをデザイン画面のアイテムにドラッグします。 Tablix データ領域でデータをグループにまとめるには、データセット フィールドをグループ化ペインにドラッグします。 レポート作成ツールは基本的にレポート定義を作成する方法であるため、レポート ビルダーとレポート デザイナーのレポート デザイン方法は非常に似ています。  
@@ -168,7 +168,7 @@ ms.locfileid: "65577868"
   
  次の表に、エラー レベルを示します。  
   
-|エラー レベル|[説明]|  
+|エラー レベル|説明|  
 |-----------------|-----------------|  
 |0|レポートのプレビューおよび配置を妨げる、最も重大で避けることのできないビルドの問題。|  
 |1|レポートのレイアウトが大幅に変更される重大なビルドの問題。|  
@@ -178,7 +178,7 @@ ms.locfileid: "65577868"
   
  [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]で新しくなったレポート アイテムが含まれるレポートをプレビューまたは配置しようとすると、これらのレポート アイテムはレポートから削除される可能性があります。 既定では、構成の ErrorLevel プロパティは 2 に設定されます。この設定では、マップが削除されると、レポートの作成が失敗する原因となります。 ただし、ErrorLevel プロパティの値を 0 または 1 に変更すると、マップが削除されても、警告が発行され、ビルド プロセスは続行されます。  
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 [SQL Server Data Tools のダウンロード](https://go.microsoft.com/fwlink/?LinkID=616714)  
 [SQL Server Data Tools の Reporting Services](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md)   

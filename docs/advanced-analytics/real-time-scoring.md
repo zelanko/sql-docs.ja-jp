@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 746a9cadfca28aae3bd2781a3daf71aabb8d6e5b
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727326"
 ---
 # <a name="real-time-scoring-with-sp_rxpredict-in-sql-server-machine-learning"></a>SQL Server 機械学習での sp_rxPredict を使用したリアルタイム スコアリング
@@ -34,7 +34,7 @@ ms.locfileid: "73727326"
 3. モデルへの入力として、スコア付けされる新しい入力データ (表形式または単一行) を指定します。
 4. スコアを生成するには、[sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql) ストアド プロシージャを呼び出します。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 + [SQL Server CLR 統合を有効にします](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/introduction-to-sql-server-clr-integration)。
 
@@ -198,6 +198,6 @@ EXEC sp_rxPredict
 
 リアルタイム スコアリング機能を無効にするには、管理者特権でコマンド プロンプトを開き、次のコマンドを実行します。`RegisterRExt.exe /uninstallrts /database:<database_name> [/instance:name]`
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 SQL Server でのスコアリングの詳細な背景情報については、「[SQL Server 機械学習で予測を生成する方法](r/how-to-do-realtime-scoring.md)」を参照してください。

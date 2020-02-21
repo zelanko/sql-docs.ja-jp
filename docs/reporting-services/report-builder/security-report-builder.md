@@ -8,15 +8,15 @@ ms.topic: conceptual
 ms.assetid: ed38291a-6afe-449f-9f32-3ae04502bd6f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: eb1a8021ca269cc5fde423ba9eb6903876f949fc
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.openlocfilehash: e8b89f31330fa09d5dbe1f70fd10b2c473d26c0d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73593842"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190096"
 ---
 # <a name="security-report-builder"></a>セキュリティ (レポート ビルダー)
-  レポート ビルダーは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーと連携するように設計されたレポート作成クライアント アプリケーションです。 レポート サーバーは、ネイティブ モードでスタンドアロン サーバーとして動作するように構成したり、SharePoint 統合モードで SharePoint サイト上のレポートをサポートするように構成したりすることができます。  
+  レポート ビルダーは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーと連携するように設計されたレポート作成クライアント アプリケーションです。 レポート サーバーは、ネイティブ モードでスタンドアロン サーバーとして動作するように構成したり、SharePoint 統合モードで SharePoint サイト上のレポートをサポートするように構成したりすることができます。  
   
  レポート ビルダーでは、レポート、共有データセット、および再利用可能なレポート パーツを作成できます。 レポート サーバーまたは SharePoint サイトから、レポートの編集や共有データ ソース、共有データセット、および共有レポート パーツの追加を実行できます。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "73593842"
   
  共有するためにパブリッシュしたアイテムを他のユーザーが参照して見つけることができるようにするには、レポート サーバー管理者と共に、ユーザーがアクセスできるフォルダー編成を設定する必要があります。 アクセスは、レポートの作成とパブリッシュされたレポートの実行に利用できる必要があります。  
   
- 詳細については、次の各トピックを参照してください。  
+ 詳細については、次のトピックを参照してください。  
   
 -   [ロールと権限 &#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md)  
   
@@ -90,10 +90,10 @@ ms.locfileid: "73593842"
   
  レポートのデザイン時は、データセット クエリの実行とレポートのプレビューに資格情報が使用されます。 実行時は、レポートの実行とクエリ結果のキャッシュに資格情報が使用されます。 共有データセット クエリ結果を個別にキャッシュすることもできます。 デザイン時の資格情報と実行時の資格情報は異なる場合があります。 詳細については、「 [レポート ビルダーでの資格情報の指定](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)」を参照してください。  
   
- データのセキュリティ保護の詳細については、「 [SQL Server データベースエンジンと Azure SQL Database の Security Center](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)」を参照してください。 
+ データのセキュリティ保護の詳細については、「[SQL Server データベース エンジンと Azure SQL Database のセキュリティ センター](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)」を参照してください。 
   
   
- データ ソースの詳細については、「 [レポート ビルダーでのデータ接続、データ ソース、および接続文字列](../report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)」を参照してください。  
+ データ ソースの詳細については、「[データ接続文字列を作成する - レポート ビルダーおよび SSRS](../report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)」を参照してください。  
   
   
 ##  <a name="Models"></a> モデルとセキュリティ フィルターについて  
@@ -107,7 +107,7 @@ ms.locfileid: "73593842"
   
 -   有効な値を提供する場合を除き、クエリ パラメーターに基づいた、型が **Text** のパラメーターは使用しないでください。 使用可能な値の一覧を使用すると、ユーザーが有効な値しか選択できないようにするのに役立ちます。 使用可能な値の一覧を使用しない場合は、ユーザーが入力できる値を制限できません。  
   
--   個人データをセキュリティで保護するためにグローバルな [&UserID] を使用しないでください。 この値は、レポート パラメーターとして、URL アクセスの構文を使用してレポート URL で指定できます。 この値を共有データセットの式で使用すると、データセットがキャッシュされなくなります。 詳細については、「 [URL アクセスパラメーターリファレンス](../../reporting-services/url-access-parameter-reference.md)」を参照してください。  
+-   個人データをセキュリティで保護するためにグローバルな [&UserID] を使用しないでください。 この値は、レポート パラメーターとして、URL アクセスの構文を使用してレポート URL で指定できます。 この値を共有データセットの式で使用すると、データセットがキャッシュされなくなります。 詳細については、「[URL アクセス パラメーター リファレンス](../../reporting-services/url-access-parameter-reference.md)」を参照してください。  
   
  アイテムがレポート サーバーにパブリッシュされた後に、レポート サーバー管理者は、ロールベースのセキュリティまたはフォルダーおよびアイテム レベルのセキュリティを割り当てることでアイテムをセキュリティで保護できます。 詳細については、「 [レポートとリソースの保護](../../reporting-services/security/secure-reports-and-resources.md)」を参照してください。  
   

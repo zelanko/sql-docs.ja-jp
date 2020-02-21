@@ -1,6 +1,6 @@
 ---
 title: RevoScaleR の概要の統計情報
-description: SQL Server で R 言語を使用して概要の統計情報を計算する方法を説明するチュートリアルです。
+description: 'RevoScaleR チュートリアル 5: SQL Server で R 言語を使用して概要の統計情報を計算する方法。'
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,28 +9,28 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4ece8cdac4f39cfd5d4b93484f18b0d415cc2291
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 43745602fc099f1b992eb1d76622ff3d7e6d0916
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727299"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947281"
 ---
 # <a name="compute-summary-statistics-in-r-sql-server-and-revoscaler-tutorial"></a>R での概要統計情報の計算 (SQL Server および RevoScaleR チュートリアル)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-このレッスンは、SQL Server で [RevoScaleR 関数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)を使用する方法についての [RevoScaleR チュートリアル](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)の一部です。
+これは、SQL Server で [RevoScaleR 関数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)を使用する方法についての [RevoScaleR チュートリアル シリーズ](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)のチュートリアル 5 です。
 
-前のレッスンで作成した確立したデータ ソースとコンピューティング コンテキストを使用して、高性能な R スクリプトを実行します。 このレッスンでは、次のタスクのために、ローカルとリモートのサーバー コンピューティング コンテキストを使用します。
+このチュートリアルでは、前のチュートリアルで作成した確立したデータ ソースとコンピューティング コンテキストを使用して、高性能な R スクリプトを実行します。 このチュートリアルでは、次のタスクのために、ローカルとリモートのサーバー コンピューティング コンテキストを使用します。
 
 > [!div class="checklist"]
 > * コンピューティング コンテキストを SQL Server に切り替える
 > * リモート データ オブジェクトに関する概要の統計情報を取得する
 > * ローカル 概要を計算する
 
-前のレッスンを完了している場合は、sqlCompute および sqlComputeTrace というリモート コンピューティング コンテキストがあるはずです。 この後のレッスンで、sqlCompute とローカル コンピューティング コンテキストを使用します。
+前のチュートリアルを完了している場合は、sqlCompute および sqlComputeTrace というリモート コンピューティング コンテキストがあるはずです。 この後のチュートリアルで、sqlCompute とローカル コンピューティング コンテキストを使用します。
 
-このレッスンでは、R IDE または **Rgui** を使用して R スクリプトを実行します。
+このチュートリアルでは、R IDE または **Rgui** を使用して R スクリプトを実行します。
 
 ## <a name="compute-summary-statistics-on-remote-data"></a>リモート データに関する概要の統計情報を計算する
 
@@ -38,9 +38,9 @@ R コードをリモートで実行する前に、リモート コンピュー�
 
 コンピューティング コンテキストは、変更するまでアクティブな状態が維持されます。 ただし、リモート サーバー コンテキストで実行*できない* R スクリプトは自動的にローカルで実行されます。
 
-コンピューティング コンテキストがどのように動作するかを確認するには、リモート SQL Server で sqlFraudDS データ ソースに関する概要の統計情報を生成します。 このデータ ソース オブジェクトは[レッスン 2](deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md) で作成され、RevoDeepDive データベースの ccFraudSmall テーブルを表しています。 
+コンピューティング コンテキストがどのように動作するかを確認するには、リモート SQL Server で sqlFraudDS データ ソースに関する概要の統計情報を生成します。 このデータ ソース オブジェクトは[チュートリアル 2](deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md) で作成され、RevoDeepDive データベースの ccFraudSmall テーブルを表しています。 
 
-1. 前のレッスンで作成した sqlCompute にコンピューティング コンテキストを切り替えます。
+1. 前のチュートリアルで作成した sqlCompute にコンピューティング コンテキストを切り替えます。
   
     ```R
     rxSetComputeContext(sqlCompute)
@@ -111,13 +111,13 @@ Number of valid observations: 10000
   
    実際の結果は、 **コンピューターのコンテキストで** rxSummary [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行した場合と同じになるはずです。 ただし、処理は速くなる場合と遅くなる場合があります。 データは分析のためのローカル コンピューターに転送されるので、処理速度はデータベースへの接続に左右されます。
 
-4. 次のいくつかのレッスンでは、リモート コンピューティング コンテキストに戻ります。
+4. 次のいくつかのチュートリアルでは、リモート コンピューティング コンテキストに戻ります。
 
     ```R
     rxSetComputeContext(sqlCompute)
     ```
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [R を使用して SQL Server のデータを表示する](../../advanced-analytics/tutorials/deepdive-visualize-sql-server-data-using-r.md)

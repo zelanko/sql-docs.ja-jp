@@ -1,6 +1,6 @@
 ---
 title: RevoScaleR コンピューティング コンテキストを使用する
-description: SQL Server 上で R 言語を使用してコンピューティング コンテキストを定義する方法に関するチュートリアルです。
+description: RevoScaleR チュートリアル 4:SQL Server 上で R 言語を使用してコンピューティング コンテキストを定義する方法。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0ae3f3ac7747410730cb91cf56733130ab9f0abb
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: c90c935f85584f8886ae112d5cfc03759c0a129a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727200"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947223"
 ---
 # <a name="define-and-use-compute-contexts-sql-server-and-revoscaler-tutorial"></a>コンピューティング コンテキストの定義と使用 (SQL Server と RevoScaleR のチュートリアル)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-このレッスンは、SQL Server で [RevoScaleR 関数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)を使用する方法についての [RevoScaleR チュートリアル](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)の一部です。
+これは、SQL Server で [RevoScaleR 関数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)を使用する方法についての [RevoScaleR チュートリアル シリーズ](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)のチュートリアル 4 です。
 
-前のレッスンでは、**RevoScaleR** 関数を使用してデータ オブジェクトを検査しました。 このレッスンでは、リモート SQL Server のコンピューティング コンテキストを定義できる、[RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) 関数について説明します。 リモートのコンピューティング コンテキストを使用すると、ローカル セッションからサーバー上のリモート セッションに R の実行をシフトできます。 
+前のチュートリアルでは、**RevoScaleR** 関数を使用してデータ オブジェクトを検査しました。 このチュートリアルでは、リモート SQL Server のコンピューティング コンテキストを定義できる、[RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) 関数について説明します。 リモートのコンピューティング コンテキストを使用すると、ローカル セッションからサーバー上のリモート セッションに R の実行をシフトできます。 
 
 > [!div class="checklist"]
 > * リモート SQL Server のコンピューティング コンテキストの要素について学ぶ
@@ -108,7 +108,7 @@ SQL Server コンピューティング コンテキストを作成する **RxInS
     rxGetComputeContext()
     ```
 
-7. "local" キーワードを指定して、コンピューティング コンテキストをローカル コンピューターに戻します (次のレッスンでは、リモート コンピューティング コンテキストの使用方法を示します)。
+7. "local" キーワードを指定して、コンピューティング コンテキストをローカル コンピューターに戻します (次のチュートリアルでは、リモート コンピューティング コンテキストの使用方法を示します)。
 
     ```R
     rxSetComputeContext("local")
@@ -141,7 +141,7 @@ SQL Server コンピューティング コンテキストを作成する **RxInS
     rxSetComputeContext(sqlComputeTrace)
     ```
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 サーバーまたはローカルで R コードを実行するように、コンピューティング コンテキストを切り替える方法について説明します。
 

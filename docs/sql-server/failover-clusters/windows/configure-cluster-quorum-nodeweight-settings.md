@@ -1,6 +1,7 @@
 ---
-title: クラスター クォーラムの NodeWeight の設定の構成 | Microsoft Docs
-ms.custom: ''
+title: クラスター クォーラムの NodeWeight の設定を構成する
+descriptoin: Describes how to configure the NodeWeight settings for a member node in a Windows Server Failover Cluster.
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: cb3fd9a6-39a2-4e9c-9157-619bf3db9951
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c42abb37423cd03b4c0233ac44244cdea00708a7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5b7fcc8a38ab33ebb3330826313db70458518d0e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063779"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74822029"
 ---
 # <a name="configure-cluster-quorum-nodeweight-settings"></a>クラスター クォーラムの NodeWeight の設定の構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

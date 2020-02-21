@@ -3,19 +3,19 @@ title: miniCRAN を使用してリポジトリを作成する
 description: miniCRAN パッケージを使用して R パッケージをオフラインでインストールし、パッケージと依存関係のローカル リポジトリを作成する方法について説明します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/15/2019
+ms.date: 11/20/2019
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9b83a0c016cf16e4df8ef7fcb90b3711eabe4933
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: c8ddfcf997cd4cc62f1c65efd7ecfc4cf3aff730
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727575"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74479474"
 ---
 # <a name="create-a-local-r-package-repository-using-minicran"></a>miniCRAN を使用してローカル R パッケージ リポジトリを作成する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "73727575"
 
 - **セキュリティ**:多くの R ユーザーは、CRAN またはそのいずれかのミラー サイトから、新しい R パッケージを任意にダウンロードしてインストールすることに慣れています。 ただし、セキュリティ上の理由により、[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] を実行している実稼働サーバーは、通常、インターネットに接続されていません。
 
-- **オフライン インストールの簡素化**:オフライン サーバーにパッケージをインストールするには、すべてのパッケージの依存関係もダウンロードする必要があります。 miniCRAN を使用すると、すべての依存関係を正しい形式で簡単に取得できます。 miniCRAN を使用すると、[CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) ステートメントを使用してインストールするパッケージを準備するときに、パッケージの依存関係のエラーを回避できます。
+- **オフライン インストールの簡素化**:オフライン サーバーにパッケージをインストールするには、すべてのパッケージの依存関係もダウンロードする必要があります。 miniCRAN を使用すると、簡単にすべての依存関係を正しい形式で取得し、依存関係のエラーを回避できます。
 
 - **バージョン管理の改善**:マルチユーザー環境では、サーバーに複数のパッケージ バージョンを無制限にインストールしないことが適切です。 ローカル リポジトリを使用すると、ユーザーに対して一貫したパッケージのセットを提供できます。
 
@@ -112,6 +112,11 @@ pdb[, c("Package", "Version", "License")]
 
 必要なパッケージを含むローカル リポジトリを作成したら、パッケージ リポジトリを SQL Server コンピューターに移動します。 次の手順では、R ツールを使用してパッケージをインストールする方法について説明します。
 
+::: moniker range=">sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+> [!NOTE]
+> パッケージをインストールするには、**sqlmlutils** を使用することをお勧めします。 「[sqlmlutils で新しい R パッケージをインストールする](install-additional-r-packages-on-sql-server.md)」を参照してください。
+::: moniker-end
+
 1. miniCRAN リポジトリが格納されているフォルダー全体を、パッケージのインストール先のサーバーにコピーします。 通常、このフォルダーは次の構造を持ちます。 
 
    `<miniCRAN root>/bin/windows/contrib/version/<all packages>`
@@ -124,7 +129,7 @@ pdb[, c("Package", "Version", "License")]
    - たとえば、RGUI の既定のファイルの場所は `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64` です。
    ::: moniker-end
 
-   ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+   ::: moniker range"=sql-server-2017||=sqlallproducts-allversions"
    - たとえば、RGUI のファイルの場所は `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64` です。
    ::: moniker-end
 
@@ -135,7 +140,7 @@ pdb[, c("Package", "Version", "License")]
 3. インスタンス ライブラリのパスを取得し、ライブラリ パスの一覧に追加します。
 
    ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-   例を次に示します。
+   たとえば、次のように入力します。
 
    ```R
    outputlib <- "C:/Program Files/Microsoft SQL Server/MSSQL13.MSSQLSERVER/R_SERVICES/library"
@@ -144,7 +149,7 @@ pdb[, c("Package", "Version", "License")]
    ::: moniker-end
 
    ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-   例を次に示します。
+   たとえば、次のように入力します。
 
    ```R
    outputlib <- "C:/Program Files/Microsoft SQL Server/MSSQL14.MSSQLSERVER/R_SERVICES/library"
@@ -153,7 +158,7 @@ pdb[, c("Package", "Version", "License")]
    ::: moniker-end
 
    ::: moniker range=">sql-server-2017||=sqlallproducts-allversions"
-   例を次に示します。
+   たとえば、次のように入力します。
 
    ```R
    outputlib <- "C:/Program Files/Microsoft SQL Server/MSSQL15.MSSQLSERVER/R_SERVICES/library"

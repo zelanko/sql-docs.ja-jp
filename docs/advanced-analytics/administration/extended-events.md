@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 272e92bed10261b5701e2dcb4d35092ad11d59c3
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727740"
 ---
 # <a name="monitor-python-and-r-scripts-with-extended-events-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services の拡張イベントで Python および R のスクリプトを監視する
@@ -46,7 +46,7 @@ AND p.name = 'SQLSatellite';
 
 ## <a name="table-of-extended-events"></a>拡張イベントの表
 
-|イベント|[説明]|注|  
+|Event|説明|Notes|  
 |-----------|-----------------|---------|  
 |connection_accept|新しい接続が受け入れられたときに発生します。 このイベントは、すべての接続試行をログに記録するために役立ちます。||  
 |failed_launching|起動に失敗しました。|エラーを示します。|  
@@ -178,7 +178,7 @@ SQL Server Machine Learning Services は、SQL Server プロセスの外部で�
 + BXLServer 実行可能ファイルと同じディレクトリに、 *.config* ファイルを配置します。
 + このファイルの名前は `bxlserver.xevents.xml` である必要があります。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
-- [SQL Server Management Studio のカスタムレポートを使用して Python および R のスクリプトの実行を監視する](../../advanced-analytics/administration/monitor-sql-server-machine-learning-services-using-custom-reports-management-studio.md)
+- [SQL Server Management Studio のカスタム レポートを使用して Python および R のスクリプトの実行を監視する](../../advanced-analytics/administration/monitor-sql-server-machine-learning-services-using-custom-reports-management-studio.md)
 - [動的管理ビュー (DMV) を使用して SQL Server Machine Learning Services を監視する](../../advanced-analytics/administration/monitor-sql-server-machine-learning-services-using-dynamic-management-views.md)

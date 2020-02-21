@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.reviewer: genemi
 author: mateusz-kmiecik
 ms.author: v-makmie
-ms.openlocfilehash: 350856cc27bdec601e0db2998f9ff9953cdf6ec7
-ms.sourcegitcommit: 4c75b49599018124f05f91c1df3271d473827e4d
-ms.translationtype: MTE75
+ms.openlocfilehash: 23c730ce0bba9003b47b777108907763d981c551
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72381732"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74401533"
 ---
 # <a name="release-notes-for-the-microsoft-ole-db-driver-for-sql-server"></a>Microsoft OLE DB Driver for SQL Server のリリース ノート
 
@@ -38,14 +38,14 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 | 追加された機能 | 詳細 |
 | :------------ | :------ |
 | Azure Active Directory 認証のサポート (`ActiveDirectoryInteractive`、`ActiveDirectoryMSI`)。 | [Azure Active Directory の使用](features/using-azure-active-directory.md)。 |
-| 埋め込み Active Directory 認証ライブラリ (ADAL) のサポート。 | 特定の認証方法を使用するために、ADAL を個別にインストールする必要はありません。 |
+| Azure Active Directory 認証ライブラリ (adal.dll) をインストーラに含める | 基本ドライバーのインストールに含まれるようになりました。これにより、SQL Server 用の Microsoft Active Directory 認証ライブラリの既存のインストールがアップグレードされ、Windows のインストール済みアプリケーションの一覧からこれが削除されます。 |
 | &nbsp; | &nbsp; |
 
 ### <a name="bugs-fixed"></a>修正されたバグ
 
 | 修正されたバグ | 詳細 |
 | :-------- | :------ |
-| Iindexdefinition での drop index logic の修正[::D ropindex](https://go.microsoft.com/fwlink/?linkid=2106448)。 | 以前のバージョンの OLE DB ドライバーでは、インデックスの所有者のスキーマ ID とユーザー ID が等しくない場合に主キーインデックスを削除することはできません。 |
+| [IIndexDefinition::DropIndex](https://go.microsoft.com/fwlink/?linkid=2106448) のインデックスの削除ロジックが修正されました。 | 以前のバージョンの OLE DB ドライバーでは、インデックスの所有者のスキーマ ID とユーザー ID が同じでない場合、主キー インデックスを削除できません。 |
 | &nbsp; | &nbsp; |
 
 ## <a name="1823"></a>18.2.3
@@ -56,7 +56,7 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 
 | 追加された機能 | 詳細 |
 | :------------ | :------ |
-| SQL Server リムーバブルメディアからのドライバーのアップグレードのサポート。 | この機能強化により、SQL Server リムーバブルメディアから直接ドライバーをアップグレードできるようになります。 |
+| SQL Server リムーバブル メディアからのドライバーのアップグレードのサポート。 | この機能強化により、SQL Server リムーバブル メディアから直接ドライバーをアップグレードできます。 |
 | &nbsp; | &nbsp; |
 
 ## <a name="1822"></a>18.2.2
@@ -90,7 +90,7 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 
 | 追加された機能 | 詳細 |
 | :------------ | :------ |
-| `UseFMTONLY` 接続文字列キーワードと `SSPROP_INIT_USEFMTONLY` 初期化プロパティのサポート。 | `UseFMTONLY` は [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以上に接続する場合のメタデータの取得方法を制御します。<br/><br/>詳細については、「 [SQL Server の OLE DB ドライバーでの接続文字列キーワードの使用](applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)」を参照してください。 |
+| `UseFMTONLY` 接続文字列キーワードと `SSPROP_INIT_USEFMTONLY` 初期化プロパティのサポート。 | `UseFMTONLY` は [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以上に接続する場合のメタデータの取得方法を制御します。<br/><br/>詳細については、次を参照してください。[OLE DB Driver for SQL Server での接続文字列キーワードの使用](applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)。 |
 | &nbsp; | &nbsp; |
 
 ### <a name="bugs-fixed"></a>修正されたバグ
@@ -106,7 +106,7 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 
 | 追加された機能 | 詳細 |
 | :------------ | :------ |
-| `MultiSubnetFailover` 接続文字列キーワードと `SSPROP_INIT_MULTISUBNETFAILOVER` 初期化プロパティのサポート。 | 詳細については、以下をご覧ください。<br/>&bull; &nbsp; [OLE DB Driver for SQL Server の高可用性、ディザスター リカバリーに関するサポート](features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)<br/>&bull; &nbsp; [OLE DB Driver for SQL Server での接続文字列キーワードの使用](applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)。 |
+| `MultiSubnetFailover` 接続文字列キーワードと `SSPROP_INIT_MULTISUBNETFAILOVER` 初期化プロパティのサポート。 | 詳細については、次を参照してください。<br/>&bull; &nbsp; [OLE DB Driver for SQL Server の高可用性、ディザスター リカバリーに関するサポート](features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)<br/>&bull; &nbsp; [OLE DB Driver for SQL Server での接続文字列キーワードの使用](applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)。 |
 | &nbsp; | &nbsp; |
 
 ## <a name="see-also"></a>参照

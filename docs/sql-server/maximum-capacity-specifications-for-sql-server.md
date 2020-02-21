@@ -21,10 +21,10 @@ ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 0fae5c47de0b8017d3f374afe18e926eea9818cc
-ms.sourcegitcommit: 84e6922a57845a629391067ca4803e8d03e0ab90
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "72008437"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>SQL Server の最大容量仕様
@@ -43,9 +43,9 @@ ms.locfileid: "72008437"
 ##  <a name="Engine"></a> [!INCLUDE[ssDE](../includes/ssde-md.md)] オブジェクト  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベースで定義される各種オブジェクト、または [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントで参照される各種オブジェクトの最大サイズと最大数。  
   
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] オブジェクト (object)||最大サイズ/最大数 ( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 64 ビットの場合)|追加情報|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] オブジェクト||最大サイズ/最大数 ( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 64 ビットの場合)|追加情報|  
 |---------------------------------------------------------|-|------------------------------------------------------------------|----------------------------|  
-|[バッチ サイズ]||65,536 * ネットワーク パケット サイズ|ネットワーク パケット サイズとは、アプリケーションとリレーショナル [!INCLUDE[ssDE](../includes/ssde-md.md)]の間の通信に使用される表形式データ ストリーム (TDS) パケットのサイズです。 既定のパケット サイズは 4 KB であり、network packet size 構成オプションによって制御されます。|  
+|バッチ サイズ||65,536 * ネットワーク パケット サイズ|ネットワーク パケット サイズとは、アプリケーションとリレーショナル [!INCLUDE[ssDE](../includes/ssde-md.md)]の間の通信に使用される表形式データ ストリーム (TDS) パケットのサイズです。 既定のパケット サイズは 4 KB であり、network packet size 構成オプションによって制御されます。|  
 |通常の string 列ごとのバイト数||8,000||  
 |GROUP BY、ORDER BY ごとのバイト数||8,060||  
 |インデックス キーごとのバイト数||1 つのクラスター化インデックスにつき 900 バイト。 1 つの非クラスター化インデックスにつき 1,700 バイト。|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]では、クラスター化インデックス キーの最大バイト数を 900 以下にする必要があります。 非クラスター化インデックス キーの場合は、最大 1,700 バイト。<br /><br /> 最大サイズを合計すると制限を超える可変長列を使用して、キーを定義できます。 ただし、これらの列のデータのサイズ合計が、制限を超えることはできません。<br /><br /> 非クラスター化インデックスには、追加の非キー列を含めることができ、それらはキーのサイズ制限にはカウントされません。 非キー列は、一部のクエリ パフォーマンスの向上に役立つ場合があります。|  

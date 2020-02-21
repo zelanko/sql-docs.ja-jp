@@ -1,6 +1,6 @@
 ---
 title: SQL Server Express のユーザー インスタンス
-description: SQL Server Express ユーザーインスタンスのサポートについて説明します。
+description: SQL Server Express のユーザー インスタンスのサポートについて説明します。
 ms.date: 08/15/2019
 dev_langs:
 - csharp
@@ -9,32 +9,32 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: 3b3ac1e395cc1240693ca0dc27324766964e0cfa
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 1b81b179657fc3564105a113712929ca8f3e10da
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452015"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246968"
 ---
 # <a name="sql-server-express-user-instances"></a>SQL Server Express のユーザー インスタンス
 
 ![Download-DownArrow-Circled](../../../ssdt/media/download.png)[ADO.NET をダウンロードする](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-Microsoft SQL Server Express Edition (SQL Server Express) は、ユーザーインスタンス機能をサポートしています。これは、Microsoft SqlClient Data Provider for SQL Server を使用している場合にのみ使用できます。 ユーザーインスタンスは、親インスタンスによって生成される SQL Server Express データベースエンジンの個別のインスタンスです。 ユーザーインスタンスを使用すると、ローカルコンピューター上の管理者以外のユーザーが、SQL Server Express データベースにアタッチして接続することができます。 各インスタンスは、個々のユーザーのセキュリティコンテキストで実行されます。ユーザーごとに1つのインスタンスがあります。  
+Microsoft SQL Server Express Edition (SQL Server Express) ではユーザー インスタンス機能がサポートされますが、これは Microsoft SqlClient Data Provider for SQL Server を使用している場合にのみ利用できます。 ユーザー インスタンスは、親インスタンスによって生成される、SQL Server Express データベース エンジンの独立したインスタンスです。 ユーザー インスタンスを使用すると、ローカル コンピューター上の管理者以外のユーザーが、SQL Server Express データベースにアタッチして接続することができます。 ユーザーごとに 1 つのインスタンスが割り当てられ、各インスタンスは個々のユーザーのセキュリティ コンテキストで実行されます。  
   
-## <a name="user-instance-capabilities"></a>ユーザーインスタンスの機能  
-ユーザーインスタンスは、最小限の特権を持つユーザーアカウント (LUA) で Windows を実行しているユーザーにとって役立ちます。これは、各ユーザーが、Windows として実行しなくても、コンピューター上で実行されているインスタンスに対してシステム管理者 (`sysadmin`) の特権を SQL Server しているためです。管理者も同様です。 SQL Server Express のインスタンスは、サービスとしてではなく、ユーザーの管理者以外の Windows アカウントで実行されているため、アクセス許可が制限されたユーザーインスタンスで実行されているソフトウェアでは、システム全体の変更を行うことができません。 各ユーザー インスタンスは、その親コンピューターや同じコンピューター上で実行されている他のユーザー インスタンスからは分離されます。 ユーザーインスタンスで実行されているデータベースはシングルユーザーモードでのみ開かれるので、複数のユーザーがユーザーインスタンスで実行されているデータベースに接続することはできません。 ユーザーインスタンスでは、レプリケーションクエリと分散クエリも無効になっています。  
+## <a name="user-instance-capabilities"></a>ユーザー インスタンスの機能  
+ユーザー インスタンスは、最小限の特権を持つユーザー アカウント (LUA) で Windows を実行しているユーザーにとって便利です。各ユーザーは、Windows 管理者として実行しなくても、コンピューター上で実行されているインスタンスに対して SQL Server システム管理者 (`sysadmin`) の特権を持つことができるためです。 SQL Server Express のインスタンスは、サービスとしてではなく、ユーザーの非管理者 Windows アカウントで実行されるため、アクセス許可が制限されたユーザー インスタンスで実行されているソフトウェアでは、システム全体の変更を行うことはできません。 各ユーザー インスタンスは、その親コンピューターや同じコンピューター上で実行されている他のユーザー インスタンスからは分離されます。 ユーザー インスタンスで実行されるデータベースはシングル ユーザー モードでのみ開かれるので、ユーザー インスタンスで実行されているデータベースに複数のユーザーが接続することはできません。 ユーザー インスタンスでは、レプリケーション クエリと分散クエリも無効になります。  
   
 詳細については、SQL Server オンライン ブックの「ユーザー インスタンス」を参照してください。  
   
 > [!NOTE]
->  ユーザーインスタンスは、自分のコンピューターで既に管理者になっているユーザーや、複数のデータベースユーザーが関係するシナリオには必要ありません。  
+>  ユーザー インスタンスは、自分のコンピューターで既に管理者になっているユーザーや、複数のデータベース ユーザーが関与するシナリオには必要ありません。  
   
-## <a name="enabling-user-instances"></a>ユーザーインスタンスの有効化  
-ユーザーインスタンスを生成するには、SQL Server Express の親インスタンスが実行されている必要があります。 SQL Server Express がインストールされている場合は、ユーザー インスタンスが既定で有効になります。また、システム管理者は、親インスタンスに対して **sp_configure** システム ストアド プロシージャを実行することで、ユーザー インスタンスの有効と無効を明示的に切り替えることもできます。  
+## <a name="enabling-user-instances"></a>ユーザー インスタンスの有効化  
+ユーザー インスタンスを生成するには、SQL Server Express の親インスタンスが実行されている必要があります。 SQL Server Express がインストールされている場合は、ユーザー インスタンスが既定で有効になります。また、システム管理者は、親インスタンスに対して **sp_configure** システム ストアド プロシージャを実行することで、ユーザー インスタンスの有効と無効を明示的に切り替えることもできます。  
   
 ```sql
 -- Enable user instances.  
@@ -44,22 +44,22 @@ sp_configure 'user instances enabled','1'
 sp_configure 'user instances enabled','0'  
 ```  
   
-ユーザーインスタンスのネットワークプロトコルは、ローカルの名前付きパイプである必要があります。 SQL Server のリモートインスタンスでユーザーインスタンスを起動することはできません。また、SQL Server ログインは許可されません。  
+ユーザー インスタンスのネットワーク プロトコルは、ローカルの名前付きパイプである必要があります。 SQL Server のリモート インスタンスでユーザー インスタンスを起動することはできません。また、SQL Server ログインは許可されません。  
   
 ## <a name="connecting-to-a-user-instance"></a>ユーザー インスタンスへの接続  
-`User Instance` および `AttachDBFilename`<xref:Microsoft.Data.SqlClient.SqlConnection.ConnectionString%2A> キーワードによって、<xref:Microsoft.Data.SqlClient.SqlConnection> でユーザー インスタンスに接続できます。 ユーザーインスタンスは、<xref:Microsoft.Data.SqlClient.SqlConnectionStringBuilder> `UserInstance` および `AttachDBFilename` プロパティによってもサポートされています。  
+`User Instance` および `AttachDBFilename`<xref:Microsoft.Data.SqlClient.SqlConnection.ConnectionString%2A> キーワードによって、<xref:Microsoft.Data.SqlClient.SqlConnection> でユーザー インスタンスに接続できます。 ユーザー インスタンスは、<xref:Microsoft.Data.SqlClient.SqlConnectionStringBuilder>`UserInstance` および `AttachDBFilename` プロパティによってもサポートされています。  
   
-次に示す接続文字列の例について、次の点に注意してください。  
+下に示す接続文字列の例については、次の点に注意してください。  
   
-- `Data Source` キーワードは、ユーザーインスタンスを生成している SQL Server Express の親インスタンスを参照します。 既定のインスタンスは .\sqlexpress です。  
+- `Data Source` キーワードは、ユーザー インスタンスを生成している SQL Server Express の親インスタンスを参照します。 既定のインスタンスは .\sqlexpress です。  
   
-- `Integrated Security` は `true` に設定されます。 ユーザーインスタンスに接続するには、Windows 認証が必要です。SQL Server ログインはサポートされていません。  
+- `Integrated Security` は `true` に設定されます。 ユーザー インスタンスに接続するには、Windows 認証が必要です。SQL Server ログインはサポートされていません。  
   
-- `User Instance` は `true` に設定されています。これにより、ユーザーインスタンスが呼び出されます。 (既定値は `false` です。)  
+- `User Instance` は `true` に設定されます。これにより、ユーザー インスタンスが呼び出されます。 (既定値は `false` です。)  
   
-- `AttachDbFileName` 接続文字列キーワードは、プライマリデータベースファイル (.mdf) をアタッチするために使用されます。このファイルには、完全なパス名を含める必要があります。 `AttachDbFileName` は、<xref:Microsoft.Data.SqlClient.SqlConnection> 接続文字列内の "拡張プロパティ" キーと "初期ファイル名" キーにも対応しています。  
+- `AttachDbFileName` 接続文字列キーワードは、プライマリ データベース ファイル (.mdf) をアタッチするために使用されます。これには、完全なパス名を含める必要があります。 また、`AttachDbFileName` は <xref:Microsoft.Data.SqlClient.SqlConnection> 接続文字列内の "extended properties" キーと "initial file name" キーにも対応しています。  
   
-- パイプ記号で囲まれた `|DataDirectory|` 置換文字列は、接続を開いているアプリケーションのデータディレクトリを参照し、.mdf および .ldf データベースとログファイルの場所を示す相対パスを提供します。 これらのファイルを別の場所に配置する場合は、ファイルへの完全パスを指定する必要があります。  
+- パイプ記号で囲まれた `|DataDirectory|` 置換文字列は、接続を開いているアプリケーションのデータ ディレクトリを参照しするもので、.mdf (データベース ファイル) および .ldf (ログ ファイル) の場所を示す相対パスを指定します。 これらのファイルを別の場所に配置する場合は、ファイルへの完全なパスを指定する必要があります。  
   
 ```console
 Data Source=.\\SQLExpress;Integrated Security=true;  
@@ -68,12 +68,12 @@ Initial Catalog=InstanceDB;
 ```  
   
 > [!NOTE]
->  また、<xref:Microsoft.Data.SqlClient.SqlConnectionStringBuilder> <xref:Microsoft.Data.SqlClient.SqlConnectionStringBuilder.UserInstance%2A> と <xref:Microsoft.Data.SqlClient.SqlConnectionStringBuilder.AttachDBFilename%2A> プロパティを使用して、実行時に接続文字列を作成することもできます。  
+>  また、<xref:Microsoft.Data.SqlClient.SqlConnectionStringBuilder><xref:Microsoft.Data.SqlClient.SqlConnectionStringBuilder.UserInstance%2A> および <xref:Microsoft.Data.SqlClient.SqlConnectionStringBuilder.AttachDBFilename%2A> プロパティを使用して、実行時に接続文字列を作成することもできます。  
   
-### <a name="using-the-124datadirectory124-substitution-string"></a>DataDirectory&#124;代替&#124;文字列の使用  
+### <a name="using-the-124datadirectory124-substitution-string"></a>&#124;DataDirectory&#124; 置換文字列の使用  
 `DataDirectory` に `AttachDbFileName` を組み合わせて使用することで、データ ファイルへの相対パスを指定でき、完全パスを使用する代わりに、データ ソースの相対パスに基づいて接続文字列を作成できます。  
   
-`DataDirectory` ポイントする物理的な場所は、アプリケーションの種類によって異なります。 この例では、添付する Northwind .mdf ファイルは、アプリケーションの \app_data フォルダーにあります。  
+`DataDirectory` が参照する物理的な場所は、アプリケーションの種類によって異なります。 この例では、アタッチする Northwind.mdf ファイルは、アプリケーションの \app_data フォルダーにあります。  
   
 ```console
 Data Source=.\\SQLExpress;Integrated Security=true;  
@@ -82,19 +82,19 @@ AttachDBFilename=|DataDirectory|\app_data\Northwind.mdf;
 Initial Catalog=Northwind;  
 ```  
   
-`DataDirectory` を使用する場合、結果として得られるファイルパスは、置換文字列によって指定されているディレクトリよりもディレクトリ構造の上位に配置することはできません。 たとえば、完全に展開された `DataDirectory` が C:\AppDirectory\app_data の場合、上記のサンプルの接続文字列は C:\ appdirectoryの下にあります。 しかしながら、`DataDirectory` を `|DataDirectory|\..\data` として指定すると、\data が \AppDirectory のサブディレクトリではないため、エラーが発生します。  
+`DataDirectory` を使用する場合、結果として得られるファイル パスは、置換文字列によって参照されるディレクトリよりもディレクトリ構造の上位に配置することはできません。 たとえば、完全に展開された `DataDirectory` が C:\AppDirectory\app_data である場合、上記の例の接続文字列は C:\AppDirectory より下位であるため機能します。 しかしながら、`DataDirectory` を `|DataDirectory|\..\data` として指定すると、\data が \AppDirectory のサブディレクトリではないため、エラーが発生します。  
   
-接続文字列に不適切な形式の置換文字列が含まれている場合は、<xref:System.ArgumentException> がスローされます。  
-  
-> [!NOTE]
->  <xref:Microsoft.Data.SqlClient> は、置換文字列をローカルコンピューターのファイルシステムに対する完全パスに解決します。 そのため、リモートサーバー、HTTP、および UNC のパス名はサポートされていません。 サーバーがローカルコンピューターに配置されていない場合、接続が開かれると、例外がスローされます。  
-  
-<xref:Microsoft.Data.SqlClient.SqlConnection> が開かれると、既定の SQL Server Express インスタンスから、呼び出し元のアカウントで実行されている実行時に開始されるインスタンスにリダイレクトされます。  
+接続文字列に不適切な形式の置換文字列が含まれている場合、<xref:System.ArgumentException> がスローされます。  
   
 > [!NOTE]
->  ユーザーインスタンスの読み込みに通常のインスタンスよりも長い時間がかかるため、<xref:Microsoft.Data.SqlClient.SqlConnection.ConnectionTimeout%2A> の値を大きくすることが必要になる場合があります。  
+>  <xref:Microsoft.Data.SqlClient> により、置換文字列がローカル コンピューターのファイル システムに対して完全パスに解決されます。 そのため、リモート サーバー、HTTP、および UNC の各パス名はサポートされていません。 サーバーがローカル コンピューターに配置されていない場合、接続が開かれると例外がスローされます。  
   
-次のコードフラグメントでは、新しい `SqlConnection` を開き、コンソールウィンドウに接続文字列を表示して、`using` コードブロックを終了すると接続を閉じます。  
+<xref:Microsoft.Data.SqlClient.SqlConnection> が開かれると、既定の SQL Server Express インスタンスから、実行時に開始された (呼び出し元アカウントで実行される) インスタンスへとリダイレクトされます。  
+  
+> [!NOTE]
+>  ユーザー インスタンスは通常のインスタンスよりも読み込みに時間がかかるため、<xref:Microsoft.Data.SqlClient.SqlConnection.ConnectionTimeout%2A> の値を大きくすることが必要になる場合があります。  
+  
+次のコード フラグメントでは、新しい `SqlConnection`が開かれ、コンソール ウィンドウに接続文字列が表示された後、`using` コードブロックが終了した時点で接続が閉じられます。  
   
 ```csharp  
 private static void OpenSqlConnection()  
@@ -113,39 +113,39 @@ private static void OpenSqlConnection()
 ```  
   
 > [!NOTE]
->  ユーザーインスタンスは、SQL Server 内で実行されている共通言語ランタイム (CLR) コードではサポートされていません。 接続文字列に `User Instance=true` を持つ <xref:Microsoft.Data.SqlClient.SqlConnection> で `Open` が呼び出されると、<xref:System.InvalidOperationException> がスローされます。  
+>  ユーザー インスタンスは、SQL Server 内で実行されている共通言語ランタイム (CLR) コードではサポートされていません。 接続文字列に `User Instance=true` が含まれる <xref:Microsoft.Data.SqlClient.SqlConnection> で `Open` が呼び出されると、<xref:System.InvalidOperationException> がスローされます。  
   
-## <a name="lifetime-of-a-user-instance-connection"></a>ユーザーインスタンス接続の有効期間  
-サービスとして実行される SQL Server のバージョンとは異なり、SQL Server Express インスタンスを手動で開始および停止する必要はありません。 ユーザーがログインし、ユーザーインスタンスに接続するたびに、まだ実行されていないユーザーインスタンスが起動されます。 ユーザーインスタンスデータベースには、非アクティブな状態が一定期間続くとデータベースが自動的にシャットダウンされるように `AutoClose` オプションが設定されています。 開始された sqlservr.exe プロセスは、インスタンスへの最後の接続が終了した後、限られたタイムアウト期間、実行されたままになります。そのため、タイムアウトの期限が切れる前に別の接続を開いた場合は、再起動する必要はありません。 タイムアウト期間が経過する前に新しい接続が開いていない場合、ユーザーインスタンスは自動的にシャットダウンします。 親インスタンスのシステム管理者は、**sp_configure** を使用し、**user instance timeout** オプションを変更することにより、ユーザー インスタンスのタイムアウト期間を設定できます。 既定値は 60 分です。  
-  
-> [!NOTE]
->  接続文字列で0より大きい値を使用して `Min Pool Size` が使用されている場合、接続プーラーは、開いているいくつかの接続を常に維持し、ユーザーインスタンスは自動的にはシャットダウンされません。  
-  
-## <a name="how-user-instances-work"></a>ユーザーインスタンスの動作  
-各ユーザーに対して最初にユーザー インスタンスが生成された時点で、そのユーザー インスタンスによって排他的に使用されるユーザーのローカル アプリケーション データ リポジトリ ディレクトリの下位パスに、Template Data フォルダーからシステム データベース **master** および **msdb** がコピーされます。 通常、このパスは `C:\Documents and Settings\<UserName>\Local Settings\Application Data\Microsoft\Microsoft SQL Server Data\SQLEXPRESS` です。 ユーザー インスタンスが開始されると、**tempdb**、ログ、トレース ファイルもこのディレクトリに書き込まれます。 インスタンスの名前が生成されます。これは、ユーザーごとに一意であることが保証されます。  
-  
-既定では、Windows Builtin\Users グループのすべてのメンバーには、ローカルインスタンスで接続するためのアクセス許可と、SQL Server バイナリに対する読み取りおよび実行のアクセス許可が付与されます。 ユーザーインスタンスをホストしている呼び出し元のユーザーの資格情報が検証されると、そのユーザーはそのインスタンスの `sysadmin` になります。 ユーザーインスタンスに対しては共有メモリのみが有効になっています。つまり、ローカルコンピューター上の操作のみが可能であることを意味します。  
-  
-ユーザーには、接続文字列で指定された .mdf ファイルと .ldf ファイルに対する読み取りと書き込みの両方の権限が付与されている必要があります。  
+## <a name="lifetime-of-a-user-instance-connection"></a>ユーザー インスタンスの接続の有効期間  
+サービスとして実行される SQL Server のバージョンとは異なり、SQL Server Express インスタンスは手動で起動したり停止したりする必要はありません。 ユーザーがログインしてユーザー インスタンスに接続するたびに、ユーザー インスタンスが起動されます (まだ実行されていない場合)。 ユーザー インスタンス データベースでは `AutoClose` オプションが設定されており、非アクティブな状態が一定期間続くとデータベースが自動的にシャットダウンされます。 開始された sqlservr.exe プロセスは、インスタンスへの最後の接続が終了した後、一定のタイムアウト期間、実行されたままになります。そのため、タイムアウトの期限が切れる前であれば、別の接続を開いても再起動する必要がありません。 タイムアウト期間が過ぎるまでに新しい接続が開かれないと、ユーザー インスタンスは自動的にシャットダウンされます。 親インスタンスのシステム管理者は、**sp_configure** を使用し、**user instance timeout** オプションを変更することにより、ユーザー インスタンスのタイムアウト期間を設定できます。 既定値は 60 分です。  
   
 > [!NOTE]
->  .Mdf ファイルと .ldf ファイルは、それぞれデータベースとログファイルを表します。 これら2つのファイルは一致したセットであるため、バックアップ操作と復元操作の間に注意する必要があります。 データベースファイルには、ログファイルの正確なバージョンに関する情報が含まれており、間違ったログファイルと結合されている場合、データベースは開かれません。  
+>  接続文字列で `Min Pool Size` に 0 より大きい値を指定すると、接続プーラーによっていくつかの接続が常に開いた状態に維持されるので、ユーザー インスタンスは自動的にはシャットダウンされません。  
   
-データの破損を防ぐために、ユーザーインスタンス内のデータベースは排他アクセスで開かれます。 2つの異なるユーザーインスタンスが同じコンピューター上の同じデータベースを共有している場合、最初のインスタンスのユーザーは、2番目のインスタンスで開く前に、データベースを閉じる必要があります。  
+## <a name="how-user-instances-work"></a>ユーザー インスタンスのしくみ  
+各ユーザーに対して最初にユーザー インスタンスが生成された時点で、そのユーザー インスタンスによって排他的に使用されるユーザーのローカル アプリケーション データ リポジトリ ディレクトリの下位パスに、Template Data フォルダーからシステム データベース **master** および **msdb** がコピーされます。 通常、このパスは `C:\Documents and Settings\<UserName>\Local Settings\Application Data\Microsoft\Microsoft SQL Server Data\SQLEXPRESS` です。 ユーザー インスタンスが開始されると、**tempdb**、ログ、トレース ファイルもこのディレクトリに書き込まれます。 インスタンスに対して名前が生成され、この名前はユーザーごとに一意であることが保証されます。  
   
-## <a name="user-instance-scenarios"></a>ユーザーインスタンスのシナリオ  
-ユーザーインスタンスを使用すると、開発用コンピューターに管理者アカウントを持つ開発者に依存しない SQL Server データストアを持つデータベースアプリケーションを開発者に提供できます。 ユーザーインスタンスは Access/Jet モデルに基づいています。このモデルでは、データベースアプリケーションは単純にファイルに接続し、ユーザーは、システム管理者に許可を与えることなく、すべてのデータベースオブジェクトに対する完全なアクセス許可を自動的に付与します。許可. これは、ユーザーが最小特権のユーザーアカウント (LUA) で実行されていて、サーバーまたはローカルコンピューターに対する管理者特権を持っていない場合に、データベースオブジェクトとアプリケーションを作成する必要がある状況で動作することを目的としています。 ユーザーインスタンスを使用すると、より特権の高いシステムサービスのセキュリティコンテキストではなく、ユーザー独自のセキュリティコンテキストで実行されるインスタンスを実行時に作成できます。  
+既定では、Windows Builtin\Users グループのすべてのメンバーには、ローカル インスタンスで接続するためのアクセス許可と、SQL Server バイナリに対する読み取りおよび実行のアクセス許可が付与されます。 ユーザー インスタンスをホストしている呼び出し元ユーザーの資格情報が検証されると、そのユーザーはそのインスタンスの `sysadmin` になります。 ユーザー インスタンスに対しては共有メモリのみが有効になっています。つまり、ローカル コンピューター上での操作のみを行うことができます。  
+  
+ユーザーには、接続文字列で指定された .mdf ファイルと .ldf ファイルに対する読み取りと書き込みの両方のアクセス許可が付与されている必要があります。  
+  
+> [!NOTE]
+>  .mdf ファイルと .ldf ファイルは、それぞれデータベース ファイルとログ ファイルを表します。 これら 2 つのファイルは対応したセットであるため、バックアップ操作と復元操作では注意する必要があります。 データベース ファイルには、ログ ファイルの正確なバージョンに関する情報が含まれているため、不適切なログ ファイルと組み合わせるとデータベースは開かれません。  
+  
+データの破損を防ぐために、ユーザー インスタンス内のデータベースは排他アクセスで開かれます。 2 つの異なるユーザー インスタンスが同じコンピューター上の同じデータベースを共有している場合、最初のインスタンスのユーザーは、2 番目のインスタンスで開く前に、そのデータベースを閉じる必要があります。  
+  
+## <a name="user-instance-scenarios"></a>ユーザー インスタンスのシナリオ  
+ユーザー インスタンスを使用すると、データベース アプリケーションの開発者は、開発用コンピューターで管理者アカウントを持つ開発者に依存しない SQL Server データ ストアを使用できるようになります。 ユーザー インスタンスは Access/Jet モデルに基づいています。このモデルでは、データベース アプリケーションは単純にファイルに接続し、ユーザーはすべてのデータベース オブジェクトに対する完全なアクセス許可を自動的に付与されます。つまり、システム管理者が介入してアクセス許可を付与する必要はありません。 これは、ユーザーが最小限の特権を持つユーザー アカウント (LUA) で実行しており、サーバーまたはローカル コンピューターに対する管理特権を持っていないが、データベース オブジェクトおよびアプリケーションを作成する必要がある状況で機能することを目的としています。 ユーザー インスタンスを使用すると、より高い特権を持つシステム サービスのセキュリティ コンテキストではなく、ユーザー自身のセキュリティ コンテキストで実行されるインスタンスを実行時に作成できます。  
   
 > [!IMPORTANT]
->  ユーザーインスタンスは、それを使用するすべてのアプリケーションが完全に信頼されているシナリオでのみ使用してください。  
+>  ユーザー インスタンスは、それを使用するすべてのアプリケーションが完全に信頼されているシナリオでのみ使用してください。  
   
-ユーザーインスタンスのシナリオは次のとおりです。  
+ユーザー インスタンスのシナリオには、次のようなものがあります。  
   
-- データを共有する必要がないシングルユーザーアプリケーション。  
+- データを共有する必要がないシングル ユーザー アプリケーション。  
   
-- ClickOnce 配置。 NET Framework 2.0 (以降) または .NET Core 1.0 (以降) および SQL Server Express が既にターゲット コンピューターにインストールされている場合、管理者以外のユーザーでも、ClickOnce アクションの結果としてダウンロードされたインストール パッケージをインストールして使用できます。 セットアップの一部である場合は、管理者が SQL Server Express をインストールする必要があることに注意してください。 詳細については、「 [ClickOnce Deployment for Windows フォーム](https://docs.microsoft.com/dotnet/framework/winforms/clickonce-deployment-for-windows-forms)」を参照してください。
+- ClickOnce 配置。 NET Framework 2.0 (以降) または .NET Core 1.0 (以降) および SQL Server Express が既にターゲット コンピューターにインストールされている場合、管理者以外のユーザーでも、ClickOnce アクションの結果としてダウンロードされたインストール パッケージをインストールして使用できます。 セットアップに含まれる場合は、管理者が SQL Server Express をインストールする必要があることにご注意ください。 詳細については、「[Windows フォーム用の ClickOnce 配置](https://docs.microsoft.com/dotnet/framework/winforms/clickonce-deployment-for-windows-forms)」を参照してください。
   
-- Windows 認証を使用した専用の ASP.NET ホスティング。 1つの SQL Server Express インスタンスは、イントラネット上でホストできます。 アプリケーションは、偽装を使用するのではなく、ASPNET Windows アカウントを使用して接続します。 すべてのアプリケーションが同じユーザーインスタンスを共有し、互いに分離されていない場合は、サードパーティまたは共有ホスティングのシナリオでは、ユーザーインスタンスを使用しないでください。  
+- Windows 認証を使用した専用 ASP.NET ホスティング。 1 つの SQL Server Express インスタンスをイントラネット上でホストできます。 アプリケーションは、偽装を使用するのではなく、ASPNET Windows アカウントを使用して接続します。 すべてのアプリケーションが同じユーザー インスタンスを共有し、互いに分離されない、サードパーティまたは共有ホスティングのシナリオでは、ユーザー インスタンスを使用しないでください。  
   
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 - [SQL Server と ADO.NET](index.md)

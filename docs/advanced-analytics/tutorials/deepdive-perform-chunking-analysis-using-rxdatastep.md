@@ -1,6 +1,6 @@
 ---
 title: RevoScaleR でのチャンク分析
-description: このチュートリアルは、SQL Server で R 言語を使用して分散された分析のデータをチャックに分割する方法について詳しく説明しています。
+description: RevoScaleR チュートリアル 12:SQL Server で R 言語を使用して分散された分析のデータをチャンクに分割する方法。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,22 +9,22 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8c7aa853f44a04e55802012e81e59a15d2b5282b
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 0ad082c3a21292b782d5888b48b698c986c0b5b2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727237"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947218"
 ---
 # <a name="perform-chunking-analysis-using-rxdatastep-sql-server-and-revoscaler-tutorial"></a>RxDataStep を使用したチャンク分析の実行 (SQL Server と RevoScaleR のチュートリアル)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-このレッスンは、SQL Server で [RevoScaleR 関数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)を使用する方法についての [RevoScaleR チュートリアル](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)の一部です。
+これは、SQL Server で [RevoScaleR 関数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)を使用する方法についての [RevoScaleR チュートリアル シリーズ](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)のチュートリアル 12 です。
 
-このレッスンでは、**rxDataStep** 関数を利用して、従来の R のように、データセット全体をメモリに読み込み、一度に処理することを要求せず、データをチャンク単位で処理します。**rxDataStep** 関数は、データをチャンク単位で読み込み、データの各チャンクに R 関数を順々に適用し、各チャンクをまとめた結果を共通の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ ソースに書き込みます。 すべてのデータが読み込まれると、結果が結合されます。
+このチュートリアルでは、**rxDataStep** 関数を利用して、従来の R のように、データセット全体をメモリに読み込み、一度に処理することを要求せず、データをチャンク単位で処理します。**rxDataStep** 関数は、データをチャンク単位で読み込み、データの各チャンクに R 関数を順々に適用し、各チャンクをまとめた結果を共通の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ ソースに書き込みます。 すべてのデータが読み込まれると、結果が結合されます。
 
 > [!TIP]
-> このレッスンでは、R で **table** 関数を使用して、コンティンジェンシー テーブルを計算します。この例は、説明のみを目的としています。 
+> このチュートリアルでは、R で **table** 関数を使用して、コンティンジェンシー テーブルを計算します。この例は、説明のみを目的としています。 
 > 
 > 実世界のデータセットを表にする場合、**RevoScaleR** の **rxCrossTabs** 関数または **rxCube** 関数の使用が推奨されます。この種類の操作のために最適です。
 
@@ -115,7 +115,7 @@ ms.locfileid: "73727237"
     rxSqlServerDropTable( table = "iroResults", connectionString = sqlConnString)
     ```
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [SQL Server の R チュートリアル](sql-server-r-tutorials.md)

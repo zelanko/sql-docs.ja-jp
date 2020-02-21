@@ -1,6 +1,6 @@
 ---
 title: RevoScaleR を使用して R モデルを作成する
-description: このチュートリアルは、SQL Server で R 言語を使用してモデルを構築する方法について詳しく説明しています。
+description: RevoScaleR チュートリアル 7:SQL Server で R 言語を使用してモデルを構築する方法。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9a23691e8ed4b5ec5290ae666455f789954fa95d
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 11feb62609cba61a695dd60085461410a38ed0f7
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727265"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947247"
 ---
 # <a name="create-r-models-sql-server-and-revoscaler-tutorial"></a>R モデルを作成する (SQL Server と RevoScaleR のチュートリアル)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-このレッスンは、SQL Server で [RevoScaleR 関数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)を使用する方法についての [RevoScaleR チュートリアル](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)の一部です。
+これは、SQL Server で [RevoScaleR 関数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)を使用する方法についての [RevoScaleR チュートリアル シリーズ](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)のチュートリアル 7 です。
 
-トレーニング データを強化しました。 ここで、回帰モデリングを使用してデータを分析してみましょう。 線形モデルは、予測分析の世界における重要なツールです。 **RevoScaleR** パッケージには、ワークロードを分割して、それを並列で実行できる回帰アルゴリズムが含まれています。
+トレーニング データを強化しました。 このチュートリアルでは、回帰モデリングを使用してデータを分析してみましょう。 線形モデルは、予測分析の世界における重要なツールです。 **RevoScaleR** パッケージには、ワークロードを分割して、それを並列で実行できる回帰アルゴリズムが含まれています。
 
 > [!div class="checklist"]
 > * 線形回帰モデルを作成する
@@ -128,7 +128,7 @@ Condition number of final variance-covariance matrix: 3997.308
 Number of iterations: 15
 ```
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [新しいデータのスコア付け](../../advanced-analytics/tutorials/deepdive-score-new-data.md)

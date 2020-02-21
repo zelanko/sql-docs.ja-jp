@@ -1,28 +1,29 @@
 ---
-title: 方法:Team Foundation ビルドから SQL Server の単体テストを実行する | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: Team Foundation ビルドから SQL Server の単体テストを実行する
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 24f5b85d-d6f9-415f-b09f-933b78dc0b67
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4c4008d88a2a353ead1ddd16f678c4167ff6714d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 0a892598e2d461d6c51e42292b00a367925f5f13
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68035090"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244291"
 ---
 # <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>方法:Team Foundation ビルドから SQL Server の単体テストを実行する
+
 Team Foundation ビルドを使用すると、SQL Server の単体テストをビルド確認テスト (BVT) の一環として実行できます。 データベースを配置し、テスト データを生成して、選択したテストを実行するように単体テストを構成できます。 Team Foundation ビルドを使い慣れていない場合は、このトピックの手順を実行する前に、次の情報を確認してください。  
   
 -   [SQL Server の単体テストの作成と定義](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
   
--   [方法: アプリケーションのビルド後にスケジュールされているテストを構成および実行する](https://msdn.microsoft.com/library/ms182465(VS.100).aspx)  
+-   [方法: 方法: アプリケーションのビルド後にスケジュールされているテストを構成および実行する](https://msdn.microsoft.com/library/ms182465(VS.100).aspx)  
   
 -   [基本的なビルド定義の作成](https://msdn.microsoft.com/library/ms181716(VS.100).aspx)  
   
@@ -81,7 +82,7 @@ x64 ビルド エージェントで単体テストを実行するには、事前
   
 4.  詳細ウィンドウの **[ホスト プロセスのプラットフォーム]** で、 **[MSIL]** をクリックし、x64 ビルド エージェントで実行するテストを構成します。  
   
-5.  **[適用]** をクリックします。  
+5.  **[Apply]** をクリックします。  
   
 ## <a name="CreateATestList"></a>テストをテスト カテゴリに割り当てる (省略可能)  
 単体テストを実行するためのビルド定義を作成するときに、通常は、1 つ以上のテスト カテゴリを指定します。 ビルドが実行されると、指定されたカテゴリ内のすべてのテストが実行されます。  
@@ -166,7 +167,7 @@ x64 ビルド エージェントで単体テストを実行するには、事前
   
 9. ソリューション エクスプローラーで、app.config をダブルクリックします。  
   
-10. エディターで、各 \<SqlUnitTesting_*VSVersion*> ノードに `AllowConfigurationOverride="true"` を追加します。 例:  
+10. エディターで、各 \<SqlUnitTesting_*VSVersion*> ノードに `AllowConfigurationOverride="true"` を追加します。 次に例を示します。  
   
     ```  
     -- Update SqlUnitTesting_VS2010 node to:  
@@ -196,7 +197,7 @@ x64 ビルド エージェントで単体テストを実行するには、事前
   
 5.  **[配置ファイルの追加]** ダイアログ ボックスで、作成した *BuildComputer*.sqlunitttest.config ファイルを指定します。  
   
-6.  **[適用]** をクリックします。  
+6.  **[Apply]** をクリックします。  
   
 7.  **[閉じる]** をクリックします。  
   
@@ -263,7 +264,7 @@ x64 ビルド エージェントで単体テストを実行するには、事前
   
 10. **[基本]** グループの **[自動テスト]** で、実行するテストを指定します。 既定では、ソリューションの \*test\*.dll という名前のファイルに含まれているテストが実行されます。  
   
-11. **[ファイル]** メニューの ***[ProjectName* の保存]** をクリックします。  
+11. **[ファイル]** メニューの **[*ProjectName* の保存]** をクリックします。  
   
     ビルド定義が作成されました。 次に、テスト プロジェクトを変更します。  
   

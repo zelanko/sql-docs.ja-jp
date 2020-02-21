@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: cf559b0a-499a-4d74-b520-b382b87e0b17
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: de76ab165f201500399ff6c0585a49122d6b9cc0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: f30568da0ea6f8b937fd87a4891058b9d68949fe
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65580652"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74957446"
 ---
 # <a name="rendering-to-html-report-builder-and-ssrs"></a>HTML での表示 (レポート ビルダーおよび SSRS)
   XML 表示拡張機能では、ページ分割されたレポートが XML 形式で返されます。 また、完全な HTML ページを生成することも、他の HTML ページに埋め込むための HTML の一部分を生成することもできます。 すべての HTML は、UTF-8 エンコードで生成されます。  
@@ -84,6 +84,8 @@ ms.locfileid: "65580652"
   
  追加の検索機能は、ReportViewer Web フォーム コントロールによって提供されます。  
   
+##  <a name="FontsOnClient"></a> クライアント コンピューター上のフォント
+ レポート内でカスタム フォントが使用されている場合、レポートが正しく表示されるためには、レポートの閲覧に使用するコンピューター (クライアント コンピューター) にカスタム フォントがインストールされている必要があります。 クライアント コンピューターにフォントがインストールされていない場合、レポートにはカスタム フォントの代わりにシステムの既定のフォントが表示されます。
   
 ##  <a name="DeviceInfo"></a> デバイス情報設定  
  デバイス情報設定を変更することによって、このレンダラーに関する既定の設定の一部 (表示モードなど) を変更することができます。 詳細については、「 [HTML デバイス情報設定](../../reporting-services/html-device-information-settings.md)」を参照してください。  

@@ -1,20 +1,21 @@
 ---
-title: Azure Data Studio でノートブックを管理する
-titleSuffix: SQL Server big data clusters
+title: 'ノートブックを管理する: Azure Data Studio'
+titleSuffix: SQL Server Big Data Clusters
 description: Azure Data Studio でノートブックを管理する方法について学習します。 これには、ノートブックを開く、ノートブックの保存、ビッグ データ クラスター接続の変更などが含まれます。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 12/06/2018
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: fb081c84de1fc9548ef1ea1f19bb2e286d0be636
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.openlocfilehash: 8cf37ff6a4ad5e2b627fa5d968391cc5a7597a4a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73844271"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244092"
 ---
 # <a name="how-to-manage-notebooks-in-azure-data-studio"></a>Azure Data Studio でノートブックを管理する方法
 
@@ -22,7 +23,7 @@ ms.locfileid: "73844271"
 
 この記事では、SQL Server を使用して Azure Data Studio でノートブック ファイルを開いて保存する方法について示します。 また、SQL Server ビッグ データ クラスターへの接続を変更する方法も示します。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 この記事では、Azure Data Studio で使用するノートブックが既にあることを前提としています。 ノートブックを作成する場合は、「[SQL Server でノートブックを使用する方法](notebooks-guidance.md)」を参照してください。 Azure Data Studio でノートブックを使用するには、次の前提条件を満たしている必要があります。
 
@@ -78,6 +79,6 @@ ms.locfileid: "73844271"
 
    ![[アタッチ先] メニューからサーバーを選択する](./media/notebooks-how-to-manage/select-attach-to-2.png)
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 Azure Data Studio のノードブックの詳細については、「[SQL Server 2019 でノートブックを使用する方法](notebooks-guidance.md)」を参照してください。

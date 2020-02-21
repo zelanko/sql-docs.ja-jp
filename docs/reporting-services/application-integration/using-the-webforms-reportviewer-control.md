@@ -1,23 +1,25 @@
 ---
-title: WebForms ReportViewer コントロールの使用 | Microsoft Docs
+title: WebForms ReportViewer コントロールの使用
+description: レポート サーバーに配置されたレポートまたはローカル ファイル システムにあるレポートを表示するには、WebForms ReportViewer コントロールを使用して Web アプリケーションにレポートを表示します。
 ms.date: 06/12/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
+ms.custom: seo-lt-2019
 ms.topic: reference
 helpviewer_keywords:
 - ReportViewer controls
 ms.assetid: 4c200f36-4012-4108-8095-370b426ccf8d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a5ea5370cbb59d5fb70fa233f3695ac77e412669
-ms.sourcegitcommit: 36c3ead6f2a3628f58040acf47f049f0b0957b8a
-ms.translationtype: MTE75
+ms.openlocfilehash: 1271a159feaf20dd46d23c5fc3ff4a0cb2aa87be
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71687382"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74796936"
 ---
-# <a name="using-the-webforms-reportviewer-control"></a>WebForms ReportViewer コントロールの使用
+# <a name="use-the-webforms-reportviewer-control"></a>WebForms ReportViewer コントロールの使用
   レポート サーバーに配置されたレポートまたはローカル ファイル システムにあるレポートを表示するには、WebForms ReportViewer コントロールを使用して Web アプリケーションにレポートを表示します。  
   
 ## <a name="to-use-the-reportviewer-control-in-a-web-application"></a>Web アプリケーションで ReportViewer コントロールを使用するには  

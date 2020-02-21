@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d90fa182-1dab-4d6f-bd85-a04dd1479986
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6ab9a4035e3a714e6725f28f7e4e370bf3fd0119
-ms.sourcegitcommit: 82b70c39550402a2b0b327db32bf5ecf88b50d3c
-ms.translationtype: MTE75
+ms.openlocfilehash: 6365b86a4efe8d29273035d62f76c7bb02b15335
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73032988"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74908855"
 ---
 # <a name="system-requirements-installation-and-driver-files"></a>システム必要条件、インストール、およびドライバー ファイル
 
@@ -27,12 +27,12 @@ ms.locfileid: "73032988"
 
 | ドライバーのバージョン | サポートの説明 |
 | :------------- | :--------------------- |
-| ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] | SQL Server 2014、SQL Server 2012、[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssKatmai](../../../includes/sskatmai_md.md)]、および [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]への接続をサポートします。 |
-| Windows 上の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 用 ODBC Driver 11 | は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client の1つまたは複数のバージョンがインストールされているコンピューターにもインストールできます。 |
-| ODBC Driver 13 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] | SQL Server 2016、SQL Server 2014、SQL Server 2012、[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]、および [!INCLUDE[ssKatmai](../../../includes/sskatmai_md.md)]への接続をサポートします。 |
-| [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]用 ODBC ドライバー13.1、 <br/> 上記に加えて13 | SQL Server 2017 をサポートします。 |
-| [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 用 ODBC Driver 17 | では、13.1 と同じデータベースバージョンがサポートされています。 |
-| ODBC Driver 17 for SQL Server | では、ドライバーバージョン17.3 以降の SQL Server 2019 がサポートされています。 |
+| ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] | SQL Server 2014、SQL Server 2012、[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssKatmai](../../../includes/sskatmai_md.md)]、および [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] への接続をサポートします。 |
+| ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Windows | [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client の 1 つまたは複数のバージョンもインストールされているコンピューターにインストールできます。 |
+| ODBC Driver 13 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] | SQL Server 2016、SQL Server 2014、SQL Server 2012、[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]、および [!INCLUDE[ssKatmai](../../../includes/sskatmai_md.md)] への接続をサポートします。 |
+| ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] | 上記の 13 のものに加えて、SQL Server 2017 をサポートします。 |
+| ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] | 13.1 と同じデータベース バージョンをサポートします。 |
+| ODBC Driver 17 for SQL Server | ドライバー バージョン 17.3 以降で、SQL Server 2019 をサポートします。 |
 | &nbsp; | &nbsp; |
 
 ### <a name="connection-string-details"></a>接続文字列の詳細
@@ -58,14 +58,14 @@ ms.locfileid: "73032988"
 次のいずれかのリンクから `msodbcsql.msi` を実行すると、ドライバーがインストールされます。
 
 - [Windows で Microsoft ODBC Driver 17 for SQL Server をダウンロードする](https://www.microsoft.com/download/details.aspx?id=56567)
-- [Microsoft ODBC Driver 13.1 for SQL Server on Windows のダウンロード](https://www.microsoft.com/download/details.aspx?id=53339)
+- [Windows で Microsoft ODBC Driver 13.1 for SQL Server をダウンロードする](https://www.microsoft.com/download/details.aspx?id=53339)
 - [Microsoft ODBC Driver 13 for SQL Server on Windows のダウンロード](https://www.microsoft.com/download/details.aspx?id=50420)
 - [Windows で Microsoft ODBC Driver 11 for SQL Server をダウンロードする](https://www.microsoft.com/download/details.aspx?id=36434)
 
 > [!NOTE]
 > Driver 17.1.0.1 以下をインストールしているお客様は、新しいバージョンの Driver をインストールする前にこれを手動でアンインストールすることをお勧めします。
 
-### <a name="side-by-side-with-native-client"></a>Native Client とサイドバイサイドで
+### <a name="side-by-side-with-native-client"></a>Native Client とサイド バイ サイド
 
 ドライバーは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client とサイド バイ サイドでインストールできます。
 
@@ -75,7 +75,7 @@ ms.locfileid: "73032988"
 msiexec /i msodbcsql.msi ADDLOCAL=ALL  
 ```  
 
-### <a name="end-user-license"></a>エンドユーザーライセンス
+### <a name="end-user-license"></a>エンドユーザー ライセンス
 
 `/passive`、`/qn`、`/qb`、または `/qr` オプションを使用してインストールする場合は、`IACCEPTMSODBCSQLLICENSETERMS=YES` を指定してエンド ユーザー ライセンスの条項に同意します。 このオプションは、すべて大文字で指定する必要があります。 次に例を示します。
   
@@ -83,9 +83,9 @@ msiexec /i msodbcsql.msi ADDLOCAL=ALL
 msiexec /quiet /passive /qn /i msodbcsql.msi IACCEPTMSODBCSQLLICENSETERMS=YES ADDLOCAL=ALL  
 ```  
 
-### <a name="silent-uninstall"></a>サイレントアンインストール
+### <a name="silent-uninstall"></a>サイレント アンインストール
 
-次の例は、サイレントアンインストールを実行する方法を示しています。
+サイレント アンインストールを行う方法を次の例に示します。
   
 ```console
 msiexec /quiet /passive /qn /uninstall msodbcsql.msi  
@@ -109,18 +109,18 @@ BCP 関数を使用するアプリケーションでは、アプリケーショ�
 
 たとえば、`msodbcsql11.lib` と `msodbcsql.h` で ODBC アプリケーションをコンパイルするときは、接続文字列で "DRIVER={ODBC Driver 11 for SQL Server}" を使用します。
 
-## <a name="components-of-the-microsoft-odbc-driver-for-includessnoversionincludesssnoversion-mdmd-on-windows"></a>Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Windows のコンポーネント
+## <a name="components-of-the-microsoft-odbc-driver-for-ssnoversion-on-windows"></a>Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Windows のコンポーネント
 
 Windows 上の ODBC ドライバーには、次のコンポーネントが含まれています。
 
-| コンポーネント | [説明] |
+| コンポーネント | 説明 |
 | :-------- | :---------- |
 |msodbcsql17.dll または <br/> msodbcsql13.dll または <br/> msodbcsql11.dll|ドライバーのすべての機能を含む DLL (ダイナミック リンク ライブラリ) ファイル。 このファイルは %SYSTEMROOT%\System32 にインストールされます。|  
 |msodbcdiag17.dll または <br/> msodbcdiag13.dll または <br/> msodbcdiag11.dll|ドライバーの診断 (トレース) インターフェイスを含むダイナミック リンク ライブラリ (DLL) ファイル。 このファイルは %SYSTEMROOT%\System32 にインストールされます。|
 |msodbcsqlr17.rll または <br/> msodbcsqlr13.rll または <br/> msodbcsqlr11.rll|ドライバー ライブラリに付随するリソース ファイル。 このファイルは %SYSTEMROOT%\System32\1033 にインストールされます。| 
 |s13ch_msodbcsql.chm または <br/> s11ch_msodbcsql.chm |ドライバーのデータ ソースを作成する方法が説明されているデータ ソース ウィザードのヘルプ ファイル。 このファイルは %SYSTEMROOT%\System32\1033 にインストールされます <br /> <br /> **注:** ODBC Driver 17 の chm ファイルはありません。 |  
-|msodbcsql.h|ドライバーを使用するために必要な新しい定義がすべて含まれているヘッダー ファイル。<br /><br /> **注:**  msodbcsql.h と odbcss.h を同じプログラムで参照することはできません。<br /><br /> ODBC Driver 17 または 13 用の msodbcsql.h は、%PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\130\SDK にインストールされます。 <br /> ODBC Driver 11 用の msodbcsql.h は、%PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\110\SDK にインストールされます。| 
-|msodbcsql17.lib または <br/> msodbcsql13.lib または <br/> msodbcsql11.lib|ドライバーの一部である **bcp** ユーティリティ関数を呼び出すために必要なライブラリ ファイル。<br /><br /> **注:**  ご利用のプログラムでこのライブラリ ファイルを参照する場合は、ライブラリ ファイルがシステム パス、およびアプリケーションを使用するプログラムのシステム パスに含まれることを確認してください。<br /><br /> msodbcsql17.lib や msodbcsql13.lib は、%PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\130\SDK にインストールされます。<br /> msodbcsql11.lib は %PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\110\SDK にインストールされます。|
+|msodbcsql.h|ドライバーを使用するために必要な新しい定義がすべて含まれているヘッダー ファイル。<br /><br /> **注:** msodbcsql.h と odbcss.h を同じプログラムで参照することはできません。<br /><br /> ODBC Driver 17 または 13 用の msodbcsql.h は、%PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\130\SDK にインストールされます。 <br /> ODBC Driver 11 用の msodbcsql.h は、%PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\110\SDK にインストールされます。| 
+|msodbcsql17.lib または <br/> msodbcsql13.lib または <br/> msodbcsql11.lib|ドライバーの一部である **bcp** ユーティリティ関数を呼び出すために必要なライブラリ ファイル。<br /><br /> **注:** ご利用のプログラムでこのライブラリ ファイルを参照する場合は、ライブラリ ファイルがシステム パス、およびアプリケーションを使用するプログラムのシステム パスに含まれることを確認してください。<br /><br /> msodbcsql17.lib や msodbcsql13.lib は、%PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\130\SDK にインストールされます。<br /> msodbcsql11.lib は %PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\110\SDK にインストールされます。|
 | &nbsp; | &nbsp; |
 
 ## <a name="see-also"></a>参照

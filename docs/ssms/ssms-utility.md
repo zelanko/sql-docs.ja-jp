@@ -14,14 +14,14 @@ ms.assetid: aafda520-9e2a-4e1e-b936-1b165f1684e8
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 08/07/2019
-ms.openlocfilehash: 4fa84860e2d101b43b1ea4ebfe09d9580c0088ee
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 5a31fb94fad2e063fe9846bd820957abb4ce9b32
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893226"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243898"
 ---
 # <a name="ssms-utility"></a>SSMS ユーティリティ
 
@@ -59,7 +59,7 @@ ms.locfileid: "68893226"
 > [!Note]
 > **[Active Directory - MFA サポートで汎用]** は現在サポートされていません。
  
-[ **-U** _username_] 'SQL 認証' を使用して接続するときのユーザー名
+[ **-U** _username_] "SQL 認証" を使用して接続するときのユーザー名
  
 **[-E]** Windows 認証を使用した接続
  
@@ -69,7 +69,7 @@ ms.locfileid: "68893226"
  
 **[-?]** コマンド ライン ヘルプを表示します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 すべてのスイッチは省略可能で、コンマで区切られるファイル以外は、空白で区切られます。 スイッチを指定していない場合、 **Ssms** は、 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] [ツール] **メニューの** [オプション] **設定で指定されているとおりに** を開きます。 たとえば、 **[環境/全般]** の **[スタートアップ時]** オプションで、 **[新しいクエリ ウィンドウを開く]** を指定すると、**Ssms** は空白のクエリ エディターで開きます。
  
@@ -79,12 +79,12 @@ ms.locfileid: "68893226"
 
 次の表では、ファイルの拡張子に対応するサーバーの種類を示します。
  
-|サーバーの種類|拡張子| 
+|サーバーの種類|拡張機能| 
 |-----------------|---------------| 
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|.sql|
 |SQL Server Analysis Services (SQL Server Analysis Services)|.mdx<br /><br /> .xmla|
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 次のスクリプトは、既定の設定でコマンド プロンプトから [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] を開きます。
  

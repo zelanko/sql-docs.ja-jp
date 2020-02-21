@@ -1,5 +1,5 @@
 ---
-title: 暗号化のサポートについて |Microsoft Docs
+title: 暗号化のサポートについて | Microsoft Docs
 ms.custom: ''
 ms.date: 09/12/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 073f3b9e-8edd-4815-88ea-de0655d0325e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5ec3ad142e3dc5e2945afebeb2c9a6c97350672c
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "71713297"
 ---
 # <a name="understanding-encryption-support"></a>暗号化のサポートについて
@@ -28,19 +28,19 @@ ms.locfileid: "71713297"
 > [!NOTE]  
 > TLS 接続に成功するためには、**serverName** に渡された値が、サーバー証明書に含まれる Subject Alternate Name (SAN) の Common Name (CN) または DNS 名と厳密に一致している必要があります。  
 >
-> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の TLS を構成する方法の詳細については、「[データベースエンジンへの暗号化接続の有効化](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。  
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用に TLS を構成する方法の詳細については、「[データベース エンジンへの暗号化接続の有効化](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 TLS 暗号化をアプリケーションで使用できるようにするために、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] のバージョン 1.2 リリース以降では、**encrypt**、**trustServerCertificate**、**trustStore**、**trustStorePassword**、**hostNameInCertificate** の各接続プロパティが導入されました。 詳細については、「[接続プロパティの設定](../../connect/jdbc/setting-the-connection-properties.md)」を参照してください。  
   
  次の表は、想定される TLS 接続シナリオでの [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] バージョンの動作をまとめたものです。 使用する TLS 接続プロパティの組み合わせをシナリオごとに変えています。 表の値の意味を以下に示します。  
   
-- **blank**: "接続文字列にプロパティが存在しない"  
+- **blank**:"接続文字列にプロパティが存在しない"  
   
-- **value**: "接続文字列にプロパティが存在し、その値が有効である"  
+- **value**:"接続文字列にプロパティが存在し、その値が有効である"  
   
-- **any**: "接続文字列にプロパティが存在するかどうか、またはその値が有効であるかどうかは関係ない"  
+- **any**:"接続文字列にプロパティが存在するかどうか、またはその値が有効であるかどうかは関係ない"  
   
 > [!NOTE]  
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーザー認証でも Windows 統合認証でも同じ動作になります。  
@@ -66,7 +66,7 @@ encrypt プロパティが **true** に設定されている場合、[!INCLUDE[j
   
 - 別の JVM を使用します。  
   
-## <a name="validating-server-tls-certificate"></a>サーバー TLS 証明書を検証しています  
+## <a name="validating-server-tls-certificate"></a>サーバーの TLS 証明書の検証  
 
 サーバーでは、TLS ハンドシェイクの際にクライアントに公開キー証明書が送信されます。 そのサーバー証明書が、クライアントが信頼している証明機関によって発行されているかどうかを、JDBC ドライバーまたはクライアントが検証する必要があります。 ドライバーは、サーバー証明書で次の条件が満たされている状態を必要とします。  
   

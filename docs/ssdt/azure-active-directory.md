@@ -1,20 +1,21 @@
 ---
-title: SQL Server Data Tools (SSDT) での Azure Active Directory | Microsoft Docs
-ms.custom: ''
-ms.date: 10/28/2019
+title: SSDT での Azure Active Directory
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: ssdt
 ms.topic: conceptual
 author: stevestein
 ms.author: sstein
+manager: jroth
+reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 10/28/2019
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 302345a2d7e8c1bd9192c91c6f88253c9a4668f2
-ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
+ms.openlocfilehash: ed7bc77b48881351a144ed5d217454518abafcc2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73049904"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245583"
 ---
 # <a name="azure-active-directory-support-in-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) での Azure Active Directory のサポート
 
@@ -40,11 +41,11 @@ Visual Studio で **[SQL Server オブジェクト エクスプローラー]** (
 - Azure とフェデレーションしていないドメインから資格情報を利用して Windows にログインしている。
 - Azure AD 認証と Azure AD を利用している。その基盤は初期またはクライアント ドメインである。
 
-詳細については、「 [Azure Active Directory 認証を使用して SQL Database に接続する](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication)」を参照してください。  
+詳細については、[Azure Active Directory 認証を使用した SQL Database への接続](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication)に関するページを参照してください。  
 
 ## <a name="active-directory-integrated-authentication"></a>Active Directory 統合認証
 
-*Active Directory 統合認証*は、Azure Active Directory (Azure AD) の ID を使用して上記の Azure SQL 製品に接続するメカニズムです。 フェデレーション ドメインから Azure Active Directory の資格情報を使用して Windows にログインしている場合は、この方法を使用して接続します。 詳細については、「 [Azure Active Directory 認証を使用して SQL Database に接続する](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication)」を参照してください。
+*Active Directory 統合認証*は、Azure Active Directory (Azure AD) の ID を使用して上記の Azure SQL 製品に接続するメカニズムです。 フェデレーション ドメインから Azure Active Directory の資格情報を使用して Windows にログインしている場合は、この方法を使用して接続します。 詳細については、[Azure Active Directory 認証を使用した SQL Database への接続](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication)に関するページを参照してください。
 
 ## <a name="active-directory-interactive-authentication"></a>Active Directory 対話型認証
 

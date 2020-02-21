@@ -1,6 +1,6 @@
 ---
 title: RevoScaleR を使用してデータをスコア付けする
-description: このチュートリアルでは、SQL Server で R 言語を使用してデータを表示する方法について詳しく説明しています。
+description: RevoScaleR チュートリアル 8:SQL Server で R 言語を使用してデータをスコア付けする方法。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bf4198e4f8baa0c572f5da3d2b4cf457e695a4b7
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 26f5c7b56298e6a3bd5f1fa9d8bc1d4db79d60af
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727177"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947196"
 ---
 # <a name="score-new-data-sql-server-and-revoscaler-tutorial"></a>新しいデータのスコア付け (SQL Server と RevoScaleR のチュートリアル)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-このレッスンは、SQL Server で [RevoScaleR 関数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)を使用する方法についての [RevoScaleR チュートリアル](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)の一部です。
+これは、SQL Server で [RevoScaleR 関数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)を使用する方法についての [RevoScaleR チュートリアル シリーズ](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)のチュートリアル 8 です。
 
-この手順では、前のレッスンで作成したロジスティック回帰モデルを使用して、同じ独立変数を入力として使用する別のデータセットをスコア付けします。
+このチュートリアルでは、前のチュートリアルで作成したロジスティック回帰モデルを使用して、同じ独立変数を入力として使用する別のデータセットをスコア付けします。
 
 > [!div class="checklist"]
 > * 新しいデータのスコア付け
@@ -32,7 +32,7 @@ ms.locfileid: "73727177"
 
 ## <a name="generate-and-save-scores"></a>スコアの生成と保存
   
-1. 前のレッスンで作成した列情報を使用するには、sqlScoreDS データソース ([レッスン 2](deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md)で作成) を更新します。
+1. 前のチュートリアルで作成した列情報を使用するには、sqlScoreDS データソース ([チュートリアル 2](deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md) で作成) を更新します。
   
     ```R
     sqlScoreDS <- RxSqlServerData(
@@ -155,7 +155,7 @@ ms.locfileid: "73727177"
   
     ![R によって作成された複雑なヒストグラム](media/rsql-sue-complex-histogram.png "R によって作成された複雑なヒストグラム")
   
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [R を使用したデータの変換](../../advanced-analytics/tutorials/deepdive-transform-data-using-r.md)

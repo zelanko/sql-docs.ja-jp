@@ -1,6 +1,6 @@
 ---
 title: RevoScaleR チュートリアルのデータベース
-description: R チュートリアル用の SQL Server データベースを作成する方法について詳しく説明しているチュートリアルです。
+description: RevoScaleR チュートリアル 1:R チュートリアル用の SQL Server データベースを作成する方法。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 537bfb64562dfad9dbefbce70423892cd6e1e431
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: ae2fd2d200b6a231dd76f04556d6d221df00809f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727125"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947213"
 ---
 # <a name="create-a-database-and-permissions-sql-server-and-revoscaler-tutorial"></a>データベースとアクセス許可を作成する (SQL Server と RevoScaleR のチュートリアル)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-このレッスンは、SQL Server で [RevoScaleR 関数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)を使用する方法についての [RevoScaleR チュートリアル](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)の一部です。
+これは、SQL Server で [RevoScaleR 関数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)を使用する方法についての [RevoScaleR チュートリアル シリーズ](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)のチュートリアル 1 です。
 
-レッスン 1 では、SQL Server データベースの設定と、このチュートリアルを完了するために必要なアクセス許可について説明します。 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) または別のクエリ エディターを使用して、次のタスクを完了します。
+このチュートリアルでは、SQL Server データベースを作成し、このシリーズの他のチュートリアルを完了するために必要なアクセス許可を設定する方法について説明します。 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) または別のクエリ エディターを使用して、次のタスクを完了します。
 
 > [!div class="checklist"]
 > * 2 つの R モデルのトレーニングとスコアリングに使用するデータを格納するための新しいデータベースを作成します
@@ -37,7 +37,6 @@ ms.locfileid: "73727125"
   
 2. 新しいデータベースの名前を入力します:RevoDeepDive。
   
-
 ## <a name="create-a-login"></a>ログインを作成します
   
 1. **[新しいクエリ]** をクリックして、データベース コンテキストを master データベースに変更します。
@@ -115,11 +114,11 @@ GO
   
 - **DDL 特権を持っていません。それでもチュートリアルを実行できますか。**
   
-    はい。ただし、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルにデータを事前に読み込んで、次のレッスンに進むように依頼する必要があります。 DDL 特権が必要な関数は、可能なときにはいつでもチュートリアルで呼び出されます。
+    はい。ただし、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルにデータを事前に読み込んで、次のチュートリアルに進むように依頼する必要があります。 DDL 特権が必要な関数は、可能なときにはいつでもチュートリアルで呼び出されます。
 
     また、管理者に、すべての外部スクリプトを実行する権限を付与してくれるよう依頼します。 これは、リモートまたは `sp_execute_external_script` を使用して R スクリプトを実行する場合に必要です。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [RxSqlServerData を使用して SQL Server のデータ オブジェクトを作成する](../../advanced-analytics/tutorials/deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md)

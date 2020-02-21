@@ -1,24 +1,26 @@
 ---
-title: SQL Server Reporting Services (SSRS) のプロダクト キーを見つける | Microsoft Docs
-ms.date: 10/02/2019
+title: SQL Server Reporting Services のプロダクト キーを見つける | Microsoft Docs
+description: 運用環境にサーバーを設置できるように、SQL Server Reporting Services (SSRS) 2017 および 2019 のプロダクト キーを見つける方法について説明します。
+ms.date: 12/04/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
+ms.custom: seo-lt-2019, seo-mmd-2019
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6033b15655cebd557ee93efabce32ea0981072f1
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
-ms.translationtype: MTE75
+ms.openlocfilehash: c85fc8de816c24496fe0ffb353f7d51e20b07389
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71952719"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74866055"
 ---
 # <a name="find-the-product-key-for-sql-server-reporting-services"></a>SQL Server Reporting Services のプロダクト キーを見つける
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2017-and-later](../../includes/ssrs-appliesto-2017-and-later.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
-運用環境にサーバーをインストールできるように、SQL Server Reporting Services (SSRS) 2017 および2019のプロダクトキーを検索する方法について説明します。
+運用環境にサーバーを設置できるように、SQL Server Reporting Services (SSRS) 2017 および 2019 のプロダクト キーを見つける方法について説明します。
 
 プロダクト キーを見つけるには、まず、SQL Server をダウンロードし、セットアップを実行します。
 
@@ -27,13 +29,13 @@ ms.locfileid: "71952719"
 
     ![SQL Server プロダクト キーをコピーする](media/find-reporting-services-product-key-ssrs/ssrs-ss2017-copy-product-key.png)
 
-1. [Reporting Services をダウンロード](install-reporting-services.md)し、セットアップを実行して、キーを貼り付けます。
+1. [Reporting Services をダウンロードし](install-reporting-services.md)、セットアップを実行して、キーを貼り付けます。
 
      ![プロダクト キーを貼り付ける](media/find-reporting-services-product-key-ssrs/ssrs-ssrs2017-paste-product-key.png)
 
 この手順は、Reporting Services を初めてインストールするときにだけ行います。 サービス更新では、キーを入力する必要がありません。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 - [SQL Server Reporting Services のインストール](install-reporting-services.md)
 - その他の質問 [Reporting Services のフォーラムに質問してみてください](https://go.microsoft.com/fwlink/?LinkId=620231)

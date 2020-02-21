@@ -1,6 +1,6 @@
 ---
 title: チュートリアル用のアヤメのデモ データ セット
-Description: アヤメのデータセットとモデルを格納するためのテーブルを含むデータベースを作成します。 このデータセットは、R 言語または Python コードを SQL Server ストアド プロシージャでラップする方法を示す演習で使用されます。
+Description: アヤメのデータセットと予測モデルを格納するためのデータベースを作成します。 このデータセットは、SQL Server Machine Learning Services 用の R および Python チュートリアルで使用されます。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/19/2018
@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e580a4d3b8d0e294573cf19c0194cc9b8a103518
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: c87b5c9fede3a8a9ab72add650447d1b02ac89c7
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727097"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74908759"
 ---
 #  <a name="iris-demo-data-for-python-and-r-tutorials-in-sql-server"></a>SQL Server での Python および R チュートリアル用のアヤメのデモ データ 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "73727097"
 
 このデータセットを使用したチュートリアルとクイックスタートには、次のものがあります。
 
-+  [クイックスタート: SQL Server でのストアド プロシージャを使用した Python モデルの作成、トレーニング、および使用](quickstart-python-train-score-in-tsql.md)
++  [クイック スタート: SQL Server でのストアド プロシージャを使用した Python モデルの作成、トレーニング、および使用](quickstart-python-train-score-in-tsql.md)
 
 ## <a name="create-the-database"></a>データベースの作成
 
@@ -153,8 +153,8 @@ R または Python から組み込みのアヤメ データを取得できます
     SELECT COUNT(*) FROM iris_data;
     ```
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 次のクイックスタートでは、機械学習モデルを作成してテーブルに保存してから、モデルを使用して予測結果を生成します。
 
-+ [クイックスタート: SQL Server でのストアド プロシージャを使用した Python モデルの作成、トレーニング、および使用](quickstart-python-train-score-in-tsql.md)
++ [クイック スタート: SQL Server でのストアド プロシージャを使用した Python モデルの作成、トレーニング、および使用](quickstart-python-train-score-in-tsql.md)

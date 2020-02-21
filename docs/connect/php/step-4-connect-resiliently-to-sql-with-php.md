@@ -1,5 +1,5 @@
 ---
-title: '手順 4: PHP を使用して SQL に弾性的を接続する |Microsoft Docs'
+title: 手順 4:PHP を使用して SQL に弾性的に接続する | Microsoft Docs
 ms.custom: ''
 ms.date: 01/22/2018
 ms.prod: sql
@@ -11,21 +11,21 @@ ms.assetid: 8013474f-48e9-43d5-ab89-7b0504044468
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 002c27145360e0877d4e1bff816c25070247ddd8
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "70874370"
 ---
-# <a name="step-4-connect-resiliently-to-sql-with-php"></a>ステップ 4: PHP で SQL に弾性的に接続する
+# <a name="step-4-connect-resiliently-to-sql-with-php"></a>手順 4:PHP を使用して SQL に弾性的に接続する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
   
-デモプログラムは、接続の試行中に一時的なエラー (この[付録](https://docs.microsoft.com/sql/odbc/reference/appendixes/appendix-a-odbc-error-codes)に記載されているプレフィックス ' 08 ' を持つエラーコード) が発生するように設計されています。 ただし、クエリコマンドの実行中に一時的なエラーが発生すると、プログラムは接続を破棄し、新しい接続を作成してから、クエリコマンドを再試行します。 この設計を選択することは推奨しません。 デモプログラムは、ユーザーが使用できるデザインの柔軟性を示しています。  
+デモ プログラムは、接続の試行時に一時的なエラー (この[付録](https://docs.microsoft.com/sql/odbc/reference/appendixes/appendix-a-odbc-error-codes)に記載されているプレフィックス "08" が付くエラー コード) が発生すると再試行されるように設計されています。 しかし、クエリ コマンドの実行中に一時的なエラーが生じると、プログラムによって接続が破棄され、新しい接続が作成された後、クエリ コマンドが再試行されます。 この設計の選択については、推奨も、非推奨もしません。 デモ プログラムは、使用可能な設計上の柔軟性をいくつか示しています。  
   
-このコードサンプルの長さは、ほとんどが例外のキャッチロジックによるものです。   
+このコード サンプルの内容の大部分は、例外キャッチのロジックの記述です。   
   
-[Sqlsrv_query ()](../../connect/php/sqlsrv-query.md)関数を使用すると、SQL Database に対するクエリから結果セットを取得できます。 この関数は、基本的にはクエリおよび接続オブジェクトを受け取り、結果セットを返します。結果セットは、 [sqlsrv_fetch_array ()](../../connect/php/sqlsrv-fetch-array.md)を使用して反復処理できます。 
+[sqlsrv_query()](../../connect/php/sqlsrv-query.md) 関数は、SQL Database に対するクエリから結果セットを取得するために使用できます。 この関数では基本的に任意のクエリと接続オブジェクトを受け入れ、[sqlsrv_fetch_array()](../../connect/php/sqlsrv-fetch-array.md) を使用して反復処理できる結果セットを返します。 
   
 ```php
 

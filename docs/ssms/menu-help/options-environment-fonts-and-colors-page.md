@@ -1,6 +1,6 @@
 ---
-title: '[オプション] ([環境] - [フォントおよび色] ページ) | Microsoft Docs'
-ms.custom: ''
+title: '[オプション] ([環境] - [フォントおよび色] ページ)'
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: ea3aa222-538d-485f-99dc-01eb02cdcfea
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7270a67f9f040f986b58ee0bb9d0d5366fe05169
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 97d8667e7c6972331471622685d8a0bb97303dcd
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265950"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75245727"
 ---
-# <a name="options-environment---fonts-and-colors-page"></a>[オプション] \([環境] - [フォントおよび色] ページ)
+# <a name="options-environment---fonts-and-colors-page"></a>[オプション] ([環境] - [フォントおよび色] ページ)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-**[オプション]** ダイアログ ボックスを使用して、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のさまざまなユーザー インターフェイス要素にカスタム フォントや配色を設定できます。 **[ツール]** メニューの **[オプション]** をクリックし、 **[環境]** フォルダーを展開して、 **[フォントおよび色]** を選択します。  
+**[オプション]** ダイアログ ボックスを使用すると、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のさまざまなユーザー インターフェイス要素にカスタム フォントや配色を設定できます。 **[ツール]** メニューの **[オプション]** をクリックし、 **[環境]** フォルダーを展開して、 **[フォントおよび色]** を選択します。  
   
 配色を変更するセッション中は、変更は適用されません。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の別のインスタンスを開き、変更が適用されると思われる条件を作ることで、色の変更を確認できます。  
   
@@ -27,7 +27,7 @@ ms.locfileid: "68265950"
 **[設定の表示]**  
 フォントと配色を変更できるユーザー インターフェイス要素がすべて一覧表示されます。 この一覧で項目を選択した後、選択した項目の色設定を **[表示項目]** でカスタマイズします。  
   
-|項目|定義|  
+|期間|定義|  
 |--------|--------------|  
 |[テキスト エディター]|[テキスト エディター] のフォント スタイル、フォント サイズ、フォント色を変更すると、既定のテキスト エディターに表示されるテキストの外観が変更されます。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の外部のテキスト エディターで開いたドキュメントは、この設定の影響を受けません。|  
 |[プリンター]|[プリンター] のフォント スタイル、フォント サイズ、色の表示設定を変更すると、印刷されるドキュメント内のテキストの外観が変更されます。<br /><br />注: テキスト エディターでの表示に使用されるフォントと異なる既定フォントを印刷用に選択できます。 これは、1 バイト文字と 2 バイト文字の両方を含むコードを印刷する場合に役立ちます。|  
@@ -35,7 +35,7 @@ ms.locfileid: "68265950"
 |[検索結果ウィンドウ]|この項目のフォント スタイル、フォント サイズ、色の表示設定を変更すると、検索結果ウィンドウ内のテキストの外観が変更されます。|  
 |[出力ウィンドウ]|この項目のフォント スタイル、フォント サイズ、色の表示設定を変更すると、[出力] ウィンドウ内のテキストの外観が変更されます。|  
 |[結果のグリッド表示]|この項目のフォント スタイル、フォント サイズ、色の表示設定を変更すると、クエリ ウィンドウの **[結果のグリッド表示]** 領域のテキストの外観が変更されます。|  
-|[実行プラン]|この項目のフォント スタイル、フォント サイズ、色の表示設定を変更すると、 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [!INCLUDE[ssEW](../../includes/ssew-md.md)] のクエリの実行プランのテキストの外観が変更されます。|  
+|[実行プラン]|この項目のフォント スタイル、フォント サイズ、色の表示設定を変更すると、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [!INCLUDE[ssEW](../../includes/ssew-md.md)] のクエリの実行プランのテキストの外観が変更されます。|  
 |[結果のテキスト表示]|この項目のフォント スタイル、フォント サイズ、色の表示設定を変更すると、クエリ ウィンドウの **[結果のテキスト表示]** 領域のテキストの外観が変更されます。|  
 |[ビジネス インテリジェンス デザイナー]|この項目のフォント スタイル、フォント サイズ、色の表示設定を変更すると、[ビジネス インテリジェンス デザイナー] ウィンドウ内のテキストの外観が変更されます。|  
   

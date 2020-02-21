@@ -1,36 +1,36 @@
 ---
-title: 'ステップ 3: ADO.NET を使用した SQL への接続を概念実証する | Microsoft Docs'
-description: SQL Server C#に接続し、クエリを実行し、行を挿入するためのコード例を示します。
+title: 手順 3:ADO.NET を使用した SQL への接続を概念実証する | Microsoft Docs
+description: SQL Server に接続し、クエリを実行し、行を挿入するための C# コードの例を示します。
 ms.custom: ''
 ms.date: 08/15/2019
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: rothja
+ms.reviewer: v-kaywon
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: aebe3dc6-3ee4-4d11-8e43-5d32b3f91490
-author: v-kaywon
-ms.author: v-kaywon
-ms.openlocfilehash: 2819697746f810e0c0b19a9ab7d076fa79c15a2f
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: cff776c4881dcc012a825bcd48f6d6271b95bb75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72451817"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247520"
 ---
-# <a name="step-3-proof-of-concept-connecting-to-sql-using-adonet"></a>ステップ 3: ADO.NET を使用した SQL への接続を概念実証する
+# <a name="step-3-proof-of-concept-connecting-to-sql-using-adonet"></a>手順 3:ADO.NET を使用した SQL への接続を概念実証する
 
 ![Download-DownArrow-Circled](../../ssdt/media/download.png)[ADO.NET をダウンロードする](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-- 前の記事:&nbsp;&nbsp;&nbsp;[ステップ 2: ADO.NET 開発用の SQL データベースを作成する](step-2-create-sql-database-ado-net-development.md)  
-- 次の記事:&nbsp;&nbsp;&nbsp;[ステップ 4: ADO.NET で SQL に弾性的に接続する](step-4-connect-resiliently-sql-ado-net.md)  
+- 前の記事:&nbsp;&nbsp;&nbsp;[手順 2: ADO.NET 開発用の SQL データベースを作成する](step-2-create-sql-database-ado-net-development.md)  
+- 次の記事:&nbsp;&nbsp;&nbsp;[手順 4: ADO.NET を使用して SQL に弾性的に接続する](step-4-connect-resiliently-sql-ado-net.md)  
 
   
 この C# コードの例は、概念実証としてのみ検討してください。 わかりやすさのためにサンプル コードは簡略化されており、Microsoft が推奨するベスト プラクティスを表しているとは限りません。  
   
-## <a name="step-1-connect"></a>手順 1: 接続する
+## <a name="step-1-connect"></a>手順 1:接続する
   
-このメソッドは、SQL データベースへの接続に使用されます **。**  
+**SqlConnection.Open** メソッドを使用して、ご自身の SQL データベースに接続します。  
 
 
 ```csharp
@@ -67,12 +67,12 @@ Press any key to finish...
 ```  
 
 
-## <a name="step-2-execute-a-query"></a>手順 2: クエリの実行  
+## <a name="step-2-execute-a-query"></a>手順 2:クエリを実行する  
   
-ExecuteReader メソッド:  
+SqlCommand.ExecuteReader メソッドでは次の処理が実行されます。  
   
-- Sql の SELECT ステートメントを SQL システムに発行します。  
-- 結果行へのアクセスを提供する SqlDataReader のインスタンスを返します。  
+- SQL SELECT ステートメントを SQL システムに発行します。  
+- 結果行にアクセスできるように SqlDataReader のインスタンスを返します。  
   
   
   
@@ -153,13 +153,13 @@ Press any key to finish...
   
   
   
-## <a name="step-3-insert-a-row"></a>手順 3: 行を挿入する  
+## <a name="step-3-insert-a-row"></a>手順 3:行を挿入する  
   
   
 この例では、次の方法を示します。  
   
-- パラメーターを渡すことにより、SQL INSERT ステートメントを安全に実行します。  
-  - パラメーターを使用すると、SQL インジェクション攻撃を防ぐことができます。  
+- パラメーターを渡して SQL INSERT ステートメントを安全に実行します。  
+  - パラメーターを使用して SQL インジェクション攻撃から保護します。  
 - 自動生成された値を取得します。  
   
   

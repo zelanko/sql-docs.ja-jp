@@ -9,12 +9,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5e283ab478a6d65243e9962fd5c26f5f91d87c15
-ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
+ms.openlocfilehash: 64799766b8b9d69a5577fd589c8f610be75ebb8f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70196345"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74479402"
 ---
 # <a name="tips-for-using-r-packages"></a>R パッケージを使用するためのヒント
 
@@ -90,6 +90,11 @@ SQL Server に R パッケージをインストールする方法の詳細につ
 
 ## <a name="see-also"></a>参照
 
-+ [新しい R パッケージのインストール](install-additional-r-packages-on-sql-server.md)
+::: moniker range="<=sql-server-2017||=sqlallproducts-allversions"
++ [R ツールを使用してパッケージをインストールする](install-r-packages-standard-tools.md)
+::: moniker-end
+::: moniker range=">sql-server-2017||=sqlallproducts-allversions"
++ [sqlmlutils で新しい R パッケージをインストールする](install-additional-r-packages-on-sql-server.md)
+::: moniker-end
 + [新しい Python パッケージのインストール](../python/install-additional-python-packages-on-sql-server.md)
 + [チュートリアル、サンプル、ソリューション](../tutorials/machine-learning-services-tutorials.md)

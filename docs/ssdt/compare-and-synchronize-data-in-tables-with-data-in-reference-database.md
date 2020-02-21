@@ -1,23 +1,24 @@
 ---
-title: 1 つ以上のテーブルのデータを参照データベースのデータと比較して同期する | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: テーブルのデータを参照データベースのデータと比較して同期する
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 96d743b0-b69a-45bb-ae0e-62103dca76e2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 055731473f94003440f4a78c6446ec965f1d0a2f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: e30ec27733885521f8d6e5b487fde40afafca4dd
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984666"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75241696"
 ---
 # <a name="compare-and-synchronize-data-in-one-or-more-tables-with-data-in-a-reference-database"></a>1 つ以上のテーブルのデータを参照データベースのデータと比較して同期する
+
 *ソース* データベースと*ターゲット* データベースのデータを比較し、比較するテーブルを指定できます。 データを確認し、同期する変更を決定することができます。 その後、ターゲットを更新してデータベースを同期するか、Transact\-SQL エディターまたはファイルに更新スクリプトをエクスポートすることができます。  
   
 たとえば、データベースを同期し、運用データのコピーでステージング サーバーを更新できます。 また、1 つ以上のテーブルを同期し、別のデータベースからの参照データをそのテーブルに設定することもできます。 さらに、別の形式の検証として、テストを実行する前と後でデータを比較することもできます。  
@@ -26,9 +27,9 @@ ms.locfileid: "67984666"
   
 このセクションのトピックは次のとおりです。  
   
--   [方法:2 つのデータベースのデータを比較および同期する](../ssdt/how-to-compare-and-synchronize-the-data-of-two-databases.md)  
+-   [方法: 2 つのデータベースのデータを比較および同期する](../ssdt/how-to-compare-and-synchronize-the-data-of-two-databases.md)  
   
--   [方法:データの差異を表示する](../ssdt/how-to-view-data-differences.md)  
+-   [方法: データの差異を表示する](../ssdt/how-to-view-data-differences.md)  
   
 ## <a name="requirements"></a>必要条件  
 テーブルまたはビューのデータを比較する場合、ソース データベースのテーブルまたはビューは、ターゲット データベースのテーブルまたはビューといくつかの属性を共有している必要があります。 次の条件を満たしていないテーブルとビューは比較されないため、**新しいデータの比較**ウィザードの 2 ページ目に表示されません。  
@@ -55,7 +56,7 @@ ms.locfileid: "67984666"
 ## <a name="UnderstandingDataCompareResults"></a>比較結果について  
 次の表では、 **[データ比較]** ウィンドウの 5 つの列について説明します。  
   
-|[列]|注|  
+|列|Notes|  
 |----------|---------|  
 |Object|テーブルまたはビューの名前、および更新を書き込む場合または更新スクリプトをエクスポートする場合にターゲットを同期する必要があるかどうかを示すチェック ボックスが表示されます。 このチェック ボックスは、データが含まれていないテーブルまたはビューでは使用できません。|  
 |異なるレコード|ターゲットのレコードのうち、キーがソースと同じで、データがソースと異なるレコードの数が表示されます。 かっこ内には、更新を書き込む場合または更新スクリプトをエクスポートする場合に更新対象としてマークされているレコードの数が示されます。|  
@@ -68,5 +69,5 @@ ms.locfileid: "67984666"
   
 ## <a name="see-also"></a>参照  
 [SQL Server Data Tools](../ssdt/sql-server-data-tools.md)  
-[方法:スキーマ比較を使用して各種のデータベース定義を比較する](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
+[方法:  スキーマ比較を使用して各種のデータベース定義を比較する](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
   

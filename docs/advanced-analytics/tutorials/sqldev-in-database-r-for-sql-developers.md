@@ -9,17 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f0734203a5b5e49ad344b2c0440208c6b652c080
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 9669b2c38d2e8b571ef7e519100b13cf5a63a10d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73725468"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74479415"
 ---
 # <a name="tutorial-r-data-analytics-for-sql-developers"></a>チュートリアル:SQL 開発者向けの R data analytics
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-SQL プログラマー向けのこのチュートリアルでは、SQL Server で [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) データベースを使用して R ベースの機械学習ソリューションを構築してデプロイすることによる R の統合について説明します。 T-SQL、SQL Server Management Studio、およびデータベース エンジン インスタンスを [[Machine Learning Services]](../install/sql-machine-learning-services-windows-install.md) および R 言語サポートと共に使用します
+SQL プログラマー向けのこのチュートリアルでは、SQL Server で [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) データベースを使用して R ベースの機械学習ソリューションを構築してデプロイすることによる R の統合について説明します。 T-SQL、SQL Server Management Studio、およびデータベース エンジン インスタンスを [Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) および R 言語サポートと共に使用します
 
 このチュートリアルでは、データ モデリング ワークフローで使用される R 関数について説明します。 手順には、データの探索、二項分類モデルの構築とトレーニング、モデル デプロイが含まれます。 構築するモデルは、旅行が、時間、移動距離、乗車位置に 基づいたヒントを生成する可能性があるかどうかを予測します。 
 
@@ -32,7 +32,7 @@ SQL プログラマー向けのこのチュートリアルでは、SQL Server �
 + データの取得とクリーニング
 + モデリングに役立つデータと構築機能の探索
 + モデルのトレーニングと最適化
-+ 実稼働へのデプロイ
++ 運用環境に展開する
 
 実際のコードの開発とテストは、専用の R 開発環境を使用して実行することをお勧めします。 ただし、スクリプトのテスト完了後は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の使い慣れた環境で [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアドプロシージャを使用して、それを [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] に容易にデプロイすることができます。
 
@@ -48,7 +48,7 @@ SQL プログラマー向けのこのチュートリアルでは、SQL Server �
 
 データベースにモデルが保存されたら、ストアド プロシージャを使用して [!INCLUDE[tsql](../../includes/tsql-md.md)] から予測モデルを呼び出します。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 すべてのタスクは、[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] の [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャを使用して実行できます。
 
@@ -58,12 +58,12 @@ SQL プログラマー向けのこのチュートリアルでは、SQL Server �
 
 + [R ライブラリ](../package-management/r-package-information.md)
 
-+ [権限](../security/user-permission.md)
++ [アクセス許可](../security/user-permission.md)
 
 + [NYC タクシーのデモ データベース](demo-data-nyctaxi-in-sql.md)
 
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [ストアド プロシージャで R 関数を使用してデータの探索と視覚化を行う](../tutorials/sqldev-explore-and-visualize-the-data.md)

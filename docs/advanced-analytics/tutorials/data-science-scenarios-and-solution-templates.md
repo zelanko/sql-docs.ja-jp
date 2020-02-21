@@ -1,6 +1,6 @@
 ---
 title: データ サイエンス ソリューション テンプレート
-description: この記事では、ソリューションを短時間で実装するために役立つベスト プラクティスをし、構成要素を提供するテンプレートについて説明します。 各テンプレートは、特定の業種または業界の特定の問題を解決するように設計されています。
+description: この記事では、機械学習ソリューションを実装する際に役立つベスト プラクティスと構成要素を提供する業界固有のテンプレートについて説明します。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 03/29/2019
@@ -9,17 +9,26 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 01893edd0174ec7aeab262b8aeddc3babb8194f7
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 6d87fbbb60f70292075d4f24080798d017ee5288
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727277"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947282"
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>データ サイエンスのシナリオとソリューション テンプレート
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-テンプレートは、ソリューションを短時間で実装するために役立つベスト プラクティスを示し、構成要素を提供するサンプル ソリューションです。 各テンプレートは、特定の業種または業界の特定の問題を解決するように設計されています。 各テンプレートのタスクは、データ準備や機能エンジニアリングから、モデルのトレーニングとスコアリングまで、多岐にわたります。 これらのテンプレートを使用して、[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] のしくみを学習します。 その後で、独自のシナリオに合わせてテンプレートをカスタマイズし、カスタム ソリューションを構築できます。 
+この記事では、さまざまな SQL Server 機械学習ソリューション テンプレートについて説明します。 これらのテンプレートにはベスト プラクティスが示されており、機械学習ソリューションを短時間で実装する際に役立つ構成要素が提供されます。 各テンプレートは、特定の業種または業界に固有のデータ サイエンスに関する問題を解決するように設計されています。
+各テンプレートのタスクは、データ準備や機能エンジニアリングから、モデルのトレーニングとスコアリングまで、多岐にわたります。 
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+これらのテンプレートを使用して、[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] のしくみを学習します。 その後で、独自のシナリオに合わせてテンプレートをカスタマイズし、カスタム ソリューションを構築できます。
+::: moniker-end
+
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+これらのテンプレートを使用して、SQL Server Machine Learning Services のしくみを学習します。 その後で、独自のシナリオに合わせてテンプレートをカスタマイズし、カスタム ソリューションを構築できます。
+::: moniker-end
 
 各ソリューションには、サンプル データ、R コードまたは Python コード、SQL ストアド プロシージャ (該当する場合) が含まれています。 このコードは、SQL Server で計算を実行することで、任意の R または Python 開発環境で実行できます。 場合によっては、T-SQL と SQL クライアント ツール (SQL Server Management Studio など) を使用してコードを直接実行できます。
 
@@ -62,7 +71,7 @@ ms.locfileid: "73727277"
 
 **方法:** このテンプレートは、顧客離反の問題を**二項分類**問題として数式化します。 顧客層と顧客トランザクションという 2 つのソースからサンプル データを使用し、顧客離れを起こす可能性が高い顧客と低い顧客を分類します。
   
-## <a name="predictive-maintenance"></a>予測メンテナンス
+## <a name="predictive-maintenance"></a>予測的なメンテナンス
 
 [予測メンテナンス テンプレート (SQL Server 2016)](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/PredictiveMaintenance/README.md)
 
@@ -99,7 +108,7 @@ ms.locfileid: "73727277"
   
     このフォルダーには、すべてのスクリプトを呼び出し、包括的な環境を作成できる PowerShell スクリプトも含まれています。 スクリプトは、必ず実際の環境似合わせて編集してください。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 + [SQL Server Machine Learning チュートリアル](machine-learning-services-tutorials.md)
 

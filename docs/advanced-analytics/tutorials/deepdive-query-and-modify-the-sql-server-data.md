@@ -1,6 +1,6 @@
 ---
 title: RevoScaleR を使用して SQL データを変更する
-description: このチュートリアルでは、SQL Server で R 言語を使用してデータのクエリを実行し、データを変更する方法について詳しく説明しています。
+description: RevoScaleR チュートリアル 3:SQL Server で R 言語を使用してデータのクエリを実行し、データを変更する方法。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 65db15d8c6778723ff04f82cde985c4827813339
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 48802f815515948c957c718e4bf666b0d7133670
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727187"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947078"
 ---
 # <a name="query-and-modify-the-sql-server-data-sql-server-and-revoscaler-tutorial"></a>SQL Server データのクエリを実行し、データを変更する (SQL Server と RevoScaleR のチュートリアル)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-このレッスンは、SQL Server で [RevoScaleR 関数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)を使用する方法についての [RevoScaleR チュートリアル](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)の一部です。
+これは、SQL Server で [RevoScaleR 関数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)を使用する方法についての [RevoScaleR チュートリアル シリーズ](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)のチュートリアル 3 です。
 
-前のレッスンでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にデータを読み込みました。 このステップでは、**RevoScaleR** を使用してデータを探索および変更できます。
+前のチュートリアルでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にデータを読み込みました。 このチュートリアルでは、**RevoScaleR** を使用してデータを探索および変更できます。
 
 > [!div class="checklist"]
 > * 変数に関する基本的な情報を返します。
@@ -129,7 +129,7 @@ Var 9: fraudRisk, Type: integer
 
 これで、指定した 3 つの変数 (*性別*、 *州*、および *カード名義人*) は要素として扱われます。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [計算コンテキストの定義と使用](../../advanced-analytics/tutorials/deepdive-define-and-use-compute-contexts.md)

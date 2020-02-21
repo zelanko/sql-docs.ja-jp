@@ -1,31 +1,37 @@
 ---
-title: Azure Data Studio でノートブックを実行する
-titleSuffix: SQL Server big data clusters
+title: 'ノートブックを実行する: Azure Data Studio'
+titleSuffix: SQL Server Big Data Clusters
 description: この記事では、SQL Server 2019 ビッグ データ クラスターに接続されている Azure Data Studio で Jupyter ノートブックを実行する方法について説明します。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 05/08/2019
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 23ff737a0fe1434c29b9cdf09102bc5042e68dc3
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.openlocfilehash: ff3f569761b7ba95a64f693f1726df589ce7e579
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73844299"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244102"
 ---
 # <a name="how-to-use-notebooks-in-sql-server"></a>SQL Server でノートブックを使用する方法
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-この記事では、[**Azure Data Studio**](../azure-data-studio/download.md) の最新リリースでノートブック エクスペリエンスを起動する方法と、独自のノートブックの作成を開始する方法について説明します。 また、さまざまなカーネルを使用してノートブックを作成する方法についても説明します。
+この記事では、[**Azure Data Studio**](../azure-data-studio/download.md) の最新リリースでノートブック エクスペリエンスを起動する方法と、独自のノートブックの作成を開始する方法について説明します。 さらに、さまざまなカーネルを使用してノートブックを作成する方法についても説明します。
+
+Azure Data Studio のノートブックの概要については、次の 5 分間の短いビデオをご覧ください。
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introduction-to-Azure-Data-Studio-Notebooks/player?WT.mc_id=dataexposed-c9-niner]
+
 
 ## <a name="connect-to-sql-server"></a>SQL Server への接続
 
 Azure Data Studio で Microsoft SQL Server 接続の種類に接続できます。
-Azure Data Studio では、F1 キーを押して、 **[新しい接続]**   をクリックし、SQL Server に接続することもできます。
+Azure Data Studio では、F1 キーを押して、 **[新しい接続]**  をクリックし、SQL Server に接続することもできます。
 
 ![接続情報](media/notebooks-guidance/connection-info.png)
 
@@ -33,7 +39,7 @@ Azure Data Studio では、F1 キーを押して、 **[新しい接続]**   を
 
 新しいノートブックを起動するには、複数の方法があります。
 
-- Azure Data Studio の **[ファイル] メニュー**にアクセスし、 **[新しいノートブック]** をクリックします。
+- Azure Data Studio の **[ファイル] メニュー**に移動し、 **[新しいノートブック]** をクリックします。
 
     ![新しいノートブック](media/notebooks-guidance/file-new-notebook.png)
 
@@ -63,7 +69,7 @@ SQL Server インスタンスに接続する SQL カーネル
 
 クエリ結果
 
-![クエリ結果](media/notebooks-guidance/sql-cell-results.png)
+![Query results](media/notebooks-guidance/sql-cell-results.png)
 
 PostgreSQL サーバー インスタンスに接続する SQL カーネル 
 
@@ -71,7 +77,7 @@ PostgreSQL サーバー インスタンスに接続する SQL カーネル
 
 クエリ結果
 
-![クエリ結果](media/notebooks-guidance/pgsql-cell-results.png)
+![Query results](media/notebooks-guidance/pgsql-cell-results.png)
 
 SQL カーネルにアタッチされている既存のノートブックにテキスト セルを追加する場合は、ツールバーの **[+Text]** コマンドをクリックします。
 
@@ -81,7 +87,7 @@ SQL カーネルにアタッチされている既存のノートブックにテ�
 
 ![Markdown セル](media/notebooks-guidance/notebook-markdown-cell.png)
 
-テキストセルの外側をクリックすると、markdown テキストが表示されます。
+テキスト セルの外側をクリックすると、markdown テキストが表示されます。
 
 ![Markdown テキスト](media/notebooks-guidance/notebook-markdown-preview.png)
 
@@ -96,7 +102,7 @@ SQL カーネルにアタッチされている既存のノートブックにテ�
 
 ![Jupyter バックエンド](media/notebooks-guidance/jupyter-backend.png)
 
-|カーネル|[説明]
+|カーネル|説明
 |:-----|:-----
 | SQL カーネル | リレーショナル データベースを対象とした SQL コードを記述します。
 |PySpark3 と PySpark カーネル| クラスターから Spark コンピューティングを使用して Python コードを作成します。
@@ -121,15 +127,15 @@ SQL Server 2019 ビッグ データ クラスターに接続している場合�
 
 ![Markdown セル](media/notebooks-guidance/notebook-markdown-cell.png)
 
-テキストセルの外側をクリックすると、markdown テキストが表示されます。
+テキスト セルの外側をクリックすると、markdown テキストが表示されます。
 
 ![Markdown テキスト](media/notebooks-guidance/notebook-markdown-preview.png)
 
-### <a name="trusted-and-non-trusted"></a>信頼されている、および信頼されていない
+### <a name="trusted-and-non-trusted"></a>"信頼されている" と "信頼されていない"
 
 Azure Data Studio で開いているノートブックは、既定で**信頼されている**状態です。
 
-ほかのソースからノートブックを開くと、**信頼されていない**モードで開かれます。その後、**信頼されている**状態にすることができます。
+他のソースからノートブックを開くと、**信頼されていない**モードで開かれます。その後、**信頼されている**状態にすることができます。
 
 ### <a name="run-cells"></a>セルの実行
 ノートブックですべてのセルを実行する場合は、ツールバーの **[Run Cells]\(セルの実行\)** ボタンをクリックします。
@@ -165,7 +171,7 @@ Spark アプリケーションが起動し、次の出力が返されます。
 
 ### <a name="spark-kernel--scala-language"></a>Spark カーネル | Scala 言語
 
-次のコードで `Spark|Scala Kernel` とセルの種類を選択します。
+`Spark|Scala Kernel` を選択して、セルに次のコードを入力します。
 
 ![Spark Scala](media/notebooks-guidance/spark-scala.png)
 
@@ -181,7 +187,7 @@ Spark アプリケーションが起動し、次の出力が返されます。
 
 ### <a name="local-python-kernel"></a>ローカル Python カーネル
 
-ローカル Python カーネルを選択し、セルに次のように入力します。
+ローカルの Python カーネルを選択し、セルに次のように入力します。
 
 ![Local python](media/notebooks-guidance/local-python.png)
 
@@ -204,7 +210,7 @@ import <package-name>
    > [!Tip]
    > Mac では、ターミナル ウィンドウの指示に従ってパッケージをインストールします。 
 
-パッケージがインストールされた後は、ノートブック セルへのアクセス、および次のコマンドの入力ができるようになります。
+パッケージがインストールされたら、ノートブック セルに移動して、次のコマンドを入力することができます。
 
 ```python
 import <package-name>
@@ -216,6 +222,6 @@ import <package-name>
 ./pip uninstall <package-name>
 ```
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 既存のノートブックを操作する方法については、「[Azure Data Studio でノートブックを管理する方法](notebooks-how-to-manage.md)」を参照してください。

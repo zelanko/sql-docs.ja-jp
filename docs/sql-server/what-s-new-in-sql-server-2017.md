@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 87537979ab3459727f07aec460118a74e15561f9
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "70874825"
 ---
 # <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017 の新機能
@@ -77,7 +77,7 @@ SQL Server 2017 には多くの新しいデータベース エンジン機能、
 - モデル アクセス許可を割り当てる**グループの管理**ページの、**エンティティ**フォルダーを展開するときのパフォーマンスが改善されました。 **グループの管理**ページは、Web アプリケーションの**セキュリティ**セクション内にあります。 パフォーマンスの改善の詳細については、こちら ([https://support.microsoft.com/help/4023865?preview](https://support.microsoft.com/help/4023865?preview)) を参照してください。 権限の割り当ての詳細については、「[Assign Model Object Permissions (Master Data Services) (モデル オブジェクト権限を割り当てる (マスター データ サービス))](../master-data-services/assign-model-object-permissions-master-data-services.md)」を参照してください。
 
 ## <a name="sql-server-2017-analysis-services-ssas"></a>SQL Server 2017 Analysis Services (SSAS) 
-SQL Server Analysis Services 2017 には、表形式モデルの多くの機能強化が導入されています。 たとえば、次のオブジェクトにアクセスできます。
+SQL Server Analysis Services 2017 には、表形式モデルの多くの機能強化が導入されています。 チェックの内容は次のとおりです
 - Analysis Services の既定のインストール オプションとしての表形式モード。 (CTP 2.0)
 - 表形式モデルのメタデータをセキュリティで保護する、オブジェクト レベルのセキュリティ。 (CTP 2.0)
 - 日付フィールドに基づくリレーションシップを簡単に作成する、日付リレーションシップ。 (CTP 2.0)
@@ -117,7 +117,7 @@ SQL Server での開発者は、オープン ソース エコシステムで入�
 
 詳細については、「[What's new in SQL Server Machine Learning Services](~/advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md)」 (SQL Server Machine Learning Services の新機能) を参照してください。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 - [SQL Server 2017 リリース ノート](sql-server-2017-release-notes.md)を参照してください。
 - 「[Linux 上の SQL Server 2017 の新機能](https://docs.microsoft.com/sql/linux/sql-server-linux-whats-new)」を参照してください。
 - [SQL Server 2016 の新機能](what-s-new-in-sql-server-2016.md)を確認してください。

@@ -1,6 +1,7 @@
 ---
-title: 孤立ユーザーのトラブルシューティング (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 孤立したユーザーのトラブルシューティング
+description: データベース ユーザー ログインがマスター データベースに存在しなくなったとき、孤立したユーザーが発生します。 このトピックでは、孤立したユーザーを特定して解決する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 07/14/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -19,14 +20,14 @@ ms.assetid: 11eefa97-a31f-4359-ba5b-e92328224133
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d42da661015f1184945d4e4ae45cb3f70016e987
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 91d3d04efa0300683a5ee727cfa0a1fcd31e3c10
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063814"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74822053"
 ---
-# <a name="troubleshoot-orphaned-users-sql-server"></a>孤立ユーザーのトラブルシューティング (SQL Server)
+# <a name="troubleshoot-orphaned-users-sql-server"></a>孤立したユーザーのトラブルシューティング (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   データベース ユーザーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] マスター **データベースのログインに基づくが、ログインが** マスター **に存在しなくなったとき、** の孤立ユーザーが発生します。 これはログインが削除されたか、データベースが別のサーバーに移され、ログインがなくなったときに発生します。 このトピックでは、孤立ユーザーを見つけ、ログインに再マッピングする方法について説明します。  
@@ -34,7 +35,7 @@ ms.locfileid: "68063814"
 > [!NOTE]  
 >  移動される可能性のあるデータベースには包含データベース ユーザーを利用し、孤立ユーザーの可能性を減らします。 詳細については、「 [包含データベース ユーザー - データベースの可搬性を確保する](../../relational-databases/security/contained-database-users-making-your-database-portable.md)」を参照してください。  
   
-## <a name="background"></a>背景情報  
+## <a name="background"></a>バックグラウンド  
  ログインに基づくセキュリティ プリンシパルを利用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスでデータベースに接続するには、 **マスター** データベースでプリンシパルに有効なログインを与える必要があります。 このログインは、プリンシパル ID を確認し、プリンシパルが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスに接続できるかどうかを決定する認証プロセスで使用されます。 サーバー インスタンスの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインは、 **sys.server_principals** カタログ ビューと **sys.sql_logins** 互換性ビューで表示できます。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインにマップされている "データベース ユーザー" として個々のデータベースにアクセスします。 このルールには次の 3 つの例外があります。  
@@ -55,7 +56,7 @@ ms.locfileid: "68063814"
   
  データベース ユーザー (ログイン ベース) は、それに対応する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインが未定義のとき、またはサーバー インスタンスで適切に定義されていないとき、インスタンスにログインできません。 このようなユーザーは、そのサーバー インスタンスのデータベースの *孤立ユーザー* と呼ばれます。 孤立状態は、データベース ユーザーが `master` インスタンスに存在しないログイン SID にマップされると発生する場合があります。 データベースを復元した後や、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の別のインスタンスにアタッチしたが、そこではログインが作成されていないときも、孤立状態になることがあります。 データベース ユーザーは、対応する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインが削除された場合にも孤立状態になることがあります。 ログインが再作成される場合でも、異なる SID が与えられ、データベース ユーザーが孤立します。  
   
-## <a name="to-detect-orphaned-users"></a>孤立ユーザーを検出するには  
+## <a name="detect-orphaned-users"></a>孤立したユーザーを検出する  
 
 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および PDW の場合**
 
@@ -95,7 +96,7 @@ WHERE sp.SID IS NULL
 
 3. 2 つのリストを比較して、ユーザー データベースの `sys.database_principals` テーブルのユーザー SID の中に、マスター データベースの `sql_logins` テーブルのログイン SID と一致しないものがあるかどうかを調べます。 
   
-## <a name="to-resolve-an-orphaned-user"></a>孤立ユーザーを解決するには  
+## <a name="resolve-an-orphaned-user"></a>孤立したユーザーを解決する  
 マスター データベースで、SID オプションで [CREATE LOGIN](../../t-sql/statements/create-login-transact-sql.md) ステートメントを使用して、なくなったログインを再作成します。前のセクションで取得したデータベース ユーザーの `SID` を提供します。  
   
 ```  

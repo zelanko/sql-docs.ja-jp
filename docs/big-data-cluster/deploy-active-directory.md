@@ -5,24 +5,24 @@ description: Active Directory ドメインで SQL Server ビッグ データ ク
 author: NelGson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 11/13/2019
+ms.date: 12/02/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 40b1101d9ee6c57db865282d1556f96aa4311a1f
-ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
+ms.openlocfilehash: e47af4ef20bc3dac6c61b9c5f851822348d36650
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74127441"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75253106"
 ---
-# <a name="deploy-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-in-active-directory-mode"></a>Active Directory モードで [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] を展開する
+# <a name="deploy-big-data-clusters-2019-in-active-directory-mode"></a>Active Directory モードで [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] を展開する
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 このドキュメントでは、認証に既存の AD ドメインを使用する Active Directory 認証モードで SQL Server 2019 ビッグ データ クラスター (BDC) を展開する方法について説明します。
 
-## <a name="background"></a>背景情報
+## <a name="background"></a>バックグラウンド
 
 Active Directory (AD) 認証を有効にするために、BDC では、クラスター内のさまざまなサービスで必要となるユーザー、グループ、コンピューター アカウント、サービス プリンシパル名 (SPN) が自動的に作成されます。 このようなアカウントを一部含め、スコーピングを許可するため、BDC 関連のあらゆる AD オブジェクトが作成される展開中に組織単位 (OU) を指名します。 クラスター展開前にこの OU を作成します。
 
@@ -49,7 +49,7 @@ AD で新しいユーザーを作成するには、ドメインまたは OU を�
 
 ### <a name="creating-an-ou"></a>OU の作成
 
-ドメイン コントローラーで、 **[Active Directory ユーザーとコンピューター]** を開きます。 左側のパネルで、OU を作成するディレクトリを右クリックし、[新規]、 **[組織単位]** の順に選択します。次に、ウィザードの指示に従って OU を作成します。 または、PowerShell で OU を作成できます。
+ドメイン コントローラーで、 **[Active Directory ユーザーとコンピューター]** を開きます。 左側のパネルで、OU を作成するディレクトリを右クリックし、[新規] -\> **[組織単位]** の順に選択します。次に、ウィザードの指示に従って OU を作成します。 または、PowerShell で OU を作成できます。
 
 ```powershell
 New-ADOrganizationalUnit -Name "<name>" -Path "<Distinguished name of the directory you wish to create the OU in>"
@@ -109,7 +109,7 @@ BDC ドメイン サービス アカウント (DSA) は、OU でユーザー、�
        - **ユーザー オブジェクトの作成**
        - **ユーザー オブジェクトの削除**
 
-    - **[OK]** をクリックします。
+    - **[OK]**
 
 - **[追加]** をクリックします。
 
@@ -123,7 +123,7 @@ BDC ドメイン サービス アカウント (DSA) は、OU でユーザー、�
 
     - スクロールで一番上まで戻り、 **[パスワードのリセット]** を選択します。
 
-    - **[OK]** をクリックします。
+    - **[OK]**
 
 - **[追加]** をクリックします。
 
@@ -137,7 +137,7 @@ BDC ドメイン サービス アカウント (DSA) は、OU でユーザー、�
 
     - スクロールで一番上まで戻り、 **[パスワードのリセット]** を選択します。
 
-    - **[OK]** をクリックします。
+    - **[OK]**
 
 - **[OK]** をさらに 2 回クリックしてダイアログ ボックスを開きます。
 
@@ -160,7 +160,7 @@ export DOMAIN_SERVICE_ACCOUNT_PASSWORD=<AD principal password>
 
 ## <a name="provide-security-and-endpoint-parameters"></a>セキュリティとエンドポイントのパラメーターを指定する
 
-資格情報の環境変数に加えて、AD 統合が機能するためのセキュリティとエンドポイントの情報も提供する必要があります。 必要なパラメーターは `kubeadm-prod` [展開プロファイル](deployment-guidance.md#configfile)に自動的に含まれます。
+資格情報の環境変数に加えて、AD 統合が機能するためのセキュリティとエンドポイントの情報も提供する必要があります。 必要なパラメーターは、自動的に `kubeadm-prod` [展開プロファイル](deployment-guidance.md#configfile)に含まれます。
 
 AD 統合には次のパラメーターが必要です: この記事の後半に出てくる `config replace` コマンドを使用し、`control.json` ファイルと `bdc.json` ファイルにこれらのパラメーターを追加します。 下の例ではすべて、サンプル ドメイン `contoso.local` が使用されています。
 
@@ -170,17 +170,20 @@ AD 統合には次のパラメーターが必要です: この記事の後半に
 
 - `security.domainControllerFullyQualifiedDns`:ドメイン コントローラーの FQDN の一覧。 FQDN には、ドメイン コントローラーのコンピューター名またはホスト名が含まれています。 複数のドメイン コントローラーがある場合、ここで一覧を指定できます。 例: `HOSTNAME.CONTOSO.LOCAL`
 
-- `security.realm` **省略可能なパラメーター**:ほとんどの場合、領域はドメイン名と同じです。 同じでない場合、このパラメーターを使用し、領域の名前を定義します (例: `CONTOSO.LOCAL`)。
+- `security.realm` **省略可能なパラメーター**: ほとんどの場合、領域はドメイン名と同じです。 同じでない場合、このパラメーターを使用し、領域の名前を定義します (例: `CONTOSO.LOCAL`)。
 
 - `security.domainDnsName`:ドメインの名前 (例: `contoso.local`)。
 
-- `security.clusterAdmins`:このパラメーターは AD グループを *1 つ受け取ります。 このグループのメンバーには、クラスターの管理者権限が与えられます。 これは、SQL Server で sysadmin 権限が、HDFS でスーパーユーザー権限が、Controller で管理者権限が与えられることを意味します。
+- `security.clusterAdmins`:このパラメーターは、**1 つの AD グループ**を受け取ります。 このグループのメンバーには、クラスターの管理者権限が与えられます。 これは、SQL Server で sysadmin 権限が、HDFS でスーパーユーザー権限が、Controller で管理者権限が与えられることを意味します。 **デプロイを開始する前に、このグループが AD に存在する必要があることに注意してください。また、このグループを Active Directory の DomainLocal にスコープ指定できないことにも注意してください。ドメイン ローカルにスコープ指定されたグループではデプロイが失敗します。**
 
-- `security.clusterUsers`:ビッグ データ クラスター内で通常のユーザー (管理者権限なし) となる AD グループの一覧。
+- `security.clusterUsers`:ビッグ データ クラスター内で通常のユーザー (管理者権限なし) となる AD グループの一覧。 **デプロイを開始する前に、これらのグループが AD に存在する必要があることに注意してください。また、これらのグループを Active Directory の DomainLocal にスコープ指定できないことにも注意してください。ドメイン ローカルにスコープ指定されたグループではデプロイが失敗します。**
 
-- `security.appOwners` **省略可能なパラメーター**:あらゆるアプリケーションを作成、削除、実行する権限が与えられる AD グループの一覧。
+- `security.appOwners` **省略可能なパラメーター**: あらゆるアプリケーションを作成、削除、実行する権限が与えられる AD グループの一覧。 **デプロイを開始する前に、これらのグループが AD に存在する必要があることに注意してください。また、これらのグループを Active Directory の DomainLocal にスコープ指定できないことにも注意してください。ドメイン ローカルにスコープ指定されたグループではデプロイが失敗します。**
 
-- `security.appReaders` **省略可能なパラメーター**: あらゆるアプリケーションを実行する権限が与えられる AD ユーザーまたはグループの一覧。 
+- `security.appReaders` **省略可能なパラメーター**: あらゆるアプリケーションを実行する権限を持つ AD グループの一覧。 **デプロイを開始する前に、これらのグループが AD に存在する必要があることに注意してください。また、これらのグループを Active Directory の DomainLocal にスコープ指定できないことにも注意してください。ドメイン ローカルにスコープ指定されたグループではデプロイが失敗します。**
+
+**AD グループのスコープを確認する方法:** 
+AD グループのスコープを確認して DomainLocal であるかどうかを判定するための[手順については、ここをクリック](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps)してください。
 
 展開構成ファイルをまだ初期化していない場合、このコマンドを実行して構成のコピーを取得できます。
 
@@ -199,6 +202,7 @@ azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.dom
 azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.domainDnsName=contoso.local"
 azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.clusterAdmins=[\"bdcadminsgroup\"]"
 azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.clusterUsers=[\"bdcusersgroup\"]"
+#Example for providing multiple clusterUser groups: [\"bdcusergroup1\",\"bdcusergroup2\"]
 ```
 
 上記の情報に加え、さまざまなクラスター エンドポイントの DNS 名を指定する必要もあります。 指定した DNS 名を使用する DNS エントリは、展開時に DNS サーバーで自動的に作成されます。 これらの名前は、さまざまなクラスター エンドポイントに接続するときに使用します。 たとえば、SQL マスター インスタンスの DNS 名が `mastersql` の場合、`mastersql.contoso.local,31433` を使用し、ツールからマスター インスタンスに接続します。
@@ -293,3 +297,5 @@ curl -k -v --negotiate -u : https://<Gateway DNS name>:30443/gateway/default/web
 - セキュア AD モードは現在のところ、`kubeadm` 展開環境でのみ動作し、AKS では動作しません。 `kubeadm-prod` 展開プロファイルには既定で、セキュリティ セクションが含まれています。
 
 - 現時点では、ドメインにつき BDC が 1 つだけ許可されます。 今後のリリースでは、ドメインあたり複数の BDC を有効にできるようになる予定です。
+
+- セキュリティ構成で指定されているどの AD グループも、DomainLocal にスコープ指定できません。 AD グループのスコープは、[この手順](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps)に従って確認できます。

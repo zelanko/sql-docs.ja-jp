@@ -1,5 +1,5 @@
 ---
-title: 'レポートのトラブルシューティング: マップ レポート (レポート ビルダーおよび SSRS) | Microsoft Docs'
+title: レポートのトラブルシューティング:マップ レポート (レポート ビルダーおよび SSRS) | Microsoft Docs
 ms.date: 01/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,18 +9,18 @@ ms.assetid: a690aec2-056b-40bc-8cab-c694bd2d6d62
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 88005509becb45f48702970153f9a891a8a01978
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73594494"
 ---
-# <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>レポートのトラブルシューティング: マップ レポート (レポート ビルダーおよび SSRS)
+# <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>レポートのトラブルシューティング:マップ レポート (レポート ビルダーおよび SSRS)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートでマップの問題が発生しやすいのは、マップまたはマップ レイヤーをレポートに追加するときや、レポート内の既存のマップまたはマップ レイヤーをカスタマイズするとき、レポートのマップをプレビューするとき、またはマップを含んだレポートをパブリッシュするときです。 このトピックでは、このような問題のトラブルシューティングについて説明します。  
     
    ## <a name="need-more-help"></a>他に支援が必要でしょうか。  
    
-  次の方法をお試しください。  
+  次の操作を試してください。  
  * スタック オーバーフローの [SQL Server Reporting Services](https://stackoverflow.com/questions/tagged/reporting-services)  
  * [Microsoft SQL Server UserVoice](https://feedback.azure.com/forums/908035-sql-server) で問題や提案を報告  
 
@@ -187,7 +187,7 @@ ms.locfileid: "73594494"
   
 -   マップ投影法が **[Mercator]** である必要があります。  
   
--   ローカル プレビューの場合は、インターネットにアクセスできる必要があります。 レポート サーバーから実行されるレポートの場合は、タイルの背景をサポートするようにレポート サーバーが構成されている必要があります。 詳細については、「[マップレポートの計画](plan-a-map-report-report-builder-and-ssrs.md)」を参照してください。  
+-   ローカル プレビューの場合は、インターネットにアクセスできる必要があります。 レポート サーバーから実行されるレポートの場合は、タイルの背景をサポートするようにレポート サーバーが構成されている必要があります。 詳細については、「[マップ レポートの計画](plan-a-map-report-report-builder-and-ssrs.md)」を参照してください。  
   
  タイトル レイヤーの追加方法の詳細については、「[マップまたはマップ レイヤーの追加、変更、または削除 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)」を参照してください。  
   

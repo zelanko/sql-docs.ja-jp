@@ -11,10 +11,10 @@ ms.assetid: 8e566243-2f93-4b21-8065-3c8336649309
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9f769e35477d564365df702bd768ac1953c7affa
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "71712974"
 ---
 # <a name="using-encryption"></a>暗号化の使用
@@ -32,11 +32,11 @@ TLS 暗号化を有効にすると、[!INCLUDE[ssNoVersion](../../includes/ssnov
 このセクションの各トピックでは、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] で TLS 暗号化をサポートするしくみについて説明します。これには、新しい接続プロパティと、クライアント側でトラスト ストアを構成する方法についての説明が含まれます。  
   
 > [!NOTE]  
-> TLS 証明書を検証するには、 **hostNameInCertificate**接続プロパティをお勧めします。  
+> TLS 証明書を検証するには、**hostNameInCertificate** 接続プロパティが推奨されます。  
 
 ## <a name="in-this-section"></a>このセクションの内容  
 
-| トピック                                                                                                        | [説明]                                                                                                                                           |
+| トピック                                                                                                        | 説明                                                                                                                                           |
 | ------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [暗号化のサポートについて](../../connect/jdbc/understanding-ssl-support.md)                                 | [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] で TLS 暗号化をサポートするしくみについて説明します。                                              |
 | [暗号化を使用した接続](../../connect/jdbc/connecting-with-ssl-encryption.md)                       | 新しい TLS 固有の接続プロパティを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに接続する方法について説明します。 |

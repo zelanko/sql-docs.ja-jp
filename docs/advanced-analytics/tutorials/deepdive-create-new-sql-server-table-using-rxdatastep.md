@@ -1,6 +1,6 @@
 ---
 title: rxDataStep を使用したテーブルの作成
-description: このチュートリアルは、SQL Server で R 言語を使用してSQL Server テーブルを作成する方法について詳しく説明しています。
+description: RevoScaleR チュートリアル 11:SQL Server で R 言語を使用してSQL Server テーブルを作成する方法。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,28 +9,28 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f4ac51fc1affb4128abab017eb00cba4b56960fa
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 99f693210b567523b74f851d1db68470cae2891d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727249"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947258"
 ---
 # <a name="create-new-sql-server-table-using-rxdatastep-sql-server-and-revoscaler-tutorial"></a>RxDataStep を使用して新しい SQL Server テーブルを作成する (SQL Server と RevoScaleR のチュートリアル)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-このレッスンは、SQL Server で [RevoScaleR 関数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)を使用する方法についての [RevoScaleR チュートリアル](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)の一部です。
+これは、SQL Server で [RevoScaleR 関数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)を使用する方法についての [RevoScaleR チュートリアル シリーズ](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)のチュートリアル 11 です。
 
-このレッスンでは、インメモリ データ フレーム、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンテキスト、およびローカル ファイルの間でデータを移動する方法を学習します。
+このチュートリアルでは、インメモリ データ フレーム、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンテキスト、およびローカル ファイルの間でデータを移動する方法を学習します。
 
 > [!NOTE]
-> このレッスンでは、別のデータセットを使用します。 航空便遅延データセットは、機械学習実験に広く使用されている公開データセットです。 この例に使用するデータ ファイルは、その他の製品サンプルと同じディレクトリにあります。
+> このチュートリアルでは、別のデータセットを使用します。 航空便遅延データセットは、機械学習実験に広く使用されている公開データセットです。 この例に使用するデータ ファイルは、その他の製品サンプルと同じディレクトリにあります。
 
 ## <a name="load-data-from-a-local-xdf-file"></a>ローカル XDF ファイルからのデータの読み込み
 
-このチュートリアルの前半では、**RxTextData** 関数を使用してデータをテキスト ファイルから R にインポートし、**RxDataStep** 関数を使用してデータを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に移動しました。
+このチュートリアル シリーズの前半では、**RxTextData** 関数を使用してデータをテキスト ファイルから R にインポートし、**RxDataStep** 関数を使用してデータを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に移動しました。
 
-このレッスンでは、別のアプローチを採用し、[XDF 形式](https://en.wikipedia.org/wiki/Extensible_Data_Format)で保存されたファイルのデータを使用します。 XDF ファイルを使用するデータに簡単な変換を実行した後に、変換後のデータを新しい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルに保存します。
+このチュートリアルでは、別のアプローチを採用し、[XDF 形式](https://en.wikipedia.org/wiki/Extensible_Data_Format)で保存されたファイルのデータを使用します。 XDF ファイルを使用するデータに簡単な変換を実行した後に、変換後のデータを新しい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルに保存します。
 
 **XDF とは**
 
@@ -115,7 +115,7 @@ Var 3: DayOfWeek 7 factor levels: Monday Tuesday Wednesday Thursday Friday Satur
     rxSummary(~., data = sqlServerAirDemo2)
     ```
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [rxDataStep を使用したチャンク分析の実行](../../advanced-analytics/tutorials/deepdive-perform-chunking-analysis-using-rxdatastep.md)

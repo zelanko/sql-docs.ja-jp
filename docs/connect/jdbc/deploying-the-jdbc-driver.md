@@ -11,10 +11,10 @@ ms.assetid: 3ad3508d-d9b1-47fb-a63b-21cdc3ed44e0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 518f6bd2605d92857520f870b20edcd351771c54
-ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73049833"
 ---
 # <a name="deploying-the-jdbc-driver"></a>JDBC ドライバーの展開
@@ -52,11 +52,11 @@ ms.locfileid: "73049833"
   
  `tar -xf sqljdbc_<version>_<language>.tar`  
 
-## <a name="legalities-of-driver-redistribution"></a>ドライバーの再配布の Legalities
+## <a name="legalities-of-driver-redistribution"></a>ドライバーの再配布の合法性
 
-JDBC Driver のバージョン6.0、6.2、6.4、および7.0 は再頒布可能です。 ライセンス契約の "_再頒布可能コード_" の条項をご確認ください。
+JDBC Driver バージョン 6.0、6.2、6.4、および 7.0 は再配布可能です。 ライセンス契約の "_再頒布可能コード_" の条項をご確認ください。
 
-JDBC Driver バージョン4.x は、古いバージョンと互換性のために残されています。 4\.x のサポートは2018より前に有効期限が切れました。
+JDBC Driver バージョン 4.x は、旧バージョンです。 4\.x のサポートは 2018 までに有効期限が切れています。
 
 ## <a name="see-also"></a>参照  
  [JDBC ドライバーの概要](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

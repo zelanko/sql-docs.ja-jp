@@ -1,6 +1,6 @@
 ---
 title: 複数の一括コピー操作
-description: SqlBulkCopy クラスを使用して SQL Server のインスタンスにデータの複数の一括コピー操作を実行する方法について説明します。
+description: SqlBulkCopy クラスを使用して SQL Server のインスタンスへのデータの複数の一括コピー操作を実行する方法について説明します。
 ms.date: 08/15/2019
 dev_langs:
 - csharp
@@ -9,15 +9,15 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: 6cc373224f4df437665cc48edb78ff81b85b8ac1
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 423300788a020a18914a5bd25abac379cbb71500
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72452133"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75247687"
 ---
 # <a name="multiple-bulk-copy-operations"></a>複数の一括コピー操作
 
@@ -37,5 +37,5 @@ ms.locfileid: "72452133"
   
 [!code-csharp[DataWorks SqlBulkCopy_._ColumnMappingOrdersDetails#1](~/../sqlclient/doc/samples/SqlBulkCopy_ColumnMappingOrdersDetails.cs#1)]
   
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 - [SQL Server での一括コピー操作](bulk-copy-operations-sql-server.md)

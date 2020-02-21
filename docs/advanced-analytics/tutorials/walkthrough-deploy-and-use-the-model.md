@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d553d991bd07785a6a6a7592cee38a1e66badf29
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 0117ff1ccbd90a18c1198c9a46fa60c27d28107d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73723710"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74479392"
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql-server-walkthrough"></a>R モデルを配置して SQL Server で使用する (チュートリアル)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "73723710"
 
     + SELECT ステートメントを使用して、SQL テーブルから格納されているモデルを呼び出します。 このモデルは **varbinary (max)** データとしてテーブルから取得され、SQL 変数 _\@lmodel2_ に格納された後、パラメーター *mod* としてシステム ストアド プロシージャ [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) に渡されます。
 
-    + スコアリングの入力として使用されるデータは、SQL クエリとして定義され、SQL 変数 _\@input_ に文字列として格納されます。 データベースからデータが取得されると、*InputDataSet* と呼ばれるデータ フレームに格納されます。これは、[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) プロシージャに対する入力データの既定の名前にすぎません。必要に応じて、 *_\@input_data_1_name_* パラメーターを使用して別の変数名を定義できます。
+    + スコアリングの入力として使用されるデータは、SQL クエリとして定義され、SQL 変数 _\@input_ に文字列として格納されます。 データベースからデータが取得されると、*InputDataSet* と呼ばれるデータ フレームに格納されます。これは、[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) プロシージャに対する入力データの既定の名前にすぎません。必要に応じて、 _\@input_data_1_name_ パラメーターを使用して別の変数名を定義できます。
 
     + スコアを生成するために、ストアド プロシージャで **RevoScaleR** ライブラリの rxPredict 関数が呼び出されます。
 
@@ -218,7 +218,7 @@ ms.locfileid: "73723710"
     >[!TIP]
     > R Tools for Visual Studio (RTVS) により、SQL Server と R の両方の優れた統合がもたらされます。SQL Server 接続での RODBC の使用例については、こちらの記事を参照してください。[SQL Server と R の使用](https://docs.microsoft.com/visualstudio/rtvs/sql-server)
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 ここでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データを使用し、トレーニング済みの R モデルを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に保持する方法を学習したので、このデータセットに基づいて比較的容易に新しいモデルを作成できます。 たとえば、次のような追加のモデルを作成することができます。
 

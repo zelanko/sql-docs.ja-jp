@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: c5852c8a-40e4-424d-a847-64eb151448ff
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 51c21800dcddec471d6760c31c3cea12e6123b6e
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
-ms.translationtype: MTE75
+ms.openlocfilehash: 7a4deeec624f349f7fd40bb89dc9b14b6baf309b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73592311"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74190684"
 ---
 # <a name="report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs"></a>レポート埋め込みデータセットと共有データセット (レポート ビルダーおよび SSRS)
   データセットは、データ接続から使用するデータを指定します。 データセットは、埋め込みデータ ソースまたはレポート サーバーの共有データ ソースへの参照としてレポートに保存されているデータ接続に基づいています。 データセットには、一連のフィールドを指定するクエリが含まれています。 これらのフィールドをデザイン画面にドラッグすると、レポートの実行時に実際のデータを評価する式を作成できます。  
@@ -42,7 +42,7 @@ ms.locfileid: "73592311"
   
 6.  **クエリ結果** クエリを実行して、結果セットの例を表示できます。 クエリを実行するには、デザイン時の資格情報が必要です。  
   
-7.  **スキーマのメタデータ** データ プロバイダーで、クエリとは別にスキーマのクエリ コマンドを実行し、データセット フィールド コレクションのメタデータを取得します。 たとえば、 [!INCLUDE[tsql](../../includes/tsql-md.md)] **SELECT** statement returns the column names for a database table. データセット フィールド コレクションを表示するには、レポート データ ペインを使用してデータセットを展開します。  
+7.  **スキーマのメタデータ** データ プロバイダーで、クエリとは別にスキーマのクエリ コマンドを実行し、データセット フィールド コレクションのメタデータを取得します。 たとえば、[!INCLUDE[tsql](../../includes/tsql-md.md)] の **SELECT** ステートメントでは、データベース テーブルの列名が返されます。 データセット フィールド コレクションを表示するには、レポート データ ペインを使用してデータセットを展開します。  
   
  事前定義済みの共有データセットとレポート パーツを使用して、データをレポートに含めることもできます。 これらのアイテムには、必要な接続情報は既に存在します。 詳細については、「[レポートへのデータの追加 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)」および「[レポート パラメーター &#40;レポート ビルダーおよびレポート デザイナー&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)」を参照してください。  
   
@@ -73,7 +73,7 @@ ms.locfileid: "73592311"
   
 -   登録および構成されている [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] データ プロバイダーの結果セット。  
   
--   定義済みエンティティ、エンティティ関係、およびフィールドを持つ特定のデータ ソースに指定されたレポート モデルのデータ。 詳細については、 [Reporting Services のドキュメント](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)の「レポートデータセット」を参照してください。  
+-   定義済みエンティティ、エンティティ関係、およびフィールドを持つ特定のデータ ソースに指定されたレポート モデルのデータ。 詳細については、[Reporting Services のドキュメント](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)の「レポート データセット」を参照してください。  
   
  実行時にレポートを処理した場合、クエリで返される実際の結果セットに 0 個以上の行があることがあります。 また、クエリで定義された列がデータ ソースに見つからない可能性もあります。 データ ソースの Null 値は、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 値の **System.DBNull.Value**にマップされます。  
   
@@ -122,7 +122,7 @@ ms.locfileid: "73592311"
   
  埋め込みデータ ソースと共有データ ソースとでは、作成、格納、および管理の方法が異なります。 次の表は、埋め込みデータ ソースと共有データ ソースの違いをまとめたものです。  
   
-|[説明]|埋め込み<br /><br /> Data Source|共有<br /><br /> Data Source|  
+|説明|埋め込み<br /><br /> Data Source|共有<br /><br /> Data Source|  
 |-----------------|------------------------------|----------------------------|  
 |データ接続がレポート定義に埋め込まれる|![利用可能](../../reporting-services/report-data/media/greencheck.gif "利用可能")||  
 |レポート サーバー上のデータ接続へのポインターがレポート定義に埋め込まれる||![利用可能](../../reporting-services/report-data/media/greencheck.gif "利用可能")|  
@@ -144,7 +144,7 @@ ms.locfileid: "73592311"
 |--------------|--------------------------------------------|------------------------------------------|  
 |クエリ テキスト|クエリを構成する (クエリを式として定義するなど)|クエリの変更は不可|  
 |クエリ パラメーター|レポート パラメーターの参照は不可<br /><br /> 既定値を含む<br /><br /> 読み取り専用フラグを含む|定義で読み取り専用とマークされていないパラメーターを構成する|  
-|フィルター|フィルターの定義|定義の一部を構成するデータセット フィルターの表示または変更は不可<br /><br /> 追加フィルターの作成は可能|  
+|フィルター|フィルターを定義する|定義の一部を構成するデータセット フィルターの表示または変更は不可<br /><br /> 追加フィルターの作成は可能|  
 |Data Source|共有データ ソースである必要がある|データ ソースの変更は不可|  
 |フィールド|クエリ コマンドのフィールド<br /><br /> データセット定義の一部を構成しない計算フィールド|フィールドの表示 (変更は不可)<br /><br /> フィールド コレクションは静的で、共有データセットをレポートに追加したときのクエリに基づきます。 更新するには、 **[データセットのプロパティ]** ダイアログ ボックスの **[フィールドの更新]** をクリックします。 定義内の現在のクエリから返されるコレクションが、実際のフィールド コレクションです。<br /><br /> 計算フィールドの追加|  
 |データセット|大文字と小文字の区別などのデータ オプション|インスタンスのデータ オプションのオーバーライド|  
@@ -219,7 +219,7 @@ ms.locfileid: "73592311"
   
 ## <a name="see-also"></a>参照  
  [データセット フィールド コレクション &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
- [レポート ビルダーでのデータ接続、データ ソース、および接続文字列](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
+ [データ接続文字列を作成する - レポート ビルダーおよび SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [レポート データセット (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)  
   
   

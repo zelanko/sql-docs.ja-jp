@@ -1,19 +1,20 @@
 ---
-title: レポート サーバー データベース接続の構成 (SSRS 構成マネージャー) | Microsoft Docs
+title: レポート サーバー データベース接続の構成 (構成マネージャー) | Microsoft Docs
+description: レポート サーバーの各インスタンスには、サーバーの管理対象であるレポート、共有データ ソース、リソース、およびメタデータが保存された、レポート サーバー データベースへの接続が必要です。
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
-ms.custom: seodec18
-ms.date: 10/09/2019
-ms.openlocfilehash: 7c781721ff9dcd2ec82844e8e0604aca83a186e4
-ms.sourcegitcommit: 3cde6aa3159beb761a19bc568d7e402bfa7aeb41
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019, seo-mmd-2019
+ms.date: 12/04/2019
+ms.openlocfilehash: d65c0e8bebf9f4019055e2fbabb30785235dacea
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72239378"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74866042"
 ---
 # <a name="configure-a-report-server-database-connection-ssrs-configuration-manager"></a>レポート サーバー データベース接続の構成 (SSRS 構成マネージャー)
 
@@ -109,7 +110,7 @@ Windows 統合セキュリティを使用すると、レポート サーバー �
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 
 > [!NOTE]
-> Azure SQL Managed Instance を使用して Reporting Services 2019 データベースをホストする場合、サポートは、接続に SQL Server ログイン資格情報の使用に制限されます。
+> Azure SQL Managed Instance を使用して Reporting Services 2019 データベースをホストする場合、サポートは、SQL Server ログイン資格情報を使用した接続に制限されます。
 
 ::: moniker-end
 
@@ -135,7 +136,7 @@ Windows 統合セキュリティを使用すると、レポート サーバー �
 
 複数のレポート サーバーで同じレポート サーバー データベースを使用するように構成できます。 この配置構成はスケールアウト配置と呼ばれます。 サーバー クラスター内で複数のレポート サーバーを実行する場合は、この構成が前提条件となります。 ただし、この構成は、サービス アプリケーションを分割する場合や、新しいレポート サーバー インスタンスのインストールと設定をテストして既存のレポート サーバーのインストールと比較する場合にも使用できます。 詳細については、「[ネイティブ モード レポート サーバーのスケールアウト配置の構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)」を参照してください。  
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 - [レポート サーバー データベースの作成](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)  
 - [Reporting Services ネイティブ モードのレポート サーバーの管理](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   

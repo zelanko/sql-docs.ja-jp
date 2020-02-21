@@ -14,10 +14,10 @@ ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 5d2fe2d80b0f9d54e877d6bc1be9a05c8c34c584
-ms.sourcegitcommit: 4c5fb002719627f1a1594f4e43754741dc299346
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "72517941"
 ---
 # <a name="before-installing-failover-clustering"></a>フェールオーバー クラスタリングをインストールする前に
@@ -186,7 +186,7 @@ ms.locfileid: "72517941"
 ##  <a name="OS_Support"></a> オペレーティング システムの確認  
  オペレーティング システムが適切にインストールされており、フェールオーバー クラスタリングをサポートするように設定されていることを確認します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の各エディションおよびそれらをサポートするオペレーティング システムの一覧を次の表に示します。  
   
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のエディション|[!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] Enterprise|[!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] Datacenter Server|[!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] Enterprise|[!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] Datacenter Server|  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エディション|[!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] Enterprise|[!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] Datacenter Server|[!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] Enterprise|[!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] Datacenter Server|  
 |---------------------------------------|------------------------------------------------|-------------------------------------------------------|----------------------------------------------|-----------------------------------------------------|  
 |[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise (64 ビット) x64*|はい|はい|可**|可**|  
 |[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise (32 ビット)|はい|はい|||  
@@ -202,7 +202,7 @@ ms.locfileid: "72517941"
 ##  <a name="MultiSubnet"></a> マルチサブネットの構成に関するその他の注意点  
  以下のセクションでは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] マルチサブネット フェールオーバー クラスターをインストールする場合に留意する要件について説明します。 マルチサブネットを構成する場合は、複数のサブネットにわたってクラスター化されるため、この操作では、複数の IP アドレスが使用され、IP アドレス リソースの依存関係への変更が行われます。  
   
-### <a name="includessnoversionincludesssnoversion-mdmd-edition-and-operating-system-considerations"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のエディションとオペレーティング システムに関する注意点  
+### <a name="ssnoversion-edition-and-operating-system-considerations"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のエディションとオペレーティング システムに関する注意点  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] マルチサブネット フェールオーバー クラスターをサポートする [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のエディションについては、「 [SQL Server 2016 の各エディションがサポートされる機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。  
   
@@ -253,7 +253,7 @@ ms.locfileid: "72517941"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のローカル クラスター グループにインストールされている MSDTC インスタンスが失敗すると、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、既定のクラスター インスタンスまたはローカル コンピューターの MSDTC インスタンスが自動的には使用されません。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] グループから失敗した MSDTC インスタンスを完全に削除して、別の MSDTC インスタンスを使用する必要があります。 同様に、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のマッピングを作成し、マップされる MSDTC インスタンスが失敗した場合は、分散トランザクションも失敗します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] で別の MSDTC インスタンスを使用するには、MSDTC インスタンスを [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のローカルのクラスター グループに追加するか、マッピングを削除する必要があります。  
   
-### <a name="configure-includemsconameincludesmsconame-mdmd-distributed-transaction-coordinator"></a>[!INCLUDE[msCoName](../../../includes/msconame-md.md)] 分散トランザクション コーディネーターの構成  
+### <a name="configure-msconame-distributed-transaction-coordinator"></a>[!INCLUDE[msCoName](../../../includes/msconame-md.md)] 分散トランザクション コーディネーターの構成  
  オペレーティング システムをインストールしてクラスターを構成した後で、クラスター アドミニストレーターを使用して、クラスター内で機能するように MSDTC を構成する必要があります。 MSDTC のクラスター化に失敗しても [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップは中断しませんが、MSDTC が適切に構成されていない場合は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のアプリケーション機能に影響が生じる可能性があります。  
   
 ## <a name="see-also"></a>参照  

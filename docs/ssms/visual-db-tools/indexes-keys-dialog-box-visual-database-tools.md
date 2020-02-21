@@ -1,10 +1,9 @@
 ---
-title: '[インデックス/キー] ダイアログ ボックス (Visual Database Tools) | Microsoft Docs'
-ms.custom: ''
+title: '[インデックス/キー] ダイアログ ボックス'
+ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -13,12 +12,14 @@ f1_keywords:
 ms.assetid: 9e4060ba-80c3-468f-bccb-e12e99f672c2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dc4ca010e03090b1ba695247023858b2d1541c40
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.manager: jroth
+ms.reviewer: ''
+ms.openlocfilehash: 7043ec4173bf1a14ca80b915e1ea6ac10fd0d72d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68254338"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75224920"
 ---
 # <a name="indexes---keys-dialog-box-visual-database-tools"></a>[インデックス/キー] ダイアログ ボックス (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "68254338"
 **[選択された主/一意キーまたはインデックス]**  
 既存の主キーまたは一意キーとインデックスを示します。 右側のグリッドにプロパティを表示するキーまたはインデックスを選択します。 一覧が空の場合、テーブルには何も定義されていません。  
   
-**[追加]**  
+**追加**  
 新しい主キー、一意キー、またはインデックスを作成します。  
   
 **削除**  
@@ -46,16 +47,16 @@ ms.locfileid: "68254338"
 **[UNIQUE]**  
 インデックスまたはキーに入力するデータが一意である必要があるかどうかを示します。 XML インデックスでは使用できません。  
   
-**型**  
+**Type**  
 **[選択された主/一意キーまたはインデックス]** の一覧で選択された項目が一意のキーであるか、主キーであるか、またはインデックスであるかを指定します。 主キーを選択した場合、該当するフィールドは読み取り専用になります。  
   
 **[IDENTITY] カテゴリ**  
 展開して **[オブジェクト名]** プロパティ フィールドと **[説明]** プロパティ フィールドを表示します。  
   
-**[名前]**  
+**Name**  
 キーまたはインデックスの名前を表示します。 新しいキーまたはインデックスを作成した場合、このプロパティには、テーブル デザイナーのアクティブ ウィンドウのテーブルに基づいて、既定の名前が設定されます。 名前はいつでも変更できます。  
   
-**[説明]**  
+**説明**  
 キーまたはインデックスの説明を記述できます。 より詳細な説明を記述する場合は、 **[説明]** をクリックしてから、プロパティ フィールドの右に表示される省略記号ボタン ( **[...]** ) をクリックします。 これにより、テキストを書くことができる領域が大きくなります。  
   
 **[テーブル デザイナー] カテゴリ**  
@@ -115,6 +116,6 @@ ms.locfileid: "68254338"
 該当するインデックスで行レベルのロックを許可するかどうかを指定します。 行レベル ロックの許可、非許可はデータベースのパフォーマンスに影響を与えます。 推奨設定値は **[はい]** です。  
   
 ## <a name="see-also"></a>参照  
-[制約の使用 (Visual Database Tools)](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)  
-[キーの使用 (Visual Database Tools)](https://msdn.microsoft.com/31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd)  
+[制約の使用(https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)  
+[キーの操作(https://msdn.microsoft.com/31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd)  
   

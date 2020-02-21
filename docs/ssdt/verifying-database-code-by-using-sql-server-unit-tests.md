@@ -1,23 +1,24 @@
 ---
-title: SQL Server の単体テストを使用したデータベース コードの検証 | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: v を使用したデータベース コードの検証
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 003713e2-de6b-4277-a0a8-7d1f2f4ffb39
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b3e720389f790282f1ad7a33302e2d277128178f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: ab6cccf656d0951c5f8fd72bb5863bbe91f0e74d
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140951"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75243486"
 ---
 # <a name="verifying-database-code-by-using-sql-server-unit-tests"></a>SQL Server の単体テストを使用したデータベース コードの検証
+
 SQL Server の単体テストを使用すると、データベースのベースラインとなる状態を確立した後、データベース オブジェクトに対してそれ以降行う変更を検証することができます。  
   
 データベースのベースラインとなる状態を確立するには、データベース オブジェクトで動作するテスト プロジェクトを作成し、Transact\-SQL テストのセットを記述します。 このような単体テストを使用すると、分離した開発環境でオブジェクトが予想どおりに機能するかどうかを確認できます。 SQL Server 単体テストは、SQL Server データベース プロジェクトを使用したオフライン データベース開発に適しています (詳細については、「[プロジェクト指向のオフライン データベース開発](../ssdt/project-oriented-offline-database-development.md)」を参照してください)。 ベースラインとなる一連の SQL Server 単体テストが用意できたら、変更をバージョン管理にチェックインする前に、これらのテストを使用してデータベースが正しく動作しているかどうかを検証できます。  

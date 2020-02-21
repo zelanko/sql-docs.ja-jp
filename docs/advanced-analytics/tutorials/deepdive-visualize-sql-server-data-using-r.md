@@ -1,6 +1,6 @@
 ---
 title: RevoScaleR を使用してデータを視覚化する
-description: このチュートリアルは、SQL Server で R 言語を使用してデータを視覚化する方法について詳しく説明しています。
+description: RevoScaleR チュートリアル 6:SQL Server で R 言語を使用してデータを視覚化する方法。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,30 +9,30 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f64b42e69b1399e67211e82e26502c3fcec96254
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 887c5790a7de70cf111f004be65e3a41748b47bf
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727119"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947366"
 ---
 #  <a name="visualize-sql-server-data-using-r-sql-server-and-revoscaler-tutorial"></a>R を使用して SQL Server データを視覚化する (SQL Server と RevoScaleR のチュートリアル)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-このレッスンは、SQL Server で [RevoScaleR 関数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)を使用する方法についての [RevoScaleR チュートリアル](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)の一部です。
+これは、SQL Server で [RevoScaleR 関数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)を使用する方法についての [RevoScaleR チュートリアル シリーズ](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)のチュートリアル 6 です。
 
-このレッスンでは、R 関数を使用して、*creditLine* 列の値の分布を男女別に表示します。
+このチュートリアルでは、R 関数を使用して、*creditLine* 列の値の分布を男女別に表示します。
 
 > [!div class="checklist"]
 > * ヒストグラム入力用の最小最大変数を作成します
 > * **RevoScaleR** から **rxHistogram** を使用して、ヒストグラムのデータを視覚化します
 > * 基本 R ディストリビューションに含まれている **lattice** から **levelplot** を使用して、散布図で視覚化します
 
-このレッスンでは、オープンソースと Microsoft 固有の関数を同じスクリプトで組み合わせることができます。
+このチュートリアルでは、オープンソースと Microsoft 固有の関数を同じスクリプトで組み合わせることができます。
 
 ## <a name="add-maximum-and-minimum-values"></a>最小値と最大値を追加する
 
-前のレッスンで計算された概要統計情報に基づき、後続の計算のためにデータ ソースに挿入できるデータに関する有益な情報がいくつか得られました。 たとえば、最小値と最大値を使用して、ヒストグラムを計算できます。 この演習では、**RxSqlServerData** データ ソースに大きい値と小さい値を追加します。
+前のチュートリアルで計算された概要統計情報に基づき、後続の計算のためにデータ ソースに挿入できるデータに関する有益な情報がいくつか得られました。 たとえば、最小値と最大値を使用して、ヒストグラムを計算できます。 この演習では、**RxSqlServerData** データ ソースに大きい値と小さい値を追加します。
 
 1. まず、仮の変数をいくつか設定します。
   
@@ -41,7 +41,7 @@ ms.locfileid: "73727119"
     var <- sumDF$Name
     ```
   
-2. 前のレッスンで作成した変数 *ccColInfo* を利用し、データ ソースに列を定義します。
+2. 前のチュートリアルで作成した変数 *ccColInfo* を利用し、データ ソースに列を定義します。
   
    また、元の定義をオーバーライドする列コレクションに新しく計算された列をいくつか追加します (*numTrans*、*numIntlTrans*、*creditLine*)。 次のスクリプトは、**rxSummary** からのインメモリ出力を格納している sumOut から取得した最小値と最大値に基づいて要素を追加します。 
   
@@ -124,7 +124,7 @@ ms.locfileid: "73727119"
     cubePlot <- rxResultsDF(cube1)
     ```
   
-    **rxCube** 関数にはオプションの引数 *returnDataFrame* = **TRUE** が含まれています。これを使うと、結果をデータ フレームに直接変換できます。 例:
+    **rxCube** 関数にはオプションの引数 *returnDataFrame* = **TRUE** が含まれています。これを使うと、結果をデータ フレームに直接変換できます。 次に例を示します。
     
     `print(rxCube(fraudRisk~F(numTrans):F(numIntlTrans), data = sqlFraudDS, returnDataFrame = TRUE))`
        
@@ -144,7 +144,7 @@ ms.locfileid: "73727119"
 
 一般的な **rxCube** 関数およびクロス集計表の詳細については、「[RevoScaleR を使用したデータのサマリー](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-summaries)」を参照してください。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 > [!div class="nextstepaction"]
 > [SQL Server データを使用して R モデルを作成する](../../advanced-analytics/tutorials/deepdive-create-models.md)

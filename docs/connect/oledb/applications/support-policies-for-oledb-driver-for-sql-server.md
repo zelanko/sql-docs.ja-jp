@@ -11,10 +11,10 @@ ms.topic: reference
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: b02789c787266a3370e3c5c9bfae50ea337d19db
-ms.sourcegitcommit: 4c75b49599018124f05f91c1df3271d473827e4d
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "72381859"
 ---
 # <a name="support-policies-for-ole-db-driver-for-sql-server"></a>OLE DB Driver for SQL Server のサポート ポリシー
@@ -22,26 +22,26 @@ ms.locfileid: "72381859"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  この記事では、さまざまなデータアクセスコンポーネントを OLE DB Driver for SQL Server と共に使用する方法について説明します。  
+  この記事では、さまざまなデータ アクセス コンポーネントを、OLE DB Driver for SQL Server で使用する方法について説明します。  
 
 ## <a name="server-support"></a>サーバー サポート  
- OLE DB Driver for SQL Server では、[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]、および [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] を介した [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] への接続がサポートされています。
+ OLE DB Driver for SQL Server では、[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]、および [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] への接続がサポートされています。
 
 ## <a name="supported-operating-system-versions"></a>サポートされるオペレーティング システムのバージョン  
- 次の表に、SQL Server 用の OLE DB ドライバーをサポートしているオペレーティングシステムを示します。  
+ 次の表に、OLE DB Driver for SQL Server をサポートするオペレーティング システムの一覧を示します。  
 
 | サポートされるオペレーティング システム |  |
 |--------------------------------------|---------------------------------|   
-| Microsoft Windows 8.1 + [2014 年4月更新](https://go.microsoft.com/fwlink/?linkid=2073785) + [KB2999226](https://go.microsoft.com/fwlink/?linkid=2074061)<br /><br />Microsoft Windows 10<br /><br /> Microsoft Windows Server 2012 + [KB2999226](https://go.microsoft.com/fwlink/?linkid=2074061)<br /><br />Microsoft Windows Server 2012 R2 + [4 月2014更新プログラム](https://go.microsoft.com/fwlink/?linkid=2073785) + [KB2999226](https://go.microsoft.com/fwlink/?linkid=2074061)<br /><br />Microsoft Windows Server 2016<br /><br />Microsoft Windows Server 2019 |  |
+| Microsoft Windows 8.1 + [2014 年 4 月の更新](https://go.microsoft.com/fwlink/?linkid=2073785) + [KB2999226](https://go.microsoft.com/fwlink/?linkid=2074061)<br /><br />Microsoft Windows 10<br /><br /> Microsoft Windows Server 2012 + [KB2999226](https://go.microsoft.com/fwlink/?linkid=2074061)<br /><br />Microsoft Windows Server 2012 R2 + [2014 年 4 月の更新](https://go.microsoft.com/fwlink/?linkid=2073785) + [KB2999226](https://go.microsoft.com/fwlink/?linkid=2074061)<br /><br />Microsoft Windows Server 2016<br /><br />Microsoft Windows Server 2019 |  |
 
 
 ## <a name="ado-support-policies"></a>ADO サポート ポリシー  
  ADO アプリケーションでは、[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以降の機能を必要としない場合に、Windows に付属している SQLOLEDB OLE DB プロバイダーを使用できます。  
 
- ADO アプリケーションでは、SQL Server に OLE DB ドライバーを使用できますが、その場合は接続文字列に `DataTypeCompatibility=80` を指定する必要があります。 `DataTypeCompatibility=80` が接続文字列に含まれている場合は、[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] の機能しか使用できません。  
+ ADO アプリケーションでは OLE DB Driver for SQL Server を使用できますが、その場合は、接続文字列に `DataTypeCompatibility=80` を指定する必要があります。 `DataTypeCompatibility=80` が接続文字列に含まれている場合は、[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] の機能しか使用できません。  
 
 ## <a name="ole-db-support-policies"></a>OLE DB サポート ポリシー  
-アプリケーションは Windows オペレーティング システムに付属している OLE DB プロバイダー (SQLOLEDB) を使用することができます。 ただし、これはメンテナンスモードであり、更新されていません。 代わりに、OLE DB Driver for SQL Server (MSOLEDBSQL) を使用してください。
+アプリケーションは Windows オペレーティング システムに付属している OLE DB プロバイダー (SQLOLEDB) を使用することができます。 ただし、これはメンテナンス モードになっていて、更新されなくなっています。 代わりに OLE DB Driver for SQL Server (MSOLEDBSQL) を使用してください。
 
 ## <a name="see-also"></a>参照  
  [OLE DB Driver for SQL Server を使用したアプリケーションの構築](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)   

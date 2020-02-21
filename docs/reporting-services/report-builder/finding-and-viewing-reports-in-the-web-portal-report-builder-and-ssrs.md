@@ -9,10 +9,10 @@ ms.assetid: 8556807e-f2e2-4a7b-bb1b-ac5ea1872e51
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2f98607ce8544a913ace04bbc70aa578d1090557
-ms.sourcegitcommit: 071065bc5433163ebfda4fdf6576349f9d195663
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "71923786"
 ---
 # <a name="finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs"></a>Web ポータルを使用したレポートの検索と表示 (レポート ビルダーおよび SSRS)
@@ -26,7 +26,7 @@ ms.locfileid: "71923786"
 ## <a name="navigating-the-folder-hierarchy-in-report-manager"></a>レポート マネージャーでのフォルダー階層の移動  
  実行するレポートを参照する場合は、ホーム ページを使用できます。このページは、レポート マネージャーを起動したとき、およびフォルダー階層内で任意のフォルダーを開いたときに自動的に表示されます。 ホーム ページには、表示権限のあるアイテムだけが表示されます。 フォルダー パスは、ホーム ページの上部にリンク行として表示されます。 ルート フォルダー ([ホーム]) を先頭に、フォルダー名が順に一覧表示されます。 各サブフォルダーを開くと、ページの最上部のフォルダー パスにフォルダー名が追加されます。 下のイメージの **(1)** 。 レポートを開くと、レポートの名前もフォルダー パスに追加されます。  
   
- ![レポート マネージャーのリボンとナビゲーション](../../reporting-services/report-builder/media/rs-reportmanager-ribbon.gif "レポート マネージャーのリボンとナビゲーション")  
+ ![レポート マネージャー リボンとナビゲーション](../../reporting-services/report-builder/media/rs-reportmanager-ribbon.gif "レポート マネージャー リボンとナビゲーション")  
 レポート マネージャーのリボン  
   
  フォルダー階層内を移動するには、次の方法を使用します。  
@@ -53,6 +53,6 @@ ms.locfileid: "71923786"
 -   レポート内の特定のテキストを検索するには、レポートの最上部にあるツール バーを使用します。  
   
 ## <a name="see-also"></a>参照  
- [レポートの検索、表示、管理 (レポート ビルダーおよび SSRS)](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
+ [レポートの検索、表示、管理 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

@@ -1,6 +1,6 @@
 ---
 title: XDF ファイルを使用してデータを移動する
-description: このチュートリアルは、SQL Server で XDF と R 言語を使用してデータを移動する方法について詳しく説明しています。
+description: 'RevoScaleR チュートリアル 13: SQL Server で XDF と R 言語を使用してデータを移動する方法。'
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6935276a47061652647666184637af8ba1535edd
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: d55bdf59eef4c8e7baa0553487a92a06e76326a9
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727209"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74947369"
 ---
 # <a name="move-data-between-sql-server-and-xdf-file-sql-server-and-revoscaler-tutorial"></a>SQL Server と XDF ファイル間でデータを移動する (SQL Server と RevoScaleR のチュートリアル)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-このレッスンは、SQL Server で [RevoScaleR 関数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)を使用する方法についての [RevoScaleR チュートリアル](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)の一部です。
+これは、SQL Server で [RevoScaleR 関数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)を使用する方法についての [RevoScaleR チュートリアル シリーズ](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)のチュートリアル 13 です。
 
-この手順では、XDF ファイルを使用して、リモートとローカルの両方のコンピューティング コンテキストでデータを転送する方法について説明します。 XDF ファイルにデータを格納すると、データを変換できるようになります。
+このチュートリアルでは、XDF ファイルを使用して、リモートとローカルの両方のコンピューティング コンテキストでデータを転送する方法について説明します。 XDF ファイルにデータを格納すると、データを変換できるようになります。
 
 完了したら、ファイル内のデータで新しい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルを作成します。 関数 [rxDataStep](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdatastep) は、データを変換し、データ フレームと xdf ファイル間で変換を実行できます。
   
@@ -108,9 +108,9 @@ ms.locfileid: "73727209"
     rxSummary(~gender + cardholder + balance + state, data = localDS)
     ```
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
-このレッスンで、**RevoScaleR** と SQL Server に関する複数パートにおよぶチュートリアル シリーズを終了します。 ここでは、さまざまなデータに関係する計算の概念を紹介し、独自のデータとプロジェクトの要件を扱うための基盤を提供しています。
+このチュートリアルで、**RevoScaleR** と SQL Server に関する複数パートにおよぶチュートリアル シリーズを終了します。 ここでは、さまざまなデータに関係する計算の概念を紹介し、独自のデータとプロジェクトの要件を扱うための基盤を提供しています。
 
 **RevoScaleR** についての知識を深めるため、R チュートリアルの一覧に戻って、見逃した演習を順を追って進めることができます。 または、目次にあるハウツーに関する記事を参照して、一般的なタスクに関する情報を確認してください。
 

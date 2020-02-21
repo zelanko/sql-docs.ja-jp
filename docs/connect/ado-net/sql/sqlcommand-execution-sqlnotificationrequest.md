@@ -1,6 +1,6 @@
 ---
 title: SqlCommand の実行と SqlNotificationRequest
-description: SqlCommand オブジェクトを構成してクエリ通知を操作する方法を示します。
+description: クエリ通知と連携するように SqlCommand オブジェクトを構成する方法を示します。
 ms.date: 08/15/2019
 dev_langs:
 - csharp
@@ -9,38 +9,38 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: v-kaywon
-ms.author: v-kaywon
-ms.reviewer: rothja
-ms.openlocfilehash: 892f11e2d81e3a0733a1f0747c0b72c72ebc79fc
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
-ms.translationtype: MTE75
+author: rothja
+ms.author: jroth
+ms.reviewer: v-kaywon
+ms.openlocfilehash: 5477b655554dceaa5f43b7d099e0fc156340f558
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72451939"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75233813"
 ---
 # <a name="sqlcommand-execution-with-a-sqlnotificationrequest"></a>SqlCommand の実行と SqlNotificationRequest
 
 ![Download-DownArrow-Circled](../../../ssdt/media/download.png)[ADO.NET をダウンロードする](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-<xref:Microsoft.Data.SqlClient.SqlCommand> は、データがサーバーからフェッチされた後にデータが変更された場合に通知を生成するように構成できます。また、クエリを再度実行した場合は、結果セットが異なることがあります。 これは、サーバー上でカスタム通知キューを使用する場合や、ライブオブジェクトを保持しない場合に便利です。
+<xref:Microsoft.Data.SqlClient.SqlCommand> は、データがサーバーからフェッチされた後に変更された場合、また、クエリを再度実行すると結果セットが異なるような場合に、通知を生成するように構成することができます。 これは、サーバー上でカスタム通知キューを使用する場合や、ライブ オブジェクトを保持しない場合に便利です。
 
-## <a name="creating-the-notification-request"></a>通知要求を作成しています
+## <a name="creating-the-notification-request"></a>通知要求の作成
 
-<xref:Microsoft.Data.Sql.SqlNotificationRequest> オブジェクトを使用して、`SqlCommand` オブジェクトにバインドすることによって通知要求を作成できます。 要求が作成されると、`SqlNotificationRequest` オブジェクトは不要になります。 キューに対して任意の通知を照会し、適切に応答することができます。 通知は、アプリケーションがシャットダウンされ、その後再起動された場合でも発生する可能性があります。
+<xref:Microsoft.Data.Sql.SqlNotificationRequest> オブジェクトを使用して通知要求を作成し、これを `SqlCommand` オブジェクトにバインドできます。 要求を作成したら、`SqlNotificationRequest` オブジェクトは不要になります。 キューに対して任意の通知を照会し、適切に応答することができます。 通知は、アプリケーションがシャットダウンされ、その後再起動された場合でも発生する可能性があります。
 
 コマンドに通知を関連付けて実行した場合、元の結果セットに何らかの変更が生じると、通知要求で構成した SQL Server キューにメッセージが送信されます。
 
 SQL Server のキューをポーリングしメッセージを解釈する方法は、アプリケーションごとに固有なものになります。 アプリケーションは、メッセージの内容に基づいてキューのポーリングと応答を行います。
 
 > [!NOTE]
-> <xref:Microsoft.Data.SqlClient.SqlDependency> で SQL Server 通知要求を使用する場合は、既定のサービス名を使用するのではなく、独自のキュー名を作成します。
+> <xref:Microsoft.Data.SqlClient.SqlDependency> と共に SQL Server 通知要求を使用する場合は、既定のサービス名を使用するのではなく、独自のキュー名を作成してください。
 
-<xref:Microsoft.Data.Sql.SqlNotificationRequest> 用の新しいクライアント側セキュリティ要素はありません。 これは主にサーバー機能であり、ユーザーが通知を要求するために必要な特別な特権をサーバーが作成しています。
+<xref:Microsoft.Data.Sql.SqlNotificationRequest> に対応する新しいクライアント側セキュリティ要素はありません。 これはそもそもサーバー機能であり、ユーザーが通知を要求するために保持する必要がある特権はサーバーによって作成されています。
 
 ### <a name="example"></a>例
 
-次のコードフラグメントは、<xref:Microsoft.Data.Sql.SqlNotificationRequest> を作成し、<xref:Microsoft.Data.SqlClient.SqlCommand> に関連付ける方法を示しています。
+次のコード フラグメントは、<xref:Microsoft.Data.Sql.SqlNotificationRequest> を作成し、<xref:Microsoft.Data.SqlClient.SqlCommand> に関連付ける方法を示しています。
 
 ```csharp
 // Assume connection is an open SqlConnection.
@@ -62,5 +62,5 @@ command.ExecuteReader();
 // SQL Server queue to see if you have a new message.
 ```
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 - [SQL Server でのクエリ通知](query-notifications-sql-server.md)

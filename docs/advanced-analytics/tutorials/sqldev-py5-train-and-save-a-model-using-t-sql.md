@@ -8,18 +8,18 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b8bec553502b2e5c8d69436e539437be9a5989aa
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 87194c1a77964f0e5aef3d0fae008d14cbfb8eb2
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73724876"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74901804"
 ---
 # <a name="train-and-save-a-python-model-using-t-sql"></a>T-SQL を使用して Python モデルをトレーニングし保存する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-この記事は、[SQL 開発者向けのデータベース内の Python 分析](sqldev-in-database-python-for-sql-developers.md)チュートリアルの一部です。 
+この記事は、[SQL 開発者向けのデータベース内 Python analytics](sqldev-in-database-python-for-sql-developers.md) チュートリアルの一部です。 
 
 この手順では、Python パッケージの **scikit-learn** と **revoscalepy** を使用して、機械学習モデルをトレーニングする方法について説明します。 これらの Python ライブラリは、SQL Server Machine Learning Services と共に、既にインストールされています。
 
@@ -115,7 +115,7 @@ SQL Server ストアド プロシージャを使用してモデルを作成お�
     INSERT INTO nyc_taxi_models (name, model) VALUES('SciKit_model', @model);
     ```
 
-    データ処理とモデルの調整には、数分かかることがあります。 Python の **stdout** ストリームにパイプ出力されるメッセージが、[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] の **[メッセージ]** ウィンドウに表示されます。 例:
+    データ処理とモデルの調整には、数分かかることがあります。 Python の **stdout** ストリームにパイプ出力されるメッセージが、[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] の **[メッセージ]** ウィンドウに表示されます。 次に例を示します。
 
     *外部スクリプトからの STDOUT メッセージ:* 
   *C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib\site-packages\revoscalepy*
@@ -128,7 +128,7 @@ SQL Server ストアド プロシージャを使用してモデルを作成お�
 
 このストアド プロシージャは、新しい **revoscalepy** パッケージを使用します。これは Python 用の新しいパッケージです。 これには、R 言語の **RevoScaleR** パッケージに提供されているものと同様のオブジェクト、変換、およびアルゴリズムが含まれています。 
 
-**revoscalepy** を使用すると、リモート コンピューティング コンテキストの作成、コンピューティング コンテキスト間でのデータ移動、データ変換、および、ロジスティック、線形回帰、デシジョンツリーなどの一般的アルゴリズムを使用した、予測モデルのトレーニングを行うことができます。 詳細については、「[SQL Server の revoscalepy モジュール](../python/ref-py-revoscalepy.md)」および「[revoscalepy 関数参照](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package)」を参照してください。
+**revoscalepy** を使用すると、リモート コンピューティング コンテキストの作成、コンピューティング コンテキスト間でのデータ移動、データ変換、および、ロジスティック、線形回帰、デシジョンツリーなどの一般的アルゴリズムを使用した、予測モデルのトレーニングを行うことができます。 詳細については、[SQL Server の revoscalepy モジュール](../python/ref-py-revoscalepy.md)および [revoscalepy 関数参照](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package)に関するページを参照してください。
 
 1. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] で新しい**クエリ** ウィンドウを開き、次のステートメントを実行して、ストアド プロシージャ _TrainTipPredictionModelRxPy_ を作成します。  ストアド プロシージャには、既に入力データの定義が含まれているため、入力クエリを提供する必要はありません。
 
@@ -179,7 +179,7 @@ SQL Server ストアド プロシージャを使用してモデルを作成お�
     INSERT INTO nyc_taxi_models (name, model) VALUES('revoscalepy_model', @model);
     ```
 
-    データ処理とモデルの調整には、しばらく時間がかかることがあります。 Python の **stdout** ストリームにパイプ出力されるメッセージが、[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] の **[メッセージ]** ウィンドウに表示されます。 例:
+    データの処理とモデルの調整には、しばらく時間がかかる場合があります。 Python の **stdout** ストリームにパイプ出力されるメッセージが、[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] の **[メッセージ]** ウィンドウに表示されます。 次に例を示します。
 
     *外部スクリプトからの STDOUT メッセージ:* 
   *C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib\site-packages\revoscalepy*
@@ -190,7 +190,7 @@ SQL Server ストアド プロシージャを使用してモデルを作成お�
 
 次の手順では、トレーニングしたモデルを使用して予測を作成します。
 
-## <a name="next-step"></a>次の手順
+## <a name="next-step"></a>次のステップ
 
 [ストアド プロシージャに埋め込まれた Python を使用した予測の実行](sqldev-py6-operationalize-the-model.md)
 

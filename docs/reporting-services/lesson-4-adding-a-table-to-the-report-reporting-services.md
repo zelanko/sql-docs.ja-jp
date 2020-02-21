@@ -1,6 +1,7 @@
 ---
-title: 'レッスン 4 : レポートへのテーブルの追加 (Reporting Services) | Microsoft Docs'
-ms.date: 04/29/2019
+title: レッスン 4:テーブルをレポートに追加する | Microsoft Docs
+description: データセットを定義したら、ページ分割されたレポートのデザインを開始できます。 レポート オブジェクトを [ツールボックス] ウィンドウからデザイン画面にドラッグ アンド ドロップすることで、レポートのレイアウトを作成します。
+ms.date: 12/16/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -8,22 +9,22 @@ ms.topic: conceptual
 ms.assetid: 5ddf2914-bcdd-427d-8cba-0ccb8342f819
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e925dec5eb14365a6c313349599a77ffe1d7ab13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: fca89bf8992db9ec3b07cea422ec146993e8aec8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65106005"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75244300"
 ---
-# <a name="lesson-4-adding-a-table-to-the-report-reporting-services"></a>レッスン 4 : レポートへのテーブルの追加 (Reporting Services)
+# <a name="lesson-4-add-a-table-to-the-report-reporting-services"></a>レッスン 4:テーブルをレポートに追加する (Reporting Services)
 
-データセットを定義したら、レポートのデザインを開始できます。 *レポート オブジェクト*を **[ツールボックス]** ウィンドウから**デザイン画面**にドラッグ アンド ドロップすることで、レポートのレイアウトを作成します。 レポート オブジェクトの種類をいくつか挙げます。
+データセットを定義したら、ページ分割されたレポートのデザインを開始できます。 *レポート オブジェクト*を **[ツールボックス]** ウィンドウから**デザイン画面**にドラッグ アンド ドロップすることで、レポートのレイアウトを作成します。 レポート オブジェクトの種類をいくつか挙げます。
 
 - テーブル
 - テキスト ボックス
-- image
-- 線
-- 四角形
+- Image
+- Line
+- Rectangle
 - グラフ
 - マップ
 
@@ -52,9 +53,9 @@ ms.locfileid: "65106005"
 
     ![ssrs_tutorial_addcolumn](media/ssrs-tutorial-addcolumn.png)
 
-7. 同様に `[LineTotal]` フィールドを追加して、5 番目の列を作成します。 列ラベルが [Line Total] として追加されます。 レポート デザイナーにより、"LineTotal" を 2 つの語に分割して列のフレンドリ名が自動的に作成されます。
+7. 同様に [`[LineTotal]`] フィールドを追加して、5 番目の列を作成します。 列ラベルが [Line Total] として追加されます。 レポート デザイナーにより、"LineTotal" を 2 つの語に分割して列のフレンドリ名が自動的に作成されます。
 
-次の図は、[Date]、[Order]、[Product]、[Qty]、および [Line Total] の各フィールドを使用して作成したテーブル データ領域を示しています。
+次の図は、次のフィールドを使って設定されたテーブル データ領域を示しています:Date、Order、Product、Qty、および Line Total です。
 ![rs_BasicTableDetailsDesign](media/rs-basictabledetailsdesign.png)
 
 ## <a name="preview-your-report"></a>レポートをプレビューする
@@ -76,11 +77,11 @@ ms.locfileid: "65106005"
 > [!NOTE]
 > **[ファイル]** メニューから **[すべてを保存]** をクリックしてレポートを保存します。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
-テーブル データ領域がレポートに、フィールドがデータ領域にそれぞれ正しく追加され、レポートが正しくプレビューされました。 次のレッスンでは、列ヘッダーとフィールド式の書式を設定する方法について学習します。 「[レッスン 5: レポートの書式設定 &#40;Reporting Services&#41;](lesson-5-formatting-a-report-reporting-services.md)」に進みます。
+テーブル データ領域がレポートに、フィールドがデータ領域にそれぞれ正しく追加され、レポートが正しくプレビューされました。 次のレッスンでは、列ヘッダーとフィールド式の書式を設定する方法について学習します。 次に、「[レッスン 5: レポートの書式設定 &#40;Reporting Services&#41;](lesson-5-formatting-a-report-reporting-services.md)」を参照してください。
   
 ## <a name="see-also"></a>参照
 
 [テーブル &#40;レポート ビルダーおよび SSRS&#41;](report-design/tables-report-builder-and-ssrs.md)  
-[データセット フィールド コレクション &#40;レポート ビルダーおよび SSRS&#41;](report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
+[データセット フィールド コレクション (レポート ビルダーおよび SSRS)](report-data/dataset-fields-collection-report-builder-and-ssrs.md)  

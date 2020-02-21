@@ -1,22 +1,24 @@
 ---
-title: サブスクリプション設定とファイル共有アカウント (構成マネージャー) | Microsoft Docs
-ms.date: 05/31/2016
+title: サブスクリプション設定とファイル共有アカウント (Configuration Manager) | Microsoft Docs
+description: Reporting Services Configuration Manager の [サブスクリプションの設定] ページを使用すると、ネイティブ モードのレポート サーバーとファイル共有のサブスクリプションのファイル共有アカウントを構成できます。
+ms.date: 12/04/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
+ms.custom: seo-lt-2019, seo-mmd-2019
 ms.topic: conceptual
 f1_keywords:
 - SQL13.rsconfigtool.subscriptionsettings.F1
 ms.assetid: fefa7bdb-b5f2-4db7-b91c-b58869279f3c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9e8dfea342f4545313035869f8c2e12367e62aed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.openlocfilehash: 9dd29c96f80ed24889356c72961f47de707037e6
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62651970"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74866275"
 ---
-# <a name="subscription-settings-and-a-file-share-account-configuration-manager"></a>サブスクリプション設定とファイル共有アカウント (構成マネージャー)
+# <a name="subscription-settings-and-a-file-share-account-ssrs-configuration-manager"></a>サブスクリプション設定とファイル共有アカウント (SSRS Configuration Manager)
   **構成マネージャーの** [サブスクリプションの設定] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ページを使用すると、ネイティブ モードのレポート サーバーとファイル共有のサブスクリプションのファイル共有アカウントを構成できます。 ファイル共有アカウントでは、複数のサブスクリプションで 1 つの資格情報のセットを使用し、ファイル共有にレポートを配信することができます。 資格情報の変更が必要なときは、ファイル共有アカウントの変更を構成します。個々のサブスクリプションは更新しません。  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のファイル共有サブスクリプションには、2 つのワークフローがあります。  
@@ -25,7 +27,7 @@ ms.locfileid: "62651970"
   
 -   個々のサブスクリプションに、宛先のファイル共有の資格情報を具体的に構成します。  
   
--   一部のファイル共有のサブスクリプションでは中枢のファイル共有アカウントを使用し、他のサブスクリプションでは特定の資格情報を使用する、2 つの方法を混在させることも可能です。  
+-   この 2 つの方法を組み合わせて、一部のファイル共有サブスクリプションでは管理者が構成したファイル共有アカウントを使用し、他のサブスクリプションでは特定の資格情報を使用することもできます。  
   
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モード。  
   
@@ -36,7 +38,7 @@ ms.locfileid: "62651970"
   
  次は、ファイル共有の配信が構成されているサブスクリプションでユーザーに表示されるものの画像です。 ファイル共有アカウントが構成されていない場合、 **[ファイル共有アカウントを使用]** は無効です。  
   
- ![構成マネージャーのファイル共有アカウント](../../reporting-services/install-windows/media/ssrs-fileshare-account.png "構成マネージャーのファイル共有アカウント")  
+ ![Configuration Manager ファイル共有アカウント](../../reporting-services/install-windows/media/ssrs-fileshare-account.png "Configuration Manager ファイル共有アカウント")  
   
 ## <a name="prevent-privilege-escalation-or-elevated-privileges"></a>権限の昇格や昇格された権限の回避  
   

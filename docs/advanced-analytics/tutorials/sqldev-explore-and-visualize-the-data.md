@@ -1,5 +1,5 @@
 ---
-title: R + T-SQL のチュートリアル:データの探索
+title: R + T-SQL チュートリアル:データの探索
 description: チュートリアルでは、R 関数を使用して SQL Server データを探索および視覚化する方法を示しています。
 ms.prod: sql
 ms.technology: machine-learning
@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 213db5ee9b88f7af34e3d000fc0f3b241d8e5791
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73725227"
 ---
 # <a name="lesson-1-explore-and-visualize-the-data"></a>レッスン 1:データの探索および視覚化
@@ -55,7 +55,7 @@ ms.locfileid: "73725227"
   
 -   ラベル列に使用される値はすべて _tip\_amount_ 列に基づき、次のようなビジネス ルールが適用されます。
   
-    |派生列名|Rule|
+    |派生列名|ルール|
     |-|-|
      |tipped|tip_amount > 0 の場合、tipped = 1、それ以外では tipped = 0|
     |tip_class|クラス 0: tip_amount = $0<br /><br />クラス 1: tip_amount > $0 および tip_amount <= $5<br /><br />クラス 2: tip_amount > $5 および tip_amount <= $10<br /><br />クラス 3: tip_amount > $10 および tip_amount <= $20<br /><br />クラス 4: tip_amount > $20|
@@ -64,7 +64,7 @@ ms.locfileid: "73725227"
 
 プロットを作成するには、[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) で提供されている拡張 R 関数の 1 つである [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram) を使用します。 この手順では、[!INCLUDE[tsql](../../includes/tsql-md.md)] クエリのデータに基づいてヒストグラムをプロットします。 この関数は、ストアド プロシージャでラップすることができます。これには、**PlotRxHistogram** を使用します。
 
-1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] では、オブジェクト エクスプローラーで、**NYCTaxi_Sample** データベースを右クリックし、**[新しいクエリ]** を選択します。
+1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] では、オブジェクト エクスプローラーで、**NYCTaxi_Sample** データベースを右クリックし、 **[新しいクエリ]** を選択します。
 
 2. 次のスクリプトに貼り付けて、ヒストグラムをプロットするストアド プロシージャを作成します。 この例には、**RPlotRxHistogram* という名前が付けられています。
 
@@ -117,7 +117,7 @@ ms.locfileid: "73725227"
     
     *plot* *0xFFD8FFE000104A4649...*
   
-2. PowerShell コマンド プロンプトを開き、次のコマンドを実行します。引数として適切なインスタンス名、データベース名、ユーザー名、資格情報を指定します。 Windows ID を使用する場合は、**-U** や **-P** を **T**に置き換えることができます。
+2. PowerShell コマンド プロンプトを開き、次のコマンドを実行します。引数として適切なインスタンス名、データベース名、ユーザー名、資格情報を指定します。 Windows ID を使用する場合は、 **-U** や **-P** を **T**に置き換えることができます。
   
     ```powershell
     bcp "exec RxPlotHistogram" queryout "plot.jpg" -S <SQL Server instance name> -d  NYCTaxi_Sample  -U <user name> -P <password> -T
@@ -166,7 +166,7 @@ ms.locfileid: "73725227"
 
 このストアド プロシージャは、**Hist** 関数を使用してヒストグラムを作成し、.JPG、.PDF、および .PNG などの一般的な形式でバイナリ データをエクスポートします。 
 
-1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] では、オブジェクト エクスプローラーで、**NYCTaxi_Sample** データベースを右クリックし、**[新しいクエリ]** を選択します。
+1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] では、オブジェクト エクスプローラーで、**NYCTaxi_Sample** データベースを右クリックし、 **[新しいクエリ]** を選択します。
 
 2. 次のスクリプトに貼り付けて、ヒストグラムをプロットするストアド プロシージャを作成します。 この例には、**RPlotHist** という名前が付けられています。
   
@@ -261,7 +261,7 @@ C:\temp\plots\rXYPlots_Tip_vs_Fare_Amount_18887c9d517b.pdf
 
 ファイル名の数値はランダムに生成され、既存のファイルに書き込もうとしたときに、エラーが発生しないようにします。
 
-### <a name="view-output"></a>出力を表示する 
+### <a name="view-output"></a>出力の表示 
 
 プロットを表示するには、宛先フォルダーを開き、ストアド プロシージャの R コードにより作成されたファイルを確認します。
 

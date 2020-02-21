@@ -1,23 +1,24 @@
 ---
-title: 方法:単一のトランザクションのスコープ内で実行する SQL Server の単体テストを作成する | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: 単一のトランザクションのスコープを実行する SQL Server の単体テストを作成する
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: cb241e94-d81c-40e9-a7ae-127762a6b855
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8c1a9bf666ac79b76d94cfbd04c88bde6eafd85b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 36bc1ac2a4a20dd0d05d90b8d12ff63b0a7a6b3e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68119879"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75246487"
 ---
 # <a name="how-to-write-a-sql-server-unit-test-that-runs-within-the-scope-of-a-single-transaction"></a>方法:単一のトランザクションのスコープ内で実行する SQL Server の単体テストを作成する
+
 単体テストは、単一のトランザクションのスコープ内で実行されるように変更できます。 この方法を使用すると、テストの終了後、テストによって行われた変更をロールバックできます。 次の手順では、以下の操作方法について説明します。  
   
 -   **BEGIN TRANSACTION** と **ROLLBACK TRANSACTION** を使用する Transact\-SQL テスト スクリプト内にトランザクションを作成します。  
@@ -159,7 +160,7 @@ ms.locfileid: "68119879"
   
 #### <a name="to-start-the-distributed-transaction-coordinator-service"></a>分散トランザクション コーディネーター サービスを開始するには  
   
-1.  **コントロール パネル**を開きます。  
+1.  **[コントロール パネル]** を開きます。  
   
 2.  **コントロール パネル**の **[管理ツール]** を開きます。  
   

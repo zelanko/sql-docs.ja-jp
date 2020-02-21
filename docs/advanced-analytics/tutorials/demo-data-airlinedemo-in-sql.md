@@ -1,6 +1,6 @@
 ---
 title: チュートリアルの航空会社のフライト デモ データ
-Description: R と Python の航空会社データセットを含むデータベースを作成します。 このデータセットは、R 言語または Python コードを SQL Server ストアド プロシージャでラップする方法を示す演習で使用されます。
+Description: R と Python の航空会社データセットを含むデータベースを作成します。 このデータセットは、SQL Server Machine Learning Services 用の R および Python チュートリアルで使用されます。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/22/2018
@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 520a94f5f92c8b7e7d8bf7ba4efc851ce0c3e723
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: 9bb8d26acb21ff38725c6e993c0b6080a35410f1
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727147"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74908915"
 ---
 #  <a name="airline-flight-arrival-demo-data-for-sql-server-python-and-r-tutorials"></a>SQL Server Python と R のチュートリアルの航空会社フライト到着デモ データ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "73727147"
 
 2. オブジェクト エクスプローラーで、 **[データベース]** を右クリックし、**flightdata** という名前の新しいデータベースを作成します。
 
-3. flightdata を右クリックし、 **[タスク]** をクリックして、 **[フラットファイルのインポート]** をクリックします。
+3. **flightdata** を右クリックし、 **[タスク]** をクリックして、 **[フラットファイルのインポート]** をクリックします。
 
 4. インストールした言語に応じて、R または Python ディストリビューションに用意されている AirlineDemoData.csv ファイルを開きます。
 
@@ -61,7 +61,7 @@ ms.locfileid: "73727147"
     SELECT COUNT(*) FROM AirlineDemoSmall;
     ```
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 次のレッスンでは、このデータに基づいて線形回帰モデルを作成します。
 
