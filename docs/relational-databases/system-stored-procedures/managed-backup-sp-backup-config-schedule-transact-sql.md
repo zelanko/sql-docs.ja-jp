@@ -1,7 +1,7 @@
 ---
 title: managed_backup。 sp_backup_config_schedule (Transact-sql) |Microsoft Docs
 ms.custom: ''
-ms.date: 06/10/2016
+ms.date: 02/20/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - managed_backup.sp_backup_config_schedule
 - sp_backup_config_schedule
 ms.assetid: 82541160-d1df-4061-91a5-6868dd85743a
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 52df69439cecad5fddf3d38b8852a1ce86cc4dbd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+author: MashaMSFT
+ms.author: mathoma
+ms.openlocfilehash: e7bb477901dee22c70bb47cd0eaf7da5eb163b7f
+ms.sourcegitcommit: 87b932dc4b603a35a19f16e2c681b6a8d4df1fec
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67942072"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77507536"
 ---
 # <a name="managed_backupsp_backup_config_schedule-transact-sql"></a>managed_backup。 sp_backup_config_schedule (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -67,10 +67,10 @@ EXEC managed_backup.sp_backup_config_schedule
  バックアップ時間枠の期間。 と@backup_begin_time @backup_durationで定義された時間枠でバックアップが完了する保証はないことに注意してください。 この時間枠内に開始され、ウィンドウの期間を超えるバックアップ操作は取り消されません。  
   
  @log_backup_freq  
- これにより、トランザクションログバックアップの頻度が決まります。 これらのバックアップは、データベースバックアップに指定されたスケジュールではなく、一定の間隔で行われます。 @log_backup_freqには、分または時間を指定できます。0は有効で、ログバックアップがないことを示します。 ログバックアップを無効にすることは、単純復旧モデルのデータベースにのみ適しています。  
+ これにより、トランザクションログバックアップの頻度が決まります。 これらのバックアップは、データベースバックアップに指定されたスケジュールではなく、一定の間隔で行われます。 @log_backup_freqは数分または数時間`0:00`で指定でき、ログバックアップがないことを示します。 ログバックアップを無効にすることは、単純復旧モデルのデータベースにのみ適しています。  
   
 > [!NOTE]  
->  復旧モデルが単純から完全に変更された場合は、log_backup_freq を0から0以外の値に再構成する必要があります。  
+>  復旧モデルが単純から完全に変更された場合は、log_backup_freq をから`0:00` 0 以外の値に再構成する必要があります。  
   
 ## <a name="return-code-value"></a>リターン コード値  
  0 (成功) または 1 (失敗)  
