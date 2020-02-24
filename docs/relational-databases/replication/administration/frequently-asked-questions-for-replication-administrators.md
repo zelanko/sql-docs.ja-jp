@@ -15,12 +15,12 @@ ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: f05b8d942a87f749fc5e1c1235d8410558603507
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 233a96ee389e8ffa7b190fde4413a33d51d0c462
+ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76910165"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "77173579"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>レプリケーションの管理者に関してよく寄せられる質問
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -139,7 +139,7 @@ ms.locfileid: "76910165"
   
 -   キャラクター モードのスナップショット ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のバージョンのサブスクライバーや [!INCLUDE[ssEW](../../../includes/ssew-md.md)] サブスクライバーで使用されます) を使用するパブリケーションのアーティクルの場合。既定では、所有者は空白のままになります。 既定の所有者は、サブスクライバーに接続しているディストリビューション エージェントまたはマージ エージェントで使用されるアカウントに関連付けられている所有者になります。  
   
- オブジェクトの所有者は、 **[アーティクルのプロパティ - \<***Article***>]** ダイアログ ボックスと、ストアド プロシージャの **sp_addarticle**、**sp_addmergearticle**、**sp_changearticle**、**sp_changemergearticle** で変更できます。 詳細については、「[View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)」 (パブリケーション プロパティの表示および変更)、「[Define an Article](../../../relational-databases/replication/publish/define-an-article.md)」 (アーティクルの定義)、および「[View and Modify Article Properties](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)」 (アーティクルのプロパティの表示および変更) を参照してください。  
+ オブジェクトの所有者は、 **[アーティクルのプロパティ - \<** _Article_ **>]** ダイアログ ボックスと、ストアド プロシージャ**sp_addarticle**、**sp_addmergearticle**、**sp_changearticle** および **sp_changemergearticle** で変更できます。 詳細については、「[View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)」 (パブリケーション プロパティの表示および変更)、「[Define an Article](../../../relational-databases/replication/publish/define-an-article.md)」 (アーティクルの定義)、および「[View and Modify Article Properties](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)」 (アーティクルのプロパティの表示および変更) を参照してください。  
   
 ### <a name="how-can-grants-on-the-subscription-database-be-configured-to-match-grants-on-the-publication-database"></a>サブスクリプション データベースの権限をパブリケーション データベースの権限に一致させるには、どのように構成すればよいですか。  
  既定では、レプリケーションではサブスクリプション データベース上で GRANT ステートメントは実行されません。 サブスクリプション データベース上の権限をパブリケーション データベース上の権限に一致させる場合は、次のいずれかの方法を使用します。  

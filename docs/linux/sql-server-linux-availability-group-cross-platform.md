@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: f6758760d8ea73d9ec0ac95a0e824a0fd46a6dbb
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 651467463e0563c9da00e23115ffb7bc4f151d23
+ms.sourcegitcommit: cebf41506a28abfa159a5dd871b220630c4c4504
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68045190"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77479679"
 ---
 # <a name="configure-sql-server-always-on-availability-group-on-windows-and-linux-cross-platform"></a>Windows 上と Linux 上で SQL Server の Always On 可用性グループを構成する (クロスプラットフォーム)
 
@@ -55,7 +55,7 @@ AG を作成する手順は、読み取りスケール ワークロード用に 
 
    **混合モード認証を設定する**
 
-   手順については、「[サーバーの認証モードの変更](../database-engine/configure-windows/change-server-authentication-mode.md#SSMSProcedure)」を参照してください。
+   手順については、「[サーバーの認証モードの変更](../database-engine/configure-windows/change-server-authentication-mode.md#change-authentication-mode-with-ssms)」を参照してください。
 
 1. Linux 上に SQL Server 2017 をインストールします。 手順については、[SQL Server のインストール](sql-server-linux-setup.md)に関する記事をご覧ください。 mssql-conf 経由で `hadr` を有効にします。
 

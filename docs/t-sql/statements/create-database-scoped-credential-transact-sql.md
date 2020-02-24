@@ -22,12 +22,12 @@ ms.assetid: fe830577-11ca-44e5-953b-2d589d54d045
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=aps-pdw-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2fff507046ae5a53abbffbd91bb245f52d57a53c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: f6c4cbb43048e9dff683b510d958e3e25d87e823
+ms.sourcegitcommit: 87b932dc4b603a35a19f16e2c681b6a8d4df1fec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "73594144"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77507506"
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)
 
@@ -101,13 +101,14 @@ CREATE DATABASE SCOPED CREDENTIAL AppCred WITH IDENTITY = 'Mary5',
 
 ### <a name="b-creating-a-database-scoped-credential-for-a-shared-access-signature"></a>B. Shared Access Signature のデータベース スコープ資格情報の作成
 
-次の例では、[BULK INSERT](../../t-sql/statements/create-external-data-source-transact-sql.md) や [OPENROWSET](../../t-sql/statements/bulk-insert-transact-sql.md) など、一括操作できる[外部データ ソース](../../t-sql/functions/openrowset-transact-sql.md)の作成に使用できるデータベース スコープ資格情報を作成します。 Shared Access Signatures は、SQL Server、APS、または SQL DW では PolyBase と共に使用できません。
+次の例では、[BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) や [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) など、一括操作できる[外部データ ソース](../../t-sql/statements/create-external-data-source-transact-sql.md)の作成に使用できるデータベース スコープ資格情報を作成します。 Shared Access Signatures は、SQL Server、APS、または SQL DW では PolyBase と共に使用できません。
 
 ```sql
 -- Create a db master key if one does not already exist, using your own password.
 CREATE MASTER KEY ENCRYPTION BY PASSWORD='<EnterStrongPasswordHere>';
 
--- Create a database scoped credential.CREATE DATABASE SCOPED CREDENTIAL MyCredentials
+-- Create a database scoped credential.
+CREATE DATABASE SCOPED CREDENTIAL MyCredentials
 WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
 SECRET = 'QLYMgmSXMklt%2FI1U6DcVrQixnlU5Sgbtk1qDRakUBGs%3D';
 ```

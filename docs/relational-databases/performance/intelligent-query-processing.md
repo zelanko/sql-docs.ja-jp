@@ -12,12 +12,12 @@ helpviewer_keywords: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 65b88c890dc16adf1a1b626dd0ddc91ad359505b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: f555713a25db2068a4f6a923504db765d3f3a09e
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74821977"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77256795"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>SQL データベースでのインテリジェントなクエリ処理
 
@@ -28,6 +28,7 @@ ms.locfileid: "74821977"
 ![インテリジェントなクエリ処理](./media/iqp-feature-family.png)
 
 インテリジェントなクエリ処理の概要については、この 6 分間のビデオをご覧ください。
+
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Overview-Intelligent-Query-processing-in-SQL-Server-2019/player?WT.mc_id=dataexposed-c9-niner]
 
 
@@ -441,7 +442,7 @@ ORDER BY [Tax Rate], [Lineage Key], [Salesperson Key]
 OPTION(RECOMPILE, USE HINT('DISALLOW_BATCH_MODE'));
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [SQL Server データベース エンジンと Azure SQL Database のパフォーマンス センター](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)     
 [クエリ処理アーキテクチャ ガイド](../../relational-databases/query-processing-architecture-guide.md)    
 [プラン表示の論理操作と物理操作のリファレンス](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    

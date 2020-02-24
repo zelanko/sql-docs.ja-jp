@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: e1f1dccc-9e65-471d-8fd1-b45085c9484a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0b5cbbd49d331f838bd0047f259f8b5addf8de84
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 2879665878826a4469cd2652c305f079d7cb5c14
+ms.sourcegitcommit: 87b932dc4b603a35a19f16e2c681b6a8d4df1fec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74821968"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77507738"
 ---
 # <a name="use-the-availability-group-wizard-sql-server-management-studio"></a>可用性グループ ウィザードの使用 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  このトピックでは、 **の**新しい可用性グループ ウィザード[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]を使用して、[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で Always On 可用性グループを作成および構成する方法について説明します。 *可用性グループ* は、1 つのまとまりとしてフェールオーバーする一連のユーザー データベースと、フェールオーバーをサポートする一連のフェールオーバー パートナー ( *可用性レプリカ*) を定義します。  
+  このトピックでは、[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] の**新しい可用性グループ ウィザード**を使用して、[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で Always On 可用性グループを作成および構成する方法について説明します。 *可用性グループ* は、1 つのまとまりとしてフェールオーバーする一連のユーザー データベースと、フェールオーバーをサポートする一連のフェールオーバー パートナー ( *可用性レプリカ*) を定義します。  
   
 > [!NOTE]  
 >  可用性グループの概要については、「 [Always On 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)の Always On 可用性グループを PowerShell コマンドレットで作成および構成する方法について説明します。  
@@ -80,7 +80,7 @@ ms.locfileid: "74821968"
   
 4.  このウィザードの初回実行時には、 **[説明]** ページが表示されます。 今後このページを省略するには、 **[次回からこのページを表示しない]** をクリックします。 このページの内容を確認してから、 **[次へ]** をクリックします。  
   
-5.  **[可用性グループ オプションの指定]** ページの **[可用性グループ名]** フィールドに、新しい可用性グループの名前を入力します。 この名前は、クラスターおよびドメイン全体で一意となる有効な [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 識別子であることが必要です。 可用性グループ名の最大文字数は 128 文字です。 e
+5.  **[可用性グループ オプションの指定]** ページの **[可用性グループ名]** フィールドに、新しい可用性グループの名前を入力します。 この名前は、クラスターおよびドメイン全体で一意となる有効な [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 識別子であることが必要です。 可用性グループ名の最大文字数は 128 文字です。
 
 6. 次に、クラスター タイプを指定します。 使用できるクラスター タイプは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] バージョンとオペレーティング システムによって異なります。 **WSFC**、**EXTERNAL**、**NONE** のいずれかを選択してください。 詳細については、「[Specify Availability Group Name Page](specify-availability-group-name-page.md)」 ([可用性グループ名の指定] ページ) を参照してください。
  
@@ -92,12 +92,12 @@ ms.locfileid: "74821968"
   
      データベースにデータベース マスター キーが含まれている場合、 **[パスワード]** 列にデータベース マスター キーのパスワードを入力します。  
   
-7.  **[レプリカの指定]** ページで、新しい可用性グループの 1 つまたは複数のレプリカを指定し、構成します。 このページには、4 つのタブがあります。 次の表では、これらのタブについて説明します。 詳細ついては、「[[レプリカの指定] ページ &#40;新しい可用性グループウィザード/レプリカの追加ウィザード&#41;](../../../database-engine/availability-groups/windows/specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md)」を参照してください。  
+7.  **[レプリカの指定]** ページで、新しい可用性グループの 1 つまたは複数のレプリカを指定し、構成します。 このページには、4 つのタブがあります。 次の表では、これらのタブについて説明します。 詳細については、「[[レプリカの指定] ページ &#40;新しい可用性グループウィザード: レプリカの追加ウィザード&#41;](../../../database-engine/availability-groups/windows/specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md)」のトピックを参照してください。  
   
     |タブ|簡単な説明|  
     |---------|-----------------------|  
     |**レプリカ**|このタブを使用して、セカンダリ レプリカをホストする [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の各インスタンスを指定します。 現在接続しているサーバー インスタンスでプライマリ レプリカをホストする必要があることに注意してください。|  
-    |**エンドポイント**|このタブを使用して、既存の任意のデータベース ミラーリング エンドポイントを検証します。また、サービス アカウントが Windows 認証を使用しているサーバー インスタンスでエンドポイントが不足している場合は、エンドポイントを自動的に作成します。<br /><br /> 注: ドメイン以外のユーザー アカウントで実行されているサーバー インスタンスが 1 つでもある場合、ウィザードを続行するには、サーバー インスタンスに手動で変更を加える必要があります。 詳細については、このトピックの「 [前提条件](#Prerequisites)」をご覧ください。|  
+    |**エンドポイント**|このタブを使用して、既存の任意のデータベース ミラーリング エンドポイントを検証します。また、サービス アカウントが Windows 認証を使用しているサーバー インスタンスでエンドポイントが不足している場合は、エンドポイントを自動的に作成します。<br /><br /> 注:ドメイン以外のユーザー アカウントで実行されているサーバー インスタンスが 1 つでもある場合、ウィザードを続行するには、サーバー インスタンスに手動で変更を加える必要があります。 詳細については、このトピックの「 [前提条件](#Prerequisites)」をご覧ください。|  
     |**バックアップの設定**|このタブを使用して、可用性グループ全体についてバックアップの設定を指定し、各可用性レプリカのバックアップ優先順位を指定します。|  
     |**リスナー**|このタブを使用して、可用性グループ リスナーを作成します。 既定では、ウィザードによってリスナーは作成されません。|  
   
@@ -181,17 +181,17 @@ ms.locfileid: "74821968"
   
 -   **ブログ:**  
   
-     [AlwaysOn - HADRON 学習シリーズ: HADRON 対応データベースのワーカー プールの使用](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+     [Always On - HADRON 学習シリーズ:HADRON 対応データベースでのワーカー プールの使用](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
-     [SQL Server Always On チームのブログ: SQL Server Always On チームのオフィシャル ブログ](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+     [SQL Server Always On チーム ブログ:SQL Server Always On チームのオフィシャル ブログ](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
      [CSS SQL Server エンジニアのブログ](https://blogs.msdn.com/b/psssql/)  
   
 -   **ビデオ:**  
   
-     [Microsoft SQL Server コード ネーム "Denali" Always On シリーズ パート 1: 次世代の高可用性ソリューションの概要](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+     [Microsoft SQL Server コードネーム "Denali" Always On シリーズ パート 1: 次世代高可用性ソリューションの概要](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
-     [Microsoft SQL Server コードネーム "Denali" AlwaysOn シリーズ パート 2: AlwaysOn を使用したミッション クリティカルな高可用性ソリューションの構築](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
+     [Microsoft SQL Server コードネーム "Denali" Always On シリーズ パート 2: Always On を使用したミッション クリティカルな高可用性ソリューションの構築](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
 -   **ホワイト ペーパー:**  
   

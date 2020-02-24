@@ -25,12 +25,12 @@ ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: a20b058d187f7c1ddade6b609b0002f7bbcbdb60
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 5f1a134e6792eedca184c74b7973d4cb267b104b
+ms.sourcegitcommit: 11691bfa8ec0dd6f14cc9cd3d1f62273f6eee885
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76910145"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "77074460"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 
@@ -75,13 +75,23 @@ OPENROWSET
 
 ## <a name="arguments"></a>引数
 
-'*provider_name*' レジストリで指定された OLE DB プロバイダーのフレンドリ名 (または PROGID) を表す文字列です。 *provider_name* 既定値はありません。
+### <a name="provider_name"></a>'*provider_name*'
+レジストリの OLE DB プロバイダーの表示名 (または PROGID) を表す文字列を指定します。 *provider_name* 既定値はありません。
 
 '*datasource*' 特定の OLE DB データ ソースに対応する文字列定数です。 *datasource* は DBPROP_INIT_DATASOURCE のプロパティで、プロバイダーの IDBProperties インターフェイスに渡され、プロバイダーの初期化に使用されます。 一般的に、この文字列にはデータベース ファイルの名前、データベース サーバーの名前、プロバイダーがデータベースを検索する際に認識する名前のいずれかを指定します。
 
 '*user_id*' 指定された OLE DB プロバイダーに渡されるユーザー名を表す文字列定数です。 *user_id* は接続のセキュリティ コンテキストを示し、DBPROP_AUTH_USERID プロパティとして渡され、プロバイダーの初期化に使用されます。 *user_id* Microsoft Windows のログイン名にすることはできません。
 
 '*password*' OLE DB プロバイダーに渡されるユーザー パスワードを表す文字列定数です。 *password* は DBPROP_AUTH_PASSWORD プロパティとして引き渡され、プロバイダーの初期化に使用されます。 *password* を Microsoft Windows のパスワードとすることはできません。
+
+```sql
+SELECT a.*
+   FROM OPENROWSET('Microsoft.Jet.OLEDB.4.0',
+                   'C:\SAMPLES\Northwind.mdb';
+                   'admin';
+                   'password',
+                   Customers) AS a;
+```
 
 '*provider_string*' プロバイダー固有の接続文字列です。これは、DBPROP_INIT_PROVIDERSTRING プロパティとして渡され、OLE DB の初期化に使用されます。 *provider_string* 通常、プロバイダーの初期化に必要なすべての接続情報をカプセル化します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーで認識されるキーワードの一覧については、「[初期化プロパティと承認プロパティ](../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md)」を参照してください。
 
@@ -91,9 +101,23 @@ OPENROWSET
 
 *object* 操作するオブジェクトを一意に識別するオブジェクト名です。
 
+```sql
+SELECT a.*
+FROM OPENROWSET('SQLNCLI', 'Server=Seattle1;Trusted_Connection=yes;',
+                 AdventureWorks2012.HumanResources.Department) AS a;
+```
+
 '*query*' プロバイダーに送られ、プロバイダーによって実行される文字列定数です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のローカル インスタンスでは、このクエリは処理されず、プロバイダーから返されたクエリ結果が処理されます (パススルー クエリ)。 パススルー クエリは、表形式のデータをテーブル名ではなくコマンド言語のみで公開するプロバイダーで使用すると便利です。 パススルー クエリは、クエリ プロバイダーが OLE DB をサポートしていれば、リモート サーバーでサポートされてコマンド オブジェクトとその必須インターフェイス。 詳細については、[SQL Server Native Client &#40;OLE DB&#41; のリファレンス](../../relational-databases/native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces.md)をご覧ください。
 
-BULK ファイルからのデータ読み取りに OPENROWSET の BULK 行セット プロバイダーを使用します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、OPENROWSET を使用すると、データを対象テーブルに読み込むことなくデータ ファイルからの読み取りができます。 このため、OPENROWSET は簡単な SELECT ステートメントで使用できます。
+```sql
+SELECT a.*
+FROM OPENROWSET('SQLNCLI', 'Server=Seattle1;Trusted_Connection=yes;',
+     'SELECT TOP 10 GroupName, Name
+     FROM AdventureWorks2012.HumanResources.Department') AS a;
+```
+
+### <a name="bulk"></a>BULK
+ファイルからのデータ読み取りに OPENROWSET の BULK 行セット プロバイダーを使用します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、OPENROWSET を使用すると、データを対象テーブルに読み込むことなくデータ ファイルからの読み取りができます。 このため、OPENROWSET は簡単な SELECT ステートメントで使用できます。
 
 > [!IMPORTANT]
 > Azure SQL Database でサポートされるのは、Azure Blob Storage からの読み取りのみです。
@@ -181,10 +205,23 @@ SINGLE_CLOB
 
 SINGLE_NCLOB *data_file* を UNICODE として読み取り、現在のデータベースの照合順序に従い、内容を **nvarchar(max)** 型の単一行、単一列の行セットとして返します。
 
+```sql
+SELECT *
+   FROM OPENROWSET(BULK N'C:\Text1.txt', SINGLE_NCLOB) AS Document;
+```
+
 ### <a name="input-file-format-options"></a>入力ファイル フォーマットのオプション
 
 FORMAT **=** 'CSV' **以下に適用されます:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
 [RFC 4180](https://tools.ietf.org/html/rfc4180) 標準に準拠しているコンマ区切り値ファイルを指定します。
+
+```sql
+SELECT *
+FROM OPENROWSET(BULK N'D:\XChange\test-csv.csv',
+    FORMATFILE = N'D:\XChange\test-csv.fmt',
+    FIRSTROW=2,
+    FORMAT='CSV') AS cars;
+```
 
 FORMATFILE ='*format_file_path*' フォーマット ファイルの完全なパスを指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、次の 2 種類のフォーマット ファイルがサポートされます: XML と非 XML。
 
