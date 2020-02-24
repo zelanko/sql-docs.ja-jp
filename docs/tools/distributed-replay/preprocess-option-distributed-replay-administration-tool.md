@@ -1,7 +1,6 @@
 ---
-title: 前処理オプション (分散再生管理ツール) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: preprocess オプション
+titleSuffix: SQL Server Distributed Replay
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -10,16 +9,18 @@ ms.topic: conceptual
 ms.assetid: 9b5012fd-233e-4a25-a2e1-585c63b70502
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 712da846443a95909746c741cee71d22d4554622
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 1b003bf2441e3cffc2e21557497695f92df50135
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67949973"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307021"
 ---
 # <a name="preprocess-option-distributed-replay-administration-tool"></a>前処理オプション (Distributed Replay 管理ツール)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 管理ツールである **DReplay.exe**は、Distributed Replay Controller と通信するために使用できるコマンド ライン ツールです。 このトピックでは、 **preprocess** コマンド ライン オプションとそれに対応する構文について説明します。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散再生管理ツールである **DReplay.exe** は、分散再生コントローラーと通信するために使用できるコマンド ライン ツールです。 このトピックでは、 **preprocess** コマンド ライン オプションとそれに対応する構文について説明します。  
   
  **preprocess** オプションは、前処理段階を開始します。 この段階では、ターゲット サーバーに対して、コントローラーが入力トレース データの再生の準備を行います。  
   
@@ -72,14 +73,14 @@ dreplay preprocess [-m controller] -i input_trace_file
   
  **-f** を指定しない場合は、既定の間隔は 30 秒です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  この例では、すべての既定の設定で前処理段階が開始されます。 値 `localhost` は、コントローラー サービスが管理ツールと同じコンピューターで実行されていることを示します。 *input_trace_file* パラメーターは、入力トレース データ `c:\mytrace.trc`の場所を指定します。 トレース ファイルのフィルターがないため、 **-c** パラメーターを指定する必要はありません。  
   
 ```  
 dreplay preprocess -m localhost -i c:\mytrace.trc -d c:\WorkingDir  
 ```  
   
- この例では、前処理段階が開始され、変更した前処理構成ファイルが指定されます。 前の例とは異なり、 **-c** パラメーターを使用して、別の場所に格納されている変更された構成ファイルを指定しています。 例:  
+ この例では、前処理段階が開始され、変更した前処理構成ファイルが指定されます。 前の例とは異なり、 **-c** パラメーターを使用して、別の場所に格納されている変更された構成ファイルを指定しています。 次に例を示します。  
   
 ```  
 dreplay preprocess -m localhost -i c:\mytrace.trc -d c:\WorkingDir -c c:\DReplay.exe.preprocess.config  

@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f2ae96a04da69835b4b13886637cf87e62996b57
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: b389f8ba8e99678f98ef4eb22d3fe51d8b04bee3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653312"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75325429"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>チュートリアル: Transact-SQL を使用して SQL Server のデータ プールにデータを取り込む
 
@@ -22,10 +22,10 @@ ms.locfileid: "69653312"
 
 このチュートリアルでは、Transact-SQL を使用して [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]の[データ プール](concept-data-pool.md)にデータを取り込む方法について説明します。 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]を使用すると、さまざまなソースからデータを取り込み、それをデータ プールのインスタンス間で分散することができます。
 
-このチュートリアルでは、次の方法を学習します。
+このチュートリアルでは、以下の内容を学習します。
 
 > [!div class="checklist"]
-> * データ プールに外部テーブルを作成する。
+> * データ プールに外部テーブルを作成する
 > * サンプルの Web クリックストリーム データをデータ プール テーブルに挿入する。
 > * データ プール テーブルのデータをローカル テーブルと結合する。
 
@@ -77,8 +77,8 @@ ms.locfileid: "69653312"
          DISTRIBUTION = ROUND_ROBIN
       );
    ```
-  
-1. CTP 3.1 では、データ プールの作成は非同期ですが、完了しているかどうかを判断する方法がありません。 データ プールが作成されたことを確認できるまで 2 分待ってから続行してください。
+
+データ プールの外部テーブルの作成は、ブロッキング操作です。 指定したテーブルがすべてのバックエンド データ プール ノードで作成されると、制御が戻ります。 作成操作中にエラーが発生した場合、エラー メッセージが呼び出し元に返されます。
 
 ## <a name="load-data"></a>データの読み込み
 
@@ -103,7 +103,7 @@ ms.locfileid: "69653312"
    SELECT TOP 10 * FROM [dbo].[web_clickstream_clicks_data_pool]  
    ```
 
-## <a name="query-the-data"></a>データのクエリ
+## <a name="query-the-data"></a>データにクエリを実行する
 
 データ プールのクエリから格納された結果を、**Sales** テーブルのローカル データと結合します。
 
@@ -134,7 +134,7 @@ GROUP BY w.wcs_user_sk;
 DROP EXTERNAL TABLE [dbo].[web_clickstream_clicks_data_pool];
 ```
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 Spark ジョブを使用してデータ プールにデータを取り込む方法について説明します。
 > [!div class="nextstepaction"]

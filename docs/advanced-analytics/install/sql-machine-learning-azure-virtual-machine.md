@@ -1,29 +1,38 @@
 ---
 title: Azure 仮想マシンにインストールする
-description: Azure クラウドの SQL Server 仮想マシンで、R と Python のデータ サイエンス ソリューションおよび機械学習ソリューションを実行できます。
+description: Azure クラウドの仮想マシンの SQL Server Machine Learning Services で、Python と R のデータ サイエンス ソリューションおよび機械学習ソリューションを実行できます。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 11/09/2018
+ms.date: 01/02/2020
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: aeec25b561822e8083b89e03f0f7e74f40660f7b
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: d81237f67c82fd7cc8b9259fcd7a0202ffb7fd4b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727616"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75776593"
 ---
-# <a name="install-sql-server-machine-learning-services-with-r-and-python-on-an-azure-virtual-machine"></a>Azure 仮想マシンに R および Python を使用した SQL Server Machine Learning Services をインストールする
+# <a name="install-sql-server-machine-learning-services-with-python-and-r-on-an-azure-virtual-machine"></a>Azure 仮想マシンに SQL Server Machine Learning Services と共に Python および R をインストールする
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Azure の SQL Server 仮想マシンに、Machine Learning Services と R および Python の統合をインストールできます。これにより、インストールと構成のタスクが不要になります。 仮想マシンがデプロイされると、機能を使用する準備が整います。
- 
-詳細な手順については、「[Azure portal で Windows SQL Server 仮想マシンをプロビジョニングする方法](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision)」を参照してください。
+Azure の仮想マシンに SQL Server Machine Learning Services と共に Python および R をインストールする方法について説明します。 これにより、Machine Learning Services のインストールと構成タスクが不要になります。
 
-「[SQL Server 設定の構成](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision#3-configure-sql-server-settings)」ステップで、インスタンスに機械学習を追加します。
+次の手順に従います。
+
+1. Azure に SQL Server 仮想マシンをプロビジョニングする
+1. ファイアウォールのブロックを解除する
+1. リモート クライアントの ODBC コールバックを有効にする
+1. ネットワーク プロトコルを追加する
+
+## <a name="provision-sql-server-virtual-machine-in-azure"></a>Azure に SQL Server 仮想マシンをプロビジョニングする
+
+詳細な手順については、「[Azure portal で Windows SQL Server 仮想マシンをプロビジョニングする方法](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision)」を参照してください。 
+
+Machine Learning Services をお使いのインスタンスに追加する手順は、「[SQL Server の設定を構成する](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision#3-configure-sql-server-settings)」にあります。
 
 <a name="firewall"></a>
 

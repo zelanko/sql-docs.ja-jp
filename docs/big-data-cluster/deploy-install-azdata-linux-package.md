@@ -5,29 +5,24 @@ description: SQL Server ビッグ データ クラスターをインストール
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9d8d4a34e89de7c136e1e80b43929531a2d10eba
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: ac50d0c20f76e78aaa5016f62cefb8c7cc7f075a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532070"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75728583"
 ---
-# <a name="install-azdata-to-manage-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-on-linux"></a>Linux 上で [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]を管理するために `azdata` をインストールする
+# <a name="install-azdata-with-apt"></a>apt での `azdata` のインストール
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 この記事では、Linux に SQL Server 2019 ビッグ データ クラスター用の `azdata` をインストールする方法について説明します。 これらのパッケージ マネージャーが使用可能になる前は、`azdata` をインストールするために `pip` が必要でした。
 
-パッケージ マネージャーは、さまざまなオペレーティング システムおよびディストリビューション向けに設計されています。
-
-- Windows および Linux (Ubuntu ディストリビューション) の場合は、[パッケージ マネージャー](./deploy-install-azdata-installer.md)を使用してインストールすると、操作が簡単になります。
-- Linux (Ubuntu) の場合は、[`apt` を使用して `azdata` をインストール](#azdata-apt)します
-
-現時点では、他のオペレーティング システムまたはディストリビューションに `azdata` をインストールするためのパッケージ マネージャーはありません。 これらのプラットフォームについては、[パッケージ マネージャーを使用せずに `azdata` をインストールする方法](./deploy-install-azdata.md)に関する記事を参照してください。
+[!INCLUDE [azdata-package-installation-remove-pip-install](../includes/azdata-package-installation-remove-pip-install.md)]
 
 ## <a id="linux"></a>Linux 用の `azdata` をインストールする
 
@@ -42,19 +37,27 @@ Ubuntu で使用可能な `azdata` インストール パッケージは `apt` �
 
     ```bash
     sudo apt-get update
-    sudo apt-get install gnupg ca-certificates curl apt-transport-https lsb-release -y
+    sudo apt-get install gnupg ca-certificates curl wget software-properties-common apt-transport-https lsb-release -y
     ```
 
 2. 署名キーをダウンロードし、インストールします。
 
     ```bash
-    wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+    curl -sL https://packages.microsoft.com/keys/microsoft.asc |
+    gpg --dearmor |
+    sudo tee /etc/apt/trusted.gpg.d/microsoft.asc.gpg > /dev/null
     ```
 
 3. `azdata` リポジトリ情報を追加します。
 
+   Ubuntu 16.04 クライアントには次を実行します。
     ```bash
     sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2019.list)"
+    ```
+
+   Ubuntu 18.04 クライアントには次を実行します。
+    ```bash
+    sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/18.04/mssql-server-2019.list)"
     ```
 
 4. リポジトリ情報を更新し、`azdata` をインストールします。
@@ -107,6 +110,6 @@ sudo apt-get update && sudo apt-get install --only-upgrade -y azdata-cli
     sudo apt autoremove
     ```
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 ビッグ データ クラスターの詳細については、「[[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]とは](big-data-cluster-overview.md)」を参照してください。

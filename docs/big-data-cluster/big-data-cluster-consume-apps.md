@@ -5,34 +5,35 @@ description: RESTful Web サービスを使用して SQL Server ビッグ デー
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.date: 01/07/2020
+ms.metadata: seo-lt-2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 32b3884b48e20b73da186f8c0d80e6c85516a8ed
-ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.openlocfilehash: 305080d5c3b0a1c517d757c1f6f2bd07fefb216c
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73707181"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75721407"
 ---
-# <a name="consume-an-app-deployed-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-using-a-restful-web-service"></a>RESTful Web サービスを使用して [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]に展開されたアプリを使用する
+# <a name="consume-an-app-deployed-on-big-data-clusters-2019-using-a-restful-web-service"></a>RESTful Web サービスを使用して [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]に展開されたアプリを使用する
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 この記事では、RESTful Web サービスを使用して SQL Server ビッグ データ クラスターに展開されたアプリを使用する方法について説明します。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 - [SQL Server ビッグ データ クラスター](deployment-guidance.md)
 - [azdata コマンドライン ユーティリティ](deploy-install-azdata.md)
 - [azdata](big-data-cluster-create-apps.md) または [App Deploy](app-deployment-extension.md) 拡張機能を使用して展開されたアプリ
 
-## <a name="capabilities"></a>Capabilities
+## <a name="capabilities"></a>機能
 
 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]にアプリケーションを展開した後は、RESTful Web サービスを使用してそのアプリケーションにアクセスして使用することができます。 これにより、そのアプリを他のアプリケーションやサービス (モバイル アプリや Web サイトなど) と統合できるようになります。 次の表では、**azdata** と共に使用して、アプリの RESTful Web サービスに関する情報を取得できるアプリケーションの展開コマンドについて説明します。
 
-|コマンド |[説明] |
+|command |説明 |
 |:---|:---|
 |`azdata app describe` | アプリケーションについて記述します。 |
 
@@ -90,7 +91,16 @@ azdata app describe --name add-app --version v1
 
 ## <a name="generate-a-jwt-access-token"></a>JWT アクセス トークンを生成する
 
-展開したアプリの RESTful Web サービスにアクセスするには、まず JWT アクセス トークンを生成する必要があります。 ブラウザーで、上の `https://[IP]:[PORT]/docs/swagger.json` コマンドを実行して取得した IP アドレスとポートを使用して、URL `describe` を開きます。 `azdata login` に使用したものと同じ資格情報を使用してサインインする必要があります。
+展開したアプリの RESTful Web サービスにアクセスするには、まず JWT アクセス トークンを生成する必要があります。 アクセス トークンの URL は、ビッグ データ クラスターのバージョンによって異なります。 
+
+|Version |URL|
+|------------|------|
+|GDR1|  `https://[IP]:[PORT]/docs/swagger.json`|
+|CU1 以降| `https://[IP]:[PORT]/api/v1/swagger.json`|
+
+> バージョン情報については、[リリース履歴](release-notes-big-data-cluster.md#release-history)に関するセクションを参照してください。
+
+ブラウザーで、上の [`describe`](#retrieve-the-endpoint) コマンドを実行して取得した IP アドレスとポートを使用して、適切な URL を開きます。 `azdata login` に使用したものと同じ資格情報でサインインします。
 
 `swagger.json` の内容を [Swagger エディター](https://editor.swagger.io)に貼り付けて、使用できるメソッドを確認します。
 
@@ -121,8 +131,8 @@ azdata app describe --name add-app --version v1
 
 これで、Web サービスを介してアプリが正常に呼び出されるようになりました。 同様の手順に従って、この Web サービスをアプリケーションに統合することができます。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 その他のサンプルにはついては、[アプリの展開サンプル](https://aka.ms/sql-app-deploy)に関するページを参照してください。
 
-[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]の詳細については、「[[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]の概要](big-data-cluster-overview.md)」を参照してください。
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]の詳細については、「[[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]とは](big-data-cluster-overview.md)」を参照してください。

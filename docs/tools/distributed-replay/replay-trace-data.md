@@ -1,6 +1,7 @@
 ---
-title: トレースデータの再生 |Microsoft Docs
-ms.custom: ''
+title: トレース データの再生
+titleSuffix: SQL Server Distributed Replay
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -10,20 +11,20 @@ ms.topic: conceptual
 ms.assetid: 19ff5285-fb9d-4fd1-97c4-ec72c311c384
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7495e00200455be05b621124c0276d07727d58cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 4438724a57b374ef298ce4eca7acd9d6009bbbb5
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67949956"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306980"
 ---
 # <a name="replay-trace-data"></a>トレース データの再生
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  入力トレース データが準備できたら、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 機能を使用して、分散再生を開始できます。 詳細については、「 [入力トレース データの準備](../../tools/distributed-replay/prepare-the-input-trace-data.md)」を参照してください。  
+  入力トレース データが準備できたら、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散再生機能を使用して、分散再生を開始できます。 詳細については、「 [入力トレース データの準備](../../tools/distributed-replay/prepare-the-input-trace-data.md)」を参照してください。  
   
  分散再生のイベント再生段階を開始するには、管理ツールの **replay** オプションを使用します。 この段階は、トレース データのディスパッチと、分散再生の開始および同期の 2 つの部分で構成されています。  
   
- ![分散イベント再生](../../tools/distributed-replay/media/eventreplay.gif "分散イベント再生")  
+ ![イベントの分散再生](../../tools/distributed-replay/media/eventreplay.gif "イベントの分散再生")  
   
  トレース データは、2 つのシーケンス モード (ストレス モードまたは同期モード) のいずれかで再生できます。 既定の動作では、ストレス モードでトレース データを再生します。 イベント再生段階とシーケンス モードの詳細については、「 [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)」を参照してください。  
   
@@ -32,7 +33,7 @@ ms.locfileid: "67949956"
   
 ### <a name="to-replay-the-trace"></a>トレースを再生するには  
   
-1.  **(省略可能) 再生の構成設定を変更する**: シーケンス モード、各種のスケーリング値など、再生の構成設定を変更する場合は、XML ベースの再生構成ファイル `<ReplayOptions>` の `DReplay.exe.replay.config`要素を変更する必要があります。 また、 `<OutputOptions>` 要素を変更すると、行数を記録するかどうかなどの出力設定を指定することもできます。 再生構成ファイルを変更する場合は、元のファイルではなく、コピーを変更することをお勧めします。 設定を変更するには、次の手順に従います。  
+1.  **(省略可能) 再生の構成設定を変更する**:シーケンス モード、各種のスケーリング値など、再生の構成設定を変更する場合は、XML ベースの再生構成ファイル `DReplay.exe.replay.config` の `<ReplayOptions>` 要素を変更する必要があります。 また、 `<OutputOptions>` 要素を変更すると、行数を記録するかどうかなどの出力設定を指定することもできます。 再生構成ファイルを変更する場合は、元のファイルではなく、コピーを変更することをお勧めします。 設定を変更するには、次の手順に従います。  
   
     1.  既定の再生構成ファイル `DReplay.exe.replay.config`のコピーを作成し、新しいファイルの名前を変更します。 既定の再生構成ファイルは管理ツールのインストール フォルダーにあります。  
   
@@ -42,7 +43,7 @@ ms.locfileid: "67949956"
   
      再生構成ファイルの詳細については、「 [Distributed Replay の構成](../../tools/distributed-replay/configure-distributed-replay.md)」を参照してください。  
   
-2.  **イベント再生段階を開始する**: 分散再生を開始するには、 **replay** オプションを使用して、管理ツールを実行する必要があります。 詳細については、「[replay オプション &#40;Distributed Replay 管理ツール&#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md)」を参照してください。  
+2.  **イベント再生段階を開始する**:分散再生を開始するには、**replay** オプションを使用して、管理ツールを実行する必要があります。 詳細については、「[replay オプション &#40;Distributed Replay 管理ツール&#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md)」を参照してください。  
   
     1.  Windows のコマンド プロンプト ユーティリティ (**CMD.exe**) を開き、Distributed Replay 管理ツール (**DReplay.exe**) のインストール場所に移動します。  
   
@@ -54,7 +55,7 @@ ms.locfileid: "67949956"
   
     5.  (省略可能) *target_server* パラメーター **-s**を使用して、分散再生クライアントでトレース ワークロードを再生する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを指定します。 `<Server>` 要素を使用して、再生構成ファイルの `<ReplayOptions>` 要素でターゲット サーバーを指定している場合、このパラメーターは必要ありません。  
   
-    6.  *clients* パラメーター **-w**を使用して、再生に参加する分散再生クライアントを指定します。 クライアント コンピューター名はコンマで区切って指定します。 注: IP アドレスは指定できません。  
+    6.  *clients* パラメーター **-w**を使用して、再生に参加する分散再生クライアントを指定します。 クライアント コンピューター名はコンマで区切って指定します。 注:IP アドレスは指定できません。  
   
     7.  (省略可能) *config_file* パラメーター **-c**を使用して、再生構成ファイルの場所を指定します。 既定の再生構成ファイルのコピーを変更した場合は、このパラメーターを使用して、新しい構成ファイルを指定します。  
   
@@ -69,6 +70,6 @@ ms.locfileid: "67949956"
 ## <a name="see-also"></a>参照  
  [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md)   
  [管理ツール コマンド ライン オプション &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
- [Distributed Replay の構成](../../tools/distributed-replay/configure-distributed-replay.md)  
+ [分散再生の構成](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   

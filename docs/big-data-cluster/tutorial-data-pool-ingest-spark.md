@@ -1,20 +1,21 @@
 ---
 title: Spark ジョブを使用してデータを取り込む
-titleSuffix: SQL Server big data clusters
-description: このチュートリアルでは、Azure Data Studio で Spark ジョブを使用して、[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] のデータ プールにデータを取り込む方法について説明します。
-author: MikeRayMSFT
-ms.author: mikeray
-ms.reviewer: shivsood
-ms.date: 08/21/2019
+titleSuffix: SQL Server Big Data Clusters
+description: このチュートリアルでは、Azure Data Studio で Spark ジョブを使用して、SQL Server のビッグ データ クラスターのデータ プールにデータを取り込む方法について説明します。
+author: rajmera3
+ms.author: raajmera
+ms.reviewer: mikeray
+ms.metadata: seo-lt-2019
+ms.date: 12/13/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c6f66b42fe280ef6612a5e9974ddcf4f1f7ccfcb
-ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
+ms.openlocfilehash: 1f3a8956120f16282cf0a3829f03bf5586c9d791
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74119198"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75776540"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>チュートリアル:Spark ジョブを使用して SQL Server のデータ プールにデータを取り込む
 
@@ -22,7 +23,7 @@ ms.locfileid: "74119198"
 
 このチュートリアルでは、Spark ジョブを使用して [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] の[データ プール](concept-data-pool.md)にデータを取り込む方法について説明します。 
 
-このチュートリアルでは、次の方法を学習します。
+このチュートリアルでは、以下の内容を学習します。
 
 > [!div class="checklist"]
 > * データ プールに外部テーブルを作成する
@@ -50,6 +51,23 @@ ms.locfileid: "74119198"
 
    ![SQL Server マスター インスタンス クエリ](./media/tutorial-data-pool-ingest-spark/sql-server-master-instance-query.png)
 
+1. MSSQL-Spark コネクタのアクセス許可を作成します。
+   ```sql
+   USE Sales
+   CREATE LOGIN sample_user  WITH PASSWORD ='password123!#' 
+   CREATE USER sample_user FROM LOGIN sample_user
+
+   -- To create external tables in data pools
+   GRANT ALTER ANY EXTERNAL DATA SOURCE TO sample_user;
+
+   -- To create external table
+   GRANT CREATE TABLE TO sample_user;
+   GRANT ALTER ANY SCHEMA TO sample_user;
+
+   ALTER ROLE [db_datareader] ADD MEMBER sample_user
+   ALTER ROLE [db_datawriter] ADD MEMBER sample_user
+   ```
+
 1. まだ存在しない場合は、データ プールへの外部データ ソースを作成します。
 
    ```sql
@@ -74,8 +92,15 @@ ms.locfileid: "74119198"
          DISTRIBUTION = ROUND_ROBIN
       );
    ```
-  
-1. CTP 3.1 では、データ プールの作成は非同期ですが、まだ完了しているかどうかを判断する方法がありません。 データ プールが作成されたことを確認できるまで 2 分待ってから続行してください。
+   
+1. データ プールのログインを作成し、ユーザーにアクセス許可を与えます。
+   ```sql 
+   EXECUTE( ' Use Sales; CREATE LOGIN sample_user  WITH PASSWORD = ''password123!#'' ;') AT  DATA_SOURCE SqlDataPool;
+
+   EXECUTE('Use Sales; CREATE USER sample_user; ALTER ROLE [db_datareader] ADD MEMBER sample_user;  ALTER ROLE [db_datawriter] ADD MEMBER sample_user;') AT DATA_SOURCE SqlDataPool;
+   ```
+   
+データ プールの外部テーブルの作成は、ブロッキング操作です。 指定したテーブルがすべてのバックエンド データ プール ノードで作成されると、制御が戻ります。 作成操作中にエラーが発生した場合、エラー メッセージが呼び出し元に返されます。
 
 ## <a name="start-a-spark-streaming-job"></a>Spark ストリーミング ジョブを開始する
 
@@ -125,14 +150,14 @@ ms.locfileid: "74119198"
                   .option("dataPoolDataSource",datasource_name).save()
                }.start()
 
-      query.processAllAvailable()
       query.awaitTermination(40000)
+      query.stop()
       ```
 ## <a name="query-the-data"></a>データにクエリを実行する
 
 次の手順は、HDFS からデータをデータ プールに読み込む Spark ストリーミング ジョブを示しています。
 
-1. 取り込んだデータについて問い合わせる前に、Yarn アプリ ID、Spark UI、ドライバー ログなど、Spark の実行状態を確認します。
+1. 取り込んだデータについて問い合わせる前に、Yarn アプリ ID、Spark UI、ドライバー ログなど、Spark の実行状態を確認します。 この情報は、Spark アプリケーションの初回起動時にノートブックに表示されます。
 
    ![Spark 実行の詳細](./media/tutorial-data-pool-ingest-spark/Spark-Joblog-sparkui-yarn.png)
 
@@ -172,7 +197,7 @@ ms.locfileid: "74119198"
 DROP EXTERNAL TABLE [dbo].[web_clickstreams_spark_results];
 ```
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 Azure Data Studio でサンプル ノートブックを実行する方法について説明します。
 > [!div class="nextstepaction"]

@@ -1,31 +1,28 @@
 ---
-title: SQL Server Profiler の実行に必要なアクセス許可 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: 必要なアクセス許可
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- Profiler [SQL Server Profiler], permissions
-- traces [SQL Server], replaying
-- replaying traces
-- SQL Server Profiler, permissions
-- security [SQL Server], SQL Server Profiler
 ms.assetid: 5c580a87-88ae-4314-8fe1-54ade83f227f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 73b4be6320ab342bcdee3b2e66d8bcd31445e0d1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: 0570401f34d08009c4af1cfc9038bec9aae0fc7a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68031510"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307533"
 ---
 # <a name="permissions-required-to-run-sql-server-profiler"></a>SQL Server Profiler の実行に必要な権限
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  既定では、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] の実行には、トレースの作成に使用した Transact-SQL ストアド プロシージャと同じユーザー権限が必要です。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を実行するには、ユーザーに ALTER TRACE アクセス権を許可する必要があります。 詳細については、「[GRANT (サーバーの権限の許可) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-server-permissions-transact-sql.md)」を参照してください。  
+
+既定では、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] の実行には、トレースの作成に使用した Transact-SQL ストアド プロシージャと同じユーザー権限が必要です。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を実行するには、ユーザーに ALTER TRACE アクセス権を許可する必要があります。 詳細については、「[GRANT (サーバーの権限の許可) &#40;Transact-SQL&#41;](../../t-sql/statements/grant-server-permissions-transact-sql.md)」を参照してください。  
   
 > [!IMPORTANT]  
 >  SHOWPLAN 権限、ALTER TRACE 権限、または VIEW SERVER STATE 権限を持つユーザーは、プラン表示出力にキャプチャされたクエリを表示できます。 これらのクエリには、パスワードなどの機密情報が含まれている場合があります。 したがって、これらの権限は、機密情報を表示することが認められているユーザー (たとえば db_owner 固定データベース ロールのメンバーや sysadmin 固定サーバー ロールのメンバー) のみに付与することをお勧めします。 また、プラン表示ファイルまたはプラン表示関連のイベントを含むトレース ファイルのみを保存すること、保存先は NTFS ファイル システムが使用されている場所とすること、および機密情報を表示する権限を持つユーザーのみにアクセスを制限することをお勧めします。  
@@ -63,7 +60,7 @@ ms.locfileid: "68031510"
   
  次の図に、トレース再生時の権限のチェック プロセスを示します。  
   
- ![SQL Server プロファイラー再生トレースのアクセス許可](../../tools/sql-server-profiler/media/replaytracedecisiontree.gif "SQL Server プロファイラー再生トレースのアクセス許可")  
+ ![SQL Server プロファイラーのトレース再生の権限](../../tools/sql-server-profiler/media/replaytracedecisiontree.gif"SQL Server Profiler replay trace permissions")  
   
 ## <a name="see-also"></a>参照  
  [SQL Server Profiler のストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql.md)   

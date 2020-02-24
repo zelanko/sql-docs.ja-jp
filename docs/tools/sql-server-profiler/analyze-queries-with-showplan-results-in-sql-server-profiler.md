@@ -1,27 +1,25 @@
 ---
-title: SQL Server Profiler での Showplan 結果を使用したクエリの分析 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: SHOWPLAN 結果を使用したクエリの分析
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- events [SQL Server], Showplan
-- Profiler [SQL Server Profiler], Showplan results
-- SQL Server Profiler, Showplan results
 ms.assetid: 6a2f7727-141c-4f59-8613-2e452bc78467
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 577590c360b14af9129487c120dbf70726f2a7ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: e0936a3931b574c08e5a58f396d7917eae569078
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68105612"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307386"
 ---
 # <a name="analyze-queries-with-showplan-results-in-sql-server-profiler"></a>SQL Server Profiler での Showplan 結果を使用したクエリの分析
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Showplan イベント クラスをトレース定義に追加することで、クエリ プランに関する情報を [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] のトレースで収集して表示できます。 また、トレースで収集した他のイベントから Showplan イベントを抽出し、これらの Showplan イベントを個別の XML ファイルに保存することもできます。  
   
@@ -36,7 +34,7 @@ ms.locfileid: "68105612"
 ## <a name="showplan-events"></a>Showplan イベント  
  次の表に、各種の Showplan トレース イベントとその説明を示します。  
   
-|イベント名|[説明]|  
+|イベント名|説明|  
 |----------------|-----------------|  
 |**Performance statistics**|コンパイル済みの Showplan が初めてキャッシュされたとき、再コンパイルされたとき、およびプラン キャッシュから削除されたときを示します。 **TextData** 列には、XML 形式の Showplan が含まれます。 詳細については、「 [Performance Statistics イベント クラス](../../relational-databases/event-classes/performance-statistics-event-class.md)」を参照してください。|  
 |**Showplan All**|実行された [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントのコンパイルに関する完全な詳細情報が含まれたクエリ プランを表示します。 たとえば、コストの見積りと列リストを表示できます。 詳細については、「 [Showplan All イベント クラス](../../relational-databases/event-classes/showplan-all-event-class.md)」を参照してください。|  

@@ -9,18 +9,22 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f984871729ea1d92b8da3b90751988fc33e741ff
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 0bed12749231eb9ca4c4398699d662666004613a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532040"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75558317"
 ---
 # <a name="configure-deployment-settings-for-cluster-resources-and-services"></a>クラスター リソースとサービスの展開設定を構成する
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 `azdata` 管理ツールに組み込まれている事前定義された構成プロファイルのセットから開始すると、ご自分の BDC ワークロード要件に合わせて、既定の設定を簡単に変更することができます。 構成ファイルの構造により、リソースの各サービスの設定を詳細に更新することができます。
+
+ビッグ データ クラスターの構成の概要については、この 13 分間のビデオをご覧ください。
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Big-Data-Cluster-Configuration/player?WT.mc_id=dataexposed-c9-niner]
 
 > [!TIP]
 > 高可用性サービスを展開する方法の詳細については、[SQL Server マスター](deployment-high-availability.md)や [HDFS 名前ノード](deployment-high-availability-hdfs-spark.md)などのミッション クリティカルなコンポーネントに対して**高可用性**を構成する方法に関する記事を参照してください。
@@ -165,7 +169,7 @@ ms.locfileid: "73532040"
 
 クラスターの展開構成ファイルをカスタマイズするには、VSCode など、任意の JSON 形式エディターを使用できます。 自動化のためにこれらの編集をスクリプト化するには、`azdata bdc config` コマンドを使用します。 この記事では、展開構成ファイルを変更してビッグ データ クラスターの展開を構成する方法について説明します。 さまざまなシナリオについて構成の変更方法の例を示します。 展開に構成ファイルを使用する方法の詳細詳細については、「[展開のガイダンス](deployment-guidance.md#configfile)」を参照してください。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 - [azdata をインストールします](deploy-install-azdata.md)。
 
@@ -210,7 +214,7 @@ azdata bdc config replace -c custom-bdc/control.json -j "$.spec.docker.imageTag=
 > ベスト プラクティスとして、バージョン固有のイメージ タグを使用して、`latest` イメージ タグの使用を避ける必要があります。これによりクラスターの正常性の問題の原因となるバージョンの不一致が発生する可能性があるためです。
 
 > [!TIP]
-> ビッグ データ クラスターの展開には、コンテナー レジストリと、コンテナー イメージをプルするリポジトリへのアクセス権が必要です。 ご使用の環境に既定の Microsoft Container Registry へのアクセス権がない場合は、必要なイメージが最初にプライベート Docker リポジトリに配置されるオフライン インストールを実行できます。 オフライン インストールの詳細については、「[SQL Server ビッグ データ クラスターのオフライン展開を実行する](deploy-offline.md)」を参照してください。 展開ワークフローでイメージをプルする元となるプライベート リポジトリにアクセスできるように、`DOCKER_USERNAME` と `DOCKER_PASSWORD` [環境変数](deployment-guidance.md#env)は、展開を発行する前に設定する必要があることに注意してください。
+> ビッグ データ クラスターの展開には、コンテナー レジストリと、コンテナー イメージをプルするリポジトリへのアクセス権が必要です。 ご使用の環境に既定の Microsoft Container Registry へのアクセス権がない場合は、必要なイメージが最初にプライベート Docker リポジトリに配置されるオフライン インストールを実行できます。 オフライン インストールの詳細については、「[SQL Server ビッグ データ クラスターのオフライン展開を実行する](deploy-offline.md)」を参照してください。 イメージをプルする元となるプライベート リポジトリに展開ワークフローから確実にアクセスできるようにするために、`DOCKER_USERNAME` および `DOCKER_PASSWORD` [の環境変数](deployment-guidance.md#env)を設定してから展開を発行する必要があることにご注意ください。
 
 ## <a id="clustername"></a> クラスター名を変更する
 
@@ -448,12 +452,12 @@ kubectl label node <kubernetesNodeName8> mssql-cluster=bdc mssql-resource=bdc-st
 
 ```bash
 azdata bdc config add -c custom-bdc/control.json -j "$.spec.clusterLabel=bdc"
-azdata bdc config add -c custom-bdc/control.json -j "$.spec.clusterLabel=bdc-shared"
+azdata bdc config add -c custom-bdc/control.json -j "$.spec.nodeLabel=bdc-shared"
 
 azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.master.spec.nodeLabel=bdc-master"
 azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.compute-0.spec.nodeLabel=bdc-compute-pool"
 azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.data-0.spec.nodeLabel=bdc-compute-pool"
-azdata bdc config add -c custom-bdc/bdc.json-j "$.spec.resources.storage-0.spec.nodeLabel=bdc-storage-pool"
+azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.storage-0.spec.nodeLabel=bdc-storage-pool"
 
 # below can be omitted in which case we will take the node label default from the control.json
 azdata bdc config add -c custom-bdc/bdc.json -j "$.spec.resources.nmnode-0.spec.nodeLabel=bdc-shared"
@@ -660,6 +664,6 @@ azdata bdc config patch --config-file custom-bdc/control.json --patch-file elast
 > [!IMPORTANT]
 > ペスト プラクティスとして、[この記事](https://www.elastic.co/guide/en/elasticsearch/reference/current/vm-max-map-count.html)の手順に従って、Kubernetes クラスター内の各ホストで、`max_map_count` 設定を手動で更新することをお勧めします。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 ビッグ データ クラスターの展開での構成ファイルの使用について詳しくは、「[Kubernetes に [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]を展開する方法](deployment-guidance.md#configfile)」を参照してください。

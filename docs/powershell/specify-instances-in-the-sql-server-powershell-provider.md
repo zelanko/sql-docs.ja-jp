@@ -1,6 +1,7 @@
 ---
-title: SQL Server PowerShell プロバイダーでのインスタンスの指定 | Microsoft Docs
-ms.custom: ''
+title: SQL Server PowerShell プロバイダーでのインスタンスの指定
+description: SQL Server PowerShell プロバイダーの使用時にインスタンスを指定する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9373de68-fd43-45f2-b9a6-149c96610aeb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 470b15071349299a8306d3dc40125dd0b0b88270
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c884fc97632860bff36a05e3340e6925871ff7e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68049080"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75557931"
 ---
 # <a name="specify-instances-in-the-sql-server-powershell-provider"></a>SQL Server PowerShell プロバイダーでのインスタンスの指定
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

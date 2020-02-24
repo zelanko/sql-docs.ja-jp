@@ -1,10 +1,7 @@
 ---
-title: osql ユーティリティ | Microsoft Docs
-ms.custom: ''
-ms.date: 03/16/2017
+title: osql ユーティリティ
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
@@ -23,17 +20,23 @@ helpviewer_keywords:
 ms.assetid: cf530d9e-0609-4528-8975-ab8e08e40b9a
 author: markingmyname
 ms.author: maghan
+ms.manageR: jroth
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/16/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: cfd8bc56a642442e1a5c5f673ca70bd86eb3ef6b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: dbc103ea44027056541dada86451c757a27619ff
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68105755"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307361"
 ---
 # <a name="osql-utility"></a>osql ユーティリティ
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  **osql** ユーティリティを使用すると、 [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメント、システム プロシージャ、およびスクリプト ファイルを入力できます。 また、このユーティリティは ODBC を使用してサーバーと通信します。  
+
+**osql** ユーティリティを使用すると、 [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメント、システム プロシージャ、およびスクリプト ファイルを入力できます。 また、このユーティリティは ODBC を使用してサーバーと通信します。  
   
 > [!IMPORTANT]  
 >  この機能は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の将来のバージョンで削除される予定です。 新しい開発作業では、この機能を使用しないでください。また、現在この機能を使用しているアプリケーションの変更を計画してください。 代わりに **sqlcmd** を使用します。 詳細については、「 [sqlcmd Utility](../tools/sqlcmd-utility.md)」を参照してください。  
@@ -69,7 +72,7 @@ osql
 > [!NOTE]  
 >  ネットワーク上のブロードキャストの特性によっては、 **osql** は、一部のサーバーからタイムリーな応答を受信できない場合があります。 そのため、返されるサーバーのリストは、このオプションの実行ごとに異なる可能性があります。  
   
- **ｰU** _login_id_  
+ **-U** _login_id_  
  ユーザーのログイン ID です。 ログイン ID では大文字と小文字は区別されます。  
   
  **-P** _password_  
@@ -138,7 +141,7 @@ C:\>osql
  コマンド ターミネータを指定します。 既定では、GO だけが入力されている行があると、コマンドが終了したと見なされ、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] に送られます。 コマンド ターミネータをリセットする場合、 [!INCLUDE[tsql](../includes/tsql-md.md)] の予約語やオペレーティング システムで特別な意味を持つ文字は、先頭に円記号が付いているかどうかに関係なく、使用しないでください。  
   
  **-q "** _query_ **"**  
- **osql** の起動時にクエリを実行しますが、クエリが完了しても **osql** を終了しません。 クエリ ステートメントには GO を含めないでください。 バッチ ファイルからクエリを実行する場合は、% 変数 (環境変数 %variable%) も使用できます。 例:  
+ **osql** の起動時にクエリを実行しますが、クエリが完了しても **osql** を終了しません。 クエリ ステートメントには GO を含めないでください。 バッチ ファイルからクエリを実行する場合は、% 変数 (環境変数 %variable%) も使用できます。 次に例を示します。  
   
 ```  
 SET table=sys.objects  
@@ -193,7 +196,7 @@ osql -E -q "select name, object_id from %table%"
 > [!NOTE]  
 >  **-n**、 **-O** および **-D** オプションは、 **osql**ではサポートされなくなりました。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **osql** ユーティリティは、ここに記載された、大文字と小文字では異なる機能を持つオプションを使用して、オペレーティング システムから直接起動されます。 起動されると、 **osql**は SQL ステートメントを受け取り、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] に対話的に送ります。 結果はフォーマットされ、画面に表示されます (**stdout**)。 **osql**を終了するには、QUIT または EXIT を使用します。  
   
  ユーザー名を指定せずに **osql**を起動すると、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、 **osqluser=(** _user_ **)** や **osqlserver=(** _server_ **)** などの環境変数が確認され、それらの値が使用されます。 環境変数が設定されていない場合は、ワークステーションのユーザー名が使用されます。 サーバーを指定していない場合は、ワークステーション名が使用されます。  
@@ -208,7 +211,7 @@ osql -E -q "select name, object_id from %table%"
 ## <a name="osql-commands"></a>OSQL コマンド  
  [!INCLUDE[tsql](../includes/tsql-md.md)] osql **では、** ステートメントの他に次のコマンドも使用できます。  
   
-|コマンド|[説明]|  
+|command|説明|  
 |-------------|-----------------|  
 |GO|最後の GO の後に入力したすべてのステートメントを実行します。|  
 |RESET|入力したステートメントをすべて消去します。|  
@@ -264,19 +267,19 @@ osql -E -i titles.qry -o titles.res
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] osql **で**に送られる Transact-SQL ステートメントには、コメントを挿入することができます。 2 種類のコメント スタイルがあります: `--` と `/*...*/` です。  
   
 ## <a name="using-exit-to-return-results-in-osql"></a>EXIT によって osql から返される結果  
- **osql**からの戻り値に、SELECT ステートメントの結果を使用できます。 数値の場合、結果行の最終行の最終列は、4 バイトの (長) 整数に変換されます。 MS-DOS は、下位バイトを親プロセスやオペレーティング システムのエラー レベルに渡します。 Windows では、4 バイトの整数全体を渡します。 構文は次のとおりです。  
+ **osql**からの戻り値に、SELECT ステートメントの結果を使用できます。 数値の場合、結果行の最終行の最終列は、4 バイトの (長) 整数に変換されます。 MS-DOS は、下位バイトを親プロセスやオペレーティング システムのエラー レベルに渡します。 Windows では、4 バイトの整数全体を渡します。 の構文は次のとおりです。  
   
 ```  
 EXIT ( < query > )  
 ```  
   
- 例:  
+ 次に例を示します。  
   
 ```  
 EXIT(SELECT @@ROWCOUNT)  
 ```  
   
- バッチ ファイルの一部として、EXIT パラメーターを使用することもできます。 例:  
+ バッチ ファイルの一部として、EXIT パラメーターを使用することもできます。 次に例を示します。  
   
 ```  
 osql -E -Q "EXIT(SELECT COUNT(*) FROM '%1')"  
@@ -304,7 +307,7 @@ osql -E -Q "EXIT(SELECT COUNT(*) FROM '%1')"
 -   状態 127 の RAISERROR ステートメント  
   
 > [!NOTE]  
->  RAISERROR を **osql** スクリプトの中で使用し、状態 127 が発生すると、 **osql** は終了し、メッセージ ID がクライアントに返されます。 例:  
+>  RAISERROR を **osql** スクリプトの中で使用し、状態 127 が発生すると、 **osql** は終了し、メッセージ ID がクライアントに返されます。 次に例を示します。  
   
 ```  
 RAISERROR(50001, 10, 127)  

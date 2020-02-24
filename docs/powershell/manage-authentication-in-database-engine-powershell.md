@@ -1,6 +1,8 @@
 ---
-title: データベース エンジン PowerShell での認証の管理 | Microsoft Docs
-ms.custom: ''
+title: PowerShell:認証を管理する
+titleSuffix: SQL Server on Linux
+description: PowerShell を使用して SQL Server への Windows および SQL 認証を管理する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -9,14 +11,14 @@ ms.topic: conceptual
 ms.assetid: ab9212a6-6628-4f08-a38c-d3156e05ddea
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c246a68216d6de4b1a21d2d2c5c0999703362c36
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 22c48323aa7570440a3edb06400d9a96e9bd9924
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68049145"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75557967"
 ---
-# <a name="manage-authentication-in-database-engine-powershell"></a>データベース エンジン PowerShell での認証の管理
+# <a name="powershell-manage-authentication-to-sql-server"></a>PowerShell: SQL Server への認証を管理する
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 既定では、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell コンポーネントは、 [!INCLUDE[ssDE](../includes/ssde-md.md)]インスタンスへの接続に Windows 認証を使用します。 SQL Server 認証を使用するには、PowerShell 仮想ドライブを定義するか、**Invoke-Sqlcmd** の **-Username** および **-Password** パラメーターを指定します。  

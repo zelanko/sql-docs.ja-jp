@@ -1,34 +1,28 @@
 ---
-title: SQL Server プロファイラー | を使用したデッドロックの分析Microsoft Docs
-ms.custom: ''
-ms.date: 03/03/2017
+title: デッドロックの分析
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- process nodes [SQL Server Profiler]
-- Profiler [SQL Server Profiler], deadlocks
-- deadlocks [SQL Server], identifying cause
-- resource nodes [SQL Server Profiler]
-- graphs [SQL Server Profiler]
-- SQL Server Profiler, deadlocks
-- events [SQL Server], deadlocks
-- edges [SQL Server Profiler]
 ms.assetid: 72d6718f-501b-4ea6-b344-c0e653f19561
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ab8914abdaa2056a71fdd4d0e1a277c89e200dc7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/03/2017
+ms.openlocfilehash: 15d41ae2517a3eadb8305a359f4576fb4407020b
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68105627"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307376"
 ---
 # <a name="analyze-deadlocks-with-sql-server-profiler"></a>SQL Server Profiler を使用したデッドロックの分析
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用して、デッドロックの原因を特定します。 デッドロックは、SQL Server 内のリソースの集合に対して複数のスレッド間またはプロセス間で相互に依存関係があるときに発生します。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を使用すると、分析用にデッドロック イベントを記録、再生、および表示するトレースを作成できます。  
+
+[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用して、デッドロックの原因を特定します。 デッドロックは、SQL Server 内のリソースの集合に対して複数のスレッド間またはプロセス間で相互に依存関係があるときに発生します。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を使用すると、分析用にデッドロック イベントを記録、再生、および表示するトレースを作成できます。  
   
  デッドロック イベントをトレースするには、 **Deadlock Graph** イベント クラスをトレースに追加します。 このイベント クラスにより、デッドロックに関連するプロセスとオブジェクトに関する XML データが、トレースの **TextData** データ列に設定されます。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] では、この XML ドキュメントをデッドロック XML (.xdl) ファイルに抽出して、後で SQL Server Management Studio で表示できます。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] Deadlock Graph **イベントを、すべての** Deadlock Graph **イベントが含まれた 1 つのファイルに抽出するか、または個別のファイルに抽出するように** を構成できます。 この抽出は、次の方法のいずれかを使用して実行できます。  
   
@@ -47,8 +41,8 @@ ms.locfileid: "68105627"
  リソース ノード  
  テーブル、インデックス、行などのデータベース オブジェクト。  
   
- エッジ  
- プロセスとリソース間の関係。 **request** エッジは、プロセスがリソースを待機したときに発生します。 **owner** エッジは、リソースがプロセスを待機したときに発生します。 ロック モードは、エッジの記述に含まれます。 たとえば、" **モード: X**" などです。  
+ Edge  
+ プロセスとリソース間の関係。 **request** エッジは、プロセスがリソースを待機したときに発生します。 **owner** エッジは、リソースがプロセスを待機したときに発生します。 ロック モードは、エッジの記述に含まれます。 たとえば、**モード:X** などです。  
   
 ## <a name="deadlock-process-node"></a>デッドロック プロセス ノード  
  Deadlock Wait-for Graph には、プロセス ノードにプロセスに関する情報が含まれています。 次の表で、プロセスの構成要素について説明します。  
@@ -62,8 +56,8 @@ ms.locfileid: "68105627"
 |[使用されたログ]|プロセスで使用されたログ領域の量。|  
 |[所有者 ID]|トランザクションを使用しており、現在ロックを待機しているプロセスのトランザクション ID。|  
 |[トランザクション記述子]|トランザクションの状態を記述するトランザクション記述子へのポインター。|  
-|[入力バッファー]|現在のプロセスの入力バッファー。イベントの種類と実行中のステートメントを定義します。 有効な値は次のとおりです。<br /><br /> **言語**<br /><br /> **RPC**<br /><br /> **なし**|  
-|Statement|ステートメントの種類。 有効な値は次のとおりです。<br /><br /> **NOP**<br /><br /> **SELECT**<br /><br /> **UPDATE**<br /><br /> **INSERT**<br /><br /> **DELETE**<br /><br /> **Unknown**|  
+|[入力バッファー]|現在のプロセスの入力バッファー。イベントの種類と実行中のステートメントを定義します。 指定できる値は、次のとおりです。<br /><br /> **Language**<br /><br /> **RPC**<br /><br /> **なし**|  
+|ステートメント|ステートメントの種類。 次のいずれかの値になります。<br /><br /> **NOP**<br /><br /> **SELECT**<br /><br /> **UPDATE**<br /><br /> **INSERT**<br /><br /> **DELETE**<br /><br /> **Unknown**|  
   
 ## <a name="deadlock-resource-node"></a>デッドロック リソース ノード  
  デッドロックにおいて、2 つのプロセスが、他のプロセスで使用されているリソースをそれぞれ待機しています。 Deadlock Graph では、これらのリソースがリソース ノードとして表示されます。  

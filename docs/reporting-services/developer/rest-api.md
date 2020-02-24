@@ -1,5 +1,5 @@
 ---
-title: Reporting Services の REST API による開発 | Microsoft Docs
+title: REST API を使用した開発
 ms.description: The REST API provides programmatic access to the objects in a SQL Server 2017 Reporting Services report server catalog.
 author: maggiesMSFT
 ms.author: maggies
@@ -9,12 +9,12 @@ ms.technology: developer
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/12/2018
-ms.openlocfilehash: ba424fa0c79249a8870962d0df4cdaf383c9aa39
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
-ms.translationtype: MTE75
+ms.openlocfilehash: 48d3cea7dfb57ad771f512806fd0c95528566559
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263030"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75321824"
 ---
 # <a name="develop-with-the-rest-apis-for-reporting-services"></a>Reporting Services の REST API による開発
 
@@ -32,10 +32,10 @@ REST API の要求/応答ペアは、次の 5 つのコンポーネントに分�
 
 * **要求 URI**。`{URI-scheme} :// {URI-host} / {resource-path} ? {query-string}` で構成されます。 要求 URI は要求メッセージ ヘッダーに含まれていますが、ほとんどの言語やフレームワークでは要求メッセージとは別に渡す必要があるため、ここでは独立した項目にしてあります。
 
-    * URI スキーム: 要求の送信に使用されるプロトコルを示します。 たとえば、`http` や `https` などです。
-    * URI ホスト: `myserver.contoso.com` など、REST サービス エンドポイントがホストされているサーバーのドメイン名または IP アドレスを指定します。
-    * リソース パス: リソースまたはリソース コレクションを指定します。リソースの選択を決定するときにサービスによって使用される複数のセグメントを含むことができます。 たとえば、`CatalogItems(01234567-89ab-cdef-0123-456789abcdef)/Properties` を使用して、CatalogItem の指定したプロパティを取得できます。
-    * クエリ文字列 (省略可能): API のバージョンやリソースの選択条件など、簡単な追加パラメーターを提供します。
+    * URI スキーム:要求の送信に使用されるプロトコルを示します。 たとえば、`http` または `https` です。
+    * URI ホスト:`myserver.contoso.com` など、REST サービス エンドポイントがホストされているサーバーのドメイン名または IP アドレスを指定します。
+    * リソース パス:リソースまたはリソース コレクションを指定します。リソースの選択を決定するときにサービスによって使用される複数のセグメントを含むことができます。 たとえば、`CatalogItems(01234567-89ab-cdef-0123-456789abcdef)/Properties` を使用して、CatalogItem の指定したプロパティを取得できます。
+    * クエリ文字列 (省略可能):API のバージョンやリソースの選択条件など、簡単な追加パラメーターを提供します。
 
 * HTTP 要求メッセージ ヘッダーのフィールド:
 
@@ -61,7 +61,7 @@ REST API の要求/応答ペアは、次の 5 つのコンポーネントに分�
 
 HTTP 要求/応答メッセージをテストするためのツールは [Fiddler](https://www.telerik.com/fiddler) です。 Fiddler は、REST 要求をインターセプトできる無料の Web デバッグ プロキシであり、HTTP 要求/応答メッセージの診断が容易になります。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 [SwaggerHub](https://app.swaggerhub.com/api/microsoft-rs/SSRS/2.0) で利用可能な API を確認します。
 

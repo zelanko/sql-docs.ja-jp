@@ -1,6 +1,6 @@
 ---
-title: SQL フルテキスト フィルター デーモン ランチャー ([サービス] タブ) | Microsoft Docs
-ms.custom: ''
+title: SQL フルテキスト フィルター デーモン ランチャー ([サービス] タブ)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,12 +11,12 @@ ms.assetid: 6aad7ebe-c4be-4d37-8536-61502f51faa2
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9d077ee1b250b0e90c335ec85a1305ac5cb2f0de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 72e85b49f70a93a633ad8ef2eeeecd526e59e97a
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058275"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306735"
 ---
 # <a name="sql-full-text-filter-daemon-launcher-service-tab"></a>SQL フルテキスト フィルター デーモン ランチャー ([サービス] タブ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "68058275"
  **Host Name**  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスを実行しているコンピューターまたはクラスターの名前が表示されます。  
   
- **[名前]**  
+ **Name**  
  サービスの表示名が表示されます。  
   
  **プロセス ID**  
@@ -46,16 +46,16 @@ ms.locfileid: "68058275"
  **[SQL サービスの種類]**  
  呼び出し側プロセスに提供されるサービスの種類が表示されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、いくつかのサービスがインストールされます。  
   
- **開始モード**  
+ **[開始モード]**  
  このサービスを以下のいずれかのモードに設定します。  
   
--   手動: このサービスは、コンピューターの起動時に自動的に開始しません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーまたは他のツールを使用してこのサービスを開始する必要があります。  
+-   手動: このサービスは、コンピューターの起動時に自動的に開始されません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーまたは他のツールを使用してこのサービスを開始する必要があります。  
   
--   \[自動]: このサービスは、コンピューターの起動時に開始を試みます。  
+-   自動:コンピューターの起動時に、このサービスの開始が試みられます。  
   
--   \[無効]: このサービスは開始できません。  
+-   無効: このサービスを開始できません。  
   
- **状態**  
+ **State**  
  このサービスが実行中か、停止しているか、無効になっているかが表示されます。 " **...** " の場合は、状態の変更が保留になっています。  
   
   

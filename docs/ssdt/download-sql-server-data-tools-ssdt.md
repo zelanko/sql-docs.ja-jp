@@ -1,5 +1,5 @@
 ---
-title: SQL Server Data Tools (SSDT) のダウンロード | Microsoft Docs
+title: SQL Server Data Tools (SSDT) のダウンロード
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssdt
@@ -8,16 +8,17 @@ keywords: ssdt のインストール, ssdt のダウンロード, 最新の ssdt
 ms.assetid: b0fc4987-d260-4d0a-9dd1-98099835b361
 author: markingmyname
 ms.author: maghan
+manager: jroth
 ms.reviewer: ''
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 08/15/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: a79940fa5696a65ed580d8550984d090a48eebdf
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.openlocfilehash: 48426127a379efecbc61587f60a798fff14190b8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72807446"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75688234"
 ---
 # <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>Visual Studio の SQL Server Data Tools (SSDT) をダウンロードし、インストールする
 
@@ -60,15 +61,17 @@ AS、IS、RS プロジェクト サポートをインストールするには、
 
 ## <a name="ssdt-for-vs-2017-standalone-installer"></a>SSDT for VS 2017 (スタンドアロン インストーラー)
 
-[![ダウンロード](../ssdt/media/download.png) SSDT for Visual Studio 2017 (15.9.2) をダウンロードする](https://go.microsoft.com/fwlink/?linkid=2095463)
+[![ダウンロード](../ssdt/media/download.png) SSDT for Visual Studio 2017 (15.9.3) をダウンロードする](https://go.microsoft.com/fwlink/?linkid=2110080)
 
 > [!IMPORTANT]
-> - SSDT for Visual Studio 2017 (15.9.2) をインストールする前に、*Analysis Services プロジェクト*と *Reporting Services プロジェクト*の拡張機能がインストールされている場合はアンインストールし、すべての VS インスタンスを閉じます。
+> - SSDT for Visual Studio 2017 (15.9.3) をインストールする前に、*Analysis Services プロジェクト*と *Reporting Services プロジェクト*の拡張機能がインストールされている場合はアンインストールし、すべての VS インスタンスを閉じます。
+> - SQL Server 2017 用の受信トレイ コンポーネント Power Query ソースが削除されました。 すぐに使用できるコンポーネントとして SQL Server 2017 および 2019 用の Power Query ソースを発表しました。これは[こちら](https://www.microsoft.com/en-us/download/details.aspx?id=100619)からダウンロードできます。
+> - SQL Server 2019 用の受信トレイ コンポーネント Microsoft Oracle Connector が削除されました。 すぐに使用できるコンポーネントとして SQL Server 2019 用の Microsoft Oracle Connector を発表しました。これは[こちら](https://www.microsoft.com/en-us/download/details.aspx?id=58228)からダウンロードできます。
 > - Teradata のソース/変換先を含む SSIS パッケージを設計する場合は、Visual Studio 2017 (15.8.0) 以前のバージョン用の SSDT を使用してください。 15.8.0 より後の Visual Studio 2017 用の SSDT では、Attunity による Teradata のソース/変換先を含む SSIS パッケージを設計できません。
 
 ### <a name="version-information"></a>バージョン情報
 
-リリース番号:15.9.2 ビルド番号:14.0.16194.0 リリース日:2019 年 7 月 17 日 
+リリース番号:15.9.3 ビルド番号: 14.0.16203.0 リリース日: 2020 年 1 月 3 日 
 
 すべての変更の一覧については、「[SQL Server Data Tools (SSDT) リリース ノート](release-notes-ssdt.md)」をご覧ください。
 
@@ -78,17 +81,17 @@ SSDT for Visual Studio 2017 の[システム要件](https://docs.microsoft.com/v
 
 **SSDT for VS 2017** の今回のリリースは、次の言語でインストールできます。
 
-- [簡体中国語]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x804)
-- [繁体中国語]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x404)
-- [英語 (米国)]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x409)
-- [フランス語]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x40c)
-- [ドイツ語]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x407)
-- [イタリア語]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x410)
-- [日本語]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x411)
-- [韓国語]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x412)
-- [ポルトガル語 (ブラジル)]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x416)
-- [ロシア語]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x419)
-- [スペイン語]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x40a)
+- [簡体中国語]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x804)
+- [繁体中国語]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x404)
+- [英語 (米国)]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x409)
+- [フランス語]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x40c)
+- [ドイツ語]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x407)
+- [イタリア語]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x410)
+- [日本語]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x411)
+- [韓国語]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x412)
+- [ポルトガル語 (ブラジル)]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x416)
+- [ロシア語]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x419)
+- [スペイン語]( https://go.microsoft.com/fwlink/?linkid=2110080&clcid=0x40a)
 
 ## <a name="offline-install"></a>オフライン インストール
 
@@ -115,7 +118,7 @@ SSDT for Visual Studio 2017 の[システム要件](https://docs.microsoft.com/v
 > [!NOTE]
 > Visual Studio 2017 の完全バージョンを使用する場合は、SSDT 専用のオフライン フォルダーを作成し、この新しく作成したフォルダーから `SSDT-Setup-ENU.exe` を実行します (別の Visual Studio 2017 のオフライン レイアウトに SSDT を追加しないでください)。 既存の Visual Studio のオフライン レイアウトに SSDT レイアウトを追加すると、必要なランタイム コンポーネント (.exe) がそこに作成されません。
 
-### <a name="considerations-and-limitations"></a>注意点と制限事項
+### <a name="considerations-and-limitations"></a>考慮事項と制限事項
 
 - コミュニティ バージョンをオフラインでインストールすることはできません
 - SSDT をアップグレードするには、SSDT のインストールに使用したのと同じパスに従う必要があります。 たとえば、VSIX を使用して SSDT を追加した場合は、VSIX 経由でアップグレードします。 別のインストール経由で SSDT をインストールした場合は、その方法を使用してアップグレードする必要があります。
@@ -136,7 +139,7 @@ SSDT for Visual Studio 2015 と SSDT for Visual Studio 2017 は、どちらも D
 
 Visual Studio 2015 の SSDT、または古いバージョンの SSDT をダウンロードしてインストールするには、「[SQL Server Data Tools (SSDT と SSDT-BI) の以前のリリース](previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md)」を参照してください。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 SSDT をインストールした後、次のチュートリアルを使用して、SSDT を使ったデータベース、パッケージ、データ モデル、およびレポートの作成方法を学ぶことができます。 
 

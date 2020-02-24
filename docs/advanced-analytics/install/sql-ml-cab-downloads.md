@@ -1,37 +1,46 @@
 ---
 title: オフライン インストール用の更新プログラムをダウンロードする
-description: SQL Server Machine Learning Services と SQL Server 2016 R Services 用の R および Python CAB とパッケージ ファイルをダウンロードします。
+description: SQL Server Machine Learning Services 用の Python と R の CAB ファイルのダウンロードについて説明します。 これらの CAB ファイルには、インターネット アクセスがない場合にサーバーに SQL Server をインストールするときに使用できる、Machine Learning Services (Python と R) 機能の更新プログラムが含まれています。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 07/30/2019
+ms.date: 01/07/2020
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e7266d90e04071c242145fc0df2e59ce86d86a16
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: b2b84349e60bf89a066fb2157a9c521d7be8ecbd
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73727628"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75776534"
 ---
-# <a name="cab-downloads-for-cumulative-updates-of-sql-server-in-database-analytics-instances"></a>SQL Server データベース内分析インスタンスの累積的な更新プログラムの CAB ダウンロード
+# <a name="cab-downloads-for-cumulative-updates-of-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services の累積的な更新プログラムの CAB ダウンロード
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-データベース内分析用に構成されている SQL Server インスタンスには、R と Python の機能があります。 これらの機能は CAB ファイルに付属し、SQL Server セットアップを通じてインストールされて提供されます。 インターネットに接続されているデバイスでは、CAB の更新プログラムは通常、Windows Update によって適用されます。 接続されていないサーバーの場合、CAB ファイルを手動でダウンロードして適用する必要があります。 
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+SQL Server Machine Learning Services 用の Python と R の CAB ファイルのダウンロードについて説明します。 これらの CAB ファイルには、インターネット アクセスがない場合にサーバーに SQL Server をインストールするときに使用できる、Machine Learning Services (Python と R) 機能の更新プログラムが含まれています。
+::: moniker-end
 
-この記事では、累積的な更新プログラムごとの CAB ファイルのダウンロード リンクを示します。 オフライン インストールの詳細については、[インターネットへのアクセスなしで SQL Server 機械学習コンポーネントをインストールする](sql-ml-component-install-without-internet-access.md#apply-cu)に関するページを参照してください。
+::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
+SQL Server 2016 R Services 用の Python と R の CAB ファイルのダウンロードについて説明します。 これらの CAB ファイルには、インターネット アクセスがない場合にサーバーに SQL Server をインストールするときに使用できる、R Services 機能の更新プログラムが含まれています。
+::: moniker-end
 
-## <a name="prerequisites"></a>Prerequisites
+次に、累積的な更新プログラムごとの CAB ファイルのダウンロード リンクを示します。 オフライン インストールの詳細については、[インターネットへのアクセスなしで SQL Server 機械学習コンポーネントをインストールする](sql-ml-component-install-without-internet-access.md#apply-cu)に関するページを参照してください。
 
-ベースライン インストールから開始します。
+## <a name="prerequisites"></a>前提条件
 
-+ SQL Server Machine Learning Services では、最初のリリースがベースライン インストールです。 
-+ SQL Server 2016 R Services では、最初のリリース、SP1、または SP2 から始めることができます。 
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+ベースライン インストールから開始します。 SQL Server Machine Learning Services では、最初のリリースがベースライン インストールです。 
+::: moniker-end
 
-また、スタンドアロン サーバーに累積的な更新プログラムを適用することもできます。
+::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
+ベースライン インストールから開始します。  SQL Server 2016 R Services では、最初のリリース、SP1、または SP2 から始めることができます。 
+::: moniker-end
+
+累積的な更新プログラムを適用することも可能です。
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 
@@ -39,7 +48,7 @@ ms.locfileid: "73727628"
 
 CAB ファイルは、新しい順で一覧表示されます。 CAB ファイルをダウンロードしてターゲット コンピューターに転送する場合、**Downloads** フォルダーやセットアップ ユーザーの %temp% フォルダーなどの便利なフォルダーにファイルを配置します。
 
-|リリース  |コンポーネント | ダウンロード リンク  | 対処された問題 | 
+|Release  |コンポーネント | ダウンロード リンク  | 対処された問題 | 
 |---------|----------|----------------|------------------|
 |**[SQL Server 2017 CU14](https://support.microsoft.com/help/4484710/)-[CU15](https://support.microsoft.com/help/4498951/)-[CU16](https://support.microsoft.com/help/4508218/)** |  |  |  |
 | | Microsoft R Open     | [SRO_3.3.3.1400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2073898&clcid=1033)| パッケージ内のバイナリが署名されました。 |
@@ -94,7 +103,7 @@ CAB ファイルは、新しい順で一覧表示されます。 CAB ファイ�
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 
 <a name="bkmk_2016Installers"></a>
 
@@ -102,7 +111,7 @@ CAB ファイルは、新しい順で一覧表示されます。 CAB ファイ�
 
 SQL Server 2016 R Services では、ベースライン リリースは RTM バージョンまたは Service Pack バージョンのいずれかになります。
 
-|リリース  |ダウンロード リンク  |
+|Release  |ダウンロード リンク  |
 |---------|---------------|
 |**SQL Server 2016 SP2 CU6**     |
 |Microsoft R Open     |[SRO_3.2.2.20100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2079936&clcid=1033)|
@@ -143,7 +152,7 @@ Microsoft R のソース コードを表示する場合は、次のように tar
 
 ::: moniker-end
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 [インターネットにアクセスしないコンピューターに累積的な更新プログラムを適用する](sql-ml-component-install-without-internet-access.md#apply-cu)
 

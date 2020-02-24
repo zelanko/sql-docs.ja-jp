@@ -1,6 +1,5 @@
 ---
-title: SQL Server に対して Visual Studio Code の mssql 拡張機能を使用する
-titleSuffix: SQL Server
+title: Visual Studio Code mssql 拡張機能を使用する
 description: Visual Studio Code の mssql 拡張機能を使用して、SQL Server on Linux 用の Transact-SQL スクリプトを編集して実行します。
 ms.topic: conceptual
 ms.prod: sql
@@ -9,12 +8,12 @@ ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
 author: markingmyname
 ms.author: maghan
 ms.date: 10/28/2019
-ms.openlocfilehash: 91cc06b4d0d2791f91a26ecc1800859713267d9b
-ms.sourcegitcommit: 82b70c39550402a2b0b327db32bf5ecf88b50d3c
+ms.openlocfilehash: 615e205566ced2c1d0a66ab69b3e9eb80c7f82f3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73588986"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75558457"
 ---
 # <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts"></a>Visual Studio Code を使用して Transact-SQL スクリプトを作成して実行する
 
@@ -37,7 +36,7 @@ Visual Studio Code は、拡張機能をサポートするクロスプラット�
 
 [Visual Studio Code の mssql 拡張機能](https://aka.ms/mssql-marketplace)を使用すると、SQL Server に接続し、Transact-SQL (T-SQL) を使用してクエリを実行し、その結果を表示できます。
 
-1. Visual Studio Code で、 **[表示]**  >  **[コマンド パレット]** を選択する、**Ctrl** + **Shift** + **P** を押す、または **F1** を押して **[コマンド パレット]** を開きます。
+1. Visual Studio Code で、 **[表示]**  >  **[コマンド パレット]** を選択する、**Ctrl**+**Shift**+**P** を押す、または **F1** を押して **[コマンド パレット]** を開きます。
 
 2. **[コマンド パレット]** で、ドロップダウンから **[拡張機能:拡張機能のインストール]** を選択します。
 
@@ -53,9 +52,9 @@ Visual Studio Code は、拡張機能をサポートするクロスプラット�
 
 mssql 拡張機能では、言語モードが **SQL** に設定されている場合に、コード エディターで mssql コマンドと T-SQL IntelliSense を有効にできます。
 
-1. **[ファイル]**  >  **[新しいファイル]** を選択するか、**Ctrl** + **N** を押します。 Visual Studio Code では、既定で新しいプレーン テキスト ファイルが開きます。 
+1. **[ファイル]**  >  **[新しいファイル]** を選択するか、**Ctrl**+**N** を押します。 Visual Studio Code では、既定で新しいプレーン テキスト ファイルが開きます。 
 
-2. 下部のステータス バーの **[プレーン テキスト]** を選択するか、**Ctrl** + **K**  >  **M** を押し、[言語] ドロップダウンから **[SQL]** を選択します。 
+2. 下部のステータス バーの **[プレーン テキスト]** を選択するか、**Ctrl**+**K** > **M** を押し、[言語] ドロップダウンから **[SQL]** を選択します。 
 
    ![SQL 言語モード](./media/sql-server-develop-use-vscode/vscode-language-mode.png)
 
@@ -68,7 +67,7 @@ mssql 拡張機能では、言語モードが **SQL** に設定されている�
 
 次の手順に従って接続プロファイルを作成し、SQL Server に接続します。
 
-1. **Ctrl** + **Shift** + **P** を押すか、**F1** を押して **[コマンド パレット]** を開きます。 
+1. **Ctrl**+**Shift**+**P** を押すか、**F1** を押して **[コマンド パレット]** を開きます。 
 
 2. 「*sql*」と入力して mssql コマンドを表示するか、*sqlcon* と入力し、ドロップダウンから **[MS SQL:接続]** を選択します。
 
@@ -83,12 +82,12 @@ mssql 拡張機能では、言語モードが **SQL** に設定されている�
 
 5. 指示に従って、新しい接続プロファイルの接続プロパティを指定します。 それぞれの値を指定した後、**Enter** キーを押して続行します。
 
-   | 接続プロパティ | [説明] |
+   | 接続プロパティ | 説明 |
    |---|---|
    | **サーバー名または ADO 接続文字列** | SQL Server インスタンス名を指定します。 ローカル コンピューター上の SQL Server インスタンスに接続するには、*localhost* を使用します。 リモート SQL Server に接続するには、ターゲットの SQL Server の名前か、その IP アドレスを入力します。 SQL Server コンテナーに接続するには、コンテナーのホスト コンピューターの IP アドレスを指定します。 ポートを指定する必要がある場合は、コンマを使用して名前と区別します。 たとえば、ポート 1401 でリッスンしているサーバーの場合は、「`<servername or IP>,1401`」と入力します。<br/><br/>別の方法として、お使いのデータベースの ADO 接続文字列をここに入力できます。 |
    | **データベース名** (省略可能) | 使用するデータベース。 既定のデータベースに接続するには、ここにデータベース名を指定しないでください。 |
    | **認証の種類** | **[統合]** または **[SQL ログイン]** を選択します。 |
-   | **User name** | **[SQL ログイン]** を選択した場合は、サーバー上のデータベースにアクセスできるユーザーの名前を入力します。 |
+   | **ユーザー名** | **[SQL ログイン]** を選択した場合は、サーバー上のデータベースにアクセスできるユーザーの名前を入力します。 |
    | **パスワード** | 指定したユーザーのパスワードを入力します。 |
    | **パスワードを保存する** | **Enter** キーを押すことで **[はい]** を選択して、パスワードを保存します。 **[いいえ]** を選択すると、接続プロファイルを使用するたびにパスワードの入力を求められます。 |
    | **プロファイル名** (省略可能) | 接続プロファイルの名前を入力します (*localhost プロファイル* など)。 |
@@ -128,18 +127,18 @@ mssql 拡張機能では、言語モードが **SQL** に設定されている�
    GO
    ```
 
-4. **Ctrl** + **Shift** + **E** を押して Transact-SQL コマンドを実行します。 クエリ ウィンドウで結果を確認します。
+4. **Ctrl**+**Shift**+**E** を押して Transact-SQL コマンドを実行します。 クエリ ウィンドウで結果を確認します。
 
     ![データベースのメッセージを作成する](./media/sql-server-develop-use-vscode/vscode-create-database-messages.png)
 
     > [!TIP]
     > mssql コマンドのショートカットキーをカスタマイズできます。 「[ショートカットのカスタマイズ](https://github.com/Microsoft/vscode-mssql/wiki/customize-shortcuts)」を参照してください。
 
-## <a name="create-a-table"></a>テーブルの作成
+## <a name="create-a-table"></a>テーブルを作成する
 
 1. コード エディター ウィンドウの内容を削除します。
 
-2. **Ctrl** + **Shift** + **P** を押すか、**F1** を押して **[コマンド パレット]** を開きます。
+2. **Ctrl**+**Shift**+**P** を押すか、**F1** を押して **[コマンド パレット]** を開きます。
 
 3. 「*sql*」と入力して mssql コマンドを表示するか、*sqluse* と入力し、 **[MS SQL:データベースの使用]** コマンドを選択します。
 
@@ -161,7 +160,7 @@ mssql 拡張機能では、言語モードが **SQL** に設定されている�
    Location [NVARCHAR](50)  NOT NULL
    ```
 
-9. **Ctrl** + **Shift** + **E** を押してテーブルを作成します。
+9. **Ctrl**+**Shift**+**E** を押してテーブルを作成します。
 
 ## <a name="insert-and-query"></a>挿入とクエリ
 
@@ -192,7 +191,7 @@ mssql 拡張機能では、言語モードが **SQL** に設定されている�
    > [!TIP]
    > mssql 拡張機能には、INSERT ステートメントと SELECT ステートメントを作成するために役立つコマンドもあります。 これらは、前の例では使用されていません。
 
-2. **Ctrl** + **Shift** + **E** を押してコマンドを実行します。 2 つの結果セットが **[結果]** ウィンドウに表示されます。
+2. **Ctrl**+**Shift**+**E** を押してコマンドを実行します。 2 つの結果セットが **[結果]** ウィンドウに表示されます。
 
    ![[結果]](./media/sql-server-develop-use-vscode/vscode-result-grid.png)
 
@@ -230,7 +229,7 @@ mssql 拡張機能では、言語モードが **SQL** に設定されている�
 
 SQL スクリプトを保存しておき、後で管理や大規模な開発プロジェクトのために実行する必要がある場合は、 *.sql* 拡張子を付けてスクリプトを保存します。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 T-SQL を初めて使用する場合は、「[チュートリアル:Transact-SQL ステートメントの作成](https://docs.microsoft.com/sql/t-sql/tutorial-writing-transact-sql-statements)」と「[Transact-SQL リファレンス (データベース エンジン)](https://docs.microsoft.com/sql/t-sql/language-reference)」を参照してください。
 

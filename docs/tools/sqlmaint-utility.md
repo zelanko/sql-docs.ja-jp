@@ -1,6 +1,6 @@
 ---
-title: sqlmaint Utility |Microsoft Docs
-ms.custom: ''
+title: sqlmaint ユーティリティ
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 937a9932-4aed-464b-b97a-a5acfe6a50de
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ecc0a38acd6ea00656e67e9f582a55c05ca15583
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: c0f87bca3404505e82c903bd868e9b5c2da00bed
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986282"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75306959"
 ---
 # <a name="sqlmaint-utility"></a>sqlmaint ユーティリティ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ number[minutes | hours | days | weeks | months]
  **sqlmaint** の構文ダイアグラムが返されます。 このパラメーターは単独で使用する必要があります。  
   
  **-S** _server_name_[ **\\** _instance\_name_]  
- 対象となる [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のインスタンスを指定します。 サーバー上の [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]の既定のインスタンスに接続するには、_server\_name_ を指定します。 サーバー上の [!INCLUDE[ssDE](../includes/ssde-md.md)] の名前付きインスタンスに接続するには、_server\_name_ **\\** _instance\_name_ を指定します。 サーバーを指定しない場合、 **sqlmaint** は、ローカル コンピューター上にある [!INCLUDE[ssDE](../includes/ssde-md.md)] の既定のインスタンスに接続します。  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のターゲット インスタンスを指定します。 サーバー上の [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]の既定のインスタンスに接続するには、_server\_name_ を指定します。 サーバー上の [!INCLUDE[ssDE](../includes/ssde-md.md)] の名前付きインスタンスに接続するには、_server\_name_ **\\** _instance\_name_ を指定します。 サーバーを指定しない場合、 **sqlmaint** は、ローカル コンピューター上にある [!INCLUDE[ssDE](../includes/ssde-md.md)] の既定のインスタンスに接続します。  
   
  **-U** _login_ID_  
  サーバーに接続するときに使用するログイン ID を指定します。 指定しない場合、 **sqlmaint** は [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 認証の使用を試みます。 *login_ID* に特殊文字が含まれる場合、特殊文字を二重引用符 (") で囲む必要があります。特殊文字が含まれない場合は、二重引用符は省略可能です。  
@@ -141,7 +141,7 @@ c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint_1996
  *sqlmaint* を実行するときにデータベースが使用中の場合、 **text_file** に警告が書き込まれます。  
   
  **-CkAl** |  **-CkAlNoIdx**  
- **-D** に指定されたデータベースで、NOINDEX オプションを含んだ DBCC CHECKALLOC ステートメントを実行します。 詳細については、「[DBCC CHECKALLOC &#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md)」を参照してください。  
+ **-D**に指定されたデータベースで、NOINDEX オプションを含んだ DBCC CHECKALLOC ステートメントを実行します。 詳細については、「[DBCC CHECKALLOC &#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md)」を参照してください。  
   
  **-CkCat**  
  **-D** に指定されたデータベースで、DBCC CHECKCATALOG (Transact-SQL) ステートメントを実行します。 詳細については、「[DBCC CHECKCATALOG &#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-checkcatalog-transact-sql.md)」を参照してください。  
@@ -228,7 +228,7 @@ dbname_log_yyyymmddhhmm.BAK
   
  *number* だけを指定する場合、既定では、 **weeks**と見なされます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  **sqlmaint** ユーティリティは、1 つまたは複数のデータベースでメンテナンス操作を実行します。 **-D** を指定する場合、残りのスイッチで指定する操作は指定したデータベースでのみ実行されます。 **-PlanName** または **-PlanID** が指定された場合、指定されたメンテナンス プランから **sqlmaint** が取得する情報は、プラン内のデータベースのリストのみです。 その他の **sqlmaint** パラメーターに指定されるすべての操作は、プランから取得されたリスト内の各データベースに対して適用されます。 **sqlmaint** ユーティリティでは、プラン自体に定義されているメンテナンス操作は適用されません。  
   
  **sqlmaint** ユーティリティは、実行が成功した場合には 0 を、実行が失敗した場合には 1 を返します。 失敗は次の場合にレポートされます。  
@@ -244,7 +244,7 @@ dbname_log_yyyymmddhhmm.BAK
   
  たとえば、 **-BkUpDB** を使用するには、BACKUP ステートメントを実行するための権限が必要です。 また、 **-UpdOptiStats** 引数を使用するには、UPDATE STATISTICS ステートメントを実行するための権限が必要です。 詳細については、オンライン ブックの該当トピックで「権限」を参照してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-performing-dbcc-checks-on-a-database"></a>A. データベースで DBCC チェックを実行する  
   

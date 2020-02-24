@@ -1,5 +1,7 @@
 ---
-title: クエリおよびテキスト エディター (SQL Server Management Studio) | Microsoft Docs
+title: クエリ エディターとテキスト エディター (SSMS)
+description: SQL Server Management Studio (SSMS) エディターを使用してファイルを対話的にクエリ、編集、およびテストする方法について説明します。
+ms.custom: seo-lt-2019
 ms.prod: sql
 ms.technology: scripting
 ms.topic: conceptual
@@ -22,17 +24,16 @@ ms.assetid: 062051e4-4b77-4969-98ae-d2547c24ce3e
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.custom: ''
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8d8958849239c730aa7f687cd12a559de158d5e1
-ms.sourcegitcommit: da8bb7abd256b2bebee7852dc0164171eeff11be
+ms.openlocfilehash: 07ab012f916a86ca8642c81e2bdd87dfc815db2e
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70988160"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75558056"
 ---
-# <a name="query-and-text-editors-sql-server-management-studio"></a>クエリおよびテキスト エディター (SQL Server Management Studio)
+# <a name="query-and-text-editors-sql-server-management-studio"></a>クエリ エディターとテキスト エディター (SQL Server Management Studio)
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
@@ -82,7 +83,7 @@ ms.locfileid: "70988160"
  **テンプレート**  
  テンプレートは、データベース内にオブジェクトを作成するのに必要なステートメントの基本構造が含まれたファイルです。 スクリプトの作成を迅速化するのに使用できます。  
   
- **メッセージ**  
+ **Messages (メッセージ)**  
  スクリプトの実行時にサーバーから返されるエラー、警告、および情報メッセージが表示されます。 メッセージの一覧は、スクリプトが再び実行されるまで変更されません。  
   
  **ステータス バー**  
@@ -135,6 +136,6 @@ ms.locfileid: "70988160"
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーを使用してコードをステップ実行したり、デバッグ情報 (変数やパラメーターの値など) を表示したりする方法について説明します。|[Transact-SQL デバッガー](../../relational-databases/scripting/transact-sql-debugger.md)|  
 |[!INCLUDE[ssDE](../../includes/ssde-md.md)]の各インスタンスに対して独自の色を設定したり、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のクエリ エディターのウィンドウのステータス バーの背景としてそれらの色を設定する方法について説明します。|[ステータス バー &#40;データベース エンジン クエリ エディター&#41;](../../relational-databases/scripting/status-bar-database-engine-query-editor.md)|  
   
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
  [SQL Server Management Studio のキーボード ショートカット](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)

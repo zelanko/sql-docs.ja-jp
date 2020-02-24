@@ -1,6 +1,6 @@
 ---
-title: '[MSSQLSERVER のプロトコルのプロパティ] ダイアログ ボックス ([フラグ] タブ) | Microsoft Docs'
-ms.custom: ''
+title: '[MSSQLSERVER のプロトコルのプロパティ] ダイアログ ボックス ([フラグ] タブ)'
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,21 +13,21 @@ ms.assetid: 4d38e6e9-f95f-4e79-ae45-89f631037528
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c14273ab80c955536d8e4f754c7af48355547b96
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: cb903479b3fb7bd5f5c8ce709a74b797aec68371
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058469"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307741"
 ---
 # <a name="protocols-for-mssqlserver-properties-flags-tab"></a>[MSSQLSERVER のプロトコルのプロパティ] ダイアログ ボックス ([フラグ] タブ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-  サーバーに証明書がインストールされている場合、 **[MSSQLSERVER のプロトコルのプロパティ]** ダイアログ ボックスの **[フラグ]** タブを使用して、プロトコルの暗号化の表示や指定を行います。インスタンス オプションを非表示に設定することもできます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の設定を有効または無効にするには、 **[ForceEncryption]** を再起動する必要があります。  
+  サーバーに証明書がインストールされている場合、 **[MSSQLSERVER のプロトコルのプロパティ]** ダイアログ ボックスの **[フラグ]** タブを使用して、プロトコルの暗号化の表示や指定を行います。インスタンス オプションを非表示に設定することもできます。 **[ForceEncryption]** の設定を有効または無効にするには、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を再起動する必要があります。  
   
  接続を暗号化するには、証明書を付けて [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] を提供する必要があります。 証明書がインストールされていない場合、インスタンスが起動されると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] により自己署名入りの証明書が生成されます。 この自己署名入りの証明書は、信頼されている証明機関から発行された証明書の代わりに使用することはできますが、この証明書では認証機能や否認不可機能は提供されません。  
   
 > [!CAUTION]  
->  自己署名入りの証明書を使用して暗号化された SSL (Secure Sockets Layer) 接続では、強力なセキュリティは提供されません。 このような接続では、man-in-the-middle アタックによる被害を受けやすくなります。 実稼働環境やインターネットに接続しているサーバーでは、自己署名入りの証明書を使用した SSL 接続は使用しないことをお勧めします。  
+>  自己署名入りの証明書を使用して暗号化された SSL (Secure Sockets Layer) 接続では、強力なセキュリティは提供されません。 man-in-the-middle (中間者) 攻撃を受ける可能性が高くなります。 実稼働環境やインターネットに接続しているサーバーでは、自己署名入りの証明書を使用した SSL 接続は使用しないことをお勧めします。  
   
  暗号化の詳細については、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オンライン ブックの「 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への接続の暗号化」をご覧ください。  
   
@@ -43,6 +43,6 @@ ms.locfileid: "68058469"
  **[HideInstance]**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser サービスは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] [参照] **ボタンを使用してこの** インスタンスを表示しようとするクライアントに対してこのインスタンスを公開しません。 サーバー上の名前付きのインスタンスの場合、接続するには、クライアント アプリケーションはプロトコル エンドポイント情報を指定する必要があります。 たとえば、 **tcp:server,5000**など、ポート番号または名前付きパイプ名を指定します。 詳しくは、「 [Logging In to SQL Server](../../database-engine/configure-windows/logging-in-to-sql-server.md)」をご覧ください。  
   
- 詳細については、オンライン ブックの「データベース エンジンへの暗号化接続を有効にする方法 (構成マネージャー)」を参照してください。  
+ 詳細については、オンライン ブックの「データベース エンジンへの暗号化接続を有効にする方法 (SQL Server 構成マネージャー)」を参照してください。  
   
   

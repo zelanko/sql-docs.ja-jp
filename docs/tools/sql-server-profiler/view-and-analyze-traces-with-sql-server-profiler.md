@@ -1,39 +1,33 @@
 ---
-title: SQL Server Profiler を使用したトレースの表示と分析 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: トレースの表示と分析
+titleSuffix: SQL Server Profiler
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords:
-- Profiler [SQL Server Profiler], viewing traces
-- SQL Server Profiler, viewing traces
-- traces [SQL Server], viewing
-- SQL Server Profiler, troubleshooting
-- troubleshooting [SQL Server], traces
-- events [SQL Server], finding inside trace
-- Profiler [SQL Server Profiler], troubleshooting
-- traces [SQL Server], events
 ms.assetid: 17e821ca-a12e-4192-acc1-96765d9ae266
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 02c30e9b80611753db7194b4114b967f4a286c07
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
+ms.openlocfilehash: bd9c65d104e6b397ea3483cd3873f4014d7798b3
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059641"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75307781"
 ---
 # <a name="view-and-analyze-traces-with-sql-server-profiler"></a>SQL Server Profiler を使用したトレースの表示と分析
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  トレースにキャプチャされたイベント データを表示するには、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用します。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] では、定義されたトレース プロパティに基づいてデータが表示されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータを分析するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] や [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーなどの別のプログラムにデータをコピーする方法があります。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーは、 **Text** データ列がトレースに含まれている場合、SQL バッチおよびリモート プロシージャ コール (RPC) のイベントを含んだトレース ファイルを使用できます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーで使用する適切なイベントと列がキャプチャされるようにするには、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]に付属の定義済みチューニング テンプレートを使用します。  
+
+トレースにキャプチャされたイベント データを表示するには、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用します。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] では、定義されたトレース プロパティに基づいてデータが表示されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータを分析するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] や [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーなどの別のプログラムにデータをコピーする方法があります。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーは、 **Text** データ列がトレースに含まれている場合、SQL バッチおよびリモート プロシージャ コール (RPC) のイベントを含んだトレース ファイルを使用できます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーで使用する適切なイベントと列がキャプチャされるようにするには、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]に付属の定義済みチューニング テンプレートを使用します。  
   
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を使用してトレースを開くとき、そのトレース ファイルが [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] または SQL トレース システムのストアド プロシージャによって作成されている場合は、トレース ファイルに .trc というファイル拡張子が付いている必要はありません。  
   
 > [!NOTE]  
->  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] は、SQL トレース ファイル (.log) と汎用 SQL スクリプト ファイルも読み取ることができます。 ファイル拡張子 .log がない SQL トレース ファイル、たとえば trace.txt を開く場合は、ファイル形式として **SQLTrace_Log** を指定します。  
+>  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] は、SQL トレース .log ファイルと汎用 SQL スクリプト ファイルも読み取ることができます。 ファイル拡張子 .log がない SQL トレース ファイル、たとえば trace.txt を開く場合は、ファイル形式として **SQLTrace_Log** を指定します。  
   
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] の日付および時刻の表示形式は、トレース分析を行いやすいように設定できます。  
   
@@ -64,7 +58,7 @@ AND     CPU < (Duration * 1000)
   
     -   トレースを定義する場合、キャプチャするその他のデータ列に加え、 **Event Class**、 **ClientProcessID**、 **Start Time** の各データ列もキャプチャします。 詳細については、「[トレースの作成 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)」を参照してください。  
   
-    -   **Event Class** データ列でキャプチャされたデータをグループ化し、トレースをファイルまたはテーブルにキャプチャします。 キャプチャされたデータをグループ化するには、[トレースのプロパティ] ダイアログ ボックスの **[イベントの選択]** タブで **[列の構成]** をクリックします。 詳細については、「[トレースに表示される列の構成 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/organize-columns-displayed-in-a-trace-sql-server-profiler.md)」を参照してください。  
+    -   **Event Class**データ列でキャプチャされたデータをグループ化し、トレースをファイルまたはテーブルにキャプチャします。 キャプチャされたデータをグループ化するには、[トレースのプロパティ] ダイアログ ボックスの **[イベントの選択]** タブで **[列の構成]** をクリックします。 詳細については、「[トレースに表示される列の構成 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/organize-columns-displayed-in-a-trace-sql-server-profiler.md)」を参照してください。  
   
     -   トレースを開始して、適切な時間が経過するか、適切な数のイベントがキャプチャされたら、トレースを停止します。  
   

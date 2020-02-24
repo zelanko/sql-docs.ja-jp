@@ -1,28 +1,29 @@
 ---
-title: 方法:データベースに接続し、既存のオブジェクトを参照する | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
+title: データベースに接続し、既存のオブジェクトを参照する
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.connectionpicker.f1
 ms.assetid: 9b331800-3806-4459-ac58-88cdc98124d3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 49049fbbff2397f6492cac385b10c23a66d48a74
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
+ms.openlocfilehash: 65559af8337bc7421f96463a954a212f56a3c269
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67897330"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75755821"
 ---
 # <a name="how-to-connect-to-a-database-and-browse-existing-objects"></a>方法:データベースに接続し、既存のオブジェクトを参照する
+
 データベース管理者と開発者の間で特に共通するタスクとして、ライブ データベースへの接続、データベースのスキーマのデザインまたは参照、データベース オブジェクトの照会などがあります。 Visual Studio の SQL Server オブジェクト エクスプローラーには、専用の **[SQL Server]** ノードが用意されました。このノードの下で、接続されているすべての SQL Server インスタンスとそのデータベースが SSMS のような階層構造でグループ化されます。 接続されている SQL Server インスタンスは、実行中の SQL Server 2008 などのオンプレミス インスタンスであることも、オフプレミスの SQL Azure インスタンスであることも想定されています。  
   
-以下の手順では、サンプル データベース AdventureWorks がインストールされていることを前提としています。 異なった SQL Server バージョンのサンプル データベースを見つけてインストールするには、[CodePlex](https://msftdbprodsamples.codeplex.com/) を使用してください。 必要に応じ、手順に従って、サーバーにある既存のデータベースを指定することもできます。  
+以下の手順では、サンプル データベース AdventureWorks がインストールされていることを前提としています。 別バージョンの SQL Server のサンプル データベースを見つけてインストールするには、[GitHub](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) を使用してください。 必要に応じ、手順に従って、サーバーにある既存のデータベースを指定することもできます。  
   
 ### <a name="to-connect-to-a-database-instance"></a>データベース インスタンスに接続するには  
   
