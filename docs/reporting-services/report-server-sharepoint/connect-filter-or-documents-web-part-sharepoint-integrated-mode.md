@@ -7,16 +7,16 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d833e0b42a6bfdaf9754525740f9bb58df794fdb
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 1f513b93852863d7c3c03ac60289d4ba2bdb4b7b
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580027"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77256715"
 ---
 # <a name="connect-filter-or-documents-web-part-with-a-reporting-services-report-viewer-web-part"></a>フィルター Web パーツまたはドキュメント Web パーツを Reporting Services レポート ビューアー Web パーツと接続する
 
-[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2016-2019](../../includes/ssrs-appliesto-sharepoint-2016-2019.md)] [!INCLUDE[ssrs-appliesto-not-sharepoint-online](../../includes/ssrs-appliesto-not-sharepoint-online.md)]
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-and-later](../../includes/ssrs-appliesto-sharepoint-2013-and-later.md)] [!INCLUDE[ssrs-appliesto-not-sharepoint-online](../../includes/ssrs-appliesto-not-sharepoint-online.md)]
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
@@ -27,7 +27,7 @@ SharePoint 製品を使用している場合、フィルター Web パーツま�
 
  フィルター Web パーツは、レポートで値を 1 つ以上のパラメーターに値を送信するために使用します。 フィルター Web パーツを使用するには、フィルター Web パーツによって送信される値、データ型、形式との互換性があるパラメーターをレポートに定義しておく必要があります。  
   
- ドキュメント Web パーツは、ホーム サイトのドキュメント ライブラリに関連付けられます。 ドキュメント ライブラリからアイテムを表示、追加、または削除するには、 **[すべてのサイト コンテンツの表示]** をクリックします。 ライブラリで、 **[ドキュメント]** をクリックします。 **[新規]** 、 **[アップロード]** 、および **[アクション]** メニューを使用してドキュメント ライブラリのアイテムを管理できます。  
+ ドキュメント Web パーツは、ホーム サイトのドキュメント ライブラリに関連付けられます。 ドキュメント ライブラリからアイテムを表示、追加、または削除するには、 **[すべてのサイト コンテンツの表示]** をクリックします。 ライブラリで、 **[ドキュメント]** をクリックします。 **[新規]**、 **[アップロード]**、および **[アクション]** メニューを使用してドキュメント ライブラリのアイテムを管理できます。  
   
 ## <a name="connect-a-filter-web-part"></a>フィルター Web パーツを接続する
   
@@ -37,17 +37,17 @@ SharePoint 製品を使用している場合、フィルター Web パーツま�
   
 3.  **[Web パーツの追加]** をクリックします。  
   
-4.  **[すべての Web パーツ]** の **[その他]** カテゴリで、 **[SQL Server Reporting Services レポート ビューアー]** を選びます。  
+4.  **[すべての Web パーツ]** の **[その他]** カテゴリで、**[SQL Server Reporting Services レポート ビューアー]** を選びます。  
   
 5.  **[追加]** をクリックします。 Web パーツがゾーンの一番上に追加されます。  
   
-6.  同一の Web パーツ ページまたはダッシュボードの別の領域で、 **[Web パーツの追加]** をクリックします。  
+6.  同一の Web パーツ ページまたはダッシュボードの別の領域で、**[Web パーツの追加]** をクリックします。  
   
 7.  **[すべての Web パーツ]** の **[フィルター]** セクションで、Web パーツを選びます。  
   
 8.  **[追加]** をクリックします。 Web パーツがゾーンの一番上に追加されます。  
   
-9. Web パーツを含むゾーンで、Web パーツの **[編集]** メニューの **[接続]** をクリックし、 **[フィルター値の送信先]** をポイントして [**レポート ビューアー** - *レポート名*] を選びます。  
+9. Web パーツを含むゾーンで、Web パーツの **[編集]** メニューの **[接続]** をクリックし、**[フィルター値の送信先]** をポイントして [**レポート ビューアー** - *レポート名*] を選びます。  
   
 10. 変更をチェックインし、ページを保存します。  
   
@@ -65,17 +65,17 @@ SharePoint 製品を使用している場合、フィルター Web パーツま�
   
 6.  ツール ペインの下部で **[適用]** をクリックし、 **[OK]** をクリックしてペインを閉じます。  
   
-7.  同一の Web パーツ ページまたはダッシュボードの別の領域で、 **[Web パーツの追加]** をクリックします。  
+7.  同一の Web パーツ ページまたはダッシュボードの別の領域で、**[Web パーツの追加]** をクリックします。  
   
-8.  **[すべての Web パーツ]** の **[その他]** カテゴリで、 **[SQL Server Reporting Services レポート ビューアー]** を選びます。  
+8.  **[すべての Web パーツ]** の **[その他]** カテゴリで、**[SQL Server Reporting Services レポート ビューアー]** を選びます。  
   
 9. **[追加]** をクリックします。 Web パーツがゾーンの一番上に追加されます。  
   
-10. Web パーツを含むゾーンで、Web パーツの **[編集]** メニューをクリックし、 **[接続]** をポイントし、 **[レポート定義の取得元]** をポイントして **[ドキュメント]** を選びます。  
+10. Web パーツを含むゾーンで、Web パーツの **[編集]** メニューをクリックし、**[接続]** をポイントし、**[レポート定義の取得元]** をポイントして **[ドキュメント]** を選びます。  
   
 11. 変更をチェックインし、ページを保存します。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
  [レポート ビューアー Web パーツを Web ページに追加する](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)   
  [SharePoint サイトのレポート ビューアー Web パーツ](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   

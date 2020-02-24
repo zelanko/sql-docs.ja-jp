@@ -10,18 +10,18 @@ ms.assetid: 0b57f375-9242-4bb2-9d4b-c560d5a93524
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 87537979ab3459727f07aec460118a74e15561f9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 92f289ec22ca35834420dc7ee84d667c55e29a19
+ms.sourcegitcommit: cebf41506a28abfa159a5dd871b220630c4c4504
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "70874825"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77478497"
 ---
 # <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017 の新機能
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 SQL Server 2017 は、SQL Server をプラットフォームとする方向に向けた大きな一歩を表します。そのプラットフォームは、SQL Server、Linux、Linux ベースの Docker コンテナー、および Windows の機能を利用することによって、開発言語、データ型、オンプレミスまたはクラウド、オペレーティング システムの選択肢を提供します。 このトピックは、特定の機能領域の新機能と、その詳細へのリンクをまとめたものです。 Linux 上の SQL Server の詳細については、[Linux 上の SQL Server に関するドキュメント](https://docs.microsoft.com/sql/linux/)をご覧ください
 
-[![Evaluation Center からダウンロードする](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=829477) **お試しください:** [SQL Server 2017 リリース (2017 年 10 月) をダウンロードする](https://go.microsoft.com/fwlink/?LinkID=829477)。
+[![Evaluation Center からダウンロードする](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=829477) **お試しください:**[SQL Server 2017 リリース (2017 年 10 月) をダウンロードする](https://go.microsoft.com/fwlink/?LinkID=829477)。
 
 > [!NOTE]
 > 以下の変更に加えて、GA リリースの後も累積的な更新プログラムが定期的にリリースされます。 これらの累積的な更新プログラムでは、多くの機能強化と修正が提供されます。 最新の CU リリースについては、[SQL Server 2017 の累積的な更新プログラム](https://aka.ms/sql2017cu)に関するページをご覧ください。
@@ -55,8 +55,6 @@ SQL Server 2017 には多くの新しいデータベース エンジン機能、
 - **DATABASE SCOPED CREDENTIAL** は新しいセキュリティ保護可能クラスで、CONTROL、ALTER、REFERENCES、TAKE OWNERSHIP、VIEW DEFINITION の各アクセス許可をサポートします。 ADMINISTER DATABASE BULK OPERATIONS が sys.fn_builtin_permissions から参照できるようになりました。 (CTP 1.0)
 - データベースの **COMPATIBILITY_LEVEL 140** が追加されました。 (CTP 1.0)  
 
-詳細については、「[What's new in SQL Server 2017 Database Engine](~/database-engine/configure-windows/what-s-new-in-sql-server-2017-database-engine.md)」 (SQL Server 2017 データベース エンジンの新機能) を参照してください。
-
 ## <a name="sql-server-2017-integration-services-ssis"></a>SQL Server 2017 Integration Services (SSIS)
 - SSIS の新しい **Scale Out** 機能として、次のような新しい機能と変更された機能があります。 詳細については、「[SQL Server 2017 の Integration Services の新機能](~/integration-services/what-s-new-in-integration-services-in-sql-server-2017.md)」を参照してください。 (RC1)
     -   スケール アウト マスターで高可用性を実現できるようになりました。
@@ -65,7 +63,7 @@ SQL Server 2017 には多くの新しいデータベース エンジン機能、
     -   SSIS カタログに、SSIS パッケージを実行する既定のモードを指定するための新しいグローバル プロパティが追加されました。
 - 新しい **SSIS の Scale Out** 機能で、実行をトリガーするときに **Use32BitRuntime** パラメーターを使用できるようになりました。 (CTP 2.1)
 - SQL Server 2017 Integration Services (SSIS) で **Linux 上の SQL Server** がサポートされ、新しいパッケージでは、コマンド ラインから Linux で SSIS パッケージを実行できます。 詳細については、[SSIS の Linux サポートをお知らせするブログの投稿](https://blogs.msdn.microsoft.com/ssis/2017/05/17/ssis-helsinki-is-available-in-sql-server-vnext-ctp2-1/)を参照してください。 (CTP 2.1)
-- 新しい **SSIS の Scale Out**  機能を使用すると、複数のコンピューターでの SSIS の実行が大幅に簡単になります。 「[Integration Services Scale Out](~/integration-services/scale-out/integration-services-ssis-scale-out.md)」を参照してください。(CTP 1.0)
+- 新しい **SSIS の Scale Out** 機能を使用すると、複数のコンピューターでの SSIS の実行が大幅に簡単になります。 「[Integration Services Scale Out](~/integration-services/scale-out/integration-services-ssis-scale-out.md)」を参照してください。(CTP 1.0)
 - OData ソースと OData 接続マネージャーで、Microsoft Dynamics AX Online と Microsoft Dynamics CRM Online の OData フィードに接続できるようになりました。 (CTP 1.0)
 
 詳細については、「[SQL Server 2017 の Integration Services の新機能](~/integration-services/what-s-new-in-integration-services-in-sql-server-2017.md)」を参照してください。

@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c46cf3fbc2138350c50e3f520871b0b6a8efde7a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 34599160e206d89eaee04074ddbaee2bac7c5f89
+ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74317036"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "77173567"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-in-kubernetes"></a>Kubernetes の SQL Server ビッグ データ クラスターでのデータ永続化
 
@@ -30,7 +30,7 @@ SQL Server ビッグ データ クラスターでは、[ストレージ クラ�
 
 - ビッグ データ クラスターの展開を成功させるには、必要な数の永続ボリュームが使用可能であることを確認する必要があります。 Azure Kubernetes Service (AKS) クラスターに展開していて、組み込みのストレージ クラス (`default` または `managed-premium`) を使用している場合、このクラスでは永続ボリュームの動的プロビジョニングがサポートされます。 そのため、永続ボリュームを事前に作成する必要はありませんが、AKS クラスター内で使用可能なワーカー ノードが、展開に必要な永続ボリュームと同じ数のディスクを接続できることを確認する必要があります。 ワーカー ノードに対して指定されている [VM サイズ](https://docs.microsoft.com/azure/virtual-machines/linux/sizes)によっては、各ノードが特定の数のディスクを接続できます。 既定のサイズのクラスター (高可用性なし) の場合は、少なくとも 24 個のディスクが必要です。 高可用性を有効にする場合、またはプールをスケール アップする場合は、スケール アップするリソースに関係なく、追加のレプリカごとに少なくとも 2 つの永続化ボリュームを確保する必要があります。
 
-- 構成内で指定しているストレージ クラスのストレージ プロビジョナーによって動的プロビジョニングがサポートされていない場合は、永続化ボリュームを事前に作成する必要があります。 たとえば、`local-storage` プロビジョナーでは動的プロビジョニングが有効になりません。 `kubeadm` を使用して展開された Kubernetes クラスター内での作業の進め方に関するガイダンスについては、この[サンプル スクリプト](https://github.com/microsoft/sql-server-samples/tree/cu1-bdc/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu)を参照してください。
+- 構成内で指定しているストレージ クラスのストレージ プロビジョナーによって動的プロビジョニングがサポートされていない場合は、永続化ボリュームを事前に作成する必要があります。 たとえば、`local-storage` プロビジョナーでは動的プロビジョニングが有効になりません。 `kubeadm` を使用して展開された Kubernetes クラスター内での作業の進め方に関するガイダンスについては、この[サンプル スクリプト](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu)を参照してください。
 
 - ビッグ データ クラスターを展開するときに、クラスター内のすべてのコンポーネントで使用する、同一のストレージ クラスを構成できます。 ただし、運用環境での展開のベスト プラクティスとして、さまざまなコンポーネントでは、サイズやスループットに関してさまざまなワークロードに対応するために、異なるストレージ構成が必要になります。 コントローラーで指定されている既定のストレージ構成は、SQL Server マスター インスタンス、データセット、および記憶域プールごとに上書きできます。 この記事では、これを行う方法の例を示します。
 

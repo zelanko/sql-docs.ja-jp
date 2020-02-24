@@ -7,16 +7,16 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 51f45290847444a1400f1d708755c6737a3b3f84
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 7a101278bed81bf1c901cf22d25d82f46e8c94e7
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65574788"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77256732"
 ---
 # <a name="add-sql-server-reporting-services-report-viewer-web-part-to-a-sharepoint-page"></a>SQL Server Reporting Services レポート ビューアー Web パーツを SharePoint ページに追加する
 
-[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2016-2019](../../includes/ssrs-appliesto-sharepoint-2016-2019.md)] [!INCLUDE[ssrs-appliesto-not-sharepoint-online](../../includes/ssrs-appliesto-not-sharepoint-online.md)]
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-and-later](../../includes/ssrs-appliesto-sharepoint-2013-and-later.md)] [!INCLUDE[ssrs-appliesto-not-sharepoint-online](../../includes/ssrs-appliesto-not-sharepoint-online.md)]
 
 レポート ビューアー Web パーツを SharePoint ページに追加する方法で、SQL Server Reporting Services または Power BI Report Server からレポートを表示します。
 
@@ -32,17 +32,17 @@ ms.locfileid: "65574788"
 
 ## <a name="add-web-part"></a>Web パーツを追加する
 
-1. SharePoint サイトで、左上にある**歯車**アイコンを選び、 **[ページの追加]** を選びます。
+1. SharePoint サイトで、左上にある**歯車**アイコンを選び、**[ページの追加]** を選びます。
 
     ![歯車アイコンから SharePoint サイトにページを追加します。](media/sharepoint-add-a-page.png)
 
-2. ページに名前を付け、 **[作成]** を選びます。
+2. ページに名前を付け、**[作成]** を選びます。
 
 3. ページ デザイナー内で、リボンにある **[挿入]** タブを選びます。 **[パーツ]** セクション内で **[Web パーツ]** を選びます。
 
     ![Office リボンから Web パーツを挿入します。](media/sharepoint-insert-web-part.png)
 
-4. **[カテゴリ] で** [SQL Server Reporting Services (ネイティブ モード)] を選びます。 **[パーツ]** で **[レポート ビューアー]** を選びます。 その後、 **[追加]** を選択します。
+4. **[カテゴリ] で **[SQL Server Reporting Services (ネイティブ モード)] を選びます。 **[パーツ]** で **[レポート ビューアー]** を選びます。 その後、**[追加]** を選択します。
 
     ![レポート ビューアー Web パーツを追加します。](media/sharepoint-report-viewer-web-part.png)
 
@@ -52,7 +52,7 @@ ms.locfileid: "65574788"
 
 特定のレポートを指すように Web パーツを構成するには、次の手順を実行します。
 
-1. SharePoint ページを編集するとき、Web パーツの右上にある下方向矢印を選び、 **[Web パーツの編集]** を選びます。
+1. SharePoint ページを編集するとき、Web パーツの右上にある下方向矢印を選び、**[Web パーツの編集]** を選びます。
 
     ![Web パーツ ドロップダウンから Web ページを編集します。](media/sharepoint-edit-web-part.png)
 
@@ -60,7 +60,7 @@ ms.locfileid: "65574788"
 
 3. Web パーツ内に表示するレポートのパスと名前を入力します。 これは */AdventureWorks Sample Reports/Company Sales* のようになります。 このレイでは、「*AdventureWorks Sample Reports*」という名前のフォルダーに「*Company Sales*」というレポートが入っています。
 
-4. レポートにパラメーターが必要な場合、レポート サーバー URL とレポートの名前を入力した後、 **[パラメーター]** セクション内で **[パラメーターの読み込み]** を選びます。
+4. レポートにパラメーターが必要な場合、レポート サーバー URL とレポートの名前を入力した後、**[パラメーター]** セクション内で **[パラメーターの読み込み]** を選びます。
 
 5. **[OK]** を選び、Web パーツ構成の変更を保存します。
 

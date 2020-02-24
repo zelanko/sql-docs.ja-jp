@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5ab1c661-9bfa-434a-b315-faac34ed12b1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 69cc078dc5ce605f1d7bf55d872c2a4629eb3301
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 5bcfeabda2eda62a6a4118ac5542e83a4b0afd66
+ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "66403253"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76971312"
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>ネイティブ モード レポート サーバーのサブスクリプションの作成と管理
   標準のサブスクリプションは、電子メールまたは共有フォルダーを使用してレポートを配信する個々のユーザーによって作成されるサブスクリプションです。 このトピックでは、個別のユーザーが作成および管理する標準のサブスクリプションに関する情報を記載しています。 データ ドリブン サブスクリプションについては、必要条件および手順が異なるため、別のトピックで説明します。 詳細については、「 [データ ドリブン サブスクリプションを作成、変更、および削除する](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)」を参照してください。  
@@ -46,7 +46,7 @@ ms.locfileid: "66403253"
   
  この記事では、データ ドリブン サブスクリプションを作成する方法については説明しません。 データ ドリブン サブスクリプションを作成する方法については、「[データ ドリブン サブスクリプションの作成 &#40;SSRS チュートリアル&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)」をご覧ください。  
   
-###  <a name="bkmk_create_fileshare_subscription"></a> ファイル共有サブスクリプションを作成するには  
+## <a name="bkmk_create_fileshare_subscription"></a> ファイル共有サブスクリプションを作成するには  
   
 1. [レポート サーバーの Web ポータル (SSRS ネイティブ モード)](../../reporting-services/web-portal-ssrs-native-mode.md) に移動します。  
   
@@ -86,7 +86,7 @@ ms.locfileid: "66403253"
   
 レポートが静的ファイルとして配信されます。 レポートに対話機能 (たとえば、追加の行と列へのリンク) を含める場合でも、これらの機能は使用できません。  
   
-###  <a name="bkmk_create_email_subscription"></a> 電子メール サブスクリプションを作成するには  
+##  <a name="bkmk_create_email_subscription"></a> 電子メール サブスクリプションを作成するには  
   
 1. [レポート サーバーの Web ポータル (SSRS ネイティブ モード)](../../reporting-services/web-portal-ssrs-native-mode.md) に移動します。  
   
@@ -163,11 +163,10 @@ ms.locfileid: "66403253"
   
  基になるレポートを削除すると、サブスクリプションは自動的に削除されます。 サブスクリプションを処理中に削除する場合、配信拡張機能がサブスクリプション データを受け取る前に削除操作を行うと、サブスクリプションは停止します。 それ以外の場合は、サブスクリプションの処理を続行します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SharePoint モード レポート サーバーのサブスクリプションの作成と管理](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)  
  [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)  
  [データ ドリブン サブスクリプション](../../reporting-services/subscriptions/data-driven-subscriptions.md)  
  [サブスクリプションと配信 &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
  [レポート サーバーの Web ポータル (SSRS ネイティブ モード)](../../reporting-services/web-portal-ssrs-native-mode.md)  
  [個人用サブスクリプションを使用する (ネイティブ モードのレポート サーバー)](../../reporting-services/subscriptions/use-my-subscriptions-native-mode-report-server.md)  
-  

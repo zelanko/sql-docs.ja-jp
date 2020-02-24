@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 103f74b4a1be1ee2111f8ed3e983f8a468f8db2c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: dba29bb00f0b8d54edd8c8c98d4134cf794fe2fd
+ms.sourcegitcommit: cebf41506a28abfa159a5dd871b220630c4c4504
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "68893032"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77478503"
 ---
 # <a name="whats-new-in-sql-server-2016"></a>SQL Server 2016 の新機能
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]  
@@ -52,7 +52,6 @@ ms.locfileid: "68893032"
     - **動的なデータ マスク:** テーブル定義で指定されている場合、マスクされたデータはほとんどのユーザーには非表示となり、UNMASK アクセス許可を持つユーザーのみがすべてのデータを参照できます。
     - **行レベル セキュリティ:** データ アクセスをデータベース エンジン レベルで制限できるため、ユーザーは自分に関係するもののみを参照できます。 
 
-[データベース エンジン](../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md)に関する記事を参照してください。
 ## <a name="sql-server-2016-analysis-services-ssas"></a>SQL Server 2016 Analysis Services (SSAS)
 SQL Server 2016 Analysis Services では、**1200 互換性レベル**に基づいて、表形式モデルのデータベースに対するパフォーマンス、オーサリング、データベース管理、フィルター、処理などが向上しています。
 - **[SQL Server R サービス](../advanced-analytics/r-services/what-s-new-in-sql-server-r-services.md)** は、統計的分析に使用する R プログラミング言語を、SQL Server に統合します。 
