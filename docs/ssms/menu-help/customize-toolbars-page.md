@@ -1,5 +1,5 @@
 ---
-title: '[ユーザー設定] \([ツール バー] ページ)'
+title: '[ユーザー設定] ([ツール バー] ページ)'
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,7 +19,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 01/31/2020
 ms.locfileid: "75242191"
 ---
-# <a name="customize-toolbars-page"></a>[ユーザー設定] \([ツール バー] ページ)
+# <a name="customize-toolbars-page"></a>[ユーザー設定] ([ツール バー] ページ)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 **[ツール バー]** タブを使用すると、ツール バーの作成、名前の変更、削除、リセットができます。 このタブを開くには、 **[ツール]** メニューの **[ユーザー設定]** をクリックした後、 **[ツール バー]** をクリックします。  
   

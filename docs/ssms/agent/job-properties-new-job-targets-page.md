@@ -1,5 +1,5 @@
 ---
-title: ジョブのプロパティ - [新しいジョブ] \([対象サーバー] ページ)
+title: ジョブのプロパティ - [新しいジョブ] ([対象サーバー] ページ)
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
@@ -21,7 +21,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 01/31/2020
 ms.locfileid: "75242249"
 ---
-# <a name="job-properties---new-job-targets-page"></a>ジョブのプロパティ - [新しいジョブ] \([対象サーバー] ページ)
+# <a name="job-properties---new-job-targets-page"></a>ジョブのプロパティ - [新しいジョブ] ([対象サーバー] ページ)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  

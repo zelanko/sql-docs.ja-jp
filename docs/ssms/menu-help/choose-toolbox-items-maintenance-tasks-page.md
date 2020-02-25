@@ -1,5 +1,5 @@
 ---
-title: '[ツールボックス アイテムの選択] \([メンテナンス タスク] ページ)'
+title: '[ツールボックス アイテムの選択] ([メンテナンス タスク] ページ)'
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 ms.prod: sql
@@ -22,7 +22,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 01/31/2020
 ms.locfileid: "75257734"
 ---
-# <a name="choose-toolbox-items-maintenance-tasks-page"></a>[ツールボックス アイテムの選択] \([メンテナンス タスク] ページ)
+# <a name="choose-toolbox-items-maintenance-tasks-page"></a>[ツールボックス アイテムの選択] ([メンテナンス タスク] ページ)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 **[ツールボックス アイテムの選択]** ダイアログ ボックスのこのタブには、コンピューターに登録されているメンテナンス タスク コンポーネントがすべて一覧表示され、ツールボックスに表示されているメンテナンス タスクを変更できます。 **[ツールボックス アイテムの選択]** ダイアログ ボックスは、 **[ツール]** メニューから開けます。 コンポーネントの一覧を並べ替えるには、列見出しを選択します。  
   
