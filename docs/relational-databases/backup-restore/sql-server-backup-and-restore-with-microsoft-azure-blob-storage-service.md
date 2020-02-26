@@ -22,7 +22,7 @@ ms.locfileid: "75251135"
 
   ![Azure BLOB へのバックアップのグラフィック](../../relational-databases/backup-restore/media/backup-to-azure-blob-graphic.png "Azre BLOB へのバックアップのグラフィック")  
   
- このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Microsoft Azure Blob ストレージ サービス [への](https://www.windowsazure.com/develop/net/how-to-guides/blob-storage/)のバックアップと Microsoft Azure Blob ストレージ サービスからの復元について説明します。 また、Microsoft Azure BLOB Service を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップを格納する利点の概要についても説明します。  
+ このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Microsoft Azure Blob ストレージ サービス](https://www.windowsazure.com/develop/net/how-to-guides/blob-storage/)へのバックアップと Microsoft Azure Blob ストレージ サービスからの復元について説明します。 また、Microsoft Azure BLOB Service を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップを格納する利点の概要についても説明します。  
   
  SQL Server では、次の方法で Microsoft Azure Blob ストレージ サービスにバックアップを格納できます。  
   
