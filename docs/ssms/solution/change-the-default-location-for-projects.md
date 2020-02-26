@@ -26,7 +26,7 @@ ms.locfileid: "75251982"
   
 ### <a name="to-change-the-default-location-for-projects"></a>プロジェクトの既定の場所を変更するには  
   
-1.  ファイルまたはプロジェクトを別の場所から開くと、既定の場所が変更されます。 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] stores the location of the previously opened project and uses it for the next opening or saving of a project.  
+1.  ファイルまたはプロジェクトを別の場所から開くと、既定の場所が変更されます。 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は前回開いたプロジェクトの場所を記憶し、次回プロジェクトを開いたり保存したりする際に使用します。  
   
 ## <a name="see-also"></a>参照  
 [ソリューション エクスプローラー](../../ssms/solution/solution-explorer.md)  
