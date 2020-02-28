@@ -28,7 +28,7 @@ ms.locfileid: "68078782"
   
  次の情報は、すべての環境のレプリケーションに関連します。  
   
--   レプリケーション トポロジ内のコンピューター間の接続を、仮想プライベート ネットワーク (VPN)、SSL (Secure Sockets Layer)、IPSEC (IP Secrity) などの業界標準の方式を使用して暗号化する。 詳細については、「[データベース エンジンへの暗号化接続の有効化 &#40;SQL Server 構成マネージャー&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。 VPN と SSL を使用したインターネット経由のデータのレプリケーションについては、「 [Securing Replication Over the Internet](../../../relational-databases/replication/security/securing-replication-over-the-internet.md)」を参照してください。  
+- レプリケーション トポロジ内のコンピューター間の接続を、仮想プライベート ネットワーク (VPN)、SSL (Secure Sockets Layer)、IPSEC (IP Security) などの業界標準の方式を使用して暗号化する。 詳細については、「[データベース エンジンへの暗号化接続の有効化 &#40;SQL Server 構成マネージャー&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。 VPN と SSL を使用したインターネット経由のデータのレプリケーションについては、「 [インターネット経由のレプリケーションのセキュリティ](../../../relational-databases/replication/security/securing-replication-over-the-internet.md)」を参照してください。   
   
      SSL を使用してレプリケーション トポロジのコンピューター間の接続をセキュリティで保護する場合、各レプリケーション エージェントの **-EncryptionLevel** パラメーターに値 **1** または **2** を指定します (値 **2** が推奨値です)。 値 **1** は、暗号化を使用していますが、SSL サーバー証明書が信頼されている発行者によって署名されていることをエージェントが検証していないことを示します。値 **2** は、証明書が検証されていることを示します。 エージェント パラメーターは、エージェント プロファイルおよびコマンド ラインで指定できます。 詳細については、次を参照してください。  
   
