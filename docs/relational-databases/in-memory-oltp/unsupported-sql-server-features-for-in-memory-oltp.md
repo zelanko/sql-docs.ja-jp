@@ -1,7 +1,7 @@
 ---
 title: サポートされていない機能 - インメモリ OLTP
 ms.custom: ''
-ms.date: 05/29/2019
+ms.date: 02/21/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,19 +11,19 @@ ms.assetid: c39f03a7-e223-4fd7-bd30-142e28f51654
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7427f7ccc70db68d1403cc1a92c7d7dafef82f5c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 8464f56274308694ada9e5721ae8e0ceb5ed85ed
+ms.sourcegitcommit: 867b7c61ecfa5616e553410ba0eac06dbce1fed3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74412508"
+ms.lasthandoff: 02/22/2020
+ms.locfileid: "77558322"
 ---
 # <a name="unsupported-sql-server-features-for-in-memory-oltp"></a>インメモリ OLTP に対してサポートされていない SQL Server の機能
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の機能で、メモリ最適化オブジェクトと共に使用できないものについて説明します。  
+このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の機能で、メモリ最適化オブジェクトと共に使用できないものについて説明します。 さらに、最後のセクションでは、インメモリ OLTP でサポートされておらず、後にサポートされるようになった機能の一覧を示します。
   
-## <a name="includessnoversionincludesssnoversion-mdmd-features-not-supported-for-in-memory-oltp"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インメモリ OLTP に対してサポートされない機能  
+## <a name="ssnoversion-features-not-supported-for-in-memory-oltp"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インメモリ OLTP に対してサポートされない機能  
 
 次に示す [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の機能は、(メモリ最適化データ ファイル グループを含む) メモリ最適化オブジェクトを持つデータベースでサポートされません。  
 
@@ -44,18 +44,18 @@ ms.locfileid: "74412508"
 | ファイバー モード | ファイバー モードは、メモリ最適化テーブルではサポートされていません。<br /><br />ファイバー モードがアクティブな場合は、メモリ最適化ファイル グループが含まれたデータベースを作成することも、既存データベースへのメモリ最適化ファイル グループの追加を行うこともできません。<br /><br />メモリ最適化ファイル グループが含まれたデータベースを使用している場合に、ファイバー モードを有効にすることはできます。 ただし、ファイバー モードを有効にするには、サーバーを再起動する必要があります。 このような場合、メモリ最適化ファイル グループを含むデータベースは回復できません。 メモリ最適化ファイル グループを含むデータベースのファイバー モードでの使用が無効になっていることを示すエラー メッセージが表示されます。<br /><br />ファイバー モードがアクティブであれば、メモリ最適化ファイル グループが含まれたデータベースのアタッチおよび復元は失敗します。 また、データベースが SUSPECT としてマークされます。<br /><br />詳細については、「 [lightweight pooling Server Configuration Option](../../database-engine/configure-windows/lightweight-pooling-server-configuration-option.md)」を参照してください。 |  
 |Service Broker の制限事項|ネイティブ コンパイル ストアド プロシージャからキューにアクセスできません。<br /><br /> メモリ最適化テーブルにアクセスするトランザクションでリモート データベースのキューにアクセスできません。|  
 |サブスクライバーでのレプリケーション|サブスクライバー上でのメモリ最適化テーブルに対するトランザクション レプリケーションはサポートされていますが、いくつかの制限があります。 詳細については、「 [メモリ最適化テーブル サブスクライバーへのレプリケーション](../../relational-databases/replication/replication-to-memory-optimized-table-subscribers.md)」を参照してください。|  
-
+|||
 
 #### <a name="cross-database-queries-and-transcations"></a>データベースにまたがるクエリとトランザクション
 
 一部の例外を除き、複数データベースにまたがるトランザクションはサポートされません。 次の表では、サポートされるケースと、対応する制限について説明します (「 [複数データベースにまたがるクエリ](../../relational-databases/in-memory-oltp/cross-database-queries.md)」も参照してください。)  
 
 
-|データベース|許可|[説明]|  
+|データベース|許可|説明|  
 |---------------|-------------|-----------------|  
 | ユーザー データベース、**model**、および **msdb**。 | いいえ | ほとんどの場合、複数のデータベースにまたがるクエリおよびトランザクションは*サポートされません*。<br /><br />クエリがメモリ最適化テーブルまたはネイティブにコンパイルされたストアド プロシージャを使用している場合、そのクエリは他のデータベースにアクセスできません。 この制限は、クエリだけでなくトランザクションにも適用されます。<br /><br />例外は、システム データベースである **tempdb** と **master** です。 ここで、**master** データベースは読み取り専用アクセスで利用できます。 |
 | **Resource** データベース、**tempdb** | はい | インメモリ OLTP オブジェクトを扱うトランザクションでは、**Resource** および **tempdb** システム データベースを追加の制限なく使用できます。
-
+||||
 
 ## <a name="scenarios-not-supported"></a>サポートされていないシナリオ  
   
@@ -69,9 +69,7 @@ ms.locfileid: "74412508"
 - ROWVERSION (TIMESTAMP) データ型はサポートされていません。 詳細については、「[FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)」を参照してください。
   
 - 自動終了は、MEMORY_OPTIMIZED_DATA ファイル グループのあるデータベースではサポートされていません。  
-  
-- データベース スナップショットは、MEMORY_OPTIMIZED_DATA ファイル グループのあるデータベースではサポートされていません。  
-  
+
 - インメモリ OLTP オブジェクトの CREATE/ALTER/DROP などのトランザクション DDL は、ユーザー トランザクション内ではサポートされていません。  
   
 - イベント通知。  
@@ -82,7 +80,17 @@ ms.locfileid: "74412508"
 - データベースの包含 ([包含データベース](../../relational-databases/databases/contained-databases.md)) は、インメモリ OLTP ではサポートされていません。
     - Contained database authentication がサポートされます。 ただし、すべてのインメモリ OLTP オブジェクトは、動的管理ビュー (DMV) **dm_db_uncontained_entities** で "breaking containment" とマークされています。
 
-  
-## <a name="see-also"></a>参照  
+## <a name="recently-added-supports"></a>最近追加されたサポート
+
+SQL Server の新しいリリースでは、以前はサポートされていなかった機能のサポートが追加される場合があります。 このセクションでは、以前はインメモリ OLTP でサポートされておらず、後にインメモリ OLTP でサポートされるようになった機能の一覧を示します。
+
+次の表で、`(15.x)` などの "_バージョン_" の値は、Transact-SQL ステートメント `SELECT @@Version;` から返される値を指します。
+
+| 機能名 | SQL Server のバージョン | 説明 |
+| :----------- | :-------------------- | :------- |
+| データベース スナップショット | 2019 (15.x) | データベース スナップショットは、MEMORY_OPTIMIZED_DATA ファイル グループのあるデータベースでサポートされるようになりました。 |
+| &nbsp; | &nbsp; | &nbsp; |
+
+## <a name="see-also"></a>参照
 
 - [SQL Server によるインメモリ OLTP のサポート](../../relational-databases/in-memory-oltp/sql-server-support-for-in-memory-oltp.md)

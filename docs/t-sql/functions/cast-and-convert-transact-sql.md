@@ -35,12 +35,12 @@ ms.assetid: a87d0850-c670-4720-9ad5-6f5a22343ea8
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 943d0e840c0c407e66f0d47deec4c1e78fc57afa
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: f8eecd6d0a1d54d56fd93eacf96154f57e4afec6
+ms.sourcegitcommit: 1feba5a0513e892357cfff52043731493e247781
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76761649"
+ms.lasthandoff: 02/18/2020
+ms.locfileid: "77440684"
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST および CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -171,7 +171,7 @@ date または time データ型の *expression* の場合、*style* には次�
 暗黙的な変換では、CAST 関数または CONVERT 関数を指定する必要はありません。 明示的な変換では、CAST 関数または CONVERT 関数を指定する必要があります。 次の図は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システムで提供されるデータ型に対して許可されるすべての明示的および暗黙的なデータ型変換を示しています。 **bigint**、**sql_variant**、**xml** が含まれます。 代入時に **sql_variant** データ型からの暗黙的な変換は行われませんが、**sql_variant** への暗黙的な変換は行われます。
   
 > [!TIP]  
-> この表は、[Microsoft ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=35834)で PDF ファイルとしてダウンロードできます。  
+> このグラフは、[Microsoft ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=35834)で PNG ファイルとしてダウンロードできます。  
   
 ![データ型変換テーブル](../../t-sql/data-types/media/lrdatahd.png "データ型変換テーブル")
   
@@ -760,7 +760,7 @@ SELECT @notastring + '1'
 
 この場合、文字列 `'1'` を整数値 1 に変換できるため、この SELECT ステートメントからは値 2 が返されます。 指定されたデータ型が整数である場合、+ 演算子は文字列連結ではなく加算演算子になります。
 
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="l-using-cast-and-convert"></a>L. CAST と CONVERT を使用する  
 次の各例では、表示価格の最初の桁が `3` である製品について製品名を取得し、これらの製品の `ListPrice` を **int** 型に変換します。`AdventureWorksDW2016` データベースを使用します。
@@ -848,7 +848,7 @@ UnconvertedText         UsingCast               UsingConvertFrom_ISO8601
 2010-07-25T13:50:38.544 07/25/2010 1:50:38 PM   07/25/2010 1:50:38 PM  
 ```  
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [データ型の優先順位 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)       
 [データ型の変換 &#40;データベース エンジン&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)     
 [FORMAT &#40;Transact-SQL&#41;](../../t-sql/functions/format-transact-sql.md)      

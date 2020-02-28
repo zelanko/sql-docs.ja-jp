@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 10e46d39d312f47fa327d79523a2613ef4b80634
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: d23ae15a277c866c62f3e9be9e2eab19c5255c10
+ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75251200"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "77173606"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>SQL Server ビッグ データ クラスターの展開のために Azure Kubernetes Service を構成する
 
@@ -70,7 +70,13 @@ Azure リソース グループは、Azure リソースが展開され管理さ�
    az account set --subscription <subscription id>
    ```
 
-1. **az group create** コマンドを使用して、リソース グループを作成します。 次の例では、`sqlbdcgroup` の場所に `westus2` という名前のリソース グループを作成します。
+1. このコマンドを使用して、クラスターとリソースをデプロイする Azure リージョンを特定します。
+
+   ```azurecli
+   az account list-locations -o table
+   ```
+
+1. **az group create** コマンドを使用して、リソース グループを作成します。 次の例では、`westus2` の場所に `sqlbdcgroup` という名前のリソース グループを作成します。
 
    ```azurecli
    az group create --name sqlbdcgroup --location westus2
@@ -104,7 +110,7 @@ Azure リソース グループは、Azure リソースが展開され管理さ�
 
 ## <a name="create-a-kubernetes-cluster"></a>Kubernetes クラスターを作成する
 
-1. [az aks create](https://docs.microsoft.com/cli/azure/aks) コマンドを利用して、AKS に Kubernetes クラスターを作成します。 次の例では、サイズが *Standard_L8s* の Linux エージェント ノードを 1 つ備えた **kubcluster** という名前の Kubernetes クラスターを作成します。
+1. [az aks create](https://docs.microsoft.com/cli/azure/aks) コマンドを利用して、AKS に Kubernetes クラスターを作成します。 次の例では、サイズが **Standard_L8s** の Linux エージェント ノードを 1 つ備えた *kubcluster* という名前の Kubernetes クラスターを作成します。
 
    スクリプトを実行する前に、`<version number>` を前の手順で特定したバージョン番号に置き換えます。
 
@@ -132,7 +138,7 @@ Azure リソース グループは、Azure リソースが展開され管理さ�
    --kubernetes-version <version number>
    ```
 
-   Kubernetes エージェント ノードの数を増減するには、`--node-count <n>` を変更します。`<n>` は、使用するエージェント ノードの数です。 これには、AKS によってバックグラウンドで管理されるマスター Kubernetes ノードは含まれません。 上記の例では、評価目的のために 1 つのノードのみを使用しています。
+   Kubernetes エージェント ノードの数を増減するには、`--node-count <n>` を変更します。`<n>` は、使用するエージェント ノードの数です。 これには、AKS によってバックグラウンドで管理されるマスター Kubernetes ノードは含まれません。 上記の例では、評価目的のために 1 つのノードのみを使用しています。 また、`--node-vm-size` を変更して、ワークロードの要件に適した仮想マシンのサイズを選択することもできます。 `az vm list-sizes --location westus2 -o table` コマンドを使用して、リージョンで使用可能な仮想マシンのサイズを一覧表示します。
 
    数分後、コマンドが完了すると、クラスターに関する JSON 形式の情報が返されます。
 
@@ -161,6 +167,7 @@ Azure リソース グループは、Azure リソースが展開され管理さ�
 
 - [最新の Azure CLI](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest) がインストールされていることを確認してください。
 - 別のリソース グループとクラスター名を使用して、同じ手順を試してください。
+- 詳細な [AKS のトラブルシューティングのドキュメント](https://docs.microsoft.com/azure/aks/troubleshooting)を参照してください。
 
 ## <a name="next-steps"></a>次のステップ
 

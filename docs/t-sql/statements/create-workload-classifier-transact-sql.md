@@ -20,12 +20,12 @@ ms.assetid: ''
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 54c9145e40d9ad326faf0c897281fedb9a9fe9dc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 73718d8fa49715a2cec91c43a9a91402fad6e031
+ms.sourcegitcommit: 1feba5a0513e892357cfff52043731493e247781
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76831611"
+ms.lasthandoff: 02/18/2020
+ms.locfileid: "77429033"
 ---
 # <a name="create-workload-classifier-transact-sql"></a>CREATE WORKLOAD CLASSIFIER (Transact-SQL)
 
@@ -144,13 +144,13 @@ CREATE WORKLOAD CLASSIFIER wcELTLoads WITH
 次の分類子構成について考えてみます。
 
 ```sql
-CREATE WORKLOAD CLASSIFIER classiferA WITH  
+CREATE WORKLOAD CLASSIFIER classifierA WITH  
 ( WORKLOAD_GROUP = 'wgDashboards'  
  ,MEMBERNAME     = 'userloginA'
  ,IMPORTANCE     = HIGH
  ,WLM_LABEL      = 'salereport' )
 
-CREATE WORKLOAD CLASSIFIER classiferB WITH  
+CREATE WORKLOAD CLASSIFIER classifierB WITH  
 ( WORKLOAD_GROUP = 'wgUserQueries'  
  ,MEMBERNAME     = 'userloginA'
  ,IMPORTANCE     = LOW
@@ -158,7 +158,7 @@ CREATE WORKLOAD CLASSIFIER classiferB WITH
  ,END_TIME       = '07:00' )
 ```
 
-ユーザー `userloginA` は両方の分類子で構成されています。  userloginA が UTC の午後 6 時から午前 7 時までの間に `salesreport` と等しいラベルを持つクエリを実行すると、要求は wgDashboards ワークロード グループに分類され、重要度が HIGH になります。  時間外報告の重要度が LOW である wgUserQueries に要求が分類されることが予想されますが、WLM_LABEL の重み付けは START_TIME/END_TIME よりも高くなります。  classiferA の重み付けは 80 (ユーザーの 64 + WLM_LABEL の 16) です。  classifierB の重み付けは 68 (ユーザーの 64 + START_TIME/END_TIME の 4) です。  この場合、WLM_LABEL を classiferB に追加できます。
+ユーザー `userloginA` は両方の分類子で構成されています。  userloginA が UTC の午後 6 時から午前 7 時までの間に `salesreport` と等しいラベルを持つクエリを実行すると、要求は wgDashboards ワークロード グループに分類され、重要度が HIGH になります。  時間外報告の重要度が LOW である wgUserQueries に要求が分類されることが予想されますが、WLM_LABEL の重み付けは START_TIME/END_TIME よりも高くなります。  classifierA の重み付けは 80 (ユーザーの 64 + WLM_LABEL の 16) です。  classifierB の重み付けは 68 (ユーザーの 64 + START_TIME/END_TIME の 4) です。  この場合、WLM_LABEL を classifierB に追加できます。
 
  詳細については、[ワークロードの重み付け](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification#classification-weighting)に関するページをご覧ください。
 

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
-ms.openlocfilehash: c5f0b10d0b2bbd953b14873e76b938ecfdce6fd9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: d08ee2e48fca1cf7cd473dbd02714b460089353f
+ms.sourcegitcommit: 9b8b71cab6e340f2cb171397f66796d7a76c497e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74993014"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77250597"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -44,7 +44,29 @@ ms.locfileid: "74993014"
 ```
 SqlPackage {parameters}{properties}{SQLCMD Variables}  
 ```
-  
+
+### <a name="usage-examples"></a>使用例
+
+**SQL スクリプト出力で .dacpac ファイルを使用してデータベース間の比較を生成する**
+
+まず、最新のデータベース変更の .dacpac ファイルを作成します。
+
+```
+sqlpackage.exe /TargetFile:"C:\sqlpackageoutput\output_current_version.dacpac" /Action:Extract /SourceServerName:"." /SourceDatabaseName:"Contoso.Database"
+ ```
+ 
+(変更がない) データベース ターゲットの .dacpac ファイルを作成します。
+
+ ```
+ sqlpackage.exe /TargetFile:"C:\sqlpackageoutput\output_target.dacpac" /Action:Extract /SourceServerName:"." /SourceDatabaseName:"Contoso.Database"
+ ```
+
+2 つの .dacpac ファイルの相違点を生成する SQL スクリプトを作成します。
+
+```
+sqlpackage.exe /Action:Script /SourceFile:"C:\sqlpackageoutput\output_current_version.dacpac" /TargetFile:"C:\sqlpackageoutput\output_target.dacpac" /TargetDatabaseName:"Contoso.Database" /OutputPath:"C:\sqlpackageoutput\output.sql"
+ ```
+
 ### <a name="help-for-the-extract-action"></a>抽出アクションのヘルプ
 
 |パラメーター|短い形式|Value|説明|
@@ -206,6 +228,7 @@ SqlPackage.exe の公開操作では、ソース データベースの構造に�
 |**/p:**|IgnoreRouteLifetime=(BOOLEAN 'True')|データベースへの公開時に、SQL Server がルーティング テーブルにルートを保持する時間の相違を無視するか、更新するかを指定します。|
 |**/p:**|IgnoreSemicolonBetweenStatements=(BOOLEAN 'True')|データベースに公開するとき、T-SQL ステートメント間のセミコロンの相違を無視するか、更新するかを指定します。|
 |**/p:**|IgnoreTableOptions=(BOOLEAN)|データベースに公開するとき、テーブル オプションの相違を無視するか、更新するかを指定します。|
+|**/p:**|IgnoreTablePartitionOptions=(BOOLEAN)|データベースに公開するとき、テーブル パーティション オプションの相違を無視するか、更新するかを指定します。  このオプションは、Azure Synapse Analytics データ ウェアハウス データベースにのみ適用されます。|
 |**/p:**|IgnoreUserSettingsObjects=(BOOLEAN)|データベースに公開するとき、ユーザー設定オブジェクトの相違を無視するか、更新するかを指定します。|
 |**/p:**|IgnoreWhitespace=(BOOLEAN 'True')|データベースに公開するとき、空白の相違を無視するか、更新するかを指定します。|
 |**/p:**|IgnoreWithNocheckOnCheckConstraints=(BOOLEAN)|公開時に、CHECK 制約の WITH NOCHECK 句の値の相違を無視するか、更新するかを指定します。|
@@ -433,6 +456,7 @@ SqlPackage.exe の Import 操作を実行すると、BACPAC パッケージ (.ba
 |**/p:**|IgnoreRouteLifetime=(BOOLEAN 'True')|データベースに公開するとき、SQL Server がルーティング テーブルにルートを保持する時間の相違を無視するか、更新するかを指定します。|
 |**/p:**|IgnoreSemicolonBetweenStatements=(BOOLEAN 'True')|データベースに公開するとき、T-SQL ステートメント間のセミコロンの相違を無視するか、更新するかを指定します。| 
 |**/p:**|IgnoreTableOptions=(BOOLEAN)|データベースに公開するとき、テーブル オプションの相違を無視するか、更新するかを指定します。| 
+|**/p:**|IgnoreTablePartitionOptions=(BOOLEAN)|データベースに公開するとき、テーブル パーティション オプションの相違を無視するか、更新するかを指定します。  このオプションは、Azure Synapse Analytics データ ウェアハウス データベースにのみ適用されます。|
 |**/p:**|IgnoreUserSettingsObjects=(BOOLEAN)|データベースに公開するとき、ユーザー設定オブジェクトの相違を無視するか、更新するかを指定します。|
 |**/p:**|IgnoreWhitespace=(BOOLEAN 'True')|データベースに公開するとき、空白の相違を無視するか、更新するかを指定します。 |
 |**/p:**|IgnoreWithNocheckOnCheckConstraints=(BOOLEAN)|データベースに公開するとき、CHECK 制約の WITH NOCHECK 句の値の相違を無視するか、更新するかを指定します。| 
@@ -597,6 +621,7 @@ SqlPackage.exe の Import 操作を実行すると、BACPAC パッケージ (.ba
 |**/p:**|IgnoreRouteLifetime=(BOOLEAN 'True')|データベースへの公開時に、SQL Server がルーティング テーブルにルートを保持する時間の相違を無視するか、更新するかを指定します。|
 |**/p:**|IgnoreSemicolonBetweenStatements=(BOOLEAN 'True')|データベースに公開するとき、T-SQL ステートメント間のセミコロンの相違を無視するか、更新するかを指定します。|
 |**/p:**|IgnoreTableOptions=(BOOLEAN)|データベースに公開するとき、テーブル オプションの相違を無視するか、更新するかを指定します。|
+|**/p:**|IgnoreTablePartitionOptions=(BOOLEAN)|データベースに公開するとき、テーブル パーティション オプションの相違を無視するか、更新するかを指定します。  このオプションは、Azure Synapse Analytics データ ウェアハウス データベースにのみ適用されます。|
 |**/p:**|IgnoreUserSettingsObjects=(BOOLEAN)|データベースに公開するとき、ユーザー設定オブジェクトの相違を無視するか、更新するかを指定します。|
 |**/p:**|IgnoreWhitespace=(BOOLEAN 'True')|データベースに公開するとき、空白の相違を無視するか、更新するかを指定します。|
 |**/p:**|IgnoreWithNocheckOnCheckConstraints=(BOOLEAN)|公開時に、CHECK 制約の WITH NOCHECK 句の値の相違を無視するか、更新するかを指定します。|

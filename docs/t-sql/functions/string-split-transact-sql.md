@@ -18,12 +18,12 @@ ms.assetid: 3273dbf3-0b4f-41e1-b97e-b4f67ad370b9
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: b93f85235b2676773ea3686c17d7d17e3a424d7f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 20580d1c746a678771ff3be0e67bab72e2b72be8
+ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "67906832"
+ms.lasthandoff: 02/13/2020
+ms.locfileid: "77179273"
 ---
 # <a name="string_split-transact-sql"></a>STRING_SPLIT (Transact-SQL)
 
@@ -41,14 +41,14 @@ STRING_SPLIT は、互換性レベル 130 以上にする必要があります�
   
 ## <a name="syntax"></a>構文  
 
-```sql
+```
 STRING_SPLIT ( string , separator )  
 ```
 
 ## <a name="arguments"></a>引数
 
  *string*  
- 任意の文字型 ([nvarchar](../../t-sql/language-elements/expressions-transact-sql.md)、**varchar**、**nchar**、**char** など) の**式**です。  
+ 任意の文字型 (**nvarchar**、**varchar**、**nchar**、**char** など) の[式](../../t-sql/language-elements/expressions-transact-sql.md)です。  
   
  *separator*  
  任意の文字型の 1 文字の[式](../../t-sql/language-elements/expressions-transact-sql.md)です (**nvarchar(1)** 、**varchar(1)** 、**nchar(1)** 、**char(1)** など)。連結する部分文字列の区切り文字として使用されます。  
@@ -62,6 +62,8 @@ STRING_SPLIT ( string , separator )
 **STRING_SPLIT** には、部分文字列を区切った文字列と、区切り記号や区切りとして使用される 1 文字を入力します。 STRING_SPLIT では、行に部分文字列が含まれる、単一列テーブルが出力されます。 出力列の名前は **value** です。
 
 出力行には任意の順序を指定できます。 この順序が入力文字列の部分文字列の順序と一致するかどうかは保証_されません_。 SELECT ステートメントで ORDER BY 句 (`ORDER BY value`) を使用して、最終的な並べ替え順序をオーバーライドできます。
+
+0x0000 (**char(0)** ) の Windows 照合順序で未定義の文字は、STRING_SPLIT に含めることができません。
 
 入力文字列に区切り文字が 2 つ以上連続して含まれている場合、長さ 0 の空の部分文字列が存在します。 空の部分文字列は、プレーンな部分文字列と同じように扱われます。 WHERE 句 (`WHERE value <> ''`) を使用して、空の部分文字列が含まれているすべての行をフィルター処理できます。 入力文字列が NULL の場合、STRING_SPLIT テーブル値関数は空のテーブルを返します。  
 
@@ -102,7 +104,7 @@ WHERE RTRIM(value) <> '';
 
 次の例のように、Product テーブルには、コンマで区切られたタグのリストを含む列があります。  
   
-|ProductId|Name|Tags|  
+|ProductId|名前|Tags|  
 |---------------|----------|----------|  
 |1|Full-Finger Gloves|clothing,road,touring,bike|  
 |2|LL Headset|bike|  
@@ -118,7 +120,7 @@ FROM Product
 
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|ProductId|Name|value|  
+|ProductId|名前|value|  
 |---------------|----------|-----------|  
 |1|Full-Finger Gloves|clothing|  
 |1|Full-Finger Gloves|道路|  

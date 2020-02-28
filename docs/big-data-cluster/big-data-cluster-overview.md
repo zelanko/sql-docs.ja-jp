@@ -9,14 +9,14 @@ ms.date: 01/07/2020
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 23eb15b1f7b763688a3657406bab12106a18f977
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c751992e666151752783e9813efa2f696fcdcb6e
+ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75720937"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "77173637"
 ---
-# <a name="what-are-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]とは
+# <a name="what-are-big-data-clusters-2019"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]とは
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -71,12 +71,11 @@ SQL Server ビッグ データ クラスターには、スケーラブルな HDF
 
 管理と監視は、コマンド ライン ツール、API、ポータル、および動的管理ビューを組み合わせて実行できます。
 
-Azure Data Studio を使用すると、ビッグ データ クラスターに対してさまざまなタスクを実行できます。 これは、新しい **SQL Server 2019 拡張機能**によって実現します。 この拡張機能には、次の機能があります。
-
+[Azure Data Studio](../azure-data-studio/what-is.md) を使用すると、ビッグ データ クラスターに対してさまざまなタスクを実行できます。
 - 一般的な管理タスク用の組み込みスニペット。
 - HDFS の参照、ファイルのアップロード、ファイルのプレビュー、およびディレクトリの作成を行う機能。
 - Jupyter 互換ノートブックを作成、開く、および実行する機能。
-- 外部データ ソースの作成を簡易化するデータ仮想化ウィザード。
+- 外部データ ソースの作成を簡易化するデータ仮想化ウィザード (**データ仮想化の拡張機能**によって有効化されます)。
 
 ## <a id="architecture"></a> アーキテクチャ
 

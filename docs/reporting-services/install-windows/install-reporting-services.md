@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 749dfd8f7cce37aeeb9721af9f951caa6ab15dfd
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 42d3d697ace0f427dcad7fdcd394695672061e13
+ms.sourcegitcommit: 1feba5a0513e892357cfff52043731493e247781
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "71952739"
+ms.lasthandoff: 02/18/2020
+ms.locfileid: "77429053"
 ---
 # <a name="install-sql-server-reporting-services"></a>SQL Server Reporting Services のインストール
 
@@ -67,7 +67,7 @@ Reporting Services をインストールする前に、「[Hardware and software
 
 7. 正常にセットアップした後、 **[レポート サーバーの構成]** を選択して、Reporting Services Configuration Manager を起動します。
 
-## <a name="configuration-your-report-server"></a>レポート サーバーの構成
+## <a name="configure-your-report-server"></a>レポート サーバーを構成する
 
 セットアップで **[レポート サーバーの構成]** を選択したら、**レポート サーバー Configuration Manager** が表示されます。 詳細については、[Report Server 構成マネージャー](reporting-services-configuration-manager-native-mode.md)に関するページを参照してください。
 
@@ -93,7 +93,7 @@ Windows サービスは、インストールの一部として作成されます
 
 URL 予約は、プレフィックス、ホスト名、ポート、および仮想ディレクトリで構成されます。
 
-|要素|[説明]|
+|要素|説明|
 |----------|-----------------|
 |Prefix|既定のプレフィックスは HTTP です。 以前に SSL (Secure Sockets Layer) 証明書をインストールした場合は、HTTPS プレフィックスを使用する URL 予約がセットアップで作成されます。|
 |ホスト名|既定のホスト名は、強いワイルドカード (+) です。 これにより、コンピューターに対して解決されるあらゆるホスト名 (`https://<computername>/reportserver`、`https://localhost/reportserver`、`https://<IPAddress>/reportserver.`) の指定のポートで、レポート サーバーが HTTP 要求を受け付けるように指定されます。|

@@ -24,12 +24,12 @@ ms.assetid: ca5fd220-d5ea-4182-8950-55d4101a86f6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7ed32cf93d5bbf13580fc15d649ad403b98524cf
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 1980e9c96e568352fe616b6de8a6c7320c3d6c86
+ms.sourcegitcommit: 10ab8d797a51926e92aec977422b1ee87b46286d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76909652"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77544895"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE (Transact-SQL) 互換性レベル
 
@@ -307,6 +307,7 @@ SQL Server 2017 より前の SQL Server の初期のバージョンのトレー�
 |以下の「例」の E を参照してください。|以下の「例」の F を参照してください。|低|
 |ODBC 関数 {fn CONVERT()} では、言語の既定の日付形式が使用されます。 言語によっては、既定の形式が YDM の場合があります。この場合、CONVERT() を `{fn CURDATE()}` などの YMD 形式が想定されている他の関数と組み合わせて使用すると、変換エラーが発生する可能性があります。|ODBC 関数 `{fn CONVERT()}` では、ODBC データ型 SQL_TIMESTAMP、SQL_DATE、SQL_TIME、SQLDATE、SQL_TYPE_TIME、および SQL_TYPE_TIMESTAMP への変換時にスタイル 121 (言語に依存しない YMD 形式) が使用されます。|低|
 |DATEPART などの datetime 組み込み関数では、文字列入力値が有効な datetime リテラルである必要はありません。 たとえば、`SELECT DATEPART (year, '2007/05-30')` は正常にコンパイルされます。|`DATEPART` などの datetime 組み込み関数では、文字列入力値が有効な datetime リテラルである必要があります。 無効な datetime リテラルを使用すると、エラー 241 が返されます。|低|
+|REPLACE 関数の最初の入力パラメーターが char 型である場合、その入力パラメーターで指定された末尾のスペースはトリミングされます。 たとえば、ステートメント SELECT '<' + REPLACE(CONVERT(char(6), 'ABC '), ' ', 'L') + '>' では、値 'ABC ' が 'ABC' として誤って評価されます。|末尾のスペースは常に保持されます。 アプリケーションがこの関数の以前の動作に依存する場合、最初の入力パラメーターを指定するときに、RTRIM 関数を使用します。 たとえば、次の構文は、SQL Server 2005 の動作に戻して、SELECT '<' + REPLACE(RTRIM(CONVERT(char(6), 'ABC ')), ' ', 'L') + '>' を実行します。|低|
 
 ## <a name="reserved-keywords"></a>予約済みキーワード
 

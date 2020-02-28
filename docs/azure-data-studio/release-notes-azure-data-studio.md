@@ -9,17 +9,47 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
-ms.date: 12/26/2019
-ms.openlocfilehash: a6907422afd32296b88d8160af4c35692277e94e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.date: 02/19/2020
+ms.openlocfilehash: 441679bbcf6d6a24e48233d4134d575ec526e0b2
+ms.sourcegitcommit: cebf41506a28abfa159a5dd871b220630c4c4504
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75521732"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77479688"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio のリリース ノート
 
 **[最新リリースのダウンロードとインストール](download.md)**
+
+## <a name="february-hotfix"></a>2 月 (修正プログラム)
+
+2019 年 2 月 19 日 &nbsp; / &nbsp; バージョン: 1.15.1
+
+&nbsp;
+
+| Change | 詳細 |
+| :----- | :------ |
+| バグの修正 #9149 アクティブな接続を表示 | [#9149](https://github.com/microsoft/azuredatastudio/issues/9149)  |
+| バグの修正 #9061 SQL ペインの表示と非表示を切り替えたときに [データの編集] グリッドで適切にサイズ変更が行われない | [#9061](https://github.com/microsoft/azuredatastudio/issues/9061)  |
+| &nbsp; | &nbsp; |
+
+## <a name="february-2020"></a>2020 年 2 月
+
+2019 年 2 月 13 日 &nbsp; / &nbsp; バージョン:1.15.0 
+
+&nbsp;
+
+| Change | 詳細 |
+| :----- | :------ |
+| Azure サインインの新しい改善 | 改善された Azure サインイン エクスペリエンスを追加しました。よりシームレスな接続エクスペリエンスを実現するための、デバイス コードのコピーまたは貼り付けの削除などが含まれます。 |
+| Notebook サポートでの検索 | ユーザーはノートブック内で Ctrl + F キーを使用できるようになりました。 Notebook サポートでの検索では、コードとテキスト セルの両方で 1 行ずつ検索が行われます。 |
+| 1\.38 から 1.42 への VS Code のマージ | このリリースには、以前の 3 つの VS Code リリースからの VS Code の更新プログラムが含まれています。 詳細については、[それらのリリース ノートをお読みください](https://code.visualstudio.com/updates/v1_42)。 |
+| 多くのユーザーから報告されている ["画面が白くなるまたは空になる"](https://github.com/microsoft/azuredatastudio/issues/8775) という問題を修正しました。 | |
+| バグと問題が解決されました | 修正の完全な一覧については、[GitHubの「バグと問題」](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+is%3Aclosed+milestone%3A%22February+2020%22)を参照してください。 |
+| &nbsp; | &nbsp; |
+
+### <a name="known-issue"></a>既知の問題
+- macOS Catalina のユーザーは Azure Data Studio を右クリックして、[開く] をクリックする必要があります。
 
 ## <a name="december-2019-hotfix"></a>2019 年 12 月 (修正プログラム)
 

@@ -21,12 +21,12 @@ ms.assetid: 919158f2-38d0-4f68-82ab-e1633bd0d308
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ca8f97c98ec94ca021f025ffc5b67152e8253ad6
-ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
+ms.openlocfilehash: b33e22b3d6575e7f83572eeca5692d538b58a16b
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2020
-ms.locfileid: "76971450"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77253327"
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -166,7 +166,7 @@ PERSIST_SAMPLE_PERCENT = { ON | OFF }
 **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降
 
 MAXDOP = *max_degree_of_parallelism*  
-**適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 および [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 以降)。  
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 および [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 以降)。  
   
  統計操作の間、**max degree of parallelism** 構成オプションをオーバーライドします。 詳細については、「 [max degree of parallelism サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)」を参照してください。 並列プランの実行で使用されるプロセッサ数を制限するには、MAXDOP を使用します。 最大数は 64 プロセッサです。  
   
@@ -181,7 +181,9 @@ MAXDOP = *max_degree_of_parallelism*
  0 (既定値)  
  現在のシステム ワークロードに基づいて、実際の数以下のプロセッサを使用します。  
   
- \<update_stats_stream_option> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+ \<update_stats_stream_option> 
+ 
+ [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
 
 ## <a name="remarks"></a>解説  
   
@@ -245,7 +247,7 @@ GO
 ```  
   
 ### <a name="b-update-the-statistics-for-an-index"></a>B. 1 つのインデックスの統計を更新する  
- 次の例では、`AK_SalesOrderDetail_rowguid` テーブルの `SalesOrderDetail` インデックスの統計を更新します。  
+ 次の例では、`SalesOrderDetail` テーブルの `AK_SalesOrderDetail_rowguid` インデックスの統計を更新します。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -255,7 +257,7 @@ GO
 ```  
   
 ### <a name="c-update-statistics-by-using-50-percent-sampling"></a>C. 50% サンプリングで統計を更新する  
- 次の例では、`Name` テーブルの `ProductNumber` および `Product` 列に統計を作成し、更新します。  
+ 次の例では、`Product` テーブルの `Name` および `ProductNumber` 列に統計を作成し、更新します。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -269,7 +271,7 @@ UPDATE STATISTICS Production.Product(Products)
 ```  
   
 ### <a name="d-update-statistics-by-using-fullscan-and-norecompute"></a>D. FULLSCAN および NORECOMPUTE を使用して統計を更新する  
- 次の例では、`Products` テーブル内の `Product` 統計を更新し、`Product` テーブル内のすべての行でフル スキャンを強制的に実行し、`Products` 統計の自動統計更新を無効にします。  
+ 次の例では、`Product` テーブル内の `Products` 統計を更新し、`Product` テーブル内のすべての行でフル スキャンを強制的に実行し、`Products` 統計の自動統計更新を無効にします。  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -279,17 +281,17 @@ UPDATE STATISTICS Production.Product(Products)
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-update-statistics-on-a-table"></a>E. テーブルの統計を更新する  
- 次の例では、`CustomerStats1` テーブルの `Customer` 統計を更新します。  
+ 次の例では、`Customer` テーブルの `CustomerStats1` 統計を更新します。  
   
 ```sql  
 UPDATE STATISTICS Customer ( CustomerStats1 );  
 ```  
   
 ### <a name="f-update-statistics-by-using-a-full-scan"></a>F. フル スキャンを使用して統計を更新する  
- 次の例では、`CustomerStats1` テーブルのすべての行のスキャンに基づいて `Customer` 統計を更新します。  
+ 次の例では、`Customer` テーブルのすべての行のスキャンに基づいて `CustomerStats1` 統計を更新します。  
   
 ```sql  
 UPDATE STATISTICS Customer (CustomerStats1) WITH FULLSCAN;  

@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 09069f4a-f2e3-4717-80e1-c0110058efc4
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f6f89e973d5f021dbd48a1bc7fc8234f9c9b6a89
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 18f91c30715dbf44058a204bd17f9ab1e6e393c6
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "67902013"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77255988"
 ---
 # <a name="hints-transact-sql---join"></a>ヒント (Transact-SQL) - Join
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "67902013"
   
 ## <a name="arguments"></a>引数  
  LOOP | HASH | MERGE  
- クエリ内の結合は、ループ、ハッシュ、またはマージを使用します。 LOOP | HASH | MERGE JOIN を使用すると、2 つのテーブル間に特定の結合が設定されます。 LOOP は、RIGHT または FULL と共に結合の種類として指定することはできません。  
+ クエリ内の結合は、ループ、ハッシュ、またはマージを使用します。 LOOP | HASH | MERGE JOIN を使用すると、2 つのテーブル間に特定の結合が設定されます。 LOOP は、RIGHT または FULL と共に結合の種類として指定することはできません。 詳細については、[結合](../../relational-databases/performance/joins.md)に関するページを参照してください。
   
  REMOTE  
  右側のテーブルのサイトで結合操作を実行します。 これは、左側のテーブルがローカル テーブルで、右側のテーブルがリモート テーブルの場合に効果的です。 REMOTE は、左側のテーブルの行数が右側のテーブルの行数よりも少ないときだけ使用します。  

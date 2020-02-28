@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 570a21b3-ad29-44a9-aa70-deb2fbd34f27
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e0e8d41e22efd3f51e1e0812d9476cce9b4b324d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 6e88e6cf9cb4101f22d3a30f5ca53fdf15b754fa
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75320610"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77256745"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>SQL Server データベースのバックアップと復元
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -154,7 +154,7 @@ ms.locfileid: "75320610"
  バックアップをテストするまでは、復元ストラテジが完成したことにはなりません。 データベースのコピーをテスト システムに復元することで、各データベースに対するバックアップ ストラテジを十分にテストすることが重要です。 使用するすべての種類のバックアップの復元をテストする必要があります。 また、バックアップを復元したら、データベースの DBCC CHECKDB を使用してデータベースの一貫性チェックを実行し、バックアップ メディアが破損していないことを検証することもお勧めします。 
 
 ### <a name="verify-media-stability-and-consistency"></a>メディアの安定性と一貫性を確認する
-バックアップ ユーティリティ (BACKUP T-SQL コマンド、SQL Server メンテナンス プラン、お使いのバックアップ ソフトウェアまたはソリューションなど) から提供される確認オプションを使用します。 例については、「[RESTORE VERIFYONLY]」 (../t-sql/statements/restore-statements-verifyonly-transact-sql.md) を参照してください。BACKUP CHECKSUM などの高度な機能を使用して、バックアップ メディア自体の問題を検出します。 詳細については、こちら[](../backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)を参照してください。
+バックアップ ユーティリティ (BACKUP T-SQL コマンド、SQL Server メンテナンス プラン、お使いのバックアップ ソフトウェアまたはソリューションなど) から提供される確認オプションを使用します。 例については、「[RESTORE VERIFYONLY]」 (../t-sql/statements/restore-statements-verifyonly-transact-sql.md) を参照してください。BACKUP CHECKSUM などの高度な機能を使用して、バックアップ メディア自体の問題を検出します。 詳細については、「[バックアップ中および復元中に発生する可能性があるメディア エラー (SQL Server)](../backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)」を参照してください。
 
 ### <a name="document-backuprestore-strategy"></a>ドキュメントのバックアップと復元ストラテジ 
 バックアップと復元の手順をドキュメント化し、そのドキュメントを運用手順書に含めて保管することをお勧めします。

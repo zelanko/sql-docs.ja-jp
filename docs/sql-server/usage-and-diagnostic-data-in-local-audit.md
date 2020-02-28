@@ -14,12 +14,12 @@ ms.assetid: a0665916-7789-4f94-9086-879275802cf3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b34d69ea0d402f568efa4e6951367cce3cfa0eca
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 626b4277edcb049b2c7b755b70199df899dc5637
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75558058"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77256655"
 ---
 # <a name="local-audit-for-sql-server-usage-and-diagnostic-data-collection-ceip"></a>SQL Server の使用状況と診断データの収集のローカル監査 (CEIP)
 
@@ -29,7 +29,7 @@ ms.locfileid: "75558058"
 
 Microsoft SQL Server は、お客様のコンピューターまたはデバイスに関する情報を収集して送信するインターネット対応の機能を備えています。 これは*標準的なコンピューター情報*と呼ばれています。 [SQL Server の使用状況と診断データの収集](usage-and-diagnostic-data-configuration-for-sql-server.md)のローカル監査コンポーネントでは、サービスによって収集されたデータが保存先フォルダーに出力されます。このデータは、Microsoft に送信されるデータ (ログ) です。 ローカル監査の目的は、Microsoft がこの機能を使用して収集するすべてのデータをユーザーがコンプライアンス、法規制、またはプライバシーの検証目的で確認できるようにすることです。  
 
-SQL Server 2016 CU2 以降は、SQL Server データベース エンジンと Analysis Services (SSAS) のインスタンス レベルで構成できるようになりました。 SQL Server 2016 CU4 および SQL Server 2016 SP1 では、ローカル監査は SQL Server Integration Services (SSIS) に対しても有効になります。 セットアップ中にインストールされる他の SQL Server コンポーネントと、セットアップ後にダウンロードまたはインストールされる SQL Server ツールには、使用状況と診断データの収集用のローカル監査機能はありません。
+SQL Server 2016 CU2 および CU3 の場合、ローカル監査は SQL Server Database Engine and Analysis Services (SSAS) のインスタンス レベルで構成できるようになりました。 SQL Server 2016 CU4、2016 SP1、およびそれ以降のリリースの場合、ローカル監査は SQL Server Integration Services (SSIS) に対しても有効になります。 セットアップ中にインストールされる他の SQL Server コンポーネントと、セットアップ後にダウンロードまたはインストールされる SQL Server ツールには、使用状況と診断データの収集用のローカル監査機能はありません。
 
 ## <a name="remarks"></a>解説
 
@@ -42,7 +42,7 @@ SQL Server 2016 CU2 以降は、SQL Server データベース エンジンと An
 
 各 SQL Server インスタンス上でローカル監査を有効にする前提条件は次のとおりです。 
 
-1. インスタンスには SQL Server 2016 RTM CU2 以降の修正プログラムが適用されている。 Integration Services の場合、インスタンスには SQL 2016 RTM CU4 または SQL 2016 SP1 の修正プログラムが適用されている。
+1. インスタンスには SQL Server 2016 RTM CU2 以降の修正プログラムが適用されている。 Integration Services の場合、インスタンスには SQL 2016 RTM CU4、SQL 2016 SP1、およびそれ以降の修正プログラムが適用されている。
 
 1. ユーザーはシステム管理者であるか、レジストリ キーの追加および変更、フォルダーの作成、フォルダー セキュリティの管理、および Windows サービスの停止/開始を行うアクセス権を持つロールである必要があります。  
 
@@ -201,7 +201,7 @@ SQL Server CEIP が既に実行中の場合、ローカル監査設定は直ち�
 
 以下の列は、ローカル監査ファイル出力の順を表しています。 以下の複数列の匿名化された値に対して、SHA 256 による一方向のハッシュが使用されています。  
 
-| Name | 説明 | 値の例
+| 名前 | 説明 | 値の例
 |-------|--------| ----------|
 |instanceUniqueID| 匿名のインスタンス識別子。 | 888770C4D5A8C6729F76F33D472B28883AE518C92E1999888B171A085059FD 
 |schemaVersion| SQLCEIP のスキーマ バージョン |  3 
@@ -320,7 +320,7 @@ Local Audit ログ ファイルは JSON 形式で出力されます。 各行は
 ローカル監査ファイルが出力されなくなります。
 
 **インターネット接続がない場合やコンピューターがファイアウォールの背後にある場合はどうなりますか?**
-SQL Server 2016 の使用状況と診断データは Microsoft に送信されなくなります。 構成が正しければ、Local Audit ログの出力は試行されます。
+SQL Server の使用状況と診断データは Microsoft に送信されなくなります。 構成が正しければ、Local Audit ログの出力は試行されます。
 
 **DBA がローカル監査を無効にするにはどうすればよいですか?**
 UserRequestedLocalAuditDirectory レジストリ キー エントリを削除します。
@@ -333,7 +333,7 @@ UserRequestedLocalAuditDirectory レジストリ キー エントリを削除し
 
 **この JSON 出力を読み取るために使用できるクライアントまたはツールはありますか?**
 出力は、メモ帳、Visual Studio、JSON リーダーなど任意のツールで読み取ることができます。
-また、JSON ファイルを読み取り、以下の図のように SQL Server 2016 インスタンスのデータを分析することもできます。 SQL Server で JSON ファイルを読み取る方法の詳細については、「 [Importing JSON files into SQL Server using OPENROWSET (BULK) and OPENJSON (Transact-SQL)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/10/07/bulk-importing-json-files-into-sql-server/)」(OPENROWSET (BULK) と OPENJSON (Transact-SQL) を使用して JSON ファイルを SQL Server にインポートする) を参照してください。
+また、JSON ファイルを読み取り、以下の図のように SQL Server インスタンスのデータを分析することもできます。 SQL Server で JSON ファイルを読み取る方法の詳細については、「 [Importing JSON files into SQL Server using OPENROWSET (BULK) and OPENJSON (Transact-SQL)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/10/07/bulk-importing-json-files-into-sql-server/)」(OPENROWSET (BULK) と OPENJSON (Transact-SQL) を使用して JSON ファイルを SQL Server にインポートする) を参照してください。
 
 ```Transact-SQL
 DECLARE @JSONFile AS VARCHAR(MAX)
@@ -379,5 +379,5 @@ FROM OPENJSON(@JSONFile)
 WHERE queryIdentifier = 'DatabaseProperties.001'
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [Local audit for SSMS usage and diagnostic data collection (SSMS の使用状況および診断データの収集のローカル監査)](../ssms/sql-server-management-studio-telemetry-ssms.md)

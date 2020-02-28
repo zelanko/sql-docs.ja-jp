@@ -1,7 +1,7 @@
 ---
 title: BULK INSERT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/25/2019
+ms.date: 02/21/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d6802e2f93c4f171797198eda2132e8b0353621f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 999ae75343a71efafd7348065b2a1d3533b4bd10
+ms.sourcegitcommit: 867b7c61ecfa5616e553410ba0eac06dbce1fed3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76910135"
+ms.lasthandoff: 02/22/2020
+ms.locfileid: "77558359"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 
@@ -59,7 +59,7 @@ BULK INSERT
    [ [ , ] ERRORFILE_DATA_SOURCE = 'data_source_name' ]
    [ [ , ] FIRSTROW = first_row ]
    [ [ , ] FIRE_TRIGGERS ]
-   [ [ , ] FORMATFILE_DATASOURCE = 'data_source_name' ]
+   [ [ , ] FORMATFILE_DATA_SOURCE = 'data_source_name' ]
    [ [ , ] KEEPIDENTITY ]
    [ [ , ] KEEPNULLS ]
    [ [ , ] KILOBYTES_PER_BATCH = kilobytes_per_batch ]
@@ -166,7 +166,7 @@ FIRE_TRIGGERS 一括読み込みの操作中に、インポート先のテーブ
 
 FIRE_TRIGGERS が指定されていない場合、挿入トリガーは実行されません。
 
-FORMATFILE_DATASOURCE **=** 'data_source_name' **適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 1.1.
+FORMATFILE_DATA_SOURCE **=** 'data_source_name' **適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 1.1.
 インポートされるデータのスキーマを定義するフォーマット ファイルの Azure Blob Storage の場所を指している名前付きの外部データ ソースです。 外部データ ソースは、[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 で追加された `TYPE = BLOB_STORAGE` オプションを使用して作成する必要があります。 詳しくは、「[CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)」をご覧ください。
 
 KEEPIDENTITY インポートしたデータ ファイルの ID 値 (複数可) を ID 列に使用することを指定します。 KEEPIDENTITY を指定しない場合、この列の ID 値は検証のみが行われ、インポートされません。この場合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、テーブルの作成時に指定された seed と増分値に基づいて、一意な値が自動的に割り当てられます。 データ ファイルにテーブルまたはビュー内の ID 列の値が含まれない場合は、フォーマット ファイルを使用して、データのインポート時にテーブルまたはビュー内の ID 列をスキップするよう指定します。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではこの列に一意な値が自動的に割り当てられます。 詳細については、「[DBCC CHECKIDENT &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md)」をご覧ください。
@@ -338,7 +338,9 @@ Azure Blob Storage からパブリック (匿名アクセス) ではないデー
 
 ### <a name="permissions"></a>アクセス許可
 
-INSERT 権限および ADMINISTER BULK OPERATIONS 権限が必要です。 Azure SQL Database では、INSERT および ADMINISTER DATABASE BULK OPERATIONS 権限が必要です。 ただし次のことが 1 つまたは複数当てはまる場合は、さらに ALTER TABLE 権限が必要になります。
+INSERT 権限および ADMINISTER BULK OPERATIONS 権限が必要です。 Azure SQL Database では、INSERT および ADMINISTER DATABASE BULK OPERATIONS 権限が必要です。 SQL Server on Linux では、ADMINISTER BULK OPERATIONS アクセス許可または bulkadmin ロールはサポートされていません。 SQL Server on Linux に対して一括挿入を実行できるのは、`sysadmin` だけです。 
+
+ただし次のことが 1 つまたは複数当てはまる場合は、さらに ALTER TABLE 権限が必要になります。
 
 - 制約が存在する場合に、CHECK_CONSTRAINTS オプションを指定しない。
 

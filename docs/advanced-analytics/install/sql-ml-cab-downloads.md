@@ -3,18 +3,18 @@ title: オフライン インストール用の更新プログラムをダウン
 description: SQL Server Machine Learning Services 用の Python と R の CAB ファイルのダウンロードについて説明します。 これらの CAB ファイルには、インターネット アクセスがない場合にサーバーに SQL Server をインストールするときに使用できる、Machine Learning Services (Python と R) 機能の更新プログラムが含まれています。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/07/2020
+ms.date: 01/13/2020
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b2b84349e60bf89a066fb2157a9c521d7be8ecbd
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 7b50e11995cc1f07b848a460ecd096f97d7b7f9b
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75776534"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77256698"
 ---
 # <a name="cab-downloads-for-cumulative-updates-of-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services の累積的な更新プログラムの CAB ダウンロード
 
@@ -24,7 +24,7 @@ ms.locfileid: "75776534"
 SQL Server Machine Learning Services 用の Python と R の CAB ファイルのダウンロードについて説明します。 これらの CAB ファイルには、インターネット アクセスがない場合にサーバーに SQL Server をインストールするときに使用できる、Machine Learning Services (Python と R) 機能の更新プログラムが含まれています。
 ::: moniker-end
 
-::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 SQL Server 2016 R Services 用の Python と R の CAB ファイルのダウンロードについて説明します。 これらの CAB ファイルには、インターネット アクセスがない場合にサーバーに SQL Server をインストールするときに使用できる、R Services 機能の更新プログラムが含まれています。
 ::: moniker-end
 
@@ -36,7 +36,7 @@ SQL Server 2016 R Services 用の Python と R の CAB ファイルのダウン�
 ベースライン インストールから開始します。 SQL Server Machine Learning Services では、最初のリリースがベースライン インストールです。 
 ::: moniker-end
 
-::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 ベースライン インストールから開始します。  SQL Server 2016 R Services では、最初のリリース、SP1、または SP2 から始めることができます。 
 ::: moniker-end
 
@@ -50,7 +50,12 @@ CAB ファイルは、新しい順で一覧表示されます。 CAB ファイ�
 
 |Release  |コンポーネント | ダウンロード リンク  | 対処された問題 | 
 |---------|----------|----------------|------------------|
-|**[SQL Server 2017 CU14](https://support.microsoft.com/help/4484710/)-[CU15](https://support.microsoft.com/help/4498951/)-[CU16](https://support.microsoft.com/help/4508218/)** |  |  |  |
+|**[SQL Server 2017 CU19](https://support.microsoft.com/en-us/help/4535007/)** |  |  |  |
+| | Microsoft R Open | [SRO_3.3.3.1900_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2106367&clcid=1033) | `sp_execute_external_script` で R スクリプトを実行すると警告メッセージが表示されるバグを修正しました。 |
+| | R Server| [SRS_9.2.0.1900_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2106460&clcid=1033) | 以前のバージョンからの変更はありません。 |
+| | Microsoft Python Open | [SPO_9.2.0.1400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2073897&clcid=1033) | 以前のバージョンからの変更はありません。 |
+| | Python サーバー | [SPS_9.2.0.1900_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2106459&clcid=1033) | Python スクリプトを実行する `sp_execute_external_script` で、varbinary または binary データ型を OutputDataSet の形式で SQL Server に戻すときにデータが失われることがあるというバグを修正しました。 |
+|**[SQL Server 2017 CU14](https://support.microsoft.com/help/4484710/)-[CU15](https://support.microsoft.com/help/4498951/)-[CU16](https://support.microsoft.com/help/4508218/)-[CU17](https://support.microsoft.com/en-us/help/4515579/)-[CU18](https://support.microsoft.com/en-us/help/4527377/)** |  |  |  |
 | | Microsoft R Open     | [SRO_3.3.3.1400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2073898&clcid=1033)| パッケージ内のバイナリが署名されました。 |
 | | R Server      |[SRS_9.2.0.1400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2069739&clcid=1033)| パッケージ内のバイナリが署名されました。 |
 | | Microsoft Python Open     | [SPO_9.2.0.1400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2073897&clcid=1033)| パッケージ内のバイナリが署名されました。 |

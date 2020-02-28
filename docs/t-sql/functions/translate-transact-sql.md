@@ -16,12 +16,12 @@ ms.assetid: 0426fa90-ef6d-4d19-8207-02ee59f74aec
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 025aaad5c92a448114355c8700aee1b6bc0a7d2f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 374e9c1ba9bd93900e8a6677984f5e0e63a7c454
+ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68098830"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "77173584"
 ---
 # <a name="translate-transact-sql"></a>TRANSLATE (Transact-SQL)
 
@@ -49,9 +49,11 @@ TRANSLATE ( inputString, characters, translations)
 
 ## <a name="remarks"></a>解説
 
-`TRANSLATE`characters*式と*translations *式の長さが異なる場合、* はエラーを返します。 `TRANSLATE` は、いずれかの引数が NULL の場合は NULL を返します。  
+*characters* 式と *translations* 式の長さが異なる場合、`TRANSLATE` はエラーを返します。 `TRANSLATE` は、いずれかの引数が NULL の場合は NULL を返します。  
 
-`TRANSLATE` 関数の動作は、複数の [REPLACE](../../t-sql/functions/replace-transact-sql.md) 関数を使用した場合と似ています。 ただし、`TRANSLATE` では文字が複数回置き換えられることはありません。 これは、使用するたびに関連するすべての文字が置き換えられる複数の `REPLACE` 関数とは異なります。 
+`TRANSLATE` 関数の動作は、複数の [REPLACE](../../t-sql/functions/replace-transact-sql.md) 関数を使用した場合と似ています。 ただし、`TRANSLATE` では `inputString` 内の個々の文字が複数回置き換えられることはありません。 `characters` パラメーター内の 1 つの値で、`inputString` 内の複数の文字を置き換えることができます。 
+
+これは、複数の `REPLACE` 関数の動作とは異なります。関数を呼び出すごとに、前回の入れ子になった `REPLACE` 関数呼び出しによって置き換えられている場合であっても、関連するすべての文字が置き換えられるためです。 
 
 `TRANSLATE` は常に SC 照合順序を認識しています。
 

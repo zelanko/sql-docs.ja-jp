@@ -18,12 +18,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8bf76e0929dea69758b1f9152af0df8f3170227d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: cb7ac494a8a87b0ac5f2f6692763d526b7f26af6
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75235203"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77256665"
 ---
 # <a name="secondary-to-primary-replica-readwrite-connection-redirection-always-on-availability-groups"></a>セカンダリ レプリカからプライマリ レプリカへの読み取り/書き込み接続のリダイレクト (Always On 可用性グループ)
 
@@ -46,13 +46,13 @@ ms.locfileid: "75235203"
 セカンダリ レプリカに読み取り/書き込み接続要求をリダイレクトするには:
 * セカンダリ レプリカがオンラインである必要があります。 
 * レプリカの仕様の `PRIMARY_ROLE` に `READ_WRITE_ROUTING_URL` が含まれている必要があります。
-* 接続文字列に `ApplicationIntent` として `ReadWrite` が定義されている必要があります (これは既定値です)。
+* 接続文字列は、`ApplicationIntent` を `ReadWrite` として定義するか、または `ApplicationIntent` を設定せずに既定値 (`ReadWrite`) を有効にすることによって、`ReadWrite` とする必要があります。
 
 ## <a name="set-read_write_routing_url-option"></a>READ_WRITE_ROUTING_URL オプションを設定する
 
 読み取り/書き込み接続を構成するには、AG を作成するときに、プライマリ レプリカに対して `READ_WRITE_ROUTING_URL` を設定する必要があります。 
 
-[!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] では、`READ_WRITE_ROUTING_URL` 仕様に `<add_replica_option>` が追加されています。 次のトピックを参照してください。 
+[!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] では、`<add_replica_option>` 仕様に `READ_WRITE_ROUTING_URL` が追加されています。 次のトピックを参照してください。 
 
 * [CREATE AVAILABILITY GROUP](../../../t-sql/statements/create-availability-group-transact-sql.md)
 * [ALTER AVAILABILITY GROUP](../../../t-sql/statements/alter-availability-group-transact-sql.md)

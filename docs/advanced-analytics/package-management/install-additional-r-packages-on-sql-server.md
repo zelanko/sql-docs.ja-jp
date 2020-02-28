@@ -10,12 +10,12 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e9435c52cc0bf318291d38a2511f496c818c2fd6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 0e28d62292c8bcc4b98d8991fbf4bd8708bbbc76
+ms.sourcegitcommit: 867b7c61ecfa5616e553410ba0eac06dbce1fed3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74479429"
+ms.lasthandoff: 02/22/2020
+ms.locfileid: "77558376"
 ---
 # <a name="install-new-r-packages-with-sqlmlutils"></a>sqlmlutils で新しい R パッケージをインストールする
 
@@ -129,13 +129,15 @@ SQL Server への接続に使用するクライアント コンピューター�
 
 1. クライアント コンピューターで RStudio を開き、新しい **R スクリプト** ファイルを作成します。
 
-1. 次の R スクリプトを使用して、**sqlmlutils** を使って **glue** パッケージをインストールします。 ご自身の SQL Server データベース接続情報に置き換えます (Windows 認証を使用しない場合は、`uid` パラメーターと `pwd` パラメーターを追加します)。
+1. 次の R スクリプトを使用して、**sqlmlutils** を使って **glue** パッケージをインストールします。 実際の SQL Server データベースの接続情報に置き換えてください。
 
    ```R
    library(sqlmlutils)
    connection <- connectionInfo(
-     server= "yourserver",
-     database = "yourdatabase")
+     server   = "server",
+     database = "database",
+     uid      = "username",
+     pwd      = "password")
 
    sql_install.packages(connectionString = connection, pkgs = "glue", verbose = TRUE, scope = "PUBLIC")
    ```
@@ -146,7 +148,7 @@ SQL Server への接続に使用するクライアント コンピューター�
 ### <a name="add-the-package-offline"></a>パッケージをオフラインで追加する
 
 クライアント コンピューターがインターネットに接続されていない場合は、インターネットにアクセスできるコンピューターを使用して、**miniCRAN** を使って **glue** パッケージをダウンロードできます。 次に、パッケージをオフラインでインストールできるクライアント コンピューターにパッケージをコピーします。
-[miniCRAN](create-a-local-package-repository-using-minicran.md#install-minicran) のインストールについては、「**miniCRAN をインストールする**」を参照してください。
+**miniCRAN** のインストールについては、「[miniCRAN をインストールする](create-a-local-package-repository-using-minicran.md#install-minicran)」を参照してください。
 
 インターネットに接続されているコンピューターでの操作:
 

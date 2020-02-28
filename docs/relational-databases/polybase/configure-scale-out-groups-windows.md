@@ -8,12 +8,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: d686cbe2fb314a59085adee76b3bbad22fcea0fc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: dfc8560c9834d920a132a54587ba80947db9425d
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "72906885"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77256755"
 ---
 # <a name="configure-polybase-scale-out-groups-on-windows"></a>Windows 上で PolyBase スケールアウト グループを構成する
 
@@ -51,7 +51,7 @@ ms.locfileid: "72906885"
   
    - PQTH4A-CMP02  
   
-2. ドメイン アカウント: *PQTH4A\PolyBaseUser*  
+2. ドメイン アカウント:*PQTH4A\PolyBaseUse*r  
 
 ## <a name="install-sql-server-with-polybase-on-all-machines"></a>すべてのマシンに、PolyBase を使用する SQL Server をインストールする
 
@@ -61,7 +61,7 @@ ms.locfileid: "72906885"
   
 3. [サーバーの構成] ページで、SQL Server PolyBase エンジンと SQL Server PolyBase Data Movement サービス用に**ドメイン アカウント** PQTH4A\PolyBaseUser を使用します。
   
-4. [PolyBase の構成] ページで、 **[PolyBase スケール アウト グループの一部として、SQL Server インスタンスを使用します]** オプションを選択します。 これにより、ファイアウォールが開かれて、PolyBase サービスへの着信接続が許可されます。
+4. [PolyBase の構成] ページで、 **[PolyBase スケール アウト グループの一部として、SQL Server インスタンスを使用します]** オプションを選択します。 これにより、ファイアウォールが開かれて、PolyBase サービスへの着信接続が許可されます。 ヘッド ノードが名前付きインスタンスの場合は、ヘッド ノードの Windows ファイアウォールに SQL Server ポートを手動で追加する必要があります。また、ヘッド ノードで SQL Browser を開始します。
   
 5. セットアップが完了したら、 **services.msc**を実行します。 SQL Server、PolyBase エンジン、および PolyBase データ移動サービスが実行されていることを確認します。
   
@@ -87,7 +87,7 @@ ms.locfileid: "72906885"
   
 4. PolyBase エンジンをシャット ダウンし、PolyBase データ移動サービスを再起動します。
   
-## <a name="optional-remove-a-compute-node"></a>省略可能: コンピューティング ノードを削除する  
+## <a name="optional-remove-a-compute-node"></a>省略可能:コンピューティング ノードを削除する  
   
 1. コンピューティング ノードの SQL Server (PQTH4A-CMP02) に接続します。
   

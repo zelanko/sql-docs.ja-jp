@@ -1,20 +1,20 @@
 ---
-title: Active Directory モードで SQL Server ビッグ データ クラスターを展開する
-titleSuffix: Deploy SQL Server Big Data Cluster in Active Directory mode
+title: Active Directory モードでの展開
+titleSuffix: SQL Server Big Data Cluster
 description: Active Directory ドメインで SQL Server ビッグ データ クラスターをアップグレードする方法について説明します。
 author: NelGson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 12/02/2019
+ms.date: 02/13/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e47af4ef20bc3dac6c61b9c5f851822348d36650
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: bd8e571417e7b2171dc135e986fa77f1f0eff089
+ms.sourcegitcommit: 10ab8d797a51926e92aec977422b1ee87b46286d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75253106"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77544879"
 ---
 # <a name="deploy-big-data-clusters-2019-in-active-directory-mode"></a>Active Directory モードで [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] を展開する
 
@@ -164,23 +164,23 @@ export DOMAIN_SERVICE_ACCOUNT_PASSWORD=<AD principal password>
 
 AD 統合には次のパラメーターが必要です: この記事の後半に出てくる `config replace` コマンドを使用し、`control.json` ファイルと `bdc.json` ファイルにこれらのパラメーターを追加します。 下の例ではすべて、サンプル ドメイン `contoso.local` が使用されています。
 
-- `security.ouDistinguishedName`: クラスターにより作成されたあらゆる AD アカウントが追加される組織単位 (OU) の識別名。 ドメインの名前が `contoso.local` の場合、OU の識別名は `OU=BDC,DC=contoso,DC=local` です。
+- `security.activeDirectory.ouDistinguishedName`: クラスターにより作成されたあらゆる AD アカウントが追加される組織単位 (OU) の識別名。 ドメインの名前が `contoso.local` の場合、OU の識別名は `OU=BDC,DC=contoso,DC=local` です。
 
-- `security.dnsIpAddresses`: ドメイン コントローラーの IP アドレスの一覧。
+- `security.activeDirectory.dnsIpAddresses`: ドメイン コントローラーの IP アドレスの一覧。
 
-- `security.domainControllerFullyQualifiedDns`:ドメイン コントローラーの FQDN の一覧。 FQDN には、ドメイン コントローラーのコンピューター名またはホスト名が含まれています。 複数のドメイン コントローラーがある場合、ここで一覧を指定できます。 例: `HOSTNAME.CONTOSO.LOCAL`
+- `security.activeDirectory.domainControllerFullyQualifiedDns`:ドメイン コントローラーの FQDN の一覧。 FQDN には、ドメイン コントローラーのコンピューター名またはホスト名が含まれています。 複数のドメイン コントローラーがある場合、ここで一覧を指定できます。 例: `HOSTNAME.CONTOSO.LOCAL`
 
-- `security.realm` **省略可能なパラメーター**: ほとんどの場合、領域はドメイン名と同じです。 同じでない場合、このパラメーターを使用し、領域の名前を定義します (例: `CONTOSO.LOCAL`)。
+- `security.activeDirectory.realm` **省略可能なパラメーター**: ほとんどの場合、領域はドメイン名と同じです。 同じでない場合、このパラメーターを使用し、領域の名前を定義します (例: `CONTOSO.LOCAL`)。
 
-- `security.domainDnsName`:ドメインの名前 (例: `contoso.local`)。
+- `security.activeDirectory.domainDnsName`:ドメインの名前 (例: `contoso.local`)。
 
-- `security.clusterAdmins`:このパラメーターは、**1 つの AD グループ**を受け取ります。 このグループのメンバーには、クラスターの管理者権限が与えられます。 これは、SQL Server で sysadmin 権限が、HDFS でスーパーユーザー権限が、Controller で管理者権限が与えられることを意味します。 **デプロイを開始する前に、このグループが AD に存在する必要があることに注意してください。また、このグループを Active Directory の DomainLocal にスコープ指定できないことにも注意してください。ドメイン ローカルにスコープ指定されたグループではデプロイが失敗します。**
+- `security.activeDirectory.clusterAdmins`:このパラメーターは、**1 つの AD グループ**を受け取ります。 このグループのメンバーには、クラスターの管理者権限が与えられます。 これは、SQL Server で sysadmin 権限が、HDFS でスーパーユーザー権限が、Controller で管理者権限が与えられることを意味します。 **デプロイを開始する前に、このグループが AD に存在する必要があることに注意してください。また、このグループを Active Directory の DomainLocal にスコープ指定できないことにも注意してください。ドメイン ローカルにスコープ指定されたグループではデプロイが失敗します。**
 
-- `security.clusterUsers`:ビッグ データ クラスター内で通常のユーザー (管理者権限なし) となる AD グループの一覧。 **デプロイを開始する前に、これらのグループが AD に存在する必要があることに注意してください。また、これらのグループを Active Directory の DomainLocal にスコープ指定できないことにも注意してください。ドメイン ローカルにスコープ指定されたグループではデプロイが失敗します。**
+- `security.activeDirectory.clusterUsers`:ビッグ データ クラスター内で通常のユーザー (管理者権限なし) となる AD グループの一覧。 **デプロイを開始する前に、これらのグループが AD に存在する必要があることに注意してください。また、これらのグループを Active Directory の DomainLocal にスコープ指定できないことにも注意してください。ドメイン ローカルにスコープ指定されたグループではデプロイが失敗します。**
 
-- `security.appOwners` **省略可能なパラメーター**: あらゆるアプリケーションを作成、削除、実行する権限が与えられる AD グループの一覧。 **デプロイを開始する前に、これらのグループが AD に存在する必要があることに注意してください。また、これらのグループを Active Directory の DomainLocal にスコープ指定できないことにも注意してください。ドメイン ローカルにスコープ指定されたグループではデプロイが失敗します。**
+- `security.activeDirectory.appOwners` **省略可能なパラメーター**: あらゆるアプリケーションを作成、削除、実行する権限が与えられる AD グループの一覧。 **デプロイを開始する前に、これらのグループが AD に存在する必要があることに注意してください。また、これらのグループを Active Directory の DomainLocal にスコープ指定できないことにも注意してください。ドメイン ローカルにスコープ指定されたグループではデプロイが失敗します。**
 
-- `security.appReaders` **省略可能なパラメーター**: あらゆるアプリケーションを実行する権限を持つ AD グループの一覧。 **デプロイを開始する前に、これらのグループが AD に存在する必要があることに注意してください。また、これらのグループを Active Directory の DomainLocal にスコープ指定できないことにも注意してください。ドメイン ローカルにスコープ指定されたグループではデプロイが失敗します。**
+- `security.activeDirectory.appReaders` **省略可能なパラメーター**: あらゆるアプリケーションを実行する権限を持つ AD グループの一覧。 **デプロイを開始する前に、これらのグループが AD に存在する必要があることに注意してください。また、これらのグループを Active Directory の DomainLocal にスコープ指定できないことにも注意してください。ドメイン ローカルにスコープ指定されたグループではデプロイが失敗します。**
 
 **AD グループのスコープを確認する方法:** 
 AD グループのスコープを確認して DomainLocal であるかどうかを判定するための[手順については、ここをクリック](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps)してください。
@@ -193,7 +193,22 @@ azdata bdc config init --source kubeadm-prod  --target custom-prod-kubeadm
 
 `control.json` ファイルで上記のパラメーターを設定するには、次の `azdata` コマンドを使用します。 これらのコマンドによって展開前に構成が置換され、独自の値が提供されます。
 
-下の例では、展開構成の AD 関連パラメーター値が置換されます。下のドメインの詳細はサンプルの値です。
+ > [!IMPORTANT]
+ > SQL Server 2019 CU2 リリースでは、展開プロファイルのセキュリティ構成セクションの構造が多少変更され、Active Directory 関連の設定はすべて、*control.json* ファイル内の *security* の下にある json ツリー内の新しい *activeDirectory* 内にあります。
+
+次の例は、SQL Server 2019 CU2 の使用に基づいています。 この例は、展開構成内の AD 関連のパラメーター値を置き換える方法を示しています。下のドメインの詳細はサンプルの値です。
+
+```bash
+azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.activeDirectory.ouDistinguishedName=OU\=bdc\,DC\=contoso\,DC\=local"
+azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.activeDirectory.dnsIpAddresses=[\"10.100.10.100\"]"
+azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.activeDirectory.domainControllerFullyQualifiedDns=[\"HOSTNAME.CONTOSO.LOCAL\"]"
+azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.activeDirectory.domainDnsName=contoso.local"
+azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.activeDirectory.clusterAdmins=[\"bdcadminsgroup\"]"
+azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.activeDirectory.clusterUsers=[\"bdcusersgroup\"]"
+#Example for providing multiple clusterUser groups: [\"bdcusergroup1\",\"bdcusergroup2\"]
+```
+
+同様に、SQL Server 2019 CU2 以前のリリースでは、次のことを実行できます。
 
 ```bash
 azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.ouDistinguishedName=OU\=bdc\,DC\=contoso\,DC\=local"

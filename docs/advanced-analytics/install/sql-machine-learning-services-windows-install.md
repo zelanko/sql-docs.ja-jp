@@ -3,18 +3,18 @@ title: Windows へのインストール
 description: Windows に SQL Server Machine Learning Services をインストールする方法について説明します。 Machine Learning Services を使用して、データベース内で Python または R スクリプトを実行できます。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/23/2020
+ms.date: 02/20/2020
 ms.topic: conceptual
 author: cawrites
 ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 26fe15ff88a52b6673d5e7de7dcad3a047fca6ba
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 9ce47719415c97f7e9e6cecb27768717710537d4
+ms.sourcegitcommit: 87b932dc4b603a35a19f16e2c681b6a8d4df1fec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76891730"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77507592"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-windows"></a>Windows に SQL Server Machine Learning Services (Python と R) をインストールする
 
@@ -40,7 +40,8 @@ Windows に SQL Server Machine Learning Services をインストールする方�
   + 外部ライブラリで実行されている R および Python スクリプトは、SQL Server で管理できないため、リソースの競合が発生します。
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
-+ Machine Learning Services は、既定で SQL Server ビッグ データ クラスターにインストールされます。 ビッグ データ クラスターを使用する場合、この記事の手順を実行する必要はありません。 詳細については、[ビッグ データ クラスターでの Machine Learning Services (Python および R) の使用](../../big-data-cluster/machine-learning-services.md)に関するページを参照してください。
+> [!NOTE]
+> Machine Learning Services は、既定で **SQL Server ビッグ データ クラスター**にインストールされます。 **ビッグ データ クラスター**を使用する場合、この記事の手順を実行する必要はありません。 詳細については、[ビッグ データ クラスターでの Machine Learning Services (Python および R) の使用](../../big-data-cluster/machine-learning-services.md)に関するページを参照してください。
 ::: moniker-end
 
 > [!IMPORTANT]

@@ -5,16 +5,16 @@ description: SQL Server ビッグ データ クラスターを新しいリリー
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 01/07/2020
+ms.date: 02/13/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: afb12477dd220e71cf2cf97d6a13b54aa2d35be4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 2f8ca3e42221387470ee4fc4cbd6873b526bc8b7
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75831835"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77256873"
 ---
 # <a name="how-to-upgrade-big-data-clusters-2019"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]をアップグレードする方法
 
@@ -76,7 +76,7 @@ ms.locfileid: "75831835"
 >最新のイメージ タグは、[SQL Server 2019 ビッグ データ クラスターのリリース ノート](release-notes-big-data-cluster.md)で入手できます。
 
 >[!IMPORTANT]
->プライベート リポジトリを使用して BDC を展開またはアップグレードするためにイメージを事前にプルする場合は、現在のビルド イメージとターゲット ビルド イメージがプライベート リポジトリ内にあることを確認します。 これにより、必要に応じて正常にロールバックすることができます。 また、元の展開以降にプライベート リポジトリの資格情報を変更した場合は、アップグレードする前に Kubernetes で対応するシークレットを更新します。 DOCKER_PASSWORD と DOCKER_USERNAME の環境変数を使用した資格情報の更新はサポートされていません。 シークレットを更新するには、[kubectl edit secrets](https://kubernetes.io/docs/concepts/configuration/secret/#editing-a-secret) を使用します。 現在のビルドとターゲット ビルドに異なるプライベート リポジトリを使用したアップグレードはサポートされていません。
+>プライベート リポジトリを使用して BDC を展開またはアップグレードするためにイメージを事前にプルする場合は、現在のビルド イメージとターゲット ビルド イメージがプライベート リポジトリ内にあることを確認します。 これにより、必要に応じて正常にロールバックすることができます。 また、最初の展開以降にプライベート リポジトリの >資格情報を変更した場合は、対応する環境変数 DOCKER_PASSWORD および >DOCKER_USERNAME を更新します。 現在のビルドとターゲット ビルドに異なるプライベート リポジトリを使用したアップグレードはサポートされていません。
 
 ### <a name="increase-the-timeout-for-the-upgrade"></a>アップグレードのタイムアウトを増やす
 
@@ -93,7 +93,15 @@ ms.locfileid: "75831835"
    Control plane upgrade failed. Failed to upgrade controller.
    ```
 
-アップグレードのタイムアウトを増やすには、アップグレード構成マップを編集します。 アップグレード構成マップを編集するには:
+アップグレードのタイムアウトを増やすには、 **--controller-timeout** と **--component-timeout** パラメーターを使用して、アップグレードの発行時に高い値を指定します。 このオプションは、SQL Server 2019 CU2 リリース以降でのみ使用できます。 次に例を示します。
+
+   ```bash
+   azdata bdc upgrade -t 2019-CU2-ubuntu-16.04 --controller-timeout=40 --component-timeout=40 --stability-threshold=3
+   ```
+**--controller-timeout** では、コントローラーまたはコントローラー db のアップグレードが完了するまでの待機時間を分単位で指定します。
+**--component-timeout** では、これ以降のアップグレードの各フェーズの完了時間を指定します。
+
+SQL Server 2019 CU2 リリースより前の場合にアップグレードのタイムアウトを増やすには、アップグレード構成マップを編集します。 アップグレード構成マップを編集するには:
 
 次のコマンドを実行します。
 
@@ -104,7 +112,7 @@ ms.locfileid: "75831835"
 次のフィールドを編集します。
 
    **controllerUpgradeTimeoutInMinutes** コントローラーまたはコントローラー db のアップグレードが完了するまでの待機時間を分単位で指定します。 既定値は 5 です。 20 以上に更新します。
-   **totalUpgradeTimeoutInMinutes**:コントローラーとコントローラー db の両方のアップグレード (コントローラー+ コラボレーション db のアップグレード) が完了するまでの合計時間を指定します。既定値は 10 です。 40 以上に更新します。
+   **totalUpgradeTimeoutInMinutes**:コントローラーとコントローラー db の両方のアップグレード (コントローラー + コントローラー db のアップグレード) が完了するまでの合計時間を指定します。既定値は 10 です。 40 以上に更新します。
    **componentUpgradeTimeoutInMinutes**:アップグレードの後続の各フェーズが完了するまでの時間を指定します。 既定値は 30 です。 45 に更新します。
 
 保存して終了します。

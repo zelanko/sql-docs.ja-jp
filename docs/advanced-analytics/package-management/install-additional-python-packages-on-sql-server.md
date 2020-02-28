@@ -9,12 +9,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9d759921ac82f34156856b587161f44c64269ea0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 83635ac9cb5b35aba25ace6947bc1281d468cb65
+ms.sourcegitcommit: 867b7c61ecfa5616e553410ba0eac06dbce1fed3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76929899"
+ms.lasthandoff: 02/22/2020
+ms.locfileid: "77558316"
 ---
 # <a name="install-python-packages-with-sqlmlutils"></a>sqlmlutils を使用した Python パッケージのインストール
 
@@ -37,7 +37,7 @@ ms.locfileid: "76929899"
 
 ### <a name="other-considerations"></a>その他の考慮事項
 
-+ パッケージは Python 3.5 に準拠し、Windows で実行する必要があります。
++ パッケージは、使用している Python のバージョンに準拠している必要があります。 各 SQL Server バージョンに含まれている Python のバージョンの詳細については、[「SQL Server Machine Learning Services とは (Python と R)」の「Python と R のバージョン」](../what-is-sql-server-machine-learning.md#versions)を参照してください。
 
 + Python パッケージ ライブラリは SQL Server インスタンスの Program Files フォルダー内にあります。既定では、このフォルダーにインストールするには管理者権限が必要です。 詳細については、[パッケージ ライブラリの場所](../package-management/python-package-information.md#default-python-library-location)に関するページを参照してください。
 
@@ -64,7 +64,7 @@ ms.locfileid: "76929899"
 
    ```console
    pip install "pymssql<3.0"
-   pip install --upgrade --upgrade-strategy only-if-needed c:\temp\sqlmlutils_0.7.2.zip
+   pip install --upgrade --upgrade-strategy only-if-needed c:\temp\sqlmlutils-0.7.2.zip
    ```
 
 ## <a name="add-a-python-package-on-sql-server"></a>SQL Server への Python パッケージのインストール
@@ -77,11 +77,11 @@ SQL Server への接続に使用するクライアント コンピューター�
 
 1. クライアント コンピューターで、**Python** または Python 環境を開きます。
 
-1. 次のコマンドを使用して、**テキスト ツール** パッケージをインストールします。 ご自身の SQL Server データベース接続情報に置き換えます (Windows 認証を使用しない場合は、`uid` パラメーターと `pwd` パラメーターを追加します)。
+1. 次のコマンドを使用して、**テキスト ツール** パッケージをインストールします。 実際の SQL Server データベースの接続情報に置き換えてください。
 
    ```python
    import sqlmlutils
-   connection = sqlmlutils.ConnectionInfo(server="yourserver", database="yourdatabase")
+   connection = sqlmlutils.ConnectionInfo(server="server", database="database", uid="username", pwd="password")
    sqlmlutils.SQLPackageManager(connection).install("text-tools")
    ```
 
@@ -137,7 +137,7 @@ print(first_match)
 sqlmlutils.SQLPackageManager(connection).uninstall("text-tools")
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 + SQL Server Machine Learning Services にインストールされている Python パッケージに関する情報を表示するには、「[Get Python package information](../package-management/python-package-information.md)」(Python パッケージ情報の取得) を参照してください。
 

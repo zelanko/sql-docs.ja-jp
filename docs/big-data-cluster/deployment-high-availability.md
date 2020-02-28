@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 31e5d851b6c049bdd7fd81a4c90be1de7ceff77f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 5d6edf4115156bda58c44615e99ffcb19b87913f
+ms.sourcegitcommit: 38c61c7e170b57dddaae5be72239a171afd293b9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76115422"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77259213"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-high-availability"></a>高可用性を使用して SQL Server ビッグ データ クラスターを展開する
 
@@ -197,7 +197,7 @@ SQL Server Master Readable Secondary Replicas  11.11.111.11,11111  sql-server-ma
 
 ビッグ データ クラスターの SQL Server マスターの可用性グループに関する既知の問題と制限事項は、次のとおりです。
 
-- `RESTORE DATABSE`、`CREATE DATABASE FROM SNAPSHOT` などの `CREATE DATABASE` 以外のワークフローの結果として作成されたデータベースは、可用性グループに自動的に追加されません。 [インスタンスに接続](#instance-connect)し、データベースを可用性グループに手動で追加します。
+- `RESTORE DATABASE`、`CREATE DATABASE FROM SNAPSHOT` などの `CREATE DATABASE` 以外のワークフローの結果として作成されたデータベースは、可用性グループに自動的に追加されません。 [インスタンスに接続](#instance-connect)し、データベースを可用性グループに手動で追加します。
 - `sp_configure` でのサーバー構成設定の実行などの特定の操作では、可用性グループ `master` ではなく、SQL Server インスタンス `master` データベースへの接続が必要になります。 対応するプライマリ エンドポイントを使用することはできません。 [指示](#instance-connect)に従ってエンドポイントを公開し、SQL Server インスタンスに接続して `sp_configure` を実行します。 SQL 認証を使用できるのは、エンドポイントを手動で公開して SQL Server インスタンス `master` データベースに接続する場合のみです。
 - ビッグ データ クラスターが展開されるときに、高可用性構成が作成される必要があります。 展開後に可用性グループで高可用性構成を有効にすることはできません。
 - 包含 msdb データベースは可用性グループに含まれており、SQL Agent ジョブはレプリケートされますが、ジョブはスケジュールごとにトリガーされません。 回避策として、[SQL Server の各インスタンスに接続](#instance-connect)し、インスタンス msdb にジョブを作成ます。

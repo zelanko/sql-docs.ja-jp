@@ -10,22 +10,22 @@ author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: pmasl
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 4b6662705a3b9e9f946d17b3edfbe158a8ac4f53
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: ac74f1af3d570863bafae7185d6d4ce653f1f036
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75325554"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77256731"
 ---
 # <a name="what-are-extended-security-updates-for-sql-server"></a>SQL Server 用の延長セキュリティ更新プログラムとは
-
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 この記事では、SQL Server レジストリ サービスを使用して [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] と [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] の延長セキュリティ更新プログラムを受け取る方法について説明します。 その他のオプションの詳細については、[サポート終了オプション](sql-server-end-of-life-overview.md)に関するページを参照してください。 
 
 ## <a name="overview"></a>概要
-
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のサポート ライフサイクルが終了したら、サーバーの延長セキュリティ更新プログラム (ESU) サブスクリプションにサインアップして、新しいバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にアップグレードまたは [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] に移行する準備ができるまで、最大 3 年間保護された状態を維持することができます。 このサブスクリプションは、オンプレミスのサーバー用にご購入いただくことも、オンプレミスのサーバーを Azure Virtual Machines に移行することによって無料でご利用いただくこともできます。 次に、Azure portal で **SQL Server レジストリ** サービスを使用して、サポートが終了した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを登録し、更新プログラムが利用可能になったときにダウンロードすることができます。 
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のサポート ライフサイクルが終了したら、サーバーの延長セキュリティ更新プログラム (ESU) サブスクリプションにサインアップして、新しいバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にアップグレードまたは [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] に移行する準備ができるまで、最大 3 年間保護された状態を維持することができます。 このサブスクリプションは、次の 2 つの方法で利用できます。
+-  オンプレミスまたはホスト環境のサーバーについて購入できます。
+-  オンプレミスのサーバーを Azure Virtual Machines に移行する場合は無料であり、既定で有効になります。 次に、Azure portal で **SQL Server レジストリ** サービスを使用して、サポートが終了した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを登録し、更新プログラムが利用可能になったときにダウンロードすることができます。 
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを保護された状態に保つために、ESU 修正プログラムが利用可能になったらすぐに適用することをお勧めします。 ESU の詳細については、[ESU の FAQ のページ](https://www.microsoft.com/cloud-platform/extended-security-updates)を参照してください。
 
@@ -33,9 +33,9 @@ ms.locfileid: "75325554"
 > [SQL Server 2008 および 2008 R2 の延長サポートは 2019 年 7 月 10 日をもって終了しました](https://www.microsoft.com/cloud-platform/windows-sql-server-2008)。 これらのバージョンについては、この記事で説明されている延長セキュリティ更新プログラムまたはその他の移行オプションを使用することをご検討ください。 詳細については、[サポート終了オプション](sql-server-end-of-life-overview.md)に関するページを参照してください。
 
 ## <a name="what-are-extended-security-updates"></a>延長セキュリティ更新プログラムとは
-[!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] および [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 用の延長セキュリティ更新プログラム (ESU) には、延長サポート更新プログラムのサブスクリプションをご購入いただいたお客様に対する、セキュリティ更新プログラムの提供が含まれています。 
+[!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] および [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] 用の延長セキュリティ更新プログラム (ESU) には、延長サポート更新プログラムのサブスクリプションをご購入いただいたお客様に対する、セキュリティ更新プログラムの提供が含まれています。
 
-セキュリティの脆弱性が検出され、[Microsoft Security Response Center (MSRC)](https://portal.msrc.microsoft.com) によって**クリティカル**と評価されると、ESU が**利用可能な場合に配布されます**。 そのため、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ESU に定期的なリリース周期はありません。 
+ESU は、セキュリティの脆弱性が検出され、[Microsoft Security Response Center (MSRC)](https://portal.msrc.microsoft.com) によって**クリティカル**と評価されると、**必要に応じて**利用可能になります。 そのため、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ESU に定期的なリリース周期はありません。
 
 ESU に含まれないもの:
 - 新機能
@@ -43,34 +43,39 @@ ESU に含まれないもの:
 - お客様のご要望による修正
 
 ### <a name="support"></a>サポート
-
 ESU にテクニカル サポートは含まれていませんが、オンプレミスを維持することを選択した場合は、[ソフトウェア アシュアランス](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default?activetab=software-assurance-default-pivot%3aprimaryr3)または [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] / [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] の Premier サポートや統合サポートなどのアクティブなサポート契約を使用して、ESU の対象となるワークロードのテクニカル サポートを受けることができます。 または、Azure でホスティングする場合は、Azure サポート プランを使用してテクニカル サポートを受けることができます。 
 
   > [!NOTE]
   > Microsoft では、ESU サブスクリプションの対象になっていない [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] および [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] インスタンス (オンプレミスとホスト環境の両方) に対してテクニカル サポートを提供することはできません。 
 
-## <a name="esu-availability"></a>ESU の使用可能性
+## <a name="esu-availability-and-deployment"></a>ESU の可用性とデプロイ
+ESU は、Azure、オンプレミス、またはホスト環境でワークロードを実行しているお客様にご利用いただけます。
 
-ESU は、Azure、オンプレミス、またはホスト環境でワークロードを実行しているお客様にご利用いただけます。 
+### <a name="azure-virtual-machines"></a>Azure Virtual Machines
+ワークロードを Azure Virtual Machines (IaaS) に移行すると、サポート終了後最大 3 年間、[!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] と [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] のセキュリティ更新プログラムにアクセスできます。仮想マシンの実行コストを上回る**追加料金はかかりません**。 お客様が Azure で延長セキュリティ更新プログラムを受け取るためにソフトウェア アシュアランスは必要ありません。 
 
-**Azure Virtual Machines**: ワークロードを Azure Virtual Machines (IaaS) に移行すると、サポート終了後最大 3 年間、[!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] と [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] のセキュリティ更新プログラムにアクセスできます。仮想マシンの実行コストを上回る**追加料金はかかりません**。 お客様が Azure で延長セキュリティ更新プログラムを受け取るためにソフトウェア アシュアランスは必要ありません。 
+**Windows Server 2008 R2 以降**で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行している Azure Virtual Machines では、[自動修正](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching)を使用するよう仮想マシンが構成されている場合、既存の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新プログラム チャネルを通じて自動的に ESU を受け取ります。
 
-**オンプレミスまたはホスト環境**: ソフトウェア アシュアランスをご利用の場合は、Enterprise Agreement (EA)、エンタープライズ サブスクリプション契約 (EAS)、サーバーおよびクラウド加入契約 (SCE)、または教育ソリューション加入契約 (EES) のもとで、サポート終了日から最大 3 年間の延長セキュリティ更新プログラムをご購入いただけます。 延長セキュリティ更新プログラムは、対象にする必要があるサーバー用にのみご購入いただけます。 延長セキュリティ更新プログラムは、Microsoft または Microsoft のライセンス パートナーから直接お買い求めいただけます。 
+**Windows Server 2008** 上で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行している Azure Virtual Machines (VM)、または **[自動修正](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching)が構成されて*いない*** 仮想マシンの場合、「[オンプレミスまたはホスト環境](#on-premises-or-hosted-environments)」セクションの説明に従って ESU 修正プログラムを手動でダウンロードして展開する必要があります。
+
+### <a name="on-premises-or-hosted-environments"></a>オンプレミスまたはホスト環境
+ソフトウェア アシュアランスをご利用の場合は、Enterprise Agreement (EA)、エンタープライズ サブスクリプション契約 (EAS)、サーバーおよびクラウド加入契約 (SCE)、または教育ソリューション加入契約 (EES) のもとで、サポート終了日から最大 3 年間の延長セキュリティ更新プログラム (ESU) サブスクリプションをご購入いただけます。 ESU は、対象にする必要があるサーバー用にのみご購入いただけます。 ESU は、Microsoft または Microsoft のライセンス パートナーから直接お買い求めいただけます。 
+
+ESU 契約の対象となるお客様は、次の手順に従って ESU 修正プログラムをダウンロードして展開する必要があります。
+-  **[SQL Server レジストリ](#create-sql-server-registry)** に[対象のインスタンスを登録](#register-instances-for-esus)します。 
+-  登録が完了すると、ESU 修正プログラムがリリースされるたびに、パッケージをダウンロードするためのダウンロード リンクが Azure portal に表示されます。 
+-  ダウンロードしたパッケージは、手動で、または組織内で使用されている Microsoft Endpoint Configuration Manager (旧称 System Center Configuration Manager) などの任意の更新プログラム オーケストレーション ソリューションを使用して、オンプレミスまたはホスト環境に展開できます。 
+
+> [!NOTE]
+> これは、自動更新プログラムを受信するように構成されていない Azure Stack および Azure Virtual Machines についても、お客様が従う必要があるプロセスです。
 
 詳細については、「[拡張セキュリティ更新プログラムのよくある質問 (FAQ)](https://www.microsoft.com/cloud-platform/extended-security-updates)」を参照してください。 
 
-## <a name="esu-delivery"></a>ESU の配信
-
-**Azure Virtual Machines**: Windows Server 2008 R2 以降で運用している [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のお客様は、[自動修正](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching)を使用して、既存の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新チャネルを通じて自動的に ESU を受け取ります。 Azure の仮想マシンが Windows Server 2008 上で実行されているか、自動修正を行うように構成 "_されていない_" 場合は、オンプレミスの登録とダウンロードの方法を手動で実装する必要があります。  
-
-**オンプレミスまたはホスト環境**: 延長セキュリティ更新プログラム契約の対象となるお客様は、**SQL Server レジストリ**に[対象のインスタンスを登録](#register-instances-for-esus)できます。 登録が完了すると、ESU が利用可能なときはいつでも、お客様は Azure portal にあるダウンロード リンクを使用して ESU パッケージをダウンロードし、オンプレミス環境またはホスト環境に展開することができます。 これは、自動更新プログラムを受信するように構成されていない Azure Stack および Azure Virtual Machines についても、お客様が従う必要があるプロセスです。
-
 ## <a name="create-sql-server-registry"></a>SQL Server レジストリの作成
-
 ESU が有効な [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを登録するには、まず Azure portal で SQL Server レジストリを作成する必要があります。 
 
-  > [!IMPORTANT]
-  > [自動更新](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching)用に構成された Azure 仮想マシンを実行している場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを ESU 用に登録する必要はありません。 
+> [!IMPORTANT]
+> [自動更新](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching)用に構成された Azure 仮想マシンを実行している場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを ESU 用に登録する必要はありません。 
 
 SQL Server レジストリを作成するには、次の手順に従います。
 
@@ -293,7 +298,7 @@ Azure では現在のところ、共有ストレージのクラスタリング�
 
 Azure Virtual Machines で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のパフォーマンスを最適化する方法については、[SQL Server 最適化ガイド](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-performance)を参照してください。 
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [SQL Server 2008/2008 R2 のライフサイクルのページ](https://support.microsoft.com/lifecycle/search?alpha=sql%20server%202008)
 - [SQL Server 2008/2008 R2 のサポート終了のページ](https://aka.ms/sqleos)

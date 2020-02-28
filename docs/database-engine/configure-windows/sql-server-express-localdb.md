@@ -14,14 +14,14 @@ helpviewer_keywords:
 - file database
 - LocalDB
 ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 66d7ac0e15ebfee2c79a90f8c5041ba899dbff93
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+author: MashaMSFT
+ms.author: mathoma
+ms.openlocfilehash: 355cb8b80e4a27a7f58bb42dd37ca9b91059fa25
+ms.sourcegitcommit: cebf41506a28abfa159a5dd871b220630c4c4504
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "73926038"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77479723"
 ---
 # <a name="sql-server-express-localdb"></a>SQL Server Express LocalDB
 
@@ -38,11 +38,11 @@ LocalDB のインストールでは、[!INCLUDE[ssDEnoversion](../../includes/ss
  >[!TIP]
  > LocalDB は、Visual Studio の一部としてインストールすることもできます。 Visual Studio のインストール中に、SQL Server Express LocalDB が含まれている **[.NET デスクトップ開発]** ワークロードを選択します。
 
-- Azure アカウントをすでにお持ちですか? [作業を開始](https://azure.microsoft.com/services/virtual-machines/sql-server/)して、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] がインストール済みの仮想マシンをすぐに作成しましょう。
+- Azure アカウントをすでにお持ちですか? [作業を開始](https://azure.microsoft.com/services/virtual-machines/sql-server/)して、SQL Server がインストール済みの仮想マシンをすぐに起動します。
 
 ## <a name="install-localdb"></a>LocalDB をインストールする
 
-インストール ウィザードまたは SqlLocalDB.msi プログラムを使用して、LocalDB をインストールします。 LocalDB は、[!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)] をインストールするときのオプションです。 
+インストール ウィザードまたは SqlLocalDB.msi プログラムを使用して、LocalDB をインストールします。 LocalDB は SQL Server Express LocalDB をインストールするときのオプションです。 
  
 インストール時に **[Feature Selection/Shared Features]\(機能の選択/共有機能\)** ページで [LocalDB] を選択します。 主要な [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のバージョンごとに LocalDB のバイナリ ファイルのインストールが 1 つだけ表示されます。 複数の [!INCLUDE[ssDE](../../includes/ssde-md.md)] プロセスを開始することができ、すべてのプロセスが使用するバイナリは同じです。 LocalDB として開始された [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のインスタンスには、[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] と同じ制限があります。
 
@@ -112,7 +112,7 @@ REM Gather information about the instance of LocalDB
 
 |||
 |-|-|
-|Name|`LocalDBApp1`|
+|名前|`LocalDBApp1`|
 |Version|\<現在のバージョン>|
 |共有名|""|
 |所有者|"\<Windows ユーザー>"|
@@ -134,7 +134,7 @@ LocalDB のトラブルシューティングについては、「[Troubleshootin
 
 ## <a name="permissions"></a>アクセス許可
 
-[!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)] LocalDB のインスタンスは、ユーザーが自分で使用するために作成するインスタンスです。 コンピューター上のすべてのユーザーは、LocalDB のインスタンスを使用してデータベースを作成したり、ユーザー プロファイルの下にファイルを格納したり、資格情報の下でプロセスを実行したりできます。 既定では、LocalDB のインスタンスにアクセスできるのは、その所有者に制限されます。 LocalDB に含まれるデータは、データベース ファイルに対するファイル システム アクセス権によって保護されます。 ユーザー データベース ファイルが共有の場所に格納されている場合、その場所へのファイル システム アクセス権を持つユーザーであればだれでも、所有する LocalDB のインスタンスを使用してデータベースを開くことができます。 データベース ファイルがユーザー データ フォルダーなどの保護された場所に格納されている場合は、そのユーザーおよびそのフォルダーにアクセスできる管理者だけがデータベースを開くことができます。 LocalDB ファイルを開くことができる LocalDB のインスタンスは、一度に 1 つのみです。
+SQL Server Express LocalDB のインスタンスは、ユーザーが自分で使用するために作成するインスタンスです。 コンピューター上のすべてのユーザーは、LocalDB のインスタンスを使用してデータベースを作成したり、ユーザー プロファイルの下にファイルを格納したり、資格情報の下でプロセスを実行したりできます。 既定では、LocalDB のインスタンスにアクセスできるのは、その所有者に制限されます。 LocalDB に含まれるデータは、データベース ファイルに対するファイル システム アクセス権によって保護されます。 ユーザー データベース ファイルが共有の場所に格納されている場合、その場所へのファイル システム アクセス権を持つユーザーであればだれでも、所有する LocalDB のインスタンスを使用してデータベースを開くことができます。 データベース ファイルがユーザー データ フォルダーなどの保護された場所に格納されている場合は、そのユーザーおよびそのフォルダーにアクセスできる管理者だけがデータベースを開くことができます。 LocalDB ファイルを開くことができる LocalDB のインスタンスは、一度に 1 つのみです。
 
 >[!NOTE]
 >LocalDB は、常にユーザーのセキュリティ コンテキストに基づいて実行されます。つまり、LocalDB は、ローカル管理者グループの資格情報で実行されることはありません。 そのため、LocalDB インスタンスで使用されるすべてのデータベース ファイルは、ローカル管理者グループのメンバーシップを考慮することなく、所有するユーザーの Windows アカウントを使用してアクセスできる必要があります。

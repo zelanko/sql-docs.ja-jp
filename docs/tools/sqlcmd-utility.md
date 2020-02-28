@@ -27,12 +27,12 @@ ms.assetid: e1728707-5215-4c04-8320-e36f161b834a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 2ce739f026afc8f61e490cb359b23b7f61c931ee
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 413d8fffc505c8b2cfb5404e70cdd9f64cd150de
+ms.sourcegitcommit: 10ab8d797a51926e92aec977422b1ee87b46286d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75306685"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77544935"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd ユーティリティ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,8 +53,8 @@ ms.locfileid: "75306685"
 
 ## <a name="download-the-latest-version-of-sqlcmd-utility"></a>最新バージョンの sqlcmd ユーティリティをダウンロードする
 
-**[![ダウンロード](../ssdt/media/download.png) Microsoft Command Line Utilities 15.0 for SQL Server (x64) (2.6 MB) をダウンロードする](https://go.microsoft.com/fwlink/?linkid=2082790)**
-<br>**[![ダウンロード](../ssdt/media/download.png) Microsoft Command Line Utilities 15.0 for SQL Server (x86) (2.3 MB) をダウンロードする](https://go.microsoft.com/fwlink/?linkid=2082695)**
+**[![ダウンロード](../ssdt/media/download.png) Microsoft Command Line Utilities 15 for SQL Server (x64) をダウンロードする (2.6 MB)](https://go.microsoft.com/fwlink/?linkid=2082790)**
+<br>**[![ダウンロード](../ssdt/media/download.png) Microsoft Command Line Utilities 15 for SQL Server (x86) をダウンロードする (2.3 MB)](https://go.microsoft.com/fwlink/?linkid=2082695)**
 
 コマンドライン ツールは一般提供 (GA) ですが、[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] のインストーラー パッケージと共にリリースされています。
 
@@ -67,11 +67,11 @@ ms.locfileid: "75306685"
 新しいバージョンの SQLCMD では、SQL Database、SQL Data Warehouse、Always Encrypted 機能の Multi-Factor Authentication (MFA) のサポートを含め、Azure AD 認証がサポートされています。
 新しい BCP では、SQL Database と SQL Data Warehouse の Multi-Factor Authentication (MFA) のサポートを含め、Azure AD 認証がサポートされています。
 
-**システム要件** Windows 10、Windows 7、Windows 8、Windows 8.1、Windows Server 2008、Windows Server 2008 R2、Windows Server 2008 R2 SP1、Windows Server 2012、Windows Server 2012 R2 このコンポーネントには、[Windows インストーラー 4.5](https://www.microsoft.com/download/details.aspx?id=8483) と [Microsoft ODBC Driver 17.3.1.1 for SQL Server](https://www.microsoft.com/download/details.aspx?id=56567) の両方が必要です。
+**システム要件** Windows 10、Windows 7、Windows 8、Windows 8.1、Windows Server 2008、Windows Server 2008 R2、Windows Server 2008 R2 SP1、Windows Server 2012、Windows Server 2012 R2
+
+このコンポーネントには、[Windows インストーラー 4.5](https://www.microsoft.com/download/details.aspx?id=8483) と [Microsoft ODBC Driver for SQL Server 17](https://www.microsoft.com/download/details.aspx?id=56567) の両方が必要です。
  
 SQLCMD のバージョンを確認するには、`sqlcmd -?` コマンドを実行し、15.0.1300.359 以降のバージョンが使用されていることを確認します。
-
-
 
 > [!NOTE]
 > Always Encrypted (`-g`) と Azure Active Directory 認証 (`-G`) を利用するには、バージョン 13.1 以降が必要です。 (お使いのコンピューターには複数のバージョンの sqlcmd.exe がインストールされている可能性があります。 必ず正しいバージョンを使用してください。 バージョンを判断するには、 `sqlcmd -?`を実行します。)

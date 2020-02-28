@@ -1,7 +1,7 @@
 ---
 title: クエリ処理アーキテクチャ ガイド | Microsoft Docs
 ms.custom: ''
-ms.date: 02/24/2019
+ms.date: 02/14/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - row mode execution
 - batch mode execution
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: e5b890ff4a9d58f531f3a72e41e8280faf2511a3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+author: pmasl
+ms.author: pelopes
+ms.openlocfilehash: b6000c540d2847686fd8f14c4ae6a0926f8dbb72
+ms.sourcegitcommit: 1feba5a0513e892357cfff52043731493e247781
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76909752"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77466173"
 ---
 # <a name="query-processing-architecture-guide"></a>クエリ処理アーキテクチャ ガイド
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -127,12 +127,12 @@ GO
 
 1. パーサーが `SELECT` ステートメントをスキャンし、キーワード、式、演算子、識別子などの論理単位に分解します。
 2. 基になるデータを結果セットで必要な形式に変換する論理手順を記述するクエリ ツリーが構築されます。クエリ ツリーはシーケンス ツリーとも呼ばれます。
-3. クエリ オプティマイザーでは、基になるテーブルにアクセスできるさまざまな方法が分析されます。 その中から、使用するリソースが最も少なく、最も短時間で結果を返す一連の手順が選択されます。 クエリ ツリーが更新され、この一連の手順が正確に記録されます。 この最終的に得られた最適化済みのクエリ ツリーを実行プランと呼びます。
+3. クエリ オプティマイザーでは、基になるテーブルにアクセスできるさまざまな方法が分析されます。 その後、使用するリソースが少なく、最も短時間で結果を返す一連の手順が選択されます。 クエリ ツリーが更新され、この一連の手順が正確に記録されます。 この最終的に得られた最適化済みのクエリ ツリーを実行プランと呼びます。
 4. リレーショナル エンジンによって、実行プランの実行が開始されます。 リレーショナル エンジンは、ベース テーブルからのデータを必要とする手順を処理するときに、要求した行セットのデータを渡すようにストレージ エンジンに要求します。
 5. リレーショナル エンジンでは、ストレージ エンジンから返されたデータが結果セット用に定義された形式に変換され、結果セットをクライアントに返します。
 
 ### <a name="ConstantFolding"></a> 定数のたたみ込みと式の評価 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ではクエリのパフォーマンスを向上するために、いくつかの定数式を前もって評価します。 これを定数のたたみ込みと呼びます。 定数は、3、'ABC'、'2005-12-31'、1.0e3、0x12345678 のような [!INCLUDE[tsql](../includes/tsql-md.md)] リテラルです。
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ではクエリのパフォーマンスを向上するために、いくつかの定数式を前もって評価します。 これを定数のたたみ込みと呼びます。 定数は [!INCLUDE[tsql](../includes/tsql-md.md)] リテラル (`3`、`'ABC'`、`'2005-12-31'`、`1.0e3`、`0x12345678` など) です。
 
 #### <a name="foldable-expressions"></a>たたみ込み可能な式
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、次の種類の式に定数のたたみ込みを適用します。
@@ -203,11 +203,11 @@ GO
 CREATE PROCEDURE MyProc2( @d datetime )
 AS
 BEGIN
-DECLARE @d2 datetime
-SET @d2 = @d+1
-SELECT COUNT(*)
-FROM Sales.SalesOrderHeader
-WHERE OrderDate > @d2
+  DECLARE @d2 datetime
+  SET @d2 = @d+1
+  SELECT COUNT(*)
+  FROM Sales.SalesOrderHeader
+  WHERE OrderDate > @d2
 END;
 ```
 
@@ -219,7 +219,7 @@ END;
 `CREATE PROCEDURE` または `ALTER TABLE` などの DDL (データ定義言語) ステートメントも、最終的には、システム カタログ テーブル上の一連のリレーショナル操作になります。また、場合によっては `ALTER TABLE ADD COLUMN` など、データ テーブルに対する一連のリレーショナル操作になります。
 
 ### <a name="worktables"></a>作業テーブル
-リレーショナル エンジンでは、[!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントで指定された論理操作を行う際に、作業テーブルの作成を必要とする場合があります。 作業テーブルとは、中間結果を格納するための内部テーブルです。 作業テーブルは、特定の `GROUP BY`クエリ、 `ORDER BY`クエリ、 `UNION` クエリで生成されます。 たとえば、インデックスの対象になっていない列を `ORDER BY` 句が参照している場合、要求された順番に結果セットを並べ替えるための作業テーブルが生成されることがあります。 また、クエリ プランの一部を実行した結果を一時的に格納するためのスプールとして作業テーブルが使用されることもあります。 作業テーブルは tempdb に作成され、不要になると自動的に削除されます。
+リレーショナル エンジンでは、[!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントで指定された論理演算を行う際に、作業テーブルの作成が必要な場合があります。 作業テーブルとは、中間結果を格納するための内部テーブルです。 作業テーブルは、特定の `GROUP BY`クエリ、 `ORDER BY`クエリ、 `UNION` クエリで生成されます。 たとえば、インデックスの対象になっていない列が `ORDER BY` 句で参照されている場合、リレーショナル エンジンでは、要求された順に結果セットを並べ替えるための作業テーブルを生成する必要があることがあります。 また、クエリ プランの一部を実行した結果を一時的に格納するためのスプールとして作業テーブルが使用されることもあります。 作業テーブルは tempdb に作成され、不要になると自動的に削除されます。
 
 ### <a name="view-resolution"></a>ビューの解決
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] クエリ プロセッサでは、インデックス付きビューとインデックスなしのビューの処理方法が異なります。 
@@ -240,7 +240,7 @@ CREATE VIEW EmployeeName AS
 SELECT h.BusinessEntityID, p.LastName, p.FirstName
 FROM HumanResources.Employee AS h 
 JOIN Person.Person AS p
-ON h.BusinessEntityID = p.BusinessEntityID;
+  ON h.BusinessEntityID = p.BusinessEntityID;
 GO
 ```
 
@@ -251,16 +251,16 @@ GO
 SELECT LastName AS EmployeeLastName, SalesOrderID, OrderDate
 FROM AdventureWorks2014.Sales.SalesOrderHeader AS soh
 JOIN AdventureWorks2014.dbo.EmployeeName AS EmpN
-ON (soh.SalesPersonID = EmpN.BusinessEntityID)
+  ON (soh.SalesPersonID = EmpN.BusinessEntityID)
 WHERE OrderDate > '20020531';
 
 /* SELECT referencing the Person and Employee tables directly. */
 SELECT LastName AS EmployeeLastName, SalesOrderID, OrderDate
 FROM AdventureWorks2014.HumanResources.Employee AS e 
 JOIN AdventureWorks2014.Sales.SalesOrderHeader AS soh
-ON soh.SalesPersonID = e.BusinessEntityID
+  ON soh.SalesPersonID = e.BusinessEntityID
 JOIN AdventureWorks2014.Person.Person AS p
-ON e.BusinessEntityID =p.BusinessEntityID
+  ON e.BusinessEntityID =p.BusinessEntityID
 WHERE OrderDate > '20020531';
 ```
 
@@ -328,7 +328,7 @@ WHERE TableA.ColZ = TableB.Colz;
   * `ARITHABORT`
   * `CONCAT_NULL_YIELDS_NULL`
   * `QUOTED_IDENTIFIER` 
-  * `NUMERIC_ROUNDABORT` セッション オプションは OFF に設定します。
+* `NUMERIC_ROUNDABORT` セッション オプションは OFF に設定します。
 * クエリ オプティマイザーにより、ビューのインデックス列とクエリ要素との間で、次のような項目の一致が検出される。 
   * WHERE 句の検索条件の述語
   * 結合操作
@@ -348,7 +348,6 @@ WHERE TableA.ColZ = TableB.Colz;
 クエリ オプティマイザーは `FROM` 句で参照されているインデックス付きビューを標準のビューとして扱います。 最適化処理の開始時には、ビューの定義をクエリにまで拡張します。 そのうえで、インデックス付きビューの照合を実行します。 クエリ オプティマイザーが選択した最終的な実行プランでは、インデックス付きビューが使用されることも、ビューが参照するベース テーブルにアクセスすることにより、ビュー内の必要なデータが具体化されることもあります。 いずれにしても、最もコストが低いプランが選択されます。
 
 #### <a name="using-hints-with-indexed-views"></a>インデックス付きビューでのヒントの使用
-
 `EXPAND VIEWS` クエリ ヒントを指定すると、ビューのインデックスがクエリで使用されるのを禁止できます。 `NOEXPAND` テーブル ヒントを指定すると、クエリの `FROM` 句で指定したインデックス付きビューのインデックスを強制的に使用することができます。 ただし、各クエリを使用するための最適なアクセス方法はクエリ オプティマイザーによる動的な判断に任せることをお勧めします。 `EXPAND` および `NOEXPAND` を使用するのは、テストで結果パフォーマンスの大幅な向上が示された場合のみにしてください。
 
 `EXPAND VIEWS` オプションは、クエリ オプティマイザーに対し、クエリ全体に関してビュー インデックスを使用しないことを指定します。 
@@ -364,7 +363,6 @@ WHERE TableA.ColZ = TableB.Colz;
 インデックス付きビューの定義ではヒントが許可されていません。 互換性モードが 80 以上の場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] はインデックス付きビューの定義の保守時にも、インデックス付きビューを使用したクエリの実行時にも、定義に含まれているヒントを無視します。 互換性モード 80 では、インデックス付きビューの定義でヒントを使用しても構文エラーにはなりませんが、ヒントは無視されます。
 
 ### <a name="resolving-distributed-partitioned-views"></a>分散パーティション ビューの解決
-
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のクエリ プロセッサでは、分散パーティション ビューのパフォーマンスが最適化されます。 分散パーティション ビューのパフォーマンスで最も重要な点は、メンバー サーバー間で転送されるデータの量を最小限に抑えることです。
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、リモート メンバー テーブルからのデータにアクセスするときに分散クエリを効率的に使用できる、高機能で動的なプランが構築されます。 
@@ -408,34 +406,66 @@ ELSE IF @CustomerIDParameter BETWEEN 6600000 and 9999999
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、パラメーター化されていないクエリに対してもこのような動的実行プランが構築されます。 クエリ オプティマイザーでは、クエリがパラメーター化され、実行プランを再利用できるようにします。 クエリ オプティマイザーがパーティション ビューを参照しているクエリをパラメーター化すると、必要な行が指定されたベース テーブルにあると仮定することができなくなります。 そのため、実行プランで動的フィルターを使用する必要があります。
 
 ## <a name="stored-procedure-and-trigger-execution"></a>ストアド プロシージャとトリガーの実行
-
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、ストアド プロシージャとトリガーのソースだけが格納されます。 ストアド プロシージャまたはトリガーを最初に実行するときに、ソースが実行プランにコンパイルされます。 時間が経過して実行プランがメモリから削除される前にストアド プロシージャまたはトリガーを再度実行すると、リレーショナル エンジンは既存の実行プランを検出してそれを再利用します。 時間が経過して実行プランがメモリから削除されると、新しい実行プランが構築されます。 これは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] がすべての [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントに行うのと同じ処理です。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] で、動的 [!INCLUDE[tsql](../includes/tsql-md.md)] のバッチと比較した場合の、ストアド プロシージャやトリガーのパフォーマンス上の主な利点は、[!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントが常に同じであることです。 したがって、リレーショナル エンジンを既存の実行プランに容易に適合させることができます。 その結果、ストアド プロシージャやトリガーのプランを簡単に再利用できます。
 
 ストアド プロシージャとトリガーの実行プランは、ストアド プロシージャを呼び出すバッチやトリガーを起動するバッチの実行プランとは別に実行されます。 このため、ストアド プロシージャやトリガーの実行プランを何回でも再利用できます。
 
 ## <a name="execution-plan-caching-and-reuse"></a>実行プランのキャッシュと再利用
-
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] には、実行プランとデータ バッファーの両方を格納するためのメモリのプールが用意されています。 実行プランまたはデータ バッファーに割り当てられるプールの割合は、システムの状態によって動的に変動します。 実行プランの格納に使用されるメモリ プールの部分をプラン キャッシュといいます。
+
+プラン キャッシュには、すべてのコンパイル済みプラン用の 2 つのストアがあります。
+-  **Object Plans** キャッシュ ストア (OBJCP)。これは、持続オブジェクト (ストアド プロシージャ、関数、およびトリガー) に関連するプランに使用されます。
+-  **SQL Plans** キャッシュ ストア (SQLCP)。これは、自動パラメーター化、動的、または準備されたクエリに関連するプランに使用されます。
+
+以下のクエリでは、これら 2 つのキャッシュ ストアのメモリ使用量に関する情報が提供されます。
+
+```sql
+SELECT * FROM sys.dm_os_memory_clerks
+WHERE name LIKE '%plans%';
+```
+
+> [!NOTE]
+> プラン キャッシュには、プランの格納に使用されない 2 つの追加のストアがあります。     
+> -  **Bound Trees** キャッシュ ストア (PHDR)。これは、ビュー、制約、および既定値のプランのコンパイル中に使われるデータ構造で使用されます。 これらの構造は、Bound Trees または Algebrizer Trees と呼ばれます。      
+> -  **Extended Stored Procedures** キャッシュ ストア (XPROC)。これは、Transact-SQL ステートメントを使わずに、DLL を使って定義されている、`sp_executeSql` や `xp_cmdshell` のような定義済みのシステム プロシージャに使用されます。 キャッシュされた構造には、プロシージャが実装されている関数名と DLL 名のみが含まれます。      
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の実行プランは、主に次の要素から構成されます。 
 
-- **クエリ実行プラン**     
-  実行プランの大部分は、任意の数のユーザーが使用できる再入可能な読み取り専用のデータ構造体です。 これをクエリ プランといいます。 クエリ プランにはユーザー コンテキストは格納されません。 また、メモリに複数のクエリ プランのコピーが配置されることはありません。すべての直列実行に 1 つのコピーが使用され、すべての並列実行に 1 つのコピーが使用されます。 並列実行用コピーは、並列処理の次数に関係なくすべての並列実行に適用されます。 
+- **コンパイル済みプラン** (またはクエリ プラン)     
+  コンパイル プロセスで生成されるクエリ プランはほとんどの場合、任意の数のユーザーによって使用される、再入可能な読み取り専用のデータ構造です。 これには、次の情報が格納されます。
+  -  論理演算子によって示される演算を実装する物理演算子。 
+  -  データにアクセスし、フィルター処理し、集約する順序を決定する、これらの演算子の順序。 
+  -  演算子を通過する推定行の数。 
+  
+     > [!NOTE]
+     > 新しいバージョンの[!INCLUDE[ssde_md](../includes/ssde_md.md)]では、[カーディナリティ推定](../relational-databases/performance/cardinality-estimation-sql-server.md)に使用された統計オブジェクトに関する情報も格納されます。
+     
+  -  tempdb の[作業テーブル](#worktables)や作業ファイルなど、作成する必要があるサポート オブジェクト。 
+  ユーザー コンテキストやランタイムの情報は、クエリ プランには格納されません。 また、メモリに複数のクエリ プランのコピーが配置されることはありません。すべての直列実行に 1 つのコピーが使用され、すべての並列実行に 1 つのコピーが使用されます。 並列実行用コピーは、並列処理の次数に関係なくすべての並列実行に適用されます。   
+  
 - **実行コンテキスト**     
-  クエリを現在実行しているユーザーごとに、パラメーター値など、実行に固有のデータを保持するデータ構造体が用意されています。 このデータ構造体を実行コンテキストといいます。 実行コンテキストのデータ構造体は再利用されます。 ユーザーがクエリを実行したときに使用されていない構造体が 1 つある場合、新しいユーザーのコンテキストでその構造体が再初期化されます。 
+  クエリを現在実行しているユーザーごとに、パラメーター値など、実行に固有のデータを保持するデータ構造体が用意されています。 このデータ構造体を実行コンテキストといいます。 実行コンテキストのデータ構造は再利用されますが、そのコンテンツは再利用されません。 別のユーザーが同じクエリを実行すると、新しいユーザーのコンテキストでデータ構造が再初期化されます。 
 
-![execution_context](../relational-databases/media/execution-context.gif)
-
-[!INCLUDE[tsql](../includes/tsql-md.md)] で任意の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ステートメントを実行すると、まずリレーショナル エンジンにより、プラン キャッシュが調査され、同じ [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントの既存の実行プランが存在するかどうかが確認されます。 [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントは、キャッシュされたプランで前に実行された [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントと文字単位で一致する場合、既存と見なされます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、既存のプランが見つかった場合にはそれが再利用され、[!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントを再びコンパイルするオーバーヘッドが削減されます。 既存の実行プランが存在しない場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] によってクエリの新しい実行プランが生成されます。
+  ![execution_context](../relational-databases/media/execution-context.gif)
 
 > [!NOTE]
-> [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントの中にはキャッシュされないものもあります。たとえば、行ストア上で実行される一括操作ステートメントや 8 KB より大きい文字列リテラルを含むステートメントなどです。
+> [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] には、実行プランを表示するための 3 つのオプションがあります。        
+> -  "***[推定実行プラン](../relational-databases/performance/display-the-estimated-execution-plan.md)***"。これは、コンパイル済みプランです。        
+> -  "***[実際の実行プラン](../relational-databases/performance/display-an-actual-execution-plan.md)***"。これは、コンパイル済みプラン (その実行コンテキストを含む) と同じです。 これには、実行が完了した後に利用可能なランタイム情報 (実行に関する警告など)、または実行中に使用された経過時間および CPU 時間 (新しいバージョンの[!INCLUDE[ssde_md](../includes/ssde_md.md)]の場合) が含まれます。        
+> -  "***[ライブ クエリ統計](../relational-databases/performance/live-query-statistics.md)***"。これは、コンパイル済みプラン (その実行コンテキストを含む) と同じです。 これには、実行が進行中のランタイム情報が含まれ、1 秒ごとに更新されます。 ランタイム情報には、演算子を通過する実際の行数などが含まれます。       
+
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] で任意の [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントが実行されると、[!INCLUDE[ssde_md](../includes/ssde_md.md)]によって、まず、プラン キャッシュが調べられ、同じ [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントの既存の実行プランが存在するかどうかが確認されます。 [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントは、キャッシュされたプランで前に実行された [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントと文字単位で一致する場合、既存と見なされます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、既存のプランが見つかった場合にはそれが再利用され、[!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントを再びコンパイルするオーバーヘッドが削減されます。 実行プランが存在しない場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] によってクエリの新しい実行プランが生成されます。
+
+> [!NOTE]
+> 一部の [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントの実行プランは、プラン キャッシュに保持されません。たとえば、行ストア上で実行される一括操作ステートメントやサイズが 8 KB より大きい文字列リテラルを含むステートメントなどです。 これらのプランは、クエリの実行中にのみ存在します。
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] には、特定の [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントの既存の実行プランを検索する効率的なアルゴリズムが用意されています。 ほとんどのシステムでは、このスキャンで使用される最低限のリソースの量が、すべての [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントをコンパイルせずに既存の実行プランを再利用することで節約できるリソースの量を超えることはありません。
 
-新しい [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントをキャッシュ内の使用されていない既存の実行プランと照合するアルゴリズムでは、すべてのオブジェクト参照が完全に修飾されている必要があります。 たとえば、`Person` は下の `SELECT` ステートメント実行するユーザーに対する既定のスキーマであるものとします。 この例では、実行するために `Person` テーブルが完全修飾されている必要はありませんが、これは、2 番目のステートメントは既存のプランと一致しないのに対し、3 番目は一致することを意味します。
+新しい [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントをプラン キャッシュ内の使用されていない既存の実行プランと照合するアルゴリズムでは、すべてのオブジェクト参照が完全に修飾されている必要があります。 たとえば、`Person` は下の `SELECT` ステートメント実行するユーザーに対する既定のスキーマであるものとします。 この例では、実行するために `Person` テーブルが完全修飾されている必要はありませんが、これは、2 番目のステートメントは既存のプランと一致しないのに対し、3 番目は一致することを意味します。
 
 ```sql
+USE AdventureWorks2014;
+GO
 SELECT * FROM Person;
 GO
 SELECT * FROM Person.Person;
@@ -444,8 +474,154 @@ SELECT * FROM Person.Person;
 GO
 ```
 
-### <a name="removing-execution-plans-from-the-plan-cache"></a>プラン キャッシュからの実行プランの削除
+特定の実行に対する以下のいずれかの SET オプションを変更すると、プランを再利用する機能に影響します。これは、[!INCLUDE[ssde_md](../includes/ssde_md.md)]で[定数のたたみ込み](#ConstantFolding)が行われ、これらのオプションがこのような式の結果に影響するためです。
 
+|||   
+|-----------|------------|------------|    
+|ANSI_NULL_DFLT_OFF|FORCEPLAN|ARITHABORT|    
+|DATEFIRST|ANSI_PADDING|NUMERIC_ROUNDABORT|    
+|ANSI_NULL_DFLT_ON|LANGUAGE|CONCAT_NULL_YIELDS_NULL|    
+|DATEFORMAT|ANSI_WARNINGS|QUOTED_IDENTIFIER|    
+|ANSI_NULLS|NO_BROWSETABLE|ANSI_DEFAULTS|    
+
+### <a name="caching-multiple-plans-for-the-same-query"></a>同じクエリに対する複数のプランのキャッシュ 
+クエリおよび実行プランは、[!INCLUDE[ssde_md](../includes/ssde_md.md)]で一意に識別でき、指紋とよく似ています。
+-  **クエリ プラン ハッシュ**は、特定のクエリの実行プランで計算されるバイナリ ハッシュ値であり、類似する実行プランを一意に識別するために使用されます。 
+-  **クエリ ハッシュ**は、クエリの [!INCLUDE[tsql](../includes/tsql-md.md)] テキストで計算されるバイナリ ハッシュ値であり、クエリを一意に識別するために使用されます。 
+
+コンパイル済みプランは、プラン キャッシュから**プラン ハンドル**を使用して取得できます。これは、プランがキャッシュに残っている間だけ一定に保たれる一時 ID です。 プラン ハンドルは、バッチ全体のコンパイル済みプランから派生したハッシュ値です。 バッチ内の 1 つまたは複数のステートメントが再コンパイルされた場合でも、コンパイル済みプランのプラン ハンドルは変わりません。
+
+> [!NOTE]
+> 単一ステートメントではなくバッチに対してプランがコンパイルされた場合は、プラン ハンドルとステートメント オフセットを使用して、バッチ内の個々のステートメントのプランを取得できます。     
+> `sys.dm_exec_requests` DMV には、各レコードの `statement_start_offset` および `statement_end_offset` 列が含まれており、現在実行中のバッチまたは持続オブジェクトの現在実行中のステートメントを参照します。 詳細については、「[sys.dm_exec_requests (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)」を参照してください。       
+> また、`sys.dm_exec_query_stats` DMV には、バッチまたは持続オブジェクト内のステートメントの位置を参照する、各レコードのこれらの列が含まれています。 詳細については、「[sys.dm_exec_query_stats (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)」を参照してください。     
+
+バッチの実際の [!INCLUDE[tsql](../includes/tsql-md.md)] テキストは、**SQL Manager** キャッシュ (SQLMGR) と呼ばれる、プラン キャッシュとは別のメモリ領域に格納されます。 コンパイル済みプランの [!INCLUDE[tsql](../includes/tsql-md.md)] テキストは、sql manager キャッシュから **SQL ハンドル**を使用して取得できます。これは、参照元の 1 つ以上のプランがプラン キャッシュに残っている間だけ一定に保たれる一時 ID です。 sql ハンドルは、バッチ テキスト全体から派生したハッシュ値であり、すべてのバッチで一意であることが保証されます。
+
+> [!NOTE]
+> コンパイル済みプランと同様に、[!INCLUDE[tsql](../includes/tsql-md.md)] テキストは、コメントを含め、バッチごとに格納されます。 sql ハンドルには、バッチ テキスト全体の MD5 ハッシュが含まれており、すべてのバッチで一意であることが保証されます。
+
+以下のクエリでは、sql manager キャッシュのメモリ使用量に関する情報が提供されます。
+
+```sql
+SELECT * FROM sys.dm_os_memory_objects
+WHERE type = 'MEMOBJ_SQLMGR';
+```
+
+sql ハンドルとプラン ハンドルの間には、1:N の関係があります。 このような状況は、コンパイル済みプランのキャッシュ キーが異なる場合に発生します。 これは、同じバッチの 2 回の実行間で SET オプションが変更されたことが原因で発生する可能性があります。
+
+次のストアド プロシージャについて考えてみます。
+
+```sql
+USE WideWorldImporters;
+GO
+CREATE PROCEDURE usp_SalesByCustomer @CID int
+AS
+SELECT * FROM Sales.Customers
+WHERE CustomerID = @CID
+GO
+
+SET ANSI_DEFAULTS ON
+GO
+
+EXEC usp_SalesByCustomer 10
+GO
+```
+
+以下のクエリを使用して、プラン キャッシュで検出できる内容を確認します。
+
+```sql
+SELECT cp.memory_object_address, cp.objtype, refcounts, usecounts, 
+    qs.query_plan_hash, qs.query_hash,
+    qs.plan_handle, qs.sql_handle
+FROM sys.dm_exec_cached_plans AS cp
+CROSS APPLY sys.dm_exec_sql_text (cp.plan_handle)
+CROSS APPLY sys.dm_exec_query_plan (cp.plan_handle)
+INNER JOIN sys.dm_exec_query_stats AS qs ON qs.plan_handle = cp.plan_handle
+WHERE text LIKE '%usp_SalesByCustomer%'
+GO
+```
+
+[!INCLUDE[ssResult](../includes/ssresult-md.md)]
+
+```
+memory_object_address   objtype   refcounts   usecounts   query_plan_hash    query_hash
+---------------------   -------   ---------   ---------   ------------------ ------------------ 
+0x000001CC6C534060      Proc      2           1           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
+
+plan_handle                                                                               
+------------------------------------------------------------------------------------------
+0x0500130095555D02D022F111CD01000001000000000000000000000000000000000000000000000000000000
+
+sql_handle
+------------------------------------------------------------------------------------------
+0x0300130095555D02C864C10061AB000001000000000000000000000000000000000000000000000000000000
+```
+
+次に、別のパラメーターを使用してストアド プロシージャを実行しますが、実行コンテキストに対するその他の変更はありません。
+
+```sql
+EXEC usp_SalesByCustomer 8
+GO
+```
+
+プラン キャッシュで検出できる内容をもう一度確認します。 [!INCLUDE[ssResult](../includes/ssresult-md.md)]
+
+```
+memory_object_address   objtype   refcounts   usecounts   query_plan_hash    query_hash
+---------------------   -------   ---------   ---------   ------------------ ------------------ 
+0x000001CC6C534060      Proc      2           2           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
+
+plan_handle                                                                               
+------------------------------------------------------------------------------------------
+0x0500130095555D02D022F111CD01000001000000000000000000000000000000000000000000000000000000
+
+sql_handle
+------------------------------------------------------------------------------------------
+0x0300130095555D02C864C10061AB000001000000000000000000000000000000000000000000000000000000
+```
+
+`usecounts` が 2 に増えていることに注目してください。これは、実行コンテキストのデータ構造が再利用されたため、同じキャッシュされたプランがそのまま再利用されたことを意味します。 次に、`SET ANSI_DEFAULTS` オプションを変更し、同じパラメーターを使用してストアド プロシージャを実行します。
+
+```sql
+SET ANSI_DEFAULTS OFF
+GO
+
+EXEC usp_SalesByCustomer 8
+GO
+```
+
+プラン キャッシュで検出できる内容をもう一度確認します。 [!INCLUDE[ssResult](../includes/ssresult-md.md)]
+
+```
+memory_object_address   objtype   refcounts   usecounts   query_plan_hash    query_hash
+---------------------   -------   ---------   ---------   ------------------ ------------------ 
+0x000001CD01DEC060      Proc      2           1           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D  
+0x000001CC6C534060      Proc      2           2           0x3B4303441A1D7E6D 0xA05D5197DA1EAC2D
+
+plan_handle                                                                               
+------------------------------------------------------------------------------------------
+0x0500130095555D02B031F111CD01000001000000000000000000000000000000000000000000000000000000
+0x0500130095555D02D022F111CD01000001000000000000000000000000000000000000000000000000000000
+
+sql_handle
+------------------------------------------------------------------------------------------
+0x0300130095555D02C864C10061AB000001000000000000000000000000000000000000000000000000000000
+0x0300130095555D02C864C10061AB000001000000000000000000000000000000000000000000000000000000
+```
+
+`sys.dm_exec_cached_plans` DMV の出力に、現在、2 つのエントリがあることに注目してください。
+-  最初のレコードでは、`usecounts` 列に`1` という値が表示されています。これは、`SET ANSI_DEFAULTS OFF` で 1 回実行されたプランです。
+-  2 番目のレコードでは、`usecounts` 列に `2` という値が表示されています。これは、`SET ANSI_DEFAULTS ON` で実行されたプランであり、2 回実行されたためです。    
+-  異なる `memory_object_address` で、プラン キャッシュ内の別の実行プラン エントリが参照されます。 しかし、`sql_handle` 値は両方のエントリで同じになります。これは、同じバッチが参照されているためです。 
+   -  `ANSI_DEFAULTS` が OFF に設定された実行には新しい `plan_handle` があり、同じ SET オプション セットの呼び出しで再利用できます。 SET オプションの変更により、実行コンテキストが再初期化されたため、新しいプラン ハンドルが必要になります。 しかし、再コンパイルはトリガーされません。`query_plan_hash` と `query_hash` の値が同じであることからわかるように、両方のエントリで同じプランとクエリが参照されます。
+
+これは事実上、同じバッチに対応するキャッシュに 2 つのプラン エントリがあることを意味し、同じクエリが繰り返し実行される場合は、プラン キャッシュに影響する SET オプションが確実に同じになるようにし、プランの再利用のために最適化し、プラン キャッシュのサイズを必要な最小値に維持することの重要性が明確に示されています。 
+
+> [!TIP]
+> よくある落とし穴は、さまざまなクライアントで、SET オプションに対して異なる既定値が設定される可能性があるということです。 たとえば、[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] によって確立された接続では自動的に `QUOTED_IDENTIFIER` が ON に設定されますが、SQLCMD では `QUOTED_IDENTIFIER` が OFF に設定されます。 これら 2 つのクライアントから同じクエリを実行すると、(上の例で説明したように) 複数のプランが生成されます。
+
+### <a name="removing-execution-plans-from-the-plan-cache"></a>プラン キャッシュからの実行プランの削除
 実行プランは、格納しておくためのメモリがある間はプラン キャッシュに残ります。 メモリ負荷が存在する場合、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]はコストベースの手法を使用して、どの実行プランをプラン キャッシュから削除するかを判断します。 コストベースの判断をするために、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]は各実行プランの現在のコスト変数を以下のような要因に基づいて増減させます。
 
 ユーザー プロセスは、キャッシュに実行プランを挿入するときに、現在のコストを元のクエリ コンパイル コストと同じ値に設定します。アドホック実行プランの場合、ユーザー プロセスは現在のコストをゼロに設定します。 これ以降、ユーザー プロセスは、実行プランを参照するたびに、現在のコストを元のコンパイル コストにリセットします。アドホック実行プランの場合、ユーザー プロセスは現在のコストを増加させます。 すべてのプランについて、現在のコストの最大値は元のコンパイル コストです。
@@ -503,14 +679,13 @@ GO
 
 > [!NOTE]
 > xEvents が利用できない [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] バージョンの場合、ステートメントレベルの再コンパイルの報告という同じ目的に [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] プロファイラー [SP:Recompile](../relational-databases/event-classes/sp-recompile-event-class.md) トレース イベントを利用できます。
-> トレース イベント [SQL:StmtRecompile](../relational-databases/event-classes/sql-stmtrecompile-event-class.md) はまた、ステートメントレベルの再コンパイルを報告します。このトレース イベントを利用し、再コンパイルを追跡記録し、デバッグすることもできます。 SP:Recompile では、ストアド プロシージャとトリガーのみに対して値が生成されますが、`SQL:StmtRecompile` では、`sp_executesql`、準備されたクエリ、および動的 SQL を使用して実行されたストアド プロシージャ、トリガー、アドホック バッチ、およびバッチに対して値が生成されます。
+> トレース イベント `SQL:StmtRecompile` では、ステートメントレベルの再コンパイルも報告されます。また、このトレース イベントを使用して、再コンパイルを追跡およびデバッグすることもできます。 `SP:Recompile` では、ストアド プロシージャとトリガーのみに対して値が生成されますが、 `SQL:StmtRecompile` では、 `sp_executesql`、準備されたクエリ、および動的 SQL を使用して実行されたストアド プロシージャ、トリガー、アドホック バッチ、およびバッチに対して値が生成されます。
 > `SP:Recompile` と `SQL:StmtRecompile` の *EventSubClass* 列には、再コンパイルの理由を示す整数コードが含まれます。 コードの説明は[ここ](../relational-databases/event-classes/sql-stmtrecompile-event-class.md)にあります。
 
 > [!NOTE]
 > `AUTO_UPDATE_STATISTICS` データベース オプションが `ON` に設定されていると、対象にしているテーブルまたはインデックス付きビューの統計が更新された場合、または前回の実行から基数が大きく変更された場合、クエリが再コンパイルされます。 この動作は、標準のユーザー定義テーブル、一時テーブル、および DML トリガーによって作成された inserted テーブルと deleted テーブルに当てはまります。 過度の再コンパイルによってクエリのパフォーマンスが低下する場合は、この設定を `OFF`に変更することを検討してください。 `AUTO_UPDATE_STATISTICS` データベース オプションを `OFF` に設定すると、統計や基数の変更に基づく再コンパイルは行われません。ただし、DML `INSTEAD OF` トリガーで作成した inserted テーブルおよび deleted テーブルは例外です。 これらのテーブルは tempdb で作成されるため、それらにアクセスするクエリの再コンパイルは tempdb の `AUTO_UPDATE_STATISTICS` の設定によって異なります。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2005 より前のバージョンでは、この設定を `OFF` にした場合も、DML トリガーの inserted テーブルと deleted テーブルにタイする基数の変更に基づいて再コンパイルが引き続き行われます。
 
 ### <a name="PlanReuse"></a> パラメーターと実行プランの再利用
-
 ADO、OLE DB、ODBC の各アプリケーションのパラメーター マーカーなどのパラメーターを使用すると、実行プランの再利用回数を増やすことができます。 
 
 > [!WARNING] 
@@ -579,7 +754,6 @@ WHERE AddressID = 1 + 2;
 ただし、簡易パラメーター化のルールに従ってパラメーター化することはできます。 強制パラメーター化の試行に失敗した場合でも、簡易パラメーター化が続けて試行されます。
 
 ### <a name="SimpleParam"></a> 簡易パラメーター化
-
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、Transact-SQL ステートメントでパラメーターまたはパラメーター マーカーを使用することで、新しい [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントと既存のコンパイル済みの実行プランとを照合するリレーショナル エンジンの機能が強化されています。
 
 > [!WARNING] 
@@ -615,7 +789,6 @@ WHERE ProductSubcategoryID = 4;
 また、単一クエリと、単一クエリと構文的に等しくパラメーター値だけが異なるクエリをパラメーター化することを指定できます。 
 
 ### <a name="ForcedParam"></a> 強制パラメーター化
-
 データベースのすべての `SELECT`、`INSERT`、`UPDATE`、`DELETE` ステートメントをパラメーター化するように指定することで、いくつかの制約はありますが [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の簡易パラメーター化の既定動作をオーバーライドできます。 強制パラメータ化を有効にするには、 `PARAMETERIZATION` ステートメントの `FORCED` オプションを `ALTER DATABASE` に設定します。 強制パラメーター化を行うと、クエリをコンパイルおよび再コンパイルする頻度を緩和できるので、データベースによってはパフォーマンスが向上します。 一般的に POS (point-of-sale) などのアプリケーションから大量のクエリが同時に実行されるデータベースは、強制パラメーター化によりパフォーマンスが向上します。
 
 `PARAMETERIZATION` オプションを `FORCED`に設定すると、 `SELECT`、 `INSERT`、 `UPDATE`、 `DELETE` の各ステートメントに使用されているリテラル値は、その形式を問わずクエリのコンパイル時にパラメーターに変換されます。 ただし、次に示すクエリ構造に現れるリテラルは例外です。 
@@ -654,7 +827,6 @@ WHERE ProductSubcategoryID = 4;
 > パラメーター名の規則はありません。 特定の命名順序に依存することは避けてください。 また、次のものは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のバージョンおよび Service Pack の適用状況によって異なる場合があります:パラメーター名、パラメーター化されるリテラル、およびパラメーター化されたテキストに含まれるスペース。
 
 #### <a name="data-types-of-parameters"></a>パラメーターのデータ型
-
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] がリテラルをパラメーター化する際に、パラメーターは次のデータ型に変換されます。
 
 * int データ型の範囲に収まるサイズの整数リテラルは、int 型にパラメーター化されます。それよりも大きな整数リテラルのうち、比較演算子 (<、\<=、=、!=、>、>=、 、!\<、!>、<>、`ALL`、`ANY`、`SOME`、`BETWEEN`、`IN` など) を伴う述語で使用されているものは numeric(38,0) 型にパラメーター化されます。 比較演算子を伴う述語で使用されていないものは、リテラルのサイズに見合う十分な有効桁数があり、小数点以下桁数が 0 の numeric 型にパラメーター化されます。
@@ -666,7 +838,6 @@ WHERE ProductSubcategoryID = 4;
 * money 型のリテラルは、money 型にパラメーター化されます。
 
 #### <a name="ForcedParamGuide"></a> 強制パラメーター化使用のガイドライン
-
 `PARAMETERIZATION` オプションを FORCED に設定するときは、次のことを考慮してください。
 
 * 強制パラメーター化を行うと、クエリをコンパイルするときにクエリ内のリテラル定数がパラメーターに変更されます。 そのため、クエリ オプティマイザーで最適なクエリ プランが選択されない場合があります。 特に、インデックス付きビューや、計算列のインデックスに合わせてクエリが調整されることはあまりありません。 パーティション テーブルおよび分散パーティション ビューに発行するクエリについても、最適なプランが選択されない場合があります。 インデックス付きビューおよび計算列のインデックスに大きく依存する環境では、強制パラメーター化を使用しないでください。 `PARAMETERIZATION FORCED` オプションは、熟練したデータベース管理者が、パフォーマンスに悪影響が出ないことを確認した上でのみ使用してください。
@@ -681,7 +852,6 @@ WHERE ProductSubcategoryID = 4;
 > `PARAMETERIZATION` オプションを `FORCED` に設定すると、`PARAMETERIZATION` オプションを `SIMPLE` に設定する場合と比べて、報告されるエラー メッセージに違いが現れる場合があります。複数のエラー メッセージが強制パラメーター化で報告される場合があり、簡易パラメーター化よりも多くのエラー メッセージが報告されることがあります。また、エラーが発生した行番号が間違って報告されることがあります。
 
 ### <a name="preparing-sql-statements"></a>SQL ステートメントの準備
-
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のリレーショナル エンジンでは、[!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントを実行前に準備する方式が完全にサポートされるようになりました。 アプリケーションでは、[!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントを複数回実行する必要がある場合、データベース API を使用して次の処理を実行できます。 
 
 * ステートメントを 1 回準備します。 これにより、[!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントがコンパイルされて実行プランが作成されます。
@@ -734,7 +904,6 @@ WHERE ProductID = 63;
 > `RECOMPILE` ヒントを利用するクエリの場合、パラメーター値とローカル変数の現在の値の両方がスニッフィングされます。 (パラメーターとローカル変数の) スニッフィングされた値は、バッチの中で、`RECOMPILE` ヒントのあるステートメントの手前に存在する値です。 特に、パラメーターの場合、バッチ呼び出しで共に与えられた値はスニッフィングされません。
 
 ## <a name="parallel-query-processing"></a>並列クエリ処理
-
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、複数の CPU (マイクロプロセッサ) を搭載したコンピューターのクエリ実行およびインデックス操作を最適化するための並列クエリを使用できます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] はオペレーティング システムのワーカー スレッドを複数使用してクエリやインデックス操作を並列的に実行できるため、操作を短時間で効率的に完了できます。
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は、クエリを最適化する過程で、並列実行による効果が期待できるクエリやインデックス操作を検索します。 次に、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は、そのようなクエリの実行プランに交換操作を挿入して並列実行用クエリを作成します。 交換操作とは、プロセス管理、データの再配布、およびフロー制御を行うクエリ実行プラン内の操作です。 交換操作は `Distribute Streams`論理操作、 `Repartition Streams`論理操作、および `Gather Streams` 論理操作から構成されており、これらは並列クエリのプラン表示出力に含まれる可能性があります。 
@@ -766,23 +935,22 @@ WHERE ProductID = 63;
 * クエリに、並列では実行できないスカラー演算子または関係演算子が含まれる。 演算子によっては、クエリ プランのセクションまたはプラン全体が直列モードで実行される場合があります。
 
 ### <a name="DOP"></a> 並列処理の次数
-
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は、並列クエリの実行またはインデックス DDL (データ定義言語) 操作のインスタンスごとに、並列処理の最適な次数を自動的に検出します。 この処理は次の基準に基づいて実行されます。 
 
 1. SMP (対称型マルチプロセッシング) コンピューターなど、複数のマイクロプロセッサまたは CPU を搭載したコンピューターで [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] が実行されているかどうか。  
-  並列クエリを使用できるのは、複数の CPU を搭載したコンピューターだけです。 
+   並列クエリを使用できるのは、複数の CPU を搭載したコンピューターだけです。 
 
 2. 十分な数のワーカー スレッドを使用できるかどうか。  
-  各クエリまたはインデックス操作では、一定数のワーカー スレッドを実行する必要があります。 並列プランの実行には直列プランの場合よりも多くのワーカー スレッドが必要になり、必要なワーカー スレッド数は並列処理の次数が高くなるほど増加します。 並列処理の特定の次数に応じた並列プランのワーカー スレッド要件を満たすことができない場合、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]が並列処理の次数を自動的に下げるか、指定されたワークロード コンテキストでの並列プランを完全に破棄します。 その後、直列プラン (1 つのワーカー スレッド) を実行します。 
+   各クエリまたはインデックス操作では、一定数のワーカー スレッドを実行する必要があります。 並列プランの実行には直列プランの場合よりも多くのワーカー スレッドが必要になり、必要なワーカー スレッド数は並列処理の次数が高くなるほど増加します。 並列処理の特定の次数に応じた並列プランのワーカー スレッド要件を満たすことができない場合、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]が並列処理の次数を自動的に下げるか、指定されたワークロード コンテキストでの並列プランを完全に破棄します。 その後、直列プラン (1 つのワーカー スレッド) を実行します。 
 
 3. 実行するクエリまたはインデックス操作の種類。  
-  インデックスの作成や再構築またはクラスター化インデックスの削除を行うインデックス操作、および CPU サイクルを大量に使用するクエリは並列プランの候補として最適です。 たとえば、大きなテーブルの結合、大量の集計、および大きな結果セットの並べ替えは候補として適しています。 トランザクション処理アプリケーションに多い単純なクエリの場合、クエリを並列実行するにはさらに調整が必要なので、パフォーマンスの向上は困難です。 並列処理の利点を得られるクエリとそうでないクエリを区別するために、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]は [cost threshold for parallelism](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md) 値を使用して、クエリまたはインデックス操作を実行するための推定コストを比較します。 適切なテストで実行中のワークロードには異なる値がより適していることが判明した場合、ユーザーは [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を使用して既定値の 5 を変更することができます。 
+   インデックスの作成や再構築またはクラスター化インデックスの削除を行うインデックス操作、および CPU サイクルを大量に使用するクエリは並列プランの候補として最適です。 たとえば、大きなテーブルの結合、大量の集計、および大きな結果セットの並べ替えは候補として適しています。 トランザクション処理アプリケーションに多い単純なクエリの場合、クエリを並列実行するにはさらに調整が必要なので、パフォーマンスの向上は困難です。 並列処理の利点を得られるクエリとそうでないクエリを区別するために、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]は [cost threshold for parallelism](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md) 値を使用して、クエリまたはインデックス操作を実行するための推定コストを比較します。 適切なテストで実行中のワークロードには異なる値がより適していることが判明した場合、ユーザーは [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を使用して既定値の 5 を変更することができます。 
 
 4. 処理する十分な数の行があるかどうか。  
-  クエリ オプティマイザーによって行数が少なすぎると判断されると、行を分散するための交換操作は導入されません。 したがって、操作は直列に実行されます。 直列プランで操作を実行すると、並列操作を実行したときに得られる効果より、起動、分散、および調整のコストの方が上回る事態を回避することができます。
+   クエリ オプティマイザーによって行数が少なすぎると判断されると、行を分散するための交換操作は導入されません。 したがって、操作は直列に実行されます。 直列プランで操作を実行すると、並列操作を実行したときに得られる効果より、起動、分散、および調整のコストの方が上回る事態を回避することができます。
 
 5. 現在の分布統計が使用できるかどうか。  
-  並列処理の最高次数が提供されない場合、並列プランが放棄される前に、それより低い次数が検討されます。  
+   並列処理の最高次数が提供されない場合、並列プランが放棄される前に、それより低い次数が検討されます。  
   たとえば、ビューにクラスター化インデックスを作成する場合、クラスター化インデックスはまだ存在しないので、分布統計を評価できません。 この場合、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]では、インデックス操作用に並列処理の最高次数を提供できません。 ただし、並べ替えやスキャンなどの一部の操作では、それまでどおり並列実行の利点を得ることができます。
 
 > [!NOTE]
@@ -795,7 +963,6 @@ WHERE ProductID = 63;
 静的カーソルとキーセット ドリブン カーソルは、並列実行プランによって作成できます。 ただし、動的カーソルの動作は、直列実行の場合だけ有効です。 クエリ オプティマイザーは、動的カーソルの一部であるクエリに対しては必ず直列実行プランを生成します。
 
 #### <a name="overriding-degrees-of-parallelism"></a>並列処理の次数のオーバーライド
-
 [max degree of parallelism](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) (MAXDOP) サーバー構成オプション ([!INCLUDE[ssSDS_md](../includes/sssds-md.md)]では [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)) を使用すると、並列プランの実行で使用されるプロセッサの数を制限できます。 max degree of parallelism オプションは、MAXDOP クエリ ヒントまたは MAXDOP インデックス オプションを指定することにより、個別のクエリやインデックス操作のステートメントでオーバーライドできます。 MAXDOP では、個別のクエリやインデックス操作をより制御できます。 たとえば、MAXDOP オプションを使用すると、オンライン インデックス操作専用のプロセッサの数を増減することによって制御できます。 このようにして、インデックス操作で使用されるリソースと同時実行ユーザーが使用するリソースのバランスをとることができます。 
 
 max degree of parallelism オプションを 0 (既定) に設定すると、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] で並列プランの実行で使用するプロセッサの数を最大 64 に制限できます。 MAXDOP オプションを 0 に設定すると、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では 64 個の論理プロセッサという実行時ターゲットが設定されますが、必要であれば、別の値を手動で設定できます。 クエリおよびインデックスに対して MAXDOP を 0 に設定すると、並列プランの実行で指定されたクエリまたはインデックスに対して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] で利用可能なすべてのプロセッサ (最大 64) を使用できます。 MAXDOP はあらゆる並列クエリに強制される値ではなく、並列に望ましいあらゆるクエリにとっての仮のターゲットです。 つまり、実行時に十分なワーカー スレッドが利用できない場合、MAXDOP サーバー構成オプションより低い並列度でクエリが実行されることがあります。
@@ -803,7 +970,6 @@ max degree of parallelism オプションを 0 (既定) に設定すると、[!I
 MAXDOP 構成のベスト プラクティスについては、[この Microsoft サポート記事](https://support.microsoft.com/help/2806535/recommendations-and-guidelines-for-the-max-degree-of-parallelism-configuration-option-in-sql-server)を参照してください。
 
 ### <a name="parallel-query-example"></a>並列クエリの例
-
 次のクエリでは、2000 年 4 月 1 日を開始日とする特定の四半期に受けた注文のうち、納品期日を過ぎた項目を 1 つ以上含む注文の件数を数えます。 さらに、該当する注文を受注優先度別にグループ分けし、受注優先度の昇順に並べ替えてその注文数を一覧表示します。 
 
 この例には、架空のテーブル名と列名を使用しています。
@@ -913,7 +1079,6 @@ Index Seek 操作の上位にある並列操作は、`O_ORDERKEY` の値を使�
 個別の `CREATE TABLE` ステートメントまたは `ALTER TABLE` ステートメントには、インデックスの作成を必要とする複数の制約が課される場合があります。 これらの複数のインデックス作成操作は連続して実行されますが、個別のインデックス作成操作は複数の CPU を備えたコンピューターでは並列操作になることがあります。
 
 ## <a name="distributed-query-architecture"></a>分散クエリ アーキテクチャ
-
 Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、[!INCLUDE[tsql](../includes/tsql-md.md)] ステートメント内で異種 OLE DB データ ソースを参照する方法として、次の 2 つがサポートされています。
 
 * リンク サーバー名  
@@ -1013,16 +1178,15 @@ WHERE date_id BETWEEN 20080802 AND 20080902;
 
 #### <a name="partitioned-attribute"></a>Partitioned 属性
 
-`Index Seek` などの操作がパーティション テーブルまたはパーティション インデックスに対して実行される場合、コンパイル時のプランと実行時のプランに `Partitioned` 属性が表示され、 `True` (1) に設定されます。 `False` (0) に設定された場合、この属性は表示されません。
+Index Seek などの演算子がパーティション テーブルまたはインデックスに対して実行される場合、コンパイル時および実行時のプランに `Partitioned` 属性が表示され、`True` (1) に設定されます。 `False` (0) に設定された場合、この属性は表示されません。
 
 `Partitioned` 属性は、次の物理操作と論理操作で表示されます。  
-* `Table Scan`  
-* `Index Scan`  
-* `Index Seek`  
-* `Insert`  
-* `Update`  
-* `Delete`  
-* `Merge`  
+|||
+|--------|--------|
+|Table Scan|Index Scan|
+|Index Seek|挿入|
+|更新|削除|
+|Merge||
 
 前の図に示したように、この属性は、属性が定義されている操作のプロパティに表示されます。 XML プラン表示出力では、この属性は、属性が定義されている操作の `Partitioned="1"` ノードに `RelOp` として表示されます。
 

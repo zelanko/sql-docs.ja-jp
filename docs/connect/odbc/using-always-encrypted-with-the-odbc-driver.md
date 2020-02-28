@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 author: v-chojas
-ms.openlocfilehash: c140087942ebe39870316e21994b6a1169daeba0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 8e654dd5be4a306078bd6262220e29470b9a16e7
+ms.sourcegitcommit: 12051861337c21229cfbe5584e8adaff063fc8e3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76706275"
+ms.lasthandoff: 02/15/2020
+ms.locfileid: "77363238"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>SQL Server 用 ODBC ドライバーと共に Always Encrypted を使用する
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -367,7 +367,7 @@ ECEK のプレーンテキスト値を取得するために、ドライバーで
 
 ODBC Driver for SQL Server には、次の組み込みのキーストア プロバイダーが付属しています。
 
-| Name | 説明 | プロバイダー (メタデータ) 名 |可用性|
+| 名前 | 説明 | プロバイダー (メタデータ) 名 |可用性|
 |:---|:---|:---|:---|
 |Azure Key Vault |Azure Key Vault に CMK を格納します | `AZURE_KEY_VAULT` |Windows、macOS、Linux|
 |Windows 証明書ストア|Windows キーストアに CMK をローカルに保存します| `MSSQL_CERTIFICATE_STORE`|Windows|
@@ -381,7 +381,7 @@ ODBC Driver for SQL Server には、次の組み込みのキーストア プロ�
 Azure Key Vault (AKV) は、Always Encrypted の列マスター キーを格納および管理するための便利なオプションです (特にアプリケーションが Azure でホストされている場合)。 Linux、macOS、および Windows 向けの ODBC Driver for SQL Server には、Azure Key Vault 用の組み込みの列マスター キーストア プロバイダーが含まれています。 Always Encrypted に対して Azure Key Vault を構成する方法の詳細については、[Azure Key Vault の操作手順](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/)、[Key Vault の概要](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)、および [Azure Key Vault での列マスター キーの作成](https://msdn.microsoft.com/library/mt723359.aspx#Anchor_2)に関するページを参照してください。
 
 > [!NOTE]
-> ODBC ドライバーは、AKV 認証用の Active Directory フェデレーション サービス (AD FS) をサポートしていません。 AKV 用の Azure Active Directory 認証を使用していて、Active Directory 構成にフェデレーション サービスが含まれている場合、認証が失敗することがあります。
+> ODBC ドライバーでは、Azure Active Directory に対する直接の AKV 認証のみがサポートされます。 AKV に対する Azure Active Directory 認証を使用しており、Active Directory 構成によって、Active Directory フェデレーション サービス エンドポイントに対する認証が要求されている場合は、認証が失敗する可能性があります。
 > Linux および macOS 用のドライバー バージョン 17.2 以降の場合、`libcurl` は、このプロバイダーを使用する上で必要ですが、明示的な依存関係にはありません。ドライバーを使用した他の操作ではそれを必要としないからです。 `libcurl` に関するエラーが発生する場合は、それがインストールされていることを確認してください。
 
 ドライバーでは、次の資格情報の種類を使用して Azure Key Vault への認証がサポートされます。
@@ -593,7 +593,7 @@ ODBC Driver 17 for SQL Server 以降、[SQL 一括コピー関数](../../relatio
 
 ### <a name="connection-string-keywords"></a>接続文字列キーワード
 
-|Name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |`ColumnEncryption`|指定できる値は `Enabled`/`Disabled` です。<br>`Enabled` -- 接続の Always Encrypted 機能を有効にします。<br>`Disabled` -- 接続の Always Encrypted 機能を無効にします。<br>*type*、*data* -- (バージョン 17.4 以降) セキュリティで保護されたエンクレーブ、構成証明プロトコルの *type*、関連付けられた構成証明データの *data* が設定された Always Encrypted を有効にします。 <br><br>既定では、 `Disabled`です。|
 |`KeyStoreAuthentication` | 有効な値: `KeyVaultPassword`、`KeyVaultClientSecret` |
@@ -603,7 +603,7 @@ ODBC Driver 17 for SQL Server 以降、[SQL 一括コピー関数](../../relatio
 
 ### <a name="connection-attributes"></a>接続属性
 
-|Name|Type|説明|  
+|名前|Type|説明|  
 |----------|-------|----------|  
 |`SQL_COPT_SS_COLUMN_ENCRYPTION`|接続前|`SQL_COLUMN_ENCRYPTION_DISABLE` (0) -- Always Encrypted を無効にします <br>`SQL_COLUMN_ENCRYPTION_ENABLE` (1) -- Always Encrypted を有効にします<br> *type*、*data* 文字列のポインター -- (バージョン 17.4 以降) セキュリティで保護されたエンクレーブを使用して有効にします|
 |`SQL_COPT_SS_CEKEYSTOREPROVIDER`|接続後|[設定] CEKeystoreProvider の読み込みを試みます<br>[取得] CEKeystoreProvider 名を返します|
@@ -613,7 +613,7 @@ ODBC Driver 17 for SQL Server 以降、[SQL 一括コピー関数](../../relatio
 
 ### <a name="statement-attributes"></a>ステートメント属性
 
-|Name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |`SQL_SOPT_SS_COLUMN_ENCRYPTION`|`SQL_CE_DISABLED` (0) -- ステートメントに対して Always Encrypted が無効にされます <br>`SQL_CE_RESULTSETONLY` (1) -- 暗号化解除のみ。 結果セットと戻り値は暗号化解除され、パラメーターは暗号化されません <br>`SQL_CE_ENABLED` (3) -- Always Encrypted は有効にされ、パラメーターと結果の両方に使用されます|
 

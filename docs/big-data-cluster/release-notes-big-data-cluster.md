@@ -5,16 +5,16 @@ description: この記事では、SQL Server ビッグ データ クラスター
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 01/07/2020
+ms.date: 02/13/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ba9d87d4985655b314faf391eaffb8f28ba35519
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 9de368594383ef1f7fe3ae3c062f92873fb15698
+ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75721690"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77256905"
 ---
 # <a name="sql-server-2019-big-data-clusters-release-notes"></a>SQL Server 2019 ビッグ データ クラスターのリリース ノート
 
@@ -50,7 +50,7 @@ ms.locfileid: "75721690"
 
 |プラットフォーム|サポートされているバージョン|
 |---------|---------|
-|`azdata`|サーバーと同じマイナー バージョンを指定する必要があります (SQL Server マスター インスタンスと同様)。<br/>`azdata –-version` を実行して、バージョンを検証します。 現時点では、このバージョンは `15.0.2070` です。|
+|`azdata`|サーバーと同じマイナー バージョンを指定する必要があります (SQL Server マスター インスタンスと同様)。<br/><br/>`azdata –-version` を実行して、バージョンを検証します。<br/><br/>SQL Server 2019 CU2 の時点で、このバージョンは `15.0.4013` です。|
 |Azure Data Studio|[Azure Data Studio](https://aka.ms/getazuredatastudio) の最新のビルドを取得します。|
 
 ## <a name="release-history"></a>リリース履歴
@@ -59,12 +59,21 @@ ms.locfileid: "75721690"
 
 | Release               | Version       | リリース日 |
 |-----------------------|---------------|--------------|
+| [CU2](#cu2)           | 15.0.4013.40    | 2020-02-13   |
 | [CU1](#cu1)           | 15.0.4003.23   | 2020-01-07   |
 | [GDR1](#rtm)            | 15.0.2070.34  | 2019-11-04   |
 
 ## <a name="how-to-install-updates"></a>更新プログラムのインストール方法
 
 更新プログラムをインストールする方法については、「[[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]をアップグレードする方法](deployment-upgrade.md)」を参照してください。
+
+## <a id="cu2"></a> CU2 (2020 年 2 月)
+
+これは SQL Server 2019 の Cumulative Update 2 (CU2) リリースです。 このリリースに対する SQL Server データベース エンジンのバージョンは 15.0.4003.23 です。
+
+|パッケージ バージョン | イメージ タグ |
+|-----|-----|
+|15.0.4013.40 |[2019-CU2-ubuntu-16.04]
 
 ## <a id="cu1"></a> CU1 (2020 年 1 月)
 
@@ -131,7 +140,7 @@ SQL Server 2019 一般配布リリース 1 (GDR1) で [!INCLUDE[big-data-cluster
 
        **`componentUpgradeTimeoutInMinutes`** :これ以降のアップグレードの各フェーズの完了時間を指定します。  既定値は 30 です。 45 に更新します。
 
-   3.   保存して終了
+   3.   保存して終了します
 
    別の方法として、次の Python スクリプトでタイムアウトを設定することも可能です。
 
