@@ -1,7 +1,7 @@
 ---
 title: JDBC ドライバーの展開 | Microsoft Docs
 ms.custom: ''
-ms.date: 10/28/2019
+ms.date: 01/20/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3ad3508d-d9b1-47fb-a63b-21cdc3ed44e0
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 518f6bd2605d92857520f870b20edcd351771c54
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 99ca0fab9a23689ac9c20cad6ebf0d94dd7b2113
+ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "73049833"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77004675"
 ---
 # <a name="deploying-the-jdbc-driver"></a>JDBC ドライバーの展開
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -30,15 +30,8 @@ ms.locfileid: "73049833"
 >  一般的な Java アプリケーションの展開については、Java の Web サイトを参照してください。  
   
 ## <a name="deploying-the-jdbc-driver-on-windows-systems"></a>Windows システム上での JDBC ドライバーの展開  
- Windows オペレーティング システム上で JDBC ドライバーを展開する場合、実行可能な ZIP ファイル形式のインストール パッケージを使用する必要があります。これは通常、`sqljdbc_<version>_<language>.exe` という名前です。  
-  
- 実行可能な ZIP ファイルをサイレント実行するには、次のようにコマンド ライン上またはバッチ ファイル内で `/auto` コマンド ライン オプションを使用する必要があります。  
-  
- `sqljdbc_<version>_<language>.exe /auto`  
-  
-> [!NOTE]  
->  `/auto` オプションを使用しても、ユーザーの画面上に WinZip ダイアログ ボックスは表示されるため、それは完全なサイレント インストールではありません。 ただし、このダイアログ ボックスで操作を行う必要はなく、解凍処理が完了するとダイアログ ボックスは閉じます。  
-  
+ Windows オペレーティング システム上で JDBC ドライバーを展開する場合、zip 形式のインストール パッケージをアンパックする必要があります。これは通常、`sqljdbc_<version>_<language>.zip` という名前です。
+
 ## <a name="deploying-the-driver-on-unix-systems"></a>UNIX システム上での JDBC ドライバーの展開 
  UNIX オペレーティング システム上で JDBC ドライバーを展開する場合、GZIP ファイル形式のインストール パッケージを使用する必要があります。これは通常、`sqljdbc_<version>_<language>.tar.gz` という名前です。  
   
@@ -54,11 +47,11 @@ ms.locfileid: "73049833"
 
 ## <a name="legalities-of-driver-redistribution"></a>ドライバーの再配布の合法性
 
-JDBC Driver バージョン 6.0、6.2、6.4、および 7.0 は再配布可能です。 ライセンス契約の "_再頒布可能コード_" の条項をご確認ください。
+JDBC Driver バージョン 6.0、6.2、6.4、7.0、7.2、7.4、および 8.2 は再頒布可能です。 ライセンス契約の "_再頒布可能コード_" の条項をご確認ください。
 
 JDBC Driver バージョン 4.x は、旧バージョンです。 4\.x のサポートは 2018 までに有効期限が切れています。
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [JDBC ドライバーの概要](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   

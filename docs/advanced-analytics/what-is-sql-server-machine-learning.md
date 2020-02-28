@@ -4,17 +4,17 @@ titleSuffix: ''
 description: Machine Learning Services は、リレーショナル データを使用して Python および R スクリプトを実行できるようになる SQL Server の機能です。 オープンソースのパッケージとフレームワーク、および予測分析と機械学習用の Microsoft Python および R パッケージを使用できます。 スクリプトは、SQL Server の外部またはネットワーク経由でデータを移動することなく、データベース内で実行されます。 この記事では、SQL Server Machine Learning Services の基本について説明します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/07/2019
+ms.date: 02/04/2020
 ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: fe7a83c66dba9af372e82fc2814828aae32d6a2d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 3cf2b6f61e01230c8657051388647e336d46ed71
+ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75558290"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77004563"
 ---
 # <a name="what-is-sql-server-machine-learning-services-python-and-r"></a>SQL Server Machine Learning Services とは (Python と R)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,6 +61,19 @@ Machine Learning Services で Python および R スクリプトを実行する�
 
 + また、任意の Python または R クライアントを使用して、実行をリモートの SQL Server にプッシュするスクリプト (*リモート計算コンテキスト*と呼ばれます) を書くこともできます。 詳細については、[Python 開発](python/setup-python-client-tools-sql.md)と [R 開発](r/set-up-a-data-science-client.md)のためにデータ サイエンス クライアントを設定する方法に関する記事を参照してください。
 
+<a name="versions"></a>
+
+## <a name="python-and-r-versions"></a>Python および R のバージョン
+
+Machine Learning Services に含まれる Python および R のバージョンは、使用する SQL Server のバージョンによって異なります。 
+
+| SQL Server のバージョン | Python バージョン | R バージョン |
+|-|-|-|
+| SQL Server 2017 | 3.5.2 | 3.3.3 |
+| SQL Server 2019 | 3.7.3 | 3.5.2 |
+
+SQL Server 2016 の R バージョンについては、[「R Services とは」の「R バージョン」セクション](r/sql-server-r-services.md#version)を参照してください。
+
 <a name="packages"></a>
 
 ## <a name="python-and-r-packages"></a>Python および R パッケージ
@@ -95,11 +108,10 @@ Machine Learning Services と共にインストールされるパッケージと
 
 1. 初めての Python または R スクリプトを作成する
 
-    + クイック スタート:[SQL でシンプルな R スクリプトを作成して実行する](tutorials/quickstart-r-create-script.md)
-    + クイック スタート:[R で予測モデルを作成してトレーニングする](tutorials/quickstart-r-train-score-model.md)
+    + クイック スタート:[単純な Python スクリプトを実行する](tutorials/quickstart-python-create-script.md)
+    + クイック スタート:[単純な R スクリプトを実行する](tutorials/quickstart-r-create-script.md)
     + チュートリアル:[T-SQL で Python を使用する](tutorials/sqldev-in-database-python-for-sql-developers.md):データの探索、特徴エンジニアリングの実行、モデルのトレーニングとデプロイ、予測の作成 (5 部構成シリーズ)
     + チュートリアル:[T-SQL で R を使用する](tutorials/sqldev-in-database-r-for-sql-developers.md):データの探索、特徴エンジニアリングの実行、モデルのトレーニングとデプロイ、予測の作成 (5 部構成シリーズ)
-    + チュートリアル:[R ツールで Machine Learning Services を使用する](tutorials/walkthrough-data-science-end-to-end-walkthrough.md):データの探索、グラフとプロットの作成、特徴エンジニアリングの実行、モデルのトレーニングとデプロイ、予測の作成 (6 部構成シリーズ)
 
 ## <a name="next-steps"></a>次のステップ
 

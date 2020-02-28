@@ -1,5 +1,5 @@
 ---
-title: 式 (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: 式 (レポート ビルダー) | Microsoft Docs
 ms.date: 09/06/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 76d3ac86-650c-46fe-8086-8b3edcea3882
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6083acaca377fdce5bcaed33ce57bb4e75cc3167
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 8cff1f3e79c383dbcbfe365ab36d9fa6912d6e28
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65579119"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080362"
 ---
 # <a name="expressions-report-builder-and-ssrs"></a>式 (レポート ビルダーおよび SSRS)
   式は [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のページ分割されたレポート全体にわたって、データの取得、計算、表示、グループ化、並べ替え、フィルター処理、パラメーター化、書式設定などのために広く使用されます。 

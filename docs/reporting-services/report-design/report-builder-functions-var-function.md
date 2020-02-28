@@ -1,5 +1,5 @@
 ---
-title: Var 関数 (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: Var 関数 (レポート ビルダー) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 7b2018ce-c5f9-4f8b-bd44-4201379a584b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2fba0fc4720e10fc2c90dcdecf783bd01f849fd8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c8fc31dec4f6e4cfc289c5d01ab03c9ecbbd5a7d
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65576748"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081100"
 ---
 # <a name="report-builder-functions---var-function"></a>レポート ビルダー関数 - Var 関数
   式で指定された NULL 以外のすべての数値の分散を、指定されたスコープで評価して返します。  

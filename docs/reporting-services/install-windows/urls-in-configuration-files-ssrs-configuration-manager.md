@@ -1,5 +1,5 @@
 ---
-title: 構成ファイル内の URL (SSRS 構成マネージャー)
+title: 構成ファイル内の URL (構成マネージャー) | Microsoft Docs
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 4f5e7fe0-b5b1-4665-93d4-80dce12d6b14
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 75da68330bcce06a4ffdaf152bb19811cffe1f99
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e2024af63b1a033b2dcb5afbde461cff02b9462b
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "73593937"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082220"
 ---
 # <a name="urls-in-configuration-files--ssrs-configuration-manager"></a>構成ファイル内の URL (SSRS 構成マネージャー)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、RSReportServer.config ファイルにアプリケーション設定を格納します。 このファイルには、URL と URL 予約の両方の構成設定が含まれています。 これらの構成設定は、変更の目的とルールが大きく異なります。 構成ファイルの変更による配置のチューニングに慣れている場合、各 URL 設定の使用方法の理解にこのトピックが役立ちます。  
@@ -38,7 +38,7 @@ ms.locfileid: "73593937"
   
  ほとんどの場合、 **UrlRoot**を変更する必要はありません。 ただし、完全修飾 URL を使用してレポート サーバーにアクセスする場合、ホスト ヘッダーを使用する URL を完全修飾サイト名に設定していないときは、RSReportServer.config を手動で編集して、 **UrlRoot** をレポートの表示に使用されるレポート サーバーの完全修飾 URL (たとえば https://www.adventure-works.com/mywebapp/reportserver) に設定する必要があります。  
   
-#### <a name="urls-connecting-the-includessrswebportalincludesssrswebportalmd-and-web-parts-to-the-report-server-web-service"></a>[!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] および Web パーツをレポート サーバー Web サービスに接続するための URL  
+#### <a name="urls-connecting-the-ssrswebportal-and-web-parts-to-the-report-server-web-service"></a>[!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] および Web パーツをレポート サーバー Web サービスに接続するための URL  
  Reporting Services の [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] および SharePoint 2.0 Web パーツは、レポート サーバーに接続する Web フロントエンド コンポーネントです。 バックエンド レポート サーバーへの接続に使用される URL は次のとおりです。  
   
 -   **ReportServerUrl** ( [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]で使用)  
@@ -50,9 +50,9 @@ ms.locfileid: "73593937"
   
  次の表は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ファイルで指定可能なすべての URL の概要を示しています。  
   
-|設定|使用法|[説明]|  
+|設定|使用法|説明|  
 |-------------|-----------|-----------------|  
-|**ReportServerUrl**|省略可能。 この要素は、手動で追加しない限り RSReportServer.config ファイルには含まれません。<br /><br /> この要素は、次のいずれかのシナリオを構成する場合にのみ設定します。<br /><br /> 別のコンピューターまたは同じコンピューター上の別のインスタンスで実行されるレポート サーバー Web サービスへの Web フロントエンド アクセスを、 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] が提供する場合<br /><br /> [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] の URL が複数存在し、レポート マネージャーで特定の URL を使用する場合<br /><br /> [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] のすべての接続に特定のレポート サーバーの URL を使用する場合<br /><br /> たとえば、ネットワーク上のすべてのコンピューターに [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] へのアクセスを許可しても、ローカル接続を使用してレポート サーバーに接続するように [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] に求める場合があります。 この場合、**ReportServerUrl** を "`https://localhost/reportserver`" に設定します。|この値には、レポート サーバー Web サービスの URL を指定します。 この値は、起動時に [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] アプリケーションから読み取られます。 この値を設定すると、 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] は、URL で指定されたレポート サーバーに接続します。<br /><br /> 既定では、 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] は、 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]と同じレポート サーバー インスタンス内で実行されるレポート サーバー Web サービスへの Web フロントエンド アクセスを提供します。 ただし、別のインスタンスまたは別のコンピューター上のインスタンス内で実行されるレポート サーバー Web サービスで [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] を使用する場合は、外部のレポート サーバー Web サービスに接続するように [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] に指示するようにこの URL を設定することができます。<br /><br /> 接続先のレポート サーバーに SSL (Secure Sockets Layer) 証明書がインストールされている場合、 **ReportServerUrl** の値には、その証明書に登録されているサーバーの名前を指定する必要があります。 "基になる接続が閉じられました: SSL/TLS セキュリティ チャネルに対する信頼関係を確立できませんでした" というエラーが表示される場合は、 **ReportServerUrl** を、SSL 証明書が発行されたサーバーの完全修飾ドメイン名に設定してください。 たとえば、証明書が **https:\///adventure-works.com.onlinesales** に登録されている場合、レポート サーバー URL は **https:\///adventure-works.com.onlinesales/reportserver** になります。|  
+|**ReportServerUrl**|省略可能。 この要素は、手動で追加しない限り RSReportServer.config ファイルには含まれません。<br /><br /> この要素は、次のいずれかのシナリオを構成する場合にのみ設定します。<br /><br /> 別のコンピューターまたは同じコンピューター上の別のインスタンスで実行されるレポート サーバー Web サービスへの Web フロントエンド アクセスを、 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] が提供する場合<br /><br /> [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] の URL が複数存在し、レポート マネージャーで特定の URL を使用する場合<br /><br /> [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] のすべての接続に特定のレポート サーバーの URL を使用する場合<br /><br /> たとえば、ネットワーク上のすべてのコンピューターに [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] へのアクセスを許可しても、ローカル接続を使用してレポート サーバーに接続するように [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] に求める場合があります。 この場合、**ReportServerUrl** を "`https://localhost/reportserver`" に設定します。|この値には、レポート サーバー Web サービスの URL を指定します。 この値は、起動時に [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] アプリケーションから読み取られます。 この値を設定すると、 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] は、URL で指定されたレポート サーバーに接続します。<br /><br /> 既定では、 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] は、 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]と同じレポート サーバー インスタンス内で実行されるレポート サーバー Web サービスへの Web フロントエンド アクセスを提供します。 ただし、別のインスタンスまたは別のコンピューター上のインスタンス内で実行されるレポート サーバー Web サービスで [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] を使用する場合は、外部のレポート サーバー Web サービスに接続するように [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] に指示するようにこの URL を設定することができます。<br /><br /> 接続先のレポート サーバーに SSL (Secure Sockets Layer) 証明書がインストールされている場合、 **ReportServerUrl** の値には、その証明書に登録されているサーバーの名前を指定する必要があります。 "基になる接続が閉じられました: SSL/TLS セキュリティ チャネルに対する信頼関係を確立できませんでした" というエラーが表示される場合は、**ReportServerUrl** を、SSL 証明書が発行されたサーバーの完全修飾ドメイン名に設定してください。 たとえば、証明書が **https:\///adventure-works.com.onlinesales** に登録されている場合、レポート サーバー URL は **https:\///adventure-works.com.onlinesales/reportserver** になります。|  
 |**ReportServerExternalUrl**|省略可能。 この要素は、手動で追加しない限り RSReportServer.config ファイルには含まれません。<br /><br /> SharePoint 2.0 Web パーツを使用しており、ユーザーがレポートを取得して新しいブラウザー ウィンドウで開くことができるようにする場合にのみ、この要素を設定します。<br /><br /> \<**ReportServerUrl**> 要素の下に \<**ReportServerExternalUrl**> を追加し、別のブラウザー ウィンドウでアクセスされたときにレポート サーバー インスタンスに解決されるレポート サーバーの完全修飾名に設定します。 \<**ReportServerUrl**> は削除しないでください。<br /><br /> 構文例を次に示します。<br /><br /> `<ReportServerExternalUrl>https://myserver/reportserver</ReportServerExternalUrl>`|この値は SharePoint 2.0 Web パーツで使用されます。<br /><br /> 以前のリリースでは、この値を設定してインターネットに接続されたレポート サーバーにレポート ビルダーを配置することが推奨されていました。 この配置シナリオはテストされていません。 以前に、レポート ビルダーへのインターネット アクセスをサポートするためにこの設定を使用していた場合は、他の方法を検討してください。|  
   
 ## <a name="see-also"></a>参照  

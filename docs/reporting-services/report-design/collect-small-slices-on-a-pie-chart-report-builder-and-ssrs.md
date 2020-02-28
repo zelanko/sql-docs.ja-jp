@@ -1,5 +1,5 @@
 ---
-title: 円グラフの小さいスライスをまとめる (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: 円グラフの小さいスライスをまとめる (レポート ビルダー) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,19 +8,19 @@ ms.topic: conceptual
 ms.assetid: 21c2b8cb-b9ca-4bc0-bf49-50ba432562f6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8718570c6a370368eaf227280245607b182eba25
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: dfcf8ddd7b77132a1658c2ea1d55f7a220c336d0
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581628"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082249"
 ---
 # <a name="collect-small-slices-on-a-pie-chart-report-builder-and-ssrs"></a>円グラフの小さいスライスをまとめる (レポート ビルダーおよび SSRS)
 スライスが多すぎる円グラフは、煩雑に見えることがあります。 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートで円グラフの多数の小さいスライスを 1 つのスライスにまとめる方法を説明します。
  
  小さいスライスを 1 つのスライスにまとめるには、まず小さいスライスを収集するためのしきい値を円グラフに対する比率と固定値のどちらで表すかを決定します。 
  
- 最初にサンプル データを使って試してみたい場合は、「[チュートリアル: レポートへの円グラフの追加 (レポート ビルダー)](Tutorial:%20Add%20a%20Pie%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md)」で小さいスライスを 1 つのスライスにまとめる手順が説明されています。
+ 「[チュートリアル:レポートへの円グラフの追加 (レポート ビルダー)](Tutorial:%20Add%20a%20Pie%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md)」には、小さいスライスを 1 つのスライスにまとめる手順が説明されています。最初にサンプル データを使って試してみたい場合に参照してください。
  
  ![report-builder-pie-chart-other-slice](../../reporting-services/report-design/media/report-builder-pie-chart-other-slice.png)
   
@@ -79,7 +79,7 @@ ms.locfileid: "65581628"
 >  2 つ目の円グラフの書式は設定できません。 このため、円スライスを収集する際は最初の方法を使用することを強くお勧めします。  
   
 ## <a name="see-also"></a>参照  
-* [チュートリアル: レポートへの円グラフの追加 (レポート ビルダー)](Tutorial:%20Add%20a%20Pie%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md)
+* [チュートリアル:レポートへの円グラフの追加 (レポート ビルダー)](Tutorial:%20Add%20a%20Pie%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md)
 *  [円グラフ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)   
 *  [グラフでのデータ ポイントの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
 *  [円グラフの外側へのデータ ポイント ラベルの表示 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   

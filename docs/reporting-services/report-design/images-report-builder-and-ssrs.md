@@ -1,5 +1,5 @@
 ---
-title: 画像 (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: 画像 (レポート ビルダー) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: fcc2db5c-5c26-4607-ae2b-f65c80360536
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bdcb7800999434cff8b26707ed477c599129e5e0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: d1336910c5538ff9d15ff7f2d651aa23e220ca87
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580249"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082080"
 ---
 # <a name="images-report-builder-and-ssrs"></a>画像 (レポート ビルダーおよび SSRS)
   画像は、レポート内に埋め込まれている画像、データベースに格納されている画像、レポート サーバー上に格納されている画像、または Web 上の他の場所に格納されている画像への参照を保持するレポート アイテムです。 画像は、行データとして繰り返し使用されるピクチャである場合もあります。 画像は、任意のレポート アイテムの背景としても使用できます。  

@@ -33,12 +33,12 @@ ms.assetid: 12be2923-7289-4150-b497-f17e76a50b2e
 author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 327b084471155c9e7d8451fc8dceec8e4c00496f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 50587bc33f6fd37e4c114fa28a7171e6ea951b84
+ms.sourcegitcommit: 11691bfa8ec0dd6f14cc9cd3d1f62273f6eee885
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68116478"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "77074448"
 ---
 # <a name="dbcc-show_statistics-transact-sql"></a>DBCC SHOW_STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -96,7 +96,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
   
 |列名|説明|  
 |-----------------|-----------------|  
-|Name|統計オブジェクトの名前。|  
+|名前|統計オブジェクトの名前。|  
 |[更新]|統計情報が最後に更新された日付と時刻。 [STATS_DATE](../../t-sql/functions/stats-date-transact-sql.md) 関数でこの情報を取得することもできます。 詳細については、このページの「[解説](#Remarks)」セクションを参照してください。|  
 |[行]|統計情報が最後に更新された時点のテーブルまたはインデックス付きビューの行の総数。 統計がフィルター選択されている場合、またはフィルター選択されたインデックスに対応している場合は、行数がテーブルの行数よりも少なくなることがあります。 詳細については、「[統計情報](../../relational-databases/statistics/statistics.md)」を参照してください。|  
 |[サンプリングされた行数]|統計の計算時にサンプリングされた行の合計数。 Rows Sampled < Rows の場合、表示されるヒストグラムおよび密度の結果は、サンプリングされた行に基づいて推定されます。|  
@@ -158,28 +158,30 @@ DBCC SHOW_STATISTICS ( table_name , target )
 ## <a name="restrictions"></a>制限  
  DBCC SHOW_STATISTICS では、空間インデックスおよび xVelocity メモリ最適化列ストア インデックスの統計情報は提供されません。  
   
-## <a name="permissions-for-includessnoversionincludesssnoversion-mdmd-and-includesssdsincludessssds-mdmd"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [!INCLUDE[ssSDS](../../includes/sssds-md.md)] のアクセス許可  
-統計オブジェクトを表示するには、テーブルを所有しているか、固定サーバー ロール `sysadmin`、固定データベース ロール `db_owner`、または固定データベース ロール `db_ddladmin` のメンバーである必要があります。
-  
-[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 で、権限に関する制限が変更され、SELECT 権限でこのコマンドを使用できるようになりました。 SELECT 権限でコマンドを実行するときは、次の要件に注意してください。
+## <a name="permissions-for-ssnoversion-and-sssds"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [!INCLUDE[ssSDS](../../includes/sssds-md.md)] のアクセス許可  
+統計オブジェクトを表示するには、ユーザーがテーブルに対する SELECT 権限を持っている必要があります。
+SELECT 権限でコマンドを実行するときは、次の要件に注意してください。
 -   統計オブジェクトのすべての列に対する権限が必要です。  
 -   フィルター条件がある場合は、そのすべての列に対する権限が必要です。  
--   テーブルには、行レベルのセキュリティ ポリシーを持つことはできません。  
+-   テーブルには、行レベルのセキュリティ ポリシーを持つことはできません。
+-   統計オブジェクト内のいずれかの列が動的データ マスク ルールでマスクされている場合、ユーザーは SELECT 権限に加えて、UNMASK 権限を持っている必要があります。
+
+[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 よりも前のバージョンでは、ユーザーはテーブルを所有しているか、固定サーバー ロール `sysadmin`、固定データベース ロール `db_owner`、または固定データベース ロール `db_ddladmin` のメンバーである必要があります。
+[!NOTE]
+動作を [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 より前の動作に戻すには、トレースフラグ 9485 を使用します。
   
-この動作を無効にするには、トレース フラグ 9485 を使用します。
-  
-## <a name="permissions-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] のアクセス許可  
+## <a name="permissions-for-sssdw-and-sspdw"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] のアクセス許可  
 DBCC SHOW_STATISTICS では、次のいずれかのメンバーシップまたはテーブルに対する SELECT 権限が必要です。
 -   sysadmin 固定サーバー ロール  
 -   db_owner 固定データベース ロール  
 -   db_ddladmin 固定データベース ロール  
   
-## <a name="limitations-and-restrictions-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] の制限事項と制約事項  
+## <a name="limitations-and-restrictions-for-sssdw-and-sspdw"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] の制限事項と制約事項  
 DBCC SHOW_STATISTICS では、コントロールのノード レベルでのシェル データベースに格納されている統計情報を表示します。 計算ノード上で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって自動的に作成される統計情報は表示されません。
   
 DBCC SHOW_STATISTICS は、外部テーブルではサポートされません。
   
-## <a name="examples-includessnoversionincludesssnoversion-mdmd-and-includesssdsincludessssds-mdmd"></a>例: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
+## <a name="examples-ssnoversion-and-sssds"></a>例: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
 ### <a name="a-returning-all-statistics-information"></a>A. すべての統計情報を返す  
 次の例は、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベース内の `AK_Address_rowguid` テーブルの `Person.Address` インデックスに関するすべての統計情報を表示します。
   
@@ -196,7 +198,7 @@ DBCC SHOW_STATISTICS ("dbo.DimCustomer",Customer_LastName) WITH HISTOGRAM;
 GO  
 ```  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdw-and-sspdw"></a>例: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 ### <a name="c-display-the-contents-of-one-statistics-object"></a>C. 1 つの統計オブジェクトの内容を表示します。  
  次の例では、DimCustomer テーブル Customer_LastName 統計の内容を表示します。  
   

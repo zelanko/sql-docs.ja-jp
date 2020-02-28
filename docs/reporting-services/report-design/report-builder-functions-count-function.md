@@ -1,5 +1,5 @@
 ---
-title: Count 関数 (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: Count 関数 (レポート ビルダー) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 7b50b101-daf8-4fb0-ae04-57384755779f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9cdf7cc51563de96e20e188a7fca2fb0f1ac9631
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c37b4999f0fb2dd7cbf14322348e5836e8b38e32
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65579719"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081300"
 ---
 # <a name="report-builder-functions---count-function"></a>レポート ビルダー関数 - Count 関数
   式で指定された NULL 以外の値の数を、指定されたスコープのコンテキストで評価して返します。  
@@ -60,7 +60,7 @@ Count(expression, scope, recursive)
   
  例  
   
-## <a name="description"></a>[説明]  
+## <a name="description"></a>説明  
  次のコード例では、既定のスコープおよび親グループのスコープで、 `Size` の NULL でない値の数を計算する式を示します。 この式は、子グループ `GroupbySubcategory`に属する行内のセルに追加されます。 親グループは `GroupbyCategory`です。 この式では、 `GroupbySubcategory` (既定のスコープ) の結果、次に `GroupbyCategory` (親グループのスコープ) の結果が表示されます。  
   
 > [!NOTE]  

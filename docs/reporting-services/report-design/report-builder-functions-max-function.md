@@ -1,5 +1,5 @@
 ---
-title: Max 関数 (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: Max 関数 (レポート ビルダー) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 61c4d6ff-6435-456a-9cbd-5113d2113e8a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0fbab9fbc037d2266d86a0af5c1919ee333e596e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 5546cf4759f6e7cc6f1c659425ff783901ca9ffd
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65577437"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081211"
 ---
 # <a name="report-builder-functions---max-function"></a>レポート ビルダー関数 - Max 関数
   指定されたスコープのコンテキストで、式で指定された NULL 以外のすべての数値の中から最大値を返します。  

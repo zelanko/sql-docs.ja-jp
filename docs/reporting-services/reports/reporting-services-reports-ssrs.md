@@ -1,5 +1,5 @@
 ---
-title: Reporting Services レポート (SSRS) | Microsoft Docs
+title: Reporting Services レポート | Microsoft Docs
 ms.date: 06/19/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 52ed9e74-f2c8-488b-a2c2-6dfbc2a2c8cc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6a0b224d51daad95e4d19cc614d3a964779cd11b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 4d178d69c68d2466fcec808b0cabdd180368f23a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190450"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082431"
 ---
 # <a name="reporting-services-reports-ssrs"></a>Reporting Services レポート (SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の改ページ調整されたレポートは、レポート データ要素とレポート レイアウト要素を含む XML ベースのレポート定義です。 クライアント ファイル システムでは、レポート定義に .rdl というファイル拡張子が付きます。 改ページ調整されたレポートをパブリッシュすると、そのレポートによって、レポート サーバーまたは SharePoint サイトに格納されたレポート アイテムが使用されます。 改ページ調整されたレポートは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]によって提供されるサーバー ベースのレポート プラットフォームの一部です。 また、 [Create mobile reports with SQL Server Mobile Report Publisher](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)操作も可能です。  
@@ -177,7 +177,7 @@ SharePoint サイトにパブリッシュされたレポートのデータ警告
   
 - **詳細情報の情報源を確認します。** たとえば、式を含むレポート デザインの場合、レポート ビルダー ツールよりもレポート デザイナー ツールで式の評価問題に関する詳細情報が得られます。 レポートの処理エラーの場合は、ログ ファイルに詳細情報が記録されています。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Reporting Services ツール](../../reporting-services/tools/reporting-services-tools.md)   
  [拡張機能 (SSRS)](../../reporting-services/extensions-ssrs.md)   
  [SharePoint Reporting Services レポート サーバーのネイティブ モードと SharePoint モードを比較する](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)  

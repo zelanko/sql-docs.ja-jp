@@ -9,12 +9,12 @@ ms.date: 10/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0219022ee2f4d813261aa6181416521e88e5d0f6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 0fc816325d4008d1913f0e07e3032677a0eddb4d
+ms.sourcegitcommit: 11691bfa8ec0dd6f14cc9cd3d1f62273f6eee885
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75253121"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "77074430"
 ---
 # <a name="security-concepts-for-big-data-clusters-2019"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]のセキュリティの概念
 
@@ -66,6 +66,10 @@ ms.locfileid: "75253121"
 クライアントと外部エンドポイント間およびクラスター内のコンポーネント間の通信の暗号化は、証明書を使用して TLS/SSL で保護されます。
 
 データ プールと通信する SQL マスター インスタンスなど、SQL Server 間のすべての通信は、SQL ログインを使用して保護されます。
+
+> [!IMPORTANT]
+>  ビッグ データ クラスターでは、etcd を使用して資格情報が保存されます。 ベスト プラクティスとして、Kubernetes クラスターで保存時に etcd 暗号化が使用されるように、確実に構成する必要があります。 既定では、etcd に格納されるシークレットは暗号化されません。 Kubernetes のドキュメントでは、この管理タスクの詳細について説明しています (https://kubernetes.io/docs/tasks/administer-cluster/kms-provider/ と https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/ )。
+
 
 ## <a name="basic-administrator-login"></a>基本管理者ログイン
 

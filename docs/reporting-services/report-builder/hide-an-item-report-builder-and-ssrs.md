@@ -1,5 +1,5 @@
 ---
-title: 項目の非表示 (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: アイテムを非表示にする (レポート ビルダー) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +11,12 @@ f1_keywords:
 ms.assetid: 9d78f8de-959b-456f-8947-687fa6e2ba91
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2a6e57c1e4326f2c8a0f04a515aab7c699778f39
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 00d0544c6580e54f34b16bcce9dac2ce8604efdc
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580707"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77079051"
 ---
 # <a name="hide-an-item-report-builder-and-ssrs"></a>アイテムを非表示にする (レポート ビルダーおよび SSRS)
   レポート パラメーターやその他の式を指定して、アイテムを条件付きで非表示にする場合は、レポート アイテムの表示/非表示を設定します。  

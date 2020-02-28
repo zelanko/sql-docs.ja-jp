@@ -1,7 +1,7 @@
 ---
 title: Azure Active Directory 認証を利用した接続 | Microsoft Docs
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 01/29/2020
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b596936010fcdce4eb5c0701c5f0c6631cd9687e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 7019efd6e1071624eb3e89873918fb9eb2775833
+ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "69028120"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77004644"
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>Azure Active Directory 認証を利用した接続
 
@@ -30,7 +30,7 @@ Microsoft JDBC Driver for SQL Server で Azure Active Directory 認証をサポ�
     * **ActiveDirectoryMSI**
         * ドライバー バージョン **v7.2** 以降でサポートされています。`authentication=ActiveDirectoryMSI` を使用して、"ID" サポートが有効になっている Azure リソース内から Azure SQL Database および Data Warehouse に接続することができます。 必要に応じて、この認証モードと共に、**msiClientId** を Connection または DataSource プロパティで指定することもできます。これには、接続を確立するための **accessToken** を取得するために使用される、マネージド サービス ID のクライアント ID が含まれている必要があります。
     * **ActiveDirectoryIntegrated**
-        * ドライバー バージョン **v6.0** 以降でサポートされています。`authentication=ActiveDirectoryIntegrated` を使用し、統合認証を使って Azure SQL Database および Data Warehouse に接続することができます。 この認証モードを使用するには、オンプレミスの Active Directory フェデレーション サービス (ADFS) をクラウドの Azure Active Directory とフェデレーションする必要があります。 これが設定されたら、ネイティブ ライブラリ 'sqljdbc_auth.dll' を Windows OS のアプリケーション クラス パスに追加するか、クロスプラットフォーム認証をサポートするための Kerberos チケットを設定することで接続できます。 ドメインに参加しているマシンにログインしているときに資格情報の入力を求められることなく、Azure SQL DB または DW にアクセスできるようになります。
+        * ドライバー バージョン **v6.0** 以降でサポートされています。`authentication=ActiveDirectoryIntegrated` を使用し、統合認証を使って Azure SQL Database および Data Warehouse に接続することができます。 この認証モードを使用するには、オンプレミスの Active Directory フェデレーション サービス (ADFS) をクラウドの Azure Active Directory とフェデレーションする必要があります。 これが設定されたら、ネイティブ ライブラリ "mssql-jdbc_auth-\<バージョン>-\<arch>.dll" を Windows OS のアプリケーション クラス パスに追加するか、クロスプラットフォーム認証をサポートするための Kerberos チケットを設定することで接続できます。 ドメインに参加しているマシンにログインしているときに資格情報の入力を求められることなく、Azure SQL DB または DW にアクセスできるようになります。
     * **ActiveDirectoryPassword**
         * ドライバー バージョン **v6.0** 以降でサポートされています。`authentication=ActiveDirectoryPassword` を使用し、Azure AD プリンシパル名とパスワードを使って Azure SQL Database および Data Warehouse に接続することができます。
     * **SqlPassword**
@@ -107,7 +107,7 @@ You have successfully logged on as: <your MSI username>
 
 ## <a name="connecting-using-activedirectoryintegrated-authentication-mode"></a>ActiveDirectoryIntegrated 認証モードを使用した接続
 バージョン 6.4 では、Microsoft JDBC Driver によって、複数のプラットフォーム (Windows、Linux、および macOS) で Kerberos チケットを使用した ActiveDirectoryIntegrated 認証のサポートが追加されています。
-詳細については、「[Windows、Linux、Mac で Kerberos チケットを設定する](https://docs.microsoft.com/sql/connect/jdbc/connecting-using-azure-active-directory-authentication#set-kerberos-ticket-on-windows-linux-and-mac)」を参照してください。 また、Windows では、JDBC ドライバーを使用した ActiveDirectoryIntegrated 認証に sqljdbc_auth.dll を使用することもできます。
+詳細については、「[Windows、Linux、Mac で Kerberos チケットを設定する](https://docs.microsoft.com/sql/connect/jdbc/connecting-using-azure-active-directory-authentication#set-kerberos-ticket-on-windows-linux-and-mac)」を参照してください。 また、Windows では、JDBC ドライバーを使用した ActiveDirectoryIntegrated 認証に mssql-jdbc_auth-\<バージョン>-\<arch>.dll を使用することもできます。
 
 > [!NOTE]
 >  古いバージョンのドライバーを使う場合は、こちらの[リンク](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)で、この認証モードを使用するために必要な該当する依存関係を確認してください。 

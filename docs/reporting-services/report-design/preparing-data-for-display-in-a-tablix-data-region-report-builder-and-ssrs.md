@@ -1,5 +1,5 @@
 ---
-title: Tablix データ領域に表示するデータの準備 (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: Tablix データ領域に表示するデータの準備 (レポート ビルダー) | Microsoft Docs
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: fbb00dc6-7887-480c-b771-cab6fecb8dcc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 93782573628b711c4e8be9eb0e9a6b52eb4935bd
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: cf1e776b874a371dceeef8c10306a55efdd1a2ff
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65578204"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082403"
 ---
 # <a name="preparing-data-for-display-in-a-tablix-data-region-report-builder-and-ssrs"></a>Tablix データ領域に表示するデータの準備 (レポート ビルダーおよび SSRS)
   Tablix データ領域には、データセットのデータが表示されます。 データセットに取得されたすべてのデータを表示することも、フィルターを作成してデータのサブセットのみを表示することもできます。 NULL 値に入力する条件式を追加したり、データセットのクエリを変更して既存の列の並べ替え順序を定義する列を含めることもできます。  
@@ -30,7 +30,7 @@ ms.locfileid: "65578204"
 =IIF(Fields!Size.Value IS NOTHING,"Null",Fields!Size.Value)  
 ```  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クエリを使用して [!INCLUDE[tsql](../../includes/tsql-md.md)] データ ソースからデータを取得する前にデータの NULL 値を削除する方法の詳細については、「[NULL と UNKNOWN (Transact-SQL)](../../t-sql/language-elements/null-and-unknown-transact-sql.md)」を参照してください。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ ソースからデータを取得する前にデータの NULL 値を削除する方法の詳細については、「[NULL と UNKNOWN (Transact-SQL)](../../t-sql/language-elements/null-and-unknown-transact-sql.md)」を参照してください。  
   
 ## <a name="handling-null-field-names"></a>NULL フィールド名の処理  
  フィールド自体がクエリ結果セット内に存在していれば、式で NULL 値のテストを行うことに問題はありません。 カスタム コードを使用して、実行時にデータ ソースから返されるコレクション フィールドにフィールド自体が存在するかどうかをテストできます。 詳細については、「[データセット フィールド コレクションの参照 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/built-in-collections-dataset-fields-collection-references-report-builder.md)」を参照してください。  

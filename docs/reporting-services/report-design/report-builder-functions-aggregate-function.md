@@ -1,5 +1,5 @@
 ---
-title: 集計関数 (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: 集計関数 (レポート ビルダー) | Microsoft Docs
 ms.date: 03/15/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 16ce643f-bbb3-40a5-ba78-7aed73156f3e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: aa6d1892c8aceb4640207bce9bc2321541137b6f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 0c2590431193fa48bf4467fb30c5abc6cbf5a037
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65576386"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77079138"
 ---
 # <a name="report-builder-functions---aggregate-function"></a>レポート ビルダー関数 - 集計関数
   データ プロバイダーの定義に従い、指定された式のカスタムの集計を返します。  

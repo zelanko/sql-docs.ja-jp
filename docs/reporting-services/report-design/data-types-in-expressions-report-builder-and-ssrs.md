@@ -1,5 +1,5 @@
 ---
-title: 式で使用されるデータ型 (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: 式で使用されるデータ型 (レポート ビルダー) | Microsoft Docs
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 998757029ae5e3a8239a937897f176d5994c5880
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: fc38e22d7265384e8f16df56ffcab63018ecd4e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "68892996"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080531"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>式で使用されるデータ型 (レポート ビルダーおよび SSRS)
   データを効率よく格納し、処理できるように、さまざまなデータの種類を表すデータ型が用意されています。 代表的なデータ型としては、テキスト (文字列) 型、数値型 (小数点以下桁数を含む)、数値型 (小数点以下桁数を含まない)、日付/時刻型、イメージ型などがあります。 レポート内の値は、レポート定義言語 (RDL) データ型である必要があります。 値は、レポートに表示する場合に目的に応じて書式設定できます。 たとえば、通貨を表すフィールドの場合、データを浮動小数点数としてレポート定義に格納しておき、実際には、指定した書式設定プロパティに従ってさまざまな形式で表示することができます。  

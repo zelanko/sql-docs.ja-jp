@@ -1,6 +1,6 @@
 ---
-title: レポート サーバーの Web ポータル (SSRS ネイティブ モード) | Microsoft Docs
-ms.date: 12/05/2018
+title: レポート サーバーの Web ポータル (ネイティブ モード) | Microsoft Docs
+ms.date: 01/31/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7349e626-6ed5-4d21-b05f-cf042ad9ad70
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 42844a8783f5d1e1066667ed828906c0549f84c2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 24afa6ec8daa26730ad202d1aad612ba01213bb4
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "70874912"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082510"
 ---
 # <a name="the-web-portal-of-a-report-server-ssrs-native-mode"></a>レポート サーバーの Web ポータル (SSRS ネイティブ モード)
 
@@ -30,7 +30,7 @@ Web ポータルを利用し、次のタスクを実行できます。
 
 - レポートの表示、検索、印刷、およびサブスクライブ。
 - サーバー上のアイテムを整理するフォルダー階層の作成、セキュリティ保護、および保守。
-- アイテムおよび操作に対するアクセスを決定するロールベースのセキュリティの構成。
+- アイテムおよび操作に対するアクセスを決定するロールベースのセキュリティの構成。 詳細については、「[ロールの定義 - 定義済みロール](security/role-definitions-predefined-roles.md)」を参照してください。
 - レポート実行プロパティ、レポート履歴、およびレポート パラメーターの構成。
 - スケジュールおよびデータ ソース接続をさらに管理しやすくする共有スケジュールおよび共有データ ソースの作成。
 - 大きい受信者一覧にレポートをロール アウトするデータ ドリブン サブスクリプションの作成。
@@ -112,7 +112,7 @@ Power BI Desktop レポートと Excel ブックのアクセス許可をアッ�
 
 [共有データセットの操作](../reporting-services/work-with-shared-datasets-web-portal.md)
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [SQL Server Mobile Report Publisher を使用してモバイル レポートを作成する](../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
 [URL の構成 (SSRS 構成マネージャー)](../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  

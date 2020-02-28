@@ -1,5 +1,5 @@
 ---
-title: テキストとプレースホルダーの書式設定 (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: テキストとプレースホルダーの書式設定 (レポート ビルダー) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +15,12 @@ f1_keywords:
 ms.assetid: 26a4baf2-7bc5-4634-b136-552687ffa477
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 59e78e1c11b18d71e20c054f69979d3f3679bce2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 5c97993b2cc2bd2585bfe6010e6aa4b1cfd59f78
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580295"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77079518"
 ---
 # <a name="formatting-text-and-placeholders-report-builder-and-ssrs"></a>テキストとプレースホルダーの書式設定 (レポート ビルダーおよび SSRS)
   テキスト ボックスは、データ領域内のレポート アイテムまたは個々のセルであり、テキスト、計算フィールド、データベース内のフィールドへのポインター、またはこの 3 つのアイテムの組み合わせが格納されます。 フォントと色の組み合わせ、太字や斜体のスタイルの追加、整列配置やぶら下げインデントなどの段落スタイルの使用が可能です。 また、テキスト ボックス全体の書式を設定することも、テキスト ボックス内の特定のテキスト、数値、式、またはフィールドの書式を設定することも可能です。  

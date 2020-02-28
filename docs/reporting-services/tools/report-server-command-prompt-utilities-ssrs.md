@@ -1,5 +1,5 @@
 ---
-title: レポート サーバーのコマンド プロンプト ユーティリティ (SSRS) | Microsoft Docs
+title: レポート サーバーのコマンド プロンプト ユーティリティ | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 68f2f9f4-f894-40ff-a71c-f9756bf4b68c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 94c21d86b1a89d8de30d0be558fcab008f49d044
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: db8be061664d720ba3be1a4f66ed05062bb1af21
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65576276"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081920"
 ---
 # <a name="report-server-command-prompt-utilities-ssrs"></a>レポート サーバーのコマンド プロンプト ユーティリティ (SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、レポート サーバーの管理に使用できるいくつかのコマンド ライン ユーティリティがあります。 これらのユーティリティは、レポート サーバーをインストールする際に自動的にインストールされます。  
   
-|Name|コマンド ファイル|サポートされる配置モード|説明|  
+|名前|コマンド ファイル|サポートされる配置モード|説明|  
 |----------|------------------|-------------------------------|-----------------|  
 |RSS ユーティリティ|rs.exe (rs.exe)|ネイティブ モードと SharePoint モード。 SharePoint モードのサポートは [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] リリースで導入されました。|[rs ユーティリティ](../../reporting-services/tools/rs-exe-utility-ssrs.md) は、スクリプト操作の実行に使用できるスクリプト ホストです。 このツールを使用して、レポート サーバー データベース間でのデータのコピー、レポートのパブリッシュ、レポート サーバー データベースでのアイテムの作成などを行う [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] スクリプトを実行します。 スクリプトを使用してサーバーを管理する方法の詳細については、「 [配置タスクおよび管理タスクのスクリプト作成](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)」を参照してください。|  
 |PowerShell コマンドレット||SharePoint のみ|PowerShell コマンドレットの一覧については、「 [Reporting Services SharePoint モードの PowerShell コマンドレット](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)」を参照してください。|  

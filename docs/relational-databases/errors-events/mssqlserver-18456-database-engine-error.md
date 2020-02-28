@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c417631d-be1f-42e0-8844-9f92c77e11f7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 737e64973e4651dd36c58fa9ff97a61c65a604a9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: ab33fa19b968990e81851edac9d91fb55db81049
+ms.sourcegitcommit: f06049e691e580327eacf51ff990e7f3ac1ae83f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68137091"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77146313"
 ---
 # <a name="mssqlserver_18456"></a>MSSQLSERVER_18456
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,6 +73,7 @@ ms.locfileid: "68137091"
 |12|ログインは有効なログインですが、サーバー アクセスに失敗しました。|  
 |18|パスワードを変更する必要があります。|  
 |38, 46|ユーザーによって要求されたデータベースを見つけることができませんでした。|
+|58| SQL Server は Windows 認証のみを使用するように設定されているのに、SQL 認証を使用したログインがクライアントで試みられた場合です。 別の原因として、SID が一致しない場合があります。|
 |102 - 111|AAD のエラーです。|
 |122 - 124|空のユーザー名またはパスワードによるエラーです。|
 |126|ユーザーによって要求されたデータベースは存在しません。|

@@ -1,5 +1,5 @@
 ---
-title: データセット フィールド コレクションの参照 (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: データセット フィールド コレクションの参照 (レポート ビルダー) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 006c6bd3-d776-4c20-9092-32e40688ac49
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 91550f60a7fe056a3df68ba9c4006e8359ff2c73
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 83b041ebde43c0208c3606fff6b0dcc33d7680c3
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581818"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081898"
 ---
 # <a name="built-in-collections---dataset-fields-collection-references-report-builder"></a>組み込みコレクション - データセット フィールド コレクションの参照 (レポート ビルダー)
   レポート内の各データセットには、1 つのフィールド コレクションが含まれます。 フィールド コレクションは、データセット クエリによって指定されるフィールドと、ユーザーが作成する追加の計算フィールドのセットです。 データセットを作成すると、フィールド コレクションが **[レポート データ]** ペインに表示されます。  

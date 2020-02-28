@@ -1,7 +1,7 @@
 ---
 title: 接続プロパティの設定 | Microsoft Docs
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 01/29/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f1b62700-f046-488d-bd6b-a5cd8fc345b7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: e32a0fffd60fe34bf0431e6060846387ff079952
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 80c4e518f8aed48effded7573a8567600274ab2b
+ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "69027765"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77004577"
 ---
 # <a name="setting-the-connection-properties"></a>接続プロパティの設定
 
@@ -51,14 +51,16 @@ ms.locfileid: "69027765"
 | accessToken<br/><br/>String<br/><br/>null | このプロパティを使用し、アクセス トークンを使って SQL データベースに接続します。 **accessToken** は、接続 URL を使用して設定することはできません。 |
 | applicationIntent<br/><br/>String<br/><br/>ReadWrite | アプリケーションがサーバーに接続するときのワークロードのタイプを宣言します。 <br/><br/>有効値は、**ReadOnly** と **ReadWrite** です。 <br/><br/>詳細については、「[高可用性、ディザスター リカバリーのための JDBC Driver のサポート](../../connect/jdbc/jdbc-driver-support-for-high-availability-disaster-recovery.md)」をご覧ください。 |
 | applicationName<br/><br/>String<br/>[&lt;=128 文字]<br/><br/>null | アプリケーション名、または "[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]" (名前が指定されていない場合) です。<br/><br/>個別のアプリケーションを識別するために、さまざまな [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロファイリング ツールおよびロギング ツールで使用されます。 |
-| 認証<br/><br/>String<br/><br/>NotSpecified | Microsoft JDBC Driver 6.0 for SQL Server 以降では、この省略可能なプロパティは、接続に使用する SQL 認証方法を示します。 指定できる値は、**ActiveDirectoryIntegrated**、**ActiveDirectoryPassword**、**ActiveDirectoryMSI**、**SqlPassword**、および **NotSpecified** (既定) です。<br/><br/> **ActiveDirectoryIntegrated** を使用して、統合 Windows 認証を使用している SQL Database に接続します。<br/><br/> **ActiveDirectoryPassword** を使用して、Azure AD のプリンシパル名とパスワードを使用している SQL Database に接続します。<br/><br/> **ActiveDirectoryMSI** を使用して、Azure Virtual Machine、App Service、Function App などにマネージド サービス ID (MSI) 認証を使用して Azure リソース内から SQL Database に接続します。 <br><br>**ActiveDirectoryMSI** 認証モードを使用するときに、ドライバーでサポートされるマネージド ID は、次の 2 種類です。 <br> 1._システム割り当てマネージド ID_:**accessToken** を取得するために既定で使用されます。 <br> 2._ユーザー割り当てマネージド ID_:マネージド サービス ID (MSI) のクライアント ID が **msiClientId** 接続プロパティで指定されている場合に、**accessToken** を取得するために使用されます。<br/><br/> **userName**/**user** プロパティと **password** プロパティを使って SQL Server に接続するには、**SqlPassword** を使用します。<br/><br/> これらの認証方法がいずれも必要ない場合は、**NotSpecified** を使用します。<br/><br/> **重要:** 認証が ActiveDirectoryIntegrated に設定されている場合は、次の 2 つのライブラリをインストールする必要があります。**SQLJDBC_AUTH.DLL** (JDBC ドライバー パッケージで入手可能) と SQL Server 用の Azure Active Directory 認証ライブラリ (**ADALSQL.DLL**)。ダウンロード センターの「[Microsoft SQL Server 用の Microsoft Active Directory 認証ライブラリ](https://www.microsoft.com/download/details.aspx?id=48742)」からさまざまな言語版 (x86 と amd64 の両方) を入手できます。 JDBC ドライバーでは、ADALSQL.DLL のバージョン **1.0.2028.318 以降** のみがサポートされます。<br/><br/> **注:** 認証プロパティが **NotSpecified** 以外の値に設定されている場合、ドライバーでは既定で Secure Sockets Layer (SSL) 暗号化が使用されます。<br/><br/> Azure Active Directory 認証を構成する方法については、[Azure Active Directory 認証を使用した SQL Database への接続](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)に関するページを参照してください。 |
+| 認証<br/><br/>String<br/><br/>NotSpecified | Microsoft JDBC Driver 6.0 for SQL Server 以降では、この省略可能なプロパティは、接続に使用する SQL 認証方法を示します。 指定できる値は、**ActiveDirectoryIntegrated**、**ActiveDirectoryPassword**、**ActiveDirectoryMSI**、**SqlPassword**、および **NotSpecified** (既定) です。<br/><br/> **ActiveDirectoryIntegrated** を使用して、統合 Windows 認証を使用している SQL Database に接続します。<br/><br/> **ActiveDirectoryPassword** を使用して、Azure AD のプリンシパル名とパスワードを使用している SQL Database に接続します。<br/><br/> **ActiveDirectoryMSI** を使用して、Azure Virtual Machine、App Service、Function App などにマネージド サービス ID (MSI) 認証を使用して Azure リソース内から SQL Database に接続します。 <br><br>**ActiveDirectoryMSI** 認証モードを使用するときに、ドライバーでサポートされるマネージド ID は、次の 2 種類です。 <br> 1._システム割り当てマネージド ID_:**accessToken** を取得するために既定で使用されます。 <br> 2._ユーザー割り当てマネージド ID_:マネージド サービス ID (MSI) のクライアント ID が **msiClientId** 接続プロパティで指定されている場合に、**accessToken** を取得するために使用されます。<br/><br/> **userName**/**user** プロパティと **password** プロパティを使って SQL Server に接続するには、**SqlPassword** を使用します。<br/><br/> これらの認証方法がいずれも必要ない場合は、**NotSpecified** を使用します。<br/><br/> **重要:** 認証が ActiveDirectoryIntegrated に設定されている場合、**mssql-jdbc_auth-\<バージョン>-\<arch>.dll** (JDBC ドライバー パッケージで入手可能) と SQL Server 用の Azure Active Directory 認証ライブラリ (**ADALSQL.DLL**) の 2 つのライブラリをインストールする必要があります。ダウンロード センターの「[Microsoft SQL Server 用の Microsoft Active Directory 認証ライブラリ](https://www.microsoft.com/download/details.aspx?id=48742)」からさまざまな言語版 (x86 と amd64 の両方) を入手できます。 JDBC ドライバーでは、ADALSQL.DLL のバージョン **1.0.2028.318 以降** のみがサポートされます。<br/><br/> **注:** 認証プロパティが **NotSpecified** 以外の値に設定されている場合、ドライバーでは既定で Secure Sockets Layer (SSL) 暗号化が使用されます。<br/><br/> Azure Active Directory 認証を構成する方法については、[Azure Active Directory 認証を使用した SQL Database への接続](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)に関するページを参照してください。 |
 | authenticationScheme<br/><br/>String<br/><br/>NativeAuthentication | アプリケーションで使用する統合セキュリティの種類を示します。 指定できる値は **JavaKerberos**、**NTLM**、および **NativeAuthentication** (既定値) です。<br/><br/> **authenticationScheme=JavaKerberos** を使用する場合は、**serverName** プロパティまたは **serverSpn** プロパティで完全修飾ドメイン名 (FQDN) を指定する必要があります。 それ以外の場合は、エラーが発生します (Kerberos データベースにサーバーが見つからない)。<br/><br/> **authenticationScheme=JavaKerberos** の使用について詳しくは、「[Kerberos 統合認証による SQL Server への接続](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md)」を参照してください。 <br/><br/> **authenticationScheme=NTLM** を使用する場合は、**domain** プロパティまたは **domainName** プロパティの NTLM を使用して認証するように Windows ドメインを指定する必要があります。また、**user** または **userName** および **password** の各プロパティの Windows 資格情報も指定する必要があります。 これを行わないと、エラーが発生します (接続プロパティを指定する必要があります)。  |
 | cancelQueryTimeout<br/><br/>INT<br/><br/>-1 | Microsoft JDBC Driver 6.4 for SQL Server 以降では、このプロパティを使用して、接続に設定されている **queryTimeout** を取り消すことができます。 SQL Server への TCP 接続が暗黙的に削除されると、クエリの実行がハングし、例外はスローされません。 このプロパティは、接続でも 'queryTimeout' が設定されている場合にのみ適用されます。 <br/><br/>ドライバーは **cancelQueryTimeout** + **queryTimeout** を合計した秒数を待機してから、接続を中断し、チャネルを閉じます。 <br/><br/>このプロパティの既定値は -1 で、動作は無期限の待機です。 |
 | columnEncryptionSetting<br/><br/>String<br/>["Enabled" &#124; "Disabled"]<br/><br/>無効 | Microsoft JDBC Driver 6.0 for SQL Server 以降では、"Enabled" に設定すると、Always Encrypted (AE) 機能を使用します。 AE を有効にすると、JDBC ドライバーは SQL Server の暗号化されたデータベースの列に格納されている機密データについて透過的に暗号化と暗号化の解除を行います。<br/><br/> **columnEncryptionSetting** の詳細については、「[JDBC ドライバーでの Always Encrypted の使用](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)」を参照してください。<br/><br/> **注:** Always Encrypted は、SQL Server 2016 以降のバージョンで利用できます。 |
-| databaseName,<br/>[データベース]<br/><br/>String<br/>[&lt;=128 文字]<br/><br/>null | 接続するデータベース名です。 <br/><br/>指定しない場合は、既定のデータベースへの接続が確立されます。 |
+| databaseName,<br/>database<br/><br/>String<br/>[&lt;=128 文字]<br/><br/>null | 接続するデータベース名です。 <br/><br/>指定しない場合は、既定のデータベースへの接続が確立されます。 |
 | domainName<br/>domain<br/><br/>String<br/>null | NTLM を使用して認証する Windows ドメイン。 |
 | disableStatementPooling<br/><br/>boolean<br/>["true" &#124; "false"]<br/><br/>true | ステートメント プーリングを使用する必要があるかどうかを示すフラグ。 |
 | enablePrepareOnFirst...<br/>PreparedStatementCall<br/><br/>boolean<br/>["true" &#124; "false"]<br/><br/>false | _enablePrepareOnFirstPreparedStatementCall_<br/><br/> 準備されたステートメントの最初の実行で <code>sp_prepexec</code> を呼び出すことによって、準備されたステートメント ハンドルの作成を有効にするには、"true" に設定します。 <br/><br/>準備されたステートメントの最初の実行で <code>sp_executesql</code> を呼び出し、ステートメントを準備しないように変更するには、"false" に設定します。2 回目の実行が行われると、<code>sp_prepexec</code> が呼び出され、準備されたステートメント ハンドルが設定されます。 |
+| enclaveAttestationUrl<br/><br/>String<br/><br/>null | Microsoft JDBC Driver 8.2 for SQL Server 以降では、この省略可能なプロパティは、セキュア エンクレーブを使用する Always Encrypted に使用する構成証明サービスのエンドポイント URL を示します。<br/><br/>詳細については、「[セキュア エンクレーブを使用する Always Encrypted](../../connect/jdbc/always-encrypted-with-secure-enclaves.md)」を参照してください。 |
+| enclaveAttestationProtocol<br/><br/>String<br/><br/>null | Microsoft JDBC Driver 8.2 for SQL Server 以降では、この省略可能なプロパティは、セキュア エンクレーブを使用する Always Encrypted に使用する構成証明プロトコルを示します。 現時点では、このフィールドでサポートされている値は **HGS** のみです。<br/><br/>詳細については、「[セキュア エンクレーブを使用する Always Encrypted](../../connect/jdbc/always-encrypted-with-secure-enclaves.md)」を参照してください。 |
 | encrypt<br/><br/>boolean<br/>["true" &#124; "false"]<br/><br/>false | [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で、サーバーに証明書がインストールされている場合に、クライアントとサーバーの間で送信されるすべてのデータに対して SSL (Secure Sockets Layer) 暗号化が使用されるようにするには、"true" に設定します。 既定値は "false" です。<br/><br/> Microsoft JDBC Driver 6.0 for SQL Server 以降では、既定で SSL 暗号化を使用する新しい接続設定 "authentication" があります。 <br/><br/>詳細については、authentication プロパティを参照してください。 |
 | failoverPartner<br/><br/>String<br/><br/>null | データベース ミラーリング構成で使用されるフェールオーバー サーバーの名前です。 このプロパティは、プリンシパル サーバーへの初期接続に失敗した場合に使用されます。初期接続が行われた後は、このプロパティは無視されます。 databaseName プロパティと組み合わせて使用する必要があります。<br/><br/> **注:** 接続文字列の中で failoverPartner プロパティを指定するときに、フェールオーバー パートナー インスタンスのサーバー インスタンスのポート番号を指定することはできません。 ただし、プリンシパル サーバー インスタンスの serverName、instanceName、portNumber の各プロパティ、およびフェールオーバー パートナー インスタンスの failoverPartner プロパティを同じ接続文字列の中で指定することはできます。<br/><br/> **Server** 接続プロパティの仮想ネットワーク名を指定した場合は、データベース ミラーリングを使用できません。 詳細については、「[高可用性、ディザスター リカバリーのための JDBC Driver のサポート](../../connect/jdbc/jdbc-driver-support-for-high-availability-disaster-recovery.md)」をご覧ください |
 | fips<br/><br/>boolean<br/>["true" &#124; "false"]<br/><br/>"false" | FIPS 対応 JVM の場合、このプロパティを **true** にする必要があります。 |
@@ -115,7 +117,7 @@ ms.locfileid: "69027765"
 > 3. pom.xml ファイルをダウンロードします。
 > 4. 次の Maven コマンドを実行して、ライブラリとその依存関係をダウンロードします。`mvn dependency:copy-dependencies`
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [JDBC ドライバーによる SQL Server への接続](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
 [FIPS モード](../../connect/jdbc/fips-mode.md)

@@ -1,5 +1,5 @@
 ---
-title: レポート サーバー URL の構成 (SSRS 構成マネージャー) | Microsoft Docs
+title: レポート サーバー URL の構成 (構成マネージャー) | Microsoft Docs
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: a0134ef0-086c-443e-93b9-7213a3d76393
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 823df0704b07657b5f7493c03fb14158b73263a2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: da3f7c0f0385ddfd8bdb61ab7009a6503acfb80a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "73594075"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080250"
 ---
 # <a name="configure-report-server-urls--ssrs-configuration-manager"></a>レポート サーバー URL の構成 (SSRS 構成マネージャー)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]では、レポート サーバー Web サービスと [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]へのアクセスに URL が使用されます。 どちらのアプリケーションを使用する場合も、事前に Web サービスと [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]それぞれに 1 つ以上の URL を構成する必要があります。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、両方のアプリケーションの URL に既定値が用意されています。この既定値は、他の Web サービスや Web アプリケーションとのサイド バイ サイドの配置をはじめとするほとんどの配置シナリオに有効です。  
@@ -28,7 +28,7 @@ ms.locfileid: "73594075"
 ## <a name="defining-a-report-server-url"></a>レポート サーバーの URL の定義  
  URL は、ネットワーク上のレポート サーバー アプリケーション インスタンスの場所を厳密に特定します。 レポート サーバーの URL を作成するときは、次の要素を指定する必要があります。  
   
-|要素|[説明]|  
+|要素|説明|  
 |----------|-----------------|  
 |ホスト名|TCP/IP ネットワークでは、IP アドレスを使用してネットワーク上のデバイスを一意に識別します。 コンピューターにインストールされているネットワーク アダプター カードごとに、物理 IP アドレスが存在します。 IP アドレスがホスト ヘッダーに解決される場合、ホスト ヘッダーを指定できます。 レポート サーバーを企業ネットワークに配置している場合は、コンピューターのネットワーク名を使用できます。|  
 |Port|TCP ポートはデバイス上のエンドポイントです。 レポート サーバーは、指定されたポートで要求をリッスンします。|  
@@ -44,7 +44,7 @@ ms.locfileid: "73594075"
   
  上記の URL の使用を可能にする設定を次の表に示します。 この表の既定値を使用することで、ホスト名を含んだ URL を通じてレポート サーバーに接続できるようになります。  
   
-|要素|値|説明|  
+|要素|Value|説明|  
 |----------|-----------|-----------------|  
 |IP アドレス|すべて割り当て|ネットワーク上のドメイン ネーム サービスによって、URL のホスト名がコンピューターの IP アドレスに解決されます。 定義した URL に IP アドレスが指定されていれば、特定のホストに送られる要求は目的の宛先に届きます。|  
 |Port|80|ポート 80 は、コンピューターにおける TCP/IP 接続の既定のポートです。 レポート サーバーはポート 80 でリッスンしているため、URL ではポート番号を省略できます。 別のポートを指定する場合は、URL 内でそのポートを指定する必要があります。|  

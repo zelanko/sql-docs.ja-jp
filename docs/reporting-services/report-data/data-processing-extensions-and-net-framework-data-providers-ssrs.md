@@ -1,5 +1,5 @@
 ---
-title: データ処理拡張機能と .NET Framework データ プロバイダー (SSRS) | Microsoft Docs
+title: データ処理拡張機能と .NET Framework データ プロバイダー | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 42a5afb5-f4c8-4957-b1fd-77bf39afa5be
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 424dbb31ab96153dbf959c304456d8d1b2e4abd0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 1be86b9522f0386fff2d1014c3d94c652411f029
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65573105"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082570"
 ---
 # <a name="data-processing-extensions-and-net-framework-data-providers-ssrs"></a>データ処理拡張機能と .NET Framework データ プロバイダー (SSRS)
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ処理拡張機能は、特定の種類のデータ ソースからのデータ取得や、レポート デザインやレポート処理をサポートする追加機能を提供することを目的として、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]と共にインストールされるコンポーネントです。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] データ プロバイダーは、特定の種類のデータ ソースからのデータの取得や変更を可能にする [!INCLUDE[msCoName](../../includes/msconame-md.md)] インターフェイスをサポートするコンポーネントで、<xref:System.Data> またはサード パーティ ソースから入手できます。  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ処理拡張機能は、特定の種類のデータ ソースからのデータ取得や、レポート デザインやレポート処理をサポートする追加機能を提供することを目的として、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]と共にインストールされるコンポーネントです。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] データ プロバイダーは、特定の種類のデータ ソースからのデータの取得や変更を可能にする <xref:System.Data> インターフェイスをサポートするコンポーネントで、[!INCLUDE[msCoName](../../includes/msconame-md.md)] またはサード パーティ ソースから入手できます。  
   
 ## <a name="understanding-a-data-processing-extension"></a>データ処理拡張機能について  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ処理拡張機能では、<xref:System.Data> インターフェイスのサブセットがサポートされています。 データ処理拡張機能には、データ ソースへの読み取り専用アクセスのみが必要です。書き込みおよび更新用のインターフェイスは実装されていません。 それぞれのデータ処理拡張機能では、レポート処理をサポートするカスタム機能を設定できます。 たとえば、データ処理拡張機能がサポートしている機能の種類は次のとおりです。  

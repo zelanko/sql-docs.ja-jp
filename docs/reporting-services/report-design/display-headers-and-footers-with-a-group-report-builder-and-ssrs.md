@@ -1,5 +1,5 @@
 ---
-title: グループ単位でのヘッダーとフッターの表示 (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: グループ単位でのヘッダーとフッターの表示 (レポート ビルダー) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 8eb7d648-4df2-491a-96cb-99e55629d617
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a9033e39b58e70131ca7c361f89cebed9f12c1d0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: ecc2cb9b0b2e425627f73ae87aa3a9e8f5a289b1
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580856"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080477"
 ---
 # <a name="display-headers-and-footers-with-a-group-report-builder-and-ssrs"></a>グループ単位でのヘッダーとフッターの表示 (レポート ビルダーおよび SSRS)
   Tablix データ領域では、グループに関連付けられている動的行と一緒に、静的行 (グループ ヘッダー、グループ フッターなど) を表示するかどうかを制御できます。  

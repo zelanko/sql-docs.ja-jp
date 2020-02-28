@@ -1,5 +1,5 @@
 ---
-title: インジケーター アイコンとインジケーター セットの変更 (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: インジケーター アイコンとインジケーター セットの変更 (レポート ビルダー) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 8a056adf-4473-473d-9b0c-314675af7bfd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a73198264f13725b7c7050b5344c2af3df4ada8f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: b93ba65ddda79ef44585c748ee2c465c1b9a25f2
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581716"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081861"
 ---
 # <a name="change-indicator-icons-and-indicator-sets-report-builder-and-ssrs"></a>インジケーター アイコンとインジケーター セットの変更 (レポート ビルダーおよび SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、ページ分割されたレポート向けに、あらかじめ構成済みのインジケーター セットが用意されていますが、これらが常にデータを効果的に表したり、配信されたレポートで正しく機能するとは限りません。 このトピックでは、インジケーター アイコンの外観を変更する手順と、インジケーター セットを変更して別のインジケーター アイコンを含めたり、インジケーター アイコンの数を増減したりする手順について説明します。  

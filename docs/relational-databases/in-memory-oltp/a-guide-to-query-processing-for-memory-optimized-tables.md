@@ -11,12 +11,12 @@ ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ef5c610cb71a0f638c2dfba8aad1fbdb77308dfa
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 652d37ec9f19ccc91e1e0d472cb98d734b65df52
+ms.sourcegitcommit: 99ce0c9b28283d292d19637def982e971115dfbc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74412821"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77125289"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>メモリ最適化テーブルのクエリ処理のガイド
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -97,7 +97,7 @@ SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID =
   
  このクエリでは、Orders テーブルの行はクラスター化インデックスを使用して取得されます。 これで、 **Hash Match** 物理演算子は **Inner Join**に使用されます。 Order のクラスター化インデックスは CustomerID で並べ替えられません。したがって、 **Merge Join** はパフォーマンスに影響を与えるソート演算子を必要とします。 前の例の **Hash Match** 演算子のコスト (46%) と比較して、 **Merge Join** 演算子 (75%) の相対コストを確認してください。 オプティマイザーでは、前の例でも **Hash Match** 演算子を検討したうえで、 **Merge Join** 演算子の方がパフォーマンスがよいと判断されています。  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-query-processing-for-disk-based-tables"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ディスク ベース テーブルに対するクエリ処理  
+## <a name="ssnoversion-query-processing-for-disk-based-tables"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ディスク ベース テーブルに対するクエリ処理  
  次の図は、アドホック クエリに対する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のクエリ処理フローの概要を示しています。  
   
  ![SQL Server クエリ処理パイプライン。](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-3.png "SQL Server クエリ処理パイプライン。")  
@@ -119,7 +119,7 @@ SQL Server クエリ処理パイプライン。
 
  クエリの最初の例の場合、実行エンジンは、Customer のクラスター化インデックスおよび Order の非クラスター化インデックスの行を Access Methods から要求します。 Access Methods は、要求された行を取得するために B ツリー インデックス構造をスキャンします。 この場合は、プランがフル インデックス スキャンを必要とするため、すべての行が取得されます。  
   
-## <a name="interpreted-includetsqlincludestsql-mdmd-access-to-memory-optimized-tables"></a>解釈された [!INCLUDE[tsql](../../includes/tsql-md.md)] によるメモリ最適化テーブルへのアクセス  
+## <a name="interpreted-tsql-access-to-memory-optimized-tables"></a>解釈された [!INCLUDE[tsql](../../includes/tsql-md.md)] によるメモリ最適化テーブルへのアクセス  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] アドホック バッチおよびストアド プロシージャは、解釈された [!INCLUDE[tsql](../../includes/tsql-md.md)]とも呼ばれます。 "解釈された" とは、クエリ プラン内の各演算子について、クエリ実行エンジンによってクエリ プランが解釈されることを意味します。 実行エンジンは、演算子とそのパラメーターを読み取り、操作を実行します。  
   
  解釈された [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、メモリ最適化テーブルとディスク ベース テーブルの両方にアクセスできます。 次の図は、解釈された [!INCLUDE[tsql](../../includes/tsql-md.md)] によるメモリ最適化テーブルへのアクセスのクエリ処理を示しています。  
@@ -225,7 +225,7 @@ END
   
  ネイティブ コンパイル ストアド プロシージャの呼び出しは、次のとおりです。  
   
-1.  ユーザーは、 **EXEC**_usp_myproc_ ステートメントを実行します。  
+1.  ユーザーは、**EXEC** _usp_myproc_ ステートメントを実行します。  
   
 2.  パーサーは、名前とストアド プロシージャのパラメーターを抽出します。  
   

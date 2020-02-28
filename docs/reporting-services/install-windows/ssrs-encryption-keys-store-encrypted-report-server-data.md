@@ -1,5 +1,5 @@
 ---
-title: 暗号化されたレポート サーバー データの格納 (SSRS 構成マネージャー) | Microsoft Docs
+title: 暗号化されたレポート サーバー データの格納 (構成マネージャー) | Microsoft Docs
 ms.date: 10/24/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ac0f4d4d-fc4b-4c62-a693-b86e712e75f2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ca402d8170c9954f8a85e3b439e14d1d3644d9bb
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 94161a531c922642fa1c4cf34dc4a683073b957d
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "73593478"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080816"
 ---
 # <a name="ssrs-encryption-keys---store-encrypted-report-server-data"></a>SSRS の暗号化キー - 暗号化されたレポート サーバー データの保存
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、暗号化された値がレポート サーバー データベースおよび構成ファイルに保存されます。 暗号化された値の大部分は資格情報です。これらの資格情報は、レポートにデータを提供する外部データ ソースへのアクセスに使用されます。 このトピックでは、暗号化される値、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]で使用される暗号化機能、および理解が必要な他の種類の保存された機密データについて説明します。  

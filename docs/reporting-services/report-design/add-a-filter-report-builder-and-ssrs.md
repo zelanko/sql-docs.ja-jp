@@ -1,5 +1,5 @@
 ---
-title: フィルターの追加 (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: フィルターの追加 (レポート ビルダー) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 10ae54e7-0e8a-4dff-995d-05516c51d076
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2d748e302606370152fc0c87ac47c350e11f39e9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 0eadf07ed347ce2b77eccab229ef6551a62d63d8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65574837"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080753"
 ---
 # <a name="add-a-filter-report-builder-and-ssrs"></a>フィルターの追加 (レポート ビルダーおよび SSRS)
   計算や表示の対象として特定の値だけを含めたり除外したりするには、データセット、データ領域、またはグループにフィルターを追加します。 実行時には、フィルターが最初にデータセットに適用され、次にデータ領域に適用された後、グループに (グループ階層の上から順に) 適用されます。 テーブル、マトリックス、または一覧では、行グループ、列グループ、および隣接するグループに対するフィルターが別々に適用されます。 グラフでは、カテゴリ グループと系列グループに対するフィルターが別々に適用されます。  

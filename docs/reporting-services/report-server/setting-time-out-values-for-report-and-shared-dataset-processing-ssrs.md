@@ -1,5 +1,5 @@
 ---
-title: レポートおよび共有データセット処理のタイムアウト値の設定 (SSRS) | Microsoft Docs
+title: レポートおよび共有データセット処理のタイムアウト値の設定 | Microsoft Docs
 description: Reporting Services では、タイムアウト値を指定して、システム リソースの使用方法に制限を設定できます。
 ms.date: 01/16/2020
 ms.prod: reporting-services
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0f9dc61d-d03c-4bbf-8090-7a53844350f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1bc1f2f27fa46f8262d3c0ca99549d23f2381ff0
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 5996c21b09a722a3cbeac41917bf83ca132feed2
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76259412"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082334"
 ---
 # <a name="setting-time-out-values-for-report-and-shared-dataset-processing-ssrs"></a>レポートおよび共有データセット処理のタイムアウト値の設定 (SSRS)
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、タイムアウト値を指定して、システム リソースの使用に制限を設定できます。 レポート サーバーは、次の 2 つのタイムアウト値をサポートします。  
@@ -56,7 +56,7 @@ ms.locfileid: "76259412"
 > [!NOTE]  
 > RSReportServer.config ファイルの **RunningRequestsDbCycle** 設定で、実行中のジョブが評価される頻度を変更できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [処理オプションの設定 &#40;Reporting Services の SharePoint 統合モード&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [Reporting Services レポート サーバー (ネイティブ モード)](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
  [Manage a Running Process](../../reporting-services/subscriptions/manage-a-running-process.md)   

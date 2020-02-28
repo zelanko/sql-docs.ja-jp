@@ -1,5 +1,5 @@
 ---
-title: グラフ (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: グラフ (レポート ビルダー) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -18,12 +18,12 @@ f1_keywords:
 ms.assetid: d56d0521-362f-4361-843a-acf2c897a87c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ca1a0b760f89e581a4e5209960caa76d89cd1350
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: bc2a48d56c5d603714353974b0a775b93140fd7a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "73593790"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080592"
 ---
 # <a name="charts-report-builder-and-ssrs"></a>グラフ (レポート ビルダーおよび SSRS)
 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] の改ページ調整されたレポートを読むユーザーが、大量の集計データを一目で理解できるよう、グラフ データ領域の使用について説明します。  
@@ -139,8 +139,8 @@ ms.locfileid: "73593790"
  [画像、テキスト ボックス、四角形、および罫線 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/images-text-boxes-rectangles-and-lines-report-builder-and-ssrs.md)   
  [対話的な並べ替え、ドキュメント マップ、およびリンク &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
  [入れ子になったデータ領域 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   
- [チュートリアル: レポートへの縦棒グラフの追加 &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-add-a-column-chart-to-your-report-report-builder.md)   
- [チュートリアル: レポートへの円グラフの追加 &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
- [チュートリアル: レポートへの横棒グラフの追加 &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
+ [チュートリアル:レポートへの縦棒グラフの追加 &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-add-a-column-chart-to-your-report-report-builder.md)   
+ [チュートリアル:レポートへの円グラフの追加 &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
+ [チュートリアル:レポートへの横棒グラフの追加 &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
   
   

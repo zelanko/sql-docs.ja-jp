@@ -1,5 +1,5 @@
 ---
-title: マップ (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: マップ (レポート ビルダー) | Microsoft Docs
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +15,12 @@ f1_keywords:
 ms.assetid: b5e9ef21-11b7-4ed2-838e-d8eecdb5c5f0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c03db76d1c8ad67bf9db43c1b4acfa728396b703
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: b59d2545358c2536bcbd0dc6d4e5e211e0c76caa
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "66428975"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082609"
 ---
 # <a name="maps-report-builder-and-ssrs"></a>マップ (レポート ビルダーおよび SSRS)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートにマップを追加すると、地理的背景に対してビジネス データを視覚化することができます。 選択するマップの種類は、レポートでどのような情報を伝えるかによって異なります。 追加できるマップの種類としては、単に場所を表示するマップのほか、バブル サイズが領域内の世帯数に応じて変化するバブル マップ、店舗ごとの最も利益率の高い製品に基づいてマーカーのスタイルが変わるマーカー マップ、店舗間の経路を表示するライン マップがあります。  
@@ -70,7 +70,7 @@ ms.locfileid: "66428975"
 #### <a name="sources-of-spatial-data"></a>空間データのソース  
  空間データには次のソースがサポートされます。  
   
--   **マップ ギャラリーのレポート** 空間データはマップ ギャラリーにあるレポートに埋め込まれます。 既定では、マップ ギャラリーが *\<ドライブ>*:\Program Files\Microsoft SQL Server\Report Builder \MapGallery にインストールされます。  
+-   **マップ ギャラリーのレポート** 空間データはマップ ギャラリーにあるレポートに埋め込まれます。 既定では、マップ ギャラリーが *\<ドライブ>* :\Program Files\Microsoft SQL Server\Report Builder \MapGallery にインストールされます。  
   
     > [!NOTE]  
     >  この [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] マッピング機能は、米国の国勢調査局 ([https://www.census.gov/](https://www.census.gov/)) から無料で入手できます。 TIGER/Line シェープファイルは、Census MAF/TIGER データベースからの選択された地理的情報および地図情報の抜粋です。 TIGER/Line シェープファイルは、米国の国勢調査局から無料で入手できます。 TIGER/Line シェープファイルに関する詳細情報については、「[TIGER/Line Shapefiles and TIGER/Line Files Technical Documentation (TIGER/Line シェープファイルと TIGER/Line ファイルに関する技術ドキュメント)](https://www.census.gov/programs-surveys/geography/technical-documentation/complete-technical-documentation/tiger-geo-line.html)」をご覧ください。 TIGER/Line シェープファイル内の境界情報は、統計データの収集および集計を唯一の目的としています。統計目的のための表現および表示は、法的管轄機関、所有権、または権利の付与の決定となるものではなく、また法的な土地の記載でもありません。 Census TIGER および TIGER/Line は、米国の国勢調査局の登録商標です。  

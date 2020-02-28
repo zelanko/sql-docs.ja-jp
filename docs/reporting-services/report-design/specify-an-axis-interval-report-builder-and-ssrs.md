@@ -1,5 +1,5 @@
 ---
-title: 軸の間隔の指定 (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: 軸の間隔の指定 (レポート ビルダー) | Microsoft Docs
 ms.date: 09/02/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: ae46712d-a5bf-44c0-9929-e30ccc1e7e33
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ecee87ddf31314b8e54c98148ab0570db08a1caf
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: fecaea37ca01f7d005934c8b371d228bc0bb6b93
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65578497"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080938"
 ---
 # <a name="specify-an-axis-interval-report-builder-and-ssrs"></a>軸の間隔の指定 (レポート ビルダーおよび SSRS)
 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] ページ分割されたレポートで軸の間隔を設定して、グラフのカテゴリ (x) 軸に表示するラベル数と目盛り数を変更する方法について説明します。

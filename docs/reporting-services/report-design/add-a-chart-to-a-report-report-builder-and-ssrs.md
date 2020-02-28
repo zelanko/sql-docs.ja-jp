@@ -1,5 +1,5 @@
 ---
-title: レポートへのグラフの追加 (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: レポートへのグラフの追加 (レポート ビルダー) | Microsoft Docs
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,19 +8,19 @@ ms.topic: conceptual
 ms.assetid: a6b595dc-f775-4a53-8554-74a0bf9335ec
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: df6236249bc494eb5235439b273889a15b982582
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 986871918463e09fe0aec138c75487694faee258
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65571628"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080800"
 ---
 # <a name="add-a-chart-to-a-report-report-builder-and-ssrs"></a>レポートへのグラフの追加 (レポート ビルダーおよび SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートでデータをビジュアル形式でまとめるには、グラフ データ領域を使用します。 表示するデータの種類に対して適切な種類のグラフを選択することが重要です。 これにより、データをグラフ形式にした場合にどの程度わかりやすくなるかが決まります。 グラフ要素の詳細については、「 [グラフ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)」を参照してください。  
   
  グラフ データ領域をレポートに追加するには、グラフの新規作成ウィザードを実行するのが最も簡単な方法です。 このウィザードを使用して、縦棒グラフ、折れ線グラフ、円グラフ、横棒グラフ、および面グラフを作成できます。 これらのグラフおよびその他の種類のグラフは、手動で追加することもできます。  
   
- グラフ データ領域をデザイン画面に追加したら、グラフのグラフ データ ペインに数値データおよび非数値データのレポート データセット フィールドをドラッグします。 グラフをクリックすると、系列グループ、カテゴリ グループ、および値の 3 つの領域を持つグラフ データ ペインが表示されます。  
+ グラフ データ領域をデザイン画面に追加したら、グラフのグラフ データ ペインに数値データおよび非数値データのレポート データセット フィールドをドラッグします。 グラフをクリックして、グラフ データ ペインを表示します。このペインには、[系列グループ]、[カテゴリ グループ]、[値] という 3 つの領域があります。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -68,9 +68,9 @@ ms.locfileid: "65571628"
  [グラフ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [グラフの種類 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
  [グラフ内の空のデータ ポイントおよび NULL データ ポイント (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
- [チュートリアル: レポートへの横棒グラフの追加 (レポート ビルダー)](https://go.microsoft.com/fwlink/?LinkId=198052)   
- [チュートリアル: レポートへの横棒グラフの追加 (レポート デザイナー)](https://go.microsoft.com/fwlink/?LinkId=198042)   
- [チュートリアル: レポートへの円グラフの追加 (レポート ビルダー)](https://go.microsoft.com/fwlink/?LinkId=198051)   
- [チュートリアル: レポートへの円グラフの追加 (レポート デザイナー)](https://go.microsoft.com/fwlink/?LinkId=198041)  
+ [チュートリアル:レポートへの横棒グラフの追加 (レポート ビルダー)](https://go.microsoft.com/fwlink/?LinkId=198052)   
+ [チュートリアル:レポートへの横棒グラフの追加 (レポート デザイナー)](https://go.microsoft.com/fwlink/?LinkId=198042)   
+ [チュートリアル:レポートへの円グラフの追加 (レポート ビルダー)](https://go.microsoft.com/fwlink/?LinkId=198051)   
+ [チュートリアル:レポートへの円グラフの追加 (レポート デザイナー)](https://go.microsoft.com/fwlink/?LinkId=198041)  
   
   

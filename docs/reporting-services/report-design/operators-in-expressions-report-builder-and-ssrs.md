@@ -1,5 +1,5 @@
 ---
-title: 式で使用される演算子 (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: 式で使用される演算子 (レポート ビルダー) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: d22dc8b6-4353-40e7-91a1-65e8dae6325d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b3edfb8c885fbb8f7436f21271fc73d89599adfc
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 0cf32f32a375f998522ff689663ec0296a0b5be4
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65582236"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082591"
 ---
 # <a name="operators-in-expressions-report-builder-and-ssrs"></a>式で使用される演算子 (レポート ビルダーおよび SSRS)
   演算子は、式に含まれる 1 つ以上の項に適用される操作を表す記号です。 式でサポートされている演算子のカテゴリには、算術、比較、連結、論理 (ビット)、およびビット シフトがあります。  

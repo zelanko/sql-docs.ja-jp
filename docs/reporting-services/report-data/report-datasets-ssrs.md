@@ -1,5 +1,5 @@
 ---
-title: レポート データセット (SSRS) | Microsoft Docs
+title: レポート データセット | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: f2e42303-e355-4c1f-bb3b-3338fbdd230d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fe6f27382bf81e245035f0f242134993845ca07a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 73de47423caed308e1a9ae433bdcc7b24b3e69d0
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190719"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081941"
 ---
 # <a name="report-datasets-ssrs"></a>レポート データセット (SSRS)
   データをレポートに追加するには、データセットを作成します。 各データセットは、データ ソースに対するクエリ コマンドの実行によって取得された結果セットを表します。 結果セットの列はフィールド コレクションです。 結果セット内の行がデータです。 データセットに実際のデータは格納されていません。 データセットには、データ ソースから特定のデータを取得するために必要な情報が含まれています。  

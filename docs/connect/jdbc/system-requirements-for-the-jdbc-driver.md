@@ -1,7 +1,7 @@
 ---
 title: JDBC ドライバーのシステム要件 | Microsoft Docs
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 01/29/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 447792bb-f39b-49b4-9fd0-1ef4154c74ab
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 5759a1f9936fdb8a6df4de422ae2ff0542dc63a8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e9e74d080ed0e7cd91dcde6cbaa2ca2e32f04dc6
+ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "69027672"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77004555"
 ---
 # <a name="system-requirements-for-the-jdbc-driver"></a>JDBC ドライバーのシステム要件
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -26,6 +26,8 @@ ms.locfileid: "69027672"
 - Java ランタイム環境
 
 ## <a name="java-runtime-environment-requirements"></a>Java Runtime Environment の要件  
+
+ Microsoft JDBC Driver 8.2 for SQL Server 以降で、Java Development Kit (JDK) 13.0 と Java Runtime Environment (JRE) 13.0 がサポートされています。
 
  Microsoft JDBC Driver 7.4 for SQL Server 以降で、Java Development Kit (JDK) 12.0 と Java Runtime Environment (JRE) 12.0 がサポートされています。
 
@@ -42,6 +44,31 @@ ms.locfileid: "69027672"
  [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] 以降では、JDBC 4.0 API を包含する形で Java Database Connectivity (JDBC) Spec API に対する JDBC ドライバー サポートが拡張されています。 JDBC 4.0 API は、Java Development Kit (JDK) 6.0 および Java Runtime Environment (JRE) 6.0 の一部として導入されました。 JDBC 4.0 は、JDBC 3.0 API のスーパーセットです。
   
  Windows と UNIX オペレーティング システムで [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] を展開する場合、インストール パッケージである *sqljdbc_\<version>_enu.exe* と *sqljdbc_\<version>_enu.tar.gz* をそれぞれ使用する必要があります。 JDBC Driver の展開方法の詳細については、「[JDBC Driver の展開](../../connect/jdbc/deploying-the-jdbc-driver.md)」トピックを参照してください。  
+
+**Microsoft JDBC Driver 8.2 for SQL Server:**  
+
+  JDBC Driver 8.2 の各インストール パッケージには、3 つの JAR クラス ライブラリ (**mssql-jdbc-8.2.0.jre8.jar**、**mssql-jdbc-8.2.0.jre11.jar**、および **mssql-jdbc-8.2.0.jre13.jar**) が含まれています。
+
+  JDBC Driver 8.2 は、すべての主要な Java 仮想マシンと連携し、それらでサポートされるように設計されていますが、テストは OpenJDK 1.8、OpenJDK 11.0、OpenJDK 13.0、Azul Zulu JRE 1.8、Azul Zulu JRE 11.0、Azul Zulu JRE 13.0 上でのみ実行されます。
+  
+  Microsoft JDBC Drivers 8.2 for SQL Server に含まれている 2 つの JAR ファイルによって提供されるサポートの概要を以下に示します。  
+  
+  |JAR|JDBC バージョン準拠|推奨される Java のバージョン|説明|  
+|---------|-----------------------------|----------------------|-----------------|   
+|mssql-jdbc-8.2.0.jre8.jar|4.2|8|Java Runtime Environment (JRE) 1.8 が必要です。 JRE 1.7 以前を使用すると、例外がスローされます。<br /><br /> 8\.2 の新機能:JDK 13 サポート、セキュア エンクレーブを使用する Always Encrypted、テンポラル データ型のパフォーマンスの向上。 |
+|mssql-jdbc-8.2.0.jre11.jar|4.3|11|Java Runtime Environment (JRE) 11.0 が必要です。 JRE 10.0 以前を使用すると、例外がスローされます。<br /><br /> 8\.2 の新機能:JDK 13 サポート、セキュア エンクレーブを使用する Always Encrypted、テンポラル データ型のパフォーマンスの向上。 |
+|mssql-jdbc-8.2.0.jre13.jar|4.3|13|Java Runtime Environment (JRE) 13.0 が必要です。 JRE 11.0 以前を使用すると、例外がスローされます。<br /><br /> 8\.2 の新機能:JDK 13 サポート、セキュア エンクレーブを使用する Always Encrypted、テンポラル データ型のパフォーマンスの向上。 |
+
+
+  JDBC Driver 8.2 は Maven Central Repository でも使用でき、次のコードを POM.XML に追加することで Maven プロジェクトに追加できます。  
+  
+ ```xml
+<dependency>
+    <groupId>com.microsoft.sqlserver</groupId>
+    <artifactId>mssql-jdbc</artifactId>
+    <version>8.2.0.jre11</version>
+</dependency>
+```
 
 **Microsoft JDBC Driver 7.4 for SQL Server:**  
 
@@ -196,14 +223,14 @@ JDBC Driver 6.4 は Maven Central Repository でも使用でき、次のコー�
  JDBC ドライバーは、Azure SQL Database と SQL Server への接続をサポートします。 Microsoft JDBC Driver 4.2 for SQL Server と Microsoft JDBC Driver 4.1 for SQL Server では、SQL Server 2008 以降をサポートします。
   
 ## <a name="operating-system-requirements"></a>オペレーティング システムの要件  
- JDBC ドライバーは、Java 仮想マシン (JVM) の使用をサポートするすべてのオペレーティング システムで機能するように設計されています。 ただし、公式にテストされているのは、Sun Solaris、SUSE Linux、および Windows オペレーティング システムだけです。  
+ JDBC ドライバーは、Java 仮想マシン (JVM) の使用をサポートするすべてのオペレーティング システムで機能するように設計されています。 ただし、公式にテストされているのは、Sun Solaris、SUSE Linux、Ubuntu Linux、CentOS Linux、macOS、および Windows オペレーティング システムだけです。  
   
 ## <a name="supported-languages"></a>サポートされている言語  
  JDBC ドライバーは、すべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 列の照合順序をサポートしています。 JDBC ドライバーでサポートされる照合順序の詳細については、「[JDBC Driver の国際化機能](../../connect/jdbc/international-features-of-the-jdbc-driver.md)」をご覧ください。  
   
  照合順序の詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「照合順序の使用」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [JDBC ドライバーの概要](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   

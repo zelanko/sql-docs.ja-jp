@@ -1,7 +1,7 @@
 ---
 title: JDBC ドライバーでの Always Encrypted の使用 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/05/2020
+ms.date: 01/29/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: ae119c85877768f7a3356a139c5aaf3f70dc6f8e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 41c91f87a62e9f4d912c7e8bbdebe86574ceebe6
+ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75681713"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77004601"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>JDBC ドライバーでの Always Encrypted の使用
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -123,7 +123,7 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
 > これらの依存関係を Maven プロジェクトに含める方法の例については、「[Apache Maven で ADAL4J と AKV の依存関係をダウンロードする](https://github.com/Microsoft/mssql-jdbc/wiki/Download-ADAL4J-And-AKV-Dependencies-with-Apache-Maven)」を参照してください。
 
 ### <a name="using-windows-certificate-store-provider"></a>Windows 証明書ストア プロバイダーの使用
-SQLServerColumnEncryptionCertificateStoreProvider は、列マスター キーを Windows 証明書ストアに格納するために使用できます。 データベースに列マスター キーと列暗号化キーの定義を作成するには、SQL Server Management Studio (SSMS) Always Encrypted ウィザードまたはその他のサポートされているツールを使用します。 同じウィザードを使用して、Windows 証明書ストアで Always Encrypted データの列マスター キーとして使用することができる自己署名証明書を生成することができます。 列マスター キーと列暗号化キーの T-SQL 構文の詳細については、「[CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md)」と「[CREATE COLUMN ENCRYPTION KEY](../../t-sql/statements/create-column-encryption-key-transact-sql.md)」をそれぞれ参照してください。
+SQLServerColumnEncryptionCertificateStoreProvider は、列マスター キーを Windows 証明書ストアに格納するために使用できます。 データベースに列マスター キーと列暗号化キーの定義を作成するには、SQL Server Management Studio (SSMS) Always Encrypted ウィザードまたはその他のサポートされているツールを使用します。 同じウィザードを使用して、Windows 証明書ストアで Always Encrypted データの列マスター キーとして使用できる自己署名証明書を生成することができます。 列マスター キーと列暗号化キーの T-SQL 構文の詳細については、「[CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md)」と「[CREATE COLUMN ENCRYPTION KEY](../../t-sql/statements/create-column-encryption-key-transact-sql.md)」をそれぞれ参照してください。
 
 SQLServerColumnEncryptionCertificateStoreProvider の名前は MSSQL_CERTIFICATE_STORE で、プロバイダー オブジェクトの getName() API によって照会できます。 これはドライバーによって自動的に登録され、アプリケーションを変更することなくシームレスに使用できます。
 
@@ -147,7 +147,7 @@ WITH VALUES
 ```
 
 > [!IMPORTANT]
-> この記事の他のキーストア プロバイダーは、ドライバーでサポートされているすべてのプラットフォームで利用できますが、JDBC ドライバーの SQLServerColumnEncryptionCertificateStoreProvider 実装は、Windows オペレーティング システムでのみ使用できます。 これにはドライバー パッケージで使用可能な sqljdbc_auth.dll への依存関係があります。 このプロバイダーを使用するには、JDBC ドライバーがインストールされているコンピューターの Windows システム パス上のディレクトリに sqljdbc_auth.dll ファイルをコピーします。 または、java.library.path システム プロパティを設定して sqljdbc_auth.dll のディレクトリを指定することもできます。 32 ビットの Java 仮想マシン (JVM) を実行している場合は、オペレーティング システムのバージョンが x64 であっても、x86 フォルダーの sqljdbc_auth.dll ファイルを使用してください。 64 ビットの JVM を x64 プロセッサ上で実行している場合は、x64 フォルダーの sqljdbc_auth.dll ファイルを使用してください。 たとえば、32 ビットの JVM を使用していて、JDBC ドライバーが既定のディレクトリにインストールされている場合、Java アプリケーションの起動時に次の仮想マシン (VM) 引数を使用することで、DLL の場所を指定できます。`-Djava.library.path=C:\Microsoft JDBC Driver <version> for SQL Server\sqljdbc_<version>\enu\auth\x86`
+> この記事の他のキーストア プロバイダーは、ドライバーでサポートされているすべてのプラットフォームで利用できますが、JDBC ドライバーの SQLServerColumnEncryptionCertificateStoreProvider 実装は、Windows オペレーティング システムでのみ使用できます。 これにはドライバー パッケージで使用可能な mssql-jdbc_auth-\<バージョン>-\<arch>.dll への依存関係があります。 このプロバイダーを使用するには、JDBC ドライバーがインストールされているコンピューターの Windows システム パス上のディレクトリに mssql-jdbc_auth-\<バージョン>-\<arch>.dll ファイルをコピーします。 または、java.library.path システム プロパティを設定して mssql-jdbc_auth-\<バージョン>-\<arch>.dll のディレクトリを指定することもできます。 32 ビットの Java 仮想マシン (JVM) を実行している場合は、オペレーティング システムのバージョンが x64 であっても、x86 フォルダーの mssql-jdbc_auth-\<バージョン>-x86.dll ファイルを使用してください。 64 ビットの JVM を x64 プロセッサ上で実行している場合は、x64 フォルダーの mssql-jdbc_auth-\<バージョン>-x64.dll ファイルを使用してください。 たとえば、32 ビットの JVM を使用していて、JDBC ドライバーが既定のディレクトリにインストールされている場合、Java アプリケーションの起動時に次の仮想マシン (VM) 引数を使用することで、DLL の場所を指定できます。`-Djava.library.path=C:\Microsoft JDBC Driver <version> for SQL Server\sqljdbc_<version>\enu\auth\x86`
 
 ### <a name="using-java-key-store-provider"></a>Java キーストア プロバイダーの使用
 JDBC ドライバーには、Java キー ストアの組み込みキー ストア プロバイダー実装が含まれています。 接続文字列に **keyStoreAuthentication** 接続文字列プロパティが存在し、それが "JavaKeyStorePassword" に設定されている場合、ドライバーによって Java キーストア用のプロバイダーが自動的にインスタンス化されて登録されます。 Java キー ストア プロバイダーの名前は MSSQL_JAVA_KEYSTORE です。 この名前は、SQLServerColumnEncryptionJavaKeyStoreProvider.getName() API を使用して照会することもできます。 
@@ -177,7 +177,7 @@ SQLServerColumnEncryptionJavaKeyStoreProvider は、JKS または PKCS12 キー�
 keytool -genkeypair -keyalg RSA -alias AlwaysEncryptedKey -keystore keystore.jks -storepass mypassword -validity 360 -keysize 2048 -storetype jks
 ```
 
-このコマンドは、公開キーを作成し、それを x.509 自己署名証明書にラップします。これは、関連付けられている秘密キーと共にキーストア `keystore.jks` に格納されます。 キーストア内のこのエントリは、エイリアス `AlwaysEncryptedKey` によって識別されます。
+このコマンドで、公開キーを作成し、それを x.509 自己署名証明書にラップします。これは、関連付けられている秘密キーと共にキーストア `keystore.jks` に格納されます。 キーストア内のこのエントリは、エイリアス `AlwaysEncryptedKey` によって識別されます。
 
 次に、同じ PKCS12 ストアの種類を使用した場合の例を示します。
 
@@ -667,6 +667,6 @@ SQLServerBulkCopy を使用して、データの暗号化解除を行うこと�
 > [!NOTE]
 > データベースが破損する可能性があるので、AllowEncryptedValueModifications を指定する際には注意が必要です。このオプションは、データが実際に暗号化されているかどうか、またはターゲット列と同じ暗号化のタイプ、アルゴリズム、およびキーを使用して正しく暗号化されているかどうかを、Microsoft JDBC Driver for SQL Server がチェックしないためです。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [Always Encrypted (データベース エンジン)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)

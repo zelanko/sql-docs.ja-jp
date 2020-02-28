@@ -1,5 +1,5 @@
 ---
-title: PDF ファイルへのエクスポート (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: PDF ファイルへのエクスポート (レポート ビルダー) | Microsoft Docs
 ms.date: 10/21/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: f22497b7-f6c1-4c7b-b831-8c731e26ae37
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ff2c93000c1b5f0e9d01a3204858717640733228
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 134cf6f645a3e120b1949e8a2dcc175748e1a042
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580787"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77078272"
 ---
 # <a name="exporting-to-a-pdf-file-report-builder-and-ssrs"></a>PDF ファイルへのエクスポート (レポート ビルダーおよび SSRS)
   PDF 表示拡張機能を使用すると、 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] ページ分割レポートを、Adobe Acrobat および PDF 1.3 をサポートするその他のサードパーティ製 PDF ビューアーで開くことが可能なファイルとして表示できます。 PDF 1.3 は Adobe Acrobat 4.0 以降のバージョンと互換性がありますが、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] でサポートされるのは Adobe Acrobat 11.0 以降です。 この表示拡張機能では、レポートの表示処理に Adobe 製のソフトウェアは必要ありません。 ただし、レポートを PDF 形式で表示または印刷するには、Adobe Acrobat などの PDF ビューアーが必要です。  

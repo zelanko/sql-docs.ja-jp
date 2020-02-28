@@ -1,29 +1,35 @@
 ---
 title: レポート ビルダーをインストールする | Microsoft Docs
 description: レポート ビルダーは、ユーザーまたは管理者がお使いのコンピューターにインストールする、スタンドアロン アプリです。
-ms.date: 01/03/2020
+ms.date: 01/31/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 70cf4c586f6fe38bd36ca99cd1ed36026969a446
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: d256ac7cc7f7925ad307c527378abcca5b6d121f
+ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75776456"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76971381"
 ---
 # <a name="install-report-builder"></a>レポート ビルダーをインストールする
-  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] はスタンドアロン アプリです。ユーザーまたは管理者によってコンピューターにインストールされます。 Microsoft ダウンロード センター、 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] レポート サーバー、または [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]と統合された SharePoint サイトからインストールできます。  
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
+
+[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] はスタンドアロン アプリです。ユーザーまたは管理者によってコンピューターにインストールされます。 Microsoft ダウンロード センター、 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] レポート サーバー、または [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]と統合された SharePoint サイトからインストールできます。  
 
 > [!NOTE]
-> SharePoint と Reporting Services の統合は、SQL Server 2016 以降では使用できません。
-  
+> 代わりに Power BI Report Builder のインストール情報をお探しですか? ダウンロード センターの [Microsoft Power BI Report Builder](https://www.microsoft.com/download/details.aspx?id=58158) ページに移動します。 
+
  管理者は通常、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のインストールと構成、Web ポータルから [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] をダウンロードするための権限の許可、フォルダーの管理とレポート サーバーに保存されたレポート、レポート パーツ、および共有データセットに対する権限の管理を行います。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 管理の詳細については、「[Reporting Services Report Server &#40;Native Mode&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)」 (Reporting Services レポート サーバー &#40;ネイティブ モード&#41;) を参照してください。  
   
 ## <a name="install-ssrbnoversion-from--a--web-portal-or-sharepoint-library"></a>Web ポータルまたは SharePoint ライブラリから [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] をインストールする 
+
+> [!NOTE]
+> SharePoint と Reporting Services の統合は、SQL Server 2016 以降では使用できません。
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web ポータル、または [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] と統合された SharePoint サイトから [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] を起動できます。 詳細については、「 [レポート ビルダーの起動](../../reporting-services/report-builder/start-report-builder.md)」を参照してください。  
 

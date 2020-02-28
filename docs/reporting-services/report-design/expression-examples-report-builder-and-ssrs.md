@@ -1,5 +1,5 @@
 ---
-title: 式の例 (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: 式の例 (レポート ビルダー) | Microsoft Docs
 ms.date: 04/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c3becfd5ede4ddd1ca7bfd7d12a6c88db225ced3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 12933c259fa02e77a76b8c31edf61db916dcde49
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "68661340"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080340"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>式の例 (レポート ビルダーおよび SSRS)
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートでは、内容と外観を制御するために式をよく使用します。 式は [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] で記述し、組み込み関数、カスタム コード、レポート変数とグループ変数、およびユーザー定義変数を使用することができます。 式は等号 (=) で始まります。 式エディターと使用できる参照の種類の詳細については、「[レポートでの式の使用 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)」および「[式の追加 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md)」を参照してください。  
@@ -208,7 +208,7 @@ ms.locfileid: "68661340"
   
      日付または数値のみを格納するテキスト ボックスに書式を適用する場合は、テキスト ボックス内で **Format** 関数を使用するのではなく、テキスト ボックスの Format プロパティを使用する必要があります。  
   
--   **Right**、 **Len**、 **InStr** の各関数は、サブストリングを返す場合に役立ちます。たとえば、 *DOMAIN*\\*username* の文字列からユーザー名だけを返します。 次の式では、\\User *というパラメーターで取得できる文字列のうち、円記号 (*) より右側の部分のみが返されます。  
+-   **Right**、 **Len**、 **InStr** の各関数は、サブストリングを返す場合に役立ちます。たとえば、 *DOMAIN*\\*username* の文字列からユーザー名だけを返します。 次の式では、\\User *というパラメーターで取得できる文字列のうち、円記号 (* ) より右側の部分のみが返されます。  
   
     ```  
     =Right(Parameters!User.Value, Len(Parameters!User.Value) - InStr(Parameters!User.Value, "\"))  
@@ -233,7 +233,7 @@ ms.locfileid: "68661340"
   
     ```  
   
--   [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の <xref:System.Text.RegularExpressions> に含まれる **Regex** 関数は、電話番号の書式を設定するなど、既存の文字列の書式を変更する場合に役立ちます。 次の式では、フィールドに含まれる、" **nnn** nnn*nnnn*-*" 形式の 10 桁の電話番号を、*-*Replace*関数を使用して "(*nnn*) *nnn*-*nnnn*" 形式に変更しています。  
+-   [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の <xref:System.Text.RegularExpressions> に含まれる **Regex** 関数は、電話番号の書式を設定するなど、既存の文字列の書式を変更する場合に役立ちます。 次の式では、フィールドに含まれる、" **nnn** nnn*nnnn*- *" 形式の 10 桁の電話番号を、* -*Replace*関数を使用して "(*nnn*) *nnn*-*nnnn*" 形式に変更しています。  
   
     ```  
     =System.Text.RegularExpressions.Regex.Replace(Fields!Phone.Value, "(\d{3})[ -.]*(\d{3})[ -.]*(\d{4})", "($1) $2-$3")  

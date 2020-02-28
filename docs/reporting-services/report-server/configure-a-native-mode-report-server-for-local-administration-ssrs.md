@@ -1,5 +1,5 @@
 ---
-title: ローカル管理用のネイティブ モードのレポート サーバー (SSRS) の構成 | Microsoft Docs
+title: ローカル管理用のネイティブ モードのレポート サーバーの構成 | Microsoft Docs
 ms.date: 05/28/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 312c6bb8-b3f7-4142-a55f-c69ee15bbf52
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 35355b32c8e4b59618cf146d9de04f3242ec6e6a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 535284c89f54fb39f448a71e5484e81c1a9d31af
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "66403263"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080886"
 ---
 # <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>ローカル管理用のネイティブ モードのレポート サーバー (SSRS) の構成
   レポート サーバー インスタンスをローカルに管理しようとする場合、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーを次のオペレーティング システムのいずれかに配置するには、追加の構成手順が必要です。 このトピックでは、レポート サーバーをローカル管理用に構成する方法を説明します。 レポート サーバーのインストールまたは構成をまだ行っていない場合は、「[SQL Server をインストール ウィザードからインストールする &#40;セットアップ&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)」および「[Reporting Services ネイティブ モードのレポート サーバーの管理](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)」を参照してください。  
@@ -71,9 +71,9 @@ ms.locfileid: "66403263"
   
 ###  <a name="bkmk_site_settings"></a> ブラウザー内の信頼済みサイトの設定  
   
-1.  [管理者として実行] の権限を使用してブラウザー ウィンドウを開きます。 **[スタート]** メニューから **[Internet Explorer]** を右クリックして、**[管理者として実行]** を選択します。  
+1.  [管理者として実行] の権限を使用してブラウザー ウィンドウを開きます。 **[スタート]** メニューから **[Internet Explorer]** を右クリックして、 **[管理者として実行]** を選択します。  
   
-2.  続行するよう求められた場合は、**[はい]** を選択します。  
+2.  続行するよう求められた場合は、 **[はい]** を選択します。  
   
 3.  URL アドレスに Web ポータルの URL を入力します。 手順については、「[レポート サーバーの Web ポータル &#40;SSRS ネイティブ モード&#41;](../../reporting-services/web-portal-ssrs-native-mode.md)」をご覧ください。  
   
@@ -97,11 +97,11 @@ ms.locfileid: "66403263"
   
 ###  <a name="bkmk_configure_folder_settings"></a> Web ポータルのフォルダー設定  
   
-1.  Web ポータルのホーム ページで、**[フォルダーの管理]** をクリックします。  
+1.  Web ポータルのホーム ページで、 **[フォルダーの管理]** をクリックします。  
   
-2.  **[管理]** フォルダー ページで、**[セキュリティ]** をクリックした後、**[グループまたはユーザーの追加]** を選択します。  
+2.  **[管理]** フォルダー ページで、 **[セキュリティ]** をクリックした後、 **[グループまたはユーザーの追加]** を選択します。  
   
-3.  **[新しいロールの割り当て]** ページで、**[グループまたはユーザー]** フィールドに、`<domain>\<user>` という形式でご自分の Windows ユーザー アカウントを入力します。  
+3.  **[新しいロールの割り当て]** ページで、 **[グループまたはユーザー]** フィールドに、`<domain>\<user>` という形式でご自分の Windows ユーザー アカウントを入力します。  
   
 5.  **[コンテンツ マネージャー]** を選択します。  
   
@@ -115,9 +115,9 @@ ms.locfileid: "66403263"
   
     ![歯車アイコン](../media/ssrsgearmenu.png)。
     >[!TIP]  
-    >**注:****[サイトの設定]** オプションが表示されない場合は、ブラウザーを閉じてから管理特権を使用してもう一度開き、Web ポータルを参照してください。  
+    >**注:** **[サイトの設定]** オプションが表示されない場合は、ブラウザーを閉じてから管理特権を使用してもう一度開き、Web ポータルを参照してください。  
   
-3.  [サイトの設定] ページで、**[セキュリティ]** を選択してから **[グループまたはユーザーの追加]** を選択します。  
+3.  [サイトの設定] ページで、 **[セキュリティ]** を選択してから **[グループまたはユーザーの追加]** を選択します。  
   
 4.  **[グループ名またはユーザー名]** フィールドに、 `<domain>\<user>`という形式で自分 (レポート サーバー管理者) の Windows ユーザー アカウントを入力します。  
 
@@ -134,7 +134,7 @@ ms.locfileid: "66403263"
   
  **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]** ロール プロパティとロールの割り当てを構成して、高度なアクセス許可で [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を毎回起動する必要をなくすには、以下の手順を実行します。  
   
--   **[スタート]** メニューの **[Microsoft SQL Server [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]]** を右クリックして、**[管理者として実行]** をクリックします。  
+-   **[スタート]** メニューの **[Microsoft SQL Server [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]]** を右クリックして、 **[管理者として実行]** をクリックします。  
   
 -   ローカル [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サーバーへの接続  
   
@@ -144,7 +144,7 @@ ms.locfileid: "66403263"
   
 -   **[システム ロールのプロパティ]** ページで、 **[レポート サーバーのプロパティを表示]** を選択します。 システム管理者ロールを持つメンバーに割り当てる他のすべてのプロパティを選択します。  
   
--   [**OK**] をクリックします。  
+-   **[OK]** をクリックします。  
   
 -   [閉じる] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]  
   
@@ -161,9 +161,9 @@ ms.locfileid: "66403263"
   
  **SSDT を開くときに高度な権限を毎回使用するには:**  
   
-1.  [スタート] メニューから **[Microsoft SQL Server]** を選択した後、**[SQL Server Data Tools]** を右クリックします。 **[管理者として実行]** をクリックします  
+1.  [スタート] メニューから **[Microsoft SQL Server]** を選択した後、 **[SQL Server Data Tools]** を右クリックします。 **[管理者として実行]** をクリックします  
   
-2.  続行するよう求められた場合は、**[はい]** を選択します。  
+2.  続行するよう求められた場合は、 **[はい]** を選択します。  
   
 これで、レポートやその他のアイテムをローカル レポート サーバーに配置できるようになります。  
   
@@ -174,7 +174,7 @@ ms.locfileid: "66403263"
 ##  <a name="bkmk_addiitonal_informaiton"></a> 追加情報  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の管理に関連する追加の一般的な手順は、Windows ファイアウォールでポート 80 を開いてレポート サーバー コンピューターへのアクセスを許可することです。 手順については、「 [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Reporting Services ネイティブ モードのレポート サーバーの管理](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
   
   

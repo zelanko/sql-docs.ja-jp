@@ -55,12 +55,12 @@ helpviewer_keywords:
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: pmasl
 ms.author: vanto
-ms.openlocfilehash: ca998b57715b874d6bc9b851f4710bb3c3e749d4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 15165b25ba9b8bb4b44172ccd99c3c0c1a2f29bf
+ms.sourcegitcommit: 74afe6bdd021f62275158a8448a07daf4cb6372b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75002337"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77144193"
 ---
 # <a name="hints-transact-sql---query"></a>ヒント (Transact-SQL) - Query
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -105,6 +105,7 @@ ms.locfileid: "75002337"
   | OPTIMIZE FOR ( @variable_name { UNKNOWN | = literal_constant } [ , ...n ] )  
   | OPTIMIZE FOR UNKNOWN  
   | PARAMETERIZATION { SIMPLE | FORCED }   
+  | QUERYTRACEON trace_flag   
   | RECOMPILE  
   | ROBUST PLAN   
   | USE HINT ( '<hint_name>' [ , ...n ] )
@@ -186,7 +187,7 @@ KEEPFIXED PLAN
 統計情報の変更に応じてクエリを再コンパイルしないようにクエリ オプティマイザーを設定します。 KEEPFIXED PLAN を指定することによって、クエリの基になるテーブルのスキーマが変更された場合、またはそのテーブルに対して **sp_recompile** が実行された場合のみ、クエリが再コンパイルされます。  
   
 IGNORE_NONCLUSTERED_COLUMNSTORE_INDEX       
-**適用先**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降)。  
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降)。  
   
 クエリで非クラスター化メモリ最適化列ストア インデックスが使用されないようにします。 クエリに、列ストア インデックスの使用を回避するクエリ ヒントと、列ストア インデックスを使用するインデックス ヒントがある場合、ヒントが競合してクエリはエラーを返します。  
   
@@ -240,7 +241,7 @@ OPTIMIZE FOR UNKNOWN
 クエリ オプティマイザーでクエリをコンパイルおよび最適化するときに、すべてのローカル変数に対して初期値の代わりに統計データを使用することを指定します。 この最適化には、強制パラメーター化によって作成されたパラメーターも含まれます。  
   
 同一のクエリ ヒント内で OPTIMIZE FOR @variable_name = _literal\_constant_ と OPTIMIZE FOR UNKNOWN が使用されている場合、クエリ オプティマイザーでは、特定の値に対しては指定された _literal\_constant_ が使用されます。 クエリ オプティマイザーでは、残りの変数値には UNKNOWN が使用されます。 これらの値はクエリを最適化する過程でのみ使用され、クエリの実行時には使用されません。  
-  
+
 PARAMETERIZATION { SIMPLE | FORCED }     
 クエリのコンパイル時に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クエリ オプティマイザーがそのクエリに適用するパラメーター化のルールを指定します。  
   
@@ -249,6 +250,11 @@ PARAMETERIZATION { SIMPLE | FORCED }
 > 詳細については、「[プラン ガイドを使用したクエリのパラメーター化動作の指定](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md)」を参照してください。
   
 SIMPLE は、クエリ オプティマイザーに対して簡易パラメーター化を試行するように指示します。 FORCED は、クエリ オプティマイザーに対して強制パラメーター化を試行するように指示します。 詳細については、「クエリ処理アーキテクチャ ガイド」の「[強制パラメーター化](../../relational-databases/query-processing-architecture-guide.md#ForcedParam)」および「クエリ処理アーキテクチャ ガイド」の「[簡易パラメーター化](../../relational-databases/query-processing-architecture-guide.md#SimpleParam)」を参照してください。  
+
+QUERYTRACEON trace_flag    
+このオプションを使用すると、単一クエリのコンパイル中にのみ、プランに影響するトレース フラグを有効にすることができます。 他のクエリ レベル オプションと同様に、これをプラン ガイドと共に使用して、任意のセッションから実行されているクエリのテキストを照合し、このクエリのコンパイル時に、プランに影響するトレース フラグを自動的に適用することができます。 QUERYTRACEON オプションは、"詳細" セクションの表および[トレース フラグ](../database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)に関するページに記載されているクエリ オプティマイザー トレース フラグに対してのみサポートされています。 しかし、サポートされていないトレース フラグ番号が使用された場合、このオプションによりエラーや警告が返されることはありません。 指定されたトレース フラグがクエリ実行プランに影響を与えるものではない場合、このオプションは自動的に無視されます。
+
+QUERYTRACEON trace_flag_number が異なるトレース フラグ番号と重複している場合は、OPTION 句で複数のトレース フラグを指定できます。
 
 RECOMPILE  
 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] に、クエリの新しい一時的なプランを生成し、クエリ実行完了直後にそのプランを破棄するよう指示します。 生成されたクエリ プランは、RECOMPILE ヒントを指定しないで同じクエリを実行したときにキャッシュに格納されるプランを置き換えません。 RECOMPILE を指定しない場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)]はクエリ プランをキャッシュして再利用します。 クエリ プランをコンパイルする場合、RECOMPILE クエリ ヒントは、クエリ内のローカル変数の現在値を使用します。 クエリがストアド プロシージャ内にある場合は、任意のパラメーターに渡された現在値を使用します。  
@@ -599,7 +605,24 @@ WHERE City = 'SEATTLE' AND PostalCode = 98104
 OPTION (RECOMPILE, USE HINT ('ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES', 'DISABLE_PARAMETER_SNIFFING')); 
 GO  
 ```  
-    
+### <a name="m-using-querytraceon-hint"></a>M. QUERYTRACEON HINT の使用  
+ 次の例では、QUERYTRACEON クエリ ヒントを使用します。 この例では、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースを使用します。 次のクエリを使用して、特定のクエリに対し、トレース フラグ 4199 によって制御される、プランに影響するすべての修正プログラムを有効にすることができます。
+  
+```sql  
+SELECT * FROM Person.Address  
+WHERE City = 'SEATTLE' AND PostalCode = 98104
+OPTION (QUERYTRACEON 4199);
+```  
+
+ 次のクエリのように、複数のトレースフラグを使用することもできます。
+
+```sql
+SELECT * FROM Person.Address  
+WHERE City = 'SEATTLE' AND PostalCode = 98104
+OPTION  (QUERYTRACEON 4199, QUERYTRACEON 4137);
+```
+
+
 ## <a name="see-also"></a>参照  
 [Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql.md)   
 [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   

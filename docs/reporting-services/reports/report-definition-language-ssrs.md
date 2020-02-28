@@ -1,5 +1,5 @@
 ---
-title: レポート定義言語 (SSRS) | Microsoft Docs
+title: レポート定義言語 | Microsoft Docs
 ms.date: 01/24/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b18b025e-f4bd-4744-8f86-0ac9fb967548
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 25a6872cd74faae521f9687d20d54541ef1798a6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: cd2d8f74169c8adcbf2862b9dcf5a442d5691c81
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65579998"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77078016"
 ---
 # <a name="report-definition-language-ssrs"></a>レポート定義言語 (SSRS)
   レポート定義言語 (RDL) は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート定義の XML 表現です。 レポート定義には、レポートのデータ取得とレイアウトの情報が含まれます。 RDL は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]用に作成された XML 文法に準拠する XML 要素で構成されます。 レポート定義ファイル内のコード アセンブリにアクセスすることによって、レポート アイテムの値、スタイル、および書式設定を制御するために独自のカスタム機能を追加できます。  
@@ -66,7 +66,7 @@ ms.locfileid: "65579998"
 |**Float**|浮動小数点数値を持つプロパティです。 オプションの 10 進区切り記号として、ピリオド (.) が使用されます。|  
 |**整数**|整数 (int32) 値を持つプロパティです。|  
 |**Language**|米国英語を表す "en-us" などの言語文化コードを含むテキスト値を持つプロパティです。 値は、特定の言語か、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] で既定の言語が定義されたニュートラル言語である必要があります。|  
-|**Name**|文字列テキストの値を持つプロパティです。 名前は、アイテムの名前空間内で一意である必要があります。 指定しない場合、名前を持つ最も内側のオブジェクトが、アイテムの名前空間となります。|  
+|**名前**|文字列テキストの値を持つプロパティです。 名前は、アイテムの名前空間内で一意である必要があります。 指定しない場合、名前を持つ最も内側のオブジェクトが、アイテムの名前空間となります。|  
 |**NormalizedString**|正規化された文字列テキストの値を持つプロパティです。|  
 |**[サイズ]**|サイズ要素には、数値が含まれている必要があります (小数点としてピリオドを使用)。 数値の後には、cm、mm、in、pt、pc など、CSS 長さ単位の指定子を入力する必要があります。 数値と指定子の間のスペースは省略可能です。 サイズ指定子の詳細については、「[CSS Values and Units Reference (CSS の値と単位のリファレンス)](/previous-versions//ms537660(v=vs.85))」を参照してください。<br /><br /> RDL では、 **Size** の最大値は 160 インチで、 最小サイズは 0 インチです。|  
 |**String**|文字列テキストの値を持つプロパティです。|  

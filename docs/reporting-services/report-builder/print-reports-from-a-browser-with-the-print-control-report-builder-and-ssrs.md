@@ -1,5 +1,5 @@
 ---
-title: 印刷コントロールを使用したブラウザーからのレポートの印刷 (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: 印刷コントロールを使用したブラウザーからのレポートの印刷 (レポート ビルダー) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 10054250-d915-4bcb-8a1d-26837db4e932
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 535d35ad80f940e7d3ed4a9163b2e65757088e58
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: bc5eabd755bec6c25c16b3974efe267cf3e27c72
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581166"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082541"
 ---
 # <a name="print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs"></a>印刷コントロールを使用したブラウザーからのレポートの印刷 (レポート ビルダーおよび SSRS)
   レポートを表示するための最も一般的なクライアント アプリケーションはブラウザーですが、ブラウザーの印刷機能はレポートの印刷には適していません。 ブラウザーの印刷機能は、Web ページを印刷するための機能です。 通常、ブラウザーから印刷したページには、Web ページ上にあるすべての可視要素と、ページまたは Web サイトを識別するヘッダーおよびフッター情報が含まれます。 ブラウザーからの印刷では現在のウィンドウの内容が印刷されるため、 レポートが数ページあっても最初のページしか印刷されません。また、レポート ページのサイズが印刷ページのサイズより大きい場合には、ページの全体を印刷しきれない場合もあります。  

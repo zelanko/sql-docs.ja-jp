@@ -2,7 +2,7 @@
 title: CREATE DATABASE (Transact-SQL) | Microsoft Docs
 description: SQL Server、Azure SQL Database、Azure Synapse Analytics、Analytics Platform System のデータベース構文を作成します。
 ms.custom: ''
-ms.date: 01/10/2020
+ms.date: 02/07/2020
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -37,12 +37,12 @@ ms.assetid: 29ddac46-7a0f-4151-bd94-75c1908c89f8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: afca0210d61e23af7578e6805c5052c00c72f88a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 2b809d3512c16a366f8f4add88cf8a0b091156d2
+ms.sourcegitcommit: 11691bfa8ec0dd6f14cc9cd3d1f62273f6eee885
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75952397"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "77074482"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -876,9 +876,9 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 {
 
   MAXSIZE = { 100 MB | 250 MB | 500 MB | 1 ... 1024 ... 4096 GB }
-  | ( EDITION = { 'basic' | 'standard' | 'premium' | 'GeneralPurpose' | 'BusinessCritical' | 'Hyperscale' }
+  | ( EDITION = { 'Basic' | 'Standard' | 'Premium' | 'GeneralPurpose' | 'BusinessCritical' | 'Hyperscale' }
   | SERVICE_OBJECTIVE =
-    { 'basic' | 'S0' | 'S1' | 'S2' | 'S3' | 'S4'| 'S6'| 'S7'| 'S9'| 'S12'
+    { 'Basic' | 'S0' | 'S1' | 'S2' | 'S3' | 'S4'| 'S6'| 'S7'| 'S9'| 'S12'
       | 'P1' | 'P2' | 'P4'| 'P6' | 'P11' | 'P15'
       | 'GP_Gen4_1' | 'GP_Gen4_2' | 'GP_Gen4_3' | 'GP_Gen4_4' | 'GP_Gen4_5' | 'GP_Gen4_6'
       | 'GP_Gen4_7' | 'GP_Gen4_8' | 'GP_Gen4_9' | 'GP_Gen4_10' | 'GP_Gen4_16' | 'GP_Gen4_24'
@@ -904,7 +904,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 CREATE DATABASE database_name
     AS COPY OF [source_server_name.] source_database_name
     [ ( SERVICE_OBJECTIVE =
-      { 'basic' |'S0' | 'S1' | 'S2' | 'S3'| 'S4'| 'S6'| 'S7'| 'S9'| 'S12'
+      { 'Basic' |'S0' | 'S1' | 'S2' | 'S3'| 'S4'| 'S6'| 'S7'| 'S9'| 'S12'
       | 'P1' | 'P2' | 'P4'| 'P6' | 'P11' | 'P15'
       | 'GP_Gen4_1' | 'GP_Gen4_2' | 'GP_Gen4_3' | 'GP_Gen4_4' | 'GP_Gen4_5' | 'GP_Gen4_6'
       | 'GP_Gen4_7' | 'GP_Gen4_8' | 'GP_Gen4_9' | 'GP_Gen4_10' | 'GP_Gen4_16' | 'GP_Gen4_24'
@@ -939,7 +939,7 @@ CATALOG_COLLATION: メタデータ カタログの既定の照合順序を指定
 
 EDITION: データベースのサービス層を指定します。
 
-単一データベース/エラスティック プール上の単一のデータベースおよびプールされたデータベース。 使用可能な値: 'basic'、'standard'、'premium'、'GeneralPurpose'、'BusinessCritical'、'Hyperscale'。
+単一データベース/エラスティック プール上の単一のデータベースおよびプールされたデータベース。 使用できる値は次のとおりです。'Basic'、'Standard'、'Premium'、'GeneralPurpose'、'BusinessCritical'、'Hyperscale'。
 
 MAXSIZE: データベースの最大サイズを指定します。 MAXSIZE は、指定されている EDITION (サービス層) に対して有効である必要があります。各サービス層でサポートされる MAXSIZE 値と既定値 (D) は次のとおりです。
 
@@ -1204,11 +1204,11 @@ CREATE DATABASE db_copy
 次の例では、データベース作成中のカタログ照合順序を DATABASE_DEFAULT に設定します。これにより、カタログ照合順序がデータベースの照合順序と同じに設定されます。
 
 ```sql
-CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140 (MAXSIZE = 100 MB, EDITION = 'basic')
+CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140 (MAXSIZE = 100 MB, EDITION = 'Basic')
   WITH CATALOG_COLLATION = DATABASE_DEFAULT
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [sys.dm_database_copies - Azure SQL Database](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)
 - [ALTER DATABASE - Azure SQL Database](alter-database-transact-sql.md?view=azuresqldb-currentls)
@@ -1279,7 +1279,7 @@ Windows と SQL の照合順序名の詳細については、[COLLATE (Transact-
 CREATE DATABASE TestDB1;
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 「[ALTER DATABASE](alter-database-transact-sql.md?view=azuresqldb-mi-current)」をご覧ください。
 
@@ -1370,7 +1370,7 @@ Azure Synapse は COMPATIBILITY_LEVEL 130 に設定されており、変更す�
 
 データベースを作成した後、データベースの照合順序を変更することはできません。
 
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]
+## <a name="examples-sssdwfull"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]
 
 ### <a name="a-simple-example"></a>A. 簡単な例
 データ ウェアハウスのデータベースを作成するための簡単な例です。 これにより、10240 GB、既定の照合順序は SQL_Latin1_General_CP1_CI_AS、最小のコンピューティング能力が DW100 の、最小の最大サイズのデータベースが作成されます。
@@ -1490,7 +1490,7 @@ DATABASE オブジェクトを共有ロックします。
 
 この操作に成功すると、このデータベースのエントリがメタデータ ビューの [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) および [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) に表示されます。
 
-## <a name="examples-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+## <a name="examples-sspdw"></a>例: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 ### <a name="a-basic-database-creation-examples"></a>A. 基本的データベース作成の例
 

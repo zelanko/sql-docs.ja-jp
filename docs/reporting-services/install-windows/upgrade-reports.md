@@ -1,5 +1,5 @@
 ---
-title: レポートのアップグレード (SSRS) | Microsoft Docs
+title: レポートのアップグレード | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a1a10c67-7462-4562-9b07-a8822188a161
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c4d5684850dff9157a56435547e48b5446dd929c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: bae0cffce8cfacd56feaab289d75b7c70d509ce7
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "69494552"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082283"
 ---
 # <a name="upgrade-reports-ssrs"></a>レポートのアップグレード (SSRS)
 
@@ -74,9 +74,9 @@ ms.locfileid: "69494552"
   
 -   メイン レポートおよびすべてのサブレポートをアップグレードできない。 レポートは [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、または [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート プロセッサによって処理されます。  
   
--   メイン レポートはアップグレードできるが、1 つ以上のサブレポートをアップグレードできない。 メイン レポートは [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] レポート プロセッサで処理されますが、表示されたレポート内のアップグレードできなかったサブレポートの表示位置に "エラー: サブレポートを処理できませんでした" というメッセージが表示されます。  
+-   メイン レポートはアップグレードできるが、1 つ以上のサブレポートをアップグレードできない。 メイン レポートは [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] レポート プロセッサによって処理されますが、表示レポートには "エラー: サブレポートを処理できませんでした" というメッセージが、アップグレードできなかったサブレポートが表示される場所に示されます。  
   
--   メイン レポートはアップグレードできないが、1 つ以上のサブレポートをアップグレードできる。 メイン レポートは [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] レポート プロセッサで処理されますが、表示されたレポート内のサブレポートの表示位置に "エラー: サブレポートを処理できませんでした" というメッセージが表示されます。  
+-   メイン レポートはアップグレードできないが、1 つ以上のサブレポートをアップグレードできる。 メイン レポートは [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] レポート プロセッサによって処理されますが、表示レポートには "エラー: サブレポートを処理できませんでした" というメッセージが、サブレポートが表示される場所に示されます。  
   
  "エラー: サブレポートを処理できませんでした" というエラーが表示された場合、レポートを同一バージョンのレポート プロセッサで処理できるように、メイン レポートまたはサブレポートの定義を変更する必要があります。  
   

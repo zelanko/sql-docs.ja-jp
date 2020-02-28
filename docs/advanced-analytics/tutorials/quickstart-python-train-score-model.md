@@ -10,12 +10,12 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c8fd7d734bee00a22af02b014e950f6694b534a1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c6c74d73a531a40e0f8e57e7104109de71e27ce3
+ms.sourcegitcommit: acfdeacc80c112992c1201748e0b5c59a473032d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76831763"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76977546"
 ---
 # <a name="quickstart-create-and-score-a-predictive-model-in-python-with-sql-server-machine-learning-services"></a>クイック スタート:SQL Server Machine Learning Services を使用して Python で予測モデルを作成してスコア付けする
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -174,7 +174,7 @@ SQL Server で再利用するために格納されているモデルは、バイ
 
 この演習では、各ストアド プロシージャがシステム ストアド プロシージャ `sp_execute_external_script` を使用して Python プロセスを開始する、さまざまなタスク専用のストアド　プロシージャを作成する方法について学習しました。 Python プロセスへの入力は、パラメーターとして `sp_execute_external` に渡されます。 SQL Server データベースの Python スクリプト自体とデータ変数は両方とも入力として渡されます。
 
-一般的に、SSMS は洗練された Python コードと共に使用するか、行ベースの出力を返す単純な Python コードでのみ使用すべきです。 ツールとして、SSMS は T-SQL などのクエリ言語をサポートし、フラット化された行セットを返します。 コードで散布図やヒストグラムなどの視覚的な出力を生成する場合は、イメージをレンダリングできるツールまたはエンドユーザー向けのアプリケーションが必要です。
+一般的に、SSMS は洗練された Python コードと共に使用するか、行ベースの出力を返す単純な Python コードでのみ使用すべきです。 ツールとして、SSMS は T-SQL などのクエリ言語をサポートし、フラット化された行セットを返します。 コードで散布図やヒストグラムなどの視覚的な出力を生成する場合は、ストアド プロシージャの外部でイメージをレンダリングできる別のツールまたはエンドユーザー向けアプリケーションが必要です。
 
 さまざまな操作を処理する包括的なスクリプトを記述することに慣れた Python 開発者にとって、タスクを個別の手順で整理することに必要性を感じない場合もあります。 しかし、トレーニングとスコアリングには異なるユース ケースがあります。 これらのタスクを分離することにより、各タスクをそれぞれ異なるスケジュールで進め、各操作に異なるスコープのアクセス許可を設定できます。
 

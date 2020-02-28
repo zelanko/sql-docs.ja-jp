@@ -1,5 +1,5 @@
 ---
-title: データ接続を追加および確認する (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: データ接続を追加および確認する (レポート ビルダー) | Microsoft Docs
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-data
@@ -9,12 +9,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 03/01/2017
-ms.openlocfilehash: b3607172643129b7ec327d12f6818dafbde10e23
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 26ea58eaaaffbbd0c53d78ca971f472413be322b
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190017"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082259"
 ---
 # <a name="add-and-verify-a-data-connection-report-builder-and-ssrs"></a>データ接続を追加および確認する (レポート ビルダーおよび SSRS)
 
@@ -52,9 +52,9 @@ ms.locfileid: "74190017"
 
 2. **[接続テスト]** をクリックします。
 
-3. 接続に成功すると、"接続が正常に作成されました" というメッセージが表示されます。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3. 接続に成功すると、次のメッセージが表示されます: "接続が正常に作成されました"。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 
-4. 接続に成功しなかった場合は、"データ ソースに接続できません。" というメッセージが表示されます。  
+4. 接続に成功しなかった場合は、次のメッセージが表示されます: "データ ソースに接続できません"。  
 
 5. **[詳細]** をクリックし、情報に基づいて問題を修正します。
 
@@ -62,7 +62,7 @@ ms.locfileid: "74190017"
 
 6. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [レポート データセット (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)   
 - [レポート埋め込みデータセットと共有データセット (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)

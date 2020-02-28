@@ -1,5 +1,5 @@
 ---
-title: グラフの系列の色の書式設定 (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: グラフの系列の色の書式設定 (レポート ビルダー) | Microsoft Docs
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: fe541501-cac5-47b1-b95f-c410db789190
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e2bdcd1df91408f33c25ad0a8eefa4c9ef2ee771
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: f1d56ecf79c427c885814e87437264ca23c13e18
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580306"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77079512"
 ---
 # <a name="formatting-series-colors-on-a-chart-report-builder-and-ssrs"></a>グラフの系列の色の書式設定 (レポート ビルダーおよび SSRS)
   Reporting Services にはグラフ用にいくつかの組み込みパレットが用意されていますが、カスタム パレットを定義することもできます。 既定では、グラフの組み込みの **[Pacific]** カラー パレットを使用して各系統が塗りつぶされます。 これらの色は、凡例にも表示されます。 複数の系統をグラフに追加すると、グラフでは、パレットで定義されている色の順序で系統に色が割り当てられます。  

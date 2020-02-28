@@ -1,5 +1,5 @@
 ---
-title: 円グラフ (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: 円グラフ (レポート ビルダー) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 536efa9c-c6fb-4cdd-b41f-ff5382910bd7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a623762a7424036ffe8b9b5b669be426480bbb4d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 99988a882adff55308c9c7e3fe776cd49b7ce275
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65582226"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082440"
 ---
 # <a name="pie-charts-report-builder-and-ssrs"></a>円グラフ (レポート ビルダーおよび SSRS)
   円グラフおよびドーナツ グラフは、データを全体に対する比率として表示します。 円グラフは、主に、グループ間の比較を示すために使用されます。 円グラフとドーナツ グラフは、ピラミッド グラフやじょうごグラフと同様、図形グラフの一種です。 図形グラフには軸がありません。 図形グラフに数値フィールドをドロップすると、それぞれの値の全体に占める比率が計算されます。 図形グラフの詳細については、「[図形グラフ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/shape-charts-report-builder-and-ssrs.md)」を参照してください。  

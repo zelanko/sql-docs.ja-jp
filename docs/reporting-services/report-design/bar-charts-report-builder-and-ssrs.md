@@ -1,5 +1,5 @@
 ---
-title: 横棒グラフ (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: 横棒グラフ (レポート ビルダー) | Microsoft Docs
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: db0cf6a0-2114-41d0-ab27-0319e52dee76
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1ed33d00286119c63042680cfd6d2bd414d58098
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 31749e321ac89d02a046a1bd6d67139bc476c110
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581837"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081477"
 ---
 # <a name="bar-charts-report-builder-and-ssrs"></a>横棒グラフ (レポート ビルダーおよび SSRS)
   横棒グラフでは、横棒のセットとして系列が表示されます。 一般的な横棒グラフは、縦棒グラフおよび範囲横棒グラフと密接な関係にあります。縦棒グラフでは、縦棒のセットとして系列が表示され、範囲横棒グラフでは、始点と終点が異なる横棒のセットとして系列が表示されます。  

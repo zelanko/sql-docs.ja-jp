@@ -1,7 +1,7 @@
 ---
 title: Microsoft SQL Server 用 JDBC Driver のサポート表 | Microsoft Docs
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 01/29/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: c5769e67-99f7-4bc1-a4fa-8941dad33d35
 author: MightyPen
 ms.author: genemi
 manager: jroth
-ms.openlocfilehash: 950fa902d2772d131f5ecd626653ad58c97c0fb1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 1f3c44f9f133d95a821cac7a1a97fe0c8ca60252
+ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "69027892"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77004529"
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server-support-matrix"></a>Microsoft SQL Server 用 JDBC Driver のサポート表
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "69027892"
   このページには、Microsoft SQL Server 用 JDBC Driver のサポート表とサポート ライフサイクル ポリシーがあります。  
   
 ## <a name="microsoft-jdbc-driver-support-lifecycle-matrix-and-policy"></a>Microsoft JDBC Driver サポート ライフサイクルの表とポリシー  
- マイクロソフト サポート ライフサイクル (MSL) ポリシーでは、マイクロソフト製品のサポート ライフサイクルを理解しやすくする、予測可能な情報を提供しています。 JDBC ドライバーのバージョン 3.0、4.x、6.x、7.x には、ドライバーのリリース日から 5 年間のメインストリーム サポートが含まれています。 メインストリーム サポートについては、Microsoft ライフサイクル ポリシーの Web サイトで定義されています。  
+ マイクロソフト サポート ライフサイクル (MSL) ポリシーでは、マイクロソフト製品のサポート ライフサイクルを理解しやすくする、予測可能な情報を提供しています。 JDBC ドライバーのバージョン 3.0、4.x、6.x、7.x、および 8.x には、ドライバーのリリース日から 5 年間のメインストリーム サポートが含まれています。 メインストリーム サポートについては、Microsoft ライフサイクル ポリシーの Web サイトで定義されています。  
   
  延長サポートとカスタム サポートのオプションは、Microsoft JDBC Driver では使用できません。  
     
@@ -32,6 +32,7 @@ ms.locfileid: "69027892"
   
 |ドライバー名|ドライバー パッケージのバージョン|適用できる JAR|メインストリーム サポートの終了|
 |-|-|-|-|  
+|Microsoft JDBC Driver 8.2 for SQL Server|8.2|mssql-jdbc-8.2.0.jre13.jar<br> mssql-jdbc-8.2.0.jre11.jar<br> mssql-jdbc-8.2.0.jre8.jar|2025 年 1 月 31 日|
 |Microsoft JDBC Driver 7.4 for SQL Server|7.4|mssql-jdbc-7.4.1.jre12.jar<br> mssql-jdbc-7.4.1.jre11.jar<br> mssql-jdbc-7.4.1.jre8.jar|2024 年 8 月 2 日|
 |Microsoft JDBC Driver 7.2 for SQL Server|7.2|mssql-jdbc-7.2.2.jre11.jar<br> mssql-jdbc-7.2.2.jre8.jar|2024 年 4 月 16 日|
 |Microsoft JDBC Driver 7.0 for SQL Server|7.0|mssql-jdbc-7.0.0.jre10.jar<br> mssql-jdbc-7.0.0.jre8.jar|2023 年 7 月 31 日|  
@@ -39,12 +40,12 @@ ms.locfileid: "69027892"
 |Microsoft JDBC Driver 6.2 for SQL Server|6.2|mssql-jdbc-6.2.2.jre8.jar<br> mssql-jdbc-6.2.2.jre7.jar|2022 年 6 月 30 日|    
 |Microsoft SQL Server 用 JDBC Driver 6.0|6.0|sqljdbc42.jar<br>sqljdbc41.jar|2021 年 7 月 14 日|    
 |Microsoft SQL Server 用 JDBC Driver 4.2|4.2|sqljdbc42.jar<br>sqljdbc41.jar|2020 年 8 月 24 日|  
-|Microsoft SQL Server 用 JDBC Driver 4.1|4.1|sqljdbc41.jar|2019 年 12 月 12日|  
   
  次の Microsoft JDBC ドライバーはサポートされなくなりました。  
  
 |ドライバー名|ドライバー パッケージのバージョン|メインストリーム サポートの終了|  
 |-|-|-|
+|Microsoft SQL Server 用 JDBC Driver 4.1|4.1|2019 年 12 月 12日| 
 |Microsoft SQL Server 用 JDBC Driver 4.0|4.0|2017 年 3 月 6 日|  
 |Microsoft SQL Server JDBC Driver 3.0|3.0|2015 年 4 月 23 日|  
 |Microsoft SQL Server JDBC Driver 2.0|2.0|2012 年 12 月 31 日|  
@@ -57,6 +58,7 @@ ms.locfileid: "69027892"
   
 |ドライバーのバージョン|SQL Server 2008|SQL Server 2008 R2|SQL Server 2012|Azure SQL データベース|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2014|SQL Server 2016|SQL Server 2017|SQL Server 2019|  
 |-|-|-|-|-|-|-|-|-|-|-|
+|8.2|N|N|Y|Y|Y|Y|Y|Y|Y|
 |7.4|N|N|Y|Y|Y|Y|Y|Y|Y|
 |7.2|N|Y|Y|Y|Y|Y|Y|Y|N| 
 |7.0|N|Y|Y|Y|Y|Y|Y|Y|N| 
@@ -88,6 +90,7 @@ ms.locfileid: "69027892"
   
 |JDBC ドライバーのバージョン|JRE のバージョン|JDBC API のバージョン| 
 |-|-|-|  
+|8.2|1.8、11、13|4.2、4.3 (部分)|
 |7.4|1.8、11、12|4.2、4.3 (部分)|
 |7.2|1.8、11|4.2、4.3 (部分)|
 |7.0|1.8、10|4.2、4.3 (部分)|
@@ -108,8 +111,7 @@ ms.locfileid: "69027892"
 ## <a name="supported-operating-systems"></a>サポートされるオペレーティング システム  
  Microsoft JDBC Driver は、Java 仮想マシン (JVM) の使用をサポートするすべてのオペレーティング システムで機能するように設計されています。 一般的に使用されるプラットフォームには、Windows 10、Windows 8.1、Windows 8、Windows 7、Windows Server 2008 R2、Windows Vista、Linux、Unix、AIX、MacOS などがあります。  
   
- JDBC 製品チームは、Windows、Sun Solaris、SUSE Linux、Red Hat Linux でドライバーをテストしています。  カスタマー サポートは、すべてのプラットフォームのお客様にご利用いただけますが、Windows などのプラットフォームで問題の再現をお客様にお願いする場合があります。  
-  
+ JDBC 製品チームは、Windows、Sun Solaris、SUSE Linux、Ubuntu Linux、CentOS Linux、および macOS でドライバーをテストしています。
 ## <a name="application-server-support"></a>アプリケーション サーバーのサポート  
  Microsoft SQL Server 用 JDBC Driver は、さまざまなアプリケーション サーバーでテストされています。  これらの製品と互換性のあるドライバー バージョンの詳細情報については、ご利用のアプリケーション サーバーの製造元にお問い合わせください。
  

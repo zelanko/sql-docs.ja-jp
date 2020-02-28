@@ -1,5 +1,5 @@
 ---
-title: 外部データ ソースのデータを追加する (SSRS) | Microsoft Docs
+title: 外部データ ソースのデータを追加する | Microsoft Docs
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-data
@@ -9,12 +9,12 @@ ms.author: maggies
 reviewer: ''
 ms.custom: ''
 ms.date: 03/17/2017
-ms.openlocfilehash: e96e72540810c42be9f8abd1d656fb2cec0e5d41
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c6d5ebdcc4866c30b9fda3967304cda747a13a83
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190949"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081838"
 ---
 # <a name="add-data-from-external-data-sources-ssrs"></a>外部データ ソースのデータを追加する (SSRS)
   外部データ ソースからデータを取得するには、データ接続を使用します。 データ接続情報は、通常は権限の付与と使用する資格情報の指定を担う外部データ ソースの所有者によって提供されます。 データ接続情報は、レポート データ ソースとして保存されます。 データ ソースの種類により、データの取得に使用するデータ拡張機能が決まります。  

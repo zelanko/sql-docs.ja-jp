@@ -2,7 +2,7 @@
 title: 分散型可用性グループの構成
 description: 'Always On 分散型可用性グループを作成および構成する方法について説明します。 '
 ms.custom: seodec18
-ms.date: 08/17/2017
+ms.date: 01/28/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c49fb6ad9ad1d824a91f2a91c399770f3032b8aa
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: ebe6152ea59de28c9df7f3bb3abfa149900c826f
+ms.sourcegitcommit: f06049e691e580327eacf51ff990e7f3ac1ae83f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75952486"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77146304"
 ---
 # <a name="configure-an-always-on-distributed-availability-group"></a>Always On 分散型可用性グループの構成  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -146,7 +146,7 @@ GO
 ### <a name="create-a-listener-for--the-secondary-availability-group"></a>セカンダリ可用性グループのリスナーを作成する  
  次に、セカンダリ可用性グループのリスナーを 2 つ目の WSFC に追加します。 この例では、 `ag2-listener`というリスナーです。 リスナーの詳細な作成手順については、「[可用性グループ リスナーの作成または構成 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)」を参照してください。  
   
-```  
+```sql  
 ALTER AVAILABILITY GROUP [ag2]    
     ADD LISTENER 'ag2-listener' ( WITH IP ( ('2001:db88:f0:f00f::cf3c'),('2001:4898:e0:f213::4ce2') ) , PORT = 60173);    
 GO  
@@ -228,15 +228,15 @@ ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];
 
 現在のところ、手動フェールオーバーのみがサポートされています。 分散型可用性グループを手動でフェールオーバーするには:
 
-1. データが失われることがないように、分散可用性グループに対し同期コミットを設定します。
-1. 分散型可用性グループが同期されるまで待ちます。
+1. データが決して失われないようにするには、グローバル プライマリ データベース (つまり、プライマリ可用性グループのデータベース) でのすべてのトランザクションを停止してから、分散型可用性グループを同期コミットに設定します。
+1. 分散型可用性グループが同期され、データベースごとの last_hardened_lsn が同じになるまで待機します。 
 1. グローバル プライマリ レプリカで、分散型可用性グループのロールを `SECONDARY` に設定します。
 1. フェールオーバーの準備ができたかテストします。
 1. プライマリ可用性グループにフェールオーバーします。
 
 次の Transact-SQL の例では、`distributedag` という名前の分散可用性グループをフェールオーバーする詳細な手順を示しています。
 
-1. グローバル プライマリとフォワーダーの "*両方*" で次のコードを実行して、分散型可用性グループを同期コミットに設定します。   
+1. データが決して失われないようにするには、グローバル プライマリ データベース (つまり、プライマリ可用性グループのデータベース) でのすべてのトランザクションを停止します。 次に、グローバル プライマリとフォワーダーの "*両方*" で次のコードを実行して、分散型可用性グループを同期コミットに設定します。   
     
       ```sql  
       -- sets the distributed availability group to synchronous commit 
@@ -262,24 +262,29 @@ ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];
        GO
 
       ```  
-   >[!NOTE]
-   >分散型可用性グループでは、2 つの可用性グループが同期された状態であるかどうかは、両方のレプリカの可用性モードに依存します。 同期コミット モードでは、現在のプライマリ可用性グループと現在のセカンダリ可用性グループの両方が、`SYNCHRONOUS_COMMIT` 可用性モードである必要があります。 このため、グローバルのプライマリ レプリカと、フォワーダーの両方で上記のスクリプトを実行する必要があります。
+   > [!NOTE]
+   > 分散型可用性グループでは、2 つの可用性グループが同期された状態であるかどうかは、両方のレプリカの可用性モードに依存します。 同期コミット モードでは、現在のプライマリ可用性グループと現在のセカンダリ可用性グループの両方が、`SYNCHRONOUS_COMMIT` 可用性モードである必要があります。 このため、グローバルのプライマリ レプリカと、フォワーダーの両方で上記のスクリプトを実行する必要があります。
 
-1. 分散型可用性グループの状態が `SYNCHRONIZED`に変化するまで待機します。 プライマリ可用性グループのプライマリ レプリカであるグローバル プライマリで次のクエリを実行します。 
+
+1. 分散型可用性グループの状態が `SYNCHRONIZED` に変化し、すべてのレプリカの (データベースごとの) last_hardened_lsn が同じになるまで待機します。 プライマリ可用性グループのプライマリ レプリカであるグローバル プライマリと、フォワーダーの両方に対して次のクエリを実行することで、synchronization_state_desc と last_hardened_lsn を確認します。 
     
       ```sql  
+      -- Run this query on the Global Primary and the forwarder
+      -- Check the results to see if synchronization_state_desc is SYNCHRONIZED, and the last_hardened_lsn is the same per database on both the global primary and       forwarder 
+      -- If not rerun the query on both side every 5 seconds until it is the case
+      --
       SELECT ag.name
              , drs.database_id
+             , db_name(drs.database_id) as database_name
              , drs.group_id
              , drs.replica_id
              , drs.synchronization_state_desc
-             , drs.end_of_log_lsn 
-        FROM sys.dm_hadr_database_replica_states drs,
-        sys.availability_groups ag
-          WHERE drs.group_id = ag.group_id;      
+             , drs.last_hardened_lsn  
+      FROM sys.dm_hadr_database_replica_states drs 
+      INNER JOIN sys.availability_groups ag on drs.group_id = ag.group_id;
       ```  
 
-    可用性グループ **synchronization_state_desc** が `SYNCHRONIZED`になってから先に進みます。 **synchronization_state_desc** が `SYNCHRONIZED`にならない場合は、その状態に変化するまで 5 秒間隔でコマンドを実行します。 **synchronization_state_desc** = `SYNCHRONIZED`の条件が満たされるまで、先に進まないでください。 
+    可用性グループ **synchronization_state_desc** が `SYNCHRONIZED` になり、さらにグローバル プライマリとフォワーダーの両方でデータベースごとの last_hardened_lsn が同じになったら、先に進みます。  **synchronization_state_desc** が `SYNCHRONIZED` ではない場合、または last_hardened_lsn が同じではない場合は、その状態に変化するまで 5 秒間隔でコマンドを実行します。 **synchronization_state_desc** = `SYNCHRONIZED` となり、かつデータベースごとの last_hardened_lsn が同じになるまで、先に進まないでください。 
 
 1. グローバル プライマリで、分散型可用性グループのロールを `SECONDARY` に設定します。 
 
@@ -289,23 +294,41 @@ ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];
 
     この時点で、分散型可用性グループは使用できません。
 
-1. フェールオーバーの準備をテストします。 次のクエリを実行します。
+1. フェールオーバーの準備をテストします。 グローバル プライマリとフォワーダーの両方に対して次のクエリを実行します。
 
     ```sql
-    SELECT ag.name, 
-        drs.database_id, 
-        drs.group_id, 
-        drs.replica_id, 
-        drs.synchronization_state_desc, 
-        drs.end_of_log_lsn 
-    FROM sys.dm_hadr_database_replica_states drs, sys.availability_groups ag
-    WHERE drs.group_id = ag.group_id; 
+     -- Run this query on the Global Primary and the forwarder
+     -- Check the results to see if the last_hardened_lsn is the same per database on both the global primary and forwarder 
+     -- The availability group is ready to fail over when the last_hardened_lsn is the same for both availability groups per database
+     --
+     SELECT ag.name, 
+         drs.database_id, 
+         db_name(drs.database_id) as database_name,
+         drs.group_id, 
+         drs.replica_id,
+         drs.last_hardened_lsn
+     FROM sys.dm_hadr_database_replica_states drs
+     INNER JOIN sys.availability_groups ag ON drs.group_id = ag.group_id;
     ```  
-    可用性グループは、**synchronization_state_desc** が `SYNCHRONIZED` であり、かつ、両方の可用性グループで **end_of_log_lsn** が同じである場合に、フェールオーバーできる状態となります。 
 
-1. プライマリ可用性グループからセカンダリ可用性グループにフェールオーバーします。 セカンダリ可用性グループのプライマリ レプリカをホストする SQL Server で、次のコマンドを実行します。 
+    可用性グループは、両方の可用性グループにおいてデータベースごとの **last_hardened_lsn** が同じである場合に、フェールオーバーできる状態となります。 一定の時間が経過しても last_hardened_lsn が同じにならない場合は、データの損失を避けるために、グローバル プライマリ上で次のコマンドを実行することでグローバル プライマリにフェールバックして、2 番目の手順からやり直します。 
 
     ```sql
+    -- If the last_hardened_lsn is not the same after a period of time, to avoid data loss, 
+    -- we need to fail back to the global primary by running this command on the global primary 
+    -- and then start over from the second step:
+
+    ALTER AVAILABILITY GROUP distributedag FORCE_FAILOVER_ALLOW_DATA_LOSS; 
+    ```
+
+
+1. プライマリ可用性グループからセカンダリ可用性グループにフェールオーバーします。 セカンダリ可用性グループのプライマリ レプリカをホストする SQL Server であるフォワーダーに対して、次のコマンドを実行します。 
+
+    ```sql
+    -- Once the last_hardened_lsn is the same per database on both sides
+    -- We can Fail over from the primary availability group to the secondary availability group. 
+    -- Run the following command on the forwarder, the SQL Server instance that hosts the primary replica of the secondary availability group.
+
     ALTER AVAILABILITY GROUP distributedag FORCE_FAILOVER_ALLOW_DATA_LOSS; 
     ```  
 

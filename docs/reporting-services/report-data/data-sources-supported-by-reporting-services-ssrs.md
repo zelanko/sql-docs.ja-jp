@@ -1,5 +1,5 @@
 ---
-title: Reporting Services でサポートされるデータ ソース (SSRS) | Microsoft Docs
+title: Reporting Services でサポートされるデータ ソース | Microsoft Docs
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6400b708fa90d384c6c7f6d0bf11ca7352bad560
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e37b386b0dd8fd5a596096b8f56e87db1a0fa1e6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190885"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77078123"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Reporting Services でサポートされるデータ ソース (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] でレポート データをデータ ソースから取得する処理は、データ処理拡張機能を使用するモジュール式の拡張可能なデータ レイヤーを通して行われます。 レポート データをデータ ソースから取得するには、対象となるデータ ソースの種類 (データ ソースで動作しているバージョンのソフトウェア) およびデータ ソース プラットフォーム (32 ビットまたは 64 ビット [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]) がサポートされているデータ処理拡張機能を選択する必要があります。  
@@ -81,19 +81,19 @@ ms.locfileid: "74190885"
 ## <a name="supported-data-sources"></a>サポートされるデータ ソース  
  次の表は、レポート データセットおよびレポート モデルのデータを取得するときに使用できる、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] データ処理拡張機能およびデータ プロバイダーを示しています。 拡張機能またはデータ プロバイダーの詳細を参照する場合は、2 番目の列のリンクをクリックしてください。 以下に、表の列の説明を示します。  
   
--   レポート データのソース:アクセス先のデータの種類 (リレーショナル データベース、多次元データベース、フラット ファイル、XML など)。 この列では、レポートに対して [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] で使用できるデータの種類がわかります。  
+-   レポート データのソース:アクセス先のデータの種類 (リレーショナル データベース、多次元データベース、フラット ファイル、XML など)。 この列では、"レポートに対して [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] で使用できるデータの種類" がわかります。  
   
--   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ ソースの種類:[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] でデータ ソースを定義するときにドロップダウン リストに表示されるデータ ソースの種類のうちの 1 つ。 このリストには、インストールおよび登録された DPE とデータ プロバイダーから取得した値が設定されます。 この列では、レポート データ ソースを作成するときにドロップダウン リストから選択するべきデータ ソースの種類がわかります。  
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ ソースの種類:[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] でデータ ソースを定義するときにドロップダウン リストに表示されるデータ ソースの種類のうちの 1 つ。 このリストには、インストールおよび登録された DPE とデータ プロバイダーから取得した値が設定されます。 この列では、"レポート データ ソースを作成するときにドロップダウン リストから選択するべきデータ ソースの種類" がわかります。  
   
--   データ処理拡張機能/データ プロバイダーの名前:[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ処理拡張機能または選択された [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ ソースの種類に対応する他のデータ プロバイダー。 この列では、データ ソースの種類を選択したときに、どのデータ処理拡張機能またはデータ プロバイダーが使用されるかがわかります。  
+-   データ処理拡張機能/データ プロバイダーの名前:[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ処理拡張機能または選択された [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ ソースの種類に対応する他のデータ プロバイダー。 この列では、"データ ソースの種類を選択したときに、どのデータ処理拡張機能またはデータ プロバイダーが使用されるか" がわかります。  
   
 -   基になるデータ プロバイダーのバージョン (省略可):データ ソースの種類によっては複数のデータ プロバイダーをサポートします。 たとえば、同じプロバイダーに異なるバージョンが存在する場合や、特定の種類のデータ プロバイダーとして複数のサードパーティによる実装が存在する場合があります。 プロバイダー名は、データ ソースを構成した後の接続文字列に含まれることがよくあります。 この列では、データ ソースの種類を選択した後に、 **[接続プロパティ]** ダイアログ ボックスで選択するべきデータ プロバイダーがわかります。  
   
--   データ ソース *\<プラットフォーム>* :対象データ ソースのデータ処理拡張機能またはデータ プロバイダーによりサポートされるデータ ソースのプラットフォーム。 この列では、このデータ処理拡張機能またはこのデータ プロバイダーが、この種類のプラットフォームのデータ ソースからデータを取得できるかどうかがわかります。  
+-   データ ソース *\<プラットフォーム>* :対象データ ソースのデータ処理拡張機能またはデータ プロバイダーによりサポートされるデータ ソースのプラットフォーム。 この列では、"このデータ処理拡張機能またはこのデータ プロバイダーが、この種類のプラットフォームのデータ ソースからデータを取得できるかどうか" がわかります。  
   
--   データ ソースのバージョン:DPE またはデータ プロバイダーでサポートされている対象データ ソースのバージョン。 この列では、このデータ処理拡張機能またはこのデータ プロバイダーが、このバージョンのデータ ソースからデータを取得できるかどうかがわかります。  
+-   データ ソースのバージョン:DPE またはデータ プロバイダーでサポートされている対象データ ソースのバージョン。 この列では、"このデータ処理拡張機能またはこのデータ プロバイダーが、このバージョンのデータ ソースからデータを取得できるかどうか" がわかります。  
   
--   RS *\<プラットフォーム>* :カスタムの DPE またはデータ プロバイダーをインストールできる、レポート サーバーおよびレポート作成クライアントのプラットフォーム。 組み込みの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ処理拡張機能は、インストールされた [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]に含まれています。 カスタムのデータ処理拡張機能または [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] データ プロバイダーは、特定のプラットフォーム用にネイティブにコンパイルする必要があります。 この列では、このデータ処理拡張機能またはこのデータ プロバイダーを、この種類のプラットフォームにインストールできるかどうかがわかります。  
+-   RS *\<プラットフォーム>* :カスタムの DPE またはデータ プロバイダーをインストールできる、レポート サーバーおよびレポート作成クライアントのプラットフォーム。 組み込みの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ処理拡張機能は、インストールされた [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]に含まれています。 カスタムのデータ処理拡張機能または [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] データ プロバイダーは、特定のプラットフォーム用にネイティブにコンパイルする必要があります。 この列では、"このデータ処理拡張機能またはこのデータ プロバイダーを、この種類のプラットフォームにインストールできるかどうか" がわかります。  
   
 ###  <a name="DataSourcesTable"></a> データ ソースの種類  
   
@@ -192,7 +192,7 @@ ms.locfileid: "74190885"
  [データ ソースの表に戻る](#DataSourcesTable)  
   
 ####  <a name="OracleOLEDB"></a> OLE DB for Oracle  
- OLE DB for Oracle データ処理拡張機能では、Oracle データ型の BLOB、CLOB、NCLOB、BFILE、UROWID がサポートされません。  
+ OLE DB for Oracle データ処理拡張機能では、次の Oracle データ型はサポートされません: BLOB、CLOB、NCLOB、BFILE、UROWID。  
   
  位置に依存する無名パラメーターはサポートされます。 この拡張機能では、名前付きパラメーターはサポートされません。 名前付きパラメーターを使用するには、 [Oracle](#OracleClient) データ処理拡張機能を使用します。  
   

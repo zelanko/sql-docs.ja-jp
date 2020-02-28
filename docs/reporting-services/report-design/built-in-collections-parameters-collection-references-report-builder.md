@@ -1,5 +1,5 @@
 ---
-title: Parameters コレクションの参照 (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: Parameters コレクションの参照 (レポート ビルダー) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: c4b47e15-0484-4c13-9182-898db825f01f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 137eb9b9cf7a5a64843e163ece3b4767dd8e1852
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 8e2d6986e4bed1876854c0c78b596746be5dc758
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581798"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082189"
 ---
 # <a name="built-in-collections---parameters-collection-references-report-builder"></a>組み込みコレクション - Parameters コレクションの参照 (レポート ビルダー)
   レポート パラメーターは、式から参照できる組み込みコレクションの 1 つです。 パラメーターを式に含めると、レポートのデータと外観をユーザーの選択に基づいてカスタマイズできます。 式は、(*Fx*) オプションまたは [\<**式**>] オプションを利用できる、すべてのレポート アイテム プロパティやテキスト ボックス プロパティで使用できます。 式は、他の方法でレポートの内容と外観を制御する場合にも使用されます。 詳細については、「[式の例 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)」を参照してください。  

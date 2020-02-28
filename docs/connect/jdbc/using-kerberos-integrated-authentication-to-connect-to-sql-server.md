@@ -1,7 +1,7 @@
 ---
 title: Kerberos 統合認証による SQL Server への接続 | Microsoft Docs
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 01/29/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 687802dc-042a-4363-89aa-741685d165b3
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 2215e9f6b6c8cd0e19c220d16ebc7a1520550a42
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: cfa4c91dc0d4d40f8cf903301acb2433dcaf6f7a
+ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "69026190"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77004635"
 ---
 # <a name="using-kerberos-integrated-authentication-to-connect-to-sql-server"></a>Kerberos 統合認証による SQL Server への接続
 
@@ -37,13 +37,13 @@ Java **Krb5LoginModule** で統合認証を使用する場合、[Krb5LoginModule
 
 ## <a name="remarks"></a>解説
 
-[!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] より前、アプリケーションでは、「[接続 URL の構築](../../connect/jdbc/building-the-connection-url.md)」に示されているように、**integratedSecurity** 接続プロパティを使用し、**sqljdbc_auth.dll** を参照することによって、(使用可能性に基づいて Kerberos または NTLM を使用する) 統合認証を指定できました。
+[!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] より前、アプリケーションでは、「[接続 URL の構築](../../connect/jdbc/building-the-connection-url.md)」に示されているように、**integratedSecurity** 接続プロパティを使用し、**mssql-jdbc_auth-\<バージョン>-\<arch>.dll** を参照することによって、(どちらが使用できるかにより、Kerberos または NTLM を使用する) 統合認証を指定できました。
 
 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] 以降、アプリケーションは、**authenticationScheme** 接続プロパティを使用して、ピュア Java Kerberos 実装を使用した Kerberos 統合認証を使用してデータベースに接続することを示すことができます。
 
 - **Krb5LoginModule** による統合認証を使用するには、依然として **integratedSecurity=true** 接続プロパティを指定する必要があります。 その後、**authenticationScheme=JavaKerberos** 接続プロパティも指定します。
 
-- **sqljdbc_auth.dll** による統合認証を引き続き使用するには、単に **integratedSecurity=true** 接続プロパティ (また、必要に応じて **authenticationScheme=NativeAuthentication**) を指定します。
+- **mssql-jdbc_auth-\<バージョン>-\<arch>.dll** による統合認証を引き続き使用するには、**integratedSecurity=true** 接続プロパティ (また、必要に応じて **authenticationScheme=NativeAuthentication**) を指定します。
 
 - **authenticationScheme=JavaKerberos** を指定するが **integratedSecurity=true** を指定しない場合は、ドライバーによって **authenticationScheme** 接続プロパティが無視され、ユーザー名とパスワードの資格情報が接続文字列に含まれていると見なされます。
 
@@ -219,6 +219,6 @@ try (Connection c = ds.getConnection(); Statement s = c.createStatement();
 5. `klist` を使用してチケット内の資格情報を確認し、資格情報が認証に使用するものであることを確認します。
 6. 上記のサンプル コードを実行し、Kerberos 認証が成功したことを確認します。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [JDBC ドライバーによる SQL Server への接続](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)

@@ -1,5 +1,5 @@
 ---
-title: レポートの印刷 (SSRS) | Microsoft Docs
+title: レポートの印刷 | Microsoft Docs
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 4bad1b6e-7d94-4b17-9502-ccd3dce0fdd9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 45b38940afcd0fe73ad2c79abc59db9dc7b549b3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 4dd9fc438ba1ec30a85119ceef6d5e1503a5ea1f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581154"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082494"
 ---
 # <a name="print-reports---reporting-services-ssrs"></a>レポートの印刷 - Reporting Services (SSRS)
   レポートをレポート サーバーに保存した後は、Web ポータル、またはエクスポートされたレポートの表示に使用する任意のアプリケーションで、レポートを表示および印刷できます。 レポートを保存する前にプレビューする場合は、印刷することができます。  
@@ -44,7 +44,7 @@ ms.locfileid: "65581154"
  別のアプリケーションにエクスポートされたレポートを印刷する方法を説明します。  
   
  [レポートの印刷 (レポート ビルダーおよび SSRS)](../../reporting-services/report-builder/print-a-report-report-builder-and-ssrs.md)  
- レポートを印刷する手順、ページの余白を制御する手順、およびハード改ページ レンダラー (PDF、画像、または印刷) によってレンダリングされるレポートの用紙サイズを指定する手順について説明します。  
+ レポートを印刷する手順、ページの余白を制御する手順、およびハード改ページ レンダラーを使用してレンダリングされるレポートの用紙サイズを指定する手順について説明します(PDF、画像、または印刷のハード改ページレンダラー)。  
   
 ## <a name="see-also"></a>参照  
  [レポートのエクスポート &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   

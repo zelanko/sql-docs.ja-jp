@@ -1,5 +1,5 @@
 ---
-title: Analysis Services データベースに対する拡張フィールド プロパティ (SSRS) | Microsoft Docs
+title: Analysis Services データベースに対する拡張フィールド プロパティ | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 1d7d87e2-bf0d-4ebb-a287-80b5a967a3f2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d315aa1c5037e27d5c48e1ee03addef35cbc22df
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: aa0f8b8d8b8ee4cbd3ebdaf70fcb63b9cb5005b9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65573320"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77077680"
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Analysis Services データベースに対する拡張フィールド プロパティ (SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ処理拡張機能では、拡張フィールド プロパティがサポートされています。 拡張フィールド プロパティとは、データ ソースにありデータ処理拡張機能でサポートされるフィールド プロパティ **Value** および **IsMissing** に加えて使用するプロパティです。 拡張プロパティは、レポート データセットのフィールド コレクションの一部としてレポート データ ペインには表示されません。 拡張フィールド プロパティ値をレポートに含めるには、組み込み **Fields** コレクションを使用して名前で拡張フィールド プロパティ値を指定する式を記述します。  

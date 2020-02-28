@@ -1,5 +1,5 @@
 ---
-title: ページ レイアウトとレンダリング (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: ページ レイアウトとレンダリング (レポート ビルダー) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: e2358653-35bc-4496-810a-d3ccf02f229f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8ec929d77b9805e3285b5d5a75940231b09cbd8e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: ee04e2cef1f4f4681b42ff8ffb4ce549aeae624d
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65576343"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082447"
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>ページ レイアウトとレンダリング (レポート ビルダーおよび SSRS)
 ページ レイアウト、改ページ、用紙サイズなど、意図したとおりのレポートを作成できるように、ページ分割されたレポートに関する [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の表示拡張機能について説明します。 

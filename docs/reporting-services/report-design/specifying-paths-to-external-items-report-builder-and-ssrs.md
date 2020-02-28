@@ -1,5 +1,5 @@
 ---
-title: 外部アイテムへのパスの指定 (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: 外部アイテムへのパスの指定 (レポート ビルダー) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 4fe513da-f3c5-479c-9fec-8662b91a0d6d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9848a77ae760fc2c1fa4c4d0ddeaa5b1120ec1ef
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: cad68b0b99479b074e04760f419e12ec9837aac3
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65578476"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080906"
 ---
 # <a name="specifying-paths-to-external-items-report-builder-and-ssrs"></a>外部アイテムへのパスの指定 (レポート ビルダーおよび SSRS)
   詳細レポート、サブレポート、画像ファイルなど、レポート定義ファイルの外部にあり、レポート サーバーに保存されるアイテムを参照するには、レポート アイテム プロパティに目的のアイテムへのパスを指定します。  
@@ -37,9 +37,9 @@ ms.locfileid: "65578476"
   
 -   **アイテムへの完全パス。**  
   
-    -   **レポート サーバーの場合** 、完全パスはホーム フォルダーである **/** から開始します。 たとえば、/Reports/AllSubreports/Subreport1 のように指定します。  
+    -   **レポート サーバーの場合:** パスは Home フォルダーの **/** から始まります。 たとえば、/Reports/AllSubreports/Subreport1 のように指定します。  
   
-    -   **SharePoint サイトの場合** 、アイテムの完全な URL とファイル拡張子 .rdl を含めたレポート名を式で指定する必要があります。 たとえば、「 `="https://server/site/library/folder/Report1.rdl"` 」のように入力します。  
+    -   **SharePoint サイトの場合:** アイテムの完全な URL とファイル拡張子 .rdl を含めたレポート名を式で指定する必要があります。 たとえば、「 `="https://server/site/library/folder/Report1.rdl"` 」のように入力します。  
   
 ## <a name="see-also"></a>参照  
  [外部の画像の追加 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-an-external-image-report-builder-and-ssrs.md)   

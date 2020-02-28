@@ -10,14 +10,14 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
-ms.date: 12/06/2019
+ms.date: 02/04/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: f4aaea790cf1e308b0675792b110ed129a55ed97
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 3f457b485994d2619e68b4315a308e66a05715cb
+ms.sourcegitcommit: cf8db6330be0d89bbec362e4c7e187b5461026f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76516265"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77051672"
 ---
 # <a name="sql-tools-overview"></a>SQL ツールの概要
 
@@ -47,13 +47,13 @@ ms.locfileid: "76516265"
 
 | ツール | 説明 | オペレーティング システム |
 |:--|:--|:--|
+|[**bcp**](bcp-utility.md)|**b**ulk **c**opy **p**rogram ユーティリティ (**bcp**) は、[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスと、ユーザー指定の形式のデータ ファイルとの間でデータの一括コピーを行います。| **Windows</br>macOS</br>Linux** |
 |[**mssql-cli (プレビュー)** ](mssql-cli.md)|**mssql-cli** は、SQL Server のクエリを実行するための対話型コマンドライン ツールです。 また、IntelliSense、構文の強調表示などの機能を備えたコマンドライン ツールを使用して SQL Server のクエリを実行できます。 | **Windows</br>macOS</br>Linux** |
+|[**mssql-conf**](../linux/sql-server-linux-configure-mssql-conf.md) | **mssql-conf** を使うと、Linux 上で実行される SQL Server を構成できます。 | **Linux** |
+|[**mssql-scripter (プレビュー)** ](https://github.com/Microsoft/mssql-scripter) | **mssql-scripter** は、SQL Server データベースのスクリプトを作成するためのマルチプラットフォーム コマンドライン エクスペリエンスです。 | **Windows</br>macOS</br>Linux** |
+| [**sqlcmd**](sqlcmd-utility.md) |**sqlcmd** ユーティリティを使用すると、Transact-SQL ステートメントやシステム プロシージャ、スクリプト ファイルをコマンド プロンプトから入力することができます。 | **Windows</br>macOS</br>Linux** |
 | [**sqlpackage**](sqlpackage.md) |**sqlpackage** は、一部のデータベース開発タスクを自動化するコマンドライン ユーティリティです。 |**Windows</br>macOS</br>Linux** |
 |[**SQL Server PowerShell**](../powershell/sql-server-powershell.md)| **SQL Server PowerShell** には、SQL を操作するためのコマンドレットが用意されています。 | **Windows</br>macOS</br>Linux** |
-| [**sqlcmd**](sqlcmd-utility.md) |**sqlcmd** ユーティリティを使用すると、Transact-SQL ステートメントやシステム プロシージャ、スクリプト ファイルをコマンド プロンプトから入力することができます。 | **Windows</br>macOS</br>Linux** |
-|[**bcp**](bcp-utility.md)|**b**ulk **c**opy **p**rogram ユーティリティ (**bcp**) は、[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスと、ユーザー指定の形式のデータ ファイルとの間でデータの一括コピーを行います。| **Windows</br>macOS</br>Linux** |
-|[**mssql-scripter (プレビュー)** ](https://github.com/Microsoft/mssql-scripter) | **mssql-scripter** は、SQL Server データベースのスクリプトを作成するためのマルチプラットフォーム コマンドライン エクスペリエンスです。 | **Windows</br>macOS</br>Linux** |
-|[**mssql-conf**](../linux/sql-server-linux-configure-mssql-conf.md) | **mssql-conf** を使うと、Linux 上で実行される SQL Server を構成できます。 | **Linux** |
 
 ## <a name="migration-and-other-tools"></a>移行とその他のツール
 
@@ -62,9 +62,10 @@ ms.locfileid: "76516265"
 | ツール | 説明 |
 |:--|:--|
 | **[構成マネージャー](../tools/configuration-manager/sql-server-configuration-manager-help.md)** | SQL Server 構成マネージャーを使用して、SQL Server サービスを構成し、ネットワーク接続を構成します。 Windows 上での構成マネージャーの実行|
-| **[SQL Server Migration Assistant](../ssma/sql-server-migration-assistant.md)** | SQL Server Migration Assistant を使用して、Microsoft Access、DB2、MySQL、Oracle、Sybase から SQL Server へのデータベースの移行を自動化します。|
 | **[Database Experimentation Assistant](../dea/database-experimentation-assistant-overview.md)** | Database Experimentation Assistant を使用して、特定のワークロードの対象となる SQL のバージョンを評価します。 |
+| **[Data Migration Assistant](../dma/dma-overview.md)** | Data Migration Assistant ツールを使用すると、SQL Server または Azure SQL Database の新しいバージョンでデータベースの機能に影響する可能性がある互換性の問題を検出することによって、最新のデータ プラットフォームにアップグレードすることができます。 |
 | **[分散再生](../tools/distributed-replay/install-distributed-replay-overview.md)** | 分散再生機能を使用すると、今後の SQL Server アップグレードの影響を評価するために役立ちます。 また、分散再生を使用して、ハードウェアとオペレーティング システムのアップグレード、および SQL Server のチューニングの影響を評価することもできます。 |
 | **[ssbdiagnose](../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md)** | ssbdiagnose ユーティリティからは、Service Broker のメッセージ好感や Service Broker サービスの構成の問題が報告されます。 |
+| **[SQL Server Migration Assistant](../ssma/sql-server-migration-assistant.md)** | SQL Server Migration Assistant を使用して、Microsoft Access、DB2、MySQL、Oracle、Sybase から SQL Server へのデータベースの移行を自動化します。|
 
-このページに記載されていないその他のツールについては、「[SQL コマンド プロンプト ユーティリティ](command-prompt-utility-reference-database-engine.md)」を参照してください。
+このページに記載されていないその他のツールについては、[SQL コマンド プロンプト ユーティリティ](command-prompt-utility-reference-database-engine.md)に関するページ、および「[SQL Server の拡張機能とツールのダウンロード](download-sql-feature-packs.md)」を参照してください。

@@ -1,5 +1,5 @@
 ---
-title: グラフの軸ラベルの書式設定 (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: グラフの軸ラベルの書式設定 (レポート ビルダー) | Microsoft Docs
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: ddf50dd5-5314-42ff-97f4-c3a4a17cfcdd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 36eb4aff0571be5eb25115df06df5079a59da75b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 0838e5d0ea9c592a52408956b75ee651bcc542a4
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65575622"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77079914"
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>グラフの軸ラベルの書式設定 (レポート ビルダーおよび SSRS)
   座標ベースのグラフ (縦棒グラフ、横棒グラフ、面グラフ、散布図、線グラフ、および範囲グラフ) では、2 本の軸を使用してデータ間の関係を分類および表示します。 それぞれの軸には、異なる書式が適用されます。  
@@ -75,7 +75,7 @@ ms.locfileid: "65575622"
 ### <a name="example-of-how-the-chart-calculates-axis-labels"></a>グラフの軸ラベルの計算方法の例  
  次の表には、縦棒グラフにプロットされる売上データのサンプルが含まれています。 Name フィールドは [カテゴリ グループ] 領域に追加され、Quantity フィールドは [値] 領域に追加されます。  
   
-|Name|Quantity|  
+|名前|Quantity|  
 |----------|--------------|  
 |Michael Blythe|229|  
 |Jae Pak|112|  

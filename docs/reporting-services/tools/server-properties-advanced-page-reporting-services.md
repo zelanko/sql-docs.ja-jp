@@ -9,12 +9,12 @@ ms.technology: tools
 ms.topic: conceptual
 ms.date: 01/28/2020
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 6f7a1e8d3d6341da5812bb44726c5bf8186d3b19
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: d1bfbb7a1abb13df05ce402fa79a1598ee04ca1f
+ms.sourcegitcommit: cf8db6330be0d89bbec362e4c7e187b5461026f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76831945"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77054838"
 ---
 # <a name="server-properties-advanced-page---power-bi-report-server--reporting-services"></a>[サーバーのプロパティ] の [詳細設定] ページ - Power BI Report Server と Reporting Services
 
@@ -140,6 +140,9 @@ Windows 統合セキュリティをレポート データ ソース接続でサ�
 
 ### <a name="enablepowerbireportexportdata"></a>EnablePowerBIReportExportData 
 (Power BI Report Server のみ) Power BI ビジュアルからの Power BI Report Server データのエクスポートを有効にします。 値は True、False です。  既定値は True です。 
+
+### <a name="enablepowerbireportexportunderlyingdata"></a>EnablePowerBIReportExportUnderlyingData 
+(Power BI Report Server のみ) ユーザーが Power BI Report Server 上の Power BI ビジュアルから基になるデータをエクスポートできるかどうかを示します。 True の値は、機能が有効になっていることを示します。
 
 ### <a name="enableremoteerrors"></a>EnableRemoteErrors
 リモート コンピューターからレポートを要求したユーザーに返されるエラー メッセージに、外部エラー情報 (レポート データ ソースに関するエラー情報など) を含めます。 有効値は **true** および **false**です。 既定値は **false** です。 詳細については、「[リモート エラーの有効化 (Reporting Services)](../../reporting-services/report-server/enable-remote-errors-reporting-services.md)」を参照してください。  

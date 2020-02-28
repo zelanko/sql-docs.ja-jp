@@ -1,5 +1,5 @@
 ---
-title: レポート アイテムのレンダリング (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: レポート アイテムのレンダリング (レポート ビルダー) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 99ebb4dc-41cc-42ac-82dd-a2b0e31155a0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1ae3b511031b95023ab8ebe2a8e4c0aa065d4f35
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 32bd51cd5dc4419465fac494559dc4d116f796c4
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65576447"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77077022"
 ---
 # <a name="rendering-report-items-report-builder-and-ssrs"></a>レポート アイテムのレンダリング (レポート ビルダーおよび SSRS)
   レポート アイテムの数、サイズ、および位置は、レポート本文の改ページに影響します。 以降、各種のレポート アイテムがどのようにレンダリングされるかについて説明します。  

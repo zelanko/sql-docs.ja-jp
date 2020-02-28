@@ -1,5 +1,5 @@
 ---
-title: DataSources コレクションと DataSets コレクションの参照 (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: DataSources コレクションと DataSets コレクションの参照 (レポート ビルダー) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: f951a4aa-da55-4e43-8579-4a5d4480d11f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 930dfe2773b72723c2b8dc8571272847bb0d62d3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 2f65020a094258e4d6ee4a3906d29d33438b0783
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581802"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081456"
 ---
 # <a name="built-in-collections---datasources-and-datasets-references-report-builder"></a>組み込みコレクション - DataSources と DataSets の参照 (レポート ビルダー)
   **DataSources** コレクションは、レポートで使用されているすべてのデータ ソースを表します。 同様に、 **DataSets** コレクションは、レポート内のすべてのデータ ソースのデータセットすべてを表します。 参照するデータ ソース別に構成されているレポート データセットの階層ビューを表示するには、 **[レポート データ]** ペインを使用します。 これらのコレクションへの参照を含めても、レポートをプレビューしたときには値が表示されません。 このコレクションを使用できるのは、レポートがレポート サーバーにパブリッシュされた後だけです。  
@@ -26,7 +26,7 @@ ms.locfileid: "65581802"
   
 |**変数**|**Type**|**説明**|  
 |------------------|--------------|---------------------|  
-|**DataSourceReference**|**String**|レポート サーバー上のデータ ソース定義の完全パスです。 たとえば、レポートでレポート履歴の一部として使用されたすべてのデータ ソースの一覧を含める場合があります。 次の例では、AdventureWorks2012 という名前のデータ ソースの完全パスを示します。<br /><br /> [https://login.microsoftonline.com/consumers/](`/DataSources/AdventureWorks2012`)|  
+|**DataSourceReference**|**String**|レポート サーバー上のデータ ソース定義の完全パスです。 たとえば、レポートでレポート履歴の一部として使用されたすべてのデータ ソースの一覧を含める場合があります。 次の例では、AdventureWorks2012 という名前のデータ ソースの完全パスを示します。<br /><br /> `/DataSources/AdventureWorks2012`|  
 |**Type**|**String**|データ ソースのデータ プロバイダーの種類です。 たとえば、「 `SQL` 」のように入力します。|  
   
 ## <a name="datasets"></a>DataSets  

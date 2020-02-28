@@ -1,5 +1,5 @@
 ---
-title: SQL Azure の接続の種類 (SSRS) | Microsoft Docs
+title: SQL Azure の接続の種類 | Microsoft Docs
 description: SQL Azure の接続のデータ拡張機能は、接続文字列とは個別に管理される、複数の値を持つパラメーター、サーバー集計、および資格情報をサポートしています。
 author: maggiesMSFT
 ms.author: maggies
@@ -9,12 +9,12 @@ ms.technology: report-data
 ms.topic: conceptual
 ms.date: 02/15/2019
 monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c9ffc6865a6dd7ccc9665eb85da8142bc918b4af
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 0d81923ba623765e8929cf0c1cb4da2e73ac6e8c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75244570"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081763"
 ---
 # <a name="sql-azure-connection-type-ssrs"></a>SQL Azure の接続の種類 (SSRS)
 

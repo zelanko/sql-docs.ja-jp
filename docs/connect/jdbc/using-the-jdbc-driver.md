@@ -1,7 +1,7 @@
 ---
 title: JDBC ドライバーの使用 | Microsoft Docs
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 01/29/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,22 +10,24 @@ ms.topic: conceptual
 ms.assetid: 6faaf05b-8b70-4ed2-9b44-eee5897f1cd0
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 828f58249f525a7c694b15eb85f051d80ba2211a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 34478dfb61f59835ab6373849876cec26dc35984
+ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "69025771"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77004661"
 ---
 # <a name="using-the-jdbc-driver"></a>JDBC ドライバーの使用
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-このセクションでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を使用して [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] データベースへのシンプルな接続を作成する方法について簡単に説明します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに接続する前に、まず [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をローカル コンピューターまたはサーバーのどちらかにインストールし、JDBC ドライバーをローカル コンピューターにインストールする必要があります。  
+このセクションでは、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースへのシンプルな接続を作成する方法について簡単に説明します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに接続する前に、まず [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をローカル コンピューターまたはサーバーのどちらかにインストールし、JDBC ドライバーをローカル コンピューターにインストールする必要があります。  
   
 ## <a name="choosing-the-right-jar-file"></a>適切な JAR ファイルの選択
 
 Microsoft JDBC Driver には、次の Java Runtime Environment (JRE) 設定との通信で使用される複数の Jar が用意されています。
+
+Microsoft JDBC Driver 8.2 for SQL Server では、**mssql-jdbc-8.2.0.jre8.jar**、**mssql-jdbc-8.2.0.jre11.jar**、**mssql-jdbc-8.2.0.jre13.jar** の各クラス ライブラリ ファイルが提供されます。
 
 Microsoft JDBC Driver 7.4 for SQL Server では、**mssql-jdbc-7.4.1.jre8.jar**、**mssql-jdbc-7.4.1.jre11.jar**、**mssql-jdbc-7.4.1.jre12.jar** の各クラス ライブラリ ファイルが提供されます。
 
@@ -59,7 +61,31 @@ JDBC Driver 7.2 を使用する場合は、**mssql-jdbc-7.2.2.jre8.jar** また�
 
 JDBC Driver 7.4 を使用する場合は、**mssql-jdbc-7.4.1.jre8.jar**、**mssql-jdbc-7.4.1.jre11.jar**、または **mssql-jdbc-7.4.1.jre12.jar** が含まれるようにクラスパスを設定します。
 
+JDBC Driver 8.2 を使用する場合は、**mssql-jdbc-8.2.0.jre8.jar**、**mssql-jdbc-8.2.0.jre11.jar**、または **mssql-jdbc-8.2.0.jre13.jar** が含まれるようにクラスパスを設定します。
+
 クラスパスに適切な Jar ファイルのエントリがない場合、アプリケーションでは `Class not found` という一般的な例外がスローされます。  
+
+### <a name="for-microsoft-jdbc-driver-82"></a>Microsoft JDBC Driver 8.2 の場合
+
+**mssql-jdbc-8.2.0.jre8.jar**、**mssql-jdbc-8.2.0.jre11.jar**、または **mssql-jdbc-8.2.0.jre13.jar** ファイルが次の場所にインストールされます。
+
+```bash
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-8.2.0.jre8.jar
+
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-8.2.0.jre11.jar
+
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-8.2.0.jre13.jar
+```
+
+次のスニペットは、Windows アプリケーションで使用される CLASSPATH ステートメントの例です。
+
+`CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 8.2 for SQL Server\sqljdbc_8.2\enu\mssql-jdbc-8.2.0.jre11.jar`
+
+次のスニペットは、Unix/Linux アプリケーションで使用される CLASSPATH ステートメントの例です。
+
+`CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_8.2/enu/mssql-jdbc-8.2.0.jre11.jar`
+
+CLASSPATH ステートメントに [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] が 1 つだけ含まれていることを確認します (**mssql-jdbc-8.2.0.jre8.jar**、**mssql-jdbc-8.2.0.jre11.jar**、**mssql-jdbc-8.2.0.jre13.jar** など)。
 
 ### <a name="for-microsoft-jdbc-driver-74"></a>Microsoft JDBC Driver 7.4 の場合
 
@@ -227,10 +253,10 @@ JDBC API 4.0 以降、JDBC ドライバーが自動的に読み込まれるよ�
 DriverManager クラスの getConnection メソッドが呼び出されると、登録されている一連の JDBC ドライバーから適切なドライバーが検出されます。 sqljdbc4.jar、sqljdbc41.jar、または sqljdbc42.jar ファイルには "META-INF/services/java.sql.Driver" ファイルが含まれています。これには、**com.microsoft.sqlserver.jdbc.SQLServerDriver** が登録済みのドライバーとして含まれています。 現在 Class.forName メソッドを使用してドライバーを読み込む仕様になっている既存のアプリケーションも正常に動作します。特に修正の必要はありません。  
   
 > [!NOTE]  
-> sqljdbc4.jar、sqljdbc41.jar、または sqljdbc42.jar のクラス ライブラリは、以前のバージョンの Java Runtime Environment (JRE) では使用できません。 [ によってサポートされている JRE バージョンの一覧については、「](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)JDBC Driver のシステム要件[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]」を参照してください。  
+> sqljdbc4.jar、sqljdbc41.jar、または sqljdbc42.jar のクラス ライブラリは、以前のバージョンの Java Runtime Environment (JRE) では使用できません。 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] によってサポートされている JRE バージョンの一覧については、「[JDBC Driver のシステム要件](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)」を参照してください。  
 
 データ ソースの接続方法と接続 URL の使用方法の詳細については、「[接続 URL の構築](../../connect/jdbc/building-the-connection-url.md)」と「[接続プロパティの設定](../../connect/jdbc/setting-the-connection-properties.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 
 [JDBC ドライバーの概要](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

@@ -1,5 +1,5 @@
 ---
-title: カスケード型パラメーターのレポートへの追加 (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: カスケード型パラメーターのレポートへの追加 (レポート ビルダー) | Microsoft Docs
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 3a22eec3-57a7-478e-b6fc-102a9dbe0591
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 56f701d86c180b6bb1d10c3c6ffebfbe057eaf7c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 55cba07f738c9a7a6b87f656687f545b64fd14cf
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65582087"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080620"
 ---
 # <a name="add-cascading-parameters-to-a-report-report-builder-and-ssrs"></a>カスケード型パラメーターのレポートへの追加 (レポート ビルダーおよび SSRS)
   カスケード型パラメーターを使用すると、大量のレポート データの管理が可能になります。 パラメーターの値の一覧が、別のパラメーターで選択された値によって決まるように、関連するパラメーターのセットを定義できます。 たとえば、最初のパラメーターが独立しており、製品カテゴリの一覧を表すとします。 ユーザーが任意のカテゴリを選択すると、2 番目のパラメーターは最初のパラメーターの値によって決まります。 その値は、選択したカテゴリ内のサブカテゴリの一覧で更新されます。 ユーザーがレポートを表示するとき、カテゴリ パラメーターとサブカテゴリ パラメーターの両方の値を使用して、レポート データにフィルターが適用されます。  
@@ -154,7 +154,7 @@ ms.locfileid: "65582087"
 ## <a name="see-also"></a>参照  
  [レポート パラメーターの追加、変更、または削除 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
  [レポート パラメーター (レポート ビルダーおよびレポート デザイナー)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
- [チュートリアル: レポートへのパラメーターの追加 &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [チュートリアル:レポートへのパラメーターの追加 &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [レポート ビルダー チュートリアル](../../reporting-services/report-builder-tutorials.md)   
  [データセット フィルター、データ領域フィルター、およびグループ フィルターの追加 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
  [レポート埋め込みデータセットと共有データセット (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

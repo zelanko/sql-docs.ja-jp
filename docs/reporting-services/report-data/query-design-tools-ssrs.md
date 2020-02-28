@@ -1,5 +1,5 @@
 ---
-title: クエリ デザイン ツール (SSRS) | Microsoft Docs
+title: クエリ デザイン ツール | Microsoft Docs
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a8139a9d-4aeb-4e64-96f3-564edf60479f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0f7dd8b90b59c95121f9924f0fbb077521b0670f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: b4d92cb7c7b669b4a3087790397a1965d460dd9a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190789"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082014"
 ---
 # <a name="query-design-tools-ssrs"></a>クエリ デザイン ツール (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、レポート デザイナーのデータセット クエリを作成するために使用できる、さまざまなクエリ デザイン ツールが用意されています。 ビジュアル モードで作業するか、クエリ言語で直接作業するかを選択できるモードがあるクエリ デザイナーもあります。 このトピックでは、各ツールを紹介し、それぞれがサポートするデータ ソースの種類を説明します。 ここでは、次のツールについて説明します。  

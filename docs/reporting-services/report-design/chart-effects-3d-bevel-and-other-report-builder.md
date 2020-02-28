@@ -1,5 +1,5 @@
 ---
-title: グラフに対する 3D、傾斜、およびその他の効果 (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: グラフに対する 3D、傾斜、その他の効果 (レポート ビルダー) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: 18ef2119-2931-43ae-9078-f39b460462dd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3d6f854eff07947e16a929acec1c20011dcf0b4b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 8a1c6dd7adfd9450ae56b9cc7718d454f5d68426
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581697"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082412"
 ---
 # <a name="chart-effects---3d-bevel-and-other-report-builder"></a>グラフの効果 - 3D、ベベルなど (レポート ビルダー)
   3 次元 (3D) 効果を使用すると、グラフに奥行を与え、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の改ページ調整されたグラフの視覚的な効果を高めることができます。 たとえば、分割円グラフの特定のスライスを強調する場合は、そのスライスが最初に目に留まるように、グラフのパースペクティブを回転および変更することができます。 グラフに 3D 効果を適用すると、グラデーションの色および陰影のスタイルはすべて無効になります。  

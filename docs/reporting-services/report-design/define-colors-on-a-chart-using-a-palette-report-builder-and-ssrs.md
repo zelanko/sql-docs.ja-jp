@@ -1,5 +1,5 @@
 ---
-title: パレットを使用したグラフの色の定義 (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: パレットを使用したグラフの色の定義 (レポート ビルダー) | Microsoft Docs
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: d95efc22-5a32-43d4-9bd2-12753e7fd395
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4cae758708ce0ac703aa2b6e82b574b45c54195a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 0c20b5893adba8968373656b0358b89deb2dc0e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65572274"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080511"
 ---
 # <a name="define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs"></a>パレットを使用したグラフの色の定義 (レポート ビルダーおよび SSRS)
   グラフの色パレットは、定義済みのパレットを選択するかカスタム パレットを定義すると、変更できます。 カスタム パレットはグラフ固有です。  

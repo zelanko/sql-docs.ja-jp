@@ -1,5 +1,5 @@
 ---
-title: SQL Server Management Studio の Reporting Services (SSRS) | Microsoft Docs
+title: SQL Server Management Studio の Reporting Services | Microsoft Docs
 ms.date: 06/10/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 60685458-9108-47bf-820a-5e7db454d408
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 27fe190bfa73414158d05353c4aa8f244b65b4f4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 8a975ad6d6aecfd701bf4893d5d91b26f998297d
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "67140356"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082156"
 ---
 # <a name="reporting-services-in-sql-server-management-studio-ssrs"></a>SQL Server Management Studio の Reporting Services (SSRS)
   レポート サーバー管理者は [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して次の操作を実行できます。  
@@ -36,7 +36,7 @@ ms.locfileid: "67140356"
   
 -   [[レポート サーバー ジョブのキャンセル] (Management Studio)](../../reporting-services/tools/cancel-report-server-jobs-management-studio.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Management Studio のレポート サーバーの F1 ヘルプ](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [SQL Server Management Studio (SSMS)](../../ssms/sql-server-management-studio-ssms.md)  
   

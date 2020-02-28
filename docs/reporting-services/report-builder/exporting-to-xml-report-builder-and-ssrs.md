@@ -1,5 +1,5 @@
 ---
-title: XML へのエクスポート (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: XML へのエクスポート (レポート ビルダー) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 11d72068-2d97-495e-948f-12d1e8c1957d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 52d83c17a1cfe79f8add7f0764216d404c14cfd9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 4ac6d962838191365048b3c41d5a8efd367d8355
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580756"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77079311"
 ---
 # <a name="exporting-to-xml-report-builder-and-ssrs"></a>XML へのエクスポート (レポート ビルダーおよび SSRS)
   XML 表示拡張機能では、改ページ調整されたレポートが XML 形式で返されます。 レポート XML のスキーマは、レポート固有のものであり、データのみを含んでいます。 XML 表示拡張機能では、レイアウト情報はレンダリングされません。また、改ページ位置も維持されません。 この拡張機能で生成された XML は、データベースにインポートしたり、XML データ メッセージとして使用したり、カスタム アプリケーションに送信することができます。  
@@ -24,7 +24,7 @@ ms.locfileid: "65580756"
 ##  <a name="ReportItems"></a> レポート アイテム  
  次の表で、レポート アイテムがどのように表示されるかについて説明します。  
   
-|アイテム|表示動作|  
+|Item|表示動作|  
 |----------|------------------------|  
 |レポート|XML ドキュメントのトップレベルの要素として表示されます。|  
 |データ領域|コンテナーの要素内部の要素として表示されます。 データ領域には、データをテキストおよびグラフとして表示するテーブル、マトリックス、一覧、およびデータを視覚化するデータ バー、スパークライン、ゲージ、インジケーターが含まれます。|  
@@ -80,7 +80,7 @@ ms.locfileid: "65580756"
   
  それぞれの変数の値は次のとおりです。  
   
-|Name|値|  
+|名前|Value|  
 |----------|-----------|  
 |レポート|Report.DataElementName|  
 |ReportURL|サーバー上のレポートに対する絶対 URL です。URL エンコードされます。|  

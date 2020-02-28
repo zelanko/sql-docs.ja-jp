@@ -1,5 +1,5 @@
 ---
-title: ゲージ (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: ゲージ (レポート ビルダー) | Microsoft Docs
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -156,12 +156,12 @@ f1_keywords:
 ms.assetid: 1f086882-4834-48e9-ab30-c214beee2040
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b65ca56f0cb942f5cc5c9fc6b01d4a9df7e0b88e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 6fb9864d97975b15711ec9cc1264251e8aac8c76
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580276"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77082122"
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>ゲージ (レポート ビルダーおよび SSRS)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] の改ページ調整されたレポートのゲージ データ領域には、データセットの単一の値が表示されます。 各ゲージは常に、ゲージ パネル内に配置されます。ゲージ パネルでは、子ゲージまたは隣接ゲージを追加できます。 1 つのゲージ パネル内に、フィルター選択、グループ化、並べ替えなどの共通機能を使用する複数のゲージを作成できます。  

@@ -1,5 +1,5 @@
 ---
-title: マップまたはマップ レイヤーのデータと表示のカスタマイズ (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: マップまたはマップ レイヤーのデータと表示のカスタマイズ (レポート ビルダー) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -21,12 +21,12 @@ f1_keywords:
 ms.assetid: fdd9b994-d138-4990-a291-279b0249eb72
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 96f1fd480d0260c24bf534dec80eef2e4ff6fda2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 53b1495299dd3a71843ceaa1ad3a43464c374210
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65572332"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080521"
 ---
 # <a name="customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs"></a>マップまたはマップ レイヤーのデータと表示のカスタマイズ (レポート ビルダーおよび SSRS)
   ウィザードを使用してマップまたはマップ レイヤーを [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] の改ページ調整されたレポートに追加した後、必要に応じてレポート内のマップの体裁を変更することができます。 改善のヒントを次に示します。  
@@ -121,7 +121,7 @@ ms.locfileid: "65572332"
   
  グループ式は、空間データとの間にリレーションシップを持つ分析データをレイヤー上の各マップ要素に対してどのように集計するかを指定します。 既定では、グループ式は、空間データと分析データの間のリレーションシップに対して指定された対応フィールドのセットです。 たとえば、国または地域の市区町村の場所と人口規模を表示するバブル マップの場合、同じ名前を持つ複数の市区町村が存在する可能性があるため、対応フィールドには、市区町村名を示す [City] と地域名を示す [Region] が含まれます。 対応するグループ式には、[City] と [Region] の 2 つのフィールドが含まれます。  
   
- 詳細については、「 [Map Tips: How To Import Shapefiles Into SQL Server and Aggregate Spatial Data (マップ ヒント: シェープファイルの SQL Server へのインポートと空間データの集計方法)](https://go.microsoft.com/fwlink/?LinkID=214991)」を参照してください。  
+ 詳細については、「[Map Tips:How To Import Shapefiles Into SQL Server and Aggregate Spatial Data (マップ ヒント: シェープファイルの SQL Server へのインポートと空間データの集計方法)](https://go.microsoft.com/fwlink/?LinkID=214991)」を参照してください。  
   
 ##  <a name="MapElements"></a> レイヤー上のマップ要素のオプションを変更する  
  マップ要素とは、空間データに基づく、レイヤー上のポイント、線、または多角形をいいます。 マップ要素に関して設定できるオプションは次のとおりです。 これらのオプションは、埋め込みのマップ要素であるかどうかに関係なく、レイヤー上のすべてのマップ要素に適用されます。  

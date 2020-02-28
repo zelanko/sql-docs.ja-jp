@@ -1,5 +1,5 @@
 ---
-title: URL へのハイパーリンクの追加 (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: URL へのハイパーリンクの追加 (レポート ビルダー) | Microsoft Docs
 ms.date: 09/07/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: d3392c0b-7b62-4d27-bc04-2bd0c5487d08
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 84f7ebd295cb64ca4d6f77427a727c1d0182b142
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 85f3b3cabf180d85da9c348a7ec2cf9062b3a4c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65574827"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080719"
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>URL へのハイパーリンクの追加 (レポート ビルダーおよび SSRS)
 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]  のページ分割されたレポートでテキスト ボックス、画像、グラフ、ゲージにハイパーリンク アクションを追加する方法について説明します。 リンクで他のレポート、レポート内のブックマーク、静的または動的な URL に移動できます。 

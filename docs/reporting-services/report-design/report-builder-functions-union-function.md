@@ -1,5 +1,5 @@
 ---
-title: Union 関数 (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: Union 関数 (レポート ビルダー) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: c87e16fe-c12a-4c9d-a9df-7a94e229fd04
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c3f1e0f0364eebbd0861edb931b0ee7f46954a7d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e760971e012e5144176484d921570bdee8097497
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65577158"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081118"
 ---
 # <a name="report-builder-functions---union-function"></a>レポート ビルダー関数 - Union 関数
   式で指定された NULL 以外のすべての数値の結合を、指定されたスコープで評価して返します。  

@@ -1,5 +1,5 @@
 ---
-title: レポート サーバー コンテンツの管理 (SSRS ネイティブ モード) | Microsoft Docs
+title: レポート サーバー コンテンツの管理 (ネイティブ モード) | Microsoft Docs
 ms.date: 06/14/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 641961ac-53a5-4997-9d42-cf4ecce1f892
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fa8579f24cbad2bdbebe3ad5198732ac7786bde9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 78fb75acfefce3a1f0c8cb28ea286a028463a56b
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "67228749"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77077977"
 ---
 # <a name="report-server-content-management-ssrs-native-mode"></a>レポート サーバー コンテンツの管理 (SSRS ネイティブ モード)
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]では、コンテンツ管理とはレポート サーバー アイテムの管理を指します。 すべてのアイテムは、プロパティおよびセキュリティの設定を通して、個別に管理できます。 アイテムは、レポート サーバー フォルダー名前空間内のさまざまな場所に移動できます。 アイテムを効率的に管理するには、コンテンツ マネージャーで実行されるタスクを理解しておく必要があります。 SQL Server Reporting Services (SSRS) 2016 以降の CTP 3.2 より、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web ポータルが利用できます。 この記事では、Web ポータルと、Web ポータルの新しいエクスペリエンスについて説明します。  
@@ -173,7 +173,7 @@ ms.locfileid: "67228749"
  [リソースの更新 (Web ポータル)](../../reporting-services/report-server/update-a-resource-report-manager.md)  
  [フォルダーへのファイルのアップロード](../../reporting-services/report-server/upload-files-to-a-folder.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Reporting Services ツール](../../reporting-services/tools/reporting-services-tools.md)   
  [ロールと権限 &#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md)   
  [Reporting Services レポート &#40;SSRS&#41;](../../reporting-services/reports/reporting-services-reports-ssrs.md)  

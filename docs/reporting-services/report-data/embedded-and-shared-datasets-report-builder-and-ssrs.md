@@ -1,5 +1,5 @@
 ---
-title: 埋め込みデータセットと共有データセット (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: 埋め込みデータセットと共有データセット (レポート ビルダー) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: adc95cc0-d15a-413d-bc5a-302eab37a069
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2ba5d42e04758b0577ca77e761a67b352dbbf163
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: f1d665699dc2051745b08a56796588dab51e3bcf
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190826"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77077624"
 ---
 # <a name="embedded-and-shared-datasets-report-builder-and-ssrs"></a>埋め込みデータセットと共有データセット (レポート ビルダーおよび SSRS)
   レポートにおけるデータセットとは、外部データ ソースに対してクエリを実行することによって返されるレポート データをいいます。 外部データ ソースに関する情報はデータ接続に含まれており、データセットは、そのデータ接続によって異なります。 レポート定義にデータそのものは含まれていません。 データセットには、クエリ コマンド、フィールド コレクション、パラメーター、フィルター、および大文字と小文字の区別と照合順序を含むデータ オプションがあります。 データセットには次の 2 種類があります。  

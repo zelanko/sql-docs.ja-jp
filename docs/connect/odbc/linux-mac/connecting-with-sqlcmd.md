@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 61a2ec0d-1bcb-4231-bea0-cff866c21463
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a782db89033da42ebf17ed33565ec680fafa0d04
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c73ee7914d0d9ac560d57a204458e5cd4ba57a0d
+ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "68005913"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76971444"
 ---
 # <a name="connecting-with-sqlcmd"></a>sqlcmd による接続
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -52,6 +52,9 @@ sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx
 - -e 入力スクリプトを標準出力デバイス (stdout) に書き込みます。
 
 - -E 信頼関係接続 (統合認証) を使用します。Linux クライアントまたは macOS クライアントからの統合認証を使用する信頼関係接続の作成の詳細については、「[統合認証を使用する](../../../connect/odbc/linux-mac/using-integrated-authentication.md)」を参照してください。
+
+- -f codepage | i:codepage[,o:codepage] | o:codepage[,i:codepage] 入力と出力のコード ページを指定します。 コード ページ番号は、インストールされた Linux コード ページを指定する数値です。
+(17.5.1.1 以降で利用可能)
 
 - -h *number_of_rows*  列ヘッダーの間に出力する行数を指定します。  
   
@@ -159,8 +162,6 @@ sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx
 現在のリリースでは、次のオプションは使用できません。  
 
 - -A  専用管理者接続 (DAC) を使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] にログインします。 専用管理者接続 (DAC) を作成する方法については、「[プログラミング ガイドライン](../../../connect/odbc/linux-mac/programming-guidelines.md)」を参照してください。  
-  
-- -f *code_page* 入力と出力のコード ページを指定します。  
   
 - -L  ローカルに構成されたサーバー コンピューターと、ネットワーク上でブロードキャストしているサーバー コンピューター名の一覧を表示します。  
   

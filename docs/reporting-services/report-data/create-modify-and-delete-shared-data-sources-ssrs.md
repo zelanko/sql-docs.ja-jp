@@ -1,5 +1,5 @@
 ---
-title: 共有データ ソースを作成、変更、および削除する (SSRS) | Microsoft Docs
+title: 共有データ ソースを作成、変更、削除する | Microsoft Docs
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1e58c1c2-5ecf-4ce6-9d04-0a8acfba17be
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9f5ed3f000f13d965d9f45c853d831e18d5dd4e8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 3cb8f79b892b639e618143fd138920650fb5cfda
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190865"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081818"
 ---
 # <a name="create-modify-and-delete-shared-data-sources-ssrs"></a>共有データ ソースを作成、変更、および削除する (SSRS)
   共有データ ソースは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーで実行される複数のレポート、モデル、およびデータ ドリブン サブスクリプションから参照できる一連のデータ ソース接続プロパティの集まりです。  共有データ ソースを使用することで、時間の経過に伴って変更されることの多いデータ ソースのプロパティを容易に管理できます。 ユーザーのアカウントまたはパスワードが変更された場合や、データベースを別のサーバーに移動した場合は、接続情報を 1 か所で更新できます。  
@@ -32,7 +32,7 @@ ms.locfileid: "74190865"
   
 |要素|説明|  
 |----------|-----------------|  
-|Name|レポート サーバーのフォルダー階層内にあるアイテムを識別する名前。|  
+|名前|レポート サーバーのフォルダー階層内にあるアイテムを識別する名前。|  
 |説明|Web ポータルでフォルダーの内容を参照したときに、アイテムと共に表示される説明です。|  
 |接続の種類|データ ソースで使用するデータ処理拡張機能です。 レポート サーバーに配置されているデータ処理拡張機能のみ使用できます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] に含まれているデータ処理拡張機能については、「[Reporting Services でサポートされるデータ ソース &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)」を参照してください。|  
 |接続文字列|データベースの接続文字列です。 よく使われるデータ ソースの接続文字列の詳細と例を確認するには、「[データ接続文字列を作成する - レポート ビルダーおよび SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)」を参照してください。|  

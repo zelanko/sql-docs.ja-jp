@@ -1,5 +1,5 @@
 ---
-title: テーブル、マトリックス、または一覧の追加、移動、または削除 (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: テーブル、マトリックス、または一覧の追加、移動、または削除 (レポート ビルダー) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 4b97c470-cde0-4bb1-a46e-5f5f5553feaa
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7239efa5a2d64b3751fde34d7cd1e676ea905dd4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 995bfa16d25392e35b9147c021b6bbcaff423a6c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581996"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081609"
 ---
 # <a name="add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs"></a>テーブル、マトリックス、または一覧の追加、移動、または削除 (レポート ビルダーおよび SSRS)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] の改ページ調整されたレポートのデータ領域には、レポート データセットのデータが表示されます。 またデータ領域には、テーブル、マトリックス、一覧、グラフ、およびゲージが含まれます。 1 つのデータ領域を別のデータ領域内に入れ子にするには、各データ領域を個別に追加し、子データ領域を親データ領域にドラッグします。  

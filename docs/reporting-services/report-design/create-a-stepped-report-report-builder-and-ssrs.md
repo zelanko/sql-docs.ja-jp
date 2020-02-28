@@ -1,5 +1,5 @@
 ---
-title: 階段状レポートの作成 (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: 階段状レポートの作成 (レポート ビルダー) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 5933c4f0-c713-4ecb-b521-ff46c9c63fff
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: adfde8e92d249c40749dba76f42c6d1d5ba20d71
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: dca297ff55b9bd845e6fcb8379dcb7cc7147d32e
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581536"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080611"
 ---
 # <a name="create-a-stepped-report-report-builder-and-ssrs"></a>階段状レポートの作成 (レポート ビルダーおよび SSRS)
 階段状レポートは  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の改ページ調整されたレポートで、次の例に示すように、親グループとその下でインデントされた詳細行または子グループが、同じ列内に表示されます。  

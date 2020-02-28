@@ -1,7 +1,7 @@
 ---
 title: JDBC ドライバーのよくあるご質問 (FAQ) | Microsoft Docs
 ms.custom: ''
-ms.date: 10/28/2019
+ms.date: 01/29/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 37f644b07b02c90e74b0b4fe4e0d5215f5efa298
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 1055b9b0422073d7b9875c748dcfe889af053dc2
+ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "73049818"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77004623"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>JDBC ドライバーのよくあるご質問 (FAQ)
 
@@ -35,6 +35,15 @@ JDBC Driver はオープンソースであり、[GitHub](https://github.com/micr
 Microsoft JDBC ドライバー用の GitHub リポジトリで入手できる JDBC ドライバー ファイルは JDBC ドライバーの中核であり、リポジトリに示されているオープンソース ライセンスの対象です。 Microsoft ダウンロード センターのドライバー パッケージには、Windows に統合された認証と JDBC ドライバーとの XA トランザクションを可能にするための追加ライブラリが含まれています。 これらの追加ライブラリは、ダウンロード可能パッケージに含まれているライセンスの対象です。
 
 **ドライバーをアップグレードする場合に知っておく必要があることは何ですか。**  
+Microsoft JDBC Driver 8.2 では、DBC 4.2 および 4.3 (一部) 仕様がサポートされ、インストール パッケージには次に示す 3 つの JAR クラス ライブラリが含まれます。
+
+| JAR                        | JDBC 仕様            | JDK のバージョン |
+| -------------------------- | ----------------------------- | ----------- |
+| mssql-jdbc-8.2.0.jre13.jar | JDBC 4.3 (一部) および 4.2 | JDK 13.0    |
+| mssql-jdbc-8.2.0.jre11.jar | JDBC 4.3 (一部) および 4.2 | JDK 11.0    |
+| mssql-jdbc-8.2.0.jre8.jar  | JDBC 4.2                      | JDK 8.0     |
+| &nbsp;                     | &nbsp;                        | &nbsp;      |
+
 Microsoft JDBC Driver 7.4 では、DBC 4.2 および 4.3 (一部) 仕様がサポートされ、インストール パッケージには次に示す 3 つの JAR クラス ライブラリが含まれます。
 
 | JAR                        | JDBC 仕様            | JDK のバージョン |
@@ -149,6 +158,6 @@ SAP 製品を使用していて JRE 1.4 のサポートが必要なお客様は�
 **ドライバーは FIPS 検証済みのアルゴリズムを使用して通信できますか。**  
 Microsoft JDBC Driver には暗号化アルゴリズムが含まれていません。 お客様が、Federal Information Processing Standards (FIPS) に準拠していると見なされるオペレーティング システム、アプリケーション、JVM アルゴリズムを活用して、これらのアルゴリズムを使用するドライバーを構成する場合、ドライバーは指定されたアルゴリズムのみを通信に使用します。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [JDBC ドライバーの概要](../../connect/jdbc/overview-of-the-jdbc-driver.md)

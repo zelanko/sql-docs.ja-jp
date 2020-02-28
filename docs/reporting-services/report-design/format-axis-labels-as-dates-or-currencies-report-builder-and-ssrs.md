@@ -1,5 +1,5 @@
 ---
-title: 日付または通貨として軸ラベルを書式設定する (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: 日付または通貨として軸ラベルを書式設定する (レポート ビルダー) | Microsoft Docs
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: e9a01a74-2f51-4b35-be3a-a6138568f6cf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 82208f23aa3bf0126c13a71f2130163b0d75c4dd
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: f93ab65674436fc0225ba8f8c66b98d12f9b7694
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65576269"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080024"
 ---
 # <a name="format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs"></a>日付または通貨として軸ラベルを書式設定する (レポート ビルダーおよび SSRS)
 適切に書式設定された DateTime 値を、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のページ分割されたレポート内の軸に表示すると、これらの値が日数として自動的にグラフに表示されます。 月や時間の間隔など、X 軸の日付や期間を指定するには、軸ラベルの書式を設定し、軸間隔の種類を有効な日付または期間に設定する必要があります。  

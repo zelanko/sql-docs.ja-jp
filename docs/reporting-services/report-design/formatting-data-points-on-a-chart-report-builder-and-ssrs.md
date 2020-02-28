@@ -1,5 +1,5 @@
 ---
-title: グラフでのデータ ポイントの書式設定 (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: グラフでのデータ ポイントの書式設定 (レポート ビルダー) | Microsoft Docs
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +11,12 @@ f1_keywords:
 ms.assetid: 08ec3818-f63a-4e89-b52c-750e47f48b85
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0481f39c0c047f401914e2c710a1f52c393bc335
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 5fbcae6cbbadb8665086c65088c32513a632c34a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65580334"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77079927"
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>グラフでのデータ ポイントの書式設定 (レポート ビルダーおよび SSRS)
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートで、データ ポイントは、グラフにおける最小単位のエンティティです。 図形以外のグラフのデータ ポイントは、そのグラフの種類に応じて表されます。 たとえば、線系列は 1 つまたは複数の連続したデータ ポイントで構成されます。 図形グラフのデータ ポイントは、個々のスライスやセグメントによって表され、これらのスライスやセグメントがグラフ全体を形成します。 たとえば、円グラフでは、それぞれのピースがデータ ポイントです。 詳細については、「 [グラフの種類 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)」を参照してください。  
@@ -41,7 +41,7 @@ ms.locfileid: "65580334"
 ## <a name="positioning-data-point-labels-on-a-chart"></a>グラフへのデータ ポイント ラベルの配置  
  すべての種類のグラフで、グラフを右クリックして **[データ ラベルの表示]** を選択すると、データ ポイント ラベルを表示できます。 データ ポイント ラベルの位置は、グラフの種類に応じて指定されます。  
   
--   横棒グラフの場合、 **BarLabelStyle** カスタム属性を使用してデータ ポイント ラベルの位置を指定できます。 外側、左、中央、および右の 4 つの位置から選択できます。 バーのラベル スタイルが外側に設定されている場合、ラベルは、グラフ領域内に収まる範囲でバーの外側に配置されます。 バーの外側でグラフ領域内にラベルを配置できない場合、ラベルはバーの内側に配置されます。  
+-   横棒グラフの場合、 **BarLabelStyle** カスタム属性を使用してデータ ポイント ラベルの位置を指定できます。 指定できる位置は 4 つあります。Outside、Left、Center、Right です。 バーのラベル スタイルが外側に設定されている場合、ラベルは、グラフ領域内に収まる範囲でバーの外側に配置されます。 バーの外側でグラフ領域内にラベルを配置できない場合、ラベルはバーの内側に配置されます。  
   
 -   円グラフの場合、 **PieLabelStyle** カスタム属性を使用してデータ ポイント ラベルの位置を指定できます。 円グラフの周囲にデータ ポイント ラベルを配置する場合は、円グラフのサイズ、円グラフと対応する凡例の間の空間、ラベルのサイズなど、多くの点を考慮する必要があります。 詳細については、「 [円グラフの外側へのデータ ポイント ラベルの表示 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)」を参照してください。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "65580334"
 ## <a name="adding-keywords-for-data-point-labels-tooltips-and-legend-text"></a>データ ポイント ラベル、ツールヒント、および凡例テキストへのキーワードの追加  
  大文字と小文字の区別があるグラフに固有のキーワードを使用すると、グラフ内に存在する項目を表すことができます。 これらのキーワードは、ツールヒント、カスタムの凡例テキスト、データ ポイント ラベルのプロパティにのみ適用されます。 多くの場合、グラフ キーワードには同等の簡単な式がありますが、キーワードを入力する方がすばやく簡単です。 グラフ キーワードの一覧は次のとおりです。  
   
-|グラフ キーワード|[説明]|適用可能なグラフの種類|同等の簡単な式の例|  
+|グラフ キーワード|説明|適用可能なグラフの種類|同等の簡単な式の例|  
 |-------------------|-----------------|------------------------------|------------------------------------------------|  
 |#VALY|データ ポイントの Y 値|All|`=Fields!MyDataField.Value`|  
 |#VALY2|データ ポイントの Y 値の 2 番目の値|範囲、バブル|なし|  
@@ -98,7 +98,7 @@ ms.locfileid: "65580334"
  [グラフの軸ラベルの書式設定 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [グラフ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [日付または通貨として軸ラベルを書式設定する &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
- [チュートリアル: レポートへの円グラフの追加 &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
+ [チュートリアル:レポートへの円グラフの追加 &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
  [式の例 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [式 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
   

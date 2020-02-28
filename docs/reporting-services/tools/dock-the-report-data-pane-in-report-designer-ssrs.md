@@ -1,5 +1,5 @@
 ---
-title: レポート デザイナーのレポート データ ペインをドッキングする (SSRS) | Microsoft Docs
+title: レポート デザイナーのレポート データ ペインをドッキングする | Microsoft Docs
 ms.date: 05/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8b87bb59-6083-44cb-ab34-493855b41585
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2480d94a6a6815c18c7464a7441daad1dd3595db
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e865cb5d12a66a1225a037fdc3a191333de7179c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190423"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080578"
 ---
 # <a name="dock-the-report-data-pane-in-report-designer-ssrs"></a>レポート デザイナーのレポート データ ペインをドッキングする (SSRS)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] の [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]レポート デザイナーでは、データ ソース、データセット、フィールド、パラメーター、画像など、レポートで使用できるデータ オブジェクトの階層ビューがレポート データ ペインに表示されます。 このビューのデータ ソースは、埋め込みデータ ソースである場合と、ソリューション エクスプローラーに表示される共有データ ソースのデータ ソース参照である場合があります。  

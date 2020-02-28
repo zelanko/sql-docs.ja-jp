@@ -1,5 +1,5 @@
 ---
-title: レポートを共有データ ソースにバインドする (SSRS) | Microsoft Docs
+title: レポートを共有データ ソースにバインドする | Microsoft Docs
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 23cc15f2-2883-48e2-bc6c-fa0ab61a2e21
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9e41ac864403dce2cad648790099496b53c4b6dc
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c5aa5e504c8434d3634b903c08b6a03c0e62345c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74190896"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081422"
 ---
 # <a name="bind-a-report-to-a-shared-data-source-ssrs"></a>レポートを共有データ ソースにバインドする (SSRS)
   レポートをテスト サーバーから実稼働サーバーに移動するときなど、ファイルをローカル コンピューターに保存した後で別のレポート サーバーにアップロードする操作が必要になる場合があります。 レポートを新しいサーバーにアップロードしたときは、新しいレポート サーバー上に格納されている共有データ ソースにレポートを再バインドする必要があります。 レポートの再バインドを行わないと、レポートが新しいレポート サーバーからアクセスされたときに正常に動作しません。  

@@ -1,5 +1,5 @@
 ---
-title: CSV ファイルへのエクスポート (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: CSV ファイルへのエクスポート (レポート ビルダー) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 68ec746e-8c82-47f5-8c3d-dbe403a441e5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: eece2e47cee99c1c3716aadc597e8b6e6dd48d79
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 0b53c40aeb36b2db7586fe135daa05aff17e54e5
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65581215"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77078368"
 ---
 # <a name="exporting-to-a-csv-file-report-builder-and-ssrs"></a>CSV ファイルへのエクスポート (レポート ビルダーおよび SSRS)
   CSV (コンマ区切り値) 表示拡張機能では、レポートのデータを平面的に表して、標準化されたプレーンテキスト形式でページ分割されたレポートを表示します。プレーンテキスト形式のレポートは、多くのアプリケーションで簡単に読み取ったり変換したりすることができます。  
@@ -65,7 +65,7 @@ ms.locfileid: "65581215"
   
  次の表では、表示した際のレポート アイテムの外観について説明します。  
   
-|アイテム|表示動作|  
+|Item|表示動作|  
 |----------|------------------------|  
 |テキスト ボックス|テキスト ボックスの内容を表示します。 既定のモードでは、アイテムは、そのアイテムの書式設定プロパティに基づいて書式が設定されます。 準拠モードでは、デバイス情報設定によって書式を変更できます。 CSV 表示モードの詳細については、以下の説明を参照してください。|  
 |テーブル|テーブルを展開して表示します。最も詳細なレベルでの各行と列に対応した、行と列が作成されます。 集計の行と列には、列見出しまたは行見出しは付けられません。 詳細レポートはサポートされません。|  

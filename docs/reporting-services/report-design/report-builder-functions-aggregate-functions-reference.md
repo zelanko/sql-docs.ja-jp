@@ -1,5 +1,5 @@
 ---
-title: 集計関数リファレンス (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: 集計関数リファレンス (レポート ビルダー) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: db6542ee-02d0-4073-90e6-cba8f9510fbb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 243f895c22621c3f83fab38a5bab47d1f7b7b490
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: d5ef615a05648e2a5873e48371b1f1edaf754664
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "68893763"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77081317"
 ---
 # <a name="report-builder-functions---aggregate-functions-reference"></a>レポート ビルダー関数 - 集計関数リファレンス
   レポートに集計値を含めるには、式に組み込み集計関数を使用できます。 数値フィールドの既定の集計関数は SUM です。 式を編集して異なる組み込み集計関数を使用したり、異なるスコープを指定することもできます。 スコープにより、計算に使用するデータセットが識別されます。  

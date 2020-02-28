@@ -1,5 +1,5 @@
 ---
-title: データのフィルター、グループ化、および並べ替え (レポート ビルダーおよび SSRS) | Microsoft Docs
+title: データのフィルター、グループ化、および並べ替え (レポート ビルダー) | Microsoft Docs
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -17,12 +17,12 @@ f1_keywords:
 ms.assetid: 4dda2a7f-3f31-47e9-a88b-28d770ebd65e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0012f01fead8d6890f8e593f4991cbb0252e3dd6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e08a4a43897c1497c81a9e01f010fa99a252130e
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "65576529"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "77080171"
 ---
 # <a name="filter-group-and-sort-data-report-builder-and-ssrs"></a>データのフィルター、グループ化、および並べ替え (レポート ビルダーおよび SSRS)
   レポートでは、式を使用してレポート データの制御、整理、および並べ替えを行うことができます。 既定では、データセットを作成してレポート レイアウトをデザインすると、データセット フィールドやパラメーターなど、レポート データ ペインに表示されるアイテムに基づいて、レポート アイテムのプロパティが式に自動的に設定されます。 グループまたはグループ内の行の並べ替え順序をユーザーが対話的に変更できるように、テーブルまたはマトリックスのセルに対話的な並べ替えボタンを追加することもできます。  
