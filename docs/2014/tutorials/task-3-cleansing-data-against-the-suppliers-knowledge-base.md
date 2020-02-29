@@ -10,27 +10,27 @@ ms.assetid: 647c924a-9b91-4294-8d96-e81416e4e90e
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: dea74f8fc22bea5a0903a3dae17f6c969849181c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: b13e3d30ac0afce5293cc0e104aa2b291112647f
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "65485052"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78177282"
 ---
 # <a name="task-3-cleansing-data-against-the-suppliers-knowledge-base"></a>タスク 3: Suppliers ナレッジ ベースに対してデータをクレンジングする
-  ここでは、コンピューター支援型のクレンジング プロセスを実行します。 DQS は、指定されたしきい値に基づいて高度なアルゴリズムと信頼レベルを使用して、選択したナレッジベースに対してデータを分析し、クレンジングします。 詳細については、「 [DQS (内部) ナレッジを使用したデータのクレンジング](https://msdn.microsoft.com/library/hh213061.aspx)」を参照してください。  
-  
-1.  [**開始**] をクリックして、コンピューター支援型のクレンジングプロセスを開始します。  
-  
-     ![クレンジング プロセスの [クレンジング] ページ](../../2014/tutorials/media/et-cleansingdataagainstthesupplierkb-01.jpg "クレンジング プロセスの [クレンジング] ページ")  
-  
-2.  クレンジングプロセスが完了したら、[**プロファイラー** ] タブで**統計**を確認します。ソースの統計情報には、処理されたレコードの数、正しいことが検出されたレコードの数、dqs によって修正されたレコードの数、DQS によって提案された変更を含むレコードの数、および無効なレコードの数が示されます。 右側のリスト ボックスには、クレンジング プロセスに含まれる各ドメインの、修正された値、提案された値、値の完全性 (データがどの程度存在するか) と正確性 (データがどの程度意図されたとおりに使用できるか) が表示されます。  
-  
-     ![クレンジングの結果](../../2014/tutorials/media/et-cleansingdataagainstthesupplierkb-02.jpg "クレンジングの結果")  
-  
-3.  [**次へ**] をクリックし**て、[管理と結果の表示**] ページに切り替えます。  
-  
-## <a name="next-step"></a>次のステップ  
- [タスク 4: 結果を管理および表示する](../../2014/tutorials/task-4-manaing-and-viewing-results.md)  
-  
-  
+  ここでは、コンピューター支援型のクレンジング プロセスを実行します。 DQS は、指定されたしきい値に基づいて高度なアルゴリズムと信頼レベルを使用して、選択したナレッジベースに対してデータを分析し、クレンジングします。 詳細については、「 [DQS (内部) ナレッジを使用したデータのクレンジング](https://msdn.microsoft.com/library/hh213061.aspx)」を参照してください。
+
+1.  [**開始**] をクリックして、コンピューター支援型のクレンジングプロセスを開始します。
+
+     ![クレンジング プロセスの [クレンジング] ページ](../../2014/tutorials/media/et-cleansingdataagainstthesupplierkb-01.jpg "クレンジング プロセスの [クレンジング] ページ")
+
+2.  クレンジングプロセスが完了したら、[**プロファイラー** ] タブで**統計**を確認します。ソースの統計情報には、処理されたレコードの数、正しいことが検出されたレコードの数、dqs によって修正されたレコードの数、DQS によって提案された変更を含むレコードの数、および無効なレコードの数が示されます。 右側のリスト ボックスには、クレンジング プロセスに含まれる各ドメインの、修正された値、提案された値、値の完全性 (データがどの程度存在するか) と正確性 (データがどの程度意図されたとおりに使用できるか) が表示されます。
+
+     ![クレンジングの結果](../../2014/tutorials/media/et-cleansingdataagainstthesupplierkb-02.jpg "クレンジングの結果")
+
+3.  [**次へ**] をクリックし**て、[管理と結果の表示**] ページに切り替えます。
+
+## <a name="next-step"></a>次のステップ
+ [タスク 4: 結果を管理および表示する](../../2014/tutorials/task-4-manaing-and-viewing-results.md)
+
+

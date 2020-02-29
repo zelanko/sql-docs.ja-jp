@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: b8c30191-f532-49cd-83f3-c271f63ce572
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 91a7278230a0e7201e78354a38af58f417ac26ce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 2a51fcc7108c7f6af6237d77cbad73c87ed7c6e6
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68108164"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78180117"
 ---
 # <a name="sp_dbfixedrolepermission-transact-sql"></a>sp_dbfixedrolepermission (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  固定データベース ロールの権限を表示します。 **sp_dbfixedrolepermission**では、に[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]正しい情報が返されます。 出力には、に[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]実装された権限階層への変更は反映されません。 詳細については、「[アクセス許可 &#40;データベースエンジン&#41;](../../relational-databases/security/permissions-database-engine.md)」を参照してください。  
+  固定データベース ロールの権限を表示します。 **sp_dbfixedrolepermission**では、に[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]正しい情報が返されます。 出力には、に[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]実装された権限階層への変更は反映されません。 詳細については、「[データベースレベルのロール](../../relational-databases/security/authentication-access/database-level-roles.md#fixed-database-roles)」を参照してください。これには、固定データベースロールの一覧と、それに対応する権限が表示されます。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
@@ -57,7 +57,7 @@ sp_dbfixedrolepermission [ [ @rolename = ] 'role' ]
 ## <a name="remarks"></a>解説  
  固定データベースロールの一覧を表示するには、 **sp_helpdbfixedrole**を実行します。 次の表は、固定データベースロールを示しています。  
   
-|固定データベースロール|[説明]|  
+|固定データベースロール|説明|  
 |-------------------------|-----------------|  
 |**db_owner**|データベース所有者|  
 |**db_accessadmin**|データベース アクセス管理者|  

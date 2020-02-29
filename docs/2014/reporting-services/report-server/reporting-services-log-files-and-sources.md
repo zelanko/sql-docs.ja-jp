@@ -17,34 +17,33 @@ ms.assetid: 80ef0acc-cbef-49d0-87e7-844e3ce19604
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2c0e935cc3d5264a1d2f5569b62db416d85b0427
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 3908c39fc6deba57bf8f0e277918e5b8167f4a77
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66103379"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78177188"
 ---
 # <a name="reporting-services-log-files-and-sources"></a>Reporting Services のログ ファイルとソース
-  レポート[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]サーバーおよびレポートサーバー環境では、サーバーの操作および状態に関する情報を記録するために、さまざまなログの出力先をサポートしています。 ログ記録には、実行のログ記録とトレースのログ記録という 2 つの基本的なカテゴリがあります。 実行のログ記録には、レポート実行統計、監査、パフォーマンスの診断、および最適化に関する情報が含まれます。 トレースのログ記録は、エラー メッセージおよび一般的な診断に関する情報です。  
-  
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]SharePoint モード |[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]ネイティブモード  
-  
- 次の表に、ログの場所やログの内容を表示する方法を含む、各ログに関する追加情報へのリンクを示します。  
-  
-|ログ|[説明]|  
-|---------|-----------------|  
-|[レポート サーバー実行ログと ExecutionLog3 ビュー](report-server-executionlog-and-the-executionlog3-view.md)|実行ログは、レポート サーバー データベースに格納されている SQL Server のビューです。<br /><br /> レポート サーバー実行ログには、レポートが実行された日時、実行したユーザー、レポートの配信先、使用された表示形式など、特定のレポートに関するデータが含まれます。|  
-|SharePoint トレース ログ|SharePoint で実行されているレポート サーバーの SharePoint トレース ログには、 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] の情報が含まれています。 SharePoint 統合ログ サービスに対して [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 固有の情報を構成することもできます。 詳細については、「 [SharePoint トレース ログの Reporting Services イベントをオンにする (ULS)](turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)|  
-|[Report Server Service Trace Log](report-server-service-trace-log.md)|サービスのトレース ログには、アプリケーションのデバッグまたは問題やイベントの調査を行う場合に役立つ詳細情報が含まれます。<br /><br /> `C:\Program Files\Microsoft SQL Server\MSRS12.MSSQLSERVER\Reporting Services\LogFiles`|  
-|[レポート サーバーの HTTP ログ](report-server-http-log.md)|HTTP ログ ファイルには、レポート サーバー Web サービスおよびレポート マネージャーによって処理された HTTP 要求および HTTP 応答がすべて記録されます。|  
-|[Windows アプリケーション ログ](windows-application-log.md)|Microsoft Windows アプリケーション ログには、レポート サーバーのイベントに関する情報が含まれます。|  
-|Windows パフォーマンス ログ|Windows パフォーマンス ログには、レポート サーバーのパフォーマンス データが含まれます。 パフォーマンス ログを作成してから、収集するデータを決定するカウンターを選択できます。 詳細については、「 [レポート サーバーのパフォーマンスの監視](monitoring-report-server-performance.md)」を参照してください。|  
-|セットアップ ログ ファイル|ログ ファイルはセットアップ中にも作成されます。 セットアップに失敗または成功した際に警告メッセージや他のメッセージが表示された場合、ログ ファイルを検証して問題のトラブルシューティングを行うことができます。 詳細については、「 [SQL Server セットアップログファイルの表示と読み取り](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)」を参照してください。|  
-|IIS ログ|Microsoft インターネット インフォメーション サービス (IIS) によって作成されたログ ファイル。 詳細については、「[インターネットインフォメーションサービス (IIS) でログ記録を有効にする方法](https://support.microsoft.com/kb/313437)」を参照してください。|  
-|ビデオ|Microsoft Power Query を使用して [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] ログ ファイルを表示する方法を示す短いビデオを表示します。<br /><br /> ![Power Query ログおよび SSRS ログに関するビデオの表示](../media/generic-video-thumbnail.png "Power Query ログおよび SSRS ログに関するビデオの表示")|  
-  
-## <a name="see-also"></a>参照  
- [Reporting Services レポートサーバー &#40;ネイティブモード&#41;](reporting-services-report-server-native-mode.md)   
- [エラーとイベントのリファレンス (Reporting Services)](../troubleshooting/errors-and-events-reference-reporting-services.md)  
-  
-  
+  レポート[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]サーバーおよびレポートサーバー環境では、サーバーの操作および状態に関する情報を記録するために、さまざまなログの出力先をサポートしています。 ログ記録には、実行のログ記録とトレースのログ記録という 2 つの基本的なカテゴリがあります。 実行のログ記録には、レポート実行統計、監査、パフォーマンスの診断、および最適化に関する情報が含まれます。 トレースのログ記録は、エラー メッセージおよび一般的な診断に関する情報です。
+
+ **[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] SharePoint モード | [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] ネイティブ モード
+
+ 次の表に、ログの場所やログの内容を表示する方法を含む、各ログに関する追加情報へのリンクを示します。
+
+|ログ|説明|
+|---------|-----------------|
+|[レポート サーバー実行ログと ExecutionLog3 ビュー](report-server-executionlog-and-the-executionlog3-view.md)|実行ログは、レポート サーバー データベースに格納されている SQL Server のビューです。<br /><br /> レポート サーバー実行ログには、レポートが実行された日時、実行したユーザー、レポートの配信先、使用された表示形式など、特定のレポートに関するデータが含まれます。|
+|SharePoint トレース ログ|SharePoint で実行されているレポート サーバーの SharePoint トレース ログには、 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] の情報が含まれています。 SharePoint 統合ログ サービスに対して [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 固有の情報を構成することもできます。 詳細については、「 [SharePoint トレース ログの Reporting Services イベントをオンにする (ULS)](turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)|
+|[レポート サーバー サービスのトレース ログ](report-server-service-trace-log.md)|サービスのトレース ログには、アプリケーションのデバッグまたは問題やイベントの調査を行う場合に役立つ詳細情報が含まれます。<br /><br /> `C:\Program Files\Microsoft SQL Server\MSRS12.MSSQLSERVER\Reporting Services\LogFiles`|
+|[レポート サーバーの HTTP ログ](report-server-http-log.md)|HTTP ログ ファイルには、レポート サーバー Web サービスおよびレポート マネージャーによって処理された HTTP 要求および HTTP 応答がすべて記録されます。|
+|[Windows アプリケーション ログ](windows-application-log.md)|Microsoft Windows アプリケーション ログには、レポート サーバーのイベントに関する情報が含まれます。|
+|Windows パフォーマンス ログ|Windows パフォーマンス ログには、レポート サーバーのパフォーマンス データが含まれます。 パフォーマンス ログを作成してから、収集するデータを決定するカウンターを選択できます。 詳細については、「 [レポート サーバーのパフォーマンスの監視](monitoring-report-server-performance.md)」を参照してください。|
+|セットアップ ログ ファイル|ログ ファイルはセットアップ中にも作成されます。 セットアップに失敗または成功した際に警告メッセージや他のメッセージが表示された場合、ログ ファイルを検証して問題のトラブルシューティングを行うことができます。 詳細については、「 [SQL Server セットアップ ログ ファイルの表示と読み取り](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)」を参照してください。|
+|IIS ログ|Microsoft インターネット インフォメーション サービス (IIS) によって作成されたログ ファイル。 詳細については、「[インターネットインフォメーションサービス (IIS) でログ記録を有効にする方法](https://support.microsoft.com/kb/313437)」を参照してください。|
+|ビデオ|Microsoft Power Query を使用して [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] ログ ファイルを表示する方法を示す短いビデオを表示します。<br /><br /> ![Power Query ログおよび SSRS ログに関するビデオの表示](../media/generic-video-thumbnail.png "Power Query ログおよび SSRS ログに関するビデオの表示")|
+
+## <a name="see-also"></a>参照
+ [Reporting Services レポートサーバー &#40;ネイティブモード&#41;](reporting-services-report-server-native-mode.md) [エラーとイベントのリファレンス &#40;Reporting Services&#41;](../troubleshooting/errors-and-events-reference-reporting-services.md)
+
+

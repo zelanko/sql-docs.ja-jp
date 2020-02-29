@@ -1,7 +1,7 @@
 ---
 title: dm_db_resource_stats (Azure SQL Database) |Microsoft Docs
 ms.custom: ''
-ms.date: 05/21/2019
+ms.date: 02/27/2020
 ms.service: sql-database
 ms.reviewer: ''
 ms.topic: language-reference
@@ -19,12 +19,12 @@ ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 1dd66834788896e6952a0352eb2a19fd1a828513
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 9165a4a371a611a5b9c2d962e700b424a60a9384
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75245961"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78175157"
 ---
 # <a name="sysdm_db_resource_stats-azure-sql-database"></a>sys.dm_db_resource_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "75245961"
   
 |[列]|データ型|[説明]|  
 |-------------|---------------|-----------------|  
-|end_time|**DATETIME**|UTC 時刻は、現在のレポート間隔の終了を示します。|  
+|end_time|**datetime**|UTC 時刻は、現在のレポート間隔の終了を示します。|  
 |avg_cpu_percent|**decimal (5, 2)**|サービス層の制限に対する割合での平均コンピューティング使用率。|  
 |avg_data_io_percent|**decimal (5, 2)**|サービス層の上限に対する平均データ i/o 使用率 (%)。 Hyperscale データベースについては、「[リソース使用率の統計情報のデータ IO](https://docs.microsoft.com/azure/sql-database/sql-database-hyperscale-performance-diagnostics#data-io-in-resource-utilization-statistics)」を参照してください。|  
 |avg_log_write_percent|**decimal (5, 2)**|サービス層の制限に対する割合としての、平均トランザクションログの書き込み (MBps)。|  
@@ -43,22 +43,22 @@ ms.locfileid: "75245961"
 |max_session_percent|**decimal (5, 2)**|データベースのサービス層の上限に対する割合での最大同時セッション数。|  
 |dtu_limit|**int**|この期間中のこのデータベースの現在の最大データベース DTU 設定です。 仮想コアベースのモデルを使用しているデータベースの場合、この列は NULL になります。|
 |cpu_limit|**decimal (5, 2)**|この期間中のこのデータベースの仮想コア数。 DTU ベースのモデルを使用しているデータベースの場合、この列は NULL になります。|
-|avg_instance_cpu_percent|**decimal (5, 2)**|SQL DB プロセスに対する平均データベース CPU 使用率 (%)。|
-|avg_instance_memory_percent|**decimal (5, 2)**|SQL DB プロセスに対する平均データベースメモリ使用率 (%)。|
+|avg_instance_cpu_percent|**decimal (5, 2)**|オペレーティングシステムによって測定された、データベースをホストしている SQL Server インスタンスの平均 CPU 使用率。 ユーザーワークロードと内部ワークロードの両方による CPU 使用率が含まれます。|
+|avg_instance_memory_percent|**decimal (5, 2)**|オペレーティングシステムによって測定された、データベースをホストしている SQL Server インスタンスのメモリ使用量の平均値。 ユーザーワークロードと内部ワークロードの両方によるメモリ使用率が含まれます。|
 |avg_login_rate_percent|**decimal (5, 2)**|単に情報を示すためだけに特定されます。 サポートされていません。 将来の互換性は保証されません。|
 |replica_role|**int**|現在のレプリカのロールのうち、0がプライマリ、1がセカンダリ、2がフォワーダー (geo セカンダリのプライマリ) であることを表します。 読み取り可能なすべてのセカンダリに ReadOnly インテントを使用して接続すると、"1" と表示されます。 ReadOnly インテントを指定せずに geo セカンダリに接続すると、"2" (フォワーダーに接続) が表示されます。|
 |||
   
 > [!TIP]  
->  これらの制限とサービスレベルの詳細については、[サービス階層](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)とサービス階層の[機能と制限](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/)に関するトピックを参照してください。  
+> これらの制限とサービスレベルの詳細については、「[サービスレベル](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)」、「 [Azure SQL Database でのクエリのパフォーマンスの手動チューニング](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/)」、および「[リソースの制限とリソースガバナンスの SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-resource-limits-database-server)」を参照してください。
   
-## <a name="permissions"></a>アクセス許可  
+## <a name="permissions"></a>アクセス許可
  このビューには、VIEW DATABASE STATE 権限が必要です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>解説
  **Dm_db_resource_stats**によって返されるデータは、実行しているサービス階層/パフォーマンスレベルに対して許容される最大制限の割合として表されます。
  
- 過去60分以内にデータベースが別のサーバーにフェールオーバーされた場合、ビューはそのフェールオーバー以降にプライマリデータベースであった時間のデータのみを返します。  
+ 過去60分以内にデータベースが別のサーバーにフェールオーバーされた場合、ビューはそのフェールオーバー以降の時間についてのみデータを返します。  
   
  保有期間が長いこのデータの詳細なビューを表示するには、 **master**データベースの**resource_stats**カタログビューを使用します。 このビューは、5分ごとにデータをキャプチャし、履歴データを14日間保持します。  詳細については、「 [sys. resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)」を参照してください。  
   
@@ -101,8 +101,4 @@ FROM sys.dm_db_resource_stats;
 ```  
   
 ## <a name="see-also"></a>参照  
- [resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)   
- [サービスレベル](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)   
- [サービス層の機能と制限](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/)  
-  
-  
+ [resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md) [サービスレベル](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)

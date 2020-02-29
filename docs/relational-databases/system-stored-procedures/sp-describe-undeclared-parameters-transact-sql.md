@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 6f016da6-dfee-4228-8b0d-7cd8e7d5a354
 author: stevestein
 ms.author: sstein
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1205572235b141709cd463476182d9b405446188
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
+ms.openlocfilehash: efa15bffc3b00dfce2c1c5d11bc3705f2b6f677e
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "72908325"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78180127"
 ---
 # <a name="sp_describe_undeclared_parameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)] 
 
   [!INCLUDE[tsql](../../includes/tsql-md.md)]バッチ内の宣言されていないパラメーターに関するメタデータを含む結果セットを返します。 Tsql バッチで使用されているが、 ** \@params**で宣言されていない各パラメーターを考慮します。 ** \@** 結果セットが返されます。この結果セットには、そのパラメーターに対して推測される型情報が含まれる、このようなパラメーターごとに1行のデータが含まれます。 ** \@Tsql**入力バッチにパラメーターがない場合、このプロシージャは空の結果セットを返します ( ** \@params**で宣言されているものを除く)。  
   
@@ -40,7 +40,10 @@ sp_describe_undeclared_parameters
     [ @tsql = ] 'Transact-SQL_batch'   
     [ , [ @params = ] N'parameters' data type ] [, ...n]  
 ```  
-  
+
+> [!Note] 
+> Azure Synapse Analytics (以前の SQL DW) でこのストアドプロシージャを使用するには、データベースの互換性レベルが10を超える必要があります。 
+
 ## <a name="arguments"></a>引数  
 `[ \@tsql = ] 'Transact-SQL\_batch'`1つ以上[!INCLUDE[tsql](../../includes/tsql-md.md)]のステートメント。 *Transact-sql SQL_batch*は**nvarchar (**_n_**)** または**nvarchar (max)** です。  
   
@@ -222,7 +225,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
      \@この場合、E (p) は Col_Int + \@p であり、TT\@(p) は**Int**です。**** 暗黙的な変換が\@生成されないため、p には int が選択されています。 その他の任意のデータ型では、少なくとも1つの暗黙的な変換が生成されます。  
   
-2.  変換の最小数に対して複数のデータ型が関連付けられている場合は、優先順位の高いデータ型が使用されます。 たとえば、次のように入力します。  
+2.  変換の最小数に対して複数のデータ型が関連付けられている場合は、優先順位の高いデータ型が使用されます。 次に例を示します。  
   
     ```sql
     SELECT * FROM t WHERE Col_Int = Col_smallint + @p  

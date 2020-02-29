@@ -19,39 +19,31 @@ ms.assetid: a85c0245-0a68-4eb0-83b1-9b11df80bd10
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 78a9b551ae44348de1c007533be3606b33c974cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: ec6d819d48ba5307e4c5c9e61ef8f7c375d6d96c
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62926284"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78176091"
 ---
 # <a name="view-package-objects"></a>パッケージ オブジェクトを表示する
-  
-  [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーでは、 **[パッケージ エクスプローラー]** タブで、パッケージをエクスプローラー表示できます。 この表示には、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] アーキテクチャのコンテナー階層が反映されます。 パッケージ コンテナーはこの階層の最上層にあり、パッケージを展開すると、そのパッケージ内にある接続、実行可能ファイル、イベント ハンドラー、ログ プロバイダー、優先順位制約、および変数が表示されます。  
-  
- 実行可能ファイルとは、パッケージ内のコンテナーおよびタスクのことで、イベント ハンドラー、優先順位制約、および変数を含めることができます。 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] では、入れ子構造の階層のコンテナーがサポートされているため、For ループ コンテナー、Foreach ループ コンテナー、およびシーケンス コンテナーは他の実行可能ファイルを含めることができます。  
-  
- パッケージにデータ フローが含まれる場合、 **パッケージ エクスプローラー** にはデータ フロー タスクが一覧表示され、データ フロー コンポーネントを一覧表示する **[コンポーネント]** フォルダーが含まれます。  
-  
- 
-  **[パッケージ エクスプローラー]** タブでは、パッケージ内のオブジェクトを削除したり、 **[プロパティ]** ウィンドウにアクセスしてオブジェクトのプロパティを表示できます。  
-  
- 次の図は、簡単なパッケージのツリー ビューを示しています。  
-  
- ![[パッケージ エクスプローラー] タブのスクリーンショット](media/packageexplorer.gif "[パッケージ エクスプローラー] タブのスクリーンショット")  
-  
-### <a name="to-view-package-content"></a>パッケージの内容を表示するには  
-  
--   [パッケージ エクスプローラーでパッケージ オブジェクトを表示する](../../2014/integration-services/view-package-objects-in-package-explorer.md)  
-  
-## <a name="see-also"></a>参照  
- [Integration Services タスク](control-flow/integration-services-tasks.md)   
- [Integration Services コンテナー](control-flow/integration-services-containers.md)   
- [優先順位制約](control-flow/precedence-constraints.md)   
- [SSIS&#41; 変数の Integration Services &#40;](integration-services-ssis-variables.md)   
- [SSIS&#41; イベントハンドラーの Integration Services &#40;](integration-services-ssis-event-handlers.md)   
- [SSIS&#41; ログ &#40;Integration Services](performance/integration-services-ssis-logging.md)  
-  
-  
+  [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーでは、 **[パッケージ エクスプローラー]** タブで、パッケージをエクスプローラー表示できます。 この表示には、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] アーキテクチャのコンテナー階層が反映されます。 パッケージ コンテナーはこの階層の最上層にあり、パッケージを展開すると、そのパッケージ内にある接続、実行可能ファイル、イベント ハンドラー、ログ プロバイダー、優先順位制約、および変数が表示されます。
+
+ 実行可能ファイルとは、パッケージ内のコンテナーおよびタスクのことで、イベント ハンドラー、優先順位制約、および変数を含めることができます。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] では、入れ子構造の階層のコンテナーがサポートされているため、For ループ コンテナー、Foreach ループ コンテナー、およびシーケンス コンテナーは他の実行可能ファイルを含めることができます。
+
+ パッケージにデータ フローが含まれる場合、 **パッケージ エクスプローラー** にはデータ フロー タスクが一覧表示され、データ フロー コンポーネントを一覧表示する **[コンポーネント]** フォルダーが含まれます。
+
+ **[パッケージ エクスプローラー]** タブでは、パッケージ内のオブジェクトを削除したり、 **[プロパティ]** ウィンドウにアクセスしてオブジェクトのプロパティを表示できます。
+
+ 次の図は、簡単なパッケージのツリー ビューを示しています。
+
+ ![[パッケージ エクスプローラー] タブのスクリーンショット](media/packageexplorer.gif "[パッケージ エクスプローラー] タブのスクリーンショット")
+
+### <a name="to-view-package-content"></a>パッケージの内容を表示するには
+
+-   [パッケージ エクスプローラーでパッケージ オブジェクトを表示する](../../2014/integration-services/view-package-objects-in-package-explorer.md)
+
+## <a name="see-also"></a>参照
+ [Integration Services タスク](control-flow/integration-services-tasks.md) [Integration Services コンテナーの](control-flow/integration-services-containers.md)[優先順位制約](control-flow/precedence-constraints.md) [Integration Services &#40;Ssis](integration-services-ssis-variables.md)&#41; INTEGRATION SERVICES &#40;ssis&#41;[イベントハンドラー](integration-services-ssis-event-handlers.md) Integration Services &#40;ssis&#41; の[ログ記録](performance/integration-services-ssis-logging.md)
+
+
