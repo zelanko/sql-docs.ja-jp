@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 8899310a-3464-4d38-9f2f-88396c4e7dc2
 author: VanMSFT
 ms.author: vanto
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: da115c8d4cf48cfbcd6190c88a83bee4e61ae5a1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||= azure-sqldw-latest
+ms.openlocfilehash: 372d3a1b5722b1a19e9560fe92f61e45b6744ace
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73240768"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78180108"
 ---
 # <a name="sysdatabase_scoped_configurations-transact-sql"></a>database_scoped_configurations (Transact-sql)
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-addw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
 構成ごとに1行の値を格納します。 
 
@@ -35,9 +35,10 @@ ms.locfileid: "73240768"
 |-----------------|---------------|-----------------|
 |**configuration_id**|**int**|構成オプションの ID。|
 |**name**|**nvarchar (60)**|構成オプションの名前。 使用可能な構成の詳細については、「 [ALTER DATABASE スコープ構成 &#40;transact-sql&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)」を参照してください。|
-|**数値**|**sqlvariant**|プライマリレプリカのこの構成オプションに設定された値。|
+|**value**|**sqlvariant**|プライマリレプリカのこの構成オプションに設定された値。|
 |**value_for_secondary**|**sqlvariant**|セカンダリレプリカのこの構成オプションに設定された値。|
 |**is_value_default**|**bit** |値が既定値に設定されているかどうかを指定します。|
+|**dw_compatibility_level**|**int**|データベースの互換性レベル。  既定値 = 0 (自動)|
 
 ## <a name="Permissions"></a> Permissions
 
