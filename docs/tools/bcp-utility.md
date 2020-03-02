@@ -28,12 +28,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/23/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 8aefcae2c8e9c449061b18b4287968120dbae852
-ms.sourcegitcommit: 10ab8d797a51926e92aec977422b1ee87b46286d
+ms.openlocfilehash: 22a1a64e11d7cae779531c46ee6b39d26ae403f4
+ms.sourcegitcommit: 1035d11c9fb7905a012429ee80dd5b9d00d9b03c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77544921"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77634851"
 ---
 # <a name="bcp-utility"></a>bcp ユーティリティ
 
@@ -63,7 +63,7 @@ ms.locfileid: "77544921"
 ビルド番号:15.0.1300.359<br>
 リリース日: 2019 年 3 月 13 日
 
-新しいバージョンの SQLCMD は、SQL Database、SQL Data Warehouse、および Always Encrypted 機能の Multi-Factor Authentication (MFA) のサポートを含め、Azure AD 認証をサポートします。
+新しいバージョンの SQLCMD では、SQL Database、SQL Data Warehouse、Always Encrypted 機能の Multi-Factor Authentication (MFA) のサポートを含め、Azure AD 認証がサポートされています。
 新しい BCP は、SQL Database と SQL Data Warehouse の Multi-Factor Authentication (MFA) のサポートを含め、Azure AD 認証をサポートします。
 
 ### <a name="system-requirements"></a>システム要件
@@ -228,13 +228,13 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
     次の例では、ユーザーとパスワードが AAD 資格情報である Azure AD のユーザー名とパスワードを使用してデータをエクスポートします。 この例では、Azure server `bcptest` からデータベース `testdb` のテーブル `aadserver.database.windows.net` をエクスポートし、データをファイル `c:\last\data1.dat` に格納します。
 
-    ```cmd
+    ```console
     bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
     ```
 
     次の例では、ユーザーとパスワードが AAD 資格情報である Azure AD のユーザー名とパスワードを使用してデータをインポートします。 この例では、Azure AD のユーザーとパスワードを使用して、Azure サーバー `aadserver.database.windows.net` 上のデータベース `testdb` のテーブル `bcptest` にファイル `c:\last\data1.dat` のデータをインポートします。
 
-    ```cmd
+    ```console
     bcp bcptest in "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
     ```
 
@@ -244,13 +244,13 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
     次の例では、Azure AD 統合アカウントを使用してデータをエクスポートします。 この例では、Azure サーバー `aadserver.database.windows.net` から Azure AD 統合を使用してデータベース `testdb` からテーブル `bcptest` をエクスポートし、そのデータをファイル `c:\last\data2.dat` に格納します。
 
-    ```cmd
+    ```console
     bcp bcptest out "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
     ```
 
     次の例では、Azure AD 統合認証を使用してデータをインポートします。この例では、Azure AD 統合認証を使用して、Azure サーバー `aadserver.database.windows.net` 上のデータベース `testdb` のテーブル `bcptest` にファイル `c:\last\data2.txt` のデータをインポートします。
 
-    ```cmd
+    ```console
     bcp bcptest in "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
     ```
 
@@ -262,17 +262,17 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
    対話型認証を有効にするには、-G オプションにパスワードを指定せず、ユーザー名 (-U) のみを指定します。
 
-   次の例では、Azure AD 対話型 モードを使用し、ユーザー名 (ユーザーは AAD アカウントを表します) を指定してデータをエクスポートします。 これは、前のセクションで使用した例と同じです。*Azure Active Directory のユーザー名とパスワード*。  
+   次の例では、Azure AD 対話型モードを使用し、ユーザー名 (ユーザーは AAD アカウントを表します) を指定してデータをエクスポートします。 これは、前のセクション、「*Azure Active Directory のユーザー名とパスワード*」で使用したのと同じ例です。  
 
    対話モードでは、パスワードを手動で入力する必要があります。また、多要素認証が有効なアカウントの場合は、構成された MFA 認証方法を完了します。
 
-   ```cmd
+   ```console
    bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com
    ```
 
    Azure AD ユーザーが Windows アカウントを使用するドメイン フェデレーション ユーザーの場合、コマンド ラインで必要なユーザー名にはそのドメイン アカウントが含まれます (たとえば、以下のように joe@contoso.com)。
 
-   ```cmd
+   ```console
    bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U joe@contoso.com
    ```
 
@@ -448,7 +448,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
     
     すべてのバージョンの bcp ユーティリティがインストールされている場所を確認するには、コマンド プロンプトに次のように入力します。
     
-    ```cmd
+    ```console
     where bcp.exe
     ```
 
@@ -604,7 +604,7 @@ END
 
 コマンド プロンプトで、次のコマンドを入力します。
 
-```cmd
+```console
 bcp -v
 ```
   
@@ -616,7 +616,7 @@ bcp -v
 
   コマンド プロンプトで、次のコマンドを入力します。
 
-  ```cmd
+  ```console
   bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransactions_character.bcp -c -T
   ```
 
@@ -638,7 +638,7 @@ bcp -v
 
 コマンド プロンプトで、次のコマンドを入力します。\(システムによってパスワードの入力が求められます。\)
 
-```cmd
+```console
 bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransactions_character.bcp -c -U<login_id> -S<server_name\instance_name>
 ```
 
@@ -650,7 +650,7 @@ bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTrans
 
   コマンド プロンプトで、次のコマンドを入力します。
 
-  ```cmd
+  ```console
   bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTransactions_character.bcp -c -T
   ```
 
@@ -658,7 +658,7 @@ bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTrans
   
 コマンド プロンプトで、次のコマンドを入力します。
 
-```cmd
+```console
 bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTransactions_native.bcp -b 5000 -h "TABLOCK" -m 1 -n -e D:\BCP\Error_in.log -o D:\BCP\Output_in.log -S -T
 ```
 
@@ -670,7 +670,7 @@ bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTr
   
 コマンド プロンプトで、次のコマンドを入力します。
 
-```cmd
+```console
 bcp "SELECT StockItemTransactionID FROM WideWorldImporters.Warehouse.StockItemTransactions WITH (NOLOCK)" queryout D:\BCP\StockItemTransactionID_c.bcp -c -T
 ```
 
@@ -680,7 +680,7 @@ bcp "SELECT StockItemTransactionID FROM WideWorldImporters.Warehouse.StockItemTr
   
 コマンド プロンプトで、次のコマンドを入力します。
 
-```cmd
+```console
 bcp "SELECT * from Application.People WHERE FullName = 'Amy Trefl'" queryout D:\BCP\Amy_Trefl_c.bcp -d WideWorldImporters -c -T
 ```
 
@@ -690,7 +690,7 @@ Transact-SQL ステートメントからデータ ファイルに結果セット
 
 コマンド プロンプトで、次のコマンドを入力します。
 
-```cmd
+```console
 bcp "SELECT FullName, PreferredName FROM WideWorldImporters.Application.People ORDER BY FullName" queryout D:\BCP\People.txt -t, -c -T
 ```
 
@@ -700,7 +700,7 @@ bcp "SELECT FullName, PreferredName FROM WideWorldImporters.Application.People O
 
 コマンド プロンプトで、次のコマンドを入力します。
 
-```cmd
+```console
 REM non-XML character format
 bcp WideWorldImporters.Warehouse.StockItemTransactions format nul -f D:\BCP\StockItemTransactions_c.fmt -c -T 
 
@@ -722,7 +722,7 @@ bcp WideWorldImporters.Warehouse.StockItemTransactions format nul -f D:\BCP\Stoc
 
 コマンド プロンプトで、次のコマンドを入力します。
 
-```cmd
+```console
 bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp in D:\BCP\StockItemTransactions_character.bcp -L 100 -f D:\BCP\StockItemTransactions_c.xml -T
 ```
 
