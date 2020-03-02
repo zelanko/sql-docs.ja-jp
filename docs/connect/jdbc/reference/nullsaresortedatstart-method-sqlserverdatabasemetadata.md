@@ -1,5 +1,5 @@
 ---
-title: nullsAreSortedAtStart Method (SQLServerDatabaseMetaData) | Microsoft Docs
+title: nullsAreSortedAtStart メソッド (SQLServerDatabaseMetaData) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -41,7 +41,7 @@ public boolean nullsAreSortedAtStart()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>解説  
- This nullsAreSortedAtStart method is specified by the nullsAreSortedAtStart method in the java.sql.DatabaseMetaData interface.  
+ この nullsAreSortedAtStart メソッドは、nullsAreSortedAtStart メソッドにより java.sql.DatabaseMetaData インターフェイスで指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

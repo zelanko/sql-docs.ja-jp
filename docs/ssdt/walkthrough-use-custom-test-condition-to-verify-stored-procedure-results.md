@@ -1,5 +1,5 @@
 ---
-title: Custom Test Condition to Verify the Results of a Stored Procedure
+title: カスタム テスト条件でストアド プロシージャの結果を検証する
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -17,9 +17,9 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 01/31/2020
 ms.locfileid: "75242657"
 ---
-# <a name="walkthrough-using-a-custom-test-condition-to-verify-the-results-of-a-stored-procedure"></a>チュートリアル: カスタム テスト条件を使用してストアド プロシージャの結果を検証する
+# <a name="walkthrough-using-a-custom-test-condition-to-verify-the-results-of-a-stored-procedure"></a>チュートリアル:カスタム テスト条件を使用してストアド プロシージャの結果を検証する
 
-機能の拡張に関するこのチュートリアルでは、テスト条件を作成し、SQL Server の単体テストを作成して機能を検証します。 これには、テスト条件のクラス ライブラリ プロジェクトの作成およびクラス ライブラリ プロジェクトの署名とインストールが含まれます。 更新するテスト条件が既にある場合は、「[Visual Studio 2010 のカスタム テスト条件を、以前のリリースから SQL Server Data Tools にアップグレードする方法](../ssdt/how-to-upgrade-visual-studio-2010-custom-test-condition-to-ssdt.md)」をご覧ください。  
+機能の拡張に関するこのチュートリアルでは、テスト条件を作成し、SQL Server の単体テストを作成して機能を検証します。 これには、テスト条件のクラス ライブラリ プロジェクトの作成およびクラス ライブラリ プロジェクトの署名とインストールが含まれます。 更新するテスト条件が既にある場合は、「[Visual Studio 2010 のカスタム テスト条件を、以前のリリースから SQL Server Data Tools にアップグレードする方法](../ssdt/how-to-upgrade-visual-studio-2010-custom-test-condition-to-ssdt.md)」を参照してください。  
   
 このチュートリアルでは、次の作業について説明します。  
   
@@ -381,7 +381,7 @@ namespace ColumnCountCondition
   
 6.  **[キャンセル]** をクリックして、データベース接続を使用するテスト プロジェクトを構成せずに単体テストを作成します。 SQL Server 単体テスト デザイナーに、空白のテストが表示されます。 テスト プロジェクトに Visual C\# のソース コード ファイルが追加されます。  
   
-    データベース接続が関連付けられたデータベース単体テストの作成および構成について詳しくは、「[空の SQL Server の単体テストを作成する方法](../ssdt/how-to-create-an-empty-sql-server-unit-test.md)」をご覧ください。  
+    データベース接続が関連付けられたデータベース単体テストの作成および構成の詳細については、「[空の SQL Server の単体テストを作成する方法](../ssdt/how-to-create-an-empty-sql-server-unit-test.md)」を参照してください。  
   
 7.  **[作成するにはここをクリックしてください]** をクリックし、単体テストの作成を完了します。 SQL Server プロジェクトに新しいテスト条件が表示されます。  
   
@@ -400,7 +400,7 @@ namespace ColumnCountCondition
   
 5.  **[プロパティ]** ウィンドウで、Count プロパティ、Enabled プロパティ、および ResultSet プロパティを構成します。  
   
-    詳しくは、「[SQL Server の単体テストにテスト条件を追加する方法](../ssdt/how-to-add-test-conditions-to-sql-server-unit-tests.md)」をご覧ください。  
+    詳細については、「[SQL Server の単体テストにテスト条件を追加する方法](../ssdt/how-to-add-test-conditions-to-sql-server-unit-tests.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
 [SQL Server の単体テストのカスタム テスト条件](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md)  
