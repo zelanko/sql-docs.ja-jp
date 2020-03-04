@@ -5,16 +5,16 @@ description: Active Directory ドメインで SQL Server ビッグ データ ク
 author: NelGson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 02/13/2020
+ms.date: 02/28/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: bd8e571417e7b2171dc135e986fa77f1f0eff089
-ms.sourcegitcommit: 10ab8d797a51926e92aec977422b1ee87b46286d
+ms.openlocfilehash: e2ce3fd5655655686d6fb27f628f6bdb3d22ceb1
+ms.sourcegitcommit: 7e544aa10f66bb1379bb5675fc063b2097631823
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77544879"
+ms.lasthandoff: 02/29/2020
+ms.locfileid: "78200963"
 ---
 # <a name="deploy-big-data-clusters-2019-in-active-directory-mode"></a>Active Directory モードで [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] を展開する
 
@@ -311,6 +311,6 @@ curl -k -v --negotiate -u : https://<Gateway DNS name>:30443/gateway/default/web
 
 - セキュア AD モードは現在のところ、`kubeadm` 展開環境でのみ動作し、AKS では動作しません。 `kubeadm-prod` 展開プロファイルには既定で、セキュリティ セクションが含まれています。
 
-- 現時点では、ドメインにつき BDC が 1 つだけ許可されます。 今後のリリースでは、ドメインあたり複数の BDC を有効にできるようになる予定です。
+- 現時点では、ドメイン (Active Directory) につき BDC が 1 つだけ許可されています。 今後のリリースでは、ドメインあたり複数の BDC を有効にできるようになる予定です。
 
 - セキュリティ構成で指定されているどの AD グループも、DomainLocal にスコープ指定できません。 AD グループのスコープは、[この手順](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps)に従って確認できます。
