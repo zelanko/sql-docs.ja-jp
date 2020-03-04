@@ -332,7 +332,7 @@ data <- RxSqlServerData(
 
     FileTable を有効にした後、モデルを書き込むには、FileTable API を使用して SQL からパスを取得した後、コードからその場所にモデルを書き込みます。 モデルを読み取る必要がある場合は、SQL からパスを取得した後、そのパスを使用してスクリプトからモデルを呼び出します。 詳しくは、「[ファイル I/O API を使用した FileTable へのアクセス](../relational-databases/blob/access-filetables-with-file-input-output-apis.md)」をご覧ください。
 
-### <a name="7-avoid-clearing-workspaces-when-you-execute-r-code-in-a-includessnoversionincludesssnoversion-mdmd-compute-context"></a>7.[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] コンピューティング コンテキストで R コードを実行しているときに、ワークスペースをクリアできない
+### <a name="7-avoid-clearing-workspaces-when-you-execute-r-code-in-a-ssnoversion-compute-context"></a>7.[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] コンピューティング コンテキストで R コードを実行しているときに、ワークスペースをクリアできない
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] コンピューティング コンテキストで R コードを実行中に R コマンドを使用してオブジェクトのワークスペースをクリアする場合、または [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) を使用して呼び出した R スクリプトの一部としてワークスペースをクリアする場合に、"*ワークスペース オブジェクト revoScriptConnection が見つからない*" というエラーが発生することがあります
 
