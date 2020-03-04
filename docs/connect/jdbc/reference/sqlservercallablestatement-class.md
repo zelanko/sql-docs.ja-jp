@@ -10,17 +10,17 @@ ms.topic: conceptual
 ms.assetid: 30710a63-c05d-47d9-9cf9-c087a1c76373
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 637b56c7f64d35501be0efef30e8f2a055b5be4b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: f47c034a720be5409d83868a7a61dd229ab70e24
+ms.sourcegitcommit: 92b2e3cf058e6b1e9484e155d2cc28ed2a0b7a8c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "67971915"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77600140"
 ---
 # <a name="sqlservercallablestatement-class"></a>SQLServerCallableStatement クラス
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  入力パラメーターおよび出力パラメーターと共に、呼び出すストアド プロシージャの名前を指定できます。 また、? = call( ?, ..) 構文を使用して状態の戻り値を取得することもできます。 = call( ?, ..) syntax.  
+  入力パラメーターおよび出力パラメーターと共に、呼び出すストアド プロシージャの名前を指定できます。 また、`? = call( ?, ..)` 構文を使用して状態の戻り値を取得することもできます。  
   
  **パッケージ:** com.microsoft.sqlserver.jdbc  
   

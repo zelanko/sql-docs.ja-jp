@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: b6000c540d2847686fd8f14c4ae6a0926f8dbb72
-ms.sourcegitcommit: 1feba5a0513e892357cfff52043731493e247781
+ms.openlocfilehash: 88e2325af328e32a246ca484ab447cc99be887c0
+ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77466173"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77903877"
 ---
 # <a name="query-processing-architecture-guide"></a>クエリ処理アーキテクチャ ガイド
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -139,19 +139,22 @@ GO
 - 定数のみから構成される数式 (1+1、5/3*2 など)。
 - 定数のみから構成される論理式 (1=1、1>2 AND 3>4 など)。
 - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] によってたたみ込み可能と判断された組み込み関数 (`CAST`、`CONVERT` など)。 固有の関数は、通常はたたみ込み可能です。ただし結果が関数への入力のみによって決まらず、SET オプション、言語設定、データベース オプション、暗号化キーなどの、状況によって変わりうる他の情報を交えて決まる場合は例外です。 非決定的関数はたたみ込み不可能です。 組み込みの決定的関数はたたみ込み可能ですが、一部例外があります。
+- CLR ユーザー定義型の決定的メソッドおよび決定的スカラー値 CLR ユーザー定義関数 ([!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以降)。 詳細については、「[CLR ユーザー定義関数およびメソッドの定数たたみ込み](https://docs.microsoft.com/sql/database-engine/behavior-changes-to-database-engine-features-in-sql-server-2014#constant-folding-for-clr-user-defined-functions-and-methods)」を参照してください。
 
 > [!NOTE] 
-> 例外の 1 つは LOB 型です。 たたみ込み処理の出力が LOB 型 (text、image、nvarchar(max)、varchar(max)、または varbinary(max) のいずれか) である場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では式はたたみ込まれません。
+> 例外の 1 つは LOB 型です。 たたみ込み処理の出力の種類がラージ オブジェクト型 (text、ntext、image、nvarchar(max)、varchar(max)、varbinary(max)、または XML) である場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では式はたたみ込まれません。
 
 #### <a name="nonfoldable-expressions"></a>たたみ込み不可能な式
 その他の種類の式は、すべてたたみ込み不可能です。 具体的には、次に示す種類の式です。
 - 定数ではない式 (結果が列の値によって変わる式など)。
 - 結果がローカル変数またはパラメーター (@x など) によって変わる式。
 - 非決定的関数。
-- ユーザー定義関数 ([!INCLUDE[tsql](../includes/tsql-md.md)] および CLR)
+- ユーザー定義 [!INCLUDE[tsql](../includes/tsql-md.md)] 関数<sup>1</sup>。
 - 結果が言語設定によって変わる式。
 - 結果が SET オプションによって変わる式。
 - 結果がサーバー構成オプションによって変わる式。
+
+<sup>1</sup> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] より前は、決定的スカラー値 CLR ユーザー定義関数および CLR ユーザー定義型のメソッドはたたみ込み可能ではありませんでした。 
 
 #### <a name="examples-of-foldable-and-nonfoldable-constant-expressions"></a>たたみ込み可能/不可能な定数式の例
 次のクエリを考えてみます。
@@ -912,21 +915,27 @@ WHERE ProductID = 63;
 > 一部の構造は、実行プランの全体または一部分で、並列処理を利用する [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の機能を妨げます。
 
 並列処理を妨げる構造は次のとおりです。
->
-> - **スカラー UDF**    
->   スカラー ユーザー定義関数について詳しくは、「[ユーザー定義関数の作成](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar)」をご覧ください。 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 以降の [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]には、これらの関数をインライン化する機能があり、クエリ処理中の並列処理の使用をロック解除します。 スカラー UDF のインライン化について詳しくは、「[SQL データベースでのインテリジェントなクエリ処理](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining)」をご覧ください。
-> - **リモート クエリ**    
->   リモート クエリについて詳しくは、「[プラン表示の論理操作と物理操作のリファレンス](../relational-databases/showplan-logical-and-physical-operators-reference.md)」をご覧ください。
-> - **動的カーソル**    
->   カーソルについて詳しくは、「[DECLARE CURSOR](../t-sql/language-elements/declare-cursor-transact-sql.md)」をご覧ください。
-> - **再帰クエリ**    
->   再帰について詳しくは、「[再帰共通テーブル式の定義および使用に関するガイドライン](../t-sql/queries/with-common-table-expression-transact-sql.md#guidelines-for-defining-and-using-recursive-common-table-expressions)」および「[Recursion in T-SQL](https://msdn.microsoft.com/library/aa175801(v=sql.80).aspx)」(T-SQL での再帰) をご覧ください。
-> - **テーブル値関数 (TVF)**     
->   TVF について詳しくは、「[ユーザー定義関数の作成 (データベース エンジン)](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF)」をご覧ください。
-> - **TOP キーワード**    
->   詳しくは、「[TOP (Transact-SQL)](../t-sql/queries/top-transact-sql.md)」をご覧ください。
+-   **スカラー UDF**        
+    スカラー ユーザー定義関数について詳しくは、「[ユーザー定義関数の作成](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar)」をご覧ください。 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 以降の [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]には、これらの関数をインライン化する機能があり、クエリ処理中の並列処理の使用をロック解除します。 スカラー UDF のインライン化について詳しくは、「[SQL データベースでのインテリジェントなクエリ処理](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining)」をご覧ください。
+    
+-   **リモート クエリ**        
+    リモート クエリについて詳しくは、「[プラン表示の論理操作と物理操作のリファレンス](../relational-databases/showplan-logical-and-physical-operators-reference.md)」をご覧ください。
+    
+-   **動的カーソル**        
+    カーソルについて詳しくは、「[DECLARE CURSOR](../t-sql/language-elements/declare-cursor-transact-sql.md)」をご覧ください。
+    
+-   **再帰クエリ**        
+    再帰について詳しくは、「[再帰共通テーブル式の定義および使用に関するガイドライン](../t-sql/queries/with-common-table-expression-transact-sql.md#guidelines-for-defining-and-using-recursive-common-table-expressions)」および「[Recursion in T-SQL](https://msdn.microsoft.com/library/aa175801(v=sql.80).aspx)」(T-SQL での再帰) をご覧ください。
 
-交換操作を挿入すると、並列クエリの実行プランになります。 並列クエリの実行プランでは複数のワーカー スレッドを使用できます。 並列でないクエリで使用する直列の実行プランの場合、実行時に使用するワーカー スレッドは 1 つのみです。 並列クエリで実際に使用するワーカー スレッドの数は、クエリ プランを実行するための初期化の時点で、プランの複雑さと並列処理の次数に応じて決まります。 並列処理の次数は、使用している CPU の最大数によって決まります (これは使用しているワーカー スレッドの数という意味ではありません)。 並列処理の次数はサーバー レベルで設定され、sp_configure システム ストアド プロシージャで変更できます。 クエリ ステートメントで `MAXDOP` クエリ ヒントを、またはインデックス ステートメントで `MAXDOP` インデックス オプションを指定することにより、この値をオーバーライドできます。 
+-   **テーブル値関数 (TVF)**         
+    TVF について詳しくは、「[ユーザー定義関数の作成 (データベース エンジン)](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF)」をご覧ください。
+    
+-   **TOP キーワード**        
+    詳しくは、「[TOP (Transact-SQL)](../t-sql/queries/top-transact-sql.md)」をご覧ください。
+
+交換操作を挿入すると、並列クエリの実行プランになります。 並列クエリの実行プランでは複数のワーカー スレッドを使用できます。 並列でない (直列) クエリで使用する直列の実行プランの場合、実行時に使用するワーカー スレッドは 1 つのみです。 並列クエリで実際に使用するワーカー スレッドの数は、クエリ プランを実行するための初期化の時点で、プランの複雑さと並列処理の次数に応じて決まります。 
+
+並列処理の次数 (DOP) は、使用している CPU の最大数によって決まります (これは使用しているワーカー スレッドの数という意味ではありません)。 DOP の制限は、[タスク](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)ごとに設定されます。 この設定は、[要求](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)ごとまたはクエリ制限ごとではありません。 つまり、並列クエリ実行中に、1 つの要求で、[スケジューラ](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)に割り当てられてた複数のタスクを生成することができます。 さまざまなタスクが同時に実行される場合、MAXDOP によって指定された数よりも多くのプロセッサが、クエリ実行の特定の時点で同時に使用される場合があります。 詳細については、「[スレッドおよびタスクのアーキテクチャ ガイド](../relational-databases/thread-and-task-architecture-guide.md)」を参照してください。
 
 次のいずれかの条件が満たされている場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のクエリ オプティマイザーは、クエリに対して並列実行プランを使用しません。
 
@@ -937,21 +946,15 @@ WHERE ProductID = 63;
 ### <a name="DOP"></a> 並列処理の次数
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は、並列クエリの実行またはインデックス DDL (データ定義言語) 操作のインスタンスごとに、並列処理の最適な次数を自動的に検出します。 この処理は次の基準に基づいて実行されます。 
 
-1. SMP (対称型マルチプロセッシング) コンピューターなど、複数のマイクロプロセッサまたは CPU を搭載したコンピューターで [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] が実行されているかどうか。  
-   並列クエリを使用できるのは、複数の CPU を搭載したコンピューターだけです。 
+1. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] が、SMP (対称型マルチプロセッシング) コンピューターなど、**複数のマイクロプロセッサまたは CPU を搭載したコンピューター上で実行**されているかどうか。 並列クエリを使用できるのは、複数の CPU を搭載したコンピューターだけです。 
 
-2. 十分な数のワーカー スレッドを使用できるかどうか。  
-   各クエリまたはインデックス操作では、一定数のワーカー スレッドを実行する必要があります。 並列プランの実行には直列プランの場合よりも多くのワーカー スレッドが必要になり、必要なワーカー スレッド数は並列処理の次数が高くなるほど増加します。 並列処理の特定の次数に応じた並列プランのワーカー スレッド要件を満たすことができない場合、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]が並列処理の次数を自動的に下げるか、指定されたワークロード コンテキストでの並列プランを完全に破棄します。 その後、直列プラン (1 つのワーカー スレッド) を実行します。 
+2. **十分な数のワーカー スレッドを使用できる**かどうか。 各クエリまたはインデックス操作では、一定数のワーカー スレッドを実行する必要があります。 並列プランの実行には直列プランの場合よりも多くのワーカー スレッドが必要になり、必要なワーカー スレッド数は並列処理の次数が高くなるほど増加します。 並列処理の特定の次数に応じた並列プランのワーカー スレッド要件を満たすことができない場合、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]が並列処理の次数を自動的に下げるか、指定されたワークロード コンテキストでの並列プランを完全に破棄します。 その後、直列プラン (1 つのワーカー スレッド) を実行します。 
 
-3. 実行するクエリまたはインデックス操作の種類。  
-   インデックスの作成や再構築またはクラスター化インデックスの削除を行うインデックス操作、および CPU サイクルを大量に使用するクエリは並列プランの候補として最適です。 たとえば、大きなテーブルの結合、大量の集計、および大きな結果セットの並べ替えは候補として適しています。 トランザクション処理アプリケーションに多い単純なクエリの場合、クエリを並列実行するにはさらに調整が必要なので、パフォーマンスの向上は困難です。 並列処理の利点を得られるクエリとそうでないクエリを区別するために、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]は [cost threshold for parallelism](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md) 値を使用して、クエリまたはインデックス操作を実行するための推定コストを比較します。 適切なテストで実行中のワークロードには異なる値がより適していることが判明した場合、ユーザーは [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を使用して既定値の 5 を変更することができます。 
+3. **実行するクエリまたはインデックス操作の種類**。 インデックスの作成や再構築またはクラスター化インデックスの削除を行うインデックス操作、および CPU サイクルを大量に使用するクエリは並列プランの候補として最適です。 たとえば、大きなテーブルの結合、大量の集計、および大きな結果セットの並べ替えは候補として適しています。 トランザクション処理アプリケーションに多い単純なクエリの場合、クエリを並列実行するにはさらに調整が必要なので、パフォーマンスの向上は困難です。 並列処理の利点を得られるクエリとそうでないクエリを区別するために、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]は [cost threshold for parallelism](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md) 値を使用して、クエリまたはインデックス操作を実行するための推定コストを比較します。 適切なテストで実行中のワークロードには異なる値がより適していることが判明した場合、ユーザーは [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を使用して既定値の 5 を変更することができます。 
 
-4. 処理する十分な数の行があるかどうか。  
-   クエリ オプティマイザーによって行数が少なすぎると判断されると、行を分散するための交換操作は導入されません。 したがって、操作は直列に実行されます。 直列プランで操作を実行すると、並列操作を実行したときに得られる効果より、起動、分散、および調整のコストの方が上回る事態を回避することができます。
+4. **処理する十分な数の行**があるかどうか。 クエリ オプティマイザーによって行数が少なすぎると判断されると、行を分散するための交換操作は導入されません。 したがって、操作は直列に実行されます。 直列プランで操作を実行すると、並列操作を実行したときに得られる効果より、起動、分散、および調整のコストの方が上回る事態を回避することができます。
 
-5. 現在の分布統計が使用できるかどうか。  
-   並列処理の最高次数が提供されない場合、並列プランが放棄される前に、それより低い次数が検討されます。  
-  たとえば、ビューにクラスター化インデックスを作成する場合、クラスター化インデックスはまだ存在しないので、分布統計を評価できません。 この場合、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]では、インデックス操作用に並列処理の最高次数を提供できません。 ただし、並べ替えやスキャンなどの一部の操作では、それまでどおり並列実行の利点を得ることができます。
+5. **現在の分布統計が使用できる**かどうか。 並列処理の最高次数が提供されない場合、並列プランが放棄される前に、それより低い次数が検討されます。 たとえば、ビューにクラスター化インデックスを作成する場合、クラスター化インデックスはまだ存在しないので、分布統計を評価できません。 この場合、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]では、インデックス操作用に並列処理の最高次数を提供できません。 ただし、並べ替えやスキャンなどの一部の操作では、それまでどおり並列実行の利点を得ることができます。
 
 > [!NOTE]
 > 並列インデックス操作は、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise Edition、Developer Edition、および Evaluation Edition でのみ使用できます。
@@ -963,11 +966,23 @@ WHERE ProductID = 63;
 静的カーソルとキーセット ドリブン カーソルは、並列実行プランによって作成できます。 ただし、動的カーソルの動作は、直列実行の場合だけ有効です。 クエリ オプティマイザーは、動的カーソルの一部であるクエリに対しては必ず直列実行プランを生成します。
 
 #### <a name="overriding-degrees-of-parallelism"></a>並列処理の次数のオーバーライド
-[max degree of parallelism](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) (MAXDOP) サーバー構成オプション ([!INCLUDE[ssSDS_md](../includes/sssds-md.md)]では [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)) を使用すると、並列プランの実行で使用されるプロセッサの数を制限できます。 max degree of parallelism オプションは、MAXDOP クエリ ヒントまたは MAXDOP インデックス オプションを指定することにより、個別のクエリやインデックス操作のステートメントでオーバーライドできます。 MAXDOP では、個別のクエリやインデックス操作をより制御できます。 たとえば、MAXDOP オプションを使用すると、オンライン インデックス操作専用のプロセッサの数を増減することによって制御できます。 このようにして、インデックス操作で使用されるリソースと同時実行ユーザーが使用するリソースのバランスをとることができます。 
+並列プランの実行で使用するプロセッサの数は、並列処理の次数によって設定されます。 この構成は、次のさまざまなレベルで設定できます。
+
+1.  サーバー レベル。**並列処理の最大限度 (MAXDOP)** の[サーバー構成オプション](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。</br> **適用対象:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
+
+    > [!NOTE]
+    > [!INCLUDE [sssqlv15-md](../includes/sssqlv15-md.md)] では、インストール プロセス中に MAXDOP サーバー構成オプションを設定するための自動推奨事項が導入されています。 セットアップのユーザー インターフェイスでは、推奨設定を受け入れることも、独自の値を入力することもできます。 詳細については、「[[データベース エンジンの構成] - [MAXDOP] ページ](../sql-server/install/instance-configuration.md#maxdop)」を参照してください。
+
+2.  ワークロード レベル。**MAX_DOP** [Resource Governor ワークロード グループ構成オプション](../t-sql/statements/create-workload-group-transact-sql.md)を使用します。</br> **適用対象:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
+
+3.  データベース レベル。**MAXDOP** [データベース スコープ構成](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)を使用します。</br> **適用対象:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] および [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] 
+
+4.  クエリまたはインデックス ステートメント レベル。**MAXDOP** [クエリ ヒント](../t-sql/queries/hints-transact-sql-query.md)または **MAXDOP** インデックス オプションを使用します。 たとえば、MAXDOP オプションを使用すると、オンライン インデックス操作専用のプロセッサの数を増減することによって制御できます。 このようにして、インデックス操作で使用されるリソースと同時実行ユーザーが使用するリソースのバランスをとることができます。</br> **適用対象:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] および [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] 
 
 max degree of parallelism オプションを 0 (既定) に設定すると、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] で並列プランの実行で使用するプロセッサの数を最大 64 に制限できます。 MAXDOP オプションを 0 に設定すると、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では 64 個の論理プロセッサという実行時ターゲットが設定されますが、必要であれば、別の値を手動で設定できます。 クエリおよびインデックスに対して MAXDOP を 0 に設定すると、並列プランの実行で指定されたクエリまたはインデックスに対して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] で利用可能なすべてのプロセッサ (最大 64) を使用できます。 MAXDOP はあらゆる並列クエリに強制される値ではなく、並列に望ましいあらゆるクエリにとっての仮のターゲットです。 つまり、実行時に十分なワーカー スレッドが利用できない場合、MAXDOP サーバー構成オプションより低い並列度でクエリが実行されることがあります。
 
-MAXDOP 構成のベスト プラクティスについては、[この Microsoft サポート記事](https://support.microsoft.com/help/2806535/recommendations-and-guidelines-for-the-max-degree-of-parallelism-configuration-option-in-sql-server)を参照してください。
+> [!TIP]
+> MAXDOP の構成に関するガイドラインについては、こちらの[ドキュメント ページ](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)を参照してください。
 
 ### <a name="parallel-query-example"></a>並列クエリの例
 次のクエリでは、2000 年 4 月 1 日を開始日とする特定の四半期に受けた注文のうち、納品期日を過ぎた項目を 1 つ以上含む注文の件数を数えます。 さらに、該当する注文を受注優先度別にグループ分けし、受注優先度の昇順に並べ替えてその注文数を一覧表示します。 

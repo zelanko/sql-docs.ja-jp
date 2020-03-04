@@ -1,18 +1,18 @@
 ---
 title: リリース ノート (OLE DB Driver for SQL Server) | Microsoft Docs
-ms.date: 10/11/2019
+ms.date: 02/27/2020
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 ms.reviewer: genemi
 author: mateusz-kmiecik
 ms.author: v-makmie
-ms.openlocfilehash: 23c730ce0bba9003b47b777108907763d981c551
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 90da0d1d42878fcbe65b1086663775d546751c80
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74401533"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78177362"
 ---
 # <a name="release-notes-for-the-microsoft-ole-db-driver-for-sql-server"></a>Microsoft OLE DB Driver for SQL Server のリリース ノート
 
@@ -31,7 +31,14 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 
 ## <a name="1830"></a>18.3.0
 
-2019 年 10 月
+![ダウンロード](../../ssdt/media/download.png) [x64 インストーラーのダウンロード](https://go.microsoft.com/fwlink/?linkid=2117515)  
+![ダウンロード](../../ssdt/media/download.png) [x86 インストーラーのダウンロード](https://go.microsoft.com/fwlink/?linkid=2117517)  
+
+リリース日:2019 年 10 月
+
+自動的に検出されたもの以外の言語でインストーラーをダウンロードする必要がある場合は、以下の直接リンクを使用できます。  
+X64 ドライバーの場合: [簡体中国語](https://go.microsoft.com/fwlink/?linkid=2117515&clcid=0x804) | [繁体中国語](https://go.microsoft.com/fwlink/?linkid=2117515&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=2117515&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=2117515&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=2117515&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=2117515&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=2117515&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=2117515&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=2117515&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=2117515&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=2117515&clcid=0x40a)  
+X86 ドライバーの場合: [簡体中国語](https://go.microsoft.com/fwlink/?linkid=2117517&clcid=0x804) | [繁体中国語](https://go.microsoft.com/fwlink/?linkid=2117517&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=2117517&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=2117517&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=2117517&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=2117517&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=2117517&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=2117517&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=2117517&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=2117517&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=2117517&clcid=0x40a)  
 
 ### <a name="features-added"></a>追加された機能
 
@@ -48,9 +55,20 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 | [IIndexDefinition::DropIndex](https://go.microsoft.com/fwlink/?linkid=2106448) のインデックスの削除ロジックが修正されました。 | 以前のバージョンの OLE DB ドライバーでは、インデックスの所有者のスキーマ ID とユーザー ID が同じでない場合、主キー インデックスを削除できません。 |
 | &nbsp; | &nbsp; |
 
+## <a name="previous-releases"></a>以前のリリース
+
+以前のバージョンの OLE DB Driver をダウンロードするには、次のセクションのダウンロード リンクをクリックします。
+
 ## <a name="1823"></a>18.2.3
 
-2019 年 6 月
+![ダウンロード](../../ssdt/media/download.png) [x64 インストーラーのダウンロード](https://go.microsoft.com/fwlink/?linkid=2119554)  
+![ダウンロード](../../ssdt/media/download.png) [x86 インストーラーのダウンロード](https://go.microsoft.com/fwlink/?linkid=2119738)  
+
+リリース日:2019 年 6 月
+
+自動的に検出されたもの以外の言語でインストーラーをダウンロードする必要がある場合は、以下の直接リンクを使用できます。  
+X64 ドライバーの場合: [簡体中国語](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x804) | [繁体中国語](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x40a)  
+X86 ドライバーの場合: [簡体中国語](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x804) | [繁体中国語](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x40a)  
 
 ### <a name="features-added"></a>追加された機能
 
@@ -61,7 +79,14 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 
 ## <a name="1822"></a>18.2.2
 
-2019 年 5 月
+![ダウンロード](../../ssdt/media/download.png) [x64 インストーラーのダウンロード](https://go.microsoft.com/fwlink/?linkid=2118512)  
+![ダウンロード](../../ssdt/media/download.png) [x86 インストーラーのダウンロード](https://go.microsoft.com/fwlink/?linkid=2118415)  
+
+リリース日:2019 年 5 月
+
+自動的に検出されたもの以外の言語でインストーラーをダウンロードする必要がある場合は、以下の直接リンクを使用できます。  
+X64 ドライバーの場合: [簡体中国語](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x804) | [繁体中国語](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x40a)  
+X86 ドライバーの場合: [簡体中国語](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x804) | [繁体中国語](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x40a)  
 
 ### <a name="bugs-fixed"></a>修正されたバグ
 
@@ -72,7 +97,14 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 
 ## <a name="1821"></a>18.2.1
 
-2019 年 2 月
+![ダウンロード](../../ssdt/media/download.png) [x64 インストーラーのダウンロード](https://go.microsoft.com/fwlink/?linkid=2118511)  
+![ダウンロード](../../ssdt/media/download.png) [x86 インストーラーのダウンロード](https://go.microsoft.com/fwlink/?linkid=2118278)  
+
+リリース日:2019 年 2 月
+
+自動的に検出されたもの以外の言語でインストーラーをダウンロードする必要がある場合は、以下の直接リンクを使用できます。  
+X64 ドライバーの場合: [簡体中国語](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x804) | [繁体中国語](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x40a)  
+X86 ドライバーの場合: [簡体中国語](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x804) | [繁体中国語](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x40a)  
 
 ### <a name="features-added"></a>追加された機能
 
@@ -84,7 +116,14 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 
 ## <a name="1810"></a>18.1.0
 
-2018 年 7 月
+![ダウンロード](../../ssdt/media/download.png) [x64 インストーラーのダウンロード](https://go.microsoft.com/fwlink/?linkid=2118506)  
+![ダウンロード](../../ssdt/media/download.png) [x86 インストーラーのダウンロード](https://go.microsoft.com/fwlink/?linkid=2118509)  
+
+リリース日:2018 年 7 月
+
+自動的に検出されたもの以外の言語でインストーラーをダウンロードする必要がある場合は、以下の直接リンクを使用できます。  
+X64 ドライバーの場合: [簡体中国語](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x804) | [繁体中国語](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x40a)  
+X86 ドライバーの場合: [簡体中国語](https://go.microsoft.com/fwlink/?linkid=2118509&2118509=0x804) | [繁体中国語](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x40a)  
 
 ### <a name="features-added"></a>追加された機能
 
@@ -102,6 +141,15 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 
 ## <a name="1802"></a>18.0.2
 
+![ダウンロード](../../ssdt/media/download.png) [x64 インストーラーのダウンロード](https://go.microsoft.com/fwlink/?linkid=2118504)  
+![ダウンロード](../../ssdt/media/download.png) [x86 インストーラーのダウンロード](https://go.microsoft.com/fwlink/?linkid=2118277)  
+
+リリース日:2018 年 3 月
+
+自動的に検出されたもの以外の言語でインストーラーをダウンロードする必要がある場合は、以下の直接リンクを使用できます。  
+X64 ドライバーの場合: [簡体中国語](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x804) | [繁体中国語](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x40a)  
+X86 ドライバーの場合: [簡体中国語](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x804) | [繁体中国語](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x40a)  
+
 ### <a name="features-added"></a>追加された機能
 
 | 追加された機能 | 詳細 |
@@ -109,6 +157,6 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 | `MultiSubnetFailover` 接続文字列キーワードと `SSPROP_INIT_MULTISUBNETFAILOVER` 初期化プロパティのサポート。 | 詳細については、次を参照してください。<br/>&bull; &nbsp; [OLE DB Driver for SQL Server の高可用性、ディザスター リカバリーに関するサポート](features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)<br/>&bull; &nbsp; [OLE DB Driver for SQL Server での接続文字列キーワードの使用](applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)。 |
 | &nbsp; | &nbsp; |
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [Microsoft OLE DB Driver for SQL Server](oledb-driver-for-sql-server.md)

@@ -1,7 +1,7 @@
 ---
 title: Java EE のサポートについて | Microsoft Docs
 ms.custom: ''
-ms.date: 01/29/2020
+ms.date: 02/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: a9448b80-b7a3-49cf-8bb4-322c73676005
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c120df0f29e9d4debc0061a13363fc99d8c44c37
-ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
+ms.openlocfilehash: 53caa00a6fe0430614b74f91ab28ccb5ef4aa742
+ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "77004597"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77903719"
 ---
 # <a name="understanding-java-ee-support"></a>Java EE のサポートについて
 
@@ -39,7 +39,7 @@ JDBC Driver 7.2 では、ドライバーは **mssql-jdbc-7.2.2.jre8.jar** また
 
 JDBC Driver 7.4 では、ドライバーは **mssql-jdbc-7.4.1.jre8.jar**、**mssql-jdbc-7.4.1.jre11.jar**、または **mssql-jdbc-7.4.1.jre12.jar** に含まれています。
 
-JDBC Driver 8.2 では、ドライバーは **mssql-jdbc-8.2.0.jre8.jar**、**mssql-jdbc-8.2.0.jre11.jar**、または **mssql-jdbc-8.2.0.jre13.jar**に含まれています。
+JDBC Driver 8.2 では、ドライバーは **mssql-jdbc-8.2.1.jre8.jar**、**mssql-jdbc-8.2.1.jre11.jar**、または **mssql-jdbc-8.2.1.jre13.jar** に含まれています。
 
 JDBC DriverManager クラスを使用してドライバーを読み込む場合、および任意のドライバー構成でドライバーのクラス名を指定する場合は常に、このクラス名が使用されます。 たとえば、Java EE アプリケーション サーバー内でデータ ソースを構成するには、ドライバーのクラス名を入力する必要が生じる場合があります。  
   

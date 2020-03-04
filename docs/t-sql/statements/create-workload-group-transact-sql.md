@@ -20,12 +20,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current'
-ms.openlocfilehash: ca80b2f95ee049d763d22f35e4ff6d35e344a8c0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: b217787d0cba0a1d62ab8393ef7fac76d7665bb0
+ms.sourcegitcommit: d876425e5c465ee659dd54e7359cda0d993cbe86
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75956498"
+ms.lasthandoff: 02/24/2020
+ms.locfileid: "77568065"
 ---
 # <a name="create-workload-group-transact-sql"></a>CREATE WORKLOAD GROUP (Transact-SQL)
 
@@ -68,9 +68,11 @@ CREATE WORKLOAD GROUP group_name
 
 ## <a name="arguments"></a>引数
 
-*group_name* には、ワークロード グループのユーザー定義の名前を指定します。 *group_name* には、英数字を最大 128 文字まで使用できます。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス内で一意である必要があり、[識別子](../../relational-databases/databases/database-identifiers.md)のルールに従っている必要があります。
+*group_name*</br>
+ワークロード グループのユーザー定義の名前を指定します。 *group_name* には、英数字を最大 128 文字まで使用できます。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス内で一意である必要があり、[識別子](../../relational-databases/databases/database-identifiers.md)のルールに従っている必要があります。
 
-IMPORTANCE = { LOW | **MEDIUM** | HIGH } ワークロード グループでの要求の相対的な重要度を指定します。 重要度は次のいずれかで、MEDIUM が既定値です。
+IMPORTANCE = { LOW | **MEDIUM** | HIGH }</br>
+ワークロード グループでの要求の相対的な重要度を指定します。 重要度は次のいずれかで、MEDIUM が既定値です。
 
 - LOW
 - MEDIUM (既定)
@@ -81,9 +83,10 @@ IMPORTANCE = { LOW | **MEDIUM** | HIGH } ワークロード グループでの�
 
 IMPORTANCE は、リソース プールに対してローカルです。同じリソース プール内の異なる重要度のワークロード グループは互いに影響しますが、別のリソース プールのワークロード グループには影響しません。
 
-REQUEST_MAX_MEMORY_GRANT_PERCENT = *value* 1 つの要求にプールから割り当てられる最大メモリ容量を指定します。 *value* は、MAX_MEMORY_PERCENT で指定したリソース プールのサイズが基準になります。
+REQUEST_MAX_MEMORY_GRANT_PERCENT = *value*</br>
+1 つの要求にプールから割り当てられる最大メモリ量を指定します。 *value* は、MAX_MEMORY_PERCENT で指定したリソース プールのサイズが基準になります。
 
-*value* は [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] までの整数と [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] で始まる float です。 既定値は 25 です。 *value* の許容範囲は 1 ～ 100 です。
+*value* は、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] までは整数であり、[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] マネージド インスタンスでは float です。 既定値は 25 です。 *value* の許容範囲は 1 ～ 100 です。
 
 > [!IMPORTANT]  
 > 指定した量のみがクエリの実行時に許可されるメモリとして割り当てられます。
@@ -100,22 +103,26 @@ REQUEST_MAX_MEMORY_GRANT_PERCENT = *value* 1 つの要求にプールから割�
 >
 > サーバーに十分な物理メモリがない場合は、どちらの場合も時間切れエラー 8645 が発生する可能性があります。
 
-REQUEST_MAX_CPU_TIME_SEC = *value* 1 回の要求に与えられる CPU 最大時間を秒単位で指定します。 *value* は、0 または正の整数にする必要があります。 *value* の既定の設定が 0 の場合は、無制限を示します。
+REQUEST_MAX_CPU_TIME_SEC = *value*</br>
+要求が使用できる最大 CPU 時間を秒単位で指定します。 *value* は、0 または正の整数にする必要があります。 *value* の既定の設定が 0 の場合は、無制限を示します。
 
 > [!NOTE]
 > 既定では、リソース ガバナーでは最大時間を超過しても、要求は継続されます。 ただし、イベントが生成されます。 詳細については、「[CPU Threshold Exceeded イベント クラス](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md)」を参照してください。
 > [!IMPORTANT]
 > [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 および [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 以降では、[トレース フラグ 2422](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) を使用すると、最大時間を超えたときにリソース ガバナーが要求を中止します。
 
-REQUEST_MEMORY_GRANT_TIMEOUT_SEC = *value* メモリ許可 (作業バッファー メモリ) が使用可能になるのをクエリが待機できる最大時間を秒単位で指定します。 *value* は、0 または正の整数にする必要があります。 *value* の既定の設定である 0 の場合、クエリ コストに基づく内部の計算を使用して、最大時間が決定されます。
+REQUEST_MEMORY_GRANT_TIMEOUT_SEC = *value*</br>
+メモリ許可 (作業バッファー メモリ) が使用可能になるのをクエリが待機できる最大時間を秒単位で指定します。 *value* は、0 または正の整数にする必要があります。 *value* の既定の設定である 0 の場合、クエリ コストに基づく内部の計算を使用して、最大時間が決定されます。
 
 > [!NOTE]
 > メモリ許可のタイムアウトに達しても、常にクエリが失敗するとは限りません。 クエリが失敗するのは、同時実行クエリ数が多すぎる場合だけです。 それ以外の場合、クエリは最小限のメモリ許可しか取得できないので、クエリのパフォーマンスが低下します。
 
-MAX_DOP = *value* 並列クエリ実行に対する **maximum degree of parallelism (MAXDOP)** を指定します。 *value* は、0 または正の整数にする必要があります。 *value* の許容範囲は 0 から 64 です。 *value* の既定の設定は 0 で、グローバル設定が使用されます。 MAX_DOP は次のように処理されます。
+MAX_DOP = *value*</br>
+並列クエリ実行に対する**並列処理の最大限度 (MAXDOP)** を指定します。 *value* は、0 または正の整数にする必要があります。 *value* の許容範囲は 0 から 64 です。 *value* の既定の設定は 0 で、グローバル設定が使用されます。 MAX_DOP は次のように処理されます。
 
 > [!NOTE]
 > ワークロード グループの MAX_DOP では、[並列処理の最大限度に対するサーバー構成](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)と、**MAXDOP** [データベース スコープ構成](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)がオーバーライドされます。
+
 > [!TIP]
 > これをクエリ レベルで行うには、**MAXDOP** [クエリ ヒント](../../t-sql/queries/hints-transact-sql-query.md)を使用します。 ワークロード グループの MAX_DOP を超えない限り、クエリ ヒントとして並列処理の最大限度を設定することは有効です。 MAXDOP クエリ ヒントの値が Resource Governor を使用して構成されている値を超える場合、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ではリソース ガバナーの `MAX_DOP` の値が使用されます。 MAXDOP [クエリ ヒント](../../t-sql/queries/hints-transact-sql-query.md)では常に、[並列処理の最大限度のサーバー構成](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)がオーバーライドされます。
 >
@@ -123,16 +130,19 @@ MAX_DOP = *value* 並列クエリ実行に対する **maximum degree of parallel
 >
 > これをサーバー レベルで行うには、**並列処理の最大限度 (MAXDOP)** [サーバー構成オプション](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)を使用します。
 
-GROUP_MAX_REQUESTS = *value* ワークロード グループで実行を許可する同時要求の最大数を指定します。 *value* には、0 または正の整数を指定する必要があります。 *value* の既定の設定は 0 であり、これでは無制限の要求が許可されます。 同時要求の最大数に達した場合、そのグループのユーザーはログインできますが、同時要求数が指定した値を下回るまで待機状態になります。
+GROUP_MAX_REQUESTS = *value*</br>
+ワークロード グループで実行を許可する同時要求の最大数を指定します。 *value* には、0 または正の整数を指定する必要があります。 *value* の既定の設定は 0 であり、これでは無制限の要求が許可されます。 同時要求の最大数に達した場合、そのグループのユーザーはログインできますが、同時要求数が指定した値を下回るまで待機状態になります。
 
-USING { *pool_name* |  **"default"** } ワークロード グループを *pool_name* で識別されるユーザー定義のリソース プールに関連付けます。 実質的には、これによってワークロード グループがグループ リソースに配置されます。 *pool_name* を指定していない場合、または USING 引数を使用していない場合、ワークロード グループは事前に定義されたリソース ガバナーの既定のプールに配置されます。
+USING { *pool_name* |  **"default"** }</br>
+ワークロード グループを *pool_name* で識別されるユーザー定義のリソース プールに関連付けます。 実質的には、これによってワークロード グループがグループ リソースに配置されます。 *pool_name* を指定していない場合、または USING 引数を使用していない場合、ワークロード グループは事前に定義されたリソース ガバナーの既定のプールに配置されます。
 
 予約語の "default" を USING で使用する場合は、引用符 ("") または角かっこ ([]) で囲む必要があります。
 
 > [!NOTE]
 > 定義済みのワークロード グループおよびリソース プールではすべて、"default" などの小文字の名前が使用されています。 大文字と小文字を区別する照合順序を使用するサーバーでは、これを考慮する必要があります。 SQL_Latin1_General_CP1_CI_AS など、大文字と小文字を区別しない照合順序を使用するサーバーでは、"default" と "Default" が同じものと見なされます。
 
-EXTERNAL external_pool_name | "default" **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降)。
+EXTERNAL external_pool_name | "default"</br>
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降)。
 
 ワークロード グループには、外部リソース プールを指定できます。 ワークロード グループを定義し、2 つのプールに関連付けることができます。
 
@@ -161,7 +171,11 @@ Resource Governor の既定の設定を使用し、Resource Governor の既定�
 
 ```sql
 CREATE WORKLOAD GROUP newReports
-    USING "default" ;
+WITH
+    (REQUEST_MAX_MEMORY_GRANT_PERCENT = 2.5
+      , REQUEST_MAX_CPU_TIME_SEC = 100
+      , MAX_DOP = 4)    
+USING "default" ;
 GO
 ```
 
@@ -191,14 +205,15 @@ GO
 
 ```
 CREATE WORKLOAD GROUP group_name
- WITH
- (        MIN_PERCENTAGE_RESOURCE = value
-      ,   CAP_PERCENTAGE_RESOURCE = value
-      ,   REQUEST_MIN_RESOURCE_GRANT_PERCENT = value
+[ WITH
+ (  [ MIN_PERCENTAGE_RESOURCE = value ]
+  [ [ , ] CAP_PERCENTAGE_RESOURCE = value ]
+  [ [ , ] REQUEST_MIN_RESOURCE_GRANT_PERCENT = value ]
   [ [ , ] REQUEST_MAX_RESOURCE_GRANT_PERCENT = value ]
-  [ [ , ] IMPORTANCE = { LOW | BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH }]
+  [ [ , ] IMPORTANCE = { LOW | BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH } ]
   [ [ , ] QUERY_EXECUTION_TIMEOUT_SEC = value ] )
   [ ; ]
+]
 ```
 
 *group_name*</br>
@@ -216,10 +231,11 @@ CREATE WORKLOAD GROUP group_name
 次に例を示します。
 
 ```sql
-CREATE WORKLOAD GROUP wgSample WITH
-( MIN_PERCENTAGE_RESOURCE = 26              -- integer value
- ,REQUEST_MIN_RESOURCE_GRANT_PERCENT = 3.25 -- factor of 26 (guaranteed a minimum of 8 concurrency)
- ,CAP_PERCENTAGE_RESOURCE = 100 )
+CREATE WORKLOAD GROUP wgSample 
+WITH
+  ( MIN_PERCENTAGE_RESOURCE = 26                -- integer value
+    , REQUEST_MIN_RESOURCE_GRANT_PERCENT = 3.25 -- factor of 26 (guaranteed a minimum of 8 concurrency)
+    , CAP_PERCENTAGE_RESOURCE = 100 )
 ```
 
 request_min_resource_grant_percent のガイドラインとして、リソース クラスに使用される値を検討してください。  次の表には、Gen2 のリソース割り当てが含まれています。
@@ -232,10 +248,10 @@ request_min_resource_grant_percent のガイドラインとして、リソース
 |Xlargerc|70%|
 |||
 
-*REQUEST_MAX_RESOURCE_GRANT_PERCENT* = value</br>
+*REQUEST_MAX_RESOURCE_GRANT_PERCENT* = value</br>         
 要求ごとに割り当てられるリソースの最大量を設定します。 *value* は省略可能な 10 進数のパラメーターで、既定値は request_min_resource_grant_percent と同じ値です。 *value* は request_min_resource_grant_percent 以上である必要があります。 request_max_resource_grant_percent の値が request_min_resource_grant_percent より大きく、システム リソースが使用可能な場合は、追加のリソースが要求に割り当てられます。
 
-*IMPORTANCE* = { LOW | BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH }</br>
+*IMPORTANCE* = { LOW | BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH }</br>        
 ワークロード グループに対する要求の既定の重要度を指定します。 重要度は次のいずれかで、NORMAL が既定値です。
 
 - LOW
@@ -246,18 +262,18 @@ request_min_resource_grant_percent のガイドラインとして、リソース
 
 ワークロード グループでの重要度セットは、ワークロード グループ内のすべての要求に対する既定の重要度です。 ユーザーは、分類子レベルで重要度を設定することもできます。これにより、ワークロード グループの重要度の設定をオーバーライドできます。 これにより、ワークロード グループ内の要求の重要度を区別して、予約されていないリソースにすばやくアクセスできるようになります。 ワークロード グループ全体で min_percentage_resource の合計が 100 未満の場合は、重要度に基づいて割り当てられた予約されていないリソースがあります。
 
-*QUERY_EXECUTION_TIMEOUT_SEC* = value</br>
+*QUERY_EXECUTION_TIMEOUT_SEC* = value</br>     
 クエリが取り消されるまでに実行できる最大時間を秒単位で指定します。 *value* は、0 または正の整数にする必要があります。 value の既定の設定が 0 の場合は、クエリはタイムアウトしません。クエリが実行状態になると、QUERY_EXECUTION_TIMEOUT_SEC がカウントされます。クエリがキューに入れられたときではありません。
 
 ## <a name="remarks"></a>解説
 
 リソース クラスに対応するワークロード グループは、旧バージョンとの互換性のために自動的に作成されます。 これらのシステム定義のワークロード グループは削除できません。 さらに 8 つのユーザー定義のワークロード グループを作成できます。
 
-ワークロード グループが 0 より大きい min_percentage_resource で作成された場合、`CREATE WORKLOAD GROUP` ステートメントは、ワークロード グループを作成するのに十分なリソースが確保されるまでキューに格納されます。
+ワークロード グループが 0 より大きい `min_percentage_resource` を使用して作成されている場合、`CREATE WORKLOAD GROUP` ステートメントは、ワークロード グループを作成するのに十分なリソースが確保されるまでキューに格納されます。
 
 ## <a name="effective-values"></a>有効な値
 
-min_percentage_resource、cap_percentage_resource、request_min_resource_grant_percent、request_max_resource_grant_percent パラメーターには、現在のサービス レベルのコンテキストで調整された有効な値と、その他のワークロード グループの構成が含まれます。
+`min_percentage_resource`、`cap_percentage_resource`、`request_min_resource_grant_percent`、`request_max_resource_grant_percent` の各パラメーターは、現在のサービス レベルおよびその他のワークロード グループの構成のコンテキストで調整された有効な値が含まれます。
 
 サービス レベルごとにサポートされるコンカレンシーは、リソース クラスを使用してクエリごとにリソースの許可を定義したときと同じになります。したがって、request_min_resource_grant_percent でサポートされる値は、インスタンスに設定されているサービス レベルによって異なります。 最も低いサービス レベル (DW100c) では、要求ごとに最小 25% のリソースが必要です。 DW100c では、構成されたワークロード グループの有効な request_min_resource_grant_percent は、25% 以上にすることができます。 有効値がどのように派生するかの詳細については、以下の表を参照してください。
 
@@ -281,17 +297,17 @@ min_percentage_resource、cap_percentage_resource、request_min_resource_grant_p
 |DW30000c|0.75%|128|
 ||||
 
-同様に、request_min_resource_grant_percent、min_percentage_resource は、有効な request_min_resource_grant_percent 以上である必要があります。 有効な min_percentage_resource 未満に構成された min_percentage_resource のワークロード グループには、実行時にゼロに調整される値が含まれています。 この場合、min_percentage_resource 用に構成されたリソースは、すべてのワークロード グループとの間で共有できます。 たとえば、DW1000c で実行されている min_percentage_resource が 10% であるワークロード グループ wgAdHoc には、有効な 10% の min_percentage_resource が含まれます (DW1000c でサポートされている最小値は 3.25% です)。 DW100c の wgAdhoc には、有効な 0% の min_percentage_resource が含まれます。 WgAdhoc 用に構成された 10% は、すべてのワークロード グループとの間で共有されます。
+同様に、request_min_resource_grant_percent、min_percentage_resource は、有効な request_min_resource_grant_percent 以上である必要があります。 有効な `min_percentage_resource` 未満に構成された `min_percentage_resource` のワークロード グループには、実行時にゼロに調整される値が含まれています。 この場合、`min_percentage_resource` 用に構成されたリソースは、すべてのワークロード グループとの間で共有できます。 たとえば、DW1000c で実行されている `min_percentage_resource` が 10% であるワークロード グループ `wgAdHoc` には、有効な 10% の `min_percentage_resource` が含まれます (DW1000c でサポートされている最小値は 3.25% です)。 DW100c の `wgAdhoc` には、有効な 0% の min_percentage_resource が含まれます。 `wgAdhoc` 用に構成された 10% は、すべてのワークロード グループとの間で共有されます。
 
-cap_percentage_resource にも有効な値があります。 ワークロード グループ wgAdhoc が 100% の cap_percentage_resource で構成され、別のワークロード グループ wgDashboards が 25% の min_percentage_resource で作成されている場合、wgAdhoc の有効な cap_percentage_resource は 75% になります。
+`cap_percentage_resource` にも有効な値があります。 ワークロード グループ `wgAdhoc` が 100% の `cap_percentage_resource` で構成されていて、別のワークロード グループ `wgDashboards` が 25% の `min_percentage_resource` で作成されている場合、`wgAdhoc` の有効な `cap_percentage_resource` は 75% になります。
 
 ワークロード グループの実行時の値を理解する最も簡単な方法は、システム ビュー [sys.dm_workload_management_workload_groups_stats](../../relational-databases/system-dynamic-management-views/sys-dm-workload-management-workload-group-stats-transact-sql.md) に対してクエリを実行することです。
 
 ## <a name="permissions"></a>アクセス許可
 
-CONTROL DATABASE アクセス許可が必須です
+`CONTROL DATABASE` 権限が必要です。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [DROP WORKLOAD GROUP (Transact-SQL)](drop-workload-group-transact-sql.md)
 - [sys.workload_management_workload_groups](../../relational-databases/system-catalog-views/sys-workload-management-workload-groups-transact-sql.md)

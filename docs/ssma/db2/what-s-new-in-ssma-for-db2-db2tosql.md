@@ -1,24 +1,40 @@
 ---
 title: SSMA for DB2 の新機能 (DB2ToSQL) |Microsoft Docs
+authors: HJToland3;nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 01/22/2020
+ms.date: 3/2/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1cc38f85-3caa-42d0-8c76-a380c1d15c67
-author: HJToland3
-ms.author: Shamikg
-ms.openlocfilehash: 9b4fc1f9d0ce1128306f27a5f7bf6658377528cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.author: jtoland;alexiva
+ms.openlocfilehash: 4ddcdb42d7d474b10e9cadd798d1feb4c429161b
+ms.sourcegitcommit: 58c25f47cfd701c61022a0adfc012e6afb9ce6e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "76516569"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78256838"
 ---
 # <a name="whats-new-in-ssma-for-db2-db2tosql"></a>SSMA for DB2 の新機能 (DB2ToSQL)
 
 この記事では、各リリースでの DB2 変更の SQL Server Migration Assistant (SSMA) を示します。
+
+## <a name="ssma-v87"></a>SSMA v 8.7
+
+SSMA for DB2 のバージョン8.7 リリースには、新しい DB2 構文パーサーに加えて、グラフィカルユーザーインターフェイスでの小さな修正とパフォーマンスの向上が含まれています。
+
+さらに、SSMA for DB2 は次の機能を提供するようになりました。
+
+* LUW での DB2 からの移行時の外部キーの検出の修正。
+* ステートメントの変換`SELECT ... FOR UPDATE`が改善されました。
+* MQ テーブルで`COUNT`の関数の変換が改善されました。
+* ステートメントの`SAVEPOINT`変換。
+* 句の`ORDER BY`値の DB2's 動作`NULL`をエミュレートするための変換です。
+* 関連する結果セットのステートメントを解析するためのサポート。
+
+> [!IMPORTANT]
+> SSMA v1.0 以降では、.NET 4.7.2 はインストールの前提条件です。 このバージョンをインストールする必要がある場合は、[ここ](https://dotnet.microsoft.com/download/dotnet-framework/net472)からランタイムファイルをダウンロードできます。
 
 ## <a name="ssma-v86"></a>SSMA v 8.6
 
@@ -30,12 +46,12 @@ Ssma for DB2 でこの設定を利用するには、[**ツール** > ] [プロ�
 
 さらに、SSMA for DB2 は次の機能を提供するようになりました。
 
--   既定の引数値を使用する関数の変換の修正プログラム
--   PARAMETER 句での関数の解析が改善されました。
-- LEAVE ステートメントを変換する権限です。
+* 既定の引数値を使用する関数の変換の修正。
+* 関数の句の`PARAMETER`解析が改善されました。
+* `LEAVE`ステートメントを変換する権限です。
 
 > [!IMPORTANT]
-> SSMA v1.0 以降では、.Net 4.7.2 はインストールの前提条件です。 このバージョンをインストールする必要がある場合は、[ここ](https://dotnet.microsoft.com/download/dotnet-framework/net472)からランタイムファイルをダウンロードできます。
+> SSMA v1.0 以降では、.NET 4.7.2 はインストールの前提条件です。 このバージョンをインストールする必要がある場合は、[ここ](https://dotnet.microsoft.com/download/dotnet-framework/net472)からランタイムファイルをダウンロードできます。
 
 ## <a name="ssma-v85"></a>SSMA v1.0
 
@@ -43,40 +59,40 @@ SSMA for DB2 の v2.0 リリースは、SQL server での JSON 機能の Azure A
 
 さらに、SSMA for DB2 は次のように強化されています。
 
-* GET DIAGNOSTICS ステートメントと ROW_NUMBER の変換を追加するためのサポート。
+* ステートメントに対する`GET DIAGNOSTICS`変換の追加を`ROW_NUMBER`サポートします。
 * オブジェクト名の先頭のスペースに関連するバグの修正が適用されていません。
 
 > [!IMPORTANT]
-> SSMA v1.0 では、.Net 4.7.2 はインストールの前提条件です。 このバージョンをインストールする必要がある場合は、[ここ](https://dotnet.microsoft.com/download/dotnet-framework/net472)からランタイムファイルをダウンロードできます。
+> SSMA v1.0 では、.NET 4.7.2 はインストールの前提条件です。 このバージョンをインストールする必要がある場合は、[ここ](https://dotnet.microsoft.com/download/dotnet-framework/net472)からランタイムファイルをダウンロードできます。
 
 ## <a name="ssma-v84"></a>SSMA v 8.4
 
 SSMA for DB2 の v2.0 リリースは、ユーザー補助の問題に対処し、最大インデックス列 (16 ではなく 32) に関連するバグを修正するように設計された、SQL Server 2016 以降のバージョンで強化されています。
 
 > [!IMPORTANT]
-> SSMA バージョン 8.4 7.4 では、.Net 4.5.2 はインストールの前提条件です。
+> SSMA バージョン 8.4 7.4 では、.NET 4.5.2 はインストールの前提条件です。
 
 ## <a name="ssma-v83"></a>SSMA v 8.3
 
 SSMA for DB2 の v2.0 リリースは、品質と変換のメトリックを向上させるように設計された対象の修正によって強化されています。 また、SSMA for DB2 のこのリリースでは、次のような修正が行われています。
 
-* アクセシビリティに関する問題の解決
-* SQL Server に ' hierarchyid ' 型の基本的なサポートを追加します
-* Z/OS 検出クエリの TRIM 関数の使用状況を RTRIM/LTRIM に置き換える
-* "標準モード" で接続するときにユーザーがパッケージコレクションを指定できるようにします (既定値は NULLID です)
-* CREATE TABLE の変換を SELECT として追加
-* グローバル一時テーブルの変換の改善
-* 名前が競合している場合に、制約に対するテーブルの優先順位を決定するために、オブジェクトの一意性のチェック順序に関する問題に対処します
-* Z/OS の日付とタイムスタンプの既定の列値の読み込みに関する問題に対処します。
-* Unicode ラインフィード文字 (NEL とも呼ばれます) をサポートします。
-* RETURN TO 句が指定されていないカーソル変換の問題に対処します
-* ラベルと GOTO のサポートを追加する
+* アクセシビリティの問題に対処します。
+* SQL Server に種類の`hierarchyid`基本サポートを追加します。
+* Z/OS 検出クエリで TRIM 関数の使用を`RTRIM` / `LTRIM`に置き換えます。
+* ' 標準モード ' で接続するときにユーザーがパッケージコレクションを指定できる`NULLID`ようにします (既定値は)。
+* の変換を`CREATE TABLE AS SELECT`追加します。
+* グローバル一時テーブルの変換を改善します。
+* 名前が競合する場合は、制約に対するテーブルの優先順位を決定するために、オブジェクトの一意性のチェック順序に関する問題に対処します。
+* Z/OS `DATE` `TIMESTAMP`の既定の列値の読み込みに関する問題に対処します。
+* Unicode ラインフィード文字 (と`NEL`も呼ばれます) をサポートします。
+* 句のない`RETURN TO`カーソル変換に関する問題に対処します。
+* ラベルと`GOTO`のサポートを追加します。
 
 ## <a name="ssma-v82"></a>SSMA v 8.2
 
 SSMA for DB2 の v2.0 リリースは、SSMA コンソールツールから Azure SQL Database への接続に関する問題に対処するために、また、変換時にビュー宣言の COUNT_BIG 列が欠落しています。 さらに、このバージョンには、品質と変換のメトリックを改善するために設計された修正プログラムのセットと、次のような修正が含まれています。
 
-* データ移行後の非クラスター化インデックスが無効になっている問題。
+* データ移行後の無効化されていない非クラスター化インデックスに関する問題。
 * サイレントインストール中の .NET Framework の検出。
 * 新しいバージョンがダウンロードされると発生する断続的なクラッシュ。
 
@@ -111,7 +127,7 @@ SSMA for DB2 の v2.0 リリースが拡張され、品質と変換メトリッ�
 SSMA for DB2 のバージョン7.10 リリースには、次の変更が含まれています。
 
 * グローバル要件の変化に対応するために、追加のセキュリティとプライバシーの保護を提供するように設計された修正。
-* BEGIN END ブロックの変換の修正。
+* ブロックの`BEGIN-END`変換の修正。
 
 ## <a name="ssma-v79"></a>SSMA v 7.9
 
@@ -126,7 +142,7 @@ SSMA for DB2 のバージョン7.9 には、次の変更が含まれています
 
 SSMA for DB2 の v1.0 リリースには、次の変更が含まれています。
 
-* [プロジェクトの設定] で強調表示されている型マッピングを変更します。
+* [*プロジェクトの設定*] で強調表示されている型マッピングを変更します。
 * ユーザーがテレメトリを無効にする機能。
 
 ## <a name="ssma-v77"></a>SSMA v 7.7
@@ -155,7 +171,7 @@ SSMA for DB2 のバージョン7.4 リリースには、次の変更が含まれ
 * お客様からのフィードバックに基づいて、品質と換算のメトリックが修正されました。
 
   > [!IMPORTANT]
-  > .Net 4.5.2 は、SSMA v2.0 をインストールするための前提条件です。 さらに、v2.0 以降では、SSMA の32ビットバージョンは廃止されました。
+  > .NET 4.5.2 は、SSMA v2.0 をインストールするための前提条件です。 さらに、v2.0 以降では、SSMA の32ビットバージョンは廃止されました。
 
 ## <a name="ssma-v73"></a>SSMA version 7.3
 
@@ -189,17 +205,17 @@ SSMA for DB2 の v2.0 リリースには、次の変更が含まれています�
 
 ## <a name="may-2016"></a>2016 年 5 月
 
-SSMA for DB2 の2016年5月のリリースには、次の変更が含まれています。  
+SSMA for DB2 の2016年5月のリリースには、次の変更が含まれています。
 
 * SQL Server 2016 のサポートが追加されました。
 * メモリ内および hekaton 機能を SQL Server するための DB2 インメモリテーブルと標準テーブルの変換が追加されました。
 * Db2 アクセス制御の SQL Server ポリシーオブジェクト (DB2 の行レベルセキュリティ) への変換が追加されました。
 * DB2 システムによってバージョン管理されたテーブルの SQL Server テンポラルテーブルへの変換を追加しました。
 * DB2 パーサーと競合回避モジュールが改善されました。
-* .Net 2.0 のインストーラーチェックが削除されました。
-* Db2 インストーラーから不要な * .dll を削除しました。
-* SSMA コンソールの [プロジェクトの保存] コマンドと [プロジェクトを開く] コマンドを修正します。
-* SSMA コンソールの "securepassword" コマンドを修正します。
+* .NET 2.0 のインストーラーチェックが削除されました。
+* Db2 インストーラー \*から不要な .dll を削除しました。
+* SSMA コンソールのコマンドとコマンドを修正`save-project`し`open-project`ます。
+* SSMA コンソールのコマンドを修正`securepassword`します。
 * 初期読み込みのオブジェクトのカウントを固定します。
 * グローバル設定のバグを修正した。
   
@@ -209,13 +225,13 @@ SSMA for DB2 の2016年3月のプレビューリリースでは、SQL Server 201
 
 ## <a name="january-2016"></a>2016 年 1 月
 
-SSMA for DB2 の2016年1月のメンテナンスリリースには、次の変更が含まれています。  
+SSMA for DB2 の2016年1月のメンテナンスリリースには、次の変更が含まれています。
   
-* いくつかの標準関数のサポートが追加されました。  
-* DB2 パーサーエラーを修正します。  
-* DB2 v9.x zOS サポート (RFC 5690920) を修正します。  
-* 変換中に DB2 の未解決の識別子エラーを修正します。  
-* SSMA (RFC 5706203) に [ログの表示] メニュー項目が追加されました。  
+* いくつかの標準関数のサポートが追加されました。
+* DB2 パーサーエラーを修正します。
+* DB2 v9.x zOS サポート (RFC 5690920) を修正します。
+* 変換中に DB2 の未解決の識別子エラーを修正します。
+* SSMA (RFC 5706203) に [ログの表示] メニュー項目が追加されました。
 * テレメトリを追加しました。
   
 ## <a name="november-2014"></a>2014 年 11 月

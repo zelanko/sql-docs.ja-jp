@@ -13,12 +13,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 02/20/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 97f4ebef586d7e0deb77f753ff264120f97cef5a
-ms.sourcegitcommit: 10ab8d797a51926e92aec977422b1ee87b46286d
+ms.openlocfilehash: 6be69f873785f413b4edddf42f303e8eb7d4b14c
+ms.sourcegitcommit: 64e96ad1ce6c88c814e3789f0fa6e60185ec479c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77544909"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77652941"
 ---
 # <a name="download-sql-server-data-tools-ssdt-for-visual-studio"></a>SQL Server Data Tools (SSDT) for Visual Studio のダウンロード
 
@@ -32,13 +32,16 @@ ms.locfileid: "77544909"
 
 データベース プロジェクトを作成するための SSDT のコア機能が Visual Studio にとって不可欠な機能であることに変わりはありません。
 
-Visual Studio 2019 では、Analysis Services、Integration Services、Reporting Services のプロジェクトを有効にするために必要な機能がそれぞれの Visual Studio (VSIX) 拡張機能に移行されただけです。 スタンドアロン SSDT をインストールする必要はなくなりました。
+Visual Studio 2019 では、Analysis Services、Integration Services、Reporting Services のプロジェクトを有効にするために必要な機能がそれぞれの Visual Studio (VSIX) 拡張機能に移行されただけです。
+
+> [!NOTE]
+> Visual Studio 2019 用の SSDT スタンドアロン インストーラはありません。
 
 ### <a name="install-ssdt-with-visual-studio-2019"></a>Visual Studio 2019 で SSDT をインストールする
 
 [Visual Studio 2019](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2019) が既にインストールされている場合、ワークロードの一覧を編集して SSDT を含めることができます。
 
-* SQL データベース プロジェクトの場合、 **[データの保存と処理]** の下にある **[SQL Server Data Tools]** を選択します。
+* SQL Database プロジェクトの場合、 **[データの保存と処理]** の下にある **[SQL Server Data Tools]** を選択します。
 
    ![[データの保存と処理] ワークロード](../ssdt/media/download-sql-server-data-tools-ssdt/data-workload-2019.png)
 
@@ -46,7 +49,7 @@ Visual Studio 2019 では、Analysis Services、Integration Services、Reporting
 
 Visual Studio 2019 をインストールしていない場合は、[Visual Studio 2019 Community](https://visualstudio.microsoft.com/downloads/) をダウンロードしてインストールできます。 
 
-* SQL データベース プロジェクトの場合、インストール中に、ワークロードの一覧で **[データの保存と処理]** の下にある **[SQL Server Data Tools]** を選択します。
+* SQL Database プロジェクトの場合、インストール中に、ワークロードの一覧で **[データの保存と処理]** の下にある **[SQL Server Data Tools]** を選択します。
 
 * Analysis Services、Integration Services、または Reporting Services プロジェクトの場合は、 *[ツール] > [拡張機能と更新プログラム]* または [[Marketplace]](https://marketplace.visualstudio.com/search?term=services&target=VS&category=All%20categories&vsVersion=&sortBy=Relevance) から適切な[拡張機能](https://docs.microsoft.com/visualstudio/ide/finding-and-using-visual-studio-extensions)をインストールできます。
 

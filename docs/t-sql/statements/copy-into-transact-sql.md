@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 4e42c60e945512c09b88b19b18b6f24ce45b46dc
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 2c6647dfab3a095228023fd56af2c766a8b40fee
+ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76536648"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77903819"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY (Transact-SQL) (プレビュー)
 
@@ -205,7 +205,7 @@ ERRORFILE でストレージ アカウントの完全なパスが定義されて
 
 - .gz - **GZIP**
 - .snappy - **Snappy**
-- .deflate - **DefaultCodec**
+- .deflate - **DefaultCodec** (Parquet および ORC のみ)
 
  *FIELDQUOTE = 'field_quote'*</br>
 *FIELDQUOTE* は CSV に適用され、CSV ファイルで引用符文字 (文字列の区切り記号) として使用される 1 バイト文字を指定します。 指定されていない場合は、RFC 4180 標準の定義に従って引用符文字 (") が引用符文字として使用されます。 拡張 ASCII 文字は、FIELDQUOTE の UTF-8 ではサポートされていません。
@@ -398,6 +398,6 @@ COPY コマンドは、この暦年 (2020) の終わりまでに一般提供さ�
 
 フィードバックや問題は、配布リストの sqldwcopypreview@service.microsoft.com までお寄せください。
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 
  [SQL Data Warehouse を使用した読み込みの概要](/azure/sql-data-warehouse/design-elt-data-loading)

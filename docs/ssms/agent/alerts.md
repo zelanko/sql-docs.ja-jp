@@ -24,12 +24,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b88680cb965ff44384d54b09e0c7244a074bd0db
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 8baf9a3ab87f53bf1e193f680e5977dc9631c4b3
+ms.sourcegitcommit: 92b2e3cf058e6b1e9484e155d2cc28ed2a0b7a8c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75252684"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77608477"
 ---
 # <a name="alerts"></a>警告
 
@@ -104,6 +104,12 @@ ms.locfileid: "75252684"
   
     > [!NOTE]  
     > パフォーマンス データは定期的にサンプリングされます。したがって、しきい値に達してからパフォーマンス警告が発せられるまでの間にわずかな遅延 (数秒) が生じる可能性があります。  
+  
+    > [!NOTE]  
+    > サーバー名を格納するイベント ログ変数は、32 文字までに制限されています。 したがって、ホスト名とインスタンス名の合計サイズが 32 文字を超えると、次のエラーが表示されることがあります。
+    
+    警告、[466] パフォーマンス カウンターの警告の生成中に、サーバー名 LONGNAMESQLSERV\LONGINSTANCENAME をコピーできませんでした。
+  
   
 ## <a name="selecting-a-wmi-event"></a>WMI イベントの選択  
 特定の WMI イベントに応答して警告が発生するように指定できます。 WMI イベントを選択するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの **[新しい警告]** または **[警告のプロパティ]** ダイアログ ボックスを開き、 **[全般]** ページで次の項目を定義する必要があります。  

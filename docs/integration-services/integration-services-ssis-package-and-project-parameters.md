@@ -1,5 +1,5 @@
 ---
-title: Integration Services (SSIS) パッケージおよびプロジェクト パラメーター | Microsoft Docs
+title: パッケージとプロジェクトのパラメーター | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 9ed9ca8e-8b1e-48d9-907d-285516d6562b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b595c8e2c09260e6874fc3cbaab8cc06d2a0c9df
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 5c773ae8db0b9942e23e40fb5f72b989b97ccfcc
+ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "71296169"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77903859"
 ---
 # <a name="integration-services-ssis-package-and-project-parameters"></a>Integration Services (SSIS) パッケージおよびプロジェクト パラメーター
 
@@ -122,7 +122,7 @@ ms.locfileid: "71296169"
   
     |プロパティ|説明|  
     |--------------|-----------------|  
-    |Name|パラメーターの名前。|  
+    |名前|パラメーターの名前。|  
     |データ型|パラメーターのデータ型です。|  
     |既定値|設計時に割り当てられたパラメーターの既定値。 これは設計時の既定値とも呼ばれます。|  
     |重要|機密性の高いパラメーター値はカタログ内で暗号化され、Transact-SQL または SQL Server Management Studio で表示する際は NULL 値として表示されます。|  
@@ -153,7 +153,7 @@ ms.locfileid: "71296169"
   
     |プロパティ|説明|  
     |--------------|-----------------|  
-    |Name|パラメーターの名前。|  
+    |名前|パラメーターの名前。|  
     |データ型|パラメーターのデータ型です。|  
     |既定値|設計時に割り当てられたパラメーターの既定値。 これは設計時の既定値とも呼ばれます。|  
     |重要|機密性の高いパラメーター値はカタログ内で暗号化され、Transact-SQL または SQL Server Management Studio で表示する際は NULL 値として表示されます。|  
@@ -180,7 +180,7 @@ ms.locfileid: "71296169"
  **新しいパラメーターを作成する**  
  タスクのプロパティと関連付ける新しいパラメーターを作成するには、このオプションを選択します。  
   
- **Name**  
+ **名前**  
  作成するパラメーターの名前を指定します。  
   
  **説明**  

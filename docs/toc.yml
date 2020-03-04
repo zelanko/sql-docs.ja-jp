@@ -312,11 +312,11 @@
                   href: relational-databases/backup-restore/back-up-multiple-databases-to-azure-blob-storage-powershell.md
                 - name: バックアップ ログ ファイルの削除
                   href: relational-databases/backup-restore/deleting-backup-blob-files-with-active-leases.md
-                - name: '[復元]'
+                - name: 復元
                   href: relational-databases/backup-restore/restoring-from-backups-stored-in-microsoft-azure.md
                 - name: 管理対象のバックアップ
                   items:
-                    - name: '[有効化]'
+                    - name: 有効化
                       href: relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md
                     - name: 詳細設定オプションの構成
                       href: relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md
@@ -338,7 +338,7 @@
                   href: relational-databases/backup-restore/back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md
                 - name: ミラー化メディア セットへのバックアップ
                   href: relational-databases/backup-restore/back-up-to-a-mirrored-media-set-transact-sql.md
-            - name: '[復元]'
+            - name: 復元
               items:
                 - name: SQL Server Management Studio (SSMS) の使用
                   href: relational-databases/backup-restore/restore-a-database-backup-using-ssms.md
@@ -1478,7 +1478,7 @@
               href: relational-databases/indexes/sort-in-tempdb-option-for-indexes.md
             - name: Disable
               href: relational-databases/indexes/disable-indexes-and-constraints.md
-            - name: '[有効化]'
+            - name: 有効化
               href: relational-databases/indexes/enable-indexes-and-constraints.md
             - name: '[名前の変更]'
               href: relational-databases/indexes/rename-indexes.md
@@ -2247,7 +2247,7 @@
           items:
             - name: 新機能
               href: relational-databases/clr-integration/clr-integration-what-s-new.md
-            - name: '[有効化]'
+            - name: 有効化
               href: relational-databases/clr-integration/clr-integration-enabling.md
             - name: パフォーマンス
               href: relational-databases/clr-integration/clr-integration-architecture-performance.md
@@ -5795,7 +5795,7 @@
                   href: sql-server/stretch-database/configure-compatible-sql-server-features-with-stretch-database.md
         - name: 操作方法
           items:
-            - name: '[有効化]'
+            - name: 有効化
               items:
                 - name: データベースを有効にする
                   href: sql-server/stretch-database/enable-stretch-database-for-a-database.md
@@ -5813,7 +5813,7 @@
                   href: sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md
                 - name: バックアップ
                   href: sql-server/stretch-database/backup-stretch-enabled-databases-stretch-database.md
-                - name: '[復元]'
+                - name: 復元
                   href: sql-server/stretch-database/restore-stretch-enabled-databases-stretch-database.md
                 - name: データを無効にして戻す
                   href: sql-server/stretch-database/disable-stretch-database-and-bring-back-remote-data.md
@@ -5937,7 +5937,7 @@
               href: relational-databases/data-compression/page-compression-implementation.md
             - name: Unicode 圧縮
               href: relational-databases/data-compression/unicode-compression-implementation.md
-            - name: '[有効化]'
+            - name: 有効化
               href: relational-databases/data-compression/enable-compression-on-a-table-or-index.md
             - name: Disable
               href: relational-databases/data-compression/disable-compression-on-a-table-or-index.md
@@ -6786,7 +6786,7 @@
         - name: リソース ガバナー
           href: relational-databases/resource-governor/resource-governor.md
           items:
-            - name: '[有効化]'
+            - name: 有効化
               href: relational-databases/resource-governor/enable-resource-governor.md
             - name: Disable
               href: relational-databases/resource-governor/disable-resource-governor.md
@@ -6810,7 +6810,7 @@
                   href: relational-databases/resource-governor/create-a-workload-group.md
                 - name: 設定の変更
                   href: relational-databases/resource-governor/change-workload-group-settings.md
-                - name: '[詳細ビュー]'
+                - name: 詳細ビュー
                   href: relational-databases/resource-governor/move-a-workload-group.md
                 - name: 削除
                   href: relational-databases/resource-governor/delete-a-workload-group.md
@@ -6898,7 +6898,7 @@
                   href: relational-databases/polybase/data-virtualization.md
                 - name: CSV データを仮想化する
                   href: relational-databases/polybase/data-virtualization-csv.md
-            - name: '[トラブルシューティング]'
+            - name: トラブルシューティング
               items:
                 - name: 監視とトラブルシューティング
                   href: relational-databases/polybase/polybase-troubleshooting.md
@@ -7125,7 +7125,7 @@
               href: master-data-services/edit-model-master-data-services.md
             - name: 削除
               href: master-data-services/delete-a-model-master-data-services.md
-        - name: エンティティ
+        - name: Entities
           href: master-data-services/entities-master-data-services.md
           items:
             - name: エンティティの依存関係エクスプローラー
@@ -8521,7 +8521,7 @@
                   href: ssms/scripting/query-and-text-editors-sql-server-management-studio.md
                   items:
                     - name: データベース エンジン クエリ エディター
-                      href: ssms/scripting/database-engine-query-editor-sql-server-management-studio.md
+                      href: ssms/f1-help/database-engine-query-editor-sql-server-management-studio.md
                     - name: XML エディター
                       href: ssms/scripting/xml-editor-sql-server-management-studio.md
                     - name: クエリ エディターでのコードの色分け
@@ -8666,7 +8666,7 @@
               href: ssms/configure-wmi-to-show-server-status-in-sql-server-tools.md
             - name: ログインの監査の構成
               href: ssms/configure-login-auditing-sql-server-management-studio.md
-            - name: '[トラブルシューティング]'
+            - name: トラブルシューティング
               items:
                 - name: 完全メモリ ダンプの取得
                   href: ssms/troubleshoot/get-full-memory-dump.md
@@ -9075,13 +9075,13 @@
                   href: ssms/menu-help/external-tools.md
                 - name: '[カスタマイズ] \([コマンド] ページ)'
                   href: ssms/menu-help/customize-commands-page.md
-                - name: '[オプション] \([環境]/[全般] ページ)'
+                - name: '[オプション] ([環境]/[全般] ページ)'
                   href: ssms/menu-help/options-environment-general-page.md
                 - name: '[オプション] ([環境] - [スタートアップ] ページ)'
                   href: ssms/menu-help/options-environment-startup-page.md
                 - name: '[オプション] ダイアログ ボックスの F1 ヘルプ'
                   href: ssms/menu-help/options-dialog-boxes-f1-help.md
-                - name: '[ツールボックス アイテムの選択] \([メンテナンス タスク] ページ)'
+                - name: '[ツールボックス アイテムの選択] ([メンテナンス タスク] ページ)'
                   href: ssms/menu-help/choose-toolbox-items-maintenance-tasks-page.md
                 - name: '[オプション] ([デザイナー] - [テーブルおよびデータベース デザイナー] ページ)'
                   href: ssms/menu-help/options-designers-table-and-database-designers-page.md
@@ -9089,7 +9089,7 @@
                   href: ssms/menu-help/about-sql-server-management-studio.md
                 - name: '[変更の保存]'
                   href: ssms/menu-help/save-changes.md
-                - name: '[ファイルを開くアプリケーションの選択] \([新しいファイル])'
+                - name: '[ファイルを開くアプリケーションの選択] ([新しいファイル])'
                   href: ssms/menu-help/open-with-new-file.md
                 - name: オプション (デザイナー - Analysis Services デザイナー - 全般)
                   href: ssms/menu-help/options-designers-analysis-services-designers-general.md
@@ -9099,7 +9099,7 @@
                   href: ssms/menu-help/advanced-save-options.md
                 - name: '[名前を付けて保存]'
                   href: ssms/menu-help/save-as.md
-                - name: '[ユーザー設定] \([ツール バー] ページ)'
+                - name: '[ユーザー設定] ([ツール バー] ページ)'
                   href: ssms/menu-help/customize-toolbars-page.md
                 - name: '[オプション] ([デザイナー] - [メンテナンス プラン] ページ)'
                   href: ssms/menu-help/options-designers-maintenance-plans-page.md
@@ -9993,7 +9993,7 @@
               href: linux/sample-unattended-install-ubuntu.md
     - name: リソース
       items:
-        - name: '[トラブルシューティング]'
+        - name: トラブルシューティング
           href: linux/sql-server-linux-troubleshooting-guide.md
         - name: ライセンス方法 >>
           href: 'https://www.microsoft.com/sql-server/sql-server-2017-pricing'
@@ -16083,7 +16083,7 @@
                   href: t-sql/language-elements/rollback-work-transact-sql.md
                 - name: SAVE TRANSACTION
                   href: t-sql/language-elements/save-transaction-transact-sql.md
-            - name: '変数:'
+            - name: 変数
               href: t-sql/language-elements/variables-transact-sql.md
               items:
                 - name: SET @local_variable
@@ -16158,7 +16158,7 @@
             - name: '[ヒント]'
               href: t-sql/queries/hints-transact-sql.md
               items:
-                - name: 結合
+                - name: Join
                   href: t-sql/queries/hints-transact-sql-join.md
                 - name: クエリ
                   href: t-sql/queries/hints-transact-sql-query.md

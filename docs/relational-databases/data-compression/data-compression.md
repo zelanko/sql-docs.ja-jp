@@ -23,12 +23,12 @@ ms.assetid: 5f33e686-e115-4687-bd39-a00c48646513
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e31898c8252084a34ed645e5b3f5113f9893ee48
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 3360957d62c6af05c6d650c0143f9f45fde3bd19
+ms.sourcegitcommit: 64e96ad1ce6c88c814e3789f0fa6e60185ec479c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68055452"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77705877"
 ---
 # <a name="data-compression"></a>データ圧縮
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "68055452"
 -   パーティション分割されている列ストア テーブルおよび列ストア インデックスの場合、パーティションごとに保存用圧縮オプションを構成することができ、オブジェクトの各パーティションを同じ保存用圧縮設定にする必要がありません。  
   
 > [!NOTE]  
->  GZIP アルゴリズム形式を使用してデータを圧縮することもできます。 これは追加の手順であり、古いデータを長期保管するためにアーカイブする際にデータの一部を圧縮する場合に最も適しています。 COMPRESS 関数を使用して圧縮したデータにインデックスを付けることはできません。 詳細については、「[COMPRESS &#40;Transact-SQL&#41;](../../t-sql/functions/compress-transact-sql.md)」を参照してください。  
+> GZIP アルゴリズム形式を使用してデータを圧縮することもできます。 これは追加の手順であり、古いデータを長期保管するためにアーカイブする際にデータの一部を圧縮する場合に最も適しています。 `COMPRESS` 関数を使用して圧縮されたデータに、インデックスを付けることはできません。 詳細については、「[COMPRESS &#40;Transact-SQL&#41;](../../t-sql/functions/compress-transact-sql.md)」を参照してください。  
   
 ## <a name="considerations-for-when-you-use-row-and-page-compression"></a>行とページの圧縮の使用に関する注意点  
  行とページの圧縮を使用する際は、次の点に注意してください。  
@@ -57,7 +57,7 @@ ms.locfileid: "68055452"
 -   圧縮は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディッションで使用できるわけではありません。 詳細については、「 [SQL Server 2016 の各エディションがサポートする機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。  
 -   圧縮は、システム テーブルには使用できません。  
 -   圧縮を使用すると、ページに格納できる行数が増えますが、テーブルまたはインデックスの最大行サイズは変更されません。  
--   最大行サイズに圧縮のオーバーヘッドを加えると最大行サイズが 8,060 バイトを超える場合、テーブルで圧縮を有効にすることはできません。 例えば、列 c1**char(8000)** および c2**char(53)** を含むテーブルは、圧縮のオーバーヘッドが追加で発生するため、圧縮できません。 vardecimal ストレージ形式を使用する場合は、この形式が有効になると行サイズのチェックが実行されます。 行とページの圧縮の場合は、オブジェクトが最初に圧縮されるときに行サイズのチェックが実行され、各行が挿入または変更されるときにもチェックされます。 圧縮では、次の 2 つのルールが適用されます。  
+-   最大行サイズに圧縮のオーバーヘッドを加えると最大行サイズが 8,060 バイトを超える場合、テーブルで圧縮を有効にすることはできません。 たとえば、`c1 CHAR(8000)` 列および `c2 CHAR(53)` 列を含むテーブルは、追加される圧縮のオーバーヘッドが原因で圧縮できません。 vardecimal ストレージ形式を使用する場合は、この形式が有効になると行サイズのチェックが実行されます。 行とページの圧縮の場合は、オブジェクトが最初に圧縮されるときに行サイズのチェックが実行され、各行が挿入または変更されるときにもチェックされます。 圧縮では、次の 2 つのルールが適用されます。  
     -   固定長の型に対する更新が常に成功する必要があります。  
     -   データ圧縮の無効化が常に成功する必要があります。 圧縮された行がページに収まる場合 (行のサイズが 8,060 バイト未満の場合) でも、圧縮されていないときの行に収まらない更新は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって回避されます。  
 -   パーティションの一覧を指定する場合は、個々のパーティションの圧縮の種類を ROW、PAGE、または NONE に設定できます。 パーティションの一覧を指定しない場合は、すべてのパーティションがステートメントで指定されたデータ圧縮プロパティを使用して設定されます。 特に指定しない限り、データ圧縮はテーブルまたはインデックスの作成時に NONE に設定されます。 特に指定しない限り、既存の圧縮はテーブルの変更時にも保持されます。  
@@ -66,8 +66,8 @@ ms.locfileid: "68055452"
 -   ヒープにクラスター化インデックスを作成する場合、圧縮状態を特に指定しない限り、ヒープの圧縮状態がクラスター化インデックスに継承されます。  
 -   ヒープがページ レベルの圧縮用に構成されている場合、ページでは、次の方法によるページ レベルの圧縮のみが受け入れられます。  
     -   データは一括最適化を有効にして一括インポートされます。  
-    -   INSERT INTO ...WITH (TABLOCK) 構文とテーブルに非クラスター化インデックスはありません。  
-    -   PAGE 圧縮オプションを指定して ALTER TABLE ...REBUILD ステートメントを実行し、テーブルを再構築する方法  
+    -   データは `INSERT INTO ... WITH (TABLOCK)` 構文を使用して挿入されますが、テーブルに非クラスター化インデックスがありません。  
+    -   テーブルを再構築するには、PAGE 圧縮オプションを指定した `ALTER TABLE ... REBUILD` ステートメントを実行します。  
 -   DML 操作の一部としてヒープに割り当てられた新しいページでは、ヒープが再構築されるまで PAGE 圧縮は使用されません。 圧縮を解除してから再適用するか、クラスター化インデックスを作成してから削除することで、ヒープを再構築します。  
 -   ヒープの圧縮設定を変更するには、テーブルのすべての非クラスター化インデックスを再構築して、ヒープ内の新しい行位置へのポインターを持つようにする必要があります。  
 -   ROW または PAGE 圧縮はオンラインまたはオフラインで有効または無効にすることができます。 オンライン操作の場合、ヒープに対する圧縮の有効化はシングル スレッドです。  
@@ -78,11 +78,11 @@ ms.locfileid: "68055452"
 -   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] で vardecimal ストレージ形式を実装したテーブルは、アップグレード時にもその設定を保持します。 vardecimal ストレージ形式を使用するテーブルに行の圧縮を適用することができます。 ただし、行の圧縮は vardecimal ストレージ形式のスーパーセットなので、vardecimal ストレージ形式を保持する理由はありません。 vardecimal ストレージ形式と行の圧縮を組み合わせても、10 進値の圧縮は追加されません。 vardecimal ストレージ形式を使用するテーブルにページの圧縮を適用することができます。ただし、vardecimal ストレージ形式の列の圧縮が追加される可能性は低くなります。  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] は vardecimal ストレージ形式をサポートしていますが、行レベルの圧縮で同じ目的が果たされるので、vardecimal ストレージ形式は非推奨とされます。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
+    > [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] は vardecimal ストレージ形式をサポートしていますが、行レベルの圧縮で同じ目的が果たされるので、vardecimal ストレージ形式は非推奨とされます。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
 ## <a name="using-columnstore-and-columnstore-archive-compression"></a>列ストアおよび列ストアの保存用圧縮の使用  
   
-**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)、[!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)]。  
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]))、[!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)]。  
   
 ### <a name="basics"></a>基本  
  列ストア テーブルおよび列ストア インデックスは常に列ストア圧縮を使用して格納されます。 保存用圧縮と呼ばれる追加の圧縮機能を構成するによって、列ストアのデータ サイズをさらに小さくすることができます。  保存用圧縮を使用するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でデータに対して Microsoft Xpress 圧縮アルゴリズムを実行します。 次の種類のデータ圧縮を使用して、保存用圧縮を追加または削除します。  
@@ -92,7 +92,8 @@ ms.locfileid: "68055452"
 保存用圧縮を追加するには、REBUILD オプションと DATA COMPRESSION = COLUMNSTORE_ARCHIVE を指定して [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md) または [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) を使用します。  
   
 #### <a name="examples"></a>例 :  
-```  
+
+```sql  
 ALTER TABLE ColumnstoreTable1   
 REBUILD PARTITION = 1 WITH (DATA_COMPRESSION =  COLUMNSTORE_ARCHIVE) ;  
   
@@ -107,7 +108,7 @@ REBUILD PARTITION = ALL WITH (DATA_COMPRESSION =  COLUMNSTORE_ARCHIVE ON PARTITI
   
 #### <a name="examples"></a>例 :  
   
-```  
+```sql  
 ALTER TABLE ColumnstoreTable1   
 REBUILD PARTITION = 1 WITH (DATA_COMPRESSION =  COLUMNSTORE) ;  
   
@@ -120,7 +121,7 @@ REBUILD PARTITION = ALL WITH (DATA_COMPRESSION =  COLUMNSTORE ON PARTITIONS (2,4
   
 次の例では、データ圧縮をあるパーティションの列ストアに設定し、列ストアの圧縮を別のパーティションに設定しています。  
   
-```  
+```sql  
 ALTER TABLE ColumnstoreTable1   
 REBUILD PARTITION = ALL WITH (  
     DATA_COMPRESSION =  COLUMNSTORE ON PARTITIONS (4,5),  
@@ -133,7 +134,7 @@ REBUILD PARTITION = ALL WITH (
   
  記憶域を削減するデータ圧縮の利点は、頻繁にアクセスしないデータに便利です。 たとえば、各月のデータ用のパーティションがある場合、ほとんどアクティビティは最新の月のデータに対して実行されるため、古い月のデータをアーカイブして必要なストレージを削減できます。  
   
-### <a name="metadata"></a>メタデータ  
+### <a name="metadata"></a>Metadata  
 次のシステム ビューには、クラスター化インデックスのデータ圧縮に関する情報が含まれています。  
 -   [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) - **type** 列と **type_desc** 列には、CLUSTERED COLUMNSTORE と NONCLUSTERED COLUMNSTORE が含まれます。  
 -   [sys.partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md) - **data_compression** 列と **data_compression_desc** 列には、COLUMNSTORE と COLUMNSTORE_ARCHIVE が含まれます。  
@@ -142,33 +143,37 @@ REBUILD PARTITION = ALL WITH (
   
 ## <a name="how-compression-affects-partitioned-tables-and-indexes"></a>パーティション テーブルとパーティション インデックスへの圧縮の影響  
  パーティション テーブルとパーティション インデックスでデータ圧縮を使用する場合は、次の点に注意してください。  
--   ALTER PARTITION ステートメントを使用してパーティションを分割すると、両方のパーティションに元のパーティションのデータ圧縮属性が継承されます。  
+-   `ALTER PARTITION` ステートメントを使用してパーティションを分割すると、両方のパーティションに元のパーティションのデータ圧縮属性が継承されます。  
 -   2 つのパーティションをマージすると、結果として得られるパーティションにマージ先パーティションのデータ圧縮属性が継承されます。  
 -   パーティションを切り替えるには、パーティションのデータ圧縮プロパティがテーブルの圧縮プロパティと一致する必要があります。  
 -   パーティション テーブルまたはパーティション インデックスの圧縮の変更に使用できる構文には、次の 2 種類があります。  
     -   次の構文では、参照されているパーティションのみが再構築されます。  
-        ```  
+    
+        ```sql  
         ALTER TABLE <table_name>   
         REBUILD PARTITION = 1 WITH (DATA_COMPRESSION =  <option>)  
         ```  
+    
     -   次の構文では、参照されていないパーティションの既存の圧縮設定を使用して、テーブル全体が再構築されます。  
-        ```  
+    
+        ```sql  
         ALTER TABLE <table_name>   
         REBUILD PARTITION = ALL   
         WITH (DATA_COMPRESSION = PAGE ON PARTITIONS(<range>),  
         ... )  
         ```  
   
-     パーティション インデックスの場合は、ALTER INDEX を使用して同じ原則に従います。  
+     パーティション インデックスの場合は、`ALTER INDEX` を使用して同じ原則に従います。  
   
 -   クラスター化インデックスを削除する場合、パーティション構成を変更しない限り、対応するヒープ パーティションでデータ圧縮設定が維持されます。 パーティション構成を変更すると、すべてのパーティションが圧縮されていない状態に再構築されます。 クラスター化インデックスを削除し、パーティション構成を変更するには、次の手順を実行します。  
      1. クラスター化インデックスを削除します。  
-     2. 圧縮オプションを指定する ALTER TABLE ...REBUILD ... オプションを使用して、テーブルを変更します。  
+     2. 圧縮オプションを指定する `ALTER TABLE ... REBUILD` オプションを使用して、テーブルを変更します。  
   
      OFFLINE でクラスター化インデックスを削除すると、クラスター化インデックスの上位レベルだけが削除されます。そのため、操作はとても高速です。 ONLINE でクラスター化インデックスを削除すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって、ヒープが手順 1. で 1 回、手順 2. で 1 回の計 2 回再構築されます。  
   
 ## <a name="how-compression-affects-replication"></a>レプリケーションへの圧縮の影響 
-**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。   
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]))。   
+
 レプリケーションでデータ圧縮を使用する場合は、次の点に注意してください。  
 -   スナップショット エージェントで最初のスキーマ スクリプトが生成されるときに、新しいスキーマでは、テーブルとインデックスの両方に同じ圧縮設定が使用されます。 圧縮をテーブルのみで有効にし、インデックスで無効にすることはできません。  
 -   トランザクション レプリケーションの場合、アーティクル スキーマ オプションによって、スクリプトを作成する必要がある依存オブジェクトおよびプロパティが特定されます。 詳細については、「 [sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)」を参照してください。  
@@ -186,7 +191,7 @@ REBUILD PARTITION = ALL WITH (
 |パブリッシャーですべてのパーティションが圧縮される場合はサブスクライバーでテーブルを圧縮するが、パーティション構成はレプリケートしない。|False|True|すべてのパーティションで圧縮が有効になっているかどうかを確認します。<br /><br /> テーブル レベルで圧縮のスクリプトを作成します。|  
   
 ## <a name="how-compression-affects-other-sql-server-components"></a>他の SQL Server コンポーネントへの圧縮の影響 
-**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。  
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]))。  
    
  圧縮はストレージ エンジンで行われるので、他のほとんどの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントには、データは圧縮されていない状態で提供されます。 このため、他のコンポーネントに対する圧縮の影響は、次のように制限されます。  
 -   一括インポート操作と一括エクスポート操作  

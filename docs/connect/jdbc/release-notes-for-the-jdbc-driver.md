@@ -1,7 +1,7 @@
 ---
 title: JDBC Driver のリリース ノート | Microsoft Docs
 ms.custom: ''
-ms.date: 01/29/2020
+ms.date: 02/26/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6d55a856096a830172ced69f9fb28f66c11733e7
-ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
+ms.openlocfilehash: 76607fbe96ef954ce90c7d24daf9a12b69a3fce6
+ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "77004543"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77903740"
 ---
 # <a name="release-notes-for-the-microsoft-jdbc-driver"></a>Microsoft JDBC Driver のリリース ノート
 
@@ -23,28 +23,28 @@ ms.locfileid: "77004543"
 
 この記事では、_Microsoft JDBC Driver for SQL Server_ のリリースを示します。 リリース バージョンごとに、変更された点とそれに関する説明が示されています。
 
-## <a name="820"></a>8.2.0
+## <a name="821"></a>8.2.1
 
 ### <a name="compliance"></a>コンプライアンス
 
-2020 年 1 月 29 日
+2020 年 2 月 26 日
 
 | コンプライアンスの変更 | 詳細 |
 | :---------------- | :------ |
-| JDBC Driver 8.2 用の最新の更新のダウンロード。 | &bull; &nbsp; [Microsoft ダウンロード センター](https://go.microsoft.com/fwlink/?linkid=2116870)<br/>&bull; &nbsp; [GitHub, 8.2.0](https://github.com/Microsoft/mssql-jdbc/releases/tag/v8.2.0)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
-| JDBC API 仕様 4.2 への完全準拠。 | 8\.2 パッケージ内の jar は Java のバージョンの互換性に従って名前付けされています。<br/><br/>たとえば、8.2 パッケージの mssql-jdbc-8.2.0.jre11.jar ファイルは、Java 11 で使用する必要があります。 |
+| JDBC Driver 8.2 用の最新の更新のダウンロード。 | &bull; &nbsp; [Microsoft ダウンロード センター](https://go.microsoft.com/fwlink/?linkid=2116870)<br/>&bull; &nbsp; [GitHub, 8.2.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v8.2.1)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
+| JDBC API 仕様 4.2 への完全準拠。 | 8\.2 パッケージ内の jar は Java のバージョンの互換性に従って名前付けされています。<br/><br/>たとえば、8.2 パッケージの mssql-jdbc-8.2.1.jre11.jar ファイルは、Java 11 で使用する必要があります。 |
 | Java Development Kit (JDK) バージョン 13.0、11.0 および 1.8 と互換性があります。 | Microsoft JDBC Driver 8.2 for SQL Server は、JDK 11.0 と 1.8 に加え、Java Development Kit (JDK) バージョン 13.0 と互換性を持つようになりました。 |
 | &nbsp; | &nbsp; |
 
 ### <a name="support-for-jdk-13"></a>JDK 13 のサポート
 
-Microsoft JDBC Driver 8.2.0 for SQL Server は、JDK 11.0 と 1.8 に加え、Java Development Kit (JDK) バージョン 13.0 と互換性を持つようになりました。
+Microsoft JDBC Driver 8.2.1 for SQL Server は、JDK 11.0 と 1.8 に加え、Java Development Kit (JDK) バージョン 13.0 と互換性を持つようになりました。
 
 ### <a name="always-encrypted-with-secure-enclaves"></a>セキュア エンクレーブを使用する Always Encrypted
 
 | Always Encrypted の変更 | 詳細 |
 | :--------- | :------ |
-| Microsoft JDBC Driver 8.2.0 for SQL Server では、セキュア エンクレーブを使用する Always Encrypted がサポートされるようになりました。 詳細については、以下を参照してください。セキュリティで保護されたエンクレーブが設定された Always Encrypted |
+| Microsoft JDBC Driver 8.2.1 for SQL Server では、セキュア エンクレーブを使用する Always Encrypted がサポートされるようになりました。 詳細については、以下を参照してください。セキュリティで保護されたエンクレーブが設定された Always Encrypted |
 | 詳細情報とサンプル コード。 | 「[セキュリティで保護されたエンクレーブが設定された Always Encrypted](../../connect/jdbc/always-encrypted-with-secure-enclaves.md)」をご覧ください。 |
 | &nbsp; | &nbsp; |
 
@@ -52,7 +52,7 @@ Microsoft JDBC Driver 8.2.0 for SQL Server は、JDK 11.0 と 1.8 に加え、Ja
 
 | テンポラル データ型の変更 | 詳細 |
 | :---------- | :------ |
-| Microsoft JDBC Driver 8.2.0 for SQL Server では、SQL Server からテンポラル データ型を取得するときのパフォーマンスが向上しています。 | この変更により、可能な場合、java.util.Calendar を使用する必要がなくなるため、不要なテンポラル データ型変換を行わなくて済みます。 |
+| Microsoft JDBC Driver 8.2.1 for SQL Server では、SQL Server からテンポラル データ型を取得するときのパフォーマンスが向上しています。 | この変更により、可能な場合、java.util.Calendar を使用する必要がなくなるため、不要なテンポラル データ型変換を行わなくて済みます。 |
 | このパフォーマンス向上の影響を受けているテンポラル データ型の一覧を次に示します。SQL Server データ型に続き、それぞれの Java マッピングが括弧内に記載されています。 | date (java.sql.Date)、datetime (java.sql.Timestamp)、datetime2 (java.sql.Timestamp)、smalldatetime (java.sql.Timestamp)、time (java.sql.Time)。 |
 | &nbsp; | &nbsp; |
 
@@ -63,7 +63,7 @@ Microsoft JDBC Driver 8.2.0 for SQL Server は、JDK 11.0 と 1.8 に加え、Ja
 
 | sqljdbc_auth.dll change | 詳細 |
 | :------------------- | :------ |
-| Microsoft JDBC Driver 8.2.0 for SQL Server 以降では、ドライバーが Azure Active Directory 認証機能を使用するために sqljdbc_auth.dll ではなく mssql-jdbc_auth-\<バージョン>-\<arch>.dll に依存しています。 | &nbsp; |
+| Microsoft JDBC Driver 8.2.1 for SQL Server 以降では、ドライバーが Azure Active Directory 認証機能を使用するために sqljdbc_auth.dll ではなく mssql-jdbc_auth-\<バージョン>-\<arch>.dll に依存しています。 | &nbsp; |
 | また、簡単にアクセスできるように、DLL も Maven リポジトリにアップロードされています。 | [このページ](https://search.maven.org/artifact/com.microsoft.sqlserver/mssql-jdbc_auth)を参照してください。 |
 | &nbsp; | &nbsp; |
 

@@ -1,7 +1,7 @@
 ---
 title: JDBC ドライバーのよくあるご質問 (FAQ) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/29/2020
+ms.date: 02/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 1055b9b0422073d7b9875c748dcfe889af053dc2
-ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
+ms.openlocfilehash: e982c4b90c1c856d67720301fdf13595872b18c2
+ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "77004623"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77903619"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>JDBC ドライバーのよくあるご質問 (FAQ)
 
@@ -39,9 +39,9 @@ Microsoft JDBC Driver 8.2 では、DBC 4.2 および 4.3 (一部) 仕様がサ�
 
 | JAR                        | JDBC 仕様            | JDK のバージョン |
 | -------------------------- | ----------------------------- | ----------- |
-| mssql-jdbc-8.2.0.jre13.jar | JDBC 4.3 (一部) および 4.2 | JDK 13.0    |
-| mssql-jdbc-8.2.0.jre11.jar | JDBC 4.3 (一部) および 4.2 | JDK 11.0    |
-| mssql-jdbc-8.2.0.jre8.jar  | JDBC 4.2                      | JDK 8.0     |
+| mssql-jdbc-8.2.1.jre13.jar | JDBC 4.3 (一部) および 4.2 | JDK 13.0    |
+| mssql-jdbc-8.2.1.jre11.jar | JDBC 4.3 (一部) および 4.2 | JDK 11.0    |
+| mssql-jdbc-8.2.1.jre8.jar  | JDBC 4.2                      | JDK 8.0     |
 | &nbsp;                     | &nbsp;                        | &nbsp;      |
 
 Microsoft JDBC Driver 7.4 では、DBC 4.2 および 4.3 (一部) 仕様がサポートされ、インストール パッケージには次に示す 3 つの JAR クラス ライブラリが含まれます。
@@ -124,6 +124,7 @@ JDBC Driver 6.0、6.2、6.4、および 7.0 は再配布可能です。 ライ�
 | Windows 以外 | ピュア Java Kerberos                    |
 | Windows 以外 | SQL Server                            |
 | Windows 以外 | Azure Active Directory 認証 |
+| Windows 以外 | NTLM                                  |
 | Windows     | ピュア Java Kerberos                    |
 | Windows     | SQL Server                            |
 | Windows     | Kerberos と NTLM バックアップ             |

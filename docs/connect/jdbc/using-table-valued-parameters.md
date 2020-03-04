@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3af61054-a886-4e1a-ad85-93f87c6d3584
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 66d9c24a31002f0c991fbf1dfdd7210adbf53172
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 1dfa8438e7afb1763129748368a7f6e08fa892c3
+ms.sourcegitcommit: 844793cd1c058e6bba136f050734e7dc62024a82
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74249715"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77575335"
 ---
 # <a name="using-table-valued-parameters"></a>テーブル値パラメーターの使用
 
@@ -237,7 +237,7 @@ pStmt.execute();
 
 このクラスは、列のメタデータを表します。 これは、列のメタデータをテーブル値パラメーターに渡すために ISQLServerDataRecord インターフェイスで使用されます。 このクラスのメソッドは次のとおりです。  
 
-| Name                                                                                                                                                                             | 説明                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| 名前                                                                                                                                                                             | 説明                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | public SQLServerMetaData(String columnName, int sqlType, int precision, int scale, boolean useServerDefault, boolean isUniqueKey, SQLServerSortOrder sortOrder, int sortOrdinal) | 指定された列名、SQL 型、有効桁数、小数点以下桁数、およびサーバーの既定値を使用して、SQLServerMetaData の新しいインスタンスを初期化します。 この形式のコンストラクターは、テーブル値パラメーター内で列が一意であるかどうか、列の並べ替え順序、および並べ替え列の序数を指定できるようにすることで、テーブル値パラメーターをサポートします。 <br/><br/>useServerDefault - この列で既定のサーバー値を使用する必要があるかどうかを指定します。既定値は false です。<br>isUniqueKey - テーブル値パラメーター内の列が一意であるかどうかを示します。既定値は false です。<br>sortOrder - 列の並べ替え順序を示します。既定値は SQLServerSortOrder.Unspecified です。<br>sortOrdinal - 並べ替え列の序数を指定します。sortOrdinal は 0 から始まります。既定値は -1 です。 |
 | public SQLServerMetaData( String columnName, int sqlType)                                                                                                                        | 列名と SQL 型を使用して、SQLServerMetaData の新しいインスタンスを初期化します。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
@@ -261,7 +261,7 @@ pStmt.execute();
 
 このクラスは、テーブル値パラメーターで使用されるインメモリ データ テーブルを表します。 このクラスのメソッドは次のとおりです。  
 
-| Name                                                          | 説明                                          |
+| 名前                                                          | 説明                                          |
 | ------------------------------------------------------------- | ---------------------------------------------------- |
 | Public SQLServerDataTable()                                   | SQLServerDataTable の新しいインスタンスを初期化します。    |
 | public Iterator<Entry\<Integer, Object[]>> getIterator()      | データ テーブルの行の反復子を取得します。 |
@@ -275,7 +275,7 @@ pStmt.execute();
 
 このクラスは、SQLServerDataTable によって表されるインメモリ データ テーブルの列を表します。 このクラスのメソッドは次のとおりです。  
 
-| Name                                                       | 説明                                                                      |
+| 名前                                                       | 説明                                                                      |
 | ---------------------------------------------------------- | -------------------------------------------------------------------------------- |
 | public SQLServerDataColumn(String columnName, int sqlType) | 列名と型を使用して、SQLServerDataColumn の新しいインスタンスを初期化します。 |
 | public String getColumnName()                              | 列名を取得します。                                                       |
@@ -285,7 +285,7 @@ pStmt.execute();
 
 このクラスは、ユーザーがテーブル値パラメーターにデータをストリームするために実装できるインターフェイスを表します。 このインターフェイスのメソッドは次のとおりです。  
   
-| Name                                                    | 説明                                                                                             |
+| 名前                                                    | 説明                                                                                             |
 | ------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
 | public SQLServerMetaData getColumnMetaData(int column); | 指定された列インデックスの列メタデータを取得します。                                               |
 | public int getColumnCount();                            | 列数の合計数を取得します。                                                                  |
@@ -296,7 +296,7 @@ pStmt.execute();
 
 次のメソッドは、テーブル値パラメーターの引き渡しをサポートするために、このクラスに追加されました。  
 
-| Name                                                                                                    | 説明                                                                                                                                                                                                                                                                                                |
+| 名前                                                                                                    | 説明                                                                                                                                                                                                                                                                                                |
 | ------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | public final void setStructured(int parameterIndex, String tvpName, SQLServerDataTable tvpDataTable)    | テーブル値パラメーターにデータ テーブルを設定します。 parameterIndex はパラメーター インデックス、tvpName はテーブル値パラメーターの名前、tvpDataTable はソース データ テーブル オブジェクトです。                                                                                                          |
 | public final void setStructured(int parameterIndex, String tvpName, ResultSet tvpResultSet)             | テーブル値パラメーターに、別のテーブルから取得された ResultSet を設定します。 parameterIndex はパラメーター インデックス、tvpName はテーブル値パラメーターの名前、tvpResultSet はソース結果セット オブジェクトです。                                                                               |
@@ -306,12 +306,12 @@ pStmt.execute();
 
 次のメソッドは、テーブル値パラメーターの引き渡しをサポートするために、このクラスに追加されました。  
   
-| Name                                                                                                        | 説明                                                                                                                                                                                                                                                                                                                      |
+| 名前                                                                                                        | 説明                                                                                                                                                                                                                                                                                                                      |
 | ----------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | public final void setStructured(String paratemeterName, String tvpName, SQLServerDataTable tvpDataTable)    | ストアド プロシージャに渡されるテーブル値パラメーターにデータ テーブルを設定します。 paratemeterName はパラメーターの名前、tvpName は TVP 型の名前、tvpDataTable はデータ テーブル オブジェクトです。                                                                                                                 |
 | public final void setStructured(String paratemeterName, String tvpName, ResultSet tvpResultSet)             | ストアド プロシージャに渡されるテーブル値パラメーターに、別のテーブルから取得された ResultSet を設定します。 paratemeterName はパラメーターの名前、tvpName は TVP 型の名前、tvpResultSet はソース結果セット オブジェクトです。                                                                              |
 | public final void setStructured(String paratemeterName, String tvpName, ISQLServerDataRecord tvpDataRecord) | ストアド プロシージャに渡されるテーブル値パラメーターに ISQLServerDataRecord オブジェクトを設定します。 ISQLServerDataRecord はデータをストリームするために使用され、その使用方法はユーザーが決定します。 paratemeterName はパラメーターの名前、tvpName は TVP 型の名前、tvpDataTable はデータ テーブル オブジェクトです。tvpDataRecord は ISQLServerDataRecord オブジェクトです。 |
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [JDBC ドライバーの概要](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

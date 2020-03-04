@@ -23,18 +23,21 @@ helpviewer_keywords:
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a8dce4ae0ec739bad6df3ac064ca96d04e91dcf7
-ms.sourcegitcommit: 867b7c61ecfa5616e553410ba0eac06dbce1fed3
+monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 ||=azure-sqldw-latest|| = sqlallproducts-allversions
+ms.openlocfilehash: 1637b46d896e0114d5b66004bc1c160e23521e30
+ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/22/2020
-ms.locfileid: "77558355"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78180077"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
-このステートメントでは、複数のデータベース構成を**個別データベース** レベルで設定できます。 このステートメントは、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降の [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で利用できます。 次のような設定があります。
+このコマンドを使うと、複数のデータベース構成設定を**個別のデータベース** レベルで設定できます。 
+
+次の設定は、[!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] および [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でサポートされています。 
 
 - プロシージャ キャッシュをクリアします。
 - プライマリ データベースに対して、MAXDOP パラメーターを特定のデータベースに最適な内容に基づいて任意の値 (1、2、...) に設定し、(クエリ レポートなどに) 使用されるすべてのセカンダリ データベースに対して別の値 (0 など) を設定します。
@@ -54,11 +57,16 @@ ms.locfileid: "77558355"
 - [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md) の最後の実際の実行プランのコレクションを有効または無効にします。
 - 再開可能なインデックス操作を一時停止してから、SQL Server エンジンによって自動的に中止されるまでの一時停止される時間を分単位で指定します。
 
+この設定は、Azure Synapse Analytics (旧称 SQL DW) でのみ使用できます。
+- ユーザー データベースの互換性レベルを設定する
+
 ![リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "[リンク] アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>構文
 
 ```
+-- Syntax for SQL Server and Azure SQL Database
+
 ALTER DATABASE SCOPED CONFIGURATION
 {
     { [ FOR SECONDARY] SET <set_options>}
@@ -101,6 +109,21 @@ ALTER DATABASE SCOPED CONFIGURATION
 > -  `DISABLE_INTERLEAVED_EXECUTION_TVF` を `INTERLEAVED_EXECUTION_TVF` に変更しました
 > -  `DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK` を `BATCH_MODE_MEMORY_GRANT_FEEDBACK` に変更しました
 > -  `DISABLE_BATCH_MODE_ADAPTIVE_JOINS` を `BATCH_MODE_ADAPTIVE_JOINS` に変更しました
+
+```
+-- Synatx for Azure Synapse Analytics (Formerly SQL DW)
+
+ALTER DATABASE SCOPED CONFIGURATION
+{
+    SET <set_options>
+}
+[;]
+
+< set_options > ::=
+{
+    DW_COMPATIBILITY_LEVEL = { AUTO | 10 | 20 }
+}
+```
 
 ## <a name="arguments"></a>引数
 
@@ -373,6 +396,18 @@ ISOLATE_SECURITY_POLICY_CARDINALITY **=** { ON | **OFF**}
 **適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開始値 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 [行レベル セキュリティ](../../relational-databases/security/row-level-security.md) (RLS) 述語がユーザー クエリ全体の実行プランのカーディナリティに影響するかどうかを制御できます。 ISOLATE_SECURITY_POLICY_CARDINALITY が ON の場合、RLS 述語は、実行プランのカーディナリティに影響しません。 たとえば、100 万行を含むテーブルがあり、RLS 述語で、クエリを発行する特定のユーザーに対して結果を 10 行に制限する場合について考えてみましょう。 このデータベース スコープ構成が OFF に設定されている場合、この述語の推定カーディナリティは 10 になります。 このデータベース スコープ構成が ON の場合、クエリ最適化により 100 万行と推定されます。 ほとんどのワークロードでは、既定値を使用することをお勧めします。
+
+DW_COMPATIBILITY_LEVEL **=** {**AUTO** | 10 | 20 }
+
+**適用対象**:Azure Synapse Analytics (旧称 SQL DW) のみ
+
+指定したバージョンのデータベース エンジンと互換性があるように、Transact-SQL およびクエリ処理の動作を設定します。  設定が完了すると、そのデータベースでクエリが実行されるときに、互換性のある機能だけが実行されます。  データベースの互換性レベルは、最初の作成時に既定で AUTO に設定されます。  互換性レベルは、データベースの一時停止/再開、バックアップ/復元操作の後でも保持されます。 
+
+|互換性レベル    |   説明|  
+|-----------------------|--------------|
+|**AUTO**| 既定値。  この値は、サポートされている最新の互換性レベルと同じです。|
+|"**10**"| 互換性レベルのサポートを導入する前に、Transact-SQL とクエリ処理の動作を実行します。|
+|**20**| 1 番目の互換性レベル。ゲート Transact-SQL とクエリ処理の動作が含まれます。 |
 
 ## <a name="Permissions"></a> Permissions
 

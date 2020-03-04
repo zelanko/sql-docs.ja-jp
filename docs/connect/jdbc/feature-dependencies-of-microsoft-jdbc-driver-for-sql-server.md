@@ -1,7 +1,7 @@
 ---
 title: Microsoft JDBC Driver for SQL Server の機能の依存関係 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/29/2020
+ms.date: 02/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a5babb916ba9c8f2f4ca5a7855eb98c2f485fd17
-ms.sourcegitcommit: 4b2c9d648b7a7bdf9c3052ebfeef182e2f9d66af
+ms.openlocfilehash: 56964eabd62246eefe660c949155cf671fb14970
+ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "77004619"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77903709"
 ---
 # <a name="feature-dependencies-of-the-microsoft-jdbc-driver-for-sql-server"></a>Microsoft JDBC Driver for SQL Server の機能の依存関係
 
@@ -44,7 +44,7 @@ ms.locfileid: "77004619"
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>8.2.0.jre11</version>
+    <version>8.2.1.jre11</version>
     <scope>compile</scope>
 </dependency>
 
@@ -67,7 +67,7 @@ ms.locfileid: "77004619"
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>8.2.0.jre11</version>
+    <version>8.2.1.jre11</version>
     <scope>compile</scope>
 </dependency>
 
@@ -94,7 +94,7 @@ ms.locfileid: "77004619"
 
 ### <a name="working-with-the-azure-key-vault-provider"></a>Azure Key Vault プロバイダーの操作:
 
-- JDBC ドライバー バージョン 8.2.0 - 依存関係のバージョン: Azure-Keyvault (バージョン 1.2.2)、Adal4j (バージョン 1.6.4)、Client-Runtime-for-AutoRest (1.7.0)、およびそれらの依存関係 ([サンプル アプリケーション](../../connect/jdbc/azure-key-vault-sample-version-7.0.md))
+- JDBC ドライバー バージョン 8.2.1 - 依存関係のバージョン: Azure-Keyvault (バージョン 1.2.2)、Adal4j (バージョン 1.6.4)、Client-Runtime-for-AutoRest (1.7.0)、およびそれらの依存関係 ([サンプル アプリケーション](../../connect/jdbc/azure-key-vault-sample-version-7.0.md))
 - JDBC ドライバー バージョン 7.4.1 - 依存関係のバージョン:Azure-Keyvault (バージョン 1.2.1)、Adal4j (バージョン 1.6.4)、Client-Runtime-for-AutoRest (1.6.10)、およびそれらの依存関係 ([サンプル アプリケーション](../../connect/jdbc/azure-key-vault-sample-version-7.0.md))
 - JDBC ドライバー バージョン 7.2.2 - 依存関係のバージョン:Azure-Keyvault (バージョン 1.2.0)、Azure-Keyvault-Webkey (バージョン 1.2.0)、Adal4j (バージョン 1.6.3)、Client-Runtime-for-AutoRest (1.6.5)、およびそれらの依存関係 ([サンプル アプリケーション](../../connect/jdbc/azure-key-vault-sample-version-7.0.md))
 - JDBC ドライバー バージョン 7.0.0 - 依存関係のバージョン:Azure-Keyvault (バージョン 1.0.0)、Adal4j (バージョン 1.6.0)、およびそれらの依存関係 ([サンプル アプリケーション](../../connect/jdbc/azure-key-vault-sample-version-7.0.md))
@@ -109,7 +109,7 @@ ms.locfileid: "77004619"
 
 ### <a name="working-with-azure-active-directory-authentication"></a>Azure Active Directory 認証の操作:
 
-- JDBC ドライバー バージョン 8.2.0 - 依存関係のバージョン: Adal4j (バージョン 1.6.4)、Client-Runtime-for-AutoRest (1.7.0)、およびそれらの依存関係。 このバージョンのドライバーでは、"sqljdbc_auth.dll" は "mssql-jdbc_auth-\<バージョン>-\<arch>.dll" に名前が変更されました。
+- JDBC ドライバー バージョン 8.2.1 - 依存関係のバージョン: Adal4j (バージョン 1.6.4)、Client-Runtime-for-AutoRest (1.7.0)、およびそれらの依存関係。 このバージョンのドライバーでは、"sqljdbc_auth.dll" は "mssql-jdbc_auth-\<バージョン>-\<arch>.dll" に名前が変更されました。
 - JDBC ドライバー バージョン 7.4.1 - 依存関係のバージョン:Adal4j (バージョン 1.6.4)、Client-Runtime-for-AutoRest (1.6.10)、およびそれらの依存関係
 - JDBC ドライバー バージョン 7.2.2 - 依存関係のバージョン:Adal4j (バージョン 1.6.3)、Client-Runtime-for-AutoRest (1.6.5)、およびそれらの依存関係
 - JDBC ドライバー バージョン 7.0.0 - 依存関係のバージョン:Adal4j (バージョン 1.6.0) とその依存関係
@@ -121,7 +121,7 @@ ms.locfileid: "77004619"
 
 *Windows オペレーティング システム*では、ドライバーは、既定で sqljdbc_auth.dll が検索され、Kerberos チケットの設定も Azure ライブラリの依存関係も必要ありません。 sqljdbc_auth.dll を使用できない場合、ドライバーでは、他のオペレーティング システムと同じように、Active Directory への認証用の Kerberos チケットが検索されます。
 
-ドライバー バージョン 8.2.0 以降、"sqljdbc_auth.dll" は "mssql-jdbc_auth-\<バージョン>-\<arch>.dll" に名前が変更されます。 例: "mssql-jdbc_auth-8.2.0.x64.dll"。
+ドライバー バージョン 8.2.1 以降、"sqljdbc_auth.dll" は "mssql-jdbc_auth-\<バージョン>-\<arch>.dll" に名前が変更されます。 例: "mssql-jdbc_auth-8.2.1.x64.dll"。
 
 この機能を使用している[サンプル アプリケーション](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md)を取得できます。
 

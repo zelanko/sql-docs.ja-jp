@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 97b36ba7e90aeaa32a0d073b972f06a9fc336750
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: ece6ef614e336b2478779107a4e4f37d2903841a
+ms.sourcegitcommit: 64e96ad1ce6c88c814e3789f0fa6e60185ec479c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "70846739"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77705868"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -99,7 +99,8 @@ replmerg [-?]
 [-SubscriberSecurityMode [0|1]]  
 [-SubscriberType [0|1|2|3|4|5|6|7|8|9]]  
 [-SubscriptionType [0|1|2]]  
-[-SyncToAlternate [0|1]  
+[-SyncToAlternate [0|1]]  
+[-T [101|102]]  
 [-UploadGenerationsPerBatch upload_generations_per_batch]  
 [-UploadReadChangesPerBatch upload_read_changes_per_batch]  
 [-UploadWriteChangesPerBatch upload_write_changes_per_batch]  
@@ -358,7 +359,10 @@ replmerg [-?]
   
  **-SyncToAlternate** **[0|1]**  
  マージ エージェントがサブスクリプションと代替パブリッシャー間での同期を実行しているかどうかを指定します。 値 **1** は、これが代替パブリッシャーであることを示します。 既定値は **0**です。  
-  
+ 
+ **-T** **[101|102]**  
+ マージ エージェントの追加機能を有効にするトレース フラグ。 値 **101** を指定すると、マージ レプリケーション同期プロセスの各ステップにかかる時間を特定するのに役立つ追加の詳細ログ情報が有効になります。 値 **102** を指定すると、トレース フラグ **101** と同じ統計情報が書き込まれますが、書き込み先は <Distribution server>..msmerge_history テーブルとなります。 トレース フラグ 101 を使用する場合は、`-output` パラメーターと `-outputverboselevel` パラメーターを使用してマージ エージェントのログ記録を有効にします。  たとえば、次のパラメーターをマージ エージェントに追加してから、エージェントを再起動します: `-T 101, -output, -outputverboselevel` 
+ 
  **-UploadGenerationsPerBatch** _upload_generations_per_batch_  
  サブスクライバーからパブリッシャーに変更をアップロードする間に、1 つのバッチで処理される生成結果の数です。 生成結果は、アーティクルごとに変更の論理グループとして定義されます。 信頼性の高い通信リンクの既定値は **100**です。 信頼性の低い通信リンクの既定値は **1**です。  
   
@@ -394,7 +398,12 @@ replmerg [-?]
   
  マージ エージェントを起動するには、コマンド プロンプトから **replmerg.exe** を実行します。 詳細については、「 [レプリケーション エージェント実行可能ファイルのプログラミング](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)」を参照してください。  
   
+ ### <a name="troubleshooting-merge-agent-performance"></a>マージ エージェントのパフォーマンスのトラブルシューティング 
  現在のセッションのマージ エージェントの履歴は、連続モードでの実行中には削除されません。 エージェントが長時間実行されると、マージ履歴テーブルに多数のエントリが発生し、パフォーマンスに影響する可能性があります。 この問題を解決するには、スケジュールされたモードに切り替えるか、引き続き連続モードを使用する場合は、定期的にマージ エージェントを再起動するための専用のジョブを作成するか、履歴の詳細レベルを下げて行数を減らして、パフォーマンスへの影響を軽減してください。  
+ 
+  場合によって、レプリケーション マージ エージェントでは、変更をレプリケートするのに長い時間を要する場合があります。 マージ レプリケーション同期プロセスで最も時間がかかる手順を特定するには、トレース フラグ 101 をマージ エージェント ログと共に使用します。 これを行うには、マージ エージェント パラメーターとして次のパラメーターを使用して、エージェントを再起動します:   <br/>-T 101   <br/>-output   <br/>-outputverboselevel
+
+また、<Distribution server>..msmerge_history テーブルに統計を書き込む必要がある場合は、トレース フラグ -T 102 を使用します。
   
 ## <a name="see-also"></a>参照  
  [レプリケーション エージェントの管理](../../../relational-databases/replication/agents/replication-agent-administration.md)  

@@ -14,12 +14,12 @@ ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f652fc8771162c81a7d86f0984eece90892e3cd3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 0f11b1e7300027d024b5961f73ffa71c7b07a2bd
+ms.sourcegitcommit: 92b2e3cf058e6b1e9484e155d2cc28ed2a0b7a8c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "72909310"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77608497"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>クエリのストアを使用した、パフォーマンスの監視
 [!INCLUDE[appliesto-ss-asdb-xxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "72909310"
 ##  <a name="Enabling"></a> クエリのストアを有効にする  
  既定では、クエリのストアは新しいデータベースに対してアクティブではありません。  
   
-#### <a name="use-the-query-store-page-in-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の [クエリ ストア] ページを使う  
+#### <a name="use-the-query-store-page-in-ssmanstudiofull"></a>[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の [クエリ ストア] ページを使う  
   
 1.  オブジェクト エクスプローラーで、データベースを右クリックし、 **[プロパティ]** をクリックします。  
   
@@ -595,7 +595,7 @@ EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;
 
 #### <a name="a-namectp23a-plan-forcing-support-for-fast-forward-and-static-cursors"></a><a name="ctp23"><a/> 高速順方向カーソルと静的カーソルのサポートを強制するプラン
   
-[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3 以降、クエリ ストアでは、高速順方向カーソルおよび [!INCLUDE[tsql](../../includes/tsql-md.md)] と API の静的カーソルに対してクエリ実行プランを強制する機能がサポートされます。 強制は、`sp_query_store_force_plan` か [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] クエリ ストア レポートの利用によりサポートされます。
+[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降および Azure SQL Database (すべてのデプロイ モデル) では、クエリ ストアにおいて、高速順方向カーソルおよび [!INCLUDE[tsql](../../includes/tsql-md.md)] と API の静的カーソルに対してクエリ実行プランを強制する機能がサポートされます。 強制は、`sp_query_store_force_plan` か [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] クエリ ストア レポートの利用によりサポートされます。
 
 ### <a name="remove-plan-forcing-for-a-query"></a>クエリに対するプランの強制を解除する
 
