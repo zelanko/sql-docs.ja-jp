@@ -1171,7 +1171,7 @@
           href: database-engine/log-shipping/about-log-shipping-sql-server.md
         - name: 操作方法
           items:
-            - name: '[構成]'
+            - name: 構成
               href: database-engine/log-shipping/configure-log-shipping-sql-server.md
             - name: セカンダリ データベースの追加
               href: database-engine/log-shipping/add-a-secondary-database-to-a-log-shipping-configuration-sql-server.md
@@ -1738,7 +1738,7 @@
                   href: relational-databases/tables/temporal-table-usage-scenarios.md
                 - name: 整合性チェック
                   href: relational-databases/tables/temporal-table-system-consistency-checks.md
-                - name: '[パーティション分割]'
+                - name: パーティション分割
                   href: relational-databases/tables/partitioning-with-temporal-tables.md
                 - name: 注意点と制限事項
                   href: relational-databases/tables/temporal-table-considerations-and-limitations.md
@@ -2101,7 +2101,7 @@
           href: relational-databases/data-tier-applications/delete-a-data-tier-application.md
         - name: 配置
           href: relational-databases/data-tier-applications/deploy-a-data-tier-application.md
-        - name: '[エクスポート]'
+        - name: エクスポート
           href: relational-databases/data-tier-applications/export-a-data-tier-application.md
         - name: データベースからの DAC の抽出
           href: relational-databases/data-tier-applications/extract-a-dac-from-a-database.md
@@ -2563,7 +2563,7 @@
               href: relational-databases/native-client/system-requirements-for-sql-server-native-client.md
             - name: SQL Server Native Client を使用する場合
               href: relational-databases/native-client/when-to-use-sql-server-native-client.md
-        - name: '[機能]'
+        - name: 機能
           href: relational-databases/native-client/features/sql-server-native-client-features.md
           items:
             - name: 診断情報の拡張イベント
@@ -4854,7 +4854,7 @@
                       href: relational-databases/replication/publish/set-the-expiration-period-for-subscriptions.md
                     - name: スキーマ オプションの指定
                       href: relational-databases/replication/publish/specify-schema-options.md
-                    - name: '[スキーマ変更のレプリケート]'
+                    - name: スキーマ変更のレプリケート
                       href: relational-databases/replication/publish/replicate-schema-changes.md
                     - name: ID 列の管理
                       href: relational-databases/replication/publish/manage-identity-columns.md
@@ -5380,7 +5380,7 @@
                       href: relational-databases/replication/publication-information-all-subscriptions-transactional-publication.md
                     - name: 警告
                       href: relational-databases/replication/publication-information-warnings-transactional-publication.md
-                    - name: '[エージェント]'
+                    - name: エージェント
                       href: relational-databases/replication/publication-information-agents-transactional-publication.md
                     - name: トレーサー トークン
                       href: relational-databases/replication/publication-information-tracer-tokens-sql-server-2005-and-later.md
@@ -5398,7 +5398,7 @@
                       href: relational-databases/replication/publication-information-all-subscriptions-merge-publication.md
                     - name: 警告
                       href: relational-databases/replication/publication-information-warnings-merge-publication-sql-server-2005-and-later.md
-                    - name: '[エージェント]'
+                    - name: エージェント
                       href: relational-databases/replication/publication-information-agents-merge-publication.md
                     - name: 同期の履歴
                       href: relational-databases/replication/subscription-synchronization-history.md
@@ -5410,7 +5410,7 @@
                       href: relational-databases/replication/publication-information-all-subscriptions-snapshot-publication.md
                     - name: 警告
                       href: relational-databases/replication/publication-information-warnings-snapshot-publication-sql-server-2005-and-later.md
-                    - name: '[エージェント]'
+                    - name: エージェント
                       href: relational-databases/replication/publication-information-agents-snapshot-publication.md
                     - name: ディストリビューターからサブスクライバーまでの履歴
                       href: relational-databases/replication/subscription-distributor-to-subscriber-history-snapshot-subscription.md
@@ -5904,7 +5904,7 @@
               href: relational-databases/database-mail/create-a-database-mail-profile.md
             - name: アカウントを作成する
               href: relational-databases/database-mail/create-a-database-mail-account.md
-            - name: '[構成]'
+            - name: 構成
               href: relational-databases/database-mail/configure-database-mail.md
             - name: メッセージング オブジェクト
               href: relational-databases/database-mail/database-mail-messaging-objects.md
@@ -7125,7 +7125,7 @@
               href: master-data-services/edit-model-master-data-services.md
             - name: 削除
               href: master-data-services/delete-a-model-master-data-services.md
-        - name: Entities
+        - name: エンティティ
           href: master-data-services/entities-master-data-services.md
           items:
             - name: エンティティの依存関係エクスプローラー
@@ -7676,7 +7676,7 @@
               href: relational-databases/security/authentication-access/database-level-roles.md
             - name: アプリケーション ロール
               href: relational-databases/security/authentication-access/application-roles.md
-            - name: '[資格情報]'
+            - name: 資格情報
               href: relational-databases/security/authentication-access/credentials-database-engine.md
             - name: '[セキュリティ保護可能なリソース]'
               href: relational-databases/security/securables.md
@@ -7987,7 +7987,7 @@
               href: tools/distributed-replay/complete-the-post-installation-steps.md
             - name: コントローラー サービスとクライアント サービスのアカウントの変更
               href: tools/distributed-replay/modify-the-controller-and-client-services-accounts.md
-        - name: '[構成]'
+        - name: 構成
           href: tools/distributed-replay/configure-distributed-replay.md
           items:
             - name: 入力トレース データの準備
@@ -8520,8 +8520,6 @@
                 - name: クエリ エディターとテキスト エディター
                   href: ssms/scripting/query-and-text-editors-sql-server-management-studio.md
                   items:
-                    - name: データベース エンジン クエリ エディター
-                      href: ssms/f1-help/database-engine-query-editor-sql-server-management-studio.md
                     - name: XML エディター
                       href: ssms/scripting/xml-editor-sql-server-management-studio.md
                     - name: クエリ エディターでのコードの色分け
@@ -8674,9 +8672,9 @@
                   href: ssms/troubleshoot/ssms-troubleshoot.md
             - name: SQL Server エージェント
               items:
-                - name: '[構成]'
+                - name: 構成
                   items:
-                    - name: '[構成]'
+                    - name: 構成
                       href: ssms/agent/configure-sql-server-agent.md
                     - name: ジョブ カテゴリへのジョブの割り当て
                       href: ssms/agent/assign-a-job-to-a-job-category.md
@@ -9023,6 +9021,8 @@
               items:
                 - name: サーバー接続 (SSMS) の F1 ヘルプ
                   href: ssms/f1-help/f1-help-for-server-connections-sql-server-management-studio.md
+                - name: データベース エンジン クエリ エディター
+                  href: ssms/f1-help/database-engine-query-editor-sql-server-management-studio.md
                 - name: Microsoft Azure Storage への接続
                   href: ssms/f1-help/connect-to-microsoft-azure-storage.md
                 - name: SQL Server Management Studio から SQL Server コンポーネントへの接続
@@ -9607,7 +9607,7 @@
               href: tools/sql-server-profiler/derive-a-template-from-a-running-trace-sql-server-profiler.md
             - name: トレース ファイルまたはトレース テーブルからテンプレートを作成する
               href: tools/sql-server-profiler/derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler.md
-            - name: '[エクスポート]'
+            - name: エクスポート
               href: tools/sql-server-profiler/export-a-trace-template-sql-server-profiler.md
             - name: '[インポート]'
               href: tools/sql-server-profiler/import-a-trace-template-sql-server-profiler.md
@@ -9841,7 +9841,7 @@
               href: linux/sql-server-linux-setup-language-extensions.md
             - name: リポジトリの構成
               href: linux/sql-server-linux-change-repo.md
-        - name: '[構成]'
+        - name: 構成
           items:
             - name: mssql-conf での構成
               href: linux/sql-server-linux-configure-mssql-conf.md
@@ -9975,7 +9975,7 @@
         - name: レプリケーション
           href: linux/sql-server-linux-replication.md
           items:
-            - name: '[構成]'
+            - name: 構成
               href: linux/sql-server-linux-replication-configure.md
             - name: '[スナップショット フォルダー]'
               href: linux/sql-server-linux-replication-snapshot-shares.md
@@ -15495,7 +15495,7 @@
                   href: t-sql/functions/radians-transact-sql.md
                 - name: RAND
                   href: t-sql/functions/rand-transact-sql.md
-                - name: '[ROUND]'
+                - name: ROUND
                   href: t-sql/functions/round-transact-sql.md
                 - name: SIGN
                   href: t-sql/functions/sign-transact-sql.md
@@ -15699,9 +15699,9 @@
                   href: t-sql/functions/left-transact-sql.md
                 - name: LEN
                   href: t-sql/functions/len-transact-sql.md
-                - name: '[LOWER]'
+                - name: LOWER
                   href: t-sql/functions/lower-transact-sql.md
-                - name: '[LTRIM]'
+                - name: LTRIM
                   href: t-sql/functions/ltrim-transact-sql.md
                 - name: NCHAR
                   href: t-sql/functions/nchar-transact-sql.md
@@ -15709,7 +15709,7 @@
                   href: t-sql/functions/patindex-transact-sql.md
                 - name: QUOTENAME
                   href: t-sql/functions/quotename-transact-sql.md
-                - name: '[REPLACE]'
+                - name: REPLACE
                   href: t-sql/functions/replace-transact-sql.md
                 - name: REPLICATE
                   href: t-sql/functions/replicate-transact-sql.md
@@ -15717,7 +15717,7 @@
                   href: t-sql/functions/reverse-transact-sql.md
                 - name: RIGHT
                   href: t-sql/functions/right-transact-sql.md
-                - name: '[RTRIM]'
+                - name: RTRIM
                   href: t-sql/functions/rtrim-transact-sql.md
                 - name: SOUNDEX
                   href: t-sql/functions/soundex-transact-sql.md
@@ -15733,7 +15733,7 @@
                   href: t-sql/functions/string-split-transact-sql.md
                 - name: STUFF
                   href: t-sql/functions/stuff-transact-sql.md
-                - name: '[SUBSTRING]'
+                - name: SUBSTRING
                   href: t-sql/functions/substring-transact-sql.md
                 - name: TRANSLATE
                   href: t-sql/functions/translate-transact-sql.md
@@ -15741,7 +15741,7 @@
                   href: t-sql/functions/trim-transact-sql.md
                 - name: UNICODE
                   href: t-sql/functions/unicode-transact-sql.md
-                - name: '[UPPER]'
+                - name: UPPER
                   href: t-sql/functions/upper-transact-sql.md
             - name: システム
               href: t-sql/functions/system-functions-transact-sql.md
