@@ -10,19 +10,19 @@ ms.assetid: 9fb8656b-0e4e-4ada-b404-4db4d3eea995
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 90780c16c2ba4b94b4e4a88c6f2c249176ef072b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: a1c05ed678fd0c23fc00466396f306763dfbc54b
+ms.sourcegitcommit: e914effe771a1ee323bb3653626cd4ba83d77308
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73632713"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78280916"
 ---
 # <a name="lesson-1-creating-database-objects"></a>レッスン 1: データベース オブジェクトの作成
   このレッスンでは、データベースを作成する方法、データベースにテーブルを作成する方法、およびテーブル内のデータにアクセスして変更する方法を説明します。 これは [!INCLUDE[tsql](../includes/tsql-md.md)]の入門レッスンであるため、これらのステートメントの各種オプションは使用せず、その説明も含まれていません。  
   
  [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントは次の方法で作成して [!INCLUDE[ssDE](../includes/ssde-md.md)] に送信できます。  
   
--   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]を使用する。 このチュートリアルでは、 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]を使用することを前提としていますが、 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Express も使用できます。これは [Microsoft ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=7593)から無料でダウンロードできます。  
+-   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]を使用する。 このチュートリアルでは、 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]を使用することを前提としていますが、 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Express も使用できます。これは [Microsoft ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=14630)から無料でダウンロードできます。  
   
 -   [sqlcmd ユーティリティ](../tools/sqlcmd-utility.md)を使用する。  
   

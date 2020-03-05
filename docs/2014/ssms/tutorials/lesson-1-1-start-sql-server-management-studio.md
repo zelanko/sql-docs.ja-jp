@@ -10,12 +10,12 @@ ms.assetid: 25ffaea6-0eee-4169-8dd0-1da417c28fc6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bd7fed6fff4ddd55ef56e4c5b342c56b6c2f462f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: af3f08bcde8b2a325784ef7a99ba5ffad89ce617
+ms.sourcegitcommit: 85b26bc1abbd8d8e2795ab96532ac7a7e01a954f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73632798"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78288982"
 ---
 # <a name="start-sql-server-management-studio"></a>SQL Server Management Studio の起動
   このチュートリアルを開始する前に、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を開いてみましょう。  
@@ -30,7 +30,7 @@ ms.locfileid: "73632798"
     >  
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、既定ではインストールされません。 
   [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を利用できない場合は、セットアップを実行してインストールしてください。 
-  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] は [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] では使用できません。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]Express は、 [Microsoft ダウンロードセンター](https://www.microsoft.com/download/details.aspx?id=7593)から無料でダウンロードできますが、このチュートリアルで説明しているものとは異なるユーザーインターフェイスを備えています。  
+  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] は [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] では使用できません。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]Express は、 [Microsoft ダウンロードセンター](https://www.microsoft.com/download/details.aspx?id=14630)から無料でダウンロードできますが、このチュートリアルで説明しているものとは異なるユーザーインターフェイスを備えています。  
   
 2.  
   **[サーバーへの接続]** ダイアログ ボックスで既定の設定を確認し、 **[接続]** をクリックします。 接続するに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、[**サーバー名**] ボックスに、がインストールされているコンピューターの名前が含まれている必要があります。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]が名前付きインスタンスの場合、[**サーバー名**] ボックスには\< *computer_name*>\\<*instance_name*> の形式でインスタンス名も含まれている必要があります。  
