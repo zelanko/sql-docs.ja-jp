@@ -10,11 +10,11 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 80fc899400be167badaae9d617d43a61e0d346b5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74401460"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78340471"
 ---
 # <a name="appliance-configuration-checklists-for-analytics-platform-system"></a>Analytics Platform System のアプライアンス構成チェックリスト
 独自の環境で分析プラットフォームシステムを構成するために必要なタスクのチェックリストを提供します。 アプライアンスを使用するには、これらの構成タスクが必要です。  
@@ -49,7 +49,7 @@ SQL Server PDW**Configuration Manager** (pdwcm) はアプライアンス管理 S
   
 **Configuration Manager**を使用して、次の構成タスクを実行します。  
   
-|構成タスク|[説明]|  
+|構成タスク|説明|  
 |----------------------|---------------|  
 |物理コンポーネント名について理解を深める|[PDW およびアプライアンスファブリック物理コンポーネント &#40;Analytics Platform System&#41;](pdw-and-appliance-fabric-physical-components.md)|  
 |SQL Server PDW の起動 Configuration Manager|[Configuration Manager &#40;Analytics Platform System&#41;を起動します。](launch-the-configuration-manager.md)|  
@@ -67,7 +67,7 @@ SQL Server PDW**Configuration Manager** (pdwcm) はアプライアンス管理 S
 ## <a name="AddTasks"></a>追加の構成タスクを実行する  
 **Configuration Manager**タスクを実行した後、次の追加の構成タスクを実行します。 これらのタスクの一部は省略可能です。  
   
-|構成タスク|[説明]|  
+|構成タスク|説明|  
 |----------------------|---------------|  
 |サードパーティ製のウイルス対策ソフトウェアは、外部に接続されているノードの SQL Server PDW アプライアンスにインストールして構成できます。<br /><br />(省略可能)|詳細については、「[ウイルス対策ソフトウェア &#40;Analytics Platform System&#41;](antivirus-software.md)」を参照してください。|  
 |DSRM のパスワードは変更できます。<br /><br />(省略可能)|詳細については、「[ディレクトリサービス復元モードで AD ノードにログオンするための管理者パスワードを設定する」を参照してください &#40;DSRM&#41; &#40;Analytics Platform System&#41;](set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode.md)です。|  

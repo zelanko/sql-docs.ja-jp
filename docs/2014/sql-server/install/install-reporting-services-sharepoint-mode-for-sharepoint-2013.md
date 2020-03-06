@@ -11,11 +11,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 8874d4c57e2fb7b94e4efac44c90e93865d2b40f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "72798340"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339214"
 ---
 # <a name="install-reporting-services-sharepoint-mode-for-sharepoint-2013"></a>SharePoint 2013 用 Reporting Services の SharePoint モードのインストール
   このトピックでは、SharePoint モードの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のシングル サーバー インストールの手順について説明します。 手順には、SQL Server インストール ウィザードの実行と、SharePoint サーバーの全体管理を使用する構成タスクが含まれます。 また、既存のインストールの更新について個々の手順 ( [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションの作成など) をこのトピックで確認することもできます。  
@@ -62,7 +62,7 @@ ms.locfileid: "72798340"
 |**スナップショット**|SharePoint サービス: SQL Server をインストールすると、インストールされます。 1 つ以上の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションを作成することができます。|  
 |**3**|
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 製品用アドイン: SharePoint サーバーにユーザー インターフェイス コンポーネントが追加されます。|  
-|**(3)**|Power View と PowerPivot で使用される Excel サービス アプリケーション。|  
+|**番**|Power View と PowerPivot で使用される Excel サービス アプリケーション。|  
 |**4/4**|PowerPivot サービス アプリケーション。|  
   
  ![SSAS SharePoint モードのシングル サーバー配置](../../../2014/sql-server/install/media/rs-sharepoint-1server-deployment.gif "SSAS SharePoint モードのシングル サーバー配置")  

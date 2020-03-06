@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0f434c5d323f2203965fd0584dbc1dbc8bd89563
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68188828"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339095"
 ---
 # <a name="sql-server-agent"></a>SQL Server エージェント
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントは、の[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]*ジョブ*と呼ばれる、スケジュールされた管理タスクを実行する Microsoft Windows サービスです。  
@@ -89,10 +89,9 @@ ms.locfileid: "68188828"
   
  警告は、次のいずれかの条件に対して生成できます。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]記録  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のイベント  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のパフォーマンス状態  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のパフォーマンス状態  
   
 -   SQL Server エージェントが実行されているコンピューターで発生した Microsoft Windows Management Instrumentation (WMI) イベント  
   
@@ -145,7 +144,7 @@ ms.locfileid: "68188828"
  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、次の表に示すサブシステムを定義しています。  
   
-|サブシステム名|[説明]|  
+|サブシステム名|説明|  
 |--------------------|-----------------|  
 |Microsoft ActiveX スクリプト|ActiveX スクリプティング ジョブ ステップを実行します。<br /><br /> ** \*重要\* \* **ActiveX スクリプティングサブシステムは、の将来[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バージョンでエージェントから削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。|  
 |オペレーティングシステム (**CmdExec**)|実行可能なプログラムを実行します。|  

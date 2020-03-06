@@ -27,11 +27,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 33f85b2f1cd8b259e46851aab818b258a6d78291
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68206105"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339310"
 ---
 # <a name="database-checkpoints-sql-server"></a>データベース チェックポイント (SQL Server)
   このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータベース チェックポイントについて概説します。 *チェックポイント*によって、予期しないシャットダウン[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]やクラッシュの後の復旧中に、ログに含まれていた変更をが適用するための適切なポイントが作成されます。  
@@ -44,7 +44,7 @@ ms.locfileid: "68206105"
  
   [!INCLUDE[ssDE](../../includes/ssde-md.md)] では、自動、間接、手動、および内部といったチェックポイントの種類がサポートされています。 次の表は、チェックポイントの種類をまとめたものです。  
   
-|Name|[!INCLUDE[tsql](../../includes/tsql-md.md)] インターフェイス|[説明]|  
+|名前|[!INCLUDE[tsql](../../includes/tsql-md.md)] インターフェイス|説明|  
 |----------|----------------------------------|-----------------|  
 |自動|EXEC sp_configure **'`recovery interval`'、'*`seconds`*'**|`recovery interval`サーバー構成オプションによって提案された上限時間を満たすために、バックグラウンドで自動的に発行されます。 自動チェックポイントは、最後まで実行されます。  自動チェックポイントは、未処理の書き込み数と、20 ミリ秒を超える書き込み待機時間の上昇を[!INCLUDE[ssDE](../../includes/ssde-md.md)]が検出したかどうかに応じて調整されます。<br /><br /> 詳細については、「 [recovery interval サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)」を参照してください。|  
 |間接|データベースの変更...TARGET_RECOVERY_TIME **=** _target_recovery_time_ {SECONDS &#124; MINUTES} を設定します|所定のデータベースのユーザーが指定したターゲット復旧時間に合わせて、バック グラウンドで発行されます。 既定のターゲット復旧時間は 0 です。この場合、自動チェックポイント ヒューリスティックがデータベースで使用されます。 ALTER DATABASE を使用して TARGET_RECOVERY_TIME を >0 に設定した場合、サーバー インスタンスに指定された復旧間隔ではなく、この値が使用されます。<br /><br /> 詳細については、「 [データベースのターゲットの復旧時間の変更 &#40;SQL Server&#41;](change-the-target-recovery-time-of-a-database-sql-server.md)」を参照してください。|  
@@ -72,8 +72,7 @@ ms.locfileid: "68206105"
 |>0|適用不可。|復旧時間が TARGET_RECOVERY_TIME 設定 (秒単位) によって設定されている間接チェックポイント ターゲット|  
   
 ###  <a name="AutomaticChkpt"></a>自動チェックポイント  
- 自動チェックポイントは、ログレコードの数が、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] `recovery interval`サーバー構成オプションで指定された時間内に処理できると推定した数に達したときに発生します。 ユーザー定義のターゲット復旧時間が設定されていないすべてのデータベースでは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] によって自動チェックポイントが生成されます。 自動チェックポイントの頻度は、サーバー `recovery interval`の詳細構成オプションによって異なります。このオプションは、システムの再起動時に、特定のサーバーインスタンスがデータベースの復旧に使用する最長時間を指定します。 
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] は、復旧間隔内に処理できるログ レコードの最大数を推定します。 自動チェックポイントを使用するデータベースのログ レコードが最大数に達すると、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] によってデータベースでチェックポイントが発行されます。 自動チェックポイントの作成間隔は大幅に変わります。 相当量のトランザクション ワークロードがあるデータベースでは、主に読み取り専用操作で使用されるデータベースよりもチェックポイントの作成回数が多くなります。  
+ 自動チェックポイントは、ログレコードの数が、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] `recovery interval`サーバー構成オプションで指定された時間内に処理できると推定した数に達したときに発生します。 ユーザー定義のターゲット復旧時間が設定されていないすべてのデータベースでは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] によって自動チェックポイントが生成されます。 自動チェックポイントの頻度は、サーバー `recovery interval`の詳細構成オプションによって異なります。このオプションは、システムの再起動時に、特定のサーバーインスタンスがデータベースの復旧に使用する最長時間を指定します。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] は、復旧間隔内に処理できるログ レコードの最大数を推定します。 自動チェックポイントを使用するデータベースのログ レコードが最大数に達すると、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] によってデータベースでチェックポイントが発行されます。 自動チェックポイントの作成間隔は大幅に変わります。 相当量のトランザクション ワークロードがあるデータベースでは、主に読み取り専用操作で使用されるデータベースよりもチェックポイントの作成回数が多くなります。  
   
  また、単純復旧モデルの場合、ログが全体の 70% に達すると自動チェックポイントもキューに登録されます。  
   
@@ -146,6 +145,6 @@ ms.locfileid: "68206105"
   
   
 ## <a name="see-also"></a>参照  
- [トランザクションログ &#40;SQL Server&#41;](the-transaction-log-sql-server.md)  
+ [トランザクション ログ &#40;SQL Server&#41;](the-transaction-log-sql-server.md)  
   
   

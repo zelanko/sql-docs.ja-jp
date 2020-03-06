@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 74f81deb2d9f5e4fcb770217a228a8b081098d89
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66079760"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339075"
 ---
 # <a name="log-operations-in-analysis-services"></a>Analysis Services でのログ操作
   Analysis Services インスタンスは、サーバーの通知、エラー、および警告を msmdsrv.exe ファイルに記録します。インストールするインスタンスごとに1つです。 管理者は、ルーチンのイベントと異常なイベントのどちらの情報を得る場合でも、このログを参照します。 最近のリリースにおいては、ログ記録が機能拡張され、さらに多くの情報が含まれるようになりました。 ログ レコードには、製品のバージョンおよびエディション情報だけでなく、プロセッサ、メモリ、接続、およびブロック イベントも含まれるようになりました。 
@@ -43,7 +43,7 @@ ms.locfileid: "66079760"
 ##  <a name="bkmk_location"></a>ログの場所と種類  
  Analysis Services では、次に示すログが提供されています。  
   
-|ファイルの名前または場所|種類|使用目的|オン (既定)|  
+|ファイルの名前または場所|Type|使用目的|オン (既定)|  
 |---------------------------|----------|--------------|-------------------|  
 |Msmdsrv.log|エラー ログ|ルーチン監視と基本的なトラブルシューティング|はい|  
 |リレーショナル データベースの OlapQueryLog テーブル|クエリ ログ|[使用法の最適化] ウィザードでの入力の収集|いいえ|  
@@ -155,7 +155,7 @@ ms.locfileid: "66079760"
   
  最も変更される可能性が高い構成設定は、メモリ ダンプ ファイルを生成するかどうかの指定に使用する `CreateAndSendCrashReports` の設定です。  
   
-|値|[説明]|  
+|Value|説明|  
 |-----------|-----------------|  
 |0|メモリ ダンプ ファイルをオフにします。 「Exception (例外)」セクションの他のすべての設定は無視されます。|  
 |1 で保護されたプロセスとして起動されました|(既定) メモリ ダンプ ファイルを有効にしますが送信しません。|  

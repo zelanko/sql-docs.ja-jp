@@ -18,11 +18,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 61d194edf727cb39a80fae852cee735c24ff560c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63065707"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339240"
 ---
 # <a name="hierarchical-data-sql-server"></a>階層データ (SQL Server)
   組み込み`hierarchyid`データ型を使用すると、階層データの格納とクエリが容易になります。 `hierarchyid`は、最も一般的な階層データであるツリーを表すために最適化されています。  

@@ -13,11 +13,11 @@ author: HJToland3
 ms.author: rajsell
 ms.reviewer: mathoma
 ms.openlocfilehash: 50f082edef5d9a6d4e95b7e37ef6d75f22eb6f2a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75244867"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338328"
 ---
 # <a name="replay-a-trace-in-database-experimentation-assistant"></a>Database Experimentation Assistant でトレースを再生する
 
@@ -163,6 +163,6 @@ UNC パスは分散再生と互換性がありません。 分散再生パスは
   
 この問題は、SQL Server 2017 の最新の累積的な更新プログラム1で対処されています。 [SQL Server 2017 の累積的な更新プログラム 1](https://support.microsoft.com/help/4038634/cumulative-update-1-for-sql-server-2017)の最新バージョンをダウンロードします。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - 提案された変更に関する洞察を得るために役立つ分析レポートを作成するには、「[レポートの作成](database-experimentation-assistant-create-report.md)」を参照してください。

@@ -13,11 +13,11 @@ ms.author: jtoland
 ms.reviewer: mathoma
 ms.custom: seo-lt-2019
 ms.openlocfilehash: f82aba87632abea4ac5fbc8b54daa6dfd0eb5b4a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "76831885"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338329"
 ---
 # <a name="create-analysis-reports-in-database-experimentation-assistant-sql-server"></a>Database Experimentation Assistant で分析レポートを作成する (SQL Server)
 
@@ -98,6 +98,6 @@ SQL Server を実行している分析コンピューターのデータベース
 
 他にも質問やフィードバックがありますか? 左下隅にあるスマイルアイコンをクリックして、DEA ツールを通じてフィードバックを送信します。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - 分析レポートを表示する方法については、「[レポートの表示](database-experimentation-assistant-view-report.md)」を参照してください。

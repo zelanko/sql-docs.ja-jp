@@ -14,18 +14,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 033999701141387ee63712a8a9ce055ad3f55cb1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68661303"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339117"
 ---
 # <a name="specify-merge-replication-properties"></a>マージレプリケーションのプロパティの指定
 このトピックでは、マージ レプリケーションのさまざまなプロパティを指定する方法について説明します。 
 
 
 ## <a name="download-only"></a>ダウンロードのみ
-  ここでは、で[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]または[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../../includes/tsql-md.md)]を使用して、マージテーブルアーティクルをダウンロード専用に指定する方法について説明します。 ダウンロード専用のアーティクルは、サブスクライバーで更新されないデータを含むアプリケーション用に設計されています。 詳細については、「[ダウンロード専用アーティクルを使用したマージ レプリケーションのパフォーマンスの最適化](../merge/optimize-merge-replication-performance-with-download-only-articles.md)」を参照してください。  
+  ここでは、で[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]または[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../../includes/tsql-md.md)]を使用して、マージテーブルアーティクルをダウンロード専用に指定する方法について説明します。 ダウンロード専用のアーティクルは、サブスクライバーで更新されないデータを含むアプリケーション用に設計されています。 詳細については、「[ダウンロード専用アーティクルを使用したマージ レプリケーションのパフォーマンス最適化](../merge/optimize-merge-replication-performance-with-download-only-articles.md)」を参照してください。  
  
   
 ###  <a name="limitations-and-restrictions"></a>制限事項と制約事項  

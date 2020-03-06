@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1b4a175ad850ccbb0711a0997c3658cf01497686
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "63144618"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338276"
 ---
 # <a name="the-transaction-log-sql-server"></a>トランザクション ログ (SQL Server)
   すべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースにはトランザクション ログがあり、データベース内のすべてのトランザクションとそれらのトランザクションによって加えられた変更が記録されます。 トランザクション ログは、いっぱいにならないように、定期的に切り捨てる必要があります。 ただし、いくつかの要因によってログの切り捨てが遅れる可能性があるため、ログのサイズを監視することは重要です。 一部の操作は、トランザクション ログのサイズへの影響を軽減するためにログへの記録を最小限に抑えることができます。  
@@ -77,7 +77,7 @@ ms.locfileid: "63144618"
   
  ログの切り捨ては、さまざまな要因で遅延が発生する場合があります。 ログの切り捨てを妨げている原因は、 **sys.databases** カタログ ビューの **log_reuse_wait** 列と [log_reuse_wait_desc](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) 列に対するクエリを実行して見つけることができます。 次の表では、これらの列の値について説明します。  
   
-|log_reuse_wait の値|log_reuse_wait_desc の値|[説明]|  
+|log_reuse_wait の値|log_reuse_wait_desc の値|説明|  
 |----------------------------|----------------------------------|-----------------|  
 |0|NOTHING|現在 1 つ以上の再利用可能な仮想ログ ファイルがある。|  
 |1 で保護されたプロセスとして起動されました|CHECKPOINT|最後にログの切り捨てを行ってからチェックポイントが発生していないか、ログの先頭が仮想ログ ファイルを超えて移動していない (すべての復旧モデル)。<br /><br /> これは、ログの切り捨てが遅れる一般的な原因です。 詳細については、「[データベース チェックポイント &#40;SQL Server&#41;](database-checkpoints-sql-server.md)」を参照してください。|  
@@ -148,7 +148,7 @@ ms.locfileid: "63144618"
   
  **トランザクションログのバックアップ (完全復旧モデル)**  
   
--   [トランザクションログ &#40;SQL Server のバックアップ&#41;](../backup-restore/back-up-a-transaction-log-sql-server.md)  
+-   [トランザクション ログのバックアップ &#40;SQL Server&#41;](../backup-restore/back-up-a-transaction-log-sql-server.md)  
   
  **トランザクションログの復元 (完全復旧モデル)**  
   

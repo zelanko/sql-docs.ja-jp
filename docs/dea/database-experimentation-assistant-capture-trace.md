@@ -13,11 +13,11 @@ author: HJToland3
 ms.author: rajsell
 ms.reviewer: mathoma
 ms.openlocfilehash: 1c87d791d5a5a16ec3b0d07c6a630f133a7f673c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "76831543"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338330"
 ---
 # <a name="capture-a-trace-in-database-experimentation-assistant"></a>Database Experimentation Assistant でトレースをキャプチャする
 
@@ -147,6 +147,6 @@ DEA を使用すると、サーバー内のすべてのデータベースまた�
 
 *Sql エラーコード*というラベルの他のエラーが表示された場合は、詳細な説明について[データベースエンジンエラー](https://docs.microsoft.com/sql/relational-databases/errors-events/database-engine-events-and-errors)を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - キャプチャしたトレースを再生する前に SQL Server の分散再生ツールを構成する方法については、 [Database Experimentation Assistant の分散再生の構成に関する](database-experimentation-assistant-configure-replay.md)ページを参照してください。

@@ -11,11 +11,11 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: caae4212e2182ae6afde29b0fed1aaee4f05645a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "70176128"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339296"
 ---
 # <a name="features-supported-by-the-editions-of-sql-server-2014"></a>SQL Server 2014 の各エディションがサポートする機能
 
@@ -169,7 +169,7 @@ ms.locfileid: "70176128"
 |分散再生 - クライアント|はい|いいえ|はい|はい||||  
 |分散再生 - コントローラー|可 (Enterprise では最大 16 クライアントのサポート、Developer では 1 クライアントのみサポート)|いいえ|可 (1 クライアントのサポートのみ)|可 (1 クライアントのサポートのみ)||||  
 |SQL Profiler|はい|はい|はい|×<sup>2</sup>|×<sup>2</sup>|×<sup>2</sup>|×<sup>2</sup>|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]・|はい|はい|はい|はい||||  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エージェント|はい|はい|はい|はい||||  
 |Microsoft System Center Operations Manager 管理パック|はい|はい|はい|はい||||  
 |データベース チューニング アドバイザー (DTA)|はい|はい|はい<sup>3</sup>|はい<sup>3</sup>||||  
 |Azure VM [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]にデータベースを配置ウィザード|はい|はい|はい|はい|はい|はい|はい|  

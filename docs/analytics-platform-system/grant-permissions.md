@@ -10,11 +10,11 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 6bbe78979c393490a52e1051fe158ae138f93dcc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74401150"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339574"
 ---
 # <a name="grant-t-sql-permissions-for-parallel-data-warehouse"></a>Parallel Data Warehouse の T-sql 権限を許可する
 並列データウェアハウスのデータベース操作に T-sql 権限を付与します。
@@ -245,7 +245,7 @@ GO
   
 管理者ログインを作成するには、「[固定サーバーロール](pdw-permissions.md#fixed-server-roles)」を参照してください。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md)  
 [ユーザーの作成](../t-sql/statements/create-user-transact-sql.md)  
 [ロールの作成](../t-sql/statements/create-role-transact-sql.md)  
