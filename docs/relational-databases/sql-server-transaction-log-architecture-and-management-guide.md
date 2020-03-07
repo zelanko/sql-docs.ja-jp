@@ -22,11 +22,11 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 82ee5bbda78f41796134a2d1ad3a639f76748bcd
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74095655"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338253"
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>SQL Server トランザクション ログのアーキテクチャと管理ガイド
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -82,13 +82,13 @@ ms.locfileid: "74095655"
 >    -  増加分が 64 MB 以上 1 GB 以下の場合、増加分のサイズに対応する 8 個の VLF を作成します (たとえば、512 MB 増加の場合は 8 個の 64 MB VLF を作成します)
 >    -  増加分が 1 GB を超える場合、増加分のサイズに対応する 16 個の VLF を作成します (たとえば、8 GB 増加の場合は 16 個の 512 MB VLF を作成します)
 
-小さな増加が繰り返され、ログ ファイルが大きくなった場合、多くの仮想ログ ファイルが生成されます。 **このような状況では、データベースの起動、ログのバックアップ操作、およびログの復元操作の速度が低下する場合があります。** 逆に、増加の回数が少なく、あるいはたった 1 回でログ ファイルが大きなサイズになった場合、非常に大きな仮想ログ ファイルが少しだけ生成されます。 トランザクション ログの**必須サイズ**を正しく見積もる方法や**自動拡張**設定については、「*トランザクション ログ ファイルのサイズの管理*」の[推奨事項](../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md#Recommendations)セクションを参照してください。
+小さな増加が繰り返され、ログ ファイルが大きくなった場合、多くの仮想ログ ファイルが生成されます。 **このような状況では、データベースの起動、ログのバックアップ操作、およびログの復元操作の速度が低下する場合があります。** 逆に、増加の回数が少なく、あるいはたった 1 回でログ ファイルが大きなサイズになった場合、非常に大きな仮想ログ ファイルが少しだけ生成されます。 トランザクション ログの**必須サイズ**を正しく見積もる方法や**自動拡張**設定については、「[トランザクション ログ ファイルのサイズの管理](../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md#Recommendations)」の*推奨事項*セクションを参照してください。
 
 必要な増分を利用し、最終的に必要なサイズに近い*サイズ*値をログ ファイルに割り当て、最適な VLF 配布を達成することと、比較的大きな *growth_increment* 値を設定することをお勧めします。 下のヒントを参照し、現在のトランザクション ログ サイズに最適な VLF 配布を決定してください。 
- - *サイズ*値は `SIZE` の `ALTER DATABASE` 引数で設定されますが、これはログ ファイルの初期サイズとなります。
- - *growth_increment* 値 (自動拡張値とも呼ばれています) は `FILEGROWTH` の `ALTER DATABASE` 引数で設定されますが、これは新しい領域が必要になるたびにファイルに追加される領域の量です。 
+ - *サイズ*値は `ALTER DATABASE` の `SIZE` 引数で設定されますが、これはログ ファイルの初期サイズとなります。
+ - *growth_increment* 値 (自動拡張値とも呼ばれています) は `ALTER DATABASE` の `FILEGROWTH` 引数で設定されますが、これは新しい領域が必要になるたびにファイルに追加される領域の量です。 
  
-`FILEGROWTH` の `SIZE` 引数と `ALTER DATABASE` 引数の詳細については、「[ALTER DATABASE &#40;Transact-SQL&#41; の File および Filegroup オプション](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)」を参照してください。
+`ALTER DATABASE` の `FILEGROWTH` 引数と `SIZE` 引数の詳細については、「[ALTER DATABASE &#40;Transact-SQL&#41; の File および Filegroup オプション](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)」を参照してください。
 
 > [!TIP]
 > 指定されたインスタンスにおいて、すべてのデータベースの現在のトランザクション ログ サイズに最適な VLF 配布と必要なサイズを得るために必要な増分を決定するには、この[スクリプト](https://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs)をご覧ください。
@@ -243,7 +243,7 @@ LSN 148 はトランザクション ログの最後のレコードです。 LSN 
 ### <a name="replication-transactions"></a>レプリケーションのトランザクション
 ログ リーダー エージェントは、トランザクション レプリケーション用に構成した各データベースのトランザクション ログを監視し、レプリケーションのマークが付けられたトランザクションをトランザクション ログからディストリビューション データベースにコピーします。 アクティブなログには、レプリケーション用にマークされていて、まだディストリビューション データベースに配信されていないすべてのトランザクションが含まれている必要があります。 これらのトランザクションが時間どおりにレプリケートされない場合、そのことが原因でログを切り捨てられなくなる場合もあります。 詳細については、「 [Transactional Replication](../relational-databases/replication/transactional/transactional-replication.md)」 (トランザクション レプリケーション) を参照してください。
 
-## <a name="see-also"></a>参照 
+## <a name="see-also"></a>関連項目 
 トランザクション ログとログ管理のベスト プラクティスに関するその他の情報については、次の記事および書籍を参照することをお勧めします。  
   
 [トランザクション ログ &#40;SQL Server&#41;](../relational-databases/logs/the-transaction-log-sql-server.md)    
