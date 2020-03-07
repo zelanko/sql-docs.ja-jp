@@ -1,5 +1,6 @@
 ---
 title: Data Migration Assistant の新機能 (SQL Server) |Microsoft Docs
+description: SQL Server と Azure SQL Database の Data Migration Assistant の各リリースの新機能について説明します。
 ms.custom: ''
 ms.date: 11/05/2019
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
-ms.openlocfilehash: 83009008745a696919aa5ae5795d60ddfe9ba80b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: b5caa8b63175447daa04198768a67e7fe5e59c81
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73632886"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896800"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>Data Migration Assistant の新機能
 
@@ -184,6 +185,6 @@ Data Migration Assistant の v1.0 リリースは最初のリリースであり�
   - ストレージ
 - 評価を実行する最新のユーザーエクスペリエンス。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [Data Migration Assistant の概要](../dma/dma-overview.md)

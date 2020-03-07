@@ -10,11 +10,11 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 9e2204000400c06ea0fd884dbf4db6c08085d495
-ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77256885"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338096"
 ---
 # <a name="how-to-deploy-big-data-clusters-2019-on-kubernetes"></a>Kubernetes 上に [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]を展開する方法
 
@@ -171,8 +171,8 @@ azdata bdc create --accept-eula=yes
 
 | 環境変数 | 要件 |説明 |
 |---|---|---|
-| `AZDATA_USERNAME` | Required |SQL Server ビッグ データ クラスター管理者のユーザー名。 同じ名前の sysadmin ログインが SQL Server マスター インスタンス内に作成されます。 セキュリティのベスト プラクティスとして、`sa` アカウントは無効になっています。 |
-| `AZDATA_PASSWORD` | Required |上記で作成したユーザー アカウントのパスワード。 `root` ユーザーには、Knox ゲートウェイと HDFS をセキュリティで保護するために使用されたのと同じパスワードが使用されます。 |
+| `AZDATA_USERNAME` | 必須 |SQL Server ビッグ データ クラスター管理者のユーザー名。 同じ名前の sysadmin ログインが SQL Server マスター インスタンス内に作成されます。 セキュリティのベスト プラクティスとして、`sa` アカウントは無効になっています。 |
+| `AZDATA_PASSWORD` | 必須 |上記で作成したユーザー アカウントのパスワード。 `root` ユーザーには、Knox ゲートウェイと HDFS をセキュリティで保護するために使用されたのと同じパスワードが使用されます。 |
 | `ACCEPT_EULA`| `azdata` を初めて使用する場合は必須| "yes" に設定します。 環境変数として設定された場合、SQL Server と `azdata` の両方に EULA が適用されます。 環境変数として設定されない場合、`azdata` コマンドの初めての使用時に `--accept-eula=yes` を含めることができます。|
 | `DOCKER_USERNAME` | 省略可能 | コンテナー イメージがプライベート リポジトリに格納されている場合に、それらにアクセスするためのユーザー名。 ビッグ データ クラスターの展開にプライベート Docker リポジトリを使用する方法の詳細については、[オフライン展開](deploy-offline.md)に関するトピックを参照してください。|
 | `DOCKER_PASSWORD` | 省略可能 |上記のプライベート リポジトリにアクセスするためのパスワード。 |

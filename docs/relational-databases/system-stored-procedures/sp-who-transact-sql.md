@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 132dfb08-fa79-422e-97d4-b2c4579c6ac5
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5d758c7ca2d21183b9486030704c31b9d5f621d0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 7c949e62261e710854aefda9b83a7ca20c222b78
+ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67950512"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866482"
 ---
 # <a name="sp_who-transact-sql"></a>sp_who (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,13 +59,13 @@ sp_who [ [ @loginame = ] 'login' | session ID | 'ACTIVE' ]
 |------------|---------------|-----------------|  
 |**調べる**|**smallint**|セッション ID。|  
 |**ecid**|**smallint**|特定のセッション ID に関連付けられている、指定されたスレッドの実行コンテキスト ID。<br /><br /> 0、1、2、3、...*n*}。ここで、0は常にメインスレッドまたは親スレッドを表し、{1, 2, 3,...*n*} サブスレッドを表します。|  
-|**オンライン**|**nchar (30)**|プロセスの状態。 指定できる値は、<br /><br /> **休止**。 
+|**status**|**nchar (30)**|プロセスの状態。 指定できる値は、<br /><br /> **休止**。 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でセッションがリセットされています。<br /><br /> を**実行して**います。 セッションで1つ以上のバッチが実行されています。 複数のアクティブな結果セット (MARS) が有効になっている場合、1つのセッションで複数のバッチを実行できます。 詳細については、「[複数のアクティブな結果セット &#40;MARS&#41; の使用](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md)」を参照してください。<br /><br /> **バックグラウンド**。 このセッションでは、デッドロック検出などのバックグラウンドタスクが実行されています。<br /><br /> **ロールバック**。 セッションでトランザクション ロールバックが実行中です。<br /><br /> **保留中**。 セッションは、ワーカー スレッドが使用可能になるのを待機しています。<br /><br /> 実行**可能。** セッションのタスクは、時間クォンタムの取得を待機している間に、スケジューラの実行可能キューにあります。<br /><br /> **spinloop**。 セッションのタスクはスピンロックの空きを待機しています。<br /><br /> **中断**されました。 セッションは、i/o などのイベントが完了するのを待機しています。|  
 |**loginame**|**nchar (128)**|特定のプロセスに関連付けられているログイン名。|  
 |**名**|**nchar (128)**|各プロセスのホスト名またはコンピューター名。|  
 |**blk**|**char (5)**|ブロック中のプロセスが存在する場合は、そのプロセスのセッション ID。 存在しない場合は、この列は 0 になります。<br /><br /> 指定したセッション ID に関連付けられているトランザクションが、孤立した分散トランザクションによってブロックされている場合、この列はブロックしている孤立トランザクションに対して '-2 ' を返します。|  
 |**dbname**|**nchar (128)**|プロセスによって使用されるデータベース。|  
-|**プロンプト**|**nchar (16)**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]プロセスに[!INCLUDE[tsql](../../includes/tsql-md.md)]対して実行[!INCLUDE[ssDE](../../includes/ssde-md.md)]されるコマンド (ステートメント、内部プロセスなど)。|  
+|**プロンプト**|**nchar (16)**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]プロセスに[!INCLUDE[tsql](../../includes/tsql-md.md)]対して実行[!INCLUDE[ssDE](../../includes/ssde-md.md)]されるコマンド (ステートメント、内部プロセスなど)。 SQL Server 2019 では、データ型が**nchar (26)** に変更されました。|  
 |**request_id**|**int**|特定のセッションで実行されている要求の ID。|  
   
  並列処理の場合は、特定のセッション ID に対してサブスレッドが作成されます。 メイン スレッドは `spid = <xxx>` および `ecid =0` のように示されます。 他のサブスレッドは同じ`spid = <xxx>`ですが、 **d** > 0 になります。  

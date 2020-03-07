@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 60a36d36-54b3-4bd6-9cac-702205a21b16
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d9da0f09c2506e0d596a485aee112f9f188b6d12
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 6aa40d6a7363dd991dc37ed5c619b656e74f0eed
+ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74947157"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866372"
 ---
 # <a name="syssysprocesses-transact-sql"></a>-sysprocesses (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,8 +49,8 @@ ms.locfileid: "74947157"
 |cpu|**int**|プロセスの累積 CPU 時間。 SET STATISTICS TIME オプションが ON と OFF のどちらであるかに関係なく、すべてのプロセスのエントリが更新されます。|  
 |physical_io|**bigint**|プロセスの累積ディスクの読み取りと書き込み。|  
 |memusage|**int**|このプロセスに現在割り当てられているプロシージャキャッシュ内のページ数。 負の値は、プロセスが別のプロセスによって割り当てられたメモリを解放していることを示します。|  
-|login_time|**DATETIME**|クライアントプロセスがサーバーにログインした時刻。|  
-|last_batch|**DATETIME**|クライアントプロセスがリモートストアドプロシージャ呼び出しまたは EXECUTE ステートメントを最後に実行した時刻。|  
+|login_time|**datetime**|クライアントプロセスがサーバーにログインした時刻。|  
+|last_batch|**datetime**|クライアントプロセスがリモートストアドプロシージャ呼び出しまたは EXECUTE ステートメントを最後に実行した時刻。|  
 |ecid|**smallint**|1つのプロセスに代わって動作するサブスレッドを一意に識別するために使用される実行コンテキスト ID。|  
 |open_tran|**smallint**|プロセスの開いているトランザクションの数。|  
 |status|**nchar (30)**|プロセス ID の状態。 指定できる値は、<br /><br /> **** = 休止[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中にセッションをリセットしています。<br /><br /> **running** = セッションで1つ以上のバッチが実行されています。 複数のアクティブな結果セット (MARS) が有効になっている場合、1つのセッションで複数のバッチを実行できます。 詳細については、「[複数のアクティブな結果セット &#40;MARS&#41; の使用](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md)」を参照してください。<br /><br /> **background** = セッションは、デッドロック検出などのバックグラウンドタスクを実行しています。<br /><br /> **rollback** = セッションでトランザクションのロールバックが進行中です。<br /><br /> **pending** = セッションは、ワーカースレッドが使用可能になるのを待機しています。<br /><br /> 実行**可能 = セッション**のタスクは、時間の経過を待機している間に、スケジューラの実行可能キューにあります。<br /><br /> **spinloop** = セッションのタスクは、スピンロックが解放されるのを待機しています。<br /><br /> **中断**= セッションは、i/o などのイベントが完了するのを待機しています。|  
@@ -58,7 +58,7 @@ ms.locfileid: "74947157"
 |hostname|**nchar (128)**|ワークステーションの名前。|  
 |program_name|**nchar (128)**|アプリケーション プログラム名です。|  
 |hostprocess|**nchar (10)**|ワークステーションプロセス ID 番号。|  
-|cmd|**nchar (26)**|現在実行中のコマンドです。|  
+|cmd|**nchar (52)**|現在実行中のコマンドです。|  
 |nt_domain|**nchar (128)**|クライアント (Windows 認証を使用している場合)、または信頼関係接続の  Windows ドメインです。|  
 |nt_username|**nchar (128)**|プロセスの windows ユーザー名 (Windows 認証を使用している場合)、または信頼関係接続の場合は。|  
 |net_address|**nchar (12)**|各ユーザーのワークステーションにあるネットワーク アダプターに割り当てられている一意識別子です。 ユーザーがログインすると、この識別子が net_address 列に挿入されます。|  
