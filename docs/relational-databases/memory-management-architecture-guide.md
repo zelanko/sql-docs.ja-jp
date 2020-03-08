@@ -15,11 +15,11 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4e33a8add08837fb71c0d0558d6bbe7f3ae9197c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68115265"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338568"
 ---
 # <a name="memory-management-architecture-guide"></a>メモリ管理アーキテクチャ ガイド
 
@@ -47,7 +47,7 @@ Windows 仮想メモリ マネージャー (VMM) は、使用可能な物理メ�
 > [!NOTE]
 > メモリ不足で負荷の高いシステムでは、クエリ プランにマージ結合、並べ替え、およびビットマップを使用したクエリが含まれていると、クエリがビットマップに必要な最低限のメモリ量を確保できなかった場合に、ビットマップが削除されることがあります。 この動作がクエリのパフォーマンスに影響を与える場合があります。そのために並べ替え処理がメモリに収まらなくなったときに、tempdb データベース内の作業テーブルの使用率が増加し、tempdb データベースのサイズが大きくなります。 この問題を解決するには、物理メモリを追加するか、より実行速度の速い別のクエリ プランを使用するようにクエリをチューニングします。
  
-### <a name="providing-the-maximum-amount-of-memory-to-includessnoversionincludesssnoversion-mdmd"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] に対する最大メモリ容量の指定
+### <a name="providing-the-maximum-amount-of-memory-to-ssnoversion"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] に対する最大メモリ容量の指定
 
 AWE および Locked Pages in Memory 特権を使用して、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベース エンジンに次の容量のメモリを指定できます。 
 
@@ -72,7 +72,7 @@ AWE および Locked Pages in Memory 特権を使用して、 [!INCLUDE[ssNoVers
 
 <a name="changes-to-memory-management-starting-2012-11x-gm"></a>
 
-## <a name="changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以降のメモリ管理の変更点
+## <a name="changes-to-memory-management-starting-with-sssql11"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以降のメモリ管理の変更点
 
 以前のバージョンの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]) では、次の 5 つの異なるメカニズムを利用してメモリが割り当てられていました。
 -  **SPA (Single-Page Allocator/単一ページ アロケータ)** 。[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] プロセスで 8KB 以下のメモリ割り当てのみ含む。 構成オプションの *max server memory (MB)* と *min server memory (MB)* によって、SPA が利用する物理メモリの上限が決められていました。 同時にバッファー プールが SPA のメカニズムであり、これが単一ページ割り当てを最も多く利用していました。
@@ -107,7 +107,7 @@ AWE および Locked Pages in Memory 特権を使用して、 [!INCLUDE[ssNoVers
 -  大量の入力パラメーターを格納する必要があるトレース操作。
 
 <a name="#changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd"></a>
-## <a name="changes-to-memory_to_reserve-starting-with-includesssql11includessssql11-mdmd"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以降の "memory_to_reserve" の変更点
+## <a name="changes-to-memory_to_reserve-starting-with-sssql11"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以降の "memory_to_reserve" の変更点
 以前のバージョンの SQL Server ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]) では、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] メモリ マネージャーは、**複数ページ アロケータ (MPA)** 、**CLR アロケータ**、SQL Server プロセスの**スレッド スタック**のメモリ割り当て、**直接 Windows 割り当て (DWA)** で使用するために、プロセス VAS (Virtual Address Space/仮想アドレス空間) の一部を予約しました。 仮想アドレス空間のこの部分は、"Mem-To-Leave" または "non-Buffer Pool" 領域とも呼ばれています。
 
 このような割り当てのために予約される仮想アドレス空間は、構成オプション _**memory\_to\_reserve**_ によって決定されます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] で使用される初期値は 256 MB です。 既定値をオーバーライドするには、スタートアップ パラメーターの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] *-g* を使用します。 スタートアップ パラメーター *-g* の詳細については、ドキュメント ページの「[データベース エンジン サービスのスタートアップ オプション](../database-engine/configure-windows/database-engine-service-startup-options.md)」を参照してください。

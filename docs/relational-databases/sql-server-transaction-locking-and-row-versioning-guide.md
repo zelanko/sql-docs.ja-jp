@@ -17,11 +17,11 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d79007dccddef604315c57beca1e1274d23c6f0f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74095689"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339680"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>トランザクションのロックおよび行のバージョン管理ガイド
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -258,7 +258,7 @@ GO
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ではさまざまなコンカレンシー制御がサポートされています。 接続のトランザクション分離レベルやカーソルのコンカレンシー オプションを選択することで、コンカレンシー制御の種類を指定できます。 これらの属性を選択するには、[!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントを使用するか、ADO、ADO.NET、OLE DB、ODBC などのデータベース API (アプリケーション プログラミング インターフェイス) のプロパティおよび属性を指定します。  
   
-#### <a name="isolation-levels-in-the-includessdenoversionincludesssdenoversion-mdmd"></a>[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] での分離レベル  
+#### <a name="isolation-levels-in-the-ssdenoversion"></a>[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] での分離レベル  
  各トランザクションでは、別のトランザクションによって行われたリソースまたはデータの変更から特定のトランザクションを分離する際の程度を定義する分離レベルを指定します。 分離レベルは、ダーティ リードやファントム読み取りなど、コンカレンシーの副作用が許可されるのかという観点で定義されます。  
   
  トランザクション分離レベルでは次のことを制御しています。  
@@ -275,7 +275,7 @@ GO
   
  分離レベルが低いほど多くのユーザーが同時にデータにアクセスできるようになりますが、ユーザーに影響が及ぶ可能性があるコンカレンシーの影響 (ダーティ リードや更新データの喪失) の種類が多くなります。 反対に、分離レベルが高いほど、ユーザーに影響が及ぶ可能性があるコンカレンシーの影響の種類は減りますが、必要なシステム リソースが増加し、あるトランザクションによって別のトランザクションがブロックされる状況も多くなります。 適切な分離レベルの選択は、アプリケーションのデータ整合性の要件と各分離レベルのオーバーヘッドとのバランスによって決まります。 最も高い分離レベルの SERIALIZABLE は、トランザクションで読み取り操作が繰り返し実行されるたびに、そのトランザクションで完全に同じデータが取得されることを保証します。このことの実現には、マルチユーザー システムにおいて他のユーザーが影響を受ける可能性が高いロック レベルが適用されています。 最も低い分離レベルは READ UNCOMMITTED ですが、このレベルでは、他のトランザクションによって変更され、まだコミットされていないデータを取得する場合があります。 READ UNCOMMITTED レベルではコンカレンシーのすべての副作用が発生する可能性がありますが、このレベルでは読み取りロックやバージョン管理が行われないのでオーバーヘッドが最小限に抑えられます。  
   
-##### <a name="includessdenoversionincludesssdenoversion-mdmd-isolation-levels"></a>[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 分離レベル  
+##### <a name="ssdenoversion-isolation-levels"></a>[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 分離レベル  
  ISO 標準では、次に示す分離レベルが定義されています。それらのすべてが [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]でサポートされます。  
   
 |Isolation Level|定義|  
