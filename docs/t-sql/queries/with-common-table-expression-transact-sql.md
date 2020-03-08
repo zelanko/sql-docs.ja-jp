@@ -28,11 +28,11 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7cedcec468c061d38225ab4cbb24b8f5320a4f13
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74564812"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338558"
 ---
 # <a name="with-common_table_expression-transact-sql"></a>WITH common_table_expression (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -142,7 +142,7 @@ ms.locfileid: "74564812"
   
 -   CTE の再帰部分の分析関数と集計関数は、CTE のセットではなく、現在の再帰レベルのセットに適用されます。 `ROW_NUMBER` などの関数は、現在の再帰レベルによって渡されたデータのサブセットでのみ機能し、CTE の再帰部分に渡されたデータのセット全体では機能しません。 詳細については、「K. 再帰 CTE で分析関数を使用する」を参照してください。  
   
-## <a name="features-and-limitations-of-common-table-expressions-in-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] と [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] の共通テーブル式の機能と制限  
+## <a name="features-and-limitations-of-common-table-expressions-in-sssdw-and-sspdw"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] と [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] の共通テーブル式の機能と制限  
  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] と [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] の CTE の現在の実装には、次のような機能と制限があります。  
   
 -   CTE は `SELECT` ステートメントに指定できます。  
@@ -568,7 +568,7 @@ Lvl  N
   
  `N` は、CTE の再帰部分を通過するたびに 1 を返します。これは、その再帰レベルのデータのサブセットのみが `ROWNUMBER` に渡されるからです。 クエリの再帰部分を反復するたびに、1 つの行のみが `ROWNUMBER` に渡されます。  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdw-and-sspdw"></a>例: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="j-using-a-common-table-expression-within-a-ctas-statement"></a>J. CTAS ステートメント内で共通テーブル式を使用する  
  次の例では、[!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] における販売員ごとの年間の販売注文数の合計を含む新しいテーブルを作成しています。  
