@@ -10,16 +10,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: d038b0a67923d7c475011b8f3d141f7d64358f61
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c827ae70d9aa344f52de1d76c482beaef90c09aa
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75247860"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78897035"
 ---
 # <a name="bulk-copy-operations-in-sql-server"></a>SQL Server での一括コピー操作
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[ADO.NET をダウンロードする](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 Microsoft SQL Server には、SQL Server データベースのテーブルまたはビューに大きなファイルを高速で一括コピーするための、**bcp** という一般的なコマンド ライン ユーティリティが用意されています。 <xref:Microsoft.Data.SqlClient.SqlBulkCopy> クラスを使用すると、同様の機能を提供するマネージ コード ソリューションを作成できます。 SQL Server テーブルにデータを読み込む方法は他にもありますが (INSERT ステートメントなど)、<xref:Microsoft.Data.SqlClient.SqlBulkCopy> を使用する方が大幅にパフォーマンスが向上します。  
   

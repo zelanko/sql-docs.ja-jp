@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 6a003670c15ac95b6f0a5f70d0997c1c854b089e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 90b11516e9fa8ed993792bfec2a77757249b696d
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75247819"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896984"
 ---
 # <a name="detecting-changes-with-sqldependency"></a>SqlDependency を使用した変更の検出
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[ADO.NET をダウンロードする](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 <xref:Microsoft.Data.SqlClient.SqlDependency> オブジェクトを <xref:Microsoft.Data.SqlClient.SqlCommand> に関連付けて、クエリの結果が最初に取得したものと異なる場合を検出できます。 `OnChange` イベントにデリゲートを割り当てることもできます。これは、関連付けられたコマンドの結果が変更されたときに実行されます。 コマンドを実行する前に、<xref:Microsoft.Data.SqlClient.SqlDependency> をコマンドに関連付ける必要があります。 <xref:Microsoft.Data.SqlClient.SqlDependency> の `HasChanges` プロパティを使用して、データを最初に取得してからクエリの結果が変更されたかどうかを判断することもできます。
 

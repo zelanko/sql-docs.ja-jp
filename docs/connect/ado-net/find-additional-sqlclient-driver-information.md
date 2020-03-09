@@ -13,16 +13,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 08ff52be06f976171623b4af91da3ebc1d26d53b
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 39723f61eaa5bf2fc18e950bbd3432837ee8620a
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75251035"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78897108"
 ---
 # <a name="finding-additional-sqlclient-driver-information"></a>追加の SqlClient ドライバー情報の検索
 
-![Download-DownArrow-Circled](../../ssdt/media/download.png)[ADO.NET をダウンロードする](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
 Microsoft SqlClient Data Provider for SQL Server の一般的な開発の詳細については、次のオンライン リソースを参照してください。
 

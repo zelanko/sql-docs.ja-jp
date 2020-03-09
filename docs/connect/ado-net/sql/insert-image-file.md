@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 613ae5b3326bc49ab25f30628ecd85e13959e2dc
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 9d80f5eec2c33fed635c18937185e2e21798e93b
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75247742"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896720"
 ---
 # <a name="inserting-an-image-from-a-file"></a>ファイルからのイメージの挿入
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[ADO.NET をダウンロードする](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 バイナリ ラージ オブジェクト (BLOB) は、データ ソースのフィールドの種類に応じて、バイナリ データまたは文字データとしてデータベースに書き込むことができます。 BLOB は、`text`、`ntext`、および `image` データ型をのことを指す一般用語であり、通常はドキュメントと画像が含まれます。  
   

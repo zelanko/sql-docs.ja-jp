@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 3a1568d1-917b-46d3-b5cb-facdc740408f
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: ccd2ce331f6e88933ff546c18446b5edbc956511
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 1f59b2d14ab34cee3e703eda9fb9db6750da96a2
+ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "67935675"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866640"
 ---
 # <a name="python-sql-driver"></a>Python SQL ドライバー
 
-![ダウンロード - 丸で囲んだ下矢印](../../ssdt/media/download.png)[Python 用の SQL ドライバーをインストールする](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![ダウンロード - 丸で囲んだ下矢印](../../ssms/media/download-icon.png)[Python 用の SQL ドライバーをインストールする](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
 Windows、Linux、または Mac では、Python を使用して SQL Database に接続できます。   
   

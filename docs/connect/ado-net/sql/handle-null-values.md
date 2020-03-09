@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 861ed4395e6cf8f5e8df3a5cc41a0f6da597e5ad
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 2bcd54ab83429b1f7961480210c12eb546a2aa70
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75247751"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896738"
 ---
 # <a name="handling-null-values"></a>null 値の処理
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[ADO.NET をダウンロードする](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 列の値が不明、または欠落している場合は、リレーショナル データベース内の null 値が使用されます。 null は、空の文字列 (文字型または 日時データ型の場合) でも、0 値 (数値データ型の場合) でもありません。 ANSI SQL-92 の規格では、すべての null が一貫して処理されるように、すべてのデータ型で同じである必要があると規定されています。 <xref:System.Data.SqlTypes> 名前空間では、<xref:System.Data.SqlTypes.INullable> インターフェイスを実装することによって null セマンティクスが提供されます。 <xref:System.Data.SqlTypes> の各データ型には、そのデータ型のインスタンスに割り当てることができる独自の `IsNull` プロパティと `Null` 値があります。  
   

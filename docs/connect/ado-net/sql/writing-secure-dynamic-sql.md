@@ -10,16 +10,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 22d64b260d8d700afc8ed354d87de730e8c3b21f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 9c2275e94d30560ae1173a12bfdcc6bfdc1eecb4
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75253370"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78895884"
 ---
 # <a name="writing-secure-dynamic-sql-in-sql-server"></a>SQL Server での安全な動的 SQL の作成
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[ADO.NET をダウンロードする](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 SQL インジェクションとは、悪意のあるユーザーが有効な入力の代わりに Transact-SQL ステートメントを入力するプロセスです。 入力が検証されずにサーバーに直接渡され、挿入されたコードがアプリケーションによって誤って実行された場合に、この攻撃によってデータが破損、または破壊される可能性があります。  
   

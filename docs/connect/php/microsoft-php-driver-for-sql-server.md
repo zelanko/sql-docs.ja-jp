@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9e78bbf3-9e9a-426d-99d3-6fa2cb33ff6b
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c8fcc4a39edfaafd7ae66990a2f1161d781d1219
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: ee38cc22ec2834060396b696acb900eb8c7f8831
+ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "67936343"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866522"
 ---
 # <a name="microsoft-drivers-for-php-for-sql-server"></a>Microsoft SQL Server 用 Drivers for PHP
 
@@ -39,7 +39,7 @@ Microsoft Drivers for PHP for SQL Server を使用すると、PHP アプリケ�
 * [Microsoft Drivers for PHP for SQL Server 向けのサポート リソース](support-resources-for-the-php-sql-driver.md)
   
 ## <a name="download"></a>ダウンロード  
-* ![ダウンロード - 丸で囲んだ下矢印](../../ssdt/media/download.png)[Microsoft Drivers for PHP for SQL Server をダウンロードする](download-drivers-php-sql-server.md)
+* ![ダウンロード - 丸で囲んだ下矢印](../../ssms/media/download-icon.png)[Microsoft Drivers for PHP for SQL Server をダウンロードする](download-drivers-php-sql-server.md)
   
 ## <a name="samples"></a>サンプル  
 * [SQL Server 用 Microsoft Drivers for PHP のコード サンプル](code-samples-for-php-sql-driver.md)

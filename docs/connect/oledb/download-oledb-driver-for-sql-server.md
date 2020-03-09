@@ -7,12 +7,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a49f0ffe4de2f3242daf147ecb80dc950f8d8a9f
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.openlocfilehash: b7c0e54f4193fcb918a5b4b5a362e1bbd9fee646
+ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78177402"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866462"
 ---
 # <a name="download-microsoft-ole-db-driver-for-sql-server"></a>Microsoft OLE DB Driver for SQL Server のダウンロード
 
@@ -24,8 +24,8 @@ OLE DB Driver for SQL Server はスタンドアロンのデータ アクセス �
 
 Microsoft OLE DB Driver 18.3 for SQL Server は、最新の一般提供 (GA) バージョンです。 以前のバージョンの Microsoft OLE DB Driver 18 for SQL Server がインストールされている場合は、18.3 をインストールすると 18.3 にアップグレードされます。
 
-**[![ダウンロード](../../ssdt/media/download.png) Microsoft OLE DB Driver for SQL Server r (x64) のダウンロード](https://go.microsoft.com/fwlink/?linkid=2117515)**  
-**[![ダウンロード](../../ssdt/media/download.png) Microsoft OLE DB Driver for SQL Server r (x86) のダウンロード](https://go.microsoft.com/fwlink/?linkid=2117517)**  
+**[![ダウンロード](../../ssms/media/download-icon.png) Microsoft OLE DB Driver for SQL Server r (x64) のダウンロード](https://go.microsoft.com/fwlink/?linkid=2117515)**  
+**[![ダウンロード](../../ssms/media/download-icon.png) Microsoft OLE DB Driver for SQL Server r (x86) のダウンロード](https://go.microsoft.com/fwlink/?linkid=2117517)**  
 
 ### <a name="version-information"></a>バージョン情報
 

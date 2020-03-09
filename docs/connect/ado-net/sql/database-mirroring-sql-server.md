@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 354b3ef1f0db45c64363d508d4bb055ee32d6416
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: c7ace2feb39bcc3f5f257c0ac2c7360649cfc33c
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75247831"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896998"
 ---
 # <a name="database-mirroring-in-sql-server"></a>SQL Server のデータベース ミラーリング
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[ADO.NET をダウンロードする](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 SQL Server のデータベース ミラーリング機能を使用すると、スタンバイ サーバー上に SQL Server データベースのコピー、つまりミラーを保持できます。 ミラーリングは、データの 2 つの個別のコピーを常に存在させることによって、高可用性と完全なデータ冗長性を実現します。 Microsoft SqlClient Provider for SQL Server は、データベース ミラーリングの暗黙的なサポートを提供するので、SQL Server データベース用に構成されていれば、開発者が何らかの処理を行ったり、コードを作成したりする必要はありません。 さらに、<xref:Microsoft.Data.SqlClient.SqlConnection> オブジェクトは明示的な接続モードをサポートしており、<xref:Microsoft.Data.SqlClient.SqlConnection.ConnectionString%2A> でフェールオーバー パートナー サーバーの名前を指定できます。  
   

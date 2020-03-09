@@ -10,16 +10,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: e60f8ce6bc8e7ef05a2de942d8bbc2885095d493
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 4ed8ccbadb27008fb15d9d117d55b5a4d332a8f6
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75251124"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896633"
 ---
 # <a name="sql-server-binary-and-large-value-data"></a>SQL Server のバイナリ データと大きな値のデータ
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[ADO.NET をダウンロードする](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 SQL Server では `max` 指定子が導入されました。これにより、`varchar`、`nvarchar`、および `varbinary` データ型の記憶容量が拡張されています。 `varchar(max)`、`nvarchar(max)`、`varbinary(max)` は、総称して*大きな値のデータ型*と呼びます。 大きな値のデータ型を使用すると、最大で 2^31-1 バイトのデータを格納できます。  
   

@@ -10,16 +10,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 7a070d71b653b0afc9e94c898653432e7e388d07
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: bc2a921e3aec0068c11b2baab45c396d853a1a36
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75250935"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78897064"
 ---
 # <a name="asynchronous-operations"></a>非同期操作
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[ADO.NET をダウンロードする](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 コマンドの実行など、一部のデータベース操作は、完了するまでに時間がかかる場合があります。 このような場合、シングルスレッド アプリケーションでは、他の操作をブロックしなければならず、そのコマンドの完了を待ってから独自の操作を続行する必要があります。 これに対して、実行時間の長い操作をバックグラウンド スレッドに割り当てることができると、フォアグラウンド スレッドが途中でブロックされることがなくなります。 たとえば、Windows アプリケーションでは、実行時間の長い操作をバックグラウンド スレッドに委任すると、その操作の実行中にユーザー インターフェイス スレッドの応答性を維持することができます。  
   

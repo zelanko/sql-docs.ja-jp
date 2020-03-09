@@ -1,1 +1,1 @@
-![ダウンロード](../ssdt/media/download.png)[ODBC Driver のダウンロード](../connect/odbc/download-odbc-driver-for-sql-server.md)
+![ダウンロード](../ssms/media/download-icon.png)[ODBC Driver のダウンロード](../connect/odbc/download-odbc-driver-for-sql-server.md)

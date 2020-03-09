@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.reviewer: genemi
 author: mateusz-kmiecik
 ms.author: v-makmie
-ms.openlocfilehash: 90da0d1d42878fcbe65b1086663775d546751c80
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.openlocfilehash: 8c06b83241f377aa05d7e5c0e4cb0d83a424f15a
+ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78177362"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866232"
 ---
 # <a name="release-notes-for-the-microsoft-ole-db-driver-for-sql-server"></a>Microsoft OLE DB Driver for SQL Server のリリース ノート
 
@@ -31,8 +31,8 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 
 ## <a name="1830"></a>18.3.0
 
-![ダウンロード](../../ssdt/media/download.png) [x64 インストーラーのダウンロード](https://go.microsoft.com/fwlink/?linkid=2117515)  
-![ダウンロード](../../ssdt/media/download.png) [x86 インストーラーのダウンロード](https://go.microsoft.com/fwlink/?linkid=2117517)  
+![ダウンロード](../../ssms/media/download-icon.png) [x64 インストーラーのダウンロード](https://go.microsoft.com/fwlink/?linkid=2117515)  
+![ダウンロード](../../ssms/media/download-icon.png) [x86 インストーラーのダウンロード](https://go.microsoft.com/fwlink/?linkid=2117517)  
 
 リリース日:2019 年 10 月
 
@@ -61,8 +61,8 @@ X86 ドライバーの場合: [簡体中国語](https://go.microsoft.com/fwlink/
 
 ## <a name="1823"></a>18.2.3
 
-![ダウンロード](../../ssdt/media/download.png) [x64 インストーラーのダウンロード](https://go.microsoft.com/fwlink/?linkid=2119554)  
-![ダウンロード](../../ssdt/media/download.png) [x86 インストーラーのダウンロード](https://go.microsoft.com/fwlink/?linkid=2119738)  
+![ダウンロード](../../ssms/media/download-icon.png) [x64 インストーラーのダウンロード](https://go.microsoft.com/fwlink/?linkid=2119554)  
+![ダウンロード](../../ssms/media/download-icon.png) [x86 インストーラーのダウンロード](https://go.microsoft.com/fwlink/?linkid=2119738)  
 
 リリース日:2019 年 6 月
 
@@ -79,8 +79,8 @@ X86 ドライバーの場合: [簡体中国語](https://go.microsoft.com/fwlink/
 
 ## <a name="1822"></a>18.2.2
 
-![ダウンロード](../../ssdt/media/download.png) [x64 インストーラーのダウンロード](https://go.microsoft.com/fwlink/?linkid=2118512)  
-![ダウンロード](../../ssdt/media/download.png) [x86 インストーラーのダウンロード](https://go.microsoft.com/fwlink/?linkid=2118415)  
+![ダウンロード](../../ssms/media/download-icon.png) [x64 インストーラーのダウンロード](https://go.microsoft.com/fwlink/?linkid=2118512)  
+![ダウンロード](../../ssms/media/download-icon.png) [x86 インストーラーのダウンロード](https://go.microsoft.com/fwlink/?linkid=2118415)  
 
 リリース日:2019 年 5 月
 
@@ -97,8 +97,8 @@ X86 ドライバーの場合: [簡体中国語](https://go.microsoft.com/fwlink/
 
 ## <a name="1821"></a>18.2.1
 
-![ダウンロード](../../ssdt/media/download.png) [x64 インストーラーのダウンロード](https://go.microsoft.com/fwlink/?linkid=2118511)  
-![ダウンロード](../../ssdt/media/download.png) [x86 インストーラーのダウンロード](https://go.microsoft.com/fwlink/?linkid=2118278)  
+![ダウンロード](../../ssms/media/download-icon.png) [x64 インストーラーのダウンロード](https://go.microsoft.com/fwlink/?linkid=2118511)  
+![ダウンロード](../../ssms/media/download-icon.png) [x86 インストーラーのダウンロード](https://go.microsoft.com/fwlink/?linkid=2118278)  
 
 リリース日:2019 年 2 月
 
@@ -116,8 +116,8 @@ X86 ドライバーの場合: [簡体中国語](https://go.microsoft.com/fwlink/
 
 ## <a name="1810"></a>18.1.0
 
-![ダウンロード](../../ssdt/media/download.png) [x64 インストーラーのダウンロード](https://go.microsoft.com/fwlink/?linkid=2118506)  
-![ダウンロード](../../ssdt/media/download.png) [x86 インストーラーのダウンロード](https://go.microsoft.com/fwlink/?linkid=2118509)  
+![ダウンロード](../../ssms/media/download-icon.png) [x64 インストーラーのダウンロード](https://go.microsoft.com/fwlink/?linkid=2118506)  
+![ダウンロード](../../ssms/media/download-icon.png) [x86 インストーラーのダウンロード](https://go.microsoft.com/fwlink/?linkid=2118509)  
 
 リリース日:2018 年 7 月
 
@@ -141,8 +141,8 @@ X86 ドライバーの場合: [簡体中国語](https://go.microsoft.com/fwlink/
 
 ## <a name="1802"></a>18.0.2
 
-![ダウンロード](../../ssdt/media/download.png) [x64 インストーラーのダウンロード](https://go.microsoft.com/fwlink/?linkid=2118504)  
-![ダウンロード](../../ssdt/media/download.png) [x86 インストーラーのダウンロード](https://go.microsoft.com/fwlink/?linkid=2118277)  
+![ダウンロード](../../ssms/media/download-icon.png) [x64 インストーラーのダウンロード](https://go.microsoft.com/fwlink/?linkid=2118504)  
+![ダウンロード](../../ssms/media/download-icon.png) [x86 インストーラーのダウンロード](https://go.microsoft.com/fwlink/?linkid=2118277)  
 
 リリース日:2018 年 3 月
 

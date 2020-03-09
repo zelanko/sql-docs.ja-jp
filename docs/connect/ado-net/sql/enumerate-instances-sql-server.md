@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: d1b5742d082fdb40b03663cf2db719399290a010
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: bd0dbbedcb2fa33af80e0a1a1d593bf7df27edb6
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75247773"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896955"
 ---
 # <a name="enumerating-instances-of-sql-server-adonet"></a>SQL Server のインスタンスの列挙 (ADO.NET)
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[ADO.NET をダウンロードする](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 SQL Server では、アプリケーションが現在のネットワーク内の SQL Server インスタンスを検索できます。 <xref:System.Data.Sql.SqlDataSourceEnumerator> クラスは、この情報をアプリケーション開発者に公開し、表示されるすべてのサーバーに関する情報を含む <xref:System.Data.DataTable> を提供します。 このときに返されるテーブルには、ユーザーが新しい接続を作成しようとして、 **[接続プロパティ]** ダイアログ ボックスで、利用可能なすべてのサーバーが含まれたドロップダウン リストを展開したときに表示されるリストと一致するサーバー インスタンスのリストが含まれています。 表示される結果が完全なものであるとは限りません。  
   

@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 95c250c0eff6d22bb5bc8b284503156d412d6a45
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 75d8b98726a758e0533053dbdf8d2e03b3bfdf0d
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75247805"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896990"
 ---
 # <a name="date-and-time-data"></a>日付型と時刻型のデータ
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[ADO.NET をダウンロードする](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 SQL Server 2008 では、日付と時刻の情報を処理するための新しいデータ型が導入されています。 新しいデータ型には、日付と時刻の個別の型と、より大きな範囲、精度、およびタイムゾーンに対応する拡張データ型が含まれます。 Microsoft SqlClient Data Provider for SQL Server (<xref:Microsoft.Data.SqlClient>) では、SQL Server 2008 データベース エンジンのすべての新機能を完全にサポートしています。 SqlClient でこれらの新機能を使用するには、.NET Framework 3.5 SP1 (またはそれ以降) または .NET Core 1.0 (またはそれ以降) をインストールする必要があります。  
   

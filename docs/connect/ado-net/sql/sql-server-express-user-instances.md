@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 1b81b179657fc3564105a113712929ca8f3e10da
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 91b00848fb42c64f1c180019a7618bf649488bd9
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75246968"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896243"
 ---
 # <a name="sql-server-express-user-instances"></a>SQL Server Express のユーザー インスタンス
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[ADO.NET をダウンロードする](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 Microsoft SQL Server Express Edition (SQL Server Express) ではユーザー インスタンス機能がサポートされますが、これは Microsoft SqlClient Data Provider for SQL Server を使用している場合にのみ利用できます。 ユーザー インスタンスは、親インスタンスによって生成される、SQL Server Express データベース エンジンの独立したインスタンスです。 ユーザー インスタンスを使用すると、ローカル コンピューター上の管理者以外のユーザーが、SQL Server Express データベースにアタッチして接続することができます。 ユーザーごとに 1 つのインスタンスが割り当てられ、各インスタンスは個々のユーザーのセキュリティ コンテキストで実行されます。  
   

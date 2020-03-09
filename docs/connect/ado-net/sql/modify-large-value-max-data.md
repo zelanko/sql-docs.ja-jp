@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 4fd43dae7d45e1b2491f34efe4102499517bd5de
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 9acbd8fb795fe1a14e77e5d746f729d37c11cc8d
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75247709"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896681"
 ---
 # <a name="modifying-large-value-max-data-in-adonet"></a>ADO.NET での大きな値 (max) データの変更
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[ADO.NET をダウンロードする](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 ラージ オブジェクト (LOB) データ型は、最大行サイズが 8 KB を超えるデータ型です。 SQL Server からは、`varchar` データ型、`nvarchar` データ型、`varbinary` データ型に `max` 指定子が提供され、2^32 バイトもの大きさの値を格納することができます。 テーブルの列と Transact-SQL 変数では、`varchar(max)`、`nvarchar(max)`、または `varbinary(max)` データ型を指定できます。 .NET では、`DataReader` によって `max` データ型をフェッチでき、特殊な処理を行うことなく入力および出力両方のパラメーター値として指定することもできます。 大きな `varchar` データ型の場合は、データを段階的に取得および更新できます。  
   

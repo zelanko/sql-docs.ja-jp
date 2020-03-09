@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 7f9893d7ac9dd83ae5212684678fc240a8d77097
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: b4d0f31c8f5fbb282c880abaee62f05dc190bbfc
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75251143"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896650"
 ---
 # <a name="specifying-xml-values-as-parameters"></a>パラメーターとしての XML 値の指定
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[ADO.NET をダウンロードする](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 値が XML 文字列であるパラメーターがクエリに必要な場合、開発者はその値を **SqlXml** のインスタンスを使用して提供することができます。 特別な処理は必要ありません。SQL Server の XML 列は、他のデータ型と同じ方法でパラメーター値を受け入れます。  
   

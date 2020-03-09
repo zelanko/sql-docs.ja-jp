@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 7855ef064061957cbc44dfcb4b075ebbd3893325
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: a3a567d86cb70c5d6d931d631a0f744ea59d359f
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75247732"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896692"
 ---
 # <a name="manipulating-data"></a>データの操作
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[ADO.NET をダウンロードする](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 複数のアクティブな結果セット (MARS) を導入する場合は、開発者が事前に複数の接続またはサーバー側のカーソルを使用して、特定のシナリオを解決しておく必要がありました。 さらに、トランザクションの状況で複数の接続を使用するときは、接続をバインド (**sp_getbindtoken** と **sp_bindsession**) する必要がありました。 次のシナリオは、MARS が有効になっている接続を、複数の接続の代わりに使用する方法を示しています。  
   

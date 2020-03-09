@@ -10,16 +10,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 46edb611f29c447f7e1ca2228212ef3e0d594fff
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 50a6e158f5678b30028337b70e1da6914038e64a
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75244040"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896539"
 ---
 # <a name="sql-server-data-types-and-adonet"></a>SQL Server のデータ型と ADO.NET
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[ADO.NET をダウンロードする](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 SQL Server と .NET は異なる型システムに基づいているため、データ損失の可能性があります。 データの整合性を確保するために、Microsoft SqlClient Data Provider for SQL Server (<xref:Microsoft.Data.SqlClient>) には、SQL Server データを操作するための型指定されたアクセサー メソッドが用意されています。 <xref:System.Data.SqlDbType> クラスの列挙体を使用すると、<xref:Microsoft.Data.SqlClient.SqlParameter> データ型を指定できます。  
   

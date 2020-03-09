@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 837bb71e81ac2d2ead661915c332ad826c4f944f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 76fc14c112d47f04fc790df118eea77f1bec42cb
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75251194"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896602"
 ---
 # <a name="provider-statistics-for-sql-server"></a>SQL Server のプロバイダー統計情報
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[ADO.NET をダウンロードする](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 .NET Framework バージョン 2.0 および .NET Core バージョン 1.0 以降、Microsoft SqlClient Data Provider for SQL Server では実行時の統計情報がサポートされています。 有効な接続オブジェクトが作成されたら、<xref:Microsoft.Data.SqlClient.SqlConnection> オブジェクトの <xref:Microsoft.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> プロパティを `True` に設定して、統計を有効にする必要があります。 統計情報が有効になったら、<xref:Microsoft.Data.SqlClient.SqlConnection> オブジェクトの <xref:Microsoft.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> メソッドを使用して、<xref:System.Collections.IDictionary> 参照を取得することにより、それらを "特定の時点のスナップショット" として確認できます。 名前と値のペアの辞書エントリのセットとしてリストを列挙します。 これらの名前と値のペアは順不同です。 カウンターはいつでも、<xref:Microsoft.Data.SqlClient.SqlConnection> オブジェクトの <xref:Microsoft.Data.SqlClient.SqlConnection.ResetStatistics%2A> メソッドを呼び出してリセットできます。 統計情報の収集が有効にされていない場合、例外は生成されません。 さらに、最初に <xref:Microsoft.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> を呼び出すことなく <xref:Microsoft.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> が呼び出された場合、取得される値は各エントリの初期値になります。 統計を有効にし、アプリケーションをしばらく実行してから統計を無効にした場合、取得される値には、統計を無効にした時点までに収集された値が反映されます。 すべての統計値は接続ごとに収集されます。  
   

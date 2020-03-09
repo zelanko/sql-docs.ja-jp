@@ -10,16 +10,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 36307dc43632a5ead207d6ddfefe1e90206a1c0e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 039efb5e3e2826fd4c337d2dbdced29295f05fdb
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75253354"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78895871"
 ---
 # <a name="xml-data-in-sql-server"></a>SQL Server における XML データ
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[ADO.NET をダウンロードする](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 SQL Server は、.NET Framework 内部の SQLXML の機能を公開します。 開発者は、SQL Server のインスタンスからの XML データへのアクセス、.NET 環境へのデータの移動、データの処理、および SQL Server への更新の適用を行うアプリケーションを作成できます。 SQL Server では、XML データをデータ ストレージなどの目的に、あるいはデータを取得するときのパラメーター値として使用できます。 .NET の **SqlXml** クラスは、SQL Server 内の XML 列に格納されたデータのクライアント側の操作をサポートします。 詳細については、SQL Server オンライン ブックの「SQLXML マネージド クラス」を参照してください。  
   

@@ -56,7 +56,7 @@ ESU は、Azure、オンプレミス、またはホスト環境でワークロ�
 
 **Windows Server 2008 R2 以降**で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行している Azure Virtual Machines では、[自動修正](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching)を使用するよう仮想マシンが構成されている場合、既存の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新プログラム チャネルを通じて自動的に ESU を受け取ります。
 
-**Windows Server 2008** 上で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行している Azure Virtual Machines (VM)、または **[自動修正](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching)が構成されて*いない*** 仮想マシンの場合、「[オンプレミスまたはホスト環境](#on-premises-or-hosted-environments)」セクションの説明に従って ESU 修正プログラムを手動でダウンロードして展開する必要があります。
+**Windows Server 2008** 上で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行している Azure Virtual Machines (VM)、または **[自動修正](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-automated-patching)が構成されて*いない***  仮想マシンの場合、「[オンプレミスまたはホスト環境](#on-premises-or-hosted-environments)」セクションの説明に従って ESU 修正プログラムを手動でダウンロードして展開する必要があります。
 
 ### <a name="on-premises-or-hosted-environments"></a>オンプレミスまたはホスト環境
 ソフトウェア アシュアランスをご利用の場合は、Enterprise Agreement (EA)、エンタープライズ サブスクリプション契約 (EAS)、サーバーおよびクラウド加入契約 (SCE)、または教育ソリューション加入契約 (EES) のもとで、サポート終了日から最大 3 年間の延長セキュリティ更新プログラム (ESU) サブスクリプションをご購入いただけます。 ESU は、対象にする必要があるサーバー用にのみご購入いただけます。 ESU は、Microsoft または Microsoft のライセンス パートナーから直接お買い求めいただけます。 

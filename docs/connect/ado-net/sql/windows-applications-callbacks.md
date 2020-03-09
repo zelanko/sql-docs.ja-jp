@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 83dca011087150eef5d8fdc948bb65cc6808830e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e8c5fbecb8892639e5e4e0cb608c3c4de0447508
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75253379"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896011"
 ---
 # <a name="windows-applications-using-callbacks"></a>コールバックを使用する Windows アプリケーション
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[ADO.NET をダウンロードする](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 ほとんどの非同期処理シナリオでは、データベース操作を開始した後、そのデータベース操作の完了を待つことなく他のプロセスの実行に進む必要があります。 ただし、多くのシナリオでは、データベース操作が完了した後で何かを実行する必要があります。 たとえば、Windows アプリケーションでは、実行時間の長い操作をバックグラウンド スレッドに委任している間、ユーザー インターフェイス スレッドの応答性を維持することができます。 ただし、データベース操作が完了したら、その結果を使用してフォームにデータを入力する必要があります。 この種類のシナリオは、コールバックを使用した実装が最も適しています。  
   

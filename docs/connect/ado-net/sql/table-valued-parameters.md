@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 29c7be3fbcb027d1789357d0ce823ac6b1c59f2a
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: f51e5326d29d7edd6a518c02f7042cc9ed104b4f
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75243977"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78895952"
 ---
 # <a name="table-valued-parameters"></a>テーブル値パラメーター
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[ADO.NET をダウンロードする](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 テーブル値パラメーターは、複数行のデータをクライアント アプリケーションから SQL Server に簡単にマーシャリングするための手段です。複数のラウンド トリップや、データ処理用の特別なサーバー側ロジックは必要ありません。 テーブル値パラメーターを使用すると、クライアント アプリケーションで複数行のデータをカプセル化してサーバーに送信する処理を 1 つのパラメーター化コマンドで実行できます。 受信データ行はテーブル変数に格納され、Transact-SQL を使用して操作できます。  
   
@@ -68,7 +68,7 @@ CREATE PROCEDURE usp_UpdateCategories
 ## <a name="modifying-data-with-table-valued-parameters-transact-sql"></a>テーブル値パラメーターを使用したデータの変更 (transact-SQL)  
 1 つのステートメントを実行することで、テーブル値パラメーターを、複数の行に影響を与えるセットベースのデータ変更で使用できます。 たとえば、テーブル値パラメーター内のすべての行を選択して、データベース テーブルに挿入できます。また、テーブル値パラメーターを更新対象テーブルに結合して、更新ステートメントを作成することもできます。  
   
-次の Transact-SQL UPDATE ステートメントは、テーブル値パラメーターを Categories テーブルに結合して使用する方法を示しています。 テーブル値パラメーターを FROM 句で JOIN と共に使用する場合は、次に示すように、別名も使用する必要があります。ここでは、テーブル値パラメーターは "ec" という別名になっています。  
+次の Transact-SQL UPDATE ステートメントは、テーブル値パラメーターを Categories テーブルに結合して使用する方法を示しています。 FROM 句の中でテーブル値パラメーターを JOIN と共に使用する場合は、次に示すように、別名も使用する必要があります。ここでは、テーブル値パラメーターは "ec" という別名になっています。  
   
 ```sql
 UPDATE dbo.Categories  
@@ -91,7 +91,7 @@ INSERT INTO dbo.Categories (CategoryID, CategoryName)
   
 - テーブル値パラメーターには、UNIQUE 制約または PRIMARY KEY 制約に対応する目的でのみインデックスを設定できます。 SQL Server では、テーブル値パラメーターの統計が保持されません。  
   
-- テーブル値パラメーターは Transact-SQL コードの中では読み取り専用です。 テーブル値パラメーターの行では列の値を更新できません。また、行の挿入や削除もできません。 テーブル値パラメーターでストアド プロシージャまたはパラメーター化されたステートメントに渡されたデータを変更するには、そのデータを一時テーブルまたはテーブル変数に挿入する必要があります。  
+- テーブル値パラメーターは Transact-SQL コードの中では読み取り専用です。 テーブル値パラメーターの行の列値は更新できません。また、行の挿入や削除もできません。 テーブル値パラメーターのストアド プロシージャまたはパラメーター化されたステートメントに渡すデータを変更するには、そのデータを一時テーブルまたはテーブル変数に挿入する必要があります。  
   
 - ALTER TABLE ステートメントを使用して、テーブル値パラメーターの設計を変更することはできません。  
   
