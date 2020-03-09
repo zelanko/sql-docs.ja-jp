@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 robots: noindex,nofollow
 ms.openlocfilehash: b32ad209651c30f810f239b0c14689be497c4378
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "69609295"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338578"
 ---
 # <a name="installation-wizard-help"></a>インストール ウィザードのヘルプ
 
@@ -120,7 +120,7 @@ ms.locfileid: "69609295"
 > [!NOTE]  
 > ユーザー アカウント制御 (UAC) は Windows セキュリティ機能であり、管理操作または管理アプリケーションの承認を管理者が実行前に明示的に行う必要があります。 UAC は既定でオンになっているため、高度な特権を必要とする特定の操作について許可するよう求めるメッセージが表示されます。 UAC を構成して既定の動作を変更することも、特定のプログラム用に UAC をカスタマイズすることもできます。 UAC および UAC 構成の詳細については、「[User Account Control Step by Step Guide (Windows ユーザー アカウント制御手順ガイド)](https://go.microsoft.com/fwlink/?linkid=196350)」と「[User Account Control (ユーザー アクセス制御)](https://go.microsoft.com/fwlink/?linkid=196351)」 (Wikipedia) を参照してください。  
   
-### <a name="see-also"></a>参照
+### <a name="see-also"></a>関連項目
   
 * [サービス アカウントの構成 &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/instances/configure-service-accounts-analysis-services)
 * [Windows サービス アカウントと権限の構成](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)  
@@ -154,7 +154,7 @@ ms.locfileid: "69609295"
   * 圧縮を使用したファイル システム  
   * システム ファイルが配置されているディレクトリ  
   
-### <a name="see-also"></a>参照
+### <a name="see-also"></a>関連項目
 
 ディレクトリ、ファイルの場所、およびインスタンス ID の名前付けの詳細については、「[SQL Server の既定のインスタンスおよび名前付きインスタンスのファイルの場所](file-locations-for-default-and-named-instances-of-sql-server.md)」を参照してください。  
   
@@ -187,7 +187,7 @@ ms.locfileid: "69609295"
   * 圧縮を使用したファイル システム  
   * システム ファイルが配置されているディレクトリ  
   
-#### <a name="see-also"></a>参照
+#### <a name="see-also"></a>関連項目
 
 * ディレクトリ、ファイルの場所、およびインスタンス ID の名前付けの詳細については、「[SQL Server の既定のインスタンスおよび名前付きインスタンスのファイルの場所](file-locations-for-default-and-named-instances-of-sql-server.md)」を参照してください。  
 * [ファイル サーバーの共有アクセス許可と NTFS アクセス許可](https://docs.microsoft.com/iis/web-hosting/configuring-servers-in-the-windows-web-platform/configuring-share-and-ntfs-permissions)
@@ -265,7 +265,7 @@ ms.locfileid: "69609295"
   
 このページで入力するパスワードは、強力なパスワード ポリシーの要件を満たす必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用したオートメーションを使用している場合、必ず強力なパスワード ポリシーの要件を満たすパスワードを指定してください。  
   
-### <a name="see-also"></a>参照
+### <a name="see-also"></a>関連項目
 
 Windows 認証と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証のどちらを選択するかについて詳しくは、「[認証モードの選択](../../relational-databases/security/choose-an-authentication-mode.md)」を参照してください。  
 
@@ -406,7 +406,7 @@ SMB ファイル共有をディレクトリとして指定するには、サポ�
 > [!NOTE]
 > 既定以外のインストール ディレクトリを指定する場合は、個々のインストール フォルダーがこの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに対して一意であることを確認します。 このダイアログ ボックスのディレクトリは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の他のインスタンスのディレクトリと共有できません。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンス内の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] コンポーネントと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントは、別のディレクトリにインストールする必要もあります。
   
-### <a name="see-also"></a>参照
+### <a name="see-also"></a>関連項目
 
 * [Windows サービス アカウントと権限の構成](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)
 * [ファイル サーバーの共有アクセス許可と NTFS アクセス許可](https://docs.microsoft.com/iis/web-hosting/configuring-servers-in-the-windows-web-platform/configuring-share-and-ntfs-permissions)  
@@ -463,7 +463,7 @@ The MaxDOP setting applies only to SQL Server 2019 and later.
   
 **[リモート クライアントに FILESTREAM データへのストリーム アクセスを許可する]** : リモート クライアントにこのサーバー上の FILESTREAM データへのアクセスを許可するには、このチェック ボックスをオンにします。  
   
-### <a name="see-also"></a>参照
+### <a name="see-also"></a>関連項目
 
 * [FILESTREAM の有効化と構成](../../relational-databases/blob/enable-and-configure-filestream.md)
 * [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
