@@ -14,11 +14,11 @@ author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 7db6dbdbe45102c2a1bc2533d156e55060869b58
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76909852"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338832"
 ---
 # <a name="sql-server-2016-release-notes"></a>SQL Server 2016 リリース ノート
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -99,7 +99,7 @@ SQL Server 2016 SP2 にはサポートと診断に関連する改善が含まれ
 - 詳細な監査
 - インメモリ OLTP (Local DB では使用できません)
 - 複数の filestream コンテナー (Local DB では使用できません)
-- [パーティション分割]
+- パーティション分割
 - PolyBase
 - 行レベルのセキュリティ
 

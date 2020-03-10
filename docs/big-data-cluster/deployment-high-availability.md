@@ -5,16 +5,16 @@ description: 高可用性を使用して SQL Server ビッグ データ クラ�
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 11/04/2019
+ms.date: 02/13/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5d6edf4115156bda58c44615e99ffcb19b87913f
-ms.sourcegitcommit: 38c61c7e170b57dddaae5be72239a171afd293b9
+ms.openlocfilehash: a73259663f710cfc5df5dc40745ecda9fdbd8f13
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77259213"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338106"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-high-availability"></a>高可用性を使用して SQL Server ビッグ データ クラスターを展開する
 
@@ -32,7 +32,7 @@ SQL Server ビッグ データ クラスターは、コンテナー化アプリ�
 - データベースはすべて可用性グループに自動的に追加されます。これには、すべてのユーザーおよびシステム データベース (`master` や `msdb` など) が含まれます。 この機能により、可用性グループ レプリカ全体で単一システム ビューが提供されます。 追加のモデル データベース (`model_replicatedmaster` と `model_msdb`) は、システム データベースのレプリケートされた部分をシード処理するために使用されます。 これらのデータベースに加えて、インスタンスに直接接続している場合は、`containedag_master` および `containedag_msdb` データベースが表示されます。 `containedag` データベースは、可用性グループ内の `master` と `msdb` を表します。
 
   > [!IMPORTANT]
-  > SQL Server 2019 CU1 リリースの時点では、CREATE DATABASE ステートメントの結果として作成されたデータベースのみが、可用性グループに自動的に追加されます。 復元などの他のワークフローの結果としてインスタンス上に作成されたデータベースは、まだ可用性グループに追加されていないため、ビッグ データ クラスター管理者が手動でこれを行う必要があります。 手順については、「[SQL Server インスタンスに接続する](#instance-connect)」セクションを参照してください。
+  > SQL Server 2019 CU1 リリースの時点では、CREATE DATABASE ステートメントの結果として作成されたデータベースのみが、可用性グループに自動的に追加されます。 データベースのアタッチなどの他のワークフローの結果としてインスタンス上に作成されたデータベースは、まだ可用性グループに追加されていないため、ビッグ データ クラスター管理者が手動でこれを行う必要があります。 手順については、「[SQL Server インスタンスに接続する](#instance-connect)」セクションを参照してください。 SQL Server 2019 CU2 リリースより前のバージョンでは、復元ステートメントの結果として作成されたデータベースも同じ動作を示し、データベースを包含可用性グループに手動で追加する必要がありました。
   >
 - Polybase 構成データベースは可用性グループには含まれません。これは、各レプリカに固有のインスタンス レベルのメタデータが含まれているためです。
 - 外部エンドポイントは、可用性グループ内のデータベースへの接続用に自動的にプロビジョニングされます。 このエンドポイント `master-svc-external` は、可用性グループ リスナーの役割を果たします。
@@ -129,12 +129,15 @@ SQL Server Master Readable Secondary Replicas  11.11.111.11,11111  sql-server-ma
 
 ## <a id="instance-connect"></a> SQL Server インスタンスに接続する
 
-サーバー レベルの構成を設定する、または可用性グループにデータベースを手動で追加するなどの特定の操作では、SQL Server インスタンスに接続する必要があります。 `sp_configure`、`RESTORE DATABASE`、または任意の可用性グループの DDL などの操作には、この種の接続が必要になります。 既定では、ビッグ データ クラスターにインスタンス接続を有効にするエンドポイントが含まれていないため、このエンドポイントを手動で公開する必要があります。 
+サーバー レベルの構成を設定する、または可用性グループにデータベースを手動で追加するなどの特定の操作では、SQL Server インスタンスに接続する必要があります。 SQL Server 2019 CU2 よりも前のバージョンでは、`sp_configure`、`RESTORE DATABASE`、または任意の可用性グループの DDL などの操作には、この種類の接続が必要になります。 既定では、ビッグ データ クラスターにインスタンス接続を有効にするエンドポイントが含まれていないため、このエンドポイントを手動で公開する必要があります。 
 
 > [!IMPORTANT]
 > SQL Server インスタンス接続用に公開されたエンドポイントでは、Active Directory が有効になっているクラスターであっても、サポートされるのは SQL 認証のみとなります。 既定では、ビッグ データ クラスターの展開中に、`sa` ログインが無効になり、`AZDATA_USERNAME` および `AZDATA_PASSWORD` 環境変数の展開時に指定された値に基づいて、新しい `sysadmin` ログインがプロビジョニングされます。
 
 このエンドポイントを公開してから、復元ワークフローで作成されたデータベースを可用性グループに追加する方法の例を以下に示します。 `sp_configure` でサーバー構成を変更する場合は、SQL Server マスター インスタンスへの接続を設定するための同様の手順が適用されます。
+
+> [!NOTE]
+> SQL Server 2019 CU2 以降では、復元ワークフローの結果として作成されたデータベースは自動的に包含可用性グループに追加されます。
 
 - `sql-server-master` エンドポイントに接続してプライマリ レプリカをホストするポッドを特定して、以下を実行します。
 
@@ -197,10 +200,10 @@ SQL Server Master Readable Secondary Replicas  11.11.111.11,11111  sql-server-ma
 
 ビッグ データ クラスターの SQL Server マスターの可用性グループに関する既知の問題と制限事項は、次のとおりです。
 
-- `RESTORE DATABASE`、`CREATE DATABASE FROM SNAPSHOT` などの `CREATE DATABASE` 以外のワークフローの結果として作成されたデータベースは、可用性グループに自動的に追加されません。 [インスタンスに接続](#instance-connect)し、データベースを可用性グループに手動で追加します。
+- SQL Server 2019 CU2 よりも前のバージョンでは、`CREATE DATABASE` および `RESTORE DATABASE` 以外のワークフロー (`CREATE DATABASE FROM SNAPSHOT` など) の結果として作成されたデータベースは、自動的に可用性グループに追加されません。 [インスタンスに接続](#instance-connect)し、データベースを可用性グループに手動で追加します。
 - `sp_configure` でのサーバー構成設定の実行などの特定の操作では、可用性グループ `master` ではなく、SQL Server インスタンス `master` データベースへの接続が必要になります。 対応するプライマリ エンドポイントを使用することはできません。 [指示](#instance-connect)に従ってエンドポイントを公開し、SQL Server インスタンスに接続して `sp_configure` を実行します。 SQL 認証を使用できるのは、エンドポイントを手動で公開して SQL Server インスタンス `master` データベースに接続する場合のみです。
 - ビッグ データ クラスターが展開されるときに、高可用性構成が作成される必要があります。 展開後に可用性グループで高可用性構成を有効にすることはできません。
-- 包含 msdb データベースは可用性グループに含まれており、SQL Agent ジョブはレプリケートされますが、ジョブはスケジュールごとにトリガーされません。 回避策として、[SQL Server の各インスタンスに接続](#instance-connect)し、インスタンス msdb にジョブを作成ます。
+- 包含 msdb データベースは可用性グループに含まれており、SQL Agent ジョブはレプリケートされますが、ジョブはスケジュールごとにトリガーされません。 回避策として、[SQL Server の各インスタンスに接続](#instance-connect)し、インスタンス msdb にジョブを作成ます。 SQL Server 2019 CU2 以降では、マスター インスタンス内の各レプリカに作成されたジョブのみがサポートされています。
 
 ## <a name="next-steps"></a>次のステップ
 
