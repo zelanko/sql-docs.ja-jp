@@ -19,11 +19,11 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 089de803bee02d241e1d7b56578c7e8bf8b15649
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "72304952"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78340684"
 ---
 # <a name="hierarchical-data-sql-server"></a>階層データ (SQL Server)
 
@@ -43,7 +43,7 @@ ms.locfileid: "72304952"
   
 -   Web ページ間のリンクのグラフ  
   
- 階層構造を持つテーブルを作成したり、別の場所に格納されているデータの階層構造を表したりするには、 [hierarchyid](../t-sql/data-types/hierarchyid-data-type-method-reference.md) を使用します。 階層データのクエリや管理を実行するには、 [ の ](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)hierarchyid 関数[!INCLUDE[tsql](../includes/tsql-md.md)] を使用します。  
+ 階層構造を持つテーブルを作成したり、別の場所に格納されているデータの階層構造を表したりするには、 [hierarchyid](../t-sql/data-types/hierarchyid-data-type-method-reference.md) を使用します。 階層データのクエリや管理を実行するには、 [!INCLUDE[tsql](../includes/tsql-md.md)] の [hierarchyid 関数](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06) を使用します。  
   
 ##  <a name="keyprops"></a> hierarchyid の主要な特性  
  値、 **hierarchyid** データ型は、ツリー階層内の位置を表します。 値を **hierarchyid** 、次のプロパティがあります。  
@@ -163,7 +163,7 @@ GO
   
      幅優先のインデックスでは、ノードの直接の子すべてが同じ場所に配置されます。 このため、"この管理者に直属するすべての従業員を検索する" など、直下の子に関するクエリに応答するには、幅優先インデックスが効率的です。  
   
- 深さ優先、幅優先、またはこれらの両方を使用するか、また、どちらをクラスター化キーとするか (該当する場合) は、上記の種類のクエリの相対的重要度と、SELECT 操作と DML 操作の相対的重要度によって決まります。 インデックス作成方法の詳細な例については、「 [チュートリアル : hierarchyid データ型の使用](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)」を参照してください。  
+ 深さ優先、幅優先、またはこれらの両方を使用するか、また、どちらをクラスター化キーとするか (該当する場合) は、上記の種類のクエリの相対的重要度と、SELECT 操作と DML 操作の相対的重要度によって決まります。 インデックス作成方法の詳細な例については、「[チュートリアル:hierarchyid データ型の使用](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)」」のレッスン 1 を参照してください。  
   
   
 ### <a name="creating-indexes"></a>インデックスの作成  
@@ -271,7 +271,7 @@ INSERT SimpleDemo
 ##  <a name="tasks"></a> 関連タスク  
   
 ###  <a name="migrating"></a> 親/子から hierarchyid への移行  
- 現在、ほとんどのツリーは親/子を使用して表されます。 親/子構造から **hierarchyid** を使用したテーブルに移行する最も簡単な方法は、一時列または一時テーブルを使用して、階層の各レベルのノード数を追跡する方法です。 親/子テーブルの移行例については、「 [チュートリアル : hierarchyid データ型の使用](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)」のレッスン 1 を参照してください。  
+ 現在、ほとんどのツリーは親/子を使用して表されます。 親/子構造から **hierarchyid** を使用したテーブルに移行する最も簡単な方法は、一時列または一時テーブルを使用して、階層の各レベルのノード数を追跡する方法です。 親/子テーブルの移行例については、「[チュートリアル:hierarchyid データ型の使用](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)」」のレッスン 1 を参照してください。  
   
   
 ###  <a name="BKMK_ManagingTrees"></a> hierarchyid を使用したツリーの管理  
@@ -398,7 +398,7 @@ GO
   
   
 ###  <a name="findclr"></a> CLR を使用した先祖の検索  
- 階層内の 2 つのノードに関連する一般的な操作は、最下位の共通の先祖を見つけることです。 [!INCLUDE[tsql](../includes/tsql-md.md)]hierarchyid**型は** と CLR の両方で使用できるので、どちらでもこの操作を記述できます。 パフォーマンスが向上するため、CLR の使用をお勧めします。  
+ 階層内の 2 つのノードに関連する一般的な操作は、最下位の共通の先祖を見つけることです。 **hierarchyid** 型は [!INCLUDE[tsql](../includes/tsql-md.md)] と CLR の両方で使用できるので、どちらでもこの操作を記述できます。 パフォーマンスが向上するため、CLR の使用をお勧めします。  
   
  次の CLR コードを使用すると、先祖を一覧表示し、最下位の共通の先祖を見つけることができます。  
   
@@ -441,7 +441,7 @@ public partial class HierarchyId_Operations
 }  
 ```  
   
- 以下の **の例で**ListAncestor**メソッドおよび**CommonAncestor[!INCLUDE[tsql](../includes/tsql-md.md)] メソッドを使用するには、DLL をビルドし、次のようなコードを実行して **の**HierarchyId_Operations[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] アセンブリを作成します。  
+ 以下の [!INCLUDE[tsql](../includes/tsql-md.md)] の例で **ListAncestor** メソッドおよび **CommonAncestor** メソッドを使用するには、DLL をビルドし、次のようなコードを実行して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の **HierarchyId_Operations** アセンブリを作成します。  
   
 ```sql
 CREATE ASSEMBLY HierarchyId_Operations   
@@ -540,7 +540,7 @@ GO
   
 ## <a name="see-also"></a>参照  
  [hierarchyid データ型メソッド リファレンス](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)   
- [チュートリアル : hierarchyid データ型の使用](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
+ [チュートリアル:hierarchyid データ型の使用](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
  [hierarchyid &#40;Transact-SQL&#41;](../t-sql/data-types/hierarchyid-data-type-method-reference.md)  
   
   

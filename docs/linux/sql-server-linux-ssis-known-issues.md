@@ -9,11 +9,11 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 45e5d9b36b6fd75db7bbc3c5ea397ee9226e2771
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68032231"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339361"
 ---
 # <a name="limitations-and-known-issues-for-ssis-on-linux"></a>Linux での SSIS に関する制限事項と既知の問題
 
@@ -26,7 +26,7 @@ ms.locfileid: "68032231"
 Linux での SSIS パッケージのこのリリースでは、次の機能はサポートされていません。
   - SSIS カタログ データベース
   - SQL エージェントでスケジュールされたパッケージの実行
-  - [Windows 認証]
+  - Windows 認証
   - サードパーティ コンポーネント
   - 変更データ キャプチャ (CDC)
   - SSIS Scale Out

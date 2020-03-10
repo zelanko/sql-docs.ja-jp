@@ -28,11 +28,11 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 604a882daffeb2a9031aa9cc7e4d577e1e4e2663
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "72916015"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339160"
 ---
 # <a name="database-checkpoints-sql-server"></a>データベース チェックポイント (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "72916015"
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] では、自動、間接、手動、および内部といったチェックポイントの種類がサポートされています。 次の表は、 **チェックポイント**の種類をまとめたものです。
   
-|Name|[!INCLUDE[tsql](../../includes/tsql-md.md)] インターフェイス|説明|  
+|名前|[!INCLUDE[tsql](../../includes/tsql-md.md)] インターフェイス|説明|  
 |----------|----------------------------------|-----------------|  
 |自動|EXEC sp_configure **'** recovery interval **','** _seconds_ **'**|**recovery interval** サーバー構成オプションに指定された期限に合わせて、バックグラウンドで自動的に発行されます。 自動チェックポイントは、最後まで実行されます。  自動チェックポイントは、未処理の書き込み数と、50 ミリ秒を超える書き込み待機時間の上昇を [!INCLUDE[ssDE](../../includes/ssde-md.md)] が検出したかどうかに応じて調整されます。<br /><br /> 詳細については、「 [recovery interval サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)」を参照してください。|  
 |間接|ALTER DATABASE ...SET TARGET_RECOVERY_TIME **=** _target\_recovery\_time_ { SECONDS &#124; MINUTES }|所定のデータベースのユーザーが指定したターゲット復旧時間に合わせて、バック グラウンドで発行されます。 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]より、既定値は 1 分です。 旧バージョンの既定値は 0 です。これは、データベースが自動チェックポイントを使用することを示し、その頻度はサーバー インスタンスの復旧間隔の設定に依存します。<br /><br /> 詳細については、「 [データベースのターゲットの復旧時間の変更 &#40;SQL Server&#41;](../../relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md)サーバー構成オプションを構成する方法について説明します。|  
@@ -140,7 +140,7 @@ ms.locfileid: "72916015"
   
 -   [CHECKPOINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md)  
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [トランザクション ログ &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)            
 [SQL Server トランザクション ログのアーキテクチャと管理ガイド](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)      
  

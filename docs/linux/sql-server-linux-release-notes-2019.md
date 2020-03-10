@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 95289a3c4ad263e2c3ef063e54984a4481cf6109
-ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77256785"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339360"
 ---
 # <a name="release-notes-for-sql-server-2019-on-linux"></a>Linux 上の SQL Server 2019 のリリース ノート
 
@@ -239,7 +239,7 @@ CU リポジトリ (mssql-server-2019) を構成済みの場合は、新規イ�
 - Linux 上で SSIS パッケージを実行する場合、このリリースでは次の機能はサポートされていません。
   - [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] カタログ データベース
   - SQL エージェントでスケジュールされたパッケージの実行
-  - [Windows 認証]
+  - Windows 認証
   - サードパーティ コンポーネント
   - 変更データ キャプチャ (CDC)
   - [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] スケール アウト
