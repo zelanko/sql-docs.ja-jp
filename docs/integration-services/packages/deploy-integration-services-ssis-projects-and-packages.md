@@ -19,11 +19,11 @@ ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b0c755208a5443e4606bdb41a0cbdfdf26a1fa1c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "71680963"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338985"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Integration Services (SSIS) プロジェクトとパッケージの配置
 
@@ -318,7 +318,7 @@ static void Main()
 
  このページでは、選択した設定を確認することができます。 選択内容を変更するには、 **[戻る]** をクリックするか、左ペインでいずれかの手順をクリックします。 **[配置]** をクリックして、配置プロセスを開始します。  
   
-#### <a name="results"></a>[結果]
+#### <a name="results"></a>結果
 
  配置プロセスが完了したら、 **[結果]** ページが表示されます。 このページでは、各アクションが成功したか、失敗したかを表示します。 アクションが失敗した場合は、 **[結果]** 列の **[失敗]** をクリックすると、エラーの説明が表示されます。 **[レポートの保存]** をクリックして結果を XML ファイルに保存するか、 **[閉じる]** をクリックしてウィザードを終了します。
   
@@ -344,7 +344,7 @@ static void Main()
 
  **[配置先の選択]** ページで **[次へ]** をクリックして、 **Integration Services 配置ウィザード** の **[レビュー]** ページに切り替えます。 [レビュー] ページで、配置アクションに関する概要レポートを確認します。 検証した後に、 **[配置]** ボタンをクリックして、配置アクションを実行します。  
   
-#### <a name="results"></a>[結果]
+#### <a name="results"></a>結果
 
  配置が完了したら、 **[結果]** ページが表示されます。 **[結果]** ページで、配置プロセスの各手順の結果を確認します。 **[レポートの保存]** をクリックして配置レポートを保存するか、 **[閉じる]** をクリックしてウィザードを閉じます。  
 
@@ -707,7 +707,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  パラメーターのスコープ (パッケージまたはプロジェクト) を選択します。  
   
 ###  <a name="configureParameters"></a> [パラメーターの構成] ページのオプションの設定  
- **Name**  
+ **名前**  
  パラメーター名を一覧表示します。  
   
  **スコープ**  
