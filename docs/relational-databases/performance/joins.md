@@ -18,11 +18,11 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8808dc2befdcb2c31218e7dc155921bb10947e14
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68419589"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339250"
 ---
 # <a name="joins-sql-server"></a>結合 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -173,7 +173,7 @@ Merge Join 操作は、標準の操作または多対多操作のいずれかに
 ハッシュの保留について詳しくは、「[Hash Warning イベント クラス](../../relational-databases/event-classes/hash-warning-event-class.md)」をご覧ください。    
 
 ## <a name="adaptive"></a> アダプティブ結合について
-[バッチ モード](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution) アダプティブ結合機能を使用すると、最初の入力のスキャンが[終わる](#hash)まで、[ハッシュ結合](#nested_loops)方法または**ネステッド ループ**結合方法のどちらを選ぶかを、遅延することができます。 アダプティブ結合演算子は、入れ子になったループ プランに切り替えるタイミングを決定するために使われるしきい値を定義します。 したがって、クエリ プランでは、再コンパイルを行わなくても、実行中により適切な結合方法に動的に切り替えることができます。 
+[バッチ モード](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution) アダプティブ結合機能を使用すると、最初の入力のスキャンが**終わる**まで、[ハッシュ結合](#hash)方法または[ネステッド ループ](#nested_loops)結合方法のどちらを選ぶかを、遅延することができます。 アダプティブ結合演算子は、入れ子になったループ プランに切り替えるタイミングを決定するために使われるしきい値を定義します。 したがって、クエリ プランでは、再コンパイルを行わなくても、実行中により適切な結合方法に動的に切り替えることができます。 
 
 > [!TIP]
 > 大小の結合入力スキャンが頻繁に切り替わるワークロードの場合、この機能から最もメリットがあります。
@@ -229,7 +229,7 @@ WHERE [fo].[Quantity] = 361;
 ### <a name="tracking-adaptive-join-activity"></a>アダプティブ結合アクティビティの追跡
 アダプティブ結合演算子には次のプラン演算子属性があります。
 
-|プラン属性|[説明]|
+|プラン属性|説明|
 |---|---|
 |AdaptiveThresholdRows|ハッシュ結合から入れ子になったループ結合への切り替えに使われるしきい値を示します。|
 |EstimatedJoinType|予想される結合の種類を示します。|

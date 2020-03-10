@@ -11,11 +11,11 @@ ms.assetid: 21e19635-340d-49bb-b39d-4867102fb5df
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 75ee40e0b7ca753efd32e0ab057340f61824acef
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "69026412"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339850"
 ---
 # <a name="using-bulk-copy-with-the-jdbc-driver"></a>JDBC ドライバーでの一括コピーの使用
 
@@ -794,6 +794,6 @@ SQLServerBulkCopy クラスは、SQL Server テーブルのみにデータを書
 | Void setTimeWithTimezoneFormat(DateTimeForm atter dateTimeFormatter)                                   | ファイルからのタイム データを java.sql.Types.TIME_WITH_TIMEZONE として解析するための書式を設定します。           |
 | Void setTimeWithTimezoneFormat(String timeFormat)                                                      | ファイルからのタイム データを java.sql.Types.TIME_WITH_TIMEZONE として解析するための書式を設定します。           |
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 
 [JDBC ドライバーの概要](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

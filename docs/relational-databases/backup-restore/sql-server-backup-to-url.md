@@ -11,11 +11,11 @@ ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 5a68190ff087707bdf0b89dc756c9346d10d34ad
-ms.sourcegitcommit: cebf41506a28abfa159a5dd871b220630c4c4504
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77479705"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338723"
 ---
 # <a name="sql-server-backup-to-url"></a>SQL Server Backup to URL
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "77479705"
 ## <a name="requirements-components-and-concepts"></a>要件、コンポーネント、および概念  
  **このセクションの内容:**  
   
--   [セキュリティ](#security)  
+-   [Security](#security)  
   
 -   [主なコンポーネントと概念の概要](#intorkeyconcepts)  
   
@@ -184,7 +184,7 @@ Blob Storage に大規模なデータベースをバックアップするとき�
 |RECOVERY &#124; NORECOVERY &#124; STANDBY|Y|||  
 |LOADHISTORY|Y|||  
 |MOVE|Y|||  
-|[REPLACE]|Y|||  
+|REPLACE|Y|||  
 |RESTART|Y|||  
 |RESTRICTED_USER|Y|||  
 |FILE|-|||  

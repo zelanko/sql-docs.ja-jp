@@ -13,11 +13,11 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 221c5c0fa216b8d5fba7f133b717a3d102aea963
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76910235"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339706"
 ---
 # <a name="query-columns-using-always-encrypted-with-sql-server-management-studio"></a>SQL Server Management Studio で Always Encrypted を使用した列のクエリを実行する
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -98,7 +98,7 @@ Always Encrypted を有効 (無効) にするには、次のようにします�
 1. SSMS 17 以前を使用している場合:
     1. **[追加のプロパティ]** タブを選択します。
     1. Always Encrypted を有効にするには、「`Column Encryption Setting = Enabled`」と入力します。 Always Encrypted を無効にするには、`Column Encryption Setting = Disabled` を指定するか、 **[追加のプロパティ]** タブから **[列暗号化設定]** の設定を削除します (既定値は **[無効]** )。   
- 1. **[接続]** をクリックします。
+ 1. **[Connect]** をクリックします。
 
 > [!TIP]
 > 既存のクエリ エディター ウィンドウで Always Encrypted の有効化と無効化を切り替えるには、次のようにします。   

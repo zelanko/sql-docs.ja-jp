@@ -14,11 +14,11 @@ ms.assetid: 641961ac-53a5-4997-9d42-cf4ecce1f892
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 78fb75acfefce3a1f0c8cb28ea286a028463a56b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77077977"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78340550"
 ---
 # <a name="report-server-content-management-ssrs-native-mode"></a>レポート サーバー コンテンツの管理 (SSRS ネイティブ モード)
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]では、コンテンツ管理とはレポート サーバー アイテムの管理を指します。 すべてのアイテムは、プロパティおよびセキュリティの設定を通して、個別に管理できます。 アイテムは、レポート サーバー フォルダー名前空間内のさまざまな場所に移動できます。 アイテムを効率的に管理するには、コンテンツ マネージャーで実行されるタスクを理解しておく必要があります。 SQL Server Reporting Services (SSRS) 2016 以降の CTP 3.2 より、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web ポータルが利用できます。 この記事では、Web ポータルと、Web ポータルの新しいエクスペリエンスについて説明します。  
@@ -167,7 +167,7 @@ ms.locfileid: "77077977"
   
  個人用レポートの機能は任意で使用できます。 既定では、レポート サーバーのインストール時には、個人用レポートは無効になっています。 この機能を有効にする方法の詳細については、「 [個人用レポートの有効化と無効化](../../reporting-services/report-server/enable-and-disable-my-reports.md)」を参照してください。 詳細については、「 [個人用レポートをセキュリティで保護する](../../reporting-services/security/secure-my-reports.md)」を参照してください。  
   
-## <a name="tasks"></a>処理手順  
+## <a name="tasks"></a>タスク  
  [フォルダーへのファイルのアップロード](../../reporting-services/report-server/upload-files-to-a-folder.md)  
  [フォルダーの作成、削除、または変更 (Web ポータル)](../../reporting-services/report-server/create-delete-or-modify-a-folder-web-portal.md)  
  [リソースの更新 (Web ポータル)](../../reporting-services/report-server/update-a-resource-report-manager.md)  

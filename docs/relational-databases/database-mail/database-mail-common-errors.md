@@ -14,11 +14,11 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ee5e7fd6511a624b05b4d6c7d03c1f2dcd288054
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "70228434"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78338861"
 ---
 # <a name="common-errors-with-database-mail"></a>データベース メールの一般的なエラー 
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ ALTER DATABASE msdb SET ENABLE_BROKER ;
 GO
 ``` 
 
-データベース メールは、多数の内部ストアド プロシージャに依存しています。 外部からのアクセスを制限するには、これらのストアド プロシージャを新しくインストールした SQL Server で無効にします。 これらのストアド プロシージャを有効にするには、次の例のように、[sp_configure](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) システム ストアド プロシージャの **Database Mail XPs オプション**を使用します。
+データベース メールは、多数の内部ストアド プロシージャに依存しています。 外部からのアクセスを制限するには、これらのストアド プロシージャを新しくインストールした SQL Server で無効にします。 これらのストアド プロシージャを有効にするには、次の例のように、**sp_configure** システム ストアド プロシージャの [Database Mail XPs オプション](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md)を使用します。
 
 ```sql
 EXEC sp_configure 'show advanced options', 1;  

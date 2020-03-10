@@ -32,11 +32,11 @@ ms.assetid: 0f5fc7be-e37e-4ecd-ba99-697c8ae3436f
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6fc3a1e41edd95a8e1cf9b4489732cff7ac2852d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "71295814"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339520"
 ---
 # <a name="legacy-package-deployment-ssis"></a>レガシー パッケージの配置 (SSIS)
 
@@ -264,7 +264,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  パッケージ オブジェクトのプロパティの値は、パッケージ構成によって実行時に更新されます。 パッケージが読み込まれると、パッケージの開発時に設定された値は、構成の値に置き換えられます。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、さまざまな種類の構成がサポートされます。 たとえば、複数の構成を含むことができる XML ファイルや、単一の構成を含む環境変数を使用できます。 詳細については、「 [パッケージ構成](../../integration-services/packages/package-configurations.md)」を参照してください。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>Options  
  **[パッケージの構成を有効にする]**  
  パッケージで使用する構成を選択します。  
   
@@ -305,7 +305,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ### <a name="welcome-to-the-package-configuration-wizard-page"></a>[パッケージ構成ウィザードへようこそ] ページ  
  **SSIS 構成ウィザード** を使用すると、パッケージとそのオブジェクトのプロパティを実行時に更新する構成を作成できます。  
   
-#### <a name="options"></a>オプション  
+#### <a name="options"></a>Options  
  **[次回からこのページを表示しない]**  
  次回ウィザードを起動するときに、ようこそページをスキップします。  
   
@@ -390,7 +390,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 |Value|説明|  
 |-----------|-----------------|  
-|**[接続]**|一覧から接続を選択するか、 **[新規作成]** をクリックし、新しい接続を作成します。|  
+|**接続**|一覧から接続を選択するか、 **[新規作成]** をクリックし、新しい接続を作成します。|  
 |**[構成テーブル]**|既存のテーブルを選択するか、 **[新規作成]** をクリックし、新しいテーブルを作成する SQL ステートメントを記述します。|  
 |**[構成フィルター]**|既存の構成名を選択するか、新しい名前を入力します。<br /><br /> 多くの SQL Server の構成は同じテーブルに格納でき、各構成には複数の構成アイテムを含むことができます。<br /><br /> このユーザー定義の値はテーブルに格納され、特定の構成に属する構成アイテムの識別に使用されます。|  
   
@@ -404,7 +404,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ### <a name="select-objects-to-export-page"></a>[エクスポートするオブジェクトの選択] ページ  
  **[対象になるプロパティの選択]** ページまたは [エクスポートするプロパティの選択] ページを使用すると、構成に含まれるオブジェクト プロパティを指定できます。 XML 構成の種類を選択した場合のみ、複数のプロパティを選択する機能を使用できます。  
   
-#### <a name="options"></a>オプション  
+#### <a name="options"></a>Options  
  **オブジェクト**  
  パッケージ階層を展開して、エクスポートするプロパティを選択します。  
   
@@ -417,7 +417,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ### <a name="completing-the-wizard-page"></a>[ウィザードの完了] ページ  
  **[ウィザードの完了]** ページを使用すると、構成の名前を指定し、構成を作成するためにウィザードが使用する設定を表示できます。 ウィザードが完了すると、パッケージのすべての構成が一覧表示される **[パッケージ構成オーガナイザー]** が表示されます。  
   
-#### <a name="options"></a>オプション  
+#### <a name="options"></a>Options  
  **[構成名]**  
  構成の名前を入力します。  
   
@@ -586,13 +586,13 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ### <a name="configure-packages-page"></a>[パッケージの構成] ページ  
  **[パッケージの構成]** ページを使用すると、パッケージ構成を編集できます。  
   
-#### <a name="options"></a>オプション  
+#### <a name="options"></a>Options  
  **構成ファイル**  
  一覧からファイルを選択して、構成ファイルの内容を編集します。  
   
  **関連トピック:** [パッケージ構成を作成する](../../integration-services/packages/create-package-configurations.md)  
   
- **[パス]**  
+ **パス**  
  構成するプロパティのパスを表示します。  
   
  **Type**  
@@ -622,7 +622,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ### <a name="deploy-ssis-packages-page"></a>[SSIS パッケージの配置] ページ  
  **[SSIS パッケージの配置]** ページを使用して、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージとその従属ファイルをインストールする場所を指定します。  
   
-#### <a name="options"></a>オプション  
+#### <a name="options"></a>Options  
  **[ファイル システムに配置]**  
  パッケージとその従属ファイルをファイル システム上の指定したフォルダーに配置します。  
   
@@ -647,7 +647,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ### <a name="select-installation-folder-page"></a>[インストール フォルダーの選択] ページ  
  **[インストール フォルダーの選択]** ページを使用して、パッケージとその従属ファイルをインストールするファイル システム フォルダーを指定します。  
   
-#### <a name="options"></a>オプション  
+#### <a name="options"></a>Options  
  **フォルダー**  
  パッケージとその従属ファイルをコピーするパスとフォルダーを指定します。  
   
@@ -663,7 +663,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ### <a name="specify-target-sql-server-page"></a>[インストール先の SQL Server の指定] ページ  
  **[インストール先の SQL Server の指定]** ページを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスへのパッケージ配置に関するオプションを指定します。  
   
-#### <a name="options"></a>オプション  
+#### <a name="options"></a>Options  
  **サーバー名**  
  パッケージの配置先となるサーバーの名前を指定します。  
   

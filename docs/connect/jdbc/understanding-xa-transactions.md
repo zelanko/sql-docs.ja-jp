@@ -11,11 +11,11 @@ ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3e249bb515ca0a8b579e923e7d289fccd80ce6ef
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74947134"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78340504"
 ---
 # <a name="understanding-xa-transactions"></a>XA トランザクションについて
 
@@ -75,17 +75,17 @@ ms.locfileid: "74947134"
 
 MS DTC サービスは、Service Manager で **[自動]** とマークされ、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスの開始時に実行されている必要があります。 XA トランザクションで使用するために MS DTC を有効にするには、次の手順を実行する必要があります。  
   
-Windows Vista 以降の場合:   
+Windows Vista 以降の場合:  
   
-1. **[スタート]** ボタンをクリックして、**[検索の開始]** ボックスに「**dcomcnfg**」と入力し、Enter キーを押して、**[コンポーネント サービス]** を開きます。 **[検索の開始]** ボックスに「%windir%\system32\comexp.msc」と入力して **[コンポーネント サービス]** を開くこともできます。  
+1. **[スタート]** ボタンをクリックして、 **[検索の開始]** ボックスに「**dcomcnfg**」と入力し、Enter キーを押して、 **[コンポーネント サービス]** を開きます。 **[検索の開始]** ボックスに「%windir%\system32\comexp.msc」と入力して **[コンポーネント サービス]** を開くこともできます。  
   
 2. [コンポーネント サービス]、[コンピューター]、[マイ コンピューター]、[分散トランザクション コーディネーター] の順に展開します。  
   
-3. **[ローカル DTC]** を右クリックし、**[プロパティ]** を選択します。  
+3. **[ローカル DTC]** を右クリックし、 **[プロパティ]** を選択します。  
   
 4. **[ローカル DTC のプロパティ]** ダイアログ ボックスの **[セキュリティ]** タブをクリックします。  
   
-5. **[XA トランザクションを有効にする]** チェック ボックスをオンにし、**[OK]** をクリックします。 これにより、MS DTC サービスが再開されます。
+5. **[XA トランザクションを有効にする]** チェック ボックスをオンにし、 **[OK]** をクリックします。 これにより、MS DTC サービスが再開されます。
   
 6. 再度 **[OK]** をクリックして **[プロパティ]** ダイアログ ボックスを閉じ、次に **[コンポーネント サービス]** を閉じます。  
   
@@ -349,6 +349,6 @@ class XidImpl implements Xid {
 
 ```
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 
 [JDBC ドライバーを使用したトランザクションの実行](../../connect/jdbc/performing-transactions-with-the-jdbc-driver.md)  

@@ -18,11 +18,11 @@ ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e2116c0a587b82f289f5dba17968f3eb42e47c05
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75228242"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339430"
 ---
 # <a name="connect-to-an-always-on-availability-group-listener"></a>Always On 可用性グループ リスナーに接続する 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ Server=tcp: AGListener,1433;Database=MyDB;Integrated Security=SSPI
  可用性グループ リスナーのサーバー名を使用する代わりに、プライマリ レプリカまたはセカンダリ レプリカの SQL Server 名のインスタンスを直接参照することもできます。ただし、その場合、新しい接続が現在のプライマリ レプリカに自動的にダイレクトされるという利点がなくなります。  また、読み取り専用ルーティングの利点もなくなります。  
   
 ##  <a name="ConnectToSecondary"></a> リスナーを使用した読み取り専用セカンダリ レプリカ (読み取り専用ルーティング) への接続  
- *読み取り専用ルーティング*は、可用性グループ リスナーへの着信接続を、読み取り専用ワークロードを許可するように構成されたセカンダリ レプリカへルーティングする、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の機能です。 次の条件が満たされる場合、可用性グループ リスナー名を参照する着信接続を、読み取り専用レプリカに自動的にルーティングできます。  
+ *読み取り専用ルーティング[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]は、可用性グループ リスナーへの着信接続を、読み取り専用ワークロードを許可するように構成されたセカンダリ レプリカへルーティングする、* の機能です。 次の条件が満たされる場合、可用性グループ リスナー名を参照する着信接続を、読み取り専用レプリカに自動的にルーティングできます。  
   
 -   少なくとも 1 つのセカンダリ レプリカが読み取り専用アクセスに設定され、各読み取り専用セカンダリ レプリカとプライマリ レプリカが読み取り専用ルーティングをサポートするように構成されている。 詳細については、このセクションの後の「 [読み取り専用ルーティングの可用性レプリカを構成するには](#ConfigureARsForROR)」を参照してください。  
 
@@ -211,13 +211,13 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2
   
 -   [Introduction to the Availability Group Listener (可用性グループ リスナーの概要)](https://blogs.msdn.microsoft.com/sqlalwayson/2012/01/16/introduction-to-the-availability-group-listener/) (SQL Server Always On チームのブログ)  
   
--   [SQL Server AlwaysOn チームのブログ: SQL Server AlwaysOn チームのオフィシャル ブログ](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [SQL Server Always On チーム ブログ:SQL Server Always On チームのオフィシャル ブログ](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 ## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [AlwaysOn クライアントの接続 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)   
  [可用性レプリカに対するクライアント接続アクセスについて &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
- [アクティブなセカンダリ: 読み取り可能なセカンダリ レプリカ &#40;AlwaysOn 可用性グループ&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
+ [アクティブなセカンダリ:読み取り可能なセカンダリ レプリカ &#40;Always On 可用性グループ&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
  [データベース ミラーリング セッションへのクライアントの接続 &#40;SQL Server&#41;](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)  
   
   

@@ -24,11 +24,11 @@ ms.assetid: d4b073c4-4238-41fc-a258-4e114216e185
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9cbb736b77cef9bcb87dfa7cac2cd5a33943ca66
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "71281972"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78339660"
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>パッケージ内の機微なデータへのアクセス制御
 
@@ -141,7 +141,7 @@ ms.locfileid: "71281972"
   
  パッケージ セキュリティの要件およびオプションを理解するため、「[セキュリティの概要 &#40;Integration Services&#41;](../../integration-services/security/security-overview-integration-services.md)」を参照しておくと役立つ場合があります。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>Options  
  **パッケージの保護レベル**  
  一覧から保護レベルを選択します。  
   
@@ -154,7 +154,7 @@ ms.locfileid: "71281972"
 ## <a name="password_dialog"></a> [パッケージ パスワード] ダイアログ ボックス
   **[パッケージ パスワード]** ダイアログ ボックスを使用すると、パスワードによって暗号化されるパッケージのパッケージ パスワードを指定できます。 パッケージで使用される保護レベルが **[機微なデータをパスワードで暗号化する]** または **[すべてのデータをパスワードで暗号化する]** の場合、パスワードを指定する必要があります。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>Options  
  **パスワード**  
  パスワードを入力します。  
   

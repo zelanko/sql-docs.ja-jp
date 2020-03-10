@@ -13,11 +13,11 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d76d91b2a083f06ea02951957bdd7e43b9092dea
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75254101"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78340520"
 ---
 # <a name="use-automatic-seeding-to-initialize-a-secondary-replica-for-an-always-on-availability-group"></a>自動シード処理を使用して、Always On 可用性グループのセカンダリ レプリカを初期化する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -103,7 +103,7 @@ WITH (
  GO
 ```
 
-`SEEDING_MODE` ステートメントの実行中にプライマリ レプリカで `CREATE AVAILABILITY GROUP` を設定しても、プライマリ レプリカには既にデータベースの主要な読み取り/書き込みコピーが含まれているため、効果はありません。 `SEEDING_MODE` が適用されるのは、別のレプリカがプライマリになっており、データベースが追加されている場合のみです。 シード処理モードは後で変更できます (「[レプリカのシード処理モードを変更する](#change-the-seeding-mode-of-a-replica)」を参照)。
+`CREATE AVAILABILITY GROUP` ステートメントの実行中にプライマリ レプリカで `SEEDING_MODE` を設定しても、プライマリ レプリカには既にデータベースの主要な読み取り/書き込みコピーが含まれているため、効果はありません。 `SEEDING_MODE` が適用されるのは、別のレプリカがプライマリになっており、データベースが追加されている場合のみです。 シード処理モードは後で変更できます (「[レプリカのシード処理モードを変更する](#change-the-seeding-mode-of-a-replica)」を参照)。
 
 セカンダリ レプリカになるインスタンスの場合、インスタンスが結合されると、SQL Server ログに次のようなメッセージが追加されます。
 
@@ -230,7 +230,7 @@ GO
 
 次の表に、自動シード処理に関連する拡張イベントを示します。
 
-|Name|[説明]|
+|名前|説明|
 |----|-----------|
 |hadr_db_manager_seeding_request_msg|シード処理要求メッセージ。|
 |hadr_physical_seeding_backup_state_change|物理シード処理のバックアップ側の状態変更。|
@@ -247,7 +247,7 @@ GO
 |hadr_automatic_seeding_failure|自動シード処理操作が失敗するときに発生します。|
 |hadr_automatic_seeding_timeout|自動シード処理操作がタイムアウトになるときに発生します。|
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [ALTER AVAILABILITY GROUP (Transact-SQL)](/sql/t-sql/statements/alter-availability-group-transact-sql)
 
