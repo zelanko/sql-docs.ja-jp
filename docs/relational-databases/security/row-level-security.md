@@ -17,12 +17,12 @@ ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 886afc267d38ec92a478fc40bcbde53e428950f0
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: f9e604ba803b1116c9867071f547a1d1958437b7
+ms.sourcegitcommit: 85b26bc1abbd8d8e2795ab96532ac7a7e01a954f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68809951"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78288977"
 ---
 # <a name="row-level-security"></a>行レベルのセキュリティ
 
@@ -63,7 +63,7 @@ RLS では、2 種類のセキュリティ述語をサポートしています�
   
  フィルター述語とブロック述語およびセキュリティ ポリシーの動作は次のとおりです。  
   
-- 別のテーブルとの結合や関数の呼び出しを実行する述語関数を定義できます。 `SCHEMABINDING = ON`でセキュリティ ポリシーが作成された場合、結合または関数にはクエリからアクセスでき、追加のアクセス許可の確認を必要とせず、期待どおりに動作します。 `SCHEMABINDING = OFF` でセキュリティ ポリシーが作成された場合、対象テーブルに対してクエリを実行するには、ユーザーに、これらの追加のテーブルと関数に対する **SELECT** 権限または **EXECUTE** 権限が必要です。
+- 別のテーブルとの結合や関数の呼び出しを実行する述語関数を定義できます。 セキュリティ ポリシーが `SCHEMABINDING = ON` (既定) を使用して作成されている場合、結合または関数にはクエリからアクセスでき、追加のアクセス許可の確認を必要とせず、期待どおりに動作します。 セキュリティ ポリシーが `SCHEMABINDING = OFF` を使用して作成されている場合、ターゲット テーブルに対してクエリを実行するには、ユーザーに、これらの追加のテーブルと関数に対する **SELECT** 権限が必要になります。 述語関数で CLR スカラー値関数を呼び出す場合は、**EXECUTE** 権限も必要になります。
   
 - セキュリティ述語は定義されているが無効になっているテーブルに対してクエリを発行できます。 フィルター処理またはブロックされている行には影響しません。  
   
@@ -121,7 +121,7 @@ RLS では、2 種類のセキュリティ述語をサポートしています�
   
 ## <a name="Best"></a> ベスト プラクティス  
   
-- RLS オブジェクト、述語関数、セキュリティ ポリシーに対して別のスキーマを作成することを強くお勧めします。  
+- RLS オブジェクト、述語関数、セキュリティ ポリシーに対して別のスキーマを作成することを強くお勧めします。 これにより、これらの特殊なオブジェクトに必要な権限をターゲット テーブルから分離できます。 マルチテナントデータベースでは、さまざまなポリシーと述語関数のさらなる分離が必要になる場合がありますが、すべてのケースで標準というわけではありません。
   
 - **ALTER ANY SECURITY POLICY** 権限は、セキュリティ ポリシー マネージャーなどの高い権限を持つユーザーを対象としています。 セキュリティ ポリシー マネージャーには、保護しているテーブルでは **SELECT** 権限は必要とされません。  
   

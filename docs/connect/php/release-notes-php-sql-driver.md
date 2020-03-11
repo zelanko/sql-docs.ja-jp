@@ -1,7 +1,7 @@
 ---
 title: Microsoft SQL Server 用 Drivers for PHP のリリース ノート | Microsoft Docs
 ms.custom: ''
-ms.date: 01/31/2020
+ms.date: 03/05/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: v-dapugl, kenvh
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 91cca3d2-ba99-4a6d-b0de-beb9699cb3f8
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 5e279ba446e790a2262e5f0effe160632065dcba
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: edc5d8122f1cb2c0fad747e480843c559f650434
+ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76941217"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866512"
 ---
 # <a name="release-notes-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft SQL Server 用 Drivers for PHP のリリース ノート
 
@@ -41,7 +41,17 @@ For any questions, ask GeneMi or CraigG.
 Thanks a lot.  2019-03-28  (DevO= 1467988)
 -->
 
-## <a name="whats-new-in-version-58"></a>バージョン 5.8 の新機能
+## <a name="58"></a>5.8
+
+![ダウンロード](../../ssms/media/download-icon.png) [Windows パッケージのダウンロード](https://go.microsoft.com/fwlink/?linkid=2120362)  
+[GitHub リリース タグ (こちらから Linux と macOS のパッケージが入手できます)](https://github.com/Microsoft/msphpsql/releases/tag/v5.8.0)
+
+### <a name="version-information"></a>バージョン情報
+
+- リリース番号:5.8.0
+- リリース日:2020 年 1 月 31 日
+
+## <a name="whats-new-in-58"></a>5\.8 の新機能
 
 | [新しい項目] | 詳細 |
 | :------- | :------ |
@@ -61,7 +71,38 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 
 <sup>1</sup> Alpine Linux サポートは、バージョン 5.8 の試験段階です。
 
-## <a name="whats-new-in-version-56"></a>バージョン 5.6 の新機能
+## <a name="previous-releases"></a>以前のリリース
+
+## <a name="561"></a>5.6.1
+
+![ダウンロード](../../ssms/media/download-icon.png) [Windows パッケージのダウンロード](https://go.microsoft.com/fwlink/?linkid=2120446)  
+[GitHub リリース タグ (こちらから Linux と macOS のパッケージが入手できます)](https://github.com/Microsoft/msphpsql/releases/tag/v5.6.1)
+
+### <a name="version-information"></a>バージョン情報
+
+- リリース番号:5.6.1
+- リリース日:2019 年 3 月 19 日
+
+## <a name="whats-new-in-561"></a>5\.6.1 の新機能
+
+| [新しい項目] | 詳細 |
+| :------- | :------ |
+| バグの修正 | フィールドまたは列のメタデータを計算するときに作成される前提条件が、アプリケーションの終了を引き起こす可能性がある問題を修正しました。 |
+| バグの修正 | sqlsrv config ファイルを変更して、pdo_sqlsrv とは別にコンパイルできるようにしました。 |
+| バグの修正 | 問題が発生した場合に false を返すように PDOStatement::getColumnMeta() を修正しました。 |
+| &nbsp; | &nbsp; |
+
+## <a name="56"></a>5.6
+
+![ダウンロード](../../ssms/media/download-icon.png) [Windows パッケージのダウンロード](https://go.microsoft.com/fwlink/?linkid=2120450)  
+[GitHub リリース タグ (こちらから Linux と macOS のパッケージが入手できます)](https://github.com/Microsoft/msphpsql/releases/tag/v5.6.0)
+
+### <a name="version-information"></a>バージョン情報
+
+- リリース番号:5.6.0
+- リリース日:2019 年 2 月 21 日
+
+## <a name="whats-new-in-56"></a>5\.6 の新機能
 
 | [新しい項目] | 詳細 |
 | :------- | :------ |
@@ -78,7 +119,17 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 | フェッチ時にメタデータをキャッシュし、Unicode 文字列の変換を高速化することで、パフォーマンスが向上しました。 | &nbsp; |
 | &nbsp; | &nbsp; |
 
-## <a name="whats-new-in-version-53"></a>バージョン 5.3 の新機能
+## <a name="53"></a>5.3
+
+![ダウンロード](../../ssms/media/download-icon.png) [Windows パッケージのダウンロード](https://go.microsoft.com/fwlink/?linkid=2120447)  
+[GitHub リリース タグ (こちらから Linux と macOS のパッケージが入手できます)](https://github.com/Microsoft/msphpsql/releases/tag/v5.3.0)
+
+### <a name="version-information"></a>バージョン情報
+
+- リリース番号:5.3.0
+- リリース日:2018 年 7 月 20 日
+
+## <a name="whats-new-in-53"></a>5\.3 の新機能
 
 - すべてのプラットフォーム上で Microsoft ODBC Driver 17.2 がサポートされます
 - macOS High Sierra のサポート (ODBC Driver 17 以降が必要になります)
@@ -86,7 +137,17 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 - Ubuntu 18.04 LTS がサポートされます (ODBC Driver 17.2 が必要になります)
 - Linux または macOS での接続の回復性もサポートされます (ODBC Driver 17.2 が必要になります)
 
-## <a name="whats-new-in-version-52"></a>バージョン 5.2 の新機能
+## <a name="52"></a>5.2
+
+![ダウンロード](../../ssms/media/download-icon.png) [Windows パッケージのダウンロード](https://go.microsoft.com/fwlink/?linkid=2120451)  
+[GitHub リリース タグ (こちらから Linux と macOS のパッケージが入手できます)](https://github.com/Microsoft/msphpsql/releases/tag/v5.2.0)
+
+### <a name="version-information"></a>バージョン情報
+
+- リリース番号:5.2.0
+- リリース日:2018 年 3 月 23 日
+
+## <a name="whats-new-in-52"></a>5\.2 の新機能
 
 - Windows 上では PHP 7.2.1 以降、他のプラットフォーム上では 7.2.0 以降がサポートされます
 - Microsoft ODBC Driver 17 のサポート
@@ -101,7 +162,17 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 - Azure SQL Data Warehouse のサポート
 - Azure SQL Managed Instance のサポート
 
-## <a name="whats-new-in-version-43"></a>バージョン 4.3 の新機能
+## <a name="43"></a>4.3
+
+![ダウンロード](../../ssms/media/download-icon.png) [Windows パッケージのダウンロード](https://go.microsoft.com/fwlink/?linkid=2120616)  
+[GitHub リリース タグ (こちらから Linux と macOS のパッケージが入手できます)](https://github.com/Microsoft/msphpsql/releases/tag/v4.3.0)
+
+### <a name="version-information"></a>バージョン情報
+
+- リリース番号:4.3.0
+- リリース日:2017 年 7 月 6 日
+
+## <a name="whats-new-in-43"></a>4\.3 の新機能
 
 - PHP 7.1 のサポート
 - macOS Sierra および macOS El Capitan のサポート
@@ -113,24 +184,53 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 - Linux と macOS 向けの接続プールのサポート。 詳細については、[接続プール](../../connect/php/connection-pooling-microsoft-drivers-for-php-for-sql-server.md)に関するページを参照してください。
 - ActiveDirectoryPassword および SqlPassword を利用した Azure Active Directory Authentication がサポートされます。 詳細については、「 [Connection Options](../../connect/php/connection-options.md)」を参照してください。
 
-## <a name="whats-new-in-version-40"></a>バージョン 4.0 の新機能
+## <a name="40"></a>4.0
+
+![ダウンロード](../../ssms/media/download-icon.png) [Windows パッケージのダウンロード](https://go.microsoft.com/fwlink/?linkid=2120448)  
+[GitHub リリース タグ (こちらから Linux と macOS のパッケージが入手できます)](https://github.com/microsoft/msphpsql/releases/tag/v4.0-RTW)
+
+### <a name="version-information"></a>バージョン情報
+
+- リリース番号:4.0
+- リリース日:2016 年 7 月 1 日
+
+## <a name="whats-new-in-40"></a>4\.0 の新機能
 
 - PHP 7.0 のサポート  
 - 完全な 64 ビットのサポート
 - Ubuntu 15.04、Ubuntu 16.04、および RedHat 7 のサポート
 
-## <a name="whats-new-in-version-32"></a>バージョン 3.2 の新機能
+## <a name="32"></a>3.2
 
-- PHP 5.6 のサポート   
-- 旧バージョンの PHP 5.5 および 5.4 最新の更新プログラムが含まれています   
+![ダウンロード](../../ssms/media/download-icon.png) [Windows パッケージのダウンロード](https://go.microsoft.com/fwlink/?linkid=2120449)  
+[GitHub リリース タグ (こちらから Linux と macOS のパッケージが入手できます)](https://github.com/microsoft/msphpsql/releases/tag/v3.2.0.0)
+
+### <a name="version-information"></a>バージョン情報
+
+- リリース番号:3.2
+- リリース日:2015 年 3 月 9 日
+
+## <a name="whats-new-in-32"></a>3\.2 の新機能
+
+- PHP 5.6 のサポート  
+- 旧バージョンの PHP 5.5 および 5.4 最新の更新プログラムが含まれています  
 - Microsoft SQL Server 用 ODBC Driver 11 が必要です  
 
-## <a name="whats-new-in-version-31"></a>バージョン 3.1 の新機能
+## <a name="31"></a>3.1
+
+[GitHub リリース タグ (こちらから Linux と macOS のパッケージが入手できます)](https://github.com/microsoft/msphpsql/releases/tag/v3.1.0.0)
+
+### <a name="version-information"></a>バージョン情報
+
+- リリース番号:3.1
+- リリース日:2014 年 12 月 12 日
+
+## <a name="whats-new-in-31"></a>3\.1 の新機能
 
 - PHP 5.5 のサポート  
 - Microsoft SQL Server 用 ODBC Driver 11 が必要です。 以前のバージョンでは、SQL Native Client が必要でした。  
 
-## <a name="whats-new-in-version-30"></a>バージョン 3.0 の新機能  
+## <a name="whats-new-in-30"></a>3\.0 の新機能  
 
 - PHP 5.4 のサポート  [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]のバージョン 3 では、PHP 5.2 はサポートされていません。  
 - AttachDBFileName 接続オプションが追加されています。 詳細については、「 [Connection Options](../../connect/php/connection-options.md)」を参照してください。  
@@ -140,7 +240,7 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 - クライアント側のカーソル (結果セットのメモリ内キャッシュ) のサポート。 詳細については、「[カーソルの種類 &#40;SQLSRV ドライバー&#41;](../../connect/php/cursor-types-sqlsrv-driver.md)」および「[カーソルの種類 &#40;PDO_SQLSRV ドライバー&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md)」を参照してください。
 - PDO::ATTR_EMULATE_PREPARES 属性が追加されました。 詳細については、「[PDO::prepare](../../connect/php/pdo-prepare.md)」をご覧ください。  
 
-## <a name="whats-new-in-version-20"></a>バージョン 2.0 の新機能
+## <a name="whats-new-in-20"></a>2\.0 の新機能
 
 バージョン 2.0 では、PDO_SQLSRV ドライバーのサポートが追加されました。 詳細については、「 [PDO_SQLSRV ドライバー リファレンス](../../connect/php/pdo-sqlsrv-driver-reference.md)」を参照してください。  
 

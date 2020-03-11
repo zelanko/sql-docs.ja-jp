@@ -3,18 +3,18 @@ title: R + T-SQL チュートリアル:データの探索
 description: チュートリアルでは、R 関数を使用して SQL Server データを探索および視覚化する方法を示しています。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/29/2018
+ms.date: 03/03/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 213db5ee9b88f7af34e3d000fc0f3b241d8e5791
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: b524f312fa1978b55e74be3dd46a24c95a3f6d29
+ms.sourcegitcommit: 85b26bc1abbd8d8e2795ab96532ac7a7e01a954f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "73725227"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78335776"
 ---
 # <a name="lesson-1-explore-and-visualize-the-data"></a>レッスン 1:データの探索および視覚化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,6 +61,11 @@ ms.locfileid: "73725227"
     |tip_class|クラス 0: tip_amount = $0<br /><br />クラス 1: tip_amount > $0 および tip_amount <= $5<br /><br />クラス 2: tip_amount > $5 および tip_amount <= $10<br /><br />クラス 3: tip_amount > $10 および tip_amount <= $20<br /><br />クラス 4: tip_amount > $20|
 
 ## <a name="create-a-stored-procedure-using-rxhistogram-to-plot-the-data"></a>rxHistogram を使用してデータをプロットするストアド プロシージャを作成する
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+> [!IMPORTANT]
+> SQL Server 2019 から、分離メカニズムが変更されています。 そのため、プロット ファイルが格納されているディレクトリに適切なアクセス許可を付与する必要があります。 これらのアクセス許可の設定方法の詳細については、[「Windows 上の SQL Server 2019:Windows 上の SQL Server 2019:Machine Learning Services」の「ファイルのアクセス許可」](../install/sql-server-machine-learning-services-2019.md#file-permissions)セクションを参照してください。
+::: moniker-end
 
 プロットを作成するには、[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) で提供されている拡張 R 関数の 1 つである [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram) を使用します。 この手順では、[!INCLUDE[tsql](../../includes/tsql-md.md)] クエリのデータに基づいてヒストグラムをプロットします。 この関数は、ストアド プロシージャでラップすることができます。これには、**PlotRxHistogram** を使用します。
 

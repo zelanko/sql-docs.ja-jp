@@ -13,12 +13,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: df31dd31192d3aa877301c63ac425af6477dedd3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: cdcfe6cd4f0c48a6774b8e2518968b8c3d1997f2
+ms.sourcegitcommit: e914effe771a1ee323bb3653626cd4ba83d77308
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75255531"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78280927"
 ---
 # <a name="check-constraint-dialog-box-visual-database-tools"></a>[制約のチェック] ダイアログ ボックス (Visual Database Tools)
 
@@ -29,7 +29,7 @@ ms.locfileid: "75255531"
 > [!NOTE]  
 > テーブルをレプリケーションのためにパブリッシュする場合は、Transact-SQL ステートメントの [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) または SQL Server 管理オブジェクト (SMO) を使用してスキーマを変更する必要があります。 テーブル デザイナーまたはデータベース ダイアグラム デザイナーを使用してスキーマを変更するとき、テーブルはいったん削除されてから再作成されます。 パブリッシュされたオブジェクトは削除できないので、スキーマの変更は失敗します。  
   
-## <a name="options"></a>オプション
+## <a name="options"></a>Options
 
 **[選択された制約のチェック]**  
 使用できる CHECK 制約を一覧表示します。 制約のプロパティを表示するには、一覧の中から選択します。  
@@ -44,12 +44,12 @@ ms.locfileid: "75255531"
 展開して **[式]** のプロパティ フィールドを表示します。  
   
 **[式]**  
-選択した CHECK 制約の式を表示します。 新しい制約の場合は、このボックスを終了する前に式を入力する必要があります。 既存の CHECK 制約を編集することもできます。 詳細については、制約の使用に関するページ (https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e) を参照してください。  
+選択した CHECK 制約の式を表示します。 新しい制約の場合は、このボックスを終了する前に式を入力する必要があります。 既存の CHECK 制約を編集することもできます。 詳細については、[制約の使用](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)に関するページを参照してください。  
   
 **[IDENTITY] カテゴリ**  
 展開して **[名前]** と **[説明]** のプロパティを表示します。  
   
-**Name**  
+**名前**  
 選択した CHECK 制約の名前を表示します。 この制約の名前を変更するには、プロパティ フィールドに直接テキストを入力します。  
   
 **説明**  

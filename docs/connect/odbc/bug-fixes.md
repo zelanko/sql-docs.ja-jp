@@ -13,16 +13,20 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: v-chojas
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: a3143595a5e76331dfc61a8edca7b4f068cdc57c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: e1be25052ed75370eead58832119d543717b8e16
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76911256"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896773"
 ---
 # <a name="list-of-bugs-fixed"></a>修正されたバグの一覧
 
 このページには [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以降の各リリースで修正されたバグの一覧が記載されています。
+
+### <a name="bug-fixes-in-the-msconame-odbc-driver-1752-for-ssnoversion"></a>[!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.5.2 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバグ修正
+
+- Alpine Linux パッケージに msodbcsql.h を追加しました
 
 ### <a name="bug-fixes-in-the-msconame-odbc-driver-175-for-ssnoversion"></a>[!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.5 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバグ修正
 

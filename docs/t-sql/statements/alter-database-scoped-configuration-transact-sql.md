@@ -24,12 +24,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 ||=azure-sqldw-latest|| = sqlallproducts-allversions
-ms.openlocfilehash: 1637b46d896e0114d5b66004bc1c160e23521e30
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.openlocfilehash: 99c252c81b081a7d4e0583e6722c5c853904cc27
+ms.sourcegitcommit: 85b26bc1abbd8d8e2795ab96532ac7a7e01a954f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78180077"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78288966"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -121,7 +121,7 @@ ALTER DATABASE SCOPED CONFIGURATION
 
 < set_options > ::=
 {
-    DW_COMPATIBILITY_LEVEL = { AUTO | 10 | 20 }
+    DW_COMPATIBILITY_LEVEL = { AUTO | 10 | 20 } -- Preview 
 }
 ```
 
@@ -397,7 +397,7 @@ ISOLATE_SECURITY_POLICY_CARDINALITY **=** { ON | **OFF**}
 
 [行レベル セキュリティ](../../relational-databases/security/row-level-security.md) (RLS) 述語がユーザー クエリ全体の実行プランのカーディナリティに影響するかどうかを制御できます。 ISOLATE_SECURITY_POLICY_CARDINALITY が ON の場合、RLS 述語は、実行プランのカーディナリティに影響しません。 たとえば、100 万行を含むテーブルがあり、RLS 述語で、クエリを発行する特定のユーザーに対して結果を 10 行に制限する場合について考えてみましょう。 このデータベース スコープ構成が OFF に設定されている場合、この述語の推定カーディナリティは 10 になります。 このデータベース スコープ構成が ON の場合、クエリ最適化により 100 万行と推定されます。 ほとんどのワークロードでは、既定値を使用することをお勧めします。
 
-DW_COMPATIBILITY_LEVEL **=** {**AUTO** | 10 | 20 }
+DW_COMPATIBILITY_LEVEL (Preview) **=** {**AUTO** | 10 | 20 }
 
 **適用対象**:Azure Synapse Analytics (旧称 SQL DW) のみ
 

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b2394fc73483b78e5e90a4ccffa9ce45205dc237
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 562fda7c79681fa70e36bf19221ceb44b2dc87ec
+ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74542314"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866380"
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>SQL Server データベース エンジンへの接続のトラブルシューティング
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -160,12 +160,12 @@ TCP/IP を使用して SQL Server に接続するには、Windows が接続を�
     - IPv4: `ping 192.168.1.101`
     - IPv6: `ping fe80::d51d:5ab5:6f09:8f48%11`
 
-1. ネットワークが正しく構成されている場合、`ping` により `Reply from <IP address>` とそれに続くいくつかの追加情報が返されます。 `ping` で `Destination host unreachable` または `Request timed out` が返される場合、TCP/IP は正しく構成されていません。 この段階でのエラーは、クライアント コンピューター、サーバー コンピューター、ネットワーク (ルーターなど) に関する問題を示唆します。 ネットワークの問題のトラブルシューティングについては、「TCP/IP の問題に関する高度なトラブルシューティング」 (/windows/client-management/troubleshoot-tcpip) を参照してください。
+1. ネットワークが正しく構成されている場合、`ping` により `Reply from <IP address>` とそれに続くいくつかの追加情報が返されます。 `ping` で `Destination host unreachable` または `Request timed out` が返される場合、TCP/IP は正しく構成されていません。 この段階でのエラーは、クライアント コンピューター、サーバー コンピューター、ネットワーク (ルーターなど) に関する問題を示唆します。 ネットワークの問題を解決するには、「[Advanced troubleshooting for TCP/IP issues](/windows/client-management/troubleshoot-tcpip)」 (TCP/IP 問題の高度なトラブルシューティング) を参照してください。
 1. 次に、IP アドレスによる ping テストに成功した場合、コンピューター名を TCP/IP アドレスに解決できることをテストします。 クライアント コンピューターのコマンド プロンプト ウィンドウで、「 `ping` 」と入力し、SQL Server を実行しているコンピューターのコンピューター名を入力します。 たとえば、`ping newofficepc` のように指定します。 
 1. IP アドレスへの `ping` が成功したが、コンピューターへの `ping` で `Destination host unreachable` または `Request timed out` が返された場合、クライアント コンピューターにキャッシュされている名前解決情報が古くなっている可能性があります。 「 `ipconfig /flushdns` 」と入力し、DNS (動的な名前解決) キャッシュを消去します。 次に、もう一度、名前でコンピューターに ping を実行します。 DNS キャッシュが空の場合、クライアント コンピューターはサーバー コンピューターの IP アドレスに関する最新情報がないか確認します。 
 1. ネットワークが正しく構成されている場合、`ping` により `Reply from <IP address>` とそれに続くいくつかの追加情報が返されます。 IP アドレスによるサーバー コンピューターへの ping に成功するが、コンピューター名で ping したとき、`Destination host unreachable.` や `Request timed out.` のようなエラーが発生した場合、名前解決が正しく構成されていません。 (詳細については、前述の 2006 年の記事、「[How to Troubleshoot Basic TCP/IP Problems](https://support.microsoft.com/kb/169790)」 (基本的 TCP/IP 問題のトラブルシューティング方法) を参照してください。)名前解決が成功しなくても、SQL Server に接続できますが、コンピューター名を IP アドレスに解決できない場合、IP アドレスを指定して接続を行う必要があります。 名前解決は後で修正できます。
 
-## <a name = "openport"></a>ファイアウォールでポートを開く
+## <a name="open-a-port-in-the-firewall"></a>ファイアウォールでポートを開く
 
 既定では、Windows ファイアウォールが有効になっており、別のコンピューターからの接続がブロックされます。 別のコンピューターから TCP/IP で接続するには、SQL Server コンピューターで、データベース エンジンで使用される TCP ポートへの接続を許可するようにファイアウォールを構成する必要があります。 既定のインスタンスは、既定で TCP ポート 1433 で待ち受けます。 名前付きインスタンスを使用している場合、または既定のインスタンス ポートを変更した場合は、[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] の TCP ポートが別のポートでリッスンしている可能性があります。 「[SQL Server インスタンス TCP ポートを取得する](#getTCP)」を参照してください。
 

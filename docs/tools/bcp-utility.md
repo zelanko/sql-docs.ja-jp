@@ -28,12 +28,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/23/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 22a1a64e11d7cae779531c46ee6b39d26ae403f4
-ms.sourcegitcommit: 1035d11c9fb7905a012429ee80dd5b9d00d9b03c
+ms.openlocfilehash: 4aad2c9bfbd79079e96339e40d5e36a9146f3ae0
+ms.sourcegitcommit: e914effe771a1ee323bb3653626cd4ba83d77308
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77634851"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78280901"
 ---
 # <a name="bcp-utility"></a>bcp ユーティリティ
 
@@ -121,18 +121,18 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  _**database\_name**_ <a name="db_name"></a>  
  指定したテーブルまたはビューを含むデータベースの名前を指定します。 指定しない場合は、ユーザーの既定データベースになります。  
 
- **d-** で明示的にデータベース名を指定することもできます。  
+ **-d**で明示的にデータベース名を指定することもできます。  
 
  **in** *data_file* | **out** *data_file* | **queryout** *data_file* | **format nul**  
  次に示すように、一括コピーの方向を指定します。  
   
 -   **in**<a name="in"></a> はファイルからデータベース テーブルまたはビューへのコピーを行います。  
   
--   **out**<a name="out"></a> はデータベース テーブルまたはビューからファイルへのコピーを行います。 既存のファイルを指定すると、ファイルは上書きされます。 **bcp** ユーティリティは、データを抽出するときに、空文字列を NULL 文字列で、NULL 文字列を空文字列で表すことに注意してください。  
+-   **out**<a name="out"></a> はデータベース テーブルまたはビューからファイルへのコピーを行います。 既存のファイルを指定すると、ファイルは上書きされます。 **bcp** ユーティリティは、データを抽出するときに、空文字列を NULL 文字列で、NULL 文字列を空文字列で表します。  
   
 -   **queryout**<a name="qry_out"></a> はクエリからのコピーを行います。データをクエリから一括コピーする場合にのみ指定する必要があります。  
   
--   **format**<a name="format"></a> は、指定されたオプション ( **-n**、 **-c**、 **-w**、 **-N**) と、テーブルやビューの区切り記号に基づいてフォーマット ファイルを作成します。 データを一括コピーするとき、 **bcp** コマンドはフォーマット ファイルを参照することができるため、フォーマット情報を対話的に再入力する必要がなくなります。 **format** オプションには **-f** オプションが必要です。XML フォーマット ファイルを作成する場合には、 **-x** オプションも必要です。 詳細については、「[フォーマット ファイルの作成 &#40;SQL Server&#41;](../relational-databases/import-export/create-a-format-file-sql-server.md)」をご覧ください。 値として **nul** を指定する必要があります (**format nul**)。  
+-   **format**<a name="format"></a> は、指定されたオプション ( **-n**、 **-c**、 **-w**、 **-N**) と、テーブルやビューの区切り記号に基づいてフォーマット ファイルを作成します。 データを一括コピーするとき、**bcp** コマンドはフォーマット ファイルを参照することができるため、フォーマット情報を対話的に再入力する必要がなくなります。 **format** オプションには **-f** オプションが必要です。XML フォーマット ファイルを作成する場合には、 **-x** オプションも必要です。 詳細については、「[フォーマット ファイルの作成 &#40;SQL Server&#41;](../relational-databases/import-export/create-a-format-file-sql-server.md)」をご覧ください。 値として **nul** を指定する必要があります (**format nul**)。  
   
  _**owner**_ <a name="schema"></a>  
  テーブルまたはビューの所有者の名前を指定します。 操作を実行するユーザーが指定のテーブルまたはビューを所有している場合、*owner* は省略可能です。 *owner* が指定されず、操作を実行するユーザーが指定のテーブルまたはビューを所有していない場合は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] からエラー メッセージが返され、操作は取り消されます。  
@@ -187,10 +187,11 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
  *err_file* がハイフン (-) またはスラッシュ (/) で始まる場合は、 **-e** と *err_file* 値の間に空白を入れないでください。  
   
- **-E**<a name="E"></a>   
- インポートしたデータ ファイルの ID 値 (複数可) を ID 列に使用することを指定します。 **-E** を指定しない場合、インポートされるデータ ファイルのこの列の ID 値は無視され、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] はテーブルの作成時に指定されたシードと増分の値に基づいて一意の値を自動的に割り当てます。  
+**-E**<a name="E"></a>
+
+インポートしたデータ ファイルの ID 値 (複数可) を ID 列に使用することを指定します。 **-E** を指定しない場合、インポートされるデータ ファイルのこの列の ID 値は無視され、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] はテーブルの作成時に指定されたシードと増分の値に基づいて一意の値を自動的に割り当てます。  詳細については、「[DBCC CHECKIDENT](../t-sql/database-console-commands/dbcc-checkident-transact-sql.md)」を参照してください。
   
- データ ファイルにテーブルまたはビュー内の ID 列の値が含まれない場合は、フォーマット ファイルを使用して、データのインポート時にテーブルまたはビュー内の ID 列を無視するように指定します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、一意な値が自動的にこの列に割り当てられます。 詳細については、「[DBCC CHECKIDENT &#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-checkident-transact-sql.md)」をご覧ください。  
+ データ ファイルにテーブルまたはビュー内の ID 列の値が含まれない場合は、フォーマット ファイルを使用して、データのインポート時にテーブルまたはビュー内の ID 列を無視するように指定します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、一意な値が自動的にこの列に割り当てられます。
   
  **-E** オプションには、特別な権限が必要です。 詳細については、後の「[解説](#remarks)」を参照してください。  
    
@@ -228,13 +229,13 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
     次の例では、ユーザーとパスワードが AAD 資格情報である Azure AD のユーザー名とパスワードを使用してデータをエクスポートします。 この例では、Azure server `bcptest` からデータベース `testdb` のテーブル `aadserver.database.windows.net` をエクスポートし、データをファイル `c:\last\data1.dat` に格納します。
 
-    ```console
+    ```cmd
     bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
     ```
 
     次の例では、ユーザーとパスワードが AAD 資格情報である Azure AD のユーザー名とパスワードを使用してデータをインポートします。 この例では、Azure AD のユーザーとパスワードを使用して、Azure サーバー `aadserver.database.windows.net` 上のデータベース `testdb` のテーブル `bcptest` にファイル `c:\last\data1.dat` のデータをインポートします。
 
-    ```console
+    ```cmd
     bcp bcptest in "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
     ```
 
@@ -244,13 +245,13 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
     次の例では、Azure AD 統合アカウントを使用してデータをエクスポートします。 この例では、Azure サーバー `aadserver.database.windows.net` から Azure AD 統合を使用してデータベース `testdb` からテーブル `bcptest` をエクスポートし、そのデータをファイル `c:\last\data2.dat` に格納します。
 
-    ```console
+    ```cmd
     bcp bcptest out "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
     ```
 
     次の例では、Azure AD 統合認証を使用してデータをインポートします。この例では、Azure AD 統合認証を使用して、Azure サーバー `aadserver.database.windows.net` 上のデータベース `testdb` のテーブル `bcptest` にファイル `c:\last\data2.txt` のデータをインポートします。
 
-    ```console
+    ```cmd
     bcp bcptest in "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
     ```
 
@@ -266,13 +267,13 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
    対話モードでは、パスワードを手動で入力する必要があります。また、多要素認証が有効なアカウントの場合は、構成された MFA 認証方法を完了します。
 
-   ```console
+   ```cmd
    bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com
    ```
 
    Azure AD ユーザーが Windows アカウントを使用するドメイン フェデレーション ユーザーの場合、コマンド ラインで必要なユーザー名にはそのドメイン アカウントが含まれます (たとえば、以下のように joe@contoso.com)。
 
-   ```console
+   ```cmd
    bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U joe@contoso.com
    ```
 
@@ -448,7 +449,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
     
     すべてのバージョンの bcp ユーティリティがインストールされている場所を確認するには、コマンド プロンプトに次のように入力します。
     
-    ```console
+    ```cmd
     where bcp.exe
     ```
 
@@ -604,7 +605,7 @@ END
 
 コマンド プロンプトで、次のコマンドを入力します。
 
-```console
+```cmd
 bcp -v
 ```
   
@@ -616,7 +617,7 @@ bcp -v
 
   コマンド プロンプトで、次のコマンドを入力します。
 
-  ```console
+  ```cmd
   bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransactions_character.bcp -c -T
   ```
 
@@ -638,7 +639,7 @@ bcp -v
 
 コマンド プロンプトで、次のコマンドを入力します。\(システムによってパスワードの入力が求められます。\)
 
-```console
+```cmd
 bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTransactions_character.bcp -c -U<login_id> -S<server_name\instance_name>
 ```
 
@@ -650,7 +651,7 @@ bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTrans
 
   コマンド プロンプトで、次のコマンドを入力します。
 
-  ```console
+  ```cmd
   bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTransactions_character.bcp -c -T
   ```
 
@@ -658,7 +659,7 @@ bcp WideWorldImporters.Warehouse.StockItemTransactions out D:\BCP\StockItemTrans
   
 コマンド プロンプトで、次のコマンドを入力します。
 
-```console
+```cmd
 bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTransactions_native.bcp -b 5000 -h "TABLOCK" -m 1 -n -e D:\BCP\Error_in.log -o D:\BCP\Output_in.log -S -T
 ```
 
@@ -670,7 +671,7 @@ bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp IN D:\BCP\StockItemTr
   
 コマンド プロンプトで、次のコマンドを入力します。
 
-```console
+```cmd
 bcp "SELECT StockItemTransactionID FROM WideWorldImporters.Warehouse.StockItemTransactions WITH (NOLOCK)" queryout D:\BCP\StockItemTransactionID_c.bcp -c -T
 ```
 
@@ -680,7 +681,7 @@ bcp "SELECT StockItemTransactionID FROM WideWorldImporters.Warehouse.StockItemTr
   
 コマンド プロンプトで、次のコマンドを入力します。
 
-```console
+```cmd
 bcp "SELECT * from Application.People WHERE FullName = 'Amy Trefl'" queryout D:\BCP\Amy_Trefl_c.bcp -d WideWorldImporters -c -T
 ```
 
@@ -690,7 +691,7 @@ Transact-SQL ステートメントからデータ ファイルに結果セット
 
 コマンド プロンプトで、次のコマンドを入力します。
 
-```console
+```cmd
 bcp "SELECT FullName, PreferredName FROM WideWorldImporters.Application.People ORDER BY FullName" queryout D:\BCP\People.txt -t, -c -T
 ```
 
@@ -700,7 +701,7 @@ bcp "SELECT FullName, PreferredName FROM WideWorldImporters.Application.People O
 
 コマンド プロンプトで、次のコマンドを入力します。
 
-```console
+```cmd
 REM non-XML character format
 bcp WideWorldImporters.Warehouse.StockItemTransactions format nul -f D:\BCP\StockItemTransactions_c.fmt -c -T 
 
@@ -722,7 +723,7 @@ bcp WideWorldImporters.Warehouse.StockItemTransactions format nul -f D:\BCP\Stoc
 
 コマンド プロンプトで、次のコマンドを入力します。
 
-```console
+```cmd
 bcp WideWorldImporters.Warehouse.StockItemTransactions_bcp in D:\BCP\StockItemTransactions_character.bcp -L 100 -f D:\BCP\StockItemTransactions_c.xml -T
 ```
 

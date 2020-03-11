@@ -3,18 +3,18 @@ title: 拡張イベントを使用したスクリプトの監視
 description: 拡張イベントを使用して、SQL Server Machine Learning Services、SQL Server Launchpad、Python または R のジョブの外部スクリプトに関連する操作を監視およびトラブルシューティングする方法について説明します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 02/28/2020
+ms.date: 03/04/2020
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: fe8601801a92b28022a83b54ea06ec5836c6c013
-ms.sourcegitcommit: 7e544aa10f66bb1379bb5675fc063b2097631823
+ms.openlocfilehash: cf0253788e19061fe54b8e2b0b8dfd3142856472
+ms.sourcegitcommit: 85b26bc1abbd8d8e2795ab96532ac7a7e01a954f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/29/2020
-ms.locfileid: "78200983"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78335742"
 ---
 # <a name="monitor-python-and-r-scripts-with-extended-events-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services の拡張イベントで Python および R のスクリプトを監視する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +84,12 @@ AND p.name = 'SQLSatellite';
 ### <a name="collecting-events-from-external-processes"></a>外部プロセスからのイベントの収集
 
 SQL Server Machine Learning Services は、SQL Server プロセスの外部で実行するいくつかのサービスを開始します。 これらの外部プロセスに関連するイベントをキャプチャするには、イベント トレース構成ファイルを作成し、プロセスの実行可能ファイルと同じディレクトリにこのファイルを配置する必要があります。  
-  
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+> [!IMPORTANT]
+> SQL Server 2019 から、分離メカニズムが変更されています。 そのため、イベント トレース構成ファイルが格納されているディレクトリに適切なアクセス許可を付与する必要があります。 これらのアクセス許可の設定方法の詳細については、[「Windows 上の SQL Server 2019:Windows 上の SQL Server 2019:Machine Learning Services」の「ファイルのアクセス許可」](../install/sql-server-machine-learning-services-2019.md#file-permissions)セクションを参照してください。
+::: moniker-end
+
 + **[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]**   
   
     スタートパッドに関連するイベントをキャプチャするには、 *.xml* ファイルを SQL Server インスタンスの Binn ディレクトリに配置します。 既定のインストールでは、これは以下の場所です。

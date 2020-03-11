@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: c4cdbfa6-9b73-4b72-a1a6-e1b45d8a773d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6fa534b756084f74606e9d40a8c1c69934b240d1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 66e45137b75eaa22e4945113101d0cc0d91901cd
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "67916052"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78896784"
 ---
 # <a name="nodejs-driver-for-sql-server"></a>Node.js Driver for SQL Server
 
-![ダウンロード-ダウン矢印-](../../ssdt/media/download.png)[NODE.JS SQL ドライバーをダウンロードする](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![ダウンロード-ダウン矢印-](../../ssms/media/download-icon.png)[NODE.JS SQL ドライバーをダウンロードする](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-面倒なモジュールは、JavaScript で実装された TDS プロトコルであり、すべての最新バージョンの SQL Server でサポートされています。 このドライバーは、Github で入手できるオープンソース プロジェクトです。  
+Tedious モジュールは、JavaScript で実装された TDS プロトコルであり、すべての最新バージョンの SQL Server でサポートされています。 このドライバーは、Github で入手できるオープンソース プロジェクトです。  
   
 Windows、Linux、または Mac では、Node.js を使用して SQL Database に接続できます。  
   
@@ -32,7 +32,7 @@ Windows、Linux、または Mac では、Node.js を使用して SQL Database �
   
 ## <a name="documentation"></a>ドキュメント  
   
-[Github 上の Tedious モジュールに関するドキュメント](https://tediousjs.github.io/tedious/)  
+[GitHub 上の Tedious モジュールに関するドキュメント](https://tediousjs.github.io/tedious/)  
   
 ## <a name="community"></a>コミュニティ  
 * [Azure Node.js デベロッパー センター](https://azure.microsoft.com/develop/nodejs/)  

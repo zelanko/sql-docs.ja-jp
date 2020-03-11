@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: 5d5b41b6-129a-40b1-af8b-7e8fbd4a84bb
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7dc49b466885e63ad9bd380a53a432a936310e18
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 7925b376fa7ec751faf0b109b6598ab86a348b3f
+ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "68419258"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78897155"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-nodejs"></a>手順 3:Node.js を使用した SQL への接続を概念実証する
 
-![ダウンロード-ダウン矢印-](../../ssdt/media/download.png)[NODE.JS SQL ドライバーをダウンロードする](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![ダウンロード-ダウン矢印-](../../ssms/media/download-icon.png)[NODE.JS SQL ドライバーをダウンロードする](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-この例は概念実証としてのみ検討してください。  わかりやすさのためにサンプル コードは簡略化されており、Microsoft が推奨するベスト プラクティスを表しているとは限りません。 Github には、同じ重要な機能を使用する他の例があります。
+この例は概念実証としてのみ検討してください。  わかりやすさのためにサンプル コードは簡略化されており、Microsoft が推奨するベスト プラクティスを表しているとは限りません。 GitHub には、同じ重要な機能を使用する他の例があります。
 
 - [https://github.com/tediousjs/tedious/blob/master/examples/](https://github.com/tediousjs/tedious/blob/master/examples/)
   
@@ -113,7 +113,7 @@ ms.locfileid: "68419258"
   
 ## <a name="step-3-insert-a-row"></a>手順 3:行を挿入する  
   
-この例では、[INSERT](../../t-sql/statements/insert-transact-sql.md) ステートメントを安全に実行し、[SQL インジェクション](../../relational-databases/tables/primary-and-foreign-key-constraints.md)の値からアプリケーションを保護するパラメーターを渡す方法を確認します。    
+この例では、[SQL インジェクション](../../relational-databases/security/sql-injection.md)の値からアプリケーションを保護するパラメーターを渡して、[INSERT](../../t-sql/statements/insert-transact-sql.md) ステートメントを安全に実行する方法を示します。    
   
   
 ```javascript  

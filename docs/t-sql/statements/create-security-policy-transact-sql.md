@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: d6ab70ee-0fa2-469c-96f6-a3c16d673bc8
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8cf0332d2a82113145e549d9419b855a222f7441
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 45a1b461c5a56bfd894122eeb67e69672c36d093
+ms.sourcegitcommit: 85b26bc1abbd8d8e2795ab96532ac7a7e01a954f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68117294"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78288956"
 ---
 # <a name="create-security-policy-transact-sql"></a>CREATE SECURITY POLICY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -76,11 +76,11 @@ CREATE SECURITY POLICY [schema_name. ] security_policy_name
   
  *\<block_dml_operation>* ブロック述語が適用される特定の DML 操作。 AFTER は、DML 操作 (INSERT または UPDATE) が実行された後に、行の値に対して述語が評価されることを指定します。 BEFORE は、DML 操作 (UPDATE または DELETE) が実行される前に、行の値に対して述語が評価されることを指定します。 操作が指定されていない場合、述語は、すべての操作に適用されます。  
   
- [ STATE = { ON | **OFF** } ]  
+ [ STATE = { **ON** | OFF } ]  
  セキュリティ ポリシーによるターゲット テーブルに対するセキュリティ述語の実施を有効または無効にします。 指定しないと、作成されているセキュリティ ポリシーは有効になります。  
   
- [SCHEMABINDING = {ON |OFF}]  
- SCHEMABINDING オプションを使用して、ポリシー内のすべての述語関数を作成する必要があるかどうかを示します。 既定では、SCHEMABINDING を指定してすべての関数を作成する必要があります。  
+ [ SCHEMABINDING = { **ON** | OFF } ]  
+ SCHEMABINDING オプションを使用して、ポリシー内のすべての述語関数を作成する必要があるかどうかを示します。 既定では、この設定は **ON** で、SCHEMABINDING を指定してすべての関数を作成する必要があります。  
   
  NOT FOR REPLICATION  
  レプリケーション エージェントがターゲット オブジェクトを変更するときにセキュリティ ポリシーを実行すべきではないことを示します。 詳細については、「[同期中にトリガと制約の動作を制御する方法 &#40;レプリケーション Transact-SQL プログラミング&#41;](../../relational-databases/replication/control-behavior-of-triggers-and-constraints-in-synchronization.md)」を参照してください。  

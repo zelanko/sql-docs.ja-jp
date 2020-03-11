@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 88b8e54867aba5439af9ed87e4a42b2083a479b3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 6a1f903d0be82d6f5057af68dce80bda1e48238a
+ms.sourcegitcommit: 951740963d5fe9cea7f2bfe053c45ad5d846df04
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76281870"
+ms.lasthandoff: 03/02/2020
+ms.locfileid: "78225926"
 ---
 # <a name="sql-server-integration-services-ssis-devops-tools-preview"></a>SQL Server Integration Services (SSIS) DevOps ツール (プレビュー)
 
@@ -38,6 +38,8 @@ ms.locfileid: "76281870"
 
 ビルドするプロジェクト フォルダーまたはファイルのパス。 フォルダー パスが指定されている場合、SSIS Build タスクでは、このフォルダーの下にあるすべての dtproj ファイルが繰り返し検索され、すべてビルドされます。
 
+プロジェクト パスを "*空*" にすることはできません。 **.** として設定して、 リポジトリのルート フォルダーからビルドします。
+
 #### <a name="project-configuration"></a>プロジェクトの構成
 
 ビルドに使用されるプロジェクト構成の名前。 指定されていない場合、各 dtproj ファイルに最初に定義されているプロジェクト構成が選択されます。
@@ -50,9 +52,19 @@ ms.locfileid: "76281870"
 
 - SSIS Build タスクは Visual Studio と、ビルド エージェントで必須となる SSIS デザイナーに依存します。 そのため、パイプラインで SSIS Build タスクを実行するには、Microsoft によってホストされるエージェントに **vs2017-win2016** を選択するか、自己ホスト エージェントに Visual Studio と SSIS デザイナー (VS2017 + SSDT2017 または VS2019 + SSIS Projects 拡張機能) をインストールする必要があります。
 
-- 面倒な設定の要らないコンポーネント (SSIS Azure Feature Pack やその他のサードパーティ コンポーネント) を利用して SSIS プロジェクトをビルドするには、パイプライン エージェントが実行されているコンピューターにそのようなコンポーネントをインストールする必要があります。  Microsoft によってホストされるエージェントの場合、[PowerShell Script タスク](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/powershell?view=azure-devops)または [Command Line Script タスク](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/command-line?view=azure-devops)を追加してコンポーネントをダウンロードし、インストールしてから SSIS Build タスクを実行できます。
+- 面倒な設定の要らないコンポーネント (SSIS Azure Feature Pack やその他のサードパーティ コンポーネント) を利用して SSIS プロジェクトをビルドするには、パイプライン エージェントが実行されているコンピューターにそのようなコンポーネントをインストールする必要があります。  Microsoft によってホストされるエージェントの場合、[PowerShell Script タスク](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/powershell?view=azure-devops)または [Command Line Script タスク](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/command-line?view=azure-devops)を追加してコンポーネントをダウンロードし、インストールしてから SSIS Build タスクを実行できます。 次に示すのは、Azure Feature Pack をインストールするための PowerShell のサンプル スクリプトです。 
+
+```powershell
+wget -Uri https://download.microsoft.com/download/E/E/0/EE0CB6A0-4105-466D-A7CA-5E39FA9AB128/SsisAzureFeaturePack_2017_x86.msi -OutFile AFP.msi
+
+start -Wait -FilePath msiexec -Args "/i AFP.msi /quiet /l* log.txt"
+
+cat log.txt
+```
 
 - 保護レベルの **EncryptSensitiveWithPassword** と **EncryptAllWithPassword** は SSIS Build タスクではサポートされていません。 コードベースのいずれの SSIS プロジェクトでもこの 2 つの保護レベルが使用されていないことを確認してください。使用されている場合、SSIS Build タスクの実行中、応答が停止し、タイムアウトになります。
+
+- **ConnectByProxy** は、最近 SSDT に追加された新しいプロパティです。 Microsoft によってホストされているエージェントにインストールされた SSDT は更新されないため、回避策としてセルフホステッド エージェントを使用してください。
 
 ## <a name="ssis-deploy-task"></a>SSIS Deploy タスク
 
@@ -88,7 +100,7 @@ ms.locfileid: "76281870"
 
 指定の宛先サーバーにアクセスするための認証の種類。 このプロパティは、宛先の種類が SSISDB の場合にのみ表示されます。 一般的に、SSIS Deploy タスクでは次の 4 つの種類がサポートされます。
 
-- [Windows 認証]
+- Windows 認証
 - SQL Server 認証
 - Active Directory - パスワード
 - Active Directory - 統合
@@ -97,7 +109,7 @@ ms.locfileid: "76281870"
 
 | |Microsoft によってホストされるエージェント|自己ホスト エージェント|
 |---------|---------|---------|
-|オンプレミスの SQL サーバーまたは VM |該当なし|[Windows 認証]|
+|オンプレミスの SQL サーバーまたは VM |該当なし|Windows 認証|
 |Azure SQL|SQL Server 認証 <br> Active Directory - パスワード|SQL Server 認証 <br> Active Directory - パスワード <br> Active Directory - 統合|
 
 #### <a name="domain-name"></a>ドメイン名

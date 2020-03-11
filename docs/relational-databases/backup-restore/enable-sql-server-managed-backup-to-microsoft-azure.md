@@ -1,5 +1,5 @@
 ---
-title: Azure へのマネージド バックアップを使用する "
+title: Azure へのマネージド バックアップを使用する
 ms.custom: seo-lt-2019
 ms.date: 12/17/2019
 ms.description: Enable SQL Server managed backup to Azure
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 07bb9cf8f0fc697e1d31a80e22a72cd5a0ea484a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: e59dfd9c79090bc20a517367e0145303822d8079
+ms.sourcegitcommit: e914effe771a1ee323bb3653626cd4ba83d77308
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75257951"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78280889"
 ---
 # <a name="enable-sql-server-managed-backup-to-azure"></a>Azure への SQL Server マネージド バックアップを有効にする
 
@@ -34,7 +34,7 @@ ms.locfileid: "75257951"
 
 ストレージ アカウントの詳細については、「 [Azure ストレージ アカウントについて](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/)」を参照してください。 
 
-#### <a name="azure-clitabazure-cli"></a>[Azure CLI](#tab/azure-cli)
+#### <a name="azure-cli"></a>[Azure CLI](#tab/azure-cli)
 
 1. Azure アカウントにサインインします。
 
@@ -61,7 +61,7 @@ ms.locfileid: "75257951"
     az storage container generate-sas --name <backupContainer> --account-name <backupStorage> --account-key $keys[0].value
     ```
 
-#### <a name="powershelltabazure-powershell"></a>[PowerShell](#tab/azure-powershell)
+#### <a name="powershell"></a>[PowerShell](#tab/azure-powershell)
 
 1. 次のコマンドで Azure アカウントにログ インします。
 
@@ -210,5 +210,5 @@ SQL 資格情報の作成に使用するコンテナーの URL と SAS を記録
   
 このセクションで説明した手順は、データベースで初めて [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] を構成するための特別な手順です。 同じシステム ストアド プロシージャを使用して既存の構成を変更し、新しい値を指定することができます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Azure への SQL Server マネージド バックアップ](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
