@@ -20,12 +20,12 @@ ms.assetid: 1ca58814-1caa-44c1-b307-ff0bdcbbef62
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4ca8b0f6e700e97c5cbc33964cc450ad54ea1a7e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 891ae8c4f21d0a38302a7213aab22b8a70e855ba
+ms.sourcegitcommit: 7008c7fe451a20d6610e40bb8f61dece86c0f17e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67899711"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79027947"
 ---
 # <a name="sysdm_os_sys_memory-transact-sql"></a>dm_os_sys_memory (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "67899711"
 |**total_physical_memory_kb**|**bigint**|オペレーティングシステムで使用できる物理メモリの合計サイズ (KB 単位)。|  
 |**available_physical_memory_kb**|**bigint**|使用可能な物理メモリのサイズ (KB 単位)。|  
 |**total_page_file_kb**|**bigint**|オペレーティング システムによって報告されたコミット制限のサイズ (KB 単位)。|  
-|**available_page_file_kb**|**bigint**|ページファイルからが使用されていない合計サイズ (KB 単位)。|  
+|**available_page_file_kb**|**bigint**|使用されていないページファイルの合計サイズ (KB 単位)。|  
 |**system_cache_kb**|**bigint**|システム キャッシュ メモリの合計サイズ (KB 単位)。|  
 |**kernel_paged_pool_kb**|**bigint**|ページ カーネル プールの合計サイズ (KB 単位)。|  
 |**kernel_nonpaged_pool_kb**|**bigint**|非ページカーネルプールの合計サイズ (KB 単位)。|  
