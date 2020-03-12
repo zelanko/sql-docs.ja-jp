@@ -10,23 +10,23 @@ ms.assetid: 0678bfbc-5d3f-44f4-89c0-13e8e52404da
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b8f7ab6cdbc1b6e0e3dc7d26fb579943a0c8fa95
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e53e51a021315c79659e684327e8b7eb784001be
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73637770"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112220"
 ---
 # <a name="discontinued-sql-server-features-in-sql-server-2014"></a>SQL Server 2014 で提供が中止された機能
   このトピックでは、[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] にアップグレードした後で使用できなくなる機能について説明します。  
   
-## <a name="discontinued-features-in-includesssql14includessssql14-mdmd"></a>
+## <a name="discontinued-features-in-sssql14"></a>
   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]
   
  
   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] で提供が中止された機能はありません。  
   
-## <a name="discontinued-features-in-includesssql11includessssql11-mdmd"></a>
+## <a name="discontinued-features-in-sssql11"></a>
   [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
   
   
@@ -48,7 +48,7 @@ ms.locfileid: "73637770"
   
 ### <a name="discontinued-sql-dmo-from-sql-server-express-installation"></a>SQL Server Express で提供が中止された SQL-DMO  
  
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の SQL-DMO が [!INCLUDE[ssExpressEd10](../includes/ssexpressed10-md.md)] から削除されました。 この機能を現在使用しているアプリケーションはできるだけ早く変更することをお勧めします。 Express 用の[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sql-dmo をサポートする必要がある場合は、 [Microsoft ダウンロードセンター](https://www.microsoft.com/download/details.aspx?id=24793)から[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 、feature Pack から旧バージョンとの互換性コンポーネントをインストールしてください。 新しい開発作業では、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) を使用してください。  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の SQL-DMO が [!INCLUDE[ssExpressEd10](../includes/ssexpressed10-md.md)] から削除されました。 この機能を現在使用しているアプリケーションはできるだけ早く変更することをお勧めします。 Express 用の[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sql-dmo をサポートする必要がある場合は、 [Microsoft ダウンロードセンター](https://www.microsoft.com/download/)から[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 、feature Pack から旧バージョンとの互換性コンポーネントをインストールしてください。 新しい開発作業では、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) を使用してください。  
   
 ### <a name="discontinued-option-for-web-assistant"></a>廃止された Web Assistant オプション  
  

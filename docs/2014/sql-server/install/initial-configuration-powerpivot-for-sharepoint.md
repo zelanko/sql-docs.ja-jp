@@ -10,12 +10,12 @@ ms.assetid: 3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: bc9b053b62a19cbe2c234f87010ae2a9652fb95c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 24a52b9dd190032a55306c1fe738c3c1e1787dad
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74200433"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112217"
 ---
 # <a name="initial-configuration-powerpivot-for-sharepoint"></a>初期構成 (PowerPivot for SharePoint)
   このトピックの手順を使用して、PowerPivot for SharePoint の最初のインストールを構成します。 最初のインストールを構成する最も簡単な方法は、PowerPivot 構成ツールを使用することです。 これによって、以下に説明したすべての構成手順が自動で行われます。  
@@ -114,8 +114,7 @@ ms.locfileid: "74200433"
   
 7.  [**データベース名**] の既定値は PowerPivotServiceApplication1_\<guid> です。 既定のデータベース名は、既定のサービス アプリケーション名に対応しています。 独自のサービス アプリケーション名を入力した場合は、サービス アプリケーションとデータベースを一緒に管理できるように、データベース名に対しても同様の命名規則を使用してください。  
   
-8.  
-  **[データベース認証]** の既定値は、"Windows 認証" です。 
+8.  **[データベース認証]** の既定値は、"Windows 認証" です。 
   **[SQL 認証]** を選択する場合は、SharePoint 管理者ガイドを参照して、SharePoint 配置でその認証の種類を使用するためのベスト プラクティスを確認してください。  
   
 9. [**この PowerPivot サービスアプリケーションのプロキシを既定のプロキシグループに追加する**] チェックボックスをオンにします。 のチェック ボックスをオンにします。これにより、このサービス アプリケーション接続が既定のサービス接続のグループに追加されます。 既定の接続グループに少なくとも 1 つの PowerPivot サービス アプリケーションを追加する必要があります。  
@@ -177,8 +176,7 @@ ms.locfileid: "74200433"
   
 6.  [**データベース名**] に、サービスアプリケーションデータベースの名前を入力します。 既定値は Secure_Store_Service_DB_\<guid> です。 既定の名前は、既定のサービス アプリケーション名に対応しています。 独自のサービス アプリケーション名を入力した場合は、サービス アプリケーションとデータベースを一緒に管理できるように、データベース名に対しても同様の命名規則を使用してください。  
   
-7.  
-  **[データベース認証]** の既定値は、"Windows 認証" です。 "SQL 認証" を選択する場合は、SharePoint 管理者ガイドを参照して、ファームでその認証の種類を使用する方法を確認してください。  
+7.  **[データベース認証]** の既定値は、"Windows 認証" です。 "SQL 認証" を選択する場合は、SharePoint 管理者ガイドを参照して、ファームでその認証の種類を使用する方法を確認してください。  
   
 8.  [アプリケーションプール] で、[**新しいアプリケーションプールの作成**] を選択します。 他のサーバー管理者がアプリケーション プールの使用方法を理解できるように、わかりやすい名前を指定します。  
   
@@ -234,7 +232,7 @@ ms.locfileid: "74200433"
   
  このプロバイダーをインストールすると、データ接続文字列の MSOLAP.4 を参照するブックが [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] PowerPivot サーバーで正常に機能するようになります。 以前のバージョンの PowerPivot for Excel で作成されたブックをアップグレードするには、SQL Server 2008 R2 OLE DB プロバイダーをインストールする方法があります。  
   
- [SQL Server 2008 R2 Feature Pack ページ](https://www.microsoft.com/download/details.aspx?id=16978)からプロバイダーをダウンロードできます。 Microsoft **® Analysis Services OLE DB Provider For microsoft® SQL Server® 2008 R2**を探し、 `SQLServer2008_ASOLEDB10.msi`インストールプログラムの x64 パッケージをダウンロードします。  
+ [SQL Server 2008 R2 Feature Pack ページ](https://www.microsoft.com/download/details.aspx?id=44272)からプロバイダーをダウンロードできます。 Microsoft **® Analysis Services OLE DB Provider For microsoft® SQL Server® 2008 R2**を探し、 `SQLServer2008_ASOLEDB10.msi`インストールプログラムの x64 パッケージをダウンロードします。  
   
  検証手順を含め、プロバイダーのインストールの詳細については、「 [SharePoint サーバーに Analysis Services OLE DB Provider をインストール](../../../2014/sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md)する」を参照してください。  
   
@@ -265,8 +263,7 @@ ms.locfileid: "74200433"
   
 6.  [サーバー名] に、「 ** \<サーバー名>** を入力します。ここ** \<** で、サーバー名>は PowerPivot for SharePoint インストールされているコンピューターの名前です。  
   
-7.  
-  **[接続]** をクリックします。  
+7.  **[Connect]** をクリックします。  
   
 8.  オブジェクトエクスプローラーで、[**データベース**] をクリックして、読み込まれている PowerPivot データファイルの一覧を表示します。  
   

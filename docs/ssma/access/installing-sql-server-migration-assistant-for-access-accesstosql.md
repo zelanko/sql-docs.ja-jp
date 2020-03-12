@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: dd50eebd-75df-4e0d-8c4d-88b511aae4c7
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 80fc19b17ac1c01f0c57d828a3bc4821050f761d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: cbbb7ed7a20937d9963af7080fb16be4f6c78da5
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75257892"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79111906"
 ---
 # <a name="installing-sql-server-migration-assistant-for-access-accesstosql"></a>アクセスのための SQL Server Migration Assistant のインストール (アクセス可能な SQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Access の Migration Assistant (ssma) は、Windows インストーラーベースのウィザードを使用してインストールされます。 このトピックでは、インストールの前提条件、SSMA の最新バージョンへのリンク、SSMA のインストール、ライセンス、アンインストール、およびアップグレードの手順について説明します。  
@@ -45,7 +45,7 @@ SSMA をインストールする前に、システムが次の要件を満たし
   
 -   Microsoft Data Access Object (DAO) プロバイダーバージョン12.0 または14.0。 Microsoft Office 2010/2007 製品から DAO プロバイダーをインストールするか、Microsoft web サイトからダウンロードすることができます。  
   
--   SQL Azure への移行については、SQL Server ネイティブアクセスクライアント (SNAC) バージョン10.5 以降。 最新バージョンの SNAC は、 [Microsoft® SQL Server® 2008 R2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=16978)から入手できます。  
+-   SQL Azure への移行については、SQL Server ネイティブアクセスクライアント (SNAC) バージョン10.5 以降。 最新バージョンの SNAC は、 [Microsoft® SQL Server® 2008 R2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=44272)から入手できます。  
   
 -   4 GB の RAM (推奨)。  
   
@@ -88,7 +88,7 @@ Access 用に新しいバージョンの SSMA にアップグレードする場�
   
 SSMA の以前のバージョンで作成したプロジェクトを開くと、プロジェクトを新しいバージョンに変換するかどうかを確認するメッセージが表示されます。 新しいバージョンの SSMA でプロジェクトを使用する場合は、[**はい**] をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [Access データベースの移行の準備](preparing-access-databases-for-migration-accesstosql.md)  
 [Access データベースの SQL Server への移行](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
 [Access アプリケーションの SQL Server へのリンク](linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md)  

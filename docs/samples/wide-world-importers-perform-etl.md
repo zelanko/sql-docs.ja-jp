@@ -1,5 +1,6 @@
 ---
 title: WideWorldImportersDW-ETL workflow |Microsoft Docs
+description: ETL パッケージと SQL Server Integration Services (SSIS) を使用して、WideWorldImporters データベースから WideWorldImportersDW に定期的にデータを移行します。
 ms.prod: sql
 ms.prod_service: sql
 ms.technology: samples
@@ -9,12 +10,12 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f33d36cccbbea6f37139410f9d3d6e03f740ee96
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 000d12b97eb2eefbfcd9a6a73e02c0098b2afdbb
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68067622"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112398"
 ---
 # <a name="wideworldimportersdw-etl-workflow"></a>WideWorldImportersDW ETL ワークフロー
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

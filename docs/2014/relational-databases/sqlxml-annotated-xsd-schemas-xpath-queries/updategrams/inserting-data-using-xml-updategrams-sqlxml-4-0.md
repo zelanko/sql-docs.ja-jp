@@ -33,12 +33,12 @@ ms.assetid: 4dc48762-bc12-43fb-b356-ea1b9c1e287e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b06e98d5ef3dfc4ad8ab99e374e2d7b5539c98be
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 71aba1741b777a593f951300a975df4736525211
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73637903"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112191"
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>XML アップデートグラムを使用した、データの挿入 (SQLXML 4.0)
   アップデートグラムは、レコードインスタンスが** \<after>** ブロックに存在していても、対応** \<する before>** ブロックに含まれていない場合に挿入操作を示します。 この場合、アップデートグラムでは、 ** \<after>** ブロックにレコードをデータベースに挿入します。  
@@ -216,7 +216,7 @@ ms.locfileid: "73637903"
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、テーブル名は、Northwind データベースの Order Details テーブルのようにスペースを含めて指定できます。 ただし、有効な[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]識別子である xml 文字では有効ではありませんが、有効な xml 識別子は\_\_エンコード値として ' __xHHHH ' を使用してエンコードできます。ここで、HHHH は、最上位ビットから順に、文字の4桁の16進数の UCS 2 コードを表します。  
   
 > [!NOTE]  
->  この例では Northwind データベースを使用します。 この[Microsoft Web サイト](https://www.microsoft.com/download/details.aspx?id=23654)からダウンロードできる SQL スクリプトを使用して、Northwind データベースをインストールできます。  
+>  この例では Northwind データベースを使用します。 この[Microsoft Web サイト](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/northwind-pubs)からダウンロードできる SQL スクリプトを使用して、Northwind データベースをインストールできます。  
   
  要素名も、角かっこ ([ ]) で囲む必要があります。 文字 [および] は XML では有効でないため、それぞれを _x005B\_としてエンコード\_し、_x005D する必要があります。 マッピング スキーマを使用して、空白文字など有効でない文字を含まない要素名を指定することもできます。 この場合、マッピング スキーマで必要なマッピングが行われるので、これらの文字をエンコードする必要はありません。  
   

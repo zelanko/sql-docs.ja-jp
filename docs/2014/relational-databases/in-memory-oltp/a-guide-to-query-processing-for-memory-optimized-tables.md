@@ -10,12 +10,12 @@ ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4db539979cf6a9e06d93b38fbc2aa92c8cdbabfb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 34fdc72cfbb341e7b7d998a76036e6e2b060e7d8
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68811070"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112242"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>メモリ最適化テーブルのクエリ処理のガイド
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]では、インメモリ OLTP によってメモリ最適化テーブルとネイティブ コンパイル ストアド プロシージャが導入されています。 ここでは、メモリ最適化テーブルとネイティブ コンパイル ストアド プロシージャの両方に対するクエリ処理の概要について説明します。  
@@ -60,7 +60,7 @@ CREATE INDEX IX_OrderDate ON dbo.[Order](OrderDate)
 GO  
 ```  
   
- ここでは、クエリ プランを構築できるように、2 個のテーブルに Northwind サンプル データベースのサンプル データが読み込まれています。このサンプル データベースは「 [SQL Server 2000 用の Northwind サンプル データベースと pubs サンプル データベース](https://www.microsoft.com/download/details.aspx?id=23654)」からダウンロードできます。  
+ ここでは、クエリ プランを構築できるように、2 個のテーブルに Northwind サンプル データベースのサンプル データが読み込まれています。このサンプル データベースは「 [SQL Server 2000 用の Northwind サンプル データベースと pubs サンプル データベース](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/northwind-pubs)」からダウンロードできます。  
   
  次のクエリについて考えてみます。このクエリでは、Customer テーブルと Order テーブルを結合し、注文の ID および関連付けられた顧客情報を返します。  
   
@@ -95,7 +95,7 @@ SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID =
   
  このクエリでは、Orders テーブルの行はクラスター化インデックスを使用して取得されます。 これで、`Hash Match` 物理操作は `Inner Join` に使用されます。 Order のクラスター化インデックスは CustomerID で並べ替えられません。したがって、`Merge Join` はパフォーマンスに影響を与える並べ替え操作を必要とします。 前の例の `Hash Match` 操作のコスト (46%) と比較して、`Merge Join` 操作 (75%) の相対コストを確認してください。 オプティマイザーでは、前の例でも `Hash Match` 操作を検討したうえで、`Merge Join` 操作の方がパフォーマンスがよいと判断されています。  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-query-processing-for-disk-based-tables"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ディスク ベース テーブルに対するクエリ処理  
+## <a name="ssnoversion-query-processing-for-disk-based-tables"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ディスク ベース テーブルに対するクエリ処理  
  次の図は、アドホック クエリに対する [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のクエリ処理フローの概要を示しています。  
   
  ![SQL Server クエリ処理パイプライン。](../../database-engine/media/hekaton-query-plan-3.gif "SQL Server クエリ処理パイプライン。")  
@@ -117,7 +117,7 @@ SQL Server クエリ処理パイプライン。
   
  クエリの最初の例の場合、実行エンジンは、Customer のクラスター化インデックスおよび Order の非クラスター化インデックスの行を Access Methods から要求します。 Access Methods は、要求された行を取得するために B ツリー インデックス構造をスキャンします。 この場合は、プランがフル インデックス スキャンを必要とするため、すべての行が取得されます。  
   
-## <a name="interpreted-includetsqlincludestsql-mdmd-access-to-memory-optimized-tables"></a>解釈された [!INCLUDE[tsql](../../../includes/tsql-md.md)] によるメモリ最適化テーブルへのアクセス  
+## <a name="interpreted-tsql-access-to-memory-optimized-tables"></a>解釈された [!INCLUDE[tsql](../../../includes/tsql-md.md)] によるメモリ最適化テーブルへのアクセス  
  [!INCLUDE[tsql](../../../includes/tsql-md.md)] アドホック バッチおよびストアド プロシージャは、解釈された [!INCLUDE[tsql](../../../includes/tsql-md.md)]とも呼ばれます。 "解釈された" とは、クエリ プラン内の各演算子について、クエリ実行エンジンによってクエリ プランが解釈されることを意味します。 実行エンジンは、演算子とそのパラメーターを読み取り、操作を実行します。  
   
  解釈された [!INCLUDE[tsql](../../../includes/tsql-md.md)] を使用して、メモリ最適化テーブルとディスク ベース テーブルの両方にアクセスできます。 次の図は、解釈された [!INCLUDE[tsql](../../../includes/tsql-md.md)] によるメモリ最適化テーブルへのアクセスのクエリ処理を示しています。  
@@ -220,7 +220,7 @@ END
   
  ネイティブ コンパイル ストアド プロシージャの呼び出しは、DLL 内の関数の呼び出しに変換されます。  
   
- ![ネイティブコンパイルストアドプロシージャの実行。](../../database-engine/media/hekaton-query-plan-7.gif "ネイティブ コンパイル ストアド プロシージャの実行。")  
+ ![ネイティブ コンパイル ストアド プロシージャの実行。](../../database-engine/media/hekaton-query-plan-7.gif "ネイティブ コンパイル ストアド プロシージャの実行。")  
 ネイティブ コンパイル ストアド プロシージャの実行。  
   
  ネイティブ コンパイル ストアド プロシージャの呼び出しは、次のとおりです。  
@@ -235,14 +235,14 @@ END
   
 4.  DLL のマシン語コードが実行され、その結果がクライアントに返されます。  
   
- **パラメータースニッフィング**  
+ **パラメーターを見つけ出す**  
   
  解釈された [!INCLUDE[tsql](../../../includes/tsql-md.md)] ストアド プロシージャは最初の実行時にコンパイルされますが、ネイティブ コンパイル ストアド プロシージャは作成時にコンパイルされます。 解釈されたストアド プロシージャが呼び出し時にコンパイルされる場合、この呼び出しに指定されたパラメーターの値が、実行プランの生成時にオプティマイザーによって使用されます。 コンパイル時にパラメーターをこのように使用することを、"パラメーターを見つけ出す" と表現します。  
   
  パラメーターを見つけ出すことは、ネイティブ コンパイル ストアド プロシージャのコンパイルには使用されません。 ストアド プロシージャに対するすべてのパラメーターは、UNKNOWN 値があると見なされます。 解釈されたストアド プロシージャと同様に、ネイティブ コンパイル ストアド プロシージャでも、`OPTIMIZE FOR` ヒントがサポートされます。 詳細については、「[クエリ ヒント &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-query)」を参照してください。  
   
 ### <a name="retrieving-a-query-execution-plan-for-natively-compiled-stored-procedures"></a>ネイティブ コンパイル ストアド プロシージャ用のクエリ実行プランの取得  
- ネイティブ コンパイル ストアド プロシージャ用のクエリ実行プランは、 ** の **推定実行プラン[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] または [!INCLUDE[tsql](../../../includes/tsql-md.md)]の SHOWPLAN_XML オプションを使用して取得できます。 次に例を示します。  
+ ネイティブ コンパイル ストアド プロシージャ用のクエリ実行プランは、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] の **推定実行プラン** または [!INCLUDE[tsql](../../../includes/tsql-md.md)]の SHOWPLAN_XML オプションを使用して取得できます。 次に例を示します。  
   
 ```sql  
 SET SHOWPLAN_XML ON  
@@ -253,8 +253,7 @@ SET SHOWPLAN_XML OFF
 GO  
 ```  
   
- クエリ オプティマイザーによって生成される実行プランは、ノード上のクエリ演算子を含むツリーおよびツリーのリーフで構成されます。 ツリーの構造により、演算子間の対話 (演算子間での行のフロー) が決定されます。 
-  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]のグラフィカルなビューでは、フローは右から左に流れます。 たとえば、図 1 のクエリ プランは、2 個のインデックス スキャン操作を含み、マージ結合操作に行を渡しています。 マージ結合操作が選択操作に行を渡します。 選択操作は、最終的にはクライアントに行を返します。  
+ クエリ オプティマイザーによって生成される実行プランは、ノード上のクエリ演算子を含むツリーおよびツリーのリーフで構成されます。 ツリーの構造により、演算子間の対話 (演算子間での行のフロー) が決定されます。 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]のグラフィカルなビューでは、フローは右から左に流れます。 たとえば、図 1 のクエリ プランは、2 個のインデックス スキャン操作を含み、マージ結合操作に行を渡しています。 マージ結合操作が選択操作に行を渡します。 選択操作は、最終的にはクライアントに行を返します。  
   
 ### <a name="query-operators-in-natively-compiled-stored-procedures"></a>ネイティブ コンパイル ストアド プロシージャのクエリ演算子  
  次の表は、ネイティブ コンパイル ストアド プロシージャの内部でサポートされるクエリ演算子をまとめたものです。  

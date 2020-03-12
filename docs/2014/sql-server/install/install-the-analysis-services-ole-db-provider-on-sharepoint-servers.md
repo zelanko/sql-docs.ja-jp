@@ -10,12 +10,12 @@ ms.assetid: 2c62daf9-1f2d-4508-a497-af62360ee859
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: f8dcec71f8b9c90df9f30aa5bfb972fef28fbcd7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 1146c612225c2f58dd501ce9cba658ca7ca6ba69
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74200445"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112177"
 ---
 # <a name="install-the-analysis-services-ole-db-provider-on-sharepoint-servers"></a>SharePoint サーバーへの Analysis Services OLE DB プロバイダーのインストール
   Microsoft OLE DB Provider for Analysis Services (MSOLAP) は、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データを操作するためにクライアント アプリケーションで使用されるインターフェイスです。 
@@ -120,7 +120,7 @@ ms.locfileid: "74200445"
 ##  <a name="bkmk_install2012_from_sppowerpivot_msi"></a>PowerPivot for SharePoint インストールパッケージ (spPowerPivot .msi) を使用して SQL Server 2012 OLE DB プロバイダーをインストールする  
  インストールパッケージ[!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] **(sppowerpivot .msi)** を使用して、および Excel Services サーバーに OLE DB プロバイダーをインストールします。 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]  
   
-#### <a name="download-the-msolap5-provider-from-the-includesssql11sp1includessssql11sp1-mdmd-feature-pack"></a>
+#### <a name="download-the-msolap5-provider-from-the-sssql11sp1-feature-pack"></a>
   [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] Feature Pack から MSOLAP.5 プロバイダーをダウンロードします。  
   
 1.  [Microsoft® SQL Server® 2012 SP1 Feature Pack](https://www.microsoft.com/download/details.aspx?id=35580)を参照してください。  
@@ -141,7 +141,7 @@ ms.locfileid: "74200445"
   
 #### <a name="step-1-download-and-install-the-client-library"></a>手順 1: クライアント ライブラリのダウンロードとインストール  
   
-1.  [ [SQL Server 2008 R2 Feature Pack] ページ](https://www.microsoft.com/download/details.aspx?id=16978)で Microsoft Analysis Services OLE DB Provider for Microsoft SQL Server 2008 r2 を見つけます。  
+1.  [ [SQL Server 2008 R2 Feature Pack] ページ](https://www.microsoft.com/download/details.aspx?id=44272)で Microsoft Analysis Services OLE DB Provider for Microsoft SQL Server 2008 r2 を見つけます。  
   
 2.  
   `SQLServer2008_ASOLEDB10.msi` インストール プログラムの x64 パッケージをダウンロードします。 ファイル名には SQLServer2008 が含まれていますが、これは SQL Server 2008 R2 バージョンのプロバイダーに対応する適切なファイルです。  

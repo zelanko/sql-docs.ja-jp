@@ -20,15 +20,15 @@ ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 78c3ba452d3ba681823e5c9f473d7a86f55809a1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 18575c95602f73baa959d35b176cf16220fc8e64
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62833789"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112161"
 ---
 # <a name="integration-services-ssis-connections"></a>Integration Services (SSIS) の接続
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)]パッケージでは、接続を使用してさまざま[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]なタスクを実行し、機能を実装します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージでは接続の使用により、各種のタスクの実行や [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 機能の実装が行われます。  
   
 -   テキスト、XML、Excel ブック、リレーショナル データベースなど、変換元および変換先のデータ ストアに接続し、データの抽出と読み込みを行います。  
   
@@ -36,43 +36,37 @@ ms.locfileid: "62833789"
   
 -   リレーショナル データベースに接続し、SELECT、DELETE、INSERT コマンドなどの SQL ステートメントやストアド プロシージャを実行します。  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続し、データベースのバックアップやログインの転送などのメンテナンス タスクおよび転送タスクを実行します。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続し、データベースのバックアップやログインの転送などのメンテナンス タスクおよび転送タスクを実行します。  
   
 -   ログ エントリをテキスト ファイル、XML ファイル、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルに書き込み、パッケージの構成を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルに書き込みます。  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続し、一部の変換作業に使用する一時作業テーブルを作成します。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続し、一部の変換作業に使用する一時作業テーブルを作成します。  
   
--   
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトおよびデータベースに接続して、データ マイニング モデルにアクセスし、キューブとディメンションを処理して、DDL コードを実行します。  
+-   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトおよびデータベースに接続して、データ マイニング モデルにアクセスし、キューブとディメンションを処理して、DDL コードを実行します。  
   
 -   Foreach Loop 列挙子およびタスクで使用する既存のファイルとフォルダーを指定するか、新しく作成します。  
   
--   メッセージ キュー、Windows Management Instrumentation (WMI) サーバー、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) サーバー、Web サーバー、およびメール サーバーに接続します。  
+-   メッセージ キュー、Windows Management Instrumentation (WMI) サーバー、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) サーバー、Web サーバー、およびメール サーバーに接続します。  
   
- これらの接続を確立するために、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] は接続マネージャーを使用します。次のセクションでは、この接続マネージャーについて説明します。  
+ これらの接続を確立するために、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] は接続マネージャーを使用します。次のセクションでは、この接続マネージャーについて説明します。  
   
 ## <a name="connection-managers"></a>接続マネージャー  
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、接続の論理表現として接続マネージャーが使用されます。 デザイン時に接続マネージャーのプロパティを設定し、パッケージの実行時に [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] が作成する物理接続を指定します。 たとえば、接続マネージャーには、デザイン時に設定する `ConnectionString` プロパティが含まれており、実行時には、接続文字列のプロパティ内の値を使用して、物理接続が作成されます。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、接続の論理表現として接続マネージャーが使用されます。 デザイン時に接続マネージャーのプロパティを設定し、パッケージの実行時に [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] が作成する物理接続を指定します。 たとえば、接続マネージャーには、デザイン時に設定する `ConnectionString` プロパティが含まれており、実行時には、接続文字列のプロパティ内の値を使用して、物理接続が作成されます。  
   
  パッケージは、接続マネージャーの種類の複数のインスタンスを使用でき、各インスタンス上でプロパティを設定できます。 実行時に、接続マネージャーの種類の各インスタンスは、さまざまな属性を持つ接続を作成します。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]には、パッケージがさまざまなデータソースおよびサーバーに接続できるようにするさまざまな種類の接続マネージャーが用意されています。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、さまざまな種類の接続マネージャーが用意されており、これにより、パッケージはさまざまなデータ ソースおよびサーバーに接続できます。  
   
--   
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]のインストール時にセットアップ プログラムによってインストールされる組み込みの接続マネージャー。  
+-   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]のインストール時にセットアップ プログラムによってインストールされる組み込みの接続マネージャー。  
   
--   
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] の Web サイトからダウンロード可能な接続マネージャー。  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] の Web サイトからダウンロード可能な接続マネージャー。  
   
 -   カスタム接続マネージャー。既存の接続マネージャーではニーズを満たすことができない場合は独自に作成できます。  
   
 ### <a name="built-in-connection-managers"></a>組み込みの接続マネージャー  
  次の表に、に用意され[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]ている接続マネージャーの種類を示します。  
   
-|種類|[説明]|トピック|  
+|Type|[説明]|トピック|  
 |----------|-----------------|-----------|  
 |ADO (ADO)|ActiveX Data Objects (ADO) オブジェクトに接続します。|[ADO 接続マネージャー](ado-connection-manager.md)|  
 |ADO.NET|.NET プロバイダーを使用して、データ ソースに接続します。|[ADO.NET 接続マネージャー](ado-net-connection-manager.md)|  
@@ -102,12 +96,12 @@ ms.locfileid: "62833789"
 > [!IMPORTANT]  
 >  次の表にリストされている接続マネージャーは、[!INCLUDE[ssEnterpriseEd11](../../includes/ssenterpriseed11-md.md)] および [!INCLUDE[ssDeveloperEd11](../../includes/ssdevelopered11-md.md)] でのみ動作します。  
   
-|種類|[説明]|トピック|  
+|Type|[説明]|トピック|  
 |----------|-----------------|-----------|  
 |ORACLE|Oracle \<バージョン情報> サーバーに接続します。|Oracle 接続マネージャーは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity の接続マネージャー コンポーネントです。 
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity には、変換元と変換先も含まれます。 詳細については、[Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=251526) のダウンロード ページを参照してください。|  
 |SAPBI|SAP NetWeaver BI Version 7 システムに接続します。|SAP BI 接続マネージャーは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI の接続マネージャー コンポーネントです。 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI には、変換元と変換先も含まれます。 詳細については、[Microsoft SQL Server 2008 用 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=262016) のダウンロード ページを参照してください。|  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI には、変換元と変換先も含まれます。 詳細については、[Microsoft SQL Server 2008 用 Feature Pack](https://www.microsoft.com/download/details.aspx?id=30440) のダウンロード ページを参照してください。|  
 |TERADATA|Teradata \<バージョン情報> サーバーに接続します。|Teradata 接続マネージャーは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity の接続マネージャー コンポーネントです。 
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity には、変換元と変換先も含まれます。 詳細については、[Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=251526) のダウンロード ページを参照してください。|  
   

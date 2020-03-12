@@ -1,5 +1,6 @@
 ---
 title: AdventureWorks サンプルデータベースをインストールして構成する
+description: SQL Server Management Studio または Azure SQL Database で AdventureWorks サンプルデータベースをダウンロードしてインストールするには、次の手順に従います。
 ms.prod: sql
 ms.prod_service: sql
 ms.technology: samples
@@ -9,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 6a4b56a31ede0d8e011c1a2244f5d014e185e7e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 424d85e947769e8e78b828e5b46d3b384eb1b50a
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74318993"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112326"
 ---
 # <a name="adventureworks-installation-and-configuration"></a>AdventureWorks のインストールと構成
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -100,6 +101,6 @@ SQL Server データベースの復元の詳細については、「 [SSMS を�
 1. [**作成**] を選択して、AdventureWorksLT データベースの復元されたコピーである新しい SQL Database を作成します。 
 
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [SQL Server Management Studio のチュートリアル](../ssms/tutorials/tutorial-sql-server-management-studio.md)   
 [SQL Server データベースエンジンのチュートリアル](../relational-databases/database-engine-tutorials.md)

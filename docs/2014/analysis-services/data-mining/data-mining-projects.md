@@ -10,12 +10,12 @@ ms.assetid: 543d70fc-34d2-42dd-8d6d-0543109f94d0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 476159031ad00ada2e70b0c9eca5c775dab67285
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: e107dde8a3f811cbc1a24533705863c954dd85c4
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73705298"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112155"
 ---
 # <a name="data-mining-projects"></a>データ マイニング プロジェクト
   データ マイニング プロジェクトは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ソリューションの一部です。 デザイン プロセス時に、このプロジェクトで作成したオブジェクトをワークスペース データベースの一部としてテストおよびクエリに使用できます。 ユーザーがプロジェクト内のオブジェクトをクエリまたは参照できるようにするには、多次元モードで実行している [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスにプロジェクトを配置する必要があります。  
@@ -163,7 +163,7 @@ ms.locfileid: "73705298"
   
  これらの視覚エフェクトは一時的なもので、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]とのセッションを終了すると、保存されずに閉じられます。 そのため、プレゼンテーションや追加の分析のために、これらの視覚エフェクトを別のアプリケーションにエクスポートする必要がある場合は、ビューアー インターフェイスの各タブまたはペインに用意されている **[コピー]** を使用します。  
   
- また、Excel 用データ マイニング アドインでは、Visio テンプレートが提供されます。それを使用して、Visio の図でモデルを表現し、Visio のツールを使用して図に注釈を付けたり、変更したりできます。 詳細については、「 [Microsoft Office 2007 用 Microsoft SQL Server 2008 データ マイニング アドイン](https://www.microsoft.com/download/details.aspx?id=7294)」を参照してください。
+ また、Excel 用データ マイニング アドインでは、Visio テンプレートが提供されます。それを使用して、Visio の図でモデルを表現し、Visio のツールを使用して図に注釈を付けたり、変更したりできます。 詳細については、「 [Microsoft Office 2007 用 Microsoft SQL Server 2008 データ マイニング アドイン](https://www.microsoft.com/download/details.aspx?id=8569)」を参照してください。
   
 ###  <a name="bkmk_Validate"></a>モデルのテストと検証  
  モデルを作成した後、結果を調査して、最もパフォーマンスの良いモデルを決定できます。  
@@ -199,7 +199,7 @@ ms.locfileid: "73705298"
 ## <a name="related-tasks"></a>Related Tasks  
  次のトピックでは、データ マイニング ウィザードを使用して、データ マイニング プロジェクトおよび関連するオブジェクトを作成する方法について説明しています。  
   
-|処理手順|トピック|  
+|タスク|トピック|  
 |-----------|------------|  
 |マイニング構造列を操作する方法について説明します。|[Create a Relational Mining Structure](create-a-relational-mining-structure.md)|  
 |新しいマイニング モデルを追加し、構造とモデルを処理する方法について詳しく説明します。|[Analysis Services データマイニング &#40;構造へのマイニングモデルの追加&#41;](add-mining-models-to-a-structure-analysis-services-data-mining.md)|  

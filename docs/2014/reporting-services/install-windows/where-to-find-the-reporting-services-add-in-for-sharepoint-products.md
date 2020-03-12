@@ -11,12 +11,12 @@ manager: kfile
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 11/16/2015
-ms.openlocfilehash: adee6ee7d0d769d8e87e228c475b224a3e78675b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 1d6a27c171fafc8480cbbcdb03c4683816ec30d4
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73637873"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112185"
 ---
 # <a name="where-to-find-the-reporting-services-add-in-for-sharepoint-products"></a>SharePoint 製品用 Reporting Services アドインの検索場所
 
@@ -58,7 +58,7 @@ Sharepoint [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVer
 ##  <a name="bkmk_sql2008sp2"></a>SQL Server 2008 SP2 Reporting Services SharePoint 2007 の製品およびテクノロジ用アドイン  
  Microsoft SQL Server 2008 SP2 Reporting Services アドインは、SharePoint 2007 製品と 2008 R2 レポート サーバーの統合のサポートを追加する 2008 アドインの更新バージョンです。  
   
- このファイルの最新バージョンは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ダウンロード センターの「 [Microsoft SharePoint テクノロジ用 Microsoft SQL Server 2008 SP2 Reporting Services アドイン](https://www.microsoft.com/download/details.aspx?id=793)」ページからオンラインで入手できます。  
+ このファイルの最新バージョンは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ダウンロード センターの「 [Microsoft SharePoint テクノロジ用 Microsoft SQL Server 2008 SP2 Reporting Services アドイン](https://www.microsoft.com/download/details.aspx?id=43344)」ページからオンラインで入手できます。  
   
 ##  <a name="bkmk_sql2008"></a>SharePoint 2007 製品およびテクノロジ用 SQL Server 2008 Reporting Services アドイン  
  Microsoft SharePoint テクノロジ用 Microsoft SQL Server 2008 Reporting Services アドインは、Windows SharePoint Services 3.0 または Microsoft Office SharePoint Server 2007 で構築した配置内でレポート サーバーを実行するための機能を提供します。  

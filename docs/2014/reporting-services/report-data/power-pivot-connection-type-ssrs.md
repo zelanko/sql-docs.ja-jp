@@ -10,12 +10,12 @@ ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e9b8fb98082fb3509acf50e6546673e86962893c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 50ce060d270cf06a771136c581bf96fe1ec21eee
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74200420"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112148"
 ---
 # <a name="powerpivot-connection-type-ssrs"></a>PowerPivot の接続の種類 (SSRS)
   SQL Server Analysis Services データ処理拡張機能を使用すると、SharePoint の PowerPivot ギャラリーにパブリッシュされた PowerPivot ブックからデータを取得することができます。  
@@ -25,7 +25,7 @@ ms.locfileid: "74200420"
 ## <a name="prerequisites"></a>前提条件  
  PowerPivot データ ソースは、SharePoint サイトの PowerPivot ギャラリーにパブリッシュされている必要があります。  
   
- レポート ビルダーから PowerPivot ブックへの接続をサポートするには、ワークステーション コンピューターに SQL Server 2008 R2 ADOMD.NET が必要です。 このクライアントライブラリは PowerPivot for Excel と共にインストールされますが、このアプリケーションがインストールされていないコンピューターを使用している場合は、 [SQL Server 2008 R2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=16978)から ADOMD.NET をダウンロードしてインストールする必要があります。  
+ レポート ビルダーから PowerPivot ブックへの接続をサポートするには、ワークステーション コンピューターに SQL Server 2008 R2 ADOMD.NET が必要です。 このクライアントライブラリは PowerPivot for Excel と共にインストールされますが、このアプリケーションがインストールされていないコンピューターを使用している場合は、 [SQL Server 2008 R2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=44272)から ADOMD.NET をダウンロードしてインストールする必要があります。  
   
 ## <a name="data-source-type"></a>データ ソースの種類  
  使用するレポート データ ソースの種類は **Microsoft SQL Server Analysis Services**です。  
@@ -63,7 +63,7 @@ ms.locfileid: "74200420"
 -   レポートには、PowerPivot データ ソースからの PowerPivot データのみが格納されます。  
   
 ## <a name="see-also"></a>参照  
- [Analysis Services MDX クエリデザイナーのユーザーインターフェイス &#40;レポートビルダー&#41;](../analysis-services-mdx-query-designer-user-interface-report-builder.md)   
+ [Analysis Services の MDX クエリ デザイナーのユーザー インターフェイス &#40;レポート ビルダー&#41;](../analysis-services-mdx-query-designer-user-interface-report-builder.md)   
  [式 &#40;レポート ビルダーおよび SSRS&#41;](../report-design/expressions-report-builder-and-ssrs.md)  
   
   

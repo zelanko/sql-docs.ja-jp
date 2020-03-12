@@ -23,12 +23,12 @@ ms.assetid: 82374ad2-7737-4164-a489-13261ba393d4
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: c4e6d16645b8a7ecab9ed2e814ed345834e80f1b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 58abfde651fb59bc69207db810324eb4c74b8c26
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75245915"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112067"
 ---
 # <a name="linking-access-applications-to-sql-server---azure-sql-db-accesstosql"></a>SQL Server への Access アプリケーションのリンク-Azure SQL DB (アクセス許可 Sql)
 既存の Access アプリケーションをで[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用する場合は、移行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]されたテーブルまたは SQL Azure のテーブルに元の access テーブルをリンクすることができます。 リンクを使用すると Access データベースが変更されるため、クエリ、フォーム、レポート、およびデータアクセスページ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、access データベースのデータではなく、または SQL Azure データベースのデータが使用されます。  
@@ -56,7 +56,7 @@ Access でテーブルを開くと、キーセットカーソルを使用して�
   
 > [!IMPORTANT]  
 > Azure データベースにアクセステーブルをリンクするには、SQL Server Native Client (SNAC) バージョン10.5 以降が必要です。   
-> 最新バージョンの SNAC は、 [Microsoft® SQL Server® 2008 R2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=16978)から入手できます。  
+> 最新バージョンの SNAC は、 [Microsoft® SQL Server® 2008 R2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=44272)から入手できます。  
   
 ## <a name="unlinking-access-tables"></a>アクセステーブルのリンク解除  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure テーブルから access テーブルのリンクを解除すると、ssma によって元のアクセステーブルとそのデータが復元されます。  
@@ -153,6 +153,6 @@ Recordset.LastModified
   
 **解決策:** サポートされているデータ型の行のみを返すアクセスクエリを定義できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [Access データベースの SQL Server への移行](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   
