@@ -865,7 +865,7 @@
                       href: database-engine/availability-groups/windows/connect-to-existing-secondary-replicas-page.md
                 - name: Always On ダッシュボード
                   items:
-                    - name: オプション
+                    - name: Options
                       href: database-engine/availability-groups/windows/options-sql-server-always-on-dashboard-page.md
                     - name: ポリシー評価の結果
                       href: database-engine/availability-groups/windows/policy-evaluation-result-always-on.md
@@ -2612,7 +2612,7 @@
               href: relational-databases/native-client/features/working-with-query-notifications.md
             - name: スナップショット分離を使用した作業
               href: relational-databases/native-client/features/working-with-snapshot-isolation.md
-        - name: '[アプリケーション]'
+        - name: アプリケーション
           href: relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md
           items:
             - name: Components
@@ -3247,7 +3247,7 @@
               href: relational-databases/native-client-odbc-queries/using-statement-parameters-binding-parameters.md
             - name: ステートメント パラメーターの使用
               href: relational-databases/native-client-odbc-queries/using-statement-parameters.md
-        - name: '[結果]'
+        - name: 結果
           href: relational-databases/native-client-odbc-results/processing-results-odbc.md
           items:
             - name: ストレージの割り当て
@@ -3441,7 +3441,7 @@
               href: relational-databases/server-management-objects-smo/create-program/using-transactions.md
             - name: データ型の処理
               href: relational-databases/server-management-objects-smo/create-program/working-with-data-types.md
-        - name: 処理手順
+        - name: タスク
           items:
             - name: データベースおよびトランザクション ログのバックアップと復元
               href: relational-databases/server-management-objects-smo/tasks/backing-up-and-restoring-databases-and-transaction-logs.md
@@ -4165,10 +4165,6 @@
       items:
         - name: 新機能
           href: sql-server/install/what-s-new-in-sql-server-installation.md
-        - name: 最大容量仕様
-          href: sql-server/maximum-capacity-specifications-for-sql-server.md
-        - name: エディション別の計算容量制限
-          href: sql-server/compute-capacity-limits-by-edition-of-sql-server.md
     - name: リリース ノート
       items:
         - name: SQL Server で廃止された機能
@@ -4188,6 +4184,10 @@
     - name: 計画
       href: sql-server/install/planning-a-sql-server-installation.md
       items:
+        - name: 最大容量仕様
+          href: sql-server/maximum-capacity-specifications-for-sql-server.md
+        - name: エディション別の計算容量制限
+          href: sql-server/compute-capacity-limits-by-edition-of-sql-server.md
         - name: ハードウェアとソフトウェアの要件
           items:
             - name: SQL Server 2019
@@ -4196,11 +4196,11 @@
               href: sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md
         - name: セキュリティに関する考慮事項
           href: sql-server/install/security-considerations-for-a-sql-server-installation.md
-        - name: ネットワーク プロトコルとネットワーク ライブラリ
+        - name: ネットワーク プロトコルとライブラリ
           href: sql-server/install/network-protocols-and-network-libraries.md
-        - name: 複数のバージョンおよびインスタンスの操作
+        - name: 複数のバージョンとインスタンスの操作
           href: sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md
-        - name: ローカルの言語バージョン
+        - name: 言語バージョン
           href: sql-server/install/local-language-versions-in-sql-server.md
         - name: ファイルの場所
           href: sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md
@@ -5423,7 +5423,7 @@
                   href: relational-databases/replication/snapshot-folder.md
                 - name: ディストリビューション データベース
                   href: relational-databases/replication/distribution-database.md
-                - name: '[ディストリビューターのプロパティ]'
+                - name: ディストリビューターのプロパティ
                   href: relational-databases/replication/publishers.md
                 - name: '[ディストリビューター パスワード]'
                   href: relational-databases/replication/distributor-password.md
@@ -6747,7 +6747,7 @@
                       href: relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md
                 - name: メモリ最適化のための SSMS
                   href: relational-databases/in-memory-oltp/sql-server-management-studio-support-for-in-memory-oltp.md
-        - name: '[メジャー グループ]'
+        - name: メジャー グループ
           href: relational-databases/partitions/partitioned-tables-and-indexes.md
           items:
             - name: 作成
@@ -9837,6 +9837,8 @@
               href: linux/sql-server-linux-setup-ssis.md
             - name: SQL Server Machine Learning Services のインストール
               href: linux/sql-server-linux-setup-machine-learning.md
+            - name: Docker に SQL Server Machine Learning Services をインストールする
+              href: linux/sql-server-setup-machine-learning-docker.md
             - name: SQL Server の言語拡張をインストールする
               href: linux/sql-server-linux-setup-language-extensions.md
             - name: リポジトリの構成

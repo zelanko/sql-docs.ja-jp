@@ -2772,10 +2772,12 @@
       items:
         - name: システム要件
           href: ../connect/odbc/linux-mac/system-requirements.md
-        - name: ドライバー マネージャーのインストール
+        - name: ドライバー マネージャーをインストールする
           href: ../connect/odbc/linux-mac/installing-the-driver-manager.md
-        - name: Microsoft ODBC Driver for SQL Server をインストールする
+        - name: ODBC ドライバーをインストールする (Linux)
           href: ../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md
+        - name: ODBC ドライバーをインストールする (macOS)
+          href: ../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md
         - name: 機能ガイド
           items:
             - name: 接続文字列のキーワードとデータ ソース名 (DSN)
@@ -2918,7 +2920,7 @@
                     - name: ODBC アーキテクチャ
                       href: ../odbc/reference/odbc-architecture.md
                       items:
-                        - name: '[アプリケーション]'
+                        - name: アプリケーション
                           href: ../odbc/reference/applications.md
                         - name: ドライバー マネージャー
                           href: ../odbc/reference/the-driver-manager.md
@@ -5070,7 +5072,7 @@
       href: ../connect/oledb/when-to-use-oledb-driver-for-sql-server.md
     - name: OLE DB Driver for SQL Server の詳細情報の検索
       href: ../connect/oledb/finding-more-oledb-driver-for-sql-server-information.md
-    - name: '[機能]'
+    - name: 機能
       href: ../connect/oledb/features/oledb-driver-for-sql-server-features.md
       items:
         - name: 拡張イベント ログの診断情報へのアクセス
@@ -5121,7 +5123,7 @@
           href: ../connect/oledb/features/working-with-query-notifications.md
         - name: スナップショット分離を使用した作業
           href: ../connect/oledb/features/working-with-snapshot-isolation.md
-    - name: '[アプリケーション]'
+    - name: アプリケーション
       href: ../connect/oledb/applications/building-applications-with-oledb-driver-for-sql-server.md
       items:
         - name: OLE DB Driver for SQL Server のコンポーネント
@@ -5372,7 +5374,7 @@
             - name: 方法
               href: ../connect/oledb/ole-db-how-to/ole-db-how-to-topics.md
               items:
-                - name: '[結果]'
+                - name: 結果
                   href: ../connect/oledb/ole-db-how-to/results/processing-results-how-to-topics-ole-db.md
                   items:
                     - name: ユーザー定義関数の実行とリターン コードの処理
