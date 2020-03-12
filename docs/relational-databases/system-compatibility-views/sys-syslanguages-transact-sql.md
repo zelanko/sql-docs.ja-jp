@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: bc152b8241b775f9fd686f8a31363cb4fca39de4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 577e7467821895f530ec2f97a33a965fca808579
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/11/2020
 ms.locfileid: "70874875"
 ---
 # <a name="syssyslanguages-transact-sql"></a>sys.syslanguages (Transact-SQL)
@@ -53,13 +53,13 @@ ms.locfileid: "70874875"
 |英語での名前|Windows LCID|
   [!INCLUDE[ssDE](../../includes/ssde-md.md)] メッセージ グループ ID|  
 |---------------------|------------------|-----------------------------------------|  
-|英語|1033|1033|  
-|ドイツ語|1031|1031|  
-|フランス語|1036|1036|  
-|日本語|1041|1041|  
+|English|1033|1033|  
+|German|1031|1031|  
+|French|1036|1036|  
+|Japanese|1041|1041|  
 |デンマーク語|1030|1030|  
-|スペイン語|3082|3082|  
-|イタリア語|1040|1040|  
+|Spanish|3082|3082|  
+|Italian|1040|1040|  
 |オランダ語|1043|1043|  
 |ノルウェー語|2068|2068|  
 |ポルトガル語|2070|2070|  
@@ -72,17 +72,17 @@ ms.locfileid: "70874875"
 |クロアチア語|1050|1050|  
 |スロバキア語|1051|1051|  
 |スロヴェニア語|1060|1060|  
-|ギリシャ語|1032|1032|  
+|Greek|1032|1032|  
 |ブルガリア語|1026|1026|  
-|ロシア語|1049|1049|  
-|トルコ語|1055|1055|  
+|Russian|1049|1049|  
+|Turkish|1055|1055|  
 |英語 (U.K.)|2057|1033|  
 |エストニア語|1061|1061|  
 |ラトビア語|1062|1062|  
 |リトアニア語|1063|1063|  
 |ポルトガル語 (ブラジル)|1046|1046|  
-|繁体字中国語|1028|1028|  
-|韓国語|1042|1042|  
+|Traditional Chinese|1028|1028|  
+|Korean|1042|1042|  
 |簡体中国語|2052|2052|  
 |アラビア語|1025|1025|  
 |タイ語|1054|1054|  
