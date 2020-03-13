@@ -17,11 +17,11 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: f826ce7ff54bb28738f79fbf22c8c8435035008c
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78339045"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289450"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>Azure Key Vault を使用する拡張キー管理 (SQL Server)
   Azure Key Vault [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]用の[!INCLUDE[msCoName](../../../includes/msconame-md.md)]コネクタを[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]使用すると、暗号化キーを保護するための[拡張キー管理 &#40;EKM&#41;](extensible-key-management-ekm.md)プロバイダーとして Azure Key Vault サービスを利用できます。

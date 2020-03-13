@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0f434c5d323f2203965fd0584dbc1dbc8bd89563
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78339095"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289630"
 ---
 # <a name="sql-server-agent"></a>SQL Server エージェント
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントは、の[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]*ジョブ*と呼ばれる、スケジュールされた管理タスクを実行する Microsoft Windows サービスです。  
@@ -204,7 +204,7 @@ ms.locfileid: "78339095"
 |SQL Server エージェントのエラー ログを使用する方法について説明します。|[SQL Server エージェント エラー ログ](sql-server-agent-error-log.md)|  
 |||  
 |パフォーマンス オブジェクトを使用する方法について説明します。|[パフォーマンス オブジェクトの使用](use-performance-objects.md)|  
-|メンテナンス プラン ウィザードについて説明します。メンテナンス プラン ウィザードは、SQL Server のインスタンスを自動管理するために、ジョブ、警告、およびオペレーターを作成するのに役立つユーティリティです。|[メンテナンス プラン ウィザードの使用](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)|  
+|メンテナンス プラン ウィザードについて説明します。メンテナンス プラン ウィザードは、SQL Server のインスタンスを自動管理するために、ジョブ、警告、およびオペレーターを作成するのに役立つユーティリティです。|[メンテナンスプランウィザードの使用](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)|  
 |SQL Server エージェントを使用して管理タスクを自動化する方法について説明します。|[自動化された管理タスク &#40;SQL Server エージェント&#41;](automated-administration-tasks-sql-server-agent.md)|  
   
 ## <a name="see-also"></a>参照  

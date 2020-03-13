@@ -14,11 +14,11 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: a411290435a10e351c05e9dd1350bde597dbe449
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78339150"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289250"
 ---
 # <a name="system-settings-master-data-services"></a>システム設定 (マスター データ サービス)
   任意の [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースに関連付けられているすべての Web アプリケーションおよび Web サービスについて、システム設定を構成できます。  
@@ -132,7 +132,7 @@ ms.locfileid: "78339150"
 |**既定の電子メール形式**|**電子メール形式**|すべての電子メール通知の形式。 既定値は **[HTML]** または **1**です。 データベース設定値 **2** は、 **テキスト**を意味します。<br /><br /> 注: この設定は、ユーザーごとにオーバーライドすることができます。オーバーライドするには、[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で、ユーザーの **[全般]** タブの **[電子メールの形式]** を変更して保存します。|  
 |**電子メールアドレスの正規表現**|**EmailRegExPattern**|[ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **ユーザー/グループの権限**] 機能領域で、ユーザーの **[全般**] タブに入力された電子メールアドレスを検証するために使用する正規表現。正規表現の詳細については、MSDN ライブラリの「[正規表現言語要素](https://go.microsoft.com/fwlink/?LinkId=164401)」を参照してください。|  
 |**データベースメールアカウント**|**EmailProfilePrincipalAccount**|電子メール通知を送信するときに使用するデータベース メール アカウントを表示します。 既定のプロファイルは **mds_email_user**です。|  
-|**データベース メール プロファイル**|**DatabaseMailProfile**|電子メール通知を送信するときに使用するデータベース メール プロファイル。 既定値は空白です。|  
+|**プロファイルのデータベースメール**|**DatabaseMailProfile**|電子メール通知を送信するときに使用するデータベース メール プロファイル。 既定値は空白です。|  
 ||**Validationebook Ehtml**|HTML 形式で、ビジネス ルールによる検証が失敗したときに電子メール ユーザーが取得するテキストを示します。|  
 ||**Validationno Etext**|プレーンテキスト形式で、ビジネス ルールによる検証が失敗したときに電子メール ユーザーが取得するテキストを示します。|  
 ||**VersionStatusChangeText**|プレーンテキスト形式で、バージョンの状態が変更するときにユーザーが取得する電子メールのテキストを示します。 この電子メールを受信するのは、モデル全体に対する **[更新]** 権限を持つユーザーのみです。|  

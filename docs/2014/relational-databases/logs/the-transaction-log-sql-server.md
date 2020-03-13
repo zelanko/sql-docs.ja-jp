@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1b4a175ad850ccbb0711a0997c3658cf01497686
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78338276"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289410"
 ---
 # <a name="the-transaction-log-sql-server"></a>トランザクション ログ (SQL Server)
   すべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースにはトランザクション ログがあり、データベース内のすべてのトランザクションとそれらのトランザクションによって加えられた変更が記録されます。 トランザクション ログは、いっぱいにならないように、定期的に切り捨てる必要があります。 ただし、いくつかの要因によってログの切り捨てが遅れる可能性があるため、ログのサイズを監視することは重要です。 一部の操作は、トランザクション ログのサイズへの影響を軽減するためにログへの記録を最小限に抑えることができます。  
@@ -39,15 +39,14 @@ ms.locfileid: "78338276"
   
 -   [最小ログ記録が可能な操作](#MinimallyLogged)  
   
--   [Related Tasks](#RelatedTasks)  
+-   [関連タスク](#RelatedTasks)  
   
 ##  <a name="Benefits"></a>利点: トランザクションログでサポートされている操作  
  トランザクション ログでは、次の操作がサポートされます。  
   
 -   個別のトランザクションの復旧  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の起動時に未完了だったすべてのトランザクションの復旧  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の起動時に未完了だったすべてのトランザクションの復旧  
   
 -   復元したデータベース、ファイル、ファイル グループ、またはページの障害時点までのロールフォワード  
   
@@ -83,13 +82,12 @@ ms.locfileid: "78338276"
 |1 で保護されたプロセスとして起動されました|CHECKPOINT|最後にログの切り捨てを行ってからチェックポイントが発生していないか、ログの先頭が仮想ログ ファイルを超えて移動していない (すべての復旧モデル)。<br /><br /> これは、ログの切り捨てが遅れる一般的な原因です。 詳細については、「[データベース チェックポイント &#40;SQL Server&#41;](database-checkpoints-sql-server.md)」を参照してください。|  
 |2|LOG_BACKUP|トランザクション ログを切り捨てる前にログ バックアップが必要である (完全復旧モデルまたは一括ログ復旧モデルのみ)。<br /><br /> 次のログ バックアップが完了した時点で、ログ領域の一部が再利用可能になります。|  
 |3|ACTIVE_BACKUP_OR_RESTORE|データ バックアップまたは復元が実行中である (すべての復旧モデル)。<br /><br /> データ バックアップによってログの切り捨てが妨げられる場合、バックアップ操作を取り消すと、当面の問題には対処できます。|  
-|4|ACTIVE_TRANSACTION|トランザクションがアクティブである (すべての復旧モデル)。<br /><br /> 実行時間の長いトランザクションがログ バックアップの先頭に存在する可能性がある。 この場合、領域を解放するには再度ログ バックアップが必要になります。 実行時間の長いトランザクションにより、単純復旧モデルを含むすべての復旧モデルでのログの切り捨てが妨げられることに注意してください。この場合、通常は、各自動チェックポイントでトランザクションログが切り捨てられます。<br /><br /> トランザクションが遅延している。 
-  *遅延トランザクション* は、一部リソースが確保できないためにロールバックがブロックされている、実質的にはアクティブなトランザクションです。 遅延トランザクションの原因、およびトランザクションの遅延を解決する方法については、「[遅延トランザクション &#40;SQL Server&#41;](../backup-restore/deferred-transactions-sql-server.md)」を参照してください。 <br /><br />実行時間の長いトランザクションも、tempdb のトランザクション ログをいっぱいにする可能性があります。 tempdb は、並べ替えの作業テーブル、ハッシュの作業ファイル、カーソル作業テーブル、行のバージョン管理といった、内部オブジェクトに対するユーザー トランザクションで暗黙的に使用されます。 ユーザートランザクションにデータの読み取りのみが含まれている場合 (SELECT クエリ) でも、ユーザートランザクションで内部オブジェクトが作成され、使用されることがあります。 その結果 tempdb のトランザクション ログがいっぱいになる可能性があります。|  
+|4|ACTIVE_TRANSACTION|トランザクションがアクティブである (すべての復旧モデル)。<br /><br /> 実行時間の長いトランザクションがログ バックアップの先頭に存在する可能性がある。 この場合、領域を解放するには再度ログ バックアップが必要になります。 実行時間の長いトランザクションにより、単純復旧モデルを含むすべての復旧モデルでのログの切り捨てが妨げられることに注意してください。この場合、通常は、各自動チェックポイントでトランザクションログが切り捨てられます。<br /><br /> トランザクションが遅延している。 *遅延トランザクション* は、一部リソースが確保できないためにロールバックがブロックされている、実質的にはアクティブなトランザクションです。 遅延トランザクションの原因、およびトランザクションの遅延を解決する方法については、「[遅延トランザクション &#40;SQL Server&#41;](../backup-restore/deferred-transactions-sql-server.md)」を参照してください。 <br /><br />実行時間の長いトランザクションも、tempdb のトランザクション ログをいっぱいにする可能性があります。 tempdb は、並べ替えの作業テーブル、ハッシュの作業ファイル、カーソル作業テーブル、行のバージョン管理といった、内部オブジェクトに対するユーザー トランザクションで暗黙的に使用されます。 ユーザートランザクションにデータの読み取りのみが含まれている場合 (SELECT クエリ) でも、ユーザートランザクションで内部オブジェクトが作成され、使用されることがあります。 その結果 tempdb のトランザクション ログがいっぱいになる可能性があります。|  
 |5|DATABASE_MIRRORING|データベース ミラーリングが一時中断されるか、高パフォーマンス モードでは、ミラー データベースがプリンシパル データベースに大幅に遅れる (完全復旧モデルのみ)。<br /><br /> 詳細については、「[データベース ミラーリング &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)」を参照してください。|  
-|6|レプリケーション|トランザクション レプリケーション中、パブリケーションに関連するトランザクションがディストリビューション データベースにまだ配信されていない  (完全復旧モデルのみ)。<br /><br /> トランザクション レプリケーションの詳細については、「 [SQL Server Replication](../../relational-databases/replication/sql-server-replication.md)」を参照してください。|  
+|6|レプリケーション|トランザクション レプリケーション中、パブリケーションに関連するトランザクションがディストリビューション データベースにまだ配信されていない (完全復旧モデルのみ)。<br /><br /> トランザクション レプリケーションの詳細については、「 [SQL Server Replication](../../relational-databases/replication/sql-server-replication.md)」を参照してください。|  
 |7|DATABASE_SNAPSHOT_CREATION|データベース スナップショットが作成されている (すべての復旧モデル)。<br /><br /> これは、通常、短い時間ログの切り捨てが遅れる一般的な原因となります。|  
 |8|LOG_SCAN|ログ スキャンが行われている (すべての復旧モデル)。<br /><br /> これは、通常、短い時間ログの切り捨てが遅れる一般的な原因となります。|  
-|9|AVAILABILITY_REPLICA|可用性グループのセカンダリ レプリカが、このデータベースのトランザクション ログ レコードを対応するセカンダリ データベースに適用中である  (完全復旧モデル)。<br /><br /> 詳細については、「 [AlwaysOn 可用性グループ &#40;SQL Server&#41;の概要](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)」を参照してください。|  
+|9|AVAILABILITY_REPLICA|可用性グループのセカンダリ レプリカが、このデータベースのトランザクション ログ レコードを対応するセカンダリ データベースに適用中である (完全復旧モデル)。<br /><br /> 詳細については、「 [AlwaysOn 可用性グループ &#40;SQL Server&#41;の概要](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)」を参照してください。|  
 |10|-|内部使用のみ|  
 |11|-|内部使用のみ|  
 |12|-|内部使用のみ|  
@@ -98,7 +96,7 @@ ms.locfileid: "78338276"
 |16|XTP_CHECKPOINT|データベースにメモリ最適化ファイル グループがある場合は、自動 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] チェックポイントがトリガーされるまで (これはログが 512 MB 増加するたびに発生します)、トランザクション ログは切り捨てられません。<br /><br /> 注: 512 MB のサイズより前にトランザクションログを切り捨てるには、対象のデータベースに対して Checkpoint コマンドを手動で起動します。|  
   
 ##  <a name="MinimallyLogged"></a>最小ログ記録が可能な操作  
- *最小ログ記録*では、特定の時点への復旧をサポートせずに、トランザクションの復旧に必要な情報のみをログに記録します。 このトピックでは、一括ログ復旧モデルで (バックアップが実行されていない場合は単純復旧モデルで) 最小ログが記録される操作について説明します。  
+ *最小ログ記録* では、トランザクションの復旧に必要な情報だけが記録されます。特定の時点への復旧はサポートしません。 このトピックでは、一括ログ復旧モデルで (バックアップが実行されていない場合は単純復旧モデルで) 最小ログが記録される操作について説明します。  
   
 > [!NOTE]  
 >  最小ログ記録は、メモリ最適化テーブルではサポートされていません。  
@@ -108,7 +106,7 @@ ms.locfileid: "78338276"
   
  次に示す操作は、完全復旧モデルで完全にログ記録されますが、単純復旧モデルと一括ログ復旧モデルでは最小限にしかログ記録されません。  
   
--   一括インポート操作 ([bcp](../../tools/bcp-utility.md)、 [BULK INSERT](/sql/t-sql/statements/bulk-insert-transact-sql)、 [INSERT...SELECT](/sql/t-sql/statements/insert-transact-sql))。 テーブルへの一括インポートの最小ログ記録の詳細については、「 [Prerequisites for Minimal Logging in Bulk Import](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md)」を参照してください。  
+-   一括インポート操作 ([bcp](../../tools/bcp-utility.md)、[BULK INSERT](/sql/t-sql/statements/bulk-insert-transact-sql)、[INSERT...SELECT](/sql/t-sql/statements/insert-transact-sql))。 テーブルへの一括インポートの最小ログ記録の詳細については、「 [Prerequisites for Minimal Logging in Bulk Import](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md)」を参照してください。  
   
     > [!NOTE]  
     >  トランザクション レプリケーションが有効な場合、BULK INSERT 操作は、一括ログ復旧モデルでも完全にログ記録されます。  
@@ -127,9 +125,9 @@ ms.locfileid: "78338276"
   
 -   データベースが単純復旧モデルまたは一括ログ復旧モデルに設定されている場合、一部のインデックス DDL 操作は、オフラインで実行されても、オンラインで実行されても、最小ログ記録の対象になります。 最小ログ記録が行われるインデックス操作は、次のとおりです。  
   
-    -   [CREATE INDEX](/sql/t-sql/statements/create-index-transact-sql)操作 (インデックス付きビューを含む)。  
+    -   [CREATE INDEX](/sql/t-sql/statements/create-index-transact-sql) 操作 (インデックス付きビューを含む)。  
   
-    -   [ALTER INDEX](/sql/t-sql/statements/alter-index-transact-sql)REBUILD 操作または DBCC DBREINDEX 操作。  
+    -   [ALTER INDEX](/sql/t-sql/statements/alter-index-transact-sql) REBUILD 操作または DBCC DBREINDEX 操作。  
   
         > [!NOTE]  
         >  DBCC DBREINDEX ステートメントは非推奨とされます。新しいアプリケーションでは、これを使用しないようにしてください。  
@@ -144,13 +142,13 @@ ms.locfileid: "78338276"
   
 -   [トランザクション ログ ファイルのサイズの管理](manage-the-size-of-the-transaction-log-file.md)  
   
--   [完全なトランザクションログのトラブルシューティング &#40;SQL Server エラー 9002&#41;](troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
+-   [満杯になったトランザクション ログのトラブルシューティング &#40;SQL Server エラー 9002&#41;](troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
   
- **トランザクションログのバックアップ (完全復旧モデル)**  
+ **トランザクション ログのバックアップ (完全復旧モデル)**  
   
 -   [トランザクション ログのバックアップ &#40;SQL Server&#41;](../backup-restore/back-up-a-transaction-log-sql-server.md)  
   
- **トランザクションログの復元 (完全復旧モデル)**  
+ **トランザクション ログの復元 (完全復旧モデル)**  
   
 -  [トランザクション ログ バックアップの復元](../backup-restore/restore-a-transaction-log-backup-sql-server.md)   
   
@@ -158,8 +156,8 @@ ms.locfileid: "78338276"
  [トランザクションの持続性の制御](control-transaction-durability.md)   
  [一括インポートで最小ログ記録を行うための前提条件](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md)   
  [SQL Server データベースのバックアップと復元](../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
- [データベースチェックポイント &#40;SQL Server&#41;](database-checkpoints-sql-server.md)   
- [データベースのプロパティを表示または変更する](../databases/view-or-change-the-properties-of-a-database.md)   
+ [データベース チェックポイント &#40;SQL Server&#41;](database-checkpoints-sql-server.md)   
+ [データベースのプロパティの表示または変更](../databases/view-or-change-the-properties-of-a-database.md)   
  [復旧モデル &#40;SQL Server&#41;](../backup-restore/recovery-models-sql-server.md)  
   
   

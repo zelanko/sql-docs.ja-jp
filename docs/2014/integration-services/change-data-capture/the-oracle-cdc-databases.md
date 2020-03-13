@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 35f07d23facba97288881d7ee3c011c368d4736a
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78338995"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289270"
 ---
 # <a name="the-oracle-cdc-databases"></a>Oracle CDC データベース
   Oracle CDC インスタンスは、ターゲット [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの同名の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに関連付けられます。 このデータベースは、Oracle CDC データベース (または CDC データベース) と呼ばれます。  
@@ -94,22 +94,22 @@ ms.locfileid: "78338995"
   
  次の表に、 **cdc.xdbcdc_config** テーブルの列を示します。  
   
-|アイテム|[説明]|  
+|Item|説明|  
 |----------|-----------------|  
 |version|CDC インスタンスの構成のバージョンを追跡します。 このテーブルが更新されたり、キャプチャ インスタンスが追加または削除されたりするたびに更新されます。|  
 |connect_string|Oracle の接続文字列です。 基本的な例を以下に示します。<br /><br /> `<server>:<port>/<instance>` (例: `erp.contoso.com:1521/orcl`)<br /><br /> 接続文字列で Oracle Net 接続記述子を指定することもできます (例: `(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp) (HOST=erp.contoso.com) (PORT=1521)) (CONNECT_DATA=(SERVICE_NAME=orcl)))`)。<br /><br /> ディレクトリ サーバーまたは tnsnames を使用している場合は、接続文字列を接続の名前にすることができます。<br /><br /> Oracle の接続文字列の詳細については、[https://go.microsoft.com/fwlink/?LinkId=231153](https://go.microsoft.com/fwlink/?LinkId=231153) を参照してください。Oracle CDC Service によって使用される Oracle Instant Client の Oracle データベース接続文字列について詳しく説明されています。|  
-|use_windows_authentication|次のいずれかのブール値です。<br /><br /> **0**: 認証のために Oracle のユーザー名とパスワードを指定します (既定値)。<br /><br /> **1**: Windows 認証を使用して Oracle データベースに接続します。 このオプションは、Oracle データベースが Windows 認証と連動するように構成されている場合にのみ使用できます。|  
+|use_windows_authentication|次のいずれかのブール値です。<br /><br /> **0**:認証のために Oracle のユーザー名とパスワードを指定します (既定値)。<br /><br /> **1**:Windows 認証を使用して Oracle データベースに接続します。 このオプションは、Oracle データベースが Windows 認証と連動するように構成されている場合にのみ使用できます。|  
 |username|ログ マイニング Oracle データベース ユーザーの名前です。 **use_windows_authentication = 0**の場合のみ必須です。|  
-|パスワード|ログ マイニング Oracle データベース ユーザーのパスワードです。 **use_windows_authentication = 0**の場合のみ必須です。|  
+|password|ログ マイニング Oracle データベース ユーザーのパスワードです。 **use_windows_authentication = 0**の場合のみ必須です。|  
 |transaction_staging_timeout|メモリに保持されている、コミットされていない Oracle トランザクションが **cdc.xdbcdc_staged_transactions** テーブルに書き込まれるまでの時間 (秒) です。 既定値は 120 秒です。|  
 |memory_limit|データをメモリにキャッシュするために使用できるメモリの量の上限 (MB) です。 この値を低くすると、 **cdc.xdbcdc_staged_transactions** テーブルに書き込まれるトランザクションが増加します。 既定値は 50 MB です。|  
 |options|name[=value][; ] という形式のオプションのリストです。二次的なオプション (トレース、チューニングなど) を指定するために使用されます。 使用できるオプションについては、次の表を参照してください。|  
   
  次の表では、使用可能なオプションについて説明しています。  
   
-|Name|Default|Min|Max|静的|[説明]|  
+|名前|Default|Min|Max|静的|説明|  
 |----------|-------------|---------|---------|------------|-----------------|  
-|trace|False|-|-|False|使用可能な値:<br /><br /> **True**<br /><br /> **False**<br /><br /> **代わっ**<br /><br /> **オート**|  
+|trace|False|-|-|False|使用可能な値:<br /><br /> **True**<br /><br /> **False**<br /><br /> **on**<br /><br /> **off**|  
 |cdc_update_state_interval|10|1|120|False|トランザクションに割り当てられるメモリのチャンクのサイズ (KB) です (トランザクションは複数のチャンクを割り当てることができます)。 [cdc.xdbcdc_config](the-oracle-cdc-databases.md#bkmk_cdcxdbcdc_config) テーブルの memory_limit 列を参照してください。|  
 |target_max_batched_transactions|100|1|1000|True|SQL Server の CT テーブルの更新で 1 つのトランザクションとして処理できる Oracle トランザクションの最大数です。|  
 |target_idle_lsn_update_interval|10|0|1|False|キャプチャ対象テーブルで操作が行われていない場合に **lsn_time_mapping** テーブルを更新する間隔 (秒) です。|  
@@ -137,12 +137,12 @@ ms.locfileid: "78338995"
   
  次の表に、 **cdc.xdbcdc_state** テーブルの列を示します。  
   
-|アイテム|[説明]|  
+|Item|説明|  
 |----------|-----------------|  
 |status|現在の Oracle CDC インスタンスの現在の状態コードです。 CDC の現在の状態を表します。|  
 |sub_status|現在の状態に関する追加情報を提供する二次的な状態です。|  
-|active|次のいずれかのブール値です。<br /><br /> **0**: Oracle CDC インスタンス プロセスはアクティブではありません。<br /><br /> **1**: Oracle CDC インスタンス プロセスはアクティブです。|  
-|error|次のいずれかのブール値です。<br /><br /> **0**: Oracle CDC インスタンス プロセスはエラー状態ではありません。<br /><br /> **1**: Oracle CDC インスタンスはエラー状態です。|  
+|active|次のいずれかのブール値です。<br /><br /> **0**:Oracle CDC インスタンス プロセスはアクティブではありません。<br /><br /> **1**:Oracle CDC インスタンス プロセスはアクティブです。|  
+|error|次のいずれかのブール値です。<br /><br /> **0**:Oracle CDC インスタンス プロセスはエラー状態ではありません。<br /><br /> **1**:Oracle CDC インスタンスはエラー状態です。|  
 |status_message|エラーまたは状態の説明を表す文字列です。|  
 |timestamp|キャプチャ状態が最後に更新された時刻 (UTC) のタイムスタンプです。|  
 |active_capture_node|現在 Oracle CDC Service と (Oracle トランザクション ログを処理している) Oracle CDC インスタンスを実行しているホストの名前です (クラスターのノードの場合があります)。|  
@@ -162,10 +162,10 @@ ms.locfileid: "78338995"
   
  次の表に、cdc.xdbcdc_trace テーブルの列を示します。  
   
-|アイテム|[説明]|  
+|Item|説明|  
 |----------|-----------------|  
 |timestamp|トレース レコードが書き込まれたときの正確な UTC タイムスタンプ。|  
-|型|次のいずれかの値が格納されます。<br /><br /> ERROR<br /><br /> INFO<br /><br /> TRACE|  
+|type|次のいずれかの値が格納されます。<br /><br /> ERROR<br /><br /> INFO<br /><br /> TRACE|  
 |node|レコードが書き込まれたノードの名前。|  
 |status|状態テーブルで使用される状態コード。|  
 |sub_status|状態テーブルで使用される副状態コード。|  
@@ -177,7 +177,7 @@ ms.locfileid: "78338995"
   
  次の表に、 **cdc.xdbcdc_staged_transactions** テーブルの列を示します。  
   
-|アイテム|[説明]|  
+|Item|説明|  
 |----------|-----------------|  
 |transaction_id|ステージングされるトランザクションの一意なトランザクション識別子です。|  
 |seq_num|現在のトランザクションの **xcbcdc_staged_transactions** 行の (0 から始まる) 番号です。|  

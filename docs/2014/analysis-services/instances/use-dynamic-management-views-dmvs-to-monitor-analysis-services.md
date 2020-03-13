@@ -10,12 +10,12 @@ ms.assetid: 22b82b2d-867f-4ebf-9288-79d1cdd62f18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a02d8d5b113e4773aa7cdfbbf20975fd70218e1a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 1827cf0acf8e600c58efca82bb3223a00efb3e41
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66079580"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79217116"
 ---
 # <a name="use-dynamic-management-views-dmvs-to-monitor-analysis-services"></a>動的管理ビュー (DMV) を使用した Analysis Services の監視
   Analysis Services 動的管理ビュー (DMV) は、ローカル サーバーの操作やサーバーの正常性に関する情報を公開するクエリ構造です。 クエリ構造は、Analysis Services インスタンスのメタデータと監視情報を返すためのスキーマ行セットへのインターフェイスです。  
@@ -104,7 +104,7 @@ ORDER BY TABLE_NAME ASC
 > [!NOTE]  
 >  特定の行セットに対して DMV が使用できない場合、サーバーは " \<schemarowset> 要求の種類がサーバーで認識されませんでした" というエラーを返します。 他のすべてのエラーは、構文の問題を示します。  
   
-|[行セット]|[説明]|  
+|[行セット]|説明|  
 |------------|-----------------|  
 |[DBSCHEMA_CATALOGS 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db/dbschema-catalogs-rowset)|現在の接続の Analysis Services データベースの一覧を返します。|  
 |[DBSCHEMA_COLUMNS 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db/dbschema-columns-rowset)|現在のデータベース内のすべての列の一覧を返します。 DMV クエリを作成するために、この一覧を使用できます。|  
@@ -112,7 +112,7 @@ ORDER BY TABLE_NAME ASC
 |[DBSCHEMA_TABLES 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db/dbschema-tables-rowset)|現在のデータベース内のすべてのテーブルの一覧を返します。 DMV クエリを作成するために、この一覧を使用できます。|  
 |[DISCOVER_CALC_DEPENDENCY 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-calc-dependency-rowset)|他の列およびテーブルとの依存関係があるモデルで使用されている列およびテーブルの一覧を返します。|  
 |[DISCOVER_COMMAND_OBJECTS 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-command-objects-rowset)|参照先のコマンドによって使用されているオブジェクトに関するリソース使用量と利用状況の情報を提供します。|  
-|[DISCOVER_COMMANDS 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-commands-rowset)|現在実行されているコマンドのリソース使用状況とアクティビティ情報を提供します。|  
+|[DISCOVER_COMMANDS 行セット](https://docs.microsoft.com/analysis-services/instances/analysis-services-schema-rowsets)|現在実行されているコマンドのリソース使用状況とアクティビティ情報を提供します。|  
 |[DISCOVER_CONNECTIONS 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-connections-rowset)|Analysis Services に対して開いている接続について、リソースの使用状況とアクティビティに関する情報を提供します。|  
 |[DISCOVER_CSDL_METADATA 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-csdl-metadata-rowset)|テーブル モデルに関する情報を返します。<br /><br /> SYSTEMRESTRICTSCHEMA と追加のパラメーターが必要です。|  
 |[DISCOVER_DB_CONNECTIONS 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-db-connections-rowset)|たとえば処理中またはインポート中に、Analysis Services から外部データ ソースに対して開いている接続について、リソースの使用状況とアクティビティに関する情報を提供します。|  
@@ -159,9 +159,9 @@ ORDER BY TABLE_NAME ASC
 |[MDSCHEMA_INPUT_DATASOURCES 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-input-datasources-rowset)|現在のデータベースで定義されるデータ ソース オブジェクトに関する情報を返します。|  
 |[MDSCHEMA_KPIS 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-kpis-rowset)|現在のデータベースで定義される KPI に関する情報を返します。|  
 |[MDSCHEMA_LEVELS 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-levels-rowset)|現在のデータベースで定義される階層内のレベルに関する情報を返します。|  
-|[MDSCHEMA_MEASUREGROUP_DIMENSIONS 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-measuregroup-dimensions-rowset)|メジャー グループのディメンションを一覧表示します。|  
+|[MDSCHEMA_MEASUREGROUP_DIMENSIONS 行セット](https://docs.microsoft.com/openspecs/sql_server_protocols/ms-ssas/e6399481-a289-41f3-94d2-e081bf29e094)|メジャー グループのディメンションを一覧表示します。|  
 |[MDSCHEMA_MEASUREGROUPS 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-measuregroups-rowset)|現在の接続にあるメジャー グループの一覧を返します。|  
-|[MDSCHEMA_MEASURES 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-measures-rowset)|現在の接続にあるメジャーの一覧を返します。|  
+|[MDSCHEMA_MEASURES 行セット](https://docs.microsoft.com/openspecs/sql_server_protocols/ms-ssas/ab8e721f-9b9c-4ba1-b105-37a5f200d67c)|現在の接続にあるメジャーの一覧を返します。|  
 |[MDSCHEMA_MEMBERS 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-members-rowset)|現在の接続にあるすべてのメンバーの一覧を返し、データベース、キューブ、およびディメンションごとに一覧表示します。|  
 |[MDSCHEMA_PROPERTIES 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-properties-rowset)|プロパティの型、データ型、その他のメタデータと共に、各プロパティの完全修飾名を返します。|  
 |[MDSCHEMA_SETS 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-sets-rowset)|現在の接続で定義されるセットの一覧を表示します。|  

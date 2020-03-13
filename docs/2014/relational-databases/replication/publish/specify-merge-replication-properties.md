@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 033999701141387ee63712a8a9ce055ad3f55cb1
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78339117"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289530"
 ---
 # <a name="specify-merge-replication-properties"></a>マージレプリケーションのプロパティの指定
 このトピックでは、マージ レプリケーションのさまざまなプロパティを指定する方法について説明します。 
@@ -162,7 +162,7 @@ ms.locfileid: "78339117"
     -   **true** -アーティクルに対して列レベルの追跡を使用します。
     -   **false** -既定の行レベルの追跡を使用します。  
   
-     ** \@Force_invalidate_snapshot**と**** **force_reinit_subscription の両方に1を指定し\@** ます。  
+     ** \@Force_invalidate_snapshot**と**1** **force_reinit_subscription の両方に1を指定し\@** ます。  
 
 ## <a name="tracking-deletes"></a>削除の追跡
 

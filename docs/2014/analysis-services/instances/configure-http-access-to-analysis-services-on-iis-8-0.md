@@ -10,12 +10,12 @@ ms.assetid: cf2e2c84-0a69-4cdd-90a1-fb4021936513
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f4f911ebf60852fd4ab11c5813fc567deb2d0c87
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 8431de73b450179592bda39066c72550991a393c
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75225399"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79217078"
 ---
 # <a name="configure-http-access-to-analysis-services-on-internet-information-services-iis-80"></a>インターネット インフォメーション サービス (IIS) 8.0 上の Analysis Services への HTTP アクセスの構成
   この記事では、Analysis Services インスタンスにアクセスするために HTTP エンドポイントを設定する方法について説明します。 HTTP アクセスを有効にするには、MSMDPUMP.dll を構成します。MSMDPUMP.dll は、インターネット インフォメーション サービス (IIS) で実行され、クライアント アプリケーションと Analysis Services サーバーの間で双方向にデータをポンプする ISAPI 拡張機能です。 この方法は、BI ソリューションが次の機能を必要とする場合に、Analysis Services への接続の代わりに使用できます。  
@@ -52,7 +52,7 @@ ms.locfileid: "75225399"
   
 -   [構成をテストする](#bkmk_test)  
   
-##  <a name="bkmk_overview"></a>概要  
+##  <a name="bkmk_overview"></a> 概要  
  MSMDPUMP は、IIS に読み込まれ、ローカルまたはリモートの Analysis Services インスタンスへのリダイレクトを提供する ISAPI 拡張機能です。 この ISAPI 拡張機能を構成して、Analysis Services インスタンスへの HTTP エンドポイントを作成します。  
   
  HTTP エンドポイントごとに 1 個の仮想ディレクトリを作成し、構成する必要があります。 接続先の Analysis Services インスタンスごとに、各エンドポイントに独自の MSMDPUMP ファイル セットが必要になります。 このファイル セット内の構成ファイルで、各 HTTP エンドポイントに使用される Analysis Services インスタンスの名前を指定します。  
@@ -298,7 +298,7 @@ ms.locfileid: "75225399"
   
  `Data Source=https://<servername>/olap/msmdpump.dll; Initial Catalog=AdventureWorksDW2012; Integrated Security=Basic; User ID=XXXX; Password=XXXXX;`  
   
- プログラムからの接続の設定の詳細については、「 [Establishing Secure Connections in ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections)」を参照してください。  
+ プログラムからの接続の設定の詳細については、「 [Establishing Secure Connections in ADOMD.NET](https://docs.microsoft.com/analysis-services/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections)」を参照してください。  
   
  最後に、接続が開始されるネットワーク環境内で実行されているクライアント コンピューターを使用して、より厳密な事後テストを必ず実行するようにしてください。  
   

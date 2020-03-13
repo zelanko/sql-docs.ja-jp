@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 04f8eaf855d33faf0d2eab8fde718c92f9a24906
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78339029"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289230"
 ---
 # <a name="sql-server-backup-to-url"></a>SQL Server Backup to URL
   このトピックでは、Azure Blob ストレージサービスをバックアップ先として使用するために必要な概念、要件、およびコンポーネントについて説明します。 バックアップと復元の機能は、ディスクまたはテープを使用する場合とよく似ていますが、いくつか相違点もあります。 相違点、重要な例外、コード例についても、このトピックで説明しています。  
@@ -23,7 +23,7 @@ ms.locfileid: "78339029"
 ## <a name="requirements-components-and-concepts"></a>要件、コンポーネント、および概念  
  **このセクションの内容:**  
   
--   [セキュリティ](#security)  
+-   [Security](#security)  
   
 -   [主なコンポーネントと概念の概要](#intorkeyconcepts)  
   
@@ -225,11 +225,9 @@ ms.locfileid: "78339029"
     2.  **SQL 資格情報:** 既存の SQL Server 資格情報を指定することも、[SQL 資格情報] ボックスの横にある [**作成**] をクリックして新しい資格情報を作成することもできます。  
   
         > [!IMPORTANT]  
-        >  
-  **[作成]** をクリックすると開くダイアログでは、サブスクリプションの管理証明書または公開プロファイルが求められます。 SQL Server では現在、公開プロファイルのバージョン 2.0 がサポートされています。 公開プロファイルのサポート対象バージョンをダウンロードするには、「 [公開プロファイルのバージョン 2.0 のダウンロード](https://go.microsoft.com/fwlink/?LinkId=396421)」をご覧ください。  
+        >  **[作成]** をクリックすると開くダイアログでは、サブスクリプションの管理証明書または公開プロファイルが求められます。 SQL Server では現在、公開プロファイルのバージョン 2.0 がサポートされています。 公開プロファイルのサポート対象バージョンをダウンロードするには、「 [公開プロファイルのバージョン 2.0 のダウンロード](https://go.microsoft.com/fwlink/?LinkId=396421)」をご覧ください。  
         >   
-        >  管理証明書または公開プロファイルにアクセスできない場合は、Transact-SQL または SQL Server Management Studio を使用してストレージ アカウント名とアクセス キーの情報を指定し、SQL 資格情報を作成することができます。 Transact-sql を使用して資格情報を作成するには、「[資格情報の作成](#credential)」セクションのサンプルコードを参照してください。 または SQL Server Management Studio を使用して、データベース エンジン インスタンスから、 **[セキュリティ]** を右クリックし、 **[新規作成]**、 **[資格情報]** の順にクリックします。 
-  **[ID]** にストレージ アカウント名、 **[パスワード]** にアクセス キーを指定します。  
+        >  管理証明書または公開プロファイルにアクセスできない場合は、Transact-SQL または SQL Server Management Studio を使用してストレージ アカウント名とアクセス キーの情報を指定し、SQL 資格情報を作成することができます。 Transact-sql を使用して資格情報を作成するには、「[資格情報の作成](#credential)」セクションのサンプルコードを参照してください。 または SQL Server Management Studio を使用して、データベース エンジン インスタンスから、 **[セキュリティ]** を右クリックし、 **[新規作成]**、 **[資格情報]** の順にクリックします。 **[ID]** にストレージ アカウント名、 **[パスワード]** にアクセス キーを指定します。  
   
     3.  **Azure ストレージコンテナー:** バックアップファイルを格納する Azure storage コンテナーの名前。  
   

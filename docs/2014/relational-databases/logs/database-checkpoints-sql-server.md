@@ -27,29 +27,27 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 33f85b2f1cd8b259e46851aab818b258a6d78291
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78339310"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289400"
 ---
 # <a name="database-checkpoints-sql-server"></a>データベース チェックポイント (SQL Server)
-  このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータベース チェックポイントについて概説します。 *チェックポイント*によって、予期しないシャットダウン[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]やクラッシュの後の復旧中に、ログに含まれていた変更をが適用するための適切なポイントが作成されます。  
+  このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータベース チェックポイントについて概説します。 *チェックポイント* によって、予期しないシャットダウンやクラッシュの後の復旧中に、ログに格納されている変更を [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] が適用するための最適なポイントが作成されます。  
   
   
 ##  <a name="Overview"></a>チェックポイントの概要  
  パフォーマンス向上のため、[!INCLUDE[ssDE](../../includes/ssde-md.md)] では、メモリ (バッファー キャッシュ) にあるデータベース ページが変更されるようになり、ページが変更されるたびにディスクに書き込まれることはなくなりました。 また、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] では定期的に各データベースにチェックポイントが発行されます。 
   *チェックポイント* では、現在メモリにある修正ページ (つまり *ダーティ ページ*) とトランザクション ログ情報がメモリからディスクに書き込まれ、トランザクション ログの情報も記録されます。  
   
- 
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] では、自動、間接、手動、および内部といったチェックポイントの種類がサポートされています。 次の表は、チェックポイントの種類をまとめたものです。  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] では、自動、間接、手動、および内部といったチェックポイントの種類がサポートされています。 次の表は、チェックポイントの種類をまとめたものです。  
   
 |名前|[!INCLUDE[tsql](../../includes/tsql-md.md)] インターフェイス|説明|  
 |----------|----------------------------------|-----------------|  
 |自動|EXEC sp_configure **'`recovery interval`'、'*`seconds`*'**|`recovery interval`サーバー構成オプションによって提案された上限時間を満たすために、バックグラウンドで自動的に発行されます。 自動チェックポイントは、最後まで実行されます。  自動チェックポイントは、未処理の書き込み数と、20 ミリ秒を超える書き込み待機時間の上昇を[!INCLUDE[ssDE](../../includes/ssde-md.md)]が検出したかどうかに応じて調整されます。<br /><br /> 詳細については、「 [recovery interval サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)」を参照してください。|  
-|間接|データベースの変更...TARGET_RECOVERY_TIME **=** _target_recovery_time_ {SECONDS &#124; MINUTES} を設定します|所定のデータベースのユーザーが指定したターゲット復旧時間に合わせて、バック グラウンドで発行されます。 既定のターゲット復旧時間は 0 です。この場合、自動チェックポイント ヒューリスティックがデータベースで使用されます。 ALTER DATABASE を使用して TARGET_RECOVERY_TIME を >0 に設定した場合、サーバー インスタンスに指定された復旧間隔ではなく、この値が使用されます。<br /><br /> 詳細については、「 [データベースのターゲットの復旧時間の変更 &#40;SQL Server&#41;](change-the-target-recovery-time-of-a-database-sql-server.md)」を参照してください。|  
-|マニュアル|CHECKPOINT [ *checkpoint_duration* ]|
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] CHECKPOINT コマンドを実行すると発行されます。 接続している現在のデータベースで手動チェックポイントが作成されます。 既定では、手動のチェックポイントは最後まで実行されます。 調整は自動チェックポイントの場合と同様に行われます。  必要に応じて、 *checkpoint_duration* パラメーターを使用し、チェックポイントを完了するのに必要な時間を秒単位で指定します。<br /><br /> 詳細については、「 [CHECKPOINT &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/checkpoint-transact-sql)」を参照してください。|  
+|間接|データベースの変更...TARGET_RECOVERY_TIME **=** _target_recovery_time_ {SECONDS &#124; MINUTES} を設定します|所定のデータベースのユーザーが指定したターゲット復旧時間に合わせて、バック グラウンドで発行されます。 既定のターゲット復旧時間は 0 です。この場合、自動チェックポイント ヒューリスティックがデータベースで使用されます。 ALTER DATABASE を使用して TARGET_RECOVERY_TIME を >0 に設定した場合、サーバー インスタンスに指定された復旧間隔ではなく、この値が使用されます。<br /><br /> 詳細については、「 [データベースのターゲットの復旧時間の変更 &#40;SQL Server&#41;](change-the-target-recovery-time-of-a-database-sql-server.md)サーバー構成オプションを構成する方法について説明します。|  
+|マニュアル|CHECKPOINT [ *checkpoint_duration* ]|[!INCLUDE[tsql](../../includes/tsql-md.md)] CHECKPOINT コマンドを実行すると発行されます。 接続している現在のデータベースで手動チェックポイントが作成されます。 既定では、手動のチェックポイントは最後まで実行されます。 調整は自動チェックポイントの場合と同様に行われます。  必要に応じて、 *checkpoint_duration* パラメーターを使用し、チェックポイントを完了するのに必要な時間を秒単位で指定します。<br /><br /> 詳細については、「 [CHECKPOINT &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/checkpoint-transact-sql)」を参照してください。|  
 |内部|[なし] :|ディスク イメージがログの現在の状態と一致することを保証するために、バックアップやデータベース スナップショット作成など、さまざまなサーバー操作によって発行されます。|  
   
 > [!NOTE]  
@@ -62,7 +60,7 @@ ms.locfileid: "78339310"
   
   
   
-###  <a name="InteractionBwnSettings"></a>TARGET_RECOVERY_TIME と ' 復旧間隔 ' オプションの相互作用  
+###  <a name="InteractionBwnSettings"></a> TARGET_RECOVERY_TIME オプションと 'recovery interval' オプションの相互作用  
  次の表は、サーバー全体の**sp_configure '`recovery interval`'** 設定とデータベース固有の ALTER database の相互作用をまとめたものです。TARGET_RECOVERY_TIME 設定です。  
   
 |target_recovery_time|'recovery interval'|使用されるチェックポイントの種類|  
@@ -118,25 +116,23 @@ ms.locfileid: "78339310"
   
 -   データベースのシャットダウンが必要な動作が実行された場合。 たとえば、AUTO_CLOSE が ON に設定されていて、データベースへの最後のユーザー接続が終了した場合、またはデータベースの再起動が必要なデータベース オプションが変更された場合です。  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER) サービスを停止することによって、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが停止します。 どちらの場合でも、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスの各データベースでチェックポイントが作成されます。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER) サービスを停止することによって、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが停止します。 どちらの場合でも、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスの各データベースでチェックポイントが作成されます。  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンス (FCI) がオフラインになった場合。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンス (FCI) がオフラインになった場合。  
   
   
 ##  <a name="RelatedTasks"></a> 関連タスク  
- **サーバーインスタンスの復旧間隔を変更するには**  
+ **サーバー インスタンスで復旧間隔を変更するには**  
   
 -   [recovery interval サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)  
   
  **データベースで間接チェックポイントを構成するには**  
   
--   [データベース &#40;SQL Server のターゲットの復旧時間を変更&#41;](change-the-target-recovery-time-of-a-database-sql-server.md)  
+-   [データベースのターゲットの復旧時間の変更 &#40;SQL Server&#41;](change-the-target-recovery-time-of-a-database-sql-server.md)  
   
  **データベースで手動チェックポイントを発行するには**  
   
--   [チェックポイント &#40;Transact-sql&#41;](/sql/t-sql/language-elements/checkpoint-transact-sql)  
+-   [CHECKPOINT &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/checkpoint-transact-sql)  
   
   
 ##  <a name="RelatedContent"></a> 関連コンテンツ  

@@ -12,12 +12,12 @@ ms.assetid: 5064e35b-b70d-4a0b-a9e9-fff04162f9d2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d47c670088f088260435f9e046e0bbdbf1fb9e4a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: eed1d8d35f7b23fd93b7cfb8046e0d6115483ad5
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "73637701"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79217142"
 ---
 # <a name="upgrade-to-sql-server-2014"></a>SQL Server 2014 へのアップグレード
   
@@ -46,7 +46,7 @@ ms.locfileid: "73637701"
   
 -   [レプリケートされたデータベースのアップグレード](../../database-engine/install-windows/upgrade-replicated-databases.md)  
   
--   [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)  
+-   [Reporting Services のアップグレードと移行](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)  
   
 -   [SQL Server 管理ツールのアップグレード](upgrade-sql-server-management-tools.md)  
   
@@ -59,8 +59,8 @@ ms.locfileid: "73637701"
  [Integration Services のアップグレード](../../integration-services/install-windows/upgrade-integration-services.md)   
  [レプリケートされたデータベースのアップグレード](../../database-engine/install-windows/upgrade-replicated-databases.md)   
  [マスターデータサービスのアップグレード](upgrade-master-data-services.md)   
- [SQL Server 2005 ベストプラクティスアナライザー](https://www.microsoft.com/download/details.aspx?id=23864)   
- [SQL Server 2008 R2 ベストプラクティスアナライザー](https://www.microsoft.com/download/details.aspx?id=15289)   
+ [SQL Server 2012 ベストプラクティスアナライザー](https://www.microsoft.com/download/details.aspx?id=29302)   
+ [SQL Server 2008 R2 ベストプラクティスアナライザー](https://www.microsoft.com/download/details.aspx?id=436)   
  [旧バージョンとの互換性](../../../2014/getting-started/backward-compatibility.md)  
   
   

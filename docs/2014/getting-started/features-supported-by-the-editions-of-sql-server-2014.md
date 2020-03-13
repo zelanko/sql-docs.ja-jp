@@ -11,11 +11,11 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: caae4212e2182ae6afde29b0fed1aaee4f05645a
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78339296"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289290"
 ---
 # <a name="features-supported-by-the-editions-of-sql-server-2014"></a>SQL Server 2014 の各エディションがサポートする機能
 
@@ -34,7 +34,7 @@ ms.locfileid: "78339296"
   
  [スケーラビリティとパフォーマンス](#Scalability)  
   
- [セキュリティ](#Enterprise_security)  
+ [Security](#Enterprise_security)  
   
  [レプリケーション](#Replication)  
   
@@ -89,7 +89,7 @@ ms.locfileid: "78339296"
   
  <sup>1</sup> Enterprise Edition with Server および Client Access LICENSE (CAL) に基づくライセンス (新しい契約では利用できません) は、インスタンスあたり[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]最大20コアに制限されています。 コアベースのサーバー ライセンス モデルでは、制限はありません。 詳細については、「 [SQL Server のエディション別の計算容量制限](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)」を参照してください。  
   
-##  <a name="High_availability"></a>高可用性  
+##  <a name="High_availability"></a> 高可用性  
   
 |機能名|Enterprise|ビジネス インテリジェンス|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -355,7 +355,7 @@ ms.locfileid: "78339296"
 |翻訳|はい|はい||||||  
 |DAX 計算、DAX クエリ、MDX クエリ|はい|はい||||||  
 |行レベルのセキュリティ|はい|はい||||||  
-|[メジャー グループ]|はい|はい||||||  
+|メジャー グループ|はい|はい||||||  
 |In-Memory および DirectQuery ストレージ モード (テーブルのみ)|はい|はい||||||  
   
 ###  <a name="PowerPivot"></a>PowerPivot for SharePoint  

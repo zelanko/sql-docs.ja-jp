@@ -10,12 +10,12 @@ ms.assetid: 29a00a41-5b0d-44b2-8a86-1b16fe507768
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9b6516c427f15c960c6bfb459c4fc375e798b798
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 7cd6ea975462a7967c7938de8900d5b1877ff524
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67046674"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79217063"
 ---
 # <a name="connection-string-properties-analysis-services"></a>接続文字列プロパティ (Analysis Services)
   このトピックでは、接続文字列プロパティについて説明します。接続文字列プロパティは、いずれかのデザイナー ツールまたは管理ツールで設定できます。また、Analysis Services データに接続および照会するクライアント アプリケーションによって作成された接続文字に表示されることもあります。 そのため、使用できるプロパティのサブセットについてのみ説明します。 完全な一覧には、多くのサーバー プロパティおよびデータベース プロパティが含まれます。それらを使用すると、サーバーでインスタンスまたはデータベースを構成している方法に関係なく、特定のアプリケーションの接続をカスタマイズできます。  
@@ -48,14 +48,14 @@ ms.locfileid: "67046674"
 ##  <a name="bkmk_common"></a>一般的に使用される接続パラメーター  
  次の表では、接続文字列を作成する際に最もよく使用されるプロパティについて説明します。  
   
-|プロパティ|[説明]|例|  
+|プロパティ|説明|例|  
 |--------------|-----------------|-------------|  
-|`Data Source`もしくは`DataSource`|サーバー インスタンスを指定します。 このプロパティは、すべての接続に必要です。 有効な値には、サーバーのネットワーク名または IP アドレス、ローカル接続の local または localhost、URL (サーバーが HTTP または HTTPS アクセス用に構成されている場合)、またはローカル キューブ (.cub) ファイルの名前があります。|
+|`Data Source` または `DataSource`|サーバー インスタンスを指定します。 このプロパティは、すべての接続に必要です。 有効な値には、サーバーのネットワーク名または IP アドレス、ローカル接続の local または localhost、URL (サーバーが HTTP または HTTPS アクセス用に構成されている場合)、またはローカル キューブ (.cub) ファイルの名前があります。|
   `Data source=AW-SRV01` : 既定のインスタンスとポート (TCP 2383) の場合。<br /><br /> 
   `Data source=AW-SRV01$Finance:8081` : 名前付きインスタンス ($Finance) と固定ポートの場合。<br /><br /> 
   `Data source=AW-SRV01.corp.Adventure-Works.com` : 完全修飾ドメイン名の場合。既定のインスタンスとポートを想定しています。<br /><br /> 
   `Data source=172.16.254.1` : サーバーの IP アドレスの場合。DNS サーバーの参照をバイパスします。接続の問題をトラブルシューティングする場合に便利です。|  
-|`Initial Catalog`もしくは`Catalog`|接続先の Analysis Services データベースの名前を指定します。 データベースが Analysis Services に配置されており、データベースに接続するための権限を持っている必要があります。 このプロパティは、AMO 接続では省略できますが、ADOMD.NET では必須です。|`Initial catalog=AdventureWorks2012`|  
+|`Initial Catalog` または `Catalog`|接続先の Analysis Services データベースの名前を指定します。 データベースが Analysis Services に配置されており、データベースに接続するための権限を持っている必要があります。 このプロパティは、AMO 接続では省略できますが、ADOMD.NET では必須です。|`Initial catalog=AdventureWorks2012`|  
 |`Provider`|有効な値は、MSOLAP または MSOLAP です。\<バージョン>。 \<version> は3、4、5のいずれかになります。 ファイル システム上では、データ プロバイダーの名前は、msolap110.dll (Server 2012 バージョン)、msolap100.dll (SQL Server SQL Server 2008 および 2008 R2)、および msolap90.dll (SQL Server 2005) です。<br /><br /> 現在のバージョンは、MSOLAP.5 です。 このプロパティは省略可能です。 既定では、クライアント ライブラリは、レジストリから現在のバージョンの OLE DB プロバイダーを読み取ります。 SQL Server 2008 インスタンスに接続するなど、特定のバージョンのデータ プロバイダーが必要な場合のみ、このプロパティを設定する必要があります。<br /><br /> データ プロバイダーは、SQL Server のバージョンに対応しています。 現在と以前のバージョンの Analysis Services を使用している場合は、通常、手動で作成した接続文字列で使用するプロバイダーを指定する必要があります。 また、必要なバージョンがインストールされていないコンピューターでは、特定のバージョンのデータ プロバイダーをダウンロードしてインストールすることが必要になる場合もあります。 OLE DB プロバイダーは、ダウンロード センターの SQL Server Feature Pack のページからダウンロードできます。 SQL Server 2012 用の Analysis Services OLE DB プロバイダーをダウンロードするには、「 [Microsoft SQL Server 2012 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=296473) 」にアクセスしてください。<br /><br /> MSOLAP.4 は、SQL Server 2008 と SQL Server 2008 R2 の両方でリリースされました。 2008 R2 バージョンは、PowerPivot ブックをサポートしており、SharePoint サーバーに手動でインストールすることが必要な場合があります。 これらのバージョンを区別するには、プロバイダーのファイル プロパティでビルド番号を確認する必要があります。それには、Program files\Microsoft Analysis Services\AS OLEDB\10 に移動します。 msolap110.dll を右クリックし、 **[プロパティ]** をクリックします。 [**詳細**] をクリックします。 ファイルのバージョン情報が表示されます。 バージョンには10.50 が含まれている必要があります。\<SQL Server 2008 R2 の>。 詳細については、「 [SharePoint サーバーへの Analysis Services OLE DB プロバイダーのインストール](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md) 」および「 [Analysis Services 接続に使用するデータ プロバイダー](data-providers-used-for-analysis-services-connections.md)」を参照してください。<br /><br /> MSOLAP. 3 は SQL Server 2005 でリリースされました。<br /><br /> SQL Server 2008 で MSOLAP. 4 がリリースされ、SQL Server 2008 R2<br /><br /> MSOLAP. 5 は SQL Server 2012 でリリースされました|
   `Provider=MSOLAP.3` は、SQL Server 2005 バージョンの OLE DB Provider for Analysis Services を必要とする接続に使用します。|  
 |`Cube`|キューブ名またはパースペクティブ名。 データベースには、複数のキューブおよびパースペクティブを含めることができます。 複数の対象が考えられる場合は、接続文字列にキューブ名またはパースペクティブ名を含めます。|
@@ -66,7 +66,7 @@ ms.locfileid: "67046674"
   
  プロパティは、アルファベット順に示しています。  
   
-|プロパティ|[説明]|  
+|プロパティ|説明|  
 |--------------|-----------------|  
 |`EffectiveUserName`|サーバーでエンド ユーザー ID の権限を借用する必要がある場合に使用します。 アカウントを domain\user という形式で指定します。 このプロパティを使用するには、呼び出し元に Analysis Services に対する管理権限が必要です。 SharePoint から Excel ブックのこのプロパティを使用する方法の詳細については、「 [SharePoint Server 2013 で Analysis Services の EffectiveUserName を使用する](https://go.microsoft.com/fwlink/?LinkId=311905)」をご覧ください。 Reporting Services でこのプロパティを使用する方法の詳細については、「 [SSAS での EffectiveUserName を使用した権限の借用](https://www.artisconsulting.com/blogs/greggalloway/2010/4/1/using-effectiveusername-to-impersonate-in-ssas)」をご覧ください。<br /><br /> 
   `EffectiveUserName` は、PowerPivot for SharePoint のインストールで使用情報を取得する場合に使用します。 ユーザー ID を含むイベントまたはエラーをログ ファイルに記録できるように、ユーザー ID がサーバーに渡されます。 PowerPivot の場合、承認には使用されません。|  
@@ -77,7 +77,7 @@ ms.locfileid: "67046674"
   `SSPI` を使用する場合、`ProtectionLevel` を `Connect`、`PktIntegrity`、`PktPrivacy` のいずれかに設定する必要があります。|  
 |`Persist Encrypted`|クライアント アプリケーションでデータ ソース オブジェクトに暗号化された形式で秘密の認証情報 (パスワードなど) を保存する必要がある場合に、このプロパティを設定します。 既定では、認証情報は保存されません。|  
 |`Persist Security Info`|有効値は True および False です。 True に設定した場合、以前に接続文字列に指定したユーザー ID やパスワードなどのセキュリティ情報を接続の確立後に接続から取得できます。 既定値は False です。|  
-|`ProtectionLevel`|接続で使用するセキュリティ レベルを指定します。 有効な値は次のとおりです。<br /><br /> `None`. 未認証の接続または匿名接続。 サーバーに送信されるデータの認証は行われません。<br /><br /> `Connect`. 認証された接続。 クライアントがサーバーとのリレーションシップを確立するときにのみ認証が行われます。<br /><br /> `PktIntegrity`. 暗号化された接続。 すべてのデータが正しいクライアントから受信されていること、および転送中に変更されていないことが確認されます。<br /><br /> `PktPrivacy`. 署名された暗号化 (XMLA でのみサポートされます)。 すべてのデータが正しいクライアントから受信されていること、および転送中に変更されておらず、暗号化することでデータのプライバシーが保護されていることが確認されます。<br /><br /> <br /><br /> 詳細については、「 [Establishing Secure Connections in ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections)」をご覧ください。|  
+|`ProtectionLevel`|接続で使用するセキュリティ レベルを指定します。 有効な値は次のとおりです。<br /><br /> `None`. 未認証の接続または匿名接続。 サーバーに送信されるデータの認証は行われません。<br /><br /> `Connect`. 認証された接続。 クライアントがサーバーとのリレーションシップを確立するときにのみ認証が行われます。<br /><br /> `PktIntegrity`. 暗号化された接続。 すべてのデータが正しいクライアントから受信されていること、および転送中に変更されていないことが確認されます。<br /><br /> `PktPrivacy`. 署名された暗号化 (XMLA でのみサポートされます)。 すべてのデータが正しいクライアントから受信されていること、および転送中に変更されておらず、暗号化することでデータのプライバシーが保護されていることが確認されます。<br /><br /> <br /><br /> 詳細については、「 [Establishing Secure Connections in ADOMD.NET](https://docs.microsoft.com/analysis-services/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections)」をご覧ください。|  
 |`Roles`|定義済みロールのコンマ区切りの一覧を指定します。そのロールによって与えられる権限を使用して、サーバーまたはデータベースに接続します。 このプロパティを省略した場合、すべてのロールを使用し、有効な権限はすべてのロールの組み合わせになります。 プロパティを空の値 (Roles = ' ' など) に設定すると、クライアント接続にロールのメンバーシップはありません。<br /><br /> このプロパティを使用した管理者は、ロールによって与えられた権限を使用して接続します。 ロールによって与えられた権限が十分でない場合、コマンドが失敗することがあります。|  
 |`SSPI`|
   `Integrated Security` が `SSPI` に設定されているときにクライアント認証に使用するセキュリティ パッケージを明示的に指定します。 SSPI では複数のパッケージがサポートされていますが、このプロパティを使用すると特定のパッケージを指定できます。 有効な値は、Negotiate、Kerberos、NTLM、および Anonymous User です。 このプロパティを設定しない場合、接続ですべてのパッケージを使用できます。|  
@@ -92,7 +92,7 @@ ms.locfileid: "67046674"
   
  プロパティは、アルファベット順に示しています。  
   
-|プロパティ|[説明]|  
+|プロパティ|説明|  
 |--------------|-----------------|  
 |`Application Name`|接続に関連付けられたアプリケーションの名前を設定します。 この値は、トレース イベントを監視する場合 (特に、同じデータベースにアクセスするアプリケーションが複数ある場合) に役立ちます。 たとえば、接続文字列に Application Name = ' test ' を追加すると、次のスクリーンショットに示すように、SQL Server プロファイラートレースに ' test ' が表示されます。<br /><br /> ![SSAS_AppNameExcample](../media/ssas-appnameexcample.gif "SSAS_AppNameExcample")<br /><br /> このプロパティの別名には、`sspropinitAppName` および `AppName` があります。 詳細については、「 [SQL Server に接続する場合の Application Name パラメーターの使用](https://www.connectionstrings.com/use-application-name-sql-server/)」をご覧ください。|  
 |`AutoSyncPeriod`|クライアントとサーバーのキャッシュを同期する頻度 (ミリ秒単位) を設定します。 ADOMD.NET には、最小限のメモリ オーバーヘッドが発生する、よく使用されるオブジェクトのために、クライアント キャッシュが用意されています。 これは、サーバーへのラウンド トリップを減らすのに役立ちます。 既定値は 10,000 ミリ秒 (10 秒) です。 null または 0 に設定した場合、自動同期は無効になります。|  

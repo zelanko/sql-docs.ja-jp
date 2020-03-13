@@ -20,12 +20,12 @@ ms.assetid: 46388efb-3c78-47a2-b5c9-5a69ff394d03
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9e3db19179e74b20837f58602a236721debc18b2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 0d6bea885a03d09da28d5f49ada36cf17375a507
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66073834"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79217149"
 ---
 # <a name="multidimensional-model-data-access-analysis-services---multidimensional-data"></a>多次元モデルのデータ アクセス (Analysis Services - 多次元データ)
   このトピックには、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] の多次元データにアクセスするために役立つ情報が記載されています。ネットワーク上の [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] サーバーに接続するための機能が組み込まれたクライアント アプリケーションのほか、プログラミングによる手法やスクリプトを使用した方法を取り上げます。  
@@ -86,10 +86,10 @@ ms.locfileid: "66073834"
   
  Analysis Services をカスタム アプリケーションに接続するためのクライアント ライブラリについて、より詳しい情報とリンクを次の表に示します。  
   
-|インターフェイス|[説明]|  
+|インターフェイス|説明|  
 |---------------|-----------------|  
 |Analysis Services 管理オブジェクト (AMO)|AMO は、Analysis Services のインスタンスと多次元データベースをコードで管理するための主要なオブジェクト モデルです。 たとえば、SQL Server Management Studio では、サーバーとデータベースの管理をサポートするために AMO が使用されています。 詳細については、「[分析管理オブジェクト (AMO) による開発](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)」を参照してください。|  
-|ADOMD.NET|ADOMD.NET は、カスタム アプリケーションから多次元データを作成し、利用するための主要なオブジェクト モデルです。 マネージド クライアント アプリケーションでは ADOMD.NET を使用して、共通の Microsoft .NET Framework データ アクセス インターフェイスを経由して [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 情報を取得できます。 詳細については、「 [ADOMD.NET での開発](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net) 」と「 [ADOMD.NET クライアント プログラミング](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/adomd-net-client-programming)」を参照してください。|  
+|ADOMD.NET|ADOMD.NET は、カスタム アプリケーションから多次元データを作成し、利用するための主要なオブジェクト モデルです。 マネージド クライアント アプリケーションでは ADOMD.NET を使用して、共通の Microsoft .NET Framework データ アクセス インターフェイスを経由して [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 情報を取得できます。 詳細については、「 [ADOMD.NET での開発](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net) 」と「 [ADOMD.NET クライアント プログラミング](https://docs.microsoft.com/analysis-services/adomd/multidimensional-models-adomd-net-client/adomd-net-client-programming)」を参照してください。|  
 |Analysis Services OLE DB Provider (MSOLAP.dll)|ネイティブ OLE DB プロバイダーを使用すると、プログラムで非マネージ API から [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] にアクセスすることができます。 詳細については、「[Analysis Services OLE DB Provider (Analysis Services - 多次元データ)](../../dev-guide/analysis-services-ole-db-provider-analysis-services-multidimensional-data.md)」を参照してください。|  
 |スキーマ行セット|スキーマ行セットのテーブルは、サーバーに配置された多次元モデルについての説明情報と、サーバー上の現在のアクティビティに関する情報を格納するデータ構造です。 プログラマは、クライアント アプリケーションからスキーマ行セットのテーブルをクエリすることによって、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] インスタンスに格納されているメタデータを調べたり、サポート情報や監視情報を取得したりすることができます。 スキーマ行セットは、OLE DB、OLE DB for Analysis Services、OLE DB for Data Mining、XMLA のいずれかのプログラム インターフェイスで利用できます。 詳細については、「 [Analysis Services のスキーマ行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets)」をご覧ください。<br /><br /> 次の一覧では、スキーマ行セットを使用するためのいくつかの方法について説明します。<br /><br /> SQL Server Management Studio またはカスタム レポートから、SQL 構文を使用して DMV クエリを実行し、スキーマ行セットにアクセスする。 詳細については、「[動的管理ビュー (DMV) を使用した Analysis Services の監視](../../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)」を参照してください。<br /><br /> スキーマ行セットを呼び出す ADOMD.NET コードを作成する。<br /><br /> XMLA `Discover` メソッドを [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] インスタンスに対して直接実行し、スキーマ行セット情報を取得する。 詳細については、「[Discover メソッド (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-discover)」を参照してください。|  
 |XMLA|XMLA は、Analysis Services のプログラマが利用できる最下層の API であり、Analysis Services データに対するあらゆるアクセス手法の下に横たわる共通の基盤です。 XMLA は、SOAP ベースの業界標準の XML プロトコルで、HTTP 接続で利用できるあらゆる標準的な多次元データ ソースへの汎用データ アクセスをサポートします。 多次元データの要求と応答は SOAP を使用して作成されます。 アプリケーションが Windows 以外のプラットフォームで実行されている場合は、ネットワーク上の Windows サーバーで運用されている多次元データベースに、XMLA を使用してアクセスできます。 詳細については、「 [Analysis Services での XMLA による開発](../../multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)」を参照してください。|  

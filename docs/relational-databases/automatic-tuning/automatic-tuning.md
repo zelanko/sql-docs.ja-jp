@@ -14,12 +14,12 @@ ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4ad185085c19d8286fa6a09e46742860a948849a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 365834e3c1cd239a245c1523947a359b7c2dcc57
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67934556"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289120"
 ---
 # <a name="automatic-tuning"></a>自動チューニング
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -89,13 +89,13 @@ SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
 は最適なプランを適用できる必要があるため[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 、手動で強制されたプランを強制的に強制しないようにする必要があります。 ユーザーまたは DBA は、最終的にはプロシージャを`sp_query_store_unforce_plan`使用してプランを[!INCLUDE[ssde_md](../../includes/ssde_md.md)]強制解除し、最適なプランを検索できるようにする必要があります。 
 
 > [!TIP]
-> Alternativelly では、[強制され**たプランを含むクエリ**クエリストア] ビューを使用して、プランを検索して強制しないようにします。
+> または、[**強制されたプランを含むクエリ**クエリストア] ビューを使用して、プランを検索して強制しないようにします。
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]クエリストアのパフォーマンスを監視し、問題を修正するために必要なすべてのビューと手順について説明します。
 
 で[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]は、クエリストアシステムビューを使用して、プラン選択の回帰を見つけることができます。 で[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]は、 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]によって、プランの選択による回帰が検出され、 [dm_db_tuning_recommendations &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)ビューで適用される推奨の操作が示されます。 ビューには、問題に関する情報、問題の重要度、および特定されたクエリ、低下したプランの ID、比較の基準として使用されたプランの ID、および問題を解決[!INCLUDE[tsql_md](../../includes/tsql-md.md)]するために実行できるステートメントなどの詳細が表示されます。
 
-| 型 | description | DATETIME | スコア | details | ... |
+| type | description | DATETIME | スコア | details | ... |
 | --- | --- | --- | --- | --- | --- |
 | `FORCE_LAST_GOOD_PLAN` | CPU 時間が4ミリ秒から14ミリ秒に変更されました | 3/17/2017 | 83 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |
 | `FORCE_LAST_GOOD_PLAN` | CPU 時間が37ミリ秒から84ミリ秒に変更されました | 3/16/2017 | 26 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |
@@ -188,5 +188,5 @@ CROSS APPLY OPENJSON (Details, '$.planForceDetails')
  [実行プラン](../../relational-databases/performance/execution-plans.md)    
  [パフォーマンスの監視とチューニング](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
  [パフォーマンス監視およびチューニング ツール](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)     
- [クエリのストアを使用した、パフォーマンスの監視](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
+ [クエリストアを使用したパフォーマンスの監視](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
  [クエリ調整アシスタント](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)

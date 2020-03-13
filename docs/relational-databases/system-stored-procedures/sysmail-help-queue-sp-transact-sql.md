@@ -18,11 +18,11 @@ ms.assetid: 94840482-112c-4654-b480-9b456c4c2bca
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d506d7ea841e211d9ab6fb0715a6a9359cefa83d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "72305215"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79289950"
 ---
 # <a name="sysmail_help_queue_sp-transact-sql"></a>sysmail_help_queue_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sysmail_help_queue_sp  [ @queue_type = ] 'queue_type'
 |列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
 |**queue_type**|**nvarchar (6)**|キューの種類。 指定できる値は、 **mail**および**status**です。|  
-|**数**|**int**|指定したキュー内のメール アイテムの数。|  
+|**length**|**int**|指定したキュー内のメール アイテムの数。|  
 |**状態**|**nvarchar (64)**|モニターの状態です。 有効な値は、[**非**アクティブ] (キューが非アクティブ)、**通知**された (キューの通知が受信されたことを示す)、 **RECEIVES_OCCURRING** (キューは受信中) です。|  
 |**last_empty_rowset_time**|**/**|キューが最後に空だった日付と時刻。 [軍用時刻形式] と [GMT タイムゾーン]。|  
 |**last_activated_time**|**/**|キューが最後にアクティブ化された日時。 [軍用時刻形式] と [GMT タイムゾーン]。|  
