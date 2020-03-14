@@ -220,6 +220,10 @@
               href: big-data-cluster/spark-hive-tools-vscode.md
             - name: 拡張された Spark History Server を使用する
               href: big-data-cluster/spark-history-server.md
+        - name: トラブルシューティング
+          items:
+            - name: Active Directory を展開する
+              href: big-data-cluster/troubleshoot-active-directory.md
     - name: リファレンス
       items:
         - name: 展開リファレンス
