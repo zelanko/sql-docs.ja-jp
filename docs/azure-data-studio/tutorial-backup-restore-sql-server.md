@@ -11,13 +11,13 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 11/04/2019
 ms.openlocfilehash: bdf3bb3151cfac9f68a9765a2c59232b9fb59f56
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "73532473"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79287216"
 ---
-# <a name="backup-and-restore-databases-using-includename-sosincludesname-sos-shortmd"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)] を使用してデータベースをバックアップし、復元する
+# <a name="backup-and-restore-databases-using-name-sos"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)] を使用してデータベースをバックアップし、復元する
 
 このチュートリアルでは、次の目的で [!INCLUDE[name-sos](../includes/name-sos-short.md)] を使用する方法について学習します。
 > [!div class="checklist"]

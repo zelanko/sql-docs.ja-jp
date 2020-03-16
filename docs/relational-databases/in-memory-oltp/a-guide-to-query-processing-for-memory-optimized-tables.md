@@ -11,12 +11,12 @@ ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 652d37ec9f19ccc91e1e0d472cb98d734b65df52
-ms.sourcegitcommit: 99ce0c9b28283d292d19637def982e971115dfbc
+ms.openlocfilehash: 8aae0e199fa1e82116baf0164b0d5c11b68e3711
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77125289"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112344"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>メモリ最適化テーブルのクエリ処理のガイド
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ CREATE INDEX IX_OrderDate ON dbo.[Order](OrderDate)
 GO  
 ```  
   
- ここでは、クエリ プランを構築できるように、2 個のテーブルに Northwind サンプル データベースのサンプル データが読み込まれています。このサンプル データベースは「 [SQL Server 2000 用の Northwind サンプル データベースと pubs サンプル データベース](https://www.microsoft.com/download/details.aspx?id=23654)」からダウンロードできます。  
+ ここでは、クエリ プランを構築できるように、2 個のテーブルに Northwind サンプル データベースのサンプル データが読み込まれています。このサンプル データベースは「 [SQL Server 2000 用の Northwind サンプル データベースと pubs サンプル データベース](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/northwind-pubs)」からダウンロードできます。  
   
  次のクエリについて考えてみます。このクエリでは、Customer テーブルと Order テーブルを結合し、注文の ID および関連付けられた顧客情報を返します。  
   

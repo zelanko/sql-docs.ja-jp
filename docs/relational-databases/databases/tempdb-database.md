@@ -18,11 +18,11 @@ ms.author: sstein
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 46807e551052ca6da38fde744d9a1e9dd7c794b0
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78338772"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79288496"
 ---
 # <a name="tempdb-database"></a>TempDB データベース
 
@@ -204,7 +204,7 @@ GO
 - 一時テーブルとテーブル変数はキャッシュされます。 キャッシュを使用することで、一時オブジェクトを削除および作成する操作を非常に高速に実行でき、ページ割り当ての競合が減少します。  
 - 割り当てページのラッチ プロトコルが改善され、使用される UP (更新) ラッチの回数が減っています。  
 - **TempDB** のログ記録オーバーヘッドが減少し、**TempDB** ログ ファイルのディスク I/O 帯域幅消費が減少しました。  
-- セットアップによって、新しいインスタンスのインストール中に複数の TempDB データ ファイルが追加されます。 この操作を実行するには、**[データベース エンジンの構成]** セクションの新しい UI 入力コントロールまたはコマンドライン パラメーター `/SQLTEMPDBFILECOUNT` を使用します。 既定では、セットアップ時に、論理プロセッサ数または 8 のいずれか小さい方と同数の TempDB データ ファイルが追加されます。  
+- セットアップによって、新しいインスタンスのインストール中に複数の TempDB データ ファイルが追加されます。 この操作を実行するには、 **[データベース エンジンの構成]** セクションの新しい UI 入力コントロールまたはコマンドライン パラメーター `/SQLTEMPDBFILECOUNT` を使用します。 既定では、セットアップ時に、論理プロセッサ数または 8 のいずれか小さい方と同数の TempDB データ ファイルが追加されます。  
 - 複数の **TempDB** データ ファイルがある場合は、拡張設定に応じて、すべてのファイルが同時に同量ずつ自動拡張されます。 [トレース フラグ 1117](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) は必須ではなくなりました。  
 - **TempDB** 内のすべての割り当てで単一エクステントが使用されます。 [トレース フラグ 1118](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) は必須ではなくなりました。  
 - プライマリ ファイル グループの場合は、AUTOGROW_ALL_FILES プロパティがオンで、プロパティは変更できません。
@@ -264,7 +264,7 @@ ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON
 SELECT SERVERPROPERTY('IsTempdbMetadataMemoryOptimized')
 ```
 
-メモリ最適化 TempDB メタデータを有効にした後で、何らかの理由でサーバーの起動に失敗した場合は、**-f** スタートアップ オプションを使用して[最小構成](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md)で SQL Server を開始することで、この機能を回避できます。 これにより、この機能を無効にしてから、通常モードで SQL Server を再起動することができます。
+メモリ最適化 TempDB メタデータを有効にした後で、何らかの理由でサーバーの起動に失敗した場合は、 **-f** スタートアップ オプションを使用して[最小構成](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md)で SQL Server を開始することで、この機能を回避できます。 これにより、この機能を無効にしてから、通常モードで SQL Server を再起動することができます。
 
 ## <a name="capacity-planning-for-tempdb-in-sql-server"></a>SQL Server の TempDB に使用するディスク領域の計画
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 運用環境での TempDB の適切なサイズを判断するには、多くの要因が関係します。 この記事で前述されているように、これらの要因には既存のワークロードや使用されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の機能などがあります。 SQL Server のテスト環境で次のタスクを実行して、既存のワークロードを分析することをお勧めします。

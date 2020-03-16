@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5c236ddc-766d-4a30-af1e-cc6176eca690
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: fade5e48340e8cc2b51b354f9717a561c632e4d3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 19479786362d6773339cc30953451f02e466c2ec
+ms.sourcegitcommit: 6e7696a169876eb914f79706d022451a1213eb6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68028630"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375559"
 ---
 # <a name="sql-server-browser-service-database-engine-and-ssas"></a>SQL Server Browser サービス (データベース エンジンと SSAS)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "68028630"
   
  起動時に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser が開始されて UDP ポート 1434 が要求されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser はレジストリを読み取って、コンピューター上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのインスタンスを識別し、使用されているポートと名前付きパイプを確認します。 サーバーに複数のネットワーク カードがある場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser が最初に検出したポートを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に返します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser では ipv6 と ipv4 をサポートしています。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クライアントが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リソースを要求すると、ポート 1434 を使用しているサーバーにクライアント ネットワーク ライブラリが UDP メッセージを送信します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser は、要求されたインスタンスの TCP/IP ポートまたは名前付きパイプで応答します。 その後、クライアント アプリケーションのネットワーク ライブラリが、目的のインスタンスのポートまたは名前付きパイプを使用しているサーバーに要求を送って接続を完了します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser では既定のインスタンスのポート情報は返されません。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クライアントが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リソースを要求すると、ポート 1434 を使用しているサーバーにクライアント ネットワーク ライブラリが UDP メッセージを送信します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser は、要求されたインスタンスの TCP/IP ポートまたは名前付きパイプで応答します。 その後、クライアント アプリケーションのネットワーク ライブラリが、目的のインスタンスのポートまたは名前付きパイプを使用しているサーバーに要求を送って接続を完了します。 
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser サービスの開始と停止の詳細については、「 [データベース エンジン、SQL Server エージェント、SQL Server Browser サービスの開始、停止、一時停止、再開、および再起動](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)」を参照してください。  
   

@@ -22,11 +22,11 @@ ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: pmasl
 ms.author: mikeray
 ms.openlocfilehash: a9e617488ac0543dd7794cce37137518c1422c80
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "69028739"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79288356"
 ---
 # <a name="server-memory-configuration-options"></a>サーバー メモリの構成オプション
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "69028739"
 
 <sup>2</sup> 現在のホストで関連付けられている所与の CPU 数に対して計算される既定のワーカー スレッドについては、ドキュメント ページの「[max worker threads サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md)」を参照してください。
 
-## <a name="how-to-configure-memory-options-using-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を利用してメモリ オプションを構成する方法  
+## <a name="how-to-configure-memory-options-using-ssmanstudiofull"></a>[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を利用してメモリ オプションを構成する方法  
 **min server memory** および **max server memory**の 2 つのサーバー メモリ オプションを使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス用に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Memory Manager によって管理されるメモリ量を MB 単位で再構成します。 既定では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は使用可能なシステム リソースに基づいて、必要なメモリを動的に変更できます。  
   
 ### <a name="procedure-for-configuring-a-fixed-amount-of-memory-not-recommended"></a>固定量のメモリを構成する手順 (非推奨)  
@@ -105,7 +105,7 @@ lock pages in memory オプションを有効にするには:
   
 6.  **[ローカル セキュリティ ポリシーの設定]** ダイアログ ボックスで、sqlservr.exe の実行権限のあるアカウント ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 開始アカウント) を追加します。  
   
-## <a name="running-multiple-instances-of-includessnoversionincludesssnoversion-mdmd"></a>複数の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの実行  
+## <a name="running-multiple-instances-of-ssnoversion"></a>複数の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの実行  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]の複数のインスタンスを実行する場合は、3 つの方法でメモリを管理できます。  
   
 -   **max server memory** を使用し、[上記](#max_server_memory)のようにメモリ使用量を制御します。 許可する値の合計がコンピューターの合計物理メモリを超えないように注意して、各インスタンスの最大値を設定します。 予測されるワークロードまたはデータベース サイズに比例して、各インスタンスにメモリを割り当てることができます。 この方法の利点は、新しいプロセスまたはインスタンスが起動したときに、直ちに空きメモリを使用できることです。 欠点は、実行していないインスタンスがある場合、残っている空きメモリを実行中のインスタンスが利用できないことです。  

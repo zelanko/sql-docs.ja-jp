@@ -15,11 +15,11 @@ ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: aba8d7e3dc7aaf48523303ad6f63682c888b3c46
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74095693"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79286976"
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>チュートリアル:Azure Blob Storage サービスと SQL Server 2016 データベースの使用
 

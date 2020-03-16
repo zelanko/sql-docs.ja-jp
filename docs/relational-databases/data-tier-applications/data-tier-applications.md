@@ -15,11 +15,11 @@ ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2068c9a4daa05ec659fa074f431b86f7fee7bc81
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "72278287"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79287586"
 ---
 # <a name="data-tier-applications"></a>データ層アプリケーション
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -107,7 +107,7 @@ ms.locfileid: "72278287"
   
 -   **IMPORT**: ユーザーは、スキーマおよびデータをホスト サーバーの新しいデータベースにインポートできます。  
   
- この両方の機能が、データベース管理ツール (SQL Server Management Studio、Azure ポータル、DACFx API) でサポートされます。  
+ この両方の機能が、次のデータベース管理ツールでサポートされます:SQL Server Management Studio、Azure Portal、DACFx API。  
   
 ## <a name="permissions"></a>アクセス許可  
  データベースを作成 (DAC パッケージを配置することによるデータベースの作成を含む) するには、 **dbmanager** ロールのメンバーであるか、 **CREATE DATABASE** 権限が割り当てられている必要があります。 データベースを削除するには、 **dbmanager** ロールのメンバーであるか、 **DROP DATABASE** 権限が割り当てられている必要があります。  
@@ -128,7 +128,7 @@ ms.locfileid: "72278287"
 |DAC パッケージの内容をフォルダーに配置し、そのフォルダーで、DAC を実稼働サーバーに配置する前に DAC の動作内容をデータベース管理者が確認できるようにする方法について説明します。|[DAC パッケージのアンパック](../../relational-databases/data-tier-applications/unpack-a-dac-package.md)|  
 |ウィザードを使用して既存のデータベースを配置する方法について説明します。 ウィザードでは DAC を使用して配置を実行します。|[DAC を使用したデータベースの配置](../../relational-databases/data-tier-applications/deploy-a-database-by-using-a-dac.md)|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server オブジェクトとバージョンの DAC サポート](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)  
   
   

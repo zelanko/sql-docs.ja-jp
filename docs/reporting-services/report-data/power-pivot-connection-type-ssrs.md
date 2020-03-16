@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ab12a58134dd5b7a183a60a2837f013a4de162b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: fb4fe31bfddb1c2312ae7e99e8a53609b5e5d70c
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "77081723"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112356"
 ---
 # <a name="power-pivot-connection-type-ssrs"></a>Power Pivot の接続の種類 (SSRS)
   SQL Server Analysis Services データ処理拡張機能を使用すると、SharePoint の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリーにパブリッシュされた [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックからデータを取得することができます。  
@@ -23,7 +23,7 @@ ms.locfileid: "77081723"
 ## <a name="prerequisites"></a>前提条件  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ ソースは、SharePoint サイトの [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリーにパブリッシュされている必要があります。  
   
- レポート ビルダーから [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックへの接続をサポートするには、ワークステーション コンピューターに SQL Server 2008 R2 ADOMD.NET が必要です。 このクライアント ライブラリは [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel と共にインストールされますが、このアプリケーションがインストールされていないコンピューターを使用する場合は、 [SQL Server 2008 R2 用 Feature Pack](https://www.microsoft.com/download/details.aspx?id=16978)に関するページから ADOMD.NET をダウンロードしてインストールする必要があります。  
+ レポート ビルダーから [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックへの接続をサポートするには、ワークステーション コンピューターに SQL Server 2008 R2 ADOMD.NET が必要です。 このクライアント ライブラリは [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel と共にインストールされますが、このアプリケーションがインストールされていないコンピューターを使用する場合は、 [SQL Server 2008 R2 用 Feature Pack](https://www.microsoft.com/download/details.aspx?id=44272)に関するページから ADOMD.NET をダウンロードしてインストールする必要があります。  
   
 ## <a name="data-source-type"></a>データ ソースの種類  
  使用するレポート データ ソースの種類は **Microsoft SQL Server Analysis Services**です。  
@@ -31,7 +31,7 @@ ms.locfileid: "77081723"
 ## <a name="connection-string"></a>接続文字列  
  接続文字列は、SharePoint の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリーまたはその他のライブラリにパブリッシュされた [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックの URL です (例: `https://contoso-srv/subsite/PowerPivotLibrary/ContosoSales.xlsx`)。  
   
-## <a name="credentials"></a>[資格情報]  
+## <a name="credentials"></a>資格情報  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックおよび SharePoint サイトへのアクセスに必要な資格情報を指定します (Windows 認証 (統合セキュリティ) など)。 詳細については、「[データ接続文字列を作成する - レポート ビルダーおよび SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)」または「[レポート データ ソースに関する資格情報と接続情報を指定する](specify-credential-and-connection-information-for-report-data-sources.md)」を参照してください。  
   
 ## <a name="queries"></a>クエリ  

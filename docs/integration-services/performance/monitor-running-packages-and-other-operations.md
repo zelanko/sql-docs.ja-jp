@@ -14,11 +14,11 @@ ms.assetid: cbbcd79f-ab9b-46ec-84cb-4821c1d16b99
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d7fd62f4f2f82e6dcc3921db7099b4f052db27b3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "71295799"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79287846"
 ---
 # <a name="monitor-running-packages-and-other-operations"></a>実行中のパッケージとその他の操作の監視
 
@@ -56,7 +56,7 @@ ms.locfileid: "71295799"
  9 つの状態の種類を使用して、操作の状態を示します。 状態の種類の一覧については、「[catalog.operations &#40;SSISDB Database&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md)」を参照してください。  
 
 ## <a name="active_ops"></a> [アクティブな操作] ダイアログ ボックス
-  配置、検証、パッケージの実行など、**サーバー上で現在実行中の** 操作の状態を表示するには、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)][アクティブな操作][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ダイアログ ボックスを使用します。 このデータは、SSISDB カタログに格納されます。  
+  配置、検証、パッケージの実行など、 **サーバー上で現在実行中の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 操作の状態を表示するには、** [アクティブな操作][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ダイアログ ボックスを使用します。 このデータは、SSISDB カタログに格納されます。  
   
  関連 [!INCLUDE[tsql](../../includes/tsql-md.md)] ビューの詳細については、「[catalog.operations (SSISDB データベース)](../../integration-services/system-views/catalog-operations-ssisdb-database.md)」、「[catalog.validations (SSISDB データベース)](../../integration-services/system-views/catalog-validations-ssisdb-database.md)」、「[catalog.executions (SSISDB データベース)](../../integration-services/system-views/catalog-executions-ssisdb-database.md)」を参照してください。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "71295799"
 |プロジェクトの復元|106|  
 |パッケージ実行の作成および開始|200|  
 |操作の停止 (検証または実行の停止)|202|  
-|プロジェクトの検証|300|  
+|プロジェクトの検証|該当なし|  
 |パッケージの検証|301|  
 |カタログの構成|1000|  
   
@@ -139,7 +139,7 @@ ms.locfileid: "71295799"
   
  このレポートには、次の情報のセクションが表示されます。  
   
-|Section|[説明]|  
+|Section|説明|  
 |-------------|-----------------|  
 |**実行情報**|過去 24 時間のさまざまな状態 (失敗、実行中、成功、その他) の実行の数を示します。|  
 |**Package Information**|過去 24 時間に実行されたパッケージの合計数を示します。|  
@@ -153,7 +153,7 @@ ms.locfileid: "71295799"
   
  このレポートには、次の情報のセクションが表示されます。  
   
-|Section|[説明]|  
+|Section|説明|  
 |-------------|-----------------|  
 |Assert|レポートに適用される現在のフィルターを示します (開始時間範囲など)。|  
 |実行情報|各パッケージの実行の開始時刻、終了時刻、および持続時間を示します。パッケージの実行で使用されたパラメーター値 (パッケージ実行タスクで子パッケージに渡された値など) の一覧を表示できます。 パラメーターの一覧を表示するには、[概要] をクリックします。|  
@@ -167,7 +167,7 @@ ms.locfileid: "71295799"
   
  このレポートには、次の情報のセクションが表示されます。  
   
-|Section|[説明]|  
+|Section|説明|  
 |-------------|-----------------|  
 |Assert|レポートに適用される現在のフィルター (指定した文字列を使用し、 **[前回失敗した日時]** 範囲にある接続など) を示します。<br /><br /> 特定の日付範囲中に発生した接続エラーのみを表示するには、 **[前回失敗した日時]** を設定します。 範囲には、複数の日、月、または年を指定できます。|  
 |詳細|接続文字列、接続中に失敗した実行の回数、および最後に失敗した日付を示します。|  

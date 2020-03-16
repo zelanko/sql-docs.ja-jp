@@ -11,11 +11,11 @@ author: rpsqrd
 ms.author: ryanpu
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d774df3329c6c9e49e9e1bd9a86dbeaf30ac5765
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74317955"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79287146"
 ---
 # <a name="plan-for-host-guardian-service-attestation"></a>ホスト ガーディアン サービスの構成証明の計画
 
@@ -112,7 +112,7 @@ HGS は、暗号化と暗号化の解除を必要とするアクション数が�
 
 開始する前に、HGS コンピューターをドメインに参加させないでください。
 
-### <a name="include-ssnoversion-mdincludesssnoversion-mdmd-computer-prerequisites"></a>[!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] コンピューターの前提条件
+### <a name="ssnoversion-md-computer-prerequisites"></a>[!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] コンピューターの前提条件
 
 [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] を実行しているコンピューターは、[SQL Server のインストール要件](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)と [Hyper-V ハードウェア要件](https://docs.microsoft.com/virtualization/hyper-v-on-windows/reference/hyper-v-requirements#hardware-requirements)の両方を満たしている必要があります。
 

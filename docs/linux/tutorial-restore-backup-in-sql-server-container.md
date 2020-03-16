@@ -3,17 +3,17 @@ title: Docker で SQL Server データベースを復元する
 description: このチュートリアルでは、新しい Linux の Docker コンテナーで SQL Server データベースのバックアップを復元する方法について説明します。
 author: VanMSFT
 ms.author: vanto
-ms.date: 11/04/2019
+ms.date: 03/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 2b34fb6b368f042e39776a25628472c336e21392
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 21b25edb34d89cb9ef3629955dd06a357a8607a2
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75721827"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198286"
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Linux の Docker コンテナーで SQL Server データベースを復元する
 
@@ -115,11 +115,11 @@ ms.locfileid: "75721827"
 1. Docker Hub から SQL Server 2019 Linux コンテナー イメージをプルします。
 
    ```bash
-   sudo docker pull mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
+   sudo docker pull mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
    ```
 
    ```PowerShell
-   docker pull mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
+   docker pull mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
    ```
 
    > [!TIP]
@@ -131,14 +131,14 @@ ms.locfileid: "75721827"
    sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
       --name 'sql1' -p 1401:1433 \
       -v sql1data:/var/opt/mssql \
-      -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
+      -d mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
    ```
 
    ```PowerShell
    docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
       --name "sql1" -p 1401:1433 `
       -v sql1data:/var/opt/mssql `
-      -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
+      -d mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
    ```
 
    このコマンドにより、Developer エディションの SQL Server 2019 コンテナー (規定値) が作成されます。 SQL Server のポート **1433** は、ホスト上ではポート **1401** として公開されています。 省略可能な `-v sql1data:/var/opt/mssql` パラメーターを使うと、**sql1ddata** という名前のデータ ボリューム コンテナーが作成されます。 これは、SQL Server によって作成されたデータを永続化するために使われます。
@@ -407,7 +407,7 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
 
 ## <a name="use-the-persisted-data"></a>永続化されたデータの使用
 
-データを保護するためにデータベースのバックアップを作成するだけでなく、データ ボリューム コンテナーを使用することもできます。 このチュートリアルの冒頭では、**パラメーターを指定して**sql1`-v sql1data:/var/opt/mssql` コンテナーを作成しました。 **sql1data** データ ボリューム コンテナーによって **/var/opt/mssql** のデータが永続化され、コンテナーが削除された後でも残ります。 以下の手順では、**sql1** コンテナーを完全に削除した後、永続化されたデータを使って新しいコンテナー **sql2** を作成します。
+データを保護するためにデータベースのバックアップを作成するだけでなく、データ ボリューム コンテナーを使用することもできます。 このチュートリアルの冒頭では、`-v sql1data:/var/opt/mssql` パラメーターを指定して **sql1** コンテナーを作成しました。 **sql1data** データ ボリューム コンテナーによって **/var/opt/mssql** のデータが永続化され、コンテナーが削除された後でも残ります。 以下の手順では、**sql1** コンテナーを完全に削除した後、永続化されたデータを使って新しいコンテナー **sql2** を作成します。
 
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
@@ -492,13 +492,13 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
     ```bash
     sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
        --name 'sql2' -e 'MSSQL_PID=Developer' -p 1401:1433 \
-       -v sql1data:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
+       -v sql1data:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
     ```
 
     ```PowerShell
     docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
        --name "sql2" -e "MSSQL_PID=Developer" -p 1401:1433 `
-       -v sql1data:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
+       -v sql1data:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
     ```
 
 1. これで Wide World Importers のデータベースが新しいコンテナーに追加されました。 クエリを実行して、以前に加えた変更を確認します。

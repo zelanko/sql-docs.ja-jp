@@ -10,11 +10,11 @@ ms.topic: conceptual
 ms.date: 01/28/2020
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: d1bfbb7a1abb13df05ce402fa79a1598ee04ca1f
-ms.sourcegitcommit: cf8db6330be0d89bbec362e4c7e187b5461026f0
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/06/2020
-ms.locfileid: "77054838"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79286466"
 ---
 # <a name="server-properties-advanced-page---power-bi-report-server--reporting-services"></a>[サーバーのプロパティ] の [詳細設定] ページ - Power BI Report Server と Reporting Services
 
@@ -24,7 +24,7 @@ ms.locfileid: "77054838"
 
 このページを開くには、SQL Server Management Studio を起動してレポート サーバー インスタンスに接続し、レポート サーバー名を右クリックして **[プロパティ]** をクリックします。 **[詳細設定]** を選択するとこのページが開きます。
 
-## <a name="options"></a>オプション
+## <a name="options"></a>Options
 
 ### <a name="accesscontrolallowcredentials"></a>AccessControlAllowCredentials
 (Power BI Report Server、Reporting Services 2017 以降のみ) `credentials` フラグが true に設定されている場合に、クライアント要求に対する応答を公開できるかどうかを示します。 既定値は **false** です。

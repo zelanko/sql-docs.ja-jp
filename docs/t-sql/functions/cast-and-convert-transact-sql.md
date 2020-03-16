@@ -36,11 +36,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f8eecd6d0a1d54d56fd93eacf96154f57e4afec6
-ms.sourcegitcommit: 1feba5a0513e892357cfff52043731493e247781
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/18/2020
-ms.locfileid: "77440684"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79286946"
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST および CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -131,7 +131,7 @@ date または time データ型の *expression* の場合、*style* には次�
 ## <a name="float-and-real-styles"></a>float 型スタイルと real 型スタイル
 *expression* が **float** 型または **real** 型の場合、*style* は次の表に示すいずれかの値になります。 その他の値は 0 として処理されます。
   
-|Value|Output|  
+|Value|出力|  
 |---|---|
 |**0** (既定値)|最高 6 桁。 該当する場合は、科学的表記法で使用します。|  
 |**1**|常に 8 桁。 常に科学的表記法で使用します。|  
@@ -142,7 +142,7 @@ date または time データ型の *expression* の場合、*style* には次�
 ## <a name="money-and-smallmoney-styles"></a>money 型スタイルと smallmoney 型スタイル
 *expression* が **money** 型または **smallmoney** 型の場合、*style* は次の表に示すいずれかの値になります。 その他の値は 0 として処理されます。
   
-|Value|Output|  
+|Value|出力|  
 |---|---|
 |**0** (既定値)|小数点位置から左へ 3 桁ごとの位置にはコンマを挿入しません。また、小数点右側には 2 桁をとります。<br /><br />例:4235.98|  
 |**1**|小数点位置から左へ 3 桁ごとの位置にはコンマを挿入します。また、小数点右側には 2 桁をとります。<br /><br />例:3,510.92|  
@@ -152,7 +152,7 @@ date または time データ型の *expression* の場合、*style* には次�
 ## <a name="xml-styles"></a>xml スタイル
 *expression* が **xml** 型の場合、*style* は次の表に示すいずれかの値になります。 その他の値は 0 として処理されます。
   
-|Value|Output|  
+|Value|出力|  
 |---|---|
 |**0** (既定値)|既定の解析動作を使用します。つまり、余分な空白を破棄し、内部の DTD サブセットを許可しません。<br /><br />**注:** **xml** データ型への変換では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] での余分な空白は XML 1.0 とは別の方法で処理されます。 詳細については、「[XML データのインスタンスの作成](../../relational-databases/xml/create-instances-of-xml-data.md)」を参照してください。|  
 |**1**|余分な空白を保持します。 このスタイル設定は、**xml:space="preserve"** の動作と一致するように、既定の **xml:space** の処理を設定します。|  
@@ -162,7 +162,7 @@ date または time データ型の *expression* の場合、*style* には次�
 ## <a name="binary-styles"></a>バイナリ スタイル
 *expression* が **binary(n)** 、**char(n)** 、**varbinary(n)** 、または **varchar(n)** の場合、*style* は次の表に示すいずれかの値になります。 表に記載されていないスタイル値の場合は、エラーが返されます。
   
-|Value|Output|  
+|Value|出力|  
 |---|---|
 |**0** (既定値)|ASCII 文字をバイナリ バイトに変換するか、バイナリ バイトを ASCII 文字に変換します。 各文字またはバイトは 1:1 で変換されます。<br /><br /> バイナリの *data_type* の場合は、文字 0x が結果の左側に追加されます。|  
 |**1**、**2**|バイナリの *data_type* の場合は、式は文字式であることが必要です。 *expression* は**偶数**桁の 16 進数 (0、1、2、3、4、5、6、7、8、9、A、B、C、D、E、F、a、b、c、d、e、f) である必要があります。 *style* が 1 に設定されている場合、式の最初の 2 文字は 0x である必要があります。 式に奇数桁の文字が含まれているか、いずれかの文字が使用できない場合は、エラーが発生します。<br /><br /> 変換された式の長さが *data_type* の長さを超える場合、結果の右側が切り捨てられます。<br /><br /> 固定長の *data_type* が変換された結果より長い場合は、結果の右側に 0 が追加されます。<br /><br /> *data_type* が文字型の場合は、バイナリ式である必要があります。 各バイナリ文字は、2 桁の 16 進数の英数文字に変換されます。 変換された式の長さが *data_type* の長さを超える場合、右側が切り捨てられます。<br /><br /> *data_type* が固定サイズの文字型で、変換された結果の長さが *data_type* の長さよりも短い場合、変換された式の右側に空白が追加され、偶数桁の 16 進数が維持されます。<br /><br /> *style* が 1 の場合、変換された結果の左側に文字 0x が追加されます。|  

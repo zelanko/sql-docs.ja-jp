@@ -25,11 +25,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
 ms.openlocfilehash: a652bc56a826469017ba4de643c9d3e1822d4c22
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75952528"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79288446"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Linux 上の SQL Server 2017 のエディションとサポートされる機能
 
@@ -49,7 +49,7 @@ Linux 上で使用できない SQL Server の機能の一覧については、[�
     
 [SQL Server 2017 をダウンロードする](https://www.microsoft.com/sql-server/sql-server-2017)
 
-## <a name="includessnoversionincludesssnoversion-mdmd-editions"></a>[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] のエディション  
+## <a name="ssnoversion-editions"></a>[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] のエディション  
  次の表で、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のエディションについて説明します。 
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エディション|定義|  
@@ -60,11 +60,11 @@ Linux 上で使用できない SQL Server の機能の一覧については、[�
 |Developer|開発者は、[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Developer Edition を使用して、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]上で動作するあらゆる種類のアプリケーションを開発できます。 このエディションには Enterprise Edition の機能がすべて含まれていますが、実稼動サーバーとして使用するのではなく、開発およびテスト システムとしての利用に対してライセンスが供与されます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer は、アプリケーションを作成し、テストするユーザーに適しています。|  
 |Express Edition|Express Edition はエントリレベルの無料のデータベースで、学習や、デスクトップおよび小規模サーバー データ ドリブン アプリケーションの構築などに適しています。 このエディションは、独立系ソフトウェア ベンダー、開発者、クライアント アプリケーションを趣味で開発する開発者などに最適です。 さらに高度なデータベース機能が必要な場合には、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express を [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の他の上位バージョンにシームレスにアップグレードできます。|  
   
-## <a name="using-includessnoversionincludesssnoversion-mdmd-with-clientserver-applications"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] とクライアント/サーバー アプリケーションの使用  
+## <a name="using-ssnoversion-with-clientserver-applications"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] とクライアント/サーバー アプリケーションの使用  
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のクライアント コンポーネントだけを、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のインスタンスに直接接続するクライアント/サーバー アプリケーションを実行するコンピューターにインストールできます。 クライアント コンポーネントをインストールすることは、データベース サーバー上にある [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスを管理する場合、または [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] アプリケーションを開発しようとしている場合にも適切なオプションです。  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-components"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のコンポーネント  
+## <a name="ssnoversion-components"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のコンポーネント  
 
 SQL Server 2017 on Linux では、SQL Server データベース エンジンがサポートされています。 次の表で、データベース エンジンの機能について説明します。   
   
@@ -229,7 +229,7 @@ Developer Edition では引き続き、[SQL Server 分散再生](../tools/distri
 | &nbsp; | ログ リーダー エージェント (Log Reader Agent) |
 | &nbsp; | 管理対象のバックアップ |
 | **高可用性** | データベース ミラーリング  |
-| **セキュリティ** | 拡張キー管理 |
+| **Security** | 拡張キー管理 |
 | &nbsp; | リンク サーバーに対する AD 認証 | 
 | &nbsp; | 可用性グループに対する AD 認証 (AG) | 
 | **サービス** | SQL Server Browser |

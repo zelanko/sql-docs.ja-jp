@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3ed4c8c8feacdd41d2e806a4d2d663f639633e07
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 7a09cef6ce1e90fe9fce7b7bd4b025598a387c1f
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "71294427"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112270"
 ---
 # <a name="integration-services-ssis-connections"></a>Integration Services (SSIS) の接続
 
@@ -114,7 +114,7 @@ ms.locfileid: "71294427"
 |Type|説明|トピック|  
 |----------|-----------------|-----------|  
 |ORACLE|Oracle \<バージョン情報\> サーバーに接続します。|Oracle 接続マネージャーは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity の接続マネージャー コンポーネントです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity には、変換元と変換先も含まれます。 詳細については、[Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=251526) のダウンロード ページを参照してください。|  
-|SAPBI|SAP NetWeaver BI Version 7 システムに接続します。|SAP BI 接続マネージャーは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI の接続マネージャー コンポーネントです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI には、変換元と変換先も含まれます。 詳細については、 [Microsoft SQL Server 2008 用 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=262016)のダウンロード ページを参照してください。|  
+|SAPBI|SAP NetWeaver BI Version 7 システムに接続します。|SAP BI 接続マネージャーは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI の接続マネージャー コンポーネントです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for SAP BI には、変換元と変換先も含まれます。 詳細については、 [Microsoft SQL Server 2008 用 Feature Pack](https://www.microsoft.com/download/details.aspx?id=30440)のダウンロード ページを参照してください。|  
 |TERADATA|Teradata \<バージョン情報\> サーバーに接続します。|Teradata 接続マネージャーは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity の接続マネージャー コンポーネントです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Teradata by Attunity には、変換元と変換先も含まれます。 詳細については、[Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=251526) のダウンロード ページを参照してください。|  
   
 ### <a name="custom-connection-managers"></a>カスタム接続マネージャー  
@@ -168,7 +168,7 @@ ms.locfileid: "71294427"
   
      選択した接続マネージャーの種類に応じたカスタム ダイアログ ボックスが開きます。 接続マネージャーの種類と設定可能なオプションの詳細については、次のオプションの表を参照してください。  
   
-    |[ODBC 入力元エディター]|オプション|  
+    |[ODBC 入力元エディター]|Options|  
     |------------------------|-------------|  
     |[ADO 接続マネージャー](../../integration-services/connection-manager/ado-connection-manager.md)|[[OLE DB 接続マネージャーの構成]](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
     |[ADO.NET 接続マネージャー](../../integration-services/connection-manager/ado-net-connection-manager.md)|[[ADO.NET の接続マネージャーの構成]](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)|  
@@ -204,7 +204,7 @@ ms.locfileid: "71294427"
   
      選択した接続マネージャーの種類に応じたカスタム ダイアログ ボックスが開きます。 接続マネージャーの種類と設定可能なオプションの詳細については、次のオプションの表を参照してください。  
   
-    |[ODBC 入力元エディター]|オプション|  
+    |[ODBC 入力元エディター]|Options|  
     |------------------------|-------------|  
     |[ADO 接続マネージャー](../../integration-services/connection-manager/ado-connection-manager.md)|[[OLE DB 接続マネージャーの構成]](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
     |[ADO.NET 接続マネージャー](../../integration-services/connection-manager/ado-net-connection-manager.md)|[[ADO.NET の接続マネージャーの構成]](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)|  
@@ -236,7 +236,7 @@ ms.locfileid: "71294427"
   
  接続マネージャーの詳細については、「[Integration Services &#40;SSIS&#41; の接続](../../integration-services/connection-manager/integration-services-ssis-connections.md)」を参照してください。  
   
-#### <a name="options"></a>オプション  
+#### <a name="options"></a>Options  
  **[接続マネージャーの種類]**  
  エディターを使用して接続の種類の接続プロパティを指定するには、接続の種類を選択して **[追加]** をクリックするか、接続の種類をダブルクリックします。  
   
@@ -313,7 +313,7 @@ ms.locfileid: "71294427"
   
 4.  **[接続マネージャー]** 領域で接続マネージャーをダブルクリックして、 **[接続マネージャー]** ダイアログ ボックスを開きます。 特定の種類の接続マネージャーおよび各種類で使用するオプションの詳細については、次の表を参照してください。  
   
-    |[ODBC 入力元エディター]|オプション|  
+    |[ODBC 入力元エディター]|Options|  
     |------------------------|-------------|  
     |[ADO 接続マネージャー](../../integration-services/connection-manager/ado-connection-manager.md)|[[OLE DB 接続マネージャーの構成]](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
     |[ADO.NET 接続マネージャー](../../integration-services/connection-manager/ado-net-connection-manager.md)|[[ADO.NET の接続マネージャーの構成]](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)|  

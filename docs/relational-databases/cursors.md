@@ -1,7 +1,7 @@
 ---
 title: カーソル | Microsoft Docs
 ms.custom: ''
-ms.date: 11/28/2018
+ms.date: 03/11/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -19,12 +19,12 @@ ms.assetid: e668b40c-bd4d-4415-850d-20fc4872ee72
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: de565a5d34ddbf8388e2c20a564bc8c872a0a1c9
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: a053f49a6ab3b42e31c5b71c2d2d558ea3170440
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68140810"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112339"
 ---
 # <a name="cursors"></a>カーソル
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ API カーソルでは、OLE DB および ODBC の API カーソル関数がサ�
   
 > [!NOTE]
 > 静的カーソルの結果セットは **tempdb** の作業テーブルに格納されるので、結果セット内の行のサイズを [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] テーブルの最大行サイズより大きくすることはできません。  
-> 詳しくは、[クエリ処理アーキテクチャ ガイドの作業テーブル](../relational-databases/query-processing-architecture-guide.md#worktables)に関するページをご覧ください。 最大行サイズについて詳しくは、「[SQL Server の最大容量仕様](../sql-server/maximum-capacity-specifications-for-sql-server.md#Engine)」をご覧ください。  
+> 詳しくは、[クエリ処理アーキテクチャ ガイドの作業テーブル](../relational-databases/query-processing-architecture-guide.md#worktables)に関するページをご覧ください。 最大行サイズについて詳しくは、「[SQL Server の最大容量仕様](../sql-server/maximum-capacity-specifications-for-sql-server.md)」をご覧ください。  
   
 [!INCLUDE[tsql](../includes/tsql-md.md)] では、静的カーソルは非反映型カーソルとも呼ばれます。 一部のデータベース API ではスナップショット カーソルとも呼びます。  
   

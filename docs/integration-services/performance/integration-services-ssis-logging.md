@@ -30,11 +30,11 @@ ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: baad15da62c4452361fe8ff3cdf46582dd3727ea
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "71282564"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79287886"
 ---
 # <a name="integration-services-ssis-logging"></a>Integration Services (SSIS) のログ記録
 
@@ -71,7 +71,7 @@ ms.locfileid: "71282564"
   
  次の表に、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] に含まれるログ プロバイダーの ProgID と ClassID、およびログ プロバイダーが書き込むログの場所の一覧を示します。  
   
-|ログ プロバイダー|ProgID|ClassID|Location|  
+|ログ プロバイダー|ProgID|ClassID|場所|  
 |------------------|------------|-------------|--------------|  
 |テキスト ファイル|DTS.LogProviderTextFile|{0A039101-ACC1-4E06-943F-279948323883}|ログ プロバイダーが使用するファイル接続マネージャーでテキスト ファイルのパスを指定します。|  
 |SQL Server プロファイラー|DTS.LogProviderSQLProfiler|{E93F6300-AE0C-4916-A7BF-A8D0CE12C77A}|ログ プロバイダーが使用するファイル接続マネージャーで [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]が使用するファイルのパスを指定します。|  
@@ -283,7 +283,7 @@ ms.locfileid: "71282564"
 ###  <a name="container"></a> [コンテナー] ペインでオプションを構成する  
  **[SSIS ログの構成]** ダイアログ ボックスの **[コンテナー]** ペインを使用すると、パッケージおよびパッケージのコンテナーでログを有効できます。  
   
-#### <a name="options"></a>オプション  
+#### <a name="options"></a>Options  
  **Containers**  
  パッケージとパッケージのコンテナーでログを有効にするには、階層ビューのチェック ボックスをオンにします。  
   
@@ -298,14 +298,14 @@ ms.locfileid: "71282564"
 ###  <a name="provider"></a> [プロバイダーとログ] タブでオプションを構成する  
  **[SSIS ログの構成]** ダイアログ ボックスの **[プロバイダーとログ]** タブを使用すると、ランタイム イベントをキャプチャするログを作成したり構成したりできます。  
   
-#### <a name="options"></a>オプション  
+#### <a name="options"></a>Options  
  **[プロバイダーの種類]**  
  ログ プロバイダーの種類を一覧から選択します。  
   
  **追加**  
  パッケージのログ プロバイダーのコレクションに、指定した種類のログを追加します。  
   
- **Name**  
+ **名前**  
  **[SSIS ログの構成]** ダイアログ ボックスの **[コンテナー]** ペインで選択したコンテナーまたはタスクについて、ログを有効または無効にします。 [名前] フィールドは編集可能です。 プロバイダーの既定の名前を使用するか、わかりやすい一意な名前を入力します。  
   
  **説明**  
@@ -322,7 +322,7 @@ ms.locfileid: "71282564"
 ###  <a name="detail"></a> [詳細] タブでオプションを構成する  
  **[SSIS ログの構成]** ダイアログ ボックスの **[詳細]** タブで、ログ記録を有効にするイベントと、ログ記録する詳細情報を指定します。 選択した情報は、パッケージ内のすべてのログ プロバイダーに適用されます。 たとえば、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスとテキスト ファイルに別々の情報を書き込むことはできません。  
   
-#### <a name="options"></a>オプション  
+#### <a name="options"></a>Options  
  **イベント**  
  イベントのログ記録を有効または無効にします。  
   

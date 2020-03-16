@@ -19,11 +19,11 @@ ms.author: jaszymas
 ms.reviewer: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 498fe2391cd3e8109aed3f6e1e02436234ffe6f7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "74957327"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79288266"
 ---
 # <a name="transparent-data-encryption-tde"></a>Transparent Data Encryption (TDE)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -244,7 +244,7 @@ ALTER DATABASE <db_name> SET ENCRYPTION SUSPEND;
 ALTER DATABASE <db_name> SET ENCRYPTION RESUME;
 ```
 
-暗号化のスキャンの現在の状態を示すために、`encryption_scan_state` 動的管理ビューに `sys.dm_database_encryption_keys` が追加されています。 また、暗号化のスキャンの状態が最後に変更された日時を含む `encryption_scan_modify_date` という新しい列もあります。 暗号化のスキャンが一時停止中に [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスが再開された場合、一時停止されている既存のスキャンがあることが起動時にエラー ログに記述されます。
+暗号化のスキャンの現在の状態を示すために、`sys.dm_database_encryption_keys` 動的管理ビューに `encryption_scan_state` が追加されています。 また、暗号化のスキャンの状態が最後に変更された日時を含む `encryption_scan_modify_date` という新しい列もあります。 暗号化のスキャンが一時停止中に [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスが再開された場合、一時停止されている既存のスキャンがあることが起動時にエラー ログに記述されます。
   
 ## <a name="transparent-data-encryption-and-buffer-pool-extension"></a>Transparent Data Encryption とバッファー プール拡張機能  
  バッファー プール拡張機能 (BPE) に関連するファイルは、データベースが TDE を使用して暗号化される場合でも暗号化されません。 BPE 関連のファイルについては、BitLocker や EFS などのファイル システム レベルの暗号化ツールを使用する必要があります。  

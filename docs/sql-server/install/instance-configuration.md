@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 robots: noindex,nofollow
 ms.openlocfilehash: b32ad209651c30f810f239b0c14689be497c4378
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78338578"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79286566"
 ---
 # <a name="installation-wizard-help"></a>インストール ウィザードのヘルプ
 
@@ -45,7 +45,7 @@ ms.locfileid: "78338578"
   
  詳しくは、「[SQL Server の最大容量仕様](../maximum-capacity-specifications-for-sql-server.md)」をご覧ください。  
   
-### <a name="options"></a>オプション
+### <a name="options"></a>Options
 
 **フェールオーバー クラスター インスタンス のみ**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスターのネットワーク名を指定します。 この名前は、ネットワーク上のフェールオーバー クラスター インスタンスを識別します。  
   
@@ -111,7 +111,7 @@ ms.locfileid: "78338578"
   
 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] をインストールする場合は、[!INCLUDE[SPS2010](../../includes/sps2010-md.md)] ファームでの [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サーバーの配置に責任を負う SharePoint ファーム管理者またはサービス管理者に管理権限を付与してください。  
   
-### <a name="options"></a>オプション
+### <a name="options"></a>Options
 
 **[サーバー モード]** : サーバー モードでは、サーバーに配置できる [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースの種類を指定します。 セットアップ中に指定したサーバー モードを後で変更することはできません。 各モードは互いに排他的です。そのため、従来のオンライン分析処理 (OLAP) ソリューションとテーブル モデル ソリューションの両方をサポートする場合は、それぞれ異なるモードで構成した 2 つの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスが必要になります。  
   
@@ -202,7 +202,7 @@ ms.locfileid: "78338578"
 
 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、BUILTIN\Administrators グループはログインとして準備されていません。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の新しいインスタンスのインストール時に、管理ユーザーごとに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを作成し、そのログインを **sysadmin** 固定サーバー ロールに追加する必要があります。 レプリケーション エージェント ジョブをなどの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブを実行する Windows アカウントに対しても同じようにします。  
   
-### <a name="options"></a>オプション
+### <a name="options"></a>Options
 
 **[セキュリティ モード]** : インストール用に **Windows 認証**または**混合モード認証**を選択します。  
   
@@ -475,7 +475,7 @@ The MaxDOP setting applies only to SQL Server 2019 and later.
 * 管理者アクセス許可を持たないユーザー用に [!INCLUDE[ssDE](../../includes/ssde-md.md)] の別のインスタンスを生成します。
 * ユーザーを管理者ロールに追加します。  
   
-### <a name="options"></a>オプション
+### <a name="options"></a>Options
   
 **[ユーザー インスタンスを有効にする]** : 既定値はオンです。 ユーザー インスタンスを有効にする機能を無効にするには、チェック ボックスをオフにします。  
   

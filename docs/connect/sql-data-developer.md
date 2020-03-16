@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 249e3794-e3fa-41cb-ad9c-f46e19e6805c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 8d94f07f12269bb2d4690ae01a5c51dd91d051f7
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 2e750d14aae5006e1229130eb4055fac74a7029b
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "68893908"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198419"
 ---
 # <a name="sql-data-developer"></a>SQL データ開発者
 Microsoft の SQL データ プラットフォームを使用して、Web サーバー、エンタープライズ サーバー、およびクラウド用のモバイル デバイスとデスクトップにわたるデータ中心のソリューションを作成します。  
@@ -23,7 +23,7 @@ Microsoft の SQL データ プラットフォームを使用して、Web サー
 ## <a name="sql-data-storage"></a>SQL データ ストレージ
 * [SQL Server データベース エンジン](../database-engine/configure-windows/sql-server-database-engine.md):SQL Server データベース エンジンを使用すると、オンライン トランザクション処理やオンライン分析処理のデータを格納するリレーショナル データベースを作成できます。 
 * [SQL Azure](https://docs.microsoft.com/azure/sql-database/):SQL Azure を使用してデータベースをクラウドに移動します 
-* [SQL Compact](https://www.microsoft.com/download/details.aspx?id=17876):モバイル デバイス、デスクトップ、および Web クライアント用のスタンドアロン アプリケーションと時々接続されるアプリケーションを構築する SQL Server Compact。
+* [SQL Compact](https://www.microsoft.com/download/details.aspx?id=30709):モバイル デバイス、デスクトップ、および Web クライアント用のスタンドアロン アプリケーションと時々接続されるアプリケーションを構築する SQL Server Compact。
 * [LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md):開発時に LocalDB を使用して、Transact-SQL コードの記述とテストを行います。SQL Server の完全なサーバー インスタンスを管理する必要はありません。
 
 ## <a name="sql-data-tools"></a>SQL Data Tools
