@@ -20,12 +20,12 @@ ms.assetid: 0d9c5b09-86fe-40ff-baab-00b7c051402f
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 362ccc5c85523b3d37cb792a42e8be4cd87d7510
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: c3dba46f4d0e2ecdebda13fe3fe9412219c2a755
+ms.sourcegitcommit: f7af758b353b53ac3b596d79fd6e32ad7e1e61cf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "68109001"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79448470"
 ---
 # <a name="syssql_logins-transact-sql"></a>sql_logins (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "68109001"
 |**is_expiration_checked**|**bit**|パスワードの有効期限が確認されます。|  
 |**password_hash**|**varbinary (256)**|SQL ログインパスワードのハッシュ。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降では、保存されたパスワード情報は salt 化パスワードの SHA-512 を使用して計算されます。|  
   
- このビューが継承する列の一覧については、「 [sys. server_principals &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)」を参照してください。  
+ このビューが継承する列の一覧については、「 [sys. server_principals &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)」を参照してください。 列`owning_principal_id`と`is_fixed_role`は、server_principals から継承されません。
   
 ## <a name="remarks"></a>解説  
  認証ログインと[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 認証ログインの両方を表示するには、「 [sys. server_principals &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)」を参照してください。  
