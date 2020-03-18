@@ -15,12 +15,12 @@ author: shkale-msft
 ms.author: shkale
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3ca26af4738de25937b71e0c97c6272414a0957a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 2b0934562f2f0ff1a2dd3ec8df1ed15f10d955ee
+ms.sourcegitcommit: 6e7696a169876eb914f79706d022451a1213eb6b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "74096085"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79428153"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>SQL Server と Azure SQL Database でのグラフ処理
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -30,19 +30,19 @@ ms.locfileid: "74096085"
 
 ## <a name="what-is-a-graph-database"></a>グラフデータベースとは  
 グラフ データベースは、ノード (または頂点) とエッジ (またはリレーションシップ) のコレクションです。 ノードはエンティティ (たとえば、個人や組織) を表し、エッジは接続されている 2 つのノード間のリレーションシップ (たとえば、お気に入りや友人) を表します。 ノードとエッジの両方に、プロパティが関連付けられている場合があります。 グラフ データベースを特徴付けるいくつかの特性を次に示します。  
--   エッジ (リレーションシップ) は、グラフ データベース内のファースト クラスのエンティティであり、属性またはプロパティを関連付けることができます。 
--   1 つのエッジは、グラフ データベース内の複数のノードを柔軟に接続できます。
--   パターン マッチングとマルチホップ ナビゲーション クエリを簡単に表現できます。
--   推移閉包およびポリモーフィック クエリを簡単に表現できます。
+-    エッジ (リレーションシップ) は、グラフ データベース内のファースト クラスのエンティティであり、属性またはプロパティを関連付けることができます。 
+-    1 つのエッジは、グラフ データベース内の複数のノードを柔軟に接続できます。
+-    パターン マッチングとマルチホップ ナビゲーション クエリを簡単に表現できます。
+-    推移閉包およびポリモーフィック クエリを簡単に表現できます。
 
 ## <a name="when-to-use-a-graph-database"></a>グラフデータベースを使用する場合
 
-リレーショナル データベースを使用して実現できないことのうち、グラフ データベースで実現できることは何もありません。 ただし、グラフデータベースを使用すると、特定の種類のクエリを簡単に表現できるようになります。 また、特定の最適化を使用すると、特定のクエリのパフォーマンスが向上する場合があります。 優先事項の決定は、次の要因に基づいて行うことができます。  
--   アプリケーションに階層データがある。 HierarchyID データ型は階層の実装に使用できますが、いくつかの制限があります。 たとえば、1つのノードに複数の親を格納することはできません。
--   アプリケーションに複雑な多対多リレーションシップがある。アプリケーションの進化に伴って、新しいリレーションシップが追加されます。
--   相互接続されたデータとリレーションシップを分析する必要があります。
+リレーショナルデータベースでは、グラフデータベースが可能なことをすべて達成できます。 ただし、グラフデータベースを使用すると、特定の種類のクエリを簡単に表現できるようになります。 また、特定の最適化を使用すると、特定のクエリのパフォーマンスが向上する場合があります。 リレーショナルデータベースとグラフデータベースのどちらを選択するかは、次の要因に基づいて決定します。  
+-    アプリケーションに階層データがある。 HierarchyID データ型は階層の実装に使用できますが、いくつかの制限があります。 たとえば、1つのノードに複数の親を格納することはできません。
+-    アプリケーションに複雑な多対多リレーションシップがある。アプリケーションの進化に伴って、新しいリレーションシップが追加されます。
+-    相互接続されたデータとリレーションシップを分析する必要があります。
 
-## <a name="graph-features-introduced-in-includesssqlv14includessssqlv14-mdmd"></a>で導入されたグラフ機能[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 
+## <a name="graph-features-introduced-in-sssqlv14"></a>で導入されたグラフ機能[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 
 グラフのデータの格納とクエリを容易にするために、SQL Server にグラフ拡張機能を追加し始めます。 次の機能は、最初のリリースで導入されました。 
 
 
@@ -68,7 +68,7 @@ WHERE MATCH(Person1-(Friends)->Person2)
 AND Person1.Name = 'John';
 ```   
  
-### <a name="fully-integrated-in-includessnoversionincludesssnoversion-mdmd-engine"></a>エンジンに完全[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に統合 
+### <a name="fully-integrated-in-ssnoversion-engine"></a>エンジンに完全[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に統合 
 グラフ拡張機能は、エンジン[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に完全に統合されています。 同じストレージエンジン、メタデータ、クエリプロセッサなどを使用して、グラフデータを格納し、クエリを実行します。 1つのクエリで、グラフとリレーショナルデータにまたがるクエリを実行します。 グラフ機能と、列[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ストア、HA、R サービスなどの他のテクノロジとの組み合わせSQL graph データベースでは、で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用できるすべてのセキュリティ機能とコンプライアンス機能もサポートされています。
  
 ### <a name="tooling-and-ecosystem"></a>ツールとエコシステム
