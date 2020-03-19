@@ -10,12 +10,12 @@ ms.assetid: bf6f372a-bc67-45ea-a771-b2dc5b0527e5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 760e90c34c84bd4b44af90cbbb78aec7e025689a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 0348c262453d2de8e4db0c379b5bf70a2d7d7977
+ms.sourcegitcommit: 36d07f0b832b1b29df6ffbfebc8c60016b37f5cb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "62757960"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79525453"
 ---
 # <a name="csdl-annotations-for-business-intelligence-csdlbi"></a>ビジネス インテリジェンス向けの CSDL 注釈 (CSDLBI)
   
@@ -37,7 +37,7 @@ ms.locfileid: "62757960"
   
  CSDLBI スキーマは、[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] などのクライアントからのモデル定義の要求に対して、Analysis Services サーバーで生成されます。 クライアント アプリケーションは、モデル データをホストする Analysis Services サーバーに XML クエリを送信します。 その応答として、サーバーはモデル内のエンティティの定義を含む XML メッセージを CSDLBI 注釈を使用して送信します。 レポートクライアントは、この情報を使用して、モデルで使用できるフィールド、集計、およびメジャーを表示します。 CSDLBI 注釈は、データのグループ化、並べ替え、および書式設定の方法に関する情報も提供します。  
   
- CSDLBI の一般的な情報については、「 [CSDLBI の概念](https://docs.microsoft.com/bi-reference/csdl/csdlbi-concepts)」を参照してください。  
+ CSDLBI の一般的な情報については、「 [CSDLBI の概念](/analysis-services/csdlbi/csdlbi-concepts)」を参照してください。  
   
 ### <a name="working-with-csdl"></a>CSDL の操作  
  特定のテーブル モデルを表す CSDLBI 注釈のセットは、単純型と複合型の両方のエンティティのコレクションを含む XML ドキュメントです。 エンティティは、計算列、メジャーまたは KPI に含まれるテーブル (またはディメンション)、列 (属性)、関連付け (リレーションシップ) および式を定義します。  
@@ -74,12 +74,12 @@ ms.locfileid: "62757960"
   
 -   パースペクティブのサポート。  
   
- CSDLBI 注釈の個々の要素の詳細については、「 [CSDL への BI 注釈のテクニカルリファレンス](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl)」を参照してください。 CSDL のコア仕様の詳細については、 [csdl v3 の仕様](https://docs.microsoft.com/ef/ef6/modeling/designer/advanced/edmx/csdl-spec)を参照してください。  
+ CSDLBI 注釈の個々の要素の詳細については、「 [CSDL への BI 注釈のテクニカルリファレンス](/analysis-services/csdlbi/technical-reference-for-bi-annotations-to-csdl)」を参照してください。 CSDL のコア仕様の詳細については、 [csdl v3 の仕様](https://docs.microsoft.com/ef/ef6/modeling/designer/advanced/edmx/csdl-spec)を参照してください。  
   
   
 ## <a name="see-also"></a>参照  
  [表形式オブジェクトモデルについて](representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)   
- [CSDLBI の概念](https://docs.microsoft.com/bi-reference/csdl/csdlbi-concepts)   
+ [CSDLBI の概念](/analysis-services/csdlbi/csdlbi-concepts)   
  [テーブル オブジェクト モデルについて](representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)  
   
   

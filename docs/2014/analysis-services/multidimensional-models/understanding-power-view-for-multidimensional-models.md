@@ -10,12 +10,12 @@ ms.assetid: d0558cae-8209-4242-80c5-2c95981b88b9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 94c38e6823f0cd52e44da7782bccada780265978
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 53c14ed48d2b95988b1d7d794e4ea711be659dd1
+ms.sourcegitcommit: 36d07f0b832b1b29df6ffbfebc8c60016b37f5cb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "75229400"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79525463"
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>多次元モデルの Power View について
   この記事では、Microsoft SQL Server 2014 の多次元モデル機能の Power View について説明します。また、の多次元モデルに Power View を実装する BI プロフェッショナルと管理者にとって重要な情報を提供します。部門.  
@@ -39,7 +39,7 @@ ms.locfileid: "75229400"
   
 -   Power View クライアント機能には、Microsoft Silverlight 5 が必要です。 詳細については、「 [Planning for Reporting Services」および「Power View Browser Support &#40;Reporting Services 2014&#41;](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)」を参照してください。  
   
-## <a name="features"></a>[機能]  
+## <a name="features"></a>機能  
  **Power View のネイティブサポート**  
   
  このリリースでは、多次元モデルで、SharePoint モードの Power View を使用した分析とビジュアル化がサポートされています。 多次元モデルで特別な構成は必要ありません。 ただし、Microsoft Excel や Microsoft Performance Point など、その他のクライアント ツールと比較すると、Power View での多次元モデル オブジェクトの表示形式にはいくつか違いがあります。 このリリースでは、Excel 2013 の Power View を使用した多次元モデルの分析とビジュアル化はサポートされていません。  
@@ -217,7 +217,7 @@ ms.locfileid: "75229400"
   
  DISCOVER_CSDL_METADATA 要求には、次の制限があります。  
   
-|Name|必須|[説明]|  
+|名前|Required|説明|  
 |----------|--------------|-----------------|  
 |CATALOG_NAME|はい|カタログ\データベース名。|  
 |PERSPECTIVE_NAME|キューブに複数のパースペクティブが含まれている場合は必須。 キューブが 1 つしかない場合や既定のパースペクティブがある場合は省略可能。|多次元データベース内のキューブ名またはパースペクティブ名。|  
@@ -225,7 +225,7 @@ ms.locfileid: "75229400"
   
  返される CSDL 出力ドキュメントは、モデルを名前空間として表し、エンティティ、アソシエーション、およびプロパティを示しています。  
   
- 表形式モデルの CSDLBI 注釈の詳細については、MSDN の「 [CSDL への BI 注釈のテクニカル リファレンス](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl) 」および「 [\[[MS-CSDLBI]\]: ビジネス インテリジェンスの概念スキーマ定義ファイル形式の注釈](https://msdn.microsoft.com/library/jj161299\(SQL.105\).aspx)」を参照してください。  
+ 表形式モデルの CSDLBI 注釈の詳細については、MSDN の「 [CSDL への BI 注釈のテクニカル リファレンス](/analysis-services/csdlbi/technical-reference-for-bi-annotations-to-csdl) 」および「 [\[[MS-CSDLBI]\]: ビジネス インテリジェンスの概念スキーマ定義ファイル形式の注釈](https://msdn.microsoft.com/library/jj161299\(SQL.105\).aspx)」を参照してください。  
   
 ## <a name="client-help-on-officecom"></a>Office.com のクライアント ヘルプ  
  Power View での多次元モデル オブジェクトの表示およびサンプル レポートの作成方法については、Office.com で提供されている次の記事を参照してください。  
