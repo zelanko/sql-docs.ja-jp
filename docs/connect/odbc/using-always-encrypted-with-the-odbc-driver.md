@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 author: v-chojas
-ms.openlocfilehash: 8e654dd5be4a306078bd6262220e29470b9a16e7
-ms.sourcegitcommit: 12051861337c21229cfbe5584e8adaff063fc8e3
+ms.openlocfilehash: 637198e079c6aa1b1e08e1a69e204b36f54f3827
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2020
-ms.locfileid: "77363238"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79285846"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>SQL Server 用 ODBC ドライバーと共に Always Encrypted を使用する
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -390,12 +390,15 @@ Azure Key Vault (AKV) は、Always Encrypted の列マスター キーを格納�
 
 - クライアント ID /シークレット - この方法では、資格情報はアプリケーションクライアント ID とアプリケーション シークレットです。
 
+- マネージド ID (17.5.2+) - システムまたはユーザー割り当てについては、「[Azure リソースのマネージド ID](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/)」を参照してください。
+
 ドライバーが AKV に格納されている CMK を列暗号化に使用できるようにするには、次の接続文字列限定のキーワードを使用します。
 
 |[資格情報の種類]| `KeyStoreAuthentication` |`KeyStorePrincipalId`| `KeyStoreSecret` |
 |-|-|-|-|
 |ユーザー名/パスワード| `KeyVaultPassword`|ユーザー プリンシパル名|Password|
 |クライアント ID/シークレット| `KeyVaultClientSecret`|クライアント ID|Secret|
+|マネージド ID|`KeyVaultManagedIdentity`|オブジェクト ID (省略可能、ユーザー割り当ての場合のみ)|(指定なし)|
 
 #### <a name="example-connection-strings"></a>接続文字列の例
 
@@ -413,7 +416,23 @@ DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATA
 DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultPassword;KeyStorePrincipalId=<username>;KeyStoreSecret=<password>
 ```
 
+**マネージド ID (システム割り当て)**
+
+```
+DRIVER=ODBC Driver 17 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultManagedIdentity
+```
+
+**マネージド ID (ユーザー割り当て)**
+
+```
+DRIVER=ODBC Driver 17 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultManagedIdentity;KeyStorePrincipalId=<objectID>
+```
+
 CMK ストレージで AKV を使用する場合、ODBC アプリケーションに他の変更を加える必要はありません。
+
+> [!NOTE]
+> ドライバーには、それが信頼する AKV エンドポイントの一覧が含まれています。 ドライバー バージョン 17.5.2 以降では、この一覧を構成できます。ドライバー内の `AKVTrustedEndpoints` プロパティ、DSN の ODBCINST.INI または ODBC.INI レジストリ キー (Windows)、`odbcinst.ini` または `odbc.ini` ファイル セクション (Linux/Mac) をセミコロン区切りの一覧に設定します。 DSN 内でそれを設定すると、ドライバー内の設定よりも優先されます。 値がセミコロンで始まる場合、既定のリストが拡張されます。それ以外の場合は、既定のリストが置き換えられます。 既定の一覧 (17.5 現在) は `vault.azure.net;vault.azure.cn;vault.usgovcloudapi.net;vault.microsoftazure.de` となります。
+
 
 ### <a name="using-the-windows-certificate-store-provider"></a>Windows 証明書ストア プロバイダーの使用
 

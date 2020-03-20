@@ -1,5 +1,6 @@
 ---
 title: Web サービス メソッドの呼び出し | Microsoft Docs
+description: プロキシ クラスのメソッドを呼び出して、レポート サーバーでレポート操作を実行します。 Web サービス メソッドにはパブリック アクセスがあり、適切な引数が必要です。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f6f0c6e3-8bb5-4c44-9d19-1872edc72746
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 65da2d36c53f5f00851b36f47396b7bcbf6a6092
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 0e7347bfcb93d327bc6e56eb91c903bbc5e1f38f
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63284605"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198327"
 ---
 # <a name="calling-web-service-methods"></a>Web サービス メソッドの呼び出し
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] プロキシ クラスを使って Web サービス操作を呼び出す場合、そのクラスのメソッドを使います。 これらのメソッドは、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] クラス ライブラリにあるクラスの他のメソッドと同じように応答します。 すべての Web サービス メソッドにはパブリック アクセスがあり、適切な数の引数および引数の型を指定する必要があります。 プロジェクトにプロキシ クラスのインスタンスを作成した後は、メソッドを呼び出し、レポート サーバー経由でレポートの操作を実行できます。 次の C# コードは、<xref:ReportService2010.ReportingService2010> プロキシ クラスの <xref:ReportService2010.ReportingService2010.ListChildren%2A> メソッドの使用方法を表しています。 このコードは、Web サービスの再帰呼び出しに使用します。Web サービスでは、レポート サーバー データベースのすべてのアイテムの一覧が入った <xref:ReportService2010.CatalogItem> オブジェクトの配列を返します。  

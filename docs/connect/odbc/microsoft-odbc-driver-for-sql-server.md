@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9f2ae91b-06af-4c9a-9d24-062df7bc4662
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a0c194903b0f9b5f5e1c06baabc17d607c68cd61
-ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
+ms.openlocfilehash: f953d3b36818ce4d44d80ddb1c67033fa468f093
+ms.sourcegitcommit: 577e7467821895f530ec2f97a33a965fca808579
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866357"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79058736"
 ---
 # <a name="microsoft-odbc-driver-for-sql-server"></a>Microsoft SQL Server 用 ODBC Driver
 
@@ -52,7 +52,8 @@ ODBC ドライバーには、[**sqlcmd**](../../tools/sqlcmd-utility.md) や [**
 
 ### <a name="linux-and-macos"></a>Linux と macOS
 
-- [ドライバーのインストール](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
+- [Linux へのドライバーのインストール](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
+- [macOS へのドライバーのインストール](../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md)
 - [SQL Server への接続](../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md)
 - [**bcp** による接続](../../connect/odbc/linux-mac/connecting-with-bcp.md)
 - [**sqlcmd** による接続](../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)
