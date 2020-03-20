@@ -2,19 +2,19 @@
 title: Active Directory モードでの展開
 titleSuffix: SQL Server Big Data Cluster
 description: Active Directory ドメインで SQL Server ビッグ データ クラスターをアップグレードする方法について説明します。
-author: NelGson
-ms.author: negust
+author: mihaelablendea
+ms.author: mihaelab
 ms.reviewer: mikeray
 ms.date: 02/28/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e2ce3fd5655655686d6fb27f628f6bdb3d22ceb1
-ms.sourcegitcommit: 7e544aa10f66bb1379bb5675fc063b2097631823
+ms.openlocfilehash: 1cd604c754113f7196963daf714eab3dd41143cc
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/29/2020
-ms.locfileid: "78200963"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79190582"
 ---
 # <a name="deploy-big-data-clusters-2019-in-active-directory-mode"></a>Active Directory モードで [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] を展開する
 
@@ -174,16 +174,27 @@ AD 統合には次のパラメーターが必要です: この記事の後半に
 
 - `security.activeDirectory.domainDnsName`:ドメインの名前 (例: `contoso.local`)。
 
-- `security.activeDirectory.clusterAdmins`:このパラメーターは、**1 つの AD グループ**を受け取ります。 このグループのメンバーには、クラスターの管理者権限が与えられます。 これは、SQL Server で sysadmin 権限が、HDFS でスーパーユーザー権限が、Controller で管理者権限が与えられることを意味します。 **デプロイを開始する前に、このグループが AD に存在する必要があることに注意してください。また、このグループを Active Directory の DomainLocal にスコープ指定できないことにも注意してください。ドメイン ローカルにスコープ指定されたグループではデプロイが失敗します。**
+- `security.activeDirectory.clusterAdmins`:このパラメーターは、1 つの AD グループを受け取ります。 AD グループのスコープは、ユニバーサルまたはドメイン グローバルである必要があります。 このグループのメンバーには、クラスターの管理者権限が与えられます。 これは、SQL Server で `sysadmin` 権限が、HDFS でスーパーユーザー権限が、コントローラーで管理者権限が与えられることを意味します。 
 
-- `security.activeDirectory.clusterUsers`:ビッグ データ クラスター内で通常のユーザー (管理者権限なし) となる AD グループの一覧。 **デプロイを開始する前に、これらのグループが AD に存在する必要があることに注意してください。また、これらのグループを Active Directory の DomainLocal にスコープ指定できないことにも注意してください。ドメイン ローカルにスコープ指定されたグループではデプロイが失敗します。**
+  >[!IMPORTANT]
+  >展開を開始する前に、このグループを AD 内に作成します。 この AD グループのスコープがドメイン ローカルの場合、展開は失敗します。
 
-- `security.activeDirectory.appOwners` **省略可能なパラメーター**: あらゆるアプリケーションを作成、削除、実行する権限が与えられる AD グループの一覧。 **デプロイを開始する前に、これらのグループが AD に存在する必要があることに注意してください。また、これらのグループを Active Directory の DomainLocal にスコープ指定できないことにも注意してください。ドメイン ローカルにスコープ指定されたグループではデプロイが失敗します。**
+- `security.activeDirectory.clusterUsers`:ビッグ データ クラスター内で通常のユーザー (管理者権限なし) となる AD グループの一覧。 この一覧には、ユニバーサル グループまたはドメイン グローバル グループのいずれかのスコープを持つ AD グループを含めることができます。 ドメイン ローカル グループを含めることはできません。
 
-- `security.activeDirectory.appReaders` **省略可能なパラメーター**: あらゆるアプリケーションを実行する権限を持つ AD グループの一覧。 **デプロイを開始する前に、これらのグループが AD に存在する必要があることに注意してください。また、これらのグループを Active Directory の DomainLocal にスコープ指定できないことにも注意してください。ドメイン ローカルにスコープ指定されたグループではデプロイが失敗します。**
+  >[!IMPORTANT]
+  >展開を開始する前に、これらのグループを AD 内に作成します。 これらの AD グループのいずれかのスコープがドメイン ローカルの場合、展開は失敗します。
 
-**AD グループのスコープを確認する方法:** 
-AD グループのスコープを確認して DomainLocal であるかどうかを判定するための[手順については、ここをクリック](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps)してください。
+- `security.activeDirectory.appOwners` **省略可能なパラメーター**: あらゆるアプリケーションを作成、削除、実行する権限が与えられる AD グループの一覧。 この一覧には、ユニバーサル グループまたはドメイン グローバル グループのいずれかのスコープを持つ AD グループを含めることができます。 ドメイン ローカル グループを含めることはできません。
+
+  >[!IMPORTANT]
+  >展開を開始する前に、これらのグループを AD 内に作成します。 これらの AD グループのいずれかのスコープがドメイン ローカルの場合、展開は失敗します。
+
+- `security.activeDirectory.appReaders` **省略可能なパラメーター**: あらゆるアプリケーションを実行する権限を持つ AD グループの一覧。 この一覧には、ユニバーサル グループまたはドメイン グローバル グループのいずれかのスコープを持つ AD グループを含めることができます。 ドメイン ローカル グループを含めることはできません。
+
+  >[!IMPORTANT]
+  >展開を開始する前に、これらのグループを AD 内に作成します。 これらの AD グループのいずれかのスコープがドメイン ローカルの場合、展開は失敗します。
+
+[AD グループのスコープを確認](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps)し、DomainLocal であるかどうかを確認します。
 
 展開構成ファイルをまだ初期化していない場合、このコマンドを実行して構成のコピーを取得できます。
 

@@ -3,18 +3,18 @@ title: Ubuntu:Linux 上に SQL Server をインストールする
 description: このクイックスタートでは、Ubuntu に SQL Server 2017 または SQL Server 2019 をインストールしてから、sqlcmd を使用してデータベースを作成してクエリを実行する方法を示します。
 author: VanMSFT
 ms.author: vanto
-ms.date: 11/04/2019
+ms.date: 03/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: seo-lt-2019
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: df3609c5bf4f31ee8a32992127681d42609b9528
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 69f1ac170d70c10d9a7061b3fc18f6c8a62db704
+ms.sourcegitcommit: efb2bb07700f645b3fbfcb400a0666de01388305
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75558425"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79319852"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>クイック スタート:Ubuntu に SQL Server をインストールし、データベースを作成する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
@@ -23,13 +23,14 @@ ms.locfileid: "75558425"
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-このクイックスタートでは、Ubuntu 16.04 に SQL Server 2017 または SQL Server 2019 をインストールします。 次に、**sqlcmd** と接続して最初のデータベースを作成し、クエリを実行します。
+このクイックスタートでは、Ubuntu 16.04 に SQL Server 2017 をインストールします。 次に、**sqlcmd** と接続して最初のデータベースを作成し、クエリを実行します。
 
 ::: moniker-end
+
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-このクイックスタートでは、Ubuntu 16.04 に SQL Server 2019 をインストールします。 次に、**sqlcmd** と接続して最初のデータベースを作成し、クエリを実行します。
+このクイックスタートでは、Ubuntu 18.04 に SQL Server 2019 をインストールします。 次に、**sqlcmd** と接続して最初のデータベースを作成し、クエリを実行します。
 
 ::: moniker-end
 
@@ -38,9 +39,12 @@ ms.locfileid: "75558425"
 
 ## <a name="prerequisites"></a>前提条件
 
+<!--SQL Server 2017 on Linux-->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
+
 Ubuntu 16.04 マシンには**少なくとも 2 GB** のメモリが必要です。
 
-ご自分のマシンに Ubuntu 16.04 をインストールするには、[http://releases.ubuntu.com/xenial/](http://releases.ubuntu.com/xenial/) にアクセスします。 Azure で Ubuntu 仮想マシンを作成することもできます。 「[Azure CLI を使用した Linux VM の作成と管理](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)」を参照してください。
+ご自分のマシンに Ubuntu 16.04 をインストールするには、<http://releases.ubuntu.com/xenial/> にアクセスします。 Azure で Ubuntu 仮想マシンを作成することもできます。 「[Azure CLI を使用した Linux VM の作成と管理](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)」を参照してください。
 
 > [!NOTE]
 > 現時点では、Windows 10 用の [Windows Subsystem for Linux](https://msdn.microsoft.com/commandline/wsl/about) はインストール先としてサポートされていません。
@@ -50,10 +54,26 @@ Ubuntu 16.04 マシンには**少なくとも 2 GB** のメモリが必要です
 > [!NOTE]
 > Ubuntu 18.04 はまだ正式にサポートされていませんが、[修正](https://blogs.msdn.microsoft.com/sql_server_team/installing-sql-server-2017-for-linux-on-ubuntu-18-04-lts/)を加えることで SQL Server を実行できます。
 
+::: moniker-end
+
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+
+Ubuntu 18.04 マシンには**少なくとも 2 GB** のメモリが必要です。
+
+ご自分のマシンに Ubuntu 18.04 をインストールするには、<http://releases.ubuntu.com/bionic/> にアクセスします。 Azure で Ubuntu 仮想マシンを作成することもできます。 「[Azure CLI を使用した Linux VM の作成と管理](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)」を参照してください。
+
+> [!NOTE]
+> 現時点では、Windows 10 用の [Windows Subsystem for Linux](https://msdn.microsoft.com/commandline/wsl/about) はインストール先としてサポートされていません。
+
+他のシステム要件については、[SQL Server on Linux のシステム要件](sql-server-linux-setup.md#system)に関する記事を参照してください。
+
+::: moniker-end
+
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-## <a id="install"></a>SQL Server をインストールする
+## <a name="install-sql-server"></a><a id="install"></a>SQL Server をインストールする
 
 Ubuntu 上で SQL Server を構成するには、ターミナルで次のコマンドを実行して **mssql-server** パッケージをインストールします。
 
@@ -106,10 +126,11 @@ Ubuntu 上で SQL Server を構成するには、ターミナルで次のコマ�
 この時点で、SQL Server は Ubuntu マシン上で動作しており、使用する準備ができています。
 
 ::: moniker-end
+
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-## <a id="install"></a>SQL Server をインストールする
+## <a name="install-sql-server"></a><a id="install"></a>SQL Server をインストールする
 
 Ubuntu 上で SQL Server を構成するには、ターミナルで次のコマンドを実行して **mssql-server** パッケージをインストールします。
 
@@ -122,7 +143,7 @@ Ubuntu 上で SQL Server を構成するには、ターミナルで次のコマ�
 2. SQL Server 2019 用の Microsoft SQL Server Ubuntu リポジトリを登録します。
 
    ```bash
-   sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2019.list)"
+   sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/18.04/mssql-server-2019.list)"
    ```
 
 3. 次のコマンドを実行して SQL Server をインストールします。
@@ -153,7 +174,10 @@ Ubuntu 上で SQL Server を構成するには、ターミナルで次のコマ�
 
 ::: moniker-end
 
-## <a id="tools"></a>SQL Server コマンドライン ツールをインストールする
+## <a name="install-the-sql-server-command-line-tools"></a><a id="tools"></a>SQL Server コマンドライン ツールをインストールする
+
+<!--SQL Server 2017 on Linux-->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
 データベースを作成するには、SQL Server 上で Transact-SQL ステートメントを実行できるツールと接続する必要があります。 次の手順で SQL Server コマンドライン ツールの [sqlcmd](../tools/sqlcmd-utility.md) と [bcp](../tools/bcp-utility.md) をインストールします。
 
@@ -199,5 +223,57 @@ Ubuntu 上で SQL Server を構成するには、ターミナルで次のコマ�
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
    source ~/.bashrc
    ```
+
+::: moniker-end
+
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+
+データベースを作成するには、SQL Server 上で Transact-SQL ステートメントを実行できるツールと接続する必要があります。 次の手順で SQL Server コマンドライン ツールの [sqlcmd](../tools/sqlcmd-utility.md) と [bcp](../tools/bcp-utility.md) をインストールします。
+
+次の手順を使用して、Ubuntu に **mssql-tools** をインストールします。 
+
+1. パブリック リポジトリの GPG キーをインポートします。
+
+   ```bash
+   curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+   ```
+
+1. Microsoft Ubuntu リポジトリを登録します。
+
+   ```bash
+   curl https://packages.microsoft.com/config/ubuntu/18.04/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list
+   ```
+
+1. ソース一覧を更新し、unixODBC 開発者パッケージを使用してインストール コマンドを実行します。
+
+   ```bash
+   sudo apt-get update 
+   sudo apt-get install mssql-tools unixodbc-dev
+   ```
+
+   > [!Note] 
+   > 最新バージョンの **mssql-tools** に更新するには、次のコマンドを実行します。
+   >    ```bash
+   >   sudo apt-get update 
+   >   sudo apt-get install mssql-tools 
+   >   ```
+
+1. **省略可能**:bash シェルで **PATH** 環境変数に `/opt/mssql-tools/bin/` を追加します。
+
+   ログイン セッション用に bash シェルから **sqlcmd/bcp** にアクセスできるようにするには、次のコマンドで **~/.bash_profile** ファイルの **PATH** を変更します。
+
+   ```bash
+   echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
+   ```
+
+   対話型/非ログイン セッション用に bash シェルから **sqlcmd/bcp** にアクセスできるようにするには、次のコマンドで **~/.bashrc** ファイルの **PATH** を変更します。
+
+   ```bash
+   echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
+   source ~/.bashrc
+   ```
+
+::: moniker-end
 
 [!INCLUDE [Connect, create, and query data](../includes/sql-linux-quickstart-connect-query.md)]

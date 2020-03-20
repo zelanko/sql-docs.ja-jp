@@ -12,12 +12,12 @@ ms.custom: seodec18
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: be126095fc300820a60bd4b195d43ec7d2059072
-ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
+ms.openlocfilehash: 83337465d8f8a7c12c9a1d69d7e9e2186485f549
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77256700"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198386"
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>チュートリアル:SQL Server on Linux で Active Directory 認証を使用する
 
@@ -46,11 +46,11 @@ AD 認証を構成する前に、次のことを行う必要があります。
   * [SUSE Linux Enterprise Server (SLES)](quickstart-install-connect-suse.md)
   * [Ubuntu](quickstart-install-connect-ubuntu.md)
 
-## <a id="join"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ホストを AD ドメインに参加させる
+## <a name="join-ssnoversion-host-to-ad-domain"></a><a id="join"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ホストを AD ドメインに参加させる
 
 SQL Server Linux ホストを Active Directory ドメイン コントローラーに参加させます。 Active Directory ドメインに参加する方法については、「[Linux ホスト上の SQL Server を Active Directory ドメインに参加させる](sql-server-linux-active-directory-join-domain.md)」をご覧ください。
 
-## <a id="createuser"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 用の AD ユーザー (または MSA) を作成して SPN を設定する
+## <a name="create-ad-user-or-msa-for-ssnoversion-and-set-spn"></a><a id="createuser"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 用の AD ユーザー (または MSA) を作成して SPN を設定する
 
 > [!NOTE]
 > 以下の手順では、[完全修飾ドメイン名](https://en.wikipedia.org/wiki/Fully_qualified_domain_name)を使います。 **Azure** を使用している場合は、先に進む前に **[作成する](https://docs.microsoft.com/azure/virtual-machines/linux/portal-create-fqdn)** 必要があります。
@@ -80,14 +80,14 @@ SQL Server Linux ホストを Active Directory ドメイン コントローラ�
 
 詳細については、「 [Kerberos 接続用のサービス プリンシパル名の登録](../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)」を参照してください。
 
-## <a id="configurekeytab"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] サービスの keytab を構成する
+## <a name="configure-ssnoversion-service-keytab"></a><a id="configurekeytab"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] サービスの keytab を構成する
 
 Linux で SQL Server の AD 認証を構成するには、AD アカウント (MSA または AD ユーザー アカウント) と、前のセクションで作成された SPN が必要です。
 
 > [!IMPORTANT]
 > AD アカウントのパスワードが変更された場合、または SPN が割り当てられているアカウントのパスワードが変更された場合は、新しいパスワードとキー バージョン番号 (KVNO) を使用して、keytab を更新する必要があります。 一部のサービスでは、パスワードが自動的にローテーションされる場合もあります。 問題のアカウントのパスワード ローテーション ポリシーを確認し、予期しないダウンタイムが発生しないように、スケジュールされたメンテナンス アクティビティと一致させます。
 
-### <a id="spn"></a> SPN の keytab エントリ
+### <a name="spn-keytab-entries"></a><a id="spn"></a> SPN の keytab エントリ
 
 1. 前のステップで作成した AD アカウントのキー バージョン番号 (KVNO) を確認します。 通常は 2 ですが、アカウントのパスワードを複数回変更した場合は、別の整数になることがあります。 SQL Server のホスト コンピューターで、次のコマンドを実行します。
 
@@ -125,6 +125,7 @@ Linux で SQL Server の AD 認証を構成するには、AD アカウント (MS
 
    > [!NOTE]
    > 上記のコマンドでは、AD 認証に AES と RC4 の両方の暗号化暗号を使用できます。 RC4 は古い暗号化暗号です。より高度なセキュリティが必要な場合、AES 暗号化暗号のみを使用して keytab エントリを作成することを選択できます。
+   > 最後の 2 つの `UserName` エントリは小文字で指定する必要があります。そうしないと、許可認証に失敗する可能性があります。
 
 1. 上記のコマンドの実行後、mssql.keytab という名前の keytab ファイルが与えられるはずです。 SQL Server コンピューターにあるフォルダー `/var/opt/mssql/secrets` にこのファイルをコピーします。
 
@@ -163,7 +164,7 @@ Linux で SQL Server の AD 認証を構成するには、AD アカウント (MS
 
 この時点で、SQL Server で AD ベースのログインを使用できるようになります。
 
-## <a id="createsqllogins"></a> Transact-SQL で AD ベースのログインを作成する
+## <a name="create-ad-based-logins-in-transact-sql"></a><a id="createsqllogins"></a> Transact-SQL で AD ベースのログインを作成する
 
 1. SQL Server に接続し、AD ベースの新しいログインを作成します。
 
@@ -177,7 +178,7 @@ Linux で SQL Server の AD 認証を構成するには、AD アカウント (MS
    SELECT name FROM sys.server_principals;
    ```
 
-## <a id="connect"></a> AD 認証を使用して SQL Server に接続する
+## <a name="connect-to-sql-server-using-ad-authentication"></a><a id="connect"></a> AD 認証を使用して SQL Server に接続する
 
 ドメイン資格情報を使用してクライアント コンピューターにログインします。 AD 認証を使用してパスワードを再入力することなく SQL Server に接続できるようになります。 AD グループに対するログインを作成した場合は、そのグループのメンバーであるすべての AD ユーザーが、同じ方法で接続できます。
 
@@ -212,7 +213,7 @@ SQL Windows とは異なり、Kerberos 認証は SQL Linux のローカル接続
 | **ODBC** | 統合認証を使用します。 |
 | **ADO.NET** | 接続文字列の構文。 |
 
-## <a id="additionalconfig"></a> その他の構成オプション
+## <a name="additional-configuration-options"></a><a id="additionalconfig"></a> その他の構成オプション
 
 [PBIS](https://www.beyondtrust.com/)、[VAS](https://www.oneidentity.com/products/authentication-services/)、[Centrify](https://www.centrify.com/) などのサードパーティ製ユーティリティを使って Linux ホストを AD ドメインに参加させていて、SQL Server で強制的に openldap ライブラリを直接使いたい場合は、次のように **mssql-conf** で **disablesssd** オプションを構成できます。
 

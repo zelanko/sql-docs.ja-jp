@@ -1,5 +1,6 @@
 ---
 title: SQL Server 2019 の新機能 | Microsoft Docs
+description: 開発言語、データ型、環境、およびオペレーティング システムの選択肢を提供する、SQL Server 2019 (15.x) の新機能について説明します。
 ms.date: 11/04/2019
 ms.prod: sql
 ms.reviewer: ''
@@ -8,12 +9,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0cddfe78555d5e5f57e57346aff1ead52f05cebf
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 55d59d140d8b833cb4b2ea6b11360043710de60d
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76831551"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79218050"
 ---
 # <a name="whats-new-in-sql-server-2019"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] の新機能
 
@@ -193,7 +194,7 @@ ms.locfileid: "76831551"
 ## <a name="platform-choice"></a>プラットフォームの選択肢
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] は、[!INCLUDE[ssSQL17](../includes/sssql17-md.md)] で導入されたイノベーションに基づいており、お客様が選択したプラットフォーム上で、これまでよりも多くの機能とセキュリティを備えた [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] を実行できます。
 
-### <a id="sql-server-on-linux"></a>Linux
+### <a name="linux"></a><a id="sql-server-on-linux"></a>Linux
 
 | 新機能または更新 | 詳細 |
 |:-----|:-----|
@@ -226,7 +227,7 @@ ms.locfileid: "76831551"
 |サーバーおよび CAL ライセンス プロダクト キーに関するセットアップ警告|Enterprise Server または Enterprise CAL ライセンス プロダクト キーが入力されていて、マシンに 20 個を超える物理コアがある場合、またはハイパースレッディングが有効になっている場合に 40 個の論理コアがある場合は、セットアップ中に警告が表示されます。 ユーザーは、引き続き制限を確認してセットアップを続行するか、オペレーティング システムの最大プロセッサ数をサポートするライセンス キーを入力することができます。|
 | &nbsp; | &nbsp; |
 
-## <a id="ml"></a> SQL Server Machine Learning Services
+## <a name="sql-server-machine-learning-services"></a><a id="ml"></a> SQL Server Machine Learning Services
 
 |新機能または更新 | 詳細 |
 |:---|:---|
@@ -269,7 +270,7 @@ ms.locfileid: "76831551"
 
 このリリースの SQL Server Reporting Services では、Azure SQL Database Managed Instance、Power BI Premium データセット、強化されたアクセシビリティ、Azure Active Directory アプリケーション プロキシ、Transparent Data Encryption がサポートされています。 また、Microsoft レポート ビルダーの更新プログラムも提供されます。 詳細については、[SQL Server Reporting Services の新機能](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)に関する記事を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [`SqlServer` PowerShell モジュール](https://www.powershellgallery.com/packages/Sqlserver)
 - [SQL Server PowerShell ドキュメント](../powershell/sql-server-powershell.md)

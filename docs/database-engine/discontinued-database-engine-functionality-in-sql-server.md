@@ -1,5 +1,6 @@
 ---
-title: SQL Server で廃止されたデータベース エンジンの機能 | Microsoft Docs
+title: 廃止されたデータベース エンジンの機能
+description: SQL Server 2019 (15.x)、SQL Server 2016 (13.x)、および以前のバージョンで廃止されたデータベース エンジンの機能について説明します。
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -35,19 +36,19 @@ ms.assetid: d686cdf0-d11d-4dba-9ec8-de1a5f189f25
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= sql-server-linux-2017  || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: db10b57b5eda73cb2bb2105f4f99fb6e5cbed733
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 25da4c94448a6527e50fe759e6c75cdbad10b007
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75258118"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79190532"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server"></a>SQL Server で廃止されたデータベース エンジンの機能
 [!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   このトピックでは、 [!INCLUDE[ssDE](../includes/ssde-md.md)] で使用できなくなった [!INCLUDE[ssCurrent](../includes/ssnoversion-md.md)]の機能について説明します。  
 
-## <a name="discontinued-features-in-includesssqlv15includessssqlv15-mdmd"></a>[!INCLUDE[ssSQLv15](../includes/sssqlv15-md.md)] で廃止された機能  
+## <a name="discontinued-features-in-sssqlv15"></a>[!INCLUDE[ssSQLv15](../includes/sssqlv15-md.md)] で廃止された機能  
 
 - 次のデータベース スコープ構成オプションは廃止されました。
 
@@ -60,7 +61,7 @@ ms.locfileid: "75258118"
 >[!NOTE]
 >[!INCLUDE[ssSQLv14](../includes/sssqlv14-md.md)] で廃止された機能はありません。
 
-## <a name="discontinued-features-in-includesssql15includessssql15-mdmd"></a>[!INCLUDE[ssSQL15](../includes/sssql15-md.md)] で廃止された機能
+## <a name="discontinued-features-in-sssql15"></a>[!INCLUDE[ssSQL15](../includes/sssql15-md.md)] で廃止された機能
 
 - [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] は 64 ビット アプリケーションです。 32 ビット版のインストールは廃止されましたが、いくつかの要素が 32 ビット コンポーネントとして実行されます。  
 
@@ -76,7 +77,7 @@ ms.locfileid: "75258118"
 
 - [SQL Server 2014 で廃止されたデータベース エンジンの機能](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014)
 
-### <a name="see-also"></a>参照
+### <a name="see-also"></a>関連項目
 
 - [SQL Server 2019 データベース エンジンの非推奨の機能](deprecated-database-engine-features-in-sql-server-version-15.md)
 - [SQL Server 2017 データベース エンジンの非推奨の機能](deprecated-database-engine-features-in-sql-server-2017.md)

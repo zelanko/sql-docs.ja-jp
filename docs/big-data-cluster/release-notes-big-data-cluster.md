@@ -5,16 +5,16 @@ description: この記事では、SQL Server ビッグ データ クラスター
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 02/13/2020
+ms.date: 03/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9de368594383ef1f7fe3ae3c062f92873fb15698
-ms.sourcegitcommit: 49082f9b6b3bc8aaf9ea3f8557f40c9f1b6f3b0b
+ms.openlocfilehash: 136665cbe354ce0fdbbc575d2e97759f35cb3444
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77256905"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79286226"
 ---
 # <a name="sql-server-2019-big-data-clusters-release-notes"></a>SQL Server 2019 ビッグ データ クラスターのリリース ノート
 
@@ -50,7 +50,7 @@ ms.locfileid: "77256905"
 
 |プラットフォーム|サポートされているバージョン|
 |---------|---------|
-|`azdata`|サーバーと同じマイナー バージョンを指定する必要があります (SQL Server マスター インスタンスと同様)。<br/><br/>`azdata –-version` を実行して、バージョンを検証します。<br/><br/>SQL Server 2019 CU2 の時点で、このバージョンは `15.0.4013` です。|
+|`azdata`|サーバーと同じマイナー バージョンを指定する必要があります (SQL Server マスター インスタンスと同様)。<br/><br/>`azdata –-version` を実行して、バージョンを検証します。<br/><br/>SQL Server 2019 CU3 の時点で、このバージョンは `15.0.4023` です。|
 |Azure Data Studio|[Azure Data Studio](https://aka.ms/getazuredatastudio) の最新のビルドを取得します。|
 
 ## <a name="release-history"></a>リリース履歴
@@ -59,6 +59,7 @@ ms.locfileid: "77256905"
 
 | Release               | Version       | リリース日 |
 |-----------------------|---------------|--------------|
+| [CU3](#cu3)           | 15.0.4023.6    | 2020-03-12   |
 | [CU2](#cu2)           | 15.0.4013.40    | 2020-02-13   |
 | [CU1](#cu1)           | 15.0.4003.23   | 2020-01-07   |
 | [GDR1](#rtm)            | 15.0.2070.34  | 2019-11-04   |
@@ -67,15 +68,30 @@ ms.locfileid: "77256905"
 
 更新プログラムをインストールする方法については、「[[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]をアップグレードする方法](deployment-upgrade.md)」を参照してください。
 
-## <a id="cu2"></a> CU2 (2020 年 2 月)
+## <a name="cu3-mar-2020"></a><a id="cu3"></a> CU3 (2020 年 3 月)
 
-これは SQL Server 2019 の Cumulative Update 2 (CU2) リリースです。 このリリースに対する SQL Server データベース エンジンのバージョンは 15.0.4003.23 です。
+SQL Server 2019 の Cumulative Update 3 (CU3) リリースです。 このリリースの SQL Server Database エンジンのバージョンは、15.0.4023.6 です。
+
+|パッケージ バージョン | イメージ タグ |
+|-----|-----|
+|15.0.4023.6 |[2019-CU3-ubuntu-16.04]
+
+### <a name="resolved-issues"></a>解決した問題
+
+SQL Server 2019 CU3 では、以前のリリースで発生した次の問題が解決されています。
+
+- [プライベート リポジトリを使用した展開](#deployment-with-private-repository)
+- [タイムアウトによりアップグレードが失敗することがある](#upgrade-may-fail-due-to-timeout)
+
+## <a name="cu2-feb-2020"></a><a id="cu2"></a> CU2 (2020 年 2 月)
+
+これは SQL Server 2019 の Cumulative Update 2 (CU2) リリースです。 このリリースの SQL Server データベース エンジンのバージョンは、15.0.4013.40 です。
 
 |パッケージ バージョン | イメージ タグ |
 |-----|-----|
 |15.0.4013.40 |[2019-CU2-ubuntu-16.04]
 
-## <a id="cu1"></a> CU1 (2020 年 1 月)
+## <a name="cu1-jan-2020"></a><a id="cu1"></a> CU1 (2020 年 1 月)
 
 これは SQL Server 2019 の Cumulative Update 1 (CU1) リリースです。 このリリースに対する SQL Server データベース エンジンのバージョンは 15.0.4003.23 です。
 
@@ -83,7 +99,7 @@ ms.locfileid: "77256905"
 |-----|-----|
 |15.0.4003.23|[2019-CU1-ubuntu-16.04]
 
-## <a id="rtm"></a> GDR1 (2019 年 11 月)
+## <a name="gdr1-nov-2019"></a><a id="rtm"></a> GDR1 (2019 年 11 月)
 
 SQL Server 2019 一般配布リリース 1 (GDR1) で [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-nover.md)]の一般提供が開始されました。 このリリースの SQL Server データベース エンジンのバージョンは、15.0.2070.34 です。
 
@@ -97,6 +113,8 @@ SQL Server 2019 一般配布リリース 1 (GDR1) で [!INCLUDE[big-data-cluster
 
 ### <a name="deployment-with-private-repository"></a>プライベート リポジトリを使用した展開
 
+- **影響を受けるリリース**: GDR1、CU1、CU2。 CU3 に対して解決されました。
+
 - **問題およびユーザーへの影響**:プライベート リポジトリからアップグレードする場合に特定の要件があります。
 
 - **回避策**:プライベート リポジトリを使用して BDC を展開またはアップグレードするためにイメージを事前にプルする場合は、現在のビルド イメージとターゲット ビルド イメージがプライベート リポジトリ内にあることを確認します。 これにより、必要な場合に正常にロールバックすることが可能になります。 また、最初の展開以降にプライベート リポジトリの資格情報を変更した場合は、アップグレードする前に Kubernetes で対応するシークレットを更新します。 `azdata` では、`AZDATA_PASSWORD` と `AZDATA_USERNAME` の環境変数を使用した資格情報の更新はサポートされていません。 [`kubectl edit secrets`](https://kubernetes.io/docs/concepts/configuration/secret/#editing-a-secret) を使用してシークレットを更新します。 
@@ -104,6 +122,8 @@ SQL Server 2019 一般配布リリース 1 (GDR1) で [!INCLUDE[big-data-cluster
 別のリポジトリを使用した現在のビルドとターゲット ビルドのアップグレードはサポートされていません。
 
 ### <a name="upgrade-may-fail-due-to-timeout"></a>タイムアウトによりアップグレードが失敗することがある
+
+- **影響を受けるリリース**: GDR1、CU1、CU2。 CU 3 に対して解決されました。
 
 - **問題およびユーザーへの影響**:タイムアウトによりアップグレードが失敗することがあります。
 
@@ -132,7 +152,7 @@ SQL Server 2019 一般配布リリース 1 (GDR1) で [!INCLUDE[big-data-cluster
       kubectl edit configmap controller-upgrade-configmap
       ```
 
-   2.   次のフィールドを編集します。
+   2. 次のフィールドを編集します。
 
        **`controllerUpgradeTimeoutInMinutes`** : コントローラーまたはコントローラー db のアップグレードが完了するまでの待機時間を分単位で指定します。 既定値は 5 です。 20 以上に更新します。
 
@@ -140,7 +160,7 @@ SQL Server 2019 一般配布リリース 1 (GDR1) で [!INCLUDE[big-data-cluster
 
        **`componentUpgradeTimeoutInMinutes`** :これ以降のアップグレードの各フェーズの完了時間を指定します。  既定値は 30 です。 45 に更新します。
 
-   3.   保存して終了します
+   3. 保存して終了します
 
    別の方法として、次の Python スクリプトでタイムアウトを設定することも可能です。
 

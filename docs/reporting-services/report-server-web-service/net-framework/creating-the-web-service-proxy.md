@@ -1,5 +1,6 @@
 ---
 title: Web サービス プロキシの作成 | Microsoft Docs
+description: クライアントと Web サービスは、SOAP メッセージを使用して通信できます。 プロキシ クラスをプロジェクトに追加して、パラメーターを XML 要素にマップし、SOAP メッセージを送信します。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b1217843-8d3d-49f3-a0d2-d35b0db5b2df
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 116e4ca4ef2080c186a11b6816a08d4c3c5ba169
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: e666496383b738b11f20cd9b3d7e3a76e8613416
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63284639"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198313"
 ---
 # <a name="creating-the-web-service-proxy"></a>Web サービス プロキシの作成
   クライアントと Web サービスは、SOAP メッセージを使用して通信できます。SOAP メッセージは、入力パラメーターと出力パラメーターを XML としてカプセル化します。 プロキシ クラスは、パラメーターを XML 要素にマップした後、ネットワークを介して SOAP メッセージを送信します。 この方法では、プロキシ クラスによって、SOAP レベルで Web サービスと通信する必要がなくなり、SOAP および Web サービスのプロキシをサポートするあらゆる開発環境で Web サービスを呼び出すことができます。  

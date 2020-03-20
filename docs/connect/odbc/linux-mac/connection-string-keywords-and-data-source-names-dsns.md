@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f95cdbce-e7c2-4e56-a9f7-8fa3a920a125
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 486d26dd3afeb91cb43181875e22592fb482af5f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 159aedf0665df441a31c93760c26523b843921bb
+ms.sourcegitcommit: 577e7467821895f530ec2f97a33a965fca808579
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "68702805"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79058717"
 ---
 # <a name="connecting-to-sql-server"></a>SQL Server への接続
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -52,7 +52,7 @@ Server = [protocol:]server[,port]
 #  
 ```  
 
-サーバーに接続するために、必要に応じてプロトコルとポートを指定することができます。 たとえば、**Server=tcp:**_servername_**,12345** などです。 Linux および macOS ドライバーでサポートされているプロトコルは `tcp` のみであることに注意してください。
+サーバーに接続するために、必要に応じてプロトコルとポートを指定することができます。 たとえば、**Server=tcp:** _servername_ **,12345** などです。 Linux および macOS ドライバーでサポートされているプロトコルは `tcp` のみであることに注意してください。
 
 静的ポートの名前付きインスタンスに接続するには、<b>Server=</b>*servername*,**port_number** を使用します。 バージョン 17.4 より前では、動的ポートへの接続はサポートされていません。
 
@@ -93,8 +93,8 @@ SSL は、OpenSSL ライブラリを使用します。 次の表は、OpenSSL �
 |Red Hat Enterprise Linux 8|1.1.1|/etc/pki/tls/cert.pem|
 |Red Hat Enterprise Linux 7|1.0.1|/etc/pki/tls/cert.pem|
 |Red Hat Enterprise Linux 6|1.0.0-10|/etc/pki/tls/cert.pem|
-|SuSE Linux Enterprise 15|1.1.0|/etc/ssl/certs|
-|SuSE Linux Enterprise 11, 12|1.0.1|/etc/ssl/certs|
+|SUSE Linux Enterprise 15|1.1.0|/etc/ssl/certs|
+|SUSE Linux Enterprise 11、12|1.0.1|/etc/ssl/certs|
 |Ubuntu 18.10、19.04|1.1.1|/etc/ssl/certs|
 |Ubuntu 18.04|1.1.0|/etc/ssl/certs|
 |Ubuntu 16.04、16.10、17.10|1.0.2|/etc/ssl/certs|
@@ -111,7 +111,8 @@ ODBC ドライバー 17.4 以降では、ドライバーでキープアライブ
 
 - `KeepAliveInterval=<integer>` では、応答を受信するまでキープアライブを再送信する間隔を設定します。  既定値は **1** 秒です。
 
+## <a name="see-also"></a>参照
 
-## <a name="see-also"></a>参照  
-[Linux および macOS に Microsoft ODBC Driver for SQL Server をインストールする](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)  
-[プログラミング ガイドライン](../../../connect/odbc/linux-mac/programming-guidelines.md)
+- [Linux に SQL Server 用 Microsoft ODBC Driver をインストールする](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
+- [macOS に Microsoft ODBC Driver for SQL Server をインストールする](../../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md)
+- [プログラミング ガイドライン](../../../connect/odbc/linux-mac/programming-guidelines.md)

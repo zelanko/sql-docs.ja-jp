@@ -1,7 +1,7 @@
 ---
 title: トレース フラグ (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 12/12/2019
+ms.date: 03/11/2020
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 058becae07f15857f0509cbbc90261b960bc4713
-ms.sourcegitcommit: 64e96ad1ce6c88c814e3789f0fa6e60185ec479c
+ms.openlocfilehash: e19d4af33285f68033dbcead3f7bc275b2e029cb
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "77705917"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79288636"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - トレース フラグ (Transact-SQL)
 
@@ -86,9 +86,9 @@ ms.locfileid: "77705917"
 |**902**|累積更新プログラムまたは Service Pack をインストールするときに、データベース アップグレード スクリプトの実行をバイパスします。 スクリプト アップグレード モード中にエラーが発生する場合は、Microsoft SQL のカスタマー サービスとサポート (CSS) に詳しいガイダンスを問い合わせることをお勧めします。 詳しくは、こちらの [Microsoft サポート技術情報](https://support.microsoft.com/kb/2163980)をご覧ください。<br /><br />**警告:** このトレース フラグは、スクリプト アップグレード モード中に更新が失敗した場合のトラブルシューティングを目的としたものであり、運用環境での継続的な実行はサポートされていません。 累積的な更新プログラムと Service Pack を完全にインストールするには、データベース アップグレード スクリプトが正常に実行される必要があります。 そうでない場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスで予期しない問題が発生することがあります。<br /><br />**スコープ**: グローバルのみ|
 |**1117**|ファイル グループ内のファイルが自動拡張のしきい値を満たすときに、ファイル グループ内のすべてのファイルを拡張します。 このトレース フラグはすべてのデータベースに影響します。すべてのデータベースでファイルグループ内のすべてのファイルが同量ずつ安全に拡張できる場合にのみ推奨されます。<br /><br />**注:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降では、この動作は ALTER DATABASE の AUTOGROW_SINGLE_FILE および AUTOGROW_ALL_FILES オプションによって制御されるようになり、トレース フラグ 1117 の効力はなくなりました。 詳細については、「[ALTER DATABASE の File および Filegroup オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)」を参照してください。<br /><br />**スコープ**: グローバルのみ|
 |**1118**|混合エクステントではなく単一エクステント上でページの割り当てを強制することにより、SGAM ページでの競合が減少します。 新しいオブジェクトが作成されると、既定では、最初の 8 ページは異なるエクステント (混合エクステント) から割り当てられます。 後でページを追加する必要が生じる場合、それらのページは同じエクステント (単一エクステント) から割り当てられます。 SGAM ページはこれらの混合エクステントを追跡するのに使用されます。これは、混合ページの割り当てが多く発生した場合に、それらの混合エクステントが即座にボトルネックとなる可能性があるためです。 新しいオブジェクトを作成する際、このトレース フラグにより 8 ページすべてが同じエクステントから割り当てられるため、SGAM ページをスキャンする必要性が最小限に抑えられます。 詳しくは、こちらの [Microsoft サポート技術情報](https://support.microsoft.com/kb/328551)をご覧ください。<br /><br />**注:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降では、この動作は ALTER DATABASE の SET MIXED_PAGE_ALLOCATION オプションによって制御されるようになり、トレース フラグ 1118 の効力はなくなりました。 詳細については、「[ALTER DATABASE の SET オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)」を参照してください。<br /><br />**スコープ**: グローバルのみ|  
-|**1204**|デッドロックに関係しているロックのリソースと種類、および影響を受けている現在のコマンドを返します。 詳しくは、こちらの [Microsoft サポート技術情報](https://support.microsoft.com/kb/832524)をご覧ください。<br /><br />**スコープ**: グローバルのみ|  
+|**1204**|デッドロックに関係しているロックのリソースと種類、および影響を受けている現在のコマンドを返します。 デッドロックの詳細については、「[トランザクションのロックおよび行のバージョン管理ガイド](../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md#deadlocks)」を参照してください。<br /><br />**注:** デッドロックの原因となっているワークロード集中型のシステムでは、トレース フラグ 1204 を使用しないようにしてください。 デッドロックを検出する他の方法の詳細については、「[トランザクションのロックおよび行のバージョン管理ガイド](../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md#deadlock_detection)」を参照してください。<br /><br />**スコープ**: グローバルのみ|  
 |**1211**|メモリの負荷またはロック数に基づいて、ロックのエスカレーションを無効にします。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]において、行ロックまたはページ ロックはテーブル ロックにエスカレートされません。<br /><br />このトレース フラグを使用すると、過剰な数のロックが発生する可能性があります。ロック メモリのサイズが十分に大きくなると、クエリに対して追加のロックを割り当てようとする試みは失敗する可能性があります。 これが原因で[!INCLUDE[ssDE](../../includes/ssde-md.md)]のパフォーマンスが悪化したり、メモリ不足によって 1204 エラー (ロック リソース割り当て不能) が発生する可能性があります。<br /><br />トレース フラグ 1211 と 1224 の両方を設定した場合、1224 よりも 1211 が優先されます。 ただし、トレース フラグ 1211 では、メモリに負荷がかかっていたとしてもすべての場合でエスカレーションが無効になるので、代わりに 1224 の使用をお勧めします。 これで、多数のロックが使用中でも "ロック不足" エラーを回避することができます。<br /><br />[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でのロックのエスカレーションが原因であるブロッキングの問題を解決する方法の詳細については、この [Microsoft サポート技術情報](https://support.microsoft.com/help/323630)をご覧ください。<br /><br />**スコープ**: グローバル、セッション|  
-|**1222**|デッドロックに関係しているロックのリソースと種類、および影響を受けている現在のコマンドを、どの XSD スキーマにも準拠しない XML 形式で返します。<br /><br />**スコープ**: グローバルのみ|  
+|**1222**|デッドロックに関係しているロックのリソースと種類、および影響を受けている現在のコマンドを、どの XSD スキーマにも準拠しない XML 形式で返します。 デッドロックの詳細については、「[トランザクションのロックおよび行のバージョン管理ガイド](../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md#deadlocks)」を参照してください。<br /><br />**注:** デッドロックの原因となっているワークロード集中型のシステムでは、トレース フラグ 1222 を使用しないようにしてください。 デッドロックを検出する他の方法の詳細については、「[トランザクションのロックおよび行のバージョン管理ガイド](../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md#deadlock_detection)」を参照してください。<br /><br />**スコープ**: グローバルのみ|  
 |**1224**|ロック数に基づいてロックのエスカレーションを無効にします。 ただし、メモリに負荷がかかっていてもロックのエスカレーションは有効にできます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] では、ロック オブジェクトで使用されるメモリ量が次のいずれかの条件を超えた場合に、行ロックまたはページ ロックがテーブル ロック (またはパーティション ロック) にエスカレートされます。<br /><ul><li>[!INCLUDE[ssDE](../../includes/ssde-md.md)] で使われるメモリの 40%。 これは、sp_configure の **locks** パラメーターが 0 に設定されている場合にのみ適用されます。 <li>sp_configure の **locks** パラメーターを使って構成されるロック メモリの 40%。 詳細については、「 [サーバー構成オプション &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)」を参照してください。</li></ul><br />トレース フラグ 1211 と 1224 の両方を設定した場合、1224 よりも 1211 が優先されます。 ただし、トレース フラグ 1211 では、メモリに負荷がかかっていたとしてもすべての場合のエスカレーションが無効になるわけではないので、1224 の使用をお勧めします。 これで、多数のロックが使用中でも "ロック不足" エラーを回避することができます。<br /><br />**注:** テーブル レベルまたは HoBT レベルの細分性へのロックのエスカレーションは、[ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) ステートメントの LOCK_ESCALATION オプションで制御することもできます。<br /><br />[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でのロックのエスカレーションが原因であるブロッキングの問題を解決する方法の詳細については、この [Microsoft サポート技術情報](https://support.microsoft.com/help/323630)をご覧ください。<br /><br />**スコープ**: グローバル、セッション|
 |**1229**|CPU の数に関係なく、すべてのロックのパーティション分割を無効にします。 既定では、より大規模なシステムのスケーラビリティ特性を向上させるために、サーバーに 16 個以上の CPU が搭載されている場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によりロックのパーティション分割が有効にされます。 パーティション分割のロックの詳細については、「[トランザクションのロックおよび行のバージョン管理ガイド](../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md#lock_partitioning)」を参照してください。<br /><br />**警告:** トレース フラグ 1229 を使用すると、スピンロックの競合が発生し、パフォーマンスが低下する可能性があります。<br /><br />**スコープ**: グローバルのみ|  
 |**1236**|データベース ロックのパーティション分割を有効にします。 詳しくは、こちらの [Microsoft サポート技術情報](https://support.microsoft.com/kb/2926217)をご覧ください。<br /><br />**注:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP3 および [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP1 以降、この動作はエンジンによって制御されるようになり、トレース フラグ 1236 に効力はありません。<br /><br />**スコープ**: グローバルのみ|

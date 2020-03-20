@@ -1,6 +1,6 @@
 ---
 title: Web アプリケーションでの URL アクセスの使用
-description: Reporting Services の URL アクセスは、ネットワークを介して各レポートにアクセスできるように特別に設計されています。
+description: Reporting Services での URL アクセスにより、ネットワーク経由でレポートにアクセスできるようになります。これにより、レポートの表示とナビゲーションをカスタム Web アプリケーションに統合できます。
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 39e7918c-ad2d-4ca6-b099-2dd4dbdb83dc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: de2ae80c7bb4a8e6d5b7eb4b0131a8c69ffdf7c1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 731ed382c029fb2115c4351d306bf5b33d294a48
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74796975"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198519"
 ---
 # <a name="integrating-reporting-services-using-url-access---web-application"></a>URL アクセスを使用した Reporting Services の統合 - Web アプリケーション
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の URL アクセスは、ネットワークを介して各レポートにアクセスできるように特別に設計されています。 この種類のアクセスは、レポートの表示およびナビゲーションをカスタム Web アプリケーションに統合するのに最適です。 Web アプリケーションで URL アクセスを使用するには、次の方法があります。  

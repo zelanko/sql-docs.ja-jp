@@ -3,17 +3,17 @@ title: Windows の分離の変更
 description: この記事では、Windows 上の SQL Server 2019 の Machine Learning Services での分離メカニズムに対する変更について説明します。 これらの変更は、SQLRUserGroup、ファイアウォール規則、ファイルのアクセス許可、および暗黙の認証に影響します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/15/2019
+ms.date: 03/05/2020
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4fae460e78682263c604d8e1e86ca40b7b62df97
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: ad95817a7b1eb9afb8377b06d20a577eda49ea23
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "69531043"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79285916"
 ---
 # <a name="sql-server-2019-on-windows-isolation-changes-for-machine-learning-services"></a>Windows 上の SQL Server 2019:Machine Learning Services の分離の変更
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,26 @@ AppContainers への移行の一環として、AppContainer SID に基づく新�
 > [!Note]
 > ネットワーク呼び出しが必要な場合は、Windows ファイアウォールでアウトバウンド規則を無効にすることができます。
 
-## <a name="program-file-permissions"></a>プログラム ファイルのアクセス許可
+<a name="file-permissions"></a>
+
+## <a name="file-permissions"></a>ファイルのアクセス許可
+
+既定では、外部の Python および R スクリプトには、作業ディレクトリに対する読み取りアクセス許可のみが与えられます。 
+
+ご利用の Python または R スクリプトで他の任意のディレクトリへのアクセス権が必要な場合は、**NT Service\MSSQLLaunchpad** サービス ユーザー アカウントおよびこのディレクトリ上の **ALL APPLICATION PACKAGES** に**読み取りおよび実行**アクセス許可または**書き込み**アクセス許可を付与する必要があります。
+
+アクセス権を付与するには、次の手順に従います。
+
+1. ファイル エクスプローラーで、作業ディレクトリとして使用するフォルダーを右クリックし、 **[プロパティ]** を選択します。
+1. **[セキュリティ]** を選択し、 **[編集]** をクリックしてアクセス許可を変更します。
+1. **[追加]** をクリックします。
+1. **[場所の指定]** がローカル コンピューター名であることを確認してください。
+1. **[選択するオブジェクト名を入力してください]** に 「**ALL APPLICATION PACKAGES**」と入力し、 **[名前の確認]** をクリックします。 **[OK]** をクリックします。
+1. **[許可]** 列の下にある **[読み取りおよび実行]** を選択します。
+1. 書き込みアクセス許可を付与する場合は、 **[許可]** 列の下にある **[書き込み]** を選択します。
+1. **[OK]** をクリックし、さらに **[OK]** をクリックします。
+
+### <a name="program-file-permissions"></a>プログラム ファイルのアクセス許可
 
 以前のリリースと同様に、**SQLRUserGroup** は、SQL Server **Binn**、**R_SERVICES**、および **PYTHON_SERVICES** ディレクトリの実行可能ファイルに対する読み取りと実行のアクセス許可を、引き続き提供します。 このリリースでは、**SQLRUserGroup** の唯一のメンバーは SQL Server Launchpad サービス アカウントです。  Launchpad サービスが R または Python の実行環境を開始すると、プロセスは LaunchPad サービスとして実行されます。
 
@@ -66,7 +85,7 @@ AppContainers への移行の一環として、AppContainer SID に基づく新�
 SQL Server セットアップの一環として、現在の既定の **R_SERVICES** および **PYTHON_SERVICES** にシンボリックリンクが作成されています。 このリンクを作成しない場合、代替案としては「すべてのアプリケーション パッケージ」の読み取りアクセス許可を、そのフォルダーまでの階層に付与することがあります。
 
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 + [Windows に SQL Server Machine Learning Services をインストールする](sql-machine-learning-services-windows-install.md)
 + [Linux に SQL Server Machine Learning Services をインストールする](../../linux/sql-server-linux-setup-machine-learning.md)

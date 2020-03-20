@@ -1,5 +1,6 @@
 ---
 title: カスタム アプリケーション内での RSClientPrint コントロールの使用 | Microsoft Docs
+description: RSPrintClient を使用すると、HTML ビューアーで表示されたレポートをクライアント側で印刷することができます。 レポート サーバーでは、画像 (EMF) 表示拡張機能でレポートがレンダリングされます。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8c0bdd18-8905-4e22-9774-a240fc81a8a7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a2c548860065672147428c6a5b64bf4ac8be4b79
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: f352c393f1386dae1839a76a4fd6e5a2553a54c3
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "73593778"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198559"
 ---
 # <a name="using-the-rsclientprint-control-in-custom-applications"></a>カスタム アプリケーション内での RSClientPrint コントロールの使用
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ActiveX コントロールである **RSPrintClient** を使用すると、HTML ビューアーで表示されたレポートをクライアント側で印刷することができます。 このコントロールには **[印刷]** ダイアログ ボックスがあり、印刷ジョブの開始、レポートのプレビュー、印刷するページの指定、余白の変更を行うことができます。 クライアント側での印刷操作の間、レポート サーバーが画像 (EMF) 表示拡張機能でレポートを表示し、オペレーティング システムの印刷機能を使用して印刷ジョブを作成し、そのジョブをプリンターに送ります。  
@@ -39,7 +40,7 @@ ms.locfileid: "73593778"
     
   
 ## <a name="rsprintclient-overview"></a>RSPrintClient の概要  
- このコントロールによって表示されるカスタム印刷ダイアログ ボックスでは、印刷プレビュー、特定のページや範囲を指定するためのページ選択、ページ余白、ページの向きなど、一般的な印刷ダイアログ ボックスの機能がサポートされています。 コントロールは CAB ファイルとしてパッケージ化されています。 **[印刷]** ダイアログ ボックス内のテキストは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] がサポートするすべての言語に向けてローカライズされています。 **RSPrintClient** ActiveX コントロールでは、画像表示拡張機能 (EMF) を使用してレポートが印刷されます。 EMF デバイス情報として StartPage、EndPage、MarginBottom、MarginLeft、MarginTop、MarginRight、PageHeight、および PageWidth が使用されます。 画像表示に対するその他のデバイス情報の設定はサポートされません。  
+ このコントロールによって表示されるカスタム印刷ダイアログ ボックスでは、印刷プレビュー、特定のページや範囲を指定するためのページ選択、ページ余白、ページの向きなど、一般的な印刷ダイアログ ボックスの機能がサポートされています。 コントロールは CAB ファイルとしてパッケージ化されています。 **[印刷]** ダイアログ ボックス内のテキストは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] がサポートするすべての言語に向けてローカライズされています。 **RSPrintClient** ActiveX コントロールでは、画像表示拡張機能 (EMF) を使用してレポートが印刷されます。 次の EMF デバイス情報が使用されます: StartPage、EndPage、MarginBottom、MarginLeft、MarginTop、MarginRight、PageHeight、および PageWidth。 画像表示に対するその他のデバイス情報の設定はサポートされません。  
   
 ### <a name="language-support"></a>言語サポート  
  印刷コントロールでは、ユーザー インターフェイスのテキストがさまざまな言語で表示され、異なる測定系を使用した入力値を受け付けます。 使われる言語と測定系は、**Culture** プロパティと **UICulture** プロパティで決まります。 どちらのプロパティも LCID 値を受け付けます。 サポートされている言語から派生した言語の LCID を指定すると、最も近い言語が選択されます。 サポート対象外で、近い言語もない LCID を指定すると、英語 (U.S.) となります。  

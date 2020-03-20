@@ -16,19 +16,19 @@ author: markingmyname
 ms.author: maghan
 ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 32c25c3ded07e84e436b69af5baac5634909998c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 9955b61f8c04aa890c156234838816976f41a585
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "75255248"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198449"
 ---
 # <a name="remove-tables-from-queries-visual-database-tools"></a>クエリからのテーブルの削除 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 クエリからテーブルまたはテーブル値オブジェクトを削除できます。  
   
 > [!NOTE]  
-> テーブルまたはテーブル値オブジェクトを削除しても、現在のクエリから削除されるだけです。データベースからは何も削除されません。 データベースからテーブルを削除する方法の詳細については、データベースからテーブルを削除する方法(https://msdn.microsoft.com/ca6aa3e9-9885-44c3-bafc-aec441fd97ec) に関するぺージを参照してください。  
+> テーブルまたはテーブル値オブジェクトを削除しても、現在のクエリから削除されるだけです。データベースからは何も削除されません。 データベースからテーブルを削除する方法の詳細については、「[データベースからテーブルを削除する方法 ](https://msdn.microsoft.com/ca6aa3e9-9885-44c3-bafc-aec441fd97ec) に関するぺージを参照してください。  
   
 ### <a name="to-remove-a-table-or-table-structured-object"></a>テーブルまたはテーブル構造オブジェクトを削除するには  
   

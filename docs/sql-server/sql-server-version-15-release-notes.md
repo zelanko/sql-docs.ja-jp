@@ -1,5 +1,6 @@
 ---
 title: SQL Server 2019 リリース ノート | Microsoft Docs
+description: SQL Server 2019 (15.x) の制限事項、既知の問題、ヘルプ リソース、およびその他のリリース ノートについて説明します。
 ms.date: 11/04/2019
 ms.prod: sql
 ms.reviewer: ''
@@ -9,14 +10,14 @@ ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: f03c9999471f1f196263cfab43960008c7d26aaf
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 0d27209448ece622a4906f6ba2cae28268c0210a
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74096113"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79190607"
 ---
-# <a name="includesql-server-2019includessssqlv15-mdmd-release-notes"></a>[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] リリース ノート
+# <a name="sql-server-2019-release-notes"></a>[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] リリース ノート
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 この記事では、[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] の制限事項と既知の問題について説明します。 関連情報については、以下をご覧ください。
@@ -76,7 +77,7 @@ SQL Server 2019 の RTM ビルド番号は `15.0.2000.5` です。
 
 - **適用対象**:[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] RTM
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [SQL Server のインストールに必要なハードウェアおよびソフトウェア](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15.md)
 

@@ -1,19 +1,19 @@
 ---
 title: Microsoft SQL データベースの接続ライブラリ | Microsoft Docs
 description: 各種のクライアント プログラミング言語から Microsoft SQL Server および Azure SQL Database への接続を可能にするモジュールのダウンロード リンクを示します。
-author: MightyPen
+author: RothJa
 ms.prod: sql
 ms.technology: ''
 ms.custom: ''
 ms.topic: article
-ms.date: 06/18/2018
-ms.author: genemi
-ms.openlocfilehash: 71254b937c4c0173af9e1549efb98a0b42f65e02
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.date: 03/05/2020
+ms.author: JRoth
+ms.openlocfilehash: eb842769490b521b248ed4114953b8d828fa80d3
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "73632815"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79286406"
 ---
 # <a name="connection-modules-for-microsoft-sql-databases"></a>Microsoft SQL データベースの接続モジュール
 
@@ -23,7 +23,7 @@ ms.locfileid: "73632815"
 - MacOS
 - Windows
 
-#### <a name="oop-to-relational-mismatch"></a>OOP とリレーショナルの不一致
+**OOP とリレーショナルの不一致:**
 
 *リレーショナル*:オブジェクト指向プログラミング (OOP) 言語で記述されたクライアント プログラムでは、多くの場合、オブジェクト指向よりもリレーショナルな形式でクエリ データを返す SQL ドライバーを使用します。 ADO.NET を使用する C# がその一例です。 OOP とリレーショナルの形式の不一致により、OOP コードの記述と理解が困難になることがあります。
 
@@ -34,7 +34,6 @@ ms.locfileid: "73632815"
 <a name="anchor-20-drivers-relational-access" />
 
 ## <a name="drivers-for-relational-access"></a>リレーショナル アクセス用のドライバー
-
 
 <!--
 Each given Microsoft Download Center page should be enhanced
@@ -49,22 +48,20 @@ although the FWLink is less precise than is https://github.com/Microsoft/msphpsq
 
 | Language | SQL ドライバーのダウンロード |
 | :------- | :---------------------- |
-| C# | [ADO.NET](https://www.microsoft.com/net/download/)<br />[Microsoft.Data.SqlClient](https://www.nuget.org/packages/Microsoft.Data.SqlClient/)<br /><br />[Linux-Ubuntu 用の .NET Core](https://www.microsoft.com/net/core#Ubuntu)<br />[MacOS 用の .NET Core](https://www.microsoft.com/net/core#macos)<br />[Windows 用の .NET Core](https://www.microsoft.com/net/core) |
+| C# | [ADO.NET](https://www.microsoft.com/net/download/)<br />[Microsoft.Data.SqlClient](https://www.nuget.org/packages/Microsoft.Data.SqlClient/)<br /><br />[.NET Core: Linux-Ubuntu、macOS、Windows](https://dotnet.microsoft.com/download) |
 | C++ | [ODBC](./odbc/download-odbc-driver-for-sql-server.md)<br /><br />[OLE DB](./oledb/download-oledb-driver-for-sql-server.md) |
 | Java | [JDBC](./jdbc/download-microsoft-jdbc-driver-for-sql-server.md) |
 | Node.js | [Node.js ドライバー、インストール手順](./node-js/step-1-configure-development-environment-for-node-js-development.md) |
 | PHP | [PHP](./php/download-drivers-php-sql-server.md) |
 | Python | [pyodbc、インストール手順](./python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development.md)<br />[ODBC のダウンロード](./odbc/download-odbc-driver-for-sql-server.md) |
 | Ruby | [Ruby ドライバー、インストール手順](./ruby/step-1-configure-development-environment-for-ruby-development.md)<br />[Ruby のダウンロード ページ](https://rubyinstaller.org/downloads/) |
-| &nbsp; | <br /> |
+| &nbsp; | <br/> |
 
 <a name="anchor-40-drivers-orm-access" />
 
 ## <a name="drivers-for-orm-access"></a>ORM アクセス用のドライバー
 
-
 次の表は、クライアントアプリケーションが Microsoft SQL データベースに接続するために使用するオブジェクト リレーショナル マッピング (ORM) フレームワークの例を示しています。
-
 
 | Language | ORM ドライバーのダウンロード |
 | :------- | :------------------ |
@@ -74,12 +71,12 @@ although the FWLink is less precise than is https://github.com/Microsoft/msphpsq
 | Node.js | [Sequelize ORM](https://docs.sequelizejs.com) |
 | Python | [Django](https://www.djangoproject.com/) |
 | Ruby | [Ruby on Rails](https://rubyonrails.org/) |
-
+| &nbsp; | <br/> |
 
 <a name="anchor-60-build-an-app-webpages" />
 
 ## <a name="build-an-app-webpages"></a>Build-an-app の Web ページ
-[https://aka.ms/sqldev](https://aka.ms/sqldev) により、*Build-an-app* の一連の Web ページが表示されます。 これらの Web ページには、プログラミング言語、オペレーティング システム、および SQL 接続ドライバーのさまざまな組み合わせに関する情報が記載されています。 Build-an-app の Web ページで提供される情報の中には、次の項目があります。
+**[https://aka.ms/sqldev](https://aka.ms/sqldev)** により、*Build-an-app* の一連の Web ページが表示されます。 これらの Web ページには、プログラミング言語、オペレーティング システム、および SQL 接続ドライバーのさまざまな組み合わせに関する情報が記載されています。 Build-an-app の Web ページで提供される情報の中には、次の項目があります。
 
 - 言語 + オペレーティングシステム + ドライバーの組み合わせごとに、作業を開始する方法についての詳細。
     - 最新の SQL 接続ドライバーをインストールするための手順。
@@ -88,18 +85,23 @@ although the FWLink is less precise than is https://github.com/Microsoft/msphpsq
     - RDS のコード例です。
     - パフォーマンスの大幅な向上のための列ストア インデックスのデモ。
 
-#### <a name="first-page-of-build-an-app-webpages"></a>Build-an-app の Web ページの最初のページ
-![Build-an-app の Web ページの最初のページのスクリーンショット][image-ref-163-buildanapp-webpages-first-page]
+**Build-an-app の Web ページの最初のページ:**  
+![Build-an-app の Web ページの最初のページのスクリーンショット](media/homepage-sql-connection-drivers/gm-aka-ms-sqldev-choose-language-g21.png)
 
-#### <a name="menu-for-java---ubuntu-of-build-an-app-webpages"></a>Build-an-app の Web ページの [Java] メニューの [Ubuntu]
-![Build-an-app の Web ページの [Java] メニューの [Ubuntu]][image-ref-167-buildanapp-webpages-menu-java-ubuntu]
+**Build-an-app の Web ページの [Java] メニューの [Ubuntu]**  
+![Build-an-app の Web ページの [Java] メニューの [Ubuntu]](media/homepage-sql-connection-drivers/gm-aka-ms-sqldev-java-ubuntu-c31.png)
 
 &nbsp;
 
 ## <a name="related-links"></a>関連リンク
 - [Java およびその他の言語を使用してクラウド内の Azure SQL Database に接続する方法のコード例](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java)
 
-<!-- Image references -->
+<!--
+Image references, **obsolete** markdown syntax alternative:
+
+![Build-an-app webpages, first page screenshot][image-ref-163-buildanapp-webpages-first-page]
+![Build-an-app webpages, menu Java Ubuntu][image-ref-167-buildanapp-webpages-menu-java-ubuntu]
 
 [image-ref-163-buildanapp-webpages-first-page]: ./media/homepage-sql-connection-drivers/gm-aka-ms-sqldev-choose-language-g21.png
 [image-ref-167-buildanapp-webpages-menu-java-ubuntu]: ./media/homepage-sql-connection-drivers/gm-aka-ms-sqldev-java-ubuntu-c31.png
+-->

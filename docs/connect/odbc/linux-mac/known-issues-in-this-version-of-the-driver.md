@@ -1,28 +1,28 @@
 ---
-title: このバージョンの Driver for SQL Server の既知の問題 |Microsoft Docs
-ms.custom: ''
-ms.date: 02/15/2018
+title: Linux および macOS での ODBC ドライバーに関する既知の問題
+ms.date: 03/05/2020
 ms.prod: sql
-ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
 - known issues
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e9abed0dcd77e0759e92dc0380a42acfe54852a7
-ms.sourcegitcommit: 1b0906979db5a276b222f86ea6fdbe638e6c9719
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9746456a4a38f2a19e485d1e17786073b97b243e
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2020
-ms.locfileid: "76971356"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79286436"
 ---
-# <a name="known-issues-in-this-version-of-the-driver"></a>このバージョンのドライバーの既知の問題
+# <a name="known-issues-for-the-odbc-driver-on-linux-and-macos"></a>Linux および macOS での ODBC ドライバーに関する既知の問題
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-この記事では、Linux と macOS 上の Microsoft ODBC Driver 13、13.1、17 for SQL Server に関する既知の問題の一覧を示します。
+この記事では、Linux と macOS 上の Microsoft ODBC Driver 13、13.1、17 for SQL Server に関する既知の問題の一覧を示します。 また、接続の問題のトラブルシューティングを行うための手順も記載されています。
+
+## <a name="known-issues"></a>既知の問題
 
 その他の問題は、 [Microsoft ODBC ドライバー チームのブログ](https://blogs.msdn.com/b/sqlnativeclient/)に投稿されます。  
 
@@ -36,7 +36,58 @@ ms.locfileid: "76971356"
 
 たとえば、エンコードが UTF-8 の場合に、out パラメーターに対して **SQLBindParameter** の *BufferLength* と *ColumnSize* の両方に 1 を指定してから、(CP-1252 を使用して) サーバー上の `char(1)` 列に格納されている前の文字を取得しようとすると、ドライバーはこの文字を 3 バイトの UTF-8 エンコードに変換しようとしますが、結果は 1 バイトのバッファーに収まりません。 逆方向では、クライアントとサーバー上の異なるコード ページ間で変換を行う前に、ドライバーは *ColumnSize* を **SQLBindParameter** の *BufferLength* と比較します。 *ColumnSize* 1 が *BufferLength* (たとえば) 3 より小さいので、ドライバーはエラーを生成します。 このエラーを回避するには、変換後のデータの長さが、指定したバッファーまたは列に適合することを確認します。 `varchar(n)` 型では、*ColumnSize* を 8000 よりも大きくすることはできません。
 
-## <a name="see-also"></a>参照  
-[プログラミング ガイドライン](../../../connect/odbc/linux-mac/programming-guidelines.md)  
-[リリース ノート](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)  
+## <a name="troubleshooting-connection-problems"></a><a id="connectivity"></a>接続の問題のトラブルシューティング  
 
+ODBC ドライバーを使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に接続できない場合、次の情報を使用して問題を特定します。  
+  
+最も一般的な接続の問題は、2 つの UnixODBC ドライバー マネージャーがインストールされている場合です。 /usr で libodbc\*.so\*を検索します。 複数バージョンのファイルがある場合、複数のドライバー マネージャーがインストールされている可能性があります。 また、アプリケーションに不適切なバージョンが使用される可能性があります。
+  
+これらの項目と共に次のセクションを含めるよう `/etc/odbcinst.ini` ファイルを編集することで、接続ログを有効にします。
+
+```
+[ODBC]
+Trace = Yes
+TraceFile = (path to log file, or /dev/stdout to output directly to the terminal)
+```  
+  
+別の接続エラーが発生し、ログ ファイルが見つからない場合、コンピューターに 2 つのドライバー マネージャーが存在する可能性があります。 それ以外の場合、ログの出力は次のようになります。  
+  
+```
+[ODBC][28783][1321576347.077780][SQLDriverConnectW.c][290]  
+        Entry:  
+            Connection = 0x17c858e0  
+            Window Hdl = (nil)  
+            Str In = [DRIVER={ODBC Driver 13 for SQL Server};SERVER={contoso.com};Trusted_Connection={YES};WSID={mydb.contoso.com};AP...][length = 139 (SQL_NTS)]  
+            Str Out = (nil)  
+            Str Out Max = 0  
+            Str Out Ptr = (nil)  
+            Completion = 0  
+        UNICODE Using encoding ASCII 'UTF8' and UNICODE 'UTF16LE'  
+```  
+  
+ASCII 文字エンコードが UTF-8 ではない場合の例: 
+  
+```
+UNICODE Using encoding ASCII 'ISO8859-1' and UNICODE 'UCS-2LE'  
+```  
+  
+複数のドライバー マネージャーがインストールされており、アプリケーションが不適切なドライバー マネージャーを使用しているか、またはライバー マネージャーが正しくビルドされていません。  
+  
+接続エラーの解決の詳細については、以下を参照してください。  
+
+- [SQL の接続問題のトラブルシューティングの手順](https://docs.microsoft.com/archive/blogs/sql_protocols/steps-to-troubleshoot-sql-connectivity-issues)  
+  
+- [SQL Server 2005 Connectivity Issue Troubleshoot - Part I (SQL Server 2005 の接続に関する問題のトラブルシューティング - パート 1)](https://techcommunity.microsoft.com/t5/sql-server/sql-server-2005-connectivity-issue-troubleshoot-part-i/ba-p/383034)  
+  
+- [Connectivity troubleshooting in SQL Server 2008 with the Connectivity Ring Buffer (接続リング バッファーを使用している SQL Server 2008 の接続のトラブルシューティング)](https://techcommunity.microsoft.com/t5/sql-server/connectivity-troubleshooting-in-sql-server-2008-with-the/ba-p/383393)  
+  
+- [SQL Server Authentication Troubleshooter (SQL Server 認証のトラブルシューティング)](https://docs.microsoft.com/archive/blogs/sqlsecurity/sql-server-authentication-troubleshooter)  
+
+## <a name="next-steps"></a>次のステップ
+
+ODBC ドライバーのインストール手順については、次の記事を参照してください。
+
+- [Linux に Microsoft ODBC Driver for SQL Server をインストールする](installing-the-microsoft-odbc-driver-for-sql-server.md)
+- [macOS に Microsoft ODBC Driver for SQL Server をインストールする](install-microsoft-odbc-driver-sql-server-macos.md)
+
+詳細については、「[プログラミング ガイドライン](programming-guidelines.md)」と[リリースノート](release-notes-odbc-sql-server-linux-mac.md)に関するページを参照してください。  

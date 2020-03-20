@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4d733c99-28b3-42d8-b7f6-7b943b548173
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 71fd26df641c1ac551dcc430c0fef555fc3c5df8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 0c919ad9202c99c7b010b6aee9c921e76784eb24
+ms.sourcegitcommit: 7008c7fe451a20d6610e40bb8f61dece86c0f17e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68037148"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79027962"
 ---
 # <a name="start-sql-server-with-minimal-configuration"></a>最小構成での SQL Server の起動
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,6 +34,8 @@ ms.locfileid: "68037148"
 -   起動ストアド プロシージャは実行されません。  
 
 -   `tempdb` は、最小サイズで構成されます。
+
+-   監査は無効になりますが、監査 DDL を発行することはできます。 実際には、SQL Serve の監査の再構成を必要とするほとんどの場合、 **-m** で十分です。 監査構成でのセキュリティの詳細については、「[SQL Server での監査](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/dd392015(v=sql.100)#security)」を参照してください。
   
  最小構成でサーバーを起動後、適切なサーバー オプションの値を変更し、サーバーを停止してから再起動してください。  
   

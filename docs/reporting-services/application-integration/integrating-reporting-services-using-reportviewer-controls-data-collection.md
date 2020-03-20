@@ -1,6 +1,6 @@
 ---
 title: ReportViewer コントロールでのデータ収集
-description: 顧客が製品をどのように使用しているかを理解するために、匿名の利用状況データがコントロールによって収集されます。 使用状況データを使用して、今後の開発で顧客に最も関係のある機能強化に注力できます。
+description: ReportViewer では、匿名の使用状況データを収集して、顧客が製品をどのように使用しているかを把握し、顧客にとって最も関連性の高い機能強化に開発の重点を置くことができます。
 author: maggiesMSFT
 ms.author: maggies
 ms.custom: ''
@@ -10,12 +10,12 @@ ms.prod_service: reporting-services-native
 ms.technology: application-integration
 ms.topic: reference
 ms.date: 09/18/2018
-ms.openlocfilehash: d7b70445fc4d8a29d8ebcdf7ecbffe4b54133f0e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 078b36034d48dbb4389c69e64d8b8b18d240b24c
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74796897"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198179"
 ---
 # <a name="integrate-reporting-services-using-reportviewer-controls---data-collection"></a>ReportViewer コントロールを使用した Reporting Services の統合 - データ収集
 
@@ -40,7 +40,7 @@ protected void Page_Load(object sender, EventArgs e)
     ReportViewer1.EnableTelemetry = false;
 }
 ```
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [WebForms レポート ビューアー コントロールの使用](../../reporting-services/application-integration/using-the-webforms-reportviewer-control.md)  
 [レポート ビューアー コントロールを使用した Reporting Services の統合](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md) 

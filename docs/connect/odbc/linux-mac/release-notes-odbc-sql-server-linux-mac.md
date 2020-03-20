@@ -1,7 +1,7 @@
 ---
-title: Linux および macOS 上の ODBC のリリース ノート | Microsoft Docs
+title: Linux および macOS 上の ODBC Driver for SQL Server のリリース ノート
 ms.custom: ''
-ms.date: 06/30/2018
+ms.date: 03/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: v-jizho2
@@ -10,14 +10,14 @@ ms.topic: conceptual
 author: v-chojas
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 39e010f87b9cf0785ba025cfb8a9cf96825ae9d9
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.openlocfilehash: b2adbb0fca6c717a5864570cad40c65d7c332f90
+ms.sourcegitcommit: 4bba3c8e3360bcbe269819d61f8898d0ad52c6e3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78896768"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79090497"
 ---
-# <a name="release-notes-for-the-microsoft-odbc-driver-to-sql-server-on-linux-and-macos"></a>Linux および macOS 上の Microsoft ODBC Driver for SQL Server のリリース ノートです
+# <a name="release-notes-for-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Linux および macOS 上の Microsoft ODBC Driver for SQL Server のリリース ノートです
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
@@ -49,9 +49,9 @@ GeneMi.  2019/04/03.
 
 | 追加された機能 | 詳細 |
 | :------------ | :------ |
-| サーバーへのラウンドトリップなしで SPID を取得する SQL_COPT_SS_SPID 接続属性 | [DSN および接続文字列の属性とキーワード](../dsn-connection-string-attribute.md)に関する記事を参照してください。 |
+| サーバーへのラウンド トリップなしで SPID を取得する SQL_COPT_SS_SPID 接続属性 | [DSN および接続文字列の属性とキーワード](../dsn-connection-string-attribute.md)に関する記事を参照してください。 |
 | Debian および Ubuntu 上で `debconf` を介して EULA への同意を示すサポート | [ドライバーのインストール](./installing-the-microsoft-odbc-driver-for-sql-server.md)に関する記事を参照してください。 |
-| 新しいディストリビューションのサポート。 | &bull; &nbsp; &nbsp; Alpine Linux (3.10、3.11)<br/>&bull; &nbsp; &nbsp; Oracle Linux 8<br/>&bull; &nbsp; &nbsp; Ubuntu 19.10<br/>&bull; &nsbp; &nbsp; macOS 10.15 |
+| 新しいディストリビューションのサポート。 | &bull; &nbsp; &nbsp; Alpine Linux (3.10、3.11)<br/>&bull; &nbsp; &nbsp; Oracle Linux 8<br/>&bull; &nbsp; &nbsp; Ubuntu 19.10<br/>&bull; &nbsp; &nbsp; macOS 10.15 |
 | バグが修正されました。 | 「[Bug fixes (バグの修正)](../bug-fixes.md)」をご覧ください。 |
 | &nbsp; | &nbsp; |
 
@@ -82,9 +82,9 @@ GeneMi.  2019/04/03.
 
 | [新しい項目] | 詳細 |
 | :------- | :------ |
-| 新しいディストリビューションのサポート。 | &bull; &nbsp; &nbsp; SuSE 15<br/>&bull; &nbsp; &nbsp; Ubuntu 18.10<br/>&bull; &nbsp; &nbsp; macOS 10.14 |
+| 新しいディストリビューションのサポート。 | &bull; &nbsp; &nbsp; SUSE 15<br/>&bull; &nbsp; &nbsp; Ubuntu 18.10<br/>&bull; &nbsp; &nbsp; macOS 10.14 |
 | Azure Active Directory マネージド サービス ID (システムおよびユーザー割り当て) 認証モード。 | 「[ODBC ドライバーでの Azure Active Directory の使用](../using-azure-active-directory.md)」を参照してください。 |
-| Always Encrypted 列に対して入力パラメーターをストリーム配信する機能。 | 詳細については、「[Limitations of the ODBC driver when using Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md#limitations-of-the-odbc-driver-when-using-always-encrypted)」(Always Encrypted を使用するときの ODBC ドライバーの制限事項) を参照してください。 |
+| Always Encrypted 列に対して入力パラメーターをストリーム配信する機能。 | 詳細については、「[Always Encrypted を使用するときの ODBC ドライバーの制限事項](../using-always-encrypted-with-the-odbc-driver.md#limitations-of-the-odbc-driver-when-using-always-encrypted)」を参照してください。 |
 | XA 分散トランザクション。 | 「[XA トランザクションの使用](../use-xa-with-dtc.md)」を参照してください。<br/><br/>XA は _eXtended Architecture_ の頭字語です。これは、複数のサーバー側データ ストレージ システムにアクセスするグローバル トランザクションの実行の標準です。 |
 | &nbsp; | &nbsp; |
 
@@ -122,7 +122,7 @@ BCP API の Always Encrypted のサポート
 
 新しい接続文字列属性 UseFMTOnly により、一時テーブルを必要とする特別なケースで以前のメタデータがドライバーで使用されます。
 
-Azure SQL Managed Instance (延長されたプライベート プレビュー) のサポート。 
+Azure SQL Managed Instance のサポート。 
 > [!NOTE]
 > Managed Instance を使用するときはいくつかの相違点があります。
 > -   FILESTREAM はサポートされていません。 
@@ -140,7 +140,7 @@ Azure SQL Managed Instance (延長されたプライベート プレビュー) �
 
 ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、Microsoft SQL Server 2016 と組み合わせて使用される場合に、Always Encrypted および Azure Active Directory のサポートが追加されました。
 
-**新しいディストリビューションのサポート**:OS X 10.11 および macOS 10.12 は、macOS 上の ODBC ドライバーの最初のリリースでサポートされています。 Red Hat 6、7、SUSE 12 に加え、Ubuntu 16.10 のサポートも追加されました。 各プラットフォームには、インストールと構成が容易になるプラットフォーム関連パッケージ (RPM または DEB) があります。  インストール手順については、[ドライバーのインストール](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)に関するページを参照してください。
+**新しいディストリビューションのサポート**:OS X 10.11 および macOS 10.12 は、macOS 上の ODBC ドライバーの最初のリリースでサポートされています。 Red Hat 6、7、SUSE 12 に加え、Ubuntu 16.10 のサポートも追加されました。 各プラットフォームには、インストールと構成が容易になるプラットフォーム関連パッケージ (RPM または DEB) があります。 詳細については、[Linux](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md) と [macOS](../../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md) での ODBC ドライバーのインストール手順を参照してください。
 
 **unixODBC Driver Manager 2.3.1 のサポートの変更**:ODBC ドライバーは、(RedHat 6 を除き) unixODBC Driver Manager のカスタム パッケージに依存しなくなり、代わりにディストリビューション パッケージ マネージャーを利用してディストリビューションのリポジトリの UnixODBC の依存関係を解決するようになりました。
 

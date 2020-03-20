@@ -1,7 +1,7 @@
 ---
 title: CREATE WORKLOAD CLASSIFIER (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/27/2020
+ms.date: 03/11/2020
 ms.prod: sql
 ms.prod_service: sql-data-warehouse
 ms.reviewer: jrasnick
@@ -20,12 +20,12 @@ ms.assetid: ''
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 73718d8fa49715a2cec91c43a9a91402fad6e031
-ms.sourcegitcommit: 1feba5a0513e892357cfff52043731493e247781
+ms.openlocfilehash: 67f844ff5955f51b0c878f2a3161cc4762834f74
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/18/2020
-ms.locfileid: "77429033"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112253"
 ---
 # <a name="create-workload-classifier-transact-sql"></a>CREATE WORKLOAD CLASSIFIER (Transact-SQL)
 
@@ -43,12 +43,12 @@ ms.locfileid: "77429033"
 ```
 CREATE WORKLOAD CLASSIFIER classifier_name  
 WITH  
-    (   WORKLOAD_GROUP = ‘name’  
-    ,   MEMBERNAME = ‘security_account’ 
-[ [ , ] WLM_LABEL = ‘label’ ]  
-[ [ , ] WLM_CONTEXT = ‘context’ ]  
-[ [ , ] START_TIME = ‘HH:MM’ ]  
-[ [ , ] END_TIME = ‘HH:MM’ ]  
+    (   WORKLOAD_GROUP = 'name'  
+    ,   MEMBERNAME = 'security_account' 
+[ [ , ] WLM_LABEL = 'label' ]  
+[ [ , ] WLM_CONTEXT = 'context' ]  
+[ [ , ] START_TIME = 'HH:MM' ]  
+[ [ , ] END_TIME = 'HH:MM' ]  
   
 [ [ , ] IMPORTANCE = { LOW | BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH }]) 
 [;]
@@ -64,8 +64,8 @@ WITH
 
  使用可能なワークロード グループは、[sys.workload_management_workload_groups](../../relational-databases/system-catalog-views/sys-workload-management-workload-groups-transact-sql.md) カタログ ビューで見つけることができます。
 
- *MEMBERNAME* ='security_account'*    
- これはロールに追加されるセキュリティ アカウントです。  security_account は sysname です。既定値はありません。 security_account は、データベース ユーザー、データベース ロール、Azure Active Directory ログイン、または Azure Active Directory グループとすることができます。
+ *MEMBERNAME* =  *'security_account'*     
+ 分類に使用するセキュリティ アカウント。  security_account は sysname です。既定値はありません。 security_account は、データベース ユーザー、データベース ロール、Azure Active Directory ログイン、または Azure Active Directory グループとすることができます。
  
  *WLM_LABEL*   
  要求を分類できるラベル値を指定します。  ラベルは、nvarchar(255) 型の省略可能なパラメーターです。  要求の [OPTION (LABEL)](/azure/sql-data-warehouse/sql-data-warehouse-develop-label) を使用して、分類子の構成を一致させます。

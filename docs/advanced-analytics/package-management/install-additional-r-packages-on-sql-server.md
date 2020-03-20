@@ -10,12 +10,12 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0e28d62292c8bcc4b98d8991fbf4bd8708bbbc76
-ms.sourcegitcommit: 867b7c61ecfa5616e553410ba0eac06dbce1fed3
+ms.openlocfilehash: ff2d40dab5fa2d8f03bf3d1fa32b08e66a0ccdbc
+ms.sourcegitcommit: 7008c7fe451a20d6610e40bb8f61dece86c0f17e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/22/2020
-ms.locfileid: "77558376"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79027937"
 ---
 # <a name="install-new-r-packages-with-sqlmlutils"></a>sqlmlutils で新しい R パッケージをインストールする
 
@@ -108,7 +108,7 @@ ms.locfileid: "77558376"
     , @script = N'print(R.version)'
    ```
 
-1. 最新の **sqlmlutils** zip ファイルを https://github.com/Microsoft/sqlmlutils/tree/master/R/dist からダウンロードします (ファイルを解凍しないでください)。 たとえば、ファイルを `c:\downloads\sqlmlutils_0.7.1.zip` にダウンロードします。
+1. 最新の **sqlmlutils** zip ファイルを [https://github.com/Microsoft/sqlmlutils/tree/master/R/dist](https://github.com/Microsoft/sqlmlutils/tree/master/R/dist) からダウンロードします (ファイルを解凍しないでください)。 たとえば、ファイルを `c:\downloads\sqlmlutils_0.7.1.zip` にダウンロードします。
 
 1. **RODBCext** リポジトリ フォルダー (`c:\downloads\rodbcext`) と **sqlmlutils** zip ファイル (`c:\downloads\sqlmlutils_0.7.1.zip`) 全体をクライアント コンピューターにコピーします。 たとえば、それらを、クライアント コンピューターの `c:\temp\packages` フォルダーにコピーします。
 

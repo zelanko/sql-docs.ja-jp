@@ -23,12 +23,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/03/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cef5bdc57a5fb5f0a2cbeed6be3356aade1ba491
-ms.sourcegitcommit: 85b26bc1abbd8d8e2795ab96532ac7a7e01a954f
+ms.openlocfilehash: 685397689b390175bd15f6241fc7036004e1e97a
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78335772"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198539"
 ---
 # <a name="ssms-query-editor"></a>SSMS クエリ エディター
 
@@ -116,7 +116,7 @@ Alt + Break キー押して、実行中のクエリをキャンセルするこ�
 
 [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターで IntelliSense 機能が使用できるかどうかを示します。 このオプションは、既定で設定されています。
 
-**[IntelliSense 有効]** を選択するには、Ctrl + B キーを押した後、Ctrl I キーを押すか、[コンテキスト メニュー](#intellisense-enabled-using-the-context-menu)から選択することもできます。
+**[IntelliSense 有効]** を選択するには、Ctrl + B キーを押した後、Ctrl + I キーを押すか、[コンテキスト メニュー](#intellisense-enabled-using-the-context-menu)から選択することもできます。
 
 ### <a name="include-actual-execution-plan-using-the-editor-toolbar"></a>エディター ツール バーを使用した [実際の実行プランを含める]
 
@@ -164,7 +164,7 @@ Ctrl + K キーを押してから Ctrl + C キーを押しても、行をコメ�
 
 行の先頭にあるコメント演算子 (--) をすべて削除することで、現在の行をアクティブなソース ステートメントにします。
 
-Ctrl + K キーを押してから Ctrl + U キーを押しても、行をコメント アウトすることができます。
+Ctrl + K キーを押してから Ctrl + U キーを押しても、行をコメント解除することができます。
 
 ### <a name="decrease-indent-using-the-editor-toolbar"></a>エディター ツール バーを使用した [インデント解除]
 

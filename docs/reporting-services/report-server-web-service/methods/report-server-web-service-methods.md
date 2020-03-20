@@ -1,5 +1,6 @@
 ---
 title: レポート サーバー Web サービスのメソッド | Microsoft Docs
+description: レポート サーバー Web サービスには、Web サービス エンドポイント (生成されたクラスを通じて公開される) を介して提供されるコンポーネント機能に基づくメソッドが含まれます。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ce5afa27-e90c-44a7-b204-098a065b3665
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4b7425b205bdc630d17e5c962519348d2b1ce7a1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 88a79f66c6cb062dfe563883fbc5fef5eeebfe08
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63284658"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198359"
 ---
 # <a name="report-server-web-service-methods"></a>レポート サーバー Web サービスのメソッド
   レポート サーバー Web サービスには、コンポーネントの機能に基づいた、複数のカテゴリのメソッドが含まれています。 これらのメソッドは、Web サービスのいくつかのエンドポイントを介して (レポート管理用に 3 つ、レポート実行用に 1 つ)、<xref:ReportService2010.ReportingService2010> クラスおよび <xref:ReportExecution2005.ReportExecutionService> クラスのメンバーとして提供されます。 これらのクラスは、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK に含まれる wsdl.exe などのプロキシ クラス ツールを使用して生成できます。 Report Server Web サービスと [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] の詳細については、「[Web サービスと、.NET Framework を使用してのアプリケーションの構築](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)」を参照してください。  

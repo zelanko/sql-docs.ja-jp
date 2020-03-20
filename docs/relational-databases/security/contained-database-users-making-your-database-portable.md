@@ -15,12 +15,12 @@ ms.assetid: e57519bb-e7f4-459b-ba2f-fd42865ca91d
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 028ab6917a8d41a2231e94253ff353910e65b865
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: b11a263953e0b58c4b3dc7072662b291f3d215ab
+ms.sourcegitcommit: 6e7696a169876eb914f79706d022451a1213eb6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75557891"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79375509"
 ---
 # <a name="contained-database-users---making-your-database-portable"></a>包含データベース ユーザー - データベースの可搬性を確保する
 
@@ -54,7 +54,7 @@ ms.locfileid: "75557891"
 
  Windows ファイアウォール ルールはすべての接続に適用され、ログイン (従来のモデルの接続) と包含データベース ユーザーに同じ影響を及ぼします。 Windows ファイアウォールの詳細については、「 [データベース エンジン アクセスを有効にするための Windows ファイアウォールを構成する](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)」を参照してください。  
   
-### <a name="includesssdsincludessssds-mdmd-firewalls"></a>[!INCLUDE[ssSDS](../../includes/sssds-md.md)] ファイアウォール
+### <a name="sssds-firewalls"></a>[!INCLUDE[ssSDS](../../includes/sssds-md.md)] ファイアウォール
 
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] では、サーバー レベルの接続 (ログイン) 用とデータベース レベルの接続 (包含データベース ユーザー) 用にファイアウォール規則を切り離すことができます。 ユーザー データベースに接続すると、最初にデータベースのファイアウォール規則がチェックされます。 データベースへのアクセスを許可する規則が存在しない場合は、サーバー レベルのファイアウォール規則がチェックされます。これには、SQL Database サーバーのマスター データベースへのアクセスが必要です。 データベース レベルのファイアウォール規則と包含データベース ユーザーを組み合わせることで、接続中にサーバーのマスター データベースにアクセスする必要がなくなり、接続のスケーラビリティが向上します。  
   
@@ -74,6 +74,31 @@ ms.locfileid: "75557891"
 |従来のモデル|包含データベース ユーザー モデル|  
 |-----------------------|-----------------------------------|  
 |master データベースのコンテキストでパスワードを変更するには:<br /><br /> `ALTER LOGIN login_name  WITH PASSWORD = 'strong_password';`|ユーザー データベースのコンテキストでパスワードを変更するには:<br /><br /> `ALTER USER user_name  WITH PASSWORD = 'strong_password';`|  
+
+### <a name="managed-instance"></a>マネージド インスタンス
+
+Azure SQL Database マネージド インスタンスは、包含データベースのコンテキストでオンプレミス SQL Server のように動作します。 自分の包含ユーザーを作成するときは、ご利用のデータベースのコンテキストを master データベースからユーザーデータベースに変更してください。 また、containment オプションを設定するときは、ユーザー データベースへのアクティブな接続が存在しないようにする必要があります。 
+
+次に例を示します。 
+
+```sql
+Use MASTER;
+GO 
+
+ALTER DATABASE Test
+SET containment=partial
+
+
+USE Test;  
+GO  
+CREATE USER Carlo  
+WITH PASSWORD='Enterpwdhere*'  
+
+
+SELECT containment_desc FROM sys.databases
+WHERE name='test'
+```
+
   
 ## <a name="remarks"></a>解説  
   

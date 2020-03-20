@@ -1,19 +1,20 @@
 ---
 title: SqlPackage.exe
 ms.prod: sql
-ms.technology: ssdt
-ms.date: 06/28/2018
-ms.reviewer: alayu; sstein
+ms.prod_service: sql-tools
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
-ms.openlocfilehash: d08ee2e48fca1cf7cd473dbd02714b460089353f
-ms.sourcegitcommit: 9b8b71cab6e340f2cb171397f66796d7a76c497e
+ms.reviewer: alayu; sstein
+ms.date: 06/28/2018
+ms.openlocfilehash: f5a1391865b2f08d6eb127fc360d94437c08155e
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77250597"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79286486"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -228,7 +229,7 @@ SqlPackage.exe の公開操作では、ソース データベースの構造に�
 |**/p:**|IgnoreRouteLifetime=(BOOLEAN 'True')|データベースへの公開時に、SQL Server がルーティング テーブルにルートを保持する時間の相違を無視するか、更新するかを指定します。|
 |**/p:**|IgnoreSemicolonBetweenStatements=(BOOLEAN 'True')|データベースに公開するとき、T-SQL ステートメント間のセミコロンの相違を無視するか、更新するかを指定します。|
 |**/p:**|IgnoreTableOptions=(BOOLEAN)|データベースに公開するとき、テーブル オプションの相違を無視するか、更新するかを指定します。|
-|**/p:**|IgnoreTablePartitionOptions=(BOOLEAN)|データベースに公開するとき、テーブル パーティション オプションの相違を無視するか、更新するかを指定します。  このオプションは、Azure Synapse Analytics データ ウェアハウス データベースにのみ適用されます。|
+|**/p:**|IgnoreTablePartitionOptions=(BOOLEAN)|データベースに公開するとき、テーブル パーティション オプションの相違を無視するか、更新するかを指定します。  このオプションは、Azure Synapse Analytics SQL プール (データ ウェアハウス) データベースにのみ適用されます。|
 |**/p:**|IgnoreUserSettingsObjects=(BOOLEAN)|データベースに公開するとき、ユーザー設定オブジェクトの相違を無視するか、更新するかを指定します。|
 |**/p:**|IgnoreWhitespace=(BOOLEAN 'True')|データベースに公開するとき、空白の相違を無視するか、更新するかを指定します。|
 |**/p:**|IgnoreWithNocheckOnCheckConstraints=(BOOLEAN)|公開時に、CHECK 制約の WITH NOCHECK 句の値の相違を無視するか、更新するかを指定します。|
@@ -270,7 +271,7 @@ SqlPackage.exe の Export 操作を実行すると、SQL Server または Azure 
 
 |パラメーター|短い形式|Value|説明|
 |---|---|---|---|
-|**/Action:**|**/a**|[エクスポート]|実行する操作を指定します。 |
+|**/Action:**|**/a**|エクスポート|実行する操作を指定します。 |
 |**/AccessToken:**|**/at**|{string}| ターゲット データベースに接続するときに使用するトークン ベースの認証アクセス トークンを指定します。 |
 |**/Diagnostics:**|**/d**|{True&#124;False}|診断ログがコンソールへの出力かどうかを指定します。 既定値は False です。 |
 |**/DiagnosticsFile:**|**/df**|{string}|診断ログを保存するファイルを指定します。 |

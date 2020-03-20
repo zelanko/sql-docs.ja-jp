@@ -27,18 +27,18 @@ ms.assetid: 016fb05e-a702-484b-bd2a-a6eabd0d76fd
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4661fa1963b120a091953bff883a0510a396345e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 2d727044455bcee06155848aee2bd6749bd475ff
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "68099996"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79315056"
 ---
 # <a name="set-transaction-isolation-level-transact-sql"></a>SET TRANSACTION ISOLATION LEVEL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 
-[!INCLUDE[tsql](../../includes/tsql-md.md)] への接続によって発行される [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ステートメントの、ロックと行のバージョン管理に関する動作を制御します。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への接続によって発行される [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの、ロックと行のバージョン管理に関する動作を制御します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
@@ -61,6 +61,8 @@ SET TRANSACTION ISOLATION LEVEL
   
 SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
 ```
+>[!NOTE]
+> SQL Data Warehouse では、ACID トランザクションを実装しています。 トランザクションサポートの分離レベルは、既定では READ UNCOMMITTED になります。  これは READ COMMITTED SNAPSHOT ISOLATION に変更できます。それには、マスター データベースに接続する際にユーザー データベースの READ_COMMITTED_SNAPSHOT データベース オプションをオンにします。  有効になると、このデータベース内のすべてのトランザクションが READ COMMITTED SNAPSHOT ISOLATION の下で実行され、セッション レベルで READ UNCOMMITTED を設定しても受け入れられません。 詳細については、「[ALTER DATABASE の SET オプション (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)」を確認してください。  
 
 ## <a name="arguments"></a>引数  
  READ UNCOMMITTED  

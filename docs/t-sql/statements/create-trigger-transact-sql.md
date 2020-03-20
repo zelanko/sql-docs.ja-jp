@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7735298fc669d8e5b385501cd3f235a0a08abb9d
-ms.sourcegitcommit: ff1bd69a8335ad656b220e78acb37dbef86bc78a
+ms.openlocfilehash: 0e3a0829702dfe46a2d6c00925a82938d23bad92
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78340694"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79287686"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ DDL トリガーは、さまざまなデータ定義言語 (DDL) イベントに
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
-## <a name="syntax"></a>構文  
+## <a name="sql-server-syntax"></a>SQL Server 構文  
   
 ``` 
 -- SQL Server Syntax  
@@ -127,7 +127,7 @@ AS { sql_statement  [ ; ] [ ,...n ] | EXTERNAL NAME < method specifier >  [ ; ] 
   
 ```  
   
-## <a name="syntax"></a>構文  
+## <a name="azure-sql-database-syntax"></a>Azure SQL Database 構文  
   
 ``` 
 -- Azure SQL Database Syntax   
@@ -215,7 +215,7 @@ INSTEAD OF
   
 テーブルまたはビューに対する INSERT、UPDATE、または DELETE の各ステートメントに、INSTEAD OF トリガーを 1 つだけ定義できます。 ビューにビューを定義して、各ビューに独自の INSTEAD OF トリガーを定義することもできます。  
   
-INSTEAD OF トリガーは、WITH CHECK OPTION を使用する更新可能なビューには定義できません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] これを行うと、WITH CHECK OPTION が指定されている更新可能なビューに INSTEAD OF トリガーを追加した場合にエラーが発生します。 INSTEAD OF トリガーを定義する前に、ALTER VIEW を使用してそのオプションを削除する必要があります。  
+INSTEAD OF トリガーは、WITH CHECK OPTION を使用する更新可能なビューには定義できません。 これを行うと、WITH CHECK OPTION が指定されている更新可能なビューに INSTEAD OF トリガーを追加した場合にエラーが発生します。 INSTEAD OF トリガーを定義する前に、ALTER VIEW を使用してそのオプションを削除する必要があります。  
   
 { [ DELETE ] [ , ] [ INSERT ] [ , ] [ UPDATE ] }  
 テーブルまたはビューに対して試行されたときに、DML トリガーをアクティブにするデータ変更ステートメントを指定します。 少なくとも 1 つのオプションを指定します。 これらのオプションを任意の順序で組み合わせて、トリガー定義内で使用できます。  

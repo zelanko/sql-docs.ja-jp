@@ -1,5 +1,6 @@
 ---
 title: Web サービスの Url プロパティを設定 | Microsoft Docs
+description: Microsoft .NET Framework アプリケーションでは、ご自分のアプリケーションのダイレクト先であるレポート サーバー Web サービスの基本 URL を変更できます。
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4eac4e40-dafb-4403-acde-13df317c8ec8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 13fc37cd6b0b7396196ad8f514ec34fb9b317a16
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 982b1c80e9c9cd71b67e0f5a2fb227a9dc8d999f
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63128830"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198509"
 ---
 # <a name="setting-the-url-property-of-the-web-service"></a>Web サービスの Url プロパティの設定
   お使いの [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] アプリケーションでは、ご自分のアプリケーションのダイレクト先であるレポート サーバー Web サービスの基本 URL をいつでも変更できます。 そのためには、サービス オブジェクトの **Url** プロパティを設定します。 次に例を示します。  

@@ -3,17 +3,17 @@ title: SQL Server 2017 および 2019 用に Linux リポジトリを構成す�
 description: Linux 上の SQL Server 2019 および SQL Server 2017 用にソース リポジトリの確認と構成を行います。 このソース リポジトリは、インストールおよびアップグレード中に適用される SQL Server のバージョンに影響します。
 author: VanMSFT
 ms.author: vanto
-ms.date: 01/07/2020
+ms.date: 03/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 zone_pivot_groups: ld2-linux-distribution
-ms.openlocfilehash: c1def0c2cfbdc4b3feed191e9eb2673b8e788f82
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 5f302c774ccb4c3f98722e4b416968a813f951bd
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75776381"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198429"
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>SQL Server on Linux のインストールとアップグレードを行うためのリポジトリを構成する
 
@@ -34,11 +34,11 @@ ms.locfileid: "75776381"
 > [!TIP]
 > SQL Server 2019 が使用できるようになりました。 お試しになる場合は、この記事を利用して新しい **mssql-server-2019** リポジトリを構成します。 その後、[インストール ガイド](sql-server-linux-setup.md)に記載されている手順に従ってインストールしてください。
 
-## <a id="repositories"></a> リポジトリ
+## <a name="repositories"></a><a id="repositories"></a> リポジトリ
 
 SQL Server on Linux をインストールする場合は、Microsoft リポジトリを構成する必要があります。 このリポジトリを使って、データベース エンジンのパッケージ (**mssql-server**) と、関連する SQL Server のパッケージを入手します。 現在、5 つの主要なリポジトリがあります。
 
-| リポジトリ | Name | 説明 |
+| リポジトリ | 名前 | 説明 |
 |---|---|---|
 | **2019** | **mssql-server-2019** | SQL Server 2019 Cumulative Update (CU) リポジトリ。 |
 | **2019 GDR** | **mssql-server-2019-gdr** | 重要な更新プログラム専用の SQL Server 2019 GDR リポジトリ。 |
@@ -46,7 +46,7 @@ SQL Server on Linux をインストールする場合は、Microsoft リポジ�
 | **2017** | **mssql-server-2017** | SQL Server 2017 Cumulative Update (CU) リポジトリ。 |
 | **2017 GDR** | **mssql-server-2017-gdr** | 重要な更新プログラム専用の SQL Server 2017 GDR リポジトリ。 |
 
-## <a id="cuversusgdr"></a> 累積的な更新プログラムと GDR
+## <a name="cumulative-update-versus-gdr"></a><a id="cuversusgdr"></a> 累積的な更新プログラムと GDR
 
 各ディストリビューションに対して、主に 2 種類のリポジトリがあることに注意する必要があります。
 
@@ -157,11 +157,14 @@ sudo rm -rf /etc/yum.repos.d/mssql-server.repo
 ::: zone pivot="ld2-ubuntu"
 必要に応じて、古いリポジトリを削除します。 以前に構成したリポジトリの種類に基づいて、次のいずれかのコマンドを使います。
 
+> [!NOTE]
+> SQL Server 2019 CU3 以降では、Ubuntu 18.04 がサポートされています。 Ubuntu 16.04 を使用している場合は、次のパスを `/ubuntu/18.04` ではなく `/ubuntu/16.04` に変更します。
+
 | リポジトリ | 削除するコマンド |
 |---|---|
 | **Preview (2019)** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview xenial main'` |
-| **2019 CU** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019 xenial main'` | 
-| **2019 GDR** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019-gdr xenial main'` |
+| **2019 CU** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019 xenial main'` | 
+| **2019 GDR** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/18.04/mssql-server-2019-gdr xenial main'` |
 | **2017 CU** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017 xenial main'` | 
 | **2017 GDR** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr xenial main'` |
 
@@ -204,6 +207,11 @@ SQL Server のインストールとアップグレードのために使用する
 ::: zone pivot="ld2-ubuntu"
 SQL Server のインストールとアップグレードのために使用する新しいリポジトリを構成します。
 
+> [!NOTE]
+> SQL Server 2019 CU3 以降では、Ubuntu 18.04 がサポートされています。 SQL Server 2019 の次のコマンドは、Ubuntu 18.04 リポジトリをポイントします。
+>
+> Ubuntu 16.04 を使用している場合は、次のパスを `/ubuntu/18.04` ではなく `/ubuntu/16.04` に変更します。
+
 1. パブリック リポジトリの GPG キーをインポートします。
 
    ```bash
@@ -214,8 +222,8 @@ SQL Server のインストールとアップグレードのために使用する
 
    | リポジトリ | Version | command |
    |---|---|---|
-   | **2019 CU** | 2019 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2019.list)"` |
-   | **2019 GDR** | 2019 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2019-gdr.list)"` |
+   | **2019 CU** | 2019 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/18.04/mssql-server-2019.list)"` |
+   | **2019 GDR** | 2019 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/18.04/mssql-server-2019-gdr.list)"` |
    | **2017 CU** | 2017 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"` |
    | **2017 GDR** | 2017 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017-gdr.list)"` |
 

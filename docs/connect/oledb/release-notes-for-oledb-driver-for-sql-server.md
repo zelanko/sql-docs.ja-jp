@@ -1,5 +1,5 @@
 ---
-title: リリース ノート (OLE DB Driver for SQL Server) | Microsoft Docs
+title: リリース ノート (OLE DB Driver for SQL Server)
 ms.date: 02/27/2020
 ms.prod: sql
 ms.technology: connectivity
@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.reviewer: genemi
 author: mateusz-kmiecik
 ms.author: v-makmie
-ms.openlocfilehash: 8c06b83241f377aa05d7e5c0e4cb0d83a424f15a
-ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
+ms.openlocfilehash: c0a9e1726958a1eda7cf71817479f7c37dcfe854
+ms.sourcegitcommit: 4bba3c8e3360bcbe269819d61f8898d0ad52c6e3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866232"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79090528"
 ---
 # <a name="release-notes-for-the-microsoft-ole-db-driver-for-sql-server"></a>Microsoft OLE DB Driver for SQL Server のリリース ノート
 
@@ -45,7 +45,7 @@ X86 ドライバーの場合: [簡体中国語](https://go.microsoft.com/fwlink/
 | 追加された機能 | 詳細 |
 | :------------ | :------ |
 | Azure Active Directory 認証のサポート (`ActiveDirectoryInteractive`、`ActiveDirectoryMSI`)。 | [Azure Active Directory の使用](features/using-azure-active-directory.md)。 |
-| Azure Active Directory 認証ライブラリ (adal.dll) をインストーラに含める | 基本ドライバーのインストールに含まれるようになりました。これにより、SQL Server 用の Microsoft Active Directory 認証ライブラリの既存のインストールがアップグレードされ、Windows のインストール済みアプリケーションの一覧からこれが削除されます。 |
+| Azure Active Directory 認証ライブラリ (adal.dll) をインストーラーに含める | 基本ドライバーのインストールに含まれるようになりました。これにより、OLE DB インストーラーを使用すると、SQL Server 用の Microsoft Active Directory 認証ライブラリの既存のインストールがアップグレードされ、Windows のインストール済みアプリケーションの一覧からこれが削除されます。 |
 | &nbsp; | &nbsp; |
 
 ### <a name="bugs-fixed"></a>修正されたバグ
@@ -70,7 +70,7 @@ X86 ドライバーの場合: [簡体中国語](https://go.microsoft.com/fwlink/
 X64 ドライバーの場合: [簡体中国語](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x804) | [繁体中国語](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=2119554&clcid=0x40a)  
 X86 ドライバーの場合: [簡体中国語](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x804) | [繁体中国語](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=2119738&clcid=0x40a)  
 
-### <a name="features-added"></a>追加された機能
+### <a name="features-added-in-1823"></a>18.2.3 で追加された機能
 
 | 追加された機能 | 詳細 |
 | :------------ | :------ |
@@ -88,7 +88,7 @@ X86 ドライバーの場合: [簡体中国語](https://go.microsoft.com/fwlink/
 X64 ドライバーの場合: [簡体中国語](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x804) | [繁体中国語](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=2118512&clcid=0x40a)  
 X86 ドライバーの場合: [簡体中国語](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x804) | [繁体中国語](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=2118415&clcid=0x40a)  
 
-### <a name="bugs-fixed"></a>修正されたバグ
+### <a name="bugs-fixed-in-1822"></a>18.2.2 で修正されたバグ
 
 | 修正されたバグ | 詳細 |
 | :-------- | :------ |
@@ -106,7 +106,7 @@ X86 ドライバーの場合: [簡体中国語](https://go.microsoft.com/fwlink/
 X64 ドライバーの場合: [簡体中国語](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x804) | [繁体中国語](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=2118511&clcid=0x40a)  
 X86 ドライバーの場合: [簡体中国語](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x804) | [繁体中国語](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=2118278&clcid=0x40a)  
 
-### <a name="features-added"></a>追加された機能
+### <a name="features-added-in-1821"></a>18.2.1 で追加された機能
 
 | 追加された機能 | 詳細 |
 | :------------ | :------ |
@@ -125,14 +125,14 @@ X86 ドライバーの場合: [簡体中国語](https://go.microsoft.com/fwlink/
 X64 ドライバーの場合: [簡体中国語](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x804) | [繁体中国語](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=2118506&clcid=0x40a)  
 X86 ドライバーの場合: [簡体中国語](https://go.microsoft.com/fwlink/?linkid=2118509&2118509=0x804) | [繁体中国語](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=2118509&clcid=0x40a)  
 
-### <a name="features-added"></a>追加された機能
+### <a name="features-added-in-1810"></a>18.1.0 で追加された機能
 
 | 追加された機能 | 詳細 |
 | :------------ | :------ |
 | `UseFMTONLY` 接続文字列キーワードと `SSPROP_INIT_USEFMTONLY` 初期化プロパティのサポート。 | `UseFMTONLY` は [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以上に接続する場合のメタデータの取得方法を制御します。<br/><br/>詳細については、次を参照してください。[OLE DB Driver for SQL Server での接続文字列キーワードの使用](applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)。 |
 | &nbsp; | &nbsp; |
 
-### <a name="bugs-fixed"></a>修正されたバグ
+### <a name="bugs-fixed-in-1810"></a>18.1.0 で修正されたバグ
 
 | 修正されたバグ | 詳細 |
 | :-------- | :------ |
@@ -150,7 +150,7 @@ X86 ドライバーの場合: [簡体中国語](https://go.microsoft.com/fwlink/
 X64 ドライバーの場合: [簡体中国語](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x804) | [繁体中国語](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=2118504&clcid=0x40a)  
 X86 ドライバーの場合: [簡体中国語](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x804) | [繁体中国語](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=2118277&clcid=0x40a)  
 
-### <a name="features-added"></a>追加された機能
+### <a name="features-added-in-1802"></a>18.0.2 で追加された機能
 
 | 追加された機能 | 詳細 |
 | :------------ | :------ |

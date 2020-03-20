@@ -1,6 +1,6 @@
 ---
 title: Web アプリケーションで SOAP API を使用する
-description: Reporting Services SOAP API からは、レポート サーバーのすべての機能にアクセスできます。
+description: レポート サーバーの機能には、Reporting Services SOAP API を使用してアクセスできます。この API にアクセスすると、エンタープライズ レポート機能を提供できます。
 ms.date: 06/26/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e8ca4455-0dc3-4741-8872-3636114938ad
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d7ae6c53033d1ea79a58d566bf57d8ed622e8f8d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 0a24b256e6d395b6cfd93773a8cb824fe7ba7ece
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74796833"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198200"
 ---
 # <a name="integrating-reporting-services-using-soap---web-application"></a>SOAP を使用した Reporting Services の統合 - Web アプリケーション
   Reporting Services SOAP API からは、レポート サーバーのすべての機能にアクセスできます。 SOAP API は Web サービスであるため、容易にアクセスし、エンタープライズ レポート機能をカスタム ビジネス アプリケーションに取り入れることができます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アプリケーションから SOAP API にアクセスするのと同じように、Web アプリケーションからレポート サーバー Web サービスにアクセスします。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] を使用して、レポート サーバー Web サービスのプロパティとメソッドを公開するプロキシ クラスを生成できます。このクラスにより、使い慣れたインフラストラクチャとツールを使用して [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] テクノロジに基づいたビジネス アプリケーションをビルドできます。  

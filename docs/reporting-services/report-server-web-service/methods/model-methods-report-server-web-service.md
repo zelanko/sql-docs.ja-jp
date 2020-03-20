@@ -1,5 +1,6 @@
 ---
 title: モデル メソッド - レポート サーバー Web サービス | Microsoft Docs
+description: レポート サーバー Web サービスでモデルを管理するために使用できるこれらの方法について説明します。
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,17 +9,17 @@ ms.topic: reference
 ms.assetid: d3e658c9-bb22-480b-a3d5-bcde8f537ab2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: baecfdb1baef4fbfcc50f2e18e4e898325f31e60
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 73d4a0ee4c5db4059dfe5ceac908b92d41ab8a45
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "63284563"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198239"
 ---
 # <a name="model-methods---report-server-web-service"></a>モデル メソッド - レポート サーバー Web サービス
   これらのメソッドを使用して、モデルを管理できます。  
   
-|方法|アクション|  
+|Method|アクション|  
 |------------|------------|  
 |<xref:ReportService2010.ReportingService2010.GenerateModel%2A>|共有データ ソース上に既定のモデルを生成します。|  
 |<xref:ReportService2010.ReportingService2010.GetModelItemPermissions%2A>|モデル アイテムに関連付けられたユーザー アクセス許可を取得します。|  

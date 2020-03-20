@@ -3,17 +3,17 @@ title: Linux 上の SQL Server 2017 のリリース ノート
 description: この記事には、Linux で実行されている SQL Server 2017 のリリース ノートとサポートされている機能が含まれています。 リリース ノートは、最新のリリースと以前のいくつかのリリースに含まれています。
 author: VanMSFT
 ms.author: vanto
-ms.date: 01/14/2020
+ms.date: 03/03/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: 6887026d7aa549af0fef82b007b4034cffaf1d9d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: e52132e0121b602092a9e1bb94cca3e5e8d1ba73
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "75952520"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79286696"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Linux 上の SQL Server 2017 のリリース ノート
 
@@ -46,6 +46,7 @@ ms.locfileid: "75952520"
 
 | Release               | Version       | リリース日 |
 |-----------------------|---------------|--------------|
+| [CU19](#CU19)         | 14.0.3281.6   | 2020-02-05   |
 | [CU18](#CU18)         | 14.0.3257.3   | 2019-12-09   |
 | [CU17](#CU17)         | 14.0.3238.1   | 2019-10-08   |
 | [CU16](#CU16)         | 14.0.3223.3   | 2019-08-01   |
@@ -69,7 +70,7 @@ ms.locfileid: "75952520"
 | [CU1](#CU1)           | 14.0.3006.16  | 2017-10-24   |
 | [GA](#GA)             | 14.0.1000.169 | 2017-10-02   |
 
-## <a id="cuinstall"></a>更新プログラムのインストール方法
+## <a name="how-to-install-updates"></a><a id="cuinstall"></a>更新プログラムのインストール方法
 
 CU リポジトリ (**mssql-server-2017**) を構成済みの場合は、新規インストールを実行すると [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] パッケージの最新の CU を取得します。 この CU リポジトリは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux 用のすべてのパッケージ インストールに関する記事の既定値です。 GDR リポジトリ (**mssql-server-2017-GDR**) を構成済みの場合は、GA 以降にリリースされた重要なセキュリティ更新プログラムのみを取得します。 Docker コンテナー CU または GDR 更新プログラムが必要な場合は、[Docker エンジン用の Microsoft SQL Server on Linux](https://hub.docker.com/r/microsoft/mssql-server) の公式イメージを参照してください。 リポジトリ構成の詳細については、[SQL Server on Linux 用のリポジトリの構成](sql-server-linux-change-repo.md)に関するページを参照してください。
 
@@ -80,7 +81,21 @@ CU リポジトリ (**mssql-server-2017**) を構成済みの場合は、新規�
 - [SQL Server Integration Services のインストール](sql-server-linux-setup-ssis.md)
 - [SQL Server エージェントの有効化](sql-server-linux-setup-sql-agent.md)
 
-## <a id="CU18"></a> CU18 (2019 年 12 月)
+## <a name="cu19-february-2020"></a><a id="CU19"></a> CU19 (2020 年 2 月)
+
+これは、[!INCLUDE[ssSQL17](../includes/sssql17-md.md)] の Cumulative Update 19 (CU19) リリースです。 このリリースの [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] のバージョンは 14.0.3281.6 です。 このリリースの修正プログラムと機能強化の詳細については、[https://support.microsoft.com/help/4535007](https://support.microsoft.com/help/4535007) を参照してください。
+
+### <a name="package-details"></a>パッケージの詳細
+
+手動またはオフラインのパッケージ インストールの場合は、次の表の情報を使用して RPM と Debian のパッケージをダウンロードすることができます。
+
+| Package | パッケージ バージョン | ダウンロード |
+|-----|-----|-----|
+| Red Hat RPM パッケージ | 14.0.3281.6-2 | [エンジン RPM パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3281.6-2.x86_64.rpm)</br>[高可用性 RPM パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3281.6-2.x86_64.rpm)</br>[フルテキスト検索 RPM パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3281.6-2.x86_64.rpm)</br>[SSIS パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
+| SLES RPM パッケージ | 14.0.3281.6-2 | [mssql-server エンジン RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3281.6-2.x86_64.rpm)</br>[高可用性 RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3281.6-2.x86_64.rpm)</br>[フルテキスト検索 RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3281.6-2.x86_64.rpm) | 
+| Ubuntu 16.04 Debian パッケージ | 14.0.3281.6-2 | [エンジン Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3281.6-2_amd64.deb)</br>[高可用性 Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3281.6-2_amd64.deb)</br>[フルテキスト検索 Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3281.6-2_amd64.deb)<br/>[SSIS パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
+
+## <a name="cu18-december-2019"></a><a id="CU18"></a> CU18 (2019 年 12 月)
 
 これは、[!INCLUDE[ssSQL17](../includes/sssql17-md.md)] の Cumulative Update 18 (CU18) リリースです。 このリリースの [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] のバージョンは 14.0.3238.1 です。 このリリースの修正プログラムと機能強化の詳細については、[https://support.microsoft.com/help/4527377](https://support.microsoft.com/help/4527377) を参照してください。
 
@@ -125,7 +140,7 @@ SQL Server 2017 コンテナーには、次の例に示すように、新しい�
 > 今後、SQL Server 2017 コンテナー用の他のタグ付けパターンを含むコンテナーを公開することありません。
 
 
-## <a id="CU17"></a> CU17 (2019 年 10 月)
+## <a name="cu17-october-2019"></a><a id="CU17"></a> CU17 (2019 年 10 月)
 
 これは、[!INCLUDE[ssSQL17](../includes/sssql17-md.md)] の Cumulative Update 17 (CU17) リリースです。 このリリースの [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] のバージョンは 14.0.3238.1 です。 このリリースの修正プログラムと機能強化の詳細については、[https://support.microsoft.com/help/4515579](https://support.microsoft.com/help/4515579) を参照してください。
 
@@ -139,7 +154,7 @@ SQL Server 2017 コンテナーには、次の例に示すように、新しい�
 | SLES RPM パッケージ | 14.0.3238.1-19 | [mssql-server エンジン RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3238.1-19.x86_64.rpm)</br>[高可用性 RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3238.1-19.x86_64.rpm)</br>[フルテキスト検索 RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3238.1-19.x86_64.rpm) | 
 | Ubuntu 16.04 Debian パッケージ | 14.0.3238.1-19 | [エンジン Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3238.1-19_amd64.deb)</br>[高可用性 Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3238.1-19_amd64.deb)</br>[フルテキスト検索 Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3238.1-19_amd64.deb)<br/>[SSIS パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <a id="CU16"></a> CU16 (2019 年 8 月)
+## <a name="cu16-august-2019"></a><a id="CU16"></a> CU16 (2019 年 8 月)
 
 これは、[!INCLUDE[ssSQL17](../includes/sssql17-md.md)] の Cumulative Update 16 (CU16) リリースです。 このリリースの [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] バージョンは 14.0.3223.3 です。 このリリースの修正プログラムと機能強化の詳細については、[https://support.microsoft.com/help/4508218](https://support.microsoft.com/help/4508218) を参照してください。
 
@@ -159,7 +174,7 @@ SQL Server 2017 コンテナーには、次の例に示すように、新しい�
 | SLES RPM パッケージ | 14.0.3223.3-15 | [mssql-server エンジン RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3223.3-15.x86_64.rpm)</br>[高可用性 RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3223.3-15.x86_64.rpm)</br>[フルテキスト検索 RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3223.3-15.x86_64.rpm) | 
 | Ubuntu 16.04 Debian パッケージ | 14.0.3223.3-15 | [エンジン Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3223.3-15_amd64.deb)</br>[高可用性 Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3223.3-15_amd64.deb)</br>[フルテキスト検索 Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3223.3-15_amd64.deb)<br/>[SSIS パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <a id="CU15"></a> CU15 (2019 年 5 月)
+## <a name="cu15-may-2019"></a><a id="CU15"></a> CU15 (2019 年 5 月)
 
 これは、[!INCLUDE[ssSQL17](../includes/sssql17-md.md)] の Cumulative Update 15 (CU15) リリースです。 このリリースの [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] バージョンは 14.0.3162.1 です。 このリリースの修正プログラムと機能強化の詳細については、[https://support.microsoft.com/help/4498951](https://support.microsoft.com/help/4498951) を参照してください。
 
@@ -173,7 +188,7 @@ SQL Server 2017 コンテナーには、次の例に示すように、新しい�
 | SLES RPM パッケージ | 14.0.3162.1-1 | [mssql-server エンジン RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3162.1-1.x86_64.rpm)</br>[高可用性 RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3162.1-1.x86_64.rpm)</br>[フルテキスト検索 RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3162.1-1.x86_64.rpm) | 
 | Ubuntu 16.04 Debian パッケージ | 14.0.3162.1-1 | [エンジン Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3162.1-1_amd64.deb)</br>[高可用性 Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3162.1-1_amd64.deb)</br>[フルテキスト検索 Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3162.1-1_amd64.deb)<br/>[SSIS パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <a id="CU14"></a> CU14 (2019 年 3 月)
+## <a name="cu14-mar-2019"></a><a id="CU14"></a> CU14 (2019 年 3 月)
 
 これは、[!INCLUDE[ssSQL17](../includes/sssql17-md.md)] の Cumulative Update 14 (CU14) リリースです。 このリリースの [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] バージョンは 14.0.3076.1 です。 このリリースの修正プログラムと機能強化の詳細については、[https://support.microsoft.com/help/4484710](https://support.microsoft.com/help/4484710) を参照してください。
 
@@ -187,7 +202,7 @@ SQL Server 2017 コンテナーには、次の例に示すように、新しい�
 | SLES RPM パッケージ | 14.0.3076.1-2 | [mssql-server エンジン RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3076.1-2.x86_64.rpm)</br>[高可用性 RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3076.1-2.x86_64.rpm)</br>[フルテキスト検索 RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3076.1-2.x86_64.rpm) | 
 | Ubuntu 16.04 Debian パッケージ | 14.0.3076.1-2 | [エンジン Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3076.1-2_amd64.deb)</br>[高可用性 Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3076.1-2_amd64.deb)</br>[フルテキスト検索 Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3076.1-2_amd64.deb)<br/>[SSIS パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <a id="CU13"></a> CU13 (2018 年 12 月)
+## <a name="cu13-dec-2018"></a><a id="CU13"></a> CU13 (2018 年 12 月)
 
 これは、[!INCLUDE[ssSQL17](../includes/sssql17-md.md)] の Cumulative Update 13 (CU13) リリースです。 このリリースの [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] バージョンは 14.0.3048.4 です。 このリリースの修正プログラムと機能強化の詳細については、[https://support.microsoft.com/help/4466404](https://support.microsoft.com/help/4466404) を参照してください。
 
@@ -201,7 +216,7 @@ SQL Server 2017 コンテナーには、次の例に示すように、新しい�
 | SLES RPM パッケージ | 14.0.3048.4-1 | [mssql-server エンジン RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3048.4-1.x86_64.rpm)</br>[高可用性 RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3048.4-1.x86_64.rpm)</br>[フルテキスト検索 RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3048.4-1.x86_64.rpm) | 
 | Ubuntu 16.04 Debian パッケージ | 14.0.3048.4-1 | [エンジン Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3048.4-1_amd64.deb)</br>[高可用性 Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3048.4-1_amd64.deb)</br>[フルテキスト検索 Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3048.4-1_amd64.deb)<br/>[SSIS パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <a id="CU12"></a> CU12 (2018 年 10 月)
+## <a name="cu12-oct-2018"></a><a id="CU12"></a> CU12 (2018 年 10 月)
 
 これは、[!INCLUDE[ssSQL17](../includes/sssql17-md.md)] の Cumulative Update 12 (CU12) リリースです。 このリリースの [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] バージョンは 14.0.3045.24 です。 このリリースの修正プログラムと機能強化の詳細については、[https://support.microsoft.com/help/4464082](https://support.microsoft.com/help/4464082) を参照してください。
 
@@ -215,7 +230,7 @@ SQL Server 2017 コンテナーには、次の例に示すように、新しい�
 | SLES RPM パッケージ | 14.0.3045.24-1 | [mssql-server エンジン RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3045.24-1.x86_64.rpm)</br>[高可用性 RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3045.24-1.x86_64.rpm)</br>[フルテキスト検索 RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3045.24-1.x86_64.rpm) | 
 | Ubuntu 16.04 Debian パッケージ | 14.0.3045.24-1 | [エンジン Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3045.24-1_amd64.deb)</br>[高可用性 Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3045.24-1_amd64.deb)</br>[フルテキスト検索 Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3045.24-1_amd64.deb)<br/>[SSIS パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <a id="CU11"></a> CU11 (2018 年 9 月)
+## <a name="cu11-sept-2018"></a><a id="CU11"></a> CU11 (2018 年 9 月)
 
 これは、[!INCLUDE[ssSQL17](../includes/sssql17-md.md)] の Cumulative Update 11 (CU11) リリースです。 このリリースの [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] バージョンは 14.0.3038.14 です。 このリリースの修正プログラムと機能強化の詳細については、[https://support.microsoft.com/help/4462262](https://support.microsoft.com/help/4462262) を参照してください。
 
@@ -229,7 +244,7 @@ SQL Server 2017 コンテナーには、次の例に示すように、新しい�
 | SLES RPM パッケージ | 14.0.3038.14-2 | [mssql-server エンジン RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3038.14-2.x86_64.rpm)</br>[高可用性 RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3038.14-2.x86_64.rpm)</br>[フルテキスト検索 RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3038.14-2.x86_64.rpm) | 
 | Ubuntu 16.04 Debian パッケージ | 14.0.3038.14-2 | [エンジン Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3038.14-2_amd64.deb)</br>[高可用性 Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3038.14-2_amd64.deb)</br>[フルテキスト検索 Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3038.14-2_amd64.deb)<br/>[SSIS パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <a id="CU10"></a> CU10 (2018 年 8 月)
+## <a name="cu10-aug-2018"></a><a id="CU10"></a> CU10 (2018 年 8 月)
 
 これは、[!INCLUDE[ssSQL17](../includes/sssql17-md.md)] の Cumulative Update 10 (CU10) リリースです。 このリリースの [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] バージョンは 14.0.3037.1 です。 このリリースの修正プログラムと機能強化の詳細については、[https://support.microsoft.com/help/4342123](https://support.microsoft.com/help/4342123) を参照してください。
 
@@ -243,7 +258,7 @@ SQL Server 2017 コンテナーには、次の例に示すように、新しい�
 | SLES RPM パッケージ | 14.0.3037.1-2 | [mssql-server エンジン RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3037.1-2.x86_64.rpm)</br>[高可用性 RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3037.1-2.x86_64.rpm)</br>[フルテキスト検索 RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3037.1-2.x86_64.rpm) | 
 | Ubuntu 16.04 Debian パッケージ | 14.0.3037.1-2 | [エンジン Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3037.1-2_amd64.deb)</br>[高可用性 Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3037.1-2_amd64.deb)</br>[フルテキスト検索 Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3037.1-2_amd64.deb)<br/>[SSIS パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <a id="CU9-GDR2"></a> CU9-GDR2 (2018 年 8 月)
+## <a name="cu9-gdr2-aug-2018"></a><a id="CU9-GDR2"></a> CU9-GDR2 (2018 年 8 月)
 
 これは、[!INCLUDE[ssSQL17](../includes/sssql17-md.md)] 用に以前にリリースされた CU (CU9) も含まれているセキュリティ更新プログラムです。 このリリースの [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] バージョンは 14.0.3035.2 です。 このリリースの修正プログラムと機能強化の詳細については、[https://support.microsoft.com/help/4293805](https://support.microsoft.com/help/4293805) を参照してください。
 
@@ -257,7 +272,7 @@ SQL Server 2017 コンテナーには、次の例に示すように、新しい�
 | SLES RPM パッケージ | 14.0.3035.2-1 | [mssql-server エンジン RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3035.2-1.x86_64.rpm)</br>[高可用性 RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3035.2-1.x86_64.rpm)</br>[フルテキスト検索 RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3035.2-1.x86_64.rpm) | 
 | Ubuntu 16.04 Debian パッケージ | 14.0.3035.2-1 | [エンジン Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3035.2-1_amd64.deb)</br>[高可用性 Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3035.2-1_amd64.deb)</br>[フルテキスト検索 Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3035.2-1_amd64.deb)<br/> |
 
-## <a id="GDR2"></a> GDR2 (2018 年 8 月)
+## <a name="gdr2-aug-2018"></a><a id="GDR2"></a> GDR2 (2018 年 8 月)
 
 これは、[!INCLUDE[ssSQL17](../includes/sssql17-md.md)] の GDR2 (および GDR1) セキュリティ修正プログラムのみが含まれるセキュリティ更新プログラムです。  このリリースの [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] バージョンは 14.0.2002.14 です。 このリリースの修正プログラムと機能強化の詳細については、[https://support.microsoft.com/help/4293803](https://support.microsoft.com/help/4293803) を参照してください。
 
@@ -271,7 +286,7 @@ SQL Server 2017 コンテナーには、次の例に示すように、新しい�
 | SLES RPM パッケージ | 14.0.2002.14-1 | [mssql-server エンジン RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017-gdr/mssql-server-14.0.2002.14-1.x86_64.rpm)</br>[高可用性 RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017-gdr/mssql-server-ha-14.0.2002.14-1.x86_64.rpm)</br>[フルテキスト検索 RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017-gdr/mssql-server-fts-14.0.2002.14-1.x86_64.rpm) | 
 | Ubuntu 16.04 Debian パッケージ | 14.0.2002.14-1 | [エンジン Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr/pool/main/m/mssql-server/mssql-server_14.0.2002.14-1_amd64.deb)</br>[高可用性 Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.2002.14-1_amd64.deb)</br>[フルテキスト検索 Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.2002.14-1_amd64.deb) |
 
-## <a id="CU9"></a> CU9 (2018 年 7 月)
+## <a name="cu9-jul-2018"></a><a id="CU9"></a> CU9 (2018 年 7 月)
 
 これは、[!INCLUDE[ssSQL17](../includes/sssql17-md.md)] の Cumulative Update 9 (CU9) リリースです。 このリリースの [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] バージョンは 14.0.3030.27 です。 このリリースの修正プログラムと機能強化の詳細については、[https://support.microsoft.com/help/4341265](https://support.microsoft.com/help/4341265) を参照してください。
 
@@ -285,7 +300,7 @@ SQL Server 2017 コンテナーには、次の例に示すように、新しい�
 | SLES RPM パッケージ | 14.0.3030.27-1 | [mssql-server エンジン RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3030.27-1.x86_64.rpm)</br>[高可用性 RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3030.27-1.x86_64.rpm)</br>[フルテキスト検索 RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3030.27-1.x86_64.rpm) | 
 | Ubuntu 16.04 Debian パッケージ | 14.0.3030.27-1 | [エンジン Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3030.27-1_amd64.deb)</br>[高可用性 Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3030.27-1_amd64.deb)</br>[フルテキスト検索 Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3030.27-1_amd64.deb)<br/>[SSIS パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <a id="CU8"></a> CU8 (2018 年 6 月)
+## <a name="cu8-jun-2018"></a><a id="CU8"></a> CU8 (2018 年 6 月)
 
 これは、[!INCLUDE[ssSQL17](../includes/sssql17-md.md)] の Cumulative Update 8 (CU8) リリースです。 このリリースの [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] バージョンは 14.0.3029.16 です。 このリリースの修正プログラムと機能強化の詳細については、[https://support.microsoft.com/help/4338363](https://support.microsoft.com/help/4338363) を参照してください。
 
@@ -299,7 +314,7 @@ SQL Server 2017 コンテナーには、次の例に示すように、新しい�
 | SLES RPM パッケージ | 14.0.3029.16-1 | [mssql-server エンジン RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3029.16-1.x86_64.rpm)</br>[高可用性 RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3029.16-1.x86_64.rpm)</br>[フルテキスト検索 RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3029.16-1.x86_64.rpm) | 
 | Ubuntu 16.04 Debian パッケージ | 14.0.3029.16-1 | [エンジン Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3029.16-1_amd64.deb)</br>[高可用性 Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3029.16-1_amd64.deb)</br>[フルテキスト検索 Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3029.16-1_amd64.deb)<br/>[SSIS パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <a id="CU7"></a> CU7 (2018 年 5 月)
+## <a name="cu7-may-2018"></a><a id="CU7"></a> CU7 (2018 年 5 月)
 
 これは、[!INCLUDE[ssSQL17](../includes/sssql17-md.md)] の Cumulative Update 7 (CU7) リリースです。 このリリースの [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] バージョンは 14.0.3026.27 です。 このリリースの修正プログラムと機能強化の詳細については、[https://support.microsoft.com/help/4229789](https://support.microsoft.com/help/4229789) を参照してください。
 
@@ -313,7 +328,7 @@ SQL Server 2017 コンテナーには、次の例に示すように、新しい�
 | SLES RPM パッケージ | 14.0.3026.27-2 | [mssql-server エンジン RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3026.27-2.x86_64.rpm)</br>[高可用性 RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3026.27-2.x86_64.rpm)</br>[フルテキスト検索 RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3026.27-2.x86_64.rpm) | 
 | Ubuntu 16.04 Debian パッケージ | 14.0.3026.27-2 | [エンジン Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3026.27-2_amd64.deb)</br>[高可用性 Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3026.27-2_amd64.deb)</br>[フルテキスト検索 Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3026.27-2_amd64.deb)<br/>[SSIS パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <a id="CU6"></a> CU6 (2018 年 4 月)
+## <a name="cu6-apr-2018"></a><a id="CU6"></a> CU6 (2018 年 4 月)
 
 これは、[!INCLUDE[ssSQL17](../includes/sssql17-md.md)] の Cumulative Update 6 (CU6) リリースです。 このリリースの [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] バージョンは 14.0.3025.34 です。 このリリースの修正プログラムと機能強化の詳細については、[https://support.microsoft.com/help/4101464](https://support.microsoft.com/help/4101464) を参照してください。
 
@@ -327,7 +342,7 @@ SQL Server 2017 コンテナーには、次の例に示すように、新しい�
 | SLES RPM パッケージ | 14.0.3025.34-3 | [mssql-server エンジン RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3025.34-3.x86_64.rpm)</br>[高可用性 RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3025.34-3.x86_64.rpm)</br>[フルテキスト検索 RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3025.34-3.x86_64.rpm) | 
 | Ubuntu 16.04 Debian パッケージ | 14.0.3025.34-3 | [エンジン Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3025.34-3_amd64.deb)</br>[高可用性 Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3025.34-3_amd64.deb)</br>[フルテキスト検索 Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3025.34-3_amd64.deb)<br/>[SSIS パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <a id="CU5"></a> CU5 (2018 年 3 月)
+## <a name="cu5-mar-2018"></a><a id="CU5"></a> CU5 (2018 年 3 月)
 
 これは、[!INCLUDE[ssSQL17](../includes/sssql17-md.md)] の Cumulative Update 5 (CU5) リリースです。 このリリースの [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] バージョンは 14.0.3023.8 です。 このリリースの修正プログラムと機能強化の詳細については、[https://support.microsoft.com/help/4092643](https://support.microsoft.com/help/4092643) を参照してください。
 
@@ -359,7 +374,7 @@ sudo systemctl start mssql-server
 | SLES RPM パッケージ | 14.0.3023.8-5 | [mssql-server エンジン RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3023.8-5.x86_64.rpm)</br>[高可用性 RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3023.8-5.x86_64.rpm)</br>[フルテキスト検索 RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3023.8-5.x86_64.rpm) | 
 | Ubuntu 16.04 Debian パッケージ | 14.0.3023.8-5 | [エンジン Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3023.8-5_amd64.deb)</br>[高可用性 Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3023.8-5_amd64.deb)</br>[フルテキスト検索 Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3023.8-5_amd64.deb)<br/>[SSIS パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <a id="CU4"></a> CU4 (2018 年 2 月)
+## <a name="cu4-feb-2018"></a><a id="CU4"></a> CU4 (2018 年 2 月)
 
 これは、[!INCLUDE[ssSQL17](../includes/sssql17-md.md)] の Cumulative Update 4 (CU4) リリースです。 このリリースの [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] バージョンは 14.0.3022.28 です。 このリリースの修正プログラムと機能強化の詳細については、[https://support.microsoft.com/help/4056498](https://support.microsoft.com/help/4056498) を参照してください。
 
@@ -376,7 +391,7 @@ sudo systemctl start mssql-server
 | SLES RPM パッケージ | 14.0.3022.28-2 | [mssql-server エンジン RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3022.28-2.x86_64.rpm)</br>[高可用性 RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3022.28-2.x86_64.rpm)</br>[フルテキスト検索 RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3022.28-2.x86_64.rpm) | 
 | Ubuntu 16.04 Debian パッケージ | 14.0.3022.28-2 | [エンジン Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3022.28-2_amd64.deb)</br>[高可用性 Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3022.28-2_amd64.deb)</br>[フルテキスト検索 Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3022.28-2_amd64.deb)<br/>[SSIS パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <a id="GDR1"></a> GDR1 (2018 年 1 月)
+## <a name="gdr1-jan-2018"></a><a id="GDR1"></a> GDR1 (2018 年 1 月)
 
 これは、[!INCLUDE[ssSQL17](../includes/sssql17-md.md)] の GDR1 セキュリティ修正プログラムのみが含まれるセキュリティ更新プログラムです。 このリリースの [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] バージョンは 14.0.2000.63 です。 このリリースの修正プログラムと機能強化の詳細については、[https://support.microsoft.com/help/4057122](https://support.microsoft.com/help/4057122) を参照してください。
 
@@ -390,7 +405,7 @@ sudo systemctl start mssql-server
 | SLES RPM パッケージ | 14.0.2000.63-3 | [mssql-server エンジン RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017-gdr/mssql-server-14.0.2000.63-3.x86_64.rpm)</br>[高可用性 RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017-gdr/mssql-server-ha-14.0.2000.63-3.x86_64.rpm)</br>[フルテキスト検索 RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017-gdr/mssql-server-fts-14.0.2000.63-3.x86_64.rpm) | 
 | Ubuntu 16.04 Debian パッケージ | 14.0.2000.63-3 | [エンジン Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr/pool/main/m/mssql-server/mssql-server_14.0.2000.63-3_amd64.deb)</br>[高可用性 Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.2000.63-3_amd64.deb)</br>[フルテキスト検索 Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.2000.63-3_amd64.deb) |
 
-## <a id="CU3"></a> CU3 (2018 年 1 月)
+## <a name="cu3-jan-2018"></a><a id="CU3"></a> CU3 (2018 年 1 月)
 
 これは、[!INCLUDE[ssSQL17](../includes/sssql17-md.md)] の Cumulative Update 3 (CU3) リリースです。 このリリースの [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] バージョンは 14.0.3015.40 です。 このリリースの修正プログラムと機能強化の詳細については、[https://support.microsoft.com/help/4052987](https://support.microsoft.com/help/4052987) を参照してください。
 
@@ -404,7 +419,7 @@ sudo systemctl start mssql-server
 | SLES RPM パッケージ | 14.0.3015.40-1 | [mssql-server エンジン RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3015.40-1.x86_64.rpm)</br>[高可用性 RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3015.40-1.x86_64.rpm)</br>[フルテキスト検索 RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3015.40-1.x86_64.rpm)</br>[SQL Server エージェント RPM パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.3015.40-1.x86_64.rpm) | 
 | Ubuntu 16.04 Debian パッケージ | 14.0.3015.40-1 | [エンジン Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3015.40-1_amd64.deb)</br>[高可用性 Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3015.40-1_amd64.deb)</br>[フルテキスト検索 Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3015.40-1_amd64.deb)</br>[SQL Server エージェント Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-agent/mssql-server-agent_14.0.3015.40-1_amd64.deb)<br/>[SSIS パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <a id="CU2"></a> CU2 (2017 年 11 月)
+## <a name="cu2-nov-2017"></a><a id="CU2"></a> CU2 (2017 年 11 月)
 
 これは、[!INCLUDE[ssSQL17](../includes/sssql17-md.md)] の Cumulative Update 2 (CU2) リリースです。 このリリースの [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] バージョンは 14.0.3008.27 です。 このリリースの修正プログラムと機能強化の詳細については、[https://support.microsoft.com/help/4052574](https://support.microsoft.com/help/4052574) を参照してください。
 
@@ -418,7 +433,7 @@ sudo systemctl start mssql-server
 | SLES RPM パッケージ | 14.0.3008.27-1 | [mssql-server エンジン RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3008.27-1.x86_64.rpm)</br>[高可用性 RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3008.27-1.x86_64.rpm)</br>[フルテキスト検索 RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3008.27-1.x86_64.rpm)</br>[SQL Server エージェント RPM パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.3008.27-1.x86_64.rpm) | 
 | Ubuntu 16.04 Debian パッケージ | 14.0.3008.27-1 | [エンジン Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3008.27-1_amd64.deb)</br>[高可用性 Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3008.27-1_amd64.deb)</br>[フルテキスト検索 Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3008.27-1_amd64.deb)</br>[SQL Server エージェント Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-agent/mssql-server-agent_14.0.3008.27-1_amd64.deb)<br/>[SSIS パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <a id="CU1"></a> CU1 (2017 年 10 月)
+## <a name="cu1-oct-2017"></a><a id="CU1"></a> CU1 (2017 年 10 月)
 
 これは、[!INCLUDE[ssSQL17](../includes/sssql17-md.md)] の Cumulative Update 1 (CU1) リリースです。 このリリースの [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] バージョンは 14.0.3006.16 です。 このリリースの修正プログラムと機能強化の詳細については、[https://support.microsoft.com/help/KB4053439](https://support.microsoft.com/help/4038634) を参照してください。
 
@@ -432,7 +447,7 @@ sudo systemctl start mssql-server
 | SLES RPM パッケージ | 14.0.3006.16-3 | [mssql-server エンジン RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3006.16-3.x86_64.rpm)</br>[高可用性 RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3006.16-3.x86_64.rpm)</br>[フルテキスト検索 RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3006.16-3.x86_64.rpm)</br>[SQL Server エージェント RPM パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.3006.16-3.x86_64.rpm) | 
 | Ubuntu 16.04 Debian パッケージ | 14.0.3006.16-3 | [エンジン Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3006.16-3_amd64.deb)</br>[高可用性 Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3006.16-3_amd64.deb)</br>[フルテキスト検索 Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3006.16-3_amd64.deb)</br>[SQL Server エージェント Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-agent/mssql-server-agent_14.0.3006.16-3_amd64.deb)<br/>[SSIS パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <a id="GA"></a> GA (2017 年 10 月)
+## <a name="ga-oct-2017"></a><a id="GA"></a> GA (2017 年 10 月)
 
 これは [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] の一般公開 (GA) リリースです。 このリリースの [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] バージョンは 14.0.1000.169 です。
 
@@ -552,7 +567,7 @@ sudo systemctl start mssql-server
 
 - このリリースでは、Office ドキュメントのフィルターを含め、すべてのフィルターが使用できるわけではありません。 サポートされているフィルターの一覧については、[Linux への SQL Server フルテキスト検索のインストール](sql-server-linux-setup-full-text-search.md#filters)に関するページを参照してください。
 
-#### <a id="ssis"></a> SQL Server Integration Services (SSIS)
+#### <a name="sql-server-integration-services-ssis"></a><a id="ssis"></a> SQL Server Integration Services (SSIS)
 
 - **mssql-server-is** パッケージは、このリリースの SUSE ではサポートされていません。 現時点では、Ubuntu と Red Hat Enterprise Linux (RHEL) でサポートされています。
 
@@ -561,7 +576,7 @@ sudo systemctl start mssql-server
 - Linux 上で SSIS パッケージを実行する場合、このリリースでは次の機能はサポートされていません。
   - [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] カタログ データベース
   - SQL エージェントでスケジュールされたパッケージの実行
-  - [Windows 認証]
+  - Windows 認証
   - サードパーティ コンポーネント
   - 変更データ キャプチャ (CDC)
   - [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] スケール アウト
@@ -576,7 +591,7 @@ Linux の SSIS の詳細については、次の記事を参照してくださ�
 -   [SQL Server Integration Services (SSIS) on Linux をインストールする](sql-server-linux-setup-ssis.md)
 -   [SSIS を使用して Linux 上でデータの抽出、変換、読み込みを行う](sql-server-linux-migrate-ssis.md)
 
-#### <a id="ssms"></a> SQL Server Management Studio (SSMS)
+#### <a name="sql-server-management-studio-ssms"></a><a id="ssms"></a> SQL Server Management Studio (SSMS)
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux に接続されている Windows の [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] には、次の制限事項が適用されます。
 

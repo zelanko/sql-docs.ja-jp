@@ -1,6 +1,6 @@
 ---
 title: URL アクセスまたは SOAP の選択
-description: Reporting Services をカスタム アプリケーションに統合するには、2 つの方法があります。URL アクセスと Reporting Services SOAP API です。 どちらの方法を使用するかは、いくつかの要因によって異なります。
+description: Reporting Services をカスタム アプリケーションに統合するには、2 つの方法があります。URL アクセスと Reporting Services SOAP API です。 これらをどのように選択するかについて説明します。
 ms.date: 10/19/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +10,12 @@ ms.topic: reference
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d401c7d95cff5011dffbfaac2ebcc9bfa5ea5c24
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.openlocfilehash: 115ff4521e347c1eb905f63c579df04f0a11adae
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "74796914"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198219"
 ---
 # <a name="choose-between-url-access-and-soap-in-reporting-services"></a>Reporting Services での URL アクセスまたは SOAP の選択
 

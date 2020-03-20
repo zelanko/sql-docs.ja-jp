@@ -4,18 +4,18 @@ titleSuffix: SQL Server
 description: この記事では、Linux に SQL Server ツールをインストールする方法について説明します。
 author: VanMSFT
 ms.author: vanto
-ms.date: 06/07/2019
+ms.date: 03/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
-ms.openlocfilehash: 23610c3144c7cf03a4c93be900bfc60a449448ed
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: a6ee495dc984273b8a1c20784542d6611edbbbba
+ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "72041251"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79288786"
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Linux に SQL Server コマンドライン ツール sqlcmd および bcp をインストールする
 
@@ -36,7 +36,7 @@ ms.locfileid: "72041251"
 
 この記事では、コマンドライン ツールをインストールする方法について説明します。 **sqlcmd** または **bcp** の使用方法の例を参照するには、トピックの最後にある[リンク](#next-steps)をご覧ください。
 
-## <a name="a-idrhelainstall-tools-on-rhel-7"></a><a id="RHEL"><a/>RHEL 7 にツールをインストールする
+## <a name="a-idrhelinstall-tools-on-rhel-7"></a><a id="RHEL"><a/>RHEL 7 にツールをインストールする
 
 次の手順を使用して、Red Hat Enterprise Linux に **mssql-tools** をインストールします。 
 
@@ -92,9 +92,12 @@ ms.locfileid: "72041251"
    source ~/.bashrc
    ```
 
-## <a id="ubuntu"></a>Ubuntu 16.04 にツールをインストールする
+## <a name="install-tools-on-ubuntu-1604"></a><a id="ubuntu"></a>Ubuntu 16.04 にツールをインストールする
 
-次の手順を使用して、Ubuntu に **mssql-tools** をインストールします。 
+次の手順を使用して、Ubuntu に **mssql-tools** をインストールします。
+
+> [!NOTE]
+> Ubuntu 18.04 は SQL Server 2019 CU3 以降でサポートされています。 Ubuntu 18.04 を使用している場合は、リポジトリのパスを `/ubuntu/16.04` から `/ubuntu/18.04` に変更します。
 
 1. パブリック リポジトリの GPG キーをインポートします。
 
@@ -137,7 +140,7 @@ ms.locfileid: "72041251"
    source ~/.bashrc
    ```
 
-## <a id="SLES"></a>SLES 12 にツールをインストールする
+## <a name="install-tools-on-sles-12"></a><a id="SLES"></a>SLES 12 にツールをインストールする
 
 次の手順を使用して、SUSE Linux Enterprise Server に **mssql-tools** をインストールします。 
 
@@ -176,7 +179,7 @@ ms.locfileid: "72041251"
    source ~/.bashrc
    ```
 
-## <a id="macos"></a>macOS にツールをインストールする
+## <a name="install-tools-on-macos"></a><a id="macos"></a>macOS にツールをインストールする
 
 **sqlcmd** と **bcp** のプレビューが macOS で使用できるようになりました。 詳しくは、[お知らせ](https://blogs.technet.microsoft.com/dataplatforminsider/2017/05/16/sql-server-command-line-tools-for-macos-released/)をご覧ください。
 
@@ -195,7 +198,7 @@ brew install mssql-tools
 #HOMEBREW_NO_ENV_FILTERING=1 ACCEPT_EULA=y brew install mssql-tools
 ```
 
-## <a id="docker"></a> Docker
+## <a name="docker"></a><a id="docker"></a> Docker
 
 [Docker コンテナー内で SQL Server を実行する](quickstart-install-connect-docker.md)場合、SQL Server のコマンドライン ツールは SQL Server Linux コンテナー イメージに既に含まれています。 対話型の Bash シェルで実行中のコンテナーにアタッチする場合は、ツールをローカルで実行できます。
 

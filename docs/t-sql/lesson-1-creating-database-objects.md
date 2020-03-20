@@ -10,12 +10,12 @@ ms.assetid: 9fb8656b-0e4e-4ada-b404-4db4d3eea995
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4b2a0c7a298cda42940e08b532be0df39221a21b
-ms.sourcegitcommit: e914effe771a1ee323bb3653626cd4ba83d77308
+ms.openlocfilehash: d2bea423a9ea039dbc9f0128c7d6b6f106ee03fe
+ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78280944"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79198409"
 ---
 # <a name="lesson-1-create-and-query-database-objects"></a>レッスン 1: データベース オブジェクトの作成とクエリ
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,12 +39,12 @@ ms.locfileid: "78280944"
 
 - [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) をインストールします。
 
-SQL Server インスタンスへのアクセス権を持っていない場合は、次のリンクからプラットフォームを選択します。 SQL 認証を選択する場合は、SQL Server のログイン資格情報を使用します。
+SQL Server インスタンスがない場合は、インスタンスを作成します。 インスタンスを作成するには、次のリンクからプラットフォームを選択します。 SQL 認証を選択する場合は、SQL Server のログイン資格情報を使用します。
 - **Windows**:[SQL Server 2017 Developer Edition をダウンロードする](https://www.microsoft.com/sql-server/sql-server-downloads)。
 - **macOS**:[Docker で SQL Server 2017 をダウンロードする](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker)。
 
 ## <a name="create-a-database"></a>データベースを作成する
-多くの [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメント同様、CREATE DATABASE ステートメントには、必須パラメーターがあります。必須パラメーターはデータベースの名前です。 また、CREATE DATABASE には、データベース ファイルを配置するディスクの場所など、多くのオプションのパラメーターがあります。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] でオプション パラメーターを指定せずに CREATE DATABASE を実行すると、これらの多くのパラメーターでは既定の値が使用されます。 このチュートリアルでは、オプションの構文パラメーターをほとんど使用しません。   
+多くの [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメント同様、[`CREATE DATABASE`](statements/create-database-transact-sql.md) ステートメントには、必須パラメーターがあります。必須パラメーターはデータベースの名前です。` CREATE DATABASE` また、データベース ファイルを配置するディスクの場所など、多くのオプションのパラメーターがあります。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] でオプション パラメーターを指定せずに `CREATE DATABASE` を実行すると、これらの多くのパラメーターでは既定値が使用されます。
 
 1.  クエリ エディターのウィンドウで、次のコードを入力します。ただし実行しないでください。  
   
@@ -53,7 +53,7 @@ SQL Server インスタンスへのアクセス権を持っていない場合は
     GO  
     ```  
   
-2.  ポインターを使用して `CREATE DATABASE`の語句を選択し、 **F1**キーを押します。 SQL Server オンライン ブックの CREATE DATABASE のトピックが開きます。 この方法を使用して、このチュートリアルで使用する CREATE DATABASE やその他のステートメントの全構文を見つけることができます。  
+2.  ポインターを使用して `CREATE DATABASE`の語句を選択し、 **F1**キーを押します。 SQL Server オンライン ブックの `CREATE DATABASE` のトピックが開きます。 この方法を使用して、このチュートリアルで使用する `CREATE DATABASE` やその他のステートメントの全構文を見つけることができます。  
   
 3.  クエリ エディターで、 **F5** キーを押してステートメントを実行し、 `TestData`という名前のデータベースを作成します。  
   
@@ -63,6 +63,7 @@ SQL Server インスタンスへのアクセス権を持っていない場合は
 > GO キーワードは、複数のステートメントを単一のバッチで送信した場合に、ステートメントを区切ります。 GO は、バッチにステートメントが 1 つしか入っていない場合はオプションです。  
 
 ## <a name="create-a-table"></a>テーブルを作成する
+
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
 テーブルを作成するには、テーブルの名前と、テーブル内の各列の名前とデータ型を入力する必要があります。 また、各列でヌル値を許可するかどうかを指定することも推奨されます。 テーブルを作成するには、テーブルを追加するスキーマに対して `CREATE TABLE` アクセス許可と `ALTER SCHEMA` アクセス許可を持っている必要があります。 [`db_ddladmin`](../relational-databases/security/authentication-access/database-level-roles.md) 固定データベース ロールには、これらのアクセス許可があります。  
@@ -76,6 +77,7 @@ SQL Server インスタンスへのアクセス権を持っていない場合は
   
   
 ### <a name="switch-the-query-editor-connection-to-the-testdata-database"></a>クエリ エディター接続から TestData データベースへの切り替え  
+
 接続を `TestData` データベースに変更するには、クエリ エディターのウィンドウで次のコードを入力して実行します。  
   
   ```sql  
@@ -84,7 +86,8 @@ SQL Server インスタンスへのアクセス権を持っていない場合は
   ```  
   
 ### <a name="create-the-table"></a>テーブルの作成
-クエリ エディターのウィンドウで、次のコードを入力して実行し、 `Products`という名前の単純なテーブルを作成します。 テーブルの列は `ProductID`、 `ProductName`、 `Price`、 `ProductDescription`という名前です。 `ProductID` 列がテーブルの主キーです。 `int`、 `varchar(25)`、 `money`、 `varchar(max)` は、すべてデータ型です。 行を挿入または変更するときにデータを入力しなくてもよい列は、 `Price` と `ProductionDescription` のみです。 このステートメントには、スキーマというオプションの要素 (`dbo.`) が含まれています。 スキーマは、テーブルを所有するデータベース オブジェクトです。 管理者の場合は、 `dbo` が既定のスキーマです。 `dbo` はデータベース所有者を表します。  
+
+クエリ エディターのウィンドウで、次のコードを入力して実行し、`Products` という名前の単純なテーブルを作成します。 テーブルの列は `ProductID`、 `ProductName`、 `Price`、 `ProductDescription`という名前です。 `ProductID` 列がテーブルの主キーです。 `int`、 `varchar(25)`、 `money`、 `varchar(max)` は、すべてデータ型です。 行を挿入または変更するときにデータを入力しなくてもよい列は、 `Price` と `ProductionDescription` のみです。 このステートメントには、スキーマというオプションの要素 (`dbo.`) が含まれています。 スキーマは、テーブルを所有するデータベース オブジェクトです。 管理者の場合は、 `dbo` が既定のスキーマです。 `dbo` はデータベース所有者を表します。  
   
   ```sql  
   CREATE TABLE dbo.Products  
@@ -103,13 +106,13 @@ SQL Server インスタンスへのアクセス権を持っていない場合は
 |1|Clamp|12.48|Workbench clamp|  
 |50|Screwdriver|3.17|Flat head|  
 |75|Tire Bar||Tool for changing tires|  
-|3000|3mm Bracket|.52||  
+|3000|3 mm Bracket|0.52||  
   
 基本構文は次のとおりです。INSERT、テーブル名、列一覧、VALUES、挿入する値の一覧。 行の先頭にある 2 つのハイフンは、その行がコメントであることを示します。この行のテキストはコンパイラによって無視されます。 この場合、コメントは構文に許可されているバリエーションを記述します。  
   
 ### <a name="insert-data-into-a-table"></a>データをテーブルに挿入  
   
-1.  次のステートメントを実行し、前のタスクで作成した `Products` テーブルに行を挿入します。 これは基本構文です。  
+1.  次のステートメントを実行し、前のタスクで作成した `Products` テーブルに行を挿入します。
   
    ```sql 
    -- Standard syntax  
@@ -117,7 +120,21 @@ SQL Server インスタンスへのアクセス権を持っていない場合は
        VALUES (1, 'Clamp', 12.48, 'Workbench clamp')  
    GO   
    ```  
-  
+
+   > [!NOTE]
+   > 挿入が成功した場合は、次の手順に進みます。
+   >
+   > 挿入に失敗した場合は、`Product` テーブルにその製品 ID を持つ行が既に存在していることが原因である可能性があります。 続行するには、テーブル内のすべての行を削除し、前の手順を繰り返します。 [`TRUNCATE TABLE`](statements/truncate-table-transact-sql.md) によってテーブル内のすべての行が削除されます。 
+   >
+   > 次のコマンドを実行して、テーブル内のすべての行を削除します。
+   > 
+   > ```sql
+   >TRUNCATE TABLE TestData.dbo.Products;
+   > GO
+   >```
+   >
+   > テーブルを切り詰めた後、この手順で `INSERT` コマンドを繰り返します。
+
 2.  次のステートメントは、フィールド一覧 (かっこ内) と値一覧の両方にある `ProductID` と `ProductName` の配置を交換することで、パラメーターの順序を変更する方法を示しています。  
   
    ```sql  
@@ -141,7 +158,7 @@ SQL Server インスタンスへのアクセス権を持っていない場合は
    ```sql  
    -- Dropping the optional dbo and dropping the ProductDescription column  
    INSERT Products (ProductID, ProductName, Price)  
-       VALUES (3000, '3mm Bracket', .52)  
+       VALUES (3000, '3 mm Bracket', 0.52)  
    GO  
    ```  
   
@@ -169,7 +186,7 @@ SQL Server インスタンスへのアクセス権を持っていない場合は
   GO  
   ```  
   
-2.  アスタリスクを使用すると、テーブルの列をすべて選択できます。 これはアドホック クエリでよく使用されます。 永続的なコード内では列一覧を指定して、新しい列が後からテーブルに追加された場合でも、予測された列がステートメントによって返されるようにしてください。  
+2.  アスタリスク (`*`) を使用すると、テーブルの列をすべて選択できます。 アスタリスクはアドホック クエリで使用します。 永続的なコード内では列一覧を指定して、新しい列が後からテーブルに追加された場合でも、予測された列がステートメントによって返されるようにしてください。  
   
   ```sql  
   -- Returns all columns in the table  
@@ -224,7 +241,7 @@ SELECT ステートメント内のデータの操作に使用できる関数の�
   
 ### <a name="create-a-view"></a>ビューの作成  
   
-次のステートメントを実行して、SELECT ステートメントを実行する非常に単純なビューを作成し、製品の名前と価格をユーザーに返します。  
+次のステートメントを実行して、SELECT ステートメントを実行するビューを作成し、製品の名前と価格をユーザーに返します。  
   
   ```sql  
   CREATE VIEW vw_Names  

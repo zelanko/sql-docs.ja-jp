@@ -21,12 +21,12 @@ ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 61c8728fede661a91090d5cb15ee4feed5816e7c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.openlocfilehash: 86702d159d3cc658a3c2e9e31477cca80f1eb6cc
+ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76831972"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79112457"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 
@@ -103,7 +103,7 @@ SQL Server では、CREATE EXTERNAL TABLE ステートメントによって、�
 
 LOCATION をフォルダーとして指定した場合、外部テーブルから選択する PolyBase クエリでは、フォルダーとそのすべてのサブフォルダーからファイルが取得されます。 Hadoop と同じように PolyBase で非表示のフォルダーは返されません。 ファイル名が下線 (_) またはピリオド (.) で始まるファイルも返されません。
 
-この例では、LOCATION='/webdata/' である場合、PolyBase クエリでは mydata.txt と mydata2.txt から行が返されます。 mydata3.txt は非表示のフォルダーのサブフォルダーであるため、返されません。 また、_hidden.txt は非表示のファイルであるため返されません。
+この例では、LOCATION='/webdata/' である場合、PolyBase クエリでは mydata.txt と mydata2.txt から行が返されます。 mydata3.txt は非表示のフォルダー内のファイルであるため、返されません。 また、_hidden.txt は非表示のファイルであるため返されません。
 
 ![外部テーブルの再帰型データ](../../t-sql/statements/media/aps-polybase-folder-traversal.png "外部テーブルの再帰型データ")
 
@@ -881,7 +881,7 @@ SCHEMARESOLUTION オブジェクトに対する共有ロック。
 
 ## <a name="examples"></a>例
 
-### <a name="a-importing-data-from-adls-into-azure-includessdwincludesssdw-mdmd"></a>A. ADLS から Azure [!INCLUDE[ssDW](../../includes/ssdw-md.md)] にデータをインポートする
+### <a name="a-importing-data-from-adls-into-azure-ssdw"></a>A. ADLS から Azure [!INCLUDE[ssDW](../../includes/ssdw-md.md)] にデータをインポートする
 
 ```sql
 
