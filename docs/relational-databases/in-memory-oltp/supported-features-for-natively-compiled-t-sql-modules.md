@@ -44,7 +44,7 @@ ms.locfileid: "79286666"
 
  サポートされない構造に関する詳細と、ネイティブ コンパイル モジュールのサポートされない一部の機能に対処する方法については、「 [Migration Issues for Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)」を参照してください。 サポートされていない機能の詳細については、「 [インメモリ OLTP でサポートされていない Transact-SQL の構造](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md)」をご覧ください。  
 
-##  <a name="qsancsp"></a> ネイティブ モジュールのクエリ領域  
+##  <a name="query-surface-area-in-native-modules"></a><a name="qsancsp"></a> ネイティブ モジュールのクエリ領域  
 
 次のクエリ構造がサポートされます。  
 
@@ -142,7 +142,7 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
 ネイティブにコンパイルされる [!INCLUDE[tsql](../../includes/tsql-md.md)] でのこれらの制限は、インタープリターによって処理される [!INCLUDE[tsql](../../includes/tsql-md.md)] によるメモリ最適化テーブルへのアクセスには適用されません。  
 
 
-##  <a name="dml"></a> データの変更  
+##  <a name="data-modification"></a><a name="dml"></a> データの変更  
 
 以下の DML ステートメントがサポートされています。  
 
@@ -154,7 +154,7 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
 
 -   WHERE は UPDATE ステートメントと DELETE ステートメントでサポートされています。  
 
-##  <a name="cof"></a> フロー制御言語  
+##  <a name="control-of-flow-language"></a><a name="cof"></a> フロー制御言語  
  次のフロー制御言語構成がサポートされています。  
 
 -   [IF...ELSE &#40;Transact-SQL&#41;](../../t-sql/language-elements/if-else-transact-sql.md)  
@@ -175,7 +175,7 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
 
 -   BEGIN ATOMIC (ストアド プロシージャの外部レベル)。 詳細については、「 [Atomic Blocks](../../relational-databases/in-memory-oltp/atomic-blocks-in-native-procedures.md)」を参照してください。  
 
-##  <a name="so"></a> サポートされている演算子  
+##  <a name="supported-operators"></a><a name="so"></a> サポートされている演算子  
  サポートされている演算子は次のとおりです。  
 
 -   [比較演算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/comparison-operators-transact-sql.md) (例: >、\<、>=、<=)  
@@ -194,7 +194,7 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
     - **適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]。  
       [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 以降では、ネイティブ コンパイル モジュールで APPLY 演算子がサポートされます。
 
-##  <a name="bfncsp"></a> ネイティブ コンパイル モジュールの組み込み関数  
+##  <a name="built-in-functions-in-natively-compiled-modules"></a><a name="bfncsp"></a> ネイティブ コンパイル モジュールの組み込み関数  
  メモリ最適化テーブルの構造とネイティブ コンパイル T-SQL モジュールでは、次の関数がサポートされます。  
 
 -   すべての[数学関数 &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
@@ -223,12 +223,12 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
 
 -   ネイティブ モジュールの実行は入れ子にすることができます。
 
-##  <a name="auditing"></a> 監査  
+##  <a name="auditing"></a><a name="auditing"></a> 監査  
  プロシージャ レベルの監査はネイティブ コンパイル ストアド プロシージャでサポートされています。  
 
- 監査の詳細については、「 [Create a Server Audit and Database Audit Specification](../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md)」を参照してください。  
+ 監査の詳細については、「 [サーバー監査の仕様およびデータベース監査の仕様を作成する方法](../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md)」を参照してください。  
 
-##  <a name="tqh"></a> テーブル ヒントとクエリ ヒント  
+##  <a name="table-and-query-hints"></a><a name="tqh"></a> テーブル ヒントとクエリ ヒント  
  サポート対象は次のとおりです。  
 
 -   テーブル ヒント構文またはクエリの [OPTION 句 &#40;Transact-SQL&#41;](../../t-sql/queries/option-clause-transact-sql.md) での INDEX、FORCESCAN、および FORCESEEK ヒント。 詳細については、「[テーブル ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)」を参照してください。  
@@ -241,7 +241,7 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
 
  詳細については、「[クエリ ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)」を参照してください。  
 
-##  <a name="los"></a> 並べ替えに関する制限事項  
+##  <a name="limitations-on-sorting"></a><a name="los"></a> 並べ替えに関する制限事項  
  [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) および [ORDER BY 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md) を使用するクエリでは、8,000 を超える行の並べ替えを行うことができます。 ただし、[ORDER BY 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md) を使用しない場合、[TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) で並べ替えができる行数は最大で 8,000 です (結合がある場合は、より少ない行数になります)。  
 
  クエリが [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) 演算子および [ORDER BY 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md) を使用する場合、TOP 演算子には 8192 行まで指定できます。 8192 行を超える行を指定すると、エラー メッセージが表示されます: "**メッセージ 41398、レベル 16、状態 1、プロシージャ *\<procedureName>* 、行 *\<lineNumber>* TOP 演算子は、最大 8192 行を返すことができます。 *\<number>* が要求されました**"。  
