@@ -68,7 +68,7 @@ match_expression [ NOT ] LIKE pattern
  *pattern*  
  *match_expression* で検索する特定の文字列であり、次の有効なワイルドカード文字を含めることができます。 *pattern* は、最大 8,000 バイトにすることができます。  
   
-|ワイルドカード文字|[説明]|例|  
+|ワイルドカード文字|説明|例|  
 |------------------------|-----------------|-------------|  
 |%|0 個以上の文字で構成される任意の文字列です。|WHERE title LIKE '%computer%' と指定すると、書籍名に "computer" という単語が含まれるすべての書籍が検索されます。|  
 |_ (アンダースコア)|任意の 1 文字です。|WHERE au_fname LIKE '_ean' と指定すると、ean で終わる 4 文字のすべての名 (Dean、Sean など) が検索されます。|  
@@ -268,7 +268,7 @@ Gail                  Westover             305-555-0100
 ```
 
 ### <a name="c-using-the-escape-clause"></a>C. ESCAPE 句を使用する  
- 次の例では、`ESCAPE` 句とエスケープ文字を使用して、`10-15%` テーブルの列 `c1` 内にある文字列 `mytbl2` と完全に一致する文字列を検索します。  
+ 次の例では、`ESCAPE` 句とエスケープ文字を使用して、`mytbl2` テーブルの列 `c1` 内にある文字列 `10-15%` と完全に一致する文字列を検索します。  
   
 ```sql
 USE tempdb;  
@@ -316,7 +316,7 @@ ORDER BY LastName ASC, FirstName ASC;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-using-like-with-the--wildcard-character"></a>E. LIKE を % ワイルドカード文字と共に使用する  
  次の例では、`DimEmployee` テーブルで `612` で始まる電話番号を持つすべての従業員を検索します。  
@@ -343,7 +343,7 @@ ORDER by LastName;
 ```  
   
 ### <a name="g-using-like-with-the-_-wildcard-character"></a>G. LIKE を _ ワイルドカード文字と共に使用する  
- 次の例では、`6` テーブルで、`2` で始まり `DimEmployee` で終る市外局番を持つすべての電話番号を検索します。 ワイルドカード文字 % は、検索パターンの末尾に含まれており、電話の列値の後続のすべての文字と一致します。  
+ 次の例では、`DimEmployee` テーブルで、`6` で始まり `2` で終る市外局番を持つすべての電話番号を検索します。 ワイルドカード文字 % は、検索パターンの末尾に含まれており、電話の列値の後続のすべての文字と一致します。  
   
 ```sql  
 -- Uses AdventureWorks  
