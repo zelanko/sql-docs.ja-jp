@@ -18,22 +18,22 @@ helpviewer_keywords:
 ms.assetid: 75063e36-a91b-496f-9936-88f3d57bd447
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 379dae51b913fc02a16a562037776620b1e0433c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 79c81cafe588fd827ece6184cab5470df8ec4c42
+ms.sourcegitcommit: eef5ab1966062e190dc1cd49409bc0429ba6d1e4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "67904475"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80290842"
 ---
 # <a name="sysresource_governor_external_resource_pools-transact-sql"></a>resource_governor_external_resource_pools (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
-**適用対象:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]および[!INCLUDE[sssql17-md](../../includes/sssql17-md.md)][!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
+**適用対象:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] および [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
 に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]格納されている外部リソースプール構成を返します。 ビューの各行によって、プールの構成が決まります。
   
 |列名|データ型|[説明]|
 |-----------------|---------------|-----------------|
-|pool_id|**int**|リソース プールの一意の ID。 NULL 値は許可されません。<br /><br /> **注:** 後で名前を変更することができます。|
+|external_pool_id|**int**|リソース プールの一意の ID。 NULL 値は許可されません。|
 |name|**sysname**|リソース プールの名前。 NULL 値は許可されません。|
 |max_cpu_percent|**int**|CPU の競合がある場合に、リソースプール内のすべての要求で許容される最大平均 CPU 帯域幅。 NULL 値は許可されません。|
 |max_memory_percent|**int**|このリソースプールの要求で使用できる合計サーバーメモリの割合。 NULL 値は許可されません。 有効な最大値はプールの最小値によって異なります。 たとえば、max_memory_percent は100に設定できますが、有効な最大値は低くなります。|
@@ -44,7 +44,7 @@ ms.locfileid: "67904475"
 
 VIEW SERVER STATE 権限が必要です。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [SQL Server での機械学習のためのリソースガバナンス](../../advanced-analytics/r/resource-governance-for-r-services.md)
 
