@@ -185,12 +185,12 @@ GO
 |Symbol|意味|  
 |------------|-------------|  
 |LIKE '5[%]'|5%|  
-|LIKE '[_]n'|_n|  
+|LIKE '[\_]n'|_n|  
 |LIKE '[a-cdf]'|a、b、c、d、または f|  
 |LIKE '[-acdf]'|-, a, c, d, or f|  
 |LIKE '[ [ ]'|[|  
 |LIKE ']'|]|  
-|LIKE 'abc[_]d%'|abc_d および abc_de|  
+|LIKE 'abc[\_]d%'|abc_d および abc_de|  
 |LIKE 'abc[def]'|abcd、abce、abcf|  
   
 ## <a name="pattern-matching-with-the-escape-clause"></a>ESCAPE 句を使用するパターン検索  
