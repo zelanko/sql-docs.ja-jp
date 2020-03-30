@@ -19,10 +19,10 @@ ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b0c755208a5443e4606bdb41a0cbdfdf26a1fa1c
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79286826"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Integration Services (SSIS) プロジェクトとパッケージの配置
@@ -131,7 +131,7 @@ System.ComponentModel.Win32Exception: A required privilege is not held by the cl
   
 4.  (省略可能) 配置されたプロジェクト用の環境を作成します。 
   
-###  <a name="convert"></a> プロジェクトをプロジェクトの配置モデルに変換するには  
+###  <a name="to-convert-a-project-to-the-project-deployment-model"></a><a name="convert"></a> プロジェクトをプロジェクトの配置モデルに変換するには  
   
 1.  [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]でプロジェクトを開き、ソリューション エクスプローラーでプロジェクトを右クリックし、 **[プロジェクト配置モデルに変換]** をクリックします。  
   
@@ -141,7 +141,7 @@ System.ComponentModel.Win32Exception: A required privilege is not held by the cl
   
 2.  ウィザードを完了します。
   
-###  <a name="deploy"></a> Integration Services サーバーにプロジェクトを配置するには  
+###  <a name="to-deploy-a-project-to-the-integration-services-server"></a><a name="deploy"></a> Integration Services サーバーにプロジェクトを配置するには  
   
 1.  [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]でプロジェクトを開き、 **[プロジェクト]** メニューの **[配置]** を選択して、 **Integration Services 配置ウィザード**を起動します。  
   
@@ -164,7 +164,7 @@ System.ComponentModel.Win32Exception: A required privilege is not held by the cl
 ## <a name="deploy-packages-to-integration-services-server"></a>Integration Services サーバーへのパッケージの配置
   [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] で導入された増分パッケージ配置機能を使用すると、プロジェクト全体を配置することなく、既存または新規のプロジェクトに 1 つ以上のパッケージを配置できます。  
   
-###  <a name="DeployWizard"></a> Integration Services 配置ウィザードを使用してパッケージを配置する  
+###  <a name="deploy-packages-by-using-the-integration-services-deployment-wizard"></a><a name="DeployWizard"></a> Integration Services 配置ウィザードを使用してパッケージを配置する  
   
 1.  コマンド プロンプトで、 **%ProgramFiles%\Microsoft SQL Server\130\DTS\Binn** にある **isdeploymentwizard.exe**を実行します。 64 ビット コンピューターの場合、 **%ProgramFiles(x86)%\Microsoft SQL Server\130\DTS\Binn**に 32 ビット バージョンのツールもあります。  
   
@@ -172,7 +172,7 @@ System.ComponentModel.Win32Exception: A required privilege is not held by the cl
   
 3.  ウィザードを完了します。 [Package Deployment Model](#PackageModel)で説明されている残りの手順を実行します。  
   
-###  <a name="SSMS"></a> SQL Server Management Studio を使用してパッケージを配置する  
+###  <a name="deploy-packages-by-using-sql-server-management-studio"></a><a name="SSMS"></a> SQL Server Management Studio を使用してパッケージを配置する  
   
 1.  SQL Server Management Studio のオブジェクト エクスプローラーで、 **[Integration Services カタログ]**  >  **[SSISDB]** ノードの順に展開します。  
   
@@ -184,7 +184,7 @@ System.ComponentModel.Win32Exception: A required privilege is not held by the cl
   
 5.  ウィザードを完了します。 [Package Deployment Model](#PackageModel)で説明されている残りの手順を実行します。  
   
-###  <a name="SSDT"></a> SQL Server Data Tools (Visual Studio) を使用してパッケージを配置する  
+###  <a name="deploy-packages-by-using-sql-server-data-tools-visual-studio"></a><a name="SSDT"></a> SQL Server Data Tools (Visual Studio) を使用してパッケージを配置する  
   
 1.  Visual Studio で Integration Services プロジェクトを開き、配置する 1 つ以上のパッケージを選択します。  
   
@@ -192,7 +192,7 @@ System.ComponentModel.Win32Exception: A required privilege is not held by the cl
   
 3.  ウィザードを完了します。 [Package Deployment Model](#PackageModel)で説明されている残りの手順を実行します。  
   
-###  <a name="StoredProcedure"></a> deploy_packages ストアド プロシージャを使用してパッケージを配置する  
+###  <a name="deploy-packages-by-using-the-deploy_packages-stored-procedure"></a><a name="StoredProcedure"></a> deploy_packages ストアド プロシージャを使用してパッケージを配置する  
  **[catalog].[deploy_packages]** ストアド プロシージャを使用して、1 つ以上の SSIS パッケージを SSIS カタログに配置できます。 次のコード例では、このストアド プロシージャを使用して SSIS サーバーにパッケージを配置する方法を示します。 詳細については、「 [catalog.deploy_packages](../../integration-services/system-stored-procedures/catalog-deploy-packages.md)」を参照してください。  
   
 ```cs
@@ -235,7 +235,7 @@ private static void Main(string[] args)
   
 ```  
   
-###  <a name="MOMApi"></a> 管理オブジェクト モデル API を使用してパッケージを配置する  
+###  <a name="deploy-packages-using-the-management-object-model-api"></a><a name="MOMApi"></a> 管理オブジェクト モデル API を使用してパッケージを配置する  
  次のコード例では、管理オブジェクト モデル API を使用してパッケージをサーバーに配置する方法を示します。  
   
 ```cs 
@@ -304,7 +304,7 @@ static void Main()
  
  このページの設定は、配置モデルごとに異なります。 このページで選択したモデルに基づいて、「 [Project Deployment Model](#ProjectModel) 」セクションまたは「 [Package Deployment Model](#PackageModel) 」セクションの手順に従ってください。  
   
-###  <a name="ProjectModel"></a> Project Deployment Model  
+###  <a name="project-deployment-model"></a><a name="ProjectModel"></a> Project Deployment Model  
   
 #### <a name="select-source"></a>ソースを選択する
 
@@ -322,7 +322,7 @@ static void Main()
 
  配置プロセスが完了したら、 **[結果]** ページが表示されます。 このページでは、各アクションが成功したか、失敗したかを表示します。 アクションが失敗した場合は、 **[結果]** 列の **[失敗]** をクリックすると、エラーの説明が表示されます。 **[レポートの保存]** をクリックして結果を XML ファイルに保存するか、 **[閉じる]** をクリックしてウィザードを終了します。
   
-###  <a name="PackageModel"></a> Package Deployment Model  
+###  <a name="package-deployment-model"></a><a name="PackageModel"></a> Package Deployment Model  
   
 #### <a name="select-source"></a>ソースを選択する
 
@@ -555,7 +555,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
   
 -   [[変換の実行] のオプションの設定](#conversion)  
   
-###  <a name="open_dialog"></a> Integration Services プロジェクト変換ウィザードを開く  
+###  <a name="open-the-integration-services-project-conversion-wizard"></a><a name="open_dialog"></a> Integration Services プロジェクト変換ウィザードを開く  
  **Integration Services プロジェクト変換** ウィザードを開くには、次のいずれかの操作を行います。  
   
 -   [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]でプロジェクトを開き、ソリューション エクスプローラーでプロジェクトを右クリックし、 **[プロジェクト配置モデルに変換]** をクリックします。  
@@ -564,7 +564,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
   
  **Integration Services プロジェクト変換ウィザード** を [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のいずれから実行するかによって、ウィザードが実行する変換タスクは異なります。   
   
-###  <a name="locate"></a> [パッケージの場所の指定] ページのオプションの設定  
+###  <a name="set-options-on-the-locate-packages-page"></a><a name="locate"></a> [パッケージの場所の指定] ページのオプションの設定  
   
 > [!NOTE]  
 >  **[パッケージの場所の指定]** ページは、ウィザードを [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]から実行した場合にのみ使用可能です。  
@@ -602,7 +602,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **フォルダー**  
  パッケージのパスを入力するか、 **[参照]** をクリックしてパッケージに移動します。  
   
-###  <a name="selectPackages"></a> [パッケージの選択] ページのオプションの設定  
+###  <a name="set-options-on-the-select-packages-page"></a><a name="selectPackages"></a> [パッケージの選択] ページのオプションの設定  
  **[パッケージ名]**  
  パッケージ ファイルを一覧表示します。  
   
@@ -621,7 +621,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **[更新]**  
  パッケージの一覧を更新します。  
   
-###  <a name="destination"></a> [配置先の選択] ページのオプションの設定  
+###  <a name="set-options-on-the-select-destination-page"></a><a name="destination"></a> [配置先の選択] ページのオプションの設定  
  このページで、新規プロジェクト配置ファイル (.ispac) の名前とパスを指定するか、既存のファイルを選択します。  
   
 > [!NOTE]  
@@ -639,7 +639,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **[プロジェクトの説明]**  
  プロジェクトの説明を入力します (省略可)。  
   
-###  <a name="projectProperties"></a> [プロジェクト プロパティの指定] ページのオプションの設定  
+###  <a name="set-options-on-the-specify-project-properties-page"></a><a name="projectProperties"></a> [プロジェクト プロパティの指定] ページのオプションの設定  
   
 > [!NOTE]  
 >  **[プロジェクト プロパティの指定]** ページは、ウィザードを [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]から実行した場合にのみ使用可能です。  
@@ -653,7 +653,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **[プロジェクトの説明]**  
  プロジェクトの説明 (省略可能) を入力します。  
   
-###  <a name="executePackage"></a> [パッケージ実行タスクの更新] ページのオプションの設定  
+###  <a name="set-options-on-the-update-execute-package-task-page"></a><a name="executePackage"></a> [パッケージ実行タスクの更新] ページのオプションの設定  
  プロジェクト ベースの参照を使用するには、パッケージに含まれているパッケージ実行タスクを更新します。 詳細については、「 [パッケージ実行タスク エディター](../../integration-services/control-flow/execute-package-task-editor.md)」を参照してください。  
   
  **[親パッケージ]**  
@@ -668,7 +668,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **[参照の割り当て]**  
  プロジェクトに格納されている子パッケージを選択します。  
   
-###  <a name="configurations"></a> [構成の選択] ページのオプションの設定  
+###  <a name="set-options-on-the-select-configurations-page"></a><a name="configurations"></a> [構成の選択] ページのオプションの設定  
  パラメーターで置き換えるパッケージ構成を選択します。  
   
  **Package**  
@@ -694,7 +694,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
   
  このオプションを選択しない場合は、パラメーターで置き換えるために選択した構成のみが削除されます。  
   
-###  <a name="createParameters"></a> [パラメーターの作成] ページのオプションの設定  
+###  <a name="set-options-on-the-create-parameters-page"></a><a name="createParameters"></a> [パラメーターの作成] ページのオプションの設定  
  各構成プロパティのパラメーター名とスコープを選択します。  
   
  **Package**  
@@ -706,7 +706,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **スコープ**  
  パラメーターのスコープ (パッケージまたはプロジェクト) を選択します。  
   
-###  <a name="configureParameters"></a> [パラメーターの構成] ページのオプションの設定  
+###  <a name="set-options-on-the-configure-parameters-page"></a><a name="configureParameters"></a> [パラメーターの構成] ページのオプションの設定  
  **名前**  
  パラメーター名を一覧表示します。  
   
@@ -724,7 +724,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
   
  また、 **[パラメーターの詳細の設定]** ダイアログ ボックスには、パラメーター値のデータ型や元のパラメーターが一覧表示されます。  
   
-###  <a name="review"></a> [確認] ページのオプションの設定  
+###  <a name="set-the-options-on-the-review-page"></a><a name="review"></a> [確認] ページのオプションの設定  
  プロジェクトの変換に関して選択したオプションを確認するには、 **[確認]** ページを使用します。  
   
  **[戻る]**  
@@ -733,7 +733,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **CONVERT**  
  プロジェクトをプロジェクト配置モデルに変換する場合にクリックします。  
   
-###  <a name="conversion"></a> [変換の実行] のオプションの設定  
+###  <a name="set-the-options-on-the-perform-conversion"></a><a name="conversion"></a> [変換の実行] のオプションの設定  
  [変換の実行] ページには、プロジェクトの変換の状態が表示されます。  
   
  **操作**  

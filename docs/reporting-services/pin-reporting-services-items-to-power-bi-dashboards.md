@@ -16,10 +16,10 @@ ms.assetid: 1d96c3f7-2fd4-40f7-8d1c-14a7f54cdb15
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: da984efa4e0b4d964cf947929094ee7b392063f2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75952480"
 ---
 # <a name="pin-reporting-services-paginated-report-items-to-dashboards-in-power-bi"></a>Power BI のダッシュボードへの Reporting Services のページ分割されたレポート アイテムのピン留め
@@ -28,7 +28,7 @@ ms.locfileid: "75952480"
 
 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] サービスのダッシュ ボードに、オンプレミスの [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のページ分割されたレポート アイテムを、新しいタイルとしてピン留めできます。   ピン留めするには、管理者がレポート サーバーを Azure Active Directory および [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]と統合しておく必要があります。  
   
-##  <a name="bkmk_requirements_to_pin"></a> ピン留めの要件  
+##  <a name="requirements-to-pin"></a><a name="bkmk_requirements_to_pin"></a> ピン留めの要件  
   
 -   レポート サーバーが [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 統合用に構成されている必要があります。 詳細については、「 [Power BI レポート サーバーの統合 (構成マネージャー)](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)と統合しておく必要があります。 レポート サーバーが構成されていない場合、レポート ビューアーのツール バーには **[Power BI ダッシュボードにピン留めする]** ボタンは表示されません。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "75952480"
  
     資格情報を保存する方法の詳細については、「 [Reporting Services データ ソースに資格情報を保存する](../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)」の「レポート固有のデータ ソース用の保存された資格情報を構成する (ネイティブ モード)」を参照してください。  
   
-##  <a name="bkmk_supported_items"></a> ピン留めできるアイテム  
+##  <a name="items-you-can-pin"></a><a name="bkmk_supported_items"></a> ピン留めできるアイテム  
  次のレポート アイテムは、 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] ダッシュボードにピン留めできます。  データ領域内で入れ子になっているアイテムをピン留めすることはできません。 たとえば、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のテーブルまたはリスト内で入れ子になっているアイテムはピン留めできません。  
   
 -   グラフ  
@@ -54,7 +54,7 @@ ms.locfileid: "75952480"
 -   アイテムはレポート本文に含まれている必要があります。  ページ ヘッダーまたはページ フッター内のアイテムをピン留めすることはできません。  
 -   最上位の四角形内の個々のアイテムはピン留めできますが、そのすべてのアイテムを 1 つのグループとしてピン留めすることはできません。  
   
-##  <a name="bkmk_to_pin"></a> レポート アイテムをピン留めするには  
+##  <a name="to-pin-a-report-item"></a><a name="bkmk_to_pin"></a> レポート アイテムをピン留めするには  
   
 1. [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]にサインインしていることを確認します。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]で、メニュー項目の **[個人用設定]** を選択し、サインインします。 詳細については、「[Power BI 統合の個人用設定 &#40;Web ポータル&#41;](my-settings-for-power-bi-integration-web-portal.md)」をご覧ください。
 
@@ -78,7 +78,7 @@ ms.locfileid: "75952480"
   
 6. **[閉じる]** をクリックして、レポートを通常のビューに戻します。  
   
-##  <a name="bkmk_in_the_dashboard"></a> ダッシュ ボードでの操作
+##  <a name="in-the-dashboard"></a><a name="bkmk_in_the_dashboard"></a> ダッシュ ボードでの操作
 
 ダッシュボードにレポート アイテムをピン留めすると、そのタイルは他のダッシュボード タイルと同様に表示され、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]からピン留めされたタイルであることを示すものは表示されません。 タイルのプロパティがレポート アイテムからどのように設定されるのかを以下に示します。  
   
@@ -94,7 +94,7 @@ ms.locfileid: "75952480"
 
 ![ssrs_pinned_tile_details](../reporting-services/media/ssrs-pinned-tile-details.png "ssrs_pinned_tile_details")  
   
-##  <a name="bkmk-troubleshoot"></a> 問題のトラブルシューティング  
+##  <a name="troubleshoot-issues"></a><a name="bkmk-troubleshoot"></a> 問題のトラブルシューティング  
   
 -   **レポート ビューアー ツール バーに [[!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]] ボタンがない。** このメッセージは、レポート サーバーが [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]と統合されていないことを意味します。 詳細については、「 [Power BI レポート サーバーの統合 (構成マネージャー)](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)と統合しておく必要があります。  
   
@@ -118,7 +118,7 @@ ms.locfileid: "75952480"
 
 -   **Power BI アプリのタイルに古いデータが表示される:** Reporting Services のレポート アイテムをダッシュボードにピン留めし、そのダッシュボードをアプリで配布した場合、そのダッシュボードにピン留めされたレポート アイテムは更新されません。 
 
-##  <a name="bkmk_subscription_management"></a> サブスクリプション管理  
+##  <a name="subscription-management"></a><a name="bkmk_subscription_management"></a> サブスクリプション管理  
  トラブルシューティングのセクションで説明したサブスクリプション関連の問題に加え、次の情報も [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 関連のサブスクリプションの維持に役立ちます。
   
 -   **アイテム名の変更。** ピン留めされたレポート アイテムの名前が変更されたり、削除されたりすると、[!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] のタイルは更新されなくなり、次のようなエラー メッセージが表示されます。  アイテムを元の名前に戻すと、サブスクリプションが再び機能し始め、サブスクリプションのスケジュールどおりにタイルが更新されるようになります。  

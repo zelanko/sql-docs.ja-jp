@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: 354afb535abb1efab76e005d88b3bdfd464a299c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71710762"
 ---
 # <a name="validate-replicated-data"></a>レプリケートされたデータの検証
@@ -259,7 +259,7 @@ ms.locfileid: "71710762"
   
      詳細については、「 [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md) 」または「 [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md)」を参照してください。  
   
-##  <a name="RMOProcedure"></a> レプリケーション管理オブジェクト (RMO) の使用  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> レプリケーション管理オブジェクト (RMO) の使用  
  レプリケーションでは、サブスクライバーのデータがパブリッシャーのデータと一致するかどうかを、レプリケーション管理オブジェクト (RMO) を使用してプログラムから検証できます。 使用するオブジェクトは、レプリケーション トポロジの種類によって異なります。 トランザクション レプリケーションでは、パブリケーションのサブスクリプションをすべて検証する必要があります。  
   
 > [!NOTE]  
@@ -309,7 +309,7 @@ ms.locfileid: "71710762"
   
 5.  目的のサブスクリプションについてマージ エージェントを実行して検証を開始するか、次回予定されているエージェントの実行を待ちます。 詳細については、「 [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md) 」および「 [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md)」を参照してください。 検証操作の結果は、エージェントの履歴に出力されます。この履歴は、レプリケーション モニターを使って表示できます。 詳しくは、「 [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication.md)」をご覧ください。  
   
-###  <a name="RMOExample"></a> 例 (RMO)  
+###  <a name="example-rmo"></a><a name="RMOExample"></a> 例 (RMO)  
  次の例では、トランザクション パブリケーションのすべてのサブスクリプションを、行数検証の対象としてマークします。  
   
  [!code-cs[HowTo#rmo_ValidateTranPub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_validatetranpub)]  

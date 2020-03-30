@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
 ms.openlocfilehash: 94175594fe2539320941b5a83c1a7aa4b127783f
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "70155686"
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 リリース ノート
@@ -115,7 +115,7 @@ SQL Server メディア/ISO/CAB 上に間違ったバージョンの StreamInsig
   
 **対処法:** [SQL Server 2014 Feature Pack のダウンロード ページ](https://go.microsoft.com/fwlink/?LinkID=306709)から正しいバージョンをダウンロードしてインストールします。  
   
-### <a name="ProdDoc"></a>製品ドキュメント RTM
+### <a name="product-documentation-rtm"></a><a name="ProdDoc"></a>製品ドキュメント RTM
   
 レポート ビルダーと PowerPivot のコンテンツが一部の言語で使用できません。 
 
@@ -148,7 +148,7 @@ SQL Server メディア/ISO/CAB 上に間違ったバージョンの StreamInsig
   
 **対処法:** [なし] :  
   
-### <a name="DBEngine"></a>データベース エンジン (RTM)
+### <a name="database-engine-rtm"></a><a name="DBEngine"></a>データベース エンジン (RTM)
   
 #### <a name="changes-made-for-standard-edition-in-sql-server-2014-rtm"></a>SQL Server 2014 RTM の Standard Edition に加えられた変更  
 SQL Server 2014 Standard では、次の点が変更されています。  
@@ -288,7 +288,7 @@ instance_id の値の不一致という問題が既に発生している場合�
   
     `update` sysdac_history_internal `set` instance_id = '\<手順 3 で書き留めた値\>' `where` \<更新しようとする行に一致する式\>  
   
-### <a name="SSRS"></a>Reporting Services (RTM)
+### <a name="reporting-services-rtm"></a><a name="SSRS"></a>Reporting Services (RTM)
   
 #### <a name="the-sql-server-2012-reporting-services-native-mode-report-server-cannot-run-side-by-side-with-sql-server-2014-reporting-services-sharepoint-components"></a>SQL Server 2012 Reporting Services ネイティブ モード レポート サーバーを SQL Server 2014 Reporting Services SharePoint コンポーネントとサイド バイ サイドで実行できない  
 **問題:** [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint コンポーネントが同じサーバーにインストールされている場合、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ネイティブ モードの Windows サービス SQL Server Reporting Services (ReportingServicesService.exe) の起動に失敗します。  
@@ -334,7 +334,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
   
 詳細については、「 [SQL Server 2014 Reporting Services の役立つヒントおよびトラブルシューティング](https://go.microsoft.com/fwlink/?LinkID=391254)」を参照してください。  
   
-### <a name="AzureVM"></a>Azure Virtual Machines 上の SQL Server 2014 RTM  
+### <a name="sql-server-2014-rtm-on-azure-virtual-machines"></a><a name="AzureVM"></a>Azure Virtual Machines 上の SQL Server 2014 RTM  
   
 #### <a name="the-add-azure-replica-wizard-returns-an-error-when-configuring-an-availability-group-listener-in-azure"></a>Azure で可用性グループ リスナーを構成するときに Azure のレプリカ追加ウィザードでエラーが返される  
 **問題:** 可用性グループにリスナーが存在する場合は、Azure でリスナーを構成しようとしたときに、Azure のレプリカ追加ウィザードでエラーが返されます。  
@@ -349,7 +349,7 @@ Azure サブネットを含め、可用性グループのレプリカをホス�
   
 2.  ウィザードが完了した後、「[Azure での AlwaysOn 可用性グループに対するリスナーの構成](https://msdn.microsoft.com/library/dn376546.aspx)」で説明されているように、Azure でリスナーの構成を完了する必要があります  
   
-### <a name="SSAS"></a>Analysis Services (RTM)
+### <a name="analysis-services-rtm"></a><a name="SSAS"></a>Analysis Services (RTM)
   
 #### <a name="msolap5-must-be-downloaded-installed-and-registered-for-a-sharepoint-2010-new-farm-configured-with-sql-server-2014"></a>SQL Server 2014 で構成された SharePoint 2010 の新しいファーム用に MSOLAP.5 のダウンロード、インストール、および登録が必要  
 **問題:**  
@@ -394,7 +394,7 @@ Azure サブネットを含め、可用性グループのレプリカをホス�
   
 -    更新スケジュールのシリアル化された長さが元のスケジュールより小さい場合、ブックのデータ更新スケジュールを更新すると、バッファー サイズが正しく更新されず、新しいスケジュール情報が古いスケジュール情報とマージされるため、スケジュールが破損します。  
   
-### <a name="DQS"></a>Data Quality Services (RTM)
+### <a name="data-quality-services-rtm"></a><a name="DQS"></a>Data Quality Services (RTM)
   
 #### <a name="no-cross-version-support-for-data-quality-services-in-master-data-services"></a>バージョンの異なる Master Data Services での Data Quality Service はサポートされない  
 **問題:** 次のシナリオはサポートされていません。  
@@ -405,7 +405,7 @@ Azure サブネットを含め、可用性グループのレプリカをホス�
   
 **対処法:** データベース エンジンのデータベース、および Data Quality Services と同じバージョンの Master Data Services を使用してください。  
   
-### <a name="UA"></a>アップグレード アドバイザーの問題点 (RTM)
+### <a name="upgrade-advisor-issues-rtm"></a><a name="UA"></a>アップグレード アドバイザーの問題点 (RTM)
   
 #### <a name="sql-server-2014-upgrade-advisor-reports-irrelevant-upgrade-issues-for-sql-server-reporting-services"></a>SQL Server 2014 アップグレード アドバイザーが SQL Server Reporting Services に関係のないアップグレードの問題点を報告する  
 **問題:** SQL Server 2014 メディアに収録されている SQL Server アップグレード アドバイザー (SSUA) が SQL Server Reporting Services サーバーを分析するときに、不適切な複数のエラーを報告します。  

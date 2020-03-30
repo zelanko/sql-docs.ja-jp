@@ -30,10 +30,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: 0926264c25affe2f110227fad4c0fb2b113c9590
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76287861"
 ---
 # <a name="programmatically-monitor-replication"></a>プログラムによるレプリケーションの監視
@@ -56,7 +56,7 @@ ms.locfileid: "76287861"
   
  [レプリケーション管理オブジェクト (RMO)](#RMO)  
   
-##  <a name="Tsql"></a> Transact-SQL  
+##  <a name="transact-sql"></a><a name="Tsql"></a> Transact-SQL  
   
 #### <a name="to-monitor-publishers-publications-and-subscriptions-from-the-distributor"></a>ディストリビューターからパブリッシャー、パブリケーション、サブスクリプションを監視するには  
   
@@ -106,7 +106,7 @@ ms.locfileid: "76287861"
   
     -   監視しきい値メトリックを有効にするには **\@mode** に **1** を指定し、無効にするには **2** を指定します。  
   
-##  <a name="RMO"></a> レプリケーション管理オブジェクト (RMO)  
+##  <a name="replication-management-objects-rmo"></a><a name="RMO"></a> レプリケーション管理オブジェクト (RMO)  
   
 #### <a name="to-monitor-a-subscription-to-a-merge-publication-at-the-subscriber"></a>サブスクライバーでマージ パブリケーションのサブスクリプションを監視するには  
   
@@ -268,7 +268,7 @@ ms.locfileid: "76287861"
   
     -   *metricID* - 監視しきい値の基準を表す <xref:System.Int32> 値です。次の表に示す値を使用します。  
   
-        |Value|説明|  
+        |値|説明|  
         |-----------|-----------------|  
         |1|**expiration** - トランザクション パブリケーションへのサブスクリプションに期限が迫っていないかを監視します。|  
         |2|**latency** - トランザクション パブリケーションへのサブスクリプションのパフォーマンスを監視します。|  

@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: abc14f78a969abd4adbbb2dcf12b4ee316614d23
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69634548"
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>SQL Server のインスタンス内の機械学習 (R および Python) コンポーネントをアップグレードする
@@ -106,7 +106,7 @@ R と Python のライブラリおよび実行可能ファイルは、R と Pyth
 
 ユーザー エクスペリエンスの観点から、テクノロジとその使用方法は変更されていません。 唯一の違いは、新しいバージョンのパッケージが存在し、場合によっては当初 SQL Server では利用できない追加パッケージが存在することです。
 
-## <a name="bkmk_BindWizard"></a>セットアップを使用して MLS にバインドする
+## <a name="bind-to-mls-using-setup"></a><a name="bkmk_BindWizard"></a>セットアップを使用して MLS にバインドする
 
 Microsoft Machine Learning のセットアップでは、既存の機能と SQL Server バージョンが検出され、SqlBindR.exe というユーティリティを呼び出してバインドが変更されます。 内部的には、SqlBindR はセットアップにチェーンされ、間接的に使用されます。 後で、SqlBindR をコマンド ラインから直接呼び出して、特定のオプションを実行することができます。
 
@@ -210,7 +210,7 @@ Machine Learning Server 9.3 にバインドされている SQL Server 2016 R Ser
 
 1. ServerSetup.exe を実行し、画面の指示に従ってインストールを完了します。
 
-## <a name="bkmk_BindCmd"></a>コマンド ライン操作
+## <a name="command-line-operations"></a><a name="bkmk_BindCmd"></a>コマンド ライン操作
 
 Microsoft Machine Learning Server を実行すると、SqlBindR.exe というコマンド ライン ユーティリティが使用できるようになり、さらなるバインド操作に使用できるようになります。 たとえば、バインドを逆にする場合は、セットアップを再実行するか、コマンド ライン ユーティリティを使用します。 また、このツールを使用して、インスタンスの互換性と可用性を確認することもできます。
 
@@ -229,7 +229,7 @@ Microsoft Machine Learning Server を実行すると、SqlBindR.exe というコ
 
 4. アップグレードが完了したら、変更されたインスタンスに関連付けられているスタート パッド サービスを再起動します。
 
-## <a name="bkmk_Unbind"></a>インスタンスを元に戻す、またはバインド解除する
+## <a name="revert-or-unbind-an-instance"></a><a name="bkmk_Unbind"></a>インスタンスを元に戻す、またはバインド解除する
 
 バインドされたインスタンスを、SQL Server セットアップによって確立された R および Python コンポーネントの初期インストールに復元できます。 SQL Server サービスに戻すには、3つの部分があります。
 
@@ -243,7 +243,7 @@ Microsoft Machine Learning Server を実行すると、SqlBindR.exe というコ
 
 バインドをロールバックするには、2つのオプションがあります。セットアップを再実行するか、SqlBindR コマンドラインユーティリティを使用します。
 
-#### <a name="bkmk_wizunbind"></a> セットアップを使用してバインドを解除する
+#### <a name="unbind-using-setup"></a><a name="bkmk_wizunbind"></a> セットアップを使用してバインドを解除する
 
 1. Machine Learning Server のインストーラーを見つけます。 インストーラーを削除した場合は、再度ダウンロードしたり、別のコンピューターからコピーしたりすることが必要になる場合があります。
 2. バインドを解除するインスタンスがあるコンピューターで、インストーラーを実行してください。
@@ -252,7 +252,7 @@ Microsoft Machine Learning Server を実行すると、SqlBindR.exe というコ
 4. ライセンス契約に同意します。 インストール中でも、ライセンス条項への同意を示す必要があります。
 5. **[完了]** をクリックします。 処理には時間がかかります。
 
-#### <a name="bkmk_cmdunbind"></a> コマンド ラインを使用したバインド解除
+#### <a name="unbind-using-the-command-line"></a><a name="bkmk_cmdunbind"></a> コマンド ラインを使用したバインド解除
 
 1. コマンド プロンプトを開き、前のセクションで説明したように **sqlbindr.exe** が含まれているフォルダーに移動します。
 
@@ -284,7 +284,7 @@ SQL Server セットアップを実行して、R および Python の機能を�
 
 ### <a name="parameters"></a>パラメーター
 
-|Name|説明|
+|名前|説明|
 |------|------|
 |*list*| 現在のコンピューター上にあるすべての SQL データベース インスタンスの ID を一覧表示します|
 |*bind*| 指定された SQL データベース インスタンスを R Server の最新バージョンにアップグレードし、インスタンスが R Server の今後のアップグレードを自動的に取得するようにします|
@@ -340,7 +340,7 @@ Microsoft Machine Learning Server 9.2.1 と 9.3 には、この問題はあり�
 > [!NOTE]
 > インストールが完了するまでお待ちください。 1 つのバージョンに関連付けられている R ライブラリを削除してから、新しい R ライブラリを追加するには、長い時間がかかることがあります。 操作が完了すると、一時フォルダーが削除されます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 + [Windows 用 Machine Learning Server のインストール (インターネット接続あり)](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)
 + [Windows 用 Machine Learning Server のインストール (オフライン)](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-offline)

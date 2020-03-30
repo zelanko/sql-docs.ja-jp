@@ -10,10 +10,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||>=sql-server-linux-2017||=sql-server-previousversions||>=sql-server-2016||=sqlallproducts-allversions
 ms.openlocfilehash: f175e9639b07c945b92b6fd715fa8b34ebea60c3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73049905"
 ---
 # <a name="versioning-system-for-sql-documentation"></a>SQL ドキュメントのバージョン管理システム
@@ -113,7 +113,7 @@ Web アドレスが `https://docs.microsoft.com/sql/` で始まっている記�
 
 次の記事は、SQL Server 2017 で新しく追加されました。 記事では、バージョン 2017 の SQL Server に追加された機能について説明されています。 それらの新機能のほとんどまたはすべては、バージョン 2019 にも含まれます。 記事の属性は次のとおりです。
 
-| Attribute | Value |
+| 属性 | 値 |
 | :-------- | :---- |
 | タイトル | SQL Server 2017 の新機能 |
 | モニカー範囲 | `>= sql-server-2017 || = sqlallproducts-allversions` |
@@ -130,13 +130,13 @@ Web アドレスが `https://docs.microsoft.com/sql/` で始まっている記�
 | `sql-server-2019` | パラメーターとコントロールが 2019 に設定されることを除き、値 `sql-server-2017` の場合と同じです。 |
 | &nbsp; | &nbsp; |
 
-### <a name="anchor-allsql-hidenothing"></a> All SQL - 何も非表示にしない、特別なモニカー
+### <a name="all-sql---hide-nothing-special-moniker"></a><a name="anchor-allsql-hidenothing"></a> All SQL - 何も非表示にしない、特別なモニカー
 
 **All SQL** という 1 つの特殊なモニカー製品名があり、その唯一のバージョンは **Hide nothing** です。 このモニカーの目的は、特定の変更の内部テスト用です。 お客様がこのモニカーを使用した場合、情報提供というよりは誤解される可能性が高くなります。
 
 記事の中には、SQL Server の複数のバージョンに関する情報が含まれるものがあります。 通常のすべてのモニカーでは、モニカーのバージョンについて正確でない、紛らわしい、または矛盾している情報が表示される可能性があるバージョン管理されたセクションは表示されません。 特別な **All SQL** モニカーでは、すべてのバージョンのセクションが表示され、不正確な情報が表示されていることが明らかでない場合があります。
 
-## <a name="anchor-message-unavailable-for-moniker"></a> メッセージ: リクエストされたページは \<モニカー\> で表示できません
+## <a name="message-the-requested-page-is-not-available-for-moniker"></a><a name="anchor-message-unavailable-for-moniker"></a> メッセージ: リクエストされたページは \<モニカー\> で表示できません
 
 次のシナリオでは、:::no-loc text="Docs"::: Web ページの上部に情報メッセージが表示されます。
 
@@ -168,7 +168,7 @@ Web アドレスが `https://docs.microsoft.com/sql/` で始まっている記�
 - _2016 以降:_ &nbsp; バージョン管理システムは、SQL Server バージョン 2016 以降のバージョンでは完全に実装されています。
     - [SQL Server 2016 以降のドキュメントへようこそ](/sql/sql-server/?view=sql-server-2016)
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [SQL Server の以前のバージョン、2014 - 2005](../toc/previous-versions-sql-server.md)  
 [SQL Server ドキュメント ナビゲーション ガイド](sql-docs-navigation-guide.md)  

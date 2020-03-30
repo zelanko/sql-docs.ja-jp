@@ -20,10 +20,10 @@ helpviewer_keywords:
 ms.custom: seo-lt-2019
 ms.date: 03/13/2018
 ms.openlocfilehash: 7a07e4cd77d02e4c62c34e55eedbd3dbf01c8322
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75245509"
 ---
 # <a name="tips-and-tricks-for-using-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) の使用に関するヒントとテクニック
@@ -231,7 +231,7 @@ SQL Server のエラー ログのパスは、構成設定によって異なる�
 
 6. メモ帳で errorlog.log ファイルを開きます。 
 
-## <a name="determine-sql-server-name"></a>SQL Server インスタンス名を見つける
+## <a name="find-sql-server-instance-name"></a><a name="determine-sql-server-name"></a>SQL Server インスタンス名を見つける
 
 SQL Server に接続する前に、あるいは接続した後に、いくつかの方法で SQL server の名前を検索できます。  
 

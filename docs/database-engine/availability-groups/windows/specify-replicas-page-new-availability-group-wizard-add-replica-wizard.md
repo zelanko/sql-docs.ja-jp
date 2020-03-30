@@ -15,10 +15,10 @@ ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3bf32d532c2bf10adb1348352c472cd87f0b8413
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74822563"
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>[レプリカの指定] ページ (新しい可用性グループ ウィザード:レプリカの追加ウィザード)
@@ -32,7 +32,7 @@ ms.locfileid: "74822563"
 |[バックアップの設定](#BackupPreferencesTab)|このタブを使用して、可用性グループ全体についてバックアップの設定を指定し、各可用性レプリカのバックアップ優先順位を指定します。|  
 |[リスナー](#Listener)|このタブ (使用可能な場合) を使用して、可用性グループ リスナーを作成します。 既定では、リスナーは作成されません。<br /><br /> このタブは、 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]を実行している場合のみ使用できます。<br/><br/>クラスター タイプが EXTERNAL または NONE のいずれかの場合、DHCP は無効です。 |  
   
-##  <a name="ReplicasTab"></a> [レプリカ] タブ  
+##  <a name="replicas-tab"></a><a name="ReplicasTab"></a> [レプリカ] タブ  
  **サーバー インスタンス**  
  可用性レプリカをホストするサーバー インスタンスの名前を表示します。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "74822563"
  **[レプリカの削除]**  
  クリックすると、選択したセカンダリ レプリカが可用性グループから削除されます。  
   
-##  <a name="EndpointsTab"></a> [エンドポイント] タブ  
+##  <a name="endpoints-tab"></a><a name="EndpointsTab"></a> [エンドポイント] タブ  
  **[エンドポイント]** タブには、可用性レプリカをホストする各サーバー インスタンスについて、既存のデータベース ミラーリング エンドポイント (存在する場合) の実際の値か、Windows 認証を使用する新しいエンドポイント候補の推奨値が表示されます。 既存のエンドポイントと候補となるエンドポイントの両方について、[エンドポイント値] グリッドには次の情報が表示されます。  
   
  **[サーバー名]**  
@@ -107,7 +107,7 @@ ms.locfileid: "74822563"
   
      エンドポイントを構成するときに **[可用性レプリカの指定]** ページを開いたままにしていた場合は、 **[エンドポイント]** タブに戻り、 **[更新]** をクリックして、 **[エンドポイント値]** グリッドを最新の情報に更新します。  
   
-##  <a name="BackupPreferencesTab"></a> [バックアップの設定] タブ  
+##  <a name="backup-preferences-tab"></a><a name="BackupPreferencesTab"></a> [バックアップの設定] タブ  
  どこでバックアップを実行するかを指定するには、次のオプションのいずれかを選択します。  
   
  **[セカンダリを優先]**  
@@ -137,7 +137,7 @@ ms.locfileid: "74822563"
  **[レプリカの除外]**  
  バックアップの実行に対してこの可用性レプリカが選択されないようにするには これは、たとえば、バックアップをフェールオーバーすることがないリモート可用性レプリカのような場合に便利です。  
   
-##  <a name="Listener"></a> [リスナー] タブ  
+##  <a name="listener-tab"></a><a name="Listener"></a> [リスナー] タブ  
  クライアント接続ポイントを提供する[可用性グループ リスナー](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)の設定を指定します。次のいずれかです。  
   
  **[今は可用性グループ リスナーを作成しない]**  
@@ -195,7 +195,7 @@ ms.locfileid: "74822563"
 >  -   リスナーの IP アドレスが排他的に使用されるように確保することを、ネットワーク管理者に依頼します。 この可用性グループへのクライアント接続を要求するときの接続文字列で使用できるよう、リスナーの DNS ホスト名をアプリケーション開発者に通知します。  
 > -   この可用性グループへのクライアント接続を要求するときの接続文字列で使用できるよう、リスナーの DNS ホスト名をアプリケーション開発者に通知します。  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
   
 -   [可用性グループ ウィザードの使用 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)  
   

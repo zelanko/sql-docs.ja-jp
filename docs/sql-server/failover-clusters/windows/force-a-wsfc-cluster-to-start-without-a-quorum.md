@@ -14,10 +14,10 @@ ms.assetid: 4a121375-7424-4444-b876-baefa8fe9015
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 078b7087669547b183f8bd34daa6c6fe0cf98cc4
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75258138"
 ---
 # <a name="force-a-wsfc-cluster-to-start-without-a-quorum"></a>クォーラムを使用せずに WSFC クラスターを強制的に起動する
@@ -30,15 +30,15 @@ ms.locfileid: "75258138"
   
 -   **補足情報:** [補足情報: クォーラムを使用せずにクラスターを強制的に起動した後](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> 開始前の準備  
+##  <a name="before-you-start"></a><a name="BeforeYouBegin"></a> 開始前の準備  
   
-###  <a name="Recommendations"></a> 推奨事項  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 推奨事項  
  明示的に指定されている場合を除き、このトピックの手順は、WSFC クラスター内のノードから実行する必要があります。  ただし、クォーラムを使用せずに強制的に起動する対象となるノードからこれらの手順を実行することにより、適切な結果が得られ、ネットワークの問題の発生を回避できる場合もあります。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
  ユーザーは、WSFC クラスターの各ノードのローカル Administrators グループのメンバーであるドメイン アカウントを使用する必要があります。  
   
-##  <a name="FailoverClusterManagerProcedure"></a> フェールオーバー クラスター マネージャーの使用  
+##  <a name="using-failover-cluster-manager"></a><a name="FailoverClusterManagerProcedure"></a> フェールオーバー クラスター マネージャーの使用  
   
 ##### <a name="to-force-a-cluster-to-start-without-a-quorum"></a>クォーラムを使用せずにクラスターを強制的に起動するには  
   
@@ -50,7 +50,7 @@ ms.locfileid: "75258138"
   
 4.  概要ペインで、 **[クォーラムの構成]** の現在の値が **[警告: クラスターは ForceQuorum 状態で実行中です]** であることを確認します。  
   
-##  <a name="PowerShellProcedure"></a> PowerShell の使用  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> PowerShell の使用  
   
 ##### <a name="to-force-a-cluster-to-start-without-a-quorum"></a>クォーラムを使用せずにクラスターを強制的に起動するには  
   
@@ -83,7 +83,7 @@ $nodes | Format-Table -property NodeName, State, NodeWeight
   
 ```  
   
-##  <a name="CommandPromptProcedure"></a> net.exe の使用  
+##  <a name="using-netexe"></a><a name="CommandPromptProcedure"></a> net.exe の使用  
   
 ##### <a name="to-force-a-cluster-to-start-without-a-quorum"></a>クォーラムを使用せずにクラスターを強制的に起動するには  
   
@@ -103,7 +103,7 @@ net.exe stop clussvc
 net.exe start clussvc /forcequorum  
 ```  
   
-##  <a name="FollowUp"></a>補足情報: クォーラムを使用せずにクラスターを強制的に起動した後  
+##  <a name="follow-up-after-forcing-cluster-to-start-without-a-quorum"></a><a name="FollowUp"></a>補足情報: クォーラムを使用せずにクラスターを強制的に起動した後  
   
 -   他のノードをオンラインに戻す前に、NodeWeight の値を再評価および再構成して、新しいクォーラムを正しく構築する必要があります。 この処理を行わないと、クラスターが再びオフラインに戻る場合があります。  
   
@@ -121,7 +121,7 @@ net.exe start clussvc /forcequorum
   
      [ログ配布のセカンダリへのフェールオーバー &#40;SQL Server&#41;](../../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)  
   
-##  <a name="RelatedContent"></a> 関連コンテンツ  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 関連コンテンツ  
   
 -   [フェールオーバー クラスターのイベントおよびログを表示する](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)  
   

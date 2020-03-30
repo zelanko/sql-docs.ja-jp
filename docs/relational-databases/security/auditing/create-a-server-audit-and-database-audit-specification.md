@@ -17,10 +17,10 @@ ms.assetid: 26ee85de-6e97-4318-b526-900924d96e62
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: d9ab1fa97653513d18c43b916ca5bfbc2105e8e7
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75557877"
 ---
 # <a name="create-a-server-audit-and-database-audit-specification"></a>サーバー監査の仕様およびデータベース監査の仕様を作成する方法
@@ -35,7 +35,7 @@ ms.locfileid: "75557877"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [セキュリティ](#Security)  
+     [Security](#Security)  
   
 -   **サーバー監査とデータベース監査の仕様を作成する方法:**  
   
@@ -43,24 +43,24 @@ ms.locfileid: "75557877"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
  データベース監査仕様は、セキュリティ保護できないオブジェクトであり、特定のデータベースに保存されます。 作成されたデータベース監査仕様は無効な状態です。  
   
  ユーザー データベースでデータベース監査の仕様を作成または変更するときは、システム ビューなど、サーバー スコープ オブジェクトの監査アクションは含めないでください。 サーバー スコープ オブジェクトが含まれている場合、監査が作成されます。 ただし、サーバー スコープ オブジェクトは対象にならず、エラーは返されません。 サーバー スコープ オブジェクトを監査するには、master データベースのデータベース監査の仕様を使用してください。  
   
  **tempdb** システム データベースを除き、データベース監査の仕様は、その仕様が作成されるデータベースに存在します。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
   
 -   ALTER ANY DATABASE AUDIT 権限を持つユーザーは、データベース監査仕様を作成し、任意の監査にバインドできます。  
   
 -   データベース監査仕様の作成後は、CONTROL SERVER 権限または ALTER ANY DATABASE AUDIT 権限を持つプリンシパル、または sysadmin アカウントがその仕様を表示できます。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 #### <a name="to-create-a-server-audit"></a>サーバー監査を作成するには  
   
@@ -80,7 +80,7 @@ ms.locfileid: "75557877"
   
      **[データベース監査の仕様の作成]** ダイアログ ボックスでは、次のオプションを使用できます。  
   
-     **Name**  
+     **名前**  
      データベース監査の仕様の名前。 この名前は、新しいサーバー監査の仕様を作成すると自動的に生成されますが、編集可能です。  
   
      **監査**  
@@ -106,7 +106,7 @@ ms.locfileid: "75557877"
   
 4.  オプションの選択が完了したら、 **[OK]** をクリックします。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-create-a-server-audit"></a>サーバー監査を作成するには  
   

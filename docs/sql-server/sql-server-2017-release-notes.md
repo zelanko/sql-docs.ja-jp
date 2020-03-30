@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = sql-server-2017 || = sqlallproducts-allversions
 ms.openlocfilehash: 2c928db781c6e7d31f07e1cea37ed80481b8fed6
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68136479"
 ---
 # <a name="sql-server-2017-release-notes"></a>SQL Server 2017 リリース ノート
@@ -38,12 +38,12 @@ ms.locfileid: "68136479"
 
 - **対処法:** 最初にコンピューターを再起動し、FILESTREAM のネットワーク共有が利用可能かどうかを確認します。 それでも共有が使用できない場合は、次の手順のようにします。
 
-    1. SQL Server 構成マネージャーで SQL Server インスタンスを右クリックして、**[プロパティ]** をクリックします。 
-    2. **[FILESTREAM]** タブで、**[ファイル I/O ストリーム アクセスに対して FILESTREAM を有効にする]** をオフにして、**[適用]** をクリックします。
-    3. もう一度、元の共有名で **[ファイル I/O ストリーム アクセスに対して FILESTREAM を有効にする]** をチェックして、**[適用]** をクリックします。
+    1. SQL Server 構成マネージャーで SQL Server インスタンスを右クリックして、 **[プロパティ]** をクリックします。 
+    2. **[FILESTREAM]** タブで、 **[ファイル I/O ストリーム アクセスに対して FILESTREAM を有効にする]** をオフにして、 **[適用]** をクリックします。
+    3. もう一度、元の共有名で **[ファイル I/O ストリーム アクセスに対して FILESTREAM を有効にする]** をチェックして、 **[適用]** をクリックします。
 
 ### <a name="master-data-services-mds"></a>マスター データ サービス (MDS)
-- **問題およびユーザーへの影響:** [ユーザーのアクセス許可] ページで、エンティティのツリー ビューのルート レベルにアクセス許可を付与すると、次のエラーが表示される: `"The model permission cannot be saved. The object guid is not valid"`
+- **問題およびユーザーへの影響:**  [ユーザーのアクセス許可] ページで、エンティティのツリー ビューのルート レベルにアクセス許可を付与すると、次のエラーが表示される: `"The model permission cannot be saved. The object guid is not valid"`
 
 - **対処法:** 
   - ツリー ビューのルート レベルではなくサブノードにアクセス許可を付与します。
@@ -53,14 +53,14 @@ ms.locfileid: "68136479"
   - Amazon Redshift
   - IBM Netezza
   - Impala
-- **対処法:**[なし] :   
+- **対処法:** [なし] :   
 
 - **問題およびユーザーへの影響:** パースペクティブを含む 1400 の互換性レベルの直接クエリ モデルが、メタデータのクエリまたは検索時に失敗する場合がある。
 - **対処法:** パースペクティブを削除して、再展開します。
 
 ### <a name="tools"></a>ツール
-- **問題およびユーザーへの影響:***DReplay* の実行が次のメッセージにより失敗する: "Error DReplay Unexpected error occurred!" (DReplay エラー 予期しないエラーが発生しました)。
-- **対処法:**[なし] :
+- **問題およびユーザーへの影響:** *DReplay* の実行が次のメッセージにより失敗する: "Error DReplay Unexpected error occurred!" (DReplay エラー 予期しないエラーが発生しました)。
+- **対処法:** [なし] :
 
 ![horizontal_bar](../sql-server/media/horizontal-bar.png)
 ## <a name="sql-server-2017-release-candidate-rc2---august-2017"></a>SQL Server 2017 リリース候補 (RC2、2017 年 8 月)
@@ -73,7 +73,7 @@ Windows 上の SQL Server については、このリリースに関するリリ
 - **問題およびユーザーへの影響:** ストアド プロシージャ **[catalog].[create_execution]** の *runincluster* パラメーターは、一貫性とわかりやすさを理由に、名前が *runinscaleout* に変更されました。
 - **回避策:** Scale Out でパッケージを実行する既存のスクリプトがある場合は、スクリプトが RC1 で動作するように、パラメーター名を *runincluster* から *runinscaleout* に変更します。
 
-- **問題およびユーザーへの影響:** SQL Server Management Studio (SSMS) 17.1 とそれより前のバージョンでは、RC1 の Scale Out でパッケージの実行をトリガーできません。 エラー メッセージ: "*@runincluster* はプロシージャ **create_execution** のパラメーターではありません。" この問題は、SSMS の次のリリースであるバージョン 17.2 で解決されています。 SSMS のバージョン 17.2 以降では、新しいパラメーター名と Scale Out でのパッケージ実行がサポートされています。 
+- **問題およびユーザーへの影響:** SQL Server Management Studio (SSMS) 17.1 とそれより前のバージョンでは、RC1 の Scale Out でパッケージの実行をトリガーできません。 エラー メッセージ: " *@runincluster* はプロシージャ **create_execution** のパラメーターではありません。" この問題は、SSMS の次のリリースであるバージョン 17.2 で解決されています。 SSMS のバージョン 17.2 以降では、新しいパラメーター名と Scale Out でのパッケージ実行がサポートされています。 
 - **回避策:** SSMS バージョン 17.2 が利用可能になるまで、以下のようにします。
   1. 既存のバージョンの SSMS を使用して、パッケージ実行スクリプトを生成します。
   2. スクリプトの *runincluster* パラメーターの名前を *runinscaleout* に変更します。
@@ -82,8 +82,8 @@ Windows 上の SQL Server については、このリリースに関するリリ
 ![horizontal_bar](../sql-server/media/horizontal-bar.png)
 ## <a name="sql-server-2017-ctp-21-may--2017"></a>SQL Server 2017 CTP 2.1 (2017 年 5 月)
 ### <a name="documentation-ctp-21"></a>ドキュメント (CTP 2.1)
-- **問題およびユーザーへの影響:**[!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] のドキュメントは制限されており、コンテンツは [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] ドキュメント セットに付属しています。  記事の中で [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] に固有のコンテンツは、**適用対象**で言及されています。 
-- **問題およびユーザーへの影響:**[!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] の場合、オフライン コンテンツを利用できません。
+- **問題およびユーザーへの影響:** [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] のドキュメントは制限されており、コンテンツは [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] ドキュメント セットに付属しています。  記事の中で [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] に固有のコンテンツは、**適用対象**で言及されています。 
+- **問題およびユーザーへの影響:** [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] の場合、オフライン コンテンツを利用できません。
 
 ### <a name="sql-server-reporting-services-ctp-21"></a>SQL Server Reporting Services (CTP 2.1)
 
@@ -113,14 +113,14 @@ Windows 上の SQL Server については、このリリースに関するリリ
 
 ### <a name="tsqllanguageservicemsi-ctp-21"></a>TSqlLanguageService.msi (CTP 2.1)
 
-- **問題およびユーザーへの影響:***TSqlLanguageService.msi* の 2016 バージョンが (SQL セットアップにより、またはスタンドアロンの再頒布可能コンポーネントとして) インストールされているコンピューターにインストールした後、v13.* (SQL 2016) バージョンの *Microsoft.SqlServer.Management.SqlParser.dll* および *Microsoft.SqlServer.Management.SystemMetadataProvider.dll* が削除されます。 これらのアセンブリの 2016 バージョンに依存しているすべてのアプリケーションは動作を停止し、次のようなエラーを生成します。"*エラー: ファイルまたはアセンブリ 'Microsoft.SqlServer.Management.SqlParser, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91'、またはその依存関係の 1 つが読み込めませんでした。指定されたファイルが見つかりません。*
+- **問題およびユーザーへの影響:** *TSqlLanguageService.msi* の 2016 バージョンが (SQL セットアップにより、またはスタンドアロンの再頒布可能コンポーネントとして) インストールされているコンピューターにインストールした後、v13.* (SQL 2016) バージョンの *Microsoft.SqlServer.Management.SqlParser.dll* および *Microsoft.SqlServer.Management.SystemMetadataProvider.dll* が削除されます。 これらのアセンブリの 2016 バージョンに依存しているすべてのアプリケーションは動作を停止し、次のようなエラーを生成します。"*エラー: ファイルまたはアセンブリ 'Microsoft.SqlServer.Management.SqlParser, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91'、またはその依存関係の 1 つが読み込めませんでした。指定されたファイルが見つかりません。*
 
-   さらに、2016 バージョンの TSqlLanguageService.msi をインストールしようとすると、次のようなメッセージで失敗します: "*Microsoft SQL Server 2016 T-SQL 言語サービスのインストールに失敗しました。この製品の新しいバージョンが既にこのコンピューターにインストールされています。*"。
+   さらに、2016 バージョンの TSqlLanguageService.msi をインストールしようとすると、次のようなメッセージで失敗します: "*Microsoft SQL Server 2016 T-SQL 言語サービスのインストールに失敗しました。この製品の新しいバージョンが既にこのコンピューターにインストールされています。* "。
 
 - **回避策:** この問題を回避して、アセンブリの v13 バージョンに依存するアプリケーションを修正するには、以下の手順のようにします。
 
    1. **[プログラムの追加と削除]** に移動します
-   2. *Microsoft SQL Server 2019 Transact-SQL 言語サービス CTP2.1* を探し、右クリックして、**[アンインストール]** を選びます。
+   2. *Microsoft SQL Server 2019 Transact-SQL 言語サービス CTP2.1* を探し、右クリックして、 **[アンインストール]** を選びます。
    3. コンポーネントを削除した後、破損したアプリケーションを修復します。または、適切なバージョンの *TSqlLanguageService.MSI* を再インストールします。
 
    この回避策はこれらのアセンブリの v14 バージョンを削除するので、v14 バージョンに依存するアプリケーションは機能しなくなります。 これらのアセンブリが必要な場合は、side-by-side 2016 インストールを含まない別のインストールが必要です。
@@ -128,8 +128,8 @@ Windows 上の SQL Server については、このリリースに関するリリ
 ![horizontal_bar](../sql-server/media/horizontal-bar.png)
 ## <a name="sql-server-2017-ctp-20-april--2017"></a>SQL Server 2017 CTP 2.0 (2017 年 4 月)
 ### <a name="documentation-ctp-20"></a>ドキュメント (CTP 2.0)
-- **問題およびユーザーへの影響:**[!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] のドキュメントは制限されており、コンテンツは [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] ドキュメント セットに付属しています。  記事の中で [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] に固有のコンテンツは、**適用対象**で言及されています。 
-- **問題およびユーザーへの影響:**[!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] の場合、オフライン コンテンツを利用できません。
+- **問題およびユーザーへの影響:** [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] のドキュメントは制限されており、コンテンツは [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] ドキュメント セットに付属しています。  記事の中で [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] に固有のコンテンツは、**適用対象**で言及されています。 
+- **問題およびユーザーへの影響:** [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] の場合、オフライン コンテンツを利用できません。
 
 ### <a name="always-on-availability-groups"></a>Always On 可用性グループ
 

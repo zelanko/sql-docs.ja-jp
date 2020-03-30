@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: 733e63f6dd01c09fd007a7176721533f7a1c57d3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70846508"
 ---
 # <a name="reinitialize-a-subscription"></a>サブスクリプションの再初期化
@@ -30,7 +30,7 @@ ms.locfileid: "70846508"
 
 
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
  サブスクリプションの再初期化には、2 段階の処理があります。  
   
 1.  パブリケーションの単一のサブスクリプションまたはすべてのサブスクリプションが再初期化対象として *マーク* されます。 サブスクリプションの再初期化のマークを設定するには、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の **[ローカル パブリケーション]** フォルダーおよび **[ローカル サブスクリプション]** フォルダーから **[サブスクリプションの再初期化]** ダイアログ ボックスを使用します。 また、 **[すべてのサブスクリプション]** タブやレプリケーション モニターのパブリケーション ノードからマークを設定することもできます。 レプリケーション モニターの起動の詳細については、「[Start the Replication Monitor](../../relational-databases/replication/monitor/start-the-replication-monitor.md)」 (レプリケーション モニターの開始) を参照してください。 サブスクリプションの再初期化の設定には、以下のオプションがあります。  
@@ -98,7 +98,7 @@ ms.locfileid: "70846508"
   
 3.  **[サブスクリプションの再初期化]** ダイアログ ボックスでオプションを選択し、 **[再初期化するように設定]** をクリックします。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
  サブスクリプションは、プログラムでレプリケーション ストアド プロシージャを使用して再初期化できます。 使用するストアド プロシージャは、サブスクリプションの種類 (プッシュまたはプル) およびサブスクリプションが属しているパブリケーションの種類によって変わります。  
   
 #### <a name="to-reinitialize-a-pull-subscription-to-a-transactional-publication"></a>トランザクション パブリケーションに対するプル サブスクリプションを再初期化するには  
@@ -157,7 +157,7 @@ ms.locfileid: "70846508"
   
      詳しくは、「 [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)」をご覧ください。  
   
-##  <a name="RMOProcedure"></a> レプリケーション管理オブジェクト (RMO) の使用  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> レプリケーション管理オブジェクト (RMO) の使用  
  次回の同期で新しいスナップショットが適用されるように、個別のサブスクリプションに再初期化のマークを付けることができます。 レプリケーション管理オブジェクト (RMO) を使用することで、プログラムによってサブスクリプションを再初期化できます。 使用するクラスは、サブスクリプションが属するパブリケーションの種類と、サブスクリプションの種類 (プッシュ サブスクリプションまたはプル サブスクリプション) に応じて変わります。  
   
 #### <a name="to-reinitialize-a-pull-subscription-to-a-transactional-publication"></a>トランザクション パブリケーションに対するプル サブスクリプションを再初期化するには  
@@ -226,7 +226,7 @@ ms.locfileid: "70846508"
   
 5.  プッシュ サブスクリプションを同期します。 詳細については、「 [プッシュ サブスクリプションの同期](../../relational-databases/replication/synchronize-a-push-subscription.md)」をご覧ください。  
   
-###  <a name="PShellExample"></a> 例 (RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> 例 (RMO)  
  次の例では、トランザクション パブリケーションに対するプル サブスクリプションを再初期化します。  
   
  [!code-cs[HowTo#rmo_ReinitTranPullSub](../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_reinittranpullsub)]  

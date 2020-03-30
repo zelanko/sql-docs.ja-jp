@@ -9,10 +9,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 5b63711b537358db7cbf3fa34dcbfdf7444d4b7a
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79286326"
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>SQL Server のドキュメントに投稿する方法
@@ -30,7 +30,7 @@ ms.locfileid: "79286326"
 
 公開されるすべての投稿は、SQL コンテンツ チームによって技術的正確さと一貫性が検証されます。 
 
-## <a id="githubui"></a> ブラウザーで編集する
+## <a name="edit-in-your-browser"></a><a id="githubui"></a> ブラウザーで編集する
 
 お使いのブラウザーで SQL Server のコンテンツに簡単な編集を加え、Microsoft に送信することができます。 詳細については、[Microsoft Docs 共同作成者ガイドの概要](https://docs.microsoft.com/contribute/#quick-edits-to-existing-documents)のページを参照してください。 
 
@@ -51,7 +51,7 @@ ms.locfileid: "79286326"
 
 ![SQL ドキュメントの編集](media/sql-server-docs-navigation-guide/edit-sql-docs.gif)
 
-## <a id="tools"></a> ツールを使ってローカルに編集する
+## <a name="edit-locally-with-tools"></a><a id="tools"></a> ツールを使ってローカルに編集する
 
 もう 1 つの編集オプションは、**sql-docs** または **azure-docs** リポジトリをフォークして、お使いのコンピューターにローカルに複製します。 その後、Markdown エディターと git クライアントを使って、変更を送信することができます。 このワークフローは、複雑で複数のファイルが関係する編集に適しています。 また、docs.microsoft.com に頻繁に投稿する場合にも適しています。
 

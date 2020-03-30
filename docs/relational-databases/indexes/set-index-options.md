@@ -26,10 +26,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: cf9b8222453cea1bdaecad25256819aa7bcb1366
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67909555"
 ---
 # <a name="set-index-options"></a>インデックス オプションの設定
@@ -44,7 +44,7 @@ ms.locfileid: "67909555"
 
    [制限事項と制約事項](#Restrictions)
 
-   [セキュリティ](#Security)
+   [Security](#Security)
 
 - **以下を使用してインデックスのプロパティを変更するには:**
 
@@ -52,20 +52,20 @@ ms.locfileid: "67909555"
 
    [Transact-SQL](#TsqlProcedure)
 
-## <a name="BeforeYouBegin"></a> はじめに
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに
 
-### <a name="Restrictions"></a> 制限事項と制約事項
+### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項
 
 - ALTER INDEX ステートメントに SET 句を使用することによって、次の各オプションが直ちにインデックスに適用されます:ALLOW_PAGE_LOCKS、ALLOW_ROW_LOCKS、OPTIMIZE_FOR_SEQUENTIAL_KEY、IGNORE_DUP_KEY、STATISTICS_NORECOMPUTE。
 - ALTER INDEX REBUILD または CREATE INDEX WITH DROP_EXISTING を使用してインデックスを再構築するときは、次の各オプションを設定できます:PAD_INDEX、FILLFACTOR、SORT_IN_TEMPDB、IGNORE_DUP_KEY、STATISTICS_NORECOMPUTE、ONLINE、ALLOW_ROW_LOCKS、ALLOW_PAGE_LOCKS、MAXDOP、DROP_EXISTING (CREATE INDEX のみ)。
 
-### <a name="Security"></a> セキュリティ
+### <a name="security"></a><a name="Security"></a> セキュリティ
 
-#### <a name="Permissions"></a> Permissions
+#### <a name="permissions"></a><a name="Permissions"></a> Permissions
 
 テーブルまたはビューに対する ALTER 権限が必要です。
 
-## <a name="SSMSProcedure"></a> SQL Server Management Studio の使用
+## <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用
 
 ### <a name="to-modify-the-properties-of-an-index-in-table-designer"></a>インデックスのプロパティをテーブル デザイナーで変更するには
 
@@ -89,7 +89,7 @@ ms.locfileid: "67909555"
 7. 該当するプロパティの設定を変更してインデックスをカスタマイズします。
 8. インデックス列の位置を追加、削除、または変更するには、[**インデックスのプロパティ -** _index_name_] ダイアログ ボックスから **[全般]** ページを選択します。 詳細については、「 [Index Properties F1 Help](../../relational-databases/indexes/index-properties-f1-help.md)」をご覧ください。
 
-## <a name="TsqlProcedure"></a> Transact-SQL の使用
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用
 
 ### <a name="to-see-the-properties-of-all-the-indexes-in-a-table"></a>テーブル内のすべてのインデックスのプロパティを表示するには
 

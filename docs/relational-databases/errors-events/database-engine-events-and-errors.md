@@ -10,10 +10,10 @@ ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3ed6d0a694370cf6dbaa14ea861bf3d0d6c618f7
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287246"
 ---
 # <a name="database-engine-errors"></a>データベース エンジンのエラー
@@ -5128,7 +5128,7 @@ ORDER BY message_id
 |   13031   |   0   |   いいえ  |   プロシージャ   |
 |   13032   |   0   |   いいえ  |   トリガー (trigger) |
 |   13033   |   0   |   いいえ  |   view    |
-|   13034   |   0   |   いいえ  |   既定値 (default) |
+|   13034   |   0   |   いいえ  |   default |
 |   13035   |   0   |   いいえ  |   ルール    |
 |   13036   |   0   |   いいえ  |   システム テーブル (system table)    |
 |   13037   |   0   |   いいえ  |   不明な型    |
@@ -5156,7 +5156,7 @@ ORDER BY message_id
 |   13077   |   0   |   いいえ  |   カーソル宣言    |
 |   13078   |   0   |   いいえ  |   レプリケーション フィルター  |
 |   13079   |   0   |   いいえ  |   変数代入 |
-|   13080   |   0   |   いいえ  |   統計  |
+|   13080   |   0   |   いいえ  |   statistics  |
 |   13081   |   0   |   いいえ  |   file    |
 |   13082   |   0   |   いいえ  |   ファイル グループ (filegroup)   |
 |   13083   |   0   |   いいえ  |   server  |

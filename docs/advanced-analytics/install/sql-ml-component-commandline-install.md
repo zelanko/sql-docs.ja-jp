@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 2bc231a064862c5e2a16f60d85a5166fd4765566
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73727587"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-components-from-the-command-line"></a>コマンド ラインから SQL Server Machine Learning R および Python コンポーネントをインストールする
@@ -89,7 +89,7 @@ ms.locfileid: "73727587"
 | /MPYCACHEDIRECTORY | 将来利用するために予約されています。 インターネットに接続されていないコンピューターへのインストール用に、%TEMP% を使って Python コンポーネントの CAB ファイルを格納します。 |
 ::: moniker-end
 
-## <a name="indb"></a> In-Database インスタンスのインストール
+## <a name="in-database-instance-installations"></a><a name="indb"></a> In-Database インスタンスのインストール
 
 データベース エンジンのインスタンスでは、In-Database 分析を利用できます。これは、インストールに **AdvancedAnalytics** 機能を追加するために必須です。 高度な分析と共にデータベース エンジンのインスタンスをインストールすることも、[それを既存のインスタンスに追加する](#add-existing)ことも可能です。 
 
@@ -138,7 +138,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR
 ```
 ::: moniker-end
 
-## <a name="post-install"></a> インストール後の構成 (必須)
+## <a name="post-install-configuration-required"></a><a name="post-install"></a> インストール後の構成 (必須)
 
 In-Database インストールにのみ適用されます。
 
@@ -159,7 +159,7 @@ In-Database インストールにのみ適用されます。
 1. SQL Server R Services:機能を使用する前に、外部スクリプトを有効にする必要があります。 次の手順として、[SQL Server R Services (In-Database) のインストール](sql-r-services-windows-install.md)に関する記事に記載されている手順に従ってください。 
 ::: moniker-end
 
-## <a name="add-existing"></a> 既存のデータベース エンジンのインスタンスに高度な分析を追加する
+## <a name="add-advanced-analytics-to-an-existing-database-engine-instance"></a><a name="add-existing"></a> 既存のデータベース エンジンのインスタンスに高度な分析を追加する
 
 既存のデータベース エンジンのインスタンスに In-Database の高度な分析を追加する場合は、インスタンス名を指定します。 たとえば、以前に SQL Server 2017 以降のデータベース エンジンと Python をインストールした場合、次のコマンドを使用して R を追加できます。
 
@@ -168,7 +168,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQL_INST_MR /INSTANCENAME=MSSQLSERVER
 /IACCEPTSQLSERVERLICENSETERMS  /IACCEPTROPENLICENSETERMS
 ```
 
-## <a name="silent"></a> サイレント インストール
+## <a name="silent-install"></a><a name="silent"></a> サイレント インストール
 
 サイレント インストールでは、.cab ファイルの場所のチェックが抑制されます。 このため、.cab ファイルがアンパックされる場所を指定する必要があります。 Python の場合、CAB ファイルは %TEMP* に配置する必要があります。 R の場合、この一時ディレクトリを使用してフォルダー パスを設定できます。
  
@@ -179,7 +179,7 @@ Setup.exe /q /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR,S
 /MRCACHEDIRECTORY=%temp% 
 ```
 
-## <a name="shared-feature"></a> スタンドアロン サーバーのインストール
+## <a name="standalone-server-installations"></a><a name="shared-feature"></a> スタンドアロン サーバーのインストール
 
 スタンドアロン サーバーは、データベース エンジンのインスタンスにバインドされない "共有機能" です。 スタンドアロン サーバーをインストールするための有効な構文を、以下の例に示します。
 

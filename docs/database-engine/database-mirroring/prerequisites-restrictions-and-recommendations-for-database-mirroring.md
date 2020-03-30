@@ -20,10 +20,10 @@ ms.assetid: fdcf2251-9895-44c6-b81e-768fef32e732
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 1f6a1c47cf5672cdf0f9a22be6a252cfc8cdbe87
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75244365"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-database-mirroring"></a>データベース ミラーリングの前提条件、制限事項、および推奨事項
@@ -35,13 +35,13 @@ ms.locfileid: "75244365"
  このトピックでは、データベース ミラーリングを設定するための前提条件と推奨事項について説明します。 データベース ミラーリングの概要については、「 [データベース ミラーリング &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)」を参照してください。  
   
   
-##  <a name="DbmSupport"></a> データベース ミラーリングのサポート  
+##  <a name="support-for-database-mirroring"></a><a name="DbmSupport"></a> データベース ミラーリングのサポート  
  データベース ミラーリングの [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のサポートについては、「[SQL Server 2016 の各エディションとサポートされている機能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。
   
  データベース ミラーリングは、サポートされているすべてのデータベース互換性レベルで動作します。 サポートされている互換性レベルについては、「[ALTER DATABASE 互換性レベル &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)」を参照してください。  
   
   
-##  <a name="Prerequisites"></a> 前提条件  
+##  <a name="prerequisites"></a><a name="Prerequisites"></a> 前提条件  
   
 -   ミラーリング セッションを確立するには、パートナーとミラーリング監視サーバー (存在する場合) が、同じバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で実行されている必要があります。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "75244365"
     >  データベース ミラーリングが停止している場合は、データベース ミラーリングを再開する前に、停止中にプリンシパル データベースで作成されたすべてのログ バックアップをミラー データベースに適用する必要があります。  
   
   
-##  <a name="Restrictions"></a> 制限  
+##  <a name="restrictions"></a><a name="Restrictions"></a> 制限  
   
 -   ミラー化できるのはユーザー データベースのみです。 **master**、 **msdb**、 **tempdb**、または **model** の各データベースはミラー化できません。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "75244365"
 -   複数のデータベースにまたがるトランザクションまたは分散トランザクションでは、データベース ミラーリングがサポートされません。 詳細については、「[Always On 可用性グループとデータベース ミラーリングでの複数データベースにまたがるトランザクションと分散トランザクション &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)」を参照してください。  
   
   
-##  <a name="RecommendationsForPartners"></a> パートナー サーバーの構成に関する推奨事項  
+##  <a name="recommendations-for-configuring-partner-servers"></a><a name="RecommendationsForPartners"></a> パートナー サーバーの構成に関する推奨事項  
   
 -   パートナーは、同じ量のワークロードを処理できる同等のシステムで実行する必要があります。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "75244365"
 -   高い安全性モードでデータベース ミラーリングを行う場合、ワイドエリア ネットワーク (WAN) の信頼性が十分かどうかに関する推奨事項はありません。 高い安全性モードで WAN 経由のデータベース ミラーリングを使用する場合、不要なフェールオーバーが自動的に行われる可能性があるため、セッションにミラーリング監視サーバーを追加する方法には注意してください。 詳細については、このトピックの「 [データベース ミラーリングの配置に関する推奨事項](#RecommendationsForDeploying)」を参照してください。  
   
   
-##  <a name="RecommendationsForDeploying"></a> データベース ミラーリングの配置に関する推奨事項  
+##  <a name="recommendations-for-deploying-database-mirroring"></a><a name="RecommendationsForDeploying"></a> データベース ミラーリングの配置に関する推奨事項  
  データベース ミラーリングのパフォーマンスを最適化するには、非同期動作を使用する必要があります。 同期動作を使用するミラーリング セッションは、ワークロードが大量のトランザクション ログ データを生成するときに、パフォーマンスが低下する可能性があります。  
   
  テスト環境ですべての動作モードを調査し、データベース ミラーリングのパフォーマンスを評価することをお勧めします。 ただし、ミラーリングを運用環境に配置する前に、実際のネットワークの性能を理解することが必要です。  

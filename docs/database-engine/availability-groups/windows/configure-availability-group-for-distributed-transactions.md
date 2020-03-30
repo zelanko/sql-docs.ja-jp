@@ -17,10 +17,10 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: c163c54bb6ee6276ce39286c1b7743587f94f695
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71713271"
 ---
 # <a name="configure-distributed-transactions-for-an-always-on-availability-group"></a>Always On 可用性グループ用に分散トランザクションを構成する
@@ -102,7 +102,7 @@ ALTER AVAILABILITY GROUP MyaAG
       );
 ```
 
-## <a name="a-namedisttrandistributed-transactions---technical-concepts"></a><a name="distTran"/>分散トランザクション - 技術的概念
+## <a name="distributed-transactions---technical-concepts"></a><a name="distTran"/>分散トランザクション - 技術的概念
 
 分散トランザクションとは、2 つ以上のデータベースにまたがるトランザクションです。 トランザクション マネージャーとしての DTC は、SQL Server インスタンス間、および他のデータ ソース間でトランザクションを調整します。 [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] データベース エンジンの各インスタンスは、リソース マネージャーとして動作できます。 可用性グループが `DTC_SUPPORT = PER_DB` で構成されていると、データベースはリソース マネージャーとして動作できます。 詳細については、MS DTC のドキュメントを参照してください。
 

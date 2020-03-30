@@ -17,10 +17,10 @@ ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3a6a21cf82a7b94d5526e4492d69bc5f1578b716
-ms.sourcegitcommit: cebf41506a28abfa159a5dd871b220630c4c4504
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77478456"
 ---
 # <a name="overview-of-always-on-availability-groups-sql-server"></a>AlwaysOn 可用性グループの概要 (SQL Server)
@@ -55,7 +55,7 @@ ms.locfileid: "77478456"
   
  ![5 つのレプリカを使用する可用性グループ](../../../database-engine/availability-groups/windows/media/aoag-agintrofigure.gif "5 つのレプリカを使用する可用性グループ")  
   
-##  <a name="AvDbs"></a> Availability Databases  
+##  <a name="availability-databases"></a><a name="AvDbs"></a> Availability Databases  
  可用性グループに追加するデータベースは、オンラインの読み取り/書き込みデータベースであることが必要であり、プライマリ レプリカをホストするサーバー インスタンスに置かれている必要があります。 追加されたデータベースは、プライマリ データベースとして可用性グループに参加しますが、引き続きクライアントから使用できます。 新しいプライマリ データベースのバックアップが、セカンダリ レプリカをホストするサーバー インスタンスに復元されない限り (RESTORE WITH NORECOVERY を使用します)、対応するセカンダリ データベースは存在しません。 新しいセカンダリ データベースは、可用性グループに参加するまでは RESTORING 状態です。 詳細については、「 [AlwaysOn セカンダリ データベース上のデータ移動の開始 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md)」を参照してください。  
   
  可用性グループに参加すると、セカンダリ データベースは ONLINE 状態になり、対応するプライマリ データベースとのデータ同期が開始されます。 *データ同期* は、プライマリ データベースへの変更をセカンダリ データベースに再現するプロセスです。 データ同期では、プライマリ データベースがトランザクション ログ レコードをセカンダリ データベースに送信します。  
@@ -63,7 +63,7 @@ ms.locfileid: "77478456"
 > [!IMPORTANT]  
 >  可用性データベースは、 *、PowerShell、および SQL Server 管理オブジェクト (SMO) の名前では、* データベース レプリカ [!INCLUDE[tsql](../../../includes/tsql-md.md)]と呼ばれることがあります。 たとえば、可用性データベースに関する情報を返す AlwaysOn 動的管理ビューの名前では、  **sys.dm_hadr_database_replica_states** や **sys.dm_hadr_database_replica_cluster_states**のように、"データベース レプリカ (database replica)" という語が使用されています。 ただし、SQL Server オンライン ブックでは、"レプリカ" という用語は一般に可用性レプリカを指します。 たとえば、"プライマリ レプリカ" と "セカンダリ レプリカ" は、常に可用性レプリカを指します。  
   
-##  <a name="AGsARsADBs"></a> 可用性レプリカ  
+##  <a name="availability-replicas"></a><a name="AGsARsADBs"></a> 可用性レプリカ  
  各可用性グループは、可用性レプリカと呼ばれる 2 つ以上のフェールオーバー パートナーを定義します。 *可用性レプリカ* は、可用性グループのコンポーネントです。 各可用性レプリカは、可用性グループ内の可用性データベースのコピーをホストします。 各可用性グループで、個々の可用性レプリカは、1 つの WSFC クラスターの別々のノード上に存在する [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の個々のインスタンスによってホストされる必要があります。 これらのサーバー インスタンスそれぞれで、AlwaysOn を有効にする必要があります。  
   
  指定したインスタンスで、1 つの可用性グループにつき 1 つだけ可用性レプリカをホストすることができます。 ただし、各インスタンスを多数の可用性グループに使用することはできます。 指定したインスタンスは、スタンドアロン インスタンスまたは [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンス (FCI) として使用できます。 サーバー レベルの冗長性が必要な場合は、フェールオーバー クラスター インスタンスを使用します。  
@@ -73,7 +73,7 @@ ms.locfileid: "77478456"
 > [!NOTE]  
 >  フェールオーバー中など、可用性レプリカのロールが不確定である場合、そのデータベースは一時的に NOT SYNCHRONIZING 状態になります。 可用性レプリカのロールが解決されるまで、それらのロールは RESOLVING に設定されます。 可用性レプリカがプライマリ ロールに解決された場合、そのデータベースはプライマリ データベースになります。 可用性レプリカがセカンダリ ロールに解決された場合、そのデータベースはセカンダリ データベースになります。  
   
-##  <a name="AvailabilityModes"></a> 可用性モード  
+##  <a name="availability-modes"></a><a name="AvailabilityModes"></a> 可用性モード  
  可用性モードは、各可用性レプリカのプロパティです。 可用性モードによって、特定のセカンダリ レプリカがディスクにトランザクション ログ レコードを書き込む (ログ書き込み) まで、プライマリ レプリカによるデータベースへのトランザクションのコミットを待機するかどうかが決定されます。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] は、*非同期コミット モード*と*同期コミット モード*という 2 種類の可用性モードをサポートします。  
   
 -   **Asynchronous-commit mode**  
@@ -86,7 +86,7 @@ ms.locfileid: "77478456"
   
  詳細については、「[可用性モード &#40;Always On 可用性グループ&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)」を参照してください。  
   
-##  <a name="FormsOfFailover"></a> フェールオーバーの種類  
+##  <a name="types-of-failover"></a><a name="FormsOfFailover"></a> フェールオーバーの種類  
  プライマリ レプリカとセカンダリ レプリカとのセッションのコンテキスト内で、プライマリ ロールとセカンダリ ロールが *フェールオーバー*と呼ばれるプロセスで交換されることがあります。 フェールオーバー中に、対象のセカンダリ レプリカがプライマリ ロールに移行し、新しいプライマリ レプリカになります。 新しいプライマリ レプリカのデータベースがプライマリ データベースとしてオンラインになります。クライアント アプリケーションから、これらのデータベースに接続できるようになります。 元のプライマリ レプリカは使用可能になるとセカンダリ ロールに移行し、セカンダリ レプリカになります 元のプライマリ データベースはセカンダリ データベースになり、データ同期が再開されます。  
   
  フェールオーバーには、自動、手動、および強制 (データ損失の可能性あり) という 3 つの形式があります。 特定のセカンダリ レプリカでサポートされるフェールオーバーの形式は、可用性モードによって決まります。同期コミット モードでは、プライマリ レプリカのフェールオーバー モードおよび対象のセカンダリ レプリカによって決まります。次に例を示します。  
@@ -111,7 +111,7 @@ ms.locfileid: "77478456"
   
  詳細については、「 [フェールオーバーとフェールオーバー モード &#40;AlwaysOn 可用性グループ&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)、または PowerShell を使用して、AlwaysOn 可用性グループ上で計画的な手動フェールオーバーまたは強制手動フェールオーバー (強制フェールオーバー) を実行する方法について説明します。  
   
-##  <a name="ClientConnections"></a> クライアント接続  
+##  <a name="client-connections"></a><a name="ClientConnections"></a> クライアント接続  
  可用性グループ リスナーを作成することによって、特定の可用性グループのプライマリ レプリカへのクライアント接続を提供できます。 *可用性グループ リスナー* には、クライアント接続を適切な可用性レプリカに送るために特定の可用性グループにアタッチされる一連のリソースが用意されています。  
   
  可用性グループ リスナーは、仮想ネットワーク名 (VNN) として機能する一意の DNS 名、1 つ以上の仮想 IP アドレス (VIP)、および TCP ポート番号に関連付けられています。 詳細については、「 [可用性グループ リスナー、クライアント接続、およびアプリケーションのフェールオーバー &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)での 1 つ以上の可用性グループの構成と管理において重要です。  
@@ -119,7 +119,7 @@ ms.locfileid: "77478456"
 > [!TIP]  
 >  可用性グループに 2 つしか可用性レプリカが存在せず、なおかつ、その可用性グループが、セカンダリ レプリカへの読み取りアクセスを許可する設定になっていない場合、クライアントは、 [データベース ミラーリングの接続文字列](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)を使用してプライマリ レプリカに接続できます。 この方法は、データベースをデータベース ミラーリングから [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]に移行した後で、一時的に役に立つ場合があります。 他のセカンダリ レプリカを追加する前に、可用性グループの可用性グループ リスナーを作成し、そのリスナーのネットワーク名を使用するようにアプリケーションを更新する必要があります。  
   
-##  <a name="ActiveSecondaries"></a> アクティブなセカンダリ レプリカ  
+##  <a name="active-secondary-replicas"></a><a name="ActiveSecondaries"></a> アクティブなセカンダリ レプリカ  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] は、アクティブなセカンダリ レプリカをサポートします。 アクティブなセカンダリ機能では以下をサポートしています。  
   
 -   **セカンダリ レプリカでのバックアップ操作の実行**  
@@ -132,7 +132,7 @@ ms.locfileid: "77478456"
   
      可用性グループに、現在、可用性グループ リスナーと 1 つ以上の読み取り可能なセカンダリ レプリカが存在する場合、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は読み取りを目的とした接続要求をそれらのいずれかにルーティングできます (*読み取り専用ルーティング*)。 詳細については、「 [可用性グループ リスナー、クライアント接続、およびアプリケーションのフェールオーバー &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)での 1 つ以上の可用性グループの構成と管理において重要です。  
   
-##  <a name="SessionTimeoutPerios"></a> セッション タイムアウト期間  
+##  <a name="session-timeout-period"></a><a name="SessionTimeoutPerios"></a> セッション タイムアウト期間  
  セッション タイムアウト期間は、可用性レプリカのプロパティで、他の可用性レプリカとの接続を閉じるまでに非アクティブに保持できる時間を決定します。 プライマリ レプリカとセカンダリ レプリカは、アクティブであることを通知するために互いに ping を実行します。 他のレプリカからタイムアウト期間内に ping を受信した場合は、その接続がまだ開いており、サーバー インスタンスが通信していることを示します。 可用性レプリカは、ping を受信すると、接続のセッション タイムアウト カウンターをリセットします。  
   
  セッション タイムアウト期間を設定することにより、相手レプリカからの ping を受信するまで無期限に待機することがなくなります。 セッション タイムアウト期間中に相手のレプリカから ping を受信しなかった場合、レプリカはタイムアウトします。レプリカの接続は閉じられ、タイムアウトしたレプリカは DISCONNECTED 状態になります。 切断されたレプリカが同期コミット モード用に構成されている場合でも、トランザクションは、そのレプリカが再接続および再同期するのを待機しません。  
@@ -142,16 +142,16 @@ ms.locfileid: "77478456"
 > [!NOTE]  
 >  解決中のロールでは、ping が発生しないため、セッション タイムアウト期間は適用されません。  
   
-##  <a name="APR"></a> ページの自動修復  
+##  <a name="automatic-page-repair"></a><a name="APR"></a> ページの自動修復  
  各可用性レプリカでは、ローカル データベースに破損ページがあると、データ ページの読み取りを妨げるエラーを解決して自動的に復旧しようとします。 セカンダリ レプリカがページを読み取ることができない場合、プライマリ レプリカに対してページの新しいコピーを要求します。 プライマリ レプリカがページを読み取ることができない場合、すべてのセカンダリ レプリカに新しいコピーの要求をブロードキャストし、最初に応答したレプリカからページを取得します。 要求が受け入れられ、新しいコピーを取得できた場合は、読み取り不可能なページがそのコピーに置き換えられます。通常、これによりエラーは解決します。  
   
  詳細については、「[ページの自動修復 &#40;可用性グループ:データベース ミラーリング&#41;](../../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)」を参照してください。  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
   
 -   [Always On 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/getting-started-with-always-on-availability-groups-sql-server.md)  
   
-##  <a name="RelatedContent"></a> 関連コンテンツ  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 関連コンテンツ  
   
 -   **ブログ:**  
   

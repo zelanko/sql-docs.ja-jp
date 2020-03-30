@@ -41,10 +41,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: cd6b2c3cea9876091532a5da3cf15bdda1da2d8d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73530929"
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE ステートメント (Transact-SQL)
@@ -382,7 +382,7 @@ RESTORE ステートメントでは、フルテキスト データに対し、�
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、各サーバー インスタンスのバックアップおよび復元動作を追跡する、バックアップおよび復元の履歴テーブルが含まれています。 復元を実行すると、バックアップ履歴テーブルも変更されます。 これらのテーブルについては、[バックアップの履歴とヘッダーの情報](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)に関するページを参照してください。
 
-## <a name="REPLACEoption"></a> REPLACE オプションによる影響
+## <a name="replace-option-impact"></a><a name="REPLACEoption"></a> REPLACE オプションによる影響
 REPLACE は頻繁に使用すべきではありません。使用するのは十分に検討した後のみに限定してください。 通常、復元により、誤ってデータベースを別のデータベースで上書きしてしまうのを防ぐことができます。 RESTORE ステートメントで指定したデータベースが現在のサーバーに既に存在し、指定したデータベースのファミリ GUID がバックアップ セットに記録されているデータベースのファミリ GUID と異なる場合、そのデータベースは復元されません。 これは重要な保護機能です。
 
 REPLACE オプションは、通常は復元によって実行されるいくつかの重要な安全性チェックをオーバーライドします。 オーバーライドされるチェックは次のとおりです。
@@ -434,7 +434,7 @@ REPLACE オプションは、通常は復元によって実行されるいくつ
 
 RESTORE 権限は、サーバーでメンバーシップ情報を常に確認できるロールに与えられます。 固定データベース ロールのメンバーシップは、データベースがアクセス可能で破損していない場合にのみ確認することができますが、これは RESTORE の実行時に必ずしも保証されないため、`db_owner` 固定データベース ロールのメンバーには RESTORE 権限は付与されません。
 
-## <a name="examples"></a> 使用例
+## <a name="examples"></a><a name="examples"></a> 使用例
 
 次の例ではすべて、データベース全体のバックアップが既に実行されていることが前提です。
 
@@ -455,7 +455,7 @@ RESTORE の例を次に示します。
 > [!NOTE]
 > その他の例については、[復元と復旧の概要](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)に関するページにリストされている復元方法に関するトピックを参照してください。
 
-### <a name="restoring_full_db"></a> A. データベース全体を復元する
+### <a name="a-restoring-a-full-database"></a><a name="restoring_full_db"></a> A. データベース全体を復元する
 
 次の例では、`AdventureWorksBackups` 論理バックアップ デバイスからデータベース バックアップ全体を復元します。 このデバイスの作成例については、「[バックアップ デバイス](../../relational-databases/backup-restore/backup-devices-sql-server.md)」を参照してください。
 
@@ -469,7 +469,7 @@ RESTORE DATABASE AdventureWorks2012
 
 [&#91;例の先頭に戻る&#93;](#examples)
 
-### <a name="restoring_full_n_differential_db_backups"></a> B. データベースの完全および差分バックアップの復元
+### <a name="b-restoring-full-and-differential-database-backups"></a><a name="restoring_full_n_differential_db_backups"></a> B. データベースの完全および差分バックアップの復元
 
 次の例では、`Z:\SQLServerBackups\AdventureWorks2012.bak` バックアップ デバイスから、データベース全体のバックアップを復元した後、差分バックアップを復元します。 復元するデータベース全体のバックアップはデバイス上の 6 番目のバックアップ セット (`FILE = 6`) で、差分データベース バックアップはデバイス上の 9 番目のバックアップ セット (`FILE = 9`) です。 差分バックアップが復旧されると、データベースがすぐに復旧されます。
 
@@ -486,7 +486,7 @@ RESTORE DATABASE AdventureWorks2012
 
 [&#91;例の先頭に戻る&#93;](#examples)
 
-### <a name="restoring_db_using_RESTART"></a> C. RESTART 構文を使用してデータベースを復元する
+### <a name="c-restoring-a-database-using-restart-syntax"></a><a name="restoring_db_using_RESTART"></a> C. RESTART 構文を使用してデータベースを復元する
 
 次の例では、サーバーの電源異常による割り込みを受けた `RESTART` 操作を、`RESTORE` オプションで再起動します。
 
@@ -501,7 +501,7 @@ RESTORE DATABASE AdventureWorks2012
 
 [&#91;例の先頭に戻る&#93;](#examples)
 
-### <a name="restoring_db_n_move_files"></a> D. データベースを復元しファイルを移動する
+### <a name="d-restoring-a-database-and-move-files"></a><a name="restoring_db_n_move_files"></a> D. データベースを復元しファイルを移動する
 
 次の例では、データベース全体とトランザクション ログを復元し、復元したデータベースを `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data` ディレクトリに移動します。
 
@@ -520,7 +520,7 @@ RESTORE LOG AdventureWorks2012
 
 [&#91;例の先頭に戻る&#93;](#examples)
 
-### <a name="copying_db_using_bnr"></a> E. BACKUP および RESTORE を使用してデータベースのコピーを作成する
+### <a name="e-copying-a-database-using-backup-and-restore"></a><a name="copying_db_using_bnr"></a> E. BACKUP および RESTORE を使用してデータベースのコピーを作成する
 
 次の例では、`BACKUP` および `RESTORE` の両方のステートメントを使用して、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] のコピーを作成します。 `MOVE` ステートメントは、データとログ ファイルを指定の位置に復元します。 `RESTORE FILELISTONLY` ステートメントは、復元するデータベース内のファイル数と名前を判断するために使用します。 データベースの新しいコピーは、`TestDB` という名前になります。 詳細については、[RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md) に関するページを参照してください。
 
@@ -540,7 +540,7 @@ GO
 
 [&#91;例の先頭に戻る&#93;](#examples)
 
-### <a name="restoring_to_pit_using_STOPAT"></a> F. STOPAT を使って特定の時点の状態に復元する
+### <a name="f-restoring-to-a-point-in-time-using-stopat"></a><a name="restoring_to_pit_using_STOPAT"></a> F. STOPAT を使って特定の時点の状態に復元する
 
 次の例では、データベースを `12:00 AM``April 15, 2020` の状態に復元し、複数のログ バックアップが関連する復元操作を行います。 バックアップ デバイス `AdventureWorksBackups`において、復元するデータベース全体のバックアップはデバイス上の 3 番目のバックアップ セット (`FILE = 3`)、最初のログ バックアップは 4 番目のバックアップ セット (`FILE = 4`)、2 番目のログ バックアップは 5 番目のバックアップ セット (`FILE = 5`) です。
 
@@ -562,7 +562,7 @@ RESTORE DATABASE AdventureWorks2012 WITH RECOVERY;
 
 [&#91;例の先頭に戻る&#93;](#examples)
 
-### <a name="restoring_transaction_log_to_mark"></a> G. トランザクション ログをマークまで復元する
+### <a name="g-restoring-the-transaction-log-to-a-mark"></a><a name="restoring_transaction_log_to_mark"></a> G. トランザクション ログをマークまで復元する
 
 次の例では、トランザクション ログを `ListPriceUpdate`というマーク付きトランザクションのマークまで復元します。
 
@@ -601,7 +601,7 @@ RESTORE LOG AdventureWorks2012
 
 [&#91;例の先頭に戻る&#93;](#examples)
 
-### <a name="restoring_using_TAPE"></a> H. TAPE 構文を使用して復元する
+### <a name="h-restoring-using-tape-syntax"></a><a name="restoring_using_TAPE"></a> H. TAPE 構文を使用して復元する
 
 次の例では、`TAPE` バックアップ デバイスからデータベース バックアップ全体を復元します。
 
@@ -612,7 +612,7 @@ RESTORE DATABASE AdventureWorks2012
 
 [&#91;例の先頭に戻る&#93;](#examples)
 
-### <a name="restoring_using_FILE_n_FG"></a> I. FILE および FILEGROUP 構文を使用して復元する
+### <a name="i-restoring-using-file-and-filegroup-syntax"></a><a name="restoring_using_FILE_n_FG"></a> I. FILE および FILEGROUP 構文を使用して復元する
 
 次の例では、2 つのファイル、1 つのセカンダリ ファイル グループ、および 1 つのトランザクション ログを格納している `MyDatabase` という名前のデータベースを復元します。 このデータベースは、完全復旧モデルを使用しています。
 
@@ -656,7 +656,7 @@ GO
 
 [&#91;例の先頭に戻る&#93;](#examples)
 
-### <a name="reverting_from_db_snapshot"></a> J. データベース スナップショットに戻す
+### <a name="j-reverting-from-a-database-snapshot"></a><a name="reverting_from_db_snapshot"></a> J. データベース スナップショットに戻す
 
 次の例では、データベースをデータベース スナップショットに戻します。 この例では、現在、データベースに 1 つだけスナップショットが存在することを想定しています。 このデータベース スナップショットを作成する方法の例については、[データベース スナップショットの作成](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md)に関するページを参照してください。
 
@@ -673,7 +673,7 @@ GO
 
 [&#91;例の先頭に戻る&#93;](#examples)
 
-### <a name="Azure_Blob"></a> K. Microsoft Azure BLOB ストレージ サービスから復元する
+### <a name="k-restoring-from-the-microsoft-azure-blob-storage-service"></a><a name="Azure_Blob"></a> K. Microsoft Azure BLOB ストレージ サービスから復元する
 
 次の 3 つの例では、Microsoft Azure ストレージ サービスを使用します。 ストレージ アカウント名は `mystorageaccount`です。 データ ファイルのコンテナーは `myfirstcontainer` と呼ばれます。 バックアップ ファイルのコンテナーは `mysecondcontainer` と呼ばれます。 保存されているアクセス ポリシーは、各コンテナーの読み取り、書き込み、削除、および一覧表示権で作成されています。 SQL Server 資格情報は、保存されているアクセス ポリシーに関連付けられている Shared Access Signature を使用して作成されています。 Microsoft Azure Blob Storage を使用した SQL Server のバックアップと復元に固有の情報については、「[Microsoft Azure Blob ストレージ サービスを使用した SQL Server のバックアップと復元](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)」を参照してください。
 
@@ -814,11 +814,11 @@ GRANT CREATE ANY DATABASE TO [mylogin];
 
 RESTORE 権限は、サーバーでメンバーシップ情報を常に確認できるロールに与えられます。 固定データベース ロールのメンバーシップは、データベースがアクセス可能で破損していない場合にのみ確認することができますが、これは RESTORE の実行時に必ずしも保証されないため、`db_owner` 固定データベース ロールのメンバーには RESTORE 権限は付与されません。
 
-## <a name="examples"></a> 使用例
+## <a name="examples"></a><a name="examples"></a> 使用例
 
 次の例では、資格情報の作成を含め、URL からのコピーのみのデータベース バックアップを復元します。
 
-### <a name="restore-mi-database"></a> A. 4 つのバックアップ デバイスからデータベースを復元する
+### <a name="a-restore-database-from-four-backup-devices"></a><a name="restore-mi-database"></a> A. 4 つのバックアップ デバイスからデータベースを復元する
 
 ```sql
 
@@ -842,7 +842,7 @@ Msg 1801, Level 16, State 1, Line 9
 Database 'WideWorldImportersStandard' already exists. Choose a different database name.
 ```
 
-### <a name="restore-mi-database-variables"></a> B. 変数を使用して指定されたデータベースを復元する
+### <a name="b-restore-database-specified-via-variable"></a><a name="restore-mi-database-variables"></a> B. 変数を使用して指定されたデータベースを復元する
 
 ```sql
 DECLARE @db_name sysname = 'WideWorldImportersStandard';
@@ -852,7 +852,7 @@ RESTORE DATABASE @db_name
 FROM URL = @url
 ```
 
-### <a name="restore-mi-database-progress"></a> C. restore ステートメントの進行状況を追跡する
+### <a name="c-track-progress-of-restore-statement"></a><a name="restore-mi-database-progress"></a> C. restore ステートメントの進行状況を追跡する
 
 ```sql
 SELECT query = a.text, start_time, percent_complete,

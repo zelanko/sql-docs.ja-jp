@@ -15,10 +15,10 @@ ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: b4994a7398b038ce8b99d38b2584da6e95d7e552
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75242271"
 ---
 # <a name="job-properties---new-job-steps-page"></a>ジョブのプロパティ - [新しいジョブ] ([ステップ] ページ)
@@ -29,7 +29,7 @@ ms.locfileid: "75242271"
 
 このページを使用すると、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブのジョブ ステップを表示したり整理したりできます。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
 **[ジョブ ステップの一覧]**  
 このジョブのジョブ ステップを一覧表示します。  
   

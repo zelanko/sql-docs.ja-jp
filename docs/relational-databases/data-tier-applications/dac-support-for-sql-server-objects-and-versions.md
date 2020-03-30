@@ -13,10 +13,10 @@ ms.assetid: b1b78ded-16c0-4d69-8657-ec57925e68fd
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c0e0f85e21898ccf61d7c205305fc9179edc2af4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68810579"
 ---
 # <a name="dac-support-for-sql-server-objects-and-versions"></a>SQL Server オブジェクトとバージョンの DAC サポート
@@ -42,7 +42,7 @@ ms.locfileid: "68810579"
   
 -   [配置操作に関するその他の注意点](#Considerations)  
   
-##  <a name="SupportedObjects"></a> サポート対象の SQL Server オブジェクト  
+##  <a name="supported-sql-server-objects"></a><a name="SupportedObjects"></a> サポート対象の SQL Server オブジェクト  
  作成時または編集時にデータ層アプリケーションで指定できるのは、サポート対象オブジェクトのみです。 DAC でサポートされていないオブジェクトを含む既存のデータベースから DAC の抽出、登録、およびインポートを行うことはできません。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、DAC の以下のオブジェクトがサポートされています。  
   
 |||  
@@ -63,7 +63,7 @@ ms.locfileid: "68810579"
 |TYPE: ユーザー定義テーブル型|User|  
 |VIEW||  
   
-##  <a name="SupportByVersion"></a> SQL Server の各バージョンでのデータ層アプリケーション サポート  
+##  <a name="data-tier-application-support-by-the-versions-of-sql-server"></a><a name="SupportByVersion"></a> SQL Server の各バージョンでのデータ層アプリケーション サポート  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョンによって、DAC 操作に対するサポート レベルが異なります。 特定のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でサポートされるすべての DAC 操作は、そのバージョンのすべてのエディションでサポートされます。  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスでは、次の DAC 操作がサポートされています。  
@@ -88,7 +88,7 @@ ms.locfileid: "68810579"
   
  あるバージョンの DAC Framework でビルドされた DAC パッケージまたはエクスポート ファイルは、それ以降の任意のバージョンの DAC Framework で処理できます。 たとえば、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] クライアント ツールを使用して抽出された DAC パッケージは、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] SP1 以降のクライアント ツールを使用して配置できます。  
   
-##  <a name="DeploymentLimitations"></a> データ配置の制限  
+##  <a name="data-deployment-limitations"></a><a name="DeploymentLimitations"></a> データ配置の制限  
  SQL Server 2012 SP1 の DAC Framework データ配置エンジンには、忠実性に関してここで述べるような制限があることに注意してください。 制限が適用される DAC Framework 操作は、.dacpac ファイルの展開またはパブリッシュ、および .bacpac ファイルのインポートです。  
   
 1.  sql_variant 列内の特定の条件と基本データ型によるメタデータの消失。 影響を受ける場合は、次のような警告メッセージが表示されます:"**DAC Framework によって配置される場合、sql_variant 列内で使用される特定のデータ型の特定のプロパティは保持されません。** "  
@@ -113,7 +113,7 @@ ms.locfileid: "68810579"
   
     -   DECIMAL、NUMERIC の各基本データ型: 値の有効桁数が 28 を超える場合。  
   
-##  <a name="Considerations"></a> 配置操作に関するその他の注意点  
+##  <a name="additional-considerations-for-deployment-actions"></a><a name="Considerations"></a> 配置操作に関するその他の注意点  
  DAC Framework のデータ配置操作に関して次の点に注意してください。  
   
 -   **抽出、エクスポート** - DAC Framework を使用してデータベースからパッケージを作成する操作 (たとえば、.dacpac ファイルの抽出や .bacpac ファイルのエクスポート) では、ここで述べた制限は適用されません。 パッケージのデータは、ソース データベースのデータを完全に忠実に再現しています。 ここで述べた条件のいずれかがパッケージに存在する場合、抽出およびエクスポート ログに、上で述べたメッセージによって問題の概要が記録されます。 これは、作成したパッケージが潜在的なデータ配置の問題を抱えていることをユーザーに警告するためです。 ログには次のような概要メッセージも記録されます: **"これらの制限は、DAC Framework によって作成された DAC パッケージに格納されたデータ型および値の忠実性には影響しません。DAC パッケージをデータベースに配置した結果のデータ型および値に対してのみ適用されます。"影響を受けるデータおよび、この制限の対処方法の詳細については、** [こちらのトピック](https://go.microsoft.com/fwlink/?LinkId=267086)をご覧ください。  

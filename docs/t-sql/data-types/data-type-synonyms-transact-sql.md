@@ -17,10 +17,10 @@ ms.assetid: 390eef67-1a49-4185-a971-e07765be9717
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ebe6db6130b3d9f058c1c8c65572263348f3dd99
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72689842"
 ---
 # <a name="data-type-synonyms-transact-sql"></a>データ型のシノニム (Transact-SQL)
@@ -64,7 +64,7 @@ CREATE TABLE ExampleTable (PriKey int PRIMARY KEY, VarCharCol national character
   
 `VarCharCol` が **nvarchar(10)** データ型に割り当てられ、すべての後続のメタデータ関数では、列は **nvarchar(10)** 列として報告されます。 メタデータ関数は報告されませんとして、 **各国語文字 varying (10)** 列です。
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)
   
   

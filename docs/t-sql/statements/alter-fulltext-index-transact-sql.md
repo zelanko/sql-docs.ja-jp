@@ -22,10 +22,10 @@ ms.assetid: b6fbe9e6-3033-4d1b-b6bf-1437baeefec3
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: f9799b747883f876b413bf540516f5c2a1cbed11
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73981813"
 ---
 # <a name="alter-fulltext-index-transact-sql"></a>ALTER FULLTEXT INDEX (Transact-SQL)
@@ -205,7 +205,7 @@ ALTER FULLTEXT INDEX ON table_name
   
  検索プロパティ リストについて詳しくは、「[検索プロパティ リストを使用したドキュメント プロパティの検索](../../relational-databases/search/search-document-properties-with-search-property-lists.md)」をご覧ください。  
   
-## <a name="change-tracking-no-population"></a> 変更の追跡と NO POPULATION パラメーターの相関関係  
+## <a name="interactions-of-change-tracking-and-no-population-parameter"></a><a name="change-tracking-no-population"></a> 変更の追跡と NO POPULATION パラメーターの相関関係  
  フルテキスト インデックスが作成されるかどうかは、変更の追跡が有効になっているかどうかと、ALTER FULLTEXT INDEX ステートメントで WITH NO POPULATION が指定されているかどうかによって決まります。 次の表は、その相関関係の結果をまとめたものです。  
   
 |変更の追跡|WITH NO POPULATION|結果|  
@@ -217,7 +217,7 @@ ALTER FULLTEXT INDEX ON table_name
   
  フルテキスト インデックスの作成について詳しくは、「[フルテキスト インデックスの作成](../../relational-databases/search/populate-full-text-indexes.md)」をご覧ください。  
   
-## <a name="change-search-property-rebuild-index"></a> 検索プロパティ リストの変更によるインデックスの再構築  
+## <a name="changing-the-search-property-list-causes-rebuilding-the-index"></a><a name="change-search-property-rebuild-index"></a> 検索プロパティ リストの変更によるインデックスの再構築  
  フルテキスト インデックスを検索プロパティ リストに初めて関連付けるときには、プロパティに固有の検索語句のインデックスを作成するためにインデックスを再作成する必要があります。 既存のインデックス データの切り捨ては行われません。  
   
  ただし、フルテキスト インデックスを別のプロパティ リストに関連付けると、インデックスが再構築されます。 再構築によりフルテキスト インデックスが即座に切り捨てられ、既存のデータがすべて削除されるため、インデックスの再作成が必要です。 作成処理の間、ベース テーブルでのフルテキスト クエリでは、作成処理によってインデックスが既に作成されているテーブル行のみが検索の対象となります。 再作成されるインデックス データには、新たに追加された検索プロパティ リストの登録済みプロパティのメタデータが含まれます。  

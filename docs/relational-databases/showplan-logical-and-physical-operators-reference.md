@@ -138,10 +138,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2ff043c2b88fd18666dad1bac3e2430e67ad2bce
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "76037041"
 ---
 # <a name="showplan-logical-and-physical-operators-reference"></a>プラン表示の論理操作と物理操作のリファレンス
@@ -182,7 +182,7 @@ ms.locfileid: "76037041"
 ## <a name="operator-descriptions"></a>操作の説明  
  このセクションには、論理演算子と物理演算子の説明が含まれています。  
   
-|グラフィカルな実行プランのアイコン|プラン表示操作|[説明]|  
+|グラフィカルな実行プランのアイコン|プラン表示操作|説明|  
 |-----------------------------------|-----------------------|-----------------|  
 |![アダプティブ結合演算子アイコン](../relational-databases/media/AdaptiveJoin.gif "アダプティブ結合演算子アイコン")|**適応型結合**|**適応型結合**演算子を使うと、ハッシュ結合方法または入れ子になったループ結合方法のどちらを選ぶかを、最初の入力のスキャンが終わるまで遅らせることができます。 **適応型結合**演算子は、物理演算子です。 詳細については、「[アダプティブ結合について](../relational-databases/performance/joins.md#adaptive)」を参照してください。 | 
 |なし|**集計**|**Aggregate** 操作は、MIN、MAX、SUM、COUNT、AVG のいずれかが含まれた式を計算します。 **Aggregate** は、論理操作または物理操作です。| 

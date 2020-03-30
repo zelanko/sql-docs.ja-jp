@@ -21,10 +21,10 @@ ms.assetid: 05da5f3d-9222-43a9-893b-aa10f0f690f8
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 29b453914dce3d371ded8f401fd4af0380a115b8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67140221"
 ---
 # <a name="create-modify-and-delete-schedules"></a>Create, Modify, and Delete Schedules
@@ -52,7 +52,7 @@ ms.locfileid: "67140221"
 
 有効期限の切れたレポート固有スケジュールは、レポートに添付されたままになります。 スケジュールの有効期限が切れたかどうかは、終了日を確認することで判断できます。 有効期限が切れた共有スケジュールは、[共有スケジュール] の一覧に残ります。 スケジュールの有効期限が切れたかどうかは [状態] フィールドに表示されます。 終了日を延長してスケジュールを再設定するか、不要になった場合はそのスケジュールの参照を削除することができます。
 
-## <a name="bkmk_native"></a> 共有スケジュールを作成、削除、または変更する (Web ポータル)
+## <a name="create-delete-or-modify-a-shared-schedule-web-portal"></a><a name="bkmk_native"></a> 共有スケジュールを作成、削除、または変更する (Web ポータル)
  スケジュールの作成と変更は、スケジュールを実行する日時を指定する頻度オプションの設定で構成されます。
 
  スケジュールは、いつでも作成または変更できます。 ただし、変更が完了する前にスケジュールが実行された場合、変更前のスケジュールが使用されます。 変更されたスケジュールは、保存されるまで有効になりません。
@@ -114,7 +114,7 @@ ms.locfileid: "67140221"
 
  複数のレポートおよびサブスクリプションによって使用される共有スケジュールを削除した場合、以前にその共有スケジュールを使用していたレポートおよびサブスクリプションごとに別個のスケジュールが作成されます。 新たに作成される各スケジュールには、共有スケジュールで指定されていた日付、時刻、および定期的なパターンが保持されます。
 
-##  <a name="bkmk_sharepoint"></a> 共有スケジュールの作成および管理 (SharePoint モード)
+##  <a name="create-and-manage-shared-schedules-sharepoint-mode"></a><a name="bkmk_sharepoint"></a> 共有スケジュールの作成および管理 (SharePoint モード)
  SharePoint サイトでの共有スケジュールの作成、変更、または削除は、サイト管理者のみが実行できます。
 
  スケジュールは、わかりやすい名前を付けて識別できます。 名前が指定されなかった場合は、反復パターンや実行日時などの情報を基に既定の名前が作成されます。
@@ -142,7 +142,7 @@ ms.locfileid: "67140221"
 4.  スケジュールを選択し、 **[削除]** をクリックします。
 
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
  [スケジュール](../../reporting-services/subscriptions/schedules.md)  
  [共有スケジュールを一時停止および再開する](../../reporting-services/subscriptions/pause-and-resume-shared-schedules.md)  
  [レポートのキャッシュ (SSRS)](../../reporting-services/report-server/caching-reports-ssrs.md)  

@@ -13,10 +13,10 @@ author: lilgreenbird
 ms.author: v-susanh
 manager: kenvh
 ms.openlocfilehash: 2fab4794544ada07e0bf5e690da35b72ad6b7421
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69026102"
 ---
 # <a name="using-ntlm-authentication-to-connect-to-sql-server"></a>NTLM 認証を使用して SQL Server に接続する
@@ -102,6 +102,6 @@ SSL 暗号化を使用した接続の詳細については、以下を参照し�
 > [!NOTE]
 > 7\.4 リリースでは、拡張保護と暗号化の**両方**を有効にすることはサポートされていません。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [JDBC ドライバーによる SQL Server への接続](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)

@@ -17,10 +17,10 @@ ms.assetid: 636314fd-d099-45cd-8bb4-f730d0a06739
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 53fc016bc4657dd1dce7dd0eefcbea58a28ae14e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296992"
 ---
 # <a name="sending-to-a-remote-private-message-queue-with-the-script-task"></a>スクリプト タスクによるリモート プライベート メッセージ キューへの送信
@@ -44,9 +44,9 @@ ms.locfileid: "71296992"
     FORMATNAME:DIRECT=OS:<computername>\private$\<queuename>  
     ```  
   
-2.  メッセージ テキストをスクリプトに渡すために、**String** 型の **MessageText** という名前の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 変数を作成します。 この変数の値として既定のメッセージを入力します。  
+2.  メッセージ テキストをスクリプトに渡すために、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]String**型の**MessageText**という名前の** 変数を作成します。 この変数の値として既定のメッセージを入力します。  
   
-3.  スクリプト タスクをデザイン画面に追加して編集します。 **[スクリプト タスク エディター]** の **[スクリプト]** タブで、**ReadOnlyVariables** プロパティに `MessageText` 変数を追加し、この変数をスクリプト内で使用できるようにします。  
+3.  スクリプト タスクをデザイン画面に追加して編集します。 **[スクリプト タスク エディター]** の **[スクリプト]** タブで、`MessageText`ReadOnlyVariables**プロパティに** 変数を追加し、この変数をスクリプト内で使用できるようにします。  
   
 4.  **[スクリプトの編集]** をクリックして、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) スクリプト エディターを開きます。  
   

@@ -19,10 +19,10 @@ ms.assetid: 9f2feb3c-ea9b-4992-8202-2aeed4f9a6dd
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 19d9171278bac69eb8b092d6bc7ec69dcbcb71ff
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68023711"
 ---
 # <a name="prepare-a-secondary-database-for-an-always-on-availability-group"></a>Always On 可用性グループに対するセカンダリ データベースの準備
@@ -35,7 +35,7 @@ ms.locfileid: "68023711"
 > [!TIP]  
 >  既存のログ配布構成がある場合は、ログ配布プライマリ データベースとその 1 つ以上のセカンダリ データベースを、可用性グループ プライマリ レプリカと 1 つ以上のセカンダリ レプリカに変換できる場合があります。 詳細については、「[Always On 可用性グループにログ配布を移行する前提条件](../../../database-engine/availability-groups/windows/prereqs-migrating-log-shipping-to-always-on-availability-groups.md)」を参照してください。  
 
-##  <a name="Prerequisites"></a> 前提条件と制限  
+##  <a name="prerequisites-and-restrictions"></a><a name="Prerequisites"></a> 前提条件と制限  
   
 -   データベースを配置するシステムのディスク ドライブに、セカンダリ データベース用に十分な空き領域があることを確認します。  
   
@@ -49,21 +49,21 @@ ms.locfileid: "68023711"
   
 -   データベースの復元後、復元された最後のデータ バックアップの後に作成されたすべてのログ バックアップを復元する必要があります (WITH NORECOVERY)。  
   
-##  <a name="Recommendations"></a> 推奨事項  
+##  <a name="recommendations"></a><a name="Recommendations"></a> 推奨事項  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のスタンドアロン インスタンスでは、可能であれば、特定のセカンダリ データベースのファイル パス (ドライブ文字を含む) は、対応するプライマリ データベースのパスと一致させることをお勧めします。 セカンダリ データベースの作成時にデータベース ファイルを移動し、その後でセカンダリ データベースにファイルを追加しようとした場合、ファイルの追加操作が失敗し、セカンダリ データベースが中断される可能性があるためです。  
   
 -   セカンダリ データベースを準備する場合は、セカンダリ レプリカの初期化が完了するまでの間、可用性グループ内のデータベースでスケジュールされているログ パックアップを一時停止することを強くお勧めします。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
  データベースをバックアップするときに、 [TRUSTWORTHY データベース プロパティ](../../../relational-databases/security/trustworthy-database-property.md) は OFF に設定されます。 したがって、新たに復元されたデータベースでは TRUSTWORTHY は常に OFF です。  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  BACKUP DATABASE 権限と BACKUP LOG 権限は、既定では、 **sysadmin** 固定サーバー ロール、 **db_owner** 固定データベース ロール、および **db_backupoperator** 固定データベース ロールのメンバーに与えられています。 詳細については、「 [BACKUP &#40;Transact-SQL&#41;](../../../t-sql/statements/backup-transact-sql.md)」を参照してください。  
   
  復元するデータベースがサーバー インスタンスに存在しない場合、RESTORE ステートメントに CREATE DATABASE 権限が必要です。 詳細については、「 [RESTORE &#40;Transact-SQL&#41;](../../../t-sql/statements/restore-statements-transact-sql.md)で復元することはできません。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="use-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 > [!NOTE]  
 >  バックアップ ファイルと復元ファイルのパスが、プライマリ レプリカをホストするサーバー インスタンスとセカンダリ レプリカをホストする各インスタンスとで同じ場合は、[新しい可用性グループ ウィザード](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)、[可用性グループへのレプリカ追加ウィザード](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)、または[可用性グループへのデータベース追加ウィザード](../../../database-engine/availability-groups/windows/availability-group-add-database-to-group-wizard.md)を使用して、セカンダリ レプリカ データベースを作成できます。  
@@ -88,7 +88,7 @@ ms.locfileid: "68023711"
 > [!NOTE]  
 >  これらのバックアップ操作および復元操作の実行方法については、このセクションの「 [関連するバックアップおよび復元のタスク](#RelatedTasks)」を参照してください。  
   
-###  <a name="RelatedTasks"></a> 関連するバックアップおよび復元のタスク  
+###  <a name="related-backup-and-restore-tasks"></a><a name="RelatedTasks"></a> 関連するバックアップおよび復元のタスク  
  **データベースのバックアップを作成するには**  
   
 -   [データベースの完全バックアップの作成 &#40;SQL Server&#41;](../../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
@@ -109,7 +109,7 @@ ms.locfileid: "68023711"
   
 -   [データベースを新しい場所に復元する &#40;SQL Server&#41;](../../../relational-databases/backup-restore/restore-a-database-to-a-new-location-sql-server.md)  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL の使用  
  **セカンダリ データベースを準備するには**  
   
 > [!NOTE]  
@@ -131,7 +131,7 @@ ms.locfileid: "68023711"
 > [!NOTE]  
 >  これらのバックアップ操作および復元操作の実行方法については、このトピックの「 [関連するバックアップおよび復元のタスク](#RelatedTasks)」を参照してください。  
   
-###  <a name="ExampleTsql"></a> Transact-SQL の例  
+###  <a name="transact-sql-example"></a><a name="ExampleTsql"></a> Transact-SQL の例  
  次の例では、セカンダリ データベースを準備します。 この例では、既定で単純復旧モデルを使用する [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] サンプル データベースを使用します。  
   
 1.  [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] データベースを使用するには、完全復旧モデルが使用されるように変更します。  
@@ -227,7 +227,7 @@ ms.locfileid: "68023711"
     GO  
     ```  
   
-##  <a name="PowerShellProcedure"></a> PowerShell の使用  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> PowerShell の使用  
  **セカンダリ データベースを準備するには**  
   
 1.  プライマリ データベースの最新のバックアップを作成する必要がある場合は、プライマリ レプリカがホストされているサーバー インスタンスにディレクトリを変更します (**cd**)。  
@@ -247,7 +247,7 @@ ms.locfileid: "68023711"
   
 -   [SQL Server PowerShell プロバイダー](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-###  <a name="ExamplePSscript"></a> バックアップと復元のスクリプトとコマンドのサンプル  
+###  <a name="sample-backup-and-restore-script-and-command"></a><a name="ExamplePSscript"></a> バックアップと復元のスクリプトとコマンドのサンプル  
  次の PowerShell コマンドは、データベースの完全バックアップとトランザクション ログをネットワーク共有にバックアップし、その共有からこれらのバックアップを復元します。 この例では、データベースの復元先のファイル パスとデータベースがバックアップされたファイル パスが同じであると想定しています。  
   
 ```  
@@ -262,10 +262,10 @@ Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.trn" -R
   
 ```  
   
-##  <a name="FollowUp"></a> 次のステップ  
+##  <a name="next-steps"></a><a name="FollowUp"></a> 次のステップ  
  セカンダリ データベースの構成を完了するには、新たに復元したデータベースを可用性グループに参加させる必要があります。 詳細については、「 [可用性グループへのセカンダリ データベースの参加 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md)のインスタンスに AlwaysOn 可用性グループを作成する方法について説明します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [BACKUP &#40;Transact-SQL&#41;](../../../t-sql/statements/backup-transact-sql.md)   
  [RESTORE の引数 &#40;Transact-SQL&#41;](../../../t-sql/statements/restore-statements-arguments-transact-sql.md)   

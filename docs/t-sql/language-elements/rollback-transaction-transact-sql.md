@@ -26,10 +26,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: cfd14c6cd0147d9e4c163a4802f060ecc4374754
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68121821"
 ---
 # <a name="rollback-transaction-transact-sql"></a>ROLLBACK TRANSACTION (Transact-SQL)
@@ -51,7 +51,7 @@ ROLLBACK { TRAN | TRANSACTION }
   
 ## <a name="arguments"></a>引数  
  *transaction_name*  
- BEGIN TRANSACTION においてトランザクションに割り当てられた名前です。 *transaction_name* は識別子のルールに従っている必要があります。ただし、使用されるのはトランザクション名の先頭の 32 文字だけです。 トランザクションを入れ子にしている場合は、*transaction_name* は最も外側の BEGIN TRANSACTION ステートメントの名前である必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスで大文字と小文字が区別されない場合であっても、*transaction_name* では常に大文字と小文字が区別されます。  
+ BEGIN TRANSACTION においてトランザクションに割り当てられた名前です。 *transaction_name* は識別子のルールに従っている必要があります。ただし、使用されるのはトランザクション名の先頭の 32 文字だけです。 トランザクションを入れ子にしている場合は、*transaction_name* は最も外側の BEGIN TRANSACTION ステートメントの名前である必要があります。 *のインスタンスで大文字と小文字が区別されない場合であっても、* transaction_name[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では常に大文字と小文字が区別されます。  
   
  **@** *tran_name_variable*  
  有効なトランザクション名を格納しているユーザー定義変数の名前を指定します。 変数は、**char**、**varchar**、**nchar**、または **nvarchar** データ型を使用して宣言する必要があります。  

@@ -47,10 +47,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9ae139dda1837a6d8698809f984060f0b341b758
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287926"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
@@ -331,7 +331,7 @@ DELAYED_DURABILITY = { OFF | ON }
   
  詳しくは、「[トランザクションの持続性の制御](../../relational-databases/logs/control-transaction-durability.md)」をご覧ください。  
 
-## <a name="Simple"></a> 簡単な例
+## <a name="simple-examples"></a><a name="Simple"></a> 簡単な例
 
 作業を始めるときに役立つ 2 つの簡単な例を次に示します。  
 `SELECT DB_NAME() AS ThisDB;` は、現在のデータベースの名前を返します。  
@@ -464,7 +464,7 @@ GO
   
  CLR ストアド プロシージャの場合は、EXTERNAL NAME 句で参照されるアセンブリの所有権、またはそのアセンブリの **REFERENCES** 権限が必要です。  
   
-##  <a name="mot"></a> CREATE PROCEDURE とメモリ最適化テーブル  
+##  <a name="create-procedure-and-memory-optimized-tables"></a><a name="mot"></a> CREATE PROCEDURE とメモリ最適化テーブル  
  メモリ最適化テーブルには、従来のストアド プロシージャとネイティブ コンパイル ストアド プロシージャの両方からアクセスできます。 ほとんどの場合、ネイティブ プロシージャの方が効率的です。
 詳細については、次を参照してください。 [ネイティブ コンパイル ストアド プロシージャ](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)です。  
   
@@ -487,7 +487,7 @@ GO
   
  ネイティブ コンパイル ストアド プロシージャでのプログラミング機能、サポートされるクエリ対象領域、および演算子について詳しくは、「[ネイティブ コンパイル T-SQL モジュールでサポートされる機能](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)」をご覧ください。  
   
-## <a name="Examples"></a> 使用例  
+## <a name="examples"></a><a name="Examples"></a> 使用例  
   
 |カテゴリ|主な構文要素|  
 |--------------|------------------------------|  
@@ -499,7 +499,7 @@ GO
 |[プロシージャの強制再コンパイル](#Recompile)|WITH RECOMPILE|  
 |[セキュリティ コンテキストの設定](#Security)|EXECUTE AS|  
   
-###  <a name="BasicSyntax"></a> 基本構文  
+###  <a name="basic-syntax"></a><a name="BasicSyntax"></a> 基本構文  
  このセクションの例では、最低限必要な構文を使用して  CREATE PROCEDURE ステートメントの基本機能を示します。  
   
 #### <a name="a-creating-a-simple-transact-sql-procedure"></a>A. 単純な Transact-SQL プロシージャを作成する  
@@ -558,7 +558,7 @@ AS EXTERNAL NAME HandlingLOBUsingCLR.LargeObjectBinary.GetPhotoFromDB;
 GO  
 ```  
   
-###  <a name="Parameters"></a> パラメーターの引き渡し  
+###  <a name="passing-parameters"></a><a name="Parameters"></a> パラメーターの引き渡し  
  このセクションの例では、入力パラメーターと出力パラメーターを使用してストアド プロシージャ間で値を受け渡す方法を示します。  
   
 #### <a name="d-creating-a-procedure-with-input-parameters"></a>D. 入力パラメーターを使用したプロシージャを作成する  
@@ -766,7 +766,7 @@ DEALLOCATE @MyCursor;
 GO  
 ```  
   
-###  <a name="Modify"></a> ストアド プロシージャを使用したデータの変更  
+###  <a name="modifying-data-by-using-a-stored-procedure"></a><a name="Modify"></a> ストアド プロシージャを使用したデータの変更  
  このセクションの例では、プロシージャの定義にデータ操作言語 (DML) ステートメントを含めることで、テーブルまたはビューのデータを挿入または変更する方法を示します。  
   
 #### <a name="i-using-update-in-a-stored-procedure"></a>I. UPDATE をストアド プロシージャで使用する  
@@ -790,7 +790,7 @@ GO
 EXEC HumanResources.Update_VacationHours 40;  
 ```  
   
-###  <a name="Error"></a> エラー処理  
+###  <a name="error-handling"></a><a name="Error"></a> エラー処理  
  このセクションの例では、ストアド プロシージャの実行時に発生する可能性のあるエラーの処理方法を示します。  
   
 #### <a name="j-using-trycatch"></a>J. TRY...CATCH の使用  
@@ -865,7 +865,7 @@ EXEC Production.uspDeleteWorkOrder 15;
 DROP PROCEDURE Production.uspDeleteWorkOrder;  
 ```  
   
-###  <a name="Encrypt"></a> プロシージャの定義の難読化  
+###  <a name="obfuscating-the-procedure-definition"></a><a name="Encrypt"></a> プロシージャの定義の難読化  
  このセクションの例では、ストアド プロシージャの定義を難読化する方法を示します。  
   
 #### <a name="k-using-the-with-encryption-option"></a>K. WITH ENCRYPTION オプションを使用する  
@@ -911,7 +911,7 @@ WHERE object_id = OBJECT_ID('HumanResources.uspEncryptThis');
  NULL  
  ```  
   
-###  <a name="Recompile"></a> プロシージャの強制再コンパイル  
+###  <a name="forcing-the-procedure-to-recompile"></a><a name="Recompile"></a> プロシージャの強制再コンパイル  
  このセクションの例では、WITH RECOMPILE 句を使用して、プロシージャを実行するたびに再コンパイルするように強制します。  
   
 #### <a name="l-using-the-with-recompile-option"></a>L. WITH RECOMPILE オプションを使用する  
@@ -934,7 +934,7 @@ AS
     WHERE v.Name LIKE @Name;  
 ```  
   
-###  <a name="Security"></a> セキュリティ コンテキストの設定  
+###  <a name="setting-the-security-context"></a><a name="Security"></a> セキュリティ コンテキストの設定  
  このセクションの例では、EXECUTE AS 句を使用して、ストアド プロシージャが実行されるセキュリティ コンテキストを設定します。  
   
 #### <a name="m-using-the-execute-as-clause"></a>M. EXECUTE AS 句を使用する  

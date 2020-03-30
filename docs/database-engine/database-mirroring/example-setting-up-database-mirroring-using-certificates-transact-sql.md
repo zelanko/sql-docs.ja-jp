@@ -17,10 +17,10 @@ ms.assetid: df489ecd-deee-465c-a26a-6d1bef6d7b66
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 5e7c3a2fd690b7a19f7d94de7e8d4fbbd9cac355
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75253593"
 ---
 # <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>例:証明書を使用したデータベース ミラーリングの設定 (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "75253593"
   
  証明書を別のシステムにコピーする場合は、セキュリティで保護されたコピー方法を使用してください。 すべての証明書をセキュリティで保護された状態で保管するよう十分に注意してください。  
   
-##  <a name="ExampleH2"></a> 例  
+##  <a name="example"></a><a name="ExampleH2"></a> 例  
  以下の例は、HOST_A に存在するパートナーで実行する必要のある処理を示しています。 この例では、2 つのパートナーが、3 つのコンピューター システムの既定のサーバー インスタンスです。 2 つのサーバー インスタンスは、信頼されていない Windows ドメインで実行されているため、証明書ベースの認証が必要です。  
   
  初期プリンシパル ロールは HOST_A によって取得され、ミラー ロールは HOST_B によって取得されます。  
@@ -62,7 +62,7 @@ ms.locfileid: "75253593"
   
 4.  [ミラーリング パートナーの構成](#ConfigureMirroringPartners)  
   
-###  <a name="ConfiguringOutboundConnections"></a> 発信接続の構成  
+###  <a name="configuring-outbound-connections"></a><a name="ConfiguringOutboundConnections"></a> 発信接続の構成  
  **発信接続用に Host_A を構成するには**  
   
 1.  master データベースで、必要な場合はデータベース マスター キーを作成します。  
@@ -156,7 +156,7 @@ ms.locfileid: "75253593"
   
  [&#91;例の先頭に戻る&#93;](#ExampleH2)  
   
-###  <a name="ConfigureInboundConnections"></a> 着信接続の構成  
+###  <a name="configuring-inbound-connections"></a><a name="ConfigureInboundConnections"></a> 着信接続の構成  
  **着信接続用に Host_A を構成するには**  
   
 1.  HOST_B に対するログインを HOST_A に作成します。  
@@ -233,7 +233,7 @@ ms.locfileid: "75253593"
 ### <a name="creating-the-mirror-database"></a>ミラー データベースの作成  
  ミラー データベースを作成する方法の詳細については、「 [ミラーリングのためのミラー データベースの準備 &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)を使用します。  
   
-###  <a name="ConfigureMirroringPartners"></a> ミラーリング パートナーの構成  
+###  <a name="configuring-the-mirroring-partners"></a><a name="ConfigureMirroringPartners"></a> ミラーリング パートナーの構成  
   
 1.  HOST_B のミラー サーバー インスタンスで、HOST_A のサーバー インスタンスをパートナー (最初のプリンシパル サーバー インスタンス) として設定します。 `TCP://HOST_A.Mydomain.Corp.Adventure-Works``.com:7024`の部分を有効なネットワーク アドレスに置き換えます。 詳細については、「 [サーバー ネットワーク アドレスの指定 &#40;データベース ミラーリング&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)を使用します。  
   
@@ -267,7 +267,7 @@ ms.locfileid: "75253593"
   
  [&#91;例の先頭に戻る&#93;](#ExampleH2)  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
   
 -   [ミラーリングのためのミラー データベースの準備 &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)  
   

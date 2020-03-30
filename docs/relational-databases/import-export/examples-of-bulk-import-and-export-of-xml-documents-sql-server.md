@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 9a665f51aa6fd6bc9b87ac354a26856049004d7e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74401585"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>XML ドキュメントの一括インポートと一括エクスポートの例 (SQL Server)
@@ -61,7 +61,7 @@ ms.locfileid: "74401585"
   
 -  [E.XML データの一括エクスポートを行う](#bulk_export_xml_data)  
   
-## <a name="binary_byte_stream"></a>バイナリ バイト ストリームとして XML の一括インポートを行う  
+## <a name="bulk-importing-xml-data-as-a-binary-byte-stream"></a><a name="binary_byte_stream"></a>バイナリ バイト ストリームとして XML の一括インポートを行う  
  適用するエンコード宣言が含まれているファイルから XML データの一括インポートを行うときは、OPENROWSET(BULK...) 句で SINGLE_BLOB オプションを指定します。 SINGLE_BLOB オプションが指定されていると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の XML パーサーは必ず XML 宣言で指定されたエンコード体系に従ってデータをインポートします。  
   
 #### <a name="sample-table"></a>サンプル テーブル  
@@ -108,7 +108,7 @@ SELECT * FROM OPENROWSET(
   
  [&#91;先頭に戻る&#93;](#top)  
   
-##  <a name="existing_row"></a> 既存の行に XML データの一括インポートを行う  
+##  <a name="bulk-importing-xml-data-in-an-existing-row"></a><a name="existing_row"></a> 既存の行に XML データの一括インポートを行う  
  この例では `OPENROWSET` 一括行セット プロパイダを使用して、XML インスタンスを既存のサンプル テーブル `T`の 1 行または複数の行に追加します。  
   
 > [!NOTE]  
@@ -143,7 +143,7 @@ GO
   
  [&#91;先頭に戻る&#93;](#top)  
   
-## <a name="file_contains_dtd"></a> DTD を含むファイルから XML データの一括インポートを行う  
+## <a name="bulk-importing-xml-data-from-a-file-that-contains-a-dtd"></a><a name="file_contains_dtd"></a> DTD を含むファイルから XML データの一括インポートを行う  
   
 > [!IMPORTANT]  
 >  作業中の XML 環境で DTD (文書型定義) が特に必要ではない場合は、DTD のサポートを無効にしておくことをお勧めします。 DTD のサポートを有効にすると、使用しているサーバーが外部からの攻撃を受けやすくなり、サービス拒否攻撃の危険にさらされる場合があります。 DTD のサポートを有効にする必要がある場合は、信頼できる XML ドキュメントのみを処理することにより、このセキュリティ上のリスクを軽減できます。  
@@ -189,7 +189,7 @@ INSERT T1
   
  [&#91;先頭に戻る&#93;](#top)  
   
-## <a name="field_terminator_in_format_file"></a> フォーマット ファイルを使用してフィールド ターミネータを明示的に指定する  
+## <a name="specifying-the-field-terminator-explicitly-using-a-format-file"></a><a name="field_terminator_in_format_file"></a> フォーマット ファイルを使用してフィールド ターミネータを明示的に指定する  
  次の例では、XML ドキュメント `Xmltable.dat`を一括インポートする方法を示します。  
   
 #### <a name="sample-data-file"></a>サンプル データ ファイル  
@@ -252,7 +252,7 @@ GO
   
  [&#91;先頭に戻る&#93;](#top)  
   
-## <a name="bulk_export_xml_data"></a> XML データの一括エクスポートを行う  
+## <a name="bulk-exporting-xml-data"></a><a name="bulk_export_xml_data"></a> XML データの一括エクスポートを行う  
  次の例では、[bcp](../../tools/bcp-utility.md) を使用し、同じ XML フォーマット ファイルを使用して、前の例で作成されたテーブルから XML データの一括エクスポートを行います。 次の `bcp` コマンドで、 `<server_name>` と `<instance_name>` はプレースホルダーであり、適切な値との差し替えが必要です。  
   
 ```cmd

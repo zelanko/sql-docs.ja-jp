@@ -18,10 +18,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: d16b152bed2a0ed774ea443ada13201e4416f173
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74055923"
 ---
 # <a name="specify-compatibility-data-formats-when-using-bcp-sql-server"></a>bcp を使用して互換性データ形式を指定する (SQL Server)
@@ -32,7 +32,7 @@ ms.locfileid: "74055923"
 >  データをインポートまたはエクスポートするためのデータ形式に精通していない場合は、「 [一括インポートまたは一括エクスポートのデータ形式 &#40;SQL Server&#41;](../../relational-databases/import-export/data-formats-for-bulk-import-or-bulk-export-sql-server.md)」を参照してください。  
   
   
-##  <a name="bcpDataFormatAttr"></a> bcp データ形式の属性  
+##  <a name="bcp-data-format-attributes"></a><a name="bcpDataFormatAttr"></a> bcp データ形式の属性  
  **bcp** コマンドにより、次のデータ形式属性に関して、データ ファイル内の各フィールドの構造を指定できます。  
   
 -   ファイル ストレージ型  
@@ -52,7 +52,7 @@ ms.locfileid: "74055923"
      文字列データ フィールドでは、省略可能なターミネータ文字を使用して、データ ファイルの各フィールドの末尾 ( *フィールド ターミネータ*を使用) と各行の末尾 ( *行ターミネータ*を使用) を示すことができます。 ターミネータ文字は、フィールドや行の終了位置と次のフィールドや行の開始位置を、データ ファイルを読み取るプログラムに示す方法の 1 つです。 詳細については、「 [フィールド ターミネータと行ターミネータの指定 &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)」を参照してください。  
   
   
-##  <a name="FieldSpecificPrompts"></a> フィールド固有のプロンプトの概要  
+##  <a name="overview-of-the-field-specific-prompts"></a><a name="FieldSpecificPrompts"></a> フィールド固有のプロンプトの概要  
  対話的な **bcp** コマンドに **in** オプションまたは **out** オプションが含まれていて、フォーマット ファイル スイッチ ( **-f**) またはデータ形式スイッチ ( **-n**、 **-c**、 **-w**、または **-N**) のいずれも含まれていない場合は、ソース テーブルとターゲット テーブルの各列で、上記の属性について順番に問い合わせが行われます。 問い合わせが行われる際は、 **bcp** コマンドにより、テーブル列の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型に基づいてそれぞれ既定値が表示されます。 すべての問い合わせに対して既定値を受け入れることは、コマンド ラインでネイティブ形式 ( **-n**) を指定するのと同じ結果になります。 各プロンプトには、[*default*] のように既定値が角かっこ付きで表示されます。 表示される既定値を受け入れるには、Enter キーを押します。 既定値以外を指定するには、プロンプトで新しい値を入力します。  
   
 ### <a name="example"></a>例  
@@ -87,7 +87,7 @@ bcp AdventureWorks.HumanResources.myTeam out myTeam.txt -T
  テーブルの列ごとに、列の順番に従って、同等のプロンプトが (必要に応じて) 表示されます。  
   
   
-##  <a name="FieldByFieldNonXmlFF"></a> XML 以外のフォーマット ファイルでのフィールドごとのデータの格納  
+##  <a name="storing-field-by-field-data-in-a-non-xml-format-file"></a><a name="FieldByFieldNonXmlFF"></a> XML 以外のフォーマット ファイルでのフィールドごとのデータの格納  
  すべてのテーブル列の情報を指定すると、 **bcp** コマンドから XML 以外のフォーマット ファイルを生成することを求められます。この生成は省略可能です。このフォーマット ファイルには、プロンプトに応じて指定したフィールドごとの情報が格納されます (上記の例を参照)。 フォーマット ファイルを生成することを選択すると、いつでも、そのテーブルからデータをエクスポートしたり、同じような構造のデータを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]にインポートできます。  
   
 > [!NOTE]  

@@ -17,10 +17,10 @@ ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b43cbcb051a1c6be2d26288a427d7a75e89a7f70
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75258884"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>データベース ミラーリング セッションへのクライアントの接続 (SQL Server)
@@ -28,7 +28,7 @@ ms.locfileid: "75258884"
   データベース ミラーリング セッションに接続するには、クライアント側で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client または .NET Framework Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を使用できます。 これらのデータ アクセス プロバイダーは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] データベース用に構成されると、両方ともデータベース ミラーリングを完全にサポートします。 ミラー化されたデータベースの使用に関するプログラミングの注意点については、「 [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md)」を参照してください。 さらに、現在のプリンシパル サーバー インスタンスは使用可能であり、クライアントのログインがサーバー インスタンス上に作成されている必要があります。 詳細については、「 [孤立ユーザーのトラブルシューティング &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)を実行します。 データベース ミラーリング セッションへのクライアント接続では、ミラーリング監視サーバー インスタンスが存在していても使用されません。  
   
   
-##  <a name="InitialConnection"></a> データベース ミラーリング セッションへの最初の接続  
+##  <a name="making-the-initial-connection-to-a-database-mirroring-session"></a><a name="InitialConnection"></a> データベース ミラーリング セッションへの最初の接続  
  クライアントはミラー化されたデータベースに初めて接続するときに、最低限サーバー インスタンスの名前を含む接続文字列を指定する必要があります。 この必須のサーバー名は、現在のプリンシパル サーバー インスタンスを特定するもので、 *イニシャル パートナー名*と呼びます。  
   
  接続文字列には、必要に応じて、別のサーバー インスタンスの名前を指定することもできます。この名前は、現在のミラー サーバー インスタンスを特定するもので、最初の接続試行でイニシャル パートナーを使用できない場合に使用されます。 この 2 つ目の名前を *フェールオーバー パートナー名*と呼びます。  
@@ -155,7 +155,7 @@ Server=123.34.45.56,4724;
 "Server=250.65.43.21,4734; Failover_Partner=Partner_B; Database=AdventureWorks; Network=dbmssocn"  
 ```  
   
-##  <a name="RetryAlgorithm"></a> 接続再試行アルゴリズム (TCP/IP 接続用)  
+##  <a name="connection-retry-algorithm-for-tcpip-connections"></a><a name="RetryAlgorithm"></a> 接続再試行アルゴリズム (TCP/IP 接続用)  
  TCP/IP 接続では、両方のパートナー名がキャッシュ内に存在すると、データ アクセス プロバイダーは接続再試行アルゴリズムに従います。 これは、セッションに初めて接続する場合にも、確立した接続が切断された後に再接続する場合にも当てはまります。 接続を開いた後の場合、ログイン前およびログイン時の手順を完了するのにさらに時間がかかります。  
   
 > [!NOTE]  
@@ -204,7 +204,7 @@ Server=123.34.45.56,4724;
   
  ![再試行間隔のアルゴリズム](../../database-engine/database-mirroring/media/dbm-retry-delay-algorithm.gif "再試行間隔のアルゴリズム")  
   
-##  <a name="Reconnecting"></a> データベース ミラーリング セッションへの再接続  
+##  <a name="reconnecting-to-a-database-mirroring-session"></a><a name="Reconnecting"></a> データベース ミラーリング セッションへの再接続  
  データベース ミラーリングのフェールオーバーなどの理由でデータベース ミラーリング セッションに対して確立された接続が失敗し、アプリケーションが最初のサーバーに再接続を試みると、データ アクセス プロバイダーは、クライアントのキャッシュに保存されたフェールオーバー パートナー名を使用して再接続を試みる場合があります。 ただし、再接続は自動的には行われず、 アプリケーションではエラーを検出することになります。 その後、アプリケーションは失敗した接続を閉じて、同じ接続文字列属性を使用して新しい接続を開く必要があります。 この時点で、データ アクセス プロバイダーがフェールオーバー パートナーに接続をリダイレクトします。 この名前で識別されるサーバー インスタンスが現在のプリンシパル サーバーの場合は、通常、接続試行は成功します。 トランザクションがコミットされたかロールバックされたかはっきりしない場合、アプリケーションでは、スタンドアロンのサーバー インスタンスに再接続するときと同じように、トランザクションの状態を確認する必要があります。  
   
  再接続は、接続文字列でフェールオーバー パートナー名を指定した最初の接続と同様に行われます。 最初の接続試行が失敗すると、クライアントがプリンシパル サーバーに接続するか、データ アクセス プロバイダーがタイムアウトするまで、イニシャル パートナー名とフェールオーバー パートナー名を交互に使用して接続が試行されます。  
@@ -225,7 +225,7 @@ Server=123.34.45.56,4724;
   
 ##  <a name="Benefits"></a>   
   
-##  <a name="StalePartnerName"></a> 古いフェールオーバー パートナー名の影響  
+##  <a name="the-impact-of-a-stale-failover-partner-name"></a><a name="StalePartnerName"></a> 古いフェールオーバー パートナー名の影響  
  データベース管理者はフェールオーバー パートナーをいつでも変更できます。 このため、クライアントが指定したフェールオーバー パートナー名が *古い*場合があります。 たとえば、別のサーバー インスタンス Partner_C で置き換えられる Partner_B というフェールオーバー パートナーを考えてみます。 クライアントがフェールオーバー パートナー名として Partner_B を指定した場合、それは古い名前です。 クライアント指定のフェールオーバー パートナー名が古い場合、データ アクセス プロバイダーは、クライアントでフェールオーバー パートナー名が指定されていない場合と同じように動作します。  
   
  たとえば、クライアントによって 1 つの接続文字列が 4 回の接続試行に使用される場合を検討します。 この接続文字列では、次のようにイニシャル パートナー名が Partner_A で、フェールオーバー パートナー名が Partner_B です。  

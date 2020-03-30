@@ -13,17 +13,17 @@ ms.assetid: 9531588c-e7ec-4049-9f9c-ee000c49c5de
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 9238bced3c9e0afe81a6eaaf7c9747c27ab4b3a9
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75245784"
 ---
 # <a name="open-with-new-file"></a>[ファイルを開くアプリケーションの選択] ([新しいファイル])
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 1 つ以上のエディターでドキュメントを開くには、 **[ファイル]** メニューの **[開く]** をクリックし、次に **[ファイル]** をクリックします。 **[ファイルを開く]** ダイアログ ボックスでファイルを選択し、 **[開く]** の横の矢印をクリックし、次に **[ファイルを開くアプリケーションの選択]** をクリックします。 **[ファイルを開くアプリケーションの選択]** ダイアログ ボックスの **[このファイルを開くのに使用するプログラムを選択してください]** の一覧で、目的のプログラムをクリックし、次に **[開く]** をクリックします。  
   
-## <a name="options"></a>オプション  
+## <a name="options"></a>Options  
 **[このファイルを開くのに使用するプログラムを選択してください]**  
 選択されているファイルの種類に対して [!INCLUDE[msCoName](../../includes/msconame_md.md)] Visual Studio で利用可能なエディターを一覧表示します。 ドキュメントを開くために使用するエディターを一覧から選択するか、 **[追加]** をクリックして新しいエディターを一覧に含めます。  
   

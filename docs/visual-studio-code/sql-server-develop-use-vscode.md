@@ -9,10 +9,10 @@ author: markingmyname
 ms.author: maghan
 ms.date: 10/28/2019
 ms.openlocfilehash: 615e205566ced2c1d0a66ab69b3e9eb80c7f82f3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75558457"
 ---
 # <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts"></a>Visual Studio Code を使用して Transact-SQL スクリプトを作成して実行する
@@ -193,7 +193,7 @@ mssql 拡張機能では、言語モードが **SQL** に設定されている�
 
 2. **Ctrl**+**Shift**+**E** を押してコマンドを実行します。 2 つの結果セットが **[結果]** ウィンドウに表示されます。
 
-   ![[結果]](./media/sql-server-develop-use-vscode/vscode-result-grid.png)
+   ![結果](./media/sql-server-develop-use-vscode/vscode-result-grid.png)
 
 ## <a name="view-and-save-the-result"></a>結果を表示して保存する
 

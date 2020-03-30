@@ -11,10 +11,10 @@ ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 767de0e7c255a96ba9aa4b2c7201c423b1269d80
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68014680"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>Always On 可用性グループのパフォーマンスを監視する
@@ -436,7 +436,7 @@ DMV の [sys.dm_hadr_database_replica_states](../../../relational-databases/syst
   
  評価結果を検査するために、ジョブの履歴を表示することができます。 評価エラーは、イベント ID 34052 で Windows アプリケーション ログ (イベント ビューアー内) にも記録されます。 また、ポリシー エラー発生時にアラートを送信するように SQL Server エージェントを構成することもできます。 詳細については、「[ポリシー管理者にポリシー エラーを通知する警告の構成](~/relational-databases/policy-based-management/configure-alerts-to-notify-policy-administrators-of-policy-failures.md)」を参照してください。  
   
-##  <a name="BKMK_SCENARIOS"></a> パフォーマンスのトラブルシューティング シナリオ  
+##  <a name="performance-troubleshooting-scenarios"></a><a name="BKMK_SCENARIOS"></a> パフォーマンスのトラブルシューティング シナリオ  
  次の表に、一般的なパフォーマンスに関連するトラブルシューティング シナリオを示します。  
   
 |シナリオ|説明|  
@@ -445,7 +445,7 @@ DMV の [sys.dm_hadr_database_replica_states](../../../relational-databases/syst
 |[トラブルシューティング:可用性グループ接続の超過 RPO](troubleshoot-availability-group-exceeded-rpo.md)|強制的な手動フェールオーバーを実行した後で、データ損失が RPO より大きくなります。 または、非同期コミット セカンダリ レプリカのデータ損失の可能性を計算したとき、計算結果が RPO を超過していることが判明します。|  
 |[トラブルシューティング:プライマリ上の変更がセカンダリ レプリカに反映されない](troubleshoot-primary-changes-not-reflected-on-secondary.md)|クライアント アプリケーションは、プライマリ レプリカの更新を正常に完了しますが、セカンダリ レプリカのクエリを実行すると、変更が反映されていないことが示されます。|  
   
-##  <a name="BKMK_XEVENTS"></a> 有用な拡張イベント  
+##  <a name="useful-extended-events"></a><a name="BKMK_XEVENTS"></a> 有用な拡張イベント  
  **同期中の**状態にあるレプリカのトラブルシューティングを行う場合は、次の拡張イベントは便利です。  
   
 |イベント名|カテゴリ|チャネル|可用性レプリカ|  

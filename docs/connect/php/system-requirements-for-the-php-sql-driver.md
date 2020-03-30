@@ -13,10 +13,10 @@ author: MightyPen
 ms.reviewer: carlrab
 ms.author: genemi
 ms.openlocfilehash: f384e121d3b4ce0aa7ebcb380ebe5eaaa0ee3d45
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76917821"
 ---
 # <a name="system-requirements-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft SQL Server 用 Drivers for PHP のシステム要件
@@ -53,7 +53,7 @@ PHP が実行されるコンピューター上に、正しいバージョンの 
 |ODBC ドライバー 13  | | | | | |Y| |
 |ODBC ドライバー 11  |Y|Y|Y|Y|Y|Y|Y|
 
-SQLSRV ドライバーを使用している場合、[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] によって使用されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Microsoft ODBC Driver for SQL Server のバージョンに関する情報が [sqlsrv_client_info](../../connect/php/sqlsrv-client-info.md) によって返されます。 PDO_SQLSRV ドライバーを使用している場合、[PDO::getAttribute](../../connect/php/pdo-getattribute.md) を使用して、バージョンを確認できます。
+SQLSRV ドライバーを使用している場合、[ によって使用されている ](../../connect/php/sqlsrv-client-info.md) Microsoft ODBC Driver for SQL Server のバージョンに関する情報が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sqlsrv_client_info[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] によって返されます。 PDO_SQLSRV ドライバーを使用している場合、[PDO::getAttribute](../../connect/php/pdo-getattribute.md) を使用して、バージョンを確認できます。
 
 ## <a name="sql-server"></a>SQL Server
 
@@ -77,7 +77,7 @@ Azure SQL Database での PHP の使用の詳細については、「[Microsoft 
 
 ## <a name="driver-versions"></a>ドライバー バージョン
 
-このセクションでは、[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] の各バージョンに含まれるドライバー ファイルの一覧を示します。 各インストール パッケージには、スレッド化されたバリアントとスレッド化されていないバリアントの SQLSRV ドライバー ファイルと PDO_SQLSRV ドライバー ファイルが含まれています。 Windows では、32 ビットと 64 ビットのバリアントも使用できます。 PHP ランタイムで使用するドライバーを構成するには、「[Microsoft Drivers for PHP for SQL Server の読み込み](../../connect/php/loading-the-php-sql-driver.md)」のインストール手順に従います。
+このセクションでは、[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] の各バージョンに含まれるドライバー ファイルの一覧を示します。 各インストール パッケージには、スレッド化および非スレッド化されたバリアント形式の SQLSRV および PDO_SQLSRV ドライバー ファイルが含まれています。 Windows では、32 ビットと 64 ビットのバリアントでも使用できます。 PHP ランタイムで使用するドライバーを構成するには、「[Microsoft Drivers for PHP for SQL Server の読み込み](../../connect/php/loading-the-php-sql-driver.md)」のインストール手順に従います。
 
 サポートされている Linux と macOS のバージョンでは、[Linux と macOS のインストール手順](../../connect/php/installation-tutorial-linux-mac.md)に関する記事に従って、PHP の PECL パッケージ システムを使用して適切なドライバーをインストールできます。 別の方法として、[Microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) GitHub プロジェクト ページからプラットフォーム用の事前構築済みバイナリをダウンロードできます。次の表に、事前構築済みバイナリ パッケージに含まれるファイルを示します。
 

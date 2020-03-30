@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 7b24d5499e618a09c4d80e8614b08219e6c6f788
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73706763"
 ---
 # <a name="revoscaler-r-library-in-sql-server"></a>RevoScaleR (SQL Server の R ライブラリ)
@@ -53,7 +53,7 @@ RevoScaleR は、分散データ サイエンスのプラットフォームと�
 
 SQL Server と R では、場合によっては異なるデータ型が使用されます。 SQL のデータ型と R のデータ型の対応表が必要であれば、[R と SQL のデータ型マッピング](r-libraries-and-data-types.md) ページを参照してください。
 
-| Function| 説明|
+| 機能| 説明|
 | ------- | ---------- |
 | [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) |  SQL Server 計算コンテキスト オブジェクトを作成し、リモート インスタンスに計算をプッシュします。 一部の **RevoScaleR** 関数では、計算コンテキストが引数として受け取られます。 |
 |[rxGetComputeContext / rxSetComputeContext](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext) | アクティブな計算コンテキストを取得または設定します。 |
@@ -68,7 +68,7 @@ SQL Server と R では、場合によっては異なるデータ型が使用さ
 
 インスタンスとデータベースに対する必要なアクセス許可がある場合は、DDL ステートメントを R から実行できます。 次の関数では、ODBC 呼び出しを使用し、DDL ステートメントを実行したり、データベース スキーマを取得したりします。
 
-| Function| 説明|
+| 機能| 説明|
 | ------- | ---------- |
 | [rxSqlServerTableExists と rxSqlServerDropTable](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdroptable) | [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] テーブルを削除するか、データベース テーブルまたはオブジェクトの存在を確認します。 |
 | [rxExecuteSQLDDL](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxexecutesqlddl) | データベース オブジェクトを定義または操作するデータ定義言語 (DDL) コマンドを実行します。 この関数ではデータを返すことができず、オブジェクト スキーマまたはメタデータを取得または変更する目的でのみ使用されます。|
@@ -77,7 +77,7 @@ SQL Server と R では、場合によっては異なるデータ型が使用さ
 
 データ ソース オブジェクトを作成したら、そのオブジェクトを使用し、それにデータを読み込んだり、データを変換したり、指定の宛先に新しいデータを書き込んだりできます。 ソースのデータのサイズによりますが、データ ソースの一部としてバッチ サイズを定義し、データをチャンク単位で動かすことができます。
 
-| Function | 説明 |
+| 機能 | 説明 |
 |----------|-------------|
 | [rxOpen-methods](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxopen-methods) | データ ソースを利用できるかどうかを確認します。データ ソースを開いたり、閉じたりします。ソースからデータを読み取ります。ターゲットにデータを書き込みます。データ ソースを閉じます。|
 | [rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport) | データ ソースからファイル ストレージまたはデータ フレームにデータを移動します。|
@@ -147,7 +147,7 @@ SQL Server と R では、場合によっては異なるデータ型が使用さ
 
 R スクリプトをストアド プロシージャ [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) 内にカプセル化する準備ができたら、入力と出力が明確に定義された 1 つの関数としてコードを書き直すことをお勧めします。 
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 + [R のチュートリアル](../tutorials/sql-server-r-tutorials.md)
 + [計算コンテキストの使用方法](../tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)

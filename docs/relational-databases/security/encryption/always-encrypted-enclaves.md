@@ -12,10 +12,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: 6e750070f51dc6cba1b035e9426d9814e4fd1b67
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75558041"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>セキュア エンクレーブを使用する Always Encrypted
@@ -139,7 +139,7 @@ SQL Server のインスタンスで障害が発生した場合、そのデータ
 - エンクレーブ対応の CEK でランダム化された暗号化を使用して列を暗号化すると、列による範囲比較のサポートのため、列に格納されたデータの順序がリークする可能性があります。 たとえば、従業員の給与が含まれる暗号化された列にインデックスがある場合、悪意のある DBA はインデックスをスキャンして暗号化された給与の最大値を検索し、給与が最高の個人を特定できます (ユーザーの名前は暗号化されていないものとします)。 
 - Always Encrypted を使用して、DBA による不正アクセスから機密データを保護する場合は、列マスター キーまたは列暗号化キーを DBA と共有しないでください。 DBA は、キーに直接アクセスできなくても、エンクレーブ内の列暗号化キーのキャッシュを利用して、暗号化された列のインデックスを管理できます。
 
-## <a name="anchorname-1-considerations-availability-groups-db-migration"></a> 可用性グループとデータベースの移行に関する考慮事項
+## <a name="considerations-for-availability-groups-and-database-migration"></a><a name="anchorname-1-considerations-availability-groups-db-migration"></a> 可用性グループとデータベースの移行に関する考慮事項
 
 エンクレーブを使用するクエリをサポートするために必要な Always On 可用性グループを構成する場合は、可用性グループ内のデータベースをホストするすべての SQL Server インスタンスで、セキュリティで保護されたエンクレーブが設定された Always Encrypted をサポートし、エンクレーブを構成する必要があります。 プライマリ データベースではエンクレーブがサポートされていても、セカンダリ レプリカではサポートされていない場合、セキュリティで保護されたエンクレーブが設定された Always Encrypted の機能を使用しようとするクエリは失敗します。
 
@@ -181,7 +181,7 @@ bacpac ファイルを使ってデータベースを移行するときは、bacp
 - [チュートリアル:SSMS を使用したセキュリティで保護されたエンクレーブを持つ Always Encrypted の概要](../tutorial-getting-started-with-always-encrypted-enclaves.md)
 - [セキュリティで保護されたエンクレーブが設定された Always Encrypted を構成して使用する](configure-always-encrypted-enclaves.md)
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 - [セキュリティで保護されたエンクレーブが設定された Always Encrypted のキーを管理する](always-encrypted-enclaves-manage-keys.md)
 - [セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用して列の暗号化をインプレースで構成する](always-encrypted-enclaves-configure-encryption.md)
 - [セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用する列のクエリを実行する](always-encrypted-enclaves-query-columns.md)

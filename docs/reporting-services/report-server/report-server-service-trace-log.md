@@ -10,17 +10,17 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/23/2019
 ms.openlocfilehash: 667f18f449a1f2564c04a03ca593c917a7b46005
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "68254862"
 ---
 # <a name="report-server-service-trace-log"></a>Report Server Service Trace Log
 
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーのトレース ログは、レポート サーバー サービスの操作に関する詳細な情報が記録されている ASCII テキスト ファイルです。  このファイル内の情報には、レポート サーバー Web サービス、Web ポータル、およびバックグラウンド処理によって実行された操作が含まれます。 トレース ログ ファイルには、他のログ ファイルに記録されている冗長な情報、およびトレース ログ以外からは入手できない追加情報が含まれています。 トレース ログ情報は、レポート サーバーを含むアプリケーションをデバッグしている場合、またはイベント ログや実行ログに書き込まれた特定の問題を調査している場合に役立ちます。 たとえば、サブスクリプションに関する問題をトラブル シューティングしている場合です。  
 
-## <a name="bkmk_view_log"></a> レポート サーバー のログ ファイルの場所
+## <a name="where-are-the-report-server-log-files"></a><a name="bkmk_view_log"></a> レポート サーバー のログ ファイルの場所
 
 トレース ログ ファイルは `ReportServerService_<timestamp>.log` と `Microsoft.ReportingServices.Portal.WebHost_<timestamp>.log` で、以下のフォルダーにあります。
 
@@ -28,7 +28,7 @@ ms.locfileid: "68254862"
 
 トレース ログは毎日作成され、午前 0 時 (ローカル時刻) 以降に発生する最初のエントリで始まります。また、サービスを再起動したときにも作成されます。 タイムスタンプには、協定世界時 (UTC) が使用されます。 このファイルは EN-US 形式です。 既定では、トレース ログのサイズの上限は 32 MBであり、14 日後に削除されます。  
 
-## <a name="bkmk_trace_configuration_settings"></a> トレースの構成設定
+## <a name="trace-configuration-settings"></a><a name="bkmk_trace_configuration_settings"></a> トレースの構成設定
 
 トレース ログの動作は構成ファイル **ReportingServicesService.exe.config** で管理されています。構成ファイルは次のフォルダー パスにあります。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "68254862"
 |**コンポーネント カテゴリ**|トレース ログ情報の生成対象となるコンポーネントおよびトレース レベルを次の形式で指定します。<br /><br /> \<component category>:\<tracelevel><br /><br /> コンポーネント (**all**、 **RunningJobs**、 **SemanticQueryEngine**、 **SemanticModelGenerator**) のすべてまたは一部を指定できます。 特定のコンポーネントに関する情報を生成しない場合は、そのコンポーネントのトレースを無効にできます (たとえば "SemanticModelGenerator:0")。 **all**の場合は、トレースを無効にしないでください。<br /><br /> 各セマンティック クエリに対して生成される Transact-SQL ステートメントを表示する場合は、"SemanticQueryEngine:4" を設定できます。 Transact-SQL ステートメントは、トレース ログに記録されます。 次の例では、Transact-SQL ステートメントをログに追加する構成設定を示しています。<br /><br /> \<add name="Components" value="all,SemanticQueryEngine:4" />|コンポーネントのカテゴリには次の値を設定できます。<br /><br /> <br /><br /> 特定のカテゴリに分類されないすべてのプロセスに対する通常のレポート サーバーの利用状況を追跡するには、**All** を使用します。<br /><br /> 実行中のレポートまたはサブスクリプションの操作を追跡するには、**RunningJobs** を使用します。<br /><br /> ユーザーがモデルベースのレポートでアドホック データ探索を実行する場合に処理されるセマンティック クエリを追跡するには、**SemanticQueryEngine** を使用します。<br /><br /> モデルの生成を追跡するには、**SemanticModelGenerator** を使用します。<br /><br /> レポート サーバーの HTTP ログ ファイルを有効にするには、**http** を使用します。 詳しくは、「 [Report Server HTTP Log](../../reporting-services/report-server/report-server-http-log.md)」をご覧ください。|  
 |コンポーネント カテゴリの**トレース レベル**値|\<component category>:\<tracelevel><br /><br /> <br /><br /> コンポーネントにトレース レベルを追加しない場合は、 **DefaultTraceSwitch** に指定された値が使用されます。 たとえば、"all,RunningJobs,SemanticQueryEngine,SemanticModelGenerator" と指定すると、すべてのコンポーネントで既定のトレース レベルが使用されます。|トレース レベルの有効な値は次のとおりです。<br /><br /> <br /><br /> 0= トレースの無効化<br /><br /> 1= 例外および再起動<br /><br /> 2= 例外、再起動、警告<br /><br /> 3= 例外、再起動、警告、状態メッセージ (既定)<br /><br /> 4= 詳細モード<br /><br /> レポート サーバーの既定値は "all:3" です。|  
   
-## <a name="bkmk_add_custom"></a> ダンプ ファイルの場所を指定するカスタム構成設定の追加  
+## <a name="adding-custom-configuration-setting-to-specify-a-dump-file-location"></a><a name="bkmk_add_custom"></a> ダンプ ファイルの場所を指定するカスタム構成設定の追加  
 カスタム設定を追加して、Windows ワトソン博士ツールでダンプ ファイルを格納する際に使用する場所を設定できます。 カスタム設定は **Directory**です。 次の例では、この構成設定を **RStrace** セクションに指定する方法を示しています。  
 
 ```
@@ -77,7 +77,7 @@ ms.locfileid: "68254862"
   
 詳細については、 [Web サイトの](https://support.microsoft.com/?kbid=913046) サポート技術情報の記事 913046 [!INCLUDE[msCoName](../../includes/msconame-md.md)] を参照してください。  
   
-##  <a name="bkmk_log_file_fields"></a> ログ ファイル フィールド
+##  <a name="log-file-fields"></a><a name="bkmk_log_file_fields"></a> ログ ファイル フィールド
 
 トレース ログでは、次のフィールドを確認できます。  
   
@@ -104,7 +104,7 @@ ms.locfileid: "68254862"
 + ReportServer_ *\<timestamp>* .log
 + ReportServerService_main_ *\<timestamp>* .log
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [Reporting Services のログ ファイルとソース](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
 - [エラーとイベントのリファレンス (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  

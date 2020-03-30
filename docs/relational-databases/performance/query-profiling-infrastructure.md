@@ -18,10 +18,10 @@ author: pmasl
 ms.author: pelopes
 manager: amitban
 ms.openlocfilehash: e4c2a2e56f9dab75bfe3873e721ccfca0bd16df3
-ms.sourcegitcommit: 64e96ad1ce6c88c814e3789f0fa6e60185ec479c
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/27/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77705907"
 ---
 # <a name="query-profiling-infrastructure"></a>クエリ プロファイリング インフラストラクチャ
@@ -50,7 +50,7 @@ ms.locfileid: "77705907"
 
 *query_post_execution_showplan* イベントを使用する拡張イベント セッションの実行時に、[sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md) DMV も入力されます。これによって、すべてのセッションのライブ クエリ統計が有効になり、[利用状況モニター](../../relational-databases/performance-monitor/activity-monitor.md)を使用することや、DMV に直接クエリを実行することができます。 詳細については、「 [Live Query Statistics](../../relational-databases/performance/live-query-statistics.md)」を参照してください。
 
-## <a name="lwp"></a>軽量クエリ実行統計プロファイリング インフラストラクチャ
+## <a name="the-lightweight-query-execution-statistics-profiling-infrastructure"></a><a name="lwp"></a>軽量クエリ実行統計プロファイリング インフラストラクチャ
 
 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 および [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降で、新しい*軽量クエリ実行統計プロファイリング インフラストラクチャ*、すなわち**軽量プロファイリング**が導入されました。 
 

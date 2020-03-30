@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
 ms.openlocfilehash: a4103e22facbb717b6797b91d8b218cc6ce4b0b7
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288116"
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>SQL Server on Linux のトラブルシューティング
@@ -24,7 +24,7 @@ ms.locfileid: "79288116"
 > [!TIP]
 > よく寄せられる質問に対する回答については、「[SQL Server on Linux に関する FAQ](sql-server-linux-faq.md)」を参照してください。
 
-## <a id="connection"></a> 接続エラーのトラブルシューティング
+## <a name="troubleshoot-connection-failures"></a><a id="connection"></a> 接続エラーのトラブルシューティング
 Linux SQL Server に接続するのが困難な場合は、いくつかの点を確認する必要があります。
 
 - **localhost** を使ってローカルに接続できない場合は、代わりに IP アドレス 127.0.0.1 を使ってみてください。 **localhost** がこのアドレスに適切にマップされていない可能性があります。

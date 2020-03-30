@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 98ef57702b01a3f32babd6b0ac9b64fb3c22e9ea
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73727661"
 ---
 # <a name="r-language-extension-in-sql-server"></a>SQL Server の R 言語拡張機能
@@ -83,7 +83,7 @@ Microsoft R をサポートするリモート データ サイエンス クラ�
 8. SQL サテライトでは、SQL Server との通信と、関連するジョブ オブジェクトのクリーンアップが管理されます。
 9. SQL Server からクライアントに結果が返されます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 + [SQL Server の機能拡張フレームワーク](extensibility-framework.md)
 + [SQL Server の Python および機械学習拡張機能](extension-python.md)

@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 239d7ee532f4052caa067be7a20022720740ff3d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68000456"
 ---
 # <a name="time-transact-sql"></a>time (Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "68000456"
   
 ## <a name="time-description"></a>time の説明  
   
-|プロパティ|Value|  
+|プロパティ|値|  
 |--------------|-----------|  
 |構文|**time** [ (*fractional second scale*) ]|  
 |使用法|DECLARE \@MyTime **time(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **time(7)** )|  
@@ -88,7 +88,7 @@ ms.locfileid: "68000456"
   
  下位クライアントに使用される既定の文字列リテラル形式は、hh:mm:ss[.nnnnnnn] として定義されている SQL 標準形式に準拠しています。 この形式は、1 秒未満の秒を除き、TIME に対する ISO 8601 の定義と似ています。  
   
-##  <a name="BackwardCompatibilityforDownlevelClients"></a> 下位クライアントの下位互換性  
+##  <a name="backward-compatibility-for-down-level-clients"></a><a name="BackwardCompatibilityforDownlevelClients"></a> 下位クライアントの下位互換性  
  一部の下位レベル クライアントは、**time**、**date**、**datetime2**、**datetimeoffset** データ型をサポートしていません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の上位インスタンスと下位クライアントの間のデータ型マッピングを次の表に示します。  
   
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ型|下位クライアントに渡される既定の文字列リテラル形式|下位 ODBC|下位 OLEDB|下位 JDBC|下位 SQLCLIENT|  
@@ -232,7 +232,7 @@ SELECT
         'datetimeoffset';  
 ```  
   
-|データ型|Output|  
+|データ型|出力|  
 |---------------|------------|  
 |**time**|12:35:29. 1234567|  
 |**date**|2007-05-08|  
@@ -241,7 +241,7 @@ SELECT
 |**datetime2**|2007-05-08 12:35:29. 1234567|  
 |**datetimeoffset**|2007-05-08 12:35:29.1234567 +12:15|  
   
-###  <a name="ExampleB"></a> B. 有効な時刻文字列リテラルを time(7) 列に挿入する  
+###  <a name="b-inserting-valid-time-string-literals-into-a-time7-column"></a><a name="ExampleB"></a> B. 有効な時刻文字列リテラルを time(7) 列に挿入する  
  次の表では、**time(7)** データ型の列に挿入可能な各種の文字列リテラルと、その列に格納される値を示します。  
   
 |文字列リテラル形式の種類|挿入する文字列リテラル|格納される time(7) 値|説明|  

@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 1f05181e1a3069ec56f079751e43bd739424ce92
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79285996"
 ---
 # <a name="sql-server-launchpad-service-configuration"></a>SQL Server Launchpad のサービスの構成
@@ -65,8 +65,8 @@ SQL Server サービスの実行に必要なアクセス許可の詳細につい
 
 |**設定名**|**Type**|**説明**|
 |----|----|----|
-|JOB\_CLEANUP\_ON\_EXIT|整数 |これは内部用の設定です。この値は変更しないでください。 </br></br>外部ランタイム セッションごとに作成された一時作業フォルダーを、セッションの完了後にクリーンアップするかどうかを指定します。 この設定はデバッグに便利です。 </br></br>サポートされる値は、**0** (無効) または **1** (有効) です。 </br></br>既定値は 1 です。これは、終了時にログ ファイルが削除されることを意味します。|
-|TRACE\_LEVEL|整数 |デバッグのために MSSQLLAUNCHPAD のトレースの詳細レベルを設定します。 これは、LOG_DIRECTORY 設定によって指定されたパスのトレース ファイルに影響します。 </br></br>サポートされる値は次のとおりです。**1** (エラー)、**2** (パフォーマンス)、**3** (警告)、**4** (情報)。 </br></br>既定値は 1 で、エラーのみの出力を意味します。|
+|JOB\_CLEANUP\_ON\_EXIT|Integer |これは内部用の設定です。この値は変更しないでください。 </br></br>外部ランタイム セッションごとに作成された一時作業フォルダーを、セッションの完了後にクリーンアップするかどうかを指定します。 この設定はデバッグに便利です。 </br></br>サポートされる値は、**0** (無効) または **1** (有効) です。 </br></br>既定値は 1 です。これは、終了時にログ ファイルが削除されることを意味します。|
+|TRACE\_LEVEL|Integer |デバッグのために MSSQLLAUNCHPAD のトレースの詳細レベルを設定します。 これは、LOG_DIRECTORY 設定によって指定されたパスのトレース ファイルに影響します。 </br></br>サポートされる値は次のとおりです。**1** (エラー)、**2** (パフォーマンス)、**3** (警告)、**4** (情報)。 </br></br>既定値は 1 で、エラーのみの出力を意味します。|
 
 すべての設定が、キーと値のペアの形をとり、各設定は個別の行に表示されます。 たとえば、トレース レベルを変更するには、`Default: TRACE_LEVEL=4` と記載した行を追加します。
 

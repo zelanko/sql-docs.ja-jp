@@ -11,10 +11,10 @@ ms.assetid: 5950f98a-3950-473d-95fd-cde3557b8fc2
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: d6fdf58703d448e07c9be063b616f90c72f2411d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67991556"
 ---
 # <a name="configure-extended-events-for-always-on-availability-groups"></a>Always On 可用性グループの拡張イベントを構成する
@@ -25,7 +25,7 @@ ms.locfileid: "67991556"
 SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'  
 ```  
    
-##  <a name="BKMK_alwayson_health"></a> Alwayson_health セッション  
+##  <a name="alwayson_health-session"></a><a name="BKMK_alwayson_health"></a> Alwayson_health セッション  
  可用性グループを作成し、可用性グループ関連のイベントのサブセットをキャプチャすると、alwayson_health 拡張イベント セッションが自動的に作成されます。 このセッションは、可用性グループをトラブルシューティングする際にすぐに開始することができる有効かつ便利なツールとしてあらかじめ構成されています。 可用性グループの作成ウィザードでは、このウィザードで構成されたすべての参加中の可用性レプリカに対してセッションを自動的に開始します。  
   
 > [!IMPORTANT]  
@@ -40,7 +40,7 @@ SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'
 alwayson_health でカバーされているイベントの一部については、[拡張イベントのリファレンス](always-on-extended-events.md#BKMK_Reference)を参照してください。  
 
 
-##  <a name="BKMK_Debugging"></a> デバッグ用の拡張イベント  
+##  <a name="extended-events-for-debugging"></a><a name="BKMK_Debugging"></a> デバッグ用の拡張イベント  
  Alwayson_health セッションでカバーされている拡張イベントに加えて、SQL Server では可用性グループ用のさまざまなデバッグ イベントが定義されています。 このような追加の拡張イベントをセッションで利用するには、以下の手順に従います。  
   
 1.  **オブジェクト エクスプローラー**で **[管理]** 、 **[拡張イベント]** 、および **[セッション]** の順に展開します。  
@@ -57,7 +57,7 @@ alwayson_health でカバーされているイベントの一部については�
   
 7.  セッションが終了したら、 **[OK]** をクリックしてセッションを閉じます。 セッションが開始されると、選択したイベントがキャプチャされることを確認してください。  
   
-##  <a name="BKMK_Reference"></a> Always On 可用性グループの拡張イベントのリファレンス  
+##  <a name="always-on-availability-groups-extended-events-reference"></a><a name="BKMK_Reference"></a> Always On 可用性グループの拡張イベントのリファレンス  
  このセクションでは、可用性グループを監視するために使用される一部の拡張イベントについて説明します。  
   
  [availability_replica_state_change](#BKMK_availability_replica_state_change)  
@@ -76,20 +76,20 @@ alwayson_health でカバーされているイベントの一部については�
   
  [error_reported (1480): データベース レプリカのロールの変更](#BKMK_error_reported_1480)  
   
-###  <a name="BKMK_availability_replica_state_change"></a> availability_replica_state_change  
+###  <a name="availability_replica_state_change"></a><a name="BKMK_availability_replica_state_change"></a> availability_replica_state_change  
  可用性レプリカの状態が変化したときに発生します。 このイベントは、可用性グループの作成または可用性レプリカの追加によってトリガーすることができます。 失敗した自動フェールオーバーを診断する場合に便利です。 フェールオーバーの各手順をトレースするためにも使用できます。  
   
 #### <a name="event-information"></a>イベントに関する情報  
   
 |列|説明|  
 |------------|-----------------|  
-|Name|availability_replica_state_change|  
+|名前|availability_replica_state_change|  
 |カテゴリ|always on|  
 |チャネル|運用時|  
   
 #### <a name="event-fields"></a>イベント フィールド  
   
-|Name|Type_name|説明|  
+|名前|Type_name|説明|  
 |----------|----------------|-----------------|  
 |availability_group_id|guid|可用性グループの ID。|  
 |availability_group_name|unicode_string|可用性グループの名前です。|  
@@ -107,20 +107,20 @@ WITH (MAX_MEMORY=4096 KB,EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,MAX_DISPAT
 GO  
 ```  
   
-###  <a name="BKMK_availability_group_lease_expired"></a> availability_group_lease_expired  
+###  <a name="availability_group_lease_expired"></a><a name="BKMK_availability_group_lease_expired"></a> availability_group_lease_expired  
  クラスターと可用性グループに接続の問題が存在し、リースの有効期限が切れた場合に発生します。 このイベントは可用性グループと基になる WSFC クラスター間の接続が切断されていることを示します。 プライマリ レプリカ上で接続の問題が発生した場合は、このイベントによって自動フェールオーバーが引き起こされるか、または可用性グループがオフラインになる可能性があります。  
   
 #### <a name="event-information"></a>イベントに関する情報  
   
 |列|説明|  
 |------------|-----------------|  
-|Name|availability_group_lease_expired|  
+|名前|availability_group_lease_expired|  
 |カテゴリ|always on|  
 |チャネル|運用時|  
   
 #### <a name="event-fields"></a>イベント フィールド  
   
-|Name|Type_name|説明|  
+|名前|Type_name|説明|  
 |----------|----------------|-----------------|  
 |availability_group_id|guid|可用性グループの ID。|  
 |availability_group_name|unicode_string|可用性グループの名前です。|  
@@ -135,12 +135,12 @@ WITH (MAX_MEMORY=4096 KB,EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,MAX_DISPAT
 GO  
 ```  
   
-###  <a name="BKMK_availability_replica_automatic_failover_validation"></a> availability_replica_automatic_failover_validation  
+###  <a name="availability_replica_automatic_failover_validation"></a><a name="BKMK_availability_replica_automatic_failover_validation"></a> availability_replica_automatic_failover_validation  
  自動フェールオーバーによって、プライマリ レプリカとしての可用性レプリカの準備状況が検証され、対象の可用性レプリカが新しいプライマリ レプリカになる準備が整っているかどうかが示される場合に発生します。 たとえば、同期または参加していないデータベースが存在する場合、フェールオーバーの検証では false が返されます。 このイベントは、フェールオーバー中に障害ポイントを示す設計になっています。 自動フェールオーバーは無人操作であるため、この情報は特に自動フェールオーバーに対応するデータベース管理者にとって有用です。 データベース管理者はイベントを検証することで、自動フェールオーバーが失敗した理由を確認できます。  
   
 #### <a name="event-information"></a>イベントに関する情報  
   
-|Name|説明|  
+|名前|説明|  
 |----------|-----------------|  
 |availability_replica_automatic_failover_validation||  
 |カテゴリ|always on|  
@@ -148,7 +148,7 @@ GO
   
 #### <a name="event-fields"></a>イベント フィールド  
   
-|Name|Type_name|説明|  
+|名前|Type_name|説明|  
 |----------|----------------|-----------------|  
 |availability_group_id|guid|可用性グループの ID。|  
 |availability_group_name|unicode_string|可用性グループの名前です。|  
@@ -174,12 +174,12 @@ GO
   
 ```  
   
-###  <a name="BKMK_error_reported"></a> error_reported (複数のエラー番号): 転送または接続に問題がある場合  
+###  <a name="error_reported-multiple-error-numbers-for-transport-or-connection-issues"></a><a name="BKMK_error_reported"></a> error_reported (複数のエラー番号): 転送または接続に問題がある場合  
  フィルター処理した各イベントは、可用性グループが依存しているトランスポートまたはデータベース ミラーリング エンドポイントで接続の問題が発生したことを示します。  
   
 |列|説明|  
 |------------|-----------------|  
-|Name|error_reported<br /><br /> フィルター処理する番号: 35201、35202、35206、35204、35207、9642、9666、9691、9692、9693、28034、28036、28080、28091、33309|  
+|名前|error_reported<br /><br /> フィルター処理する番号: 35201、35202、35206、35204、35207、9642、9666、9691、9692、9693、28034、28036、28080、28091、33309|  
 |カテゴリ|エラー|  
 |チャネル|[Admin]|  
   
@@ -235,14 +235,14 @@ WITH (MAX_MEMORY=4096 KB,EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,MAX_DISPAT
 GO  
 ```  
   
-###  <a name="BKMK_data_movement_suspend_resume"></a> data_movement_suspend_resume  
+###  <a name="data_movement_suspend_resume"></a><a name="BKMK_data_movement_suspend_resume"></a> data_movement_suspend_resume  
  データベース レプリカのデータベース移動が中断または再開されたときに発生します。  
   
 #### <a name="event-information"></a>イベントに関する情報  
   
 |列|説明|  
 |------------|-----------------|  
-|Name|data_movement_suspend_resume|  
+|名前|data_movement_suspend_resume|  
 |カテゴリ|常に有効です。|  
 |チャネル|運用時|  
   
@@ -250,7 +250,7 @@ GO
   
 ||||  
 |-|-|-|  
-|Name|Type_name|説明|  
+|名前|Type_name|説明|  
 |availability_group_id|guid|可用性グループの ID。|  
 |availability_group_name|unicode_string|可用性グループの名前 (使用可能な場合)。|  
 |availability_replica_id|guid|可用性レプリカの ID。|  
@@ -278,20 +278,20 @@ WITH (MAX_MEMORY=4096 KB,EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,MAX_DISPAT
 GO  
 ```  
   
-###  <a name="BKMK_alwayson_ddl_executed"></a> alwayson_ddl_executed  
+###  <a name="alwayson_ddl_executed"></a><a name="BKMK_alwayson_ddl_executed"></a> alwayson_ddl_executed  
  CREATE、ALTER、DROP などの可用性グループ データ定義言語 (DDL) ステートメントが実行されているときに発生します。 イベントの主な目的は、可用性レプリカでのユーザー アクションの問題を示すこと、または手動フェールオーバー、強制フェールオーバー、データ移動の中断、データ移動の再開などのランタイムの問題が続く運用アクションの開始ポイントを示すことです。  
   
 #### <a name="event-information"></a>イベントに関する情報  
   
 |列|説明|  
 |------------|-----------------|  
-|Name|alwayson_ddl_execution|  
+|名前|alwayson_ddl_execution|  
 |カテゴリ|always on|  
 |チャネル|分析|  
   
 #### <a name="event-fields"></a>イベント フィールド  
   
-|Name|Type_name|説明|  
+|名前|Type_name|説明|  
 |----------|----------------|-----------------|  
 |availability_group_id|Guid|可用性グループの ID。|  
 |availability_group_name|unicode_string|可用性グループの名前です。|  
@@ -311,20 +311,20 @@ WITH (MAX_MEMORY=4096 KB,EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,MAX_DISPAT
 GO  
 ```  
   
-###  <a name="BKMK_availability_replica_manager_state"></a> availability_replica_manager_state  
+###  <a name="availability_replica_manager_state"></a><a name="BKMK_availability_replica_manager_state"></a> availability_replica_manager_state  
  可用性レプリカ マネージャーの状態が変化したときに発生します。 このイベントは可用性レプリカ マネージャーのハートビートを示します。 可用性レプリカ マネージャーが正常な状態にない場合は、SQL Server インスタンス内のすべての可用性レプリカがダウンします。  
   
 #### <a name="event-information"></a>イベントに関する情報  
   
 |列|説明|  
 |------------|-----------------|  
-|Name|availability_replica_manager_state_change|  
+|名前|availability_replica_manager_state_change|  
 |カテゴリ|always on|  
 |チャネル|運用時|  
   
 #### <a name="event-fields"></a>イベント フィールド  
   
-|Name|Type_name|説明|  
+|名前|Type_name|説明|  
 |----------|----------------|-----------------|  
 |current_state|manager_state|可用性レプリカ マネージャーの現在の状態。<br /><br /> オンライン<br /><br /> オフライン<br /><br /> WaitingForClusterCommunication|  
   
@@ -342,14 +342,14 @@ WITH (MAX_MEMORY=4096 KB,EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,MAX_DISPAT
 GO  
 ```  
   
-###  <a name="BKMK_error_reported_1480"></a> error_reported (1480): データベース レプリカのロールの変更  
+###  <a name="error_reported-1480-database-replica-role-change"></a><a name="BKMK_error_reported_1480"></a> error_reported (1480): データベース レプリカのロールの変更  
  このフィルター処理された error_reported イベントは、可用性レプリカ ロールの変更後に非同期的に発生します。 フェールオーバー プロセス中に、想定したロールを変更できない可用性データベースを示します。  
   
 #### <a name="event-information"></a>イベントに関する情報  
   
 |列|説明|  
 |------------|-----------------|  
-|Name|error_reported<br /><br /> エラー番号 1480: REPLICATION_TYPE_MSG データベース "DATABASE_NAME" は、REASON_MSG が原因で、"OLD_ROLE" から "NEW_ROLE" にロールを変更中です|  
+|名前|error_reported<br /><br /> エラー番号 1480: REPLICATION_TYPE_MSG データベース "DATABASE_NAME" は、REASON_MSG が原因で、"OLD_ROLE" から "NEW_ROLE" にロールを変更中です|  
 |カテゴリ|エラー|  
 |チャネル|[Admin]|  
   

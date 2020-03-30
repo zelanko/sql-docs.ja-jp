@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 7c71ebfbda37e66050f868fa7676d0247e84840e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74119230"
 ---
 # <a name="sql-server-r-language-tutorials"></a>SQL Server の R 言語のチュートリアル
@@ -46,7 +46,7 @@ ms.locfileid: "74119230"
 | [R と SQL Server を使用して予測モデルを作成する](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction) | スキー レンタル ビジネスで機械学習を使用して、今後のレンタルを予測する方法を学習します。これは、今後の需要に合わせた事業計画と人員配置に役立ちます。 |
 | [R と SQL Server を使用して顧客のクラスタリングを実行する](https://microsoft.github.io/sql-ml-tutorials/R/customerclustering/) | 教師なし学習を使用して、売上データに基づいて顧客をセグメント化します。 |
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 + [SQL Server の R 拡張機能](../concepts/extension-r.md)
 + [SQL Server Machine Learning Services チュートリアル](machine-learning-services-tutorials.md)

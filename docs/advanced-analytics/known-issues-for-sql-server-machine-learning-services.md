@@ -8,10 +8,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: da725efe691aae60bf9776bbe73f80227067d2e2
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74200397"
 ---
 # <a name="known-issues-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services での既知の問題
@@ -125,7 +125,7 @@ SQL Server 2017 のプレリリース版をインターネットにアクセス�
 
 **適用対象:** SQL Server 2017 と Python
 
-### <a name="bkmk_sqlbindr"></a>[!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] を使用してクライアントから古いバージョンの SQL Server R Services に接続すると、互換性のないバージョンであることが警告される
+### <a name="warning-of-incompatible-version-when-you-connect-to-an-older-version-of-sql-server-r-services-from-a-client-by-using-sssqlv14_md"></a><a name="bkmk_sqlbindr"></a>[!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] を使用してクライアントから古いバージョンの SQL Server R Services に接続すると、互換性のないバージョンであることが警告される
 
 SQL Server 2016 のコンピューティング コンテキストで R コードを実行すると、次のエラーが表示される場合があります。
 

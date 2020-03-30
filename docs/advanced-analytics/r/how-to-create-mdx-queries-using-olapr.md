@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 6934d3ae816df23d68843eb49d5eca8c95d83d57
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73727459"
 ---
 # <a name="how-to-create-mdx-queries-in-r-using-olapr"></a>olapR を使って R で MDX クエリを作成する方法
@@ -32,7 +32,7 @@ ms.locfileid: "73727459"
 + 新しい OLAP オブジェクトの作成
 + パーティションへの書き戻し (メジャーまたは合計を含む)
 
-## <a name="buildMDX"></a> R から MDX クエリを作成する
+## <a name="build-an-mdx-query-from-r"></a><a name="buildMDX"></a> R から MDX クエリを作成する
 
 1. OLAP データ ソース (SSAS インスタンス) および MSOLAP プロバイダーを指定する接続文字列を定義します。
 
@@ -58,7 +58,7 @@ ms.locfileid: "73727459"
   + `executeMD` : 多次元配列を返します
   + `execute2D` : 2 次元 (表形式) のデータ フレームを返します
 
-## <a name="executeMDX"></a> R から有効な MDX クエリ を実行する
+## <a name="execute-a-valid-mdx-query-from-r"></a><a name="executeMDX"></a> R から有効な MDX クエリ を実行する
 
 1. OLAP データ ソース (SSAS インスタンス) および MSOLAP プロバイダーを指定する接続文字列を定義します。
 
@@ -156,7 +156,7 @@ ocs <- OlapConnection(cnnstr)
 explore(ocs)
 ```
 
-| [結果]  |
+| 結果  |
 | ----|
 | _Analysis Services Tutorial_|
 |_Internet Sales_|
@@ -174,11 +174,11 @@ ocs \<- OlapConnection(cnnstr)
 explore(ocs, "Sales")
 ```
 
-| [結果]  |
+| 結果  |
 | ----|
 | _顧客_|
 |_Date_|
-|_[リージョン]_|
+|_リージョン_|
 
 
 #### <a name="to-return-all-members-of-the-specified-dimension-and-hierarchy"></a>指定したディメンションと階層のすべてのメンバーを取得するには
@@ -191,7 +191,7 @@ ocs <- OlapConnection(cnnstr)
 explore(ocs, "Analysis Services Tutorial", "Product", "Product Categories", "Category")
 ```
 
-| [結果]  |
+| 結果  |
 | ----|
 | _Accessories_|
 |_Bikes_|
@@ -201,6 +201,6 @@ explore(ocs, "Analysis Services Tutorial", "Product", "Product Categories", "Cat
 |-> Assembly Components|
 
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [R での OLAP キューブからのデータの使用](../../advanced-analytics/r/using-data-from-olap-cubes-in-r.md)
