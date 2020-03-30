@@ -14,10 +14,10 @@ ms.assetid: d67fbd8a-7554-4a16-96f1-d9ee857a95e3
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 712cc824e6faa834bd8d6023e4948e9e80dfabce
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67986693"
 ---
 # <a name="sql-server-cursor-manager-by-type-object"></a>SQL Server: Cursor Manager by Type オブジェクト
@@ -26,7 +26,7 @@ ms.locfileid: "67986693"
   
  次の表で、SQL Server **Cursor Manager by Type** カウンターについて説明します。  
   
-|Cursor Manager by Type カウンター|[説明]|  
+|Cursor Manager by Type カウンター|説明|  
 |-------------------------------------|-----------------|  
 |**Active cursors**|アクティブなカーソルの数。|  
 |**Cache Hit Ratio**|キャッシュ ヒットとキャッシュ参照の比率。|  
@@ -40,7 +40,7 @@ ms.locfileid: "67986693"
   
  オブジェクトの各カウンターには、次のインスタンスが含まれています。  
   
-|Cursor Manager のインスタンス|[説明]|  
+|Cursor Manager のインスタンス|説明|  
 |-----------------------------|-----------------|  
 |**_Total**|すべてのカーソルに関する情報。|  
 |**API Cursor**|API カーソルのみに関する情報。|  

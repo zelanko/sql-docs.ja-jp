@@ -11,10 +11,10 @@ ms.assetid: 957f664c-8a7a-4532-b5a6-5f859c5840bd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0bd0dd7c77e7ebc2501b507324b02ba1bb364190
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081110"
 ---
 # <a name="report-parts-report-builder-and-ssrs"></a>レポート パーツ (レポート ビルダーおよび SSRS)
@@ -24,7 +24,7 @@ ms.locfileid: "77081110"
   
  レポートに追加するレポート パーツは、サイトやサーバーにあるレポート パーツのインスタンスとのリレーションシップを一意の ID によって維持します。 サイトやサーバーのレポート パーツをレポートに追加した後、サイトやサーバーにある元のレポート パーツに影響を及ぼすことなく、それらを変更できます。 十分な権限を持っている場合は、サイトやサーバーのレポート パーツに他のユーザーが行った更新内容を受け入れ、新しいレポート パーツを追加するか、元のレポート パーツに書き込んで、変更後のレポート パーツをサイトやサーバーに保存できます。  
   
-##  <a name="ComponentWorkflow"></a> レポート パーツのライフ サイクル  
+##  <a name="life-cycle-of-a-report-part"></a><a name="ComponentWorkflow"></a> レポート パーツのライフ サイクル  
  ![rs_ComponentCreation](../../reporting-services/report-design/media/rs-componentcreation.gif "rs_ComponentCreation")  
   
 1.  ユーザー A が埋め込みデータセットに依存するグラフを含むレポートを作成します。  
@@ -42,7 +42,7 @@ ms.locfileid: "77081110"
 6.  ユーザー B はサーバーから更新されたグラフを受け入れます。 これにより、ユーザー B が自分のレポート内のグラフに対して行った変更が上書きされます。  
   
   
-##  <a name="PublishingComponents"></a> レポート パーツのパブリッシュ  
+##  <a name="publishing-report-parts"></a><a name="PublishingComponents"></a> レポート パーツのパブリッシュ  
  レポート パーツをパブリッシュすると、レポート ビルダーによってレポート パーツの名前とは異なる一意の ID が割り当てられます。 レポート ビルダーでは、レポート パーツにどのような変更が加えられても、その ID を保持します。 ID は、レポート内の元のレポート アイテムをレポート パーツにリンクします。 他のレポート作成者がレポート パーツを再利用する場合、ID はそれらのレポート内のレポート パーツもレポート サーバー上のレポート パーツにリンクします。  
   
  以下に、レポート パーツとしてパブリッシュできるレポート アイテムを示します。  
@@ -81,7 +81,7 @@ ms.locfileid: "77081110"
  プロパティ ペインで説明を編集することもできます。  
   
   
-##  <a name="ReusingComponents"></a> レポート パーツの再利用  
+##  <a name="reusing-report-parts"></a><a name="ReusingComponents"></a> レポート パーツの再利用  
  レポートを作成する最も簡単な方法は、テーブルやグラフなどの既存のレポート パーツをレポート パーツ ギャラリーからレポートに追加することです。 レポートに追加した後、必要に応じて変更したり、サーバーから更新を受け入れたりできます。 レポート内のレポート アイテムを変更しても、サイトまたはサーバーにパブリッシュされたレポート パーツのインスタンスには影響しません。また、レポート内のインスタンスとサイトまたはサーバー上のインスタンスの間のリレーションシップを壊すこともありません。 十分な権限がある場合は、更新したコピーをサイトまたはサーバーに保存し直すことができます。 他のユーザーがサイトまたはサーバー上でコピーを変更する場合は、コピーをそのまま維持することも、サイトまたはサーバー上のコピーと同じになるように更新することもできます。  
   
 ### <a name="searching-for-report-parts"></a>レポート パーツの検索  
@@ -103,7 +103,7 @@ ms.locfileid: "77081110"
  レポートに既に存在するデータセットと同じデータセットを使用する別のレポート パーツを追加する場合、ウィザードでは、そのデータセットの別のバージョンをレポートに追加するのではなく、既存のデータセットを参照するように、レポート パーツ内の参照をリダイレクトします。 詳細については、「 [レポート ビルダーのレポート パーツおよびデータセット](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)」を参照してください。  
   
   
-##  <a name="UpdatingComponents"></a> サーバーでの変更内容によるレポート パーツの更新  
+##  <a name="updating-report-parts-with-changes-from-the-server"></a><a name="UpdatingComponents"></a> サーバーでの変更内容によるレポート パーツの更新  
  レポートを開くたびに、レポート ビルダーによって、そのレポートにあるレポート パーツのサーバー インスタンスがサーバー上で更新されたかどうかが確認されます。 また、データセットやパラメーターなどのレポート パーツの依存アイテムに変更が加えられたかどうかも確認されます。 パブリッシュ済みレポート パーツまたはレポート パーツの依存アイテムがサーバー上で更新されている場合は、レポート内の情報バーに、更新されたアイテムの数が表示されます。 更新は、表示して受け入れることも、拒否することもできます。また、情報バーを消去することもできます。 更新内容を表示すると、レポート パーツのサムネイル、最終変更者、および最終変更日が表示されます。 更新されたアイテムのすべてまたは一部を受け入れることができます。  
   
 > [!NOTE]  
@@ -120,7 +120,7 @@ ms.locfileid: "77081110"
  サーバー上のバージョンに戻すには、レポート内で使用しているバージョンを削除し、再度追加します。  
   
   
-##  <a name="RepublishingComponents"></a> サーバーに既に存在するレポート パーツの更新  
+##  <a name="updating-report-parts-already-on-the-server"></a><a name="RepublishingComponents"></a> サーバーに既に存在するレポート パーツの更新  
  サーバーに存在するレポート パーツを更新したり、既存のレポート パーツを置き換えずに、新しいレポート パーツとしてパブリッシュしたりできます。 サーバーに存在するレポート パーツを更新する場合、他のレポート内のレポート パーツのコピーは自動的に変更されません。 他のレポート作成者がそのレポート パーツをレポートに追加した場合は、そのレポートを次回開くときに変更が通知され、 変更を受け入れるかどうかを選択できます。  
   
  新しいレポート パーツとしてパブリッシュする場合は、レポート ビルダーによって新しい一意の ID が指定され、元のレポート パーツにはリンクされなくなります。  
@@ -128,10 +128,10 @@ ms.locfileid: "77081110"
  データセットがレポート パーツに埋め込まれている場合は、レポート パーツをパブリッシュするたびに、 **[レポート パーツのパブリッシュ]** ダイアログ ボックスにデータセットが表示されます。 共有データセットは、 **[レポート パーツのパブリッシュ]** ダイアログ ボックスには表示されません。  
   
   
-##  <a name="RptPartsRptDesigner"></a> レポート デザイナーでのレポート パーツの操作  
+##  <a name="working-with-report-parts-in-report-designer"></a><a name="RptPartsRptDesigner"></a> レポート デザイナーでのレポート パーツの操作  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のレポート デザイナーでは、レポート パーツの動作が少し異なります。 一方、レポート デザイナーでは、パブリッシュは一方向です。つまり、レポート デザイナーからレポート パーツをパブリッシュすることはできますが、レポート デザイナーで既存のレポート パーツを再利用することはできません。 詳細については、「[レポート デザイナーでのレポート パーツ &#40;SSRS&#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)」を参照してください。  
   
-##  <a name="HowTo"></a> 操作方法に関するトピック  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> 操作方法に関するトピック  
  [レポート パーツのパブリッシュおよび再パブリッシュ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/publish-and-republish-report-parts-report-builder-and-ssrs.md)  
   
  [レポート パーツの参照と既定のフォルダーの設定 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)  

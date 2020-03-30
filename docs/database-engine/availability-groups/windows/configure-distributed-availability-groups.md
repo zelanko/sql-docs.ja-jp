@@ -11,10 +11,10 @@ ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: ebe6152ea59de28c9df7f3bb3abfa149900c826f
-ms.sourcegitcommit: f06049e691e580327eacf51ff990e7f3ac1ae83f
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77146304"
 ---
 # <a name="configure-an-always-on-distributed-availability-group"></a>Always On 分散型可用性グループの構成  
@@ -217,14 +217,14 @@ ALTER AVAILABILITY GROUP [distributedag]
 GO  
 ```  
 
-## <a name="failover"></a> 2 つ目の可用性グループのセカンダリ上のデータベースを結合する
+## <a name="join-the-database-on-the-secondary-of-the-second-availability-group"></a><a name="failover"></a> 2 つ目の可用性グループのセカンダリ上のデータベースを結合する
 2 つ目の可用性グループのセカンダリ レプリカ上のデータベースが復元状態になったら、それを可用性グループに手動で結合する必要があります。
 
 ```sql  
 ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];   
 ```
   
-## <a name="failover"></a> セカンダリ可用性グループにフェールオーバーする  
+## <a name="fail-over-to-a-secondary-availability-group"></a><a name="failover"></a> セカンダリ可用性グループにフェールオーバーする  
 
 現在のところ、手動フェールオーバーのみがサポートされています。 分散型可用性グループを手動でフェールオーバーするには:
 

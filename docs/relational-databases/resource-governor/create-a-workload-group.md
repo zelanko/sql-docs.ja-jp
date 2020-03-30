@@ -12,10 +12,10 @@ helpviewer_keywords:
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 237ec09347ab139aabcc9f475f5e3b64aba0f054
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73633003"
 ---
 # <a name="create-a-workload-group"></a>ワークロード グループの作成
@@ -28,9 +28,9 @@ ms.locfileid: "73633003"
   
 -   **ワークロード グループの作成に使用するもの:** [SQL Server Management Studio](#CreRPProp)、[Transact-SQL](#CreRPTSQL)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="LimitationsRestrictions"></a> 制限事項と制約事項
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> 制限事項と制約事項
 
  **REQUEST_MAX_MEMORY_GRANT_PERCENT**  
   
@@ -38,11 +38,11 @@ ms.locfileid: "73633003"
   
  インデックス作成では、パフォーマンスを向上させるため、最初に許可されたメモリ量を超えるメモリ ワークスペースの使用が許可されます。 この特別な処理はリソース ガバナーでサポートされていますが、最初のメモリ許可も追加のメモリ許可も、ワークロード グループ設定およびリソース プール設定によって制限されます。  
   
-###  <a name="Permissions"></a> Permissions
+###  <a name="permissions"></a><a name="Permissions"></a> Permissions
 
  ワークロード グループを作成するには、CONTROL SERVER 権限が必要です。  
   
-##  <a name="CreRPProp"></a> SQL Server Management Studio を使用してワークロード グループを作成する
+##  <a name="create-a-workload-group-using-sql-server-management-studio"></a><a name="CreRPProp"></a> SQL Server Management Studio を使用してワークロード グループを作成する
 
  **ワークロード グループを作成するには [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
@@ -60,7 +60,7 @@ ms.locfileid: "73633003"
   
 7.  変更を保存するには、 **[OK]** をクリックします。  
 
-##  <a name="CreRPTSQL"></a> Transact-SQL を使用してワークロード グループを作成する  
+##  <a name="create-a-workload-group-using-transact-sql"></a><a name="CreRPTSQL"></a> Transact-SQL を使用してワークロード グループを作成する  
  **ワークロード グループを作成するには [!INCLUDE[tsql](../../includes/tsql-md.md)]**  
   
 1.  設定するプロパティ値を指定する CREATE WORKLOAD GROUP ステートメントを実行します。  

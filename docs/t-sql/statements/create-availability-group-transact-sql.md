@@ -25,10 +25,10 @@ ms.assetid: a3d55df7-b4e4-43f3-a14b-056cba36ab98
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 8266791ae6621dbf81f16b2eb5c83ef8c9a3c1b5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75244592"
 ---
 # <a name="create-availability-group-transact-sql"></a>CREATE AVAILABILITY GROUP (Transact-SQL)
@@ -483,7 +483,7 @@ CREATE AVAILABILITY GROUP group_name
 ### <a name="a-configuring-backup-on-secondary-replicas-flexible-failover-policy-and-connection-access"></a>A. セカンダリ レプリカ上のバックアップ、柔軟なフェールオーバー ポリシー、および接続アクセスを構成する  
  次の例では、2 つのユーザー データベース (`MyAg` および `ThisDatabase`) に対して、`ThatDatabase` という名前の可用性グループを作成します。 次の表は、可用性グループ全体を対象に設定されるオプションの指定値をまとめたものです。  
   
-|グループ オプション|設定|[説明]|  
+|グループ オプション|設定|説明|  
 |------------------|-------------|-----------------|  
 |AUTOMATED_BACKUP_PREFERENCE|SECONDARY|この自動バックアップの設定によって、プライマリ レプリカがオンラインの唯一のレプリカである場合を除いて、バックアップがセカンダリ レプリカで発生することが示されます (これが既定の動作です)。 AUTOMATED_BACKUP_PREFERENCE 設定が作用するためには、自動バックアップの設定が考慮されるようにバックアップ ジョブのスクリプトを可用性データベースに作成する必要があります。|  
 |FAILURE_CONDITION_LEVEL|3|このエラー条件レベル設定は、孤立したスピンロック、深刻な書き込みアクセス違反、ダンプが多すぎるなど、SQL Server 内部の深刻なエラーが発生した場合に自動フェールオーバーを開始する必要があることを指定します。|  
@@ -491,7 +491,7 @@ CREATE AVAILABILITY GROUP group_name
   
  3 つの可用性レプリカは、`COMPUTER01`、`COMPUTER02`、および `COMPUTER03` という名前のコンピューター上の既定のサーバー インスタンスによってホストされます。 次の表は、レプリカ オプションの指定値をレプリカごとにまとめたものです。  
   
-|レプリカ オプション|`COMPUTER01` 上の設定|`COMPUTER02` 上の設定|`COMPUTER03` 上の設定|[説明]|  
+|レプリカ オプション|`COMPUTER01` 上の設定|`COMPUTER02` 上の設定|`COMPUTER03` 上の設定|説明|  
 |--------------------|-----------------------------|-----------------------------|-----------------------------|-----------------|  
 |ENDPOINT_URL|TCP://*COMPUTER01:5022*|TCP://*COMPUTER02:5022*|TCP://*COMPUTER03:5022*|この例では、いずれのシステムも同じドメインに存在するため、エンドポイントの URL には、コンピューター システムの名前をシステム アドレスとして使用できます。|  
 |AVAILABILITY_MODE|SYNCHRONOUS_COMMIT|SYNCHRONOUS_COMMIT|ASYNCHRONOUS_COMMIT|2 つのレプリカが同期コミット モードを使用します。 同期されているレプリカは、データ損失のないフェールオーバーをサポートします。 3 番目のレプリカには、非同期コミットの可用性モードが使用されます。|  
@@ -558,7 +558,7 @@ ALTER AVAILABILITY GROUP [MyAg]
 GO  
 ```  
   
-##  <a name="RelatedTasks"></a> 関連タスク  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 関連タスク  
   
 -   [可用性グループの作成 &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md)  
   

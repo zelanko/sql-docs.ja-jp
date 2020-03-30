@@ -10,10 +10,10 @@ ms.author: davidph
 author: dphansen
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 6357f98627842ab790b494cf1b4a1f9b2110ec9c
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73727348"
 ---
 # <a name="upgrade-and-installation-faq-for-sql-server-machine-learning-or-r-server"></a>SQL Server Machine Learning または Microsoft R Server のアップグレードとインストールに関する FAQ
@@ -92,7 +92,7 @@ SQL Server 2016 のリリース前バージョンでは、次のバージョン�
 
 SQL Server がリリース前のバージョンの場合、機械学習コンポーネントのアンインストールが複雑で、特殊なスクリプトの実行が必要になる場合があります。 ご購入元に問い合わせてください。
 
-###  <a name="bkmk_Uninstall"></a> 以前のバージョンの Microsoft R Server からアップグレードする前にアンインストールする
+###  <a name="uninstall-prior-to-upgrading-from-an-older-version-of-microsoft-r-server"></a><a name="bkmk_Uninstall"></a> 以前のバージョンの Microsoft R Server からアップグレードする前にアンインストールする
 
 Microsoft R Server のプレリリース版がインストールされている場合は、それをアンインストールしてから新しいバージョンにアップグレードする必要があります。
 
@@ -163,7 +163,7 @@ SQL Server 2016 では、SQL Server R Services で実行されていた R と、
   
     -   5A2A1571-B8CD-4AAF-9303-8DF463DABE5A        (7.5.0 の場合)
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
  [SQL Server Machine Learning Services (データベース内)](../r/sql-server-r-services.md)
 

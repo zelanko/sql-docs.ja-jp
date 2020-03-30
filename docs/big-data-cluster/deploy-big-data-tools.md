@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 12dea4163feba35af6346d347503f42ab31c852a
-ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77173630"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>SQL Server 2019 のビッグ データ ツールをインストールする
@@ -26,7 +26,7 @@ ms.locfileid: "77173630"
 
 次の表では、一般的なビッグ データ クラスター ツールとそのインストール方法を示します。
 
-| ツール | Required | 説明 | インストール |
+| ツール | 必須 | 説明 | インストール |
 |---|---|---|---|
 | `python` | はい | Python は、動的なセマンティクスを備えた、インタープリター方式でオブジェクト指向の高水準プログラミング言語です。 SQL Server 用のビッグ データ クラスターの多くの部分で、Python が使われています。 | [Python のインストール](#python)|
 | `azdata` | はい | ビッグ データ クラスターをインストールして管理するためのコマンドライン ツールです。 | [インストール](deploy-install-azdata.md) |
@@ -62,7 +62,7 @@ ms.locfileid: "77173630"
 
 残りのツールは、特定のシナリオでのみ必要です。 **Azure CLI** を使って、AKS の展開に関連付けられている Azure サービスを管理できます。 **mssql-cli** は必須ではありませんが便利なツールです。これを使うと、クラスター内の SQL Server マスター インスタンスに接続し、コマンド ラインからクエリを実行できます。 そして、GitHub スクリプトでサンプル データをインストールする予定の場合は、**sqlcmd** と `curl` が必要です。
 
-### <a id="python"></a> Python をオフラインでインストールする
+### <a name="install-python-offline"></a><a id="python"></a> Python をオフラインでインストールする
 
 1. インターネットにアクセスできるコンピューターで、Python が含まれる次のいずれかの圧縮ファイルをダウンロードします。
 

@@ -11,10 +11,10 @@ author: rpsqrd
 ms.author: ryanpu
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 06db927ec2d77f07e82a9647239f87bc46e8a953
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74320065"
 ---
 # <a name="register-computer-with-host-guardian-service"></a>ホスト ガーディアン サービスにコンピューターを登録する
@@ -80,7 +80,7 @@ Set-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Control\DeviceGuard -Name 
 
 レジストリを変更した後、[!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] コンピューターを再起動して、VBS が実行されているかどうかを再度確認します。
 
-コンピューターが会社で管理されている場合、再起動後に、グループ ポリシーまたは Microsoft エンドポイント マネージャーによって、これらのレジストリ キーの変更がオーバーライドされる可能性があります。
+コンピューターが会社で管理されている場合、再起動後に、グループ ポリシーまたは Microsoft Endpoint Manager によって、これらのレジストリ キーの変更がオーバーライドされる可能性があります。
 IT ヘルプ デスクに問い合わせて、VBS 構成を管理するポリシーがデプロイされているかどうかを確認してください。
 
 ## <a name="step-3-configure-the-attestation-url"></a>手順 3:構成証明 URL を構成する

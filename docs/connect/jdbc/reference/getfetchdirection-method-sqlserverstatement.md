@@ -16,10 +16,10 @@ ms.assetid: ceb4ae68-decc-46d3-83f1-0bbd23aaf58c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1be44732bb2843e7ce4b306a28dec7343d960ea1
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67983241"
 ---
 # <a name="getfetchdirection-method-sqlserverstatement"></a>getFetchDirection メソッド (SQLServerStatement)
@@ -38,7 +38,7 @@ public final int getFetchDirection()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- [setFetchDirection](../../../connect/jdbc/reference/setfetchdirection-method-sqlserverstatement.md) メソッドによって指定されるフェッチ方向を示す **int** です。  
+ **setFetchDirection** メソッドによって指定されるフェッチ方向を示す [int](../../../connect/jdbc/reference/setfetchdirection-method-sqlserverstatement.md) です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

@@ -16,10 +16,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 2c6da41d19fed61fd83a7d4a1521ddba8726ba46
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67994311"
 ---
 # <a name="creating-a-rowset-with-iopenrowset"></a>IOpenRowset を使用した行セットの作成
@@ -35,7 +35,7 @@ ms.locfileid: "67994311"
   
 -   DBID の *uName* メンバーには、既存のベース テーブルまたはビューの名前を Unicode 文字列で指定する必要があります。  
   
--   **OpenRowset** の *pIndexID* パラメーターには NULL を指定する必要があります。  
+-   *OpenRowset* の **pIndexID** パラメーターには NULL を指定する必要があります。  
   
  **IOpenRowset::OpenRowset** の結果セットには、1 つの行セットが含まれます。 1 つの行セットが含まれる結果セットは、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] カーソルでサポートできます。 開発者はカーソル サポートによって、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のコンカレンシー メカニズムを使用できます。  
   

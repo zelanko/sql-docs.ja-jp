@@ -18,10 +18,10 @@ ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b0b4a72519a0fa20d0c4a7472760a8f06a9ced32
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79190610"
 ---
 # <a name="whats-new-in-sql-server-2016"></a>SQL Server 2016 の新機能
@@ -49,9 +49,9 @@ ms.locfileid: "79190610"
     - 最大テーブル 2 TB をサポートしています (256 GB 以上)。 
     - 並べ替えと Always On 可用性グループのサポートに対する列ストア インデックスの機能強化があります。
 - 新しいセキュリティ機能
-    - **Always Encrypted:** 有効にすると、暗号化キーを持つアプリケーションのみが、SQL Server 2016 データベースの暗号化された機密データにアクセスにできます。 キーが SQL Server に渡されることはありません。
-    - **動的なデータ マスク:** テーブル定義で指定されている場合、マスクされたデータはほとんどのユーザーには非表示となり、UNMASK アクセス許可を持つユーザーのみがすべてのデータを参照できます。
-    - **行レベル セキュリティ:** データ アクセスをデータベース エンジン レベルで制限できるため、ユーザーは自分に関係するもののみを参照できます。 
+    - **Always Encrypted:** 有効にすると、暗号化キーを持つアプリケーションのみが、SQL Server 2016 データベースの暗号化された機微なデータにアクセスにできます。 キーが SQL Server に渡されることはありません。
+    - **動的データ マスク:** テーブル定義で指定されている場合、マスクされたデータはほとんどのユーザーには非表示となり、UNMASK アクセス許可を持つユーザーのみがすべてのデータを参照できます。
+    - **行レベル セキュリティ:** データ アクセスをデータベース エンジン レベルで制限できるため、ユーザーは自分に関係するもののみを参照します。 
 
 ## <a name="sql-server-2016-analysis-services-ssas"></a>SQL Server 2016 Analysis Services (SSAS)
 SQL Server 2016 Analysis Services では、**1200 互換性レベル**に基づいて、表形式モデルのデータベースに対するパフォーマンス、オーサリング、データベース管理、フィルター、処理などが向上しています。

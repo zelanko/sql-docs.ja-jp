@@ -25,10 +25,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: efc2d749f3963f0828a70bc1506581f5bd2a35a3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75246229"
 ---
 # <a name="char-and-varchar-transact-sql"></a>char および varchar (Transact-SQL)
@@ -74,7 +74,7 @@ CREATE TABLE または ALTER TABLE 実行時に SET ANSI_PADDING が OFF に設�
 > Null 以外の varchar(max) または nvarchar(max) の各列には、24 バイトの追加の固定割り当てが必要で、これは並べ替え操作中の 8,060 バイトの行制限におけるカウント対象となります。 これにより、テーブル内に作成できる Null 以外の varchar(max) または nvarchar(max) の列数について、暗黙的な制限が生じます。
 テーブルの作成時やデータ挿入時に、最大行サイズが許容最大値の 8,060 バイトを超えるという通常の警告以外の、特別なエラーは提供されません。 この大きな行サイズが原因で、クラスター化インデックス キーの更新や列セット全体の並べ替えなどの通常操作の一部でエラー (エラー 512 など) が発生する可能性があります。これは、操作の実行中にのみ発生します。
 
-## <a name="_character"></a> 文字データの変換
+## <a name="converting-character-data"></a><a name="_character"></a> 文字データの変換
 
 文字式を異なるサイズの文字型に変換する場合、値が新しいデータ型に長すぎる場合は、切り捨てられます。 **uniqueidentifier** 型は、文字式からの変換のための文字型と見なされるため、文字型に変換する場合は切り捨てのルールが適用されます。 例については、後の「例」のセクションを参照してください。
 
@@ -174,7 +174,7 @@ String                                       TruncatedValue
 (1 row(s) affected)
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [nchar および nvarchar (Transact-SQL)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)
 [CAST および CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)

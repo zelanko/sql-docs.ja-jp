@@ -24,10 +24,10 @@ ms.assetid: b4c6bced-4473-4bae-85b9-56deced495f9
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 039e6b776240121aa66559cfb637c11f0ac70a9d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71314577"
 ---
 # <a name="signbycert-transact-sql"></a>SIGNBYCERT (Transact-SQL)
@@ -61,7 +61,7 @@ SignByCert ( certificate_ID , @cleartext [ , 'password' ] )
  証明書に対する CONTROL 権限が必要です。  
   
 ## <a name="examples"></a>例  
- 次の例では、証明書 `ABerglundCert07` を使用して `@SensitiveData` 内のテキストに署名します。署名の前にはパスワード "pGFD4bb925DGvbd2439587y" を使用して証明書を暗号化解除します。 その後、クリアテキストと署名をテーブル `SignedData04` に挿入します。  
+ 次の例では、証明書 `@SensitiveData` を使用して `ABerglundCert07` 内のテキストに署名します。署名の前にはパスワード "pGFD4bb925DGvbd2439587y" を使用して証明書を暗号化解除します。 その後、クリアテキストと署名をテーブル `SignedData04` に挿入します。  
   
 ```  
 DECLARE @SensitiveData nvarchar(max);  

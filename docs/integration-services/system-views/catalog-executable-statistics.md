@@ -11,10 +11,10 @@ ms.assetid: 3dda28d6-10d8-4294-9b5e-a6048c07faf9
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 85f24df15c968aa7a5848519f4c118a96bc3534c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296638"
 ---
 # <a name="catalogexecutable_statistics"></a>catalog.executable_statistics 
@@ -28,7 +28,7 @@ ms.locfileid: "71296638"
   
  実行可能ファイルは、パッケージの制御フローに追加するタスクまたはコンテナーです。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |Statistics_id|bigint|データの一意の ID。|  
 |Execution_id|bigint|実行のインスタンスの一意の ID。<br /><br /> catalog.executions ビューには、実行に関する追加情報が表示されます。 詳細については、「[catalog.executions &#40;SSISDB データベース&#41;](../../integration-services/system-views/catalog-executions-ssisdb-database.md)」を参照してください。|  

@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7e1052544d1243dea4e6c3da377de2dbbe36d5af
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74412488"
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>インメモリ OLTP でサポートされていない Transact-SQL の構造
@@ -38,7 +38,7 @@ ms.locfileid: "74412488"
 ## <a name="databases-that-use-in-memory-oltp"></a>インメモリ OLTP を使用するデータベース  
  次の表に、サポートされていない [!INCLUDE[tsql](../../includes/tsql-md.md)] 機能、およびインメモリ OLTP データベースに関するエラー メッセージのテキストに含まれるキーワードを示します。 また、エラーの解決方法も示します。  
   
-|Type|Name|解決策|  
+|Type|名前|解像度|  
 |----------|----------|----------------|  
 |オプション|AUTO_CLOSE|データベース オプション AUTO_CLOSE=ON は、MEMORY_OPTIMIZED_DATA ファイル グループのあるデータベースではサポートされていません。|  
 |オプション|ATTACH_REBUILD_LOG|CREATE データベース オプション ATTACH_REBUILD_LOG は、MEMORY_OPTIMIZED_DATA ファイル グループのあるデータベースではサポートされていません。|  
@@ -49,7 +49,7 @@ ms.locfileid: "74412488"
 ## <a name="memory-optimized-tables"></a>メモリ最適化テーブル  
  次の表に、サポートされていない [!INCLUDE[tsql](../../includes/tsql-md.md)] 機能、およびメモリ最適化テーブルに関するエラー メッセージのテキストに含まれるキーワードを示します。 また、エラーの解決方法も示します。  
   
-|Type|Name|解決策|  
+|Type|名前|解像度|  
 |----------|----------|----------------|  
 |機能|ON|メモリ最適化テーブルをファイル グループまたはパーティション構成に配置できません。 **CREATE TABLE** ステートメントから ON 句を削除します。<br /><br /> すべてのメモリ最適化テーブルは、メモリ最適化ファイル グループにマップされます。|  
 |データ型|*データ型名*|指示されたデータ型はサポートされていません。 サポートされているデータ型に置き換えます。 詳細については、「 [サポートされるデータ型](../../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md)」を参照してください。|  
@@ -80,7 +80,7 @@ ms.locfileid: "74412488"
 ## <a name="indexes-on-memory-optimized-tables"></a>メモリ最適化テーブルのインデックス  
  次の表に、メモリ最適化テーブルのインデックスに関連したエラー メッセージのテキストに表示される可能性がある [!INCLUDE[tsql](../../includes/tsql-md.md)] の機能およびキーワードと、エラーを解決するための修正措置を示します。  
   
-|Type|Name|解決策|  
+|Type|名前|解像度|  
 |----------|----------|----------------|  
 |機能|フィルター選択されたインデックス|フィルター選択されたインデックスは、メモリ最適化テーブルでサポートされていません。 インデックスの指定から **WHERE** 句を削除します。|  
 |機能|[付加列]|付加列の指定は、メモリ最適化テーブルにとって必須ではありません。 メモリ最適化テーブルのすべての列は、各メモリ最適化インデックスに暗黙的に含まれています。|  
@@ -90,14 +90,14 @@ ms.locfileid: "74412488"
 ## <a name="nonclustered-hash-indexes"></a>非クラスター化ハッシュ インデックス  
  次の表に、非クラスター化ハッシュ インデックスに関連したエラー メッセージのテキストに表示される可能性がある [!INCLUDE[tsql](../../includes/tsql-md.md)] の機能およびキーワードと、エラーを解決するための修正措置を示します。  
   
-|Type|Name|解決策|  
+|Type|名前|解像度|  
 |----------|----------|----------------|  
 |オプション|ASC/DESC|非クラスター化ハッシュ インデックスは順序付けされません。 インデックス キーの指定からキーワード **ASC** および **DESC** を削除します。|  
   
 ## <a name="natively-compiled-stored-procedures-and-user-defined-functions"></a>ネイティブ コンパイル ストアド プロシージャおよびユーザー定義関数  
  次の表に、ネイティブ コンパイル ストアド プロシージャおよびユーザー定義関数に関連したエラー メッセージのテキストに表示される可能性がある [!INCLUDE[tsql](../../includes/tsql-md.md)] の機能およびキーワードと、エラーを解決するための修正措置を示します。  
   
-|Type|機能|解決策|  
+|Type|機能|解像度|  
 |----------|-------------|----------------|  
 |機能|インライン テーブル変数|テーブル型は、変数宣言を使用してインラインで宣言できません。 テーブル型は、 **CREATE TYPE** ステートメントを使用して明示的に宣言する必要があります。|  
 |機能|カーソル|カーソルは、ネイティブ コンパイル ストアド プロシージャではサポートされていません。<br /><br /> クライアントからプロシージャを実行する場合、カーソル API ではなく RPC を使用します。 ODBC で、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントから削除してください。 **EXECUTE**を避け、代わりにプロシージャの名前を直接指定します。<br /><br /> [!INCLUDE[tsql](../../includes/tsql-md.md)] バッチまたは他のストアド プロシージャからプロシージャを実行する場合、ネイティブ コンパイル ストアド プロシージャでカーソルを使用しないでください。<br /><br /> ネイティブ コンパイル ストアド プロシージャを作成する場合は、カーソルを使用せずに、セットベースのロジックまたは **WHILE** ループを使用します。|  
@@ -159,7 +159,7 @@ ms.locfileid: "74412488"
 |オプション|WITH TIES|**適用対象:** [!INCLUDE[ssSDS14_md](../../includes/sssql14-md.md)] および [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>このオプションは **TOP** 句でサポートされていません。 ネイティブ コンパイル ストアド プロシージャのクエリから **WITH TIES** を削除します。<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] および [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 以降の SQL Server では、**TOP WITH TIES** をサポートしていません。|  
 |集計関数|*集計関数*|集計関数はすべてサポートされているわけではありません。 ネイティブ コンパイル T-SQL モジュールでサポートされている集計関数の詳細については、「[ネイティブ コンパイル T-SQL モジュールでサポートされる機能](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)」を参照してください。|  
 |順位付け関数|*順位付け関数*|順位付け関数は、ネイティブ コンパイル ストアド プロシージャではサポートされていません。 プロシージャの定義から削除します。|  
-|Function|*Function*|この関数はサポートされません。 ネイティブ コンパイル T-SQL モジュールでサポートされている関数の詳細については、「[ネイティブ コンパイル T-SQL モジュールでサポートされる機能](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)」を参照してください。|  
+|機能|*Function*|この関数はサポートされません。 ネイティブ コンパイル T-SQL モジュールでサポートされている関数の詳細については、「[ネイティブ コンパイル T-SQL モジュールでサポートされる機能](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)」を参照してください。|  
 |ステートメント|*ステートメント*|このステートメントはサポートされていません。 ネイティブ コンパイル T-SQL モジュールでサポートされている関数の詳細については、「[ネイティブ コンパイル T-SQL モジュールでサポートされる機能](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)」を参照してください。|  
 |機能|バイナリおよび文字列で使用される MIN と MAX|集計関数 **MIN** および **MAX** は、ネイティブ コンパイル ストアド プロシージャ内の文字やバイナリ文字列値に使用できません。|  
 |機能|GROUP BY ALL|ALL は、ネイティブ コンパイル ストアド プロシージャ内の GROUP BY 句では使用できません。 GROUP BY 句から ALL を削除します。|  
@@ -179,7 +179,7 @@ ms.locfileid: "74412488"
 ## <a name="transactions-that-access-memory-optimized-tables"></a>メモリ最適化テーブルにアクセスするトランザクション  
  次の表に、メモリ最適化テーブルにアクセスするトランザクションに関連したエラー メッセージのテキストに表示される可能性がある [!INCLUDE[tsql](../../includes/tsql-md.md)] の機能およびキーワードと、エラーを解決するための修正措置を示します。  
   
-|Type|Name|解決策|  
+|Type|名前|解像度|  
 |----------|----------|----------------|  
 |機能|セーブポイント (savepoint)|メモリ最適化テーブルにアクセスするトランザクション内での明示的なセーブポイントの作成はサポートされていません。|  
 |機能|バインドされたトランザクション|バインドされたセッションは、メモリ最適化テーブルにアクセスするトランザクションに参加できません。 プロシージャを実行する前にセッションをバインドしないでください。|  

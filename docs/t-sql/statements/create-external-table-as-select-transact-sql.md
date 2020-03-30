@@ -21,10 +21,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 24668748b97c44e825baee2dee95d9442aa1e11f
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68073146"
 ---
 # <a name="create-external-table-as-select-transact-sql"></a>CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)
@@ -150,7 +150,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
   
  データベースは、データのエクスポート時に外部データ ソースで発生したすべての Java エラーを報告します。  
   
-##  <a name="GeneralRemarks"></a> 全般的な解説  
+##  <a name="general-remarks"></a><a name="GeneralRemarks"></a> 全般的な解説  
  CETAS ステートメントが完了したら、外部テーブルに対して [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリを実行できます。 CREATE TABLE AS SELECT ステートメントを使用してインポートする場合を除き、これらの操作ではクエリの実行中にデータをデータベースにインポートします。  
   
  外部テーブルの名前と定義は、データベースのメタデータに格納されます。 データは外部データ ソースに格納されます。  
@@ -189,7 +189,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
 ## <a name="locking"></a>ロック  
  SCHEMARESOLUTION オブジェクトの共有ロックを取得します。  
   
-##  <a name="Examples"></a> 使用例  
+##  <a name="examples"></a><a name="Examples"></a> 使用例  
   
 ### <a name="a-create-a-hadoop-table-using-create-external-table-as-select-cetas"></a>A. CREATE EXTERNAL TABLE AS SELECT (CETAS) を使用して Hadoop テーブルを作成する  
  次の例では、ソース テーブル `dimCustomer` の列の定義とデータを使用して、`hdfsCustomer` という名前の新しい外部テーブルを作成します。  

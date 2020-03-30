@@ -19,10 +19,10 @@ author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
 ms.openlocfilehash: 2c6647dfab3a095228023fd56af2c766a8b40fee
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77903819"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY (Transact-SQL) (プレビュー)
@@ -370,13 +370,13 @@ COPY コマンドを使用すると、機能が一般公開される時点まで
 | :-----: | :--------: |
 |   100   |     60     |
 |   200   |     60     |
-|   300   |     60     |
+|   該当なし   |     60     |
 |   400   |     60     |
 |   500   |     60     |
 |  1,000  |    120     |
 |  1,500  |    180     |
 |  2,000  |    240     |
-|  2,500  |    300     |
+|  2,500  |    該当なし     |
 |  3,000  |    360     |
 |  5,000  |    600     |
 |  6,000  |    720     |

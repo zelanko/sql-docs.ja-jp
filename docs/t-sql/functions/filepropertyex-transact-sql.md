@@ -20,10 +20,10 @@ helpviewer_keywords:
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 955cfe87f93bedc41c6aeb29951ee1c81d0a4d6e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68425934"
 ---
 # <a name="filepropertyex-transact-sql"></a>FILEPROPERTYEX (Transact-SQL)
@@ -48,7 +48,7 @@ FILEPROPERTYEX ( name , property )
 
 
   
-|値|[説明]|
+|値|説明|
 |-----------|-----------------|  
 |**BlobTier**|ターゲット Azure ページ BLOB の層。 Azure ページ BLOB ストレージを使用する Standard および GeneralPurpose データベースのみに適用されます。|
 |**[AccountType]**|BLOB ストレージとファイル ストレージのどちらであるか、また Premium ストレージと Standard ストレージのどちらであるかを示すストレージ アカウントの種類。|

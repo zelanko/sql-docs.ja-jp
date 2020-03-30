@@ -11,17 +11,17 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.openlocfilehash: f93711983eb32a979e47941883e968b52e03459c
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73532541"
 ---
 # <a name="schema-compare-extension"></a>スキーマ比較の拡張機能
 スキーマ比較の拡張機能では、2 つのデータベース定義を比較して、ソースとターゲットの相違を適用するための使いやすいエクスペリエンスが提供されます。
 
 
-## <a name="features"></a>[機能]
+## <a name="features"></a>特徴
 
 * 2 つの dacpac ファイルまたはデータベースのスキーマを比較する
 * ソースと一致させるためにターゲットに対して実行する必要がある一連のアクションとして結果を表示する

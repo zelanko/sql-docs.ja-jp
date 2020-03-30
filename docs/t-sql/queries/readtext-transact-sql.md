@@ -20,10 +20,10 @@ ms.assetid: 91b69853-1381-4306-8343-afdb73105738
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: dd8ad58e96956e1ab0f7b542bab4168272b3f968
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68141293"
 ---
 # <a name="readtext-transact-sql"></a>READTEXT (Transact-SQL)
@@ -59,7 +59,7 @@ HOLDLOCK
 トランザクションが終了するまでテキスト値の読み取りをロックします。 他のユーザーは値を読み取ることができますが、変更はできません。  
   
 ## <a name="remarks"></a>解説  
-有効な _text\_ptr_ 値を取得するには、[TEXTPTR](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md) 関数を使用します。 TEXTPTR は指定行で **text**、**ntext**、**image** 列のポインターを返します。 TEXTPRT はまた、クエリが複数の行を返す場合の最後の行で **text**、**ntext**、**image** 列のポインターを返します。 TEXTPTR は 16 バイトのバイナリ文字列を返すため、テキスト ポインターを保持するローカル変数を宣言し、READTEXT でその変数を使用することをお勧めします。 ローカル変数の宣言の詳細については、「[DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)」を参照してください。  
+有効な [text](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md)ptr _値を取得するには、\_TEXTPTR_ 関数を使用します。 TEXTPTR は指定行で **text**、**ntext**、**image** 列のポインターを返します。 TEXTPRT はまた、クエリが複数の行を返す場合の最後の行で **text**、**ntext**、**image** 列のポインターを返します。 TEXTPTR は 16 バイトのバイナリ文字列を返すため、テキスト ポインターを保持するローカル変数を宣言し、READTEXT でその変数を使用することをお勧めします。 ローカル変数の宣言の詳細については、「[DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)」を参照してください。  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、行内テキスト ポインターが存在しても、有効ではない場合があります。 **text in row** オプションの詳細については、「[sp_tableoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)」を参照してください。 テキスト ポインターを無効にする方法の詳細については、「[sp_invalidate_textptr &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-invalidate-textptr-transact-sql.md)」を参照してください。  
   

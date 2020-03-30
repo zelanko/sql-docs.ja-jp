@@ -11,10 +11,10 @@ ms.assetid: cbbf2728-b8c8-4c35-875a-6e967c8285dc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0dc8ddf82859b8bf47853a3d72a7461567388b87
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67995198"
 ---
 # <a name="unwrap-method-sqlservercallablestatement"></a>unwrap メソッド (SQLServerCallableStatement)
@@ -45,7 +45,7 @@ public <T> T unwrap(Class<T> iface)
   
  アプリケーションは [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] に固有の JDBC API 拡張機能にアクセスする必要がある場合があります。 unwrap メソッドは、クラスがベンダー拡張を公開する場合、このオブジェクトが拡張するパブリック クラスへのアンラッピングをサポートします。  
   
- [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) は、[ISQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) クラスから拡張された [ISQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) クラスを実装します。 このメソッドが呼び出されると、オブジェクトは次のクラスにラップ解除されます。[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)、[SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)、および [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)。  
+ [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) は、[ISQLServerStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) クラスから拡張された [ISQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) クラスを実装します。 このメソッドが呼び出されると、オブジェクトは [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)、[SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)、および [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) の各クラスにアンラップされます。  
   
  詳細については、「[ラッパーとインターフェイス](../../../connect/jdbc/wrappers-and-interfaces.md)」を参照してください。  
   

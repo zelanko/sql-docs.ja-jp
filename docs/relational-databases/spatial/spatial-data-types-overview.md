@@ -16,10 +16,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2abe169f1666a1ce44b96130a52ef8edbc5a788e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68048519"
 ---
 # <a name="spatial-data-types-overview"></a>空間データ型の概要
@@ -28,7 +28,7 @@ ms.locfileid: "68048519"
 空間データには 2 つの型があります。 **geometry** データ型は平面 (ユークリッド (平面地球)) データをサポートしています。 **geometry** データ型 (平面) は、Open Geospatial Consortium (OGC) Simple Features for SQL Specification version 1.1.0 および SQL MM (ISO 標準) の両方に準拠しています。
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではそのほかに、 **geography** データ型もサポートされています。このデータ型は、GPS の緯度経度座標などの楕円体 (球体地球) データを格納します。
 
-##  <a name="objects"></a> 空間データ オブジェクト  
+##  <a name="spatial-data-objects"></a><a name="objects"></a> 空間データ オブジェクト  
 **geometry** データ型と **geography** データ型は、16 の空間データ オブジェクト (インスタンス型) をサポートしています。 ただし、 *インスタンス化可能*なインスタンス型、つまりデータベース内でインスタンスを作成して使用することができる (インスタンス化できる) インスタンス型は、そのうちの 11 種類のみです。 これらのインスタンスは、親データ型から派生するプロパティによって、 **Points**、 **LineStrings, CircularStrings**、 **CompoundCurves**、 **Polygons**、 **CurvePolygons** 、または **GeometryCollection** 内の複数の **geometry** インスタンスや **geography**インスタンスとして識別されます。 **Geography** 型には、 **FullGlobe**という追加のインスタンス型があります。  
 
 次の図は、 **geometry** の階層を表しています。 **geometry** データ型と **geography** データ型はこの階層に基づいています。 **geometry** と **geography** のインスタンス化可能な型は青で示されています。  
@@ -53,7 +53,7 @@ geometry 型および geography 型のサブタイプには、単純型とコレ
 -   [MultiPolygon](../../relational-databases/spatial/multipolygon.md)  
 -   [GeometryCollection](../../relational-databases/spatial/geometrycollection.md)  
 
-##  <a name="differences"></a> geometry データ型と geography データ型の違い  
+##  <a name="differences-between-the-geometry-and-geography-data-types"></a><a name="differences"></a> geometry データ型と geography データ型の違い  
 2 つの空間データ型の動作はよく似ていますが、データの格納および操作の方法にいくつかの重要な違いがあります。  
 
 ### <a name="how-connecting-edges-are-defined"></a>接続エッジの定義方法  
@@ -86,7 +86,7 @@ OGC の仕様の詳細については、以下を参照してください。
 -   [OGC の仕様、簡易機能アクセス Part 1 - 共通アーキテクチャ](https://go.microsoft.com/fwlink/?LinkId=93627)  
 -   [OGC の仕様、簡易機能アクセス Part 2 - SQL オプション](https://go.microsoft.com/fwlink/?LinkId=93628)  
 
-##  <a name="circular"></a> 円弧セグメント  
+##  <a name="circular-arc-segments"></a><a name="circular"></a> 円弧セグメント  
 円弧セグメントでは、次の 3 つのインスタンス化可能な型を使用できます:**CircularString**、**CompoundCurve**、**CurvePolygon**。  円弧セグメントは、2 次元平面内の 3 つの点によって定義されます。3 番目のポイントを最初のポイントと同じにすることはできません。  
 
 図 A と図 B は、一般的な円弧のセグメントを示します。 3 つの点が 1 つの円周上にあることに注意してください。  

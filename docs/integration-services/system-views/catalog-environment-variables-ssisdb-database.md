@@ -11,10 +11,10 @@ ms.assetid: 45f5aacd-505a-443b-8fc2-c7929e78cff8
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: fdb7a7c325a6189feaea690fe2cc22d685ba86e6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71296656"
 ---
 # <a name="catalogenvironment_variables-ssisdb-database"></a>catalog.environment_variables (SSISDB データベース)
@@ -26,13 +26,13 @@ ms.locfileid: "71296656"
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログのすべての環境に対する環境変数の詳細を表示します。  
   
-|列名|データ型|[説明]|  
+|列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |variable_id|**bigint**|環境変数の一意識別子 (ID)。|  
 |environment_id|**bigint**|変数が関連付けられている環境の一意の ID。|  
 |name|**sysname**|環境変数の名前。|  
 |description|**nvarchar(1024)**|環境変数の説明。|  
-|型|**nvarchar(128)**|環境変数のデータ型。|  
+|type|**nvarchar(128)**|環境変数のデータ型。|  
 |sensitive|**bit**|値が `1` のとき、変数はセンシティブで、格納されるときに暗号化されます。 値が `0` のとき、変数はセンシティブではなく、値はプレーンテキストで格納されます。|  
 |value|**sql_variant**|環境変数の値。 sensitive が `0` の場合、プレーンテキストの値が表示されます。 sensitive が `1` の場合、**NULL** 値が表示されます。|  
   

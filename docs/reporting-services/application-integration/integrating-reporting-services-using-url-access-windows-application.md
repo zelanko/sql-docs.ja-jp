@@ -17,10 +17,10 @@ ms.assetid: a4b222e5-0cbd-409c-92c4-046a674db8ac
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: f133f6cf53123ed7c05f7a7181d5c829b45a258d
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74796901"
 ---
 # <a name="integrating-reporting-services-using-url-access---windows-application"></a>URL アクセスを使用した Reporting Services の統合 - Windows アプリケーション
@@ -89,7 +89,7 @@ private void viewReportButton_Click(object sender, System.EventArgs e)
   
 1.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] または [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] で新しい Windows アプリケーションを作成します。  
   
-2.  **[ツールボックス]** ダイアログ ボックスで <xref:System.Windows.Forms.WebBrowser> コントロールを探します。  
+2.  <xref:System.Windows.Forms.WebBrowser>[ツールボックス]**ダイアログ ボックスで** コントロールを探します。  
   
      **ツールボックス**が表示されていない場合は、 **[表示]** メニュー項目をクリックして **[ツールボックス]** を選択することでアクセスできます。  
   

@@ -13,10 +13,10 @@ ms.assetid: 44f3c991-9e8f-4126-a9a2-2d9da779fb11
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a8eaed6e70ad457f33dc9587e3004e433da43ae1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298086"
 ---
 # <a name="sap-bw-source-editor-advanced-page"></a>[SAP BW 変換元エディター] ([詳細設定] ページ)
@@ -50,7 +50,7 @@ ms.locfileid: "71298086"
  **文字列変換**  
  文字列変換に適用するルールを指定します。  
   
-|オプション|[説明]|  
+|オプション|説明|  
 |------------|-----------------|  
 |**自動文字列変換**|SAP Netweaver BW システムが Unicode システムの場合に、 **nvarchar** にすべての文字列を変換します。 それ以外の場合は **varchar**にすべての文字列を変換します。|  
 |**文字列を varchar に変換**|**varchar**にすべての文字列を変換します。|  

@@ -14,10 +14,10 @@ ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8ddc5fb198a62374fc43ebacb5fa7423ac9fadd5
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287896"
 ---
 # <a name="validate-query-and-change-json-data-with-built-in-functions-sql-server"></a>組み込み関数を使用した JSON データの検証、クエリ、変更 (SQL Server)
@@ -76,7 +76,7 @@ CREATE TABLE Families (
 )
 ``` 
 
-##  <a name="ISJSON"></a> ISJSON 関数を使用して JSON テキストを検証する  
+##  <a name="validate-json-text-by-using-the-isjson-function"></a><a name="ISJSON"></a> ISJSON 関数を使用して JSON テキストを検証する  
  **ISJSON** 関数は、文字列に有効な JSON が含まれているかどうかをテストします。  
   
 次の例では、JSON 列に有効な JSON テキストが含まれる行が返されます。 明示的な JSON 制約がない場合、NVARCHAR 列には任意のテキストを入力できることに注意してください。  
@@ -89,7 +89,7 @@ WHERE ISJSON(doc) > 0
 
 詳細については、「 [ISJSON &#40;Transact-SQL&#41;](../../t-sql/functions/isjson-transact-sql.md)」を参照してください。  
   
-##  <a name="VALUE"></a> JSON_VALUE 関数を使用して、JSON テキストから値を抽出する  
+##  <a name="extract-a-value-from-json-text-by-using-the-json_value-function"></a><a name="VALUE"></a> JSON_VALUE 関数を使用して、JSON テキストから値を抽出する  
 **JSON_VALUE** 関数は、JSON 文字列からスカラー値を抽出します。 次のクエリでは、`id` JSON フィールドが `AndersenFamily` の値と一致するドキュメントが、`city` および `state` JSON フィールドで並べ替えられて返されます。
 
 ```sql  
@@ -109,7 +109,7 @@ ORDER BY JSON_VALUE(f.doc, '$.address.city') DESC, JSON_VALUE(f.doc, '$.address.
 
 詳細については、「 [JSON_VALUE &#40;Transact-SQL&#41;](../../t-sql/functions/json-value-transact-sql.md)」をご覧ください。  
   
-##  <a name="QUERY"></a> JSON_QUERY 関数を使用して JSON テキストからオブジェクトまたは配列を抽出する  
+##  <a name="extract-an-object-or-an-array-from-json-text-by-using-the-json_query-function"></a><a name="QUERY"></a> JSON_QUERY 関数を使用して JSON テキストからオブジェクトまたは配列を抽出する  
 
 **JSON_QUERY** 関数は、JSON 文字列からオブジェクトまたは配列を抽出します。 次の例では、クエリの結果には JSON フラグメントを返す方法を示します。  
   
@@ -179,7 +179,7 @@ FROM Families f
 
 ルート ドキュメントは、最初の `OPENJSON(children)` の呼び出しによって返される 2 つの `children` 行と結合されて、2 つの行 (またはタプル) が作成されます。 その後、各行は、`OUTER APPLY` 演算子を使用して `OPENJSON(pets)` によって生成される新しい行と結合されます。 Jesse にはペットが 2 匹いるため、`(AndersenFamily, Jesse, Merriam)` は Goofy および Shadow に対して生成される 2 つの行と結合されます。 Lisa にはペットがいないため、このタプルに対して `OPENJSON(pets)` によって返される行はありません。 ただし、`OUTER APPLY` を使用しているため、列には `NULL` が設定されます。 `OUTER APPLY` の代わりに `CROSS APPLY` を指定した場合、このタプルと結合できるペット行がないので、Lisa についての結果は返されません。
 
-##  <a name="JSONCompare"></a> JSON_VALUE と JSON_QUERY を比較する  
+##  <a name="compare-json_value-and-json_query"></a><a name="JSONCompare"></a> JSON_VALUE と JSON_QUERY を比較する  
 **JSON_VALUE** と **JSON_QUERY** の主な違いは、 **JSON_VALUE** はスカラー値を返しますが、 **JSON_QUERY** はオブジェクトまたは配列を返す点です。  
   
 次のようなサンプル JSON テキストがあるとします。  
@@ -242,7 +242,7 @@ GROUP BY JSON_VALUE(Info, '$.Customer.Name'), Status
 HAVING SUM(SubTotal)>1000
 ```  
   
-##  <a name="MODIFY"></a> JSON_MODIFY 関数を使用して JSON テキストのプロパティ値を更新する  
+##  <a name="update-property-values-in-json-text-by-using-the-json_modify-function"></a><a name="MODIFY"></a> JSON_MODIFY 関数を使用して JSON テキストのプロパティ値を更新する  
 **JSON_MODIFY** 関数は、JSON 文字列内のプロパティの値を更新し、更新された JSON 文字列を返します。  
   
 次の例では、JSON を格納する変数の JSON プロパティの値を更新します。  

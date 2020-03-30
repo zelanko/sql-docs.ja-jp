@@ -14,10 +14,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b01305a689f7dbe7937560350200d3e81a1785dd
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288456"
 ---
 # <a name="query-store-usage-scenarios"></a>クエリ ストアの使用シナリオ
@@ -110,7 +110,7 @@ ms.locfileid: "79288456"
   
 クエリのパフォーマンスが向上しているため、分析に基づいてこのインデックスを保持することができます。  
   
-## <a name="CEUpgrade"></a> 新しい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にアップグレードするときにパフォーマンスの安定性を維持する  
+## <a name="keep-performance-stability-during-the-upgrade-to-newer-ssnoversion"></a><a name="CEUpgrade"></a> 新しい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にアップグレードするときにパフォーマンスの安定性を維持する  
 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]の前のバージョンでは、最新バージョンのプラットフォームへのアップグレード中にパフォーマンスが後退するというリスクがありました。 それは、新しいビットがインストールされると、クエリ オプティマイザーの最新バージョンがすぐにアクティブになるためでした。  
   
 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降では、すべてのクエリ オプティマイザーの変更は最新の[データベース互換性レベル](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)と連携しているため、プランの変更は、アップグレードの時点ではなく、ユーザーが `COMPATIBILITY_LEVEL` を最新のものに変更した時点で発生します。 この機能とクエリ ストアの組み合わせによって、アップグレード プロセス中のクエリのパフォーマンスを高いレベルで制御できます。 推奨されるアップグレードのワークフローを次の図に示します。  

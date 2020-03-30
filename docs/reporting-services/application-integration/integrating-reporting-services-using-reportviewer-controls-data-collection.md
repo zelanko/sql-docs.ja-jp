@@ -11,10 +11,10 @@ ms.technology: application-integration
 ms.topic: reference
 ms.date: 09/18/2018
 ms.openlocfilehash: 078b36034d48dbb4389c69e64d8b8b18d240b24c
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "79198179"
 ---
 # <a name="integrate-reporting-services-using-reportviewer-controls---data-collection"></a>ReportViewer コントロールを使用した Reporting Services の統合 - データ収集
@@ -40,7 +40,7 @@ protected void Page_Load(object sender, EventArgs e)
     ReportViewer1.EnableTelemetry = false;
 }
 ```
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [WebForms レポート ビューアー コントロールの使用](../../reporting-services/application-integration/using-the-webforms-reportviewer-control.md)  
 [レポート ビューアー コントロールを使用した Reporting Services の統合](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md) 

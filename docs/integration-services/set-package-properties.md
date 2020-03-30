@@ -26,10 +26,10 @@ ms.assetid: 13f81c3e-2b18-4f83-b445-a2f4a2c560aa
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b6f3217854bf72f3c7300c87aefceab24220401a
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71281936"
 ---
 # <a name="set-package-properties"></a>パッケージのプロパティを設定する
@@ -68,10 +68,10 @@ ms.locfileid: "71281936"
 ## <a name="properties-by-category"></a>カテゴリ別プロパティ  
  次の表は、パッケージのプロパティをカテゴリ別に一覧表示しています。  
   
-###  <a name="Checkpoints"></a> チェックポイント  
+###  <a name="checkpoints"></a><a name="Checkpoints"></a> チェックポイント  
  このカテゴリのプロパティを使用すると、パッケージ制御フローで障害が発生した時点からパッケージを再開できます。制御フローの最初からパッケージを再実行する必要はありません。 詳細については、「[チェックポイントを使用してパッケージを再開する](../integration-services/packages/restart-packages-by-using-checkpoints.md)」を参照してください。  
   
-|プロパティ|[説明]|  
+|プロパティ|説明|  
 |--------------|-----------------|  
 |**CheckpointFileName**|パッケージを再開するチェックポイントに関する情報をキャプチャする、ファイルの名前です。 パッケージが正常に完了すると、このファイルは削除されます。|  
 |**CheckpointUsage**|パッケージが再開できる時点を指定します。 値は、 **Never**、 **IfExists**、および **Always**です。 このプロパティの既定値は、パッケージを再起動できないことを示す **Never**です。 詳細については、<xref:Microsoft.SqlServer.Dts.Runtime.DTSCheckpointUsage> を参照してください。|  
@@ -80,10 +80,10 @@ ms.locfileid: "71281936"
 > [!NOTE]  
 >  dtexec の **/CheckPointing on** オプションを使用すると、パッケージの **SaveCheckpoints** プロパティを True に設定した場合、および **CheckpointUsage** プロパティを Always に設定した場合と同等の効果が得られます。 詳細については、「[dtexec ユーティリティ](../integration-services/packages/dtexec-utility.md)」を参照してください。  
   
-###  <a name="Execution"></a> 実行  
+###  <a name="execution"></a><a name="Execution"></a> 実行  
  このカテゴリのプロパティは、パッケージ オブジェクトの実行時の動作を構成します。  
   
-|プロパティ|[説明]|  
+|プロパティ|説明|  
 |--------------|-----------------|  
 |**DelayValidation**|パッケージの実行時までパッケージの検証を遅らせるかどうかを示します。 このプロパティの既定値は、 **False**です。|  
 |**Disable**|パッケージを無効にするかどうかを示します。 このプロパティの既定値は **False**です。|  
@@ -94,32 +94,32 @@ ms.locfileid: "71281936"
 |**MaximumErrorCount**|パッケージが実行を停止するまでに発生が許可される、最大エラー数を示します。 このプロパティの既定値は **1**です。|  
 |**PackagePriorityClass**|パッケージ スレッドの Win32 スレッド優先度クラスを示します。 値は、 **Default**、 **AboveNormal**、 **Normal**、 **BelowNormal**、および **Idle**です。 このプロパティの既定値は **Default**です。 詳細については、<xref:Microsoft.SqlServer.Dts.Runtime.DTSPriorityClass> を参照してください。|  
   
-###  <a name="ForcedExecutionValue"></a> 強制実行値  
+###  <a name="forced-execution-value"></a><a name="ForcedExecutionValue"></a> 強制実行値  
  このカテゴリのプロパティは、パッケージのオプションの実行値を構成します。  
   
-|プロパティ|[説明]|  
+|プロパティ|説明|  
 |--------------|-----------------|  
 |**ForcedExecutionValue**|ForceExecutionValue を **True**に設定すると、値は、パッケージが返すオプションの実行値を示します。 このプロパティの既定値は **0**です。|  
 |**ForcedExecutionValueType**|ForcedExecutionValue のデータ型。 このプロパティの既定値は **Int32**です。|  
 |**ForcedExecutionValue**|コンテナーのオプションの実行値に特定の値を適用する必要があるかどうかを示すブール値です。 このプロパティの既定値は **False**です。|  
   
-###  <a name="Identification"></a> [識別]  
+###  <a name="identification"></a><a name="Identification"></a> [識別]  
  このカテゴリのプロパティは、パッケージの一意識別子や名前などの情報を提供します。  
   
-|プロパティ|[説明]|  
+|プロパティ|説明|  
 |--------------|-----------------|  
 |**CreationDate**|パッケージが作成された日付です。|  
 |**CreatorComputerName**|パッケージが作成されたコンピューターの名前です。|  
 |**CreatorName**|パッケージの作成者の名前です。|  
 |**説明**|パッケージ機能の説明です。|  
 |**ID**|パッケージ GUID です。パッケージが作成されるときに割り当てられます。 このプロパティは読み取り専用です。 **ID** プロパティの新しい値をランダムに生成するには、ドロップダウン リストで **[\<新しい ID の設定\>]** を選択します。|  
-|**名前**|パッケージの名前です。|  
+|**Name**|パッケージの名前です。|  
 |**PackageType**|パッケージの種類です。 値は、 **Default**、 **DTSDesigner**、 **DTSDesigner100**、 **DTSWizard**、 **SQLDBMaint**、および **SQLReplication**です。 このプロパティの既定値は **Default**です。 詳細については、<xref:Microsoft.SqlServer.Dts.Runtime.DTSPackageType> を参照してください。|  
   
-###  <a name="Misc"></a> その他  
+###  <a name="misc"></a><a name="Misc"></a> その他  
  このカテゴリのプロパティは、パッケージで使用する構成と式にアクセスし、パッケージのロケールとログ モードに関する情報を提供するために使用されます。 詳細については、「 [パッケージでプロパティ式を使用する](../integration-services/expressions/use-property-expressions-in-packages.md)」を参照してください。  
   
-|プロパティ|[説明]|  
+|プロパティ|説明|  
 |--------------|-----------------|  
 |**構成**|パッケージで使用する構成のコレクションです。 パッケージ構成を表示して構成するには、参照ボタン ( **[...]** ) をクリックします。|  
 |**式**|パッケージのプロパティの式を作成するには、参照ボタン ( **[...]** ) をクリックします。<br /><br /> [プロパティ] ウィンドウに一覧表示されるプロパティだけでなく、オブジェクト モデルに含まれるすべてのパッケージのプロパティの式が作成できます。<br /><br /> 詳細については、「 [パッケージでプロパティ式を使用する](../integration-services/expressions/use-property-expressions-in-packages.md)」を参照してください。<br /><br /> 既存のプロパティの式を表示するには、 **Expressions**を展開します。 式を変更したり評価するには、式テキスト ボックスの参照ボタン ( **[...]** ) をクリックします。|  
@@ -130,26 +130,26 @@ ms.locfileid: "71281936"
 |**SuppressConfigurationWarnings**|構成によって生成された警告を表示しないかどうかを示します。 このプロパティの既定値は **False**です。|  
 |**UpdateObjects**|パッケージに含まれるオブジェクトの新しいバージョンが使用できるようになった場合に、パッケージを更新して、そのオブジェクトの新バージョンを使用するかどうかを示します。 たとえば、このプロパティが **True**に設定されている場合は、一括挿入タスクが含まれるパッケージを更新し、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] が提供する新しいバージョンの一括挿入タスクを使用します。 このプロパティの既定値は **False**です。|  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
  このカテゴリのプロパティを使用すると、パッケージの保護レベルが設定されます。 詳しくは、「 [Access Control for Sensitive Data in Packages](../integration-services/security/access-control-for-sensitive-data-in-packages.md)」をご覧ください。  
   
-|プロパティ|[説明]|  
+|プロパティ|説明|  
 |--------------|-----------------|  
 |**PackagePassword**|パスワードを必要とするパッケージ保護レベル (**EncryptSensitiveWithPassword** と **EncryptAllWithPassword**) のパスワード。|  
 |**ProtectionLevel**|パッケージの保護レベルです。 値は、 **DontSaveSensitive**、 **EncryptSensitiveWithUserKey**、 **EncryptSensitiveWithPassword**、 **EncryptAllWithPassword**、および **ServerStorage**です。 このプロパティの既定値は **EncryptSensitiveWithUserKey**です。 詳細については、<xref:Microsoft.SqlServer.Dts.Runtime.DTSProtectionLevel> を参照してください。|  
   
-###  <a name="Transactions"></a> トランザクション  
+###  <a name="transactions"></a><a name="Transactions"></a> トランザクション  
  このカテゴリのプロパティは、パッケージの分離レベルとトランザクション オプションを構成します。 詳細については、「 [Integration Services のトランザクション](../integration-services/integration-services-transactions.md)」をご覧ください。  
   
-|プロパティ|[説明]|  
+|プロパティ|説明|  
 |--------------|-----------------|  
 |**IsolationLevel**|パッケージ トランザクションの分離レベルです。 値は、 **Unspecified**、 **Chaos**、 **ReadUncommitted**、 **ReadCommitted**、 **RepeatableRead**、 **Serializable**、および **Snapshot**です。 このプロパティの既定値は **Serializable**です。<br /><br /> 注: **IsolationLevel** プロパティの値 **Snapshot** は、パッケージ トランザクションと互換性がありません。 したがって、 **IsolationLevel** プロパティを使用して、パッケージ トランザクションの分離レベルを **Shapshot**に設定することはできません。 SQL クエリを使用して、パッケージ トランザクションを **Snapshot**に設定してください。 詳細については、「[SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../t-sql/statements/set-transaction-isolation-level-transact-sql.md)」を参照してください。<br /><br /> **IsolationLevel** プロパティは、 **TransactionOption** プロパティの値が **Required**の場合にのみ、パッケージ トランザクションに適用されます。<br /><br /> 子コンテナーによって要求された **IsolationLevel** プロパティの値は、以下の場合には無視されます。<br />子コンテナーの **TransactionOption** プロパティの値が **Supported**である場合。<br />子コンテナーが親コンテナーのトランザクションに参加する場合。<br /><br /> コンテナーによって要求された **IsolationLevel** プロパティの値は、コンテナーが新しいトランザクションを開始する場合にのみ利用されます。 コンテナーは、次の場合に新しいトランザクションを開始します。<br />コンテナーの **TransactionOption** プロパティの値が **Required**である場合。<br />親がまだトランザクションを開始していない場合。<br /><br /> <br /><br /> 詳細については、<xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A> を参照してください。|  
 |**TransactionOption**|パッケージに対するトランザクションの関与を示します。 値は、 **NotSupported**、 **Supported**、および **Required**です。 このプロパティの既定値は **Supported**です。 詳細については、<xref:Microsoft.SqlServer.Dts.Runtime.DTSTransactionOption> を参照してください。|  
   
-###  <a name="Version"></a> バージョン  
+###  <a name="version"></a><a name="Version"></a> バージョン  
  このカテゴリのプロパティは、パッケージ オブジェクトのバージョンに関する情報を提供します。  
   
-|プロパティ|[説明]|  
+|プロパティ|説明|  
 |--------------|-----------------|  
 |**VersionBuild**|パッケージのビルドのバージョン番号です。|  
 |**VersionComments**|パッケージのバージョンに関するコメントです。|  

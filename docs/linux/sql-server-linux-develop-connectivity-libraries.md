@@ -9,10 +9,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 80efe5ff-09ba-48a0-ac93-a91d62cff47c
 ms.openlocfilehash: a4ed76cde2cd8ff8b9d862b981dcbed2361c6ae8
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73049738"
 ---
 # <a name="connectivity-libraries-and-frameworks-for-microsoft-sql-server"></a>Microsoft SQL Server の接続ライブラリとフレームワーク
@@ -23,7 +23,7 @@ ms.locfileid: "73049738"
 
 次の表に、クライアント アプリケーションがさまざまな言語から使用できる接続ライブラリすなわち "*ドライバー*" の一覧を示します。これらによって、オンプレミスまたはクラウドで、Linux、Windows、Docker 上で実行されている Microsoft SQL Server や、Azure SQL Database と Azure SQL Data Warehouse にも接続して使用できます。 
 
-| Language | プラットフォーム | その他のリソース | ダウンロード | 開始するには |
+| 言語 | プラットフォーム | その他のリソース | ダウンロード | 開始するには |
 | :-- | :-- | :-- | :-- | :-- |
 | C# | Windows、Linux、macOS | [Microsoft ADO.NET for SQL Server](/sql/connect/ado-net/microsoft-ado-net-sql-server) | [ダウンロード](https://msdn.microsoft.com/vstudio/aa496123.aspx) | [開始するには](https://www.microsoft.com/sql-server/developer-get-started/csharp/ubuntu)
 | Java | Windows、Linux、macOS | [SQL Server 用 Microsoft JDBC ドライバー](https://msdn.microsoft.com/library/mt484311.aspx) | [ダウンロード](https://go.microsoft.com/fwlink/?LinkId=245496) |  [開始するには](https://www.microsoft.com/sql-server/developer-get-started/java/ubuntu)
@@ -35,7 +35,7 @@ ms.locfileid: "73049738"
 
 次の表に、オブジェクト リレーショナル マッピング (ORM) フレームワークと Web フレームワークの一部の例を示します。クライアント アプリケーションは、オンプレミスまたはクラウドで、Linux、Windows、Docker 上で実行されている Microsoft SQL Server や、Azure SQL Database と Azure SQL Data Warehouse でも、これらを使用できます。 
 
-| Language | プラットフォーム | ORM |
+| 言語 | プラットフォーム | ORM |
 | :-- | :-- | :-- |
 | C# | Windows、Linux、macOS | [Entity Framework](https://docs.microsoft.com/ef)<br>[Entity Framework Core](https://docs.microsoft.com/ef/core/index) |
 | Java | Windows、Linux、macOS |[Hibernate ORM](https://hibernate.org/orm)|

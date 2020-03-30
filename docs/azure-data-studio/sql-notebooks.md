@@ -4,18 +4,18 @@ titleSuffix: Azure Data Studio
 description: Azure Data Studio で SQL Notebook を使用する方法について説明します
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.reviewer: achatter; alayu; maghan; sstein
+ms.reviewer: achatter; alayu; maghan; mikeray
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.custom: seodec18
 ms.date: 06/28/2019
-ms.openlocfilehash: b2651dd2d95f0fb8b5aba37b1d755bc26a781dde
-ms.sourcegitcommit: 844793cd1c058e6bba136f050734e7dc62024a82
+ms.openlocfilehash: 0cefd49b539c967a77faaa566fce9958182cc5df
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77575354"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "79448440"
 ---
 # <a name="how-to-use-notebooks-in-azure-data-studio"></a>Azure Data Studio でノートブックを使用する方法
 
@@ -32,14 +32,14 @@ Azure Data Studio では、F1 キーを押して、 **[新しい接続]**  を�
 
 新しいノートブックを起動するには、複数の方法があります。
 
-1. Azure Data Studio の **[ファイル] メニュー**に移動し、 **[新しいノートブック]** をクリックします。
+* Azure Data Studio の **[ファイル] メニュー**に移動し、 **[新しいノートブック]** をクリックします。
 
     ![image3](media/sql-notebooks/file-new-notebook.png)
 
-2. **[SQL Server]** 接続を右クリックして、 **[新しいノートブック]** を開始します。 
+* **[SQL Server]** 接続を右クリックして、 **[新しいノートブック]** を開始します。
     ![image3](media/sql-notebooks/server-new-notebook.png)
 
-3. コマンド パレット (**Ctrl + Shift + P**) を開き、 **[新しいノートブック]** に入力します。 `Notebook-1.ipynb` という名前の新しいファイルが開きます。
+* コマンド パレット (**Ctrl + Shift + P**) を開き、 **[新しいノートブック]** に入力します。 `Notebook-1.ipynb` という名前の新しいファイルが開きます。
 
 ## <a name="supported-kernels-and-attach-to-context"></a>サポートされているカーネルとコンテキストへのアタッチ
 

@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 45cf5461b9154d397ee5365fd275d2545a3cc376
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "73531588"
 ---
 # <a name="how-to-view-the-status-of-a-big-data-cluster"></a>ビッグ データ クラスターの状態を表示する方法 
@@ -22,7 +22,7 @@ ms.locfileid: "73531588"
 
 この記事では、サービス エンドポイントにアクセスして SQL Server ビッグ データ クラスター コンポーネントの状態を表示する方法について説明します。 Azure Data Studio と **azdata** の両方を使用できます。この記事では、両方の手法について説明します。
 
-## <a id="datastudio"></a> Azure Data Studio を使用する
+## <a name="use-azure-data-studio"></a><a id="datastudio"></a> Azure Data Studio を使用する
 
 **Azure Data Studio** の最新の [Insider ビルド](https://aka.ms/getazuredatastudio)をダウンロードしたら、SQL Server ビッグ データ クラスター ダッシュボードを使用して、サービス エンドポイントとビッグ データ クラスターの状態を表示できます。 以下の機能の一部については、最初は Azure Data Studio の Insider ビルドでのみ使用可能となります。
 
@@ -55,7 +55,7 @@ ms.locfileid: "73531588"
 
 これらのリンクを直接クリックできます。 これらのダッシュボードにアクセスするときは、認証が必要になります。 メトリックとログのダッシュボードの場合は、環境変数 **AZDATA_USERNAME** と **AZDATA_PASSWORD** を使用して、展開時に設定するコントローラー管理者の資格情報を指定します。 Spark ダッシュボードでは、AD に統合されたクラスターの AD ID、またはクラスター内で基本認証を使用している場合は、ユーザー **ルート**および **AZDATA_PASSWORD** というゲートウェイ (Knox) 資格情報が使用されます。 
 
-### <a id="notebook"></a> クラスターの状態ノートブック
+### <a name="cluster-status-notebook"></a><a id="notebook"></a> クラスターの状態ノートブック
 
 1. クラスターの状態ノートブックを起動して、ビッグ データ クラスターのクラスターの状態を表示することもできます。 ノートブックを起動するには、 **[クラスターの状態]** タスクをクリックします。
 

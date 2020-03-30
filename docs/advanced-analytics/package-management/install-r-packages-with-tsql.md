@@ -10,10 +10,10 @@ ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2017||=sqlallproducts-allversions
 ms.openlocfilehash: b19b2df1b39bcc88332d60f1389be12b32d7b921
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74485267"
 ---
 # <a name="use-t-sql-create-external-library-to-install-r-packages-on-sql-server"></a>T-SQL (CREATE EXTERNAL LIBRARY) を使用して SQL Server に R パッケージをインストールする
@@ -35,7 +35,7 @@ ms.locfileid: "74485267"
 
 1 つのパッケージをインストールする場合は、そのパッケージを zip 形式でダウンロードします。
 
-パッケージの依存関係により、複数のパッケージをインストールする方が一般的です。 パッケージに他のパッケージが必要な場合は、インストール中にすべてのパッケージが相互にアクセスできることを確認する必要があります。 [miniCRAN](https://andrie.github.io/miniCRAN/) を使用して[ローカル リポジトリを作成](create-a-local-package-repository-using-minicran.md)し、パッケージの完全なコレクションをアセンブルすること、また [igraph](https://igraph.org/r/) を使用して、パッケージの依存関係を分析することをお勧めします。 間違ったバージョンのパッケージをインストールしたり、パッケージの依存関係を省略したりすると、CREATE EXTERNAL LIBRARY ステートメントが失敗することがあります。 
+パッケージの依存関係により、複数のパッケージをインストールする方が一般的です。 パッケージに他のパッケージが必要な場合は、インストール中にすべてのパッケージが相互にアクセスできることを確認する必要があります。 [miniCRAN](create-a-local-package-repository-using-minicran.md) を使用して[ローカル リポジトリを作成](https://andrie.github.io/miniCRAN/)し、パッケージの完全なコレクションをアセンブルすること、また [igraph](https://igraph.org/r/) を使用して、パッケージの依存関係を分析することをお勧めします。 間違ったバージョンのパッケージをインストールしたり、パッケージの依存関係を省略したりすると、CREATE EXTERNAL LIBRARY ステートメントが失敗することがあります。 
 
 ## <a name="copy-the-file-to-a-local-folder"></a>ファイルをローカル フォルダーにコピーする
 

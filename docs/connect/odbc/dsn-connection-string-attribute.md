@@ -10,10 +10,10 @@ ms.reviewer: v-chojas
 ms.author: v-jizho2
 author: karinazhou
 ms.openlocfilehash: bf9b755176913ad144781c5be0ad53150aedcd1b
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "76911246"
 ---
 # <a name="dsn-and-connection-string-keywords-and-attributes"></a>DSN と接続文字列のキーワードと属性
@@ -22,7 +22,7 @@ ms.locfileid: "76911246"
 
 ## <a name="supported-dsnconnection-string-keywords-and-connection-attributes"></a>サポートされる DSN/接続文字列のキーワードおよび接続属性
 
-各プラットフォームに使用できるキーワードと属性を次の表に示します (L:Linux、M:Mac、W:Windows)。 キーワードまたは属性をクリックすると、詳細が表示されます。
+次の表では、各プラットフォーム (L: Linux、M: Mac、W: Windows) で使用可能なキーワードと属性の一覧を示します。 キーワードまたは属性をクリックすると、詳細が表示されます。
 
 | DSN / 接続文字列のキーワード | 接続属性 | プラットフォーム |
 |-|-|-|
@@ -172,7 +172,7 @@ SQL Server に接続するときに使用する認証モードを設定します
 
 | キーワードの値 | 属性値 | 説明 |
 |-|-|-|
-|Enabled|SQL_CE_ENABLED|Always Encrypted を有効にします。|
+|有効|SQL_CE_ENABLED|Always Encrypted を有効にします。|
 |無効|SQL_CE_DISABLED|(既定値) Always Encrypted を無効にします。|
 | |SQL_CE_RESULTSETONLY|解読のみを有効にします (結果と戻り値)。|
 
@@ -182,7 +182,7 @@ SQL Server に接続するときに使用する認証モードを設定します
 
 | キーワードの値 | 属性値| 説明 |
 |-|-|-|
-|Enabled|SQL_IS_ON|(既定値) 透過的なネットワーク IP の解決を有効にします。|
+|有効|SQL_IS_ON|(既定値) 透過的なネットワーク IP の解決を有効にします。|
 |無効|SQL_IS_OFF|透過的なネットワーク IP の解決を無効にします。|
 
 ### <a name="usefmtonly"></a>UseFMTONLY
@@ -246,7 +246,7 @@ Always Encrypted 用のキーストア プロバイダー ライブラリを読�
 
 ### <a name="sql_copt_ss_enlist_in_xa"></a>SQL_COPT_SS_ENLIST_IN_XA
 
-XA 準拠トランザクション プロセッサ (TP) での XA トランザクションを有効にするには、アプリケーションで SQL_COPT_SS_ENLIST_IN_XA および `XACALLPARAM` オブジェクトへのポインターを指定して **SQLSetConnectAttr** を呼び出す必要があります。 このオプションは、Windows、(17.3 以降) Linux、Mac でサポートされています。
+XA 準拠トランザクション プロセッサ (TP) での XA トランザクションを有効にするには、アプリケーションで SQL_COPT_SS_ENLIST_IN_XA および **オブジェクトへのポインターを指定して**SQLSetConnectAttr`XACALLPARAM` を呼び出す必要があります。 このオプションは、Windows、(17.3 以降) Linux、Mac でサポートされています。
 ```
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, param, SQL_IS_POINTER);  // XACALLPARAM *param
 ``` 
@@ -255,7 +255,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, param, SQL_IS_POINTER);  // XA
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, (SQLPOINTER)TRUE, 0);
 ``` 
 
-|Value|説明|プラットフォーム|  
+|値|説明|プラットフォーム|  
 |-----------|-----------------|-----------------|  
 |XACALLPARAM object*|`XACALLPARAM` オブジェクトを指すポインター。|Windows、Linux、Mac|
 |TRUE|XA トランザクションを ODBC 接続に関連付けます。 関連するすべてのデータベース アクティビティは、XA トランザクションの保護下で実行されます。|Windows|  

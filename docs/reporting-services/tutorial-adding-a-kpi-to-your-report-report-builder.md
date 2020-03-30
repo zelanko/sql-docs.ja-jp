@@ -9,10 +9,10 @@ ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ee2333bc6d369bbc9908198d8cfa2fa18ce23065
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63041890"
 ---
 # <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>チュートリアル: レポートへの KPI の追加 (レポート ビルダー)
@@ -32,7 +32,7 @@ KPI は、ビジネス上重要で、測定可能な値です。 このシナリ
 ## <a name="requirements"></a>必要条件  
 要件の詳細については、[「チュートリアルの前提条件 (レポート ビルダー)」](../reporting-services/prerequisites-for-tutorials-report-builder.md) を参照してください。  
   
-## <a name="Table"></a>1.テーブルまたはマトリックス ウィザードを使用して表レポートとデータセットを作成する  
+## <a name="1-create-a-table-report-and-dataset-from-the-table-or-matrix-wizard"></a><a name="Table"></a>1.テーブルまたはマトリックス ウィザードを使用して表レポートとデータセットを作成する  
 このセクションでは、共有データ ソースを選択し、埋め込みデータセットを作成して、データをテーブルに表示します。  
  
 ### <a name="to-create-a-table-with-an-embedded-dataset"></a>埋め込みデータセットでテーブルを作成するには  
@@ -99,7 +99,7 @@ KPI は、ビジネス上重要で、測定可能な値です。 このシナリ
 
 11. **[次へ]** をクリックします。  
   
-## <a name="CompleteWizard"></a>2.ウィザードでデータを整理し、レイアウトを選択する  
+## <a name="2-organize-data-and-choose-layout-in-the-wizard"></a><a name="CompleteWizard"></a>2.ウィザードでデータを整理し、レイアウトを選択する  
 テーブルまたはマトリックス ウィザードでは、データを表示するための最初のデザインを提供します。 ウィザードのプレビュー ペインでは、テーブルやマトリックスのデザインを完了する前にデータのグループ化の結果を表示できます。  
   
 ### <a name="to-organize-data-into-groups-and-choose-a-layout"></a>データをグループにまとめてレイアウトを選択するには 
@@ -173,7 +173,7 @@ KPI は、ビジネス上重要で、測定可能な値です。 このシナリ
  
 ![report-builder-kpi-format-numbers](../reporting-services/media/report-builder-kpi-format-numbers.png)
 
-## <a name="BackgroundColors"></a>3.背景色を使用して KPI を表示する  
+## <a name="3-use-background-colors-to-display-a-kpi"></a><a name="BackgroundColors"></a>3.背景色を使用して KPI を表示する  
 背景色を、レポートの実行時に評価される式に設定することができます。  
   
 ### <a name="to-display-the-present-state-of-a-kpi-by-using-background-colors"></a>背景色を使用して KPI の現在の状態を表示するには  
@@ -198,7 +198,7 @@ KPI は、ビジネス上重要で、測定可能な値です。 このシナリ
 
 ![report-builder-kpi-colors](../reporting-services/media/report-builder-kpi-colors.png)
   
-## <a name="Gauge"></a>4.ゲージを使用して KPI を表示する  
+## <a name="4-display-a-kpi-by-using-a-gauge"></a><a name="Gauge"></a>4.ゲージを使用して KPI を表示する  
 ゲージは、データセットの単一の値を表示します。 このチュートリアルでは、水平方向の線形ゲージを使用します。このゲージは、その形と単純さにより、テーブルのセルで使用してサイズが小さくなっても読み取りやすいからです。 詳しくは、「 [ゲージ &#40;レポート ビルダーおよび SSRS&#41;](../reporting-services/report-design/gauges-report-builder-and-ssrs.md)」をご覧ください。  
   
 ### <a name="to-display-the-present-state-of-a-kpi-using-a-gauge"></a>ゲージを使用して KPI の現在の状態を表示するには  
@@ -253,7 +253,7 @@ KPI は、ビジネス上重要で、測定可能な値です。 このシナリ
   
 ![report-builder-linear-kpi](../reporting-services/media/report-builder-linear-kpi.png) 
   
-## <a name="Indicator"></a>5.インジケーターを使用して KPI を表示する  
+## <a name="5-display-a-kpi-by-using-an-indicator"></a><a name="Indicator"></a>5.インジケーターを使用して KPI を表示する  
 インジケーターは、データ値をひとめでわかるようにするための単純で小さなゲージです。 そのサイズと単純さのために、テーブルやマトリックスでよく使用されます。 詳細については、「[インジケーター (レポート ビルダーおよび SSRS)](../reporting-services/report-design/indicators-report-builder-and-ssrs.md)」を参照してください。  
   
 ### <a name="to-display-the-present-state-of-a-kpi-using-an-indicator"></a>インジケーターを使用して KPI の現在の状態を表示するには  
@@ -288,7 +288,7 @@ KPI は、ビジネス上重要で、測定可能な値です。 このシナリ
 
 ![report-builder-kpi-stoplight](../reporting-services/media/report-builder-kpi-stoplight.png)
   
-## <a name="Title"></a>6.レポート タイトルを追加する  
+## <a name="6-add-a-report-title"></a><a name="Title"></a>6.レポート タイトルを追加する  
 レポート タイトルは、レポートの最上部に表示されます。 レポート ヘッダーがあれば、そこにレポート タイトルを配置します。レポート ヘッダーを使用しない場合は、レポート本文の一番上のテキスト ボックスに配置します。 このセクションでは、自動的にレポート本文の一番上に配置されるテキスト ボックスを使用します。  
   
 テキストの語句や文字のフォントのスタイル、サイズ、および色を変更して、テキストをさらに強調することもできます。 詳細については、「[テキスト ボックス内のテキストの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)」を参照してください。  
@@ -303,7 +303,7 @@ KPI は、ビジネス上重要で、測定可能な値です。 このシナリ
   
 4.  **[実行]** をクリックして、レポートをプレビューします。  
   
-## <a name="Save"></a>7.レポートを保存する  
+## <a name="7-save-the-report"></a><a name="Save"></a>7.レポートを保存する  
 レポートをレポート サーバーまたは自分のコンピューターに保存します。 レポート サーバーに保存しない場合は、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のいくつかの機能 (レポート パーツ、サブレポートなど) が使用できなくなります。  
   
 ### <a name="to-save-the-report-on-a-report-server"></a>レポート サーバーにレポートを保存するには  

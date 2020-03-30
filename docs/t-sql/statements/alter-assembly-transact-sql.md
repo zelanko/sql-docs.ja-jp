@@ -24,10 +24,10 @@ ms.assetid: 87bca678-4e79-40e1-bb8b-bd5ed8f34853
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 2881c4ee5145506158585611f61219983b764936
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68066111"
 ---
 # <a name="alter-assembly-transact-sql"></a>ALTER ASSEMBLY (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "68066111"
   アセンブリの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] カタログ プロパティを変更することにより、アセンブリを変更します。 ALTER ASSEMBLY では、その実装を保持する [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] モジュールの最新コピーが反映されるようにアセンブリを更新し、それに関連付けられているファイルを追加または削除します。 アセンブリは、[CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md) を使用して作成されます。  
 
 > [!WARNING]
->  CLR では、セキュリティ境界としてサポートされなくなった、.NET Framework のコード アクセス セキュリティ (CAS) が使用されます。 `PERMISSION_SET = SAFE` で作成された CLR アセンブリが、外部のシステム リソースにアクセスし、非管理対象コードを呼び出し、sysadmin 特権を取得できる場合があります。 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 以降、CLR アセンブリのセキュリティを強化するために `clr strict security` という `sp_configure` オプションが導入されました。 `clr strict security` は既定で有効になり、`SAFE` および `EXTERNAL_ACCESS` アセンブリを `UNSAFE` とマークされている場合と同様に扱います。 `clr strict security` オプションは、旧バージョンとの互換性のために無効にできますが、これは推奨されません。 Microsoft では、master データベースで `UNSAFE ASSEMBLY` アクセス許可が付与されている対応するログインを含む証明書または非対称キーで、すべてのアセンブリに署名することをお勧めします。 詳しくは、「[CLR の厳密なセキュリティ](../../database-engine/configure-windows/clr-strict-security.md)」をご覧ください。  
+>  CLR では、セキュリティ境界としてサポートされなくなった、.NET Framework のコード アクセス セキュリティ (CAS) が使用されます。 `PERMISSION_SET = SAFE` で作成された CLR アセンブリが、外部のシステム リソースにアクセスし、非管理対象コードを呼び出し、sysadmin 特権を取得できる場合があります。 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 以降、CLR アセンブリのセキュリティを強化するために `sp_configure` という `clr strict security` オプションが導入されました。 `clr strict security` は既定で有効になり、`SAFE` および `EXTERNAL_ACCESS` アセンブリを `UNSAFE` とマークされている場合と同様に扱います。 `clr strict security` オプションは、旧バージョンとの互換性のために無効にできますが、これは推奨されません。 Microsoft では、master データベースで `UNSAFE ASSEMBLY` アクセス許可が付与されている対応するログインを含む証明書または非対称キーで、すべてのアセンブリに署名することをお勧めします。 詳しくは、「[CLR の厳密なセキュリティ](../../database-engine/configure-windows/clr-strict-security.md)」をご覧ください。  
 
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -137,7 +137,7 @@ ALTER ASSEMBLY assembly_name
   
  ALTER ASSEMBLY ステートメントを使用しても、次の情報は変更できません。  
   
--   アセンブリを参照する、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス内の CLR 関数、集計関数、ストアド プロシージャ、およびトリガーの署名。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内の [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] データベース オブジェクトを新しいバージョンのアセンブリに再バインドできない場合、ALTER ASSEMBLY は失敗します。  
+-   アセンブリを参照する、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス内の CLR 関数、集計関数、ストアド プロシージャ、およびトリガーの署名。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で、[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 内の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース オブジェクトを新しいバージョンのアセンブリに再バインドできない場合、ALTER ASSEMBLY は失敗します。  
   
 -   別のアセンブリから呼び出されるアセンブリ内のメソッドの署名。  
   
@@ -187,7 +187,7 @@ ALTER ASSEMBLY assembly_name
 - ユーザーには `ALTER ASSEMBLY` アクセス許可が必要です  
 - さらに、次の条件のいずれかを満たす必要があります。  
   - サーバーでの `UNSAFE ASSEMBLY` アクセス許可のある対応するログインを含む証明書または非対称キーでアセンブリが署名されている。 アセンブリへの署名は推奨されます。  
-  - データベースに `ON` に設定された `TRUSTWORTHY` プロパティが含まれ、そのデータベースがサーバーでの `UNSAFE ASSEMBLY` アクセス許可のあるログインによって所有されている。 このオプションは推奨されません。  
+  - データベースに `TRUSTWORTHY` に設定された `ON` プロパティが含まれ、そのデータベースがサーバーでの `UNSAFE ASSEMBLY` アクセス許可のあるログインによって所有されている。 このオプションは推奨されません。  
   
   
  アセンブリの権限セットの詳細については、「[アセンブリのデザイン](../../relational-databases/clr-integration/assemblies-designing.md)」をご覧ください。  

@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6fc6da38a122f2397c41232cb1a0ec5ad0831cd5
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68098633"
 ---
 # <a name="typeproperty-transact-sql"></a>TYPEPROPERTY (Transact-SQL)
@@ -47,7 +47,7 @@ TYPEPROPERTY (type , property)
  *property*  
  データ型について返される情報の種類です。 *プロパティ* 値は次のいずれかを指定することができます。  
   
-|プロパティ|[説明]|返される値|  
+|プロパティ|説明|返される値|  
 |--------------|-----------------|--------------------|  
 |**AllowsNull**|データ型で NULL 値が許容されるかどうか。|1 = True<br /><br /> 0 = False<br /><br /> NULL = データ型が見つからない|  
 |**OwnerId**|型の所有者。<br /><br /> 注: スキーマの所有者はデータ型の所有者である必要はありません。|NULL 以外 = 型所有者のデータベース ユーザー ID。<br /><br /> NULL = サポートされない型、または型の ID が無効。|  

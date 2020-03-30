@@ -13,10 +13,10 @@ ms.assetid: 5377c59f-2e25-4852-a306-c87ae3dca9fd
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1fcb84fe69c617cacc183910e3446400a172ea6d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "67903118"
 ---
 # <a name="configure-topology-peer-to-peer-replication"></a>[トポロジの構成] (ピア ツー ピア レプリケーション)
@@ -63,7 +63,7 @@ ms.locfileid: "67903118"
   
 ### <a name="options-for-each-node"></a>各ノードのオプション  
  **[新しいピア接続の追加]**  
- 2 つのノード間の接続を追加します。 たとえば、ノード A とノード B 間の接続を追加すると、レプリケーションによって次の 2 つのサブスクリプションが追加されます。1 つ目によってノード A がノード B のパブリケーションから変更を受信できるようになり、2 つ目によってノード B がノード A のパブリケーションから変更を受信できるようになります。  
+ 2 つのノード間の接続を追加します。 たとえば、ノード A とノード B 間の接続を追加すると、レプリケーションによって 2 つのサブスクリプションが追加されます。最初のサブスクリプションによってノード A がノード B のパブリケーションから変更を受信できるようになり、2 番目のサブスクリプションによってノード B がノード A のパブリケーションから変更を受信できるようになります。  
   
  **[ピア ノードの削除]**  
  トポロジからノードを削除します。 たとえば、ノード C を削除すると、そのノードのパブリケーションが削除されます。 ノード A とノード C、およびノード B とノード C 間のサブスクリプションも削除されます。 ノード C のデータベースは削除されず、パブリッシングおよびディストリビューションは無効になりません。  

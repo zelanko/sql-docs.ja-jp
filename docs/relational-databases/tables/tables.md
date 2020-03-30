@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9b59f204fafd7e1b912eea2673783290f67fa786
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79287746"
 ---
 # <a name="tables"></a>テーブル
@@ -44,7 +44,7 @@ ms.locfileid: "79287746"
 一時テーブルは **tempdb**に格納されます。 一時テーブルには、ローカル一時テーブルとグローバル一時テーブルの 2 種類があります。 この 2 種類の一時テーブルでは、名前、表示設定、および可用性が異なります。 ローカル一時テーブル名の先頭には、番号記号 (#) が 1 つ付いています。このテーブルは、作成したユーザーの現在の接続でのみ表示され、このユーザーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスから切断すると削除されます。 グローバル一時テーブル名の先頭には、番号記号が 2 つ (##) 付いています。このテーブルは、作成されるとすべてのユーザーに表示され、このテーブルを参照するすべてのユーザーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスから切断すると削除されます。 
 
 
-#### <a name="ctp23"></a> 複数のスコープにまたがる一時テーブルを使用するワークロードの再コンパイルの削減
+#### <a name="reduced-recompilations-for-workloads-using-temporary-tables-across-multiple-scopes"></a><a name="ctp23"></a> 複数のスコープにまたがる一時テーブルを使用するワークロードの再コンパイルの削減
 
 すべてのデータベース互換レベルにおいて、[!INCLUDE[ss2019](../../includes/sssqlv15-md.md)] により、複数のスコープにまたがる一時テーブルを使用するワークロードの再コンパイルが減ります。 この機能は、すべてのデプロイ モデルのデータベース互換レベル 150 の Azure SQL Database でも有効になります。  この機能が提供されるまでは、一時テーブルが外側のスコープのバッチによって作成されていた場合、データ操作言語 (DML) ステートメント (`SELECT`、`INSERT`、`UPDATE`、`DELETE`) で一時テーブルを参照すると、実行のたびに DML ステートメントが再コンパイルされました。 この改良により、SQL Server では追加の軽量なチェックが実行されて、不要な再コンパイルが回避されます。
 

@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 548ab73e97b9bccb6a64a95b7294d3d5ca63493d
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79286846"
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-on-linux"></a>パフォーマンスのベスト プラクティスと SQL Server on Linux の構成ガイドライン
@@ -31,7 +31,7 @@ ms.locfileid: "79286846"
 
 - **ノードまたは CPU に PROCESS AFFINITY を使用する**
 
-   Linux オペレーティング システム上の SQL Server (通常はすべてのノードと CPU) に使用しているすべての **NUMANODE**、CPU、または両方に `ALTER SERVER CONFIGURATION` を使用して `PROCESS AFFINITY` を設定することをお勧めします。 プロセッサ関係は、効率的な Linux および SQL スケジューリングの動作を維持するために役立ちます。 **NUMANODE** オプションを使用するのが最も簡単な方法です。 コンピューターに NUMA ノードが 1 つしかない場合でも、**PROCESS AFFINITY** を使用する必要があることに注意してください。  **PROCESS AFFINITY** の設定方法の詳細については、「[ALTER SERVER CONFIGURATION](../t-sql/statements/alter-server-configuration-transact-sql.md)」のドキュメントを参照してください。
+   Linux オペレーティング システム上の SQL Server (通常はすべてのノードと CPU) に使用しているすべての `ALTER SERVER CONFIGURATION`NUMANODE`PROCESS AFFINITY`、CPU、または両方に **を使用して** を設定することをお勧めします。 プロセッサ関係は、効率的な Linux および SQL スケジューリングの動作を維持するために役立ちます。 **NUMANODE** オプションを使用するのが最も簡単な方法です。 コンピューターに NUMA ノードが 1 つしかない場合でも、**PROCESS AFFINITY** を使用する必要があることに注意してください。  [PROCESS AFFINITY](../t-sql/statements/alter-server-configuration-transact-sql.md) の設定方法の詳細については、「**ALTER SERVER CONFIGURATION**」のドキュメントを参照してください。
 
 - **複数の tempdb データ ファイルを構成する**
 
@@ -61,7 +61,7 @@ SQL Server のインストールで最適なパフォーマンスを得るには
 
 次の表に、CPU 設定に関する推奨事項を示します。
 
-| 設定 | Value | 詳細情報 |
+| 設定 | 値 | 詳細情報 |
 |---|---|---|
 | CPU 周波数ガバナー | パフォーマンス | **cpupower** コマンドを参照してください |
 | ENERGY_PERF_BIAS | パフォーマンス | **x86_energy_perf_policy** コマンドを参照してください |
@@ -70,7 +70,7 @@ SQL Server のインストールで最適なパフォーマンスを得るには
 
 次の表に、ディスク設定に関する推奨事項を示します。
 
-| 設定 | Value | 詳細情報 |
+| 設定 | 値 | 詳細情報 |
 |---|---|---|
 | ディスク先行読み取り | 4096 | **blockdev** コマンドを参照してください。 |
 | sysctl の設定 | kernel.sched_min_granularity_ns = 10000000<br/>kernel.sched_wakeup_granularity_ns = 15000000<br/>vm.dirty_ratio = 40<br/>vm.dirty_background_ratio = 10<br/>vm.swappiness = 10 | **sysctl** コマンドを参照してください |

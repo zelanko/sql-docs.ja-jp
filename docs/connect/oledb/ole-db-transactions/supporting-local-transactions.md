@@ -18,10 +18,10 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: c0cfc1ad6ff3439efe458f97394909c919b77075
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67993962"
 ---
 # <a name="supporting-local-transactions"></a>ローカル トランザクションのサポート
@@ -39,7 +39,7 @@ ms.locfileid: "67993962"
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|*isoLevel*[in]|このトランザクションで使用する分離レベルを指定します。 ローカル トランザクションでは、OLE DB Driver for SQL Server によって次がサポートされます。<br /><br /> **ISOLATIONLEVEL_UNSPECIFIED**<br /><br /> **ISOLATIONLEVEL_CHAOS**<br /><br /> **ISOLATIONLEVEL_READUNCOMMITTED**<br /><br /> **ISOLATIONLEVEL_READCOMMITTED**<br /><br /> **ISOLATIONLEVEL_REPEATABLEREAD**<br /><br /> **ISOLATIONLEVEL_CURSORSTABILITY**<br /><br /> **ISOLATIONLEVEL_REPEATABLEREAD**<br /><br /> **ISOLATIONLEVEL_SERIALIZABLE**<br /><br /> **ISOLATIONLEVEL_ISOLATED**<br /><br /> **ISOLATIONLEVEL_SNAPSHOT**<br /><br /> <br /><br /> 注:[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以降では、データベースのバージョン管理が有効でも無効でも、ISOLATIONLEVEL_SNAPSHOT は *isoLevel* の引数として有効です。 ただし、ユーザーがステートメントを実行する際に、バージョン管理が有効か、データベースが読み取り専用の場合は、エラーが発生します。 また、[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] より前のバージョンの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に接続している場合に、*isoLevel* に ISOLATIONLEVEL_SNAPSHOT を指定すると、XACT_E_ISOLATIONLEVEL エラーが発生します。|  
+|*isoLevel*[in]|このトランザクションで使用する分離レベルを指定します。 ローカル トランザクションでは、OLE DB Driver for SQL Server によって次がサポートされます。<br /><br /> **ISOLATIONLEVEL_UNSPECIFIED**<br /><br /> **ISOLATIONLEVEL_CHAOS**<br /><br /> **ISOLATIONLEVEL_READUNCOMMITTED**<br /><br /> **ISOLATIONLEVEL_READCOMMITTED**<br /><br /> **ISOLATIONLEVEL_REPEATABLEREAD**<br /><br /> **ISOLATIONLEVEL_CURSORSTABILITY**<br /><br /> **ISOLATIONLEVEL_REPEATABLEREAD**<br /><br /> **ISOLATIONLEVEL_SERIALIZABLE**<br /><br /> **ISOLATIONLEVEL_ISOLATED**<br /><br /> **ISOLATIONLEVEL_SNAPSHOT**<br /><br /> <br /><br /> 注: [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以降では、データベースのバージョン管理が有効でも無効でも、ISOLATIONLEVEL_SNAPSHOT は *isoLevel* の引数として有効です。 ただし、ユーザーがステートメントを実行する際に、バージョン管理が有効か、データベースが読み取り専用の場合は、エラーが発生します。 また、*より前のバージョンの* に接続している場合に、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]isoLevel[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] に ISOLATIONLEVEL_SNAPSHOT を指定すると、XACT_E_ISOLATIONLEVEL エラーが発生します。|  
 |*isoFlags*[in]|0 以外の値を指定すると、OLE DB Driver for SQL Server からはエラーが返されます。|  
 |*pOtherOptions*[in]|NULL 以外の場合、OLE DB Driver for SQL Server では、インターフェイスからのオプション オブジェクトが要求されます。 このオプション オブジェクトの *ulTimeout* メンバーが 0 以外の場合、OLE DB Driver for SQL Server からは XACT_E_NOTIMEOUT が返されます。 OLE DB Driver for SQL Server では、*szDescription* メンバーの値は無視されます。|  
 |*pulTransactionLevel*[out]|NULL 以外の場合、OLE DB Driver for SQL Server からは、トランザクションの入れ子のレベルが返されます。|  

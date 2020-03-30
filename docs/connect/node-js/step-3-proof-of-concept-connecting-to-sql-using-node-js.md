@@ -1,5 +1,5 @@
 ---
-title: 手順 3:Node.js を使用した SQL への接続を概念実証する | Microsoft Docs
+title: 'ステップ 3: Node.js を使用した SQL への接続を概念実証する | Microsoft Docs'
 ms.custom: ''
 ms.date: 07/23/2019
 ms.prod: sql
@@ -11,13 +11,13 @@ ms.assetid: 5d5b41b6-129a-40b1-af8b-7e8fbd4a84bb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7925b376fa7ec751faf0b109b6598ab86a348b3f
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78897155"
 ---
-# <a name="step-3-proof-of-concept-connecting-to-sql-using-nodejs"></a>手順 3:Node.js を使用した SQL への接続を概念実証する
+# <a name="step-3-proof-of-concept-connecting-to-sql-using-nodejs"></a>ステップ 3: Node.js を使用した SQL への接続を概念実証する
 
 ![ダウンロード-ダウン矢印-](../../ssms/media/download-icon.png)[NODE.JS SQL ドライバーをダウンロードする](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
@@ -25,7 +25,7 @@ ms.locfileid: "78897155"
 
 - [https://github.com/tediousjs/tedious/blob/master/examples/](https://github.com/tediousjs/tedious/blob/master/examples/)
   
-## <a name="step-1-connect"></a>手順 1:接続する  
+## <a name="step-1-connect"></a>手順 1: 接続する  
   
 **新しい Connection** 関数は、SQL Database に接続するために使用します。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "78897155"
     });  
 ```  
   
-## <a name="step-2--execute-a-query"></a>手順 2:クエリを実行する  
+## <a name="step-2--execute-a-query"></a>手順 2: クエリを実行する  
   
   
 **新しい Request()** 関数 を使用して、すべての SQL ステートメントが実行されます。 ステートメントが SELECT ステートメントなどの行を返す場合は、**request.on()** 関数を使用してそれらを取得することができます。 行が存在しない場合、request.on() 関数からは空のリストが返されます。  
@@ -111,9 +111,9 @@ ms.locfileid: "78897155"
     }  
 ```  
   
-## <a name="step-3-insert-a-row"></a>手順 3:行を挿入する  
+## <a name="step-3-insert-a-row"></a>手順 3: 行を挿入する  
   
-この例では、[SQL インジェクション](../../relational-databases/security/sql-injection.md)の値からアプリケーションを保護するパラメーターを渡して、[INSERT](../../t-sql/statements/insert-transact-sql.md) ステートメントを安全に実行する方法を示します。    
+この例では、[SQL インジェクション](../../t-sql/statements/insert-transact-sql.md)の値からアプリケーションを保護するパラメーターを渡して、[INSERT](../../relational-databases/security/sql-injection.md) ステートメントを安全に実行する方法を示します。    
   
   
 ```javascript  

@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: HaoQian-MS
 ms.author: haoqian
 ms.openlocfilehash: c1f2a7670913f2df948201b29f26e0283f27f698
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79288746"
 ---
 # <a name="walkthrough-set-up-integration-services-ssis-scale-out"></a>チュートリアル:Integration Services (SSIS) Scale Out を設定する
@@ -43,7 +43,7 @@ ms.locfileid: "79288746"
 
 * [Scale Out Worker を有効にする](#EnableWorker)
 
-## <a name="InstallMaster"></a> Scale Out Master をインストールする
+## <a name="install-scale-out-master"></a><a name="InstallMaster"></a> Scale Out Master をインストールする
 
 Scale Out Master をセットアップするには、[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] をセットアップするときに、データベース エンジン サービス、[!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)]、および SSIS の Scale Out Master 機能をインストールする必要があります。 
 
@@ -91,7 +91,7 @@ Scale Out Master 機能をインストールするには、[!INCLUDE[ssNoVersion
     > [!NOTE]
     > Scale Out Master が Microsoft SQL Server データベース エンジンと共にインストールされず、そのデータベース エンジン インスタンスが名前付きインスタンスである場合は、インストール後に Scale Out Master サービス構成ファイルで `SqlServerName` を構成する必要があります。 詳細については、[Scale Out Master](integration-services-ssis-scale-out-master.md) に関するページを参照してください。
 
-## <a name="InstallWorker"></a> Scale Out Worker をインストールする
+## <a name="install-scale-out-worker"></a><a name="InstallWorker"></a> Scale Out Worker をインストールする
  
 Scale Out Worker をセットアップするには、[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] のセットアップで [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] とその Scale Out Worker 機能をインストールする必要があります。
 
@@ -142,20 +142,20 @@ Scale Out Worker 機能をインストールするには、[!INCLUDE[ssNoVersion
     -   `/ISWORKERSVCMASTER` (省略可)
     -   `/ISWORKERSVCCERT` (省略可)
  
-## <a name="InstallCert"></a> Scale Out Worker クライアント証明書をインストールする
+## <a name="install-scale-out-worker-client-certificate"></a><a name="InstallCert"></a> Scale Out Worker クライアント証明書をインストールする
 
 Scale Out Worker のインストール時に、ワーカー証明書が自動的に作成され、コンピューターにインストールされます。 また、対応するクライアント証明書 SSISScaleOutWorker.cer が `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn` にインストールされます。 Scale Out Master で Scale Out Worker を認証するには、このクライアント証明書を Scale Out Master のローカル コンピューターのルート ストアに追加する必要があります。
   
 ルート ストアにクライアント証明書を追加するには、.cer ファイルをダブルクリックし、[証明書] ダイアログ ボックスで **[証明書のインストール]** をクリックします。 **証明書のインポート ウィザード**が開きます。  
 
-## <a name="Firewall"></a> ファイアウォールのポートを開く
+## <a name="open-firewall-port"></a><a name="Firewall"></a> ファイアウォールのポートを開く
 
 Scale Out Master コンピューターの Windows ファイアウォールで、Scale Out Master のインストール時に指定したポートと、SQL Server のポート (既定では 1433) を開きます。
 
 > [!Note]
 > ファイアウォールのポートを開いた後に、Scale Out Worker サービスを再開する必要もあります。
     
-## <a name="Start"></a> SQL Server Scale Out Master および Worker サービスを開始する
+## <a name="start-sql-server-scale-out-master-and-worker-services"></a><a name="Start"></a> SQL Server Scale Out Master および Worker サービスを開始する
 
 インストール時にサービスのスタートアップの種類を **[自動]** に設定していない場合は、次のサービスを開始してください。
 
@@ -163,18 +163,18 @@ Scale Out Master コンピューターの Windows ファイアウォールで、
 
 -   SQL Server Integration Services Scale Out Worker 14.0 (SSISScaleOutWorker140)
 
-## <a name="EnableMaster"></a> Scale Out Master を有効にする
+## <a name="enable-scale-out-master"></a><a name="EnableMaster"></a> Scale Out Master を有効にする
 
 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio_md](../../includes/ssmanstudio-md.md)] で SSISDB カタログを作成するときに、 **[カタログの作成]** ダイアログ ボックスで **[SSIS スケール アウト マスターとしてこのサーバーを有効にする]** を選択します。
 
 カタログの作成後は、[[Scale Out Manager]](integration-services-ssis-scale-out-manager.md) を使用して Scale Out Master を有効にすることができます。
 
-## <a name="EnableAuth"></a> SQL Server 認証モードを有効にする
+## <a name="enable-sql-server-authentication-mode"></a><a name="EnableAuth"></a> SQL Server 認証モードを有効にする
 データベース エンジンをインストールするときに [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 認証を有効にしなかった場合は、SSISDB カタログをホストする [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] インスタンスで SQL Server 認証モードを有効にします。 
 
 SQL Server 認証を無効にすると、パッケージの実行はブロックされません。 ただし、実行ログを SSISDB データベースに書き込むことはできません。
 
-## <a name="EnableWorker"></a> Scale Out Worker を有効にする
+## <a name="enable-scale-out-worker"></a><a name="EnableWorker"></a> Scale Out Worker を有効にする
 
 Scale Out Worker は [Scale Out Manager](integration-services-ssis-scale-out-manager.md) (グラフィカル ユーザー インターフェイスを利用可能) またはストアド プロシージャを使用して有効にすることができます。
 

@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 892b18ac9780054cafe90d62569afb63f8261b3e
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "68742979"
 ---
 # <a name="restore-statements---filelistonly-transact-sql"></a>RESTORE ステートメント - FILELISTONLY (Transact-SQL)
@@ -90,7 +90,7 @@ FROM <backup_device>
 |-|-|-|  
 |LogicalName|**nvarchar(128)**|ファイルの論理名です。|  
 |PhysicalName|**nvarchar(260)**|ファイルの物理名またはオペレーティング システム名です。|  
-|Type|**char(1)**|ファイルの種類。次のいずれかになります。<br /><br /> **L** = Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログ ファイル<br /><br /> **D** = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ ファイル<br /><br /> **F** = フルテキスト カタログ<br /><br /> **S** = FileStream、FileTable、または [!INCLUDE[hek_2](../../includes/hek-2-md.md)] コンテナー|  
+|種類|**char(1)**|ファイルの種類。次のいずれかになります。<br /><br /> **L** = Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログ ファイル<br /><br /> **D** = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ ファイル<br /><br /> **F** = フルテキスト カタログ<br /><br /> **S** = FileStream、FileTable、または [!INCLUDE[hek_2](../../includes/hek-2-md.md)] コンテナー|  
 |FileGroupName|**nvarchar(128)** NULL|このファイルを含むファイル グループの名前。|  
 |Size|**numeric(20,0)**|現在のサイズ (バイト単位)。|  
 |MaxSize|**numeric(20,0)**|最大許容サイズ (バイト単位)。|  

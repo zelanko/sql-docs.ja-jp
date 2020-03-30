@@ -19,10 +19,10 @@ author: pmasl
 ms.author: pelopes
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 8d4d4812ccdc944411224094f3a9a29115845dc1
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "73632932"
 ---
 # <a name="compatibility-certification"></a>互換性証明書
@@ -57,7 +57,7 @@ ms.locfileid: "73632932"
 
 新しい開発作業の場合、あるいは[インテリジェント クエリ処理](../../relational-databases/performance/intelligent-query-processing.md)のような新しい機能と一部の新しい [!INCLUDE[tsql](../../includes/tsql-md.md)] を既存のアプリケーションで使用する必要があるとき、データベース互換性レベルを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で利用できる最新のレベルにアップグレードすることを計画し、その互換性レベルでアプリケーションが動作することを確認します。 データベース互換性レベルのアップグレードに関する詳細については、「[データベース互換性レベルのアップグレードのベスト プラクティス](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#best-practices-for-upgrading-database-compatibility-level)」を参照してください。
    
-### <a name="queryplan_shape"></a> クエリ プラン シェイプを使用する理由      
+### <a name="why-query-plan-shape"></a><a name="queryplan_shape"></a> クエリ プラン シェイプを使用する理由      
 クエリ プラン シェイプは、クエリ プランを構成するさまざまな演算子の視覚的表現を指します。 これには、シーク、スキャン、結合、並べ替えなどの演算子に加えて、データの流れを示す演算子間のつながりと、意図した結果セットを生成するために実行する必要がある演算の順序が含まれます。 クエリ プラン シェイプは、クエリ オプティマイザーによって決定されます。
 
 アップグレード中のクエリ パフォーマンスを常に予測できるように、基本的な目標の 1 つは、同じクエリ プラン シェイプを使用することになります。 これは、基礎となる [!INCLUDE[ssde_md](../../includes/ssde_md.md)] のバージョンが異なる場合でも、アップグレードの直後にデータベース互換性レベルを変更しないことで達成できます。 他には、クエリ実行エコシステムで変更がない場合 (利用できるリソースの大幅な変更など)、または基礎データのデータ配布で変更がない場合、クエリのパフォーマンスを変えないでください。 
@@ -98,7 +98,7 @@ ms.locfileid: "73632932"
 > [!INCLUDE[msCoName](../../includes/msconame-md.md)] は、次の場合にクエリ プラン シェイプ保護を提供します。
 >
 > - 前の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バージョン (ソース) が実行されていたハードウェアに相当するハードウェアで新しい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バージョン (ターゲット) が実行されるとき。
-> - ターゲット [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] とソース [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の両方で同じ[サポートされているデータベース互換性レベル](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#supported-dbcompats)が使用されるとき。
+> - ターゲット [ とソース ](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#supported-dbcompats) の両方で同じ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サポートされているデータベース互換性レベル[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が使用されるとき。
 >
 > 上の条件で発生する (ソース [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と比較したときの) クエリ プラン シェイプ退化は対処されます。 このような場合は、Microsoft カスタマー サポートにお問い合わせください。
   

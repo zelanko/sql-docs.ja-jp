@@ -26,10 +26,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 12226869eb78e53c072826ad0dc8e280104108e3
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74094563"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>BACPAC ファイルのインポートによる新しいユーザー データベースの作成
@@ -84,7 +84,7 @@ ms.locfileid: "74094563"
   
     -   [[結果] ページ](#Results)  
   
-###  <a name="Introduction"></a> [説明] ページ  
+###  <a name="introduction-page"></a><a name="Introduction"></a> [説明] ページ  
  このページには、データ層アプリケーションのインポート ウィザードの手順が表示されます。  
   
  **[オプション]**  
@@ -95,7 +95,7 @@ ms.locfileid: "74094563"
   
 -   **[キャンセル]** : 操作を取り消し、ウィザードを閉じます。  
   
-###  <a name="Import_settings"></a> [インポートの設定] ページ  
+###  <a name="import-settings-page"></a><a name="Import_settings"></a> [インポートの設定] ページ  
  このページを使用して、インポートする .bacpac ファイルの場所を指定します。  
   
 -   **[ローカル ディスクからインポート]** : **[参照]** をクリックしてローカル コンピューター内を参照するか、用意されている領域にパスを指定します。 パス名には、ファイル名および .bacpac 拡張子を含める必要があります。  
@@ -106,7 +106,7 @@ ms.locfileid: "74094563"
   
      続行するには、インポートする .bacpac ファイルを指定し、 **[開く]** をクリックします。  
   
-###  <a name="Database_settings"></a> [データベースの設定] ページ  
+###  <a name="database-settings-page"></a><a name="Database_settings"></a> [データベースの設定] ページ  
  このページを使用すると、作成されるデータベースの詳細を指定できます。  
   
  **SQLServer のローカル インスタンスの場合**  
@@ -129,15 +129,15 @@ ms.locfileid: "74094563"
   
  続行するには、 **[次へ]** をクリックします。  
   
-###  <a name="Summary"></a> [概要] ページ  
+###  <a name="summary-page"></a><a name="Summary"></a> [概要] ページ  
  このページを使用すると、操作の指定ソースとターゲットの設定を確認できます。 指定した設定でインポート操作を実行するには、 **[完了]** をクリックします。 インポート操作をキャンセルしてウィザードを終了するには、 **[キャンセル]** をクリックします。  
   
-###  <a name="Progress"></a> [進行状況] ページ  
+###  <a name="progress-page"></a><a name="Progress"></a> [進行状況] ページ  
  このページには、操作の進行状況を示す進行状況バーが表示されます。 詳細な状態を表示するには、 **[詳細表示]** をクリックします。  
   
  続行するには、 **[次へ]** をクリックします。  
   
-###  <a name="Results"></a> [結果] ページ  
+###  <a name="results-page"></a><a name="Results"></a> [結果] ページ  
  このページでは、データベースのインポートや作成操作の成功と失敗が報告され、各アクションの成功または失敗が示されます。 エラーが発生したアクションには、 **[結果]** 列にリンクが表示されます。 そのアクションのエラーのレポートを表示するには、リンクをクリックします。  
   
  **[閉じる]** をクリックしてウィザードを閉じます。  

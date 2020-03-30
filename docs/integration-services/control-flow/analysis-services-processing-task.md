@@ -16,10 +16,10 @@ ms.assetid: e5748836-b4ce-4e17-ab6b-617a336f02f4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: e95fd78657a043683d04fa86fd66edd345e2f483
-ms.sourcegitcommit: 1035d11c9fb7905a012429ee80dd5b9d00d9b03c
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "77634791"
 ---
 # <a name="analysis-services-processing-task"></a>Analysis Services 処理タスク
@@ -84,7 +84,7 @@ ms.locfileid: "77634791"
 ## <a name="analysis-services-processing-task-editor-general-page"></a>[Analysis Services 処理タスク エディター] ([全般] ページ)
   **[Analysis Services 処理タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、Analysis Services 処理タスクの名前と説明を指定できます。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>Options  
  **名前**  
  Analysis Services 処理タスクに一意の名前を指定します。 この名前は、タスク アイコンのラベルとして使用されます。  
   
@@ -107,7 +107,7 @@ ms.locfileid: "77634791"
   
 4.  テーブル モデルでは、バッチ設定が無視されます。  
   
-### <a name="options"></a>オプション  
+### <a name="options"></a>Options  
  **Analysis Services 接続マネージャー**  
  既存の Analysis Services 接続マネージャーを一覧から選択するか、 **[新規作成]** をクリックして新しい接続マネージャーを作成します。  
   
@@ -123,7 +123,7 @@ ms.locfileid: "77634791"
 |**[オブジェクト名]**|指定されたオブジェクト名を表示します。|  
 |**Type**|指定されたオブジェクトの種類を表示します。|  
 |**[処理オプション]**|一覧から処理オプションを選択します。<br /><br /> **関連トピック:** [多次元モデルの処理 &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services)|  
-|**[設定]**|指定されたオブジェクトの処理設定を表示します。|  
+|**設定**|指定されたオブジェクトの処理設定を表示します。|  
   
  **追加**  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトを一覧に追加します。  

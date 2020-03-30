@@ -21,35 +21,35 @@ ms.assetid: 4a602584-63e4-4322-aafc-5d715b82b834
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 5a98049201636bf521ae7162bd4ac0de71d74725
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "74821944"
 ---
 # <a name="use-the-fail-over-availability-group-wizard-sql-server-management-studio"></a>可用性グループのフェールオーバー ウィザードの使用 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   このトピックでは、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]の [!INCLUDE[tsql](../../../includes/tsql-md.md)]、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]、または PowerShell を使用して、AlwaysOn 可用性グループ上で計画的な手動フェールオーバーまたは強制手動フェールオーバー (強制フェールオーバー) を実行する方法について説明します。 可用性グループは、可用性レプリカのレベルでフェールオーバーします。 SYNCHRONIZED 状態のセカンダリ レプリカにフェールオーバーする場合は、ウィザードで計画的な手動フェールオーバー (データ損失なし) を実行します。 UNSYNCHRONIZED 状態または NOT SYNCHRONIZING 状態のセカンダリ レプリカにフェールオーバーする場合は、ウィザードで "*強制フェールオーバー*" とも呼ばれる強制手動フェールオーバー (データ損失の可能性あり) を実行します。 どちらの形式の手動フェールオーバーでも、接続先のセカンダリ レプリカはプライマリ ロールに移行します。 計画的な手動フェールオーバーでは、同時に、元のプライマリ レプリカはセカンダリ ロールに移行します。 強制フェールオーバー後は、元のプライマリ レプリカはオンラインになると、セカンダリ ロールに移行します。  
 
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> はじめに  
  計画的な手動フェールオーバーを初めて実行する前に、「 [可用性グループの計画的な手動フェールオーバーの実行 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)、または PowerShell を使用して、AlwaysOn 可用性グループ上で計画的な手動フェールオーバーまたは強制手動フェールオーバー (強制フェールオーバー) を実行する方法について説明します。  
   
  強制手動フェールオーバーを初めて実行する前に、「 [可用性グループの強制手動フェールオーバーの実行 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)、または PowerShell を使用して、AlwaysOn 可用性グループ上で計画的な手動フェールオーバーまたは強制手動フェールオーバー (強制フェールオーバー) を実行する方法について説明します。  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 制限事項と制約事項  
   
 -   フェールオーバー コマンドは、ターゲットのセカンダリ レプリカがコマンドを受け入れた直後に戻ります。 ただし、データベースの復旧は、可用性グループがフェールオーバーを完了した後に非同期で行われます。  
     
-###  <a name="Prerequisites"></a> 可用性グループのフェールオーバー ウィザードを使用するための前提条件  
+###  <a name="prerequisites-for-using-the-failover-availability-group-wizard"></a><a name="Prerequisites"></a> 可用性グループのフェールオーバー ウィザードを使用するための前提条件  
   
 -   現在使用可能な可用性レプリカをホストするサーバー インスタンスに接続している必要があります。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="security"></a><a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  可用性グループの ALTER AVAILABILITY GROUP 権限、CONTROL AVAILABILITY GROUP 権限、ALTER ANY AVAILABILITY GROUP 権限、または CONTROL SERVER 権限が必要です。  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
  **可用性グループのフェールオーバー ウィザードを使用するには**  
   
 1.  オブジェクト エクスプローラーで、フェールオーバーを行う可用性グループのセカンダリ レプリカをホストするサーバー インスタンスに接続し、サーバー ツリーを展開します。  
@@ -93,7 +93,7 @@ ms.locfileid: "74821944"
   
  このウィザードの他のページのヘルプは、他の AlwaysOn 可用性グループ ウィザードと共通で、個別の F1 ヘルプ トピックに記載されています。  
   
-###  <a name="SelectNewPrimaryReplica"></a> Select New Primary Replica Page  
+###  <a name="select-new-primary-replica-page"></a><a name="SelectNewPrimaryReplica"></a> Select New Primary Replica Page  
  ここでは、 **[新しいプライマリ レプリカの選択]** ページのオプションについて説明します。 このページを使用すると、可用性グループのフェールオーバー先のセカンダリ レプリカ (フェールオーバー ターゲット) を選択できます。 このレプリカは新しいプライマリ レプリカになります。  
   
 #### <a name="page-options"></a>ページのオプション  
@@ -106,7 +106,7 @@ ms.locfileid: "74821944"
  **[クォーラムの状態]**  
  クラスター タイプ WSFC の場合は、可用性レプリカのクォーラムの状態を表示します。次のいずれかになります。  
   
-   |値|[説明]|  
+   |値|説明|  
    |-----------|-----------------|  
    |**[標準のクォーラム]**|クラスターは、標準のクォーラムを使用して起動しました。|  
    |**強制されたクォーラム**|クラスターは、強制されたクォーラムを使用して起動しました。|  
@@ -128,7 +128,7 @@ ms.locfileid: "74821944"
  **可用性モード**  
  サーバー インスタンスの可用性モードを表示します。次のいずれかになります。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**[同期コミット]**|同期コミット モードの場合、同期コミット プライマリ レプリカは、同期コミット セカンダリ レプリカによるログ書き込みが確認されるまで待機した後で、トランザクションをコミットします。 同期コミット モードでは、特定のセカンダリ データベースがプライマリ データベースに 1 回同期されれば、コミットされたトランザクションが完全に保護されることが保証されます。|  
 |**[非同期コミット]**|非同期コミット モードでは、非同期コミット セカンダリ レプリカによりログが書き込まれことが確認されるまで待機せずに、プライマリ レプリカがトランザクションをコミットします。 非同期コミット モードでは、セカンダリ データベースでのトランザクションの遅延が最小になりますが、セカンダリ データベースがプライマリ データベースよりも遅延する場合があるため、一部のデータが失われる可能性があります。|  
@@ -138,7 +138,7 @@ ms.locfileid: "74821944"
  **フェールオーバー モード**  
  サーバー インスタンスのフェールオーバー モードを表示します。次のいずれかになります。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**自動**|自動フェールオーバー用に構成されているセカンダリ レプリカでは、そのセカンダリ レプリカがプライマリ レプリカと同期されている場合は計画的な手動フェールオーバーもサポートされます。|  
 |**手動**|手動フェールオーバーには、計画的 (データ損失なし) および強制 (データ損失の可能性あり) の 2 種類があります。 特定のセカンダリ レプリカでサポートされる手動フェールオーバーはどちらか 1 つだけで、このサポートは可用性モードによって異なり、同期コミット モードのサポートはセカンダリ レプリカの同期状態によって決まります。 特定のセカンダリ レプリカで現在サポートされている手動フェールオーバーの形式を調べるには、このグリッドの **[フェールオーバーの準備]** 列を参照してください。|  
@@ -148,7 +148,7 @@ ms.locfileid: "74821944"
  **[フェールオーバーの準備]**  
  セカンダリ レプリカのフェールオーバーの準備を表示します。次のいずれかになります。  
   
-|値|[説明]|  
+|値|説明|  
 |-----------|-----------------|  
 |**[データ損失なし]**|このセカンダリ レプリカでは現在、計画的フェールオーバーがサポートされています。 この値は、同期コミット モードのセカンダリ レプリカが現在、プライマリ レプリカと同期されている場合にのみ表示されます。|  
 |**[データ損失、警告 (** _#_ **)]**|このセカンダリ レプリカでは現在、強制フェールオーバー (データ損失の可能性あり) がサポートされています。 この値は、セカンダリ レプリカがプライマリ レプリカと同期されていない場合に表示されます。 データ損失の警告リンクをクリックすると、データ損失の可能性に関する情報が表示されます。|  
@@ -159,7 +159,7 @@ ms.locfileid: "74821944"
  **キャンセル**  
  ウィザードをキャンセルします。 **[新しいプライマリ レプリカの選択]** ページでウィザードをキャンセルすると、何もアクションを実行せずに終了します。  
   
-###  <a name="ConfirmPotentialDataLoss"></a> Confirm Potential Data Loss Page  
+###  <a name="confirm-potential-data-loss-page"></a><a name="ConfirmPotentialDataLoss"></a> Confirm Potential Data Loss Page  
  ここでは、強制フェールオーバーを実行する場合にのみ表示される **[データ損失の可能性の確認]** ページのオプションについて説明します。 このトピックの対象は、 [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)]だけです。 このページを使用すると、可用性グループを強制的にフェールオーバーするためにデータの損失を許容できるかどうかを指定できます。  
   
 #### <a name="confirm-potential-data-loss-options"></a>[データ損失の可能性の確認] のオプション  
@@ -171,7 +171,7 @@ ms.locfileid: "74821944"
  **キャンセル**  
  ウィザードをキャンセルします。 **[データ損失の可能性の確認]** ページでウィザードをキャンセルすると、何もアクションを実行せずに終了します。  
   
-###  <a name="ConnectToReplica"></a> Connect to Replica Page  
+###  <a name="connect-to-replica-page"></a><a name="ConnectToReplica"></a> Connect to Replica Page  
  ここでは、 **の** [レプリカへの接続] [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)]ページのオプションについて説明します。 このページは、ターゲット セカンダリ レプリカに接続していない場合にのみ表示されます。 このページを使用すると、新しいプライマリ レプリカとして選択したセカンダリ レプリカに接続できます。  
   
 #### <a name="page-options"></a>ページのオプション  

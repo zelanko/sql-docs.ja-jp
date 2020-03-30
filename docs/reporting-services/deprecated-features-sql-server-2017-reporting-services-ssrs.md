@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: d8fe51ce9d86688669e84ad866ad9f5e6da075e8
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "74320316"
 ---
 # <a name="deprecated-features-in-sql-server-2017-reporting-services"></a>SQL Server 2017 Reporting Services で非推奨の機能
@@ -29,7 +29,7 @@ ms.locfileid: "74320316"
 ある機能が非推奨とされた場合、次のようになります。
 
 - その機能は保守管理状態にあり、それ以外では利用されていません。 新しい変更は行われません。新しい機能との相互運用性に関する変更もありません。
-- Microsoft は、アップグレードを容易にする目的で、今後のリリースから非推奨機能を外さないように努めます。 ただし、非推奨機能が将来の技術革新を制限してしまうような場合は、Reporting Services からそれを永久的に外すことをまれに選択することがあります。
+- Microsoft は、アップグレードを容易にする目的で、今後のリリースから非推奨機能を外さないように努めます。 ただし、その機能が将来の技術革新を制限してしまうような場合は、Reporting Services からそれを永久的に外すことをまれに選択することがあります。
 - 新しい開発作業に非推奨機能を使用することはお勧めしません。
 
 ## <a name="features-deprecated-in-the-next-version-of-sql-server"></a>SQL Server の次のバージョンで非推奨となっている機能

@@ -9,10 +9,10 @@ ms.assetid: c962b0ff-ce8a-4742-8262-dc730901afcf
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 466415ebd4075afd5dda83e95a498a32b50af453
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "62651727"
 ---
 # <a name="lesson-2-modifying-the-report-data-source-properties"></a>レッスン 2: レポート データ ソースのプロパティの変更
@@ -20,7 +20,7 @@ ms.locfileid: "62651727"
   
 また、データセットとレポートを変更し、パラメーターを使用して `[Order]` のレポートをフィルター処理します。これによってサブスクリプションが特定の注文と表示形式で、レポートのさまざまなインスタンスを出力できるようになります。  
   
-## <a name="bkmk_modify_datasource"></a>保存された資格情報を使用するようにデータソースを変更するには  
+## <a name="to-modify-the-data-source-to-use-stored-credentials"></a><a name="bkmk_modify_datasource"></a>保存された資格情報を使用するようにデータソースを変更するには  
   
 1.  管理者特権を使用して [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] Web ポータルを参照します。たとえば、Internet Explorer アイコンを右クリックして **[管理者として実行]** をクリックします。  
  
@@ -54,7 +54,7 @@ ms.locfileid: "62651727"
   
 11. レポートを表示し、指定した資格情報を使用してレポートが実行されていることを確認します。 。  
   
-## <a name="bkmk_modify_dataset"></a>AdventureWorksDataset を変更するには  
+## <a name="to-modify-the-adventureworksdataset"></a><a name="bkmk_modify_dataset"></a>AdventureWorksDataset を変更するには  
  次の手順では、パラメーターを使用して注文番号でデータ セットをフィルター処理できるよう、データセットを変更します。
 1.  で **Sales Orders** レポートを開きます。 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]  
   
@@ -81,7 +81,7 @@ ms.locfileid: "62651727"
   
 4.  **[OK]**  
  次の手順では、レポートにパラメーターを追加します。  データセット パラメーターは、レポート パラメーターにフィードされます。 
-## <a name="bkmk_add_reportparameter"></a>レポート パラメーターを追加し、レポートを再パブリッシュするには  
+## <a name="to-add-a-report-parameter-and-republish-the-report"></a><a name="bkmk_add_reportparameter"></a>レポート パラメーターを追加し、レポートを再パブリッシュするには  
   
 1.  **[レポート データ]** ペインで、[パラメーター] フォルダーを展開し、 **[Ordernumber]** パラメーターをダブルクリックします。  これは、データセットにパラメーターを追加した前の手順で自動的に作成されています。 **[新規]** そして **[パラメーター]** をクリックします。  
  ![ssrs_tutorial_datadriven_parameter](../reporting-services/media/ssrs-tutorial-datadriven-parameter.png) 
@@ -103,7 +103,7 @@ ms.locfileid: "62651727"
     ![ssrs_tutorial_datadriven_reportviewer_parameter](../reporting-services/media/ssrs-tutorial-datadriven-reportviewer-parameter.png) 
  
   
-## <a name="bkmk_redeploy"></a>レポートを再配置する  
+## <a name="re-deploy-the-report"></a><a name="bkmk_redeploy"></a>レポートを再配置する  
   
 1.  レポートを再配置して、このレッスンで適用した変更を、次のレッスンのサブスクリプション構成で利用できるようにします。 テーブルのチュートリアルで使用されるプロジェクト プロパティの詳細については、「[レッスン 6: グループと合計の追加 (Reporting Services)](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md)」の「レポートをレポート サーバーにパブリッシュするには (オプション)」セクションを参照してください。  
   

@@ -11,10 +11,10 @@ ms.assetid: e5018225-68bb-4f34-ae4a-ead79d8ad13a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9963f137470c7e252bc00be189c37ac98e6374e4
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71284354"
 ---
 # <a name="integration-services-features-supported-by-the-editions-of-sql-server"></a>SQL Server の各エディションがサポートする Integration Services の機能
@@ -37,7 +37,7 @@ Evaluation Edition と Developer Edition でサポートされている機能に
     
 > [![Evaluation Center からダウンロードする](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) **[Evaluation Centerから SQL Server 2016 をダウンロードする](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**    
     
-## <a name="ISNew"></a> SQL Server 2017 の新しい Integration Services 機能
+## <a name="new-integration-services-features-in-sql-server-2017"></a><a name="ISNew"></a> SQL Server 2017 の新しい Integration Services 機能
   
 |機能|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
@@ -49,13 +49,13 @@ Evaluation Edition と Developer Edition でサポートされている機能に
 
 <sup>2</sup> この機能は、SQL Server 2016 Service Pack 1 でもサポートされています。
 
-## <a name="IEWiz"></a> SQL Server インポートおよびエクスポート ウィザード
+## <a name="sql-server-import-and-export-wizard"></a><a name="IEWiz"></a> SQL Server インポートおよびエクスポート ウィザード
 
 |機能|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |SQL Server インポートおよびエクスポート ウィザード|はい|はい|はい|はい|はい|  
 
-## <a name="IS"></a> Integration Services  
+## <a name="integration-services"></a><a name="IS"></a> Integration Services  
   
 |機能|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
@@ -66,7 +66,7 @@ Evaluation Edition と Developer Edition でサポートされている機能に
 |Hadoop/HDFS コネクタおよびタスク|はい|はい||||  
 |基本的なデータ プロファイリング ツール|はい|はい|||| 
 
-## <a name="ISAA"></a> Integration Services – 高度なソース/ターゲット  
+## <a name="integration-services---advanced-sources-and-destinations"></a><a name="ISAA"></a> Integration Services – 高度なソース/ターゲット  
   
 |機能|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
@@ -77,7 +77,7 @@ Evaluation Edition と Developer Edition でサポートされている機能に
 |ディメンション処理変換先|はい|||||  
 |パーティション処理変換先|はい|||||  
   
-## <a name="ISAT"></a> Integration Services - 高度なタスクおよび変換  
+## <a name="integration-services---advanced-tasks-and-transformations"></a><a name="ISAT"></a> Integration Services - 高度なタスクおよび変換  
   
 |機能|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  

@@ -17,10 +17,10 @@ ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ebd9d811c39247822d2200327fefe02026c067e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "77081691"
 ---
 # <a name="rsexe-utility-ssrs"></a>RS.exe Utility (SSRS)
@@ -45,10 +45,10 @@ rs {-?}
 {-t trace}  
 ```  
   
-##  <a name="bkmk_filelocation"></a> ファイルの場所  
+##  <a name="file-location"></a><a name="bkmk_filelocation"></a> ファイルの場所  
  **RS.exe** は **\Program Files\Microsoft SQL Server\110\Tools\Binn**にあります。 このユーティリティは、ファイル システム上の任意のフォルダーから実行できます。  
   
-##  <a name="bkmk_arguments"></a> 引数  
+##  <a name="arguments"></a><a name="bkmk_arguments"></a> 引数  
  **-?**  
  (省略可) **rs** の引数の構文を表示します。  
   
@@ -97,10 +97,10 @@ rs {-?}
  **-t**  
  (省略可) エラー メッセージをトレース ログに出力します。 この引数は値を取りません。 詳細については、「 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)」を参照してください。  
   
-##  <a name="bkmk_permissions"></a> Permissions  
+##  <a name="permissions"></a><a name="bkmk_permissions"></a> Permissions  
  ツールを実行するには、スクリプトの実行対象であるレポート サーバー インスタンスに接続するための権限が必要です。 スクリプトを実行して、ローカル コンピューターまたはリモート コンピューターに変更を加えることができます。 リモート コンピューターにインストールしたレポート サーバーを変更するには、 **-s** 引数でリモート コンピューターを指定します。  
   
-##  <a name="bkmk_examples"></a> 使用例  
+##  <a name="examples"></a><a name="bkmk_examples"></a> 使用例  
  次の例では、実行する [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET スクリプト、および Web サービス メソッドを含むスクリプト ファイルの指定方法を示しています。  
   
 ```  

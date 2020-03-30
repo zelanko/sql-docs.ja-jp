@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d2bea423a9ea039dbc9f0128c7d6b6f106ee03fe
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "79198409"
 ---
 # <a name="lesson-1-create-and-query-database-objects"></a>レッスン 1: データベース オブジェクトの作成とクエリ
@@ -40,11 +40,11 @@ ms.locfileid: "79198409"
 - [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) をインストールします。
 
 SQL Server インスタンスがない場合は、インスタンスを作成します。 インスタンスを作成するには、次のリンクからプラットフォームを選択します。 SQL 認証を選択する場合は、SQL Server のログイン資格情報を使用します。
-- **Windows**:[SQL Server 2017 Developer Edition をダウンロードする](https://www.microsoft.com/sql-server/sql-server-downloads)。
-- **macOS**:[Docker で SQL Server 2017 をダウンロードする](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker)。
+- **Windows**: [SQL Server 2017 Developer Edition をダウンロードする](https://www.microsoft.com/sql-server/sql-server-downloads)。
+- **macOS**: [Docker で SQL Server 2017 をダウンロードする](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker)。
 
 ## <a name="create-a-database"></a>データベースを作成する
-多くの [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメント同様、[`CREATE DATABASE`](statements/create-database-transact-sql.md) ステートメントには、必須パラメーターがあります。必須パラメーターはデータベースの名前です。` CREATE DATABASE` また、データベース ファイルを配置するディスクの場所など、多くのオプションのパラメーターがあります。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] でオプション パラメーターを指定せずに `CREATE DATABASE` を実行すると、これらの多くのパラメーターでは既定値が使用されます。
+多くの [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメント同様、[`CREATE DATABASE`](statements/create-database-transact-sql.md) ステートメントには、必須パラメーターがあります。必須パラメーターはデータベースの名前です。` CREATE DATABASE` また、データベース ファイルを配置するディスクの場所など、多くのオプションのパラメーターがあります。 `CREATE DATABASE` でオプション パラメーターを指定せずに [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] を実行すると、これらの多くのパラメーターでは既定値が使用されます。
 
 1.  クエリ エディターのウィンドウで、次のコードを入力します。ただし実行しないでください。  
   
@@ -108,7 +108,7 @@ SQL Server インスタンスがない場合は、インスタンスを作成し
 |75|Tire Bar||Tool for changing tires|  
 |3000|3 mm Bracket|0.52||  
   
-基本構文は次のとおりです。INSERT、テーブル名、列一覧、VALUES、挿入する値の一覧。 行の先頭にある 2 つのハイフンは、その行がコメントであることを示します。この行のテキストはコンパイラによって無視されます。 この場合、コメントは構文に許可されているバリエーションを記述します。  
+基本的な構文は、INSERT、テーブル名、列一覧、VALUES、および挿入する値の一覧です。 行の先頭にある 2 つのハイフンは、その行がコメントであることを示します。この行のテキストはコンパイラによって無視されます。 この場合、コメントは構文に許可されているバリエーションを記述します。  
   
 ### <a name="insert-data-into-a-table"></a>データをテーブルに挿入  
   

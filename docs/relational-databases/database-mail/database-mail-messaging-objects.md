@@ -16,24 +16,24 @@ ms.assetid: 5aa2886e-1db1-4066-85df-57ccf4538c54
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8eb132920a6b51303e5725ecdb770dd742972f42
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "70809949"
 ---
 # <a name="database-mail-messaging-objects"></a>データベース メール メッセージング オブジェクト
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   **msdb** データベースはデータベース メール ホスト データベースです。 このデータベースには、データベース メールのストアド プロシージャやメッセージング オブジェクトが格納されます。 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] にはデータベース メール構成ウィザードが付属していて、データベース メールの有効化、プロファイルとアカウントの作成と管理、およびデータベース メール オプションの構成をこのウィザードから行うことができます。  
   
-##  <a name="ComponentsAndConcepts"></a>**msdb** データベース内にあるオブジェクト  
+##  <a name="objects-in-msdb-database"></a><a name="ComponentsAndConcepts"></a>**msdb** データベース内にあるオブジェクト  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] msdb **データベースで、** を有効にする必要があります。 ただし、データベース メールでは [!INCLUDE[ssSB](../../includes/sssb-md.md)] ネットワークを使用しません。 そのため、ユーザーはデータベース メールを使用するための [!INCLUDE[ssSB](../../includes/sssb-md.md)] エンドポイントを作成する必要はありません。 データベース メールの外部プロセスでは、 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] との通信に標準の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]接続が使用されます。  
   
  データベース メールが有効になっていると、 **msdb** データベース内の次のオブジェクトがデータベース メールによって公開されます。  
   
  これらのオブジェクトは、メール ホスト データベース内のデータベース メールのインターフェイスです。 上記で一覧したオブジェクトによって提供される機能を実装するために、他のオブジェクトがインストールされます。 ただし、このようなオブジェクトは内部使用のために予約されています。  
   
-|Name|種類|[説明]|  
+|Name|種類|説明|  
 |----------|----------|-----------------|  
 |[sysmail_allitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)|**表示**|データベース メールに送信されたすべてのメッセージの一覧を表示します。|  
 |[sysmail_event_log &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)|**表示**|[Database Mail External Program](../../relational-databases/database-mail/database-mail-external-program.md)の動作に関するメッセージの一覧を表示します。|  

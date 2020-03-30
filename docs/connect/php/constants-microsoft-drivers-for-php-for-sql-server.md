@@ -13,10 +13,10 @@ ms.assetid: 9727c944-b645-48d6-9012-18dbde35ee3c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4081e9db30e3607d783de40a71d9d7b2e7599c76
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "67993703"
 ---
 # <a name="constants-microsoft-drivers-for-php-for-sql-server"></a>定数 (Microsoft Drivers for PHP for SQL Server)
@@ -79,7 +79,7 @@ PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE では、日付と時刻の型を [PHP Da
 ### <a name="err-constants"></a>ERR 定数  
 次の表に、[sqlsrv_errors](../../connect/php/sqlsrv-errors.md) がエラー、警告、または両方を返す場合に、指定するために使用される定数を示します。  
   
-|Value|説明|  
+|値|説明|  
 |---------|---------------|  
 |SQLSRV_ERR_ALL|**sqlsrv** 関数の最後の呼び出しで生成されたエラーと警告が返されます。 これが既定値です。|  
 |SQLSRV_ERR_ERRORS|**sqlsrv** 関数の最後の呼び出しで生成されたエラーが返されます。|  
@@ -152,12 +152,12 @@ PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE では、日付と時刻の型を [PHP Da
 |-------------------|---------------|  
 |SQLSRV_ENC_BINARY|データは、エンコードまたは変換されず、生のバイト ストリームとしてサーバーから返されます。|  
 |SQLSRV_ENC_CHAR|データは、システムに設定された Windows ロケールのコード ページに指定されているとおりに、8 ビット文字で返されます。 任意のマルチバイト文字またはこのコード ページにマップされていない文字は、1 バイトの疑問符 (?) 文字に置き換えられます。<br /><br />これが既定のエンコードです。|  
-|"UTF-8"|データは UTF-8 エンコードで返されます。 この定数は、 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]のバージョン 1.1 で追加されました。 UTF-8 のサポートの詳細については、「[方法: 組み込みの UTF-8 サポートを使用した UTF-8 データの送信と取得](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)」をご覧ください。|  
+|"UTF-8"|データは UTF-8 エンコードで返されます。 この定数は、 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]のバージョン 1.1 で追加されました。 UTF-8 のサポートの詳細については、「[方法: 組み込みの UTF-8 サポートを使用した UTF-8 データの送信と取得](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)」を参照してください。|  
   
 > [!NOTE]  
 > **SQLSRV_PHPTYPE_STREAM** または **SQLSRV_PHPTYPE_STRING** を使用する場合、エンコードを指定する必要があります。 パラメーターを省略すると、エラーが返されます。  
   
-これらの定数の詳細については、「[方法: PHP データ型を指定する](../../connect/php/how-to-specify-php-data-types.md)」、「[方法: SQLSRV ドライバーを使用したストリームとしての文字データの取得](../../connect/php/how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver.md)」を参照してください。  
+これらの定数の詳細については、「 [方法: PHP データ型を指定する](../../connect/php/how-to-specify-php-data-types.md)」および「 [方法: SQLSRV ドライバーを使用したストリームとしての文字データの取得](../../connect/php/how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver.md)」を参照してください。  
   
 ### <a name="sqltype-constants"></a>SQLTYPE 定数  
 次の表に、SQL Server データ型の記述に使用される定数を示します。 一部の定数は関数に似ており、精度、スケール、長さに対応するパラメーターを受け取る場合があります。  パラメーターをバインドするときは、関数に似た定数を使用する必要があります。 型の比較には、標準の (関数に似ていない) 定数が必要です。 SQL Server データ型の詳細については、「[データ型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)」を参照してください。 有効桁数、小数点以下桁数、長さの詳細については、「[有効桁数、小数点以下桁数、および長さ (Transact-SQL)](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)」を参照してください。  

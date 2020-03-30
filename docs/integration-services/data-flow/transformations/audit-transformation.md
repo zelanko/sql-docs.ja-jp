@@ -17,10 +17,10 @@ ms.assetid: 8c143682-9c81-4150-83d6-1d9678151d37
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 76ce8959e9b9cedb9a1e8a096913a3d6257cfd2d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "71298015"
 ---
 # <a name="audit-transformation"></a>監査変換
@@ -70,7 +70,7 @@ ms.locfileid: "71298015"
  **[監査の種類]**  
  監査情報を得るために使用できるシステム変数を選択します。  
   
-|Value|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**[実行インスタンスの GUID]**|パッケージの実行インスタンスを個別に識別する GUID を挿入します。|  
 |**[パッケージ ID]**|パッケージを個別に識別する GUID を挿入します。|  

@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c01f99fc2f1964e1a459de12d77f0bfc3ea40ca6
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "72796643"
 ---
 # <a name="use-table-valued-parameters-database-engine"></a>テーブル値パラメーターの使用 (データベース エンジン)
@@ -43,7 +43,7 @@ ms.locfileid: "72796643"
 
 [例](#Example)
 
-## <a name="Benefits"></a> 利点
+## <a name="benefits"></a><a name="Benefits"></a> 利点
 
 テーブル値パラメーターの対象範囲はストアド プロシージャ、関数、または動的な [!INCLUDE[tsql](../../includes/tsql-md.md)] テキストで、他のパラメーターと同じです。 同様に、テーブル型の変数の対象範囲も、DECLARE ステートメントを使用して作成される他のローカル変数と同じです。 テーブル値変数は、動的な [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント内で宣言でき、テーブル値パラメーターとしてストアド プロシージャおよび関数に渡すことができます。
 
@@ -58,10 +58,10 @@ ms.locfileid: "72796643"
 - クライアントで並べ替え順序と一意キーを指定できます。
 - ストアド プロシージャで使用すると、一時テーブルのようにキャッシュされます。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]以降では、テーブル値パラメーターはパラメーター化クエリ用にもキャッシュされます。
 
-## <a name="Permissions"></a> Permissions
+## <a name="permissions"></a><a name="Permissions"></a> Permissions
 ユーザー定義テーブル型のインスタンスを作成したり、テーブル値パラメーターを使用してストアド プロシージャを呼び出したりするには、その型、またはその型を含むスキーマまたはデータベースに対する EXECUTE 権限が必要です。
 
-## <a name="Restrictions"></a> 制限
+## <a name="restrictions"></a><a name="Restrictions"></a> 制限
 
 テーブル値パラメーターには、次の制限があります。
 
@@ -69,7 +69,7 @@ ms.locfileid: "72796643"
 - テーブル値パラメーターは、READONLY 入力パラメーターとして [!INCLUDE[tsql](../../includes/tsql-md.md)] ルーチンに渡す必要があります。 ルーチン本体でテーブル値パラメーターに対して UPDATE、DELETE、INSERT などの DML 操作を実行することはできません。
 - SELECT INTO または INSERT EXEC ステートメントの対象としてテーブル値パラメーターを使用することはできません。 テーブル値パラメーターは、SELECT INTO の FROM 句か、INSERT EXEC 文字列またはストアド プロシージャに含めることができます。
 
-## <a name="BulkInsert"></a> テーブル値パラメーターと BULK INSERT 操作
+## <a name="table-valued-parameters-vs-bulk-insert-operations"></a><a name="BulkInsert"></a> テーブル値パラメーターと BULK INSERT 操作
 
 テーブル値パラメーターの使用はセットベースの変数を使用するその他の方法に似ていますが、多くの場合、大規模なデータセットを処理するときは、テーブル値パラメーターを使用する方が短時間で済みます。 テーブル値パラメーターよりもスタートアップ コストがかかる一括操作と比較すると、1,000 行未満の行を挿入する場合は、テーブル値パラメーターの方がパフォーマンスが高くなります。
 
@@ -77,7 +77,7 @@ ms.locfileid: "72796643"
 
 テーブル値パラメーターは、同等のパラメーター配列の実装と同様またはそれ以上のパフォーマンスを実現します。
 
-## <a name="Example"></a> 例
+## <a name="example"></a><a name="Example"></a> 例
 
 次の例では、AdventureWorks データベース内で、[!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、テーブル値パラメーターの型を作成してその型を参照する変数を宣言し、パラメーター一覧を入力してから、その値をストアド プロシージャに渡す方法を示します。
 

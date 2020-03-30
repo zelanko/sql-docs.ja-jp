@@ -11,17 +11,17 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 36bc1ac2a4a20dd0d05d90b8d12ff63b0a7a6b3e
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75246487"
 ---
-# <a name="how-to-write-a-sql-server-unit-test-that-runs-within-the-scope-of-a-single-transaction"></a>方法:単一のトランザクションのスコープ内で実行する SQL Server の単体テストを作成する
+# <a name="how-to-write-a-sql-server-unit-test-that-runs-within-the-scope-of-a-single-transaction"></a>単一のトランザクションのスコープ内で実行する SQL Server の単体テストを作成する方法
 
 単体テストは、単一のトランザクションのスコープ内で実行されるように変更できます。 この方法を使用すると、テストの終了後、テストによって行われた変更をロールバックできます。 次の手順では、以下の操作方法について説明します。  
   
--   **BEGIN TRANSACTION** と **ROLLBACK TRANSACTION** を使用する Transact\-SQL テスト スクリプト内にトランザクションを作成します。  
+-   \-BEGIN TRANSACTION**と**ROLLBACK TRANSACTION **を使用する Transact**SQL テスト スクリプト内にトランザクションを作成します。  
   
 -   テスト クラスで単一のテスト メソッドのトランザクションを作成します。  
   
@@ -108,7 +108,7 @@ ms.locfileid: "75246487"
     ```  
   
     > [!NOTE]  
-    > Visual Basic を使用している場合は、(`Imports Microsoft.VisualStudio.TestTools.UnitTesting`、`Imports Microsoft.VisualStudio.TeamSystem.Data.UnitTesting`、および `Imports Microsoft.VisualStudio.TeamSystem.Data.UnitTest.Conditions` に加えて) `Imports System.Transactions` を追加する必要があります。Visual C# を使用している場合は、(Microsoft.VisualStudio.TestTools、Microsoft.VisualStudio.TeamSystem.Data.UnitTesting、および Microsoft.VisualStudio.TeamSystem.Data.UnitTesting.Conditions の `using` ステートメントに加えて) `using System.Transactions` を追加する必要があります。 また、プロジェクトへの参照をこれらのアセンブリに追加する必要もあります。  
+    > Visual Basic を使用している場合は、(`Imports System.Transactions`、`Imports Microsoft.VisualStudio.TestTools.UnitTesting`、および `Imports Microsoft.VisualStudio.TeamSystem.Data.UnitTesting` に加えて) `Imports Microsoft.VisualStudio.TeamSystem.Data.UnitTest.Conditions` を追加する必要があります。Visual C# を使用している場合は、(Microsoft.VisualStudio.TestTools、Microsoft.VisualStudio.TeamSystem.Data.UnitTesting、および Microsoft.VisualStudio.TeamSystem.Data.UnitTesting.Conditions の `using System.Transactions` ステートメントに加えて) `using` を追加する必要があります。 また、プロジェクトへの参照をこれらのアセンブリに追加する必要もあります。  
   
 ## <a name="to-create-a-transaction-for-all-test-methods-in-a-test-class"></a>テスト クラスですべてのテスト メソッドのトランザクションを作成するには  
   
@@ -156,7 +156,7 @@ ms.locfileid: "75246487"
     ```  
   
 ## <a name="to-start-the-distributed-transaction-coordinator-service"></a>分散トランザクション コーディネーター サービスを開始するには  
-このトピックの一部の手順では、System.Transactions アセンブリ内の型を使用します。 これらの手順を実行する前に、単体テストを実行するコンピューターで、分散トランザクション コーディネーター サービスが実行されていることを確認する必要があります。 そうでない場合は、テストが失敗し、次のエラー メッセージが表示されます。"テスト メソッド *ProjectName*.*TestName*.*MethodName* が例外をスローしました:System.Data.SqlClient.SqlException: サーバー '*ComputerName*' の MSDTC は使用できません"。  
+このトピックの一部の手順では、System.Transactions アセンブリ内の型を使用します。 これらの手順を実行する前に、単体テストを実行するコンピューターで、分散トランザクション コーディネーター サービスが実行されていることを確認する必要があります。 サービスが実行されていない場合は、テストが失敗し、"テスト メソッド *ProjectName*.*TestName*.*MethodName* が例外をスローしました: System.Data.SqlClient.SqlException: サーバー '*ComputerName*' の MSDTC は使用できません" というエラー メッセージが表示されます。  
   
 #### <a name="to-start-the-distributed-transaction-coordinator-service"></a>分散トランザクション コーディネーター サービスを開始するには  
   

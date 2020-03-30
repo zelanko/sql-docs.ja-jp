@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 ms.reviewer: v-kaywon
 ms.openlocfilehash: 9c2275e94d30560ae1173a12bfdcc6bfdc1eecb4
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "78895884"
 ---
 # <a name="writing-secure-dynamic-sql-in-sql-server"></a>SQL Server での安全な動的 SQL の作成
@@ -46,7 +46,7 @@ SQL Server では、構文的に有効であれば受信したクエリがすべ
   
 - 多層環境では、信頼関係ゾーンへ入る前にすべてのデータを検証する必要がある。  
   
-- ファイル名の作成に使用できるフィールドでは、次の文字列を受け付けない:AUX、CLOCK$、COM1 から COM8、CON、CONFIG$、LPT1 から LPT8、NUL、PRN。  
+- ファイル名に AUX、CLOCK$、COM1 ～ COM8、CON、CONFIG$、LPT1 ～ LPT8、NUL、および PRN を使用できる場合、これらの文字列をフィールドで受け入れない。  
   
 - ストアド プロシージャおよびコマンドで <xref:Microsoft.Data.SqlClient.SqlParameter> オブジェクトを使用して、型チェックと長さの検証を行います。  
   

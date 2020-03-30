@@ -18,10 +18,10 @@ ms.assetid: 5022ae33-03a3-48de-8ac1-82742f48cebe
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ff907d83a4d793169872d5abaa059e8b6a1d91b3
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "65572748"
 ---
 # <a name="graphical-query-designer-user-interface"></a>グラフィカル クエリ デザイナーのユーザー インターフェイス
@@ -30,11 +30,11 @@ ms.locfileid: "65572748"
  。  
   
 ## <a name="graphical-query-designer"></a>グラフィカル クエリ デザイナー  
- グラフィカル クエリ デザイナーでサポートされているクエリ コマンドの種類は、**Text**、**StoredProcedure**、および **TableDirect** の 3 つです。 データセットに対するクエリを作成する前に、 [[データセットのプロパティ]](https://msdn.microsoft.com/library/1fa34a4b-7de0-4e92-99fa-bc28a206773f) ダイアログ ボックスの [クエリ] ページにあるコマンドの種類のオプションを選択する必要があります。  
+ グラフィカル クエリ デザイナーでサポートされているクエリ コマンドの種類は、 **Text**、 **StoredProcedure**、および **TableDirect**の 3 つです。 データセットに対するクエリを作成する前に、 [[データセットのプロパティ]](https://msdn.microsoft.com/library/1fa34a4b-7de0-4e92-99fa-bc28a206773f) ダイアログ ボックスの [クエリ] ページにあるコマンドの種類のオプションを選択する必要があります。  
   
  クエリの種類には、次のオプションがあります。  
   
--   **Text** [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および Oracle のデータ処理拡張機能を含め、リレーショナル データベース データ ソースの標準の [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリ テキストをサポートします。  
+-   **Text** [!INCLUDE[tsql](../../includes/tsql-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] および Oracle のデータ処理拡張機能を含め、リレーショナル データベース データ ソースの標準の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クエリ テキストをサポートします。  
   
 -   **[TableDirect]** 指定したテーブルのすべての列を選択します。 たとえば、Customers という名前のテーブルの場合、これは [!INCLUDE[tsql](../../includes/tsql-md.md)] という `SELECT * FROM Customers`ステートメントと同じです。  
   

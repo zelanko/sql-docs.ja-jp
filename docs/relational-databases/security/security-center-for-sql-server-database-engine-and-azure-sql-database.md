@@ -20,10 +20,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9bf5e128b054bbea218c6b791666f5698c24c37d
-ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/30/2020
 ms.locfileid: "75557748"
 ---
 # <a name="security-center-for-sql-server-database-engine-and-azure-sql-database"></a>SQL Server データベース エンジンと Azure SQL Database のセキュリティ センター
@@ -35,7 +35,7 @@ ms.locfileid: "75557748"
   
  ![security-center-legend](../performance/media/security-center-legend.PNG "security-center-legend")  
   
-##  <a name="Who"></a> 認証: ユーザーはだれか  
+##  <a name="authentication-who-are-you"></a><a name="Who"></a> 認証: ユーザーはだれか  
   
 |||  
 |-|-|  
@@ -43,7 +43,7 @@ ms.locfileid: "75557748"
 |**どこで認証されたか**<br /><br /> ![security-center-both](../performance/media/security-center-both.png "security-center-both") マスター データベース: ログインと DB ユーザー<br /><br /> ![security-center-both](../performance/media/security-center-both.png "security-center-both") ユーザー データベース: 包含 DB ユーザー|マスター データベースでの認証 (ログインとデータベース ユーザー)<br /><br /> [SQL Server ログインの作成](../../relational-databases/security/authentication-access/create-a-login.md)<br /><br /> [Azure SQL Database におけるデータベースとログインの管理](https://msdn.microsoft.com/library/ee336235.aspx)<br /><br /> [データベース ユーザーの作成](../../relational-databases/security/authentication-access/create-a-database-user.md)<br /><br /> <br /><br /> ユーザー データベースでの認証<br /><br /> [包含データベース ユーザー - データベースの可搬性を確保する](../../relational-databases/security/contained-database-users-making-your-database-portable.md)|  
 |**他の ID の使用**<br /><br /> ![security-center-both](../performance/media/security-center-both.png "security-center-both") 資格情報<br /><br /> ![security-center-sqlserver](../performance/media/security-center-sqlserver.png "security-center-sqlserver") 別のログインとして実行<br /><br /> ![security-center-both](../performance/media/security-center-both.png "security-center-both") 別のデータベース ユーザーとして実行|[資格情報 &#40;データベース エンジン&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)<br /><br /> [別のログインとして実行](../../t-sql/statements/execute-as-transact-sql.md)<br /><br /> [別のデータベース ユーザーとして実行](../../t-sql/statements/execute-as-transact-sql.md)|  
   
-##  <a name="What"></a> 認証: 何を実行できるか  
+##  <a name="authorization-what-can-you-do"></a><a name="What"></a> 認証: 何を実行できるか  
   
 |||  
 |-|-|  
@@ -51,7 +51,7 @@ ms.locfileid: "75557748"
 |**ロールによるセキュリティ**<br /><br /> ![security-center-sqlserver](../performance/media/security-center-sqlserver.png "security-center-sqlserver") サーバー レベルのロール<br /><br /> ![security-center-both](../performance/media/security-center-both.png "security-center-both") データベース レベルのロール|[サーバーレベルのロール](../../relational-databases/security/authentication-access/server-level-roles.md)<br /><br /> [データベース レベルのロール](../../relational-databases/security/authentication-access/database-level-roles.md)|  
 |**選んだデータ要素へのデータ アクセスを制限する**<br /><br /> ![security-center-both](../performance/media/security-center-both.png "security-center-both") ビュー/プロシージャを使用したデータ アクセスの制限<br /><br /> ![security-center-both](../performance/media/security-center-both.png "security-center-both") 行レベルのセキュリティ<br /><br /> ![security-center-both](../performance/media/security-center-both.png "security-center-both") 動的なデータ マスキング<br /><br /> ![security-center-both](../performance/media/security-center-both.png "security-center-both") 署名済みオブジェクト|[ビュー](../../relational-databases/views/views.md) と [プロシージャ](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)を使用したデータ アクセスの制限<br /><br /> [行レベルのセキュリティ (SQL Server)](../../relational-databases/security/row-level-security.md)<br /><br /> [行レベルのセキュリティ (Azure SQL Database)](https://msdn.microsoft.com/library/azure/dn765131.aspx)<br /><br /> [動的なデータ マスキング (SQL Server)](../../relational-databases/security/dynamic-data-masking.md)<br /><br /> [動的なデータ マスキング (Azure SQL Database)](https://azure.microsoft.com/documentation/articles/sql-database-dynamic-data-masking-get-started/)<br /><br /> [署名済みオブジェクト](../../t-sql/statements/add-signature-transact-sql.md)|  
   
-##  <a name="Encrypt"></a> 暗号化: 秘密データの格納  
+##  <a name="encryption-storing-secret-data"></a><a name="Encrypt"></a> 暗号化: 秘密データの格納  
   
 |||  
 |-|-|  
@@ -59,14 +59,14 @@ ms.locfileid: "75557748"
 |**ソースの暗号化**<br /><br /> ![security-center-sqlserver](../performance/media/security-center-sqlserver.png "security-center-sqlserver") 拡張キー管理モジュール<br /><br /> ![security-center-sqlserver](../performance/media/security-center-sqlserver.png "security-center-sqlserver") Azure Key Vault に格納されたキー<br /><br /> ![security-center-both](../performance/media/security-center-both.png "security-center-both") Always Encrypted|[拡張キー管理モジュール](../../relational-databases/security/encryption/extensible-key-management-ekm.md)<br /><br /> [Azure キー コンテナーに格納されたキー](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)<br /><br /> [常に暗号化](../../relational-databases/security/encryption/always-encrypted-database-engine.md)|  
 |**列、データ、キーの暗号化**<br /><br /> ![security-center-both](../performance/media/security-center-both.png "security-center-both") 証明書による暗号化<br /><br /> ![security-center-both](../performance/media/security-center-both.png "security-center-both") 対称キーによる暗号化<br /><br /> ![security-center-both](../performance/media/security-center-both.png "security-center-both") 非対称キーによる暗号化<br /><br /> ![security-center-both](../performance/media/security-center-both.png "security-center-both") パスフレーズによる暗号化|[証明書による暗号化](../../t-sql/functions/encryptbycert-transact-sql.md)<br /><br /> [非対称キーによる暗号化](../../t-sql/functions/encryptbyasymkey-transact-sql.md)<br /><br /> [対称キーによる暗号化](../../t-sql/functions/encryptbykey-transact-sql.md)<br /><br /> [パスフレーズによる暗号化](../../t-sql/functions/encryptbypassphrase-transact-sql.md)<br /><br /> [データの列の暗号化](../../relational-databases/security/encryption/encrypt-a-column-of-data.md)|  
   
-##  <a name="Connect"></a> 接続のセキュリティ: 制限とセキュリティ保護  
+##  <a name="connection-security-restricting-and-securing"></a><a name="Connect"></a> 接続のセキュリティ: 制限とセキュリティ保護  
   
 |||  
 |-|-|  
 |**ファイアウォールによる防御**<br /><br /> ![security-center-sqlserver](../performance/media/security-center-sqlserver.png "security-center-sqlserver") Windows ファイアウォールの設定<br /><br /> ![security-center-sqldb](../../relational-databases/security/media/security-center-sqldb.png "security-center-sqldb") Azure サービスのファイアウォール設定<br /><br /> ![security-center-sqldb](../../relational-databases/security/media/security-center-sqldb.png "security-center-sqldb") データベース ファイアウォールの設定|[データベース エンジン アクセスを有効にするための Windows ファイアウォールを構成する](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)<br /><br /> [Azure SQL データベースのファイアウォール設定](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md)<br /><br /> [Azure サービスのファイアウォール設定](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)|  
 |**転送中のデータの暗号化**<br /><br /> ![security-center-both](../performance/media/security-center-both.png "security-center-both") 強制 SSL 接続<br /><br /> ![security-center-sqlserver](../performance/media/security-center-sqlserver.png "security-center-sqlserver") SSL 接続 (オプション)|[データベース エンジンの Secure Sockets Layer](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)<br /><br /> [SQL データベースの Secure Sockets Layer](https://msdn.microsoft.com/library/azure/ff394108.aspx)<br /><br /> [Microsoft SQL Server の TLS 1.2 サポート](https://support.microsoft.com/kb/3135244)|  
   
-##  <a name="Audit"></a> 監査: アクセスの記録  
+##  <a name="auditing-recording-access"></a><a name="Audit"></a> 監査: アクセスの記録  
   
 |||  
 |-|-|  
@@ -74,7 +74,7 @@ ms.locfileid: "75557748"
 |**カスタム監査**<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") トリガー|カスタム監査の実装: [DDL Triggers](../../relational-databases/triggers/ddl-triggers.md) と [DML Triggers](../../relational-databases/triggers/dml-triggers.md)の作成|  
 |**コンプライアンス**<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") 準拠|SQL Server:<br />                        [情報セキュリティ国際評価基準](https://go.microsoft.com/fwlink/?LinkId=616319)<br /><br /> SQL データベース:<br />                        [Microsoft Azure セキュリティ センター: 機能による準拠](https://azure.microsoft.com/support/trust-center/services/)|  
   
-##  <a name="SQLInjection"></a> SQL インジェクション  
+##  <a name="sql-injection"></a><a name="SQLInjection"></a> SQL インジェクション  
  SQL インジェクションとは、後で [!INCLUDE[ssDE](../../includes/ssde-md.md)] に渡され解析および実行が行われる文字列に、有害なコードを挿入するという攻撃です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、構文的に有効であれば受信したクエリがすべて実行されるため、SQL ステートメントを構成するすべてのプロシージャにおいて、インジェクションに対する脆弱性を検証する必要があります。 すべてのデータベース システムに SQL インジェクションのリスクがあり、脆弱性の多くが、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]にクエリを実行するアプリケーションで確認されています。 SQL インジェクション攻撃を阻止するには、ストアド プロシージャとパラメーター化コマンドを使用し、動的 SQL を回避して、すべてのユーザーのアクセス許可を制限します。  詳細については、「 [SQL Injection](../../relational-databases/security/sql-injection.md)」を参照してください。  
   
  アプリケーション プログラマ向けのその他のリンク:  
