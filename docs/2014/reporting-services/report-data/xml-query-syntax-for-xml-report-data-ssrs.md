@@ -15,15 +15,15 @@ ms.assetid: d203886f-faa1-4a02-88f5-dd4c217181ef
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 017292aa073c0b5745f313b61592a5c57199567c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: f5f8840e0204847d447ea794e94312221ec1cc72
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2020
-ms.locfileid: "66106948"
+ms.lasthandoff: 03/28/2020
+ms.locfileid: "80380793"
 ---
 # <a name="xml-query-syntax-for-xml-report-data-ssrs"></a>XML レポート データの XML クエリ構文 (SSRS)
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]では、XML データ ソースのデータセットを作成できます。 データセットを取得するためのクエリは、データ ソースを定義した後で作成します。 データセット クエリを作成する際は、データ ソースが参照する XML データの種類に応じて、XML `Query` または要素パスを指定する必要があります。 Xml `Query`は、 ** \<クエリ>** のタグで始まり、データソースによって異なる名前空間と xml 要素が含まれています。 要素パスは、基になる XML データから取り出すノードおよびノード属性を XPath に似た構文で指定するもので、名前空間には依存しません。 要素パスの詳細については、「[Element Path Syntax for XML Report Data &#40;SSRS&#41;](report-data-ssrs.md)」 (XML レポート データの要素パス構文 &#40;SSRS&#41;) を参照してください。  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]では、XML データ ソースのデータセットを作成できます。 データセットを取得するためのクエリは、データ ソースを定義した後で作成します。 データセット クエリを作成する際は、データ ソースが参照する XML データの種類に応じて、XML `Query` または要素パスを指定する必要があります。 XML`Query`は**\<Query>タグ**で始まり、データ ソースによって異なる名前空間と XML 要素が含まれます。 要素パスは、基になる XML データから取り出すノードおよびノード属性を XPath に似た構文で指定するもので、名前空間には依存しません。 要素パスの詳細については、「[Element Path Syntax for XML Report Data &#40;SSRS&#41;](report-data-ssrs.md)」 (XML レポート データの要素パス構文 &#40;SSRS&#41;) を参照してください。  
   
  次のような種類の XML データについて、XML データ ソースを作成できます。  
   
@@ -63,13 +63,10 @@ ms.locfileid: "66106948"
 |XML ドキュメント (既定)|*クエリなし*。<br /><br /> 要素パスは XML ドキュメントそのものから取得され、名前空間には依存しません。|  
   
 > [!NOTE]  
->  最初に挙げた Web サービスの例では、 <xref:ReportService2006.ReportingService2006.ListChildren%2A> メソッドから) このクエリを実行するには、新しいデータ ソースを作成し、接続文字列を http://localhost/reportserver/reportservice2006.asmx に設定する必要があります。 
-  <xref:ReportService2006.ReportingService2006.ListChildren%2A> メソッドは、`Item` と `Recursive` の 2 つのパラメーターを受け取ります。 
-  `Item` の既定値は `/` に、`Recursive` の既定値は `1` に設定されます。  
+>  最初に挙げた Web サービスの例では、 <xref:ReportService2006.ReportingService2006.ListChildren%2A> メソッドから) このクエリを実行するには、新しいデータ ソースを作成し、接続文字列を http://localhost/reportserver/reportservice2006.asmx に設定する必要があります。 <xref:ReportService2006.ReportingService2006.ListChildren%2A> メソッドは、`Item` と `Recursive` の 2 つのパラメーターを受け取ります。 `Item` の既定値は `/` に、`Recursive` の既定値は `1` に設定されます。  
   
 ## <a name="specifying-namespaces"></a>名前空間の指定  
- データ ソースから取得された XML データに使用する名前空間を指定するには、XML `Query` 要素を使用します。 次の XML クエリには、名前空間 `sales` が使用されています。 
-  `ElementPath` および `sales:LineItems` の XML `sales:LineItem` ノードには、名前空間 `sales` が使用されています。  
+ データ ソースから取得された XML データに使用する名前空間を指定するには、XML `Query` 要素を使用します。 次の XML クエリには、名前空間 `sales` が使用されています。 `sales:LineItems` および `sales:LineItem` の XML `ElementPath` ノードには、名前空間 `sales` が使用されています。  
   
 ```  
 <Query xmlns:sales=  
@@ -90,8 +87,8 @@ ms.locfileid: "66106948"
   
 |XML Query 要素|データセットとして取得されるフィールド|  
 |-----------------------|-------------------------------------|  
-|\<Query/>|値 A: https://schemas.microsoft.com/..。<br /><br /> 値 B: https://schemas.microsoft.com/..。<br /><br /> 値 C: https://schemas.microsoft.com/..。|  
-|\<xmldp: Query xmlns: xmldp = "https://schemas.microsoft.com/sqlserver/2005/02/reporting/XmlDPQuery" xmlns: ns = "https://schemas.microsoft.com/..."><br /><br /> \<xmldp: ElementPath>Root {}/Ns: Element2/Node\</xmldp: ElementPath><br /><br /> \</xmldp: クエリ>|Value D<br /><br /> Value E<br /><br /> Value F|  
+|\<Query/>|値 A: `https://schemas.microsoft.com/..`。<br /><br /> 値 B: `https://schemas.microsoft.com/..`。<br /><br /> 値 C: `https://schemas.microsoft.com/.`..|  
+|\<xmldp:クエリ xmlns:xmldp=" "https://schemas.microsoft.com/sqlserver/2005/02/reporting/XmlDPQueryxmlns:ns=" 。https://schemas.microsoft.com/..><br /><br /> \<ルート{}/ns: 要素 2/ノード\</xmldp:要素パス>>要素パス<br /><br /> \</xmldp:クエリ>|Value D<br /><br /> Value E<br /><br /> Value F|  
   
 #### <a name="xml-document-dpnamespacexml"></a>XML document: DPNamespace.xml  
  この XML をコピーして、レポート デザイナーからアクセスできる URL (http://localhost/DPNamespace.xml など) に保存すると、XML データ ソースとして使用できます。  
@@ -111,8 +108,8 @@ ms.locfileid: "66106948"
 </Root>  
 ```  
   
-## <a name="see-also"></a>参照  
- [XML の接続の種類 (SSRS)](xml-connection-type-ssrs.md)   
+## <a name="see-also"></a>関連項目  
+ [XML 接続の種類&#40;SSRS&#41;](xml-connection-type-ssrs.md)   
  [Reporting Services チュートリアル &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)  
   
   
