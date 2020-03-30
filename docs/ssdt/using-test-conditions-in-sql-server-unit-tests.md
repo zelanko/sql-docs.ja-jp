@@ -13,10 +13,10 @@ ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
 ms.openlocfilehash: 85dfbf5b8843325f445a73b7e470c54cf3c91d58
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "75243519"
 ---
 # <a name="using-test-conditions-in-sql-server-unit-tests"></a>SQL Server の単体テストでのテスト条件の使用
@@ -75,7 +75,7 @@ SQL Server の単体テスト メソッドに予期される例外を指定す�
   
 予期される例外と SQL Server のネガティブ単体テストの使用方法の例については、「[チュートリアル: SQL Server の単体テストの作成と実行](../ssdt/walkthrough-creating-and-running-a-sql-server-unit-test.md)」をご覧ください。  
   
-## <a name="SpecifyDataChecksum"></a>データ チェックサムの指定  
+## <a name="specifying-a-data-checksum"></a><a name="SpecifyDataChecksum"></a>データ チェックサムの指定  
 SQL Server 単体テスト デザイナーを表示するには、**ソリューション エクスプローラー**で単体テストのソース コード ファイルをダブルクリックします。  
   
 データベース単体テストにデータ チェックサム テスト条件を追加した後、次の手順に従って予期されるチェックサムを構成する必要があります。  
@@ -107,7 +107,7 @@ SQL Server 単体テスト デザイナーを表示するには、**ソリュー
   
     テスト条件の **[値]** 列には、予期されるチェックサムの値が表示されます。  
   
-## <a name="SpecifyExpectedSchema"></a>予期されるスキーマの指定  
+## <a name="specifying-an-expected-schema"></a><a name="SpecifyExpectedSchema"></a>予期されるスキーマの指定  
 SQL Server 単体テストに予期されるスキーマ テスト条件を追加した後、次の手順に従って予期されるスキーマを構成する必要があります。  
   
 #### <a name="to-specify-an-expected-schema"></a>予期されるスキーマを指定するには  

@@ -11,10 +11,10 @@ ms.assetid: ae34cd1f-3569-4759-80c7-7c9b33b3e9eb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 123e847e01c07ab04bf5be97593af838abfdc4bd
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "71713285"
 ---
 # <a name="configuring-the-client-for-encryption"></a>暗号化のためのクライアントの構成
@@ -48,7 +48,7 @@ java -Djavax.net.ssl.trustStore=C:\MyCertificates\storeName
 java -Djavax.net.ssl.trustStorePassword=storePassword  
 ```  
   
- この場合、この JVM 上で実行されるすべてのアプリケーションが既定でこれらの設定を使用します。 アプリケーションでこの既定の設定をオーバーライドするには、接続文字列か、[SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) クラスの該当する setter メソッドで、接続プロパティの **trustStore** および **trustStorePassword** を設定する必要があります。  
+ この場合、この JVM 上で実行されるすべてのアプリケーションが既定でこれらの設定を使用します。 アプリケーションでこの既定の設定をオーバーライドするには、接続文字列か、**SQLServerDataSource** クラスの該当する setter メソッドで、接続プロパティの **trustStore** および [trustStorePassword](../../connect/jdbc/reference/sqlserverdatasource-class.md) を設定する必要があります。  
   
  これ以外に、"\<java-home>/lib/security/jssecacerts" や "\<java-home>/lib/security/cacerts" など、既定のトラスト ストア ファイルを構成および管理することもできます。 そのためには、JRE (Java ランタイム環境) と共にインストールされる JAVA "keytool" ユーティリティを使用します。 "keytool" ユーティリティの詳細については、Sun Microsystems の Web サイトで keytool についてのドキュメントを参照してください。  
   

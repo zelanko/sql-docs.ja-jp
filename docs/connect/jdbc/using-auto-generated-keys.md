@@ -11,10 +11,10 @@ ms.assetid: 55a062c7-45ce-40e3-9a6f-4a0f4da4e2a6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f93bad7ff490ee2774d10e2df940168a67d30867
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "69026613"
 ---
 # <a name="using-auto-generated-keys"></a>自動生成キーの使用
@@ -23,7 +23,7 @@ ms.locfileid: "69026613"
 
 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] では、自動的に生成された行識別子を取得する JDBC 3.0 API がオプションでサポートされます。 この機能の主な重要性は、クエリ、およびサーバーに対する 2 回目のラウンドトリップを要求することなく、データベース テーブルを更新するアプリケーションで IDENTITY 値を利用できることです。
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では識別子の擬似列をサポートしていないため、自動生成キー機能を使用する必要のある更新は、IDENTITY 列を含むテーブルに対して実行する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で許可されるのは 1 つのテーブルにつき 1 つの IDENTITY 列だけです。 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) クラスの [getGeneratedKeys](../../connect/jdbc/reference/getgeneratedkeys-method-sqlserverstatement.md) メソッドによって返される結果セットは 1 列だけで構成され、返される列名は GENERATED_KEYS です。 生成されたキーが IDENTITY 列のないテーブルで要求された場合、JDBC ドライバーは null の結果セットを返します。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では識別子の擬似列をサポートしていないため、自動生成キー機能を使用する必要のある更新は、IDENTITY 列を含むテーブルに対して実行する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で許可されるのは 1 つのテーブルにつき 1 つの IDENTITY 列だけです。 [SQLServerStatement](../../connect/jdbc/reference/getgeneratedkeys-method-sqlserverstatement.md) クラスの [getGeneratedKeys](../../connect/jdbc/reference/sqlserverstatement-class.md) メソッドによって返される結果セットは 1 列だけで構成され、返される列名は GENERATED_KEYS です。 生成されたキーが IDENTITY 列のないテーブルで要求された場合、JDBC ドライバーは null の結果セットを返します。
 
 例として、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] サンプル データベースで次のテーブルを作成します。
 

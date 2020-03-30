@@ -9,10 +9,10 @@ ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7a26065cc1d65e5c187123ead990888aa4de0e60
-ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
+ms.lasthandoff: 03/29/2020
 ms.locfileid: "63295623"
 ---
 # <a name="tutorial-introducing-expressions"></a>チュートリアル: 式の概要
@@ -31,7 +31,7 @@ ms.locfileid: "63295623"
 ## <a name="requirements"></a>必要条件  
 要件の詳細については、[「チュートリアルの前提条件 (レポート ビルダー)」](../reporting-services/prerequisites-for-tutorials-report-builder.md) を参照してください。  
   
-## <a name="Setup"></a>1.テーブルまたはマトリックス ウィザードを使用して表レポートとデータセットを作成する  
+## <a name="1-create-a-table-report-and-dataset-from-the-table-or-matrix-wizard"></a><a name="Setup"></a>1.テーブルまたはマトリックス ウィザードを使用して表レポートとデータセットを作成する  
 このセクションでは、表レポート、データ ソース、データセットを作成します。 テーブルのレイアウト時には、少数のフィールドのみを含めておきます。 ウィザードの完了後に、列を手動で追加します。 ウィザードを使用すると、容易にテーブルをレイアウトできます。  
   
 > [!NOTE]  
@@ -122,7 +122,7 @@ ms.locfileid: "63295623"
   
 17. **[完了]** をクリックします。  
   
-## <a name="UpdateNames"></a>2.データ ソースおよびデータセットの既定名を更新する  
+## <a name="2-update-default-names-of-the-data-source-and-dataset"></a><a name="UpdateNames"></a>2.データ ソースおよびデータセットの既定名を更新する  
   
 ### <a name="to-update-the-default-name-of-the-data-source"></a>データ ソースの既定名を更新するには  
   
@@ -146,7 +146,7 @@ ms.locfileid: "63295623"
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## <a name="Concatenate"></a>3.名のイニシャルと姓を表示する  
+## <a name="3-display-first-initial-and-last-name"></a><a name="Concatenate"></a>3.名のイニシャルと姓を表示する  
 このセクションでは、イニシャルと姓を含む名前に評価される式に、 **Left** 関数および **連結** ( **&** ) 演算子を使用します。 式を手順どおりに作成することも、手順をスキップして先に進み、チュートリアルから式をコピーして **[式]** ダイアログ ボックスに貼り付けることもできます。   
   
 1.  **[StateProvince]** 列を右クリックし、 **[列の挿入]** をポイントして、 **[左]** をクリックします。  
@@ -191,7 +191,7 @@ ms.locfileid: "63295623"
   
 12. **[実行]** をクリックして、レポートをプレビューします。  
 
-## <a name="DateFormat"></a>(省略可能) 日付列、通貨列、ヘッダー行の書式を設定する  
+## <a name="optional-format-the-date-and-currency-columns-and-header-row"></a><a name="DateFormat"></a>(省略可能) 日付列、通貨列、ヘッダー行の書式を設定する  
 このセクションでは、日付を含む **[Last Purchase]** 列と通貨を含む [YTDPurchase] 列の書式を設定します。 ヘッダー行の書式も設定します。  
   
 ### <a name="to-format-the-date-column"></a>日付列の書式を設定するには  
@@ -227,7 +227,7 @@ ms.locfileid: "63295623"
 ![report-builder-expression-tutorial-preview-formatted](../reporting-services/media/report-builder-expression-tutorial-preview-formatted.png)
 
   
-## <a name="Gender"></a>4.色を使用して性別を表示する  
+## <a name="4-use-color-to-display-gender"></a><a name="Gender"></a>4.色を使用して性別を表示する  
 このセクションでは、個人の性別を示す色を追加します。 色を表示するための新しい列を追加し、Gender フィールドの値に基づいてその列に表示する色を決定します。  
   
 レポートを縞模様にするとき、その表のセルに適用した色を維持するには、四角形を追加し、四角形に背景色を追加します。  
@@ -309,7 +309,7 @@ ms.locfileid: "63295623"
 
     ![report-builder-expression-tutorial-preview-formatted-m-f-column](../reporting-services/media/report-builder-expression-tutorial-preview-formatted-m-f-column.png)  
   
-## <a name="Lookup"></a>5.CountryRegion 名を参照する  
+## <a name="5-look-up-the-countryregion-name"></a><a name="Lookup"></a>5.CountryRegion 名を参照する  
 このセクションでは、CountryRegion データセットを作成し、 **Lookup** 関数を使用して、国/地域の識別子の代わりに国/地域の名前を表示します。  
   
 ### <a name="to-create-the-countryregion-dataset"></a>CountryRegion データセットを作成するには  
@@ -379,7 +379,7 @@ ms.locfileid: "63295623"
   
 11. **[実行]** をクリックして、レポートをプレビューします。  
   
-## <a name="Count"></a>6.前回の購入日からの日数をカウントする  
+## <a name="6-count-days-since-last-purchase"></a><a name="Count"></a>6.前回の購入日からの日数をカウントする  
 このセクションでは、列を追加し、 **Now** 関数または `ExecutionTime` 組み込みグローバル変数を使用して、顧客の前回購入日から今日までの日数を計算します。  
   
 ### <a name="to-add-the-days-ago-column"></a>Days Ago 列を追加するには  
@@ -419,7 +419,7 @@ ms.locfileid: "63295623"
 
 11. **[実行]** をクリックして、レポートをプレビューします。  
   
-## <a name="Indicator"></a>7.インジケーターを使用して売上比較を示す  
+## <a name="7-use-an-indicator-to-show-sales-comparison"></a><a name="Indicator"></a>7.インジケーターを使用して売上比較を示す  
 このセクションでは、新しい列を追加し、インジケーターを使用して、個人の年度累計 (YTD) 購入額が平均 YTD 購入額を上回るか下回るかを示します。 **Round** 関数では、値から小数が除去されます。  
   
 インジケーターとその状態を構成するには、多くの手順を踏む必要があります。 必要であれば、「インジケーターを構成するには」の手順をスキップして先に進み、このチュートリアルから完成した式をコピーして、 **[式]** ダイアログ ボックスに貼り付けることができます。  
@@ -514,7 +514,7 @@ ms.locfileid: "63295623"
 
     ![report-builder-expression-tutorial-preview-indicator](../reporting-services/media/report-builder-expression-tutorial-preview-indicator.png)
   
-## <a name="GreenBar"></a>8.縞模様のレポートを作成する  
+## <a name="8-make-a-banded-report"></a><a name="GreenBar"></a>8.縞模様のレポートを作成する  
 レポートを読む人がレポート内で 1 行おきに適用する色を指定し、レポートを縞模様にできるようにパラメーターを作成します。  
   
 ### <a name="to-add-a-parameter"></a>パラメーターを追加するには  
@@ -611,7 +611,7 @@ ms.locfileid: "63295623"
     
     ![report-builder-expression-tutorial-preview-banded](../reporting-services/media/report-builder-expression-tutorial-preview-banded.png) 
   
-## <a name="Title"></a>(省略可能) レポート タイトルを追加する  
+## <a name="optional-add-a-report-title"></a><a name="Title"></a>(省略可能) レポート タイトルを追加する  
 レポートにタイトルを追加します。  
   
 ### <a name="to-add-a-report-title"></a>レポート タイトルを追加するには  
@@ -630,7 +630,7 @@ ms.locfileid: "63295623"
   
 3.  レポートの白以外の縞の色を選択し、 **[レポートの表示]** をクリックします。  
   
-## <a name="Save"></a>(省略可能) レポートを保存する  
+## <a name="optional-save-the-report"></a><a name="Save"></a>(省略可能) レポートを保存する  
 レポートは、レポート サーバー、SharePoint ライブラリ、またはコンピューターに保存することができます。 詳細については、「[レポートの保存 &#40;レポート ビルダー&#41;](../reporting-services/report-builder/saving-reports-report-builder.md)」を参照してください。  
   
 このチュートリアルでは、レポートをレポート サーバーに保存します。 レポート サーバーにアクセスできない場合は、レポートをコンピューターに保存してください。  
